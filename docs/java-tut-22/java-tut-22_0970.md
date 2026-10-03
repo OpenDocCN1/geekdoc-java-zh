@@ -1,3 +1,4 @@
+
 # 教程：Java 命名和目录接口
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/index.html`](https://docs.oracle.com/javase/tutorial/jndi/index.html)
@@ -8,7 +9,7 @@
 
 为您提供了 JNDI、其架构和打包的概述。
 
-描述了设置运行本教程中描述的示例以及任何其他 JNDI 应用程序所需的环境的说明和步骤。
+描述了设置运行本教程中描述的示例以及任何其他 JNDI 应用程序所需的环境的说明以及步骤。
 
 描述了各种命名和目录操作，并通过许多示例演示了使用 JNDI 访问命名/目录服务。
 
@@ -18,7 +19,7 @@
 
 介绍了 JDK 5.0 和 JDK 6 中可用的 JNDI 和 LDAP 服务提供程序中的功能。
 
-* * *
+---
 
 **注意：** 本教程基于位于 [`docs.oracle.com/javase/jndi/tutorial/`](https://docs.oracle.com/javase/jndi/tutorial/) 的独立 JNDI 教程。最后更新于 Java 2 SDK，标准版，v 1.4.2，全面介绍了 JNDI，但不再受支持。本教程从独立教程中摘录了基础知识，并包括了在 Java 平台标准版 5.0 和 6 发行版中添加的功能。
 

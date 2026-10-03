@@ -1,8 +1,5 @@
 
-
 ## 第八章：8 遗传算法
-
-
 
 ![](img/icon.jpg)
 
@@ -132,7 +129,9 @@ $方程$ (8.1)$方程$ ![](img/eq8-1.jpg)
 
 在这个例子中，我们考虑了一个由六个个体（P1 到 P6）组成的群体。它们的适应度值在表 8-1 的第二列中给出。相对适应度（RF）值是通过将个体的适应度值除以所有个体适应度值之和计算得出的（例如，P1 的 RF = 12/42）。最后一列表示累积 RF（CRF），它是通过将所有 RF 值累加到某一行得到的。例如，P2 对应的 CRF = 0.286 + 0.119 = 0.405。最后的 CRF，即所有个体 RF 值的总和，将为 1.0。在轮盘赌方案中，RF 值作为个体随机选择的代理概率，当一个没有偏见的虚拟拨盘旋转时，它将决定被选择的个体。
 
-在图 8-6 中，这六个个体被表示为六个不同的区域，其面积与它们的 RF 值相同（在个体名称旁边显示）。为了实现轮盘赌方法，我们从 0 到 1 的均匀分布中随机抽取一个数字，这与旋转拨盘的效果相同。（通过使用 Kotlin 标准数学库中的 random() 方法可以编程实现此操作。）假设该随机数的值为 0.68，相当于拨盘停在第四个区域内（介于 0.595 和 0.833 的 CRF 之间）。根据这个抽取结果，我们会选择 P4 作为父母 1，并再次重复这一过程选择父母 2。##### 基于排名的选择
+在图 8-6 中，这六个个体被表示为六个不同的区域，其面积与它们的 RF 值相同（在个体名称旁边显示）。为了实现轮盘赌方法，我们从 0 到 1 的均匀分布中随机抽取一个数字，这与旋转拨盘的效果相同。（通过使用 Kotlin 标准数学库中的 `random()` 方法可以编程实现此操作。）假设该随机数的值为 0.68，相当于拨盘停在第四个区域内（介于 0.595 和 0.833 的 CRF 之间）。根据这个抽取结果，我们会选择 P4 作为父母 1，并再次重复这一过程选择父母 2。
+
+##### 基于排名的选择
 
 第三种选择方法，基于排名的选择，非常类似于轮盘赌方法。在这种方法中，我们根据问题的不同，将个体按升序或降序排序，并根据它们的适应度分配一个排名。如果两个或更多个体的适应度相同，它们将根据在有序列表中的位置被分配一个平均排名。最后，利用这些排名计算 RF 值，并像使用轮盘赌方法一样选择配对父母。
 
@@ -188,39 +187,33 @@ $方程$ (8.1)$方程$ ![](img/eq8-1.jpg)
 
 在这个代码段中，我们创建了一个数据类，并声明和/或设置了所需的全局参数和集合。我们还创建了两个可变的数据对象列表，用来存储当前代和下一代的种群状态。
 
-```
-data class Solution(
-    val chromosome: String,
-    val fitness: Int
-)
 
-❶ val TARGET = "To be, or not to be: that is the question."
-❷ val VALID_GENES: String =
- "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" + // letters
-            "1234567890" +                                   // numbers
-            ", .-;:_!/?#%&()={[]}$*@\"\'"                    // symbols
-val chromosomeLength = TARGET.length
-val POP_SIZE = 100
-val MAX_GEN = 1000
-val ELITISM = 0.15
-val eliteSize = (POP_SIZE * ELITISM).toInt()
-❸ val MUTATION_THRESHOLD = 1.0/chromosomeLength
 
-val population: MutableList<Solution> = mutableListOf()
-val nextgen: MutableList<Solution> = mutableListOf()
-```
+`data class Solution(val chromosome: String, val fitness: Int)`
 
-让我们一步步地讲解这个代码段。在代码块的顶部，我们创建了一个 Solution 对象（数据类），它将用于创建构成种群的个体，并进行基因变化。
+❶ `val TARGET = "To be, or not to be: that is the question."`
+❷ `val VALID_GENES: String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" + // letters "1234567890" + // numbers ", .-;:_!/?#%&()={[]}$*@\"\'" // symbols`
+`val chromosomeLength = TARGET.length`
+`val POP_SIZE = 100`
+`val MAX_GEN = 1000`
+`val ELITISM = 0.15`
+`val eliteSize = (POP_SIZE * ELITISM).toInt()`
+❸ `val MUTATION_THRESHOLD = 1.0/chromosomeLength`
 
-接下来，我们定义目标字符串或种群中最适应个体的期望最终状态❶。目标字符串包含 42 个字符（包括空格），并存储在名为 TARGET 的字符串中。该目标字符串是从一个基因池构建的——这些字符是我们在英语中常用来构建短语的字符。这个基因池保存为 VALID_GENES❷。
+`val population: MutableList<Solution> = mutableListOf()`
+`val nextgen: MutableList<Solution> = mutableListOf()`
 
-我们将种群大小（POP_SIZE）设置为 100，将代数（MAX_GEN）设置为 1,000。我们还使用了精英主义。种群中 15%（即最适应的前 15 个个体）将自动进入下一代。下一代的其余成员将通过选择、交叉和变异生成。变异阈值已设置为 1.0/chromosomeLength ❸，因此每个后代中平均会有 42 个基因中有 1 个基因发生变异。（对于其他优化问题，可能需要调整这个经验规则。例如，当染色体中基因较少时，可能需要将变异阈值从 1%设置为 3%。）
+让我们一步步地讲解这个代码段。在代码块的顶部，我们创建了一个`Solution`对象（数据类），它将用于创建构成种群的个体，并进行基因变化。
 
-最后的两行代码创建了两个可变类型为 Solution 的列表，这些列表分别存储当前代（种群）和下一代（nextgen）个体。
+接下来，我们定义目标字符串或种群中最适应个体的期望最终状态❶。目标字符串包含 42 个字符（包括空格），并存储在名为`TARGET`的字符串中。该目标字符串是从一个基因池构建的——这些字符是我们在英语中常用来构建短语的字符。这个基因池保存为`VALID_GENES`❷。
+
+我们将种群大小（`POP_SIZE`）设置为 100，将代数（`MAX_GEN`）设置为 1,000。我们还使用了精英主义。种群中 15%（即最适应的前 15 个个体）将自动进入下一代。下一代的其余成员将通过选择、交叉和变异生成。变异阈值已设置为`1.0/chromosomeLength`❸，因此每个后代中平均会有 42 个基因中有 1 个基因发生变异。（对于其他优化问题，可能需要调整这个经验规则。例如，当染色体中基因较少时，可能需要将变异阈值从 1%设置为 3%。）
+
+最后的两行代码创建了两个可变类型为`Solution`的列表，这些列表分别存储当前代（`population`）和下一代（`nextgen`）个体。
 
 ##### 初始化种群和适应度评估
 
-初始种群通过调用 initPopulation()函数创建，该函数依赖于 getFitness()辅助函数。
+初始种群通过调用`initPopulation()`函数创建，该函数依赖于`getFitness()`辅助函数。
 
 ```
 fun initPopulation() {
@@ -253,15 +246,15 @@ fun getFitness(chromosome: String): Int {
 }
 ```
 
-initPopulation()函数创建了 POP_SIZE 指定数量的个体（在本例中为 100 个），这些个体的染色体是通过随机从提供的基因池 VALID_GENES ❶中选取个体基因（共 42 个）来生成的。染色体完成后，通过调用 getFitness()函数来评估其适应度。然后，使用染色体和适应度值创建一个新的 Solution 并将其添加到种群中 ❷。
+`initPopulation()`函数创建了`POP_SIZE`指定数量的个体（在本例中为 100 个），这些个体的染色体是通过随机从提供的基因池`VALID_GENES`❶中选取个体基因（共 42 个）来生成的。染色体完成后，通过调用`getFitness()`函数来评估其适应度。然后，使用染色体和适应度值创建一个新的`Solution`并将其添加到种群中❷。
 
-在退出该函数之前，我们按降序对种群进行排序，并打印出初始种群中的最佳解。此排序是为了检查终止条件并在 runGA()函数内实现精英主义，以处理第一代。对于后续代，排序将在每次迭代结束时进行。
+在退出该函数之前，我们按降序对种群进行排序，并打印出初始种群中的最佳解。此排序是为了检查终止条件并在`runGA()`函数内实现精英主义，以处理第一代。对于后续代，排序将在每次迭代结束时进行。
 
-在 getFitness()函数内，我们创建了一个名为 pairs 的列表，类型为 Pair<Char, Char>，并根据基因对的比较来计算给定染色体的适应度值。对于每个匹配的基因，适应度加 1 ❸。如果一个染色体完全匹配目标字符串，它将拥有最大适应度值 42。
+在`getFitness()`函数内，我们创建了一个名为`pairs`的列表，类型为`Pair<Char, Char>`，并根据基因对的比较来计算给定染色体的适应度值。对于每个匹配的基因，适应度加 1❸。如果一个染色体完全匹配目标字符串，它将拥有最大适应度值 42。
 
 ##### 驱动函数
 
-在 runGA()函数的代码块中，我们实现了遗传算法的核心组件。这包括遍历多个代，检查终止条件，并通过精英主义、选择、交叉和变异——即一整套遗传操作符——来创建下一代。
+在`runGA()`函数的代码块中，我们实现了遗传算法的核心组件。这包括遍历多个代，检查终止条件，并通过精英主义、选择、交叉和变异——即一整套遗传操作符——来创建下一代。
 
 ```
 fun runGA() {
@@ -310,17 +303,17 @@ fun runGA() {
 }
 ```
 
-最外层的 for 循环❶执行指定代数的遗传过程。在这个循环内，我们首先通过将当前人口的最佳适应度值与最大可能适应度值❷进行比较来检查终止条件。如果满足条件，程序会在打印达到目标的消息后终止。如果条件不满足，我们通过调用 selectElites()函数❸来实现精英策略，下一节将详细讨论该函数。
+最外层的`for`循环❶执行指定代数的遗传过程。在这个循环内，我们首先通过将当前人口的最佳适应度值与最大可能适应度值❷进行比较来检查终止条件。如果满足条件，程序会在打印达到目标的消息后终止。如果条件不满足，我们通过调用`selectElites()`函数❸来实现精英策略，下一节将详细讨论该函数。
 
-然后我们进入第一个内部 for 循环❹，该循环通过竞赛选择新父代、调用 crossover()函数创建子代（该函数还会对新创建的染色体应用变异，具体内容将在下一节讨论），然后将子代添加到可变的 nextgen 列表中，创建下一代的其余成员。
+然后我们进入第一个内部`for`循环❹，该循环通过竞赛选择新父代、调用`crossover()`函数创建子代（该函数还会对新创建的染色体应用变异，具体内容将在下一节讨论），然后将子代添加到可变的`nextgen`列表中，创建下一代的其余成员。
 
-我们使用第二个内部 for 循环❺将下一代的解决方案（nextgen）逐一复制到 population 中，然后清空 nextgen 以便进行下一次迭代。需要注意的是，由于 Solution 数据类结构简单，应用 copy()方法复制 nextgen 中的元素时，会创建深拷贝，防止 population 和 nextgen 之间发生交叉引用。此外，将 nextgen 的值转移到 population 中后，无需存储多个代的解决方案，从而节省了大量内存。
+我们使用第二个内部`for`循环❺将下一代的解决方案（`nextgen`）逐一复制到`population`中，然后清空`nextgen`以便进行下一次迭代。需要注意的是，由于`Solution`数据类结构简单，应用`copy()`方法复制`nextgen`中的元素时，会创建深拷贝，防止`population`和`nextgen`之间发生交叉引用。此外，将`nextgen`的值转移到`population`中后，无需存储多个代的解决方案，从而节省了大量内存。
 
-在最外层的 for 循环的最后一部分，我们将新更新的人口按降序排序❻，并打印每一代的三个关键值：迭代次数、适应度最佳的染色体以及对应的适应度❼。
+在最外层的`for`循环的最后一部分，我们将新更新的人口按降序排序❻，并打印每一代的三个关键值：迭代次数、适应度最佳的染色体以及对应的适应度❼。
 
 ##### 操作函数
 
-runGA()函数依赖于几个操作函数来执行关键的遗传操作。
+`runGA()`函数依赖于几个操作函数来执行关键的遗传操作。
 
 ```
 fun selectElites() {
@@ -366,17 +359,17 @@ fun mutation(crossChromosome: String): String {
 }
 ```
 
-selectElites()函数是一行代码。它将当前代中最优秀的 15 个个体（eliteSize = 15）直接提升到下一代，而不再进行遗传过程❶。
+`selectElites()`函数是一行代码。它将当前代中最优秀的 15 个个体（`eliteSize = 15`）直接提升到下一代，而不再进行遗传过程❶。
 
-tournament()函数从当前人口中随机选出两个个体，并根据它们的适应度值返回竞争的胜者❷。
+`tournament()`函数从当前人口中随机选出两个个体，并根据它们的适应度值返回竞争的胜者❷。
 
-crossover()函数接受两个父代作为参数，在随机位置切割它们的染色体，并将两个父代的切割部分组合起来，为后代创建一个新的染色体❸。接下来，将这个新创建的染色体（crossChromosome）传递给 mutation()函数❹，该函数返回最终的染色体，并将其保存为 newChromosome。然后，计算新创建的染色体的适应度值，调用 getFitness()❺后返回一个后代。
+`crossover()`函数接受两个父代作为参数，在随机位置切割它们的染色体，并将两个父代的切割部分组合起来，为后代创建一个新的染色体❸。接下来，将这个新创建的染色体（`crossChromosome`）传递给`mutation()`函数❹，该函数返回最终的染色体，并将其保存为`newChromosome`。然后，计算新创建的染色体的适应度值，调用`getFitness()`❺后返回一个后代。
 
-最后，mutation() 函数对随机选择的基因进行突变。它首先将染色体从字符串对象转换为字符数组，因为在 Kotlin 中，字符串是不可变的。突变操作由 MUTATION_THRESHOLD 参数 ❻ 触发，应用于染色体中的每个基因。突变操作完成后，字符数组会被转换回字符串，并作为新的（突变后的）染色体 ❼ 返回。
+最后，`mutation()`函数对随机选择的基因进行突变。它首先将染色体从字符串对象转换为字符数组，因为在 Kotlin 中，字符串是不可变的。突变操作由`MUTATION_THRESHOLD`参数❻触发，应用于染色体中的每个基因。突变操作完成后，字符数组会被转换回字符串，并作为新的（突变后的）染色体❼返回。
 
 ##### main() 函数
 
-main() 函数仅仅打印了一些与问题相关的关键参数，并进行两次函数调用来完成任务。
+`main()`函数仅仅打印了一些与问题相关的关键参数，并进行两次函数调用来完成任务。
 
 ```
 fun main() {
@@ -393,7 +386,7 @@ fun main() {
 }
 ```
 
-第一次调用 initPopulation() 会用随机的染色体初始化当前种群。第二次调用 runGA() 执行必要的遗传操作。
+第一次调用`initPopulation()`会用随机的染色体初始化当前种群。第二次调用`runGA()`执行必要的遗传操作。
 
 #### 结果
 
@@ -401,18 +394,25 @@ fun main() {
 
 以下是程序的一些示例输出：
 
+
+
+# 使用遗传算法进行文本匹配
+
+**目标字符串：** `To be, or not to be: that is the question.`
+
+**种群大小：** 100，**代数：** 1000，**染色体长度：** 42
+
+**变异阈值：** 0.023809523809523808
+
+**初始种群中的最佳解：**
+
 ```
-*** Text-matching using the genetic algorithm ***
-
-Target string: To be, or not to be: that is the question.
-Population size: 100, Generations: 1000, Chromosome length: 42
-Mutation threshold: 0.023809523809523808
-
-Best solution from initial population:
 Solution(chromosome=u[n_ebJvtj=J[h5j{bNx:BhPch'qyM/)3RVz"K_]P:, fitness=3)
+```
 
-... initPopulation done ...
+**... 初始化种群完成 ...**
 
+```
     1   u[n_ebJvtj=J[h5j{bNx:BhPch'qyM/)3RVz"K_]P:   3
     2   c_g-i1KpZQn[[qXq%hwp:,shb]7k?PEL_ol @izl.    4
     3   C@eSnKo7T_b6o@thqvgL Kh=FU[(&bCF{veDP"4/d    5
@@ -425,9 +425,11 @@ Solution(chromosome=u[n_ebJvtj=J[h5j{bNx:BhPch'qyM/)3RVz"K_]P:, fitness=3)
    10   p42y"BZo;bTcXxD?{bNL BhPcU[(&bCF{veDPiol.    9
    11   342y"aZo@_b6o@thqvgL Kh=FD[(?/e qJ9*iio#k   10
    12   =[eSnKo8U XNP thqvgL Kh=FD[(?/e qJ9*iio#k   11
+```
 
 `--snip--`
 
+```
   370   To be, or not to be: that i(the question.   41
   371   To be, or not to be: that i(the question.   41
   372   To be, or not to be: that i(the question.   41
@@ -438,13 +440,13 @@ Solution(chromosome=u[n_ebJvtj=J[h5j{bNx:BhPch'qyM/)3RVz"K_]P:, fitness=3)
   377   To be, or not to be: that i(the question.   41
   378   To be, or not to be: that i(the question.   41
   379   To be, or not to be: that is the question.  42
-
-*** Target reached at generation = 379 ***
 ```
+
+**在第 379 代达到目标**
 
 在这个实例中，起初染色体与目标字符串没有任何相似之处，算法用了 379 代才精确地重建出目标字符串。我们还没有对全局参数值进行任何调整来加速收敛过程，但代码几乎即时就收敛到最优解（处理时间将取决于你设备的配置）。相当令人印象深刻！
 
-项目 34：解决背包问题
+# 项目 34：解决背包问题
 
 你可能熟悉诺亚方舟，诺亚和他的追随者为了躲避大洪水而建造的船只。诺亚所面临的挑战是巨大的：他必须建造一艘前所未有的庞大船只，并选择谁或什么可以上船。对数学家来说，后者的决定是一个经典的优化问题，试图最大化可以容纳在有限空间内的物品的价值。
 
@@ -452,11 +454,11 @@ Solution(chromosome=u[n_ebJvtj=J[h5j{bNx:BhPch'qyM/)3RVz"K_]P:, fitness=3)
 
 约拿能够列出对他最有价值的 12 个物品——但这仍然太多，无法全部带上船。现在，他需要弄清楚应该选择哪些物品的组合，以便这些物品对他来说的总价值（分配的价值总和）最大化，同时不超过船的承载能力。
 
-#### 策略
+## 策略
 
 约拿方舟问题是数学中*背包问题*的一个变种：
 
-> 设 n 为可供选择的物品数量。设***V*** = [v[1], v[2], . . . , vn]为这些物品的价值列表，***W*** = [w[1], w[2], . . . , wn]为这些物品的重量列表。同时，设***W***max 为背包的最大承载重量。目标是找到一个包含 m 个物品的子集，使得该子集的总价值最大化，同时确保相应的物品总重量不超过***W***max。
+> 设 `n` 为可供选择的物品数量。设 `V` = [v[1], v[2], . . . , vn] 为这些物品的价值列表，`W` = [w[1], w[2], . . . , wn] 为这些物品的重量列表。同时，设 `Wmax` 为背包的最大承载重量。目标是找到一个包含 `m` 个物品的子集，使得该子集的总价值最大化，同时确保相应的物品总重量不超过 `Wmax`。
 
 我们将利用遗传算法来解决这个问题。显然，我们需要对代码中的问题定义部分做出调整。首先，由于约拿现在有 12 个不同的物品可以选择，我们将设置染色体的数量为 12。染色体中的每个基因将具有二进制值，其中 1 表示将该物品包含在解决方案中，0 表示排除它。我们还将根据选择的物品及其各自的价值和重量，以不同的方式计算解决方案的适应度。关于这一点，我将在讨论相关代码段时进一步解释。
 
@@ -464,15 +466,15 @@ Solution(chromosome=u[n_ebJvtj=J[h5j{bNx:BhPch'qyM/)3RVz"K_]P:, fitness=3)
 
 在开始编写代码之前，我们需要解决一些技术上的问题。首先，我们将采用 0-1 方法来解决这个问题，意味着我们要么选择一个物品，要么完全排除它。我们不允许选择物品的部分（以及部分的价值）。其次，我们假设每个物品只有一份，因此我们不能在解决方案中重复任何物品。第三，我们假设只有一个背包可供填充。
 
-#### 代码
+## 代码
 
 我们在第三十三章开发了一个完整功能的遗传算法程序。大部分代码我们将重用，并进行一些必要的调整以描述和解决背包问题（或约拿方舟问题）。
 
-##### 问题定义和全局参数
+### 问题定义和全局参数
 
 这段代码由导入语句、数据类声明、创建可供选择的项目列表、全局参数以及创建可变列表以跟踪当前和下一代的种群状态、每代的最佳解决方案等组成。
 
-```
+```kotlin
 import kotlin.math.roundToInt
 
 // Define required data classes.
@@ -486,7 +488,7 @@ data class Item(val value: Int, val weight: Int)
     Item(50, 30),
     Item(68, 43),
     Item(62, 54),
- Item(45, 38),
+    Item(45, 38),
     Item(68, 62),
     Item(84, 85),
     Item(87, 87),
@@ -512,25 +514,25 @@ val nextgen: MutableList<Solution> = mutableListOf()
 val bestSolutions: MutableList<Solution> = mutableListOf()
 ```
 
-代码片段以单个导入语句开始，导入了我们将稍后使用的 roundToInt()方法。接着，我们定义了两个简单的数据类，Solution 和 Item，用于创建种群中的个体成员以及带有其关键属性（值和重量）的对象。请注意，我们创建的是整数数组类型的染色体，而不是像项目 33 中那样创建字符串类型的染色体。
+代码片段以单个导入语句开始，导入了我们将稍后使用的 `roundToInt()` 方法。接着，我们定义了两个简单的数据类，`Solution` 和 `Item`，用于创建种群中的个体成员以及带有其关键属性（值和重量）的对象。请注意，我们创建的是整数数组类型的染色体，而不是像项目 33 中那样创建字符串类型的染色体。
 
-> 注意
+> **注意**
+>
+> 根据你的 IDE，你可能会在声明本项目的第一个数据类（`Solution`）时遇到“弱警告”。这是因为我们在数据类（`Solution`）中使用了一个属性，其类型为 `Array`（`chromosome`）。虽然该警告表明某些用例可能存在潜在问题，但对于本章和下一章讨论的问题并不适用。如果你觉得这个警告烦人，可以尝试用常规类代替数据类。在这种情况下，你可以手动添加数据类自动生成的必要自定义方法，例如 `copy()` 和 `toString()`。我鼓励你尝试这种方法，作为进一步学习的机会。
 
-*根据你的 IDE，你可能会在声明本项目的第一个数据类（*Solution*）时遇到“弱警告”。这是因为我们在数据类（*Solution*）中使用了一个属性，其类型为*Array*（*chromosome*）。虽然该警告表明某些用例可能存在潜在问题，但对于本章和下一章讨论的问题并不适用。如果你觉得这个警告烦人，可以尝试用常规类代替数据类。在这种情况下，你可以手动添加数据类自动生成的必要自定义方法，例如*copy()*和*toString()*。我鼓励你尝试这种方法，作为进一步学习的机会。*
+接下来，我们创建了一个包含 12 个对象❶的 `Item` 类型的 `List`。船的容量限制（`maxWeight`）设置为 175 单位❷（我们假设这是除了约拿自身重量之外的限制）。
 
-接下来，我们创建了一个包含 12 个对象❶的 Item 类型的 List。船的容量限制（maxWeight）设置为 175 单位❷（我们假设这是除了约拿自身重量之外的限制）。
-
-鉴于可选择的对象相对较少，我们将种群大小（POP_SIZE）设置为 25，代数（MAX_GEN）设置为适中的 30。精英选择比例设置为 0.1，即 10%。变异阈值（MUTATION_THRESHOLD）的值设置得稍有不同（其值保留三位有效数字），❸，但它仍然遵循经验法则。
+鉴于可选择的对象相对较少，我们将种群大小（`POP_SIZE`）设置为 25，代数（`MAX_GEN`）设置为适中的 30。精英选择比例设置为 0.1，即 10%。变异阈值（`MUTATION_THRESHOLD`）的值设置得稍有不同（其值保留三位有效数字），❸，但它仍然遵循经验法则。
 
 请注意，变异阈值可以四舍五入到几个小数位，而不会影响结果。这可以加速更复杂问题的计算，这些问题需要更大的种群和更长的运行时间才能收敛。
 
 代码的最后三行创建了三个可变列表，用于存储当前和下一代成员，以及从连续代中挑选出的最佳解集合。
 
-##### 初始化种群和适应度评估
+### 初始化种群和适应度评估
 
 本节与我们为项目 33 开发的内容只有少数几个不同之处。
 
-```
+```kotlin
 fun initPopulation() {
     // Initialize a population of valid solutions (of nonzero fitness).
     // Each solution is represented by a chromosome.
@@ -568,21 +570,21 @@ fun getFitness(chromosome: IntArray): Int {
 }
 ```
 
-在 initPopulation()函数中，我们首先将每个染色体创建为一个整数数组❶。这是因为我们仅允许在染色体中使用二进制基因值（0 或 1）。最初，所有基因都将设置为 0，当染色体初始化时。然后，我们在一个 while 循环❷中随机改变这些值为 1 或 0。此外，我们只将具有非零或正适应度值的解添加到初始种群中❸。这样有助于我们从更好的染色体集合开始，避免所有初始解的适应度值都为零的情况，因为这种情况是很难改进的！
+在 `initPopulation()` 函数中，我们首先将每个染色体创建为一个整数数组❶。这是因为我们仅允许在染色体中使用二进制基因值（0 或 1）。最初，所有基因都将设置为 0，当染色体初始化时。然后，我们在一个 `while` 循环❷中随机改变这些值为 1 或 0。此外，我们只将具有非零或正适应度值的解添加到初始种群中❸。这样有助于我们从更好的染色体集合开始，避免所有初始解的适应度值都为零的情况，因为这种情况是很难改进的！
 
-函数的其余部分与之前相同——我们在对初始种群进行排序，以为 runGA()函数中的精英选择做好准备，并打印出初始种群中的当前最佳解。
+函数的其余部分与之前相同——我们在对初始种群进行排序，以为 `runGA()` 函数中的精英选择做好准备，并打印出初始种群中的当前最佳解。
 
-辅助函数 getFitness()接受一个染色体作为参数，并评估其适应度。它将适应度计算为值的加权和（sumValue），其中权重为染色体中的基因❹。它还计算了加权和的重量作为 sumWeight❺。如果重量的总和≤ Wmax，函数返回染色体的适应度值；否则，返回 0。
+辅助函数 `getFitness()` 接受一个染色体作为参数，并评估其适应度。它将适应度计算为值的加权和（`sumValue`），其中权重为染色体中的基因❹。它还计算了加权和的重量作为 `sumWeight`❺。如果重量的总和 ≤ `Wmax`，函数返回染色体的适应度值；否则，返回 0。
 
-如前所述，我们必须确保 sumWeight ≤ Wmax 且 sumValue > 0。我们在此函数中强制执行前一个条件。后一个条件则是在 initPopulation()函数的 while 循环内强制执行的。只有当染色体的适应度值（由 getFitness()函数返回）大于零时，染色体才会被使用❸。
+如前所述，我们必须确保 `sumWeight ≤ Wmax` 且 `sumValue > 0`。我们在此函数中强制执行前一个条件。后一个条件则是在 `initPopulation()` 函数的 `while` 循环内强制执行的。只有当染色体的适应度值（由 `getFitness()` 函数返回）大于零时，染色体才会被使用❸。
 
-##### 驱动函数
+### 驱动函数
 
 我们同样需要对这部分代码做一些小的修改，代码最初是为项目 33 开发的。首先，我们将在开头删除终止条件。对于背包问题，最佳解通常事先未知。我们需要运行代码几次，以了解可能的最佳解。其次，我们现在会将所有代的最佳解保存在一个列表中，并从该列表中挑选出整体最优的解作为潜在的最佳解。
 
-这是修订后的 runGA()函数的代码：
+这是修订后的 `runGA()` 函数的代码：
 
-```
+```kotlin
 fun runGA() {
     // Run the algorithm for a specified number of generations.
     for (generation in 1 .. MAX_GEN) {
@@ -601,7 +603,8 @@ fun runGA() {
             // Add child to nextgen.
             nextgen += child
         }
- // Step 3: Transfer nextgen to the current population.
+
+        // Step 3: Transfer nextgen to the current population.
         for (i in nextgen.indices)
             population[i] = nextgen[i].copy()
 
@@ -620,7 +623,9 @@ fun runGA() {
 }
 ```
 
-除了删除基于适应度值的终止条件外，代码的两个修改都位于代码段的末尾。首先，每代中最优的解现在被添加到可变的 bestSolutions 列表中❶。其次，我们添加了一个新的打印函数，名为 printSolution()❷，以整理打印输出而不增加 runGA()的混乱。该函数简单地格式化并打印出每代的代数、染色体和最优解的适应度值。
+
+
+除了删除基于适应度值的终止条件外，代码的两个修改都位于代码段的末尾。首先，每代中最优的解现在被添加到可变的`bestSolutions`列表中❶。其次，我们添加了一个新的打印函数，名为`printSolution()`❷，以整理打印输出而不增加`runGA()`的混乱。该函数简单地格式化并打印出每代的代数、染色体和最优解的适应度值。
 
 ```
 fun printSolution(generation: Int, solution: Solution) {
@@ -634,9 +639,9 @@ fun printSolution(generation: Int, solution: Solution) {
 
 该函数打印一行由三个子字符串组成的内容。第一个子字符串表示代数或迭代次数。我们为此分配了 10 个字符空格，其中 4 个用于显示数字，其余的空格将在数字后作为填充（空白字符）。第二个子字符串简单地包含了 12 个基因的序列，转换成字符串。第三个子字符串包含适应度值。我们为数字分配了六个空格，其中最多三个将用于显示适应度值，其余空格将作为填充，位于显示适应度值的字符前面。
 
-##### 操作符函数
+### 操作符函数
 
-我们将跳过讨论 selectElites()和 tournament()函数，因为在此示例中使用它们不需要做任何更改（你可以从项目 33 中复制它们）。然而，我们有一个不同的染色体结构来解决背包问题，并且需要满足额外的约束条件。这意味着我们需要对 crossover()和 mutation()函数进行修改。
+我们将跳过讨论`selectElites()`和`tournament()`函数，因为在此示例中使用它们不需要做任何更改（你可以从项目 33 中复制它们）。然而，我们有一个不同的染色体结构来解决背包问题，并且需要满足额外的约束条件。这意味着我们需要对`crossover()`和`mutation()`函数进行修改。
 
 ```
 fun crossover(parent1: Solution, parent2: Solution): Solution {
@@ -668,17 +673,17 @@ fun mutation(newChromosome: IntArray) {
 }
 ```
 
-如同之前，crossover()函数首先随机定位一个点来分割染色体❶。我们使用 copyRangeOf()方法从父代 1 和父代 2 复制不同范围的基因，因为染色体的类型是 IntArray 而不是 String。新染色体是通过将父代 1 的前半部分与父代 2 的后半部分组合而成的（每次交叉生成一个子代）❷。
+如同之前，`crossover()`函数首先随机定位一个点来分割染色体❶。我们使用`copyRangeOf()`方法从父代 1 和父代 2 复制不同范围的基因，因为染色体的类型是`IntArray`而不是`String`。新染色体是通过将父代 1 的前半部分与父代 2 的后半部分组合而成的（每次交叉生成一个子代）❷。
 
-接下来，我们调用 mutation()函数对新创建的染色体进行变异❸。由于数组是按引用（内存位置）而非按值传递的，因此所有遗传变异将直接应用到 newChromosome 的选定元素上，我们无需将变异后的染色体返回给调用函数。
+接下来，我们调用`mutation()`函数对新创建的染色体进行变异❸。由于数组是按引用（内存位置）而非按值传递的，因此所有遗传变异将直接应用到`newChromosome`的选定元素上，我们无需将变异后的染色体返回给调用函数。
 
-一旦此步骤完成，使用新创建的染色体和其适应度❹，将创建并返回一个新的子代（Solution）。
+一旦此步骤完成，使用新创建的染色体和其适应度❹，将创建并返回一个新的子代（`Solution`）。
 
-最后，mutation()函数扫描染色体中的每个基因，并通过将一个介于 0 和 1 之间的随机数与 MUTATION_THRESHOLD 进行比较来对基因进行变异。当条件满足时，它会将基因的值从 0 翻转为 1，或反之❺。
+最后，`mutation()`函数扫描染色体中的每个基因，并通过将一个介于 0 和 1 之间的随机数与`MUTATION_THRESHOLD`进行比较来对基因进行变异。当条件满足时，它会将基因的值从 0 翻转为 1，或反之❺。
 
-##### main()函数
+### main()函数
 
-本项目的 main()函数与项目 33 中的 main()函数相似，只是多了一次调用 printBestSolution()来打印最佳总体解。以下是包含打印功能的代码片段：
+本项目的`main()`函数与项目 33 中的`main()`函数相似，只是多了一次调用`printBestSolution()`来打印最佳总体解。以下是包含打印功能的代码片段：
 
 ```
 fun main() {
@@ -708,11 +713,11 @@ fun printBestSolution() {
 }
 ```
 
-main()函数非常简短。它首先打印关键的全局参数，然后调用 initPopulation()创建初始解集，并调用驱动函数 runGA()来运行我们为背包问题定制的遗传算法。最后，调用 printBestSolution()函数打印最佳总体解。
+`main()`函数非常简短。它首先打印关键的全局参数，然后调用`initPopulation()`创建初始解集，并调用驱动函数`runGA()`来运行我们为背包问题定制的遗传算法。最后，调用`printBestSolution()`函数打印最佳总体解。
 
-接下来，bestSolutions 列表按降序排序，使得第一个项目代表最优解❶。然后，解构该项目的属性为染色体和适应度❷。最后，计算此最优（或近似最优）解中物品的总重量作为加权总和，权重为各个基因值（0，1）❸。最后一行打印最佳总体解的重量和适应度总和。
+接下来，`bestSolutions`列表按降序排序，使得第一个项目代表最优解❶。然后，解构该项目的属性为染色体和适应度❷。最后，计算此最优（或近似最优）解中物品的总重量作为加权总和，权重为各个基因值（0，1）❸。最后一行打印最佳总体解的重量和适应度总和。
 
-#### 结果
+## 结果
 
 以下是运行代码时的示例输出，提供了运行代码时可以期待的结果：
 
@@ -772,7 +777,7 @@ Jonah 的最优解是选择物品 1、2、3、4 和 12，这将使 Jonah 的总�
 
 另一方面，遗传算法可以帮助解决现实世界中的组合问题，这些问题涉及数百个决策变量，在这种情况下，检查所有可能的组合以找到全局最优解既不实际也不可能。它们所需的时间远少于传统方法，并且生成近似最优解所需的计算努力显著较少。
 
-项目 35：使用遗传算法优化多元函数
+## 项目 35：使用遗传算法优化多元函数
 
 在这个最终项目中，我们将学习如何将遗传算法应用于多元函数优化。对于函数的唯一要求是，它必须在决策空间内以独立变量的形式定义。与基于梯度的算法不同，这个函数不需要是平滑的或可微的。
 
@@ -786,7 +791,7 @@ $方程式$ ![](img/pg333.jpg)
 
 如前所示，在图 8-3 中，Eggholder 函数具有非常复杂的形状，拥有众多的峰值和谷值。正因为如此，基于梯度的确定性算法很难找到全局最小值。确定性搜索方法通常会陷入局部最优解，除非我们采用一种结合随机搜索特征的混合方法。相比之下，给定足够的多样性（种群大小）和时间（代数），遗传算法能够相对快速地为该问题找到全局最小值。
 
-#### 策略
+### 策略
 
 为了在遗传算法中实现函数优化，决策变量被视为个体基因，这意味着二维 Eggholder 函数将有两个基因。然而，这些基因将作为实数表示，包括分数，而不是字符（如在项目 33 中）或二进制值（如在项目 34 中）。
 
@@ -794,237 +799,61 @@ $方程式$ ![](img/pg333.jpg)
 
 最后，我们需要一种新的方式来实现函数优化的变异。在之前的项目中，我们通过随机替换字符或二进制值引入变异，但这种方法对于实数来说没有意义。实数的数字不能随意替换，因为它们在数字中的相对位置具有额外的意义。因此，对于实值基因，变异是通过向基因中随机添加或减去一个小的噪声来实现的（我们仍然使用概率阈值）。噪声的大小被计算为特定基因（决策变量）范围的一小部分。通过这种方式，我们可以适当地调整噪声或变异的大小，而无需担心函数中相应决策变量所使用的底层单位。
 
-#### 代码
+### 代码
 
 函数优化的代码与项目 33 和 34 具有相同的一般结构。值得再次强调的是，若要最小化目标函数，我们需要将其乘以–1，而对于最大化目标函数，则无需对其进行任何修改。
 
-##### 问题定义与全局参数
+#### 问题定义与全局参数
 
 这段代码包括导入块、数据类、全局参数以及几个可变列表的集合：
 
-```
-// import block
-import kotlin.math.sin
-import kotlin.math.sqrt
-import kotlin.math.abs
-import kotlin.math.pow
-import kotlin.math.min
-import kotlin.math.max
-import kotlin.random.Random
 
-// Define required data classes.
-data class Solution(
-  ❶ val chromosome: DoubleArray,
-    val fitness: Double)
 
-// global parameters and declarations
-❷ val getFitness = :: eggHolder
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
-❸ val chromosomeLength = 2    // number of independent variables
-val bounds = arrayOf(doubleArrayOf(-512.0, 512.0),
-                     doubleArrayOf(-512.0, 512.0))
-val varRange = doubleArrayOf(bounds[0][1] - bounds[0][0],
-                             bounds[1][1] - bounds[1][0])
-val POP_SIZE = 100
-val MAX_GEN = 200
-❹ val MUTATION_THRESHOLD = 0.5    // On average, 1 of 2 genes will mutate.
-val MUTATION_FACTOR = 0.02
-val ELITISM = 0.1
-val eliteSize = (POP_SIZE * ELITISM).toInt()
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`。
 
-val population: MutableList<Solution> = mutableListOf()
-val nextgen: MutableList<Solution> = mutableListOf()
-val bestSolutions: MutableList<Solution> = mutableListOf()
-```
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
 
-这段代码首先导入必要的数学函数，以计算函数值或适应度。记得只导入你需要的方法，而不是使用`import kotlin.math.*`语句导入所有方法。然后，我们声明染色体为 DoubleArray 类型❶，以处理实数编码的基因。
-
-我们还将 getFitness 定义为一个变量，并将其引用赋值给 Eggholder 函数❷。这种方法使得我们以后可以定义其他函数。要使用这些函数，我们只需将 getFitness 重新赋值为所需的函数。
-
-由于 Eggholder 函数是一个由两个独立变量（*x*[1] 和 *x*[2]）决定的函数，我们每个染色体需要两个实数编码的基因❸。
-
-接下来的两行设置决策变量的边界，并计算每个变量的范围。对于实数编码的基因，变异的大小通常设置为相对于决策变量范围的一个小值。这种方法的优点是与尺度无关。
-
-代码段的其余部分与之前的项目相似。这次，种群由 100 个个体（POP_SIZE）组成，并将进化 200 代（MAX_GEN）。MUTATION_THRESHOLD 现在设为 0.5❹，符合将突变概率设置为基因数的倒数的惯例。
-
-当然，我们也可以尝试许多其他参数值的组合。此代码段中使用的值是通过多次试验选择的，以确保可以快速找到 Eggholder 函数的全局最小值。
-
-##### 初始化种群和适应度评估
-
-这段代码的总体结构与前两个项目非常相似，只是做了一些与问题相关的调整：
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
 
 ```
-fun initPopulation() {
-    // Initialize a population of valid solutions (genes within bounds).
-    // Each solution is represented by a chromosome.
-
-    for (person in 0 until POP_SIZE) {
-      ❶ val x = DoubleArray(chromosomeLength)
-        for (i in 0 until chromosomeLength) {
-            // The first argument is inclusive, but the second one is not.
-            // It's possible to add a small bias term to the upper bounds.
-          ❷ x[i] = Random.nextDouble(bounds[i][0], bounds[i][1])
-        }
-        population += Solution(x, getFitness(x))
-    }
-
-    // Sort the population (in place) in descending order.
-    population.sortByDescending {it.fitness}
-
-    println("\nBest solution from initial population:")
-  ❸ println(population[0].toString())
-    println("\n... initPopulation done ...\n")
-}
-fun eggHolder(x: DoubleArray): Double {
-    val c1 = (x[1] + 47)
-    val c2 = sin(sqrt(abs(0.5 * x[0] + c1)))
-    val c3 = x[0] * sin(sqrt(abs(x[0] - c1)))
-
-    // Multiply by -1 ONLY for minimization problems.
-  ❹ return -1.0 * (-c1 * c2 - c3)
-}
+if (condVar > someVal) {console.log("xxx")}
 ```
 
-我们将染色体生成一个 DoubleArray，包含两个元素（*x*[0]为基因 1，*x*[1]为基因 2）❶。然后，我们随机初始化这些基因，确保它们保持在各自的边界内（由决策空间定义）❷。其余的代码段将解分配给可变列表 population，按降序对 population 进行排序，并打印初始种群中的最佳解❸。
 
-如前所述，这段代码没有包括 getFitness 函数；相反，我们将 getFitness 指向了 eggHolder()函数，它返回目标函数（适应度）的值。为了方便，我们将方程 8.2 给出的目标函数分解为三部分，稍后将这些部分合并计算适应度值❹。请注意，我们在返回值给 getFitness 之前，将适应度乘以-1。这样做可以使我们使用为最大化问题开发的代码来解决最小化问题。
 
-我们将跳过 runGA()函数的审查，因为它与项目 34 中使用的相同。selectElites()和 tournament()函数也是如此。因此，我们将直接进入 crossover()和 mutation()函数。
+# 实值函数优化：遗传算法
 
-##### Crossover 和 Mutation 的操作函数
+## 运行参数
 
-接下来，我们将讨论执行交叉和突变的两个关键操作函数，看看针对实值基因引入的差异。
+- 维度数：2
+- 种群大小：100，代数：200
+- 精英策略：0.1
+- 变异阈值：0.5
+- 变异因子：0.02
 
-```
-fun crossover(parent1: Solution, parent2: Solution): Solution {
-    // Select a random weight within (0-1).
-    // This could be generated separately for x- and y-components.
-  ❶ val s = (0..1000).random()/1000.0
+## 运行结果
 
-    // Generate randomly weighted genes.
-    var x1 = parent1.chromosome[0]*s + parent2.chromosome[0]*(1-s)
-    var x2 = parent1.chromosome[1]*s + parent2.chromosome[1]*(1-s)
-
-    // Check that new genes stay within bounds (decision space).
-    x1 = min(max(x1, bounds[0][0]), bounds[0][1])
-    x2 = min(max(x2, bounds[1][0]), bounds[1][1])
-
-    // Compose the new chromosome.
-  ❷ val xNew = doubleArrayOf(x1, x2)
-    // Mutate the new chromosome.
-  ❸ mutation(xNew)
-
-  ❹ return Solution(xNew, getFitness(xNew))
-}
-
-fun mutation(xNew: DoubleArray) {
-    for (i in 0 until chromosomeLength) {
-        if (((0..1000).random() / 1000.0) <= MUTATION_THRESHOLD) {
-            // Get the random sign factor.
-          ❺ val sign = if ((0..100).random()/100.0 <= 0.5) -1 else 1
-          ❻ xNew[i] += sign * varRange[i] * MUTATION_FACTOR
-            xNew[i] =  min(max(xNew[i], bounds[i][0]), bounds[i][1])
-        }
-    }
-    // nothing to return
-}
-```
-
-实数基因的交叉函数目的仍然相同：通过使用父代的遗传物质为子代生成新的染色体。可以使用几种方法来创建新的染色体或基因。在这个示例中，我们使用基于随机选择的值*s*（范围在 0 和 1 之间）❶的随机加权方案。 （如果使用固定的权重，s=0.5，那就相当于用两个父代基因值的算术平均值来创建一个新的基因。）
-
-我们使用加权平均方案来生成两个新基因（x1 和 x2），并确保这些值在决策变量的范围内。然后，我们将新的染色体 xNew 组合为一个 DoubleArray，包含两个基因作为其元素❷。
-
-接下来，我们调用 mutation() 函数对在位置 ❸ 创建的染色体进行变异。由于数组是通过引用传递的（内存地址），因此变异可以直接作用于数组的元素（基因），我们不需要返回任何内容给调用函数。变异应用后，使用新创建的染色体及其适应度 ❹ 创建并返回一个新子代（解）。
-
-mutation() 函数，类似于 项目 34，扫描每个基因，如果 0 到 1 之间的随机数小于 MUTATION_THRESHOLD，则对其进行变异。它随机选择变异的符号（正或负） ❺ 并计算该值，公式为符号乘以决策变量的范围再乘以 MUTATION_FACTOR ❻。它还确保变异后的基因值在相应决策变量的边界内。
-
-在我们继续 main() 函数之前，我们需要调整来自 项目 34 的 printSolution() 函数。现在它接受一个类型为 DoubleArray 的染色体解，而非 IntArray。请在代码中使用以下更新后的函数：
+初始种群中的最佳解：
 
 ```
-fun printSolution(generation: Int, solution: Solution) {
-    val str1 = "%04d".format(generation).padEnd(10, ' ')
-    val (c, f) = solution
-    val str2 = "%5.7f".format(c[0]).padEnd(14, ' ')
-    val str3 = "%5.7f".format(c[1]).padEnd(14, ' ')
-
-    // Multiply f (fitness) by -1 for minimization (for display only).
-    val str4 = "%5.4f".format(-f)
-
-    println(str1 + str2 + str3 + str4)
-}
-```
-
-你可以回顾这段代码，并将其与程序输出进行比较作为练习，因为你已经熟悉这些辅助函数。
-
-##### main() 函数
-
-main() 函数的代码片段，包括 printBestSolution() 函数，与之前项目中的 main() 函数类似。
-
-```
-fun main() {
-    println("\n*** Real-valued function optimization using " +
-            "the genetic algorithm ***\n")
-    println("Number of dimensions: $chromosomeLength")
-    println("Population size: $POP_SIZE, Generations: $MAX_GEN")
-    println("Elitism: $ELITISM")
-    println("Mutation threshold: $MUTATION_THRESHOLD")
-    println("Mutation factor: $MUTATION_FACTOR")
-
-    // Initialize the population.
-    initPopulation()
-    // Run the genetic algorithm.
-    runGA()
-    // Print the best overall solution.
-    printBestSolution()
-}
-
-fun printBestSolution() {
-    // Sort the bestSolutions to get the best-so-far solution.
-    bestSolutions.sortByDescending {it.fitness}
-    println("\nBest solution found after $MAX_GEN generations:")
-
-    // Deconstruct for printing with formatting.
-    val (chromosome, fitness) = bestSolutions[0]
-
-    // Format and print the best-so-far properties.
-    for (i in chromosome.indices) {
-        print("chromosome[$i]: ")
-        println("%5.8f".format(chromosome[i]))
-    }
-    println("Fitness: " + "%5.5f".format(-fitness))
-}
-```
-
-main() 函数首先打印关键的全局参数。然后它调用 initPopulation() 来初始化种群，并启动驱动函数 runGA()，通过遗传算法执行函数最小化。
-
-在 printBestSolution() 函数中，我们使用 for 循环将两个实数基因格式化并打印在同一行。最后，我们打印负适应度值，以获取正确的最小适应度符号。
-
-#### 结果
-
-现在我们可以运行代码并查看结果。如果你使用与我为此项目所使用的相同全局参数值，你很可能在五到七次尝试内获得全局最优解。让我们来看一个示例输出：
-
-```
-*** Real-valued function optimization using a genetic algorithm ***
-
-Number of dimensions: 2
-Population size: 100, Generations: 200
-Elitism: 0.1
-Mutation threshold: 0.5
-Mutation factor: 0.02
-
-Best solution from initial population:
 [439.9192360610284, 466.3475628354653] -809.6304961876202
+```
 
-... initPopulation done ...
+`initPopulation` 完成...
 
+```
 0001      439.91923606   466.34756284   -809.63050
 0002      439.91923606   466.34756284   -809.63050
 0003      439.91923606   466.34756284   -809.63050
 0004      421.26042117   431.81770471   -838.23597
 0005      421.26042117   431.81770471   -838.23597
+```
 
 `--snip--`
 
+```
 0190      512.00000000   404.23184036   -959.64066
 0191      512.00000000   404.23184036   -959.64066
 0192      512.00000000   404.23184036   -959.64066
@@ -1036,20 +865,25 @@ Best solution from initial population:
 0198      512.00000000   404.23184036   -959.64066
 0199      512.00000000   404.23184036   -959.64066
 0200      512.00000000   404.23184036   -959.64066
+```
 
-Best solution found after 200 generations:
+200 代后找到的最佳解：
+
+```
 chromosome[0]: 512.00000000
 chromosome[1]: 404.23184036
 Fitness: -959.64066
 ```
 
+## 结果分析
+
 结果的第一部分展示了用于解决该问题的全局参数——种群大小（100）和代数（200）。精英策略设置为 0.1，即 10%。我们使用了 0.5 的变异阈值，因为我们有两个基因，但如果该阈值导致最佳解发生波动而非收敛，我们本可以使用更低的阈值。由于该问题的决策空间内存在许多接近最优的解，较高的变异阈值可能有助于算法跳出局部最小值并探索其他区域。
 
 初始的最佳适应度值为 -809.63，这与全局最小值 -959.64 的差距不大，全局最小值出现在 117 次迭代后（在上面的部分输出中没有显示）。一旦达到了这个值，最佳解保持不变，直到程序在完成最大迭代次数后结束。
 
-从结果的最后部分可以看出，最优解位于 *x*[1] = 512.0 和 *x*[2] = 404.23。图 8-9 显示了这个点，作为在 Eggholder 函数等高线图的右上角附近的白色半圆。
+从结果的最后部分可以看出，最优解位于 `x[1] = 512.0` 和 `x[2] = 404.23`。图 8-9 显示了这个点，作为在 Eggholder 函数等高线图的右上角附近的白色半圆。
 
-![](img/Figure8-9.jpg)
+![图 8-9](img/Figure8-9.jpg)
 
 图 8-9：Eggholder 函数的等高线图
 
@@ -1057,13 +891,13 @@ Fitness: -959.64066
 
 图 8-10 展示了这个问题的收敛模式。适应度值随着代数（迭代次数）的增加而逐步改善，直到达到全局最小值。
 
-![](img/Figure8-10.jpg)
+![图 8-10](img/Figure8-10.jpg)
 
 图 8-10：使用遗传算法求解 Eggholder 函数的收敛模式
 
 我们将在下一章使用粒子群优化（另一种 NIA）重新解决这个问题，并绘制相应的收敛模式。你将看到，虽然两种方法都能找到全局最优解，但粒子群优化会更快完成这一过程！
 
-### 遗传算法的停止条件
+## 遗传算法的停止条件
 
 在解决现实世界的优化问题时，我们通常无法获得全局最优解。因此，我们不能直接使用它作为停止条件。为了解决这个挑战，我们可以采用几种策略。在本节中，我将讨论在遗传算法中常用的停止条件定义方法。
 
@@ -1075,21 +909,21 @@ Fitness: -959.64066
 
 关于遗传算法还有很多可以讨论的内容，研究人员经常开发新的自适应或混合策略，并发现新的应用。如果你对前沿技术感兴趣，我建议你查阅近期的期刊文章，了解遗传算法在你感兴趣领域的应用。
 
-在项目 35 中，我们修改了用于函数最大化的代码，以处理一个最小化问题。然而，代码的来回修改容易导致错误。因此，在下一个练习中，你将开发新的代码，直接处理函数最小化问题。 ### 总结
+在项目 35 中，我们修改了用于函数最大化的代码，以处理一个最小化问题。然而，代码的来回修改容易导致错误。因此，在下一个练习中，你将开发新的代码，直接处理函数最小化问题。
+
+## 总结
 
 在本章中，你探讨了自然启发式算法的迷人世界，这些计算方法模仿自然现象来解决复杂问题。此类算法的一个关键特点是它们具有随机性：它们利用内建的随机性来处理那些常规方法难以解决或过于复杂的问题。你了解了使用自然启发式算法的优势和挑战，并重点讨论了最受欢迎且最强大的例子之一：遗传算法。
 
 遗传算法受到自然进化过程的启发，使用一组候选解，通过选择、交叉和变异来找到给定问题的最佳解。你学习了几种实现这些操作的方法，并调整算法的参数以获得最佳性能。你还将遗传算法应用于三个不同的项目，以：
 
-+   从一个随机字符种群中生成目标字符串
-
-+   在有限容量的背包中最大化物品的价值
-
-+   为一个实值且高度复杂的多变量目标函数找到全局最优解
+- 从一个随机字符种群中生成目标字符串
+- 在有限容量的背包中最大化物品的价值
+- 为一个实值且高度复杂的多变量目标函数找到全局最优解
 
 此外，你完成了一组涵盖交叉操作的附加技术和解决最小化问题的专门方法的练习。到本章结束时，你对遗传算法的理论和实践有了坚实的理解，并掌握了如何使用它们来解决各种类型的优化问题。
 
-### 资源
+## 资源
 
 Brownlee, Jason. *《聪明的算法：自然启发的编程技巧》*. 电子版, 2012 年 6 月 16 日. *[`github.com/clever-algorithms/CleverAlgorithms`](https://github.com/clever-algorithms/CleverAlgorithms)*.
 

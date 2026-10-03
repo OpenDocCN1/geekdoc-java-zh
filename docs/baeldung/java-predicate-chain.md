@@ -1,14 +1,15 @@
+
 # Java 8 谓词链
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-predicate-chain>
 
-## 1。概述
+## 1. 概述
 
-在这个快速教程中，**我们将讨论在 Java 8 中链接 [`Predicates`](/web/20221028012857/https://www.baeldung.com/cs/predicates) 的不同方式。**
+在这个快速教程中，**我们将讨论在 Java 8 中链接 `Predicates` 的不同方式。**
 
-## 2。基本示例
+## 2. 基本示例
 
-首先，**让我们看看如何使用一个简单的`Predicate`** 来过滤一个`List`的名字:
+首先，**让我们看看如何使用一个简单的 `Predicate`** 来过滤一个 `List` 的名字：
 
 ```java
 @Test
@@ -23,17 +24,17 @@ public void whenFilterList_thenSuccess(){
 }
 ```
 
-在本例中，我们使用`Predicate`过滤了姓名的`List`，只留下以“A”开头的姓名:
+在本例中，我们使用 `Predicate` 过滤了姓名的 `List`，只留下以“A”开头的姓名：
 
 ```java
 name -> name.startsWith("A")
 ```
 
-但是如果我们想要应用多个`Predicates`呢？
+但是如果我们想要应用多个 `Predicates` 呢？
 
-## 3。多个过滤器
+## 3. 多个过滤器
 
-如果我们想要应用多个`Predicates`，**，一个选择是简单地链接多个过滤器:**
+如果我们想要应用多个 `Predicates`，**一个选择是简单地链接多个过滤器**：
 
 ```java
 @Test
@@ -48,13 +49,11 @@ public void whenFilterListWithMultipleFilters_thenSuccess(){
 }
 ```
 
-现在，我们已经更新了示例，通过提取以“A”开头且长度小于 5 的名称来过滤列表。
+现在，我们已经更新了示例，通过提取以“A”开头且长度小于 5 的名称来过滤列表。我们使用了两个过滤器——一个用于一个 `Predicate`。
 
-我们使用了两个过滤器——一个用于一个`Predicate`。
+## 4. 复杂 `Predicate`
 
-## 4。复杂`Predicate`
-
-现在，我们可以用一个复杂的`Predicate` : 滤波器来代替使用多个滤波器
+现在，我们可以用一个复杂的 `Predicate` 滤波器来代替使用多个过滤器：
 
 ```java
 @Test
@@ -68,17 +67,17 @@ public void whenFilterListWithComplexPredicate_thenSuccess(){
 }
 ```
 
-这个选项比第一个更灵活，因为**我们可以使用位运算来构建我们想要的复杂的`Predicate`** 。
+这个选项比第一个更灵活，因为**我们可以使用位运算来构建我们想要的复杂的 `Predicate`** 。
 
-## 5。结合`Predicates`
+## 5. 结合 `Predicates`
 
-接下来，如果我们不想使用位运算构建复杂的`Predicate`，Java 8 `Predicate`有一些有用的方法，我们可以用它们来组合`Predicates`。
+接下来，如果我们不想使用位运算构建复杂的 `Predicate`，Java 8 `Predicate` 有一些有用的方法，我们可以用它们来组合 `Predicates`。
 
-**我们将使用`Predicate.and()`、`Predicate.or()`和`Predicate.negate().`、**的方法组合`Predicates`
+**我们将使用 `Predicate.and()`、`Predicate.or()` 和 `Predicate.negate().`、** 的方法组合 `Predicates`。
 
-### 5.1。`Predicate.and()`
+### 5.1. `Predicate.and()`
 
-在这个例子中，我们将显式定义我们的`Predicates`，然后我们将使用`Predicate.and():`组合它们
+在这个例子中，我们将显式定义我们的 `Predicates`，然后我们将使用 `Predicate.and():` 组合它们：
 
 ```java
 @Test
@@ -95,13 +94,11 @@ public void whenFilterListWithCombinedPredicatesUsingAnd_thenSuccess(){
 }
 ```
 
-正如我们所看到的，语法相当直观，方法名暗示了操作的类型。使用`and()`，我们通过只提取满足两个条件的名字来过滤`List`。
+正如我们所看到的，语法相当直观，方法名暗示了操作的类型。使用 `and()`，我们通过只提取满足两个条件的名字来过滤 `List`。
 
-### 5.2。`Predicate.or()`
+### 5.2. `Predicate.or()`
 
-我们也可以用`Predicate.or()`来组合`Predicates.`
-
-让我们提取以“J”开头的名称，以及长度小于 4 的名称:
+我们也可以用 `Predicate.or()` 来组合 `Predicates`。让我们提取以“J”开头的名称，以及长度小于 4 的名称：
 
 ```java
 @Test
@@ -118,9 +115,9 @@ public void whenFilterListWithCombinedPredicatesUsingOr_thenSuccess(){
 }
 ```
 
-### 5.3。`Predicate.negate()`
+### 5.3. `Predicate.negate()`
 
-我们也可以在组合`Predicates`时使用`Predicate.negate()`:
+我们也可以在组合 `Predicates` 时使用 `Predicate.negate()`：
 
 ```java
 @Test
@@ -137,13 +134,11 @@ public void whenFilterListWithCombinedPredicatesUsingOrAndNegate_thenSuccess(){
 }
 ```
 
-这里，我们使用了`or()`和`negate()`的组合，根据以“J”开头或长度不小于 4 的名字来过滤`List`。
+这里，我们使用了 `or()` 和 `negate()` 的组合，根据以“J”开头或长度不小于 4 的名字来过滤 `List`。
 
-### 5.4。联合收割机`Predicates`内联
+### 5.4. 联合收割机 `Predicates` 内联
 
-我们不需要明确定义我们的`Predicates`来使用`and(),` `or()`，和`negate().`
-
-我们也可以通过将`Predicate`转换成:
+我们不需要明确定义我们的 `Predicates` 来使用 `and(),` `or()`，和 `negate()`。我们也可以通过将 `Predicate` 转换成：
 
 ```java
 @Test
@@ -158,11 +153,11 @@ public void whenFilterListWithCombinedPredicatesInline_thenSuccess(){
 }
 ```
 
-## 6。`Predicates`组合收藏
+## 6. `Predicates` 组合收藏
 
-最后，**让我们看看如何通过减少它们来链接一个`Predicates`的集合。**
+最后，**让我们看看如何通过减少它们来链接一个 `Predicates` 的集合。**
 
-在下面的例子中，我们使用`Predicate.and()`组合了`Predicates`中的`List`:
+在下面的例子中，我们使用 `Predicate.and()` 组合了 `Predicates` 中的 `List`：
 
 ```java
 @Test
@@ -181,13 +176,13 @@ public void whenFilterListWithCollectionOfPredicatesUsingAnd_thenSuccess(){
 }
 ```
 
-请注意，我们使用基本标识作为:
+请注意，我们使用基本标识作为：
 
 ```java
 x->true
 ```
 
-但是如果我们想用`Predicate.or()`将它们结合起来，那就不一样了:
+但是如果我们想用 `Predicate.or()` 将它们结合起来，那就不一样了：
 
 ```java
 @Test
@@ -201,8 +196,8 @@ public void whenFilterListWithCollectionOfPredicatesUsingOr_thenSuccess(){
 }
 ```
 
-## 7。结论
+## 7. 结论
 
-在本文中，我们探索了在 Java 8 中链接谓词的不同方式，通过使用`filter(),`构建复合体`Predicates`，并结合`Predicates.`
+在本文中，我们探索了在 Java 8 中链接谓词的不同方式，通过使用 `filter(),` 构建复合体 `Predicates`，并结合 `Predicates`。
 
-完整的源代码可以在 GitHub 的[上找到。](https://web.archive.org/web/20221028012857/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-function)
+完整的源代码可以在 GitHub 上找到。

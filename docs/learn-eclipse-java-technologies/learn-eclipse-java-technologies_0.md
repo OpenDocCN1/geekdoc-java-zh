@@ -1,9 +1,5 @@
+
 # Eclipse [Java 技术] 入门指南
-
-
-
-
-
 
 我想将此本书献给使用它的学生们。祝愿你们职业道路成功，并希望你们永停止学习。
 
@@ -47,9 +43,9 @@ Eclipse 平台及其他插件可以从 http://www.eclipse.org/ 下载。
 
 Eclipse 平台及其他插件有：
 
-*   `7-zip`
-*   `PeZip`
-*   `IZArc`
+* `7-zip`
+* `PeZip`
+* `IZArc`
 
 ![Images/image045.jpeg)
 
@@ -65,10 +61,10 @@ Eclipse 平台及其他插件通过 `eclipse.exe` 启动。
 
 Eclipse 窗口的主要可见部分有：
 
-*   视图
-*   编辑器（均显示在一个编辑器区域）
-*   菜单栏
-*   工具栏
+* 视图
+* 编辑器（均显示在一个编辑器区域）
+* 菜单栏
+* 工具栏
 
 ![Images/image047.jpeg)
 
@@ -80,37 +76,37 @@ Eclipse 窗口的主要可见部分有：
 
 ## 菜单
 
-Eclipse 窗口菜单栏上的典型菜单有
+Eclipse 窗口菜单栏上的典型菜单有：
 
-*   文件菜单
-*   编辑菜单
-*   导航菜单
-*   搜索菜单
-*   项目菜单
-*   运行菜单
-*   窗口菜单
-*   帮助菜单
+* 文件菜单
+* 编辑菜单
+* 导航菜单
+* 搜索菜单
+* 项目菜单
+* 运行菜单
+* 窗口菜单
+* 帮助菜单
 
 ![Images/image049.jpeg)
 
 ## 菜单简述
 
-| 序号 | 菜单名称与描述 |
-
-
-
-
-
-## 菜单
-
 - **文件 (File)**：`File` 菜单允许你打开文件进行编辑、关闭编辑器、保存编辑器内容以及重命名文件。除其他功能外，它还允许你导入导出工作空间内容并关闭 Eclipse。
+
 - **编辑 (Edit)**：`Edit` 菜单提供了复制和粘贴等项。
+
 - **源 (Source)**：`Source` 菜单仅在打开 Java 编辑器时才可见。它提供了许多与编辑 Java 源代码相关的有用菜单项。
+
 - **导航 (Navigate)**：`Navigate` 菜单允许你快速定位资源并导航到它们。
+
 - **搜索 (Search)**：`Search` 菜单提供的项可以在工作空间中搜索包含特定数据的文件。
+
 - **项目 (Project)**：与构建项目相关的菜单项可以在 `Project` 菜单中找到。
+
 - **运行 (Run)**：`Run` 菜单上的项允许你以运行模式或调试模式启动程序。它还提供了允许你调试代码的菜单项。
+
 - **窗口 (Window)**：`Window` 菜单允许你打开和关闭视图和视角。它还允许你调出 `Preferences`（首选项）对话框。
+
 - **帮助 (Help)**：`Help` 菜单可用于调出 `Help`（帮助）窗口、`Eclipse Marketplace` 或安装新插件。`about Eclipse` 菜单项提供版本信息。
 
 ## 自定义菜单
@@ -155,7 +151,7 @@ Eclipse 视图（views）允许用户查看项目元数据的图形化表示。�
 
 ![Image](img/image00054.jpeg)
 
-点击 `Other`菜单项会调出 `Show View` 对话框，允许你定位并激活视图。
+点击 `Other` 菜单项会调出 `Show View` 对话框，允许你定位并激活视图。
 
 ![Image](img/image00055.jpeg)
 
@@ -173,7 +169,7 @@ Eclipse 视角（perspective）是对视图和编辑器区域初始集合和排�
 
 ![Image](img/image00056.jpeg)
 
-`Open Perspective` 对话框显示所有可用的视角。也可以点击工具栏上的 `Open Perspective` 按钮（![Image](img/image00057.jpeg) ）来调出相同的对话框。
+`Open Perspective` 对话框显示所有可用的视角。也可以点击工具栏上的 `Open Perspective` 按钮（![Image](img/image00057.jpeg)）来调出相同的对话框。
 
 ## 切换视角
 
@@ -214,7 +210,7 @@ Java 开发中最常用的视角是 `Java` 视角和 `Debug` 视角。用户可�
 
 Eclipse 工作空间包含以下资源：
 
-字体 项目
+- 项目
 - 文件
 - 文件夹
 
@@ -236,25 +232,21 @@ Eclipse 工作空间包含以下资源：
 
 # 创建 Java 项目
 
-### 打开 New Java Project 向导
+## 打开 New Java Project 向导
 
 `New Java Project` 向导可用于创建新的 Java 项目。有许多方法可以打开此向导：
 
 - 点击 `File` 菜单并选择 `New` → `Java Project`。
 - 在 `Project Explorer` 任意位置右键点击并选择 `New` → `Java Project`。
-- 点击工具栏上的 `New` 按钮（![Image](img/image00065.jpeg) ）并选择 `Java Project`。
-
-
-
-
+- 点击工具栏上的 `New` 按钮（![Image](img/image00065.jpeg)）并选择 `Java Project`。
 
 ## 使用新建 Java 项目向导
 
-新建 Java 项目向导有两个页面。在第一页上−
+新建 Java 项目向导有两个页面。在第一页上：
 
-* 输入项目名称
-* 选择 Java 运行时环境 (`JRE`) 或保持默认值
-* 选择项目布局，这决定了是否会为源代码和类文件创建独立的文件夹。推荐的选项是为源码和类文件创建单独文件夹。
+- 输入项目名称
+- 选择 Java 运行时环境 (`JRE`) 或保持默认值
+- 选择项目布局，这决定了是否会为源代码和类文件创建独立的文件夹。推荐的选项是为源码和类文件创建单独文件夹。
 
 ![Image](img/image00066.jpeg)
 
@@ -272,23 +264,21 @@ Eclipse 工作空间包含以下资源：
 
 ## 打开新建 Java 包向导
 
-你可以使用新建 Java 包向导来创建 Java 包。Java 包向导可以通过不同的方式打开−
+你可以使用新建 Java 包向导来创建 Java 包。Java 包向导可以通过不同的方式打开：
 
-* 点击 `File`（文件）菜单并选择 `New`（新建）→ `Package`（包）。
-* 在包管理器中右键点击并选择 `New` → `Package`。
-* 点击工具栏上的包图标(![Image](img/image00068.jpeg) )
+- 点击 `File`（文件）菜单并选择 `New`（新建）→ `Package`（包）。
+- 在包管理器中右键点击并选择 `New` → `Package`。
+- 点击工具栏上的包图标（![Image](img/image00068.jpeg)）。
 
 如果你正在创建子包，在打开 Java 包向导之前请选择父包，这样名称字段就可以有一个默认值。
 
 ## 使用新建 Java 包向导
 
-一旦 Java 包向导出现−
+一旦 Java 包向导出现：
 
-
-
-* 输入/确认源文件夹名称。
-* 输入包名。
-* 点击 `Finish`（完成）按钮。
+- 输入/确认源文件夹名称。
+- 输入包名。
+- 点击 `Finish`（完成）按钮。
 
 ![Image](img/image00069.jpeg)
 
@@ -302,28 +292,28 @@ Eclipse 工作空间包含以下资源：
 
 ## 打开新建 Java 类向导
 
-你可以使用新建 Java 类向导来创建 Java 类。Java 类向导可以通过不同的方式调用−
+你可以使用新建 Java 类向导来创建 Java 类。Java 类向导可以通过不同的方式调用：
 
-* 点击 `File`（文件）菜单并选择 `New` → `Class`（类）。
-* 在包管理器中右键点击并选择 `New` → `Class`。
-* 点击类下拉按钮 (![Image](img/image00071.jpeg) ) 并选择 class ( ![Image](img/image00072.jpeg))。
+- 点击 `File`（文件）菜单并选择 `New` → `Class`（类）。
+- 在包管理器中右键点击并选择 `New` → `Class`。
+- 点击类下拉按钮（![Image](img/image00071.jpeg)）并选择 class（![Image](img/image00072.jpeg)）。
 
 在调出新建 Java 类向导之前，如果可能，请选择要创建该类的包，这样向导就可以自动为你填写包名。
 
 ## 使用新建 Java 类向导
 
-一旦 java 类向导出现−
+一旦 java 类向导出现：
 
-* 确保源文件夹和包是正确的。
-* 输入类名。
-* 选择合适的类修饰符。
-* 输入超类名或点击 `Browse`（浏览）按钮搜索已有的类。
-* 点击 `Add`（添加）按钮选择此类实现的接口。
-* 检查并修改与方法存根（method stubs）和注释相关的复选框。
+- 确保源文件夹和包是正确的。
+- 输入类名。
+- 选择合适的类修饰符。
+- 输入超类名或点击 `Browse`（浏览）按钮搜索已有的类。
+- 点击 `Add`（添加）按钮选择此类实现的接口。
+- 检查并修改与方法存根（method stubs）和注释相关的复选框。
 
 ![Image](img/image00073.jpeg)
 
-* 点击 `Finish`（完成）按钮。
+- 点击 `Finish`（完成）按钮。
 
 ## 查看新创建的 Java 类
 
@@ -335,23 +325,23 @@ Eclipse 工作空间包含以下资源：
 
 ## 打开新建 Java 接口向导
 
-新建 Java 接口向导可创建新的 java 接口。有许多方法打开此向导−
+新建 Java 接口向导可创建新的 java 接口。有许多方法打开此向导：
 
-* 点击 `File`（文件）菜单并选择 `New` → `Interface`（接口）。
-* 在包管理器中右键点击并选择 `New` > `Interface`。
-* 点击工具栏上的类下拉按钮 (![Image](img/image00075.jpeg)) 并选择 Interface (![Image](img/image00076.jpeg))。
+- 点击 `File`（文件）菜单并选择 `New` → `Interface`（接口）。
+- 在包管理器中右键点击并选择 `New` > `Interface`。
+- 点击工具栏上的类下拉按钮（![Image](img/image00075.jpeg)）并选择 Interface（![Image](img/image00076.jpeg)）。
 
 在调出新建 Java 接口向导之前，如果可能，请选择要创建接口的包，这样向导就可以自动为你填写包名。
 
 ## 使用新建 Java 接口向导
 
-一旦 java 接口向导出现−
+一旦 java 接口向导出现：
 
-* 确保源文件夹和包是正确的。
-* 输入接口名称。
-* 点击 `Add`（添加）按钮选择扩展的接口。
-* 如果你想生成注释，请勾选 `Generate comments`（生成注释）复选框。
-* 点击 `Finish`（完成）按钮。
+- 确保源文件夹和包是正确的。
+- 输入接口名称。
+- 点击 `Add`（添加）按钮选择扩展的接口。
+- 如果你想生成注释，请勾选 `Generate comments`（生成注释）复选框。
+- 点击 `Finish`（完成）按钮。
 
 ![Image](img/image00077.jpeg)
 
@@ -365,42 +355,44 @@ Eclipse 工作空间包含以下资源：
 
 ## 打开新建 XML 文件向导
 
-你可以使用新建 XML 文件向导来创建 XML 文件。要调用此向导−
+你可以使用新建 XML 文件向导来创建 XML 文件。要调用此向导：
 
-* 点击 `File`（文件）菜单并选择 `New` → `Other`（其他）或
-* 点击新的下拉框 (![Image](img/image00079.jpeg)) 选择 other（其他）或
-* 按下 `ctrl` + `N`
+- 点击 `File`（文件）菜单并选择 `New` → `Other`（其他）或
+- 点击新的下拉框（![Image](img/image00079.jpeg)）选择 other（其他）或
+- 按下 `ctrl` + `N`
 
-一旦“选择向导（Select a wizard）”对话框出现−
+一旦“选择向导（Select a wizard）”对话框出现：
 
-* 在过滤文本框中输入 `xml`，这将仅显示与 xml 相关的向导。
-* 展开 XML 分类并选择 `XML File`。
+- 在过滤文本框中输入 `xml`，这将仅显示与 xml 相关的向导。
+- 展开 XML 分类并选择 `XML File`。
 
 ![Image](img/image00080.jpeg)
 
-* 点击 `Next`（下一步）调出 XML 向导。
+- 点击 `Next`（下一步）调出 XML 向导。
 
 ## 注意
 
-如果打开了 XML 视图，可以通过以下方式调用 XML 向导−
+如果打开了 XML 视图，可以通过以下方式调用 XML 向导：
 
-* 点击 `File`（文件）菜单并选择 `New` → `XML File`。
-* 点击工具栏上的 `XML File` 按钮 (![Image](img/image00081.jpeg) )
+- 点击 `File`（文件）菜单并选择 `New` → `XML File`。
+- 点击工具栏上的 `XML File` 按钮（![Image](img/image00081.jpeg)）
 
 ## 使用 XML 向导
 
-一旦 XML 向导出现−
+一旦 XML 向导出现：
 
-* 输入或选择父文件夹。
-* 输入文件名。
+- 输入或选择父文件夹。
+- 输入文件名。
 
 ![Image](img/image00082.jpeg)
 
-* 点击 `Next` 基于 DTD xml 文件，否则点击 `Finish`（完成）。
+- 点击 `Next` 基于 DTD xml 文件，否则点击 `Finish`（完成）。
 
 ## 查看新创建的 XML 文件
 
 新创建的 XML 文件应该出现在包管理器中，一个允许你修改新文件的 java 编辑实例应该出现在编辑器区域。
+
+
 
 ![Image](img/image00083.jpeg)
 
@@ -428,9 +420,6 @@ Java 构建路径用于编译 Java 项目时发现依赖。它由以下项目组
 
 Run Configurations 对话框允许创建多个运行配置。每个运行配置都可以启动应用程序。可以通过选择 Run 菜单中的 Run Configurations 菜单项来调用 Run Configurations 对话框。
 
-[content]
-/
-
 要为 Java 应用创建运行配置，请从左侧列表中选择 `Java Application` 并点击 `New`（新建）按钮。在弹出对话框的主页中指定：
 
 * 运行配置名称。
@@ -441,9 +430,6 @@ Run Configurations 对话框允许创建多个运行配置。每个运行配置�
 
 * 零或多个程序参数。
 * 零或多个虚拟机参数。
-
-
-
 
 Common（公共）选项卡提供了常用选项，例如为标准输入和输出分配控制台。
 
@@ -457,7 +443,8 @@ Common（公共）选项卡提供了常用选项，例如为标准输入和输�
 
 运行 Java 程序最快的方法是使用包管理器（Package Explorer）视图。
 
-在包管理器视图中 −：
+在包管理器视图中：
+
 * 右键点击包含 main 方法的类。
 * 选择 `Run As`（运行方式）→ `Java Application`（Java 程序）。
 
@@ -479,22 +466,26 @@ Common（公共）选项卡提供了常用选项，例如为标准输入和输�
 
 ## 打开 Jar 文件向导
 
-可以使用 Jar 文件向导将项目内容导出为 jar 文件。要打开 Jar 文件向导 −：
+可以使用 Jar 文件向导将项目内容导出为 jar 文件。要打开 Jar 文件向导：
+
 * 在包管理器中选择你想要导出的项目。如果你想导出项目中的所有类和资源，只需选择该项目。
 * 点击 `File`（文件）菜单并选择 `Export`（导出）。
 * 在导出向导第一页的过滤器文本框中输入 `JAR`。
 
 ![Image](img/image00090.jpeg)
+
 * 在 Java 类别下选择 `JAR` file。
 * 点击 `Next`（下一步）。
 
 ## 使用 Jar 文件向导
 
-在 Jar File 规范页面 −：
+在 Jar File 规范页面：
+
 * 输入 JAR 文件名和文件夹。
 * 默认只导出类。要同时导出源代码，点击 `Export Java source files and resources`（导出 Java 源代码和资源）复选框。
 
 ![Image](img/image00091.jpeg)
+
 * 点击 `Next`（下一步）更改 JAR 打包选项。
 * 点击 `Next`（下一步）更改 JAR Manifest 规范。
 * 点击 `Finish`（完成）。
@@ -505,7 +496,8 @@ Common（公共）选项卡提供了常用选项，例如为标准输入和输�
 
 一个 eclipse 工作空间（workspace）可以包含任意数量的项目。项目可以是打开状态或关闭状态。
 
-打开的项目 −：
+打开的项目：
+
 * 消耗内存。
 * 占用构建时间，特别是当使用 `Clean All Projects`（`Project → Clean all projects`）并带有 `Start a build immediately`（立即启动构建）选项时。
 
@@ -537,7 +529,8 @@ Common（公共）选项卡提供了常用选项，例如为标准输入和输�
 
 ## 构建 Java 项目
 
-项目可以关联零或多个构建器（builders）。Java 项目与一个 java builder 关联。要查看与项目关联的构建器 −：
+项目可以关联零或多个构建器（builders）。Java 项目与一个 java builder 关联。要查看与项目关联的构建器：
+
 * 在包管理器视图中右键点击项目并选择 `Properties`（属性）。
 * 在左侧树中点击 `Builders`（构建器）。
 
@@ -561,12 +554,14 @@ eclipse 调试配置类似于运行配置，但它用于以调试模式启动应
 
 ![Image](img/image00098.jpeg)
 
-要为 Java 应用程序创建调试配置，从左侧列表选择 `Java Application` 并点击 `New` 按钮。在弹出的主标签页对话框中指定 −：
+要为 Java 应用程序创建调试配置，从左侧列表选择 `Java Application` 并点击 `New` 按钮。在弹出的主标签页对话框中指定：
+
 * 调试配置名称。
 * `Project`（项目）名称。
 * 类名称。
 
-在 arguments（参数）标签页中指定 −：
+在 arguments（参数）标签页中指定：
+
 * 多个程序参数。
 * 多个虚拟机参数。
 
@@ -578,7 +573,8 @@ eclipse 调试配置类似于运行配置，但它用于以调试模式启动应
 
 ## 调试 Java 程序
 
-调试 Java 程序最快的方法是通过包管理器视图。在包管理器视图中 −：
+调试 Java 程序最快的方法是通过包管理器视图。在包管理器视图中：
+
 * 右键点击包含 main 方法的类。
 * 选择 `Debug As`（调试方式）→ `Java Application`（Java 程序）。
 
@@ -618,9 +614,6 @@ java 编辑器允许用户在 java 代码中放置断点。要设置断点，在
 
 给出的图片显示了与 Resume（恢复）、Step Into（进入）和 Step Over（跳过）等操作相关的快捷键。
 
-
-
-
 # 偏好
 
 ## 设置偏好
@@ -645,12 +638,12 @@ java 编辑器允许用户在 java 代码中放置断点。要设置断点，在
 
 在编辑器中，内容辅助通过通过为已输入的字符提供上下文敏感的可能补全列表，来帮助减少输入的字符。可以通过点击 `Ctrl` + `Space` 来调用内容辅助。
 
-如果您正在 Java 编辑器中编辑方法体，并在新行上按 `Ctrl` + `Space`，它将弹出一个对话框显示 −
+如果您正在 Java 编辑器中编辑方法体，并在新行上按 `Ctrl` + `Space`，它将弹出一个对话框显示：
 
-*   类变量
-*   类方法
-*   父类方法
-*   其他相关类
+* 类变量
+* 类方法
+* 父类方法
+* 其他相关类
 
 ![Image](img/image00108.jpeg)
 
@@ -664,18 +657,18 @@ java 编辑器允许用户在 java 代码中放置断点。要设置断点，在
 
 ## 使用快速修复
 
-当您在 Eclipse 编辑器中输入字符时，它会分析文档内容以检测潜在的错误和警告。Java 编辑器使用 Java 语法检测代码中的错误。当它发现错误或警告时，它 −
+当您在 Eclipse 编辑器中输入字符时，它会分析文档内容以检测潜在的错误和警告。Java 编辑器使用 Java 语法检测代码中的错误。当它发现错误或警告时，它：
 
-*   使用红色波浪线突出显示错误。
-*   使用黄色波浪线突出显示警告。
-*   在 Problem（问题）视图中显示错误和警告。
-*   在垂直标尺上添加带有警告符号或错误符号的灯泡。
+* 使用红色波浪线突出显示错误。
+* 使用黄色波浪线突出显示警告。
+* 在 Problem（问题）视图中显示错误和警告。
+* 在垂直标尺上添加带有警告符号或错误符号的灯泡。
 
-快速修复对话框提供了可能的更正列表。可以通过以下方式调用快速修复对话框 −
+快速修复对话框提供了可能的更正列表。可以通过以下方式调用快速修复对话框：
 
-*   将鼠标指针置在波浪线线上。
-*   点击灯泡。
-*   将光标置于高亮文本中，从 Edit（编辑）菜单中选择 Quick fix（快速修复）或点击快捷键 `Ctrl` + `1`。
+* 将鼠标指针置在波浪线线上。
+* 点击灯泡。
+* 将光标置于高亮文本中，从 Edit（编辑）菜单中选择 Quick fix（快速修复）或点击快捷键 `Ctrl` + `1`。
 
 ![Image](img/image00110.jpeg)
 
@@ -705,10 +698,10 @@ Java 编辑器与不同类型的悬停相关。悬停提供了有关鼠标指针
 
 Eclipse 搜索对话框允许您在整个工作空间、一组项目、特定项目或包资源管理器视图中选择的文件夹中，搜索包含字面量或字符模式的文件。
 
-可以通过以下方式调用搜索对话框 −
+可以通过以下方式调用搜索对话框：
 
-*   点击 `Search`（搜索）菜单并选择 `Search` 或 `File`（文件）或 `Java`。
-*   点击 `Ctrl` + `H`。
+* 点击 `Search`（搜索）菜单并选择 `Search` 或 `File`（文件）或 `Java`。
+* 点击 `Ctrl` + `H`。
 
 ![Image](img/image00114.jpeg)
 
@@ -716,12 +709,12 @@ File Search（文件搜索）页面允许您搜索任何类型的文件，但 Ja
 
 ![Image](img/image00115.jpeg)
 
-例如，在 Java Search 页面中搜索 `Person` 类型的使用情况 −
+例如，在 Java Search 页面中搜索 `Person` 类型的使用情况：
 
-*   在 `search box`（搜索框）中输入 `Person`。
-*   将 `Search For` 按钮设置为 `Type`（类型）。
-*   将 `Limit To` 按钮设置为 `References`（引用）。
-*   点击 `Search`（搜索）。
+* 在 `search box`（搜索框）中输入 `Person`。
+* 将 `Search For` 按钮设置为 `Type`（类型）。
+* 将 `Limit To` 按钮设置为 `References`（引用）。
+* 点击 `Search`（搜索）。
 
 搜索结果出现在 Search 视图中。
 
@@ -779,29 +772,27 @@ Open Resource 菜单项用于定位工作空间中的文件。可以使用 `*`�
 
 重命名在项目中广泛使用的类可能花费大量时间，但 Eclipse 重构向导通过自动检测对重命名类的所有依赖并进行修改，使工作变得更加简单。
 
-可以通过以下方式打开重构菜单 −
+可以通过以下方式打开重构菜单：
 
-*   在包资源管理器视图中右键点击 Java 元素并选择 Refactor（重构）菜单项。
-*   在 Java 编辑器中右键点击 Java 元素并选择 Ref 构菜单项。
-*   在包资源管理器或 Java 编辑器中选择 Java 元素并点击 `Shift` + `Alt` + `T`。
+* 在包资源管理器视图中右键点击 Java 元素并选择 Refactor（重构）菜单项。
+* 在 Java 编辑器中右键点击 Java 元素并选择 Ref 构菜单项。
+* 在包资源管理器或 Java 编辑器中选择 Java 元素并点击 `Shift` + `Alt` + `T`。
+
+
 
 ![Image](img/image00123.jpeg)
 
-重构菜单显示了支持所选 Java 元素的所有更改。要重命名类，选择 Rename（重命名）菜单项。
+重构菜单显示了支持所选 Java 元素的所有更改。要重命名类，选择`Rename`（重命名）菜单项。
 
 ![Image](img/image00124.jpeg)
 
-点击 Next 按钮查看更改预览（可用）。然后点击 Finish 让向导完成工作。
-
-
-
-
+点击`Next`按钮查看更改预览（可用）。然后点击`Finish`让向导完成工作。
 
 要设置书签，请右键点击要设置书签行附近的垂直标尺，并选择`添加书签 (Add Bookmark)`。在`添加书签`对话框中为书签输入一个名称。
 
 ![Image](img/image00125.jpeg)
 
-垂直标尺上会出现书签图标。此外，书签视图（Bookmarks view）中的表格会增加出一行。
+垂直标尺上会出现书签图标。此外，书签视图（`Bookmarks view`）中的表格会增加出一行。
 
 ![Image](img/image00126.jpeg)
 
@@ -809,9 +800,11 @@ Open Resource 菜单项用于定位工作空间中的文件。可以使用 `*`�
 
 要打开书签视图 −
 
-*   点击`窗口 (Window)` 菜单并选择`显示视图 → 其他 (Show View → Other)`。
-*   在过滤器文本框中输入 `Bookmark`。
-*   在`常规 (General)` 下，选择`书签 (Bookmarks)`。
+*   点击`窗口 (Window)`菜单并选择`显示视图 → 其他 (Show View → Other)`。
+
+*   在过滤器文本框中输入`Bookmark`。
+
+*   在`常规 (General)`下，选择`书签 (Bookmarks)`。
 
 ![Image](img/image00127.jpeg)
 
@@ -823,29 +816,31 @@ Open Resource 菜单项用于定位工作空间中的文件。可以使用 `*`�
 
 ![Image](img/image00128.jpeg)
 
-使用书签视图，你可以通过双击书签或右键点击书签并选择“转到 (Go to)”菜单项来导航到书签。
+使用书签视图，你可以通过双击书签或右键点击书签并选择“转到 (`Go to`)”菜单项来导航到书签。
 
 # 任务管理
 
 ## 管理任务
 
-程序员喜欢在代码中放置 TODO 标记，作为对需要完成的任务的提醒。Java 代码中包含 `TODO` 单词的注释会被识别为任务，并显示在标记栏和任务（Tasks）视图中。
+程序员喜欢在代码中放置`TODO`标记，作为对需要完成的任务的提醒。Java 代码中包含`TODO`单词的注释会被识别为任务，并显示在标记栏和任务（`Tasks`）视图中。
 
 ![Image](img/image00129.jpeg)
 
-可以通过右键点击标记栏并选择`添加任务 (Add Task)`，使用 Eclipse 编辑器将任务与正在编辑的文件关联。在弹出的对话框中，输入任务描述，从优先级下拉列表中选择一个优先级，然后点击`确定 (OK)` 按钮。
+可以通过右键点击标记栏并选择`添加任务 (Add Task)`，使用 Eclipse 编辑器将任务与正在编辑的文件关联。在弹出的对话框中，输入任务描述，从优先级下拉列表中选择一个优先级，然后点击`确定 (OK)`按钮。
 
 ![Image](img/image00130.jpeg)
 
-要使用 Eclipse 编辑器删除任务，请右键点击标记栏中的任务图标，并选择`删除任务 (Remove Task)` 菜单项。
+要使用 Eclipse 编辑器删除任务，请右键点击标记栏中的任务图标，并选择`删除任务 (Remove Task)`菜单项。
 
 ## 打开任务视图
 
 要打开任务视图 −
 
-*   点击`窗口 (Window)` 菜单并选择`显示视图 → 其他 (Show View → Other)`。
-*   在过滤器文本框中输入 `Tasks`。
-*   在`常规 (General)` 下，选择`任务 (Tasks)`。
+*   点击`窗口 (Window)`菜单并选择`显示视图 → 其他 (Show View → Other)`。
+
+*   在过滤器文本框中输入`Tasks`。
+
+*   在`常规 (General)`下，选择`任务 (Tasks)`。
 
 ![Image](img/image00131.jpeg)
 
@@ -860,7 +855,9 @@ Open Resource 菜单项用于定位工作空间中的文件。可以使用 `*`�
 它还可以用于 −
 
 *   更改与任务关联的优先级。
+
 *   将任务标记为已完成。
+
 *   删除某个任务或所有已完成的任务。
 
 # 安装插件
@@ -873,19 +870,19 @@ Open Resource 菜单项用于定位工作空间中的文件。可以使用 `*`�
 
 ![Image](img/image00133.jpeg)
 
-在 Eclipse IDE 内部，你可以使用`Eclipse 市场 (Eclipse Marketplace)`对话框搜索市场，该对话框可以通过点击`帮助 (Help)` 菜单并选择`Eclipse Marketplace`来调用。
+在 Eclipse IDE 内部，你可以使用`Eclipse 市场 (Eclipse Marketplace)`对话框搜索市场，该对话框可以通过点击`帮助 (Help)`菜单并选择`Eclipse Marketplace`来调用。
 
 ![Image](img/image00134.jpeg)
 
-在上面的截图中，要安装 `PyDev-Python IDE for Eclipse`，只需点击`安装 (Install)` 按钮。使用弹出的对话框即可安装插件。
+在上面的截图中，要安装`PyDev-Python IDE for Eclipse`，只需点击`安装 (Install)`按钮。使用弹出的对话框即可安装插件。
 
 ![Image](img/image00135.jpeg)
 
-你也可以通过从`帮助 (Help)` 菜单访问的`安装新软件 (Install New Software)` 菜单项（`帮助 → 安装新软件`）来安装插件。
+你也可以通过从`帮助 (Help)`菜单访问的`安装新软件 (Install New Software)`菜单项（`帮助 → 安装新软件`）来安装插件。
 
 ![Image](img/image00136.jpeg)
 
-在这种情况下，你必须知道可以下载插件的远程站点 URL。你可以点击`添加 (Add)` 按钮来提供此 URL。
+在这种情况下，你必须知道可以下载插件的远程站点 URL。你可以点击`添加 (Add)`按钮来提供此 URL。
 
 ![Image](img/image00137.jpeg)
 
@@ -897,55 +894,55 @@ Open Resource 菜单项用于定位工作空间中的文件。可以使用 `*`�
 
 ## 使用代码模板
 
-代码模板通过向编辑器中插入代码来减少打字时间。每个代码模板都给出了短的字面量。在编辑器窗口中输入该字面量并按 `Ctrl + Space` 就会弹出一个对话框，从中可以选择与该字面量相关的代码模板。
+代码模板通过向编辑器中插入代码来减少打字时间。每个代码模板都给出了短的字面量。在编辑器窗口中输入该字面量并按`Ctrl + Space`就会弹出一个对话框，从中可以选择与该字面量相关的代码模板。
 
-在 Java 编辑器窗口的方法体内输入 `for` 并点击 `Ctrl + space`，会显示与 `for` 相关的代码模板。
+在 Java 编辑器窗口的方法体内输入`for`并点击`Ctrl + space`，会显示与`for`相关的代码模板。
 
 ![Image](img/image00139.jpeg)
 
-选择 `for - iterate over array` 会插入遍历方法体中早早声明的 `depArray` 代码。
+选择`for - iterate over array`会插入遍历方法体中早早声明的`depArray`代码。
 
-另一个实用的代码模板字面量是 `sysout`，它可以插入 `System.out.println()` 方法调用。
+另一个实用的代码模板字面量是`sysout`，它可以插入`System.out.println()`方法调用。
 
 ![Image](img/image00140.jpeg)
 
 ## 修改/添加代码模板
 
-你可以使用`偏好 (Preferences)` 对话框添加新的代码模板。通过点击`窗口 (Windows)` 菜单并选择`偏好 (Preferences)` 菜单项来打开`偏好`对话框。要找到`模板 (Templates)` 页面，在过滤器文本框中输入 `Templates`。
+你可以使用`偏好 (Preferences)`对话框添加新的代码模板。通过点击`窗口 (Windows)`菜单并选择`偏好 (Preferences)`菜单项来打开`偏好`对话框。要找到`模板 (Templates)`页面，在过滤器文本框中输入`Templates`。
 
 ![Image](img/image00141.jpeg)
 
-你可以通过阅读 Eclipse 帮助来了解更多关于用于自定义插入代码的变量。要打开帮助窗口，点击`帮助 (Help)` 菜单并选择`帮助 (Help)`。
-
-## 快捷键
+你可以通过阅读 Eclipse 帮助来了解更多关于用于自定义插入代码的变量。要打开帮助窗口，点击`帮助 (Help)`菜单并选择`帮助 (Help)`。
 
 ## 快捷键
 
 你可以仅使用键盘导航 Eclipse 用户界面 −
 
 *   使用菜单项的助记符。
+
 *   使用对话框或视图控件的助记符。
+
 *   使用工具栏操作的加速。
 
 ![Image](img/image00143.jpeg)
 
-通过 `Ctrl + Shift + L` 调用`快捷键辅助 (Key Assist)` 操作可以显示所有可用快捷键。
+通过`Ctrl + Shift + L`调用`快捷键辅助 (Key Assist)`操作可以显示所有可用快捷键。
 
 ![Image](img/image00144.jpeg)
 
-操作的组合键可以使用`按键 (Keys)` 偏好页面进行更改。许多命令或操作都有快捷键。此偏好页面允许。
+操作的组合键可以使用`按键 (Keys)`偏好页面进行更改。许多命令或操作都有快捷键。此偏好页面允许。
 
-例如，要将 `Alt + C` 指定为触发`新建类 (New Class)`对话框的快捷键，在命令列表中选择 `New Class`，导航到`绑定 (Bindings)`文本框，然后从 `when` 下拉列表中选择上下文。确保所选按键没有冲突并点击`确定 (OK)` 按钮。
+例如，要将`Alt + C`指定为触发`新建类 (New Class)`对话框的快捷键，在命令列表中选择`New Class`，导航到`绑定 (Bindings)`文本框，然后从`when`下拉列表中选择上下文。确保所选按键没有冲突并点击`确定 (OK)`按钮。
 
 ![Image](img/image00145.jpeg)
 
-现在你可以按 `Alt + C` 打开`新建类 (New Class)` 向导。
+现在你可以按`Alt + C`打开`新建类 (New Class)`向导。
 
 # 重启选项
 
 ## 重启 Eclipse
 
-重启选项允许用户重启 Eclipse。要重启 Eclipse，点击`文件 (File)` 菜单并选择`重启 (Restart)` 菜单项。
+重启选项允许用户重启 Eclipse。要重启 Eclipse，点击`文件 (File)`菜单并选择`重启 (Restart)`菜单项。
 
 ![Image](img/image00146.jpeg)
 
@@ -955,67 +952,62 @@ Open Resource 菜单项用于定位工作空间中的文件。可以使用 `*`�
 
 技巧 #1 发现快捷键
 
-*   按 `Ctrl + Shift + L` 打开显示所有可用快捷键的小部件。
+*   按`Ctrl + Shift + L`打开显示所有可用快捷键的小部件。
 
 技巧 #2 – 内容辅助
 
-*   在 Java 编辑器中按 `Ctrl + Space` 查看建议的完成内容。点击 `Ctrl + Space` 之前输入一个或多个字符将缩小列表。
+*   在 Java 编辑器中按`Ctrl + Space`查看建议的完成内容。点击`Ctrl + Space`之前输入一个或多个字符将缩小列表。
 
 技巧 #3 – 参数提示
 
-*   当光标在方法参数中时，按 `Ctrl + Shift + Space` 查看参数提示列表。
+*   当光标在方法参数中时，按`Ctrl + Shift + Space`查看参数提示列表。
 
 技巧 #4 – 代码完成支持驼峰命名
 
-*   代码完成支持驼峰模式。输入 `NPE` 并点击 `Ctrl + Space` 将建议 `NullPointerException` 和 `NoPermissionException`。
+*   代码完成支持驼峰模式。输入`NPE`并点击`Ctrl + Space`将建议`NullPointerException`和`NoPermissionException`。
 
 技巧 #5 创建 Getter 和 Setter
 
-*   点击`源 → 生成 Getter 和 Setter` 打开允许你生成 getter 和 setter 方法的向导。
+*   点击`源 → 生成 Getter 和 Setter`打开允许你生成 getter 和 setter 方法的向导。
 
 技巧 #6 生成 hashCode() 和 equals() 方法
 
-*   点击`源 → 生成 hashCode() 和 equals()` 为 Java 类生成这些方法。
-
-
-
-
+*   点击`源 → 生成 hashCode() 和 equals()`为 Java 类生成这些方法。
 
 # 提示 #7 − 为代码块添加代码
 
-* 选择一段代码并按 `Alt+Shift+Z` 即可显示菜单，其中包含 `if statement`、`for loop`、`try/catch` 等选项，可用于包裹所选的代码块。
+* 选择一段代码并按`Alt+Shift+Z`即可显示菜单，其中包含`if statement`、`for loop`、`try/catch`等选项，可用于包裹所选的代码块。
 
 # 提示 #8 − 定位匹配括号
 
-* 选择一个左括号或右括号并按 `Ctrl+Shift+P` 查找与之匹配的括号。
+* 选择一个左括号或右括号并按`Ctrl+Shift+P`查找与之匹配的括号。
 
 # 提示 #9 − 智能 Javadoc
 
-* 输入 `/**` 并按 `Enter` 自动添加 Javadoc 注释模板。
+* 输入`/**`并按`Enter`自动添加 Javadoc 注释模板。
 
 # 提示 #10 − 组织导入
 
-* 按 `Ctrl+Shift+O` 整理所有导入项。
+* 按`Ctrl+Shift+O`整理所有导入项。
 
 # 提示 #11 − 激活菜单栏
 
-* 按 `F10` 激活菜单栏。
+* 按`F10`激活菜单栏。
 
 # 提示 #12 − 使视图/编辑器激活
 
-* 按 `Ctrl+F7` 查看打开的视图和编辑器区域列表，并切换到其中一个。
+* 按`Ctrl+F7`查看打开的视图和编辑器区域列表，并切换到其中一个。
 
 # Web 浏览器
 
 ## 内部浏览器
 
-内部浏览器视图允许你直接直接在 Eclipse Workbench 窗口内浏览互联网。要激活内部浏览器视图，请点击 `Window` 并选择 `Show View → Other`。
+内部浏览器视图允许你直接直接在 Eclipse Workbench 窗口内浏览互联网。要激活内部浏览器视图，请点击`Window`并选择`Show View → Other`。
 
-在 `Show View` 对话框的过滤器文本框中输入 `browser`。从树中选择 `Internal Web Browser` 并点击 `OK`。
+在`Show View`对话框的过滤器文本框中输入`browser`。从树中选择`Internal Web Browser`并点击`OK`。
 
 ![Image](img/image00147.jpeg)
 
 要跳转到网页，在内部浏览器视图的 URL 文本框中输入该网页的 URL。
 
-![Image](img/image00148.jpeg)ss
-
+![Image](img/image00148.jpeg)

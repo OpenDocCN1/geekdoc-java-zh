@@ -1,9 +1,7 @@
+
 # 经验丰富的 Java 开发者的 Python 指南
 
-
-
 ![](img/cover.jpeg)
-
 
 # 前言
 
@@ -61,10 +59,15 @@
 以下是一些流行的 Python IDE，它们都因其丰富的功能对 Python 的强大支持而受到 AI 开发者的喜爱。
 
 *   `PyCharm`：由 JetBrains 开发，`PyCharm` 是一个强大的 IDE，拥有一套为 Python 开发定制的丰富功能。`PyCharm` 提供智能代码补全、调试工具、与版本控制系统的集成，并支持 `TensorFlow`、`PyTorch` 和 `scikit-learn` 等流行的 AI 库。
+
 *   `Jupyter Notebook / JupyterLab`：`Jupyter Notebook` 是一个基于 Web 的交互式计算环境，允许开发者创建和共享包含实时代码、方程、可视化和叙述文本的文档。`Jupyter Notebook` 最初由 Fernando Pérez 和 Brian Granger 领导的研究团队开发。他们于 2011 年作为 `IPython` 项目（一个 Python 交互式计算环境）的一部分开始开发 `Jupyter Notebook`。它广泛应用于 AI 和数据科学社区的原型设计、实验和协作。`JupyterLab` 是 `Jupyter Notebook` 的增强版本，具有更全面的界面和功能。
+
 *   `Google Colab`：Google 提供的免费云端 notebook 环境。允许开发者在浏览器界面中编写和执行 Python 代码，并访问 Google 基础设施提供的强大计算资源。
+
 *   `Spyder`：一个专为科学计算和数据分析设计的 IDE，由 `Spyder Project Contributors`（一个开源开发者社区）开发。它提供了交互式控制台、变量查看器、调试器以及对 `Matplotlib` 和 `seaborn` 等绘图库的支持。`Spyder` 因其易用性以及与科学计算库的集成而深受 AI 开发者的喜爱。
+
 *   `Visual Studio Code (VS Code)`：由微软开发的轻量级且多功能的 IDE。`VS Code` 通过 `Python` 和 `Pylance` 等插件提供广泛的自定义选项和 Python 支持。
+
 *   `Atom`：由 GitHub 开发的可定制文本编辑器。提供语法高亮、代码折叠和包管理功能。`Atom` 因其灵活性以及扩展 AI 开发功能的插件支持而深受 AI 开发者的喜爱。
 
 ## 第三章：创建你的第一个项目
@@ -85,10 +88,6 @@
 *   应用更改并关闭设置窗口。
 
 ### 3.3 其他配置
-
-
-
-
 
 此外，你可能还会考虑其他配置，例如版本控制管理、配置代码风格以及调整针对代码补全等功能的编辑器设置。这些任务可以类似于 Java 的方式进行配置。
 
@@ -146,6 +145,7 @@ project_name/
     ```
     print("Hello World")
     ```
+
 *   在项目管理器中右键点击该 Python 文件并选择：`Run ’Hello_World’`。
 *   运行程序后，你应该能在 IntelliJ IDEA 界面底部的控制输出窗口看到打印 Hello World。
 
@@ -193,31 +193,42 @@ print("Hello",
 Python 支持多种内置数据类型，包括：
 
 `int`
+
 不带小数点的整数（例如 10, -5, 1000）。在 Python 中，整数的大小没有像 Java 中 `int` 和 `long` 那样的预定义限制。只要你的计算机内存足够，Python 就可以处理非常大的整数值。
 
 `float`
+
 带有小数点的浮点数（例如 3.14, -0.5, 2.718）。它们根据 IEEE 754 标准代表双精度浮点数，通常提供约 15 位小数精度。Python 像 Java 那样没有专门针对单精度浮点数的独立类型。
 
 `complex`
+
 具有实部和虚部的复数（例如 3+4j, -2-5j）。
 
 `str`
+
 表示不可变 Unicode 字符序列的字符串。
+
 字符串字面量可以使用单引号或双引号编写，允许在字符串内部使用另一种引号类型。
 
 ```
 "He said: ’Hello!’"
 'He said: "Hello!"’
 ```
+
 与注释一样，也支持三引号多行字符串字面量。
+
 字符串字面量包含任意 Unicode 字符，可以直接输入或以代码点表示。
 
 `bool`
+
 表示 `True` 或 `False` 的布尔值。
 
 `bytes`
+
 `bytes` 对象可以存储不可变的字节序列，表示从 0 到 255 的二进制数据。
+
 可以使用以下方式创建 `bytes` 对象：
+
 *   带有 `b` 前缀的字节字面量，例如 `b"Hello"`
 *   使用 `bytes()` 构造函数，它可以接受各种输入，例如 `bytes(65)`、`bytes([72, 91])`、`bytes("Hello", "utf-8")`
 
@@ -226,6 +237,7 @@ Python 有两个 Java 没有数值运算符：用于幂的 `**` 和用于地板�
 ### 4.3 变量声明
 
 Python 是一种动态类型语言，这意味着变量不需要显式的类型声明。相反，变量的类型根据赋值它的值在运行时推断。
+
 因此，Python 中的变量通过简单地为名称赋值来声明。
 
 ```python
@@ -240,6 +252,7 @@ my_string = "Hello World!"
 ```
 
 此示例还证明了，与 Java 不同，Python 中的静态变量可以通过简单地在顶层作用域中声明来实现。
+
 在 Python 中，变量可以根据赋值的值动态更改其类型。
 
 ```python
@@ -257,6 +270,7 @@ print(type(my_variable)) # <class 'bool'>
 #### 4.4.1 if-else 语句
 
 在 Python 中，if-else 语句的功能与 Java 类似，区别在于条件不需要大括号，并利用缩进来区分语句中的 if 和 else 块。
+
 条件的写法与 Java 相似，但 Python 使用 `and` 和 `or` 代替 `&&` 和 `||` 进行逻辑操作。
 
 ```python
@@ -267,10 +281,6 @@ else:
 ```
 
 Python 中没有 switch 语句，但使用 `elif` 语句（else if 的缩写）起到了类似的作用。
-
-
-
-
 
 ```python
 if argument == 1:
@@ -316,14 +326,16 @@ Python 还支持三元运算符，提供了一种根据条件评估表达式的�
 
 这是一个短短示例：
 
+
+
 ```python
 x = 2
 print("even" if x % 2 == 0 else "odd")  # even
 ```
 
-#### 4.4.2 for 循环
+### 4.4.2 `for` 循环
 
-在 Python 中，`for` 循环可以迭代序列的元素，如字符串、列表、元组、集合等（列表、元组和集合将在第 6 章: Python 数据结构 中讨论）。
+在 Python 中，`for` 循环可以迭代序列的元素，如字符串、列表、元组、集合等（列表、元组和集合将在第 6 章：Python 数据结构 中讨论）。
 
 为了模拟在 Java 等语言中常见的基于整数索引的 `for` 循环行为，Python 提供了 `range()` 函数。该函数生成一个整数序列。
 
@@ -340,7 +352,7 @@ for i in range(3, 10, 2): # (start, stop, step)
 
 `print()` 函数中的 `end` 参数指定了输出结尾打印的字符或字符串，替换了默认的换行符（`\n`）。
 
-#### 4.4.3 while 循环
+### 4.4.3 `while` 循环
 
 除了语法外，`while` 循环的工作方式与 Java 相同。
 
@@ -351,7 +363,7 @@ while x < 5:
     x += 1
 ```
 
-#### 4.4.4 嵌套块
+### 4.4.4 嵌套块
 
 在 Python 中，用于缩进的空格或制表符数量对于解释器识别代码结构并确定哪些语句属于哪个块至关重要。可以使用空格或制表符来实现缩进。
 
@@ -369,7 +381,7 @@ for i in range(3):
     print("Still on outer loop")
 ```
 
-#### 4.4.5 break, continue, pass
+### 4.4.5 `break`, `continue`, `pass`
 
 Python 提供了 `break`、`continue` 和 `pass` 等控制流关键字来修改循环和 `if-else` 语句的行为。
 
@@ -459,16 +471,9 @@ def double(x):
 print(apply(double, 5))  # 10
 ```
 
+无效的函数调用：
 
-
-
-# 你今年 25 岁。
-
-# 你住在纽约。
-
-# 无效的函数调用：
-
-# 位置参数跟在关键字参数之后
+位置参数跟在关键字参数之后
 
 `greet(name="Alice", 30)`
 
@@ -485,7 +490,7 @@ print(func())  # 输出: [1]
 print(func())  # 输出: [1, 1]
 ```
 
-当第一次调用函数 `func` 时，使用了 `a` 的默认值（空列表 `[]`（列表将在第 6 章节讨论：Python 数据结构）），并且 `append(1)` 操作通过向列表添加 1 修改修改了该列表。
+当第一次调用函数 `func` 时，使用了 `a` 的默认值（空列表 `[]`（列表将在第 6 章节讨论：Python 数据结构）），并且 `append(1)` 操作通过向列表添加 1 修改了该列表。
 
 因此，第一次调用 `func()` 返回 `[1]`。
 
@@ -503,7 +508,8 @@ func(1, 2, 3, 4, 5)  # 1 2 3 4 5
 func(6, 7, 8, 9, e=10)  # 6 7 8 9 10
 ```
 
-# 这行无效
+这行无效：
+
 ```python
 # func(6, 7, c=8, d=9, e=10)
 ```
@@ -546,6 +552,7 @@ else:
 ```
 
 当你作为独立脚本运行 `example.py` 时，输出将是：
+
 ```
 这是顶级代码
 该脚本正在直接运行
@@ -560,6 +567,7 @@ import example
 ```
 
 输出将是：
+
 ```
 这是顶级代码
 该模块正在被导入
@@ -579,7 +587,7 @@ import example
 
 #### 运算符
 
-`==` 运算符检查值的相等性，而 `is` 运算符检查标识标识。在 Python 中，`==` 运算符调用 `__eq__()` 方法，该方法默认像 `is` 运算符一样比较值。
+`==` 运算符检查值的相等性，而 `is` 运算符检查标识。在 Python 中，`==` 运算符调用 `__eq__()` 方法，该方法默认像 `is` 运算符一样比较值。
 
 ```python
 class Pair:
@@ -613,10 +621,6 @@ print(obj_2 is obj_1)  # False
 print(obj_3 is obj_1)  # True
 print(obj_1 == 10)  # False
 ```
-
-
-
-
 
 此外，`del` 语句可以删除实例变量：
 
@@ -669,7 +673,7 @@ obj2.print_x()  # Bye
 
 子类继承父类的所有属性和方法，它们可以访问并使用这些继承的成员，就像它们直接定义在子类内部一样。与 Java 不同，Python 不对继承的成员强制执行访问限制，这意味着父类无法阻止子类使用它们。
 
-与 Java 相比，Python 不会在子类构造函数从中自动调用父类的构造函数。
+与 Java 相比，Python 不会在子类构造函数中自动调用父类的构造函数。
 
 相反，如果子类没有定义自己的构造函数，Python 会自动在父类中查找构造函数。如果找到，则会自动调用。然而，如果子类定义了自己的构造函数，如果需要，则必须显式调用父类构造函数，通常使用 `super().__init__()`。但这一步不是强制的，这样做不会导致编译错误。
 
@@ -703,7 +707,7 @@ print(isinstance(our_cat, Animal)) # True
 
 ### 5.3 多继承
 
-多继承是 Python 支持的一个特性，但它在开发者之间的流行程度不异，通常是一个争议的话题。
+多继承是 Python 支持的一个特性，但它在开发者之间的流行程度不一，通常是一个争议的话题。
 
 尽管如此，多继承被频繁使用，即使在 Python 的内置库中也是如此，用于实现面向对象编程中所谓的混入（mixin）的东西：小的、可重用的代码片段，可以被“混合”到多个类中以提供公共功能。因此，我们在这里简要描述多继承。
 
@@ -730,7 +734,7 @@ parrot.speak()
 parrot.fly()
 ```
 
-在 Python 中，方法解析顺序（MRO）决定了搜索类方法的序列。MRO 使用 C3 线性化算法生成，该算法解决了菱继承问题。
+在 Python 中，方法解析顺序（MRO）决定了搜索类方法的序列。MRO 使用 C3 线性化算法生成，该算法解决了菱形继承问题。
 
 以下是一个演示 MRO 的示例：
 
@@ -757,17 +761,19 @@ print(type(d).__mro__)
 
 ### 5.4 访问修饰符
 
-#### 5.4.1 使用 _ 和 __ 前缀
+#### 5.4.1 使用 `_` 和 `__` 前缀
 
 类的受保护成员习惯上通过在其名称前加上单下划线（`_`）表示。虽然这不会强制严格的保护，但它向其他开发者信号，这些成员旨在供类或子类内部使用。
+
+
 
 Python 中的私有成员通过在其名称前加上双下划线（`__`）来表示。这种命名约定会触发命名修饰（mangling），使得外部代码访问这些成员变得困难。
 
 命名修饰机制如下：
 
-当类的成员以前双下划线（`__`）开头时，Python 会通过将类名作为前缀内部重命名该成员。此重命名过程发生在编译期间，而不是运行时。例如，如果类 `MyClass` 有函数 `__func()`，该函数将在编译期间重命名为 `_MyClass__func()`，代码对函数的引用也会相应更新。
+当类的成员以前双下划线（`__`）开头时，Python 会通过将类名作为前缀内部重命名该成员。此重命名过程发生在编译期间，而不是运行时。例如，如果类`MyClass`有函数`__func()`，该函数将在编译期间重命名为`_MyClass__func()`，代码对函数的引用也会相应更新。
 
-被双下划线包围的属性和方法（如 `__name__` 和 `__init__`）不受修饰。这些通常是 Python 标准数据模型的一部分，并在语言中具有特定的、预定义的角色。
+被双下划线包围的属性和方法（如`__name__`和`__init__`）不受修饰。这些通常是 Python 标准数据模型的一部分，并在语言中具有特定的、预定义的角色。
 
 ```python
 class MyClass:
@@ -791,21 +797,15 @@ print(obj._protected_method())  # Protected
 print(obj.__private_method())
 ```
 
-#### 5.4.2 通过装饰器实现 Setter 和 Getter
+## 5.4.2 通过装饰器实现 Setter 和 Getter
 
 Python 中的装饰器和 Java 中的注解功能 set 相似，但它们的运行方式不同，并且具有不同的语法和功能（装饰器将在第 19 章：元编程中讨论）。
 
 Python 提供了装饰器
 
-*   `@property`
-
-*   `@<attr>.setter`
-
-
-
-
-
-### `@<attr>.deleter`
+- `@property`
+- `@<attr>.setter`
+- `@<attr>.deleter`
 
 用于为类属性定义 getter、setter 和 deleter（删除）方法。
 
@@ -813,11 +813,11 @@ Python 提供了装饰器
 
 下面的示例演示了它们的用法。
 
-请注意，在这个示例中，`radius` 方法被重载了，这意味着有两个同名为 `radius` 但签名不同的方法。
+请注意，在这个示例中，`radius`方法被重载了，这意味着有两个同名为`radius`但签名不同的方法。
 
-Python 不支持传统意义的方法重载（即允许多个同名但参数不同的方法）。然而，Python 的 `property` 特性允许为类属性定义 getter、setter 和 deleter，这可以产生重载的效果。
+Python 不支持传统意义的方法重载（即允许多个同名但参数不同的方法）。然而，Python 的`property`特性允许为类属性定义 getter、setter 和 deleter，这可以产生重载的效果。
 
-这种方法通常配合 `property` 装饰器使用，为单个属性定义 getter、setter 和 deleter 方法。
+这种方法通常配合`property`装饰器使用，为单个属性定义 getter、setter 和 deleter 方法。
 
 ```python
 class Circle:
@@ -848,11 +848,11 @@ del circle.radius
 print(circle.radius)  # AttributeError
 ```
 
-### 5.5 类作为一等对象
+## 5.5 类作为一等对象
 
-在 Python 中，一切都是对象，包括类本身。因此，类是 `class` 类型的实例。
+在 Python 中，一切都是对象，包括类本身。因此，类是`class`类型的实例。
 
-要获取一个对象的类对象，可以使用内置的 `type()` 函数。
+要获取一个对象的类对象，可以使用内置的`type()`函数。
 
 ```python
 x = 42
@@ -868,7 +868,7 @@ class MyClass:
 print(MyClass)  # <class '__main__.MyClass'>
 ```
 
-你还可以使用 `type()` 函数来动态创建类对象，只需向它提供类名、基类元组以及一个包含属性和方法名称对应值的字典（元组和字典将在第 6 章讨论）。
+你还可以使用`type()`函数来动态创建类对象，只需向它提供类名、基类元组以及一个包含属性和方法名称对应值的字典（元组和字典将在第 6 章讨论）。
 
 ```python
 def init_method(self, value):
@@ -909,7 +909,7 @@ obj.print_x()  # 42
 
 另一方面，**未绑定方法**是一个独立的函数，不与任何特定实例关联，类似于 Java 中的静态函数。
 
-要将函数作为方法添加到实例中，请使用 `types.MethodType` 创建绑定方法：
+要将函数作为方法添加到实例中，请使用`types.MethodType`创建绑定方法：
 
 ```python
 import types
@@ -928,7 +928,7 @@ obj.print()  # 42
 obj.print_unbound(obj)  # 42
 ```
 
-我们到为止讨论的类方法都是实例方法，这意味着它们在类的实例上执行。此外，还有其他类型的方法：**静态方法**（static methods）和**类方法**（class methods），分别被标记为 `@staticmethod` 和 `@classmethod`。
+我们到为止讨论的类方法都是实例方法，这意味着它们在类的实例上执行。此外，还有其他类型的方法：**静态方法**（static methods）和**类方法**（class methods），分别被标记为`@staticmethod`和`@classmethod`。
 
 与 Java 类似，**静态方法**属于类而不是任何实例的方法。它不需要访问实例（`self`）或类（`cls`）作为参数。它们通常用于工具函数，在独立于类或实例的情况下执行任务。
 
@@ -955,6 +955,7 @@ class TimeStamp:
 TimeStamp.set_date(year=2024, month=5, day=16)
 time_stamp = TimeStamp()
 print(time_stamp) # 示例处未显示完整 print，但逻辑如此
+```
 
 ## 6: 数据结构
 
@@ -962,40 +963,36 @@ print(time_stamp) # 示例处未显示完整 print，但逻辑如此
 
 ```python
 nested_list = [[1, 2, 3], [3, 4, 6]]
+
 print(nested_list[1][1])  # 4
 ```
 
-对于生成具有预定义值的长列表，Python 有一种名为列表推导式的特性。它通过 `for` 子句生成列表元素，并可选地包含额外的 `for` 或 `if` 子句。
+对于生成具有预定义值的长列表，Python 有一种名为列表推导式的特性。它通过`for`子句生成列表元素，并可选地包含额外的`for`或`if`子句。
 
 ```python
 # 使用列表推导式生成平方数列表
 squares = [x ** 2 for x in range(1, 5)]
+
 print(squares)  # [1, 4, 9, 16]
 
 # 使用列表推导式生成偶数的平方
 even_squares = [x**2 for x in range(1, 10) if x % 2 == 0]
+
 print(even_squares)  # [4, 16, 36, 64]
 
 # 带有两个 for 子句的列表推导式
-pairs = [f"{x}{y}" for x in range(1, 3)]
-```
+pairs = [f"{x}{y}" for x in range(1, 3) for y in range(4, 6)]
 
-
-
-
-
-```python
-for y in range(4, 6)]
-    print(pairs)  # ['14', '15', '24', '25']
+print(pairs)  # ['14', '15', '24', '25']
 ```
 
 最后，有一个非常通用的功能用于创建列表的子列表，称为切片（slicing）。
 
-`::` 运算符用于 Python 的切片语法，以生成列表的子列表。其语法如下：
+`::`运算符用于 Python 的切片语法，以生成列表的子列表。其语法如下：
 
 `list[start:stop:step]`
 
-这三个参数都可以省略，分别默认为列表的开头、列表末尾和 `1`。当使用负步长时，`start` 和 `stop` 的默认值分别是列表的最后一个元素和第一个元素。
+这三个参数都可以省略，分别默认为列表的开头、列表末尾和`1`。当使用负步长时，`start`和`stop`的默认值分别是列表的最后一个元素和第一个元素。
 
 切片操作通常是安全的，不会产生异常。还可以通过仅使用默认值的切片运算符（`[:]`）来创建列表的（浅拷贝）。
 
@@ -1005,49 +1002,62 @@ for y in range(4, 6)]
 my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 even_indexed = my_list[::2]
+
 print(even_indexed)  # [1, 3, 5, 7, 9]
 
 odd_indexed = my_list[1::2]
+
 print(odd_indexed)  # [2, 4, 6, 8, 10]
 
 first_five = my_list[:5]
+
 print(first_five)  # [1, 2, 3, 4, 5]
 
 last_five = my_list[-5:]
+
 print(last_five)
 
 subsequence = my_list[2:7]
+
 print(subsequence)  # [3, 4, 5, 6, 7]
 
 reverse = my_list[::-1]
+
 print(reverse)  # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 
 first_five_reversed = my_list[4::-1]
+
 print(first_five_reversed)  # [5, 4, 3, 2, 1]
 
 last_five_reversed = my_list[:-6:-1]
+
 print(last_five_reversed)  # [10, 9, 8, 7, 6]
 
 shallow_copy = my_list[:]
+
 print(shallow_copy == my_list)  # True
+
 print(shallow_copy is my_list)  # False
 
 # 这不会抛出异常！
 print(my_list[-5000:5000:-300])  # []
 ```
 
-最后，可以使用 Python 中的 `slice()` 函数创建可重用的切片对象：
+最后，可以使用 Python 中的`slice()`函数创建可重用的切片对象：
 
 ```python
 slice_obj = slice(1, None, 2)  # 1::2
+
 list_1 = [1, 2, 3, 4, 5]
+
 list_2 = [10, 11]
 
 print(list_1[slice_obj])  # [2, 4]
+
 print(list_2[slice_obj])  # [11]
 ```
 
-### 6.2 元组 (Tuples
+## 6.2 元组 (Tuples)
 
 在 Python 中，元组是元素的有序集合，类似于列表。然而，元组是不可变的，这意味着它们的元素在创建后无法被修改。
 
@@ -1055,20 +1065,27 @@ print(list_2[slice_obj])  # [11]
 
 ```python
 my_tuple = (1, 2, 3, 4, 5)
+
 print(my_tuple[1])  # 2
+
 print(my_tuple[-2])  # 4
+
 print(my_tuple[1:4])  # (2, 3, 4)
 
 new_tuple = my_tuple + (6, 7, 8)
+
 print(new_tuple)  # (1, 2, 3, 4, 5, 6, 7, 8)
 
 repeated_tuple = (1, 2, 3) * 2
+
 print(repeated_tuple)  # (1, 2, 3, 1, 2, 3)
 
 print(my_tuple.count(3))  # 1
+
 print(my_tuple.index(4))  # 3
 
 a, b, c, d, e = my_tuple
+
 print(a, b, c, d, e)  # 输出: 1 2 3 4 5
 ```
 
@@ -1079,19 +1096,27 @@ def func(x, y, z):
     return x, y, z
 
 a = 1, 2, 3
+
 b = func(4, 5, 6)
+
 print(a)  # (1, 2, 3)
+
 print(b)  # (4, 5, 6)
 ```
 
-由于元组是不可变的，它们没有像列表那样的 `sort()` 方法。相反，可以使用 `sorted()` 函数来对列表和元组进行排序。该函数返回一个包含排序元素的新列表，而不会修改原始序列。
+由于元组是不可变的，它们没有像列表那样的`sort()`方法。相反，可以使用`sorted()`函数来对列表和元组进行排序。该函数返回一个包含排序元素的新列表，而不会修改原始序列。
 
 ```python
 my_tuple = (3, 1, 2)
+
 sorted_list = sorted(my_tuple)
+
 sorted_tuple = tuple(sorted_list)
+
 print(my_tuple)  # (3, 1, 2)
+
 print(sorted_list)  # [1, 2, 3]
+
 print(sorted_tuple)  # (1, 2, 3)
 ```
 
@@ -1099,38 +1124,49 @@ print(sorted_tuple)  # (1, 2, 3)
 
 ```python
 a = (1)
+
 b = (1,)
+
 print(a)  # 1
+
 print(b)  # (1,)
 ```
 
-如果你想对推导式使用元组，必须使用 `tuple` 构造函数：
+如果你想对推导式使用元组，必须使用`tuple`构造函数：
 
 ```python
 no_tuple = tuple(i for i in range(5))
+
 print(no_tuple)  # (0, 1, 2, 3, 4)
 ```
 
-### 6.3 字符串上的操作
+## 6.3 字符串上的操作
 
 许多在 Python 中可以对元组的操作也可以适用于字符串，因为元组和字符串都是不可变的序列，共享许多行为。以下是一些示例：
 
 ```python
 string = "xza"
+
 print(string[-1])  # a
+
 print(string[1:3])  # za
+
 print(string.index("a"))  # 2
+
 print(list(string))  # ['x', 'z', 'a']
 
 sorted_list = sorted(string)
+
 print(sorted_list)  # ['a', 'x', 'z']
+
 sorted_string = "-".join(sorted_list)
+
 print(sorted_string)  # a-x-z
 ```
 
-### 6.4 字典 (Dictionaries
+## 6.4 字典 (Dictionaries)
 
-Python 中的字典作为 map 的对应物。与 Java map 不同，字典是无序的项集合，每个项存储为键值对。它们是可变的。Python 字典使用大括号 `{}` 定义，并用冒号（:`）分隔键值。Python 字典中的键和值可以是不同的类型。
+Python 中的字典作为 map 的对应物。与 Java map 不同，字典是无序的项集合，每个项存储为键值对。它们是可变的。Python 字典使用大括号`{}`定义，并用冒号（`:`）分隔键值。Python 字典中的键和值可以是不同的类型。
 
 ```python
 name_of_locations = {
@@ -1157,23 +1193,31 @@ my_dict["age"] = 31
 
 # 移除键值对
 my_dict["city"] = "New York"
+
 del my_dict["city"]
 
 # 遍历字典
 for key, value in my_dict.items():
     print(key, ":", value)
+
 # name : John
 # age : 31
 
 # 检查字典中是否存在键
 print("name" in my_dict)  # True
-print("city" not in my_dict)  # True
+```
+
+
+
+`print("city" not in my_dict)`  # True
 
 # 推导式：创建一个字典
+
 # 将数字映射到它们的立方并过滤偶数
-even_cubes = {x:x*x for x in range(1, 10) if x % 2 == 0}
-print(even_cubes)  # {2: 8, 4: 64, 6: 216, 8: 512}
-```
+
+`even_cubes = {x:x*x for x in range(1, 10) if x % 2 == 0}`
+
+`print(even_cubes)`  # {2: 8, 4: 64, 6: 216, 8: 512}
 
 最后，还有称为字典打包/解包（dictionary packing/unpacking）的功能，它可以将参数列表转换为字典，反之亦然。
 
@@ -1212,7 +1256,7 @@ func()
 # () {}
 ```
 
-### 6.5 集合 (Sets
+### 6.5 集合 (Sets)
 
 在 Python 中，类似于 Java，集合是无序且可变的唯一元素集合。它们使用包含元素列表的大括号 `{}` 定义。与 Java 不同，Python 集合中的元素可以是不同的类型。
 
@@ -1241,17 +1285,11 @@ set_1 = {1, 2, 3, 4}
 set_2 = {3, 4, 5, 6}
 ```
 
-
-
-
-
 ```python
 set_1.add(10)
-
 print(set_1)  # {1, 2, 3, 4, 10}
 
 set_1.remove(10)
-
 print(set_1)  # {1, 2, 3, 4}
 
 union_set = set_1 | set_2
@@ -1279,7 +1317,6 @@ print(superset_check)  # True
 
 ```python
 my_set = {1, 2, 3, 4}
-
 frozen_set = frozenset(my_set)
 
 # 此语句抛出 AttributeError
@@ -1300,8 +1337,8 @@ frozen_set.add(5)
 
 在 Python 中，迭代器是一个实现了两个方法的对象：
 
-- `__next__()()`：此方法返回数据流中的下一个项目。如果没有更多项目，它将抛出 `StopIteration` 异常（异常将在第 7 章中解释）。
-- `__iter__()()`：此方法返回迭代器本身。它使得迭代器可以在期望迭代器的上下文中使用，例如在 `for` 循环中。
+- `__next__()`：此方法返回数据流中的下一个项目。如果没有更多项目，它将抛出 `StopIteration` 异常（异常将在第 7 章中解释）。
+- `__iter__()`：此方法返回迭代器本身。它使得迭代器可以在期望迭代器的上下文中使用，例如在 `for` 循环中。
 
 Python 中的列表、元组、字典和集合仅实现了 `__iter__()` 方法，该方法负责在调用时创建迭代器。这些对象没有直接实现 `__next__()` 方法。
 
@@ -1314,6 +1351,7 @@ class MyIterator:
     def __init__(self, limit):
         self.limit = limit
         self.current = 0
+
     def __iter__(self):
         return self
 
@@ -1373,10 +1411,6 @@ class MyContext:
 with MyContext() as manager:
     print(manager)
 ```
-
-
-
-
 
 Python 中的回溯（traceback）类似于 Java 的堆栈跟踪（stack trace）。两者都提供了导致异常发生的函数调用序列信息。它是一份关于函数调用的详细报告，包含了导致异常发生的文件名、行号和函数名。
 
@@ -1452,6 +1486,7 @@ except Exception as ex:
     print(f"ex: {type(ex)}")
     print(f"__cause__: {type(ex.__cause__)}")
     print(f"__context__: {type(ex.__context__)}")
+
 # ex: <class 'ValueError'>
 # __cause__: <class 'AttributeError'>
 # __context__: <class 'ZeroDivisionError'>
@@ -1503,10 +1538,6 @@ except CustomError as e:
 `write()` 方法允许将数据直接写入文件。你可以用它写入字符串和字节。任何其他数据类型在写入之前必须进行转换。
 
 文件必须以写入模式 (`w`) 打开以创建或覆盖文件，或者以追加模式 (`a`) 打开以便向现有文件添加数据而不覆盖其内容。
-
-
-
-
 
 ```python
 with open("example.bin", "wb") as file:
@@ -1563,11 +1594,14 @@ def greet(name):
     return f"Hi {name}!"
 
 greet_function = greet
-
 print(greet_function("Alice"))  # Hi Alice!
 ```
 
 函数可以作为参数传递给其他函数。
+
+```python
+
+
 
 ```python
 def apply_operation(operation, x, y):
@@ -1592,14 +1626,13 @@ triple = create_multiplier(3)
 print(triple(5))  # 15
 ```
 
-在 Python 中，可以将对象的方法作为参数传递给函数。
-
-虽然这与 Java 中的方法引用（由 `::` 运算符表示）有一些相似之处，但其语法和实现是不同的。
+在 Python 中，可以将对象的方法作为参数传递给函数。虽然这与 Java 中的方法引用（由 `::` 运算符表示）有一些相似之处，但其语法和实现是不同的。
 
 ```python
 class MyClass:
     def __init__(self, value):
         self.value = value
+
     def multiply(self, other):
         return self.value * other
 
@@ -1615,9 +1648,7 @@ print(result)  # 10
 
 在 Java 和 Python 中，lambda 表达式都是匿名函数，可以用于创建小型、一次性的函数，而不需要显式地定义独立的函数。
 
-Python 中的 lambda 表达式使用 `lambda` 关键字定义，后面跟着一个由逗号分隔的参数列表、一个冒号（:`）以及一个表示函数调用返回值的表达式。
-
-与 Java 不同，Python 的动态类型特性意味着你不需要在 lambda 函数中指定参数类型。
+Python 中的 lambda 表达式使用 `lambda` 关键字定义，后面跟着一个由逗号分隔的参数列表、一个冒号（`:`）以及一个表示函数调用返回值的表达式。与 Java 不同，Python 的动态类型特性意味着你不需要在 lambda 函数中指定参数类型。
 
 ```python
 add = lambda x, y: x + y
@@ -1638,9 +1669,7 @@ print(my_list)  # [1, 2, 3]
 
 ### 9.3 内置高阶函数
 
-lambda 表达式配合 Python 的内置高阶函数使用非常方便。
-
-以下是 `map()` 和 `filter()` 的示例。注意在 Python 中，它们返回的是迭代器，与 Java 的对应实现不同。
+lambda 表达式配合 Python 的内置高阶函数使用非常方便。以下是 `map()` 和 `filter()` 的示例。注意在 Python 中，它们返回的是迭代器，与 Java 的对应实现不同。
 
 ```python
 numbers = [1, 2, 3, 4, 5]
@@ -1653,7 +1682,7 @@ print(list(evens))  # [2, 4]
 
 # 第三部分
 
-### Python 环境管理
+## Python 环境管理
 
 ## 第 10 章
 
@@ -1674,7 +1703,7 @@ src/
     └── data_processing.py
 ```
 
-在 Python 中，模块包含包含 定义的文件。包是一个包含模块和一个特殊的 `__init__.py` 文件的目录。
+在 Python 中，模块包含包含定义的文件。包是一个包含模块和一个特殊的 `__init__.py` 文件的目录。
 
 要从包中导入模块，使用点符号法。例如，在上面的结构中，`helper.py` 被引用为 `utils.helper`。
 
@@ -1686,18 +1715,11 @@ src/
 
 普通包是包含 `__init__.py` 文件的目录。当导入相应的包或其部分时，该文件会被执行。`__init__.py` 文件可以包含初始化代码，例如定义变量、导入模块或设置包所需的资源。或者，也可以保持为空。无论导入多少次，它每个 Python 进程只会执行一次。一旦执行，模块会被缓存在内存中，后续对同一包的导入将重用已初始化的模块。
 
-
-
-
 相反，它使用找到的第一个包或模块，而忽略其他可能的发现。由于这可能导致 Python 应用程序出现意外行为，因此应该避免此类情况。
 
-类似于 Gradle 构建过程中的源集（source sets），IntelliJ IDEA 中的 Python 项目可以将源代码组织在不同的目录中。
+类似于 Gradle 构建过程中的源集（source sets），IntelliJ IDEA 中的 Python 项目可以将源代码组织在不同的目录中。IntelliJ IDEA 项目配置功能，可以为不同的用途指定目录。
 
-IntelliJ IDEA 项目配置功能，可以为不同的用途指定目录。
-
-这可以通过右键点击项目窗口中的目录名称，在右键菜单中使用 `Mark directory`（标记目录）选项来实现。
-
-或者，你可以导航到 `File` → `Project Structure` → `Project Settings` → `Modules` → `Sources` 来配置目录。
+这可以通过右键点击项目窗口中的目录名称，在右键菜单中使用 `Mark directory`（标记目录）选项来实现。或者，你可以导航到 `File` → `Project Structure` → `Project Settings` → `Modules` → `Sources` 来配置目录。
 
 最重要的两个标记是：
 
@@ -1708,9 +1730,9 @@ IntelliJ IDEA 项目配置功能，可以为不同的用途指定目录。
 
 通过此配置，项目已准备好在使用包在平台 A 上运行：
 
-`my_legacy_common_package`
-`my_legacy_platform_package`
-`my_package`
+- `my_legacy_common_package`
+- `my_legacy_platform_package`
+- `my_package`
 
 要使项目准备在平台 B 上运行，你只需要交换平台包上的 `Source Root` 和 `Excluded` 标记。
 
@@ -1761,10 +1783,10 @@ Python 支持从模块导入多种类型，每种类型都有特定的用途：
 
 ```python
 # my_package/my_module
-
 class MyClass:
     def __init__(self, name):
         self.name = name
+
     def greet(self):
         return f"Hello, {self.name}!"
 
@@ -1780,29 +1802,25 @@ my_variable = "Hello, World!"
 
 #### 10.3.1 导入整个模块
 
-你可以使用 `import` 关键字后跟包名和模块名来导入整个模块。
-
-一旦导入，你就可以使用点符号来访问模块的内容。
+你可以使用 `import` 关键字后跟包名和模块名来导入整个模块。一旦导入，你就可以使用点符号来访问模块的内容。
 
 ```python
 import my_package.my_module
+
 print(my_package.my_module.my_variable)
 print(my_package.my_module.my_function)
-
 obj = my_package.my_module.MyClass()
 ```
 
 #### 10.3.2 导入特定项
 
-你可以使用 `from` 关键字后跟模块名以及 `import` 语句来导入特定项，如类、函数或变量。
-
-一旦导入，你就可以直接引用它们，而无需在它们前面加上模块名。
+你可以使用 `from` 关键字后跟模块名以及 `import` 语句来导入特定项，如类、函数或变量。一旦导入，你就可以直接引用它们，而无需在它们前面加上模块名。
 
 ```python
 from my_package.my_module import my_variable, my_function, MyClass
+
 print(my_variable)
 print(my_function())
-
 obj = MyClass()
 ```
 
@@ -1812,9 +1830,9 @@ obj = MyClass()
 
 ```python
 from my_package.my_module import my_variable as renamed_variable, my_function as renamed_function, MyClass as RenamedClass
+
 print(renamed_variable)
 print(renamed_function())
-
 obj = RenamedClass()
 ```
 
@@ -1824,15 +1842,13 @@ obj = RenamedClass()
 
 ```python
 from my_package.my_module import *
+
 print(my_variable)
 print(my_function())
-
 obj = MyClass()
 ```
 
-虽然通配符导入很方便，但它们会导致命名空间污染，并不清楚哪些符号被导入了，从而引发问题。
-
-通过为 `__all__` 变量赋值一个项列表，可以限制模块的通配符导入。
+虽然通配符导入很方便，但它们会导致命名空间污染，并不清楚哪些符号被导入了，从而引发问题。通过为 `__all__` 变量赋值一个项列表，可以限制模块的通配符导入。
 
 #### 10.4 绝对导入与相对导入
 
@@ -1840,15 +1856,9 @@ obj = MyClass()
 
 绝对导入从顶级包开始指定要导入的模块或包的精确位置。这种导入类型类似于 Java 的 import 语句，提供了从项目根目录到目标模块的完整路径。
 
-
-
-[content]
-
 相对导入指定了模块或包相对于当前模块的位置。这种类型的导入在同一个项目或包层级结构内导入模块或包时非常有用。
 
-在 Python 中使用相对导入时，可以通过在导入路径前加上一个或多个点（`.`）来指定在包层级结构中向上遍历的层数。
-
-每个点代表层级结构中向上的一级。例如，要从父包导入模块使用单个点（`.`）；要从祖父包导入，则使用两个点（`..`），依此类推。
+在 Python 中使用相对导入时，可以通过在导入路径前加上一个或多个点（`.`）来指定在包层级结构中向上遍历的层数。每个点代表层级结构中向上的一级。例如，要从父包导入模块使用单个点（`.`）；要从祖父包导入，则使用两个点（`..`），依此类推。
 
 例如，考虑以下项目结构：
 
@@ -1878,6 +1888,7 @@ from package.sub_package.sub_module
 如果 `second_module` 想要从 `module` 导入函数，它可以使用相对导入，并使用单个 `.` 表示该模块位于同一个包中。
 
 #### `second_module`
+
 ```python
 from .module import my_function
 ```
@@ -1885,6 +1896,7 @@ from .module import my_function
 如果 `sub_sub_module.py` 想要从 `sub_module.py` 和 `other_module.py` 导入函数，可以分别使用 `..` 和 `...` 作为前缀。
 
 #### `sub_sub_module`
+
 ```python
 from ..sub_module
     import my_function as func_1
@@ -1893,15 +1905,13 @@ from ...other_sub_package.other_module
     import my_function as func_2
 ```
 
-在讨论完相对导入后，需要注意的是根据 Python 风格指南 `PEP 8`，通常推荐使用绝对导入而非相对导入。`PEP 8`all：
+在讨论完相对导入后，需要注意的是根据 Python 风格指南 `PEP 8`，通常推荐使用绝对导入而非相对导入。`PEP 8` 规定：
 
 > 推荐使用绝对导入，因为它们通常更具读性，并且如果导入系统配置错误，它们的行为往往更好（或者至少错误信息更准确）。
 
 ### 10.5 包接口
 
-在 Python 中，将导入语句放置在 `__init__.py` 文件或包的模块中，可以让这些导入在其他模块或包中直接可用。
-
-这种行为允许包提供一个方便的接口，使用户可以直接从包命名空间访问常用的对象。
+在 Python 中，将导入语句放置在 `__init__.py` 文件或包的模块中，可以让这些导入在其他模块或包中直接可用。这种行为允许包提供一个方便的接口，使用户可以直接从包命名空间访问常用的对象。
 
 例如，考虑一个名为 `mypackage` 的包，其结构如下：
 
@@ -1915,9 +1925,9 @@ my_package/
 如果 `my_module_1.py` 包含函数 `my_function`，且 `my_module_2.py` 包含一个名为 `MyClass` 的类，你可以在 `__init__.py` 中导入这些对象：
 
 #### `__init__.py`
+
 ```python
 from my_module_1 import my_function
-
 from my_module_2 import MyClass
 ```
 
@@ -1926,6 +1936,8 @@ from my_module_2 import MyClass
 ```python
 from mypackage import my_function, MyClass
 ```
+
+
 
 这为包的用户提供了一个更简洁、更直观的 API，因为他们可以直接从包命名空间访问所需的对象。
 
@@ -1941,6 +1953,7 @@ from mypackage import my_function, MyClass
 这里有一个简单的示例来说说明其用法：
 
 #### `my_module.py`
+
 ```python
 def script():
     print("Running as script.")
@@ -1955,11 +1968,14 @@ else:
 ```
 
 直接运行 `my_module.py` 将输出：
-```
+
+```text
 Running as script
 ```
+
 而在其他地方导入 `my_module.py` 将输出：
-```
+
+```text
 Module my_module imported.
 ```
 
@@ -1967,7 +1983,7 @@ Module my_module imported.
 
 ### 11.1 Python 环境简介
 
-Python 环境类似于 Java 开发工具包 (JDK)，包含了执行 Python 代码和运行基于 Python 的应用程序所需的资源和设置。
+Python 环境类似于 Java 开发工具包（JDK），包含了执行 Python 代码和运行基于 Python 的应用程序所需的资源和设置。
 
 它包括许多核心组件，如 Python 解释器、库、依赖项、配置设置和运行时环境。
 
@@ -1982,27 +1998,26 @@ Python 环境类似于 Java 开发工具包 (JDK)，包含了执行 Python 代�
 
 #### 11.2.1 可用工具
 
-- **venv**：这是 Python 提供的标准工具。你可以使用 `venv` 模块中的 Python 脚本创建虚拟环境，该模块随 Python 包含。
-- **Virtualenv**：这是一个流行的第三方工具，增强了 `venv` 模块提供的功能。
+- **`venv`**：这是 Python 提供的标准工具。你可以使用 `venv` 模块中的 Python 脚本创建虚拟环境，该模块随 Python 包含。
+- **`Virtualenv`**：这是一个流行的第三方工具，增强了 `venv` 模块提供的功能。
 
 （注：文中提到虚拟环境提供了激活和取消脚本，这些脚本会修改 shell 环境以使用虚拟环境的解释器，并修改 shell 的 PATH 变量以优先考虑虚拟环境的二进制目录进行包执行。这允许你在 shell 会话中无缝切换虚拟环境。）
 
+#### 11.2.2 Conda
 
-
-
-
-# Conda
 `Conda` 是一个流行的包和环境管理系统，通常用于数据科学社区。它作为 Anaconda Python 发行版的包管理器。
 
 它提供了创建和管理虚拟环境的功能，以及包的安装和依赖管理。
 
-# Pipenv
+#### 11.2.3 Pipenv
+
 `Pipenv` 是一个流行的工具，它将包管理与虚拟环境管理相结合。它通过创建一个 `Pipfile` 来管理依赖，并创建一个 `Pipfile.lock` 来锁定依赖版本。
 
-# Poetry
+#### 11.2.4 Poetry
+
 `Poetry` 是一个用于 Python 项目的现代依赖管理工具和项目管理器。它允许你在 `pyproject.toml` 文件中定义项目依赖和设置。
 
-你可以使用命令行或通过集成开发环境（IDE）如 `IntelliJ IDEA`来创建虚拟环境。
+你可以使用命令行或通过集成开发环境（IDE）如 `IntelliJ IDEA` 来创建虚拟环境。
 
 虽然在某些情况下可能需要从命令行创建虚拟环境（例如在远程服务器上工作或需要特定配置时），但通常情况下，使用 IDE 是更优的方法。
 
@@ -2016,16 +2031,12 @@ Python 环境类似于 Java 开发工具包 (JDK)，包含了执行 Python 代�
 
 你可以从 `conda.io` 下载并安装 `Conda`。
 
-## 11.2.2 创建虚拟环境
+### 11.2.5 创建虚拟环境
 
 1. 导航到 `File` → `Project Structure` → `Platform Settings` → `SDKs`。
-
 2. 点击 `+` 图并在下拉菜单中选择 `Python SDK`。在出现的对话框中，选择 `Conda Environment` 并保持选择为 `New environment`。
-
 3. 为新的虚拟环境指定位置。该位置可以是任何地方，但建议在你的项目目录下创建一个新目录。
-
 4. 为虚拟环境选择所需的 Python 版本。请记住，你只能为 `Anaconda` 支持的 Python 版本创建虚拟环境，因为 `Conda` 将下载 Anaconda Python 发行版。
-
 5. 点击 `OK` 创建虚拟环境。
 
 `Conda` 将下载选定的 Python 解释器并预安装许多模块，这样你以后就不需要手动安装。
@@ -2034,25 +2045,22 @@ Python 环境类似于 Java 开发工具包 (JDK)，包含了执行 Python 代�
 
 注意，此名称仅在 `IntelliJ IDEA` 中使用，因此 `Conda` 命令行工具不会显示此名称，而是显示目录路径。
 
-## 11.2.3 修改虚拟环境
+### 11.2.6 修改虚拟环境
 
 1. 导航到 `File` → `Project Structure` → `Project Settings` → `Modules` 并点击 `Dependencies` 选项卡。
-
 2. 在 `Module SDK` 下，从下拉菜单中选择你想使用的虚拟环境并点击 `OK`。
 
 从那时起，选定的虚拟环境将用于在 `IntelliJ IDEA` 中通过标准设置运行 Python 脚本。
 
 注意你也可以在运行时配置中更改虚拟环境。每个运行时配置都可以在不同的虚拟环境中运行。这种灵活性允许你轻松地针对不同的 Python 版本测试你的脚本，例如。
 
-## 11.2.4 删除虚拟环境
+### 11.2.7 删除虚拟环境
 
 1. 导航到 `File` → `Project Structure` → `Platform Settings` → `SDKs`。
-
 2. 从列表中选择你想删除的虚拟环境并点击 `-`。
-
 3. 导航到虚拟环境所在的目录。
 
-# 第 12 章：使用外部包
+## 第 12 章：使用外部包
 
 在 Python 开发中，与 Java 类似，外部包对于扩展标准库之外的功能至关重要。这些包也称为库或模块，由 Python 社区开发和维护，为从数据处理到科学计算的各种任务提供了多样化的工具。
 
@@ -2069,10 +2077,6 @@ Python 环境类似于 Java 开发工具包 (JDK)，包含了执行 Python 代�
 当不在激活虚拟环境的情况下使用包管理器安装 Python 库时，它们被存储在系统级 Python 安装的 `site-packages` 目录中。当你激活虚拟环境时，使用包管理器安装的 Python 库将存储在该虚拟环境特定的 `site-packages` 目录中。
 
 因此，在命令行执行任何包管理器命令之前，确保你正在使用正确的 shell 环境至关重要。最简单的方法是在计算机系统上打开终端程序来全局安装包，或者在 `IntelliJ IDEA` 中打开终端，它会自动激活为项目配置的虚拟环境。
-
-
-
-
 
 `pip` 和 `Conda` 安装包的命令非常相似。例如，要安装 `numpy` 包（一个用于 Python 科学计算的基础包），你可以使用以下命令之一：
 
@@ -2123,7 +2127,7 @@ pip list
 conda list
 ```
 
-`pip` 和 `Conda` 都提供了 set 的卸载包的方法。例如，要移除 `numpy` 包，可以使用以下命令：
+`pip` 和 `Conda` 都提供了卸载包的方法。例如，要移除 `numpy` 包，可以使用以下命令：
 
 ```bash
 pip uninstall numpy
@@ -2152,7 +2156,7 @@ pip install pip-autoremove
 conda remove --prune numpy
 ```
 
-## 12.2 IntelliJ IDEA 包管理
+### 12.2 IntelliJ IDEA 包管理
 
 IntelliJ IDEA 提供了一个内置的 Python 包工具（Python Packages Tool），简化了管理 Python 项目中外部包和依赖项的过程。你可以点击相应的图标访问该工具，该图标默认位于左侧菜单栏的下部。
 
@@ -2162,11 +2166,11 @@ IntelliJ IDEA 提供了一个内置的 Python 包工具（Python Packages Tool�
 
 点击包名会在工具窗口右侧显示该包的描述。在描述的顶部，要么有一个安装按钮和一个用于选择版本的下拉菜单，要么对于已安装的包，有一个垂直省略号图标，显示卸载包的按钮。
 
-你也可以通过导航到 `File → Project Structure → Platform Settings →SDKs` 来管理所有可用虚拟环境的包。
+你也可以通过导航到 `File → Project Structure → Platform Settings → SDKs` 来管理所有可用虚拟环境的包。
 
 对于选定的虚拟环境，`Packages` 标签页显示当前安装的包，并提供与 Python 包工具相同的安装、更新和卸载包的选项。
 
-## 12.3 管理项目依赖
+### 12.3 管理项目依赖
 
 管理依赖是 Python 项目的一个关键方面，确保了开发、部署和协作的顺利进行。Python 中指定项目依赖的一种常用方法是使用 `requirements.txt` 文件。类似于 Java 中 Gradle 脚本中的依赖部分，该文件作为项目运行所需的外部包及其相应版本的清单。
 
@@ -2174,7 +2178,7 @@ IntelliJ IDEA 提供了一个内置的 Python 包工具（Python Packages Tool�
 
 虽然有 `requirements.txt` 的替代方案，例如 `Pipenv` 使用的 `Pipfile` 和 `Conda` 使用的 `environment.yml`，但本节将重点介绍 `requirements.txt` 的用法。由于它对许多开发者来说，它仍然是跨 `Pip`、`virtualenv` 和 `Docker` 等工具及工作流的最流行的 Python 项目依赖管理方法之一。
 
-### 12.3.1 requirements.txt 的结构
+#### 12.3.1 requirements.txt 的结构
 
 `requirements.txt` 文件通常位于项目的根目录下。对于项目依赖的外部包，文件中包含一个以包名开行，后跟版本规范。这是一个示例：
 
@@ -2194,11 +2198,7 @@ requests
 
 也可以包含以 `#` 开头的注释行。此外，文件中还有可能的其他规范，例如引用其他 requirements 文件，但这超出了本书的范围。
 
-
-
-
-
-### 12.3.2 创建 requirements.txt
+#### 12.3.2 创建 requirements.txt
 
 除了手动创建 `requirements.txt` 文件外，你利用如 `pip` 等命令行工具，或利用 IDE 的功能（如 `IntelliJ IDEA` 提供的功能）来自动生成该文件。
 
@@ -2218,9 +2218,13 @@ pip freeze > requirements.txt
 2. 在打开的对话框中，你可以指定文件名（默认设置为 `requirements.txt`）、版本类型（例如：无版本、精确版本、最低版本或兼容性发布版本）以及其他一些选项，如移除未使用的包。
 3. 点击 `OK` 创建文件。
 
-### 12.3.3 安装 requirements.txt
+#### 12.3.3 安装 requirements.txt
 
 要从命令行安装 `requirements.txt` 中指定的依赖，请使用以下 `pip` 命令：
+
+```bash
+
+
 
 ```bash
 pip install -r requirements.txt
@@ -2241,9 +2245,9 @@ pip install -r requirements.txt
 以下是该过程的简要概述：
 
 - **编译**：Python 解释器将 Python 文件的源代码编译为字节码，并将其存储在同名后缀为 `.pyc` 的文件中。
-- **解释**：Python 虚拟机 (`PVM`) 从 `.pyc` 文件读取字节码指令并按顺序执行。
+- **解释**：Python 虚拟机（`PVM`）从 `.pyc` 文件读取字节码指令并按顺序执行。
 
-当你运行 Python 脚本或加载模块时，解释器会检查是否已存在源代码 (`.py`) 对应的已编译字节码文件 (`.pyc`)，以及源代码自字节码创建以来是否被修改过。
+当你运行 Python 脚本或加载模块时，解释器会检查是否已存在源代码（`.py`）对应的已编译字节码文件（`.pyc`），以及源代码自字节码创建以来是否被修改过。
 
 如果同时满足这两个条件，解释器就可以重用现有的字节码文件，跳过编译步骤直接执行字节码。
 
@@ -2251,9 +2255,9 @@ pip install -r requirements.txt
 
 然而，`.pyc` 代码依赖于 Python 版本，Python 不保证版本之间字节码的兼容性。
 
-此外，可能存在用 Python 以外语言编写的模块，如 `C++`。这些模块被称为 `extension modules`（扩展模块）。它们通常由特定平台格式的编译二进制代码组成（例如 Windows 的 `DLLs`，Linux/macOS 的 `shared libraries`），并以 Python 定义的格式提供一组函数和数据结构。
+此外，可能存在用 Python 以外语言编写的模块，如 `C++`。这些模块被称为 `extension modules`（扩展模块）。它们通常由特定平台格式的编译二进制代码组成（例如 Windows 的 `DLLs`，Linux/macOS 的 `shared libraries`），并以 Python 定义的格式提供一组函数和数据结构，使 Python 解释器能够将 Python 模块的标准导入语句和函数调用转换为扩展模块的原生代码调用。
 
-使得 Python 解释器能够将 Python 模块的标准导入语句和函数调用转换为扩展模块的原生代码调用。将外部模块集成到 Python 项目需要额外的 IDE 和工具支持，这超出了本书的范围。
+将外部模块集成到 Python 项目需要额外的 IDE 和工具支持，这超出了本书的范围。
 
 # 第 14 章：外部代码分发
 
@@ -2261,7 +2265,7 @@ pip install -r requirements.txt
 
 描述所有这些选项超出了本书的范围。相反，在接下来的章节中，我们将重点关注一组配置文件和工具，它们应该涵盖了外部分发最常见的场景。
 
-### 14.1 Python 代码包类型
+## 14.1 Python 代码包类型
 
 Python 代码可以打包成几种类型的归档，但最常见的格式是 `sdist` 和 `wheel`。
 
@@ -2275,12 +2279,12 @@ Python 代码可以打包成几种类型的归档，但最常见的格式是 `sd
 
 此外，还有针对特定用例或环境定制的特殊格式或较不常用的格式：
 
-- **Conda 包 (`.conda`)**：`Conda` 包是 `Conda` 包管理器使用的分发格式，通常与 `Anaconda` 关联。它们的内容与 `wheel` 文件相似。
+- **Conda 包（`.conda`）**：`Conda` 包是 `Conda` 包管理器使用的分发格式，通常与 `Anaconda` 关联。它们的内容与 `wheel` 文件相似。
 - **Docker 容器**：通过 `Docker` 分发的 Python 容器通常基于 `Docker Hub` 或其他可靠来源提供的官方 Python 镜像。这些官方镜像作为 Python 容器的基础，包含了核心运行时环境以及额外的库或依赖。
 
 后续章节将提供创建 `sdist` 和 `wheel` 包的详细说明。
 
-### 14.2 创建包
+## 14.2 创建包
 
 在创建包文件之前，确保你的项目包含关键组件：良好的结构、完善的文档、彻底的测试脚本、指定的依赖、`README` 文件以及 `LICENSE`。
 
@@ -2288,28 +2292,35 @@ Python 代码可以打包成几种类型的归档，但最常见的格式是 `sd
 
 首先，创建 `setup.py` 文件以定义包元数据和配置，然后编译包以生成分发包文件。
 
-#### 14.2.1 创建 setup.py
+### 14.2.1 创建 setup.py
 
 在本节中，我们将演示如何创建 `setup.py` 文件。
 
-
-
-
-
 我们将涵盖两种场景：一种是简单且常见的，另一种是更为复杂的，展示了 `setup.py` 的一些高级功能。简单场景涉及一个带有子包的包，结构如下：
 
-```
+```text
 my_project/
+
 |- src/
+
 |..|- my_package/
+
 |..|..|- my_sub_package/
+
 |..|..|..|- __init__.py__
+
 |..|..|..|- my_sub_module_1
+
 |..|..|..|- my_sub_module_2
+
 |..|..|- __init__.py__
+
 |..|..|- my_module_1
+
 |..|..|- my_module_2
+
 |..|..|- my_module_3
+
 |..|- setup.py.
 ```
 
@@ -2338,47 +2349,75 @@ setup(
 
 此外，确保 `setup.py` 放置在顶层包目录中，因为这是 `setuptools` 默认搜索包所在的位置。
 
-使用 IntelliJ IDEA 创建 `setup.py` 非常简单。只需导航到“工具（Tools）”菜单并选择 `Create setup.py` 即可。
+使用 `IntelliJ IDEA` 创建 `setup.py` 非常简单。只需导航到“工具（Tools）”菜单并选择 `Create setup.py` 即可。
 
 然而，需要注意的是，在编写本书时，该功能仅在用于分发的顶层包位于项目根目录中时才有效。此外，它不支持命名空间包（namespace packages）。
 
-以下是一个更复杂的项目结构。
+以下是一个更复杂的项目结构：
 
-```
+```text
 my_project/
+
 |- src_1/
+
 |..|- package_1/
+
 |..|..|- data/
+
 |..|..|..|- data.json
+
 |..|..|..|- webpage.html
+
 |..|..|- sub_package/
+
 |..|..|..|- __init__.py__
+
 |..|..|..|- sub_module_1
+
 |..|..|..|- sub_module_2
+
 |..|..|- __init__.py__
+
 |..|..|- module_1
+
 |..|..|- module_2
+
 |..|..|- module_3
+
 |..|- package_2/
+
 |..|..|- __init__.py__
+
 |..|..|- module_4
+
 |..|- package_3/
+
 |..|..|- __init__.py__
+
 |..|..|- module_5
+
 |- src_2/
+
 |..|- package_name_spc/
+
 |..|..|- module_name_spc
+
 |- src_3/
+
 |..|- test_package/
+
 |..|..|- test_module_1
+
 |..|..|- test_module_2
+
 |- MANIFEST.in
+
 |- setup.py.
 ```
 
 该项目由组织在三个不同根目录中的代码组成，其中一个目录包含多个顶层普通包，而另一个目录容纳了一个命名空间包。
 
-此外，还有一个专门为测试目的设计的包，包含专门为测试定制的模块。这些测试模块应该被包含在 `sdist` 分发中，但从 wheel 包中排除。
+此外，还有一个专门为测试目的设计的包，包含专门为测试定制的模块。这些测试模块应该被包含在 `sdist` 分发中，但从 `wheel` 包中排除。
 
 请注意，项目的打包配置包含位于项目顶层目录的单个 `setup.py` 文件，以及一个名为 `MANIFEST.in` 的额外文件。
 
@@ -2386,10 +2425,11 @@ my_project/
 
 `MANIFEST.in` 的全面用法及其可用配置超出了本书的讨论范围。
 
-以下是 `setup.py` 和 `MANIFEST.in` 的内容，展示了打包该项目的一种可能配置。
+以下是 `setup.py` 和 `MANIFEST.in` 的内容，展示了打包该项目的一种可能配置：
 
 ```python
 # setup.py
+
 from setuptools import \
     setup, find_packages, find_namespace_packages
 
@@ -2416,6 +2456,7 @@ setup(
 )
 
 # MANIFEST.in
+
 recursive-include src *
 ```
 
@@ -2429,50 +2470,47 @@ recursive-include src *
 
 `install_requires` 参数用于指定依赖项，即运行你的包所需的包。它接受一个列表，列表中的字符串格式与 `requirements.txt` 文件中的行相似。
 
-
-
-
 运行该命令时，大多数临时数据在执行后会自动清理。然而，包含包元数据的 `<package name>.egg-info` 目录可能会残留。如果你由于元数据过旧或错误而遇到问题，请在重新运行命令之前手动删除此目录。
 
 在创建包后，建议进行快速的“烟雾测试”（smoke test），以确认其打包和功能是否正确。
 
 要做到这一点，请使用全新的虚拟环境设置一个新项目。打开终端并执行以下命令安装新创建的包：
 
-```
+```bash
 pip install <package_file>
 ```
 
-其中 `<package_file>` 指 wheel 文件或 `sdist` 文件。
+其中 `<package_file>` 指 `wheel` 文件或 `sdist` 文件。
 
-一旦在虚拟环境中安装包，你就可以开始编写简单的测试代码，以确保核心功能已正确打包并运行。
+一旦在虚拟环境中安装包，你就可以开始编写简单的测试代码，以确保核心功能已正确打包和运行。
 
 此外，特别是对于 `sdist` 文件，你可以检查虚拟环境目录，以确保所有额外文件（如 `README` 或 `LICENSE` 文件）已正确安装。
 
-## 14.2.3 上传包
+### 14.2.3 上传包
 
 Python 的包管理器 `pip` 依赖 HTTP 下载包，这使得你可以将 Python 包上传到任何提供下载 URL 的服务器，例如 `AWS S3`、`Google Cloud Storage`、`Microsoft Azure Blob Storage` 或通用 Web 服务器或文件托管服务。
 
 GitHub 特别为托管代码仓库和发布软件版本提供了一个方便的平台。
 
-开始，你可以创建一个仓库并上传你的包代码。然后，你可以利用仓库首页上的“Create a new release”（创建新发布）链接将 `sdist` 或 wheel 文件作为发布版本上传。这允许你根据各自的版本号上传包的多个版本。
+开始，你可以创建一个仓库并上传你的包代码。然后，你可以利用仓库首页上的“Create a new release”（创建新发布）链接将 `sdist` 或 `wheel` 文件作为发布版本上传。这允许你根据各自的版本号上传包的多个版本。
 
 现在，你包的每个用户都可以使用 `pip` 命令安装它：
 
-```
+```bash
 pip install <package_download_url>
 ```
 
 此外，用户可以在 `requirements.txt` 文件或 `setup.py` 中 `install_requires` 参数的依赖列表中使用以下语法添加依赖项：
 
-```
+```text
 <package_name> @ <package_download_url>
 ```
 
-为了广泛地分享你的包，请在创建账户后将其发布到 PyPI。你需要使用如 `twine` 等工具，此处将不再进行详细介绍。
+为了广泛地分享你的包，请在创建账户后将其发布到 `PyPI`。你需要使用如 `twine` 等工具，此处将不再进行详细介绍。
 
 # 第四部分：高级 Python 技术
 
-## 第 15 章：编写 Python 测试代码
+# 第 15 章：编写 Python 测试代码
 
 在 Python 最流行的测试框架中，有两个框架脱颖而出：`unittest` 和 `pytest`。
 
@@ -2482,7 +2520,7 @@ pip install <package_download_url>
 
 在本章中，我们将重点关注 `unittest`。理解 `unittest` 为掌握其他测试框架（包括 `pytest`）打下坚实的基础。
 
-### 15.1 测试用例类的结构
+## 15.1 测试用例类的结构
 
 在 `unittest` 中，测试用例类继承自 `unittest.TestCase`。该基类提供了多种断言方法用于验证预期的结果。
 
@@ -2492,6 +2530,7 @@ pip install <package_download_url>
 import unittest
 
 class MyTestCase(unittest.TestCase):
+
     def test_addition(self):
         result = 2 + 2
         self.assertEqual(result, 4)
@@ -2511,9 +2550,9 @@ class MyTestCase(unittest.TestCase):
 
 这种命名约定也适用于包内模块的文件名；如果不遵守这一约定，可能会导致在运行整个包内的所有测试时，这些模块未被识别为包含测试。
 
-### 15.2 运行测试用例
+## 15.2 运行测试用例
 
-在 IntelliJ IDEA 中运行 Python 测试用例与运行 `JUnit` 测试用例类似。你可以使用以下方法运行特定的测试模块或整个测试包目录：
+在 `IntelliJ IDEA` 中运行 Python 测试用例与运行 `JUnit` 测试用例类似。你可以使用以下方法运行特定的测试模块或整个测试包目录：
 
 - 在项目窗口中右键点击测试模块或测试包目录，并在右键菜单中选择 `Run Python Tests in...`。
 - 点击编辑器窗口中测试用例或测试类旁边的行槽图标（gutter icon）。
@@ -2524,9 +2563,11 @@ class MyTestCase(unittest.TestCase):
 
 要运行特定模块的测试，输入：
 
-```
-python -m unittest <module_name>
-```
+```bash
+
+
+
+运行`python -m unittest <module_name>`命令。
 
 要运行包目录内的所有测试，使用以下命令：
 
@@ -2534,27 +2575,27 @@ python -m unittest <module_name>
 python -m unittest discover -s <path to directory>
 ```
 
-`unittest` 提供了几个命令行选项来定制测试执行过程。
+`unittest`提供了几个命令行选项来定制测试执行过程。
 
-例如，使用 `-v` 可以增加命令输出的详细程度，这对于确定失败原因特别有用。此外，你可以使用 `--help` 选项来列出所有可用选项。
+例如，使用`-v`可以增加命令输出的详细程度，这对于确定失败原因特别有用。此外，你可以使用`--help`选项来列出所有可用选项。
 
-请注意，`unittest` 测试运行器的发现机制只能处理顶层命名包，会忽略所有子包，除非它们是普通包。
+请注意，`unittest`测试运行器的发现机制只能处理顶层命名包，会忽略所有子包，除非它们是普通包。
 
 ### 15.3 测试组织
 
 与 Java 类似，Python 中被认为良好的实践是将测试代码与相应的代码紧密集成，但放在独立的目录中。这意味着按照应用程序源代码的结构并行组织测试模块和包。
 
-例如，如果你在代码包 `utility` 中有一个模块 `calculator.py`，你可能会创建一个对应的测试包 `test_utility`，其中包含一个模块 `test_calculator.py`。
+例如，如果你在代码包`utility`中有一个模块`calculator.py`，你可能会创建一个对应的测试包`test_utility`，其中包含一个模块`test_calculator.py`。
 
-在 `unittest` 中，为了避免代码重复，你拥有类似于 `JUnit` 中的固件（fixtures）。这些固件是 `TestCase` 类的方法，你可以在测试类中对其进行覆盖：
+在`unittest`中，为了避免代码重复，你拥有类似于`JUnit`中的固件（fixtures）。这些固件是`TestCase`类的方法，你可以在测试类中对其进行覆盖：
 
-`setUp()` 方法在测试用例类中的每个测试方法之前调用，用于设置测试所需的任何资源或状态。相反，`tearDown()` 方法在每个测试方法之后调用，用于清理测试期间分配的资源。
+`setUp()`方法在测试用例类中的每个测试方法之前调用，用于设置测试所需的任何资源或状态。相反，`tearDown()`方法在每个测试方法之后调用，用于清理测试期间分配的资源。
 
-除了每个测试的设置和拆析外，`unittest` 还提供了类级设置和拆析方法：`setUpClass()` 和 `tearDownClass()`。这些方法在整个测试用例类中调用一次，允许你执行多个测试方法共享的设置和清理操作。
+除了每个测试的设置和拆析外，`unittest`还提供了类级设置和拆析方法：`setUpClass()`和`tearDownClass()`。这些方法在整个测试用例类中调用一次，允许你执行多个测试方法共享的设置和清理操作。
 
-除了定义测试用例外，`unittest` 模块还提供了装饰器，允许你修改单个测试方法或整个测试类的行为。这些装饰器类似于 Java 中 `JUnit` 对应的注解。
+除了定义测试用例外，`unittest`模块还提供了装饰器，允许你修改单个测试方法或整个测试类的行为。这些装饰器类似于 Java 中`JUnit`对应的注解。
 
-```python
+```
 @unittest.skip("<跳过的原因>")
 ```
 
@@ -2562,18 +2603,15 @@ python -m unittest discover -s <path to directory>
 
 你可以提供可选的跳过原因，该原因将显示在测试输出中。
 
-```python
+```
 @unittest.expectedFailure
 ```
-
-
-
 
 此装饰器将一个测试方法或测试类中的所有测试方法标记为预期失败（expected failures）。如果带有此装饰器的测试方法在执行期间失败，它将在结果列表中被标记为忽略（ignored）。相反，如果测试方法执行成功，它将被标记为失败（failure）。
 
 此装饰器用于临时标记已知由于未解决的 bug 或功能不完整等问题会导致失败的测试。
 
-最后，还可以使用 `unittest` 提供的 `TestSuite` 类来定义一组测试用例及其执行顺序。
+最后，还可以使用`unittest`提供的`TestSuite`类来定义一组测试用例及其执行顺序。
 
 以下是一个示例：
 
@@ -2581,59 +2619,71 @@ python -m unittest discover -s <path to directory>
 import unittest
 
 class MyTestCase(unittest.TestCase):
+
     def test_add(self):
+
         self.assertEqual(2 + 2, 4)
 
     def test_subtract(self):
+
         self.assertEqual(5 - 3, 2)
 
     def test_divide(self):
+
         self.assertEqual(6 / 3, 2)
 
 suite = unittest.TestSuite()
+
 suite.addTest(MyTestCase("test_subtract"))
+
 suite.addTest(MyTestCase("test_add"))
+
 suite.addTest(MyTestCase("test_add"))
 
 if __name__ == "__main__":
+
     print("Running tests")
+
     unittest.TextTestRunner(verbosity=2) \
+
         .run(suite)
 ```
 
-该脚本构建了测试套并启动了一个能够处理 `TestSuite` 对象的运行器，使用了 `unittest` 提供的 `TextTestRunner`。
+该脚本构建了测试套并启动了一个能够处理`TestSuite`对象的运行器，使用了`unittest`提供的`TextTestRunner`。
 
 你可以在终端中使用以下命令执行脚本：
 
-`python my_test_suite.py`
+```
+python my_test_suite.py
+```
 
 在配置的详细级别 2 下，它将输出每个测试用例的结果。
 
-请注意，测试套被配置为先运行 `test_subtract`，然后运行两次 `test_add`，并且不运行 `test_divide`。
+请注意，测试套被配置为先运行`test_subtract`，然后运行两次`test_add`，并且不运行`test_divide`。
 
-此外，`if __name__ == "__main__":` 子句防止测试运行器在脚本被加载到其他地方时执行，例如在调试器中为了查找问题而运行 `MyTestCase` 中的单个测试用例时。
+此外，`if __name__ == "__main__":`子句防止测试运行器在脚本被加载到其他地方时执行，例如在调试器中为了查找问题而运行`MyTestCase`中的单个测试用例时。
 
 另外，在实际项目中，你会将测试类放在单独的模块中，并在创建和运行测试套的测试脚本中导入该模块。
 
-最后，请注意，如果你在 IntelliJ IDEA 的右菜单中运行此脚本，它将其识别为测试文件，并恰好运行一次 `MyTestCase` 中的三个测试。
+最后，请注意，如果你在 IntelliJ IDEA 的右菜单中运行此脚本，它将其识别为测试文件，并恰好运行一次`MyTestCase`中的三个测试。
 
 因此，为了执行该测试套，你需要在终端中运行它。
 
 ### 15.4 Mock 与补丁 (Patching)
 
-与 Java 不同，得益于 Python 的动态类型特性，在 Python 中创建 mock 对象并将其到被测试代码要简单得多。`unittest.mock` 子包提供了创建 mock 和指定其行为的所有工具。它还提供了补丁（patching）功能，允许临时替换模块或类中的属性或函数。
+与 Java 不同，得益于 Python 的动态类型特性，在 Python 中创建 mock 对象并将其到被测试代码要简单得多。`unittest.mock`子包提供了创建 mock 和指定其行为的所有工具。它还提供了补丁（patching）功能，允许临时替换模块或类中的属性或函数。
 
-尽管本书的范围不允许对 `unittest.mock` 提供的功能进行全面概述，但我们将在本节中对其一些关键特性进行简要介绍。
+尽管本书的范围不允许对`unittest.mock`提供的功能进行全面概述，但我们将在本节中对其一些关键特性进行简要介绍。
 
 ### 15.4.1 创建 Mock
 
-使用 `unittest.mock`，创建 mock 对象最简单的方法是调用 `Mock()`。生成的对象可以像函数一样调用，也可以作为带有属性和方法的对象访问。
+使用`unittest.mock`，创建 mock 对象最简单的方法是调用`Mock()`。生成的对象可以像函数一样调用，也可以作为带有属性和方法的对象访问。
 
 不需要显式指定它所代表的函数名称和返回值，或者它应该包含的属性。每当 mock 对象被调用或查询时，它都会动态地创建另一个 mock 对象并返回它。
 
 此外，可以指定 mock 对象的行为。
 
-通过给其 `return_value` 属性赋值来确定其作为函数的行为，而通过给相应的属性赋值来确定其属性查询的行为。
+通过给其`return_value`属性赋值来确定其作为函数的行为，而通过给相应的属性赋值来确定其属性查询的行为。
 
 以下是一个示例：
 
@@ -2641,20 +2691,27 @@ if __name__ == "__main__":
 from unittest.mock import Mock
 
 function_mock = Mock()
+
 function_mock.return_value = 42
 
 result_1 = function_mock("Life", "Universe")
+
 result_2 = function_mock()
 
 print(result_1, result_2)  # 42 42
 
 object_mock = Mock()
+
 object_mock.name = "Arthur Dent"
+
 object_mock.luggage = "Towel"
+
 object_mock.great_question = function_mock
 
 result_3 = object_mock.name
+
 result_4 = object_mock.luggage
+
 result_5 = object_mock.great_question()
 
 print(result_3, result_4, result_5)
@@ -2662,7 +2719,7 @@ print(result_3, result_4, result_5)
 # Arthur Dent Towel 42
 ```
 
-如 `result_1` 和 `result_2` 所示，可以带任意数量的参数调用函数 mock。
+如`result_1`和`result_2`所示，可以带任意数量的参数调用函数 mock。
 
 还可以验证方法调用的次数以及传递给这些调用的参数。
 
@@ -2670,30 +2727,35 @@ print(result_3, result_4, result_5)
 
 ```python
 function_mock.assert_called()
+
 function_mock.assert_any_call("Life", "Universe")
+
 assert object_mock.great_question.call_count == 3
 ```
 
-还有一个 `Mock` 的子类叫做 `MagicMock`，它与标准函数一起使用时为未配置的属性或函数提供了有用的默认值，例如：
+还有一个`Mock`的子类叫做`MagicMock`，它与标准函数一起使用时为未配置的属性或函数提供了有用的默认值，例如：
 
 ```python
 int(MagicMock())  # 返回 1
+
 float(MagicMock())  # 返回 1.0
+
 MagicMock()[5]  # 返回一个 MagicMock 对象
+
 len(MagicMock())  # 返回 0 !!!
 ```
 
-在这些示例中使用 `Mock` 代替 `MagicMock` 将抛出异常。
+在这些示例中使用`Mock`代替`MagicMock`将抛出异常。
 
-因此，在需要对不影响测试结果任意值进行 mock 的测试中，`MagicMock` 可以简化 mock 设置。
+因此，在需要对不影响测试结果任意值进行 mock 的测试中，`MagicMock`可以简化 mock 设置。
 
-最后，有一个名为 `side_effect` 的属性，你可以为 mock 方法指定它。
+最后，有一个名为`side_effect`的属性，你可以为 mock 方法指定它。
 
 它允许你指定一个函数或迭代器，并在 mock 被调用时使用它。该属性对于根据测试输入返回不同的值非常有用。工作原理如下：
 
-- 如果 `side_effect` 设置为函数，则当 mock 被调用时将调用该函数。
-- 如果 `side_effect` 设置为可迭代器（如列表或生成器），则 mock 每次被调用都会从迭代器中返回值。
-- 如果 `side_effect` 设置为异常，当 mock 被调用时将抛出该异常而不是返回值。
+- 如果`side_effect`设置为函数，则当 mock 被调用时将调用该函数。
+- 如果`side_effect`设置为可迭代器（如列表或生成器），则 mock 每次被调用都会从迭代器中返回值。
+- 如果`side_effect`设置为异常，当 mock 被调用时将抛出该异常而不是返回值。
 
 这是一个示例：
 
@@ -2701,83 +2763,115 @@ len(MagicMock())  # 返回 0 !!!
 from unittest.mock import Mock
 
 func_1 = Mock(); func_2 = Mock(); func_3 = Mock()
+
 func_1.side_effect = lambda x: x + 1
+
 func_2.side_effect = range(1, 3)
+
 func_3.side_effect = ValueError("Ooops")
 
 assert func_1(10) == 11
+
 assert func_2() == 1
+
 assert func_2() == 2
+
 try:
+
     func_3()
+
 except ValueError as e:
+
     assert str(e) == "Ooops"
 ```
 
 ### 15.4.2 补丁 (Patching)
 
-为了将被测试代码与其依赖项（如外部库、模块或对象）隔离，`unittest.mock` 提供了一种名为补丁（patching）的机制。虽然涵盖该机制的所有方面超本书的范围，但我们至少将涵盖最重要的功能。
+为了将被测试代码与其依赖项（如外部库、模块或对象）隔离，`unittest.mock`提供了一种名为补丁（patching）的机制。虽然涵盖该机制的所有方面超本书的范围，但我们至少将涵盖最重要的功能。
 
-编写测试用例时经常出现的一个任务是 mock requests。这可以使用 `@patch` 装饰器轻松实现。作为一个示例，考虑以下执行简单请求的函数：
+编写测试用例时经常出现的一个任务是 mock requests。这可以使用`@patch`装饰器轻松实现。作为一个示例，考虑以下执行简单请求的函数：
 
 ```python
 # user_data.py
+
 import requests
 
 url = "https://api.example.com/users"
+
 def get_user_list():
+
     response = requests.get(url)
+
     if response.status_code == 200:
+
         return response.json()
+
     else:
+
         return None
 ```
 
-为了测试该函数在成功和失败请求下的行为，你需要补丁 `requests.get` 调用，如下所示：
+为了测试该函数在成功和失败请求下的行为，你需要补丁`requests.get`调用，如下所示：
 
 ```python
 import unittest
+
 from unittest.mock import patch, Mock
+
 from user_data import get_user_list
 
 @patch("user_data.requests.get")
+
 class TestUserData(unittest.TestCase):
+
     def test_success(self, mock_get):
+
         data = ["John", "Jill", "Anna"]
+
         json_mock = Mock()
+
         json_mock.return_value = data
+
         response_mock = Mock()
+
         response_mock.status_code = 200
+
         response_mock.json = json_mock
+
         mock_get.return_value = response_mock
+
         result = get_user_list()
+
         self.assertEqual(result, data)
 
     def test_failure(self, mock_get):
+
         response_mock = Mock()
+
         response_mock.status_code = 404
+
         mock_get.return_value = response_mock
+
         result = get_user_list()
+
         self.assertIsNone(result)
 ```
 
+此示例演示了`@patch`装饰器的用法。该装饰器可以应用于单个测试函数，也可以应用于整个测试类，后者等同于对类中的每一个测试函数应用装饰器。
 
+`@patch`的参数是目标规范（target specification），它以表示对象导入路径的字符串指定要补丁的属性、函数或对象。
 
-此示例演示了 `@patch` 装饰器的用法。该装饰器可以应用于单个测试函数，也可以应用于整个测试类，后者等同于对类中的每一个测试函数应用装饰器。
+在示例中，`user_data.requests.get`指定`requests.get`函数为目标，该函数通过模块开头的导入语句成为了`user_data`模块的一部分。
 
-`@patch` 的参数是目标规范（target specification），它以表示对象导入路径的字符串指定要补丁的属性、函数或对象。
+`@patch`装饰器会为`requests.get`函数创建一个 mock 对象（mock object），并作为额外参数`mock_get`传递给测试方法。
 
-在示例中，`user_data.requests.get` 指定 `requests.get` 函数为目标，该函数通过模块开头的导入语句成为了 `user_data` 模块的一部分。
+在测试方法内部，首先创建一个 mock 对象来模拟`requests.get`的返回值，然后将该 mock 对象设置为被模拟的`requests.get`函数的`return_value`。
 
-`@patch` 装饰器会为 `requests.get` 函数创建一个 mock 对象（mock object），并作为额外参数 `mock_get` 传递给测试方法。
-
-在测试方法内部，首先创建一个 mock 对象来模拟 `requests.get` 的返回值，然后将该 mock 对象设置为被模拟的 `requests.get` 函数的 `return_value`。
-
-请注意，`@patch` 指定的目标是 `user_data.requests.get` 而不是 `requests.get`。
+请注意，`@patch`指定的目标是`user_data.requests.get`而不是`requests.get`。
 
 在这个示例中，后者也可以运行，但它违反了补丁的一般建议：在对象被使用的地方进行补丁，而不是在它定义的地方。
 
-Ned Batchelder 在他的博客 [`nedbatchelder.com`](https://nedbatchelder.com) 上写过非常非常优秀的文章解释了这一规则的原因。我鼓励你阅读这篇文章以更深地理解这一原则。
+Ned Batchelder 在他的博客[`nedbatchelder.com`](https://nedbatchelder.com)上写过非常非常优秀的文章解释了这一规则的原因。我鼓励你阅读这篇文章以更深地理解这一原则。
 
 [`tinyurl.com/y5k8y3ht`](https://tinyurl.com/y5k8y3ht)
 
@@ -2797,22 +2891,33 @@ _update_interval = 60.0  # seconds
 class UserRepository:
 
     def __init__(self):
+
         self._database = Database()
+
         self._remote = RemoteData()
+
         self._last_update = 0.0
 
     def get_user_list(self):
+
         elapsed = time() - self._last_update
+
         if elapsed > _update_interval:
+
             self._update_database()
+
         return self._database.get_user_list()
 
     def _update_database(self):
+
         data = self._fetch_data()
+
         self._database.save_user_list(data)
+
         self._last_update = time()
 
     def _fetch_data(self):
+
         return self._remote.user_list()
 ```
 
@@ -2830,26 +2935,44 @@ from repository import UserRepository
 class TestUserRepository(TestCase):
 
     @patch("repository.time")
+
     @patch("repository.UserRepository._fetch_data")
+
     @patch("repository.Database")
+
     def test_repository_start(
+
              self, mock_db, mock_fetch, mock_time):
 
         current_time = 1709579635
+
         mock_time.return_value = current_time
+
         mock_db_inst = Mock()
+
         mock_db.return_value = mock_db_inst
+
         data = Mock()
+
         mock_fetch.return_value = data
-        mock_db_inst.get_user_list.return_value = \
-            data
-        repo = UserRepository()
-        user_list = repo.get_user_list()
-        mock_fetch.assert_called()
-        mock_db_inst.save_user_list.
-            assert_called_once_with(data)
-        self.assertEqual(repo._last_update, current_time)
-        self.assertEqual(user_list, data)
+```
+
+
+
+```python
+mock_db_inst.get_user_list.return_value = data
+
+repo = UserRepository()
+
+user_list = repo.get_user_list()
+
+mock_fetch.assert_called()
+
+mock_db_inst.save_user_list.assert_called_once_with(data)
+
+self.assertEqual(repo._last_update, current_time)
+
+self.assertEqual(user_list, data)
 ```
 
 此示例演示了 `@patch` 的几个重要特性：
@@ -2858,15 +2981,20 @@ class TestUserRepository(TestCase):
 - 每个装饰器都会将额外的 mock 作为参数添加到测试函数中。装饰器是堆叠的，这意味着参数出现的顺序与 `@patch` 语句的顺序相反。
 - `@patch("repository.Database")` 装饰器为类创建一个 mock，这与类的实例 mock 不同。类可以像方法一样被调用，模拟 `__init__` 构造函数的行为。
 - 所以这两个语句：
+
   ```python
   mock_db_inst = Mock()
+
   mock_db.return_value = mock_db_inst
   ```
+
   的效果是 `Database()` 始终返回 `mock_db_inst`。
 - `Database()` 的 `save` 方法在准备测试时没有显式地 mock。然而，仍然可以使用以下语句检查它是否被调用过：
+
   ```python
   mock_db_instance.save.assert_called_once_with(data)
   ```
+
   这是因为对实例的 mock 调用任何方法都会自动创建一个 mock，该 mock 会创建一个答案并将其作为方法调用的结果返回。
 - `@patch("repository.UserRepository._fetch_data")` 是补丁类内部方法的示例。由于它是内部函数，补丁目标既是它定义的地方，也是它使用的地方。因此，在这种情况下没有违反前面提到的补丁规则。
 
@@ -2884,27 +3012,36 @@ from unittest.mock import patch, Mock
 from repository import UserRepository
 
 class TestUserRepository(TestCase):
+
     def test_repository_start(self):
+
         with patch("repository.time") as mock_time:
+
             current_time = 1709579635
+
             mock_time.return_value = current_time
+
             repo = UserRepository()
-            with patch.object(repo, "_database") \
-                    as mock_db, \
-                 patch.object(repo, "_remote") \
-                    as mock_rem:
+
+            with patch.object(repo, "_database") as mock_db, \
+                 patch.object(repo, "_remote") as mock_rem:
+
                 data = Mock()
+
                 mock_rem.user_list.return_value = data
+
                 mock_db.get_user_list.return_value = data
+
                 user_list = repo.get_user_list()
+
                 mock_rem.user_list.assert_called()
+
                 mock_db.save_user_list.assert_called_once_with(data)
+
                 self.assertEqual(repo._last_update, current_time)
+
                 self.assertEqual(user_list, data)
 ```
-
-
-
 
 在使用该工具之前，您需要安装 `coverage` 包（安装包的说明请见第 12 章：使用外部包）。
 
@@ -2946,7 +3083,7 @@ I/O 密集型任务（I/O-bound tasks）主要涉及等待输入输出操作完�
 
 Python 提供了多个包和库来高效地处理 CPU 密集型和 I/O 密集型任务。在接下来的章节中，我们将深入探索 `multiprocessing`、`threading`、`process / thread pools` 以及 `asyncio` 包。
 
-### 16.1 多进程 (Multiprocessing)
+### 16.1 多进程（Multiprocessing）
 
 多进程是 Python 中用于并发执行多个进程的技术，利用了多个 CPU 核心或处理器的优势。这些进程是 Python 解释器的独立实例，运行在它们各自的内存空间中。
 
@@ -2967,6 +3104,7 @@ if __name__ == "__main__":
     process = Process(target=worker, args=args)
     process.start()
     process.join()
+
 # Alice is 30 years old
 ```
 
@@ -2976,19 +3114,19 @@ Pickling 将 Python 对象转换为可以跨进程传输或存储在文件中的
 
 然而，并不是所有对象都可以被 pickle。例如，代表打开的文件句柄、套接字或数据库连接的对象通常无法被 pickle。每个进程需要单独创建这些对象。
 
-请注意，在多进程的语文中，由 `Process` 创建的每个进程都是独立的。
+请注意，在多进程的语境中，由 `Process` 创建的每个进程都是独立的。
 
-### 16.2 进程间通信 (Inter-Process Communication)
+### 16.2 进程间通信（Inter-Process Communication）
 
 进程间通信（IPC）对于启用进程间的通信至关重要。
 
 Python 提供了多种 IPC 机制，用于进程环境。
 
-`Queues`（队列）是用于进程间安全的的数据结构。它们支持多个生产者和消费者。
+`Queues`（队列）是用于进程间安全的数据结构。它们支持多个生产者和消费者。
 
 `Pipes`（管道）允许两个进程进行通信，作为双向通信通道。`Locks`（锁）允许一次只有一个进程访问共享资源，例如文件。
 
-### 16.2.1 队列 (Queues)
+#### 16.2.1 队列（Queues）
 
 `multiprocessing` 提供的 `Queue` 类促进了进程间的协调，遵循 FIFO（先进先出）原则。这使得一个或多个进程可以产生并队列项目。
 
@@ -3001,34 +3139,42 @@ from time import sleep
 def worker(number, input_queue):
     while True:
         item = input_queue.get()
+
         if item == "Terminate":
             break
+
         print(f"Worker {number}: {item}")
         sleep(1)
 
 if __name__ == "__main__":
     q = Queue()
+
     process_1 = Process(target=worker, args=(1, q))
     process_2 = Process(target=worker, args=(2, q))
     process_3 = Process(target=worker, args=(3, q))
+
     process_1.start()
     process_2.start()
     process_3.start()
+
     for i in range(15):
         q.put(i)
+
     q.put("Terminate")
     q.put("Terminate")
     q.put("Terminate")
+
     process_1.join()
     process_2.join()
     process_3.join()
+
 # Worker 1: 0
 # Worker 2: 1
 # Worker 3: 2
 # ...
 ```
 
-### 16.2.2 管道 (Pipes)
+#### 16.2.2 管道（Pipes）
 
 `multiprocessing` 包提供的 `Pipe` 类促进了两个进程之间的双向通信。
 
@@ -3043,6 +3189,7 @@ from time import sleep
 def worker(my_pipe, ping_or_pong, start):
     if start:
         my_pipe.send(ping_or_pong)
+
     while True:
         word = my_pipe.recv()
         print(word)
@@ -3050,28 +3197,29 @@ def worker(my_pipe, ping_or_pong, start):
 
 if __name__ == "__main__":
     pipe_ends = Pipe()
+
     args_1 = (pipe_ends[0], "Ping", True)
     process_1 = Process(target=worker, args=args_1)
+
+    args_2 = (pipe_ends[1], "Pong", False)
+    process_2 = Process(target=worker, args=args_2)
+
+    process_1.start()
+    process_2.start()
+
+    sleep(5)
+
+    process_1.kill()
+    process_2.kill()
 ```
 
-
-
-
-```python
-args_2 = (pipe_ends[1], "Pong", False)
-process_2 = Process(target=worker, args=args_2)
-process_1.start()
-process_2.start()
-sleep(5)
-process_1.kill()
-process_2.kill()
-```
-
+```text
 # Ping
 # Pong
 # ...
+```
 
-## 16.2.3 Locks
+#### 16.2.3 锁（Locks）
 
 `multiprocessing` 模块提供了一个 `Lock` 类，可以用于协调多个进程对共享资源（如日志文件）的访问。
 
@@ -3092,37 +3240,42 @@ def worker(number, print_lock):
 
 if __name__ == "__main__":
     lock = Lock()
+
     processes = [
         Process(target=worker, args=(i, lock))
         for i in range(5)
     ]
+
     for process in processes:
         process.start()
+
     for process in processes:
         process.join()
 ```
 
+```text
 # Worker 0
 # i = 0
 # Worker 2
 # i = 0
 # ...
+```
 
-## 16.2.4 Shared Memory
+#### 16.2.4 共享内存（Shared Memory）
 
 除了这里描述的通信机制，共享内存是另一种用于 IPC（进程间通信）的概念。
 
-共享内存允许多个进程共享区域区域，使其能够比 `pipes` 或 `queues` 等其他 IPC 方法更高效地交换数据。
+共享内存允许多个进程共享区域，使其能够比 `pipes` 或 `queues` 等其他 IPC 方法更高效地交换数据。
 
 `multiprocessing` 模块提供的共享内存实现依赖于 C 语言数据类型和字节流。
 
-虽然共享内在某些场景下可以提供高性能和高效率，但它带来了与同步、数据一致性和平台兼容性相关的挑战。因此，本书将不再介绍它。
+虽然共享内存某些场景下可以提供高性能和高效率，但它带来了与同步、数据一致性和平台兼容性相关的挑战。因此，本书将不再介绍它。
 
-### 16.3 Threading
+### 16.3 线程（Threading）
 
 与 Java 一样，Python 中的线程允许任务在单个进程内并发运行。（Java 和 Python 线程之间的一个重要区别将在下一节解释。）
 
-### 16.3.1 创建和运行线程
+#### 16.3.1 创建和运行线程
 
 Python 内置的 `threading` 模块提供了一个用于处理线程的高级接口。线程可以通过继承 `Thread` 类并重写其 `run()` 方法，或者通过向 `Thread` 构造函数传递目标函数来创建。一旦创建，就可以使用 `Thread` 类提供的方法来启动、暂停、恢复和终止线程。与进程类似，线程也有一个 `join()` 函数，允许你等待线程终止。
 
@@ -3132,163 +3285,225 @@ Python 内置的 `threading` 模块提供了一个用于处理线程的高级接
 from threading import Thread
 
 class MyCountDownThread(Thread):
+
     def __init__(self, start):
         super().__init__()
         self.counter = start
+
     def run(self):
         while self.counter > 0:
             print(f"Counter = {self.counter}")
             self.counter -= 1
+
         print("Count Down Finished!")
 
 def print_hello_world():
-    print("Hello World!")
+```
+
+
+
+```
+print("Hello World!")
 
 thread_1 = MyCountDownThread(100)
+
 thread_1.start()
+
 thread_1.join()
+
 thread_2 = Thread(target=print_hello_world())
+
 thread_2.start()
+
 thread_2.join()
 ```
 
+```
 # Counter = 100
 # ...
 # Counter = 1
 # Count Down Finished!
 # Hello World!
+```
 
 ## 16.3.2 Thread Synchronization Techniques
 
-使用线程时，不需要 `pipes` 或 `queues` 等进程间通信机制，因为同一个进程内的线程共享相同的内存空间。这意味着数据可以直接在线程之间共享，而没有独立进程之间通信的开销。
+使用线程时，不需要`pipes`或`queues`等进程间通信机制，因为同一个进程内的线程共享相同的内存空间。这意味着数据可以直接在线程之间共享，而没有独立进程之间通信的开销。
 
 然而，仍然需要对共享数据的访问进行同步，以防止竞态条件并确保数据完整性。
 
-`threading` 包提供了大量的线程同步功能。在下文中我们将探索这些技术中的几种，并演示如何使用它们来管理对共享数据的并发访问。
+`threading`包提供了大量的线程同步功能。在下文中我们将探索这些技术中的几种，并演示如何使用它们来管理对共享数据的并发访问。
 
-#### Locks
+### Locks
 
-`Locks` 的行为与 `multiprocessing` 包提供的锁类似。这里是一个同步多个线程向同一个文件的文件的示例：
+`Locks`的行为与`multiprocessing`包提供的锁类似。这里是一个同步多个线程向同一个文件的文件的示例：
 
 ```python
 from threading import Thread, Lock
+
 from time import sleep
 
 lock = Lock()
+
 class FileWriter(Thread):
+
     def __init__(self, writer_id, output_file):
+
         super().__init__()
+
         self.id = writer_id
+
         self.file = output_file
+
     def run(self):
+
         for i in range(5):
+
             with lock:
+
                 self.file.write(f"Writer {self.id}: {i}\n")
+
                 sleep(1)
 
 with open("my_file.txt", "w") as file:
+
     threads = [
+
         FileWriter(i, file)
+
         for i in range(5)
+
     ]
+
     for thread in threads:
+
         thread.start()
+
     for thread in threads:
+
         thread.join()
 ```
 
+```
 # my_file.txt:
 # Writer 0: 0
 # Writer 1: 0
 # Writer 2: 0
 # ...
+```
 
-#### Semaphores
+### Semaphores
 
-Python 中的 `Semaphores` 工作方式与 Java 中非常相似。它们通过允许特定数量的线程同时使用共享资源来控制对该资源的访问。
+Python 中的`Semaphores`工作方式与 Java 中非常相似。它们通过允许特定数量的线程同时使用共享资源来控制对该资源的访问。
 
-除了 `Semaphore` 类提供的 `acquire()` 和 `release()` 方法外，`Semaphore` 对象还可以配合 `with` 语句作为上下文管理器。该上下文管理器会在 `with` 块开始时自动获取许可，并在结束时释放许可。
+除了`Semaphore`类提供的`acquire()`和`release()`方法外，`Semaphore`对象还可以配合`with`语句作为上下文管理器。该上下文管理器会在`with`块开始时自动获取许可，并在结束时释放许可。
 
 这里是一个单次线程池的示例，允许最多三个线程同时运行：
 
 ```python
 from threading import Thread, Semaphore
+
 from time import sleep
 
 semaphore = Semaphore(3)
+
 class Worker(Thread):
+
     def __init__(self, worker_id):
+
         super().__init__()
+
         self.id = worker_id
+
     def run(self):
+
         with semaphore:
+
             print(f"Worker: {self.id}")
+
             sleep(3)
 
 threads = [
+
     Worker(i)
+
     for i in range(50)
+
 ]
+
 for thread in threads:
+
     thread.start()
+
 for thread in threads:
+
     thread.join()
 ```
 
+```
 # Worker: 0
 # Worker: 1
 # Worker: 2
 # ...
+```
 
-#### Condition Variables
+### Condition Variables
 
-与 Java 类似，Python 中 `Condition` 类提供的条件变量是根据特定条件协调线程执行的同步原语。它们通常与集成在条件变量中的锁配合使用，以控制资源的访问。
+与 Java 类似，Python 中`Condition`类提供的条件变量是根据特定条件协调线程执行的同步原语。它们通常与集成在条件变量中的锁配合使用，以控制资源的访问。
 
-线程可以使用 `wait()` 方法在条件变量上等待。当线程调用 `wait()` 时，它会释放关联锁并进入阻塞状态，直到另一个线程通知它。
+线程可以使用`wait()`方法在条件变量上等待。当线程调用`wait()`时，它会释放关联锁并进入阻塞状态，直到另一个线程通知它。
 
-线程可以通过 `notify()` 或 `notify_all()` 方法被通知。
+线程可以通过`notify()`或`notify_all()`方法被通知。
 
-当线程调用 `notify()` 时，它会唤醒一个在条件变量上等待的线程。如果有多个线程在等待，哪个线程被唤醒是不确定的。
+当线程调用`notify()`时，它会唤醒一个在条件变量上等待的线程。如果有多个线程在等待，哪个线程被唤醒是不确定的。
 
-`notify_all()` 方法唤醒所有等待的线程。
+`notify_all()`方法唤醒所有等待的线程。
 
 在唤醒后，线程必须重新获取关联锁才能继续。
 
-除了提供 `wait()`、`notify()` 和 `notify_all()` 方法外，`Condition` 对象还可以配合 `with` 语句作为上下文管理器。该上下文管理器会在进入和退出块时分别自动获取和释放关联锁。
+除了提供`wait()`、`notify()`和`notify_all()`方法外，`Condition`对象还可以配合`with`语句作为上下文管理器。该上下文管理器会在进入和退出块时分别自动获取和释放关联锁。
 
-注意的是，`wait()`、`notify()` 和 `notify_all()` 必须在 `with` 语句的块内部调用。
+注意的是，`wait()`、`notify()`和`notify_all()`必须在`with`语句的块内部调用。
 
 下面的代码提供了一个使用条件变量的示例，其中单个生产者不规则地产生项目，消费者需要等待新项目。
 
 ```python
 from threading import Thread, Condition
+
 from time import sleep
 
 buffer = []
+
 item_available = Condition()
+
 signal_term = "Terminate"
 
 class Producer(Thread):
+
     def run(self):
+
         for item in range(100):
+
             if item % 10 == 0:
+
                 sleep(5)
+
             with item_available:
-```
 
+                print(f"Producer: Item {item}")
 
+                buffer.insert(0, item)
 
+                item_available.notify()
 
-
-```python
-print(f"Producer: Item {item}")
-buffer.insert(0, item)
-item_available.notify()
 with item_available:
+
     buffer.insert(0, signal_term)
+
     item_available.notify_all()
 ```
 
+```python
 class Consumer(Thread):
     def __init__(self, consumer_id):
         super().__init__()
@@ -3306,181 +3521,234 @@ class Consumer(Thread):
             sleep(5)
 ```
 
+```python
 consumer_threads = [
+
     Consumer(consumer_id)
+
     for consumer_id in range(5)
+
 ]
+
 for consumer_thread in consumer_threads:
+
     consumer_thread.start()
 
 producer_thread = Producer()
+
 producer_thread.start()
+
 producer_thread.join()
+
 for consumer_thread in consumer_threads:
+
     consumer_thread.join()
 ```
 
+```
 # Producer: Item 0
 # ...
 # Producer: Item 9
 # Consumer 0: Item 0
 # Consumer 1: Item 1
+```
 
 ## Event 对象
 
-Event 对象是同步原语，用于通过信号特定事件的发生并在线程之间进行通信。线程可以等待另一个线程设置事件，然后据此继续操作。
+`Event`对象是同步原语，用于通过信号特定事件的发生并在线程之间进行通信。线程可以等待另一个线程设置事件，然后据此继续操作。
 
-线程可以调用 `wait()` 方法等待事件被设置。如果事件已经设置，线程将立即继续执行。如果未设置，它将一直等待，直到另一个线程使用 `set()` 方法设置事件。
+线程可以调用`wait()`方法等待事件被设置。如果事件已经设置，线程将立即继续执行。如果未设置，它将一直等待，直到另一个线程使用`set()`方法设置事件。
 
-`set()` 方法设置事件，允许等待该事件的线程继续执行。
+`set()`方法设置事件，允许等待该事件的线程继续执行。
 
-`clear()` 方法重置事件，表示其未被设置。在事件被重置后调用 `wait()` 的线程将阻塞，直到另一个线程再次设置事件。
+`clear()`方法重置事件，表示其未被设置。在事件被重置后调用`wait()`的线程将阻塞，直到另一个线程再次设置事件。
 
 这里是一个示例，其中线程在延迟后提供了“打印机访问权限”：
 
 ```python
 from threading import Thread, Event
+
 from time import sleep
 
 printer_available = Event()
+
 printer = None
 
 class PrinterCreator(Thread):
+
     def run(self):
+
         sleep(3)
+
         global printer
+
         printer = lambda x: print(f"Printer: {x}")
+
         printer_available.set()
 
 PrinterCreator().start()
+
 printer_available.wait()
+
 printer("Hello World")
 ```
 
+```
 # Printer: Hello World
+```
 
 ## 16.4 使用池管理并发
 
-Python 中的 `concurrent` 包提供了一系列工具，用于在较低（有时更依赖于平台）的层级管理并发和并行。对该包提供详尽描述超出了本书的范围。
+Python 中的`concurrent`包提供了一系列工具，用于在较低（有时更依赖于平台）的层级管理并发和并行。对该包提供详尽描述超出了本书的范围。
 
-然而，我们将重点关注其 `concurrent.futures` 子包提供的关键组件，例如进程池、线程池以及未来（futures）。
+然而，我们将重点关注其`concurrent.futures`子包提供的关键组件，例如进程池、线程池以及未来（futures）。
 
 线程池和进程池是管理并发的重要工具，因为它们预分配了一个线程或进程池，这些线程或进程保持存活并准备执行多个任务，直到池被显式关闭。这种方法避免了为每个单独任务创建和销毁线程或进程的开销。
 
-类似于 Java 的 `ExecutorService` 接口，但与 Java 不同，它们不仅支持线程池，还支持进程池。
+类似于 Java 的`ExecutorService`接口，但与 Java 不同，它们不仅支持线程池，还支持进程池。
 
 以下是使用进程池的示例：
 
 ```python
 from concurrent.futures import ProcessPoolExecutor
+
 from time import sleep
 
 def square(x):
+
     sleep(2)
+
     return x * x
 
 if __name__ == "__main__":
+
     with ProcessPoolExecutor(max_workers=2)\
+
             as executor:
+
         futures = [executor.submit(square, i)
+
                    for i in range(1, 6)]
+
         for future in futures:
+
             print(future.result())
 ```
 
+```
 # Producer: Item 0
 # ...
 # Producer: Item 9
 # Consumer 0: Item 0
 # Consumer 1: Item 1
 # ...
+```
 
 ## Event 对象
 
-Event 对象是同步原语，用于通过信号特定事件的发生并在线程之间进行通信。线程可以等待另一个线程设置事件，然后据此继续操作。
+`Event`对象是同步原语，用于通过信号特定事件的发生并在线程之间进行通信。线程可以等待另一个线程设置事件，然后据此继续操作。
 
-线程可以调用 `wait()` 方法等待事件被设置。如果事件已经设置，线程将立即继续执行。如果未设置，它将一直等待，直到另一个线程使用 `set()` 方法设置事件。
+线程可以调用`wait()`方法等待事件被设置。如果事件已经设置，线程将立即继续执行。如果未设置，它将一直等待，直到另一个线程使用`set()`方法设置事件。
 
-`set()` 方法设置事件，允许等待该事件的线程继续执行。
+`set()`方法设置事件，允许等待该事件的线程继续执行。
 
-`clear()` 方法重置事件，表示其未被设置。在事件被重置后调用 `wait()` 的线程将阻塞，直到另一个线程再次设置事件。
+`clear()`方法重置事件，表示其未被设置。在事件被重置后调用`wait()`的线程将阻塞，直到另一个线程再次设置事件。
 
 这里是一个示例，其中线程在延迟后提供了“打印机访问权限”：
 
 ```python
 from threading import Thread, Event
+
 from time import sleep
 
 printer_available = Event()
+
 printer = None
 
 class PrinterCreator(Thread):
+
     def run(self):
+
         sleep(3)
+
         global printer
+
         printer = lambda x: print(f"Printer: {x}")
+
         printer_available.set()
 
 PrinterCreator().start()
+
 printer_available.wait()
+
 printer("Hello World")
 ```
 
+```
 # Printer: Hello World
+```
 
 ## 16.4 使用池管理并发
 
-Python 中的 `concurrent` 包提供了一系列工具，用于在较低（有时更依赖于平台）的层级管理并发和并行。对该包提供详尽描述超出了本书的范围。
+Python 中的`concurrent`包提供了一系列工具，用于在较低（有时更依赖于平台）的层级管理并发和并行。对该包提供详尽描述超出了本书的范围。
 
-然而，我们将重点关注其 `concurrent.futures` 子包提供的关键组件，例如进程池、线程池以及未来（futures）。
+然而，我们将重点关注其`concurrent.futures`子包提供的关键组件，例如进程池、线程池以及未来（futures）。
 
 线程池和进程池是管理并发的重要工具，因为它们预分配了一个线程或进程池，这些线程或进程保持存活并准备执行多个任务，直到池被显式关闭。这种方法避免了为每个单独任务创建和销毁线程或进程的开销。
 
-类似于 Java 的 `ExecutorService` 接口，但与 Java 不同，它们不仅支持线程池，还支持进程池。
+类似于 Java 的`ExecutorService`接口，但与 Java 不同，它们不仅支持线程池，还支持进程池。
 
 以下是使用进程池的示例：
 
 ```python
 from concurrent.futures import ProcessPoolExecutor
+
 from time import sleep
 
 def square(x):
+
     sleep(2)
+
     return x * x
 
 if __name__ == "__main__":
+
     with ProcessPoolExecutor(max_workers=2)\
+
             as executor:
+
         futures = [executor.submit(square, i)
+
                    for i in range(1, 6)]
+
         for future in futures:
+
             print(future.result())
 ```
+
+
 
 ### 16.5 全局解释器锁 (GIL)
 
 Python 中的全局解释器锁 (GIL) 同一时间只有一个线程执行 Python 字节码，即使在具有多个核心的系统上，这与 Java 的并发模型不同。以下是其运行机制的详细解释：
 
-### 1. 线程执行：
+#### 1. 线程执行
 
 当 Python 程序启动时，解释器初始化 GIL，它作为一个互斥锁控制对 Python 对象和内存的访问。随着程序的执行，可能会创建多个线程来执行并发任务，例如 I/O 操作、计算或数据处理。每个线程独立运行并可以执行 Python 字节码来完成任务。
 
-### 2. 获取 GIL：
+#### 2. 获取 GIL
 
 当线程想要执行 Python 字节码时，它尝试获取 GIL。如果 GIL 可用（即没有其他线程持有它），该线程获取 GIL 并继续执行字节码。如果 GIL 已被另一个线程持有，请求线程将一直等待 GIL 被释放。
 
-### 3. 独他执行：
+#### 3. 独他执行
 
 一旦线程持有了 GIL，它对 Python 对象和内存具有独他访问权限，允许其在不受其他线程干扰的情况下执行 Python 字节码。
 
-### 4. 释放 GIL：
+#### 4. 释放 GIL
 
 当线程完成任务或达到可以主动释放 GIL 的点时（例如在 I/O 操作期间或不需要 GIL 的长时间计算期间），它会释放锁以允许其他线程获取。
 
 例如，执行文件 I/O 操作的线程在等待从文件读取或写入数据时，可能会主动释放 GIL。
-
-
-
 
 同样地，一个执行耗时数学计算且不涉及共享 Python 对象的线程可能会释放 `GIL`，允许其他线程并发执行 Python 字节码。
 
@@ -3488,7 +3756,7 @@ Python 中的全局解释器锁 (GIL) 同一时间只有一个线程执行 Pytho
 
 释放 `GIL` 允许其他等待线程获取它并继续执行 Python 字节码，从而实现多个线程的并发执行。
 
-## 5.交叉执行
+#### 5. 交叉执行
 
 Python 解释器包含一个调度器，用于管理线程的交叉执行。然而，该调度器在 `GIL` 的限制内运行，GIL 允许允许一个线程执行 Python 字节码。
 
@@ -3506,7 +3774,7 @@ Python 解释器包含一个调度器，用于管理线程的交叉执行。然�
 
 ### 16.6 异步编程
 
-### 16.6.1 概述
+#### 16.6.1 概述
 
 异步编程是一种编程范式，能够在不需要显式线程或多进程的情况下实现多个任务的并发执行。
 
@@ -3525,7 +3793,7 @@ Python 解释器包含一个调度器，用于管理线程的交叉执行。然�
 
 虽然 `asyncio` 为异步编程提供了许多功能，但其完整深度超出了本书的范围。不过，在接下来的章节中，你将获得一个很好的概述，从而将理解 `asyncio` 是如何工作的以及如何有效地使用它。
 
-### 16.6.2 创建和运行协程
+#### 16.6.2 创建和运行协程
 
 使用 `asyncio` 创建并运行一个协程非常简单。
 
@@ -3542,6 +3810,7 @@ async def my_coroutine():
 
 result = asyncio.run(my_coroutine())
 print(result)
+
 # Coroutine started
 # Coroutine resumed after 1 second
 # 42
@@ -3568,6 +3837,7 @@ async def main():
     await my_coroutine(2, 8)
 
 asyncio.run(main())
+
 # 1: Falling asleep ...
 # 1: Waking up ...
 # 2: Falling asleep ...
@@ -3594,6 +3864,7 @@ async def main():
     print(result)
 
 asyncio.run(main())
+
 # 1: Falling asleep ...
 # 2: Falling asleep ...
 # 1: Waking up ...
@@ -3635,6 +3906,7 @@ async def main():
     task_3.cancel()
 
 asyncio.run(main())
+
 # 1: Falling asleep ...
 # 2: Falling asleep ...
 # 3: Falling asleep ...
@@ -3647,10 +3919,6 @@ asyncio.run(main())
 `asyncio.create_task` 不仅创建任务，还将其提交给事件循环处理。
 
 `asyncio.wait` 是一个协程函数，用于等待任务列表满足特定条件。默认条件是“所有任务已完成”。在例示例中，当至少有一个任务完成时，条件即满足了。
-
-
-
-
 
 `asyncio.wait` 的结果是一个包含两个 Future 集合的元组，分别代表已完成和尚未完成的任务。
 
@@ -3702,7 +3970,7 @@ loop.run_until_complete(main())
 
 最后，通过 `run_until_complete()` 启动循环，它会处理所有任务直到完成。
 
-### 16.6.3 执行器
+#### 16.6.3 执行器
 
 在带有 `asyncio` 的异步编程中，协程是并发执行的构建块。与线程不同（线程由操作系统处理上下文切换和调度），在协程中，确保协程及时将控制权交给事件循环是程序员的责任。
 
@@ -3789,19 +4057,24 @@ if __name__ == "__main__":
 # 14930352
 ```
 
-要在执行器中执行函数，你可以使用事件循环的 `run_in_executor` 方法。该方法接收执行器池、要运行的函数以及函数的参数。`run_in_executor` 然后会将任务提交给执行器池。注意 `run_in_executor` 仅接受位置参数。此外，你可以将执行器参数设置为 `None`，此时使用事件循环的默认池。默认情况下这是一个线程池，但可以通过事件循环的 `set_default_executor()` 方法进行覆盖。
 
-16.4 协程同步
 
-虽然协程本身不会引入竞态条件，但它们通常与共享资源工作或执行需要协调的操作。`asyncio` 提供的 `Queue`、`Lock` 和 `Event` 有助于管理协程间的并发访问。线程同步原语如 `Lock` 和 `Semaphore` 会阻塞整个线程直到它们获取或释放。如果在协程中使用，它们可能会阻塞事件循环，阻止其他协程执行，从而违背异步编程的目的。
 
-因此，`asyncio` 提供了自己的套专为协程异步编程设计的同步原语。以下是一个基于线程同步示例重写的示例：
+要在执行器中执行函数，你可以使用事件循环的`run_in_executor`方法。该方法接收执行器池、要运行的函数以及函数的参数。`run_in_executor`然后会将任务提交给执行器池。注意，`run_in_executor`仅接受位置参数。此外，你可以将执行器参数设置为`None`，此时使用事件循环的默认池。默认情况下这是一个线程池，但可以通过事件循环的`set_default_executor()`方法进行覆盖。
+
+## 16.4 协程同步
+
+虽然协程本身不会引入竞态条件，但它们通常与共享资源工作或执行需要协调的操作。`asyncio`提供的`Queue`、`Lock`和`Event`有助于管理协程间的并发访问。线程同步原语如`Lock`和`Semaphore`会阻塞整个线程直到它们获取或释放。如果在协程中使用，它们可能会阻塞事件循环，阻止其他协程执行，从而违背异步编程的目的。
+
+因此，`asyncio`提供了自己的一套专为协程异步编程设计的同步原语。以下是一个基于线程同步示例重写的示例：
 
 ```python
 import asyncio
 
 buffer = []
+
 item_available = asyncio.Event()
+
 signal_term = "Terminate"
 
 async def producer():
@@ -3811,6 +4084,7 @@ async def producer():
             await asyncio.sleep(5)
             print(f"Producer: Item {item}")
         buffer.insert(0, item)
+
     buffer.insert(0, signal_term)
     item_available.set()
 
@@ -3818,9 +4092,11 @@ async def consumer(consumer_id):
     while True:
         if buffer:
             item = buffer.pop()
+
             if item == signal_term:
                 buffer.insert(0, signal_term)
                 return
+
             print(f"Consumer {consumer_id}: Item {item}")
             await asyncio.sleep(5)
         else:
@@ -3832,6 +4108,7 @@ async def main():
         asyncio.create_task(consumer(consumer_id))
         for consumer_id in range(12)
     ]
+
     await asyncio.gather(*tasks)
 
 asyncio.run(main())
@@ -3844,19 +4121,15 @@ asyncio.run(main())
 # ...
 ```
 
-
-
-
-
 注意，使用协程时，不需要用锁来保护对缓冲区列表的访问。与线程不同，在单线程进程中由于抢占式调度的存在，生产者或消费者在访问列表时都不会被中断。
 
-### 16.6.5 异步上下文管理器
+## 16.6.5 异步上下文管理器
 
-异步上下文管理器是可以与 `async with` 语句一起使用的类。
+异步上下文管理器是可以与`async with`语句一起使用的类。
 
-与同步上下文管理器不同，它们必须实现协程 `__aenter__` 和 `__aexit__`，而不是 `__enter__` 和 `__exit__` 方法。
+与同步上下文管理器不同，它们必须实现协程`__aenter__`和`__aexit__`，而不是`__enter__`和`__exit__`方法。
 
-这些协程会被 `async with` 语句等待（await），从而在设置和清理期间允许非阻塞的执行。
+这些协程会被`async with`语句等待（await），从而在设置和清理期间允许非阻塞的执行。
 
 以下是一个示例：
 
@@ -3865,9 +4138,11 @@ import asyncio
 
 class MyAsyncContextManager:
     data = [1, 2, 3, 4, 5]
+
     async def __aenter__(self):
         print("__aenter__ called")
         return self
+
     async def __aexit__(self, exc_type, exc_value, traceback):
         print("__aexit__ called")
         self.data = None
@@ -3877,22 +4152,21 @@ async def main():
         print(manager.data)
 
 asyncio.run(main())
+
 # __aenter__ called
 # [1, 2, 3, 4, 5]
 # __aexit__ called
 ```
 
-# 第 17 章
+# 第 17 章 HTTP 请求
 
-## HTTP 请求
+Python 提供了多个库用于发送 HTTP 请求，每个库都有其自己的优势和特性。最常用的库之一是`requests`，我们将在本章介绍它。
 
-Python 提供了多个库用于发送 HTTP 请求，每个库都有其自己的优势和特性。最常用的库之一是 `requests`，我们将在本章介绍它。
+流行的替代方案包括`urllib`和`http.client`。
 
-流行的替代方案包括 `urllib` 和 `http.client`。
+## 17.1 GET 请求
 
-### 17.1 GET 请求
-
-使用 `requests` 包中的 `get` 函数发送 HTTP GET 请求非常简单。
+使用`requests`包中的`get`函数发送 HTTP GET 请求非常简单。
 
 以下是一个示例（Reqres.in 是一个用于测试和原型设计中模拟 HTTP 响应的 REST-API 服务）：
 
@@ -3900,47 +4174,50 @@ Python 提供了多个库用于发送 HTTP 请求，每个库都有其自己的�
 import requests
 
 url = "https://reqres.in/api/users/1"
+
 try:
     response = requests.get(url)
+
     if response.ok:
         print(f"Content Type: {response.headers['content-type']}")
         print(f"Contents: {response.text}")
-else:
-    print(f"Error: {response.status_code}")
+    else:
+        print(f"Error: {response.status_code}")
 except Exception as ex:
     print(f"An exception occurred: {ex}")
+
 # Content Type: application/json; charset=utf-8
 # Contents: {"data":{"id":1, ...
 ```
 
-`requests` 模块的 `get()` 函数返回一个 `Response` 对象，包含以结构化格式从 HTTP 请求检索的所有数据。`Response` 最重要的属性包括：
+`requests`模块的`get()`函数返回一个`Response`对象，包含以结构化格式从 HTTP 请求检索的所有数据。`Response`最重要的属性包括：
 
-- `ok`: 如果 HTTP 状态码小于 400 则返回 True，否则返回 False。
-- `status_code`: 响应的 HTTP 状态码。
-- `headers`: 包含响应头头的字典。
-- `text`: Unicode 格式的响应内容。
-- `content`: 字节（bytes）格式的响应内容。
-- `request`: 一个提供 HTTP 请求信息的对象。
-- `url`: 响应的 URL。
+- `ok`：如果 HTTP 状态码小于 400 则返回 True，否则返回 False。
+- `status_code`：响应的 HTTP 状态码。
+- `headers`：包含响应头的字典。
+- `text`：Unicode 格式的响应内容。
+- `content`：字节（bytes）格式的响应内容。
+- `request`：一个提供 HTTP 请求信息的对象。
+- `url`：响应的 URL。
 
-`requests` 库中的 `get` 函数在某些情况下可能会抛出异常。以下是 `get` 函数可能抛出的三个最重要的异常：
+`requests`库中的`get`函数在某些情况下可能会抛出异常。以下是`get`函数可能抛出的三个最重要的异常：
 
-- `ConnectionError`: 当发生网络连接错误时抛出，例如 DNS 解析失败、拒绝连接或超时。
-- `Timeout`: 当请求完成所需的时间超过指定的超时时间时抛出。
-- `TooManyRedirects`: 当请求遇到太多重定向时抛出。
+- `ConnectionError`：当发生网络连接错误时抛出，例如 DNS 解析失败、拒绝连接或超时。
+- `Timeout`：当请求完成所需的时间超过指定的超时时间时抛出。
+- `TooManyRedirects`：当请求遇到太多重定向时抛出。
 
-如果你想通过抛出异常来处理 HTTP 状态码不是 200 的响应，可以调用 `Response` 类的 `raise_for_status()` 方法。如果响应状态码表示错误，该方法将抛出 `HTTPError` 异常。
+如果你想通过抛出异常来处理 HTTP 状态码不是 200 的响应，可以调用`Response`类的`raise_for_status()`方法。如果响应状态码表示错误，该方法将抛出`HTTPError`异常。
 
-### 17.2 解析 JSON 响应
+## 17.2 解析 JSON 响应
 
-`Response` 类的 `json()` 方法使用 Python 内置的 `json.loads()` 函数将响应内容作为 JSON 字符串解析为 Python 对象。
+`Response`类的`json()`方法使用 Python 内置的`json.loads()`函数将响应内容作为 JSON 字符串解析为 Python 对象。
 
 该函数将 JSON 数据类型映射到相应的 Python 数据结构，如下：
 
-- JSON 对象 (`{}`）：映射到 Python `dictionary`（字典）。
-- JSON 数组 (`[]`）：映射到 Python `list`（列表）。
+- JSON 对象（`{}`）：映射到 Python `dictionary`（字典）。
+- JSON 数组（`[]`）：映射到 Python `list`（列表）。
 - JSON 字符串：映射到 Python `string`（字符串）。
-- JSON 数字（整数或浮点数）：映射到 Python `int` 或 `float`。
+- JSON 数字（整数或浮点数）：映射到 Python `int`或`float`。
 - JSON `true`：映射到 Python `True`。
 - JSON `false`：映射到 Python `False`。
 - JSON `null`：映射到 Python `None`。
@@ -3951,22 +4228,21 @@ except Exception as ex:
 import requests
 
 url = "https://reqres.in/api/users/1"
+
 response = requests.get(url)
+
 user_data = response.json()
+
 print(user_data)
 ```
-
-
-
-
 
 ```python
 response = requests.post(url, data=raw_data)
 ```
 
-要向 `POST` 请求的体中包含文件，你可以先将其内容读取到一个变量中，然后按照上述描述的方法将变量的内容作为原始数据（raw data）发送。
+要向`POST`请求的体中包含文件，你可以先将其内容读取到一个变量中，然后按照上述描述的方法将变量的内容作为原始数据（raw data）发送。
 
-如果你想在 `POST` 请求的体中与表单数据（form data）一起上传文件，可以使用 `files` 参数。在最简单的形式下，`files` 参数是一个字典，它将要上传的文件的表单名称映射到其作为已打开的文件形式的内容。
+如果你想在`POST`请求的体中与表单数据（form data）一起上传文件，可以使用`files`参数。在最简单的形式下，`files`参数是一个字典，它将要上传的文件的表单名称映射到其作为已打开的文件形式的内容。
 
 以下是一个示例：
 
@@ -3978,14 +4254,17 @@ url = "http://httpbin.org/post"
 data = {
     "number_of_reports": 2
 }
+
 with open("report1.csv", "rb") as file1, \
      open("report2.csv", "rb") as file2:
     files = {
         "report1": file1,
         "report2": file2
     }
+
     r = requests.post(url, data=data, files=files)
     print(r.text)
+
 # ...
 #   "files": {
 #     "report1": "John;Doe;42\r\nJane;Doe;56\r\n",
@@ -3993,91 +4272,89 @@ with open("report1.csv", "rb") as file1, \
 #   },
 #   "form": {
 #     "number_of_reports": "2"
-#   },
+#   }
 # ...
 ```
 
 可以通过传递一个元组作为字典条目的值，来提供额外的参数（例如供 HTTP 请求使用的不同文件名），但这部分将在此不再介绍。
 
-此外，请注意，`post()` 函数不会自动关闭文件。这一责任由调用代码承担，在这里我们使用 `with` 语句对其进行管理。
+此外，请注意，`post()`函数不会自动关闭文件。这一责任由调用代码承担，在这里我们使用`with`语句对其进行管理。
 
-在结束本节之前，重要的一是，为 `get()` 函数描述的所有功能（例如解析 JSON 响应）同样适用于 `post()` 函数。
+在结束本节之前，重要的一点是，为`get()`函数描述的所有功能（例如解析 JSON 响应）同样适用于`post()`函数。
 
-### 17.7 杂项主题
+## 17.7 杂项主题
 
 在本章的最后一个章节中，我们将涵盖与 HTTP 请求相关的各种杂项主题。
 
-#### 17.7.1 其他 HTTP 方法
+### 17.7.1 其他 HTTP 方法
 
-对于每个 HTTP 方法 `DELETE`、`HEAD`、`OPTIONS`、`PATCH`、`PUT`，`requests` 包都有相应的函数，其用法与之前已描述的 `get()` 和 `post()` 函数相同。
+对于每个 HTTP 方法`DELETE`、`HEAD`、`OPTIONS`、`PATCH`、`PUT`，`requests`包都有相应的函数，其用法与之前已描述的`get()`和`post()`函数相同。
 
-#### 17.7.2 SSL 证书
+### 17.7.2 SSL 证书
 
-如果你在使用 `requests` 库使用本地存储的 SSL 证书，可以在发送请求时将证书路径作为 `cert` 参数的值传递。该参数期望一个代表证书文件路径的字符串。
+如果你在使用`requests`库使用本地存储的 SSL 证书，可以在发送请求时将证书路径作为`cert`参数的值传递。该参数期望一个代表证书文件路径的字符串。
 
-#### 17.7.3 身份验证
+### 17.7.3 身份验证
 
-`requests` 包对请求身份验证提供了广泛的支持。然而，对其所有能力进行深入解释已超出本书的范围。
+`requests`包对请求身份验证提供了广泛的支持。然而，对其所有能力进行深入解释已超出本书的范围。
 
 尽管如此，这里是认证可能性的简单概述：
 
-要在 `requests` 中执行简单的身份验证，你可以利用 `auth` 参数，它接受一个包含用户名和密码的元组。
+要在`requests`中执行简单的身份验证，你可以利用`auth`参数，它接受一个包含用户名和密码的元组。
 
-通过传递一个用用户名和密码初始化的 `HTTPDigestAuth` 类实例作为 `auth` 参数，启用摘要认证（Digest Authentication）。该类可用 `requests.auth` 模块。
+通过传递一个用用户名和密码初始化的`HTTPDigestAuth`类实例作为`auth`参数，启用摘要认证（Digest Authentication）。该类可用`requests.auth`模块。
 
-`requests` 包直接不支持 OAuth2。但是，有其他包提供了 OAuth2 支持。例如，`requests_oauthlib` 是一个特定的包，它将 OAuth 支持集成到 `requests` 包中，允许开发者使用熟悉的 `requests` API 执行 OAuth2 认证。该包基于 `OAuthLib` 构建，在 `requests` 的上下文中处理 OAuth 相关的任务。
+`requests`包直接不支持 OAuth2。但是，有其他包提供了 OAuth2 支持。例如，`requests_oauthlib`是一个特定的包，它将 OAuth 支持集成到`requests`包中，允许开发者使用熟悉的`requests` API 执行 OAuth2 认证。该包基于`OAuthLib`构建，在`requests`的上下文中处理 OAuth 相关的任务。
 
-#### 17.7.4 协程支持
+### 17.7.4 协程支持
 
 如果你想在协程中发起 HTTP 请求，异步执行请求以避免阻塞事件循环至关重要。
 
-使用线程或进程执行器是一种方法，更合适的解决方案是使用 `aiohttp` 等异步 HTTP 客户端库，它们专为异步编程设计并与 `asyncio` 无缝集成。
+使用线程或进程执行器是一种方法，更合适的解决方案是使用`aiohttp`等异步 HTTP 客户端库，它们专为异步编程设计并与`asyncio`无缝集成。
 
-描述 `aiohttp` 的功能已超出本书范围，但这里有一个显示基本功能的简短示例。
+描述`aiohttp`的功能已超出本书范围，但这里有一个显示基本功能的简短示例。
 
-请注意，它使用了 `async with` 语句，确保由协程创建的会话和响应在结束时自动关闭。
+请注意，它使用了`async with`语句，确保由协程创建的会话和响应在结束时自动关闭。
 
 ```python
 import aiohttp
 import asyncio
 
 url = "https://reqres.in/api/users/1"
+
 async def fetch_data():
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
             return await response.text()
+
 async def main():
     data = await fetch_data()
     print(data)
+
 asyncio.run(main())
+
 # {"data":{"id":1, ...
 ```
 
-## 第 18 章
-
-### 类型提示
+# 第 18 章 类型提示
 
 在 Python 中，类型提示（type hinting）是一种用于在代码中标记变量、函数参数和返回值的预期类型信息的技术。虽然 Python 是一种动态类型语言，意味着变量没有固定类型，但类型提示允许开发者对其程序中所使用的意图数据类型提供提示。
 
 在 Python 中使用类型提示是可选的，但它对所有规模的项目都有益，特别是在大型且复杂的代码库中。
 
-例如，像 `IntelliJ IDEA` 这样的集成开发环境可以在编写代码时对类型提示违规进行无缝实时检查。这种即时反馈循环有助于保持对类型提示的遵循，提高代码质量和可靠性。
+例如，像`IntelliJ IDEA`这样的集成开发环境可以在编写代码时对类型提示违规进行无缝实时检查。这种即时反馈循环有助于保持对类型提示的遵循，提高代码质量和可靠性。
 
-此外，诸如 `MyPy` 等工具（尽管书中未探讨）可以有助于静态分析。
-
-
-
-
+此外，诸如`MyPy`等工具（尽管书中未探讨）可以有助于静态分析。
 
 ```python
 assert square_root_1(2) == square_root_2(2.0)
 ```
 
-### 18.2.2 可选类型 (Optional Types)
+### 18.2.2 可选类型（Optional Types）
 
-可选类型表示变量或函数参数可以是指定的类型或 `None`。这在处理可选值时例如可能提供也可能省略的函数参数非常有帮助。
+可选类型表示变量或函数参数可以是指定的类型或`None`。这在处理可选值时例如可能提供也可能省略的函数参数非常有帮助。
 
-可选类型使用 `typing` 模块中的 `Optional` 类型构造函数来表示。
+可选类型使用`typing`模块中的`Optional`类型构造函数来表示。
 
 ```python
 from typing import Optional
@@ -4092,9 +4369,9 @@ print(greet(None))  # Hello, Guest!
 print(greet("Arthur"))  # Hello, Arthur!
 ```
 
-### 18.2.3 泛型 (Generics)
+### 18.2.3 泛型（Generics）
 
-与 Java 类似，在 Python 中通过附加类型变量创建泛型类、方法或函数，用于在该结构的上下文中引入类型占位符。这使你能够编写能够处理各种类型同时维护类型安全的泛型代码。在 Python 中，可以通过在 `[]` 之间定义类型变量来指定泛型：
+与 Java 类似，在 Python 中通过附加类型变量创建泛型类、方法或函数，用于在该结构的上下文中引入类型占位符。这使你能够编写能够处理各种类型同时维护类型安全的泛型代码。在 Python 中，可以通过在`[]`之间定义类型变量来指定泛型：
 
 ```python
 from typing import List, Optional
@@ -4106,6 +4383,7 @@ def first_elementT -> Optional[T]:
         return None
 
 x: int = first_element([1, 2, 3, 4, 5])
+
 y: float = first_element([1.1, 2.2, 3.3, 4.4, 5.5])
 ```
 
@@ -4118,16 +4396,22 @@ class Point[T: (int, float)]:
         self.y: T = y
 
 class Vector[T: Point]:
-    def __init__(self, point_1: T, point_2: T):
-        self.point_1: T = point_1
-        self.point_2: T = point_2
+```
+
+
+
+
+```
+def __init__(self, point_1: T, point_2: T):
+    self.point_1: T = point_1
+    self.point_2: T = point_2
 
 my_point_1: Point = Point(1.1, 2.2)
 my_point_2: Point = Point(3.3, 4.4)
 my_vector: Vector = Vector(my_point_1, my_point_2)
 ```
 
-利用 `typing` 模块中的 `TypeVar` 构造函数可以可以带有约束的类型变量变得可复用：
+利用 `typing` 模块中的 `TypeVar` 构造函数可以创建带有约束的类型变量，使其变得可复用：
 
 ```python
 from typing import TypeVar
@@ -4188,6 +4472,7 @@ code = """
 def greet(name):
     print(f"Hello {name}!")
 """
+
 exec(code)
 greet("Alice")  # Hello Alice!
 ```
@@ -4232,7 +4517,7 @@ add(3, 5)
 # Return value: 8
 ```
 
-装饰器可以接受参数。当装饰器带有参数时，它变成一个返回另一个装饰器的函数（即装饰器）。
+装饰器可以接受参数。当装饰器带有参数时，它变成一个返回另一个装饰器的函数（即装饰器工厂）。
 
 ```python
 def repeat(n):
@@ -4285,9 +4570,6 @@ Python 提供了一系列丰富的特殊方法，也称为“魔法方法”或�
 由于空间限制，本书仅提供了有限数量的特殊方法示例，展示了它们在自定义对象行为方面的灵活性。
 
 ### 19.3.1 算术运算 (Arithmetic Operations)
-
-
-
 
 像 `__add__`、`__sub__`、`__mul__` 等函数帮助对象执行加法、减法和乘法等基础数学运算。同样，`__iadd__`（对应 `+=`）、`__isub__`（对应 `-=`）和 `__imul__`（对应 `*=`）方法允许对象支持原地操作。
 
@@ -4387,7 +4669,7 @@ print(point1 < point2)  # True
 print(point2 >= point3)  # True
 ```
 
-如上面的示例所示，在 Python 中（类似于 Java），如果你重写了 `__eq__` 运算符，那么重写 `__hash__` 函数是一个良好的做法。你可以使用内置的 `hash()` 函数来计算哈希值。`hash()` 函数只能处理不可变类型的对象。不可变类型是指创建后状态无法修改类型。示例包括整数、浮点数、字符串、元组和 `frozenset`。可变类型（如列表、字典和集合）不能直接被哈希，因为它们的状态在创建后可以改变。
+如上面的示例所示，在 Python 中（类似于 Java），如果你重写了 `__eq__` 运算符，那么重写 `__hash__` 函数是一个良好的做法。你可以使用内置的 `hash()` 函数来计算哈希值。`hash()` 函数只能处理不可变类型的对象。不可变类型是指创建后状态无法修改的类型。示例包括整数、浮点数、字符串、元组和 `frozenset`。可变类型（如列表、字典和集合）不能直接被哈希，因为它们的状态在创建后可以改变。
 
 ## 19.3.3 属性访问
 
@@ -4442,34 +4724,36 @@ class CustomArray:
             )
         else:
             return self.__content[key]
+
+    def __setitem__(self, key, value):
+        if isinstance(key, tuple):
+            for i in key:
+                self.__content[i] = value
+        else:
+            self.__content[key] = value
+
+    def __delitem__(self, key):
+        if isinstance(key, tuple):
+            for i in key:
+                self.__content[i] = None
+        else:
+            self.__content[key] = None
+
+    def __iter__(self):
+        return iter(self.__content)
+
+    def __contains__(self, item):
+        return item in self.__content
+
+    def __len__(self):
+        return len(self.__content)
 ```
 
 
 
+`return self.__size`
 
 ```python
-for i in key:
-    self.__content[i] = value
-else:
-    self.__content[key] = value
-
-def __delitem__(self, key):
-    if isinstance(key, tuple):
-        for i in key:
-            self.__content[i] = None
-    else:
-        self.__content[key] = None
-
-def __iter__(self):
-    return iter(self.__content)
-
-def __contains__(self, item):
-    return item in self.__content
-
-def __len__(self):
-    return self.__size
-```
-
 my_array = CustomArray(5)
 my_array.print()  # [None, None, None, None, None]
 print(len(my_array))  # 5
@@ -4490,7 +4774,7 @@ del my_array[0]
 my_array.print()  # [None, None, None, None, None]
 ```
 
-#### 19.3.5 __new__ 和 __call__
+#### 19.3.5 `__new__` 和 `__call__`
 
 在 Python 中，`__new__` 和 `__call__` 是两个强大的特殊方法，它们在对象创建和实例行为中起着至关重要的作用。
 
@@ -4508,7 +4792,7 @@ print(my_tuple)
 # (1, 2, 3, 4, 5, -5659871693760987716)
 ```
 
-`__call__` 方法允许类的实例像函数一样被被调用：
+`__call__` 方法允许类的实例像函数一样被调用：
 
 ```python
 class Multiplier:
@@ -4594,13 +4878,9 @@ print(singleton2.value)  # 20
 print(singleton1 is singleton2)  # True
 ```
 
-## 19.5 类和对象内省
+### 19.5 类和对象内省
 
 与 Java 不同，Python 提供了内置函数和如 `inspect` 等模块来实现对类和对象的内省。内省允许开发者在运行时检查结构、属性和方法，从而有助于调试、文档生成和动态代码生成等任务。
-
-
-
-
 
 请注意，`dir()` 函数并没有显示对象的所有属性。它列出了与对象相关的大多数属性和方法，可能会排除某些特殊或动态添加的属性。
 
@@ -4618,13 +4898,13 @@ print(obj.dyn_attr)  # Dynamic Attribute
 print(dir(obj))  # List does not contain dyn_attr
 ```
 
-## 19.5.2 `inspect` 模块
+#### 19.5.2 `inspect` 模块
 
 Python 中的 `inspect` 模块类似于 Java 的反射 API，它允许你检查对象的结构和成员变量。
 
 解释该模块提供的完整功能将超出本书的范畴。相反，这里有两个演示常见任务的示例。
 
-### 记录方法调用
+##### 记录方法调用
 
 此示例展示了如何为对象的每个方法调用自动添加日志。在编写测试代码时，自动封装方法通常有用。
 
@@ -4664,10 +4944,11 @@ my_object.print_value()
 `inspect.ismethod()` 是一个谓词函数，如果其参数是绑定方法，则返回 `True`。
 
 `inspect` 模块提供了其他谓词函数，例如：
+
 - `inspect.isfunction()` 用于函数
 - `inspect.isbuiltin()` 用于内置函数，如 `__new__()`。
 
-### 创建 Mock（模拟）
+##### 创建 Mock（模拟）
 
 此示例演示了如何通过将所有方法替换为虚拟方法来为类创建 mock。它根据返回类型提示返回值：`int` 返回 `0`，`bool` 返回 `False`，`str` 返回空字符串，其他类型返回 `None`。
 

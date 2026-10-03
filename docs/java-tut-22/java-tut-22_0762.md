@@ -1,3 +1,4 @@
+
 # 何时使用 SAX
 
 > 原文：[`docs.oracle.com/javase/tutorial/jaxp/sax/when.html`](https://docs.oracle.com/javase/tutorial/jaxp/sax/when.html)

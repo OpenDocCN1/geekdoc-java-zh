@@ -1,3 +1,4 @@
+
 # 保存策略文件
 
 > 原文：[`docs.oracle.com/javase/tutorial/security/toolsign/wstep4.html`](https://docs.oracle.com/javase/tutorial/security/toolsign/wstep4.html)
@@ -8,7 +9,6 @@
 
 ```java
 exampleraypolicy
-
 ```
 
 然后选择**保存**按钮。策略文件现在已保存，其名称和路径显示在标有策略文件的文本框中。

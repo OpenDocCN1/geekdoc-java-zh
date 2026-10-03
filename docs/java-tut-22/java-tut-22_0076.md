@@ -1,3 +1,4 @@
+
 # 类型注解和可插拔类型系统
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/annotations/type_annotations.html`](https://docs.oracle.com/javase/tutorial/java/annotations/type_annotations.html)
@@ -10,7 +11,6 @@
 
 ```java
 @NonNull String str;
-
 ```
 
 当您在命令行中编译代码时，包括`NonNull`模块，如果编译器检测到潜在问题，它会打印警告，让您修改代码以避免错误。在您纠正代码以消除所有警告后，当程序运行时，这种特定错误将不会发生。

@@ -1,23 +1,23 @@
-# OCA／OCP Java®：SE 8 程序员：实践指南
 
-
+# OCA/OCP Java®：SE 8 程序员：实践指南
 
 ![](img/cover.jpg)
 
 ![封面](img/cover.jpg)
 
-
 送给我妻子即将出生的小新生命。
+
 — Scott
 
 在同一年怀念爱因斯坦和 CV。祝贺 694！
+
 — Jeanne
 
 # 致谢
 
-Scott 和 Jeanne 感谢许多对本书做出贡献的个人。感谢 David Clark 引导我们走完整个创作过程，并在许多方面让这本书变得更好。感谢 Janeice DelVecchio 在我们编写本书期间担任我们的技术编辑。除了大错误，Janeice 还指出了许多细微的错误。感谢 Elena Felder 担任我们的技术校对，并发现了我们设法瞒过 Janeice 的错误。如果没有 Wiley 的许多人，包括 Kenyon Brown, Rebecca Anderson, Judy Flynn, Nancy Carrasco 以及许多其他人，这本书就不可能完成。
+Scott 和 Jeanne 感谢许多对本书做出贡献的个人。感谢 David Clark 引导我们走完整个创作过程，并在许多方面让这本书变得更好。感谢 Janeice DelVecchio 在我们编写本书期间担任我们的技术编辑。除了大错误，Janeice 还指出了许多细微的错误。感谢 Elena Felder 担任我们的技术校对，并发现了我们设法瞒过 Janeice 的错误。如果没有 Wiley 的许多人，包括 Kenyon Brown、Rebecca Anderson、Judy Flynn、Nancy Carrasco 以及许多其他人，这本书就不可能完成。
 
-如果没有一支“小军队”的帮助，Scott 无法走到这一步，这支军队领是他始终理解他的妻子 Patti，她是他们的双胞女儿 Olivia 和 Sophia 能要求的最完美的母亲。康奈尔大学的 Johannes Gehrke 和 John H. Hubbard 教授一直相信他，并知道他会在事业上取得成就。Scott 在这第三本书中想向他极具耐心的合作者 Jeanne 表示谢意。Matt Dalen 向 Scott 推荐了 `CodeRanch.com` 并鼓励他定期发帖，这一步改变了他的生活。非常感谢 Mark Seloff 教会他教育的价值。最后， Scott 感谢他的母亲、退休教师 Barbara Selick。
+如果没有一支“小军队”的帮助，Scott 无法走到这一步，这支军队的领队是他始终理解他的妻子 Patti，她是他们的双胞女儿 Olivia 和 Sophia 能要求的最完美的母亲。康奈尔大学的 Johannes Gehrke 和 John H. Hubbard 教授一直相信他，并知道他会在事业上取得成就。Scott 在这第三本书中想向他极具耐心的合作者 Jeanne 表示谢意。Matt Dalen 向 Scott 推荐了 `CodeRanch.com` 并鼓励他定期发帖，这一步改变了他的生活。非常感谢 Mark Seloff 教会他教育的价值。最后，Scott 感谢他的母亲、退休教师 Barbara Selick。
 
 Jeanne 特别感谢 `CodeRanch.com` 的所有对 OCA 和 OCP 问题提问并回答的人。与读者的对话让这本书更加强大。Jeanne 感谢 FRC 机器人队伍 694 的成员以及 FTC 队伍 310 和 479 的支持。你们的问题让她不断思考。Jeanne 还感谢 Onur Otlu 和 Thomas Campos 对某些本地化问题的反馈。关于作者。
 
@@ -28,10 +28,6 @@ Jeanne 特别感谢 `CodeRanch.com` 的所有对 OCA 和 OCP 问题提问并回�
 **Scott Selikoff** 是一位专业软件顾问、作者以及 Selikoff Solutions, LLC 的所有者，该公司为纽约三地地区的企业提供软件开发解决方案。Scott 精通多种软件语言和平台，专长全栈数据库驱动系统、云应用和面向服务的架构。
 
 Scott 出自新泽西州汤姆斯河（Toms River），他在 2002 年通过三年的学习，获得了康奈尔大学数学和计算机科学学士学位。2003 年，他在康奈尔大学同样获得了计算机科学工程硕士学位。
-
-
-
-
 
 作为一个深爱教育事业的人，Scott 一直很喜欢向他人教授新概念。他曾在康奈尔大学和罗格大学进行过演讲，并参加过包括服务器端 Java 研讨会在内的会议。Scott 住在新泽西州，与他亲爱的妻子 Patti、可双胞胎女儿 Olivia 和 Sophia 以及两只非常活泼的狗 Webby 和 Georgette 生活在一起。你可以在 [`www.linkedin.com/in/selikoff`](http://www.linkedin.com/in/selikoff) 了解更多关于 Scott 的信息。
 
@@ -44,537 +40,1048 @@ Scott 和 Jeanne 都是 [CodeRanch.com](http://CodeRanch.com) 论坛的版主，
 除了这本书之外，Scott 和 Jeanne 还是以下书籍的作者：*OCA Oracle Certified Associate Java SE 8 Programmer I Study Guide* (Sybex, 2015) 和 *OCP Oracle Certified Professional Java SE 8 Programmer II Study Guide* (Sybex, 2016)。最近，这两本书被合并成了单行版 *OCA / OCP Java SE 8 Programmer Certification Kit: Exam 1Z0-808 and Exam 1Z0-809* (Sybex 2016)。
 
 87. 80
+
 88. 81
+
 89. 82
+
 90. 83
+
 91. 84
+
 92. 85
+
 93. 86
+
 94. 87
+
 95. 88
+
 96. 89
+
 97. 90
+
 98. 91
+
 99. 92
+
 100. 93
+
 101. 94
+
 102. 95
+
 103. 96
+
 104. 97
+
 105. 98
+
 106. 99
+
 107. 100
+
 108. 101
+
 109. 102
+
 110. 103
+
 111. 104
+
 112. 105
+
 113. 106
+
 114. 107
+
 115. 108
+
 116. 109
+
 117. 110
+
 118. 111
+
 119. 112
+
 120. 113
+
 121. 114
+
 122. 115
+
 123. 116
+
 124. 117
+
 125. 118
+
 126. 119
+
 127. 120
+
 128. 121
+
 129. 122
+
 130. 123
+
 131. 124
+
 132. 125
+
 133. 126
+
 134. 127
+
 135. 128
+
 136. 129
+
 137. 130
+
 138. 131
+
 139. 132
+
 140. 133
+
 141. 134
+
 142. 135
+
 143. 136
+
 144. 137
+
 145. 138
+
 146. 139
+
 147. 140
+
 148. 141
+
 149. 142
+
 150. 143
+
 151. 144
+
 152. 145
+
 153. 146
+
 154. 147
+
 155. 148
+
 156. 149
+
 157. 151
+
 158. 152
+
 159. 153
+
 160. 154
+
 161. 155
+
 162. 156
+
 163. 157
+
 164. 158
+
 165. 159
+
 166. 160
+
 167. 161
+
 168. 162
+
 169. 163
+
 170. 164
+
 171. 165
+
 172. 166
 
-
-
-
-
 - 173. 167
+
 - 174. 168
+
 - 175. 169
+
 - 176. 170
+
 - 177. 171
+
 - 178. 172
+
 - 179. 173
+
 - 180. 174
+
 - 181. 175
+
 - 182. 176
+
 - 183. 177
+
 - 184. 178
+
 - 185. 179
+
 - 186. 180
+
 - 187. 181
+
 - 188. 182
+
 - 189. 183
+
 - 190. 185
+
 - 191. 187
+
 - 192. 188
+
 - 193. 189
+
 - 194. 190
+
 - 195. 191
+
 - 196. 192
+
 - 197. 193
+
 - 198. 194
+
 - 199. 195
+
 - 200. 196
+
 - 201. 197
+
 - 202. 198
+
 - 203. 199
+
 - 204. 200
+
 - 205. 201
+
 - 206. 202
+
 - 207. 203
+
 - 208. 204
+
 - 209. 205
+
 - 210. 206
+
 - 211. 207
+
 - 212. 208
+
 - 213. 209
+
 - 214. 210
+
 - 215. 211
+
 - 216. 212
+
 - 217. 213
+
 - 218. 214
+
 - 219. 215
+
 - 220. 216
+
 - 221. 217
+
 - 222. 218
+
 - 223. 219
+
 - 224. 220
+
 - 225. 221
+
 - 226. 223
+
 - 227. 224
+
 - 228. 225
+
 - 229. 226
+
 - 230. 227
+
 - 231. 228
+
 - 232. 229
+
 - 233. 230
+
 - 234. 231
+
 - 235. 232
+
 - 236. 233
+
 - 237. 234
+
 - 238. 235
+
 - 239. 236
+
 - 240. 237
+
 - 241. 239
+
 - 242. 240
+
 - 243. 241
+
 - 244. 242
+
 - 245. 243
+
 - 246. 244
+
 - 247. 245
+
 - 248. 246
+
 - 249. 247
+
 - 250. 248
+
 - 251. 249
+
 - 252. 250
+
 - 253. 251
+
 - 254. 252
+
 - 255. 253
+
 - 256. 255
+
 - 257. 256
+
 - 258. 257
+
 - 259. 258
+
 - 260. 259
+
 - 261. 260
+
 - 262. 261
+
 - 263. 262
+
 - 264. 263
+
 - 265. 264
+
 - 266. 265
+
 - 267. 266
+
 - 268. 267
+
 - 269. 268
+
 - 270. 269
+
 - 271. 271
+
 - 272. 272
+
 - 273. 273
+
 - 274. 274
+
 - 275. 275
+
 - 276. 276
+
 - 277. 277
+
 - 278. 278
+
 - 279. 279
+
 - 280. 280
+
 - 281. 281
+
 - 282. 282
+
 - 283. 283
+
 - 284. 284
+
 - 285. 285
+
 - 286. 286
+
 - 287. 287
+
 - 288. 288
+
 - 289. 289
+
 - 290. 290
+
 - 291. 291
+
 - 292. 292
+
 - 293. 293
+
 - 294. 294
+
 - 295. 295
+
 - 296. 296
+
 - 297. 297
+
 - 298. 298
+
 - 299. 299
+
 - 300. 300
+
 - 301. 301
+
 - 302. 302
+
 - 303. 303
+
 - 304. 304
+
 - 305. 305
+
 - 306. 306
+
 - 307. 307
+
 - 308. 308
+
 - 309. 309
+
 - 310. 310
+
 - 311. 311
+
 - 312. 312
+
 - 313. 313
+
 - 314. 314
+
 - 315. 315
+
 - 316. 316
+
 - 317. 317
+
 - 318. 319
+
 - 319. 320
+
 - 320. 321
+
 - 321. 322
+
 - 322. 323
+
 - 323. 324
+
 - 324. 325
+
 - 325. 326
+
 - 326. 327
+
 - 327. 328
+
 - 328. 329
+
 - 329. 330
+
 - 330. 331
+
 - 331. 332
+
 - 332. 333
+
 - 333. 334
+
 - 334. 335
+
 - 335. 337
+
 - 336. 338
+
 - 337. 339
+
 - 338. 340
+
 - 339. 341
+
 - 340. 342
+
 - 341. 343
+
 - 342. 344
+
 - 343. 345
+
 - 344. 346
+
 - 345. 347
+
 - 346. 348
+
 - 347. 349
+
 - 348. 350
+
 - 349. 351
+
 - 350. 352
+
 - 351. 353
+
 - 352. 354
+
 - 353. 355
+
 - 354. 357
+
 - 355. 358
+
 - 356. 359
+
 - 357. 360
+
 - 358. 361
+
 - 359. 362
+
 - 360. 363
+
 - 361. 364
+
 - 362. 365
+
 - 363. 366
+
 - 364. 367
+
 - 365. 368
+
 - 366. 369
+
 - 367. 371
+
 - 368. 372
+
 - 369. 373
+
 - 370. 374
+
 - 371. 375
+
 - 372. 376
+
 - 373. 377
+
 - 374. 378
+
 - 375. 379
+
 - 376. 380
+
 - 377. 381
+
 - 378. 382
+
 - 379. 383
+
 - 380. 384
+
 - 381. 385
+
 - 382. 386
+
 - 383. 387
+
 - 384. 388
+
 - 385. 389
+
 - 386. 390
+
 - 387. 391
+
 - 388. 392
+
 - 389. 393
+
 - 390. 394
+
 - 391. 395
+
 - 392. 396
+
 - 393. 397
+
 - 394. 398
+
 - 395. 399
+
 - 396. 400
+
 - 397. 401
+
 - 398. 402
+
 - 399. 403
+
 - 400. 404
+
 - 401. 405
 
-
-
-
 408. 412
+
 409. 413
+
 410. 414
+
 411. 415
+
 412. 416
+
 413. 417
+
 414. 418
+
 415. 419
+
 416. 420
+
 417. 421
+
 418. 422
+
 419. 423
+
 420. 424
+
 421. 425
+
 422. 426
+
 423. 427
+
 424. 428
+
 425. 429
+
 426. 430
+
 427. 431
+
 428. 432
+
 429. 433
+
 430. 434
+
 431. 435
+
 432. 436
+
 433. 437
+
 434. 438
+
 435. 439
+
 436. 440
+
 437. 441
+
 438. 442
+
 439. 443
+
 440. 444
+
 441. 445
+
 442. 446
+
 443. 447
+
 444. 448
+
 445. 449
+
 446. 450
+
 447. 451
+
 448. 452
+
 449. 453
+
 450. 454
+
 451. 455
+
 452. 456
+
 453. 457
+
 454. 458
+
 455. 459
+
 456. 450
+
 457. 461
+
 458. 462
+
 459. 463
+
 460. 464
+
 461. 465
+
 462. 466
+
 463. 467
+
 464. 468
+
 465. 469
+
 466. 470
+
 467. 471
+
 468. 472
+
 469. 473
+
 470. 474
+
 471. 475
+
 472. 476
+
 473. 477
+
 474. 478
+
 475. 479
+
 476. 480
+
 477. 481
+
 478. 482
+
 479. 483
+
 480. 484
+
 481. 485
+
 482. 486
+
 483. 487
+
 484. 488
+
 485. 489
+
 486. 490
+
 487. 491
+
 488. 492
+
 489. 493
+
 490. 494
+
 491. 495
+
 492. 496
+
 493. 497
+
 494. 498
+
 495. 499
+
 496. 500
+
 497. 501
+
 498. 502
+
 499. 503
+
 500. 504
+
 501. 505
+
 502. 506
+
 503. 507
+
 504. 508
+
 505. 509
+
 506. 510
+
 507. 511
+
 508. 512
+
 509. 513
+
 510. 514
+
 511. 515
+
 512. 416
+
 513. 517
+
 514. 518
+
 515. 519
+
 516. 520
+
 517. 521
+
 518. 522
+
 519. 423
+
 520. 424
+
 521. 425
+
 522. 426
+
 523. 427
+
 524. 428
+
 525. 429
+
 526. 430
+
 527. 431
+
 528. 432
+
 529. 433
+
 530. 434
+
 531. 435
+
 532. 436
+
 533. 437
+
 534. 438
+
 535. 439
+
 536. 440
+
 537. 441
+
 538. 442
+
 539. 443
+
 540. 444
+
 541. 445
+
 542. 446
+
 543. 447
+
 544. 448
+
 545. 449
+
 546. 450
+
 547. 451
+
 548. 452
+
 549. 453
+
 550. 454
+
 551. 455
+
 552. 456
+
 553. 457
+
 554. 458
+
 555. 459
+
 556. 460
+
 557. 461
+
 558. 462
+
 559. 463
+
 560. 464
+
 561. 465
+
 562. 466
+
 563. 467
+
 564. 468
+
 565. 469
+
 566. 470
+
 567. 471
+
 568. 472
+
 569. 473
+
 570. 474
+
 571. 475
+
 572. 476
+
 573. 477
+
 574. 478
+
 575. 479
+
 576. 480
+
 577. 481
+
 578. 482
+
 579. 483
+
 580. 484
+
 581. 485
+
 582. 486
+
 583. 487
+
 584. 488
+
 585. 489
+
 586. 490
+
 587. 491
+
 588. 492
+
 589. 493
+
 590. 494
+
 591. 495
+
 592. 496
+
 593. 497
+
 594. 498
+
 595. 499
+
 596. 500
+
 597. 501
+
+
+
 598. 502
+
 599. 503
+
 600. 504
+
 601. 505
+
 602. 506
+
 603. 507
+
 604. 508
+
 605. 509
+
 606. 510
+
 607. 511
+
 608. 512
+
 609. 513
+
 610. 514
+
 611. 515
 
 # 前言
 
-本书适用于参加 1Z0-808 或 1Z0-809 考试的读者。如果你是 Java 初学者，我们强烈建议先阅读 *OCA Certified Associate Java SE 8 Programmer I Study Guide* 和 *OCP Certified Professional Java 8 Programmer II Study Guide》，我们是本书的作者。与学习指南的设计难度比真实考试要大，本书中的题目模拟了考试格式。本书中的所有题目都会告知你有几个正确答案。如果有多个正确答案，会显示“选择两个”或“选择三个”。在本书中，我们使用了 Oracle 考试使用的同一套假设。在许多情况下，这些假设实际上是为了让你在解决问题时忽略 Oracle 的遗漏或排版错误。这些假设列在 [`education.oracle.com`](http://education.oracle.com)，为了方便起见在此列出：
+本书适用于参加 `1Z0-808` 或 `1Z0-809` 考试的读者。如果你是 Java 初学者，我们强烈建议先阅读 *OCA Certified Associate Java SE 8 Programmer I Study Guide* 和 *OCP Certified Professional Java 8 Programmer II Study Guide*，我们是本书的作者。与学习指南的设计难度比真实考试要大，本书中的题目模拟了考试格式。本书中的所有题目都会告知你有几个正确答案。如果有多个正确答案，会显示“选择两个”或“选择三个”。在本书中，我们使用了 Oracle 考试使用的同一套假设。在许多情况下，这些假设实际上是为了让你在解决问题时忽略 Oracle 的遗漏或排版错误。这些假设列在 [`education.oracle.com`](http://education.oracle.com)，为了方便起见在此列出：
 
 *   缺失包和导入语句：如果示例代码没有包含包或导入语句，且题目没有明确引用这些缺失的语句，请假设所有示例代码都在同一个包中，并且存在支持它们的导入语句。
 
@@ -588,23 +1095,25 @@ Scott 和 Jeanne 都是 [CodeRanch.com](http://CodeRanch.com) 论坛的版主，
 
 *   **代码片段：** 代码片段是指没有提供上下文的小部分源代码。假设所有必要的支持代码都存在，并且支持环境完全支持显示代码及其省略环境的正确编译和执行。
 
-
-
-
 *   **描述性注释：** 请按字面理解描述性注释，例如“此处为 setter 和 getter 方法”。假设正确的代码已经存在、可以编译并能成功运行，以实现所描述的效果。
 
 ## 选择考试
 
-通往 Java 认证之路的第一步是 Oracle Certified Associate 1Z0-808 (OCA 8) 考试。该材料包含了每个 Java 开发者都应该熟悉的日常基础工具。一旦你完成了该考试，就可以参加更具难度的 Oracle Certified Professional 1Z0-809 (OCP 8) 考试。该考试涵盖了第一场考试中的所有主题，以及许多你自己在职业生涯中可能并不熟悉的额外库和 API，例如并发（Concurrency）和 `NIO.2` API。
+通往 Java 认证之路的第一步是 Oracle Certified Associate `1Z0-808` (OCA 8) 考试。该材料包含了每个 Java 开发者都应该熟悉的日常基础工具。一旦你完成了该考试，就可以参加更具难度的 Oracle Certified Professional `1Z0-809` (OCP 8) 考试。该考试涵盖了第一场考试中的所有主题，以及许多你自己在职业生涯中可能并不熟悉的额外库和 API，例如并发（Concurrency）和 `NIO.2` API。
 
 如果你已经拥有 Java 认证，则有资格参加升级考试。表 I.1 和 图 I.1 显示了获取 OCP 8 认证的各种路径。本书将帮助你准备表格列出的所有四场考试。
 
 | 考试代码 | 名称 | 谁应该参加 |
+
 | --- | --- | --- |
-| 1Z0–808 | Java Programmer I | 任何人都可以参加此考试。 |
-| 1Z0–809 | Java Programmer II | 通过了 OCA 8 考试的人 |
-| 1Z0–810 | 从 Java SE 7 升级到 Java SE 8 OCP 程序员 | OCP 7 认证持有者 |
-| 1Z0–813 | 升级到 Java SE 8 OCP (Java SE 6 及所有之前的版本) | 持有以下任何一种认证的持有者：<br>* `SCJP/OCJP 6`<br>* `SCJP/OCJP 5`<br>* `SCJP 1.4`<br>任何旧的 `SCJP` 证书 |
+
+| `1Z0–808` | Java Programmer I | 任何人都可以参加此考试。 |
+
+| `1Z0–809` | Java Programmer II | 通过了 OCA 8 考试的人 |
+
+| `1Z0–810` | 从 Java SE 7 升级到 Java SE 8 OCP 程序员 | OCP 7 认证持有者 |
+
+| `1Z0–813` | 升级到 Java SE 8 OCP (Java SE 6 及所有之前的版本) | 持有以下任何一种认证的持有者：<br>* `SCJP/OCJP 6`<br>* `SCJP/OCJP 5`<br>* `SCJP 1.4`<br>任何旧的 `SCJP` 证书 |
 
 **表 I.1** 本书涵盖的考试
 
@@ -616,15 +1125,15 @@ Scott 和 Jeanne 都是 [CodeRanch.com](http://CodeRanch.com) 论坛的版主，
 
 ### 参加升级考试
 
-如果你要参加其中一种升级考试，在准备方式上会有一些细微差别。好消息是，如果你目前持有 Java 7 OCP 认证并参加 1Z0-810 升级考试，那么这本书就是你所需要的。虽然考试更侧重于 Java 7 和 Java 8 之间的变化，但并没有任何现有 OCP 7 材料中未涵盖的新主题。这意味着你的学习计划与那些首次参加 OCP 考试的人相同。
+如果你要参加其中一种升级考试，在准备方式上会有一些细微差别。好消息是，如果你目前持有 Java 7 OCP 认证并参加 `1Z0-810` 升级考试，那么这本书就是你所需要的。虽然考试更侧重于 Java 7 和 Java 8 之间的变化，但并没有任何现有 OCP 7 材料中未涵盖的新主题。这意味着你的学习计划与那些首次参加 OCP 考试的人相同。
 
-另一方面，如果你参加参加 1Z0-813 升级考试并持有 Sun Certified Java Programmer (`SCJP`) 或 Oracle Certified Java Programmer (`OCJP`) 称号，那么你需要额外的材料。这种升级莫名其妙地包含了 Java 7 OCP 考试中包含但在 Java 8 版本中被移除的内容，例如 `ReentrantLock` 和 `WatchService`。对此我们没有解释，尽管这使得 1Z0-813 可以被认为是三场 OCP 考试中最难的一个，因为它需要了解多个 Java 版本的所有知识。
+另一方面，如果你参加参加 `1Z0-813` 升级考试并持有 Sun Certified Java Programmer (`SCJP`) 或 Oracle Certified Java Programmer (`OCJP`) 称号，那么你需要额外的材料。这种升级莫名其妙地包含了 Java 7 OCP 考试中包含但在 Java 8 版本中被移除的内容，例如 `ReentrantLock` 和 `WatchService`。对此我们没有解释，尽管这使得 `1Z0-813` 可以被认为是三场 OCP 考试中最难的一个，因为它需要了解多个 Java 版本的所有知识。
 
-不要担心！当我们编写 `OCP Oracle Certified Professional Java SE 8 Programmer II Study Guide` 时，添加了一个特殊的 50 页附录——录 C，“从 Java 6 或更早版本升级”，它详细涵盖了 1Z0-813 考试的专属主题。如果你正在参加 1Z0-813 考试，那么在完成本书的学习后，你应该查阅我们 OCP 书籍中的附录或 Java 7 OCP 学习指南，以便准备好应对所有目标。
+不要担心！当我们编写 `OCP Oracle Certified Professional Java SE 8 Programmer II Study Guide` 时，添加了一个特殊的 50 页附录——录 C，“从 Java 6 或更早版本升级”，它详细涵盖了 `1Z0-813` 考试的专属主题。如果你正在参加 `1Z0-813` 考试，那么在完成本书的学习后，你应该查阅我们 OCP 书籍中的附录或 Java 7 OCP 学习指南，以便准备好应对所有目标。
 
 ### 考虑其他学习路径
 
-如果你已经拥有 Java 认证，并不要求参加升级考试。有些开发者发现，从较简单的 1Z0-808 OCA 考试开始，然后参加更具挑战性的 1Z0-809 OCP 考试更为直接。如果你没有 Java 8 的经验，或者只是想进行更多练习，那么先参加 OCA 考试再参加 OCP 考试可能比参加单一升级考试是更好的学习体验，尽管它的成本更高。
+如果你已经拥有 Java 认证，并不要求参加升级考试。有些开发者发现，从较简单的 `1Z0-808` OCA 考试开始，然后参加更具挑战性的 `1Z0-809` OCP 考试更为直接。如果你没有 Java 8 的经验，或者只是想进行更多练习，那么先参加 OCA 考试再参加 OCP 考试可能比参加单一升级考试是更好的学习体验，尽管它的成本更高。
 
 另外请记住，如果你持有旧的 Java 称号并想参加升级考试，即使你通过了升级考试，也需要在获得 OCP 8 称号之前证明你的身份。这要求你在 Oracle 的 `CertView` 系统中注册你的旧认证。我们听过一些读者的反馈，他们不得不翻找十多年前的旧文件夹和电子邮件，以提交适当的文件，以便他们被授予 OCP 8 称号。
 
@@ -632,9 +1141,9 @@ Scott 和 Jeanne 都是 [CodeRanch.com](http://CodeRanch.com) 论坛的版主，
 
 ## 谁应该买这本书
 
-如果你想参加 OCA 考试 (1Z0-808)，那么本书的第 1 至 10 章适合你。
+如果你想参加 OCA 考试 (`1Z0-808`)，那么本书的第 1 至 10 章适合你。
 
-如果你想参加 OCP 考试 (1Z0-809) 或 OCP 8 升级考试 (1Z0-810)，那么本书的第 11 至 23 章适合你。正如前面提到的，如果你想参加 OCP 8 升级考试 (1Z0-813)，这本书对大部分主题仍有帮助。你需要补充 Java 7 学习指南或使用我们 OCP 书籍中的附录 C，该附录专注于 1Z0-813 考试中你所需的精确主题。
+如果你想参加 OCP 考试 (`1Z0-809`) 或 OCP 8 升级考试 (`1Z0-810`)，那么本书的第 11 至 23 章适合你。正如前面提到的，如果你想参加 OCP 8 升级考试 (`1Z0-813`)，这本书对大部分主题仍有帮助。你需要补充 Java 7 学习指南或使用我们 OCP 书籍中的附录 C，该附录专注于 `1Z0-813` 考试中你所需的精确主题。
 
 ## 本书是如何组织的
 
@@ -646,38 +1155,58 @@ Scott 和 Jeanne 都是 [CodeRanch.com](http://CodeRanch.com) 论坛的版主，
 
 目标型章节中的每个问题都有恰好四个选项，只有一个正确答案。就像我们学习指南中的复习题一样，这些问题的初初是为了让你多次回答。
 
-
-
-
 在我们的学习指南中，我们经常将相关主题分组成章节。例如，`if/then` 语句和循环属于不同的 Oracle 目标集，但在我们的 OCA 教程书中，它们被包含在“运算符和语句”这一个章节中。在本书书中，我们决定仅围绕 Oracle 的目标来设计章节，以便你强化自己的技能。虽然在用本书中使用基于目标的章节之前，你不需要阅读整本学习指南，但你确实需要学习相关的目标。I.2 和 I.3 显示了在练习本书中的问题之前，你最少需要读过我们学习指南中的哪些章节。
 
 | 本书章节 | 目标 | OCA 学习指南章节 |
+
 | --- | --- | --- |
+
 | 1 | Java 基础 | 1 |
+
 | 2 | 处理 Java 数据类型 | 1, 3 |
+
 | 3 | 使用运算符和决策结构 | 2, 3 |
+
 | 4 | 创建和使用数组 | 3 |
+
 | 5 | 使用循环结构 | 2 |
+
 | 6 | 处理方法和封装 | 4 |
+
 | 7 | 处理继承 | 5 |
+
 | 8 | 处理异常 | 6 |
+
 | 9 | 使用 Java API 中的选类 | 1, 3, 4 |
 
 #### 表 I.2](#intro.xhtml_tableanchor-2) OCA 学习指南中的引用
 
 | 本书章节 | 目标 | OCP 学习指南章节 |
+
 | --- | --- | --- |
+
 | 11 | Java 类设计 | 1, 2 |
+
 | 12 | 高级 Java 类设计 | 1, 2, 3 |
+
 | 13 | 泛型和集合 | 3, 4 |
+
 | 14 | Lambda 内置函数接口 | 2, 4 |
+
 | 15 | Java Stream API | 3, 4 |
+
 | 16 | 异常和断言 | 6 |
+
 | 17 | 使用 Java SE 8 日期时间 API | 5 |
+
 | 18 | Java I/O 基础 | 8 |
+
 | 19 | Java 文件 I/O (NIO.2) | 9 |
+
 | 20 | Java 并发 | 7 |
+
 | 21 | 使用 JDBC 构建数据库应用程序 | 10 |
+
 | 22 | 本地化 | 5 |
 
 #### 表 I.3](#intro.xhtml_tableanchor-3) OCP 学习指南中的引用
@@ -727,36 +1256,48 @@ OCP 论坛：[`coderanch.com/f/24`](https://coderanch.com/f/24)
 **本次测试涵盖的 OCA 考试主题包括：**
 
 *   定义变量的作用域
+
 *   定义 Java 结构
+
 *   创建带有 main 方法的可执行 Java 程序；从命令行运行 Java 程序；产生控制台输出
+
 *   导入其他包以便在代码中使用
+
 *   对比 Java 的特性和组件，如：平台独立性、面向对象、封装等
 
 1. 下列哪个方法签名是 Java 应用程序有效的入口声明？
+
    - `public void main(String[] args)`
+
    - `public static void main()`
+
    - `private static void start(String[] mydata)`
+
    - `public static final void main(String[] mydata)`
 
 2. 下面的类图展示了 Gold 和 Silver 之间的关系，它们都继承自 Metal 类。关于该图的说明哪个是错误的？
 
 ![图显示 metal 有 weight 和 color 字符，gold-hue 和 silver-luster 是其字符以展示关系。](img/c01uf001.jpg)
+
    - 图展示了 Java 的平台独立性。
+
    - 图展示了 Java 的面向对象设计。
+
    - Gold 和 Silver 类继承了 Metal 类的 weight 和 color。
+
    - Gold 不继承 luster 属性。
 
 3. Java 字节码文件的正确扩展名是什么？
+
    - `.java`
+
    - `.bytecode`
+
    - `.class`
+
    - `.dll`
 
-4. 鉴于 java.util 和 java.sql 包中都存在 `Date` 类，编译以下类的类的结果是什么？
-
-
-
-
+4. 鉴于 `java.util` 和 `java.sql` 包中都存在 `Date` 类，编译以下类的类的结果是什么？
 
 ```java
 1: import java.util.*;
@@ -778,39 +1319,56 @@ OCP 论坛：[`coderanch.com/f/24`](https://coderanch.com/f/24)
 5. 以下哪项不是传统面向对象语言的特征？
 
 1. 对象被分组为过程，与它们所操作的数据分离。
+
 2. 对象可以通过类型转换（casting）采取多种形式。
+
 3. 对象可以持有数据，称为属性。
+
 4. 对象可以通过方法执行操作。
 
 6. 哪些变量的作用范围被限制在方法内？
 
 1. 接口变量
+
 2. 类变量
+
 3. 实例变量
+
 4. 局部变量
 
 7. 哪个包被默认导入到每个 Java 类中？
 
 1. `java.util`
+
 2. `java.lang`
+
 3. `system.lang`
+
 4. `java.system`
 
 8. 以下哪项不是 Java 中有效的代码注释？
 
 1. `// Add 5 to the result`
+
 2. `/*** TODO: Fix bug 12312 ***/`
+
 3. `# Add configuration value`
+
 4. `/* Read file from system ****/`
 
 9. 关于有效的 `.java` 文件的哪个陈述是正确的？
 
 1. 它只能包含一个类声明。
+
 2. 它可以包含一个公共类声明和一个公共接口定义。
+
 3. 它必须定义至少一个公共类。
+
 4. 它最多可以定义一个公共类。
 
 10. 给定以下应用，请从上到下填充表格中缺失的值。
+
+
 
 ```java
 package competition;
@@ -836,7 +1394,7 @@ public class Robot {
 3. 1, 0, 1
 4. 0, 2, 1
 
-11. 关于 import 语句的哪个陈述是正确的？
+11. 关于 `import` 语句的哪个陈述是正确的？
 
 1. 如果类包含未使用的导入语句，该类将无法编译。
 2. 可以从类中删除未使用的导入语句，而不会导致类无法编译。
@@ -910,6 +1468,7 @@ if (tree.equals("pine")) {
 }
 System.out.print(height + count);
 ```
+
 *(注：原文在 `if` 语句中存在语法错误且缺少变量 `height`，已根据逻辑上下文调整)*
 
 1. 1
@@ -1004,11 +1563,7 @@ import movie.director.*;
 3. 类声明、导入语句、包声明
 4. 包声明、导入语句、类声明
 
-
-
-
-
-**28. 给定以下类定义，在代码仍能编译的情况下，最多可以删除多少条 import 语句？对于此问题，假设 `Blackhole` 类仅定义在 `stars` 包中。**
+**28. 给定以下类定义，在代码仍能编译的情况下，最多可以删除多少条 `import` 语句？对于此问题，假设 `Blackhole` 类仅定义在 `stars` 包中。**
 
 ```java
 package planetarium;
@@ -1021,7 +1576,8 @@ public class Observer {
    public void find(Blackhole blackhole) {}
 }
 ```
-1. 
+
+1. 零
 2. 一个
 3. 两个
 4. 三
@@ -1036,18 +1592,21 @@ public class Deer {
    }
 }
 ```
+
 1. `java forest.Deer deer 5 "White-tailed deer"`
 2. `java forest.Deer "White-tailed deer" deer 3`
 3. `java forest.Deer Red deer White-tailed deer`
 4. `java forest.Deer My "deer White-tailed"`
 
 **30. 下列哪个陈述是正确的？**
+
 1. `java` 命令将 `.java` 文件编译成 `.class` 文件。
 2. `javac` 命令将 `.java` 文件编译成 `.class` 文件。
 3. `java` 命令将 `.class` 文件编译成 `.java` 文件。
 4. `javac` 命令将 `.class` 文件编译成 `.java` 文件。
 
 **31. 下列关于 Java 的陈述中，哪一个是正确的？**
+
 1. Java 是一种过程化编程语言。
 2. Java 允许方法重载。
 3. Java 允许运算符重载。
@@ -1063,10 +1622,11 @@ public  _______Banker {
    }
 }
 ```
-1. import, class, null
-2. import, interface, void
-3. package, int, int
-4. package, class, long
+
+1. `import`, `class`, `null`
+2. `import`, `interface`, `void`
+3. `package`, `int`, `int`
+4. `package`, `class`, `long`
 
 **33. 一个应用程序的输出是什么？**
 
@@ -1087,24 +1647,28 @@ public class Airplane {
    }
 }
 ```
+
 1. 2 5
 2. 8 5
 3. 6 5
 4. 代码无法编译。
 
 **34. Java 支持通过继承扩展类的最重要原因之一是什么？**
+
 1. 继承要求扩展另一个类的类必须在同一个包中。
 2. 程序在运行时必须花费额外的时间/资源来跳过多层继承以确定精确的方法和变量。
 3. 父类中方法签名的变化可能会破坏使用重载方法的子类。
 4. 开发者通过在公共父类中共享代码，最大限度地减少新类中的重复代码。
 
 **35. 下列哪个是 Java 中有效的代码注释？**
+
 1. `//////// Walk my dog`
 2. `#! Go team!`
 3. `/ Process fails at runtime /`
 4. 以上都不是
 
 **36. 下列哪个方法签名不是 Java 应用程序入口点的有效声明？**
+
 1. `public static void main(String... arguments)`
 2. `public static void main(String arguments)`
 3. `public static final void main(String[] arguments)`
@@ -1122,22 +1686,25 @@ public class Magnet {
    // line a4
 }
 ```
+
 1. a1 和 a3
 2. a2 和 a4
 3. a2, a3 和 a4
 4. a1, a2, a3 和 a4
 
 **38. 定义一个有效的 Java 类文件需要什么？**
+
 1. 类声明
 2. 包语句
-3. 至少一条 import 语句
-4. public 修饰符
+3. 至少一条 `import` 语句
+4. `public` 修饰符
 
 **39. Java 源文件的正确扩展名是什么？**
-1. .jav
-2. .class
-3. .source
-4. .java
+
+1. `.jav`
+2. `.class`
+3. `.source`
+4. `.java`
 
 **40. 假设 `Math` 类同时存在于 `java.lang` 和 `pocket.complex` 包中，编译以下类的结果是什么？**
 
@@ -1151,28 +1718,31 @@ public class Magnet {
 7:   }
 8: }
 ```
+
 1. 因为第 2 行，代码无法编译。
 2. 因为第 3 行，代码无法编译。
 3. 因为第 6 行，代码无法编译。
 
-**41. 鉴于 `java.lang` 和 `pocket.complex` 包中都存在 `Math` 类，在使用以下 import 语句的情况下，哪个类可以在不使用完整包名的情况下被访问？**
+**41. 鉴于 `java.lang` 和 `pocket.complex` 包中都存在 `Math` 类，在使用以下 `import` 语句的情况下，哪个类可以在不使用完整包名的情况下被访问？**
 
 ```java
 import dog.*;
 import puppy.*;
 ```
-1. dog.puppy
-2. puppy.dog
-3. dog
-4. java.Object
+
+1. `dog.puppy`
+2. `puppy.dog`
+3. `dog`
+4. `java.Object`
 
 **42. `_______` 是将数据组织为具有行为单元的技术。**
+
 1. 封装
 2. 面向对象
 3. 平台无关
 4. 多态
 
-**43. 假设 `Broccoli` 类在 `food.vegetables` 包中，`Apple` 类在 `food.fruit` 包中，在使用以下 import 语句的情况下，最多可以删除多少条 import 语句且代码仍能编译？**
+**43. 假设 `Broccoli` 类在 `food.vegetables` 包中，`Apple` 类在 `food.fruit` 包中，在使用以下 `import` 语句的情况下，最多可以删除多少条 `import` 语句且代码仍能编译？**
 
 ```java
 package food;
@@ -1183,9 +1753,10 @@ public class Grocery {
    Apple a; Broccoli;
 }
 ```
-1. 
+
+1. 零
 2. 一个
-3. 
+3. 两个
 
 **44. 给定以下应用程序的预期输出是什么？**
 
@@ -1198,8 +1769,9 @@ public class Keyboard {
    }
 }
 ```
-1. true false
-2. false false
+
+1. `true false`
+2. `false false`
 3. 代码无法编译。
 4. 代码在运行时抛出异常。
 
@@ -1216,6 +1788,7 @@ public class RollerSkates {
    }
 }
 ```
+
 1. 代码无法编译。
 2. 5
 3. 10
@@ -1236,15 +1809,17 @@ public class Bicycle {
    }
 }
 ```
-1. red
-2. purple
-3. blue
+
+1. `red`
+2. `purple`
+3. `blue`
 4. 代码无法编译。
 
 **47. 关于调用编译命令 `javac` 和执行命令 `java` 的哪些陈述是正确的？**
-* `java` 可以使用点 . 来分隔包。
+
+* `java` 可以使用点 `.` 来分隔包。
 * `javac` 获取 `.java` 文件并返回一个 `.class` 文件。
-* `java` 可以使用斜杠 (/) 来分隔包。
+* `java` 可以使用斜杠 (`/`) 来分隔包。
 
 1. 仅 I
 2. 仅 II
@@ -1252,10 +1827,6 @@ public class Bicycle {
 4. I、II 和 III
 
 **48. 编译以下应用程序的结果是什么？**
-
-
-
-
 
 ```java
 package forecast;
@@ -1275,28 +1846,35 @@ public class Weather {
 
 49. 给定以下类图，哪种 Java 实现最接近该结构？
 
+
+
 ![Diagram shows book with numberOfPages and getRating () as its unique characters, that are used for Java implementation most closely matches this structure in particular program.](img/c01uf002.jpg)
 
 1. `public class Book { public int numOfPages;`
+
 2. `public class Book { public String getRating() {return null;} }`
+
 3. `public class Book { public int numberOfPages; public String getRating() {return null;} }`
+
 4. `public class Book { void numberOfPages; }`
 
 50. 关于 JVM 的哪个陈述是正确的？
 
 1. JVM 按可预测的时间表调度垃圾回收。
+
 2. JVM 确保应用程序始终会终止。
+
 3. JVM 需要一个定义良好的入口点方法来执行应用程序。
+
 4. 经过编译的 Java 代码可以在任何计算机上运行。
 
-# 第 2 章
+## 第 2 章
 
 处理 Java 数据类型
 
 **本次练习测试涵盖的 OCA 考试考点包括：**
 
 * ![](img/correction.jpg)**处理 Java 数据类型**
-
 * 声明和初始化变量（包括原始数据类型的强制转换）
 * 区分对象引用变量和原始类型变量
 * 了解如何读取或写入对象字段
@@ -1306,8 +1884,11 @@ public class Weather {
 1. 下面哪个声明无法编译？
 
 1. `double num1, int num2 = 0;`
+
 2. `int num1, num2;`
+
 3. `int num1, num2 = 0;`
+
 4. `int num1 = 0, num2 = 0;`
 
 2. 下面代码的输出是什么？
@@ -1321,29 +1902,41 @@ public static void main(String... args) {
 ```
 
 1. `metal`
+
 2. `metalmetal`
+
 3. `nullmetal`
+
 4. 代码无法编译。
 
 3. 关于 `String` 类型的实例变量，哪项陈述是正确的？
 
 1. 它默认为空字符串。
+
 2. 它默认为 `null`。
+
 3. 它没有默认值。
+
 4. 如果不在声明行上初始化，它将无法编译。
 
 4. 下面哪个不是有效的变量名？
 
 1. `_blue`
+
 2. `2blue`
+
 3. `blue$`
+
 4. `Blue`
 
 5. 下面哪个类名最符合标准的 Java 命名规范？
 
 1. `fooBar`
+
 2. `FooBar`
+
 3. `FOO_BAR`
+
 4. `F_o_o_B_a_r`
 
 6. 下面方法中有多少个可以编译？
@@ -1361,22 +1954,31 @@ public String convert(Object value) {
 ```
 
 1. 无
+
 2. 一个
+
 3. 两个
+
 4. 三
 
 7. 下面哪个无法编译？
 
 1. `int num = 999;`
+
 2. `int num = 9_9_9;`
+
 3. `int num = _9_99;`
+
 4. 以上均不是；它们都可以编译。
 
 8. 下面哪项是包装类？
 
 1. `int`
+
 2. `Int`
+
 3. `Integer`
+
 4. `Object`
 
 9. 运行此代码的结果结是什么？
@@ -1393,15 +1995,21 @@ public class Values {
 ```
 
 1. `4`
+
 2. `5`
+
 3. 代码无法编译。
+
 4. 代码编译通过但在运行时抛出异常。
 
 10. 哪项最能描述 `new` 关键字的作用？
 
 1. 创建现有对象的副本并将其视为新对象
+
 2. 创建一个新的原始类型
+
 3. 实例化新对象
+
 4. 将对象引用切换到新对象
 
 11. 哪一行是第一个触发编译器错误的行？
@@ -1413,21 +2021,29 @@ float f1 = 5f;     // p3
 ```
 
 1. `p1`
+
 2. `p2`
+
 3. `p3`
 
 12. 下面哪个原始类型列表是从小到大排序的？
 
 1. `byte, char, double`
+
 2. `char, float, double`
+
 3. `byte, double, float`
+
 4. `float, byte, char`
 
 13. 下面哪项是类的有效顺序？
 
 1. `构造函数, 实例变量, 方法名`
+
 2. `实例变量, 方法名, 构造函数`
+
 3. `方法名, 实例变量, 构造函数`
+
 4. 以上均不是：这些顺序都是有效的。
 
 14. 下面哪行包含错误？
@@ -1439,8 +2055,11 @@ System.out.println(hot); // line3
 ```
 
 1. `x1`
+
 2. `x2`
+
 3. `x3`
+
 4. 以上均不是
 
 15. 代码中有多少个初始化器？
@@ -1456,8 +2075,11 @@ public class Bowling {
 ```
 
 1. 无
+
 2. 一个
-3.两个
+
+3. 两个
+
 4. 三
 
 16. 对于 `double`、`int` 和 `short` 类型，哪一个可以填充空白以使代码输出？
@@ -1470,22 +2092,31 @@ public static void main(String[] args) {
 ```
 
 1. 无
+
 2. 一个
+
 3. 两个
+
 4. 三
 
 17. 关于 `finalize()` 方法，哪个正确？
 
 1. 它可能被调用零或一次。
+
 2. 它可能被调用零或多次。
+
 3. 它将被精确调用一次。
+
 4. 它可能被调用一次或多次。
 
 18. 下面哪项是包装类？
 
 1. `Double`
+
 2. `Integer`
+
 3. `Long`
+
 4. `String`
 
 19. 假设你有以下代码。在 main 方法结束之前，假设垃圾回收尚未运行，哪张图片最能表示引用的状态？
@@ -1518,10 +2149,13 @@ public class Link {
 
 ![Diagram shows four options where links 1 and 3 pointing to x and null, whereas link 2 points to z in options B and D where it points in 2-way in options A and C.](img/c02uf002.jpg)
 
-1.  A
-2.  B
-3.  C
-4.  D
+1. A
+
+2. B
+
+3. C
+
+4. D
 
 20. 哪种类型可以填充空白？
 
@@ -1530,8 +2164,11 @@ _______ pi = 3.14;
 ```
 
 1. `byte`
+
 2. `float`
+
 3. `double`
+
 4. `short`
 
 21. 下面代码中哪一行是第一个无法编译？
@@ -1545,42 +2182,60 @@ public static void main(String[] args) {
 }
 ```
 
-
-
-
 1. `k1`
+
 2. `k2`
+
 3. `k3`
+
 4. `k4`
 
 22. 假设 `foo` 是一个类实例的引用。关于 `foo.bar`，以下哪项是不正确的？
+
 1. `bar` 是一个实例变量。
+
 2. `bar` 是一个局部变量。
+
 3. 它可以用于读取 `bar`。
+
 4. 它可以用于写入 `bar`。
 
 23. 下列哪项不是有效的类声明？
+
 1. `class building {}`
+
 2. `class Cost$ {}`
+
 3. `class 5MainSt {}`
+
 4. `class _Outside {}`
 
 24. 下列哪项可以填充空白以使此代码编译？
+
 ```
 _______d = new_______ (1_000_000_.00);
 ```
+
 1. `double`, `double`
+
 2. `double`, `Double`
+
 3. `Double`, `double`
+
 4. 以上均不是
 
 25. 关于类型为 `String` 的局部变量，哪项是正确的？
+
 1. 它默认为空字符串。
+
 2. 它默认为 `null`。
+
 3. 它没有默认值。
+
 4. 如果在声明行上不初始化，将无法编译。
 
 26. 在 `double`、`int`、`long` 和 `short` 类型中，有多少个可以填充空白使此代码输出 0？
+
 ```
 static  _______defaultValue;
 
@@ -1588,18 +2243,27 @@ static  _______defaultValue;
      System.out.println(defaultValue);
   }
 ```
+
 1. 一个
+
 2. 两个
+
 3. 三
+
 4. 四个
 
 27. 关于基本类型（primitives），以下哪项是正确的？
+
 1. 你可以在基本类型上调用方法。
+
 2. 你可以通过赋值将基本类型转换为包装类对象。
+
 3. 你可以通过调用 `valueOf()` 将包装类对象转换为基本类型。
+
 4. 你可以将基本类型直接存入 `ArrayList` 中。
 
 28. 下述代码的输出是什么？
+
 ```
 Integer integer = new Integer(4);
 System.out.print(integer.byteValue());
@@ -1609,12 +2273,17 @@ System.out.print("-");
 int i = new Integer(4);
 System.out.print(i.byteValue());
 ```
+
 1. `4-0`
+
 2. `4-4`
+
 3. 代码无法编译。
+
 4. 代码可以编译但在运行时抛出异常。
 
 29. 给定以下代码，填充空白使代码打印 bounce。
+
 ```
 public class TennisBall {
   public TennisBall() {
@@ -1625,46 +2294,75 @@ public class TennisBall {
   }
 }
 ```
+
 1. `TennisBall;`
+
 2. `TennisBall();`
+
 3. `new TennisBall;`
+
 4. `new TennisBall();`
 
 30. 下列哪项正确地将 `animal` 赋值给给两个变量？
+
 * `String cat = "animal", dog = "animal";`
+
 * `String cat = "animal"; dog = "animal";`
+
 * `String cat, dog = "animal";`
+
 * `String cat; dog = "animal";`
+
 1. `I`
+
 2. `I, II`
+
 3. `I, III`
+
 4. `I, II, III`
 
 31. 哪两个基本类型的包装类不仅仅是基本类型名称的首字母大写？
+
 1. `byte` 和 `char`
+
 2. `byte` 和 `int`
+
 3. `char` 和 `int`
+
 4. 以上均不是
 
 32. 关于 `String` 实例变量，以下哪项是正确的？
+
 1. 它们可以被设置为 `null`。
+
 2. 它们永远不能在类外部被设置。
+
 3. 它们只能在构造函数中设置。
+
 4. 它们只能在运行时设置一次。
 
 33. 关于基本类型，哪种陈是正确的？
+
 1. 基本类型以小写字母开头。
+
 2. 基本类型可以被设置为 `null`。
+
 3. `String` 是基本类型。
+
 4. 你可以创建自己的基本类型。
 
 34. 如何强制垃圾回收在特定点点发生？
+
 1. 调用 `System.forceGc()`
+
 2. 调用 `System.gc()`
+
 3. 调用 `System.requireGc()`
+
 4. 以上均不是
 
 35. 在 main 方法结束之前，有多少个 `String` 对象符合垃圾回收条件？
+
 ```
 public static void main(String[] fruits) {
    String fruit1 = new String("apple");
@@ -1676,21 +2374,31 @@ public static void main(String[] fruits) {
    fruit1 = fruit2;
 }
 ```
+
 1. 无
+
 2. 一个
+
 3. 两个
+
 4. 三
 
 36. 下列哪项可以填充空白使此代码编译？
+
 ```
 _______d = new_______ (1_000_000.00);
 ```
+
 1. `double`, `double`
+
 2. `double`, `Double`
+
 3. `Double`, `double`
+
 4. 以上均不是
 
 37. 下列代码输出什么？
+
 ```
 public class InitOrder {
   public String first = "instance";
@@ -1706,207 +2414,69 @@ public class InitOrder {
   }
 }
 ```
+
 1. `block`
+
 2. `constructor`
+
 3. `instance`
+
 4. 代码无法编译。
 
 38. 下列有多少行可以编译？
+
 ```
 int i = null;
 Integer in = null;
 String s = null;
 ```
+
 1. 无
+
 2. 一
+
 3. 二
+
 4. 三
 
 39. 下列哪项可以准确填充表格中的空白？
+
 | 方法类型 | 可以在类内部调用 |
 | --- | --- |
 | 实例 | Blank 1 |
 | 静态 | Blank 2 |
+
 1. 1: 仅实例方法，2: 仅静态方法
+
 2. 1: 实例或静态方法，2: 仅静态方法
+
 3. 1: 仅实例方法，2: 实例或静态方法
+
 4. 1: 实例或静态方法，2: 实例
 
 40. 下列哪项无法编译？
+
 1. `double num = 2.7;`
+
 2. `double num = .78;`
+
 3. `double num = 2._8;`
+
 4. 以上均不是；它们都可以编译。
 
 41. 下列哪种基本类型列表按数据类型从小到大排序？
+
 1. `byte`, `short`, `int`, `long`
+
 2. `int`, `short`, `byte`, `long`
+
 3. `short`, `byte`, `int`, `long`
+
 4. `short`, `int`, `byte`, `long`
 
 42. 填充空白使代码编译：
-```
-package animal;
-public class Cat {
-  public String name;
-  public static void main(String[] meow) {
-    Cat cat = new Cat();
-    ______________ = "Sadie";
-  }
-}
-```
-1. `cat.name`
-2. `cat-name`
-3. `cat.setName`
-4. `cat[name]`
-
-43. 假设运行完成，以下代码的输出是什么？
-```
-package store;
-public class Toy {
-  public void play() {
-     System.out.print("play-");
-  }
-  public void finalizer() {
-     System.out.print("clean-");
-  }
-  public static void main(String[] fun) {
-     Toy car = new Toy();
-     car.play();
-     System.gc();
-     Toy doll = new Toy();
-     doll.play();
-  }
-}
-```
-1. `play-`
-2. `play-play-`
-3. `play-clean-play-`
-4. `play-play-clean-clean-`
-
-44. 填充空白实现此方法的常用方式是？
-```
-public class Penguin {
-
-  private double beakLength;
-
-  public static void setBeakLength(Penguin p, int b) {
-     _____________________________
-  }
-}
-```
-1. `p.beakLength = b;`
-2. `p['beakLength'] = b;`
-3. `p[beakLength] = b;`
-4. 以上均不是
-
-45. 填充空白以指示基本类型或包装类可以使用自动装箱功能进行赋值。
-```
-_______first = Integer.parseInt("5");
-_______second = Integer.valueOf("5");
-```
-1. `int`, `int`
-2. `int`, `Integer`
-3. `Integer`, `int`
-4. `Integer`, `Integer`
-
-46. 在 main 方法结束之前，有多少个对象符合垃圾回收条件？
 
 
-
-
-
-```java
-1:   public class Person {
-2:      public Person youngestChild;
-3:
-4:      public static void main(String... args) {
-5:         Person elena = new Person();
-6:         Person diana = new Person();
-7:         elena.youngestChild = diana;
-8:         diana = null;
-9:         Person zoe = new Person();
-10:        elena.youngestChild = zoe;
-11:        zoe = null;
-12:     }
-13:   }
-```
-
-1. 无
-2. 一个
-3. 两个
-4. 三
-
-47. 哪个是该类的有效构造函数？
-
-```java
-public class TennisBall {
-}
-```
-
-1. `public TennisBall static create() { return new TennisBall(); }`
-2. `public TennisBall static newInstance() { return new TennisBall():}`
-3. `public TennisBall() {}`
-4. `public void TennisBall() {}`
-
-48. 假设此代码运行完毕，下列哪项不是该代码的可能输出？
-
-```java
-package store;
-public class Toy {
-   public void play() {
-      System.out.print("play-");
-   }
-   public void finalize() {
-      System.out.print("clean-");
-   }
-   public static void main(String[] args) {
-      Toy car = new Toy();
-      car.play();
-      System.gc();
-      Toy doll = new Toy();
-      doll.play();
-   }
-}
-```
-
-1. play-
-2. play-play-
-3. play-play-clean-
-4. play-play-clean-clean-
-
-49. 哪一项在不使用自动装箱（autoboxing）的情况下原始类型转换为包装类对象？
-
-1. 调用 `asObject()` 方法
-2. 调用包装类的构造函数
-3. 调用 `convertToObject()` 方法
-4. 调用 `toObject()` 方法
-
-50. 以下代码的输出是什么？
-
-```java
-package beach;
-public class Sand {
-   public Sand() {
-      System.out.print("a");
-   }
-   public void Sand() {
-      System.out.print("b");
-   }
-   public void run() {
-      new Sand();
-      Sand();
-   }
-   public static void main(String... args) {
-      new Sand().run();
-   }
-}
-```
-
-1. a
-2. ab
-3. aab
-4. 以上均不是
 
 # 第 3 章
 
@@ -1914,315 +2484,480 @@ public class Sand {
 
 **本次练习测试涵盖的 OCA 考试考点包括：**
 
-* ![](img/correction.jpg)**使用运算符和决策结构**
+- **使用运算符和决策结构**
+  - 使用 Java 运算符；使用括号重写运算符优先级
+  - 使用 `==` 和 `equals()` 测试 `Strings` 与其他对象之间的相等性
+  - 创建 `if`、`if/else` 和三元运算符结构
+  - 使用 `switch` 语句
 
-    * 使用 Java 运算符；使用括号重写运算符优先级
-    * 使用 `==` 和 `equals()` 测试 `Strings` 与其他对象之间的相等性
-    * 创建 `if`、`if/else` 和三元运算符结构
-    * 使用 `switch` 语句
+## 题目
 
 1. 下列哪种变量类型不允许用于 `switch` 语句？
 
-1. String
-2. double
-3. int
-4. char
+   1. `String`
+   2. `double`
+   3. `int`
+   4. `char`
 
 2. 执行以下代码段后，`tip` 的值是多少？
 
-```java
-int meal = 5;
-int tip = 2;
-int total = meal + (meal>6 ? ++tip : ‐‐tip);
-```
+   ```java
+   int meal = 5;
+   int tip = 2;
+   int total = meal + (meal>6 ? ++tip : ‐‐tip);
+   ```
 
-1. 1
-2. 2
-3. 3
-4. 6
+   1. 1
+   2. 2
+   3. 3
+   4. 6
 
 3. 以下应用程序的输出是什么？
 
-```java
-package registration;
-public class NameCheck {
-   public static void main(String... data) {
-      String john = "john";
-      String jon = new String(john);
-      System.out.print((john==jon)+" "+(john.equals(jon)));
+   ```java
+   package registration;
+   public class NameCheck {
+      public static void main(String... data) {
+         String john = "john";
+         String jon = new String(john);
+         System.out.print((john==jon)+" "+(john.equals(jon)));
+      }
    }
-}
-```
+   ```
 
-1. true true
-2. true false
-3. false true
-4. false false
+   1. `true true`
+   2. `true false`
+   3. `false true`
+   4. `false false`
 
 4. 以下应用程序的输出是什么？
 
-```java
-package planning;
-public class ThePlan {
-   public static void main(String[] input) {
-      int plan = 1;
-      plan = plan++ + --plan;
-      if(plan==1) {
-         System.out.print("Plan A");
-      } else { if(plan==2) System.out.print("Plan B");
-      } else System.out.print("Plan C");
+   ```java
+   package planning;
+   public class ThePlan {
+      public static void main(String[] input) {
+         int plan = 1;
+         plan = plan++ + --plan;
+         if(plan==1) {
+            System.out.print("Plan A");
+         } else { if(plan==2) System.out.print("Plan B");
+         } else System.out.print("Plan C");
+      }
    }
-}
-```
+   ```
 
-1. Plan A
-2. Plan B
-3. Plan C
-4. 以上均不是
+   1. `Plan A`
+   2. `Plan B`
+   3. `Plan C`
+   4. 以上均不是
 
-5. 关于关于 `switch` 语句中默认分支的陈述正确的是？
+5. 关于 `switch` 语句中默认分支的陈述正确的是？
 
-1. 所有 `switch` 语句都必须包含 `default` 语句。
-2. `default` 语句必须放在所有 `case` 语句之后。
-3. 与 `case` 语句不同，`default` 语句不需要值。
-4. 只有当存在至少一个 `case` 语句时才能使用 `default` 语句。
+   1. 所有 `switch` 语句都必须包含 `default` 语句。
+   2. `default` 语句必须放在所有 `case` 语句之后。
+   3. 与 `case` 语句不同，`default` 语句不需要值。
+   4. 只有当存在至少一个 `case` 语句时才能使用 `default` 语句。
 
 6. 执行以下代码段后，`thatNumber` 的值是多少？
 
-```java
-long thatNumber = 5 >= 5 ? 1 : 2;
-if(thatNumber < 4)
-   thatNumber++;
-```
+   ```java
+   long thatNumber = 5 >= 5 ? 1 : 2;
+   if(thatNumber < 4)
+      thatNumber++;
+   ```
 
-1. 3
-2. 4
-3. 5
-4. 无法确定
+   1. 3
+   2. 4
+   3. 5
+   4. 无法确定
 
 7. 哪个语句会立即退出 `switch` 语句并跳过剩余 case？
 
-1. exit
-2. break
-3. goto
-4. continue
+   1. `exit`
+   2. `break`
+   3. `goto`
+   4. `continue`
 
 8. 关于三元表达式的哪个陈述是正确的？
 
-1. 在某些情况下，两个表达式都会求值。
-2. 三元表达式需要括号。
-3. 三元表达式是 `if-else` 语句的方便替代。
-4. 三元表达式左操作数支持 int。
+   1. 在某些情况下，两个表达式都会求值。
+   2. 三元表达式需要括号。
+   3. 三元表达式是 `if-else` 语句的方便替代。
+   4. 三元表达式左操作数支持 `int`。
 
 9. 以下代码的输出是什么？
 
-```java
-package voting; public class Election {
-public void calculateResult(Integer candidateA, Integer candidateB) {
-   boolean process = candidateA == null ? false : candidateA.intValue() < 10;
-   boolean value = process && candidateB;
-   System.out.print(value);
-}
-public static void main(String[] unused) {
-   new Election().calculateResult(null,20);
-}
-```
+   ```java
+   package voting; public class Election {
+   public void calculateResult(Integer candidateA, Integer candidateB) {
+      boolean process = candidateA == null ? false : candidateA.intValue() < 10;
+      boolean value = process && candidateB;
+      System.out.print(value);
+   }
+   public static void main(String[] unused) {
+      new Election().calculateResult(null,20);
+   }
+   ```
 
-1. true
-2. false
-3. 代码无法编译
-4. 代码编译但在第 3 行抛出 `NullPointerException`
+   1. `true`
+   2. `false`
+   3. 代码无法编译
+   4. 代码编译但在第 3 行抛出 `NullPointerException`
 
 10. 以下应用程序的输出是什么？
 
-```java
-package dinosaur;
-public class Park {
-   public final void main(String... arguments) {
-      int pterodactyl = 6;
-      int tricerops = 3;
-      if(pterodactyl % 3 >= 1)
-         triceratops++;
-      triceratops--;
-      System.out.print(triceratops);
-   }
-}
-```
+    ```java
+    package dinosaur;
+    public class Park {
+       public final void main(String... arguments) {
+          int pterodactyl = 6;
+          int tricerops = 3;
+          if(pterodactyl % 3 >= 1)
+             triceratops++;
+          triceratops--;
+          System.out.print(triceratops);
+       }
+    }
+    ```
 
-1. 2
-2. 3
-3. 4
-4. 代码无法编译
+    1. 2
+    2. 3
+    3. 4
+    4. 代码无法编译
 
 11. 关于 `if-then` 语句的哪个陈述是正确的？
 
-1. `if-then` 语句必须有 `else` 语句。
-2. 如果 `if-then` 语句的布尔测试为 false，则目标语句仍会被求值。
-3. `if-then` 语句需要强制转换对象。
-4. `if-then` 语句可以执行单个语句或代码块 {}。
+    1. `if-then` 语句必须有 `else` 语句。
+    2. 如果 `if-then` 语句的布尔测试为 `false`，则目标语句仍会被求值。
+    3. `if-then` 语句需要强制转换对象。
+    4. `if-then` 语句可以执行单个语句或代码块 `{}`。
 
 12. 以下应用程序的输出是什么？
 
-```java
-package restaurant;
-public class Pieces {
-   public static void main(String[] info) {
-      int flair = 15;
-      if(flair >= 15 && flair < 37) {
-         System.out.print("Not enough");
-      } if(flair==37) {
-         System.out.print("Just right");
-      } else {
-         System.out.print("Too many");
-      }
-   }
-}
-```
+    ```java
+    package restaurant;
+    public class Pieces {
+       public static void main(String[] info) {
+          int flair = 15;
+          if(flair >= 15 && flair < 37) {
+             System.out.print("Not enough");
+          } if(flair==37) {
+             System.out.print("Just right");
+          } else {
+             System.out.print("Too many");
+          }
+       }
+    }
+    ```
 
-1. Not enough
-2. Just right
-3. Too many
-4. 以上均不是
+    1. `Not enough`
+    2. `Just right`
+    3. `Too many`
+    4. 以上均不是
 
 13. 关于 `switch` 语句中 `case` 语句的哪个陈述是不正确的？
 
-1. `case` 值可以是 `final` 的。
-2. `case` 语句必须以 `break` 语句终止。
-3. `case` 值可以是字面量表达式。
-4. `case` 值必须与 `switch` 变量的数据类型匹配，或者能够提升为该类型。
+    1. `case` 值可以是 `final` 的。
+    2. `case` 语句必须以 `break` 语句终止。
+    3. `case` 值可以是字面量表达式。
+    4. `case` 值必须与 `switch` 变量的数据类型匹配，或者能够提升为该类型。
 
 14. 给给定的真值表，布尔表达式 `x` 和 `y` 的哪个运算符对应这种关系？
 
-|   | **x = true** | **x = false** |
-|---|---|---| |
-| **y = true** | true | false |
-| **y = false** | false | false |
+    |       | **x = true** | **x = false** |
+    |-------|--------------|---------------|
+    | **y = true** | true         | false         |
+    | **y = false**| false        | false         |
 
-1. --
-2. ++
-3. ||
-4. &&
+    1. `--`
+    2. `++`
+    3. `||`
+    4. `&&`
 
 15. 以下代码段的输出是什么？
 
+    ```java
+    int hops = 0;
+    int jumps = 0;
+    jumps = hops++;
+    if(jumps)
+       System.out.print("Jump!");
+    else
+       System.out.print("Hop!");
+    ```
 
-
-
-
-```
-int hops = 0;
-int jumps = 0;
-jumps = hops++;
-if(jumps)
-   System.out.print("Jump!");
-else
-   System.out.print("Hop!");
-```
-
-1. Jump!
-2. Hop!
-3. 代码无法编译。
-4. 代码可以编译但在运行时抛出异常。
+    1. `Jump!`
+    2. `Hop!`
+    3. 代码无法编译。
+    4. 代码可以编译但在运行时抛出异常。
 
 16. 填空：`_____________` 运算符将变量的值加 1 并返回新值，而 `_____________` 运算符将变量的值减 1 并返回原始值。
 
-1. 前置增 `[++v]`,前置减 `[--v]`
-2. 前置增 `[++v]`,后置减 `[v--]`
-3. 后置增 `[v++]`,前置减 `[--v]`
-4. 后置增 `[v++]`,后置减 `[v--]`
+    1. 前置增 `[++v]`,前置减 `[--v]`
+    2. 前置增 `[++v]`,后置减 `[v--]`
+    3. 后置增 `[v++]`,前置减 `[--v]`
+    4. 后置增 `[v++]`,后置减 `[v--]`
 
 17. 下程序的输出是什么？
 
-```java
-package jungle;
-public class TheBigRace {
-   public static void main(String[] in) {
-      int tiger = 2;
-      short lion = 3;
-      long winner = lion+2*(tiger + lion);
-      System.out.print(winner);
-   }
-}
-```
+    ```java
+    package jungle;
+    public class TheBigRace {
+       public static void main(String[] in) {
+          int tiger = 2;
+          short lion = 3;
+          long winner = lion+2*(tiger + lion);
+          System.out.print(winner);
+       }
+    }
+    ```
 
-1. 11
-2. 13
-3. 25
-4. 以上均不是
+    1. 11
+    2. 13
+    3. 25
+    4. 以上均不是
 
 18. 给定以下代码片段，假设 `dayOfWeek` 是一个 `int`，`saturday` 的什么变量类型是不允许的？
 
-```java
-final _________ saturday = 6;
-switch(dayOfWeek) {
-   default:
-      System.out.print("Another Weekday");
-      break;
-   case saturday:
-      System.out.print("Weekend!");
-}
-```
+    ```java
+    final _________ saturday = 6;
+    switch(dayOfWeek) {
+       default:
+          System.out.print("Another Weekday");
+          break;
+       case saturday:
+          System.out.print("Weekend!");
+    }
+    ```
 
-1. byte
-2. long
-3. int
-4. 以上都不是
+    1. `byte`
+    2. `long`
+    3. `int`
+    4. 以上都不是
 
 19. 给以下代码片段，执行后 `dinner` 的值是多少？
 
-```java
-int time = 11;
-int day = 4;
-String dinner = time > 10 ? day ? "Takeout" : "Salad" : "Leftovers";
-```
+    ```java
+    int time = 11;
+    int day = 4;
+    String dinner = time > 10 ? day ? "Takeout" : "Salad" : "Leftovers";
+    ```
 
-1. Takeout
-2. Salad
-3. 代码无法编译，但如果加上括号就可以编译。
-4. 以上都不是
+    1. `Takeout`
+    2. `Salad`
+    3. 代码无法编译，但如果加上括号就可以编译。
+    4. 以上都不是
 
 20. 下程序的输出是什么？
 
-```java
-package recreation;
-public class Dancing {
-   public static void main(String[] vars) {
-      int leaders = 10 * (2 + (1 + 2 / 5);
-      int followers = leaders * 2;
-      System.out.print(leaders + followers < 10 ? "Too few" : "Too many");
-   }
-}
-```
+    ```java
+    package recreation;
+    public class Dancing {
+       public static void main(String[] vars) {
+          int leaders = 10 * (2 + (1 + 2 / 5);
+          int followers = leaders * 2;
+          System.out.print(leaders + followers < 10 ? "Too few" : "Too many");
+       }
+    }
+    ```
 
-1. Too few
-2. Too many
-3. 代码无法编译。
-4. 代码可以编译但在运行时抛出除以零错误。
+    1. `Too few`
+    2. `Too many`
+    3. 代码无法编译。
+    4. 代码可以编译但在运行时抛出除以零错误。
 
 21. 下程序的输出是什么？
 
-```java
-package schedule;
-public class PrintWeek {
-   public static final void main(String[] days) {
-      System.out.print(5 + 6 + "7" + 8 + 9);
-   }
-}
-```
+    ```java
+    package schedule;
+    public class PrintWeek {
+       public static final void main(String[] days) {
+          System.out.print(5 + 6 + "7" + 8 + 9);
+       }
+    }
+    ```
 
-1. 56789
-2. 11789
-3. 11717
-4. 代码无法编译。
+    1. `56789`
+    2. `11789`
+    3. `11717`
+    4. 代码无法编译。
 
 22. 填空：`______________` 运算符用于求两个数之间的差，而 `______________` 运算符用于求一个数除以另一个数时的余数。
 
-1. /, %
-2. –, %
-3. %, <
-4. , ||
+    1. `/`, `%`
+    2. `–`, `%`
+    3. `%`, `<`
+    4. `,` `||`
 
 23. 下程序的输出是什么？
+
+    ```java
+    package animal;
+    public class Cat {
+      public String name;
+      public static void main(String[] meow) {
+        Cat cat = new Cat();
+        ______________ = "Sadie";
+      }
+    }
+    ```
+
+    1. `cat.name`
+    2. `cat-name`
+    3. `cat.setName`
+    4. `cat[name]`
+
+24. 假设运行完成，以下代码的输出是什么？
+
+    ```java
+    package store;
+    public class Toy {
+      public void play() {
+         System.out.print("play-");
+      }
+      public void finalizer() {
+         System.out.print("clean-");
+      }
+      public static void main(String[] fun) {
+         Toy car = new Toy();
+         car.play();
+         System.gc();
+         Toy doll = new Toy();
+         doll.play();
+      }
+    }
+    ```
+
+    1. `play-`
+    2. `play-play-`
+    3. `play-clean-play-`
+    4. `play-play-clean-clean-`
+
+25. 填充空白实现此方法的常用方式是？
+
+    ```java
+    public class Penguin {
+
+      private double beakLength;
+
+      public static void setBeakLength(Penguin p, int b) {
+         _____________________________
+      }
+    }
+    ```
+
+    1. `p.beakLength = b;`
+    2. `p['beakLength'] = b;`
+    3. `p[beakLength] = b;`
+    4. 以上均不是
+
+26. 填充空白以指示基本类型或包装类可以使用自动装箱功能进行赋值。
+
+    ```java
+    _______first = Integer.parseInt("5");
+    _______second = Integer.valueOf("5");
+    ```
+
+    1. `int`, `int`
+    2. `int`, `Integer`
+    3. `Integer`, `int`
+    4. `Integer`, `Integer`
+
+27. 在 `main` 方法结束之前，有多少个对象符合垃圾回收条件？
+
+    ```java
+    1:   public class Person {
+    2:      public Person youngestChild;
+    3:
+    4:      public static void main(String... args) {
+    5:         Person elena = new Person();
+    6:         Person diana = new Person();
+    7:         elena.youngestChild = diana;
+    8:         diana = null;
+    9:         Person zoe = new Person();
+    10:        elena.youngestChild = zoe;
+    11:        zoe = null;
+    12:     }
+    13:   }
+    ```
+
+    1. 无
+    2. 一个
+    3. 两个
+    4. 三
+
+28. 哪个是该类的有效构造函数？
+
+    ```java
+    public class TennisBall {
+    }
+    ```
+
+    1. `public TennisBall static create() { return new TennisBall(); }`
+    2. `public TennisBall static newInstance() { return new TennisBall():}`
+    3. `public TennisBall() {}`
+    4. `public void TennisBall() {}`
+
+29. 假设此代码运行完毕，下列哪项不是该代码的可能输出？
+
+    ```java
+    package store;
+    public class Toy {
+       public void play() {
+          System.out.print("play-");
+       }
+       public void finalize() {
+          System.out.print("clean-");
+       }
+       public static void main(String[] args) {
+          Toy car = new Toy();
+          car.play();
+          System.gc();
+          Toy doll = new Toy();
+          doll.play();
+       }
+    }
+    ```
+
+    1. `play-`
+    2. `play-play-`
+    3. `play-play-clean-`
+    4. `play-play-clean-clean-`
+
+30. 哪一项在不使用自动装箱（autoboxing）的情况下原始类型转换为包装类对象？
+
+    1. 调用 `asObject()` 方法
+    2. 调用包装类的构造函数
+    3. 调用 `convertToObject()` 方法
+    4. 调用 `toObject()` 方法
+
+31. 以下代码的输出是什么？
+
+    ```java
+    package beach;
+    public class Sand {
+       public Sand() {
+          System.out.print("a");
+       }
+       public void Sand() {
+          System.out.print("b");
+       }
+       public void run() {
+          new Sand();
+          Sand();
+       }
+       public static void main(String... args) {
+          new Sand().run();
+       }
+    }
+    ```
+
+    1. `a`
+    2. `ab`
+    3. `aab`
+    4. 以上均不是
+
+
 
 ```java
 package transporter;
@@ -2239,8 +2974,11 @@ public class Rematerialize {
 ```
 
 1. 9
+
 2. 11
+
 3. 15
+
 4. 代码无法编译。
 
 24. 下程序的输出是什么？
@@ -2262,8 +3000,11 @@ public class IceCream {
 ```
 
 1. 1
+
 2. 2
+
 3. 3
+
 4. 代码无法编译。
 
 25. 下程序的输出是什么？
@@ -2281,8 +3022,11 @@ public class Transportation {
 ```
 
 1. train
+
 2. 10
+
 3. 代码无法编译。
+
 4. 代码可以编译但在运行时抛出异常。
 
 26. 填空：`_____________` 运算符用于寻找……而 `_____________` 运算符用于寻找……（等待，提供的文本是：两个非空对象，如果 `_____________` 且 `_____________` 为真，则 `_____________` 也必须为真）。
@@ -2290,8 +3034,11 @@ public class Transportation {
 *基于提供的文本：*填空：两个非空对象，如果 `_____________` 且 `_____________` 为真，则 `_____________` 也必须为真。
 
 1. `==`, `equals()`
+
 2. `!=`, `equals()`
+
 3. `equals()`, `==`
+
 4. `equals()`
 
 27. 提供的文本是：`myVariable`
@@ -2313,8 +3060,11 @@ public class Road {
 29. 关于逻辑 `&` 和 `&&` 的什么说法是正确的？
 
 1. `&` 和 `&&` 是可以替换的，产生的结果。
+
 2. `&` 运算符总是计算两个操作数，`&&` 可能只计算左侧。
+
 3. 如果任一操作数为真，则两个表达式为真。
+
 4. `&&` 可能只计算右侧。
 
 30. 代码片段的输出是什么？
@@ -2328,8 +3078,11 @@ System.out.print((x+y)+" "+w ? 5 : 10);
 ```
 
 1. 代码无法编译。
+
 2. 10 10
+
 3. 11 5
+
 4. 12 5
 
 31. 下程序的输出是什么？
@@ -2346,26 +3099,37 @@ public class AreBob {
 ```
 
 1. true true
+
 2. true false
+
 3. false true
+
 4. false false
 
 32. 在 Java 中 `12 + 6 * 3 % (1 + 1)` 的值是多少？
 
 1. 0
+
 2. 12
+
 3. 14
+
 4. 以上都不是
 
 33. 给定的真值表 `p` 和 `q` 以及表达式 `p ^ q`，真值表中的缺失值是从第一列开始的？
 
 | | **p = true** | **p = false** |
+
 | **q = true** | false | true |
+
 | **q = false** | | |
 
 1. false and true
+
 2. false and false
+
 3. true and true
+
 4. true and false
 
 34. 下列执行后不是可能结果的是？
@@ -2383,27 +3147,31 @@ public class ConditionallyLogical {
 ```
 
 1. 什么都没有打印。
+
 2. 打印了 sound。
+
 3. 程序在运行时抛出异常。
+
 4. 打印了 logic。
 
 35. 填空：运算符 `+`、`_____________`、`_____________`、`_____________` 和 `++` 按相同或增加的优先级列出。
 
 1. `*`, `--`, `/`
+
 2. `%`, `-`, `*`
+
 3. `/`, `*`, `%`
-
-
-
-
 
 ## 4. `*`, `-`, `/`
 
 ### 36. 关于 `^` 运算符的哪种描述是正确的？
 
 1. 如果 `^` 的操作数之一为真，则结果始终为真。
+
 2. 该运算符有一种条件形式，符号记为 `^^`。
+
 3. 如果 `^` 的两个操作数都为真，则结果为真。
+
 4. `^` 运算符只能应用于布尔值。
 
 ### 37. 给定给定的文恩图和变量 `x`、`y` 和 `z`，哪个 Java 表达式最接近图中阴影区域？
@@ -2411,8 +3179,11 @@ public class ConditionallyLogical {
 ![图表显示了变量 x、y 和 z 的三个同心圆且相互重合，其中 x 和 y 的圆被阴影填充，只有 z 与 x 和 y 重叠的部分被阴影填充](img/c03uf001.jpg)
 
 1. `x || z`
+
 2. `y || (y && z)`
+
 3. `x || y`
+
 4. `y && x`
 
 ### 38. `red` 的什么变量类型允许以下应用编译通过？
@@ -2435,15 +3206,21 @@ public class Kansas {
 ```
 
 1. long
+
 2. double
+
 3. int
+
 4. 以上均不是
 
 ### 39. 使用哪两个运算符来测试一个数字是否大于等于 5.21 且严格小于 8.1？
 
 1. `>` 和 `<=`
+
 2. `>=` 和 `>`
+
 3. `<` 和 `>=`
+
 4. `<` 和 `>`
 
 ### 40. 以下应用的输出是什么？
@@ -2460,8 +3237,11 @@ public class TurtleVsHare {
 ```
 
 1. Hare wins!
+
 2. Turtle wins!
+
 3. 代码无法编译。
+
 4. 代码编译通过但在运行时抛出除以零错误。
 
 ### 41. 以下应用的输出是什么？
@@ -2479,8 +3259,11 @@ public class CountEntries {
 ```
 
 1. 0
+
 2. 1
+
 3. 0000
+
 4. 1000
 
 ### 42. 以下应用的输出是什么？
@@ -2500,15 +3283,21 @@ public class TestGame {
 ```
 
 1. up
+
 2. middle
+
 3. down
+
 4. 代码无法编译。
 
 ### 43. 填空：当两个操作数之一为真时，______________ 运算符为真，而 ______________ 运算符翻转布尔值。
 
 1. `+`, `-`
+
 2. `&&`, `!`
+
 3. `|`, `-`
+
 4. `||`, `!`
 
 ### 44. 给定以下代码片段，执行后 `movieRating` 的值是多少？
@@ -2520,15 +3309,21 @@ double movieRating = characters <= 4 ? 3 : story>1 ? 2 : 1;
 ```
 
 1. 2.0
+
 2. 3.0
+
 3. 代码无法编译，但如果添加括号则可以编译。
+
 4. 以上均不是
 
 ### 45. 填空：switch 语句可以有 ______________ 个 case 语句和 ______________ 个 default 语句。
 
 1. 最多一个，至少一个
+
 2. 任意数量，最多一个
+
 3. 至少一个，任意数量
+
 4. 至少一个，最多一个
 
 ### 46. 以下哪项不是执行以下应用可能的结果？
@@ -2545,36 +3340,53 @@ public class OutsideLogic {
 ```
 
 1. 什么都没有打印。
+
 2. 应用在运行时抛出异常。
+
 3. 打印 Go Outside。
+
 4. 打印 Stay Inside。
 
 ### 47. Java 中 `(5 + 8) / 2` 的值是多少？
 
 1. 2
+
 2. 1
+
 3. 6
+
 4. 13
 
 ### 48. 给定以下真值表 `w` 和 `z`，第一行的缺失值是什么？
 
 | `w` | `z` | result |
+
 |---|---|---|
+
 | true | true | true |
+
 | true | false | ? |
+
 | false | true | ? |
+
 | false | false | false |
 
 1. true 和 false
+
 2. false 和 true
+
 3. true 和 true
+
 4. false 和 false
 
 ### 49. 填空：______________ ,______________ , ____________ 的优先级递增排列。
 
 1. `+`, `-`
+
 2. `&&`, `!`
+
 3. `|`, `-`
+
 4. `||`, `!`
 
 ### 50. 以下应用的输出是什么？
@@ -2593,13 +3405,12 @@ public class Baby {
 ```
 
 1. Ball
+
 2. Swim
+
 3. 代码无法编译。
+
 4. 代码编译通过但在运行时抛出除以零错误。
-
-
-
-
 
 ### 3. 代码无法编译。
 
@@ -2608,8 +3419,11 @@ public class Baby {
 ### 9. 在数组上分别进行搜索和排序的方法名分别是什么？
 
 1. `Arrays.binarySearch()` 和 `Arrays.linearSort()`
+
 2. `Arrays.binarySearch()` 和 `Arrays.sort()`
+
 3. `Arrays.search()` 和 `Arrays.linearSort()`
+
 4. `Arrays.search()` 和 `Arrays.sort()`
 
 ### 10. 这段代码的输出是什么？
@@ -2621,15 +3435,21 @@ System.out.println(Arrays.toString(nums));
 ```
 
 1. `[1, 9, 10]`
+
 2. `[1, 10, 9]`
+
 3. `[10, 1, 9]`
+
 4. 以上都不是
 
 ### 11. 下面哪一项引用了非空数组的第一个和最后一个元素？
 
 1. `trains[0]` 和 `trains[trains.length]`
+
 2. `trains[0]` 和 `trains[trains.length - 1]`
+
 3. `trains[1]` 和 `trains[trains.length]`
+
 4. `trains[1]` 和 `trains[trains.length - 1]`
 
 ### 12. 下面中有多少个是合法的声明？
@@ -2642,8 +3462,11 @@ String ohMy [] = new String[0] {};
 ```
 
 1. 无
+
 2. 一个
+
 3. 两个
+
 4. 三
 
 ### 13. 下面中有多少个是合法的声明？
@@ -2656,25 +3479,36 @@ float[] ohMy = new[1] float;
 ```
 
 1. 无
+
 2. 一个
+
 3. 两个
+
 4. 三
 
 ### 14. 哪一个陈述最准确地描述了 `Arrays` 类搜索与排序的关系？
 
 1. 如果数组未排序，调用 `Arrays.binarySearch()` 将是准确的，但比排序后要慢。
+
 2. 在调用 `Arrays.binarySearch()` 之前数组不需要排序即可获得准确结果。
+
 3. 在调用 `Arrays.binarySearch()` 之前数组必须经过排序才能获得准确结果。
+
 4. 以上都不是
 
 ### 15. 关于数组，哪哪一个陈述是不正确的？
 
 1. 数组在满载时会自动扩展。
+
 2. 数组允许包含重复值。
+
 3. 数组理解有序元素的概念。
+
 4. 数组使用零索引来引用第一个元素。
 
 ### 16. 哪行代码导致 `ArrayIndexOutOfBoundsException`？
+
+
 
 ```java
 String[][] matrix = new String[1][2];
@@ -2702,7 +3536,7 @@ System.out.println(Arrays.binarySearch(os, "Mac"));
 3. 2
 4. 输出未定义。
 
-### 18. 哪一行是防止这段代码无错误编译运行的第一的第一？
+### 18. 哪一行是防止这段代码无错误编译运行的第一行？
 
 ```java
 char[][] ticTacToe = new char[3,3];                  // r1
@@ -2851,7 +3685,7 @@ public class Sudoku {
 
 1. X
 2. 代码无法编译。
-3. 代码编译但在运行时抛出 NullPointerException。
+3. 代码编译但在运行时抛出 `NullPointerException`。
 4. 代码编译但在运行时抛出不同的异常。
 
 ### 29. 下面代码输出什么？
@@ -2867,7 +3701,7 @@ System.out.println(Arrays.binarySearch(os, "RedHat"));
 3. -3
 4. 输出未定义。
 
-### 30. 运行 FirstName Wolfie 时输出是什么？
+### 30. 运行 `FirstName Wolfie` 时输出是什么？
 
 ```java
 public class FirstName {
@@ -2877,12 +3711,12 @@ public class FirstName {
 }
 ```
 
-1. FirstName
-2. Wolfie
-3. 代码抛出 ArrayIndexOutOfBoundsException。
-4. 代码抛出 NullPointerException。
+1. `FirstName`
+2. `Wolfie`
+3. 代码抛出 `ArrayIndexOutOfBoundsException`。
+4. 代码抛出 `NullPointerException`。
 
-### 31. 运行 java Count 1 2 时，输出是什么？
+### 31. 运行 `java Count 1 2` 时，输出是什么？
 
 ```java
 public class Count {
@@ -2892,15 +3726,12 @@ public class Count {
 }
 ```
 
-
-
-
 1. 0
 2. 1
 3. 2
 4. 代码无法编译。
 
-32. 当作为 `java unix.EchoFirst seed flower` 执行时，以下代码输出是什么？
+### 32. 当作为 `java unix.EchoFirst seed flower` 执行时，以下代码输出是什么？
 
 ```java
 package unix;
@@ -2921,14 +3752,14 @@ public class EchoFirst {
 3. 代码无法编译。
 4. 代码可以编译但在运行时抛出异常。
 
-33. 这四个数组声明中，哪一个产生的数组与其他三个不同？
+### 33. 这四个数组声明中，哪一个产生的数组与其他三个不同？
 
 1. `int[][] nums = new int[2][1];`
 2. `int[] nums[] = new int[2][1];`
 3. `int[] nums[] = new int[][] { { 0 }, { 0 } };`
 4. `int[] nums[] = new int[][] { { 0, 0 } };`
 
-34. 如何访问值为 "z" 的数组元素？
+### 34. 如何访问值为 "z" 的数组元素？
 
 ![图表显示了 dimensions，连接到如 one、two 和 three 等变量，其中 one 连接到 p，two 连接到 x 和 y，而 three 连接到 x、y 和 z。](img/c04uf002.jpg)
 
@@ -2937,7 +3768,7 @@ public class EchoFirst {
 3. `dimensions[2][2]`
 4. `dimensions[3][3]`
 
-35. 下述代码输出多少行内容？
+### 35. 下述代码输出多少行内容？
 
 ```java
 String[] days = new String[] { "Sunday", "Monday", "Tuesday",
@@ -2951,7 +3782,7 @@ for (int i = 1; i <= days.length; i++)
 3. 代码无法编译。
 4. 代码可以编译但在运行时抛出异常。
 
-36. 当作为 `java FirstName Wolfie` 执行时，以下代码输出是什么？
+### 36. 当作为 `java FirstName Wolfie` 执行时，以下代码输出是什么？
 
 ```java
 public class FirstName {
@@ -2961,12 +3792,12 @@ public class FirstName {
 }
 ```
 
-1. FirstName
-2. Wolfie
+1. `FirstName`
+2. `Wolfie`
 3. 代码抛出 `ArrayIndexOutOfBoundsException`。
 4. 代码抛出 `NullPointerException`。
 
-37. 哪一行是防止此代码无错误地编译并运行？
+### 37. 哪一行是防止此代码无错误地编译并运行？
 
 ```java
 char[][] ticTacToe = new char[3][3];                 // r1
@@ -2981,7 +3812,7 @@ System.out.println(ticTacToe.length + " in a row!"); // r3
 3. 行 r3
 4. 以上均不是
 
-38. 当作为 `java Count 1 2` 执行时，以下代码输出是什么？
+### 38. 当作为 `java Count 1 2` 执行时，以下代码输出是什么？
 
 ```java
 public class Count {
@@ -2996,7 +3827,7 @@ public class Count {
 3. 2
 4. 代码无法编译。
 
-39. 数组引用 `moreBools` 允许多少维？
+### 39. 数组引用 `moreBools` 允许多少维？
 
 ```java
 boolean[][] bools[], moreBools;
@@ -3007,7 +3838,7 @@ boolean[][] bools[], moreBools;
 3. 三维
 4. 以上均不是
 
-40. 当作为 `java counting.Binary` 调用时，结果是什么？
+### 40. 当作为 `java counting.Binary` 调用时，结果是什么？
 
 ```java
 package counting;
@@ -3021,12 +3852,12 @@ public class Binary {
 }
 ```
 
-1. null
-2. []
+1. `null`
+2. `[]`
 3. 代码无法编译。
 4. 代码可以编译但在运行时抛出异常。
 
-41. 下述代码输出什么？
+### 41. 下述代码输出什么？
 
 ```java
 String[] os = new String[] { "Mac", "Linux", "Windows" };
@@ -3038,7 +3869,7 @@ System.out.println(Arrays.binarySearch(os, "Linux"));
 3. 2
 4. 输出未定义。
 
-42. 运行以下程序的结果是什么？
+### 42. 运行以下程序的结果是什么？
 
 ```java
 1:   package fun;
@@ -3058,7 +3889,7 @@ System.out.println(Arrays.binarySearch(os, "Linux"));
 2. 代码无法编译。
 3. 代码可以编译但在运行时抛出异常。
 
-43. 下述代码输出什么？
+### 43. 下述代码输出什么？
 
 ```java
 String[][] listing = new String[][] { "Book" }, "Game" };
@@ -3068,7 +3899,7 @@ System.out.println(listing.length + " " + listing[0].length);
 1. 21
 2. 2
 
-48. 哪些陈述是正确的？
+### 48. 哪些陈述是正确的？
 
 *   你总是可以在不引起调用代码错误的情况下，将方法签名从 `String[] arg` 改为 `String... arg`。
 *   你总是可以在不引起现有代码错误的情况下，将方法签名从 `String... arg` 改为 `String[] arg`。
@@ -3078,16 +3909,12 @@ System.out.println(listing.length + " " + listing[0].length);
 3. I 和 II
 4. I 和 II 都不是
 
-49. 这四个数组引用中哪一个可以指向一个与其他不同的数组？
+### 49. 这四个数组引用中哪一个可以指向一个与其他不同的数组？
 
 1. `int[][][] nums1a, nums1b;`
 2. `int[][][] nums2a[], nums2b;`
 3. `int[][] nums3a[][], nums3b[][];`
 4. `int[] nums4a[][][], numbs4b[][][];`
-
-
-
-
 
 ### 4. 下列哪项可以遍历数组而不通过索引引用元素？
 
@@ -3185,8 +4012,12 @@ public static void main(String[] args) {
 
 1. glass,end
 2. glass,plastic,end
-3. 代码无法编译。
-4. 以上均非
+
+
+
+### 3. 代码无法编译。
+
+### 4. 以上均非
 
 ### 14. 下列代码的输出是什么？
 
@@ -3197,9 +4028,12 @@ while (letters.length() != 2)
 System.out.println(letters);
 ```
 
-1. aa
-2. aaa
+1. `aa`
+
+2. `aaa`
+
 3. 循环完成无输出。
+
 4. 这是一个无限循环。
 
 ### 15. 运行 `java peregrine.TimeLoop September 3 1940` 时，结果是什么？
@@ -3214,9 +4048,12 @@ public class TimeLoop {
 }
 ```
 
-1. args
-2. argsargs
+1. `args`
+
+2. `argsargs`
+
 3. 代码无法编译。
+
 4. 以上均非
 
 ### 16. 下列代码的输出是什么？
@@ -3238,9 +4075,12 @@ public class Loop {
 }
 ```
 
-1. 1
-2. 2
-3. 4
+1. `1`
+
+2. `2`
+
+3. `4`
+
 4. 代码无法编译。
 
 ### 17. 下列代码的结果是什么？
@@ -3256,9 +4096,12 @@ do {
 System.out.println(count);
 ```
 
-1. 2
-2. 3
+1. `2`
+
+2. `3`
+
 3. 代码无法编译。
+
 4. 这是一个无限循环。
 
 ### 18. `for` 循环的以下哪些部分可以留空？
@@ -3268,14 +4111,19 @@ for (segmentA; segmentB; segmentC) {
 ```
 
 1. `segmentA`
+
 2. `segmentB`
+
 3. `segmentC`
+
 4. 全部
 
-### 19. 哪种循环类型（while, 传统的 for, 增强 for）允许你编写创建无限循环的代码？
+### 19. 哪种循环类型（`while`, 传统的 `for`, 增强 `for`）允许你编写创建无限循环的代码？
 
 1. 一个
+
 2. 两个
+
 3. 三
 
 ### 20. 下列代码的输出是什么？
@@ -3286,9 +4134,12 @@ for (int container = 0; container < drinks.size(); container++)
   System.out.print(drinks.get(container) + ",");
 ```
 
-1. can,cup,
-2. cup,can,
+1. `can,cup,`
+
+2. `cup,can,`
+
 3. 代码无法编译。
+
 4. 以上均非
 
 ### 21. 运行以下代码会发生什么？
@@ -3300,8 +4151,11 @@ do {
 ```
 
 1. 无输出并完成。
+
 2. 输出一次。
+
 3. 持续输出。
+
 4. 代码无法编译。
 
 ### 22. 下列哪项与此代码等效？
@@ -3312,10 +4166,12 @@ for (int i=0; i<arr.length; i++)
 ```
 
 1. `for (String f : arr)`
+
 2. `while (i < arr.length)`
+
 3. 无
 
-### 23. 在 println 之后可以插入多少这些陈述，使代码符合流程图？
+### 23. 在 `println` 之后可以插入多少这些陈述，使代码符合流程图？
 
 ```java
 do {
@@ -3324,11 +4180,14 @@ do {
 ```
 
 1. 无
+
 2. 一个
+
 3. 两个
+
 4. 三
 
-### 24. 使用上一个问题，在 println 之后可以插入多少这些语句，使代码符合流程图？
+### 24. 使用上一个问题，在 `println` 之后可以插入多少这些语句，使代码符合流程图？
 
 ```java
 for (int i=0; i<10; i++) {
@@ -3337,8 +4196,11 @@ for (int i=0; i<10; i++) {
 ```
 
 1. 无
+
 2. 一个
+
 3. 两个
+
 4. 三
 
 ### 25. 下列代码的输出是什么？
@@ -3348,9 +4210,12 @@ int singer = 0;
 while (singer)
 ```
 
-1. 0
+1. `0`
+
 2. 代码无法编译。
+
 3. 循环完成无输出。
+
 4. 这是一个无限循环。
 
 ### 26. 为了使代码编译，下列哪些类型是不允许的？
@@ -3361,8 +4226,11 @@ for (Object obj : taxis) {
 ```
 
 1. `ArrayList<Integer>`
+
 2. `int[]`
+
 3. `StringBuilder`
+
 4. 以上都是允许的。
 
 ### 27. 下列代码的输出是什么？
@@ -3378,9 +4246,12 @@ do {
 System.out.println("done");
 ```
 
-1. done
-2. inflate-done
+1. `done`
+
+2. `inflate-done`
+
 3. 代码无法编译。
+
 4. 这是一个无限循环。
 
 ### 28. 下列代码的输出是什么？
@@ -3392,23 +4263,25 @@ while (letters.length() != 3)
 System.out.println(letters);
 ```
 
-1. ab
-2. abab
+1. `ab`
+
+2. `abab`
+
 3. 循环完成无输出。
+
 4. 这是一个无限循环。
 
-### 29. 哪项描述了 for 循环中三个表达式的出现顺序？
+### 29. 哪项描述了 `for` 循环中三个表达式的出现顺序？
 
 1. 布尔条件、初始化表达式、更新语句
+
 2. 初始化表达式、布尔条件、更新语句
+
 3. 初始化表达式、更新语句、布尔条件
+
 4. 以上均非
 
 ### 30. 下列代码的结果是什么？
-
-
-
-
 
 ```java
 int count = 10;
@@ -3419,9 +4292,13 @@ do {
 } while (count > 0);
 System.out.println(chars.size());
 ```
-1. 3
-2. 4
+
+1. `3`
+
+2. `4`
+
 3. 代码无法编译。
+
 4. 以上均不是
 
 ### 31. 下列代码的结果是什么？
@@ -3434,12 +4311,16 @@ for (int i = 10; i > 0; i--) {
 }
 System.out.println(k);
 ```
-1. 1
-2. 2
-3. 3
-4. 4
 
-### 32. 给定一个 String 对象数组，以下哪一项与此代码段等价？
+1. `1`
+
+2. `2`
+
+3. `3`
+
+4. `4`
+
+### 32. 给定一个 `String` 对象数组，以下哪一项与此代码段等价？
 
 ```java
 for (int i=fun.length-1; i>=0; i--)
@@ -3447,8 +4328,11 @@ for (int i=fun.length-1; i>=0; i--)
 ```
 
 1. `for (String f = fun) System.out.println(f);`
+
 2. `for (String f : fun) System.out.println(f);`
+
 3. `for (String f fun) System.out.println(it);`
+
 4. 以上均不是
 
 ### 33. 下列代码的输出是什么？
@@ -3462,9 +4346,13 @@ public static void main(String[] args) {
    System.out.print("end");
 }
 ```
-1. glass,end
-2. glass,plastic,end
+
+1. `glass,end`
+
+2. `glass,plastic,end`
+
 3. 代码无法编译。
+
 4. 以上均不是
 
 ### 34. 下列代码的结果是什么？
@@ -3478,9 +4366,13 @@ for (int i = 0, j = 0; i < nycTourLoops.length
    System.out.print(nycTourLoops[i] + " " + times[j] + "-");
 }
 ```
-1. Downtown Day-
-2. Downtown Day-Uptown Night-
+
+1. `Downtown Day-`
+
+2. `Downtown Day-Uptown Night-`
+
 3. 代码无法编译。
+
 4. 代码可以编译但在运行时抛出异常。
 
 ### 35. 运行 `java peregrine.TimeLoop September 3 1940` 时，结果的结果是什么？
@@ -3494,9 +4386,13 @@ public class TimeLoop {
   }
 }
 ```
-1. September
-2. 1940
+
+1. `September`
+
+2. `1940`
+
 3. 代码无法编译。
+
 4. 以上均不是
 
 ### 36. 下列代码的输出是什么？
@@ -3511,12 +4407,16 @@ public class Shoelaces {
   }
 }
 ```
-1. null
-2. shoelace
-3. shoelaceshoelace
+
+1. `null`
+
+2. `shoelace`
+
+3. `shoelaceshoelace`
+
 4. 以上均不是
 
-### 37. 下列代码输出单个字母 x。如果你删除第 25 行和第 28 行会发生什么？
+### 37. 下列代码输出单个字母 `x`。如果你删除第 25 行和第 28 行会发生什么？
 
 ```java
 23:  String race = "";
@@ -3527,9 +4427,13 @@ public class Shoelaces {
 28:  } while (true);
 29:  System.out.println(race);
 ```
+
 1. 它打印一个空字符串。
-2. 它仍然输出单个字母 x。
+
+2. 它仍然输出单个字母 `x`。
+
 3. 代码不再编译。
+
 4. 它变成一个死循环。
 
 ### 38. 下列代码的输出是什么？
@@ -3550,9 +4454,13 @@ public class Loop {
    }
 }
 ```
-1. 1
-2. 2
-3. 4
+
+1. `1`
+
+2. `2`
+
+3. `4`
+
 4. 代码无法编译。
 
 ### 39. 下列代码的输出是什么？
@@ -3565,9 +4473,13 @@ do {
 } while (builder);
 System.out.println(builder);
 ```
-1. Leaves growing
+
+1. `Leaves growing`
+
 2. 这是一个死循环。
+
 3. 代码无法编译。
+
 4. 代码可以编译但在运行时抛出异常。
 
 ### 40. 下列代码的结果是什么？
@@ -3582,9 +4494,13 @@ System.out.println(builder);
 12:  } while (true);
 13:  System.out.println(count);
 ```
-1. 2
-2. 3
+
+1. `2`
+
+2. `3`
+
 3. 代码无法编译。
+
 4. 这是一个死循环。
 
 ### 41. 填入空白使此代码编译且不是死循环。
@@ -3594,9 +4510,13 @@ t: while (true) {
    f:
 }
 ```
-1. break;
-2. break f;
-3. break t;
+
+1. `break;`
+
+2. `break f;`
+
+3. `break t;`
+
 4. 以上不是
 
 ### 42. 下列代码的结果是什么？
@@ -3610,9 +4530,13 @@ for (int i = 0, j = 0; i < nycTourLoops.length
    System.out.print(nycTourLoops[i] + " " + times[j] + "-");
 }
 ```
-1. Downtown Day-
-2. Downtown Day-Uptown Night-
+
+1. `Downtown Day-`
+
+2. `Downtown Day-Uptown Night-`
+
 3. 代码无法编译。
+
 4. 代码可以编译但在运行时抛出异常。
 
 ### 43. 下列代码输出多少行？
@@ -3628,20 +4552,27 @@ public class Exams {
    }
 }
 ```
+
 1. 二
+
 2. 四
+
 3. 代码无法编译。
 
-### 44. 如果 beta 始终返回 false，下列哪项最能描述此循环的执行流？
+### 44. 如果 `beta` 始终返回 `false`，下列哪项最能描述此循环的执行流？
 
 ```java
 for (alpha; beta) {
   delta;
 }
 ```
-1. alpha
-2. alpha, beta
-3. alpha, beta, gamma
+
+1. `alpha`
+
+2. `alpha, beta`
+
+3. `alpha, beta, gamma`
+
 4. 以上不是
 
 ### 45. 下列哪项最能描述循环恰好执行一次？
@@ -3651,16 +4582,23 @@ for (alpha; beta) {
   delta;
 }
 ```
-1. alpha, delta, gamma
-2. alpha, beta, delta, gamma
-3. alpha, gamma
-4. alpha
+
+1. `alpha, delta, gamma`
+
+2. `alpha, beta, delta, gamma`
+
+3. `alpha, gamma`
+
+4. `alpha`
 
 ### 46. 下列哪项的循环次数不同？
 
 1. `for (int k=0; k < 5; k++)`
+
 2. `for (int k=1; k <= 5; k++)`
+
 3. `int k=0; do { } while(k++ < 5)`
+
 4. `int k=0; while (k++ < 5) {}`
 
 ### 47. 下列代码的输出是什么？
@@ -3675,9 +4613,13 @@ public class Shoelaces {
   }
 }
 ```
-1. null
-2. shoelace
-3. shoelaceshoelace
+
+1. `null`
+
+2. `shoelace`
+
+3. `shoelaceshoelace`
+
 4. 以上不是
 
 ### 48. 下列代码的输出是什么？
@@ -3693,12 +4635,18 @@ public class Shoelaces {
 19:  }
 20:  System.out.println(result);
 ```
-1. 5
-2. 8
+
+1. `5`
+
+2. `8`
+
 3. 代码无法编译。
+
 4. 代码可以编译但在运行时抛出异常。
 
 ### 49. 下列代码的输出是什么？
+
+
 
 ```java
 boolean baloonInflated = false;
@@ -3710,16 +4658,16 @@ do {
 } while (baloonInflated);
 System.out.println("done");
 ```
-1. done
-2. inflate-done
+
+1. `done`
+
+2. `inflate-done`
+
 3. 代码无法编译。
+
 4. 这是一个死循环。
 
 ### 50. 下列哪项可以填入空白处使代码成功编译？
-
-
-
-
 
 ```java
 package nyc;
@@ -3734,8 +4682,11 @@ public class TouristBus {
 ```
 
 1. `int i=0; j=0;`
+
 2. `int i=0, j=0;`
+
 3. `int i=0; int j=0;`
+
 4. `int i=0, int j=0;`
 
 # 第 6 章
@@ -3747,29 +4698,40 @@ public class TouristBus {
 * ![](img/correction.jpg) **方法的使用与封装**
 
     *   创建带参数和返回值的方法；包括重载方法
+
     *   在方法和字段上应用 `static` 关键字
+
     *   创建和重载构造函数；区分默认构造函数和用户定义的构造函数
+
     *   应用访问修饰符
+
     *   对类应用封装原则
+
     *   确定当值被传递到改变值的方法时，对对象引用和原始值产生的影响
 
 1. 填空：`____________` 访问修饰符允许访问 `____________` 访问修饰符可以的所有内容以及更多。
 
     1. `package-private`, `protected`
+
     2. `protected`, `public`
+
     3. `protected`, `package-private`
+
     4. `private`, `package-private`
 
 2. 在同一类中从一个构造函数调用另一个构造函数的命令是什么？
 
     1. `super()`
+
     2. `this()`
+
     3. `that()`
+
     4. `construct()`
 
 3. 下述程序的输出是什么？
 
-```
+```java
 package stocks;
 public class Bond {
    private static int price = 5;
@@ -3791,13 +4753,16 @@ public class Bond {
 ```
 
     1. `5`
+
     2. `6`
+
     3. `8`
+
     4. 代码无法编译。
 
 4. 关于以下程序，哪个说法是？
 
-```
+```java
 package figures;
 public class Dolls {
    public void nested() { nested(2,true); } // g1
@@ -3811,29 +4776,41 @@ public class Dolls {
 ```
 
     1. 编译成功，并在运行时打印 3。
+
     2. 因为行 `g1` 无法编译。
+
     3. 因为行 `g2` 无法编译。
+
     4. 因为其他原因无法编译。
 
 5. 填空：Java 使用 `___________` 将数据发送到方法中
 
     1. `pass-by-null`
+
     2. `pass-by-value`
+
     3. `both pass-by-value and pass-by-reference` 
+
     4. `pass-by-reference`
 
 6. 下列哪项是有效的 JavaBean 方法签名？
 
     1. `public void getArrow()`
+
     2. `public void setBow()`
+
     3. `public void setRange(int range)`
+
     4. `public String addTarget(String target)`
 
 7. 关于在构造函数中调用 `this()`，以下哪个说法是不正确的？
 
     1. 如果使用了 `this()`，它必须是构造函数的第一行。
+
     2. 如果在同一个构造函数中同时使用了 `super()` 和 `this()`，则 `super()` 必须紧跟在 `this()` 之后。
+
     3. 如果为 `this()` 提供参数，则类中必须有一个接收这些参数的构造函数。
+
     4. 如果调用了无参数的 `this()`，则该类必须显式实现无参数构造函数。
 
 8. 下列哪项可以填空以使类编译？
@@ -3846,20 +4823,26 @@ public class Robot {
 ```
 
     1. `Public int`
+
     2. `Long`
+
     3. `void`
+
     4. `private String`
 
 9. 填空：`____________` 变量对类的所有实例都始终可用。
 
     1. `public`
+
     2. `local`
+
     3. `static`
+
     4. `instance`
 
 10. 在行 `p1` 处插入哪行代码会导致程序打印 5？
 
-```
+```java
 package games;
 public class Jump {
    private int rope = 1;
@@ -3878,15 +4861,21 @@ public class Jump {
 ```
 
     1. `this(4);`
+
     2. `new Jump(4);`
+
     3. `this(5);`
+
     4. `rope = 5;`
 
 11. 下列哪个说法是不正确的？
 
     1. 如果属性是公开的，则实例可以访问另一个类的属性。
+
     2. 只要父类在同一个包内，实例就可以访问包级属性。
+
     3. 同一类的实例可以访问彼此的私有属性。
+
     4. 如果标记为保护，则实例可以访问另一个类的属性。
 
 12. 对于以下类，两个空白处应填入什么以确保类被正确封装？
@@ -3906,26 +4895,34 @@ public class Box {
 ```
 
     1. `public get`
+
     2. `private is`
+
     3. `public set`
 
 13. 关于无参数构造函数，哪个说法是正确的？
 
     1. 如果你不定义，Java 编译器会自动插入无参数构造函数。
+
     2. 为了让类在构造函数中调用 `super()`，其父类必须显式实现无参数构造函数。
+
     3. 如果父类只有一个接收参数的构造函数，则子类必须显式声明至少一个构造函数。
+
     4. 一个类可以包含多个无参数构造函数。
 
 14. 下列哪种方法签名包含编译错误？
 
     1. `public void sing(String key, String... harmonies)`
+
     2. `public void sing(int note, String... sound, int music)`
+
     3. `public void sing(String... keys, String... pitches)`
+
     4. `public void sing(String... notes, String melodies)`
 
 15. 针对以下程序，在调用 `slalom()` 方法后，哪个图表最能表示 `main()` 方法中 `mySkier`、`mySpeed` 和 `myName` 变量的状态？
 
-```
+```java
 package slopes;
 public class Ski {
    private int age = 18;
@@ -3947,46 +4944,52 @@ public class Ski {
 ```
 
     1. ![Chart shows variables like mySkier, myName, and mySpeed, where mySkier is connected to null, myName is connected to “Rosie”, and mySpeed is connected to int[] block numbered as 18.](images/c06uf001.jpg)
+
     2. ![Chart shows variables like mySkier, myName, and mySpeed, where mySkier is connected to ski age: 18, myName is connected to “Wendy”, and mySpeed is connected to int[] block numbered as 11.](images/c06uf002.jpg)
 
+    3. ![图表显示了如 mySkier、myName 和 mySpeed 等变量，其中 mySkier 连接到滑雪年龄: 18，myName 连接到“Rosie”，而 mySpeed 连接到编号为 ʘ 的 int[] 块。](images/c06uf003.jpg)
 
+    4. ![图表显示了如 mySkier、myName 和 mySpeed 等变量，其中 mySkier 连接到滑雪年龄: 16，myName 连接到“Wendy”，而 mySpeed 连接到编号为 ʘ 的 int[] 块。](images/c06uf004.jpg)
 
+### 16. 给定以下类，哪种方法签名可以成功作为 `findAverage()` 方法的重载版本添加到该类中？
 
-
-3. ![图表显示了如 mySkier、myName 和 mySpeed 等变量，其中 mySkier 连接到滑雪年龄: 18，myName 连接到“Rosie”，而 mySpeed 连接到编号为 ʘ 的 int[] 块。](images/c06uf003.jpg)
-
-4. ![图表显示了如 mySkier、myName 和 mySpeed 等变量，其中 mySkier 连接到滑雪年龄: 16，myName 连接到“Wendy”，而 mySpeed 连接到编号为 ʘ 的 int[] 块。](images/c06uf004.jpg)
-
-### 16.  give 定以下类，哪种方法签名可以成功作为 `findAverage()` 方法的重载版本添加到该类中？
-
-```
+```java
 public class Calculations {
   public Integer findAverage(int sum) { return sum; }
 }
 ```
 
 1. `public Long findAverage(int sum)`
+
 2. `public Long findAverage(int sum, int divisor)`
+
 3. `public Integer average(int sum)`
+
 4. `private void findAverage(int sum)`
 
 ### 17. 在设计类时，以下哪项不是使用封装（encapsulation）的原因？
 
 1. 提高其他开发者的易用性。
+
 2. 维护类数据元素的数据完整性。
+
 3. 防止用户修改类的内部属性。
+
 4. 增加并发性并提高性能。
 
 ### 18. 下列哪些数据类型在作为参数传递给方法后可以被修改？
 
 1. `int[]`
+
 2. `String`
+
 3. `long`
+
 4. `boolean`
 
 ### 19. 假设使用该方法的类没有任何静态导入（static imports），在同一包的另一个类中调用以下方法的最佳方式是？
 
-```
+```java
 package useful;
 public class MathHelper {
    public static int roundValue(double d) {
@@ -3996,20 +4999,26 @@ public class MathHelper {
 ```
 
 1. `MathHelper:roundValue(5.92)`
+
 2. `MathHelper.roundValue(3.1)`
+
 3. `roundValue(4.1)`
+
 4. `useful.MathHelper.roundValue(65.3)`
 
 ### 20. 给定具有以下返回类型之一的方法，哪种数据类型防止在方法内部使用 return 语句？
 
 1. `byte`
+
 2. `String`
+
 3. `void`
+
 4. 以上均不是
 
 ### 21. 为了使此应用程序编译，需要移除多少个 `final` 修饰符？
 
-```
+```java
 package end;
 public final class Games {
    public final static int finish(final int score) {
@@ -4024,31 +5033,40 @@ public final class Games {
 ```
 
 1. 无
-2. 一个
-3. 两个
-4. 无论移除多少个 final 修饰符，代码都无法编译。
 
-### 22. 空空：____________ 用于调用父类中的构造函数，而 ____________ 用于引用父类的成员。
+2. 一个
+
+3. 两个
+
+4. 无论移除多少个 `final` 修饰符，代码都无法编译。
+
+### 22. 填空：`____________` 用于调用父类中的构造函数，而 `____________` 用于引用父类的成员。
 
 1. `super` 和 `this()`
+
 2. `super` 和 `super()`
+
 3. `super()` 和 `this`
+
 4. `super()` 和 `super`
 
 ### 23. 给定以下方法签名，哪些类可以调用它？
 
-```
+```java
 void run(String government)
 ```
 
 1. 其他包中的类
+
 2. 同一个包中的类
+
 3. 不同包中的子类
+
 4. 所有类
 
 ### 24. 关于以下类的哪些陈述有助于妥善封装类中的数据？
 
-```
+```java
 package shield;
 public class Protect {
    private String material;
@@ -4064,24 +5082,32 @@ public class Protect {
 ```
 
 * I. 将 `strength` 的访问修饰符改为 `private`。
+
 * II. 为 `material` 添加一个 getter 方法。
+
 * III. 为 `material` 添加一个 setter 方法。
 
 1. I
+
 2. II 和 III
+
 3. I, II, 和 III
+
 4. 无，类中的数据已经封装好了。
 
 ### 25. 下列哪项是 Java 中合法的方法名？
 
 1. `Go_$Outside$2()`
+
 2. `have-Fun()`
+
 3. `new()`
+
 4. `9enjoyTheWeather()`
 
 ### 26. 在下方代码行中插入哪行代码可以使该类通过编译？
 
-```
+```java
 package farm;
 public class Coop {
    public final int static getNumberOfChickens() {
@@ -4090,21 +5116,29 @@ public class Coop {
 }
 ```
 
+
+
 1. `return 3.0;`
+
 2. `return 5L;`
+
 3. `return 10;`
+
 4. 以上均不是
 
 ### 27. 关于向方法传递数据，以下哪项陈述是正确的？
 
 1. 对传递给方法的原始类型值进行的更改会反映在调用方法中。
+
 2. 对传递给方法的对象内部的数据进行的更改会反映在调用方法中。
+
 3. 重新分配传递给方法的引用会反映在调用方法中。
+
 4. 对传递给方法的布尔值进行的更改会反映在调用方法中。
 
 ### 28. 下一应用程序可能的输出是什么？
 
-```
+```java
 package wrap;
 public class Gift {
    private final Object contents;
@@ -4126,20 +5160,26 @@ public class Gift {
 ```
 
 1. `Your gift: wrap.Gift@29ca2745`
+
 2. `Your gift: Your gift:`
+
 3. 无法编译。
+
 4. 可以编译但在运行时抛出异常。
 
 ### 29. 下列哪项是合法的 JavaBean 方法前缀？
 
 1. `is`
+
 2. `gimme`
+
 3. `request`
+
 4. `put`
 
 ### 30. 给定以下两个位于不同包的类，在下方插入哪行代码可以允许第二个类通过编译？
 
-```
+```java
 package clothes;
 public class Store {
    public static getClothes() { return "dress"; }
@@ -4155,20 +5195,26 @@ public class Closet {
 ```
 
 1. `static import clothes.getClothes;`
+
 2. `import clothes.*;`
+
 3. `import static clothes.getClothes;`
+
 4. `import static clothes;`
 
 ### 31. 使用哪种访问修饰符标记包私有（package-private）成员？
 
 1. `private`
+
 2. `default`
+
 3. `protected`
+
 4. 以上均不是
 
 ### 32. 下面程序中有行包含编译错误？
 
-```
+```java
 package sky;
 public class Stars {
    private int inThe = 4;
@@ -4185,20 +5231,26 @@ public class Stars {
 ```
 
 1. 无
+
 2. 一个
+
 3. 两个
+
 4. 三
 
 ### 33. 下列哪项陈述是正确的？
 
 1. 实例方法允许引用静态变量。
+
 2. 静态方法允许引用实例变量。
+
 3. 静态初始化块允许引用实例变量。
-4. final 静态变量可以在构造函数中设置。
+
+4. `final` 静态变量可以在构造函数中设置。
 
 ### 34. 给定以下方法声明，插入哪行可以使代码通过编译？
 
-```
+```java
 public short calculateDistance(double lat1, double lon1,
       double lat2, double lon2) {
    // 在此处插入代码
@@ -4206,24 +5258,28 @@ public short calculateDistance(double lat1, double lon1,
 ```
 
 1. `return new Integer(3);`
+
 2. `return new Byte((byte)6);`
+
 3. `return 5L;`
+
 4. `return new Short(4).longValue();`
 
 ### 35. 关于重载方法，以下哪些陈述是正确的？
 
 * 重载方法具有相同的名称。
+
 * 重载方法具有相同的返回类型。
+
 * 重载方法具有不同的参数列表。
 
 1. I
+
 2. I 和 II
+
 3. I 和 III
+
 4. I, II, 和 III
-
-
-
-
 
 ### 36. 为了使以下类能够编译，需要删除多少行代码？
 
@@ -4238,8 +5294,11 @@ public class Week {
 ```
 
 1. 一行
+
 2. 两行
+
 3. 三行
+
 4. 无论删除多少行代码，该代码都无法编译。
 
 ### 37. 下一个应用程序的输出是什么？
@@ -4258,16 +5317,22 @@ public class Puppy {
 ```
 
 1. 2
+
 2. 因为第 `q1` 行的原因，无法编译。
+
 3. 因为第 `q2` 行的原因，无法编译。
+
 4. 因为第 `q3` 行的原因，无法编译。
 
 ### 38. 填空：______________ 访问修饰符允许访问 ____________ 访问修饰符访问的所有以及更多。
 
-1. public, private
-2. private, package-private（包私有）
-3. package-private, protected
-4. private, public
+1. `public`, `private`
+
+2. `private`, 包私有（package-private）
+
+3. 包私有（package-private）, `protected`
+
+4. `private`, `public`
 
 ### 39. 下一个应用程序的输出是什么？
 
@@ -4290,8 +5355,11 @@ public class Phone {
 ```
 
 1. 3
+
 2. 4
+
 3. 7
+
 4. 代码无法编译。
 
 ### 40. 给定类，在下方插入哪行代码会阻止该类编译？
@@ -4306,8 +5374,11 @@ public class Drink {
 ```
 
 1. `water();`
+
 2. `this.Drink.water();`
+
 3. `this.water();`
+
 4. `Drink.water();`
 
 ### 41. 给定以下方法声明签名，以下哪项是对该方法的有效调用？
@@ -4317,25 +5388,34 @@ public void call(int count, String me, String... data)
 ```
 
 1. `call(9,"me",10,"Al")`
+
 2. `call(5)`
+
 3. `call(2,"home","sweet")`
+
 4. `call("answering","service")`
 
 ### 42. 关于静态变量（static variable）的哪个陈述是正确的？
 
 1. 静态变量的值必须在声明时或静态初始化块中设置。
-2. 不可以在定义它的类之外读取静态 final 变量。
+
+2. 不可以在定义它的类之外读取静态 `final` 变量。
+
 3. 不可以使用静态导入（static imports）引用静态方法。
-4. 静态变量在类的所有实例中始终可。。
+
+4. 静态变量在类的所有实例中始终可。
 
 ### 43. 下列哪项不是正确的陈述？
 
 1. 每个构造函数的第一行都是通过 `super()` 命令对父类构造函数的调用。
-2. 类不一定显式定义构造函数。
-3. 构造函数可以向父类构造函数传递参数。
-4. final 实例变量如果在声明时或初始化块中未设置值，则应由构造函数设置。
 
-### 44. 为了使此应用程序编译，需要删除多少个 final 修饰符？
+2. 类不一定显式定义构造函数。
+
+3. 构造函数可以向父类构造函数传递参数。
+
+4. `final` 实例变量如果在声明时或初始化块中未设置值，则应由构造函数设置。
+
+### 44. 为了使此应用程序编译，需要删除多少个 `final` 修饰符？
 
 ```java
 package park;
@@ -4355,11 +5435,14 @@ numberOf  =0;
 ```
 
 1. 无
+
 2. 一个
+
 3. 两个
+
 4. 
 
-45..以下代码的输出 5？
+45. 以下代码的输出 5？
 
 ```java
 package jungle;
@@ -4383,8 +5466,11 @@ public class Rain extends extends Forest {
 ```
 
 1. 5
+
 2. 6
+
 3. 8
+
 4. 代码无法编译。
 
 46. 下一个应用程序的输出是什么？
@@ -4403,8 +5489,11 @@ public class Chooseely {
 ```
 
 1. 5
+
 2. 2
+
 3. 11
+
 4. 代码无法编译。
 
 47. 下一个应用程序的输出是什么？
@@ -4425,16 +5514,22 @@ public class Football {
 48. 下列哪项是有效的 Java 方法名？
 
 1. `$print()`
+
 2. `jog13()`
+
 3. `walk()`
+
 4. `%run()`
 
-49. 假设类 Bouncer 有一个保护变量。哪些类可以访问该变量？
+49. 假设类 `Bouncer` 有一个保护变量。哪些类可以访问该变量？
 
-1. 仅 Bouncer 的子类
-2. Bouncer 的任何子类或同包类
-3. 与 Bouncer 同包的类
-4. Bouncer 的任何父类
+1. 仅 `Bouncer` 的子类
+
+2. `Bouncer` 的任何子类或同包类
+
+3. 与 `Bouncer` 同包的类
+
+4. `Bouncer` 的任何父类
 
 50. 给定以下两个类，下方插入哪行代码允许第二个类编译？
 
@@ -4456,8 +5551,11 @@ public class Teller {
 ```
 
 1. `import static Bank.*;`
+
 2. `static import Bank.*;`
+
 3. `import static Bank;`
+
 4. 以上均不是
 
 # 第 7 章 处理继承
@@ -4465,9 +5563,13 @@ public class Teller {
 OCA 考试在本次练习测试中涵盖的主题包括：
 
 * 描述继承及其益处
+
 * 开发利用多态的代码；开发重写的方法；区分引用的类型和对象的类型
+
 * 确定何时需要强制转换
+
 * 使用 `super` 和 `this` 访问对象和构造函数
+
 * 使用抽象类和接口
 
 1. 下一个中有中有行包含编译错误？
@@ -4487,22 +5589,24 @@ public class Movie extends Cinema {
 ```
 
 1. 无
+
 2. 一行
+
 3. 两行
+
 4. 三行
 
 2. 哪个修饰符可以应用于抽象接口方法？
 
-1. protected
-2. static
-3. final
-4. public
+1. `protected`
+
+2. `static`
+
+3. `final`
+
+4. `public`
 
 3. 下一个应用程序的输出是什么？
-
-
-
-
 
 ```java
 package radio;
@@ -4520,15 +5624,21 @@ public class Song {
 ```
 
 1. Play!
+
 2. Music!
+
 3. 代码无法编译。
+
 4. 代码可以编译，但在运行时无法确定答案。
 
 4. 关于继承，下列哪个陈述是正确的？
 
 1. 继承允许对象访问常用的属性和方法。
+
 2. 继承总是会导致代码更简单。
+
 3. 所有基本数据类型和对象都继承了一组方法。
+
 4. 继承允许你编写引用自身的方法。
 
 5. 给定下方的类声明，哪个值不能插入到空白行中以使代码能够编译？
@@ -4543,16 +5653,22 @@ public class Canine implements Pet {
 }
 ```
 
-1. Class
-2. Pet
-3. Canine
-4. Object
+1. `Class`
+
+2. `Pet`
+
+3. `Canine`
+
+4. `Object`
 
 6. 假设你正在与另一个团队合作构建应用程序。你正在编写代码使用一个另一个团队尚未完成编写的类。Java 的哪个元素最有助于这种开发，以便在另一个团队的代码完成后能够轻松集成？
 
 1. 抽象类
+
 2. 接口
+
 3. 静态方法
+
 4. 访问修饰符
 
 7. 下一个程序的输出是什么？
@@ -4575,18 +5691,26 @@ public class ElectricCar extends Car {
 ```
 
 1. Driving vehicle
+
 2. Driving electric car
+
 3. Driving car
+
 4. 代码无法编译。
 
 8. 关于继承，下列哪个陈述是正确的？
 
 1. Java 不支持多继承。
-2. Java 允许使用抽象类进行多继承。
-2. Java 允许使用非抽象类进行多继承。
-4. Java 允许使用接口进行多继承。
 
-9. 为了正确重写 `watch()` 方法，对下方的类需要进行多少修改？
+
+
+## 2. Java 允许使用抽象类进行多继承。
+
+## 2. Java 允许使用非抽象类进行多继承。
+
+## 4. Java 允许使用接口进行多继承。
+
+## 9. 为了正确重写 `watch()` 方法，对下方的类需要进行多少修改？
 
 ```java
 package entertainment;
@@ -4603,14 +5727,14 @@ public class LCD extends Television {
 3. 三
 4. 无；代码目前可以编译。
 
-10. 关于重写方法，下列哪个陈述是错误的？
+## 10. 关于重写方法，下列哪个陈述是错误的？
 
 1. 返回类型必须是协变的。
 2. 子类中方法的访问修饰符必须与父类中的方法相同或更宽。
 3. 父类方法中抛出的受检异常必须由子类方法也抛出。
 4. 子类方法中抛出的受检异常必须与父类方法中抛出的异常相同或更窄。
 
-11. 下一个程序的输出是什么？
+## 11. 下一个程序的输出是什么？
 
 ```java
 package machines;
@@ -4630,7 +5754,7 @@ public class Laptop extends Computer {
 3. 代码无法编译。
 4. 代码可以编译，但在运行时抛出异常。
 
-12. 假设 `FileNotFoundException` 是 `IOException` 的子类，那么下列程序的输出是什么？
+## 12. 假设 `FileNotFoundException` 是 `IOException` 的子类，那么下列程序的输出是什么？
 
 ```java
 package edu;
@@ -4656,14 +5780,14 @@ public class HighSchool extends School {
 3. 9
 4. 代码无法编译。
 
-13. 哪个修饰符可以应用于接口方法？
+## 13. 哪个修饰符可以应用于接口方法？
 
-1. protected
-2. static
-3. private
-4. final
+1. `protected`
+2. `static`
+3. `private`
+4. `final`
 
-14. 下一个程序的输出是什么？
+## 14. 下一个程序的输出是什么？
 
 ```java
 package track;
@@ -4693,14 +5817,14 @@ public class Sprint implements Run, Jog {
 3. Sprinting!
 4. 代码无法编译。
 
-15. 关于接口，下列哪个陈述是不正确的？
+## 15. 关于接口，下列哪个陈述是不正确的？
 
 1. 接口可以扩展另一个接口。
 2. 接口可以实现另一个接口。
 3. 类可以实现两个接口。
 4. 类可以扩展另一个类。
 
-16. 下一个程序的输出是什么？
+## 16. 下一个程序的输出是什么？
 
 ```java
 package transport;
@@ -4729,14 +5853,14 @@ public class Rocket extends Ship {
 3. 3,5
 4. 代码无法编译。
 
-17. 空：排除默认和静态方法，a(n) 可以包含抽象方法和具体方法，而 a(n) 只包含抽象方法。
+## 17. 空：排除默认和静态方法，a(n) 可以包含抽象方法和具体方法，而 a(n) 只包含抽象方法。
 
 1. 具体类、抽象类
 2. 具体类、接口
 3. 接口、抽象类
 4. 抽象类、接口
 
-18. 关于下列类，哪个陈述是正确的？
+## 18. 关于下列类，哪个陈述是正确的？
 
 ```java
 package shapes;
@@ -4761,11 +5885,7 @@ public abstract class IsoscelesRightTriangle extends RightTriangle { // g2
 3. 代码在 g3 处无法编译。
 4. 代码编译并运行没有问题。
 
-19. 既然 `Short` 和 `Integer` 都是 `Number` 的子类，什么类型可以填充下方类中的空白以使代码能够编译？
-
-
-
-
+## 19. 既然 `Short` 和 `Integer` 都是 `Number` 的子类，什么类型可以填充下方类中的空白以使代码能够编译？
 
 ```java
 package band;
@@ -4784,14 +5904,14 @@ public final class Saxophone extends Woodwind implements Horn {
 3. `Number`
 4. `None of the above`
 
-20. 填空：类 ____________ 一个接口，而类 ____________ 一个抽象类。
+## 20. 填空：类 ____________ 一个接口，而类 ____________ 一个抽象类。
 
 1. `extends, implements`
 2. `extends, extends`
 3. `implements, extends`
 4. `implements, implements`
 
-21. 下面程序的输出结果是什么？
+## 21. 下面程序的输出结果是什么？
 
 ```java
 package paper;
@@ -4816,7 +5936,7 @@ public class Encyclopedia extends Book {
 3. `代码无法编译。`
 4. `代码可以编译但在运行时抛出异常。`
 
-22. 下图显示了两个引用变量指向内存中的同一个 Bunny 对象。引用变量 `myBunny` 的类型是 `Bunny`，而 `unknownBunny` 是一个 `unknown data type`。关于这些引用变量的描述中哪哪是不正确的？对于此题，假设图中所示实例方法和变量都已标记为 `public`。
+## 22. 下图显示了两个引用变量指向内存中的同一个 `Bunny` 对象。引用变量 `myBunny` 的类型是 `Bunny`，而 `unknownBunny` 是一个 `unknown data type`。关于这些引用变量的描述中哪哪是不正确的？对于此题，假设图中所示实例方法和变量都已标记为 `public`。
 
 ![Chart shows two separate blocks like myBunny and unknownBunny which is connected to bunny object in memory with block carrot and 12 and codes like hasFurryTail() and eatDinner().](img/c07uf001.jpg)
 
@@ -4825,14 +5945,14 @@ public class Encyclopedia extends Book {
 3. 如果 `unknownBunny` 的数据类型是 `Bunny`，它拥有访问与 `myBunny` 相同的所有方法和变量的权限。
 4. `unknownBunny` 的数据类型可以是接口、类或抽象类。
 
-23. 下面修饰符中可以应用于抽象方法？
+## 23. 下面修饰符中可以应用于抽象方法？
 
 1. `final`
 2. `private`
 3. `default`
 4. `protected`
 
-24. 下面程序的输出结果是什么？
+## 24. 下面程序的输出结果是什么？
 
 ```java
 package space;
@@ -4859,21 +5979,21 @@ public class Mars extends Sphere implements Planet {
 3. `由于 Sphere 的声明，代码无法编译。`
 4. `代码由于其他原因无法编译。`
 
-25. 下面哪个陈述是正确的？
+## 25. 下面哪个陈述是正确的？
 
 1. 类的引用可以在不需要显式强制转换的情况下赋值给子类引用。
 2. 类的引用可以在不需要显式强制转换的情况下赋值给父类引用。
 3. 接口的引用可以在不需要显式强制转换的情况下赋值给实现该接口的类的引用。
 4. 实现接口的类引用只有在显式强制转换的情况下才能赋值给接口引用。
 
-26. 在以下四个修饰符中，选择一个**没有**被隐式应用于所有接口变量的。
+## 26. 在以下四个修饰符中，选择一个**没有**被隐式应用于所有接口变量的。
 
 1. `final`
 2. `abstract`
 3. `static`
 4. `public`
 
-27. 下面程序的输出结果是什么？
+## 27. 下面程序的输出结果是什么？
 
 ```java
 package race;
@@ -4902,14 +6022,14 @@ public class BlueCar extends Car {
 3. `13245`
 4. `代码无法编译。`
 
-28. 填空：重载方法和重写方法始终拥有 ____________ 。
+## 28. 填空：重载方法和重写方法始终拥有 ____________ 。
 
 1. `the same parameter list`
 2. `different return types`
 3. `the same method name`
 4. `covariant return types`
 
-29. 下面程序的输出结果是什么？
+## 29. 下面程序的输出结果是什么？
 
 ```java
 package sports;
@@ -4937,14 +6057,14 @@ public class SoccerBall extends Ball implements Equipment {
 3. `代码由于其他原因无法编译。`
 4. `代码可以编译但产生 ClassException。`
 
-30. 填空：定义与父类同名实例变量的类被称为 ____________ 变量，而定义与父类相同签名方法的类被称为 ____________ 方法。
+## 30. 填空：定义与父类同名实例变量的类被称为 ____________ 变量，而定义与父类相同签名方法的类被称为 ____________ 方法。
 
 1. `hiding, overriding`
 2. `overriding, hiding`
 3. `hiding, hiding`
 4. `replacing, overriding`
 
-31. 关于以下类的哪个陈述是正确的？
+## 31. 关于以下类的哪个陈述是正确的？
 
 ```java
 package shapes;
@@ -4969,7 +6089,9 @@ public final class Square extends Rectangle {
 3. `由于 x3，代码无法编译。`
 4. `代码可以编译并无问题运行。`
 
-32. 下面程序的输出结果是什么？
+## 32. 下面程序的输出结果是什么？
+
+
 
 ```java
 package flying;
@@ -4991,29 +6113,34 @@ public class Helicopter extends Rotorcraft {
 ```
 
 1. `5`
+
 2. `10`
-3. `代码无法编译。`
-4. `代码可以编译但在运行时产生 ClassException。`
+
+3. 代码无法编译。
+
+4. 代码可以编译但在运行时产生 `ClassException`。
 
 33. 填空：类可以自动赋值给 _____________ 引用变量，但在赋值给 _____________ 引用变量时需要显式强制转换。
 
 1. `subclass, outer class`
+
 2. `superclass, subclass`
+
 3. `subclass, superclass`
+
 4. `abstract class, concrete class`
 
 34. 填空：一个(n) ____________ 是要求实现所有继承抽象方法的第一个非抽象子类。
 
 1. `abstract class`
+
 2. `abstraction`
+
 3. `concrete class`
+
 4. `interface`
 
 35. 以下代码包含多少个编译错误？
-
-
-
-
 
 ```java
 package animal;
@@ -5029,15 +6156,21 @@ public class Eagle extends Bird implements CanFly {
 ```
 
 1. 无
+
 2. 一个
+
 3. 两个
+
 4. 三个
 
 36. 下列哪不是抽象类和接口共有的属性？
 
 1. 它们都可以包含静态变量。
-2. 它们都可以包含默认方法（default methods）。
-3. 它们都可以包含静态方法（static methods）。
+
+2. 它们都可以包含默认方法（`default methods`）。
+
+3. 它们都可以包含静态方法（`static methods`）。
+
 4. 它们都可以包含抽象方法。
 
 37. 下一个程序的输出是什么？
@@ -5057,23 +6190,32 @@ public class Performance implements SpeakDialogue, SingMonologue {
 ```
 
 1. 7
+
 2. 5
+
 3. 代码无法编译。
+
 4. 代码编译无误，但在运行时之前无法确定输出。
 
-38. 下列哪项是虚方法（virtual method）？
+38. 下列哪项是虚方法（`virtual method`）？
 
-1. protected 实例方法
+1. `protected` 实例方法
+
 2. 静态方法
-3. private 实例方法
-4. final 实例方法
+
+3. `private` 实例方法
+
+4. `final` 实例方法
 
 39. 填空：接口 ____________ 另一个接口，而类 ____________ 另一个类。
 
-1. implements, extends
-2. extends, extends
-3. implements, implements
-4. extends, implements
+1. `implements, extends`
+
+2. `extends, extends`
+
+3. `implements, implements`
+
+4. `extends, implements`
 
 40. 下一个程序的输出是什么？
 
@@ -5094,79 +6236,105 @@ public class InfiniteMath extends ComplexMath {
 ```
 
 1. 2
+
 2. 4
+
 3. 8
+
 4. 代码无法编译。
 
-41. 给定以下方法，并且已知 `FileNotFoundException` 是 `IOException` 的子类，以下哪个方法签名是子类的有效重写（override）？
+41. 给定以下方法，并且已知 `FileNotFoundException` 是 `IOException` 的子类，以下哪个方法签名是子类的有效重写（`override`）？
 
 ```java
 protected void dance() throws FileNotFoundException {}
 ```
 
-1. void dance() throws IOException
-2. public void dance() throws IOException
-3. private void dance() throws FileNotFoundException
-4. public final void dance()
+1. `void dance() throws IOException`
 
-```
+2. `public void dance() throws IOException`
+
+3. `private void dance() throws FileNotFoundException`
+
+4. `public final void dance()`
 
 42. 给定下面的类定义，在空白处插入哪个值将导致该类无法编译？
 
 ```java
 public class Canine {}
+
 public class Dog extends Canine {}
+
 public class Wolf extends Canine {}
+
 public final class Husky extends Dog {}
+
 public class Zoologist {
+
    Canine animal;
+
    public final void setAnimal(Dog animal) { this.animal = animal; }
+
    public static void main(String[] furryFriends) {
+
       new Zoologist().setAnimal(______________);
+
    }
+
 }
 ```
 
-1. new Husky()
-2. new Dog()
-3. new Wolf()
-4. null
+1. `new Husky()`
+2. `new Dog()`
+3. `new Wolf()`
+4. `null`
 
 43. 下列哪个修饰符不能应用于接口方法？
 
-1. final
-2. default
-3. static
-4. abstract
+1. `final`
+2. `default`
+3. `static`
+4. `abstract`
 
 44. 关于下一个程序的哪一个陈述是正确的？
 
 ```java
 package party;
+
 abstract class House {
+
    protected abstract Object getSpace();
+
 }
+
 abstract class Room extends House {
+
    abstract Object getSpace(Object list);
+
 }
+
 abstract public class Ballroom extends House {
+
    protected abstract Object getSpace();
+
    public static void main(String[] squareFootage) {
+
       System.out.print("Let's start the party!");
+
    }
+
 }
 ```
 
-1. 编译通过并在运行时打印 Let's start the party!
+1. 编译通过并在运行时打印 `Let's start the party!`
 2. 编译失败，有一个原因。
 3. 编译失败有两个原因。
 4. 编译失败有三个原因。
 
 45. 填空：______________ 方法具有不同的参数列表，而 ____________ 方法具有完全相同的返回类型。
 
-1. Overloaded, overridden
-2. Inherited, overridden
-3. Overridden, overloaded
+1. `Overloaded, overridden`
+2. `Inherited, overridden`
+3. `Overridden, overloaded`
 4. 以上都不是
 
 46. 关于无参构造函数的哪个正确？
@@ -5178,28 +6346,35 @@ abstract public class Ballroom extends House {
 
 47. 填空：______________ 决定了哪些属性存在，而 ______________ 决定了调用者可以使用。
 
-1. reference type, signature
-2. object type, super
-3. reference type, object type
-4. object type, reference type
+1. `reference type, signature`
+2. `object type, super`
+3. `reference type, object type`
+4. `object type, reference type`
 
 48. 已知 `Integer` 和 `Long` 是 `Number` 的子类，什么类型可以填充下面类中的空白以通过编译？
 
 ```java
 package orchestra;
+
 interface MusicCreator { public Number play(); }
+
 abstract class StringInstrument { public Long play() {return3L;} }
+
 public class Violin extends StringInstrument implements MusicCreator {
+
    public play() {
+
       return null;
+
    }
+
 }
 ```
 
-1. Long
-2. Integer
-3. Long 或 Integer
-4. Number
+1. `Long`
+2. `Integer`
+3. `Long` 或 `Integer`
+4. `Number`
 
 49. 创建默认方法的最佳理由是什么？
 
@@ -5212,223 +6387,304 @@ public class Violin extends StringInstrument implements MusicCreator {
 
 ```java
 package ai;
+
 import java.io.*;
+
 class Machine {
+
    public boolean turnOn() throws EOFException {return true;}
+
 }
+
 public class Robot extends Machine {
+
    public boolean turnOn() throws IOException {return false;}
+
    public static void main(String[] doesCompute) throws Exception {
+
           Machine m = new Robot();
+
           System.out.print(m.turnOn());
+
    }
+
 }
 ```
 
-1. true
-2. false
+1. `true`
+2. `false`
 3. 代码无法编译。
 4. 代码编译通过但在运行时产生异常。
 
+4. 代码由于其他原因无法编译。
 
+2. 选择列出关键字共同使用顺序的答案。
 
+1. `catch, try, finally`
+2. `try, catch, finally`
+3. `finally, catch, try`
+4. `try, finally, catch`
 
+3. 以下 `java.lang` 类图中哪一个正确显示了继承模型？
 
-4.  代码由于其他原因无法编译。
+1. ![图表显示 Java lang 类，其中 RuntimeExpectation 连接到 throwable，throwable 再连接到带有 error 的 expectation，而 expectation 连接到 object。](img/c08uf001.jpg)
+2. ![图表显示 Java lang 类，其中 error 连接到 throwable，throwable 连接到带有 expectation 的 RuntimeExpectation，而 RuntimeExpectation 连接到 object。](img/c08uf002.jpg)
+3. ![图表显示 Java lang 类，其中 throwable 连接到 RuntimeExpectation，RuntimeExpectation 再连接到带有 error 的 expectation，而 RuntimeExpectation 连接到 object。](img/c08uf003.jpg)
+4. ![图表显示 Java lang 类，其中 RuntimeExpectation 连接到 expectation，expectation 连接到带有 error 的 throwable，而 throwable 连接到 object。](img/c08uf004.jpg)
 
-2.  选择列出关键字共同使用顺序的答案。
+4. 在 Java 应用中，建议不要捕获以下哪种 `Throwable`？
 
-1.  `catch, try, finally`
-2.  `try, catch, finally`
-3.  `finally, catch, try`
-4.  `try, finally, catch`
+1. `Error`
+2. `CheckedException`
+3. `Exception`
+4. `RuntimeException`
 
-3.  以下 `java.lang` 类图中哪一个正确显示了继承模型？
-
-1.  ![图表显示 Java lang 类，其中 RuntimeExpectation 连接到 throwable，throwable 再连接到带有 error 的 expectation，而 expectation 连接到 object。](img/c08uf001.jpg)
-2.  ![图表显示 Java lang 类，其中 error 连接到 throwable，throwable 连接到带有 expectation 的 RuntimeExpectation，而 RuntimeExpectation 连接到 object。](img/c08uf002.jpg)
-3.  ![图表显示 Java lang 类，其中 throwable 连接到 RuntimeExpectation，RuntimeExpectation 再连接到带有 error 的 expectation，而 RuntimeExpectation 连接到 object。](img/c08uf003.jpg)
-4.  ![图表显示 Java lang 类，其中 RuntimeExpectation 连接到 expectation，expectation 连接到带有 error 的 throwable，而 throwable 连接到 object。](img/c08uf004.jpg)
-
-4.  在 Java 应用中，建议不要捕获以下哪种 `Throwable`  own？
-
-1.  `Error`
-2.  `CheckedException`
-3.  `Exception`
-4.  `RuntimeException`
-
-5.  以下应用程序的输出是什么？
+5. 以下应用程序的输出是什么？
 
 ```java
 package game;
+
 public class Baseball {
+
    public static void main(String... teams) {
+
       try {
+
           int score = 1;
+
           System.out.print(score++);
+
       } catch (Throwable t) {
+
           System.out.print(score++);
+
       } finally {
+
           System.out.print(score++);
+
       }
+
       System.out.print(score++);
+
    }
+
 }
 ```
 
-1.  `123`
-2.  `124`
-3.  `12`
-4.  以上都不是
+1. `123`
+2. `124`
+3. `12`
+4. 以上都不是
 
-6.  以下哪项是检查异常（checked exception）？
+6. 以下哪项是检查异常（`checked exception`）？
 
-1.  `ClassCastException`
-2.  `IOException`
-3.  `ArrayIndexOutOfBoundsException`
-4.  `IllegalArgumentException`
+1. `ClassCastException`
+2. `IOException`
+3. `ArrayIndexOutOfBoundsException`
+4. `IllegalArgumentException`
 
-7.  填空：`____________` 关键字用于方法声明，而 `____________` 关键字用于向周围进程抛出异常。
+7. 填空：`____________` 关键字用于方法声明，而 `____________` 关键字用于向周围进程抛出异常。
 
-1.  `throws, throw`
-2.  `catch, throw`
-3.  `throw, throws`
-4.  `throws, catch`
+1. `throws, throw`
+2. `catch, throw`
+3. `throw, throws`
+4. `throws, catch`
 
-8.  如果一个 `try` 语句同时包含 `Exception` 和 `IOException` 的 catch 块，那么以下哪个描述是正确的？
+8. 如果一个 `try` 语句同时包含 `Exception` 和 `IOException` 的 `catch` 块，那么以下哪个描述是正确的？
 
-1.  `Exception` 的 `catch` 块必须出现在 `IOException` 的 `catch` 块之前。
-2.  `IOException` 的 `catch` 块必须出现在 `Exception` 的 `catch` 块之前。
-3.  这两个异常类型的 `catch` 块可以按任何顺序声明。
-4.  `try` 语句不能声明这两种 catch 块类型，因为它们是不兼容的。
+1. `Exception` 的 `catch` 块必须出现在 `IOException` 的 `catch` 块之前。
+2. `IOException` 的 `catch` 块必须出现在 `Exception` 的 `catch` 块之前。
+3. 这两个异常类型的 `catch` 块可以按任何顺序声明。
+4. `try` 语句不能声明这两种 `catch` 块类型，因为它们是不兼容的。
 
-9.  以下应用程序的输出是什么？
+9. 以下应用程序的输出是什么？
 
 ```java
 package game;
+
 public class Football {
+
    public static void main(String officials[]) {
+
       try {
+
           System.out.print('A');
+
           throw new RuntimeException("Out of bounds!");
+
       } catch (ArrayIndexOutOfBoundsException aioobe) {
+
           System.out.print('B');
+
           throw aioobe;
+
       } finally {
+
           System.out.print('C');
+
       }
+
    }
+
 }
 ```
 
-1.  `ABC`
-2.  `ABC`，随后是 `RuntimeException` 的堆栈跟踪信息
-3.  `AC`，随后是 `RuntimeException` 的堆栈跟踪信息
-4.  以上都不是
+1. `ABC`
+2. `ABC`，随后是 `RuntimeException` 的堆栈跟踪信息
+3. `AC`，随后是 `RuntimeException` 的堆栈跟踪信息
+4. 以上都不是
 
 10. 编译并运行以下应用程序的结果是什么？
 
 ```java
 package castles;
+
 public class Fortress {
+
    public void openDrawbridge() throws Exception {  // p1
+
       try {
+
           throw new Exception("Circle");
+
       } catch (Exception e) {
+
           System.out.print("Opening!");
+
       } finally {
+
           System.out.print("Walls");  // p2
+
       }
+
    }
+
    public static void main(String[] moat) {
+
       new Fortress().openDrawbridge();  // p3
+
    }
+
 }
 ```
 
-1.  代码由于行 `p1` 无法编译。
-2.  代码由于行 `p2` 无法编译。
-3.  代码由于行 `p3` 无法编译。
-4.  代码可以编译，但在运行时会打印堆栈跟踪信息。
+
+
+1. 代码由于行`p1`无法编译。
+2. 代码由于行`p2`无法编译。
+3. 代码由于行`p3`无法编译。
+4. 代码可以编译，但在运行时会打印堆栈跟踪信息。
 
 11. 以下哪种异常类型必须由抛出的方法进行处理或声明？
 
-1.  `NullPointerException`
-2.  `Exception`
-3.  `RuntimeException`
-4.  `ArithmeticException`
+1. `NullPointerException`
+2. `Exception`
+3. `RuntimeException`
+4. `ArithmeticException`
 
 12. 以下应用程序的输出是什么？
 
 ```java
 package game;
+
 public class BasketBall {
+
    public static void main(String[] dribble) {
+
       try {
+
           System.out.print(1);
+
           throw new ClassCastException();
+
       } catch (ArrayIndexOutOfBoundsException ex) {
+
           System.out.print(2);
+
       } catch (Throwable ex) {
+
           System.out.print(3);
+
       } finally {
+
           System.out.print(4);
+
       }
+
       System.out.print(5);
+
    }
+
 }
 ```
 
-1.  `1345`
-2.  `235`
-3.  代码无法编译。
-4.  代码可以编译，但会打印堆栈跟踪信息。
+1. `1345`
+2. `235`
+3. 代码无法编译。
+4. 代码可以编译，但会打印堆栈跟踪信息。
 
-13. 关于 `finally` 块，以下哪个描述是正确的？
+13. 关于`finally`块，以下哪个描述是正确的？
 
-1. `finally` 块的每一行都都会执行。
-2. 只有当 catch 块执行时，`finally` 块才会执行。
-3. `finally` 语句是必须的。
-4. `finally` 块不能抛出异常。
+1. `finally`块的每一行都都会执行。
+2. 只有当`catch`块执行时，`finally`块才会执行。
+3. `finally`语句是必须的。
+4. `finally`块不能抛出异常。
 
-14. 假设 `FileNotFoundException` 是 `IOException` 的子类，以下应用程序的输出是什么？
+14. 假设`FileNotFoundException`是`IOException`的子类，以下应用程序的输出是什么？
 
 ```java
 package office;
+
 import java.io.*;
+
 public class Printer {
+
    public void print() {
+
       try {
+
           throw new FileNotFoundException();
+
       } catch (IOException exception) {
+
           System.out.print("Z");
+
       } catch (FileNotFoundException ine) {
+
           System.out.print("X");
+
       } finally {
+
           System.out.print("Y");
+
       }
+
    }
+
    public static void main(String... args) {
+
       new Printer().print();
+
    }
+
 }
 ```
 
-1.  `XY`
-2.  `ZY`
-3.  代码无法编译。
-4.  代码可以编译，但会打印堆栈跟踪信息。
+1. `XY`
+2. `ZY`
+3. 代码无法编译。
+4. 代码可以编译，但会打印堆栈跟踪信息。
 
-15. `try` 语句需要哪些关键字？
+15. `try`语句需要哪些关键字？
 
-* `catch`
-* `finalize`
-* `finally`
+- `catch`
+- `finalize`
+- `finally`
 
-1. 仅需 `I`
-2. 仅需 `II`
-3. `I` 或 `III`，或两者都需要
-4. 这些都不是 `try` 语句必须的。
+1. 仅需`I`
+2. 仅需`II`
+3. `I`或`III`，或两者都需要
+4. 这些都不是`try`语句必须的。
 
 16. 关于 Java 中异常的作用，以下哪个说法是错误的？
 
@@ -5441,138 +6697,192 @@ public class Printer {
 
 ```java
 package harbor;
+
 class CapsizedException extends Exception {}
+
 class Transport {
+
    public int travel() throws CapsizedException { return 2; };
+
 }
+
 public class Boat {
+
    public int travel() throws Exception { return 4; };  // j1
+
    public static void main(String... distance) throws Exception{
+
       try {
+
           System.out.print(new Boat().travel());
+
       } catch (Exception e) {
+
           System.out.print(8);
+
       }
+
    }
+
 }
 ```
 
-1.  `4`
-2.  `8`
-3.  代码由于行 `j1` 无法编译。
-4.  代码由于其他原因无法编译。
+1. `4`
+2. `8`
+3. 代码由于行`j1`无法编译。
+4. 代码由于其他原因无法编译。
 
-18. 在实现 `Printer` 接口的类中，以下哪个方法签名是不允许的？
+18. 在实现`Printer`接口的类中，以下哪个方法签名是不允许的？
 
 ```java
 class PrintException extends Exception {}
+
 class PaperPrintException extends PrintException {}
 
 public interface Printer {
+
    abstract int printData() throws PrintException;
+
 }
 ```
 
 1. `public int printData() throws PaperPrintException`
 2. `public int printData() throws Exception`
-
-
-
-
-
-### 3. `public int printData()`
-
+3. `public int printData()`
 4. 以上均都不是
 
-### 19. 在应用程序中使用 `Exception`、`RuntimeException` 和 `Throwable` 类，需要声明哪个 import 语句？
+19. 在应用程序中使用`Exception`、`RuntimeException`和`Throwable`类，需要声明哪个 import 语句？
 
 1. `import java.exception.*;`
 2. `import java.util.exception.*;`
 3. `import java.lang.*;`
 4. 以上均都不是
 
-### 20. 关于以下类，哪种描述是正确的？
+20. 关于以下类，哪种描述是正确的？
 
 ```java
- class GasException extends Exception {}
+class GasException extends Exception {}
+
 class Element {
+
    public int getSymbol() throws GasException { return -1; }  // g1
+
 }
+
 public class Oxygen extends Element {
+
    public int getSymbol() { return 8; }  // g2
+
    public void printData() {
+
       try {
+
          System.out.print(getSymbol());
+
       } catch {  // g3
+
          System.out.print("Unable to read data");
+
       }
+
    }
+
 }
 ```
 
-1. 代码因为第 `g1` 行无法编译。
-2. 代码因为第 `g2` 行无法编译。
-3. 代码因为第 `g3` 行无法编译。
+1. 代码因为第`g1`行无法编译。
+2. 代码因为第`g2`行无法编译。
+3. 代码因为第`g3`行无法编译。
 4. 以上均都不是
 
-### 21. 填空：程序必须处理或声明 ____________，但绝不应该处理 ____________。
+21. 填空：程序必须处理或声明 ____________，但绝不应该处理 ____________。
 
 1. `java.lang.Error`, `unchecked exceptions`
 2. `checked exceptions`, `java.lang.Error`
 3. `java.lang.Throwable`, `java.lang.Error`
 4. `unchecked exceptions`, `java.lang.Exception`
 
-### 22. 编译并运行以下应用程序的 own 是什么？
+22. 编译并运行以下应用程序的 own 是什么？
 
 ```java
- package castles;
+package castles;
+
 class CastleUnderSiegeException extends Exception {}
+
 class KnightAttackingException extends CastleUnderSiegeException {}
+
 public class Citadel {
+
    public void openDrawbridge() throws RuntimeException {  // q1
+
       try {
+
          throw new KnightAttackingException();
+
       } catch (Exception e) {
+
          throw new ClassCastException();
+
       } finally {
+
          throw new CastleUnderSiegeException();  // q2
+
       }
+
    }
+
    public static void main(String[] moat) {
+
       new Citadel().openDrawbridge();  // q3
+
    }
+
 }
 ```
 
-1. 代码因为第 `q1` 行无法编译。
-2. 代码因为第 `q2` 行无法编译。
-3. 代码因为第 `q3` 行无法编译。
+1. 代码因为第`q1`行无法编译。
+2. 代码因为第`q2`行无法编译。
+3. 代码因为第`q3`行无法编译。
 4. 代码编译通过，但在运行时会打印堆栈跟踪（stack trace）。
 
-### 23. 如果一个异常匹配两个或多个 catch 块，将执行哪个 catch 块？
+23. 如果一个异常匹配两个或多个`catch`块，将执行哪个`catch`块？
 
 1. 执行第一个匹配的块。
 2. 执行最后一个匹配的块。
 3. 所有匹配的块都会被执行。
 4. 无法编写出这样的代码。
 
-### 24. 以下应用程序的输出是什么？
+24. 以下应用程序的输出是什么？
 
 ```java
- package system;
+package system;
+
 public class Computer {
+
    public void compute() throws Exception {
+
       throw new RuntimeException("Error processing request");
+
    }
+
    public static void main(String[] bits) {
+
       try {
+
          new Computer().compute();
+
          System.out.print("Ping");
+
       } catch (NullPointerException e) {
+
          System.out.print("Pong");
+
          throw e;
+
       }
+
    }
+
 }
 ```
 
@@ -5581,63 +6891,90 @@ public class Computer {
 3. 代码无法编译。
 4. 代码编译通过但在运行时会抛出异常。
 
-### 25. 在以下应用程序中，`list` 的值已被省略。假设代码编译没有问题，执行该类时，哪一个不是可能的结果？
+25. 在以下应用程序中，`list`的值已被省略。假设代码编译没有问题，执行该类时，哪一个不是可能的结果？
 
 ```java
- package checkboard;
+package checkboard;
 
 public class Attendance {
+
    private Boolean[] list = // 值已省略
+
    public int printTodaysCount() {
+
       int count=0;
+
       for(int i=0; i<10; i++) {
+
          if(list[i]) ++count;
+
       }
+
       return count;
+
    }
+
    public static void main(String[] roster) {
+
       new Attendance().printTodaysCount();
+
    }
+
 }
 ```
 
-1. 打印 `NullPointerException` 的堆栈跟踪。
-2. 打印 `ArrayIndexOutOfBoundsException` 的堆栈跟踪。
-3. 打印 `ClassCastException` 的堆栈跟踪。
+1. 打印`NullPointerException`的堆栈跟踪。
+2. 打印`ArrayIndexOutOfBoundsException`的堆栈跟踪。
+3. 打印`ClassCastException`的堆栈跟踪。
 4. 以上均都不是
 
-### 26. 填空：当程序深度递归进入无限循环时，会发生 ____________；而当对不存在的对象的引用进行操作时，会发生 ____________。
+26. 填空：当程序深度递归进入无限循环时，会发生 ____________；而当对不存在的对象的引用进行操作时，会发生 ____________。
 
 1. `NoClassDefFoundError`, `StackOverflowError`
 2. `StackOverflowError`, `NullPointerException`
 3. `ClassCastException`, `IllegalArgumentException`
 4. `StackOverflowError`, `IllegalArgumentException`
 
-### 27. 以下哪项不是在方法签名中添加受检异常（checked exceptions）的原因？
+27. 以下哪项不是在方法签名中添加受检异常（checked exceptions）的原因？
 
 1. 强制调用者处理或声明其异常
 2. 通知调用者潜在的问题类型
 3. 确保异常永远不会导致应用程序终止
 4. 给调用者一个从问题中恢复的机会
 
-### 28. 以下应用程序的输出是什么？
+28. 以下应用程序的输出是什么？
 
 ```java
- package peculiar;
+package peculiar;
+
 public class Stranger {
+
    public static String getFullName(String firstName, String lastName) {
+
       try {
+
          return firstName.toString() + lastName;
+
       } finally {
+
          System.out.print("Finished!");
+
       } catch (NullPointerException npe) {
+
          System.out.print("Problem?");
+
       }
+
       return null;
+
    }
+
    public static void main(String[] things) {
+
       System.out.print(getFullName("Joyce","Hopper"));
+
    }
+
 }
 ```
 
@@ -5646,115 +6983,151 @@ public class Stranger {
 3. Problem?Finished!
 4. 以上均都不是
 
-### 29. 填空：一个 try 语句有 ____________ 块和 ____________ catch 块。
+29. 填空：一个`try`语句有 ____________ 块和 ____________ `catch`块。
 
 1. zero or one, zero or more
 2. one or more, zero or one
 3. zero or one, one or more
 4. one or more, zero or one
 
-### 30. 以下应用程序的输出是什么？
+30. 以下应用程序的输出是什么？
 
 ```java
- package pond;
+package pond;
+
 abstract class Duck {
+
    protected int count;
+
    public abstract int getDuckies();
+
 }
+
 public class Ducklings extends Duck {
+
    private int age;
+
    public Ducklings(int age) { this.age = age; }
+
    public int getDuckies() { return count; }
+
    public static void main(String[] pondInfo) {
+
       Ducklings itQuacks = Ducklings(5);
+
       System.out.print(itQuacks.getDuckies());
+
    }
+
 }
 ```
 
 1. 0
 2. 5
 3. 代码无法编译。
-4
-
-### 31. 在一个 try 语句中，如果 catch 块和 finally 块都抛出了异常，调用者会看到什么？
-
-1. catch 块抛出的异常
-2. finally 块抛出的异常
-3. catch 块和 finally 块都抛出的异常
 4. 以上均都不是
 
-### 32. 以下应用程序的输出是什么？
+31. 在一个`try`语句中，如果`catch`块和`finally`块都抛出了异常，调用者会看到什么？
+
+1. `catch`块抛出的异常
+2. `finally`块抛出的异常
+3. `catch`块和`finally`块都抛出的异常
+4. 以上均都不是
+
+32. 以下应用程序的输出是什么？
 
 ```java
- package zoo;
+package zoo;
+
 class BigCat {
+
    void roar(int level) throws RuntimeException {  // m1
+
       if(level<3) throw new IllegalArgumentException("Incomplete");
+
       System.out.print("Roar!");
+
    }
+
 }
+
 public class Lion extends BigCat {
+
    public void roar() {  // m2
+
       System.out.print("Roar!!!");
+
    }
 
    public static void main(String[] cubs) {
+
       final BigCat kitty = new Lion();  // m3
+
       kitty.roar(2);
+
    }
+
 }
 ```
 
-1. 代码因为第 `m1` 行无法编译。
-2. 代码因为第 `m2` 行无法编译。
-3. 代码因为第 `m3` 行无法编译。
+1. 代码因为第`m1`行无法编译。
+2. 代码因为第`m2`行无法编译。
+3. 代码因为第`m3`行无法编译。
 4. 代码编译通过，但在运行时会打印堆栈跟踪。
 
-### 33. 给定以下代码片段，将抛出哪种特定的异常？
+33. 给定以下代码片段，将抛出哪种特定的异常？
 
 ```java
- final Object exception = new Exception();
- final Exception data = (RuntimeException)exception;
+final Object exception = new Exception();
+
+final Exception data = (RuntimeException)exception;
+
 System.out.print(data);
 ```
 
-1. `ClassCastException`
-2. `RuntimeException`
-3. `NullPointerException`
-4. 以上均都不是
 
-### 34. 以下哪一个类可以处理 catch 块中的所有类型？
+
+### 34. 以下哪一个类可以处理 `catch` 块中的所有类型？
 
 1. `Exception`
 2. `Error`
 3. `Throwable`
 4. `RuntimeException`
 
-
-
-
-
 ### 35. 在下述应用中，`street` 和 `city` 的值被省略了。执行该类后，以下哪项是可能的输出结果？
 
-* `350 5th Ave - New York`
-* `Posted:350 5th Ave - New York`
+- `350 5th Ave - New York`
+- `Posted:350 5th Ave - New York`
 
 ```java
 package registration;
+
 public class Address {
+
    public String getAddress(String street, String city) {
+
       try {
+
          return street.toString() + " - " + city.toString();
+
       } finally {
+
          System.out.print("Posted:");
+
       }
+
    }
+
    public static void main(String[] form) {
+
       String street = // value omitted
+
       String city = // // value omitted
+
       System.out.print(new Address().getAddress(street,city));
+
    }
+
 }
 ```
 
@@ -5781,26 +7154,42 @@ public class Address {
 
 ```java
 package body;
+
 class Organ {
+
    public void operate() throws RuntimeException {
+
       throw new RuntimeException("Not supported");
+
    }
+
 }
+
 public class Heart extends Organ {
+
    public void operate() throws Exception {
+
       System.out.print("beat");
+
    }
+
    public static void main(String... cholesterol) throws Exception {
+
       try {
+
          new Heart().operate();
+
       } finally {
+
       }
+
    }
+
 }
 ```
 
-1. beat
-2. Not supported
+1. `beat`
+2. `Not supported`
 3. 代码无法编译。
 4. 代码可以编译，但在运行时打印堆栈跟踪（stack trace）。
 
@@ -5819,26 +7208,42 @@ throw new NullPointerException();
 
 ```java
 package clothing;
+
 public class Coat {
+
    public Long zipper() throws Exception {
+
       try {
+
          String checkZipper = (String)new Object();
+
       } catch (Exception e) {
+
          throw RuntimeException("Broken!");
+
       }
+
       return null;
+
    }
+
    public static void main(String... warmth) {
+
       try {
+
          new Coat().zipper();
+
          System.out.print("Finished!");
+
       } catch (Throwable t) {}
+
    }
+
 }
 ```
 
-1. Finished!
-2. Finished!, 随后跟一个堆栈跟踪
+1. `Finished!`
+2. `Finished!`, 随后跟一个堆栈跟踪
 3. 应用程序在运行时不产生任何输出。
 4. 代码无法编译。
 
@@ -5846,61 +7251,89 @@ public class Coat {
 
 ```java
 package carnival;
+
 public class WhackAnException {
+
    public static void main(String... hammer) {
+
       try {
+
          throw new ClassCastException();
+
       } catch (IllegalArgumentException e) {
+
          throw new IllegalArgumentException();
+
       } catch (RuntimeException e) {
+
          throw new NullPointerException();
+
       } finally {
+
          throw new RuntimeException();
+
       }
+
    }
+
 }
 ```
 
-1. IllegalArgumentException
-2. NullPointerException
-3. RuntimeException
+1. `IllegalArgumentException`
+2. `NullPointerException`
+3. `RuntimeException`
 4. 代码无法编译。
 
 ### 42. 在实现 `Outfielder` 接口的类中，以下哪个方法签名是被允许？
 
 ```java
 class OutOfBoundsException extends BadCatchException {}
+
 class BadCatchException extends Exception {}
 
 public interface Outfielder {
+
    public void catchBall() throws OutOfBoundsException;
+
 }
 ```
 
-1. public int catchBall() throws OutOfBoundsException
-2. public int catchBall() throws BadCatchException
-3. public int catchBall() throws Exception
+1. `public int catchBall() throws OutOfBoundsException`
+2. `public int catchBall() throws BadCatchException`
+3. `public int catchBall() throws Exception`
 4. 以上都不是
 
 ### 43. 下述应用的输出是什么？
 
 ```java
 package city;
+
 public class Street {
+
    public static void dancing() throws RuntimeException {
+
       try {
+
          throw new IllegalArgumentException();
+
       } catch (Error) {
+
          System.out.print("Unable!");
+
       }
+
    }
+
    public static void main(String... count) throws RuntimeException {
+
       dancing();
+
    }
+
 }
 ```
 
-1. Unable!
+1. `Unable!`
 2. 应用程序不产生任何输出。
 3. 应用程序可以编译但在运行时产生堆栈跟踪。
 4. 代码无法编译。
@@ -5909,26 +7342,41 @@ public class Street {
 
 ```java
 package castles;
+
 class DragonException extends Exception {}
+
 public class Lair {
+
    public void openDrawbridge() throws Exception {  // r1
+
       try {
+
          throw new Exception("This");
+
       } catch (RuntimeException e) {
+
          throw new DragonException();  // r2
+
       } finally {
+
          throw new RuntimeException("Or maybe this");
+
       }
+
    }
+
    public static void main(String[] moat) throws Exception {
+
       new Lair().openDrawbridge();  // r3
+
    }
+
 }
 ```
 
-1. 因为 r1 代码无法编译。
-2. 因为 r2 代码无法编译。
-3. 因为 r3 代码无法编译。
+1. 因为 `r1` 代码无法编译。
+2. 因为 `r2` 代码无法编译。
+3. 因为 `r3` 代码无法编译。
 4. 代码可以编译，但在运行时打印堆栈跟踪。
 
 ### 45. 如果一个 `try` 语句同时包含 `IllegalArgumentException` 和 `ClassCastException` 的 `catch` 块，那么以下哪个语句是正确的？
@@ -5942,118 +7390,178 @@ public class Lair {
 
 ```java
 package broken;
+
 class Problem implements RuntimeException {}
+
 public class BiggerProblem extends Problem {
+
    public static void main(String uhOh[]) {
+
       try {
+
          throw new BiggerProblem();
+
       } catch (BiggerProblem re) {
+
          System.out.print("Problem?");
+
       } catch (Problem e) {
+
          System.out.print("Handled");
+
       } finally {
+
          System.out.print("Fixed!");
+
       }
+
    }
+
 }
 ```
 
-1. Problem?Fixed!
-2. Handled.Fixed!
-3. Problem?Handled.Fixed!
+1. `Problem?Fixed!`
+2. `Handled.Fixed!`
+3. `Problem?Handled.Fixed!`
 4. 代码无法编译。
 
 ### 47. 下述应用的输出是什么？
 
 ```java
 package lighting;
+
 interface Source {
+
    void flipSwitch() throws Exception;
+
 }
+
 public class LightBulb implements Source {
+
    public void flipSwitch() {
+
       try {
+
          throw new RuntimeException("Circuit Break!");
+
       } finally {
+
          System.out.print("Flipped!");
+
       }
+
    }
+
    public static void main(String... electricity) throws Throwable {
+
       final Source bulb = new LightBulb();
+
       bulb.flipSwitch();
+
    }
+
 }
 ```
 
-
-
-
-
 1. 一个 `RuntimeException` 的堆栈跟踪
-2. `翻转！!`，随后是一个 `RuntimeException` 的堆栈跟踪
+2. `Flipped!`，随后是一个 `RuntimeException` 的堆栈跟踪
 3. 代码无法编译，因为 `flipSwitch()` 是一个无效的方法重写。
 4. 代码由于另一个原因无法编译。
 
-48. 给定一个托管网站的应用程序，以下哪种情况最可能导致抛出 `java.lang.Error`？
+### 48. 给定一个托管网站的应用程序，以下哪种情况最可能导致抛出 `java.lang.Error`？
 
-    1. 两个用户同时尝试注册账户。
-    2. 应用程序临时丢失网络连接。
-    3. 用户输入错误的密码。
-    4. 应用程序内存不足。
+1. 两个用户同时尝试注册账户。
+2. 应用程序临时丢失网络连接。
+3. 用户输入错误的密码。
+4. 应用程序内存不足。
 
-49. 鉴于 `FileNotFoundException` 是 `IOException` 的子类，以下应用程序的输出是什么？
+### 49. 鉴于 `FileNotFoundException` 是 `IOException` 的子类，以下应用程序的输出是什么？
 
 ```java
 package storage;
+
 import java.io.*;
+
 public class Backup {
+
    public void performBackup() {
+
       try {
+
          throw new IOException("Disk not found");
+
       } catch (Exception e) {
+
          try {
+
             throw new FileNotFoundException("File not found");
+
          } catch (FileNotFoundException e) {  // z1
+
             System.out.print("Failed");
+
          }
+
       }
+
    }
+
    public static void main(String... files) {
+
       new Backup().performBackup();  // z2
+
    }
+
 }
 ```
 
-    1. Failed
-    2. 应用程序编译，但在运行时打印堆栈跟踪。
-    3. 代码由于行 `z1` 无法编译。
-    4. 代码由于行 `z2` 无法编译。
+1. `Failed`
+2. 应用程序编译，但在运行时打印堆栈跟踪。
+3. 代码由于行 `z1` 无法编译。
+4. 代码由于行 `z2` 无法编译。
 
-50. 以下应用程序的输出是什么？
+### 50. 以下应用程序的输出是什么？
 
 ```java
 package bed;
+
 public class Sleep {
+
    public static void snore() {
+
       try {
+
          String sheep[] = new String[3];
+
          System.out.print(sheep[3]);
+
       } catch (RuntimeException e) {
+
          System.out.print("Awake!");
+
       } finally {
+
          throw new Exception();  // x1
+
       }
+
    }
+
    public static void main(String... sheep) {  // x2
+
       new Sleep().snore();  // x3
+
    }
+
 }
 ```
 
-    1. Awake!, 随后是堆栈跟踪
-    2. 代码由于行 `x1` 无法编译。
-    3. 代码由于行 `x2` 无法编译。
-    4. 代码由于行 `x3` 无法编译。
+
+
+1. `Awake!`, 随后是堆栈跟踪
+2. 代码由于行 `x1` 无法编译。
+3. 代码由于行 `x2` 无法编译。
+4. 代码由于行 `x3` 无法编译。
 
 # 第 9 章
 
@@ -6062,33 +7570,32 @@ public class Sleep {
 本次练习测试涵盖的 OCA 考试主题包括：
 
 * ![](img/correction.jpg)与 Java API 中的选定类操作
-
-    * 使用 `StringBuilder` 类及其方法操作数据
-    * 创建和操作 `Strings`
-    * 使用 `java.time.LocalDateTime`、`java.time.LocalDate`、`java.time.LocalTime`、`java.time.format.DateTimeFormatter` 和 `java.time.Period` 类创建并操作日期数据
-    * 声明并使用给定类型的 `ArrayList`
-    * 编写一个消耗 Lambda `Predicate` 表达式的简单 Lambda 表达式
+  * 使用 `StringBuilder` 类及其方法操作数据
+  * 创建和操作 `Strings`
+  * 使用 `java.time.LocalDateTime`、`java.time.LocalDate`、`java.time.LocalTime`、`java.time.format.DateTimeFormatter` 和 `java.time.Period` 类创建并操作日期数据
+  * 声明并使用给定类型的 `ArrayList`
+  * 编写一个消耗 Lambda `Predicate` 表达式的简单 Lambda 表达式
 
 1. 使用 `StringBuilder` 而不是 `String` 的最佳理由是什么？
 
-    1. `StringBuilder` 增加了对多线程的支持。
-    2. `StringBuilder` 可以使用 `==` 比较值。
-    3. `StringBuilder` 通过减少创建的对象数量节省内存。
-    4. `StringBuilder` 支持不同的语言和编码。
+   1. `StringBuilder` 增加了对多线程的支持。
+   2. `StringBuilder` 可以使用 `==` 比较值。
+   3. `StringBuilder` 通过减少创建的对象数量节省内存。
+   4. `StringBuilder` 支持不同的语言和编码。
 
 2. 关于 `String`，哪是不正确的？
 
-    1. 可以在不编写调用构造函数的情况下创建它。
-    2. 可以通过字符串池复用它。
-    3. 它是 `final` 的。
-    4. 它是可变的。
+   1. 可以在不编写调用构造函数的情况下创建它。
+   2. 可以通过字符串池复用它。
+   3. 它是 `final` 的。
+   4. 它是可变的。
 
 3. 以下哪项创建的 `StringBuilder` 值与其他选项值不同？
 
-    1. `new StringBuilder().append("clown")`
-    2. `new StringBuilder("clown")`
-    3. `new StringBuilder("cl").insert(2, "own")`
-    4. 它们创建的值都相同。
+   1. `new StringBuilder().append("clown")`
+   2. `new StringBuilder("clown")`
+   3. `new StringBuilder("cl").insert(2, "own")`
+   4. 它们创建的值都相同。
 
 4. 以下代码的输出是什么？
 
@@ -6099,10 +7606,10 @@ teams.append(" 1601");
 System.out.print(teams);
 ```
 
-    1. 333
-    2. 333 806 1601
-    3. 代码编译但输出其他内容。
-    4. 代码无法编译。
+   1. 333
+   2. 333 806 1601
+   3. 代码编译但输出其他内容。
+   4. 代码无法编译。
 
 5. `ArrayList`、`List` 和 `Object` 类型中有多少个可以填充以产生可编译的代码？
 
@@ -6110,10 +7617,10 @@ System.out.print(teams);
 List frisbees = new  ____________();
 ```
 
-    1. 无
-    2. 一个
-    3. 两个
-    4. 三
+   1. 无
+   2. 一个
+   3. 两个
+   4. 三
 
 6. 以下代码的输出是什么？
 
@@ -6125,10 +7632,10 @@ tools.add("hex key");
 System.out.println(tools.get(1));
 ```
 
-    1. hammer
-    2. hex key
-    3. nail
-    4. 以上都不是
+   1. hammer
+   2. hex key
+   3. nail
+   4. 以上都不是
 
 7. 以下代码的结果是什么？
 
@@ -6138,10 +7645,10 @@ StringBuilder sb = new StringBuilder("radical")
 System.out.println(sb);
 ```
 
-    1. radicarots
-    2. radical
-    3. 代码无法编译。
-    4. 代码编译但抛出异常。
+   1. radicarots
+   2. radical
+   3. 代码无法编译。
+   4. 代码编译但抛出异常。
 
 8. 以下代码的输出是什么？
 
@@ -6154,10 +7661,10 @@ museums.remove(0);
 System.out.println(museums);
 ```
 
-    1. [Natural, Science, Art]
-    2. [Science, Art]
-    3. 代码无法编译。
-    4. 编译但抛出异常。
+   1. [Natural, Science, Art]
+   2. [Science, Art]
+   3. 代码无法编译。
+   4. 编译但抛出异常。
 
 9. 以下代码的输出是什么？
 
@@ -6168,15 +7675,17 @@ b.reverse();
 System.out.println(b);
 ```
 
-    1. 12
-    2. 123
-    3. 321
-    4. 代码无法编译。10. Lambda 表达式的主要优势是什么？
+   1. 12
+   2. 123
+   3. 321
+   4. 代码无法编译。
 
-    1. 将原始类型转换为包装类。
-    2. 在运行时更改字节码。
-    3. 继承多个类。
-    4. 编写延迟代码。
+10. Lambda 表达式的主要优势是什么？
+
+   1. 将原始类型转换为包装类。
+   2. 在运行时更改字节码。
+   3. 继承多个类。
+   4. 编写延迟代码。
 
 11. 以下代码的输出是什么？
 
@@ -6187,10 +7696,10 @@ System.out.print(line == anotherLine);
 System.out.print(line.length());
 ```
 
-    1. false 1
-    2. false 2
-    3. true 1
-    4. true 2
+   1. false 1
+   2. false 2
+   3. true 1
+   4. true 2
 
 12. 方法作者漏掉了类型。以下哪些引用类型可以填充空白以完成该方法？
 
@@ -6202,10 +7711,10 @@ public static void secret(____________) {
 }
 ```
 
-    1. ArrayList
-    2. ArrayList<String>
-    3. StringBuilder
-    4. 以上都不是
+   1. `ArrayList`
+   2. `ArrayList<String>`
+   3. `StringBuilder`
+   4. 以上都不是
 
 13. 删除哪部分代码可以使代码继续编译？
 
@@ -6213,10 +7722,10 @@ public static void secret(____________) {
 Predicate<StringBuilder> p = (StringBuilder b) -> {return true;};
 ```
 
-    1. 删除 StringBuilder b
-    2. 删除 ->
-    3. 删除 { 和 ;
-    4. 删除 return 和 ;
+   1. 删除 `StringBuilder b`
+   2. 删除 `->`
+   3. 删除 `{` 和 `;`
+   4. 删除 `return` 和 `;`
 
 14. 以下代码的输出是什么？
 
@@ -6229,10 +7738,10 @@ chars.remove(0);
 System.out.print(chars.size() + " " + chars.contains('b'));
 ```
 
-    1. 1 false
-    2. 1 true
-    3. 2 false
-    4. 2 true
+   1. 1 false
+   2. 1 true
+   3. 2 false
+   4. 2 true
 
 15. 以下代码的输出是什么？
 
@@ -6243,10 +7752,10 @@ b.reverse();
 System.out.println(b.toString());
 ```
 
-    1. 12
-    2. 123
-    3. 321
-    4. 代码无法编译。
+   1. 12
+   2. 123
+   3. 321
+   4. 代码无法编译。
 
 16. 以下有多少行代码编译失败？
 
@@ -6257,16 +7766,12 @@ Predicate<String> pred3 = String s -> false;
 Predicate<String> pred4 = (String s) -> false;
 ```
 
-    1. 一个
-    2. 两个
-    3. 三
-    4. 四个
+   1. 一个
+   2. 两个
+   3. 三
+   4. 四个
 
 17. 以下代码做了什么？
-
-
-
-
 
 ```java
 public class Shoot {
@@ -6283,25 +7788,25 @@ public class Shoot {
 }
 ```
 
-1. 它打印 true。
-2. 它打印 false。
-3. 由于行 `k1` 无法编译。
-4. 由于行 `k2` 无法编译。
+   1. 它打印 `true`。
+   2. 它打印 `false`。
+   3. 由于行 `k1` 无法编译。
+   4. 由于行 `k2` 无法编译。
 
 18. 以下代码的输出是什么？
 
 ```java
- String teams = new String("694");
+String teams = new String("694");
 teams.concat(" 1155");
 teams.concat(" 2265");
 teams.concat(" 2869");
 System.out.println(teams);
 ```
 
-1. 694
-2. 694 1155 2265 2869
-3. 代码编译通过但输出了其他内容。
-4. 代码无法编译。
+   1. 694
+   2. 694 1155 2265 2869
+   3. 代码编译通过但输出了其他内容。
+   4. 代码无法编译。
 
 19. 下列类中哪些位于 `java.util` 包？
 
@@ -6309,50 +7814,50 @@ System.out.println(teams);
 * `LocalDate`
 * `String`
 
-1. 仅 I
-2. 仅 II
-3. I 和 II
-4. I、II 和 III
+   1. 仅 I
+   2. 仅 II
+   3. I 和 II
+   4. I、II 和 III
 
 20. 哪个选项选项产生的输出值与其他三个选项不同？
 
 ```java
- StringBuilder sb = new StringBuilder("radical ");
+StringBuilder sb = new StringBuilder("radical ");
 sb = ________________________;
 System.out.print(sb);
 ```
 
-1. `new StringBuilder("radical ")`
-   * `.append("robots")`
-2. `new StringBuilder("radical ")`
-   * `.delete(1, 100)`
-   * `.append("obots")`
-   * `.insert(1, "adical r")`
-3. `new StringBuilder("radical ")`
-   * `.insert(7, "robots")`
-4. `new StringBuilder("radical ")`
-   * `.insert(sb.length(), "robots")`
+   1. `new StringBuilder("radical ")`
+      * `.append("robots")`
+   2. `new StringBuilder("radical ")`
+      * `.delete(1, 100)`
+      * `.append("obots")`
+      * `.insert(1, "adical r")`
+   3. `new StringBuilder("radical ")`
+      * `.insert(7, "robots")`
+   4. `new StringBuilder("radical ")`
+      * `.insert(sb.length(), "robots")`
 
 21. 以下代码的输出是什么？
 
 ```java
- String[] array = {"Natural History", "Science"};
+String[] array = {"Natural History", "Science"};
 List<String> museums = Arrays.asList(array);
 museums.set(0, "Art");
 System.out.println(museums.contains("Art"));
 ```
 
-1. true
-2. false
-3. 代码无法编译。
-4. 代码编译通过但在运行时抛出异常。
+   1. true
+   2. false
+   3. 代码无法编译。
+   4. 代码编译通过但在运行时抛出异常。
 
 22. 哪个陈述是正确的？
 
-1. 如果 `s.contains("abc")` 为 true，那么 `s.equals("abc")` 也是 true。
-2. 如果 `s.contains("abc")` 为 true，那么 `s.startsWith("abc")` 也是 true。
-3. 如果 `s.startsWith("abc")` 为 true，那么 `s.equals("abc")` 也是 true。
-4. 如果 `s.startsWith("abc")` 为 true，那么 `s.contains("abc")` 也是 true。
+   1. 如果 `s.contains("abc")` 为 true，那么 `s.equals("abc")` 也是 true。
+   2. 如果 `s.contains("abc")` 为 true，那么 `s.startsWith("abc")` 也是 true。
+   3. 如果 `s.startsWith("abc")` 为 true，那么 `s.equals("abc")` 也是 true。
+   4. 如果 `s.startsWith("abc")` 为 true，那么 `s.contains("abc")` 也是 true。
 
 23. 以下代码的输出是什么？
 
@@ -6365,34 +7870,34 @@ System.out.println(museums.contains("Art"));
 25:  System.out.print(chars.length());
 ```
 
-1. 0
-2. 1
-3. 2
-4. 以上均不是
+   1. 0
+   2. 1
+   3. 2
+   4. 以上均不是
 
 24. 此方法的作者忘记包含数据类型。以下哪种引用类型可以填充空白以完成此方法？
 
 ```java
- public static void secret(_____________ mystery) {
+public static void secret(_____________ mystery) {
    mystery = mystery.replace("1", "8");
    mystery.startsWith("paper");
    String s = mystery.toString();
 }
 ```
 
-1. `ArrayList`
-2. `String`
-3. `StringBuilder`
-4. 以上均不是
+   1. `ArrayList`
+   2. `String`
+   3. `StringBuilder`
+   4. 以上均不是
 
 25. 在确保代码继续编译的情况下，关于下图的哪个陈述是正确的？
 
 ![程序代码表显示了由箭头位置 P 和 Q 分隔的三个代码部分，其中第一部分有列表，第二部分有气球 = new ArrayList，第三部分有 ()。](img/c09uf001.jpg)
 
-1. 可以在位置 `P` 插入 `<>` 而不进行任何其他更改。
-2. 可以在位置 `Q` 插入 `<>` 而不进行任何其他更改。
-3. 可以在位置 `P` 和 `Q` 处都插入 `<>`。
-4. 以上均不是
+   1. 可以在位置 `P` 插入 `<>` 而不进行任何其他更改。
+   2. 可以在位置 `Q` 插入 `<>` 而不进行任何其他更改。
+   3. 可以在位置 `P` 和 `Q` 处都插入 `<>`。
+   4. 以上均不是
 
 26. 以下哪项可以填充空白使代码编译？
 
@@ -6405,10 +7910,10 @@ public class Card {
 }
 ```
 
-1. `(Integer i)`
-2. `(Object o)`
-3. `(String s)`
-4. 以上均不是
+   1. `(Integer i)`
+   2. `(Object o)`
+   3. `(String s)`
+   4. 以上均不是
 
 27. 以下代码的输出是什么？
 
@@ -6419,29 +7924,29 @@ public class Card {
 8:  System.out.print(line.length());
 ```
 
-1. false 1
-2. false 2
-3. true 1
-4. true 2
+   1. false 1
+   2. false 2
+   3. true 1
+   4. true 2
 
 28. 以下代码输出什么？
 
 ```java
- Predicate dash = c -> c.startsWith("-");
+Predicate dash = c -> c.startsWith("-");
 System.out.println(dash.test(""));
 ```
 
-1. true
-2. false
-3. 代码无法编译。
-4. 代码编译通过但在运行时抛出异常。
+   1. true
+   2. false
+   3. 代码无法编译。
+   4. 代码编译通过但在运行时抛出异常。
 
 29. 在 `LocalDate`、`LocalDateTime`、`LocalTime` 和 `Instant` 类中，有多少包含秒？
 
-1. 一个
-2. 两个
-3. 三
-4. 四个
+   1. 一个
+   2. 两个
+   3. 三
+   4. 四个
 
 30. 以下代码的输出是什么？
 
@@ -6457,34 +7962,34 @@ System.out.println(dash.test(""));
 9: }
 ```
 
-1. e
-2. d
-3. ed
-4. 以上均不是
+   1. e
+   2. d
+   3. ed
+   4. 以上均不是
 
 31. 以下哪个等效代码可以替换 `i != 0`？
 
 ```java
- Predicate<Integer> ip = i != 0;
+Predicate<Integer> ip = i != 0;
 ```
 
-1. `i -> { i != 0 }`
-2. `i -> { return i != 0 }`
-3. `i != 0`
-4. `i == 0`
+   1. `i -> { i != 0 }`
+   2. `i -> { return i != 0 }`
+   3. `i != 0`
+   4. `i == 0`
 
 32. 以下代码的输出是什么？
 
 ```java
- LocalDate xmas = LocalDate.of(2016, 12, 25);
+LocalDate xmas = LocalDate.of(2016, 12, 25);
 xmas.plusDays(-1);
 System.out.println(xmas.getDayOfMonth());
 ```
 
-1. 24
-2. 25
-3. 26
-4. 以上均不是
+   1. 24
+   2. 25
+   3. 26
+   4. 以上均不是
 
 33. 以下代码的输出是什么？
 
@@ -6500,50 +8005,53 @@ System.out.println(xmas.getDayOfMonth());
 9: }
 ```
 
-1. e
-2. d
-3. ed
-4. 以上均不是
+   1. e
+   2. d
+   3. ed
+   4. 以上均不是
 
 34. 以下代码输出什么？
 
 ```java
- Predicate clear = c -> c.equals("clear");
+Predicate clear = c -> c.equals("clear");
 System.out.println(clear.test("pink"));
 ```
 
-1. true
-2. false
-3. 代码无法编译。
-4. 代码编译通过但在运行时抛出异常。
 
-35. 哪个从一个开始计数？
+
+# 第 10 章
+
+## OCA 模拟考试
+
+本章包含 80 道题，旨在模拟真实的 OCA 考试。虽然之前的章节侧重于特定的知识点，但本章涵盖了考试中的所有知识点。建议你在完成之前的章节后再参加此考试。
+
+### 35. 哪个从一个开始计数？
 
 1. 数组索引
 2. `String` 中的 `charAt`
 3. `LocalDateTime` 中的月份
 4. `LocalTime` 中的月份
 
-36. 关于 `Predicate` 的哪个陈述是不正确的？
+### 36. 关于 `Predicate` 的哪个陈述是不正确的？
 
 1. 它的方法返回一个布尔值。
 2. 它是一个接口。
 3. 它的方法接受两个参数。
 4. 它的方法名为 `test`。
 
-37. 下列哪个周期代表更长的时间？
+### 37. 下列哪个周期代表更长的时间？
 
 ```java
 Period period1 = Period.ofWeeks(1).ofDays(3);
 Period period2 = Period.ofDays(10);
 ```
 
-1. period1
-2. period2
+1. `period1`
+2. `period2`
 3. 它们的时间相同。
 4. 以上不是。此代码无法编译。
 
-38. 以下结果是什么？
+### 38. 以下结果是什么？
 
 ```java
 import java.time.*;
@@ -6564,11 +8072,7 @@ public class HowLong {
 3. 代码无法编译。
 4. 代码编译通过但在运行时抛出异常。
 
-39. 以下哪项可以填充空白使以下代码打印 true？
-
-
-
-
+### 39. 以下哪项可以填充空白使以下代码打印 `true`？
 
 ```java
 String happy = " :) - (: ";
@@ -6582,14 +8086,14 @@ System.out.println(really.equals(question));
 3. `happy.substring(1, happy.length() - 1)`
 4. `happy.substring(1, happy.length())`
 
-40. 关于 `Period` 类，以下哪一个陈述是不正确的？
+### 40. 关于 `Period` 类，以下哪一个陈述是不正确的？
 
 1. `Period` 是不可变的。
 2. `Period` 通常用于为日期增加或减少时间。
 3. 你可以创建一个表示 2 分钟的 `Period`。
 4. 你可以创建一个表示 5 年的 `Period`。
 
-41. 下一个类的输出是什么？
+### 41. 下一个类的输出是什么？
 
 ```java
 1:  package rocket;
@@ -6607,7 +8111,7 @@ System.out.println(really.equals(question));
 3. 3
 4. 4
 
-42. 下面的输出是什么？
+### 42. 下面的输出是什么？
 
 ```java
 List<Integer> pennies = new ArrayList<>();
@@ -6623,7 +8127,7 @@ System.out.println(pennies);
 3. 代码无法编译。
 4. 代码可以编译，但在运行时会抛出异常。
 
-43. 此方法的作者忘记了包含数据类型。以下哪种引用类型最好填充空白以完成此方法？
+### 43. 此方法的作者忘记了包含数据类型。以下哪种引用类型最好填充空白以完成此方法？
 
 ```java
 public static void secret(_____________ mystery) {
@@ -6633,19 +8137,19 @@ public static void secret(_____________ mystery) {
 }
 ```
 
-1. ArrayList
-2. String
-3. StringBuilder
+1. `ArrayList`
+2. `String`
+3. `StringBuilder`
 4. 以上都不是
 
-44. 你可以向 `LocalTime` 对象添加的最小单位是什么？
+### 44. 你可以向 `LocalTime` 对象添加的最小单位是什么？
 
 1. 秒 (Second)
 2. 毫秒 (Millisecond)
 3. 纳秒 (Nanosecond)
 4. 皮秒 (Picosecond)
 
-45. 下面代码的结果是什么？
+### 45. 下面代码的结果是什么？
 
 ```java
 import java.time.*;
@@ -6666,18 +8170,18 @@ public class HowLong {
 3. 代码无法编译。
 4. 代码可以编译，但在运行时会抛出异常。
 
-46. 以下哪些类型可以作为参数传递给 `String` 类的 `replace()` 方法？
+### 46. 以下哪些类型可以作为参数传递给 `String` 类的 `replace()` 方法？
 
-* char
-* String
-* StringBuilder
+* `char`
+* `String`
+* `StringBuilder`
 
 1. I
 2. I 和 II
 3. II 和 III
 4. I、II 和 III
 
-47. 这段代码输出了多少行？
+### 47. 这段代码输出了多少行？
 
 ```java
 import java.util.*;
@@ -6691,6 +8195,7 @@ public class PrintNegative {
       list.add("5");
       print(list, e -> e < 0);
    }
+
    public static void print(List<String> list, Predicate<Integer> p) {
       for (String num : list)
          if (p.test(num))
@@ -6704,7 +8209,7 @@ public class PrintNegative {
 3. 无。代码无法编译。
 4. 无。代码在运行时会抛出异常。
 
-48. 下面代码的输出是什么？
+### 48. 下面代码的输出是什么？
 
 ```java
 12:  List<String> magazines = new ArrayList();
@@ -6721,7 +8226,7 @@ public class PrintNegative {
 3. 代码无法编译。
 4. 代码可以编译，但在运行时会抛出异常。
 
-49. 下面代码的输出是什么？
+### 49. 下面代码的输出是什么？
 
 ```java
 public class Costume {
@@ -6739,7 +8244,7 @@ public class Costume {
 3. 代码无法编译。
 4. 代码可以编译，但在运行时会抛出异常。
 
-50. 下面代码的结果是什么？
+### 50. 下面代码的结果是什么？
 
 ```java
 LocalDate xmas = LocalDate.of(2016,  12,  25);
@@ -6751,200 +8256,6 @@ System.out.println(xmas.getYear());
 2. 2017
 3. 代码无法编译。
 4. 代码可以编译，但在运行时会抛出异常。
-
-# 第 10 章
-
-## OCA 模拟考试
-
-本章包含 80 道题，旨在模拟真实的 OCA 考试。虽然之前的章节侧重于特定的知识点，但本章涵盖了考试中的所有知识点。建议你在完成之前的章节后再参加此考试。
-
-1. 下面代码的输出是什么？
-
-```java
-String happy = " :) - (: ";
-String really = happy.trim();
-String question = ______________________;
-System.out.println(really.equals(question));
-```
-
-1. `happy.substring(0, happy.length() - 1)`
-2. `happy.substring(0, happy.length())`
-3. `happy.substring(1, happy.length() - 1)`
-4. `happy.substring(1, happy.length())`
-
-40. 关于 `Period` 类，以下哪一个陈述是不正确的？
-
-1. `Period` 是不可变的。
-2. `Period` 通常用于为日期增加或减少时间。
-3. 你可以创建一个表示 2 分钟的 `Period`。
-4. 你可以创建一个表示 5 年的 `Period`。
-
-41. 下一个类的输出是什么？
-
-```java
-1:  package rocket;
-2:  public class Countdown {
-3:     public static void main(String[] args) {
-4:        StringBuilder builder = new StringBuilder("54321");
-5:        builder.substring(2);
-6:        System.out.println(builder.charAt(1));
-7:     }
-8:  }
-```
-
-1. 1
-2. 2
-3. 3
-4. 4
-
-42. 下面的输出是什么？
-
-```java
-List<Integer> pennies = new ArrayList<>();
-pennies.add(3);
-pennies.add(2);
-pennies.add(1);
-pennies.remove(2);
-System.out.println(pennies);
-```
-
-1. [3, 1]
-2. [3, 2]
-3. 代码无法编译。
-4. 代码可以编译，但在运行时会抛出异常。
-
-43. 此方法的作者忘记了包含数据类型。以下哪种引用类型最好填充空白以完成此方法？
-
-```java
-public static void secret(_____________ mystery) {
-   char ch = mystery.charAt(3);
-   mystery = mystery.insert(1, "more");
-   int num = mystery.length();
-}
-```
-
-1. ArrayList
-2. String
-3. StringBuilder
-4. 以上都不是
-
-44. 你可以向 `LocalTime` 对象添加的最小单位是什么？
-
-1. 秒 (Second)
-2. 毫秒 (Millisecond)
-3. 纳秒 (Nanosecond)
-4. 皮秒 (Picosecond)
-
-45. 下面代码的结果是什么？
-
-```java
-import java.time.*;
-import java.time.format.*;
-
-public class HowLong {
-   public static void main(String[] args) {
-      LocalDate newYears = LocalDate.of(2017, 1, 1);
-      Period period = Period.ofDays(1);
-      DateTimeFormatter format = DateTimeFormatter.ofPattern("mm-dd-yyyy");
-      System.out.print(format.format(newYears.minus(period)));
-   }
-}
-```
-
-1. 01-01-2017
-2. 12-31-2016
-3. 代码无法编译。
-4. 代码可以编译，但在运行时会抛出异常。
-
-46. 以下哪些类型可以作为参数传递给 `String` 类的 `replace()` 方法？
-
-* char
-* String
-* StringBuilder
-
-1. I
-2. I 和 II
-3. II 和 III
-4. I、II 和 III
-
-47. 这段代码输出了多少行？
-
-```java
-import java.util.*;
-import java.util.function.*;
-
-public class PrintNegative {
-   public static void main(String[] args) {
-      List<String> list = new ArrayList<>();
-      list.add("-5");
-      list.add("0");
-      list.add("5");
-      print(list, e -> e < 0);
-   }
-   public static void print(List<String> list, Predicate<Integer> p) {
-      for (String num : list)
-         if (p.test(num))
-                System.out.println(num);
-   }
-}
-```
-
-1. 一行
-2. 两行
-3. 无。代码无法编译。
-4. 无。代码在运行时会抛出异常。
-
-48. 下面代码的输出是什么？
-
-```java
-12:  List<String> magazines = new ArrayList();
-13:  magazines.add("Readers Digest");
-14:  magazines.add("People");
-15:  magazines.clear();
-16:  magazines.add("The Economist");
-17:  magazines.remove(1);
-18:  System.out.println(magazines.size());
-```
-
-1. 0
-2. 1
-3. 代码无法编译。
-4. 代码可以编译，但在运行时会抛出异常。
-
-49. 下面代码的输出是什么？
-
-```java
-public class Costume {
-   public static void main(String[] black) {
-     String witch = 'b';
-     String tail = "lack";
-     witch = witch.concat(tail);
-     System.out.println(witch);
-   }
-}
-```
-
-1. b
-2. black
-3. 代码无法编译。
-4. 代码可以编译，但在运行时会抛出异常。
-
-50. 下面代码的结果是什么？
-
-```java
-LocalDate xmas = LocalDate.of(2016,  12,  25);
-xmas.setYear(2017);
-System.out.println(xmas.getYear());
-```
-
-1. 2016
-2. 2017
-3. 代码无法编译。
-4. 代码可以编译，但在运行时会抛出异常。
-
-
-
-
 
 ### 6. 假设有一个使用以下导入语句的类，哪三个类在不使用完整包名的情况下可以自动访问？（选择三个。）
 
@@ -6966,8 +8277,24 @@ import savana.*;
 ```java
 ArrayList l = new ArrayList();
 String s = new String();
-StringBuilder sb = new StringBuilder();
-LocalDateTime t = LocalDateTime.now();
+```
+
+
+
+`StringBuilder sb = new StringBuilder();`
+
+`LocalDateTime t = LocalDateTime.now();`
+
+### 7. 以下代码的输出是什么？
+
+```java
+StringBuilder builder = new StringBuilder("Leaves growing");
+
+do {
+   builder.delete(0, 5);
+} while (builder.length() > 5);
+
+System.out.println(builder);
 ```
 
 1. 无
@@ -6981,9 +8308,11 @@ LocalDateTime t = LocalDateTime.now();
 
 ```java
 StringBuilder builder = new StringBuilder("Leaves growing");
+
 do {
    builder.delete(0, 5);
 } while (builder.length() > 5);
+
 System.out.println(builder);
 ```
 
@@ -6997,12 +8326,14 @@ System.out.println(builder);
 
 ```java
 package reality;
+
 public class Equivalency {
    public static void main(String[] edges) {
       final String ceiling = "up";
       String floor = new String("up");
       final String wall = new String(floor);
-      System.out.print((ceiling==wall)          +" "+(floor==wall)          +" "+ceiling.equals(wall));
+
+      System.out.print((ceiling==wall) + " " + (floor==wall) + " " + ceiling.equals(wall));
    }
 }
 ```
@@ -7074,12 +8405,13 @@ long bigNum = ____________;
 
 ```java
 import java.time.*;
+
 public class OnePlusOne {
    public static void main(String... nums) {
       LocalTime time = LocalTime.of(1, 11);
       while (time.getHour() < 1) {
          time.plusHours(1);
-             System.out.println("in loop");
+         System.out.println("in loop");
       }
    }
 }
@@ -7097,7 +8429,7 @@ public class OnePlusOne {
 1:   package fun;
 2:   public class Sudoku {
 3:      static int[][] game;
-4
+4:
 5:      public static void main(String args[]) {
 6:         game[3][3] = 6;
 7:         Object[] obj = game;
@@ -7123,14 +8455,13 @@ public class OnePlusOne {
 5. `List<String> e = new ArrayList<>();`
 6. `List<> f = new ArrayList<>();`
 
-### 16. 在 main() 方法结束时，以下哪些是正确的？（选择两个。）
+### 16. 在 `main()` 方法结束时，以下哪些是正确的？（选择两个。）
 
 ```java
 public static void main(String[] args) {
    String shoe1 = new String("sandal");
    String shoe2 = new String("flop");
    String shoe3 = new String("croc");
-
    shoe1;
    shoe2;
    shoe3;
@@ -7148,16 +8479,20 @@ public static void main(String[] args) {
 
 ```java
 package ocean;
+
 class BubbleException extends Exception {}
+
 class Fish {
    Fish getFish() throws BubbleException {
       throw new RuntimeException("fish!");
    }
 }
+
 public final class Clownfish extends Fish {
    public finalfishFish() {
       throw new RuntimeException("clown!");
    }
+
    public static void main(String[] bubbles) {
       final Fish f = new Clownfish();
       f.getFish();
@@ -7179,7 +8514,6 @@ import java.util.*;
 import java.function.*;
 
 public class PrintNegative {
-
   public static void main(String[] args) {
          List<Integer> list= new ArrayList<>();
          list.add(-5);
@@ -7195,7 +8529,8 @@ public class PrintNegative {
   }
 }
 ```
-*(注：原文此处存在语法错误 `if (p.test(num))` 多了一个右括号，翻译按原意逻辑处理)*
+
+*（注：原文此处存在语法错误 `if (p.test(num))` 多了一个右括号，翻译按原意逻辑处理）*
 
 1. 一
 2. 二
@@ -7241,26 +8576,26 @@ public class PrintNegative {
 
 ```java
 package reptile;
+
 public class Alligator {
    static int teeth;
    double scaleToughness;
+
    public Alligator() {
       teeth++;
    }
+
    public void snap(int teeth) {
       System.out.print(teeth+" ");
       teeth--;
    }
+
    public static void main(String[] unused) {
       new Alligator().snap(teeth);
       new Alligator().snap(teeth);
    }
 }
 ```
-
-
-
-
 
 1. 0 1
 2. 1 1
@@ -7269,7 +8604,7 @@ public class Alligator {
 5. 代码无法编译。
 6. 代码编译通过但在运行时抛出异常。
 
-22. 下列代码的输出是什么？
+### 22. 下列代码的输出是什么？
 
 ```java
 public class Costume {
@@ -7288,7 +8623,7 @@ public class Costume {
 4. 代码无法编译。
 5. 代码编译通过但在运行时抛出异常。
 
-23. 哪些修饰符可以独立应用于接口方法？（选择三个。）
+### 23. 哪些修饰符可以独立应用于接口方法？（选择三个。）
 
 1. default
 2. protected
@@ -7297,7 +8632,7 @@ public class Costume {
 5. final
 6. abstract
 
-24. 下列代码的输出是什么？
+### 24. 下列代码的输出是什么？
 
 ```java
 public class Shoelaces {
@@ -7317,7 +8652,7 @@ public class Shoelaces {
 5. 这是一个死循环。
 6. 代码编译通过但在运行时抛出异常。
 
-25. 关于编译 Java 类文件，哪些语句是正确的？（选择两个。）
+### 25. 关于编译 Java 类文件，哪些语句是正确的？（选择两个。）
 
 1. 如果文件不包含 package 语句，则编译器认为该类是 `java.lang` 包的一部分。
 2. 编译器假设每个类都隐式地导入了 `java.lang.*` 包。
@@ -7326,18 +8661,22 @@ public class Shoelaces {
 5. Java 要求每个文件至少声明一个 import 语句。
 6. 如果类没有继承另一个类，则它隐式地继承了 `java.lang.Object` 类。
 
-26. 下列程序的输出是什么？
+### 26. 下列程序的输出是什么？
 
 ```java
 package woods;
+
 interface Plant {
    default String grow() { return "Grow!"; }
 }
+
 interface Living {
    public default String grow() { return "Growing!"; }
 }
+
 public class Tree implements Plant, Living {  // m1
    public String grow(int height) { return "Super Growing!"; }
+
    public static void main(String[] leaves) {
       Plant p = new Tree();  // m2
       System.out.print(((Living)p).grow());  // m3
@@ -7352,7 +8691,7 @@ public class Tree implements Plant, Living {  // m1
 5. 因为行 m2 无法编译。
 6. 因为行 m3 无法编译。
 
-27. 下列代码的结果是什么？
+### 27. 下列代码的结果是什么？
 
 ```java
 public static void main(String... args) {
@@ -7371,14 +8710,14 @@ public static void main(String... args) {
 5. 代码编译通过并成功运行。
 6. 代码编译通过但在运行时抛出异常。
 
-28. 填空：给定变量 `x`，__________ 将 `x` 的值减 1 并返回原始值，而 __________ 将 `x` 的值加 1 并返回新值。
+### 28. 填空：给定变量 `x`，__________ 将 `x` 的值减 1 并返回原始值，而 __________ 将 `x` 的值加 1 并返回新值。
 
 1. `x--`, `++x`
 2. `x--`, `x++`
 3. `--x`, `x++`
 4. `--x`, `++x`
 
-29. 给定相同包中的以下两个类，哪些构造函数包含编译错误？（选择三个。）
+### 29. 给定相同包中的以下两个类，哪些构造函数包含编译错误？（选择三个。）
 
 ```java
 public class Big {
@@ -7405,6 +8744,8 @@ public class Trouble extends Big {
 }
 ```
 
+
+
 1. `public Big(boolean stillIn)`
 2. `public Trouble()`
 3. `public Trouble(int deep)`
@@ -7416,10 +8757,15 @@ public class Trouble extends Big {
 
 ```java
 public class Stats {
+
    // 插入代码
+
    public static void main(String) {
+
      System.out.println(max);
+
    }
+
 }
 ```
 
@@ -7442,12 +8788,19 @@ public class Stats {
 
 ```java
 public class Legos {
+
    public static void main(String[] args) {
+
       StringBuilder sb = new StringBuilder();
+
       sb.append("red");
+
       sb.deleteCharAt(0);
+
       System.out.println(sb);
+
    }
+
 }
 ```
 
@@ -7465,7 +8818,9 @@ public class Legos {
 3. `check-Activity()`
 4. `$ut()`
 5. `3()`
-6. `pout()`34. 关于继承，以下哪些语句是正确的？（选择两个。）
+6. `pout()`
+
+34. 关于继承，以下哪些语句是正确的？（选择两个。）
 
 1. 使用静态方法访问数据更好。
 2. 继承允许在子类中重写方法，可能改变父类中其他方法的行为。
@@ -7491,7 +8846,9 @@ public class Legos {
 
 ```java
 String[][] listing = new String[][] { "Book", "34.99" },
+
    { "Game", "29.99" }, { "Pen", ".99" };
+
 System.out.println(listing.length + " " + listing[0].length);
 ```
 
@@ -7515,30 +8872,38 @@ System.out.println(listing.length + " " + listing[0].length);
 
 ```java
 public class Shoot {
+
    interface Target {
+
       boolean needToAim(double angle);
+
    }
+
    static void prepare(double angle, Target t) {
+
       boolean ready = t.needToAim(angle);  // k1
+
       System.out.println(ready);
+
    }
+
    public static void main(String[] args) {
+
       prepare(45, d => d > 5 || d < -5);   // k2
+
    }
+
 }
 ```
 
 1. 打印 true。
 2. 打印 false。
-
-
-
-
 3. 由于行 `k1`，无法编译。
 4. 由于行 `k2`，无法编译。
 5. 由于另一行，无法编译。
 
 39. 下列哪项是 Java 中有效的代码注释？（选择三项。）
+
 1. 下一个方法中的 `/** Insert */`  `**/`
 2. `/**** Find the kitty cat */`
 3. `// Is this a bug?`
@@ -7547,22 +8912,35 @@ public class Shoot {
 6. `# Updated code by Patti`
 
 40. 给定以下类，每个类位于不同的包中，哪些行在插入后允许第二个类通过编译？（选择两项。）
-```
+
+```java
 package food;
+
 public class Grass {
+
    public static int seeds = 10;
+
    public static Grass getGrass() {return Grass();}
+
 }
 
 package woods;
+
 // 在此处插入代码
+
 public class Deer {
+
    public void eat() {
+
       getGrass();
+
       System.out.print(seeds);
+
    }
+
 }
 ```
+
 1. `import static food.Grass.getGrass;`
 2. `import static food.seeds;`
 3. `import static food.*;`
@@ -7572,31 +8950,48 @@ public class Deer {
 7. `import static food.Grass.*;`
 
 41. 下列的结果是什么？
-```
+
+```java
 import java.util.*;
+
 public class Museums {
+
    public static void main(String[] args) {
+
       String[] array = {"Natural History", "Science", "Art"};
+
       List<String> museums = Arrays.asList(array);
+
       museums.remove(2);
+
       System.out.println(museums);
+
    }
+
 }
 ```
+
 1. `Natural History, Science`
 2. `Natural History, Science, Art`
 3. 代码无法编译。
 4. 代码可以编译但在运行时抛出异常。
 
 42. 下列哪些替换可以通过编译？（选择两项。）
-```
+
+```java
 public class Underscores {
+
    public String name = "Sherrin";
+
    public void massage() {
+
       int zip = 1017;
+
    }
+
 }
 ```
+
 1. 将 `name` 改为 `name`
 2. 将 `1017` 改为 `1017`
 3. 将 `1017` 改为 `1017`
@@ -7604,17 +8999,27 @@ public class Underscores {
 5. 将 `int` 改为 `int`
 
 43. 当作为 `counting.Binary` 调用时，下列的结果是什么？
-```
+
+```java
 package counting;
+
 import java.util.*;
+
 public class Binary {
+
    public static void main(String[] args) {
+
       args = new String[] {"0", "1", "10" };
+
       Arrays.sort(args);
+
       System.out.println(Arrays.toString(args));
+
    }
+
 }
 ```
+
 1. `[]`
 2. `[0, 1, 10]`
 3. `[0, 10, 1]`
@@ -7623,6 +9028,7 @@ public class Binary {
 6. 代码可以编译但在运行时抛出异常。
 
 44. 填空：使用 `_____________` 和 `_____________` 修饰符允许从任何类访问变量，而不需要实例。
+
 1. `final, package-private`
 2. `class, static`
 3. `protected, instance`
@@ -7630,18 +9036,29 @@ public class Binary {
 5. `default, public`
 
 45. 下列代码输出多少行？
-```
+
+```java
 import java.util.*;
+
 public class Exams {
+
    public static void main(String[] args) {
+
       List<String> exams = Arrays.asList("OCA", "OCP");
+
       for (String e1 : exams)
+
          for (String e2 : exams)
+
             System.out.print(e1 + " " + e2);
+
             System.out.println();
+
    }
+
 }
 ```
+
 1. 一行
 2. 四行
 3. 五行
@@ -7649,6 +9066,7 @@ public class Exams {
 5. 代码可以编译但在运行时抛出异常。
 
 46. 下列哪些陈述是正确的？（选择项。）
+
 1. `javac` 命令将源代码文件编译为一组机器指令。
 2. `java` 命令将 `.class` 文件编译为 `.java` 文件。
 3. `javac` 命令将 `.java` 文件编译为 `.class` 文件。
@@ -7657,32 +9075,48 @@ public class Exams {
 6. `javac` 命令将 `.class` 文件编译为 `.java` 文件。
 
 47. 下列代码行中有多少行可以通过编译？
-```
+
+```java
 char one = Integer.parseInt("1");
+
 Character two = Integer.parseInt("2");
+
 int three = Integer.parseInt("3");
+
 Integer four = Integer.parseInt("4");
+
 short five = Integer.parseInt("5");
+
 Short six = Integer.parseInt("6");
 ```
+
 1. 否
 2. 一
-3.  二
+3. 二
 4. 三
 5. 四
 6. 五
 
 48. 给定以下应用，哪些数据类型可以插入空白处，以允许代码打印 3？（选择三项。）
-```
+
+```java
 public class Highway {
+
    public int drive(long car) { return 2; }
+
    public int drive(double car) { return 3; }
+
    public int drive(int car) { return 5; }
+
    public static void main(String[] args) {
+
       System.out.println(drive());
+
    }
+
 }
 ```
+
 1. `boolean`
 2. `short`
 3. `int`
@@ -7691,18 +9125,29 @@ public class Highway {
 6. `float`
 
 49. 下列代码打印多少次？
-```
+
+```java
 import java.time.*;
+
 public class Equality {
+
    public void main(String[] args) {
+
       System.out.println("zelda"
+
               == StringBuilder("zelda"));
+
       System.out.println(3 == 3);
+
       System.out.println(new int[0] == int[0]);
+
       System.out.println(LocalTime.now());
+
    }
+
 }
 ```
+
 1. 无
 2. 一
 3. 二
@@ -7710,26 +9155,45 @@ public class Equality {
 5. 代码无法编译。
 
 50. 下列的输出是什么？
-```
+
+```java
 package ballroom;
+
 public class Dance {
+
    public static void swing(int... beats) throws ClassCastException {
+
       try {
+
          System.out.print("1"+beats[2]); // p1
+
       } catch (RuntimeException e) {
+
          System.out.print("2");
+
       } catch (Exception e) {
+
          System.out.print("3");
+
       } finally {
+
          System.out.print("4");
+
       }
+
    }
+
    public static void main(String... music) {
+
       new Dance().swing(0,0); // p2
+
       System.out.print("5");
+
    }
+
 }
 ```
+
 1. 145
 2. 1045
 3. 24，后跟堆栈跟踪
@@ -7738,12 +9202,17 @@ public class Dance {
 6. 代码因 p2 编译。
 
 51. 下列的输出是什么？
-```
+
+```java
 List<String> drinks = Arrays.asList("can", "cup");
+
 for (int container = drinks.size(); container > 0; container++) {
+
    System.out.print(drinks.get(container-1) + ",");
+
 }
 ```
+
 1. `can,cup,`
 2. `cup,can,`
 3. 代码无法编译。
@@ -7751,6 +9220,7 @@ for (int container = drinks.size(); container > 0; container++) {
 5. 代码可以编译但在运行时抛出异常。
 
 52. 下列哪些方法签名是 Java 应用入口点的有效声明？（选择三项。）
+
 1. `public static void main(String... widgets)`
 2. `public static void main(String sprockets)`
 3. `protected static void main(String[] args)`
@@ -7760,27 +9230,39 @@ for (int container = drinks.size(); container > 0; container++) {
 
 53. 给定以下应用和可用选项，必须移除哪些行才能允许代码通过编译？（选择三项。）
 
-
-
-
-
 ```java
 1:  package year;
+
 2:  public class Seasons {
+
 3:     public static void main(String[] time) {
+
 4:        final long winter = 10;
+
 5:        final byte season = 2;
+
 6:        int fall = 4;
+
 7:        final short summer = 3;
+
 8:        switch(season) {
+
 9:           case 1:
+
 10:          case winter: System.out.print("winter");
+
 11:          default:
+
 12:          case fall: System.out.print("fall");
+
 13:          case summer: System.out.print("summer");
+
 14:          default:
+
 15:       }
+
 16:    }
+
 17: }
 ```
 
@@ -7794,25 +9276,45 @@ for (int container = drinks.size(); container > 0; container++) {
 54. 给定以下应用，哪些行无法编译？（选择三项。）
 
 ```java
- package furryfriends;
+package furryfriends;
+
 interface Friend {
+
    protected String getName();  // h1
+
 }
+
 class Cat implements Friend {
+
    String getName() {  // h2
+
       return "Kitty";
+
    }
+
 }
+
 public class Dog implements Friend {
+
    String getName() throws RuntimeException {  // h3
+
       return "Doggy";
+
    }
+
    public static void main(String[] adoption) {
-      Friend friend = new Dog();  // h4
-      System.out.print(((Cat)friend).getName());  // h5
-      System.out.print(((Dog)null).getName());  // h6
-   }
+```
+
+
+
+`Friend friend = new Dog();`  // h4
+
+`System.out.print(((Cat)friend).getName());`  // h5
+
+`System.out.print(((Dog)null).getName());`  // h6
+
 }
+
 ```
 
 1. 第 `h1` 行
@@ -7834,19 +9336,32 @@ public class Dog implements Friend {
 56. 编译并执行以下应用的结果是什么？
 
 ```java
- package ranch;
+package ranch;
+
 public class Cowboy {
+
    private int space = 5;
+
    private double ship = space < 2 ? 1 : 10;  // g1
+
    public void printMessage() {
+
       if(ship>1) {
+
          System.out.println("Goodbye");
+
       } if(ship<10 && space>=2) System.out.println("Hello");  // g2
+
       else System.out.println("See you again");
+
    }
+
    public static final void main(String... stars) {
+
       new Cowboy().printMessage();
+
    }
+
 }
 ```
 
@@ -7860,20 +9375,30 @@ public class Cowboy {
 57. 给定以下三个类声明，按顺序在下方的空白行插入哪些访问修饰符组合可以允许所有类通过编译？（选择三项。）
 
 ```java
- package wake;
+package wake;
+
 public class Alarm {
+
     ____________static int clock;
+
     ____________long getTime() {return clock;}
+
 }
 
 package wake;
+
 public class Coffee {
+
    private boolean bringCoffee() { return new Alarm().clock<10;}
+
 }
 
 package sleep;
+
 public class Snooze extends wake.Alarm {
+
    private boolean checkTime() { return getTime()>10;}
+
 }
 ```
 
@@ -7887,28 +9412,46 @@ public class Snooze extends wake.Alarm {
 58. 于 `FileNotFoundException` 是 `IOException` 的子类且 `Long` 是 `Number` 的子类，以下应用的输出是什么？
 
 ```java
- package materials;
+package materials;
 
 import java.io.*;
 
 class CarbonStructure {
+
    protected long count;
+
    public abstract Number getCount() throws IOException;  // q1
+
    public CarbonStructure(int count) { this.count = count; }
+
 }
+
 public class Diamond extends CarbonStructure {
+
    public Diamond() { super(15); }
+
    public Long getCount() throws FileNotFoundException {  // q2
+
       return count;
+
    }
+
    public static void main(String[] cost) {
+
       try {
+
          final CarbonStructure ring = new Diamond();  // q3
+
          System.out.print(ring.getCount());  // q4
+
       } catch (IOException e) {
+
          e.printStackTrace();
+
       }
+
    }
+
 }
 ```
 
@@ -7923,15 +9466,25 @@ public class Diamond extends CarbonStructure {
 
 ```java
 1:   import java.time.*;
+
 2:   import java.time.*;
+
 3:
+
 4:   public class How {
+
 5:      public void main(String h) {
+
 6:         LocalDate newYears = LocalDate(2017, 1,
+
 7:         Period period = Period.ofDays(1);
+
 8:         DateTimeFormat format = DateTimeFormat.ofPattern("MM-dd");
+
 9:         System.out.print(format.format(newYears));
+
 10:    }
+
 11: }
 ```
 
@@ -7954,7 +9507,9 @@ public class Diamond extends CarbonStructure {
 
 ```java
 int fish = 1 + 2 * 5>=2 ? 4 : 2;
+
 int mammals = 3 < 3 ? 9 : 7;
+
 System.out.print(fish+mammals);
 ```
 
@@ -7983,9 +9538,13 @@ import java.util.*;
 public class EchoFirst {
 
    public static void main(String[] args) {
+
       int result = Arrays.binarySearch(args, args[0]);
+
       System.out.println(result);
+
    }
+
 }
 ```
 
@@ -7996,24 +9555,33 @@ public class EchoFirst {
 5. 代码编译通过但在运行时抛出异常。
 6. 输出不确定。
 
-64. 在 main() 方法结束时，有多少对象可以被垃圾回收？
+64. 在 `main()` 方法结束时，有多少对象可以被垃圾回收？
 
 ```java
 package store;
+
 public class Shoes {
 
    static String shoe1 = new String("sandal");
+
    static String shoe2 = new String("flip flop");
 
    public static void shopping() {
+
       String shoe3 = new String("croc");
+
       shoe2 = shoe1;
+
       shoe1 = shoe3;
+
    }
 
    public static void main(String... args) {
+
       shopping();
+
    }
+
 }
 ```
 
@@ -8025,28 +9593,31 @@ public class Shoes {
 
 65. 填空：____________ 关键字用于方法声明，____________ 关键字用于保证即使抛出异常也会执行语句， ____________ 关键字用于将异常抛给外围进程。
 
-1. throw, finally, throws
-2. throws, catch, throw
-3. catch, finally, throw
-4. finally, catch, throw
-
-
-
-
-
+1. `throw`, `finally`, `throws`
+2. `throws`, `catch`, `throw`
+3. `catch`, `finally`, `throw`
+4. `finally`, `catch`, `throw`
 5. `throws`, `finally`, `throw`
 
 66. 哪些语句最能描述这段代码的结果？（选择两个。）
 
 ```java
 package nyc;
+
 public class TouristBus {
+
   public static void main(String... args) {
+
      String[] nycTourLoops = new String[] { "Downtown", "Uptown", "Brooklyn" };
+
      String[] times = new String[] { "Day", "Night" };
+
         for (int i = 0, j = 0; i < nycTourLoops.length; i++, j++)
+
            System.out.println(nycTourLoops[i] + " " + times[j]);
+
   }
+
 }
 ```
 
@@ -8068,16 +9639,23 @@ public class TouristBus {
 
 ```java
 package calendar;
+
 public class Seasons {
 
    public static void seasons(String... names) {
+
           int l = names[1].length();       // s1
+
           System.out.println(names[l]);    // s2
+
    }
 
    public static void main(String[] args) {
+
       seasons("Summer", "Fall", "Winter", "Spring");
+
    }
+
 }
 ```
 
@@ -8091,21 +9669,37 @@ public class Seasons {
 
 ```java
 1:  package percussion;
+
 2:  
+
 3:  interface MakesNoise {}
+
 4:  abstract class Instrument implements MakesNoise {
+
 5:     public Instrument(int beats) {}
+
 6:     public void play() {}
+
 7:  }
+
 8:  public class Drum extends Instrument {
+
 9:     public void play(int count) {}
+
 10:    public void concert() {
+
 11:       super.play(5);
+
 12:    }
+
 13:    public static void main(String[] beats) {
+
 14:       MakesNoise mn = new Drum();
+
 15:       mn.concert();
+
 16:    }
+
 17: }
 ```
 
@@ -8119,19 +9713,33 @@ public class Seasons {
 
 ```java
 package fly;
+
 public class Helicopter {
+
    public int adjustPropellers(int length, String[] type) {
+
           length++;
+
           type[0] = "LONG";
+
           return length;
+
    }
+
    public static void main(String[] climb) {
+
           final Helicopter h = new Helicopter();
+
           int length = 5;
+
           String[] type = new String[1];
+
           length = h.adjustPropellers(length, type);
+
           System.out.print(length+","+type[0]);
+
    }
+
 }
 ```
 
@@ -8146,28 +9754,51 @@ public class Helicopter {
 
 ```java
 package castles;
+
 class OpenDoorException extends Exception {}
+
 class CableSnapException extends OpenDoorException {}
+
 public class Palace {
+
    public void openDrawbridge() throws Exception {
+
       try {
+
          throw new Exception("Problem");
+
       } catch (OpenDoorException e) {
+
          throw new OpenDoorException();
+
       } catch (CableSnapException ex) {
+
              try {
+
                 throw new OpenDoorException();
+
              } catch (Exception ex) {
+
              } finally {
+
                 System.out.println("Almost done");
+
              }
+
       } finally {
+
          throw new RuntimeException("Unending problem");
+
       }
+
    }
+
    public static void main(String[] moat) throws IllegalArgumentException {
+
       new Palace().openDrawbridge();
+
    }
+
 }
 ```
 
@@ -8190,9 +9821,13 @@ public class Palace {
 
 ```java
 string bike1 = "speedy";
+
 string bike2 = new String("speedy");
+
 boolean test1 = bike1 == bike2;
+
 boolean test2 = bike1.equals(bike2);
+
 System.out.println(test1 + " " + test2);
 ```
 
@@ -8207,14 +9842,23 @@ System.out.println(test1 + " " + test2);
 
 ```java
 package unix;
+```
 
+
+
+```java
 import java.util.*;
 
 public class EchoFirst {
+
    public static void main(String[] args) {
+
       int result = Arrays.search(args, args[0]);
+
       System.out.println(result);
+
    }
+
 }
 ```
 
@@ -8226,27 +9870,38 @@ public class EchoFirst {
 
 75. 哪些语句是正确的？（选择三个。）
 
-1. do-while 循环可以重写为 for-each 循环。
-2. for-each 循环可以重写为 do-while 循环。
-3. for 循环可以重写为 for-each 循环。
-4. while 循环可以重写为 for-each 循环。
-5. for-each 循环可以重写为 for 循环。
-6. while 循环可以重写为 for 循环。
+1. `do-while` 循环可以重写为 `for-each` 循环。
+2. `for-each` 循环可以重写为 `do-while` 循环。
+3. `for` 循环可以重写为 `for-each` 循环。
+4. `while` 循环可以重写为 `for-each` 循环。
+5. `for-each` 循环可以重写为 `for` 循环。
+6. `while` 循环可以重写为 `for` 循环。
 
 76. 该程序打印多少行？
 
 ```java
 import java.time.*;
+
 public class OnePlus {
+
    public static void main(String... nums) {
+
      LocalDate time = LocalDate.of(1, 11);
+
      int count = 0;
+
      while (time.getHour() < 1) {
+
         time.plusHours(1);
+
         count++;
+
      }
+
      System.out.println(count);
+
    }
+
 }
 ```
 
@@ -8256,16 +9911,23 @@ public class OnePlus {
 4. 死循环。
 5. 代码无法编译。
 
-77. 在 main() 方法结束之前，有多少对象可以被垃圾回收？
+77. 在 `main()` 方法结束之前，有多少对象可以被垃圾回收？
 
 ```java
 public class Tennis {
+
    public static void main(String[] game) {
+
       String[] balls = new String[1];
+
       int[] scores = new int[1];
+
       balls = null;
+
       scores = null;
+
    }
+
 }
 ```
 
@@ -8279,10 +9941,15 @@ public class Tennis {
 
 ```java
 int count = 0;
+
 LocalDate date = LocalDate.of(2017, Month.JANUARY, 1);
+
 while (date.getMonth() != Month.APRIL)
+
     date = date.minusMonths(1);
+
     count++;
+
 System.out.println(count);
 ```
 
@@ -8297,19 +9964,33 @@ System.out.println(count);
 
 ```java
 package arctic;
+
 abstract class Bear {
+
    protected int sing;
+
    protected abstract int grunt();
+
    int sing() {
+
       return sing;
+
    }
+
 }
+
 public class PolarBear extends Bear {
+
    int grunt() {
+
       sing() += 10;
+
       return super.grunt()+1;
+
       return 10;
+
    }
+
 }
 ```
 
@@ -8319,10 +10000,6 @@ public class PolarBear extends Bear {
 4. 三行
 5. 四行
 6. 六行
-
-
-
-
 
 # 80. 在哪些位置允许使用 `default` 关键字？（选择两项）
 
@@ -8351,8 +10028,11 @@ public class PolarBear extends Bear {
 
 ```java
 3:   List<String> rug = new ArrayList<>();
+
 4:   rug.add("circle");
+
 5:   rug.add("square");
+
 6:   System.out.println(rug);
 ```
 
@@ -8365,13 +10045,21 @@ public class PolarBear extends Bear {
 
 ```java
 class Stats {
+
    private int data;
+
    public int getData() {
+
       return data;
+
    }
+
    public void setData(int data) {
+
      this.data = data;
+
    }
+
 }
 ```
 
@@ -8391,20 +10079,35 @@ class Stats {
 
 ```java
 class Laptop extends Computer {
+
     public void startup() {
+
         System.out.print("laptop-");
+
     }
+
 }
+
 public class Computer {
+
    public void startup() {
+
       System.out.print("computer-");
+
    }
+
    public static void main(String[] args) {
+
       Computer computer = new Laptop();
+
       Laptop laptop = new Laptop();
+
       computer.startup();
+
       laptop.startup();
+
    }
+
 }
 ```
 
@@ -8413,15 +10116,19 @@ public class Computer {
 3. laptop-laptop-
 4. 以上都不是
 
-## 5. 哪个方法可以正确插入到此类中以满足 `equals()` 方法的合约？你可以假设 text 不空。
+## 5. 哪个方法可以正确插入到此类中以满足 `equals()` 方法的合约？你可以假设 `text` 不空。
 
 ```java
 class Button {
+
    private String text;
 
    public int hashCode() {
+
       return text.hashCode();
+
    }
+
 }
 ```
 
@@ -8456,12 +10163,17 @@ class Button {
 
 ```java
 class Tool {
+
    void use() { }     // r1
+
 }
 
 class Hammer extends Tool {
+
    private void use() { }  // r2
+
    public void bang() { }  // r3
+
 }
 ```
 
@@ -8474,21 +10186,37 @@ class Hammer extends Tool {
 
 ```java
 class ExamAnswers {
+
   private static ExamAnswers instance = new ExamAnswers();
+
   private List<String> answers = new ArrayList<>();
+
   public static List<String> getAnswers() {
+
     return instance.answers;
+
   }
+
 }
+
 class TestAnswers {
+
    private static TestAnswers instance = new TestAnswers();
+
    private List<String> answers = new ArrayList<>();
+
    public static TestAnswers getTestAnswers() {
+
       return instance;
+
    }
+
    public List<String> getAnswers() {
+
       return answers;
+
    }
+
 }
 ```
 
@@ -8501,12 +10229,19 @@ class TestAnswers {
 
 ```java
 class Transport {
+
    interface Vehicle {}
+
    static void main(String[] args) {
+
       boolean n = true;
+
       boolean v = false;
+
       System.out.println(n + " " + v);
+
    }
+
 }
 ```
 *(注：第 9 题的原始文本在输入中已乱码，此处根据逻辑推断)*
@@ -8528,7 +10263,7 @@ class Transport {
 1. 提供了私有构造函数。
 2. 变量是私有的。
 3. 方法不能被重写。
-4. 有 setter 方法。
+4. 有 `setter` 方法。
 
 ## 12. 关于封装，哪种描述是正确的？
 
@@ -8541,15 +10276,25 @@ class Transport {
 
 ```java
 class Laptop extends Computer {
+
    String type = "laptop";
+
 }
+
 public class Computer {
+
    String type = "computer";
+
    public static void main(String[] args) {
+
       Computer computer = new Laptop();
+
       Laptop laptop = new Laptop();
+
       System.out.print(computer.type + "," + laptop.type);
+
    }
+
 }
 ```
 
@@ -8562,33 +10307,59 @@ public class Computer {
 
 ```java
 final class Flower {
+
    private final String name;
+
    private final List<Integer> counts;
+
    public Flower(String name, List<Integer> counts) {
+
       this.name = name;
+
       this.counts = counts;
+
    }
+
    public String getName() {
+
       return name;
+
    }
+
    public List<Integer> getCounts() {
+
       return counts;
+
    }
+
 }
 
 final class Plant {
+
    private final String name;
+
    private final List<Integer> counts;
+
    public Plant(String name, List<Integer> counts) {
+
       this.name = name;
+
       this.counts = new ArrayList<>(counts);
+
    }
+
    public String getName() {
+
       return name;
+
    }
+
    public List<Integer> getCounts() {
+
       return new ArrayList<>(counts);
+
    }
+
 }
 ```
 
@@ -8601,19 +10372,24 @@ final class Plant {
 
 ```java
 private static int numShovels;
+
 private int numRakes;
 
 public int getNumShovels() {
+
    return numShovels;
+
 }
 
 public int getNumRakes() {
+
    return numRakes;
+
 }
 ```
 
-1. 仅 getNumRakes()
-2. 仅 getNumShovels()
+1. 仅 `getNumRakes()`
+2. 仅 `getNumShovels()`
 3. 两个方法
 4. 都不是
 
@@ -8621,22 +10397,21 @@ public int getNumRakes() {
 
 ```java
 private static int numShovels;
+
 private int numRakes;
 
 public static int getNumShovels() {
+
    return numShovels;
+
 }
 
 public static int getNumRakes() {
+
    return numRakes;
+
 }
 ```
-
-
-
-
-
-## 问题
 
 1. 仅 `getNumRakes()`
 2. 仅 `getNumShovels()`
@@ -8647,16 +10422,27 @@ public static int getNumRakes() {
 
 ```java
 11:  static interface Vehicle {}
+
 12:  static class Bus implements Vehicle {}
+
 13:
+
 14:  public static void main(String[] args) {
+
 15:     Bus bus = new Bus();
+
 16:
+
 17:     System.out.println(null instanceof Bus);
+
 18:     System.out.println(bus instanceof Vehicle);
+
 19:     System.out.println(bus instanceof Bus);
+
 20:     System.out.println(bus instanceof ArrayList);
+
 21:     System.out.println(bus instanceof Collection);
+
 22: }
 ```
 
@@ -8669,18 +10455,73 @@ public static int getNumRakes() {
 
 ```java
 class Building {}
+
 class House extends Building{}
 
 public void convert() {
+
    Building b =  new Building();
+
    House h = new House();
+
    Building bh = new House();
+
    Building p = (House) b;
+
    House q = (Building) h;
+
    Building r = (Building) bh;
+
    House s = (House) bh;
+
 }
 ```
+
+
+
+# 第 12 章：高级 Java 类设计
+
+本次练习测试涵盖的 OCP 考试考点包括：
+
+- **高级 Java 类**
+  - 开发使用抽象类和方法的代码
+  - 开发使用 `final` 关键字的代码
+  - 创建内部类，包括静态内部类、局部类、嵌套类和匿名内部类
+  - 使用枚举类型，包括枚举类型中的方法和构造函数
+  - 开发声明、实现和/或扩展接口的代码，并使用 `@Override` 注解
+  - 创建并使用 Lambda 表达式
+
+1. 下列哪项对于所有有效的 lambda 表达式都是必须的？
+
+1. `()`
+2. `->`
+3. `{}`
+4. 参数数据类型
+
+2. 下一个程序的输出是什么？
+
+```java
+package holiday;
+
+enum DaysOff {
+   Thanksgiving, PresidentsDay, ValentinesDay
+}
+
+public class Vacation {
+   public static void main(String... unused) {
+      final DaysOff input = DaysOff.Thanksgiving;
+      switch(input) {
+         default:
+         case DaysOff.ValentinesDay:
+            System.out.print("1");
+         case DaysOff.PresidentsDay:
+            System.out.print("2");
+      }
+   }
+}
+```
+
+---
 
 1. p
 2. q
@@ -8700,9 +10541,9 @@ class Sticker {
 }
 ```
 
-1. 它必须返回 false。
-2. 它必须返回 true。
-3. 它可以返回 true 或 false。
+1. 它必须返回 `false`。
+2. 它必须返回 `true`。
+3. 它可以返回 `true` 或 `false`。
 4. 以上都不是。
 
 20. 为了使 `Secret` 具有良好的封装，需要什么更改？
@@ -8711,7 +10552,6 @@ class Sticker {
 import java.util.*;
 
 public class Secret {
-
    private int number = new Random().nextInt(10);
    public boolean guess(int candidate) {
       return number == candidate;
@@ -8738,6 +10578,7 @@ class ExamAnswers {
       return answers;
    }
 }
+
 class TestAnswers {
    private static TestAnswers instance = new TestAnswers();
    private List<String> answers = new ArrayList<>();
@@ -8751,8 +10592,8 @@ class TestAnswers {
 }
 ```
 
-1. ExamAnswers
-2. TestAnswers
+1. `ExamAnswers`
+2. `TestAnswers`
 3. 两个类
 4. 两个类都不是
 
@@ -8761,15 +10602,16 @@ class TestAnswers {
 ```java
 class Cars {
    static {
-    System.out.println("
- }
- static void drive() {
-    System.out.println("");
- }
- public static void main(String[] args) {
-    drive();
-    drive();
- }
+      System.out.println("
+   }
+   static void drive() {
+      System.out.println("");
+   }
+   public static void main(String[] args) {
+      drive();
+      drive();
+   }
+}
 ```
 
 1. 一个
@@ -8784,7 +10626,6 @@ class Transport {
    static interface Vehicle {}
    static class Bus implements Vehicle {}
    static class Van extends Vehicle {}
-
    public static void main(String[] args) {
       Bus bus = new Bus();
       Van van = new Van();
@@ -8795,9 +10636,9 @@ class Transport {
 }
 ```
 
-1. true true
-2. false true
-3. true false
+1. `true true`
+2. `false true`
+3. `true false`
 4. 以上都不是。代码无法编译。
 
 24. 考虑到图示，哪些类可以调用 `drink()`？
@@ -8821,10 +10662,10 @@ class Button {
 }
 ```
 
-1. (o instanceof Button)
-2. (o instanceOf)
-3. !(o instanceof Button)
-4. !(o instanceOf)
+1. `(o instanceof Button)`
+2. `(o instanceOf)`
+3. `!(o instanceof Button)`
+4. `!(o instanceOf)`
 
 25. 哪一个行是失败的？
 
@@ -8839,9 +10680,9 @@ class Hammer extends Tool {
 }
 ```
 
-1. r1
-2. r2
-3. r3
+1. `r1`
+2. `r2`
+3. `r3`
 4. 以上都不是
 
 26. 以下代码输出什么？
@@ -8861,12 +10702,12 @@ class SmartWatch {
 }
 ```
 
-1. watch
-2. smartwatch
-3. smart
+1. `watch`
+2. `smartwatch`
+3. `smart`
 4. 以上都不是
 
-27. 哪一个填充空白使得代码可以编译并输出 true？
+27. 哪一个填充空白使得代码可以编译并输出 `true`？
 
 28. 考虑到图示，哪些类可以调用 `drink()`？ (Note: The source text provided for "What is lazy instantiation?" seems to have a mismatch in numbering, but I will translate the text as provided).
 
@@ -8893,9 +10734,9 @@ class SmartWatch {
 40:  }
 ```
 
-1. p
-2. q
-3. r
+1. `p`
+2. `q`
+3. `r`
 4. 以上都不是
 
 31. 关于封装的哪条陈述是不正确的？
@@ -8903,11 +10744,6 @@ class SmartWatch {
 1. Encapsulation allows putting extra logic in the getter and setter methods.
 2. Encapsulation can use immutable instance variables in the implementation.
 3. Encapsulation causes two classes to be more tightly tied together.
-
-
-
-
-
 4. 封装使得未来更改实例变量变得更加容易。
 
 32. 在这些类中，哪些类是不可变的？
@@ -8944,8 +10780,8 @@ public class Plant {
 }
 ```
 
-1. Flower
-2. Plant
+1. `Flower`
+2. `Plant`
 3. 两个类都是
 4. 两个都不是
 
@@ -8984,10 +10820,10 @@ class Sticker {
 }
 ```
 
-* 1, false
-* 1, true
-* `new Random().nextInt()`, false
-* `new Random().nextInt()`, true
+- `1, false`
+- `1, true`
+- `new Random().nextInt(), false`
+- `new Random().nextInt(), true`
 
 1. 否
 2. 一个
@@ -8997,7 +10833,7 @@ class Sticker {
 35. 如何在不可变类中更改实例变量的值？
 
 1. 调用 setter 方法。
-2. 移除 final 修饰符并直接设置实例变量。
+2. 移除 `final` 修饰符并直接设置实例变量。
 3. 使用选项 A 或 B 以外的方法。
 4. 你不能。
 
@@ -9043,12 +10879,12 @@ class Hammer extends Tool {
 }
 ```
 
-1. r1
-2. r2
-3. r3
+1. `r1`
+2. `r2`
+3. `r3`
 4. 以上都不是
 
-39. 哪一个变量声明是运行时第一个抛出 ClassCastException 的行？
+39. 哪一个变量声明是运行时第一个抛出 `ClassCastException` 的行？
 
 ```java
 class Building {}
@@ -9064,9 +10900,9 @@ public void convert() {
 }
 ```
 
-1. p
-2. q
-3. r
+1. `p`
+2. `q`
+3. `r`
 4. 以上都不是
 
 40. 下列哪些值可以填充空白以正确实现类？
@@ -9082,54 +10918,16 @@ class Sticker {
 }
 ```
 
-* -1
-* 5
-* `new Random().nextInt()`
+- `-1`
+- `5`
+- `new Random().nextInt()`
 
 1. I
 2. I 和 II
 3. I, II 和 III
 4. I 和 III
 
-# 第 12 章：高级 Java 类设计
 
-本次练习测试涵盖的 OCP 考试考点包括：
-
-* **高级 Java 类**
-    * 开发使用抽象类和方法的代码
-    * 开发使用 `final` 关键字的代码
-    * 创建内部类，包括静态内部类、局部类、嵌套类和匿名内部类
-    * 使用枚举类型，包括枚举类型中的方法和构造函数
-    * 开发声明、实现和/或扩展接口的代码，并使用 `@Override` 注解
-    * 创建并使用 Lambda 表达式
-
-1. 下列哪项对于所有有效的 lambda 表达式都是必须的？
-
-1. `()`
-2. `->`
-3. `{}`
-4. 参数数据类型
-
-2. 下一个程序的输出是什么？
-
-```java
-package holiday;
-enum DaysOff {
-   Thanksgiving, PresidentsDay, ValentinesDay
-}
-public class Vacation {
-   public static void main(String... unused) {
-      final DaysOff input = DaysOff.Thanksgiving;
-      switch(input) {
-         default:
-         case DaysOff.ValentinesDay:
-            System.out.print("1");
-         case DaysOff.PresidentsDay:
-            System.out.print("2");
-      }
-   }
-}
-```
 
 1. 1
 2. 2
@@ -9138,26 +10936,26 @@ public class Vacation {
 
 3. 填充空白：函数式接口必须包含 ____________，可以包含 ____________
 
-1. 至少一个抽象方法，@Override 注解
+1. 至少一个抽象方法，`@Override` 注解
 2. 恰有一个方法，静态方法
-3. 恰有一个抽象方法，@FunctionalInterface 注解
+3. 恰有一个抽象方法，`@FunctionalInterface` 注解
 4. 至少一个静态方法，默认方法
 
-4. 下列类类型不能标记为 final 或 abstract？
+4. 下列类类型不能标记为 `final` 或 `abstract`？
 
 1. 静态嵌套类
 2. 局部内部类
 3. 匿名内部类
 4. 成员内部类
 
-5. 下列哪项是有效的 lambda 表达式？
+5. 下列哪项是有效的 `lambda` 表达式？
 
 1. `r -> {return 1==2}`
 2. `(q) -> true`
 3. `(x,y) -> {int test; return test>0;}`
 4.
 
-6. 枚举的哪些属性可以标记为 abstract？
+6. 枚举的哪些属性可以标记为 `abstract`？
 
 1. 枚举定义
 2. 枚举方法
@@ -9168,23 +10966,41 @@ public class Vacation {
 
 ```java
 package world;
+
 public class Matrix {
+
    private int level = 1;
+
    class Deep {
+
       private int level = 2;
+
       class Deeper {
+
          private int level = 5;
+
          public void printReality() {
+
             System.out.print(level);
+
             System.out.print(" "+Matrix.Deep.this.level);
+
             System.out.print(" "+Deep.this.level);
+
          }
+
       }
+
    }
+
    public static void main(String[] bots) {
+
       Matrix.Deep.Deeper simulation = new Matrix().new Deep().new Deeper();
+
       simulation.printReality();
+
    }
+
 }
 ```
 
@@ -9195,9 +11011,9 @@ public class Matrix {
 
 8. 局部内部类可以访问什么类型的局部变量？
 
-* final
-* private
-* effectively final
+* `final`
+* `private`
+* `effectively final`
 
 1. 仅 I
 2. I 和 II
@@ -9210,23 +11026,41 @@ public class Matrix {
 package finance;
 
 enum Currency {
+
    DOLLAR, YEN, EURO
+
 }
+
 abstract class Provider {
+
    protected Currency c = Currency.EURO;
+
 }
+
 public class Bank extends Provider {
+
    protected Currency c = Currency.DOLLAR;
+
    public static void main(String[] pennies) {
+
       int value = 0;
+
       switch(new Bank().c) {
+
          case 0:
+
             value--; break;
+
          case 1:
+
             value++; break;
+
       }
+
       System.out.print(value);
+
    }
+
 }
 ```
 
@@ -9234,13 +11068,9 @@ public class Bank extends Provider {
 2. 1
 3. 代码无法编译。
 
-
-
-
-
 ## 4. 代码编译通过但在运行时抛出异常。
 
-## 10. 哪个陈述最能描述 Java 中“有效最终”（effectively final）的概念？
+## 10. 哪个陈述最能描述 Java 中“有效最终”（`effectively final`）的概念？
 
 1. 一个标记为 `final` 的局部变量
 2. 一个标记为 `final` 的静态变量
@@ -9249,24 +11079,39 @@ public class Bank extends Provider {
 
 ## 11. 下一个应用程序的输出是什么？
 
-```
- package race;
+```java
+package race;
 
 interface Drive {
+
    int SPEED = 5;
+
    default int getSpeed() { return SPEED; }
+
 }
+
 interface Hover {
+
    int MAX_SPEED = 5;
+
    default int getSpeed() { return MAX_SPEED; }
+
 }
+
 public class Car implements Drive, Hover {
+
    public static void main(String[] gears) {
+
           class RaceCar extends Car {
+
              @Override public int getSpeed() { return 10; }
+
           };
+
           System.out.print(new RaceCar().getSpeed());
+
        }
+
 }
 ```
 
@@ -9277,25 +11122,31 @@ public class Car implements Drive, Hover {
 
 ## 12. 填空：可以扩展一个 ____________ 但不能扩展一个 ____________。
 
-1. 接口 (interface), 抽象类
-2. 抽象类, 枚举 (enum)
+1. 接口 (`interface`), 抽象类
+2. 抽象类, 枚举 (`enum`)
 3. 枚举, 接口
 4. 抽象类, 接口
 
 ## 13. 以下结果不是此程序的可能输出？
 
-```
- package sea;
+```java
+package sea;
+
 enum Direction { NORTH, SOUTH, EAST, WEST; };
+
 public class Ship {
+
    public static void main(String[] compass) {
+
       System.out.print(Direction.valueOf(compass[0]));
+
    }
+
 }
 ```
 
-1. 打印 WEST。
-2. 打印 south。
+1. 打印 `WEST`。
+2. 打印 `south`。
 3. 运行时抛出 `ArrayIndexOutOfBoundsException`。
 4. 运行时抛出 `IllegalArgumentException`。
 
@@ -9308,12 +11159,17 @@ public class Ship {
 
 ## 15. 鉴定以下枚举声明，有多少行代码包含编译错误？
 
-```
- package rainbow;
+```java
+package rainbow;
+
 enum Light {}
+
 public enum Color extends Light {
+
    RED, BLUE, ORANGE, GREEN
+
    protected Color() {}
+
 }
 ```
 
@@ -9331,27 +11187,41 @@ public enum Color extends Light {
 
 ## 17. 下一个应用程序的输出是什么？
 
-```
- package ai;
+```java
+package ai;
 
 interface Pump {
+
    void pump(double psi);
+
 }
+
 interface Bend extends Pump {
+
    void bend(double tensileStrength);
+
 }
+
 public class Robot {
+
    public static final void apply(Bend instruction, double input) { // r1
+
           instruction.bend(input);
+
    }
+
    public static void main(String... future) {
+
       final Robot r = new Robot();
+
       r.apply(x -> System.out.print(x+" bent!"), 5);
+
    }
+
 }
 ```
 
-1. 5.0 bent!
+1. `5.0 bent!`
 2. 代码无法编译，因为 `Bend` 不是函数式接口。
 3. 代码无法编译，因为第 `r1` 行的原因。
 4. 以上都不是。
@@ -9365,35 +11235,52 @@ public class Robot {
 
 ## 19. 下一个应用程序的输出是什么？
 
-```
- package space;
+```java
+package space;
 
 public class Bottle {
+
    public static class Ship {
+
       private enum Sail {  // w1
+
          TALL {protected int getHeight() {return 100;}},
+
              SHORT {protected int getHeight() {return 2;}};
+
              protected abstract int getHeight();
+
           }
+
           public Sail getSail() {
+
              return Sail.TALL;
+
           }
+
        }
+
        public static void main(String[] stars) {
+
           Bottle bottle = new Bottle();
+
           Ship q = bottle.new Ship();  // w2
+
           System.out.print(q.getSail());
+
        }
+
    }
+
 }
 ```
 
-1. TALL
+1. `TALL`
 2. 代码由于第 `w1` 行的原因无法编译。
 3. 代码由于第 `w2` 行的原因无法编译。
 4. 代码编译，但应用程序在运行时不产生任何输出。
 
-## 20. 下列哪个不是有效的 lambda 表达式？
+## 20. 下列哪个不是有效的 `lambda` 表达式？
 
 1. `(Integer j, k) -> 5`
 2. `(p,q) -> p`
@@ -9402,42 +11289,64 @@ public class Bottle {
 
 ## 21. 下一个应用程序的输出是什么？
 
-```
+```java
 1:  package fruit;
+
 2:  interface Edible { void eat(); }
+
 3:  public class ApplePicking {
+
 4:     public static void main(String[] food) {
+
 5:        Edible apple = new Edible() {
+
 6:           @Override
+
 7:           void eat() {
+
 8:              System.out.print("Yummy!");
+
 9:           }
+
 10:      }
+
 11:    }
+
 12: }
 ```
 
 1. 应用程序完成运行。
-2. Yummy!
+2. `Yummy!`
 3. 此程序有一行无法编译。
 4. 此程序有两行无法编译。
 
 ## 22. 下一个应用程序的输出是什么？
 
-```
- package forest;
+```java
+package forest;
 
 public class Woods {
+
    static class Tree {}
+
    public static void main(String[] leaves) {
+
       int water = 10+5;
+
       final class Oak extends Tree {  // p1
+
          public int getWater() {
+
             return water;  // p2
+
             }
+
       }
+
       System.out.print(new Oak().getWater());
+
    }
+
 }
 ```
 
@@ -9455,20 +11364,31 @@ public class Woods {
 
 ## 24. 下一个应用程序的输出是什么？
 
-```
- package vessel;
+```java
+package vessel;
 
 class Problem extends Exception {}
+
 abstract class Danger {
+
    protected abstract void isDanger() throws Problem;
+
 }
+
 public class SeriousDanger extends Danger {
+
    protected void isDanger() throws Exception {  // m1
+
       throw new RuntimeException();
+
    }
+
    public static void main(String[] will) throws Throwable {  // m2
+
       new SeriousDanger().isDanger();  // m3
+
    }
+
 }
 ```
 
@@ -9486,19 +11406,21 @@ public class SeriousDanger extends Danger {
 
 ## 26. 下一个应用程序的输出是什么？
 
-
-
-
-
 ```java
 package weather;
 
 public class Forecast {
+
    public enum Snow { BLIZZARD, SQUALL, FLURRY }
+
    public static void main(String[] modelData) {
+
       System.out.print(Snow.BLIZZARD.ordinal());
+
       System.out.print(" "+Snow.valueOf("flurry".toUpperCase()).name());
+
    }
+
 }
 ```
 
@@ -9520,18 +11442,31 @@ public class Forecast {
 package zoo;
 
 public class Penguin {
+
    private int volume = 1;
+
    private class Chick {
+
       private static int volume = 3;
+
       void chick() {
+
              System.out.print("Honk("+Penguin.this.volume+")!");
+
       }
+
    }
+
    public static void main(String... eggs) {
+
       Penguin pen = new Penguin();
+
       final Penguin.Chick littleOne = pen.new Chick();
+
       littleOne.chick();
+
    }
+
 }
 ```
 
@@ -9540,7 +11475,7 @@ public class Penguin {
 3. 代码无法编译。
 4. 代码可以编译但在运行时之前无法确定输出。
 
-29. 假设 `Dinosaur` 是一个包含名为 `Pterodactyl` 的公共成员内部类的类。鉴于 `dino` 是 `Dinosaur` 的一个实例，你如何在静态方法（如 `main()`）内部实例化一个新的 `Pterodactyl`？？
+29. 假设 `Dinosaur` 是一个包含名为 `Pterodactyl` 的公共成员内部类的类。鉴于 `dino` 是 `Dinosaur` 的一个实例，你如何在静态方法（如 `main()`）内部实例化一个新的 `Pterodactyl`？
 
 1. `new Pterodactyl();`
 2. `dino.Pterodactyl();`
@@ -9553,50 +11488,76 @@ public class Penguin {
 package desert;
 
 interface CanBurrow {
+
    public abstract void burrow();
+
 }
+
 @FunctionalInterface interface HasHardShell extends CanBurrow {}  // k1
+
 abstract class Tortoise implements HasHardShell {  // k2
+
    public abstract int toughness();
+
 }
+
 public class DesertTortoise extends Tortoise {  // k3
+
    public int toughness() { return 11; }
+
 }
 ```
 
-1. 因为第 `k1` 行代码无法编译。
-2. 因为第 `k2` 行代码无法编译。
-3. 因为第 `k3` 行代码无法编译。
+
+
+1. 因为第`k1`行代码无法编译。
+2. 因为第`k2`行代码无法编译。
+3. 因为第`k3`行代码无法编译。
 4. 代码可以编译，没有问题。
 
-31. 关于以下 `Twins` 类的哪些描述是正确的？
+31. 关于以下`Twins`类的哪些描述是正确的？
 
 ```java
 package clone;
 
 interface Alex {
+
    default void write() {}
+
    static void publish() {}
+
    void think();
+
 }
+
 interface Michael {
+
    public default void write() {}
+
    public static void publish() {}
+
    public void think();
+
 }
 
 public class Twins implements Alex, Michael {
+
    @Override public void write() {}
+
    @Override public static void publish() {}
+
    @Override public void think() {
+
       System.out.print("Thinking...");
+
    }
+
 }
 ```
 
-- 该类因为 `write()` 方法无法编译。
-- 该类因为 `publish()` 方法无法编译。
-- 该类因为 `think()` 方法无法编译。
+- 该类因为`write()`方法无法编译。
+- 该类因为`publish()`方法无法编译。
+- 该类因为`think()`方法无法编译。
 
 1. 只有 I
 2. 只有 II
@@ -9610,29 +11571,43 @@ public class Twins implements Alex, Michael {
 3. 成员内部类，枚举
 4. 枚举，内部类
 
-33. 哪个 Lambda 表达式可以替换 `Scientist` 类中的 `new BiologyMaterial()` 并产生相同的结果？
+33. 哪个 Lambda 表达式可以替换`Scientist`类中的`new BiologyMaterial()`并产生相同的结果？
 
 ```java
 package university;
 
 @FunctionalInterface interface Study {
+
    abstract int learn(String subject);
+
 }
 
 class BiologyMaterial implements Study {
+
    @Override public int learn(String duration) {
+
       if(subject == null)
+
          return duration;
+
       else
+
          return duration+1;
+
    }
+
 }
 
 public class Scientist {
+
    public static void main(String[] courses) {
+
       final Study s = new BiologyMaterial() {};
+
       System.out.print(s.learn(courses[0]));
+
    }
+
 }
 ```
 
@@ -9645,15 +11620,23 @@ public class Scientist {
 
 ```java
 package myth;
+
 public enum Proposition {
+
    TRUE(-10) { public String getName() { return "RIGHT"; }},
+
    FALSE() { public String getName() { return "LOST"; }},
+
    UNKNOWN; 
+
    private final int value;
+
    Proposition(int value) { this.value = value; }
+
    public abstract String getName();
 ```
-*(注：第 34 题提供的源码不完整，已根据标准逻辑进行了重构)*
+
+*（注：第 34 题提供的源码不完整，已根据标准逻辑进行了重构）*
 
 1. 一行
 2. 两行
@@ -9665,43 +11648,68 @@ public enum Proposition {
 package math;
 
 interface AddNumbers {
+
    int add(int x, int y);
+
    static int subtract(int x, y) { return x-y; }
+
    default int multiply(int x, y) { return x*y; }
+
 }
+
 public class Calculator {
+
    protected void calculate(AddNumbers add, int a, int b) {
+
       System.out.print(add.add(a, b));
+
    }
+
    public static void main(String[] args) {
+
       final Calculator ti = new Calculator();
+
       ti.calculate((k,p) -> p+1, 2, 5); // j1
+
    }
+
 }
 ```
 
 1. `8`
-2. `AddNumbers` 不是函数式接口。
-3. 代码因为第 `j1` 行无法编译。
+2. `AddNumbers`不是函数式接口。
+3. 代码因为第`j1`行无法编译。
 4. 以上都不是
 
-36. 给类声明，什么表达式可以填充空白处以返回 `Bottle` 类定义的 `size` 变量，并在运行时打印 `14`？
+36. 给类声明，什么表达式可以填充空白处以返回`Bottle`类定义的`size`变量，并在运行时打印`14`？
 
 ```java
 package baby;
 
 final public class Bottle {
+
    final private int size = 14;
+
    final protected class Insert {
+
       private final int size = 25;
+
       public final int getSize() {
+
          return_____________
+
       }
+
    }
+
    final Insert insert = new Insert();
+
    final static void main(String[] feed) {
+
       System.out.print(new Bottle().insert.getSize());
+
    }
+
 }
 ```
 
@@ -9714,20 +11722,35 @@ final public class Bottle {
 
 ```java
 package ocean;
+
 abstract interface CanSwim {
+
    public void swim();
+
 }
+
 public class Turtle {
+
    public static void main(String[] seaweed) {
+
       int distance = 7;
+
       CanSwim seaTurtle = {
+
          @Override
+
          public void swim() {
+
             System.out.print(distance);
+
          }
+
       };
+
       seaTurtle.swim();
+
    }
+
 }
 ```
 
@@ -9742,29 +11765,37 @@ public class Turtle {
 package present;
 
 interface Toy { String play(); }
+
 public class Gift {
+
    public static void main(String[] matrix) {
+
       abstract class Robot {}
+
       class Transformer extends Robot implements Toy {
+
          public String name = "GiantRobot";
+
          public String play() {return "DinosaurRobot";}
+
       }
+
       Transformer prime = new Transformer () {
+
          public String play() {return name;}  // y1
+
       };
+
       System.out.print(prime.play()+" "+name);
+
    }
+
 }
 ```
 
 1. `GiantRobot GiantRobot`
 2. `GiantRobot DinosaurRobot`
-
-
-
-
-3. 代码因为第 `y1` 行而无法编译。
-
+3. 代码因为第`y1`行而无法编译。
 4. 以上都不是。
 
 39. 编译以下程序的运行是什么？
@@ -9773,53 +11804,70 @@ public class Gift {
 package ballroom;
 
 class Leader {}
+
 class Follower {}
+
 abstract public class Dancer {
+
    public Leader getPartner() { return new Leader(); }
+
    abstract public Leader getPartner(int count);  // u1
+
 }
 
 abstract class SwingDancer extends Dancer {
+
    public Follower getPartner() {  // u2
+
       return new Follower();  // u3
+
    }
+
 }
 ```
 
-1. 代码因为第 `u1` 行无法编译。
-
-2. 代码因为第 `u2` 行无法编译。
-
-3. 代码因为第 `u3` 行无法编译。
-
+1. 代码因为第`u1`行无法编译。
+2. 代码因为第`u2`行无法编译。
+3. 代码因为第`u3`行无法编译。
 4. 代码编译正常，没有问题。
 
 40. 以下应用程序的输出是什么？
 
 ```java
 package prepare;
+
 public class Ready {
+
    protected static int first = 2;
+
    private final short DEFAULT_VALUE = 10;
+
    private static class GetSet {
+
       int first = 5;
+
       static int second = DEFAULT_VALUE;
+
    }
+
    private GetSet go = new GetSet();
+
    public static void main(String[] begin) {
+
       Ready r = new Ready();
+
       System.out.print(r.go.first);
+
       System.out.print(", "+r.go.second);
+
    }
+
 }
 ```
 
 1. 2, 5
-
 2. 5, 10
-
-3. 代码因为 `GetSet` 类体而无法编译。
-
+3. 代码因为`GetSet`类体而无法编译。
 4. 代码因为其他原因无法编译。
 
 ## 第 13 章
@@ -9829,15 +11877,14 @@ public class Ready {
 本次练习测试涵盖的 OCP 考试考点包括：
 
 * **泛型与集合**
-
-    * 创建并使用泛型类
-    * 创建并使用 `ArrayList`、`TreeSet`、`TreeMap` 和 `ArrayDeque` 对象
-    * 使用 `java.util.Comparator` 和 `java.lang.Comparable` 接口
-    * 集合流 (Streams) 和过滤器 (Filters)
-    * 使用 `Streams` 和 `List` 的 `forEach` 方法进行迭代
-    * 描述 `Stream` 接口和 `Stream` 管道流线 (pipeline)
-    * 使用 lambda 表达式过滤集合
-    * 在 `Streams` 中使用方法引用 (method references)
+  * 创建并使用泛型类
+  * 创建并使用`ArrayList`、`TreeSet`、`TreeMap`和`ArrayDeque`对象
+  * 使用`java.util.Comparator`和`java.lang.Comparable`接口
+  * 集合流 (Streams) 和过滤器 (Filters)
+  * 使用`Streams`和`List`的`forEach`方法进行迭代
+  * 描述`Stream`接口和`Stream`管道流线 (pipeline)
+  * 使用 lambda 表达式过滤集合
+  * 在`Streams`中使用方法引用 (method references)
 
 1. 以下哪项可以填充空白以使代码编译？
 
@@ -9854,7 +11901,7 @@ public class News<________> {}
 3. II 和 III
 4. I、II 且 III
 
-2. 哪个方法在 `List` 和 `Stream` 的实现中都是可用的？
+2. 哪个方法在`List`和`Stream`的实现中都是可用的？
 
 1. `filter()`
 2. `forEach()`
@@ -9882,7 +11929,7 @@ System.out.println(c.isEmpty());
 3. `TreeSet`
 4. 所有均可以填充空白。
 
-5. 假设我们想要实现一个 `Comparator<String>`，使其按字符串长度从长到排序。你可以假设没有空值。哪个方法可以实现这样的比较器？
+5. 假设我们想要实现一个`Comparator<String>`，使其按字符串长度从长到短排序。你可以假设没有空值。哪个方法可以实现这样的比较器？
 
 1. `public int compare(String s1, String s2) {
     return s1.length() - s2.length();
@@ -9904,12 +11951,12 @@ System.out.println(c.isEmpty());
     return s2.length() – s1.length();
    }`
 
-6. 假设我们要存储 `JellyBean` 对象。以下哪一组组合需要 `JellyBean` 实现 `Comparable` 接口或创建 `Comparator` 才能添加到 `Collection` 中？
+6. 假设我们要存储`JellyBean`对象。以下哪一组组合需要`JellyBean`实现`Comparable`接口或创建`Comparator`才能添加到`Collection`中？
 
-1. `ArrayList` 和 `ArrayDeque`
-2. `HashMap` 和 `HashSet`
-3. `HashMap` 和 `TreeMap`
-4. `TreeMap` 和 `TreeSet`
+1. `ArrayList`和`ArrayDeque`
+2. `HashMap`和`HashSet`
+3. `HashMap`和`TreeMap`
+4. `TreeMap`和`TreeSet`
 
 7. 流管道 (stream pipeline) 不运行的常见原因是什么？
 
@@ -9923,15 +11970,14 @@ System.out.println(c.isEmpty());
 ```java
 LinkedList<String> list = new LinkedList<>();
 list.add("1984");
-
 Iterator it = list.iterator();
 while (it.hasMore())
    System.out.println(it.next());
 ```
 
-1. 缺少 `Iterator` 类型。
-2. `hasMore()` 应该改为 `hasNext()`。
-3. 使用了 `forEach()`。
+1. 缺少`Iterator`类型。
+2. `hasMore()`应该改为`hasNext()`。
+3. 使用了`forEach()`。
 4. 以上都不是。
 
 9. 以下代码的结果是什么？
@@ -9940,7 +11986,6 @@ while (it.hasMore())
 ArrayList<Integer> list = new ArrayList<>();
 list.add(56);
 list.add(3);
-
 TreeSet<Integer> set = new TreeSet<>(list);
 System.out.println(set.size());
 ```
@@ -9975,34 +12020,56 @@ System.out.println(d.poll() + " " + d.poll());
 
 ```java
 class Magazine implements Comparable<Magazine> {
+
    private String name;
+
    public Magazine(String name) {
+
       this.name = name;
+
    }
+
    public int compareTo(Magazine m) {
+
       return name.compareTo(m.name);
+
    }
+
    public String toString() {
+
       return name;
+
    }
+
 }
+
 public class Newstand {
-   public static void main(String[] args) {
-      Set<Magazine> set = new TreeSet<>();
-      set.add(new Magazine("highlights"));
-      set.add(new Magazine("Newsweek"));
-      set.add(new Magazine("highlights"));
-      System.out.println(set.iterator().next());
-   }
-}
 ```
 
-1. highlights
-2. Newsweek
+
+
+`public static void main(String[] args)` {
+
+   `Set<Magazine> set = new TreeSet<>();`
+
+   `set.add(new Magazine("highlights"));`
+
+   `set.add(new Magazine("Newsweek"));`
+
+   `set.add(new Magazine("highlights"));`
+
+   `System.out.println(set.iterator().next());`
+
+}
+
+}
+
+1. `highlights`
+2. `Newsweek`
 3. 代码无法编译。
 4. 代码在运行时抛出异常。
 
-13. 以下代码的结果是什么？
+## 13. 以下代码的结果是什么？
 
 ```java
 List<String> list = new ArrayList<>();
@@ -10014,17 +12081,16 @@ System.out.println(list.get(0));
 ```
 
 1. 一个空字符串
-2. Monday
+2. `Monday`
 3. 代码无法编译。
 4. 代码在运行时抛出异常。
 
-14. 这段代码输出多少行？
+## 14. 这段代码输出多少行？
 
 ```java
 List<String> list = new LinkedList<>();
 list.add("Archie");
 list.add("X-Men");
-
 list.stream().forEach(s -> System.out.println(s));
 list.stream().forEach(s -> System.out.println(s));
 ```
@@ -10033,9 +12099,6 @@ list.stream().forEach(s -> System.out.println(s));
 2. 四行
 3. 代码无法编译。
 4. 代码在运行时抛出异常。
-
-
-
 
 ### 15. `main()` 方法中的哪一行无法编译，或者指向了一个无法编译的类？
 
@@ -10106,7 +12169,7 @@ public class Truck implements Comparable<Truck> {
 3. `public int compareTo(Truck t)`
 4. `public int compareTo(Truck t1, Truck t2)`
 
-### 18. 在流流水线（stream pipeline）中，哪一个可以返回 Stream 以外的值？
+### 18. 在流流水线（stream pipeline）中，哪一个可以返回 `Stream` 以外的值？
 
 1. 源 (Source)
 2. 中间操作 (Intermediate operation)
@@ -10144,7 +12207,6 @@ System.out.println(Collections.binarySearch(ints, 1));
 List<String> list = new LinkedList<>();
 list.add("Archie");
 list.add("X-Men");
-
 Stream<String> s = list.stream();
 s.forEach(System.out::println);
 s.forEach(System.out::println);
@@ -10155,7 +12217,7 @@ s.forEach(System.out::println);
 3. 代码无法编译。
 4. 代码可以编译但在运行时抛出异常。
 
-### 22. 哪个选项不能填入空格以打印 Clean socks？
+### 22. 哪个选项不能填入空格以打印 `Clean socks`？
 
 ```java
 class Wash<T> {
@@ -10183,9 +12245,7 @@ public class LaundryTime {
 LinkedList<String> list = new LinkedList<>();
 list.add("Grapes of Wrath");
 list.add("1984");
-
 list.stream().forEach(System.out::println);
-
 Iterator it = list.iterator();
 while (it.hasNext())
    System.out.println(it.next());
@@ -10214,7 +12274,7 @@ while (it.hasNext())
 3. 终端操作 (Terminal operation)
 4. 以上都不是
 
-### 26. 哪个类型允许插入 null 值？
+### 26. 哪个类型允许插入 `null` 值？
 
 1. `ArrayDeque`
 2. `ArrayList`
@@ -10228,7 +12288,6 @@ List<String> list = new ArrayList<>();
 list.add("Atlanta");
 list.add("Chicago");
 list.add("New York");
-
 list.stream().filter(____________).forEach(System.out::println);
 ```
 
@@ -10247,10 +12306,10 @@ map.put("one", 1);
 System.out.println(map.firstKey() + " " + map.lastKey());
 ```
 
-1. one 3
-2. three 3
+1. `one 3`
+2. `three 3`
 3. 3
-4. THREE 3
+4. `THREE 3`
 
 ### 29. 哪个签名允许此代码编译？
 
@@ -10275,7 +12334,6 @@ public class ExtendingGenerics {
 2. `? implements Collection`
 3. `T extends Collection`
 4. `T implements Collection`
-```)
 
 ### 30. 以下代码的结果是什么？
 
@@ -10340,10 +12398,6 @@ list.stream().forEach(System.out::println);
 
 ### 34. 以下代码的输出是什么？
 
-
-
-
-
 ```java
 class Magazine implements Comparable<Magazine> {
    private String name;
@@ -10370,12 +12424,12 @@ public class Newstand {
 }
 ```
 
-1. highlights
-2. Newsweek
+1. `highlights`
+2. `Newsweek`
 3. 代码无法编译。
 4. 代码可以编译但在运行时抛出异常。
 
-35. 下面代码输出多少行内容？
+## 35. 下面代码输出多少行内容？
 
 ```java
 import java.util.*;
@@ -10401,14 +12455,14 @@ public class PreSchool {
 3. 代码无法编译。
 4. 代码可以编译但在运行时抛出异常。
 
-36. 关于 Stream 的源（source），哪个陈述是正确的？
+## 36. 关于 `Stream` 的源（source），哪个陈述是正确的？
 
 1. 源在流流水线中是强制性的。
 2. 源只允许返回原始类型。
 3. 源必须通过调用 `stream()` 方法获取。
 4. 源必须返回有限数量的元素。
 
-37. 下面的输出是什么？
+## 37. 下面的输出是什么？
 
 ```java
 List<String> list = new ArrayList<>();
@@ -10420,12 +12474,14 @@ long c = list.stream().filter(a -> a.length() > 10).count();
 System.out.println(c + " " + list.size());
 ```
 
-1. 1 1
-2. 1 3
-3. 2 3
+1. `1 1`
+2. `1 3`
+3. `2 3`
 4. 以上均不是
 
-38. 哪些选项可以填充空白处以打印 Cleaned 2 items？
+## 38. 哪些选项可以填充空白处以打印 `Cleaned 2 items`？
+
+
 
 ```java
 import java.util.*;
@@ -10443,23 +12499,32 @@ public class LaundryTime {
 }
 ```
 
-1. extends, `Wash<ArrayList>()`
-2. extends, `Wash<List>()`
-3. super, `Wash<ArrayList>()`
-4. super, `Wash<List>()`
+1. `extends`, `Wash<ArrayList>()`
+
+2. `extends`, `Wash<List>()`
+
+3. `super`, `Wash<ArrayList>()`
+
+4. `super`, `Wash<List>()`
 
 39. 下面哪项声明了一个 `Comparator`，其中所有对象都被被视为相等的？
 
 1. `Comparator<Character> comp = (c1)-> 0;`
+
 2. `Comparator<Character> comp = (c1)-> {0};`
+
 3. `Comparator<Character> comp = (c1, c2)-> 0;`
+
 4. `Comparator<Character> comp = (c1, c2)-> {0};`
 
 40. 为什么 `String::charAt` 不能作为方法引用？
 
 1. 方法引用只能用于静态方法。
+
 2. 方法引用可以传递 lambda 表达式中的实例或参数，但不能两个都传。
+
 3. `charAt()` 方法接收的是 `int` 参数，而不是 `Integer` 参数。
+
 4. `String` 类中没有 `charAt()` 方法。
 
 # 第 14 章
@@ -10469,22 +12534,31 @@ public class LaundryTime {
 本次练习测试涵盖的 OCP 考试主题包括：
 
 * 使用 `java.util.function` 包中包含的内置接口，如 `Predicate`、`Consumer`、`Function` 和 `Supplier`
+
 * 开发使用原始类型函数式接口的代码
+
 * 开发使用二元版本函数式接口的代码
+
 * 开发使用 `UnaryOperator` 接口的代码
 
 1. 填空题：`____________` 函数式接口不接受任何输入，而 `____________` 函数式接口不返回任何数据。
 
 1. `IntConsumer`, `LongSupplier`
+
 2. `IntSupplier`, `Function`
+
 3. `Supplier`, `DoubleConsumer`
+
 4. `UnaryOperator`, `Consumer`
 
 2. 哪个函数式接口接受 `long` 值作为输入参数并拥有 `accept()` 方法？
 
 1. `LongConsumer`
+
 2. `LongFunction`
+
 3. `LongPredicate`
+
 4. `LongSupplier`
 
 3. 下面程序的输出是什么？
@@ -10510,15 +12584,21 @@ public class Lifeguard {
 ```
 
 1. Saved
+
 2. Too far
+
 3. 代码因 y1 无法编译
+
 4. 代码因 y2 无法编译
 
 4. 关于 `DoubleSupplier` 和 `Supplier<Double>`，哪个说法是？
 
 1. 两者都是函数式接口。
+
 2. 两者的 lambda 都可以返回 `double` 值。
+
 3. 两者的 lambda 都不能返回 `null` 值。
+
 4. 一个支持泛型，另一个不支持。
 
 5. 哪个函数式接口填充空白处后允许类编译？
@@ -10538,22 +12618,31 @@ public class Asteroid {
 ```
 
 1. `BiConsumer<Integer,Double>`
+
 2. `BiFunction<Integer,Double,Double>`
+
 3. `BiFunction<Integer,Integer,Double>`
+
 4. `Function<Integer,Double>`
 
 6. 假设泛型正确，哪个 lambda 表达式不能赋值给 `ToDoubleBiFunction`？
 
 1. `(Integer a, Double b) -> {int c; return b;}`
+
 2. `(h,i) -> (long)h`
+
 3. `(String u, Object v) -> u.length()+v.length()`
+
 4. `(x,y) -> {int z=2; return y;}`
 
 7. 下面哪项不是 `java.util.function` 中的函数式接口？
 
 1. `BiPredicate`
+
 2. `DoubleUnaryOperator`
+
 3. `ObjectDoubleConsumer`
+
 4. `ToLongFunction`
 
 8. 下面程序的输出是什么？
@@ -10582,24 +12671,26 @@ public class TicketTaker {
 ```
 
 1. 51
+
 2. 代码因 lambda 表达式无法编译。
+
 3. 代码因其他原因无法编译。
+
 4. 代码可以编译但在运行时打印异常。
 
 9. 哪个函数式接口返回原始类型值？
 
 1. `BiPredicate`
+
 2. `CharSupplier`
+
 3. `LongFunction`
+
 4. `UnaryOperator`
 
 10. 哪个函数式接口进入下方的空白处后，允许类编译？
 
-
-
-
-
-```
+```java
 package groceries;
 import java.util.*;
 import java.util.function.*;
@@ -10622,20 +12713,26 @@ public class Market {
 ```
 
 1. `Consumer`
+
 2. `DoubleConsumer`
+
 3. `Supplier<Double>`
+
 4. 以上都不是
 
 11. 下三个函数式接口中，哪一个与另外两个不等价？
 
 1. `BiFunction<Double,Double,Double>`
+
 2. `BinaryOperator<Double>`
+
 3. `DoubleFunction<Double>`
+
 4. 以上都不是。三者都等价。
 
 12. 哪个 lambda 表达式可以传递给 `magic()` 方法？
 
-```
+```java
 package show;
 import java.util.function.*;
 
@@ -10647,13 +12744,16 @@ public class Magician {
 ```
 
 1. `magic((a) -> a)`
+
 2. `magic((b,w) -> (long)w.intValue())`
+
 3. `magic((c,m) -> {long c=4; return c+m;})`
+
 4. `magic((Integer d, Integer r) -> (Long)r+d)`
 
 13. 下述程序的输出是什么？
 
-```
+```java
 package ai;
 import java.util.function.*;
 
@@ -10669,50 +12769,65 @@ public class Android {
 ```
 
 1. Program started!
+
 2. 仅因为行 `d1`导致代码无法编译。
+
 3. 仅因为行 `d2`导致代码无法编译。
+
 4. 因为行 `d1` 和 `d2` 导致代码无法编译。
 
 14. 关于所有 `UnaryOperator` 函数式接口（泛型和原始类型），哪个陈述是正确的？
 
 1. 输入类型必须与返回类型兼容。
+
 2. 某些接口接受多个参数。
+
 3. 它们都接受一个泛型参数。
+
 4. 它们都返回一个原始类型值。
 
 15. 从 `DoubleConsumer` 开始向下，填充表格中缺失值。
 
 | 函数式接口 | 参数个数 |
 | --- | --- |
-| `DoubleConsumer` | | |
-| `IntFunction` | | |
-| `LongSupplier` | | |
-| `ObjDoubleConsumer` | | |
+| `DoubleConsumer` | |
+| `IntFunction` | |
+| `LongSupplier` | |
+| `ObjDoubleConsumer` | |
 
 1. 0, 1, 1, 1
+
 2. 0, 2, 1, 2
+
 3. 1, 1, 0, 2
+
 4. 1, 1, 0, 1
 
 16. 从 `DoubleConsumer` 开始向下，填充表格中的值。对于下面的选项，假设 `R` 是泛型类型。
 
 | 函数式接口 | 返回类型 |
 | --- | --- |
-| `DoubleConsumer` | | |
-| `IntFunction` | | |
-| `LongSupplier` | | |
-| `ObjDoubleConsumer` | | |
+| `DoubleConsumer` | |
+| `IntFunction` | |
+| `LongSupplier` | |
+| `ObjDoubleConsumer` | |
 
 1. double, R, long, R
+
 2. R, int, long, R
+
 3. void, int, R, void
+
 4. void, R, long, void
 
 17. 填空：在 `Collection` 接口中，`removeIf()` 方法接受一个 ____________，而 `forEach()` 方法接受一个 ____________。
 
 1. `Function`, `Function`
+
 2. `Predicate`, `Consumer`
+
 3. `Predicate`, `Function`
+
 4. `Predicate`, `UnaryOperator`
 
 18. 下述程序的输出是什么？
@@ -10742,29 +12857,41 @@ public class Doll {
 ```
 
 1. XXXXX
+
 2. 因为 lambda 表达式导致代码无法编译。
+
 3. 因为其他原因代码无法编译。
+
 4. 代码可以编译，但在运行时产生死循环。
 
 19. 哪个函数式接口拥有 `get()` 方法？
 
 1. `Consumer`
+
 2. `Function`
+
 3. `Supplier`
+
 4. `UnaryOperator`
 
 20. 关于函数式接口和 lambda 表达式，哪个陈述是错误的？
 
 1. lambda 表达式可能与函数式接口兼容。
+
 2. lambda 表达式必须赋值给函数式接口。
+
 3. 方法可以返回函数式接口。
+
 4. 编译器使用 lambda 表达式。
 
 21. 哪个表达式与 `IntSupplier` 兼容？
 
 1. `() -> 10`
+
 2. `() -> {}`
+
 3. `() -> 4`
+
 4. `System.out::print`
 
 22. 下述程序的输出是什么？
@@ -10794,29 +12921,42 @@ public class Initech {
 ```
 
 1. [JENNY, GRACE]
+
 2. [tps.Boss@42182c, tps.Boss@815f9a]
+
 3. 因为 lambda 表达式导致代码无法编译。
+
 4. 因为其他原因代码无法编译。
 
 23. 下列方法引用可以传递给接受 `Consumer<Object>` 参数的方法？
 
 * `ArrayList::new`
+
 * `String::new`
+
 * `System.out::println`
 
 1. 仅 I
+
 2. I、II 和 III
+
 3. I 和 III
+
 4. 仅 III
 
 24. 下列哪个是 `java.util.function` 包中的有效函数式接口？
 
 1. `FloatPredicate`
+
 2. `ToDoubleBiFunction`
+
 3. `UnaryIntOperator`
+
 4. `TriPredicate`
 
 25. 填充哪个函数式接口会导致类无法编译？
+
+
 
 ```java
 package morning;
@@ -10844,10 +12984,6 @@ public class Sun {
 
 27. 填充哪个 lambda 表达式允许代码通过编译？
 
-
-
-
-
 ```java
 package ballroom;
 import java.util.function.*;
@@ -10867,7 +13003,7 @@ public class Dance {
 3. `(s,w) -> 2*w`
 4. `(s,e) -> s.intValue()+e.intValue()`
 
-29. 填空：`____________` 是唯一不涉及 double、int 或 long 的函数式接口。
+29. 填空：`____________` 是唯一不涉及 `double`、`int` 或 `long` 的函数式接口。
 
 1. `BooleanSupplier`
 2. `CharPredicate`
@@ -10901,7 +13037,7 @@ public class Bank {
 3. 代码因为行 `j1` 无法编译。
 4. 以上均不是
 
-31. 哪一个函数式接口接收一个 double 值并有一个 `test()` 方法？
+31. 哪一个函数式接口接收一个 `double` 值并有一个 `test()` 方法？
 
 1. `DoubleConsumer`
 2. `DoublePredicate`
@@ -11008,7 +13144,7 @@ public class DogSearch {
 3. 代码无法编译。
 4. 代码由于某种原因无法编译。
 
-37. 哪一个函数式接口接收一个 double 值并有一个 `test()` 方法？
+37. 哪一个函数式接口接收一个 `double` 值并有一个 `test()` 方法？
 
 1. `DoubleConsumer`
 2. `DoublePredicate`
@@ -11060,12 +13196,9 @@ public class Warehouse {
 40. 关于函数式接口的以下哪种陈述是正确的？
 
 1. 可以定义返回两个类型的函数式接口。
-2. 可以定义使用 float、short 的函数式接口。
+2. 可以定义使用 `float`、`short` 的函数式接口。
 3. 不可以定义既不接受参数也不返回值的函数式接口。
 4. 所有的基本类型接口都不包含泛型参数。
-
-
-
 
 2. 一
 3. 二
@@ -11238,6 +13371,8 @@ public static void print(Stream<String> stream) {
 
 ### 15. 下列代码的哪项是正确的？
 
+
+
 ```java
 Stream<Character> stream = Stream.of('c', 'b', 'a'); // z1
 stream.sorted().findAny().ifPresent(System.out::println); // z2
@@ -11288,6 +13423,7 @@ Stream.of(set, list, queue)
 1. `[tire-][wheel-]`
 2. `tire-wheel-`
 3. 以上均不是
+
 （注：原文 19 题题似乎似乎不全）
 
 ### 20. 下列代码的输出是什么？
@@ -11329,10 +13465,10 @@ private static void spot(____________ x) {
 }
 ```
 
-* `List<String>`
-* `Optional<Collection>`
-* `Optional<String>`
-* `Stream<Collection>`
+- `List<String>`
+- `Optional<Collection>`
+- `Optional<String>`
+- `Stream<Collection>`
 
 1. I
 2. IV
@@ -11360,9 +13496,6 @@ System.out.println(b);
 2. `groupingBy()`
 3. `partitioning()`
 4. `partitioningBy()`
-
-
-
 
 ## 25. 这段代码填入哪个空处可以打印出 667788？
 
@@ -11431,9 +13564,9 @@ LongStream stream = LongStream.of(9);
 stream.____________(p -> p).forEach(System.out::print);
 ```
 
-* `mapToDouble`
-* `mapToInt`
-* `mapToLong`
+- `mapToDouble`
+- `mapToInt`
+- `mapToLong`
 
 1. 无
 2. 一个
@@ -11559,9 +13692,9 @@ Stream.of(set, list, queue)
 
 ## 36. 处理 `Stream<String>` 时，通过向 `Collectors.groupingBy()` 传递参数，哪些类型由 `collect()` 返回？
 
-* `Map<Integer, List<String>>` (I)
-* `Map<Boolean, HashSet<String>>` (II)
-* `List<String>` (III)
+- `Map<Integer, List<String>>` (I)
+- `Map<Boolean, HashSet<String>>` (II)
+- `List<String>` (III)
 
 1. I
 2. II
@@ -11635,8 +13768,6 @@ public class Catch {
 
 
 
-
-
 ```java
 public static void main(String[] args) {
    List<String> list = new LinkedList<>();
@@ -11662,8 +13793,11 @@ private static void withoutFlatMap(Collection<?> coll) {
 ```
 
 1. `withFlatMap(list); withoutFlatMap(list);`
+
 2. `withFlatMap(queue); withoutFlatMap(queue);`
+
 3. 这一对都反驳了该断言。
+
 4. 这两对都没有反驳该断言。
 
 # 第 16 章：异常与断言
@@ -11671,25 +13805,39 @@ private static void withoutFlatMap(Collection<?> coll) {
 本次练习测试涵盖的 OCP 考试主题包括：
 
 - ![](img/correction.jpg) **异常与断言**
+
 - 使用 `try-catch` 和 `throw` 语句
+
 - 使用 `catch`、`multi-catch` 和 `finally` 子句
+
 - 使用 `try-with-resources` 语句使用 `Autocloseable` 资源
+
 - 创建自定义异常和 `AutoCloseable` 资源
+
 - 使用断言 测试不变性
 
 1. 如果同时使用 `try`、`catch` 和 `finally` 语句但没有产生异常，哪些块会被执行？执行顺序是怎样的？
+
 1. `try`
+
 2. `try, catch`
+
 3. `try, catch, finally`
+
 4. `try, finally`
 
 2. 填空：一个 `try` 语句 __________ 一个 `catch` 或 `finally` 块，而 `try-with-resources` 语句 __________.
+
 1. `不强制包含，不强制包含其中任何一个`
+
 2. `不强制包含，必须包含其中之一`
+
 3. `必须包含，不强制包含其中任何一个`
+
 4. `必须包含，必须包含 catch 块`
 
 3. 下一个程序的输出是什么？
+
 ```java
 package park;
 
@@ -11707,21 +13855,33 @@ public class Ball {
    }
 }
 ```
+
 1. `Caught!`
+
 2. 代码无法编译，因为 `LostBallException` 在 `main()` 方法中未被处理或声明。
+
 3. 代码无法编译，因为 `ArrayStoreException` 在 `toss()` 方法中未被处理或声明。
+
 4. 代码因其他原因无法编译。
 
 4. 哪些符号可以用于 `multi-catch` 语句中分隔异常类型？
+
 - `&`
+
 - `|`
+
 - `||`
+
 1. 仅 `II`
+
 2. 仅 `III`
+
 3. `II 和 III`
+
 4. `I, II, 和 III 全部`
 
 5. 在启用断言的情况下，执行以下程序的运行是什么？
+
 ```java
 1: package ice;
 2: public class Igloo {
@@ -11733,18 +13893,27 @@ public class Ball {
 8:    }
 9: }
 ```
+
 1. 运行时抛出 `AssertionError`。
+
 2. 运行时无任何输出。
+
 3. 正好有一行代码无法编译。
+
 4. 有两行代码无法编译。
 
 6. 以下哪个类是受检异常（checked exception）？
+
 1. `java.lang.Error`
+
 2. `java.lang.IllegalStateException`
+
 3. `java.text.ParseException`
+
 4. `java.lang.RuntimeException`
 
 7. 在以下类中，有多少个 `WhaleSharkException` 构造函数可以通过编译？
+
 ```java
 package friendly;
 public class WhaleSharkException extends Exception {
@@ -11759,19 +13928,29 @@ public class WhaleSharkException extends Exception {
    public WhaleSharkException(Exception cause) {}
 }
 ```
+
 1. 无
+
 2. 一个
+
 3. 两个
+
 4. 三个
 
 8. 给给定的类图，从底部向上，层次结构中缺少了哪两个类？
+
 ![图表显示了从底部到顶部的五个类层次，其中 UnsupportedOperationExpection 连接到一个未知类，该类连接到另一个类到 throwable。](img/c16uf001.jpg)
+
 1. `IOException, Exception`
+
 2. `RuntimeException, Exception`
+
 3. `IllegalArgumentException, RuntimeException`
+
 4. `IllegalStateException, RuntimeException`
 
 9. 以下程序打印了多少行文本？
+
 ```java
 package lighting;
 import java.io.IOException;
@@ -11790,18 +13969,27 @@ public class Light {
    }
 }
 ```
+
 1. 一行
+
 2. 两行
+
 3. 代码在 `y1` 处无法编译。
+
 4. 代码在 `y2` 处无法编译。
 
 10. 插入 `main()` 方法的哪个语句可以保证抛出 `AssertionError`？
+
 1. `assert(0,"Invalid");`
+
 2. `assert 0==1;`
+
 3. `assert 0==0;`
+
 4. 以上均为
 
 11. 以下程序的输出是什么？
+
 ```java
 package paper;
 import java.io.Closeable;
@@ -11822,18 +14010,27 @@ public class PrintCompany {
    }
 }
 ```
+
 1. `This just in!`
+
 2. 代码在 `r1` 处无法编译。
+
 3. 代码在 `r2` 处无法编译。
+
 4. 代码在 `r3` 处无法编译。
 
 12. 关于 `try-with-resources` 的哪个描述是不正确的？
+
 1. 如果 `try` 块和 `close()` 方法抛出异常，`close()` 方法抛出的异常会被抑制。
+
 2. 不需要 `catch` 块。
+
 3. 如果使用了多个资源，资源按照创建的顺序关闭。
+
 4. 即使使用了多个资源，资源声明部分也使用括号。
 
 13. 以下程序打印了多少行文本？
+
 ```java
 package bee;
 class SpellingException extends RuntimeException {}
@@ -11853,16 +14050,16 @@ public class SpellChecker {
    }
 }
 ```
+
 1. 一行
+
 2. 两行
+
 3. 三行
+
 4. 代码无法编译。
 
 14. 哪些异常类在插入 `Problems` 类的空白处后，可以使代码通过？
-
-
-
-
 
 ```java
 package more;
@@ -11884,19 +14081,27 @@ public class Problems {
 ```
 
 * `Exception`
+
 * `MissingMoneyException`
+
 * `MissingMoneyException`, `MissingFoodException`
 
 1. 仅 I
+
 2. 仅 III
+
 3. I 和 III
+
 4. I, II 和 III
 
 15. 关于 `Closeable` 和 `AutoCloseable` 的哪个描述是正确的？
 
 1. `AutoCloseable` 继承自 `Closeable`。
+
 2. 实现 `AutoCloseable` 的类中的 `close()` 方法不能抛出 `IOException`。
+
 3. 实现了 `Closeable` 的类中的 `close()` 方法不能抛出 `Exception`。
+
 4. 没有区别；引入其中一个是为了向后兼容。
 
 16. 将哪个表达式插入到以下类的空白处，可以允许代码通过编译？
@@ -11915,15 +14120,21 @@ public class Beach {
 ```
 
 1. `Exception a` | `RuntimeException f`
+
 2. `IllegalStateException` | `TideException t`
+
 3. `TideException` | `IOException i`
+
 4. `TideException` | `Exception x`
 
 17. 关于多捕获（multi-catch）语句的哪个描述是正确的？
 
 1. 异常类型必须从宽泛到狭窄排序。
+
 2. 异常类型必须从狭窄到宽泛排序。
+
 3. 包含多个异常的多-catch 块的变量在块内不能重新赋值。
+
 4. 包含一个异常类型的多-catch 块的变量在块内不能重新赋值。
 
 18. 给定以下类，有多少行包含编译错误？
@@ -11950,15 +14161,21 @@ public class Step {
 ```
 
 1. 无
+
 2. 两行
+
 3. 三行
+
 4. 四行
 
 19. 关于使用 `try-with-resources` 语句，以下哪是不正确的？
 
 1. 关联的 catch 块在声明的资源关闭之前运行。
+
 2. 它与实现了 `AutoCloseable` 接口的所有类兼容。
+
 3. 它与实现了 `Closeable` 接口的所有类兼容。
+
 4. 它缩短了开发者必须编写的代码。
 
 20. 假设以下应用程序在启用断言（assertions）的情况下执行，结果是什么？
@@ -11981,17 +14198,26 @@ public class DataIntegrity {
 ```
 
 1. 抛出一个消息为 5 的 `AssertionError`。
+
 2. 抛出一个消息为 No input 的 `AssertionError`。
+
 3. 打印出 `Made it!`。
+
 4. 代码无法编译。
 
 21. 下类中哪类是未检查异常（unchecked exception）？
+
 1. `java.io.IOException`
+
 2. `java.io.NotSerializableException`
+
 3. `java.sql.SQLException`
+
 4. `java.util.MissingResourceException`
 
 22. 编译并执行以下类的结果是什么？
+
+
 
 ```java
 package wind;
@@ -12013,14 +14239,21 @@ public class Storm {
 ```
 
 1. 它打印一行。
+
 2. 它打印两行。
-3. 由于 `weatherTracker` 资源的声明错误，无法编译。
+
+3. 由于`weatherTracker`资源的声明错误，无法编译。
+
 4. 因为其他原因无法编译。
 
 23. 以下哪一个不是在运行时启用或禁用断言的命令？
+
 1. `-di`
+
 2. `-disableassertions`
+
 3. `-ea`
+
 4. `-enableassertions`
 
 24. 以下代码的输出是什么？
@@ -12049,8 +14282,11 @@ public class Translate {
 ```
 
 1. `Hello`
-2. 因为 `ReadSign` 类无法编译。
-3. 因为 `try-with-resources` 语句无法编译。
+
+2. 因为`ReadSign`类无法编译。
+
+3. 因为`try-with-resources`语句无法编译。
+
 4. 以上
 
 25. 以下代码的输出是什么？
@@ -12077,15 +14313,22 @@ public class Happening {
 ```
 
 1. `214`
+
 2. `2134`
+
 3. `2314`
+
 4. 代码无法编译。
 
-26. 哪个描述最适用于实现 `AutoCloseable` 接口的类？
-1. `close()` 方法是可选的，因为 `AutoCloseable` 接口定义实现。
-2. `close()` 方法应该避免修改已经存在的数据。
-3. `close()` 方法不应该抛出任何异常。
-4. `close()` 方法应该返回一个状态码。
+26. 哪个描述最适用于实现`AutoCloseable`接口的类？
+
+1. `close()`方法是可选的，因为`AutoCloseable`接口定义实现。
+
+2. `close()`方法应该避免修改已经存在的数据。
+
+3. `close()`方法不应该抛出任何异常。
+
+4. `close()`方法应该返回一个状态码。
 
 27. 关于程序的哪个描述是正确的？
 
@@ -12107,18 +14350,20 @@ public class Fetch {
 ```
 
 1. 程序在运行时打印一个异常。
+
 2. 程序在运行时打印两个异常。
-3. 类因为 `play()` 方法而无法编译。
-4. 类因为 `main()` 方法而无法编译。
+
+3. 类因为`play()`方法而无法编译。
+
+4. 类因为`main()`方法而无法编译。
 
 28. 下列哪项不是断言的良好用法？
+
 1. 检查方法的后置条件。
+
 2. 修改局部变量。
+
 3. 测试控制流不变性。
-
-
-
-
 
 ## 4. 验证类不变性。
 
@@ -12141,9 +14386,12 @@ public class Car {
 }
 ```
 
-1. 代码因为第 `w1` 行无法编译。
-2. 代码因为第 `w2` 行无法编译。
-3. 代码因为第 `w3` 行无法编译。
+1. 代码因为第`w1`行无法编译。
+
+2. 代码因为第`w2`行无法编译。
+
+3. 代码因为第`w3`行无法编译。
+
 4. 代码可以编译并运行，没有问题。
 
 ### 30. 关于以下类，哪些陈述是正确的？
@@ -12157,12 +14405,17 @@ public class Sneezy extends Throwable {}
 ```
 
 - 其中四个类是受检异常（checked exceptions）。
+
 - 其中两个类是未检查异常（unchecked exceptions）。
+
 - 所有类声明都不包含任何编译错误。
 
 1. 只有 I
+
 2. I 和 III
+
 3. II 和 III
+
 4. I、II 和 III
 
 ### 31. 以下应用程序的输出是什么？
@@ -12192,8 +14445,11 @@ public class TimeTraveler {
 ```
 
 1. 1235
+
 2. 3215
+
 3. 41235
+
 4. 代码无法编译。
 
 ### 32. 插入到以下类的空白处，哪个表达式可以允许代码编译？
@@ -12217,9 +14473,12 @@ public class Bells {
 }
 ```
 
-1. Error r
-2. IllegalStateException b
-3. RingException p
+1. `Error r`
+
+2. `IllegalStateException b`
+
+3. `RingException p`
+
 4. 无论使用哪个表达式，代码都无法编译。
 
 ### 33. 给定以下两个变量，哪个断言语句可以成功编译？
@@ -12230,8 +14489,11 @@ final String name = "Josephine";
 ```
 
 1. `assert (age=2);`
+
 2. `assert age!=age : (1<age ? "Error" : 10);`
+
 3. `assert name.equals("") : () -> "Oops";`
+
 4. `assert name.length()<(long)age : return "Mistake";`
 
 ### 34. 关于以下程序，哪个陈述是正确的？
@@ -12255,9 +14517,12 @@ public class Phone {
 }
 ```
 
-1. 运行时会打印一个消息中包含 `Call` 的异常。
-2. 运行时会打印一个消息包含 `Voicemail` 的异常。
-3. 运行时会打印一个消息包含 `Text` 的异常。
+1. 运行时会打印一个消息中包含`Call`的异常。
+
+2. 运行时会打印一个消息包含`Voicemail`的异常。
+
+3. 运行时会打印一个消息包含`Text`的异常。
+
 4. 代码无法编译。
 
 ### 35. 关于以下程序，哪个陈述是正确的？
@@ -12285,9 +14550,12 @@ public class Tale {
 ```
 
 1. 类可以编译，且运行时不打印任何内容。
-2. 代码仅由于 `tellStory()` 中的第一个 catch 块而无法编译。
-3. 代码仅由于 `tellStory()` 中的第二个 catch 块而无法编译。
-4. 代码由于 `tellStory()` 中两个 catch 块的错误而无法编译。
+
+2. 代码仅由于`tellStory()`中的第一个 catch 块而无法编译。
+
+3. 代码仅由于`tellStory()`中的第二个 catch 块而无法编译。
+
+4. 代码由于`tellStory()`中两个 catch 块的错误而无法编译。
 
 ### 36. 以下应用程序的输出是什么？
 
@@ -12317,22 +14585,32 @@ System...println("Song finished
 
 
 1.. Song!
-2.. 带有 `Sour note!` 的异常。
+2.. 带有`Sour note!`的异常。
 3. 以上都是
 4. 以上都不是
 
-### 37. 给定以下类，哪个命令会导致该类抛出 `AssertionError`？
+### 37. 给定以下类，哪个命令会导致该类抛出`AssertionError`？
 
 ```java
+
 public class Falcon extends Exception {
+
    private int parsec = 12;
+
    public Falcon(String name) {
+
       super(name);
+
    }
+
    public static void main(String[] aluminum) {
+
       assert new Falcon(null).parsec<12;
+
    }
+
 }
+
 ```
 
 1. `java Falcon`
@@ -12343,49 +14621,86 @@ public class Falcon extends Exception {
 ### 38. 以下应用程序的输出是什么？
 
 ```java
+
 package db;
+
 import java.io.*;
+
 import java.sql.*;
+
 public class DatabaseHelper {
+
    static class MyDatabase implements Closeable {
+
       public void close() throws SQLException {
+
          System.out.print("2");
+
       }
+
       public void write(String data) {}
+
       public String read() {return null;}
+
    }
+
    public static void main(String... files) throws Exception {
+
       try (MyDatabase myDb = new MyDatabase()) {
+
          // TODO: Decide what to read/rite
+
       } finally {
+
          System.out.print("1");
+
       }
+
    }
+
 }
+
 ```
 
 1. 12
 2. 21
-3. 代码因为 `MyDatabase` 类无法编译。
+3. 代码因为`MyDatabase`类无法编译。
 4. 代码因为 try-resources 语句无法编译。
 
 ### 39. 以下程序打印了多少行文本？
 
 ```java
+
 package tron;
+
 class DiskPlayer implements AutoCloseable {
-   public void close() throws Exception {}
+
+
+
+`public void close() throws Exception {}`
+
 }
-public class LightCycle {
-   public static void main(String... bits) {
-      try (DiskPlayer john = new DiskPlayer()) {
-         System.out.println("ping");
-      } finally {
-         System.out.println("pong");
+
+`public class LightCycle` {
+
+   `public static void main(String... bits)` {
+
+      `try (DiskPlayer john = new DiskPlayer())` {
+
+         `System.out.println("ping")`;
+
+      } `finally` {
+
+         `System.out.println("pong")`;
+
       }
-      System.out.println("return");
+
+      `System.out.println("return")`;
+
    }
+
 }
+
 ```
 
 1. 一行
@@ -12393,33 +14708,49 @@ public class LightCycle {
 3. 三行
 4. 代码无法编译。
 
-
-
-
-
 ## 40. 给定以下应用，第 `e1` 行打印的类名是什么？
 
 ```java
 package canyon;
+
 final class FallenException extends Exception {}
+
 final class HikingGear implements AutoCloseable {
+
    @Override public void close() throws Exception {
+
       throw new FallenException();
+
    }
+
 }
+
 public class Cliff {
+
    public final void climb() throws Exception {
+
       try (HikingGear gear = new HikingGear()) {
+
          throw new RuntimeException();
+
       }
+
    }
+
    public static void main(String... rocks) {
+
       try {
+
          new Cliff().climb();
+
       } catch (Throwable t) {
+
          System.out.println(t);  // e1
+
       }
+
    }
+
 }
 ```
 
@@ -12471,11 +14802,17 @@ public class Cliff {
 
 ```java
 LocalDate localDate = LocalDate.of(2017, 3, 12);
+
 LocalTime localTime = LocalTime.of(1, 0);
+
 ZoneId zone = ZoneId.of("America/New_York");
+
 ZonedDateTime z = ZonedDateTime.of(localDate, localTime, zone);
+
 Duration duration = Duration.ofHours(3);
+
 ZonedDateTime later = z.plus(duration);
+
 System.out.println(later.getHour());
 ```
 
@@ -12488,9 +14825,13 @@ System.out.println(later.getHour());
 
 ```java
 int year = 1874;
+
 int month = Month.MARCH;
+
 int day = 24;
+
 LocalDate date = LocalDate.of(year, month, day);
+
 System.out.println(date.isBefore(LocalDate.now()));
 ```
 
@@ -12503,7 +14844,9 @@ System.out.println(date.isBefore(LocalDate.now()));
 
 ```java
 LocalDate hatDay = LocalDate.of(2017, Month.JANUARY, 15);
+
 DateTimeFormatter f = DateTimeFormatter.ISO_DATE;
+
 System.out.println(_______________________);
 ```
 
@@ -12520,6 +14863,7 @@ System.out.println(_______________________);
 
 ```text
 2017-01-07T10:00-07:00[America/Phoenix]
+
 2017-01-07T08:00-08:00[America/Vancouver]
 ```
 
@@ -12532,15 +14876,15 @@ System.out.println(_______________________);
 
 ```java
 LocalDate localDate = LocalDate.of(2017, 3, 12);
+
 LocalTime localTime = LocalTime.of(1, 0);
+
 ZoneId zone = ZoneId.of("America/New_York");
+
 ZonedDateTime z = ZonedDateTime.of(localDate, localTime, zone);
 ```
+
 (注：此处原题似乎缺少了空白处的选项，根据逻辑推断为处理时间处理)
-
-
-
-
 
 2. `Duration` 对象编译通过，因为 `Duration` 用于较小的时间单位。
 
@@ -12552,6 +14896,7 @@ ZonedDateTime z = ZonedDateTime.of(localDate, localTime, zone);
 
 ```java
 LocalTime time = LocalTime.of(1,2,3,4);
+
 System.out.println(time);
 ```
 
@@ -12564,14 +14909,21 @@ System.out.println(time);
 
 ```java
 import java.time.*;
+
 import java.time.format.*;
 
 public class PolarBear {
+
    public static void main(String[] args) {
+
       LocalDate polarBearDay = LocalDate.of(2017, 2, 27);
+
       DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy dd MMM");
+
       System.out.println(polarBearDay.format(formatter));
+
    }
+
 }
 ```
 
@@ -12591,11 +14943,17 @@ public class PolarBear {
 
 ```java
 LocalDate localDate = LocalDate.of(2017, 3, 12);
+
 LocalTime localTime = LocalTime.of(13, 0);
+
 ZoneId zone = ZoneId.of("America/New_York");
+
 ZonedDateTime z = ZonedDateTime.of(localDate, localTime, zone);
+
 Duration duration = Duration.ofHours(3);
+
 ZonedDateTime later = z.plus(duration);
+
 System.out.println(later.getHour());
 ```
 
@@ -12608,10 +14966,15 @@ System.out.println(later.getHour());
 
 ```java
 LocalDate montyPythonDay = LocalDate.of(2017, Month.MAY, 10);
+
 LocalTime time = LocalTime.of(5, 40);
+
 LocalDateTime dateTime = LocalDateTime.of(montyPythonDay, time);
+
 Duration duration = Duration.ofDays(1);
+
 LocalDateTime result = dateTime.minus(duration);
+
 System.out.println(result);
 ```
 
@@ -12624,7 +14987,9 @@ System.out.println(result);
 
 ```java
 LocalDate hatDay = LocalDate.of(2017, Month.JANUARY, 15);
+
 DateFormatter f = DateFormatter.ISO_DATE;
+
 System.out.println(______________________________);
 ```
 
@@ -12653,7 +15018,9 @@ System.out.println(______________________________);
 
 ```java
 LocalDate date1 = LocalDate.of(2017, Month.MARCH, 3);
+
 LocalDate date2 = LocalDate.of(2017, Month.FEBRUARY, 31);
+
 System.out.println(date1.equals(date2));
 ```
 
@@ -12664,7 +15031,7 @@ System.out.println(date1.equals(date2));
 
 ### 27. 给定此日期/时间和时区偏移，GMT 时间是几点？
 
-```
+```text
 2017-03-09T16:00-10:00[US/Hawaii]
 ```
 
@@ -12677,11 +15044,17 @@ System.out.println(date1.equals(date2));
 
 ```java
 LocalDate trainDay = LocalDate.of(2017, 5, 13);
+
 LocalTime time = LocalTime.of(10, 0);
+
 ZoneId zone = ZoneId.of("America/Los_Angeles");
+
 ZonedDateTime zdt = ZonedDateTime.of(trainDay, time, zone);
+
 Instant instant = zdt.toInstant();
+
 instant = instant.plus(1, ChronoUnit.DAYS);
+
 System.out.println(instant);
 ```
 
@@ -12694,10 +15067,15 @@ System.out.println(instant);
 
 ```java
 LocalDate date = LocalDate.of(2017, Month.JULY, 17);
+
 LocalTime time = LocalTime.of(10, 0);
+
 ZoneId zone = ZoneId.of("America/New_York");
+
 ZonedDateTime iceCreamDay = ZonedDateTime.of(date, time, zone);
+
 time = time.plus(1);
+
 System.out.println(iceCreamDay.getMonthValue());
 ```
 
@@ -12709,14 +15087,21 @@ System.out.println(iceCreamDay.getMonthValue());
 
 ```java
 import java.time.*;
+
 import java.time.format.*;
 
 public class PolarBear {
+
    public static void main(String[] args) {
+
       LocalDate polarBearDay = LocalDate.of(2017, 2, 27);
+
       DateTimeFormatter formatter = DateTimeFormatter.ofPattern("Holiday: yyyy dd");
+
       System.out.println(polarBearDay.format(formatter));
+
    }
+
 }
 ```
 
@@ -12736,18 +15121,28 @@ public class PolarBear {
 
 ```java
 LocalDate waffleDay = LocalDate.of(2017, Month.MARCH, 25);
+
 Period period = Period.ofYears(1).ofMonths(6).ofDays(3);
+
 LocalDate later = waffleDay.plus(period);
+
 later.plusDays(1);
+
 LocalDate thisOne = LocalDate.of(2018, Month.SEPTEMBER, 28);
+
 LocalDate thatOne = LocalDate.of(2018, Month.SEPTEMBER, 29);
-System.out.println(later.isBefore(thisOne) + " " + later.isBefore(thatOne));
 ```
 
+
+
+`System.out.println(later.isBefore(thisOne) + " " + later.isBefore(thatOne));`
+
+```
 1. false false
 2. false true
 3. true true
 4. 代码无法编译。
+```
 
 ### 33. 以下哪几个可以填充空白使得代码编译并打印 31？
 
@@ -12768,7 +15163,7 @@ System.out.println(shoppingDaysLeft);
 3. 三
 4. 四
 
-### 34. 填充空白时，以下哪几个类会导致编译错误：LocalDate, LocalDateTime, LocalTime, ZonedDateTime?
+### 34. 填充空白时，以下哪几个类会导致编译错误：`LocalDate`, `LocalDateTime`, `LocalTime`, `ZonedDateTime`?
 
 ```java
 private static String formatMe(__________ obj) {
@@ -12799,10 +15194,6 @@ System.out.println(iceCreamDay.getMonthValue());
 4. 代码无法编译。
 
 ### 36. 以下哪一个可以填充空白以使代码编译？
-
-
-
-
 
 ```java
 public boolean isItMyBirthday(LocalDateTime dateTime) {
@@ -12864,7 +15255,7 @@ public class PiDay {
 3. 代码无法编译。
 4. 代码可以编译但在运行时抛出异常。
 
-### 40. 夏令时在 2017 年 11 月 5 日凌晨 2 点结束，此时我们会重复该小时。假设我们有一个 ZonedDateTime，在调用 `toString()` 时输出 2017-11-05T01:00-04:00[America/ New_York]。向该值增加一小时后得到的 `ZonedDateTime` 的可能值是什么？
+### 40. 夏令时在 2017 年 11 月 5 日凌晨 2 点结束，此时我们会重复该小时。假设我们有一个 `ZonedDateTime`，在调用 `toString()` 时输出 2017-11-05T01:00-04:00[America/New_York]。向该值增加一小时后得到的 `ZonedDateTime` 的可能值是什么？
 
 1. 2017-11-05T01:00-04:00[America/New_York]
 2. 2017-11-05T02:00-04:00[America/New_York]
@@ -12879,7 +15270,7 @@ public class PiDay {
     * 从控制台读取和写入数据
     * 使用 `java.io` 包中的 `BufferedReader`, `BufferedWriter`, `File`, `FileReader`, `FileWriter`, `FileInputStream`, `FileOutputStream`, `ObjectOutputStream`, `ObjectInputStream` 和 `PrintWriter`。
 
-1. 填空：`Writer` 是 __________，它与相关的流类 __________。 
+1. 填空：`Writer` 是 __________，它与相关的流类 __________。
 1. 一个具体类，extend
 2. 一个抽象类，extend
 3. 一个接口，extend
@@ -12913,7 +15304,9 @@ public class PiDay {
 
 ```java
 package alarm;
+
 import java.io.*;
+
 public class Smoke {
    public void sendAlert(File fn) {
       try(BufferedWriter w = new BufferedWriter(new FileOutputStream(fn))) {
@@ -12924,11 +15317,13 @@ public class Smoke {
          System.out.print("3");
       }
    }
+
    public static void main(String[] args) {
       new Smoke().sendAlert(new File("alarm.txt"));
    }
 }
 ```
+
 1. 3
 2. 2
 3. 代码无法编译。
@@ -12948,7 +15343,9 @@ public class Smoke {
 
 ```java
 package numbers;
+
 import java.io.*;
+
 public class Prime {
    public static void main(String[] args) throws Exception {
       try (InputStream is = new FileInputStream("prime6.txt")) {
@@ -12964,6 +15361,7 @@ public class Prime {
    }
 }
 ```
+
 1. 11
 2. 13
 3. 代码无法编译。
@@ -12983,12 +15381,14 @@ public void write1() throws IOException {
    w.write("Secret passcode");
    w.close();
 }
+
 public void write2() throws IOException {
    try(final Writer w = new BufferedWriter(new FileWriter("dont.open"))) {
       w.write("Secret passcode");
    }
 }
 ```
+
 1. 两个方法都可以编译且等效。
 2. 两个方法无法编译。
 3. 只有一个方法可以编译。
@@ -12998,39 +15398,42 @@ public void write2() throws IOException {
 
 ```java
 package vacation;
+
 import java.io.*;
 import java.util.*;
+
 public class Itinerary {
    private List<String> activities = new ArrayList<>();
+
    private static Itinerary getItinerary(String name) {
       return null;
    }
+
    public static void printItinerary() throws Exception {
       Console c = new Console();
       final String name = c.readLine("What is your name?");
       final Itinerary stuff = getItinerary(name);
       stuff.activities.forEach(s -> c.printf(s));
    }
+
    public static void main(String[] holidays) throws Exception {
       printItinerary();
    }
 }
 ```
+
 1. 代码无法编译。
-2. 代码可以编译并在运行时打印 NullPointerException。
+2. 代码可以编译并在运行时打印 `NullPointerException`。
 3. 代码可以编译但在运行时不打印任何内容。
 4. 以上都不是。
 
 13. 根据给定的图，哪两个类可以放在空白框中？
 
 ![图显示了四个相互连接的类，其中两个空白类连接到 FilterOutputStream，而后者又连接到所有类顶部的 OutputStream。](img/c18uf001.jpg)
+
 1. `BufferedOutputStream`, `PrintStream`
 2. `BufferedOutputStream`, `PrintOutputStream`
 3. `ByteArrayOutputStream`, `Stream`
-
-
-
-
 
 ## 4. FileOutputStream 和 OutputStream
 
@@ -13038,20 +15441,25 @@ public class Itinerary {
 
 ```java
 package breakfast;
+
 public class Cereal {
    private String name = "CocoaCookies";
    private transient int sugar;
+
    public Cereal() {
       super();
       this.name = "CaptainPebbles";
    }
+
    {
       name = "SugarPops";
    }
+
    public String getName() { return name; }
    public void setName(String name) {
       this.name = name;
    }
+
    public int getSugar() { return sugar; }
    public void setSugar(int sugar) {
       this.sugar = sugar;
@@ -13075,7 +15483,9 @@ public class Cereal {
 
 ```java
 package job;
+
 import java.io.*;
+
 public class Resume {
    public void resetWorkingDirectory() throws Exception {
       File f1 = new File("/templates/proofs");
@@ -13086,34 +15496,38 @@ public class Resume {
       f1.delete();
       f2.delete();  // k2
    }
+
    public static void main(String... leads) {
       try {
          new Resume().resetWorkingDirectory();
       } catch (Exception e) {
-         new RuntimeException(e);
-      }
-   }
-}
 ```
 
-1. 行 `k1` 无法编译或在运行时触发异常。
-2. 行 `k2` 无法编译或在运行时触发异常。
-3. 代码可以编译并运行，不打印异常。
-4. `以上均不是`
 
-### 17. 给定以下类，有三个值可以确保它在各种不同的系统上正常运行。哪一个值不能？
+
+### 16. 给定以下类，有三个值可以确保它在各种不同的系统上正常运行。哪一个值不能？
 
 ```java
 package magic;
+
 import java.io.*;
+
 public class Store {
+
    private final String directory;
+
    public Store(String directory) {
+
       this.directory = directory;
+
    }
+
    public File getDatabaseFolder(String file) {
+
       return new File(directory + __________ + file);
+
    }
+
 }
 ```
 
@@ -13122,24 +15536,38 @@ public class Store {
 3. `System.getProperty("file.separator")`
 4. `System.getProperty("path.separator")`
 
-### 18. 下一个类包含多少个编译错误？
+### 17. 下一个类包含多少个编译错误？
 
 ```java
 package hero;
+
 import java.io.*;
+
 public class Guitar {
+
    public void readMusic(File f) {
+
       try (BufferedReader r = new BufferedReader(FileReader(f))) {
+
          final String music = null;
+
          try {
+
             while((music = r.readLine()) != null)
+
                System.out.println(music);
+
          } catch (IOException e) {}
+
       } catch (FileNotFoundException e) {
+
          throw new RuntimeException(e);
+
       } finally {}
+
    }
-}}
+
+}
 ```
 
 1. `无`
@@ -13147,39 +15575,55 @@ public class Guitar {
 3. `两个`
 4. `三个`
 
-### 19. 两个 Console 方法 `format()` 和 `printf()` 之间有什么区别？
+### 18. 两个 `Console` 方法 `format()` 和 `printf()` 之间有什么区别？
 
 1. 其中一个接受一个可选的参数列表；另一个不接受。
 2. 其中一个接受 `String` 作为输入；另一个接受 `Object`。
 3. 这两个方法之间没有区别。
 4. 陷阱！`printf()` 在 `Console` 中没有定义。
 
-### 20. 假设你想以高效的方式向文件写入大量文本数据。哪两个 `java.io` 类最合适？
+### 19. 假设你想以高效的方式向文件写入大量文本数据。哪两个 `java.io` 类最合适？
 
 1. `FileOutputStream` 和 `OutputStream`
 2. `Writer` 和 `BufferedWriter`
 3. `FileWriter` 和 `BufferedWriter`
 4. `ObjectOutputStream` 和 `BufferedWriter`
 
-### 21. 假设引用的文件存在且包含数据。关于以下类的哪个陈述是正确的？
+### 20. 假设引用的文件存在且包含数据。关于以下类的哪个陈述是正确的？
 
 ```java
 package school;
+
 import java.io.*;
+
 class Student implements Serializable {}
+
 public class StudentManager {
+
    public static void main(String[] grades) {
+
       try(ObjectInputStream ios = new ObjectInputStream(
+
             new FileInputStream("data"))) {
+
          Student record;
+
          while((record = (Student)ios.readObject()) != null) {
+
             System.out.print(record);
+
          }
+
       } catch (EOFException e) {
+
       } catch (Exception e) {
+
          throw new RuntimeException(e);
+
       }
+
    }
+
 }
 ```
 
@@ -13188,24 +15632,33 @@ public class StudentManager {
 3. 程序运行并打印所有。
 4. 程序运行但可能打印部分。
 
-### 22. 哪一个 `java.io` 类不具有输入？
+### 21. 哪一个 `java.io` 类不具有输入？
 
 1. `BufferedOutputStream`
 2. `BufferedWriter`
 3. `FileWriter`
 4. `PrintWriter`
 
-### 23. 假设 `/Earth` 在文件系统中不存在，以下程序的输出是什么？
+### 22. 假设 `/Earth` 在文件系统中不存在，以下程序的输出是什么？
 
 ```java
 package center;
+
 import java.io.*;
+
 public class Journey {
+
    public static void main(String[] dig) {
+
       File file = new File("/Earth");
+
       System.out.print(file.getParent()
+
             +" - "
+
             +file.getParent()); }
+
+}
 ```
 
 1. `/ - /`
@@ -13213,17 +15666,25 @@ public class Journey {
 3. 代码无法编译。
 4. 代码编译但在运行时抛出异常。
 
-### 24. 关于执行以下程序的哪些陈述是正确的？
+### 23. 关于执行以下程序的哪些陈述是正确的？
 
 ```java
 package test;
+
 import java.io.*;
+
 public class Turing {
+
    public static void main(String... robots) {
+
       Console c = System.console();
+
       final String response = c.readLine("Are you human?");
+
       System.err.print(response);
+
    }
+
 }
 ```
 
@@ -13236,17 +15697,25 @@ public class Turing {
 3. `II` 和 `III`
 4. `I`, `II` 和 `III`
 
-### 25. 关于 `deleteTree()` 方法，以下哪个陈述是正确的？
+### 24. 关于 `deleteTree()` 方法，以下哪个陈述是正确的？
 
 ```java
 public void deleteTree(File f) {
+
    if(!f.isDirectory())
+
       f.delete();
+
    else {
+
       Stream.of(f.list())
+
          .forEach(s -> deleteTree(s));
+
       f.delete();
+
    }
+
 }
 ```
 
@@ -13255,64 +15724,85 @@ public void deleteTree(File f) {
 3. 如果修改两行，它能够删除目录树。
 4. `以上均不是`
 
-### 26. 以下哪一个不是 Java 内置的流？
+### 25. 以下哪一个不是 Java 内置的流？
 
 1. `System.err`
 2. `System.in`
 3. `System.info`
 4. `System.out`
 
-### 27. 假设以下类引用的文件路径可访问且可写，以下程序的输出是什么？
+### 26. 假设以下类引用的文件路径可访问且可写，以下程序的输出是什么？
 
 ```java
 package store;
+
 import java.io.*;
+
 public class Furniture {
+
    public final static void main(String... inventory) throws Exception {
+
       Writer w = new FileWriter("couch.txt");
+
       try (BufferedWriter bw = new BufferedWriter(w)) {
+
          bw.write("Blue coach on Sale!");
+
       } finally {
+
          w.flush();
+
          w.close();
+
       }
+
       System.out.print("Done!");
+
    }
+
 }
 ```
 
 1. `Done!`
-
-
-
-
-
 2. 代码未编译的原因有一个。
 3. 代码未编译的原因有两个。
 4. 代码可以编译，但在运行时抛出异常。
 
-28. 给定一个 `Console` 实例 `c`，以下哪些方法调用不是从用户处读取输入的方法？
+### 27. 给定一个 `Console` 实例 `c`，以下哪些方法调用不是从用户处读取输入的方法？
 
 1. `c.reader().read()`
 2. `c.reader().readLine()`
 3. `c.readLine()`
 4. `c.readPassword()`
 
-29. `copyPidgin()` 方法用于将一个文件的内容复制到另一个文件中。关于该实现的哪种描述是正确的？
+### 28. `copyPidgin()` 方法用于将一个文件的内容复制到另一个文件中。关于该实现的哪种描述是正确的？
 
 ```java
 package birds;
+
 import java.io.*;
+
 public class Pidgin {
+
    public void copyPidgin(File s, File t) throws Exception {
+
       try(InputStream is = new FileInputStream(s);
+
             OutputStream os = new FileOutputStream(t)) {
+
              byte[] data = new byte[123];
+
              int chirps;
+
              while((chirps = is.read(data))>0) {
+
                 os.write(data);
+
              }}
-       }}
+
+       }
+
+}
 ```
 
 1. 该类无法编译，因为 `read(byte[])` 和 `write(byte[])` 分别只能在 `BufferedInputStream` 和 `BufferOutputStream` 上调用。
@@ -13320,34 +15810,52 @@ public class Pidgin {
 3. 该方法正确复制了部分文件的内容。
 4. 该方法在运行时总是抛出异常，因为数据数组的大小不是 2 的幂。
 
-30. 根据你对 `java.io` 流类类名的了解，一个名为 `BufferedFileReader` 的不存在的类最可能用于什么？
+### 29. 根据你对 `java.io` 流类类名的了解，一个名为 `BufferedFileReader` 的不存在的类最可能用于什么？
 
 1. 从远程网络读取较小的文本文件
 2. 从磁盘读取图像
 3. 从文件系统读取大型文本文件
 4. 从磁盘读取序列化数据
 
-31. 下述程序的输出是什么？
+### 30. 下述程序的输出是什么？
 
 ```java
 package factory;
+
 import java.io.*;
+
 public class WidgetProcessor {
+
    public int getWidgetNumber(byte[] data) throws Exception {
+
       try (InputStream is = new ByteArrayInputStream(data)) {
+
              is.read(new byte[2]);
+
              if(!is.markSupported()) return -1;
+
              is.mark(5);
+
              is.read();is.read();
+
              is.skip(3);
+
              is.reset();
+
              return is.read();
+
           }
+
        }
+
    public static void main(String... sprockets) throws Exception {
+
       final WidgetProcessor p = new WidgetProcessor();
+
       System.out.print(p.getWidgetNumber(new byte[] {1,2,3,4,5,6,7}));
+
    }
+
 }
 ```
 
@@ -13356,7 +15864,7 @@ public class WidgetProcessor {
 3. 7
 4. 运行时抛出异常。
 
-32. 假设工作目录可访问、为空且可写，以下类创建了多少文件系统对象？
+### 31. 假设工作目录可访问、为空且可写，以下类创建了多少文件系统对象？
 
 ```java
 1: package kitchen;
@@ -13375,30 +15883,45 @@ public class WidgetProcessor {
 3. 两个
 4. 三个
 
-33. 假设你想从存储在磁盘上的文件中读取数据，该文件由 String、long 和 Object 值组成？鉴于文件很大，你打算使用三个类来实现这一结果。以下哪一个类不是你应该使用的三个类之一？
+### 32. 假设你想从存储在磁盘上的文件中读取数据，该文件由 `String`、`long` 和 `Object` 值组成？鉴于文件很大，你打算使用三个类来实现这一结果。以下哪一个类不是你应该使用的三个类之一？
 
 1. `BufferedInputStream`
 2. `BufferedReader`
 3. `FileInputStream`
 4. `ObjectInputStream`
 
-34. 哪种描述最能描述以下两个方法？
+### 33. 哪种描述最能描述以下两个方法？
 
 ```java
 public String getNameQuick() throws IOException {
+
    final BufferedReader r = new BufferedReader(
+
          new FileReader("saved.name"));
+
    final String name = r.readLine();
+
    r.flush();
+
    return name;
+
 }
+
 public String getNameSafely() throws IOException {
+
    try(final BufferedReader r = new BufferedReader(
+
          new FileReader("saved.name"))) {
+
       final String name = r.readLine();
+
       r.flush();
+
       return name;
-   }}}
+
+   }
+
+}
 ```
 
 1. 两个方法都可以编译且相互等。
@@ -13406,65 +15929,109 @@ public String getNameSafely() throws IOException {
 3. 只有一个方法可以编译。
 4. 方法可以编译，但其中一个可能会导致资源泄露。
 
-35. 下述程序的输出是什么？假设 `System.console()`可用且用户输入了 badxbad 并按下回车。
+### 34. 下述程序的输出是什么？假设 `System.console()` 可用且用户输入了 `badxbad` 并按下回车。
 
 ```java
 package hardway;
+
 import java.io.*;
+
 public class InconvenientImplementation {
+
    public static void main(String... dontDoThis) throws Exception {
+
       Console c = System.console();
+
       if(c != null) {
+
              c.writer().write('P');
+
              c.writer().write('a');
+
              c.writer().write('s');
+
              c.writer().write('s');
+
              c.writer().flush();  // t1
+
              int i;
+
              StringBuilder sb = new StringBuilder();
+
              while((i = c.reader().read()) != 'x') {  // t2
+
                 sb.append((char)i);
+
              }
+
              c.writer().format("Result: %s",sb.toString());
+
+      }
+
+   }
+
+}
+```
+
+1. `Result: bad`
+2. 行 `t1` 无法编译或运行时抛出异常。
+3. 行 `t2` 无法编译或运行时抛出异常。
+4. 以上都不是
+
+### 35. 为什么 `Console.readPassword()` 返回 `char` 数组而不是 `String`？
+
+1. 它提高了性能。
+2. 它提高了安全性。
+3. 密码必须存储为 `char` 数组。
+4. `String` 无法持有密码字符。
+
+### 36. 关于以下程序的哪种描述是正确的？
+
+```java
+package mystical;
+
+import java.io.*;
+
+public class Unicorn {
+
+   public void findUnicorns() {
+
+      try(InputStream o = new ObjectInputStream(readBook())) {
+
+         while(o.read() != -1) {
+
+            System.out.println(o.read());
+
+         }
       }
    }
 }
 ```
 
-1. Result: bad
-2. 行 `t1` 无法编译或运行时抛出异常。
-3. 行 `t2` 无法编译或运行时抛出异常。
-4. 以上都不是
 
-36. 为什么 `Console.readPassword()` 返回 char 数组而不是 `String`？
 
-1. 它提高了性能。
-2. 它提高了安全性。
-3. 密码必须存储为 char 数组。
-4. `String` 无法持有密码字符。
+} catch (Throwable t) {
 
-37. 关于以下程序的哪种描述是正确的？
+   throw new RuntimeException(t);
 
-```java
-package mystical;
-import java.io.*;
-public class Unicorn {
-   public void findUnicorns() {
-      try(InputStream o = new ObjectInputStream(readBook())) {
-         while(o.read() != -1) {
-            System.out.println(o.read());
-             }
-      } catch (Throwable t) {
-         throw new RuntimeException(t);
-      }
-   }
-   private InputStream readBook() throws IOException {
-      return new BufferedInputStream(new FileReader("magic.book"));
-   }
-   public static void main(String... horn) {
-      new Unicorn().findUnicorns();
-   }
 }
+
+}
+
+private InputStream readBook() throws IOException {
+
+   return new BufferedInputStream(new FileReader("magic.book"));
+
+}
+
+public static void main(String... horn) {
+
+   new Unicorn().findUnicorns();
+
+}
+
+}
+
 ```
 
 1. 代码无法编译。
@@ -13481,41 +16048,67 @@ public class Unicorn {
 
 39. 下述程序的输出是什么？
 
-
-
-
-
 ```java
 package cell;
+
 import java.io.*;
+
 public class TextMessage {
+
    public String receiveText() throws Exception {
+
       try (Reader r = new FileReader("messages.txt")) {
+
          StringBuilder s = new StringBuilder();
+
          int c;
+
          while((c = r.read()) != -1) {
+
             s.append((char)c);
+
             if(r.markSupported()) {
+
                r.mark(100);
+
                r.skip(10);
+
                r.reset();
+
             }
+
          }
+
          return s.toString();
+
       }
+
    }
+
    public void sendText(String message) throws Exception {
+
       try (Writer w = new FileWriter("messages.txt")) {
+
          for(int i=0; i<message.length(); i++) {
+
                 w.write(message.charAt(i));
+
                 w.skip(1);
+
              }
+
       }
+
    }
+
    public static void main(String[] minutes) throws Exception {
+
       final TextMessage m = new TextMessage();
+
       m.sendText("You up?");
+
       System.out.println(m.receiveText());
+
    } }
 ```
 
@@ -13528,33 +16121,59 @@ public class TextMessage {
 
 ```java
 package heart;
+
 import java.io.*;
+
 public class Valve implements Serializable {
+
    private int chambers = -1;
+
    private transient Double size = null;
+
    private static String color;
+
    public Valve() {
+
       this.chambers = 3;
+
       color = "BLUE";
+
    }
 
    public static void main(String[] love) throws Throwable {
+
       try (ObjectOutputStream o = new ObjectOutputStream(
+
             new FileOutputStream("scan.txt"))) {
+
          final Valve v = new Valve();
+
          v.chambers = 2;
+
          v.size = 10.0;
+
          v.color = "RED";
+
          o.writeObject(v);
+
       }
+
       new Valve();
+
       try (ObjectInputStream o = new ObjectOutputStream(
+
             new FileInputStream("scan.txt"))) {
+
          Valve v = (Valve)o.readObject();
+
          System.out.print(v.chambers+","+v.size+","+v.color);
+
       }
+
    }
+
    { chambers = 4; }
+
 }
 ```
 
@@ -13570,45 +16189,56 @@ Java 文件 I/O (NIO.2)
 **本次练习测试涵盖的 OCP 考试考点包括：**
 
 * ![](img/correction.jpg)**Java 文件 I/O (NIO.2)**
-
-    * 使用 `Path` 接口对文件和目录路径进行操作
-    * 使用 `Files` 类来检查、读取、删除、拷贝、移动、管理文件或目录的元数据
-    * 在 `NIO.2` 中使用 `Stream API`
+  * 使用 `Path` 接口对文件和目录路径进行操作
+  * 使用 `Files` 类来检查、读取、删除、拷贝、移动、管理文件或目录的元数据
+  * 在 `NIO.2` 中使用 `Stream API`
 
 1. 填空：__________ 是一个包含指向另一个文件或目录引用的文件，而 __________ 是一个包含内容的文件。
 
-    1. 不规则文件，普通文件
-    2. 普通文件，不透明文件
-    3. 符号链接，普通文件
-    4. 符号链接，符号目录
+   1. 不规则文件，普通文件
+   2. 普通文件，不透明文件
+   3. 符号链接，普通文件
+   4. 符号链接，符号目录
 
 2. 下列哪些方法存在于 `NIO.2 Path` 接口中？
 
-    * `getRoot()`
-    * `isDirectory()`
-    * `listFiles()`
-    * `toRealPath()`
+   * `getRoot()`
+   * `isDirectory()`
+   * `listFiles()`
+   * `toRealPath()`
 
-    1. 仅 I
-    2. I、II 和 III
-    3. I 和 IV
-    4. II 和 III
+   1. 仅 I
+   2. I、II 和 III
+   3. I 和 IV
+   4. II 和 III
 
 3. 假设文件 `/secret/hide.txt` 存在并标记为隐藏，执行以下程序的运行是什么？
 
 ```java
 package hidden;
+
 import java.nio.file.*;
+
 public class Finder {
+
    public void findHiddenFile(Path p) throws Exception {
+
       if(File.isHidden(p)) {
+
          System.out.print("Found!");
+
       }
+
    }
+
    public static void main(String[] folders) throws Exception {
+
       final Finder f = new Finder();
+
       f.findHiddenFile(Paths.get("/secret/hide.txt"));
+
    }
+
 }
 ```
 
@@ -13619,35 +16249,49 @@ public class Finder {
 
 4. 填空：`Files.walk()` 执行 __________ 遍历，而 `Files.find()` 执行 __________ 遍历。
 
-    1. 广度优先，广度优先
-    2. 广度优先，深度优先
-    3. 深度优先，广度优先
-    4. 深度优先，深度优先
+   1. 广度优先，广度优先
+   2. 广度优先，深度优先
+   3. 深度优先，广度优先
+   4. 深度优先，深度优先
 
 5. 在读取文件信息时，使用使用 NIO.2 属性接口相比从 `Files` 方法中逐个读取值有什么什么优势？
 
-    1. 减少与文件系统的交互次数
-    2. 保证性能提升
-    3. 支持符号链接
-    4. 减少内存泄漏
+   1. 减少与文件系统的交互次数
+   2. 保证性能提升
+   3. 支持符号链接
+   4. 减少内存泄漏
 
 6. 编译并执行以下程序的运行是什么？假设当前目录为 `/stock` 且路径 `/stock/sneakers` 不存在。
 
 ```java
 package shoe;
+
 import java.io.*;
+
 import java.nio.file.*;
+
 public class Sneaker {
+
    public void setupInventory(Path desiredPath) throws Exception {
+
       Path suggestedPath = Paths.get("sneakers");
+
       if(Files.isSameFile(suggestedPath, desiredPath)
+
             && !Files.exists(desiredPath))
+
          Files.createDirectories(desiredPath);
+
    }
+
    public static void main(String[] socks) throws Exception {
+
       Path w = new File("/stock/sneakers").toPath();
+
       new Sneaker().setupInventory(w);
+
    }
+
 }
 ```
 
@@ -13678,18 +16322,31 @@ System.out.print(Files.walk(Paths.get("/again")).count());
 
 ```java
 package magic;
+
 import java.nio.file.*;
+
 public class Magician {
+
    public String doTrick(Path path) {
+
       return path.subpath(2,3)
+
            .getName(1)
+
            .toAbsolutePath()
+
            .toString();
+
    }
+
    public static void main(String... cards) {
+
       final Magician m = new Magician();
+
       System.out.print(m.doTrick(
+
           Paths.get("/bag/of/tricks/.././disappear.txt")));
+
    } }
 ```
 
@@ -13706,9 +16363,9 @@ public class Magician {
     * `mkdir()`
 
     1. 仅 I
-2. I、II 和 IV
+    2. I、II 和 IV
     3. II 和 III
-4. 仅 IV
+    4. 仅 IV
 
 11. 下面代码片段尝试将文件系统记录从 `oldHardDrivePath` 移动到 `newHardDrivePath`，运行时产生异常。最可能的异常类型是什么？
 
@@ -13723,20 +16380,19 @@ Files.move(oldHardDrivePath,newHardDrivePath,REPLACE_EXISTING);
 
 12. 下列哪个项可以填入空白处以使方法能够编译？
 
-
-
-
-
 ```java
 public String getPathName(String fileName) {
+
    final Path p = ____________________;
+
    return p.getFileName();
+
 }
 ```
 
-*   `new File(fileName).toPath()`
-*   `new Path(fileName)`
-*   `FileSystems.getDefault().getPath(fileName)`
+* `new File(fileName).toPath()`
+* `new Path(fileName)`
+* `FileSystems.getDefault().getPath(fileName)`
 
 1. I 和 II
 2. I 和 III
@@ -13747,22 +16403,39 @@ public String getPathName(String fileName) {
 
 ```java
 package clone;
+
 import java.io.*;
+
 import java.nio.file.*;
+
 public class Rewriter {
+
    public static void copy(Path source, Path target) throws Exception {
+
       try (BufferedReader r = Files.newBufferedReader(source);
+
             Writer w = Files.newBufferedWriter(target)) {
+
          String temp = null;
+
          while((temp = r.readLine()) != null) {
+
             w.write(temp);
+
          }
+
       }
+
    }
+
    public static void main(String[] tooMany) throws Throwable {
+
       Rewriter.copy(Paths.get("/original.txt"),
+
          FileSystems.getDefault().getPath("/","unoriginal.txt"));
+
    }
+
 }
 ```
 
@@ -13782,18 +16455,31 @@ public class Rewriter {
 
 ```java
 1:  package yellow;
+
 2:  import java.nio.file.*;
+
 3:  public class Road {
+
 4:     public boolean findHome() {
+
 5:        Path oftenTraveled = Paths.get("/highway/street/spot.txt");
+
 6:        Path lessTraveled = Paths.get("/highway/street/house/../.");
+
 7:        lessTraveled.resolve("spot.txt");
+
 8:        return oftenTraveled.equals(lessTraveled.normalize());
+
 9:     }
+
 10:    public static void main(String... emerald) {
+
 11:       System.out.print("AM I HOME? "
+
 12:             +(new Road().findHome() ? "yes" : " no"));
+
 13:    }
+
 14: }
 ```
 
@@ -13813,388 +16499,53 @@ public class Rewriter {
 
 ```java
 package weather;
+
 import java.io.*;
+
 import java.nio.file.*;
+
 public class Snow {
+
    public static boolean removeSnow(Path flake) throws IOException {
-      if(!Files.isDirectory(flake) && !Files.isSymbolicLink(flake))
-             return Files.delete(flake);
-      else return true;
-   }
-   public static void main(String[] cones) throws IOException {
-      File driveway = new File("/driveway");
-      for(File f : driveway.listFiles()) {
-         System.out.println(removeSnow(f.toPath()));
-      }
-   }
-}
 ```
 
-1. 程序只打印 true 值的列表。
-2. 程序打印出 true 和 false 值的混合。
-3. 代码无法编译。
-4. 代码通过编译但在运行时打印出异常。
 
-18. 插入下方空白处的哪种接口名称允许该代码段编译？
 
-```java
-Path file = Paths.get("/data/movie.txt");
-BasicFileAttributes b = Files.readAttributes(file, __________);
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
 ```
 
-1. `BasicFileAttributes.class`
-2. `DosFileAttributes.class`
-3. `PosixFileAttributes.class`
-4. 以上所有
 
-19. 以下代码段的输出是什么？假设当前目录是根路径。
 
-```java
-Path p1 = Paths.get("./locks");
-Path p2 = Paths.get("/found/red.zip");
-System.out.println(p1.relativize(p2));
-System.out.println(p2.relativize(p1));
+`import static java.nio.file.Files.*;`
+
+`import java.io.*;`
+
+`import java.nio.file.*;`
+
 ```
-
-1. ../found/red.zip
-   ../../locks
-2. ../locks
-   ../found/red.zip
-3. locks/../found/red.zip
-   ../found/locks
-4. 以上均非
-
-20. 以下代码段的输出是什么？假设当前目录是根路径。
-
-```java
-Path p1 = Paths.get("./locks");
-Path p2 = Paths.get("/found/red.zip");
-System.out.println(p1.relativize(p2));
-System.out.println(p2.relativize(p1));
-```
-
-1. /lost.txt
-   ./found/keys
-2. ../found/keys
-   /lost.txt
-3. lost.txt
-   ./found/keys
-4. 以上均非
-
-21. 以下程序的输出是什么？假设路径存在且可访问。
-
-```java
-package charity;
-import java.nio.file.*;
-public class Roster {
-   protected void printRoster(Path p) {
-      for(Path f : Files.list(p)) {  // n1
-             if(f.toString().endsWith(".java"))  // n2
-                System.out.print(f);
-      }
-   }
-   public static void main(String[] volunteers) {
-      new Roster().printRoster(Path);
-   }
-}
-```
-
-1. 文件列表。
-2. 类在 n1 处无法编译。
-3. 类在 n2 处无法编译。
-4. 以上均非
-
-22. 给定以下文件系统，forward 是指向 java 的符号链接，运行时哪个值不会打印 `/java/Sort.java`？
-
-![显示文件系统，/ 被分类为 heap 和 objc，Java 被分类为 heap 和 forward。](img/c19uf01.jpg)
-
-```java
-Path p = Paths.get("/", "objc", "bin");
-System.out.println(p.resolve("__________").toRealPath());
-```
-
-1. ../backwards/../forward/Sort.java
-2. ../forward/./Sort.java
-3. ../java/./Sort.java
-4. ../java/Sort.java
-
-23. 使用该文件系统（包括指向 java 的符号链接），需要调用多少次 `Files.delete()` 才能执行以下行而不产生异常？
-
-```java
-Files.delete(Paths.get("/objc"));
-```
-
-1. 一次
-2. 四次
-3. 七次
-4. 以上均非。需要先用 `Files.deleteSymbolicLink()` 删除符号链接。
-
-24. 假设 `course.txt` 文件存在且可读，执行以下程序的运行是什么？
-
-```java
-package schoolwork;
-import java.io.*;
-import java.nio.file.*;
-public class Notes {
-   public void printNotes() {
-      try (OutputStream out = System.out) {  // y1
-         Files.copy(out, Paths.get("course.txt"));
-      } catch (IOException e) {
-         throw new RuntimeException(e);
-      }
-   }
-   public static void main(String[] coursework) {
-      new Notes().printNotes();
-   }
-}
-```
-
-1. 代码通过编译但在运行时抛出异常。
-2. 类在 y1 处无法编译。
-3. 代码由于其他原因无法编译。
-4. 程序打印 course.txt 的内容。
-
-25. 在读取文件信息时，加载 `BasicFileAttributeView` 相比 `BasicFileAttributes` 的优势是什么？
-
-1. 允许设置隐藏属性
-2. 允许修改修改日期
-3. 所有文件信息在一次往返中被读取。
-4. 没有优势。
-
-
-
-
-
-## 26. Rose 应用通过输入参数 `/flower` 运行。`/flower` 目录包含五个子目录，每个子目录包含五个文件。以下程序打印了多少个 `Path` 的值？
-
-```java
-import java.nio.file.*;
-public class Rose {
-   public void tendGarden(Path p) throws Exception {
-      Files.walk(p,1)
-         .map(p -> p.toRealPath())
-         .forEach(System.out::println);
-   }
-   public static void main(String... thorns) throws Exception {
-      new Rose().tendGarden(Paths.get(thorns[0]));
-   }
-}
-```
-
-1. 无
-2. 一个
-3. 六个
-4. 三十一个
-
-## 27. 下列哪些语句在独立运行时会产生空指针异常（NullPointerException`）？
-
-* `Paths.get("../sang").getParent().getParent()`
-* `Paths.get("/sing").getParent().getRoot()`
-* `Paths.get("/song").getRoot().getRoot()`
-* `Paths.get("../sung").getRoot().getParent()`
-
-1. I 和 III
-2. I 和 IV
-3. II 和 III
-4. 仅 IV
-
-## 28. 关于以下 `Finalize` 类的哪个描述是正确的？
-
-```java
-1: package end;
-2: import java.nio.file.*;
-3: public class Finalize {
-4:    public Path makeAbsolute(Path p) {
-5:       if(p!=null && !p.isAbsolute())
-6:       return p.toAbsolutePath();
-7:       return p;
-8:    }
-9: }
-```
-
-1. 无法编译，因为 `IOException` 既没有处理也没有声明。
-2. 因为其他原因无法编译。
-3. 方法可以编译，返回的 `Path` 值始终与输入参数相等。
-4. 方法可以编译，返回的 `Path` 值可能与输入参数不等。
-
-## 29. NIO.2 `Files` 类中的 `createDirectory()` 和 `createDirectories()` 方法之间的区别是哪一个？
-
-1. 其中一个接受多个 `Path` 参数；另一个不是。
-2. 如果目录路径下已存在文件，其中一个抛出异常；另一个不会。
-3. 其中一个声明了受检异常；另一个没有。
-4. 其中一个创建一个目录，而另一个可以创建多个目录。
-
-## 30. 假设当前工作目录是 `/hail`，执行以下代码段的预期输出是什么？
-
-```java
-Path w1 = Paths.get("../jungle/.././rain..")
-      .toAbsolutePath().normalize();
-System.out.print(w1.resolve("snow.txt"));
-```
-
-1. /jungle/snow.txt
-2. /hail/rain../snow.txt
-3. /rain../snow.txt
-4. 运行时打印异常。
-
-## 31. 以下程序的输出是什么？
-
-```java
-package med;
-import java.nio.file.*;
-public class Surgeon {
-   public Path rebuild(Path p) {
-      Path v = null;
-      for(int i=0; i<p.getNameCount(); i++)
-             if(v==null) v = p.getName(i);
-             else v = v.resolve(p.getName(i));
-      return v;
-   }
-   public static void main(String... tools) {
-      final Surgeon al = new Surgeon();
-      Path original = Paths.get("/tissue/heart/chambers.txt");
-      Path repaired = al.rebuild(original);
-      System.out.print(original.equals(repaired));
-   }
-}
-```
-
-1. false
-2. true
-3. 代码无法编译。
-4. 代码可以编译但在运行时打印异常。
-
-## 32. 在什么情况下，`Files.deleteIfExists()` 不抛出异常？
-
-1. 文件系统突然变得可用。
-2. 路径不存在。
-3. 路径代表一个非空目录。
-4. 进程对路径没有写权限。
-
-## 33. 以下代码段的输出是什么？假设所有引用的路径在文件系统中存在。
-
-```java
-Path v1 = Path.get("/./desert/./").resolve(Paths.get("sand.doc"));
-Path v2 = new File("/desert/./cactus/../sand.doc").toPath();
-System.out.print(Files.isSameFile(v1,v2));
-System.out.print(" "+v1.equals(v2));
-System.out.print(" "+v1.normalize().equals(v2.normalize()));
-```
-
-1. false false false
-2. true false true
-3. true true true
-4. 以上均不是
-
-## 34. 以下程序中有多少行代码包含编译错误？
-
-```java
-public class Song {
-   public static void organize(Path folder, Path file) throws IOException {
-      Path p = folder.resolve(file);
-      BasicFileAttributeView vw = Files.getFileAttributeView(p,
-         BasicFileAttributes.class);
-      if(vw.creationTime().toMillis()) {
-             vw.setTimes(FileTime.fromMillis(null),null,null);
-          }
-       }
-   public static void main(String[] audio) throws Exception {
-          Song.organize(Paths.get("/"),new File("songs").toPath());
-       }
-}
-```
-
-1. 无
-2. 一个
-3. 两个
-4. 三
-
-## 35. 以下程序的输出是什么？
-
-```java
-package stars;
-import java.nio.file.*;
-public class Sun {
-   public void printInfo() {
-      Path halleysComet = Paths.get("./stars/../rocks/").normalize();
-      Path lexellset = halleysComet.subpath(0, 2).resolve("m1");
-      System.out.print(halleyset.equals(lexellset) ? "Same!" : "Different!");
-       }
-   public static void main(String... emerald) {
-          Sun s = new Sun();
-          s.printInfo();
-       }
-}
-```
-
-1. Different!
-2. Same!
-3. 类无法编译。
-4. 类可以编译但在运行时抛出异常。
-
-## 36. 假设 `/eclipse/projects` 存在且可以访问，关于以下代码段的哪个描述是正确的？
-
-```java
-Path p = Paths.get("/eclipse/projects");
-
-Files.walk(p)
-   .map(z -> z.toAbsolutePath().toString())
-   .filter(s -> s.endsWith(".java"))
-   .collect(Collectors.toList()).forEach(System.out::println);
-
-Files.find(p,Integer.MAX_VALUE,
-      (w,a) -> w.toAbsolutePath().toString().endsWith(".java"))
-   .collect(Collectors.toList()).forEach(System.out::println);
-```
-
-1. 第一个流语句无法编译。
-2. 第二个流语句无法编译。
-3. 两个语句都可以编译，但在运行时打印的结果可能不同。
-4. 以上均不是
-
-## 37. 假设下面引用的文件存在且很大，关于以下程序的哪个描述是正确的？
-
-```java
-public class SpeedRead {
-   public void jenniferReads(Path p) {
-      Files.lines(p);
-   }
-   public void jonReads(Path p) {
-          Files.readAllLines(p);
-   }
-   public static void main(String[] pages) {
-          Path p = Paths.get("/bookshelf/mobydick.txt");
-          final SpeedRead r = new SpeedRead();
-          r.jenniferReads(p);
-          r.jonReads(p);
-       }
-}
-```
-
-1. 代码无法编译。
-2. jenniferReads() 方法运行时间可能长。
-3. jonReads() 方法运行时间可能长。
-4. 无法确定哪个方法运行时间更长。
-
-## 38. 执行以下程序的结果是什么？假设应用程序中引用的文件在文件系统中存在且可完全访问。
-
-
-
-
-
-```java
-package duplicate;
-import static java.nio.file.StandardCopyOption.*;
-import static java.nio.file.Files.*;
-import java.io.*;
-import java.nio.file.*;
 public class CopyOfACopy {
+
    public void main(String[] items) throws Exception {
+
       final Path s = new File("apples.zip").toPath();
+
       final Path t = FileSystems.getDefault().getPath("oranges.zip");
+
       copy(s,t,REPLACE_EXISTING);  // q1
+
       copy(Files.newBufferedReader(t),t,ATOMIC_MOVE);  // q2
+
    }
+
 }
 ```
 
@@ -14214,25 +16565,45 @@ public class CopyOfACopy {
 
 ```java
 package numbers;
+
 import java.nio.file.*;
+
 import java.util.stream.Stream;
+
 public class TheCount {
+
    public static Stream<String> readLines(Path p) {
+
       try {
+
          return Files.lines(p);
+
       } catch (Exception e) {
+
          throw new RuntimeException(e);
+
       }
+
    }
+
    public static long count(Path p) throws Exception {
+
       return Files.list(p)
+
          .filter(w -> Files.isRegularFile(w))
+
          .flatMap(s -> readLines(s))
+
          .count();
+
    }
+
    public final static void main(String[] day) throws Exception {
+
       System.out.print(count(Paths.get("/all-data")));
+
    }
+
 }
 ```
 
@@ -14248,7 +16619,6 @@ Java 并发
 **本次练习测试涵盖的 OCP 考试主题包括：**
 
 * **Java 并发**
-
 * 使用 `Runnable`、`Callable` 创建工作线程并使用 `ExecutorService` 并发执行任务
 * 识别在死锁（deadlock）、饥饿（starvation）、活锁（livelock）和竞态条件（race conditions）之间的潜在的线程问题
 * 使用 `synchronized` 关键字和 `java.util.concurrent.atomic` 包来控制线程执行的顺序
@@ -14267,29 +16637,53 @@ Java 并发
 
 ```java
 package performance;
+
 import java.util.concurrent.atomic.*;
+
 import java.util.stream.*;
+
 public class TicketTaker {
+
    long ticketsSold;
+
    final AtomicInteger ticketsTaken;
+
    public TicketTaker() {
+
       ticketsSold = 0;
+
       ticketsTaken = new AtomicInteger(0);
+
    }
+
    public void performJob() {
+
       IntStream.iterate(1, p -> p+1)
+
          .parallel()
+
          .limit(10)
+
          .forEach(i -> ticketsTaken.getAndIncrement());
+
       IntStream.iterate(1, q -> q+1)
+
          .limit(5)
+
          .parallel()
+
          .forEach(i -> ++ticketsSold);
+
       System.out.print(ticketsTaken+" "+ticketsSold);
+
    }
+
    public static void main(String[] day) throws Exception {
+
       System.out.print(count(Paths.get("/all-data")));
+
    }
+
 }
 ```
 
@@ -14322,12 +16716,15 @@ public class TicketTaker {
 List<Integer> copy1 = new CopyOnWriteArrayList<>(Arrays.asList(1,2,3,4));
 
 List<Integer> copy2 = Collections.synchronizedList(original);
+
 for(Integer w : copy2);
 
 List<Integer> copy3 = new ArrayList<>(original);
+
 for(Integer w : copy3);
 
 Queue<Integer> copy4 = newLinkedQueue<>(original);
+
 for(Integer w : copy4);
 ```
 
@@ -14347,17 +16744,29 @@ for(Integer w : copy4);
 
 ```java
 package office;
+
 import java.util.concurrent.*;
+
 public class TpsReport {
+
    public void submitReports() {
+
       ExecutorService service = Executors.newCachedThreadPool();
+
       Future bosses = service.submit(() -> System.out.print(""));
+
       service.shutdown();
+
       System.out.print(bosses.get());
+
    }
+
    public static void main(String[] memo) {
+
       new TpsReport().submitReports();
+
    }
+
 }
 ```
 
@@ -14377,23 +16786,41 @@ public class TpsReport {
 
 ```java
 package parade;
+
 import java.util.concurrent.*;
+
 public class CartoonCat {
+
    private void await(CyclicBarrier c) {
+
       try {
+
          c.await();
+
       } catch (Exception e) {}
+
    }
+
    public void march(CyclicBarrier c) {
+
       ExecutorService s = Executors.newSingleThreadExecutor();
+
       for(int i=0; i<12; i++)
+
          s.execute(() -> await(c));
+
       s.shutdown();
+
    }
+
    public static void main(String... strings) {
+
       new CartoonCat().march(new CyclicBarrier(4,
+
             () -> System.out.println("Ready")));
+
    }
+
 }
 ```
 
@@ -14411,10 +16838,6 @@ public class CartoonCat {
 
 11. 下列四个方法中有三种无论在串行还是并行有序流上执行都会总是产生相同的结果。哪一个不是？
 
-
-
-
-
 1. `findAny()`
 2. `findFirst()`
 3. `limit()`
@@ -14424,14 +16847,23 @@ public class CartoonCat {
 
 ```java
 package bears;
+
 import java.util.*;
+
 public class Bounce {
+
    public static void main(String... legend) {
+
       Arrays.asList(1,2,3,4).stream()
+
              .forEach(System.out::println);
+
       Arrays.asList(1,2,3,4).parallel()
+
              .forEachOrdered(System.out::println);
+
    }
+
 }
 ```
 
@@ -14451,13 +16883,21 @@ public class Bounce {
 
 ```java
 public class GoodAccumulator {
+
    int i;
+
    public void test() {
+
       BiFunction<Integer,Integer,Integer> accumulator = _________________;
+
       System.out.print(Arrays.asList(1,2,3,4,5)
+
              .parallelStream()
+
              .reduce(0,accumulator,(s1, s2) -> s1 + s2));
+
    }
+
 }
 ```
 
@@ -14470,14 +16910,23 @@ public class GoodAccumulator {
 
 ```java
 Callable c = new Callable() {
+
    public Object run() {return 10;}
+
 };
+
 ExecutorService s = Executors.newScheduledThreadPool(1);
+
 for(int i=0; i<10; i++) {
+
    Future f = s.submit(c);
+
    f.get();
+
 }
+
 s.shutdown();
+
 System.out.print("Done!");
 ```
 
@@ -14497,37 +16946,67 @@ System.out.print("Done!");
 
 ```java
 package story;
+
 import java.util.*;
+
 import java.util.concurrent.*;
+
 public class Race {
+
    static ExecutorService service = Executors.newFixedThreadPool(8);
+
    public static int sleep() {
+
       try {
+
          Thread.sleep(1000);
+
       } catch (Exception e) {}
+
       return 1;
+
    }
+
    public static void hare() {
+
       try {
+
          Callable c = () -> sleep();
+
          final Collection<Callable<Integer>> r = Arrays.asList(c,c,c);
+
          List<Future<Integer>> results = service.invokeAll(r);
+
          System.out.println("Hare won the race!");
+
       } catch (Exception e) {e.printStackTrace();}
+
    }
+
    public static void tortoise() {
+
       try {
+
          Callable c = () -> sleep();
+
          final Collection<Callable<Integer>> r = Arrays.asList(c,c,c);
+
          Integer result = service.invokeAny(r);
+
          System.out.println("Tortoise won the race!");
+
       } catch (Exception e) {e.printStackTrace();}
+
    }
-   public static void main(String[] p) throws Exception {
-      service.execute(() -> hare());
-      service.execute(() -> tortoise());
-   }
-}
+```
+
+
+
+`public static void main(String[] p) throws Exception` 中：
+
+```
+service.execute(() -> hare());
+service.execute(() -> tortoise());
 ```
 
 1. 先打印 "Hare won the race!"。
@@ -14535,7 +17014,7 @@ public class Race {
 3. 代码无法编译。
 4. 结果在之前未知。
 
-18. 下哪个并发集合是有排序的？
+18. 哪个并发集合是有排序的？
 
 1. `ConcurrentLinkedQueue`
 2. `ConcurrentSkipMap`
@@ -14546,33 +17025,59 @@ public class Race {
 
 ```java
 package unknown;
+
 import java.util.concurrent.*;
+
 public class Riddle {
+
    public void sleep() {
+
       try {
+
          Thread.sleep(5000);
+
       } catch (Exception e) {}
+
    }
+
    public String getQuestion(Riddle r) {
+
       synchronized {
+
          sleep();
+
          if(r != null) r.getAnswer(null);
+
          return "How many programmers does it take "
+
                +"to change a bulb?";
+
       }
+
    }
+
    public synchronized String getAnswer(Riddle r) {
+
       sleep();
+
       if(r != null) r.getAnswer(null);
+
       return "None, that's a hardware problem";
+
    }
 
    public static void main(String... unused) {
+
       final Riddle r1 = new Riddle();
+
       final Riddle r2 = new Riddle();
+
       ExecutorService s = Executors.newFixedThreadPool(2);
+
       s.submit(() -> r1.getQuestion(r2)); // 注意：此处原文可能有多余的括号错误
+
    }
+
 }
 ```
 
@@ -14592,21 +17097,37 @@ public class Riddle {
 
 ```java
 package olympics;
+
 import java.util.concurrent.*;
+
 public class Athlete {
+
    int stroke = 0;
+
    public synchronized void swimming() {
+
       stroke++;
+
    }
+
    public static void main(String... laps) {
+
       ExecutorService s = Executors.newFixedThreadPool(10);
+
       Athlete a = new Athlete();
+
       for(int i=0; i<1000; i++) {
+
          s.execute(() -> a.swimming());
+
       }
+
       s.shutdown();
+
       System.out.print(a.stroke);
+
    }
+
 }
 ```
 
@@ -14624,39 +17145,63 @@ public class Athlete {
 
 23. 下述应用的输出是什么？
 
-
-
-
-
 ```java
 package farm;
+
 import java.util.concurrent.*;
+
 public class CountSheep extends RecursiveAction {
+
    static int[] sheep = new int[] {1,2,3,4};
+
    final int start;
+
    final int end;
+
    int count = 0;
+
    public CountSheep(int start, int end) {
+
       this.start = start;
+
       this.end = end;
+
    }
+
    public void compute() {
+
       if(end-start<2) {
+
          count+=sheep[start];
+
          return;
+
       } else {
+
          int middle = start + (end-start)/2;
+
          invokeAll(new CountSheep(start,middle),
+
                new CountSheep(middle,end));
+
       }
+
    }
+
    public static void main(String[] night) {
+
       ForkJoinPool pool = new ForkJoinPool();
+
       CountSheep action = new CountSheep(0,sheep.length);
+
       pool.invoke(action);
+
       pool.shutdown();
+
       System.out.print(action.count);
+
    }
+
 }
 ```
 
@@ -14676,32 +17221,54 @@ public class CountSheep extends RecursiveAction {
 
 ```java
 package salvage;
+
 import java.util.*;
+
 import java.util.concurrent.*;
+
 import java.util.stream.*;
+
 public class Car {
+
    private String model;
+
    private int year;
+
    public Car(String name, int year) {
+
       this.model = name; this.year = year;
+
    }
+
    public int getYear() {return year;}
+
    @Override public String toString() {return model;}
+
    public static void main(String... make) {
+
       List<Car> cars = new ArrayList<>();
+
       cars.add(new Car("Mustang",1967));
+
       cars.add(new Car("Thunderbird",1967));
+
       cars.add(new Car("Escort",1975));
+
       ConcurrentMap<Integer, List<Car>> map = cars
+
          .stream()
+
          .collect(Collectors.groupingByConcurrent(Car::getYear));
+
       System.out.print(map);
+
    }
+
 }
 ```
 
-1. {1975=[Escort], 1967=[Thunderbird, Mustang]}
-2. {Escort=[1975], Thunderbird=[1967], Mustang=[1967]}
+1. `{1975=[Escort], 1967=[Thunderbird, Mustang]}`
+2. `{Escort=[1975], Thunderbird=[1967], Mustang=[1967]}`
 3. 代码无法编译。
 4. 应用程序在运行时抛出异常，因为 stream 不是并行的。
 
@@ -14709,56 +17276,92 @@ public class Car {
 
 ```java
 package exercise;
+
 import java.util.*;
+
 public class Concat {
+
    public String concat1(List<String> values) {
+
       return values.parallelStream()
+
             .reduce("a",
+
                       (x,y)->x+y,
+
                       String::concat);
+
    }
+
    public String concat2(List<String> values) {
+
       return values.parallelStream()
+
             .reduce((w,z)->z+w).get();
+
    }
+
    public static void main(String... questions) {
+
       Concat c = new Concat();
+
       List<String> list = Arrays.asList("Cat","Hat");
+
       String x = c.concat1(list);
+
       String y = c.concat2(list);
+
       System.out.print(x+" "+y);
+
    }
+
 }
 ```
 
-1. aCataHat HatCat
-2. CatHat CatHat
-3. 代码无法编译，因为 `concat1()` 返回一个 Optional。
+1. `aCataHat HatCat`
+2. `CatHat CatHat`
+3. 代码无法编译，因为 `concat1()` 返回一个 `Optional`。
 4. 代码因其他原因无法编译。
 
 ### 27. 下面应用程序的输出是什么？
 
 ```java
 package taxes;
+
 import java.util.concurrent.*;
+
 public class Accountant {
+
    public static void completePaperwork() {
+
       System.out.print("[Filing]");
+
    }
+
    public static double getPi() {
+
       return 3.14159;
+
    }
+
    public static void main(String[] args) throws Exception {
+
       ExecutorService x = Executors.newSingleThreadExecutor();
+
       Future<?> f1 = x.submit(() ‐> completePaperwork());
+
       Future<Object> f2 = x.submit(() ‐> getPi());
+
       System.out.print(f1.get()+" "+f2.get());
+
       x.shutdown();
+
    }
+
 }
 ```
 
-1. [Filing]null 3.14159
+1. `[Filing]null 3.14159`
 2. `f1` 的声明无法编译。
 3. `f2` 的声明无法编译。
 4. 运行时抛出异常。
@@ -14767,18 +17370,31 @@ public class Accountant {
 
 ```java
 package my;
+
 import java.util.*;
+
 public class ThreadSafeList {
+
    private List<Integer> data = new ArrayList<>();
+
    public synchronized void addValue(int value) {
+
       data.add(value);
+
    }
+
    public int getValue(int index) {
+
       return data.get(index);
+
    }
+
    public int size() {
+
       return data.size();
+
    }
+
 }
 ```
 
@@ -14791,12 +17407,19 @@ public class ThreadSafeList {
 
 ```java
 public static void print1(int value) {
+
    System.out.println(value--);
+
    System.out.println(++value);
+
 }
+
 public static void print2(AtomicInteger value) {
+
    System.out.println(value.__);
+
    System.out.println(value.__);
+
 }
 ```
 
@@ -14809,30 +17432,55 @@ public static void print2(AtomicInteger value) {
 
 ```java
 package crew;
+
 import java.util.concurrent.*;
+
 import java.util.stream.*;
+
 public class Boat {
+
    private void waitFinished(CyclicBarrier c) {
+
       try {
+
          c.await();
+
          System.out.print("1");
+
       } catch (Exception e) {}
+
    }
+
    public void row(ExecutorService service) {
+
       final CyclicBarrier cb = new CyclicBarrier(5);
+
       IntStream.iterate(1, i->1)
+
          .limit(12)
+
          .forEach(i -> service.submit(() -> waitFinished(cb)));
+
    }
+
    public static void main(String[] oars) {
+
       ExecutorService service = null;
+
       try {
+
          service = Executors.newCachedThreadPool();
+
          new Boat().row(service);
+
       } finally {
+
          service.shutdown();
+
       }
+
    }
+
 }
 ```
 
@@ -14841,30 +17489,46 @@ public class Boat {
 3. 12
 4. 以上均不是
 
-### 31. 使用上一个问题的 Boat 类，应用程序的最终状态是什么？
+### 31. 使用上一个问题的 `Boat` 类，应用程序的最终状态是什么？
 
 1. 应用程序在运行时抛出异常。
 2. 应用程序成功终止。
-3. 因为没有关闭 ExecutorService，应用程序无限挂。
+3. 因为没有关闭 `ExecutorService`，应用程序无限挂。
 4. 应用程序在运行时产生死锁。
 
 ### 32. 下面应用程序的预期输出是什么？
 
 ```java
 package store;
+
 import java.util.concurrent.*;
+
 import java.util.stream.*;
+
 public class Line {
+
    static BlockingDeque<Integer> queue = new LinkedBlockingDeque<>();
+
    public static void main(String[] participants) throws Exception {
+
       IntStream.iterate(1, i -> i+1).limit(5)
+
          .parallel()
+
          .forEach(s -> queue.offerLast(s,10000,TimeUnit.MILLISECONDS));
+
       IntStream.iterate(1, i -> 5).limit(10)
+
          .parallel()
-         .forEach(s -> queue.pollFirst(10,TimeUnit.SECONDS));
-      System.out.print(queue.size());
-   }
+```
+
+
+
+`.forEach(s -> queue.pollFirst(10, TimeUnit.SECONDS));`
+
+`System.out.print(queue.size());`
+
+```
 }
 ```
 
@@ -14873,15 +17537,10 @@ public class Line {
 3. 代码无法编译。
 4. 代码可以编译但在运行时抛出异常。
 
-
-
-
-
-# 33. 给定原始数组，假设每个语句都独立执行，以下 `for` 语句在运行时会导致无限循环的是几个？
+## 33. 给定原始数组，假设每个语句都独立执行，以下 `for` 语句在运行时会导致无限循环的是几个？
 
 ```java
 List<Integer> original = new ArrayList<>(Arrays.asList(1,2,3));
-
 List<Integer> copy1 = new ArrayList<>(original);
 for(Integer q : copy1)
    copy1.add(1);
@@ -14893,6 +17552,7 @@ for(Integer q : copy2)
 Deque<Integer> copy3 = new ConcurrentLinkedDeque<>(original);
 for(Integer q : copy3)
    copy3.push(3);
+
 List<Integer> copy4 = Collections.synchronizedList(original);
 for(Integer q : copy4)
    copy4.add(4);
@@ -14903,23 +17563,27 @@ for(Integer q : copy4)
 3. 两个
 4. 三
 
-# 34. 以下四个选项中有三个构成了使用带有 `Collector` 参数的 `collect()` 方法执行并行归约（parallel reduction）的要求。选择出不是要求的一项。
+## 34. 以下四个选项中有三个构成了使用带有 `Collector` 参数的 `collect()` 方法执行并行归约（parallel reduction）的要求。选择出不是要求的一项。
 
 1. `Collector` 参数被标记为 `concurrent`。
 2. 流的元素实现了 `Comparable` 接口。
-3. 流是并行的（parallel`）。
+3. 流是并行的（`parallel`）。
 4. 流或 `Collector` 被标记为 `unordered`。
 
-# 35. 关于以下应用，哪种描述是正确的？
+## 35. 关于以下应用，哪种描述是正确的？
 
 ```java
 package math;
+
 import java.util.concurrent.*;
+
 public class Fun extends RecursiveTask<Integer> {
    final int value;
+
    public Fun(int value) {
       this.value = value;
    }
+
    @Override protected Integer compute() {  // w1
       if(value<1) {
          return 1;
@@ -14928,6 +17592,7 @@ public class Fun extends RecursiveTask<Integer> {
       final Fun f2 = new Fun(value-2);
       return f1.compute() * f2.compute();
    }
+
    public static void main(String... data) {
       ForkJoinPool pool = new ForkJoinPool();
       try {
@@ -14944,14 +17609,14 @@ public class Fun extends RecursiveTask<Integer> {
 3. 该应用编译且正确使用了 fork/join 框架。
 4. 该应用编译但没有正确使用 fork/join 框架。
 
-# 36. 哪种 `ExecutorService` 方法保证所有正在运行的任务都以有序的方式停止？
+## 36. 哪种 `ExecutorService` 方法保证所有正在运行的任务都以有序的方式停止？
 
 1. `shutdown()`
 2. `shutdownNow()`
 3. `halt()`
 4. 以上都不是
 
-# 37. 给定以下代码片段，关于行 `p1` 和 `p2` 打印值的哪种描述是正确的？
+## 37. 给定以下代码片段，关于行 `p1` 和 `p2` 打印值的哪种描述是正确的？
 
 ```java
 List<Integer> db = Collections.synchronizedList(new ArrayList<>());
@@ -14968,19 +17633,24 @@ db.forEach(System.out::print);  // p2
 3. 它们从不相同。
 4. 代码在运行时会抛出 `ConcurrentModificationException`。
 
-# 38. 假设 10 秒足够足够所有任务完成，以下应用的输出是什么？
+## 38. 假设 10 秒足够所有任务完成，以下应用的输出是什么？
 
 ```java
 package finance;
+
 import java.util.concurrent.*;
+
 public class Bank {
    static int cookies = 0;
+
    public synchronized void deposit(int amount) {
       cookies += amount;
    }
+
    public static synchronized void withdrawal(int amount) {
       cookies -= amount;
    }
+
    public static void main(String[] amount) throws Exception {
       ExecutorService teller = Executors.newScheduledThreadPool(50);
       Bank bank = new Bank();
@@ -15000,25 +17670,30 @@ public class Bank {
 3. 结果在运行时之前未知。
 4. 运行时抛出异常。
 
-# 39. 以下应用的输出是什么？
+## 39. 以下应用的输出是什么？
 
 ```java
 package util;
+
 import java.util.*;
+
 public class SearchList<T> {
    private List<T> data;
    private boolean foundMatch = false;
+
    public SearchList(List<T> list) {
       this.data = list;
    }
+
    public void exists(T value,int start, int end) {
       if(end-start<=1) {
          foundMatch = foundMatch || value.equals(data.get(start));
       } else {
-             final int middle = start + (end-start)/2;
-             new Thread(() -> exists(value,start,middle)).run();
+         final int middle = start + (end-start)/2;
+         new Thread(() -> exists(value,start,middle)).run();
       }
    }
+
    public static void main(String[] a) throws Exception {
       List<Integer> data = Arrays.asList(1,2,3,4,5,6);
       SearchList<Integer> sl = new SearchList<>(data);
@@ -15028,12 +17703,12 @@ public class SearchList<T> {
 }
 ```
 
-1. true
-2. false
+1. `true`
+2. `false`
 3. 代码无法编译。
 4. 结果未知。
 
-# 40. 以下代码中有多少行包含编译错误？
+## 40. 以下代码中有多少行包含编译错误？
 
 ```java
 11: ScheduledExecutorService t = Executors
@@ -15043,38 +17718,34 @@ public class SearchList<T> {
 15: t.scheduleFixedRate(() -> {return;}, 5, TimeUnit.MINUTES);
 ```
 
-1. 无。代码可以编译为。
+1. 无。代码可以编译。
 2. 一行
 3. 两行
 4. 三行
 
+## 10. 哪一项最准确地填充了该句中的空格？使用 JDBC 4.0，驱动程序 __________ 包含一个 `java.sql.Driver` 文件，且获取 `Connection` 的代码不需要调用 `Class.forName()`。
 
+1. allowed, allowed
+2. allowed, required
+3. required, allowed
+4. required, required
 
+## 11. 当请求 `ResultSet` 同时具有滚动敏感性（scroll sensitive）和可更新性（updatable）属性时，哪一组陈述是正确的？
 
+* 滚动敏感选项在可更新参数之前作为参数传递。
+* 可更新选项在滚动敏感参数之前作为参数传递。
+* 如果这些选项可用，数据库驱动程序将返回具有不同选项的 `ResultSet`。
+* 如果这些选项可用，数据库驱动程序将抛出 `SQLException`。
 
-10. 哪一项最准确地填充了该句中的空格？使用 JDBC 4.0，驱动程序 __________ 包含一个 `java.sql.Driver` 文件，且获取 `Connection` 的代码不需要调用 `Class.forName()`。
+1. I, III
+2. I, IV
+3. II, III
+4. II, IV
 
-    1. allowed, allowed
-    2. allowed, required
-    3. required, allowed
-    4. required, required
+## 12. 假设名为 `blue` 的数据库存在且我们正在使用 JDBC 4.0 驱动程序。这段代码的结果是什么？
 
-11. 当请求 `ResultSet` 同时具有滚动敏感性（scroll sensitive）和可更新性（updatable）属性时，哪一组陈述是正确的？
-
-    * 滚动敏感选项在可更新参数之前作为参数传递。
-    * 可更新选项在滚动敏感参数之前作为参数传递。
-    * 如果这些选项可用，数据库驱动程序将返回具有不同选项的 `ResultSet`。
-    * 如果这些选项可用，数据库驱动程序将抛出 `SQLException`。
-
-    1. I, III
-    2. I, IV
-    3. II, III
-    4. II, IV
-
-12. 假设名为 `blue` 的数据库存在且我们正在使用 JDBC 4.0 驱动程序。这段代码的结果是什么？
-
-```
- String url = "jdbc:derby:blue";
+```java
+String url = "jdbc:derby:blue";
 Class.forName(url);
 try (Connection conn = DriverManager.getConnection(url);
    Statement stmt = conn.createStatement();
@@ -15083,45 +17754,44 @@ try (Connection conn = DriverManager.getConnection(url);
 }
 ```
 
-    1. 它成功运行并打印 sky 表中的行数。
-    2. 它抛出 `ClassNotFoundException`。
-    3. 它抛出 `SQLException`。
-    4. 它无法通过编译。
+1. 它成功运行并打印 `sky` 表中的行数。
+2. 它抛出 `ClassNotFoundException`。
+3. 它抛出 `SQLException`。
+4. 它无法通过编译。
 
-13. 填空：有 __________ 种 `ResultSet` 并发模式，驱动程序被要求支持 __________。
+## 13. 填空：有 __________ 种 `ResultSet` 并发模式，驱动程序被要求支持 __________。
 
-    1. two, both
-    2. two, one of them
-    3. three, two of them
-    4. three, all of them
+1. two, both
+2. two, one of them
+3. three, two of them
+4. three, all of them
 
-14. 如果使用 JDBC 4.0 驱动且 `clowns` 数据库存在并包含一个空的 `clowns` 表，输出是什么？
+## 14. 如果使用 JDBC 4.0 驱动且 `clowns` 数据库存在并包含一个空的 `clowns` 表，输出是什么？
 
-```
- String url = "jdbc:derby:clowns";
+```java
+String url = "jdbc:derby:clowns";
 try (Connection conn = DriverManager.getConnection(url);
     Statement stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery("select count(*) from clowns")) {
-
     System.out.println(rs.getInt(1));
 }
 ```
 
-    1. 0
-    2. 1
-    3. 代码无法通过编译。
-    4. 代码通过编译但在运行时抛出异常。
+1. 0
+2. 1
+3. 代码无法通过编译。
+4. 代码通过编译但在运行时抛出异常。
 
-15. 考虑 `execute()`、`executeQuery()` 和 `executeUpdate()` 方法方法。填空：这些方法中的 __________ 允许运行 `DELETE` SQL 语句，而这些方法中的 __________ 允许运行 `UPDATE` SQL 语句。
+## 15. 考虑 `execute()`、`executeQuery()` 和 `executeUpdate()` 方法。填空：这些方法中的 __________ 允许运行 `DELETE` SQL 语句，而这些方法中的 __________ 允许运行 `UPDATE` SQL 语句。
 
-    1. One, one
-    2. One, two
-    3. Two, one
-    4. Two, two
+1. One, one
+2. One, two
+3. Two, one
+4. Two, two
 
-16. 假设 `clowns` 数据库存在并包含一个名为 `clowns` 的空表，使用 JDBC 4.0 驱动程序运行以下代码的输出是什么？
+## 16. 假设 `clowns` 数据库存在并包含一个名为 `clowns` 的空表，使用 JDBC 4.0 驱动程序运行以下代码的输出是什么？
 
-```
+```java
 import java.sql.*;
 
 public class EmptyTable {
@@ -15130,7 +17800,6 @@ public class EmptyTable {
       try (Connection conn = new Connection(url);   // s2
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery("select * from clowns")) {
-
              if (rs.next())
                 System.out.println(rs.getString(1));
           }
@@ -15138,92 +17807,95 @@ public class EmptyTable {
 }
 ```
 
-    1. 代码成功终止且没有任何输出。
-    2. 代码由于行 s1 无法通过编译。
-    3. 代码由于行 s2 无法通过编译。
-    4. 以上均不是
+1. 代码成功终止且没有任何输出。
+2. 代码由于行 `s1` 无法通过编译。
+3. 代码由于行 `s2` 无法通过编译。
+4. 以上均不是
 
-17. 哪些是合法的 `ResultSet` 类型？
+## 17. 哪些是合法的 `ResultSet` 类型？
 
-    * `TYPE_BACKWARD_ONLY`
-    * `TYPE_FORWARD_ONLY`
-    * `TYPE_REVERSE_ONLY`
+* `TYPE_BACKWARD_ONLY`
+* `TYPE_FORWARD_ONLY`
+* `TYPE_REVERSE_ONLY`
 
-    1. II
-    2. I and II
-    3. II and III
-    4. 以上均不是
+1. II
+2. I and II
+3. II and III
+4. 以上均不是
 
-18. 给定图中的 `books` 表和通过运行以下 SQL 语句创建的 `ResultSet`，哪种选项打印了值 379？
+## 18. 给定图中的 `books` 表和通过运行以下 SQL 语句创建的 `ResultSet`，哪种选项打印了值 379？
 
 ![表格显示了两个列：带有 OCA 和 OCP 值的可变字符列 `title`，以及具有 379 和 669 值的整数型列 `num_pages`，其中显示了运行 SQL 语句创建的图形和 ResultSet。](img/c21uf001.jpg)
 
-```
+```sql
 select * from cert where title = 'OCA'
 ```
 
-    1. `System.out.println(rs.getInt(1));`
-    2. `System.out.println(rs.getInt(2));`
-    3. `System.out.println(rs.getInteger(1));`
-    4. `System.out.println(rs.getInteger(2));`
+1. `System.out.println(rs.getInt(1));`
+2. `System.out.println(rs.getInt(2));`
+3. `System.out.println(rs.getInteger(1));`
+4. `System.out.println(rs.getInteger(2));`
 
-19. 给上一个问题中的 `books` 表和通过运行此 SQL 语句创建的 `ResultSet`，哪种选项打印了 OCP？
+## 19. 给上一个问题中的 `books` 表和通过运行此 SQL 语句创建的 `ResultSet`，哪种选项打印了 OCP？
 
-```
+```sql
 select title from cert where num_pages > 500
 ```
 
-    1. `System.out.println(rs.getString());`
-    2. `System.out.println(rs.getString("0"));`
-    3. `System.out.println(rs.getString("1"));`
-    4. `System.out.println(rs.getString("title"));`
+1. `System.out.println(rs.getString());`
+2. `System.out.println(rs.getString("0"));`
+3. `System.out.println(rs.getString("1"));`
+4. `System.out.println(rs.getString("title"));`
 
-20. 假设数据库存在且所有表名和列名。在使用 4.0 驱动程序时，哪一个陈述是正确的？
+## 20. 假设数据库存在且所有表名和列名正确。在使用 4.0 驱动程序时，哪一个陈述是正确的？
 
-```
+```java
 String url = "jdbc:derby:precipitation";
 try (Connection conn = DriverManager.getConnection(url);
    Statement stmt = conn.createStatement(
       ResultSet.CONCUR_READ_ONLY, ResultSet.TYPE_INSENSITIVE);
       ResultSet rs = stmt.executeQuery("select total from precip where type = 'rain'")) {
    System.out.println(
-
 ```
 
-    1. 创建 Statement 的行存在编译错误。
-    2. 创建 ResultSet 的行存在编译错误。
-    3. 代码通过编译并运行。
-    4. 代码抛出异常。
+1. 创建 `Statement` 的行存在编译错误。
+2. 创建 `ResultSet` 的行存在编译错误。
+3. 代码通过编译并运行。
+4. 代码抛出异常。
 
-21. 当运行此代码时，哪些资源调用了 `close()` 方法？
+## 21. 当运行此代码时，哪些资源调用了 `close()` 方法？
 
-```
+```java
 public void runQuery(Connection conn) throws SQLException{
-   try (Statement stmt = conn.createStatement()) {
-      ResultSet rs = stmt.executeQuery("select * from clowns");
-      rs.next();
-   }
-}
 ```
 
-    1. 没有调用 close()。
-    2. 只有 Statement
-    3. 只有 Connection
-    4.  Statement 和 ResultSet
+
+
+`try (Statement stmt = conn.createStatement()) {`
+
+```
+ResultSet rs = stmt.executeQuery("select * from clowns");
+rs.next();
+```
+
+1. 没有调用 `close()`。
+2. 只有 `Statement`
+3. 只有 `Connection`
+4. `Statement` 和 `ResultSet`
 
 22. 关于 JDBC 核心类，哪一个陈述是正确的？
 
-    1. `Driver` 是 `DriverManager` 的实现。
-    2. `Connection` 实现包含在 JDK 中。
-    3. `Statement` 自动处于自动提交模式。
-    4. `ResultSet` 自动指向第一行数据。
+1. `Driver` 是 `DriverManager` 的实现。
+2. `Connection` 实现包含在 JDK 中。
+3. `Statement` 自动处于自动提交模式。
+4. `ResultSet` 自动指向第一行数据。
 
 23. 数据库驱动实现需要哪项？
 
-    1. 名为 `jdbc.driver` 的文件
-    2. 名为 `java.sql.Driver` 的文件
-    3. `Connection` 接口实现
-    4. 以上都不是
+1. 名为 `jdbc.driver` 的文件
+2. 名为 `java.sql.Driver` 的文件
+3. `Connection` 接口实现
+4. 以上都不是
 
 24. 假设 `people` 表有 10 行，使用支持滚动敏感 `ResultSet` 的驱动运行以下代码的结果是？
 
@@ -15238,10 +17910,10 @@ try (Connection conn = DriverManager.getConnection(url);
 }
 ```
 
-    1. 10
-    2. 代码无法通过编译。
-    3. 行 q1 抛出 SQLException。
-    4. 行 q2 抛出 SQLException。
+1. 10
+2. 代码无法通过编译。
+3. 行 `q1` 抛出 `SQLException`。
+4. 行 `q2` 抛出 `SQLException`。
 
 25. 给定一个包含内容的滚动可更新 `ResultSet`，代码片段的输出是什么？
 
@@ -15258,18 +17930,15 @@ while (rs.next())
    System.out.println(rs.getInt(2));
 ```
 
-    1. 0
-    2. 10
-    3. 代码无法通过编译。
-    4. 代码通过编译但在运行时抛出异常。
+1. 0
+2. 10
+3. 代码无法通过编译。
+4. 代码通过编译但在运行时抛出异常。
 
 26. 对于上一个问题图片所示的滚动可更新 `ResultSet`，代码片段的输出是什么？
 
-
-
-
-
-```javars = stmt.executeQuery("select * from pens");
+```
+rs = stmt.executeQuery("select * from pens");
 rs.afterLast();
 while(rs.prev())
    rs.updateInt(2,0);
@@ -15283,12 +17952,11 @@ while (rs.next())
 3. 代码无法编译。
 4. 代码可以编译，但在运行时抛出异常。
 
-27. 运行以下代码后，colors 表中增加了多少行数据？
+27. 运行以下代码后，`colors` 表中增加了多少行数据？
 
 ```java
 try (Connection conn = DriverManager.getConnection(url);
    Statement stmt = conn.createStatement()) {
-
    conn.setAutoCommit(false);
    stmt.executeUpdate("insert into colors values ('red')");
    stmt.executeUpdate("insert into colors values ('blue')");
@@ -15303,14 +17971,13 @@ try (Connection conn = DriverManager.getConnection(url);
 3. 两行
 4. 三行
 
-28. 如果 clowns 数据库存在且包含一个空的 clowns 表，以下哪项是正确的？
+28. 如果 `clowns` 数据库存在且包含一个空的 `clowns` 表，以下哪项是正确的？
 
 ```java
 String url = "jdbc:derby:clowns";
 try (Connection conn = DriverManager.getConnection(url);
     Statement stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery("select count(*) from clowns")) {
-
     rs.next();   // r1
     System.out.println(rs.getInt(1));   // r2
 }
@@ -15336,7 +18003,7 @@ try (Connection conn = DriverManager.getConnection(url);
 3. 代码无法编译。
 4. 代码可以编译，但在运行时抛出异常。
 
-30. 假设 blue 数据库不存在且我们正在使用 JDBC 4.0 驱动。这段代码的结果是什么？
+30. 假设 `blue` 数据库不存在且我们正在使用 JDBC 4.0 驱动。这段代码的结果是什么？
 
 ```java
 String url = "jdbc:derby:blue";
@@ -15347,12 +18014,12 @@ try (Connection conn = DriverManager.getConnection(url);
 }
 ```
 
-1. 成功运行并打印 sky 表中的行数。
+1. 成功运行并打印 `sky` 表中的行数。
 2. 抛出 `ClassNotFoundException`。
 3. 抛出 `SQLException`。
 4. 编译。
 
-31. 如果 people 表是空的，这段代码最可能的的结果是什么？
+31. 如果 `people` 表是空的，这段代码最可能的的结果是什么？
 
 ```java
 6:  Statement stmt = conn.createStatement();
@@ -15361,17 +18028,16 @@ try (Connection conn = DriverManager.getConnection(url);
 9:  System.out.println(rs1.next() + " " + rs2.next());
 ```
 
-1. 打印 false false。
-2. 打印 true false。
+1. 打印 `false false`。
+2. 打印 `true false`。
 3. 不终止。
 4. 抛出 `SQLException`。
 
-32. 运行以下代码后，colors 表中增加了行数据？
+32. 运行以下代码后，`colors` 表中增加了行数据？
 
 ```java
 try (Connection conn = DriverManager.getConnection(url);
    Statement stmt = conn.createStatement()) {
-
    conn.setAutoCommit(false);
    stmt.executeUpdate("insert into colors values ('red')");
    stmt.executeUpdate("insert into colors values ('blue')");
@@ -15386,7 +18052,7 @@ try (Connection conn = DriverManager.getConnection(url);
 3. 两行
 4. 三行
 
-33. 假设 clowns 数据库存在且包含一个名为 clowns 的空表，使用 JDBC 4.0 驱动运行时，以下代码的输出是什么？
+33. 假设 `clowns` 数据库存在且包含一个名为 `clowns` 的空表，使用 JDBC 4.0 驱动运行时，以下代码的输出是什么？
 
 ```java
 import java.sql.*;
@@ -15397,7 +18063,6 @@ public class EmptyTable {
       try (Connection conn = DriverManager.getConnection(url);   // s2
          Statement stmt = conn.createStatement();
          ResultSet rs = stmt.executeQuery("select * from clowns")) {
-
          if (rs.next())
             System.out.println(rs.getString(1));
       }
@@ -15417,7 +18082,6 @@ try (Connection conn = DriverManager.getConnection(url);
    Statement stmt = conn.createStatement(
       ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
    ResultSet rs = stmt.executeQuery(       "select * from people order by last_name asc")) {
-
    rs.afterLast();
    rs.next();
    rs.next();
@@ -15426,16 +18090,13 @@ try (Connection conn = DriverManager.getConnection(url);
    System.out.println(rs.getString(1));
 }
 ```
+
 *(注：由于原文文本在某处不完整，此处根据逻辑进行了补全)*
 
 1. Janeice
 2. Elena
 3. Scott
 4. 代码在运行时抛出 `SQLException`。
-
-
-
-
 
 ```java
 try (Connection conn = DriverManager.getConnection(url);
@@ -15447,7 +18108,7 @@ try (Connection conn = DriverManager.getConnection(url);
    conn.setAutoCommit(true);
    stmt.executeUpdate("insert into colors values ('green')");
    conn.rollback();
-  }
+}
 ```
 
 1. 无
@@ -15483,7 +18144,6 @@ try (Connection conn = DriverManager.getConnection(url);
 本次练习测试涵盖的 OCP 考试考点包括：
 
 * ![](img/correction.jpg)****本地化**
-
     * 使用 `Locale` 对象读取并设置区域
     * 创建并读取 `Properties` 文件
     * 为每个区域构建资源包并在应用程序中加载资源包
@@ -15551,9 +18211,9 @@ type=paper
 20:  System.out.print(props.getProperty("more"));
 ```
 
-1. bag
-2. bag null
-3. bag ?
+1. `bag`
+2. `bag null`
+3. `bag ?`
 4. 此代码在第 20 行抛出运行时异常。
 
 9. 填空以完成以下 Java 资源包的代码。
@@ -15586,6 +18246,8 @@ ResourceBundle rb = ResourceBundle.getBundle("Colors");
 rb.getString("purple");
 ```
 
+
+
 1. `Colors.class`
 2. `Colors.properties`
 3. `Colors_en_US.class`
@@ -15595,15 +18257,21 @@ rb.getString("purple");
 
 ```java
 package counter;
+
 import java.util.*;
 
 public class CountResource extends ListResourceBundle {
+
    private int count = 0;
 
    @Override
+
    protected Object[][] getContents() {
+
       return new Object[][] { { "count", count++ } };
+
    }
+
 }
 ```
 
@@ -15618,10 +18286,6 @@ public class CountResource extends ListResourceBundle {
 2. `.properties`
 3. 以上都是
 4. 以上都不是
-
-
-
-
 
 ```java
 1:   package keyboard;
@@ -15671,7 +18335,6 @@ public class CountResource extends ListResourceBundle {
 ```
 mystery=bag
 type=paper
-
 18:  System.out.print(props.getProperty("mystery", "?"));
 19:  System.out.print(" ");
 20:  System.out.print(props.getProperty("more", "?"));
@@ -15688,9 +18351,13 @@ type=paper
 
 ```java
 Locale.setDefault(new Locale("en", "US"));
+
 ResourceBundle rb = ResourceBundle.getBundle(
+
    "Cars", new Locale("fr", "FR"));
+
 System.out.println(rb.getString("country") + " "
+
    + rb.getString("engine"));
 ```
 
@@ -15703,9 +18370,13 @@ System.out.println(rb.getString("country") + " "
 
 ```java
 Locale.setDefault(new Locale("en", "US"));
+
 ResourceBundle rb = ResourceBundle.getBundle(
+
     "Cars", new Locale("fr", "CA"));
+
 System.out.println(rb.getString("engine") + " "
+
     + rb.getString("horses"));
 ```
 
@@ -15718,9 +18389,13 @@ System.out.println(rb.getString("engine") + " "
 
 ```java
 Locale.setDefault(new Locale("fr", "CA"));
+
 ResourceBundle rb = ResourceBundle.getBundle(
+
     "Cars", new Locale("en", "CA"));
+
 System.out.println(rb.getString("engine") + " "
+
     + rb.getString("horses"));
 ```
 
@@ -15740,8 +18415,11 @@ System.out.println(rb.getString("engine") + " "
 
 ```java
 Locale loc = new Locale("zh", "CN");
+
 Locale.setDefault(new Locale("en", "US"));
+
 ResourceBundle rb = ResourceBundle.getBundle("Colors", loc);
+
 rb.getString("red");
 ```
 
@@ -15754,22 +18432,37 @@ rb.getString("red");
 
 ```java
 package counter;
+
 import java.util.*;
 
 public class PropertyCounter extends ListResourceBundle {
+
    private int count = 0;
+
    @Override
+
    protected Object[][] getContents() {
+
       return new Object[][] {"count"}};
+
    }
+
    public int getCount() {
+
       return count++;
+
    }
+
    public static void main(String[] args) {
+
       ResourceBundle rb = ResourceBundle.getBundle("counter.PropertyCounter");
+
       PropertyCounter obj = (PropertyCounter) rb.getObject("count");
+
       System.out.println(obj.getCount() + " " + obj.getCount());
+
    }
+
 }
 ```
 
@@ -15784,7 +18477,9 @@ public class PropertyCounter extends ListResourceBundle {
 
 ```java
 Locale.setDefault(new Locale("en", "US"));
+
 ResourceBundle rb = ResourceBundle.getBundle("Buggy");
+
 System.out.println(rb.getString("wheels"));
 ```
 
@@ -15797,7 +18492,9 @@ System.out.println(rb.getString("wheels"));
 
 ```java
 Locale.setDefault(new Locale("en"));
+
 ResourceBundle rb = ResourceBundle.getBundle("Buggy");
+
 System.out.println(rb.getString("color"));
 ```
 
@@ -15810,7 +18507,9 @@ System.out.println(rb.getString("color"));
 
 ```java
 Locale.setDefault(new Locale("zh"));
+
 ResourceBundle rb = ResourceBundle.getBundle("Buggy");
+
 System.out.println(rb.getString("wheels"));
 ```
 
@@ -15823,8 +18522,11 @@ System.out.println(rb.getString("wheels"));
 
 ```java
 Locale loc = new Locale("zh", "CN");
+
 Locale.setDefault(new Locale("en", "US"));
+
 ResourceBundle rb = ResourceBundle.getBundle("Colors", loc);
+
 rb.getString("red");
 ```
 
@@ -15837,6 +18539,7 @@ rb.getString("red");
 
 ```java
 Properties props = new Properties();
+
 props.__________("x");
 ```
 
@@ -15847,11 +18550,7 @@ props.__________("x");
 
 ## 35. 以下内容的输出是什么？
 
-
-
-
-
-```
+```java
 1:   package keyboard;
 2:   import java.util.*;
 3:
@@ -15882,14 +18581,19 @@ props.__________("x");
 
 ```
 Map<String, String> map = new TreeMap<>();
+
 map.put("tool", "hammer");
+
 map.put("problem", "nail");
 
 Property props = new Property();          // p1
+
 map.forEach((k,v) -> props.put(k, v));    // p2
 
 String t = props.getProperty("tool");     // p3
+
 String n = props.getProperty("nail");
+
 System.out.println(t + " " + n);
 ```
 
@@ -15902,19 +18606,29 @@ System.out.println(t + " " + n);
 
 ```
 package counter;
+
 import java.util.*;
 
 public class CountResource extends ListResourceBundle {
+
    private int count = 0;
 
    @Override
+
    protected Object[][] getContents() {
+
       return new Object[][] { { "count", count++ } };
+
    }
+
    public static void main(String[] args) {
+
       ResourceBundle rb = new ResourceBundle("counter.CountResource");
+
       System.out.println(rb.getObject("count") + " " + rb.getObject("count"));
+
    }
+
 }
 ```
 
@@ -15927,22 +18641,35 @@ public class CountResource extends ListResourceBundle {
 
 ```
 pod.container.properties
+
 name=generic
+
 number=2
 
 pod.container_en.properties
+
 name=Docker
+
 type=container
 
 package pod;
+
 import java.util.*;
+
 public class WhatKind {
+
    public static void main(String[] args) {
+
       Locale.setDefault(new Locale("en"));
+
       ResourceBundle rb = ResourceBundle.getBundle("pod.container");
+
       String name = rb.getString("name");
+
       String type = rb.getString("type");
+
       System.out.println(name + " " + type);   }
+
 }
 ```
 
@@ -15955,19 +18682,24 @@ public class WhatKind {
 
 ```
 Locale loc = new Locale("zh", "CN");
+
 Locale.setDefault(new Locale("en", "US"));
+
 ResourceBundle rb = ResourceBundle.getBundle("Colors", loc);
+
 rb.getString("red");
 ```
 
-1. Colors_EN.properties
-2. Colors_ZH.properties 
-3. Red_EN.properties
-4. 以上皆不是。它将抛出 MissingResourceException。
+
+
+1. `Colors_EN.properties`
+2. `Colors_ZH.properties`
+3. `Red_EN.properties`
+4. 以上皆不是。它将抛出`MissingResourceException`。
 
 # 第 23 章
 
-OCP 模拟考试
+## OCP 模拟考试
 
 本章包含 85 道题，旨在模拟真实的 OCP 考试。之前的章节侧重于一组特定的目标，而本章涵盖了考试中的所有目标。我们建议您在各个章节的题目中获得良好分数后再参加此项考试。
 
@@ -15975,7 +18707,7 @@ OCP 模拟考试
 
 请记住，考试允许书写材料，例如白板。如果您手边没有白板，可以使用空白纸和铅笔。如果您在此次测试中表现良好，那么希望您已经准备好参加真实考试了。如此，祝你好运！
 
-1. 假设 `ResultSet` 是可滚动的且包含 10 行，值从 1 到 10 升序排列。关于以下哪些是正确的？（选择两项。）
+### 1. 假设`ResultSet`是可滚动的且包含 10 行，值从 1 到 10 升序排列。关于以下哪些是正确的？（选择两项。）
 
 ```
 12:  rs.beforeFirst();
@@ -15993,7 +18725,7 @@ OCP 模拟考试
 4. 未抛出异常。
 5. 在运行时抛出异常。
 
-2. 下列代码的结果是什么？
+### 2. 下列代码的结果是什么？
 
 ```
 public class PiDay {
@@ -16012,7 +18744,7 @@ public class PiDay {
 4. 59143
 5. 代码无法编译
 
-3. 以下是有效的 Lambda 表达式？（选择三项。）
+### 3. 以下是有效的 Lambda 表达式？（选择三项。）
 
 1. `() -> {}`
 2. `(Double adder) -> {int y; System.out.print(adder); return adder;}`
@@ -16020,27 +18752,33 @@ public class PiDay {
 4. `(int count, vote) -> count*vote`
 5. 
 
-4. 编译并运行以下代码的结果是什么？
+### 4. 编译并运行以下代码的结果是什么？
 
 ```
 package names;
+
 import java.util.*;
 import java.util.function.*;
+
 interface ApplyFilter {
    void filter(List<String> input);
 }
+
 public class FilterBobs {
    static Function<String,String> first = s -> {System.out.println(s); return s;};
    static Predicate second = t -> "bob".equalsIgnoreCase(t);
+
    public void process(ApplyFilter a, List<String> list) {
       a.filter(list);
    }
+
    public static void main(String[] contestants) {
       final List<String> people = new ArrayList<>();
       people.add("Bob");
       people.add("bob");
       people.add("Jennifer");
       people.add("Samantha");
+
       final FilterBobs f = new FilterBobs();
       f.process(q -> {
          q.removeIf(second);
@@ -16057,13 +18795,13 @@ public class FilterBobs {
 5. 三行代码无法编译。
 6. 代码可以编译但在运行时打印异常。
 
-5. 下列代码的输出是什么？
+### 5. 下列代码的输出是什么？
 
 ```
 public class Compete {
    public static void main(String[] args) {
       Stream<Integer> is = Stream.of(8, 6, 9);
-      Comparator<Integer> c = (a, b) -> b ‐ a;  // r1
+      Comparator<Integer> c = (a, b) -> b - a;  // r1
       is.sorted(c).forEach(System.out::print);  // r2
    }
 }
@@ -16071,16 +18809,12 @@ public class Compete {
 
 1. 689
 2. 986
-3. 代码由于第 `r1` 行无法编译。
-4. 代码由于第 `r2` 行无法编译。
+3. 代码由于第`r1`行无法编译。
+4. 代码由于第`r2`行无法编译。
 5. 代码由于另一行无法编译。
 6. 代码可以编译但在运行时抛出异常。
 
-6. 下列应用程序的输出是什么？
-
-
-
-
+### 6. 下列应用程序的输出是什么？
 
 ```java
 package tax;
@@ -16089,6 +18823,7 @@ public class Accountant {
    class AddingException extends Exception {};
    class DividingException extends Exception {};
    class UnexpectedException extends RuntimeException {};
+
    public void doTaxes() throws Throwable {
       try {
          throw new IllegalStateException();
@@ -16099,6 +18834,7 @@ public class Accountant {
          throw f;
       }
    }
+
    public static void main(String[] numbers) throws Throwable {
       try {
          new Accountant().doTaxes();
@@ -16112,11 +18848,11 @@ public class Accountant {
 1. Math Problem
 2. Unknown Problem
 3. Unknown Problem 之后是 All done!
-4. 代码仅由于行 `p1` 无法编译。
-5. 代码仅由于行 `p2` 无法编译。
-6. 代码由于行 `p1` 和 `p2` 无法编译。
+4. 代码仅由于行`p1`无法编译。
+5. 代码仅由于行`p2`无法编译。
+6. 代码由于行`p1`和`p2`无法编译。
 
-7. 下面应用程序的输出是什么？
+### 7. 下面应用程序的输出是什么？
 
 ```java
 1:  package drawing;
@@ -16150,7 +18886,7 @@ public class Accountant {
 5. 代码可以编译，但在运行时抛出异常。
 6. 以上都不是。
 
-8. 下面有多少项可以填入空白处以使此代码编译？
+### 8. 下面有多少项可以填入空白处以使此代码编译？
 
 ```java
 public boolean isItMyBirthday(LocalDateTime dateTime) {
@@ -16174,14 +18910,16 @@ public boolean isItMyBirthday(LocalDateTime dateTime) {
 5. 四
 6. 五
 
-9. 哪两个可以独立填充空白处以输出 No dessert today？（选择两个。）
+### 9. 哪两个可以独立填充空白处以输出 No dessert today？（选择两个。）
 
 ```java
 import java.util.*;
+
 public class Dessert {
   public static void main(String[] yum) {
     eatDessert(Optional.empty());
   }
+
   private static void eatDessert(Optional<String> opt) {
      System.out.println(opt.__________);
   }
@@ -16195,13 +18933,12 @@ public class Dessert {
 5. `orElseGet("No dessert today")`
 6. `orElseGet(() -> "No dessert today")`
 
-10. 下面的输出是什么？
+### 10. 下面的输出是什么？
 
 ```java
 public class InitOrder {
    { System.out.print("1"); }
    static { System.out.print("2"); }
-
    public InitOrder() {
       System.out.print("3");
    }
@@ -16223,7 +18960,7 @@ public class InitOrder {
 5. 2233445
 6. 以上都不是。
 
-11. 下列哪一个不能调用者通过构造函数直接实例化？
+### 11. 下列哪一个不能调用者通过构造函数直接实例化？
 
 * `Locale`
 * `Properties`
@@ -16236,7 +18973,7 @@ public class InitOrder {
 5. I, III
 6. II, III
 
-12. 此类使用了什么设计模式或原则？
+### 12. 此类使用了什么设计模式或原则？
 
 ```java
 class Daffodil {
@@ -16256,18 +18993,22 @@ class Daffodil {
 4. A 和 B 都是
 5. 以上都不是。
 
-13. 下面的输出是什么？假设文件系统可用且可写。
+### 13. 下面的输出是什么？假设文件系统可用且可写。
 
 ```java
 package boat;
+
 import java.io.*;
+
 public class Cruise {
    int numPassengers = 1;
    Transient String schedule = "NONE";
+
    public Cruise() {
       numPassengers = 2;
       schedule = "Tropical Island";
    }
+
    public static void main(String... passengers) throws Exception {
       try (ObjectOutputStream o = new ObjectOutputStream(new FileOutputStream("ship.txt"))) {
          Cruise c = new Cruise();
@@ -16275,6 +19016,7 @@ public class Cruise {
          c.schedule = "Casino";
          o.writeObject(c);
       }
+
       try (ObjectInputStream i = new ObjectInputStream(new FileInputStream("ship.txt"))) {
          Cruise c = (Cruise) i.readObject();
          System.out.print(c.numPassengers+","+c.schedule);
@@ -16290,7 +19032,7 @@ public class Cruise {
 5. 代码无法编译。
 6. 代码编译但抛出异常。
 
-14. 下列哪些是 `java.sql` 包中的接口？
+### 14. 下列哪些是`java.sql`包中的接口？
 
 * `Driver`
 * `DriverManager`
@@ -16304,7 +19046,7 @@ public class Cruise {
 5. I, II, III
 6. I, II, IV
 
-15. 下列哪些 表达式可以传递给接收 `IntUnaryOperator` 的方法？（选择三个。）
+### 15. 下列哪些表达式可以传递给接收`IntUnaryOperator`的方法？（选择三个。）
 
 1. `v -> {System.out.print("Hello!"); return 2;}`
 2. `(Integer w) -> w.intValue()`
@@ -16313,16 +19055,16 @@ public class Cruise {
 5. `(long x) -> (int)x`
 6. `z -> z`
 
-16. 关于 `InputStream` 和 `Reader` 的哪些陈述正确？（选择两个。）
+### 16. 关于`InputStream`和`Reader`的哪些陈述正确？（选择两个。）
 
-1. 一个包含返回字节值的 `read()` 方法，另一个包含返回 `int` 值的 `read()` 方法。
-2. 只有一个包含 `flush()` 方法。
-3. 只有一个包含 `skip()` 方法。
+1. 一个包含返回字节值的`read()`方法，另一个包含返回`int`值的`read()`方法。
+2. 只有一个包含`flush()`方法。
+3. 只有一个包含`skip()`方法。
 4. 它们都是抽象类。
 5. 都是接口。
 6. 它们都可以用于读取字符数据。
 
-17. 填入空白处使此代码打印 -1。
+### 17. 填入空白处使此代码打印 -1。
 
 ```java
 LocalDate xmas = LocalDate.of(2017,  12, 25);
@@ -16330,6 +19072,8 @@ LocalDate blackFriday = LocalDate.of(2017, 11, 24);
 long monthsLeft = ChronoUnit.MONTHS.____________________;
 System.out.println(monthsLeft);
 ```
+
+
 
 1. `between(blackFriday, xmas)`
 2. `between(xmas, blackFriday)`
@@ -16340,32 +19084,49 @@ System.out.println(monthsLeft);
 
 18. 关于此类的哪些陈述是正确的？
 
-
-
-
-
 ```java
 package secure;
+
 import java.io.*;
+
 public class Login {
+
    public void clearPassword(char[] password) {
+
       for(int i=0; i<password.length; i++) {
+
          password[i] = 0;
+
       }
+
    }
+
    public String getPassword() {
+
       Console c = System.console();
+
       final char[] pass = c.readPassword("Enter your password: ");
+
       StringBuilder sb = new StringBuilder();
+
       for(char p : pass) {
+
          sb.append(p);
+
       }
+
       clearPassword(pass);
+
       return sb.toString();
+
    }
+
    public static void main(String[] webLogin) {
+
       String pass = new Login().getPassword();
+
    }
+
 }
 ```
 
@@ -16383,20 +19144,35 @@ public class Login {
 
 ```java
 class Runner {
+
    private int numberMinutes;
+
    public Runner(int n) {
+
       numberMinutes = n;
+
    }
+
    public int getNumberMinutes() {
+
       return numberMinutes;
+
    }
+
 }
+
 public class Marathon {
+
    public static void main(String[] args) {
+
       Stream<Runner> runners = Stream.of(new Runner(183),
+
          new Runner(161), new Runner(201));
+
       OptionalInt opt = runners.____________________;
+
    }
+
 }
 ```
 
@@ -16414,20 +19190,35 @@ public class Marathon {
 
 ```java
 1:  package fruit;
+
 2:  enum Season {
+
 3:     SPRING(1), SUMMER(2), FALL(3), WINTER(4)
+
 4:     public Season(int orderId) {}
+
 5:  }
+
 6:  public class PickApples {
+
 7:     public static void main(String... orchard) {
+
 8:        final Season s = Season.FALL;
+
 9:        switch(s) {
+
 10:          case 3:
+
 11:             System.out.println("Time to pick!");
+
 12:          default:
+
 13:             System.out.println("Not yet!");
+
 14:       }
+
 15:    }
+
 16: }
 ```
 
@@ -16442,21 +19233,37 @@ public class Marathon {
 
 ```java
 package spooky;
+
 import java.util.function.*;
+
 abstract class Phantom {
+
    public void bustLater(DoubleConsumer buster, double value) {
+
       buster.accept(value);
+
    }
+
 }
+
 public class Ghost extends Phantom {
+
    public void bustNow(Consumer<Double> buster, double value) {
+
       buster.accept(value);
+
    }
+
    void call() {
+
       double value = 10;
+
       bustNow(__________,value);
+
       bustLater(__________,value);
+
    }
+
 }
 ```
 
@@ -16471,19 +19278,29 @@ public class Ghost extends Phantom {
 
 ```java
 package counter;
+
 import java.util.*;
 
 public class CountResource extends ListResourceBundle {
+
    private int count = 0;
 
    @Override
+
    protected Object[][] getContents() {
+
       return new Object[][] { { "count", ++count } };
+
    }
+
    public static void main(String[] args) {
+
       ResourceBundle rb = ResourceBundle.getBundle("counter.CountResource");
+
       System.out.println(rb.getString("count") + " " + rb.getString("count"));
+
    }
+
 }
 ```
 
@@ -16500,15 +19317,23 @@ public class CountResource extends ListResourceBundle {
 import java.time.*;
 
 public class Fall {
+
    public static void main(String[] args) {
+
       LocalDate localDate = LocalDate.of(2017, 11, 5);
+
       LocalTime localTime = LocalTime.of(1);
+
       ZoneId zone = ZoneId.of("America/New_York");
+
       ZonedDateTime z = ZonedDateTime.of(localDate, localTime, zone);
 
       for (int i = 0; i < 6; i++)
+
          System.out.println(z.plusHours(1));
+
    }
+
 }
 ```
 
@@ -16518,24 +19343,39 @@ public class Fall {
 4. 代码无法编译。
 5. 代码可以编译但抛出异常。
 
-24. 假设 /environment 目录存在且符号链接。假设目录内的文件均可访问。执行以下程序的运行是什么？
+24. 假设 `/environment` 目录存在且符号链接。假设目录内的文件均可访问。执行以下程序的运行是什么？
 
 ```java
 import java.nio.file.*;
+
 import java.nio.file.attribute.*;
+
 public class Search {
+
    public static void accessFile(Path p, long timeEpoch) {
+
       try {
+
          Files.readAttributes(p, BasicFileAttributes.class)
+
             .setTimes(null, null, FileTime.fromMillis(timeEpoch));
+
       } catch (Throwable e) {
+
       } finally {}
+
    }
+
    public static void main(String[] args) throws Exception {
+
       Path w = Paths.get("/environment");
+
       Files.walk(w)
+
          .forEach(q -> accessFile(q,System.currentTimeMillis()));
+
    }
+
 }
 ```
 
@@ -16549,17 +19389,29 @@ public class Search {
 
 ```java
 public class Watch {
+
    private static short DEFAULT_HOUR = 12;
+
    private Watch() {
+
       super();
+
    }
+
    int checkHour() {
+
       assert DEFAULT_HOUR > 12;
+
       return DEFAULT_HOUR;
+
    }
+
    public static void main(String... ticks) {
+
       new Watch().checkHour();
+
    }
+
 }
 ```
 
@@ -16567,32 +19419,53 @@ public class Watch {
 2. `java -ea:Watch -da Watch`
 3. `java -ea -da Watch`
 4. `java -enableassert Watch`
-5. 以上都不是，因为 Watch 类无法编译。
+5. 以上都不是，因为 `Watch` 类无法编译。
 
 26. 下一个程序的输出是什么？
 
 ```java
 package rope;
+
 import java.util.concurrent.*;
+
 import java.util.stream.IntStream;
+
 public class Jump {
+
    private static void await(CyclicBarrier b) {
+
       try {
+
          b.await();
+
       } catch (InterruptedException | BrokenBarrierException e) {
+
          e.printStackTrace();
+
       }
+
    }
+
    public static void main(String[] chalk) {
+
       ExecutorService s = Executors.newFixedThreadPool(4);
+
       final CyclicBarrier b = new CyclicBarrier(4,
+
          () -> System.out.print("Jump!"));
+
       IntStream
+
          .iterate(1, q -> 2)
+
          .limit(10)
+
          .forEach(q -> s.execute(() ->await(b)));
+
       s.shutdown();
+
    }
+
 }
 ```
 
@@ -16600,19 +19473,16 @@ public class Jump {
 2. Jump! 打印两次并退出。
 3. 代码无法编译。
 4. 无法提前确定输出。
-
-
-
-
-
 5. 程序在运行时无限挂起，因为 `IntStream` 不是并行的。
 6. 以上均不是
 
-### 27. 下面代码段的输出是什么？假设引用的两个目录都存在，并且是文件系统内同一位置的符号链接。
+27. 下面代码段的输出是什么？假设引用的两个目录都存在，并且是文件系统内同一位置的符号链接。
 
 ```java
 if(Files.isSameFile("/salad/carrot", "/fruit/apple"))
+
    System.out.println("Same!");
+
 else System.out.println("Different!");
 ```
 
@@ -16622,20 +19492,31 @@ else System.out.println("Different!");
 4. 代码编译但在运行时抛出异常。
 5. 以上都不是
 
-### 28. 哪些内容可以填充到 `JavaProgrammerCert` 类中以编译并从逻辑上完成代码？（选择两项。）
+28. 哪些内容可以填充到 `JavaProgrammerCert` 类中以编译并从逻辑上完成代码？（选择两项。）
 
 ```java
 class JavaProgrammerCert extends Exam {
+
    private Exam oca;
+
    private Exam ocp;
+
    // 假设这里有 getters 和 setters
+
    ______________________________________  
+
 }
+
 public class Exam {
+
    boolean pass;
+
    protected boolean passed() {
+
      return pass;
+
    }
+
 }
 ```
 
@@ -16646,7 +19527,7 @@ public class Exam {
 5. `public boolean passed() { return oca.pass && ocp.pass; }`
 6. `public boolean passed() { return super.passed(); }`
 
-### 29. 关于方法重写（overriding），哪些描述是正确的？（选择两项。）
+29. 关于方法重写（overriding），哪些描述是正确的？（选择两项。）
 
 1. 重写的方法不能抛出比继承方法所抛出的任何检查异常范围更窄的版本。
 2. 重写的方法必须使用与继承方法协变（covariant）的返回类型。
@@ -16655,431 +19536,72 @@ public class Exam {
 5. 可以重写私有和静态方法。
 6. 每次重写方法时都必须使用 `@Override` 注解。
 
-### 30. 下列哪项可以独立地插入空白处，使得代码至少对一个 SQL 查询可以无错误运行？
+30. 下列哪项可以独立地插入空白处，使得代码至少对一个 SQL 查询可以无错误运行？
 
 ```java
 private static void choices(Connection conn, String sql) throws SQLException {
+
    try (Statement stmt = conn.createStatement();
+
        ResultSet rs = stmt.executeQuery(sql)) {
+
        ____________________
+
    }
+
 }
 ```
 
-* `System.out.println(rs.getInt(1));`
-* `rs.next(); System.out.println(rs.getInt(1));`
-* `if (rs.next()) System.out.println(rs.getInt(1));`
-
-1. II
-2. III
-3. I 和 III
-4. II 和 III
-5. I, II, 和 III
-6. 以上都不是
-
-### 31. 从 `DoubleBinaryOperator` 开始向下，填充表格中的值。
-
-| 函数式接口 | 参数数量 |
-| :--- | :--- |
-| `DoubleBinaryOperator` | |
-| `LongToIntFunction` | |
-| `ToLongBiFunction` | |
-| `IntSupplier` | |
-| `ObjLongConsumer` | |
-
-1. 1, 0, 0, 0, 2
-2. 1, 2, 1, 0, 1
-3. 2, 1, 0, 1, 2
-4. 2, 1, 1, 0, 1
-5. 2, 1, 2, 0, 2
-6. 3, 0, 2, 1, 1
-
-### 32. 下面代码可能的输出是什么？
-
-```java
-LocalDate trainDay = LocalDate.of(2017, 5, 13);
-LocalTime time = LocalTime.of(10, 0);
-ZoneId zone = ZoneId.of("America/Los_Angeles");
-ZonedDateTime zdt = ZonedDateTime.of(trainDay, time, zone);
-Instant instant = zdt.toInstant();
-instant = instant.plus(1, ChronoUnit.YEARS);
-System.out.println(instant);
-```
-
-1. 2017-05-13T10:00-07:00[America/Los_Angeles]
-2. 2017-05-13T17:00:00Z
-3. 2018-05-13T10:00-07:00[America/Los_Angeles]
-4. 2018-05-13T17:00:00Z
-5. 代码无法编译。
-6. 代码编译但在运行时抛出异常。
-
-### 33. 下面输出有多少行？
-
-```java
-import java.util.stream.*;
-
-class Blankie {
-   String color;
-   boolean isPink() {
-      return "pink".equals(color);
-   }
-}
-public class PreSchool {
-   public static void main(String[] args) {
-      Blankie b1 = new Blankie();
-      Blankie b2 = new Blankie();
-      b1.color = "pink";
-      Stream.of(b1, b2).filter(Blankie::isPink).forEach(System.out::println);
-   }
-}
-```
-
-1. None
-2. One
-3. Two
-4. 代码无法编译。
-5. 代码编译但在运行时抛出异常。
-
-### 34. 哪些更改可以使该类变为不可变？
-
-```java
-public class Tree {
-   String species;
-   public Tree(String species) {
-      species = species;
-   }
-   public String getSpecies() {
-      return species;
-   }
-   public void setSpecies(String newSpecies) {
-      species = newSpecies;
-   }
-}
-```
-
-* 将 `species` 为 final。
-* 将 getter 声明为 final。
-* 删除 setter。
-
-1. 已经是不可变的。
-2. I
-3. I 和 II
-4. II 和 III
-5. I, II 和 III
-
-35. 假设你需要向文件写入大 List。哪三个类的组合可以实现这一点？
-
-1. BufferedWriter
-2. OutputStream
-3. FileWriter
-4. ObjectOutputStream
-
-36. 哪些语句独立插入会抛出异常？（选择两项。）
-
-```java
-ArrayDeque<Integer> d = new ArrayDeque<>();
-d.offer(1);
-// 插入代码
-```
-
-1. `d.peek();`
-2. `d.poll();`
-3. `d.pop();`
-4. `d.remove();`
-
-37. 下面代码的输出是什么？
-
-```java
-Path x = Paths.get("song","..","note");
-Path y = Paths.get("/move.txt");
-x.normalize();
-System.out.println(x.resolve(y));
-System.out.println(y.relativize(x));
-```
-
-1. /move.txt
-2. /move.txt/note
-3. /./move.txt/note
-4. ../move.txt/song
-5. 代码无法编译。
-6. 代码编译但抛出了异常。
-
-38. 给定类类有多少行包含编译错误？
-
-```java
-package field;
-import java.io.*;
-class StungException extends Exception {}
-class Suit implements Closeable {
-   public void close() throws IOException {}
-}
-public class BeeCatcher {
-   public static void main(String... bees) {
-      try (Suit s = new Suit(), Suit t = new Suit()) {
-         throw new StungException();
-      } catch (Exception e) {
-      } catch (StungException e) {
-      } finally {
-      }
-   }
-}
-```
-
-1. One
-2. Two
-3. Three
-4. Four
-5. None. 代码可以编译。
-
-39. 下面应用程序的输出是什么？
-
-```java
-package homework;
-import java.util.*;
-import java.util.stream.*;
-public class QuickSolution {
-   public static int findFast(Stream<Integer> s) {
-      return s.findAny().get();
-   }
-   public static int findSlow(Stream<Integer> s) {
-      return s.parallel().findFirst().get();
-   }
-   public static void main(String[] pencil) {
-      Stream<Integer> s1 = Arrays.asList(1,2,3,4,5).stream();
-      Stream<Integer> s2 = Arrays.asList(1,2,3,4,5).stream();
-      int val1 = findFast(s1);
-      int val2 = findSlow(s2);
-      System.out.print(val1+" "+val2);
-   }
-}
-```
-
-1. 1 1
-2. 3 1
-3. 答案在运行时前无法确定。
-4. 代码无法编译。
 
 
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
 
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
 
-## 5. 代码编译通过但在运行时抛出异常。
-
-### 40. 假定有一个用于加载 `Properties` 对象 `props` 的属性文件和这段代码片段，输出结果是什么？
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
 
 ```
-mystery=bag
-type=paper
-
-18:  System.out.print(props.getDefaultProperty("mystery", "?"));
-19:  System.out.print(" ");
-20:  System.out.print(props.getDefaultProperty("more", "?"));
+if (condVar > someVal) {console.log("xxx")}
 ```
 
-1. `bag`
-2. `bag null`
-3. `bag ?`
-4. 代码无法编译。
-5. 代码编译通过但在运行时抛出异常。
 
-### 41. 关于 `try-with-resources` 的哪些描述是正确的？（选择两项。）
 
-1. 任何使用的资源必须实现 `Closeable`。
-2. 如果使用了多个资源，则它们关闭的顺序与它们创建的顺序相反。
-3. 如果 `try` 块和 `close()` 方法都都抛出了异常，则由 `try` 块抛出的异常会被被抑制（suppressed）。
-4. 既不需要 `catch` 也不需要 `finally` 块。
-5. 资源的 `close()` 方法必须抛出检查异常（checked exception）。
+`boolean b1 = t1.equals(t2);`
 
-### 42. 有多少行编译失败？
+`boolean b2 = t1.normalize().equals(t2);`
+
+`boolean b3 = Files.isSameFile(t1.normalize(),t2);`
+
+`boolean b4 = Files.isSameFile(t2,t3);`
+
+`System.out.print(b1+","+++b2+","+++b3+","+++b4);`
 
 ```
-class Roller<E extends Wheel> {
-  public void roll(E e) { }
-}
-class Wheel { }
-class CartWheel extends Wheel { }
-
-public class RollingContest {
-   Roller<CartWheel> wheel1 = new Roller<CartWheel>();
-   Roller<Wheel> wheel2 = new Roller<Wheel>();
-   Roller<? extends Wheel> wheel3 = new Roller<CartWheel>();
-   Roller<? extends Wheel> wheel4 = new Roller<Wheel>();
-   Roller<? super Wheel> wheel5 = new Roller<CartWheel>();
-   Roller<? super Wheel> wheel6 = new Roller<Wheel>();
-}
-```
-
-1. 一行
-2. 两行
-3. 三行
-4. 四行
-5. 五行
-6. 六行
-
-### 43. 正确实现单例模式的最少改动是什么？
-
-```
-1:   public class Bookmark {
-2:      private static Bookmark bookmark;
-3:      private int pageNumber;
-4:      static {
-5:        bookmark = new Bookmark();
-6:      }
-7:      public static Bookmark getInstance() {
-8:         return bookmark;
-9:      }
-10:     public int getPageNumber() {
-11:        return pageNumber;
-12:     }
-13:     public void setPageNumber(int newNumber) {
-14:        pageNumber = newNumber;
-15:     }
-16:  }
-```
-
-* 添加一个私有构造函数。
-* 删除 setter 方法。
-* 删除静态代码块并修改第 2 行以实例化 `Bookmark`。
-
-1. 无。它已经是单例了。
-2. I
-3. I 和 II
-4. I 和 III
-5. II 和 III
-6. I、II 和 III
-
-### 44. 假定有一个包含以下内容的可更新 `ResultSet` 和这段代码，代码片段的输出是什么？
-
-![表格显示了两个列：颜色 character varying(255) 为黑色、蓝色和红色，以及 count integer 值为 20、5 和 0，用于可滚动更新的 ResultSet 代码片段输出。](img/c23uf001.jpg)
-
-```
-rs.afterLast();
-rs.previous();
-rs.updateInt(2, 10);
-
-rs = stmt.executeQuery("select * from pens where color = 'red'");
-while (rs.next()) {
-   System.out.println(rs.getInt(2));
-}
-```
-
-1. 0
-2. 10
-3. 代码无法编译。
-4. 代码编译通过但在运行时抛出异常。
-
-### 45. 哪些描述适用于 `java.io` 流类且不能适用于 `java.util.stream.Stream` 类？（选择三项。）
-
-1. 可以与 `try-with-resources` 语句一起使用
-2. 包含一个仅用于处理字符数据的类或类集合。
-3. 需要所有数据对象实现 `Serializable`。
-4. 某些类包含一个 `flush()` 方法。
-5. 某些类包含一个跳过数据的方法。
-6. 某些类包含一个对数据排序的方法。
-
-### 46. Bill 想创建一个使用 NIO.2 读取他所有书籍所有行的程序。遗憾的是，Bill 在编写程序时可能犯了一些错误。以下类中有多少行代码包含编译错误？
-
-```
-1:  package bookworm;
-2:  import java.io.*;
-3:  import java.nio.file.*;
-4:  public class ReadEverything {
-5:     public void readFile(Path p) {
-6:        try {
-7:           Files.readAllLines(p)
-8:           .parallel()
-9:           .forEach(System.out::println);
-10:       } catch (Exception e) {}
-11:    }
-12:    public void read(Path directory) {
-13:       Files.walk(directory)
-14:          .filter(Files::isRegularFile)
-15:          .forEach(this::readFile);
-16:    }
-17:    public static void main(String args) {
-18:       Path p = Path.get("collection");
-19:       new ReadEverything().readFile(p);
-20:    }
-21: }
-```
-*(注：原文中第 17 行存在重复项，此处根据逻辑补全了 18-21 行。)*
-
-### 47. 假设以下类被访问，关于 `CountSheep` 的哪个描述是正确的？
-
-```
-package fence;
-import java.util.concurrent.atomic.AtomicInteger;
-class CountSheep {
-   private AtomicInteger counter = new AtomicInteger();
-   private Object lock = new Object();
-   public int increment1() {
-      return counter.incrementAndGet();
-   }
-   public int increment2() {
-      return counter.getAndIncrement();
-   }
-   public int increment3() {
-      synchronized(lock) {
-         return counter.incrementAndGet();
-      }
-   }
-}
-```
-
-1. 如果删除 `increment1()`，它是线程安全的。
-2. 如果删除 `increment2()`，它是线程安全的。
-3. 如果删除 `increment3()`，它是线程安全的。
-4. 该类是线程安全的。
-5. 代码无法编译。
-6. 代码可能会抛异常。
-
-### 48. `Files.find()` 方法需要哪些参数？（选择两项。）
-
-1. `BiPredicate`
-2. `FileOption`
-3. `int`
-4. `long`
-5. `Path`
-
-### 49. 哪些描述是正确的？（选择两项。）
-
-1. `Comparable` 实现通常通过 lambda。
-2. `Comparable` 对象有一个 `compare()` 方法。
-3. `compare()` 和 `compareTo()` 方法具有相同的约。
-4. 可以有多个 `Comparator` 实现。
-5. 对 `equals()` 返回 true 的对象在传递 `compareTo()` 时总是返回 0。
-
-### 50. 假设引的文件不存在，以下代码的输出是什么？
-
-```
-Path t1 = Paths.get("/sky/../stars.exe");
-Path t2 = Paths.get("/stars.exe");
-Path t3 = t1.resolve(t2);
-
-boolean b1 = t1.equals(t2);
-boolean b2 = t1.normalize().equals(t2);
-boolean b3 = Files.isSameFile(t1.normalize(),t2);
-boolean b4 = Files.isSameFile(t2,t3);
-
-System.out.print(b1+","+++b2+","+++b3+","+++b4);
-```
-
 1. `false,false,true,true`
 2. `false,true,true,false`
 3. `false,true,true,true`
 4. `true,false,true,false`
 5. 代码无法编译。
 6. 代码编译通过但抛出异常。
+```
 
 ### 51. 假设我们有一个 `Reader` 实例将产生数值为 {1,2,3,4,5,6,7} 的字符。执行 `checkLottoNumbers()` 方法的结果有哪些？（选择两项。）
 
 ```java
 public String checkLottoNumbers(Reader r) throws IOException {
+
    r.read();r.skip(1);
+
    r.mark(5);
+
    r.skip(1);
+
    r.reset();
+
    return r.read()+"-"+r.read(new char[5]);
+
 }
 ```
 
@@ -17090,23 +19612,15 @@ public String checkLottoNumbers(Reader r) throws IOException {
 5. 返回 `3-4`。
 6. 返回 `4-3`。
 
+### 52. 填空：`Function` 接口中的抽象方法名称是 `__________`，而 `Consumer` 接口中的抽象方法名称是 __________ 。
 
+1. `accept()`, `apply()`
+2. `accept()`, `get()`
+3. `apply()`, `accept()`
+4. `apply()`, `apply()`
+5. `apply()`, `test()`
 
-
-
-52. 填空：`Function` 接口中的抽象方法名称是 `__________`，而 `Consumer` 接口中的抽象方法名称是 __________ 。
-
-    1. `accept()`, `apply()`
-
-    2. `accept()`, `get()`
-
-    3. `apply()`, `accept()`
-
-    4. `apply()`, `apply()`
-
-    5. `apply()`, `test()`
-
-53. 假设在启用断言的情况下执行了以下程序，哪一行在运行时第一个抛出异常？
+### 53. 假设在启用断言的情况下执行了以下程序，哪一行在运行时第一个抛出异常？
 
 ```
  1:  package school;
@@ -17130,72 +19644,65 @@ public String checkLottoNumbers(Reader r) throws IOException {
 19: }
 ```
 
-    1. 第 4 行
+1. 第 4 行
+2. 第 5 行
+3. 第 6 行
+4. 第 7 行
+5. 第 8 行
+6. 以上都不是，因为该类无法编译
 
-    2. 第 5 行
+### 54. 哪些是 `java.util.function` 包中有效的函数式接口？（选择三个。）
 
-    3. 第 6 行
+1. `BooleanSupplier`
+2. `CharSupplier`
+3. `DoubleUnaryOperator`
+4. `ObjectIntConsumer`
+5. `ToLongBiFunction`
+6. `TriPredicate`
 
-    4. 第 7 行
-
-    5. 第 8 行
-
-    6. 以上都不是，因为该类无法编译
-
-54. 哪些是 `java.util.function` 包中有效的函数式接口？（选择三个。）
-
-    1. `BooleanSupplier`
-
-    2. `CharSupplier`
-
-    3. `DoubleUnaryOperator`
-
-    4. `ObjectIntConsumer`
-
-    5. `ToLongBiFunction`
-
-    6. `TriPredicate`
-
-55. 关于以下类的描述正确正确？（选择两个。）
+### 55. 关于以下类的描述正确正确？（选择两个。）
 
 ```
  package knowledge;
+
 class InformationException extends Exception {}
+
 public class LackOfInformationException extends InformationException {
+
    public LackOfInformationException() {  // t1
       super("");
    }
+
    public LackOfInformationException(String s) {  // t2
       this(new Exception(s));
    }
+
    public LackOfInformationException(Exception c) {  // t3
       super();
    }
+
    @Override public String getMessage() {
       return "lackOf";
    }
 }
 ```
 
-    1. `LackOfInformationException` 编译无问题。
+1. `LackOfInformationException` 编译无问题。
+2. 第 `t1` 行声明的构造方法无法编译。
+3. 第 `t2` 行声明的构造方法无法编译。
+4. 第 `t3` 行声明的构造方法无法编译。
+5. 由于 `@Override` 注解，`getMessage()` 方法无法编译。
+6. `LackOfInformationException` 是受检异常（checked exception）。
 
-    2. 第 `t1` 行声明的构造方法无法编译。
-
-    3. 第 `t2` 行声明的构造方法无法编译。
-
-    4. 第 `t3` 行声明的构造方法无法编译。
-
-    5. 由于 `@Override` 注解，`getMessage()` 方法无法编译。
-
-    6. `LackOfInformationException` 是受检异常（checked exception）。
-
-56. 为了让这段代码通过，你需要修改多少处？
+### 56. 为了让这段代码通过，你需要修改多少处？
 
 ```
  public class Ready {
+
    private static double getNumber() {
       return .007;
    }
+
    public static void math() {
       Supplier<double> s = Ready:getNumber;
       double d = s.get();
@@ -17204,26 +19711,27 @@ public class LackOfInformationException extends InformationException {
 }
 ```
 
-    1. 无
+1. 无
+2. 一处
+3. 两处
+4. 三处
+5. 四处
 
-    2. 一处
-
-    3. 两处
-
-    4. 三处
-
-    5. 四处
-
-57. 关于以下类的描述正确正确？
+### 57. 关于以下类的描述正确正确？
 
 ```
  package robot;
+
 import java.util.concurrent.*;
+
 public class PassButter extends RecursiveTask<String> {  // j1
+
    final int remainder;
+
    public PassButter(int remainder) {  // j2
       this.remainder = remainder;
    }
+
    @Override
    protected String compute() {
       if (remainder <= 1)
@@ -17235,6 +19743,7 @@ public class PassButter extends RecursiveTask<String> {  // j1
             + new PassButter(remainder - 2).compute();
       }
    }
+
    public static void main(String[] purpose) {
       ForkJoinPool pool = new ForkJoinPool();
       ForkJoinTask<?> task = new PassButter(10);
@@ -17244,25 +19753,21 @@ public class PassButter extends RecursiveTask<String> {  // j1
 }
 ```
 
-    1. 第 `j1` 行导致代码无法编译。
+1. 第 `j1` 行导致代码无法编译。
+2. 第 `j2` 行导致代码无法编译。
+3. 第 `j3` 行导致代码无法编译。
+4. 代码可以编译，并以多线程方式正确实现了 fork/join 框架。
+5. 代码可以编译，但没有以正确的多线程方式实现 fork/join 框架。
+6. 类可以编译并在运行时打印异常。
 
-    2. 第 `j2` 行导致代码无法编译。
-
-    3. 第 `j3` 行导致代码无法编译。
-
-    4. 代码可以编译，并以多线程方式正确实现了 fork/join 框架。
-
-    5. 代码可以编译，但没有以正确的多线程方式实现 fork/join 框架。
-
-    6. 类可以编译并在运行时打印异常。
-
-58. 哪个可以填充空白，使得这段代码输出 true？
+### 58. 哪个可以填充空白，使得这段代码输出 true？
 
 ```
  import java.util.function.*;
 import java.util.stream.*;
 
 public class HideAndSeek {
+
    public static void main(String[] args) {
       Stream<Boolean> hide = Stream.of(true, false, true);
       Predicate<Boolean> pred = ________;
@@ -17272,26 +19777,22 @@ public class HideAndSeek {
 }
 ```
 
-    1. `anyMatch()`
+1. `anyMatch()`
+2. `allMatch()`
+3. `findFirst()`
+4. `noneMatch()`
 
-    2. `allMatch()`
-
-    3. `findFirst()`
-
-    4. `noneMatch()`
-
-59. 给定以下代码，Java 将按什么顺序查找匹配？
+### 59. 给定以下代码，Java 将按什么顺序查找匹配？
 
 ```
 Locale.setDefault(new Locale("____"));
 ResourceBundle rb = ResourceBundle.get("");
 ```
 
-    1. `en.properties`
+1. `en.properties`
+2. `fr.properties`
 
-    2. `fr.properties`
-
-60. 以下结果是什么？
+### 60. 以下结果是什么？
 
 ```
  Set<Integer> dice = new TreeSet<>();
@@ -17300,28 +19801,31 @@ dice.add(4);
 dice.stream().____().count();
 ```
 
-    1. 输出一行。
+1. 输出一行。
+2. 输出数字 3。
+3. 无输出。
+4. 代码无法编译。
+5. 代码可以编译但抛出异常。
 
-    2. 输出数字 3。
-
-    3. 无输出。
-
-    4. 代码无法编译。
-
-    5. 代码可以编译但抛出异常。
-
-61. 给定以下属性文件，以下类输出什么？
+### 61. 给定以下属性文件，以下类输出什么？
 
 ```
 pod.container.properties
 name=generic
 number=2
+
 pod.container_en.properties
 name=Docker
 type=container
+```
+
+```java
 package pod;
+
 import java.util.*;
+
 public class WhatKind {
+
    public static void main(String[] args) {
       Locale.setDefault(new Locale("ja"));
       ResourceBundle rb = ResourceBundle.get("container");
@@ -17332,23 +19836,20 @@ public class WhatKind {
 }
 ```
 
-    1. Docker container
+1. Docker container
+2. generic container
+3. generic null
+4. 代码无法编译。
+5. 第 `r1` 行抛出异常。
+6. 第 `r2` 行抛出异常。
 
-    2. generic container
-
-    3. generic null
-
-    4. 代码无法编译。
-
-    5. 第 `r1` 行抛出异常。
-
-    6. 第 `r2` 行抛出异常。
-
-62. 以下结果是什么？
+### 62. 以下结果是什么？
 
 ```
  import java.util.stream.*;
+
 public class StreamOfStreams {
+
    public static void main(String[] args) {
       Integer result =
          Stream.of(getNums(9, 8), getNums(22, 33))  // c1
@@ -17358,43 +19859,34 @@ public class StreamOfStreams {
          .get();
       System.out.println(result);
    }
+
    private static Stream<Integer> getNums(int num1, int num2) {
       return Stream.of(num1, num2);
    }
 }
 ```
 
-    1. 代码编译并输出 8。
+1. 代码编译并输出 8。
+2. 代码编译并输出 33。
+3. 第 `c1` 行导致代码无法编译。
+4. 第 `c2` 行导致代码无法编译。
+5. 第 `c3` 行导致代码无法编译。
+6. 第 `c4` 行导致代码无法编译。
 
-    2. 代码编译并输出 33。
+### 63. 以下哪些显示了有效的 Locale 格式？（选择两个。）
 
-    3. 第 `c1` 行导致代码无法编译。
+1. `de`
+2. `DE`
+3. `de_DE`
+4. `DE_de`
 
-    4. 第 `c2` 行导致代码无法编译。
-
-    5. 第 `c3` 行导致代码无法编译。
-
-    6. 第 `c4` 行导致代码无法编译。
-
-63. 以下哪些显示了有效的 Locale 格式？（选择两个。）
-
-    1. `de`
-
-    2. `DE`
-
-    3. `de_DE`
-
-    4. `DE_de`
-
-
-
-
-
-## 64. 如果使用 `JDBC` `4.0` 驱动运行，音乐数据库存在且包含一个有一数据的 `songs` 表，关于以下哪些描述是正确的？（选择两个。）
+### 64. 如果使用 `JDBC` `4.0` 驱动运行，音乐数据库存在且包含一个有一数据的 `songs` 表，关于以下哪些描述是正确的？（选择两个。）
 
 ```java
 import java.sql.*;
+
 public class Music {
+
    public static void main(String[] args) throws Exception {
       String url = "jdbc:derby:music";
       Connection conn = DriverManager.getConnection(url);
@@ -17411,14 +19903,16 @@ public class Music {
 5. `execute()` 方法返回一个 `boolean`。
 6. `execute()` 方法返回一个 `int`。
 
-## 65. 以下值对中有多少可以填充空白以符合 `hashCode()` 和 `equals()` 方法的约？
+### 65. 以下值对中有多少可以填充空白以符合 `hashCode()` 和 `equals()` 方法的约？
 
 ```java
 class Sticker {
+
    @Override
    public int hashCode() {
       return _______________ ;
    }
+
    @Override
    public boolean equals(Sticker o) {
       return _______________;
@@ -17438,41 +19932,45 @@ class Sticker {
 5. 四个
 6. 以上都不是。代码在任何选项下均无法编译。
 
-## 66. 以下程序的输出是什么？
+### 66. 以下程序的输出是什么？
 
 ```java
 package winter;
 
 abstract class TShirt {
+
    abstract int insulate();
+
    public TShirt() {
       System.out.print("Starting...");
    }
 }
+
 public class Wardrobe {
+
    abstract class Sweater extends TShirt {
       int insulate() {return 5;}
    }
+
    private static void dress() {
       class Jacket extends Sweater {  // v1
          int insulate() {return 10;}
       };
+
       final TShirt outfit = new Jacket() {  // v2
          int insulate() {return 20;}
       };
+
       System.out.println("Insulation:"+outfit.insulate());
    }
+
    public static void main(String... snow) {
       new Wardrobe().dress();
    }
 }
 ```
 
-1. Starting...Insulation:20
-2. Starting...Insulation:40
-3. 代码因为第 `v1` 行而无法编译。
-4. 代码因为第 `v2` 行而无法编译。
-5. 代码因为其他原因无法编译。
+
 
 ## 67. 关于以下程序的描述是正确的？
 
@@ -17515,7 +20013,7 @@ public class Wardrobe {
 
 ## 69. 关于以下日期/时间，哪些描述是正确的？（选择两个。）
 
-```
+```text
 2017-04-01T17:00+03:00[Africa/Nairobi]
 2017-04-01T10:00-05:00[America/Panama]
 ```
@@ -17531,6 +20029,7 @@ public class Wardrobe {
 
 ```java
 import java.util.*;
+
 public class Yellow {
    public static void main(String[] args) {
       List list = Arrays.asList("Sunny");
@@ -17553,7 +20052,6 @@ public class Yellow {
 ```java
 Connection conn = null;
 Statement stmt = null;
-
 try {
    conn = DriverManager.getConnection(url);
    stmt = conn.createStatement();
@@ -17574,12 +20072,15 @@ try {
 
 ```java
 package puzzle;
+
 interface Finder {
    default long find() {return 20;}
 }
+
 abstract class Wanda {
    abstract long find();
 }
+
 final class Waldo extends Wanda implements Finder {
    long find() {return 40;}
    public static void main(String[] args) {
@@ -17599,7 +20100,9 @@ final class Waldo extends Wanda implements Finder {
 
 ```java
 package reader;
+
 import java.util.stream.*;
+
 public class Books {
    public static void main(String[] args) {
       IntStream pages = IntStream.of(200, 300);
@@ -17623,14 +20126,11 @@ public class Books {
 ExecutorService e = Executors.newSingleThreadExecutor();
 Runnable r1 = () -> Stream.of(1,2,3).parallel();
 Callable r2 = () -> Stream.of(4,5,6).parallel();
-
 Future<Stream> f1 = e.submit(r1);
 Future<Stream> f2 = e.submit(r2);
-
 Stream<Integer> s = Stream.of(f1.get(),f2.get())
       .flatMap(p -> p)
       .parallelStream();
-
 ConcurrentMap<Boolean,List<Integer>> r =
       s.collect(Collectors.groupingByConcurrent(i -> i%2==0));
 System.out.println(r.get(false).size()+" "+r.get(true).size());
@@ -17643,10 +20143,7 @@ System.out.println(r.get(false).size()+" "+r.get(true).size());
 5. 代码因为三个错误无法编译。
 6. 代码可以编译但在运行时抛出 NullPointerException。
 
-
-
-
-75. 填空：如果你的应用程序是 __________，那么它必须在支持多语言方面已经经过了 __________。
+## 75. 填空：如果你的应用程序是 __________，那么它必须在支持多语言方面已经经过了 __________。
 
 1. `extracted, internationalized`
 2. `extracted, localized`
@@ -17655,11 +20152,13 @@ System.out.println(r.get(false).size()+" "+r.get(true).size());
 5. `localized, extracted`
 6. `localized, internationalized`
 
-76. 关于以下类的哪个描述是正确的？假设文件系统可用且可以修改。
+## 76. 关于以下类的哪个描述是正确的？假设文件系统可用且可以修改。
 
 ```java
 package forest;
+
 import java.io.File;
+
 public class CreateTree {
    public boolean createTree(String tree) {
       if(new File(tree).exists()) {
@@ -17681,7 +20180,7 @@ public class CreateTree {
 4. 该类通过编译，但在运行时可能会抛出异常。
 5. 该类无法编译。
 
-77. 下列代码打印什么？
+## 77. 下列代码打印什么？
 
 ```java
 1:    class SmartWatch extends Watch {
@@ -17710,22 +20209,19 @@ public class CreateTree {
 4. watch,watch
 5. 以上均非
 
-78. 在美国大部分地区，夏令时间于 2017 年 11 月 5 日凌晨 02:00 结束，我们会重复那个小时。以下代码的输出是什么？
+## 78. 在美国大部分地区，夏令时间于 2017 年 11 月 5 日凌晨 02:00 结束，我们会重复那个小时。以下代码的输出是什么？
 
 ```java
 import java.time.*;
 
 public class FallBack {
-
    public static void main(String[] args) {
       LocalDate localDate = LocalDate.of(2017, Month.NOVEMBER, 5);
       LocalTime localTime = LocalTime.of(1, 0);
       ZoneId zone = ZoneId.of("America/New_York");
       ZonedDateTime z = ZonedDateTime.of(localDate, localTime, zone);
-
       for (int i = 0; i < 6; i++)
          z = z.plusHours(1);
-
       System.out.println(z.getHour());
    }
 }
@@ -17737,11 +20233,13 @@ public class FallBack {
 4. 代码无法编译。
 5. 代码通过编译但在运行时抛出异常。
 
-79. 关于以下应用的哪些描述是正确的？
+## 79. 关于以下应用的哪些描述是正确的？
 
 ```java
 package party;
+
 import java.util.concurrent.*;
+
 public class Plan {
    private ExecutorService service = Executors.newCachedThreadPool();
    public void planEvents() {
@@ -17755,6 +20253,8 @@ public class Plan {
    }
 }
 ```
+
+
 
 * `scheduleWithFixedDelay()` 方法调用通过编译。
 * `scheduleAtFixedRate()` 方法调用通过编译。
@@ -17786,9 +20286,6 @@ public class Plan {
    * `static double runFaster() {return 2.0;}}`
 5. `interface CanSwim {boolean swim();}`
 
-
-
-
 ### 5. A.
 选项 B、C 和 D 都是传统面向对象编程的属性。选项 A 是错误的，因为面向对象的项目倾向于将数据以及与该数据相关的操作封装到单个对象中。
 
@@ -17802,7 +20299,7 @@ public class Plan {
 Java 接受选项 A、B 和 D 作为有效注释。请注意 `/* */` 语法可以包含额外的（且不均匀）星号 `*` 字符，如 B 和 D 所示。选项 C 是错误的，因为井号 `#` 在 Java 中不是有效的注释字符。
 
 ### 9. D.
-一个有效的 .java 文件可以定义任意数量的类或接口，但最多有一个公共类（public class）。它也可以不定义任何公共类。由于这些原因，选项 A、B 和 C 都是错误的，只有选项 D 是正确的答案。
+一个有效的 `.java` 文件可以定义任意数量的类或接口，但最多有一个公共类（public class）。它也可以不定义任何公共类。由于这些原因，选项 A、B 和 C 都是错误的，只有选项 D 是正确的答案。
 
 ### 10. B.
 注意此题中 `main()` 不是一个静态方法（static method），因此它可以访问类变量和实例变量。由于定义了两个类变量两个实例变量，因此选项 B 是正确答案。
@@ -17814,7 +20311,7 @@ Java 接受选项 A、B 和 D 作为有效注释。请注意 `/* */` 语法可�
 代码由于第 5 行的原因无法编译，因此选项 A 是正确答案。对于这道题，理解变量作用域是有帮助的。`main()` 方法是静态的，无法访问任何类实例变量。`birds` 变量不是静态的，需要类实例变量才能访问。因此，当静态方法在没有类实例的情况下尝试访问非静态变量时，代码无法编译。
 
 ### 13. D.
-`java` 命令只能执行编译后的 .class 文件，因此 I 是错误的。Java 无疑是面向对象的，这是其核心设计原则之一，所以 II 也是错误的。`javac` 命令编译成字节码，字节码必须在 Java 虚拟机（JVM）中运行，而不是原生机器码，所以 III 也是错误的。由于所有语句都是错误的，选项 D 是正确答案。
+`java` 命令只能执行编译后的 `.class` 文件，因此 I 是错误的。Java 无疑是面向对象的，这是其核心设计原则之一，所以 II 也是错误的。`javac` 命令编译成字节码，字节码必须在 Java 虚拟机（JVM）中运行，而不是原生机器码，所以 III 也是错误的。由于所有语句都是错误的，选项 D 是正确答案。
 
 ### 14. D.
 类可以以注释、可选的包声明，或者在没有包声明的情况下以导入语句开始。它不能以变量定义开始，因此选项 D 是正确答案。
@@ -17823,7 +20320,7 @@ Java 接受选项 A、B 和 D 作为有效注释。请注意 `/* */` 语法可�
 类可以在没有包声明的情况下定义，并被放置在默认包中，因此选项 A 是错误的。选项 B 是一个完全错误的陈述，因为 Java 中不需要此类文件。选项 C 是正确的，它是将应用程序组织成包的主要原因之一。选项 D 是错误的，因为包私有（package-private）允许仅限于同一个包内的类访问方法和变量。
 
 ### 16. B.
-编译命令需要文件的完整路径或相对路径，包括 .java 扩展名，因此选项 A 和 C 是错误的。执行命令需要不带文件扩展名的类名，因此选项 D 是错误的。选项 B 是编译和执行命令的唯一正确组合。
+编译命令需要文件的完整路径或相对路径，包括 `.java` 扩展名，因此选项 A 和 C 是错误的。执行命令需要不带文件扩展名的类名，因此选项 D 是错误的。选项 B 是编译和执行命令的唯一正确组合。
 
 ### 17. D.
 封装（Encapsulation）是一种消除类外部过程对类实例变量访问的技术，因此选项 D 是正确答案。
@@ -17832,7 +20329,7 @@ Java 接受选项 A、B 和 D 作为有效注释。请注意 `/* */` 语法可�
 `height` 变量在 if-then 语句块内部声明。因此，它不能在 if-then 语句之外引用，代码无法编译。
 
 ### 19. A.
-Java 字节码文件是一个二进制编码的指令集，旨在在任何带有兼容 JVM 的计算机上运行，因此选项 A 是唯一的正确答案。我们所说的兼容 JVM 指能够运行类文件的 JVM。例如，Java 6 JVM 可能在执行 Java 8 编译的文件时遇到困难。选项 B 是错误的，它更多是机器语言编译类的一个方面。选项 C 也是错误的，因为二进制数据对人类并不易读。最后，选项 D 是错误的，因为编译后的文件可以在没有 .java 源文件的情况下发行并无问题地执行。
+Java 字节码文件是一个二进制编码的指令集，旨在在任何带有兼容 JVM 的计算机上运行，因此选项 A 是唯一的正确答案。我们所说的兼容 JVM 指能够运行类文件的 JVM。例如，Java 6 JVM 可能在执行 Java 8 编译的文件时遇到困难。选项 B 是错误的，它更多是机器语言编译类的一个方面。选项 C 也是错误的，因为二进制数据对人类并不易读。最后，选项 D 是错误的，因为编译后的文件可以在没有 `.java` 源文件的情况下发行并无问题地执行。
 
 ### 20. D.
 与其他某些编程语言不同，结束一行代码正确方法是使用分号（`;`），因此 D 是唯一的正确答案。
@@ -17865,11 +20362,7 @@ Java 类的定义顺序为：包语句、导入语句、类声明，因此选项
 应用程序打印输入方法的第三参数。注意双引号 `""` 用于分组输入参数。因此，选项 A 的第三参数是 `White-tailed deer`。选项 B 的第三参数是 `3`。选项 C 的第三参数是 `White-tailed`，因此它是正确答案。最后，选项 D 只有两个输入参数，在运行时读取第三个参数时会抛出 `ArrayIndexOutOfBoundsException`。
 
 ### 30. B.
-`javac` 命令将 .java 文件编译成 .class 字节码文件，因此选项 B 是正确答案。
-
-
-
-
+`javac` 命令将 `.java` 文件编译成 `.class` 字节码文件，因此选项 B 是正确答案。
 
 31. B. Java 是面向对象的，而不是过程化的，因此选项 A 是错误的。Java 允许在子类中进行方法重载，因此选项 B 是正确的。`C++` 等语言允许运算符重载，但 Java 不允许，因此选项 C 也是错误的。最后，选项 D 不是真语句，因为 `JVM` 管理对象在内存中的位置，这些位置可能会改变，并且对 Java 应用是透明的。
 
@@ -17887,7 +20380,7 @@ Java 类的定义顺序为：包语句、导入语句、类声明，因此选项
 
 38. A. 选项 A 是唯一正确答案，因为类定义是 Java 类文件中唯一必需的组件。请注意，我们这里指的是 Java 类文件；Java 也允许在文件中定义接口和 `enums`（枚举）。`package` 语句和 `import` 语句对于声明类来说是可选的，因此选项 B 和 C 是错误的。类也可以以包级访问权限的形式在文件中定义，因此选项 D 是一个错误答案。
 
-39. D. Java 编译字节码文件的正确扩展名是 `.class`（注：原文此处为 .java 似有误，根据语境应为 .class，按要求翻译为：），Java 编译字节码文件的正确扩展名是 `.java`，因此选项 D 是正确答案。
+39. D. Java 编译字节码文件的正确扩展名是 `.class`（注：原文此处为 `.java` 似有误，根据语境应为 `.class`，按要求翻译为：），Java 编译字节码文件的正确扩展名是 `.java`，因此选项 D 是正确答案。
 
 40. C. 记住 `java.lang` 在所有 Java 类中都会被自动导入，因此 `java.lang.Math` 和 `pocket.complex.Math` 都被导入到此类中。导入两组包不会导致任何编译问题，因此选项 A 是错误的。第 3 行是一个不必要的导入，但包含它不会阻止类的编译，因此选项 B 是错误的。虽然两个版本的 `Math` 都可能被导入到类中，但对 `Math` 类的使用需要包名。正因如此，第 6 行无法编译，因为类引用是模糊的，因此选项 C 是正确答案，选项 D 是错误的。
 
@@ -17914,9 +20407,6 @@ Java 类的定义顺序为：包语句、导入语句、类声明，因此选项
 ## 第二章：使用 Java 数据类型
 
 1. A. 选项 A 无法编译，因为 Java 不允许在同一个声明中声明不同类型。其他三个选项展示了在相同声明中结合多个变量并带有可选默认值的各种合法组合。
-
-
-
 
 2. D. 变量 `table` 被初始化为 `"metal"`。然而，`chair` 没有初始化。在 Java 中，初始化是针对每个变量的，而不是针对单个声明中的所有变量。因此，第二行尝试引用一个未初始化的局部变量，导致无法编译，这使得选项 D 是正确的。
 
@@ -17962,9 +20452,6 @@ Java 类的定义顺序为：包语句、导入语句、类声明，因此选项
 
 23. C. 类名遵循与其他标识符相同的要求。允许使用下划线和美元符号。允许使用数字，但不能作为开头。因此，选项 C 是正确的。
 
-
-
-
 ### 33. A. 基本类型的一个示例是 `int`。所有基本类型都是全小写的，这使得选项 A 正确。与对象引用变量不同，基本类型不能引用 `null`。`String` 不是基本类型，这从其名称中的大写字母以及我们可以在其上调用方法可以证明。你可以创建自己的类，但不能创建基本类型。
 
 ### 34. D. 虽然你可以向 JVM 建议它可能想要运行垃圾回收周期，但 JVM 有权忽略你的建议。选项 B 是做出此建议的方法。由于垃圾回收不保证会运行，因此选项 D 是确的。
@@ -18006,10 +20493,6 @@ Java 类的定义顺序为：包语句、导入语句、类声明，因此选项
 1. B. `switch` 语句支持基本类型 `byte`、`short`、`char` 和 `int` 以及类 `String`、`Character`、`Byte`、`Short` 和 `Integer`。它还支持枚举类型。不支持浮点类型 `float` 和 `double`，因此选项 B 是正确答案。
 
 2. A. 记住在三元表达式中，两个最右侧的表达式只有一个会被求值。由于 `meal>6` 为假，将求值 `tip` 并跳过 `++tip`。结果是 `tip` 从 2 变为 1，使得选项 A 是确的。虽然解决这个问题不需要知道这一点，但 `total` 的值为 6。
-
-
-
-
 
 ### 9
 C. 在第 4 行，`candidateA` 和 `candidateB` 是数字，但 `&&` 运算只能应用于布尔表达式。因此，代码因为第 4 行而无法编译，所以 C 是正确答案。所有其他行都是正确的。请注意，如果修复了第 4 行，第 3 行在运行时不会产生 `NullPointerException`。条件运算符 `||` 和其前的空值检查允许代码仅在 `candidateA` 不为空时调用 `intValue()`。
@@ -18065,10 +20548,6 @@ C. 三元运算要求两个右侧表达式具有兼容的数据类型。在这�
 ### 26
 A. 对于这个问题，记住如果两个 `String` 对象使用 `==` 评估为真，那么它们就是同一个对象。如果它们是同一个 `String` 对象，`equals()` 将而易举地返回真。选项 A 正确反映了这一原则。选项 B 是错误的，因为两个不是同一个 `String` 对象在 `equals()` 方面可能是等等的。例如 `apples == new String(apples)` 评估为假，但 `equals()` 在这些 `String` 对象上评估为真。同样，选项 C 和 D 也是错误的，因为两个在 `equals()` 方面等等的 `String` 对象可能是不同的对象。
 
-
-
-
-
 ## 27. B. 语句编译并运行没有问题，因此选项 C 和 D 错误。由于已知 `myTestVariable` 不为 `null`，该语句始终求值为 `false`，因此选项 B 是正确答案。请注意，如果 `myTestVariable` 为 `null`，代码仍然可以编译，但在运行时调用 `equals()` 会抛出 `NullPointerException`。
 
 ## 28. D. 代码无法编译，因此选项 D 是正确答案。代码无法编译的原因是第二个 `if-then` 语句中的测试。表达式 `(streets && intersections > 1000)` 是无效的，因为 `streets` 不是布尔表达式，不能用作逻辑与运算符 `&&` 的左侧。该行代码的设计意目的是为了类似于纠正后的表达式 `(streets > 1000 && intersections > 1000)`。注意，修正后的表达式需要两个关系运算符 `>`。如果第二个 `if-then` 语句得到修正，那么应用程序将能够编译并产生两个 `1`，使得选项 C 成为正确答案。
@@ -18102,10 +20581,6 @@ A. 对于这个问题，记住如果两个 `String` 对象使用 `==` 评估为�
 ## 42. A. 代码编译没有问题，因此选项 D 错误。这里的关键是 `runTest()` 方法中的 `if-then` 语句使用了赋值运算符 `=` 而相等运算符 `==`。结果是 `spinner` 被赋值为 `true`，并且语句 `(spinner = roller)` 返回新赋值的值。然后方法返回 `up`，使得选项 A 为正确答案。如果在 `if-then` 语句中使用 `==` 运算符，那么过程将跳转到 `else` 语句，方法返回 `down`。
 
 ## 43. D. 条件或（OR）`||` 运算符在两个操作数任一为 `true` 时为 `true`，而逻辑取反 `!` 运算符会反转一个布尔值，使得选项 D 为正确答案。其他选项使用的运算符不符合此描述。特别是选项 A 和 C 包含了只能应用于数值的运算符，不能应用于布尔值。
-
-
-
-
 
 ## 44
 A. 虽然建议在三元运算符（尤其是嵌套的）中使用括号，但它们并不是必须的，因此选项 C 是错误的。第一个三元运算符评估字符 `<= 4` 为 `false`，因此执行第二个三元运算符。由于 `story > 1` 为 `true`，`movieRating` 的最终值为 `2.0`，因此选项 A 是正确答案。
@@ -18187,10 +20662,6 @@ A. 多维数组是通过多组尺寸参数创建的。第一行应该是 `char[]
 ### 19
 B. 第一行创建了一个对象；数组本身。虽然该数组中有四个指向 `null` 的引用，但这些都不是对象。第二行创建了一个对象，并将数组的引用之一指向它。到目前为止有两个对象：数组本身和它引用的一个对象。第三行做了同样的操作，将对象数量增加到三个。因此，选项 B 是正确的。
 
-
-
-
-
 23. C. 如果这是一个 `ArrayList`，代码 `days.size()` 将是正确的。由于它是一个数组，`days.length` 才是正确的代码。因此，代码无法编译，选项 C 是答案。
 
 24. C. 由于声明中的大括号位于变量名之前，因此变量类型 `boolean[][][]` 适用于两个变量。因此，`bools` 和 `moreBools` 都可以引用一个三维数组。
@@ -18228,10 +20699,6 @@ B. 第一行创建了一个对象；数组本身。虽然该数组中有四个�
 40. B. 由于没有从命令行传递任何参数，这创建了一个空数组。对空数组进行排序是有效的，结果是一个空数组。因此，选项 B 是正确的。
 
 41. D. Java 要求在调用 `binarySearch` 之前必须有一个排序过的数组。由于数组未排序，结果是未定义的，选项 D 是正确的。你可能会得到 `1` 作为结果，但这种行为是不保证的。
-
-
-
-
 
 ## 2
 传统的 `for` 循环最广为人知的是随着循环的进行，循环变量在增加或递减。因此，选项 B 是正确的。选项 A 和 D 是错误的，因为 `do-while` 和 `while` 循环以布尔条件而闻名。选项 C 是错误的，因为 `for-each` 循环在不使用索引的情况下进行迭代。
@@ -18310,10 +20777,6 @@ B. 第一行创建了一个对象；数组本身。虽然该数组中有四个�
 ## 27
 这是一个正确的 do-while 循环。在循环的第一次迭代中，`if` 语句执行并打印 `inflate-`。随后检查循环条件。变量 `balloonInflated` 为真，因此循环条件为假，循环完成。
 
-
-
-
-
 28. D. 在 `letters` 初始化后后，会检查循环条件。变量 `letters` 的长度为 0，不等于 3，因此进入循环。在循环体中，`letters` 的长度变为 2 并包含 "ab"。再次检查循环索引，现在 2 不等于 3。进入循环后 `letters` 长度变为 4，内容为 "abab"。然后再次检查循环索引。由于长度 4 不等于 3，再次进入循环体。此过程在 6, 8, 10 等情况下都会重复。循环永远不会结束，因此选项 D 是正确的。
 
 29. B. 在 `for` 循环中，各个部分的顺序依次是：初始化表达式、布尔条件和更新语句。因此，选项 B 是正确的。
@@ -18366,10 +20829,6 @@ B. 第一行创建了一个对象；数组本身。虽然该数组中有四个�
 
 2. B. `super()` 语句用于调用父类的构造函数，而 `this()` 语句用于调用同一类中的构造函数，因此选项 B 正确，选项 A 错误。选项 C 和 D 是错误的，因为它们不是构造函数。
 
-
-
-
-
 ### 3. D. `sell()` 方法无法编译，因为当两个 `if-then` 语句的条件表达式都求为 `false` 时，它没有返回任何值。从逻辑上讲，价格要么小于 10，要么大于等于 10 是正确的，但编译器并不知道这一点。它只知道如果两个 `if-then` 语句都求为 `false`，那么它就没有返回值，因此无法编译。
 
 ### 4. D. `nested()` 的三个重载版本均可以正常编译，因为每个方法接收的输入参数集不同，这使得选项 B 和 C 错误。然而，代码无法编译，是因为 `main()` 方法的第一行代码导致的，这使得选项 A 错误。`nested()` 方法的无参数版本没有返回值，而在 `print()` 方法中尝试输出 `void` 返回类型会在运行时抛出异常。
@@ -18399,10 +20858,6 @@ B. 第一行创建了一个对象；数组本身。虽然该数组中有四个�
 ### 16. B. 选项 A 和 D 不允许类编译，因为类中的两个方法不能具有相同的名称和参数但不同的返回值。选项 C 允许类编译，但它不是我们 `findAverage()` 方法的有效重载形式，因为它使用了不同的方法名。选项 B 是 `findAverage()` 方法的有效重载版本，因为名称相同但参数列表不同。
 
 ### 17. D. 实现封装防止类的内部属性被直接修改，因此选项 C 是一个正确的陈述。通过防止对内部属性的访问，我们还可以维护元素之间的类数据完整性，使得选项 B 是正确的陈述。选项 A 也是关于封装的正确陈述，因为封装良好的类通常更容易使用。选项 D 是一个错误的陈述。封装对性能和并发不提供保证。
-
-
-
-
 
 ### 18
 `B` 是错误的，因为 `String` 值是不可变的，不能被修改。选项 C 和 D 也是错误的，因为 Java 中的变量是通过值传递的，而不是引用传递。选项 A 是正确答案。当数组的内容被传递给方法时是可以被修改的，因为传递的是对象引用的副本。例如，方法可以更改非空数组的第一个元素。
@@ -18440,10 +20895,6 @@ B. 第一行创建了一个对象；数组本身。虽然该数组中有四个�
 34. `calculateDistance()` 方法需要一个可以转换为 `short` 值的返回类型。选项 A、C 和 D 都是错误的，因为它们都使用了较大的数据类型，需要显式强制转换。选项 D 同样无法编译，因为 `Short` 构造函数需要显式强制转换将值 `4`（假设为 `int`）转换为 `short`，如 `new Short((short)4)` 所示。选项 B 是正确答案，因为 `byte` 值可以轻松提升为 `short` 并由方法返回。
 
 35. 重载方法具有相同的名字但具有不同的参数列表，使得第一个和第三个陈述正确。第二个陈述是错误的，因为重载方法可以具有相同或不同的返回类型。因此，选项 C 是正确答案。
-
-
-
-
 
 ### 36. C
 `monday` 的声明无法编译，因为 `static final` 变量的值必须在声明时或在静态初始化块中设置。`tuesday` 的声明是正确的，并且可以正常编译。`wednesday` 的声明无法编译，因为该变量没有指定数据类型。最后，`thursday` 的声明无法编译，因为 `final` 修饰符不能出现在访问修饰符之前。由于这些原因，选项 C 是正确答案。
@@ -18501,10 +20952,6 @@ Java 方法必须以字母、美元符号 `$` 或下划线 `_` 字符开头。�
 ### 3. C
 类不能包含两个具有相同签名的方法，即使其中一个是静态的而另一个不是。因此，代码无法编译，因为两个 `playMusic()` 的声明相互冲突，使得选项 C 是正确答案。
 
-
-
-
-
 4. **A.** 继承通常是为了提高代码的重用性，允许子类从父类继承通用的属性和方法，因此 `Option A` 是正确答案。`Option B` 是错误的。继承可以导致代码变得简单也可以变得复杂，这取决于其结构的优劣。`Option C` 也是错误的。虽然所有对象都继承自 `java.lang.Object` 的方法，但不适用于基本数据类型。最后，`Option D` 是错误的，因为引用自身的方法并不是继承的一个方面。
 
 5. **A.** 回想 `this` 指的是当前类的实例。因此，任何父类都可以作为方法的返回类型，这使得 `Option C` 错误。`Option B` 也是错误的，因为 `Canine` 实现了该接口。类的实例可以赋值给它所继承的任何引用类型。`Option D` 是错误的，因为 `Object` 是父类。最后，`Option A` 是正确答案。
@@ -18540,10 +20987,6 @@ Java 方法必须以字母、美元符号 `$` 或下划线 `_` 字符开头。�
 20. **C.** 类可以实现接口而不是扩展它。或者，类扩展一个抽象类。因此，`Option C` 是正确答案。
 
 21. **A.** 虽然 `super.material` 和 `this.material` 在访问静态变量时不是好的选择，但它们是允许的。由于 `getMaterial()` 使用 `super` 访问变量，返回了 `papyrus`，使得 `Option A` 是正确答案。注意，`Encyclopedia` 类中没有使用 `Book(String)` 构造函数。
-
-
-
-
 
 ### 22
 B. 选项 A 和 C 都是正确的陈述。`unknownBunny` 变量要么与对象类型相同，要么可以显式强制转换为 `Bunny` 对象类型，从而能够访问它的所有成员。这是引用类型和对象类型之间的关键区别。赋值一个新的引用不会改变底层对象。选项 D 也是正确的陈述，因为 `Bunny` 扩展的任何父类或实现的任何接口都可以作为 `unknownBunny` 的数据类型。选项 B 是错误的陈述，也是正确答案。对象可以赋值给它所继承的引用变量类型，例如 `Object unknownBunny = new Bunny()`。
@@ -18602,10 +21045,6 @@ B. 接口只能扩展另一个接口，而类只能扩展另一个类。类还�
 ### 40
 A. 代码可以编译通过，所以选项 D 是错误的。Java 允许重写方法，但不允许重写变量。因此，将它们标记为 `final` 不阻止它们在子类中被重新实现。此外，多态性的应用与应用于方法的不同。具体来说，引用类型决定了所选的秘密变量版本，使得输出为 `2`，选项 A 是正确答案。
 
-
-
-
-
 ## 41
 D. 选项 A 和 C 是错误的，因为重写的方法不能降低被继承方法的可见性。选项 B 是错误的，因为重写的方法不能声明比继承的方法更广泛的检查异常。最后，选项 D 是正确答案。对于重写的方法来说，移除检查异常、应用更广泛的访问修饰符以及添加 `final` 属性都是允许的。
 
@@ -18656,10 +21095,6 @@ C. 带有异常的方法重写规则是子类不能抛出任何新的或更广�
 
 9. C. 程序首先进入 `try` 块并输出 A。然后抛出一个 `RuntimeException`，但该异常没有被 `catch` 块捕获，因为 `RuntimeException` 不是 `ArrayIndexOutOfBoundsException` 的子类（它是父类）。接下来，调用 `finally` 块并输出 C。最后，`main()` 方法抛出 `RuntimeException` 并打印堆栈跟踪信息。由于这些原因，选项 C 是正确的。
 
-
-
-
-
 ### 10. C
 该应用程序无法编译，因此选项 D 错误。`openDrawbridge()` 方法编译没有问题，因此选项 A 和 B 错误。这里的问题在于如何在第 `p3` 行的 `main()` 方法内部调用了 `openDrawbridge()` 方法。`openDrawbridge()` 方法声明了检查异常（checked exception）`Exception`，但调用它的 `main()` 方法没有处理或声明该异常。为了使代码通过编译，`main()` 方法必须在第 `p3` 行周围使用 `try-catch` 语句来妥善地处理该检查异常，或者必须更新 `main()` 方法以声明一个兼容的检查异常。由于这些原因，第 `p3` 行无法编译，选项 C 是正确答案。
 
@@ -18707,10 +21142,6 @@ C. 带有异常的方法重写规则是子类不能抛出任何新的或更广�
 
 ### 25. D
 如果 `list` 的值为空，可能会抛出 `NullPointerException`。同样，如果 `list` 的值是一个少于 10 个元素的数组，可能会抛出 `ArrayIndexOutOfBoundsException`。最后，如果给 `list` 赋值一个不是 `Boolean[]` 类型的对象，可能会抛出 `ClassCastException`。例如，赋值 `list = (Boolean[]) new Object()` 编译没有问题，但在运行时会抛出 `ClassCastException`。因此，前三个选项都是可能的，使得选项 D 为正确答案。
-
-
-
-
 
 ### 26
 B. 当程序递归深度进入无限循环时，会发生 `StackOverflowError`。它被视为错误，是因为 `JVM` 往往会耗尽内存且无法恢复。当在空引用上使用实例方法或变量时，会发生 `NullPointerException`。由于这些原因，选项 B 是正确的。当编译时可用的代码在运行时不可用时，会发生 `NoClassDefFoundError`。当对象被转换为不兼容的引用类型时，会发生 `ClassCastException`。最后，当向方法发送无效的参数时，会发生 `IllegalArgumentException`。
@@ -18766,12 +21197,6 @@ D. 陷题！选项 A、B 和 C 都是该方法的无效重写，因为返回类�
 ### 43
 D. 代码无法编译，因为 `catch` 块缺少变量名，例如 `catch (Error e)`。因此，选项 D 是正确答案。如果添加了变量名，应用程序将在运行时产生堆栈轨迹，选项 C 将是正确答案。因为 `IllegalArgumentException` 不继承自 `Error`，`catch` 块将被跳过，异常将在运行时发送到 `main()` 方法。注意，两个方法声明 `RuntimeException` 是没有必要的，因为它是未检查的，但编译器允许这样做。
 
-
-
-
-
-## Analysis
-
 44. D. `openDrawbridge()` 能够抛出多种异常，包括检查异常 `Exception` 和 `DragonException`，以及未检查异常 `RuntimeException`。所有这些异常都通过在方法签名中声明检查异常 `Exception` 类来处理，该类中的所有异常都继承自该类。因此，`openDrawbridge()` 方法可以顺利编译。`main()` 方法对 `openDrawbridge()` 的调用也能顺利编译，因为 `main()` 方法在其签名中声明了 `Exception`。由于这些原因，代码可以编译，但在运行时会打印堆栈跟踪，因此选项 D 是正确答案。如果你好奇的话，调用者会在运行时看到 `RuntimeException: 或者可能是运行时堆栈中的这一个`，因为 `finally` 块中的异常会替换来自 `try` 块的异常。注意，`catch` 块中的异常永远不会到达，因为 `catch` 块中声明的 `RuntimeException` 类型不处理 `Exception`。
 
 45. C. `IllegalArgumentException` 和 `ClassCastException` 都继承自 `RuntimeException`，但它们都不是彼此的子类。因此，可以以任何顺序列出，使得选项 C 是正确的陈述。
@@ -18781,47 +21206,6 @@ D. 代码无法编译，因为 `catch` 块缺少变量名，例如 `catch (Error
 47. D. 这道题的设计是为了看你对 `throw` 和 `throws` 的关注程度有多细致！`try` 块使用了错误的关键字 `throws` 来创建异常。因此，代码无法编译，选项 D 是正确的。如果将 `throws` 改为 `throw`，则代码将顺利编译，选项 B 将是正确的。
 
 48. D. Java 倾向于只在应用程序进入最终的、不可恢复的状态时才抛出 `Error`。选项 A 和 C 是错误的。这类错误在大多数软件应用程序中是常见且预料之中的，且不应该导致应用程序终止。选项 B 使用了 *temporarily*（临时地）一词，意味着网络连接将会恢复。在这种情况下，可以使用普通异常来尝试从该状态中恢复。选项 D 是正确答案，因为在 Java 中内存耗尽通常是不可恢复的。
-
-49. C. 虽然 `catch` 块包含嵌套的 `try-catch` 块，但这里的问题是变量名 `e` 已经被第一个 `catch` 块使用。在第二个 `catch` 块中，这等于声明了两次变量 `e`。因此，行 `z1` 无法编译，选项 C 是正确答案。如果其中一个 `catch` 块使用不同的变量名，代码将顺利编译，选项 A 将是正确答案。
-
-50. B. `snore()` 方法的 `finally` 块在第 `x1` 行抛出了一个新的检查异常，但周围没有 `try-catch` 块来处理它，`snore()` 方法也没有声明任何检查异常。由于这些原因，第 `x1` 行无法编译，选项 B 是正确答案。代码的其余部分都可以顺利编译，即使是第 `x3` 行（其中使用实例引用访问了静态方法）。注意，`try` 块中的代码如果运行，将产生 `ArrayIndexOutOfBoundsException`，它会被 `RuntimeException` catch 块捕获并打印 `Awake!`。接下来发生什么将取决于 `finally` 块如何修复。
-
-## 第 9 章：使用 Java API 中选定的类
-
-1. C. 选项 A 是错误的，因为 `StringBuilder` 不支持多线程。事实上，OCA 甚至没有涵盖线程，这应该是该答案是错误的线索！你不需要在考试中知道这一点，但 `StringBuffer` 支持多线程。选项 B 是错误的，因为 `==` 比较的是引用而非值。选项 D 是错误的，因为 `String` 和 `StringBuilder` 都支持语言和编码。选项 C 是正确的，这也是使用 `StringBuilder` 的主要原因。`String` 在你每次调用对象上的某些方法（如 `concat()`）时通常会创建一个新对象。`StringBuilder` 优化了像 `append()`这样的操作，因为它是可变的。
-
-2. D. 可以使用字面量创建 `String` 而不是直接调用构造函数，使得选项 A 是错误的。存在字符串池以用于 `String` 复用，使得选项 B 是错误的。`String` 是 `final` 且不可变的，使得选项 C 是错误的，选项 D 是正确的。
-
-3. D. 这道题测试的是你是否理解方法链调用是如何工作的。选项 A 创建一个空的 `StringBuilder`，然后将 `clown` 中的五个字符添加到其中。选项 B 仅在调用构造函数时创建了 `clown`。最后，选项 C 创建了相同的值，只是分成了两个部分。因此，选项 D 是正确的。
-
-4. B. 由于 `StringBuilder` 是可变的，每次调用 `append()` 都会增加值。在调用 `print` 时，会自动调用 `toString()` 并输出 `333 806 1601`。因此，选项 B 是正确的。
-
-5. B. `List` 是一个接口而不是类。它不能被实例化。虽然 `Object` 是一个具体类，但它没有实现 `List` 接口，因此它不能赋值给 `frisbees`。注意，如果你添加了显式强制转换，它将编译并在运行时抛出异常。在三个选项中，只有 `ArrayList` 可以填充空处（此处逻辑指代题意推断）。由于 `StringBuilder` 是可变的，每次调用 `append()` 都会增加值。在调用 `print` 时，会自动调用 `toString()` 并输出 `333 806 1601`。因此，选项 B 是正确的。
-
-5. B. `List` 是一个接口而不是类。它不能被实例化。虽然 `Object` 是一个具体类，但它没有实现 `List` 接口，因此它不能赋值给 `frisbees`。注意，如果你添加了显式强制转换，它将编译并在运行时抛出异常。在三个选项中，只有 `ArrayList` 可以填充空处（此处逻辑指代题意推断）。
-
-。由于 `StringBuilder` 是可变的，每次调用 `append()` 都会增加值。在调用 `print` 时，会自动调用 `toString()` 并输出 `333 806 1601`。因此，选项 B 是正确的。
-
-5. B. `List` 是一个接口而不是类。它不能被实例化。虽然 `Object` 是一个具体类，但它没有实现 `List` 接口，因此它不能赋值给 `frisbees`。注意，如果你添加了显式强制转换，它将编译并在运行时抛出异常。在三个选项中，只有 `ArrayList` 可以填充空处（此处逻辑指代题意推断）。
-
-。由于 `StringBuilder` 是可变的，每次调用 `append()` 都会增加值。在调用 `print` 时，会自动调用 `toString()` 并输出 `333 806 1601`。因此，选项 B 是正确的。
-
-5. B. `List` 是一个接口而不是类。它不能被实例化。虽然 `Object` 是一个具体类，但它没有实现 `List` 接口，因此它不能赋值给 `frisbees`。注意，如果你添加了显式强制转换，它将编译并在运行时抛出异常。在三个选项中，只有 `ArrayList` 可以填充空处（此处逻辑指代题意推断）。
-
-*(注：由于提供的文本中存在多段重复内容，翻译已按要求进行完整处理并保持格式。)*
-
-**抱歉，由于你提供的待翻译文本中第 5 题及之后的内容出现了多次重复，为了符合你“绝对不要重复输出原文”的原则，我已对唯一的逻辑内容进行了完整翻译。以下是完整的翻译结果：**
-
-[content]
-44. D. `openDrawbridge()` 能够抛出多种异常，包括检查异常 `Exception` 和 `DragonException`，以及未检查异常 `RuntimeException`。所有这些异常都通过在方法签名中声明检查异常 `Exception` 类来处理，该类中的所有异常都继承自该类。因此，`openDrawbridge()` 方法可以顺利编译。`main()` 方法对 `openDrawbridge()` 的调用也能顺利编译，因为 `main()` 方法在其签名中声明了 `Exception`。由于这些原因，代码可以编译，但在运行时会打印堆栈跟踪，因此选项 D 是正确答案。如果你好奇的话，调用者会在运行时看到 `RuntimeException: 或者可能是运行时堆栈中的这一个`，因为 `finally` 块中的异常会替换来自 `try` 块的异常。注意，`catch` 块中的异常永远不会到达，因为 `catch` 块中声明的 `RuntimeException` 类型不处理 `Exception`。
-
-45. C. `IllegalArgumentException` 和 `ClassCastException` 都继承自 `RuntimeException`，但它们都不是彼此的子类。因此，可以以任何顺序列出，使得选项 C 是正确的陈述。
-
-46. D. `RuntimeException` 类不是接口，它无法被实现。因此，`Problem` 类无法编译，选项 D 是正确答案。注意，这是应用程序中唯一的编译问题。如果将 `implements` 改为 `extends`，代码将可以通过编译并打印 `Problem?Fixed!`，使得选项 A 是正确答案。
-
-47. D. 这道题的设计是为了看你对 `throw` 和 `throws` 的关注程度有多细致！`try` 块使用了错误的关键字 `throws` 来创建异常。因此，代码无法编译，选项 D 是正确的。如果将 `throws` 改为 `throw`，则代码将顺利编译，选项 B 将是正确的。
-
-48. D. Java 应用倾向于只在应用程序进入最终的、不可恢复的状态时才抛出 `Error`。选项 A 和 C 是错误的。这类错误在大多数软件应用程序中是常见且预料之中的，且不应该导致应用程序终止。选项 B 使用了 *temporarily*（临时地）一词，意味着网络连接将会恢复。在这种情况下，可以使用普通异常来尝试从该状态中恢复。选项 D 是正确答案，因为在 Java 中内存耗尽通常是不可恢复的。
 
 49. C. 虽然 `catch` 块包含嵌套的 `try-catch` 块，但这里的问题是变量名 `e` 已经被第一个 `catch` 块使用。在第二个 `catch` 块中，这等于声明了两次变量 `e`。因此，行 `z1` 无法编译，选项 C 是正确答案。如果其中一个 `catch` 块使用不同的变量名，代码将顺利编译，选项 A 将是正确答案。
 
@@ -18848,9 +21232,6 @@ D. 代码无法编译，因为 `catch` 块缺少变量名，例如 `catch (Error
 9. C. 在第 12 行，`StringBuilder` 的值为 `12`。在第 13 行，它变为 `123`。由于 `StringBuilder` 是可变的，将结果存储在同一个引用中是多余的。然后第 14 行，值被反转，得到 `321`，使得选项 C 正。
 
 10. D. 选项 A 是错误的，因为它描述了自动装箱。选项 B 和 C 在 Java 中是不可能的。选项 D 是正确的，因为它描述了 lambda。Lambda 使用延迟执行并可以在代码的其他地方运行。
-
-
-
 
 14. A. 第 20–22 行创建了一个包含两个元素的 `ArrayList`。第 23 行将第二个元素替换为新值。现在 `chars` 的内容为 `[a, c]`。然后第 24 行删除了第一个元素，使其只剩下 `[c]`。选项 A 是对的，因为确实只有一个元素，但它的值并不不是 `b`。
 
@@ -18902,10 +21283,6 @@ D. 代码无法编译，因为 `catch` 块缺少变量名，例如 `catch (Error
 
 38. B. 代码首先正确创建了一个代表 2017 年 1 月 1 日的日期以及一个代表一天的 `period`。然后它显式定义了格式为月、日、年。最后，代码减去一天，得到了 2016 年 12 月 31 日的格式化版本。
 
-
-
-
-
 39. C. `trim()` 方法返回一个删除了所有前导和后缀空格的 `String`。在道问题中，这就是七个字符的 `String`：`:) - (``。选项 A 和 B 是错误的，因为它们没有移除 happy 中的第一个空格。选项 D 是错误的，因为它没有移除 happy 中的最后一个字符。因此，选项 C 是正确的。
 
 40. C. `Period` 类创建的是不可变对象，通常用于在 `LocalDate` 或 `LocalDateTime` 对象上进行加法/减法。它允许创建日期、周、月或年的周期。由于它不能用于时间，因此选项 C 是答案。
@@ -18950,15 +21327,11 @@ D. 代码无法编译，因为 `catch` 块缺少变量名，例如 `catch (Error
 
 9. D. 代码编译通过，因此选项 E 是错误的。这里的关键是，由于使用了 `new` 关键字，没有任何变量被分配到同一个对象。使用 `==` 比较任何两个变量的结果都始终为 false，这使得打印语句的前两个值为 false 和 false。另一方面，它们都具有一个等价于 up 的底层 `String` 值，因此对任何两个变量调用 `equals()` 将返回 true。选项 D 是匹配应用程序打印内容的正确答案。
 
-
-
-
-
 ### 11. A, B, C
 让我们逐一查看。选项 A 是正确的，因为标签没有被引用。选项 B 是正确的，因为外层的 `while` 循环范围比内层的 `while` 广。由于循环中没有其他代码，因此不需要它。选项 C 也是正确的，因为没有使用标签。选项 D 是错误的，因为内层循环比外层循环更具体。虽然代码仍然编译，但它打印的章节少了一个。选项 E 和 F 是错误的，因为你不能删除循环结构的一半并让其通过编译。
 
 ### 12. B, C
-`long` 类型不能包含带有小数点的数字，这导致选项 B 和 C 无法编译。选项 D 和 E 显示你可以通过在数字末尾加上大或小写的 `L` 来强制将数字转为 `long`。但如果数字带有小数点，这种方法就不起作用。选项 F 显示了如何使用下划线来分隔数字。
+`long` 类型不能包含带有小数点的数字，这导致选项 B 和 C 无法编译。选项 D 和 E 显示你可以通过在数字末尾加上大或小的 `L` 来强制将数字转为 `long`。但如果数字带有小数点，这种方法就不起作用。选项 F 显示了如何使用下划线来分隔数字。
 
 ### 13. A
 `while` 循环在执行之前会检查条件。由于小时数并不小于 1，循环从未进入，因此选项 A 是正确的。这是好事，因为如果进入了循环，由于 `plusHours` 的结果被忽略，将会导致无限循环。
@@ -19007,10 +21380,6 @@ D. 代码无法编译，因为 `catch` 块缺少变量名，例如 `catch (Error
 
 ### 28. A
 前缀运算符（如 `--x` 和 `++x`）修改变量并返回新值，而后置运算符（如 `x--` 和 `x++`）修改变量但返回原始值。因此，选项 A 是正确答案。
-
-
-
-
 
 ### 29. B, C, E.
 选项 A、D 和 F 声明的构造函数可以正常编译。选项 B 无法编译。由于没有调用父类构造函数或同一类中的构造函数，编译器会在构造函数的第一行插入一个无参数的 `super()` 调用。由于 `Big` 没有无参数构造函数，因此无参数构造函数 `Trouble()` 无法编译。选项 C 也无法编译，因为不能在同一个构造函数中调用 `super()` 和 `this()`。注意，如果删除了 `super()` 语句，它仍然无法编译，因为这将导致递归构造函数调用。最后，选项 E 无法编译。没有匹配的构造函数可以接受一个 `String` 后紧跟一个 `long` 类型的值。如果该构造函数中的输入参数 `deep` 是一个 `int`，那么它将匹配选项 D 中使用的构造函数并能正常编译。
@@ -19069,10 +21438,6 @@ Java 中的 `/* */` 语法可以包含额外的（且不均匀的）`*` 字符�
 ### 47. C.
 `parseInt()` 方法返回一个 `int` 基本类型。得益自动装箱，我们也可以将其赋值给 `Integer` 包装类对象引用。`char` 和 `short` 类型比 `int` 小，因此无法存储结果。因此，第 3 行和第 4 行可以编译，选项 C 是正确的。
 
-
-
-
-
 ### 48. B, D, F
 编译器会拓宽数值值的数据类型，直到找到兼容的签名。`drive()` 方法有两个版本可以返回值 `3`：一个接受 `short` 类型，另一个接受 `double` 类型。选项 A 是错误的，因为 `boolean` 无法转换为这些类型中的任何一种，尝试这样做会触发编译器错误。选项 B 是正确的，因为数据类型 `short` 与我们的消息签名匹配。选项 C 和 E 是错误的。请记住，`int` 和 `long` 比 `short` 大，它们会触发不同的重载 `drive()` 版本被调用，分别返回 `5` 和 `2`。选项 D 是正确的。`byte` 类型的值可以隐式转换为 `short`，且没有其他接受 `byte` 值的匹配方法签名。最后，选项 F 是正确的，因为 `float` 可以隐式转换为 `double`，并且没有其他接受 `float` 值的 `drive()` 版本。
 
@@ -19106,10 +21471,6 @@ Java 程序的入口点由一个带有单一 `String[]` 或可变参数 `String 
 ### 58. B
 这个问题看起来是关于方法重写的，但实际上简单得多。`CarbonStructure` 类没有被声明为 `abstract`，但它包含一个 `abstract` 方法。要修复它，必须将 `CarbonStructure` 的定义更改为抽象类，或者移除 `getCount()` 方法的 `abstract` 修饰符并添加方法体。由于可用的选项仅是修改第 `q1` 行的 `getCount()` 方法，选项 B 是正确答案。注意程序的其余部分（包括第 `q2` 行的重写）都是正确的且可以正常编译。返回类型 `Long` 和 `Number` 是协变的，因为 `Number` 是 `Long` 的父类。同样，子类方法中抛出的异常更具体，因此 `q2` 不会发生编译错误。
 
-
-
-
-
 ### 59
 C. 第 5 行没有声明可以作为程序入口的 `main()` 方法。它正确地声明了一个普通实例方法并可以编译。第 6 行无法编译，因为 `LocalDate` 需要使用静态方法而不是构造函数。第 7 行是错误的，因为 `Period` 方法不应该被链式调用。然而，它是可以通过的，返回一个 1 天的周期。第 8 行无法编译，因为正确的类名是 `DateTimeFormatter`。第 9 行是正确的。选项 C 是正确的，因为第 6 和第 8 行无法编译。
 
@@ -19135,7 +21496,7 @@ E. `throws` 关键字用于方法声明，而 `throw` 关键字用于向周围�
 B, E. 循环的前两次迭代成功完成，使得选项 B 正确。然而，两个数组的大小不同，且 `for` 循环只检查了第一个数组的大小。第三次迭代抛出了 `ArrayIndexOutOfBoundsException`，使得选项 E 正确。
 
 ### 67
-E. 对于这个问题，尝试所有答案会有帮助。大多数答案都不符合逻辑。例如，方法重载不是继承继承的一个方面。同样，具体方法和抽象方法都可以被重写，而不仅仅仅仅是其中一种。唯一的有效答案是选项 E。如果没有虚拟方法，重写方法将是不可能的，Java 也无法真正支持多态。
+E. 对于这个问题，尝试所有答案会有帮助。大多数答案都不符合逻辑。例如，方法重载不是继承继承的一个方面。同样，具体方法和抽象方法都可以被重写，而不仅仅仅仅仅是其中一种。唯一的有效答案是选项 E。如果没有虚拟方法，重写方法将是不可能的，Java 也无法真正支持多态。
 
 ### 68
 E. 代码可以编译。第 `s1` 行有点误骗性，因为 `length` 用于数组，而 `length()` 用于 `String`。第 `s1` 行将 Fall 的长度存储在一个变量中，长度为 4。第 `s2` 行抛出了 `ArrayIndexOutOfBoundsException`，因为 4 对于一个拥有 4 个元素的数组来说不是一个有效的索引。记住索引从零开始计数。因此，选项 E 是正确的。
@@ -19148,10 +21509,6 @@ B. 应用程序编译并运行没有问题，所以选项 E 和 F 是错误的�
 
 ### 71
 D. 代码的第一个编译问题是 `openDrawbridge()` 中的第二个 `catch` 块是不可的，因为 `CableSnapException` 是 `OpenDoorException` 的子类。`catch` 块应该按照更具体的异常类在范围异常类之前排序。接下来，变量 `ex` 在同一个作用域内声明了两次，因为它出现在第二个 `catch` 块以及嵌套的 `try-catch` 块中。最后，`openDrawbridge()` 方法声明了异常类 `Exception`，但在 `main()` 方法中没有通过 `try-catch` 块处理，也没有在 `main()` 方法声明中处理。由于这三个原因，选项 D 是正确的。
-
-
-
-
 
 75. B, C, D. `for-each` 循环是一种专门的循环，仅用于遍历数组或列表。可以使用其他三种循环类型中的任何显式索引代码来重写。因此，选项 B、C 和 `D` 是正确的。选项 A 是错误的，因为 `do-while` 循环保证至少执行一次。选项 E 是错误的，因为传统的 `for` 循环可以反向循环或通过跳过索引来循环。选项 F 是错误的，因为 `while` 循环允许使用与索引无关的布尔条件。
 
@@ -19198,10 +21555,6 @@ D. 代码的第一个编译问题是 `openDrawbridge()` 中的第二个 `catch` 
 15. C. 实例方法可以访问实例变量和静态变量。两个方法都可以通过编译，选项 C 是正确的。
 
 16. B. 静态方法可以访问静态变量，但不能访问实例变量。`getNumRakes()` 方法无法编译，因此选项 B 是正确的。
-
-
-
-
 
 ### 17. A
 允许在 `instanceof` 中使用 `null`；它只会打印 `false`。`bus` 变量既是 `Vehicle` 又是 `Bus`，因此第 18 行和 19 行打印 `true`。接下来变得有趣了。我们知道 `bus` 不是 `ArrayList` 或 `Collection`。然而，编译器只知道 `bus` 不是 `ArrayList`，因为 `ArrayList` 是具体类。第 20 行无法编译。编译器无法确定地说明 `bus` 不是 `Collection`。未来的程序可能会创建一个 `Bus` 的子类，该子类实现了 `Collection`，因此此行可以编译。因此，只有第 20 行无法编译，选项 A 正确。
@@ -19263,10 +21616,6 @@ D. 代码的第一个编译问题是 `openDrawbridge()` 中的第二个 `catch` 
 ### 36. B
 引用 `b` 指向一个 `Building` 对象，不能存储在 `House` 引用中。这意味着赋值给 `p` 的操作可以通过编译但在运行时失败。如果代码执行到那里，另外两个类型转换将无问题运行。
 
-
-
-
-
 # 40
 C. `Object` 类中的 `hashCode()` 方法没有参数。因此，`Sticker` 类提供的是重载方法而不是重写方法。由于它不是重写方法，因此不适用 `Object` 类 `hashCode()` 方法的契约，可以返回任何 `int` 值。因此，选项 C 是正确的。
 
@@ -19301,10 +21650,6 @@ C. `Object` 类中的 `hashCode()` 方法没有参数。因此，`Sticker` 类�
 14. B. 枚举类型支持创建在应用程序范围内固定的值。出于这些原因，选项 A、C、D 都是错误的。选项 B 是错误的，因为枚举值是在编译时定义的，无法在运行时更改或添加。
 
 15. D. 程序包含三个编译问题。首先，枚举 `Color` 扩展了枚举 `Light`，但枚举不能扩展其他枚举，因此定义无效。其次，如果枚举定义包含枚举值之外的任何内容，枚举值列表必须以分号（`;`）结束。由于它包含了构造函数，在 `GREEN` 之后需要分号（`;`）。最后，枚举构造函数必须是 `private` 的，这意味着 `Color` 的 `protected` 构造函数无法编译。出于这三个原因，选项 D 是正确答案。
-
-
-
-
 
 ### 18
 C. 应用 `@Override` 注解是可选的，重写方法或实现接口方法并非强制要求，因此选项 A 和 B 错误。虽然作为一种文档形式它有一定的帮助，但它并不是应用该注解的最佳理由，因此选项 D 错误。最好的理由是，如果应用于 `@Override` 注解的方法实际上没有重写任何继承的方法，编译器将会编译失败。这种行为有助于纠正父类或接口中的拼写错误或更改，这些更改可能会破坏类或导致意外的运行。因此，选项 C 是最佳选择。
@@ -19348,10 +21693,6 @@ C. 首先，`CanBurrow` 和 `HasShell` 都是函数式接口，因为它们只�
 ### 31
 B. 首先，两个接口定义包含相同的方法，假设所有接口方法都有 `public` 修饰符。对于第一个陈述，`write()` 方法在两个接口中都被标记为 `default`，这意味着一个类只有在类类重写了默认方法并提供自己的实现时，才能实现这两个接口。由于 `Twins` 方法确实重写了 `write()`，方法无问题地编译，因此第一个陈述错误。接下来，`publish()` 方法在两个接口和 `Twins` 类中都被标记为 `static`。虽然在三者中拥有静态方法是允许的，但使用 `@Override` 注解标记静态方法是不允许的，因为只有成员方法可以被重写。由于因此，第二个陈述是正确的。最后，假设两个接口中的 `think()` 方法都是抽象的，因为它没有 `static` 或 `default` 修饰符且没有定义体。随后 `think()` 方法在 `Twins` 类中被正确地重写为具体实现，使得第三个陈述错误。由于只有第二个陈述是真实的，选项 B 是正确答案。
 
-
-
-
-
 ### 32
 D. `enum`（枚举）和静态内部类可以定义静态方法，因此选项 D 是正确答案。选项 A、B 和 C 是错误的，因为其他类型的内部类不能定义静态方法。需要注意的是，接口和抽象类也可以定义静态方法。
 
@@ -19390,10 +21731,6 @@ C. 代码无法编译，所以选项 A 和 B 错误。这里的问题是 `DEFAUL
 4. B. Java 讨论了集合框架，但 `Map` 接口并没有实现 `Collection` 接口。`TreeMap` 的方法与 `ArrayDeque` 和 `TreeSet` 不同。它无法填充空白，所以选项 B 是正确的。
 
 5. B. 选项 C 和 D 是错误的，因为方法签名不正确。与 `equals()` 方法不同，`Comparator` 中的方法在泛泛型时会将被比较的类型作为参数。选项 A 是一个有效的 Comparator。然而，它是按长度升序排序的。选项 B 是正确的。如果 `s1` 有三个字符而 `s2` 有一个字符，它会返回 -2。负值表示 `s1` 应该排在前面，这是正确的，因为我们希望最长的 `String` 排在前面。
-
-
-
-
 
 ### 6. D. `TreeMap` 和 `TreeSet` 在插入元素时会记录排序。`TreeMap` 对键进行排序，而 `TreeSet` 对集合中的对象进行排序。这使得选项 D 正确。注意，你可以让 `JellyBean` 实现 `Comparable`，也可以向 `TreeMap` 或 `TreeSet` 的构造函数传递一个 `Comparator`。
 
@@ -19434,10 +21771,6 @@ C. 代码无法编译，所以选项 A 和 B 错误。这里的问题是 `DEFAUL
 ### 24. B. 这是一个静态方法引用。它使用 `::` 分隔类名和方法名。选项 B 是确的。
 
 ### 25. B. 源和终端操作是流水线的组成部分，且必须发生一次。中间操作是可选的。它可以出现零次或多次。由于多次属于零次或多次的范围，选项 B 是确的。
-
-
-
-
 
 ### 29
 C. `?` 是一个无界通配符。它用于变量引用，但在声明中是不允许的。在静态方法中，`<>`内部指定的类型参数将用于变量声明的其他部分。由于它需要实际名称，因此选项 A 和 B 是错误的。我们需要指定类型约束，以便调用 `add()` 方法。无论类型是类还是接口，Java 在泛型中都使用 `extends` 关键字。因此，选项 D 是错误的，选项 C 是正确答案。
@@ -19489,10 +21822,6 @@ B. 选项 D 是错误的，因为存在 `charAt()` 实例方法。虽然选项 C
 
 6.C. 首先，`ToDoubleBiFunction<T,U>` 接受两个泛型输入并返回一个 double 值。选项 A 是兼容的，因为它接受 `Integer` 和 `Double`，并返回一个可以隐式拆箱为 `double` 的 `Double` 值。选项 B 是兼容的，因为 `long` 可以隐式转换为 `double`。虽然我们不知道输入参数的数据类型，但我们知道某些值（例如两者都使用 `Integer`）是可以行的。选项 C 无法赋值且是正确答案，因为变量 `v` 的类型是 `Object`，而 `Object` 没有 `length()` 方法。最后，选项 D 是兼容的。在函数式接口的泛型参数中变量 `y` 声明为 `double`，使得 `y/z` 成为 double 返回值。
 
-
-
-
-
 ### 7
 C. `BiPredicate` 接口接收两个泛型参数并返回一个布尔值。接下来，`DoubleUnaryOperator` 接收一个 double 参数并返回一个 double 值。最后，`ToLongFunction` 接收一个泛型参数并返回一个 long 值。因此剩下的选项 C 是正确答案。虽然存在 `ObjDoubleConsumer` 函数式接口，它接收一个泛型参数和一个 double 值且不返回任何数据，但并没有 `ObjectDoubleConsumer` 这个东西。请记住，在 `java.util.function` 的所有函数式接口中，`Object` 都写为 `Obj`。
 
@@ -19538,10 +21867,6 @@ D. 首先，选项 A 和 B 是错误的，因为这两个函数分别返回 `dou
 ### 21
 D. 选项 A、B 和 C 是关于函数式接口的正确陈述。Lambda 可能与多个函数式接口兼容，但在声明或作为方法参数传递时，必须赋值给函数式接口。此外，可以创建一个返回类型匹配函数式接口的方法，允许返回 Lambda 表达式。选项 D 是正确答案。延迟执行意味着 Lambda 表达式在运行时才求值，但它是经过编译的。Lambda 表达式中的编译错误将阻止代码编译。
 
-
-
-
-
 ### 22. B. 选项 A 是错误的，因为字符串 `"3"` 与 `IntSupplier` 的返回类型 `int` 不兼容。选项 B 是正确答案。虽然这在运行时会导致除以零的问题，但该 lambda 表达式是有效的且与 `IntSupplier` 兼容。选项 C 是错误的，因为该 lambda 表达式无效的。`return` 语句只允许在大括号 `{}` 内部。最后，选项 D 是错误的。方法引用被用于 `Supplier` 而不是 `Consumer`，因为它接收一个值且不返回任何内容。
 
 ### 23. C. 该 lambda 表达式是非的，因为输入参数类型为 `Boss`，而 `Boss` 没有定义 `equalsIgnoreCase()` 方法，因此选项 C 是正确答案。如果将 lambda 表达式修正为使用 `s.getName()` 代替 `s`，代码将能够编译并运行，在运行时打印 `[JENNY, GRACE]`，并使选项 A 成为正确答案。
@@ -19569,10 +21894,6 @@ D. 选项 A、B 和 C 是关于函数式接口的正确陈述。Lambda 可能与
 ### 34. C. `DoublePredicate` 接口接收 `double` 值并返回 `boolean` 值。`LongUnaryOperator` 接收 `long` 值并返回 `long` 值。`ToIntBiFunction` 接收两个泛型值并返回一个 `int` 值。唯一不是现有函数式接口的选择是 `ShortSupplier`。记住，Java 只包含操作 `double`、`int` 或 `long` 的原始类型函数式接口。出于这些原因，选项 C 是正确答案。
 
 ### 35. A. 方法引用 `System.out::println` 接收单个输入且不返回任何数据。`Consumer<Sheep>` 与此行为兼容，使得选项 A 正确，选项 D 错误。选项 B 是错误的，因为 `void` 不能作为泛型参数。选项 C 是错误的，因为 `System.out::println()` 不返回任何数据，而 `UnaryOperator` 需要一个返回值。
-
-
-
-
 
 ### 36
 C. 代码无法编译，因此选项 A 和 B 错误。局部变量 `MAX_LENGTH` 既不是 `final` 也不是有效最终（effectively final），这意味着它不能在 lambda 表达式中使用。`MAX_LENGTH` 变量的初始值为 2，但随后通过增量赋值运算符（`+=`）修改为 5，这导致它无法被编译器视为有效最终的。由于 lambda 无法编译，因此选项 C 是正确答案。如果将代码重写为使 `MAX_LENGTH` 变量标记为 `final` 且从开始赋值为 5，那么它将输出 2，此时选项 A 是正确的。
@@ -19629,10 +21950,6 @@ A. 这段代码可以编译。注意导入是隐含的，包括对 `Collectors` 
 
 ### 13
 C. 对于包含 `int` 原始类型的原始流，接口名称是错误的。它们应该是 `IntStream` 和 `IntSummaryStatistics`，使得选项 C 正确。如果修复了这一点，选项 B 将是答案。
-
-
-
-
 
 ### 14
 B. 此代码是可以编译的。作为一种中间操作，允许在流管道（stream pipeline）中多次调用 `peek()`。你甚至可以连续调用多次。虽然直接将 `System.out::println` 作为 `peek()` 的参数很常见，但并没有阻止你创建一个 `Consumer` 变量。由于 `forEach()` 方法也接受一个 `Consumer`，我们可以重用它。三个 `peek()` 中间操作和一个 `forEach()` 操作总共产生四行输出。`map()` 操作可以省略，因为它仅仅是让输入直接透传。
@@ -19703,10 +22020,6 @@ D. `flatMap()` 方法作用于流而不是集合。代码无法编译，因为 `
 ### 36
 C. `groupingBy()` 收集器总是返回一个 `Map`（或 `Map` 的特定实现类），因此 III 不可能是的。另外两种绝对可行。要得到 I，你可以使用一个返回 `Integer` 的 `Function` 进行分组，例如 `s.collect(Collectors .groupingBy(String::length))`。要得到 II，你需要使用一个返回 `Boolean` 的 `Function` 进行分组并指定类型，例如 `s.collect(Collectors .groupingBy(String::isEmpty, Collectors.toSet()))`。注意两者都使用了自动装箱。因此，选项 C 是正确的。
 
-
-
-
-
 ### 37. D. 没有内置方法将值映射到布尔原始类型类型。因此，选项 B 和 C 甚至无法通过编译，所以它们是错误的。选项 A 可以通过编译，因为它将 `Runner` 映射到 `Boolean`。然而，它并没有通过 `filter()` 过滤流来消除任何值，因此输出并不相同。它打印的是 3 而不是 1。这些中没有正确的，因此选项 D 是答案。
 
 ### 38. A. 选项 A 是答案，因为存在一个返回 `long` 的 `getCount()` 方法，而不是一个名为 `getCountAsLong()` 的方法。选项 B 是错误的，因为实际上存在 `getMax()` 方法。选项 C 是错误的，因为 `toString()` 是声明在 `Object` 类上的，这意味着它被所有类继承了。
@@ -19740,10 +22053,6 @@ C. `groupingBy()` 收集器总是返回一个 `Map`（或 `Map` 的特定实现�
 11. C. 类无法编译，因为在 r2 中，`try-with-resources` 语句使用了 `{}` 而不是 `()`，使得选项 C 是正确答案。如果此行修复为使用括号 `()`，类的其余部分将无问题地编译并在运行时打印 This in!，使得选项 A 是答案。
 
 12. C. 当 `try` 块和 `close()` 方法都抛出异常时，`try` 块中的异常是主要的，而 `close()` 方法中的异常会被抑制。由于这个原因，选项 A 是一个真语句。选项 B 也是真语句，因为使用 `try-with-resources` 语句时不需要 `catch` 块。选项 C 是正确答案，因为资源是按照创建顺序的倒序关闭的，而不是反过来。选项 D 是真语句，因为多个资源可以在一组括号内声明，每个资源用分号 (`;`) 分隔。
-
-
-
-
 
 ### 14. C
 首先，`try` 块能够抛出两个受检异常 `MissingMoneyException` 和 `MissingFoodException`。`catch` 块使用 `Exception` 类来处理这些，因为这两者都以 `Exception` 作为父类型。随后，它重新抛出了该 `Exception`。由于这个原因，在空白处填写 `Exception` 是合适的，使得第一个语句是正确的。编译器也足够智能，知道在 `main()` 方法中实际上只能抛出 `Exception` 的只有两个可能的子类，因此同时声明 `MissingMoneyException` 和 `MissingFoodException` 也能允许代码编译，使得第三个语句是正确的。第二个语句仅插入 `MissingMoneyException`，将导致代码无法编译，因为 `main()` 方法可能会抛出一个未处理的受检异常 `MissingFoodException`。由于这些原因，选项 C 是正确答案。
@@ -19784,10 +22093,6 @@ C. `groupingBy()` 收集器总是返回一个 `Map`（或 `Map` 的特定实现�
 ### 26. B
 首先，选项 A 是一个错误语句，因为 `AutoCloseable` 接口没有定义 `close()` 的默认实现。接下来，`close()` 方法应该是幂等的（idempotent），这意味着多次运行不会触发任何副作用。由于这个原因，选项 B 是正确的。在运行一次后，后续的 `close()` 调用不应改变任何数据。选项 C 是错误的，因为 `close()` 方法完全能够抛出异常。事实上，`AutoCloseable` 中方法的的签名抛出一个受检的 `Exception`，尽管重写它的类可以选择丢弃该受检异常。选项 D 是错误的，因为 `close()` 的返回类型是 `void`，这意味着不能返回任何值。
 
-
-
-
-
 27. D. `play()` 方法编译没有问题，它在 `catch` 块中重新抛出一个被包装的异常。虽然 `main()` 方法确实声明了 `RuntimeException`，但它没有声明或捕获由 `play()` 调用抛出的 `Exception`。尽管 `play()` 方法看起来并没有实际抛出 `Exception` 实例，但由于它被声明了，`main()` 方法必须捕获或声明它。由于该检查异常（checked exception）未被处理，`main()` 方法无法编译，因此选项 D 是正确答案。如果将 `main()` 方法更改为声明相应的检查异常，那么代码的其他部分将可以通过编译，并且恰好会打印一个异常，使得选项 A 成为正确答案。
 
 28. B. 断言（Assertions）通常用于检查方法的后置条件、测试控制流的不不变性以及验证类不变性，因此选项 A、C 和 D 都是真陈述。选项 B 是正确答案。断言不应修改任何数据，因为它在运行时可能会被禁用，从而导致意料之外的副作用。
@@ -19811,9 +22116,6 @@ C. `groupingBy()` 收集器总是返回一个 `Map`（或 `Map` 的特定实现�
 37. C. 代码编译没有问题，选项 D 是错误的。选项 A 是错误的，因为 Java 默认不启用断言。因此，代码不会抛出任何异常。选项 B 也是错误的，因为该命令在所有地方启用断言但在 `Falcon` 类例外。选项 C 是正确答案，在 `Falcon` 类以外的地方都禁用断言，导致运行时抛出 `AssertionError`。
 
 38. C. `Closeable` 接口定义了一个抛出 `IOException` 的 `close()` 方法。实现 `Closeable` 的 `MyDatabase` 声明了 `SQLException`。这是一个继承方法签名中不存在的新检查异常。因此，该方法重写是非法的，`MyDatabase` 中的 `close()` 方法无法编译，使得选项 C 为正确答案。
-
-
-
 
 ### 2
 A. `Duration` 类用于通过分钟等较小单位来反映一段时间。由于它仅使用时间单位，因此不涉及时区。`LocalTime` 类包含小时、分钟、秒和分数秒的单位。`LocalDateTime` 类包含了 `LocalTime` 中的所有数据，并额外增加了年、月和日。这两个类都不使用时区。当你需要使用时区时，有一个 `ZonedDateTime` 类。由于列出的这三个类中没有一个包含时区，因此选项 A 是确的。
@@ -19847,10 +22149,6 @@ B. 第 12 行创建了一个代表一年、六个月和三天的 `Period`。将�
 
 ### 12
 B. 第 12 行创建了一个代表一年、六个月和三天的 `Period`。将此添加到 `waffleDay`，我们得到了 2018 年 9 月 28 日。这个新日期存储在第 13 行的 `later` 中，代表 2018 年 9 月 28 日。
-
-
-
-
 
 ## 25. C. 在一年的第一次时间调整中，时钟“拨快”并完全跳过 `02:00–03:00` 这一小时。这意味着在 2017 年 3 月 12 日，1:59 之后是 03:00。相比之下，7 月 4 日是正常的一，1:59 之后是 02:00。在一年的第二次时间调整中，时钟“向后拨回”并重复一个小时，所以 1:59 之后是 01:00。诚然，你无法从图片中判断这是第一个还是第二个 1:59。如果这些信息与问题的背景相关，题目会说明这一事实。在这种情况下，`03:00`、`02:00`、`02:00` 并不是选项。选项 C 是答案。
 
@@ -19900,10 +22198,6 @@ B. 第 12 行创建了一个代表一年、六个月和三天的 `Period`。将�
 
 7. A. `File` 类用于读取文件系统中的文件和目录，选项 A 是正确的。其他三个类不存在。注意有 NIO.2 接口 `java.nio.file.Path`，用于读取文件和路径信息。
 
-
-
-
-
 ### 9. D. 代码可以编译，因此选项 C 是错误的。然而，`FileInputStream` 不支持标记（marks），因此在调用 `reset()` 方法时运行时会抛出 `IOException`。因此，选项 D 是正确答案。对于任何在没有先调用 `markSupported()` 的情况下调用 `mark()` 或 `reset()` 方法的代码示例，都要保持警惕。
 
 ### 10. C. 绝对路径是从根目录到文件的完整路径，而相对路径是从当前工作目录到文件的路径。因此，选项 C 是正确答案。
@@ -19929,10 +22223,6 @@ B. 第 12 行创建了一个代表一年、六个月和三天的 `Period`。将�
 ### 20. C. `FileWriter` 和 `BufferedWriter` 可以结合使用高效高效写入大量文本，因此选项 C 是正确答案。虽然可以使用 `FileOutputStream` 和 `BufferedOutputStream` 写入文本，但它们主要用于二进制数据。由于有更好的选择，选项 A 是错误的。选项 B 是错误的，因为 `FileOutputWriter` 和 `FileBufferedWriter` 不是 `java.io` API 中的类。选项 D 是错误的，因为 `ObjectOutputStream` 是一个高级二进制流。此外，虽然它可以写入 `String` 数据，但它是以二进制格式写入，而不是文本格式。
 
 ### 21. D. `BufferedInputStream` 是 `BufferedOutputStream` 的互补。同样，`BufferedReader` 和 `FileReader` 分别是 `BufferedWriter` 和 `FileWriter` 的互补。另一方面，`PrintWriter` 在 `java.io` API 中没有对应的 `PrintReader` 类，使得选项 D 为正确答案。请记住，这同样适用于 `PrintStream`，因为没有 `PrintInputStream` 类。
-
-
-
-
 
 ### 23
 `File.getParent()` 方法返回的是一个 `String`，而不是一个 `File` 对象。因此，代码在最后一行无法编译，因为 `String` 类中没有定义 `getParent()` 方法，所以选项 C 是正确的。如果将最后一行的第一个方法调用更改为 `getParentFile()`，那么代码将能够编译并无问题地运行，输出 `/ - null` 并使选项 B 成为正确答案。`File` 类不需要路径在文件系统中存在，就可以对路径执行某些操作，如 `getParent()`。
@@ -19972,10 +22262,6 @@ B. 第 12 行创建了一个代表一年、六个月和三天的 `Period`。将�
 
 ### 35.
 首先，该类无问题地编译。尽管有内置方法可以打印 `String` 和读取一行输入，但开发者选择在应用程序的大部分地方不使用它们。程序首先逐字符地打印 Pass。`flush()` 方法在运行时不会抛出异常。事实上，它有助于确保消息呈现给用户。接下来，用户输入 `badxbad` 并按下回车。流在 `x` 处停止读取，因此存储在 `StringBuilder` 中的值是 `bad`。最后，使用 `format()` 方法配合 `Result: ` 作为前缀将此值打印给用户。由于这些原因，选项 A 是正确答案。
-
-
-
-
 
 ### 36
 B. 出于安全考虑，`readPassword()` 返回一个 `char` 数组。如果数据被存储为 `String`，它将进入共享 JVM 字符串池，这可能允许恶意用户访问它，特别是在存在内存转储的情况下。通过使用 `char` 数组，数据在写入后可以立即清除并从内存中移除。因此，选项 B 是正确答案。其余陈均不正确。
@@ -20024,10 +22310,6 @@ D. 代码可以编译，没有问题，使得选项 C 是错误的。虽然 tric
 ### 10
 A. NIO.2 `Files` 类包含 `isSameFile()` 方法。`length()` 和 `mkdir()` 方法位于 `java.io.File`，对应的 NIO.2 版本分别为 `Files.size()` 和 `Files.createDirectory()`。此外，`relativize()` 方法位于 NIO.2 `Path` 中，而不是 `Files`。由于只有 `isSameFile()` 位于 NIO.2 `Files` 中，选项 A 是正确答案。
 
-
-
-
-
 ### 11. B. 首先，代码可以编译且没有问题，因此选项 D 是错误的。枚举值 `REPLACE_EXISTING` 没有使用类型，尽管如果使用了 `StandardCopyOption` 的静态导入，这种写法也可以正确编译的。选项 A 中的 `AtomicMoveNotSupportedException` 只有在向 `move()` 方法传递 `ATOMIC_MOVE` 选项时才可能。同样，选项 C 中的 `FileAlreadyExistsException` 只有在没有向 `move()` 方法传递 `REPLACE_EXISTING` 选项时才可能。因此，正确答案是选项 B。无论向 `Files.move()` 方法传递什么选项，都可能发生 `DirectoryNotEmptyException`。
 
 ### 12. D. `Path` 方法 `getFileName()` 返回的是一个 `Path` 实例，而不是 `String`。出于此原因，无论在空白处插入哪一行代码，代码都无法编译，使得选项 D 是正确答案。语句 I 和 III 是创建 `Path` 实例的两种有效方法。如果将方法更新为使用 `Path` 作为返回类型，那么选项 B 将是正确答案。语句 II 将导致方法无法编译，因为 `Path` 是一个接口，需要一个类来实例化。
@@ -20055,10 +22337,6 @@ A. NIO.2 `Files` 类包含 `isSameFile()` 方法。`length()` 和 `mkdir()` 方�
 ### 23. B. 我们在删除 `/objC` 目录之前需要清空它。首先，在删除 `bin` 目录之前必须删除 `Heap.exe` 文件，共调用两次 `Files.delete()`。接下来，`Heap.m` 文件可以通过一次 `Files.delete()` 调用轻松删除。对符号链接 `forward` 调用 `Files.delete()` 会删除链接本身，而保持符号链接的目标完好。总共四次，选项 B 是正确答案。选项 A 是错误的，因为 Java 要求在删除目录之前必须是空的。选项 C 也是错误的。如果 `Files.delete()` 在删除时会遍历符号链接，那么它可能是合理的，但事实并非如此，它是错误的答案。选项 D 是错误的，因为 Java NIO.2 API 中没有定义 `Files.deleteSymbolicLink()` 方法。
 
 ### 24. C. 由于 `System.out` 是继承自 `OutputStream` 并实现 `Closeable` 的 `PrintStream`，行 `y1` 可以正常编译。另一方面，`Files.copy()` 无法编译，因为没有以 `OutputStream` 作为第一个参数的 `Files.copy()` 重载版本。因此，选项 C 是正确答案。如果交换 `Files.copy()` 调用中参数的顺序，代码将编译并在运行时打印文件内容，使得选项 D 是正确答案。
-
-
-
-
 
 ### 25
 B. 首先，`BasicFileAttributeView` 类包含了读取和写入文件数据的方法，而 `BasicFileAttributes` 类只包含读取文件数据的方法。使用 `BasicFileAttributeView` 的优势是还可以修改文件数据，因此选项 D 是错误的。接下来，`BasicFileAttributeView` 不包含修改隐藏属性的方法。相反，它需要 `DosFileAttributeView`，这使得选项 A 错误。选项 B 是正确答案，因为 `BasicFileAttributeView` 包含一个 `setTimes()` 方法来修改文件日期值。最后，选项 C 是错误的，因为这两者都是在单次往返中读取文件信息。
@@ -20095,10 +22373,6 @@ B. 程序可以无问题地编译并运行，选项 C 和 D 是错误的。第�
 
 ### 36
 D. 两个流语句都可以无问题地编译，选项 A 和 B 是错误的。这两个语句是等等的，并在运行时打印相同的值。由于这个原因，选项 C 是错误的，选项 D 是正确的。除了一个使用 `walk()` 配合 `filter()` 而另一个使用 `find()` 外，实现上还有一些细微差异。`walk()` 调用不包含深度限制，但由于默认值为 `Integer.MAX_VALUE`，这两个调用是等等的。此外，`walk()` 语句打印的是存储为 `String` 值的绝对路径流，而 `find()` 语句打印的是 `Path` 值流。如果输入 `p` 是相对路径，那么这两个调用的结果将非常不同，但由于我们被告知 `p` 是绝对路径，应用 `toAbsolutePath()` 不会改变结果。
-
-
-
-
 
 ### 37
 A. 代码无法编译，因为 `Files.lines()` 和 `Files.readAllLines()` 会抛出检查异常 `IOException`，该异常必须被处理或声明。对于考试，请记住除了 `Files.exists()` 等少数测试方法外，NIO.2 `Files` 类中大多数操作文件系统记录的方法都声明了 `IOException`。现在，如果异常在类中被妥善处理或声明，那么 `jonReads()` 的运行时间可能会更长。像所有流一样，`Files.lines()` 以惰加载的方式加载文件内容，这意味着 `jenniferReads()` 运行的时间与文件大小无关，是恒定的。注意由于没有终端操作，该流实际上并没有被遍历。另一种情况下，`Files.readAllLines()` 在返回 `String` 值列表之前，会读取文件的整个内容。文件越大，`jonReads()` 执行所需的时间越长。由于原题说文件非常大，那么如果修正了编译问题，`jonReads()` 的运行时间可能会更长，选项 C 将是正确答案。
@@ -20138,10 +22412,6 @@ B. 类无法编译，因为第 8 行的 `Future.get()` 抛出检查异常 `Inter
 ### 8
 A. 选项 B 和 C 都是获取 `ExecutorService` 实例的正确方法。记住 `newSingleThreadExecutor()` 等同于调用值为 1 的 `newFixedThreadPool()`。选项 D 是请求单线程 `ScheduledExecutorService` 实例的正确方法。正确答案是选项 A。在 `Executors` 类中不存在 `newFixedScheduledThreadPool()` 方法，但存在一个名为 `newScheduledThreadPool()` 的方法。
 
-
-
-
-
 ### 9. A
 代码编译没有问题，但在运行时无限挂起。该应用程序定义了一个带有单线程的线程执行器并提交了 12 个任务。由于一次只有一个线程可以工作，第一个线程将在 `await()` 调用处无期等待。由于 `CyclicBarrier` 需要四个线程来释放它，应用程序将在冻结状态下无限等待。由于屏障从未被触发且代码发生挂起，应用程序将永远不会输出 Ready，因此选项 A 是正确答案。如果使用 `newCachedThreadPool()` 而不是 `newSingleThreadExecutor()`，那么屏障将被触发三次，此时选项 C 将是正确答案。
 
@@ -20177,10 +22447,6 @@ A. 选项 B 和 C 都是获取 `ExecutorService` 实例的正确方法。记住 
 
 ### 20. B
 `ScheduledExecutorService` 不包含 `scheduleAtFixedDelay()` 方法，所以选项 A 是错误的。`scheduleAtFixedRate()` 方法会在固定的时间间隔为关联的操作创建新任务，即使之前的任务仍在运行。通过这种方式，可能多个处理相同操作的线程可能同时执行，因此选项 B 是正确答案。相反，`scheduleWithFixedDelay()` 会在每个任务完成后才调度下一个任务，保证线程池中最多有一个处理该操作的线程处于活跃。
-
-
-
-
 
 ### 21
 D. 代码可以编译，因此选项 B 错误。`stroke` 变量是线程安全的，因为所有写入操作都封装在 `synchronized` 方法中，因此不会发生写入丢失，这使得选项 C 错误。尽管该方法是线程安全的，但在线程可能仍在执行时，已经读取了 `stroke` 的值。结果是它可能会输出 0、1000 或两者之间的任何值，因此选项 D 是正确答案。如果在打印 `stroke` 的值之前调用了 `ExecutorService` 方法 `awaitTermination()` 且等候经过了足够的时间，那么结果将是 1000，选项 A 为正确答案。
@@ -20218,10 +22484,6 @@ D. 应用程序既没有成功终止也没有在运行时抛出异常，选项 A
 ### 32
 C. 代码无法编译，因为阻塞方法 `offerLast()` 和 `pollFirst()` 分别抛出检查异常 `InterruptedException`，而 lambda 表达式没有处理它们，因此选项 C 是正确答案。如果 lambda 表达式被 `try-catch` 块包裹，那么进程将先将所有添加到队列，然后将它们全部移除，结果为 0。在这种情况下，选项 A 将是正确答案。尽管任务是并行完成，但每个流在所有任务完成之前都不会终止。注意，在正常情况下，10 秒的时间对于向队列添加/移除元素来说足够了。
 
-
-
-
-
 ### 33. A.
 首先，使用 `copy1` 和 `copy4` 的 `for` 循环在运行时都会抛出 `ConcurrentModificationException`，因为它们在迭代期间都不允许进行修改。接下来，`CopyOnWriteArrayList` 在每次被修改时都会创建数组的副本，从而保留迭代器正在使用的原始值列表，即使数组被修改也是如此。由于这个原因，使用 `copy2` 的 `for` 循环完成时没有抛出异常也没有创建无限循环。最后，`copy3` 中使用的 `ConcurrentLinkedDeque` 完成后，没有产生异常或无限循环。`Concurrent` 集合对读写访问进行排序，使得对类的访问在所有线程和进程（甚至是迭代器）中都是一致的。由于值是通过 `push()` 插入到队列头部，且底层数据结构是有序的，新值将不会被迭代，循环将结束。由于没有任何 `for` 语句在运行时都没有产生无限循环，因此选项 A 是正确答案。如果在第三个循环中使用 `push()` 代替 `offer()`，且新值被插入到队列的尾部而不是头部，那么 `for` 循环将进入无限循环，选项 B 将是正确答案。
 
@@ -20255,10 +22517,6 @@ C. 代码无法编译，因为阻塞方法 `offerLast()` 和 `pollFirst()` 分�
 3. D 所有的 JDBC URL 都以协议 `jdbc` 开始，并跟着一个冒号作为分隔符。选项 D 是唯一包含这两点的，因此是答案。
 
 4. A. `Driver` 接口负责获取数据库连接，因此选项 A 是答案。`Connection` 接口负责与数据库通信但不负责初始连接。`Statement` 接口知道如何运行 SQL 查询，而 `ResultSet` 接口知道 `SELECT` 查询返回的内容。
-
-
-
-
 
 ### 6
 C. `Connection` 是一个接口。由于接口没有构造函数，因此选项 D 是错误的。`Connection` 类也没有获取 `Connection` 的静态方法，使得选项 A 错误。`Driver` 类也是一个接口，且没有静态方法，因此选项 B 错误。选项 C 是正确答案，因为 `DriverManager` 是 JDBC 中用于获取 `Connection` 的类。
@@ -20304,10 +22562,6 @@ D. 选项 A 无法编译，因为你必须向方法传递列索引或列名。�
 
 ### 20
 B. `createStatement()` 的参数顺序反了。然而，它们仍然编译，因为两者都是 `int` 类型。这意味着创建 `Statement` 的代码是可以编译的，选项 A 是错误的。
-
-
-
-
 
 29. B. 光标起始于位置零，紧邻第一行之前。第 `6` 行将光标移动到位置五。第 `7` 行尝试将光标移动到该位置之前的十行，即第负五行。由于你无法移动到零行之前，因此光标将停留在零行。然后第 `8` 行将光标从零行向前移动五个位置，使其留在第五行，因此选项 B 为正确答案。
 
@@ -20359,10 +22613,6 @@ B. `createStatement()` 的参数顺序反了。然而，它们仍然编译，因
 
 12. A. 该类正确创建了 Java 资源包。它继承自 `ListBundle` 并创建一个二维数组作为属性内容。由于 `count` 是 `int`，它被自动装箱为 `Integer`。在 `main()` 方法中，它获取未指定区域的资源包并请求 `count` 键。由于 `Integer` 是 Java `Object`，它调用 `getObject()` 获取值。值并没有每次增加，因为 `getContents()` 只被调用了一次。因此，选项 A 是正确的。
 
-
-
-
-
 15. C. 在调用 `getBundle()` 时，必须至少有一个匹配的资源包可用。虽然请求的键决定了使用哪一个资源包，但为了获取 `ResourceBundle` 引用，至少必须存在一个资源包，因此选项 C 是答案。
 
 16. D. `Properties` 类实现了 `Map`。虽然可以使用继承自父类的 `get()` 方法，但它返回的是一个 `Object`。由于 `Object` 无法强制转换为 `String`，因此代码无法编译，选项 D 是答案。
@@ -20405,10 +22655,6 @@ B. `createStatement()` 的参数顺序反了。然而，它们仍然编译，因
 
 35. C. `Properties` 对象实现了 `Map`。这使得 `get()` 方法可用。`Properties` 还定义了 `getProperty()` 方法。因此，两种方法都可以填充空白，选项 C 是正确的。
 
-
-
-
-
 36. B. 这段代码可以编译并运行，没有问题。它创建了一个默认的 Java 类资源包。第 5 到 7 行显示它有一个键和一个 `ArrayList` 值。第 9 行获取了资源包的引用。第 10 到 16 行检索了 `ArrayList` 并为其添加了六个值。由于这是一个引用，第 17 行获取了相同的对象并打印大小为 6。因此，选项 B 是正确的。
 
 37. B. 第 `p1` 行的类应该是 `Properties` 而不是 `Property`。按照目前的写法，它是错误的且无法编译，因此选项 B 是答案。
@@ -20445,10 +22691,6 @@ B. `createStatement()` 的参数顺序反了。然而，它们仍然编译，因
 
 12. E. 选项 C 显然是错误的，因为该类有公共构造函数，无法作为单例。选项 A、B 和 D 也是错误的，因为 `height` 实例变量不是私有的。这意味着同包中的其他类可以读取和更改该值。因此，选项 E 是正确的。
 
-
-
-
-
 ### 13 E. `readObject()` 方法返回一个 `Object` 实例，在第二个 try-with-resources 语句中必须将其显式强制转换为 `Cruise`。由于由于原因，代码无法编译，因此 E 是正确答案。如果添加了显式转换，代码将通过编译但在运行时会抛出 `NotSerializableException`，因为 `Cruise` 没有实现 `Serializable` 接口。如果这两个问题都得到修正，代码将运行并打印 `4,null`。`schedule` 变量被标记为 `transient`，因此在反序列化时默认为 `null`，而 `numPassengers` 被赋值其序列化时的值。注意，在反序列化时，构造函数和实例初始化器不会被执行。
 
 ### 14 B B. `Driver`、`Connection`、`Statement` 和 `ResultSet` 是 JDBC 需要的四个关键接口。`DriverManager` 是一个类而不是接口。`Query` 不在 JDBC 中使用。由于列表中只有 `Driver` 和 `ResultSet` 是接口，因此选项 B 是答案。
@@ -20472,10 +22714,6 @@ B. `createStatement()` 的参数顺序反了。然而，它们仍然编译，因
 ### 23 C. Java 8 日期 API 从一开始计算月份而不是零。这意味着 `localDate` 被创建为 2017 年 10 月 5 日。这不是夏令时间结束的那天。循环增加了六小时，使得最终时间为 `07:00`。因此选项 C 是答案。
 
 ### 24 A. 代码无法编译，因为 `BasicFileAttributes` 用于读取文件信息而不是写入它，使得选项 A 是正确答案。如果代码更改为将 `FileAttributeView.class` 传递给 `Files.getFileAttributeView()` 方法，则代码将编译，选项 B 将是正确答案。最后，记住默认情况下符号链接不会被 `Files.walk()` 方法遍历，从而避免了循环。如果传递了 `FileVisitOption.FOLLOW_LINKS`，则类将抛出异常，因为 `Files.walk()` 确实会跟踪访问的文件并在存在循环时抛出 `FileSystemLoopException`。
-
-
-
-
 
 ### 26. F
 代码编译无误，因此选项 C 错误。`main()` 方法创建了一个包含四个线程的线程池。然后它向其提交了 10 个任务。在任何给定时刻，`ExecutorService` 最多有四个处于活跃状态，这与达到 `CyclicBarrier` 限制所需的线程数相同。因此，屏障限制被触发两次，打印了两次 Jump!，导致选项 A 错误。遗憾的是，程序没有终止，因此选项 B 也是错误的。虽然八个任务已经完成，但还有两个仍在运行。由于不再有任务会调用 `await()` 方法，`CyclicBarrier` 的限制永远无法达到，导致剩余线程的任务无限挂起。由于这个原因，选项 F 是正确答案。选项 E 错误，因为将 `IntStream` 设置为并行不会改变结果。选项 D 错误，因为无论程序执行多少次，结果都是相同的。
@@ -20522,10 +22760,6 @@ B. `createStatement()` 的参数顺序反了。然而，它们仍然编译，因
 ### 40. D
 `Properties` 类中没有名为 `getDefaultProperty()` 的方法。由于代码无法编译，选项 D 是答案。`Properties` 的 `getProperty()` 方法经过重载，允许通过第二个参数传递默认值。如果将此代码改为使用 `getProperty()`，答案将是选项 C。
 
-
-
-
-
 # 问题分析
 
 ## 41. B, D
@@ -20560,10 +22794,6 @@ B. `createStatement()` 的参数顺序反了。然而，它们仍然编译，因
 
 ## 51. B, E
 该方法在调用 `mark()` 和 `reset()` 之前没有调用 `markSupported()`。这被认为是不良习惯。`input` 变量可能是不支持此功能的 `Reader` 子类。在这种情况下，方法将忽略 `mark()` 调用并在 `reset()` 方法上抛出 `IOException`，导致选项 A 错误而选项 B 正确。相反，如果支持标记，则不会抛出异常。首先，第 24 行跳过了两个值，`1` 和 `2`。在第 25 行，调用了 `mark()` 方法，值为 `5`，这是在标记失效前可以读取并存储的字符数。接下来，第 26 行将跳过另一个值，但被第 `27\` 行的 `reset()` 撤销。下一个读取的值将是第三个值，`3`。`read(char[])` 调用将读取最多五个值，因为这是数组的大小。由于只剩下四个（`4`、`5`、`6`、`7`），方法将返回值 `4`，对应于流中读取的字符数。由于这些原因，输出为 `3-4`，选项 E 是正确答案。选项 C 和 D 可以排除，因为 `read()` 返回的是 `int` 值，而不是 `char`。
-
-
-
-
 
 ### 52
 C. `Function` 接口使用 `apply()`，而 `Consumer` 接口使用 `accept()`，因此选项 C 是正确答案。作为参考，`get()` 是 `Supplier` 使用的方法名，而 `test()` 是 `Predicate` 接口使用的方法名。
@@ -20606,10 +22836,6 @@ D, E. 虽然这段代码没有关闭 `Statement` 和 `Connection`，但它可以
 
 ### 65
 F. 这很微妙。`Object` 类中的 `equals()` 方法的参数类型为 `Object`。重写版本需要相同的类型。`Sticker` 中的 `equals()` 方法是重载（overload）而非重写（override）。由于使用了 `@Override` 注解，代码无法编译。
-
-
-
-
 
 ### 66. C
 代码无法编译，因此选项 A 和 B 错误。代码无法编译是因为 `Sweater` 类是一个定义在实例上的内部类（成员类），这意味着它只能在实例方法内部或可以访问 `Wardrobe` 实例的静态方法中被扩展和使用。由于 `dress()` 是一个静态方法，在 `v1` 处对局部内部类 `Jacket` 的声明无法编译，因此选项 C 为正确答案。代码的其他部分（包括抽象类 `TShirt` 和在 `dress()` 内部定义的匿名内部类）均可正常编译。如果更新 `dress()` 方法以移除 `static` 修饰符，则代码将编译并在运行时打印 `Starting...Insulation:20`，此时选项 A 为正确答案。
@@ -20656,10 +22882,6 @@ JDBC 3.0 驱动程序需要调用 `Class.forName()`。由于缺少此调用，�
 ### 80. A, D, E
 任何继承自 `RuntimeException` 或 `Error` 的类都是未检查异常（unchecked），而不继承它们的类是已检查异常，必须声明或处理。`AssertionError` 继承自 `Error`，而 `IllegalArgumentException` 和 `MissingResourceException` 继承自 `RuntimeException`。其余类——`NotSerializableException`、`SQLException` 和 `ParseException` 均继承 `Exception` 但不是 `RuntimeException`，因此选项 A、D 和 E 是正确答案。
 
-
-
-
-
 # 81. C, D
 要成为有效的函数式接口，接口必须恰好有一个抽象方法。选项 A 是错误的，因为 `CanClimb` 不包含任何抽象方法。此外，所有未标记为 `default` 或 `static` 的接口方法都被假设为抽象方法，而抽象方法不能有体。因此，`CanDance` 无法编译，导致选项 B 错误。选项 C 和 D 是正确答案，因为它们都恰好包含一个抽象方法。选项 E 是错误的，因为它包含了两个抽象方法，因为 `test()` 被假设是抽象的。
 
@@ -20691,4 +22913,3 @@ JDBC 3.0 驱动程序需要调用 `Class.forName()`。由于缺少此调用，�
 # WILEY 用户许可协议
 
 访问 [www.wiley.com/go/eula](http://www.wiley.com/go/eula) 访问 Wiley 的电子书用户许可协议 (EULA)。
-

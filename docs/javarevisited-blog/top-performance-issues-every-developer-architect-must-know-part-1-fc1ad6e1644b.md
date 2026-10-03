@@ -1,3 +1,4 @@
+
 # 每个开发人员/架构师都必须知道的主要性能问题—第 1 部分—数据库
 
 > 原文：<https://medium.com/javarevisited/top-performance-issues-every-developer-architect-must-know-part-1-fc1ad6e1644b?source=collection_archive---------0----------------------->

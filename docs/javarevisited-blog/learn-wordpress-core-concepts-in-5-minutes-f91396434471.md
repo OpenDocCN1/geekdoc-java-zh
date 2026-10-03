@@ -1,3 +1,4 @@
+
 # 2021 年初学 Web 开发的最佳 WordPress 开发者课程
 
 > 原文：<https://medium.com/javarevisited/learn-wordpress-core-concepts-in-5-minutes-f91396434471?source=collection_archive---------4----------------------->
@@ -79,7 +80,7 @@ WordPress 是最受欢迎的内容管理系统，主要用于博客，但它可�
 *   理解和定制 WP REST API
 *   学习构建自定义插件
 
-**5。** [**WordPress 主题从无到有发展**](https://click.linksynergy.com/deeplink?id=iES2LKDPLgo&mid=39197&u1=medrev&murl=https://www.udemy.com/course/advanced-wordpress-theme-development-with-bootstrap/)
+## 5. [WordPress 主题从无到有发展](https://click.linksynergy.com/deeplink?id=iES2LKDPLgo&mid=39197&u1=medrev&murl=https://www.udemy.com/course/advanced-wordpress-theme-development-with-bootstrap/)
 
 到目前为止，我们已经看到了专门针对 WordPress 网站开发的课程，并使用现有的主题来添加设计和功能。但是，大多数时候，我们从客户那里获得客户需求，要求特定的设计和功能。现在，为了克服这个问题，我们可以为一个特殊的客户建立一个定制的主题，主题开发在 WordPress 领域是一个非常有利可图的工作。
 
@@ -94,7 +95,7 @@ WordPress 是最受欢迎的内容管理系统，主要用于博客，但它可�
 
 ## 6.WordPress 核心概念文章
 
-本指南不包括购买域名和主机概念，从本指南开始，你应该已经在任何主机上安装了 [WordPress](/coursesaving/best-body-language-training-course-85f97f33fda7) ，并且应该能够登录到 WordPress 仪表盘。WordPress 仪表盘如下图所示，你可以用[https://yourdomain.com/wp-admin/.](https://yourdomain.com/wp-admin/.)登录你的仪表盘
+本指南不包括购买域名和主机概念，从本指南开始，你应该已经在任何主机上安装了 [WordPress](/coursesaving/best-body-language-training-course-85f97f33fda7) ，并且应该能够登录到 WordPress 仪表盘。WordPress 仪表盘如下图所示，你可以用 `https://yourdomain.com/wp-admin/.` 登录你的仪表盘
 
 [![](img/68ebda7d961328ebecd1d756df6d8400.png)](https://javarevisited.blogspot.com/2020/08/top-5-courses-to-learn-wordpress-in.html)
 
@@ -112,7 +113,7 @@ WordPress 帖子
 
 现在第一步是给你的文章起一个标题，然后你可以写一篇文章的描述。所有的内容都要加在标题下面的方框里。这是一个基于块的编辑器，所以每当你按下回车键，它会打开一个新的块。您必须选择书写文本段落的块类型，您可以选择段落块。
 
-您可以在编辑器的左侧看到一些选项卡，这些是您可以选择来添加帖子的选项。永久链接是改变 yourdomain.com/post-url-to-edit 等职位的网址，你可以选择修改你的链接。
+您可以在编辑器的左侧看到一些选项卡，这些是您可以选择来添加帖子的选项。永久链接是改变 `yourdomain.com/post-url-to-edit` 等职位的网址，你可以选择修改你的链接。
 
 下一步是**分类**，这是给你的文章分类，例如如果这篇文章属于购物，那么你可以给分类为购物，这在 WordPress 中被称为分类。
 

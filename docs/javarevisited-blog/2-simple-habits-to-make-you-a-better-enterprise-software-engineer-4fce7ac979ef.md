@@ -1,10 +1,11 @@
+
 # 让你成为更好的企业软件工程师的两个简单习惯
 
 > 原文：<https://medium.com/javarevisited/2-simple-habits-to-make-you-a-better-enterprise-software-engineer-4fce7ac979ef?source=collection_archive---------1----------------------->
 
 ## 下一级工程
 
-## 通过这些简单可行的习惯，让你的软件工程生涯更上一层楼。
+通过这些简单可行的习惯，让你的软件工程生涯更上一层楼。
 
 ![](img/c4d242d8bf4a823af0f1a6e9eb6aa801.png)
 

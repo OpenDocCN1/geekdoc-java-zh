@@ -1,4 +1,5 @@
-# KrakenD:如何部署到 Kubernetes
+
+# KrakenD：如何部署到 Kubernetes
 
 > 原文：<https://medium.com/javarevisited/krakend-how-to-deploy-to-kubernetes-bd1bf2173b0?source=collection_archive---------1----------------------->
 
@@ -8,6 +9,6 @@
 
 克拉肯德[中型](https://medium.com/devops-faith)
 
-# 介绍
+## 介绍
 
 最近，我在寻找一个免费的开源 API 网关，我发现了 KrakenD，这是一个超高性能的开源网关，可以转换、聚合或删除多个服务中的数据，具有线性可伸缩性。

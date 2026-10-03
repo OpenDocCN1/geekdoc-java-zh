@@ -1,3 +1,4 @@
+
 # 使用 Jackson 库将我的 JavaFX ToDo 列表持久化到 JSON
 
 > 原文：<https://medium.com/javarevisited/using-the-jackson-library-to-persist-my-javafx-todo-list-to-json-8a4b31917c09?source=collection_archive---------2----------------------->
@@ -8,25 +9,25 @@
 
 我的 JavaFX ToDoList 使用 Jackson 库作为 JSON 文件持久化
 
-# 将我的 JavaFX 升级到 DoList 应用程序
+## 将我的 JavaFX 升级到 DoList 应用程序
 
 在我的`TodoListApplication`的第三次迭代中，我添加了一个带有表情符号`String`的`ToDoCategory` enum，并用它来填充一个 JavaFX `ComboBox`。
 
-<https://donraab.medium.com/experimenting-with-java-enums-emojis-and-combobox-in-javafx-2c12492cf65>  
+<https://donraab.medium.com/experimenting-with-java-enums-emojis-and-combobox-in-javafx-2c12492cf65>
 
 在本系列的第三篇博客的结尾，我说我会在下一篇博客中解释如何让 ToDoList 持久化。我终于来了，做我说过要做的事。这是我第一次尝试使用带有 [Eclipse 集合](https://github.com/eclipse/eclipse-collections)、Java 日期时间和 Java 记录的 [Jackson](https://github.com/FasterXML/jackson) 库。我边走边学习，并打算与你，读者，分享这种学习，同时它也发生在我身上。很有可能有人会看到我在这里所做的，并给我宝贵的反馈意见，告诉我如何改进。
 
-# 我的 ToDoItem 实例晚上睡在哪里？
+## 我的 ToDoItem 实例晚上睡在哪里？
 
 当我第一次学习面向对象编程并接触到“持久性”的概念时，这个主题叫做“对象晚上睡在哪里？”这里存在一个古老的问题:当我们关掉电源时，我们的数据去了哪里。到目前为止，我的 JavaFX ToDoList 只在内存中工作，当应用程序关闭时，`ToDoItem`实例就会消失。
 
 持久化数据有很多选择。我决定使用 Jackson 库将我的`ToDoItem`实例中的`MutableList`转换成 JSON，保存到一个文件中并从中读取。
 
-# 杰克森、日蚀收藏和 JSR 310
+## 杰克森、日蚀收藏和 JSR 310
 
 Jackson JSON 库是一个非常棒的库。你可以在这里找到更多信息。
 
-<https://github.com/FasterXML/jackson>  
+<https://github.com/FasterXML/jackson>
 
 你也可以通过关注 Medium 上的 [@cowtowncoder](https://medium.com/u/b9b3ec1cfbf7?source=post_page-----8a4b31917c09--------------------------------) 来了解杰克逊的最新消息。
 
@@ -60,7 +61,7 @@ Jackson JSON 库是一个非常棒的库。你可以在这里找到更多信息�
 <jackson.version>2.14.1</jackson.version>
 ```
 
-## 与 JPMS 合作
+### 与 JPMS 合作
 
 IntelliJ 为我生成的 JavaFX 项目框架被设置为使用 JPMS。我以前从未在 Java 应用程序中明确使用过 JPMS。这让我有些头疼，但是我能够成功地让事情进入工作状态。
 
@@ -83,17 +84,17 @@ module example.todolist {
 
 让我陷入循环的是`jackson.datatype.eclipse.collections`的模块名不一致。我不得不去 Jackson GitHub 网站查找模块的名称。
 
-<https://github.com/FasterXML/jackson-datatypes-collections/blob/2.15/eclipse-collections/src/moditect/module-info.java>  
+<https://github.com/FasterXML/jackson-datatypes-collections/blob/2.15/eclipse-collections/src/moditect/module-info.java>
 
 不幸的是，这遵循了一个不同的模块命名惯例，而不是 Google Guava 的模块，它包含在同一个项目中。
 
-<https://github.com/FasterXML/jackson-datatypes-collections/blob/2.15/guava/src/moditect/module-info.java>  
+<https://github.com/FasterXML/jackson-datatypes-collections/blob/2.15/guava/src/moditect/module-info.java>
 
 看起来，在 jackson-datatypes-collections 中，番石榴和 HPPC 遵循一个 JPMS 模块命名约定，而 Eclipse 集合和 PCollections 遵循另一个命名约定。
 
-<https://github.com/FasterXML/jackson-datatypes-collections>  
+<https://github.com/FasterXML/jackson-datatypes-collections>
 
-## 为 Json 序列化对 ToDoItem 进行更改
+### 为 Json 序列化对 ToDoItem 进行更改
 
 我在我的`ToDoItem`记录中添加了以下注释，以便与 Jackson 一起使用。我可能不需要其中的一些注释，但这肯定是有效的(并且是一致的)，所以在这里分享一下。如果可以简化，请在评论里告诉我。
 
@@ -129,7 +130,7 @@ public record ToDoItem(
 
 我希望持久化记录中的数据，而不是从 getters 返回的值。我意识到我在这里混合了数据和表格表示逻辑。这纯粹是出于方便。正如我在以前的博客中提到的，我使用了 getters，这样我的`ToDoItem`记录就可以与 JavaFX `TableView`一起工作。使用`todolist-view.fxml`文件中的`PropertyValueFactory`定义。
 
-## 将 Json 文件读入 Eclipse 集合可变列表
+### 将 Json 文件读入 Eclipse 集合可变列表
 
 下面是我写的将 Json 文件读入我在`TodoListController`中使用的`MutableList`的代码。
 
@@ -167,7 +168,7 @@ private ObjectMapper getObjectMapper()
 }
 ```
 
-## 从可变列表中写入 Json 文件
+### 从可变列表中写入 Json 文件
 
 使用 Jackson 编写 Json 文件的代码几乎和读取 Json 文件的代码一样简单。
 
@@ -195,7 +196,7 @@ public void writeToDoListToFile()
 
 我的异常处理还可以改进，但是对于持久性的第一次迭代来说还可以。
 
-## 使用杰克逊效果很好
+### 使用杰克逊效果很好
 
 最后，使用 Json 来持久化和具体化我的 ToDoItem 可变列表并不需要很多代码。Jackson 库工作得和我希望的一样好，我在 JPMS 模块中遇到了一个小的包命名问题。
 
@@ -216,11 +217,11 @@ public void writeToDoListToFile()
 ]
 ```
 
-# JavaFX 生命周期事件
+## JavaFX 生命周期事件
 
 我想让`ToDoItem`的`MutableList`在应用程序启动时自动加载，并在窗口关闭和应用程序关闭时自动保存。我将解释我是如何让它工作的。
 
-## 正在加载待办事项列表
+### 正在加载待办事项列表
 
 我将读取 JSON 文件的代码添加到了`TodoListController`的`initialize`方法中。
 
@@ -244,13 +245,19 @@ protected void initialize()
 
 该代码在窗口打开时执行。一旦使用 Jackson 从文件中读入`MutableList`，它将被设置到`todoList`中的项目列表中，并带有一个包装的`ObservableList`。
 
-## 保存待办事项列表
+### 保存待办事项列表
 
 这对我来说是最棘手的部分。我本能地知道，我应该能够将一些回调挂钩到窗口的关闭事件中。所以我做了一些谷歌搜索，找到了一些关于如何做到这一点的答案。这要求我对我的`TodoListApplication`类做一些改变。
 
 我修改了 IntelliJ 最初为我生成的`start`方法，如下所示。
 
-```
+
+
+## 修改 `FXMLLoader` 周围的代码
+
+我需要修改`FXMLLoader`周围的代码，以便获得`TodoListController`的句柄，这样我就可以将`Stage`的`setOnCloseRequest`事件与调用控制器的`writeToDoListToFile`方法挂钩。作为副产品，我学到了如何通过视图本身访问与视图相关联的控制器。我仍然需要完全理解这一点，但是代码至少是有效的。
+
+```java
 @Override
 public void start(Stage stage) throws IOException
 {
@@ -269,15 +276,13 @@ public void start(Stage stage) throws IOException
 }
 ```
 
-我需要修改`FXMLLoader`周围的代码，以便获得`TodoListController`的句柄，这样我就可以将`Stage` `setOnCloseRequest`事件与调用控制器的`writeToDoListToFile`方法挂钩。作为副产品，我学到了如何通过视图本身访问与视图相关联的控制器。我仍然需要完全理解这一点，但是代码至少是有效的。
-
 ## 哎呀，我需要一条错误处理消息
 
 当我摆弄我的待办事项列表时，我导致了一个异常的发生。如果我把日期或其他东西留空，我会得到一个可怕的`NullPointerException`。呸。我想在输入无效并显示错误消息时发出警告。我发现了一种使用`Alert`类的简单方法。
 
 我按如下方式重构了`TodoListController`类中的`onAddButtonClick`方法，因此任何空输入都会显示一条错误消息。
 
-```
+```java
 @FXML
 protected void onAddButtonClick()
 {
@@ -315,13 +320,13 @@ private void displayInvalidInputMessage()
 
 ![](img/091b739179e6dfcabe92db8b60e4e935.png)
 
-# 完整的源代码
+## 完整的源代码
 
 我最终会将我的待办事项列表实验的源代码上传到 GitHub 项目中。目前，我的`TodoListApplication`的源代码包含在以下四个文件中。
 
-`TodoListApplication.java`
+### `TodoListApplication.java`
 
-```
+```java
 package example.todolist;
 
 import java.io.IOException;
@@ -359,9 +364,9 @@ public class TodoListApplication extends Application
 }
 ```
 
-`todolist-view.fxml`
+### `todolist-view.fxml`
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
@@ -415,9 +420,11 @@ public class TodoListApplication extends Application
 </VBox>
 ```
 
-`TodoListController.java`(包含`ToDoItem`和`ToDoCategory`类)
+### `TodoListController.java`（包含`ToDoItem`和`ToDoCategory`类）
 
-```
+
+
+```java
 package example.todolist;
 
 import java.io.IOException;
@@ -609,7 +616,7 @@ public class TodoListController
 
 `module-info.java`
 
-```
+```java
 module example.todolist {
     requires javafx.controls;
     requires javafx.fxml;
@@ -643,16 +650,27 @@ module example.todolist {
 你可能喜欢的其他 Java JSON 教程
 
 *   [如何在 Java 中格式化 JSON 字符串？](https://javarevisited.blogspot.com/2015/05/how-to-print-json-string-in-java-jackson-example.html)
+
 *   [Java 中将 JSON 字符串转换为对象的 3 种方法](https://javarevisited.blogspot.com/2022/03/3-examples-to-parse-json-in-java-using.html)
+
 *   [如何用 Gson 解析 JSON？](http://www.java67.com/2017/05/how-to-convert-json-string-to-java-object-gson-example.html)
+
 *   [如何用 Java 解析 JSON 数组？](http://javarevisited.blogspot.sg/2013/04/convert-json-array-to-string-array-list-java-from.html)
+
 *   [如何在 json-simple Java 中迭代 JSONObject？](https://javarevisited.blogspot.com/2022/12/how-to-iterate-over-jsonobject-in-java.html)
+
 *   [如何用 Java 下载 Jackson JAR 文件](https://javarevisited.blogspot.com/2017/06/how-to-get-jar-files-of-jackson-libary-for-JSON.html)
+
 *   [如何解决无法识别的 PropertyException:无法识别的字段，未标记为可忽略](https://javarevisited.blogspot.com/2017/10/jackson-json-parsing-error.html) -
+
 *   [20 个 JSON 面试问题及答案](https://javarevisited.blogspot.com/2022/08/json-interview-questions-with-answers.html)
+
 *   [如何在 Java 中将 JSON 转换成 HashMap？](http://javarevisited.blogspot.sg/2017/04/how-to-convert-map-to-json-to-hashmap-in-java.html)
+
 *   [Java 开发人员应该学习的 10 件事](http://javarevisited.blogspot.sg/2017/12/10-things-java-programmers-should-learn.html#axzz53JaDYLsP)
+
 *   [Java 解析 JSON 时如何忽略未知属性？](http://javarevisited.blogspot.sg/2018/01/how-to-ignore-unknown-properties-parsing-json-java-jackson.html#axzz56KqU1RoL)
+
 *   [如何从 Spring MVC 控制器返回 JSON？](https://javarevisited.blogspot.com/2022/05/how-to-return-json-xml-or-thymeleaf-.html)
 
-<https://javarevisited.blogspot.com/2022/03/3-examples-to-parse-json-in-java-using.html> 
+<https://javarevisited.blogspot.com/2022/03/3-examples-to-parse-json-in-java-using.html>

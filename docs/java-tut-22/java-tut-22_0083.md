@@ -1,3 +1,4 @@
+
 # 使用接口作为类型
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/IandI/interfaceAsType.html`](https://docs.oracle.com/javase/tutorial/java/IandI/interfaceAsType.html)
@@ -15,7 +16,6 @@ public Object findLargest(Object object1, Object object2) {
    else 
       return object2;
 }
-
 ```
 
 通过将`object1`强制转换为`Relatable`类型，它可以调用`isLargerThan`方法。
@@ -40,7 +40,6 @@ public boolean isEqual(Object object1, Object object2) {
    else 
       return false;
 }
-
 ```
 
 这些方法适用于任何“可比较”的对象，无论它们的类继承关系如何。当它们实现了`Relatable`接口时，它们可以是自己类（或超类）类型和`Relatable`类型。这使它们具有多重继承的一些优势，可以同时具有来自超类和接口的行为。

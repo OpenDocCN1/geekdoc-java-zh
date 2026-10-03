@@ -1,3 +1,4 @@
+
 # 导出公钥证书
 
 > 原文：[`docs.oracle.com/javase/tutorial/security/toolsign/step5.html`](https://docs.oracle.com/javase/tutorial/security/toolsign/step5.html)
@@ -8,7 +9,6 @@
 
 ```java
 keytool -export -keystore examplestore -alias signFiles -file Example.cer
-
 ```
 
 你将被提示输入存储密码。

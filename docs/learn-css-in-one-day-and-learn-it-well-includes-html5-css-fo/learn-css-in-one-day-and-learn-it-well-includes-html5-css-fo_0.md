@@ -1,13 +1,5 @@
+
 # 一天学会并精通 CSS（包含 HTML5）：带实战项目的 CSS 初学者实用指南。你开始 CSS 编程所需的唯一书籍……（通过实战项目快速开发）（第 2 卷）
-
-
-
-
-
-
-
-
-
 
 ## 前言
 
@@ -35,15 +27,17 @@
 
 [Python：一天学会并精通 Python](http://mybook.to/Python)
 
-
-
 ```
 注意哪个段落既有黄色背景又有下划线。这是因为该段落有两个类：`myClassPara` 和 `mySecondPara`。
 16. 最后，让我们尝试在所有 `<p>` 元素的结尾添加叹号。使用 `after` 伪元素来实现。在 `</style>` 之前添加以下 CSS 代码：
 ```css
+
 p::after{
+
     content: "!";
+
 }
+
 ```
 
 ## 第 4 章：CSS Box 模型
@@ -54,43 +48,70 @@ p::after{
 
 在 CSS 中，所有元素都被视为盒子。CSS 盒子由外边距、边框、内边距和实际内容组成，如下所示。
 
-
-
-
 ![](img/00011.jpg)
 
 粗黑线是边框（border）。边界内部是内边距（padding）和实际内容。边界外部是盒子的外边距（margin）。内边距、边框和外边距的厚度都可以通过 CSS 修改。为了理解这个盒模型是如何工作的，让我们分析下面的代码。你可以在 [`learncodingfast.com/css`](http://learncodingfast.com/css) 下载这段代码。
 
 ```html
+
 <!doctype html>
+
 <html>
+
 <head><title>Chapter 4 - CSS Box Model</title>
+
 <style type="text/css">
+
 #box1 {
+
 margin: 20px;
+
 padding: 10px;
+
 border: 5px solid black;
+
 width: 100px;
+
 height: 100px;
+
 text-align: justify;
+
 float: left;
+
 }
+
 #box2 {
+
 margin: 20px;
+
 padding: 50px;
+
 border: 5px solid black;
+
 width: 100px;
+
 height: 100px;
+
 text-align: justify;
+
 float: left;
+
 }
+
 </style></head>
+
 <body>
+
 <div id="box1">Learn CSS in One Day and Learn It Well. CSS is easy.</div>
+
 <div id="box2">Learn CSS in One Day and Learn It Well. CSS is easy.</div>
+
 <p>skajd fhadlc vkas j cnl ka jshvn aclaks jdclkasjd ckasj cnkas djvcn ksa mc nlkasd jn skajd fhadlc vkas j cnl ka jshvn aclaks jdclkasjd ckasj cnkas djvcn ksa mc nlkasd jn skajd fhadlc vkas j cnl ka jshvn aclaks jdclkasjd ckasj cnkas djvcn ksa mc nlkasd jn</p>
+
 </body>
+
 </html>
+
 ```
 
 如果你运行这段代码，你将看到下面的盒子。盒子旁边和下方的乱码文本被添加是为了显示外边距（margin）。
@@ -125,23 +146,28 @@ CSS 盒子的 `width` 和 `height` 属性指定内容区域的尺寸（不包括
 
 语法 1:
 ```
+
 margin: 25px;
+
 ```
 语法 2:
 ```
+
 margin: 25px 50px;
+
 ```
 语法 3:
 ```
+
 margin-top: 25px;
+
 ```
 语法 4:
 ```
+
 margin: 25px 50px 60px 10px;
+
 ```
-
-
-
 
 除了使用 RGB 表示法，你还可以使用十六进制法，它使用 6 位数字来表示颜色。前两个数字代表“红色”强度的十六进制值，接下来两个代表“绿色”，最后两个代表“蓝色”。通常会使用颜色工具来生成这些十六进制值。访问 [`instant-eyedropper.com/`](http://instant-eyedropper.com/) 网站获取这样一个免费工具。
 
@@ -150,17 +176,23 @@ margin: 25px 50px 60px 10px;
 ### 示例：
 
 ```
+
 border-color: rgb(255, 0, 0);
+
 ```
 将设置所有边框为红色。
 
 ```
+
 border-color: red green;
+
 ```
 将顶部和底部的边框设置为红色，左侧和右侧的边框设置为绿色。
 
 ```
+
 border-top-color: #12005F;
+
 ```
 将设置顶部边框设置为 #12005F。
 
@@ -169,16 +201,22 @@ border-top-color: #12005F;
 要设置边框样式，你使用 `border-style` 属性。接受的值有：`none`、`dotted`、`dashed`、`solid`、`double`、`groove`、`ridge`、`inset` 和 `outset`。例如，如果你写：
 
 ```
+
 border-style: solid dotted;
+
 ```
 顶部和底部边框将为实线，而左右为虚线。如果你想单独设置样式，可以写：
 
 ```
+
 border-top-style: solid;
+
 ```
 
 ```
+
 border-left-style: dotted;
+
 ```
 
 ### border-radius（圆角）
@@ -190,22 +228,30 @@ border-left-style: dotted;
 ### 示例：
 
 ```
+
 border-radius: 5px;
+
 ```
 将所有角的圆角半径设置为 5px。
 
 ```
+
 border-radius: 10px 20px;
+
 ```
 将左上角和右下角（即对角线的两个角）的半径设置为 10px，右上角和左下角的半径设置为 20px。
 
 ```
+
 border-radius: 25px 5px 0 50px;
+
 ```
 从左上角开始按顺时针方向继续设置各个角的值。
 
 ```
+
 border-top-left-radius: 10px;
+
 ```
 将左上角的边框半径设置为 10px。
 
@@ -216,7 +262,9 @@ border-top-left-radius: 10px;
 `border` 属性是在单行内指定边框宽度、样式和颜色的简写，而不是分开进行。只需写道：
 
 ```
+
 border: 5px solid green;
+
 ```
 这些值分别代表宽度 (5px)、样式 (solid) 和颜色 (green)。此简写中不包含圆角。
 
@@ -266,8 +314,6 @@ border: 5px solid green;
    (c) `margin: 25px 200px;`
    (d) `margin: 25px;`
 
-
-
 有四种定位元素的方法。为了理解这四种方法的工作原理，我强烈建议你尝试本章末尾的。如果不通过实践，这个主题很难理解。
 
 ### 静态定位 (Static Positioning)
@@ -275,7 +321,9 @@ border: 5px solid green;
 第一种定位方法是 `static` 定位。静态并没有特殊含义，它意味着元素是根据页面的正常流进行定位。所有的 HTML 元素默认都使用这种方法定位。如果你想指定使用 `static` 定位（例如覆盖同一元素的其他定位规则），可以写：
 
 ```css
+
 position: static;
+
 ```
 
 ### 相对定位 (Relative Positioning)
@@ -285,80 +333,103 @@ position: static;
 假设我们有两个盒子，`box1` 和 `box2`，且没有指定定位。如果在 HTML 代码中我们在 `box1` 之后创建 `box2`，那么 `box2` 默认将定位在 `box1` 下方（参见下面的代码）。
 
 ```html
+
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
 <style>
+
 #box1 {
+
   /*一些 box1 的样式规则*/
+
 }
+
 #box2 {
+
   /*一些 box2 的样式规则*/
+
 }
+
 </style>
+
 </head>
+
 <body>
+
   <div id="box1">Box 1</div>
+
   <div id="box2">Box 2</div>
+
 </body>
+
 </html>
+
 ```
 
 现在假设我们为 `box2` 的 CSS 声明添加了以下规则：
 
 ```css
+
 position: relative;
+
 left: 150px;
+
 top: 50px;
 ```
 
-我们所做是将 `box2` 的定位更改为 `relative` 定位。
+
+
+我们所做是将`box2`的定位更改为`relative`定位。
 
 ![](img/00002.jpg)
 
-上面的图片显示了使用 `relative` 定位时 `box2` 的位置。添加了一个白色虚线框来显示 `box2` 的原始位置。
+上面的图片显示了使用`relative`定位时`box2`的位置。添加了一个白色虚线框来显示`box2`的原始位置。
 
-当应用 `relative` 定位时，`box2` 会相对于其正常位置发生移动。`top: 50px;` 行将盒子距离原始位置的顶部移动 50px，而 `left: 150px;` 行则将其向左侧移动 150px。
+当应用`relative`定位时，`box2`会相对于其正常位置发生移动。`top: 50px;`行将盒子距离原始位置的顶部移动 50px，而`left: 150px;`行则将其向左侧移动 150px。
 
-你也可以使用 `right` 和 `bottom` 属性来定位 `box2`。例如，`bottom: 50px;` 将将 `box2` 从原始底部向上移动 50px，而 `right: 50px;` 将将其从 `box2` 的原始右边缘向左移动 50px。此外，你还可以使用负像素来定位盒子（例如 `left: -50px`）。
+你也可以使用`right`和`bottom`属性来定位`box2`。例如，`bottom: 50px;`将将`box2`从原始底部向上移动 50px，而`right: 50px;`将将其从`box2`的原始右边缘向左移动 50px。此外，你还可以使用负像素来定位盒子（例如`left: -50px`）。
 
 尝试第 5 章的练习，并调整这些值来观察它们是如何工作的。
 
-请注意，当使用 `relative` 定位时，元素可能会与其他元素发生重叠。
+请注意，当使用`relative`定位时，元素可能会与其他元素发生重叠。
 
-如果你想指定哪个元素在前面，就必须使用 `z-index` 属性。`z-index` 属性适用于任何定位为 `relative`、`fixed` 或 `absolute` 的元素（即不是 `static`）。`z-index` 值较大的元素将定位在 `z-index` 值较小的元素前面。
+如果你想指定哪个元素在前面，就必须使用`z-index`属性。`z-index`属性适用于任何定位为`relative`、`fixed`或`absolute`的元素（即不是`static`）。`z-index`值较大的元素将定位在`z-index`值较小的元素前面。
 
-假设你有两个盒子，`greenBox` 和 `redBox`，并且它们相互重叠。如果你将 `greenBox` 的 `z-index` 为
+假设你有两个盒子，`greenBox`和`redBox`，并且它们相互重叠。如果你将`greenBox`的`z-index`为
 
 ```css
 z-index: 1;
 ```
 
-并将 `redBox` 的 `z-index` 为
+并将`redBox`的`z-index`为
 
 ```css
 z-index: 2;
 ```
 
-那么 `redBox` 将位于 `greenBox` 之上，因为它的 `z-index` 值更大。
+那么`redBox`将位于`greenBox`之上，因为它的`z-index`值更大。
 
 ### 固定定位 (Fixed Positioning)
 
-第三种定位方法是 `fixed` 定位。顾其名，使用 `fixed` 方法定位的元素将始终保持在其分配的位置上；即使页面滚动，它也不会移动。固定定位通常用于在网页侧边定位社交分享按钮。要使用 `fixed` 定位，我们写：
+第三种定位方法是`fixed`定位。顾其名，使用`fixed`方法定位的元素将始终保持在其分配的位置上；即使页面滚动，它也不会移动。固定定位通常用于在网页侧边定位社交分享按钮。要使用`fixed`定位，我们写：
 
 ```css
 position: fixed;
 ```
 
-使用 `fixed` 定位时，我们可以使用 `top` 属性指定盒子距离页面顶部的像素数，而 `left` 属性指定它距离页面左侧的像素数。
+使用`fixed`定位时，我们可以使用`top`属性指定盒子距离页面顶部的像素数，而`left`属性指定它距离页面左侧的像素数。
 
-除了 `top` 和 `left`，还有 `right` 和 `bottom` 属性，它们分别指定了盒子距离页面右侧和底部的像素数。
+除了`top`和`left`，还有`right`和`bottom`属性，它们分别指定了盒子距离页面右侧和底部的像素数。
 
 ### 绝对定位 (Absolute Positioning)
 
-最后一种方法是 `absolute` 定位。
+最后一种方法是`absolute`定位。
 
-当使用 `absolute` 定位时，元素相对于第一个非 `static` 定位的父元素进行定位。如果没有找到这样的元素，它将相对于页面进行定位。
+当使用`absolute`定位时，元素相对于第一个非`static`定位的父元素进行定位。如果没有找到这样的元素，它将相对于页面进行定位。
 
 例如，假设我们有以下 HTML 代码：
 
@@ -373,6 +444,7 @@ position: fixed;
 #box1 {
   position: relative;
 }
+
 #box2 {
   position: absolute;
   top: 50px;
@@ -380,7 +452,7 @@ position: fixed;
 }
 ```
 
-假设 `box2` 不是任何具有非静态定位元素的子元素，它将相对于页面进行定位。
+假设`box2`不是任何具有非静态定位元素的子元素，它将相对于页面进行定位。
 
 ### 浮动定位 (Floating Positioning)
 
@@ -400,30 +472,37 @@ div {
   margin: 5px;
   float: left;
 }
+
 #box1 {
   width: 60px;
   height: 100px;
 }
+
 #box2 {
   width: 100px;
   height: 20px;
 }
+
 #box3 {
   width: 50px;
   height: 150px;
 }
+
 #box4 {
   width: 20px;
   height: 50px;
 }
+
 #box5 {
   width: 150px;
   height: 120px;
 }
+
 #box6 {
   width: 120px;
   height: 70px;
 }
+
 #box7 {
   width: 25px;
   height: 80px;
@@ -456,42 +535,39 @@ div {
 <p>This is yet more text that is not floated.</p>
 ```
 
-
-
-
-如果这些段落位于 `div` 盒子之后并在 HTML 文档中，我们将得到下面的图表。这些段落将仅仅“挤进”任何可用空间。
+如果这些段落位于`div`盒子之后并在 HTML 文档中，我们将得到下面的图表。这些段落将仅仅“挤进”任何可用空间。
 
 ![](img/00006.jpg)
 
-如果你不希望发生这种情况，可以使用 `clear: both` 属性来清除浮动。要实现这一点，请在 CSS 声明中添加以下内容：
+如果你不希望发生这种情况，可以使用`clear: both`属性来清除浮动。要实现这一点，请在 CSS 声明中添加以下内容：
 
 ```css
 .clearFloat { clear: both; }
 ```
 
-要使用此类，我们将其添加到第一个 `<p>` 标签中：
+要使用此类，我们将其添加到第一个`<p>`标签中：
 
 ```html
 <p class="clearFloat">这是一段没有浮动的文本。</p>
 ```
 
-你只需要在第一个 `<p>` 标签上添加 `clearFloat` 类。一旦你清除了浮动，文本将不再环绕盒子显示。
+你只需要在第一个`<p>`标签上添加`clearFloat`类。一旦你清除了浮动，文本将不再环绕盒子显示。
 
 这就是 CSS 中定位和浮动工作原理的要点。我强烈建议你尝试本章的练习题，以更好地理解这两个概念。
 
 ### 练习 5
 
-从 [`learncodingfast.com/css`](http://learncodingfast.com/css) 下载此练习的源代码并解压文件。此练习的源代码可以在“第 5 章 - 定位与浮动”文件夹中找到。
+从[`learncodingfast.com/css`](http://learncodingfast.com/css)下载此练习的源代码并解压文件。此练习的源代码可以在“第 5 章 - 定位与浮动”文件夹中找到。
 
 ### 练习 5.1
 
-> 1. 在浏览器和文本编辑器中同时打开 `Chapter 5 - Positioning.html` 文件。
-
-> 2. 为 `#box1` 和 `#box2` 的 CSS 声明添加 `position: static;` 规则，并观察两个盒子的位置发生了什么变化。
+> 1. 在浏览器和文本编辑器中同时打开`Chapter 5 - Positioning.html`文件。
 >
-> 没有变化，对吧？这是因为所有 HTML 元素默认都使用 `static` 定位。
-
-> 3. 从 `#box1` 和 `#box2` 的 CSS 声明中移除 `position: static;` 规则。在 #`box2` 的 CSS 声明中添加以下行。
+> 2. 为`#box1`和`#box2`的 CSS 声明添加`position: static;`规则，并观察两个盒子的位置发生了什么变化。
+>
+> 没有变化，对吧？这是因为所有 HTML 元素默认都使用`static`定位。
+>
+> 3. 从`#box1`和`#box2`的 CSS 声明中移除`position: static;`规则。在`#box2`的 CSS 声明中添加以下行。
 
 ```css
 position: relative;
@@ -500,10 +576,10 @@ left: 70px;
 ```
 
 > 观察第二个盒子位置的变化。3. 它现在距离正常位置顶部 50px，距离左侧 10px。
-
-> 尝试为 `top` 和 `left` 属性使用不同的值，看看 `box2` 的位置发生了什么变化。也尝试负值。你也可以尝试使用 `right` 和 `bottom` 属性。
-
-> 4. 现在将 #`box2` 的 CSS 声明改回
+>
+> 尝试为`top`和`left`属性使用不同的值，看看`box2`的位置发生了什么变化。也尝试负值。你也可以尝试使用`right`和`bottom`属性。
+>
+> 4. 现在将`#box2`的 CSS 声明改回
 
 ```css
 position: relative;
@@ -512,31 +588,31 @@ left: 70px;
 ```
 
 > 注意到文本被红色盒子部分遮住了？
-
-> 如果你想让文本出现在红色盒子前面，请在 `p` 的 CSS 声明中添加以下行。
+>
+> 如果你想让文本出现在红色盒子前面，请在`p`的 CSS 声明中添加以下行。
 
 ```css
 position: relative;
 z-index: 2;
 ```
 
-> 你可以将位置设置为 `relative`、`absolute` 或 `fixed`。只要它不是 `static`，就没有关系。
-
-> 下一步，在 `#box2` 的 CSS 声明中添加行 `z-index: 1;`。刷新页面。文本现在应该在红色盒子前面，因为文本的 `z-index` 大于红色盒子的 `z-index`。
-
-> 如果你想让红色盒子出现在文本前面，只需将 `#box2` 的 `z-index` 改为大于 2 的值即可。
-
-> 5. 现在，将 `#box1` 的高度改为 `5000px`，并将 `#box2` 的定位改为 `fixed`（`position: fixed;`）。
-
+> 你可以将位置设置为`relative`、`absolute`或`fixed`。只要它不是`static`，就没有关系。
+>
+> 下一步，在`#box2`的 CSS 声明中添加行`z-index: 1;`。刷新页面。文本现在应该在红色盒子前面，因为文本的`z-index`大于红色盒子的`z-index`。
+>
+> 如果你想让红色盒子出现在文本前面，只需将`#box2`的`z-index`改为大于 2 的值即可。
+>
+> 5. 现在，将`#box1`的高度改为`5000px`，并将`#box2`的定位改为`fixed`（`position: fixed;`）。
+>
 > 滚动页面。5. 红色盒子现在使用固定定位，因此它不会移动。
-
-> 6. 将 `#box2` 的定位改回 `relative`，并将 `#box1` 的高度改回 `100px`。在文件底部 HTML 代码中的 `<p>` 标签之前添加以下行。
+>
+> 6. 将`#box2`的定位改回`relative`，并将`#box1`的高度改回`100px`。在文件底部 HTML 代码中的`<p>`标签之前添加以下行。
 
 ```html
 <div id="box3"></div>
 ```
 
-> 现在添加以下 CSS 声明来样式化 `box3`。
+> 现在添加以下 CSS 声明来样式化`box3`。
 
 ```css
 #box3 {
@@ -552,9 +628,9 @@ z-index: 2;
 }
 ```
 
-> `box3` 使用了 `absolute` 定位，由于它不是任何 `<<div>` 元素的子元素，因此它是相对于页面进行定位的。也就是说，它距离页面顶部 50px，距离左侧 150px。
-
-> 7. 现在将三个盒子的 `<<div>` 代码更改为以下：
+> `box3`使用了`absolute`定位，由于它不是任何`<div>`元素的子元素，因此它是相对于页面进行定位的。也就是说，它距离页面顶部 50px，距离左侧 150px。
+>
+> 7. 现在将三个盒子的`<div>`代码更改为以下：
 
 ```html
 <div id="box1"></div>
@@ -563,17 +639,17 @@ z-index: 2;
 </div>
 ```
 
-> `box3` 现在是 `box2` 的子元素。因此，它现在相对于 `box2` 定位，所以它距离 `box2` 顶部 50px，距离左侧 150px。
+> `box3`现在是`box2`的子元素。因此，它现在相对于`box2`定位，所以它距离`box2`顶部 50px，距离左侧 150px。
 
 ### 练习 5.2
 
-> 1. 在浏览器和文本编辑器中同时打开 `Chapter 5 - Floating.html` 文件。
-
-> 2. 调整你的浏览器窗口，看看当 `<div>` 元素没有足够的空间时会发生什么。
-
-> 3. 通过将 `float: left;` 改为 `float: right;` 来修改 `div` 的 CSS 声明。
-
-> 4. 使用 `float: left;`，在 HTML 代码中的 </body> 标签上方添加以下代码。
+> 1. 在浏览器和文本编辑器中同时打开`Chapter 5 - Floating.html`文件。
+>
+> 2. 调整你的浏览器窗口，看看当`<div>`元素没有足够的空间时会发生什么。
+>
+> 3. 通过将`float: left;`改为`float: right;`来修改`div`的 CSS 声明。
+>
+> 4. 使用`float: left;`，在 HTML 代码中的`</body>`标签上方添加以下代码。
 
 ```html
 <p>这是一段没有浮动的文本。</p>
@@ -581,45 +657,41 @@ z-index: 2;
 <p>这是更多没有浮动的文本。</p>
 ```
 
-> 刷新页面并调整浏览器窗口，看看当 宽度 变窄时会发生什么。
-
-> 5. 接下来，在 </style> 标签上方添加以下代码
+> 刷新页面并调整浏览器窗口，看看当宽度变窄时会发生什么。
+>
+> 5. 接下来，在`</style>`标签上方添加以下代码
 
 ```css
 .clearFloat { float: both; }
 ```
 
-> 将第一个 <p> 标签改为 `<p class="clearFloat">` 看看发生了什么。
-
-> 你只需要在第一个 <p> 标签上添加 `clearFloat` 类。一旦你清除了浮动，文本将不再环绕盒子显示。
-
+> 将第一个`<p>`标签改为`<p class="clearFloat">`看看发生了什么。
+>
+> 你只需要在第一个`<p>`标签上添加`clearFloat`类。一旦你清除了浮动，文本将不再环绕盒子显示。
+>
 > 这就是 CSS 中定位和浮动工作原理的概要。我强烈建议你尝试本章的练习题，以更好地理解这两个概念。
 
 ### 练习 6
 
-从 [`learncodingfast.com/css`](http://learncodingfast.com/css) 下载此练习的源代码并解压文件。此练习的源代码可以在“第 6 章 - 显示与可见性”文件夹中找到。
+从[`learncodingfast.com/css`](http://learncodingfast.com/css)下载此练习的源代码并解压文件。此练习的源代码可以在“第 6 章 - 显示与可见性”文件夹中找到。
 
 ### 练习 6.1
 
-> 1. 在浏览器和文本编辑器中同时打开 `Chapter 6 - Display and Visibility.html` 文件。
-
-> 2. 更改 `#displaydemo` 的高度和宽度，看看黄色盒子发生了什么变化。
-
-
-
-
-
+> 1. 在浏览器和文本编辑器中同时打开`Chapter 6 - Display and Visibility.html`文件。
+>
+> 2. 更改`#displaydemo`的高度和宽度，看看黄色盒子发生了什么变化。
+>
 > 没有任何变化，对吧？黄色框被声明为内联级元素。因此，它只会占据它所需的宽度和高度。事实上，你可以移除高度和宽度属性，什么都不会改变。
-
-> 3. 现在将 `#displaydemo` 的 `display` 属性从 `display: inline;` 改为 `display: block;`。发生了什么？
-
+>
+> 3. 现在将`#displaydemo`的`display`属性从`display: inline;`改为`display: block;`。发生了什么？
+>
 > 黄色框现在以块级元素的形式显示。它会在新行开始并结束。如果你声明了它的宽度和高度，那么宽度和高度将是你指定的值。如果你没有指定宽度和高度，黄色框将占据页面的整个宽度。它将占据它所需的高度。
-
-> 4. 尝试更改 `#displaydemo` 的 CSS 声明中的高度和宽度。观察发生了什么。
-
-> 5. 现在，让我们来看一下 `visibility` 属性。将 `#magic` 的 CSS 声明从 `display: inline;` 改为 `visibility: hidden;`。观察蓝色句子中单词“magic”发生了什么变化。
-
-> 6. 接下来，将 `#magic` 的 CSS 声明从 `visibility: hidden;` 改为 `display: none;`。观察发生了什么。
+>
+> 4. 尝试更改`#displaydemo`的 CSS 声明中的高度和宽度。观察发生了什么。
+>
+> 5. 现在，让我们来看一下`visibility`属性。将`#magic`的 CSS 声明从`display: inline;`改为`visibility: hidden;`。观察蓝色句子中单词“magic”发生了什么变化。
+>
+> 6. 接下来，将`#magic`的 CSS 声明从`visibility: hidden;`改为`display: none;`。观察发生了什么。
 
 ## 第 7 章：背景
 
@@ -629,7 +701,7 @@ z-index: 2;
 
 ## 背景颜色
 
-要声明元素的背景颜色，我们使用 `background-color` 属性。类似于我们指定 CSS 框的边界颜色一样，我们可以使用三种表示法之一声明元素的背景颜色：颜色名称、rgb 表示法或十六进制表示法。
+要声明元素的背景颜色，我们使用`background-color`属性。类似于我们指定 CSS 框的边界颜色一样，我们可以使用三种表示法之一声明元素的背景颜色：颜色名称、rgb 表示法或十六进制表示法。
 
 示例：
 
@@ -651,17 +723,17 @@ background-color: #00FF00;
 
 ### background-image
 
-要使用图像作为背景，我们使用 `background-image` 属性指定图片的 URL。
+要使用图像作为背景，我们使用`background-image`属性指定图片的 URL。
 
 示例：
 
 ```
-background-image: url(“image1.jpg”);
+background-image: url("image1.jpg");
 ```
 
 ### background-repeat
 
-默认情况下，背景图像位于元素的左上角，并在垂直和水平方向上重复。如果你不希望背景图像重复，可以使用 `background-repeat` 属性进行更改。以下列表显示了 `background-repeat` 属性的一些常用值：
+默认情况下，背景图像位于元素的左上角，并在垂直和水平方向上重复。如果你不希望背景图像重复，可以使用`background-repeat`属性进行更改。以下列表显示了`background-repeat`属性的一些常用值：
 
 - `repeat`: 这是默认值。图像将在水平和垂直方向上重复。
 - `repeat-x`: 图像仅在水平方向上重复。
@@ -676,7 +748,7 @@ background-repeat: repeat-x;
 
 ### background-attachment
 
-`background-attachment` 属性指定背景图像应该是固定还是随页面滚动。两个常用的值是 `fixed` 和 `scroll`。默认值是 `scroll`。尝试本章末的练习来查看它是如何工作的。
+`background-attachment`属性指定背景图像应该是固定还是随页面滚动。两个常用的值是`fixed`和`scroll`。默认值是`scroll`。尝试本章末的练习来查看它是如何工作的。
 
 示例：
 
@@ -686,15 +758,15 @@ background-attachment: scroll;
 
 ### background-position
 
-如果你想指定显示背景图像的哪个区域，`background-position` 属性将非常有用。
+如果你想指定显示背景图像的哪个区域，`background-position`属性将非常有用。
 
 假设你有一个宽度和高度均为 100px 的元素。如果你使用的背景图像宽度为 200px，高度为 300px，那么只有背景图像的一部分将显示，因为图像大于元素的尺寸。
 
 ![](img/00009.jpg)
 
-例如，如果你使用上面的图像（200px 比 300px）作为 100px 比 100px 元素的背景图像，默认只会显示区域 A（左上角）。如果你想显示区域 F 呢？要这样做，你需要更改 `background-position` 属性的值。
+例如，如果你使用上面的图像（200px 比 300px）作为 100px 比 100px 元素的背景图像，默认只会显示区域 A（左上角）。如果你想显示区域 F 呢？要这样做，你需要更改`background-position`属性的值。
 
-指定 `background-position` 值的最常用方法是使用像素。语法为：
+指定`background-position`值的最常用方法是使用像素。语法为：
 
 ```
 background-position: xpos ypos;
@@ -706,9 +778,11 @@ background-position: xpos ypos;
 background-position: -100px -200px;
 ```
 
+
+
 第一个数字（`-100px`）水平移动图像。如果这个数字是正数，图像向右移动。如果是负数，它向左移动。
 
-第二个数字（`-200px`）垂直移动图像。如果这个数字是正数，图像向移动移动。如果是负数，它向向上移动。
+第二个数字（`-200px`）垂直移动图像。如果这个数字是正数，图像向下移动。如果是负数，它向上移动。
 
 理解这个概念的最佳方法是尝试本章的练习。我强烈建议你在进入第 8 章之前完成它们。
 
@@ -719,17 +793,17 @@ background-position: -100px -200px;
 ### 练习 7.1
 
 1. 从 [`learncodingfast.com/css`](http://learncodingfast.com/css) 下载此练习的源代码并解压文件。此练习的源代码可以在章节中找到。
-2. 在浏览器中打开 `7 - Background.html` 文件。观察 `body` 发生了什么。
-3. 在 `body` 中，将 `background-attachment: fixed;` 改为 `background-attachment: scroll;`。刷新页面并观察发生了什么。
-4. 在 `body` 中，将 `background-repeat: repeat;` 改为：
+2. 在浏览器中打开`7 - Background.html`文件。观察`body`发生了什么。
+3. 在`body`中，将`background-attachment: fixed;`改为`background-attachment: scroll;`。刷新页面并观察发生了什么。
+4. 在`body`中，将`background-repeat: repeat;`改为：
    - `repeat-x`
    - `no-repeat`
    - `repeat-y`
    观察每种情况发生了什么。
-5. 在 `body` 中，将 `background-color: white;` 改为 `background-color: #000FF;`。这将页面背景颜色改为蓝色。
-6. 最后，我们将查看 `background-position` 属性。示例中的图像是相同文件夹中的 `backgroundposition.png`。在继续之前看一眼。
-7. 注意，当 `background-position` 设置为 `0 0`（默认值）时，显示区域 A。更改 `background-position` 属性将相对于区域 A 移动图像。
-8. 在 `#box1` 的 CSS 声明中，将 `background-position: 0 0;` 改为：
+5. 在`body`中，将`background-color: white;`改为`background-color: #000FF;`。这将页面背景颜色改为蓝色。
+6. 最后，我们将查看`background-position`属性。示例中的图像是相同文件夹中的`backgroundposition.png`。在继续之前看一眼。
+7. 注意，当`background-position`设置为`0 0`（默认值）时，显示区域 A。更改`background-position`属性将相对于区域 A 移动图像。
+8. 在`#box1`的 CSS 声明中，将`background-position: 0 0;`改为：
    - `background-position: -100px 0;`
    - `background-position: 100px 0;`
    - `background-position: 0 -100px;`
@@ -739,17 +813,13 @@ background-position: -100px -200px;
 
 ## 第 8 章：文本与字体
 
-CSS 中的文本和字体属性用于格式化网页上单词和文本的外观。`font` 属性关注字符的外观，例如是“粗”还是“细”、“大”还是“小”，以及使用什么字体。`text` 属性用于样式化其他其他。在本章中，我们将涵盖常用的 `text` 和 `font` 属性。
+CSS 中的文本和字体属性用于格式化网页上单词和文本的外观。`font`属性关注字符的外观，例如是“粗”还是“细”、“大”还是“小”，以及使用什么字体。`text`属性用于样式化其他属性。在本章中，我们将涵盖常用的`text`和`font`属性。
 
 ## 字体属性
 
 ### font-family
 
-`font-family` 属性用于设置字体类型。
-
-
-
-
+`font-family`属性用于设置字体类型。
 
 字体类型主要三大类：衬线字体（serif）、无衬线字体（san serif）和等宽字体（monospace）。
 
@@ -757,9 +827,9 @@ CSS 中的文本和字体属性用于格式化网页上单词和文本的外观�
 
 无衬线字体在字符的末端没有笔画。示例包括 Arial 和 Verdana。
 
-等宽字体对所有字符都使用相同的空间。例如，字母‘i’的宽度与字母‘a’相同。等宽宽字体的示例包括“Courier New”和“Lucida Console”。
+等宽字体对所有字符都使用相同的空间。例如，字母‘i’的宽度与字母‘a’相同。等宽字体的示例包括“Courier New”和“Lucida Console”。
 
-在指定 `font-family` 属性时，你应该始终包含多个字体名称，这样如果浏览器不支持第一个字体，它就会尝试下一个字体，直到找到它支持的字体为止。从更具体的字体（如“Times New Roman”）开始，并以一个通用的字体族结束。如果字体名称包含多个单词，应使用引号。
+在指定`font-family`属性时，你应该始终包含多个字体名称，这样如果浏览器不支持第一个字体，它就会尝试下一个字体，直到找到它支持的字体为止。从更具体的字体（如“Times New Roman”）开始，并以一个通用的字体族结束。如果字体名称包含多个单词，应使用引号。
 
 示例：
 
@@ -769,7 +839,7 @@ font-family: "Times New Roman", Times, serif;
 
 ## font-size
 
-`font-size` 属性设置文本的大小。字体大小可以使用像素 (`px`)、em、百分比 (%) 或使用关键字来设置。
+`font-size`属性设置文本的大小。字体大小可以使用像素（`px`）、em、百分比（%）或使用关键字来设置。
 
 ### 使用 px
 
@@ -781,11 +851,11 @@ font-size: 20px;
 
 ### 使用 em
 
-一个 em 等于当前字体大小。如果该元素是另一个元素的子元素，则当前字体大小是父元素的字体大小。如果该元素不是任何元素的元素，则当前字体大小是浏览器的默认字体大小。如上述，大多数浏览器上使用的默认字体大小是 16px。因此，默认情况下 `1em = 16px`。
+一个 em 等于当前字体大小。如果该元素是另一个元素的子元素，则当前字体大小是父元素的字体大小。如果该元素不是任何元素的子元素，则当前字体大小是浏览器的默认字体大小。如上述，大多数浏览器上使用的默认字体大小是 16px。因此，默认情况下`1em = 16px`。
 
 然而，可以通过更改浏览器设置来更改默认字体大小。例如，要更改 Firefox 默认字体大小，点击菜单按钮（最右侧的三条横线按钮），选择“选项 (Options)”，最后选择“内容 (Content)”选项卡。然后你可以在“字体与颜色 (Fonts & Colors)”部分更改当前字体大小。
 
-如果用户将默认字体大小设置为 20px，`1em` 变为 20px。如果你想让字体大小变为当前字体大小的 1.5 倍，只需编写 `1.5em`。em 是大多数开发者首选的单位大小，因为默认字体大小可以由用户自定义。
+如果用户将默认字体大小设置为 20px，`1em`变为 20px。如果你想让字体大小变为当前字体大小的 1.5 倍，只需编写`1.5em`。em 是大多数开发者首选的单位大小，因为默认字体大小可以由用户自定义。
 
 ### 使用百分比
 
@@ -793,7 +863,7 @@ font-size: 20px;
 
 ### 使用关键字
 
-指定字体大小的最后方法是使用关键字。常用的关键字有 `xx-small`、`x-small`、`small`、`medium`（默认值）、`large`、`x-large` 和 `xx-large`。
+指定字体大小的最后方法是使用关键字。常用的关键字有`xx-small`、`x-small`、`small`、`medium`（默认值）、`large`、`x-large`和`xx-large`。
 
 示例：
 
@@ -806,7 +876,7 @@ font-size: large;
 
 ## font-style
 
-`font-style` 属性用于指定斜体文本。两个常用值为 `normal` 和 `italic`。normal 以斜体显示文本，而 italic 以斜体显示文本。
+`font-style`属性用于指定斜体文本。两个常用值为`normal`和`italic`。`normal`以正常文本显示文本，而`italic`以斜体显示文本。
 
 示例：
 
@@ -816,9 +886,9 @@ font-style: italic;
 
 ## font-weight
 
-`font-weight` 属性是 `font-style` 的对应项。虽然 `font-style` 用于指定斜体文本，但 `font-weight` 用于指定粗体文本。常用的值包括 `normal`、`bold`、`bolder` 和 `lighter`。或者，你也可以使用 100 的倍数的数字指定字符的粗细，从 100（最细）到 900（最粗）。400 是正常粗，700 与 bold 相同。
+`font-weight`属性是`font-style`的对应项。虽然`font-style`用于指定斜体文本，但`font-weight`用于指定粗体文本。常用的值包括`normal`、`bold`、`bolder`和`lighter`。或者，你也可以使用 100 的倍数的数字指定字符的粗细，从 100（最细）到 900（最粗）。400 是正常粗细，700 与`bold`相同。
 
-然而请注意，大多数网页浏览器只支持 `normal` 和 `bold` 字体权重。在这种情况下，100-500 对应 `normal`，而 600 及以上对应 `bold`。
+然而请注意，大多数网页浏览器只支持`normal`和`bold`字体权重。在这种情况下，100-500 对应`normal`，而 600 及以上对应`bold`。
 
 示例：
 
@@ -829,11 +899,11 @@ font-weight: 300;
 
 ## Text Properties
 
-CSS `text` 属性允许你设置与文本字体无关的属性。常用属性包括文本颜色、文本对齐、文本装饰、字间距、词间距和行高。
+CSS `text`属性允许你设置与文本字体无关的属性。常用属性包括文本颜色、文本对齐、文本装饰、字间距、词间距和行高。
 
 ### color
 
-CSS `color` 属性指定文本颜色。与我们在第 4 章中学习的 `border-color` 属性类似，文本颜色可以通过三种方式指定：使用颜色名称、RGB 值或十六进制值。
+CSS `color`属性指定文本颜色。与我们在第 4 章中学习的`border-color`属性类似，文本颜色可以通过三种方式指定：使用颜色名称、RGB 值或十六进制值。
 
 示例：
 
@@ -845,7 +915,7 @@ color: rgb(255,0,0);
 
 ### text-alignment
 
-`text-alignment` 属性允许我们指定文本是居中、左对齐、右对齐还是两端对齐。常用的值为 `left`、`right`、`center` 和 `justify`。
+`text-alignment`属性允许我们指定文本是居中、左对齐、右对齐还是两端对齐。常用的值为`left`、`right`、`center`和`justify`。
 
 示例：
 
@@ -855,9 +925,9 @@ text-align: center;
 
 ### text-decoration
 
-`text-decoration` 属性主要用于指定文本是否用线条进行装饰。常用的值为 `none`（即：普通文本，无装饰）、`underline`（下划线）、`overline`（文本上方的线）和 `line-through`（贯穿线）。
+`text-decoration`属性主要用于指定文本是否用线条进行装饰。常用的值为`none`（即：普通文本，无装饰）、`underline`（下划线）、`overline`（文本上方的线）和`line-through`（贯穿线）。
 
-此属性通常用于移除链接的下划线。默认情况下，大多数浏览器将以蓝色显示链接并带有下划线。你可以使用代码 `text-decoration: none;` 来移除装饰。
+此属性通常用于移除链接的下划线。默认情况下，大多数浏览器将以蓝色显示链接并带有下划线。你可以使用代码`text-decoration: none;`来移除装饰。
 
 示例：
 
@@ -867,7 +937,7 @@ text-decoration: none;
 
 ### letter-spacing
 
-字间距用于增加或减少字符之间的间间距。可以使用像素 (`px`) 或相对单位 `em` 来指定。
+字间距用于增加或减少字符之间的间距。可以使用像素（`px`）或相对单位`em`来指定。
 
 示例：
 
@@ -877,7 +947,7 @@ letter-spacing: 2px;
 
 ### word-spacing
 
-词间距另一方面用于增加或减少单词之间的间距。与 `letter-spacing` 类似，可以使用像素 (`px`) 或相对单位 `em` 来指定。
+词间距另一方面用于增加或减少单词之间的间距。与`letter-spacing`类似，可以使用像素（`px`）或相对单位`em`来指定。
 
 示例：
 
@@ -906,52 +976,48 @@ line-height: 24px;
 
 ### Exercise 8.1
 
-1. 同时在浏览器和文本编辑器打开打开 Chapter 8 - Font and Text.html。
-2. 修改 `font-family` 属性并观察文本的变化。当前字体族是无衬线字体。尝试以下各项：
+1. 同时在浏览器和文本编辑器打开`Chapter 8 - Font and Text.html`。
+2. 修改`font-family`属性并观察文本的变化。当前字体族是无衬线字体。尝试以下各项：
    - a) `font-family: Verdana, Arial, Helvetica, sans-serif;`
    - b) `font-family: Courier, "Lucida Console", monospace;`
-3. 修改 `font-size` 属性并观察每种情况下示例文本的变化。尝试：
+3. 修改`font-size`属性并观察每种情况下示例文本的变化。尝试：
    - a) `font-size: 40px;`
    - b) `font-size: 1.5em;`
    - c) `font-size: x-small;`
    - d) `font-size: 120%;`
-4. 修改 `font-style` 属性并观察文本的变化。尝试：
+4. 修改`font-style`属性并观察文本的变化。尝试：
    - a) `font-style: italic;`
-5. 修改 `font-weight` 属性并观察文本的变化。尝试：
+5. 修改`font-weight`属性并观察文本的变化。尝试：
    - a) `font-weight: bold;`
    - b) `font-weight: 300;`
-6. 修改 `color` 属性并观察文本的变化。尝试：
+6. 修改`color`属性并观察文本的变化。尝试：
    - a) `color: blue;`
    - b) `color: #00ff00;`
    - c) `color: rgb(255,0,0);`
 
-
-
-
-
-## 7. 修改 CSS 属性 `text-align` 并观察示例文本的变化。默认情况下，此段落的文字是左对齐的。现在尝试以下各项：
+## 7. 修改 CSS 属性`text-align`并观察示例文本的变化。默认情况下，此段落的文字是左对齐的。现在尝试以下各项：
 
 (a) `text-align: justify;`
 (b) `text-align: right;`
 (c) `text-align: center;`
 
-## 8. 修改 CSS 属性 `text-decoration` 并观察示例文本的变化。尝试：
+## 8. 修改 CSS 属性`text-decoration`并观察示例文本的变化。尝试：
 
 (a) `text-decoration: underline;`
 (b) `text-decoration: overline;`
 (c) `text-decoration: line-through;`
 
-## 9. 修改 CSS 属性 `letter-spacing` 并观察示例文本的变化。尝试：
+## 9. 修改 CSS 属性`letter-spacing`并观察示例文本的变化。尝试：
 
 (a) `letter-spacing: 5px;`
 (b) `letter-spacing: -5px;`
 
-## 10. 将 `letter-spacing` 改回 `0px`。修改 CSS 属性 `word-spacing` 并观察示例文本的变化。尝试：
+## 10. 将`letter-spacing`改回`0px`。修改 CSS 属性`word-spacing`并观察示例文本的变化。尝试：
 
 (a) `word-spacing: 10px;`
 (b) `word-spacing: -20px;`
 
-## 11. 将 `word-spacing` 改回 `0px`。修改 CSS 属性 `line-height` 并观察示例文本的变化。尝试：
+## 11. 将`word-spacing`改回`0px`。修改 CSS 属性`line-height`并观察示例文本的变化。尝试：
 
 (a) `line-height: 2;`
 (b) `line-height: 25px;`
@@ -967,22 +1033,22 @@ line-height: 24px;
 
 ### list-style-type
 
-`list-style-type` 属性允许你为列表设置列表项目标记。列表项目标记是指每个列表项目左侧的那些符号/数字/字母。
+`list-style-type`属性允许你为列表设置列表项目标记。列表项目标记是指每个列表项目左侧的那些符号/数字/字母。
 
-对于有序列表，我们可以指定想要使用的数字或字母类型作为标记。例如，如果我们想使用罗马数字（如 i, ii, iii）作为项目标记，可以编写 `list-style-type: lower-roman;`。
+对于有序列表，我们可以指定想要使用的数字或字母类型作为标记。例如，如果我们想使用罗马数字（如 i, ii, iii）作为项目标记，可以编写`list-style-type: lower-roman;`。
 
 其他常用的标记还包括：
 
 `decimal`（这是默认值），
-`decimal-leading-zero`（带有前零的数字，例如 01, 02..），
+`decimal-leading-zero`（带有前导零的数字，例如 01, 02..），
 `lower-alpha`（例如 a, b, c..），
 `lower-greek`（例如 α, β, γ..），
 `upper-alpha`（例如 A, B, C..）以及
 `upper-roman`（例如 I, II, III…）。
 
-对于无序列表，你可以指定想要作为项目符号的形状。默认标记是 `disc`（实心圆）。你可以将其改为 `square`（正方形）或 `circle`（圆形）。
+对于无序列表，你可以指定想要作为项目符号的形状。默认标记是`disc`（实心圆）。你可以将其改为`square`（正方形）或`circle`（圆形）。
 
-此外，你也可以选择不为列表使用任何项目标记。要这样做，你需要编写 `list-style-type: none;`。这在创建导航栏时非常常见。
+此外，你也可以选择不为列表使用任何项目标记。要这样做，你需要编写`list-style-type: none;`。这在创建导航栏时非常常见。
 
 示例：
 
@@ -992,19 +1058,19 @@ line-height: 24px;
 
 ### list-style-image
 
-如果你不喜欢提供的任何列表样式，可以选择使用图像作为列表项目标记。要这样做，你可以使用 `list-style-image` 属性来指定使用的图像 URL。
+如果你不喜欢提供的任何列表样式，可以选择使用图像作为列表项目标记。要这样做，你可以使用`list-style-image`属性来指定使用的图像 URL。
 
 示例：
 
-`list-style-image: url(‘myMarker.gif’);`
+`list-style-image: url('myMarker.gif');`
 
 ### list-style-position
 
-`list-style-position` 属性用于指定列表项目标记应该出现在内容流的内部还是外部。有两个接受的值：`inside` 和 `outside`。
+`list-style-position`属性用于指定列表项目标记应该出现在内容流的内部还是外部。有两个接受的值：`inside`和`outside`。
 
-默认情况下，列表项目带有一定的缩进显示。如果 `list-style-position` 设置为 `inside`，则列表项目标记将在缩进之后。缩进由下方图中框的左边缘表示。如果 `list-style-position` 设置为 `outside`，则标记将在缩进之前显示![](img/00004.jpg)
+默认情况下，列表项目带有一定的缩进显示。如果`list-style-position`设置为`inside`，则列表项目标记将在缩进之后。缩进由下方图中框的左边缘表示。如果`list-style-position`设置为`outside`，则标记将在缩进之前显示![](img/00004.jpg)
 
-换句话说，`list-style-position: inside` 产生的缩进比 `list-style-position: outside` 更多。默认位置是 `outside`。
+换句话说，`list-style-position: inside`产生的缩进比`list-style-position: outside`更多。默认位置是`outside`。
 
 示例：
 
@@ -1012,7 +1078,7 @@ line-height: 24px;
 
 ### list-style
 
-`list-style` 是一个简写属性，用于在一个声明中设置所有的列表属性（即 `list-style-type`、`list-style-position` 和 `list-style-image`）。如果缺少任何值，将使用该缺失属性的默认值。
+`list-style`是一个简写属性，用于在一个声明中设置所有的列表属性（即`list-style-type`、`list-style-position`和`list-style-image`）。如果缺少任何值，将使用该缺失属性的默认值。
 
 示例：
 
@@ -1020,7 +1086,7 @@ line-height: 24px;
 
 ## CSS 链接
 
-可以使用之前章节讨论过的任何 CSS 属性对超链接进行样式设置。你可以使用 `background-color` 属性设置背景颜色，这将使链接具有高亮外观。你还可以使用第 8 章涵盖的文本和字体属性来更改字体大小、字体样式、文本颜色、文本装饰等。
+可以使用之前章节讨论过的任何 CSS 属性对超链接进行样式设置。你可以使用`background-color`属性设置背景颜色，这将使链接具有高亮外观。你还可以使用第 8 章涵盖的文本和字体属性来更改字体大小、字体样式、文本颜色、文本装饰等。
 
 此外，我们还可以根据状态对超链接进行样式设置。链接有四种状态：
 
@@ -1067,6 +1133,8 @@ ul {
 }
 ```
 
+
+
 现在我们必须对链接设置样式。我们将为链接使用块级显示（block display）。
 
 ```css
@@ -1095,7 +1163,7 @@ li {
 
 ### 练习 9.1
 
-1. 在浏览器和编辑器中同时打开文件 Chapter 9 - List and Links.html。
+1. 在浏览器和编辑器中同时打开文件 `Chapter 9 - List and Links.html`。
 2. 修改 `ol` 的 CSS 声明并观察有序列表的变化。尝试以下各项：
    (a) `list-style-type: decimal-leading-zero;`
    (b) `list-style-type: lower-roman;`
@@ -1110,13 +1178,10 @@ li {
    (c) `list-style-type: none;`
    (d) `list-style-type: disc;`
 4. 在 `ul` 的 CSS 声明中添加以下规则：
-   ```css
-   list-style-position: outside;
-   ```
 
-
-
-
+```css
+list-style-position: outside;
+```
 
 > 刷新浏览器。没有任何变化对吧？那是因为 `list-style-position: outside;` 是默认值。现在将 `list-style-position: outside;` 改为 `list-style-position: inside;`。你会发现无序列表向右稍微移动了（即缩进增加了）。
 
@@ -1167,6 +1232,7 @@ th {
   padding: 30px;
   text-align: center;
 }
+
 td {
   border: solid 1px black;
   padding: 20px;
@@ -1288,18 +1354,18 @@ tr:nth-child(odd) {
 ### 练习 10.1
 
 > 1. 在浏览器和文本编辑器中同时打开 `Chapter 10 - Tables.html` 文件。
-> 2. 修改 `table` 的 声明并观察表格发生了什么。尝试添加以下内容：
+> 2. 修改 `table` 的声明并观察表格发生了什么。尝试添加以下内容：
 
 > (a) `padding: 50px;`
 > (b) `margin: 30px;`
 > (c) `border-collapse: collapse;`
 > (d) 将 `border: dashed 1px black;` 改为 `border: 2px green;`
-> 3. 修改 `th` 的 声明并观察表格发生了什么。尝试添加：
+> 3. 修改 `th` 的声明并观察表格发生了什么。尝试添加：
 
 > (a) `padding: 50px;`
 > (b) `margin: 30px;`（外边距规则会被忽略，试试看）
 > 对 `td` 执行同样的操作。
-> 4. 移除第 3 部分中 `td` 和 `th` 的 `padding` 和 `margin` 属性。修改 `table` 的 声明并观察表格发生了什么。尝试添加以下：
+> 4. 移除第 3 部分中 `td` 和 `th` 的 `padding` 和 `margin` 属性。修改 `table` 的声明并观察表格发生了什么。尝试添加以下：
 
 > (a) `width: 300px;`
 > (b) `width: 50%;`
@@ -1307,30 +1373,28 @@ tr:nth-child(odd) {
 > (c) `height: 500px;`
 > (d) `height: 80%;`
 > 注意现在表格的高度是红色框的 80%。
-> 5. 移除第 4 部分中 `table` 的 `height` 和 `width` 属性。修改 `th` 的 声明并观察表格发生了什么。尝试将 `height` 属性更改为：
+> 5. 移除第 4 部分中 `table` 的 `height` 和 `width` 属性。修改 `th` 的声明并观察表格发生了什么。尝试将 `height` 属性更改为：
 
 > (a) `height: 100px;`
 > 从 `th` 中移除 `height` 属性并将其添加到 `td` 中。观察发生了什么。对 `tr` 执行同样的操作。
-> 6. 修改 `th` 的 声明并观察表格发生了什么。尝试将 `width` 属性更改为：
+> 6. 修改 `th` 的声明并观察表格发生了什么。尝试将 `width` 属性更改为：
 
 > (a) `width: 100px;`
 > 从 `th` 中移除 `width` 属性并将其添加到 `td` 中。观察发生了什么。应该没有区别，因为无论你在 `th` 还是 `td` 级别设置表格单元格的宽度，该宽度都会影响这两个元素。
-
-
-
-
 
 ## 7. 分别在第一个、第二个和第三个 `<th>` 开始标签添加 `id="firstColumn"`、`id="secondColumn"` 和 `id="thirdColumn"` 属性。接下来，添加以下 CSS 规则来分别调整三列的宽度：
 
 ```css
 #firstColumn {
-    width: 100px;
+  width: 100px;
 }
+
 #secondColumn {
-    width: 200px;
+  width: 200px;
 }
+
 #thirdColumn {
-    width: 50px;
+  width: 50px;
 }
 ```
 
@@ -1356,10 +1420,11 @@ tr:nth-child(odd) {
 
 ```css
 tr:nth-child(even) {
-    background-color: lightgreen;
+  background-color: lightgreen;
 }
+
 tr:nth-child(odd) {
-    background-color: lightgray;
+  background-color: lightgray;
 }
 ```
 
@@ -1395,9 +1460,9 @@ tr:nth-child(odd) {
 <!doctype html>
 <html>
 <head><title>第 3 章 - CSS 基础</title>
-<style> 
-p{
-background-color: yellow;
+<style>
+p {
+  background-color: yellow;
 }
 </style>
 </head>
@@ -1409,10 +1474,10 @@ background-color: yellow;
 <p class="myClass">这个段落有 class = "myClass".</p>
 <p class="myClass mySecondPara">这个段落有 class = "myClass" 且 class = "mySecondPara".</p>
 <div>
-    div 中包含一些文本。
-    <p>这个段落是 'div' 的第一个子元素。</p>
-    <p>这个段落是 'div' 的第二个子元素。</p>
-    <p>这个段落是 'div' 的第三个子元素。</p>
+  div 中包含一些文本。
+  <p>这个段落是 'div' 的第一个子元素。</p>
+  <p>这个段落是 'div' 的第二个子元素。</p>
+  <p>这个段落是 'div' 的第三个子元素。</p>
 </div>
 <a href="http://www.learncodingfast.com">快速学习</a>
 </body>
@@ -1427,24 +1492,24 @@ background-color: yellow;
 <head><title>第 4 章 - 模型</title>
 <style>
 div {
-    width: 100px;
-    height: 100px;
-    padding: 20px;
-    margin: 10px;
-    border: 5px solid black;
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  margin: 10px;
+  border: 5px solid black;
 }
 </style>
 </head>
 <body>
-<h1>第 4 章 - 模型</h1>
-<div>
-    这是一个盒子模型。
-</div>
-</body>
-</html>
 ```
 
-### 练习 5.1
+
+
+# 第 4 章 - 模型
+
+这是一个盒子模型。
+
+## 练习 5.1
 
 ```html
 <!doctype html>
@@ -1468,7 +1533,7 @@ div {
 </html>
 ```
 
-### 练习 5.2
+## 练习 5.2
 
 ```html
 <!doctype html>
@@ -1501,15 +1566,11 @@ div {
 </html>
 ```
 
+这个`<span id="displaydemo">黄色框</span>`用于演示行内级元素和块级元素之间的区别。
 
+“这简直就像`<span id="magic">魔法</span>`一样。你可以让文字消失。”
 
-
-
-这个 <span id="displaydemo">黄色框</span>用于演示行内级元素和块级元素之间的区别。
-
-“这简直就像<span id="magic">魔法</span>一样。你可以让文字消失。”
-
-### 练习 7.1
+## 练习 7.1
 
 ```html
 <!doctype html>
@@ -1543,7 +1604,7 @@ body {
 </html>
 ```
 
-### 练习 8.1
+## 练习 8.1
 
 ```html
 <!doctype html>
@@ -1575,7 +1636,7 @@ line-height: 1;
 </html>
 ```
 
-### 练习 9.1
+## 练习 9.1
 
 ```html
 <!doctype html>
@@ -1621,7 +1682,7 @@ a:active { }
 </html>
 ```
 
-### 练习 9.2
+## 练习 9.2
 
 ```html
 <!doctype html>
@@ -1655,7 +1716,7 @@ float: left;
 </html>
 ```
 
-### 练习 10.1
+## 练习 10.1
 
 ```html
 <!doctype html>
@@ -1694,4 +1755,3 @@ tr{
 </body>
 </html>
 ```
-

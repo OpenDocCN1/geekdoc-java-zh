@@ -1,32 +1,25 @@
+
 # 处理 SQLException
 
 > 原文：[`docs.oracle.com/javase/tutorial/jdbc/basics/sqlexception.html`](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqlexception.html)
 
 本页涵盖以下主题：
 
-+   SQLException 概述
-
-+   检索异常
-
-+   检索警告
-
-+   分类的 SQLException
-
-+   SQLException 的其他子类
++ `SQLException` 概述
++ 检索异常
++ 检索警告
++ 分类的 `SQLException`
++ `SQLException` 的其他子类
 
 ## SQLException 概述
 
 当 JDBC 在与数据源交互过程中遇到错误时，会抛出一个`SQLException`实例，而不是`Exception`。（在这种情况下，数据源代表`Connection`对象连接的数据库。）`SQLException`实例包含以下信息，可以帮助您确定错误的原因：
 
-+   错误描述。通过调用方法`SQLException.getMessage`检索包含此描述的`String`对象。
-
-+   SQLState 代码。这些代码及其相应的含义已经由 ISO/ANSI 和 Open Group（X/Open）标准化，尽管一些代码已保留供数据库供应商自行定义。这个`String`对象由五个字母数字字符组成。通过调用方法`SQLException.getSQLState`检索此代码。
-
-+   错误代码。这是一个整数值，标识导致抛出`SQLException`实例的错误。其值和含义是特定于实现的，可能是底层数据源返回的实际错误代码。通过调用方法`SQLException.getErrorCode`检索错误。
-
-+   一个原因。`SQLException`实例可能具有因果关系，由导致抛出`SQLException`实例的一个或多个`Throwable`对象组成。要浏览这些原因链，递归调用方法`SQLException.getCause`，直到返回一个`null`值。
-
-+   任何*链接*异常的引用。如果发生多个错误，这些异常通过此链引用。通过在抛出异常上调用方法`SQLException.getNextException`检索这些异常。
++ 错误描述。通过调用方法`SQLException.getMessage`检索包含此描述的`String`对象。
++ SQLState 代码。这些代码及其相应的含义已经由 ISO/ANSI 和 Open Group（X/Open）标准化，尽管一些代码已保留供数据库供应商自行定义。这个`String`对象由五个字母数字字符组成。通过调用方法`SQLException.getSQLState`检索此代码。
++ 错误代码。这是一个整数值，标识导致抛出`SQLException`实例的错误。其值和含义是特定于实现的，可能是底层数据源返回的实际错误代码。通过调用方法`SQLException.getErrorCode`检索错误。
++ 一个原因。`SQLException`实例可能具有因果关系，由导致抛出`SQLException`实例的一个或多个`Throwable`对象组成。要浏览这些原因链，递归调用方法`SQLException.getCause`，直到返回一个`null`值。
++ 任何*链接*异常的引用。如果发生多个错误，这些异常通过此链引用。通过在抛出异常上调用方法`SQLException.getNextException`检索这些异常。
 
 ## 检索异常
 
@@ -59,7 +52,6 @@ public static void printSQLException(SQLException ex) {
         }
     }
 }
-
 ```
 
 例如，如果您使用 Java DB 调用方法`CoffeesTable.dropTable`，表`COFFEES`不存在，*并且*您删除对`JDBCTutorialUtilities.ignoreSQLException`的调用，输出将类似于以下内容：
@@ -69,7 +61,6 @@ SQLState: 42Y55
 Error Code: 30000
 Message: 'DROP TABLE' cannot be performed on
 'TESTDB.COFFEES' because it does not exist.
-
 ```
 
 您可以先检索 `SQLState`，然后相应地处理 `SQLException`，而不是打印 `SQLException` 信息。例如，如果 `SQLState` 等于代码 `42Y55`（并且您正在使用 Java DB 作为您的 DBMS），则方法 `JDBCTutorialUtilities.ignoreSQLException` 返回 `true`，导致 `JDBCTutorialUtilities.printSQLException` 忽略 `SQLException`：
@@ -92,7 +83,6 @@ public static boolean ignoreSQLException(String sqlState) {
 
     return false;
 }
-
 ```
 
 ## 检索警告
@@ -129,7 +119,6 @@ public static void printWarnings(SQLWarning warning)
         warning = warning.getNextWarning();
     }
 }
-
 ```
 
 最常见的警告是 `DataTruncation` 警告，是 `SQLWarning` 的子类。所有 `DataTruncation` 对象的 SQLState 都是 `01004`，表示读取或写入数据时出现问题。`DataTruncation` 方法让您找出数据在哪一列或参数被截断，截断是在读取还是写入操作中发生的，应该传输多少字节，实际传输了多少字节。
@@ -138,11 +127,9 @@ public static void printWarnings(SQLWarning warning)
 
 您的 JDBC 驱动程序可能会抛出与常见 SQLState 或与特定 SQLState 类值不相关的常见错误状态对应的 `SQLException` 子类。这使您能够编写更具可移植性的错误处理代码。这些异常是以下类的子类之一：
 
-+   `SQLNonTransientException`
-
-+   `SQLTransientException`
-
-+   `SQLRecoverableException`
++ `SQLNonTransientException`
++ `SQLTransientException`
++ `SQLRecoverableException`
 
 查看 `java.sql` 包的最新 Javadoc 或您的 JDBC 驱动程序的文档，以获取有关这些子类的更多信息。
 
@@ -150,6 +137,5 @@ public static void printWarnings(SQLWarning warning)
 
 以下 `SQLException` 的子类也可能被抛出：
 
-+   `BatchUpdateException` 在批量更新操作期间发生错误时抛出。除了`SQLException`提供的信息外，`BatchUpdateException`还提供了在错误发生之前执行的所有语句的更新计数。
-
-+   `SQLClientInfoException` 在连接上无法设置一个或多个客户端信息属性时抛出。除了`SQLException`提供的信息外，`SQLClientInfoException`还提供了未设置的客户端信息属性列表。
++ `BatchUpdateException` 在批量更新操作期间发生错误时抛出。除了`SQLException`提供的信息外，`BatchUpdateException`还提供了在错误发生之前执行的所有语句的更新计数。
++ `SQLClientInfoException` 在连接上无法设置一个或多个客户端信息属性时抛出。除了`SQLException`提供的信息外，`SQLClientInfoException`还提供了未设置的客户端信息属性列表。

@@ -1,3 +1,4 @@
+
 # 原子变量
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/concurrency/atomicvars.html`](https://docs.oracle.com/javase/tutorial/essential/concurrency/atomicvars.html)
@@ -7,7 +8,6 @@
 要了解这个包可能如何使用，让我们回到最初用来演示线程干扰的`Counter`类：
 
 ```java
-
 class Counter {
     private int c = 0;
 
@@ -22,15 +22,12 @@ class Counter {
     public int value() {
         return c;
     }
-
 }
-
 ```
 
 使`Counter`免受线程干扰的一种方法是使其方法同步，就像`SynchronizedCounter`中那样：
 
 ```java
-
 class SynchronizedCounter {
     private int c = 0;
 
@@ -45,15 +42,12 @@ class SynchronizedCounter {
     public synchronized int value() {
         return c;
     }
-
 }
-
 ```
 
 对于这个简单的类，同步是一个可接受的解决方案。但对于一个更复杂的类，我们可能希望避免不必要同步的活跃度影响。用`AtomicInteger`替换`int`字段可以让我们在不使用同步的情况下防止线程干扰，就像`AtomicCounter`中那样：
 
 ```java
-
 import java.util.concurrent.atomic.AtomicInteger;
 
 class AtomicCounter {
@@ -70,7 +64,5 @@ class AtomicCounter {
     public int value() {
         return c.get();
     }
-
 }
-
 ```

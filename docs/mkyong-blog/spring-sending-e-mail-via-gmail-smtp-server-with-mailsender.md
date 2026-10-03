@@ -1,17 +1,18 @@
+
 # spring–使用 MailSender 通过 Gmail SMTP 服务器发送电子邮件
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring/spring-sending-e-mail-via-gmail-smtp-server-with-mailsender/>
 
-Spring 附带了一个有用的'**org . spring framework . mail . JavaMail . javamailsenderimpl**'类来简化通过 JavaMail API 发送电子邮件的过程。这里有一个 Maven 构建项目，使用 Spring 的“ **JavaMailSenderImpl** 通过 Gmail SMTP 服务器发送电子邮件。
+Spring 附带了一个有用的`org.springframework.mail.javamail.JavaMailSenderImpl`类来简化通过 JavaMail API 发送电子邮件的过程。这里有一个 Maven 构建项目，使用 Spring 的`JavaMailSenderImpl`通过 Gmail SMTP 服务器发送电子邮件。
 
 ## 1.项目依赖性
 
 添加 JavaMail 和 Spring 的依赖项。
 
-*文件:pom.xml*
+*文件：`pom.xml`*
 
-```java
- <project  
+```xml
+<project  
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
   http://maven.apache.org/maven-v4_0_0.xsd">
@@ -54,17 +55,17 @@ Spring 附带了一个有用的'**org . spring framework . mail . JavaMail . jav
     </dependency>
 
   </dependencies>
-</project> 
+</project>
 ```
 
 ## 2.春天的邮件发送者
 
-用 Spring 的 MailSender 接口发送电子邮件的 Java 类。
+用 Spring 的`MailSender`接口发送电子邮件的 Java 类。
 
-*文件:MailMail.java*
+*文件：`MailMail.java`*
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
@@ -87,20 +88,21 @@ public class MailMail
 		message.setText(msg);
 		mailSender.send(message);	
 	}
-} 
+}
 ```
 
 ## 3.Bean 配置文件
 
-配置 mailSender bean 并指定 Gmail SMTP 服务器的电子邮件详细信息。
+配置`mailSender` bean 并指定 Gmail SMTP 服务器的电子邮件详细信息。
 
 **Note**
+
 Gmail configuration details – [http://mail.google.com/support/bin/answer.py?hl=en&answer=13287](http://web.archive.org/web/20200616054438/http://mail.google.com/support/bin/answer.py?hl=en&answer=13287)
 
-*文件:Spring-Mail.xml*
+*文件：`Spring-Mail.xml`*
 
-```java
- <beans 
+```xml
+<beans 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
@@ -123,13 +125,13 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	<property name="mailSender" ref="mailSender" />
 </bean>
 
-</beans> 
+</beans>
 ```
 
 ## 4.运行它
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -148,9 +150,11 @@ public class App
     		   "Testing only \n\n Hello Spring Email Sender");
 
     }
-} 
+}
 ```
 
 ## 下载源代码
 
-Download it – [Spring-Email-Gmail-Smtp-Example.zip](http://web.archive.org/web/20200616054438/http://www.mkyong.com/wp-content/uploads/2010/03/Spring-Email-Gmail-Smtp-Example.zip)Tags : [email](http://web.archive.org/web/20200616054438/https://mkyong.com/tag/email/) [gmail](http://web.archive.org/web/20200616054438/https://mkyong.com/tag/gmail/) [smtp](http://web.archive.org/web/20200616054438/https://mkyong.com/tag/smtp/) [spring](http://web.archive.org/web/20200616054438/https://mkyong.com/tag/spring/)<input type="hidden" id="mkyong-current-postId" value="4067">
+Download it – [Spring-Email-Gmail-Smtp-Example.zip](http://web.archive.org/web/20200616054438/http://www.mkyong.com/wp-content/uploads/2010/03/Spring-Email-Gmail-Smtp-Example.zip)
+
+Tags : [email](http://web.archive.org/web/20200616054438/https://mkyong.com/tag/email/) [gmail](http://web.archive.org/web/20200616054438/https://mkyong.com/tag/gmail/) [smtp](http://web.archive.org/web/20200616054438/https://mkyong.com/tag/smtp/) [spring](http://web.archive.org/web/20200616054438/https://mkyong.com/tag/spring/)

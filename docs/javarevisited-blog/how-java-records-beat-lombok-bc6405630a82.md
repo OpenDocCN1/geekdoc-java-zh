@@ -1,3 +1,4 @@
+
 # Java 记录如何击败 Lombok
 
 > 原文：<https://medium.com/javarevisited/how-java-records-beat-lombok-bc6405630a82?source=collection_archive---------0----------------------->

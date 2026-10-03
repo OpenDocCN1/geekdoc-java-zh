@@ -1,3 +1,5 @@
+
+
 # 读取属性
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/ops/getattrs.html`](https://docs.oracle.com/javase/tutorial/jndi/ops/getattrs.html)
@@ -6,7 +8,6 @@
 
 ```java
 Attributes answer = ctx.getAttributes("cn=Ted Geisel, ou=People");
-
 ```
 
 您可以按照以下方式打印此答案的内容。
@@ -20,7 +21,6 @@ for (NamingEnumeration ae = answer.getAll(); ae.hasMore();) {
          System.out.println("value: " + e.next()))
         ;
 }
-
 ```
 
 这将产生以下输出。
@@ -44,7 +44,6 @@ attribute: telephonenumber
 value: +1 408 555 5252
 attribute: cn
 value: Ted Geisel
-
 ```
 
 ## 返回选定的属性
@@ -57,7 +56,6 @@ String[] attrIDs = {"sn", "telephonenumber", "golfhandicap", "mail"};
 
 // Get the attributes requested
 Attributes answer = ctx.getAttributes("cn=Ted Geisel, ou=People", attrIDs);
-
 ```
 
 `此示例`请求对象`"cn=Ted Geisel, ou=People"`的`"sn"`、`"telephonenumber"`、`"golfhandicap"`和`"mail"`属性。此对象除了`"golfhandicap"`属性外，其余属性都存在，因此答案中返回了三个属性。以下是示例的输出。
@@ -70,5 +68,5 @@ attribute: mail
 value: Ted.Geisel@JNDITutorial.example.com
 attribute: telephonenumber
 value: +1 408 555 5252
-
 ```
+

@@ -1,3 +1,4 @@
+
 # 2023 年，你可以在 Coursera 上在线获得 5 个常青藤计算机科学和工程学位
 
 > 原文：<https://medium.com/javarevisited/5-ivy-league-computer-science-and-engineering-degrees-you-can-earn-online-on-coursera-6ab0155d4147?source=collection_archive---------1----------------------->
@@ -22,7 +23,7 @@ image_credit- Coursera 学位课程
 
 最初，我对在线学位课程有点怀疑，一直在想，这真的可能吗？是否有效可信？但是，在网上，特别是在 Coursera 网站上读到这个消息后，我现在认为这是一个增加你学历的好方法。我知道我的许多同事在获得工程学士学位后就开始在 IT 领域工作了。他们中的许多人想从一所知名大学获得硕士学位，如 M.Tech 或 MBA，但他们总是害怕离开工作岗位去追求自己的梦想。在许多情况下，为了追求一个 [**硕士学位而辞职是不现实的，因为他们中的许多人已经结婚了，有些人甚至有了孩子。现在，他们都可以看到这个选项，并可以通过参加 Coursera 上世界知名大学的在线学位课程来实现他们的梦想。**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fdegrees)
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fdegrees>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fdegrees>
 
 # 2023 年 Coursera 上排名前五的计算机科学和工程学位
 
@@ -54,7 +55,7 @@ image_credit- Coursera 学位课程
 
 所以，你还在等什么，用美国排名前五的计算机科学研究生项目的学位来深化你的知识，促进你的职业生涯。该学位现在开放注册，他们正在接受注册。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fdegrees%2Fmaster-of-computer-science-illinois>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fdegrees%2Fmaster-of-computer-science-illinois>
 
 ## 2.[宾夕法尼亚大学计算机和信息技术硕士](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fdegrees%2Fmcit-penn)
 
@@ -63,16 +64,27 @@ image_credit- Coursera 学位课程
 ## 是什么让这个学位独一无二？
 
 *   **常春藤质量**
+
     这是一个首创的项目，为非计算机专业的学生提供常春藤计算机科学硕士学位。
+
 *   **围绕你的时间表**
+
     课程是 100%在线的。你将受益于与在校学生相同的高质量教学，并以相同的学位毕业。毕业证书并没有说明这个学位是在网上获得的还是在学校获得的。
+
 *   **可获得的价格**
+
     **MCIT 在线学位的费用明显低于校内替代方案和大多数计算机科学在线硕士学位。学生为总共 10 个课程单元的每个课程单元支付 2636 美元。学费和费用作为指南发布，可能会有所变化。**
+
 *   **真实世界、基于项目的学习**
+
     核心课程和选修课融合了计算机科学理论和基于项目的应用学习。你将有机会使用真实世界的工具和环境，比如 [TensorFlow](/@javinpaul/top-10-courses-to-learn-tensorflow-for-machine-learning-in-2020-39a31e7cd84b) 和[亚马逊云](/javarevisited/top-10-courses-to-learn-amazon-web-services-aws-cloud-in-2020-best-and-free-317f10d7c21d)。
+
 *   **教师访问**
+
     你将通过论坛和现场办公时间接触到世界知名的教师。
+
 *   **申请前先试一试**
+
     宾夕法尼亚工程大学在 Coursera 上提供了一门在线计算思维解决问题的课程，帮助你在申请前决定这个项目是否合适。
 
 这是在线申请这个学位的链接——宾夕法尼亚大学的计算机和信息技术硕士
@@ -118,11 +130,12 @@ image_credit- Coursera 学位课程
 除了这些在线学位项目，我发现还有两个值得考虑的项目与数据科学有关。如果你想在 2023 年获得数据科学学位，那么你可以在 Coursera 上查看以下学位课程:
 
 *   [伊利诺伊大学数据科学专业计算机科学硕士](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fdegrees%2Fmaster-of-computer-science-illinois%2Fdata-science)
+
 *   [科罗拉多大学博尔德分校数据科学硕士](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fdegrees%2Fmaster-of-science-data-science-boulder)
 
 如果你觉得 Coursera 的课程有用，因为它们是由知名公司如**谷歌**、 **IBM** 、**亚马逊**和世界上最好的大学创建的，我建议你加入 Coursera 的订阅计划 [**Coursera Plus**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus)
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
 这种单次订阅可以让你无限制地访问他们最受欢迎的**课程**、**专业**、**专业证书**和**指导项目**。它每年花费大约 399 美元，但是它完全物有所值，因为你可以获得无限制的证书。
 
@@ -139,19 +152,22 @@ image_credit- Coursera 学位课程
 其他**编程和职业文章**你可能喜欢
 
 *   [完整的 DevOps 开发者路线图](https://javarevisited.blogspot.com/2018/09/the-2018-devops-roadmap-your-guide-to-become-DevOps-Engineer.html)
-*   [10 张 Coursera 证书开始你的 IT 职业生涯](/javarevisited/top-10-coursera-certificates-to-start-your-career-in-cloud-data-science-ai-mainframe-and-it-558690c83587)
-*   [学习 Python 的 10 门 Coursera 课程和证书](https://javarevisited.blogspot.com/2020/02/10-best-coursera-courses--for-python.html#axzz6G15UISw6)
-*   [学习 Jenkins 自动化和开发运维的五大课程](https://javarevisited.blogspot.com/2018/09/top-5-jenkins-courses-for-java-and-DevOps-Programmers.html)
-*   [面向 Java 和 DevOps 专业人员的 10 门免费 Docker 课程](https://javarevisited.blogspot.sg/2018/02/10-free-docker-container-courses-for-Java-Developers.html)
-*   [每个程序员都应该学习的 11 个基本技能](https://dev.to/javinpaul/11-essential-skills-software-developers-should-learn-in-2020-1bio)
-*   [2023 年 Java 开发人员应该学习的 10 种工具](http://www.java67.com/2018/04/10-tools-java-developers-should-learn.html)
-*   [深度学习 Kubernetes 的 7 门免费课程](/javarevisited/7-free-online-courses-to-learn-kubernetes-in-2020-3b8a68ec7abc)
-*   Coursera 为初学者提供的最佳 Python 认证
-*   [plural sight vs Udemy vs Coursera 点评](/javarevisited/pluralsight-or-udemy-d9a94d2e8ee)
-*   [Coursera、edX 或 Udemy 证书会给你的简历增值吗](https://javarevisited.blogspot.com/2020/02/does-udemy-coursera-edx-educative-or.html)
+
+
+
+* [10 张 Coursera 证书开始你的 IT 职业生涯](/javarevisited/top-10-coursera-certificates-to-start-your-career-in-cloud-data-science-ai-mainframe-and-it-558690c83587)
+* [学习 Python 的 10 门 Coursera 课程和证书](https://javarevisited.blogspot.com/2020/02/10-best-coursera-courses--for-python.html#axzz6G15UISw6)
+* [学习 Jenkins 自动化和开发运维的五大课程](https://javarevisited.blogspot.com/2018/09/top-5-jenkins-courses-for-java-and-DevOps-Programmers.html)
+* [面向 Java 和 DevOps 专业人员的 10 门免费 Docker 课程](https://javarevisited.blogspot.sg/2018/02/10-free-docker-container-courses-for-Java-Developers.html)
+* [每个程序员都应该学习的 11 个基本技能](https://dev.to/javinpaul/11-essential-skills-software-developers-should-learn-in-2020-1bio)
+* [2023 年 Java 开发人员应该学习的 10 种工具](http://www.java67.com/2018/04/10-tools-java-developers-should-learn.html)
+* [深度学习 Kubernetes 的 7 门免费课程](/javarevisited/7-free-online-courses-to-learn-kubernetes-in-2020-3b8a68ec7abc)
+* Coursera 为初学者提供的最佳 Python 认证
+* [plural sight vs Udemy vs Coursera 点评](/javarevisited/pluralsight-or-udemy-d9a94d2e8ee)
+* [Coursera、edX 或 Udemy 证书会给你的简历增值吗](https://javarevisited.blogspot.com/2020/02/does-udemy-coursera-edx-educative-or.html)
 
 感谢您阅读本文。如果你喜欢 Coursera 的这些最好的在线学位课程，请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
-**p . s .**——如果你想知道其他可以在网上获得的编程和计算机科学学位，那么我强烈建议你在 Coursera 上查看这些 [**计算机科学和工程学位，Coursera**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fdegrees)是获得世界顶级大学和学院的真实学位和认证的最佳地点之一。
+**p . s .**——如果你想知道其他可以在网上获得的编程和计算机科学学位，那么我强烈建议你在 Coursera 上查看这些 [计算机科学和工程学位，Coursera](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fdegrees)是获得世界顶级大学和学院的真实学位和认证的最佳地点之一。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fdegrees> 
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fdegrees>

@@ -1,24 +1,25 @@
+
 # 如何用 Java 在 AWS Lambda 函数中实现 Hibernate
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-aws-lambda-hibernate>
 
-## 1.概观
+## 1. 概观
 
 AWS Lambda 允许我们创建可以轻松部署和扩展的轻量级应用程序。虽然我们可以使用像 [Spring Cloud Function](/web/20220524114622/https://www.baeldung.com/spring-cloud-function) 这样的框架，但是出于性能原因，我们通常会尽可能少地使用框架代码。
 
-有时我们需要从 Lambda 访问关系数据库。这就是 Hibernate 和 T2 JPA 非常有用的地方。但是，**没有春天，我们怎么给 Lambda 添加 Hibernate 呢？**
+有时我们需要从 Lambda 访问关系数据库。这就是 Hibernate 和 JPA 非常有用的地方。但是，**没有 Spring，我们怎么给 Lambda 添加 Hibernate 呢？**
 
 在本教程中，我们将看看在 Lambda 中使用任何 RDBMS 的挑战，以及 Hibernate 如何以及何时有用。我们的示例将使用无服务器应用程序模型来构建数据的 REST 接口。
 
 我们将看看如何使用 [Docker](/web/20220524114622/https://www.baeldung.com/tag/docker/) 和 AWS SAM CLI 在本地机器上测试一切。
 
-## 2.在 Lambdas 中使用 RDBMS 和 Hibernate 的挑战
+## 2. 在 Lambdas 中使用 RDBMS 和 Hibernate 的挑战
 
 Lambda 代码需要尽可能小，以加速冷启动。此外，Lambda 应该能够在几毫秒内完成它的工作。然而，使用关系数据库会涉及大量的框架代码，运行速度会更慢。
 
 在云原生应用中，我们尝试使用云原生技术进行设计。像 [Dynamo DB](/web/20220524114622/https://www.baeldung.com/aws-lambda-dynamodb-java) 这样的无服务器数据库可能更适合 Lambdas。然而，对关系数据库的需求可能来自于我们项目中的一些其他优先级。
 
-### 2.1.使用 Lambda 中的 RDBMS
+### 2.1. 使用 Lambda 中的 RDBMS
 
 Lambdas 运行一小段时间，然后它们的容器暂停。容器可以在将来的调用中重用，或者如果不再需要，可以由 AWS 运行时处理掉。这意味着**容器要求的任何资源都必须在单次调用**的生命周期内小心管理。
 
@@ -28,13 +29,13 @@ Lambdas 运行一小段时间，然后它们的容器暂停。容器可以在将
 
 **在一些项目中，Lambda 并不是连接 RDBMS** 的最佳选择，而传统的带有连接池的 Spring 数据服务，也许在 EC2 或 ECS 中运行，也许是更好的解决方案。
 
-### 2.2.Hibernate 案例
+### 2.2. Hibernate 案例
 
 确定我们是否需要 Hibernate 的一个好方法是问一下如果没有它我们会写什么样的代码。
 
 如果不使用 Hibernate 会导致我们必须编码复杂的连接或者字段和列之间的大量样板映射，那么从编码的角度来看，Hibernate 是一个很好的解决方案。如果我们的应用程序没有经历高负载或者对低延迟的需求，那么 Hibernate 的开销可能不是问题。
 
-### 2.3.Hibernate 是一项重量级技术
+### 2.3. Hibernate 是一项重量级技术
 
 然而，我们还需要考虑在 Lambda 中使用 Hibernate 的成本。
 
@@ -42,62 +43,62 @@ Hibernate jar 文件的大小是 7 MB。Hibernate 在启动时需要时间来检
 
 直接使用 [JDBC](/web/20220524114622/https://www.baeldung.com/java-jdbc) 可能更容易。或者，一个轻量级的类似 ORM 的框架，如 [JDBI](/web/20220524114622/https://www.baeldung.com/jdbi) 可以提供一个很好的查询抽象，而不会有太多的开销。
 
-## 3.示例应用程序
+## 3. 示例应用程序
 
-在本教程中，我们将为一家小批量运输公司构建一个跟踪应用程序。让我们想象他们从顾客那里收集大件物品来创建一个`Consignment`。然后，无论货物运送到哪里，都会被打上时间戳，这样客户就可以监控了。每批货物都有一个`source`和`destination`，为此我们将使用[what3words.com](https://web.archive.org/web/20220524114622/https://what3words.com/goes.pepper.fence)作为我们的地理定位服务。
+在本教程中，我们将为一家小批量运输公司构建一个跟踪应用程序。让我们想象他们从顾客那里收集大件物品来创建一个 `Consignment`。然后，无论货物运送到哪里，都会被打上时间戳，这样客户就可以监控了。每批货物都有一个 `source` 和 `destination`，为此我们将使用 [what3words.com](https://web.archive.org/web/20220524114622/https://what3words.com/goes.pepper.fence) 作为我们的地理定位服务。
 
 让我们想象一下，他们使用的移动设备连接和重试都不好。因此，在创建寄售之后，关于它的其余信息可以以任何顺序到达。这种复杂性，以及每批货物需要两个列表——物品和登记——是使用 Hibernate 的一个很好的理由。
 
-### 3.1.API 设计
+### 3.1. API 设计
 
-我们将使用以下方法创建一个 REST API:
+我们将使用以下方法创建一个 REST API：
 
-*   `POST /consignment`–创建新的托运，返回 ID，并提供`source `和`destination`；必须在任何其他操作之前完成
-*   `POST /consignment/{id}/item`–向托运货物中添加物品；总是添加到列表的末尾
-*   `POST /consignment/{id}/checkin`–在沿途任何地点托运货物，提供`location`和时间戳；将始终按照时间戳的顺序保存在数据库中
-*   `GET /consignment/{id}`–获得货物的完整历史记录，包括货物是否已经到达目的地
+- `POST /consignment` – 创建新的托运，返回 ID，并提供 `source` 和 `destination`；必须在任何其他操作之前完成
+- `POST /consignment/{id}/item` – 向托运货物中添加物品；总是添加到列表的末尾
+- `POST /consignment/{id}/checkin` – 在沿途任何地点托运货物，提供 `location` 和时间戳；将始终按照时间戳的顺序保存在数据库中
+- `GET /consignment/{id}` – 获得货物的完整历史记录，包括货物是否已经到达目的地
 
-### 3.2.λ设计
+### 3.2. Lambda 设计
 
 我们将使用一个 Lambda 函数为这个 REST API 提供[无服务器应用模型](/web/20220524114622/https://www.baeldung.com/aws-serverless)来定义它。这意味着我们的单个 Lambda 处理函数将需要能够满足上述所有请求。
 
 为了使测试变得快速和容易，没有部署到 AWS 的开销，我们将在我们的开发机器上测试一切。
 
-### 4.创建 Lambda
+## 4. 创建 Lambda
 
 让我们建立一个新的 Lambda 来满足我们的 API，但是还没有实现它的数据访问层。
 
-### 4.1.先决条件
+### 4.1. 先决条件
 
-首先，如果我们还没有 Docker 的话，我们需要[安装它。我们将需要它来托管我们的测试数据库，AWS SAM CLI 使用它来模拟 Lambda 运行时。](https://web.archive.org/web/20220524114622/https://docs.docker.com/get-docker/)
+首先，如果我们还没有 Docker 的话，我们需要[安装它](https://web.archive.org/web/20220524114622/https://docs.docker.com/get-docker/)。我们将需要它来托管我们的测试数据库，AWS SAM CLI 使用它来模拟 Lambda 运行时。
 
-我们可以测试我们是否有 Docker:
+我们可以测试我们是否有 Docker：
 
-```java
+```bash
 $ docker --version
 Docker version 19.03.12, build 48a66213fe
 ```
 
-接下来，我们需要[安装 AWS SAM CLI](https://web.archive.org/web/20220524114622/https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html) ，然后测试它:
+接下来，我们需要[安装 AWS SAM CLI](https://web.archive.org/web/20220524114622/https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html) ，然后测试它：
 
-```java
+```bash
 $ sam --version
 SAM CLI, version 1.1.0
 ```
 
 现在我们准备创建我们的 Lambda。
 
-### 4.2.创建 SAM 模板
+### 4.2. 创建 SAM 模板
 
-SAM CLI 为我们提供了一种创建新 Lambda 函数的方法:
+SAM CLI 为我们提供了一种创建新 Lambda 函数的方法：
 
-```java
+```bash
 $ sam init
 ```
 
-这将提示我们新项目的设置。让我们选择以下选项:
+这将提示我们新项目的设置。让我们选择以下选项：
 
-```java
+```text
 1 - AWS Quick Start Templates
 13 - Java 8
 1 - maven
@@ -107,9 +108,9 @@ Project name - shipping-tracker
 
 我们应该注意，这些选项编号可能会随着 SAM 工具的更高版本而变化。
 
-现在，应该有一个名为`shipping-tracker`的新目录，其中有一个存根应用程序。如果我们查看其`template.yaml`文件的内容，我们会发现一个名为`HelloWorldFunction`的函数，带有一个简单的 REST API:
+现在，应该有一个名为 `shipping-tracker` 的新目录，其中有一个存根应用程序。如果我们查看其 `template.yaml` 文件的内容，我们会发现一个名为 `HelloWorldFunction` 的函数，带有一个简单的 REST API：
 
-```java
+```yaml
 Events:
   HelloWorld:
     Type: Api 
@@ -118,30 +119,30 @@ Events:
       Method: get
 ```
 
-默认情况下，这满足了对`/hello`的一个基本 GET 请求。我们应该通过使用`sam`来构建和测试它，快速测试一切都在工作:
+默认情况下，这满足了对 `/hello` 的一个基本 GET 请求。我们应该通过使用 `sam` 来构建和测试它，快速测试一切都在工作：
 
-```java
+```bash
 $ sam build
 ... lots of maven output
 $ sam start-api
 ```
 
-然后我们可以使用`curl`测试`hello world` API:
+然后我们可以使用 `curl` 测试 `hello world` API：
 
-```java
+```bash
 $ curl localhost:3000/hello
 { "message": "hello world", "location": "192.168.1.1" }
 ```
 
-之后，让我们通过使用`CTRL+C `中止程序来停止`sam`运行它的 API 监听器。
+之后，让我们通过使用 `CTRL+C` 中止程序来停止 `sam` 运行它的 API 监听器。
 
 现在我们有了一个空的 Java 8 Lambda，我们需要定制它来成为我们的 API。
 
-### 4.3.创建我们的 API
+### 4.3. 创建我们的 API
 
-为了创建我们的 API，我们需要将我们自己的路径添加到`template.yaml`文件的`Events`部分:
+为了创建我们的 API，我们需要将我们自己的路径添加到 `template.yaml` 文件的 `Events` 部分：
 
-```java
+```yaml
 CreateConsignment:
   Type: Api 
   Properties:
@@ -164,23 +165,23 @@ ViewConsignment:
     Method: get
 ```
 
-让我们也将我们调用的函数从`HelloWorldFunction`重命名为`ShippingFunction`:
+让我们也将我们调用的函数从 `HelloWorldFunction` 重命名为 `ShippingFunction`：
 
-```java
+```yaml
 Resources:
   ShippingFunction:
     Type: AWS::Serverless::Function 
 ```
 
-接下来，我们将目录 it 重命名为`ShippingFunction`，并将 Java 包从`helloworld`更改为`com.baeldung.lambda.shipping`。这意味着我们需要更新`template.yaml`中的`CodeUri`和`Handler`属性，以指向新的位置:
+接下来，我们将目录重命名为 `ShippingFunction`，并将 Java 包从 `helloworld` 更改为 `com.baeldung.lambda.shipping`。这意味着我们需要更新 `template.yaml` 中的 `CodeUri` 和 `Handler` 属性，以指向新的位置：
 
-```java
+```yaml
 Properties:
   CodeUri: ShippingFunction
   Handler: com.baeldung.lambda.shipping.App::handleRequest
 ```
 
-最后，为了给我们自己的实现腾出空间，让我们替换处理程序的主体:
+最后，为了给我们自己的实现腾出空间，让我们替换处理程序的主体：
 
 ```java
 public APIGatewayProxyResponseEvent handleRequest(APIGatewayProxyRequestEvent input, Context context) {
@@ -195,41 +196,41 @@ public APIGatewayProxyResponseEvent handleRequest(APIGatewayProxyRequestEvent in
 }
 ```
 
-尽管单元测试是一个好主意，但是对于这个例子，我们也将通过删除`src/test`目录来删除所提供的单元测试。
+尽管单元测试是一个好主意，但是对于这个例子，我们也将通过删除 `src/test` 目录来删除所提供的单元测试。
 
-### 4.4.测试空 API
+### 4.4. 测试空 API
 
-现在我们已经移动了一些东西，并创建了我们的 API 和一个基本的处理程序，让我们仔细检查一下一切是否仍然工作:
+现在我们已经移动了一些东西，并创建了我们的 API 和一个基本的处理程序，让我们仔细检查一下一切是否仍然工作：
 
-```java
+```bash
 $ sam build
 ... maven output
 $ sam start-api
 ```
 
-让我们使用`curl`来测试 HTTP GET 请求:
+让我们使用 `curl` 来测试 HTTP GET 请求：
 
-```java
+```bash
 $ curl localhost:3000/consignment/123
 /consignment/{id}
 ```
 
-我们也可以使用`curl -d`来发布:
+我们也可以使用 `curl -d` 来发布：
 
-```java
+```bash
 $ curl -d '{"source":"data.orange.brings", "destination":"heave.wipes.clay"}' \
   -H 'Content-Type: application/json' \
   http://localhost:3000/consignment/
 /consignment
 ```
 
-如我们所见，两个请求都成功结束。我们的存根代码输出`resource`——请求的路径——我们可以在设置到各种服务方法的路由时使用它。
+如我们所见，两个请求都成功结束。我们的存根代码输出 `resource`——请求的路径——我们可以在设置到各种服务方法的路由时使用它。
 
-### 4.5.在 Lambda 中创建端点
+### 4.5. 在 Lambda 中创建端点
 
 我们使用一个 Lambda 函数来处理我们的四个端点。我们可以在同一个代码库中为每个端点创建不同的处理程序类，或者为每个端点编写单独的应用程序，但是将相关的 API 放在一起可以让一个 Lambdas 机群为它们提供公共代码，这可以更好地利用资源。
 
-然而，我们需要构建一个 REST 控制器的等价物，将每个请求分派给一个合适的 Java 函数。因此，我们将创建一个存根`ShippingService`类，并从处理程序路由到它:
+然而，我们需要构建一个 REST 控制器的等价物，将每个请求分派给一个合适的 Java 函数。因此，我们将创建一个存根 `ShippingService` 类，并从处理程序路由到它：
 
 ```java
 public class ShippingService {
@@ -249,9 +250,9 @@ public class ShippingService {
 }
 ```
 
-我们还将为`Consignment`、`Item,`和`Checkin`创建空类。这些很快就会成为我们的榜样。
+我们还将为 `Consignment`、`Item` 和 `Checkin` 创建空类。这些很快就会成为我们的榜样。
 
-现在我们有了一个服务，让我们使用`resource`来路由到适当的服务方法。我们将在处理程序中添加一个`switch`语句，将请求路由到服务:
+现在我们有了一个服务，让我们使用 `resource` 来路由到适当的服务方法。我们将在处理程序中添加一个 `switch` 语句，将请求路由到服务：
 
 ```java
 Object result = "OK";
@@ -281,23 +282,25 @@ return new APIGatewayProxyResponseEvent()
   .withBody(toJson(result));
 ```
 
-我们可以使用[杰克逊](/web/20220524114622/https://www.baeldung.com/jackson)来实现我们的`fromJson`和`toJson`功能。
+我们可以使用 [Jackson](/web/20220524114622/https://www.baeldung.com/jackson) 来实现我们的 `fromJson` 和 `toJson` 功能。
 
-### 4.6.失败的实现
+### 4.6. 失败的实现
 
-到目前为止，我们已经学习了如何创建一个 AWS Lambda 来支持一个 API，使用`sam`和`curl`来测试它，并在我们的处理程序中构建基本的路由功能。我们可以对错误的输入添加更多的错误处理。
+到目前为止，我们已经学习了如何创建一个 AWS Lambda 来支持一个 API，使用 `sam` 和 `curl` 来测试它，并在我们的处理程序中构建基本的路由功能。我们可以对错误的输入添加更多的错误处理。
 
-我们应该注意到,`template.yaml`中的映射已经期望 AWS API 网关过滤不在我们 API 中正确路径上的请求。因此，我们需要对坏路径进行更少的错误处理。
+
+
+我们应该注意到，`template.yaml`中的映射已经期望 AWS API 网关过滤不在我们 API 中正确路径上的请求。因此，我们需要对坏路径进行更少的错误处理。
 
 现在，是时候用数据库、实体模型和 Hibernate 来实现我们的服务了。
 
-## 5.设置数据库
+## 5. 设置数据库
 
 对于这个例子，我们将使用 PostgreSQL 作为 RDBMS。任何关系数据库都可以工作。
 
-### 5.1.在 Docker 中启动 PostgreSQL
+### 5.1. 在 Docker 中启动 PostgreSQL
 
-首先，我们将提取一个 PostgreSQL docker 映像:
+首先，我们将提取一个 PostgreSQL docker 映像：
 
 ```java
 $ docker pull postgres:latest
@@ -306,13 +309,13 @@ Status: Downloaded newer image for postgres:latest
 docker.io/library/postgres:latest
 ```
 
-现在让我们为这个数据库创建一个 docker 网络来运行。这个网络将允许我们的 Lambda 与数据库容器通信:
+现在让我们为这个数据库创建一个 docker 网络来运行。这个网络将允许我们的 Lambda 与数据库容器通信：
 
 ```java
 $ docker network create shipping
 ```
 
-接下来，我们需要在该网络中启动数据库容器:
+接下来，我们需要在该网络中启动数据库容器：
 
 ```java
 docker run --name postgres \
@@ -321,13 +324,13 @@ docker run --name postgres \
   -d postgres:latest
 ```
 
-对于`–name,`，我们将容器命名为`postgres`。通过`–network,`,我们将它添加到了我们的`shipping` docker 网络中。为了设置服务器的密码，我们使用了环境变量`POSTGRES_PASSWORD`，用`-e`开关设置。
+对于`--name`，我们将容器命名为`postgres`。通过`--network`，我们将它添加到了我们的`shipping` docker 网络中。为了设置服务器的密码，我们使用了环境变量`POSTGRES_PASSWORD`，用`-e`开关设置。
 
 我们还使用`-d`在后台运行容器，而不是绑定我们的 shell。PostgreSQL 将在几秒钟后启动。
 
-### 5.2.添加模式
+### 5.2. 添加模式
 
-我们需要一个新的表模式，所以让我们使用 PostgreSQL 容器中的`psql`客户端来添加`shipping`模式:
+我们需要一个新的表模式，所以让我们使用 PostgreSQL 容器中的`psql`客户端来添加`shipping`模式：
 
 ```java
 $ docker exec -it postgres psql -U postgres
@@ -337,7 +340,7 @@ Type "help" for help.
 postgres=#
 ```
 
-在这个 shell 中，我们创建了模式:
+在这个 shell 中，我们创建了模式：
 
 ```java
 postgres=# create schema shipping;
@@ -348,13 +351,13 @@ CREATE SCHEMA
 
 我们现在运行 PostgreSQL，准备好让 Lambda 使用它。
 
-## 6.添加我们的实体模型和 DAO
+## 6. 添加我们的实体模型和 DAO
 
 现在我们有了一个数据库，让我们创建我们的实体模型和 DAO。虽然我们只使用了一个连接，但是让我们使用[光连接池](/web/20220524114622/https://www.baeldung.com/hikaricp)来看看如何为可能需要在一次调用中针对数据库运行多个连接的 Lambdas 配置它。
 
-### 6.1.向项目中添加 Hibernate
+### 6.1. 向项目中添加 Hibernate
 
-我们将为 [Hibernate](https://web.archive.org/web/20220524114622/https://search.maven.org/artifact/org.hibernate/hibernate-core) 和[光连接池](https://web.archive.org/web/20220524114622/https://search.maven.org/artifact/org.hibernate/hibernate-hikaricp)添加对`pom.xml`的依赖。我们还将添加 [PostgreSQL JDBC 驱动程序](https://web.archive.org/web/20220524114622/https://search.maven.org/artifact/org.postgresql/postgresql):
+我们将为 [Hibernate](https://web.archive.org/web/20220524114622/https://search.maven.org/artifact/org.hibernate/hibernate-core) 和[光连接池](https://web.archive.org/web/20220524114622/https://search.maven.org/artifact/org.hibernate/hibernate-hikaricp)添加对`pom.xml`的依赖。我们还将添加 [PostgreSQL JDBC 驱动程序](https://web.archive.org/web/20220524114622/https://search.maven.org/artifact/org.postgresql/postgresql)：
 
 ```java
 <dependency>
@@ -374,9 +377,9 @@ CREATE SCHEMA
 </dependency>
 ```
 
-### 6.2.实体模型
+### 6.2. 实体模型
 
-让我们充实实体对象。一个`Consignment`有一个物品和值机的列表，还有它的`source`、`destination`，还有它是否已经送达(也就是是否已经签到了它的最终目的地):
+让我们充实实体对象。一个`Consignment`有一个物品和值机的列表，还有它的`source`、`destination`，还有它是否已经送达(也就是是否已经签到了它的最终目的地)：
 
 ```java
 @Entity(name = "consignment")
@@ -393,7 +396,7 @@ public class Consignment {
 }
 ```
 
-我们将该类注释为一个实体，并带有一个表名。我们也会提供 getters 和 setters。让我们用列名来标记 getters:
+我们将该类注释为一个实体，并带有一个表名。我们也会提供 getters 和 setters。让我们用列名来标记 getters：
 
 ```java
 @Id
@@ -418,7 +421,7 @@ public boolean isDelivered() {
 }
 ```
 
-对于我们的列表，我们将使用`@ElementCollection`注释使它们成为独立表中的有序列表，并与`consignment`表建立外键关系:
+对于我们的列表，我们将使用`@ElementCollection`注释使它们成为独立表中的有序列表，并与`consignment`表建立外键关系：
 
 ```java
 @ElementCollection(fetch = EAGER)
@@ -438,7 +441,7 @@ public List getCheckins() {
 
 这就是 Hibernate 开始为自己买单的地方，执行管理集合的工作相当容易。
 
-`Item`实体更简单:
+`Item`实体更简单：
 
 ```java
 @Embeddable
@@ -468,7 +471,7 @@ public class Item {
 
 它被标记为`@Embeddable`以使其成为父对象中列表定义的一部分。
 
-类似地，我们将定义`Checkin`:
+类似地，我们将定义`Checkin`：
 
 ```java
 @Embeddable
@@ -490,9 +493,9 @@ public class Checkin {
 } 
 ```
 
-### 6.3.创建一个航运刀
+### 6.3. 创建一个航运刀
 
-我们的`ShippingDao`类将依赖于被传递一个开放休眠`Session`。这将需要`ShippingService` 来管理会话:
+我们的`ShippingDao`类将依赖于被传递一个开放休眠`Session`。这将需要`ShippingService` 来管理会话：
 
 ```java
 public void save(Session session, Consignment consignment) {
@@ -508,13 +511,13 @@ public Optional<Consignment> find(Session session, String id) {
 
 稍后我们将把它连接到我们的`ShippingService` 中。
 
-## 7.Hibernate 周期
+## 7. Hibernate 周期
 
 到目前为止，我们的实体模型和 DAO 与非 Lambda 实现不相上下。下一个挑战是在 Lambda 的生命周期内创建一个 Hibernate `SessionFactory`。
 
-### 7.1.数据库在哪里？
+### 7.1. 数据库在哪里？
 
-如果我们要从 Lambda 访问数据库，那么它需要是可配置的。让我们将 JDBC URL 和数据库凭证放入我们的`template.yaml`中的环境变量:
+如果我们要从 Lambda 访问数据库，那么它需要是可配置的。让我们将 JDBC URL 和数据库凭证放入我们的`template.yaml`中的环境变量：
 
 ```java
 Environment: 
@@ -526,13 +529,13 @@ Environment:
 
 这些环境变量将被注入 Java 运行时。`postgres`用户是 Docker PostgreSQL 容器的默认用户。当我们之前启动容器时，我们将密码指定为`password`。
 
-在`DB_URL`中，我们有服务器名称——`//postgres`是我们给容器的名称——数据库名称`postgres `是默认数据库。
+在`DB_URL`中，我们有服务器名称——`//postgres`是我们给容器的名称——数据库名称`postgres`是默认数据库。
 
-值得注意的是，尽管我们在这个例子中对这些值进行了硬编码，但是 SAM 模板允许我们声明输入和`parameter overrides.` ,因此它们可以在以后进行参数化。
+值得注意的是，尽管我们在这个例子中对这些值进行了硬编码，但是 SAM 模板允许我们声明输入和`parameter overrides`，因此它们可以在以后进行参数化。
 
-### 7.2.创建会话工厂
+### 7.2. 创建会话工厂
 
-我们需要配置 Hibernate 和光连接池。为了给 Hibernate 提供设置，我们将它们添加到一个`Map`:
+我们需要配置 Hibernate 和光连接池。为了给 Hibernate 提供设置，我们将它们添加到一个`Map`：
 
 ```java
 Map<String, String> settings = new HashMap<>();
@@ -554,7 +557,7 @@ settings.put(HBM2DDL_DATABASE_ACTION, "create");
 
 正如我们所见，许多设置已经在 Hibernate 的`AvailableSettings`类中定义了常量，尽管光特有的设置没有。
 
-现在我们有了设置，我们需要构建`SessionFactory`。我们将分别向其中添加我们的实体类:
+现在我们有了设置，我们需要构建`SessionFactory`。我们将分别向其中添加我们的实体类：
 
 ```java
 StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
@@ -569,11 +572,11 @@ return new MetadataSources(registry)
   .buildSessionFactory();
 ```
 
-### 7.3.管理资源
+### 7.3. 管理资源
 
 启动时，Hibernate 围绕实体对象执行代码生成。它并不打算让应用程序多次执行该操作，而是使用时间和内存来执行。所以，我们想在 Lambda 冷启动时做一次。
 
-因此，我们应该创建`SessionFactory`，因为我们的处理程序对象是由 Lambda 框架创建的。我们可以在 handler 类的初始化列表中这样做:
+因此，我们应该创建`SessionFactory`，因为我们的处理程序对象是由 Lambda 框架创建的。我们可以在 handler 类的初始化列表中这样做：
 
 ```java
 private SessionFactory sessionFactory = createSessionFactory();
@@ -583,7 +586,7 @@ private SessionFactory sessionFactory = createSessionFactory();
 
 更糟糕的是，**没有生命周期事件允许 Lambda 关闭被 AWS 运行时处理的资源**。因此，以这种方式保持的连接有可能永远不会被正确释放。
 
-我们可以通过挖掘连接池的`SessionFactory`并显式关闭任何连接来解决这个问题:
+我们可以通过挖掘连接池的`SessionFactory`并显式关闭任何连接来解决这个问题：
 
 ```java
 private void flushConnectionPool() {
@@ -599,9 +602,11 @@ private void flushConnectionPool() {
 
 我们应该注意到，`SessionFactory`的`close`方法也会关闭连接，但是它也会使`SessionFactory`不可用。
 
-### 7.4.添加到处理程序
+### 7.4. 添加到处理程序
 
-**现在，我们需要确保处理程序使用会话工厂并释放它的连接**。记住这一点，让我们将大部分控制器功能提取到一个名为`routeRequest`的方法中，并修改我们的处理程序来释放`finally`块中的资源:
+
+
+现在，我们需要确保处理程序使用会话工厂并释放它的连接。记住这一点，让我们将大部分控制器功能提取到一个名为`routeRequest`的方法中，并修改我们的处理程序来释放`finally`块中的资源：
 
 ```java
 try {
@@ -609,32 +614,32 @@ try {
     return routeRequest(input, service);
 } finally {
     flushConnectionPool();
-} 
+}
 ```
 
-我们还修改了我们的`Shipping` `Service`，将`SessionFactory`和`ShippingDao`作为属性，通过构造函数注入，但是它还没有使用它们。
+我们还修改了`ShippingService`，将`SessionFactory`和`ShippingDao`作为属性，通过构造函数注入，但是它还没有使用它们。
 
-### 7.5.测试休眠
+### 7.5. 测试休眠
 
 此时，尽管`ShippingService`什么都不做，但是调用 Lambda 应该会导致 Hibernate 启动并生成 DDL。
 
-在注释掉它的设置之前，让我们仔细检查它生成的 DDL:
+在注释掉它的设置之前，让我们仔细检查它生成的 DDL：
 
 ```java
 $ sam build
 $ sam local start-api --docker-network shipping
 ```
 
-我们像以前一样构建应用程序，但是现在我们将参数`–docker-network`添加到`sam local`中。**它在与我们的数据库**相同的网络中运行测试 Lambda，这样 Lambda 就可以通过使用它的容器名到达数据库容器。
+我们像以前一样构建应用程序，但是现在我们将参数`--docker-network`添加到`sam local`中。它在与我们的数据库相同的网络中运行测试 Lambda，这样 Lambda 就可以通过使用它的容器名到达数据库容器。
 
-当我们第一次使用`curl`到达终点时，我们的表应该被创建:
+当我们第一次使用`curl`到达终点时，我们的表应该被创建：
 
 ```java
 $ curl localhost:3000/consignment/123
 {"id":null,"source":null,"destination":null,"items":[],"checkins":[],"delivered":false}
 ```
 
-存根代码仍然返回空白的`Consignment`。但是，现在让我们检查数据库，看看这些表是否已经创建:
+存根代码仍然返回空白的`Consignment`。但是，现在让我们检查数据库，看看这些表是否已经创建：
 
 ```java
 $ docker exec -it postgres pg_dump -s -U postgres
@@ -646,13 +651,13 @@ CREATE TABLE shipping.consignment_item (
 
 一旦我们对 Hibernate 设置的运行感到满意，我们就可以注释掉`HBM2DDL_`设置。
 
-## 8.完成业务逻辑
+## 8. 完成业务逻辑
 
 剩下的就是让`ShippingService`使用`ShippingDao`来实现业务逻辑。每个方法都将在`try-with-resources`块中创建一个会话工厂，以确保它被关闭。
 
-### 8.1.创建寄售
+### 8.1. 创建寄售
 
-新的货物尚未交付，应该会收到一个新的 ID。那么我们应该将它保存在数据库中:
+新的货物尚未交付，应该会收到一个新的 ID。那么我们应该将它保存在数据库中：
 
 ```java
 public String createConsignment(Consignment consignment) {
@@ -665,9 +670,9 @@ public String createConsignment(Consignment consignment) {
 }
 ```
 
-### 8.2.查看托运
+### 8.2. 查看托运
 
-要获得一批货物，我们需要通过 ID 从数据库中读取它。虽然 REST API 应该对未知请求返回`Not Found`,但是对于这个例子，如果没有找到，我们将返回一个空的委托:
+要获得一批货物，我们需要通过 ID 从数据库中读取它。虽然 REST API 应该对未知请求返回`Not Found`，但是对于这个例子，如果没有找到，我们将返回一个空的委托：
 
 ```java
 public Consignment view(String consignmentId) {
@@ -678,9 +683,9 @@ public Consignment view(String consignmentId) {
 }
 ```
 
-### 8.3.添加项
+### 8.3. 添加项
 
-项目将按照收到的顺序进入我们的项目列表:
+项目将按照收到的顺序进入我们的项目列表：
 
 ```java
 public void addItem(String consignmentId, Item item) {
@@ -699,9 +704,9 @@ private void addItem(Session session, Consignment consignment, Item item) {
 
 理想情况下，如果委托不存在，我们会有更好的错误处理，但是对于这个例子，不存在的委托将被忽略。
 
-### 8.4.登记入住
+### 8.4. 登记入住
 
-签入需要按照发生的时间排序，而不是按照收到请求的时间排序。此外，当物品到达最终目的地时，应标记为已送达:
+签入需要按照发生的时间排序，而不是按照收到请求的时间排序。此外，当物品到达最终目的地时，应标记为已送达：
 
 ```java
 public void checkIn(String consignmentId, Checkin checkin) {
@@ -721,11 +726,11 @@ private void checkIn(Session session, Consignment consignment, Checkin checkin) 
 }
 ```
 
-## 9.测试应用程序
+## 9. 测试应用程序
 
 让我们模拟一个从白宫到帝国大厦的包裹旅行。
 
-代理创建旅程:
+代理创建旅程：
 
 ```java
 $ curl -d '{"source":"data.orange.brings", "destination":"heave.wipes.clay"}' \
@@ -735,7 +740,7 @@ $ curl -d '{"source":"data.orange.brings", "destination":"heave.wipes.clay"}' \
 "3dd0f0e4-fc4a-46b4-8dae-a57d47df5207"
 ```
 
-我们现在有了货物的 ID `3dd0f0e4-fc4a-46b4-8dae-a57d47df5207`。然后，有人收集了托运的两件物品——一幅画和一架钢琴:
+我们现在有了货物的 ID `3dd0f0e4-fc4a-46b4-8dae-a57d47df5207`。然后，有人收集了托运的两件物品——一幅画和一架钢琴：
 
 ```java
 $ curl -d '{"location":"data.orange.brings", "timeStamp":"20200101T120000", "description":"picture"}' \
@@ -746,10 +751,10 @@ $ curl -d '{"location":"data.orange.brings", "timeStamp":"20200101T120000", "des
 $ curl -d '{"location":"data.orange.brings", "timeStamp":"20200101T120001", "description":"piano"}' \
   -H 'Content-Type: application/json' \
   http://localhost:3000/consignment/3dd0f0e4-fc4a-46b4-8dae-a57d47df5207/item
-"OK" 
+"OK"
 ```
 
-一段时间后，有一个签到:
+一段时间后，有一个签到：
 
 ```java
 $ curl -d '{"location":"united.alarm.raves", "timeStamp":"20200101T173301"}' \
@@ -758,7 +763,7 @@ http://localhost:3000/consignment/3dd0f0e4-fc4a-46b4-8dae-a57d47df5207/checkin
 "OK"
 ```
 
-后来又一次:
+后来又一次：
 
 ```java
 $ curl -d '{"location":"wink.sour.chasing", "timeStamp":"20200101T191202"}' \
@@ -767,7 +772,7 @@ http://localhost:3000/consignment/3dd0f0e4-fc4a-46b4-8dae-a57d47df5207/checkin
 "OK"
 ```
 
-此时，客户请求货物的状态:
+此时，客户请求货物的状态：
 
 ```java
 $ curl http://localhost:3000/consignment/3dd0f0e4-fc4a-46b4-8dae-a57d47df5207
@@ -784,12 +789,12 @@ $ curl http://localhost:3000/consignment/3dd0f0e4-fc4a-46b4-8dae-a57d47df5207
     {"timeStamp":"20200101T191202","location":"wink.sour.chasing"}
   ],
   "delivered":false
-}% 
+}%
 ```
 
 他们看到了进展，但还没有交付。
 
-应该在 20:12 发送一条消息说它到达了`deflection.famed.apple`，但是它被延迟了，并且来自目的地的 21:46 的消息首先到达那里:
+应该在 20:12 发送一条消息说它到达了`deflection.famed.apple`，但是它被延迟了，并且来自目的地的 21:46 的消息首先到达那里：
 
 ```java
 $ curl -d '{"location":"heave.wipes.clay", "timeStamp":"20200101T214622"}' \
@@ -798,7 +803,7 @@ http://localhost:3000/consignment/3dd0f0e4-fc4a-46b4-8dae-a57d47df5207/checkin
 "OK"
 ```
 
-此时，客户请求货物的状态:
+此时，客户请求货物的状态：
 
 ```java
 $ curl http://localhost:3000/consignment/3dd0f0e4-fc4a-46b4-8dae-a57d47df5207
@@ -809,10 +814,10 @@ $ curl http://localhost:3000/consignment/3dd0f0e4-fc4a-46b4-8dae-a57d47df5207
     {"timeStamp":"20200101T214622","location":"heave.wipes.clay"}
   ],
   "delivered":true
-} 
+}
 ```
 
-现在送来了。因此，当延迟的消息通过时:
+现在送来了。因此，当延迟的消息通过时：
 
 ```java
 $ curl -d '{"location":"deflection.famed.apple", "timeStamp":"20200101T201254"}' \
@@ -829,12 +834,12 @@ $ curl http://localhost:3000/consignment/3dd0f0e4-fc4a-46b4-8dae-a57d47df5207
 {"timeStamp":"20200101T214622","location":"heave.wipes.clay"}
 ],
 "delivered":true
-} 
+}
 ```
 
 签入被放在时间轴中的正确位置。
 
-## 10.结论
+## 10. 结论
 
 在本文中，我们讨论了在 AWS Lambda 这样的轻量级容器中使用 Hibernate 这样的重量级框架所面临的挑战。
 

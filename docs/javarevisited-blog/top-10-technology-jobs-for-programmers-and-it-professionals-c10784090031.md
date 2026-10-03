@@ -1,3 +1,4 @@
+
 # 2023 年你可以瞄准更高薪水的 10 个高薪技术工作
 
 > 原文：<https://medium.com/javarevisited/top-10-technology-jobs-for-programmers-and-it-professionals-c10784090031?source=collection_archive---------1----------------------->
@@ -128,23 +129,25 @@ DevOps 运动的主要特征是强烈提倡从集成、测试到部署的软件�
 
 顺便说一句，你需要一个 [**Pluralsight 会员**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing) 才能加入这个课程，费用大约是每月 29 美元，每年 299 美元(14%的折扣)，但它完全值得。另类。你也可以使用他们的 [**10 天免费试用**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 免费观看本课程。
 
+
+
 [![](img/4db8524278d06080242bb92aff161c64.png)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Flinux-system-administration-fundamentals)
 
-## 10.Web 开发人员
+## 10. Web 开发人员
 
 最后，使用最新技术如 [Angular](http://www.java67.com/2018/01/top-5-free-angular-js-online-courses-for-web-developers.html) 、 [React](https://javarevisited.blogspot.com/2018/08/top-5-react-js-and-redux-courses-to-learn-online.html) 以及古老技术如 [Ruby](http://www.java67.com/2018/02/5-free-ruby-and-rails-courses-to-learn-online.html) 和 [PHP](http://www.java67.com/2018/02/5-free-php-and-mysql-courses-for-web-developers.html) 的 Web 开发人员。
 
-在美国，网页开发人员的平均工资约为 90，000 美元，高于数据库管理员、质量保证员和图形设计师，但低于 Linux 和 Windows 系统管理员和数据科学家。
+在美国，网页开发人员的平均工资约为 90,000 美元，高于数据库管理员、质量保证员和图形设计师，但低于 Linux 和 Windows 系统管理员和数据科学家。
 
 如果你想学习网页开发并成为一名网页开发者，那么 [**网页开发者训练营**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fthe-web-developer-bootcamp%2F) 是一个很好的地方。
 
 [![](img/32eaf824a67844ae50f7d540d1a609cc.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fthe-web-developer-bootcamp%2F)
 
-## 11.数据库管理员或 DBA
+## 11. 数据库管理员或 DBA
 
 DBA 是传统的工作之一，有很多工作保障，没有太多学习挑战。
 
-在美国，数据库管理员的平均工资约为 85，000 美元，预计低于 Web 开发人员，但高于 QA 工程师和图形设计师。
+在美国，数据库管理员的平均工资约为 85,000 美元，预计低于 Web 开发人员，但高于 QA 工程师和图形设计师。
 
 如果你想了解更多关于数据库管理的知识，建议你通过 [**Oracle DBA 11g/12c —初级 DBA 数据库管理**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Foracledbatraining%2F) **。**
 
@@ -152,9 +155,9 @@ DBA 是传统的工作之一，有很多工作保障，没有太多学习挑战�
 
 [![](img/4784d21cff0d8097d0b0dd6a73af5a13.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Foracledbatraining%2F)
 
-## 12.质量保证工程师(QA)
+## 12. 质量保证工程师(QA)
 
-QA 工程师的平均工资约为 85，000 美元，在许多地理位置高于平面设计师和移动开发人员，但在美国，他们仅高于平面设计师。
+QA 工程师的平均工资约为 85,000 美元，在许多地理位置高于平面设计师和移动开发人员，但在美国，他们仅高于平面设计师。
 
 同样是开发人员的 QA 工程师往往比那些只做手工测试的人挣得更多。
 
@@ -164,9 +167,9 @@ QA 工程师的平均工资约为 85，000 美元，在许多地理位置高于�
 
 **[![](img/595aecbe8f206efeaf9f09bdebe50261.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fselenium-with-c%2F)**
 
-## **13.美术设计员**
+## **13. 美术设计员**
 
-**美国图形设计师的平均工资约为 70，00 美元，与数据科学家和 DevOps 专家相比并不算高，但对图形设计师的需求总是存在的。**
+**美国图形设计师的平均工资约为 70,000 美元，与数据科学家和 DevOps 专家相比并不算高，但对图形设计师的需求总是存在的。**
 
 **如果你有一些平面设计技能，那么你也可以做很多报酬不错的在线工作。**
 
@@ -180,17 +183,22 @@ QA 工程师的平均工资约为 85，000 美元，在许多地理位置高于�
 
 **DevOps 和机器学习专家以及数据科学家往往拥有全球最高的薪酬，如果你今年考虑薪酬，这些可能是你应该瞄准的工作。**
 
-**其他**编程文章**你可能喜欢的
+**其他**编程文章**你可能喜欢的**
+
 [2023 年 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html#123)
+
 [2023 年学习 Python 的 10 个理由](https://javarevisited.blogspot.com/2018/05/10-reasons-to-learn-python-programming.html)
+
 [2023 年你可以学习的 10 种编程语言](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html)
+
 [10 个工具每个 Java 开发者都应该知道的](http://www.java67.com/2018/04/10-tools-java-developers-should-learn.html)
+
 [学习 Java 编程语言的 10 个理由](http://javarevisited.blogspot.sg/2013/04/10-reasons-to-learn-java-programming.html)
+
 [Java 和 Web 开发者应该学习的 10 个框架](http://javarevisited.blogspot.sg/2018/01/10-frameworks-java-and-web-developers-should-learn.html)
 
 [2023 年要学习的 5 大 Java 框架](http://javarevisited.blogspot.sg/2018/04/top-5-java-frameworks-to-learn-in-2018_27.html)
-[每个 Java 开发者都应该知道的 10 个测试库](https://javarevisited.blogspot.sg/2018/01/10-unit-testing-and-integration-tools-for-java-programmers.html)**
 
-**感谢您阅读本文。如果你喜欢这篇文章，请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。**
+[每个 Java 开发者都应该知道的 10 个测试库](https://javarevisited.blogspot.sg/2018/01/10-unit-testing-and-integration-tools-for-java-programmers.html)
 
-**</javarevisited/what-java-programmers-should-learn-in-2020-648050533c83> **
+感谢您阅读本文。如果你喜欢这篇文章，请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。

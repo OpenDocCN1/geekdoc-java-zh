@@ -1,51 +1,41 @@
+
 # Android Studio Iguana 核心指南 - Java 版
-
-
 
 ![](img/java_iguana_front_cover_large.jpg)
 
 ![java_iguana_front_cover_large.jpg](img/java_iguana_front_cover_large.jpg)
 
-
-
-
-
-
-
-
-
-
-
 # 目录
 
 ## 1. 简介
 
-本书已针对 Android Studio Iguana (2023.2.1) 和新 UI 完全更新，教你如何使用 Java 编程语言开发 Android 应用程序。
+本书已针对 `Android Studio Iguana (2023.2.1)` 和新 UI 完全更新，教你如何使用 `Java` 编程语言开发 `Android` 应用程序。
 
-本书从基础开始，概述了如何设置 Android 开发和测试环境，随后概述了工具窗口、代码编辑器和布局编辑器（Layout Editor）工具等区域。在介绍 Android 架构之后，深入探讨了使用 Android Studio 环境设计 Android 应用程序和用户界面。
+本书从基础开始，概述了如何设置 `Android` 开发和测试环境，随后概述了工具窗口、代码编辑器和布局编辑器（`Layout Editor`）工具等区域。在介绍 `Android` 架构之后，深入探讨了使用 `Android Studio` 环境设计 `Android` 应用程序和用户界面。
 
-章节还涵盖了 Android 架构组件，包括 ViewModel、生命周期管理、Room 数据库访问、内容提供（Content Providers）、数据库检查器（Database Inspector）、应用导航、活动数据（LiveData）和数据绑定。
+章节还涵盖了 `Android` 架构组件，包括 `ViewModel`、生命周期管理、`Room` 数据库访问、内容提供（`Content Providers`）、数据库检查器（`Database Inspector`）、应用导航、活动数据（`LiveData`）和数据绑定。
 
-同时也涵盖了更高级的主题，如意（Intent）、触摸屏处理、手势识别以及音频的录制和播放。本书还涵盖了打印、过渡和对折叠设备的支持。
+同时也涵盖了更高级的主题，如意（`Intent`）、触摸屏处理、手势识别以及音频的录制和播放。本书还涵盖了打印、过渡和对折叠设备的支持。
 
-书中详细涵盖了材料设计（Material Design）的概念，包括浮动操作按钮（FAB）、Snackbars、标签页界面、卡片视图（Card Views）、导航抽屉（Navigation Drawers）和折叠工具栏。
+书中详细涵盖了材料设计（`Material Design`）的概念，包括浮动操作按钮（`FAB`）、`Snackbars`、标签页界面、卡片视图（`Card Views`）、导航抽屉（`Navigation Drawers`）和折叠工具栏。
 
-还详细涵盖了 Android Studio 和 Android 的其他关键特性，包括布局编辑器、`ConstraintLayout` 和 `ConstraintSet` 类、MotionLayout 编辑器、视图绑定（View Binding）、约束链（Constraint Chains）、障碍（Barriers）和直接回复通知。
+还详细涵盖了 `Android Studio` 和 `Android` 的其他关键特性，包括布局编辑器、`ConstraintLayout` 和 `ConstraintSet` 类、`MotionLayout` 编辑器、视图绑定（`View Binding`）、约束链（`Constraint Chains`）、障碍（`Barriers`）和直接回复通知。
 
-章节同样涵盖了 Android Studio 的高级功能，如应用链接（App Links）、Gradle 构建配置、应用内以及向 Google Play 开发者控制台提交应用。
+章节同样涵盖了 `Android Studio` 的高级功能，如应用链接（`App Links`）、`Gradle` 构建配置、应用内以及向 `Google Play` 开发者控制台提交应用。
 
-假设你已经有一定的 Java 编程经验，准备好下载 Android Studio 和 Android SDK，拥有 Windows、Mac 或 Linux 系统，并且对要开发的 App 有想法，你就可以开始了。
+假设你已经有一定的 `Java` 编程经验，准备好下载 `Android Studio` 和 `Android SDK`，拥有 `Windows`、`Mac` 或 `Linux` 系统，并且对要开发的 `App` 有想法，你就可以开始了。
 
 ### 1.1 下载代码示例
 
-书中所包含示例的源代码和 Android Studio 项目文件可以在以下地址下载：
+书中所包含示例的源代码和 `Android Studio` 项目文件可以在以下地址下载：
 
 [`www.payloadbooks.com/product/iguanajava`](https://www.payloadbooks.com/product/iguanajava)
 
-从代码示例将项目加载到 Android Studio 的步骤如下：
+从代码示例将项目加载到 `Android Studio` 的步骤如下：
 
-1. 在“欢迎使用 Android Studio”对话框中，点击 `Open`（打开）按钮选项。
-2. 在项目选择对话框中，导航并选择包含要导入项目的文件夹，然后点击 `OK`（确定）。
+1. 在“欢迎使用 `Android Studio`”对话框中，点击`Open`（打开）按钮选项。
+
+2. 在项目选择对话框中，导航并选择包含要导入项目的文件夹，然后点击`OK`（确定）。
 
 ### 1.2 反馈
 
@@ -53,7 +43,7 @@
 
 ### 1.3 勘误表
 
-虽然我们尽力确保书中内容的准确性，但对于一本涵盖如此规模和复杂程度领域的书籍，难免会包含一些错误和遗漏。书中任何已知问题将同解决方案一起列在以下 URL 中：
+虽然我们尽力确保书中内容的准确性，但对于一本涵盖如此规模和复杂程度领域的书籍，难免会包含一些错误和遗漏。书中任何已知问题将同解决方案一起列在以下 `URL` 中：
 
 [`www.payloadbooks.com/iguanajava`](https://www.payloadbooks.com/iguanajava)
 
@@ -61,7 +51,7 @@
 
 ### 1.4 招募作者
 
-Payload Publishing 正在招募作者。
+`Payload Publishing` 正在招募作者。
 
 你是一个有书籍构思的志向作者吗？当你与我们合作出版时，我们将每一步都为你提供全方位支持。我们提供指导以及技术和编辑协助，帮助你将书籍变为现实。一旦你的书籍完成，我们将通过我们的分销和渠道合作伙伴在全球范围内进行出版和营销，并支付比传统出版商更高的版税。
 
@@ -75,79 +65,81 @@ Payload Publishing 正在招募作者。
 
 ## 2. 设置 Android Studio 开发环境
 
-在开始开发 Android 应用程序之前，第一步是配置计算机系统作为开发平台。这涉及几个步骤，包括安装 Android Studio 开发环境（IDE），包括 Android 开发包（SDK）和 OpenJDK Java 开发环境。
+在开始开发 `Android` 应用程序之前，第一步是配置计算机系统作为开发平台。这涉及几个步骤，包括安装 `Android Studio` 开发环境（`IDE`），包括 `Android` 开发包（`SDK`）和 `OpenJDK` `Java` 开发环境。
 
-本章将涵盖在 Windows、macOS 和 Linux 系统上安装 Android 开发所需组件的步骤。
+本章将涵盖在 `Windows`、`macOS` 和 `Linux` 系统上安装 `Android` 开发所需组件的步骤。
 
 ### 2.1 系统要求
 
-Android 应用程序开发可以在任何以下类型的系统上进行：
+`Android` 应用程序开发可以在任何以下类型的系统上进行：
 
-- Windows 8/10/11 64 位
-- 运行在 Intel 上的 macOS 10.14 或更高版本
-- 带有 Intel i5 或更高处理器的 Chrome OS 设备
-- 2.31 或更高版本的 Linux (`glibc`)
-- 至少 8GB 内存
-- 大约 8GB 可用磁盘空间
-- 1280 x 800 最小分辨率
+- `Windows 8/10/11` 64 位
+
+- 运行在 `Intel` 上的 `macOS 10.14` 或更高版本
+
+- 带有 `Intel i5` 或更高处理器的 `Chrome OS` 设备
+
+- `2.31` 或更高版本的 `Linux` (`glibc`)
+
+- 至少 `8GB` 内存
+
+- 大约 `8GB` 可用磁盘空间
+
+- `1280 x 800` 最小分辨率
 
 ### 2.2 下载 Android Studio 包
 
-开发 Android 应用程序的大部分工作将在 Android Studio 环境中完成。书中的内容和示例基于 Android Studio Iguana 2023.2.1 以及 Android API 34 SDK (UpsideDownCake) 创建，当时是最新的稳定版本。
+开发 `Android` 应用程序的大部分工作将在 `Android Studio` 环境中完成。书中的内容和示例基于 `Android Studio Iguana 2023.2.1` 以及 `Android API 34 SDK` (`UpsideDownCake`) 创建，当时是最新的稳定版本。
 
-然而，Android Studio 频繁更新，因此在本书出版后可能已经发布了新版本。
+然而，`Android Studio` 频繁更新，因此在本书出版后可能已经发布了新版本。
 
-可以在主页面下载最新版本的 Android Studio，该页面位于：
+可以在主页面下载最新版本的 `Android Studio`，该页面位于：
 
 [`developer.android.com/studio/index.html`](https://developer.android.com/studio/index.html)
 
-如果此页面提供了下载新版本 Android Studio 的说明，则本书与软件之间可能存在差异。如果这些差异引起问题，搜索“Android Studio Iguana”应该提供下载旧版本的选项。或者，访问以下网页在存档中查找 Android Studio Iguana 2023.2.1：
+如果此页面提供了下载新版本 `Android Studio` 的说明，则本书与软件之间可能存在差异。如果这些差异引起问题，搜索“`Android Studio Iguana`”应该提供下载旧版本的选项。或者，访问以下网页在存档中查找 `Android Studio Iguana 2023.2.1`：
 
 [`developer.android.com/studio/archive`](https://developer.android.com/studio/archive)
 
 ### 2.3 安装 Android Studio
 
-下载完成后，安装 Android Studio 的具体步骤取决于执行安装的操作系统。
+下载完成后，安装 `Android Studio` 的具体步骤取决于执行安装的操作系统。
 
 #### 2.3.1 在 Windows 上安装
 
-在 Windows 资源管理器中找到下载的 Android Studio 安装执行文件（命名为 `android-studio-<version>-windows.exe`），并双击它开始安装过程，如果弹出用户账户控制对话框，点击 `Yes` 按钮。
+在 `Windows` 资源管理器中找到下载的 `Android Studio` 安装执行文件（命名为 `android-studio-<version>-windows.exe`），并双击它开始安装过程，如果弹出用户账户控制对话框，点击`Yes`按钮。
 
+一旦 `Android Studio` 安装向导出现，请按照各个屏幕的操作来配置安装，以满足你的需求，包括 `Android Studio` 的安装文件系统位置以及是否将其提供给其他系统用户。在提示选择要安装的组件时，确保勾选了 `Android Studio` 和 `Android Virtual Device`（安卓虚拟设备）选项。
 
+虽然对于 `Android Studio` 安装在系统的哪个位置没有严格规定，但本书的其余部分将假设安装路径为 `C:\Program Files\Android\Android Studio`，并假设 `Android SDK` 包已安装在用户的 `AppData\Local\Android\sdk` 子文件夹中。配置好选项后，点击`Install`（安装）按钮开始安装过程。
 
-
-
-一旦 Android Studio 安装向导出现，请按照各个屏幕的操作来配置安装，以满足你的需求，包括 Android Studio 的安装文件系统位置以及是否将其提供给其他系统用户。在提示选择要安装的组件时，确保勾选了 Android Studio 和 `Android Virtual Device`（安卓虚拟设备）选项。
-
-虽然对于 Android Studio 安装在系统的哪个位置没有严格规定，但本书的其余部分将假设安装路径为 `C:\Program Files\Android\Android Studio`，并假设 Android SDK 包已安装在用户的 `AppData\Local\Android\sdk` 子文件夹中。配置好选项后，点击 `Install`（安装）按钮开始安装过程。
-
-在带有开始菜单的 Windows 版本上，可以从安装期间添加到该菜单的项启动新安装的 Android Studio。可以通过导航到 `Android Studio\bin` 目录，右键点击 `studio64` 可执行文件并选择 `Pin to Taskbar`（固定到任务栏）菜单选项，以便快速访问（在 Windows 11 上，可以通过选择菜单中的 `Show more options` 找到此选项）。
+在带有开始菜单的 `Windows` 版本上，可以从安装期间添加到该菜单的项启动新安装的 `Android Studio`。可以通过导航到 `Android Studio\bin` 目录，右键点击`studio64`可执行文件并选择`Pin to Taskbar`（固定到任务栏）菜单选项，以便快速访问（在 `Windows 11` 上，可以通过选择菜单中的`Show more options`找到此选项）。
 
 #### 2.3.2 在 macOS 上安装
 
-macOS 版 Android Studio 以磁盘镜像 (.dmg) 文件格式下载。下载完 `android-studio-<version>-mac.dmg` 文件后，在 Finder 窗口中找到它并双击打开，如图 2-1 所示：
+`macOS` 版 `Android Studio` 以磁盘镜像 (`.dmg`) 文件格式下载。下载完 `android-studio-<version>-mac.dmg` 文件后，在 `Finder` 窗口中找到它并双击打开，如图 2-1 所示：
 
 ![](img/as_dmg_drag_to_applications.jpg)
 
 图 2-1
 
-要安装此包，将 Android Studio 图标拖放到 `Applications`（应用程序）文件夹中。Android Studio 包将被安装到系统的 `Applications` 文件夹中，此过程通常需要几秒钟完成。
+要安装此包，将 `Android Studio` 图标拖放到`Applications`（应用程序）文件夹中。`Android Studio` 包将被安装到系统的`Applications`文件夹中，此过程通常需要几秒钟完成。
 
-要启动 Android Studio，在 Finder 窗口的 `Applications` 文件夹中找到该可执行文件并双击。
+要启动 `Android Studio`，在 `Finder` 窗口的`Applications`文件夹中找到该可执行文件并双击。
 
-为了以后方便，请从 Finder 窗口将 Android Studio 图标拖到 dock 栏。
+为了以后方便，请从 `Finder` 窗口将 `Android Studio` 图标拖到 `dock` 栏。
 
 #### 2.3.3 在 Linux 上安装
 
-下载 Linux 版 Android Studio 包后，打开终端窗口，切换目录到安装 Android Studio 的位置，并执行以下命令：
+下载 `Linux` 版 `Android Studio` 包后，打开终端窗口，切换目录到安装 `Android Studio` 的位置，并执行以下命令：
 
 ```
 tar xvfz /<path to package>/android-studio-<version>-linux.tar.gz
 ```
 
-注意，Android Studio 束将安装到名为 `android-studio` 的子目录中。因此，假设上述命令在 `/home/demo` 中执行，软件包将被解压到 `/home/demo/android-studio`。
+注意，`Android Studio` 束将安装到名为 `android-studio` 的子目录中。因此，假设上述命令在 `/home/demo` 中执行，软件包将被解压到 `/home/demo/android-studio`。
 
-要启动 Android Studio，打开终端窗口，切换目录到 `android-studio/bin` 子目录，并执行以下命令：
+要启动 `Android Studio`，打开终端窗口，切换目录到 `android-studio/bin` 子目录，并执行以下命令：
 
 ```bash
 ./studio.sh
@@ -155,21 +147,21 @@ tar xvfz /<path to package>/android-studio-<version>-linux.tar.gz
 
 ### 2.4 Android Studio 安装向导
 
-如果你之前安装过旧版本的 Android Studio，在首次启动此新版本时，可能会出现一个对话框，提供从之前的 Android Studio 版本导入设置的选项。如果你有旧版本的设置并想将其导入到最新安装中，请选择相应的选项和位置。或者，指示你不需要导入任何之前的设置并点击 `OK` 按钮继续。
+如果你之前安装过旧版本的 `Android Studio`，在首次启动此新版本时，可能会出现一个对话框，提供从之前的 `Android Studio` 版本导入设置的选项。如果你有旧版本的设置并想将其导入到最新安装中，请选择相应的选项和位置。或者，指示你不需要导入任何之前的设置并点击`OK`按钮继续。
 
-如果你是首次安装 Android Studio，安装过程启动后出现的初始对话框可能类似于下方的图 2-2：
+如果你是首次安装 `Android Studio`，安装过程启动后出现的初始对话框可能类似于下方的图 2-2：
 
 ![](img/as_setup_wizard.jpg)
 
 图 2-2
 
-如果出现此对话框，点击 `Next`（下一步）按钮显示 `Install Type`（安装类型）屏幕（图 2-3）。在此屏幕上，在点击 `Next` 之前选择 `Standard`（标准）安装选项。
+如果出现此对话框，点击`Next`（下一步）按钮显示`Install Type`（安装类型）屏幕（图 2-3）。在此屏幕上，在点击`Next`之前选择`Standard`（标准）安装选项。
 
 ![](img/as_setup_install_type.jpg)
 
 图 2-3
 
-在 `Select UI Theme`（选择 UI 主题）屏幕上，根据喜好选择 `Darcula` 或 `Light` 主题。做出选择后，点击 `Next`，并在进入 `License Agreement`（许可协议）之前检查 `Verify Settings`（验证设置）屏幕中的选项。选择每个许可类别并启用 `Accept`（接受）复选框。最后，点击 `Finish`（完成）按钮启动安装。完成这些初始设置步骤后，点击 `Finish` 按钮显示使用所选 UI 主题的“Welcome to Android Studio”屏幕：
+在`Select UI Theme`（选择 `UI` 主题）屏幕上，根据喜好选择`Darcula`或`Light`主题。做出选择后，点击`Next`，并在进入`License Agreement`（许可协议）之前检查`Verify Settings`（验证设置）屏幕中的选项。选择每个许可类别并启用`Accept`（接受）复选框。最后，点击`Finish`（完成）按钮启动安装。完成这些初始设置步骤后，点击`Finish`按钮显示使用所选 `UI` 主题的“`Welcome to Android Studio`”屏幕：
 
 ![](img/as_iguana_welcome.jpg)
 
@@ -177,105 +169,111 @@ tar xvfz /<path to package>/android-studio-<version>-linux.tar.gz
 
 ### 2.5 安装额外的 Android SDK 包
 
-目前为止的操作安装了 Android Studio IDE 和当前的默认 Android SDK 包。在继续之前，值得花些时间验证安装了哪些包，并安装任何缺失或更新的包。
+目前为止的操作安装了 `Android Studio` `IDE` 和当前的默认 `Android SDK` 包。在继续之前，值得花些时间验证安装了哪些包，并安装任何缺失或更新的包。
 
-此任务可以通过点击欢迎对话框中的 `More Actions`（更多操作）链接并从下拉菜单中选择 `SDK Manager`（SDK ）选项来完成。一旦调用，`Settings` 对话框的 `Android SDK` 屏幕如图 2-5 所示：
+此任务可以通过点击欢迎对话框中的`More Actions`（更多操作）链接并从下拉菜单中选择`SDK Manager`（`SDK` ）选项来完成。一旦调用，`Settings` 对话框的`Android SDK`屏幕如图 2-5 所示：
 
 ![](img/as_sdk_manager.jpg)
 
 图 2-5
 
-Google 的每个 Android Studio 版本都与其支持的 Android SDK 最大应用程序接口 (API) 级别配对。对于 Android Studio Iguana，这是 `Android UpsideDownCake` (API Level 34)。可以使用以下链接确认此信息：
+`Google` 的每个 `Android Studio` 版本都与其支持的 `Android SDK` 最大应用程序接口 (`API`) 级别配对。对于 `Android Studio Iguana`，这是`Android UpsideDownCake` (`API Level 34`)。可以使用以下链接确认此信息：
 
 [`developer.android.com/studio/releases#api-level-support`](https://developer.android.com/studio/releases#api-level-support)
 
-在首次安装 Android Studio 之后，可能只安装了最新支持版本的 Android SDK。要安装旧版本的 Android SDK，请勾选相应的版本并点击 `Apply`（应用）按钮。本书其余部分假设安装了 `Android UpsideDownCake` (API Level 34) SDK。
+在首次安装 `Android Studio` 之后，可能只安装了最新支持版本的 `Android SDK`。要安装旧版本的 `Android SDK`，请勾选相应的版本并点击`Apply`（应用）按钮。本书其余部分假设安装了`Android UpsideDownCake` (`API Level 34`) `SDK`。
 
-本书中的大多数示例支持旧到 `Android 8.0 (Oreo)`。这确保了程序可以在多种 Android 设备上运行。在 SDK 版本列表中，启用 `Android 8.0 (Oreo)` 旁的复选框并点击 `Apply` 按钮。在生成的确认对话框中点击 `OK` 按钮安装 SDK。随后的对话将在执行安装前寻求许可条款。安装完成后点击 `Finish`。
+本书中的大多数示例支持旧到`Android 8.0 (Oreo)`。这确保了程序可以在多种 `Android` 设备上运行。在 `SDK` 版本列表中，启用`Android 8.0 (Oreo)`旁的复选框并点击`Apply`按钮。在生成的确认对话框中点击`OK`按钮安装 `SDK`。随后的对话将在执行安装前寻求许可条款。安装完成后点击`Finish`。
 
-最新 SDK 也可能列出可用更新。要访问有关准备更新包的详细信息，启用屏幕右下角的 `Show Package Details`（显示包详细信息）选项。这将显示图 2-6 所示的信息：
+最新 `SDK` 也可能列出可用更新。要访问有关准备更新包的详细信息，启用屏幕右下角的`Show Package Details`（显示包详细信息）选项。这将显示图 2-6 所示的信息：
 
 ![](img/as_sdk_manager_update_available.jpg)
 
 图 2-6
 
-上述图片突出了可用更新。要安装更新，启用项目左侧的复选框并点击 `Apply` 按钮。
+上述图片突出了可用更新。要安装更新，启用项目左侧的复选框并点击`Apply`按钮。
 
-除了 Android SDK 包，还安装了用于构建 Android 应用程序的工具。要查看已安装的包并检查更新，留在 `SDK` 设置屏幕并选择 `SDK Tools` 标签，如图 2-7 所示：
+除了 `Android SDK` 包，还安装了用于构建 `Android` 应用程序的工具。要查看已安装的包并检查更新，留在`SDK`设置屏幕并选择`SDK Tools`标签，如图 2-7 所示：
 
 ![](img/as_sdk_manager_tools.jpg)
 
 图 2-7
 
-在 `Android SDK Tools` 屏幕内，请确保以下包在 `Status` 列中显示为 `Installed`：
+在`Android SDK Tools`屏幕内，请确保以下包在`Status`列中显示为`Installed`：
 
 • `Android SDK Build-tools`
+
 • `Android Emulator`
+
 • `Android SDK Platform-tools`
+
 • `Google Play Services`
+
 • `Intel x86 Emulator Accelerator (HAXM installer)`*
-• `Google USB Driver`（仅限 Windows）
+
+• `Google USB Driver`（仅限 `Windows`）
+
 • `Layout Inspector image server for API 31-34`
 
-*注意：基于 Apple 芯片的 Mac 无法安装 Intel x86 模拟加速器 (HAXM installer)。
+*注意：基于 `Apple` 芯片的 `Mac` 无法安装 `Intel x86` 模拟加速器 (`HAXM installer`)。
 
-
-
-
-
-如果上述任何软件包被列为“未安装”（Not Installed）或需要更新，请勾选这些软件包旁边的选框并点击 `Apply`（应用）按钮启动安装过程。如果出现 `HAXM` 模拟器设置对话框，请选择推荐的内存分配：
+如果上述任何软件包被列为“未安装”（`Not Installed`）或需要更新，请勾选这些软件包旁边的选框并点击`Apply`（应用）按钮启动安装过程。如果出现`HAXM`模拟器设置对话框，请选择推荐的内存分配：
 
 ![](img/as_haxm_memory.jpg)
 
 图 2-8
 
-安装完成后，检查软件包列表并确保所选软件包在 `Status`（状态）列中显示为 `Installed`（已安装）。如果有任何包被列为“未安装”（Not installed），请确保它们已选中并再次点击 `Apply` 按钮。
+安装完成后，检查软件包列表并确保所选软件包在`Status`（状态）列中显示为`Installed`（已安装）。如果有任何包被列为“未安装”（`Not installed`），请确保它们已选中并再次点击`Apply`按钮。
 
 ## 2.6 安装 Android SDK 命令行工具
 
-Android Studio 包含了允许你从操作系统的命令行执行某些任务的工具。要在你的系统上安装这些工具，请打开 `SDK Manager`，选择 `SDK Tools` 标签页，并在图 2-9 所示找到 `Android SDK Command-line Tools (latest)` 软件包：
+`Android Studio` 包含了允许你从操作系统的命令行执行某些任务的工具。要在你的系统上安装这些工具，请打开`SDK Manager`，选择`SDK Tools`标签页，并在图 2-9 所示找到`Android SDK Command-line Tools (latest)`软件包：
 
 ![](img/as_sdk_manager_command_line_tools.jpg)
 
 图 2-9
 
-如果命令行工具包尚未安装，请启用它并点击 `Apply`，然后点击 `OK` 完成安装。安装完成后，点击 `Finish` 并关闭 `SDK Manager` 对话框。
+如果命令行工具包尚未安装，请启用它并点击`Apply`，然后点击`OK`完成安装。安装完成后，点击`Finish`并关闭`SDK Manager`对话框。
 
-为了使你用于开发的的操作系统能够找到这些工具，有必要将它们添加到系统的 `PATH` 环境变量中。
+为了使你用于开发的的操作系统能够找到这些工具，有必要将它们添加到系统的`PATH`环境变量中。
 
-无论你使用哪种操作系统，你都需要配置 `PATH` 环境变量以包含以下路径（其中 `<path_to_android_sdk_installation>` 代表你安装 Android SDK 的文件系统位置）：
+无论你使用哪种操作系统，你都需要配置`PATH`环境变量以包含以下路径（其中 `<path_to_android_sdk_installation>` 代表你安装 `Android SDK` 的文件系统位置）：
 
 `<path_to_android_sdk_installation>/sdk/cmdline-tools/latest/bin`
 
 `<path_to_android_sdk_installation>/sdk/platform-tools`
 
-你可以通过启动 `SDK Manager` 并参考设置面板顶部的 `Android SDK Location:`（Android SDK 所在）字段来识别 SDK 在系统中的位置，如图 2-10 所示：
+你可以通过启动`SDK Manager`并参考设置面板顶部的`Android SDK Location:`（`Android SDK` 所在）字段来识别 `SDK` 在系统中的位置，如图 2-10 所示：
 
 ![](img/as_sdk_location.jpg)
 
 图 2-10
 
-一旦确定了 SDK 的位置，将其添加到 `PATH` 变量的步骤取决于操作系统：
+一旦确定了 `SDK` 的位置，将其添加到`PATH`变量的步骤取决于操作系统：
 
 ### 2.6.1 Windows 8.1
 
-1. 在开始屏幕上，将鼠标移动到屏幕右下角并从弹出菜单选择 `Search`（搜索）。在搜索框中输入 `Control Panel`（控制面板）。当 `Control Panel` 图标出现在结果区域时，点击它在桌面上启动该工具。
-2. 在 `Control Panel` 中，使用 `Category`（类别）菜单将显示更改为 `Large Icons`（大图标）。从图标列表中标记为 `System`（系统）的图标。
-3. 在 `Environment Variables`（环境变量）对话框中，在 `System variables`（系统变量）列表中找到 `Path` 变量，选中并点击 `Edit…`（编辑）按钮。使用编辑对话框中的 `New`（新建）按钮向路径添加两个新项。例如，假设 Android SDK 安装在 `C:\Users\demo\AppData\Local\Android\Sdk`，则添加以下条目：
+
+
+1. 在开始屏幕上，将鼠标移动到屏幕右下角并从弹出菜单选择`Search`（搜索）。在搜索框中输入`Control Panel`（控制面板）。当`Control Panel`图标出现在结果区域时，点击它在桌面上启动该工具。
+
+2. 在`Control Panel`中，使用`Category`（类别）菜单将显示更改为`Large Icons`（大图标）。从图标列表中标记为`System`（系统）的图标。
+
+3. 在`Environment Variables`（环境变量）对话框中，在`System variables`（系统变量）列表中找到`Path`变量，选中并点击`Edit…`（编辑）按钮。使用编辑对话框中的`New`（新建）按钮向路径添加两个新项。例如，假设 Android SDK 安装在`C:\Users\demo\AppData\Local\Android\Sdk`，则添加以下条目：
 
    `C:\Users\demo\AppData\Local\Android\Sdk\cmdline-tools\latest\bin`
 
    `C:\Users\demo\AppData\Local\Android\Sdk\platform-tools`
 
-4. 点击每个对话框中的 `OK` 并关闭系统属性控制面板。
+4. 点击每个对话框中的`OK`并关闭系统属性控制面板。
 
-按下键盘上的 `Windows + R` 并在 `Run` 对话框中输入 `cmd` 打开命令提示符窗口。在 `Command Prompt` 窗口中输入：
+按下键盘上的`Windows + R`并在`Run`对话框中输入`cmd`打开命令提示符窗口。在`Command Prompt`窗口中输入：
 
 ```
 echo %Path%
 ```
 
-返回的路径变量值应包含 Android SDK 平台工具文件夹的路径。通过尝试如下所示运行 `adb` 工具来验证 `platform-tools` 值是否正确：
+返回的路径变量值应包含 Android SDK 平台工具文件夹的路径。通过尝试如下所示运行`adb`工具来验证`platform-tools`值是否正确：
 
 ```bash
 adb
@@ -283,27 +281,27 @@ adb
 
 执行该工具时，它应该输出命令行选项列表。
 
-同样，通过尝试运行 `AVD Manager` 命令行工具来检查工具路径设置（如果担心 `avdmanager` 工具报告 Java 问题——这稍后会解决）：
+同样，通过尝试运行`AVD Manager`命令行工具来检查工具路径设置（如果担心`avdmanager`工具报告 Java 问题——这稍后会解决）：
 
 ```bash
 avdmanager
 ```
 
-如果其中一个或两个命令出现了类似下所示的消息，那么很可能是向 `Path` 环境变量中添加了错误的路径：
+如果其中一个或两个命令出现了类似下所示的消息，那么很可能是向`Path`环境变量中添加了错误的路径：
 
 `'adb' is not recognized as an internal or external command, operable program or batch file.`
 
 ### 2.6.2 Windows 10
 
-右键点击 `Start` 菜单，从弹出菜单选择 `Settings`（设置），并在 `Find a setting`（查找设置）文本框中输入“Edit the system environment variables”。在 `System Properties` 对话框中，点击 `Environment Variables...` 按钮。按照 Windows 8.1 列出的步骤，从第 3 步开始。
+右键点击`Start`菜单，从弹出菜单选择`Settings`（设置），并在`Find a setting`（查找设置）文本框中输入“Edit the system environment variables”。在`System Properties`对话框中，点击`Environment Variables...`按钮。按照 Windows 8.1 列出的步骤，从第 3 步开始。
 
 ### 2.6.3 Windows 11
 
-右键点击任务栏上的 `Start` 图标并从弹出菜单选择 `Settings`。当 `Settings` 对话框出现时，向下滚动列表并选择“About”（关于）选项。在 `About` 界面，从 `Related links`（相关链接）部分选择 `Advanced system settings`（高级系统设置）。当 `System Properties` 窗口出现时，点击 `Environment Variables...` 按钮。按照 Windows 8.1 列出的步骤，从第 3 步开始。
+右键点击任务栏上的`Start`图标并从弹出菜单选择`Settings`。当`Settings`对话框出现时，向下滚动列表并选择“About”（关于）选项。在`About`界面，从`Related links`（相关链接）部分选择`Advanced system settings`（高级系统设置）。当`System Properties`窗口出现时，点击`Environment Variables...`按钮。按照 Windows 8.1 列出的步骤，从第 3 步开始。
 
 ### 2.6.4 Linux
 
-可以通过向家目录下的 `.bashrc` 文件添加命令在 Linux 上实现此配置（具体取决于取决于使用的特定 Linux 发行版）。假设 Android SDK 束包安装在 `/home/android/sdk`，`.bashrc` 文件中的导出语句如下：
+可以通过向家目录下的`.bashrc`文件添加命令在 Linux 上实现此配置（具体取决于使用的特定 Linux 发行版）。假设 Android SDK 束包安装在`/home/android/sdk`，`.bashrc`文件中的导出语句如下：
 
 ```bash
 export PATH=/home/android/sdk/platform-tools:/home/android/sdk/cmdline-tools/latest/bin:$PATH
@@ -311,13 +309,13 @@ export PATH=/home/android/sdk/platform-tools:/home/android/sdk/cmdline-tools/lat
 
 ### 2.6.5 macOS
 
-在 macOS 上有多种方法可以修改 `PATH` 环境变量。最干净的方法是在 `/etc/paths.d` 目录下一个文件，包含要添加到 `$PATH` 的路径。假设 SDK 安装位置为 `/Users/demo/Library/Android/sdk`，可以通过在 `/etc/paths.d` 创建名为 `android-sdk` 的文件进行配置：
+在 macOS 上有多种方法可以修改`PATH`环境变量。最干净的方法是在`/etc/paths.d`目录下一个文件，包含要添加到`$PATH`的路径。假设 SDK 安装位置为`/Users/demo/Library/Android/sdk`，可以通过在`/etc/paths.d`创建名为`android-sdk`的文件进行配置：
 
 `/Users/demo/Library/Android/sdk/cmdline-tools/latest/bin`
 
 `/Users/demo/Library/Android/sdk/platform-tools`
 
-注意由于由于系统目录，创建文件时需要使用 `sudo` 命令。例如：
+注意由于系统目录，创建文件时需要使用`sudo`命令。例如：
 
 ```
 sudo vi /etc/paths.d/android-sdk
@@ -331,7 +329,7 @@ Android Studio 是一个大型且复杂的应用程序，具有许多进程。�
 
 图 2-11
 
-要查看并修改当前的内存配置，选择主菜单 `File -> Settings...`（macOS 上为 `Android Studio -> Settings...`），并在生成的对话框中，选择左侧导航面板中的 `Appearance & Behavior`（外观与行为），然后选择 `System Settings` 下的 `Memory Settings`（内存设置）选项，如下图 2-12 所示：
+要查看并修改当前的内存配置，选择主菜单`File -> Settings...`（macOS 上为`Android Studio -> Settings...`），并在生成的对话框中，选择左侧导航面板中的`Appearance & Behavior`（外观与行为），然后选择`System Settings`下的`Memory Settings`（内存设置）选项，如下图 2-12 所示：
 
 ![](img/as_memory_settings.jpg)
 
@@ -339,29 +337,25 @@ Android Studio 是一个大型且复杂的应用程序，具有许多进程。�
 
 更改内存分配时，不要分配超过需要或超过系统在不影响其他进程的情况下所提供的内存。
 
-
-
-
-
-IDE 堆内存设置调整了分配给 Android Studio 的内存，并且无论当前加载什么项目都会生效。另一方面，当在 Android Studio 内部构建和运行项目时，会有几个后台进程（称为守护进程）执行编译和运行应用的任务。在编译和运行大型复杂项目时，通过调整守护进程堆内存设置可以改进构建时间。与 IDE 堆内存设置不同，这些守护进程设置仅适用于当前项目，并且只有在 Android Studio 中打开项目时才能访问。若要在打开的项目中显示 SDK Manager，请从主菜单中选择 `Tools -> SDK Manager...` 菜单选项。
+IDE 堆内存设置调整了分配给 Android Studio 的内存，并且无论当前加载什么项目都会生效。另一方面，当在 Android Studio 内部构建和运行项目时，会有几个后台进程（称为守护进程）执行编译和运行应用的任务。在编译和运行大型复杂项目时，通过调整守护进程堆内存设置可以改进构建时间。与 IDE 堆内存设置不同，这些守护进程设置仅适用于当前项目，并且只有在 Android Studio 中打开项目时才能访问。若要在打开的项目中显示 SDK Manager，请从主菜单中选择`Tools -> SDK Manager...`菜单选项。
 
 ## 2.8 更新 Android Studio 和 SDK
 
 Android Studio 和 Android SDK 会定期发布新版本。新版本的 SDK 是通过 Android SDK Manager 进行安装的。当有更新可供安装时，Android Studio 通常会通知你。
 
-要手动检查 Android Studio 更新，请使用 Android Studio 主窗口中的 `Help -> Check for Updates...` 菜单选项（macOS 上为 `Android Studio -> Check for Updates...`）。
+要手动检查 Android Studio 更新，请使用 Android Studio 主窗口中的`Help -> Check for Updates...`菜单选项（macOS 上为`Android Studio -> Check for Updates...`）。
 
 ## 2.9 总结
 
-在开始开始开发基于 Android 的应用程序之前，第一步是搭建合适的开发环境。这包括 Android SDK 和 Android Studio IDE（其中包含 OpenJDK 开发环境）。本章涵盖了在 Windows、macOS 和 Linux 上安装这些包的步骤。
+在开始开发基于 Android 的应用程序之前，第一步是搭建合适的开发环境。这包括 Android SDK 和 Android Studio IDE（其中包含 OpenJDK 开发环境）。本章涵盖了在 Windows、macOS 和 Linux 上安装这些包的步骤。
 
 ## 3. 在 Android Studio 中创建一个示例 Android 应用
 
-本书的前几个章节解释了如何使用 Android Studio IDE 配置适用于开发 Android 应用程序的环境。在进入稍高级的话题之前，现在是验证所有所需的开发包已安装并正常运行的好时。实现这一目标的最佳方法是创建一个 Android 应用程序并编译、运行它。本章将涵盖如何使用 Android Studio 创建 Android 应用程序项目。项目创建完成后，后续章节将探索如何使用 Android 模拟器环境对应用程序进行测试运行。
+本书的前几个章节解释了如何使用 Android Studio IDE 配置适用于开发 Android 应用程序的环境。在进入稍高级的话题之前，现在是验证所有所需的开发包已安装并正常运行的好时机。实现这一目标的最佳方法是创建一个 Android 应用程序并编译、运行它。本章将涵盖如何使用 Android Studio 创建 Android 应用程序项目。项目创建完成后，后续章节将探索如何使用 Android 模拟器环境对应用程序进行测试运行。
 
 ### 3.1 关于项目
 
-在本章创建的项目是一个基础的货币汇率转换器（事实上，它非常简单，只从美元转换为欧元，并使用估算汇率进行转换）。该项目还将使用最基础的 Android Studio 项目模板之一。这种简易性允许我们介绍 Android 应用开发的一些关键方面，而不会通过一次性引入过多的概念（例如推荐的应用架构和 Android 架构组件）让初学者感到无从。。在遵循本章教程时，请放心，初始示例项目中所使用的技术和代码将在稍后部分进行更详细的介绍。
+在本章创建的项目是一个基础的货币汇率转换器（事实上，它非常简单，只从美元转换为欧元，并使用估算汇率进行转换）。该项目还将使用最基础的 Android Studio 项目模板之一。这种简易性允许我们介绍 Android 应用开发的一些关键方面，而不会通过一次性引入过多的概念（例如推荐的应用架构和 Android 架构组件）让初学者感到无从。在遵循本章教程时，请放心，初始示例项目中所使用的技术和代码将在稍后部分进行更详细的介绍。
 
 ### 3.2 创建新的 Android 项目
 
@@ -371,43 +365,43 @@ Android Studio 和 Android SDK 会定期发布新版本。新版本的 SDK 是�
 
 图 3-1
 
-一旦出现此窗口，Android Studio 就已准备好创建一个新项目。要创建新项目，点击 `New Project` 选项以显示新项目向导的第一个屏幕。
+一旦出现此窗口，Android Studio 就已准备好创建一个新项目。要创建新项目，点击`New Project`选项以显示新项目向导的第一个屏幕。
 
 ### 3.3 创建 Activity
 
-下一步是为应用程序定义要创建的初始 Activity 类型。提供了为手机和平板电脑、Wear OS、电视或汽车创建项目的选项。在开发 Android 应用程序时，有多种不同的 Activity 类型，其中许多将在后面的章节中详细介绍。然而，对于本示例，请从 Templates 面板中选择 `Phone and Tablet` 选项，然后选择创建 `Empty Views Activity` 选项。`Empty Views Activity` 选项创建一个由单个 `TextView` 对象组成的模板用户界面。
+下一步是为应用程序定义要创建的初始 Activity 类型。提供了为手机和平板电脑、Wear OS、电视或汽车创建项目的选项。在开发 Android 应用程序时，有多种不同的 Activity 类型，其中许多将在后面的章节中详细介绍。然而，对于本示例，请从 Templates 面板中选择`Phone and Tablet`选项，然后选择创建`Empty Views Activity`选项。`Empty Views Activity`选项创建一个由单个`TextView`对象组成的模板用户界面。
 
 ![](img/as_new_project_template.jpg)
 
 图 3-2
 
-选中 `Empty Views Activity` 选项后，点击 Next 继续项目配置。
+选中`Empty Views Activity`选项后，点击 Next 继续项目配置。
 
 ### 3.4 定义项目和 SDK 设置
 
-在项目配置窗口（图 3-3）中，将 `Name` 字段设置为 `AndroidSample`。应用程序名称是在 Android Studio 内部引用和识别应用程序的名称，也是如果完成的应用程序要在 Google Play 商店销售时将使用的名称。
+在项目配置窗口（图 3-3）中，将`Name`字段设置为`AndroidSample`。应用程序名称是在 Android Studio 内部引用和识别应用程序的名称，也是如果完成的应用程序要在 Google Play 商店销售时将使用的名称。
 
-`Package name`（包名）在 Android 应用生态系统中唯一标识应用程序。虽然可以设置为任何唯一标识你的应用的字符串，但传统上基于你的域名的反转 URL 加上应用程序名称。例如，如果你的域名是 `www.mycompany.com`，且应用程序命名为 `AndroidSample`，那么包名可能指定如下：
+`Package name`（包名）在 Android 应用生态系统中唯一标识应用程序。虽然可以设置为任何唯一标识你的应用的字符串，但传统上基于你的域名的反转 URL 加上应用程序名称。例如，如果你的域名是`www.mycompany.com`，且应用程序命名为`AndroidSample`，那么包名可能指定如下：
 
 ```
 com.mycompany.androidsample
 ```
 
-如果你没有域名，可以在 `Company Domain` 字段中输入任何其他字符串，或者可以使用 `example.com` 进行测试，但在发布应用程序之前需要对其进行更改：
+如果你没有域名，可以在`Company Domain`字段中输入任何其他字符串，或者可以使用`example.com`进行测试，但在发布应用程序之前需要对其进行更改：
 
 ```
 com.example.androidsample
 ```
 
-`Save location`（保存位置）设置将默认位于你主目录下名为 `AndroidStudioProjects` 的文件夹中，可以通过点击包含当前路径设置文本字段右侧的文件夹图标进行更改。
+`Save location`（保存位置）设置将默认位于你主目录下名为`AndroidStudioProjects`的文件夹中，可以通过点击包含当前路径设置文本字段右侧的文件夹图标进行更改。
 
-将 `minimum SDK` 设置为 `API 26`（Oreo；Android 8.0）。在本书中创建的大多数项目都将使用此最小 SDK，除非某个必要功能仅在较新版本可用。这里的目标是使用最新的 Android SDK 构建应用，同时保留对运行旧版本 Android 的设备的兼容性（在这种情况下，最远可追溯到 Android 8.0）。`Minimum SDK` 设置下方的文本将概述目前使用该应用的 Android 设备百分比。点击 `Help me choose` 按钮（如图 3-3 所示）以查看各种 Android 版本的详细分类：
+将`minimum SDK`设置为`API 26`（Oreo；Android 8.0）。在本书中创建的大多数项目都将使用此最小 SDK，除非某个必要功能仅在较新版本可用。这里的目标是使用最新的 Android SDK 构建应用，同时保留对运行旧版本 Android 的设备的兼容性（在这种情况下，最远可追溯到 Android 8.0）。`Minimum SDK`设置下方的文本将概述目前使用该应用的 Android 设备百分比。点击`Help me choose`按钮（如图 3-3 所示）以查看各种 Android 版本的详细分类：
 
 ![](img/as_java_project_settings.jpg)
 
 图 3-3
 
-最后，将 `Language` 菜单改为 `Java`并将 `Kotlin DSL (build.gradle.kts)` 作为构建语言，然后点击 Finish 创建项目。
+最后，将`Language`菜单改为`Java`并将`Kotlin DSL (build.gradle.kts)`作为构建语言，然后点击 Finish 创建项目。
 
 ### 3.5 启用新的 Android Studio UI
 
@@ -417,7 +411,7 @@ Android Studio 正在向新的用户界面过渡，该界面在 Iguana 版本中
 
 图 3-4
 
-通过选择 `File -> Settings...` 菜单选项（macOS 上为 `Android Studio -> Settings...`）并选择左侧面板中 `Appearance and Behavior` 下的 `New UI` 选项来启用新 UI。在主面板中，勾选 `Enable new UI` 复选框，然后点击 `Apply`，最后点击 `OK` 提交更改：
+通过选择`File -> Settings...`菜单选项（macOS 上为`Android Studio -> Settings...`）并选择左侧面板中`Appearance and Behavior`下的`New UI`选项来启用新 UI。在主面板中，勾选`Enable new UI`复选框，然后点击`Apply`，最后点击`OK`提交更改：
 
 ![](img/as_enable_new_ui.jpg)
 
@@ -427,17 +421,13 @@ Android Studio 正在向新的用户界面过渡，该界面在 Iguana 版本中
 
 ### 3.6 修改示例应用程序
 
-Android Studio 重启后，主窗口将使用新 UI 重新出现，并包含我们的 `AndroidSample` 项目，如下方的图 3-6 所示：
+Android Studio 重启后，主窗口将使用新 UI 重新出现，并包含我们的`AndroidSample`项目，如下方的图 3-6 所示：
 
 ![](img/as_main_window.jpg)
 
 图 3-6
 
-
-
-
-
-新创建的项目以及关联文件的引用列在主项目窗口左侧的 `Project` 工具窗口中。`Project` 工具窗口有多种可以显示信息的模式。默认情况下，此面板应处于 `Android` 模式。此设置由面板顶部菜单控制，如图 3-7 中高亮所示。如果面板当前未处于 `Android` 模式，请使用菜单切换模式：
+新创建的项目以及关联文件的引用列在主项目窗口左侧的`Project`工具窗口中。`Project`工具窗口有多种可以显示信息的模式。默认情况下，此面板应处于`Android`模式。此设置由面板顶部菜单控制，如图 3-7 中高亮所示。如果面板当前未处于`Android`模式，请使用菜单切换模式：
 
 ![](img/as_project_menu.jpg)
 
@@ -445,65 +435,67 @@ Android Studio 重启后，主窗口将使用新 UI 重新出现，并包含我�
 
 ### 3.7 修改用户界面
 
-我们活动（activity）的用户界面设计存储在一个名为 `activity_main.xml` 的文件中，该文件又位于 `Project` 工具窗口文件层次结构下的 `app` -> `res` -> `layout` 。在 `Project` 工具窗口中找到该文件后，双击文件将其加载到用户界面 `Layout Editor`（布局编辑器）工具中，该工具将出现在 Android Studio 主窗口的中间面板：
+我们活动（activity）的用户界面设计存储在一个名为`activity_main.xml`的文件中，该文件又位于`Project`工具窗口文件层次结构下的`app` -> `res` -> `layout`。在`Project`工具窗口中找到该文件后，双击文件将其加载到用户界面`Layout Editor`（布局编辑器）工具中，该工具将出现在 Android Studio 主窗口的中间面板：
 
 ![](img/as_layout_editor.jpg)
 
 图 3-8
 
-`Layout Editor` 窗口顶部工具栏上有一个菜单（上图中设置为 `Pixel`），它反映在 `Layout Editor` 面板中设备的视觉表示上。通过点击此菜单可以使用其他设备选项。
+`Layout Editor`窗口顶部工具栏上有一个菜单（上图中设置为`Pixel`），它反映在`Layout Editor`面板中设备的视觉表示上。通过点击此菜单可以使用其他设备选项。
 
-使用 `System UI Mode` 按钮 (![](img/as_night_mode_button.jpg)) 来开启或关闭设备屏幕布局的 `Night`（夜）模式。要在设备表示的横屏和竖屏之间切换，请使用显示 ![](img/as_rotate_button.jpg) 图标的下拉菜单。
+使用`System UI Mode`按钮（![](img/as_night_mode_button.jpg)）来开启或关闭设备屏幕布局的`Night`（夜）模式。要在设备表示的横屏和竖屏之间切换，请使用显示![](img/as_rotate_button.jpg)图标的下拉菜单。
 
-正如我们在设备屏幕上看到的，内容布局已经包含一个显示“Hello World!”消息的标签。面板左侧运行着调色板，包含了不同类别的用户界面组件，用于构建用户界面，例如按钮、标签和文本字段。但我们需要，并不是所有的用户界面组件对用户都是可见的。其中一类就是布局。Android 支持多种布局，这些布局对视觉用户界面组件在屏幕上的定位和管理提供了不同层次的控制。虽然从用户界面的视觉表示很难判断，但当前设计是使用 `ConstraintLayout` 创建的。这可以通过查看 `Component Tree`（组件树）面板中的信息来确认，该面板默认位于 `Layout Editor` 面板的左下角，如图 3-9 所示：
+正如我们在设备屏幕上看到的，内容布局已经包含一个显示“Hello World!”消息的标签。面板左侧运行着调色板，包含了不同类别的用户界面组件，用于构建用户界面，例如按钮、标签和文本字段。但我们需要，并不是所有的用户界面组件对用户都是可见的。其中一类就是布局。Android 支持多种布局，这些布局对视觉用户界面组件在屏幕上的定位和管理提供了不同层次的控制。虽然从用户界面的视觉表示很难判断，但当前设计是使用`ConstraintLayout`创建的。这可以通过查看`Component Tree`（组件树）面板中的信息来确认，该面板默认位于`Layout Editor`面板的左下角，如图 3-9 所示：
 
 ![](img/as_component_tree.jpg)
 
 图 3-9
 
-从组件树层次结构可以看出，用户界面布局由一个名为 `main` 的 `ConstraintLayout` 父布局和一个 `TextView` 子对象组成。
+从组件树层次结构可以看出，用户界面布局由一个名为`main`的`ConstraintLayout`父布局和一个`TextView`子对象组成。
 
-继续之前，检查 `Layout Editor` 的 `Autoconnect`（自动连接）模式已启用。这意味着当组件添加到布局时，`Layout Editor` 将自动添加约束，以确保组件在不同的屏幕尺寸和设备方向上正确定位（该主题将在后续章节中更详细地介绍）。`Autoconnect` 按钮出现在 `Layout Editor` 工具栏中，用 U 形图标表示。当被禁用时，图标上会带有一条对角线（图 3-10）。如有必要，点击此按钮重新启用 `Autoconnect` 模式。
+继续之前，检查`Layout Editor`的`Autoconnect`（自动连接）模式已启用。这意味着当组件添加到布局时，`Layout Editor`将自动添加约束，以确保组件在不同的屏幕尺寸和设备方向上正确定位（该主题将在后续章节中更详细地介绍）。`Autoconnect`按钮出现在`Layout Editor`工具栏中，用 U 形图标表示。当被禁用时，图标上会带有一条对角线（图 3-10）。如有必要，点击此按钮重新启用`Autoconnect`模式。
 
 ![](img/as_autoconnect_disabled.jpg)
 
 图 3-10
 
-修改应用程序的下一步是在布局中添加一些额外的组件，其中第一个是 `Button`，供用户点击以启动汇率转换。
+修改应用程序的下一步是在布局中添加一些额外的组件，其中第一个是`Button`，供用户点击以启动汇率转换。
 
-`Palette`（调色板）面板由两列组成，左列包含视图组件类别列表。右列列出当前选择类别包含的组件。在图 3-11 中，例如，在 `Buttons` 类别中选择了 `Button` 视图：
+`Palette`（调色板）面板由两列组成，左列包含视图组件类别列表。右列列出当前选择类别包含的组件。在图 3-11 中，例如，在`Buttons`类别中选择了`Button`视图：
 
 ![](img/as_palette_button_selected.jpg)
 
 图 3-11
 
-从 `Buttons` 列表中点击并拖动 `Button` 对象，将其到用户界面设计的水平中心，使其位于现有 `TextView` 小部件下方：
+从`Buttons`列表中点击并拖动`Button`对象，将其到用户界面设计的水平中心，使其位于现有`TextView`小部件下方：
 
 ![](img/as_android_sample_button.jpg)
 
 图 3-12
 
-下一步是更改 `Button` 组件当前显示的文本。位于设计区域右侧的面板是 `Attributes`（属性）面板。此面板显示分配给布局中当前选择组件的属性。在此面板中，在 `Common Attributes`（常用属性）部分找到 `text` 属性，并将当前值从“Button”更改为“Convert”，如图 3-13 所示：
+
+
+下一步是更改`Button`组件当前显示的文本。位于设计区域右侧的面板是`Attributes`（属性）面板。此面板显示分配给布局中当前选择组件的属性。在此面板中，在`Common Attributes`（常用属性）部分找到`text`属性，并将当前值从“Button”更改为“Convert”，如图 3-13 所示：
 
 ![](img/as_android_sample_button_text.jpg)
 
 图 3-13
 
-第二个带有扳手图标的文本属性允许设置文本属性，该属性仅显示在 `Layout Editor` 工具中，但在运行时不会显示。这对于测试在不反复运行应用的情况下，视觉组件和布局在不同设置下的行为非常有用。
+第二个带有扳手图标的文本属性允许设置文本属性，该属性仅显示在`Layout Editor`工具中，但在运行时不会显示。这对于测试在不反复运行应用的情况下，视觉组件和布局在不同设置下的行为非常有用。
 
-万万一 `Autoconnect` 系统未能设置所有布局连接，请点击 `Infer Constraints`（推断约束）按钮（图 3-14）向布局添加任何缺失的约束：
+万一`Autoconnect`系统未能设置所有布局连接，请点击`Infer Constraints`（推断约束）按钮（图 3-14）向布局添加任何缺失的约束：
 
 ![](img/as_editor_autoconnect.jpg)
 
 图 3-14
 
-我们需要解释一下 `Layout Editor` 工具右上角的警告按钮，如图 3-15 所示。此警告表示布局存在潜在问题。点击此按钮查看问题详情：
+我们需要解释一下`Layout Editor`工具右上角的警告按钮，如图 3-15 所示。此警告表示布局存在潜在问题。点击此按钮查看问题详情：
 
 ![](img/as_warnings.jpg)
 
 图 3-15
 
-点击后，`Problems`（问题）工具窗口（图 3-16）将会出现，描述问题性质
+点击后，`Problems`（问题）工具窗口（图 3-16）将会出现，描述问题性质：
 
 ![](img/as_tool_window.jpg)
 
@@ -511,49 +503,45 @@ Android Studio 重启后，主窗口将使用新 UI 重新出现，并包含我�
 
 此工具窗口分为两个面板。左面板（图中标记为 A）列出了文件中发现的问题。在我们的示例中，仅列出了以下问题：
 
-button `<Button>: Hardcoded text
+`button <Button>: Hardcoded text`
 
 当选择列表中一项时（B），右面板将更新提供详细信息（C）。在这种情况下，解释如下：
 
-Hardcoded string "Convert", should use @string resource
+`Hardcoded string "Convert", should use @string resource`
 
 工具窗口还包含一个预览编辑器（D），允许对布局文件进行手动修正。
 
-此 I18N 信息告知我们项目国际化存在潜在问题（“I18N”源于“internationalization”一词以“I”开头，以“N”结尾，中间有 18 个字母）。警告提醒我们，在开发 Android 应用程序时，尽可能将文本字符串等属性和值存储为资源。这样做可以通过修改资源文件而不是更改应用程序源代码来更改应用程序的外观。在将用户界面翻译成不同的语言时特别有用。如果用户界面所有的文本都包含在一个资源文件中（例如），可以将该文件交给翻译人员，他们将执行翻译工作并返回翻译后的文件以包含在应用程序中。这使得无需进行任何源码更改即可针对多种语言。在此实例中我们将创建一个名为 `convert_string` 的新资源并为其分配字符串“Convert”。
+此 I18N 信息告知我们项目国际化存在潜在问题（“I18N”源于“internationalization”一词以“I”开头，以“N”结尾，中间有 18 个字母）。警告提醒我们，在开发 Android 应用程序时，尽可能将文本字符串等属性和值存储为资源。这样做可以通过修改资源文件而不是更改应用程序源代码来更改应用程序的外观。在将用户界面翻译成不同的语言时特别有用。如果用户界面所有的文本都包含在一个资源文件中（例如），可以将该文件交给翻译人员，他们将执行翻译工作并返回翻译后的文件以包含在应用程序中。这使得无需进行任何源码更改即可针对多种语言。在此实例中我们将创建一个名为`convert_string`的新资源并为其分配字符串“Convert”。
 
-首先点击 `Show Quick Fixes` 按钮（E），并从菜单中选择 `Extract string resource`（提取字符串资源）选项，如图 3-17 所示：
+首先点击`Show Quick Fixes`按钮（E），并从菜单中选择`Extract string resource`（提取字符串资源）选项，如图 3-17 所示：
 
 ![](img/as_extract_button.jpg)
 
 图 3-17
 
-
-
-
-
-选择此选项后，将出现提取资源（Extract Resource）面板（图 3-18）。在此面板中，将资源名称字段更改为 `convert_string`并将资源值设置为 `Convert`，然后点击 OK 按钮：
+选择此选项后，将出现提取资源（Extract Resource）面板（图 3-18）。在此面板中，将资源名称字段更改为`convert_string`并将资源值设置为`Convert`，然后点击 OK 按钮：
 
 ![](img/as_extract_resource.jpg)
 
 图 3-18
 
-要添加的下一个组件是 `EditText`，用户将在其中输入要转换的美元金额。从 `Palette`（调色板）面板中选择 `Text` 类别，点击并拖拽 `Number (Decimal)` 组件到布局中，使其在水平方向上居中，并位于现有 `TextView` 组件上方。选中该组件后，使用 `Attributes`（属性）工具窗口将 `hint` 属性设置为“dollars”。点击警告图标并将字符串提取为名为 `dollars_hint` 的资源。
+要添加的下一个组件是`EditText`，用户将在其中输入要转换的美元金额。从`Palette`（调色板）面板中选择`Text`类别，点击并拖拽`Number (Decimal)`组件到布局中，使其在水平方向上居中，并位于现有`TextView`组件上方。选中该组件后，使用`Attributes`（属性）工具窗口将`hint`属性设置为“dollars”。点击警告图标并将字符串提取为名为`dollars_hint`的资源。
 
-在本章稍后编写的代码将需要访问用户在 `EditText` 字段中输入的美元值。它将通过引用分配给用户界面布局中组件的 `id`来实现。Android Studio 为组件分配的默认 `id` 可以在布局中选中组件时，在 `Attributes` 工具窗口中查看和更改，如图 3-19 所示：
+在本章稍后编写的代码将需要访问用户在`EditText`字段中输入的美元值。它将通过引用分配给用户界面布局中组件的`id`来实现。Android Studio 为组件分配的默认`id`可以在布局中选中组件时，在`Attributes`工具窗口中查看和更改，如图 3-19 所示：
 
 ![](img/as_widget_id.jpg)
 
 图 3-19
 
-将 `id` 改为 `dollarText`，并在 `Rename`（重命名）对话框中点击 `Refactor`（重构）按钮。这可以确保项目其他地方对旧 `id` 的任何引用都会自动更新为使用新 `id`：
+将`id`改为`dollarText`，并在`Rename`（重命名）对话框中点击`Refactor`（重构）按钮。这可以确保项目其他地方对旧`id`的任何引用都会自动更新为使用新`id`：
 
 ![](img/as_rename_id_dialog.jpg)
 
 图 3-20
 
-如有必要，重复上述步骤将 `TextView` 组件的 `id` 设置为 `textView`。
+如有必要，重复上述步骤将`TextView`组件的`id`设置为`textView`。
 
-点击 `Infer Constraints`（推断约束）按钮以添加任何缺失的布局约束。此时，布局应该类似于图 3-21 所示所示：
+点击`Infer Constraints`（推断约束）按钮以添加任何缺失的布局约束。此时，布局应该类似于图 3-21 所示：
 
 ![](img/as_android_sample_ui.jpg)
 
@@ -561,23 +549,23 @@ Hardcoded string "Convert", should use @string resource
 
 ### 3.8 检查布局和资源文件
 
-在继续下一步之前，我们将查看用户界面设计和资源处理的一些内部方面。在上一节中，我们通过 `Layout Editor` 工具修改 `activity_main.xml` 文件来更改用户界面。事实上，`Layout Editor` 所做的只是提供了一种易于用户编辑文件底层 XML 内容的方法。在实践中，没有理由不直接修改 XML 来更改用户界面，在某些情况下，这实际上比使用 `Layout Editor` 工具更快。在 `Layout Editor` 面板的右上角是 `View Modes`（视图模式）按钮，在下方的图 3-22 中标记为 A 到 C：
+在继续下一步之前，我们将查看用户界面设计和资源处理的一些内部方面。在上一节中，我们通过`Layout Editor`工具修改`activity_main.xml`文件来更改用户界面。事实上，`Layout Editor`所做的只是提供了一种易于用户编辑文件底层 XML 内容的方法。在实践中，没有理由不直接修改 XML 来更改用户界面，在某些情况下，这实际上比使用`Layout Editor`工具更快。在`Layout Editor`面板的右上角是`View Modes`（视图模式）按钮，在下方的图 3-22 中标记为 A 到 C：
 
 ![](img/as_layout_editor_view_mode_buttons.jpg)
 
 图 3-22
 
-默认情况下，编辑器处于 `Design` 模式（按钮 C），此时只显示布局的视觉表示。在 `Code` 模式（A）下，编辑器将显示布局的 XML，而在 `Split` 模式（B）下，同时显示布局和 XML，如图 3-23 所示：
+默认情况下，编辑器处于`Design`模式（按钮 C），此时只显示布局的视觉表示。在`Code`模式（A）下，编辑器将显示布局的 XML，而在`Split`模式（B）下，同时显示布局和 XML，如图 3-23 所示：
 
 ![](img/as_layout_editor_split_mode.jpg)
 
 图 3-23
 
-`View Modes` 按钮左侧的按钮（在图 3-22 中标记为 B）用于快速在 `Code` 和 `Split` 模式之间切换。
+`View Modes`按钮左侧的按钮（在图 3-22 中标记为 B）用于快速在`Code`和`Split`模式之间切换。
 
-从 XML 文件的结构可以看出，用户界面由 `ConstraintLayout` 组件组成，它又是 `TextView`、`Button` 和 `EditText` 对象的父级。我们还可以看到，例如，`Button` 的 `text` 属性设置为我们的 `convert_string` 资源。尽管复杂内容内容异，但所有用户界面布局都是这种层次化的、基于 XML 的结构。
+从 XML 文件的结构可以看出，用户界面由`ConstraintLayout`组件组成，它又是`TextView`、`Button`和`EditText`对象的父级。我们还可以看到，例如，`Button`的`text`属性设置为我们的`convert_string`资源。尽管复杂内容各异，但所有用户界面布局都是这种层次化的、基于 XML 的结构。
 
-当修改 XML 布局时，这些更改将反映在布局画布上。也可以在布局画布面板内对布局进行视觉修改，更改将出现在 XML 列表中。要查看此效果，切换到 `Split` 模式并修改 XML 布局，将 `ConstraintLayout` 的背景颜色更改为红色如下：
+当修改 XML 布局时，这些更改将反映在布局画布上。也可以在布局画布面板内对布局进行视觉修改，更改将出现在 XML 列表中。要查看此效果，切换到`Split`模式并修改 XML 布局，将`ConstraintLayout`的背景颜色更改为红色如下：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -595,13 +583,13 @@ Hardcoded string "Convert", should use @string resource
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-注意布局颜色会实时更改以匹配 XML 文件中的新设置。同样注意，在 XML 编辑器左边距（也称为槽口）包含颜色设置的行旁边会出现一个红色红色方块。这是属性上已设置红色的视觉提示。点击红色方块将显示颜色选择器以选择不同的颜色：
+注意布局颜色会实时更改以匹配 XML 文件中的新设置。同样注意，在 XML 编辑器左边距（也称为槽口）包含颜色设置的行旁边会出现一个红色方块。这是属性上已设置红色的视觉提示。点击红色方块将显示颜色选择器以选择不同的颜色：
 
 ![](img/as_layout_editor_color_selector.jpg)
 
 图 3-24
 
-在继续之前，从布局文件中删除背景属性。最后，使用 Project 面板找到 `app -> res -> values -> strings.xml` 文件并双击将其加载到编辑器。目前 XML 如下：
+在继续之前，从布局文件中删除背景属性。最后，使用 Project 面板找到`app -> res -> values -> strings.xml`文件并双击将其加载到编辑器。目前 XML 如下：
 
 ```xml
 <resources>
@@ -610,9 +598,9 @@ Hardcoded string "Convert", should use @string resource
 </resources>
 ```
 
-为了演示资源的使用，更改 `convert_string` 的字符串，然后返回布局编辑器。注意布局已获取字符串的新值。
+为了演示资源的使用，更改`convert_string`的字符串，然后返回布局编辑器。注意布局已获取字符串的新值。
 
-还有一种快速访问 XML 文件中引用的资源的方法。当布局编辑器处于 `Split` 或 `Code` 模式时，点击 `@string/convert_string` 属性使其高亮，然后按下键盘上的 `Ctrl-B`（macOS 为 `Cmd-B`）。Android Studio 随后将打开 `strings.xml` 文件并带您到定义该资源的行。利用此机会将字符串恢复为原始的“Convert”，并为代码中引用的资源添加以下附加条目：
+还有一种快速访问 XML 文件中引用的资源的方法。当布局编辑器处于`Split`或`Code`模式时，点击`@string/convert_string`属性使其高亮，然后按下键盘上的`Ctrl-B`（macOS 为`Cmd-B`）。Android Studio 随后将打开`strings.xml`文件并带您到定义该资源的行。利用此机会将字符串恢复为原始的“Convert”，并为代码中引用的资源添加以下附加条目：
 
 ```xml
 <resources>
@@ -623,7 +611,7 @@ Hardcoded string "Convert", should use @string resource
 </resources>
 ```
 
-可以通过编辑器窗口右上角的 `Open editor` 链接使用 Android Studio 翻译编辑器编辑资源字符串。这将翻译编辑器显示在 Android Studio 窗口的主面板：
+可以通过编辑器窗口右上角的`Open editor`链接使用 Android Studio 翻译编辑器编辑资源字符串。这将翻译编辑器显示在 Android Studio 窗口的主面板：
 
 ![](img/as_translations_editor.jpg)
 
@@ -633,16 +621,13 @@ Hardcoded string "Convert", should use @string resource
 
 ### 3.9 添加交互
 
-示例项目的最后一步是使应用程序交互，以便当用户在 `EditText` 字段中输入美元金额并点击转换按钮时，转换后的欧元金额将显示在 `TextView` 上。这涉及对 `Button` 组件实现事件处理。具体来说，需要配置 `Button` 在触发 `onClick` 事件时调用应用程序代码中的方法。事件处理可以通过多种方式实现，并在后续标题为 Android 事件处理概述与示例的章节中介绍。返回布局编辑器到 `Design` 模式，在布局编辑器中选择 `Button` 组件，参考 `Attributes` 工具窗口，并指定名为 `convertCurrency` 的方法如下：
+示例项目的最后一步是使应用程序交互，以便当用户在`EditText`字段中输入美元金额并点击转换按钮时，转换后的欧元金额将显示在`TextView`上。这涉及对`Button`组件实现事件处理。具体来说，需要配置`Button`在触发`onClick`事件时调用应用程序代码中的方法。事件处理可以通过多种方式实现，并在后续标题为“Android 事件处理概述与示例”的章节中介绍。返回布局编辑器到`Design`模式，在布局编辑器中选择`Button`组件，参考`Attributes`工具窗口，并指定名为`convertCurrency`的方法如下：
 
 ![](img/as_onclick_attribute.jpg)
 
 图 3-26
 
-
-
-
-接下来，双击 Project 工具窗口中的 `MainActivity.java` 文件（`app -> java -> <package name> -> `MainActivity`）将其加载到代码编辑器中，并向类文件中添加 `convertCurrency` 方法的代码，使其读取内容如下。注意，还需要导入一些额外的 Android 程序包：
+接下来，双击 Project 工具窗口中的`MainActivity.java`文件（`app -> java -> <package name> -> MainActivity`）将其加载到代码编辑器中，并向类文件中添加`convertCurrency`方法的代码，使其读取内容如下。注意，还需要导入一些额外的 Android 程序包：
 
 ```java
 package com.ebookfrenzy.androidsample;
@@ -680,15 +665,15 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-该方法首先通过调用名为 `findViewById` 方法并传递布局文件中分配的 `id` 来获取 `EditText` 和 `TextView` 对象的引用。随后会进行检查以确保用户输入了美元金额，如果是，则提取该值，将其从 `String` 转换为浮点值，并转换为欧元。最后，结果将显示在 `TextView` 组件上。
+该方法首先通过调用名为`findViewById`方法并传递布局文件中分配的`id`来获取`EditText`和`TextView`对象的引用。随后会进行检查以确保用户输入了美元金额，如果是，则提取该值，将其从`String`转换为浮点值，并转换为欧元。最后，结果将显示在`TextView`组件上。
 
-如果上述任何内容有不清楚的地方，请放心，这些概念将在后续章节中进行更详细介绍。特别是使用 `findByViewId` 从代码内部访问控件的主题，以及对一种被称为 `view binding`（视图绑定）的替代技术的介绍，将在标题为“Android View Binding 概述”的章节中介绍。
+如果上述任何内容有不清楚的地方，请放心，这些概念将在后续章节中进行更详细介绍。特别是使用`findByViewId`从代码内部访问控件的主题，以及对一种被称为`view binding`（视图绑定）的替代技术的介绍，将在标题为“Android View Binding 概述”的章节中介绍。
 
 ### 3.10 总结
 
-虽然并不复杂，但设置 Android 开发环境涉及多个步骤。完成这些步骤后，运行一个示例以确保环境已正确安装和配置是非常值得。在本章中，我们创建了一个示例应用程序，并使用 Android Studio 布局编辑器工具修改了用户界面布局。在此过程中，我们探索了尽可能使用资源（特别是字符串值）的重要性，并简要接触了布局。接下来，我们查看了用于存储 Android 应用程序用户界面设计的底层 XML。
+虽然并不复杂，但设置 Android 开发环境涉及多个步骤。完成这些步骤后，运行一个示例以确保环境已正确安装和配置是非常值得的。在本章中，我们创建了一个示例应用程序，并使用 Android Studio 布局编辑器工具修改了用户界面布局。在此过程中，我们探索了尽可能使用资源（特别是字符串值）的重要性，并简要接触了布局。接下来，我们查看了用于存储 Android 应用程序用户界面设计的底层 XML。
 
-最后，在 `Button` 上添加了一个 `onClick` 事件，该事件连接到一个实现的方法，用于从 `EditText` 组件中提取用户输入，将其从美元转换为欧元，然后结果显示在 `TextView` 上。
+最后，在`Button`上添加了一个`onClick`事件，该事件连接到一个实现的方法，用于从`EditText`组件中提取用户输入，将其从美元转换为欧元，然后结果显示在`TextView`上。
 
 应用已准备好进行测试，用于测试目的配置模拟器所需的步骤将在下一章中详细介绍。
 
@@ -702,136 +687,171 @@ AVD 是模拟器，允许在无需将应用程序安装到物理 Android 设备�
 
 AVD 会话（session）可以以独立窗口的形式出现，也可以嵌入在 Android Studio 窗口中。
 
-新的 AVD 使用 Android 虚拟设备管理器（Android Virtual Device Manager）创建和管理，可以使用命令行模式或更具用户友好的图形用户界面。创建新的 AVD 的第一步是启动 AVD Manager。这可以在 Android Studio 环境中点击右侧工具窗口中的 `Device Manager` 按钮来实现。
+新的 AVD 使用 Android 虚拟设备管理器（Android Virtual Device Manager）创建和管理，可以使用命令行模式或更具用户友好的图形用户界面。创建新的 AVD 的第一步是启动 AVD Manager。这可以在 Android Studio 环境中点击右侧工具窗口中的`Device Manager`按钮来实现。
 
-*注：提供的文本包含了一些关于 AVD 创建 UI 的重复性/占位符类指令；我已根据提供的源维护了逻辑流。）*
+要添加新的 AVD，点击`Device Manager`中的`Create virtual device`链接或`+`按钮打开`Virtual Device Configuration`对话：
 
-要添加新的 AVD，点击 `Device Manager` 中的 `Create virtual device` 链接或 `+` 按钮打开 `Virtual Device Configuration` 对话：
+1. 从`Category`面板中选择`Phone`选项以显示可用的 Android AVD 模板。
 
-1. 从 `Category` 面板中选择 `Phone` 选项以显示可用的 Android AVD 模板。
-2. 选择 `Pixel 4` 设备选项并点击 `Next`。
-3. 在 `System Image` 屏幕上，选择最新版本的 Android。如果尚未安装系统镜像，将在 `Release Name` 旁边提供 `Download` 链接。点击此链接下载并安装系统镜像。如果所需的镜像未列出，请点击 `x86 Images`（如果您运行的是带有 Apple 芯片的 Mac，请点击 `ARM images`）和 `Other images` 标签页以查看备选列表。
-4. 点击 `Next` 继续，并在 `name` 字段中输入描述性名称（例如 `Pixel 4 API 34`）或接受默认名称。
-5. 点击 `Finish` 创建 AVD。
-6. 如果以后需要对 AVD 进行修改，重新打开 `Device Manager`，选择列表中的 AVD，并点击 `Actions` 列中的铅笔图标进行编辑设置。
+2. 选择`Pixel 4`设备选项并点击`Next`。
+
+
+
+### 3. 创建 AVD
+
+在`System Image`屏幕上，选择最新版本的`Android`。如果尚未安装系统镜像，将在`Release Name`旁边提供`Download`链接。点击此链接下载并安装系统镜像。如果所需的镜像未列出，请点击`x86 Images`（如果您运行的是带有 Apple 芯片的 Mac，请点击`ARM images`）和`Other images`标签页以查看备选列表。
+
+点击`Next`继续，并在`name`字段中输入描述性名称（例如`Pixel 4 API 34`）或接受默认名称。
+
+点击`Finish`创建 AVD。
+
+如果以后需要对 AVD 进行修改，重新打开`Device Manager`，选择列表中的 AVD，并点击`Actions`列中的铅笔图标进行编辑设置。
 
 ### 4.2 启动模拟器
 
-要测试新创建的 AVD 模拟器，从 `Device Manager` 中选择模拟器并点击 `Actions` 列中的启动按钮（三角形）。模拟器将嵌入 Android Studio 主窗口中并开始启动过程。模拟器启动所需的时间取决于 AVD 及其运行系统的配置。
+要测试新创建的 AVD 模拟器，从`Device Manager`中选择模拟器并点击`Actions`列中的启动按钮（三角形）。模拟器将嵌入 Android Studio 主窗口中并开始启动过程。模拟器启动所需的时间取决于 AVD 及其运行系统的配置。
 
-要隐藏和显示模拟器工具窗口，请点击 `Running Devices` 工具窗口按钮。点击标签旁边的“x”关闭按钮退出模拟器。模拟器工具窗口可以容纳多个器会话，每个会话由一个标签表示。要在会话之间切换，请点击相应的标签。
+要隐藏和显示模拟器工具窗口，请点击`Running Devices`工具窗口按钮。点击标签旁边的“x”关闭按钮退出模拟器。模拟器工具窗口可以容纳多个器会话，每个会话由一个标签表示。要在会话之间切换，请点击相应的标签。
 
-
-
-
-
-虽然模拟器可能默认以竖屏方向显示，但此及其他默认选项是可以更改的。在 `Device Manager`（设备管理器）中，选择新的 `Pixel 4` 条目，并点击设备行 `Actions`（操作）列中的铅笔图标。在配置屏幕中，找到 `Startup orientation`（启动方向）部分并更改方向设置。退出并重新启动模拟器会话以使此更改生效。关于模拟器的更多细节请参阅下一章“使用和配置 Android Studio AVD 模拟器”]]。
+虽然模拟器可能默认以竖屏方向显示，但此及其他默认选项是可以更改的。在`Device Manager`（设备管理器）中，选择新的`Pixel 4`条目，并点击设备行`Actions`（操作）列中的铅笔图标。在配置屏幕中，找到`Startup orientation`（启动方向）部分并更改方向设置。退出并重新启动模拟器会话以使此更改生效。关于模拟器的更多细节请参阅下一章“使用和配置 Android Studio AVD 模拟器”。
 
 为了在本文章的下一节中节省时间，请在继续操作之前保持模拟器运行。
 
 ### 4.3 在 AVD 中运行应用程序
 
-配置好 `AVD` 模拟器后，现在可以编译并运行之前章节中创建的示例 `AndroidSample` 应用程序。在将 `AndroidSample` 项目加载到 `Android Studio` 后，确保新创建的 `Pixel 4` `AVD` 显示在设备菜单中（标记为下方图 4-7 中的 A），然后点击由三角形表示的运行按钮 (B)，选择 `Run`（运行） -> `Run ‘app’` 菜单选项，或使用键盘快捷键 `Ctrl-R`：
+配置好`AVD`模拟器后，现在可以编译并运行之前章节中创建的示例`AndroidSample`应用程序。在将`AndroidSample`项目加载到`Android Studio`后，确保新创建的`Pixel 4` `AVD`显示在设备菜单中（标记为下方图 4-7 中的 A），然后点击由三角形表示的运行按钮 (B)，选择`Run`（运行） -> `Run 'app'`菜单选项，或使用键盘快捷键`Ctrl-R`：
 
 ```
 ![](img/as_device_and_run_toolbar.jpg)
-```图 4-7 设备菜单 (A) 可用于选择不同的 `AVD` 实例或物理设备作为运行目标，也可以在多个设备上运行应用。菜单还提供了访问 `Device Manager` 以及设备连接配置和故障排除选项的权限：
+```
+
+图 4-7 设备菜单 (A) 可用于选择不同的`AVD`实例或物理设备作为运行目标，也可以在多个设备上运行应用。菜单还提供了访问`Device Manager`以及设备连接配置和故障排除选项的权限：
 
 ```
 ![](img/as_select_run_device.jpg)
-```图 4-8 一旦应用程序安装并运行，第一个片段（fragment）的用户界面将出现在模拟器中（片段是 `Android` 项目中一个可重用的部分，通常由用户界面布局和一些代码组成，该主题将在本章名为“Android Fragment 简介”]的章节中介绍）：
+```
+
+图 4-8 一旦应用程序安装并运行，第一个片段（fragment）的用户界面将出现在模拟器中（片段是`Android`项目中一个可重用的部分，通常由用户界面布局和一些代码组成，该主题将在本章名为“Android Fragment 简介”的章节中介绍）：
 
 ```
 ![](img/as_androidsample_running.jpg)
-```图 4-9 一旦运行过程开始，`Run`（运行）工具窗口将会出现。`Run` 工具窗口将在应用程序包安装和启动时显示诊断信息。图 4-10]显示了典型成功启动应用程序的 `Run` 工具窗口输出：
+```
+
+图 4-9 一旦运行过程开始，`Run`（运行）工具窗口将会出现。`Run`工具窗口将在应用程序包安装和启动时显示诊断信息。图 4-10 显示了典型成功启动应用程序的`Run`工具窗口输出：
 
 ```
 ![](img/as_logcat.jpg)
-```图 4-10 如果在启动过程中遇到问题，`Run` 工具窗口将提供信息以帮助隔离问题原因。
+```
 
-假设应用程序加载到模拟器并按预期运行，我们已经安全地验证了 `Android` 开发环境已正确安装和配置。在应用程序运行时，尝试进行货币换算以验证应用程序运行符合预期。
+图 4-10 如果在启动过程中遇到问题，`Run`工具窗口将提供信息以帮助隔离问题原因。
+
+假设应用程序加载到模拟器并按预期运行，我们已经安全地验证了`Android`开发环境已正确安装和配置。在应用程序运行时，尝试进行货币换算以验证应用程序运行符合预期。
 
 ### 4.4 在多个设备上运行
 
-上述图 4-8]中所示的运行目标菜单包含一个在多个模拟器和设备上并行运行应用程序的选项。选中此项时，该选项将显示图 4-11]中的对话框，提供系统上配置的 `AVDs` 以及任何已连接的物理设备列表。在点击 `Run` 按钮之前，启用目标模拟器或设备旁边的复选框：
+上述图 4-8 中所示的运行目标菜单包含一个在多个模拟器和设备上并行运行应用程序的选项。选中此项时，该选项将显示图 4-11 中的对话框，提供系统上配置的`AVDs`以及任何已连接的物理设备列表。在点击`Run`按钮之前，启用目标模拟器或设备旁边的复选框：
 
 ```
 ![](img/as_avd_multiple_devices.jpg)
-```图 4-11 点击 `Run` 按钮后，`Android Studio` 将在选定的模拟器和设备上启动应用。
+```
+
+图 4-11 点击`Run`按钮后，`Android Studio`将在选定的模拟器和设备上启动应用。
 
 ### 4.5 停止运行的应用程序
 
-要停止运行的应用程序，请点击主工具栏上的停止按钮，如图 4-12]所示：
+要停止运行的应用程序，请点击主工具栏上的停止按钮，如图 4-12 所示：
 
 ```
 ![](img/as_stop_button.jpg)
-```图 4-12 应用程序也可以使用 `Run` 工具窗口终止。首先通过应用程序运行时变为用的窗口栏按钮显示 `Run` 工具窗口。一旦 `Run` 工具窗口出现，点击下方图 4-13]中高亮的停止按钮：
+```
+
+图 4-12 应用程序也可以使用`Run`工具窗口终止。首先通过应用程序运行时变为用的窗口栏按钮显示`Run`工具窗口。一旦`Run`工具窗口出现，点击下方图 4-13 中高亮的停止按钮：
 
 ```
 ![](img/as_logcat_stop.jpg)
-```图 4-13
+```
+
+图 4-13
 
 ### 4.6 支持深色主题
 
-为了测试应用程序在启用深色主题时的行为，请在模拟器中运行的 `Android` 实例内打开 `Settings`（设置）应用，选择 `Display`（显示）类别，并如图 4-14]所示启用 `Dark`（深色）主题选项：
+为了测试应用程序在启用深色主题时的行为，请在模拟器中运行的`Android`实例内打开`Settings`（设置）应用，选择`Display`（显示）类别，并如图 4-14 所示启用`Dark`（深色）主题选项：
 
 ```
 ![](img/as_avd_dark_theme_setting.jpg)
-```图 4-14 启用深色主题后，运行 `AndroidSample` 应用并注意它以深色主题显示，包括黑色背景和按钮上的紫色背景，如图 4-15]所示：
+```
+
+图 4-14 启用深色主题后，运行`AndroidSample`应用并注意它以深色主题显示，包括黑色背景和按钮上的紫色背景，如图 4-15 所示：
 
 ```
 ![](img/as_androidsample_running_dark.jpg)
-```图 4-15 在继续之前返回 `Settings` 应用并关闭深色主题。
+```
+
+图 4-15 在继续之前返回`Settings`应用并关闭深色主题。
 
 ### 4.7 在独立窗口中运行模拟器
 
-到本章为止，我们仅将模拟器作为嵌入在主 `Android Studio` 窗口内的工具窗口。模拟器可以配置为在 `Settings`（设置）中的独立窗口中显示，可以通过点击 `Android Studio` 工具栏上的 `IDE` 和 `Project Settings` 按钮显示，如图 16]所示：
+到本章为止，我们仅将模拟器作为嵌入在主`Android Studio`窗口内的工具窗口。模拟器可以配置为在`Settings`（设置）中的独立窗口中显示，可以通过点击`Android Studio`工具栏上的`IDE`和`Project Settings`按钮显示，如图 16 所示：
 
 ```
 ![](img/as_settings.jpg)
-```图 16 在 `Settings` 对话框中，导航到侧边面板的 `Tools` -> `Emulator`，并禁用 `Launch in Running Devices`选项：
+```
+
+图 16 在`Settings`对话框中，导航到侧边面板的`Tools` -> `Emulator`，并禁用`Launch in Running Devices`选项：
 
 ```
 ![](img/as_tool_window.jpg)
-```图 17 禁用该选项后，点击 `Apply` 按钮以及 `OK` 提交更改，然后点击图 4-7 中的 B 按钮退出模拟器。运行应用程序，此时模拟器将作为独立窗口出现，如：
+```
+
+图 17 禁用该选项后，点击`Apply`按钮以及`OK`提交更改，然后点击图 4-7 中的 B 按钮退出模拟器。运行应用程序，此时模拟器将作为独立窗口出现，如：
 
 ```
 ![](img/as_separate_window.jpg)
-```图 18 独立或工具窗口的选择取决于个人喜好。如果你喜欢在工具窗口中运行，返回设置屏幕并重新启用 `Launch in Running Devices`选项。然而，在提交之前，请记住 `Running Devices` 工具窗口也可以从工具 `Options` 菜单中分离，该菜单可以通过点击图 19]所示按钮访问：
+```
+
+图 18 独立或工具窗口的选择取决于个人喜好。如果你喜欢在工具窗口中运行，返回设置屏幕并重新启用`Launch in Running Devices`选项。然而，在提交之前，请记住`Running Devices`工具窗口也可以从工具`Options`菜单中分离，该菜单可以通过点击图 19 所示按钮访问：
 
 ```
 ![](img/as_running_devices_menu.jpg)
-```图 19 在 `Options` 菜单中，选择 `View Mode` -> `Float` 以将工具窗口分离：
+```
+
+图 19 在`Options`菜单中，选择`View Mode` -> `Float`以将工具窗口分离：
 
 ```
 ![](img/as_tool_window_options_float.jpg)
-```图 20 要重新停靠 `Running Devices` 工具窗口，请点击图 4-21 所示的 `Dock` 按钮：
+```
+
+图 20 要重新停靠`Running Devices`工具窗口，请点击图 4-21 所示的`Dock`按钮：
 
 ```
 ![](img/as_tool_window_dock_button.jpg)
-```图 21
+```
+
+图 21
 
 ### 4.8 移除设备框
 
-模拟器可以配置为带有或不带设备框显示。要更改设置，退出模拟器，打开 `Device Manager`，选择列表中的 `AVD`，并点击图 4-22]中箭头所示的菜单按钮：
+模拟器可以配置为带有或不带设备框显示。要更改设置，退出模拟器，打开`Device Manager`，选择列表中的`AVD`，并点击图 4-22 中箭头所示的菜单按钮：
 
 ```
 ![](img/as_device_manager_avd_menu.jpg)
-```图 22 选择 `Edit` 选项，并在设置屏幕中找到并关闭 `Enable device frame` 选项，然后点击 `Finish` 按钮：
+```
+
+图 22 选择`Edit`选项，并在设置屏幕中找到并关闭`Enable device frame`选项，然后点击`Finish`按钮：
 
 ```
 ![](img/as_avd_device_frame_option.jpg)
-```图 23 一旦禁用了设备框，模拟器在下次启动时将如图 4-24]所示：
+```
+
+图 23 一旦禁用了设备框，模拟器在下次启动时将如图 4-24 所示：
 
 ```
 ![](img/as_avd_no_device_frame.jpg)
-```图 24
+```
+
+图 24
 
 ### 4.9 总结
-
-
-
-
 
 典型的应用开发流程遵循测试环境中的编码、编译和运行周期。Android 应用程序可以在物理 Android 设备或 Android 虚拟设备 (AVD) 模拟器上进行测试。AVD 使用 Android Studio 的设备管理器工具创建和管理，该工具可以作为命令行工具使用，也可以通过图形用户界面使用。在创建 AVD 以模拟特定的 Android 设备模型时，应配置与物理设备匹配的硬件规格。
 
@@ -845,7 +865,9 @@ AVD 模拟器会话可以以独立窗口的形式显示，也可以嵌入到 And
 
 当以独立模式启动时，模拟器在加载过程中会显示一个初始启动屏幕。加载完成后，将出现主模拟器窗口，其中包含所选设备类型的表示（对于图 5-1，这是一个 Pixel 4 设备）：
 
+```
 ![](img/avd_running_standalone.jpg)
+```
 
 图 5-1
 
@@ -855,7 +877,9 @@ AVD 模拟器会话可以以独立窗口的形式显示，也可以嵌入到 And
 
 模拟器工具栏（图 5-2）提供了与模拟器环境外观和行为相关的系列选项。
 
+```
 ![](img/as_3.5_avd_toolbar.jpg)
+```
 
 图 5-2
 
@@ -864,15 +888,25 @@ AVD 模拟器会话可以以独立窗口的形式显示，也可以嵌入到 And
 尽管工具栏中的许多选项是自而易懂的，但为了完整起见，将对每个选项进行介绍：
 
 - `退出 / 最小化` – 工具栏顶部的“x”按钮在选中时会退出模拟器会话，而“-”选项则会最小化整个窗口。
+
 - `电源` – `电源`按钮模拟物理 Android 设备上的硬件电源按钮。点击并释放此按钮将锁定设备并关闭屏幕。长按此按钮将启动设备的“关机”请求序列。
+
 - `音量增大 / 缩小` – 两个控制模拟器环境内播放音频音量的按钮。
+
 - `向左/向右旋转` – 模拟的设备在竖屏和横屏方向之间旋转。
+
 - `截屏` – 为设备屏幕显示的内容截屏。捕获的图像存储在扩展控制面板设置屏幕指定的指定位置（本章稍后会概述）。
+
 - `缩放模式` – 此按钮切换进入和退出缩放模式，其细节将在本章稍后介绍。
+
 - `返回` – 执行标准的 Android“返回”导航以返回上一个屏幕。
+
 - `主页` – 显示设备主屏幕。
+
 - `概览` – 模拟标准的 Android“概览”导航，显示设备上当前运行的应用程序。
+
 - `折叠设备` – 模拟折叠屏设备的折叠和展开。此选项仅在模拟器运行折叠屏设备系统镜像时可用。
+
 - `扩展控制` – 显示扩展控制面板，允许配置如模拟位置和电话活动、电池强度、蜂窝网络类型和指纹识别等选项。
 
 ### 5.3 在缩放模式下工作
@@ -891,7 +925,9 @@ AVD 模拟器会话可以以独立窗口的形式显示，也可以嵌入到 And
 
 扩展控制工具栏按钮显示如图 5-3 所示的面板。默认情况下将显示位置设置。从左侧面板选择不同的类别将显示相应的控制组：
 
+```
 ![](img/as_avd_extended_controls.jpg)
+```
 
 图 5-3
 
@@ -927,10 +963,6 @@ AVD 模拟器会话可以以独立窗口的形式显示，也可以嵌入到 And
 
 ### 5.5.8 麦克风
 
-
-
-
-
 麦克风设置允许启用麦克风，并模拟虚拟耳机和麦克风连接。还提供了一个按钮用于在模拟器上启动语音助手。
 
 ### 5.5.9 指纹识别
@@ -965,41 +997,47 @@ AVD 模拟器会话可以以独立窗口的形式显示，也可以嵌入到 And
 
 当模拟器首次启动时，它会执行冷启动，就像物理 Android 设备开机一样。由于操作系统需要加载并启动所有后台进程，冷启动过程可能需要一些时间才能完成。为了避免每次启动模拟器时都要经过这一过程，系统配置为每次退出时都自动保存模拟器当前状态的快照（称为快速启动快照）。下次启动模拟器时，快速启动快照将加载到内存中，并从上次离开的地方继续执行，允许模拟器在冷启动完成所需的一部分时间内重启。
 
-扩展控制面板的快照屏幕可以在模拟器执行期间的任何点存储额外的快照。这保存了整个模拟器的精确状态，允许模拟器恢复到拍摄快照时的精确时间点。在屏幕中，可以使用 `Take Snapshot` 按钮（在图 5-4 中标记为 A）拍摄快照。要恢复现有的快照，从列表中选择 (B) 并点击屏幕底部的 `run` 按钮 (C)。还提供了编辑 (D) 快照名称和描述的选项，以及删除 (E) 当前选快照的选项：
+扩展控制面板的快照屏幕可以在模拟器执行期间的任何点存储额外的快照。这保存了整个模拟器的精确状态，允许模拟器恢复到拍摄快照时的精确时间点。在屏幕中，可以使用`Take Snapshot`按钮（在图 5-4 中标记为 A）拍摄快照。要恢复现有的快照，从列表中选择 (B) 并点击屏幕底部的`run`按钮 (C)。还提供了编辑 (D) 快照名称和描述的选项，以及删除 (E) 当前选快照的选项：
 
+```
 ![](img/as_avd_snapshots.jpg)
+```
 
 图 5-4
 
-你还可以通过从主工具栏的运行目标菜单中进行选择，决定使用冷启动、最近的快速启动快照或之前的快照来启动模拟器，如图图 5-5 所示：
+你还可以通过从主工具栏的运行目标菜单中进行选择，决定使用冷启动、最近的快速启动快照或之前的快照来启动模拟器，如图 5-5 所示：
 
+```
 ![](img/as_avd_run_snapshot.jpg)
+```
 
 图 5-5
 
 ### 5.7 配置指纹模拟
 
-模拟器允许配置多达 10 个模拟指纹，并用于测试 Android 应用内的指纹身份验证。配置模拟指纹的第一步是启动模拟器，打开 `Settings` 应用并选择 `Security` 选项。
+模拟器允许配置多达 10 个模拟指纹，并用于测试 Android 应用内的指纹身份验证。配置模拟指纹的第一步是启动模拟器，打开`Settings`应用并选择`Security`选项。
 
-在 `Security` 设置屏幕中，选择 `fingerprint` 选项。在出现的信息屏幕上，点击 `Next` 按钮进入 `Fingerprint` 设置屏幕。在启用指纹安全之前，必须配置备用屏幕解锁方法（例如 `PIN`）。输入并确认合适的 `PIN`，并通过接受默认通知选项完成 `PIN` 输入过程。
+在`Security`设置屏幕中，选择`fingerprint`选项。在出现的信息屏幕上，点击`Next`按钮进入`Fingerprint`设置屏幕。在启用指纹安全之前，必须配置备用屏幕解锁方法（例如`PIN`）。输入并确认合适的`PIN`，并通过接受默认通知选项完成`PIN`输入过程。
 
-继续通过剩余屏幕，直到 `Settings` 应用请求在传感器上进行指纹录入。此时，显示扩展控制对话框，在左侧面板中选择 `Finger-print` 类别，并确保主设置面板中选中了 `Finger 1`：
+
+
+继续通过剩余屏幕，直到`Settings`应用请求在传感器上进行指纹录入。此时，显示扩展控制对话框，在左侧面板中选择`Finger-print`类别，并确保主设置面板中选中了`Finger 1`：
 
 ![](img/as_avd_touch_sensor.jpg)
 
 图 5-6
 
-点击 `Touch Sensor` 按钮以模拟 `Finger 1` 触摸指纹传感器。模拟器将报告成功添加指纹：
+点击`Touch Sensor`按钮以模拟`Finger 1`触摸指纹传感器。模拟器将报告成功添加指纹：
 
 ![](img/as_avd_fingerprint_added.jpg)
 
 图 5-7
 
-要添加更多指纹，点击 `Add Another` 按钮，并在再次点击 `Touch Sensor` 按钮之前，从扩展控制面板菜单中选择另一个手指。
+要添加更多指纹，点击`Add Another`按钮，并在再次点击`Touch Sensor`按钮之前，从扩展控制面板菜单中选择另一个手指。
 
 ### 5.8 工具窗口模式下的模拟器
 
-如上一章（“在 Android Studio 中创建 Android 虚拟设备 (AVD)”(#AVD_Creation.xhtml__idTextAnchor084)）所述，Android Studio 可以配置为在嵌入式工具窗口中启动模拟器，使其不显示在独立窗口中。在此模式下运行时，工具栏中将提供与独立模式下相同的控件，如图图 5-8 所示：
+如上一章“在 Android Studio 中创建 Android 虚拟设备 (AVD)”（`#AVD_Creation.xhtml__idTextAnchor084`）所述，Android Studio 可以配置为在嵌入式工具窗口中启动模拟器，使其不显示在独立窗口中。在此模式下运行时，工具栏中将提供与独立模式下相同的控件，如图 5-8 所示：
 
 ![](img/avd_running_devices_toolbar.jpg)
 
@@ -1021,25 +1059,25 @@ AVD 模拟器会话可以以独立窗口的形式显示，也可以嵌入到 And
 
 ### 5.9 创建可调整的模拟器
 
-除了配置特定设备模型的模拟器外，Android Studio 还提供了一种可调整的 AVD，允许你在手机、平板电脑和折叠屏尺寸之间切换。要创建此类模拟器，打开设备管理器并点击工具栏上的 `+` 按钮。接下来，选择图 5-9 所示的 Resizable 设备定义，并按照通常步骤创建新 AVD：
+除了配置特定设备模型的模拟器外，Android Studio 还提供了一种可调整的 AVD，允许你在手机、平板电脑和折叠屏尺寸之间切换。要创建此类模拟器，打开设备管理器并点击工具栏上的`+`按钮。接下来，选择图 5-9 所示的 Resizable 设备定义，并按照通常步骤创建新 AVD：
 
 ![](img/avd_create_resizable.jpg)
 
 图 5-9
 
-当你在工具窗口中的模拟器上运行应用时，Display 将出现在工具栏中，允许你切换模拟器配置，如图图 5-10 所示：
+当你在工具窗口中的模拟器上运行应用时，`Display`将出现在工具栏中，允许你切换模拟器配置，如图 5-10 所示：
 
 ![](img/as_avd_fold_button.jpg)
 
 图 5-10
 
-如果模拟器以独立模式运行，可以在侧边工具栏找到 Display ，如下：
+如果模拟器以独立模式运行，可以在侧边工具栏找到`Display`，如下：
 
 ![](img/avd_resizable_menu.jpg)
 
 图 5-11
 
-一旦选择了折叠屏显示模式，可以使用 Change posture 菜单在打开、关闭和半开状态下测试应用：
+一旦选择了折叠屏显示模式，可以使用`Change posture`菜单在打开、关闭和半开状态下测试应用：
 
 ![](img/as_avd_posture.jpg)
 
@@ -1053,31 +1091,27 @@ Android Studio 包含一个 Android 虚拟设备模拟器环境，旨在使无�
 
 虽然很急于运行上一章创建的示例应用，但它涉及到 Android Studio 用户界面的某些方面，这些内容最好先进行介绍。
 
-
-
-
-
 Android Studio 是一个强大且功能丰富的开发环境，在很大程度上，它的使用是非常直观的。尽管如此，现在花时间熟悉 Android Studio 用户界面的布局和结构，将缩短本书后续章节的学习曲线。基于此考虑，本章将提供 Android Studio 环境中各个区域和组件的概述。
 
-### 6.1 欢迎界面
+## 6.1 欢迎界面
 
-欢迎界面（图 6-1）会在 Android Studio 运行且当前没有打开任何项目时显示（可以通过选择 `File` -> Close Project` 菜单选项随时关闭已打开的项目）。如果 Android Studio 在项目仍处于打开状态之前退出，该工具在下次启动时将跳过欢迎界面，自动打开之前活跃的项目。
+欢迎界面（图 6-1）会在 Android Studio 运行且当前没有打开任何项目时显示（可以通过选择`File` -> `Close Project`菜单选项随时关闭已打开的项目）。如果 Android Studio 在项目仍处于打开状态之前退出，该工具在下次启动时将跳过欢迎界面，自动打开之前活跃的项目。
 
 ![](img/as_iguana_welcome2.jpg)
 
 图 6-1
 
-除了最近项目列表外，欢迎界面提供了执行任务的选项，例如打开和创建项目，并可以访问当前受版本控制的项目。此外，`Customize`（自定义）屏幕提供了更改 IDE 和编辑器所用主题和字体设置的选项。可以使用 `Plugins`（插件）选项查看、安装和管理 Android Studio 插件。
+除了最近项目列表外，欢迎界面提供了执行任务的选项，例如打开和创建项目，并可以访问当前受版本控制的项目。此外，`Customize`（自定义）屏幕提供了更改 IDE 和编辑器所用主题和字体设置的选项。可以使用`Plugins`（插件）选项查看、安装和管理 Android Studio 插件。
 
-当最近项目列表取代 `More Actions`（更多操作）链接时，可以通过选择该链接或使用图 6-2 所示的菜单来获取可用选项：
+当最近项目列表取代`More Actions`（更多操作）链接时，可以通过选择该链接或使用图 6-2 所示的菜单来获取可用选项：
 
 ![](img/as_welcome_menu.jpg)
 
 图 6-2
 
-### 6.2 菜单栏
+## 6.2 菜单栏
 
-在创建新项目或打开现有项目时，Android Studio 主窗口将会出现。当同时打开多个项目时，每个项目将分配其自己的主窗口。窗口的精确配置取决于 Android Studio 运行的操作系统，以及上一次项目打开时显示了哪些工具和面板。例如，主菜单栏的外观将取决于主机操作系统。在 macOS 上，Android Studio 遵循将菜单栏放置在桌面顶端边缘的标准惯例，如图 6-3 所示所示：
+在创建新项目或打开现有项目时，Android Studio 主窗口将会出现。当同时打开多个项目时，每个项目将分配其自己的主窗口。窗口的精确配置取决于 Android Studio 运行的操作系统，以及上一次项目打开时显示了哪些工具和面板。例如，主菜单栏的外观将取决于主机操作系统。在 macOS 上，Android Studio 遵循将菜单栏放置在桌面顶端边缘的标准惯例，如图 6-3 所示：
 
 ![](img/as_menu_bar.jpg)
 
@@ -1089,7 +1123,7 @@ Android Studio 是一个强大且功能丰富的开发环境，在很大程度�
 
 图 6-4
 
-### 6.3 主窗口
+## 6.3 主窗口
 
 项目打开后，Android Studio 主窗口通常看起来像图 6-5 所示：
 
@@ -1099,7 +1133,7 @@ Android Studio 是一个强大且功能丰富的开发环境，在很大程度�
 
 主窗口的各种元素可以总结如下：
 
-**A – 工具栏（Toolbar）** – 一组用于频繁执行操作的快捷键。工具栏按钮提供了快速访问一组菜单栏操作的快捷方式。可以通过右键点击工具栏并选择 `Customize Toolbar…`（自定义工具栏…）菜单选项来自定义工具栏。图 6-6 所示的工具栏菜单提供了执行任务的方便方法，例如创建和打开项目以及在多个项目打开时进行窗口切换：
+**A – 工具栏（Toolbar）** – 一组用于频繁执行操作的快捷键。工具栏按钮提供了快速访问一组菜单栏操作的快捷方式。可以通过右键点击工具栏并选择`Customize Toolbar…`（自定义工具栏…）菜单选项来自定义工具栏。图 6-6 所示的工具栏菜单提供了执行任务的方便方法，例如创建和打开项目以及在多个项目打开时进行窗口切换：
 
 ![](img/as_project_switch_menu.jpg)
 
@@ -1111,9 +1145,9 @@ Android Studio 是一个强大且功能丰富的开发环境，在很大程度�
 
 图 6-7
 
-从列表中选择一个方法将跳转到代码编辑器中的相应位置。可以使用 `View` -> `Appearance` -> Navigation Bar` 菜单选项来隐藏、显示和更改此栏的位置。
+从列表中选择一个方法将跳转到代码编辑器中的相应位置。可以使用`View` -> `Appearance` -> `Navigation Bar`菜单选项来隐藏、显示和更改此栏的位置。
 
-**C – 编辑器窗口（Editor Window）** – 编辑器窗口显示开发者当前正在的文件的内容。当打开多个文件时，每个文件都由位于编辑器顶部边缘的标签页表示，如图 6-8 所示：
+**C – 编辑器窗口（Editor Window）** – 编辑器窗口显示开发者当前正在编辑的文件的内容。当打开多个文件时，每个文件都由位于编辑器顶部边缘的标签页表示，如图 6-8 所示：
 
 ![](img/as_menu_bar_java.jpg)
 
@@ -1125,13 +1159,13 @@ Android Studio 是一个强大且功能丰富的开发环境，在很大程度�
 
 图 6-9
 
-可以使用 `View` -> `Appearance` -> Status Bar Widgets` 菜单更改显示在状态栏中的小部件。
+可以使用`View` -> `Appearance` -> `Status Bar Widgets`菜单更改显示在状态栏中的小部件。
 
-**E – 项目工具窗口（Project Tool Window）** – 项目工具窗口提供了项目文件结构的分级概述，允许执行到特定文件和文件夹的导航。可以使用工具栏以几种不同的方式显示项目。默认设置是 `Android` 视图，这是本书其余部分主要使用的模式。
+**E – 项目工具窗口（Project Tool Window）** – 项目工具窗口提供了项目文件结构的分级概述，允许执行到特定文件和文件夹的导航。可以使用工具栏以几种不同的方式显示项目。默认设置是`Android`视图，这是本书其余部分主要使用的模式。
 
 项目工具窗口只是 Android Studio 环境中许多可用工具之一。
 
-### 6.4 工具窗口（Tool Windows）
+## 6.4 工具窗口（Tool Windows）
 
 除了项目视图（Project View）工具窗口外，Android Studio 还包含许多其他窗口，当这些窗口启用时，会显示在沿主窗口左右边缘的工具窗口栏上，并包含用于显示和隐藏每个工具窗口的按钮。图 6-10 显示了典型的工具窗口栏配置，尽管按钮的布局可能有所不同。
 
@@ -1141,112 +1175,107 @@ Android Studio 是一个强大且功能丰富的开发环境，在很大程度�
 
 点击按钮将显示相应的工具窗口，而再次点击将隐藏窗口。工具窗口栏上的按钮指示了窗口将出现的一侧。可以通过点击并拖动按钮来更改这些位置。
 
-Android Studio 提供了系列工具窗口，最常用的包括：
+Android Studio 提供了一系列工具窗口，最常用的包括：
 
 - **Project（项目）** – 项目视图提供了文件结构的概述，允许在文件之间进行快速导航。通常，在项目视图中双击文件会将该文件加载到相应的编辑器中。
-- **Resource Manager（资源管理器）** - 用于添加和管理项目内的资源和资产，例如图像、颜色和布局文件。
-- **More Tool Windows（更多工具窗口）** - 显示未在工具窗口栏中的其他工具窗口的菜单。从此菜单选择工具窗口时，它将作为按钮出现在工具窗口栏中。
+- **Resource Manager（资源管理器）** – 用于添加和管理项目内的资源和资产，例如图像、颜色和布局文件。
+- **More Tool Windows（更多工具窗口）** – 显示未在工具窗口栏中的其他工具窗口的菜单。从此菜单选择工具窗口时，它将作为按钮出现在工具窗口栏中。
 - **Run（运行）** – 运行窗口在应用程序运行时变为可用，提供运行结果的视图以及停止或重启运行进程的选项。如果应用程序无法在设备或模拟器上安装和运行，此窗口通常会提供有关问题的诊断信息。
 - **Logcat** – Logcat 工具窗口提供了访问运行应用程序监控日志输出的权限，以及拍摄屏幕、录制视频以及停止和重启进程的选项。
-- **Problems（问题）** - 查看项目内所有当前错误或警告的中心位置。双击问题列表中的项将带您进入问题所在的文件和位置。
-- **App Quality Insights（应用质量洞察）** - 提供访问云端 Firebase 应用质量和崩溃分析平台的权限。
+- **Problems（问题）** – 查看项目内所有当前错误或警告的中心位置。双击问题列表中的项将带您进入问题所在的文件和位置。
+- **App Quality Insights（应用质量洞察）** – 提供访问云端 Firebase 应用质量和崩溃分析平台的权限。
 - **Terminal（终端）** – 提供访问运行 Android Studio 的系统的终端窗口权限。在 Windows 系统上，这是命令提示符界面，而在 Linux 和 macOS 系统上，它以终端提示符的形式出现。
-
-
-
-
-
-- **版本控制 (I)** - 当项目文件受源代码版本控制时，使用此工具窗口，允许访问 Git 仓库和代码更改历史。
-- **通知 (J)** - 当项目文件受源代码版本控制时，使用此工具窗口，允许访问 Git 仓库和代码更改历史。
-- **Gradle (K)** – `Gradle` 工具窗口提供了构成项目构建配置的 `Gradle` 任务视图。该窗口列出了将项目各种元素编译为可执行应用程序所需的任务。右键点击顶层 `Gradle` 任务并选择`Open Gradle Config`打开 Gradle 配置）菜单选项，可以将当前项目的 Gradle 构建文件加载到编辑器中。`Gradle` 将在本书后续部分详细介绍。
-- **设备管理器 (L)** - 提供对`Device Manager` 工具窗口的访问，可以在该窗口添加、删除和管理物理 Android 设备连接和模拟器。
-- **运行中的设备 (M)** - 如果已启用在工具窗口中运行模拟器的选项（如章节“在 Android Studio 中创建 Android 虚拟设备 (AVD)” 节所示），则该窗口包含 AVD 模拟器。
-- **应用检查** - 提供对`Database`和`Background Task`检查器的访问。`Database Inspector` 允许你在应用运行时检查、查询和修改应用程序的数据库。`Background Task Inspector` 允许监控和管理使用 `WorkManager` 创建的后台工作任务。
-- **书签** – `Bookmarks` 工具窗口提供快速访问已书签的文件和代码行。例如，在项目视图中右键点击文件可以访问`Add to Bookmarks`菜单选项。同样，你可以通过将光标移动到源文件中的某行并按 `F11` 键（macOS 上为 `F3`）为源文件中的代码添加书签。可以通过此工具窗口访问所有书签项。
-- **构建** - `build` 工具窗口显示项目编译和打包期间构建过程的信息以及遇到的任何错误的详细信息。
+- **版本控制 (I)** – 当项目文件受源代码版本控制时，使用此工具窗口，允许访问 Git 仓库和代码更改历史。
+- **通知 (J)** – 当项目文件受源代码版本控制时，使用此工具窗口，允许访问 Git 仓库和代码更改历史。
+- **Gradle (K)** – `Gradle`工具窗口提供了构成项目构建配置的`Gradle`任务视图。该窗口列出了将项目各种元素编译为可执行应用程序所需的任务。右键点击顶层`Gradle`任务并选择`Open Gradle Config`（打开 Gradle 配置）菜单选项，可以将当前项目的 Gradle 构建文件加载到编辑器中。`Gradle`将在本书后续部分详细介绍。
+- **设备管理器 (L)** – 提供对`Device Manager`工具窗口的访问，可以在该窗口添加、删除和管理物理 Android 设备连接和模拟器。
+- **运行中的设备 (M)** – 如果已启用在工具窗口中运行模拟器的选项（如章节“在 Android Studio 中创建 Android 虚拟设备 (AVD)”节所示），则该窗口包含 AVD 模拟器。
+- **应用检查** – 提供对`Database`和`Background Task`检查器的访问。`Database Inspector`允许你在应用运行时检查、查询和修改应用程序的数据库。`Background Task Inspector`允许监控和管理使用`WorkManager`创建的后台工作任务。
+- **书签** – `Bookmarks`工具窗口提供快速访问已书签的文件和代码行。例如，在项目视图中右键点击文件可以访问`Add to Bookmarks`菜单选项。同样，你可以通过将光标移动到源文件中的某行并按`F11`键（macOS 上为`F3`）为源文件中的代码添加书签。可以通过此工具窗口访问所有书签项。
+- **构建** – `build`工具窗口显示项目编译和打包期间构建过程的信息以及遇到的任何错误的详细信息。
 - **构建变体** – 构建变体工具窗口提供了一种为当前应用程序项目配置不同构建目标的快速方法（例如，针对应用程序调试和发布版本的不同构建，或针对不同设备类别的多个构建）。
-- **设备文件管理器** - 可通过`View` -> `Tool Windows` -> `Device File Explorer` 菜单访问，此工具窗口提供对当前连接的 Android 设备或模拟器文件系统的直接访问，允许浏览文件系统并将文件复制到本地文件系统。
-- **布局检查器** - 提供构成用户界面布局的组件层次结构的视觉 3D 渲染。
-- **结构** – `structure` 工具提供了当前编辑器中显示的源文件结构的高级视图。此信息包括文件中的`classes`（类）、`methods`（方法）和 `variables`（变量）等项列表。从结构列表中选择一个项将带你进入编辑器窗口中源文件中的对应位置。
-- **TODO** – 如名所示，此工具提供了一个查看项目中尚未完成项的地方。`Android Studio` 通过扫描项目的源文件并查找匹配指定 `TODO` 模式的注释来编译此列表。可以通过打开 `Settings` 对话框并导航到 `Editor` 下的 `TODO` 来查看和更改这些模式。
+- **设备文件管理器** – 可通过`View` -> `Tool Windows` -> `Device File Explorer`菜单访问，此工具窗口提供对当前连接的 Android 设备或模拟器文件系统的直接访问，允许浏览文件系统并将文件复制到本地文件系统。
+- **布局检查器** – 提供构成用户界面布局的组件层次结构的视觉 3D 渲染。
+- **结构** – `structure`工具提供了当前编辑器中显示的源文件结构的高级视图。此信息包括文件中的`classes`（类）、`methods`（方法）和`variables`（变量）等项列表。从结构列表中选择一个项将带你进入编辑器窗口中源文件中的对应位置。
+- **TODO** – 如名所示，此工具提供了一个查看项目中尚未完成项的地方。`Android Studio`通过扫描项目的源文件并查找匹配指定`TODO`模式的注释来编译此列表。可以通过打开`Settings`对话框并导航到`Editor`下的`TODO`来查看和更改这些模式。
 
-### 6.5 工具窗口菜单
+## 6.5 工具窗口菜单
 
-每个工具窗口在顶部都有自己的工具栏。这些工具栏中的菜单按钮随工具而异，但所有工具窗口都包含一个 `Options` 菜单（在图 6-11 中标记为 `A`）：
+每个工具窗口在顶部都有自己的工具栏。这些工具栏中的菜单按钮随工具而异，但所有工具窗口都包含一个`Options`菜单（在图 6-11 中标记为`A`）：
 
 ![](img/as_tool_window_buttons.jpg)
 
 图 6-11
 
-`Options` 菜单允许更改窗口的各个方面。例如，图 6-12 显示了 `Project` 工具窗口的 `Options` 菜单。可以使用设置，例如取消停靠窗口并使其浮动在 `Android Studio` 主窗口边界之外，以及移动和调整工具面板的大小：
+`Options`菜单允许更改窗口的各个方面。例如，图 6-12 显示了`Project`工具窗口的`Options`菜单。可以使用设置，例如取消停靠窗口并使其浮动在`Android Studio`主窗口边界之外，以及移动和调整工具面板的大小：
 
 ![](img/as_tool_window_menu.jpg)
 
 图 6-12
 
-所有工具窗口在工具栏的最右侧还包含一个按钮（在上方图 6-11 中标记为 `B`），提供了隐藏工具窗口视图的额外方法。可以通过点击该窗口使其获取焦点，然后输入搜索术语（例如 `Project` 工具窗口中的文件名）来对工具窗口内的项进行搜索。搜索框将出现在窗口的工具栏中，并高亮显示匹配的项。
+所有工具窗口在工具栏的最右侧还包含一个按钮（在上方图 6-11 中标记为`B`），提供了隐藏工具窗口视图的额外方法。可以通过点击该窗口使其获取焦点，然后输入搜索术语（例如`Project`工具窗口中的文件名）来对工具窗口内的项进行搜索。搜索框将出现在窗口的工具栏中，并高亮显示匹配的项。
 
-### 6.6 Android Studio 键盘快捷键
+## 6.6 Android Studio 键盘快捷键
 
-`Android Studio` 包含了许多键盘快捷键，以便在执行常用任务时节省时间。可以在 `Android Studio` 项目窗口内通过选择 `Help` -> `Keyboard Shortcuts PDF` 菜单选项查看并打印完整的键盘快捷键映射列表。你也可以通过打开 `Settings` 对话框并点击 `Keymap` 项来列出和修改键盘快捷键，如下方的图 6-13 所示：
+`Android Studio`包含了许多键盘快捷键，以便在执行常用任务时节省时间。可以在`Android Studio`项目窗口内通过选择`Help` -> `Keyboard Shortcuts PDF`菜单选项查看并打印完整的键盘快捷键映射列表。你也可以通过打开`Settings`对话框并点击`Keymap`项来列出和修改键盘快捷键，如下方的图 6-13 所示：
 
 ![](img/as_keymap.jpg)
 
 图 6-13
 
-### 6.7 切换器和最近文件导航
+## 6.7 切换器和最近文件导航
 
-在 `Android Studio` 主窗口中导航的另一种实用机制是使用 `Switcher`（切换器）。通过 `Ctrl-Tab` 键盘快捷键访问，切换器作为一个列出工具窗口和当前打开文件的面板出现（图 6-14）。
+在`Android Studio`主窗口中导航的另一种实用机制是使用`Switcher`（切换器）。通过`Ctrl-Tab`键盘快捷键访问，切换器作为一个列出工具窗口和当前打开文件的面板出现（图 6-14）。
 
 ![](img/as_switcher.jpg)
 
 图 6-14
 
-只要按下 `Ctrl` 键切换器就会显示。通过点击该窗口使其获取焦点然后输入搜索术语，可以对该窗口内的项进行搜索。搜索框将出现在窗口的工具栏中，并高亮显示匹配的项。
+只要按下`Ctrl`键切换器就会显示。通过点击该窗口使其获取焦点然后输入搜索术语，可以对该窗口内的项进行搜索。搜索框将出现在窗口的工具栏中，并高亮显示匹配的项。
 
-除了 `Switcher` 之外，`Recent Files`（最近文件）面板提供了对最近文件的导航（图 6-15）。可以使用快捷键 `Ctrl-E`（macOS 上为 `Cmd-E`）。显示后，可以使用鼠标指针选择选项，或使用键盘箭头键滚动。按下 `Enter` 键将选择高亮项：
+除了`Switcher`之外，`Recent Files`（最近文件）面板提供了对最近文件的导航（图 6-15）。可以使用快捷键`Ctrl-E`（macOS 上为`Cmd-E`）。显示后，可以使用鼠标指针选择选项，或使用键盘箭头键滚动。按下`Enter`键将选择高亮项：
 
 ![](img/as_recent_files.jpg)
 
 图 6-15
 
-### 6.8 修改 Android Studio 主题
+## 6.8 修改 Android Studio 主题
 
-可以使用 `Settings` 对话框更改 Android Studio 环境的主题。一旦显示设置对话框，选择左侧面板中的 `Appearance & Behavior` 选项，然后选择 `Appearance`。在点击 `OK` 按钮之前更改 `Theme` 设置。可用的主题取决于平台，但通常包括 `Light`、`IntelliJ`、`Windows`、`High Contrast` 和 `Darcula` 等选项。图 6-16 显示了选择深色主题的主窗口示例：
+可以使用`Settings`对话框更改 Android Studio 环境的主题。一旦显示设置对话框，选择左侧面板中的`Appearance & Behavior`选项，然后选择`Appearance`。在点击`OK`按钮之前更改`Theme`设置。可用的主题取决于平台，但通常包括`Light`、`IntelliJ`、`Windows`、`High Contrast`和`Darcula`等选项。图 6-16 显示了选择深色主题的主窗口示例：
 
 ![](img/as_dark_theme.jpg)
 
 图 6-16
 
-要将 Android Studio 主题与操作系统的亮/暗模式设置同步，请启用 `Sync with OS` 并使用下拉菜单控制每种模式使用的主题：
+要将 Android Studio 主题与操作系统的亮/暗模式设置同步，请启用`Sync with OS`并使用下拉菜单控制每种模式使用的主题：
 
 ![](img/as_theme_sync.jpg)
 
 图 6-17
 
-### 6.9 总结
+## 6.9 总结
 
-`Android Studio` 环境的主要元素包括欢迎界面和主窗口。每个打开的项目都分配了自己的主窗口，主窗口又由菜单栏、工具栏、编辑和设计区域、状态栏以及一组工具窗口组成。工具窗口位于主窗口的两侧。
+`Android Studio`环境的主要元素包括欢迎界面和主窗口。每个打开的项目都分配了自己的主窗口，主窗口又由菜单栏、工具栏、编辑和设计区域、状态栏以及一组工具窗口组成。工具窗口位于主窗口的两侧。
 
-在 `Android Studio` 中，几乎没有操作是无法通过快捷键触发的。可以从 `Android Studio` 主窗口访问默认键盘快捷键映射。
-
-
-
-
+在`Android Studio`中，几乎没有操作是无法通过快捷键触发的。可以从`Android Studio`主窗口访问默认键盘快捷键映射。
 
 虽然使用 Android 虚拟设备 (AVD) 测试应用程序可以实现许多功能，但在物理 Android 设备上进行真实世界的应用测试是不可替代的，而且某些 Android 功能仅在物理 Android 设备上可用。
 
-与 AVD 实例和连接的 Android 设备之间的通信均由 Android 调试桥接 (ADB) 处理。本章将解释如何在 macOS、Windows 和基于 Linux 的系统上配置 `adb` 环境，以便在 Android 设备上启用应用测试。
+与 AVD 实例和连接的 Android 设备之间的通信均由 Android 调试桥接 (ADB) 处理。本章将解释如何在 macOS、Windows 和基于 Linux 的系统上配置`adb`环境，以便在 Android 设备上启用应用测试。
 
-### 7.1 Android 调试桥接 (ADB) 概述
+# 7 Android 调试桥接 (ADB)
 
-`ADB` 的主要目的是促进开发系统（在本例中为 Android Studio）与 AVD 模拟器以及 Android 设备之间的交互，以便用于运行和调试应用程序。`ADB` 允许你通过 WiFi 或 USB 数据线连接到设备。
+## 7.1 Android 调试桥接 (ADB) 概述
 
-`ADB` 由一个客户端、一个运行在开发系统后台的服务器进程，以及一个运行在 AVD 或手机、平板电脑等真实 Android 设备上的守护后台进程组成。
+`ADB`的主要目的是促进开发系统（在本例中为 Android Studio）与 AVD 模拟器以及 Android 设备之间的交互，以便用于运行和调试应用程序。`ADB`允许你通过 WiFi 或 USB 数据线连接到设备。
 
-`ADB` 客户端有多种形式。例如，在 Android SDK 的 `platform-tools` 子目录中提供了一个名为 `adb` 的命令行工具作为客户端。同样，Android Studio 也有内置的客户端。
 
-可以使用 `adb` 命令行工具执行多种任务。例如，可以使用 `devices` 命令行参数列出活跃的虚拟或物理设备。以下命令输出表示系统上存在一个 AVD，但没有物理设备：
+
+`ADB`由一个客户端、一个运行在开发系统后台的服务器进程，以及一个运行在AVD或手机、平板电脑等真实Android设备上的守护后台进程组成。
+
+`ADB`客户端有多种形式。例如，在Android SDK的`platform-tools`子目录中提供了一个名为`adb`的命令行工具作为客户端。同样，Android Studio也有内置的客户端。
+
+可以使用`adb`命令行工具执行多种任务。例如，可以使用`devices`命令行参数列出活跃的虚拟或物理设备。以下命令输出表示系统上存在一个AVD，但没有物理设备：
 
 ```
 $ adb devices
@@ -1255,30 +1284,33 @@ List of devices attached
 emulator-5554 device
 ```
 
-### 7.2 在 Android 设备上启用 USB 调试 ADB
+### 7.2 在Android设备上启用USB调试ADB
 
-在 `ADB` 连接到 Android 设备之前，必须将该设备配置为允许该连接。对于运行 Android 6.0 或更高版本的手机和平板电脑设备，实现此目的的步骤如下：
+在`ADB`连接到Android设备之前，必须将该设备配置为允许该连接。对于运行Android 6.0或更高版本的手机和平板电脑设备，实现此目的的步骤如下：
 
-1. 打开设备上的`Settings（设置）应用并选择`About tablet（关于平板电脑）或`About phone（关于手机）选项（在某些 Android 版本中，这可以在`Settings` 应用的`System（系统）页面找到）。
-2. 在`About`屏幕上，向下滚动到`Build number（版本号）字段（图 7-1）并点击七次，直到消息显示已启用开发者模式。如果 `About` 屏幕上没有列出 `Build number`，则可以通过`Software information（软件信息）`选项找到。或者，如果可用，展开列表中的`Advanced（高级）`部分。
+1. 打开设备上的`Settings`（设置）应用并选择`About tablet`（关于平板电脑）或`About phone`（关于手机）选项（在某些Android版本中，这可以在`Settings`应用的`System`（系统）页面找到）。
+
+2. 在`About`屏幕上，向下滚动到`Build number`（版本号）字段（图7-1）并点击七次，直到消息显示已启用开发者模式。如果`About`屏幕上没有列出`Build number`，则可以通过`Software information`（软件信息）选项找到。或者，如果可用，展开列表中的`Advanced`（高级）部分。
 
 ![](img/as_3.2_build_number.jpg)
-图 7-1
 
-3. 返回主`Settings`屏幕，注意出现一个名为`Developer options（开发者选项）`的新选项（在较新的 Android 版本中，此选项列在`System`设置屏幕上）。选择此选项，并在生成的屏幕上找到如图 7-2 所示的`USB debugging（USB 调试）`选项：
+图7-1
+
+3. 返回主`Settings`屏幕，注意出现一个名为`Developer options`（开发者选项）的新选项（在较新的Android版本中，此选项列在`System`设置屏幕上）。选择此选项，并在生成的屏幕上找到如图7-2所示的`USB debugging`（USB调试）选项：
 
 ![](img/android_12_enable_debugging.jpg)
-图 7-2
 
-4. 启用`USB debugging`选项，并在请求确认时点击`Allow（允许）`按钮。
+图7-2
 
-如果你使用三星 Galaxy 设备，可能需要在启用调试选项之前，在`Settings`应用中关闭`Auto Blocker（自动锁）`功能。
+4. 启用`USB debugging`选项，并在请求确认时点击`Allow`（允许）按钮。
 
-现在设备已配置为接受通过 USB 连接来自开发系统 `adb` 的调试连接。剩下的工作是配置开发系统以便在连接设备时检测到它。虽然这是一个相对简单的过程，但步骤取决于开发系统运行的是 Windows、macOS 还是 Linux。注意，以下步骤假设 Android SDK `platform-tools` 目录已包含在操作系统 `PATH` 环境变量中，如“设置 Android Studio 开发环境”章节中所示。
+如果你使用三星Galaxy设备，可能需要在启用调试选项之前，在`Settings`应用中关闭`Auto Blocker`（自动锁）功能。
 
-### 7.2.1 macOS ADB 配置
+现在设备已配置为接受通过USB连接来自开发系统`adb`的调试连接。剩下的工作是配置开发系统以便在连接设备时检测到它。虽然这是一个相对简单的过程，但步骤取决于开发系统运行的是Windows、macOS还是Linux。注意，以下步骤假设Android SDK `platform-tools`目录已包含在操作系统`PATH`环境变量中，如“设置Android Studio开发环境”章节中所示。
 
-要在 macOS 系统上配置 `ADB` 环境，请使用 USB 数据线将设备连接到计算机系统，打开终端窗口并执行以下命令重启 `adb` 服务器：
+### 7.2.1 macOS ADB配置
+
+要在macOS系统上配置`ADB`环境，请使用USB数据线将设备连接到计算机系统，打开终端窗口并执行以下命令重启`adb`服务器：
 
 ```
 $ adb kill-server
@@ -1297,27 +1329,28 @@ List of devices attached
 74CE000600000001 offline
 ```
 
-如果设备被列为`offline（离线）`，请前往 Android 设备并检查是否有图 7-3 所示的寻求`Allow USB debugging（允许 USB 调试）`权限的对话框。在点击 OK 之前，勾选`Always allow from this computer（始终允许此计算机）`旁边的复选框。
+如果设备被列为`offline`（离线），请前往Android设备并检查是否有图7-3所示的寻求`Allow USB debugging`（允许USB调试）权限的对话框。在点击OK之前，勾选`Always allow from this computer`（始终允许此计算机）旁边的复选框。
 
 ![](img/Image2856.jpg)
-图 7-3
 
-现在重复 `adb devices` 命令应该会将设备列为可用：
+图7-3
+
+现在重复`adb devices`命令应该会将设备列为可用：
 
 ```
 List of devices attached
 015d41d4454bf80c device
 ```
 
-如果设备未列出，尝试注销并重新登录 macOS 桌面，如果问题仍然，请重启系统。
+如果设备未列出，尝试注销并重新登录macOS桌面，如果问题仍然，请重启系统。
 
-### 7.2.2 Windows ADB 配置
+### 7.2.2 Windows ADB配置
 
-配置 Windows 开发系统使用 `ADB` 连接到 Android 设备的第一步是在系统上安装相应的 USB 驱动程序。要安装的 USB 驱动程序取决于 Android 设备的型号。如果有 Pixel 手机等 Google 设备，则必须在在 Windows 系统上安装并配置`Google USB Driver` 包。实现此操作的详细步骤列在以下网页上：
+配置Windows开发系统使用`ADB`连接到Android设备的第一步是在系统上安装相应的USB驱动程序。要安装的USB驱动程序取决于Android设备的型号。如果有Pixel手机等Google设备，则必须在在Windows系统上安装并配置`Google USB Driver`包。实现此操作的详细步骤列在以下网页上：
 
 [`developer.android.com/sdk/win-usb.html`](https://developer.android.com/sdk/win-usb.html)
 
-对于不支持 Google USB 驱动的 Android 设备，需要下载设备制造商提供的驱动程序。可以从此处获取驱动列表和安装信息：
+对于不支持Google USB驱动的Android设备，需要下载设备制造商提供的驱动程序。可以从此处获取驱动列表和安装信息：
 
 [`developer.android.com/tools/extras/oem-usb.html`](https://developer.android.com/tools/extras/oem-usb.html)
 
@@ -1332,14 +1365,14 @@ List of devices attached
 HT4CT016 offline
 ```
 
-如果设备被列为`offline`或`unauthorized（未授权）`，请查看设备并检查图 7-3 所示的寻求`Allow USB debugging`权限的对话框。在点击 OK 之前，勾选`Always allow from this computer（始终允许此计算机）`旁边的复选框。重复 `adb devices` 命令现在会将设备列出：
+如果设备被列为`offline`或`unauthorized`（未授权），请查看设备并检查图7-3所示的寻求`Allow USB debugging`权限的对话框。在点击OK之前，勾选`Always allow from this computer`（始终允许此计算机）旁边的复选框。重复`adb devices`命令现在会将设备列出：
 
 ```
 List of devices attached
 HT4CT016 device
 ```
 
-如果设备未列出，执行以下命令重启 `ADB` 服务器：
+如果设备未列出，执行以下命令重启`ADB`服务器：
 
 ```
 adb kill-server
@@ -1352,19 +1385,19 @@ adb start-server
 
 注意，可能还需要重启系统。
 
-### 7.2.3 Linux ADB 配置
+### 7.2.3 Linux ADB配置
 
-在本章中，我们将再次使用 Ubuntu Linux 作为在 Linux 上配置 `adb` 连接到物理设备的示例。
+在本章中，我们将再次使用Ubuntu Linux作为在Linux上配置`adb`连接到物理设备的示例。
 
-在 Ubuntu Linux 上进行物理设备测试需要安装名为 `android-tools-adb` 的包，这又要求 Android Studio 用户是 `plugdev` 组的成员。这是大多数 Ubuntu 版本的默认设置，可以通过运行 `id` 命令进行验证。如果没有列出 `plugdev` 组，运行以下命令将用户添加到该组：
+在Ubuntu Linux上进行物理设备测试需要安装名为`android-tools-adb`的包，这又要求Android Studio用户是`plugdev`组的成员。这是大多数Ubuntu版本的默认设置，可以通过运行`id`命令进行验证。如果没有列出`plugdev`组，运行以下命令将用户添加到该组：
 
 `sudo usermod -aG plugdev $LOGNAME`
 
-满足组成员要求后，可以通过执行以下命令安装 `android-tools-adb` 包：
+满足组成员要求后，可以通过执行以下命令安装`android-tools-adb`包：
 
 `sudo apt-get install android-tools-adb`
 
-完成上述更改后，重启 Ubuntu 系统。系统重启后，打开终端窗口，启动 `adb` 服务器并检查已连接设备列表：
+完成上述更改后，重启Ubuntu系统。系统重启后，打开终端窗口，启动`adb`服务器并检查已连接设备列表：
 
 ```
 $ adb start-server
@@ -1375,135 +1408,129 @@ $ adb start-server
 $ adb devices
 ```
 
+015d41d4454bf80c离线
 
+如果设备显示为离线（offline）或未授权（unauthorized），请检查Android设备并查看图7-3所示请求允许USB调试的对话框。
 
+### 7.3 解决USB连接问题
 
-
-015d41d4454bf80c 离线
-
-如果设备显示为离线（offline）或未授权（unauthorized），请检查 Android 设备并查看图 7-3 所示请求允许 USB 调试的对话框。
-
-### 7.3 解决 USB 连接问题
-
-如果您无法通过上述步骤成功连接到设备，请显示运行目标菜单（图 7-4）并选择`Troubleshoot Device Connections`排除设备连接）选项：
+如果您无法通过上述步骤成功连接到设备，请显示运行目标菜单（图7-4）并选择`Troubleshoot Device Connections`（排除设备连接）选项：
 
 ![](img/as_troubleshoot_device_connections.jpg)
 
-图 7-4
+图7-4
 
 连接助手将扫描设备并报告问题以及可能的解决方案。
 
-### 7.4 在 Android 设备上启用无线调试
+### 7.4 在Android设备上启用无线调试
 
-按照上述第 7.2 节的第 1 至 3 步操作，这次启用如图 7-5 所示的`Wireless Debugging`无线调试）选项：
+按照上述第7.2节的第1至3步操作，这次启用如图7-5所示的`Wireless Debugging`（无线调试）选项：
 
 ![](img/android_12_enable_wifi_debugging.jpg)
 
-图 7-5
+图7-5
 
-接下来，点击上面的无线调试条目以显示如图 7-6 所示的屏幕：
+接下来，点击上面的无线调试条目以显示如图7-6所示的屏幕：
 
 ![](img/android_12_enable_wifi_debugging_settings.jpg)
 
-图 7-6
+图7-6
 
-如果您的设备带有摄像头，选择`Pair device with QR code`使用二维码码配对设备，否则选择`Pair device with pairing code`使用配对码配对设备）选项。根据您的选择，`Settings`应用将启动相机会话或显示配对码，如图 7-7 所示：
+如果您的设备带有摄像头，选择`Pair device with QR code`（使用二维码码配对设备），否则选择`Pair device with pairing code`（使用配对码配对设备）选项。根据您的选择，`Settings`应用将启动相机会话或显示配对码，如图7-7所示：
 
 ![](img/as_pair_devices_code.jpg)
 
-图 7-7
+图7-7
 
-选择选项后，返回 Android Studio，并在运行目标菜单中选择如图 7-8 所示的`Pair Devices Using WiFi`通过 WiFi 配对设备）选项：
+选择选项后，返回Android Studio，并在运行目标菜单中选择如图7-8所示的`Pair Devices Using WiFi`（通过WiFi配对设备）选项：
 
 ![](img/as_pair_using_wifi.jpg)
 
-图 7-8
+图7-8
 
-在配对对话框中，根据您之前在设备`Settings`应用中的选择，选择`Pair using QR code`使用二维码配对或`Pair using pairing code`使用配对码配对：
+在配对对话框中，根据您之前在设备`Settings`应用中的选择，选择`Pair using QR code`（使用二维码配对）或`Pair using pairing code`（使用配对码配对）：
 
 ![](img/as_pair_using_wifi_qr_code.jpg)
 
-使用 Android 设备扫描二维码，或将设备屏幕上显示的配对码输入到 Android Studio 对话框（图 7-10）中完成配对过程：
+使用Android设备扫描二维码，或将设备屏幕上显示的配对码输入到Android Studio对话框（图7-10）中完成配对过程：
 
 ![](img/as_pair_devices_wifi_enter_code.jpg)
 
-图 7-10
+图7-10
 
-如果配对过程失败，请尝试重启开发系统和 Android 设备并重试。
+如果配对过程失败，请尝试重启开发系统和Android设备并重试。
 
-### 7.5 测试 adb 连接
+### 7.5 测试adb连接
 
-假设在您选择的开发平台上已成功配置了`adb`，下一步是尝试在设备上运行在“在 Android Studio 中创建示例 Android App”章节中创建的测试应用程序。启动 Android Studio，打开`AndroidSample`项目，并验证设备是否出现在设备选择菜单中（如图 7-11 所示）：
+假设在您选择的开发平台上已成功配置了`adb`，下一步是尝试在设备上运行在“在Android Studio中创建示例Android App”章节中创建的测试应用程序。启动Android Studio，打开`AndroidSample`项目，并验证设备是否出现在设备选择菜单中（如图7-11所示）：
 
 ![](img/as_run_on_device.jpg)
 
-图 7-11
+图7-11
 
 从列表中选择设备并点击运行按钮以安装并运行应用。
 
 ### 7.6 设备镜像
 
-设备镜像允许您在物理设备上运行应用，同时在 Android Studio 的 Running Devices 工具窗口内查看显示。换句话说，尽管应用程序运行在物理设备上，但它在 Android Studio 中的显示方式与 AVD 实例相同。
+设备镜像允许您在物理设备上运行应用，同时在Android Studio的Running Devices工具窗口内查看显示。换句话说，尽管应用程序运行在物理设备上，但它在Android Studio中的显示方式与AVD实例相同。
 
-设备连接到 Android Studio 后，显示 Running Devices 工具窗口并点击`Device Mirror`设置链接以显示`Settings`对话框。在`Settings`对话框中，启用物理 Android 设备的镜像并点击`OK`。下次运行应用时，Android Studio 将会在 Running Devices 工具窗口镜像物理设备的显示。
+设备连接到Android Studio后，显示Running Devices工具窗口并点击`Device Mirror`设置链接以显示`Settings`对话框。在`Settings`对话框中，启用物理Android设备的镜像并点击`OK`。下次运行应用时，Android Studio将会在Running Devices工具窗口镜像物理设备的显示。
 
 ### 7.7 总结
 
-虽然 Android 虚拟设备模拟器提供了极佳的测试环境，但必须记住，要确保应用程序在物理 Android 设备上正确运行，没有真正的替代品。
+虽然Android虚拟设备模拟器提供了极佳的测试环境，但必须记住，要确保应用程序在物理Android设备上正确运行，没有真正的替代品。
 
-但默认情况下，Android Studio 环境未配置为将 Android 设备作为目标测试设备。因此，需要执行某些步骤，以便通过 USB 线或 WiFi 网络从 Android Studio 开发环境直接将应用程序加载到 Android 设备上。实现此目标的具体步骤取决于开发平台。在本章中，我们涵盖了针对 Linux、macOS 和基于 Windows 平台的这些步骤。
+但默认情况下，Android Studio环境未配置为将Android设备作为目标测试设备。因此，需要执行某些步骤，以便通过USB线或WiFi网络从Android Studio开发环境直接将应用程序加载到Android设备上。实现此目标的具体步骤取决于开发平台。在本章中，我们涵盖了针对Linux、macOS和基于Windows平台的这些步骤。
 
-## 8. Android Studio 代码编辑器基础
+## 8. Android Studio代码编辑器基础
 
-为 Android 开发应用程序涉及大量的编程工作，根据定义，这涉及输入、审查和修改代码行。令人遗憾的是，开发者在使用 Android Studio 时的大部分时间通常花在编辑器窗口内编辑代码上。
+为Android开发应用程序涉及大量的编程工作，根据定义，这涉及输入、审查和修改代码行。令人遗憾的是，开发者在使用Android Studio时的大部分时间通常花在编辑器窗口内编辑代码上。
 
-现代代码编辑器必须远超输入、删除、剪切和粘贴的基本功能。今天，代码编辑器的实用性通常由等因素衡量，例如它减少了程序员所需的输入量、在大型源代码文件中进行导航的易用性，以及编辑器在编写代码时实时检测并突出编程错误的能力。正如本章将要显示的，这些只是 Android Studio 编辑器出色的少数领域之一。
+现代代码编辑器必须远超输入、删除、剪切和粘贴的基本功能。今天，代码编辑器的实用性通常由等因素衡量，例如它减少了程序员所需的输入量、在大型源代码文件中进行导航的易用性，以及编辑器在编写代码时实时检测并突出编程错误的能力。正如本章将要显示的，这些只是Android Studio编辑器出色的少数领域之一。
 
-本章虽然不是 Android Studio 编辑器功能的详尽概述，但其目的是提供该工具功能的指南。丰富的程序员会发现，某些功能在现代编辑器中是通用的，而另一些则是该环境特有的。
+本章虽然不是Android Studio编辑器功能的详尽概述，但其目的是提供该工具功能的指南。丰富的程序员会发现，某些功能在现代编辑器中是通用的，而另一些则是该环境特有的。
 
-### 8.1 Android Studio 编辑器
+### 8.1 Android Studio编辑器
 
-当选择 Java、Kotlin 或其他文本文件进行编辑时，Android Studio 编辑器会出现在主窗口中心。图 8-1 显示了一个加载 Java 源码文件的典型会话：
+当选择Java、Kotlin或其他文本文件进行编辑时，Android Studio编辑器会出现在主窗口中心。图8-1显示了一个加载Java源码文件的典型会话：
 
 ![](img/as_code_editor_java.jpg)
 
-图 8-1
+图8-1
 
 构成编辑器窗口的元素如下：
 
-**A – 文档标签**——Android Studio 可以随时打开多个文件进行编辑。每打开一个文件，它会被分配到一个位于编辑器窗口顶部标签栏的文档标签。当空间不足以显示所有标签时，标签栏远右角会出现一个小下拉菜单。点击此菜单将列出所有打开的文件列表。标签中文件名下方的波浪线表示文件包含需要解决的错误，解决后才能编译和运行项目。
+**A – 文档标签**——Android Studio可以随时打开多个文件进行编辑。每打开一个文件，它会被分配到一个位于编辑器窗口顶部标签栏的文档标签。当空间不足以显示所有标签时，标签栏远右角会出现一个小下拉菜单。点击此菜单将列出所有打开的文件列表。标签中文件名下方的波浪线表示文件包含需要解决的错误，解决后才能编译和运行项目。
 
-切换文件只需点击相应的标签或使用`Alt-Left` 和 `Alt-Right` 快捷键。也可以通过切换器（通过`Ctrl-Tab` 快捷键访问）在文件之间导航。
+切换文件只需点击相应的标签或使用`Alt-Left`和`Alt-Right`快捷键。也可以通过切换器（通过`Ctrl-Tab`快捷键访问）在文件之间导航。
 
-要将编辑器面板从 Android Studio 主窗口分离以便在独立窗口中显示，请点击标签并将其拖到桌面上主窗口之外的区域。要将编辑器返回主窗口，请点击分离编辑器中的文件标签，并将其拖放回主窗口中的原始标签栏。
+要将编辑器面板从Android Studio主窗口分离以便在独立窗口中显示，请点击标签并将其拖到桌面上主窗口之外的区域。要将编辑器返回主窗口，请点击分离编辑器中的文件标签，并将其拖放回主窗口中的原始标签栏。
 
 **B – 编辑器侧栏区域**——侧栏区域用于编辑器显示信息图标和控件。该侧栏区域的一些典型项目包括调试断点标记、代码块折叠和展开控件、书签、更改标记和行号。行号默认开启，但可以通过右键点击侧栏并选择`Appearance -> Show Line Numbers`菜单选项来禁用。
 
-**C – 代码结构位置**——编辑器底部的此栏显示了光标相对于代码整体结构的位置。在下图中，该栏指示当前正在编辑`convertCurrency` 方法，且该方法包含在`MainActivity` 类中：
-
-
-
-
+**C – 代码结构位置**——编辑器底部的此栏显示了光标相对于代码整体结构的位置。在下图中，该栏指示当前正在编辑`convertCurrency`方法，且该方法包含在`MainActivity`类中：
 
 ![](img/as_code_structure.jpg)
 
-图 8-2
+图8-2
 
-双击栏中的任意元素会将光标移动到代码文件中的相应位置。例如，双击 `convertCurrency` 条目将把光标移动到源代码中 `convertCurrency` 方法的顶部。同样，点击 `MainActivity` 条目将显示一个可供选择的代码导航点列表：
+双击栏中的任意元素会将光标移动到代码文件中的相应位置。例如，双击`convertCurrency`条目将把光标移动到源代码中`convertCurrency`方法的顶部。同样，点击`MainActivity`条目将显示一个可供选择的代码导航点列表：
 
 ![](img/as_code_structure_menu.jpg)
 
-图 8-3
+图8-3
 
 ### D – 编辑区域
+
 用户在此处审查、输入和编辑代码的主要区域。本章的随后的章节将详细介绍编辑区域的关键功能。
 
 ### E – 验证与标记侧边栏
-Android Studio 集成了一项名为“即时代码分析”的功能。这本质上意味着当你输入代码时，编辑器会分析代码以检查警告和语法错误。验证侧边栏顶部的指示器会随着代码的添加而实时更新，显示已发现的错误和警告数量。点击此指示器将显示一个弹出窗口，其中包含编辑器中代码存在问题的摘要，如图 8-4 所示：
+
+Android Studio集成了一项名为“即时代码分析”的功能。这本质上意味着当你输入代码时，编辑器会分析代码以检查警告和语法错误。验证侧边栏顶部的指示器会随着代码的添加而实时更新，显示已发现的错误和警告数量。点击此指示器将显示一个弹出窗口，其中包含编辑器中代码存在问题的摘要，如图8-4所示：
 
 ![](img/as_editor_validation_summary.jpg)
 
-图 8-4
+图8-4
 
 上下箭头可以在代码中的错误位置之间移动。绿色勾号表示未检测到任何警告或错误。
 
@@ -1511,48 +1538,51 @@ Android Studio 集成了一项名为“即时代码分析”的功能。这本�
 
 ![](img/as_code_editor_problem_popup.jpg)
 
-图 8-5
+图8-5
 
-当某行代码已滚动出编辑器区域可视范围时，将鼠标指针悬停在该行的标记上，将显示一个“透镜（lens）”覆盖层，其中包含问题所在的代码块（图 8-6），从而无需滚动到编辑器中的该位置即可进行查看：
+当某行代码已滚动出编辑器区域可视范围时，将鼠标指针悬停在该行的标记上，将显示一个“透镜（lens）”覆盖层，其中包含问题所在的代码块（图8-6），从而无需滚动到编辑器中的该位置即可进行查看：
 
 ![](img/as_code_editor_lens.jpg)
 
-图 8-6
+图8-6
 
 值得注意的是，透镜覆盖层不仅限于侧边栏中的警告和错误。悬停在侧边栏的任何部分都会出现一个透镜，显示源文件中该位置存在的代码。
 
 ### F – 状态栏
-虽然状态栏是主窗口的一部分而非编辑器，但它确实包含关于当前活动编辑会话的信息。这些信息包括光标在行和字符方面的当前位置，以及文件的编码格式（UTF-8、ASCII 等）。点击状态栏中的这些值可以更改相应的设置。例如，点击行号会显示“转到行列（Go to Line:Column）”对话框。使用 `View -> Appearance -> Status Bar Widgets` 菜单选项可以添加和删除组件。例如，如果你遇到 Android Studio 的性能问题，内存指示器（Memory Indicator）是一个非常有用的组件。
 
-在概述了构成 Android Studio 编辑器的元素后，本章的剩余部分将更详细探索编辑环境的关键功能。
+虽然状态栏是主窗口的一部分而非编辑器，但它确实包含关于当前活动编辑会话的信息。这些信息包括光标在行和字符方面的当前位置，以及文件的编码格式（UTF-8、ASCII等）。点击状态栏中的这些值可以更改相应的设置。例如，点击行号会显示“转到行列（Go to Line:Column）”对话框。使用`View -> Appearance -> Status Bar Widgets`菜单选项可以添加和删除组件。例如，如果你遇到Android Studio的性能问题，内存指示器（Memory Indicator）是一个非常有用的组件。
+
+在概述了构成Android Studio编辑器的元素后，本章的剩余部分将更详细探索编辑环境的关键功能。
 
 ## 8.2 分拆编辑器窗口
 
-默认情况下，编辑器将显示一个单面板，显示当前选中文件的内容。在同时处理多个源文件时，一个非常实用的功能是将编辑器拆分为多个窗格。要拆分编辑器，可以在编辑器窗口内的文件标签上点击右键，然后选择`Split Right（向右拆）`或`Split Down（向下拆）`菜单选项。例如，图 8-7 显示了拆分器的工作状态，编辑器被拆分为三个面板：
+
+
+默认情况下，编辑器将显示一个单面板，显示当前选中文件的内容。在同时处理多个源文件时，一个非常实用的功能是将编辑器拆分为多个窗格。要拆分编辑器，可以在编辑器窗口内的文件标签上点击右键，然后选择`Split Right`（向右拆）或`Split Down`（向下拆）菜单选项。例如，图 8-7 显示了拆分器的工作状态，编辑器被拆分为三个面板：
 
 ![](img/as_code_editor_split.jpg)
 
 图 8-7
 
-可以通过在相应的标签上点击右键并选择`Change Splitter Orientation（更改拆分器方向）`菜单选项随时更改拆分面板的方向。重复这些步骤可以取消单个面板的拆分，此时从菜单中选择`Unsplit（取消拆分）`选项。右键点击任何标签并选择`Unsplit All（取消所有拆分）`可以移除所有拆分面板。
+可以通过在相应的标签上点击右键并选择`Change Splitter Orientation`（更改拆分器方向）菜单选项随时更改拆分面板的方向。重复这些步骤可以取消单个面板的拆分，此时从菜单中选择`Unsplit`（取消拆分）选项。右键点击任何标签并选择`Unsplit All`（取消所有拆分）可以移除所有拆分面板。
 
 窗口拆分可显示不同的文件，或为同一个文件提供多个窗口，允许同时查看和编辑同一文件的不同区域。
 
 ## 8.3 代码补全
 
-Android Studio 编辑器拥有大量的 Java 编程语法、构成 Android SDK 的类和方法，以及你自己的代码库的知识。在输入代码时，编辑器会扫描输入内容，并在适当的情况下就完成一个语句或引用可能需要的内容提供建议。当编辑器检测到补全建议时，会出现一个包含建议列表的面板。例如在图 8-8 中，编辑器正在为 `String` 声明的开头提供可能性：
+Android Studio 编辑器拥有大量的 Java 编程语法、构成 Android SDK 的类和方法，以及你自己的代码库的知识。在输入代码时，编辑器会扫描输入内容，并在适当的情况下就完成一个语句或引用可能需要的内容提供建议。当编辑器检测到补全建议时，会出现一个包含建议列表的面板。例如在图 8-8 中，编辑器正在为`String`声明的开头提供可能性：
 
 ![](img/as_code_editor_completion.jpg)
 
 图 8-8
 
-如果没有任何自动补全建议是正确的，请继续输入，编辑器将在适当的情况下继续完善建议。要接受最顶部的建议，请按键盘上的 `Enter` 或 `Tab` 键。要选择不同的建议，使用方向键在列表中上下移动，再次使用 `Enter` 或 `Tab` 键选中高亮的项。
+如果没有任何自动补全建议是正确的，请继续输入，编辑器将在适当的情况下继续完善建议。要接受最顶部的建议，请按键盘上的`Enter`或`Tab`键。要选择不同的建议，使用方向键在列表中上下移动，再次使用`Enter`或`Tab`键选中高亮的项。
 
-可以使用 `Ctrl-Space` 组合键序列手动调用补全建议。这在更改编辑器中的单词或声明时非常有用。当光标位于编辑器中的某个单词上时，该单词将自动高亮。按下 `Ctrl-Space` 将显示一个建议列表。使用 `Tab` 键替换编辑器中的当前单词。
+可以使用`Ctrl-Space`组合键序列手动调用补全建议。这在更改编辑器中的单词或声明时非常有用。当光标位于编辑器中的某个单词上时，该单词将自动高亮。按下`Ctrl-Space`将显示一个建议列表。使用`Tab`键替换编辑器中的当前单词。
 
-除了实时自动补全功能外，Android Studio 编辑器还提供了智能补全（Smart Completion）系统。智能补全通过 `Shift-Space` 序列调用，选中后将根据代码的上下文提供更详细的建议。再次按下 `Shift-Space` 序列将从更广泛的范围内提供建议。
+除了实时自动补全功能外，Android Studio 编辑器还提供了智能补全（Smart Completion）系统。智能补全通过`Shift-Space`序列调用，选中后将根据代码的上下文提供更详细的建议。再次按下`Shift-Space`序列将从更广泛的范围内提供建议。
 
-代码补全对许多程序员来说是一个个人偏好问题。为了承认这一事实，Android Studio 为自动补全设置提供了高水平控制。可以通过打开设置对话框并在设置面板中选择 `Editor -> General -> Code Completion` 来查看和修改这些设置，如图 8-9 所示：
+代码补全对许多程序员来说是一个个人偏好问题。为了承认这一事实，Android Studio 为自动补全设置提供了高水平控制。可以通过打开设置对话框并在设置面板中选择`Editor -> General -> Code Completion`来查看和修改这些设置，如图 8-9 所示：
 
 ![](img/as_completion_settings.jpg)
 
@@ -1560,7 +1590,7 @@ Android Studio 编辑器拥有大量的 Java 编程语法、构成 Android SDK �
 
 ## 8.4 语句完成
 
-Android Studio 编辑器提供的另一种补全形式是语句完成。它可以自动填充方法和循环语句等项的括号和大括号。语句补全通过 `Shift-Ctrl-Enter`（macOS 上为 `Shift-Cmd-Enter`）序列调用。例如考虑以下代码：
+Android Studio 编辑器提供的另一种补全形式是语句完成。它可以自动填充方法和循环语句等项的括号和大括号。语句补全通过`Shift-Ctrl-Enter`（macOS 上为`Shift-Cmd-Enter`）序列调用。例如考虑以下代码：
 
 ```
 myMethod()
@@ -1575,7 +1605,7 @@ myMethod() {
 
 ## 8.5 参数信息
 
-还可以要求编辑器提供方法接受的参数信息。当光标位于方法调用括号之间时，`Ctrl-P`（macOS 上为 `Cmd-P`）序列将显示该方法接受的参数，其中最可能的建议将加粗显示：
+还可以要求编辑器提供方法接受的参数信息。当光标位于方法调用括号之间时，`Ctrl-P`（macOS 上为`Cmd-P`）序列将显示该方法接受的参数，其中最可能的建议将加粗显示：
 
 ![](img/as_code_editor_parametre_info_java.jpg)
 
@@ -1583,32 +1613,29 @@ myMethod() {
 
 ## 8.6 参数名称提示
 
-
-
-
-代码编辑器可以配置为在方法调用中显示参数名称提示。例如，图 8-11 显示了 `Snackbar` 类中 `make()` 和 `setAction()` 方法调用中的参数名称提示：
+代码编辑器可以配置为在方法调用中显示参数名称提示。例如，图 8-11 显示了`Snackbar`类中`make()`和`setAction()`方法调用中的参数名称提示：
 
 ![](img/as_code_editor_hints.jpg)
 
 图 8-11
 
-此模式的设置可以通过打开设置对话框，并在侧边面板中导航到 `Editor` -> `Inlay Hints` -> `Java` 来配置。在随后的生成的屏幕上，为您选择的编程语言开启或关闭 `Parameter names`（参数名称）选项。要调整提示设置，点击 `Exclude list...`（排除列表）链接并进行必要的调整。
+此模式的设置可以通过打开设置对话框，并在侧边面板中导航到`Editor` -> `Inlay Hints` -> `Java`来配置。在随后的生成的屏幕上，为您选择的编程语言开启或关闭`Parameter names`（参数名称）选项。要调整提示设置，点击`Exclude list...`（排除列表）链接并进行必要的调整。
 
 ## 8.7 代码生成
 
-除了在输入代码时完成代码外，编辑器在某些条件下还可以为您生成代码。图 8-12 所示的可用代码生成选项列表，可以在光标位于文件中需要生成代码的位置时，使用 `Alt-Insert`（macOS 上为 `Cmd-N`）快捷键访问。
+除了在输入代码时完成代码外，编辑器在某些条件下还可以为您生成代码。图 8-12 所示的可用代码生成选项列表，可以在光标位于文件中需要生成代码的位置时，使用`Alt-Insert`（macOS 上为`Cmd-N`）快捷键访问。
 
 ![](img/as_code_generate_menu.jpg)
 
 图 8-12
 
-例如，考虑一种情况：我们希望在项目中的 `Activity` 将被操作系统销毁时收到通知。正如本书后面的章节概述，这可以通过重写 `Activity` 超类的 `onStop()` 周期方法来实现。要让 Android Studio 为此生成存根方法，请从代码生成列表中选择 `Override Methods…`（重写方法……）选项，并在生成的可用方法列表中选择 `onStop()` 方法：
+例如，考虑一种情况：我们希望在项目中的`Activity`将被操作系统销毁时收到通知。正如本书后面的章节概述，这可以通过重写`Activity`超类的`onStop()`周期方法来实现。要让 Android Studio 为此生成存根方法，请从代码生成列表中选择`Override Methods…`（重写方法……）选项，并在生成的可用方法列表中选择`onStop()`方法：
 
 ![](img/as_code_editor_override_dialog.jpg)
 
 图 8-13
 
-选中要重写的方法后，点击 `OK` 将在 Java 源文件的当前光标位置生成如下存根方法：
+选中要重写的方法后，点击`OK`将在 Java 源文件的当前光标位置生成如下存根方法：
 
 ```java
 @Override
@@ -1631,23 +1658,23 @@ protected void onStop() {
 
 图 8-15
 
-要展开已折叠的代码段，请点击编辑器行槽中的展开箭头。若要在不展开的情况下查看隐藏代码，请将鼠标指针悬停在“{…}指示器上，如 图 8-16 所示。随后，编辑器将显示包含折叠代码块的透镜覆盖（lens overlay）：
+要展开已折叠的代码段，请点击编辑器行槽中的展开箭头。若要在不展开的情况下查看隐藏代码，请将鼠标指针悬停在“{…}”指示器上，如 图 8-16 所示。随后，编辑器将显示包含折叠代码块的透镜覆盖（lens overlay）：
 
 ![](img/as_code_editor_folded_lens_java.jpg)
 
 图 8-16
 
-文件中的所有代码块可以使用 `Ctrl-Shift-Plus` 和 `Ctrl-Shift-Minus` 快捷键序列（macOS 上为 `Cmd-Shift-Plus` 和 `Cmd-Shift-Minus`）进行折叠或展开。
+文件中的所有代码块可以使用`Ctrl-Shift-Plus`和`Ctrl-Shift-Minus`快捷键序列（macOS 上为`Cmd-Shift-Plus`和`Cmd-Shift-Minus`）进行折叠或展开。
 
-默认情况下，Android Studio 编辑器在打开源文件时会自动折叠某些代码。要配置发生这种情况的条件，请导航到设置对话框中的 `Editor` -> `General` -> `Code Folding` 项（图 8-17）：
+默认情况下，Android Studio 编辑器在打开源文件时会自动折叠某些代码。要配置发生这种情况的条件，请导航到设置对话框中的`Editor` -> `General` -> `Code Folding`项（图 8-17）：
 
 ![](img/as_code_editor_folding_settings.jpg)
 
 图 8-17
 
- 快速文档查找
+## 8.9 快速文档查找
 
-通过将光标置于所需文档的声明上并按下 `Ctrl-Q` 快捷键（macOS 上为 `Ctrl-J`），可以访问上下文相关的 Java 和 Android 文档。这将显示一个包含该项目相关参考文档的弹出窗口。例如，图 8-18 显示了 `Android FloatingActionButton` 类的文档。
+通过将光标置于所需文档的声明上并按下`Ctrl-Q`快捷键（macOS 上为`Ctrl-J`），可以访问上下文相关的 Java 和 Android 文档。这将显示一个包含该项目相关参考文档的弹出窗口。例如，图 8-18 显示了`Android FloatingActionButton`类的文档。
 
 ![](img/as_code_editor_documentation_lookup_java.jpg)
 
@@ -1657,26 +1684,27 @@ protected void onStop() {
 
 通常情况下，Android Studio 编辑器会在添加语句和代码块时，自动在缩进、间距和嵌套方面对代码进行格式化。在需要重新格式化代码的情况下（这很常见，例如当从网站剪切粘贴示例代码时），编辑器提供了源代码格式化功能，选择后将自动重新格式化代码以匹配主流的代码风格。
 
-按下 `Ctrl-Alt-L`（macOS 上为 `Cmd-Opt-L`）快捷键序列来格式化源代码。要显示 `Reformat Code`（格式化代码）对话框（图 8-19），请使用 `Ctrl-Alt-Shift-L`（macOS 上为 `Cmd-Opt-Shift-L`）。此对话框提供了仅格式化当前选定代码、整个源文件的选项：
+按下`Ctrl-Alt-L`（macOS 上为`Cmd-Opt-L`）快捷键序列来格式化源代码。要显示`Reformat Code`（格式化代码）对话框（图 8-19），请使用`Ctrl-Alt-Shift-L`（macOS 上为`Cmd-Opt-Shift-L`）。此对话框提供了仅格式化当前选定代码、整个源文件的选项：
 
 ![](img/as_reformat_code.jpg)
 
 图 8-19
 
-完整的代码风格偏可以通过打开设置对话框并在侧边面板选择 `Code Style` 来更改，以访问支持的编程和标记语言。例如，要配置上述对话框中的 `Arrangement` 选项，展开 `Code Style` 部分并选择 `Java`。
+完整的代码风格偏好可以通过打开设置对话框并在侧边面板选择`Code Style`来更改，以访问支持的编程和标记语言。例如，要配置上述对话框中的`Arrangement`选项，展开`Code Style`部分并选择`Java`。
 
 ## 8.11 查找示例代码
 
-Android Studio 编辑器提供了与当前高亮项相关的示例代码方法。此功能对于学习如何使用特定的类很有帮助。要查找示例代码，在编辑器中高亮方法或类名，右键点击并选择 `Find Sample Code`get。如果有示例代码，将出现示例代码面板。从列表中选择示例将加载到右侧面板。
+Android Studio 编辑器提供了与当前高亮项相关的示例代码方法。此功能对于学习如何使用特定的类很有帮助。要查找示例代码，在编辑器中高亮方法或类名，右键点击并选择`Find Sample Code`。如果有示例代码，将出现示例代码面板。从列表中选择示例将加载到右侧面板。
+
+## 8.12 动态模板
+
+Android Studio 编辑器包含一组动态模板，可以快速插入常用的代码片段。可以通过在编辑器中使用`Cmd-J`（macOS）或`Ctrl-J`（Windows/Linux）快捷键序列访问这些模板，然后从列表中选择所需的模板。
 
 ## 8.13 总结
 
 Android Studio 编辑器极力减少编写代码所需的输入量，并使代码更容易阅读和导航。本章涵盖了关键编辑器功能，包括代码补全、代码生成、编辑器窗口分割、代码折叠、格式化、文档查找和动态模板。
 
 ## 9. Android 架构概述
-
-
-
 
 到目前为止，本书已经采取了步骤来建立适用于使用 Android Studio 开发 Android 应用程序的环境。通过创建一个 Android Studio 应用程序项目，已经在应用开发过程中迈出了第一步。
 
@@ -1704,11 +1732,11 @@ Linux 内核位于 Android 软件栈的底部，在设备硬件与 Android 软�
 
 硬件抽象层（`HAL`）由一组与摄像头、麦克风和加速度计等设备组件的库模块组成。当 Android 栈需要访问硬件组件时，它使用 HAL 库模块。每个 Android 设备制造商都为其特定的硬件配置有一个抽象层，允许标准的 Android 库和框架在任何设备上运行，无需针对特定硬件进行修改。
 
-# 9.4 Android 运行时 – ART
+### 9.4 Android 运行时 – ART
 
-当在 Android Studio 中构建 Android 应用时，它会被编译成中间字节码格式（`DEX` 格式）。当随后随后加载到设备时，Android 运行时（`ART`）会使用一种称为提前编译（`AOT` 编译）的过程将字节码翻译为设备处理器所需的本地器指令。这种格式被称为可执行和链接格式（`ELF`）。
+当在 Android Studio 中构建 Android 应用时，它会被编译成中间字节码格式（`DEX` 格式）。当随后加载到设备时，Android 运行时（`ART`）会使用一种称为提前编译（`AOT` 编译）的过程将字节码翻译为设备处理器所需的本地器指令。这种格式被称为可执行和链接格式（`ELF`）。
 
-之后每次启动应用程序时，都会运行 `ELF` 可执行版本，从而获得更应用程序性能和更长的电池寿命。
+之后每次启动应用程序时，都会运行`ELF`可执行版本，从而获得更快的应用程序性能和更长的电池寿命。
 
 这与旧版 Android 实现中使用的即时编译（`JIT`）方法形成对比，在那种方法中，每次启动应用程序时都在虚拟机（`VM`）内部翻译字节码。
 
@@ -1718,34 +1746,30 @@ Linux 内核位于 Android 软件栈的底部，在设备硬件与 Android 软�
 
 Android 开发者可用的某些关键核心 Android 库总结如下：
 
-- `android.app` – 提供对应用程序模型的访问，是所有 Android 应用程序的石。
+- `android.app` – 提供对应用程序模型的访问，是所有 Android 应用程序的基石。
 - `android.content` – 促进应用程序与应用程序组件之间的内容访问、发布和消息传递。
-- `android.database` – 用于访问内容提供者发布的数据，包含 `SQLite` 数据库管理类。
+- `android.database` – 用于访问内容提供者发布的数据，包含`SQLite`数据库管理类。
 - `android.graphics` – 一种底层的 2D 图形绘制 API，包括颜色、点、过滤器、矩形和画布。
 - `android.hardware` – 提供了一个访问加速度计和光线传感器等硬件的 API。
-- `android.opengl` – 指向 `OpenGL ES` 3D 图形渲染 API 的 Java 接口。
+- `android.opengl` – 指向`OpenGL ES` 3D 图形渲染 API 的 Java 接口。
 - `android.os` – 为应用程序提供访问标准操作系统服务的权限，包括消息、系统服务和进程间通信。
 - `android.media` – 提供启用音频和视频播放的类。
-- `android.net` – 一组提供网络栈的 API。包括 `android.net.wifi`，它提供对设备无线栈的访问。
+- `android.net` – 一组提供网络栈的 API。包括`android.net.wifi`，它提供对设备无线栈的访问。
 - `android.print` – 包括一组允许从 Android 应用程序内部将内容发送到配置的打印机的类。
 - `android.provider` – 一组便利类，提供对标准 Android 内容提供者数据库的访问，例如日历和联系人应用程序维护的数据库。
 - `android.text` – 用于在设备显示上渲染和操作文本。
-- `android.util` –一组实用类，用于执行字符串和数字转换、XML 处理以及日期时间操作等任务。
+- `android.util` – 一组实用类，用于执行字符串和数字转换、XML 处理以及日期时间操作等任务。
 - `android.view` – 应用程序用户界面的基础构建块。
 - `android.widget` – 丰富的预构建用户界面组件，如按钮、标签、列表视图、布局管理器、单选按钮等。
 - `android.webkit` – 一组旨在在应用程序中构建网络浏览功能的类。
 
 在介绍了 Android 运行时中的 Java 库之后，现在是我们将注意力转向 Android 软件栈这一层中的 C/C++ 库了。
 
-### 9.5.1 C/C++ 库
+#### 9.5.1 C/C++ 库
 
-在前节概述的 Android 运行时核心库是基于 Java 的，并为 Android 开发者提供了主要的 API。然而，重要的是，核心库并没有执行许多实际工作，事实上它们上是一组 C/C++ 库的 Java “封装器”。例如，当调用 `android.opengl` 库在设备显示器上绘制 3D 图形时，该库最终调用 `OpenGL ES` C++ 库，而该库又与底层的 Linux 内核协作以执行绘制任务。
+在前节概述的 Android 运行时核心库是基于 Java 的，并为 Android 开发者提供了主要的 API。然而，重要的是，核心库并没有执行许多实际工作，事实上它们是 一组 C/C++ 库的 Java “封装器”。例如，当调用`android.opengl`库在设备显示器上绘制 3D 图形时，该库最终调用`OpenGL ES` C++ 库，而该库又与底层的 Linux 内核协作以执行绘制任务。
 
-包含 C/C++ 库是为了满足广泛且多样的功能，包括 2D 和 3D 图形绘制、安全套接层 (`SSL`) 通信、`SQLite` 数据库管理、音频和视频播放、位图和矢量字体渲染、显示子系统和图形层管理以及标准 C 系统库 (`libc`) 的实现。
-
-
-
-
+包含 C/C++ 库是为了满足广泛且多样的功能，包括 2D 和 3D 图形绘制、安全套接层（`SSL`）通信、`SQLite`数据库管理、音频和视频播放、位图和矢量字体渲染、显示子系统和图形层管理以及标准 C 系统库（`libc`）的实现。
 
 在实践中，典型的 Android 开发者仅通过基于 Java 的 Android 核心库 API 访问这些库。如果需要直接访问这些库，可以使用 Android 原生开发工具包（NDK）来实现，其目的是通过 Java 原生接口（JNI）在 Java 代码中调用非 Java 或 Kotlin 编程语言（如 C 和 C++）的原生方法。
 
@@ -1758,10 +1782,13 @@ Android 框架包含以下关键服务：
 - `Activity Manager` – 控制应用程序生命周期和活动栈的所有方面。
 - `Content Providers` – 允许应用程序发布并与其他应用程序共享数据。
 - `Resource Manager` – 提供对非代码嵌入式资源的访问，如字符串、颜色设置和用户界面布局。
-- `Notifications Manager` – 允许应用程序向用户显示警和通知。
+- `Notifications Manager` – 允许应用程序向用户显示警报和通知。
 - `View System` – 一组可扩展的视图，用于创建应用程序用户界面。
 - `Package Manager` – 应用程序通过此系统查找设备上当前安装的其他应用程序的信息。
 - `Telephony Manager` – 向应用程序提供设备上可用电话服务的信息，如状态和订阅者信息。
+
+
+
 - `Location Manager` – 提供对位置服务的访问，允许应用程序接收位置更改的更新。
 
 ### 9.7 Applications
@@ -1770,7 +1797,7 @@ Android 框架包含以下关键服务：
 
 ### 9.8 Summary
 
-良好的 Android 开发知识基础需要理解 Android 的整体架构。Android 实现为一种软件栈架构，由 Linux 内核、运行时环境、相应的库、应用框架和一组应用程序组成。应用程序主要用 Java 或 Kotlin 编写，并在 Android Studio 构建环境中被编译为字节码格式。当应用程序随后安装到设备上时，这些字节码将由 Android Runtime (ART) 编译为 CPU 使用的原生格式。Android 架构的关键目标是性能和效率，既包括应用程序执行的效率，也包括应用设计中重用实现的效率。
+良好的 Android 开发知识基础需要理解 Android 的整体架构。Android 实现为一种软件栈架构，由 Linux 内核、运行时环境、相应的库、应用框架和一组应用程序组成。应用程序主要用 Java 或 Kotlin 编写，并在 Android Studio 构建环境中被编译为字节码格式。当应用程序随后安装到设备上时，这些字节码将由 `Android Runtime (ART)` 编译为 CPU 使用的原生格式。Android 架构的关键目标是性能和效率，既包括应用程序执行的效率，也包括应用设计中重用实现的效率。
 
 ## 10. The Anatomy of an Android App
 
@@ -1800,14 +1827,11 @@ Fragment 为每个用户界面屏幕由单独的 Activity 表示提供了高效�
 
 `Intents` 是一个 Activity 启动另一个 Activity 并实现组成应用程序的 Activity 流的机制。`Intents` 由对要执行的操作的描述以及可选的要执行该操作的数据组成。
 
-`Intents` 可以是显式的，即通过按类名引用 Activity 请求启动特定的 Activity；也可以是隐式的，即通过陈述要执行的操作类型或提供要执行该操作的特定类型的数据。对于隐式意，Android 运行时将使用称为 `Intent Resolution` 的过程选择与 `Intent` 所指定的标准最匹配的 Activity 进行启动。
+`Intents` 可以是显式的，即通过按类名引用 Activity 请求启动特定的 Activity；也可以是隐式的，即通过陈述要执行的操作类型或提供要执行该操作的特定类型的数据。对于隐式意图，Android 运行时将使用称为 `Intent Resolution` 的过程选择与 `Intent` 所指定的标准最匹配的 Activity 进行启动。
 
 ### 10.4 Broadcast Intents
 
-`Intent` 的另一种类型——`Broadcast Intent`（广播意图），是一种发送到所有注册了“感兴趣”的 `Broadcast Receiver` 的系统系统级意图。例如，Android 系统通常会发送 `Broadcast Intents` 来指示设备状态的变化，例如系统启动完成、设备连接外部电源源或屏幕开启或关闭。
-
-
-
+`Intent` 的另一种类型——`Broadcast Intent`（广播意图），是一种发送到所有注册了“感兴趣”的 `Broadcast Receiver` 的系统级意图。例如，Android 系统通常会发送 `Broadcast Intents` 来指示设备状态的变化，例如系统启动完成、设备连接外部电源或屏幕开启或关闭。
 
 广播广播（Broadcast Intent）可以是普通的（异步的），即它在大致相同的时间发送给所有感兴趣的广播接收器（Broadcast Receivers）；也可以是有序的，即它一次发送给一个接收器，接收器对其进行处理，然后将其中止或允许传递给下一个广播接收器。
 
@@ -1815,7 +1839,7 @@ Fragment 为每个用户界面屏幕由单独的 Activity 表示提供了高效�
 
 广播接收器是应用程序响应广播的一种机制。应用程序必须注册广播接收器，并配置 `Intent Filter`（意图过滤器）以指示其感兴趣的广播类型。当匹配的意图被广播时，无论注册该接收器的应用程序当前是否运行，Android 运行时都会调用该接收器。接收器有 5 秒钟来完成所需的任务（例如启动 `Service`、更新数据或向用户发出通知），然后返回。广播接收器在后台运行，且没有用户界面。
 
-## 10.6 Android 服务 (Android Services)
+### 10.6 Android 服务 (Android Services)
 
 Android 服务是在后台运行的且没有用户界面的进程。它们可以从 Activity、广播接收器或其他服务中启动并管理。对于应用程序需要继续执行任务但一定不需要向用户显示用户界面的情况，Android 服务是理想的选择。虽然服务缺乏用户界面，但它们仍然可以使用通知（notifications）和吐司（toasts，出现在屏幕上但不中断当前可见 Activity 的小型通知消息）通知用户事件，并能够发出 `Intent`。
 
@@ -1829,7 +1853,7 @@ Android 运行时赋予服务的优先级高于许多其他进程，系统只有
 
 原生 Android 应用程序包含了几个标准的内容提供者，允许应用程序访问联系人和多媒体文件等数据。Android 系统上当前可用的内容提供者可以使用内容解析器（Content Resolver）进行查找。
 
-## 10.8 应用程序清单 (The Application Manifest)
+### 10.8 应用程序清单 (The Application Manifest)
 
 应用程序清单文件是将组成应用程序的各种元素结合在一起的胶水。在这个基于 XML 的文件中，应用程序概述了组成完整应用程序的 Activity、服务、广播接收器、数据提供和权限。
 
@@ -1859,17 +1883,17 @@ Activity 专注于用户与应用程序交互的区域（一个 Activity 本质�
 
 ### 11.1 通过 ID 查找视图 (Find View by Id)
 
-正如 ["Android 应用程序剖析”(#App_Anatomy.xhtml__idTextAnchor278) 章节概述的，组成应用程序的所有资源都被编译成一个名为 `R` 的类。这些资源中包含了定义布局的内容。在 `R` 类中有一个名为 `layout` 的子类，它包含了布局资源，包括构成用户界面的视图。大多数应用程序都需要实现代码与这些视图之间的交互，例如，当读取在 `EditText` 视图输入的值或更改 `TextView` 显示的内容时。
+正如 ["Android 应用程序剖析”](#App_Anatomy.xhtml__idTextAnchor278) 章节概述的，组成应用程序的所有资源都被编译成一个名为 `R` 的类。这些资源中包含了定义布局的内容。在 `R` 类中有一个名为 `layout` 的子类，它包含了布局资源，包括构成用户界面的视图。大多数应用程序都需要实现代码与这些视图之间的交互，例如，当读取在 `EditText` 视图输入的值或更改 `TextView` 显示的内容时。
 
 在 Android Studio 3.6 之前，从应用程序代码访问视图的最常用选项是编写代码通过 `findViewById()` 方法根据 ID 手动查找视图。例如：
 
-```
+```java
 TextView exampleView = findViewById(R.id.exampleView);
 ```
 
 获取引用后，就可以访问视图的属性。例如：
 
-```
+```java
 exampleView.setText("Hello");
 ```
 
@@ -1879,17 +1903,13 @@ exampleView.setText("Hello");
 
 ### 11.2 视图绑定 (View Binding)
 
-
-
-
-
 当应用模块中启用视图绑定（view binding）时，Android Studio 会为每个布局文件生成一个绑定类。在代码中可以使用此绑定类访问布局视图，而无需使用 `findViewById()`。
 
 Android Studio 生成的绑定类名称基于布局文件名，将其转换为所谓的“驼峰命名法”，并在末尾附加“Binding”字样。例如，对于 `activity_main.xml` 文件，绑定类将被命名为 `ActivityMainBinding`。
 
-Android Studio Iguana 在项目模板中使用视图绑定的情况并不不一致。例如，我们在创建 `AndroidSample` 项目时使用的 `Empty Views Activity` 模板没有使用视图绑定。相反，`Basic Views Activity` 模板是使用视图绑定实现的。如果你使用了一个没有使用视图绑定的模板，了解如何向项目中添加它将是非常重要的。
+Android Studio Iguana 在项目模板中使用视图绑定的情况并不一致。例如，我们在创建 `AndroidSample` 项目时使用的 `Empty Views Activity` 模板没有使用视图绑定。相反，`Basic Views Activity` 模板是使用视图绑定实现的。如果你使用了一个没有使用视图绑定的模板，了解如何向项目中添加它将是非常重要的。
 
-## 11.3 转换 AndroidSample 项目
+### 11.3 转换 AndroidSample 项目
 
 在本章的剩余部分中，我们将通过将 `AndroidSample` 项目转换为使用视图绑定代替 `findViewById()`，来练习迁移到视图绑定。
 
@@ -1938,6 +1958,8 @@ protected void onCreate(Bundle savedInstanceState) {
 
 要切换到使用视图绑定，需要导入绑定类并按如下修改类。请注意，由于布局文件名为 `activity_main.xml`，我们可以推断 Android Studio 生成的绑定类命名为 `ActivityMainBinding`。请注意，如果你在创建项目时使用了 `com.example` 以外的域名，则下面的导入语句需要更改以反映这一点：
 
+
+
 ```java
 import android.widget.EditText;
 import android.widget.TextView;
@@ -1964,7 +1986,7 @@ public class MainActivity extends AppCompatActivity {
     }
 ```
 
-现在我们已经有了 `binding` 的引用，可以按照如下方式通过名称访问视图：
+现在我们已经有了`binding`的引用，可以按照如下方式通过名称访问视图：
 
 ```java
 public void convertCurrency(View view) {
@@ -1982,20 +2004,21 @@ public void convertCurrency(View view) {
 
 编译并运行应用，验证货币转换是否如以前一样正常工作。
 
-### 11.6 选择选项
+## 11.6 选择选项
 
-尽管 `Empty Views Activity` 模板没有采用视图绑定，但 Google 强烈建议尽可能使用视图绑定。因此，在开发自己的项目时，应该使用视图绑定。
+尽管`Empty Views Activity`模板没有采用视图绑定，但 Google 强烈建议尽可能使用视图绑定。因此，在开发自己的项目时，应该使用视图绑定。
 
 ## 11.7 本书示例中的视图绑定
 
 书中任何依赖于未实现视图绑定的项目模板的章节将首先进行迁移。尽管不需要每次执行迁移都重复这些步骤，这些章节会引导你回到这里刷新记忆（担心，几章之后这就会变得自然）。为了方便操作，本节简要地总结了迁移步骤。
 
-### 11.8 将项目转换为视图绑定
+## 11.8 将项目转换为视图绑定
 
 将项目模块转换为视图绑定涉及以下步骤：
 
-1. 编辑 `Project` 窗口中列出的模块级 Gradle 脚本 `Gradle Scripts -> build.gradle.kts (Module :app)`。
-2. 找到文件的 `android` 部分并添加以下项以启用 `viewBinding` 属性：
+1. 编辑`Project`窗口中列出的模块级 Gradle 脚本`Gradle Scripts -> build.gradle.kts (Module :app)`。
+
+2. 找到文件的`android`部分并添加以下项以启用`viewBinding`属性：
 
 ```kotlin
 android {
@@ -2005,8 +2028,9 @@ android {
 }
 ```
 
-3. 点击编辑器顶部的 `Sync Now` 链接以新的设置同步项目。
-4. 编辑 `MainActivity.java` 文件并将其修改为如下（其中 `<reverse domain>` 代表创建项目时使用的域名`<project name>` 被替换为项目的小写名称（例如 `androidsample`），`<binding name>` 是对应布局资源文件的名称（例如，`activity_main.xml` 的绑定为 `ActivityMainBinding`）：
+3. 点击编辑器顶部的`Sync Now`链接以新的设置同步项目。
+
+4. 编辑`MainActivity.java`文件并将其修改为如下（其中`<reverse domain>`代表创建项目时使用的域名，`<project name>`被替换为项目的小写名称（例如`androidsample`），`<binding name>`是对应布局资源文件的名称（例如，`activity_main.xml`的绑定为`ActivityMainBinding`）：
 
 ```java
 import android.view.View;
@@ -2034,21 +2058,17 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-5. 通过 `binding` 对象的属性名称访问视图。
+5. 通过`binding`对象的属性名称访问视图。
 
-### 11.9 总结
+## 11.9 总结
 
-
-
-
-
-在 Android Studio 3.6 引入之前，在应用代码中访问布局视图需要使用 `findViewById()` 方法。现在提供了一种名为视图绑定（view bindings）的替代方案。视图绑定由 Android Studio 为每个 XML 布局文件自动生成的类组成。这些类包含了对应布局中每个视图的绑定，提供了比 `findViewById()` 方法更安全的选项。然而，从 Android Studio Iguana 版本开始，某些项目模板默认未启用视图绑定。需要额外的步骤来在每个项目模块中手动启用并配置支持。
+在 Android Studio 3.6 引入之前，在应用代码中访问布局视图需要使用`findViewById()`方法。现在提供了一种名为视图绑定（view bindings）的替代方案。视图绑定由 Android Studio 为每个 XML 布局文件自动生成的类组成。这些类包含了对应布局中每个视图的绑定，提供了比`findViewById()`方法更安全的选项。然而，从 Android Studio Iguana 版本开始，某些项目模板默认未启用视图绑定。需要额外的步骤来在每个项目模块中手动启用并配置支持。
 
 # 12. 理解 Android 应用程序和 Activity 生命周期
 
 在之前的章节中，我们学习了 Android 应用程序运行在进程中，并由以活动（activities）、服务（services）和广播接收器（broadcast receivers）形式存在的多个组件组成。本章旨在通过查看 Android 运行时应用程序和 Activity 的生命周期来扩展这些知识。
 
-无论如今的移动设备与过去的桌面系统相比，其拥的内存和计算能力是多么强大，但请记住，根据现代桌面和笔记本电脑系统的标准，这些设备仍被认为是“资源受限”的，特别是在内存方面。因此，Android 系统的一项核心责任是确保有效管理这些有限资源，并确保操作系统和运行其上的应用程序始终对用户保持响应。为了实现这一点，Android 对运行应用程序的进程生命周期、状态以及组成这些应用程序的各个组件具有完全控制权。
+无论如今的移动设备与过去的桌面系统相比，其拥有的内存和计算能力是多么强大，但请记住，根据现代桌面和笔记本电脑系统的标准，这些设备仍被认为是“资源受限”的，特别是在内存方面。因此，Android 系统的一项核心责任是确保有效管理这些有限资源，并确保操作系统和运行其上的应用程序始终对用户保持响应。为了实现这一点，Android 对运行应用程序的进程生命周期、状态以及组成这些应用程序的各个组件具有完全控制权。
 
 因此，开发 Android 应用的一个重要因素是理解 Android 的应用程序和 Activity 生命周期管理模型，以及应用程序如何应对在其执行周期内可能发生的状态变化。
 
@@ -2060,7 +2080,7 @@ public class MainActivity extends AppCompatActivity {
 
 ## 12.2 Android 进程状态
 
-进程托管应用程序，而应用程序由组件组成。在 Android 系统中，进程的当前状态由其所托管应用程序中排名最高的活动组件定义。如 图 12-1 所示，进程在任何给定时刻都可以处于以下五种状态之一：
+进程托管应用程序，而应用程序由组件组成。在 Android 系统中，进程的当前状态由其所托管应用程序中排名最高的活动组件定义。如图 12-1 所示，进程在任何给定时刻都可以处于以下五种状态之一：
 
 ![android_process_priorities.png](img/Image2438.jpg)
 
@@ -2068,60 +2088,58 @@ public class MainActivity extends AppCompatActivity {
 
 ### 12.2.1 前台进程
 
-这些进程被赋予了最高优先级。在任何时候，活跃的前台进程可能只有一个或两个，它们通常是系统最后被终止的进程。进程必须满足以下一个或多个多个标准才能获得前台状态：
+这些进程被赋予了最高优先级。在任何时候，活跃的前台进程可能只有一个或两个，它们通常是系统最后被终止的进程。进程必须满足以下一个或多个标准才能获得前台状态：
 
-* 托管用户正在与之交互的 Activity。
-* 托管与用户正在交互的 Activity 连接的 `Service`。
-* 托管通过调用 `startForeground()` 指明终止将破坏用户体验的 `Service`。
-* 托管正在执行 `onCreate()`、`onResume()` 或 `onStart()` 回调的 `Service`。
-* 托管正在执行其 `onReceive()` 方法的广播接收器（Broadcast Receiver）。
+- 托管用户正在与之交互的 Activity。
+- 托管与用户正在交互的 Activity 连接的`Service`。
+- 托管通过调用`startForeground()`指明终止将破坏用户体验的`Service`。
+- 托管正在执行`onCreate()`、`onResume()`或`onStart()`回调的`Service`。
+- 托管正在执行其`onReceive()`方法的广播接收器（Broadcast Receiver）。
 
 ### 12.2.2 可见进程
 
-包含对用户可见但不是用户正在交互的 Activity 的进程被归类为“可见进程”。这通常发生在进程中的 Activity 对用户可见，但另一个 Activity（如部分屏幕或对话框）处于前台时。如果进程托管的 `Service` 本身绑定到一个可见或前台 Activity，该进程也符合可见状态。
+包含对用户可见但不是用户正在交互的 Activity 的进程被归类为“可见进程”。这通常发生在进程中的 Activity 对用户可见，但另一个 Activity（如部分屏幕或对话框）处于前台时。如果进程托管的`Service`本身绑定到一个可见或前台 Activity，该进程也符合可见状态。
 
 ### 12.2.3 服务进程
 
-包含已启动并正在执行的 `Service` 的进程。
+包含已启动并正在执行的`Service`的进程。
 
 ### 12.2.4 后台进程
 
-包含一个或多个当前对用户不可见的 Activity，且未托管符合服务进程状态的 `Service` 的进程。如果需要为高优先级进程释放额外内存，此类进程面临高终止风险。Android 维护着后台进程的动态列表，按顺序终止进程，使得最久处于前台的进程首先被杀死。
+包含一个或多个当前对用户不可见的 Activity，且未托管符合服务进程状态的`Service`的进程。如果需要为高优先级进程释放额外内存，此类进程面临高终止风险。Android 维护着后台进程的动态列表，按顺序终止进程，使得最久处于前台的进程首先被杀死。
 
 ### 12.2.5 空进程
 
 空进程不再包含活跃的应用程序，并保留在内存中，准备作为新启动应用程序的宿主。这正比于在等乘客到达时保持公交车门开启且引擎运行。此类进程被认为优先级最低，是释放资源时第一个被杀死的。
 
-### 12.3 进程间依赖
+## 12.3 进程间依赖
 
 确定最高优先级进程比上一节概述的要复杂，因为进程之间往往存在相互依赖。因此，在确定进程的优先级时，Android 系统还会考虑该进程是否以某种方式为另一个更高优先级的进程提供服务（例如，作为前台进程的内容提供者的服务进程）。根据基本规则，Android 文档规定，进程的排名永远不会低于它正在服务的进程。
 
-### 12.4 Activity 生命周期
+## 12.4 Activity 生命周期
 
 正如我们之前确定的，Android 进程的状态主要由构成其托管应用程序的 Activity 和组件的状态决定。因此，重要的是理解这些 Activity 在应用程序的执行周期内也会经历不同的状态转换。Activity 的当前状态部分取决于它在所谓的“Activity 栈”（Activity Stack）中的位置。
 
-### 12.5 Activity 栈
+## 12.5 Activity 栈
 
-运行时系统为 Android 设备上运行的每个应用程序维护一个 Activity 栈。当应用程序启动时，该应用程序中第一个启动的 Activity 被放入栈中。当第二个 Activity 启动时，它被放置在栈顶，前一个 Activity 则被向下推。栈顶的 Activity 被称为活动（或运行中） Activity。当活动 Activity 退出时，它会从运行时从栈中弹出，栈中紧随下方的 Activity 变成当前的活动 Activity。例如，栈顶的 Activity 可能因为其负责的任务已完成而退出。或者，用户可能选择了屏幕上的“返回”按钮以回到上一个 Activity，导致当前 Activity 被运行时系统从栈中弹出并销毁。Android Activity 栈的视觉表示如图 12-2](#Activity_Lifecycle.xhtml__idTextAnchor316) 所示。
+运行时系统为 Android 设备上运行的每个应用程序维护一个 Activity 栈。当应用程序启动时，该应用程序中第一个启动的 Activity 被放入栈中。当第二个 Activity 启动时，它被放置在栈顶，前一个 Activity 则被向下推。栈顶的 Activity 被称为活动（或运行中） Activity。当活动 Activity 退出时，它会从运行时从栈中弹出，栈中紧随下方的 Activity 变成当前的活动 Activity。例如，栈顶的 Activity 可能因为其负责的任务已完成而退出。或者，用户可能选择了屏幕上的“返回”按钮以回到上一个 Activity，导致当前 Activity 被运行时系统从栈中弹出并销毁。Android Activity 栈的视觉表示如图 12-2 所示。
 
 如图所示，新的 Activity 在启动时会被推入栈顶。当前的活动 Activity 位于栈顶，直到它被新的 Activity 向下推，或在退出时从栈中弹出。如果资源受限，运行时将杀死 Activity，从栈底开始。
-
-
-
 
 Activity 栈（Activity Stack）在编程术语中被称为“后进先出”（LIFO）栈，因为最后一个推入栈的项是第一个被弹出的项。
 
 ![android_activity_lifecycle_diagram.png](img/Image2447.jpg)
+
 图 12-2
 
 ## 12.6 Activity 状态
 
 在应用程序执行过程中，一个活动可能会处于以下几种状态之一：
 
-*   **活跃 / 运行中（Active / Running）** – 该活动位于 `Activity Stack` 的栈顶，是设备屏幕上可见的前台任务，拥有焦点，并且当前正在与用户进行交互。在资源短缺的情况下，这种活动被终止的概率最低。
-*   **已暂停（Paused）** – 该活动对用户可见，但目前没有焦点（通常是因为当前活跃的活动部分遮挡了该活动）。暂停的活动保留在内存中，继续保持与窗口管理器（window manager）连接，保留所有状态信息，并且在移动到 `Activity Stack` 顶部时，可以快速恢复到活跃状态。
-*   **停止（Stopped）** – 该活动对用户不可见（换句话说，它被设备显示上的其他活动遮挡了）。与暂停的活动一样，它保留所有的状态和成员信息，但在低内存情况下被终止的风险更高。
-*   **已杀死（Killed）** – 运行时系统已终止该活动以释放内存，该活动不再存在于 `Activity Stack` 中。如果应用程序需要，必须重新启动此类活动。
+- **活跃 / 运行中（Active / Running）** – 该活动位于`Activity Stack`的栈顶，是设备屏幕上可见的前台任务，拥有焦点，并且当前正在与用户进行交互。在资源短缺的情况下，这种活动被终止的概率最低。
+- **已暂停（Paused）** – 该活动对用户可见，但目前没有焦点（通常是因为当前活跃的活动部分遮挡了该活动）。暂停的活动保留在内存中，继续保持与窗口管理器（window manager）连接，保留所有状态信息，并且在移动到`Activity Stack`顶部时，可以快速恢复到活跃状态。
+- **停止（Stopped）** – 该活动对用户不可见（换句话说，它被设备显示上的其他活动遮挡了）。与暂停的活动一样，它保留所有的状态和成员信息，但在低内存情况下被终止的风险更高。
+- **已杀死（Killed）** – 运行时系统已终止该活动以释放内存，该活动不再存在于`Activity Stack`中。如果应用程序需要，必须重新启动此类活动。
 
 ## 12.7 配置更改（Configuration Changes）
 
@@ -2135,11 +2153,11 @@ Activity 栈（Activity Stack）在编程术语中被称为“后进先出”（
 
 在实践中，这些状态变化并非在完全没有通知的情况下强加的，在大多数情况下，应用程序会收到运行时系统的更改通知，并获得相应反应的机会。这通常涉及保存或恢复内部数据结构和用户界面状态，从而允许用户在应用程序之间无缝切换，并至少提供多个应用程序并发运行的假象。
 
-Android 提供了两种方法来处理应用内对象生命周期状态的变化。一种方法涉及响应操作系统的状态变化方法调用，将在名为“ 处理 Android 活动状态更改”的章节中详细介绍。
+Android 提供了两种方法来处理应用内对象生命周期状态的变化。一种方法涉及响应操作系统的状态变化方法调用，将在名为“处理 Android 活动状态更改”的章节中详细介绍。
 
 另一种方法是使用 Jetpack 架构组件中的生命周期类，这将在后续章节详细介绍。
 
-### 12.9 总结
+## 12.9 总结
 
 移动设备通常被认为是资源受限的，特别是内存方面。因此，Android 运行系统的主要职责之一是确保应用程序对用户保持响应。应用程序由运行在 Android 上的进程组成。
 
@@ -2147,9 +2165,9 @@ Android 提供了两种方法来处理应用内对象生命周期状态的变化
 
 本章的核心信息是，活动在执行期间会经过各种状态，并且对运行时环境中的命运几乎没有控制权。直接与用户交互的进程被终止的风险较高。因此，Android 开发的一个基本元素是应用程序响应状态变化通知的能力。
 
+例如，考虑在 Android Studio 中创建示例 Android 应用中创建的`AndroidSample`项目，并随后将其转换为视图绑定（view binding）。将此项目加载到`Android Studio`环境中并找到`MainActivity.java`文件（位于`app` -> `java` -> `<your domain>` -> `androidsample`）。找到该文件后，双击将其加载到编辑器中，其内容如下：
 
 
-例如，考虑在在 Android Studio 中创建示例 Android 应用中创建的 `AndroidSample` 项目，并随后将其转换为视图绑定（view binding）。将此项目加载到 `Android Studio` 环境中并找到 `MainActivity.java` 文件（位于 `app` -> `java` -> `<your domain>` -> `androidsample`）。找到该文件后，双击将其加载到编辑器中，其内容如下：
 
 ```java
 package com.example.androidsample;
@@ -2213,38 +2231,46 @@ public class MainActivity extends AppCompatActivity {
 
 其中一个方法名为 `onCreate()`，再次回到上面的代码段，我们可以看到该方法在 `MainActivity` 类中已经为我们重写并实现。在随后的章节中，我们将探索 `onCreate()` 以及 `Activity` 和 `Fragment` 类其他相关的生命周期方法。
 
-### 13.3 动态状态 vs. 持久化状态
+## 13.3 动态状态 vs. 持久化状态
 
 生命周期管理的核心目标之一是确保在适当的时间保存并恢复活动的状态。在此语境下，我们所说的状态是指当前活动持有的数据以及用户界面的外观。例如，活动可能在内存中维护一个数据模型，该模型需要保存到数据库、内容提供程序或文件中。因为它从应用程序的一次调用到另一次调用一直存在，因此被称为持久化状态（persistent state）。用户界面的外观（例如输入到字段中尚未提交到应用程序的文本）被称为动态状态（dynamic state），因为它们通常只在活动的单次调用期间存在。
 
 理解这两种状态之间的差异很重要，因为它们的保存方式不同。保存持久化状态的目的是避免活动被运行时系统杀死而导致的数据丢失。另一方面，保存动态状态的原因略为复杂，是为了给用户在前台和后台活动之间进行无缝切换的感知。保存持久化状态和动态状态的机制将在本章的后续部分变得更加清晰。
 
-### 13.4 Android 生命周期方法
+## 13.4 Android 生命周期方法
 
 如前文所述，`Activity` 和 `Fragment` 类包含几个生命周期方法，当实例状态发生变化时，它们作为事件处理器。支持的主要方法如下：
 
 - `onCreate(Bundle savedInstanceState)`：在活动首次创建时调用的方法，是执行大多数初始化任务的理想位置。该方法接收一个 `Bundle` 对象形式的参数，该参数可能包含来自活动上一次调用的动态状态信息。
+
 - `onRestart()`：在活动之前被运行时系统停止后即将重新启动时调用。
+
 - `onStart()`：在调用 `onCreate()` 或 `onRestart()` 方法后总是立即调用。此方法向活动指示它即将变得对用户可见。
+
 - `onResume()`：表示活动现在处于活动栈的顶端，并且是用户正在与之交互的活动。
 
-
-
-
 - `onPause()` – 表示之前的活动即将成为前台活动。此调用之后将分别调用 `onResume()` 或 `onStop()` 方法，取决于该活动是返回前台还是对用户不可见。在此方法中可以采取某些步骤来存储尚未被应用保存的持久化状态信息。为了避免切换活动时的延迟，应避免在此方法中执行耗时操作，例如将数据存储到数据库或执行网络操作。此方法还应该确保停止任何 CPU 密集型任务（如动画）。
+
 - `onStop()` – 活动不再对用户可见。此调用之后有两种可能的情景：如果活动再次移动到前台，则调用 `onRestart()`；如果活动被终止，则调用 `onDestroy()`。
+
 - `onDestroy()` – 活动即将被销毁，可能是自地是因为活动已完成任务并调用了 `finish()` 方法，也可能是运行时为了释放内存或由于配置更改（如设备方向改变）而正在终止它。需要注意的是，当活动终止时并不总是会调用 `onDestroy()`。
+
 - `onConfigurationChanged()` – 当发生配置更改且该活动已指示不需要重启时调用。该方法会接收一个概述新设备配置的 `Configuration` 对象，然后由活动负责对更改做出响应。
 
 以下生命周期方法适用于 `Fragment` 类：
 
 - `onAttach()` - 当 fragment 分配给活动时调用。
+
 - `onCreateView()` - 用于创建并返回 fragment 的用户界面布局层级结构时调用。
+
 - `onViewCreated()` - 在 `onCreateView()` 返回后调用。
+
 - `onViewStatusRestored()` - fragment 保存的视图层级结构已恢复。
 
 除了上述生命周期方法外，还有两个专门用于保存和恢复活动动态状态的方法：
+
 - `onRestoreInstanceState(Bundle savedInstanceState)` – 如果活动是从之前保存状态的调用重启的，则此方法会在调用 `onStart()` 方法后立即被调用。与 `onCreate()` 类似，此方法会传递一个包含之前状态数据的 `Bundle` 对象。当在 `onCreate()` 和 `onStart()` 中完成活动初始化后，恢复之前的状态更具意义时，通常使用此方法。
+
 - `onSaveInstanceState(Bundle outState)` – 在活动销毁之前调用，以便保存当前的动态状态（通常与用户界面有关）。该方法会接收一个应保存状态的 `Bundle` 对象，该对象随后会在活动重启时通过 `onCreate()` 和 `onRestoreInstanceState()` 方法传递。注意，此方法仅在运行时确定需要保存动态状态时才会被调用。
 
 在重写上述方法时，务必记住，除了 `onRestoreInstanceState()` 和 `onSaveInstanceState()` 之外，方法实现必须包含对父类中对应方法的调用。例如，以下方法重写了 `onRestart()` 方法，但也包含了对父类实例方法的调用：
@@ -2263,7 +2289,9 @@ protected void onRestart() {
 将涵盖的最后一个主题涉及活动或 fragment 在执行过程中将经历的整个、可见和前台生命周期的概述：
 
 - **整个生命 (Entire Lifetime)** – “整个生命”一词用于描述从首次调用 `onCreate()` 方法到对象终止前调用 `onDestroy()` 之间发生的一切。
+
 - **可见生命 (Visible Lifetime)** – 涵盖调用 `onStart()` 和 `onStop()` 之间的执行期间。在此期间，活动或 fragment 对用户可见的，尽管它可能不是用户当前正在交互的对象。
+
 - **前台生命 (Foreground Lifetime)** – 指调用 `onResume()` 和 `onPause()` 方法之间的执行期间。
 
 需要注意的是，活动或 fragment 在整个生命周期期间可能会多次经过前台和可见生命。
@@ -2300,9 +2328,6 @@ protected void onRestart() {
 
 生命周期方法的一个问题是，它们无法让活动或 fragment 在应用执行的任何点轻松地发现当前的生命周期状态。相反，对象必须在内部跟踪状态，或者等待下一次生命周期方法的调用。
 
-
-
-
 此外，这些方法并没有为对象提供简单的方法来观察应用内其他对象的生命周期状态变化。这是一个严重的考虑因素，因为给定 activity 或 fragment 的生命周期状态变化可能会影响应用内的许多其他对象。
 
 生命周期方法也仅适用于 `Fragment` 和 `Activity` 类的子类。因此，无法构建出真正感知生命周期的自定义类。
@@ -2331,46 +2356,45 @@ protected void onRestart() {
 
 在 `Name` 字段中输入 `StateChange`，并指定 `com.ebookfrenzy.statechange` 为包名。在点击 `Finish` 按钮之前，将 `Minimum API level` 设置为 `API 26: Android 8.0 (Oreo)`，并将 `Language` 菜单更改为 `Java`。完成项目创建过程后，`StateChange` 项目应列在位于 Android Studio 主窗口左侧的 `Project` 工具窗口中。按照章节 11.8 迁移项目到 View Binding 中概述的步骤将项目转换为使用 view binding。
 
-接下来的操作涉及 activity 的用户界面的设计。它存储在一个名为 `activity_main.xml` 的文件中，该文件应该已经加载到 `Layout Editor` 工具中。如果没有，请在 `Project` 工具窗口中导航到它，可以在 `app -> res -> layout` 文件夹中找到它。一旦找到，双击文件即可将其加载到 Android Studio Layout Editor 工具中。
+
+
+接下来的操作涉及`activity`的用户界面设计。它存储在一个名为`activity_main.xml`的文件中，该文件应该已经加载到`Layout Editor`工具中。如果没有，请在`Project`工具窗口中导航到它，可以在`app -> res -> layout`文件夹中找到它。一旦找到，双击文件即可将其加载到`Android Studio Layout Editor`工具中。
 
 ![](img/as_state_change_main_window.jpg)
 
 图 14-1
 
-### 14.2 设计用户界面
+## 14.2 设计用户界面
 
-当用户界面布局加载到 `Layout Editor` 工具后，是时候为示例应用设计用户界面了。与其当前用户界面设计中的“Hello World!” `TextView`，activity 需要一个 `EditText` 视图。在 `Component Tree` 面板中选择 `TextView` 对象并按键盘上的 `Delete` 键将其从设计中移除。
+当用户界面布局加载到`Layout Editor`工具后，是时候为示例应用设计用户界面了。与其当前用户界面设计中的“Hello World!” `TextView`，`activity`需要一个`EditText`视图。在`Component Tree`面板中选择`TextView`对象并按键盘上的`Delete`键将其从设计中移除。
 
-从 `Layout Editor` 左侧的 `Palette` 中，选择 `Text` 类别，并从文本列表中点击并拖动 `Plain Text` 组件到布局画布上。将组件移动到显示中心，使居中引导线出现，并放置到位，使布局类似于图 14-2。
+从`Layout Editor`左侧的`Palette`中，选择`Text`类别，并从文本列表中点击并拖动`Plain Text`组件到布局画布上。将组件移动到显示中心，使居中引导线出现，并放置到位，使布局类似于图 14-2。
 
 ![](img/as_statechange_ui.jpg)
 
 图 14-2
 
-在使用 `EditText` 小部件时，有必要为视图指定 `input type`。这定义了用户将输入的文本或数据类型。例如，如果 `input type` 设置为 `Phone`，用户将被限制输入数字。或者，如果 `input type` 设置为 `TextCapCharacters`，输入将默认为大写字母。输入类型设置也可以组合。
+在使用`EditText`小部件时，有必要为视图指定`input type`。这定义了用户将输入的文本或数据类型。例如，如果`input type`设置为`Phone`，用户将被限制输入数字。或者，如果`input type`设置为`TextCapCharacters`，输入将默认为大写字母。输入类型设置也可以组合。
 
-对于本示例，我们将使用默认的 `input type` 以支持文本输入。将来如果选择不同的设置，请选择布局中的 `EditText` 小部件并在 `Attributes` 窗口中找到 `inputType` 项。接下来，点击下方图 14-3 所示设置左侧的图标以打开选项列表。`Type` 菜单提供了限制输入为文本、数字、时间和电话号码的选项。`Variations` 菜单为当前选择的输入类型提供了额外选项。例如，文本输入类型有一个用于电子邮件地址输入的变体。
+对于本示例，我们将使用默认的`input type`以支持文本输入。将来如果选择不同的设置，请选择布局中的`EditText`小部件并在`Attributes`窗口中找到`inputType`项。接下来，点击下方图 14-3 所示设置左侧的图标以打开选项列表。`Type`菜单提供了限制输入为文本、数字、时间和电话号码的选项。`Variations`菜单为当前选择的输入类型提供了额外选项。例如，文本输入类型有一个用于电子邮件地址输入的变体。
 
-一旦选择了 `type` 和 `variation`，可以使用复选框列表进一步自定义输入类型：
+一旦选择了`type`和`variation`，可以使用复选框列表进一步自定义输入类型：
 
 ![](img/as_text_input_type_menu.jpg)
 
 图 14-3
 
-留在 `Attributes` 窗口中，将视图的 `id` 更改为 `editText` 并点击弹出对话框中的 `Refactor` 按钮。
+留在`Attributes`窗口中，将视图的`id`更改为`editText`并点击弹出对话框中的`Refactor`按钮。
 
-默认情况下，`EditText` 显示文本为“Name”。留在 `Attributes` 面板中，从 `text` 属性字段中删除此内容，使布局中的视图为空。
+默认情况下，`EditText`显示文本为“Name”。留在`Attributes`面板中，从`text`属性字段中删除此内容，使布局中的视图为空。
 
-在继续之前，点击布局编辑器工具栏中的 `Infer Constraints` 按钮以添加任何缺失的约束。
+在继续之前，点击布局编辑器工具栏中的`Infer Constraints`按钮以添加任何缺失的约束。
 
-### 14.3 重写 Activity 生命周期方法
+## 14.3 重写 Activity 生命周期方法
 
-此时，项目包含一个名为 `MainActivity` 的 activity，它派自 Android `AppCompatActivity` 类。该 activity 的源代码包含在 `MainActivity.java` 文件中，该文件应该已在编辑器会话中打开，并在编辑器标签栏的标签页表示。如果文件不再打开，请在 `Project` 工具窗口面板导航到它（`app -> java -> com.ebookfrenzy.statechange -> MainActivity`）并双击它将文件加载到编辑器中。
+此时，项目包含一个名为`MainActivity`的`activity`，它派自 Android `AppCompatActivity`类。该`activity`的源代码包含在`MainActivity.java`文件中，该文件应该已在编辑器会话中打开，并在编辑器标签栏的标签页表示。如果文件不再打开，请在`Project`工具窗口面板导航到它（`app -> java -> com.ebookfrenzy.statechange -> MainActivity`）并双击它将文件加载到编辑器中。
 
-
-
-
-到目前为止，Activity 重写的唯一生命周期方法是 `onCreate()` 方法，该方法已实现为在设置 Activity 用户界面之前调用父类的该方法实例。现在我们将修改此方法，以便在每次执行时都在 Android Studio 的 Logcat 面板中输出一条诊断消息。为此，我们将使用 `Log` 类，这要求我们导入 `android.util.Log` 并声明一个 `tag`（标签），以便我们能够在日志输出中过滤这些消息：
+到目前为止，`activity`重写的唯一生命周期方法是`onCreate()`方法，该方法已实现为在设置`activity`用户界面之前调用父类的该方法实例。现在我们将修改此方法，以便在每次执行时都在`Android Studio`的`Logcat`面板中输出一条诊断消息。为此，我们将使用`Log`类，这要求我们导入`android.util.Log`并声明一个`tag`（标签），以便我们能够在日志输出中过滤这些消息：
 
 ```java
 package com.ebookfrenzy.statechange;
@@ -2390,7 +2414,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-下一个任务是重写更多方法，每个方法都包含相应的日志调用。这些重写方法可以手动添加，也可以使用 `Alt-Insert` 快捷键生成，正如在标题为 Android Studio 代码编辑器基础的章节中所概述。注意，如果方法是自动生成的，仍然需要手动添加日志调用：
+下一个任务是重写更多方法，每个方法都包含相应的日志调用。这些重写方法可以手动添加，也可以使用`Alt-Insert`快捷键生成，正如在标题为“Android Studio 代码编辑器基础”的章节中所概述。注意，如果方法是自动生成的，仍然需要手动添加日志调用：
 
 ```java
 @Override
@@ -2442,77 +2466,89 @@ protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
 }
 ```
 
-### 14.4 过滤 Logcat 面板
+## 14.4 过滤 Logcat 面板
 
-在 `MainActivity.java` 的重写方法中添加代码的目的是将日志信息输出到 Logcat 工具窗口，该窗口通过如图 14-4 所示的按钮显示：
+在`MainActivity.java`的重写方法中添加代码的目的是将日志信息输出到`Logcat`工具窗口，该窗口通过如图 14-4 所示的按钮显示：
 
 ![](img/as_logcat_button.jpg)
+
 图 14-4
 
-Logcat 工具窗口可以配置为显示与设备或模拟器会话相关的所有事件，也可以限制为与当前选定应用相关的事件。输出也可以限制为仅包含匹配指定过滤器的日志事件。
+`Logcat`工具窗口可以配置为显示与设备或模拟器会话相关的所有事件，也可以限制为与当前选定应用相关的事件。输出也可以限制为仅包含匹配指定过滤器的日志事件。
 
-当在当前应用运行时显示时，Logcat 工具窗口将如下方的图 14-5 所示：
+当在当前应用运行时显示时，`Logcat`工具窗口将如下方的图 14-5 所示：
 
 ![](img/as_logcat_tool_window.jpg)
+
 图 14-5
 
-上图中标记为 A 的菜单允许你选择要显示日志输出的设备或模拟器。此输出出现在标记为 C 的输出面板中。可以通过在标记为 B 的字段中输入选项来过滤日志输出。默认键设置 `package:mine` 将输出限制为当前应用包（在本例中为 `com.ebookfrenzy.statechange`）生成的日志消息。留空此字段将允许显示所选设备或模拟器的日志输出，包括操作系统生成的诊断消息。也可以组合键来进一步过滤输出。例如，我们可以如下配置 Logcat 面板，仅显示与我们的 `StateChange` 标签相关的消息：
+上图中标记为 A 的菜单允许你选择要显示日志输出的设备或模拟器。此输出出现在标记为 C 的输出面板中。可以通过在标记为 B 的字段中输入选项来过滤日志输出。默认键设置`package:mine`将输出限制为当前应用包（在本例中为`com.ebookfrenzy.statechange`）生成的日志消息。留空此字段将允许显示所选设备或模拟器的日志输出，包括操作系统生成的诊断消息。也可以组合键来进一步过滤输出。例如，我们可以如下配置`Logcat`面板，仅显示与我们的`StateChange`标签相关的消息：
 
-`package:mine tag:StateChange`
+```
+package:mine tag:StateChange
+```
 
-我们可以通过在键前加上减号（`-`）符号来排除输出。除了 `StateChange` 标签外，我们可能还有使用不同标签的诊断消息。为了过滤日志以排除第二个标签的输出，我们可以输入以下键选项：
+我们可以通过在键前加上减号（`-`）符号来排除输出。除了`StateChange`标签外，我们可能还有使用不同标签的诊断消息。为了过滤日志以排除第二个标签的输出，我们可以输入以下键选项：
 
-`package:mine tag:StateChange -tag:OtherTag`
+```
+package:mine tag:StateChange -tag:OtherTag
+```
 
-除了你自己的标签值外，还可以从 Android 内置的一系列预定义诊断标签中进行选择。当你向过滤器字段中输入内容时，Logcat 将显示匹配的标签列表，如图 14-6 所示：
+除了你自己的标签值外，还可以从 Android 内置的一系列预定义诊断标签中进行选择。当你向过滤器字段中输入内容时，`Logcat`将显示匹配的标签列表，如图 14-6 所示：
 
 ![](img/as_logcat_filter_suggestions.jpg)
+
 图 14-6
 
-或者，使用 `Ctrl-Space` 访问完整的过滤建议。
+或者，使用`Ctrl-Space`访问完整的过滤建议。
 
-`level` 键可以根据严重性控制显示哪些消息。要过滤掉错误消息以外的所有消息，将使用以下键：
+`level`键可以根据严重性控制显示哪些消息。要过滤掉错误消息以外的所有消息，将使用以下键：
 
-`level:error`
+```
+level:error
+```
 
-除了 error，Logcat 面板还支持 verbose、info、warn 和 assert 级别设置。
+除了`error`，`Logcat`面板还支持`verbose`、`info`、`warn`和`assert`级别设置。
 
-Logcat 还支持多个日志面板，每个面板都有自己的过滤设置。要添加另一个面板，请点击上图图 14-5 中标记为 D 的 `+` 按钮。使用相应的标签在不同面板之间切换，或通过右键点击当前显示的面板并选择任一选项来并排显示它们。可以使用 `Split-Right` 或 `Split-Down` 菜单进行水平或垂直排列。在继续之前，关闭除一个面板外的所有面板，并按如下 own 配置过滤器：
+`Logcat`还支持多个日志面板，每个面板都有自己的过滤设置。要添加另一个面板，请点击上图图 14-5 中标记为 D 的`+`按钮。使用相应的标签在不同面板之间切换，或通过右键点击当前显示的面板并选择任一选项来并排显示它们。可以使用`Split-Right`或`Split-Down`菜单进行水平或垂直排列。在继续之前，关闭除一个面板外的所有面板，并按如下方式配置过滤器：
 
-### 14.5 运行应用程序
+## 14.5 运行应用程序
 
-为了获得最佳效果，应在物理 Android 设备或模拟器上运行应用程序。在设备已配置并连接到开发计算机的情况下，点击 Android Studio 工具栏上如图 14-7 所示的运行按钮：
+为了获得最佳效果，应在物理 Android 设备或模拟器上运行应用程序。在设备已配置并连接到开发计算机的情况下，点击`Android Studio`工具栏上如图 14-7 所示的运行按钮：
 
 ![](img/as_run_button.jpg)
+
 图 14-7
 
-如果出现对话框，请选择物理 Android 设备或模拟器（假设你尚未将其设置为默认目标）。在 Android Studio 构建应用程序并安装到设备后，它应该启动并在前景运行。
+如果出现对话框，请选择物理 Android 设备或模拟器（假设你尚未将其设置为默认目标）。在`Android Studio`构建应用程序并安装到设备后，它应该启动并在前景运行。
 
-查看 Logcat 面板可以指示到为止触发了哪些方法：
+查看`Logcat`面板可以指示到为止触发了哪些方法：
 
 ![](img/as_logcat_app_running.jpg)
-### 实验 Activity
 
-由于诊断功能正常，现在是时候测试应用程序以理解 Activity 生命周期周期状态变化了。首先，考虑 Logcat 面板中的初始日志序列：
+## 实验 Activity
 
-`onCreate`
-`onStart`
-`onResume`
+由于诊断功能正常，现在是时候测试应用程序以理解 Activity 生命周期状态变化了。首先，考虑`Logcat`面板中的初始日志序列：
 
-显然，初始状态变化完全正如 Android 应用和 Activity 生命周期的概述。然而，请注意，并没有调用 `onRestoreInstanceState()`，因为 Android 运行时检测到在这种情况下没有恢复的状态。
+```
+onCreate
+onStart
+onResume
+```
 
-点击设备显示屏底部状态栏上的 Home 图标，并注意日志中报告的方法调用序列如下：
+显然，初始状态变化完全正如“Android 应用和 Activity 生命周期”的概述。然而，请注意，并没有调用`onRestoreInstanceState()`，因为 Android 运行时检测到在这种情况下没有恢复的状态。
 
-`onPause`
-`onStop`
-`onSaveInstanceState`
+点击设备显示屏底部状态栏上的 `Home`图标，并注意日志中报告的方法调用序列如下：
 
-在这种情况下，运行时注意到 Activity 不在前景，对用户不可见，并且停止了 Activity，但在此没有提供 Activity 保存动态状态的机会。取决于运行时最终销毁了还是重启了 Activity，当用户返回 Activity 时，Activity 将通过调用 `onRestart()` 被通知其已重启，或者将再次通过创建序列。
+```
+onPause
+onStop
+onSaveInstanceState
+```
 
+在这种情况下，运行时注意到 Activity 不在前台，对用户不可见，并且停止了 Activity，但在此没有提供 Activity 保存动态状态的机会。取决于运行时最终销毁了还是重启了 Activity，当用户返回 Activity 时，Activity 将通过调用`onRestart()`被通知其已重启，或者将再次通过创建序列。
 
-
-
-正如“理解 Android 应用程序和 Activity 生命周期”所示，Activity 的销毁和重建可以通过对设备进行配置更改来触发，例如从竖屏旋转到横屏。要直观看到这一点，请在 `StateChange` 应用程序处于前台时旋转设备。使用模拟器时，可以使用模拟器工具栏上的旋转按钮来模拟设备旋转。为了完成旋转，可能还需要点击旋转按钮。该按钮出现在设备或模拟器屏幕的底部，如图图 14-9 所示：
+正如“理解 Android 应用程序和 Activity 生命周期”所示，Activity 的销毁和重建可以通过对设备进行配置更改来触发，例如从竖屏旋转到横屏。要直观看到这一点，请在`StateChange`应用程序处于前台时旋转设备。使用模拟器时，可以使用模拟器工具栏上的旋转按钮来模拟设备旋转。为了完成旋转，可能还需要点击旋转按钮。该按钮出现在设备或模拟器屏幕的底部，如图图 14-9 所示：
 
 ![](img/android_rotate_button.jpg)
 
@@ -2533,25 +2569,29 @@ onResume
 
 显然，运行时系统允许 Activity 在被销毁和重启之前保存状态。
 
-### 14.7 总结
+## 14.7 总结
+
 “一画胜过千言万语”这句谚语在学习新编程范式的示例中同样适用。在本章中，我们创建了一个 Android 应用程序示例，以演示 Activity 可能会经历的不同生命周期状态。在开发本章的项目时，我们还查看了从 Activity 内部生成诊断日志信息的机制。
 
-在下一章中，我们将扩展 `StateChange` 示例项目，演示如何保存和恢复 Activity 的动态状态。
+在下一章中，我们将扩展`StateChange`示例项目，演示如何保存和恢复 Activity 的动态状态。
 
-## 15. 保存和恢复 Android Activity 状态
+# 15. 保存和恢复 Android Activity 状态
+
 如果前面的几个章节已经实现了目标，那么现在对于在 Activity 生命周期特定时间点保存和恢复用户界面状态的重要性，应该更加清晰了。
 
 在本章中，我们将扩展在“通过示例 Android Activity 状态变化”中创建的示例应用程序，以演示运行时系统销毁和重建 Activity 时保存和恢复状态涉及的步骤。
 
-保存和恢复动态状态的关键组件涉及使用 Android SDK 中的 `Bundle` 类，该主题将在本章中涵盖。
+保存和恢复动态状态的关键组件涉及使用 Android SDK 中的`Bundle`类，该主题将在本章中涵盖。
 
-### 15.1 保存动态状态
-正如我们所学的，Activity 可以通过运行时系统调用 Activity 对 `onSaveInstanceState()` 方法的来实现保存动态状态信息。作为方法的参数传递的是对 `Bundle` 对象的引用，方法必须将任何需要保存的动态数据存储在该对象中。随后，`Bundle` 对象由运行时系统代表 Activity 进行存储，并在这些方法被调用时，作为参数传递给 Activity 的 `onCreate()` 和 `onRestoreInstanceState()` 方法。然后，可以在这些方法中从 `Bundle` 对象中检索数据，并用于恢复 Activity 的状态。
+## 15.1 保存动态状态
 
-### 15.2 用户界面状态的默认保存
-在上一章中，`StateChange` 示例应用程序的诊断输出显示，当运行它的设备旋转到足够以触发方向变化时，Activity 会经历几次状态变化。
+正如我们所学的，Activity 可以通过运行时系统调用 Activity 的`onSaveInstanceState()`方法来实现保存动态状态信息。作为方法的参数传递的是对`Bundle`对象的引用，方法必须将任何需要保存的动态数据存储在该对象中。随后，`Bundle`对象由运行时系统代表 Activity 进行存储，并在这些方法被调用时，作为参数传递给 Activity 的`onCreate()`和`onRestoreInstanceState()`方法。然后，可以在这些方法中从`Bundle`对象中检索数据，并用于恢复 Activity 的状态。
 
-再次启动 `StateChange` 应用程序，并在执行设备旋转之前在 `EditText` 字段中输入一些文本（在运行 Android 9 或更高版本的设备或模拟器上，可能需要点击状态栏中的旋转按钮来完成旋转）。旋转设备后，`Logcat` 窗口中应出现以下状态变化序列：
+## 15.2 用户界面状态的默认保存
+
+在上一章中，`StateChange`示例应用程序的诊断输出显示，当运行它的设备旋转到足够以触发方向变化时，Activity 会经历几次状态变化。
+
+再次启动`StateChange`应用程序，并在执行设备旋转之前在`EditText`字段中输入一些文本（在运行 Android 9 或更高版本的设备或模拟器上，可能需要点击状态栏中的旋转按钮来完成旋转）。旋转设备后，`Logcat`窗口中应出现以下状态变化序列：
 
 ```
 onPause
@@ -2564,9 +2604,9 @@ onRestoreInstanceState
 onResume
 ```
 
-显然，这导致了 Activity 的销毁和重建。然而，查看运行中应用程序的用户界面，应该显示输入到 `EditText` 字段中的文本已被保留。鉴于 Activity 已被销毁并重建，且我们没有添加任何特定代码来确保文本被保存和恢复，这种行为需要一些解释。
+显然，这导致了 Activity 的销毁和重建。然而，查看运行中应用程序的用户界面，应该显示输入到`EditText`字段中的文本已被保留。鉴于 Activity 已被销毁并重建，且我们没有添加任何特定代码来确保文本被保存和恢复，这种行为需要一些解释。
 
-事实上，Android SDK 包含的大多数视图控件已经实现了 Activity 自动重启时保存和恢复状态所需的行为。启用此行为的唯一要求是 Activity 中的 `onSaveInstanceState()` 和 `onRestoreInstanceState()` 重写方法包含对父类对应方法的调用：
+事实上，Android SDK 包含的大多数视图控件已经实现了 Activity 自动重启时保存和恢复状态所需的行为。启用此行为的唯一要求是 Activity 中的`onSaveInstanceState()`和`onRestoreInstanceState()`重写方法包含对父类对应方法的调用：
 
 ```java
 @Override
@@ -2580,9 +2620,11 @@ protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
 }
 ```
 
-可以在 XML 布局文件中通过将 `android:saveEnabled` 属性设置为 `false` 来禁用用户界面视图的自动状态保存。对于本示例，我们将禁用用户界面布局中 `EditText` 视图的自动状态保存机制，然后在应用程序中添加代码来手动保存和恢复视图的状态。
+可以在 XML 布局文件中通过将`android:saveEnabled`属性设置为`false`来禁用用户界面视图的自动状态保存。对于本示例，我们将禁用用户界面布局中`EditText`视图的自动状态保存机制，然后在应用程序中添加代码来手动保存和恢复视图的状态。
 
-为了配置 `EditText` 视图，使其在 Activity 重启时不保存和恢复状态，请编辑 `activity_main.xml` 文件，使该视图的条目如下所示（注意，可以通过“在 Android Studio 中创建 Android 应用程序示例所示，将布局编辑器切换到代码模式来编辑 XML）：
+为了配置`EditText`视图，使其在 Activity 重启时不保存和恢复状态，请编辑`activity_main.xml`文件，使该视图的条目如下所示（注意，可以通过“在 Android Studio 中创建 Android 应用程序示例”所示，将布局编辑器切换到代码模式来编辑 XML）：
+
+
 
 ```xml
 <EditText
@@ -2594,25 +2636,23 @@ protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
     android:saveEnabled="false"
     app:layout_constraintBottom="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStart="parent"
+    app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
 ```
 
 更改后，运行应用程序，输入文本并旋转设备，以验证文本不再被保存和恢复。
 
-### 15.3 Bundle 类
+## 15.3 Bundle 类
+
 对于需要在视图控件提供的功能之外保存状态的情况，`Bundle` 类提供了使用键值对机制存储数据的容器。键的形式为字符串值，而与键关联的值可以是原始值或任何实现了 `Parcelable` 接口的对象。许多类已经实现了 `Parcelable` 接口。自定义类可以通过实现 `Parcelable` 接口定义的 set 方法来变为“可拆分的”，这些方法的细节可以在 Android 文档中找到：
 
 [`developer.android.com/reference/android/os/Parcelable.html`](https://developer.android.com/reference/android/os/Parcelable.html)
 
-`Bundle` 类还包含一组用于获取和设置各种类型键值对的方法，包括原始类型（bool、char、double 和 float 值）和对象（如 String 和 CharSequence）。
+`Bundle` 类还包含一组用于获取和设置各种类型键值对的方法，包括原始类型（`bool`、`char`、`double` 和 `float` 值）和对象（如 `String` 和 `CharSequence`）。
 
 对于本示例，由于禁用了 `EditText` 视图文本的自动保存，我们需要确保用户输入到 `EditText` 字段中的文本保存到 `Bundle` 对象中，并在随后恢复。这将分别使用 `Bundle` 类的 `putCharSequence()` 和 `getCharSequence()` 方法来实现。
 
-### 15.4 保存状态
-
-
-
+## 15.4 保存状态
 
 扩展 `StateChange` 应用的第一步是确保从 `MainActivity` Activity 的 `onSaveInstanceState()` 方法中从 `EditText` 组件提取用户输入的文本，然后将其以键值对的形式保存到 `Bundle` 对象中。
 
@@ -2677,13 +2717,13 @@ protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
 }
 ```
 
-### 15.6 测试应用程序
+## 15.6 测试应用程序
 
 剩下的工作只是再次构建并运行 `StateChange` 应用。运行并处于前台时，触摸 `EditText` 组件并在旋转设备到另一种方向之前输入一些文本。以前文本的更改会丢失，但得益于我们在本章向 Activity 中添加的代码，新文本将保留在 `editText` 组件中。
 
 在验证代码执行符合预期后，注释掉两个方法中的 `super.onSaveInstanceState()` 和 `super.onRestoreInstanceState()` 调用，重新启动应用并注意在设备旋转后文本仍然被保留。默认的保存和恢复系统本质上被自定义实现取代了，从而提供了一种在 Activity 内部动态且有选择地保存和恢复状态的方法。
 
-### 15.7 总结
+## 15.7 总结
 
 Android 应用中动态状态的保存和恢复是在适当的生命周期方法中实现适当的代码。对于大多数用户界面视图，这由 `Activity` 父类自动处理。在其他情况下，这通常包括在 `onSaveInstanceState()` 方法中提取值和设置，并将数据作为键值对保存到运行时系统传递给 Activity 的 `Bundle` 对象中。
 
@@ -2707,26 +2747,30 @@ Android 应用中动态状态的保存和恢复是在适当的生命周期方法
 
 用户界面中的每个项都是 Android `View` 类的子类（确说是 `android.view.View`）。Android SDK 提供了一组预构建视图，用于构建用户界面。典型示例包括标准项目，如 `Button`、`CheckBox`、`ProgressBar` 和 `TextView` 类。这些视图也被称为小组件。对于 SDK 提供的组件无法满足的需求，可以通过子类和扩展现有类，或者通过直接基于 `View` 类构建全新的组件来创建新视图。
 
-
-
-
 一个视图也可以包含多个其他视图（也称为复合视图）。此类视图派自 Android `ViewGroup` 类（`android.view.ViewGroup`），而该类本身又是 `View` 类的子类。此类视图的一个示例是 `RadioGroup`，它旨在包含多个 `RadioButton` 对象，使得在任何时间只有一个对象可以处于“开启”状态。从结构上来说，复合视图由单个父视图（派自 `ViewGroup` 类，通常称为容器视图或根元素）组成，该视图能够包含其他视图（称为子视图）。
 
 另一类基于 `ViewGroup` 的容器视图是布局管理器。
 
-## 16.3 Android 布局管理器
+### 16.3 Android 布局管理器
 
 除了上一节讨论的控件风格的视图外，SDK 还包含了一组被称为布局（Layouts）的视图。布局（`Layouts`）是容器视图（因此也派自 `ViewGroup`），用于控制子视图在屏幕上的布局方式。
 
 Android SDK 包含了以下布局视图，它们可以在 Android 用户界面设计中被抽用：
 
 *   `ConstraintLayout` – 引入自 Android 7，该布局管理器适用于大多数布局需求。`ConstraintLayout` 允许通过分配给每个子视图的简单约束设置来定义布局中视图的位置和行为。这种布局的灵活性允许快速轻松地创建复杂布局，而无需相互嵌套其他布局类型，从而提升了布局性能。`ConstraintLayout` 还与 Android Studio 布局编辑器工具紧密集成。除非另有说明，否则它是书中大多数示例的优选布局。
+
 *   `LinearLayout` – 根据所选的方向（orientation）将子视图放置在单行或单列中。可以每个子视图设置权重（weight）值，以指定该子视图相对于其他子视图占据布局空间的多少比例。
+
 *   `TableLayout` – 将子视图按行列的网格格式排列。表格中的每一行由一个 `TableRow` 对象子表示，而该对象又包含一个每个单元格的视图对象。
+
 *   `FrameLayout` – `FrameLayout` 的目的是分配屏幕的一个区域，通常用于显示单个视图。如果添加了多个子视图，默认情况下它们将相互叠显示，并位于布局区域的左上角。通过在每个子视图上设置重力（gravity）值可以实现单个子视图的交替定位。例如，在子视图上设置 `center_vertical` 重力值将使其位于包含的 `FrameLayout` 视图的垂直中心。
+
 *   `RelativeLayout` – `RelativeLayout` 允许通过在子视图上指定对齐方式和边距，使子视图相对于彼此以及包含的布局视图进行定位。例如，子视图 A 可以配置为位于包含的 `RelativeLayout` 视图的垂直和水平中心。相反，视图 B 可能也会配置为在布局视图水平居中，但位于 View A 顶部边缘 30 像素处，从而使其相对于 View A 的垂直位置。在设计必须适应各种屏幕尺寸和方向的用户界面时，`RelativeLayout` 管理器会非常有帮助。
+
 *   `AbsoluteLayout` – 允许将子视图放置在容器布局内的特定 X 和 Y 坐标上。不建议使用这种布局，因为它缺乏响应屏幕尺寸和方向变化的灵活性。
+
 *   `GridLayout` – `GridLayout` 实例由不可见的线划分，形成一个包含行和列单元格的网格。子视图被放置在单元格中，并可以配置为水平和垂直覆盖多个单元格，从而快速轻松地实现各种布局选项。`GridLayout` 中组件之间的间隙可以通过在相邻单元格中放置名为 `Space` 的特殊类型视图或设置边距参数来实现。
+
 *   `CoordinatorLayout` – 作为 Android Design Support Library 的随 Android 5.0 引入，`CoordinatorLayout` 专门用于协调应用程序屏幕顶部应用栏（app bar）与其他视图元素的外观和行为。当使用 Basic Views Activity 模板创建新活动时，主布局中的父视图将使用 `CoordinatorLayout` 实例实现。该布局管理器将在后文中详细介绍，从“与浮动操作按钮和 Snackbar 进行工作”章节开始。
 
 在考虑 Android 应用的用户界面布局时，值得记住，正如下一节所述，这些布局可以相互嵌套，以创建几乎任何所需复杂程度的用户界面设计。
@@ -2763,10 +2807,6 @@ Android SDK 包含了以下布局视图，它们可以在 Android 用户界面�
 
 Android 应用用户界面屏幕中的每个元素都是派自 `android.view.View` 类的视图。每个视图代表设备显示器的一个矩形区域，负责在该矩形内显示的内容，并处理发生在视图边界内的事件。多个视图可以组合成单个复合视图。复合视图中的视图是容器视图的子视图，容器视图通常是 `android.view.ViewGroup` 类的子类（该类又是 `android.view.View` 类的子类）。用户界面是由视图层级结构的形式构建的。
 
-
-
-
-
 Android SDK 包含了一系列预定义的视图（views），可用于创建用户界面。这些包括文本字段和按钮等基础组件，还包括一系列用于控制子视图定位的布局管理器。如果提供的视图不能满足特定需求，可以通过扩展或组合现有视图，或者通过对 `android.view.View` 子类化创建一个全新的类来创建自定义视图（custom views）。
 
 可以使用 Android Studio 布局编辑器工具、手写 XML 布局资源文件或编写 Java 代码来创建用户界面。这些方法都将在接下来的章节中进行介绍。
@@ -2779,15 +2819,17 @@ Android SDK 包含了一系列预定义的视图（views），可用于创建用
 
 ## 17.1 基础视图活动模板与空视图活动模板
 
-正如标题为“Android 应用剖析章节中所概述，Android 应用程序由一个或多个活动（activities）组成。活动是应用程序功能的独立模块，通常直接对应于单个用户界面屏幕。因此，当使用 Android Studio 布局编辑器时，我们总是在为某个活动编写布局。
 
-在创建新的 Android Studio 项目时，有多个模板可以作为主活动用户界面的起点。最基础的模板是基础视图活动（Basic Views Activity）模板和空视图活动（Empty Views Activity）模板。尽管它们初看起来看起来相似，但这两个选项之间存在显著差异。要在布局编辑器中查看这些差异，请使用 `View Options` 菜单启用“显示系统 UI（Show System UI）”，如下方的图 17-1 所示：
+
+正如标题为“Android 应用剖析”章节中所概述，Android 应用程序由一个或多个活动（`activities`）组成。活动是应用程序功能的独立模块，通常直接对应于单个用户界面屏幕。因此，当使用 Android Studio 布局编辑器时，我们总是在为某个活动编写布局。
+
+在创建新的 Android Studio 项目时，有多个模板可以作为主活动用户界面的起点。最基础的模板是基础视图活动（`Basic Views Activity`）模板和空视图活动（`Empty Views Activity`）模板。尽管它们初看起来相似，但这两个选项之间存在显著差异。要在布局编辑器中查看这些差异，请使用 `View Options` 菜单启用“显示系统 UI（`Show System UI`）”，如下方的图 17-1 所示：
 
 ![](img/as_layout_editor_view_options.jpg)
 
 图 17-1
 
-空视图活动模板创建一个单个布局文件，其由一个 `ConstraintLayout` 实例实例组成，该实例包含一个 `TextView` 对象，如图 17-2 所示：
+空视图活动模板创建一个单个布局文件，其由一个 `ConstraintLayout` 实例组成，该实例包含一个 `TextView` 对象，如图 17-2 所示：
 
 ![](img/as_layout_with_system_ui.jpg)
 
@@ -2805,25 +2847,21 @@ Android SDK 包含了一系列预定义的视图（views），可用于创建用
 
 图 17-4
 
-此应用行为使用了两个 Android 功能，称为片段（fragments）和导航（navigation），这些内容将分别从标题为“Android 片段简介]和“导航架构组件概览]的章节开始介绍。
+此应用行为使用了两个 Android 功能，称为片段（`fragments`）和导航（`navigation`），这些内容将分别从标题为“Android 片段简介”和“导航架构组件概览”的章节开始介绍。
 
-`content_main.xml` 文件包含一个特殊的片段，称为导航宿主片段（Navigation Host Fragment），它允许根据 `res -> layout -> nav_graph.xml` 文件中配置的设置，在视图中切换进入或退出不同的内容。在基础视图活动模板的情况下，`nav_graph.xml` 文件被配置为根据用户对 `Next` 和 `Previous` 按钮的选择，在 `fragment_first.xml` 和 `fragment_second.xml` 文件定义的用户界面布局之间进行切换。
+`content_main.xml` 文件包含一个特殊的片段，称为导航宿主片段（`Navigation Host Fragment`），它允许根据 `res -> layout -> nav_graph.xml` 文件中配置的设置，在视图中切换进入或退出不同的内容。在基础视图活动模板的情况下，`nav_graph.xml` 文件被配置为根据用户对 `Next` 和 `Previous` 按钮的选择，在 `fragment_first.xml` 和 `fragment_second.xml` 文件定义的用户界面布局之间进行切换。
 
-如果你在活动中既不需要浮动按钮也不需要菜单，并且不需要 `CoordinatorLayout` 特殊标题栏行为（例如在某些滚动操作期间使标题栏和工具栏从视图折叠的选项，该主题在标题为“使用 AppBar 和折叠工具栏布局]的章节中介绍），那么空视图活动模板将很有帮助。然而，基础视图活动非常有帮助，因为它默认提供了这些元素。事实上，使用基础视图活动模板创建一个新活动并删除不需要的元素，比使用空视图活动模板并手动实现折叠工具栏、菜单或浮动按钮等行为要快得多。
+如果你在活动中既不需要浮动按钮也不需要菜单，并且不需要 `CoordinatorLayout` 特殊标题栏行为（例如在某些滚动操作期间使标题栏和工具栏从视图折叠的选项，该主题在标题为“使用 AppBar 和折叠工具栏布局”的章节中介绍），那么空视图活动模板将很有帮助。然而，基础视图活动非常有帮助，因为它默认提供了这些元素。事实上，使用基础视图活动模板创建一个新活动并删除不需要的元素，比使用空视图活动模板并手动实现折叠工具栏、菜单或浮动按钮等行为要快得多。
 
 然而，由于书中并非所有示例都需要基础视图活动模板的功能，因此本章中的大多数示例将使用空视图活动模板，除非示例需要基础视图活动模板提供的某项功能。
 
+1. 在 `Project` 工具窗口中，导航到并双击`app -> res -> navigation -> nav_graph.xml`文件，将其加载到导航编辑器中。
 
+2. 在编辑器中，在图表面板中选择`SecondFragment`项，并按下键盘上的删除键将其从图表中移除。
 
+3. 找到并删除`SecondFragment.java`（`app -> java -> <package name> -> SecondFragment`）和`fragment_second.xml`（`app -> res -> layout -> fragment_second.xml`）文件。
 
-
-1. 在 `Project` 工具窗口中，导航到并双击 `app -> res -> navigation -> nav_graph.xml` 文件，将其加载到导航编辑器中。
-
-2. 在编辑器中，在图表面板中选择 `SecondFragment` 项，并按下键盘上的删除键将其从图表中移除。
-
-3. 找到并删除 `SecondFragment.java`（`app -> java -> <package name> -> SecondFragment`）和 `fragment_second.xml`（`app -> res -> layout -> fragment_second.xml`）文件。
-
-4. 最后一项任务是从 `FirstFragment` 类中移除一些代码，使得 `Button` 视图在点击时不再导航到已不存在的第二个碎片（fragment）。找到 `FirstFragment.java` 文件，双击它将其加载到编辑器，并移除 `onViewCreated()` 方法中的代码，使其内容如下所示：
+4. 最后一项任务是从`FirstFragment`类中移除一些代码，使得`Button`视图在点击时不再导航到已不存在的第二个碎片（fragment）。找到`FirstFragment.java`文件，双击它将其加载到编辑器，并移除`onViewCreated()`方法中的代码，使其内容如下所示：
 
 ```java
 public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
@@ -2840,9 +2878,9 @@ public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
 
 ### 17.2 Android Studio 布局编辑器
 
-如前面的章节所示，`Layout Editor` 工具提供了一个“所见即所得”（WYSIWYG）的环境，在该环境中，用户可以从调色板中选择视图，然后将其放置在代表 Android 设备显示的画布上。一旦视图放置在画布上，就可以对其进行移动、删除和调整大小（受父视图约束的限制）。此外，可以使用 `Attributes` 工具窗口修改与所选视图相关的各种属性。
+如前面的章节所示，`Layout Editor`工具提供了一个“所见即所得”（WYSIWYG）的环境，在该环境中，用户可以从调色板中选择视图，然后将其放置在代表 Android 设备显示的画布上。一旦视图放置在画布上，就可以对其进行移动、删除和调整大小（受父视图约束的限制）。此外，可以使用`Attributes`工具窗口修改与所选视图相关的各种属性。
 
-在底层，`Layout Editor` 工具会构建一个 XML 资源文件，其中包含了正在设计的用户界面定义。因此，`Layout Editor` 工具以三种不同的模式运行：`Design`（设计）、`Code`（代码）和 `Split`（拆）。
+在底层，`Layout Editor`工具会构建一个 XML 资源文件，其中包含了正在设计的用户界面定义。因此，`Layout Editor`工具以三种不同的模式运行：`Design`（设计）、`Code`（代码）和`Split`（拆分）。
 
 ### 17.3 设计模式
 
@@ -2852,11 +2890,13 @@ public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
 
 图 17-5
 
-**A – 调色板（Palette）** – 调色板提供了 Android SDK 系列视图组件。这些组件被分类以便于导航。可以通过从调色板中拖拽视图组件并将其掉到布局所需的位置来向布局添加项。
+**A – 调色板（Palette）** – 调色板提供了 Android SDK 系列视图组件。这些组件被分类以便于导航。可以通过从调色板中拖拽视图组件并将其放到布局所需的位置来向布局添加项。
 
 **B – 设备屏幕（Device Screen）** – 设备屏幕提供了设计中的用户界面布局的视觉化“所见即所得”表示。该布局通过允许选择、删除、移动和调整视图的大小，允许直接的设计操纵。可以使用工具栏中的菜单随时更改布局表示的设备模型。
 
-**C – 组件树（Component Tree）** – 如上一节（“理解 Android 视图、视图组和布局”中标记为 A）列出了 Android SDK 支持的不同视图组件类别。当从列表中选择一个类别时，第二个面板（B）将更新并显示该类别的组件列表：
+**C – 组件树（Component Tree）** – 列出了当前布局中的视图层次结构，允许快速选择和操作布局中的各个视图。
+
+调色板（如图 17-6 所示）展示了可供选择的视图组件。当从列表中选择一个类别时，第二个面板（B）将更新并显示该类别的组件列表：
 
 ![](img/as_layout_editor_pallette.jpg)
 
@@ -2895,11 +2935,8 @@ public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
 图 17-10
 
 模式菜单还包含测试动态颜色的选项，该主题在“Material Design 3 主题与动态色彩教程”章节中有所介绍。
+
 ### 17.7 代码模式
-
-
-
-
 
 在使用 Android Studio 布局编辑器工具时，请记住它所做的仅仅是提供了一种易于操作的方法来创建 XML 布局资源文件。在设计过程中，可以通过选择上方图 17-7 中标记为 A 的按钮来查看并直接编辑底层 XML。
 
@@ -2921,17 +2958,24 @@ public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
 
 ### 17.9 设置属性 (Setting Attributes)
 
-属性面板（Attributes panel）提供了当前选中组件所有可用设置的访问。例如，图 17-13
+属性面板（Attributes panel）提供了当前选中组件所有可用设置的访问。例如，图 17-13 显示了属性窗口：
+
+![](img/as_layout_editor_attributes.jpg)
 
 图 17-13
 
 属性窗口分为以下不同的部分：
 
-- `id` - 包含 `id` 属性，定义了在应用程序源码中引用当前所选对象的名称。
+- `id` - 包含`id`属性，定义了在应用程序源码中引用当前所选对象的名称。
+
 - `Declared Attributes`（已声明属性） - 包含所有已赋值的属性。
+
 - `Layout`（布局） - 定义当前所选视图对象相对于屏幕及布局中对象的定位和大小的设置。
+
 - `Transforms`（变换） - 包含允许当前所选对象进行旋转、缩放和偏移的控件。
+
 - `Common Attributes`（常用属性） - 对于当前所选视图对象类通常需要更改的属性列表。
+
 - `All Attributes`（所有属性） - 当前所选对象可用属性的完整列表。
 
 也可以通过选择属性窗口工具栏中的搜索按钮并输入属性名称来对特定属性进行搜索。
@@ -2952,7 +2996,7 @@ public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
 
 ### 17.10 变换 (Transforms)
 
-属性窗口内的变换面板（图 17-16）提供了一组控件和属性，用于控制当前所选对象在旋转、透明度（用于视图淡入淡出）、缩放（大小）和平移（相对于当前位置的偏移）方面的视觉效果：
+属性窗口内的变换面板（图 17-16）提供了一组控件和属性，用于控制当前所选对象在旋转、透明度（用于视图淡入淡出）、缩放（大小）和平移（相对于当前位置的偏移）等方面的视觉效果：
 
 ![](img/as_layout_editor_transforms.jpg)
 
@@ -2962,7 +3006,7 @@ public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
 
 ## 17.11 工具可见性切换 (Tools Visibility Toggles)
 
-在代码模式下查看 Android Studio XML 布局文件的内容时，你会注意到许多定义视图外观和行为的属性以 `android:` 前缀开头。这表示这些属性是在 `android` 命名空间内设置的，并在应用程序运行时生效。例如，以下布局文件的摘录在 `Button` 视图上设置了各种属性：
+在代码模式下查看 Android Studio XML 布局文件的内容时，你会注意到许多定义视图外观和行为的属性以`android:`前缀开头。这表示这些属性是在`android`命名空间内设置的，并在应用程序运行时生效。例如，以下布局文件的摘录在`Button`视图上设置了各种属性：
 
 ```xml
 <Button
@@ -2972,7 +3016,7 @@ public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
     android:text="Button"
 ```
 
-除了 `android` 命名空间外，Android Studio 还提供了 `tools` 命名空间。当在该命名空间内设置属性时，它们仅在布局编辑器的预览中生效。在设计布局时，你可能会发现让 `EditText` 视图显示某些文本但在应用程序运行时需要视图为空。为了实现这一点，你将如下使用 `tools` 命名空间设置视图的 text 属性：
+除了`android`命名空间外，Android Studio 还提供了`tools`命名空间。当在该命名空间内设置属性时，它们仅在布局编辑器的预览中生效。在设计布局时，你可能会发现让`EditText`视图显示某些文本但在应用程序运行时需要视图为空。为了实现这一点，你将如下使用`tools`命名空间设置视图的 text 属性：
 
 ```xml
 <EditText
@@ -2996,28 +3040,25 @@ public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
 tools:visibility="invisible"
 ```
 
-虽然在使用 `invisible` 设置时视图不再可见，但它仍然存在于布局中并占据原来的空间。要让布局表现得就像该视图不存在，应将可见性属性设置为 `gone`：
+虽然在使用`invisible`设置时视图不再可见，但它仍然存在于布局中并占据原来的空间。要让布局表现得就像该视图不存在，应将可见性属性设置为`gone`：
 
 ```xml
 tools:visibility="gone"
 ```
 
-在上述两个示例中，可见性设置仅适用于布局编辑器，对运行应用程序没有影响。要在布局编辑器和运行应用程序中控制可见性，可以使用 `android` 命名空间设置相同的属性：
+在上述两个示例中，可见性设置仅适用于布局编辑器，对运行应用程序没有影响。要在布局编辑器和运行应用程序中控制可见性，可以使用`android`命名空间设置相同的属性：
 
 ```xml
 android:visibility="gone"
 ```
 
-虽然这些可见性工具属性很有用，但手动编辑 XML 布局文件是一个麻烦的过程。为了方便更改这些设置，Android Studio 在布局编辑器的组件树（Component Tree）面板中提供了一组切换按钮。要访问这些控件，请点击面板中对应视图右侧的边缘。例如，图 17-18 显示了名为 `myButton` 的 `Button` 视图的工具可见性切换控件：
+虽然这些可见性工具属性很有用，但手动编辑 XML 布局文件是一个麻烦的过程。为了方便更改这些设置，Android Studio 在布局编辑器的组件树（Component Tree）面板中提供了一组切换按钮。要访问这些控件，请点击面板中对应视图右侧的边缘。例如，图 17-18 显示了名为`myButton`的`Button`视图的工具可见性切换控件：
 
 ![](img/as_layout_editor_tools_attr_visibility.jpg)
 
 图 17-18
 
-这些切换按钮控制 `android` 和 `tools` 命名空间对应视图的可见性，并提供 `not set`（未设置）、`visible`（可见）、`invisible`（隐藏）和 `gone`（移除）选项。做出切换选择时，Android Studio 会自动在布局文件的 XML 视图元素中添加相应的属性。
-
-
-
+这些切换按钮控制`android`和`tools`命名空间对应视图的可见性，并提供`not set`（未设置）、`visible`（可见）、`invisible`（隐藏）和`gone`（移除）选项。做出切换选择时，Android Studio 会自动在布局文件的 XML 视图元素中添加相应的属性。
 
 除了组件树（Component Tree）面板中的可见性切换开关外，布局编辑器还包含了工具可见性和位置切换按钮，如下方的图 17-19 所示的高亮显示按钮：
 
@@ -3025,15 +3066,17 @@ android:visibility="gone"
 
 图 17-19
 
-此按钮用于切换当前工具的可见性设置。例如，如果上方所示的 `Button` 视图工具可见性属性设置为 `gone`，点击此按钮将使其变为可见。这使得在视图添加到和从布局中移除时，能够快速检查布局行为。该切换开关对于检查布局中的视图是否正确约束也很有用，该主题在《Android Studio 中使用 ConstraintLayout 指南》章节中有所介绍。
+此按钮用于切换当前工具的可见性设置。例如，如果上方所示的`Button`视图工具可见性属性设置为`gone`，点击此按钮将使其变为可见。这使得在视图添加到和从布局中移除时，能够快速检查布局行为。该切换开关对于检查布局中的视图是否正确约束也很有用，该主题在《Android Studio 中使用 ConstraintLayout 指南》章节中有所介绍。
 
 ### 17.12 转换视图
 
-在 Android Studio 布局编辑器中，可以轻松将布局中的视图从一种类型转换为另一种（例如将 `TextView` 转换为 `EditText`），只需在屏幕布局或组件树窗口中右键点击视图，并选择 `Convert view...` 菜单选项（图 17-20）：
+在 Android Studio 布局编辑器中，可以轻松将布局中的视图从一种类型转换为另一种（例如将`TextView`转换为`EditText`），只需在屏幕布局或组件树窗口中右键点击视图，并选择`Convert view...`菜单选项（图 17-20）：
 
 ![](img/as_layout_editor_convert_view.jpg)
 
 图 17-20
+
+
 
 选中后，将弹出一个对话框，其中包含所选对象可以转换的兼容视图类型列表。例如，图 17-21 显示了现有 `TextView` 视图可以转换的类型：
 
@@ -3041,57 +3084,77 @@ android:visibility="gone"
 
 图 17-21
 
-这种技术对于将布局从一种类型转换为另一种也很有帮助（例如，将 `ConstraintLayout` 转换为 `LinearLayout`）。
+这种技术对于将布局从一种类型转换为另一种类型也很有帮助（例如，将 `ConstraintLayout` 转换为 `LinearLayout`）。
 
 ## 17.13 显示示例数据
 
-在 Android Studio 中设计布局时，会出现这样的情况：用户界面中要显示的内容在应用完成并运行之前是不可用的。这有时导致很难在布局编辑器内部评估布局在应用运行时的外观。为了解决这个问题，布局编辑器允许指定示例数据，用示例图像和数据填充布局编辑器中的视图。这些示例数据仅在布局编辑器中显示，在应用运行时不会显示。可以通过直接编辑布局的 XML 或使用设计时助手（在设计区域中右键点击小部件并选择 `Set Sample Data` 菜单选项）来配置示例数据。设计时助手面板将为所选的视图项显示一系列预配置的示例数据选项，包括各种配置的文本和图像组合。例如，图 17-22 显示了在 `RecyclerView` 列表中选择显示示例数据时显示的示例数据选项：
+在 Android Studio 中设计布局时，会出现这样的情况：用户界面中要显示的内容在应用完成并运行之前是不可用的。这有时导致很难在布局编辑器内部评估布局在应用运行时的外观。
+
+为了解决这个问题，布局编辑器允许指定示例数据，用示例图像和数据填充布局编辑器中的视图。这些示例数据仅在布局编辑器中显示，在应用运行时不会显示。
+
+可以通过直接编辑布局的 XML 或使用设计时助手（在设计区域中右键点击小部件并选择 `Set Sample Data` 菜单选项）来配置示例数据。设计时助手面板将为所选的视图项显示一系列预配置的示例数据选项，包括各种配置的文本和图像组合。
+
+例如，图 17-22 显示了在 `RecyclerView` 列表中选择显示示例数据时显示的示例数据选项：
 
 ![](img/as_layout_editor_design_time_attrs.jpg)
 
 图 17-22
 
-或者，可以在布局设计过程中提供用于显示的自定义文本和图像。在布局编辑器中使用示例数据的示例包含在随后的标题为《布局编辑器示例数据教程》 的章节中。由于示例数据是通过 `tools` 属性实现的，可以使用上方图 17-19 中高亮显示的切换按钮来控制预览中数据的可见性。
+或者，可以在布局设计过程中提供用于显示的自定义文本和图像。在布局编辑器中使用示例数据的示例包含在随后的标题为《布局编辑器示例数据教程》的章节中。
+
+由于示例数据是通过 `tools` 属性实现的，可以使用上方图 17-19 中高亮显示的切换按钮来控制预览中数据的可见性。
 
 ## 17.14 创建自定义设备定义
 
-布局编辑器工具栏中的设备菜单（图 17-23）提供了预配置设备类型的列表，选中后它们将作为设备屏幕画布出现。除了预配置的设备类型外，之前在 Android Studio 环境中配置的任何 AVD 也会列在菜单中。要添加额外的设备配置，显示设备菜单，选择 `Add Device Definition` 选项，并按照《在 Android Studio 中创建 Android 虚拟设备 (AVD)章节中概述的步骤进行操作。
+布局编辑器工具栏中的设备菜单（图 17-23）提供了预配置设备类型的列表，选中后它们将作为设备屏幕画布出现。除了预配置的设备类型外，之前在 Android Studio 环境中配置的任何 AVD 也会列在菜单中。
+
+要添加额外的设备配置，显示设备菜单，选择 `Add Device Definition` 选项，并按照《在 Android Studio 中创建 Android 虚拟设备（AVD）》章节中概述的步骤进行操作。
 
 ![](img/as_layout_editor_device_menu.jpg)
 
 图 17-23
 
-### 17.15 更改当前设备
+## 17.15 更改当前设备
 
-作为设备选择菜单的替代，可以通过从设备菜单选择 `Custom` 选项，点击设备屏幕右下角的缩放手柄（图 17-24），并拖动选择备用设备显示格式。随着屏幕调整大小，将出现标记，指示可选的各种尺寸选项和方向：
+作为设备选择菜单的替代，可以通过从设备菜单选择 `Custom` 选项，点击设备屏幕右下角的缩放手柄（图 17-24），并拖动选择备用设备显示格式。
+
+随着屏幕调整大小，将出现标记，指示可选的各种尺寸选项和方向：
 
 ![](img/as_3.5_show_layout_resize_device.jpg)
 
 图 17-24
 
-### 17.16 布局验证
+## 17.16 布局验证
 
-布局验证选项允许在一系列 Pixel 尺寸的屏幕上同时预览用户界面布局。要访问布局验证工具窗口，请点击 Android Studio 主窗口右边缘的标签页，或使用窗口左下角的工具窗口（Tool Window）菜单。加载后，该面板将如图 17-25 所示，在多个设备屏幕配置上渲染布局：
+布局验证选项允许在一系列 Pixel 尺寸的屏幕上同时预览用户界面布局。
+
+要访问布局验证工具窗口，请点击 Android Studio 主窗口右边缘的标签页，或使用窗口左下角的工具窗口（Tool Window）菜单。加载后，该面板将如图 17-25 所示，在多个设备屏幕配置上渲染布局：
 
 ![](img/as_layout_editor_device_validation.jpg)
 
 图 17-25
 
-### 17.17 总结
+## 17.17 总结
 
-开发 Android 应用的关键部分涉及创建用户界面。这是在 Android Studio 环境中使用布局编辑器工具完成的，该工具以三种模式运行。在设计（Design）模式下，从调色板中选择视图组件，将其放置在代表 Android 设备屏幕的布局上，并使用属性列表进行配置。代表用户界面的底层 XML 可以在代码（Code）模式下直接编辑。另一方面，拆分（Split）模式允许通过可视化和直接 XML 编辑来创建和修改布局。这些模式结合在一起提供了一个详尽且直观的用户界面设计环境。
+开发 Android 应用的关键部分涉及创建用户界面。这是在 Android Studio 环境中使用布局编辑器工具完成的，该工具以三种模式运行。
+
+在设计（Design）模式下，从调色板中选择视图组件，将其放置在代表 Android 设备屏幕的布局上，并使用属性列表进行配置。代表用户界面的底层 XML 可以在代码（Code）模式下直接编辑。另一方面，拆分（Split）模式允许通过可视化和直接 XML 编辑来创建和修改布局。
+
+这些模式结合在一起提供了一个详尽且直观的用户界面设计环境。
 
 布局验证面板允许在各种设备尺寸上快速预览用户界面布局。
 
 ## 18. Android ConstraintLayout 指南
 
-正如在《理解 Android 视图、视图组和布局》（#Views_and_Layouts.xhtml__idTextAnchor359）章节中所述的，Android 提供了几种布局管理器来设计用户界面。从 Android 7 开始，Google 引入了一种解决了旧布局管理器许多缺点的布局。这种称为 `ConstraintLayout` 的布局将简单、表达性且灵活的布局系统与 Android Studio 布局编辑器工具内置的强大功能相结合，以便创建自动适应不同屏幕尺寸和设备方向变化的响应式用户界面布局。
+正如在《理解 Android 视图、视图组和布局》（`#Views_and_Layouts.xhtml__idTextAnchor359`）章节中所述的，Android 提供了几种布局管理器来设计用户界面。
+
+从 Android 7 开始，Google 引入了一种解决了旧布局管理器许多缺点的布局。这种称为 `ConstraintLayout` 的布局将简单、表达性且灵活的布局系统与 Android Studio 布局编辑器工具内置的强大功能相结合，以便创建自动适应不同屏幕尺寸和设备方向变化的响应式用户界面布局。
 
 本章将概述 `ConstraintLayout` 的基本概念，下一章将详细概述如何在 Android Studio 布局编辑器中使用 `ConstraintLayout` 创建基于约束的布局。
 
 ### 18.1 ConstraintLayout 如何工作
 
-与其他所有布局一样，`ConstraintLayout` 管理其包含的视觉组件（也称为小部件）的位置和大小行为。它是根据在每个小部件上设置的约束连接来实现此的。
+与其他所有布局一样，`ConstraintLayout` 管理其包含的视觉组件（也称为小部件）的位置和大小行为。它是根据在每个小部件上设置的约束连接来实现的。
 
 要充分理解和使用 `ConstraintLayout`，掌握以下关键概念至关重要：
 
@@ -3106,51 +3169,63 @@ android:visibility="gone"
 - `Barriers`（屏障）
 - `Flow`（流）
 
-### 18.1.1 Constraints（约束）
+#### 18.1.1 Constraints（约束）
 
+约束（Constraints）是一组规则，规定了组件相对于其他组件、容器 `ConstraintLayout` 的边界以及称为指南线（guidelines）的特殊元素的对齐和间距。
 
+约束还决定了 Activity 的界面布局如何响应设备方向的变化，或在不同屏幕尺寸的设备上显示时的表现。为了正确配置，组件必须具有足够的约束连接，以便 `ConstraintLayout` 布局引擎能够在水平和垂直平面上解析其位置。
 
-约束（Constraints）是一组规则，规定了组件相对于其他组件、容器 `ConstraintLayout` 的边界以及称为指南线（guidelines）的特殊元素的对齐和间距。约束还决定了 Activity 的界面布局如何响应设备方向的变化，或在不同屏幕尺寸的设备上显示时的表现。为了正确配置，组件必须具有足够的约束连接，以便 `ConstraintLayout` 布局引擎能够在水平和垂直平面上解析其位置。
+#### 18.1.2 边距（Margins）
 
-### 18.1.2 边距 (Margins)
+边距（margin）是某种指定固定距离的约束形式。考虑一个需要放置在设备屏幕右上角附近的 `Button` 对象。
 
-边距（margin）是某种指定固定距离的约束形式。考虑一个需要放置在设备屏幕右上角附近的 `Button` 对象。这可以通过实现从 `Button` 的顶边缘和右侧边缘出发、并将其连接到父级 `ConstraintLayout` 对应侧边缘的边距约束来实现，如图 18-1
+这可以通过实现从 `Button` 的顶边缘和右侧边缘出发、并将其连接到父级 `ConstraintLayout` 对应侧边缘的边距约束来实现，如图 18-1 所示。
 
 图 18-1
 
-如上图所示，这些约束连接中的每一个都关联了一个边距值，规定了组件距离父布局两侧的固定距离。在这种配置下，无论屏幕尺寸或设备方向如何，`Button` 对象将始终根据两个约束连接指定的，分别距离父级 `ConstraintLayout` 的顶边缘和右侧边缘 20 和 15 个设备无关像素 (dp)。
+如上图所示，这些约束连接中的每一个都关联了一个边距值，规定了组件距离父布局两侧的固定距离。
 
-虽然上述配置在某些情况下是可以接受的，但它并没有让 `ConstraintLayout` 布局引擎在调整组件位置以响应设备旋转和支持不同尺寸屏幕方面灵活性。要为布局添加这种响应性，必须实现对向约束（opposing constraints）。
+在这种配置下，无论屏幕尺寸或设备方向如何，`Button` 对象将始终根据两个约束连接指定的，分别距离父级 `ConstraintLayout` 的顶边缘和右侧边缘 20 和 15 个设备无关像素（dp）。
 
-### 18.1.3 对向约束 (Opposing Constraints)
+虽然上述配置在某些情况下是可以接受的，但它并没有让 `ConstraintLayout` 布局引擎在调整组件位置以响应设备旋转和支持不同尺寸屏幕方面具有灵活性。要为布局添加这种响应性，必须实现对向约束（opposing constraints）。
 
-在单个组件上沿同一轴运行的两个约束被认为是对向约束。换句话说，左侧和右侧都有约束的组件被认为具有水平对向约束。例如，图 18-2 展示了在之前的布局基础上添加水平和垂直对向约束：
+#### 18.1.3 对向约束（Opposing Constraints）
+
+在单个组件上沿同一轴运行的两个约束被认为是对向约束。换句话说，左侧和右侧都有约束的组件被认为具有水平对向约束。
+
+例如，图 18-2 展示了在之前的布局基础上添加水平和垂直对向约束：
 
 ![](img/Image24461.jpg)
 
 图 18-2
 
-这里需要理解的关键点是，一旦在特定轴上实现了对向约束，组件的定位将基于百分比而非坐标。例如，组件不再固定在距离布局顶部 20dp 处，而是定位在距离顶部 30% 的位置。在不同的方向以及在更大或更小的屏幕上运行时，`Button` 始终相对于父布局尺寸处于相同的位置。
+这里需要理解的关键点是，一旦在特定轴上实现了对向约束，组件的定位将基于百分比而非坐标。
+
+例如，组件不再固定在距离布局顶部 20dp 处，而是定位在距离顶部 30% 的位置。在不同的方向以及在更大或更小的屏幕上运行时，`Button` 始终相对于父布局尺寸处于相同的位置。
 
 现在需要理解的是，图 18-2 中概述的布局不仅使用了对向约束，还通过应用约束偏置（constraint bias）来实现的。
 
-### 18.1.4 约束偏置 (Constraint Bias)
+#### 18.1.4 约束偏置（Constraint Bias）
 
-现在已经确定，`ConstraintLayout` 中的组件可能会受到对向约束连接的影响。默认情况下，对向约束是相等的，导致相应的组件在对向轴上居中。例如，图 18-3 展示了一个使用水平和垂直对向约束在包含它的 `ConstraintLayout` 中居中的组件：
+现在已经确定，`ConstraintLayout` 中的组件可能会受到对向约束连接的影响。默认情况下，对向约束是相等的，导致相应的组件在对向轴上居中。
+
+例如，图 18-3 展示了一个使用水平和垂直对向约束在包含它的 `ConstraintLayout` 中居中的组件：
 
 ![](img/Image2453.jpg)
 
 图 18-3
 
-为了允许在对向约束的情况下调整组件位置，`ConstraintLayout` 实现了一种名为约束偏置（constraint bias）的功能。约束偏置允许组件沿对向轴的定位根据特定百分比向其中一个约束偏斜。例如，图 18-4 显示了具有 75% 水平偏置和 10% 垂直偏置的之前的约束布局：
+为了允许在对向约束的情况下调整组件位置，`ConstraintLayout` 实现了一种名为约束偏置（constraint bias）的功能。
+
+约束偏置允许组件沿对向轴的定位根据特定百分比向其中一个约束偏斜。例如，图 18-4 显示了具有 75% 水平偏置和 10% 垂直偏置的之前的约束布局：
 
 ![](img/Image2461.jpg)
 
 图 18-4
 
-下一章题为“在 Android Studio 中使用 ConstraintLayout 的指南，将更详细地涵盖这些概念，并解释这些功能是如何集成到 Android Studio 布局编辑器工具中的。然而，在此还需要涵盖 `ConstraintLayout` 类的另外几个领域。
+下一章题为《在 Android Studio 中使用 ConstraintLayout 的指南》，将更详细地涵盖这些概念，并解释这些功能是如何集成到 Android Studio 布局编辑器工具中的。然而，在此还需要涵盖 `ConstraintLayout` 类的另外几个领域。
 
-### 18.1.5 链 (Chains)
+#### 18.1.5 链（Chains）
 
 `ConstraintLayout` 链（chains）提供了一种方法，可以将两个或多个组件的布局行为定义为一组。链可以在垂直或水平轴上声明，并配置以定义链中组件的间距和大小。
 
@@ -3162,39 +3237,41 @@ android:visibility="gone"
 
 链中的第一个元素是链头（chain head），它在垂直链中对应顶部组件，在水平链中对应最左侧的组件。整个链的布局行为主要通过在链头组件上设置属性来配置。
 
-### 18.1.6 链样式 (Chain Styles)
+#### 18.1.6 链样式（Chain Styles）
 
 `ConstraintLayout` 链的布局行为由应用于链头组件的链样式设置决定。`ConstraintLayout` 类目前支持以下链布局样式：
 
-- 散布链 (Spread Chain) – 链中的组件均匀分布在可用空间内。这是链的默认行为。
+- **散布链（Spread Chain）**：链中的组件均匀分布在可用空间内。这是链的默认行为。
 
-![](img/Image2478.jpg)
+  ![](img/Image2478.jpg)
 
-图 18-6
+  图 18-6
 
-- 内部散布链 (Spread Inside Chain) – 链中的组件在链头和最后一个组件之间均匀分布。头部和最后一个组件不包含在分布中。
+- **内部散布链（Spread Inside Chain）**：链中的组件在链头和最后一个组件之间均匀分布。头部和最后一个组件不包含在分布中。
 
-![](img/Image2485.jpg)
+  ![](img/Image2485.jpg)
 
-图 18-7
+  图 18-7
 
-- 权重链 (Weighted Chain) – 允许通过权重属性定义链中每个组件占据的空间。
+- **权重链（Weighted Chain）**：允许通过权重属性定义链中每个组件占据的空间。
 
-![](img/Image2492.jpg)
+  ![](img/Image2492.jpg)
 
-图 18-8
+  图 18-8
 
-- 压缩链 (Packed Chain) – 构成链的组件聚集在一起。可以使用偏置来控制链相对于父元素的水平或垂直位置。
+- **压缩链（Packed Chain）**：构成链的组件聚集在一起。可以使用偏置来控制链相对于父元素的水平或垂直位置。
 
-![](img/Image2500.jpg)
+  ![](img/Image2500.jpg)
 
-图 18-9
+  图 18-9
 
-### 18.2 基线对齐 (Baseline Alignment)
+### 18.2 基线对齐（Baseline Alignment）
 
 到目前为止，本章仅提到了相对于组件侧边的约束（通常称为侧约束）。然而，一种常见的需求是组件相对于其显示的内容而非组件本身。为了满足这一需求，`ConstraintLayout` 提供了基线对齐支持。
 
-例如，假设之前的图 18-1 理论布局需要一个 `TextView` 组件放置在 `Button` 左侧 40dp 处。在这种情况下，`TextView` 需要与 `Button` 基线对齐。这意味着 `Button` 中的文本需要与 `TextView` 内的文本垂直对齐。该布局的额外约束需要如图 18-10 所示进行连接：
+例如，假设之前的图 18-1 理论布局需要一个 `TextView` 组件放置在 `Button` 左侧 40dp 处。在这种情况下，`TextView` 需要与 `Button` 基线对齐。这意味着 `Button` 中的文本需要与 `TextView` 内的文本垂直对齐。
+
+该布局的额外约束需要如图 18-10 所示进行连接：
 
 ![](img/Image2508.jpg)
 
@@ -3206,18 +3283,17 @@ android:visibility="gone"
 
 控制组件的尺寸是用户界面设计过程的关键元素。`ConstraintLayout` 提供了三个可以在单个组件上设置的选项以管理尺寸行为。这些设置在高度和宽度维度上单独配置：
 
-- 固定 (Fixed) – 组件固定为指定的尺寸。
-
-- 匹配约束 (Match Constraint) – 允许由布局引擎调整大小以满足现有的约束。也称为 `AnySize` 或 `MATCH_CONSTRAINT` 选项。
-
-
-
-
--   包裹内容（Wrap Content）——组件的大小由其内容（即文本或图形）决定。
+- **固定（Fixed）**：组件固定为指定的尺寸。
+- **匹配约束（Match Constraint）**：允许由布局引擎调整大小以满足现有的约束。也称为 `AnySize` 或 `MATCH_CONSTRAINT` 选项。
+- **包裹内容（Wrap Content）**：组件的大小由其内容（即文本或图形）决定。
 
 ### 18.4 指南线辅助工具（Guideline Helper）
 
-指南线是 `ConstraintLayout` 中提供的特殊元素，为约束连接提供了额外的目标。在 `ConstraintLayout` 实例中可以添加多个指南线，这些指南线可以被配置为水平或垂直方向。一旦添加，就可以从布局中的组件到指南线建立约束连接。这在多个组件必须沿某一轴对齐时特别有用。例如，在图 18-11 中，三三个包含在 `ConstraintLayout` 内部的 `Button` 对象沿着垂直指南线进行约束：
+指南线是 `ConstraintLayout` 中提供的特殊元素，为约束连接提供了额外的目标。在 `ConstraintLayout` 实例中可以添加多个指南线，这些指南线可以被配置为水平或垂直方向。
+
+一旦添加，就可以从布局中的组件到指南线建立约束连接。这在多个组件必须沿某一轴对齐时特别有用。
+
+例如，在图 18-11 中，三个包含在 `ConstraintLayout` 内部的 `Button` 对象沿着垂直指南线进行约束：
 
 ![](img/Image2519.jpg)
 
@@ -3225,17 +3301,25 @@ android:visibility="gone"
 
 ### 18.5 分组辅助工具（Group Helper）
 
-`ConstraintLayout` 的此功能允许将组件放入逻辑组中，并作为一个单一实体控制这些组件的可见性。`Group` 是布局中其他组件的引用列表。一旦定义，更改组实例的可见性属性（`visible`、`invisible` 或 `gone`）将应用到所有组成员上。这使得通过更改单个属性就能轻松地隐藏和显示多个组件。一个布局可以包含多个组，一个组件也可以属于多个组。如果组之间发生冲突，则 XML 文件中最后声明的组具有优先级。
+`ConstraintLayout` 的此功能允许将组件放入逻辑组中，并作为一个单一实体控制这些组件的可见性。
+
+`Group` 是布局中其他组件的引用列表。一旦定义，更改组实例的可见性属性（`visible`、`invisible` 或 `gone`）将应用到所有组成员上。这使得通过更改单个属性就能轻松地隐藏和显示多个组件。
+
+一个布局可以包含多个组，一个组件也可以属于多个组。如果组之间发生冲突，则 XML 文件中最后声明的组具有优先级。
 
 ### 18.6 屏障辅助工具（Barrier Helper）
 
-与指南线类似，屏障（barriers）是用于约束布局内视图的虚拟视图。与指南线一样，屏障可以是垂直或水平的，一个或多个视图可以被约束在其上（为了避免混淆，这些将被称为受约束视图）。与指南线不同，指南线在布局中保持固定位置，而屏障的位置是由一组所谓的参考视图定义的。屏障的引入是为了解决某些情况下频繁发生的视图重叠问题。例如，考虑下方的图 18-12 所示的布局：
+与指南线类似，屏障（barriers）是用于约束布局内视图的虚拟视图。与指南线一样，屏障可以是垂直或水平的，一个或多个视图可以被约束在其上（为了避免混淆，这些将被称为受约束视图）。
+
+与指南线不同，指南线在布局中保持固定位置，而屏障的位置是由一组所谓的参考视图定义的。屏障的引入是为了解决某些情况下频繁发生的视图重叠问题。例如，考虑下方的图 18-12 所示的布局：
 
 ![](img/Image2526.jpg)
 
 图 18-12
 
-上述布局需要注意的关键点是：`View 3` 的宽度设置为匹配约束模式，且该视图的左边缘连接到 `View 1` 的右边缘。按照目前的实现，增加 `View 1` 的宽度将产生缩小 `View 3`宽宽预期效果：
+上述布局需要注意的关键点是：`View 3` 的宽度设置为匹配约束模式，且该视图的左边缘连接到 `View 1` 的右边缘。
+
+按照目前的实现，增加 `View 1` 的宽度将产生缩小 `View 3` 宽度的预期效果：
 
 ![](img/Image2533.jpg)
 
@@ -3247,7 +3331,7 @@ android:visibility="gone"
 
 图 18-14
 
-由于 `View 3` 仅受 `View 1` 制，它不会调整大小以适应 `View 2` 宽度的增加，导致视图重叠。
+由于 `View 3` 仅受 `View 1` 制约，它不会调整大小以适应 `View 2` 宽度的增加，导致视图重叠。
 
 解决此问题的办法是添加一个垂直屏障并将 `Views 1` 和 `View 2` 指定为屏障的参考视图，以便它们控制屏障的位置。这样，`View 3` 的左边缘将相对于屏障进行约束，使其成为受约束视图。
 
@@ -3261,7 +3345,9 @@ android:visibility="gone"
 
 ### 18.7 流布局辅助工具（Flow Helper）
 
-`ConstraintLayout Flow` 辅助工具允许视图组以流式网格布局方式显示。与 `Group` 辅助工具一样，`Flow` 包含了对其负责定位的视图的引用，并提供了各种配置选项，包括垂直和水平方向、换行行为（包括换行之前的最大组件数量）、间距和对齐属性。`Flow` 还可以应用链（Chain）行为，包括散开（spread）、内部扩散（spread inside）和打包（packed）选项。
+`ConstraintLayout Flow` 辅助工具允许视图组以流式网格布局方式显示。与 `Group` 辅助工具一样，`Flow` 包含了对其负责定位的视图的引用，并提供了各种配置选项，包括垂直和水平方向、换行行为（包括换行之前的最大组件数量）、间距和对齐属性。
+
+`Flow` 还可以应用链（Chain）行为，包括散开（spread）、内部扩散（spread inside）和打包（packed）选项。
 
 图 18-16 表示了使用 `Flow` 辅助工具实例在水平模式下定位的五个大小相同的按钮的布局，且没有换行设置：
 
@@ -3275,13 +3361,15 @@ android:visibility="gone"
 
 图 18-17
 
-另一方面，图 18-18 显示了按钮的换行设置为使用内部扩散的链模式模式（其效果仅在第二行可见，因为第一行是满的）。该配置还设置了 `gap` 属性在按钮之间添加间距：
+另一方面，图 18-18 显示了按钮的换行设置为使用内部扩散的链模式（其效果仅在第二行可见，因为第一行是满的）。该配置还设置了 `gap` 属性在按钮之间添加间距：
 
 ![](img/as_4.1_flow_chain_spread_inside.jpg)
 
 图 18-18
 
-作为 `Flow` 辅助工具灵活性的最终演示，图 18-19 显示了五个大小不一的按钮，配置为水平、打包链模式，并在每第三个组件后换行。此外，通过设置 `horizontal-bias` 值为 `1.0`，网格内容已右对齐（值为 `0.0` 将导致左对齐，而 `0.5` 将使网格内容居中对齐）：
+作为 `Flow` 辅助工具灵活性的最终演示，图 18-19 显示了五个大小不一的按钮，配置为水平、打包链模式，并在每第三个组件后换行。
+
+此外，通过设置 `horizontal-bias` 值为 `1.0`，网格内容已右对齐（值为 `0.0` 将导致左对齐，而 `0.5` 将使网格内容居中对齐）：
 
 ![](img/as_4.1_flow_right_align.jpg)
 
@@ -3293,124 +3381,131 @@ android:visibility="gone"
 
 ### 18.9 ConstraintLayout 的优势
 
-`ConstraintLayout` 提供的灵活性允许在需要嵌套多个布局的情况下，通过单个布局实例实现旧布局的功能。这通过允许设计所谓的“扁平化”或“浅”布局层级，避免了布局嵌套的固有问题，从而改进了运行时的用户界面性能。
+`ConstraintLayout` 提供的灵活性允许在需要嵌套多个布局的情况下，通过单个布局实例实现旧布局的功能。
+
+这通过允许设计所谓的“扁平化”或“浅”布局层级，避免了布局嵌套的固有问题，从而改进了运行时的用户界面性能。
 
 `ConstraintLayout` 的引入也是为了解决目前各种 Android 设备尺寸的问题。`ConstraintLayout` 的灵活性使得设计响应并适应运行应用程序设备的用户界面变得更加容易。
 
-最后，正如在 Android Studio 中使用 ConstraintLayout 的指南章节中所示，Android Studio 布局编辑器工具已针对 `ConstraintLayout` 用户界面设计进行了增强。
+最后，正如在《Android Studio 中使用 ConstraintLayout 的指南》章节中所示，Android Studio 布局编辑器工具已针对 `ConstraintLayout` 用户界面设计进行了增强。
 
 ## 18.10 ConstraintLayout 的可用性
 
-尽管 `ConstraintLayout` 是随 Android 7 引入的，但它是作为独立的支持库从主 Android SDK 中提供的，并兼容直到 API 9（Gingerbread）的老旧 Android 版本。这使得使用此布局的应用程序可以在运行旧版本 Android 的设备上运行。
-
-### 18.11 总结
-
-`ConstraintLayout` 是随 Android 7 引入的布局管理器。它的设计目的是为了创建适应市场上各种 Android 设备尺寸和方向的灵活布局。`ConstraintLayout` 使用约束来控制相对于父 `ConstraintLayout` 实例、指南线、屏障以及布局中其他组件的对齐和定位。`ConstraintLayout` 是新创建 Android Studio 项目的默认布局，并在设计用户界面布局时推荐使用。这种简单而灵活的布局管理方法可以轻松实现复杂的响应式用户界面。
 
 
+尽管`ConstraintLayout`是随 Android 7 引入的，但它是作为独立的支持库从主 Android SDK 中提供的，并兼容直到 API 9（Gingerbread）的老旧 Android 版本。这使得使用此布局的应用程序可以在运行旧版本 Android 的设备上运行。
 
+## 18.11 总结
 
+`ConstraintLayout`是随 Android 7 引入的布局管理器。它的设计目的是为了创建适应市场上各种 Android 设备尺寸和方向的灵活布局。`ConstraintLayout`使用约束来控制相对于父`ConstraintLayout`实例、指南线、屏障以及布局中其他组件的对齐和定位。`ConstraintLayout`是新创建 Android Studio 项目的默认布局，并在设计用户界面布局时推荐使用。这种简单而灵活的布局管理方法可以轻松实现复杂的响应式用户界面。
 
-正如前面的章节中多次提到的，Google 对 Android Studio 布局编辑器工具进行了重大更改，其中许多更改仅是为了支持使用 `ConstraintLayout` 进行用户界面布局设计。既然上一章中已经概述了 `ConstraintLayout` 的基本概念，本章将详细探讨这些概念，同时概述布局编辑器工具如何设计和实现基于 `ConstraintLayout` 的用户界面。
+正如前面的章节中多次提到的，Google 对 Android Studio 布局编辑器工具进行了重大更改，其中许多更改仅是为了支持使用`ConstraintLayout`进行用户界面布局设计。既然上一章中已经概述了`ConstraintLayout`的基本概念，本章将详细探讨这些概念，同时概述布局编辑器工具如何设计和实现基于`ConstraintLayout`的用户界面。
 
 ## 19.1 设计与布局视图
 
-名为“Android Studio 布局编辑器指南”的章节解释了 Android Studio 布局编辑器工具提供了两种方式来以 `Design`（设计）和 `Layout`（布局，也称为蓝图）视图查看活动的用户界面布局。这些布局视图可以单独显示，也可以像图 19-1 所示那样并排显示：
+名为“Android Studio 布局编辑器指南”的章节解释了 Android Studio 布局编辑器工具提供了两种方式来以`Design`（设计）和`Layout`（布局，也称为蓝图）视图查看活动的用户界面布局。这些布局视图可以单独显示，也可以像图 19-1 所示那样并排显示：
 
 ![](img/as_design_and_blueprint.jpg)
+
 图 19-1
 
-`Design` 视图（位于图左侧）呈现了布局的“所见即所得”表示，其中布局的外观与其在运行应用程序中的显示一致。另一方面，`Layout` 视图显示蓝图风格的视图，其中阴影轮廓表示小部件。如上面的图 19-1 所示，`Layout` 视图还显示了约束连接（在这种情况下，用于将按钮在布局中居中的对向约束）。当选择布局中的特定小部件或鼠标指针悬停在设计区域上时，这些约束也会叠加到 `Design` 视图上，如图 19-2 所示：
+`Design`视图（位于图左侧）呈现了布局的“所见即所得”表示，其中布局的外观与其在运行应用程序中的显示一致。另一方面，`Layout`视图显示蓝图风格的视图，其中阴影轮廓表示小部件。如上面的图 19-1 所示，`Layout`视图还显示了约束连接（在这种情况下，用于将按钮在布局中居中的对向约束）。当选择布局中的特定小部件或鼠标指针悬停在设计区域上时，这些约束也会叠加到`Design`视图上，如图 19-2 所示：
 
 ![](img/as_design_canvas_with_constraints.jpg)
+
 图 19-2
 
-两种视图中约束连接的外观可以使用图 19-3 所示的 `View Options`（视图选项）菜单进行更改：
+两种视图中约束连接的外观可以使用图 19-3 所示的`View Options`（视图选项）菜单进行更改：
 
 ![](img/as_layout_view_options.jpg)
+
 图 19-3
 
 除了显示用户界面布局两种模式外，布局编辑器工具提供了三种方法来建立特定布局设计所需的约束。
 
 ## 19.2 自动连接模式
 
-自动连接（Autoconnect）顾其实名，在项目被添加到布局时会自动建立约束连接。可以使用图 19-4 所示的工具栏按钮开启或关闭 `Autoconnect` 模式：
+自动连接（Autoconnect）顾其实名，在项目被添加到布局时会自动建立约束连接。可以使用图 19-4 所示的工具栏按钮开启或关闭`Autoconnect`模式：
 
 ![](img/as_layout_autoconnect.jpg)
+
 图 19-4
 
-`Autoconnect` 模式使用算法根据小部件的位置以及小部件与父布局侧边及其他元素的接近程度来决定建立最佳约束。如果任何自动约束连接未能提供预期的行为，可以像本章稍后概述的那样进行手动更改。
+`Autoconnect`模式使用算法根据小部件的位置以及小部件与父布局侧边及其他元素的接近程度来决定建立最佳约束。如果任何自动约束连接未能提供预期的行为，可以像本章稍后概述的那样进行手动更改。
 
 ## 19.3 推断模式
 
-推断模式使用涉及算法和概率的启发式方法，在小部件已添加到布局后自动实现约束连接。这种模式通常用于关闭了 `Autoconnect` 功能且在没有任何约束连接的情况下将对象添加到布局的情况。这允许通过从调色板将对象拖到布局画布上，并进行尺寸和位置更改，直到布局符合要求，从而完成布局。本质上，这涉及在不担心约束的情况下“绘制”布局。推断模式也可以在设计过程中用于填充布局中缺失的约束。
+推断模式使用涉及算法和概率的启发式方法，在小部件已添加到布局后自动实现约束连接。这种模式通常用于关闭了`Autoconnect`功能且在没有任何约束连接的情况下将对象添加到布局的情况。这允许通过从调色板将对象拖到布局画布上，并进行尺寸和位置更改，直到布局符合要求，从而完成布局。本质上，这涉及在不担心约束的情况下“绘制”布局。推断模式也可以在设计过程中用于填充布局中缺失的约束。
 
-当点击 `Infer constraints`（推断约束）按钮（图 19-5
+当点击`Infer constraints`（推断约束）按钮（图 19-5）
+
 图 19-5
 
-与 `Autoconnect` 模式一样，布局编辑器工具始终存在推断错误约束的可能性，尽管可以手动修改和修正。
+与`Autoconnect`模式一样，布局编辑器工具始终存在推断错误约束的可能性，尽管可以手动修改和修正。
 
 ## 19.4 手动操作约束
 
 实现约束连接的第三种方法是手动进行。这样做时，理解布局编辑器工具中小部件周围出现的各种句柄将很有帮助。例如，考虑图 19-6 所示的小部件：
 
 ![](img/as_constraint_markers.jpg)
+
 图 19-6
 
 类似弹簧的线条 (A) 代表从小部件侧边到目标已建立的约束连接。对象每个角的小型正方形标记 (B) 是缩放句柄，点击并拖动它们可以调整小部件的尺寸。位于小部件每侧的小型圆形句柄 (C) 是侧约束锚点。要创建约束连接，点击句柄并将生成的线条拖到要连接约束的元素（例如指南线或父布局的侧边或另一个小部件的侧边），如图 19-7 所示。当连接到另一个小部件的侧边时，将线条拖到该小部件的侧约束句柄，并在小部件和句柄高亮时释放线条：
 
 ![](img/as_layout_drag_constraint.jpg)
+
 图 19-7
 
 如果将约束线拖动到小部件并释放但未附加到约束句柄，布局编辑器将显示一个菜单，其中包含可以附加的侧列表。在图 19-8 中，例如，约束可以附加到目标小部件的顶部或底部：
 
 ![](img/as_drag_edges.jpg)
+
 图 19-8
 
-额外的标记表示基线约束的锚点，即使用小部件内部的内容而非边缘作为对齐点。要显示此标记，右键点击小部件并选择 `Show Baseline`（显示基线）选项。要从基线句柄建立约束连接，将鼠标指针悬停在句手上直到其高亮，然后点击并拖动到目标（如图 19-9 所示）：
+额外的标记表示基线约束的锚点，即使用小部件内部的内容而非边缘作为对齐点。要显示此标记，右键点击小部件并选择`Show Baseline`（显示基线）选项。要从基线句柄建立约束连接，将鼠标指针悬停在句手上直到其高亮，然后点击并拖动到目标（如图 19-9 所示）：
 
 ![](img/as_baselines.jpg)
+
 图 19-9
 
-要隐藏基线锚点，再次右键点击小部件并选择 `Hide Baseline`（隐藏基线）选项。
+要隐藏基线锚点，再次右键点击小部件并选择`Hide Baseline`（隐藏基线）选项。
 
 ## 19.5 在检查器中添加约束
 
-可以使用 `Attributes` 工具窗口中的 `Inspector`（检查器）面板为 Android Studio 布局编辑器中的视图添加约束，如图 19-10 所示。正方形表示当前中的视图，周围的区域表示应用于对应视图侧边的约束（如果有）：
+可以使用`Attributes`工具窗口中的`Inspector`（检查器）面板为 Android Studio 布局编辑器中的视图添加约束，如图 19-10 所示。正方形表示当前中的视图，周围的区域表示应用于对应视图侧边的约束（如果有）：
 
 ![](img/as_attributes.jpg)
+
 图 19-10
 
 视图侧边缺少约束由指向带有加号的蓝色圆圈的虚线表示（如上图中视图的底边所示）。要添加约束，点击此蓝色圆圈，布局编辑器将添加连接到它认为布局中最合适目标的约束。
 
 ## 19.6 在属性窗口中查看约束
 
-可以通过显示 `Attributes` 工具窗口中的 `Constraints` 部分来查看当前选中的小部件上配置的约束列表，如下图 19-11 所示：
+可以通过显示`Attributes`工具窗口中的`Constraints`部分来查看当前选中的小部件上配置的约束列表，如下图 19-11 所示：
 
 ![](img/as_constraints_section.jpg)
+
 图 19-11
 
 点击列表中的约束将选择布局中的该约束。
 
 ## 19.7 删除约束
 
-
-
-
-
-要删除单个约束，请在设计布局或 `Attributes` 工具窗口中选择该约束，使其高亮（例如，在图 19-12 中，最右侧的约束已被选中），然后按下键盘上的删除 键。该约束将从从布局中移除。
+要删除单个约束，请在设计布局或`Attributes`工具窗口中选择该约束，使其高亮（例如，在图 19-12 中，最右侧的约束已被选中），然后按下键盘上的删除键。该约束将从从布局中移除。
 
 ![](img/as_constraint_selected.jpg)
 
 图 19-12
 
-另一种选项是按住 `Ctrl` 键（macOS 上为 Cmd 键）并将鼠标指针悬停在约束锚点上，并在锚点变为红色后点击锚点：
+另一种选项是按住`Ctrl`键（macOS 上为 Cmd 键）并将鼠标指针悬停在约束锚点上，并在锚点变为红色后点击锚点：
 
 ![](img/as_constraint_anchor_delete.jpg)
 
 图 19-13
 
-或者，通过右键点击组件并选择 `Clear Constraints of Selection`（清除选择约束）菜单选项来移除该组件上的所有约束。
+或者，通过右键点击组件并选择`Clear Constraints of Selection`（清除选择约束）菜单选项来移除该组件上的所有约束。
 
 要移除布局中每个组件的所有约束，请使用图 19-14 所示的亮亮工具栏按钮：
 
@@ -3418,15 +3513,15 @@ android:visibility="gone"
 
 图 19-14
 
-# 19.8 调整约束偏移
+## 19.8 调整约束偏移
 
-上一章概述了使用偏移设置来偏向一个对立约束而非另一个约束的概念。`Android Studio Layout Editor` 工具中的偏移通过位于 `Attributes` 工具窗口中的 `Inspector` 进行调整，并如图 19-15 所示。图中由箭头指示的两个滑块用于控制当前选中组件的垂直和水平对立约束的偏移。
+上一章概述了使用偏移设置来偏向一个对立约束而非另一个约束的概念。`Android Studio Layout Editor`工具中的偏移通过位于`Attributes`工具窗口中的`Inspector`进行调整，并如图 19-15 所示。图中由箭头指示的两个滑块用于控制当前选中组件的垂直和水平对立约束的偏移。
 
 ![](img/as_constraint_bias_sliders.jpg)
 
 图 19-15
 
-# 19.9 理解 ConstraintLayout 边距
+## 19.9 理解 ConstraintLayout 边距
 
 约束可以配合边距（margins）使用，在组件与另一个元素（如另一个组件、指南或父布局侧边）之间实现固定间隙。例如，考虑图 19-16 中应用于`Button`对象的水平约束：
 
@@ -3434,19 +3529,19 @@ android:visibility="gone"
 
 图 19-16
 
-按照目前的配置，水平约束延伸到父 `ConstraintLayout` 的左边缘和右边缘。因此，组件具有对立的水平约束，这意味着 `ConstraintLayout` 布局引擎在运行时组件的实际位置方面有一定的裁量。这使得布局具有灵活性，以适应不同的屏幕尺寸和设备方向。水平偏移设置也可以控制组件的位置直到布局的右侧。例如，图 19-17 显示了应用了 100% 水平偏移的相同按钮：
+按照目前的配置，水平约束延伸到父`ConstraintLayout`的左边缘和右边缘。因此，组件具有对立的水平约束，这意味着`ConstraintLayout`布局引擎在运行时组件的实际位置方面有一定的裁量。这使得布局具有灵活性，以适应不同的屏幕尺寸和设备方向。水平偏移设置也可以控制组件的位置直到布局的右侧。例如，图 19-17 显示了应用了 100% 水平偏移的相同按钮：
 
 ![](img/as_constraint_100_bias.jpg)
 
 图 19-17
 
-`ConstraintLayout` 边距可能会出现在约束连接的末端，代表一个固定间隙，即使在调整偏移或响应活动中其他处的布局变化时，组件也无法移动该区域。在图 19-18 中，右侧约束现在包含一个 `50dp` 的边距，即使偏移仍设置为 `100%`，组件也无法移动到此处。
+`ConstraintLayout`边距可能会出现在约束连接的末端，代表一个固定间隙，即使在调整偏移或响应活动中其他处的布局变化时，组件也无法移动该区域。在图 19-18 中，右侧约束现在包含一个`50dp`的边距，即使偏移仍设置为`100%`，组件也无法移动到此处。
 
 ![](img/as_constraint_bias_with_margin.jpg)
 
 图 19-18
 
-组件上的现有边距值可以在 `Inspector` 中进行修改。如图 19-19 所示，正在使用下拉菜单将当前选中组件的右侧边距更改为 `16dp`。或者，点击当前值也可以在字段中输入数字。
+组件上的现有边距值可以在`Inspector`中进行修改。如图 19-19 所示，正在使用下拉菜单将当前选中组件的右侧边距更改为`16dp`。或者，点击当前值也可以在字段中输入数字。
 
 ![](img/as_constraint_set_margin.jpg)
 
@@ -3458,9 +3553,9 @@ android:visibility="gone"
 
 图 19-20
 
-# 19.10 对立约束和偏移的重要性
+## 19.10 对立约束和偏移的重要性
 
-正如上一章讨论的，在 Android 中使用 `ConstraintLayout` 时，对立约束、边距和偏移构成了响应式布局设计的基石。当一个组件的约束在没有对立约束连接的情况下被固定住时，这些约束本质上是边距约束。这在 `Layout Editor` 工具中通过带有边距测量的实线线在视觉上指示出来，如图 19-21 所示。
+正如上一章讨论的，在 Android 中使用`ConstraintLayout`时，对立约束、边距和偏移构成了响应式布局设计的基石。当一个组件的约束在没有对立约束连接的情况下被固定住时，这些约束本质上是边距约束。这在`Layout Editor`工具中通过带有边距测量的实线线在视觉上指示出来，如图 19-21 所示。
 
 ![](img/as_constraint_no_opposing.jpg)
 
@@ -3472,7 +3567,7 @@ android:visibility="gone"
 
 图 19-22
 
-当实现对立约束时，约束连接由锯齿状弹簧线表示（弹簧比喻旨在指示组件的位置不是固定的绝对 `X` 和 `Y` 坐标）：
+当实现对立约束时，约束连接由锯齿状弹簧线表示（弹簧比喻旨在指示组件的位置不是固定的绝对`X`和`Y`坐标）：
 
 ![](img/as_constraints_opposing.jpg)
 
@@ -3486,17 +3581,18 @@ android:visibility="gone"
 
 在设计响应性和自适应的用户界面布局时，手动设计布局和修正自动创建的约束时，考虑偏移和对立约束是重要的。
 
-# 19.11 配置组件维度
+## 19.11 配置组件维度
 
-ConstraintLayout 内部维度可以使用 `Inspector` 配置。如上一章概述，组件维度可以设置为 `wrap content`、`fixed` 或 `match constraint` 模式。当前选中组件每个维度的流行设置显示在 `Inspector` 中代表组件的正方形内，如图 19-25 所示：
+`ConstraintLayout`内部维度可以使用`Inspector`配置。如上一章概述，组件维度可以设置为`wrap content`、`fixed`或`match constraint`模式。当前选中组件每个维度的流行设置显示在`Inspector`中代表组件的正方形内，如图 19-25 所示：
 
 ![](img/as_constraint_dimensions.jpg)
 
 图 19-25
 
-上述图形将水平和垂直维度设置为 `wrap content` 模式（由向内的 V 形指示）。`inspector` 使用以下视觉指示表示三种维度模式：
+上述图形将水平和垂直维度设置为`wrap content`模式（由向内的 V 形指示）。`inspector`使用以下视觉指示表示三种维度模式：
 
 | 固定尺寸 | ![](img/Image2826.jpg) |
+| --- | --- |
 | 匹配约束 | ![](img/Image2834.jpg) |
 | 内容 | ![](img/Image2844.jpg) |
 
@@ -3504,7 +3600,7 @@ ConstraintLayout 内部维度可以使用 `Inspector` 配置。如上一章概�
 
 要更改当前设置，点击指示器以循环切换设置。
 
-此外，可以使用 `Expand Horizontally`（水平扩展）和 `Expand Vertically`（垂直扩展）选项根据约束和布局中的其他组件允许的最大量扩展尺寸。这些通过右键点击布局中的组件并从生成的菜单中选择 `Organize`（组织）选项来访问（图 19-26）。使用时，当前选中的组件将水平或垂直方向上增大尺寸以填充其周围的空间。
+此外，可以使用`Expand Horizontally`（水平扩展）和`Expand Vertically`（垂直扩展）选项根据约束和布局中的其他组件允许的最大量扩展尺寸。这些通过右键点击布局中的组件并从生成的菜单中选择`Organize`（组织）选项来访问（图 19-26）。使用时，当前选中的组件将水平或垂直方向上增大尺寸以填充其周围的空间。
 
 ![](img/as_constraint_expand_menu.jpg)
 
@@ -3512,13 +3608,9 @@ ConstraintLayout 内部维度可以使用 `Inspector` 配置。如上一章概�
 
 ### 19.12 设计时工具定位
 
+标题为"Android Studio 布局编辑器工具指南"的章节介绍了`tools`命名空间的概念，并解释了如何使用它来设置仅在布局编辑器内生效可见性属性。在后台，Android Studio 还会使用`tools`属性在将组件在没有约束的情况下放置在布局上时，将它们保持在原有位置。例如，想象在禁用了自动连接模式的情况下，向布局中放置了一个`Button`。虽然该组件在预览画布上似乎处于正确位置，但当应用运行时，它将出现在屏幕的左上角。这是因为该组件没有约束来告诉`ConstraintLayout`父容器应该将其放置在何处。
 
-
-
-
-标题为"Android Studio 布局编辑器工具指南"的章节介绍了 `tools` 命名空间的概念，并解释了如何使用它来设置仅在布局编辑器内生效可见性属性。在后台，Android Studio 还会使用 `tools` 属性在将组件在没有约束的情况下放置在布局上时，将它们保持在原有位置。例如，想象在禁用了自动连接模式的情况下，向布局中放置了一个 `Button`。虽然该组件在预览画布上似乎处于正确位置，但当应用运行时，它将出现在屏幕的左上角。这是因为该组件没有约束来告诉 `ConstraintLayout` 父容器应该将其放置在何处。
-
-该组件在布局编辑器中显示位置正确，是因为 Android Studio 设置了绝对 X 和 Y 位的 `tools` 属性，以便在添加约束之前将其保持在正确位置。在 XML 布局文件中，代码可能如下：
+该组件在布局编辑器中显示位置正确，是因为 Android Studio 设置了绝对 X 和 Y 位的`tools`属性，以便在添加约束之前将其保持在正确位置。在 XML 布局文件中，代码可能如下：
 
 ```xml
 <Button
@@ -3530,7 +3622,7 @@ ConstraintLayout 内部维度可以使用 `Inspector` 配置。如上一章概�
     tools:layout_editor_absoluteY="88dp" />
 ```
 
-一旦为组件添加了足够的约束，布局编辑器将移除这些 `tools` 属性。一种快速识别哪些组件缺少约束（无需等待应用运行）的实用技巧是：点击图 19-27 中高亮的按钮，以切换 `tools` 位置可见性。任何跳转到左上角的组件都没有被完全约束，它们是通过临时的 `tools` 绝对 X 和 Y 位置属性保持在原位的。
+一旦为组件添加了足够的约束，布局编辑器将移除这些`tools`属性。一种快速识别哪些组件缺少约束（无需等待应用运行）的实用技巧是：点击图 19-27 中高亮的按钮，以切换`tools`位置可见性。任何跳转到左上角的组件都没有被完全约束，它们是通过临时的`tools`绝对 X 和 Y 位置属性保持在原位的。
 
 ![](img/as_constraint_tool_button.jpg)
 
@@ -3538,21 +3630,21 @@ ConstraintLayout 内部维度可以使用 `Inspector` 配置。如上一章概�
 
 ### 19.13 添加指南线 (Guidelines)
 
-指南线提供了额外的可以锚定约束的元素。可以通过右键点击布局并选择 `Vertical Guideline`（垂直指南线）或 `Horizontal Guideline`（水平指南线）菜单选项，或者使用工具栏菜单选项来添加指南线，如图 19-28 所示：
+指南线提供了额外的可以锚定约束的元素。可以通过右键点击布局并选择`Vertical Guideline`（垂直指南线）或`Horizontal Guideline`（水平指南线）菜单选项，或者使用工具栏菜单选项来添加指南线，如图 19-28 所示：
 
 ![](img/as_layout_guideline_menu.jpg)
 
 图 19-28
 
-或者，也可以从 `Palette`（调色板）的 `Helpers` 部分拖动水平和垂直 `Guidelines`，将其将其到布局画布或 `Component Tree`（组件树）面板上，如图 19-29 中的箭头所示：
+或者，也可以从`Palette`（调色板）的`Helpers`部分拖动水平和垂直`Guidelines`，将其将其到布局画布或`Component Tree`（组件树）面板上，如图 19-29 中的箭头所示：
 
 ![](img/as_adding_guidelines.jpg)
 
 图 19-29
 
-添加后，指南线将以虚线的形式显示在布局中，可以通过点击并拖动该线来移动它。要建立到指南线的约束连接，点击组件的约束句柄，并在释放之前将其拖到指南线处。在图 19-30 中，两个 `Buttons` 的左侧通过约束连接到垂直指南线上。
+添加后，指南线将以虚线的形式显示在布局中，可以通过点击并拖动该线来移动它。要建立到指南线的约束连接，点击组件的约束句柄，并在释放之前将其拖到指南线处。在图 19-30 中，两个`Buttons`的左侧通过约束连接到垂直指南线上。
 
-垂直指南线的位置可以指定为距离父布局左侧或右侧的绝对距离（水平指南线为距离顶部或底部）。例如，下图中的垂直指南线位于父布局左边缘的 `97dp` 处：
+垂直指南线的位置可以指定为距离父布局左侧或右侧的绝对距离（水平指南线为距离顶部或底部）。例如，下图中的垂直指南线位于父布局左边缘的`97dp`处：
 
 ![](img/as_constrain_guideline.jpg)
 
@@ -3566,25 +3658,27 @@ ConstraintLayout 内部维度可以使用 `Inspector` 配置。如上一章概�
 
 ### 19.14 添加屏障 (Barriers)
 
-可以通过右键点击布局并在 `Add helpers` 菜单中选择 `Vertical`（垂直屏障）或 `Horizontal Barrier`（水平屏障）选项，或使用工具栏菜单选项来添加屏障，如图 19-28 所示。或者，在 `Palette` 的 `Helpers` 部分找到 `Barrier` 类型，并将其拖动到布局画布或 `Component Tree` 面板。
+可以通过右键点击布局并在`Add helpers`菜单中选择`Vertical`（垂直屏障）或`Horizontal Barrier`（水平屏障）选项，或使用工具栏菜单选项来添加屏障，如图 19-28 所示。或者，在`Palette`的`Helpers`部分找到`Barrier`类型，并将其拖动到布局画布或`Component Tree`面板。
 
-一旦布局中添加了屏障，它将作为 `Component Tree` 面板中的一项出现：
+一旦布局中添加了屏障，它将作为`Component Tree`面板中的一项出现：
 
 ![](img/as_component_tree_barrier.jpg)
 
 图 19-32
 
-要将视图作为引用视图（即控制屏障位置的视图），请将组件从 `Component Tree` 内部拖到屏障项上。例如，图 19-33 中，名为 `textView2` 和 `textView3` 的组件已被分配为屏障的引用组件：
+要将视图作为引用视图（即控制屏障位置的视图），请将组件从`Component Tree`内部拖到屏障项上。例如，图 19-33 中，名为`textView2`和`textView3`的组件已被分配为屏障的引用组件：
 
 ![](img/as_barrier_reference_views.jpg)
 
 图 19-33
 
-在添加引用视图后，需要配置屏障以指定屏障相对于这些视图的方向。这是屏障方向设置，当在 `Component Tree` 面板中选择屏障时，在 `Attributes`（属性）工具窗口中定义：
+在添加引用视图后，需要配置屏障以指定屏障相对于这些视图的方向。这是屏障方向设置，当在`Component Tree`面板中选择屏障时，在`Attributes`（属性）工具窗口中定义。
+
+
 
 ![](img/as_barrier_direction.jpg)
 
-下图显示了一个包含屏障的布局，其中 `textView1` 和 `textView2` 作为引用视图，由于屏障方向设置为 `end`，`textView3` 是受约束视图：
+下图显示了一个包含屏障的布局，其中`textView1`和`textView2`作为引用视图，由于屏障方向设置为`end`，`textView3`是受约束视图：
 
 ![](img/as_barrier.jpg)
 
@@ -3592,19 +3686,19 @@ ConstraintLayout 内部维度可以使用 `Inspector` 配置。如上一章概�
 
 ### 19.15 添加组 (Group)
 
-要在布局中添加 `Group`，右键点击布局并在 `Add helpers` 菜单中选择 `Group` 选项，或使用图 19-28 所示的工具栏选项。或者，在 `Palette` 的 `Helpers` 部分找到 `Group` 项目并将其拖到布局画布或 `Component Tree` 面板。要向组添加组件，在 `Component Tree` 中选择它们并将它们拖到 `Group` 项。例如，图 19-36 显示将三个选中的组件添加到组中：
+要在布局中添加`Group`，右键点击布局并在`Add helpers`菜单中选择`Group`选项，或使用图 19-28 所示的工具栏选项。或者，在`Palette`的`Helpers`部分找到`Group`项目并将其拖到布局画布或`Component Tree`面板。要向组添加组件，在`Component Tree`中选择它们并将它们拖到`Group`项。例如，图 19-36 显示将三个选中的组件添加到组中：
 
 ![](img/as_group.jpg)
 
 图 19-36
 
-组引用的任何组件都会在 `Component Tree` 中的组下方以斜体显示，如图 19-37 所示。要从组中移除组件，选择它并按下键盘删除键：
+组引用的任何组件都会在`Component Tree`中的组下方以斜体显示，如图 19-37 所示。要从组中移除组件，选择它并按下键盘删除键：
 
 ![](img/as_group_added.jpg)
 
 图 19-37
 
-一旦组件分配给组，使用 `Attributes` 工具窗口的 `Constraints` 部分来修改可见性设置：
+一旦组件分配给组，使用`Attributes`工具窗口的`Constraints`部分来修改可见性设置：
 
 ![](img/as_group_invisible.jpg)
 
@@ -3612,7 +3706,7 @@ ConstraintLayout 内部维度可以使用 `Inspector` 配置。如上一章概�
 
 ### 19.16 使用 Flow 助手
 
-Flow 助手可以像之前其他助手一样通过菜单或 `Palette` 添加。与 `Group` 助手一样（图 19-36），通过将组件从 `Component Tree` 拖动到 `Flow` 实例来添加。添加 `Flow` 助手并分配组件后，在 `Component Tree` 中选择它，并使用 `Attribute` 工具窗口的 `Common Attributes` 部分配置流布局行为：
+Flow 助手可以像之前其他助手一样通过菜单或`Palette`添加。与`Group`助手一样（图 19-36），通过将组件从`Component Tree`拖动到`Flow`实例来添加。添加`Flow`助手并分配组件后，在`Component Tree`中选择它，并使用`Attribute`工具窗口的`Common Attributes`部分配置流布局行为：
 
 ![](img/as_flow_attributes.jpg)
 
@@ -3620,22 +3714,19 @@ Flow 助手可以像之前其他助手一样通过菜单或 `Palette` 添加。�
 
 ### 19.17 组件组的对齐与分布
 
-当布局中选择了两个或多个组件时，Android Studio 布局编辑器工具提供了一系列对齐和分布操作。按 Shift 点击要参与操作的每个组件，右键点击布局并从 `Align` 菜单中显示的许多选项中进行选择：
+当布局中选择了两个或多个组件时，Android Studio 布局编辑器工具提供了一系列对齐和分布操作。按`Shift`点击要参与操作的每个组件，右键点击布局并从`Align`菜单中显示的许多选项中进行选择：
 
 ![](img/as_layout_align_menu.jpg)
 
 图 19-40
 
-如下方的图 19-41 所示，这些选项也可以通过布局编辑器工具栏上的 `Align` 按钮访问：
+如下方的图 19-41 所示，这些选项也可以通过布局编辑器工具栏上的`Align`按钮访问：
 
 ![](img/as_layout_align_menu_2.jpg)
-图 19-41
-
-
 
 图 19-41
 
-同样，`Pack` 菜单(图 19-42) 可以用于对所选的小部件进行重新定位，使它们紧密排列在一起，无论是垂直还是水平方向。它通过更改小部件的绝对 `x` 和 `y` 坐标来实现此点，但不会应用任何约束。另一方面，`Pack` 菜单中的两个分布选项会移动所选的小部件，使它们在垂直或水平轴上均匀间隔开，并在视图之间应用约束以保持这种间距：
+同样，`Pack`菜单（图 19-42）可以用于对所选的小部件进行重新定位，使它们紧密排列在一起，无论是垂直还是水平方向。它通过更改小部件的绝对`x`和`y`坐标来实现此点，但不会应用任何约束。另一方面，`Pack`菜单中的两个分布选项会移动所选的小部件，使它们在垂直或水平轴上均匀间隔开，并在视图之间应用约束以保持这种间距：
 
 ![](img/as_layout_pack_menu.jpg)
 
@@ -3643,29 +3734,29 @@ Flow 助手可以像之前其他助手一样通过菜单或 `Palette` 添加。�
 
 ### 19.18 将其他布局转换为 ConstraintLayout
 
-对于使用一个或多个其他 Android 布局类（如 `RelativeLayout` 或 `LinearLayout`）的现有用户界面布局，`Layout Editor` 工具提供了将用户界面转换为使用 `ConstraintLayout` 的选项。
+对于使用一个或多个其他 Android 布局类（如`RelativeLayout`或`LinearLayout`）的现有用户界面布局，`Layout Editor`工具提供了将用户界面转换为使用`ConstraintLayout`的选项。
 
-当 `Layout Editor` 工具打开并处于设计模式时，`Component Tree` 面板显示在 `Palette` 之下。要将布局转换为 `ConstraintLayout`，请在 `Component Tree` 中找到它，右键点击它，并选择 `Convert <current layout> to Constraint Layout` 菜单选项：
+当`Layout Editor`工具打开并处于设计模式时，`Component Tree`面板显示在`Palette`之下。要将布局转换为`ConstraintLayout`，请在`Component Tree`中找到它，右键点击它，并选择`Convert <current layout> to Constraint Layout`菜单选项：
 
 ![](img/as_layout_convert_view_menu.jpg)
 
 图 19-43
 
-选择此菜单选项时，`Android Studio` 将将选定的布局转换为 `ConstraintLayout`，并使用推理建立设计以匹配原始布局类型行为的约束。
+选择此菜单选项时，`Android Studio`将将选定的布局转换为`ConstraintLayout`，并使用推理建立设计以匹配原始布局类型行为的约束。
 
 ### 19.19 总结
 
-重新设计的 `Layout Editor` 工具结合 `ConstraintLayout` 使得使用 `Android Studio` 设计复杂的用户界面布局成为一个相对快速且直观的过程。本章详细介绍了约束、外边距和偏置（bias）的概念，同时探索了基于 `ConstraintLayout` 的设计是如何集成到 `Layout Editor` 工具中的。
+重新设计的`Layout Editor`工具结合`ConstraintLayout`使得使用`Android Studio`设计复杂的用户界面布局成为一个相对快速且直观的过程。本章详细介绍了约束、外边距和偏置（bias）的概念，同时探索了基于`ConstraintLayout`的设计是如何集成到`Layout Editor`工具中的。
 
 ## 20. 在 Android Studio 中使用 ConstraintLayout 链和比例
 
-之前的章节已经介绍了 `ConstraintLayout` 类的关键特性，并概述了在 `Android Studio Layout Editor` 中进行基于 `ConstraintLayout` 的用户界面设计的最佳实践。虽然 `ConstraintLayout` 链和比例的概念在名为“Android ConstraintLayout 指南”的章节中已经概述，但我们还没有讨论如何在 `Layout Editor` 中使用这些特性。因此，本章的重点是提供在使用 `ConstraintLayout` 类时创建和管理链和比例的实际步骤。
+之前的章节已经介绍了`ConstraintLayout`类的关键特性，并概述了在`Android Studio Layout Editor`中进行基于`ConstraintLayout`的用户界面设计的最佳实践。虽然`ConstraintLayout`链和比例的概念在名为“Android ConstraintLayout 指南”的章节中已经概述，但我们还没有讨论如何在`Layout Editor`中使用这些特性。因此，本章的重点是提供在使用`ConstraintLayout`类时创建和管理链和比例的实际步骤。
 
 ### 20.1 创建链
 
-链可以通过向活动的 XML 布局资源文件添加几行代码，或者通过使用 `Layout Editor` 的某些链特有功能来实现。
+链可以通过向活动的 XML 布局资源文件添加几行代码，或者通过使用`Layout Editor`的某些链特有功能来实现。
 
-考虑一个由三个 `Button` 小部件组成的布局，它们被约束定位在 `ConstraintLayout` 父布局的左上角、顶部中央和右上，如图 20-1 所示：
+考虑一个由三个`Button`小部件组成的布局，它们被约束定位在`ConstraintLayout`父布局的左上角、顶部中央和右上，如图 20-1 所示：
 
 ![](img/as_three_button_row.jpg)
 
@@ -3709,7 +3800,7 @@ Flow 助手可以像之前其他助手一样通过菜单或 `Palette` 添加。�
     app:layout_constraintTop_toTopOf="parent" />
 ```
 
-按照目前的配置，没有双向约束将这些小部件分组成一条链。为了解决这个问题，需要从 `button1` 的右侧到 `button2` 的左侧，以及从 `button3` 的左侧到 `button2` 的右侧添加额外的约束，如下：
+按照目前的配置，没有双向约束将这些小部件分组成一条链。为了解决这个问题，需要从`button1`的右侧到`button2`的左侧，以及从`button3`的左侧到`button2`的右侧添加额外的约束，如下：
 
 ```xml
 <Button
@@ -3749,19 +3840,19 @@ Flow 助手可以像之前其他助手一样通过菜单或 `Palette` 添加。�
     app:layout_constraintLeft_toEndOf="@+id/button2" />
 ```
 
-通过这些更改，小部件现在有了双向约束。这构成了 `Layout Editor` 中通过链连接表示的 `ConstraintLayout` 链，如下方的图 20-2 所示。注意，链默认为散布样式。
+通过这些更改，小部件现在有了双向约束。这构成了`Layout Editor`中通过链连接表示的`ConstraintLayout`链，如下方的图 20-2 所示。注意，链默认为散布样式。
 
 ![](img/as_layout_chain.jpg)
 
 图 20-2
 
-还可以通过右键点击一个视图并选择 `Chains -> Create Horizontal Chain` 或 `Chains -> Create Vertical Chain` 菜单选项创建链。
+还可以通过右键点击一个视图并选择`Chains -> Create Horizontal Chain`或`Chains -> Create Vertical Chain`菜单选项创建链。
 
 ### 20.2 更改链样式
 
-如果没有配置链样式，`ConstraintLayout` 将默认使用散布样式。可以通过右键点击链中的任何小部件并选择 `Cycle Chain Mode` 菜单选项来更改链样式。每次点击该菜单选项，样式都会按照 `spread`、`spread inside` 和 `packed` 的顺序切换设置。
+如果没有配置链样式，`ConstraintLayout`将默认使用散布样式。可以通过右键点击链中的任何小部件并选择`Cycle Chain Mode`菜单选项来更改链样式。每次点击该菜单选项，样式都会按照`spread`、`spread inside`和`packed`的顺序切换设置。
 
-或者，可以在 `Attributes` 工具窗口中展开 `layout_constraints` 属性，并根据链的方向更改 `horizontal_chainStyle` 或 `vertical_chainStyle` 属性：
+或者，可以在`Attributes`工具窗口中展开`layout_constraints`属性，并根据链的方向更改`horizontal_chainStyle`或`vertical_chainStyle`属性：
 
 ![](img/as_layout_chain_style.jpg)
 
@@ -3777,7 +3868,7 @@ Flow 助手可以像之前其他助手一样通过菜单或 `Palette` 添加。�
 
 ### 20.4 聚集链样式
 
-使用相同的技术将链样式属性更改为 `packed`会导致布局发生，如图 20-5 所示：
+使用相同的技术将链样式属性更改为`packed`会导致布局发生，如图 20-5 所示：
 
 ![](img/as_layout_chain_packed.jpg)
 
@@ -3785,12 +3876,7 @@ Flow 助手可以像之前其他助手一样通过菜单或 `Palette` 添加。�
 
 ### 20.5 带有偏置的聚集链样式
 
-
-
-
-
-### 序言
-紧凑链（packed chain）的位置可以通过应用偏移值（bias）来影响。偏移值范围在 0.0 到 1.0 之间，其中 0.5 代表父容器的中心。偏移通过选择链头部组件并在属性（Attributes）面板的 `layout_constraintHorizontal_bias` 或 `layout_constraintVertical_bias` 属性中分配值来控制。图 20-6 显示了一个水平偏移设为 0.2 的紧凑链：
+紧凑链（packed chain）的位置可以通过应用偏移值（bias）来影响。偏移值范围在 0.0 到 1.0 之间，其中 0.5 代表父容器的中心。偏移通过选择链头部组件并在属性（Attributes）面板的`layout_constraintHorizontal_bias`或`layout_constraintVertical_bias`属性中分配值来控制。图 20-6 显示了一个水平偏移设为 0.2 的紧凑链：
 
 ![](img/as_layout_chain_packed_bias.jpg)
 
@@ -3798,7 +3884,7 @@ Flow 助手可以像之前其他助手一样通过菜单或 `Palette` 添加。�
 
 ### 20.6 加权链
 
-最后探索的链区域涉及对单个控件进行加权，以控制链中每个控件在可用空间中所占的比例。加权链只能使用散开链（spread chain）样式实现，并且链中任何响应权重（weight）属性的控件都必须将相应的尺寸属性（垂直链为 `height`，水平链为 `width`）配置为匹配约束（match constraint）模式。控件尺寸的匹配约束模式可以通过选择该控件、显示属性面板并将尺寸更改为 `match_constraint`（等同于 `0dp`）来配置。例如，在图 20-7 中，按钮的 `layout_width` 约束设置为 `match_constraint` (0dp)，表示控件的宽度将根据现有的约束设置来确定：
+最后探索的链区域涉及对单个控件进行加权，以控制链中每个控件在可用空间中所占的比例。加权链只能使用散开链（spread chain）样式实现，并且链中任何响应权重（weight）属性的控件都必须将相应的尺寸属性（垂直链为`height`，水平链为`width`）配置为匹配约束（match constraint）模式。控件尺寸的匹配约束模式可以通过选择该控件、显示属性面板并将尺寸更改为`match_constraint`（等同于`0dp`）来配置。例如，在图 20-7 中，按钮的`layout_width`约束设置为`match_constraint`（0dp），表示控件的宽度将根据现有的约束设置来确定：
 
 ![](img/as_match_constraints.jpg)
 
@@ -3810,19 +3896,19 @@ Flow 助手可以像之前其他助手一样通过菜单或 `Palette` 添加。�
 
 图 20-8
 
-每个控件相对于链中其他控件所占空间的大小可以通过向控件添加权重属性来控制。图 20-9 显示了了在 `button1` 上设置 `layout_constraintHorizontal_weight` 属性为 4，在 `button2` 和 `button3` 上设为 2 的效果：
+每个控件相对于链中其他控件所占空间的大小可以通过向控件添加权重属性来控制。图 20-9 显示了在`button1`上设置`layout_constraintHorizontal_weight`属性为 4，在`button2`和`button3`上设为 2 的效果：
 
 ![](img/as_layout_weighted_chain.jpg)
 
 图 20-9
 
-由于这些权重值，`button1` 占据了一半的空间 (4/8)，而 `button2` 和 `button3` 分别占据了四分之一 (2/8) 的空间。
+由于这些权重值，`button1`占据了一半的空间（4/8），而`button2`和`button3`分别占据了四分之一（2/8）的空间。
 
 ### 20.7 使用比例
 
-ConstraintLayout 比例允许一个控件维度相对于控件的另一个维度进行缩放（也称为宽高比）。例如，可以将宽高比设置应用到 `ImageView`，以确保其宽度始终是高度的倍倍。
+ConstraintLayout 比例允许一个控件维度相对于控件的另一个维度进行缩放（也称为宽高比）。例如，可以将宽高比设置应用到`ImageView`，以确保其宽度始终是高度的倍数。
 
-尺寸比例约束通过将受限的维度设置为匹配约束模式，并将该控件上的 `layout_constraintDimensionRatio` 属性配置为所需的比例来配置。该比例值可以指定为浮点值或 `width:height` 比例设置。例如，接面的 XML 片段为 `ImageView` 控件配置了 2:1 的比例：
+尺寸比例约束通过将受限的维度设置为匹配约束模式，并将该控件上的`layout_constraintDimensionRatio`属性配置为所需的比例来配置。该比例值可以指定为浮点值或`width:height`比例设置。例如，下面的 XML 片段为`ImageView`控件配置了 2:1 的比例：
 
 ```xml
 <ImageView
@@ -3832,9 +3918,11 @@ ConstraintLayout 比例允许一个控件维度相对于控件的另一个维度
     app:layout_constraintDimensionRatio="2:1" />
 ```
 
-上面的示例演示了当仅有一个维度被设置为匹配约束时如何配置比例。当两个维度都设置为匹配约束模式时，也可以应用比例。这涉及在比例前加上 `H` 或 `W`，以指示哪一个维度是相对于另一个维度进行受限的。
+上面的示例演示了当仅有一个维度被设置为匹配约束时如何配置比例。当两个维度都设置为匹配约束模式时，也可以应用比例。这涉及在比例前加上`H`或`W`，以指示哪一个维度是相对于另一个维度进行受限的。
 
-例如，考虑以下用于 `ImageView` 对象的 XML 片段：
+例如，考虑以下用于`ImageView`对象的 XML 片段：
+
+
 
 ```xml
 <ImageView
@@ -3848,9 +3936,9 @@ ConstraintLayout 比例允许一个控件维度相对于控件的另一个维度
     app:layout_constraintDimensionRatio="W,1:3" />
 ```
 
-在上面的示例中，高度将根据应用于它的约束来定义。在这种情况下，已配置了约束，使其附加到父视图的顶部和底部，实质上是拉伸控件以填充整个父视图的高度。另一方面，宽度维度被限制为 `ImageView` 高度的三分之一。因此，无论布局显示在什么尺寸的屏幕或方向上，`ImageView` 的高度始终与父容器相同，宽度为该高度的三分之一。
+在上面的示例中，高度将根据应用于它的约束来定义。在这种情况下，已配置了约束，使其附加到父视图的顶部和底部，实质上是拉伸控件以填充整个父视图的高度。另一方面，宽度维度被限制为`ImageView`高度的三分之一。因此，无论布局显示在什么尺寸的屏幕或方向上，`ImageView`的高度始终与父容器相同，宽度为该高度的三分之一。
 
-在不手动编辑 XML 资源文件的情况下也可以相同的结果。每当控件维度设置为匹配约束模式时，属性面板的检查器区域就会出现比例控制切换开关。例如，图 20-10 显示了按钮控件的布局宽度和高度属性分别设置为匹配约束模式和 100dp，并突显了比例控制切换开关：
+在不手动编辑 XML 资源文件的情况下也可以相同的结果。每当控件维度设置为匹配约束模式时，属性面板的检查器区域就会出现比例控制切换开关。例如，图 20-10 显示了按钮控件的布局宽度和高度属性分别设置为匹配约束模式和`100dp`，并突显了比例控制切换开关：
 
 ![](img/as_ratio_toggle.jpg)
 
@@ -3863,35 +3951,36 @@ ConstraintLayout 比例允许一个控件维度相对于控件的另一个维度
 图 20-11
 
 ### 20.8 总结
-链和比例都是 `ConstraintLayout` 的强大功能，旨在为设计响应式用户界面提供更多选项。正如本章所述，Android Studio 布局编辑器已经增强，使其更容易使用这些功能。
+
+链和比例都是`ConstraintLayout`的强大功能，旨在为设计响应式用户界面提供更多选项。正如本章所述，Android Studio 布局编辑器已经增强，使其更容易使用这些功能。
 
 ## 21. Android Studio 布局教程
-为 Android 应用设计用户界面的最简单且有效的方法是使用 Android Studio 布局编辑器。本章将概述如何使用这种方法创建基于 `ConstraintLayout` 的用户界面。本章中的练习也将作为从“空白”Android Studio 项目创建活动的机会。在介绍布局编辑器之后，本章还将引入布局检查工具。
+
+为 Android 应用设计用户界面的最简单且有效的方法是使用 Android Studio 布局编辑器。本章将概述如何使用这种方法创建基于`ConstraintLayout`的用户界面。本章中的练习也将作为从“空白”Android Studio 项目创建活动的机会。在介绍布局编辑器之后，本章还将引入布局检查工具。
 
 ### 21.1 布局编辑器示例
-示例的第一阶段是创建一个项目。启动 Android Studio 并通过 `File -> Close Project` 关闭任何已打开的项目。
 
-在欢迎界面选择 `New Project`，选择 `Empty Views Activity` 模板并点击 `Next`。在 `Name` 字段中输入 `LayoutSample`，并指定 `com.ebookrenzy.layoutsample` 为包名。在点击 `Finish` 按钮之前，将 `Minimum API` 级别设置为 `API 26: Android 8.0 (Oreo)`并将`Language` 菜单改为 `Java`。
+示例的第一阶段是创建一个项目。启动 Android Studio 并通过`File -> Close Project`关闭任何已打开的项目。
+
+在欢迎界面选择`New Project`，选择`Empty Views Activity`模板并点击`Next`。在`Name`字段中输入`LayoutSample`，并指定`com.ebookrenzy.layoutsample`为包名。在点击`Finish`按钮之前，将`Minimum API`级别设置为`API 26: Android 8.0 (Oreo)`并将`Language`菜单改为`Java`。
 
 #### 21.2 准备布局编辑器环境
-在 `app -> res -> layout` 文件夹中找到并双击 `activity_main.xml` 布局文件将其加载到布局编辑器。由于教程旨在获得使用约束的经验，使用工具栏上的按钮关闭 `Autoconnect` 功能。一旦禁用，按钮将出现一条划线，正如图 21-1 所示：
+
+在`app -> res -> layout`文件夹中找到并双击`activity_main.xml`布局文件将其加载到布局编辑器。由于教程旨在获得使用约束的经验，使用工具栏上的按钮关闭`Autoconnect`功能。一旦禁用，按钮将出现一条划线，正如图 21-1 所示：
 
 ![](img/as_layout_sample_autoconnect_off.jpg)
 
 图 21-1
 
-如果 `Autoconnect` 按钮右侧的默认间距值未设置为 `8dp`，请点击并从中选择 `8dp`。用户界面设计还将使用 `ImageView` 对象来显示图像。在继续之前，应将此图像添加到项目中，供本章稍后使用。
+如果`Autoconnect`按钮右侧的默认间距值未设置为`8dp`，请点击并从中选择`8dp`。用户界面设计还将使用`ImageView`对象来显示图像。在继续之前，应将此图像添加到项目中，供本章稍后使用。
 
-
-
-
-在 Android Studio 中，显示 Resource Manager 工具窗口（`View -> Tool Windows -> Resource Manager`）。在你操作系统的文件导航器中找到 `GalaxyS23.webp` 图像，并将其拖到 Resource Manager 工具窗口。在弹出的对话框中，点击 `Next`，然后点击 `Import` 按钮，将图像添加到项目中。该图像现在应该出现在 Resource Manager 中，如下方的 图 21-2 所示：
+在 Android Studio 中，显示 Resource Manager 工具窗口（`View -> Tool Windows -> Resource Manager`）。在你操作系统的文件导航器中找到`GalaxyS23.webp`图像，并将其拖到 Resource Manager 工具窗口。在弹出的对话框中，点击`Next`，然后点击`Import`按钮，将图像添加到项目中。该图像现在应该出现在 Resource Manager 中，如下方的图 21-2 所示：
 
 ![](img/as_resource_manager.jpg)
 
 图 21-2
 
-该图像也会出现在 Project 工具窗口的 `res -> drawables` 部分：
+该图像也会出现在 Project 工具窗口的`res -> drawables`部分：
 
 ![](img/as_layout_sample_image_added.jpg)
 
@@ -3899,31 +3988,31 @@ ConstraintLayout 比例允许一个控件维度相对于控件的另一个维度
 
 ## 21.3 将组件添加到用户界面
 
-从 `Common` 调板类别中，将一个 `ImageView` 对象拖到显示视图的中心。注意，会出现水平和垂直虚线，表示显示的中心轴。当对齐中心时，松开鼠标按钮将视图放置到指定位置。一旦放置在布局中，就会出现 Resources 对话框，请求在视图中显示的图像。在对话框顶部的搜索栏中输入“galaxy”以定位 `galaxys6.png` 资源，如 图 21-4 所示：
+从`Common`调板类别中，将一个`ImageView`对象拖到显示视图的中心。注意，会出现水平和垂直虚线，表示显示的中心轴。当对齐中心时，松开鼠标按钮将视图放置到指定位置。一旦放置在布局中，就会出现 Resources 对话框，请求在视图中显示的图像。在对话框顶部的搜索栏中输入“galaxy”以定位`galaxys6.png`资源，如图 21-4 所示：
 
 ![](img/as_pick_a_resource.jpg)
 
 图 21-4
 
-选择图像并点击 `OK` 将其分配给 `ImageView` 对象。如有必要，使用调整大小手柄调整 `ImageView` 的大小，并将其重新定位到布局中心。此时，布局应与 图 21-5 一致：
+选择图像并点击`OK`将其分配给`ImageView`对象。如有必要，使用调整大小手柄调整`ImageView`的大小，并将其重新定位到布局中心。此时，布局应与图 21-5 一致：
 
 ![](img/as_layout_sample_image_layout.jpg)
 
 图 21-5
 
-从调板的 `Common` 部分点击并拖动 `TextView` 对象，将其放置在 `ImageView` 上方，如 图 21-6 所示：
+从调板的`Common`部分点击并拖动`TextView`对象，将其放置在`ImageView`上方，如图 21-6 所示：
 
 ![](img/as_layout_sample_textview.jpg)
 
 图 21-6
 
-使用 `Attributes` 面板，展开 `Common Attributes` 部分中的 `textAppearance` 属性项，将 `textSize` 属性更改为 `24sp`，`textAlignment` 设置为 `center`，并将文本改为“Samsung Galaxy S23”。
+使用`Attributes`面板，展开`Common Attributes`部分中的`textAppearance`属性项，将`textSize`属性更改为`24sp`，`textAlignment`设置为`center`，并将文本改为“Samsung Galaxy S23”。
 
 ![](img/as_layout_sample_textview.jpg)
 
 图 21-6
 
-接下来，在布局底部添加三个 `Button` 组件，并将这些视图的文本属性设置为“Buy Now”、“Pricing”和“Details”。完成后的布局现在应与 图 21-7 一致：
+接下来，在布局底部添加三个`Button`组件，并将这些视图的文本属性设置为“Buy Now”、“Pricing”和“Details”。完成后的布局现在应与图 21-7 一致：
 
 ![](img/as_layout_sample_full_ui.jpg)
 
@@ -3931,7 +4020,7 @@ ConstraintLayout 比例允许一个控件维度相对于控件的另一个维度
 
 此时，组件的约束还不够充分，以至于布局引擎能够在运行时对组件进行定位和调整大小。如果现在运行程序，所有组件都将位于在显示器的左上角。
 
-将组件添加到布局后，使用位于 Layout Editor 工具栏中的设备旋转菜单（如 图 21-8 中的箭头所示）以横向模式查看用户界面：
+将组件添加到布局后，使用位于 Layout Editor 工具栏中的设备旋转菜单（如图 21-8 中的箭头所示）以横向模式查看用户界面：
 
 ![](img/as_layout_rotate.jpg)
 
@@ -3941,35 +4030,35 @@ ConstraintLayout 比例允许一个控件维度相对于控件的另一个维度
 
 ### 21.4 添加约束
 
-约束是创建适应设备方向变化和不同屏幕尺寸布局的关键。首先，将布局旋转回竖向模式，并选择 `ImageView` 上方的 `TextView` 组件。选中该组件后，从 `TextView` 的左侧、右侧和顶部建立到父级 `ConstraintLayout` 相应侧的约束，如 图 21-9 所示。将顶部约束的间距设置为 `16`：
+约束是创建适应设备方向变化和不同屏幕尺寸布局的关键。首先，将布局旋转回竖向模式，并选择`ImageView`上方的`TextView`组件。选中该组件后，从`TextView`的左侧、右侧和顶部建立到父级`ConstraintLayout`相应侧的约束，如图 21-9 所示。将顶部约束的间距设置为`16`：
 
 ![](img/as_layout_sample_textview_constraints.jpg)
 
 图 21-9
 
-约束好 `TextView` 组件后，选择 `ImageView` 实例并在左侧和右侧建立对等约束，每个约束都连接到父布局的相应侧。接下来，建立从 `ImageView` 顶部到 `TextView` 底部的约束连接，以及从 `ImageView` 底部到中间 `Button` 组件顶部的约束。如有必要，点击并拖动 `ImageView` 以保持其位于布局的垂直中心。
+约束好`TextView`组件后，选择`ImageView`实例并在左侧和右侧建立对等约束，每个约束都连接到父布局的相应侧。接下来，建立从`ImageView`顶部到`TextView`底部的约束连接，以及从`ImageView`底部到中间`Button`组件顶部的约束。如有必要，点击并拖动`ImageView`以保持其位于布局的垂直中心。
 
-在 `ImageView` 仍被选中的，使用属性面板中的 `Inspector` 将 `ImageView` 的顶部和底部边距分别更改为 `24` 和 `8`，并将组件的高度和宽度维度属性均更改为 `match_constraint`，以便组件能够调整大小以匹配约束。这些设置将允许布局引擎在需要时增大或缩小 `ImageView` 的尺寸以适应布局变化：
+在`ImageView`仍被选中的，使用属性面板中的`Inspector`将`ImageView`的顶部和底部边距分别更改为`24`和`8`，并将组件的高度和宽度维度属性均更改为`match_constraint`，以便组件能够调整大小以匹配约束。这些设置将允许布局引擎在需要时增大或缩小`ImageView`的尺寸以适应布局变化：
 
 ![](img/as_layout_sample_constraints.jpg)
 
 图 21-10
 
-图 21-11](#ConstraintLayout_Tutorial.xhtml__idTextAnchor570) 显示了 `ImageView` 相对于布局中其他元素的当前实现约束：
+图 21-11](#ConstraintLayout_Tutorial.xhtml__idTextAnchor570) 显示了`ImageView`相对于布局中其他元素的当前实现约束：
 
 ![](img/as_layout_sample_ui_constraints.jpg)
 
 图 21-11
 
-显示 `ImageView` 相对于布局中其他元素的当前实现约束。
+显示`ImageView`相对于布局中其他元素的当前实现约束。
 
-最后的任务是为三个 `Button` 组件添加约束。首先通过点击 Layout Editor 中如 图 21-1 所示的按钮开启 `Autoconnect`。
+最后的任务是为三个`Button`组件添加约束。首先通过点击 Layout Editor 中如图 21-1 所示的按钮开启`Autoconnect`。
 
-接下来，点击 `Buy Now` 按钮，然后按 Shift 点击另外两个按钮以全选。右键点击 `Buy Now` 按钮并选择 `Chains -> Create Horizontal Chain`。默认情况下，链将使用 `spread` 样式显示，这是本例的行为。
+接下来，点击`Buy Now`按钮，然后按 Shift 点击另外两个按钮以全选。右键点击`Buy Now`按钮并选择`Chains -> Create Horizontal Chain`。默认情况下，链将使用`spread`样式显示，这是本例的行为。
 
-最后，在 `Buy Now` 按钮与布局底部之间建立约束，边值为 `8`。对剩余按钮重复此步骤。
+最后，在`Buy Now`按钮与布局底部之间建立约束，边值为`8`。对剩余按钮重复此步骤。
 
-完成这些步骤后，按钮应如 图 21-12 所示：
+完成这些步骤后，按钮应如图 21-12 所示：
 
 ![](img/as_layout_sample_chain.jpg)
 
@@ -3989,12 +4078,9 @@ ConstraintLayout 比例允许一个控件维度相对于控件的另一个维度
 
 ### 21.6 使用 Layout Inspector
 
-可以使用 Layout Inspector 工具查看用户界面布局的组件层次结构。应用程序必须在运行 API 29 或更高版本的设备或模拟器上运行才能访问此类信息。程序运行时，选择 `Tools -> Layout Inspector` 菜单选项。
+可以使用 Layout Inspector 工具查看用户界面布局的组件层次结构。应用程序必须在运行 API 29 或更高版本的设备或模拟器上运行才能访问此类信息。程序运行时，选择`Tools -> Layout Inspector`菜单选项。
 
 一旦检查器加载，最左侧的面板 (A) 显示构成用户界面布局的组件层次结构。中间面板 (B) 可视化地表示布局设计。在视觉布局中点击组件，会导致该项在层次列表中突出显示，从而轻松找到视觉组件相对于整个布局层次结构的位置。
-
-
-
 
 最右侧面板（在图 21-14 中标记为 C）包含了当前选中组件的所有属性设置，允许对组件的内部配置进行深入分析。在适当的情况下，值单元格将包含指向项目源代码中属性设置位置的链接。
 
@@ -4012,7 +4098,7 @@ ConstraintLayout 比例允许一个控件维度相对于控件的另一个维度
 
 ### 21.7 总结
 
-Android Studio 中的 Layout Editor 工具与 `ConstraintLayout` 类紧密集成。本章通过创建一个示例用户界面，概述了如何使用 Layout Editor 工具添加小部件并设置约束，从而实现基于 `ConstraintLayout` 的用户界面。本章还介绍了 Live Layout Inspector 工具，该工具对于分析用户界面布局的结构非常有有用。
+Android Studio 中的 Layout Editor 工具与`ConstraintLayout`类紧密集成。本章通过创建一个示例用户界面，概述了如何使用 Layout Editor 工具添加小部件并设置约束，从而实现基于`ConstraintLayout`的用户界面。本章还介绍了 Live Layout Inspector 工具，该工具对于分析用户界面布局的结构非常有有用。
 
 ## 22. 在 Android Studio 中手动设计 XML 布局
 
@@ -4026,7 +4112,7 @@ XML 布局文件的结构非常简单，遵循视图树的层次方法。XML 资
 <?xml version="1.0" encoding="utf-8"?>
 ```
 
-该声明之后应该是布局的根元素，通常是一个容器视图（如布局管理器）。它由起始和结束标签以及需要在视图上设置的任何属性表示。例如，下面的 XML 将 `ConstraintLayout` 视图声明为根元素，并设置 `match_parent` 属性，使其填充设备显示的所有可用空间：
+该声明之后应该是布局的根元素，通常是一个容器视图（如布局管理器）。它由起始和结束标签以及需要在视图上设置的任何属性表示。例如，下面的 XML 将`ConstraintLayout`视图声明为根元素，并设置`match_parent`属性，使其填充设备显示的所有可用空间：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -4045,16 +4131,16 @@ XML 布局文件的结构非常简单，遵循视图树的层次方法。XML 资
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-在上面的示例中，布局元素还在每个侧配置了 16dp（密度无关像素）的内边距。Android 布局中的任何间距指定必须使用以下测量单位之一：
+在上面的示例中，布局元素还在每个侧配置了`16dp`（密度无关像素）的内边距。Android 布局中的任何间距指定必须使用以下测量单位之一：
 
 * `in` – 英寸。
 * `mm` – 毫米。
 * `pt` – 磅（1/72 英寸）。
-* `dp` – 密度无关像素。一种根据设备显示物理密度相对于 160dpi 显示基准的抽象测量单位。
-* `sp` – 缩放无关像素。与 `dp` 类似，但根据用户的字体字体进行缩放。
-* `px` – 实际像素。不建议使用，因为不同的显示器每英寸像素不同。优先使用 `dp` 而非此单位。
+* `dp` – 密度无关像素。一种根据设备显示物理密度相对于`160dpi`显示基准的抽象测量单位。
+* `sp` – 缩放无关像素。与`dp`类似，但根据用户的字体字体进行缩放。
+* `px` – 实际像素。不建议使用，因为不同的显示器每英寸像素不同。优先使用`dp`而非此单位。
 
-任何需要添加到 `ConstraintLayout` 父元素的子元素必须嵌套在起始和结束标签之间。在下面的示例中，添加了一个 `Button` 小部件作为 `ConstraintLayout` 的子元素：
+任何需要添加到`ConstraintLayout`父元素的子元素必须嵌套在起始和结束标签之间。在下面的示例中，添加了一个`Button`小部件作为`ConstraintLayout`的子元素：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -4073,7 +4159,7 @@ XML 布局文件的结构非常简单，遵循视图树的层次方法。XML 资
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-按照目前的实现，按钮没有约束连接。因此，在运行时，按钮将出现在屏幕的左上角（由于父布局分配的内边距，缩进了 16dp）。然而，如果在按钮侧边添加相对的约束，它将显示在布局正中央：
+按照目前的实现，按钮没有约束连接。因此，在运行时，按钮将出现在屏幕的左上角（由于父布局分配的内边距，缩进了`16dp`）。然而，如果在按钮侧边添加相对的约束，它将显示在布局正中央：
 
 ```xml
 <Button
@@ -4086,6 +4172,8 @@ XML 布局文件的结构非常简单，遵循视图树的层次方法。XML 资
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
 ```
+
+
 
 要向布局添加第二个小部件，请将其嵌入 `ConstraintLayout` 元素的内部。例如，下面的修改向布局添加了 `TextView` 小部件：
 
@@ -4114,6 +4202,7 @@ XML 布局文件的结构非常简单，遵循视图树的层次方法。XML 资
     <TextView />
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
+
 （等等，让我正确格式化文中提供的添加 `TextView` 的 XML）
 
 ```xml
@@ -4141,6 +4230,7 @@ XML 布局文件的结构非常简单，遵循视图树的层次方法。XML 资
     <TextView />
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
+
 （注：原文提供了一个添加 `TextView` 的特定 XML 块，我将遵循原文的内容。）
 
 ```xml
@@ -4168,6 +4258,7 @@ XML 布局文件的结构非常简单，遵循视图树的层次方法。XML 资
     <TextView />
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
+
 再次，新添加的 `TextView` 缺少约束会导致它在运行时出现在左上角。下面的修改通过连接到父布局的相对约束使小部件水平居中，同时将 `TextView` 的底部连接到按钮的顶部：
 
 ```xml
@@ -4188,12 +4279,9 @@ XML 布局文件的结构非常简单，遵循视图树的层次方法。XML 资
 
 ![](img/as_manual_xml_ui.jpg)
 
+### 图 22-1
 
-
-
-# 图 22-1
-
-## 22.2 手动编写 XML 与 可视化布局设计
+## 22.2 手动编写 XML 与可视化布局设计
 
 是手动编写 `XML` 还是在设计模式下使用 Layout Editor 工具，这取决于个人偏好。然而，使用设计模式有许多优点。
 
@@ -4262,9 +4350,6 @@ set.connect(button1.getId(), ConstraintSet.LEFT,
 
 ### 23.4.2 向布局应用约束
 
-
-
-
 一旦配置了约束集，必须将其应用到 `ConstraintLayout` 实例上才能生效。约束集是通过调用 `applyTo()` 方法应用的，并传递一个要应用这些设置的布局对象的引用：
 
 ```java
@@ -4288,11 +4373,13 @@ set.constrainWidth(button1.getId(), ConstraintSet.WRAP_CONTENT);
 set.constrainMaxHeight(imageView1.getId(), 250);
 ```
 
-### 23.4.5 约束偏移 (Bias)
+### 23.4.5 约束偏移（Bias）
 
-正如名为 "在 Android Studio 中使用 ConstraintLayout" 的章节中所述，当视图具有对立的约束时，它将沿着约束轴（即水平或垂直）居中。可以通过在特定的约束轴上应用偏移来调整这种居中。在使用 Android Studio 布局编辑器时，可以通过属性（Attributes）工具窗口中的控件来实现。然而在处理约束集时，可以使用 `setHorizontalBias()` 和 `setVerticalBias()` 方法添加偏移，引用视图 ID 和作为 0 到 1 之间的浮点值的偏移值。
+正如名为“在 Android Studio 中使用 ConstraintLayout”的章节中所述，当视图具有对立的约束时，它将沿着约束轴（即水平或垂直）居中。可以通过在特定的约束轴上应用偏移来调整这种居中。在使用 Android Studio 布局编辑器时，可以通过属性（Attributes）工具窗口中的控件来实现。然而在处理约束集时，可以使用 `setHorizontalBias()` 和 `setVerticalBias()` 方法添加偏移，引用视图 ID 和作为 0 到 1 之间的浮点值的偏移值。
 
 例如，下面的代码在将 `Button` 的左侧和右侧连接到父布局相应的侧之前，应用了 25% 的水平偏移：
+
+
 
 ```java
 set.connect(button1.getId(), ConstraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT, 0);
@@ -4300,19 +4387,19 @@ set.connect(button1.getId(), ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, Const
 set.setHorizontalBias(button1.getId(), 0.25f);
 ```
 
-### 23.4.6 对齐约束
+## 23.4.6 对齐约束
 
-也可以使用约束集应用对齐。Android Studio 布局编辑器提供的完整对齐选项也可以通过约束集通过 `centerVertically()` 和 `centerHorizontally()` 方法进行配置，这两个方法都根据正在配置的对齐方式接受不同的参数。此外，可以使用 `center()` 方法将视图在两个视图之间居中。
+也可以使用约束集应用对齐。`Android Studio` 布局编辑器提供的完整对齐选项也可以通过约束集通过`centerVertically()`和`centerHorizontally()`方法进行配置，这两个方法都根据正在配置的对齐方式接受不同的参数。此外，可以使用`center()`方法将视图在两个视图之间居中。
 
-在下面的代码中，`button2` 的位置使其与 `button1` 水平对齐：
+在下面的代码中，`button2`的位置使其与`button1`水平对齐：
 
 ```java
 set.centerHorizontally(button2.getId(), button1.getId());
 ```
 
-### 23.4.7 复制和应用约束集
+## 23.4.7 复制和应用约束集
 
-可以使用 `clone()` 方法将 `ConstraintLayout` 实例的当前约束集复制到约束集对象中。例如，下一行代码将约束设置从名为 `myLayout` 的 `ConstraintLayout` 实例复制到约束集对象中：
+可以使用`clone()`方法将`ConstraintLayout`实例的当前约束集复制到约束集对象中。例如，下一行代码将约束设置从名为`myLayout`的`ConstraintLayout`实例复制到约束集对象中：
 
 ```java
 set.clone(myLayout);
@@ -4327,15 +4414,15 @@ set.constrainWidth(button1.getId(), ConstraintSet.WRAP_CONTENT);
 set.applyTo(mySecondLayout);
 ```
 
-### 23.4.8 ConstraintLayout 链 (Chains)
+## 23.4.8 ConstraintLayout 链 (Chains)
 
-也可以使用 `createHorizontalChain()` 和 `createVerticalChain()` 方法在约束集内部创建垂直和水平链。使用这些方法的语法如下：
+也可以使用`createHorizontalChain()`和`createVerticalChain()`方法在约束集内部创建垂直和水平链。使用这些方法的语法如下：
 
 ```java
 createHorizontalChain(int leftId, int leftSide, int rightId, int rightSide, int[] chainIds, float[] weights, int style);
 ```
 
-根据上述语法，下面的示例创建了一个从 `button1` 开始并以 `button4` 结束的水平散布链。这些视图之间是 `button2` 和 `button3`，它们的权重都设置为零：
+根据上述语法，下面的示例创建了一个从`button1`开始并以`button4`结束的水平散布链。这些视图之间是`button2`和`button3`，它们的权重都设置为零：
 
 ```java
 int[] chainViews = {button2.getId(), button3.getId()};
@@ -4343,9 +4430,9 @@ float[] chainWeights = {0, 0};
 set.createHorizontalChain(button1.getId(), ConstraintSet.LEFT, button4.getId(), ConstraintSet.RIGHT, chainViews, chainWeights);
 ```
 
-### 23.4.9 辅助线 (Guidelines)
+## 23.4.9 辅助线 (Guidelines)
 
-可以使用 `setGuidelineBegin()`、`setGuidelineEnd()` 或 `setGuidelinePercent()` 方法向约束添加辅助线。在下面的代码中，创建了一个垂直辅助线并将其位于父布局宽度的 50% 处：
+可以使用`setGuidelineBegin()`、`setGuidelineEnd()`或`setGuidelinePercent()`方法向约束添加辅助线。在下面的代码中，创建了一个垂直辅助线并将其位于父布局宽度的 50% 处：
 
 ```java
 set.create(ConstraintSet.VERTICAL_GUIDELINE);
@@ -4359,32 +4446,32 @@ set.connect(button.getId(), ConstraintSet.LEFT, ConstraintSet.PARENT_ID, 0); // 
 set.applyTo(layout);
 ```
 
-### 23.4.10 移除约束
+## 23.4.10 移除约束
 
-可以使用 `clear()` 方法从约束集中的视图移除约束，通过传递视图 ID 和要移除约束的锚点来实现：
+可以使用`clear()`方法从约束集中的视图移除约束，通过传递视图 ID 和要移除约束的锚点来实现：
 
 ```java
 set.clear(button.getId(), ConstraintSet.LEFT);
 ```
 
-同样，可以通过仅引用视图来使用 `clear()` 方法移除视图的所有约束：
+同样，可以通过仅引用视图来使用`clear()`方法移除视图的所有约束：
 
 ```java
 set.clear(button.getId());
 ```
 
-### 23.4.11 缩放
+## 23.4.11 缩放
 
-可以使用 `ConstraintSet` 的 `setScaleX()` 和 `setScaleY()` 方法调整布局内视图的比例，这些方法接受执行操作的视图以及浮点值。在下面的代码中，按钮对象被缩放为宽度的两倍和高度一半：
+可以使用`ConstraintSet`的`setScaleX()`和`setScaleY()`方法调整布局内视图的比例，这些方法接受执行操作的视图以及浮点值。在下面的代码中，按钮对象被缩放为宽度的两倍和高度一半：
 
 ```java
 set.setScaleX(myButton.getId(), 2f);
 set.setScaleY(myButton.getId(), 0.5f);
 ```
 
-### 23.4.12 旋转
+## 23.4.12 旋转
 
-可以使用 `setRotationX()` 和 `setRotationY()` 方法分别在 X 或 Y 轴上旋转视图，这两个方法都必须传递旋转视图的 ID 和表示要旋转角度的浮点值。旋转中心点可以通过调用 `setTransformPivot()`、`setTransformPivotX()` 和 `setTransformPivotY()` 方法定义。下面的代码使用位于 500, 500 的点点在 Y 轴上旋转按钮视图 30 度：
+可以使用`setRotationX()`和`setRotationY()`方法分别在 X 或 Y 轴上旋转视图，这两个方法都必须传递旋转视图的 ID 和表示要旋转角度的浮点值。旋转中心点可以通过调用`setTransformPivot()`、`setTransformPivotX()`和`setTransformPivotY()`方法定义。下面的代码使用位于 500, 500 的点在 Y 轴上旋转按钮视图 30 度：
 
 ```java
 set.setTransformPivot(button.getId(), 500, 500);
@@ -4392,31 +4479,29 @@ set.setRotationY(button.getId(), 30);
 set.applyTo(layout);
 ```
 
-### 23.5 总结
+## 23.5 总结
 
-作为编写 XML 布局资源文件或使用 Android Studio 布局编辑器工具的替代，也可以在 Java 代码中动态创建 Android 用户界面。在 Java 代码中创建布局包括创建视图类的实例并在这些对象上设置属性以定义所需的显示和行为。
+作为编写 XML 布局资源文件或使用 Android Studio 布局编辑器工具的替代方案，也可以在 Java 代码中动态创建 Android 用户界面。在 Java 代码中创建布局包括创建视图类的实例并在这些对象上设置属性以定义所需的显示和行为。
 
+视图相对于其`ConstraintLayout`父视图以及任何兄弟视图的位置和大小是通过约束集（constraint sets）来定义的。约束集由`ConstraintSet`类的实例表示，该实例一旦创建，就可以使用广泛的方法调用来对其进行配置，以执行诸如建立约束连接、控制视图大小行为以及创建链等任务。
 
-
-视图相对于其 `ConstraintLayout` 父视图以及任何兄弟视图的位置和大小是通过约束集（constraint sets）来定义的。约束集由 `ConstraintSet` 类的实例表示，该实例一旦创建，就可以使用广泛的方法调用来对其进行配置，以执行诸如建立约束连接、控制视图大小行为以及创建链等任务。
-
-在本章涵盖 `ConstraintSet` 类的基础知识后，下一章将通过一个教程来将这些功能付诸实际应用。
+在本章涵盖`ConstraintSet`类的基础知识后，下一章将通过一个教程来将这些功能付诸实际应用。
 
 # 24. Android ConstraintSet 教程
 
-上一节介绍了在 Java 代码中通过 `ConstraintLayout` 和 `ConstraintSet` 类创建和修改用户界面布局的基本概念。本章将通过创建一个完全使用 Java 代码编写（且不使用 Android Studio 布局编辑器工具）的示例布局，将这些概念付诸实践。
+上一节介绍了在 Java 代码中通过`ConstraintLayout`和`ConstraintSet`类创建和修改用户界面布局的基本概念。本章将通过创建一个完全使用 Java 代码编写（且不使用 Android Studio 布局编辑器工具）的示例布局，将这些概念付诸实践。
 
 ## 24.1 在 Android Studio 中创建示例项目
 
-启动 Android Studio，并在欢迎界面选择 `New Project`（新建项目），在弹出的新项目对话框中，选择 `Empty Views Activity` 模板，然后点击 `Next` 按钮。
+启动 Android Studio，并在欢迎界面选择`New Project`（新建项目），在弹出的新项目对话框中，选择`Empty Views Activity`模板，然后点击`Next`按钮。
 
-在 `Name` 字段中输入 `JavaLayout`，并指定 `com.ebookfrenzy.javalayout` 为包名。在点击 `Finish` 按钮之前，将 `Minimum API level` 设置更改为 `API 26: Android 8.0 (Oreo)`，并将 `Language` 菜单改为 `Java`。
+在`Name`字段中输入`JavaLayout`，并指定`com.ebookfrenzy.javalayout`为包名。在点击`Finish`按钮之前，将`Minimum API level`设置更改为`API 26: Android 8.0 (Oreo)`，并将`Language`菜单改为`Java`。
 
-项目创建完成后，`MainActivity.java` 文件将自动加载到编辑面板中。正如我们预期的那样，Android Studio 创建了一个模板 Activity 并重写了 `onCreate()` 方法，为添加 Java 代码以创建用户界面提供了一个理想的位置。
+项目创建完成后，`MainActivity.java`文件将自动加载到编辑面板中。正如我们预期的那样，Android Studio 创建了一个模板 Activity 并重写了`onCreate()`方法，为添加 Java 代码以创建用户界面提供了一个理想的位置。
 
 ## 24.2 向 Activity 添加视图
 
-`onCreate()` 方法目前的设计方案是使用资源布局文件作为用户界面。因此，首先从该方法中删除以下行代码：
+`onCreate()`方法目前的设计方案是使用资源布局文件作为用户界面。因此，首先从该方法中删除以下行代码：
 
 ```java
 @Override
@@ -4435,7 +4520,7 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-下一个修改是向 Activity 添加一个带有单个 `Button` 视图视图的 `ConstraintLayout` 对象。这涉及创建 `ConstraintLayout` 和 `Button` 类的新实例。然后需要将 `Button` 视图作为子视图添加到 `ConstraintLayout` 视图中，通过调用 Activity 实例的 `setContentView()` 方法将其显示：
+下一个修改是向 Activity 添加一个带有单个`Button`视图的`ConstraintLayout`对象。这涉及创建`ConstraintLayout`和`Button`类的新实例。然后需要将`Button`视图作为子视图添加到`ConstraintLayout`视图中，通过调用 Activity 实例的`setContentView()`方法将其显示：
 
 ```java
 package com.ebookfrenzy.javalayout;
@@ -4462,11 +4547,11 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-当以此方式创建用户界面对象的新实例时，必须向构造方法传递创建对象的上下文（context），在本例中，这就是当前的 Activity。由于上述代码位于 Activity 类内部，因此通过标准的 `this` 关键字引用上下文：
+当以此方式创建用户界面对象的新实例时，必须向构造方法传递创建对象的上下文（context），在本例中，这就是当前的 Activity。由于上述代码位于 Activity 类内部，因此通过标准的`this`关键字引用上下文：
 
 `Button myButton = new Button(this);`
 
-完成上述添加后，编译并运行应用程序（在物理设备或模拟器上）。启动后，可见的运行是在 `ConstraintLayout` 视图的左上角出现一个没有任何文本的按钮，如[图 24-1]所示：
+完成上述添加后，编译并运行应用程序（在物理设备或模拟器上）。启动后，可见的运行是在`ConstraintLayout`视图的左上角出现一个没有任何文本的按钮，如[图 24-1]所示：
 
 ![](img/Image2435.jpg)
 
@@ -4474,9 +4559,9 @@ public class MainActivity extends AppCompatActivity {
 
 ## 24.3 设置视图属性
 
-对于此练习，我们需要将 `ConstraintLayout` 视图的背景设置为蓝色，并让 `Button` 视图在黄色背景上显示“Press Me”的文本。这些任务可以通过如所述在 Java 代码中设置视图的属性来实现。
+对于此练习，我们需要将`ConstraintLayout`视图的背景设置为蓝色，并让`Button`视图在黄色背景上显示“Press Me”的文本。这些任务可以通过在 Java 代码中设置视图的属性来实现，如所述。
 
-为了方便翻译文本，将将其作为资源添加。在 Project 窗口中，找到 `app -> values -> strings.xml` 文件并修改它以添加资源：
+为了方便翻译文本，将将其作为资源添加。在 Project 窗口中，找到`app -> values -> strings.xml`文件并修改它以添加资源：
 
 ```xml
 <resources>
@@ -4487,13 +4572,13 @@ public class MainActivity extends AppCompatActivity {
 
 虽然这是处理字符串的推荐方法，但后续许多示例将直接引用代码：`getString(R.string.press_me)`。
 
-当编译编译运行时，布局将反映这些设置，按钮将以黄色背景出现。
+当编译并运行时，布局将反映这些设置，按钮将以黄色背景出现。
 
 ## 24.4 创建视图 ID
 
-当布局完成后，它将包含一个 `Button` 和一个 `EditText` 视图。在 `ConstraintSet` 类的方法中引用这些视图之前，必须为它们分配唯一的 ID。此过程的第一步是创建一个包含这些 ID 的资源文件。
+当布局完成后，它将包含一个`Button`和一个`EditText`视图。在`ConstraintSet`类的方法中引用这些视图之前，必须为它们分配唯一的 ID。此过程的第一步是创建一个包含这些 ID 的资源文件。
 
-右键点击 `app -> values` 文件夹，选择 `New -> Values Resource File` 菜单，并将新资源命名为 `id.xml`。创建后，对其进行编辑使其内容如下：
+右键点击`app -> values`文件夹，选择`New -> Values Resource File`菜单，并将新资源命名为`id.xml`。创建后，对其进行编辑使其内容如下：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -4503,7 +4588,7 @@ public class MainActivity extends AppCompatActivity {
 </resources>
 ```
 
-在教程的此时，只创建了 `Button`，因此编辑 `configureLayout()` 方法为对象分配相应的 ID：
+在教程的此时，只创建了`Button`，因此编辑`configureLayout()`方法为对象分配相应的 ID：
 
 ```java
 private void configureLayout() {
@@ -4515,9 +4600,9 @@ private void configureLayout() {
 
 ## 24.5 配置约束集
 
-如果没有约束，`ConstraintLayout` 视图会将 `Button` 视图放置在屏幕的左上角。要指示布局视图将按钮放置在不同的位置（在本例中为水平和垂直居中），需要创建一个 `ConstraintSet` 实例，使用适当的设置对其初始化，并将其应用于父布局。
+如果没有约束，`ConstraintLayout`视图会将`Button`视图放置在屏幕的左上角。要指示布局视图将按钮放置在不同的位置（在本例中为水平和垂直居中），需要创建一个`ConstraintSet`实例，使用适当的设置对其初始化，并将其应用于父布局。
 
-对于此示例，需要配置按钮，使其宽度和高度限制为其显示的文本的大小，并在父布局中居中显示。再次编辑 `configureLayout()` 方法以进行这些更改：
+对于此示例，需要配置按钮，使其宽度和高度限制为其显示的文本的大小，并在父布局中居中显示。再次编辑`configureLayout()`方法以进行这些更改：
 
 ```java
 import androidx.constraintlayout.widget.ConstraintSet;
@@ -4528,10 +4613,6 @@ private void configureLayout() {
     // ...
 }
 ```
-
-
-
-
 
 ```java
 myButton.setText(getString(R.string.press_me));
@@ -4551,7 +4632,7 @@ set.connect(myButton.getId(), ConstraintSet.BOTTOM, ConstraintSet.PARENT_ID, Con
 set.applyTo(myLayout);
 ```
 
-配置好初始约束后，编译并运行应用程序，验证 `Button` 视图现在是否出现在布局的中心：
+配置好初始约束后，编译并运行应用程序，验证`Button`视图现在是否出现在布局的中心：
 
 ![](img/Image2444.jpg)
 
@@ -4559,7 +4640,9 @@ set.applyTo(myLayout);
 
 ## 24.6 添加 EditText 视图
 
-布局中下一个添加的项是 `EditText` 视图。第一步是创建 `EditText` 对象，按照 `id.xml` 资源文件中声明的内容分配 ID 并将其添加到布局中。现在需要对实现这些步骤的 `configureLayout()` 方法进行如下代码更改：
+布局中下一个添加的项是`EditText`视图。第一步是创建`EditText`对象，按照`id.xml`资源文件中声明的内容分配 ID 并将其添加到布局中。现在需要对实现这些步骤的`configureLayout()`方法进行如下代码更改：
+
+
 
 ```java
 private void configureLayout() {
@@ -4595,9 +4678,9 @@ set.applyTo(myLayout);
 
 应用程序的测试运行应该显示 `EditText` 字段位于按钮上方，并有 70dp 的间距。
 
-## 24.7 将密度无关像素 (dp) 转换为像素 (px)
+## 24.7 将密度无关像素（dp）转换为像素（px）
 
-本练习的下一个任务是将 `EditText` 视图的宽度设置为 200dp。正如“Android Studio 布局教程”章节中概述的，在用户界面布局中设置尺寸和位置时，使用密度无关像素 (dp) 比像素 (px) 更好。要使用 `dp` 设置位置，有必要在运行时考虑设备显示密度的将 `dp` 值转换为 `px` 值。因此，为了将 `EditText` 视图的宽度设置为 200dp，需要在类中添加以下代码：
+本练习的下一个任务是将 `EditText` 视图的宽度设置为 200dp。正如“Android Studio 布局教程”章节中概述的，在用户界面布局中设置尺寸和位置时，使用密度无关像素（dp）比像素（px）更好。要使用 `dp` 设置位置，有必要在运行时考虑设备显示密度，将 `dp` 值转换为 `px` 值。因此，为了将 `EditText` 视图的宽度设置为 200dp，需要在类中添加以下代码：
 
 ```java
 package com.ebookrenzy.javalayout;
@@ -4636,27 +4719,25 @@ public class MainActivity extends AppCompatActivity {
 
 然而，在某些情况下，使用 Java 创建用户界面是合理的。例如，这种方法在创建动态用户界面时最为有用。
 
-## 25 在 Android Studio 中使用 Apply Changes
+# 25 在 Android Studio 中使用 Apply Changes
 
 现在已经涵盖了使用 Android Studio 进行开发的一些基本概念，这是一个介绍 Android Studio Apply Changes 功能的好时机。所有经验丰富的开发者都明白，等待应用程序运行的每一秒都可以用于编写和优化代码。
 
-### 25.1 引入 Apply Changes
+## 25.1 引入 Apply Changes
 
 在 Android Studio 的早期版本，每次需要测试项目的更改，Android Studio 都会重新编译代码、转换为 Dex 格式、生成 APK 包并将其安装到设备或模拟器上。在执行这些步骤后，应用程序才能启动并准备好测试。即使在快速开发系统上，这个过程也需要大量时间。对于大型应用程序，此过程通常需要一分钟或长时间。
 
 相比之下，Apply Changes 允许许多代码和资源更改在已经在设备或模拟器会话运行时几乎立即地反映在应用程序中。考虑一个正在 Android Studio 中开发并已经在设备或模拟器上启动的应用程序。如果对资源设置或方法内部的代码进行更改，Apply Changes 将更新后的代码和资源推送到运行的应用程序并动态“交换”这些更改。这样，无需构建、部署和重新启动整个应用程序，更改就会反映在应用程序中。
 
-### 25.2 理解 Apply Changes 选项
+## 25.2 理解 Apply Changes 选项
 
 Android Studio 提供了三种应用于运行应用程序的更改选项，形式为运行应用程序、应用更改以及重启活动和应用代码更改。这些选项可以总结如下：
 
+- `Run App`（运行应用）：停止当前运行的应用并重启它。如果自上次启动以来项目未发生任何更改，此选项将重新启动应用。相反，如果项目已发生更改，Android Studio 将在启动应用之前重新构建并将应用安装到设备或模拟器上。
 
+- `Apply Code Changes`（应用代码更改）：当对项目所做的更改仅涉及现有方法主体的修改，或者添加了新类或方法时，可以使用此选项。选中后，更改将应用到运行的应用中，而无需重启应用或当前运行的 Activity。然而，如果对任何项目资源（如布局文件）进行了更改，则无法使用此模式。其他限制还包括删除方法、更改方法签名、重命名类以及其他结构性代码更改。如果对项目清单（Manifest）进行了更改，也无法使用此选项。
 
-
-
-- **Run App (运行应用)**：停止当前运行的应用并重启它。如果自上次启动以来项目未发生任何更改，此选项将重新启动应用。相反，如果项目已发生更改，Android Studio 将在启动应用之前重新构建并将应用安装到设备或模拟器上。
-- **Apply Code Changes (应用代码更改)**：当对项目所做的更改仅涉及现有方法主体的修改，或者添加了新类或方法时，可以使用此选项。选中后，更改将应用到运行的应用中，而无需重启应用或当前运行的 Activity。然而，如果对任何项目资源（如布局文件）进行了更改，则无法使用此模式。其他限制还包括删除方法、更改方法签名、重命名类以及其他结构性代码更改。如果对项目清单（Manifest）进行了更改，也无法使用此选项。
-- **Apply Changes and Restart Activity (应用更改并重启 Activity)**：选中后，此模式将动态应用项目内发生的任何代码或资源更改，并在不重新安装或重启应用的情况下重启 Activity。与 Apply Code Changes 选项不同，当项目代码和资源发生更改时，可以使用此选项。但是，仍然适用于涉及某些结构性代码更改和清单修改的限制。
+- `Apply Changes and Restart Activity`（应用更改并重启 Activity）：选中后，此模式将动态应用项目内发生的任何代码或资源更改，并在不重新安装或重启应用的情况下重启 Activity。与 `Apply Code Changes` 选项不同，当项目代码和资源发生更改时，可以使用此选项。但是，仍然适用于涉及某些结构性代码更改和清单修改的限制。
 
 ## 25.3 使用 Apply Changes
 
@@ -4666,25 +4747,25 @@ Android Studio 提供了三种应用于运行应用程序的更改选项，形�
 
 图 25-1
 
-在应用启动并运行后，将出现一个停止按钮（在图 25-2 中标记为 A），并且 Apply Changes and Restart Activity (B) 和 Apply Code Changes (C) 按钮将变为可用：
+在应用启动并运行后，将出现一个停止按钮（在图 25-2 中标记为 A），并且 `Apply Changes and Restart Activity`（B）和 `Apply Code Changes`（C）按钮将变为可用：
 
 ![](img/as_run_apply_changes.jpg)
 
 图 25-2
 
-如果在选择一个 Apply Changes 按钮之一后无法应用更改，Android Studio 将显示一条指示失败的消息和解释。例如，图 25-3 显示了在对资源文件进行更改后选择 Apply Code Changes 选项时，Android Studio 显示的消息：
+如果在选择一个 Apply Changes 按钮之一后无法应用更改，Android Studio 将显示一条指示失败的消息和解释。例如，图 25-3 显示了在对资源文件进行更改后选择 `Apply Code Changes` 选项时，Android Studio 显示的消息：
 
 ![](img/as_instant_run_restart_resources.jpg)
 
 图 25-3
 
-在这种情况下，解决方案是使用 Apply Changes and Restart Activity 选项（此处提供了该链接）。同样，当尝试应用涉及删除方法的更改时，将出现以下消息：
+在这种情况下，解决方案是使用 `Apply Changes and Restart Activity` 选项（此处提供了该链接）。同样，当尝试应用涉及删除方法的更改时，将出现以下消息：
 
 ![](img/as_instant_run_restart_method_removed.jpg)
 
 图 25-4
 
-在在这种情况下，唯一的选项是点击 Run App 按钮以重新安装并重启应用。作为手动选择正确选项的替代方案，Android Studio 可以配置为自动回退到执行 Run App 操作。
+在这种情况下，唯一的选项是点击 `Run App` 按钮以重新安装并重启应用。作为手动选择正确选项的替代方案，Android Studio 可以配置为自动回退到执行 `Run App` 操作。
 
 ## 25.4 配置 Apply Changes Fallback 设置
 
@@ -4694,13 +4775,13 @@ Apply Changes 回退设置位于 Android Studio 的 Settings 对话框中。在 
 
 图 25-5
 
-启用所需的选项后，点击 `Apply`，然后点击 `OK` 按钮提交更改并关闭对话框。在启用这些默认设置后，Android Studio 将将在需要自动重新安装并重启应用。
+启用所需的选项后，点击 `Apply`，然后点击 `OK` 按钮提交更改并关闭对话框。在启用这些默认设置后，Android Studio 将在需要时自动重新安装并重启应用。
 
 ## 25.5 Apply Changes 教程
 
-启动 Android Studio，从欢迎界面选择 New Project 选项，并在生成的新项目对话框中点击 `Next` 按钮之前选择 `Basic Views Activity` 模板。
+启动 Android Studio，从欢迎界面选择 `New Project` 选项，并在生成的新项目对话框中点击 `Next` 按钮之前选择 `Basic Views Activity` 模板。
 
-在 `Name` 字段中输入 `ApplyChanges` 并指定包名为 `com.ebookfrenzy.applychanges`。在点击 `Finish` 按钮之前，将 `Minimum API level` 设置为 `API 26`：Android 8.0 (Oreo)，并将 Language 菜单改为 `Java`。
+在 `Name` 字段中输入 `ApplyChanges` 并指定包名为 `com.ebookfrenzy.applychanges`。在点击 `Finish` 按钮之前，将 `Minimum API level` 设置为 `API 26`：Android 8.0（Oreo），并将 Language 菜单改为 `Java`。
 
 ## 25.6 使用 Apply Code Changes
 
@@ -4730,9 +4811,9 @@ binding.fab.setOnClickListener(new View.OnClickListener() {
 
 ## 25.7 使用 Apply Changes and Restart Activity
 
-任何资源更改都需要使用 Apply Changes and Restart Activity 选项。在 Android Studio 中，选择 `app -> res -> layout -> fragment_first.xml` 布局文件。在布局编辑器 Design 模式下，选择默认 `TextView` 组件并将属性窗口中的 `text` 属性更改为“Hello”。
+任何资源更改都需要使用 `Apply Changes and Restart Activity` 选项。在 Android Studio 中，选择 `app -> res -> layout -> fragment_first.xml` 布局文件。在布局编辑器 Design 模式下，选择默认 `TextView` 组件并将属性窗口中的 `text` 属性更改为“Hello”。
 
-在点击 Apply Changes 按钮之前，确保关闭上述 Configuring Apply Changes Fallback Settings 回退选项。注意请求失败，因为此更改涉及项目资源。点击 Apply Changes and Restart Activity 按钮并验证 Activity 重启显示新文本。
+在点击 Apply Changes 按钮之前，确保关闭上述 Configuring Apply Changes Fallback Settings 回退选项。注意请求失败，因为此更改涉及项目资源。点击 `Apply Changes and Restart Activity` 按钮并验证 Activity 重启显示新文本。
 
 ## 25.8 使用 Run App
 
@@ -4744,26 +4825,23 @@ public void demoMethod() {
 }
 ```
 
-使用 Apply Code Changes 按钮并确认更改无需重新安装应用即可应用。
+使用 `Apply Code Changes` 按钮并确认更改无需重新安装应用即可应用。
 
-接下来，删除新方法并验证点击两个 Apply Changes 按钮之一都将导致请求失败。此类更改后运行应用的唯一方法是点击 Run App 按钮。
+接下来，删除新方法并验证点击两个 Apply Changes 按钮之一都将导致请求失败。此类更改后运行应用的唯一方法是点击 `Run App` 按钮。
 
-### 25.9 总结
+## 25.9 总结
 
 Apply Changes 是 Android Studio 的一项功能，旨在显著加速开发应用时执行的代码、构建和运行循环。许多情况下，Apply Changes 功能可以在无需重新安装或重启应用的情况下将更新推送到运行的应用中。
 
-## 26 Gradle 版本目录 指南
+# 26 Gradle 版本目录指南
 
 新建的 Android Studio 项目由 Android Studio 自动生成的约 80 个文件组成。当你点击运行按钮时，Android Studio 使用名为 Gradle 的构建系统生成其他文件、编译源代码、解析库依赖并创建可安装的应用包。构建完成后，项目文件夹将包含约 700 个文件。
 
-
-
-
 本章解释了 Gradle 构建系统如何确定将哪些库包含在构建过程中，以及你如何使用该系统为你的项目添加库依赖项。
 
-### 26.1 库和插件依赖
+## 26.1 库和插件依赖
 
-在之前标题为"Android 架构概述"的章节中，我们简要讨论了 Java API 框架以及其中包含的库。当 Gradle 构建项目时，它需要知道完成构建需要哪些库以及它们各自的版本号。例如，一个项目可能依赖于 2.6.0 版本的 Room 数据库运行时库（`androidx.room:room-runtime`）。遗憾的是，当我们在项目中编写 Room 数据库代码时，Gradle 不会自动将相应的库依赖项添加到构建配置中。相反，我们必须通过 Gradle 构建文件和版本目录（version catalog）手动添加这些依赖项。
+在之前标题为“Android 架构概述”的章节中，我们简要讨论了 Java API 框架以及其中包含的库。当 Gradle 构建项目时，它需要知道完成构建需要哪些库以及它们各自的版本号。例如，一个项目可能依赖于 2.6.0 版本的 Room 数据库运行时库（`androidx.room:room-runtime`）。遗憾的是，当我们在项目中编写 Room 数据库代码时，Gradle 不会自动将相应的库依赖项添加到构建配置中。相反，我们必须通过 Gradle 构建文件和版本目录（version catalog）手动添加这些依赖项。
 
 ## 26.2 项目级 Gradle 构建文件
 
@@ -4775,11 +4853,13 @@ plugins {
 }
 ```
 
-在实践中，只有少数少数需要修改此文件。
+在实践中，只有少数情况需要修改此文件。
 
 ## 26.3 模块级 Gradle 构建文件
 
-一个 Android Studio 项目由一个或多个模块组成，每个模块都有自己的构建配置和库依赖项。新项目将包含一个模块，其 gradle 构建文件将会在 Gradle Scripts 文件夹中显示为 `build.gradle.kts` (Module: app)，其部分内容如下：
+一个 Android Studio 项目由一个或多个模块组成，每个模块都有自己的构建配置和库依赖项。新项目将包含一个模块，其 Gradle 构建文件将会在 Gradle Scripts 文件夹中显示为 `build.gradle.kts`（Module: app），其部分内容如下：
+
+
 
 ```kotlin
 plugins {
@@ -4829,7 +4909,7 @@ activity = { group = "androidx.activity", name = "activity", version.ref = "acti
 androidApplication = { id = "com.android.application", version.ref = "agp"}
 ```
 
-该目录分为标记为 `[versions]`、`[libraries]` 和 `[plugins]` 的部分。为了帮助理解目录的工作原理，我们将使用 material 库作为示例。在 `[libraries]` 部分中，material 库的声明如下：
+该目录分为标记为 `[versions]`、`[libraries]` 和 `[plugins]` 的部分。为了帮助理解目录的工作原理，我们将使用 `material` 库作为示例。在 `[libraries]` 部分中，`material` 库的声明如下：
 
 ```toml
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
@@ -4923,17 +5003,13 @@ dependencies {
 
 Android 项目使用 Gradle 系统进行构建，涉及多个步骤。这些步骤之一是解析并包含成功构建所需的任何库。虽然新创建的项目将包含简单应用程序所需的基础库和插件，但更复杂的项目将具有额外的依赖项。这些依赖项在模块级构建文件中声明。为了跨项目模块的版本一致性并为添加新库或更新版本号提供单一位置，Gradle 使用版本目录。随着你的代码使用越来越多的库和插件，你必须编辑构建和目录文件来添加这些依赖项。
 
-27. Android 事件处理概述与示例
-
-
-
-
+## 27. Android 事件处理概述与示例
 
 在之前的章节中，已经介绍了许多关于 Android 应用用户界面设计的内容。然而，尚未涵盖的领域是用户与界面的交互如何触发底层的 Activity 来执行任务。换句话说，从之前的章节中，我们知道如何创建一个包含按钮视图的用户界面，但不知道当用户触碰它时如何让应用程序内部发生某些操作。
 
 因此，本章的主要目标是提供 Android 应用程序事件处理的概述，并结合一个基于 Android Studio 的示例项目。
 
-## 27.1 理解 Android 事件
+### 27.1 理解 Android 事件
 
 Android 事件可以采取多种形式，但通常是响应外部操作而生成的。最常见的事件形式（特别是平板电脑和智能手机等设备）涉及与触摸屏的某种形式的交互。此类事件属于输入事件类别。
 
@@ -4941,7 +5017,7 @@ Android 框架维护了一个事件队列，事件在发生时会被放入队列
 
 为了处理已传递的事件，视图必须备有一个事件监听器。所有用户界面组件都派生自 `View` 类，它包含一系列事件监听器接口，每个接口包含一个回调方法的抽象声明。为了能够响应特定类型的事件，视图必须注册相应的事件监听器并实现相应的回调。例如，如果按钮要响应点击事件（等同于用户触碰并释放按钮视图，就像点击物理按钮一样），它必须注册 `View.onClickListener` 事件监听器（通过调用目标视图的 `setOnClickListener()` 方法），并实现相应的 `onClick()` 回调方法。如果在按钮视图的位置检测到“点击”事件，当该事件从事件队列中移除时，Android 框架将调用该视图的 `onClick()` 方法。当然，在 `onClick()` 回调方法的实现中，应该执行任何响应按钮点击调的任务或其他方法。
 
-## 27.2 使用 android:onClick 资源
+### 27.2 使用 android:onClick 资源
 
 在详细探索事件监听器之前，值得注意的是，如果仅要求在用户“点击”用户界面中的按钮视图时调用回调方法，则提供了一种快捷方法。考虑一个包含名为 `button1` 按钮视图的用户界面布局，其要求是当用户触碰按钮时，调用 Activity 类中声明的名为 `buttonClick()` 的方法。实现此行为仅需编写 `buttonClick()` 方法（该方法接收触发点击事件的视图引用作为参数），并在 XML 文件中的按钮视图声明中添加一行代码。例如：
 
@@ -4961,10 +5037,15 @@ Android 框架维护了一个事件队列，事件在发生时会被放入队列
 在本章后面提到的示例 Activity 中，将详细介绍注册事件监听器和实现回调方法的步骤。在在此之前，值得花些时间概述 Android 框架中提供的事件监听器以及与每个监听器关联的回调方法。
 
 - `onClickListener` – 用于检测点击样式事件，即用户触碰并释放由视图占据的设备显示区域。对应 `onClick()` 回调方法，该方法将接收事件的视图引用作为参数传递。
+
 - `onLongClickListener` – 用于检测用户是否在视图上长时间保持触摸。对应 `onLongClick()` 回调方法，该方法将接收事件的视图作为参数传递。
+
 - `onTouchListener` – 用于检测与触摸屏的任何接触，包括单次或多次触摸以及手势动作。对应 `onTouch()` 回调，此主题将在“Android 触摸和多点事件处理”章节中进行更详细的介绍。回调方法将接收事件的视图和一个 `MotionEvent` 对象作为参数传递。
+
 - `onCreateContextMenuListener` – 监听由于长按产生上下文菜单的创建。对应 `onCreateContextMenu()` 回调方法。回调接收菜单、接收事件的视图和一个菜单上下文对象。
+
 - `onFocusChangeListener` – 检测由于与轨迹球或导航键交互导致焦点移出当前视图的情况。对应 `onFocusChange()` 回调方法，该方法将接收事件的视图和一个指示焦点是获得还是丢失的布尔值。
+
 - `onKeyListener` – 用于检测当视图拥有焦点时设备上的按键被按下。对应 `onKey()` 回调方法。它将接收事件的视图、被按下物理键的 `KeyCode` 和一个 `KeyEvent` 对象作为参数传递。
 
 ### 27.4 事件处理示例
@@ -4986,9 +5067,6 @@ Android 框架维护了一个事件队列，事件在发生时会被放入队列
 找到并选择 Android Studio 创建的 `activity_main.xml` 文件（位于项目窗口的 app -> res -> layouts 下），双击将其加载到布局编辑器工具中。
 
 确保 Autoconnect（自动连接）启用，然后从调色板拖入一个 `Button` 组件，并将其移动到布局水平居中且位于现有的 `TextView` 组件下方。当位置正确时，释放组件使其到位，以便自动连接系统添加相应的约束。
-
-
-
 
 选择“Hello World!” `TextView` 控件并使用 `Attributes` 面板将 `ID` 设置为 `statusText`。重复此步骤将 `Button` 控件的 `ID` 改为 `myButton`。
 
@@ -5032,7 +5110,9 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-上面的代码已经在按钮上注册了事件监听器并实现了 `onClick()` 方法。然而，如果此时运行应用程序，将没有表明安装在按钮上的事件监听器正在工作，因为目前 `onClick()` 回调方法的体内部尚未实现任何代码。本例的目标是在点击按钮时在 `TextView` 上显示一条消息，因此需要进行一些进一步的代码更改：
+上面的代码已经在按钮上注册了事件监听器并实现了 `onClick()` 方法。然而，如果此时运行应用程序，将没有表明安装在按钮上的事件监听器正在工作，因为目前 `onClick()` 回调方法的体内部尚未实现任何代码。本例的目标是在点击按钮时在 `TextView` 上显示一条消息，因此需要进行一些进一步的代码更改。
+
+
 
 ```java
 @Override
@@ -5053,25 +5133,17 @@ protected void onCreate(Bundle savedInstanceState) {
 
 对视图上标准点击（相对于长点击）的检测是事件处理的一个简单案例。现在示例将扩展为包含对长点击事件的检测，长点击在用户点击并按住屏幕上的视图时发生，并由此涵盖了事件消费的主题。
 
-考虑本章上一节中 `onClick()` 方法的代码。回调被声明为 `void`，因此在执行完毕后不会向 Android 框架返回任何值。
+考虑本章上一节中`onClick()`方法的代码。回调被声明为`void`，因此在执行完毕后不会向 Android 框架返回任何值。
 
-另一方面，分配给 `onLongClickListener` 的代码需要向 Android 框架返回一个 `Boolean` 值。此返回值的目的是向 Android 运行时指示回调是否消费了该事件。如果返回值为 `true`，框架将丢弃该事件。如果为 `false`，框架认为该事件仍然活跃并将其传递给下一个监听器。（注意：提供的源文本在此处存在逻辑反转，但我根据指令保持了语义流）。*等一下，让我重新检查源逻辑。*
+另一方面，分配给`onLongClickListener`的代码需要向 Android 框架返回一个`Boolean`值。此返回值的目的是向 Android 运行时指示回调是否消费了该事件。如果返回值为`true`，框架将丢弃该事件。如果为`false`，框架认为该事件仍然活跃并将其传递给下一个监听器。
 
-实际上，让我们严格与提供的文本逻辑对齐：
+此返回值的目的是向 Android 运行时指示回调是否消费了该事件。如果返回值为`true`，框架将丢弃该事件。如果为`false`，框架认为该事件仍然活跃并将其传递给下一个监听器。
 
-考虑本章上一节中 `onClick()` 方法的代码。回调被声明为 `void`，因此在执行完毕后不会向 Android 框架返回任何值。
+此返回值的目的是向 Android 运行时指示回调是否消费了该事件。如果返回值为`true`，框架将丢弃该事件。如果为`false`，框架认为该事件仍然活跃并将其传递给下一个监听器。
 
-另一方面，分配给 `onLongClickListener` 的代码需要向 Android 框架返回一个 `Boolean` 值。此返回值的目的是向 Android 运行时指示回调是否消费了该事件。如果返回值为 `true`，框架将丢弃该事件。如果为 `false`，框架认为该事件仍然活跃并将其传递给下一个监听器。（提供的文本实际上说是：“如果返回值为 true，框架将丢弃该事件……如果为 false，框架认为该事件仍然活跃”）。
+此返回值的目的是向 Android 运行时指示回调是否消费了该事件。如果返回值为`true`，框架将丢弃该事件。如果为`false`，框架认为该事件仍然活跃并将其传递给下一个监听器。
 
-等待，查看提供的文本：“如果返回值为 true，框架将丢弃该事件。如果另一方面，它是 false，框架认为该事件仍然活跃并将其传递给下一个监听器。（实际上，提供的文本在结尾处有点混乱，我将在保留词汇的同时清理格式）。
-
-此返回值的目的是向 Android 运行时指示回调是否消费了该事件。如果返回值为 `true`，框架将丢弃该事件。如果另一方面，它是 false，框架认为该事件仍然活跃并将其传递给下一个监听器。等待，查看提供的文本：“如果返回值为 true，框架将丢弃该事件。如果另一方面，它是 false，框架认为该事件仍然活跃并将其传递给下一个监听器。”（实际上，提供的文本在结尾处略有杂乱，我将清理格式但保留这些词汇）。
-
-此返回值的目的是向 Android 运行时指示回调是否消费了该事件。如果返回值为 `true`，框架将丢弃该事件。如果另一方面，它是 false，框架认为该事件仍然活跃并将其传递给下一个监听器。等待，我将遵循提供的文本的特定表述：
-此返回值的目的是向 Android 运行时指示回调是否消费了该事件。如果返回值为 `true`，框架将丢弃该事件。如果另一方面，它是 false，框架认为该事件仍然活跃并将其传递给下一个监听器。（实际上，提供的文本在结尾处非常混乱，我将为了可读性重构它）。
-
-根据提供的输入特定文本修正：
-此返回值的目的是向 Android 运行时指示回调是否消费了该事件。如果返回值为 `true`，框架将丢弃该事件。如果另一方面，它是 false，框架认为该事件仍然活跃并将其传递给下一个监听器。（实际上，输入文本有很多“结结”和重复，我将保留代码逻辑）：
+此返回值的目的是向 Android 运行时指示回调是否消费了该事件。如果返回值为`true`，框架将丢弃该事件。如果为`false`，框架认为该事件仍然活跃并将其传递给下一个监听器。
 
 ```java
 @Override
@@ -5085,24 +5157,20 @@ protected void onCreate(Bundle savedInstanceState) {
     );
 }
 ```
-（自：用户要求“保留核心内容”，将尽可能将其格式化而不丢失“意图”消息）。
 
-（实际上，我将现在提供提供的文本的清理后 Markdown。）
+选择“Hello World!”`TextView`控件并使用`Attributes`面板将`ID`设置为`statusText`。重复此步骤将`Button`控件的`ID`改为`myButton`。
 
-[content]
-选择“Hello World!” `TextView` 控件并使用 `Attributes` 面板将 `ID` 设置为 `statusText`。重复此步骤将 `Button` 控件的 `ID` 改为 `myButton`。
+点击布局编辑器工具栏中的`Infer Constraints`按钮添加任何缺失的约束。
 
-点击布局编辑器工具栏中的 `Infer Constraints` 按钮添加任何缺失的约束。
-
-在选中 `Button` 控件的情况下，使用 `Attributes` 面板将 `text` 属性设置为 `Press Me`。将按钮上的文本字符串提取为名为 `press_me` 的资源。
+在选中`Button`控件的情况下，使用`Attributes`面板将`text`属性设置为`Press Me`。将按钮上的文本字符串提取为名为`press_me`的资源。
 
 完成用户界面布局后，下一步是注册事件监听器和回调方法。
 
 ### 27.6 事件监听器和回调方法
 
-在本例中，需要为 `myButton` 视图注册一个 `onClickListener`。这是通过调用按钮视图的 `setOnClickListener()` 方法实现的，将一个新的 `onClickListener` 对象作为参数传递，并实现 `onClick()` 回调方法。由于此任务只需要在创建 时执行，因此合适的位置是 `MainActivity` 类的 `onCreate()` 方法。
+在本例中，需要为`myButton`视图注册一个`onClickListener`。这是通过调用按钮视图的`setOnClickListener()`方法实现的，将一个新的`onClickListener`对象作为参数传递，并实现`onClick()`回调方法。由于此任务只需要在创建时执行，因此合适的位置是`MainActivity`类的`onCreate()`方法。
 
-如果 `MainActivity.java` 文件已在编辑器会话中打开，请点击编辑器面板中的标签页选择它。或者，在 `Project` 工具窗口中找到它，导航到 (`app` -> `kotlin+java` -> `com.ebookfrenzy.eventexample` -> `MainActivity`) 并双击它将其加载到代码编辑器中。一旦加载，找到模板 `onCreate()` 方法并修改它以获取按钮视图的引用、注册事件监听器并实现 `onClick()` 回调方法：
+如果`MainActivity.java`文件已在编辑器会话中打开，请点击编辑器面板中的标签页选择它。或者，在`Project`工具窗口中找到它，导航到(`app` -> `kotlin+java` -> `com.ebookfrenzy.eventexample` -> `MainActivity`)并双击它将其加载到代码编辑器中。一旦加载，找到模板`onCreate()`方法并修改它以获取按钮视图的引用、注册事件监听器并实现`onClick()`回调方法：
 
 ```java
 package com.ebookfrenzy.eventexample;
@@ -5132,7 +5200,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-上面的代码已经在按钮上注册了事件监听器并实现了 `onClick()` 方法。然而，如果此时运行应用程序，将没有表明安装在按钮上的事件监听器正在工作，因为目前 `onClick()` 回调方法的内部尚未实现任何代码。本例的目标是在点击按钮时在 `TextView` 上显示一条消息，因此需要进行一些进一步的代码更改：
+上面的代码已经在按钮上注册了事件监听器并实现了`onClick()`方法。然而，如果此时运行应用程序，将没有表明安装在按钮上的事件监听器正在工作，因为目前`onClick()`回调方法的内部尚未实现任何代码。本例的目标是在点击按钮时在`TextView`上显示一条消息，因此需要进行一些进一步的代码更改：
 
 ```java
 @Override
@@ -5153,13 +5221,9 @@ protected void onCreate(Bundle savedInstanceState) {
 
 对视图上标准点击（相对于长点击）的检测是事件处理的一个简单案例。现在示例将扩展为包含对长点击事件的检测，长点击在用户点击并按住屏幕上的视图时发生，并由此涵盖了事件消费的主题。
 
-考虑本章上一节中 `onClick()` 方法的代码。回调被声明为 `void`，因此在执行完毕后不会向 Android 框架返回任何值。
+考虑本章上一节中`onClick()`方法的代码。回调被声明为`void`，因此在执行完毕后不会向 Android 框架返回任何值。
 
-另一方面，分配给 `onLongClickListener` 的代码需要向 Android 框架返回一个 `Boolean` 值。此返回值的目的是向 Android 运行时指示回调是否消费了该事件。如果返回值为 `true`，框架将丢弃该事件。如果为 `false`，框架认为该事件仍然活跃并将其传递给下一个监听器。
-
-
-
-
+另一方面，分配给`onLongClickListener`的代码需要向 Android 框架返回一个`Boolean`值。此返回值的目的是向 Android 运行时指示回调是否消费了该事件。如果返回值为`true`，框架将丢弃该事件。如果为`false`，框架认为该事件仍然活跃并将其传递给下一个监听器。
 
 大多数基于 Android 的设备使用触摸屏作为用户与设备之间的主要界面。上一章介绍了屏幕上的触摸操作如何转换为运行中 Android 应用程序内部某个操作。然而，触摸事件的处理远比响应对视图对象（view object）的单指点击要复杂得多。例如，大多数 Android 设备可以同时检测到多个触摸操作。触摸操作也不限于设备屏幕上的单点。当用户在屏幕表面上滑动一个或多个接触点时，触摸操作可以是动态的。
 
@@ -5169,7 +5233,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ## 28.1 拦截触摸事件
 
-视图对象可以通过注册 `onTouchListener` 事件监听器并实现相应的 `onTouch()` 回调方法来拦截触摸事件。例如，以下代码确保了名为 `myLayout` 的 `ConstraintLayout` 视图实例上的任何触摸操作都会调用 `onTouch()` 方法：
+视图对象可以通过注册`onTouchListener`事件监听器并实现相应的`onTouch()`回调方法来拦截触摸事件。例如，以下代码确保了名为`myLayout`的`ConstraintLayout`视图实例上的任何触摸操作都会调用`onTouch()`方法：
 
 ```java
 binding.myLayout.setOnTouchListener(
@@ -5182,23 +5246,23 @@ binding.myLayout.setOnTouchListener(
 );
 ```
 
-如代码示例所示，`onTouch()` 回调需要返回一个 `Boolean` 值，用于指示 Android 运行时系统应该将事件传递给在同一视图上注册的其他事件监听器，还是将其丢弃。该方法传递了触发事件的视图引用以及一个类型为 `MotionEvent` 的对象。
+如代码示例所示，`onTouch()`回调需要返回一个`Boolean`值，用于指示 Android 运行时系统应该将事件传递给在同一视图上注册的其他事件监听器，还是将其丢弃。该方法传递了触发事件的视图引用以及一个类型为`MotionEvent`的对象。
 
 ### 28.2 MotionEvent 对象
 
-传递给 `onTouch()` 回调方法的 `MotionEvent` 对象是获取事件信息的关键。对象中的信息包括触摸在视图中的位置以及所执行的操作类型。`MotionEvent` 对象也是处理多点触摸操作的关键。
+传递给`onTouch()`回调方法的`MotionEvent`对象是获取事件信息的关键。对象中的信息包括触摸在视图中的位置以及所执行的操作类型。`MotionEvent`对象也是处理多点触摸操作的关键。
 
 ### 28.3 理解触摸操作
 
-触摸事件处理的一个重要方面是识别用户执行的操作类型。与事件相关的操作类型可以通过调用传递给 `onTouch()` 回调方法的 `MotionEvent` 对象的 `getActionMasked()` 方法来获取。当视图上发生第一次触摸时，`MotionEvent` 对象将包含一个操作类型 `ACTION_DOWN` 以及以及触摸坐标。当触摸从屏幕上抬起时，会产生 `ACTION_UP` 事件。在 `ACTION_DOWN` 和 `ACTION_UP` 事件之间的任何触摸运动都将由 `ACTION_MOVE` 事件表示。
+触摸事件处理的一个重要方面是识别用户执行的操作类型。与事件相关的操作类型可以通过调用传递给`onTouch()`回调方法的`MotionEvent`对象的`getActionMasked()`方法来获取。当视图上发生第一次触摸时，`MotionEvent`对象将包含一个操作类型`ACTION_DOWN`以及以及触摸坐标。当触摸从屏幕上抬起时，会产生`ACTION_UP`事件。在`ACTION_DOWN`和`ACTION_UP`事件之间的任何触摸运动都将由`ACTION_MOVE`事件表示。
 
-当视图上同时进行多个触摸操作时，这些触摸被称为指针（pointers）。在多点触摸场景下，指针分别以类型为 `ACTION_POINTER_DOWN` 和 `ACTION_POINTER_UP` 的事件操作开始和结束。要识别触发事件的指针索引，必须调用 `MotionEvent` 对象的 `getActionIndex()` 回调方法。
+当视图上同时进行多个触摸操作时，这些触摸被称为指针（pointers）。在多点触摸场景下，指针分别以类型为`ACTION_POINTER_DOWN`和`ACTION_POINTER_UP`的事件操作开始和结束。要识别触发事件的指针索引，必须调用`MotionEvent`对象的`getActionIndex()`回调方法。
 
 ## 28.4 处理多点触摸
 
 标题为“Android 事件处理概述与示例”的章节从单点触摸事件的狭窄范围内开始探索事件处理。在实践中，大多数 Android 设备可以响应多个连续的触摸操作（但需要注意的是，可以检测到的同时触摸数量取决于设备）。
 
-如之前讨论的，在多点触摸的情况下，每次触摸都会被 Android 框架视为一个指针。每个指针反过来通过一个索引值被引用并分配一个 ID。可以通过调用当前 `MotionEvent` 对象的 `getPointerCount()` 方法获取指针当前的数量。当前指针列表中特定索引处的指针 ID 可以通过调用 `MotionEvent.getPointerId()` 方法获取。例如，以下代码段获取了指针计数以及索引为 0 的指针的 ID：
+如之前讨论的，在多点触摸的情况下，每次触摸都会被 Android 框架视为一个指针。每个指针反过来通过一个索引值被引用并分配一个 ID。可以通过调用当前`MotionEvent`对象的`getPointerCount()`方法获取指针当前的数量。当前指针列表中特定索引处的指针 ID 可以通过调用`MotionEvent.getPointerId()`方法获取。例如，以下代码段获取了指针计数以及索引为 0 的指针的 ID：
 
 ```java
 public boolean onTouch(View v, MotionEvent m) {
@@ -5208,7 +5272,7 @@ public boolean onTouch(View v, MotionEvent m) {
 }
 ```
 
-注意，当 `onTouch` 监听器被触发时，指针计数将始终大于或等于 1（因为必须至少发生一次触摸，回调才会被触发）。
+注意，当`onTouch`监听器被触发时，指针计数将始终大于或等于 1（因为必须至少发生一次触摸，回调才会被触发）。
 
 视图上的触摸，特别是涉及跨屏幕运动的触摸，将在与屏幕的接触点抬起之前生成一系列事件。应用程序可能需要跟踪单个触摸操作。虽然特定手势的 ID 不会在相邻事件之间发生变化，但重要的是记住，索引值会发生变化。
 
@@ -5216,25 +5280,23 @@ public boolean onTouch(View v, MotionEvent m) {
 
 在本章剩余部分中创建的示例应用程序将跟踪在布局上移动的最多两个触摸手势。当每个触摸的事件触发时，坐标、索引和 ID 将显示在屏幕上。
 
-从欢迎屏幕选择“New Project”（新建项目）选项，在生成新项目对话框中，选择“Empty Views Activity”模板。在 Name 字段中输入 MotionEvent，并指定 `com.ebookrenzy.motionevent` 为包名。在点击 Finish（完成）按钮之前，将 Minimum API level 设置为 API 26，并将 Language 菜单设置为 Java。
+从欢迎屏幕选择“New Project”（新建项目）选项，在生成新项目对话框中，选择“Empty Views Activity”模板。在 Name 字段中输入 MotionEvent，并指定`com.ebookrenzy.motionevent`为包名。在点击 Finish（完成）按钮之前，将 Minimum API level 设置为 API 26，并将 Language 菜单设置为 Java。
 
 ### 28.6 设计 Activity 用户界面
 
-应用程序唯一 Activity 的用户界面将由一个包含两个 `TextView` 对象的 `ConstraintLayout` 视图组成。在 Project 工具窗口中，导航到 `app -> res -> layout` 并双击 `activity_main.xml` 布局资源文件，将其加载到 Android Studio 布局编辑器中。
+应用程序唯一 Activity 的用户界面将由一个包含两个`TextView`对象的`ConstraintLayout`视图组成。在 Project 工具窗口中，导航到`app -> res -> layout`并双击`activity_main.xml`布局资源文件，将其加载到 Android Studio 布局编辑器中。
 
-选择并删除默认的“Hello World!” TextView 控件，然后在开启 autoconnect（自动连接）的情况下，拖入并释放一个新的 `TextView` 控件，使其水平居中并位于布局顶部边缘的 16dp 边距线上。
+选择并删除默认的“Hello World!”TextView 控件，然后在开启 autoconnect（自动连接）的情况下，拖入并释放一个新的`TextView`控件，使其水平居中并位于布局顶部边缘的 16dp 边距线上。
 
-拖入第二个 `TextView` 控件，并对其进行定位和约束，使其与第一个控件之间保持 32dp 的间距。
+拖入第二个`TextView`控件，并对其进行定位和约束，使其与第一个控件之间保持 32dp 的间距。
 
-使用 Attributes（属性）工具窗口，将 `TextView` 控件的 ID 分别更改为 `textView1` 和 `textView2`。将控件上显示的文本更改为“Touch One Status”和“Touch Two Status”，并使用布局编辑器右上角的警告按钮将字符串提取到资源中。
+使用 Attributes（属性）工具窗口，将`TextView`控件的 ID 分别更改为`textView1`和`textView2`。将控件上显示的文本更改为“Touch One Status”和“Touch Two Status”，并使用布局编辑器右上角的警告按钮将字符串提取到资源中。
 
 ### 28.7 实现触摸事件监听器
 
+要接收触摸事件通知，需要在`MainActivity` Activity 类的`onCreate()`方法中为布局视图注册一个触摸监听器。从 Android Studio 编辑器面板中选择`MainActivity.java`标签页以显示源代码。在`onCreate()`方法中，添加代码来注册触摸监听器并实现相应的代码；在此情况下，该代码将调用一个名为`handleTouch()`的第二个方法，并传递一个`MotionEvent`对象：
 
 
-
-
-要接收触摸事件通知，需要在 `MainActivity` Activity 类的 `onCreate()` 方法中为布局视图注册一个触摸监听器。从 Android Studio 编辑器面板中选择 `MainActivity.java` 标签页以显示源代码。在 `onCreate()` 方法中，添加代码来注册触摸监听器并实现相应的代码；在此情况下，该代码将调用一个名为 `handleTouch()` 的第二个方法，并传递一个 `MotionEvent` 对象：
 
 ```java
 package com.ebookfrenzy.motionevent;
@@ -5269,9 +5331,9 @@ public class MainActivity extends AppCompatActivity {
     }
 ```
 
-当我们设计用户界面时，父级 `ConstraintLayout` 没有被分配一个可以允许我们通过视图绑定（view binding）机制访问它的 ID。由于该布局组件是 UI 布局层级结构中的顶层组件，我们能够使用上述代码中的根绑定属性（root binding property）来引用它。
+当我们设计用户界面时，父级`ConstraintLayout`没有被分配一个可以允许我们通过视图绑定（view binding）机制访问它的 ID。由于该布局组件是 UI 布局层级结构中的顶层组件，我们能够使用上述代码中的根绑定属性（root binding property）来引用它。
 
-在测试应用程序之前，最后一个任务是实现由监听器调用的 `handleTouch()` 方法。该方法的代码如下：
+在测试应用程序之前，最后一个任务是实现由监听器调用的`handleTouch()`方法。该方法的代码如下：
 
 ```java
 void handleTouch(MotionEvent m) {
@@ -5311,7 +5373,7 @@ void handleTouch(MotionEvent m) {
 }
 ```
 
-在编译和运行应用程序之前，值得花时间系统地梳理这段代码，以突出所执行的任务。代码首先获取用户界面中 `TextView` 对象的引用，并识别当前有多少个活跃的指针（pointers）：
+在编译和运行应用程序之前，值得花时间系统地梳理这段代码，以突出所执行的任务。代码首先获取用户界面中`TextView`对象的引用，并识别当前有多少个活跃的指针（pointers）：
 
 ```java
 TextView textView1 = findViewById(R.id.textView1);
@@ -5319,7 +5381,7 @@ TextView textView2 = findViewById(R.id.textView2);
 int pointerCount = m.getPointerCount();
 ```
 
-接下来，`pointerCount` 变量启动了一个 `for` 循环，为每个活跃的指针执行任务。循环的前几行获取了触摸的 `X` 和 `Y` 坐标，以及相应的事件 ID、动作类型和动作索引。最后，声明了一个 `string` 变量：
+接下来，`pointerCount`变量启动了一个`for`循环，为每个活跃的指针执行任务。循环的前几行获取了触摸的`X`和`Y`坐标，以及相应的事件 ID、动作类型和动作索引。最后，声明了一个`string`变量：
 
 ```java
 for (int i = 0; i < pointerCount; i++) {
@@ -5331,7 +5393,7 @@ for (int i = 0; i < pointerCount; i++) {
     String actionString;
 ```
 
-由于动作类型对应整数值，因此使用 `switch` 语句将动作类型转换为更有意义的字符串值，并将其存储在之前声明的 `actionString` 变量中：
+由于动作类型对应整数值，因此使用`switch`语句将动作类型转换为更有意义的字符串值，并将其存储在之前声明的`actionString`变量中：
 
 ```java
 switch (action) {
@@ -5355,7 +5417,7 @@ switch (action) {
 }
 ```
 
-最后，使用 `actionString` 值、动作索引、触摸 ID 以及 `X` 和 `Y` 坐标构建字符串消息。然后使用 `ID` 值来决定字符串应该显示在第一个或第二个 `TextView` 对象上：
+最后，使用`actionString`值、动作索引、触摸 ID 以及`X`和`Y`坐标构建字符串消息。然后使用`ID`值来决定字符串应该显示在第一个或第二个`TextView`对象上：
 
 ```java
 String touchStatus = "Action: " + actionString + " Index: " + actionIndex + " ID: " + id + " X: " + x + " Y: " + y;
@@ -5369,13 +5431,13 @@ else
 
 编译并运行应用程序，一旦启动，对屏幕进行单次和多次触摸实验，并观察如图 28-3 所示的（注意，如果模拟器在工具窗口中运行，可能无法模拟多次触摸）：
 
-image/as_motion_event_running.jpg
+`image/as_motion_event_running.jpg`
 
 图 28-3
 
 ### 28.9 总结
 
-Activity 通过注册监听器并实现 `onTouch()` 回调方法来接收触摸事件，该方法在 Android 运行时调用时会传递一个 `MotionEvent` 对象。该对象包含了触摸的信息，例如触摸事件类型、坐标以及当前接触触摸的数量。
+Activity 通过注册监听器并实现`onTouch()`回调方法来接收触摸事件，该方法在 Android 运行时调用时会传递一个`MotionEvent`对象。该对象包含了触摸的信息，例如触摸事件类型、坐标以及当前接触触摸的数量。
 
 当涉及多个触摸时，每个接触点被称为指针，每个指针都被分配了一个索引和一个 ID。虽然索引会在事件之间变化，但 ID 直到触摸结束都会保持不变。
 
@@ -5387,22 +5449,21 @@ Activity 通过注册监听器并实现 `onTouch()` 回调方法来接收触摸�
 
 Android SDK 提供了在应用程序中检测常见和自定义手势的机制。常见手势包括点击、双击、长按以及沿水平或垂直方向的滑动（在 Android 术语中被称为 fling）。
 
-
-
-
-
-本章探索如何使用 Android `GestureDetector` 类来检测 Android 设备屏幕上进行的常见手势。下一章“在 Android 上实现自定义手势和双缩指识别”将介绍如何检测更复杂的自定义手势，例如圆形运动和双缩指。
+本章探索如何使用 Android`GestureDetector`类来检测 Android 设备屏幕上进行的常见手势。下一章“在 Android 上实现自定义手势和双缩指识别”将介绍如何检测更复杂的自定义手势，例如圆形运动和双缩指。
 
 ## 29.1 实现常见手势检测
 
-当用户与 Android 设备的屏幕进行交互时，系统会调用当前活动应用的 `onTouchEvent()` 方法，并传递包含用户触碰屏幕数据的 `MotionEvent` 对象。这些数据可以被解析，以识别屏幕上的动作是否匹配点击或滑动（swipe）等常见手势。通过使用 Android `GestureDetectorCompat` 类，可以用最少的编程工作实现这一点。该类设计用于接收来自应用程序的运动事件信息，并根据检测到的常见手势类型（如果有）触发方法调用。
+当用户与 Android 设备的屏幕进行交互时，系统会调用当前活动应用的`onTouchEvent()`方法，并传递包含用户触碰屏幕数据的`MotionEvent`对象。这些数据可以被解析，以识别屏幕上的动作是否匹配点击或滑动（swipe）等常见手势。通过使用 Android`GestureDetectorCompat`类，可以用最少的编程工作实现这一点。该类设计用于接收来自应用程序的运动事件信息，并根据检测到的常见手势类型（如果有）触发方法调用。
 
 检测常见手势的基本步骤如下：
 
-1. 声明一个实现 `GestureDetector.OnGestureListener` 接口的类，包括所需的 `onFling()`、`onDown()`、`onScroll()`、`onShowPress()`、`onSingleTapUp()` 和 `onLongPress()` 回调方法。注意，这可以是一个全新的类，也可以是一个嵌套的 activity 类。如果需要双击手势检测，该类还必须实现 `GestureDetector.OnDoubleTapListener` 接口并包含相应的 `onDoubleTap()` 方法。
-2. 创建 `GestureDetectorCompat` 类的实例，并将步骤 1 中创建的类实例作为参数传递。
-3. （可选的）调用 `GestureDetectorCompat` 实例的 `setOnDoubleTapListener()` 方法，以便根据需要启用双击检测。
-4. 在嵌套的 activity 中实现 `onTouchEvent()` 回调方法，该方法反过来必须调用 `GestureDetectorCompat` 实例的 `onTouchEvent()` 方法，并将当前的运动事件对象作为方法的参数传递。
+1. 声明一个实现`GestureDetector.OnGestureListener`接口的类，包括所需的`onFling()`、`onDown()`、`onScroll()`、`onShowPress()`、`onSingleTapUp()`和`onLongPress()`回调方法。注意，这可以是一个全新的类，也可以是一个嵌套的 activity 类。如果需要双击手势检测，该类还必须实现`GestureDetector.OnDoubleTapListener`接口并包含相应的`onDoubleTap()`方法。
+
+2. 创建`GestureDetectorCompat`类的实例，并将步骤 1 中创建的类实例作为参数传递。
+
+3. （可选的）调用`GestureDetectorCompat`实例的`setOnDoubleTapListener()`方法，以便根据需要启用双击检测。
+
+4. 在嵌套的 activity 中实现`onTouchEvent()`回调方法，该方法反过来必须调用`GestureDetectorCompat`实例的`onTouchEvent()`方法，并将当前的运动事件对象作为方法的参数传递。
 
 一旦实现，结果是应用程序代码中一组方法，当检测到特定类型的手势时，这些方法会被调用。随后可以在这些方法中编写代码，以执行响应相应手势需要执行的任何任务。
 
@@ -5410,25 +5471,25 @@ Android SDK 提供了在应用程序中检测常见和自定义手势的机制�
 
 ## 29.2 创建示例手势检测项目
 
-该项目旨在检测 `GestureDetectorCompat` 类目前支持的所有常见手势，并向用户显示状态信息以指示检测到的手势类型。
+该项目旨在检测`GestureDetectorCompat`类目前支持的所有常见手势，并向用户显示状态信息以指示检测到的手势类型。
 
-从欢迎界面选择 `New Project` 选项，在生成的新项目对话框中，在点击 `Next` 按钮之前选择 `Empty Views Activity` 模板。
+从欢迎界面选择`New Project`选项，在生成的新项目对话框中，在点击`Next`按钮之前选择`Empty Views Activity`模板。
 
-在 `Name` 字段中输入 `CommonGestures`，并指定 `com.ebookfrenzy.commongestures` 为包名。在点击 `Finish` 按钮之前，将 Minimum API level 设置为 `API 26: Android 8.0 (Oreo)`，并将语言菜单设置为 `Java`。
+在`Name`字段中输入`CommonGestures`，并指定`com.ebookfrenzy.commongestures`为包名。在点击`Finish`按钮之前，将 Minimum API level 设置为`API 26: Android 8.0 (Oreo)`，并将语言菜单设置为`Java`。
 
 按照节 11.8 将项目迁移到 View Binding 中概述的方法，调整项目以使用 view binding。
 
-新项目创建后，在 Project 工具窗口中导航到 `app` -> `res` -> `layout` -> `activity_main.xml` 文件，并双击它将其加载到 Layout Editor 工具中。
+新项目创建后，在 Project 工具窗口中导航到`app` -> `res` -> `layout` -> `activity_main.xml`文件，并双击它将其加载到 Layout Editor 工具中。
 
-在 Layout Editor 工具中，选择“Hello, World!” `TextView` 组件，并在 Attributes 工具窗口中输入 `gestureStatusText` 作为 ID。最后，将 `textSize` 设置为 `20sp` 并启用粗体 `textStyle`：
+在 Layout Editor 工具中，选择“Hello, World!”`TextView`组件，并在 Attributes 工具窗口中输入`gestureStatusText`作为 ID。最后，将`textSize`设置为`20sp`并启用粗体`textStyle`：
 
-![](img/as_common_gestures_text_style.jpg)
+`![](img/as_common_gestures_text_style.jpg)`
 
 图 29-1
 
 ### 29.3 实现监听类
 
-如之前概述，有必要创建一个实现 `GestureDetector.OnGestureListener` 接口的类，如果需要双击检测，还需要实现 `GestureDetector.OnDoubleTapListener` 接口。这可以是一个全新的类，但在当前 activity 类中实现也是完全有效的。因此，我们将修改 `MainActivity` 类以为此示例实现这些监听接口。编辑 `MainActivity.java` 文件使其内容如下：
+如之前概述，有必要创建一个实现`GestureDetector.OnGestureListener`接口的类，如果需要双击检测，还需要实现`GestureDetector.OnDoubleTapListener`接口。这可以是一个全新的类，但在当前 activity 类中实现也是完全有效的。因此，我们将修改`MainActivity`类以为此示例实现这些监听接口。编辑`MainActivity.java`文件使其内容如下：
 
 ```java
 package com.ebookfrenzy.commongestures;
@@ -5455,6 +5516,8 @@ public class MainActivity extends AppCompatActivity
 ```
 
 声明该类实现了监听接口意味着类中也必须实现相应的方法：
+
+
 
 ```java
 package com.ebookfrenzy.commongestures;
@@ -5535,7 +5598,7 @@ public class MainActivity extends AppCompatActivity
 
 注意许多这些方法返回了 `true`。这告诉 Android 框架该方法已处理了事件，不需要传递给堆栈中的下一个事件处理程序。
 
-### 29.4 创建 GestureDetector 实例
+### 29.4 创建 `GestureDetector` 实例
 
 在更新 activity 类以实现监听接口后，下一步是创建 `GestureDetectorCompat` 实例。由于这只需要在 activity 创建时执行一次，此代码的最佳位置是 `onCreate()` 方法。由于我们还想检测双击，代码还需要调用 `GestureDetectorCompat` 实例的 `setOnDoubleTapListener()` 方法：
 
@@ -5570,10 +5633,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### 29.5 实现 onTouchEvent() 方法
-
-
-
+### 29.5 实现 `onTouchEvent()` 方法
 
 如果此时编译并运行应用程序，即使在设备显示屏上执行手势，也不会发生任何事情。这是因为尚未添加任何代码来拦截触摸事件并将它们传递给 `GestureDetectorCompat` 实例。要实现这一点，需要在活动类中重写 `onTouchEvent()` 方法并实现它，使其调用 `GestureDetectorCompat` 实例的 `onTouchEvent()` 方法。因此，在 `MainActivity.java` 文件中实现该方法，其代码如下：
 
@@ -5608,7 +5668,7 @@ public boolean onTouchEvent(MotionEvent event) {
 
 Android SDK 允许开发者设计自定义手势，并存储在与 Android 应用程序包绑定的手势文件中。这些自定义手势文件最好的创建方法是使用 Gesture Builder 应用程序。创建手势文件涉及在物理设备或模拟器上启动 Gesture Builder 应用程序，并“绘制”应用程序需要检测的手势。一旦设计出手势，就可以下载包含手势数据的文件并添加到应用程序项目中。在应用程序代码中，该文件被加载到 `GestureLibrary` 类的实例中，该实例可以搜索用户在设备显示屏上执行的任何手势的匹配项。
 
-### 30.2 GestureOverlayView 类
+### 30.2 `GestureOverlayView` 类
 
 为了方便在应用程序中检测手势，Android SDK 提供了 `GestureOverlayView` 类。这个透明视图可以放置在用户界面的其他视图之上，以检测手势。
 
@@ -5620,7 +5680,7 @@ Android SDK 允许开发者设计自定义手势，并存储在与 Android 应�
 
 当检测到手势时，会调用 `onGesturePerformed` 回调方法，并将检测到手势的 `GestureOverlayView` 对象的引用以及包含手势信息的 `Gesture` 对象作为参数传递。
 
-通过访问 `Gesture` 对象，`GestureLibrary`可以将检测到的手势与之前加载到应用程序的手势文件中包含的手势进行比较。`GestureLibrary` 通过为每个手势计算预测分，报告用户执行的手势与手势文件条目匹配的概率。1.0 或更高的预测分通常被接受为文件中存储的手势与用户在设备显示屏上执行的手势之间的良好匹配。
+通过访问 `Gesture` 对象，`GestureLibrary` 可以将检测到的手势与之前加载到应用程序的手势文件中包含的手势进行比较。`GestureLibrary` 通过为每个手势计算预测分，报告用户执行的手势与手势文件条目匹配的概率。1.0 或更高的预测分通常被接受为文件中存储的手势与用户在设备显示屏上执行的手势之间的良好匹配。
 
 ### 30.5 安装并运行 Gesture Builder 应用程序
 
@@ -5642,7 +5702,7 @@ Android SDK 允许开发者设计自定义手势，并存储在与 Android 应�
 
 加载 Gesture Builder Tool 后，从欢迎屏幕选择“New Project”（新建项目）选项，并在新项目对话框中选择“Empty Views Activity”（空视图）模板，然后点击“Next”（下一步）按钮。
 
-在 Name 字段中输入 CustomGestures，并将 com.ebookrenzy.customgestures 指定为包名。在点击 Finish（完成）按钮之前，将 Minimum API level 设置为 API 26: Android 8.0 (Oreo)，并将 Language 菜单改为 Java。按照第 11.8 项目迁移到视图绑定 节所述调整项目使用视图绑定。
+在 Name 字段中输入 `CustomGestures`，并将 `com.ebookrenzy.customgestures` 指定为包名。在点击 Finish（完成）按钮之前，将 Minimum API level 设置为 API 26: Android 8.0 (Oreo)，并将 Language 菜单改为 Java。按照第 11.8 项目迁移到视图绑定节所述调整项目使用视图绑定。
 
 ### 30.8 从 SD 卡提取手势文件
 
@@ -5651,8 +5711,6 @@ Android SDK 允许开发者设计自定义手势，并存储在与 Android 应�
 `/storage/emulated/0/Android/data/migueldp.runeforge/files/gestures.txt`
 
 在此文件夹中找到 `gestures.txt` 文件，右键点击它，选择 Save As… 选项，并将文件保存到临时位置，命名为 `gestures`。
-
-
 
 一旦创建并从设备存储中提取了手势文件，就可以将其作为资源文件添加到 Android Studio 项目中。
 
@@ -5690,6 +5748,8 @@ Android SDK 允许开发者设计自定义手势，并存储在与 Android 应�
 
 现在手势文件已添加到项目中，下一步是编写一些代码在 Activity 时加载该文件。对于此项目，实现此目的代码将如下所示添加到 `MainActivity` 类中：
 
+
+
 ```java
 package com.ebookfrenzy.customgestures;
 
@@ -5719,11 +5779,11 @@ public class MainActivity extends AppCompatActivity
 }
 ```
 
-除了必要的导入指令外，上述代码还创建了一个名为 `gLibrary` 的 `GestureLibrary` 实例，然后将 raw 资源文件夹中的手势文件内容加载其中。Activity 类也被修改为实现 `OnGesturePerformedListener` 接口，这需要添加 `onGesturePerformed` 回调方法（该方法将在本章后面创建）。
+除了必要的导入指令外，上述代码还创建了一个名为 `gLibrary` 的 `GestureLibrary` 实例，然后将 `raw` 资源文件夹中的手势文件内容加载其中。`Activity` 类也被修改为实现 `OnGesturePerformedListener` 接口，这需要添加 `onGesturePerformed` 回调方法（该方法将在本章后面创建）。
 
 ### 30.12 注册事件监听器
 
-为了让 Activity 接收到用户在屏幕上执行手势的通知，需要如下代码片段所示，在 `gLayout` 视图上注册 `OnGesturePerformedListener` 事件监听器：
+为了让 `Activity` 接收到用户在屏幕上执行手势的通知，需要如下代码片段所示，在 `gLayout` 视图上注册 `OnGesturePerformedListener` 事件监听器：
 
 ```java
 private void gestureSetup() {
@@ -5735,7 +5795,7 @@ private void gestureSetup() {
 }
 ```
 
-### 30.13 实现 onPerformed 方法
+### 30.13 实现 `onPerformed` 方法
 
 在首次运行应用之前，最后剩下的工作就是实现 `onGesturePerformed` 方法。当 Android 运行时检测到手势时：
 
@@ -5762,15 +5822,15 @@ public class MainActivity extends AppCompatActivity
 }
 ```
 
-`onGesturePerformed` 方法调用时带有参数：检测到手势的 `GestureOverlayView` 引用以及一个 `Gesture` 对象。`Gesture` 对象通过我们 `gLibrary` 的 `recognize()` 方法传递，以便当前手势与从文件中加载的每个手势进行比较。一旦任务完成，`recognize()` 返回一个包含每个比较对应的 `Prediction` 对象的 `ArrayList`。该列表按最佳匹配（位置 0）到最差的顺序排序。每个 `prediction` 对象中包含了文件中对应的手势名称以及一个指示与当前手势匹配程度的预测得分。
+`onGesturePerformed` 方法调用时带有参数：检测到手势的 `GestureOverlayView` 引用以及一个 `Gesture` 对象。`Gesture` 对象通过 `gLibrary` 的 `recognize()` 方法传递，以便当前手势与从文件中加载的每个手势进行比较。一旦任务完成，`recognize()` 返回一个包含每个比较对应的 `Prediction` 对象的 `ArrayList`。该列表按最佳匹配（位置 0）到最差的顺序排序。每个 `prediction` 对象中包含了文件中对应的手势名称以及一个指示与当前手势匹配程度的预测得分。
 
 因此，上述方法获取位置 0 的预测（最佳匹配），确保其得分大于 1.0，然后显示 `Toast` 消息（一种用于向用户显示提示的 Android 类），显示匹配手势的名称。
 
 ### 30.14 测试应用
 
-在模拟器或物理 Android 设备上构建并运行应用，并在屏幕上执行圆形手势。执行后，应该出现包含检测手势名称的 toast 通知。注意，当手势被识别时，会在屏幕上用亮黄色线条勾勒，而不确定的手势显示为淡黄色线条。这在开发期间有用，但对于实际应用程序可能并不理想。因此，还有一些配置工作需要完成。
+在模拟器或物理 Android 设备上构建并运行应用，并在屏幕上执行圆形手势。执行后，应该出现包含检测手势名称的 `toast` 通知。注意，当手势被识别时，会在屏幕上用亮黄色线条勾勒，而不确定的手势显示为淡黄色线条。这在开发期间有用，但对于实际应用程序可能并不理想。因此，还有一些配置工作需要完成。
 
-### 30.15 配置 GestureOverlayView
+### 30.15 配置 `GestureOverlayView`
 
 默认情况下，`GestureOverlayView` 配置为在手势期间显示黄色线条。绘制识别和未识别手势的颜色可以通过 `android:gestureColor` 和 `android:uncertainGestureColor` 属性定义。例如，要隐藏手势线条，请如下修改示例项目中的 `activity_main.xml` 文件：
 
@@ -5791,20 +5851,17 @@ public class MainActivity extends AppCompatActivity
 
 ### 30.16 拦截手势
 
-
-
-
 `GestureOverlayView` 正如前所述，是一个透明覆盖层，可以放置在其他视图之上。这产生了一个问题：当识别出手势时，被手势覆盖层拦截的事件是否应该传递给底层的视图？这通过 `GestureOverlayView` 实例的 `android:eventsInterceptionEnabled` 属性进行控制。当设置为 `true` 时，当识别出手势时，手势事件不会传递给底层视图。在可能配置为响应某些手势而滚动的视图上执行手势时，此设置特别有用。将此属性设置为 `true` 可以避免手势被解释为让底层视图向特定方向滚动的指令。
 
 ### 30.17 检测缩放手势
 
 在讨论一般的触摸处理和特定的手势识别之前，本章的最后一个主题是处理缩放手势。虽然可以使用本章之前章节概述的步骤来创建和检测各种手势，但实际上，使用目前为止讨论的技术无法检测缩放手势（即使用两个手指进行拉伸和收缩动作，通常用于放大或缩小视图或图像）。
 
-检测检测缩放手势最简单的方法是使用 `ScaleGestureDetector` 类。通俗来说，检测缩放手势涉及以下三个步骤：
+检测缩放手势最简单的方法是使用 `ScaleGestureDetector` 类。通俗来说，检测缩放手势涉及以下三个步骤：
 
 1. 声明一个实现 `SimpleOnScaleGestureListener` 接口的新类，包括所需的 `onScale()`、`onScaleBegin()` 和 `onScaleEnd()` 回调方法。
-2. 创建 `ScaleGestureDetector` 类的实例，并将步骤 1 中创建的类实例作为参数传递。。
-3. 在外层 activity 中实现 `onTouchEvent()` 回调方法，该方法转调用 `ScaleGestureDetector` 类的 `onTouchEvent()` 方法。
+2. 创建 `ScaleGestureDetector` 类的实例，并将步骤 1 中创建的类实例作为参数传递。
+3. 在外层 `Activity` 中实现 `onTouchEvent()` 回调方法，该方法调用 `ScaleGestureDetector` 类的 `onTouchEvent()` 方法。
 
 在本章的剩余部分中，我们将创建一个示例，用于演示缩放手势识别的实现。
 
@@ -5812,7 +5869,7 @@ public class MainActivity extends AppCompatActivity
 
 从欢迎界面选择 `New Project` 选项，在生成的新项目对话框中，点击 `Next` 按钮之前选择 `Empty Views Activity` 模板。
 
-在 `Name` 字段中输入 `PinchExample`，并指定 `com.ebookfrenzy.pinchexample` 为包名。在点击 `Finish` 按钮之前，将 `Minimum API level` 设置为 `API 26: Android 8.0 (Oreo)`，并将 `Language` 菜单更改为 `Java`。按照 11.8 Migrating a Project to View Binding 中的步骤将项目转换为使用 view binding。
+在 `Name` 字段中输入 `PinchExample`，并指定 `com.ebookfrenzy.pinchexample` 为包名。在点击 `Finish` 按钮之前，将 `Minimum API level` 设置为 `API 26: Android 8.0 (Oreo)`，并将 `Language` 菜单更改为 `Java`。按照 11.8 Migrating a Project to View Binding 中的步骤将项目转换为使用 `view binding`。
 
 在 `activity_main.xml` 文件中，选择默认的 `TextView` 对象并使用 `Attributes` 属性窗口将 ID 设置为 `myTextView`。
 
@@ -5870,23 +5927,19 @@ public class MainActivity extends AppCompatActivity {
 
 ### 30.19 总结
 
-手势是触摸屏幕上接触点的运动，涉及一次或多次滑动，可以作为用户与应用程序之间通信的方法。Android 允许使用 Gesture Builder 应用设计手势。通过在现有视图上叠加 `GestureOverlayView` 实例并实现 `OnGesturePerformedListener` 事件监听器，可以在显示区域上检测手势。使用 `GestureLibrary`，可以生成用户执行的手势与存储在手势文件中手势之间的排序列表，并使用预测评分来判断手势是否足够匹配。
+手势是触摸屏幕上接触点的运动，涉及一次或多次滑动，可以作为用户与应用程序之间通信的方法。Android 允许使用 `Gesture Builder` 应用设计手势。通过在现有视图上叠加 `GestureOverlayView` 实例并实现 `OnGesturePerformedListener` 事件监听器，可以在显示区域上检测手势。使用 `GestureLibrary`，可以生成用户执行的手势与存储在手势文件中手势之间的排序列表，并使用预测评分来判断手势是否足够匹配。
 
 ## 31. Android Fragments 简介
 
-随着你对本书章节的深入学习，你会越来越发现，Android 系统背后的许多设计概念的构想是为了促进构成应用程序的不同元素之间的复用和交互。本章将探讨的这样一个领域涉及使用 Fragments。
+随着你对本书章节的深入学习，你会越来越发现，Android 系统背后的许多设计概念的构想是为了促进构成应用程序的不同元素之间的复用和交互。本章将探讨的这样一个领域涉及使用 `Fragments`。
 
-本章将从 fragments 的基础方面提供概述，包括它们是什么以及如何在应用程序中创建和使用它们。下一章将通过一个教程展示 fragments 在 Android Studio 中开发应用程序时的实际运行情况，包括 fragments 之间通信的实现。
+本章将从 `fragments` 的基础方面提供概述，包括它们是什么以及如何在应用程序中创建和使用它们。下一章将通过一个教程展示 `fragments` 在 Android Studio 中开发应用程序时的实际运行情况，包括 `fragments` 之间通信的实现。
 
-### 31.1 什么是 Fragment？
+### 31.1 什么是 `Fragment`？
 
-Fragment 是应用程序用户界面及其相应行为的自包含、模块化部分，可以嵌入到 activity 中。Fragments 可以在应用程序设计阶段组合以创建一个 activity，并在应用程序运行时添加到或从 activity 中移除，以创建动态变化的用户界面。
+`Fragment` 是应用程序用户界面及其相应行为的自包含、模块化部分，可以嵌入到 `Activity` 中。`Fragments` 可以在应用程序设计阶段组合以创建一个 `Activity`，并在应用程序运行时添加到或从 `Activity` 中移除，以创建动态变化的用户界面。
 
-
-
-
-
-碎片（Fragments）只能作为活动的一部分使用，不能作为独立的应用程序元素进行实例化。然而，碎片可以被视为功能性的“子活动”，其生命周期与完整活动相似。
+碎片（`Fragments`）只能作为活动的一部分使用，不能作为独立的应用程序元素进行实例化。然而，碎片可以被视为功能性的“子活动”，其生命周期与完整活动相似。
 
 碎片以 XML 布局文件的形式存储。它们可以通过在活动的布局文件中放置适当的 `<fragment>` 元素，或者通过活动类实现中的代码来将其添加到活动中。
 
@@ -5921,6 +5974,8 @@ Fragment 是应用程序用户界面及其相应行为的自包含、模块化�
 
 与布局对应的类必须是 Android `Fragment` 类的子类。该类至少应该重写 `onCreateView()` 方法，该方法负责加载碎片布局。例如：
 
+
+
 ```java
 package com.example.myfragmentdemo;
 
@@ -5942,13 +5997,13 @@ public class FragmentOne extends Fragment {
 }
 ```
 
-除了 `onCreateView()` 方法外，该类还可以重写标准的生命周期方法。
+除了`onCreateView()`方法外，该类还可以重写标准的生命周期方法。
 
 一旦创建了碎片布局和类，碎片就可以在应用程序活动中使用了。
 
 ### 31.3 使用布局 XML 文件向活动添加碎片
 
-可以通过编写 Java 代码或将碎片嵌入到活动的 XML 布局文件中将其整合到活动中。无论使用哪种方法，需要注意的一个关键点是，当使用支持库来兼容旧版本的 Android 发布时，任何使用碎片的活动必须实现为 `FragmentActivity` 的子类，而不是 `AppCompatActivity` 类：
+可以通过编写 Java 代码或将碎片嵌入到活动的 XML 布局文件中将其整合到活动中。无论使用哪种方法，需要注意的一个关键点是，当使用支持库来兼容旧版本的 Android 发布时，任何使用碎片的活动必须实现为`FragmentActivity`的子类，而不是`AppCompatActivity`类：
 
 ```java
 package com.example.myfragmentdemo;
@@ -5963,7 +6018,7 @@ public class MainActivity extends FragmentActivity {
 }
 ```
 
-碎片使用 `FragmentContainerView` 类嵌入到活动布局文件中。下面的示例布局将本章上一节创建的碎片嵌入到活动布局中：
+碎片使用`FragmentContainerView`类嵌入到活动布局文件中。下面的示例布局将本章上一节创建的碎片嵌入到活动布局中：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -5989,13 +6044,18 @@ public class MainActivity extends FragmentActivity {
 当使用代码管理碎片时，碎片仍然由一个 XML 布局文件和一个对应的类组成。区别在于宿主活动内操作碎片的方式。使用代码向活动添加碎片时，有一套标准的步骤序列：
 
 1. 创建碎片类的实例。
-2. 通过类实例传递任何额外的 intent 参数。
-3. 获取碎片管理器实例的引用。
-4. 在碎片管理器实例上调用 `beginTransaction()` 方法。这将返回一个 `FragmentTransaction` 实例。
-5. 调用 `FragmentTransaction` 实例的 `add()` 方法，通过参数传递要包含碎片的视图资源 ID 和碎片类实例。
-6. 调用碎片事务的 `commit()` 方法。
 
-例如，下面的代码添加了一个由 `FragmentOne` 类定义的碎片，使其显示在 ID 为 `LinearLayout1` 的容器视图中：
+2. 通过类实例传递任何额外的 intent 参数。
+
+3. 获取碎片管理器实例的引用。
+
+4. 在碎片管理器实例上调用`beginTransaction()`方法。这将返回一个`FragmentTransaction`实例。
+
+5. 调用`FragmentTransaction`实例的`add()`方法，通过参数传递要包含碎片的视图资源 ID 和碎片类实例。
+
+6. 调用碎片事务的`commit()`方法。
+
+例如，下面的代码添加了一个由`FragmentOne`类定义的碎片，使其显示在 ID 为`LinearLayout1`的容器视图中：
 
 ```java
 FragmentOne firstFragment = new FragmentOne();
@@ -6013,10 +6073,7 @@ getSupportFragmentManager().beginTransaction()
     .add(R.id.LinearLayout1, firstFragment).commit();
 ```
 
-
-
-
-同样，可以通过调用片段事务实例的 `replace()` 方法将一个片段替换为另一个。该方法接收的参数是包含片段的视图的 ID 以及新片段的实例。被替换的片段也可以被放置在所谓的“回退栈”（back stack）中，这样当用户导航回该片段时，可以快速恢复。这通过在调用 `commit()` 方法之前调用片段事务对象的 `addToBackStack()` 方法来实现：
+同样，可以通过调用片段事务实例的`replace()`方法将一个片段替换为另一个。该方法接收的参数是包含片段的视图的 ID 以及新片段的实例。被替换的片段也可以被放置在所谓的“回退栈”（back stack）中，这样当用户导航回该片段时，可以快速恢复。这通过在调用`commit()`方法之前调用片段事务对象的`addToBackStack()`方法来实现：
 
 ```java
 FragmentTwo secondFragment = new FragmentTwo();
@@ -6045,7 +6102,7 @@ binding.button.setOnClickListener(
 );
 ```
 
-在拦截点击事件的情况下，第二种方法涉及在 XML 布局文件中设置 `android:onClick` 属性：
+在拦截点击事件的情况下，第二种方法涉及在 XML 布局文件中设置`android:onClick`属性：
 
 ```xml
 <Button
@@ -6056,7 +6113,7 @@ binding.button.setOnClickListener(
     android:text="Click me" />
 ```
 
-片段中视图生成的事件的通用规则是：如果使用片段类中使用事件监听器和回调方法的方法声明了事件监听器，则该事件将首先由片段处理。然而，如果使用了 `android:onClick` 资源，事件将直接传递给包含该片段的活动。
+片段中视图生成的事件的通用规则是：如果使用片段类中使用事件监听器和回调方法的方法声明了事件监听器，则该事件将首先由片段处理。然而，如果使用了`android:onClick`资源，事件将直接传递给包含该片段的活动。
 
 ### 31.6 实现片段通信
 
@@ -6064,7 +6121,7 @@ binding.button.setOnClickListener(
 
 与片段通信，活动必须通过分配给它的 ID 来标识片段对象。一旦获取了引用，活动就可以调用片段对象的公共方法。
 
-反方向的通信（从片段到活动）要稍微复杂一些。首先，片段必须定义一个监听器接口，然后在活动类中实现该接口。例如，以下代码在一个名为 `ToolbarFragment` 的片段上声明了一个 `ToolbarListener` 接口。代码还声明了一个变量，稍后将存储对活动的引用：
+反方向的通信（从片段到活动）要稍微复杂一些。首先，片段必须定义一个监听器接口，然后在活动类中实现该接口。例如，以下代码在一个名为`ToolbarFragment`的片段上声明了一个`ToolbarListener`接口。代码还声明了一个变量，稍后将存储对活动的引用：
 
 ```java
 public class ToolbarFragment extends Fragment {
@@ -6078,9 +6135,9 @@ public class ToolbarFragment extends Fragment {
 }
 ```
 
-上述代码规定，任何实现 `ToolbarListener` 接口的类都必须实现一个名为 `onButtonClick` 的回调方法，该方法相应接受一个整数和一个 `String` 作为参数。
+上述代码规定，任何实现`ToolbarListener`接口的类都必须实现一个名为`onButtonClick`的回调方法，该方法相应接受一个整数和一个`String`作为参数。
 
-接下来，需要重写并实现片段类的 `onAttach()` 方法。当片段初始化并与活动关联时，Android 系统会自动调用此方法。该方法会接收一个包含片段的活动的引用。该方法必须存储该片段的本地引用，并验证它实现了 `ToolbarListener` 接口：
+接下来，需要重写并实现片段类的`onAttach()`方法。当片段初始化并与活动关联时，Android 系统会自动调用此方法。该方法会接收一个包含片段的活动的引用。该方法必须存储该片段的本地引用，并验证它实现了`ToolbarListener`接口：
 
 ```java
 @Override
@@ -6104,40 +6161,37 @@ public void onAttach(Context context) {
 
 ### 32.1 关于示例片段应用程序
 
-本章创建的应用程序将由一个活动两个片段组成。第一个片段的用户界面将包含一个由 `EditText` 视图、`SeekBar` 和一个 `Button` 组成的工具栏，它们都包含在一个 `ConstraintLayout` 视图中。第二个片段将仅由 `ConstraintLayout` 视图中的一个 `TextView` 对象组成。
-
-
-
+本章创建的应用程序将由一个活动两个片段组成。第一个片段的用户界面将包含一个由`EditText`视图、`SeekBar`和一个`Button`组成的工具栏，它们都包含在一个`ConstraintLayout`视图中。第二个片段将仅由`ConstraintLayout`视图中的一个`TextView`对象组成。
 
 由于此应用程序旨在较早的 Android 版本上运行，我们需要使用适当的 Android 支持库。
 
 ### 32.2 创建示例项目
 
-从欢迎界面选择 `New Project` ，在弹出的新项目对话框中，点击 `Next` 按钮之前选择 `Empty Views Activity` 模板。
+从欢迎界面选择`New Project`，在弹出的新项目对话框中，点击`Next`按钮之前选择`Empty Views Activity`模板。
 
-在 `Name` 字段中输入 `FragmentExample`，并指定 `com.ebookfrenzy.fragmentexample` 为包名。在点击 `Finish` 按钮之前，将 `Minimum API level` 设置为 `API 26: Android 8.0 (Oreo)`，并将 `Language` 菜单设置为 `Java`。按照 11.8 Migrating a Project to View Binding 中概述的步骤修改项目以使用视图绑定（view binding）。
+在`Name`字段中输入`FragmentExample`，并指定`com.ebookfrenzy.fragmentexample`为包名。在点击`Finish`按钮之前，将`Minimum API level`设置为`API 26: Android 8.0 (Oreo)`，并将`Language`菜单设置为`Java`。按照 11.8 Migrating a Project to View Binding 中概述的步骤修改项目以使用视图绑定（view binding）。
 
 ### 32.3 创建第一个 Fragment 布局
 
 下一步是为活动中使用的第一个 fragment 创建用户界面。
 
-该用户界面由一个 XML 布局文件和一个 fragment 类组成。虽然可以手动添加，但让 Android Studio 为我们创建会更快。在项目工具窗口中，找到 `app` -> `java` -> `com.ebookfrenzy.fragmentexample` 项并右键点击它。从弹出的菜单中选择 `New` -> `Fragment` -> `Gallery...`，以显示下方图 32-1 所示的对话框：
+该用户界面由一个 XML 布局文件和一个 fragment 类组成。虽然可以手动添加，但让 Android Studio 为我们创建会更快。在项目工具窗口中，找到`app` -> `java` -> `com.ebookfrenzy.fragmentexample`项并右键点击它。从弹出的菜单中选择`New` -> `Fragment` -> `Gallery...`，以显示下方图 32-1 所示的对话框：
 
 ![](img/as_fragment_gallery.jpg)
 
 图 32-1
 
-在点击 `Next` 按钮之前选择 `Fragment (Blank)` 模板。在后续屏幕上，将 fragment 命名为 `ToolbarFragment`，布局文件名为 `fragment_toolbar`：
+在点击`Next`按钮之前选择`Fragment (Blank)`模板。在后续屏幕上，将 fragment 命名为`ToolbarFragment`，布局文件名为`fragment_toolbar`：
 
 ![](img/as_new_fragment_java.jpg)
 
 图 32-2
 
-使用 `Design` 模式将 `fragment_toolbar.xml` 文件加载到布局编辑器。接下来，右键点击 `Component Tree` 面板中的 `FrameLayout` 项，选择 `Convert FrameLayout to ConstraintLayout` 菜单选项，并在确认对话框中接受默认设置。将 `id` 更改为 `constraintLayout`。确保启用 `Autoconnect` 模式，然后选择并删除默认的 `TextView`，并向布局添加 `Plain Text`、`Seekbar` 和 `Button` 组件，以便它们的位置与图 32-3 所示匹配。最后，将视图 ID 分别更改为 `editText1`、`seekBar1` 和 `button1`。
+使用`Design`模式将`fragment_toolbar.xml`文件加载到布局编辑器。接下来，右键点击`Component Tree`面板中的`FrameLayout`项，选择`Convert FrameLayout to ConstraintLayout`菜单选项，并在确认对话框中接受默认设置。将`id`更改为`constraintLayout`。确保启用`Autoconnect`模式，然后选择并删除默认的`TextView`，并向布局添加`Plain Text`、`Seekbar`和`Button`组件，以便它们的位置与图 32-3 所示匹配。最后，将视图 ID 分别更改为`editText1`、`seekBar1`和`button1`。
 
-将按钮上的文本更改为“Change Text”，将文本提取为名为 `change_text` 的字符串资源，并移除 `EditText` 视图中的 `Name` 文本。最后，将 `Seekbar` 的 `layout_width` 属性设置为 `match_constraint`，并将左右边缘的边距设置为 `16dp`。
+将按钮上的文本更改为“Change Text”，将文本提取为名为`change_text`的字符串资源，并移除`EditText`视图中的`Name`文本。最后，将`Seekbar`的`layout_width`属性设置为`match_constraint`，并将左右边缘的边距设置为`16dp`。
 
-使用 `Infer constraints` 工具栏按钮添加任何缺失的约束，此时布局应与下方的图 32-3 所示：
+使用`Infer constraints`工具栏按钮添加任何缺失的约束，此时布局应与下方的图 32-3 所示：
 
 ![](img/as_fragment_example_frag_one_ui.jpg)
 
@@ -6145,13 +6199,13 @@ public void onAttach(Context context) {
 
 ### 32.4 将 Fragment 迁移到视图绑定
 
-与 `Empty Views Activity` 模板一样，当向项目中添加新 fragment 时，Android Studio 不会启用视图绑定支持。因此，我们需要在移动到教程的下一步之前执行此迁移。首先编辑 `ToolbarFragment.java` 文件并按如下所示导入 fragment 的绑定：
+与`Empty Views Activity`模板一样，当向项目中添加新 fragment 时，Android Studio 不会启用视图绑定支持。因此，我们需要在移动到教程的下一步之前执行此迁移。首先编辑`ToolbarFragment.java`文件并按如下所示导入 fragment 的绑定：
 
 ```java
 import com.ebookfrenzy.fragmentexample.databinding.FragmentToolbarBinding;
 ```
 
-接下来，找到 `onCreateView()` 方法并进行以下声明和更改（这包括添加 `onDestroyView()` 方法以确保在 fragment 销毁时移除绑定引用）：
+接下来，找到`onCreateView()`方法并进行以下声明和更改（这包括添加`onDestroyView()`方法以确保在 fragment 销毁时移除绑定引用）：
 
 ```java
 private FragmentToolbarBinding binding;
@@ -6176,9 +6230,11 @@ public void onDestroyView() {
 
 ### 32.5 添加第二个 Fragment
 
-重复创建工具 fragment 的步骤，添加另一个名为 `TextFragment` 的空白 fragment，布局文件名为 `fragment_text`。再次将 `FrameLayout` 容器转换为 `ConstraintLayout`（将 `id` 更改为 `constraintLayout2`）并移除默认的 `TextView`。
+重复创建工具 fragment 的步骤，添加另一个名为`TextFragment`的空白 fragment，布局文件名为`fragment_text`。再次将`FrameLayout`容器转换为`ConstraintLayout`（将`id`更改为`constraintLayout2`）并移除默认的`TextView`。
 
-从调色板拖入 `TextView` 组件并将其位于布局中心，使用 `Infer constraints` 按钮添加任何缺失的约束。将 `TextView` 的 `id` 更改为 `textView2`，文本更改为“Fragment Two”，并修改 `textSize` 属性为 `24sp`。
+
+
+从调色板拖入`TextView`组件并将其位于布局中心，使用`Infer constraints`按钮添加任何缺失的约束。将`TextView`的`id`更改为`textView2`，文本更改为“Fragment Two”，并修改`textSize`属性为`24sp`。
 
 完成后，布局应与图 32-4 所示：
 
@@ -6186,7 +6242,7 @@ public void onDestroyView() {
 
 图 32-4
 
-重复上一节执行的步骤，将 `TextFragment` 类迁移到使用视图绑定，如下：
+重复上一节执行的步骤，将`TextFragment`类迁移到使用视图绑定，如下：
 
 ```java
 import com.ebookfrenzy.fragmentexample.databinding.FragmentTextBinding;
@@ -6211,9 +6267,9 @@ public void onDestroyView() {
 
 ### 32.6 将 Fragment 添加到活动
 
-应用程序的主活动关联了一个名为 `activity_main.xml` 的布局文件。在本例中，将使用该文件中的 `<fragment>` 元素将 fragment 添加到活动。使用工具窗口，导航到 `FragmentExample` 项目的 `app` -> `res` -> `layout` 部分，双击 `activity_main.xml` 文件将其加载到 Android Studio 布局编辑器。
+应用程序的主活动关联了一个名为`activity_main.xml`的布局文件。在本例中，将使用该文件中的`<fragment>`元素将 fragment 添加到活动。使用工具窗口，导航到`FragmentExample`项目的`app` -> `res` -> `layout`部分，双击`activity_main.xml`文件将其加载到 Android Studio 布局编辑器。
 
-在布局编辑器的 `Design` 模式下，选择并删除布局中的默认 `TextView` 对象，选择调色板中的 `Common` 类别。从列表中拖出 `FragmentContainerView` 组件并将其放到布局中，使其水平居中并放置在虚线出现处，指示顶部布局边距：
+在布局编辑器的`Design`模式下，选择并删除布局中的默认`TextView`对象，选择调色板中的`Common`类别。从列表中拖出`FragmentContainerView`组件并将其放到布局中，使其水平居中并放置在虚线出现处，指示顶部布局边距：
 
 ![](img/as_3.5_fragment_example_add_fragment.jpg)
 
@@ -6225,22 +6281,19 @@ public void onDestroyView() {
 
 图 32-6
 
-从列表中选择 `ToolbarFragment` 条目并点击 OK 以关闭 Fragments 对话框。添加后，点击布局编辑器右上角的红色警告按钮以显示问题（Problems）工具窗口。未知 fragment 的消息表示布局编辑器工具需要知道在预览期间显示哪个 fragment。选择 `Unknown fragment item`，然后点击右侧面板中的 `Pick Layout...` 链接，如图 32-7 所示：
+从列表中选择`ToolbarFragment`条目并点击 OK 以关闭 Fragments 对话框。添加后，点击布局编辑器右上角的红色警告按钮以显示问题（Problems）工具窗口。未知 fragment 的消息表示布局编辑器工具需要知道在预览期间显示哪个 fragment。选择`Unknown fragment item`，然后点击右侧面板中的`Pick Layout...`链接，如图 32-7 所示：
 
 ![](img/as_pick_fragment_layout.jpg)
 
 图 32-7
 
-在弹出的对话框（见图 32-8）中，选择 `fragment_toolbar` 条目，然后点击 OK：
+在弹出的对话框（见图 32-8）中，选择`fragment_toolbar`条目，然后点击 OK：
 
 ![](img/as_select_fragment_toolbar.jpg)
 
 图 32-8
 
-
-
-
-选中片段后，将 `layout_width` 属性更改为 `match_constraint`，使其占据屏幕全宽。从调板中点击并拖动另一个 `FragmentContainerView` 项，将其放置在水平居中，并位于第一个片段的底部下方。在出现提示时，在点击确定之前，从片段对话框中选择 `TextFragment` 项。显示 `Problems`（问题）窗口并重复之前的步骤，这次选择 `fragment_text` 布局。使用 `Infer constraints`（推断约束）按钮建立任何缺失的布局约束。
+选中片段后，将`layout_width`属性更改为`match_constraint`，使其占据屏幕全宽。从调板中点击并拖动另一个`FragmentContainerView`项，将其放置在水平居中，并位于第一个片段的底部下方。在出现提示时，在点击确定之前，从片段对话框中选择`TextFragment`项。显示`Problems`（问题）窗口并重复之前的步骤，这次选择`fragment_text`布局。使用`Infer constraints`（推断约束）按钮建立任何缺失的布局约束。
 
 注意片段现在在布局中可见了，如图 32-9 所示：
 
@@ -6248,13 +6301,13 @@ public void onDestroyView() {
 
 图 32-9
 
-在继续下一步之前，选择布局中的 `TextFragment` 实例，并在 `Attributes`（属性）工具窗口中将片段的 `ID` 更改为 `text_fragment`。
+在继续下一步之前，选择布局中的`TextFragment`实例，并在`Attributes`（属性）工具窗口中将片段的`ID`更改为`text_fragment`。
 
 ### 32.7 让工具栏片段与 Activity 通
 
-当用户触摸工具栏片段中的按钮时，片段类需要从 `EditText` 视图中提取文本以及 `SeekBar` 的当前值，并将它们发送给文本片段。如“Android 片段介绍”（#Fragments.xhtml__idTextAnchor712)所述，片段之间不应直接通信，而是应该使用它们嵌入的 `activity` 作为中介。
+当用户触摸工具栏片段中的按钮时，片段类需要从`EditText`视图中提取文本以及`SeekBar`的当前值，并将它们发送给文本片段。如“Android 片段介绍”（#Fragments.xhtml__idTextAnchor712)所述，片段之间不应直接通信，而是应该使用它们嵌入的`activity`作为中介。
 
-此过程的第一步是确保工具栏片段对被点击的按钮有响应。我们还需要实现一些代码来跟踪 `SeekBar` 视图的值。对于此示例，我们将在 `ToolbarFragment` 类中实现这些监听器。选择 `ToolbarFragment.java` 文件并进行修改，如下列表所示：
+此过程的第一步是确保工具栏片段对被点击的按钮有响应。我们还需要实现一些代码来跟踪`SeekBar`视图的值。对于此示例，我们将在`ToolbarFragment`类中实现这些监听器。选择`ToolbarFragment.java`文件并进行修改，如下列表所示：
 
 ```java
 package com.ebookfrenzy.fragmentexample;
@@ -6306,11 +6359,11 @@ public class ToolbarFragment extends Fragment implements SeekBar.OnSeekBarChange
 }
 ```
 
-在继续之前，我们需要花些时间解释上述代码更改。首先，该类声明为实现了 `OnSeekBarChangeListener` 接口。这是因为用户界面包含一个 `SeekBar` 实例，片段需要在用户滑动滑条更改字体大小时接收接收通知。实现 `OnSeekBarChangeListener` 接口要求实现 `onProgressChanged()`、`onStartTrackingTouch()` 和 `onStopTrackingTouch()` 方法。这些方法已经实现，但只需要 `onProgressChanged()` 方法来执行任务，在这种情况下，是将新值存储在类开始处声明的名为 `seekvalue` 的变量中。此外还声明了一个变量来存储对 `EditText` 对象的引用。
+在继续之前，我们需要花些时间解释上述代码更改。首先，该类声明为实现了`OnSeekBarChangeListener`接口。这是因为用户界面包含一个`SeekBar`实例，片段需要在用户滑动滑条更改字体大小时接收接收通知。实现`OnSeekBarChangeListener`接口要求实现`onProgressChanged()`、`onStartTrackingTouch()`和`onStopTrackingTouch()`方法。这些方法已经实现，但只需要`onProgressChanged()`方法来执行任务，在这种情况下，是将新值存储在类开始处声明的名为`seekvalue`的变量中。此外还声明了一个变量来存储对`EditText`对象的引用。
 
-添加了 `onViewCreated()` 方法在按钮上设置 `OnClickListener`，其配置为在检测到点击事件时调用名为 `buttonClicked()` 的方法。该方法随后也被实现，尽管它目前没有做任何操作。
+添加了`onViewCreated()`方法在按钮上设置`OnClickListener`，其配置为在检测到点击事件时调用名为`buttonClicked()`的方法。该方法随后也被实现，尽管它目前没有做任何操作。
 
-此过程的下一阶段是设置监听器，允许片段在按钮被点击时调用 `activity`。这遵循了上一章概述的机制：
+此过程的下一阶段是设置监听器，允许片段在按钮被点击时调用`activity`。这遵循了上一章概述的机制：
 
 ```java
 public class ToolbarFragment extends Fragment implements SeekBar.OnSeekBarChangeListener {
@@ -6338,9 +6391,9 @@ public class ToolbarFragment extends Fragment implements SeekBar.OnSeekBarChange
 }
 ```
 
-上述实现将导致当用户点击按钮时，调用属于 activity 类的名为 `onButtonClick()` 方法。因此，剩下的工作只是声明 activity 类实现了新创建的 `ToolbarListener` 接口并实现 `onButtonClick()` 方法。
+上述实现将导致当用户点击按钮时，调用属于 activity 类的名为`onButtonClick()`方法。因此，剩下的工作只是声明 activity 类实现了新创建的`ToolbarListener`接口并实现`onButtonClick()`方法。
 
-由于在早期的 Android 版本中使用了 Android 支持库来支持片段，activity 还需要更改为继承自 `FragmentActivity` 而不是 `AppCompatActivity`。将这些要求结合起来得到了修改后的 `MainActivity.java` 文件：
+由于在早期的 Android 版本中使用了 Android 支持库来支持片段，activity 还需要更改为继承自`FragmentActivity`而不是`AppCompatActivity`。将这些要求结合起来得到了修改后的`MainActivity.java`文件：
 
 ```java
 package com.ebookfrenzy.fragmentexample;
@@ -6356,11 +6409,11 @@ public class MainActivity extends FragmentActivity implements ToolbarFragment.To
 }
 ```
 
-按照目前的代码，工具栏片段将在用户点击按钮时检测并将 `EditText` 字段的内容和 `SeekBar` 视图的当前设置传递 activity。现在 activity 的的任务与文本片段通信并传递这些值，以便片段相应更新 `TextView` 对象。
+按照目前的代码，工具栏片段将在用户点击按钮时检测并将`EditText`字段的内容和`SeekBar`视图的当前设置传递 activity。现在 activity 的的任务与文本片段通信并传递这些值，以便片段相应更新`TextView`对象。
 
 ### 32.8 让 Activity 与文本片段通信
 
-如[“Android 片段介绍所述，activity 可以通过获取片段实例的引用并调用对象的公共方法与片段通信。因此，在 `TextFragment` 类中，我们现在实现一个名为 `changeTextProperties()` 的公共方法，它接收字体大小整数和新文本字符串作为参数。方法将使用这些值修改 `TextView` 对象。在 Android Studio 编辑面板中，找到并修改 `TextFragment.java` 文件以添加此新方法：
+如[“Android 片段介绍所述，activity 可以通过获取片段实例的引用并调用对象的公共方法与片段通信。因此，在`TextFragment`类中，我们现在实现一个名为`changeTextProperties()`的公共方法，它接收字体大小整数和新文本字符串作为参数。方法将使用这些值修改`TextView`对象。在 Android Studio 编辑面板中，找到并修改`TextFragment.java`文件以添加此新方法：
 
 ```java
 package com.ebookfrenzy.fragmentexample;
@@ -6376,17 +6429,13 @@ public class TextFragment extends Fragment {
 }
 ```
 
-当 `TextFragment` 片段放在 activity 的布局中时，被赋予了 ID `text_fragment`。通过这个 ID，activity 现在可以获取片段实例的引用并调用该对象的 `changeTextProperties()` 方法。编辑 `MainActivity.java` 文件并如下所示修改 `onButtonClick()` 方法：
+当`TextFragment`片段放在 activity 的布局中时，被赋予了 ID `text_fragment`。通过这个 ID，activity 现在可以获取片段实例的引用并调用该对象的`changeTextProperties()`方法。编辑`MainActivity.java`文件并如下所示修改`onButtonClick()`方法：
 
 ```java
 public void onButtonClick(int fontsize, String text) {
     TextFragment textFragment = (TextFragment)
 }
 ```
-
-
-
-
 
 ```
 getSupportFragmentManager().findFragmentById(R.id.text_fragment);
@@ -6398,7 +6447,7 @@ textFragment.changeTextProperties(fontsize, text);
 
 ### 32.9 测试应用程序
 
-现在该项目的代码工作已经完成，最后一个任务是运行应用程序。当应用程序启动时，主活动（main activity）将启动并创建、显示两个片段。当用户触摸工具栏片段（toolbar fragment）中的按钮时，工具栏片段将调用活动的 `onButtonClick()` 方法，并将来自 `EditText` 视图的文本以及 `SeekBar` 的当前值传递过去。随后，活动将调用第二个片段的 `changeTextProperties()` 方法，该方法将修改 `TextView` 以反映新的文本和字体大小：
+现在该项目的代码工作已经完成，最后一个任务是运行应用程序。当应用程序启动时，主活动（main activity）将启动并创建、显示两个片段。当用户触摸工具栏片段（toolbar fragment）中的按钮时，工具栏片段将调用活动的`onButtonClick()`方法，并将来自`EditText`视图的文本以及`SeekBar`的当前值传递过去。随后，活动将调用第二个片段的`changeTextProperties()`方法，该方法将修改`TextView`以反映新的文本和字体大小：
 
 ![](img/as_fragment_example_running.jpg)
 
@@ -6406,95 +6455,95 @@ textFragment.changeTextProperties(fontsize, text);
 
 ### 32.10 总结
 
-本章的目标是通过创建一个示例项目，演示在 Android 应用程序中使用片段的步骤。涵盖的主题包括使用 `Android Support Library` 以兼容在片段引入之前的 Android 版本，包括在活动布局中包含片段，以及实现片段间的通信。
+本章的目标是通过创建一个示例项目，演示在 Android 应用程序中使用片段的步骤。涵盖的主题包括使用`Android Support Library`以兼容在片段引入之前的 Android 版本，包括在活动布局中包含片段，以及实现片段间的通信。
 
 ## 33 使用 Jetpack 的现代 Android App 架构
 
-多年来，Google 并没有推荐构建 Android 应用的特定方法，而是提供工具和开发工具包，让开发者决定什么种方法对特定项目或个人编程风格有效。这种情况在 2017 年随着 `Android Architecture Components` 的引入而发生了改变，它随后在 2018 年发布时成为了 `Android Jetpack` 的一部分。
+多年来，Google 并没有推荐构建 Android 应用的特定方法，而是提供工具和开发工具包，让开发者决定什么种方法对特定项目或个人编程风格有效。这种情况在 2017 年随着`Android Architecture Components`的引入而发生了改变，它随后在 2018 年发布时成为了`Android Jetpack`的一部分。
 
-本章提供了 `Jetpack` 概念、Android 应用架构建议以及一些关键架构组件的概述。在涵盖基础知识后，这些主题将在后续章节中进行详细介绍，并通过实际示例进行演示。
+本章提供了`Jetpack`概念、Android 应用架构建议以及一些关键架构组件的概述。在涵盖基础知识后，这些主题将在后续章节中进行详细介绍，并通过实际示例进行演示。
 
 ### 33.1 什么是 Android Jetpack？
 
-`Android Jetpack` 由 `Android Studio`、`Android Architecture Components`、`Android Support Library` 以及一组关于 Android App 应该如何结构的指南组成。`Android Architecture Components` 旨在让在开发 Android 应用时，执行常用任务变得更快速、更简单，同时符合架构指南的核心原则。
+`Android Jetpack`由`Android Studio`、`Android Architecture Components`、`Android Support Library`以及一组关于 Android App 应该如何结构的指南组成。`Android Architecture Components`旨在让在开发 Android 应用时，执行常用任务变得更快速、更简单，同时符合架构指南的核心原则。
 
-虽然本书将涵盖所有的 `Android Architecture Components`，但本章将重点关注关键架构指南以及 `ViewModel`、`LiveData` 和 `Lifecycle` 组件，同时介绍 `Data Binding` 和 `Repositories`。
+虽然本书将涵盖所有的`Android Architecture Components`，但本章将重点关注关键架构指南以及`ViewModel`、`LiveData`和`Lifecycle`组件，同时介绍`Data Binding`和`Repositories`。
 
-在继续之前，重要的是理解 `Jetpack` 应用开发方法是可选的。虽然 Google 强调了一些年来流行的其他技术的缺点，但它并没有止于完全谴责那些应用开发方法。Google 的立场是，虽然开发应用没有绝对对错之分，但存在一种推荐的方法。
+在继续之前，重要的是理解`Jetpack`应用开发方法是可选的。虽然 Google 强调了一些年来流行的其他技术的缺点，但它并没有止于完全谴责那些应用开发方法。Google 的立场是，虽然开发应用没有绝对对错之分，但存在一种推荐的方法。
 
 ### 33.2 “旧”架构
 
-在标题为在 Android Studio 中创建示例 Android App 的章节中，创建了一个 Android 项目，该项目由单个活动组成，该活动包含了用于显示和管理用户界面的所有代码，以及应用程序的后端逻辑。在 `Jetpack` 引入之前，最常见的架构遵循这种范式，即应用由多个活动组成（应用中的每个屏幕对应一个活动），并且每个活动类在某种程度上都混合了用户界面代码和后端代码。
+
+
+# 在 Android Studio 中创建示例 Android App
+
+在标题为"在 Android Studio 中创建示例 Android App"的章节中，创建了一个 Android 项目，该项目由单个活动组成，该活动包含了用于显示和管理用户界面的所有代码，以及应用程序的后端逻辑。在`Jetpack`引入之前，最常见的架构遵循这种范式，即应用由多个活动组成（应用中的每个屏幕对应一个活动），并且每个活动类在某种程度上都混合了用户界面代码和后端代码。
 
 这种方法导致了一系列与应用生命周期相关的问题（例如，用户每次旋转设备时，活动都会被销毁并重建，导致任何未保存到持久化存储形式的应用数据丢失），以及如导航效率低下等问题（涉及到为用户访问的每个应用屏幕都要启动一个新的活动）。
 
-### 33.3 现代 Android 架构
+## 33.3 现代 Android 架构
 
 在最基础的层，Google 现在提倡单活动应用，不同的屏幕作为内容加载到同一个活动中。
 
-现代架构指南还建议将应用中不同的职责区域划分到完全独立的模块中（这种概念被称为“关注点分离”）。这种方法的关键之一是 `ViewModel` 组件。
+现代架构指南还建议将应用中不同的职责区域划分到完全独立的模块中（这种概念被称为"关注点分离"）。这种方法的关键之一是`ViewModel`组件。
 
-### 33.4 ViewModel 组件
+## 33.4 ViewModel 组件
 
-`ViewModel` 的目的是将应用程序与用户界面相关的数据模型和逻辑，从负责显示、管理用户界面以及与操作系统交互的代码隔离开。当按这样设计时，应用将由一个或多个 UI 控制器（如活动）以及一个负责处理这些控制器所需要的数据 `ViewModel` 实例组成。
+`ViewModel`的目的是将应用程序与用户界面相关的数据模型和逻辑，从负责显示、管理用户界面以及与操作系统交互的代码隔离开。当按这样设计时，应用将由一个或多个 UI 控制器（如活动）以及一个负责处理这些控制器所需要的数据`ViewModel`实例组成。
 
-`ViewModel` 只感知数据模型和相应的逻辑。它对用户界面一无所知，也不会尝试直接访问或响应与用户界面内视图相关的事件。当 UI 控制器需要数据进行显示时，它会请求 `ViewModel` 提供。同样，当用户在用户界面的视图中输入数据时，UI 控制器会将其传递给 `ViewModel` 处理。
+`ViewModel`只感知数据模型和相应的逻辑。它对用户界面一无所知，也不会尝试直接访问或响应与用户界面内视图相关的事件。当 UI 控制器需要数据进行显示时，它会请求`ViewModel`提供。同样，当用户在用户界面的视图中输入数据时，UI 控制器会将其传递给`ViewModel`处理。
 
-这种职责分离解决了与 UI 控制器生命周期相关的问题。无论 UI 控制器在应用生命周期内被重建多频繁，`ViewModel` 实例都保留在内存中，从而保持数据的一致性。例如，活动使用的 `ViewModel` 将一直留在内存中，直到活动结束，而在单活动应用中，这意味着直到应用退出。
+这种职责分离解决了与 UI 控制器生命周期相关的问题。无论 UI 控制器在应用生命周期内被重建多频繁，`ViewModel`实例都保留在内存中，从而保持数据的一致性。例如，活动使用的`ViewModel`将一直留在内存中，直到活动结束，而在单活动应用中，这意味着直到应用退出。
 
 ![](img/jetpack_diagram_1.jpg)
 
 图 33-1
 
-### 33.5 LiveData 组件
+## 33.5 LiveData 组件
 
-考虑一个显示实时数据的应用，例如金融股票的当前价格。该应用可以使用股票价格 Web 服务持续用最新信息更新 `ViewModel` 中的数据模型。这种实时数据只有在及时显示给用户时才有用。UI 控制器只有两种方式可以确保在用户界面显示最新数据。一种方案是控制器持续检查 `ViewModel` 以判断数据自上次显示以来是否发生了变化。然而，这种方法的问题是它可能不够高效。为了保持数据馈的实时性，UI 控制器必须在循环中运行，持续检查数据变化。
+考虑一个显示实时数据的应用，例如金融股票的当前价格。该应用可以使用股票价格 Web 服务持续用最新信息更新`ViewModel`中的数据模型。这种实时数据只有在及时显示给用户时才有用。UI 控制器只有两种方式可以确保在用户界面显示最新数据。一种方案是控制器持续检查`ViewModel`以判断数据自上次显示以来是否发生了变化。然而，这种方法的问题是它可能不够高效。为了保持数据馈的实时性，UI 控制器必须在循环中运行，持续检查数据变化。
 
-更好的解决方案是，当 `ViewModel` 中的特定数据项发生变化时，UI 控制器接收通知。这通过使用 `LiveData` 组件实现。`LiveData` 是一个数据持有者，允许值变得可观察。从基本角度来说，可观察对象在数据发生变化时可以通知其他对象，从而解决了确保用户界面始终与 `ViewModel` 内数据匹配的问题。
+更好的解决方案是，当`ViewModel`中的特定数据项发生变化时，UI 控制器接收通知。这通过使用`LiveData`组件实现。`LiveData`是一个数据持有者，允许值变得可观察。从基本角度来说，可观察对象在数据发生变化时可以通知其他对象，从而解决了确保用户界面始终与`ViewModel`内数据匹配的问题。
 
-这意味着，例如，对 `ViewModel` 值的 UI 控制器可以设置一个观察者，该观察者反而在值变化时会被通知。在我们假设的应用程序中，例如，股票将封装在 `ViewModel` 中的 `LiveData` 对象中，UI 控制器将为该值分配一个观察者，声明在值变化时调用的方法。当数据变化触发时，该方法将从 `ViewModel` 读取更新后的值并用其更新用户界面。
+这意味着，例如，对`ViewModel`值的 UI 控制器可以设置一个观察者，该观察者反而在值变化时会被通知。在我们假设的应用程序中，例如，股票将封装在`ViewModel`中的`LiveData`对象中，UI 控制器将为该值分配一个观察者，声明在值变化时调用的方法。当数据变化触发时，该方法将从`ViewModel`读取更新后的值并用其更新用户界面。
 
 ![](img/Jetpack_diagram_2.jpg)
 
 图 33-2
 
-`LiveData` 实例也可以被声明为可变的，允许观察实体更新 `LiveData` 对象中持有的底层值。例如，用户可能会在用户界面中输入一个需要覆盖存储在 `ViewModel` 中的值。
+`LiveData`实例也可以被声明为可变的，允许观察实体更新`LiveData`对象中持有的底层值。例如，用户可能会在用户界面中输入一个需要覆盖存储在`ViewModel`中的值。
 
-
-
-
-
-使用 `LiveData` 的另一个关键优势是它可以感知其观察者的生命周期状态。例如，如果一个 activity 包含一个 `LiveData` 观察者，相应的 `LiveData` 对象将知道 activity 生命周期周期状态何时发生变化并做出相应的响应。如果 activity 处于暂停状态（可能是 app 被置于后台），`LiveData` 对象将停止向观察者发送事件。假设 activity 刚刚启动或在暂停后恢复。在这种情况下，`LiveData` 对象将向观察者发送一个 `LiveData` 事件，以便 activity 能够获得最新的值。同样，`LiveData` 实例会在 activity 被销毁时感知到并移除观察者以释放资源。
+使用`LiveData`的另一个关键优势是它可以感知其观察者的生命周期状态。例如，如果一个 activity 包含一个`LiveData`观察者，相应的`LiveData`对象将知道 activity 生命周期周期状态何时发生变化并做出相应的响应。如果 activity 处于暂停状态（可能是 app 被置于后台），`LiveData`对象将停止向观察者发送事件。假设 activity 刚刚启动或在暂停后恢复。在这种情况下，`LiveData`对象将向观察者发送一个`LiveData`事件，以便 activity 能够获得最新的值。同样，`LiveData`实例会在 activity 被销毁时感知到并移除观察者以释放资源。
 
 到目前为止，我们只讨论了 UI 控制器使用观察者的情况。在实践中，观察者可以用于任何符合 Jetpack 生命周期周期管理方法的对象中。
 
 ## 33.6 ViewModel 状态的保存
 
-Android 允许用户将运行中的应用置到后台，并在在设备上执行其他任务（包括运行其他应用）后返回应用。当设备资源不足时，操作系统将通过终止后台应用进程来解决此问题，从最久未使用的应用开始。然而，当用户返回被终止的后台应用时，它应该显示为被置于后台时的相同状态，无论它是否被终止。在与 `ViewModel` 关联的数据方面，可以使用 `ViewModel Saved State` 模块来实现。该模块允许将值存储应用的保存状态中，并在发生系统发起的进程终止时进行恢复。此主题将在稍后的 “Android ViewModel 状态保存教程” 章节中介绍。
+Android 允许用户将运行中的应用置到后台，并在在设备上执行其他任务（包括运行其他应用）后返回应用。当设备资源不足时，操作系统将通过终止后台应用进程来解决此问题，从最久未使用的应用开始。然而，当用户返回被终止的后台应用时，它应该显示为被置于后台时的相同状态，无论它是否被终止。在与`ViewModel`关联的数据方面，可以使用`ViewModel Saved State`模块来实现。该模块允许将值存储应用的保存状态中，并在发生系统发起的进程终止时进行恢复。此主题将在稍后的 "Android ViewModel 状态保存教程" 章节中介绍。
 
 ## 33.7 LiveData 与数据绑定
 
-Android Jetpack 包含了数据绑定库（Data Binding Library），它允许 `ViewModel` 中的数据直接映射到 XML 用户界面布局文件中的特定视图。在之前创建的 `AndroidSample` 项目中，必须编写代码来获取 `EditText` 和 `TextView` 视图的引用，并设置和获取文本属性以反映数据变化。数据绑定允许存储在 `ViewModel` 中的 `LiveData` 值在 XML 布局文件中被直接引用，避免了编写代码来保持布局视图更新的需求。
+Android Jetpack 包含了数据绑定库（Data Binding Library），它允许`ViewModel`中的数据直接映射到 XML 用户界面布局文件中的特定视图。在之前创建的`AndroidSample`项目中，必须编写代码来获取`EditText`和`TextView`视图的引用，并设置和获取文本属性以反映数据变化。数据绑定允许存储在`ViewModel`中的`LiveData`值在 XML 布局文件中被直接引用，避免了编写代码来保持布局视图更新的需求。
 
 ![](img/Jetpack_diagram_3.jpg)
 
 图 33-3
 
-数据绑定将被更详细地介绍，从 “Android Jetpack 数据绑定概览” 章节开始。
+数据绑定将被更详细地介绍，从 "Android Jetpack 数据绑定概览" 章节开始。
 
 ## 33.8 Android 生命周期
 
 从 Android 组件创建到其销毁的时间被称为生命周期。在生命周期期间，组件将在不同的生命周期状态之间切换，这通常是在操作系统的控制下并响应用户操作的。例如，一个 activity 从初始化状态开始，然后过渡到创建状态。一旦 activity 开始运行，它将切换到启动状态，从该状态开始，它将在各种状态之间循环切换，包括创建、启动、恢复和销毁。
 
-许多 Android 框架类和组件允许其他对象访问其当前状态。也可以使用生命周期观察者（Lifecycle observers），以便对象在另一个对象的生命周期状态变化时接收到通知。`ViewModel` 组件在后台使用这种技术来识别观察者何时已重启或被销毁。此功能不仅限于 Android 框架和架构组件。它也可以构建在任何使用架构组件包含的一组生命周期组件类中。
+许多 Android 框架类和组件允许其他对象访问其当前状态。也可以使用生命周期观察者（Lifecycle observers），以便对象在另一个对象的生命周期状态变化时接收到通知。`ViewModel`组件在后台使用这种技术来识别观察者何时已重启或被销毁。此功能不仅限于 Android 框架和架构组件。它也可以构建在任何使用架构组件包含的一组生命周期组件类中。
 
-能够检测并响应其他对象生命周期状态变化的对象被称为生命周期感知（lifecycle-aware）。相比之下，提供其生命周期状态访问的对象被称为生命周期所有者（lifecycle owners）。题为 “与 Android 生命周期感知组件一起工作” 的章节将更详细地介绍生命周期。
+能够检测并响应其他对象生命周期状态变化的对象被称为生命周期感知（lifecycle-aware）。相比之下，提供其生命周期状态访问的对象被称为生命周期所有者（lifecycle owners）。题为 "与 Android 生命周期感知组件一起工作" 的章节将更详细地介绍生命周期。
 
 ## 33.9 仓库模块
 
-如果 `ViewModel` 从一个或多个外部源（如数据库或网络服务）获取数据，那么将处理这些数据源的代码与 `ViewModel` 类分离是非常关重要的。毕竟，不这样做将违反关注点分离（separation of concerns）指南。为了避免将此功能与 `ViewModel` 混合，Google 的架构指南建议将此代码放在独立的 `Repository`（仓库）模块中。
+如果`ViewModel`从一个或多个外部源（如数据库或网络服务）获取数据，那么将处理这些数据源的代码与`ViewModel`类分离是非常关重要的。毕竟，不这样做将违反关注点分离（separation of concerns）指南。为了避免将此功能与`ViewModel`混合，Google 的架构指南建议将此代码放在独立的`Repository`（仓库）模块中。
 
-仓库不是 Android 架构组件，而是由应用开发者创建的 Java 类，负责与各种数据源进行交互。该类随后为 `ViewModel` 提供一个接口，允许该数据存储在模型中。
+仓库不是 Android 架构组件，而是由应用开发者创建的 Java 类，负责与各种数据源进行交互。该类随后为`ViewModel`提供一个接口，允许该数据存储在模型中。
 
 ![](img/Jetpack_diagram_4.jpg)
 
@@ -6502,33 +6551,29 @@ Android Jetpack 包含了数据绑定库（Data Binding Library），它允许 `
 
 ## 33.10 总结
 
-直到最近，Google 倾向于不推荐任何特定的方法来构建 Android 应用。随着 Android Jetpack 的引入，情况现在发生了变化，Jetpack 由工具、组件、库和架构指南组成。Google 现在建议将应用项目分为不同的模块，每个模块负责特定的功能区域，即所谓的“关注点分离”。
+直到最近，Google 倾向于不推荐任何特定的方法来构建 Android 应用。随着 Android Jetpack 的引入，情况现在发生了变化，Jetpack 由工具、组件、库和架构指南组成。Google 现在建议将应用项目分为不同的模块，每个模块负责特定的功能区域，即所谓的"关注点分离"。
 
 特别是，指南建议将应用的视图数据模型与负责处理用户界面的代码分离。此外，负责从网络服务或数据库等数据源收集数据的代码应该构建在独立的仓库模块中，而不是与视图模型捆绑。
 
-Android Jetpack 包含了 Android 架构组件（Android Architecture Components），旨在使开发符合建议指南的应用变得更容易。本章引入了 `ViewModel`、`LiveData` 和 `Lifecycle` 组件。这些将从下一章开始进行更详细的介绍。本章未提到的其他架构组件将在书的后半部分介绍。
+Android Jetpack 包含了 Android 架构组件（Android Architecture Components），旨在使开发符合建议指南的应用变得更容易。本章引入了`ViewModel`、`LiveData`和`Lifecycle`组件。这些将从下一章开始进行更详细的介绍。本章未提到的其他架构组件将在书的后半部分介绍。
 
-## 34. Android ViewModel 教程
+# 34. Android ViewModel 教程
 
 上一章介绍了 Android Jetpack 的基本概念，并概述了现代 Android 应用架构的基础。Jetpack 定义了一系列建议，描述了 Android 应用项目应该如何构建，同时提供了一系列库和组件，使其更容易符合这些指南以开发出更可靠的应用。
 
-为了帮助强化和澄清上一章提供的信息，本章将逐步介绍如何创建一个使用 `ViewModel` 组件的示例应用项目。下一章将通过包含 `LiveData` 和数据绑定进一步增强该示例。
+为了帮助强化和澄清上一章提供的信息，本章将逐步介绍如何创建一个使用`ViewModel`组件的示例应用项目。下一章将通过包含`LiveData`和数据绑定进一步增强该示例。
 
-### 34.1 关于项目
+## 34.1 关于项目
 
-
-
-
-
-在 `Name` 字段中输入 `ViewModelDemo`，并指定 `com.ebookfrenzy.viewmodeldemo` 为包名。在点击 `Finish` 按钮之前，将 `Minimum API level` 设置为 `API 26`：`Android 8.0 (Oreo)`，并将 `Language` 菜单更改为 `Java`。
+在`Name`字段中输入`ViewModelDemo`，并指定`com.ebookfrenzy.viewmodeldemo`为包名。在点击`Finish`按钮之前，将`Minimum API level`设置为`API 26`：`Android 8.0 (Oreo)`，并将`Language`菜单更改为`Java`。
 
 ## 34.3 移除不需要的项目元素
 
-如 《Android Studio 布局编辑器指南》 所示，`Basic Views Activity` 模板包含并非所有项目所需的需要的。在将 `ViewModel` 添加到项目之前，我们首先需要按照步骤移除导航功能、第二个内容片段和悬浮操作按钮：
+如《Android Studio 布局编辑器指南》所示，`Basic Views Activity`模板包含并非所有项目所需的需要的。在将`ViewModel`添加到项目之前，我们首先需要按照步骤移除导航功能、第二个内容片段和悬浮操作按钮：
 
-1. 在 Project 工具窗口中双击 `activity_main.xml` 布局文件，选择悬浮操作按钮，并按下键盘上的删除键从布局中移除该对象。
+1. 在 Project 工具窗口中双击`activity_main.xml`布局文件，选择悬浮操作按钮，并按下键盘上的删除键从布局中移除该对象。
 
-2. 编辑 `MainActivity.java` 文件，从 `onCreate` 方法中删除悬浮操作按钮的代码，如下：
+2. 编辑`MainActivity.java`文件，从`onCreate`方法中删除悬浮操作按钮的代码，如下：
 
 ```java
 @Override
@@ -6546,13 +6591,13 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-3. 在 Project 工具窗口中，导航并双击 `app -> res -> navigation -> nav_graph.xml` 文件，将其加载到导航编辑器中。
+3. 在 Project 工具窗口中，导航并双击`app -> res -> navigation -> nav_graph.xml`文件，将其加载到导航编辑器中。
 
-4. 在编辑器中，在图面板中选择 `SecondFragment` 条目，并按下键盘上的删除键将其从图中移除。
+4. 在编辑器中，在图面板中选择`SecondFragment`条目，并按下键盘上的删除键将其从图中移除。
 
-5. 找到并删除 `SecondFragment.java` 和 `fragment_second.xml` 文件。
+5. 找到并删除`SecondFragment.java`和`fragment_second.xml`文件。
 
-6. 最后的任务是从 `FirstFragment` 类中移除一些代码，以便 `Button` 视图在点击时不再导航到已不存在的第二个片段。编辑 `FirstFragment.java` 文件并从 `onViewCreated()` 方法中删除代码，使其内容如下：
+6. 最后的任务是从`FirstFragment`类中移除一些代码，以便`Button`视图在点击时不再导航到已不存在的第二个片段。编辑`FirstFragment.java`文件并从`onViewCreated()`方法中删除代码，使其内容如下：
 
 ```java
 public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
@@ -6569,25 +6614,27 @@ public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
 
 ## 34.4 设计 Fragment 布局
 
-下一步是设计片段的布局。首先，在 Project 工具窗口中找到 `fragment_first.xml` 文件并双击它将其加载到布局编辑器。一旦布局加载，选择并删除现有的 `Button`、`TextView` 和 `ConstraintLayout` 组件。接下来，在 Component Tree 面板中右键点击 `NestedScrollView` 实例，选择 `Convert NestedScrollView to ConstraintLayout` 菜单选项，如图 34-1 所示，并在生成的对话框中接受默认设置：
+下一步是设计片段的布局。首先，在 Project 工具窗口中找到`fragment_first.xml`文件并双击它将其加载到布局编辑器。一旦布局加载，选择并删除现有的`Button`、`TextView`和`ConstraintLayout`组件。接下来，在 Component Tree 面板中右键点击`NestedScrollView`实例，选择`Convert NestedScrollView to ConstraintLayout`菜单选项，如图 34-1 所示，并在生成的对话框中接受默认设置：
 
 ![](img/as_convert_to_constaintlayout.jpg)
+
 图 34-1
 
-选择转换后的 `ConstraintLayout` 组件，并使用 Attributes 工具窗口将 `id` 更改为 `constraintLayout`。
+选择转换后的`ConstraintLayout`组件，并使用 Attributes 工具窗口将`id`更改为`constraintLayout`。
 
-添加一个新的 `TextView`，将其置于布局中心，并将 `id` 更改为 `resultText`。接下来，从调色板拖入 `Number (Decimal)` 视图并将其放置在现有 `TextView` 之上。在布局中选中该视图，参考 Attributes 工具窗口并将 `id` 更改为 `dollarText`。
+添加一个新的`TextView`，将其置于布局中心，并将`id`更改为`resultText`。接下来，从调色板拖入`Number (Decimal)`视图并将其放置在现有`TextView`之上。在布局中选中该视图，参考 Attributes 工具窗口并将`id`更改为`dollarText`。
 
-将 `Button` 控件拖到布局中，将其放置在 `TextView` 下方，并将 `text` 属性更改为“Convert”。在保持按钮选中状态的情况下，将 `id` 属性更改为 `convertButton`。此时，布局应该类似于图 34-2 所示所示（注意这三个视图已使用垂直链进行了约束）：
+将`Button`控件拖到布局中，将其放置在`TextView`下方，并将`text`属性更改为"Convert"。在保持按钮选中状态的情况下，将`id`属性更改为`convertButton`。此时，布局应该类似于图 34-2 所示所示（注意这三个视图已使用垂直链进行了约束）：
 
 ![](img/as_view_model_demo_ui.jpg)
+
 图 34-2
 
 最后，点击布局编辑器右上角的警告图标，将硬编码字符串转换为资源。
 
 ## 34.5 实现 View Model
 
-完成用户界面布局后，需要在 view model 中创建应用的数据模型。首先，在 Project 工具窗口中找到 `com.ebookfrenzy.viewmodeldemo`，右键点击它并选择 `New -> Class` 。将类命名为 `MainViewModel` 并按回车。编辑该类使其如下：
+完成用户界面布局后，需要在 view model 中创建应用的数据模型。首先，在 Project 工具窗口中找到`com.ebookfrenzy.viewmodeldemo`，右键点击它并选择`New -> Class`。将类命名为`MainViewModel`并按回车。编辑该类使其如下：
 
 ```java
 package com.ebookfrenzy.viewmodeldemo.main;
@@ -6609,27 +6656,29 @@ public class MainViewModel extends ViewModel {
 }
 ```
 
-该类声明了变量来存储当前字符串值和转换后的金额，并带有 getter 和 setter 方法以提供对这些值的访问。调用时，`setAmount` 将赋值给 `this.dollarText`，并通过 `Float.parseFloat(dollarText) * rate` 计算 `result`。
+该类声明了变量来存储当前字符串值和转换后的金额，并带有 getter 和 setter 方法以提供对这些值的访问。调用时，`setAmount`将赋值给`this.dollarText`，并通过`Float.parseFloat(dollarText) * rate`计算`result`。
 
-`getResult` 方法返回 `result`。
+`getResult`方法返回`result`。
 
 ## 34.6 将 Fragment 与 View Model 关联
 
-片段需要某种方式获取 `ViewModel` 的引用，以便访问模型并观察数据变化。`Fragment` 或 `Activity` 使用 `ViewModelProvider` 实例维护它们所依赖的 `ViewModels`。
+片段需要某种方式获取`ViewModel`的引用，以便访问模型并观察数据变化。`Fragment`或`Activity`使用`ViewModelProvider`实例维护它们所依赖的`ViewModels`。
 
-在 `Fragment` 内部使用 `ViewModelProvider` 类创建 `ViewModelProvider` 实例。调用时，类初始化器接收当前 `Fragment` 或 `Activity` 的引用并返回 `ViewModelProvider` 实例如下：
+在`Fragment`内部使用`ViewModelProvider`类创建`ViewModelProvider`实例。调用时，类初始化器接收当前`Fragment`或`Activity`的引用并返回`ViewModelProvider`实例如下：
 
 ```java
 ViewModelProvider viewModelProvider = new ViewModelProvider(this);
 ```
 
-一旦创建了 `ViewModelProvider`，可以使用索引请求特定的 `ViewModel` 类。提供者将创建该 `ViewModel` 类的新实例，或返回已存在的实例，例如：
+
+
+一旦创建了`ViewModelProvider`，可以使用索引请求特定的`ViewModel`类。提供者将创建该`ViewModel`类的新实例，或返回已存在的实例，例如：
 
 ```java
 ViewModel viewModel = viewModelProvider.get(MainViewModel.class);
 ```
 
-编辑 `FirstFragment.java` 文件并重写 `onCreate` 方法以设置 `ViewModelProvider`：
+编辑`FirstFragment.java`文件并重写`onCreate`方法以设置`ViewModelProvider`：
 
 ```java
 ...
@@ -6647,15 +6696,11 @@ public class FirstFragment extends Fragment {
 }
 ```
 
-## 34.7 修改 Fragment
+## 34.7 修改Fragment
 
-片段类需要更新以响应按钮点击并与存储在 `ViewModel` 中的数据值进行交互。该类还需要用户界面布局中三个视图的引用，以便响应按钮点击、提取当前的美元金额并显示转换后的货币金额。
+片段类需要更新以响应按钮点击并与存储在`ViewModel`中的数据值进行交互。该类还需要用户界面布局中三个视图的引用，以便响应按钮点击、提取当前的美元金额并显示转换后的货币金额。
 
-
-
-
-
-在标题为在 Android Studio 中创建一个 Android 应用的章节中，`Button` 组件的 `onClick` 属性被用于指定用户点击按钮时调用的方法。遗憾的是，该属性只能调用 `Activity` 上的方法，而不能用于调用 `Fragment` 中的方法。为了克服这一局限性，我们必须在 `Fragment` 类中添加一些代码，以在按钮上设置 `onClick` 监听器。如下所示，这可以在 `FirstFragment.java` 文件的 `onViewCreated()` 生命周期周期方法中实现：
+在标题为在Android Studio中创建一个Android应用的章节中，`Button`组件的`onClick`属性被用于指定用户点击按钮时调用的方法。遗憾的是，该属性只能调用`Activity`上的方法，而不能用于调用`Fragment`中的方法。为了克服这一局限性，我们必须在`Fragment`类中添加一些代码，以在按钮上设置`onClick`监听器。如下所示，这可以在`FirstFragment.java`文件的`onViewCreated()`生命周期周期方法中实现：
 
 ```java
 public class MainFragment extends Fragment {
@@ -6670,15 +6715,15 @@ public class MainFragment extends Fragment {
 }
 ```
 
-添加监听器后，每当用户点击按钮时，放在 `onClick()` 方法中的任何代码都会被调用。
+添加监听器后，每当用户点击按钮时，放在`onClick()`方法中的任何代码都会被调用。
 
-### 34.8 访问 ViewModel 数据
+### 34.8 访问ViewModel数据
 
-点击按钮时，`onClick()` 方法需要从 `EditText` 视图读取当前值，确认该字段为空，然后调用 `ViewModel` 实例的 `setAmount()` 方法。随后，该方法需要调用 `ViewModel` 的 `getResult()` 方法并在 `TextView` 组件上显示转换后的值。
+点击按钮时，`onClick()`方法需要从`EditText`视图读取当前值，确认该字段为空，然后调用`ViewModel`实例的`setAmount()`方法。随后，该方法需要调用`ViewModel`的`getResult()`方法并在`TextView`组件上显示转换后的值。
 
-由于项目尚未使用 `LiveData`，因此在每次创建 `Fragment` 时，也有有必要从 `ViewModel` 获取最新的结果值。
+由于项目尚未使用`LiveData`，因此在每次创建`Fragment`时，也有有必要从`ViewModel`获取最新的结果值。
 
-回到 `FirstFragment.java` 文件，按照如下方式在 `onViewCreated()` 方法中实现这些要求：
+回到`FirstFragment.java`文件，按照如下方式在`onViewCreated()`方法中实现这些要求：
 
 ```java
 import java.util.Locale;
@@ -6703,27 +6748,27 @@ public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceStat
 
 ### 34.9 测试项目
 
-完成此项目开发阶段后，在模拟器或物理设备上构建并运行应用，输入一个美元值并点击 `Convert` 按钮。转换后的金额应该出现在 `TextView` 上，这表明 UI 控制器和 `ViewModel` 的重构符合预期。
+完成此项目开发阶段后，在模拟器或物理设备上构建并运行应用，输入一个美元值并点击`Convert`按钮。转换后的金额应该出现在`TextView`上，这表明UI控制器和`ViewModel`的重构符合预期。
 
-当运行原始的 `AndroidSample` 应用时，旋转设备会导致在 `resultText` `TextView` 组件上显示的值丢失。现在用 `ViewModelDemo` 应用重复此测试，并注意旋转后当前的欧元值被保留了。这是因为当 `Fragment` 被销毁和重建时，`ViewModel` 留留在内存中，并且在 `onViewCreated()` 方法中添加了代码，以便每次 `Fragment` 启动时都使用 `ViewModel` 的结果数据值更新 `TextView`。
+当运行原始的`AndroidSample`应用时，旋转设备会导致在`resultText` `TextView`组件上显示的值丢失。现在用`ViewModelDemo`应用重复此测试，并注意旋转后当前的欧元值被保留了。这是因为当`Fragment`被销毁和重建时，`ViewModel`留在内存中，并且在`onViewCreated()`方法中添加了代码，以便每次`Fragment`启动时都使用`ViewModel`的结果数据值更新`TextView`。
 
-虽然这是对原始 `AndroidSample` 应用的改进，但通过使用 `LiveData` 和数据绑定可以更多地简化项目，这两者都是后续章节的主题。
+虽然这是对原始`AndroidSample`应用的改进，但通过使用`LiveData`和数据绑定可以更多地简化项目，这两者都是后续章节的主题。
 
 ### 34.10 总结
 
-在本章中，我们重新回顾了书中之前创建的 `AndroidSample` 项目，并创建了一个新版本，其结构符合 Android Jetpack 架构指南。示例项目还演示了使用 `ViewModels` 将数据处理与用户界面相关的代码分离来。最后，本章展示了 `ViewModel` 方法如何避免处理 `Fragment` 和 `Activity` 生命周期时出现的问题。
+在本章中，我们重新回顾了书中之前创建的`AndroidSample`项目，并创建了一个新版本，其结构符合Android Jetpack架构指南。示例项目还演示了使用`ViewModels`将数据处理与用户界面相关的代码分离。最后，本章展示了`ViewModel`方法如何避免处理`Fragment`和`Activity`生命周期时出现的问题。
 
-# 35. Android Jetpack LiveData 教程
+# 35. Android Jetpack LiveData教程
 
-上一章开始构建一个符合推荐的 Jetpack 架构指南的应用。上一章开始构建一个符合推荐的 Jetpack 架构指南的应用。上一章开始构建一个符合推荐的 Jetpack 架构指南的应用。
+上一章开始构建一个符合推荐的Jetpack架构指南的应用。上一章开始构建一个符合推荐的Jetpack架构指南的应用。上一章开始构建一个符合推荐的Jetpack架构指南的应用。
 
 ### 35.1 LiveData - 回顾
 
-`LiveData` 是在使用 Jetpack 开发现代应用 章节中引入的。正如之前描述的，`LiveData` 是对数据的封装器，可以被 `Activities` 和 `Fragments` 等组件观察。`LiveData` 可以在 `ViewModel` 内部向 UI 暴露数据。一旦将 `LiveData` 添加到项目中，它就允许 UI 对数据变化做出反应。
+`LiveData`是在使用Jetpack开发现代应用章节中引入的。正如之前描述的，`LiveData`是对数据的封装器，可以被`Activities`和`Fragments`等组件观察。`LiveData`可以在`ViewModel`内部向UI暴露数据。一旦将`LiveData`添加到项目中，它就允许UI对数据变化做出反应。
 
-### 35.2 在 ViewModel 中添加 LiveData
+### 35.2 在ViewModel中添加LiveData
 
-启动 Android Studio，打开上一章创建的 `ViewModel` 项目，并打开 `MainViewModel.java` 文件，其目前的内容如下：
+启动Android Studio，打开上一章创建的`ViewModel`项目，并打开`MainViewModel.java`文件，其目前的内容如下：
 
 ```java
 package com.frenzy.viewModeldemo;
@@ -6746,7 +6791,7 @@ public class MainViewModel extends ViewModel {
 }
 ```
 
-本章的这一阶段旨在 `result` 变量封装在 `MutableLiveData` 实例中以便其被更改。从修改该类开始，使其内容如下，注意在使用 `LiveData` 时需要导入额外的包：
+本章的这一阶段旨在将`result`变量封装在`MutableLiveData`实例中以便其被更改。从修改该类开始，使其内容如下，注意在使用`LiveData`时需要导入额外的包：
 
 ```java
 package com.frenzy.viewModeldemo;
@@ -6757,7 +6802,6 @@ import androidx.lifecycle.ViewModel;
 public class MainViewModel extends ViewModel {
     private static final Float rate = 0.74;
     private String dollarText = "";
-    private Float result = 0F;
     final private MutableLiveData<Float> result = new MutableLiveData<>();
 
     public void setAmount(String value) {
@@ -6771,7 +6815,7 @@ public class MainViewModel extends ViewModel {
 }
 ```
 
-现在 `result` 变量包含在 `MutableLiveData` 实例中，`setAmount()` 和 `getResult()` 方法都必须修改。在 `setAmount()` 方法中，不能再使用赋值运算符 (=) 为 `result` 变量赋值。相反，必须调用 `setValue()` 方法并将新值作为参数传递。目前的 `getResult()` 方法声明为返回 `Float` 值，必须更改为返回 `MutableLiveData` 对象。完成这些剩余更改后得到的类文件如下：
+现在`result`变量包含在`MutableLiveData`实例中，`setAmount()`和`getResult()`方法都必须修改。在`setAmount()`方法中，不能再使用赋值运算符(=)为`result`变量赋值。相反，必须调用`setValue()`方法并将新值作为参数传递。目前的`getResult()`方法声明为返回`Float`值，必须更改为返回`MutableLiveData`对象。完成这些剩余更改后得到的类文件如下：
 
 ```java
 package com.frenzy.viewModeldemo;
@@ -6782,29 +6826,6 @@ import androidx.lifecycle.ViewModel;
 public class MainViewModel extends ViewModel {
     private static final Float rate = 0.74;
     private String dollarText = "";
-    private Float result = 0F;
-    final private MutableLiveData<Float> result = new MutableLiveData<>();
-
-    public void setAmount(String value) {
-        this.dollarText = value;
-        result = Float.parseFloat(dollarText)*rate;
-    }
-
-    public Float getResult() {
-        return result;
-    }
-}
-```
-
-*(注：由于提供的原文文本在 35.2 之后存在大量重复的代码块和描述，译文已遵循“不要重复输出原文”的原则，此处仅展示了逻辑演进的完整翻译。)*
-
-
-
-
-
-```java
-    private String dollarText = "";
-
     final private MutableLiveData<Float> result = new MutableLiveData<>();
 
     public void setAmount(String value) {
@@ -6813,9 +6834,7 @@ public class MainViewModel extends ViewModel {
         result.setValue(Float.parseFloat(dollarText)*rate);
     }
 
-    public Float getResult()
-    public MutableLiveData<Float> getResult()
-    {
+    public MutableLiveData<Float> getResult() {
         return result;
     }
 }
@@ -6823,14 +6842,13 @@ public class MainViewModel extends ViewModel {
 
 ## 35.3 实现观察者
 
-现在转换结果已经包含在 `LiveData` 实例中，下一步是在 UI 控制器中配置一个观察者，在本例中，该控制器是 `FirstFragment` 类。找到 `FirstFragment.java` 类（`app -> java -> `<package name>` -> `FirstFragment`），双击它将其加载到编辑器中，并修改 `onViewCreated()` 方法以创建一个名为 `resultObserver` 的新 `Observer` 实例
+现在转换结果已经包含在`LiveData`实例中，下一步是在UI控制器中配置一个观察者，在本例中，该控制器是`FirstFragment`类。找到`FirstFragment.java`类（`app -> java -> <package name> -> FirstFragment`），双击它将其加载到编辑器中，并修改`onViewCreated()`方法以创建一个名为`resultObserver`的新`Observer`实例：
 
 ```java
 package com.ebookfrenzy.viewmodeldemo;
 
 import androidx.lifecycle.Observer;
 
-.
 .
 
 @Override
@@ -6850,7 +6868,9 @@ public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceStat
 }
 ```
 
-`resultObserver` 实例声明了 `onChanged()` 方法，当该方法被调用时，会传入当前的结果值，然后将其转换为字符串并显示在 `resultText` `TextView` 对象上。下一步是将观察者添加到结果 `LiveData` 对象中，该引用可以通过调用 `ViewModel` 对象的 `getResult()` 方法来获取。由于更新结果 `TextView` 的任务现在由 `onChanged()` 回调方法负责，因此执行此任务的现有代码行现在可以删除了：
+`resultObserver`实例声明了`onChanged()`方法，当该方法被调用时，会传入当前的结果值，然后将其转换为字符串并显示在`resultText` `TextView`对象上。下一步是将观察者添加到结果`LiveData`对象中，该引用可以通过调用`ViewModel`对象的`getResult()`方法来获取。由于更新结果`TextView`的任务现在由`onChanged()`回调方法负责，因此执行此任务的现有代码行现在可以删除了：
+
+
 
 ```java
 @Override
@@ -6879,10 +6899,7 @@ public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceStat
 }
 ```
 
-
-
-
-在项目可以使用数据绑定之前，必须配置项目以使用 Android Data Binding 库，并启用对数据绑定类和绑定语法的支持。幸运的是，这只需要在模块级 `build.gradle.kts` 文件中添加几行（项目工具窗口 `Gradle Scripts` 下列为 `build.gradle.kts (Module: app)` 的文件）即可实现。以下列出了启用数据绑定的部分构建文件：
+在项目可以使用数据绑定之前，必须配置项目以使用 Android Data Binding 库，并启用对数据绑定类和绑定语法的支持。幸运的是，这只需要在模块级`build.gradle.kts`文件中添加几行（项目工具窗口`Gradle Scripts`下列为`build.gradle.kts (Module: app)`的文件）即可实现。以下列出了启用数据绑定的部分构建文件：
 
 ```kotlin
 android {
@@ -6893,9 +6910,10 @@ android {
 ```
 
 ## 36.2.2 数据绑定布局文件
+
 正如我们在之前的章节中所看到的，应用的界面通常包含在 XML 布局文件中。在这些布局文件中的 View 能够利用数据绑定之前，必须将布局文件转换为数据绑定布局文件。
 
-正如书中前面的介绍，XML 布局文件定义了布局中组件的层次结构，从顶层或根视图开始。根视图总是以布局容器的形式出现，例如 `ConstraintLayout`、`FrameLayout` 或 `LinearLayout` 实例，正如 `ViewModelDemo` 项目中的 `fragment_main.xml` 文件所示：
+正如书中前面的介绍，XML 布局文件定义了布局中组件的层次结构，从顶层或根视图开始。根视图总是以布局容器的形式出现，例如`ConstraintLayout`、`FrameLayout`或`LinearLayout`实例，正如`ViewModelDemo`项目中的`fragment_main.xml`文件所示：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -6934,9 +6952,10 @@ android {
 ```
 
 ## 36.2.3 布局文件数据元素
-数据绑定布局文件需要某种方式来声明项目中的类，布局中的 View 将绑定到这些类（例如 `ViewModel` 或 UI 控制器）。声明这些类后，布局文件需要一个变量名在绑定表达式中引用这些实例。
 
-这是通过使用 `data` 元素实现的，示例所示：
+数据绑定布局文件需要某种方式来声明项目中的类，布局中的 View 将绑定到这些类（例如`ViewModel`或 UI 控制器）。声明这些类后，布局文件需要一个变量名在绑定表达式中引用这些实例。
+
+这是通过使用`data`元素实现的，示例所示：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -6957,9 +6976,9 @@ android {
 </layout>
 ```
 
-上面的 `data` 元素声明了一个名为 `myViewModel` 的新变量，类型为 `MainViewModel`（注意，在声明变量时，必须声明 `MyViewModel` 类的完整包名）。
+上面的`data`元素声明了一个名为`myViewModel`的新变量，类型为`MainViewModel`（注意，在声明变量时，必须声明`MyViewModel`类的完整包名）。
 
-`data` 元素可以导入其他类，这些类随后可以在布局文件的其他地方绑定表达式中引用。例如，如果你有一个类，其中包含一个在显示给用户之前需要对值进行调的方法，可以如下所示导入该类：
+`data`元素可以导入其他类，这些类随后可以在布局文件的其他地方绑定表达式中引用。例如，如果你有一个类，其中包含一个在显示给用户之前需要对值进行调的方法，可以如下所示导入该类：
 
 ```xml
 <data>
@@ -6971,18 +6990,19 @@ android {
 ```
 
 ## 36.2.4 绑定类
-对于 `data` 元素中引用的每个类，Android Studio 将自动生成一个绑定类。此 `AndroidDataBinding` 的子类将根据布局文件名使用 `Binding` 后缀进行命名。因此，名为 `activity_main` 的布局的绑定类将是 `ActivityMainBinding`。
 
-名为 `fragment_main` 的布局的绑定类将是 `FragmentMainBinding`。
+对于`data`元素中引用的每个类，Android Studio 将自动生成一个绑定类。此`AndroidDataBinding`的子类将根据布局文件名使用`Binding`后缀进行命名。因此，名为`activity_main`的布局的绑定类将是`ActivityMainBinding`。
 
-要使用数据绑定，你可以使用 `DataBindingUtil` 来加载布局。在 Activity 的情况下，`onCreate()` 中的代码如下：
+名为`fragment_main`的布局的绑定类将是`FragmentMainBinding`。
+
+要使用数据绑定，你可以使用`DataBindingUtil`来加载布局。在 Activity 的情况下，`onCreate()`中的代码如下：
 
 ```java
 ActivityMainBinding binding;
 binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 ```
 
-在 Fragment 的情况下，`onCreateView()` 中的代码如下：
+在 Fragment 的情况下，`onCreateView()`中的代码如下：
 
 ```java
 FragmentMainBinding binding;
@@ -6993,7 +7013,8 @@ return view;
 ```
 
 ## 36.2.5 数据绑定变量配置
-如上所述，数据绑定布局文件包含 `data` 元素，该元素包含变量元素，由变量名和要建立绑定的类类型组成。例如：
+
+如上所述，数据绑定布局文件包含`data`元素，该元素包含变量元素，由变量名和要建立绑定的类类型组成。例如：
 
 ```xml
 <data>
@@ -7006,14 +7027,14 @@ return view;
 </data>
 ```
 
-在上面的示例中，第一个变量知道将绑定到类型为 `MainViewModel` 的 `ViewModel` 类实例，但尚未连接到实际的 `MainViewModel` 对象实例。这需要一个额外的步骤，将应用内部使用的 `MainViewModel` 实例分配给布局文件中声明的变量。这是通过调用绑定实例的 `setVariable()` 方法实现的，该引用是在上一章中获取的：
+在上面的示例中，第一个变量知道将绑定到类型为`MainViewModel`的`ViewModel`类实例，但尚未连接到实际的`MainViewModel`对象实例。这需要一个额外的步骤，将应用内部使用的`MainViewModel`实例分配给布局文件中声明的变量。这是通过调用绑定实例的`setVariable()`方法实现的，该引用是在上一章中获取的：
 
 ```java
 MainViewModel mViewModel = new ViewModelProvider(this).get(MainViewModel.class);
 binding.setVariable(viewModel, mViewModel);
 ```
 
-上述 `data` 元素中的第二个变量引用了名为 `MainFragment` 的 Fragment 形式的 UI 控制器类。在这种情况下，UI 控制器（无论是 Activity 或 Fragment）中的代码需要将自身分配给该变量：
+上述`data`元素中的第二个变量引用了名为`MainFragment`的 Fragment 形式的 UI 控制器类。在这种情况下，UI 控制器（无论是 Activity 或 Fragment）中的代码需要将自身分配给该变量：
 
 ```java
 binding.setVariable(uiController, this);
@@ -7021,16 +7042,13 @@ binding.setVariable(uiController, this);
 
 ## 36.2.6 绑定表达式（单向）
 
-
-
-
-绑定表达式（Binding expressions）定义了特定视图与绑定对象之间的交互方式。例如，`Button` 上的绑定表达式可能会声明在响应点击时调用对象上的哪个方法。另一种，绑定表达式可能会定义存储在 `ViewModel` 中的哪个数据值应该显示在 `TextView` 中，以及如何进行展示和格式化。
+绑定表达式（Binding expressions）定义了特定视图与绑定对象之间的交互方式。例如，`Button`上的绑定表达式可能会声明在响应点击时调用对象上的哪个方法。另一种，绑定表达式可能会定义存储在`ViewModel`中的哪个数据值应该显示在`TextView`中，以及如何进行展示和格式化。
 
 绑定表达式使用一种声明式语言，允许通过逻辑以及对其他类和方法的访问来决定绑定数据如何使用。例如，表达式可以包含数学表达式、方法调用、字符串拼接、数组元素访问以及比较操作。此外，所有标准的 Java 语言库都会默认导入，因此在 Java 中可以实现的许多功能也可以在绑定表达式中执行。正如前面讨论过的，数据元素还可以用于导入自定义类，以为表达式添加更多功能。
 
-绑定表达式以 `@` 符号开头，后跟由大括号 (`{}`) 包围的表达式。
+绑定表达式以`@`符号开头，后跟由大括号 (`{}`) 包围的表达式。
 
-例如，考虑一个包含名为 `result` 变量 `ViewModel` 实例。假设该类已经在数据绑定布局文件中被赋值给名为 `viewModel` 的变量，并且需要绑定到 `TextView` 对象，以便视图始终显示最新的结果值。如果该值被存储为 `String` 对象，则在布局文件中的声明如下：
+例如，考虑一个包含名为`result`变量`ViewModel`实例。假设该类已经在数据绑定布局文件中被赋值给名为`viewModel`的变量，并且需要绑定到`TextView`对象，以便视图始终显示最新的结果值。如果该值被存储为`String`对象，则在布局文件中的声明如下：
 
 ```xml
 <TextView
@@ -7044,9 +7062,9 @@ binding.setVariable(uiController, this);
     app:layout_constraintTop_toTopOf="parent" />
 ```
 
-在上面的 XML 中，`text` 属性被设置为 `viewModel` 对象中 `result` LiveData 属性所存储的值。
+在上面的 XML 中，`text`属性被设置为`viewModel`对象中`result` LiveData 属性所存储的值。
 
-然而，考虑如果 `result` 在模型中存储为 `Float` 值而不是 `String`。如果是这样，上面的表达式将导致编译错误。显然，在 `TextView` 显示它之前，必须将 `Float` 值转换为字符串。为了解决此类问题，绑定表达式可以包含必要的步骤，使用标准 Java 语言类来完成转换：
+然而，考虑如果`result`在模型中存储为`Float`值而不是`String`。如果是这样，上面的表达式将导致编译错误。显然，在`TextView`显示它之前，必须将`Float`值转换为字符串。为了解决此类问题，绑定表达式可以包含必要的步骤，使用标准 Java 语言类来完成转换：
 
 ```xml
 android:text="@{String.valueOf(viewModel.result)}"
@@ -7056,9 +7074,9 @@ android:text="@{String.valueOf(viewModel.result)}"
 
 `warning: myViewModel.result.getValue() is a boxed field but needs to be un-boxed to execute String.valueOf(viewModel.result.getValue()).`
 
-Java 中的值可以以原始值的形式（如 `boolean` 类型，称为未装箱 unboxed）或封装在 Java 对象中（如 `Boolean` 类型）并通过对该对象的引用访问（即装箱 boxed）。解箱过程涉及从对象中拆出原始值。
+Java 中的值可以以原始值的形式（如`boolean`类型，称为未装箱 unboxed）或封装在 Java 对象中（如`Boolean`类型）并通过对该对象的引用访问（即装箱 boxed）。解箱过程涉及从对象中拆出原始值。
 
-为了避免此消息，请如下所示将产生问题的操作封装在 `safeUnbox()` 调用中：
+为了避免此消息，请如下所示将产生问题的操作封装在`safeUnbox()`调用中：
 
 ```xml
 android:text="@{String.valueOf(safeUnbox(myViewModel.result))}"
@@ -7088,7 +7106,7 @@ android:text='@{String.valueOf(safeUnbox(myViewModel.result)) + " dollars"}'
 
 到目前为止涵盖的表达式类型被称为单向绑定。换句话说，随着相应值的发生变化，布局会不断更新，但从布局内部对值的更改并不会更新存储的值。
 
-另一方面，双向绑定允许数据模型响应布局的变化而进行更新。例如，`EditText` 视图可以配置双向绑定，这样当用户输入不同的值时，该值将被用于更新对应的数据模型值。在声明双向表达式时，语法与单向表达式类似，但它以 `@=` 开头。例如：
+另一方面，双向绑定允许数据模型响应布局的变化而进行更新。例如，`EditText`视图可以配置双向绑定，这样当用户输入不同的值时，该值将被用于更新对应的数据模型值。在声明双向表达式时，语法与单向表达式类似，但它以`@=`开头。例如：
 
 ```xml
 android:text="@={myViewModel.result}"
@@ -7096,13 +7114,15 @@ android:text="@={myViewModel.result}"
 
 ### 36.2.8 事件和监听器绑定
 
-绑定表达式还可以响应视图上的事件触发方法调用。例如，`Button` 视图可以配置为在点击时调用一个方法。在名为[在 Android Studio 中创建一个 Android 应用]的章节中，例如，按钮的 `onClick` 属性被配置为调用应用主 Activity 中名为 `convertCurrency()` 的方法。在 XML 文件中，表示如下：
+绑定表达式还可以响应视图上的事件触发方法调用。例如，`Button`视图可以配置为在点击时调用一个方法。在名为[在 Android Studio 中创建一个 Android 应用]的章节中，例如，按钮的`onClick`属性被配置为调用应用主 Activity 中名为`convertCurrency()`的方法。在 XML 文件中，表示如下：
 
 ```xml
 android:onClick="convertCurrency"
 ```
 
-`convertCurrency()` 方法在以下行中声明：
+
+
+`convertCurrency()`方法在以下行中声明：
 
 ```java
 public void convertCurrency(View view) {
@@ -7111,13 +7131,13 @@ public void convertCurrency(View view) {
 }
 ```
 
-注意，这种类型的方法调用始终会传递发生事件的视图引用。在数据绑定中可以使用以下表达式实现相同的效果（假设布局已绑定到一个变量名为 `viewModel` 的类）：
+注意，这种类型的方法调用始终会传递发生事件的视图引用。在数据绑定中可以使用以下表达式实现相同的效果（假设布局已绑定到一个变量名为`viewModel`的类）：
 
 ```xml
 android:onClick="convertCurrency"
 ```
 
-另一种选项是允许向方法传递参数，被称为监听器绑定。下面的表达式使用这种方法调用 `viewModel` 实例上的无参数方法：
+另一种选项是允许向方法传递参数，被称为监听器绑定。下面的表达式使用这种方法调用`viewModel`实例上的无参数方法：
 
 ```xml
 android:onClick='@{() -> methodOne()}'
@@ -7131,19 +7151,19 @@ android:onClick='@{() -> methodTwo(viewModel.result, 10, "A String")}'
 
 表达式提供了丰富的灵活语言，用于将用户界面视图绑定到数据和其他方法。本节仅涵盖了最常用的用例。要了解更多关于表达式的信息，请查阅在线 Android 文档：https://developer.android.com/topic/libraries/data-binding/expressions
 
-### 36.3 总结
+## 36.3 总结
 
 Android 数据绑定提供了一种系统，用于在用户界面视图与数据和其他方法之间创建连接。在完成初始配置步骤后，数据绑定涉及在布局的视图中使用绑定表达式。这些表达式可以是单向的或双向的，还可以用于绑定响应点击等事件的方法。
 
-### 37 Android Jetpack 数据绑定教程
+# 37 Android Jetpack 数据绑定教程
 
-到目前为止，我们涵盖了现代应用架构的基本概念，并详细查看了 ViewModel 和 LiveData 组件。绑定的概念在上一节中讨论过，现在将在本节中使用它修改 ViewModelDemo 应用。
+到目前为止，我们涵盖了现代应用架构的基本概念，并详细查看了`ViewModel`和`LiveData`组件。绑定的概念在上一节中讨论过，现在将在本节中使用它修改`ViewModelDemo`应用。
 
-#### 37.1 冗余代码
+## 37.1 冗余代码
 
-如果需要，请复制 ViewModelDemo 项目文件夹并将其保存为 ViewModelDemo_LiveData 以供后续使用。复制完成后，打开原始的 ViewModelDemo 项目，准备删除在本章节结束时不再需要的代码。
+如果需要，请复制`ViewModelDemo`项目文件夹并将其保存为`ViewModelDemo_LiveData`以供后续使用。复制完成后，打开原始的`ViewModelDemo`项目，准备删除在本章节结束时不再需要的代码。
 
-启动 Android Studio，打开 ViewModelDemo 项目，编辑 `FirstFragment.java` 文件，并将代码修改为：
+启动 Android Studio，打开`ViewModelDemo`项目，编辑`FirstFragment.java`文件，并将代码修改为：
 
 ```java
 package com.ebookfrenzy.viewmodeldemo;
@@ -7158,8 +7178,6 @@ import android.arch.lifecycle.Observer;
 
 .
 ```
-
-
 
 ```java
 public class MainFragment extends Fragment {
@@ -7190,7 +7208,7 @@ public class MainFragment extends Fragment {
 }
 ```
 
-接下来，编辑 `MainViewModel.java` 文件并继续按照所示删除代码（同时请注意 `dollarText` 变量转换为 `LiveData`）：
+接下来，编辑`MainViewModel.java`文件并继续按照所示删除代码（同时请注意`dollarText`变量转换为`LiveData`）：
 
 ```java
 package com.ebookfrenzy.viewmodeldemo;
@@ -7219,9 +7237,9 @@ public class MainViewModel extends ViewModel {
 
 ## 37.2 启用数据绑定
 
-使用数据绑定的第一步是在 Android Studio 项目中启用它。这涉及向 `Gradle Scripts -> build.gradle.kts (Module :app)` 文件添加一个新属性。
+使用数据绑定的第一步是在 Android Studio 项目中启用它。这涉及向`Gradle Scripts -> build.gradle.kts (Module :app)`文件添加一个新属性。
 
-在 `build.gradle.kts` 文件中，添加以下元素以启用项目中的数据绑定：
+在`build.gradle.kts`文件中，添加以下元素以启用项目中的数据绑定：
 
 ```kotlin
 plugins {
@@ -7236,11 +7254,11 @@ android {
 }
 ```
 
-一旦添加了项，编辑器屏幕顶部将出现一个包含 `Sync Now` 链接的栏。点击该链接根据新的构建配置设置重新同步项目。
+一旦添加了项，编辑器屏幕顶部将出现一个包含`Sync Now`链接的栏。点击该链接根据新的构建配置设置重新同步项目。
 
 ## 37.3 添加布局元素
 
-正如“Android 数据绑定概览”中所述，布局层级必须有一个 `layout` 组件作为根视图才能使用数据绑定。这需要对 `fragment_first.xml`（`app -> res -> layout -> fragment_first.xml`）进行以下更改。在布局编辑器中打开此文件，切换到 `Code` 模式并进行这些更改：
+正如“Android 数据绑定概览”中所述，布局层级必须有一个`layout`组件作为根视图才能使用数据绑定。这需要对`fragment_first.xml`（`app -> res -> layout -> fragment_first.xml`）进行以下更改。在布局编辑器中打开此文件，切换到`Code`模式并进行这些更改：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -7256,14 +7274,15 @@ android {
 </layout>
 ```
 
-完成这些更改后，切换回 `Design` 模式，注意新的根节点虽然在布局画布上不可见，但现在已列在组件树中，如图 37-1 所示。
+完成这些更改后，切换回`Design`模式，注意新的根节点虽然在布局画布上不可见，但现在已列在组件树中，如图 37-1 所示。
 
 图 37-1
-构建并运行应用以验证添加 `layout` 元素没有更改用户界面。
+
+构建并运行应用以验证添加`layout`元素没有更改用户界面。
 
 ## 37.4 在布局文件中添加数据元素
 
-将布局文件转换为数据绑定布局的下一步是添加 `data` 元素。在本例中，布局将绑定到 `MainViewModel`，因此编辑 `fragment_first.xml` 文件并如下所示添加 `data` 元素：
+将布局文件转换为数据绑定布局的下一步是添加`data`元素。在本例中，布局将绑定到`MainViewModel`，因此编辑`fragment_first.xml`文件并如下所示添加`data`元素：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -7287,7 +7306,7 @@ android {
 
 ## 37.5 使用绑定类
 
-下一步是修改 `FirstFragment.java` 文件代码以膨胀数据绑定。最佳方法是重写 `onCreateView()` 方法：
+下一步是修改`FirstFragment.java`文件代码以膨胀数据绑定。最佳方法是重写`onCreateView()`方法：
 
 ```java
 import androidx.databinding.DataBindingUtil;
@@ -7305,13 +7324,13 @@ public class MainFragment extends Fragment {
 }
 ```
 
-旧代码膨胀了 `fragment_first.xml` 布局（也就是说创建了包含所有视图的布局），并返回了根视图的引用。数据绑定库包含一个工具类，它提供的特殊方法在构建 UI 的同时还会初始化并返回布局类的实例。新代码调用该方法并将引用存储在变量中：`DataBindingUtil.inflate(inflater, R.layout.fragment_first, container, false)`。
+旧代码膨胀了`fragment_first.xml`布局（也就是说创建了包含所有视图的布局），并返回了根视图的引用。数据绑定库包含一个工具类，它提供的特殊方法在构建 UI 的同时还会初始化并返回布局类的实例。新代码调用该方法并将引用存储在变量中：`DataBindingUtil.inflate(inflater, R.layout.fragment_first, container, false)`。
 
-绑定对象必须在 Fragment 存在期间留在内存中。为了确保在 Fragment 消失时销毁实例，将当前 Fragment 声明为绑定对象的生命周期所有者。`binding.lifecycleOwner = this;`
+绑定对象必须在`Fragment`存在期间留在内存中。为了确保在`Fragment`消失时销毁实例，将当前`Fragment`声明为绑定对象的生命周期所有者。`binding.lifecycleOwner = this;`
 
 ## 37.6 将 ViewModel 实例分配给数据绑定变量
 
-此时，数据绑定知道它将绑定到 `MainViewModel` 类的实例，但尚未连接到实际 `MainViewModel` 对象。这需要额外步骤，将应用内部使用的 `MainViewModel` 实例分配给布局文件中定义的 `viewModel` 变量。在 `FirstFragment.java` 文件的 `onViewCreated()` 方法中按如下所示添加代码：
+此时，数据绑定知道它将绑定到`MainViewModel`类的实例，但尚未连接到实际`MainViewModel`对象。这需要额外步骤，将应用内部使用的`MainViewModel`实例分配给布局文件中定义的`viewModel`变量。在`FirstFragment.java`文件的`onViewCreated()`方法中按如下所示添加代码：
 
 ```java
 import static com.ebookfrenzy.viewmodeldemo.BR.myViewModel;
@@ -7323,13 +7342,9 @@ public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceStat
 }
 ```
 
-如果 Android Studio 报告 `myViewModel` 未定义，请使用 `Build -> Make Project` 菜单重新构建项目以强制生成类。完成这些更改后，下一步是在数据绑定布局文件的视图元素中插入一些绑定表达式。
+如果 Android Studio 报告`myViewModel`未定义，请使用`Build -> Make Project`菜单重新构建项目以强制生成类。完成这些更改后，下一步是在数据绑定布局文件的视图元素中插入一些绑定表达式。
 
-
-
-
-
-第一个绑定表达式将 `resultText` `TextView` 绑定到模型视图中的结果值。编辑 `fragment_first.xml` 文件，找到 `resultText` 元素，并修改 `text` 属性，该元素显示如下：
+第一个绑定表达式将`resultText` `TextView`绑定到模型视图中的结果值。编辑`fragment_first.xml`文件，找到`resultText`元素，并修改`text`属性，该元素显示如下：
 
 ```xml
 <TextView
@@ -7346,7 +7361,7 @@ public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceStat
 
 该表达式首先检查结果值当前是否为零，如果是，则显示一条指示用户输入数值的消息。然而，如果结果不为零，则将该值转换为字符串并与单词“euros”拼接，然后显示给用户。
 
-结果值只需要单向绑定，因为布局永远不需要更新存储在 `ViewModel` 中的值。相反，`dollarValue` `EditText` 视图需要使用双向绑定，以便数据模型可以使用用户输入的最新值进行更新，并允许在触发设备旋转等生命周期事件发生时，将当前值在视图中重新显示。`dollarText` 元素应声明如下：
+结果值只需要单向绑定，因为布局永远不需要更新存储在`ViewModel`中的值。相反，`dollarValue` `EditText`视图需要使用双向绑定，以便数据模型可以使用用户输入的最新值进行更新，并允许在触发设备旋转等生命周期事件发生时，将当前值在视图中重新显示。`dollarText`元素应声明如下：
 
 ```xml
 <EditText
@@ -7364,11 +7379,13 @@ public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceStat
     app:layout_constraintTop_toTopOf="parent" />
 ```
 
-现在已经添加了这些初始绑定表达式，必须编写一个方法，在用户点击 `Button` 控件时执行转换。
+现在已经添加了这些初始绑定表达式，必须编写一个方法，在用户点击`Button`控件时执行转换。
 
-### 37.8 添加转换方法
+## 37.8 添加转换方法
 
-当点击 `Convert` 按钮时，它将调用 `ViewModel` 上的方法来执行转换计算，并将欧元值放入 `result` `LiveData` 变量中。现在在 `MainViewModel.java` 文件中添加此方法：
+
+
+当点击`Convert`按钮时，它将调用`ViewModel`上的方法来执行转换计算，并将欧元值放入`result` `LiveData`变量中。现在在`MainViewModel.java`文件中添加此方法：
 
 ```java
 public class MainViewModel extends ViewModel {
@@ -7387,11 +7404,11 @@ public class MainViewModel extends ViewModel {
 }
 ```
 
-注意，在没有有效的美元值的情况下，会为 `result` `LiveData` 变量分配零值。这确保了分配给 `resultText` `TextView` 的绑定表达式在用户未输入任何值时会显示“Enter value”消息。
+注意，在没有有效的美元值的情况下，会为`result` `LiveData`变量分配零值。这确保了分配给`resultText` `TextView`的绑定表达式在用户未输入任何值时会显示“Enter value”消息。
 
 ### 37.9 添加监听器绑定
 
-在测试项目之前的最后一步是对布局文件中的 `Button` 元素添加监听器绑定表达式，以便在按钮被点击时调用 `convertValue()` 方法。再次编辑 `fragment_first.xml` 文件，找到 `convertButton` 元素，并如下添加 `onClick`：
+在测试项目之前的最后一步是对布局文件中的`Button`元素添加监听器绑定表达式，以便在按钮被点击时调用`convertValue()`方法。再次编辑`fragment_first.xml`文件，找到`convertButton`元素，并如下添加`onClick`：
 
 ```xml
 <Button
@@ -7403,43 +7420,39 @@ public class MainViewModel extends ViewModel {
 
 ### 37.10 测试应用
 
-编译并运行应用，测试在 `dollar field` 中输入一个值并点击 `Convert` 按钮是否会在 `TextView` 中显示正确的结果。同时验证当 `dollar field` 为空时，是否会出现“Enter value”提示。
+编译并运行应用，测试在`dollar field`中输入一个值并点击`Convert`按钮是否会在`TextView`中显示正确的结果。同时验证当`dollar field`为空时，是否会出现“Enter value”提示。
 
 ### 37.11 总结
 
-本章的主要目标是完成设置数据绑定的步骤，以演示单向、双向绑定和监听器绑定。本章还提供了一个如何使用 `LiveData` 保存数据以连接 UI 视图的实际示例。
+本章的主要目标是完成设置数据绑定的步骤，以演示单向、双向绑定和监听器绑定。本章还提供了一个如何使用`LiveData`保存数据以连接UI视图的实际示例。
 
 # 38 Android 用状态教程
 
 应用状态的保留和恢复关乎在应用置于后台后为用户提供连续性。用户期望能够从一个应用切换到另一个应用，并在返回原始应用时，发现它正处于切换前的完全相同的状态。
 
-正如“理解应用程序和 Activity 生命周期”章节中所述的，当用户将应用置于后台时，如果资源受限，该应用将具备被终止条件。当用户尝试将已终止的应用返回前台时，Android 会在一个新进程中重新启动应用。由于这一切对用户来说是不可见的，因此应用有责任将自己恢复到置于后台时的状态。对于基于 `ViewModel` 的应用，这种行为很大可以通过 Saved State 模块来实现。
+正如“理解应用程序和Activity生命周期”章节中所述的，当用户将应用置于后台时，如果资源受限，该应用将具备被终止条件。当用户尝试将已终止的应用返回前台时，Android会在一个新进程中重新启动应用。由于这一切对用户来说是不可见的，因此应用有责任将自己恢复到置于后台时的状态。对于基于`ViewModel`的应用，这种行为很大可以通过Saved State模块来实现。
 
-### 38.1 理解 ViewModel 状态保存
+### 38.1 理解ViewModel状态保存
 
-正如前面的章节所述，`ViewModel` 为应用开发带来了许多好处，包括在配置更改（如设备旋转）时恢复 UI 状态。为了演示这一点，请运行 `ViewModelDemo` 应用（如果你仍需要创建项目，请从示例代码中加载 `ViewModel_LiveData` 项目）。
+正如前面的章节所述，`ViewModel`为应用开发带来了许多好处，包括在配置更改（如设备旋转）时恢复UI状态。为了演示这一点，请运行`ViewModelDemo`应用（如果你仍需要创建项目，请从示例代码中加载`ViewModel_LiveData`项目）。
 
 运行时，输入一个美元值并将其转换为欧元。在显示美元和欧元值的情况下，旋转设备或模拟器，并注意在应用响应方向变化后这两个值仍然可见。
 
-遗憾的是，这种行为并不适用于后台应用进程的终止。在应用运行时，点击设备主页键将 `ViewModelDemo` 应用置于后台，然后打开终端工具窗口并运行以下命令将其终止（`<package name>` 为创建项目时使用的名称，例如 `com.ebookfrenzy.viewmodeldemo`）：
+遗憾的是，这种行为并不适用于后台应用进程的终止。在应用运行时，点击设备主页键将`ViewModelDemo`应用置于后台，然后打开终端工具窗口并运行以下命令将其终止（`<package name>`为创建项目时使用的名称，例如`com.ebookfrenzy.viewmodeldemo`）：
 
 ```bash
 adb shell am kill <package name>
 ```
 
-如果未找到 `adb` 命令，请参考“设置 Android Studio 开发环境”章节获取设置你的 Android Studio 环境的步骤。
+如果未找到`adb`命令，请参考“设置Android Studio开发环境”章节获取设置你的Android Studio环境的步骤。
 
-应用被终止后，返回设备或模拟器并从启动器选择该应用（不要从 Android Studio 内部重新运行应用）。一旦应用出现，它将像刚启动一样，之前的最后的美元值和欧元值都丢失了。然而，从用户的角度来看，应用是从后台恢复的，本应该仍然包含原始数据。在这种情况下，应用未能提供用户对 Android 应用所期望的连续性。
+应用被终止后，返回设备或模拟器并从启动器选择该应用（不要从Android Studio内部重新运行应用）。一旦应用出现，它将像刚启动一样，之前的最后的美元值和欧元值都丢失了。然而，从用户的角度来看，应用是从后台恢复的，本应该仍然包含原始数据。在这种情况下，应用未能提供用户对Android应用所期望的连续性。
 
+基础的ViewModel状态保存通过引入ViewModel Saved State库得以实现可能。该库扩展了`ViewModel`类，以支持在后台进程终止及随后的重新启动期间维持状态。
 
+保存状态的关键在于`SavedStateHandle`类，它用于保存和恢复ViewModel实例的状态。`SavedStateHandle`对象包含一个键值映射（key-value map），允许通过引用相应的键来保存和恢复数据值。
 
-
-
-基础的 ViewModel 状态保存通过引入 ViewModel Saved State 库得以实现可能。该库扩展了 `ViewModel` 类，以支持在后台进程终止及随后的重新启动期间维持状态。
-
-保存状态的关键在于 `SavedStateHandle` 类，它用于保存和恢复 ViewModel 实例的状态。`SavedStateHandle` 对象包含一个键值映射（key-value map），允许通过引用相应的键来保存和恢复数据值。
-
-为了支持状态保存，需要声明一种不同的 `ViewModel` 子类，在这种情况下，该子类包含一个可以接收 `SavedStateHandle` 实例的构造函数。一旦声明，就可以在创建时包含一个 `SavedStateViewModelFactory` 对象来创建此类类型的 `ViewModel` 实例。考虑以下来自标准 `ViewModel` 声明的代码片段：
+为了支持状态保存，需要声明一种不同的`ViewModel`子类，在这种情况下，该子类包含一个可以接收`SavedStateHandle`实例的构造函数。一旦声明，就可以在创建时包含一个`SavedStateViewModelFactory`对象来创建此类类型的`ViewModel`实例。考虑以下来自标准`ViewModel`声明的代码片段：
 
 ```java
 package com.ebookfrenzy.viewmodeldemo.ui.main;
@@ -7463,7 +7476,7 @@ private MainViewModel mViewModel;
 mViewModel = new ViewModelProvider(this).get(MainViewModel.class);
 ```
 
-另一方面，设计用于支持保存状态的 `ViewModel` 子类需要如下所示声明：
+另一方面，设计用于支持保存状态的`ViewModel`子类需要如下所示声明：
 
 ```java
 package com.ebookfrenzy.viewmodeldemo.ui.main;
@@ -7487,7 +7500,7 @@ public class MainViewModel extends ViewModel {
 }
 ```
 
-当创建上述 `ViewModel` 实例时，必须如下所示向 `ViewModelProvider` 类初始化器传递一个 `SavedStateViewModelFactory` 实例：
+当创建上述`ViewModel`实例时，必须如下所示向`ViewModelProvider`类初始化器传递一个`SavedStateViewModelFactory`实例：
 
 ```java
 SavedStateViewModelFactory factory =
@@ -7498,7 +7511,7 @@ mViewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
 ## 38.3 保存和恢复状态
 
-可以通过从 `ViewModel` 内部将其传递给 `SavedStateHandle` 实例的 `set()` 方法来保存对象或值，并提供在执行检索时要引用的键字符串：
+可以通过从`ViewModel`内部将其传递给`SavedStateHandle`实例的`set()`方法来保存对象或值，并提供在执行检索时要引用的键字符串：
 
 ```java
 private static final String NAME_KEY = "Customer Name";
@@ -7506,29 +7519,31 @@ private static final String NAME_KEY = "Customer Name";
 savedStateHandle.set(NAME_KEY, customerName);
 ```
 
-当与 `LiveData` 对象配合使用时，可以使用 `SavedStateHandle` 实例的 `getLiveData()` 方法恢复之前的值，再次如下引用相应的键：
+当与`LiveData`对象配合使用时，可以使用`SavedStateHandle`实例的`getLiveData()`方法恢复之前的值，再次如下引用相应的键：
 
 ```java
 MutableLiveData<String> restoredName = savedStateHandle.getLiveData(NAME_KEY);
 ```
 
-要恢复普通（非 `LiveData`）对象，请使用 `SavedStateHandle` 的 `get()` 方法：
+要恢复普通（非`LiveData`）对象，请使用`SavedStateHandle`的`get()`方法：
 
 ```java
 String restoredName = savedStateHandle.get(NAME_KEY);
 ```
 
-其他常用的 `SavedStateHandle` 方法包括：
+其他常用的`SavedStateHandle`方法包括：
 
 - `contains(String key)` - 返回一个布尔值，表示保存的状态是否包含指定键的值。
+
 - `remove(String key)` - 从保存状态中移除该值和键。返回被移除的值。
-- `keys()` - 返回包含在保存状态中的所有键的 `String` 集合。
 
-## 38.4 为 ViewModelDemo 项目添加保存状态支持
+- `keys()` - 返回包含在保存状态中的所有键的`String`集合。
 
-在涵盖了 ViewModel Saved State 的基础知识后，可以扩展 `ViewModelDemo` 应用以包含此支持。首先，将  [Android Jetpack LiveData 教程 创建的 `ViewModelDemo_LiveData` 项目加载到 Android Studio（示例代码下载中也有项目的副本）。
+## 38.4 为ViewModelDemo项目添加保存状态支持
 
-接下来，修改 `MainViewModel.java` 文件，使构造函数接受并存储 `SavedStateHandle` 实例。此外，导入 `androidx.lifecycle.SavedStateHandle`，声明键字符串常量，并修改结果 `LiveData` 变量，以便值现在从构造函数中的保存状态中获取：
+在涵盖了ViewModel Saved State的基础知识后，可以扩展`ViewModelDemo`应用以包含此支持。首先，将[Android Jetpack LiveData教程](https://www.example.com)创建的`ViewModelDemo_LiveData`项目加载到Android Studio（示例代码下载中也有项目的副本）。
+
+接下来，修改`MainViewModel.java`文件，使构造函数接受并存储`SavedStateHandle`实例。此外，导入`androidx.lifecycle.SavedStateHandle`，声明键字符串常量，并修改结果`LiveData`变量，以便值现在从构造函数中的保存状态中获取：
 
 ```java
 package com.ebookfrenzy.viewmodeldemo.ui.main;
@@ -7556,7 +7571,7 @@ public class MainViewModel extends ViewModel {
 }
 ```
 
-在 `MainViewModel.java` 文件中继续操作，修改 `setAmount()` 方法，包含代码在每次计算新的欧元金额时保存结果值：
+在`MainViewModel.java`文件中继续操作，修改`setAmount()`方法，包含代码在每次计算新的欧元金额时保存结果值：
 
 ```java
 public void setAmount(String value) {
@@ -7568,7 +7583,7 @@ public void setAmount(String value) {
 }
 ```
 
-完成对 `ViewModel` 的更改后，打开 `FirstFragment.java` 文件进行以下更改，以便在创建过程中包含一个 `SavedStateFactory` 实例：
+完成对`ViewModel`的更改后，打开`FirstFragment.java`文件进行以下更改，以便在创建过程中包含一个`SavedStateFactory`实例：
 
 ```java
 .
@@ -7582,35 +7597,33 @@ public void onCreate(@Nullable savedInstanceState) {
     SavedStateViewModelFactory factory =
         new SavedStateViewModelFactory(getActivity().getApplication(),this);
     mViewModel = new ViewModelProvider(this, factory).get(MainViewModel.class);
-    // TODO: 使用 ViewModel
+    // TODO: 使用ViewModel
 }
 ```
 
-当界面填充了美元和欧元值后，将应用置于后台，使用 `adb` 工具终止它，然后从设备或模拟器屏幕重新启动。重启后，之前的金额应仍显示在 `TextView` 和 `EditText` 组件中，确认状态已成功保存并恢复。
+当界面填充了美元和欧元值后，将应用置于后台，使用`adb`工具终止它，然后从设备或模拟器屏幕重新启动。重启后，之前的金额应仍显示在`TextView`和`EditText`组件中，确认状态已成功保存并恢复。
 
 ### 38.5 总结
 
-良好的应用程序在从后台恢复时，应该向用户展示相同的状态，无论在此期间操作系统是否终止了包含应用的进程。在使用 `ViewModel` 时，可以通过利用 ViewModel Saved State 模块来实现。这涉及修改 `ViewModel` 构造函数以接受 `SavedStateHandle` 实例，反之，可以通过一系列方法调用来保存和恢复数据值。在创建 `ViewModel` 实例时，必须传递 `SavedStateViewModelFactory` 实例。实施这些步骤后，应用程序将在后台终止期间自动保存并恢复状态。
+良好的应用程序在从后台恢复时，应该向用户展示相同的状态，无论在此期间操作系统是否终止了包含应用的进程。在使用`ViewModel`时，可以通过利用ViewModel Saved State模块来实现。这涉及修改`ViewModel`构造函数以接受`SavedStateHandle`实例，反之，可以通过一系列方法调用来保存和恢复数据值。在创建`ViewModel`实例时，必须传递`SavedStateViewModelFactory`实例。实施这些步骤后，应用程序将在后台终止期间自动保存并恢复状态。
 
-## 39. 与 Android 生命周期感知组件协作
+## 39. 与Android生命周期感知组件协作
 
-之前的章节 理解 Android 应用和 Activity 生命周期 描述了使用生命周期方法在 UI 控制器（如 activity 或 fragment）中跟踪生命周期状态变化的方法。这些方法的主要问题之一是它们将处理生命周期变化的负担交给了 UI 控制器。从表面上看，这似乎是逻辑方法，因为 UI 控制器毕竟是经历状态变化的对象。然而事实是，受状态变化影响的代码通常位于应用中的其他类中。这导致 UI 控制器中出现了复杂的代码，需要响应生命周期状态的变化来管理和操作其他对象。在遵循 Android 架构指南时，应尽可能避免这种情况。
+之前的章节“理解Android应用和Activity生命周期”描述了使用生命周期方法在UI控制器（如activity或fragment）中跟踪生命周期状态变化的方法。这些方法的主要问题之一是它们将处理生命周期变化的负担交给了UI控制器。从表面上看，这似乎是逻辑方法，因为UI控制器毕竟是经历状态变化的对象。然而事实是，受状态变化影响的代码通常位于应用中的其他类中。这导致UI控制器中出现了复杂的代码，需要响应生命周期状态的变化来管理和操作其他对象。在遵循Android架构指南时，应尽可能避免这种情况。
+
+一种更清晰且更符合逻辑的方法是让App内的对象能够观察其他对象的生命周期状态，并负责对变化采取任何必要的操作。例如，负责跟踪用户位置的类可以观察UI控制器的生命周期状态并在控制器进入暂停（paused）状态时挂起位置更新。当控制器进入恢复（resumed）状态时，重新开始跟踪。这是通过Android架构组件内置的`Lifecycle`包中提供的类和接口实现的。
+
+本章将介绍用于在Android应用中构建生命周期感知能力的术语和关键组件。
+
+## 39.1 生命周期感知（Lifecycle Awareness）
+
+如果一个对象能够检测并响应App内其他对象生命周期状态的变化，则认为该对象是生命周期感知的。某些Android组件（例如`LiveData`）已经具有生命周期感知能力。通过在类中实现`LifecycleObserver`接口，也可以配置任何类为生命周期感知。
+
+## 39.2 生命周期所有者（Lifecycle Owners）
+
+生命周期感知组件只能观察生命周期所有者的对象状态。生命周期所有者实现`LifecycleOwner`接口，并被分配了一个配套的`Lifecycle`对象，该对象负责存储组件的当前状态并向生命周期观察者提供状态信息。大多数Android Framework组件（如activity和fragment类）都是生命周期所有者。也可以使用`LifecycleRegistry`类并实现`LifecycleObserver`接口将自定义类配置为生命周期所有者。例如：
 
 
-
-
-
-一种更清晰且更符合逻辑的方法是让 App 内的对象能够观察其他对象的生命周期状态，并负责对变化采取任何必要的操作。例如，负责跟踪用户位置的类可以观察 UI 控制器的生命周期状态并在控制器进入暂停（paused）状态时挂起位置更新。当控制器进入恢复（resumed）状态时，重新开始跟踪。这是通过 Android 架构组件内置的 `Lifecycle` 包中提供的类和接口实现的。
-
-本章将介绍用于在 Android 应用中构建生命周期感知能力的术语和关键组件。
-
-## 39.1 生命周期周期感知 (Lifecycle Awareness)
-
-如果一个对象能够检测并响应 App 内其他对象生命周期状态的变化，则认为该对象是生命周期感知的。某些 Android 组件（例如 `LiveData`）已经具有生命周期感知能力。通过在类中实现 `LifecycleObserver` 接口，也可以配置任何类为生命周期感知。
-
-## 39.2 生命周期周期所有者 (Lifecycle Owners)
-
-生命周期感知组件只能观察生命周期所有者的对象状态。生命周期所有者实现 `LifecycleOwner` 接口，并被分配了一个配套的 `Lifecycle` 对象，该对象负责存储组件的当前状态并向生命周期观察者提供状态信息。大多数 Android Framework 组件（如 activity 和 fragment 类）都是生命周期所有者。也可以使用 `LifecycleRegistry` 类并实现 `LifecycleObserver` 接口将自定义类配置为生命周期所有者。例如：
 
 ```java
 public class SampleOwner implements LifecycleOwner {
@@ -7636,7 +7649,7 @@ public class SampleOwner implements LifecycleOwner {
 }
 ```
 
-除非生命周期所有者是另一个生命周期感知组件的子类，否则该类需要通过调用 `LifecycleRegistry` 类的方法触发生命周期状态变化。可以使用 `markState()` 方法传递新的状态值来触发生命周期状态变化：
+除非生命周期所有者是另一个生命周期感知组件的子类，否则该类需要通过调用`LifecycleRegistry`类的方法触发生命周期状态变化。可以使用`markState()`方法传递新的状态值来触发生命周期状态变化：
 
 ```java
 public void resuming() {
@@ -7644,7 +7657,7 @@ public void resuming() {
 }
 ```
 
-上述调用也将导致相应的事件处理程序。或者，可以调用 `LifecycleRegistry.handleLifecycleEvent()` 方法并传递要触发的生命周期事件（这将导致生命周期状态发生变化）。例如：
+上述调用也将导致相应的事件处理程序。或者，可以调用`LifecycleRegistry.handleLifecycleEvent()`方法并传递要触发的生命周期事件（这将导致生命周期状态发生变化）。例如：
 
 ```java
 lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_START);
@@ -7652,7 +7665,7 @@ lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_START);
 
 ## 39.3 生命周期周期观察者 (Lifecycle Observers)
 
-为了观察生命周期所有者的状态，生命周期感知组件必须实现 `DefaultLifecycleObserver` 接口，并重写需要观察的任何生命周期变化事件的方法。
+为了观察生命周期所有者的状态，生命周期感知组件必须实现`DefaultLifecycleObserver`接口，并重写需要观察的任何生命周期变化事件的方法。
 
 ```java
 public class SampleObserver implements DefaultLifecycleObserver {
@@ -7660,13 +7673,13 @@ public class SampleObserver implements DefaultLifecycleObserver {
 }
 ```
 
-然后创建此观察者类的实例并将其添加到 `Lifecycle` 对象维护的观察者列表中。
+然后创建此观察者类的实例并将其添加到`Lifecycle`对象维护的观察者列表中。
 
 ```java
 getLifecycle().addObserver(new SampleObserver());
 ```
 
-如果观察者不再需要跟踪生命周期状态，可以随时从 `Lifecycle` 对象中移除。
+如果观察者不再需要跟踪生命周期状态，可以随时从`Lifecycle`对象中移除。
 
 图 39-1 展示了提供生命周期感知能力的关键元素之间的关系：
 
@@ -7676,24 +7689,33 @@ getLifecycle().addObserver(new SampleObserver());
 
 ## 39.4 生命周期周期状态与事件
 
-当生命周期所有者的状态变化时，分配的 `Lifecycle` 对象将更新为新状态。在任何时刻，生命周期所有者将处于以下五种状态之一：
+当生命周期所有者的状态变化时，分配的`Lifecycle`对象将更新为新状态。在任何时刻，生命周期所有者将处于以下五种状态之一：
 
 - `Lifecycle.State.INITIALIZED`
+
 - `Lifecycle.State.CREATED`
+
 - `Lifecycle.State.STARTED`
+
 - `Lifecycle.State.RESUMED`
+
 - `Lifecycle.State.DESTROYED`
 
-当组件转换不同的状态时，`Lifecycle` 对象将向添加到列表的任何观察者触发事件。在生命周期观察者内部可以重写以下事件方法：
+当组件转换不同的状态时，`Lifecycle`对象将向添加到列表的任何观察者触发事件。在生命周期观察者内部可以重写以下事件方法：
 
 - `onCreate()`
+
 - `onResume()`
+
 - `onPause()`
+
 - `onStop()`
+
 - `onStart()`
+
 - `onDestroy()`
 
-例如，以下代码重写了 `DefaultLifecycleObserver.onResume()` 方法：
+例如，以下代码重写了`DefaultLifecycleObserver.onResume()`方法：
 
 ```java
 @Override
@@ -7710,7 +7732,7 @@ public void onResume(@NonNull LifecycleOwner owner) {
 
 ### 39.5 总结
 
-本章介绍了生命周期感知的基础，以及 Android Jetpack 包含的 Android `Lifecycle` 包中的类和接口。该包包含了用于创建生命周期所有者、观察者和生命周期感知组件的多个类和接口。生命周期所有者分配了一个 `Lifecycle` 对象，该对象维护所有者的状态记录和订阅观察者列表。当所有者的状态发生变化时，会通过生命周期事件方法通知观察者以响应变化。
+本章介绍了生命周期感知的基础，以及 Android Jetpack 包含的 Android `Lifecycle`包中的类和接口。该包包含了用于创建生命周期所有者、观察者和生命周期感知组件的多个类和接口。生命周期所有者分配了一个`Lifecycle`对象，该对象维护所有者的状态记录和订阅观察者列表。当所有者的状态发生变化时，会通过生命周期事件方法通知观察者以响应变化。
 
 下一章将创建一个 Android Studio 项目，演示如何使用和创建生命周期感知组件，包括创建生命周期观察者和所有者，以及如何处理生命周期状态变化和事件的处理。
 
@@ -7722,13 +7744,13 @@ public void onResume(@NonNull LifecycleOwner owner) {
 
 在欢迎界面选择 New Project 快速启动，在结果的新项目对话框中选择 Empty Views Activity 模板，然后点击 Next 按钮。
 
-在 Name 字段中输入 `LifecycleDemo`，并在 package name 中指定 `com.ebookrenzy.lifecemo`。在点击 Finish 按钮之前，将 Minimum API level 设置为 26：Android 8.0 (Oreo)，并将 Language 设置为 Java。
+在 Name 字段中输入`LifecycleDemo`，并在 package name 中指定`com.ebookrenzy.lifecemo`。在点击 Finish 按钮之前，将 Minimum API level 设置为 26：Android 8.0 (Oreo)，并将 Language 设置为 Java。
 
 ### 40.2 创建 生命周期观察者
 
-如前所述，activity 和 fragment 已经实现了 LifecycleOwner ，可以被其他对象观察。为了进行演示，教程的下一步是在项目中添加一个可以观察 `MainActivity` 实例的类。
+如前所述，activity 和 fragment 已经实现了 LifecycleOwner ，可以被其他对象观察。为了进行演示，教程的下一步是在项目中添加一个可以观察`MainActivity`实例的类。
 
-要添加新类，在 Project 工具窗口中右键点击 app -> java -> com.ebookrenzy.lifecemo，选择 New -> Java Class...。在 New Class 对话框中将类命名为 `DemoObserver` 并按回键创建 `DemoObserver.java` 文件。新文件应会在编辑器中打开，内容如下：
+要添加新类，在 Project 工具窗口中右键点击 app -> java -> com.ebookrenzy.lifecemo，选择 New -> Java Class...。在 New Class 对话框中将类命名为`DemoObserver`并按回键创建`DemoObserver.java`文件。新文件应会在编辑器中打开，内容如下：
 
 ```java
 package com.ebookrenzy.lifecemo;
@@ -7738,7 +7760,7 @@ public class DemoObserver {
 }
 ```
 
-留在编辑器中，修改类文件以声明它将实现 `DefaultLifecycleObserver` 接口：
+留在编辑器中，修改类文件以声明它将实现`DefaultLifecycleObserver`接口：
 
 ```java
 package com.ebookrenzy.lifecemo;
@@ -7750,7 +7772,7 @@ public class DemoObserver implements DefaultLifecycleObserver {
 }
 ```
 
-下一步是重写 `DefaultLifecycleObserver` 类的生命周期方法。对于此示例，所有事件将被处理，每个向 Logcat 面板输出显示事件类型的消息。按照以下列表更新观察者类：
+下一步是重写`DefaultLifecycleObserver`类的生命周期方法。对于此示例，所有事件将被处理，每个向 Logcat 面板输出显示事件类型的消息。按照以下列表更新观察者类：
 
 ```java
 package com.ebookrenzy.lifecemo;
@@ -7765,9 +7787,6 @@ import androidx.lifecycle.LifecycleOwner;
 
 .
 ```
-
-
-
 
 ```java
 public class DemoObserver implements DefaultLifecycleObserver {
@@ -7806,11 +7825,11 @@ public class DemoObserver implements DefaultLifecycleObserver {
 }
 ```
 
-完成 `DemoObserver` 类后，下一步是将将其作为观察者添加到 `MainActivity` 类中。
+完成`DemoObserver`类后，下一步是将将其作为观察者添加到`MainActivity`类中。
 
 ### 40.3 添加观察者
 
-观察者通过调用所有者的 `Lifecycle` 对象的 `addObserver()` 方法添加到生命周期所有者，该对象的引用是通过调用 `getLifecycle()` 方法获得的。编辑 `MainActivity.java` 类文件并修改 `onCreate()` 方法以添加观察者：
+观察者通过调用所有者的`Lifecycle`对象的`addObserver()`方法添加到生命周期所有者，该对象的引用是通过调用`getLifecycle()`方法获得的。编辑`MainActivity.java`类文件并修改`onCreate()`方法以添加观察者：
 
 ```java
 @Override
@@ -7821,27 +7840,34 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-当观察者类被创建并添加到生命周期所有者的 `Lifecycle` 对象后，应用就可以准备进行测试了。
+当观察者类被创建并添加到生命周期所有者的`Lifecycle`对象后，应用就可以准备进行测试了。
 
 ### 40.4 测试观察者
 
-由于 `DemoObserver` 类向 Logcat 控制台输出诊断信息，如果配置了过滤器仅显示 `DemoObserver` 消息，将更容易看到输出。按照之前在 “通过示例理解 Android Activity 状态变化” 中列出的步骤，显示 Logcat 面并在过滤器字段中输入以下键：
+由于`DemoObserver`类向 Logcat 控制台输出诊断信息，如果配置了过滤器仅显示`DemoObserver`消息，将更容易看到输出。按照之前在 “通过示例理解 Android Activity 状态变化” 中列出的步骤，显示 Logcat 面并在过滤器字段中输入以下键：
 
 `package:mine tag:DemoObserver`
 
 应用成功启动后，Logcat 输出应指示以下生命周期状态更改和事件：
 
 * `onCreate`
+
 * `onStart`
+
 * `onResume`
 
 在应用仍在运行时，执行设备旋转以触发内容的销毁和重建，生成以下额外输出：
 
 * `onPause`
+
 * `onStop`
+
 * `onDestroy`
+
 * `onCreate`
+
 * `onStart`
+
 * `onResume`
 
 在进入本章的下一节之前，花些时间将应用的输出与上一章中图 39-2 的流程图进行比较。
@@ -7850,7 +7876,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 本章的最后一个任务是创建一个自定义生命周期所有者类，并演示如何在该类内部触发事件并修改生命周期状态。
 
-在项目窗口中右键点击应用 -> java -> `com.ebookfrenzy.lifecycledemo` 条目，选择 `New -> Java Class...` 菜单选项以添加新类。在 `Create Class` 对话框中类命名为 `DemoOwner`，然后按回车键。将新的 `DemoOwner.java` 文件加载到代码编辑器后，对其进行如下修改：
+在项目窗口中右键点击应用 -> java -> `com.ebookfrenzy.lifecycledemo` 条目，选择 `New -> Java Class...` 菜单选项以添加新类。在 `Create Class` 对话框中类命名为`DemoOwner`，然后按回车键。将新的`DemoOwner.java`文件加载到代码编辑器后，对其进行如下修改：
 
 ```java
 package com.ebookfrenzy.lifecycledemo;
@@ -7865,7 +7891,7 @@ public class DemoOwner implements LifecycleOwner {
 }
 ```
 
-该类需要一个初始化为自身引用的 `LifecycleRegistry` 实例，以及一个配置为返回 `LifecycleRegistry` 实例的 `getLifecycle()` 方法。声明一个变量来存储 `LifecycleRegistry` 引用，并使用构造函数来初始化该实例：
+该类需要一个初始化为自身引用的`LifecycleRegistry`实例，以及一个配置为返回`LifecycleRegistry`实例的`getLifecycle()`方法。声明一个变量来存储`LifecycleRegistry`引用，并使用构造函数来初始化该实例：
 
 ```java
 public class DemoOwner implements LifecycleOwner {
@@ -7883,7 +7909,7 @@ public class DemoOwner implements LifecycleOwner {
 }
 ```
 
-接下来，类必须通知注册表生命周期状态的变化。这可以通过使用 `LifecycleRegistry` 对象的 `markState()` 方法标记状态，或者通过使用 `handleLifecycleEvent()` 方法触发生命周期事件来实现。什么是状态更改取决于类的用途。在本示例中，我们将添加一些触发事件的方法：
+接下来，类必须通知注册表生命周期状态的变化。这可以通过使用`LifecycleRegistry`对象的`markState()`方法标记状态，或者通过使用`handleLifecycleEvent()`方法触发生命周期事件来实现。什么是状态更改取决于类的用途。在本示例中，我们将添加一些触发事件的方法：
 
 ```java
 private final LifecycleRegistry lifecycleRegistry;
@@ -7909,7 +7935,7 @@ public void stopOwner() {
 }
 ```
 
-将 `MainActivity.java` 文件加载到代码编辑器，找到 `onCreate()` 方法，并添加代码创建 `DemoOwner` 实例并调用 `startOwner()` 和 `stopOwner()` 方法。请注意，添加 `DemoObserver` 作为观察者的调用已被移除，以避免重复输出：
+将`MainActivity.java`文件加载到代码编辑器，找到`onCreate()`方法，并添加代码创建`DemoOwner`实例并调用`startOwner()`和`stopOwner()`方法。请注意，添加`DemoObserver`作为观察者的调用已被移除，以避免重复输出：
 
 ```java
 private DemoOwner demoOwner;
@@ -7929,7 +7955,9 @@ protected void onCreate(Bundle savedInstanceState) {
 最后一次构建并运行应用，参考 Logcat 工具窗口，并确认观察者按顺序检测到创建、启动和停止生命周期事件：
 
 * `onCreate`
+
 * `onStart`
+
 * `onStop`
 
 ### 40.7 总结
@@ -7938,17 +7966,15 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ## 41 导航组件概述
 
- 41.1 理解导航
-
-
-
-
+### 41.1 理解导航
 
 每个应用都有一个主屏幕，它在应用启动且在任何启动屏出现后会显示（启动屏是应用加载时临时显示的应用品牌界面）。用户通常从这个主屏幕执行任务，导致出现其他屏幕。这些屏幕通常以应用内其他活动（activities）和片段（fragments）的形式存在。例如，一个消息应用可能有一个列出当前消息的主屏幕，用户可以从那里导航到另一个屏幕以访问联系人列表或设置屏幕。联系人列表屏幕反过来允许用户导航到其他屏幕，可以在那里添加新用户或更新现有联系人。在图形上，应用的导航图（navigation graph）可以如图 41-1 所示表示：
 
 ![](img/jetpack_navigation_graph_diagram.jpg)
 
 图 41-1
+
+
 
 构成应用的每个屏幕（包括主屏幕在内）统称为目的地（destination），通常是一个片段或活动。Android 导航架构使用导航栈（navigation stack）来跟踪用户在应用内目的地之间的路径。当应用首次启动时，主屏幕是第一个被放入栈中的目的地，并成为当前目的地。当用户导航到另一个目的地时，该屏幕成为当前目的地，并推到主目的地的栈上方。当用户导航到其他屏幕时，它们也会被推入栈。例如，图 41-2 显示了假设的消息应用在用户启动应用并导航到“添加联系人”屏幕后导航栈的当前状态：
 
@@ -7962,7 +7988,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 图 41-3
 
-在目的地之间导航和管理导航栈涉及的所有工作都由导航控制器（navigation controller）处理，由 `NavController` 类表示。
+在目的地之间导航和管理导航栈涉及的所有工作都由导航控制器（navigation controller）处理，由`NavController`类表示。
 
 使用导航架构组件（Navigation Architecture Component）为 Android 项目添加导航是一个简单的过程，涉及导航宿主（navigation host）、导航图（navigation graph）、导航动作（navigation actions）以及极少的代码编写，以获取导航控制器的引用并与其进行交互。
 
@@ -7974,7 +8000,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 图 41-4
 
-`NavHostFragment` 可以通过在 Android Studio 布局编辑器中从调色板的容器（Containers）部分拖放实例，或者通过如下方式手动编辑 XML 将其放入活动布局中：
+`NavHostFragment`可以通过在 Android Studio 布局编辑器中从调色板的容器（Containers）部分拖放实例，或者通过如下方式手动编辑 XML 将其放入活动布局中：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -7995,7 +8021,7 @@ protected void onCreate(Bundle savedInstanceState) {
 </FrameLayout>
 ```
 
-上述导航宿主片段元素中的注意点是 `name` 属性对 `NavHostFragment` 的引用、将 `defaultNavHost` 设置为 `true` 以及将包含导航图的文件分配给 `navGraph` 属性。
+上述导航宿主片段元素中的注意点是`name`属性对`NavHostFragment`的引用、将`defaultNavHost`设置为`true`以及将包含导航图的文件分配给`navGraph`属性。
 
 当活动启动时，此导航宿主片段将被导航图中指定的主目的地替换。当用户在应用屏幕间导航时，宿主片段将被对应目的地的适当片段替换。
 
@@ -8009,7 +8035,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 图 41-5
 
-目的地列表 (A) 列出了图中的所有目的地。从列表中选择一个目的地将定位并选中图中的目的地（这对于在大型图中定位目的地特别有用）。导航面板 (B) 包含每个每个目的地的对话框，代表该目的的用户界面。在本例中，此图包含两个目的地 `mainFragment` 和 `secondFragment`。目的地之间的箭头 (C) 表示导航连接。通过将鼠标指针悬停在起点边缘，然后点击并拖动到目的地来添加动作。属性面板 (D) 允许查看当前目的地或连接的属性。通过点击按钮 E 并从菜单中选择来添加新目的地。可以选择将现有片段作为目的地，也可以创建新的空白目的地。组件树面板 (F) 提供了导航图的分级概述。
+目的地列表 (A) 列出了图中的所有目的地。从列表中选择一个目的地将定位并选中图中的目的地（这对于在大型图中定位目的地特别有用）。导航面板 (B) 包含每个每个目的地的对话框，代表该目的的用户界面。在本例中，此图包含两个目的地`mainFragment`和`secondFragment`。目的地之间的箭头 (C) 表示导航连接。通过将鼠标指针悬停在起点边缘，然后点击并拖动到目的地来添加动作。属性面板 (D) 允许查看当前目的地或连接的属性。通过点击按钮 E 并从菜单中选择来添加新目的地。可以选择将现有片段作为目的地，也可以创建新的空白目的地。组件树面板 (F) 提供了导航图的分级概述。
 
 可以通过将编辑器切换到代码模式查看并修改导航图的底层 XML。以下 XML 表示上述图 41-5 所示的目的地和动作：
 
@@ -8038,21 +8064,18 @@ protected void onCreate(Bundle savedInstanceState) {
 </navigation>
 ```
 
-
-
-
-导航图也可以拆分为多个文件，以改进组织结构并促进重用。通过这种结构方式，嵌套图会被嵌入到根图中。要创建嵌套图，按住 Shift 键并点击要嵌套的目的，在第一个目的地上右键点击并选择 `Move to Nested Graph -> New Graph` 选项。随后，嵌套图将作为图中的一个新节点出现。双击嵌套图节点可以将图文件加载到编辑器中，以便访问嵌套图。
+导航图也可以拆分为多个文件，以改进组织结构并促进重用。通过这种结构方式，嵌套图会被嵌入到根图中。要创建嵌套图，按住 Shift 键并点击要嵌套的目的，在第一个目的地上右键点击并选择`Move to Nested Graph -> New Graph`选项。随后，嵌套图将作为图中的一个新节点出现。双击嵌套图节点可以将图文件加载到编辑器中，以便访问嵌套图。
 
 ### 41.4 访问导航控制器（Navigation Controller）
 
-从一个目的地导航到另一个目的地通常是为了响应应用内的某个事件，例如按钮点击或菜单选择。在触发导航动作之前，代码必须获取获取控制器的实例引用。这需要调用 `Navigation` 或 `NavHostFragment` 类的 `findNavController()` 方法。例如，以下代码可以用于访问 activity 的导航控制器。注意，为了使代码生效，activity 必须包含一个导航主机片段：
+从一个目的地导航到另一个目的地通常是为了响应应用内的某个事件，例如按钮点击或菜单选择。在触发导航动作之前，代码必须获取获取控制器的实例引用。这需要调用`Navigation`或`NavHostFragment`类的`findNavController()`方法。例如，以下代码可以用于访问 activity 的导航控制器。注意，为了使代码生效，activity 必须包含一个导航主机片段：
 
 ```java
 NavController controller =
     Navigation.findNavController(activity, R.id.demo_nav_host_fragment);
 ```
 
-在这种情况下，方法调用传递了 `activity` 的引用以及嵌入在 activity 布局中的 `NavHostFragment` 的 ID。
+在这种情况下，方法调用传递了`activity`的引用以及嵌入在 activity 布局中的`NavHostFragment`的 ID。
 
 另一种方法是通过将该视图传递给方法来识别与任何视图关联的导航控制器：
 
@@ -8060,7 +8083,7 @@ NavController controller =
 NavController controller = Navigation.findNavController(binding.button);
 ```
 
-最后一种选项通过调用 `NavHostFragment` 类的 `findNavController()` 方法并传递片段的引用来查找片段的导航控制器：
+最后一种选项通过调用`NavHostFragment`类的`findNavController()`方法并传递片段的引用来查找片段的导航控制器：
 
 ```java
 NavController controller = NavHostFragment.findNavController(fragment);
@@ -8068,7 +8091,7 @@ NavController controller = NavHostFragment.findNavController(fragment);
 
 ### 41.5 触发导航动作
 
-一旦找到导航控制器，就可以通过调用控制器的 `navigate()` 方法并传递要执行动作的资源 ID 来触发导航动作。例如：
+一旦找到导航控制器，就可以通过调用控制器的`navigate()`方法并传递要执行动作的资源 ID 来触发导航动作。例如：
 
 ```java
 controller.navigate(R.id.goToContactsList);
@@ -8078,7 +8101,7 @@ controller.navigate(R.id.goToContactsList);
 
 ### 41.6 传递参数
 
-在导航动作期间，可以使用导航图文件中声明的参数将数据从一个目的地传递到另一个目的地。参数由名称、类型和可选的默认值组成，并可以在 XML 中手动添加，也可以在图中选择动作箭头或目的地时使用属性面板进行添加。例如，在图 41-6 中，声明了一个名为 `contactsCount` 的整数参数，默认值为 0：
+在导航动作期间，可以使用导航图文件中声明的参数将数据从一个目的地传递到另一个目的地。参数由名称、类型和可选的默认值组成，并可以在 XML 中手动添加，也可以在图中选择动作箭头或目的地时使用属性面板进行添加。例如，在图 41-6 中，声明了一个名为`contactsCount`的整数参数，默认值为 0：
 
 ![](img/as_navigation_argument_example.jpg)
 
@@ -8099,7 +8122,7 @@ controller.navigate(R.id.goToContactsList);
 </fragment>
 ```
 
-导航组件提供了两种数据的方法。一种是将数据放入传递给目的地的 `Bundle` 中。这种方法的主要缺点是不是类型安全的。也就是说，如果接收目的地对参数的处理类型与其声明类型不同（例如，将字符串视为整数），此错误将不会被编译器捕，并可能在运行时引发问题。更好的选项（也是本书使用的方案）是 `safeargs`。`safeargs` 是 Android 构建系统的插件，它会自动生成类，允许以类型安全的方式传递参数。
+导航组件提供了两种数据的方法。一种是将数据放入传递给目的地的`Bundle`中。这种方法的主要缺点是不是类型安全的。也就是说，如果接收目的地对参数的处理类型与其声明类型不同（例如，将字符串视为整数），此错误将不会被编译器捕，并可能在运行时引发问题。更好的选项（也是本书使用的方案）是`safeargs`。`safeargs`是 Android 构建系统的插件，它会自动生成类，允许以类型安全的方式传递参数。
 
 ### 41.7 总结
 
@@ -8111,19 +8134,21 @@ controller.navigate(R.id.goToContactsList);
 
 ### 42.1 创建 NavigationDemo 项目
 
-从欢迎界面选择 New Project（新建项目）选项，在出现的新项目对话框中，点击 Next（下一步）之前选择 Empty Views Activity 模板。在 Name 字段中输入 NavigationDemo，并指定 `com.ebookfrenzy.navigationdemo` 为包名。在点击 Finish（完成）按钮之前，将 Minimum API level 更改为 API 26: Android 8.0 (Oreo)，并将 Language 菜单更改为 Java。
+从欢迎界面选择 New Project（新建项目）选项，在出现的新项目对话框中，点击 Next（下一步）之前选择 Empty Views Activity 模板。在 Name 字段中输入 NavigationDemo，并指定`com.ebookfrenzy.navigationdemo`为包名。在点击 Finish（完成）按钮之前，将 Minimum API level 更改为 API 26: Android 8.0 (Oreo)，并将 Language 菜单更改为 Java。
 
 #### 42.2 向构建配置添加导航
 
-新的 Empty Views Activity 项目默认不在构建配置文件中包含导航组件库。下一步是将导航库添加到构建配置中。从编辑 Gradle Scripts -> `libs.version.toml` 文件开始并对其进行如下修改（请注意现在可能有更新版本的库可用）：
+新的 Empty Views Activity 项目默认不在构建配置文件中包含导航组件库。下一步是将导航库添加到构建配置中。从编辑 Gradle Scripts -> `libs.version.toml`文件开始并对其进行如下修改（请注意现在可能有更新版本的库可用）：
 
 [versions]
+
 navigationFragment = "2.7.7"
 
 [libraries]
+
 androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
 
-接下来，打开 Gradle Scripts -> `build.gradle.kts (Module :app)` 文件，并在 dependencies 部分添加以下指令。同时，借此机会为模块启用视图绑定（view binding）：
+接下来，打开 Gradle Scripts -> `build.gradle.kts (Module :app)`文件，并在 dependencies 部分添加以下指令。同时，借此机会为模块启用视图绑定（view binding）：
 
 ```kotlin
 android {
@@ -8139,23 +8164,21 @@ dependencies {
 
 在文件中添加导航依赖项后，点击 Sync Now（立即同步）链接以重新同步项目的构建配置。
 
-
-
-
-
 在将导航库添加到构建配置后，现在可以将导航图资源文件添加到项目中了。正如“导航架构组件概述”所示，这是一个 XML 文件，包含了用户将能够进行导航的片段（fragments）和活动（activities），以及执行跳转的动作和目的地之间传递的任何数据。
 
-在 Project（项目）工具窗口中，找到 `res` 文件夹（`app` -> `res`），右键点击它，并选择 `New`（新建）-> `Android Resource File`菜单选项：
+在 Project（项目）工具窗口中，找到`res`文件夹（`app` -> `res`），右键点击它，并选择`New`（新建）-> `Android Resource File`菜单选项：
 
 ![](img/as_new_resource_file_menu.jpg)
+
 图 42-1
 
-选择菜单项后，将出现 `New Resource File（新建资源文件）对话框。在此对话框中，将文件命名为 `navigation_graph`，并将 `Resource` 类型菜单更改为 `Navigation`，如图 42-2 所示，然后点击 `OK` 按钮创建文件。
+选择菜单项后，将出现`New Resource File（新建资源文件）对话框。在此对话框中，将文件命名为`navigation_graph`，并将`Resource`类型菜单更改为`Navigation`，如图 42-2 所示，然后点击`OK`按钮创建文件。
 
 ![](img/as_new_resource_file.jpg)
+
 图 42-2
 
-导航图资源文件添加到项目后，它将出现在主面板中，准备好添加新的目的地。将编辑器切换到 `Code（代码）`模式，并在添加任何目的地之前检查图的 XML：
+导航图资源文件添加到项目后，它将出现在主面板中，准备好添加新的目的地。将编辑器切换到`Code（代码）`模式，并在添加任何目的地之前检查图的 XML：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -8165,27 +8188,31 @@ dependencies {
 </navigation>
 ```
 
-将编辑器切换回 `Design（设计）`模式，注意 `Destinations（目的地）`面板中的 `Host` 部分表明项目内未检测到导航主机片段（navigation host fragments）：
+将编辑器切换回`Design（设计）`模式，注意`Destinations（目的地）`面板中的`Host`部分表明项目内未检测到导航主机片段（navigation host fragments）：
 
 ![](img/as_navigation_hosts_no_fragments.jpg)
+
 图 42-3
 
 在向导航图添加任何目的地之前，下一步是向项目添加一个导航主机片段。
 
 ### 42.4 声明导航主机
 
-对于本项目，导航主机片段将包含在主活动的用户的用户界面布局中。首先，在 Project 工具窗口中找到主活动布局文件（`app` -> `res` -> `layout` -> `activity_main.xml`），将其加载到布局编辑器工具中，并删除默认的 `TextView` 组件。
+对于本项目，导航主机片段将包含在主活动的用户的用户界面布局中。首先，在 Project 工具窗口中找到主活动布局文件（`app` -> `res` -> `layout` -> `activity_main.xml`），将其加载到布局编辑器工具中，并删除默认的`TextView`组件。
 
-在布局编辑器处于 `Design`模式的情况下，从 `Palette（调色板）`的`Containers`部分拖入 `NavHostFragment`元素，并将其释放到活动布局的容器区域，如图 42-4 所示：
+在布局编辑器处于`Design`模式的情况下，从`Palette（调色板）`的`Containers`部分拖入`NavHostFragment`元素，并将其释放到活动布局的容器区域，如图 42-4 所示：
 
 ![](img/as_navigation_add_navhostfragment.jpg)
+
 图 42-4
 
-在弹出的 `Navigation Graphs`对话框中，选择上一节创建的 `navigation_graph.xml`文件，并点击 `OK`按钮。
+在弹出的`Navigation Graphs`对话框中，选择上一节创建的`navigation_graph.xml`文件，并点击`OK`按钮。
 
-在布局中选中新添加的 `NavHostFragment`实例后，使用 `Attributes（属性）`工具窗口将元素的 ID 更改为 `demo_nav_host_fragment`，然后点击 `Infer constraints（推断约束）按钮。
 
-将布局编辑器切换到 `Code`模式并检查 XML 文件。注意编辑器已正确配置了 `navigationGraph` 属性以引用 `navigation_graph.xml` 文件，且 `defaultNavHost` 属性已设置为 `true`：
+
+在布局中选中新添加的`NavHostFragment`实例后，使用`Attributes（属性）`工具窗口将元素的 ID 更改为`demo_nav_host_fragment`，然后点击`Infer constraints（推断约束）`按钮。
+
+将布局编辑器切换到`Code`模式并检查 XML 文件。注意编辑器已正确配置了`navigationGraph`属性以引用`navigation_graph.xml`文件，且`defaultNavHost`属性已设置为`true`：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -8210,26 +8237,29 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-返回 `navigation_graph.xml` 文件并确认已检测到 `NavHostFragment` 实例（可能需要关闭并重新打开文件）：
+返回`navigation_graph.xml`文件并确认已检测到`NavHostFragment`实例（可能需要关闭并重新打开文件）：
 
 ![](img/as_navigation_hosts_added.jpg)
+
 图 42-5
 
 ### 42.5 添加目的地
 
-留在导航图中，现在是添加第一个目的地的时间了。如图 42-6 所示点击新目的地按钮：
+留在导航图中，现在是添加第一个目的地的时间了。如图 42-6 所示，点击新目的地按钮：
 
 ![](img/as_navigation_add_navhostfragment_menu.jpg)
+
 图 42-6
 
-接下来，选择 `New destination（新目的地）`。在弹出的对话框中，选择 `Fragment` 模板，将新片段命名为 `FirstFragment`，并将布局命名为 `fragment_first`，然后点击 `Finish（完成）`按钮。在项目重新构建的简短延迟后，新片段将作为图中的目的地出现，如图 7 所示：
+接下来，选择`New destination（新目的地）`。在弹出的对话框中，选择`Fragment`模板，将新片段命名为`FirstFragment`，并将布局命名为`fragment_first`，然后点击`Finish（完成）`按钮。在项目重新构建的简短延迟后，新片段将作为图中的目的地出现，如图 7 所示：
 
 ![](img/as_navigation_fragment.jpg)
+
 图 42-7
 
-目的地上方的首页图标表示这是起始目的地。这意味着创建 NavHost 时将显示该目的地。要更改起始目的地，选择图中的另一个节点并点击工具栏上的首页按钮。
+目的地上方的首页图标表示这是起始目的地。这意味着创建`NavHost`时将显示该目的地。要更改起始目的地，选择图中的另一个节点并点击工具栏上的首页按钮。
 
-通过将编辑器切换到 `Code`模式来检查导航图的 XML 内容：
+通过将编辑器切换到`Code`模式来检查导航图的 XML 内容：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -8245,41 +8275,41 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 </navigation>
 ```
 
-在执行任何导航之前，图至少还需要另一个目的地。重复上述步骤添加一个名为 `SecondFragment` 布局为 `fragment_second` 的片段。新片段将作为图中的另一个目的地出现，如图 42-8 所示：
+在执行任何导航之前，图至少还需要另一个目的地。重复上述步骤添加一个名为`SecondFragment`、布局为`fragment_second`的片段。新片段将作为图中的另一个目的地出现，如图 42-8 所示：
 
 ![](img/as_navigation_two_fragments.jpg)
+
 图 42-8
 
 ### 42.6 设计目的地布局
 
-在添加目的地之间跳转的动作之前，现在是为两个目的地片段添加一些用户界面组件的好时机。首先双击 `firstFragment` 目的地，使 `fragment_first.xml` 文件加载到布局编辑器，然后选择并删除默认的 `TextView` 实例。在 `Component Tree（组件树）`面板中，右键点击 `FrameLayout` 项并选择 `Convert from FrameLayout to ConstraintLayout（从 FrameLayout 转换为 ConstraintLayout）`菜单选项，在生成的转换对话框中接受默认设置：
+在添加目的地之间跳转的动作之前，现在是为两个目的地片段添加一些用户界面组件的好时机。首先双击`firstFragment`目的地，使`fragment_first.xml`文件加载到布局编辑器，然后选择并删除默认的`TextView`实例。在`Component Tree（组件树）`面板中，右键点击`FrameLayout`项并选择`Convert from FrameLayout to ConstraintLayout（从 FrameLayout 转换为 ConstraintLayout）`菜单选项，在生成的转换对话框中接受默认设置：
 
 ![](img/as_navigation_convert_to_constraint_layout.jpg)
+
 图 42-9
 
-使用 `Attributes`工具窗口将 `ConstraintLayout` 的 ID 更改为 `constraintLayout`，然后将 `Button` 和 `Plain Text EditText` 控件拖到布局中，使其类似于下方图 42-10 所示：
+使用`Attributes`工具窗口将`ConstraintLayout`的 ID 更改为`constraintLayout`，然后将`Button`和`Plain Text EditText`控件拖到布局中，使其类似于下方图 42-10 所示：
 
 ![](img/as_navigation_first_fragment_ui.jpg)
+
 图 42-10
 
-一旦视图位置正确，点击工具栏上的 `Infer constraints`按钮为布局添加任何缺失的约束。选择 `EditText` 视图并使用 `Attributes`工具窗口删除默认的“Name”文本，并将控件 ID 更改为 `userText`。接下来，将按钮文本属性更改为“Navigate”并将其提取到字符串资源。
+一旦视图位置正确，点击工具栏上的`Infer constraints`按钮为布局添加任何缺失的约束。选择`EditText`视图并使用`Attributes`工具窗口删除默认的“Name”文本，并将控件 ID 更改为`userText`。接下来，将按钮文本属性更改为“Navigate”并将其提取到字符串资源。
 
-
-
-
-返回 `navigation_graph.xml` 文件并双击 `secondFragment` 目标，将 `fragment_second.xml` 文件加载到布局编辑器中。选择并删除默认的 `TextView` 实例，并重复上述步骤将 `FrameLayout` 转换为 `ConstraintLayout`，将 `id` 更改为 `constraintLayout2`。接下来，拖入一个新的 `TextView` 控件到布局中心，并点击 `Infer constraints`（推断约束）按钮以添加任何缺失的约束。选中新的 `TextView`，使用属性（Attributes）面板将 `ID` 更改为 `argText`。
+返回`navigation_graph.xml`文件并双击`secondFragment`目标，将`fragment_second.xml`文件加载到布局编辑器中。选择并删除默认的`TextView`实例，并重复上述步骤将`FrameLayout`转换为`ConstraintLayout`，将`id`更改为`constraintLayout2`。接下来，拖入一个新的`TextView`控件到布局中心，并点击`Infer constraints（推断约束）`按钮以添加任何缺失的约束。选中新的`TextView`，使用属性（`Attributes`）面板将`ID`更改为`argText`。
 
 ### 42.7 向导航图中添加动作（Action）
 
 现在两个目标已经添加到图中，并且相应的用户界面布局也设计完成，项目需要一种方法让用户从第一个片段（fragment）导航到第二个片段。这将通过向图中添加动作（action）来实现，之后可以在应用代码中引用该动作。
 
-要建立一个以第一个片段为起点、以第二个片段为终点的动作连接（action connection），请打开导航图，并将鼠标指针悬停在 `firstFragment` 目标右边缘的垂直中心位置，直到出现如图 42-11 所示的高亮圆圈：
+要建立一个以第一个片段为起点、以第二个片段为终点的动作连接（action connection），请打开导航图，并将鼠标指针悬停在`firstFragment`目标右边缘的垂直中心位置，直到出现如图 42-11 所示的高亮圆圈：
 
 ![](img/as_navigation_first_fragment_selected.jpg)
 
 图 42-11
 
-在圆圈内点击并拖动生成的线条到 `secondFragment` 目标：
+在圆圈内点击并拖动生成的线条到`secondFragment`目标：
 
 ![](img/as_navigation_add_connection.jpg)
 
@@ -8291,7 +8321,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 
 图 42-13
 
-可以随时通过选择动作连接并按下键盘上的 `Delete` 键来删除它。选中箭头后，检查并检查属性（Attributes）工具窗口中可用的属性，并将 `ID` 更改为 `mainToSecond`。这是代码中引用该动作时使用的 `ID`。将编辑器切换到代码（Code）模式，注意该动作现在已包含在 XML 中：
+可以随时通过选择动作连接并按下键盘上的`Delete`键来删除它。选中箭头后，检查属性（`Attributes`）工具窗口中可用的属性，并将`ID`更改为`mainToSecond`。这是代码中引用该动作时使用的`ID`。将编辑器切换到代码（`Code`）模式，注意该动作现在已包含在 XML 中：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -8317,11 +8347,11 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 </navigation>
 ```
 
-## 42.8 实现 OnFragmentInteractionListener
+### 42.8 实现 OnFragmentInteractionListener
 
-在添加触发动作的代码之前，必须修改 `MainActivity` 类以实现 `OnFragmentInteractionListener` 接口。该接口是在导航图编辑器中创建空白片段时，在 `Fragment` 类中生成的。为了符合该接口，activity 需要一个名为 `onFragmentInteraction()` 的方法来实现片段与 activity 之间的通信。
+在添加触发动作的代码之前，必须修改`MainActivity`类以实现`OnFragmentInteractionListener`接口。该接口是在导航图编辑器中创建空白片段时，在`Fragment`类中生成的。为了符合该接口，activity 需要一个名为`onFragmentInteraction()`的方法来实现片段与 activity 之间的通信。
 
-编辑 `MainActivity.java` 文件并进行修改，如下：
+编辑`MainActivity.java`文件并进行修改，如下：
 
 ```java
 import android.net.Uri;
@@ -8338,7 +8368,7 @@ public class MainActivity extends AppCompatActivity implements SecondFragment.On
 }
 ```
 
-如果 Android Studio 报告 `OnFragmentInteractionListener` 未定义（某些版本的 Android Studio 会自动添加，而另一些则不会），编辑 `SecondFragment.java` 文件并添加以下内容：
+如果 Android Studio 报告`OnFragmentInteractionListener`未定义（某些版本的 Android Studio 会自动添加，而另一些则不会），编辑`SecondFragment.java`文件并添加以下内容：
 
 ```java
 import android.net.Uri;
@@ -8349,9 +8379,9 @@ public interface OnFragmentInteractionListener {
 }
 ```
 
-## 42.9 为目标片段添加视图绑定（View Binding）
+### 42.9 为目标片段添加视图绑定（View Binding）
 
-由于我们需要访问布局中的某些视图，因此必须修改当前代码以启用视图绑定。首先编辑 `FirstFragment.java` 并进行以下更改：
+由于我们需要访问布局中的某些视图，因此必须修改当前代码以启用视图绑定。首先编辑`FirstFragment.java`并进行以下更改：
 
 ```java
 import com.ebookrenzy.navigationdemo.databinding.FragmentBinding;
@@ -8374,11 +8404,11 @@ public class FirstFragment extends Fragment {
 }
 ```
 
-对 `SecondFragment.java` 重复上述步骤，并引用 `FragmentBinding`。
+对`SecondFragment.java`重复上述步骤，并引用`FragmentBinding`。
 
 ### 42.10 触发动作
 
-现在动作已添加到图中，下一步是在第一个片段中添加代码，以便在点击按钮时触发该动作。找到 `FirstFragment.java` 文件，将其加载到代码编辑器中，并重写 `onViewCreated()` 方法以获取按钮实例，并配置在用户点击按钮时调用的 `OnClickListener` 实例：
+现在动作已添加到图中，下一步是在第一个片段中添加代码，以便在点击按钮时触发该动作。找到`FirstFragment.java`文件，将其加载到代码编辑器中，并重写`onViewCreated()`方法以获取按钮实例，并配置在用户点击按钮时调用的`OnClickListener`实例：
 
 ```java
 import androidx.annotation.NonNull;
@@ -8404,26 +8434,22 @@ public class FirstFragment extends Fragment {
 
 编译并运行应用，验证点击第一个片段中的按钮是否跳转到第二个片段。
 
-作为这种设置监听器的替代方案，`Navigation` 类还包含一个名为 `createNavigateOnClickListener()` 的方法，它提供了一种更高效的方法来设置监听器并导航。因此，可以使用以下单行代码实现相同的结果：
+作为这种设置监听器的替代方案，`Navigation`类还包含一个名为`createNavigateOnClickListener()`的方法，它提供了一种更高效的方法来设置监听器并导航。因此，可以使用以下单行代码实现相同的结果：
 
 ```java
 binding.button.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.mainToSecond, null));
 ```
 
-## 42.11 使用 Safeargs 传递数据
+### 42.11 使用 Safeargs 传递数据
 
-下一个目标是将第一个片段 `EditText` 视图中输入的文本传递到第二个片段，并在那里显示在 `TextView` 控件上。如上一章所述，Android 组件 支持两种传递数据的方法。本章将类型安全的参数传递。
+下一个目标是将第一个片段`EditText`视图中输入的文本传递到第二个片段，并在那里显示在`TextView`控件上。如上一章所述，Android 组件支持两种传递数据的方法。本章将类型安全的参数传递。
+
+
 
 使用 safeargs 的第一步是在 Gradle 构建配置中添加 safeargs 插件。使用 Project 工具窗口，找到并编辑 Gradle Scripts -> `libs.versions.toml` 文件如下：
 
 ```toml
 [libraries]
-```
-
-
-
-
-```
 androidx-navigation-safe-args-gradle-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigationFragment" }
 ```
 
@@ -8431,7 +8457,6 @@ androidx-navigation-safe-args-gradle-plugin = { module = "androidx.navigation:na
 
 ```kotlin
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
     dependencies {
         classpath(libs.androidx.navigation.safe.args.gradle.plugin)
@@ -8480,7 +8505,9 @@ plugins {
 当构建项目时，`safeargs` 插件将生成以下附加类，这些类可以在导航过程中传递和接收参数。
 
 - `FirstFragmentDirections` - 此类表示导航动作的起点（使用导航源类名并在末尾附加“Directions”进行命名），并提供对动作对象的访问。
+
 - `ActionMainToSecond` - 代表执行转换的动作的类（根据导航图文件中分配给动作的 ID 命名，前加上“Action”）。该类为目标上配置的每个参数包含一个 setter 方法（设置方法）。例如，由于第二个片段目标包含一个名为 `message` 的参数，该类包含一个名为 `setMessage()` 的方法。一旦配置完成，会将该类的实例传递给导航控制器的 `navigate()` 方法，以导航到目标。
+
 - `SecondFragmentArgs` - 在目标片段中用于访问从起点传递参数的类（使用导航目标类名并在末尾附加“Args”进行命名）。该类为传递到目标的每个参数包含一个 getter 方法（获取方法），例如 `getMessage()`。
 
 使用这些类，可以如下修改 `FirstFragment.java` 文件中 `onViewCreated()` 方法内的 `onClickListener` 代码，以从 `EditText` 控件提取当前文本，将其应用于动作并启动到第二个片段的转换：
@@ -8524,15 +8551,11 @@ public void onStart() {
 
 `MotionLayout` 是一种布局容器，其主要目的是动画布局内视图从一个状态到另一个状态的转换。例如，`MotionLayout` 可以让 `ImageView` 实例在指定时间内从屏幕左上角移动到右下角。除了视图的位置外，其他属性的变化也可以被动画，例如颜色、大小或旋转角度。这些状态变化也可以进行插值处理（使视图在整个动画过程中移动、旋转并改变大小）。
 
-
-
-
-
 使用 `MotionLayout` 的视图运动可以在两点之间沿直线执行，也可以实现为遵循一条包含起点和终点之间不同位置中间点的路径。`MotionLayout` 还支持使用触摸和滑动来启动并控制动画。
 
 `MotionLayout` 动画完全在 XML 中声明，通常不需要编写代码。这些 XML 声明可以在 Android Studio 代码编辑器中手动实现、通过使用 `MotionLayout` 编辑器进行视觉化实现，或者结合这两种方法。
 
-### 43.2 MotionLayout
+### 43.2 MotionLayout 
 
 在实现动画时，用户界面中通常使用的 `ConstraintLayout` 容器必须首先转换为 `MotionLayout` 实例（这可以通过在布局编辑器中右键点击 `ConstraintLayout` 并选择 `Convert to MotionLayout` 菜单选项来实现）。`MotionLayout` 还需要至少 `2.0.0` 版本的 `ConstraintLayout` 库。
 
@@ -8625,6 +8648,8 @@ public void onStart() {
 
 例如，来自 `MotionScene` 文件的以下片段声明了视图背景从绿色变为红色的开始和结束约束：
 
+
+
 ```xml
 <ConstraintSet android:id="@+id/start">
     <Constraint
@@ -8655,13 +8680,9 @@ public void onStart() {
 </ConstraintSet>
 ```
 
-
-
-
-
 ### 43.6 触发动画
 
-如果没有某些事件告诉 `MotionLayout` 开始动画，则 `MotionScene` 文件中的任何设置都将不会影响布局（视图根据 `start` `ConstraintSet` 中的设置进行定位除除外）。
+如果没有某些事件告诉 `MotionLayout` 开始动画，则 `MotionScene` 文件中的任何设置都将不会影响布局（视图根据 `start` `ConstraintSet` 中的设置进行定位除外）。
 
 动画可以配置为响应屏幕点击（`OnClick`）或滑动（`OnSwipe`）手势来启动。`OnClick` 处理器会导致动画启动并运行到完成，而 `OnSwipe` 则将同步动画，使其沿着时间轴来回移动，以匹配触控的动作。`OnSwipe` 处理器还会响应屏幕上的“快速甩动（flinging）”动作。`OnSwipe` 处理器还提供了选项，用于配置动画如何对不同方向的拖拽做出反应，以及滑动动作锚定的目标视图的哪一侧。这允许（例如）向左的拖拽动作使视图向相应方向移动，同时防止向上运动导致视图向侧移动（除非这确实是需要的行为）。
 
@@ -8690,11 +8711,11 @@ public void onStart() {
 
 在上面的示例中，动作已设置为切换（toggle）模式。这种模式和其他可用选项可以总结如下：
 
-*   `toggle`: 动画到相反状态。例如，如果视图当前处于过渡起点，它将过渡到终点，反之亦然。
-*   `jumpToStart`: 立即更改到起始状态，没有动画。
-*   `jumpToEnd`: 立即更改到结束状态，没有动画。
-*   `transitionToStart`: 带动画过渡到起始状态。
-*   `transitionToEnd`: 带动画过渡到结束状态。
+- `toggle`：动画到相反状态。例如，如果视图当前处于过渡起点，它将过渡到终点，反之亦然。
+- `jumpToStart`：立即更改到起始状态，没有动画。
+- `jumpToEnd`：立即更改到结束状态，没有动画。
+- `transitionToStart`：带动画过渡到起始状态。
+- `transitionToEnd`：带动画过渡到结束状态。
 
 ### 43.7 弧形运动
 
@@ -8726,7 +8747,7 @@ public void onStart() {
 
 `MotionLayout` 支持几种类型的关键帧，可以总结如下：
 
-### 43.8.1 属性关键帧 (Attribute Keyframes)
+#### 43.8.1 属性关键帧（Attribute Keyframes）
 
 属性关键帧（使用 `KeyAttribute` 声明）允许在中间点更改视图属性。`KeyAttribute` 支持上述列出的属性并结合 `framePosition`。例如，以下声明将导致视图在时间轴 50% 处在水平（`scaleX`）和垂直（`scaleY`）方向上尺寸翻倍：
 
@@ -8748,13 +8769,13 @@ public void onStart() {
 </Transition>
 ```
 
-### 43.8.2 位置关键帧 (Position Keyframes)
+#### 43.8.2 位置关键帧（Position Keyframes）
 
 位置关键帧（`KeyPosition`）修改视图移动时的路径。通过在时间轴上的不同点放置关键位置，可以为动画应用任何复杂程度的路径。坐标相对于以下系统之一声明：
 
-*   `parentRelative`: `x` 和 `y` 坐标相对于父容器，坐标以百分比指定（0.0 到 1.0 之间）。
-*   `deltaRelative`: `x` 和 `y` 坐标不是相对于父容器，而是相对于起始和结束位置。例如，起点为 (0,0)，终点为 (1,1)。
-*   `pathRelative`: `x` 和 `y` 坐标相对于路径，终点之间的直线作为图表的 X 轴。这与 `deltaRelative` 坐标空间相似，但考虑了路径的角度。
+- `parentRelative`：`x` 和 `y` 坐标相对于父容器，坐标以百分比指定（0.0 到 1.0 之间）。
+- `deltaRelative`：`x` 和 `y` 坐标不是相对于父容器，而是相对于起始和结束位置。例如，起点为 (0,0)，终点为 (1,1)。
+- `pathRelative`：`x` 和 `y` 坐标相对于路径，终点之间的直线作为图表的 X 轴。这与 `deltaRelative` 坐标空间相似，但考虑了路径的角度。
 
 例如，下面的 `ConstraintSets` 声明了设备屏幕两侧的起点和终点。默认情况下，使用这些点的视图过渡将跨越屏幕移动，如 [图 43-5] 所示：
 
@@ -8782,16 +8803,13 @@ public void onStart() {
     motion:framePosition="75"/>
 ```
 
-
-
-
-
 ```xml
 motion:keyPositionType="pathRelative"
 motion:percentY="-0.3"
 motion:percentX="0.75"/>
 ```
-上述元素使用 `pathRelative` 坐标系在路径的 25% 和 75% 处创建关键帧位置点。第一个位置位于坐标 (0.25, 0.3)，第二个位置位于 (0.75, -0.3)。这些位置关键帧可以可视化，如下方的 图 43-7 所示：
+
+上述元素使用 `pathRelative` 坐标系在路径的 25% 和 75% 处创建关键帧位置点。第一个位置位于坐标 (0.25, 0.3)，第二个位置位于 (0.75, -0.3)。这些位置关键帧可以可视化，如下方的图 43-7 所示：
 
 ![](img/motionlayout_curve_path.jpg)
 
@@ -8803,16 +8821,11 @@ motion:percentX="0.75"/>
 
 对于复杂的缓动需求，可以通过在三次贝塞尔曲线上绘制点来定义线性度，例如：
 
-.
-.
-
 ```xml
 motion:layout_constraintBottom_toBottomOf="parent"
 motion:transitionEasing="cubic(0.2, 0.7, 0.3, 1)"
 android:rotation="360">
 ```
-.
-.
 
 如果你不熟悉贝塞尔曲线，可以考虑使用以下 URL 中的在线曲线生成器：
 
@@ -8820,23 +8833,15 @@ android:rotation="360">
 
 然而，对于大多数需求，缓动可以使用内置的标准 `accelerate`（加速）和 `decelerate`（减速）值来指定：
 
-.
-.
-
 ```xml
 motion:layout_constraintBottom_toBottomOf="parent"
 motion:transitionEasing="decelerate"
 android:rotation="360">
 ```
-.
-.
 
 ### 43.10 KeyTrigger（触发器）
 
 触发关键帧（`KeyTrigger`）允许在动画到达动画时间线内的指定帧位置时调用视图上的某个方法。这还考虑了动画的方向。例如，可以根据动画是向前运行还是向后运行调用不同的方法。考虑一个按钮，当动画移动超过时间线的 20% 时显示出来。`KeyTrigger` 将在 `Transition` 元素的 `KeyFrameSet` 中通过 `onPositiveCross` 属性如下实现：
-
-.
-.
 
 ```xml
 <KeyFrameSet>
@@ -8846,8 +8851,6 @@ android:rotation="360">
         motion:motionTarget="@id/button"/>
 </KeyFrame>
 ```
-.
-.
 
 同样，如果动画反向播放并掉到 10% 以下时隐藏同一个按钮，则可以使用 `onNegativeCross` 属性添加第二个关键触发器：
 
@@ -8919,39 +8922,39 @@ motionLayout.setTransitionListener(transitionListener);
 
 ### 44 MotionLayout 教程
 
-介绍 `MotionLayout` 的基础知识后，本章将提供在示例项目中尝试 `MotionLayout` 的机会。除了继续探索 `MotionLayout` 的主要功能外，本章还将介绍 `MotionLayout` 编辑器并探索如何使用它。
+
+
+介绍`MotionLayout`的基础知识后，本章将提供在示例项目中尝试`MotionLayout`的机会。除了继续探索`MotionLayout`的主要功能外，本章还将介绍`MotionLayout`编辑器并探索如何使用它。
 
 本章创建的项目将使用起始和结束约束集、手处理器以及属性关键帧。
 
-#### 44.1 创建 MotionLayout 项目在欢迎屏幕上点击 `New Project` 按钮，并在新项目对话框中选择 `Empty Views Activity` 模板，然后点击 `Next` 按钮。
+## 44.1 创建 MotionLayout 项目
 
-在 `Name` 字段输入 `MotionLayoutDemo`，并指定包名为 `com.ebookrenzy.motionlayoutdemo`。在点击 `Finish` 按钮之前，将 `Minimum API` 设置为 `API 26: Android 8.0 (Oreo)`并将`Language` 设置为 Java。
+在欢迎屏幕上点击`New Project`按钮，并在新项目对话框中选择`Empty Views Activity`模板，然后点击`Next`按钮。
 
-### 44.2 ConstraintLayout 到 MotionLayout 的转换
+在`Name`字段输入`MotionLayoutDemo`，并指定包名为`com.ebookrenzy.motionlayoutdemo`。在点击`Finish`按钮之前，将`Minimum API`设置为`API 26: Android 8.0 (Oreo)`并将`Language`设置为`Java`。
 
-Android Studio 已经在 `activity_main.xml` 布局文件中将 `ConstraintLayout` 容器作为父视图。下一步是将该容器转换为 `MotionLayout` 实例。在 `Component Tree` 中，右键点击 `ConstraintLayout` 项并选择 `Convert to MotionLayout` 菜单选项：
+## 44.2 ConstraintLayout 到 MotionLayout 的转换
+
+Android Studio 已经在`activity_main.xml`布局文件中将`ConstraintLayout`容器作为父视图。下一步是将该容器转换为`MotionLayout`实例。在`Component Tree`中，右键点击`ConstraintLayout`项并选择`Convert to MotionLayout`菜单选项：
 
 ![](img/as_convert_to_motionlayout.jpg)
 
 图 44-1
 
-做出选择后，点击确认对话框中的 `Convert` 按钮。转换完成后，`MotionLayout` 编辑器将出现在 Android Studio 主窗口中，如下方的 图 44-2 所示：
+做出选择后，点击确认对话框中的`Convert`按钮。转换完成后，`MotionLayout`编辑器将出现在 Android Studio 主窗口中，如下方的图 44-2 所示：
 
 ![](img/as_motionlayout_editor.jpg)
 
 图 44-2
 
-作为转换过程的一部分，Android Studio 将创建一个名为 `res -> xml` 的新文件夹，并在其中放置名为 `activity_main_scene.xml` 的 `MotionLayout` 场景文件：
+作为转换过程的一部分，Android Studio 将创建一个名为`res -> xml`的新文件夹，并在其中放置名为`activity_main_scene.xml`的`MotionLayout`场景文件：
 
 ![](img/as_motionlayout_scene_file.jpg)
 
 图 44-3
 
-
-
-
-
-此文件包含一个顶层 `MotionScene` 元素，其中包含了 `ConstraintSet` 和 `Transition` 项，这些项将定义主布局中的动画。默认情况下，该文件将包含起始和结束约束集的空元素以及一个初始过渡：
+此文件包含一个顶层`MotionScene`元素，其中包含了`ConstraintSet`和`Transition`项，这些项将定义主布局中的动画。默认情况下，该文件将包含起始和结束约束集的空元素以及一个初始过渡：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -8972,51 +8975,51 @@ Android Studio 已经在 `activity_main.xml` 布局文件中将 `ConstraintLayou
 </MotionScene>
 ```
 
-在 `MotionLayout` 编辑器中进行的任何更改都将存储在此文件中。同样，也可以直接编辑此文件，以便在 `MotionLayout` 编辑器之外实现和修改动画设置。
+在`MotionLayout`编辑器中进行的任何更改都将存储在此文件中。同样，也可以直接编辑此文件，以便在`MotionLayout`编辑器之外实现和修改动画设置。
 
-在本教程中，动画将主要通过 `MotionLayout` 编辑器界面来实现。然而，我们将在每个阶段回顾这些更改是如何反映在底层的 `MotionScene` 文件中的。随着本章节的进行，你会发现 `MotionScene` 的 XML 语法非常简单且易于学习。
+在本教程中，动画将主要通过`MotionLayout`编辑器界面来实现。然而，我们将在每个阶段回顾这些更改是如何反映在底层的`MotionScene`文件中的。随着本章节的进行，你会发现`MotionScene`的 XML 语法非常简单且易于学习。
 
-本教程的第一阶段将演示如何使用 `MotionLayout` 对 `Button` 对象进行动画处理，包括运动（跟随路径）、旋转和尺寸缩放。
+本教程的第一阶段将演示如何使用`MotionLayout`对`Button`对象进行动画处理，包括运动（跟随路径）、旋转和尺寸缩放。
 
-### 44.3 配置起始和结束约束
+## 44.3 配置起始和结束约束
 
-将 `activity_main.xml` 文件加载到 `MotionLayout` 编辑器后，确保选中了 `Motion Layout` 选框（在下方的 图 44-5 中标记为 E），然后在删除默认的 `TextView` 之前，从调色板中拖放 `Button` 视图到布局画布的左上角，如图 图 44-4 所示：
+将`activity_main.xml`文件加载到`MotionLayout`编辑器后，确保选中了`Motion Layout`选框（在下方的图 44-5 中标记为 E），然后在删除默认的`TextView`之前，从调色板中拖放`Button`视图到布局画布的左上角，如图图 44-4 所示：
 
 ![](img/as_motionlayout_button.jpg)
 
 图 44-4
 
-选中按钮后，使用 `Attributes` 工具窗口将 `id` 改为 `myButton`。
+选中按钮后，使用`Attributes`工具窗口将`id`改为`myButton`。
 
-如上一章所述，`MotionLayout` 动画主要是一个指定视图如何在两个状态之间进行转换的案例。因此，实现动画的第一步是指定定义这些状态的约束。
+如上一章所述，`MotionLayout`动画主要是一个指定视图如何在两个状态之间进行转换的案例。因此，实现动画的第一步是指定定义这些状态的约束。
 
-对于此示例，起始点将是布局视图的顶部。要配置这些约束，请在编辑器窗口中选择起始约束集项（在下方的 图 44-5 中标记为 A）：
+对于此示例，起始点将是布局视图的顶部。要配置这些约束，请在编辑器窗口中选择起始约束集项（在下方的图 44-5 中标记为 A）：
 
 ![](img/as_motionlayout_editor_labelled.jpg)
 
 图 44-5
 
-选中起始框时，所有的约束和布局更改都将应用于起始点约束集。要返回整个布局的标准约束和属性，请点击 `Motion Layout` 选框 (E)。
+选中起始框时，所有的约束和布局更改都将应用于起始点约束集。要返回整个布局的标准约束和属性，请点击`Motion Layout`选框（E）。
 
-接下来，在 `ConstraintSet` 列表中选择 `myButton` 项 (B)。注意，`Source` 列显示按钮是根据布局文件中的约束进行定位的。相反，我们希望按钮根据起始约束集进行定位。在 `myButton` 项仍被选中的情况下，点击 `Edit` 按钮 (C) 并从菜单中选择 `Create Constraint`，之后按钮项将指示该视图将根据起始约束集进行定位：
+接下来，在`ConstraintSet`列表中选择`myButton`项（B）。注意，`Source`列显示按钮是根据布局文件中的约束进行定位的。相反，我们希望按钮根据起始约束集进行定位。在`myButton`项仍被选中的情况下，点击`Edit`按钮（C）并从菜单中选择`Create Constraint`，之后按钮项将指示该视图将根据起始约束集进行定位：
 
 ![](img/as_motionlayout_start_constraint.jpg)
 
 图 44-6
 
-起始约束集必须将按钮置在布局的顶部，带有 `8dp` 的偏移量并水平居中。在 `myButton` 仍被选中的情况下，使用 `Attributes` 工具窗口对视图的顶部、左侧和右侧设置约束如下：
+起始约束集必须将按钮置在布局的顶部，带有`8dp`的偏移量并水平居中。在`myButton`仍被选中的情况下，使用`Attributes`工具窗口对视图的顶部、左侧和右侧设置约束如下：
 
 ![](img/as_motionlayout_start_constraint_settings.jpg)
 
 图 44-7
 
-选择结束约束集项（在下方的 图 44-5 中标记为 D），并重复步骤以创建一个新约束，这次将按钮放置在布局的水平中心，但距离布局底部有 `8dp` 的偏移量：
+选择结束约束集项（在下方的图 44-5 中标记为 D），并重复步骤以创建一个新约束，这次将按钮放置在布局的水平中心，但距离布局底部有`8dp`的偏移量：
 
 ![](img/as_motionlayout_end_constraint_settings.jpg)
 
 图 44-8
 
-配置好起始和结束约束后，打开 `activity_main_scene.xml` 文件，并注意约束已添加到文件中：
+配置好起始和结束约束后，打开`activity_main_scene.xml`文件，并注意约束已添加到文件中：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -9049,39 +9052,35 @@ Android Studio 已经在 `activity_main.xml` 布局文件中将 `ConstraintLayou
 </MotionScene>
 ```
 
-### 44.4 预览 MotionLayout 动画
+## 44.4 预览 MotionLayout 动画
 
-要在不构建和运行应用程序的情况下预览动画，请选择下方 图 44-9 中标记为 A 的过渡箭头。这将显示动画面板（标记为 B）：
+要在不构建和运行应用程序的情况下预览动画，请选择下方图 44-9 中标记为 A 的过渡箭头。这将显示动画面板（标记为 B）：
 
 ![](img/as_motionlayout_test.jpg)
 
 图 44-9
 
-要测试动画，点击滑块 (C) 并沿着时间轴移动它。随着滑块移动，画布上的按钮将沿着虚线路径 (D) 移动。使用工具栏按钮 (E) 持续（向前、向后或切换）。
+要测试动画，点击滑块（C）并沿着时间轴移动它。随着滑块移动，画布上的按钮将沿着虚线路径（D）移动。使用工具栏按钮（E）持续（向前、向后或切换）。
 
-### 44.5 添加 OnClick 手势
+## 44.5 添加 OnClick 手势
 
-虽然已经创建了简单的 `MotionLayout` 动画过渡，但我们仍然需要从程序内部启动动画的方法。这可以通过分配点击或滑动处理器来实现。对于此示例，我们将配置在用户点击按钮时启动动画。在 `MotionLayout` 编辑器中，如果动画设置为循环运行，请将其暂停。接下来，选择上方的 图 44-9 中标记为 A 的过渡箭头，在 `Attributes` 工具窗口中找到 `OnClick` 属性部分，并点击 图 44-10 中箭头所示的 `+` 按钮：
+虽然已经创建了简单的`MotionLayout`动画过渡，但我们仍然需要从程序内部启动动画的方法。这可以通过分配点击或滑动处理器来实现。对于此示例，我们将配置在用户点击按钮时启动动画。在`MotionLayout`编辑器中，如果动画设置为循环运行，请将其暂停。接下来，选择上方的图 44-9 中标记为 A 的过渡箭头，在`Attributes`工具窗口中找到`OnClick`属性部分，并点击图 44-10 中箭头所示的`+`按钮：
 
 ![](img/as_motionlayout_add_onclick.jpg)
 
 图 44-10
 
-`OnClick` 面板将为第一个属性出现空行。对于属性名称，输入 `targetId`；对于值字段，输入按钮的 id (`@id/myButton`)。在下一个空行，在属性名称字段输入 `app:clickAction`。在值字段点击向下箭头显示有效选项菜单：
+`OnClick`面板将为第一个属性出现空行。对于属性名称，输入`targetId`；对于值字段，输入按钮的 id（`@id/myButton`）。在下一个空行，在属性名称字段输入`app:clickAction`。在值字段点击向下箭头显示有效选项菜单：
 
 ![](img/as_motionlayout_onclick_toggle.jpg)
 
 图 44-11
 
-对于此示例，选择 `toggle` 操作。这将导致视图在点击时动画到相反的位置。一旦输入这些设置，它们应该与下方 图 44-12 所示的匹配：
+对于此示例，选择`toggle`操作。这将导致视图在点击时动画到相反的位置。一旦输入这些设置，它们应该与下方图 44-12 所示的匹配：
 
 ![](img/as_4.0_motionlayout_onclick_added.jpg)
 
 图 44-12
-
-
-
-
 
 ```xml
 <Transition
@@ -9095,38 +9094,43 @@ Android Studio 已经在 `activity_main.xml` 布局文件中将 `ConstraintLayou
 </Transition>
 ```
 
-在设备或模拟器上编译并运行应用，确认点击按钮会导致其在 `MotionScene` 文件定义的起点和终点之间来回切换。
+在设备或模拟器上编译并运行应用，确认点击按钮会导致其在`MotionScene`文件定义的起点和终点之间来回切换。
 
-### 44.6 在过渡中添加属性关键帧 (Attribute Keyframe)
+## 44.6 在过渡中添加属性关键帧（Attribute Keyframe）
 
-到目前为止，示例项目仅演示了按钮视图从屏幕上一个位置到另一个位置的动画。属性关键帧（`KeyAttribute`）提供了一种方法，用于指定过渡时间轴内的特定点，让其他属性更改在这些点生效。例如，可以定义一个 `KeyAttribute`，使得视图在移动通过时间轴 30% 时，其尺寸必须增加 50%。对于此示例，我们将在动画的中间点添加一个旋转效果。
+到目前为止，示例项目仅演示了按钮视图从屏幕上一个位置到另一个位置的动画。属性关键帧（`KeyAttribute`）提供了一种方法，用于指定过渡时间轴内的特定点，让其他属性更改在这些点生效。例如，可以定义一个`KeyAttribute`，使得视图在移动通过时间轴 30% 时，其尺寸必须增加 50%。对于此示例，我们将在动画的中间点添加一个旋转效果。
 
-首先，在 MotionLayout 编辑器中打开 `activity_main.xml` 文件，选择过渡连接箭头以显示时间轴，然后点击图 44-13 中高亮显示的按钮：
+首先，在`MotionLayout`编辑器中打开`activity_main.xml`文件，选择过渡连接箭头以显示时间轴，然后点击图 44-13 中高亮显示的按钮：
 
 ![](img/as_motionlayout_add_keyframe.jpg)
+
 图 44-13
 
-从菜单中，选择 `KeyAttribute` 选项：
+从菜单中，选择`KeyAttribute`选项：
 
 ![](img/as_motionlayout_add_key_attribute.jpg)
+
 图 44-14
 
-一旦选中，将出现图 44-15 所示的对话框。在对话框中，确保选中了 `ID` 选项并引用了 `myButton`。在位置（position）字段中，输入 `50`（这是以百分比表示，0 是起点，100 是终点）。最后，在点击 `Add` 按钮之前，从属性（Attribute）下拉菜单中选择旋转（rotation）项：
+一旦选中，将出现图 44-15 所示的对话框。在对话框中，确保选中了`ID`选项并引用了`myButton`。在位置（position）字段中，输入`50`（这是以百分比表示，0 是起点，100 是终点）。最后，在点击`Add`按钮之前，从属性（Attribute）下拉菜单中选择旋转（rotation）项：
 
 ![](img/as_motionlayout_create_key_attribute.jpg)
+
 图 44-15
 
-一旦添加了 `KeyAttribute`，时间轴中会出现一个该属性的行。点击该行将其高亮，然后点击该行最左侧的折叠箭头以展开属性过渡图。注意，时间轴上会出现一个小的菱形标记（如下方的图 44-16 所示），它表示关键帧的位置。图表表示效果的线性程度。在这种情况下，按钮将稳稳地旋转到指定的度数，并在关键帧位置达到最大旋转。当它到达终点时，按钮将旋转回 0 度：
+一旦添加了`KeyAttribute`，时间轴中会出现一个该属性的行。点击该行将其高亮，然后点击该行最左侧的折叠箭头以展开属性过渡图。注意，时间轴上会出现一个小的菱形标记（如下方的图 44-16 所示），它表示关键帧的位置。图表表示效果的线性程度。在这种情况下，按钮将稳稳地旋转到指定的度数，并在关键帧位置达到最大旋转。当它到达终点时，按钮将旋转回 0 度：
 
 ![](img/as_motionlayout_key_attribute_timeline.jpg)
+
 图 44-16
 
-要更改 `KeyAttribute` 的属性，在时间轴中选择它，然后参考属性（Attributes）工具窗口。在 `KeyAttribute` 面板中，将 `rotation` 属性更改 360 度：
+要更改`KeyAttribute`的属性，在时间轴中选择它，然后参考属性（Attributes）工具窗口。在`KeyAttribute`面板中，将`rotation`属性更改 360 度：
 
 ![](img/as_motionlayout_change_key_attribute.jpg)
+
 图 44-17
 
-通过来回移动滑块并观察按钮在布局画布中遍历动画路径时的旋转情况来检查该属性是否生效。参考 `activity_main_scene.xml` 文件，其内容应如下：
+通过来回移动滑块并观察按钮在布局画布中遍历动画路径时的旋转情况来检查该属性是否生效。参考`activity_main_scene.xml`文件，其内容应如下：
 
 ```xml
 <Transition
@@ -9146,28 +9150,33 @@ Android Studio 已经在 `activity_main.xml` 布局文件中将 `ConstraintLayou
 
 使用过渡滑块或通过编译运行应用来测试动画，验证按钮正在旋转。
 
-## 4.7 在过渡中添加自定义属性 (CustomAttribute)
+## 44.7 在过渡中添加自定义属性（CustomAttribute）
 
-`KeyAttribute` 属性限于内置效果，如缩放和旋转。通过声明 `CustomAttributes` 也可以实现额外的更改。与存储在 `Transition` 元素中的 `KeyAttributes` 不同，`CustomAttributes` 位于起点和终点集中。因此，这些属性只能声明在起点和终点生效（也就是说，你不能在过渡的中途中指定属性关键帧）。
+`KeyAttribute`属性限于内置效果，如缩放和旋转。通过声明`CustomAttributes`也可以实现额外的更改。与存储在`Transition`元素中的`KeyAttributes`不同，`CustomAttributes`位于起点和终点集中。因此，这些属性只能声明在起点和终点生效（也就是说，你不能在过渡的中途中指定属性关键帧）。
 
-对于此示例，我们将配置按钮颜色从红色逐渐变为绿色。首先选择图 44-18 中标记为 A 的起始框，然后选择 `myButton` 约束集 (B)：
+对于此示例，我们将配置按钮颜色从红色逐渐变为绿色。首先选择图 44-18 中标记为 A 的起始框，然后选择`myButton`约束集（B）：
 
 ![](img/as_motionlayout_custom_attr.jpg)
+
 图 44-18
 
-参考属性窗口，点击如下所示高亮的 `CustomAttributes` 部分的 `+` 按钮：
+参考属性窗口，点击如下所示高亮的`CustomAttributes`部分的`+`按钮：
 
 ![](img/as_motionlayout_add_custom_attribute.jpg)
+
 图 44-19
 
-在弹出的对话框（图 44-20）中，将属性类型更改为 `Color` 并在属性名称（Attribute Name）中输入 `backgroundColor`。最后，将值设置为 `#F80A1F`：
+在弹出的对话框（图 44-20）中，将属性类型更改为`Color`并在属性名称（Attribute Name）中输入`backgroundColor`。最后，将值设置为`#F80A1F`：
 
 ![](img/as_motionlayout_custom_attribute.jpg)
+
 图 44-20
 
-点击 `OK` 提交更改，然后选择图 44-18 上方标记为 C 的终点集，重复上述步骤添加自定义属性，这次指定颜色值为 `#33CC33`。
+点击`OK`提交更改，然后选择图 44-18 上方标记为 C 的终点集，重复上述步骤添加自定义属性，这次指定颜色值为`#33CC33`。
 
-使用时间轴滑块或运行应用确保按钮颜色颜色。`CustomAttributes` 的添加将反映在 `activity_main_scene.xml` 文件中，如下：
+使用时间轴滑块或运行应用确保按钮颜色颜色。`CustomAttributes`的添加将反映在`activity_main_scene.xml`文件中，如下：
+
+
 
 ```xml
 <ConstraintSet id="@+id/start">
@@ -9188,22 +9197,24 @@ Android Studio 已经在 `activity_main.xml` 布局文件中将 `ConstraintLayou
 
 ## 4.8 添加位置关键帧 (Position Keyframes)
 
-本教程的最后一个任务是在动画路径上添加位置关键帧（`KeyPosition`）以引入水平移动。在 MotionLayout 编辑器中显示过渡时间轴的情况下，点击如图 44-13 所示高亮的按钮以创建关键帧，并从下方图 44-21 所示的菜单中选择 `KeyPosition` 选项：
+本教程的最后一个任务是在动画路径上添加位置关键帧（`KeyPosition`）以引入水平移动。在 `MotionLayout` 编辑器中显示过渡时间轴的情况下，点击如图 44-13 所示高亮的按钮以创建关键帧，并从下方图 44-21 所示的菜单中选择 `KeyPosition` 选项：
 
 ![](img/as_motionlayout_keyposition_menu.jpg)
+
 图 44-21
 
 在结果对话框中，按照图 44-22 所示设置属性：
 
 ![](img/as_motionlayout_create_keyposition.jpg)
+
 图 44-22
 
 点击 `Add` 按钮提交更改，然后重复上述步骤添加配置如下的第二个位置关键帧：
 
-- 位置（Position）：75
-- 类型（Type）：parentRelative
-- 百比 X（PercentX）：0.85
-- 百比 Y（PercentY）：0.75
+- 位置（`Position`）：75
+- 类型（`Type`）：`parentRelative`
+- 百比 X（`PercentX`）：0.85
+- 百比 Y（`PercentY`）：0.75
 
 完成这些更改后，这些关键帧项将被添加到 `activity_main_scene.xml` 文件的过渡元素中：
 
@@ -9227,19 +9238,16 @@ Android Studio 已经在 `activity_main.xml` 布局文件中将 `ConstraintLayou
 最后测试一次应用，验证按钮现在按照下方所示路径移动，同时保持旋转和颜色变化：
 
 ![](img/as_motionlayout_path_1.jpg)
+
 图 44-23
 
-
-
-
-
-位置关键帧（Position keyframes）通过预览画布中表示运动路径的虚线上的菱形标记表示，如图 44-24 所示（如果标记不可见，请确保已选中预览中的 `Button` 视图）：
+位置关键帧（`Position keyframes`）通过预览画布中表示运动路径的虚线上的菱形标记表示，如图 44-24 所示（如果标记不可见，请确保已选中预览中的 `Button` 视图）：
 
 ![](img/as_motionlayout_path_2.jpg)
 
 图 44-24
 
-要视觉上调整关键帧的位置，点击标记并将其拖到新位置。随着标记的移动，Motion Layout 编辑器将显示网格以及当前的 `x` 和 `y` 坐标：
+要视觉上调整关键帧的位置，点击标记并将其拖到新位置。随着标记的移动，`MotionLayout` 编辑器将显示网格以及当前的 `x` 和 `y` 坐标：
 
 ![](img/as_motionlayout_path_3.jpg)
 
@@ -9247,19 +9255,19 @@ Android Studio 已经在 `activity_main.xml` 布局文件中将 `ConstraintLayou
 
 ### 44.9 总结
 
-本章介绍了 Android Studio 内置的 MotionLayout 编辑器，并探索了如何使用它为 Android 应用的用户界面添加动画，而无需手动编写 XML 声明。本章涵盖的示例包括将 `ConstraintLayout` 容器转换为 `MotionLayout`、在 `MotionScene` 文件中创建起始和结束约束集以及过渡，以及添加 `OnClick` 处理器。还涵盖了动画预览器、自定义属性和位置关键帧。
+本章介绍了 Android Studio 内置的 `MotionLayout` 编辑器，并探索了如何使用它为 Android 应用的用户界面添加动画，而无需手动编写 XML 声明。本章涵盖的示例包括将 `ConstraintLayout` 容器转换为 `MotionLayout`、在 `MotionScene` 文件中创建起始和结束约束集以及过渡，以及添加 `OnClick` 处理器。还涵盖了动画预览器、自定义属性和位置关键帧。
 
 ## 45. 一个 MotionLayout KeyCycle 教程
 
-之前的章节介绍并演示了使用 `MotionLayout` 容器结合 Android Studio MotionLayout 编辑器的功能将动画集成到 Android 应用用户界面的概念。标题为“MotionLayout 简介`的章节简要提到了循环（`KeyCycle`）和时间循环（`KeyTimeCycle`）关键帧，并解释了如何使用它们来实现涉及大量重复状态变化的动画。
+之前的章节介绍并演示了使用 `MotionLayout` 容器结合 Android Studio `MotionLayout` 编辑器的功能将动画集成到 Android 应用用户界面的概念。标题为“MotionLayout 简介”的章节简要提到了循环（`KeyCycle`）和时间循环（`KeyTimeCycle`）关键帧，并解释了如何使用它们来实现涉及大量重复状态变化的动画。
 
-本章将详细介绍循环关键帧，然后演示如何在使用 Android Studio 和循环编辑器（Cycle Editor）的示例项目中创建它们。
+本章将详细介绍循环关键帧，然后演示如何在使用 Android Studio 和循环编辑器（`Cycle Editor`）的示例项目中创建它们。
 
 ### 45.1 循环关键帧概览
 
 位置关键帧可以为动画时间轴添加中间状态变化。虽然这对于少量的状态变化有效，但如果数量很大，实现起来将非常麻烦。例如，为了让按钮在点击时抖动 50 次以表示发生错误，需要手动创建 100 个位置关键帧来执行小的顺时针和逆时针旋转。同样，在视图跨越屏幕时实现弹跳效果同样耗费时间。
 
-对于需要重复执行状态变化的情况，MotionLayout 包含了 `Cycle` 和 `Time Cycle` 关键帧。两者执行相同的任务，不同之处 `KeyCycle` 帧基于动画路径中的帧位置，而 `KeyTimeCycles` 是基于每秒循环次数（Hz）的时间。
+对于需要重复执行状态变化的情况，`MotionLayout` 包含了 `Cycle` 和 `Time Cycle` 关键帧。两者执行相同的任务，不同之处 `KeyCycle` 帧基于动画路径中的帧位置，而 `KeyTimeCycles` 是基于每秒循环次数（Hz）的时间。
 
 使用这些 `KeyCycle` 帧，动画时间轴本质上被分为若干子部分（称为循环），每个部分包含一个或多个波形，定义了视图属性在整个时间轴上如何修改。创建 `KeyCycle` 循环时需要以下信息：
 
@@ -9336,13 +9344,13 @@ Android Studio 已经在 `activity_main.xml` 布局文件中将 `ConstraintLayou
 
 图 45-2
 
-到为止，本章的示例一直在使用 `sin` 波。在 MotionLayout 中使用循环关键帧时，还有其他波形可用。例如图 45-3 展示了将所有循环关键帧的 `waveShape` 属性更改为 `sawtooth` 波的效果：
+到目前为止，本章的示例一直在使用 `sin` 波。在 `MotionLayout` 中使用循环关键帧时，还有其他波形可用。例如图 45-3 展示了将所有循环关键帧的 `waveShape` 属性更改为 `sawtooth` 波的效果：
 
 ![](img/as_4.0_keycycle_sawtooth.jpg)
 
 图 45-3
 
-除了 `sin` 和 `sawtooth`，MotionLayout 还支持 `triangle`、`square`、`bounce` 和 `reverseSawtooth` 波。
+除了 `sin` 和 `sawtooth`，`MotionLayout` 还支持 `triangle`、`square`、`bounce` 和 `reverseSawtooth` 波。
 
 在上面的示例中，每个循环沿 Y 轴在相同范围内移动。然而，假设我们需要第二个循环沿正 Y 轴移动更远。这通过如下调整第二个循环的 `waveOffset` 属性来实现：
 
@@ -9380,12 +9388,9 @@ Android Studio 已经在 `activity_main.xml` 布局文件中将 `ConstraintLayou
 
 图 45-5
 
-
-
-
 虽然并不复杂，但通过直接编辑 `MotionScene` 文件中的 XML `KeyCycle` 条目来获取所需的精确配置可能需要一些时间。为了方便，Google 的 Android 工程师开发了 `Cycle Editor`。这个基于 Java 的独立工具尚未成为 Android Studio 的一部分。`Cycle Editor` 允许你可视化地设计和测试循环关键帧集。
 
-`Cycle Editor` 工具是一个 Java 归档文件 (`jar`)，要求在你的开发系统中安装 Java 运行时。
+`Cycle Editor` 工具是一个 Java 归档文件（`jar`），要求在你的开发系统中安装 Java 运行时。
 
 一旦安装了 Java，就可以从以下 URL 下载 `CycleEditor.jar` 文件：
 
@@ -9463,9 +9468,11 @@ java -jar CycleEditor.jar
 
 ![](img/as_4.0_keycycle_editor_main.jpg)
 
+
+
 图 45-13
 
-选择 `File -> parse xml` 菜单以查看更改。使用图 45-13 中列出的值配置 1 到 4 的设置（记住你已经配置了 `cycle 0`）：
+选择`File -> parse xml`菜单以查看更改。使用图 45-13 中列出的值配置 1 到 4 的设置（记住你已经配置了`cycle 0`）：
 
 | Cycle 0 | Cycle 1 | Cycle 2 | Cycle 3 | Cycle 4 |
 |---|---|---|---|---|
@@ -9508,7 +9515,7 @@ java -jar CycleEditor.jar
 </KeyFrameSet>
 ```
 
-选择 `File -> Parse XML` 选项以刷新带有新循环的波形，它现在应该如图 45-14 所示：
+选择`File -> Parse XML`选项以刷新带有新循环的波形，它现在应该如图 45-14 所示：
 
 ![](img/as_4.0_keycycle_editor_cyclekeys_complete.jpg)
 
@@ -9516,7 +9523,7 @@ java -jar CycleEditor.jar
 
 ### 45.6 预览动画
 
-现在可以在 `Cycle Editor` 工具中预览基于循环的动画。点击播放按钮（如图 45-15 中标记为 A 的处）开始动画。要将循环结合水平移动，将第二个菜单 (B) 从 `Stationary` 更改为 `West to East`。还可以花时间尝试 `time` 和 `linearity` 设置（C 和 D）。
+现在可以在`Cycle Editor`工具中预览基于循环的动画。点击播放按钮（如图 45-15 中标记为 A 的处）开始动画。要将循环结合水平移动，将第二个菜单（B）从`Stationary`更改为`West to East`。还可以花时间尝试`time`和`linearity`设置（C 和 D）。
 
 ![](img/as_4.0_keycycle_play_buttons.jpg)
 
@@ -9524,11 +9531,7 @@ java -jar CycleEditor.jar
 
 ### 45.7 将 KeyFrameSet 添加到 MotionScene
 
-
-
-
-
-在循环编辑器（Cycle Editor）中，从 XML 面板选中并复制 `KeyCycle` 元素，将其粘贴到 Android Studio 中 `res -> xml -> activity_main_scene.xml` 文件的 `Transition` 部分，使其置于现有的 `KeyFrameSet` 标记之间。请注意增加的持续时间设置以及用于启动动画的 `OnClick` 处理器：
+在循环编辑器（Cycle Editor）中，从 XML 面板选中并复制`KeyCycle`元素，将其粘贴到 Android Studio 中`res -> xml -> activity_main_scene.xml`文件的`Transition`部分，使其置于现有的`KeyFrameSet`标记之间。请注意增加的持续时间设置以及用于启动动画的`OnClick`处理器：
 
 ```xml
 <Transition
@@ -9545,32 +9548,55 @@ java -jar CycleEditor.jar
             android:translationY="60dp"/>
         <KeyCycle
             motion:framePosition="25"
-.
-.
+            motion:motionTarget="@+id/button"
+            motion:wavePeriod="2"
+            motion:waveOffset="0dp"
+            motion:waveShape="sin"
+            android:translationY="60dp"/>
+        <KeyCycle
+            motion:framePosition="50"
+            motion:motionTarget="@+id/button"
+            motion:wavePeriod="3"
+            motion:waveOffset="0dp"
+            motion:waveShape="sin"
+            android:translationY="150dp"/>
+        <KeyCycle
+            motion:framePosition="75"
+            motion:motionTarget="@+id/button"
+            motion:wavePeriod="2"
+            motion:waveOffset="0dp"
+            motion:waveShape="sin"
+            android:translationY="60dp"/>
+        <KeyCycle
+            motion:framePosition="100"
+            motion:motionTarget="@+id/button"
+            motion:wavePeriod="1"
+            motion:waveOffset="0dp"
+            motion:waveShape="sin"
+            android:translationY="60dp"/>
     </KeyFrameSet>
     <OnClick motion:targetId="@id/button"
             motion:clickAction="toggle" />
-.
-.
+...
 ```
 
-在继续操作之前，请检查每个目标属性是否已正确声明。在编写时，循环编辑器仍在使用过时的 `motion:target` 标签。例如：
+在继续操作之前，请检查每个目标属性是否已正确声明。在编写时，循环编辑器仍在使用过时的`motion:target`标签。例如：
 
 `motion:target="@+id/button"`
 
-这需要对五个 `KeyCycle` 条目中的每一个都更改为如下内容：
+这需要对五个`KeyCycle`条目中的每一个都更改为如下内容：
 
 `motion:motionTarget="@+id/button"`
 
 完成这些更改后，编译并在设备或模拟器上运行应用，点击按钮开始并查看动画。
 
-请注意，`KeyCycle` 的波形形成也可以在 Android Studio MotionLayout 编辑器中查看，如下方的图 45-16 所示：
+请注意，`KeyCycle`的波形形成也可以在 Android Studio MotionLayout 编辑器中查看，如下方的图 45-16 所示：
 
 ![](img/as_keycycle_demo_transition.jpg)
 
 图 45-16
 
-`KeyCycle` 帧集并不是每个动画只有一个。例如，将以下 `KeyFrameSet` 添加到 `activity_main_scene.xml` 文件的 `Transition` 部分，为按钮在移动时添加一些旋转效果：
+`KeyCycle`帧集并不是每个动画只有一个。例如，将以下`KeyFrameSet`添加到`activity_main_scene.xml`文件的`Transition`部分，为按钮在移动时添加一些旋转效果：
 
 ```xml
 <KeyFrameSet>
@@ -9618,12 +9644,15 @@ java -jar CycleEditor.jar
 ```
 
 ### 5.8 总结
-`KeyCycle` 帧集提供了一种构建涉及大量状态变化的动画的有用方法。正如本章概述的，使用循环编辑器可以显著简化这些帧集的生成。
+
+`KeyCycle`帧集提供了一种构建涉及大量状态变化的动画的有用方法。正如本章概述的，使用循环编辑器可以显著简化这些帧集的生成。
 
 ## 6 使用悬浮操作按钮和 Snackbar
+
 本章的目标之一是提供材料设计（Material Design）的概述。材料设计最初作为 Android 5.0 的一部分引入，是一套设计指南，规定了 Android 用户界面以及运行在上面的上的应用的外观和行为。作为实现材料设计概念的一部分，Google 还引入了 Android 设计支持库（Android Design Support Library）。该库包含了多个组件，允许将材料设计的许多关键功能构建到 Android 应用中。这些组件中的两个——悬浮操作按钮和 Snackbar 将在本章中被涵盖。
 
 ### 6.1 材料设计
+
 材料设计的原则定义了 Android 环境的整体外观。材料设计由 Google 的 Android 团队创建，它规定构成 Android 用户界面和运行在上面的应用的元素在行为、动画和样式方面应以特定方式显示和运行。材料设计的原则之一是用户界面的元素看起来具有物理深度，并且感觉项目是由物理材料层层构建而成的。例如，一个按钮通过阴影效果看起来悬浮在它所处布局表面之上。按下按钮会导致按钮发生弯曲并抬起，就像是由薄材料制成的，在松开时会产生涟漪。
 
 材料设计还规定了用户界面元素的布局和行为。一个关键的例子是位于屏幕顶部的应用栏（app bar）应该如何显示，以及它相对于活动主内容区域内发生的滚动操作应该如何表现。
@@ -9631,43 +9660,42 @@ java -jar CycleEditor.jar
 材料设计涵盖了广泛的领域，从推荐的颜色样式到对象的动画。可以通过以下链接在线找到材料设计概念和指南的完整描述，这也是所有 Android 开发者推荐阅读的内容：[`material.io/design/introduction`](https://material.io/design/introduction)
 
 ### 6.2 设计库
+
 许多实现 Android 应用所需的材料设计构建模块都包含在 Android 设计支持库中。该库包含一系列用户界面组件，可以在 Android 应用中实现材料设计的视觉、感觉和行为。该库中的两个组件——悬浮操作按钮和 Snackbar 将在本章中介绍，而其他的将在后续章节介绍。
 
-### 6.3 悬浮操作按钮 (FAB)
+### 6.3 悬浮操作按钮（FAB）
+
 悬浮操作按钮看起来悬浮在应用界面之上。它通常推广用户界面屏幕中最常见的操作。悬浮操作按钮可以放置在屏幕上，允许用户在联系列表中添加条目或在应用内发送电子邮件。例如，图 46-1 展示了标准 Android 联系人应用中用于添加新联系人的悬浮操作按钮：
 
 ![](img/as_contacts_app.jpg)
 
 图 46-1
 
-
-
-
-
-`Snackbar` 组件提供了一种在屏幕底部以面板形式向用户展示信息的方法，如图 46-2 所示。`Snackbar` 实例包含一条短的文本消息和一个可选的操作按钮，用户点击该按钮时将执行相应任务。一旦显示，`Snackbar` 将自动超时消失，也可以由用户通过滑动操作手动移除。在 `Snackbar` 显示期间，应用程序将继续运行并正常响应用户交互。
+`Snackbar`组件提供了一种在屏幕底部以面板形式向用户展示信息的方法，如图 46-2 所示。`Snackbar`实例包含一条短的文本消息和一个可选的操作按钮，用户点击该按钮时将执行相应任务。一旦显示，`Snackbar`将自动超时消失，也可以由用户通过滑动操作手动移除。在`Snackbar`显示期间，应用程序将继续运行并正常响应用户交互。
 
 ![](img/as_snackbar_example.jpg)
+
 图 46-2
 
-在本章的剩余部分中，将创建一个示例应用程序，该程序将使用悬浮操作按钮和 `Snackbar` 的基本功能向项目列表添加条目。
+在本章的剩余部分中，将创建一个示例应用程序，该程序将使用悬浮操作按钮和`Snackbar`的基本功能向项目列表添加条目。
 
 ### 46.5 创建示例项目
 
-从欢迎界面选择“New Project”（新建项目）选项，在弹出的新项目对话框中，点击“Next”（下一步）按钮之前，选择 `Basic Views Activity` 模板。
+从欢迎界面选择“New Project”（新建项目）选项，在弹出的新项目对话框中，点击“Next”（下一步）按钮之前，选择`Basic Views Activity`模板。
 
-在 `Name`名称）字段中输入 `FabExample`，并指定 `com.ebookfrenzy.fabexample` 为包名。在点击“Finish”（完成）按钮之前，将 `Minimum API level`最小 API 级别设置为 `API 26`：Android 8.0 (Oreo)，并将 `Language`语言菜单设置为 `Java`。
+在`Name`名称）字段中输入`FabExample`，并指定`com.ebookfrenzy.fabexample`为包名。在点击“Finish”（完成）按钮之前，将`Minimum API level`最小 API 级别设置为`API 26`：Android 8.0 (Oreo)，并将`Language`语言菜单设置为`Java`。
 
 ### 46.6 审查项目
 
-由于选择了 `Basic Views Activity` 模板，该活动包含四个布局文件。`activity_main.xml` 文件包含一个 `CoordinatorLayout` 管理器，其中包含应用栏（app bar）、`Material toolbar` 和悬浮操作按钮条目。
+由于选择了`Basic Views Activity`模板，该活动包含四个布局文件。`activity_main.xml`文件包含一个`CoordinatorLayout`管理器，其中包含应用栏（app bar）、`Material toolbar`和悬浮操作按钮条目。
 
-`content_main.xml` 文件代表活动内容区域的布局，包含一个 `NavHostFragment` 实例。该文件通过以下 `include` 指令嵌入到 `activity_main.xml` 文件中：
+`content_main.xml`文件代表活动内容区域的布局，包含一个`NavHostFragment`实例。该文件通过以下`include`指令嵌入到`activity_main.xml`文件中：
 
 ```xml
 <include layout="@layout/content_main" />
 ```
 
-`activity_main.xml` 文件中的悬浮操作按钮元素如下：
+`activity_main.xml`文件中的悬浮操作按钮元素如下：
 
 ```xml
 <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -9680,9 +9708,9 @@ java -jar CycleEditor.jar
     app:srcCompat="@android:drawable/ic_dialog_email" />
 ```
 
-这声明按钮将出现在屏幕右下角，边距由 `values/dimens.xml` 文件中的 `fab_margin` 标识符表示（在本情况下，设置为 `16dp`）。XML 进一步声明按钮的内部图标将采用标准的内置邮件图标 drawable 。
+这声明按钮将出现在屏幕右下角，边距由`values/dimens.xml`文件中的`fab_margin`标识符表示（在本情况下，设置为`16dp`）。XML 进一步声明按钮的内部图标将采用标准的内置邮件图标 drawable。
 
-空白模板还配置了悬浮操作按钮，当用户点击时显示一个 `Snackbar` 实例。实现此功能的代码可以在 `MainActivity.java` 文件的 `onCreate()` 方法中找到，如下：
+空白模板还配置了悬浮操作按钮，当用户点击时显示一个`Snackbar`实例。实现此功能的代码可以在`MainActivity.java`文件的`onCreate()`方法中找到，如下：
 
 ```java
 binding.fab.setOnClickListener(new View.OnClickListener() {
@@ -9694,26 +9722,30 @@ binding.fab.setOnClickListener(new View.OnClickListener() {
 });
 ```
 
-该代码通过视图绑定（view binding）访问悬浮操作按钮，并添加了 `OnClickListener` 处理器，在按钮被点击时调用。此方法显示一个配置了消息但没有操作的 `Snackbar` 实例。
+该代码通过视图绑定（view binding）访问悬浮操作按钮，并添加了`OnClickListener`处理器，在按钮被点击时调用。此方法显示一个配置了消息但没有操作的`Snackbar`实例。
 
 当项目编译并运行时，悬浮操作按钮将出现在屏幕底部，如图 46-3 所示：
 
 ![](img/as_default_fab.jpg)
+
 图 46-3
 
-点击悬浮操作按钮将触发 `OnClickListener` 处理器方法，导致 `Snackbar` 显示在屏幕底部：
+点击悬浮操作按钮将触发`OnClickListener`处理器方法，导致`Snackbar`显示在屏幕底部：
 
 ![](img/as_default_fab_snackbar.jpg)
+
 图 46-4
 
 ### 46.7 移除导航功能
 
-正如“Android Studio 布局编辑器工具指南”概述所示，`Basic Views Activity` 模板包含多个片段（fragments）和按钮，用于在不同片段之间进行导航。这些功能对于本教程来说是不必要的，如果不移除，稍后会导致问题。在继续教程之前，请按照以下方式修改项目：
+正如“Android Studio 布局编辑器工具指南”概述所示，`Basic Views Activity`模板包含多个片段（fragments）和按钮，用于在不同片段之间进行导航。这些功能对于本教程来说是不必要的，如果不移除，稍后会导致问题。在继续教程之前，请按照以下方式修改项目：
 
-1. 在 `Project` 工具窗口中，导航并双击 `app -> res -> navigation -> nav_graph.xml` 文件，将其加载到导航编辑器中。
-2. 选择编辑器中 `Component Tree` 面板内的 `SecondFragment` 条目，按下键盘上的删除键将其从图中移除。
-3. 找到并删除 `SecondFragment.java` (`app -> java -> <package name> -> SecondFragment`) 和 `fragment_second.xml` (`app -> res -> layout -> fragment_second.xml`) 文件。
-4. 找到 `FirstFragment.java` 文件，双击将其加载到编辑器中，并移除 `onViewCreated()` 方法中的代码，使其如下：
+1. 在`Project`工具窗口中，导航并双击`app -> res -> navigation -> nav_graph.xml`文件，将其加载到导航编辑器中。
+2. 选择编辑器中`Component Tree`面板内的`SecondFragment`条目，按下键盘上的删除键将其从图中移除。
+3. 找到并删除`SecondFragment.java`（`app -> java -> <package name> -> SecondFragment`）和`fragment_second.xml`（`app -> res -> layout -> fragment_second.xml`）文件。
+4. 找到`FirstFragment.java`文件，双击将其加载到编辑器中，并移除`onViewCreated()`方法中的代码，使其如下：
+
+
 
 ```java
 binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
@@ -9727,12 +9759,13 @@ binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
 
 ### 46.8 更改悬浮操作按钮
 
-本示例的目标是配置悬浮操作按钮向列表添加条目，目前按钮上的图标需要更改为更具指示性的内容。使用的图标是 `ic_add.png`。在项目文件夹中找到此图像。
+本示例的目标是配置悬浮操作按钮向列表添加条目，目前按钮上的图标需要更改为更具指示性的内容。使用的图标是`ic_add.png`。在项目文件夹中找到此图像。
 
 ![](img/as_added.jpg)
+
 图 46-5
 
-接下来，编辑 `activity_main.xml` 文件，将图标源从 `@android:drawable/ic_dialog_email` 更改为 `@drawable/ic_add`如下：
+接下来，编辑`activity_main.xml`文件，将图标源从`@android:drawable/ic_dialog_email`更改为`@drawable/ic_add`如下：
 
 ```xml
 <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -9745,7 +9778,7 @@ binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
     app:srcCompat="@drawable/ic_add" />
 ```
 
-在布局预览中，内部图标已变为加号。我们还可以通过向 `OnClickListener` 添加代码，让悬浮操作按钮在点击时执行任何操作。例如，对 `MainActivity.java` 文件的以下更改每次点击按钮时都会调用名为 `displayMessage()` 的方法来显示消息：
+在布局预览中，内部图标已变为加号。我们还可以通过向`OnClickListener`添加代码，让悬浮操作按钮在点击时执行任何操作。例如，对`MainActivity.java`文件的以下更改每次点击按钮时都会调用名为`displayMessage()`的方法来显示消息：
 
 ```java
 import android.widget.Toast;
@@ -9766,7 +9799,7 @@ public void displayMessage(String message) {
 
 ### 46.9 为 Snackbar 添加操作
 
-`Snackbar` 还可以添加操作，在用户点击时执行相应任务。编辑 `MainActivity.java` 文件并修改 `Snackbar` 创建代码，以添加一个标题为“My Action”的操作，该操作配置了名为 `actionOnClickListener` 的 `OnClickListener`，后者会显示一条吐司消息：
+`Snackbar`还可以添加操作，在用户点击时执行相应任务。编辑`MainActivity.java`文件并修改`Snackbar`创建代码，以添加一个标题为“My Action”的操作，该操作配置了名为`actionOnClickListener`的`OnClickListener`，后者会显示一条吐司消息：
 
 ```java
 binding.fab.setOnClickListener(new View.OnClickListener() {
@@ -9778,7 +9811,7 @@ binding.fab.setOnClickListener(new View.OnClickListener() {
 });
 ```
 
-在 `MainActivity.java` 文件中，添加监听器处理器：
+在`MainActivity.java`文件中，添加监听器处理器：
 
 ```java
 private View.OnClickListener actionOnClickListener = new View.OnClickListener() {
@@ -9788,10 +9821,6 @@ private View.OnClickListener actionOnClickListener = new View.OnClickListener() 
     }
 };
 ```
-
-
-
-
 
 ```java
 View.OnClickListener actionOnClickListener = new View.OnClickListener() {
@@ -9805,7 +9834,7 @@ View.OnClickListener actionOnClickListener = new View.OnClickListener() {
 };
 ```
 
-运行应用并点击悬浮操作按钮，此时 toast 消息和 `Snackbar` 都应该出现。当 `Snackbar` 可见时，点击 `Snackbar` 中的“My Action”按钮，并验证 `Snackbar` 上的文本是否更改为“Action Complete（操作完成）”
+运行应用并点击悬浮操作按钮，此时 toast 消息和`Snackbar`都应该出现。当`Snackbar`可见时，点击`Snackbar`中的“My Action”按钮，并验证`Snackbar`上的文本是否更改为“Action Complete（操作完成）”
 
 ![](img/fab_action_clicked.jpg)
 
@@ -9813,43 +9842,43 @@ View.OnClickListener actionOnClickListener = new View.OnClickListener() {
 
 ### 46.10 总结
 
-在开始使用这些功能的示例项目之前，本章对 Material 设计（Material Design）、悬浮操作按钮（floating action button）以及 `Snackbar` 提供了概述。
+在开始使用这些功能的示例项目之前，本章对 Material 设计（Material Design）、悬浮操作按钮（floating action button）以及`Snackbar`提供了概述。
 
-悬浮操作按钮和 `Snackbar` 是 Android Material 设计实现方法的一部分。悬浮操作按钮提供了一种在 Android 应用特定屏幕内推广最常用操作的方法。`Snackbar` 则为应用程序向用户展示信息并允许用户对其进行操作的方法。
+悬浮操作按钮和`Snackbar`是 Android Material 设计实现方法的一部分。悬浮操作按钮提供了一种在 Android 应用特定屏幕内推广最常用操作的方法。`Snackbar`则为应用程序向用户展示信息并允许用户对其进行操作的方法。
 
 ## 47. 使用 TabLayout 组件创建标签页界面
 
-上一章概述了 Android 中 Material 设计的概念。它引入了设计支持库提供的两个组件，即以悬浮操作按钮和 `Snackbar` 的形式呈现。本章将演示如何使用设计支持库的另一个组件——`TabLayout`，它可以与 `ViewPager` 类结合使用，以便在 Android Activity 中创建一个基于标签的界面。
+上一章概述了 Android 中 Material 设计的概念。它引入了设计支持库提供的两个组件，即以悬浮操作按钮和`Snackbar`的形式呈现。本章将演示如何使用设计支持库的另一个组件——`TabLayout`，它可以与`ViewPager`类结合使用，以便在 Android Activity 中创建一个基于标签的界面。
 
 ### 47.1 ViewPager2 简介
 
-尽管 `ViewPager2` 不属于设计支持库的一部分，但在与 `TabLayout` 组件配合使用来实现标签页用户界面时，它是一个非常有用的辅助类。`ViewPager2` 的主要作用是允许用户翻页不同的信息页面，其中布局片段（layout fragment）通常代表每一页。与 `ViewPager2` 关联片段由 `FragmentStateAdapter` 类的实例管理。
+尽管`ViewPager2`不属于设计支持库的一部分，但在与`TabLayout`组件配合使用来实现标签页用户界面时，它是一个非常有用的辅助类。`ViewPager2`的主要作用是允许用户翻页不同的信息页面，其中布局片段（layout fragment）通常代表每一页。与`ViewPager2`关联片段由`FragmentStateAdapter`类的实例管理。
 
-至少，分配给 `ViewPager2` 的页面适配器必须实现两个方法。第一个方法名为 `getItemCount()`，必须返回要向用户显示的页面片段总数。第二个方法 `createFragment()` 接收一个页码，并必须返回相应的、准备好展示给用户的片段对象。
+至少，分配给`ViewPager2`的页面适配器必须实现两个方法。第一个方法名为`getItemCount()`，必须返回要向用户显示的页面片段总数。第二个方法`createFragment()`接收一个页码，并必须返回相应的、准备好展示给用户的片段对象。
 
 ### 47.2 TabLayout 组件概述
 
-如前所述，`TabLayout` 是 Material 设计中引入的组件之一，并包含在设计支持库中。`TabLayout` 的目的是向用户提供一行标签，用户可以选择这些标签来显示不同的页面。标签可以是固定的，也可以是可滚动的，用户可以向左或向右滑动查看比当前屏幕显示容量更多的标签。标签上显示的信息可以是基于文本的、图像或文本与图像的组合。例如，图 47-1 显示了一个包含四个显示图像标签的应用程序标签栏：
+如前所述，`TabLayout`是 Material 设计中引入的组件之一，并包含在设计支持库中。`TabLayout`的目的是向用户提供一行标签，用户可以选择这些标签来显示不同的页面。标签可以是固定的，也可以是可滚动的，用户可以向左或向右滑动查看比当前屏幕显示容量更多的标签。标签上显示的信息可以是基于文本的、图像或文本与图像的组合。例如，图 47-1 显示了一个包含四个显示图像标签的应用程序标签栏：
 
 ![](img/Image2425.jpg)
 
 图 47-1
 
-另一方面，图 47-2 显示了一个 `TabLayout` 配置，它包含四个在可滚动配置下显示文本的标签：
+另一方面，图 47-2 显示了一个`TabLayout`配置，它包含四个在可滚动配置下显示文本的标签：
 
 ![](img/Image2434.jpg)
 
 图 47-2
 
-本章的剩余部分将通过创建一个示例项目，演示如何将 `TabLayout` 组件配合 `ViewPager2` 和四个片段一起使用。
+本章的剩余部分将通过创建一个示例项目，演示如何将`TabLayout`组件配合`ViewPager2`和四个片段一起使用。
 
 ### 47.3 创建 TabLayoutDemo 项目
 
 从欢迎界面选择“New Project（新建项目）”选项，在弹出的新项目对话框中，点击“Next（下一步）”按钮之前选择“Basic Views Activity”模板。
 
-在“Name（名称）”字段中输入 `TabLayoutDemo`，并指定 `com.ebookfrenzy.tablayoutdemo` 为包名。在点击“Finish（完成）”按钮之前，将 Minimum API level（最低 API 级别）设置改为 `API 26: Android 8.0 (Oreo)`，并将语言菜单设置为 Java。
+在“Name（名称）”字段中输入`TabLayoutDemo`，并指定`com.ebookfrenzy.tablayoutdemo`为包名。在点击“Finish（完成）”按钮之前，将 Minimum API level（最低 API 级别）设置改为`API 26: Android 8.0 (Oreo)`，并将语言菜单设置为 Java。
 
-项目创建完成后，在 Layout Editor 工具加载 `content_main.xml` 文件，选择 `NavHostFragment` 对象并将其删除。由于我们不会使用 Basic Views Activity 模板的导航功能，请编辑 `MainActivity.java` 文件并修改 `onCreate()` 方法以移除导航代码：
+项目创建完成后，在 Layout Editor 工具加载`content_main.xml`文件，选择`NavHostFragment`对象并将其删除。由于我们不会使用 Basic Views Activity 模板的导航功能，请编辑`MainActivity.java`文件并修改`onCreate()`方法以移除导航代码：
 
 ```java
 @Override
@@ -9874,7 +9903,7 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-最后，删除 `onSupportUp()` 方法：
+最后，删除`onSupportUp()`方法：
 
 ```java
 @Override
@@ -9886,13 +9915,13 @@ public boolean onSupportUp() {
 
 ### 47.4 创建第一个片段
 
-`TabLayout` 上的每个标签在选中时都会显示不同的片段。通过以下方式创建这些片段中的第一个：在项目窗口中右键点击 `app -> java -> com.ebookfrenzy.tablayoutdemo`，选择 `New -> Fragment -> Fragment (Blank)`。在生成的对话框中，在 `Fragment Name:` 字段中输入 `Tab1Fragment`，在 `Fragment Layout Name:` 字段中输入 `fragment_tab1`。点击 Finish 按钮创建片段：
+`TabLayout`上的每个标签在选中时都会显示不同的片段。通过以下方式创建这些片段中的第一个：在项目窗口中右键点击`app -> java -> com.ebookfrenzy.tablayoutdemo`，选择`New -> Fragment -> Fragment (Blank)`。在生成的对话框中，在`Fragment Name:`字段中输入`Tab1Fragment`，在`Fragment Layout Name:`字段中输入`fragment_tab1`。点击 Finish 按钮创建片段：
 
 ![](img/tab_layout_fragment.jpg)
 
 图 47-3
 
-编辑 `Tab1Fragment.java` 文件，如果 Android Studio 没有自动添加，请添加如下的 `OnFragmentInteractionListener` 接口声明：
+编辑`Tab1Fragment.java`文件，如果 Android Studio 没有自动添加，请添加如下的`OnFragmentInteractionListener`接口声明：
 
 ```java
 import android.net.Uri;
@@ -9903,9 +9932,9 @@ public interface OnFragmentInteractionListener {
 }
 ```
 
-在 Layout Editor 中加载新创建的 `fragment_tab1.xml`位于 `app -> layout`），在 Component 面板中右键点击 `FrameLayout` 项，选择 `Convert FrameLayout to ConstraintLayout` 选项。在生成的对话框中，确认所有转换选项后点击 OK。将布局的 ID 改为 `constraintLayout`。
+在 Layout Editor 中加载新创建的`fragment_tab1.xml`位于`app -> layout`），在 Component 面板中右键点击`FrameLayout`项，选择`Convert FrameLayout to ConstraintLayout`选项。在生成的对话框中，确认所有转换选项后点击 OK。将布局的 ID 改为`constraintLayout`。
 
-一旦布局转换为 `ConstraintLayout`，从布局中删除 `TextView`。从 Palette（调色板）找到 `TextView` 组件并将其拖动到布局中心。编辑该对象的文本属性为“Tab 1 Fragment”，将字符串提取为名为 `tab_1_fragment` 的资源，并点击工具栏上的 `Infer Constraints（推断约束）`按钮。此时，布局应与图 47-4 所示：
+一旦布局转换为`ConstraintLayout`，从布局中删除`TextView`。从 Palette（调色板）找到`TextView`组件并将其拖动到布局中心。编辑该对象的文本属性为“Tab 1 Fragment”，将字符串提取为名为`tab_1_fragment`的资源，并点击工具栏上的`Infer Constraints（推断约束）`按钮。此时，布局应与图 47-4 所示：
 
 ![](img/as_3.5_tab_layout_fragment_ui.jpg)
 
@@ -9915,14 +9944,11 @@ public interface OnFragmentInteractionListener {
 
 到为止，项目包含了四个片段中的一个。复制第一个片段比使用之前的步骤创建其余三个片段要快。每个片段包含一个布局 XML 文件和一个 Java 类文件，每个都需要复制。
 
+在 Project（项目）工具窗口右键点击`fragment_tab1.xml`文件，从弹出的菜单中选择`Copy`（复制）选项。右键点击布局项，这次选择`Paste`（粘贴）选项。在点击`OK`按钮之前，在弹出的对话框并将新布局文件命名为`fragment_tab2.xml`。编辑新的`fragment_tab2.xml`文件，将`Text View`上的文本改为“Tab 2 Fragment”，按照通常步骤将字符串提取到名为`tab_2_fragment`的资源。
 
+要克隆`Tab1Fragment`类文件，右键点击`app -> java -> com.ebookfrenzy.tablayoutdemo`下列出的类并选择`Copy`。右键点击`com.ebookfrenzy.tablayoutdemo`条目并选择`Paste`。在`Copy Class`对话框中，在`New name:`字段中输入`Tab2Fragment`并点击`OK`。
 
-
-在 Project（项目）工具窗口右键点击 `fragment_tab1.xml` 文件，从弹出的菜单中选择 `Copy`（复制）选项。右键点击布局项，这次选择 `Paste`（粘贴）选项。在点击 `OK` 按钮之前，在弹出的对话框并将新布局文件命名为 `fragment_tab2.xml`。编辑新的 `fragment_tab2.xml` 文件，将 `Text View` 上的文本改为“Tab 2 Fragment”，按照通常步骤将字符串提取到名为 `tab_2_fragment` 的资源。
-
-要克隆 `Tab1Fragment` 类文件，右键点击 `app -> java -> com.ebookfrenzy.tablayoutdemo` 下列出的类并选择 `Copy`。右键点击 `com.ebookfrenzy.tablayoutdemo` 条目并选择 `Paste`。在 `Copy Class` 对话框中，在 `New name:` 字段中输入 `Tab2Fragment` 并点击 `OK`。
-
-编辑新的 `Tab2Fragment.java` 文件并修改 `onCreate()` 方法以载入 `fragment_tab2` 布局文件：
+编辑新的`Tab2Fragment.java`文件并修改`onCreate()`方法以载入`fragment_tab2`布局文件：
 
 ```java
 @Override
@@ -9939,9 +9965,11 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container,
 
 图 47-5
 
-### 47.6 添加 `TabLayout` 和 `ViewPager2`
+### 47.6 添加 TabLayout 和 ViewPager2
 
-现在 fragment 创建过程已经完成，下一步是向主活动布局文件添加 `TabLayout` 和 `ViewPager2`。编辑 `activity_main.xml` 文件并按照下面的 XML 列表所示添加这些元素。注意，`TabLayout` 组件嵌入在 `AppBarLayout` 元素中，而 `ViewPager2` 放置在 `AppBarLayout` 之后：
+现在 fragment 创建过程已经完成，下一步是向主活动布局文件添加`TabLayout`和`ViewPager2`。编辑`activity_main.xml`文件并按照下面的 XML 列表所示添加这些元素。注意，`TabLayout`组件嵌入在`AppBarLayout`元素中，而`ViewPager2`放置在`AppBarLayout`之后。
+
+
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -9985,7 +10013,7 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container,
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 ```
 
-#### 创建 Pager Adapter
+### 创建 Pager Adapter
 
 此示例将使用 `ViewPager2` 方法来处理分配给 `TabLayout` 的 fragment，在布局资源中添加 `ViewPager2`，并在项目中添加一个子自 `FragmentStateAdapter` 的新类，以管理用户选择标签项时显示的 fragment。
 
@@ -10006,8 +10034,10 @@ public class TabPagerAdapter extends FragmentStateAdapter {
     }
 }
 ```
+
 （注：此处原文示例代码块不完整，仅为展示翻译逻辑，后文将有完整代码实现）
-*修正：根据上下文逻辑，完整代码应为：*
+
+修正：根据上下文逻辑，完整代码应为：
 
 ```java
 package com.ebookfrenzy.tablayoutdemo;
@@ -10082,10 +10112,8 @@ Tab4Fragment.OnFragmentListener {
 }
 ```
 
-
-
-
-```java(this, binding.tabLayout.getTabCount());
+```java
+(this, binding.tabLayout.getTabCount());
 
 binding.viewPager.setAdapter(adapter);
 ```
@@ -10173,7 +10201,9 @@ new TabLayoutMediator(binding.tabLayout, binding.viewPager,
 
 - `StaggeredGridLayoutManager` - 列表项以交错网格格式呈现。当列表项大小不一时，使用此管理器效果最好。
 
-![](img/Image2443.jpg) 图 48-3
+![](img/Image2443.jpg)
+
+图 48-3
 
 在三种内置管理器都无法提供布局的情况下，可以通过子类 `LayoutManager` 类来实现自定义布局管理器。`RecyclerView` 中显示的每个列表项都是 `ViewHolder` 的实例。`ViewHolder` 实例包含了 `RecyclerView` 显示该项所需的所有内容，包括要显示的信息和用于显示的视图。
 
@@ -10181,9 +10211,12 @@ new TabLayoutMediator(binding.tabLayout, binding.viewPager,
 
 - `getItemCount()` – 该方法返回要显示的项目计数。
 - `onCreateViewHolder()` – 该方法创建并返回用于显示数据的 `ViewHolder`。该视图通常通过填充 XML 布局创建。
-- `onBindViewHolder()` – 该方法接收 `onCreateViewHolder()` 创建的 `ViewHolder` 以及指示即将显示的列表项的整数。`ViewHolder` 包含了 `onCreateViewHolder()` 分配的布局。`onBindViewHolder()` 方法负责填充布局中的视图以指定项目的文本，并将其返回给 `RecyclerView` 进行展示。
 
-将 `RecyclerView` 添加到布局中在其所属的 activity XML 内容文件中添加相应的元素。例如：
+
+
+`onBindViewHolder()`方法接收`onCreateViewHolder()`创建的`ViewHolder`以及指示即将显示的列表项的整数。`ViewHolder`包含了`onCreateViewHolder()`分配的布局。`onBindViewHolder()`方法负责填充布局中的视图以指定项目的文本，并将其返回给`RecyclerView`进行展示。
+
+将`RecyclerView`添加到布局中在其所属的activity XML内容文件中添加相应的元素。例如：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -10210,23 +10243,17 @@ new TabLayoutMediator(binding.tabLayout, binding.viewPager,
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-
-在上面的示例中，`RecyclerView` 与 `AppBar` 和 `Toolbar` 一起被嵌入到主活动布局文件的 `CoordinatorLayout` 中。这提供了一些额外功能，例如配置 `Toolbar` 和 `AppBar`，当用户在 `RecyclerView` 中向上滚动时它们滚出屏幕（该主题在标题为 ["使用 AppBar 和折叠 Toolbar 布局”]的章节中会有更详细的介绍）。
+在上面的示例中，`RecyclerView`与`AppBar`和`Toolbar`一起被嵌入到主活动布局文件的`CoordinatorLayout`中。这提供了一些额外功能，例如配置`Toolbar`和`AppBar`，当用户在`RecyclerView`中向上滚动时它们滚出屏幕（该主题在标题为["使用 AppBar 和折叠 Toolbar 布局”]的章节中会有更详细的介绍）。
 
 ## 48.2 CardView 概述
 
-`CardView` 类是一个用户界面视图，允许使用卡片隐喻以分组形式呈现信息。卡片通常使用 `RecyclerView` 实例以列表形式呈现，并可以配置为带有阴影效果和圆角。例如，[图 48-4] 显示了三个配置好的 `CardView` 实例，它们显示一个由一个 `ImageView` 和两个 `TextView` 组成的布局：
+`CardView`类是一个用户界面视图，允许使用卡片隐喻以分组形式呈现信息。卡片通常使用`RecyclerView`实例以列表形式呈现，并可以配置为带有阴影效果和圆角。例如，[图 48-4]显示了三个配置好的`CardView`实例，它们显示一个由一个`ImageView`和两个`TextView`组成的布局：
 
 ![](img/Image24511.jpg)
 
 图 48-4
 
-要与 `CardView` 实例一起的用户界面布局定义在 XML 布局资源文件中，并在运行时加载到 `CardView` 中。`CardView` 布局可以包含任何复杂性的布局，使用标准的布局管理器，如 `RelativeLayout` 和 `LinearLayout`。以下 XML 布局文件表示由 `RelativeLayout` 和单个 `ImageView` 组成的卡片视图布局。卡片被配置为提升以创建阴影效果，并带有圆角显示：
+要与`CardView`实例一起的用户界面布局定义在XML布局资源文件中，并在运行时加载到`CardView`中。`CardView`布局可以包含任何复杂性的布局，使用标准的布局管理器，如`RelativeLayout`和`LinearLayout`。以下XML布局文件表示由`RelativeLayout`和单个`ImageView`组成的卡片视图布局。卡片被配置为提升以创建阴影效果，并带有圆角显示：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -10255,25 +10282,25 @@ new TabLayoutMediator(binding.tabLayout, binding.viewPager,
 </androidx.cardview.widget.CardView>
 ```
 
-当与 `RecyclerView` 结合创建一个滚动的卡片列表时，视图器的 `onCreateViewHolder()` 方法会充气卡片的布局资源文件，将其分配给 `ViewHolder` 实例并返回给 `RecyclerView` 实例。
+当与`RecyclerView`结合创建一个滚动的卡片列表时，视图器的`onCreateViewHolder()`方法会充气卡片的布局资源文件，将其分配给`ViewHolder`实例并返回给`RecyclerView`实例。
 
 ### 48.3 总结
 
-本章介绍了 Android `RecyclerView` 和 `CardView` 组件。`RecyclerView` 提供了一种资源高效的方式，在 Android 应用中显示可滚视图列表。`CardView` 在以卡片形式呈现组数据（例如名称和地址列表）时非常有用。正如之前概述以及在下一章教程中所演示的那样，`RecyclerView` 和 `CardView` 结合使用时特别有用。
+本章介绍了Android `RecyclerView`和`CardView`组件。`RecyclerView`提供了一种资源高效的方式，在Android应用中显示可滚视图列表。`CardView`在以卡片形式呈现组数据（例如名称和地址列表）时非常有用。正如之前概述以及在下一章教程中所演示的那样，`RecyclerView`和`CardView`结合使用时特别有用。
 
 ## 49. Android RecyclerView 和 CardView 教程
 
-本章将创建一个示例项目，同时使用 `CardView` 和 `RecyclerView` 组件来创建一个滚动的卡片列表。完成后的应用将显示一个包含图像和文本的卡片列表。除了显示卡片列表外，项目还将实现为选择卡片时会向用户显示消息，指示点击了哪张卡片。
+本章将创建一个示例项目，同时使用`CardView`和`RecyclerView`组件来创建一个滚动的卡片列表。完成后的应用将显示一个包含图像和文本的卡片列表。除了显示卡片列表外，项目还将实现为选择卡片时会向用户显示消息，指示点击了哪张卡片。
 
 ## 49.1 创建 CardDemo 项目
 
 从欢迎界面选择“New Project”选项，在弹出的新项目对话框中，点击“Next”按钮之前选择“Basic Views Activity”模板。
 
-在 `Name` 字段中输入 `CardDemo` 并指定 `com.ebookfrenzy.carddemo` 为包名。在点击“Finish”按钮之前，将 Minimum API 级设置为 `API 26: Android 8.0 (Oreo)`，并将语言菜单设置为 Java。
+在`Name`字段中输入`CardDemo`并指定`com.ebookfrenzy.carddemo`为包名。在点击“Finish”按钮之前，将Minimum API级设置为`API 26: Android 8.0 (Oreo)`，并将语言菜单设置为Java。
 
 ## 49.2 修改 Basic Views Activity 项目
 
-由于选择了 Basic Views Activity，布局包含一个悬浮按钮，这在该项目中是不需要的。将 `activity_main.xml` 布局文件加载到 Layout Editor 工具中，选择悬浮按钮，并按键盘删除键从布局中移除该对象。编辑 `MainActivity.java` 文件，并从 `onCreate` 方法中移除悬浮按钮和导航控制器代码如下：
+由于选择了Basic Views Activity，布局包含一个悬浮按钮，这在该项目中是不需要的。将`activity_main.xml`布局文件加载到Layout Editor工具中，选择悬浮按钮，并按键盘删除键从布局中移除该对象。编辑`MainActivity.java`文件，并从`onCreate`方法中移除悬浮按钮和导航控制器代码如下：
 
 ```java
 @Override
@@ -10298,15 +10325,11 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-同样，移除 `onSupportNavigateUp()`，然后打开 `content_main.xml` 并从布局中删除 `nav_host_fragment_main`，只保留 `ConstraintLayout`。
+同样，移除`onSupportNavigateUp()`，然后打开`content_main.xml`并从布局中删除`nav_host_fragment_main`，只保留`ConstraintLayout`。
 
 ## 49.3 设计 CardView 布局
 
-卡片内部的布局将定义在一个独立的 XML 文件中。在 Project 窗口中，右键点击 `res -> layout` 选择 New Layout。在 New Resource 对话框中，在点击 OK 之前，在 name 字段输入 `card_layout` 并输入 `androidx.cardview.widget.CardView`。将 `card_layout.xml` 加载到 Layout Editor，切换到 Code 视图并修改布局如下：
-
-
-
-
+卡片内部的布局将定义在一个独立的XML文件中。在Project窗口中，右键点击`res -> layout`选择New Layout。在New Resource对话框中，在点击OK之前，在name字段输入`card_layout`并输入`androidx.cardview.widget.CardView`。将`card_layout.xml`加载到Layout Editor，切换到Code视图并修改布局如下：
 
 ```xml
               android:layout_marginTop="8dp"
@@ -10319,15 +10342,15 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ### 49.4 添加 RecyclerView
 
-选择 `content_main.xml` 布局文件，从调色板的 `Containers` 部分拖入一个 `RecyclerView` 对象到布局中，使其位于屏幕中心，它应该自动调整大小以填充整个屏幕。使用 `Infer constraints` 工具栏按钮为该视图添加任何缺失的布局约束。使用 `Attributes` 工具窗口，将 `RecyclerView` 实例的 `ID` 更改为 `recyclerView`，并将 `layout_width` 和 `layout_height` 属性更改为 `match_constraint`。
+选择`content_main.xml`布局文件，从调色板的`Containers`部分拖入一个`RecyclerView`对象到布局中，使其位于屏幕中心，它应该自动调整大小以填充整个屏幕。使用`Infer constraints`工具栏按钮为该视图添加任何缺失的布局约束。使用`Attributes`工具窗口，将`RecyclerView`实例的`ID`更改为`recyclerView`，并将`layout_width`和`layout_height`属性更改为`match_constraint`。
 
 ## 49.5 添加图像文件
 
-除了两个 `TextView` 之外，卡片布局还包含一个 `ImageView`，其 `Recycler adapter` 已经配置为显示图像。在项目测试之前，必须添加这些图像。项目将使用的图像命名为 `android_image_<n>.jpg`，可以在下方 URL 下载的示例代码 `project_icons` 文件夹中找到：
+除了两个`TextView`之外，卡片布局还包含一个`ImageView`，其`Recycler adapter`已经配置为显示图像。在项目测试之前，必须添加这些图像。项目将使用的图像命名为`android_image_<n>.jpg`，可以在下方URL下载的示例代码`project_icons`文件夹中找到：
 
 [`www.payloadbooks.com/product/iguanajava`](https://www.payloadbooks.com/product/iguanajava)
 
-在操作系统的文件系统导航器中找到这些图像，选择并复制这八张图像。在 `Project` 工具窗口中右键点击 `app` -> `res` -> `drawable` 条目并选择 `Paste` 将文件添加到到文件夹中：
+在操作系统的文件系统导航器中找到这些图像，选择并复制这八张图像。在`Project`工具窗口中右键点击`app` -> `res` -> `drawable`条目并选择`Paste`将文件添加到到文件夹中：
 
 ![](img/as_card_demo_images.jpg)
 
@@ -10335,9 +10358,9 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ## 49.6 创建 RecyclerView Adapter
 
-如上一节所述，`RecyclerView` 需要一个适配来处理列表项的创建。通过右键点击 `Project` 工具窗口中的 `app` -> `java` -> `com.ebookfrenzy.carddemo` 条目并选择 `New` -> `Java Class` 菜单选项，将此新类添加到项目中。在新类对话框中，在 `Name` 字段中输入 `RecyclerAdapter`，并在列表中选择 `Class`，然后按键盘上的 `Return` 创建新的 Java 类文件。
+如上一节所述，`RecyclerView`需要一个适配来处理列表项的创建。通过右键点击`Project`工具窗口中的`app` -> `java` -> `com.ebookfrenzy.carddemo`条目并选择`New` -> `Java Class`菜单选项，将此新类添加到项目中。在新类对话框中，在`Name`字段中输入`RecyclerAdapter`，并在列表中选择`Class`，然后按键盘上的`Return`创建新的Java类文件。
 
-编辑 `RecyclerAdapter.java` 文件以添加一些导入指令，并声明该类现在扩展 `RecyclerView.Adapter`。与其创建一个单独的类来提供显示的数据，不如也向适配器添加一些基础数组作为应用的数据：
+编辑`RecyclerAdapter.java`文件以添加一些导入指令，并声明该类现在扩展`RecyclerView.Adapter`。与其创建一个单独的类来提供显示的数据，不如也向适配器添加一些基础数组作为应用的数据：
 
 ```java
 package com.ebookfrenzy.carddemo;
@@ -10377,7 +10400,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                                    R.drawable.android_image_8 };
 ```
 
-在 `RecyclerAdapter` 类中，我们现在需要对 `ViewHolder` 类进行自己的实现，并为引用 `card_layout.xml` 中的视图元素。留在 `RecyclerAdapter.java` 中，按如下方式实现此类：
+
+
+在`RecyclerAdapter`类中，我们现在需要对`ViewHolder`类进行自己的实现，并为引用`card_layout.xml`中的视图元素。留在`RecyclerAdapter.java`中，按如下方式实现此类：
 
 ```java
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
@@ -10394,9 +10419,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             itemDetail = itemView.findViewById(R.id.itemDetail);
         }
     }
+}
 ```
 
-`ViewHolder` 类包含一个 `ImageView` 和两个 `TextView` 变量，以及一个构造方法，该方法使用 `card_layout.xml` 文件中的三个视图项初始化这些变量。要添加到 `RecyclerAdapter.java` 文件的下一个项是 `onCreateViewHolder()` 方法的实现：
+`ViewHolder`类包含一个`ImageView`和两个`TextView`变量，以及一个构造方法，该方法使用`card_layout.xml`文件中的三个视图项初始化这些变量。要添加到`RecyclerAdapter.java`文件的下一个项是`onCreateViewHolder()`方法的实现：
 
 ```java
 @NonNull
@@ -10408,9 +10434,9 @@ public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
 }
 ```
 
-此方法将由 `RecyclerView` 调用，以获取 `ViewHolder`。它会加载 `card_layout.xml` 视图层次结构并返回 `ViewHolder` 实例。
+此方法将由`RecyclerView`调用，以获取`ViewHolder`。它会加载`card_layout.xml`视图层次结构并返回`ViewHolder`实例。
 
-`onBindViewHolder()` 方法用于填充 `ViewHolder` 对象中的视图层次结构的数据。它接收一个 `ViewHolder` 对象和一个表示要显示的列表项的整数值。该方法现在应使用项号索引到数据数组：
+`onBindViewHolder()`方法用于填充`ViewHolder`对象中的视图层次结构的数据。它接收一个`ViewHolder`对象和一个表示要显示的列表项的整数值。该方法现在应使用项号索引到数据数组：
 
 ```java
 @Override
@@ -10421,7 +10447,7 @@ public void onBindViewHolder(ViewHolder viewHolder, int i) {
 }
 ```
 
-适配器类的最后一个要求是实现 `getItem()` 方法，在此情况下，它返回 `titles` 数组的数量：
+适配器类的最后一个要求是实现`getItem()`方法，在此情况下，它返回`titles`数组的数量：
 
 ```java
 @Override
@@ -10432,9 +10458,9 @@ public int getItemCount() {
 
 ## 49.7 初始化 RecyclerView 组件
 
-此时，项目包含 `RecyclerView` 实例、`CardView` 实例的 XML 布局文件以及 `RecyclerView` 的适配器。目前的最后一步是用布局管理器初始化 `RecyclerView`，创建适配器实例并将其分配给 `RecyclerView` 对象。对于本示例，`RecyclerView` 将配置为使用 `LinearLayoutManager` 布局选项。
+此时，项目包含`RecyclerView`实例、`CardView`实例的XML布局文件以及`RecyclerView`的适配器。目前的最后一步是用布局管理器初始化`RecyclerView`，创建适配器实例并将其分配给`RecyclerView`对象。对于本示例，`RecyclerView`将配置为使用`LinearLayoutManager`布局选项。
 
-这里有一个之处，因为我们需要在 `MainActivity` 类中使用视图绑定访问 `recyclerView` 组件。问题是 `recyclerView` 包含在 `content_main.xml` 布局文件中，而该文件又包含在 `activity_main.xml` 文件中。为了能够进入 `content_main.xml` 文件，我们需要在包含它时为其分配一个 ID。为此，请编辑 `activity_main.xml` 文件并修改 `include` 元素如下所示：
+这里有一个之处，因为我们需要在`MainActivity`类中使用视图绑定访问`recyclerView`组件。问题是`recyclerView`包含在`content_main.xml`布局文件中，而该文件又包含在`activity_main.xml`文件中。为了能够进入`content_main.xml`文件，我们需要在包含它时为其分配一个ID。为此，请编辑`activity_main.xml`文件并修改`include`元素如下所示：
 
 ```xml
 <include
@@ -10442,11 +10468,11 @@ public int getItemCount() {
     layout="@layout/content_main" />
 ```
 
-为包含的文件分配 ID 后，可以使用以下绑定访问 `recyclerView` 组件：
+为包含的文件分配ID后，可以使用以下绑定访问`recyclerView`组件：
 
 `binding.contentMain.recyclerView`
 
-现在编辑 `MainActivity.java` 文件并修改 `onCreate()` 方法以实现初始化代码：
+现在编辑`MainActivity.java`文件并修改`onCreate()`方法以实现初始化代码：
 
 ```java
 package com.ebookfrenzy.carddemo;
@@ -10456,10 +10482,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity {
 ```
-
-
-
-
 
 ```java
     private RecyclerView recyclerView;
@@ -10489,7 +10511,7 @@ public class MainActivity extends AppCompatActivity {
 
 ## 49.9 响应卡片选择
 
-此项目的最后一个阶段是让列表中的卡片变为可选择，这样点击卡片就会触发应用内部的事件。在例示例中，卡片将被配置为在用户点击时在屏幕上显示一条消息。为了响应点击操作，需要修改 `ViewHolder` 类，为每个项目视图（item view）分配一个 `onClickListener`。编辑 `RecyclerAdapter.java` 文件并修改 `ViewHolder` 类声明，使其内容如下：
+此项目的最后一个阶段是让列表中的卡片变为可选择，这样点击卡片就会触发应用内部的事件。在示例中，卡片将被配置为在用户点击时在屏幕上显示一条消息。为了响应点击操作，需要修改`ViewHolder`类，为每个项目视图（item view）分配一个`onClickListener`。编辑`RecyclerAdapter.java`文件并修改`ViewHolder`类声明，使其内容如下：
 
 ```java
 import com.google.android.material.snackbar.Snackbar;
@@ -10513,7 +10535,7 @@ class ViewHolder extends RecyclerView.ViewHolder{
 }
 ```
 
-在 `onClick` 处理程序的体内部，现在可以添加代码来显示指示卡片已被点击的消息。由于点击结果后执行的操作可能取决于点击了哪张卡片，因此识别所选的卡片也很重要。此信息可以通过调用 `RecyclerView.ViewHolder` 类的 `getAdapterPosition()` 方法获取。留在 `RecyclerAdapter.java` 文件中，向 `onClick` 处理程序添加代码，使其内容如下：
+在`onClick`处理程序的体内部，现在可以添加代码来显示指示卡片已被点击的消息。由于点击结果后执行的操作可能取决于点击了哪张卡片，因此识别所选的卡片也很重要。此信息可以通过调用`RecyclerView.ViewHolder`类的`getAdapterPosition()`方法获取。留在`RecyclerAdapter.java`文件中，向`onClick`处理程序添加代码，使其内容如下：
 
 ```java
 @override
@@ -10525,7 +10547,7 @@ public void onClick(View v) {
 }
 ```
 
-最后一个任务是启用 Android 应用中点击项目时出现的 Material Design 波纹效果（ripple effect）。这涉及在 `card_layout.xml` 文件的 `CardView` 实例声明中添加如下属性：
+最后一个任务是启用Android应用中点击项目时出现的Material Design波纹效果（ripple effect）。这涉及在`card_layout.xml`文件的`CardView`实例声明中添加如下属性：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -10546,14 +10568,11 @@ public void onClick(View v) {
 
 ## 49.10 总结
 
-本章详细介绍了结合 `CardView` 和 `RecyclerView` 组件来显示列表的步骤。示例还涵盖了点击检测以及波纹效果的启用。
+本章详细介绍了结合`CardView`和`RecyclerView`组件来显示列表的步骤。示例还涵盖了点击检测以及波纹效果的启用。
 
+切换回设计（Design）模式，并在选中`RecyclerView`的情况下，使用设计视图属性（Design-time View Attributes）面板将模板切回默认设置。`recycl_view_item.xml`文件将从项目中删除，同时`content_main.xml` XML文件中的两个`tools`属性行也将被删除（如果Android Studio未能自动删除这些行，则可以在代码（Code）视图中手动删除）。
 
-
-
-切换回设计（Design）模式，并在选中 `RecyclerView` 的情况下，使用设计视图属性（Design-time View Attributes）面板将模板切回默认设置。`recycl_view_item.xml` 文件将从项目中删除，同时 `content_main.xml` XML 文件中的两个 `tools` 属性行也将被删除（如果 Android Studio 未能自动删除这些行，则可以在代码（Code）视图中手动删除）。
-
-要切换到使用卡片布局显示示例数据，请添加一个 `listitem` 属性来引用 `card_layout.xml` 文件。在布局中选中 `RecyclerView` 后，在属性（Attributes）工具窗口中搜索 `listitem` 属性，并在属性字段中输入 `@layout/card_layout`，如图 50-4 所示：
+要切换到使用卡片布局显示示例数据，请添加一个`listitem`属性来引用`card_layout.xml`文件。在布局中选中`RecyclerView`后，在属性（Attributes）工具窗口中搜索`listitem`属性，并在属性字段中输入`@layout/card_layout`，如图 50-4 所示：
 
 ![](img/as_sample_data_list_item.jpg)
 
@@ -10565,19 +10584,19 @@ public void onClick(View v) {
 
 图 50-5
 
-下一步是在卡片布局的视图中显示一些图像和不同的文本。这既可以通过布局编辑器提供的模板示例数据实现，也可以通过专门为此项目添加自定义示例数据来实现。将 `card_layout.xml` 文件加载到布局编辑器中，选中 `ImageView` 并按照本章早些介绍显示设计视图属性面板。从 `srcCompat` 菜单中选择内置的背景/风景图集，如下方的图 50-6 所示：
+下一步是在卡片布局的视图中显示一些图像和不同的文本。这既可以通过布局编辑器提供的模板示例数据实现，也可以通过专门为此项目添加自定义示例数据来实现。将`card_layout.xml`文件加载到布局编辑器中，选中`ImageView`并按照本章早些介绍显示设计视图属性面板。从`srcCompat`菜单中选择内置的背景/风景图集，如下方的图 50-6 所示：
 
 ![](img/as_sample_data_images.jpg)
 
 图 50-6
 
-接下来，右键点击 `itemTitle` `TextView` 对象，选择“设置示例数据（Set Sample Data）”菜单选项，并在设计属性面板中选择 `cities` 文本选项。对 `itemDetail` 视图重复此步骤，这次选择 `full_names` 选项，如图 50-7 所示：
+接下来，右键点击`itemTitle` `TextView`对象，选择“设置示例数据（Set Sample Data）”菜单选项，并在设计属性面板中选择`cities`文本选项。对`itemDetail`视图重复此步骤，这次选择`full_names`选项，如图 50-7 所示：
 
 ![](img/as_sample_data_names.jpg)
 
 图 50-7
 
-在设计模式下打开 `content_main.xml` 文件，并注意 `RecyclerView` 现在正在使用内置图像和示例文本数据：
+在设计模式下打开`content_main.xml`文件，并注意`RecyclerView`现在正在使用内置图像和示例文本数据：
 
 ![](img/as_sample_data_stage1.jpg)
 
@@ -10585,19 +10604,19 @@ public void onClick(View v) {
 
 ### 50.2 使用自定义示例数据
 
-本章的最后一步是演示如何在布局编辑器中使用自定义示例数据和图像。这需要创建一个示例数据目录并添加一些文本和图像文件。在项目（Project）工具窗口中，右键点击 `app` 条目并选择“新建（New）-> 示例数据目录（Sample Data Directory）”菜单选项，此时 `Project` 工具窗口中会出现一个名为 `sampledata` 的新目录。如果看不到新文件夹，将 `Project` 工具窗口从 `Android` 模式切换到 `Project` 模式，并在 `CardDemo -> app` 下找到文件夹，如图 50-9 所示：
+本章的最后一步是演示如何在布局编辑器中使用自定义示例数据和图像。这需要创建一个示例数据目录并添加一些文本和图像文件。在项目（Project）工具窗口中，右键点击`app`条目并选择“新建（New）-> 示例数据目录（Sample Data Directory）”菜单选项，此时`Project`工具窗口中会出现一个名为`sampledata`的新目录。如果看不到新文件夹，将`Project`工具窗口从`Android`模式切换到`Project`模式，并在`CardDemo -> app`下找到文件夹，如图 50-9 所示：
 
 ![](img/as_sample_data_folder.jpg)
 
 图 50-9
 
-右键点击 `sampledata` 目录，创建一个名为 `images` 的目录，并按照上一章概述的步骤将 Android 图像复制并粘贴到新文件夹中。在 `card_layout.xml` 文件中再次显示 `ImageView` 的设计视图属性面板，这次点击“浏览（Browse）”链接并在资源（Resources）对话框中选择新添加的 Android 图像（如果未出现 `images` 文件夹，请重新构建项目）：
+右键点击`sampledata`目录，创建一个名为`images`的目录，并按照上一章概述的步骤将Android图像复制并粘贴到新文件夹中。在`card_layout.xml`文件中再次显示`ImageView`的设计视图属性面板，这次点击“浏览（Browse）”链接并在资源（Resources）对话框中选择新添加的Android图像（如果未出现`images`文件夹，请重新构建项目）：
 
 ![](img/as_sample_data_resource_manager.jpg)
 
 图 50-10
 
-再次右键点击 `sampledata` 目录，选择“新建（New）-> 文件（File）”选项，将文件命名为 `chapters` 并输入以下内容：
+再次右键点击`sampledata`目录，选择“新建（New）-> 文件（File）”选项，将文件命名为`chapters`并输入以下内容：
 
 ```
 Chapter One
@@ -10610,7 +10629,7 @@ Chapter Seven
 Chapter Eight
 ```
 
-接下来创建一个名为 `items` 的第二个文本文件，内容如下：
+接下来创建一个名为`items`的第二个文本文件，内容如下：
 
 ```
 Item one details
@@ -10623,7 +10642,7 @@ Item seven details
 Item eight details
 ```
 
-创建示例数据文本文件后，剩下的只需如下所示在 `card_layout.xml` 文件的视图元素中引用它们：
+创建示例数据文本文件后，剩下的只需如下所示在`card_layout.xml`文件的视图元素中引用它们：
 
 ```xml
 <TextView
@@ -10647,7 +10666,10 @@ Item eight details
     app:layout_constraintStart_toEndOf="@+id/itemImage"
     app:layout_constraintTop_toTopOf="parent" />
 ```
-*(注：此处原文似乎未提供完整的 `card_layout.xml` 闭合标签，已按原文内容翻译)*
+
+
+
+*（注：此处原文似乎未提供完整的 `card_layout.xml` 闭合标签，已按原文内容翻译）*
 
 重新构建应用并回到 `content_main.xml`，此时示例数据应该已经显示：
 
@@ -10655,17 +10677,17 @@ Item eight details
 
 图 50-11
 
-### 50.3 总结
+## 50.3 总结
 
 本章演示了如何在布局编辑器中使用示例数据以提供更真实的显示。本教程涵盖的步骤包括使用现有示例模板以及集成自定义示例数据。
 
-# 51 使用 AppBar 和折叠工具栏布局
+# 51 使用 `AppBar` 和折叠工具栏布局
 
-在本章中，我们将探索如何自定义 Activity 内的 AppBar，并使其对屏幕内发生的滚动事件做出响应。通过 `CoordinatorLayout` 配合 `AppBarLayout` 和 `CollapsingToolbarLayout` 容器，可以配置 AppBar 显示图像并进入退出动画。例如，可以配置列表的向上滚动以使 AppBar 隐退，并在向下滚动时重新出现。
+在本章中，我们将探索如何自定义 `Activity` 内的 `AppBar`，并使其对屏幕内发生的滚动事件做出响应。通过 `CoordinatorLayout` 配合 `AppBarLayout` 和 `CollapsingToolbarLayout` 容器，可以配置 `AppBar` 显示图像并进入退出动画。例如，可以配置列表的向上滚动以使 `AppBar` 隐退，并在向下滚动时重新出现。
 
-### 51.1 AppBar 的结构
+## 51.1 `AppBar` 的结构
 
-AppBar 是应用运行时位于屏幕顶部的区域，可以配置为包含各种项目，包括状态栏、工具栏、标签栏和灵活空间区域。图 51-1 所示，显示了一个包含状态栏、工具栏和标签栏的 AppBar：
+`AppBar` 是应用运行时位于屏幕顶部的区域，可以配置为包含各种项目，包括状态栏、工具栏、标签栏和灵活空间区域。图 51-1 所示，显示了一个包含状态栏、工具栏和标签栏的 `AppBar`：
 
 ![](img/Image2427.jpg)
 
@@ -10677,15 +10699,11 @@ AppBar 是应用运行时位于屏幕顶部的区域，可以配置为包含各�
 
 图 51-2
 
-正如本章其余部分将演示的，如果 Activity 用户界面布局的主区域包含可滚动内容，则 AppBar 的元素可以随着屏幕内容的滚动进行展开和收缩。
+正如本章其余部分将演示的，如果 `Activity` 用户界面布局的主区域包含可滚动内容，则 `AppBar` 的元素可以随着屏幕内容的滚动进行展开和收缩。
 
-### 51.2 示例项目
+## 51.2 示例项目
 
-
-
-
-
-在本例中，我们将对早期章节中标题为“Android RecyclerView 和 CardView 教程”的 `CardDemo` 项目进行修改。首先，启动 Android Studio 并加载此项目。
+在本例中，我们将对早期章节中标题为“Android `RecyclerView` 和 `CardView` 教程”的 `CardDemo` 项目进行修改。首先，启动 Android Studio 并加载此项目。
 
 项目加载后，运行应用并注意在向上滚动列表时，工具栏是否保持可见，如图图 51-3 所示：
 
@@ -10695,7 +10713,7 @@ AppBar 是应用运行时位于屏幕顶部的区域，可以配置为包含各�
 
 第一步是更改配置，使工具栏在向上滚动运动期间收缩，并在向下滚动时展开。
 
-## 51.3 协调 RecyclerView 和 Toolbar
+## 51.3 协调 `RecyclerView` 和 `Toolbar`
 
 将 `activity_main.xml` 文件加载到布局编辑器（Layout Editor）工具中，切换到 Code 模式，并查看 XML 布局设计。其层级结构如图图 51-4 所示所示：
 
@@ -10722,7 +10740,9 @@ AppBar 是应用运行时位于屏幕顶部的区域，可以配置为包含各�
 接下来，在布局编辑器中打开 `activity_main.xml` 文件，切换到 Code 模式，并找到 `AppBarLayout` 元素。注意视图层级中 `AppBarLayout` 的唯一子元素是 `Toolbar`。为了让工具栏响应 `RecyclerView` 中发生的滚动事件，必须在该元素上设置 `app:layout_scrollFlags` 属性。赋值给此属性的值取决于所需的交互性质，并且必须由以下一个或多个选项组成：
 
 - `scroll` – 表示视图将滚动出屏幕。如果不设置此项，视图在滚动事件期间将固定在屏幕顶部。
+
 - `enterAlways` – 与滚动选项一起使用时，向上滚动运动会导致视图收回。在此模式下的任何向下滚动运动都将导致视图重新出现。
+
 - `enterAlwaysCollapsed` – 设置在视图上时，该视图在向下滚动运动达到列表限制之前将不会从折叠状态展开。如果设置了 `minHeight` 属性，视图将在初始滚动运动期间出现，但仅到达到最小高度为止。它将保持在该高度，并且在到达列表顶部之前不会完全展开。注意，此选项仅在同时与 `enterAlways` 和 `scroll` 选项一起使用时起作用。例如：
 
 ```xml
@@ -10748,11 +10768,11 @@ android:minHeight="20dp"
 
 图 51-5
 
-## 51.4 引入 Collapsing Toolbar Layout
+## 51.4 引入 `CollapsingToolbarLayout`
 
 `CollapsingToolbarLayout` 容器通过提供更多选项，以及在响应协调滚动操作时对应用栏及其子元素折叠的范围控制，增强了标准工具栏。`CollapsingToolbarLayout` 类旨在作为 `AppBarLayout` 的子元素添加。它提供了诸如在折叠时自动调整工具栏字体的功能。`parallax` 模式允许应用栏内容在折叠时淡出，而 `pin` 模式允许应用栏元素在收缩期间保持固定位置。还有 `scrim` 选项用于指定在折叠过程中过渡的颜色。
 
-为了演示这些功能，`activity_main.xml` 文件中的应用栏将使用 `CollapsingToolbarLayout` 并结合 `ImageView` 以演示 `parallax` 模式的效果。使用 `CollapsingToolbarLayout` 的新视图层级如图图 5-6 所示：
+为了演示这些功能，`activity_main.xml` 文件中的应用栏将使用 `CollapsingToolbarLayout` 并结合 `ImageView` 以演示 `parallax` 模式的效果。使用 `CollapsingToolbarLayout` 的新视图层级如图 5-6 所示：
 
 ![](img/as3.0_appbar_collapsing_tree.jpg)
 
@@ -10798,10 +10818,6 @@ android:minHeight="20dp"
     </com.google.android.material.appbar.AppBarLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 ```
-
-
-
-
 
 ```xml
             app:layout_scrollFlags="scroll|enterAlways"
@@ -10858,44 +10874,38 @@ app:layout_collapseMode="pin"
     app:expandedTitleMarginEnd="64dp">
 ```
 
-### 51.5 更改标题和 scrim 颜色
+## 51.5 更改标题和 `scrim` 颜色
 
-作为最后一个任务，编辑 `MainActivity.java` 文件并在 `onCreate()` 方法中添加一些代码以更改折叠布局管理器实例上的标题文本，并设置不同的 scrim 颜色（注意 scrim 颜色也可以在布局资源文件中设置）：
+作为最后一个任务，编辑 `MainActivity.java` 文件并在 `onCreate()` 方法中添加一些代码以更改折叠布局管理器实例上的标题文本，并设置不同的 `scrim` 颜色（注意 `scrim` 颜色也可以在布局资源文件中设置）：
+
+
 
 ```java
 package com.ebookfrenzy.carddemo;
 
-.
-.
-
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import android.graphics.Color;
 
-.
-.
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-        setSupportActionBar(binding.toolbar);
-        binding.collapsingToolbar.setTitle("My Toolbar Title");
-        binding.collapsingToolbar.setContentScrimColor(Color.GREEN);
-        layoutManager = new LinearLayoutManager(this);
-        binding.contentMain.recyclerView.setLayoutManager(layoutManager);
-        adapter = new RecyclerAdapter();
-        binding.contentMain.recyclerView.setAdapter(adapter);
-    }
-.
-.
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    binding = ActivityMainBinding.inflate(getLayoutInflater());
+    setContentView(binding.getRoot());
+    setSupportActionBar(binding.toolbar);
+    binding.collapsingToolbar.setTitle("My Toolbar Title");
+    binding.collapsingToolbar.setContentScrimColor(Color.GREEN);
+    layoutManager = new LinearLayoutManager(this);
+    binding.contentMain.recyclerView.setLayoutManager(layoutManager);
+    adapter = new RecyclerAdapter();
+    binding.contentMain.recyclerView.setAdapter(adapter);
+}
 ```
 
 最后运行一次应用程序，注意新标题已出现在应用栏中，并且现在滚动会导致工具栏在移出视线时过渡到绿色。
 
 ### 51.6 总结
 
-大多数 Android 应用顶部的应用栏可以由多个元素组成，包括工具栏、标签布局（tab layout）和图像视图。当嵌入 `CoordinatorLayout` 父布局时，可以使用多种不同的选项来控制应用栏如何响应活动主要内容的滚动事件。为了对这种行为进行更强大的控制，`CollapsingToolbarLayout` 管理器提供了一系列额外的控制级别，用于控制应用栏内容相对于滚动活动的展开和收缩。
+大多数 Android 应用顶部的应用栏可以由多个元素组成，包括工具栏、标签布局（tab layout）和图像视图。当嵌入`CoordinatorLayout`父布局时，可以使用多种不同的选项来控制应用栏如何响应活动主要内容的滚动事件。为了对这种行为进行更强大的控制，`CollapsingToolbarLayout`管理器提供了一系列额外的控制级别，用于控制应用栏内容相对于滚动活动的展开和收缩。
 
 # 52. Android Studio 主列表/详情流教程
 
@@ -10905,7 +10915,7 @@ import android.graphics.Color;
 
 主列表/详情流（primary/detail flow）是一种界面设计概念，其中向用户显示项目列表（称为主列表，primary list）。当从列表中选择一个项目时，与该项目相关的附加信息将在详情面板（detail pane）中呈现给用户。例如，一个电子邮件应用程序可能包含一个接收消息的主列表，由发件者地址和消息主题。从列表中选择某条消息后，消息正文将出现在详情面板中。
 
-在横屏模式的平板板尺寸 Android 设备上，主列表显示在屏幕左边缘的窄面板中。显示的其余部分用于详情面板，这种布局被称为“双窗模式（two-pane mode）”。例如，图 52-1 显示了主列表/详情的双窗布局：
+在横屏模式的平板尺寸 Android 设备上，主列表显示在屏幕左边缘的窄面板中。显示的其余部分用于详情面板，这种布局被称为“双窗模式（two-pane mode）”。例如，图 52-1 显示了主列表/详情的双窗布局：
 
 ![](img/as_detail_flow_tablet.jpg)
 
@@ -10923,11 +10933,11 @@ import android.graphics.Color;
 
 从欢迎界面选择 New Project（新建项目）选项，在生成的新项目对话框中，选择 No Activity（无活动）模板，然后点击 Next 按钮。
 
-在 Name 字段中输入 PrimaryDetailFlow，并指定 `com.ebookfrenzy.primarydetailflow` 为包名。在点击 Finish 按钮之前，将 Minimum API level 设置为 API 26: Android 8.0 (Oreo)，并将 Language 菜单设置为 Java。
+在 Name 字段中输入`PrimaryDetailFlow`，并指定`com.ebookfrenzy.primarydetailflow`为包名。在点击 Finish 按钮之前，将 Minimum API level 设置为 API 26: Android 8.0 (Oreo)，并将 Language 菜单设置为 Java。
 
 ## 52.3 添加主列表/详情流活动
 
-在 Project 工具窗口中，右键点击 `app` -> `java` -> `com.ebookfrenzy.primarydetailflow` 项，选择 New -> Activity -> Primary/Detail Views Flow 菜单选项。在新活动对话框（图 52-3）中，点击 Finish 按钮之前，确保 Launcher Activity（启动活动）复选框已启用：
+在 Project 工具窗口中，右键点击`app` -> `java` -> `com.ebookfrenzy.primarydetailflow`项，选择 New -> Activity -> Primary/Detail Views Flow 菜单选项。在新活动对话框（图 52-3）中，点击 Finish 按钮之前，确保 Launcher Activity（启动活动）复选框已启用：
 
 ![](img/as_new_primary_detail_activity.jpg)
 
@@ -10937,15 +10947,11 @@ import android.graphics.Color;
 
 虽然主列表/详情模板的结构最初看起来可能令人困惑，事实所示，对于许多主列表/详情实现需求，模板提供的许多功能可以保持不变。
 
-
-
-
-
-在本章的剩余部分中，`PrimaryDetailFlow` 项目将进行修改，使得主列表显示网站名称列表，并将详情面板更改为包含一个 `WebView` 对象，而不是当前的 `TextView`。当用户选择一个网站时，相应的网页随后将在详情面板中加载并显示。
+在本章的剩余部分中，`PrimaryDetailFlow`项目将进行修改，使得主列表显示网站名称列表，并将详情面板更改为包含一个`WebView`对象，而不是当前的`TextView`。当用户选择一个网站时，相应的网页随后将在详情面板中加载并显示。
 
 ## 52.5 修改内容模型
 
-该示例目前的内容由 `PlaceholderContent` 类文件定义。因此，首先从开始，选择 `PlaceholderContent.java` 文件（位于 `Project` 工具窗口的 `app` -> `java` -> `com.ebookfrenzy.primarydetailflow` -> `placeholder` 文件夹中）并查看代码。文件的底部是一个名为 `PlaceholderItem` 的类声明，该类目前能够存储三个 `String` 对象，分别代表内容、详情字符串以及 ID。相比之下，更新后的项目需要每个项目对象包含一个 `ID` 字符串、一个网站名称字符串以及一个对应网站 `URL` 的字符串。为了添加这些功能，请修改 `PlaceholderItem` 类，使其内容如下：
+该示例目前的内容由`PlaceholderContent`类文件定义。因此，首先从开始，选择`PlaceholderContent.java`文件（位于`Project`工具窗口的`app` -> `java` -> `com.ebookfrenzy.primarydetailflow` -> `placeholder`文件夹中）并查看代码。文件的底部是一个名为`PlaceholderItem`的类声明，该类目前能够存储三个`String`对象，分别代表内容、详情字符串以及 ID。相比之下，更新后的项目需要每个项目对象包含一个`ID`字符串、一个网站名称字符串以及一个对应网站`URL`的字符串。为了添加这些功能，请修改`PlaceholderItem`类，使其内容如下：
 
 ```java
 public static class PlaceholderItem {
@@ -10971,7 +10977,7 @@ public static class PlaceholderItem {
 }
 ```
 
-注意，封装的 `PlaceholderContent` 类目前包含一个 `for` 循环，该循环通过多次调用名为 `createPlaceholderItem()` 和 `makeDetails()` 的方法添加了 25 个项目。这些代码大部分不再需要，并应该如下所示从类中删除：
+注意，封装的`PlaceholderContent`类目前包含一个`for`循环，该循环通过多次调用名为`createPlaceholderItem()`和`makeDetails()`的方法添加了 25 个项目。这些代码大部分不再需要，并应该如下所示从类中删除：
 
 ```java
 public static final Map<String, PlaceholderItem> ITEM_MAP = new HashMap<String, PlaceholderItem>();
@@ -11021,17 +11027,17 @@ static {
 }
 ```
 
-代码现在利用修改后的 `PlaceholderItem` 类来存储每个项目的 `ID`、网站名称和 `URL`。
+代码现在利用修改后的`PlaceholderItem`类来存储每个项目的`ID`、网站名称和`URL`。
 
 ## 52.6 修改详情面板
 
-详情面板（当用户从主列表中选择项目时显示的屏幕）的布局包含在 `activity_item_detail.xml` 文件中，该文件又包含一个 `FrameContainerView` 实例，用于显示实际的详情面板内容。如果应用以单面板模式显示，框架容器将显示 `fragment_item_detail.xml` 文件中的布局，而多面板模式将显示 `fragment_item_detail.xml (sw600dp)` 布局。
+详情面板（当用户从主列表中选择项目时显示的屏幕）的布局包含在`activity_item_detail.xml`文件中，该文件又包含一个`FrameContainerView`实例，用于显示实际的详情面板内容。如果应用以单面板模式显示，框架容器将显示`fragment_item_detail.xml`文件中的布局，而多面板模式将显示`fragment_item_detail.xml (sw600dp)`布局。
 
-Android Studio 为 `fragment_item_detail.xml` 提供的模板布局包含一个 `Coordinator` 布局，该布局包含一个应用栏、工具栏、浮动操作按钮和一个文本视图。对于此示例，我们只需要显示一个 `WebView`，因此请打开此文件并删除布局中的所有视图，保留 `item_detail_container` 视图即可。执行此操作最简单的方法是在 `Component Tree`（组件树）中选择所有视图并删除它们。从 `Widgets` 部分拖入一个 `WebView` 对象并将其到布局上，然后更改 `id`。接下来，编辑 `fragment_item_detail.xml`，在将 `WebView` 放到布局上之前删除 `TextView` 并更改 `id`。
+Android Studio 为`fragment_item_detail.xml`提供的模板布局包含一个`Coordinator`布局，该布局包含一个应用栏、工具栏、浮动操作按钮和一个文本视图。对于此示例，我们只需要显示一个`WebView`，因此请打开此文件并删除布局中的所有视图，保留`item_detail_container`视图即可。执行此操作最简单的方法是在`Component Tree`（组件树）中选择所有视图并删除它们。从`Widgets`部分拖入一个`WebView`对象并将其到布局上，然后更改`id`。接下来，编辑`fragment_item_detail.xml`，在将`WebView`放到布局上之前删除`TextView`并更改`id`。
 
 ## 52.7 修改 ItemDetail 类
 
-此时，用户界面已经修改，但相应的 Java 类仍然是为 `TextView` 而非 `WebView` 设计的。双击 `ItemDetailFragment.java`加载该类的源代码。为了加载与选中项目对应的页面，需要更改几行代码。完成此更改后，代码应如下：
+此时，用户界面已经修改，但相应的 Java 类仍然是为`TextView`而非`WebView`设计的。双击`ItemDetailFragment.java`加载该类的源代码。为了加载与选中项目对应的页面，需要更改几行代码。完成此更改后，代码应如下：
 
 ```java
 import android.webkit.WebResource;
@@ -11065,11 +11071,11 @@ public class ItemDetailFragment extends Fragment {
 }
 ```
 
-在上述代码中，删除了对工具栏布局和项目详情文本元素的引用，这些元素已从 `fragment_item_detail.xml` 文件中移除。接下来，修改了 `updateContent()` 以访问 `website_detail` 视图（以前是 `TextView`，现在是 `WebView`）并提取选中项目的 `URL`。创建了 `WebViewClient` 类的实例并分配了 `shouldOverrideLoading()` 回调方法。实现该方法是为了强制系统使用 `WebView` 实例加载页面，而不是 Chrome 浏览器。
+在上述代码中，删除了对工具栏布局和项目详情文本元素的引用，这些元素已从`fragment_item_detail.xml`文件中移除。接下来，修改了`updateContent()`以访问`website_detail`视图（以前是`TextView`，现在是`WebView`）并提取选中项目的`URL`。创建了`WebViewClient`类的实例并分配了`shouldOverrideLoading()`回调方法。实现该方法是为了强制系统使用`WebView`实例加载页面，而不是 Chrome 浏览器。
 
 ## 52.8 修改 ItemListFragment 类
 
-还需要对 `ItemListFragment.java` 进行细微更改，以确保网站名称出现在主列表中。编辑此文件，找到 `onBindViewHolder()` 方法并修改 `setText()` 方法调用，引用网站名称如下：
+还需要对`ItemListFragment.java`进行细微更改，以确保网站名称出现在主列表中。编辑此文件，找到`onBindViewHolder()`方法并修改`setText()`方法调用，引用网站名称如下：
 
 ```java
 @Override
@@ -11078,10 +11084,6 @@ public void onBindViewHolder(final ViewHolder holder, int position) {
     holder.mContentView.setText(mValues.get(position).website_name);
 }
 ```
-
-
-
-
 
 ```java
 ClipData.Item clipItem = new ClipData.Item(mValues.get(position).id);
@@ -11095,7 +11097,9 @@ ClipData dragData = new ClipData(
 
 ### 52.9 添加清单权限
 
-最后一步是通过清单文件为应用程序添加互联网权限。这将使 `WebView` 对象能够访问互联网并下载网页。在 Project 工具窗口中（app -> manifests）导航到并加载 `AndroidManifest.xml` 文件，双击它将其加载到编辑器中。加载后，在文件中添加适当的权限行：
+最后一步是通过清单文件为应用程序添加互联网权限。这将使`WebView`对象能够访问互联网并下载网页。在 Project 工具窗口中（app -> manifests）导航到并加载`AndroidManifest.xml`文件，双击它将其加载到编辑器中。加载后，在文件中添加适当的权限行：
+
+
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -11110,7 +11114,7 @@ ClipData dragData = new ClipData(
 
 在配置适当的模拟器或连接的 Android 设备上编译并运行应用程序。根据显示屏的大小，应用程序将以小屏模式或双窗格模式出现。无论如何，主列表都应该预先加载内容模型中定义的三个网站的名称。选择一个项目将导致相应的网站在详情面板中显示，如图 52-6 中的双窗格模式所示：
 
-![](img/as_primary_detail_running.jpg)
+![](img_as_primary_detail_running.jpg)
 
 图 52-6
 
@@ -11132,7 +11136,7 @@ Android `Service` 类旨在允许应用程序启动并执行后台任务。与�
 
 对于不需要同步处理请求的服务，`JobIntentService` 是推荐选项。然而，需要同步处理请求的服务将需要继承自 `Service` 类，并手动实现和管理线程，以高效地处理任何 CPU 密集型任务。
 
-### 53.2 Bound Service
+## 53.2 Bound Service
 
 绑定服务允许启动组件与服务进行交互并接收其结果。这种交互也可以通过实现进程间通信（IPC）跨越进程边界进行。例如，一个 Activity 可能会启动一个服务来处理音频播放。该 Activity 极可能包含一个用户界面，为用户提供暂停播放或跳到下一曲的控制控件。同样，服务可能需要向调用 Activity 通信信息，以指示当前音频轨道已结束，并提供即将开始播放的下一曲的详情。
 
@@ -11140,7 +11144,7 @@ Android `Service` 类旨在允许应用程序启动并执行后台任务。与�
 
 绑定服务必须包含 `onBind()` 方法的实现。在实现客户端和服务之间的通信时，推荐的技术取决于客户端和服务是否位于相同或不同的进程中。本地通信可以通过扩展 `Binder` 类并从 `onBind()` 方法返回一个实例来实现。
 
-### 53.3 Service 的结构
+## 53.3 Service 的结构
 
 如前提到的，服务必须创建为 `Service` 类的子类（具体来说是 `android.app.Service`）或其子类（例如 `android.app.IntentService`）。在子类化过程中，取决于所创建服务的具体性质，必须重写以下一个或多个父类回调方法：
 
@@ -11152,16 +11156,11 @@ Android `Service` 类旨在允许应用程序启动并执行后台任务。与�
 
 注意 `IntentService` 类包含了它对 `onStartCommand()` 和 `onBind()` 回调方法的实现，因此在子类中不需要实现它们。
 
-### 53.4 控制已销毁服务的重启选项
+## 53.4 控制已销毁服务的重启选项
 
 `onStartCommand()` 回调方法需要返回一个整数值，以定义当 Android 运行时系统销毁服务时应该发生什么情况。这些方法的可能的返回值如下：
 
 - `START_NOT_STICKY` – 向系统指示，如果服务被销毁，则不要重启它，除非有等待传递的意图（intents）。
-
-
-
-
-
 - `START_STICKY` – 表示如果服务是在 `onStartCommand()` 方法返回后被销毁的，则应该在销毁后尽快重启。如果没有待递送的等待 Intent，则将调用 `onStartCommand()` 回调方法并传递一个 NULL 的 Intent 值。当服务被销毁时正在处理的 Intent 将丢弃。
 - `START_REDELIVER_INTENT` – 表示如果服务是在从 `onStartCommand()` 回调方法返回后被销毁，则应该重启服务，并将当前的 Intent 重新递送给 `onStartCommand()` 方法，随后传递任何待处理的 Intent。
 
@@ -11215,13 +11214,13 @@ Android `Service` 类旨在允许应用程序启动并执行后台任务。与�
 
 冒号前缀表示新进程对于本地应用是私有的。然而，如果进程名是以小写字母而不是冒号开头，该进程将是全局的，其他组件可以使用。
 
-最后，通过使用与 Activity 相同的 Intent 过滤器机制，服务也可以向运行在设备上的其他应用程序发布其功能。有关 Intent 过滤器（intent filters）的更多细节，请参考章节 “Android Intent 概览”。
+最后，通过使用与 Activity 相同的 Intent 过滤器机制，服务也可以向运行在设备上的其他应用程序发布其功能。有关 Intent 过滤器（intent filters）的更多细节，请参考章节“Android Intent 概览”。
 
 ## 53.6 在系统启动时运行的服务
 
 考虑到服务的后台性质，在基于 Android 系统首次启动时需要启动服务并不罕见。这可以通过创建一个广播接收器（broadcast receiver）来实现，并配置 Intent 过滤器来监听系统的 `android.intent.action.BOOT_COMPLETED` Intent。当检测到此类 Intent 时，广播接收器将调用必要的服务然后返回。注意，为了能够运行，此类广播接收器必须请求 `android.permission.RECEIVE_BOOT_COMPLETED` 权限。
 
-### 53.7 总结
+## 53.7 总结
 
 Android 服务是一种强大的机制，允许应用程序在后台执行任务。服务一旦启动，无论调用应用程序是否为前台任务，即使启动服务的组件被销毁，它也会继续运行。
 
@@ -11231,13 +11230,13 @@ Android 服务是一种强大的机制，允许应用程序在后台执行任务
 
 `IntentService` 类（`Android Service` 类的子类）提供了一种方便的机制，用于在单独的工作线程中处理异步服务请求。
 
-## 54. Android Intent 概览
+# 54. Android Intent 概览
 
-到本书的这一阶段，应该已经清楚 Android 应用程序包含一个或多个 Activity 等内容。然而，一个尚未详尽介绍的领域是一个 Activity 如何触发启动另一个 Activity 的机制。正如标题为 Android 应用剖析” 的章节简要概述的，这主要是通过 Intent 实现的。
+到本书的这一阶段，应该已经清楚 Android 应用程序包含一个或多个 Activity 等内容。然而，一个尚未详尽介绍的领域是一个 Activity 如何触发启动另一个 Activity 的机制。正如标题为“Android 应用剖析”的章节简要概述的，这主要是通过 Intent 实现的。
 
-在接下来的章节中通过基于 Android Studio 的示例来实现 之前，本章旨在以显式 Intent（explicit intents）和隐式 Intent（implicit intents）的形式提供 Intent 的概览，并介绍 Intent 过滤器（intent filters）。
+在接下来的章节中通过基于 Android Studio 的示例来实现之前，本章旨在以显式 Intent（explicit intents）和隐式 Intent（implicit intents）的形式提供 Intent 的概览，并介绍 Intent 过滤器（intent filters）。
 
-### 54.1 Intent 概览
+## 54.1 Intent 概览
 
 Intent（`android.content.Intent`）是一个用于启动另一个 Activity 的消息系统。例如，Activity 可以发布一个 Intent 来请求启动同一应用程序内的另一个 Activity。Intent 的范围超出了这一概念，允许 Activity 请求设备上任何其他已适当注册且配置了权限的 Activity 服务。例如，考虑一个包含需要加载网页的 Activity。与其让应用程序包含一个第二个 Activity 来执行此任务，代码可以发送一个 Intent 到 Android 运行时，请求任何注册了显示网页能力的 Activity 服务。运行时系统会将请求与设备上的可用 Activity 进行匹配，并启动匹配的 Activity，或者在存在多个匹配项时允许用户决定使用哪一个。
 
@@ -11247,9 +11246,9 @@ Intent 还允许数据从发送方 Activity 向接收方 Activity 传输。在�
 
 Intent 分为显式或隐式。
 
-### 54.2 显式 Intent
+## 54.2 显式 Intent
 
-显式 Intent 通过引用目标 组件名称（即类名）请求启动特定的 Activity。这种方法在启动与发送 Activity 同一应用程序内的 Activity 时最常见。
+显式 Intent 通过引用目标组件名称（即类名）请求启动特定的 Activity。这种方法在启动与发送 Activity 同一应用程序内的 Activity 时最常见。
 
 发布显式 Intent 需要创建 `Intent` 实例，并传递 Activity 上下文要启动的 Activity 组件名称。然后调用 `startActivity()` 方法并将 Intent 对象作为参数。例如，以下代码片段发布了启动类名为 `ActivityB` 的 Activity 的 Intent：
 
@@ -11258,9 +11257,6 @@ Intent i = new Intent(this, ActivityB.class);
 
 startActivity(i);
 ```
-
-
-
 
 可以通过调用 `intent` 对象的 `putExtra()` 方法，将数据添加到 `intent` 对象中，从而在启动之前将其传输到接收的 activity。数据必须以键值对的形式添加。以下代码扩展了之前的示例，分别为 `intent` 添加了键名为 `"myString"` 和 `"myInt"` 的 `String` 和整数值：
 
@@ -11282,6 +11278,8 @@ if (extras != null) {
 ```
 
 当使用 intent 启动同一个应用程序内的其他 activity 时，这些 activity 必须在应用程序清单列出。以下 `AndroidManifest.xml` 内容针对一个包含名为 `ActivityA` 和 `ActivityB` 的应用程序进行了正确配置：
+
+
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -11308,7 +11306,7 @@ if (extras != null) {
 
 ### 54.3 从 Activity 返回数据
 
-如上一节的示例所示，虽然数据传输到了 `ActivityB`，但没有办法将数据返回给第一个 activity（我们称之为 `ActivityA`）。然而，可以通过将 `ActivityB` 启动为 `ActivityA` 的子 activity 来实现。通过创建 `ActivityResultLauncher` 实例可以将 activity 启动为子 activity。`ActivityResultLauncher` 实例是通过调用 `registerForActivityResult()` 方法创建的，并传入一个 lambda 回调处理器。当子 activity 返回时，该处理器将被调用并传递返回的数据。一旦创建了 `ActivityResultLauncher` 实例，就可以带有 `intent` 参数调用它来启动子 activity。创建 `ActivityResultLauncher` 实例的代码通常如下：
+如上一节的示例所示，虽然数据传输到了`ActivityB`，但没有办法将数据返回给第一个 activity（我们称之为`ActivityA`）。然而，可以通过将`ActivityB`启动为`ActivityA`的子 activity 来实现。通过创建`ActivityResultLauncher`实例可以将 activity 启动为子 activity。`ActivityResultLauncher`实例是通过调用`registerForActivityResult()`方法创建的，并传入一个 lambda 回调处理器。当子 activity 返回时，该处理器将被调用并传递返回的数据。一旦创建了`ActivityResultLauncher`实例，就可以带有`intent`参数调用它来启动子 activity。创建`ActivityResultLauncher`实例的代码通常如下：
 
 ```java
 ActivityResultLauncher<Intent> startForResult = registerForActivityResult(
@@ -11324,14 +11322,14 @@ ActivityResultLauncher<Intent> startForResult = registerForActivityResult(
     });
 ```
 
-一旦启动器就绪，就可以如下调用它并传递要启动的 `intent`：
+一旦启动器就绪，就可以如下调用它并传递要启动的`intent`：
 
 ```java
 Intent i = new Intent(this, ActivityB.class);
 startForResult.launch(i);
 ```
 
-要将数据返回给父 activity，子 activity 必须实现 `finish()` 方法，该方法的目的是创建一个包含数据的新 `intent` 对象，然后调用封装 activity 的 `setResult()` 方法，传递结果码和包含数据的 `intent`。结果码通常是 `RESULT_OK` 或 `RESULT_ANCELED`，但也可以根据开发者的需求自定义值。如果子 activity 崩溃，父 activity 将接收到 `RESULT_ANCELED` 。例如，以下代码说明了典型的子 activity `finish()` 方法：
+要将数据返回给父 activity，子 activity 必须实现`finish()`方法，该方法的目的是创建一个包含数据的新`intent`对象，然后调用封装 activity 的`setResult()`方法，传递结果码和包含数据的`intent`。结果码通常是`RESULT_OK`或`RESULT_ANCELED`，但也可以根据开发者的需求自定义值。如果子 activity 崩溃，父 activity 将接收到`RESULT_ANCELED`。例如，以下代码说明了典型的子 activity`finish()`方法：
 
 ```java
 public void finish() {
@@ -11344,18 +11342,18 @@ public void finish() {
 
 ### 54.4 隐式 Intent
 
-与显式 intent（引用要启动的 activity 类名）不同，隐式 intent 通过指定要执行的操作以及接收 activity 处理的数据类型来识别要启动的 activity。例如，操作类型为 `ACTION_VIEW` 并配有 `URI` 对象形式的网页 URL，将指示 Android 系统搜索并随后启动一个具有 Web 能力的 activity。以下隐式 intent 在 Android 设备上执行时，将导致指定的网页在浏览器 activity 中出现：
+与显式 intent（引用要启动的 activity 类名）不同，隐式 intent 通过指定要执行的操作以及接收 activity 处理的数据类型来识别要启动的 activity。例如，操作类型为`ACTION_VIEW`并配有`URI`对象形式的网页 URL，将指示 Android 系统搜索并随后启动一个具有 Web 能力的 activity。以下隐式 intent 在 Android 设备上执行时，将导致指定的网页在浏览器 activity 中出现：
 
 ```java
 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ebookfrenzy.com"));
 startActivity(intent);
 ```
 
-当 activity 发出上述隐式 intent 时，Android 系统将使用称为意解析的过程搜索设备上能够处理 `ACTION_VIEW` 请求的 activity。在系统使用隐式 intent 启动 activity 之前，用户必须验证或启用该 activity。如果未满足这些条件，则 intent 将无法启动该 activity。在探索这两个选项之前，我们首先需要讨论意过滤器。
+当 activity 发出上述隐式 intent 时，Android 系统将使用称为意解析的过程搜索设备上能够处理`ACTION_VIEW`请求的 activity。在系统使用隐式 intent 启动 activity 之前，用户必须验证或启用该 activity。如果未满足这些条件，则 intent 将无法启动该 activity。在探索这两个选项之前，我们首先需要讨论意过滤器。
 
 ### 54.5 使用意过滤器
 
-意过滤器是 activity 向 Android 解析过程“宣告”其支持的操作和数据处理能力的机制。这些声明还包含了执行链接验证所需的设置。以下 `AndroidManifest.xml` 文件说明了名为 `MyWebView` 的应用中名为 `WebActivity` 的 activity 的配置，其具有配置适当的意过滤器：
+意过滤器是 activity 向 Android 解析过程“宣告”其支持的操作和数据处理能力的机制。这些声明还包含了执行链接验证所需的设置。以下`AndroidManifest.xml`文件说明了名为`MyWebView`的应用中名为`WebActivity`的 activity 的配置，其具有配置适当的意过滤器：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -11380,11 +11378,7 @@ startActivity(intent);
 </application>
 ```
 
-
-
-
-
-使用 Web 链接在 Android 设备上启动活动被认为存在潜在的安全风险。为了降低这种风险，用于启动意图（intent）的链接必须经过自动验证，或者由用户在设备上手动添加为支持的链接。要启用自动验证，必须在目标 Activity 的相应声明中将 `autoVerify` 设置为 `true`，如下所示：
+使用 Web 链接在 Android 设备上启动活动被认为存在潜在的安全风险。为了降低这种风险，用于启动意图（intent）的链接必须经过自动验证，或者由用户在设备上手动添加为支持的链接。要启用自动验证，必须在目标 Activity 的相应声明中将`autoVerify`设置为`true`，如下所示：
 
 ```xml
 <intent-filter android:autoVerify="true">
@@ -11396,9 +11390,9 @@ startActivity(intent);
 </intent-filter>
 ```
 
-接下来，链接 URL 必须与应用所属的网站关联。这通过创建一个名为 `assetlinks.json` 的数字资产链接文件并将其安装在网站的 `.well-known` 文件夹来实现。
+接下来，链接 URL 必须与应用所属的网站关联。这通过创建一个名为`assetlinks.json`的数字资产链接文件并将其安装在网站的`.well-known`文件夹来实现。
 
-数字资产链接文件包含一个关系声明（relation statement），用于允许目标应用通过网站的链接 URL 启动；以及一个目标声明（target statement），用于声明配套应用的包名和该项目的 `SHA-256` 证书指纹。一个典型的资产链接文件内容可能如下：
+数字资产链接文件包含一个关系声明（relation statement），用于允许目标应用通过网站的链接 URL 启动；以及一个目标声明（target statement），用于声明配套应用的包名和该项目的`SHA-256`证书指纹。一个典型的资产链接文件内容可能如下：
 
 ```json
 [{
@@ -11415,7 +11409,7 @@ startActivity(intent);
 
 注意，你可以手动创建此文件，也可以使用以下 URL 提供的在线工具生成：[`developers.google.com/digital-asset-links/tools/generator`](https://developers.google.com/digital-asset-links/tools/generator)
 
-在处理 Android 时，`namespace` 值始终设置为 `android_app`，而 `package_name` 对应于由意图启动的应用包。最后，证书指纹是用于构建应用的哈希值。当你在测试应用时，它将是包含 `debug.keystore` 文件中的调试证书。在 Windows 系统上，Android Studio 将此文件存储在以下位置：
+在处理 Android 时，`namespace`值始终设置为`android_app`，而`package_name`对应于由意图启动的应用包。最后，证书指纹是用于构建应用的哈希值。当你在测试应用时，它将是包含`debug.keystore`文件中的调试证书。在 Windows 系统上，Android Studio 将此文件存储在以下位置：
 
 `\Users\<your user name>\.android\debug.keystore`
 
@@ -11423,21 +11417,23 @@ startActivity(intent);
 
 `$HOME/.android/debug.keystore`
 
-一旦找到文件，可以在终端或命令提示符窗口中运行以下命令来获取 `SHA 256` 指纹：
+一旦找到文件，可以在终端或命令提示符窗口中运行以下命令来获取`SHA 256`指纹：
 
 ```bash
 keytool -list -v -keystore <path to debug.keystore file here>
 ```
 
-当提示密码时，输入 `android`，随后将输出内容，包括 `SHA 256` 指纹：
+当提示密码时，输入`android`，随后将输出内容，包括`SHA 256`指纹：
 
 Certificate fingerprints:
+
 SHA1: 11:E8:66:11:B6:94:3D:AA:7E:50:63:99:77:B8:6A:90:FF:B6:9C:6D
+
 SHA256: 7F:EE:E3:C8:38:41:C3:EA:11:56:83:94:2A:4C:D2:EA:A0:69:F8:96:D1:17:77:02:46:EC:AD:6E:3C:64:A9:29
 
-当你准备好构建应用的发布版本时，必须确保已将发布版本的 `SHA 256` 指纹添加到资产文件中。关于生成发布版密钥库（release keystore）文件的详情，请参见“创建、测试和上传 Android App Bundle” 章节。一旦拥有了发布版密钥库文件，运行上述 `keytool` 命令即可获取指纹。
+当你准备好构建应用的发布版本时，必须确保已将发布版本的`SHA 256`指纹添加到资产文件中。关于生成发布版密钥库（release keystore）文件的详情，请参见“创建、测试和上传 Android App Bundle”章节。一旦拥有了发布版密钥库文件，运行上述`keytool`命令即可获取指纹。
 
-一旦你将数字资产文件放置在网站的正确位置，请在设备或模拟器上安装应用并等待 30 秒以完成链接验证。要检查验证状态，请在命令或终端提示符中运行运行：
+一旦你将数字资产文件放置在网站的正确位置，请在设备或模拟器上安装应用并等待 30 秒以完成链接验证。要检查验证状态，请在命令或终端提示符中运行：
 
 ```bash
 adb shell pm get-app-links --user cur com.example.mywebview
@@ -11458,18 +11454,17 @@ com.example.mywebview:
             www.ebookfrenzy.com
 ```
 
-你也可以通过设备或模拟器上的 `Settings` 应用按以下步骤检查状态：
+你也可以通过设备或模拟器上的`Settings`应用按以下步骤检查状态：
 
-1. 启动 `Settings` 应用。
-2. 选择 `Apps`。
+1. 启动`Settings`应用。
+
+2. 选择`Apps`。
+
 3. 找到并选择你的应用。
-4. 在设置页面，选择 `Open by Default`。
 
+4. 在设置页面，选择`Open by Default`。
 
-
-
-
-Activity 可以将数据封装成 `intent` 对象中的键值对，从而向接收 Activity 发送数据。只有当 Activity 作为发送 Activity 的子活动启动时，才能从其返回数据。
+Activity 可以将数据封装成`intent`对象中的键值对，从而向接收 Activity 发送数据。只有当 Activity 作为发送 Activity 的子活动启动时，才能从其返回数据。
 
 Activity 通过在应用程序清单文件中指定意图过滤器（intent filters），向 Android 意图解析过程发布能力。发送和接收 Activity 都必须请求适当的权限以执行访问设备联系人数据库或互联网等任务。
 
@@ -11477,21 +11472,21 @@ Activity 通过在应用程序清单文件中指定意图过滤器（intent filt
 
 # 55. Android 显式意图 – 实例教程
 
-标题为“Android 意图概览”，并将 `Language` 菜单设置为 `Java`。按照章节 [11.8 将项目迁移到 View Binding] 中概述的步骤，将项目转换为使用 `view binding`。
+标题为“Android 意图概览”，并将`Language`菜单设置为`Java`。按照章节 [11.8 将项目迁移到 View Binding] 中概述的步骤，将项目转换为使用`view binding`。
 
 ## 55.2 设计 MainActivity 的用户界面布局
 
-`MainActivity` 的用户界面将由一个 `ConstraintLayout` 视图组成，其中包含 `EditText`（纯文本）、`TextView` 以及命名为 `editText1`、`textView1` 和 `button1` 的 `Button`。使用 `Project` 工具窗口找到 `MainActivity` 的 `activity_main.xml` 资源文件（位于 `app -> res -> layout` 下），并双击将其加载到 Android Studio 布局编辑器工具中。选择默认的“Hello World!” `TextView` 并使用 `Attributes` 工具窗口为其分配 `ID` 为 `textView1`。
+`MainActivity`的用户界面将由一个`ConstraintLayout`视图组成，其中包含`EditText`（纯文本）、`TextView`以及命名为`editText1`、`textView1`和`button1`的`Button`。使用`Project`工具窗口找到`MainActivity`的`activity_main.xml`资源文件（位于`app -> res -> layout`下），并双击将其加载到 Android Studio 布局编辑器工具中。选择默认的“Hello World!”`TextView`并使用`Attributes`工具窗口为其分配`ID`为`textView1`。
 
-从调色板拖入一个 `Button` 对象，将其放置在水平居中并位于 `TextView` 底部下方。将 `text` 属性更改为“Send Text”，并配置 `onClick` 属性以调用名为 `sendText()` 的方法。
+从调色板拖入一个`Button`对象，将其放置在水平居中并位于`TextView`底部下方。将`text`属性更改为“Send Text”，并配置`onClick`属性以调用名为`sendText()`的方法。
 
-接下来，添加一个 `Plain Text` 对象，使其水平居中并位于 `TextView` 顶部上方。使用 `Attributes` 工具窗口移除分配给 text 属性的“Name”字符串，并将 `ID` 设置为 `editText1`。布局完成后，点击工具栏上的 `Infer constraints（推断约束）`按钮以添加适当约束：
+接下来，添加一个`Plain Text`对象，使其水平居中并位于`TextView`顶部上方。使用`Attributes`工具窗口移除分配给 text 属性的“Name”字符串，并将`ID`设置为`editText1`。布局完成后，点击工具栏上的`Infer constraints（推断约束）`按钮以添加适当约束：
 
 ![](img/as_infer_constraints.jpg)
 
 图 55-1
 
-最后，点击布局编辑器窗口右上角的红色警告按钮，并在生成的面板将“Send Text”字符串提取到名为 `send_text` 的资源中。布局完成后，用户界面应类似于[图 55-2]所示：
+最后，点击布局编辑器窗口右上角的红色警告按钮，并在生成的面板将“Send Text”字符串提取到名为`send_text`的资源中。布局完成后，用户界面应类似于[图 55-2]所示：
 
 ![](img/as_explicit_intent_send_ui.jpg)
 
@@ -11499,21 +11494,23 @@ Activity 通过在应用程序清单文件中指定意图过滤器（intent filt
 
 ## 55.3 创建第二个 Activity 类
 
-当用户触摸“Send Text”按钮时，将发布一个意图，请求启动第二个 Activity，用户可以在其中输入响应。因此，下一步是创建第二个 Activity。在 `Project` 工具窗口中，右键点击 `app -> java` 下的 `com.ebookfrenzy.explicitintent` 包名，选择 `New -> Activity -> Empty Views Activity` 菜单选项，显示如[图 55-3]所示的新建 Android Activity 对话框：
+当用户触摸“Send Text”按钮时，将发布一个意图，请求启动第二个 Activity，用户可以在其中输入响应。因此，下一步是创建第二个 Activity。在`Project`工具窗口中，右键点击`app -> java`下的`com.ebookfrenzy.explicitintent`包名，选择`New -> Activity -> Empty Views Activity`菜单选项，显示如[图 55-3]所示的新建 Android Activity 对话框：
 
 ![](img/as_explicit_intent_new_activity_java.jpg)
 
 图 55-3
 
-在 `Activity Name` 和 `Title` 字段中输入 `SecondActivity`，将布局文件命名为 `activity_second`，并将 `Language` 菜单设置为 `Java`。由于该 Activity 不会在应用程序启动时启动（将在点击按钮时由 `MainActivity` 通过 `intent` 启动），请在点击 `Finish` 按钮之前确保禁用 `Launcher Activity` 选项。
+
+
+在`Activity Name`和`Title`字段中输入`SecondActivity`，将布局文件命名为`activity_second`，并将`Language`菜单设置为`Java`。由于该 Activity 不会在应用程序启动时启动（将在点击按钮时由`MainActivity`通过`intent`启动），请在点击`Finish`按钮之前确保禁用`Launcher Activity`选项。
 
 ## 55.4 设计 SecondActivity 的用户界面布局
 
-第二个 Activity 用户界面所需的元素是 `Plain Text EditText`、`TextView` 和 `Button` 视图。考虑到这些要求，将 `activity_second.xml` 布局加载到布局编辑器中并添加视图。
+第二个 Activity 用户界面所需的元素是`Plain Text EditText`、`TextView`和`Button`视图。考虑到这些要求，将`activity_second.xml`布局加载到布局编辑器中并添加视图。
 
-在设计过程中，注意按钮视图上的 `onClick` 属性已配置为调用名为 `returnText()` 的方法，且 `TextView` 和 `EditText` 视图分别分配了 ID `textView2` 和 `editText2`。完成后，布局应类似于[图 55-4]。注意按钮上的文本（“Return Text”）已提取到名为 `return_text` 的字符串资源中。
+在设计过程中，注意按钮视图上的`onClick`属性已配置为调用名为`returnText()`的方法，且`TextView`和`EditText`视图分别分配了 ID `textView2`和`editText2`。完成后，布局应类似于[图 55-4]。注意按钮上的文本（“Return Text”）已提取到名为`return_text`的字符串资源中。
 
-布局完成后，点击工具栏上的 `Infer constraints` 按钮以为布局添加必要的约束：
+布局完成后，点击工具栏上的`Infer constraints`按钮以为布局添加必要的约束：
 
 ![](img/as_explicit_intent_return_ui.jpg)
 
@@ -11521,7 +11518,7 @@ Activity 通过在应用程序清单文件中指定意图过滤器（intent filt
 
 ## 55.5 检查应用程序清单文件
 
-为了让 `MainActivity` 能够使用 `intent` 启动 `SecondActivity`，`AndroidManifest.xml` 文件中需要存在 `SecondActivity` 条目。在 `Project` 工具窗口中找到该文件（`app -> manifests`），双击将其加载到编辑器，并验证 Android Studio 已自动添加了该 Activity 条目：
+为了让`MainActivity`能够使用`intent`启动`SecondActivity`，`AndroidManifest.xml`文件中需要存在`SecondActivity`条目。在`Project`工具窗口中找到该文件（`app -> manifests`），双击将其加载到编辑器，并验证 Android Studio 已自动添加了该 Activity 条目：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -11554,7 +11551,7 @@ Activity 通过在应用程序清单文件中指定意图过滤器（intent filt
 
 ### 55.6 创建意图
 
-`MainActivity` 的目标是在用户触摸“Send Text”按钮时创建并启动 `intent`。在意图创建过程中，用户在 `EditText` 视图中输入的问题字符串将作为键值对添加到 `intent` 对象中。在创建 `MainActivity` 的用户界面布局时，按钮对象已配置为在用户“点击”时调用名为 `sendText()` 的方法。现在需要如下所示将该方法添加到 `MainActivity` 类 `MainActivity.java` 源：
+`MainActivity`的目标是在用户触摸“Send Text”按钮时创建并启动`intent`。在意图创建过程中，用户在`EditText`视图中输入的问题字符串将作为键值对添加到`intent`对象中。在创建`MainActivity`的用户界面布局时，按钮对象已配置为在用户“点击”时调用名为`sendText()`的方法。现在需要如下所示将该方法添加到`MainActivity`类`MainActivity.java`源：
 
 ```java
 package com.ebookfrenzy.explicitintent;
@@ -11571,10 +11568,6 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-
-
-
-
 ```java
         startActivity(i);
 
@@ -11582,13 +11575,13 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-`sendText()` 方法的代码遵循了“Android Intent 概述”中概述的技术。首先，创建一个新的 `Intent` ，并将当前 activity 和 `SecondActivity` 的类名作为参数传递。接下来，将输入到 `EditText` 对象中的文本以键值对的形式添加到 intent 对象中，并通过调用 `startActivity()` 启动 intent，并将 intent 对象作为参数传递。
+`sendText()`方法的代码遵循了“Android Intent 概述”中概述的技术。首先，创建一个新的`Intent`，并将当前 activity 和`SecondActivity`的类名作为参数传递。接下来，将输入到`EditText`对象中的文本以键值对的形式添加到 intent 对象中，并通过调用`startActivity()`启动 intent，并将 intent 对象作为参数传递。
 
-编译并运行应用程序，点击“Send Text”（发送文本）按钮启动 `SecondActivity`。使用返回按钮（位于显示器底部的工具栏中）或在较新版本的 Android 系统上从屏幕边缘向右滑动返回 `MainActivity` 屏幕。
+编译并运行应用程序，点击“Send Text”（发送文本）按钮启动`SecondActivity`。使用返回按钮（位于显示器底部的工具栏中）或在较新版本的 Android 系统上从屏幕边缘向右滑动返回`MainActivity`屏幕。
 
 ## 55.7 提取 Intent 数据
 
-现在 `SecondActivity` 已经从 `MainActivity` 启动，下一步是提取 intent 中包含的 `String` 数据值，并将其赋值给 `SecondActivity` 用户界面中的 `TextView` 对象。这涉及到在适配 activity 以使用视图绑定之外，还需要在 `SecondActivity.java` 源文件中为 `SecondActivity` 的 `onCreate()` 方法添加一些代码：
+现在`SecondActivity`已经从`MainActivity`启动，下一步是提取 intent 中包含的`String`数据值，并将其赋值给`SecondActivity`用户界面中的`TextView`对象。这涉及到在适配 activity 以使用视图绑定之外，还需要在`SecondActivity.java`源文件中为`SecondActivity`的`onCreate()`方法添加一些代码：
 
 ```java
 package com.ebookfrenzy.explicitintent;
@@ -11630,13 +11623,13 @@ public class SecondActivity extends AppCompatActivity {
 }
 ```
 
-在模拟器或物理 Android 设备上编译并运行应用程序。在点击“Send Text”按钮之前，在 `MainActivity` 的文本框中输入一些文本。现在消息应该出现在 `SecondActivity` 用户界面的 `TextView` 组件上。
+在模拟器或物理 Android 设备上编译并运行应用程序。在点击“Send Text”按钮之前，在`MainActivity`的文本框中输入一些文本。现在消息应该出现在`SecondActivity`用户界面的`TextView`组件上。
 
-## 55.8 将 SecondActivity 作为子 Activity 
+## 55.8 将 SecondActivity 作为子 Activity
 
-为了让 `SecondActivity`能够向 `MainActivity` 返回数据，`SecondActivity` 必须作为 `MainActivity` 的子活动启动。这意味着我们需要调用 `registerForActivityResult()` 并声明一个回调处理器，以便 `SecondActivity` 返回时调用。此回调将提取 `SecondActivity` 返回的数据并将其显示在 `textView1` 上。
+为了让`SecondActivity`能够向`MainActivity`返回数据，`SecondActivity`必须作为`MainActivity`的子活动启动。这意味着我们需要调用`registerForActivityResult()`并声明一个回调处理器，以便`SecondActivity`返回时调用。此回调将提取`SecondActivity`返回的数据并将其显示在`textView1`上。
 
-`registerForActivityResult()` 返回一个 `ActivityResultLauncher` 实例，可以在 `sendText()` 内部调用它来启动 intent。编辑 `MainActivity.java` 文件，使其内容如下：
+`registerForActivityResult()`返回一个`ActivityResultLauncher`实例，可以在`sendText()`内部调用它来启动 intent。编辑`MainActivity.java`文件，使其内容如下：
 
 ```java
 .
@@ -11683,7 +11676,7 @@ public class MainActivity extends AppCompatActivity {
 
 ## 55.9 从子 Activity 返回数据
 
-`SecondActivity` 现在作为 `MainActivity` 的子活动启动，而 `MainActivity` 也相应地修改为处理从 `SecondActivity` 返回的数据。剩下的只需修改 `SecondActivity.java` 以实现 `finish()` 方法并添加一个名为 `returnText()` 的方法。`finish()` 方法在 activity 退出时触发（例如，当用户选择设备上的返回按钮时）：
+`SecondActivity`现在作为`MainActivity`的子活动启动，而`MainActivity`也相应地修改为处理从`SecondActivity`返回的数据。剩下的只需修改`SecondActivity.java`以实现`finish()`方法并添加一个名为`returnText()`的方法。`finish()`方法在 activity 退出时触发（例如，当用户选择设备上的返回按钮时）：
 
 ```java
 public void returnText(View view) {
@@ -11700,17 +11693,17 @@ public void finish() {
 }
 ```
 
-`finish()` 方法创建一个新的 `intent`，将返回数据作为键值对添加，然后调用 `setResult()` 方法传递结果代码和 intent 对象。`returnText()` 方法调用了 `finish()` 方法。
+`finish()`方法创建一个新的`intent`，将返回数据作为键值对添加，然后调用`setResult()`方法传递结果代码和 intent 对象。`returnText()`方法调用了`finish()`方法。
 
-打开 `activity_second.xml` 文件，选择按钮控件并配置 `onClick` 属性调用 `returnText()`。
+打开`activity_second.xml`文件，选择按钮控件并配置`onClick`属性调用`returnText()`。
 
 ## 55.10 测试应用程序
 
-编译并运行应用程序，在 `MainActivity` 的文本字段中输入内容并点击“Send Text”按钮。当 `SecondActivity` 出现时，在 `EditText` 视图中输入文本并使用返回按钮或“Return Text”按钮返回 `MainActivity`，结果应该出现在文本视图中。
+编译并运行应用程序，在`MainActivity`的文本字段中输入内容并点击“Send Text”按钮。当`SecondActivity`出现时，在`EditText`视图中输入文本并使用返回按钮或“Return Text”按钮返回`MainActivity`，结果应该出现在文本视图中。
 
 ## 55.11 总结
 
-在上一节涵盖了意 的基础之后，本章的目标是通过在 Android Studio 中创建一个应用程序项目，演示显式意的使用以及父子活动之间数据传输的概念。
+在上一节涵盖了意的基础之后，本章的目标是通过在 Android Studio 中创建一个应用程序项目，演示显式意的使用以及父子活动之间数据传输的概念。
 
 下一章将通过示例来演示隐式意。
 
@@ -11724,29 +11717,27 @@ public void finish() {
 
 在欢迎界面选择 New Project（新建项目），在结果的新项目对话框中选择 Empty Views Activity 模板，然后点击 Next 按钮。
 
-在 Name 字段中输入 `ImplicitIntent`，并将包名为 `com.ebookfrenzy.implicitintent`。由于此示例将使用仅适用于最新 Android 版本的功能，将 Minimum API level 设置为 `API 31: Android 12.0 (S)`，并将 Language 菜单设置为 Java，最后点击 Finish 按钮。
+在 Name 字段中输入`ImplicitIntent`，并将包名为`com.ebookfrenzy.implicitintent`。由于此示例将使用仅适用于最新 Android 版本的功能，将 Minimum API level 设置为`API 31: Android 12.0 (S)`，并将 Language 菜单设置为 Java，最后点击 Finish 按钮。
 
 ### 56.2 设计用户界面
 
+`MainActivity`类的用户界面非常直观，仅由一个`ConstraintLayout`和两个`Button`对象组成。在 Project 工具窗口中，找到`app -> res -> layout -> activity_main.xml`文件并双击它将其加载到 Layout Editor（布局编辑器）工具中。
 
-
-
-
-`MainActivity` 类的用户界面非常直观，仅由一个 `ConstraintLayout` 和两个 `Button` 对象组成。在 Project 工具窗口中，找到 `app -> res -> layout -> activity_main.xml` 文件并双击它将其加载到 Layout Editor（布局编辑器）工具中。
-
-删除默认的 `TextView`，并在启用 `Autoconnect`（自动连接）模式的情况下，将 `Button` 放置在布局中，使其显示如下所示：
+删除默认的`TextView`，并在启用`Autoconnect`（自动连接）模式的情况下，将`Button`放置在布局中，使其显示如下所示：
 
 ![](img/as_implicit_intent_ui.jpg)
 
 图 56-1
 
-将按钮上的文本设置为 `Show Web Page`（显示网页）和 `Enable Links`（启用链接），并将文本提取到字符串资源。
 
-选择每个 `Button` 并使用 Attributes（属性）工具窗口配置 `onClick` 属性，分别调用名为 `showWebPage` 和 `enableLink` 的方法。
+
+将按钮上的文本设置为`Show Web Page`（显示网页）和`Enable Links`（启用链接），并将文本提取到字符串资源。
+
+选择每个`Button`并使用 Attributes（属性）工具窗口配置`onClick`属性，分别调用名为`showWebPage`和`enableLink`的方法。
 
 ### 56.3 创建隐式意图
 
-如上所述，隐式意图（implicit intent）将在名为 `showWebPage()` 的方法内部创建并发布，该方法反而在 `MainActivity` 类中实现，其代码位于 `MainActivity.java` 源文件中。在 Project 工具窗口中找到此文件并双击它加载到编辑面板。加载后，修改代码以添加 `showWebPage()` 和 `enableLink()` 方法以及一些必要的导入：
+如上所述，隐式意图（implicit intent）将在名为`showWebPage()`的方法内部创建并发布，该方法反而在`MainActivity`类中实现，其代码位于`MainActivity.java`源文件中。在 Project 工具窗口中找到此文件并双击它加载到编辑面板。加载后，修改代码以添加`showWebPage()`和`enableLink()`方法以及一些必要的导入：
 
 ```java
 package com.ebookfrenzy.implicitintent;
@@ -11774,15 +11765,15 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-`showWebPage()` 方法执行的任务非常简单。首先，创建一个新的 intent 对象。然而，代码并没有指定意图的类名，而是使用 `ACTION_VIEW` 选项指示了意图的性质（向用户显示某些内容）。intent 对象还包含一个包含要显示的 URL 的 `URI`。这告诉 Android 意图解析系统，该 activity 正在请求显示网页。然后通过调用 `startActivity()` 方法发布该意图。
+`showWebPage()`方法执行的任务非常简单。首先，创建一个新的 intent 对象。然而，代码并没有指定意图的类名，而是使用`ACTION_VIEW`选项指示了意图的性质（向用户显示某些内容）。intent 对象还包含一个包含要显示的 URL 的`URI`。这告诉 Android 意图解析系统，该 activity 正在请求显示网页。然后通过调用`startActivity()`方法发布该意图。
 
-在模拟器或物理 Android 设备上编译并运行应用程序，一旦运行，触摸 `Show Web Page` 按钮。触摸后，应该出现一个网页浏览器视图并加载由 URL 指定网页。现在，一个成功的隐式意图已经执行完毕。
+在模拟器或物理 Android 设备上编译并运行应用程序，一旦运行，触摸`Show Web Page`按钮。触摸后，应该出现一个网页浏览器视图并加载由 URL 指定网页。现在，一个成功的隐式意图已经执行完毕。
 
 ## 56.4 添加第二个匹配的 Activity
 
-本章的剩余部分将演示当设备上安装了多个符合隐式意图请求的 activity 时的效果。为了实现这一点，将在设备或模拟器上创建并安装第二个应用程序。首先，在 Android Studio 中创建一个新项目，应用程序名称设置为 `MyWebView`，使用与本章之前创建 `ImplicitIntent` 项目时相同的 SDK 配置选项，并再次选择 `Empty Views Activity`（空视图活动）。
+本章的剩余部分将演示当设备上安装了多个符合隐式意图请求的 activity 时的效果。为了实现这一点，将在设备或模拟器上创建并安装第二个应用程序。首先，在 Android Studio 中创建一个新项目，应用程序名称设置为`MyWebView`，使用与本章之前创建`ImplicitIntent`项目时相同的 SDK 配置选项，并再次选择`Empty Views Activity`（空视图活动）。
 
-如果你有一个用于托管 `Digital Asset Links`（数字资产链接）文件的网站，并想尝试自动验证，则请在指定包名时使用您的网站 URL。例如，如果您的网站托管在 `www.mycompany.com`，则包名需要设置为如下：
+如果你有一个用于托管`Digital Asset Links`（数字资产链接）文件的网站，并想尝试自动验证，则请在指定包名时使用您的网站 URL。例如，如果您的网站托管在`www.mycompany.com`，则包名需要设置为如下：
 
 `com.mycompany.mywebview`
 
@@ -11794,11 +11785,11 @@ public class MainActivity extends AppCompatActivity {
 
 图 56-2
 
-在继续之前，将 `WebView` 实例的 ID 更改为 `webView1`，并使用 Infer constraints（推断约束）按钮添加任何缺失的约束。
+在继续之前，将`WebView`实例的 ID 更改为`webView1`，并使用 Infer constraints（推断约束）按钮添加任何缺失的约束。
 
 ## 56.6 获取 Intent URL
 
-当创建用于显示浏览器窗口的隐式意图对象时，网页 URL 将封装在 intent 对象中的 `Uri` 对象内。`MainActivity` 类中 `onCreate()` 方法的任务是从 intent 对象中提取此 `Uri`，将其转换为 URL 字符串并赋值给 `WebView` 对象。为了实现此功能，修改 `MainActivity.java` 文件内容如下：
+当创建用于显示浏览器窗口的隐式意图对象时，网页 URL 将封装在 intent 对象中的`Uri`对象内。`MainActivity`类中`onCreate()`方法的任务是从 intent 对象中提取此`Uri`，将其转换为 URL 字符串并赋值给`WebView`对象。为了实现此功能，修改`MainActivity.java`文件内容如下：
 
 ```java
 package com.ebookfrenzy.mywebview;
@@ -11834,13 +11825,14 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-添加的 `onCreate()` 代码执行以下任务：
+添加的`onCreate()`代码执行以下任务：
+
 - 获取启动此活动的 intent 引用
-- 从 intent 中提取 `Uri` 数据
-- 将 `Uri` 数据转换为 `URL` 对象
+- 从 intent 中提取`Uri`数据
+- 将`Uri`数据转换为`URL`对象
 - 将 URL 加载到 web view
 
-`MyWebView` 项目的代码部分现在已完成。剩下的是修改清单。
+`MyWebView`项目的代码部分现在已完成。剩下的是修改清单。
 
 ## 56.7 修改 MyWebView 项目清单文件
 
@@ -11850,7 +11842,7 @@ public class MainActivity extends AppCompatActivity {
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-此外，检查 MyWebView 项目 `AndroidManifest.xml` 文件的意图过滤器部分将发现以下设置：
+此外，检查 MyWebView 项目`AndroidManifest.xml`文件的意图过滤器部分将发现以下设置：
 
 ```xml
 <intent-filter>
@@ -11859,16 +11851,13 @@ public class MainActivity extends AppCompatActivity {
 </intent-filter>
 ```
 
-在上述 XML 中，`android.intent.action.MAIN` 条目表示该活动在没有数据输入时是应用程序的入口点——`android.intent.category.LAUNCHER` 指令则表示该活动应该列在设备的应用程序启动屏幕上。
+在上述 XML 中，`android.intent.action.MAIN`条目表示该活动在没有数据输入时是应用程序的入口点——`android.intent.category.LAUNCHER`指令则表示该活动应该列在设备的应用程序启动屏幕上。
 
-由于该活动不需要作为应用程序的入口点启动、没有数据输入（在此情况下为 URL）无法运行，且不需要出现在启动器中，因此该活动的清单文件中不需要 `MAIN` 或 `LAUNCHER` 指令。
+由于该活动不需要作为应用程序的入口点启动、没有数据输入（在此情况下为 URL）无法运行，且不需要出现在启动器中，因此该活动的清单文件中不需要`MAIN`或`LAUNCHER`指令。
 
-然而，`MainActivity` 类的意图过滤器确实需要修改，以指示它能够处理 `HTTP` 数据方案的 `ACTION_VIEW` 意图操作。
+然而，`MainActivity`类的意图过滤器确实需要修改，以指示它能够处理`HTTP`数据方案的`ACTION_VIEW`意图操作。
 
-
-
-
-Android 还要求处理不包含 `MAIN` 和 `LAUNCHER` 隐式意图的 activity，其意图过滤器（intent filter）必须包含所谓的 `browsable` 和 `default` 类别。因此，修改后的意图过滤器部分应如下，其中 `<website url>` 应替换为你的网站地址或 `www.ebookfrenzy.com`，取决于你在创建 `MyWebView` 项目时使用的包名：
+Android 还要求处理不包含`MAIN`和`LAUNCHER`隐式意图的 activity，其意图过滤器（intent filter）必须包含所谓的`browsable`和`default`类别。因此，修改后的意图过滤器部分应如下，其中`<website url>`应替换为你的网站地址或`www.ebookfrenzy.com`，取决于你在创建`MyWebView`项目时使用的包名：
 
 ```xml
 <intent-filter android:autoVerify="true">
@@ -11880,7 +11869,7 @@ Android 还要求处理不包含 `MAIN` 和 `LAUNCHER` 隐式意图的 activity�
 </intent-filter>
 ```
 
-将这些要求结合，得到了完整的 `AndroidManifest.xml` 文件：
+将这些要求结合，得到了完整的`AndroidManifest.xml`文件：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -11909,19 +11898,19 @@ Android 还要求处理不包含 `MAIN` 和 `LAUNCHER` 隐式意图的 activity�
 </manifest>
 ```
 
-在 Project（项目）工具窗口中双双击文件名，将 `AndroidManifest.xml` 文件加载到清单编辑器中。加载完成后，修改 XML 以匹配上述更改，记得输入正确的网站 URL。
+在 Project（项目）工具窗口中双双击文件名，将`AndroidManifest.xml`文件加载到清单编辑器中。加载完成后，修改 XML 以匹配上述更改，记得输入正确的网站 URL。
 
 对清单文件进行适当的修改后，新的 activity 已经准备好安装到设备上。
 
 ### 56.8 在设备上安装 MyWebView 包
 
-在将 `MyWebView` 主 activity 作为隐式意图的接收者使用之前，必须先将其安装到设备上。这通过以正常方式运行应用程序来实现。由于清单文件既不包含 `android.intent.action.MAIN` 包含 `android.intent.category.LAUNCHER` 设置，因此必须指示 Android Studio 仅安装但不启动应用。要配置此行为，请从工具栏中选择 `app` -> `Edit configurations…` 菜单，如图图 56-3 所示：
+在将`MyWebView`主 activity 作为隐式意图的接收者使用之前，必须先将其安装到设备上。这通过以正常方式运行应用程序来实现。由于清单文件既不包含`android.intent.action.MAIN`包含`android.intent.category.LAUNCHER`设置，因此必须指示 Android Studio 仅安装但不启动应用。要配置此行为，请从工具栏中选择`app` -> `Edit configurations…`菜单，如图图 56-3 所示：
 
 ![](img/as_edit_configurations.jpg)
 
 图 56-3
 
-在 `Run/Debug Configurations` 对话框中，将位于面板 `Launch Options` 部分的 `Launch` 选项更改为 `Nothing`，然后点击 `Apply` 最后点击 `OK`：
+在`Run/Debug Configurations`对话框中，将位于面板`Launch Options`部分的`Launch`选项更改为`Nothing`，然后点击`Apply`最后点击`OK`：
 
 ![](img/as_launch_options.jpg)
 
@@ -11931,13 +11920,13 @@ Android 还要求处理不包含 `MAIN` 和 `LAUNCHER` 隐式意图的 activity�
 
 ### 56.9 测试应用程序
 
-安装 `MyWebView` 应用后，重新运行 `ImplicitIntent` 并点击 `Show Web Page` 按钮。注意，网页仍然加载到 `Chrome` 浏览器中，而不是设备的 main activity。
+安装`MyWebView`应用后，重新运行`ImplicitIntent`并点击`Show Web Page`按钮。注意，网页仍然加载到`Chrome`浏览器中，而不是设备的 main activity。
 
 ### 56.10 手动启用链接
 
-对清单文件进行适当的修改后，新的 activity 已经准备好安装到设备上。安装 `MyWebView` 应用后，重新运行 `ImplicitIntent` 并点击 `Show Web Page` 按钮。注意，网页仍然加载到 `Chrome` 浏览器中，而不是设备的 main activity。
+对清单文件进行适当的修改后，新的 activity 已经准备好安装到设备上。安装`MyWebView`应用后，重新运行`ImplicitIntent`并点击`Show Web Page`按钮。注意，网页仍然加载到`Chrome`浏览器中，而不是设备的 main activity。
 
-在 `MainActivity.java` 文件中修改 `enableLink()` 方法以匹配上述更改，记得输入正确的网站 URL：
+在`MainActivity.java`文件中修改`enableLink()`方法以匹配上述更改，记得输入正确的网站 URL：
 
 ```java
 public void enableLink(View view) {
@@ -11949,34 +11938,33 @@ public void enableLink(View view) {
 
 ### 56.11 自动链接验证
 
-如果你选择为 `MyWebView` 包名使用自己的 URL，现在可以执行自动验证的额外步骤。首先从设备或模拟器上卸载 `MyWebView` 应用。根据 Android Intent 概述章节中概述的步骤，找到 `debug.keystore` 文件并使用 `keytool` 工具获取 SHA256 指纹：
+如果你选择为`MyWebView`包名使用自己的 URL，现在可以执行自动验证的额外步骤。首先从设备或模拟器上卸载`MyWebView`应用。根据 Android Intent 概述章节中概述的步骤，找到`debug.keystore`文件并使用`keytool`工具获取 SHA256 指纹：
 
 `keytool -list -v -keystore <path to debug.keystore file>`
 
 接下来，在浏览器中打开以下页面：https://developers.google.com/digital-asset-links/tools/generator
 
-页面加载后在 `Hosting site domain` 字段输入你的网站 URL，在 `App package name` 字段输入 `com.<domain>.mywebview`，并将 SHA256 指纹输入 `App package fingerprint (SHA256)` 字段：
+页面加载后在`Hosting site domain`字段输入你的网站 URL，在`App package name`字段输入`com.<domain>.mywebview`，并将 SHA256 指纹输入`App package fingerprint (SHA256)`字段：
 
 ![](img/as_implicit_generator.jpg)
 
-点击 `Generate statement` 按钮显示生成的语句，并将其放在 Web 服务器上 `.well-known` 文件夹下的 `assetlinks.json` 文件中。返回生成页面并点击 `Test statement` 按钮验证文件是否正确。
+点击`Generate statement`按钮显示生成的语句，并将其放在 Web 服务器上`.well-known`文件夹下的`assetlinks.json`文件中。返回生成页面并点击`Test statement`按钮验证文件是否正确。
 
 ### 56.12 总结
 
 隐式意图提供了一种机制，一个 activity 可以指定操作类型以及可选的要执行该操作的数据，请求另一个 activity 的服务。然而，要成为隐式意图的目标合格候选者，activity 必须配置为从传入的意图对象中提取适当的数据，并包含在配置正确的清单文件中，包括适当的权限和意图过滤器。包含目标 activity 的应用还必须通过 Digital Asset Links 文件进行验证或由用户手动启用。
 
-
-
-
 除了提供启动应用程序活动的机制外，意图（intents）还用于向系统的其他组件广播系统级消息。这涉及广播语义（Broadcast Intents）和广播接收器（Broadcast Receivers）的实现，两者都是本章的主题。
 
 ## 57.1 广播语义概述
 
-广播语义是 `Intent` 对象，通过调用 `Activity` 类的 `sendBroadcast()`、`sendStickyBroadcast()` 或 `sendOrderedBroadcast()` 方法进行广播（后者用于需要获取广播结果的情况）。广播意图不仅在应用程序组件之间提供了一种消息传递和事件系统，Android 系统还使用广播意图来通知感兴趣的应用程序有关关键系统事件（例如外部电源或耳机的连接或断开）。
+广播语义是`Intent`对象，通过调用`Activity`类的`sendBroadcast()`、`sendStickyBroadcast()`或`sendOrderedBroadcast()`方法进行广播（后者用于需要获取广播结果的情况）。广播意图不仅在应用程序组件之间提供了一种消息传递和事件系统，Android 系统还使用广播意图来通知感兴趣的应用程序有关关键系统事件（例如外部电源或耳机的连接或断开）。
 
-当创建广播意图时，它必须包含一个动作字符串（action string）、可选数据（data）和一个类别字符串（category string）。与标准意图一样，数据是使用 `intent` 对象的 `putExtra()` 方法，并结合键值对添加到广播意图中的。可选的类别字符串可以通过调用 `addCategory()` 方法分配给广播意图。
+当创建广播意图时，它必须包含一个动作字符串（action string）、可选数据（data）和一个类别字符串（category string）。与标准意图一样，数据是使用`intent`对象的`putExtra()`方法，并结合键值对添加到广播意图中的。可选的类别字符串可以通过调用`addCategory()`方法分配给广播意图。
 
 标识广播事件的动作字符串必须是唯一的，并且通常使用应用程序的包名语法。例如，以下代码段创建并发送了一个广播意图，包含一个唯一的动作字符串和数据：
+
+
 
 ```java
 Intent intent = new Intent();
@@ -11988,10 +11976,13 @@ intent.putExtra("MyData", 1000);
 sendBroadcast(intent);
 ```
 
-上述代码将在 Android 3.0 之前的 Android 设备上成功启动相应的广播接收器。然而，在较新的 Android 版本上，广播接收器将无法接收该意图。这是因为 Android 3.0 引入了一种启动控制安全措施，防止已停止应用程序的组件通过意图启动。如果应用程序刚刚安装且之前没有启动过，或者被用户使用设备上的应用程序管理器手动停止，则该应用程序被认为处于停止状态。然而，为了绕过这个问题，可以在发送意图之前为其添加一个标记，以允许意图启动已停止应用程序的组件。该标记是 `FLAG_INCLUDE_STOPPED_PACKAGES`，其用法如下述之前代码段的适配版本所示：
+上述代码将在 Android 3.0 之前的 Android 设备上成功启动相应的广播接收器。然而，在较新的 Android 版本上，广播接收器将无法接收该意图。这是因为 Android 3.0 引入了一种启动控制安全措施，防止已停止应用程序的组件通过意图启动。如果应用程序刚刚安装且之前没有启动过，或者被用户使用设备上的应用程序管理器手动停止，则该应用程序被认为处于停止状态。
+
+然而，为了绕过这个问题，可以在发送意图之前为其添加一个标记，以允许意图启动已停止应用程序的组件。该标记是`FLAG_INCLUDE_STOPPED_PACKAGES`，其用法如下述之前代码段的适配版本所示：
 
 ```java
-Intent intent = new Intent();intent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
+Intent intent = new Intent();
+intent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
 intent.setAction("com.example.Broadcast");
 intent.putExtra("MyData", 1000);
 sendBroadcast(intent);
@@ -11999,7 +11990,11 @@ sendBroadcast(intent);
 
 ## 57.2 广播接收器概述
 
-应用程序通过注册广播接收器来监听特定的广播意图。广播接收器通过扩展 Android `BroadcastReceiver` 类并重写 `onReceive()` 方法来实现。广播接收器可以在代码中（例如在活动内部）或在清单文件中注册。注册实现的一部分包括创建意图过滤器（intent filters），以指示接收器需要监听的特定广播意图。这是通过引用广播意图的动作字符串来实现的。当检测到匹配的广播时，广播接收器的 `onReceive()` 方法会被调用，此时该方法有 5 秒钟的时间在返回之前执行任何必要的任务。需要注意的是，广播接收器不需要持续运行。如果检测到有匹配的意图，Android 运行时系统会在调用 `onReceive()` 方法之前自动启动广播接收器。
+应用程序通过注册广播接收器来监听特定的广播意图。广播接收器通过扩展 Android `BroadcastReceiver` 类并重写 `onReceive()` 方法来实现。广播接收器可以在代码中（例如在活动内部）或在清单文件中注册。
+
+注册实现的一部分包括创建意图过滤器（intent filters），以指示接收器需要监听的特定广播意图。这是通过引用广播意图的动作字符串来实现的。当检测到匹配的广播时，广播接收器的 `onReceive()` 方法会被调用，此时该方法有 5 秒钟的时间在返回之前执行任何必要的任务。
+
+需要注意的是，广播接收器不需要持续运行。如果检测到有匹配的意图，Android 运行时系统会在调用 `onReceive()` 方法之前自动启动广播接收器。
 
 以下代码列出了一个广播接收器子类的模板：
 
@@ -12070,27 +12065,27 @@ unregisterReceiver(receiver);
 
 需要重要的是，某些系统广播意图只有当接收器在代码中注册时才能被检测到。请在线查看 Intent 类文档有关系统广播意图的详细概述：[`developer.android.com/reference/android/Intent`](https://developer.android.com/reference/android/Intent)
 
-### 57.3 从广播获取结果
+## 57.3 从广播获取结果
 
-当使用 `sendBroadcast()` 方法发送广播意图时，发起的活动无法从获取广播的广播接收器获取结果。如果需要返回结果，则必须使用 `sendOrderedBroadcast()` 方法。调用 `sendOrderedBroadcast()` 时需要传入多个参数，包括另一个广播接收器（称为结果接收器），用于在所有其他广播接收器处理意图后通知它，以及一组供这些接收器放置结果数据的数据引用。当所有广播接收器都获得了处理机会后，结果接收器的 `onReceive()` 方法会被调用并传递结果数据。
+当使用 `sendBroadcast()` 方法发送广播意图时，发起的活动无法从获取广播的广播接收器获取结果。如果需要返回结果，则必须使用 `sendOrderedBroadcast()` 方法。
+
+调用 `sendOrderedBroadcast()` 时需要传入多个参数，包括另一个广播接收器（称为结果接收器），用于在所有其他广播接收器处理意图后通知它，以及一组供这些接收器放置结果数据的数据引用。当所有广播接收器都获得了处理机会后，结果接收器的 `onReceive()` 方法会被调用并传递结果数据。
 
 ## 57.4 粘性广播意图
 
-默认情况下，广播意图在发送并被感兴趣的接收器处理后就会消失。然而，广播意图可以被定义为“粘性”（sticky）。粘性意图及其包含的数据在执行完成后仍留在系统中。粘性广播意图中的数据可以通过调用 `registerReceiver()` 方法的返回值来获取。许多 Android 系统广播都是粘性的，一个典型的例子是与电量状态相关的广播。
+默认情况下，广播意图在发送并被感兴趣的接收器处理后就会消失。然而，广播意图可以被定义为“粘性”（sticky）。粘性意图及其包含的数据在执行完成后仍留在系统中。
 
-
-
-
+粘性广播意图中的数据可以通过调用 `registerReceiver()` 方法的返回值来获取。许多 Android 系统广播都是粘性的，一个典型的例子是与电量状态相关的广播。
 
 可以通过调用 `removeStickyBroadcast()` 方法随时移除粘性广播（sticky broadcast），并将要移除的广播意引用作为参数传递。
 
-### 57.5 广播意（Broadcast Intent）示例
+## 57.5 广播意（Broadcast Intent）示例
 
 本章的剩余部分将通过创建一个基于 Android Studio 的示例来演示广播意的的实际应用。首先，将创建一个简单的应用程序来发送自定义广播意。随后，将创建一个相应的广播接收器（broadcast receiver），在检测到广播时在 Android 设备的屏幕上显示消息。最后，将修改广播接收器以检测系统发出的外部电源已从设备断出的通知。
 
-### 57.6 创建示例应用程序
+## 57.6 创建示例应用程序
 
-在欢迎界面上选择 `New Project` ，在弹出的新项目对话框中，点击 `Next` 按钮之前选择 `Empty Views Activity` 模板。
+在欢迎界面上选择 `New Project`，在弹出的新项目对话框中，点击 `Next` 按钮之前选择 `Empty Views Activity` 模板。
 
 在 `Name` 字段中输入 `SendBroadcast`，并指定 `com.ebookfrenzy.sendbroadcast` 为包名。在点击 `Finish` 按钮之前，将 `Minimum API level` 设置为 `API 33: Android 13.0 (Tiramisu)`，并将 `Language` 菜单更改为 `Java`。
 
@@ -12100,9 +12095,11 @@ unregisterReceiver(receiver);
 
 ## 57.7 创建并发送广播意
 
-已经创建了 `SendBroadcast` 应用程序的框架，现在是时候实现发送广播意的代码了。这涉及到之前指定的作为用户界面 `Button` 视图的 `onClick` 目标的 `broadcastIntent()` 方法。找到并双击 `MainActivity.java` 文件，修改它以添加创建并发送广播意的代码。修改后，该类的源代码应如下：
+已经创建了 `SendBroadcast` 应用程序的框架，现在是时候实现发送广播意的代码了。这涉及到之前指定的作为用户界面 `Button` 视图的 `onClick` 目标的 `broadcastIntent()` 方法。
 
-```
+找到并双击 `MainActivity.java` 文件，修改它以添加创建并发送广播意的代码。修改后，该类的源代码应如下：
+
+```java
 package com.ebookfrenzy.sendbroadcast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12132,13 +12129,15 @@ public class MainActivity extends AppCompatActivity {
 
 发送广播意的应用程序创建此结束。剩下的只是构建一个匹配的广播接收器。
 
-### 57.8 创建广播接收器
+## 57.8 创建广播接收器
 
-要创建广播接收器，需要创建一个子自 `BroadcastReceiver` 父类的类。在 Project 工具窗口中，导航到 `app -> java` 并右键点击包名。从弹出的菜单中选择 `New -> Other -> Broadcast Receiver`，将类名命名为 `MyReceiver`，并确保选择了 `Exported` 和 `Enabled` 选项。这些设置允许 Android 系统在需要时启动接收器，并确保该类能够接收其他应用程序发送的消息。配置好类后，点击 `Finish`。
+要创建广播接收器，需要创建一个子自 `BroadcastReceiver` 父类的类。在 Project 工具窗口中，导航到 `app -> java` 并右键点击包名。从弹出的菜单中选择 `New -> Other -> Broadcast Receiver`，将类名命名为 `MyReceiver`，并确保选择了 `Exported` 和 `Enabled` 选项。
+
+这些设置允许 Android 系统在需要时启动接收器，并确保该类能够接收其他应用程序发送的消息。配置好类后，点击 `Finish`。
 
 一旦创建，Android Studio 将自动将新的 `MyReceiver.java` 类文件加载到编辑器，其内容如下：
 
-```
+```java
 package com.ebookfrenzy.sendbroadcast;
 
 import android.content.BroadcastReceiver;
@@ -12159,7 +12158,7 @@ public class MyReceiver extends BroadcastReceiver {
 
 如代码所示，Android Studio 为新类生成了模板以及 `onReceive()` 方法的存根方法。现在需要对类进行一些更改以实现所需的行为。因此，继续留在 `MyReceiver.java` 文件中，修改代码使其如下：
 
-```
+```java
 package com.ebookfrenzy.sendbroadcast;
 
 import android.content.BroadcastReceiver;
@@ -12182,11 +12181,13 @@ public class MyReceiver extends BroadcastReceiver {
 
 广播接收器代码现在已完成。
 
-### 57.9 注册广播接收器
+## 57.9 注册广播接收器
 
-项目需要公开广播接收器的存在，并且必须包含一个意过滤器来指定它感兴趣的广播。当在上一节创建 `BroadcastReceiver` 类时，Android Studio 自动在清单文件中添加了一个 `<receiver>` 元素。因此，剩下的是在 `MainActivity.java` 文件中添加代码以创建意过滤器并注册接收器：
+项目需要公开广播接收器的存在，并且必须包含一个意过滤器来指定它感兴趣的广播。当在上一节创建 `BroadcastReceiver` 类时，Android Studio 自动在清单文件中添加了一个 `<receiver>` 元素。
 
-```
+因此，剩下的是在 `MainActivity.java` 文件中添加代码以创建意过滤器并注册接收器：
+
+```java
 package com.ebookfrenzy.sendbroadcast;
 
 .
@@ -12227,7 +12228,7 @@ public class MainActivity extends AppCompatActivity {
 
 在不再需要时注销广播接收器也是重要的：
 
-```
+```java
 @Override
 protected void onDestroy() {
     super.onDestroy();
@@ -12235,13 +12236,15 @@ protected void onDestroy() {
 }
 ```
 
-### 57.10 测试广播示例
+## 57.10 测试广播示例
 
 要测试广播发送器和接收器，在设备或 AVD 上运行 `SendBroadcast` 应用并等待其显示在屏幕上。运行时，触摸按钮，此时“Broadcast Intent Detected.”的吐司应该弹出几秒后消失。
 
-### 57.11 监听系统广播
+## 57.11 监听系统广播
 
-此示例的最后一个阶段是修改广播接收器的意过滤器，以监听外部电源从设备断开时广播的系统意。该动作是 `android.intent.action.ACTION_POWER_DISCONNECTED`。修改 `MainActivity.java` 文件中的 `configureReceiver()` 方法以添加此额外的过滤器：
+此示例的最后一个阶段是修改广播接收器的意过滤器，以监听外部电源从设备断开时广播的系统意。该动作是 `android.intent.action.ACTION_POWER_DISCONNECTED`。
+
+修改 `MainActivity.java` 文件中的 `configureReceiver()` 方法以添加此额外的过滤器：
 
 ```java
 private void configureReceiver() {
@@ -12253,8 +12256,6 @@ private void configureReceiver() {
     registerReceiver(receiver, filter);
 }
 ```
-
-
 
 
 
@@ -12273,17 +12274,17 @@ public void onReceive(Context context, Intent intent) {
 
 `Broadcast intent detected com.ebookfrenzy.sendbroadcast`
 
-接下来，移除当前为 Android 设备供电的 USB 连接器，此时接收器应该在 toast 消息中报告以下内容（在竖屏设备上，消息可能会被截断）。如果应用在模拟器上运行，请显示扩展控制，选择电池（Battery）选项并将充电器（Charger）连接设置设置为 None。
+接下来，移除当前为 Android 设备供电的 USB 连接器，此时接收器应该在 toast 消息中报告以下内容（在竖屏设备上，消息可能会被截断）。如果应用在模拟器上运行，请显示扩展控制，选择电池（Battery）选项并将充电器（Charger）连接设置设置为 `None`。
 
 `Broadcast intent detected android.intent.action.ACTION_POWER_DISCONNECTED`
 
 为了避免设备断开电源时总是出现此消息，请启动设置应用并选择应用（Apps）选项。从生成的列表中选择 `SendBroadcast` 应用并点击卸载（Uninstall）按钮。
 
-### 57.12 总结
+## 57.12 总结
 
 广播意图是一种机制，可以发布供 Android 系统上的多个组件消费的意图。广播通过注册广播接收器（Broadcast Receiver）来检测，该接收器随后被配置为监听匹配特定操作字符串的意图。通常情况下，广播接收器保持休眠状态，直到检测到匹配的意图被系统唤醒。Android 系统还使用广播意图来发布事件通知，例如低电量警告或外部电源与设备的连接或断开。
 
-除了提供广播意图和接收器的概述外，本章还通过了一个了一个发送广播意图并实现广播接收器以监听自定义和系统广播意图的示例。
+除了提供广播意图和接收器的概述外，本章还通过了一个发送广播意图并实现广播接收器以监听自定义和系统广播意图的示例。
 
 ## 58 Android 本地绑定服务 – 实例详解（Worked Example）
 
@@ -12297,7 +12298,7 @@ public void onReceive(Context context, Intent intent) {
 
 ### 58.2 绑定服务的交互选项
 
-实现客户端组件与绑定服务之间交互有两种两种推荐的机制。假设绑定服务是本地的，且与客户端组件属于同一个应用程序（换句话说，它在同一个进程中运行，对其他应用程序中的组件不可）。在这种情况下，推荐的方法是创建一个 `Binder` 类的子类并扩展它以为服务提供接口。然后由 `onBind()` 方法返回此 `Binder` 对象的实例，随后供客户端组件用于直接访问服务中持有的方法和数据。
+实现客户端组件与绑定服务之间交互有两种推荐的机制。假设绑定服务是本地的，且与客户端组件属于同一个应用程序（换句话说，它在同一个进程中运行，对其他应用程序中的组件不可）。在这种情况下，推荐的方法是创建一个 `Binder` 类的子类并扩展它以为服务提供接口。然后由 `onBind()` 方法返回此 `Binder` 对象的实例，随后供客户端组件用于直接访问服务中持有的方法和数据。
 
 当绑定服务不是应用程序本地的时（换句话说，它在与客户端组件不同的进程中运行），最佳交互方式是使用 `Messenger/Handler` 实现。
 
@@ -12309,21 +12310,19 @@ public void onReceive(Context context, Intent intent) {
 
 从欢迎屏幕选择“新建项目”（New Project）选项，在生成的新项目对话框中，点击下一步（Next）按钮之前选择“空视图活动”（Empty Views Activity）模板。
 
-### `Name` 字段中输入 `LocalBound` 并指定 `com.ebookfrenzy.localbound` 为包名。在点击完成（Finish）按钮之前，将“最低 API 级别”（Minimum API level）设置为 `API 26: Android 8.0 (Oreo)`，并将“语言”（Language）菜单更改为 `Java`。使用节 11.8 将项目迁移到视图绑定 中的步骤将项目迁移到视图绑定。
+在`Name`字段中输入`LocalBound`并指定`com.ebookfrenzy.localbound`为包名。在点击完成（Finish）按钮之前，将“最低 API 级别”（Minimum API level）设置为`API 26: Android 8.0 (Oreo)`，并将“语言”（Language）菜单更改为`Java`。使用节 11.8 将项目迁移到视图绑定中的步骤将项目迁移到视图绑定。
 
 一旦项目创建完成，下一步是添加一个新类作为绑定服务。
 
 ### 58.4 为项目添加绑定服务
 
-要向项目添加新类，请在项目窗口中右键点击包名（位于 `app -> java -> com.ebookfrenzy.localbound`），并选择 New（新建）-> Service -> Service。指定 `BoundService` 为类名，并在点击完成以创建类之前，确保“已导出”（Exported）和“已启用”（Enabled）选项已勾选。Android Studio 将 `BoundService.java` 文件加载到编辑器中，其内容如下：
+要向项目添加新类，请在项目窗口中右键点击包名（位于`app -> java -> com.ebookfrenzy.localbound`），并选择`New`（新建）-> `Service` -> `Service`。指定`BoundService`为类名，并在点击完成以创建类之前，确保“已导出”（Exported）和“已启用”（Enabled）选项已勾选。Android Studio 将`BoundService.java`文件加载到编辑器中，其内容如下：
 
 ```java
 package com.ebookfrenzy.localbound;
 
 import android.app.Service;
-
 import android.content.Intent;
-
 import android.os.IBinder;
 
 public class BoundService extends Service {
@@ -12340,13 +12339,9 @@ public class BoundService extends Service {
 
 ### 58.5 实现 Binder
 
-如前所述，本地绑定服务可以通过向客户端传递配置适当的 `Binder` 对象来与其通信。这是通过在绑定服务类内部创建一个 `Binder` 子类并通过扩展它添加一个或多个客户端可以调用的方法来实现的。通常涉及实现一个返回绑定服务实例引用的方法。有了该实例的引用，客户端就可以直接访问并调用服务内部的方法。
+如前所述，本地绑定服务可以通过向客户端传递配置适当的`Binder`对象来与其通信。这是通过在绑定服务类内部创建一个`Binder`子类并通过扩展它添加一个或多个客户端可以调用的方法来实现的。通常涉及实现一个返回绑定服务实例引用的方法。有了该实例的引用，客户端就可以直接访问并调用服务内部的方法。
 
-对于此示例，需要对上一节创建的模板 `BoundService` 类进行一些更改。首先，需要声明一个 `Binder` 子类。该类将包含一个名为 `getService()` 的方法，该方法将返回当前服务的实例引用（由 `this` 关键字表示）。根据这些要求，编辑 `BoundService.java` 文件并按如下方式修改：
-
-
-
-
+对于此示例，需要对上一节创建的模板`BoundService`类进行一些更改。首先，需要声明一个`Binder`子类。该类将包含一个名为`getService()`的方法，该方法将返回当前服务的实例引用（由`this`关键字表示）。根据这些要求，编辑`BoundService.java`文件并按如下方式修改：
 
 ```java
 import android.os.Binder;
@@ -12373,11 +12368,9 @@ public class BoundService extends Service {
 }
 ```
 
-### 转换后的文本（排版说明）
+对`BoundService`类进行了修改后，花一点时间回顾一下步骤。首先，声明了一个`Binder`子类（名为`MyLocalBinder`）。该类包含一个方法，返回`BoundService`实例引用。创建一个`MyLocalBinder`类实例并赋值给`myBinder` `IBinder`（由于`Binder`是`IBinder`的子类，因此没有类型匹配）。
 
-对 `BoundService` 类进行了修改后，花一点时间回顾一下步骤。首先，声明了一个 `Binder` 子类（名为 `MyLocalBinder`）。该类包含一个方法，返回 `BoundService` 实例引用。创建一个 `MyLocalBinder` 类实例并赋值给 `myBinder` `IBinder`（由于 `Binder` 是 `IBinder` 的子类，因此没有类型匹配）。
-
-接下来，需要修改 `onBind()` 方法返回 `myBinder` 对象引用，并实现一个新的公共方法，当绑定到服务的客户端调用时返回当前时间：
+接下来，需要修改`onBind()`方法返回`myBinder`对象引用，并实现一个新的公共方法，当绑定到服务的客户端调用时返回当前时间：
 
 ```java
 package com.ebookrenzy.localbound;
@@ -12417,7 +12410,7 @@ public class BoundService extends Service {
 }
 ```
 
-此时，绑定服务已完成并准备添加到项目文件中。在项目窗口中找到并双击 `LocalBound` 项目的 `AndroidManifest.xml` 文件，一旦进入 Manifest 编辑器，验证 Android Studio 是否已为服务添加了 `<service>` 条目：
+此时，绑定服务已完成并准备添加到项目文件中。在项目窗口中找到并双击`LocalBound`项目的`AndroidManifest.xml`文件，一旦进入 Manifest 编辑器，验证 Android Studio 是否已为服务添加了`<service>`条目：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -12444,11 +12437,11 @@ public class BoundService extends Service {
 </manifest>
 ```
 
-下一阶段是在 activity 中编写代码以绑定服务并调用 `getCurrentTime()` 方法。
+下一阶段是在 activity 中编写代码以绑定服务并调用`getCurrentTime()`方法。
 
 ### 58.6 将客户端绑定到服务
 
-在本教程中，客户端是运行应用程序的 `MainActivity` 实例。如前所述，要成功绑定服务并接收服务 `onBind()` 方法返回的 `IBinder` 对象，需要创建一个 `ServiceConnection` 子类并实现 `onServiceConnected()` 和 `onServiceDisconnected()` 回调方法。编辑 `MainActivity.java` 文件并修改如下：
+在本教程中，客户端是运行应用程序的`MainActivity`实例。如前所述，要成功绑定服务并接收服务`onBind()`方法返回的`IBinder`对象，需要创建一个`ServiceConnection`子类并实现`onServiceConnected()`和`onServiceDisconnected()`回调方法。编辑`MainActivity.java`文件并修改如下：
 
 ```java
 package com.ebookrenzy.localbound;
@@ -12481,11 +12474,11 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-当客户端成功绑定到服务时，将调用 `onServiceConnected()` 方法。该方法接收服务 `onBind()` 方法返回的 `IBinder` 对象参数。该参数被强制转换为 `MyLocalBinder` 类型对象。然后调用 binder 对象的 `getService()` 方法获取服务实例的引用，进而将其赋值给 `myService`。一个布尔标志表示连接已成功建立。
+当客户端成功绑定到服务时，将调用`onServiceConnected()`方法。该方法接收服务`onBind()`方法返回的`IBinder`对象参数。该参数被强制转换为`MyLocalBinder`类型对象。然后调用 binder 对象的`getService()`方法获取服务实例的引用，进而将其赋值给`myService`。一个布尔标志表示连接已成功建立。
 
-当连接结束时，会调用 `onServiceDisconnected()` 方法并将布尔标志设为 false。
+当连接结束时，会调用`onServiceDisconnected()`方法并将布尔标志设为 false。
 
-建立连接后，下一步是修改 activity 以绑定服务。这涉及创建一个 `intent` 并调用 `bindService()` 方法，该操作可以在 activity 的 `onCreate()` 方法中执行：
+建立连接后，下一步是修改 activity 以绑定服务。这涉及创建一个`intent`并调用`bindService()`方法，该操作可以在 activity 的`onCreate()`方法中执行：
 
 ```java
 @Override
@@ -12498,15 +12491,17 @@ public void onCreate(Bundle savedInstanceState) {
 
 ### 58.7 完成示例
 
-剩下的工作是添加一种调用 `getCurrentTime()` 方法并将结果显示给用户的机制。按照惯例，Android Studio 会为 activity 创建一个模板 `activity_main.xml` 文件，其中只包含一个 `TextView`。将此文件加载到编辑器，使用设计模式选择 `TextView` 组件并将 ID 改为 `myTextView`。在 `TextView` 下方添加一个 `Button` 视图，并将文本改为“Show Time”，将其提取为字符串资源 `show_time`。完成这些更改后，布局应如图 58-1 所示。
+
+
+剩下的工作是添加一种调用`getCurrentTime()`方法并将结果显示给用户的机制。按照惯例，Android Studio 会为 activity 创建一个模板`activity_main.xml`文件，其中只包含一个`TextView`。将此文件加载到编辑器，使用设计模式选择`TextView`组件并将 ID 改为`myTextView`。在`TextView`下方添加一个`Button`视图，并将文本改为“Show Time”，将其提取为字符串资源`show_time`。完成这些更改后，布局应如图 58-1 所示。
 
 ![](img/as_local_bound_ui.jpg)
 
 图 58-1
 
-通过配置 Button 的 `onClick` 属性来完成用户界面。
+通过配置 Button 的`onClick`属性来完成用户界面。
 
-最后，编辑 `MainActivity.java` 文件代码来实现 `showTime()` 方法。该方法调用服务的 `getCurrentTime()` 方法（得益于 `onServiceConnected()` 方法，现在可以通过 activity 通过 `myService` 引用获取），并将结果字符串赋值给 `TextView`：
+最后，编辑`MainActivity.java`文件代码来实现`showTime()`方法。该方法调用服务的`getCurrentTime()`方法（得益于`onServiceConnected()`方法，现在可以通过 activity 通过`myService`引用获取），并将结果字符串赋值给`TextView`：
 
 ```java
 package com.ebookrenzy.localbound;
@@ -12528,51 +12523,47 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### 58.8 测试应用程序
+## 58.8 测试应用程序
 
 代码更改完成后，对应用程序进行测试。一旦可见，触摸按钮并注意文本视图更改为显示当前日期和时间。该示例成功启动并绑定到了服务，然后调用了该服务的方法执行任务，并将结果返回给 activity。
 
-### 58.9 总结
+## 58.9 总结
 
-
-
-
-
-当一个绑定的服务是本地的且对应用程序私有的时，该应用程序内的组件无需诉助于进程间通信（IPC）即可与该服务进行交互。简单来说，服务的 `onBind()` 方法返回一个 `IBinder` 对象，该对象包含指向正在运行的服务实例的引用。客户端组件实现 `ServiceConnection` 子类，其中包含回调方法，这些方法在服务连接和断开时会被调用。前一种方法将接收由 `onBind()` 方法返回的 `IBinder` 对象，从而允许调用服务中的公共方法。
+当一个绑定的服务是本地的且对应用程序私有的时，该应用程序内的组件无需诉助于进程间通信（IPC）即可与该服务进行交互。简单来说，服务的`onBind()`方法返回一个`IBinder`对象，该对象包含指向正在运行的服务实例的引用。客户端组件实现`ServiceConnection`子类，其中包含回调方法，这些方法在服务连接和断开时会被调用。前一种方法将接收由`onBind()`方法返回的`IBinder`对象，从而允许调用服务中的公共方法。
 
 在介绍了本地绑定服务的实现后，下一章将重点关注如何使用 IPC 与远程绑定服务进行交互。
 
-## 59. Android 远程绑定服务——实例示例
+# 59. Android 远程绑定服务——实例示例
 
-在关于 Android 服务的最后一个章节中，将开发一个示例应用程序，以演示使用 `messenger` 和 `handler` 配置来辅助客户端与远程绑定服务之间的交互。
+在关于 Android 服务的最后一个章节中，将开发一个示例应用程序，以演示使用`messenger`和`handler`配置来辅助客户端与远程绑定服务之间的交互。
 
-### 59.1 客户端到远程服务的通信
+## 59.1 客户端到远程服务的通信
 
-如上一章所述，客户端与本地服务之间的交互可以通过向客户端返回一个包含服务对象引用的 `IBinder` 对象来实现。然而，对于远程服务，这种方法不可行，因为远程服务运行在不同的进程中，因此无法从客户端直接访问。
+如上一章所述，客户端与本地服务之间的交互可以通过向客户端返回一个包含服务对象引用的`IBinder`对象来实现。然而，对于远程服务，这种方法不可行，因为远程服务运行在不同的进程中，因此无法从客户端直接访问。
 
-对于远程服务，必须创建一个 `Messenger` 和 `Handler` 配置，允许消息在客户端和服务服务的跨进程边界之间传递。
+对于远程服务，必须创建一个`Messenger`和`Handler`配置，允许消息在客户端和服务服务的跨进程边界之间传递。
 
-具体而言，服务会创建一个 `Handler` 实例，当接收到客户端的消息时，该实例会被调用。在初始化方面，由 `Handler` 负责创建一个 `Messenger` 对象，该对象反过来又创建一个 `IBinder` 对象，并在 `onBind()` 方法中返回给客户端。客户端使用此 `IBinder` 对象创建 `Messenger` 对象的实例，并随后向服务处理器发送消息。客户端每发送一次消息，处理器的 `handleMessage()` 方法就会被调用一次，并传递一个 `message` 对象。
+具体而言，服务会创建一个`Handler`实例，当接收到客户端的消息时，该实例会被调用。在初始化方面，由`Handler`负责创建一个`Messenger`对象，该对象反过来又创建一个`IBinder`对象，并在`onBind()`方法中返回给客户端。客户端使用此`IBinder`对象创建`Messenger`对象的实例，并随后向服务处理器发送消息。客户端每发送一次消息，处理器的`handleMessage()`方法就会被调用一次，并传递一个`message`对象。
 
-本章创建的示例将由一个运行在单独进程中的 Activity 和一个绑定服务组成。`Messenger/Handler` 机制将向服务发送字符串，该字符串将显示在 `Logcat` 输出中。
+本章创建的示例将由一个运行在单独进程中的 Activity 和一个绑定服务组成。`Messenger/Handler`机制将向服务发送字符串，该字符串将显示在`Logcat`输出中。
 
-### 59.2 创建示例应用程序
+## 59.2 创建示例应用程序
 
-从欢迎界面选择 `New Project` 选项，在出现的新项目对话框中，选择 `Empty Views Activity` 模板，然后点击 `Next` 按钮。
+从欢迎界面选择`New Project`选项，在出现的新项目对话框中，选择`Empty Views Activity`模板，然后点击`Next`按钮。
 
-在 `Name` 字段中输入 `RemoteBound`，并指定包名为 `com.ebookfrenzy.remotebound`。在点击 `Finish` 按钮之前，将 `Minimum API` 级别设置改为 `API 26: Android 8.0 (Oreo)`，并将语言菜单设置为 `Java`。
+在`Name`字段中输入`RemoteBound`，并指定包名为`com.ebookfrenzy.remotebound`。在点击`Finish`按钮之前，将`Minimum API`级别设置改为`API 26: Android 8.0 (Oreo)`，并将语言菜单设置为`Java`。
 
-### 59.3 设计用户界面
+## 59.3 设计用户界面
 
-在 Project 工具窗口中找到 `activity_main.xml` 文件并双击将其加载到 Layout Editor 工具中。在 Layout Editor 工具的 Design 模式下，右键点击默认的 `TextView` 实例，选择 `Convert view...` 菜单选项，从弹出对话框中选择 `Button` 视图并点击 `Apply`。将按钮的文本属性更改为“Send Message”，并将字符串提取到名为 `send_message` 的新资源中。
+在 Project 工具窗口中找到`activity_main.xml`文件并双击将其加载到 Layout Editor 工具中。在 Layout Editor 工具的 Design 模式下，右键点击默认的`TextView`实例，选择`Convert view...`菜单选项，从弹出对话框中选择`Button`视图并点击`Apply`。将按钮的文本属性更改为“Send Message”，并将字符串提取到名为`send_message`的新资源中。
 
-最后，配置 `onClick` 属性以调用名为 `sendMessage` 的方法。
+最后，配置`onClick`属性以调用名为`sendMessage`的方法。
 
-### 59.4 实现远程绑定服务
+## 59.4 实现远程绑定服务
 
-要实现此示例的远程绑定服务，在 Project 工具窗口中右键点击包名（位于 `app -> java` 下），并选择 `New -> Service -> Service` 菜单选项为项目添加一个新类。指定 `RemoteService` 为类名，并确保在点击 `Finish` 创建类之前勾选了 `Exported` 和 `Enabled` 选项。
+要实现此示例的远程绑定服务，在 Project 工具窗口中右键点击包名（位于`app -> java`下），并选择`New -> Service -> Service`菜单选项为项目添加一个新类。指定`RemoteService`为类名，并确保在点击`Finish`创建类之前勾选了`Exported`和`Enabled`选项。
 
-下一步是为新服务实现处理器类。这通过扩展 `Handler` 类并实现 `handleMessage()` 方法来实现。该方法会在接收到来自客户端的消息时被调用。它将接收一个 `Message` 对象作为参数，包含客户端需要传递给服务的任何数据。在本例中，这将是一个包含要显示给用户的字符串的 `Bundle` 对象。在完成此实现后，`RemoteService.java` 文件中修改后的类内容应如下：
+下一步是为新服务实现处理器类。这通过扩展`Handler`类并实现`handleMessage()`方法来实现。该方法会在接收到来自客户端的消息时被调用。它将接收一个`Message`对象作为参数，包含客户端需要传递给服务的任何数据。在本例中，这将是一个包含要显示给用户的字符串的`Bundle`对象。在完成此实现后，`RemoteService.java`文件中修改后的类内容应如下：
 
 ```java
 package com.ebookfrenzy.remotebound;
@@ -12615,7 +12606,7 @@ public class RemoteService extends Service {
 }
 ```
 
-实现处理器后，服务中唯一的任务是修改 `onBind()` 方法，使其返回一个包含 `Messenger` 的 `IBinder`，该 `Messenger` 反过来包含一个指向处理器的引用：
+实现处理器后，服务中唯一的任务是修改`onBind()`方法，使其返回一个包含`Messenger`的`IBinder`，该`Messenger`反过来包含一个指向处理器的引用：
 
 ```java
 final Messenger myMessenger = new Messenger(new IncomingHandler());
@@ -12626,11 +12617,11 @@ public IBinder onBind(Intent intent) {
 }
 ```
 
-上述代码的第一行创建了处理器的实例并将其传递给 `Messenger` 对象。在 `onBind()` 方法中，调用 messenger 的 `getBinder()` 方法以返回 `IBinder`。
+上述代码的第一行创建了处理器的实例并将其传递给`Messenger`对象。在`onBind()`方法中，调用 messenger 的`getBinder()`方法以返回`IBinder`。
 
-### 59.5 在 Manifest 中配置远程服务
+## 59.5 在 Manifest 中配置远程服务
 
-为了准确演示客户端与远程服务之间的通信，有必要配置服务与应用程序的其他部分分离运行。这通过在文件中 `<service>` 标签内添加 `android:process` 属性来实现。为了启动服务，还需要为服务提供意图过滤器（intent filter）。实现此操作时，修改 `AndroidManifest.xml` 添加所需的条目：
+为了准确演示客户端与远程服务之间的通信，有必要配置服务与应用程序的其他部分分离运行。这通过在文件中`<service>`标签内添加`android:process`属性来实现。为了启动服务，还需要为服务提供意图过滤器（intent filter）。实现此操作时，修改`AndroidManifest.xml`添加所需的条目：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -12658,10 +12649,7 @@ public IBinder onBind(Intent intent) {
 </manifest>
 ```
 
-
-
-
-与本地绑定服务一样，客户端组件需要实现 `ServiceConnection` 类的一个实例，并包含 `onServiceConnected()` 和 `onServiceDisconnected()` 方法。同样，与本地服务相同，`onServiceConnected()` 方法将接收由远程服务的 `onBind()` 方法返回的 `IBinder` 对象，该对象将用于向服务器处理器发送消息。在本示例中，客户端是 `MainActivity`，其代码位于 `MainActivity.java` 中。加载此文件并进行修改，以添加 `ServiceConnection` 类、一个用于存储接收到的 `Messenger` 对象引用的变量，以及一个用于指示连接是否建立的 `Boolean` 标志位：
+与本地绑定服务一样，客户端组件需要实现`ServiceConnection`类的一个实例，并包含`onServiceConnected()`和`onServiceDisconnected()`方法。同样，与本地服务相同，`onServiceConnected()`方法将接收由远程服务的`onBind()`方法返回的`IBinder`对象，该对象将用于向服务器处理器发送消息。在本示例中，客户端是`MainActivity`，其代码位于`MainActivity.java`中。加载此文件并进行修改，以添加`ServiceConnection`类、一个用于存储接收到的`Messenger`对象引用的变量，以及一个用于指示连接是否建立的`Boolean`标志位：
 
 ```java
 package com.ebookfrenzy.remotebound;
@@ -12709,7 +12697,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-接下来，必须添加一些代码来绑定到远程服务。这涉及到创建一个与清单文件中声明的服务意图过滤器匹配的 `intent`，然后调用 `bindService()` 方法，并将 `intent` 和 `ServiceConnection` 实例引用作为参数传递。在本示例中，此代码将在应用的 `onCreate()` 方法中实现：
+接下来，必须添加一些代码来绑定到远程服务。这涉及到创建一个与清单文件中声明的服务意图过滤器匹配的`intent`，然后调用`bindService()`方法，并将`intent`和`ServiceConnection`实例引用作为参数传递。在本示例中，此代码将在应用的`onCreate()`方法中实现：
 
 ```java
 @Override
@@ -12722,9 +12710,9 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-### 59.7 向远程服务发送消息
+## 59.7 向远程服务发送消息
 
-在测试应用程序之前，剩下的工作是在 `MainActivity` 类中实现 `sendMessage()` 方法，该方法被配置为用户点击界面上的按钮时调用。此方法需要检查服务是否已连接，创建一个包含服务器要显示的的字符串的 `bundle` 对象，将其添加到 `Message` 对象中并发送：
+在测试应用程序之前，剩下的工作是在`MainActivity`类中实现`sendMessage()`方法，该方法被配置为用户点击界面上的按钮时调用。此方法需要检查服务是否已连接，创建一个包含服务器要显示的的字符串的`bundle`对象，将其添加到`Message`对象中并发送：
 
 ```java
 public void sendMessage(View view) {
@@ -12741,37 +12729,37 @@ public void sendMessage(View view) {
 }
 ```
 
-代码完成后，进行编译并运行。打开 Logcat 窗口并过滤 `RemoteServer`。一旦应用程序启动，点击用户界面上的按钮，此时消息应该就会出现：
+代码完成后，进行编译并运行。打开 Logcat 窗口并过滤`RemoteServer`。一旦应用程序启动，点击用户界面上的按钮，此时消息应该就会出现：
 
-### 59.8 总结
+## 59.8 总结
 
-要实现客户端与绑定服务之间的交互，应用必须实现一个处理器（handler）。该技术背的基本概念在本章中已经涵盖。
+
+
+要实现客户端与绑定服务之间的交互，应用必须实现一个处理器（`handler`）。该技术背后的基本概念在本章中已经涵盖。
 
 # 60 线程、处理器和执行器概述
 
 线程是任何多任务操作系统的基石，可以被视为运行在应用程序中的微进程。在本章中，我们将探索线程的重要性，并演示如何创建和管理它们。
 
-### 60.1 主线程
+## 60.1 主线程
 
 当 Android 应用程序首次启动时，运行时会创建一个线程，所有组件都在该线程中运行。此线程通常被称为主线程。主线程的主要作用是处理用户界面。应用程序内启动的任何额外组件默认也会在主线程上运行。在主线程上执行耗时任务的组件将导致整个应用程序锁定，直到任务完成。
 
-### 60.2 线程处理器 (Handlers)
+## 60.2 线程处理器（Handlers）
 
-显然，Android 开发的关键规则之一是永远不要主线程上执行耗时操作。第二个同样重要的规则是，独立线程中的代码绝不能直接更新用户界面的任何部分。对用户界面的更改必须始终从主线程执行。如果线程中执行的代码需要与用户界面交互，它必须通过与主线程同步来实现。这通过在主线程中创建一个处理器来实现，该处理器随后接收来自另一个线程的消息并相应地更新用户界面。
+显然，Android 开发的关键规则之一是永远不要在主线程上执行耗时操作。第二个同样重要的规则是，独立线程中的代码绝不能直接更新用户界面的任何部分。对用户界面的更改必须始终从主线程执行。如果线程中执行的代码需要与用户界面交互，它必须通过与主线程同步来实现。这通过在主线程中创建一个处理器来实现，该处理器随后接收来自另一个线程的消息并相应地更新用户界面。
 
-### 60.3 线程示例
+## 60.3 线程示例
 
 本章的剩余部分将通过一些简单的示例，旨在对线程提供基础介绍。第一步将强调在独立于主线程的线程中执行耗时任务的重要性。
 
-
-
-
-将文本更改为“Press Me”并将其提取为名为 `press_me` 的资源。在布局中仍选中按钮视图的情况下，找到 `onClick` 属性并输入 `buttonClick` 作为方法名。
+将文本更改为“Press Me”并将其提取为名为`press_me`的资源。在布局中仍选中按钮视图的情况下，找到`onClick`属性并输入`buttonClick`作为方法名。
 
 ![](img/as_thread_example_ui_one_button.jpg)
+
 图 60-1
 
-接下来，将 `MainActivity.java` 文件加载到编辑面板中，并为 `buttonClick()` 方法添加代码，当用户点击 `Button` 视图时将调用该方法。由于此这里的目标是演示在主线程上执行耗时任务的问题，代码将在 `TextView` 对象上显示不同文本之前简单地暂停 20 秒：
+接下来，将`MainActivity.java`文件加载到编辑面板中，并为`buttonClick()`方法添加代码，当用户点击`Button`视图时将调用该方法。由于此这里的目标是演示在主线程上执行耗时任务的问题，代码将在`TextView`对象上显示不同文本之前简单地暂停 20 秒：
 
 ```java
 public void buttonClick(View view) {
@@ -12791,13 +12779,14 @@ public void buttonClick(View view) {
 代码修改完成后，在物理设备或模拟器上运行应用程序。一旦应用程序运行，点击按钮，此时应用程序将看起来冻结。例如，将无法第二次点击按钮，在某些情况下，操作系统将报告应用程序无响应，如 图 60-2 所示。
 
 ![](img/as_4.2_threadexample_not_responding.jpg)
+
 图 60-2
 
-显然，在 `buttonClick()` 方法中任何需要时间完成的任务都需要在单独的线程中执行。
+显然，在`buttonClick()`方法中任何需要时间完成的任务都需要在单独的线程中执行。
 
-### 60.5 创建新线程
+## 60.5 创建新线程
 
-要创建一个新线程，需要将要在该线程中执行的代码放置在 `Runnable` 实例的 `run()` 方法中。然后，需要创建一个新的 `Thread` 对象，并将 `Runnable` 实例的引用传递给构造函数。最后，需要调用线程对象的 `start()` 方法来启动线程运行。因此，为了执行 `buttonClick()` 方法中的任务，需要进行以下更改：
+要创建一个新线程，需要将要在该线程中执行的代码放置在`Runnable`实例的`run()`方法中。然后，需要创建一个新的`Thread`对象，并将`Runnable`实例的引用传递给构造函数。最后，需要调用线程对象的`start()`方法来启动线程运行。因此，为了执行`buttonClick()`方法中的任务，需要进行以下更改：
 
 ```java
 public void buttonClick(View view) {
@@ -12820,7 +12809,7 @@ public void buttonClick(View view) {
 }
 ```
 
-事实上，如果需要，可以使用 Java Lambda 表达式来简化 `runnable` 的声明。进行此更改将导致以下声明：
+事实上，如果需要，可以使用 Java Lambda 表达式来简化`runnable`的声明。进行此更改将导致以下声明：
 
 ```java
     Runnable runnable = () -> {
@@ -12838,13 +12827,13 @@ public void buttonClick(View view) {
     myThread.start();
 ```
 
-现在运行应用程序时，点击按钮会导致延迟在新线程中执行，让主线程继续处理用户界面。事实上，每次点击按钮都会创建一个新线程，允许任务执行多次。仔细检查 `button()` 方法的更新后的代码将会发现更新 `TextView` 的代码已被移除。正如之前提到的，从主线程以外的线程更新用户界面元素违反了 Android 开发的一项关键规则。因此，为了更新用户界面，必须为线程实现一个 `Handler`。
+现在运行应用程序时，点击按钮会导致延迟在新线程中执行，让主线程继续处理用户界面。事实上，每次点击按钮都会创建一个新线程，允许任务执行多次。仔细检查`button()`方法的更新后的代码将会发现更新`TextView`的代码已被移除。正如之前提到的，从主线程以外的线程更新用户界面元素违反了 Android 开发的一项关键规则。因此，为了更新用户界面，必须为线程实现一个`Handler`。
 
-### 60.6 实现线程处理器（Handler）
+## 60.6 实现线程处理器（Handler）
 
-线程处理器在应用程序的主线程中实现，主要用于响应应用程序进程内运行的其他线程发送的消息来更新用户界面。Handler 是自 Android `Handler` 类的子类，可以通过指定要由线程执行的 `Runnable`，或者通过重写 `Handler` 子类中的 `handleMessage()` 回调来使用，该回调会在线程向处理器发送消息时被调用。
+线程处理器在应用程序的主线程中实现，主要用于响应应用程序进程内运行的其他线程发送的消息来更新用户界面。`Handler`是自 Android`Handler`类的子类，可以通过指定要由线程执行的`Runnable`，或者通过重写`Handler`子类中的`handleMessage()`回调来使用，该回调会在线程向处理器发送消息时被调用。
 
-为了本示例的目的，将实现一个处理器，以便从之前创建的线程内部更新用户界面。将 `MainActivity.java` 文件加载到 Android 编辑器中并修改代码，为活动添加一个 `Handler` 实例：
+为了本示例的目的，将实现一个处理器，以便从之前创建的线程内部更新用户界面。将`MainActivity.java`文件加载到 Android 编辑器中并修改代码，为活动添加一个`Handler`实例：
 
 ```java
 import android.os.Handler;
@@ -12859,7 +12848,7 @@ public class MainActivity extends AppCompatActivity {
     };
 ```
 
-上述代码更改声明了一个处理器，并在该处理器内部实现了 `handleMessage()` 回调，该回调会在线程向处理器发送消息时被调用。在此例中，代码简单地在用户界面的 `TextView` 对象上显示一个字符串。现在剩下的是修改 `buttonClick()` 方法中创建的线程，在延迟完成后向处理器发送消息：
+上述代码更改声明了一个处理器，并在该处理器内部实现了`handleMessage()`回调，该回调会在线程向处理器发送消息时被调用。在此例中，代码简单地在用户界面的`TextView`对象上显示一个字符串。现在剩下的是修改`buttonClick()`方法中创建的线程，在延迟完成后向处理器发送消息：
 
 ```java
 public void buttonClick(View view) {
@@ -12880,11 +12869,11 @@ public void buttonClick(View view) {
 }
 ```
 
-注意，所做的更改只是调用了处理器的 `sendEmptyMessage()` 方法。由于处理器不对收到的任何消息内容进行操作，它收到的是空对象。编译并运行应用程序，在执行时点击按钮。在 20 秒延迟后，用户界面的 `TextView` 对象将显示新文本。
+注意，所做的更改只是调用了处理器的`sendEmptyMessage()`方法。由于处理器不对收到的任何消息内容进行操作，它收到的是空对象。编译并运行应用程序，在执行时点击按钮。在 20 秒延迟后，用户界面的`TextView`对象将显示新文本。
 
-### 60.7 向处理器传递消息
+## 60.7 向处理器传递消息
 
-虽然上一个示例触发了 `handleMessage()`处理器回调，但它没有利用消息对象向处理器发送数据。在教程的这一阶段，将进一步修改示例以在线程和处理器之间传递数据。首先，`buttonClick()` 方法中更新的线程将从系统获取字符串格式的日期和时间并存储在 `Bundle` 对象中。然后调用处理器的 `obtainMessage()` 方法获取消息对象。最后，在通过调用处理器的 `sendMessage()` 方法发送之前，将 `bundle` 添加到消息对象中：
+虽然上一个示例触发了`handleMessage()`处理器回调，但它没有利用消息对象向处理器发送数据。在教程的这一阶段，将进一步修改示例以在线程和处理器之间传递数据。首先，`buttonClick()`方法中更新的线程将从系统获取字符串格式的日期和时间并存储在`Bundle`对象中。然后调用处理器的`obtainMessage()`方法获取消息对象。最后，在通过调用处理器的`sendMessage()`方法发送之前，将`bundle`添加到消息对象中：
 
 ```java
 public void buttonClick(View view) {
@@ -12906,10 +12895,6 @@ public void buttonClick(View view) {
 }
 ```
 
-
-
-
-
 ```java
 bundle.putString("myKey", "Thread Completed");
 msg.setData(bundle);
@@ -12920,7 +12905,7 @@ Thread myThread = new Thread(runnable);
 myThread.start();
 ```
 
-接下来，更新 `handler` 的 `handleMessage()` 方法，从消息的 `bundle` 对象中提取日期时间字符串，并将其显示在 `TextView` 对象上：
+接下来，更新`handler`的`handleMessage()`方法，从消息的`bundle`对象中提取日期时间字符串，并将其显示在`TextView`对象上：
 
 ```java
 Handler handler = new Handler(Looper.getMainLooper()) {
@@ -12933,19 +12918,19 @@ Handler handler = new Handler(Looper.getMainLooper()) {
 };
 ```
 
-最后，编译并运行应用程序，测试在线程完成后，点击按钮是否会使 `TextView` 对象上显示“Thread Complete”消息。
+最后，编译并运行应用程序，测试在线程完成后，点击按钮是否会使`TextView`对象上显示“Thread Complete”消息。
 
-### 60.8 Java Executor 并发
+## 60.8 Java Executor 并发
 
 到本章为止，我们一直只关注直接创建和管理 Java 线程。虽然对于简单的多线程任务来说是可以接受的，但在处理涉及大量线程的复杂情况时，这可能是不够的。例如，启动和停止线程涉及系统开销。因此，一个创建和销毁大量线程的应用面临着性能下降的风险。基础线程 API 也没有提供用于调度、重复任务执行或从任务中返回结果的预构建选项。
 
-通过使用 Java 并发框架（`java.util.concurrent` 包的一部分）中的 `Executor` 类可以克服直接操作线程的缺点。该框架允许创建活动线程池，并管理如何将任务分配给这些线程。这使得现有线程可以重用于其他任务，而无需不断创建新线程。
+通过使用 Java 并发框架（`java.util.concurrent`包的一部分）中的`Executor`类可以克服直接操作线程的缺点。该框架允许创建活动线程池，并管理如何将任务分配给这些线程。这使得现有线程可以重用于其他任务，而无需不断创建新线程。
 
-该框架还提供了额外功能，包括任务完成后返回结果的能力（称为 `Callable``）、检查线程状态，以及调度任务在超时后或按重复的时间间隔运行。
+该框架还提供了额外功能，包括任务完成后返回结果的能力（称为`Callable`）、检查线程状态，以及调度任务在超时后或按重复的时间间隔运行。
 
-### 60.9 使用 Runnable 任务
+## 60.9 使用 Runnable 任务
 
-探索该框架的第一步是修改 `buttonClicked()` 方法，以使用并发框架 `Executor` 在单独线程中运行任务：
+探索该框架的第一步是修改`buttonClicked()`方法，以使用并发框架`Executor`在单独线程中运行任务：
 
 ```java
 import java.util.concurrent.ExecutorService;
@@ -12975,7 +12960,7 @@ public void buttonClick(View view) {
 }
 ```
 
-当执行上述代码时，超时将像以前一样在单独线程中执行。然而，对方法进行的更改需要一些解释。首先，从系统 `Executors` 实例获取 `ExecutorService` 实例的引用：
+当执行上述代码时，超时将像以前一样在单独线程中执行。然而，对方法进行的更改需要一些解释。首先，从系统`Executors`实例获取`ExecutorService`实例的引用：
 
 ```java
 ExecutorService executor = Executors.newSingleThreadExecutor();
@@ -12987,7 +12972,7 @@ ExecutorService executor = Executors.newSingleThreadExecutor();
 ExecutorService executor = Executors.newThreadPool(10);
 ```
 
-接下来，通过 `executor` 的 `submit()` 方法启动任务：
+接下来，通过`executor`的`submit()`方法启动任务：
 
 ```java
 executor.submit(new Runnable() {
@@ -13003,10 +12988,9 @@ executor.submit(() -> {
 });
 ```
 
+`buttonClick()`方法现在被配置为启动一个`Callable`任务，并将返回值赋值给`Future`变量。应用程序现在需要知道任务何时完成以及结果何时可用。一种方案是调用`Future`变量的`get()`方法。由于该方法在执行失败或被中断时可能会抛出异常，因此必须在如下的`try/catch`语句中执行：
 
 
-
-`buttonClick()` 方法现在被配置为启动一个 `Callable` 任务，并将返回值赋值给 `Future` 变量。应用程序现在需要知道任务何时完成以及结果何时可用。一种方案是调用 `Future` 变量的 `get()` 方法。由于该方法在执行失败或被中断时可能会抛出异常，因此必须在如下的 `try/catch` 语句中执行：
 
 ```
 String result = null;
@@ -13018,13 +13002,13 @@ try {
 }
 ```
 
-遗憾的是，`get()` 方法会阻塞当前线程，直到线程中运行的任务完成，这实际上违背了初初在独立线程中运行任务的意图。另一种方案是为 `get()` 方法调用提供一个超时时间，超时后它将把控制权交给当前线程。例如，下面的代码将导致 `get()` 调用在 3 秒后超时：
+遗憾的是，`get()` 方法会阻塞当前线程，直到线程中运行的任务完成，这实际上违背了最初在独立线程中运行任务的意图。另一种方案是为`get()`方法调用提供一个超时时间，超时后它将把控制权交给当前线程。例如，下面的代码将导致`get()`调用在 3 秒后超时：
 
 ```
 result = future.get(3, TimeUnit.SECONDS);
 ```
 
-然而，更好的替代方案是调用 `Future` 实例的 `isDone()` 方法来检查线程状态，仅在任务完成后才调用 `get()` 方法。为了实现这一行为，请在 `MainActivity.java` 文件中添加如下 `statusClick()` 方法：
+然而，更好的替代方案是调用`Future`实例的`isDone()`方法来检查线程状态，仅在任务完成后才调用`get()`方法。为了实现这一行为，请在`MainActivity.java`文件中添加如下`statusClick()`方法：
 
 ```
 import java.util.concurrent.ExecutionException;
@@ -13047,11 +13031,11 @@ public void statusClick(View view) {
 }
 ```
 
-完成更改后，运行应用程序并点击“Press Me”按钮。在任务运行期间，点击“Status”按钮。只要任务仍在运行，TextView 中就会显示“Waiting”消息。然而，一旦任务完成，`isDone()` 方法将返回 true 值，`get()` 方法将会被调用，任务返回的字符串（“Task Complete”）将显示在 TextView 上。
+完成更改后，运行应用程序并点击“Press Me”按钮。在任务运行期间，点击“Status”按钮。只要任务仍在运行，TextView 中就会显示“Waiting”消息。然而，一旦任务完成，`isDone()`方法将返回 true 值，`get()`方法将会被调用，任务返回的字符串（“Task Complete”）将显示在 TextView 上。
 
 ### 60.13 调度任务
 
-最后一个涵盖的领域涉及使用 `ExecutorService` 来调度任务执行。这涉及到使用 `ScheduledExecutorService` 实例，并在其上调用 `schedule()` 方法，传递要执行的 `Runnable` 任务以及一个时间延迟。`schedule()` 调用将返回一个 `ScheduledFuture` 实例，该实例可用于识别任务预计启动前的剩余时间。
+最后一个涵盖的领域涉及使用`ExecutorService`来调度任务执行。这涉及到使用`ScheduledExecutorService`实例，并在其上调用`schedule()`方法，传递要执行的`Runnable`任务以及一个时间延迟。`schedule()`调用将返回一个`ScheduledFuture`实例，该实例可用于识别任务预计启动前的剩余时间。
 
 例如，下面的代码调度了一个任务在 30 秒后运行，并访问了剩余的延迟时间：
 
@@ -13064,13 +13048,13 @@ ScheduledFuture<?> future = executor.schedule(task, 30, TimeUnit.SECONDS);
 long delayRemaining = future.getDelay(TimeUnit.SECONDS);
 ```
 
-同样，`ScheduledExecutorService` 可用于在可选的初始延迟后，按固定间隔重复执行任务。例如，下面的代码会导致任务在初始 30 秒延迟后每隔 10 秒执行一次：
+同样，`ScheduledExecutorService`可用于在可选的初始延迟后，按固定间隔重复执行任务。例如，下面的代码会导致任务在初始 30 秒延迟后每隔 10 秒执行一次：
 
 ```
 executor.scheduleAtFixedRate(task, 30, 10, TimeUnit.SECONDS);
 ```
 
-`scheduleAtFixedRate()` 方法无论之前调度的任务是否完成，都会启动任务的下一个实例。若要指定任务执行结束与下一次执行开始之间的固定时间间隔，请使用 `scheduleWithFixedDelay()` 方法。在下面的示例中，第一个任务调度在 0 秒延迟后执行，随后的每次执行都会在上一个任务完成后 10 秒后进行：
+`scheduleAtFixedRate()`方法无论之前调度的任务是否完成，都会启动任务的下一个实例。若要指定任务执行结束与下一次执行开始之间的固定时间间隔，请使用`scheduleWithFixedDelay()`方法。在下面的示例中，第一个任务调度在 0 秒延迟后执行，随后的每次执行都会在上一个任务完成后 10 秒后进行：
 
 ```
 executor.scheduleWithFixedDelay(task, 0, 10, TimeUnit.SECONDS);
@@ -13084,7 +13068,7 @@ executor.scheduleWithFixedDelay(task, 0, 10, TimeUnit.SECONDS);
 
 ## 61 在 Android 中发起运行时权限请求
 
-在前面的章节创建的许多示例中，对 `AndroidManifest.xml` 进行了修改，以请求应用执行特定任务的权限。在在此之前的每个案例中，都请求了互联网访问权限以允许应用下载和显示网页。然而，有几种权限在运行 Android 6 时需要额外的步骤。第一种此类“危险”权限将在下一章中遇到。
+在前面的章节创建的许多示例中，对`AndroidManifest.xml`进行了修改，以请求应用执行特定任务的权限。在在此之前的每个案例中，都请求了互联网访问权限以允许应用下载和显示网页。然而，有几种权限在运行 Android 6 时需要额外的步骤。第一种此类“危险”权限将在下一章中遇到。
 
 ### 61.1 理解普通权限和危险权限
 
@@ -13095,24 +13079,32 @@ Android 通过要求用户授予应用执行某些任务的权限来强制安全
 危险权限的完整列表包含在表 61-1 中：
 
 | 权限组 | 权限 |
+
 | :--- | :--- |
+
 | 日历 | `READ_CALENDARWRITE_CALENDAR` |
+
 | 摄像头 | `CAMERA` |
+
 | 联系人 | `READ_CONTACTSWRITE_CONTACTSGET_ACCOUNTS` |
+
 | 位置 | `ACCESS_FINE_LOCATIONACCESS_COARSE_LOCATION` |
+
 | 麦克风 | `RECORD_AUDIO` |
+
 | 通知 | `POST_NOTIFICATIONS` |
+
 | 电话 | `READ_PHONE_STATECALL_PHONEREAD_CALL_LOGWRITE_CALL_LOGADD_VOICEMAILUSE_SIPPROCESS_OUTGOING_CALLS` |
+
 | 传感器 | `BODY_SENSORS` |
+
 | 短信 | `SEND_SMSRECEIVE_SMSREAD_SMSRECEIVE_WAP_PUSHRECEIVE_MMS` |
+
 | 存储 | `MANAGE_EXTERNAL_STORAGEREAD_EXTERNAL_STORAGEWRITE_EXTERNAL_STORAGE` |
 
  61-1
 
-
-
-
-`MANAGE_EXTERNAL_STORAGE` 权限允许应用访问设备外部存储上的所有文件，包括属于其他应用的文件。因此，只有当 Google 在审核过程中验证应用需要此级别的访问权限时，该权限才会为您的应用启用。为了在应用提交到 Google Play 商店之前对其进行测试，可以执行以下 `adb` 命令来临时在测试设备上为应用启用访问权限：
+`MANAGE_EXTERNAL_STORAGE`权限允许应用访问设备外部存储上的所有文件，包括属于其他应用的文件。因此，只有当 Google 在审核过程中验证应用需要此级别的访问权限时，该权限才会为您的应用启用。为了在应用提交到 Google Play 商店之前对其进行测试，可以执行以下`adb`命令来临时在测试设备上为应用启用访问权限：
 
 ```bash
 adb shell appops set --uid <package name> MANAGE_EXTERNAL_STORAGE allow
@@ -13126,17 +13118,17 @@ adb shell appops set --uid <package name> MANAGE_EXTERNAL_STORAGE default
 
 ## 61.2 创建权限示例项目
 
-从欢迎界面选择 `New Project`（新建项目）选项，在出现的新项目对话框中，点击 `Next`（下一步）之前选择 `Empty Views Activity` 模板。
+从欢迎界面选择`New Project`（新建项目）选项，在出现的新项目对话框中，点击`Next`（下一步）之前选择`Empty Views Activity`模板。
 
-在 `Name`（名称）字段中输入 `PermissionDemo` 并指定 `com.ebookfrenzy.permissiondemo` 为包名。在点击 `Finish`（完成）按钮之前，将 `Minimum API level`（最低 API 级别）设置更改为 `API 26`：`Android 8.0 (Oreo)`，并将 `Language`（语言）菜单更改为 `Java`。
+在`Name`（名称）字段中输入`PermissionDemo`并指定`com.ebookfrenzy.permissiondemo`为包名。在点击`Finish`（完成）按钮之前，将`Minimum API level`（最低 API 级别）设置更改为`API 26`：`Android 8.0 (Oreo)`，并将`Language`（语言）菜单更改为`Java`。
 
 ### 61.3 检查权限
 
-Android Support Library 包含多种方法可以在 Android 应用的代码中查找和管理危险权限。无论应用运行的 Android 版本如何，这些这些 API 调用都是安全的，但只有在 `Android 6.0` 或更高版本上执行时，才会执行有意义的任务。
+Android Support Library 包含多种方法可以在 Android 应用的代码中查找和管理危险权限。无论应用运行的 Android 版本如何，这些这些 API 调用都是安全的，但只有在`Android 6.0`或更高版本上执行时，才会执行有意义的任务。
 
-在应用尝试使用需要批准危险权限的功能之前，无论之前是否授予了权限，代码都必须检查该权限是否已授予。可以通过调用 `Compat` 类的 `checkSelfPermission()` 方法来实现，并将当前活动的引用和请求的权限作为参数传递。该方法将检查权限之前是否已授予，并返回与 `PackageManager.PERMISSION_GRANTED` 或 `PackageManager.PERMISSION_DENIED` 匹配的整数值。
+在应用尝试使用需要批准危险权限的功能之前，无论之前是否授予了权限，代码都必须检查该权限是否已授予。可以通过调用`Compat`类的`checkSelfPermission()`方法来实现，并将当前活动的引用和请求的权限作为参数传递。该方法将检查权限之前是否已授予，并返回与`PackageManager.PERMISSION_GRANTED`或`PackageManager.PERMISSION_DENIED`匹配的整数值。
 
-在示例项目的 `MainActivity.java` 文件中，修改代码以检查是否已授予应用录音的权限：
+在示例项目的`MainActivity.java`文件中，修改代码以检查是否已授予应用录音的权限：
 
 ```java
 package com.ebookfrenzy.permissiondemoactivity;
@@ -13168,7 +13160,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-编辑 `AndroidManifest.xml` 文件（位于 Project 工具窗口的 `app` -> `manifests` 下），并添加一行代码来请求录音权限，如下：
+编辑`AndroidManifest.xml`文件（位于 Project 工具窗口的`app` -> `manifests`下），并添加一行代码来请求录音权限，如下：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -13191,11 +13183,11 @@ public class MainActivity extends AppCompatActivity {
 </manifest>
 ```
 
-在设备或模拟器上运行应用并打开 `Logcat` 窗口。注意，尽管权限已添加到 manifest 文件中，但仍出现了权限被拒绝的消息。这是因为 Android 要求在向 manifest 文件添加请求之外，应用还必须在运行时请求危险权限。
+在设备或模拟器上运行应用并打开`Logcat`窗口。注意，尽管权限已添加到 manifest 文件中，但仍出现了权限被拒绝的消息。这是因为 Android 要求在向 manifest 文件添加请求之外，应用还必须在运行时请求危险权限。
 
 ## 61.4 在运行时请求权限
 
-权限请求是通过调用 `ActivityCompat` 类的 `requestPermissions()` 方法发出的。当调用此方法时，权限请求将进行异步处理，并在任务完成后调用一个名为 `onRequestPermissionsResult()` 的方法。`requestPermissions()` 方法接受当前活动的引用、请求权限的标识符和请求代码作为参数。请求代码可以是任意整数值，并将用于标识是哪个请求触发了对 `onRequestPermissionsResult()` 方法的调用。修改 `MainActivity.java` 文件以声明请求代码，并在权限检查失败时请求权限：
+权限请求是通过调用`ActivityCompat`类的`requestPermissions()`方法发出的。当调用此方法时，权限请求将进行异步处理，并在任务完成后调用一个名为`onRequestPermissionsResult()`的方法。`requestPermissions()`方法接受当前活动的引用、请求权限的标识符和请求代码作为参数。请求代码可以是任意整数值，并将用于标识是哪个请求触发了对`onRequestPermissionsResult()`方法的调用。修改`MainActivity.java`文件以声明请求代码，并在权限检查失败时请求权限：
 
 ```java
 import androidx.core.app.ActivityCompat;
@@ -13222,7 +13214,9 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-接下来，实现 `onRequestPermissionsResult()` 方法，其内容如下：
+接下来，实现`onRequestPermissionsResult()`方法，其内容如下：
+
+
 
 ```java
 @Override
@@ -13246,20 +13240,17 @@ public void onRequestPermissionsResult(int requestCode,
 
 图 61-3
 
-点击`While using the app`按钮，检查 `Logcat` 面板中是否出现了“Permission has been granted by user”。一旦用户授予了请求的权限，在未来的应用调用中，`checkSelfPermission()` 调用将返回 `PERMISSION_GRANTED` ，除非用户卸载并重新安装应用或在 `Settings` 中更改应用权限。
+点击`While using the app`按钮，检查`Logcat`面板中是否出现了“Permission has been granted by user”。一旦用户授予了请求的权限，在未来的应用调用中，`checkSelfPermission()`调用将返回`PERMISSION_GRANTED`，除非用户卸载并重新安装应用或在`Settings`中更改应用权限。
 
 ## 61.5 为权限请求提供理由
 
 如图 61-3 所示，用户可以拒绝请求的权限。在这种情况下，除非用户在点击拒绝按钮之前选择了“不再询问”（Never ask again），否则应用在每次用户启动它时都会继续请求权限。用户的反复拒绝可能表明用户不理解为什么应用需要该权限。因此，如果能在提出请求时解释这些需求的原因，用户可能更有可能授予权限。遗憾的是，无法更改请求对话框的内容以包含此类解释。
 
-
-
-
 最好的做法是将解释放在单独对话框中，该对话框可以在向用户展示请求框之前显示。这引发了何时显示此解释对话框的问题。Android 文档建议只有在用户之前拒绝过权限时才显示解释对话框，并提供了一种方法来识别此类情况。
 
-调用 `ActivityCompat` 类的 `shouldShowRequestPermissionRationale()` 方法，如果用户之前拒绝过对特定权限的请求，将返回 `true`；如果之前没有发出过请求，则返回 `false`。如果结果为 `true`，应用应该显示一个包含权限理由的对话框，一旦用户阅读并关闭了对话框，就应该再次请求权限。
+调用`ActivityCompat`类的`shouldShowRequestPermissionRationale()`方法，如果用户之前拒绝过对特定权限的请求，将返回`true`；如果之前没有发出过请求，则返回`false`。如果结果为`true`，应用应该显示一个包含权限理由的对话框，一旦用户阅读并关闭了对话框，就应该再次请求权限。
 
-要向示例应用中添加此功能，请修改 `onCreate()` 方法使其读取如下：
+要向示例应用中添加此功能，请修改`onCreate()`方法使其读取如下：
 
 ```java
 import android.app.AlertDialog;
@@ -13286,17 +13277,18 @@ private void setupPermissions() {
 }
 ```
 
-该方法仍然检查是否已授予权限，但现在还会识别是否需要显示理由。如果用户之前拒绝了请求，将显示一个包含解释和 OK 按钮的对话框，并在按钮上配置了监听器，在点击按钮时调用 `makeRequest()` 方法。如果之前没有请求过权限，代码将直接跳转到请求权限。
+该方法仍然检查是否已授予权限，但现在还会识别是否需要显示理由。如果用户之前拒绝了请求，将显示一个包含解释和 OK 按钮的对话框，并在按钮上配置了监听器，在点击按钮时调用`makeRequest()`方法。如果之前没有请求过权限，代码将直接跳转到请求权限。
 
 ### 61.6 测试权限应用
 
-在执行测试的设备或模拟器会话上，启动设置应用，选择“应用”选项，滚动并选择 PermissionDemo 应用。在应用设置屏幕上，点击卸载按钮移除该应用。
+在执行测试的设备或模拟器会话上，启动设置应用，选择“应用”选项，滚动并选择`PermissionDemo`应用。在应用设置屏幕上，点击卸载按钮移除该应用。
 
 重新运行应用，当权限请求对话框出现时，点击“不允许”按钮。停止并重启应用，验证理由对话框是否出现。点击 OK 按钮，当权限请求对话框出现时，点击“在使用应用时”按钮。
 
-返回设置应用，选择“应用”选项，再次从列表中选择 PermissionDemo 应用。一旦列出应用的设置，验证“权限”部分是否列出了“麦克风”权限。
+返回设置应用，选择“应用”选项，再次从列表中选择`PermissionDemo`应用。一旦列出应用的设置，验证“权限”部分是否列出了“麦克风”权限。
 
 ![](img/as_permission_microphone.jpg)
+
 图 61-4
 
 ### 61.7 总结
@@ -13314,16 +13306,19 @@ private void setupPermissions() {
 在 Android 设备上启动通知时，它将作为状态栏中的图标显示。例如，图 62-1 显示了带有多个通知图标的状态栏：
 
 ![](img/Image252.jpg)
+
 图 62-1
 
 要查看通知，用户从状态栏开始执行向下滑动的动作以下拉通知抽屉，如图 62-2 所示：
 
 ![](img/as_4.1_android_11.jpg)
+
 图 62-2
 
 在运行 Android 8 或更高版本的设备上，长按应用图标将显示与该应用相关的任何待处理通知，如图 62-3 所示：
 
 ![](img/Image242.jpg)
+
 图 62-3
 
 Android 8 及更高版本还支持通知点，当通知等待用户查看时，它会出现在应用图标上。
@@ -13331,44 +13326,42 @@ Android 8 及更高版本还支持通知点，当通知等待用户查看时，�
 典型的通知将显示一条消息，并在点击时启动负责发布该通知的应用。通知还可能包含操作按钮，点击后可执行针对对应应用的特定任务。例如，图 62-4 显示了一个包含两个操作按钮的通知，允许用户删除或保存收到的消息：
 
 ![](img/Image2450.jpg)
+
 图 62-4
 
 用户还可以在通知中输入内联文本回复并将其发送给应用，如下图 62-5 所示。这允许用户在无需将相应的应用调到前台的情况下对通知做出响应：
 
 ![](img/Image2458.jpg)
+
 图 62-5
 
 本章的剩余部分将介绍创建和发布包含操作的简单通知。直接回复支持主题将在名为“Android 直接回复教程”的章节中介绍。
 
 ## 62.2 创建 NotifyDemo 项目
 
+主 Activity 将包含一个按钮，其目的是创建并发布一个意图（intent）。在布局编辑器中定位并加载`activity_main.xml`文件，删除默认的`TextView`组件。
 
+在启用自动连接（Autoconnect）的情况下，从面板中将`Button`对象拖放到布局画布的中心，如图 62-6 所示。
 
-
-
-主 Activity 将包含一个按钮，其目的是创建并发布一个意图（intent）。在布局编辑器中定位并加载 `activity_main.xml` 文件，删除默认的 `TextView` 组件。
-
-在启用自动连接（Autoconnect）的情况下，从面板中将 `Button` 对象拖放到布局画布的中心，如图 62-6 所示。
-
-在布局中选中 `Button` 组件后，使用属性（Attributes）面板配置 `onClick` 属性，以调用名为 `sendNotification` 的方法。
+在布局中选中`Button`组件后，使用属性（Attributes）面板配置`onClick`属性，以调用名为`sendNotification`的方法。
 
 ![](img/as_notification_ui.jpg)
 
 图 62-6
 
-选择 `Button` 组件，在属性工具窗口中将文本（text）属性更改为“Notify”，并将属性值提取为字符串资源。
+选择`Button`组件，在属性工具窗口中将文本（text）属性更改为“Notify”，并将属性值提取为字符串资源。
 
 ## 62.4 创建第二个 Activity
 
-在这个示例中，应用将包含第二个 Activity，该 Activity 将由用户从通知内部启动。右键点击 `app -> java` 下的 `com.ebookfrenzy.notifydemo` 包名，并选择 `New -> Activity -> Empty Views Activity` 菜单选项以显示新建 Android Activity 对话框。
+在这个示例中，应用将包含第二个 Activity，该 Activity 将由用户从通知内部启动。右键点击`app -> java`下的`com.ebookfrenzy.notifydemo`包名，并选择`New -> Activity -> Empty Views Activity`菜单选项以显示新建 Android Activity 对话框。
 
-在 `Activity Name` 字段中输入 `ResultActivity`并将布局文件命名为 `activity_result`。由于此 Activity 在应用启动时不会启动（它将通过通知内部的意图启动），在点击 Finish（完成）按钮之前，确保禁用 Launcher Activity（启动 Activity）选项是重要的。
+在`Activity Name`字段中输入`ResultActivity`并将布局文件命名为`activity_result`。由于此 Activity 在应用启动时不会启动（它将通过通知内部的意图启动），在点击 Finish（完成）按钮之前，确保禁用 Launcher Activity（启动 Activity）选项是重要的。
 
-打开第二个 Activity 的布局（`app -> res -> layout -> activity_result.xml`），并拖放一个 `TextView` 组件，使其位于布局中心。编辑 `TextView` 的文本使其显示为“Result Activity”，并将属性值提取为字符串资源。
+打开第二个 Activity 的布局（`app -> res -> layout -> activity_result.xml`），并拖放一个`TextView`组件，使其位于布局中心。编辑`TextView`的文本使其显示为“Result Activity”，并将属性值提取为字符串资源。
 
 ## 62.5 创建通知通道
 
-在应用发送通知之前，它必须创建一个通知通道。通知通道由一个用于在应用内唯一标识该通道的 ID、一个通道名称和一个通道描述组成（只有后两个对用户可见）。通道通过配置 `NotificationChannel` 实例，然后将该对象传递给 `NotificationManager` 类的 `createNotificationChannel()` 方法来创建。对于此示例，应用将包含一个名为“NotifyDemo News”的单一通知通道。编辑 `MainActivity.java` 文件并实现在应用启动时创建通道的代码：
+在应用发送通知之前，它必须创建一个通知通道。通知通道由一个用于在应用内唯一标识该通道的 ID、一个通道名称和一个通道描述组成（只有后两个对用户可见）。通道通过配置`NotificationChannel`实例，然后将该对象传递给`NotificationManager`类的`createNotificationChannel()`方法来创建。对于此示例，应用将包含一个名为“NotifyDemo News”的单一通知通道。编辑`MainActivity.java`文件并实现在应用启动时创建通道的代码：
 
 ```java
 import android.app.NotificationManager;
@@ -13408,11 +13401,11 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-该代码声明并初始化了一个 `NotificationManager` 实例，然后使用名称和描述创建一个低重要级别（其他选项为高、min 和 none）的新通道。通道还还添加了一系列可选设置。最后，通过传递通知对象创建通道。
+该代码声明并初始化了一个`NotificationManager`实例，然后使用名称和描述创建一个低重要级别（其他选项为高、min 和 none）的新通道。通道还还添加了一系列可选设置。最后，通过传递通知对象创建通道。
 
-### 2. 请求通知权限
+### 2.5.1 请求通知权限
 
-在测试应用之前，必须在清单文件中请求相应的权限。具体来说，应用需要发布通知的权限。找到 `AndroidManifest.xml` 并添加：
+在测试应用之前，必须在清单文件中请求相应的权限。具体来说，应用需要发布通知的权限。找到`AndroidManifest.xml`并添加：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -13422,7 +13415,7 @@ public class MainActivity extends AppCompatActivity {
 </manifest>
 ```
 
-为了让应用在 Android 6 或更高版本上运行，必须在运行时请求代码。编辑 `MainActivity.java` 文件，首先添加一些导入和常量：
+为了让应用在 Android 6 或更高版本上运行，必须在运行时请求代码。编辑`MainActivity.java`文件，首先添加一些导入和常量：
 
 ```java
 import androidx.core.app.ActivityCompat;
@@ -13434,7 +13427,7 @@ import android.pm.PackageManager;
 private static final int NOTIFICATION_REQUEST_CODE = 101;
 ```
 
-接下来，需要在类中添加一个方法，其目的是将要请求的权限和相应的标识码作为参数。留在 `MainActivity.java` 类中，实现此方法：
+接下来，需要在类中添加一个方法，其目的是将要请求的权限和相应的标识码作为参数。留在`MainActivity.java`类中，实现此方法：
 
 ```java
 protected void requestPermission(String permissionType, int requestCode) {
@@ -13447,7 +13440,7 @@ protected void requestPermission(String permissionType, int requestCode) {
 
 使用本书中在 Android 中进行运行时请求章节中概述的步骤，上述方法在发出请求之前验证指定的权限是否已授予。
 
-当请求处理完成后，`onRequestPermissionsResult()` 方法将在 Activity 上调用，并传递标识码和请求结果。因此，下一步是在 `MainActivity.java` 文件中实现此方法：
+当请求处理完成后，`onRequestPermissionsResult()`方法将在 Activity 上调用，并传递标识码和请求结果。因此，下一步是在`MainActivity.java`文件中实现此方法：
 
 ```java
 @Override
@@ -13463,10 +13456,9 @@ public void onRequestPermissionsResult(int requestCode, @NonNull String[] permis
 
 
 
-
 上述代码通过检查请求标识码来识别是哪个权限请求已返回，然后再检查相应的权限是否已授予。如果权限被拒绝，则会向用户显示一条消息，指示应用将无法运行且录制按钮将被禁用。
 
-在测试应用之前，最后剩下的工作是在应用启动时调用新添加的 `requestPermission()` 方法。在 `MainActivity.java` 文件中，按照如下所示修改 `onCreate()` 方法：
+在测试应用之前，最后剩下的工作是在应用启动时调用新添加的`requestPermission()`方法。在`MainActivity.java`文件中，按照如下所示修改`onCreate()`方法：
 
 ```java
 @Override
@@ -13498,7 +13490,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 在继续之前，请确保已为该应用启通知点。
 
-虽然这不是本示例的强制要求，但值得注意的是，可以通过通知管理器的 `deleteNotificationChannel()` 方法从应用内部删除通道，调用时传递要删除的通道 ID：
+虽然这不是本示例的强制要求，但值得注意的是，可以通过通知管理器的`deleteNotificationChannel()`方法从应用内部删除通道，调用时传递要删除的通道 ID：
 
 ```java
 String channelID = "com.ebookfrenzy.notifydemo.news";
@@ -13507,7 +13499,7 @@ notificationManager.deleteNotificationChannel(channelID);
 
 ## 62.7 创建和发布通知
 
-通知使用 `Notification.Builder` 类创建，并且必须包含图标、标题和内容。打开 `MainActivity.java` 文件并按如下所示实现 `sendNotification()` 方法以构建基础通知：
+通知使用`Notification.Builder`类创建，并且必须包含图标、标题和内容。打开`MainActivity.java`文件并按如下所示实现`sendNotification()`方法以构建基础通知：
 
 ```java
 .
@@ -13529,7 +13521,7 @@ public void sendNotification(View view) {
 }
 ```
 
-一旦构建了通知，就需要使用 `NotificationManager` 实例的 `notify()` 方法进行发布。访问 `NotificationManager` 并发布通知的代码需要添加到 `sendNotification()` 方法中，如下：
+一旦构建了通知，就需要使用`NotificationManager`实例的`notify()`方法进行发布。访问`NotificationManager`并发布通知的代码需要添加到`sendNotification()`方法中，如下：
 
 ```java
 protected void sendNotification(View view) {
@@ -13571,7 +13563,7 @@ protected void sendNotification(View view) {
 
 图 62-12
 
-如果一个应用有多个待处理通知，长按菜单将包含通知计数（如上图突出所示）。此数字可以在构建通知时通过调用 `setNumber()` 方法在应用内部配置：
+如果一个应用有多个待处理通知，长按菜单将包含通知计数（如上图突出所示）。此数字可以在构建通知时通过调用`setNumber()`方法在应用内部配置：
 
 ```java
 Notification notification = new Notification.Builder(MainActivity.this, CHANNEL_ID)
@@ -13589,13 +13581,13 @@ Notification notification = new Notification.Builder(MainActivity.this, CHANNEL_
 
 通知应该允许用户执行某些操作，例如响应通知启动应用或采取其他操作。常见需求是在用户点击通知时启动属于应用的活动。
 
-这种方法需要启动一个活动以及一个启动该活动的 `Intent`。假设应用中有一个名为 `ResultActivity` 的活动，则 `intent` 的创建方式如下：
+这种方法需要启动一个活动以及一个启动该活动的`Intent`。假设应用中有一个名为`ResultActivity`的活动，则`intent`的创建方式如下：
 
 ```java
 Intent resultIntent = new Intent(this, ResultActivity.class);
 ```
 
-然后该 `intent` 需要封装在 `PendingIntent` 实例中。`PendingIntent` 对象的设计旨在将 `intent` 传递给其他应用程序，从而授予这些应用程序在未来某个时刻执行该 `intent` 的权限。在这种情况下，`PendingIntent` 对象用于为通知系统提供一种启动 `ResultActivity` 活动的方法：
+然后该`intent`需要封装在`PendingIntent`实例中。`PendingIntent`对象的设计旨在将`intent`传递给其他应用程序，从而授予这些应用程序在未来某个时刻执行该`intent`的权限。在这种情况下，`PendingIntent`对象用于为通知系统提供一种启动`ResultActivity`活动的方法：
 
 ```java
 PendingIntent pendingIntent =
@@ -13607,7 +13599,7 @@ PendingIntent pendingIntent =
     );
 ```
 
-剩下的工作是在构建通知过程中使用 `setContentIntent()` 方法分配 `PendingIntent` 对象。将这些更改整合后，修改 `sendNotification()` 方法如下：
+剩下的工作是在构建通知过程中使用`setContentIntent()`方法分配`PendingIntent`对象。将这些更改整合后，修改`sendNotification()`方法如下：
 
 ```java
 .
@@ -13639,10 +13631,6 @@ protected void sendNotification(View view) {
 }
 ```
 
-
-
-
-
 ```java
 .setContentText("This is an example notification.")
         .setSmallIcon(android.R.drawable.ic_dialog_info)
@@ -13653,11 +13641,11 @@ protected void sendNotification(View view) {
 notificationManager.notify(notificationId, notification);
 ```
 
-编译并重新运行应用，点击按钮并显示通知栏。然而，这一次点击通知将导致 `ResultActivity` 启动。
+编译并重新运行应用，点击按钮并显示通知栏。然而，这一次点击通知将导致`ResultActivity`启动。
 
 ## 62.9 在通知中添加操作
 
-为通知添加交互性的另一种方法是创建操作（actions）。这些操作以通知消息下方的按钮形式出现，并被设置为在用户点击时触发特定的意图（intent）。如果将以下代码添加到 `sendNotification()` 方法，将添加一个标记为“Open”的动作按钮，选择它时将启动引用的 `pendingIntent`：
+为通知添加交互性的另一种方法是创建操作（actions）。这些操作以通知消息下方的按钮形式出现，并被设置为在用户点击时触发特定的意图（intent）。如果将以下代码添加到`sendNotification()`方法，将添加一个标记为“Open”的动作按钮，选择它时将启动引用的`pendingIntent`：
 
 ```java
 final Icon icon = Icon.createWithResource(MainActivity.this,
@@ -13685,7 +13673,7 @@ notificationManager.notify(notificationId, notification);
 
 图 62-13
 
-点击该操作将触发 `pendingIntent` 并启动 `ResultActivity`。
+点击该操作将触发`pendingIntent`并启动`ResultActivity`。
 
 ## 62.10 组合组通知（Bundled Notifications）
 
@@ -13697,7 +13685,9 @@ notificationManager.notify(notificationId, notification);
 
 现在想象一下收到了十条甚至二十条新消息。为了避免这个问题，Android 允许将通知组合成组。
 
-要组合通知，每条通知都必须通过 `setGroup()` 方法指定属于同一组，并且必须发布并配置另一条通知作为摘要通知（summary notification）。例如，以下代码创建并发布了上方图 62-14 所示的三个通知，但将它们组合到同一个组中。该代码还发布了一个通知作为摘要：
+要组合通知，每条通知都必须通过`setGroup()`方法指定属于同一组，并且必须发布并配置另一条通知作为摘要通知（summary notification）。例如，以下代码创建并发布了上方图 62-14 所示的三个通知，但将它们组合到同一个组中。该代码还发布了一个通知作为摘要：
+
+
 
 ```java
 final String GROUP_KEY_NOTIFY = "group_key_notify";
@@ -13756,7 +13746,7 @@ notificationManager.notify(notificationId0, builderSummary.build());
 
 ### 62.11 总结
 
-通知为应用提供了一种在应用未运行或后台向用户传递消息的方式。通知出现在状态栏和通知栏中。本地通知由应用触发，而远程通知由服务器启动并递送到设备。本地通知使用 `Notification.Builder` 类创建并使用 `NotificationManager` 服务发布。如本章所示，可以通过操作、意图和 `PendingIntent` 类配置通知为用户提供选项（例如启动活动或保存消息）。通知组合为发布大量通知的应用提供了一种分组机制。
+通知为应用提供了一种在应用未运行或后台向用户传递消息的方式。通知出现在状态栏和通知栏中。本地通知由应用触发，而远程通知由服务器启动并递送到设备。本地通知使用`Notification.Builder`类创建并使用`NotificationManager`服务发布。如本章所示，可以通过操作、意图和`PendingIntent`类配置通知为用户提供选项（例如启动活动或保存消息）。通知组合为发布大量通知的应用提供了一种分组机制。
 
 ## 63 Android 直接回复通知教程
 
@@ -13764,13 +13754,13 @@ notificationManager.notify(notificationId0, builderSummary.build());
 
 ### 63.1 创建 DirectReply 项目
 
-在欢迎屏幕上选择 New Project，在出现的新项目对话框中选择 Empty Views Activity 模板，然后点击 Next 按钮。
+在欢迎屏幕上选择`New Project`，在出现的新项目对话框中选择`Empty Views Activity`模板，然后点击`Next`按钮。
 
-在 Name 字段中输入 `DirectReply` 并指定 `com.ebookfrenzy.directreply` 为包名。在点击 Finish 按钮之前，将 Minimum API level 设置为 API 33: Android 13 并将 Language 菜单设置为 Java。按照第 11.8 迁移项目到 View Binding 节中的步骤修改项目以支持视图绑定。
+在`Name`字段中输入`DirectReply`并指定`com.ebookfrenzy.directreply`为包名。在点击`Finish`按钮之前，将`Minimum API level`设置为`API 33: Android 13`并将`Language`菜单设置为`Java`。按照第 11.8 迁移项目到 View Binding 节中的步骤修改项目以支持视图绑定。
 
 ### 63.2 设计用户界面
 
-使用布局工具加载 `activity_main.xml` 布局文件。在启用 Autoconnect 的情况下，在现有的“Hello World!”标签下方添加 Button 对象，如图 63-1 所示。在布局中选中 Button 小部件后，使用 Attributes 工具窗口将 onClick 属性设置为调用名为 `sendNotification` 方法。如有必要，使用 Infer Constraints 按钮为布局添加任何缺失的约束。在继续之前，选择“Hello World!”TextView，将 id 属性更改为 `textView` 并修改按钮上的文本为“Notify”：
+使用布局工具加载`activity_main.xml`布局文件。在启用`Autoconnect`的情况下，在现有的“Hello World!”标签下方添加`Button`对象，如图 63-1 所示。在布局中选中`Button`小部件后，使用`Attributes`工具窗口将`onClick`属性设置为调用名为`sendNotification`方法。如有必要，使用`Infer Constraints`按钮为布局添加任何缺失的约束。在继续之前，选择“Hello World!”`TextView`，将`id`属性更改为`textView`并修改按钮上的文本为“Notify”：
 
 ![](img/as_direct_reply_ui.jpg)
 
@@ -13778,11 +13768,7 @@ notificationManager.notify(notificationId0, builderSummary.build());
 
 ### 63.3 请求通知权限
 
-
-
-
-
-在 Project 工具窗口中，找到并双击 `AndroidManifest.xml` 文件，将其加载到编辑器中并修改 XML 添加权限元素（permission element）：
+在`Project`工具窗口中，找到并双击`AndroidManifest.xml`文件，将其加载到编辑器中并修改 XML 添加权限元素（permission element）：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -13792,7 +13778,7 @@ notificationManager.notify(notificationId0, builderSummary.build());
 </manifest>
 ```
 
-编辑 `MainActivity.java` 文件，首先添加一些额外的导入指令和一个常量，作为请求权限的请求识别码：
+编辑`MainActivity.java`文件，首先添加一些额外的导入指令和一个常量，作为请求权限的请求识别码：
 
 ```java
 import androidx.annotation.NonNull;
@@ -13807,7 +13793,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-接下来，需要在类中添加一个方法，该方法的作用是接收要请求的权限和对应的请求识别码作为参数。继续在 `MainActivity.java` 类文件中，如下所示实现该方法：
+接下来，需要在类中添加一个方法，该方法的作用是接收要请求的权限和对应的请求识别码作为参数。继续在`MainActivity.java`类文件中，如下所示实现该方法：
 
 ```java
 protected void requestPermission(String permissionType, int requestCode) {
@@ -13821,7 +13807,7 @@ protected void requestPermission(String permissionType, int requestCode) {
 }
 ```
 
-当请求处理完成后，活动将调用 `onRequestPermissionsResult()` 方法，并传递识别码和请求结果。因此，下一步是在 `MainActivity.java` 文件中如下所示实现该方法：
+当请求处理完成后，活动将调用`onRequestPermissionsResult()`方法，并传递识别码和请求结果。因此，下一步是在`MainActivity.java`文件中如下所示实现该方法：
 
 ```java
 @Override
@@ -13840,7 +13826,7 @@ public void onRequestPermissionsResult(int requestCode,
 }
 ```
 
-在测试应用之前，最后要做的是在应用启动时调用新添加的 `requestPermission()` 方法。在 `MainActivity.java` 文件中，如下所示修改 `onCreate()` 方法：
+在测试应用之前，最后要做的是在应用启动时调用新添加的`requestPermission()`方法。在`MainActivity.java`文件中，如下所示修改`onCreate()`方法：
 
 ```java
 @Override
@@ -13856,7 +13842,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ## 63.4 创建通知通道
 
-与上一章的示例相同，在发送通知之前必须先创建一个通道。编辑 `MainActivity.java` 文件并添加代码以创建一个新通道：
+与上一章的示例相同，在发送通知之前必须先创建一个通道。编辑`MainActivity.java`文件并添加代码以创建一个新通道：
 
 ```java
 import android.app.NotificationChannel;
@@ -13890,9 +13876,9 @@ public class MainActivity extends AppCompatActivity {
 
 ## 63.5 构建 RemoteInput 对象
 
-使通知中实现内联直接回复的关键元素是 `RemoteInput` 类。之前的章节介绍了 `PendingIntent` 类并解释了它如何允许一个应用程序创建一个意图（intent），然后授予其他应用程序或服务从原始应用外部启动该意图的能力。在名为“Android Notifications”的章节中，创建了一个等待意图，允许从通知内部启动原始应用中的活动。`RemoteInput` 类允许将对用户输入的请求包含在带有意图的 `PendingIntent` 对象中。当 `PendingIntent` 对象中的意图被触发时（例如启动一个活动），该活动也会接收到用户输入的任何内容。
+使通知中实现内联直接回复的关键元素是`RemoteInput`类。之前的章节介绍了`PendingIntent`类并解释了它如何允许一个应用程序创建一个意图（intent），然后授予其他应用程序或服务从原始应用外部启动该意图的能力。在名为“Android Notifications”的章节中，创建了一个等待意图，允许从通知内部启动原始应用中的活动。`RemoteInput`类允许将对用户输入的请求包含在带有意图的`PendingIntent`对象中。当`PendingIntent`对象中的意图被触发时（例如启动一个活动），该活动也会接收到用户输入的任何内容。
 
-在通知中实现直接回复的第一步是创建 `RemoteInput` 对象。这是通过使用 `RemoteInput.Builder()` 方法实现的。要构建 `RemoteInput` 对象，需要一个键字符串，用于从生成的意图中提取输入内容。该对象还需要一个标签字符串，它将显示在通知的文本输入中。编辑 `MainActivity.java` 文件并添加 `sendNotification()` 方法。同时注意添加了一些在后续章节中将使用的导入指令和变量：
+在通知中实现直接回复的第一步是创建`RemoteInput`对象。这是通过使用`RemoteInput.Builder()`方法实现的。要构建`RemoteInput`对象，需要一个键字符串，用于从生成的意图中提取输入内容。该对象还需要一个标签字符串，它将显示在通知的文本输入中。编辑`MainActivity.java`文件并添加`sendNotification()`方法。同时注意添加了一些在后续章节中将使用的导入指令和变量：
 
 ```java
 package com.ebookfrenzy.directreply;
@@ -13917,11 +13903,13 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-现在 `RemoteInput` 对象已经创建并使用键和标签字符串初始化，它需要被放置在通知操作中。但在执行该步骤之前，需要创建 `PendingIntent` 实例。
+现在`RemoteInput`对象已经创建并使用键和标签字符串初始化，它需要被放置在通知操作中。但在执行该步骤之前，需要创建`PendingIntent`实例。
 
 ## 63.6 创建 PendingIntent
 
-创建 `PendingIntent` 的步骤与“Android Notifications”章节概述的步骤相同，但意图将配置为启动 `MainActivity`。继续在 `MainActivity.java` 文件中，如下所示添加创建创建 `PendingIntent`：
+创建`PendingIntent`的步骤与“Android Notifications”章节概述的步骤相同，但意图将配置为启动`MainActivity`。继续在`MainActivity.java`文件中，如下所示添加创建创建`PendingIntent`：
+
+
 
 ```java
 public void sendNotification(View view) {
@@ -13943,11 +13931,7 @@ public void sendNotification(View view) {
 
 ## 63.7 创建回复操作
 
-
-
-
-
-内联回复将可以通过操作按钮在通知中访问。该操作需要被创建并配置，包括一个图标、显示在按钮上的标签、`PendingIntent` 对象以及 `RemoteInput` 对象。修改 `sendNotification()` 方法以添加创建此操作的代码：
+内联回复将可以通过操作按钮在通知中访问。该操作需要被创建并配置，包括一个图标、显示在按钮上的标签、`PendingIntent` 对象以及 `RemoteInput` 对象。修改`sendNotification()`方法以添加创建此操作的代码：
 
 ```java
 import android.graphics.drawable.Icon;
@@ -13979,7 +13963,7 @@ public void sendNotification(View view) {
 }
 ```
 
-在教程的这一阶段，我们已经构建了准备好使用的 `RemoteInput`、`PendingIntent` 和 `Notification Action` 对象。下一阶段是构建并发布通知：
+在教程的这一阶段，我们已经构建了准备好使用的`RemoteInput`、`PendingIntent`和`Notification Action`对象。下一阶段是构建并发布通知：
 
 ```java
 public void sendNotification(View view) {
@@ -14024,20 +14008,22 @@ public void sendNotification(View view) {
 完成更改后，编译并运行应用，允许通知，并测试点击按钮是否能成功发布通知。当查看通知栏时，通知应该如图 63-2 所示：
 
 ![](img/as_direct_reply.jpg)
+
 图 63-2
 
-点击 `Reply` 操作按钮，使文本输入字段出现，并显示创建 `RemoteInput` 对象时嵌入的回复标签。
+点击`Reply`操作按钮，使文本输入字段出现，并显示创建`RemoteInput`对象时嵌入的回复标签。
 
 ![](img/as_direct_reply_enter.jpg)
+
 图 63-3
 
 输入某些文本并点击输入字段末尾的发送箭头按钮。
 
 ### 63.8 接收直接回复输入
 
-现在通知已成功向用户索取输入，应用需要对该输入进行处理。本教程的目标是让用户在通知中输入的文本显示在 Activity 用户界面的 `TextView` 控件上。
+现在通知已成功向用户索取输入，应用需要对该输入进行处理。本教程的目标是让用户在通知中输入的文本显示在 Activity 用户界面的`TextView`控件上。
 
-当用户输入文本并点击发送按钮时，通过 `PendingIntent` 对象中的 intent 启动 `MainActivity`。该 intent 中包含了用户通过通知输入的文本。在 Activity 的 `onCreate()` 方法中，调用 `getIntent()` 方法将返回启动该 Activity 的 intent 副本。将其传递给 `RemoteInput.getResultsFromIntent()` 方法，反过来将返回一个包含回复文本的 `Bundle` 对象，该对象可以被提取并赋值给 `TextView` 控件。这导致了 `MainActivity.java` 文件中的 `onCreate()` 方法被修改，其读取内容如下：
+当用户输入文本并点击发送按钮时，通过`PendingIntent`对象中的 intent 启动`MainActivity`。该 intent 中包含了用户通过通知输入的文本。在 Activity 的`onCreate()`方法中，调用`getIntent()`方法将返回启动该 Activity 的 intent 副本。将其传递给`RemoteInput.getResultsFromIntent()`方法，反过来将返回一个包含回复文本的`Bundle`对象，该对象可以被提取并赋值给`TextView`控件。这导致了`MainActivity.java`文件中的`onCreate()`方法被修改，其读取内容如下：
 
 ```java
 @Override
@@ -14056,16 +14042,17 @@ private void handleIntent() {
 }
 ```
 
-完成这些代码更改后，再次构建并运行应用。点击按钮发布通知，并在通知面板输入并发送某些文本。注意 `MainActivity` 中的 `TextView` 控件已更新以显示输入的内联文本。
+完成这些代码更改后，再次构建并运行应用。点击按钮发布通知，并在通知面板输入并发送某些文本。注意`MainActivity`中的`TextView`控件已更新以显示输入的内联文本。
 
 ### 63.9 更新通知
 
 在通知中发送回复后，你可能会注意到进度指示器在通知面板中继续旋转，如图 63-4 所示：
 
-image/as_direct_reply_progress.jpg)
+![](image/as_direct_reply_progress.jpg)
+
 图 63-4
 
-通知显示此指示器是因为它正在等待 Activity 的响应以确认收到发送的文本。处理此任务的推荐方法是更新通知，指示已收到回复。由于原始通知在发布时已分配了 ID，因此可以再次使用它进行更新。在 `handleIntent()` 方法中添加以下代码以执行此任务：
+通知显示此指示器是因为它正在等待 Activity 的响应以确认收到发送的文本。处理此任务的推荐方法是更新通知，指示已收到回复。由于原始通知在发布时已分配了 ID，因此可以再次使用它进行更新。在`handleIntent()`方法中添加以下代码以执行此任务：
 
 ```java
 private void handleIntent() {
@@ -14088,17 +14075,14 @@ private void handleIntent() {
 最后测试一次应用，验证在发送内联回复文本后进度指示器消失，并出现新面板指示已收到回复：
 
 ![](img/as_direct_reply_received.jpg)
+
 图 63-5
 
 ### 63.10 总结
 
-直接回复通知功能允许用户在通知中输入文本，并通过 intent 传递给相应应用程序的 Activity。直接回复通过 `RemoteInput` 类实现，该类的实例可以嵌入操作中并随通知一起。在处理直接回复通知时，重要的是告知 `NotificationManager` 服务已收到并处理了回复。
+直接回复通知功能允许用户在通知中输入文本，并通过 intent 传递给相应应用程序的 Activity。直接回复通过`RemoteInput`类实现，该类的实例可以嵌入操作中并随通知一起。在处理直接回复通知时，重要的是告知`NotificationManager`服务已收到并处理了回复。
 
 ### 64. 折叠屏设备与多窗口支持
-
-
-
-
 
 折叠屏设备无论我们是否准备好都会到来（或者，对于第一代三星 Galaxy Fold 来说，可能甚至在设备本身准备好之前就出现了）。为了给这一新类设备做准备，了解需要采取的一些额外步骤非常重要，确保您的应用程序在折叠屏设备上运行正常。
 
@@ -14113,11 +14097,13 @@ private void handleIntent() {
 Android 中的多窗口支持提供了三种形式的窗口支持。分屏模式适用于大多数手机、折叠屏和平板电脑设备，它提供了一个分屏环境，其中两个 activity 并排显示或上下堆叠。它提供了一个可移动的分割线，用户拖动它可以调整分配给每个相邻 activity 的屏幕百分比：
 
 ![](img/Image24272.jpg)
+
 图 64-1
 
 自由窗口模式（Freeform mode）为具有较大屏幕的设备提供了窗口化环境，目前由设备制造商决定启用。自由窗口与分屏模式的区别在于，它允许每个 activity 显示在独立的、可调整大小的窗口中，并且不限于同时显示两个 activity。例如，图所示显示了一个处于自由窗口模式下的设备，其中计算器和第二个应用显示在独立的窗口中：
 
 ![](img/Image24362.jpg)
+
 图 64-2
 
 画中画（Picture-in-picture）支持顾其实名，允许视频在用户执行其他任务时在较窗口继续播放，该主题将在“Android 画中画模式”章节介绍。
@@ -14127,6 +14113,7 @@ Android 中的多窗口支持提供了三种形式的窗口支持。分屏模式
 尽管在编写时市场上还没有用于应用测试的折叠屏设备，但 Android SDK 包含了折叠屏模拟器。要创建折叠屏模拟器，选择 Android Studio Tools -> AVD Manager 菜单选项，点击 Create Virtual Device 按钮，并在硬件选择屏幕中选择下方图 64-3 所示的折叠屏选项之一：
 
 ![](img/as_foldable_avd.jpg)
+
 图 64-3
 
 选择折叠屏选项后，继续创建过程，选择 Android 10 API 29 或更高版本作为系统镜像。
@@ -14134,6 +14121,7 @@ Android 中的多窗口支持提供了三种形式的窗口支持。分屏模式
 一旦模拟器运行，工具栏中将出现一个额外的按钮，允许模拟器在折叠和展开的配置之间切换：
 
 ![](img/as_3.5_foldable_emulator_fold_button.jpg)
+
 图 64-4
 
 ## 64.3 进入多窗口模式
@@ -14141,11 +14129,13 @@ Android 中的多窗口支持提供了三种形式的窗口支持。分屏模式
 可以通过显示总览（Overview）屏幕、长按工具栏中列出的应用的图标，并选择图 64-5 所示的分屏（Split screen）菜单选项，来进入分屏模式：
 
 ![](img/as_3.5_split_screen_button.jpg)
+
 图 64-5
 
 进入分屏模式后，总览按钮将变为显示两个矩形（图 64-6 中标记为 A），当前 activity 将占据屏幕部分 (B)，总览屏幕将出现在屏幕的相邻部分，允许选择第二个 activity 进行显示 (C)：
 
 ![](img/as_3.5_split_screen_select_second_app.jpg)
+
 图 64-6
 
 一旦选择了第二个应用，屏幕将如上文图 64-1 所示被平均分割。
@@ -14165,11 +14155,14 @@ adb shell settings put global enable_freeform_support 1
 一旦启用，在总览屏幕中长按应用图标时，将出现一个额外的选项，如图 64-7 所示：
 
 ![](img/as_3.5_freeform_button.jpg)
+
 图 64-7
 
 ## 64.5 检查自由窗口支持
 
 如本章早期概述，Google 将是否启用自由窗口多窗口模式的选择交给了各个 Android 设备制造商。由于自由窗口仅在较大的设备上才有意义，因此无法保证每个应用可能运行的设备上都提供自由窗口。幸运的是，如果设备不支持自由窗口模式，系统会忽略所有自由窗口的特定方法和属性，因此使用它们不会导致应用崩溃。然而，可能会出现某些情况，检测设备是否支持自由窗口是有用的。幸运的是，可以通过检查包管理器中的自由窗口管理功能来实现这一点。以下代码示例检查自由窗口支持并根据结果返回布尔值：
+
+
 
 ```java
 public Boolean checkFreeform() {
@@ -14179,7 +14172,7 @@ public Boolean checkFreeform() {
 
 ## 64.6 在应用中启用多窗口支持
 
-清单文件中的 `android:resizableActivity` 控制应用是否支持多窗口行为。该设置可以在应用程序级别或单个 activity 级别进行。例如，以下片段配置了名为 `MainActivity` 的活动支持分屏和自由窗口模式：
+清单文件中的 `android:resizableActivity` 控制应用是否支持多窗口行为。该设置可以在应用程序级别或单个 `activity` 级别进行。例如，以下片段配置了名为 `MainActivity` 的活动支持分屏和自由窗口模式：
 
 ```xml
 <activity
@@ -14198,18 +14191,13 @@ public Boolean checkFreeform() {
 
 ## 64.7 指定多窗口属性
 
-`<layout>` 元素中提供了许多属性，用于指定活动在启动到多窗口模式时的尺寸和位置。在自由窗口模式下启动时，应用 的初始高度、宽度和位置可以使用以下属性：
+`<layout>` 元素中提供了许多属性，用于指定活动在启动到多窗口模式时的尺寸和位置。在自由窗口模式下启动时，应用的初始高度、宽度和位置可以使用以下属性：
 
-- `android:defaultWidth` – 指定 activity 的默认宽度。
-- `android:defaultHeight` – 指定 activity 的默认高度。
+- `android:defaultWidth` – 指定 `activity` 的默认宽度。
+- `android:defaultHeight` – 指定 `activity` 的默认高度。
+- `android:gravity` – 指定 `activity` 的初始位置（`start`、`end`、`left`、`right`、`top` 等）。
 
-
-
-
-
-- `android:gravity` – 指定 activity 的初始位置（start、end、left、right、top 等）。
-
-请注意，上述属性仅在 activity 在自由窗口模式（freeform mode）下显示时才生效。以下示例配置了一个 activity，使其在屏幕起始边缘以特定的高度和宽度显示：
+请注意，上述属性仅在 `activity` 在自由窗口模式（freeform mode）下显示时才生效。以下示例配置了一个 `activity`，使其在屏幕起始边缘以特定的高度和宽度显示：
 
 ```xml
 <activity android:name=".MainActivity ">
@@ -14219,14 +14207,14 @@ public Boolean checkFreeform() {
 </activity>
 ```
 
-可以使用以下 `<layout>` 属性来指定 activity 在分屏模式（split-view）或自由窗口模式（freeform）下可以缩至的最小宽度和高度：
+可以使用以下 `<layout>` 属性来指定 `activity` 在分屏模式（split-view）或自由窗口模式（freeform）下可以缩至的最小宽度和高度：
 
-- `android:minimalHeight` – 指定 activity 在分屏或自由窗口模式下可以缩至的最小高度。
-- `android:minimalWidth` - 指定 activity 在分屏或自由窗口模式下可以缩至的最小宽度。
+- `android:minimalHeight` – 指定 `activity` 在分屏或自由窗口模式下可以缩至的最小高度。
+- `android:minimalWidth` – 指定 `activity` 在分屏或自由窗口模式下可以缩至的最小宽度。
 
-当用户将分屏分界线滑动到最小高度或宽度边界之外时，系统将停止调整收缩中 activity 的布局，并简单地裁剪用户界面，为相邻的 activity 留空间。
+当用户将分屏分界线滑动到最小高度或宽度边界之外时，系统将停止调整收缩中 `activity` 的布局，并简单地裁剪用户界面，为相邻的 `activity` 留空间。
 
-以下 manifest 文件片段实现了 activity 的最小宽度和高度属性：
+以下 manifest 文件片段实现了 `activity` 的最小宽度和高度属性：
 
 ```xml
 <activity android:name=".MainActivity ">
@@ -14237,7 +14225,7 @@ public Boolean checkFreeform() {
 
 ## 64.8 在 Activity 中检测多窗口模式
 
-在某些情况下，activity 需要检测其当前是否正以多窗口模式显示给用户。可以通过调用 `Activity` 类的 `isInMultiWindowMode()` 方法获取当前状态。当调用此方法时，它会返回一个 true 或 false 值，取决于 activity 当前是否处于全屏状态：
+在某些情况下，`activity` 需要检测其当前是否正以多窗口模式显示给用户。可以通过调用 `Activity` 类的 `isInMultiWindowMode()` 方法获取当前状态。当调用此方法时，它会返回一个 `true` 或 `false` 值，取决于 `activity` 当前是否处于全屏状态：
 
 ```java
 if (this.isInMultiWindowMode()) {
@@ -14249,7 +14237,7 @@ if (this.isInMultiWindowMode()) {
 
 ## 64.9 接收多窗口通知
 
-如果 activity 重写了 `onMultiWindowModeChanged()` 回调方法，它将接收进入或退出多窗口模式的通知。传递给该方法的第一个参数在进入多窗口模式时为 true，在 activity 退出该模式时为 false。新的配置设置包含在第二个参数传递的 `Configuration` 对象中：
+如果 `activity` 重写了 `onMultiWindowModeChanged()` 回调方法，它将接收进入或退出多窗口模式的通知。传递给该方法的第一个参数在进入多窗口模式时为 `true`，在 `activity` 退出该模式时为 `false`。新的配置设置包含在第二个参数传递的 `Configuration` 对象中：
 
 ```java
 @Override
@@ -14264,7 +14252,7 @@ public void onMultiWindowModeChanged(boolean isInMultiWindowMode,
 }
 ```
 
-正如“处理 Android Activity 状态变化”章节概述的，Android 10 及更高版本允许多个 activity 同时处于恢复状态（也称为多重恢复，multi-resume）。用户最近交互的 activity 被称为顶层恢复 activity（topmost resumed activity）。为了跟踪 activity 获得和丢失顶层恢复状态的过程，可以在 activity 中实现 `onTopResumedActivityChanged()` 回调方法，例如：
+正如“处理 Android Activity 状态变化”章节概述的，Android 10 及更高版本允许多个 `activity` 同时处于恢复状态（也称为多重恢复，multi-resume）。用户最近交互的 `activity` 被称为顶层恢复 `activity`（topmost resumed activity）。为了跟踪 `activity` 获得和丢失顶层恢复状态的过程，可以在 `activity` 中实现 `onTopResumedActivityChanged()` 回调方法，例如：
 
 ```java
 @Override
@@ -14287,15 +14275,15 @@ android:name="android.allow_multiple_resumed_activities" android:value="true" />
 
 ## 64.10 在多窗口模式下启动 Activity
 
-在本书的“Android 显式 Intent – 示例”章节中，创建了一个示例 app，其中 activity 使用 intent 启动了第二个 activity。默认情况下，通过 intent 启动的 activity 被认为与源 activity 处于同一个任务栈（task stack）中。然而，通过 intent 传递相应的标志，可以将 activity 启动到新的任务栈中。
+在本书的“Android 显式 Intent – 示例”章节中，创建了一个示例 app，其中 `activity` 使用 `intent` 启动了第二个 `activity`。默认情况下，通过 `intent` 启动的 `activity` 被认为与源 `activity` 处于同一个任务栈（task stack）中。然而，通过 `intent` 传递相应的标志，可以将 `activity` 启动到新的任务栈中。
 
-当多窗口模式下的 activity 启动另一个 activity 时，新 activity 将出现在源 activity 不同的窗口中。要将 activity 启动到新的任务栈中，必须在 intent 上设置以下标志：
+当多窗口模式下的 `activity` 启动另一个 `activity` 时，新 `activity` 将出现在源 `activity` 不同的窗口中。要将 `activity` 启动到新的任务栈中，必须在 `intent` 上设置以下标志：
 
 - `Intent.FLAG_ACTIVITY_ADJACENT`
 - `Intent.FLAG_ACTIVITY_MULTIPLE_TASK`
 - `Intent.FLAG_ACTIVITY_NEW_TASK`
 
-以下代码示例配置并启动了第二个 activity，使其出现在独立的窗口中：
+以下代码示例配置并启动了第二个 `activity`，使其出现在独立的窗口中：
 
 ```java
 Intent i = new Intent(this, SecondActivity.class);
@@ -14307,9 +14295,9 @@ startActivity(i);
 
 ## 64.11 配置自由窗口 activity 的大小和位置
 
-默认情况下，在自由窗口模式下启动到不同任务栈的 activity 将位于屏幕中心，大小由系统决定。可以通过通过 `ActivityOptions` 类向 intent 传递边界设置（bounds settings）来控制此窗口的位置和尺寸。
+默认情况下，在自由窗口模式下启动到不同任务栈的 `activity` 将位于屏幕中心，大小由系统决定。可以通过 `ActivityOptions` 类向 `intent` 传递边界设置（bounds settings）来控制此窗口的位置和尺寸。
 
-此过程的第一步是创建一个 `Rect` 对象，配置代表 activity 窗口的左 (X)、顶 (Y)、右 (X) 和底 (Y) 坐标。以下代码示例创建了一个 Rect，其左上角位于坐标 (0, 0)，右下角位于 (100, 100)：
+此过程的第一步是创建一个 `Rect` 对象，配置代表 `activity` 窗口的左（X）、顶（Y）、右（X）和底（Y）坐标。以下代码示例创建了一个 `Rect`，其左上角位于坐标（0, 0），右下角位于（100, 100）：
 
 ```java
 Rect rect = new Rect(0, 0, 100, 100);
@@ -14322,7 +14310,7 @@ ActivityOptions options = ActivityOptions.makeBasic();
 ActivityOptions bounds = options.setLaunchBounds(rect);
 ```
 
-最后，将 `ActivityOptions` 实例转换为 `Bundle` 对象，并与 intent 一起传递给 `startActivity()` 方法：
+最后，将 `ActivityOptions` 实例转换为 `Bundle` 对象，并与 `intent` 一起传递给 `startActivity()` 方法：
 
 ```java
 startActivity(i, bounds.toBundle());
@@ -14343,13 +14331,9 @@ ActivityOptions bounds = options.setLaunchBounds(rect);
 startActivity(i, bounds.toBundle());
 ```
 
-当源 activity 在自由窗口模式下通过 intent 启动第二个 activity 时，新 activity 窗口将按照 Rect 对象中定义的位置和尺寸出现。
+当源 `activity` 在自由窗口模式下通过 `intent` 启动第二个 `activity` 时，新 `activity` 窗口将按照 `Rect` 对象中定义的位置和尺寸出现。
 
 ## 64.12 总结
-
-
-
-
 
 Android 7 引入了多窗口支持，这是一种允许屏幕上同时显示多个活动的系统。此功能现在已成为为折叠设备提供支持的基础。多窗口支持提供的三种模式为：分屏、自由窗口和画中画。在分屏模式下，屏幕被水平或垂直地划分为两个窗格，每个窗格中显示一个活动。自由窗口模式仅在某些 Android 设备上支持，允许每个活动出现在独立的、可移动且可调整大小的窗口中。正如本章概述，`Android SDK` 中提供了许多方法和属性设置，用于检测、响应和控制应用内部的多窗口行为。
 
@@ -14357,11 +14341,11 @@ Android 7 引入了多窗口支持，这是一种允许屏幕上同时显示多�
 
 不需要存储至少某些持久化数据的移动应用寥寥无几。使用数据库是大多数应用程序不可或缺的方面，范围从几乎完全数据驱动的应用到需要存储少量数据（例如常见的游戏比分）的应用不等。
 
-考虑到典型 Android 程序的瞬态生命周期，持久化数据存储的重要性变得更加显而。由于 Android 运行时系统随时存在终止应用程序组件以释放资源的风险，制定一个全面的数据存储策略以避免数据丢失，是设计和实现任何应用开发策略的关键因素。
+考虑到典型 Android 程序的瞬态生命周期，持久化数据存储的重要性变得更加显而易见。由于 Android 运行时系统随时存在终止应用程序组件以释放资源的风险，制定一个全面的数据存储策略以避免数据丢失，是设计和实现任何应用开发策略的关键因素。
 
-本章将涵盖 Android 操作系统捆绑的 `SQLite` 数据库管理系统，并概述 `Android SDK` 类如何在 Android 应用程序中实现基于 SQLite 的持久化数据库存储。然而，在深入探讨 Android 开发背景下的 `SQLite` 细节之前，会对数据库和 SQL 进行简要概述。
+本章将涵盖 Android 操作系统捆绑的 `SQLite` 数据库管理系统，并概述 `Android SDK` 类如何在 Android 应用程序中实现基于 `SQLite` 的持久化数据库存储。然而，在深入探讨 Android 开发背景下的 `SQLite` 细节之前，会对数据库和 `SQL` 进行简要概述。
 
-### 65.1 理解数据库表
+## 65.1 理解数据库表
 
 数据库表（Database Tables）提供了数据库中最基础层的数据结构。每个数据库可以包含多个表，每个表设计用于存储特定类型的信息。例如，一个数据库可能包含一个 `customer` 表，其中包含特定业务每个客户的名称、地址和电话号码。同一个数据库可能还包含一个 `products` 表，用于存储该业务销售商品的描述以及相关的产品代码。
 
@@ -14381,7 +14365,7 @@ Android 7 引入了多窗口支持，这是一种允许屏幕上同时显示多�
 
 每一列反过来被定义为包含特定类型的数据。因此，设计用于存储数字的列被定义为包含数值数据。
 
-### 65.4 数据库行
+## 65.4 数据库行
 
 保存到表中的每条新记录都存储在行（row）中。每一行反过来由与保存记录相关的数据列组成。
 
@@ -14395,29 +14379,27 @@ Android 7 引入了多窗口支持，这是一种允许屏幕上同时显示多�
 
 主键允许数据库管理系统唯一地标识表中的特定行。如果没有主键，将无法检索或删除表中的特定行，因为无法确定是否选中了正确的行。例如，假设存在一个表，客户的姓氏被定义为主键。想象一下，如果数据库中记录了多个名为“Smith”的客户，会产生什么问题。如果没有某种能够保证的方法来唯一地标识特定行，要确保在任何给定时间访问到正确的数据是不可能的。
 
-主键可以由表中的单列或多列组成。要符合单列主键的条件，不能有两行包含匹配的主键值。当使用多个列来构建主键时，单个列列的值不需要是唯一的，但所有列的值组合必须是唯一的。
+主键可以由表中的单列或多列组成。要符合单列主键的条件，不能有两行包含匹配的主键值。当使用多个列来构建主键时，单个列的值不需要是唯一的，但所有列的值组合必须是唯一的。
 
-### 65.6 什么是 SQLite？
+## 65.6 什么是 SQLite？
 
-`SQLite` 是一个嵌入式关系型数据库管理系统（RDBMS）。大多数关系型数据库（`Oracle`、`SQL Server` 和 `MySQL` 是主要示例）都是独立运行并与需要数据库访问的应用协作的独立服务器进程。`SQLite` 被称为嵌入式，是因为是以库的形式提供并链接到应用程序中的。因此，后台没有运行独立的数据库服务器。所有的数据库操作都通过通过调用 `SQLite` 库中的函数在应用程序内部进行处理。
+`SQLite` 是一个嵌入式关系型数据库管理系统（RDBMS）。大多数关系型数据库（`Oracle`、`SQL Server` 和 `MySQL` 是主要示例）都是独立运行并与需要数据库访问的应用协作的独立服务器进程。`SQLite` 被称为嵌入式，是因为它以库的形式提供并链接到应用程序中。因此，后台没有运行独立的数据库服务器。所有的数据库操作都通过调用 `SQLite` 库中的函数在应用程序内部进行处理。
 
 `SQLite` 的开发者已将该技术置于公有领域，结果它现在是一项广泛部署的数据库解决方案。
 
-`SQLite` 用 `C` 语言编写，因此 `Android SDK` 提供了一个围绕底层接口的 Java “封装”。它由可在应用程序的 `Java` 或 `Kotlin` 代码中创建和管理 SQLite 数据库的类组成。
+`SQLite` 用 `C` 语言编写，因此 `Android SDK` 提供了一个围绕底层接口的 Java“封装”。它由可在应用程序的 `Java` 或 `Kotlin` 代码中创建和管理 `SQLite` 数据库的类组成。
 
 有关 `SQLite` 的更多信息，请参考 [`www.sqlite.org`](https://www.sqlite.org)。
 
-## 65.7 结构化查询语言 (SQL)
+## 65.7 结构化查询语言（SQL）
 
 在 `SQLite` 数据库中，使用名为结构化查询语言的高级语言访问数据。这通常缩写为 `SQL`，读作 sequel。`SQL` 是大多数关系型数据库管理系统使用的标准语言。`SQLite` 大程度上符合 `SQL-92` 标准。
 
-`SQL` 是一种简单且易于使用的语言，专门设计用于读取和写入数据库数据。由于 `SQL` 一组较小的关键字，它可以快速学习。此外，`SQL` 语法在大多数 DBMS 实现之间几乎相同，因此在在一个系统中学习了 `SQL` 后，你的技能可能会转移到其他数据库管理系统。
+`SQL` 是一种简单且易于使用的语言，专门设计用于读取和写入数据库数据。由于 `SQL` 是一组较小的关键字，它可以快速学习。此外，`SQL` 语法在大多数 DBMS 实现之间几乎相同，因此在一个系统中学习了 `SQL` 后，你的技能可能会转移到其他数据库管理系统。
 
-虽然本章将使用一些基本的 `SQL` 语句，但对 `SQL` 的详细概述超出了本书的范围。然而，许多其他资源提供了比我们在这里这一章中提供的更好的 `SQL` 概述。
+虽然本章将使用一些基本的 `SQL` 语句，但对 `SQL` 的详细概述超出了本书的范围。然而，许多其他资源提供了比我们在这一章中提供的更好的 `SQL` 概述。
 
-## 65.8 在 Android 虚拟设备 (AVD) 上尝试 SQLite
-
-
+## 65.8 在 Android 虚拟设备（AVD）上尝试 SQLite
 
 
 
@@ -14435,7 +14417,7 @@ adb shell
 
 连接后，shell 环境将提供一个命令提示符，可以在其中输入命令。首先使用 `su` 命令获取超级用户权限：
 
-```
+```text
 Generic_x86:/ su
 root@android:/ # own
 ```
@@ -14469,7 +14451,7 @@ root@android:/data/data/databases # sqlite3 ./mydatabase.db
 sqlite3 ./mydatabase.db
 ```
 
-```
+```text
 SQLite version 3.8.10.2 2015-05-20 18:17:19
 Enter ".help" for usage hints.
 sqlite>
@@ -14557,10 +14539,6 @@ sqlite> .exit
 - `onCreate()`：在首次创建数据库时调用。该方法将 `SQLiteDatabase` 对象作为参数传递给新创建的数据库。这是初始化数据库（如创建表和插入初始数据行）的理想位置。
 - `onUpgrade()`：当应用程序代码包含更新版本的数据库版本号引用时调用。这通常在应用程序在设备上更新并且需要数据库架构也进行更新以处理额外数据存储时使用。
 
-
-
-
-
 除了上述强制性的回调方法外，在数据库打开时调用的 `onOpen()` 方法也可以在子类中实现。
 
 子类的构造函数也必须被实现，以调用父类，并传递应用上下文、数据库名称和数据库版本。
@@ -14571,7 +14549,7 @@ sqlite> .exit
 - `getReadableDatabase()` – 创建或打开一个仅读的数据库。返回一个以 `SQLiteDatabase` 对象形式表示的数据库引用。
 - `close()` – 关闭数据库。
 
-## 65.9.4 ContentValues
+### 65.9.4 ContentValues
 
 `ContentValues` 是一个便利类，允许声明键/值对，这些键值对由表列标识符和存储在每列中的值组成。该类在向数据库表中插入或更新条目时特别有用。
 
@@ -14589,7 +14567,7 @@ SQLite 是一个轻量级、嵌入式关系型数据库管理系统，包含在 
 
 ## 66. Android SQLite 数据库教程
 
-标题为 “Android SQLite 数据库概述” 的章节涵盖了使用 SQLite 数据库管理系统将关系型数据库存储集成到 Android 应用中的基本原理。在本章中，我们将创建一个使用 SQLite 数据库的项目来存储和检索数据。
+标题为“Android SQLite 数据库概述”的章节涵盖了使用 SQLite 数据库管理系统将关系型数据库存储集成到 Android 应用中的基本原理。在本章中，我们将创建一个使用 SQLite 数据库的项目来存储和检索数据。
 
 ### 66.1 关于数据库示例
 
@@ -14619,7 +14597,7 @@ SQLite 是一个轻量级、嵌入式关系型数据库管理系统，包含在 
 
 完成后，应用程序将由一个 activity 和一个数据库处理器类组成。数据库处理器将是 `SQLiteOpenHelper` 的子类，并在底层 SQLite 数据库和 activity 类之间提供一个抽象层，由 activity 调用数据库处理器与数据库进行交互（添加、删除和查询数据库条目）。为了以结构化的方式实现这种交互，还需要实现第三类类，用于在数据库条目数据在 activity 和处理器之间传递时持有这些数据。这实际上是一个非常简单的类，能够持有客户 ID、姓名和电话值，以及用于访问这些值的 getter 和 setter 方法。随后可以在 activity 和数据库处理器中创建该类的实例，并根据需要来回传递。本质上，该类代表了数据库模型。
 
-在 Project（项目）工具窗口中导航到 `app -> java` 并右键点击包名。在弹出菜单中，选择 New -> Java Class 选项，并在 Create New Class 对话框中将类名命名为 `Customer`，在按下键盘回车键之前将 Kind 菜单更改为 `Class`。
+在 Project（项目）工具窗口中导航到 `app -> java` 并右键点击包名。在弹出菜单中，选择 `New -> Java Class` 选项，并在 Create New Class 对话框中将类名命名为 `Customer`，在按下键盘回车键之前将 Kind 菜单更改为 `Class`。
 
 创建后，`Customer.java` 源文件将自动加载到 Android Studio 编辑器。加载后，修改代码以添加适当的构造函数：
 
@@ -14677,10 +14655,9 @@ public class Customer {
 
 数据处理器将通过派自 Android `SQLiteOpenHelper` 类来实现，并如“Android SQLite 数据库概述”所示，添加构造函数、`onCreate()` 和 `onUpgrade()` 方法。由于处理器需要代表 activity 组件执行添加、查询和删除操作，还需要在该类中添加相应的方法。
 
-
-
-
 首先向项目中添加第二个新类作为处理器，命名为 `MyDBHandler`。创建新类后，对其进行修改使其读取如下：
+
+
 
 ```java
 package com.ebookfrenzy.sqldemo;
@@ -14708,7 +14685,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
 }
 ```
 
-现在我们已经在源文件中预填充了模板 `onCreate()` 和 `onUpgrade()` 方法，接下来的任务是修改代码以为数据库名称、表名、表列和数据库版本声明常量如下：
+现在我们已经在源文件中预填充了模板`onCreate()`和`onUpgrade()`方法，接下来的任务是修改代码以为数据库名称、表名、表列和数据库版本声明常量如下：
 
 ```java
 public class MyDBHandler extends SQLiteOpenHelper {
@@ -14721,7 +14698,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
 }
 ```
 
-接下来，需要实现 `onCreate()` 方法，以便在数据库首次初始化时创建客户表。这涉及构造一个 SQL CREATE 语句，该语句包含创建带有适当列的新表指令，然后通过传递的作为参数传递给 `onCreate()` 的 `SQLiteDatabase` 对象的 `execSQL()` 方法将其执行：
+接下来，需要实现`onCreate()`方法，以便在数据库首次初始化时创建客户表。这涉及构造一个 SQL `CREATE` 语句，该语句包含创建带有适当列的新表指令，然后通过传递的作为参数传递给`onCreate()`的`SQLiteDatabase`对象的`execSQL()`方法将其执行：
 
 ```java
 @Override
@@ -14735,7 +14712,7 @@ public void onCreate(SQLiteDatabase db) {
 }
 ```
 
-当调用处理器时使用的数据库版本大于之前使用的版本时，会调用 `onUpgrade()` 方法。在此实例中执行的具体步骤将取决于应用程序，因此对于本示例，我们将删除旧数据库并创建一个新数据库：
+当调用处理器时使用的数据库版本大于之前使用的版本时，会调用`onUpgrade()`方法。在此实例中执行的具体步骤将取决于应用程序，因此对于本示例，我们将删除旧数据库并创建一个新数据库：
 
 ```java
 @Override
@@ -14746,11 +14723,11 @@ public void onUpgrade(SQLiteDatabase db, int oldVersion,
 }
 ```
 
-在 `MyDBHandler.java` 处理器类中，剩余需要实现的是添加、查询和删除数据库表条目的方法。
+在`MyDBHandler.java`处理器类中，剩余需要实现的是添加、查询和删除数据库表条目的方法。
 
 ### 66.6 Add Handler 方法
 
-插入数据库记录的方法将命名为 `addCustomer()`，并将我们的 `Customer` 数据模型类的实例作为参数参数。在方法体中将创建一个 `ContentValues` 对象，并用从 `Customer` 对象中提取出的数据列的键值对进行填充。接下来，通过调用 `getWritableDatabase()` 获取数据库引用，然后调用返回的数据库对象的 `insert()` 方法。最后，一旦完成插入，就需要关闭数据库：
+插入数据库记录的方法将命名为`addCustomer()`，并将我们的`Customer`数据模型类的实例作为参数参数。在方法体中将创建一个`ContentValues`对象，并用从`Customer`对象中提取出的数据列的键值对进行填充。接下来，通过调用`getWritableDatabase()`获取数据库引用，然后调用返回的数据库对象的`insert()`方法。最后，一旦完成插入，就需要关闭数据库：
 
 ```java
 public void addCustomer(Customer customer) {
@@ -14765,7 +14742,7 @@ public void addCustomer(Customer customer) {
 
 ### 66.7 Query 方法
 
-查询数据库的方法将命名为 `findCustomer()`，并将一个包含要查找客户名称的 `String` 对象作为参数。使用此字符串将构造一个 SQL SELECT 语句以查找表中所有匹配的记录。对于本示例，将只返回第一个匹配项，并包含在一个新的 `Customer` 数据类实例中：
+查询数据库的方法将命名为`findCustomer()`，并将一个包含要查找客户名称的`String`对象作为参数。使用此字符串将构造一个 SQL `SELECT` 语句以查找表中所有匹配的记录。对于本示例，将只返回第一个匹配项，并包含在一个新的`Customer`数据类实例中：
 
 ```java
 public Customer findCustomer(String customername) {
@@ -14789,7 +14766,7 @@ public Customer findCustomer(String customername) {
 
 ### 66.8 Delete 方法
 
-删除方法将命名为 `deleteCustomer()`，并将以 `Customer` 对象形式接收的待删除条目作为参数。该方法将使用 SQL SELECT 语句根据客户名称搜索该条目，如果找到，则从表中删除它。删除的成功与否将体现在 `Boolean` 返回值中：
+删除方法将命名为`deleteCustomer()`，并将以`Customer`对象形式接收的待删除条目作为参数。该方法将使用 SQL `SELECT` 语句根据客户名称搜索该条目，如果找到，则从表中删除它。删除的成功与否将体现在`Boolean`返回值中：
 
 ```java
 public boolean deleteCustomer(String customername) {
@@ -14811,7 +14788,7 @@ public boolean deleteCustomer(String customername) {
 
 ### 66.9 实现 Activity 事件方法
 
-测试应用程序之前的最后一个任务是为用户界面中的三个按钮编写 `onClick` 事件处理器。将源文件加载到编辑器并添加如下的 `onClick` 方法：
+测试应用程序之前的最后一个任务是为用户界面中的三个按钮编写`onClick`事件处理器。将源文件加载到编辑器并添加如下的`onClick`方法：
 
 ```java
 package com.ebookfrenzy.sqldemo;
@@ -14864,9 +14841,6 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-
-
-
 ```java
 binding.customerName.getText().toString());
 
@@ -14883,7 +14857,7 @@ else
 
 ### 66.10 测试应用程序
 
-完成代码更改后，在 AVD 会话或物理 Android 设备上编译并运行应用程序。一旦应用程序运行，在用户界面表单中输入客户名称和电话号码，然后点击 `Add` 按钮。记录添加后，文本框将清空。重复这些步骤向数据库中添加第二个客户。接下来，将新添加客户之一的名称输入到客户名称字段，并点击 `Find` 按钮。表单应更新为所选客户的客户 ID 和电话号码。点击 `Delete` 按钮删除所选记录。随后通过客户名称进行搜索，应显示该记录已不存在。
+完成代码更改后，在 AVD 会话或物理 Android 设备上编译并运行应用程序。一旦应用程序运行，在用户界面表单中输入客户名称和电话号码，然后点击`Add`按钮。记录添加后，文本框将清空。重复这些步骤向数据库中添加第二个客户。接下来，将新添加客户之一的名称输入到客户名称字段，并点击`Find`按钮。表单应更新为所选客户的客户 ID 和电话号码。点击`Delete`按钮删除所选记录。随后通过客户名称进行搜索，应显示该记录已不存在。
 
 ### 66.11 总结
 
@@ -14901,39 +14875,41 @@ else
 
 ### 67.2 内容提供者
 
-内容提供者是作为 `android.content.ContentProvider` 类的子类的。通常，负责管理要共享数据的应用程序将实现一个内容提供者，以便于与其他应用程序共享该数据。
+内容提供者是作为`android.content.ContentProvider`类的子类的。通常，负责管理要共享数据的应用程序将实现一个内容提供者，以便于与其他应用程序共享该数据。
 
 创建内容提供者涉及实现方法来代表其他客户端应用程序管理数据。这些方法如下：
 
-###### 67.2.1 onCreate()
+#### 67.2.1 onCreate()
 
 此方法在内容提供者首次创建时被调用，应用于执行内容提供者所需的任何初始化任务。
 
-##### 67.2.2 query()
+#### 67.2.2 query()
 
-当客户端请求从内容提供者检索数据时，将调用此方法。该方法识别要检索的数据（单行或多行），执行数据提取，并将结果封装在 `Cursor` 对象中返回。
+当客户端请求从内容提供者检索数据时，将调用此方法。该方法识别要检索的数据（单行或多行），执行数据提取，并将结果封装在`Cursor`对象中返回。
 
-##### 67.2.3 insert()
+#### 67.2.3 insert()
 
 当需要向提供者数据库中插入新行时，将调用此方法。该方法必须识别数据的目标位置，执行插入并返回新添加行的完整 URI。
 
-##### 67.2.4 update()
+#### 67.2.4 update()
 
 当需要代表客户端更新现有行时调用的方法。该方法使用通过传递的参数来更新适当的表行，并返回操作结果更新的行数。
 
-##### 67.2.5 delete()
+#### 67.2.5 delete()
 
 当需要从表中删除行时调用此方法。该方法删除指定的行并返回删除的行数计数。
 
-###### 67.2.6 getType()
+#### 67.2.6 getType()
 
 返回由内容提供者存储的数据 MIME 类型。
 
-在内容提供者中实现这些方法时，重要的一点是，除 `onCreate()` 方法外，它们可以从许多进程同时被调用，因此必须是线程安全的。
 
-一旦实现了内容提供者，随之而来的问题如何在 Android 系统中标识该提供者。这就是内容 URI 发挥作用的地方。
 
-#### 67.3 内容 URI
+在内容提供者中实现这些方法时，重要的一点是，除`onCreate()`方法外，它们可以从许多进程同时被调用，因此必须是线程安全的。
+
+一旦实现了内容提供者，随之而来的问题是如何在 Android 系统中标识该提供者。这就是内容 URI 发挥作用的地方。
+
+## 67.3 内容 URI
 
 Android 设备可能包含多个内容提供者。因此，系统必须提供某种方法来从一个提供者识别出另一个提供者。同样，单个内容提供者可能提供对多种形式内容的访问（通常以数据库表的形式）。因此，客户端应用程序需要一种方法来指定所需访问的底层数据。这是通过使用内容 URI 实现的。
 
@@ -14941,59 +14917,56 @@ Android 设备可能包含多个内容提供者。因此，系统必须提供某
 
 `com.example.mydbapp.myprovider`
 
-提供者数据结构内的数据库表可以通过在 authority 之后附加表名来引用。例如，以下 URI 引用了内容提供者中名为 `products` 的表：
+提供者数据结构内的数据库表可以通过在 authority 之后附加表名来引用。例如，以下 URI 引用了内容提供者中名为`products`的表：
 
 `com.example.mydbapp.myprovider/products`
 
-同样，指定表中的特定行可以通过将行 ID 附加到 URI 中来引用。例如，以下 URI 引用了 `products` 表中 `ID` 列存储的值等于 `3` 的行：
+同样，指定表中的特定行可以通过将行 ID 附加到 URI 中来引用。例如，以下 URI 引用了`products`表中`ID`列存储的值等于`3`的行：
 
 `com.example.mydbapp.myprovider/products/3`
 
-在内容提供者中实现 `insert`、`query`、`update` 和 `delete` 方法时，这些方法有责任识别传入的 URI 是指向表中的特定行还是引用了多行，并采取相应的行动。由于 URI 可以扩展到多个层级，这可能是一项复杂的任务。然而，使用 `UriMatcher` 类可以显著简化这一过程，将在下一章中进行概述。
+在内容提供者中实现`insert`、`query`、`update`和`delete`方法时，这些方法有责任识别传入的 URI 是指向表中的特定行还是引用了多行，并采取相应的行动。由于 URI 可以扩展到多个层级，这可能是一项复杂的任务。然而，使用`UriMatcher`类可以显著简化这一过程，将在下一章中进行概述。
 
-### 67.4 内容解析器 (Content Resolver)
+## 67.4 内容解析器（Content Resolver）
 
-通过 `ContentResolver` 对象实现对内容提供者的访问。应用程序可以通过调用应用程序上下文的 `getContentResolver()` 方法获取其内容解析器的引用。
+通过`ContentResolver`对象实现对内容提供者的访问。应用程序可以通过调用应用程序上下文的`getContentResolver()`方法获取其内容解析器的引用。
 
-内容解析器对象包含一组与内容提供者对应的方法（`insert`、`query`、`delete` 等）。应用程序只需调用这些方法并指定要执行操作内容的 URI。内容解析器和内容提供者对象随后进行通信，代表应用程序执行请求的任务。
+内容解析器对象包含一组与内容提供者对应的方法（`insert`、`query`、`delete`等）。应用程序只需调用这些方法并指定要执行操作内容的 URI。内容解析器和内容提供者对象随后进行通信，代表应用程序执行请求的任务。
 
-#### 67.5 <provider> 清清单元素
+## 67.5 `<provider>`清单元素
 
-为了让内容提供者在 Android 系统中可见，必须在所属应用程序的 Android 清清单文件中进行声明。这是通过使用`<provider>`元素实现的，该元素必须包含以下项目：
+为了让内容提供者在 Android 系统中可见，必须在所属应用程序的 Android 清单文件中进行声明。这是通过使用`<provider>`元素实现的，该元素必须包含以下项目：
 
-- `android:authority` – 内容提供者的完整权限 URI。例如 `com.example.mydbapp.mydbapp.myprovider`。
+- `android:authority` – 内容提供者的完整权限 URI。例如`com.example.mydbapp.mydbapp.myprovider`。
 - `android:name` – 实现内容提供者的类名。在大多数情况下，这将使用与 authority 相同的值。
 
-
-
-
-同样，`<provider>` 元素可以定义客户端应用程序必须具备的权限，以便获得访问底层数据的权限。如果没有声明任何权限，默认行为是允许所有应用程序访问。
+同样，`<provider>`元素可以定义客户端应用程序必须具备的权限，以便获得访问底层数据的权限。如果没有声明任何权限，默认行为是允许所有应用程序访问。
 
 权限可以设置成覆盖整个内容提供者，也可以限于特定的表和记录。
 
-### 67.6 总结
+## 67.6 总结
 
 属于应用程序的数据通常对该应用程序是私有的，其他应用程序无法访问。当数据需要共享时，就需要设置内容提供者。本章涵盖了实现应用程序间数据共享的基础元素，并概述了内容提供者、内容 URI 和解析器（content resolver）的概念。
 
-在下一章中，将扩展之前创建的 `SQLdemo` 项目，以便通过内容提供者提供底层客户数据。
+在下一章中，将扩展之前创建的`SQLdemo`项目，以便通过内容提供者提供底层客户数据。
 
-## 68. Android Content Provider 教程
+# 68. Android Content Provider 教程
 
-如上一章所述，内容提供者提供了一种机制，使得一个 Android 应用程序存储的数据可以其他应用程序访问。在提供了对内容提供者的理论概述后，本章将通过扩展在“Android SQLite 数据库教程”章节中创建的 `SQLDemo` 项目，继续介绍内容提供者，以实现基于内容提供者的数据库访问。
+如上一章所述，内容提供者提供了一种机制，使得一个 Android 应用程序存储的数据可以被其他应用程序访问。在提供了对内容提供者的理论概述后，本章将通过扩展在“Android SQLite 数据库教程”章节中创建的`SQLDemo`项目，继续介绍内容提供者，以实现基于内容提供者的数据库访问。
 
 ## 68.1 复制 SQLDemo 项目
 
-为了保持原始 `SQLDemo` 项目完整无损，我们将在修改它之前创建一个项目的备份副本，以实现应用程序实现内容提供者支持。如果 Android Studio 中当前打开了 `SQLDemo` 项目，请使用 `File` -> `Close Project` 菜单选项关闭它。
+为了保持原始`SQLDemo`项目完整无损，我们将在修改它之前创建一个项目的备份副本，以实现应用程序内容提供者支持。如果 Android Studio 中当前打开了`SQLDemo`项目，请使用`File` -> `Close Project`菜单选项关闭它。
 
-使用你操作系统的文件管理器，导航到包含 Android Studio 项目的目录，并将 `SQLDemo` 项目文件夹复制到名为 `SQLDemo_provider` 的新文件夹中。
+使用你操作系统的文件管理器，导航到包含 Android Studio 项目的目录，并将`SQLDemo`项目文件夹复制到名为`SQLDemo_provider`的新文件夹中。
 
-在 Android Studio 欢迎界面，打开 `SQLDemo_provider` 项目，使其加载到主窗口。
+在 Android Studio 欢迎界面，打开`SQLDemo_provider`项目，使其加载到主窗口。
 
-### 68.2 添加 Content Provider 包
+## 68.2 添加 Content Provider 包
 
-下一步是向 `SQLDemo` 项目添加一个新包以包含内容提供者类。在 Project（项目）工具窗口中导航到 `app` -> `java`，右键点击它并选择 `New` -> `Package` 菜单选项。当 `Choose Destination Directory` 对话框出现时，从 Directory Structure 面板选择 `..\app\src\main\java` 选项并点击 OK。
+下一步是向`SQLDemo`项目添加一个新包以包含内容提供者类。在 Project（项目）工具窗口中导航到`app` -> `java`，右键点击它并选择`New` -> `Package`菜单选项。当`Choose Destination Directory`对话框出现时，从 Directory Structure 面板选择`..\app\src\main\java`选项并点击 OK。
 
-在 `New Package` 对话框中，按下回车键之前，在 name 字段中输入以下包名：
+在`New Package`对话框中，按下回车键之前，在 name 字段中输入以下包名：
 
 `com.ebookfrenzy.sqldemo.provider`
 
@@ -15003,15 +14976,15 @@ Android 设备可能包含多个内容提供者。因此，系统必须提供某
 
 图 68-1
 
-### 68.3 创建 Content Provider 类
+## 68.3 创建 Content Provider 类
 
-正如“理解 Android Content Providers”中所讨论，内容提供者是通过子类 `android.content.ContentProvider` 类创建的。因此，下一步是在新的提供者包中添加一个类作为此应用程序的内容提供者。在 Project 工具窗口中找到新包，右键点击它并选择 `New` -> `Other` -> `Content Provider` 菜单选项。在 `Configure Component` 对话框中，在 `Class Name` 字段输入 `MyContentProvider`，并在 `URI Authorities` 字段输入以下内容：
+正如“理解 Android Content Providers”中所讨论，内容提供者是通过子类`android.content.ContentProvider`类创建的。因此，下一步是在新的提供者包中添加一个类作为此应用程序的内容提供者。在 Project 工具窗口中找到新包，右键点击它并选择`New` -> `Other` -> `Content Provider`菜单选项。在`Configure Component`对话框中，在`Class Name`字段输入`MyContentProvider`，并在`URI Authorities`字段输入以下内容：
 
 `com.ebookfrenzy.sqldemo.provider.MyContentProvider`
 
 在点击 Finish 创建新类之前，确保新的内容提供者类已导出并启用。
 
-一旦创建了新类，`MyContentProvider.java` 文件应该列在 Project 工具窗口提供者包下方，并自动加载到编辑器中，其内容如下述列表所示：
+一旦创建了新类，`MyContentProvider.java`文件应该列在 Project 工具窗口提供者包下方，并自动加载到编辑器中，其内容如下述列表所示：
 
 ```java
 package com.ebookfrenzy.sqldemo.provider;
@@ -15068,13 +15041,13 @@ public class MyContentProvider extends ContentProvider {
 }
 ```
 
-通过快速查看此文件的代码可以看出，Android Studio 已经为 `ContentProvider` 子类需要实现的每个方法填充了存根方法。很快就需要开始实现这些方法，但首先需要声明与提供者 authority（机构标识）和 URI 相关的常量。
+通过快速查看此文件的代码可以看出，Android Studio 已经为`ContentProvider`子类需要实现的每个方法填充了存根方法。很快就需要开始实现这些方法，但首先需要声明与提供者 authority（机构标识）和 URI 相关的常量。
 
 ## 68.4 构建 Authority 和内容 URI
 
-如上一章所述，所有内容提供者都必须关联一个 authority 和内容 URI。在实践中，authority 通常是内容提供者类的完整包名，在本例中为上一节创建新内容类时定义的 `com.ebookfrenzy.sqldemo.provider.MyContentProvider`。
+如上一章所述，所有内容提供者都必须关联一个 authority 和内容 URI。在实践中，authority 通常是内容提供者类的完整包名，在本例中为上一节创建新内容类时定义的`com.ebookfrenzy.sqldemo.provider.MyContentProvider`。
 
-内容 URI 会根据应用程序需求而异，对于本示例，它将包含 并在结尾附加表名。在 `MyContentProvider.java` 文件中，进行以下修改：
+内容 URI 会根据应用程序需求而异，对于本示例，它将包含并在结尾附加表名。在`MyContentProvider.java`文件中，进行以下修改：
 
 ```java
 package com.ebookfrenzy.sqldemo.provider;
@@ -15093,17 +15066,13 @@ public class MyContentProvider extends ContentProvider {
 }
 ```
 
-上述语句首先创建一个名为 `AUTHORITY` 的新 String 对象并将权限字符串赋值给它。同样，创建第二个名为 `CUSTOMERS_TABLE` 的 String 对象并初始化为我们的数据库表名（`customers`）。
+上述语句首先创建一个名为`AUTHORITY`的新 String 对象并将权限字符串赋值给它。同样，创建第二个名为`CUSTOMERS_TABLE`的 String 对象并初始化为我们的数据库表名（`customers`）。
 
-最后，将这两个字符串元素组合，加上 `content://` 前缀并使用 `Uri` 类的 `parse()` 方法转换为 `Uri` 对象。结果被赋值给变量 `CONTENT_URI`。
+最后，将这两个字符串元素组合，加上`content://`前缀并使用`Uri`类的`parse()`方法转换为`Uri`对象。结果被赋值给变量`CONTENT_URI`。
 
 ## 68.5 在 Content Provider 中实现 URI 匹配
 
-
-
-
-
-当内容提供者（content provider）的方法被调用时，它们将接收一个 `URI` 作为参数，该 `URI` 表示要执行操作的数据。此 `URI` 的形式可以是指向特定表中特定行的引用。`URI` 也可能更加通用，例如仅指定数据库表。每个方法都有责任识别 `Uri` 类型并采取相应的操作。使用 `UriMatcher` 实例可以极大地减轻这项任务。一旦创建了 `UriMatcher` 实例，就可以将其配置为在被要求时返回一个与检测到的 `URI` 类型相对应的特定整数值。在本教程中，我们将配置 `UriMatcher` 实例，以便在当 `URI` 引用整个 `customers` 表时返回值 1，当 `URI` 引用 `customers` 表中特定行的 ID 时返回值 2。在开始创建 `URIMatcher` 实例之前，我们先创建两个整数变量来表示两种 `URI` 类型：
+当内容提供者（content provider）的方法被调用时，它们将接收一个`URI`作为参数，该`URI`表示要执行操作的数据。此`URI`的形式可以是指向特定表中特定行的引用。`URI`也可能更加通用，例如仅指定数据库表。每个方法都有责任识别`Uri`类型并采取相应的操作。使用`UriMatcher`实例可以极大地减轻这项任务。一旦创建了`UriMatcher`实例，就可以将其配置为在被要求时返回一个与检测到的`URI`类型相对应的特定整数值。在本教程中，我们将配置`UriMatcher`实例，以便在当`URI`引用整个`customers`表时返回值 1，当`URI`引用`customers`表中特定行的 ID 时返回值 2。在开始创建`URIMatcher`实例之前，我们先创建两个整数变量来表示两种`URI`类型：
 
 ```java
 package com.ebookfrenzy.sqldemo.provider;
@@ -15123,7 +15092,7 @@ public class MyContentProvider extends ContentProvider {
 }
 ```
 
-声明了 `Uri` 类型变量后，现在是时候添加代码来创建 `UriMatcher` 实例并配置其返回相应的变量了：
+声明了`Uri`类型变量后，现在是时候添加代码来创建`UriMatcher`实例并配置其返回相应的变量了：
 
 ```java
 public class MyContentProvider extends ContentProvider {
@@ -15141,11 +15110,11 @@ public class MyContentProvider extends ContentProvider {
 }
 ```
 
-`UriMatcher` 实例（命名为 `sURIMatcher`）现在已准备好在当 `URI` 仅引用客户表时返回 `CUSTOMER` 的值，当 `URI` 包含表中特定行的 ID 时返回 `CUSTOMER_ID`。
+`UriMatcher`实例（命名为`sURIMatcher`）现在已准备好在当`URI`仅引用客户表时返回`CUSTOMER`的值，当`URI`包含表中特定行的 ID 时返回`CUSTOMER_ID`。
 
-### 68.6 实现内容提供者的 `onCreate()` 方法
+### 68.6 实现内容提供者的`onCreate()`方法
 
-当内容提供者类被创建并初始化时，将调用一次该类的 `onCreate()` 方法。在此方法中，必须执行该类的任何初始化任务。对于此示例，需要执行的所有操作是在“An Android SQLite Database Tutorial”中实现的 `MyDBHandler` 类实例。一旦创建了此实例，它将需要能够被类中的其他方法访问，因此还需要对数据库句柄进行声明，这导致了 `MyContentProvider.java` 文件中的以下代码更改：
+当内容提供者类被创建并初始化时，将调用一次该类的`onCreate()`方法。在此方法中，必须执行该类的任何初始化任务。对于此示例，需要执行的所有操作是在“An Android SQLite Database Tutorial”中实现的`MyDBHandler`类实例。一旦创建了此实例，它将需要能够被类中的其他方法访问，因此还需要对数据库句柄进行声明，这导致了`MyContentProvider.java`文件中的以下代码更改：
 
 ```java
 @Override
@@ -15155,9 +15124,9 @@ public boolean onCreate() {
 }
 ```
 
-### 68.7 实现内容提供者的 `insert()` 方法
+### 68.7 实现内容提供者的`insert()`方法
 
-当客户端应用程序或活动请求将数据插入到底层数据库时，将调用内容提供者类的 `insert()` 方法。然而，此时项目中的 `MyContentProvider.kt` 文件中仅存在一个存根方法，其内容如下：
+当客户端应用程序或活动请求将数据插入到底层数据库时，将调用内容提供者类的`insert()`方法。然而，此时项目中的`MyContentProvider.kt`文件中仅存在一个存根方法，其内容如下：
 
 ```java
 public Uri insert(Uri uri, ContentValues values) {
@@ -15165,16 +15134,19 @@ public Uri insert(Uri uri, ContentValues values) {
 }
 ```
 
-作为方法的参数传递的是指定插入位置的 `URI` 和一个包含要插入数据的 `ContentValues` 对象。现在需要修改此方法以执行以下任务：
+作为方法的参数传递的是指定插入位置的`URI`和一个包含要插入数据的`ContentValues`对象。现在需要修改此方法以执行以下任务：
 
-- 使用 `sUriMatcher` 对象来识别 `URI` 类型。
-- 如果 `URI` 无效，则抛出异常。
-- 获取底层 `SQLite` 数据库的可写实例的引用。
+- 使用`sUriMatcher`对象来识别`URI`类型。
+- 如果`URI`无效，则抛出异常。
+- 获取底层`SQLite`数据库的可写实例的引用。
+
+
+
 - 执行 SQL `insert` 操作将数据插入到数据库表中。
-- 通知相应的 `content resolver`（内容解析器）数据库已发生更改。
-- 返回新添加行的 `URI`。
+- 通知相应的`content resolver`（内容解析器）数据库已发生更改。
+- 返回新添加行的`URI`。
 
-将这些需求整合在一起，就得到了一个修改后的 `insert()` 方法，其内容如下：
+将这些需求整合在一起，就得到了一个修改后的`insert()`方法，其内容如下：
 
 ```java
 @Override
@@ -15194,26 +15166,26 @@ public Uri insert(Uri uri, ContentValues values) {
 }
 ```
 
-### 68.8 实现内容提供者的 `query()` 方法
+### 68.8 实现内容提供者的`query()`方法
 
-当调用内容提供者返回数据时，将调用内容提供者的 `query()` 方法。调用时，该方法会传递以下参数：
+当调用内容提供者返回数据时，将调用内容提供者的`query()`方法。调用时，该方法会传递以下参数：
 
-- `URI`: 指定执行查询的数据源的 `URI`。它可以是多个结果的通用查询，也可以是针对单行 ID 的特定查询。
-- `Projection`: 数据库表中的多个列。在本应用程序中，这些列对应于 ID、姓名和电话号码。`projection` 参数只是包含要返回结果集中每列命名的 `String` 数组。
-- `Selection`: 作为查询一部分执行的“where”元素。此参数控制从指定数据库中选择行。例如，如果查询需要选择名为“John Andrews”的客户，传递给 `query()` 方法的选择字符串将是 `customername = “John Andrews”`。
-- `Selection Args`: 需要传递给选择以执行选择的附加参数。
-- `Sort Order`: 选中行的排序顺序。
+- `URI`：指定执行查询的数据源的`URI`。它可以是多个结果的通用查询，也可以是针对单行 ID 的特定查询。
+- `Projection`：数据库表中的多个列。在本应用程序中，这些列对应于 ID、姓名和电话号码。`projection`参数只是包含要返回结果集中每列命名的`String`数组。
+- `Selection`：作为查询一部分执行的"where"元素。此参数控制从指定数据库中选择行。例如，如果查询需要选择名为"John Andrews"的客户，传递给`query()`方法的选择字符串将是`customername = "John Andrews"`。
+- `Selection Args`：需要传递给选择以执行选择的附加参数。
+- `Sort Order`：选中行的排序顺序。
 
-`query()` 方法需要执行以下操作：
+`query()`方法需要执行以下操作：
 
-- 使用 `sUriMatcher` 识别 `URI` 类型。
-- 如果 `URI` 无效，则抛出异常。
-- 根据传递给标准构建 SQL 查询。为了方便起见，可以使用 `SQLiteQueryBuilder` 类来构建查询。
+- 使用`sUriMatcher`识别`URI`类型。
+- 如果`URI`无效，则抛出异常。
+- 根据传递给标准构建 SQL 查询。为了方便起见，可以使用`SQLiteQueryBuilder`类来构建查询。
 - 在数据库上执行查询操作。
-- 通知 `content resolver` 操作。
-- 返回包含查询结果的 `Cursor` 对象。
+- 通知`content resolver`操作。
+- 返回包含查询结果的`Cursor`对象。
 
-考虑到这些需求，`MyContentProvider.kt` 文件中 `query()` 方法的代码现在应该如以下代码列表所示：
+考虑到这些需求，`MyContentProvider.kt`文件中`query()`方法的代码现在应该如以下代码列表所示：
 
 ```java
 @Override
@@ -15236,24 +15208,20 @@ public Cursor query(Uri uri, String[] projection, String selection, String[] sel
 }
 ```
 
+## 68.9 实现 Content Provider 的`update()`方法
 
+当请求对现有数据库表行进行更改时，content provider 的`update()`方法会被调用。该方法将接收一个带有`ContentValues`对象形式的新值的`URI`，以及通常的选择参数字符串。
 
+调用时，`update()`方法通常会执行以下步骤：
 
+- 使用`sUriMatcher`识别`URI`类型。
+- 如果`URI`无效，则抛出异常。
+- 获取底层`SQLite database`可写实例的引用。
+- 根据选择标准和`URI`类型在数据库上执行相应的更新操作。
+- 通知`content resolver`（内容解析器）数据库变更。
+- 返回由于更新操作而更改的行数。
 
-## 68.9 实现 Content Provider 的 update() 方法
-
-当请求对现有数据库表行进行更改时，content provider 的 `update()` 方法会被调用。该方法将接收一个带有 `ContentValues` 对象形式的新值的 `URI`，以及通常的选择参数字符串。
-
-调用时，`update()` 方法通常会执行以下步骤：
-
--   使用 `sUriMatcher` 识别 `URI` 类型。
--   如果 `URI` 无效，则抛出异常。
--   获取底层 `SQLite database` 可写实例的引用。
--   根据选择标准和 `URI` 类型在数据库上执行相应的更新操作。
--   通知 `content resolver`（内容解析器）数据库变更。
--   返回由于更新操作而更改的行数。
-
-一个通用的 `update()` 方法（也是我们将在项目中使用的方法）其实现如下：
+一个通用的`update()`方法（也是我们将在项目中使用的方法）其实现如下：
 
 ```java
 @Override
@@ -15293,18 +15261,18 @@ public int update(Uri uri, ContentValues values, String selection,
 }
 ```
 
-## 68.10 实现 Content Provider 的 delete() 方法
+## 68.10 实现 Content Provider 的`delete()`方法
 
-与其他一些 provider 方法一样，`delete()` 方法会接收一个 `URI`、一个选择字符串和一组可选的选择参数。一个典型的 `delete()` 方法在调用时还会执行以下（目前已经熟悉的）任务：
+与其他一些 provider 方法一样，`delete()`方法会接收一个`URI`、一个选择字符串和一组可选的选择参数。一个典型的`delete()`方法在调用时还会执行以下（目前已经熟悉的）任务：
 
--   使用 `sUriMatcher` 识别 `URI` 类型。
--   如果 `URI` 无效，则抛出异常。
--   获取底层 `SQLite database` 可写实例的引用。
--   根据选择标准和 `Uri` 类型在数据库上执行相应的删除操作。
--   通知 `content resolver` 数据库变更。
--   返回由于操作而更改的行数。
+- 使用`sUriMatcher`识别`URI`类型。
+- 如果`URI`无效，则抛出异常。
+- 获取底层`SQLite database`可写实例的引用。
+- 根据选择标准和`Uri`类型在数据库上执行相应的删除操作。
+- 通知`content resolver`数据库变更。
+- 返回由于操作而更改的行数。
 
-一个典型的 `delete()` 方法在许多方面与 `update()` 方法相似，可以如下所示实现：
+一个典型的`delete()`方法在许多方面与`update()`方法相似，可以如下所示实现：
 
 ```java
 @Override
@@ -15343,9 +15311,9 @@ public int delete(Uri uri, String selection, String[] selectionArgs) {
 
 ## 68.11 在 Manifest 文件中声明 Content Provider
 
-除非在所属的应用程序 manifest 文件中声明 content provider，否则 content resolver 将无法定位并访问它。如所述，content providers 使用 `<provider>` 标签声明，且 manifest 条目必须正确引用 content authority（内容权限）。
+除非在所属的应用程序 manifest 文件中声明 content provider，否则 content resolver 将无法定位并访问它。如所述，content providers 使用`<provider>`标签声明，且 manifest 条目必须正确引用 content authority（内容权限）。
 
-因此，对于本项目，请在 Project 窗口中找到 `AndroidManifest.xml` 并双击它将其加载到编辑面板。在编辑面板中，确保在将 `ContentProvider` 类添加到项目时，已经添加了 content provider 的声明：
+因此，对于本项目，请在 Project 窗口中找到`AndroidManifest.xml`并双击它将其加载到编辑面板。在编辑面板中，确保在将`ContentProvider`类添加到项目时，已经添加了 content provider 的声明：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -15384,7 +15352,9 @@ public int delete(Uri uri, String selection, String[] selectionArgs) {
 
 当此应用程序最初创建时，它设计为使用数据库处理器访问底层数据库。现在已经实现了 content provider，需要修改数据库处理器，以便通过 content resolver 执行所有数据库操作。
 
-第一步是修改 `MyDBHandler.kt` 类，使其获取 `ContentResolver` 实例的引用。这可以在类的构造方法中实现：
+第一步是修改`MyDBHandler.kt`类，使其获取`ContentResolver`实例的引用。这可以在类的构造方法中实现：
+
+
 
 ```java
 package com.ebookfrenzy.sqldemo;
@@ -15404,10 +15374,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
 }
 ```
 
-
-
-
-接下来，需要重写 `addCustomer()`、`findCustomer()` 和 `removeCustomer()` 方法，以便使用内容解析器（content resolver）和内容提供者（content provider）进行数据管理：
+接下来，需要重写`addCustomer()`、`findCustomer()`和`removeCustomer()`方法，以便使用内容解析器（content resolver）和内容提供者（content provider）进行数据管理：
 
 ```java
 public void addCustomer(Customer customer) {
@@ -15450,39 +15417,39 @@ public boolean deleteCustomer(String customername) {
 
 当数据库处理类更新为使用内容解析器和内容提供者后，应用程序现在可以进行测试了。编译并运行应用程序，然后执行添加、查找和删除客户条目的操作。在操作和功能方面，该应用程序的行为与直接访问数据库时完全一致，区别在于它现在使用了内容提供者。
 
-正如我们在下一章中看到的，由于现在已经实现了内容提供者并在清单文件中进行了声明，任何其他应用程序都可能访问该数据（由于没有声明权限，因此生效的是默认完全访问权限）。其他应用程序获取访问权限所需的知道的唯一信息是内容 URI 和 customers 表中的列名。
+正如我们在下一章中看到的，由于现在已经实现了内容提供者并在清单文件中进行了声明，任何其他应用程序都可能访问该数据（由于没有声明权限，因此生效的是默认完全访问权限）。其他应用程序获取访问权限所需的知道的唯一信息是内容 URI 和`customers`表中的列名。
 
-### 68.13 总结
+## 68.13 总结
 
 本章的目标是更详细地概述实现 Android 内容提供者的具体步骤，特别强调内容提供者类中查询、插入、删除和更新方法的结构和实现。本章还涵盖了使用内容解析器类访问内容提供者数据的实际应用，并对数据库项目进行了修改以同时使用内容提供者和内容解析器。
 
-### 69. Android 内容提供者客户端教程
+## 69. Android 内容提供者客户端教程
 
-在专门关于内容提供者的最后一个章节中，我们将构建一个应用程序，用于访问我们 `SQLDemo` 内容提供者中包含的数据并显示客户联系人列表。
+在专门关于内容提供者的最后一个章节中，我们将构建一个应用程序，用于访问我们`SQLDemo`内容提供者中包含的数据并显示客户联系人列表。
 
 ### 69.1 创建 SQLDemoClient 项目
 
 启动 Android Studio，从欢迎界面选择 New Project 选项，在生成的新项目对话框中点击 Next 按钮之前选择 Empty Views Activity 模板。
 
-在 `Name` 字段中输入 `SQLDemoClient` 并指定 `com.ebookfrenzy.sqldemoclient` 为包名。在点击 Finish 按钮之前，将 `Minimum API level` 设置为 `API 26: Android 8.0 (Oreo)`，并将 `Language` 菜单更改为 `Java`。使用节 11.8 Migrating a Project to View Binding 中的步骤为项目启用视图绑定（view binding）。
+在`Name`字段中输入`SQLDemoClient`并指定`com.ebookfrenzy.sqldemoclient`为包名。在点击 Finish 按钮之前，将`Minimum API level`设置为`API 26: Android 8.0 (Oreo)`，并将`Language`菜单更改为`Java`。使用节 11.8 Migrating a Project to View Binding 中的步骤为项目启用视图绑定（view binding）。
 
 ### 69.2 设计用户界面
 
-打开 `activity_main.xml` 文件并移除默认的 `TextView`。在布局中添加一个按钮和一个 `TextView`，将按钮文本更改为“Reload”，并调整视图位置使布局类似于图 69-1：
+打开`activity_main.xml`文件并移除默认的`TextView`。在布局中添加一个按钮和一个`TextView`，将按钮文本更改为“Reload”，并调整视图位置使布局类似于图 69-1：
 
 ![](img/as_sql_demo_client_ui.jpg)
 
 图 69-1
 
-使用 Infer constraints 按钮配置布局约束，将 `TextView` 的 `textAppearance` 属性更改为 `Display1`，并将按钮上的 `onClick` 属性设置为名为 `reload()` 的方法。
+使用 Infer constraints 按钮配置布局约束，将`TextView`的`textAppearance`属性更改为`Display1`，并将按钮上的`onClick`属性设置为名为`reload()`的方法。
 
 ### 69.3 访问内容提供者
 
-访问内容提供者的代码将包含在 `reload()` 方法中。第一步是通过调用 `Content Resolver` 实例的 `query()` 方法获取 `Cursor` 对象。调用 `query()` 时，我们需要为由 `SQLDemo` 内容提供者管理的 customers 表提供内容 URI，其读取如下：
+访问内容提供者的代码将包含在`reload()`方法中。第一步是通过调用`Content Resolver`实例的`query()`方法获取`Cursor`对象。调用`query()`时，我们需要为由`SQLDemo`内容提供者管理的 customers 表提供内容 URI，其读取如下：
 
 `content://com.ebookfrenzy.sqldemo.provider.MyContentProvider/customers`
 
-一旦我们有了 `Cursor` 对象的引用，就可以遍历数据库记录并使用我们的 `TextView` 组件显示数据。编辑 `MainActivity.java` 文件并如下添加 `reload()` 方法：
+一旦我们有了`Cursor`对象的引用，就可以遍历数据库记录并使用我们的`TextView`组件显示数据。编辑`MainActivity.java`文件并如下添加`reload()`方法：
 
 ```java
 package com.ebookfrenzy.sqldemoclient;
@@ -15541,7 +15508,7 @@ public class MainActivity extends AppCompatActivity {
 
 ### 69.5 测试项目
 
-在用于测试 SQLDemo 程序的设备或模拟器上构建并运行该程序，点击 Reload 按钮。应用程序应该查询客户数据库中的记录并显示在 `TextView` 上：
+在用于测试 SQLDemo 程序的设备或模拟器上构建并运行该程序，点击 Reload 按钮。应用程序应该查询客户数据库中的记录并显示在`TextView`上：
 
 ![](img/as_sql_demo_client_running.jpg)
 
@@ -15549,16 +15516,13 @@ public class MainActivity extends AppCompatActivity {
 
 ### 69.6 总结
 
-在本章中，我们创建了一个简单的应用程序，演示了从客户端访问存储在内容提供者的数据。这涉及到向内容解析器实例的 `query()` 方法传递内容 URI，并在项目清单文件中请求内容提供者的权限。`query()` 调用返回了一个用于遍历记录的 `Cursor` 对象。
+在本章中，我们创建了一个简单的应用程序，演示了从客户端访问存储在内容提供者的数据。这涉及到向内容解析器实例的`query()`方法传递内容 URI，并在项目清单文件中请求内容提供者的权限。`query()`调用返回了一个用于遍历记录的`Cursor`对象。
 
 ## 70. Android Room 持久库
 
 Room 持久库包含在 Android Architecture Components 中，旨在以符合 Android 架构指南的方法为应用程序添加数据库存储支持。在之前的章节中涵盖了 SQLite 数据库的基础知识，本章将探索基于 Room 的数据库管理、在 Android 应用程序中实现 Room 支持的关键元素，以及这些元素在架构和代码方面的实现。在涵盖这些主题后，接下来两个章节将通过示例 Room 数据库项目将理论付诸实践。
 
-
-
-
-# 70.1 重新审视现代应用架构
+### 70.1 重新审视现代应用架构
 
 使用 Jetpack 构建现代 Android 应用架构 章节介绍了现代应用架构的概念，并强调了分离应用内不同职责区域的重要性。图 70-1 所示的图表 概述了典型 Android 应用的推荐架构：
 
@@ -15566,33 +15530,33 @@ Room 持久库包含在 Android Architecture Components 中，旨在以符合 An
 
 图 70-1
 
-在本书的前几个章节中已经详细介绍了该架构的前三个层级，现在是时候 `Room` 持久化库的背景下探索仓库和数据库架构层了。
+在本书的前几个章节中已经详细介绍了该架构的前三个层级，现在是时候`Room`持久化库的背景下探索仓库和数据库架构层了。
 
-## 70.2 Room 数据库持久化的关键元素
+### 70.2 Room 数据库持久化的关键元素
 
-在章节稍后进行更详细讨论之前，首先值得总结在使用 `Room` 持久化库操作 `SQLite` 数据库时涉及的关键元素：
+在章节稍后进行更详细讨论之前，首先值得总结在使用`Room`持久化库操作`SQLite`数据库时涉及的关键元素：
 
-### 70.2.1 仓库 (Repository)
+#### 70.2.1 仓库 (Repository)
 
-如之前讨论过的，仓库模块包含了直接处理应用所用所有数据源所需代码。这避免了 UI 控制器和 `ViewModel` 包含直接访问数据库或网络服务等数据源的代码。
+如之前讨论过的，仓库模块包含了直接处理应用所用所有数据源所需代码。这避免了 UI 控制器和`ViewModel`包含直接访问数据库或网络服务等数据源的代码。
 
-### 70.2.2 Room 数据库
+#### 70.2.2 Room 数据库
 
-`room database` 对象提供了指向底层 `SQLite` 数据库的接口。它还为仓库提供了对数据访问对象 (`DAO`) 的访问。应用应该只有一个 `room database` 实例，该实例可以用于访问多个数据库表。
+`room database`对象提供了指向底层`SQLite`数据库的接口。它还为仓库提供了对数据访问对象 (`DAO`) 的访问。应用应该只有一个`room database`实例，该实例可以用于访问多个数据库表。
 
-### 70.2.3 数据访问对象 (DAO)
+#### 70.2.3 数据访问对象 (DAO)
 
-`DAO` 包含了仓库在 `SQLite` 数据库中插入、检索和删除数据所需的 SQL 语句。这些 SQL 语句映射到方法，然后从仓库内部调用这些方法来执行相应的查询。
+`DAO`包含了仓库在`SQLite`数据库中插入、检索和删除数据所需的 SQL 语句。这些 SQL 语句映射到方法，然后从仓库内部调用这些方法来执行相应的查询。
 
-### 70.2.4 实体 (Entities)
+#### 70.2.4 实体 (Entities)
 
-实体是定义数据库中表结构的类，它定义了表名、列名和数据类型，并标识哪一列应作为主键。除了声明表结构外，实体类还包含提供对这些数据字段访问的 getter 和 setter 方法。`DAO` 响应 SQL 查询方法调用返回给仓库的数据将以这些实体类实例的形式存在。然后将调用 getter 方法从实体对象中提取数据。同样，当仓库需要向数据库写入新记录时，它会创建一个实体实例，通过 setter 调用配置对象上的值，然后调用 `DAO` 中声明的 `insert` 方法，并传递要保存的实体实例。
+实体是定义数据库中表结构的类，它定义了表名、列名和数据类型，并标识哪一列应作为主键。除了声明表结构外，实体类还包含提供对这些数据字段访问的 getter 和 setter 方法。`DAO`响应 SQL 查询方法调用返回给仓库的数据将以这些实体类实例的形式存在。然后将调用 getter 方法从实体对象中提取数据。同样，当仓库需要向数据库写入新记录时，它会创建一个实体实例，通过 setter 调用配置对象上的值，然后调用`DAO`中声明的`insert`方法，并传递要保存的实体实例。
 
-### 70.2.5 SQLite 数据库
+#### 70.2.5 SQLite 数据库
 
-`SQLite` 数据库负责存储和提供对数据的访问。应用代码（包括仓库）不应直接访问此底层数据库。所有的数据库操作都是通过使用 `room database`、`DAOs` 和实体的组合完成的。
+`SQLite`数据库负责存储和提供对数据的访问。应用代码（包括仓库）不应直接访问此底层数据库。所有的数据库操作都是通过使用`room database`、`DAOs`和实体的组合完成的。
 
-图 70-2 中的架构图说明了这些不同元素如何相互作用以在 Android 应用中提供基于 `Room` 的数据库存储：
+图 70-2 中的架构图说明了这些不同元素如何相互作用以在 Android 应用中提供基于`Room`的数据库存储：
 
 ![](img/room_architecture_diagram.jpg)
 
@@ -15600,18 +15564,23 @@ Room 持久库包含在 Android Architecture Components 中，旨在以符合 An
 
 上述架构图中的带数字连接可以总结如下：
 
-1. 仓库与 `Room Database` 交互以获取数据库实例，该实例反过来用于获取 `DAO` 实例的引用。
-2. 仓库创建实体实例并配置数据数据，然后将它们传递给 `DAO` 用于搜索和插入操作。
-3. 仓库调用 `DAO` 上的方法并传递要插入数据库的实体，并在响应搜索查询时接收实体实例。
-4. 当 `DAO` 有结果要返回给仓库时，它将它们封装成实体对象。
-5. `DAO` 与 `Room Database` 交互以启动数据库操作并处理结果。
-6. `Room Database` 处理与底层 `SQLite` 数据库的所有底层交互，提交查询并接收结果。
+1. 仓库与`Room Database`交互以获取数据库实例，该实例反过来用于获取`DAO`实例的引用。
 
-在涵盖了使用 `Room` 持久库进行数据库访问的关键元素的基本概述后，是时候详细详细探索实体、`DAOs`、`room databases` 和仓库了。
+2. 仓库创建实体实例并配置数据数据，然后将它们传递给`DAO`用于搜索和插入操作。
+
+3. 仓库调用`DAO`上的方法并传递要插入数据库的实体，并在响应搜索查询时接收实体实例。
+
+4. 当`DAO`有结果要返回给仓库时，它将它们封装成实体对象。
+
+5. `DAO`与`Room Database`交互以启动数据库操作并处理结果。
+
+6. `Room Database`处理与底层`SQLite`数据库的所有底层交互，提交查询并接收结果。
+
+在涵盖了使用`Room`持久库进行数据库访问的关键元素的基本概述后，是时候详细详细探索实体、`DAOs`、`room databases`和仓库了。
 
 ### 70.3 理解实体
 
-每个数据库表都将关联一个实体类。该类定义了表的结构，并表现为标准的 Java 类，中间穿插了一些特殊的 `Room` 注解。一个声明要在数据库表内存储数据的 Java 类可能如下所示：
+每个数据库表都将关联一个实体类。该类定义了表的结构，并表现为标准的 Java 类，中间穿插了一些特殊的`Room`注解。一个声明要在数据库表内存储数据的 Java 类可能如下所示：
 
 ```java
 public class Customer {
@@ -15652,6 +15621,8 @@ public class Customer {
 ```
 
 按照目前的实现，上述代码声明了一个基础 Java 类，包含表示表字段的变量和一组 getter 和 setter 方法。然而，该类还不是一个实体。要使该类成为实体并使其在 SQL 语句中可访问，需要添加一些 Room 注解：
+
+
 
 ```java
 @Entity(tableName = "customers")
@@ -15698,17 +15669,14 @@ public class Customer {
 }
 ```
 
-上述注解首先声明该类表示一个实体，并分配了一个名为“customers”的表名。这是 `DAO` 引用表的名称。每个数据库表都需要一列作为主键。在本例中，客户 ID 被声明为主主键。还添加了注解来分配在 SQL 查询中引用的列名，并指示该字段不能存储空值。最后，id 值被配置为自动生成。这意味着系统会自动为新记录生成 id，以避免主键冲突。还为客户名称字段分配了列名。然而请注意，地址字段没有分配列名。这意味着地址数据仍将存储在数据库中，但不需要在 SQL 语句中引用。如果实体中的某个字段不需要存储在数据库中，请使用 `@Ignore` 注解：
+上述注解首先声明该类表示一个实体，并分配了一个名为“customers”的表名。这是`DAO`引用表的名称。每个数据库表都需要一列作为主键。在本例中，客户 ID 被声明为主键。还添加了注解来分配在 SQL 查询中引用的列名，并指示该字段不能存储空值。最后，id 值被配置为自动生成。这意味着系统会自动为新记录生成 id，以避免主键冲突。还为客户名称字段分配了列名。然而请注意，地址字段没有分配列名。这意味着地址数据仍将存储在数据库中，但不需要在 SQL 语句中引用。如果实体中的某个字段不需要存储在数据库中，请使用`@Ignore`注解：
 
 ```java
 @Ignore
 private String myString;
 ```
 
-
-
-
-注解也可以包含在实体类中，以便使用关系型数据库中称为“外键”（foreign keys）的概念与其他实体建立关系。外键允许一个表引用另一个表中的主键。例如，可以在名为 `Purchase` 的实体与我们现有的 `Customer` 实体之间建立如下关系：
+注解也可以包含在实体类中，以便使用关系型数据库中称为“外键”（foreign keys）的概念与其他实体建立关系。外键允许一个表引用另一个表中的主键。例如，可以在名为`Purchase`的实体与我们现有的`Customer`实体之间建立如下关系：
 
 ```java
 @Entity(foreignKeys = {@ForeignKey(entity = Customer.class,
@@ -15727,13 +15695,13 @@ public class Purchase {
 }
 ```
 
-注意，外键声明还指定了当父级记录被删除或更新时执行的操作。可用选项有 `CASCADE`、`NO_ACTION`、`RESTRICT`、`SET_DEFAULT` 和 `SET_NULL`。
+注意，外键声明还指定了当父级记录被删除或更新时执行的操作。可用选项有`CASCADE`、`NO_ACTION`、`RESTRICT`、`SET_DEFAULT`和`SET_NULL`。
 
 ### 70.4 数据访问对象 (Data Access Objects)
 
-数据访问对象允许访问存储在 SQLite 数据库中的数据。`DAO` 被声明为标准的 Java 接口，并带有额外的注解，将特定的 SQL 语句映射到方法，仓库随后可以调用这些方法。
+数据访问对象允许访问存储在 SQLite 数据库中的数据。`DAO`被声明为标准的 Java 接口，并带有额外的注解，将特定的 SQL 语句映射到方法，仓库随后可以调用这些方法。
 
-第一步是创建接口并使用 `@Dao` 注解将其声明为 `DAO`：
+第一步是创建接口并使用`@Dao`注解将其声明为`DAO`：
 
 ```java
 @Dao
@@ -15741,7 +15709,7 @@ public interface CustomerDao {
 }
 ```
 
-接下来，添加包含 SQL 语句和对应方法名的条目。例如，下面的声明允许通过调用名为 `getAllCustomers()` 的方法来检索 `customers` 表中的所有行：
+接下来，添加包含 SQL 语句和对应方法名的条目。例如，下面的声明允许通过调用名为`getAllCustomers()`的方法来检索`customers`表中的所有行：
 
 ```java
 @Dao
@@ -15751,9 +15719,9 @@ public interface CustomerDao {
 }
 ```
 
-`getAllCustomers()` 方法返回一个 `List` 对象，其中包含从数据库表中检索的每条记录的 `Customer` 实体对象。`DAO` 同时也使用了 `LiveData`，以便仓库可以观察数据库的变化。
+`getAllCustomers()`方法返回一个`List`对象，其中包含从数据库表中检索的每条记录的`Customer`实体对象。`DAO`同时也使用了`LiveData`，以便仓库可以观察数据库的变化。
 
-参数也可以传递给方法，并在相应的 SQL 语句中引用。考虑以下 DAO 声明，它搜索与客户名称匹配的数据库记录（请注意 `WHERE` 条件中引用的列名是分配给实体类中列的名称）：
+参数也可以传递给方法，并在相应的 SQL 语句中引用。考虑以下 DAO 声明，它搜索与客户名称匹配的数据库记录（请注意`WHERE`条件中引用的列名是分配给实体类中列的名称）：
 
 ```java
 @Query("SELECT * FROM customers WHERE name = :customerName")
@@ -15762,14 +15730,14 @@ List<Customer> findCustomer(String customerName);
 
 在此示例中，方法传递了一个字符串值，该值通过在变量名前前加冒号（`:`）包含在 SQL 语句中。
 
-可以使用 `@Insert` 方便注解声明如下的基础的插入操作：
+可以使用`@Insert`方便注解声明如下的基础的插入操作：
 
 ```java
 @Insert
 void addCustomer(Customer customer);
 ```
 
-这之所以被称为方便注解，是因为 Room 持久库可以推断传递给 `addCustomer()` 方法的 `Customer` 实体将被插入数据库，而无需提供 SQL 插入语句。也可以在单个事务中插入多条数据库记录，如下：
+这之所以被称为方便注解，是因为 Room 持久库可以推断传递给`addCustomer()`方法的`Customer`实体将被插入数据库，而无需提供 SQL 插入语句。也可以在单个事务中插入多条数据库记录，如下：
 
 ```java
 @Insert
@@ -15783,21 +15751,21 @@ public void insertCustomers(Customer... customers);
 void deleteCustomer(String name);
 ```
 
-作为使用 `@Query` 注解执行删除的替代，也可以使用 `@Delete` 方便注解。在示例中，所有与传递给 `deleteCustomers()` 方法的实体集匹配的 `Customer` 记录将从数据库中删除：
+作为使用`@Query`注解执行删除的替代，也可以使用`@Delete`方便注解。在示例中，所有与传递给`deleteCustomers()`方法的实体集匹配的`Customer`记录将从数据库中删除：
 
 ```java
 @Delete
 public void deleteCustomers(Customer... customers);
 ```
 
-`@Update` 方便注解在更新记录时提供类似的行为：
+`@Update`方便注解在更新记录时提供类似的行为：
 
 ```java
 @Update
 public void updateCustomers(Customer... customers);
 ```
 
-这些类型数据库操作的 DAO 方法也可以声明返回一个 `int` 值，表示受事务影响的行数，例如：
+这些类型数据库操作的 DAO 方法也可以声明返回一个`int`值，表示受事务影响的行数，例如：
 
 ```java
 @Delete
@@ -15806,7 +15774,7 @@ public int deleteCustomers(Customer... customers);
 
 # 70.5 Room 数据库
 
-`RoomDatabase` 类通过扩展 `RoomDatabase` 类来创建，并作为嵌入 Android 操作系统中的实际 SQLite 数据库之上的层。该类负责创建并返回一个新的 Room 数据库实例，并提供对数据库相关 `DAO` 实例的访问。
+`RoomDatabase`类通过扩展`RoomDatabase`类来创建，并作为嵌入 Android 操作系统中的实际 SQLite 数据库之上的层。该类负责创建并返回一个新的 Room 数据库实例，并提供对数据库相关`DAO`实例的访问。
 
 Room 持久库提供了一个数据库构建器来创建数据库实例。每个 Android 应用应该只有一个 Room 数据库实例，因此最好在类中实现防御性代码，以防止创建多个实例。
 
@@ -15839,7 +15807,7 @@ public class CustomerRoomDatabase extends RoomDatabase {
 }
 ```
 
-上述示例中需要注意的重要区域是类上方声明数据库要工作的实体的注解、检查实例是否已创建的代码，以及为实例分配的名称 `customer_database`。
+上述示例中需要注意的重要区域是类上方声明数据库要工作的实体的注解、检查实例是否已创建的代码，以及为实例分配的名称`customer_database`。
 
 ### 70.6 仓库 (Repository)
 
@@ -15857,14 +15825,14 @@ public class CustomerRepository {
 }
 ```
 
-一旦仓库可以访问 DAO，它就可以调用数据访问方法。例如，下面的代码调用了 `getAllCustomers()` DAO 方法：
+一旦仓库可以访问 DAO，它就可以调用数据访问方法。例如，下面的代码调用了`getAllCustomers()` DAO 方法：
 
 ```java
 private LiveData<List<Customer>> allCustomers;
 allCustomers = customerDao.getAllCustomers();
 ```
 
-在调用 DAO 方法时，需要注意的是，除非方法返回 `LiveData` 实例（它会在单独的线程上自动运行查询），否则无法在应用的主线程上执行操作。尝试这样做会导致应用崩溃并输出以下诊断信息：
+在调用 DAO 方法时，需要注意的是，除非方法返回`LiveData`实例（它会在单独的线程上自动运行查询），否则无法在应用的主线程上执行操作。尝试这样做会导致应用崩溃并输出以下诊断信息：
 
 `Cannot access database on the main thread since it may potentially lock the UI for a long period of time`
 
@@ -15874,11 +15842,7 @@ allCustomers = customerDao.getAllCustomers();
 
 本章概述的示例使用存在于 Android 设备持久性存储上的数据库文件的 SQLite 数据库。这确保了即使在应用进程终止后数据仍然存在。
 
-
-
-
-
-Room 数据库持久库也支持内存数据库。这些数据库完全存储在内存中，并在应用终止时丢失。与内存数据库配合工作时，唯一需要的更改是调用 `Room Database` 类中的 `Room.inMemoryDatabaseBuilder()` 方法，而不是 `Room.databaseBuilder()`。下面的代码显示了方法调用之间的区别（注意内存数据库不需要数据库名称）：
+Room 数据库持久库也支持内存数据库。这些数据库完全存储在内存中，并在应用终止时丢失。与内存数据库配合工作时，唯一需要的更改是调用`Room Database`类中的`Room.inMemoryDatabaseBuilder()`方法，而不是`Room.databaseBuilder()`。下面的代码显示了方法调用之间的区别（注意内存数据库不需要数据库名称）：
 
 ```java
 // 创建基于文件存储的数据库
@@ -15914,9 +15878,9 @@ Android Room 持久库包含在 Android 架构组件中，作为低级 SQLite �
 
 ### 71.1 TableLayout 和 TableRow 布局视图
 
-`TableLayout` 容器视图允许用户界面元素以行和列构成的表格格式在屏幕上进行组织。`TableLayout` 中的每一行都由一个 `TableRow` 实例占据，`TableRow` 又被划分为单元格，每个单元格包含一个子视图（该子视图可能是一个包含多个子视图的容器）。
+`TableLayout`容器视图允许用户界面元素以行和列构成的表格格式在屏幕上进行组织。`TableLayout`中的每一行都由一个`TableRow`实例占据，`TableRow`又被划分为单元格，每个单元格包含一个子视图（该子视图可能是一个包含多个子视图的容器）。
 
-表格的列数由列数最多的行决定，默认情况下，每列的宽度由该列中最宽的单元格定义。列可以被配置为可收缩或可伸展（或两者兼有），以便它们相对于父 `TableLayout` 改变大小。此外，单个单元格可以配置为跨多列。
+表格的列数由列数最多的行决定，默认情况下，每列的宽度由该列中最宽的单元格定义。列可以被配置为可收缩或可伸展（或两者兼有），以便它们相对于父`TableLayout`改变大小。此外，单个单元格可以配置为跨多列。
 
 考虑图 71-1 所示的用户界面布局：
 
@@ -15924,25 +15888,27 @@ Android Room 持久库包含在 Android 架构组件中，作为低级 SQLite �
 
 图 71-1
 
-从布局的视觉外观，很难识别用于设计界面的 `TableLayout` 结构。然而，图 71-2](#TableLayout.xhtml__idTextAnchor1368) 所示的层级树使得结构稍微更容易理解：
+从布局的视觉外观，很难识别用于设计界面的`TableLayout`结构。然而，图 71-2](#TableLayout.xhtml__idTextAnchor1368) 所示的层级树使得结构稍微更容易理解：
 
 ![](img/as3.2_tablelayout_tree.jpg)
 
 图 71-2
 
-该布局包含一个父 `LinearLayout` 视图，带有 `TableLayout`、`LinearLayout` 和 `RecyclerView` 子视图。`TableLayout` 包含三个 `TableRow` 子视图，代表表格中的三行。`TableRow` 包含两个子视图，每个子视图代表表格列单元格的内容。`LinearLayout` 子视图包含三个 `Button` 子视图。
+该布局包含一个父`LinearLayout`视图，带有`TableLayout`、`LinearLayout`和`RecyclerView`子视图。`TableLayout`包含三个`TableRow`子视图，代表表格中的三行。`TableRow`包含两个子视图，每个子视图代表表格列单元格的内容。`LinearLayout`子视图包含三个`Button`子视图。
 
 图 71-2 所示的布局是下一章将完成的数据库示例所需的精确布局。因此，本章的剩余部分将用于逐步完成界面设计。
 
 ### 71.2 创建 Room 数据库
 
+
+
 从欢迎界面选择新建项目（New Project）选项，并在生成的对话框中选择空视图活动（Empty Views Activity）模板。在 Name 字段输入 `RoomDemo` 并指定 `com.frenzy.room` 为包名。在点击完成（Finish）按钮之前，将最低 API 级别改为 API 26：Android 8.0 (Oreo)，并将语言改为 Java。
 
-按照 11.8 将项目迁移到视图绑定 中列出的步骤将项目迁移到视图绑定。
+按照 11.8 将项目迁移到视图绑定中列出的步骤将项目迁移到视图绑定。
 
 ### 71.3 转换为 LinearLayout
 
-在项目（Project）窗口中找到 `activity_main.xml` 文件（app -> res -> layout），并双击它将其加载到布局编辑器（Layout Editor）。默认情况下，Android Studio 使用 `ConstraintLayout` 作为根元素。这需要转换为 `LinearLayout`。
+在项目（Project）窗口中找到 `activity_main.xml` 文件（`app -> res -> layout`），并双击它将其加载到布局编辑器（Layout Editor）。默认情况下，Android Studio 使用 `ConstraintLayout` 作为根元素。这需要转换为 `LinearLayout`。
 
 在布局编辑器处于设计模式下，在组件树（Component Tree）面板找到 `ConstraintLayout` 组件，右键点击它显示如图 71-3 所示的菜单，并选择转换视图（Convert view...）选项：
 
@@ -15976,11 +15942,7 @@ Android Room 持久库包含在 Android 架构组件中，作为低级 SQLite �
 
 Android Studio 自动向 `TableLayout` 添加了四个 `TableRow` 实例。由于此示例只需要三行，选择并删除第四个 `TableRow` 实例。可以随时通过从调色板拖入 `TableRow` 对象并将其掉落在组件树窗口中的 `TableLayout` 项上来向 `TableLayout` 添加额外的行。
 
-选中 `TableLayout` 后，使用属性工具窗口将 `layout_height` 属性更改为 `wrap_content`并将 `layout_width` 更改为 `match_parent`。
-
-
-
-
+选中 `TableLayout` 后，使用属性工具窗口将 `layout_height` 属性更改为 `wrap_content`，并将 `layout_width` 更改为 `match_parent`。
 
 从调色板的 Text 区域，将两个 `TextView` 对象拖到组件树（Component Tree）中最顶部的 `TableRow` 条目（图 71-7）：
 
@@ -15996,7 +15958,7 @@ Android Studio 自动向 `TableLayout` 添加了四个 `TableRow` 实例。由�
 
 图 71-8
 
-将另一个 `TextView` 和一个 `Number (Decimal) Text Field` 拖放到第三个 `TableRow` 上，将 `TextView` 放置在 `EditText` 之上。将 `TextView` 的 `text` 改为“Product Quantity”，并将 `EditText` 对象的 `ID` 设置为 `productQuantity`。
+将另一个 `TextView` 和一个 Number (Decimal) Text Field 拖放到第三个 `TableRow` 上，将 `TextView` 放置在 `EditText` 之上。将 `TextView` 的 `text` 改为“Product Quantity”，并将 `EditText` 对象的 `ID` 设置为 `productQuantity`。
 
 Shift 点击如图 71-9 所示布局中的所有控件，使用属性窗口将所有对象的 `textSize` 属性设置为 18sp：
 
@@ -16030,7 +15992,7 @@ Shift 点击如图 71-9 所示布局中的所有控件，使用属性窗口将�
 
 图 71-12
 
-选中布局中的 `RecyclerView`，将视图的 `ID` 改为 `product_recycler`并将 `layout_height` 属性设置为 `match_parent`。在继续之前，检查组件树面板中的布局层次是否与下图一致：
+选中布局中的 `RecyclerView`，将视图的 `ID` 改为 `product_recycler`，并将 `layout_height` 属性设置为 `match_parent`。在继续之前，检查组件树面板中的布局层次是否与下图一致：
 
 ![](img/as_table_completed_tree.jpg)
 
@@ -16038,7 +16000,7 @@ Shift 点击如图 71-9 所示布局中的所有控件，使用属性窗口将�
 
 ### 71.8 调整布局边距
 
-最后只需点击组件树面板中的第一个 `TableRow` 。按住键盘上的 `Cmd/Ctrl` 键并点击第二个、三个 `TableRows`、水平 `LinearLayout` 以及 `RecyclerView`，选中所有五个项目。在属性面板中找到 `layout_margin` 属性类别，找到后将值更改为 10dp，如图 71-14 所示：
+最后只需点击组件树面板中的第一个 `TableRow`。按住键盘上的 `Cmd/Ctrl` 键并点击第二个、三个 `TableRows`、水平 `LinearLayout` 以及 `RecyclerView`，选中所有五个项目。在属性面板中找到 `layout_margin` 属性类别，找到后将值更改为 10dp，如图 71-14 所示：
 
 ![](img/as_table_layout_margin.jpg)
 
@@ -16073,7 +16035,7 @@ androidx-room-runtime = { group = "androidx.room", name = "room-runtime", versio
 androidx-fragment = { group = "androidx.fragment", name = "fragment", version.ref = "fragment" }
 ```
 
-点击 Sync Now 提交更改。接下来，对模块级 `build.gradle.kts` 文件进行以下更改（app -> Gradle Scripts -> `build.gradle.kts (Module :app)`）：
+点击 Sync Now 提交更改。接下来，对模块级 `build.gradle.kts` 文件进行以下更改（`app -> Gradle Scripts -> build.gradle.kts (Module :app)`）：
 
 ```kotlin
 dependencies {
@@ -16085,21 +16047,17 @@ dependencies {
 
 ### 72.3 构建实体
 
-
-
-
-
 此项目将从创建一个定义数据库表模式的实体（entity）开始。该实体包含一个用于产品 ID 的整数、一个存储产品名称的字符串列，以及另一个存储数量的整数值。
 
 `productid` 列将作为主键并自动生成。表 72-1 总结了该实体的结构：
 
 | 列名 | 数据类型 |
-| :--- | :--- |
+| --- | --- |
 | productid | Integer / 主键 / 自动递增 |
 | productname | String |
 | productquantity | Integer |
 
-表 72-1 
+表 72-1
 
 在项目（Project）工具窗口中，右键点击 `app` -> `java` -> `com.ebookfrenzy.roomdemo` 项，选择 `New` -> `Java Class` 菜单选项，为该实体添加类文件。在新建类对话框中，将类命名为 `Product`，在列表中选择 `Class` 选项，然后按键盘回车键生成文件。
 
@@ -16168,7 +16126,7 @@ public class Product {
 
 这些注解声明该类为名为 `products` 的表的实体，并为 `id` 和 `name` 变量分配了列名。`id` 列也被配置为主键并设置为自动生成。由于在 SQL 查询中不需要引用 `quantity` 列，因此没有为 `quantity` 变量分配列名。
 
-### 72.4 创建数据访问对象 (DAO)
+### 72.4 创建数据访问对象（DAO）
 
 定义产品实体后，下一步是创建 DAO 接口。再次参考项目（Project）工具窗口，右键点击 `app` -> `java` -> `com.ebookfrenzy.roomdemo` 项并选择 `New` -> `Java Class` 菜单选项。在新建类对话框中，在 Name 字段中输入 `ProductDao`，并如图 72-1 所示，从列表中选择 `Interface`：
 
@@ -16207,7 +16165,9 @@ DAO 实现了从 products 数据库插入、查找和删除记录的方法。插
 
 ## 72.5 添加 Room 数据库
 
-在将仓库（repository）添加到项目之前，最后一个任务是实现 Room 数据库。向项目添加一个名为 `ProductDatabase` 的新类，这次选择 `Class`。文件生成后，按照`Android 持久化库`章节中概述的步骤对其进行修改：
+
+
+在将仓库（repository）添加到项目之前，最后一个任务是实现 Room 数据库。向项目添加一个名为 `ProductDatabase` 的新类，这次选择 `Class`。文件生成后，按照“Android 持久化库”章节中概述的步骤对其进行修改：
 
 ```java
 package com.ebookrenzy.roomdemo;
@@ -16237,9 +16197,9 @@ public abstract class ProductDatabase extends RoomDatabase {
 }
 ```
 
-### 72.6 添加仓库 (Repository)
+### 72.6 添加仓库（Repository）
 
-向项目添加一个名为 `ProductRepository` 的新类，选择 `Class` 选项。仓库类将负责代表 ViewModel 与数据库进行交互。它必须提供使用 DAO 插入、删除和查询产品记录的方法。除了 `getAllProducts()` 方法返回 `LiveData` 对象外，这些数据库操作必须在单独线程中执行。
+向项目添加一个名为 `ProductRepository` 的新类，选择 `Class` 选项。仓库类将负责代表 `ViewModel` 与数据库进行交互。它必须提供使用 `DAO` 插入、删除和查询产品记录的方法。除了 `getAllProducts()` 方法返回 `LiveData` 对象外，这些数据库操作必须在单独线程中执行。
 
 在 `ProductRepository.java` 文件中，添加用于将搜索结果返回仓库的 `handler` 代码：
 
@@ -16266,9 +16226,9 @@ public class ProductRepository {
 }
 ```
 
-上述代码声明了一个名为 `searchResults` 的 `MutableLiveData` 变量，当异步搜索任务完成后，会将结果存储其中（在教程后续，ViewModel 内部的观察者将监控此数据对象）。
+上述代码声明了一个名为 `searchResults` 的 `MutableLiveData` 变量，当异步搜索任务完成后，会将结果存储其中（在教程后续，`ViewModel` 内部的观察者将监控此数据对象）。
 
-仓库类现在必须提供 ViewModel 可以调用以启动这些操作的方法。然而，仓库需要通过 `ProductDatabase` 实例获取 DAO 引用。为 `ProductRepository` 类添加一个构造函数方法来执行这些任务：
+仓库类现在必须提供 `ViewModel` 可以调用以启动这些操作的方法。然而，仓库需要通过 `ProductDatabase` 实例获取 `DAO` 引用。为 `ProductRepository` 类添加一个构造函数方法来执行这些任务：
 
 ```java
 .
@@ -16288,10 +16248,6 @@ public class ProductRepository {
     }
 }
 ```
-
-
-
-
 
 在引用已存储的 `DAO` 后，可以如下方式将方法添加到 `ProductRepository` 类文件中：
 
@@ -16318,9 +16274,9 @@ public void findProduct(String name) {
 }
 ```
 
-在插入和删除方法中，创建并使用了了适当的新线程来执行相应的数据库操作。在 `findProduct()` 方法中，会向 `handler` 发送消息，指示有新结果可用。
+在插入和删除方法中，创建并使用了适当的新线程来执行相应的数据库操作。在 `findProduct()` 方法中，会向 `handler` 发送消息，指示有新结果可用。
 
-完成仓库类还剩最后一项任务。用户界面布局中的 `RecyclerView` 必须与数据库中存储的当前产品列表同步。`ProductDao` 类已经包含一个名为 `getAllProducts()` 的方法，该方法使用 SQL 查询选择所有数据库记录并将它们封装在 `LiveData` 对象中返回。仓库需要在初始化时调用此此方法，并将结果存储在 `LiveData` 对象中，该对象可以被 `ViewModel` 观察，进而被 UI 控制器观察。一旦设置完成，每当数据库表发生变化时，UI 控制器观察者都会收到通知，`RecyclerView` 就可以更新最新的产品列表。在 `ProductRepository.java` 文件中，在构造函数内添加 `LiveData` 变量并调用 DAO 的 `getAllProducts()` 方法：
+完成仓库类还剩最后一项任务。用户界面布局中的 `RecyclerView` 必须与数据库中存储的当前产品列表同步。`ProductDao` 类已经包含一个名为 `getAllProducts()` 的方法，该方法使用 SQL 查询选择所有数据库记录并将它们封装在 `LiveData` 对象中返回。仓库需要在初始化时调用此方法，并将结果存储在 `LiveData` 对象中，该对象可以被 `ViewModel` 观察，进而被 UI 控制器观察。一旦设置完成，每当数据库表发生变化时，UI 控制器观察者都会收到通知，`RecyclerView` 就可以更新最新的产品列表。在 `ProductRepository.java` 文件中，在构造函数内添加 `LiveData` 变量并调用 `DAO` 的 `getAllProducts()` 方法：
 
 ```java
 import androidx.lifecycle.LiveData;
@@ -16353,9 +16309,9 @@ public MutableLiveData<List<Product>> getSearchResults() {
 }
 ```
 
-### 72.7 添加 ViewModel
+### 72.7 添加 `ViewModel`
 
-`ViewModel` 负责创建仓库实例，并提供方法和 `LiveData` 对象，UI 控制器利用这些内容来保持用户界面与底层数据库同步。正如在 `ProductRepository.java` 中实现的那，仓库构造函数需要访问应用上下文以获取 Room 数据库实例。为了让 `ViewModel` 能够访问应用上下文以便将其传递给仓库，`ViewModel` 需要继承 `AndroidViewModel` 而不是 `ViewModel`。
+`ViewModel` 负责创建仓库实例，并提供方法和 `LiveData` 对象，UI 控制器利用这些内容来保持用户界面与底层数据库同步。正如在 `ProductRepository.java` 中实现的那样，仓库构造函数需要访问应用上下文以获取 Room 数据库实例。为了让 `ViewModel` 能够访问应用上下文以便将其传递给仓库，`ViewModel` 需要继承 `AndroidViewModel` 而不是 `ViewModel`。
 
 首先，在 Project 项目工具窗口中找到 `com.ebookfrenzy.viewmodeldemo` 条目，右键点击它并选择 New -> Java Class 菜单选项。接下来，将新类命名为 `MainViewModel` 并按键盘 Enter 键。最后，编辑新类文件，将类更改为扩展 `AndroidViewModel` 并实现默认构造函数：
 
@@ -16406,13 +16362,13 @@ public void findProduct(String name) {
 
 ## 72.8 创建产品项
 
-数据库中每个产品的名称将出现在用户界面的 `RecyclerView` 列表中。这需要一个包含每行对应 `TextView` 的布局文件。现在通过右键点击 Project 窗口中的 `app -> layout` 条目并选择 New -> Layout File 来添加此文件。将文件命名为 `product_item`，并在点击 创建文件并加载它之前，将根元素更改为 `LinearLayout`。在设计模式下，将一个 `TextView` 对象拖到布局中，它将默认出现在布局顶部。
+数据库中每个产品的名称将出现在用户界面的 `RecyclerView` 列表中。这需要一个包含每行对应 `TextView` 的布局文件。现在通过右键点击 Project 窗口中的 `app -> layout` 条目并选择 New -> Layout File 来添加此文件。将文件命名为 `product_item`，并在点击“创建文件”并加载它之前，将根元素更改为 `LinearLayout`。在设计模式下，将一个 `TextView` 对象拖到布局中，它将默认出现在布局顶部。
 
-选中布局中的 `TextView`，使用属性窗口将视图的 ID 设置为 `product_row`并将 `layout_height` 设置为 `30dp`。选择组件树中的 `LinearLayout` 条目，并将 `layout_height` 设置为 `wrap_content`。
+选中布局中的 `TextView`，使用属性窗口将视图的 ID 设置为 `product_row`，并将 `layout_height` 设置为 `30dp`。选择组件树中的 `LinearLayout` 条目，并将 `layout_height` 设置为 `wrap_content`。
 
-## 72.9 添加 RecyclerView 适配器
+## 72.9 添加 `RecyclerView` 适配器
 
-正如“使用 RecyclerView 和 CardView”章节详细概述的那样，`RecyclerView` 实例需要一个适配器类来提供显示的数据。通过右键点击项目工具窗口中的 `app -> java -> com.ebookfrenzy.roomdemo` 条目并选择 New -> Java Class 来添加此类。在对话框中将类命名为 `ListAdapter`，列表中选择 `Class` 然后按下回车。将生成的 `ListAdapter.java` 类加载到编辑器中，如下实现该类：
+正如“使用 RecyclerView 和 CardView”章节详细概述的那样，`RecyclerView` 实例需要一个适配器类来提供显示的数据。通过右键点击项目工具窗口中的 `app -> java -> com.ebookfrenzy.roomdemo` 条目并选择 New -> Java Class 来添加此类。在对话框中将类命名为 `ListAdapter`，列表中选择 `Class`，然后按下回车。将生成的 `ListAdapter.java` 类加载到编辑器中，如下实现该类：
 
 ```java
 package com.ebookfrenzy.roomdemo.ui.main;
@@ -16452,8 +16408,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
 
 
-
-
 ```java
 View view = LayoutInflater.from(parent.getContext()).inflate(productItemLayout, parent, false);
 return new ViewHolder(view);
@@ -16474,9 +16428,9 @@ static class ViewHolder extends RecyclerView.ViewHolder {
 }
 ```
 
-# 72.10 准备主 Activity
+## 72.10 准备主 Activity
 
-最后一个需要修改的组件是 `MainActivity` 类，它需要在 `Button` 视图上配置监听器，并在 `ViewModel` 类中的 live 数据 对象上配置观察者。在添加这些代码之前，必须进行一些准备工作，添加一些导入语句和变量。编辑 `MainActivity.java` 文件并进行如下修改：
+最后一个需要修改的组件是 `MainActivity` 类，它需要在 `Button` 视图上配置监听器，并在 `ViewModel` 类中的 live 数据对象上配置观察者。在添加这些代码之前，必须进行一些准备工作，添加一些导入语句和变量。编辑`MainActivity.java`文件并进行如下修改：
 
 ```java
 import androidx.lifecycle.ViewModelProvider;
@@ -16496,7 +16450,7 @@ public class MainActivity extends AppCompatActivity {
     }
 ```
 
-在代码的不同阶段，应用需要清除用户界面上显示的产品信息。为了避免代码重复，请添加以下 `clearFields()` 方便函数：
+在代码的不同阶段，应用需要清除用户界面上显示的产品信息。为了避免代码重复，请添加以下`clearFields()`方便函数：
 
 ```java
 private void clearFields() {
@@ -16506,11 +16460,11 @@ private void clearFields() {
 }
 ```
 
-在应用可以构建和测试之前，需要将上述 `onCreate()` 方法中调用的三个设置方法添加到类中。
+在应用可以构建和测试之前，需要将上述`onCreate()`方法中调用的三个设置方法添加到类中。
 
-# 72.11 添加按钮监听器
+## 72.11 添加按钮监听器
 
-主 fragment 的用户界面布局包含三个按钮，每个按钮在用户点击时都需要执行特定的特定的任务。编辑 `MainActivity.java` 文件并添加 `listenerSetup()` 方法：
+主 fragment 的用户界面布局包含三个按钮，每个按钮在用户点击时都需要执行特定的任务。编辑`MainActivity.java`文件并添加`listenerSetup()`方法：
 
 ```java
 import com.ebookfrenzy.roomdemo.Product;
@@ -16537,11 +16491,11 @@ private void listenerSetup() {
 }
 ```
 
-`addButton` 监听器执行了一些验证，以确保用户已输入产品名称，并使用这些数据来创建一个新的 `Product` 实体（注意，数量字符串被转换为整数以匹配实体数据）。随后在清除字段之前，调用 `insertProduct()` 方法并传递了 `Product` 对象。`findButton` 和 `deleteButton` 将产品名称传递给 `findProduct()` 或 `deleteProduct()` 方法。
+`addButton`监听器执行了一些验证，以确保用户已输入产品名称，并使用这些数据来创建一个新的`Product`实体（注意，数量字符串被转换为整数以匹配实体数据）。随后在清除字段之前，调用`insertProduct()`方法并传递了`Product`对象。`findButton`和`deleteButton`将产品名称传递给`findProduct()`或`deleteProduct()`方法。
 
-# 72.12 添加 Live 观察者
+## 72.12 添加 Live 观察者
 
-用户界面现在需要添加观察者，以与 `ViewModel` 中的 `searchResults` 和 `allProducts` live 数据保持同步。在 `MainActivity.java` 文件中，按如下实现 `observerSetup` 方法：
+用户界面现在需要添加观察者，以与`ViewModel`中的`searchResults`和`allProducts` live 数据保持同步。在`MainActivity.java`文件中，按如下实现`observerSetup`方法：
 
 ```java
 import java.util.Locale;
@@ -16560,11 +16514,11 @@ private void observerSetup() {
 }
 ```
 
-“所有产品”观察者将当前列表传递给 `setProductList()`。“搜索结果”观察者检查数据库是否至少找到了一个结果，从列表中提取 `Product` 对象，根据需要进行转换，并将其分配给 TextView。
+“所有产品”观察者将当前列表传递给`setProductList()`。“搜索结果”观察者检查数据库是否至少找到了一个结果，从列表中提取`Product`对象，根据需要进行转换，并将其分配给`TextView`。
 
-# 72.13 初始化 RecyclerView
+## 72.13 初始化 RecyclerView
 
-添加最后的设置方法来初始化并配置 RecyclerView，如下：
+添加最后的设置方法来初始化并配置`RecyclerView`，如下：
 
 ```java
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -16576,21 +16530,17 @@ private void recyclerSetup() {
 }
 ```
 
-...在设备或模拟器上编译并运行应用，添加一些产品，并确保它们自动出现在 RecyclerView 中。对现有的产品进行搜索，并验证产品 ID 和数量字段是否随之更新。最后，输入一个现有产品的名称，从数据库中删除它，并确认它已从 RecyclerView 列表中移除。
+...在设备或模拟器上编译并运行应用，添加一些产品，并确保它们自动出现在`RecyclerView`中。对现有的产品进行搜索，并验证产品 ID 和数量字段是否随之更新。最后，输入一个现有产品的名称，从数据库中删除它，并确认它已从`RecyclerView`列表中移除。
 
-# 72.15 使用数据库检查器
+## 72.15 使用数据库检查器
 
-如之前所述，可以使用 `Database Inspector` 工具来检查与运行应用关联的 Room 数据库的内容并进行细微的数据更改。在使用 RoomDemo 应用添加了一些数据库记录后，使用 `View -> Tool Windows -> App Inspection` 菜单选项显示 `Database Inspector` 工具：
+如之前所述，可以使用`Database Inspector`工具来检查与运行应用关联的 Room 数据库的内容并进行细微的数据更改。在使用 RoomDemo 应用添加了一些数据库记录后，使用`View -> Tool Windows -> App Inspection`菜单选项显示`Database Inspector`工具：
 
-在检查器窗口内，从标记为 A 的菜单中选择运行的应用。从 `Databases` 面板 (B) 中，双击 `products` 表以查看存储在数据库中的当前行。启用 `Live updates` 选项 (C)，然后使用运行的应用向数据库添加更多记录。注意 Database Inspector 会实时更新 (D) 表格数据。
+在检查器窗口内，从标记为 A 的菜单中选择运行的应用。从`Databases`面板 (B) 中，双击`products`表以查看存储在数据库中的当前行。启用`Live updates`选项 (C)，然后使用运行的应用向数据库添加更多记录。注意`Database Inspector`会实时更新 (D) 表格数据。
 
-关闭 `Live updates` 以便表格不再是只读的，双击表行中的数量单元格，并在按下回车键之前更改该值。返回运行的应用并搜索该产品，以确认在检查器中对数量的更改已保存到数据库表中。
+关闭`Live updates`以便表格不再是只读的，双击表行中的数量单元格，并在按下回车键之前更改该值。返回运行的应用并搜索该产品，以确认在检查器中对数量的更改已保存到数据库表中。
 
-最后，点击表格查询按钮以显示新的查询标签页 (A)，确保选中了 `product_database` (B)，在查询文本框 (C) 中输入 SQL 语句并点击 `Run` 按钮 (D)。
-
-
-
-
+最后，点击表格查询按钮以显示新的查询标签页 (A)，确保选中了`product_database` (B)，在查询文本框 (C) 中输入 SQL 语句并点击`Run`按钮 (D)。
 
 ![](img/as_database_query.jpg)
 
@@ -16600,89 +16550,91 @@ private void recyclerSetup() {
 
 ## 72.16 总结
 
-本章演示了如何使用 `Room` 持久库在 `SQLite` 数据库中存储数据。完成的项目使用了存储库（repository）将 `ViewModel` 与所有数据库操作分离。它还演示了实体（entities）、DAO 以及 Room 数据库实例的创建，包括在执行某些数据库操作时使用异步任务。
+本章演示了如何使用`Room`持久库在`SQLite`数据库中存储数据。完成的项目使用了存储库（repository）将`ViewModel`与所有数据库操作分离。它还演示了实体（entities）、DAO 以及 Room 数据库实例的创建，包括在执行某些数据库操作时使用异步任务。
 
 ## 73 使用 Android 存储访问框架访问云存储
 
 近年来，远程存储服务（在其他情况下也称为“云存储”）被广泛采用，用于存储用户文件和数据。驱动这一增长的有两个关键因素。首先，大多数移动设备现在都提供持续、高速的互联网连接，从而使得数据传输既快速又廉价。第二个因素是，与传统的计算机系统（如台式机和笔记本电脑）相比，这些移动设备在内部存储资源方面受到限制。例如，如今一个高规格的 Android 平板通常带有 256 GB 的存储容量。与带有 1 TB 硬盘驱动器的中端笔记本电脑系统相比，无缝远程存储文件已成为今天许多移动应用的关键需求。
 
-为了承认这一事实，Google 在 Android 4.4 SDK 中引入了 `Storage Access Framework`（存储访问框架）。本章将提供存储访问框架的高级概述，为下一章中更注重细节的教程做准备，该章节标题为“一个 Android 存储访问框架示例”。
+为了承认这一事实，Google 在 Android 4.4 SDK 中引入了`Storage Access Framework`（存储访问框架）。本章将提供存储访问框架的高级概述，为下一章中更注重细节的教程做准备，该章节标题为“一个 Android 存储访问框架示例”。
 
 ### 73.1 存储访问框架
 
-从用户的角度来看，`Storage Access Framework` 提供了一个直观的用户界面，允许用户在 Android 内部浏览、选择、删除和创建由存储服务（也称为文档提供者）托管的文件。通过使用此浏览界面（也称为选择器，picker），用户可以浏览他们所选文档提供者所托管的文件（如文档、音频、图像和视频）。例如，图 73-1 显示了选择器界面显示了文档提供者服务托管的一系列文件：
+从用户的角度来看，`Storage Access Framework`提供了一个直观的用户界面，允许用户在 Android 内部浏览、选择、删除和创建由存储服务（也称为文档提供者）托管的文件。通过使用此浏览界面（也称为选择器，picker），用户可以浏览他们所选文档提供者所托管的文件（如文档、音频、图像和视频）。例如，图 73-1 显示了选择器界面显示了文档提供者服务托管的一系列文件：
 
 ![](img/as3.0_storage_demo_picker.jpg)
 
 图 73-1
 
-文档提供者可以从云端服务到与客户端应用程序在同一台设备上的本地文档提供者。在编写时，与 `Storage Access Framework` 兼容的最著名的文档提供者是 Box 和，意不料的是，Google Drive。其他云存储提供者和应用程序开发者很快也将提供符合 `Storage Access Framework` 的服务。
+文档提供者可以从云端服务到与客户端应用程序在同一台设备上的本地文档提供者。在编写时，与`Storage Access Framework`兼容的最著名的文档提供者是 Box 和，意料不到的是，Google Drive。其他云存储提供者和应用程序开发者很快也将提供符合`Storage Access Framework`的服务。
 
 除了云端文档提供者外，选择器还提供了对设备内部存储的访问，为应用程序用户提供一系列文件存储选项。
 
-通过一组 `Intents`，Android 开发者只需几行代码即可将这些存储能力集成到应用程序中。从开发者的角度来看，`Storage Access Framework` 特别之处在于，用户选择的底层文档提供者对应用程序是完全透明的。一旦在应用程序中使用框架实现了存储功能，它将与所有文档提供者配合，而无需任何代码修改。
+通过一组`Intents`，Android 开发者只需几行代码即可将这些存储能力集成到应用程序中。从开发者的角度来看，`Storage Access Framework`特别之处在于，用户选择的底层文档提供者对应用程序是完全透明的。一旦在应用程序中使用框架实现了存储功能，它将与所有文档提供者配合，而无需任何代码修改。
 
 ### 73.2 使用存储访问框架
 
-Android 包含一组 `Intents`，旨在将 `Storage Access Framework` 的功能集成到 Android 应用程序中。这些 intent 向用户显示 `Storage Access Framework` 选择器界面，并通过调用启动 intent 的 activity 的 `onActivityResult()` 方法将交互结果返回给应用程序。当调用 `onActivityResult()` 方法时，将传递所选文件的 `Uri` 以及一个指示操作成功与否的值的值。
+Android 包含一组`Intents`，旨在将`Storage Access Framework`的功能集成到 Android 应用程序中。这些 intent 向用户显示`Storage Access Framework`选择器界面，并通过调用启动 intent 的 activity 的`onActivityResult()`方法将交互结果返回给应用程序。当调用`onActivityResult()`方法时，将传递所选文件的`Uri`以及一个指示操作成功与否的值的值。
 
 `Storage Access Framework` intents 可以总结如下：
 
-- `ACTION_OPEN_DOCUMENT` – 为用户提供访问选择器界面的权限，以便从设备上配置的文档提供者选择文件。所选的文件以 `Uri` 对象的格式返回给应用程序。
-- `ACTION_CREATE_DOCUMENT` – 允许用户选择文档提供者、该提供者存储上的位置以及新文件的文件名。一旦选定，文件将由 `Storage Access Framework` 创建，并将该文件的 `Uri` 返回给应用程序以进行进一步处理。
+- `ACTION_OPEN_DOCUMENT` – 为用户提供访问选择器界面的权限，以便从设备上配置的文档提供者选择文件。所选的文件以`Uri`对象的格式返回给应用程序。
+
+- `ACTION_CREATE_DOCUMENT` – 允许用户选择文档提供者、该提供者存储上的位置以及新文件的文件名。一旦选定，文件将由`Storage Access Framework`创建，并将该文件的`Uri`返回给应用程序以进行进一步处理。
 
 ### 73.3 过滤选择器文件列表
 
-在启动 intent 时，选择器界面中列出的文件可以使用各种选项进行过滤。例如，考虑以下用于配置 `ACTION_OPEN_DOCUMENT` intent 的代码：
+在启动 intent 时，选择器界面中列出的文件可以使用各种选项进行过滤。例如，考虑以下用于配置`ACTION_OPEN_DOCUMENT` intent 的代码：
 
-```
+```java
 Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
 ```
 
-当启动时，上述 intent 将导致显示选择器界面，允许用户浏览并选择由可用文档提供者托管的任何文件。一旦用户选择了文件，将以 `Uri` 对象的形式向应用程序提供该文件的引用。应用程序可以使用 `openFileDescriptor(Uri, String)` 方法打开该文件。然而，存在某种风险，并非文档提供者列出的所有文件都能通过这种方式打开。通过使用 `CATEGORY_OPENABLE` 选项修改 intent，可以在选择器中排除此类文件。例如：
+当启动时，上述 intent 将导致显示选择器界面，允许用户浏览并选择由可用文档提供者托管的任何文件。一旦用户选择了文件，将以`Uri`对象的形式向应用程序提供该文件的引用。应用程序可以使用`openFileDescriptor(Uri, String)`方法打开该文件。然而，存在某种风险，并非文档提供者列出的所有文件都能通过这种方式打开。通过使用`CATEGORY_OPENABLE`选项修改 intent，可以在选择器中排除此类文件。例如：
 
-```
+```java
 Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
 intent.addCategory(Intent.CATEGORY_OPENABLE);
 ```
 
-现在显示 intent 时，无法使用 `openFileDescriptor()` 方法打开的文件将列出，但用户无法选择。
+现在显示 intent 时，无法使用`openFileDescriptor()`方法打开的文件将列出，但用户无法选择。
 
 另一种实用的过滤方法允许按文件类型限制可供选择的文件。这涉及指定应用程序能够处理的文件类型。例如，一个图像编辑应用程序可能只想为用户提供从文档提供者选择图像文件的选项。这是通过在 intent 对象上配置要供用户选择的文件 MIME 类型来实现的。例如，以下代码指定了图像文件适用于选择器中的选择：
 
-```
+```java
 intent.addCategory(Intent.CATEGORY_OPENABLE);
 intent.setType("image/*");
 ```
 
 这可以进一步细化为限制选择 JPEG 图像：
 
-```
+```java
 intent.setType("image/jpeg");
 ```
 
 或者，音频播放器应用只能处理音频文件：
 
-```
+```java
 intent.setType("audio/*");
 ```
 
 该音频应用可能被进一步限制为仅支持播放 MP4 音频文件：
 
-```
+```java
 intent.setType("audio/mp4");
 ```
 
-在处理 `Storage Access Framework` 时，可以使用广泛的 MIME 类型设置，其中更常见的可以在网上找到：
+在处理`Storage Access Framework`时，可以使用广泛的 MIME 类型设置，其中更常见的可以在网上找到：
 
 https://en.wikipedia.org/wiki/Internet_media_type#List_of_common_media_types
 
 ### 73.4 处理 Intent 结果
 
-由于正在启动返回结果的 intent，需要使用 `registerForActivityResult()` 方法（在标题为“Android Explicit Intents – 示例`的章节中介绍）来创建一个启动器并声明一个 lambda 来处理返回的数据，例如：
+由于正在启动返回结果的 intent，需要使用`registerForActivityResult()`方法（在标题为“Android Explicit Intents – 示例”的章节中介绍）来创建一个启动器并声明一个 lambda 来处理返回的数据，例如：
 
-```
-ActivityResultLauncher<Intent> startOpenForResult = registerForActivityResult(
+
+
+`ActivityResultLauncher<Intent> startOpenForResult = registerForActivityResult(
     new ActivityResultContracts.StartActivityForResult(),
     new ActivityResultCallback<ActivityResult>() {
         @Override
@@ -16691,12 +16643,7 @@ ActivityResultLauncher<Intent> startOpenForResult = registerForActivityResult(
                 Intent data = result.getData();
             }
         }
-    });
-```
-
-
-
-
+    });`
 
 ```java
 // Read file content from Uri here
@@ -16705,7 +16652,7 @@ ActivityResultLauncher<Intent> startOpenForResult = registerForActivityResult(
 });
 ```
 
-一旦声明，可以如下所示配置并启动意：
+一旦声明，可以如下所示配置并启动意图：
 
 ```java
 Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
@@ -16714,11 +16661,11 @@ intent.setType("text/plain");
 startOpenForResult.launch(intent);
 ```
 
-### 73.5 读取文件内容
+## 73.5 读取文件内容
 
 读取文档提供程序托管的文件内容的具体步骤在很大程度上取决于文件的类型。例如，从文本文件中读取行的步骤与读取图像或音频文件的步骤不同。
 
-可以通过从 `Uri` 对象中提取文件描述符，然后将图像解码为 `BitmapFactory` 实例，将文件赋值给 `Bitmap` 对象。例如：
+可以通过从`Uri`对象中提取文件描述符，然后将图像解码为`BitmapFactory`实例，将文件赋值给`Bitmap`对象。例如：
 
 ```java
 ParcelFileDescriptor pFileDescriptor =
@@ -16732,7 +16679,7 @@ myImageView.setImageBitmap(image);
 
 注意，文件描述符是以“r”模式打开的。这表示文件将以读取模式打开。其他选项是“w”用于写入权限以及“rwt”用于读写权限，其中文件中的现有内容会被新内容截断。
 
-读取文本文件的内容需要稍多工作，并需要使用 `InputStream` 对象。例如，以下代码从文本文件中读取行：
+读取文本文件的内容需要稍多工作，并需要使用`InputStream`对象。例如，以下代码从文本文件中读取行：
 
 ```java
 InputStream inputStream = getContentResolver().openInputStream(uri);
@@ -16745,9 +16692,9 @@ while ((readline = reader.readLine()) != null) {
 inputStream.close();
 ```
 
-### 73.6 向文件写入内容
+## 73.6 向文件写入内容
 
-向文档提供程序托管的打开文件写入内容与读取类似，不同之处使用的是输出流而不是输入流。例如，以下代码向由指定 `Uri` 引用基于存储的文件输出流写入文本：
+向文档提供程序托管的打开文件写入内容与读取类似，不同之处使用的是输出流而不是输入流。例如，以下代码向由指定`Uri`引用基于存储的文件输出流写入文本：
 
 ```java
 try {
@@ -16766,11 +16713,11 @@ try {
 }
 ```
 
-首先，从 `Uri` 中提取文件描述符，这次请求对目标文件的写入权限。随后使用该文件描述符获取文件输出流的引用。，内容（在本例中为某些文本）在文件描述符和输出流关闭之前写入输出流中。
+首先，从`Uri`中提取文件描述符，这次请求对目标文件的写入权限。随后使用该文件描述符获取文件输出流的引用。内容（在本例中为某些文本）在文件描述符和输出流关闭之前写入输出流中。
 
-### 73.7 删除文件
+## 73.7 删除文件
 
-是否可以从存储中删除文件取决于该文件的文档提供程序是否支持删除文件。假设允许删除，可以如下所示对指定的 `Uri` 执行删除：
+是否可以从存储中删除文件取决于该文件的文档提供程序是否支持删除文件。假设允许删除，可以如下所示对指定的`Uri`执行删除：
 
 ```java
 if (DocumentsContract.deleteDocument(getContentResolver(), uri))
@@ -16779,9 +16726,9 @@ else
     // 删除失败
 ```
 
-### 73.8 获取对文件的持久访问权限
+## 73.8 获取对文件的持久访问权限
 
-当应用程序通过存储访问框架（Storage Access Framework）获取文件访问时，该访问将一直有效，直到运行应用程序的 Android 设备重启。通过“获取” `Uri` 的必要权限，可以获得对特定文件的持久访问。例如，以下代码为 `fileUri` `Uri` 实例引用的文件持久化读写权限：
+当应用程序通过存储访问框架（Storage Access Framework）获取文件访问时，该访问将一直有效，直到运行应用程序的 Android 设备重启。通过“获取”`Uri`的必要权限，可以获得对特定文件的持久访问。例如，以下代码为`fileUri` `Uri`实例引用的文件持久化读写权限：
 
 ```java
 final int takeFlags = intent.getFlags()
@@ -16790,9 +16737,9 @@ final int takeFlags = intent.getFlags()
 getContentResolver().takePersistableUriPermission(fileUri, takeFlags);
 ```
 
-一旦应用程序获取了文件的权限，并且应用程序已保存了该 `Uri`，用户应该能够在设备重启后继续访问文件，而无需从选择器界面重新选择文件。
+一旦应用程序获取了文件的权限，并且应用程序已保存了该`Uri`，用户应该能够在设备重启后继续访问文件，而无需从选择器界面重新选择文件。
 
-如果在任何时候不再需要持久化权限，可以通过调用内容解析器的 `releasePersistableUriPermission()` 方法来释放它们：
+如果在任何时候不再需要持久化权限，可以通过调用内容解析器的`releasePersistableUriPermission()`方法来释放它们：
 
 ```java
 final int releaseFlags = intent.getFlags()
@@ -16801,57 +16748,53 @@ final int releaseFlags = intent.getFlags()
 getContentResolver().releasePersistableUriPermission(fileUri, releaseFlags);
 ```
 
-### 73.9 总结
+## 73.9 总结
 
-考虑近年来对存储的感知变化是非常有趣的的。“存储”一词曾与大容量内部硬盘驱动器同义，现在它同样可能指在云端远程托管的存储空间。随着资源受限的“始终连接”移动设备的广泛采用，情况变得日益如此。
+考虑近年来对存储的感知变化是非常有趣的。“存储”一词曾与大容量内部硬盘驱动器同义，现在它同样可能指在云端远程托管的存储空间。随着资源受限的“始终连接”移动设备的广泛采用，情况变得日益如此。
 
 存储访问框架为用户和应用程序开发者提供了一种简单的机制，可以无缝访问存储在云端的文件。通过一组意图（intents）和一个用于选择文档提供程序的内置用户界面，现在可以用极少的代码将全面的云存储集成到 Android 应用程序中。
 
 存储访问框架大大简化了将云存储访问集成到 Android 应用程序的过程。该框架由一个选择器用户界面和一组新意图组成，访问 Google Drive 和 Box 等文档提供程序存储的文件现在可以相对轻松地构建到 Android 应用程序。
 
-### 74. 存储访问框架示例
+## 74. 存储访问框架示例
 
 在上一章涵盖了存储访问框架的基础知识后，本章将通过创建一个示例应用程序，来使用存储访问框架来存储和管理文件。
 
-#### 74.1 关于存储访问框架示例
+### 74.1 关于存储访问框架示例
 
 在本章创建的 Android 应用程序将以原始文本编辑器的形式存在，旨在将文本文件创建并远程存储到云服务。在实践中，该示例将与任何兼容存储访问框架的云文档存储提供程序配合，但为了本示例，假设使用 Google Drive。
 
 从功能角度来看，应用程序将向用户展示一个多行文本视图，用户可以在其中输入和编辑文本，并有一组按钮允许创建、打开和保存基于存储的文本文件。
 
-#### 74.2 创建存储访问框架示例
+### 74.2 创建存储访问框架示例
 
 从欢迎界面选择 New Project（新建项目）选项，在出现的新项目对话框中，点击 Next（下一步）按钮之前选择 Empty Views Activity（空视图活动）模板。
 
-在 Name（名称）字段中输入 `StorageDemo`，并指定 `com.ebookfrenzy.storagedemo` 为包名。在点击 Finish（完成）按钮之前，将 Minimum API 级设置为 `API 26: Android 8.0 (Oreo)`，并将语言菜单设置为 Java。
+在 Name（名称）字段中输入`StorageDemo`，并指定`com.ebookfrenzy.storagedemo`为包名。在点击 Finish（完成）按钮之前，将 Minimum API 级设置为`API 26: Android 8.0 (Oreo)`，并将语言菜单设置为 Java。
 
 按照第 11.8 节中将项目迁移到 View Binding 的常规步骤，为项目添加 View Binding 支持。
 
 ### 74.3 设计用户界面
 
-用户界面需要由三个 `Button` 视图和一个 `EditText` 视图组成。在 Project 工具窗口中，导航到 `app -> res -> layout` 下的 `activity_main.xml` 布局文件并双击将其加载到布局编辑器工具中。在工具 设计模式下，选择并删除 Hello World! `TextView` 对象。
+用户界面需要由三个`Button`视图和一个`EditText`视图组成。在 Project 工具窗口中，导航到`app -> res -> layout`下的`activity_main.xml`布局文件并双击将其加载到布局编辑器工具中。在工具设计模式下，选择并删除 Hello World! `TextView`对象。
 
+将一个`Button`小部件拖动到布局的左上角，这样在释放部件之前，会显示左侧和顶部的虚线边距引导线。放置第二个`Button`，使中心和顶部的边距引导线出现。第三个`Button`小部件应放置在顶部和右侧的边距引导线出现的位置。
 
+将这三个按钮的文本属性分别更改为“New”、“Open”和“Save”。接下来放置一个`Plain Text`小部件，使其在水平方向居中，并位于中间按钮的下方，以便用户界面布局与图 74-1 所示。使用布局编辑器（Layout Editor）工具栏中的`Infer Constraints`（推断约束）按钮来添加任何缺失的约束。
 
-
-
-将一个 `Button` 小部件拖动到布局的左上角，这样在释放部件之前，会显示左侧和顶部的虚线边距引导线。放置第二个 `Button`，使中心和顶部的边距引导线出现。第三个 `Button` 小部件应放置在顶部和右侧的边距引导线出现的位置。
-
-将这三个按钮的文本属性分别更改为“New”、“Open”和“Save”。接下来放置一个 `Plain Text` 小部件，使其在水平方向居中，并位于中间按钮的下方，以便用户界面布局与图 74-1 所示所示。使用布局编辑器（Layout Editor）工具栏中的 `Infer Constraints`（推断约束）按钮来添加任何缺失的约束。
-
-在布局中选择 `Plain Text` 小部件，删除当前的文本属性设置，使字段初始为空，并将 ID 设置为 `fileText`。接下来，将字符串属性提取为命名为 `string`、`open_string` 和 `save_string` 的资源值。
+在布局中选择`Plain Text`小部件，删除当前的文本属性设置，使字段初始为空，并将 ID 设置为`fileText`。接下来，将字符串属性提取为命名为`string`、`open_string`和`save_string`的资源值。
 
 ![](img/as_storagedemo_ui.jpg)
 
 图 74-1
 
-使用属性（Attributes）工具窗口，配置 `Button` 小部件上的 `onClick` 属性，分别调用名为 `newFile`、`openFile` 和 `saveFile` 的方法。
+使用属性（Attributes）工具窗口，配置`Button`小部件上的`onClick`属性，分别调用名为`newFile`、`openFile`和`saveFile`的方法。
 
 ## 74.4 添加活动启动器
 
-按照名为 Android 显式意图——实例示例章节概述步骤步骤，我们需要开始注册启动器来处理文件内容的创建、打开和保存。
+按照名为 Android 显式意图——实例示例章节概述步骤，我们需要开始注册启动器来处理文件内容的创建、打开和保存。
 
-在 `MainActivity.java` 文件中，为三个操作中的每一个添加启动器，如下所示：
+在`MainActivity.java`文件中，为三个操作中的每一个添加启动器，如下所示：
 
 ```java
 import androidx.activity.result.ActivityResult;
@@ -16919,9 +16862,11 @@ ActivityResultLauncher<Intent> startCreateForResult =
 
 ## 74.5 创建新文件
 
-当选择 New 按钮时，应用程序需要触发一个 `ACTION_CREATE_DOCUMENT` 意图来创建一个纯文本 MIME  own 的文件。在设计用户界面时，New 按钮被配置为调用名为 `newFile()` 的方法。正是在方法内部需要启动适当的意图。
+当选择 New 按钮时，应用程序需要触发一个`ACTION_CREATE_DOCUMENT`意图来创建一个纯文本 MIME 类型的文件。在设计用户界面时，New 按钮被配置为调用名为`newFile()`的方法。正是在方法内部需要启动适当的意图。
 
-留在 `MainActivity.java` 文件中，如下所示实现该方法：
+留在`MainActivity.java`文件中，如下所示实现该方法：
+
+
 
 ```java
 package com.ebookfrenzy.storagedemo;
@@ -16974,10 +16919,6 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-
-
-
-
 ```java
 fileOutputStream.close();
 pfd.close();
@@ -16987,7 +16928,7 @@ pfd.close();
 }
 ```
 
-该方法首先从用户选择的文件的 `Uri` 获取并打开文件描述符。由于代码需要向文件写入内容，因此描述符是以写入模式（`“w””）打开的。随后，该文件描述符被作为创建输出流的基础，从而允许应用程序向文件写入内容。
+该方法首先从用户选择的文件的 `Uri` 获取并打开文件描述符。由于代码需要向文件写入内容，因此描述符是以写入模式（`"w"`）打开的。随后，该文件描述符被作为创建输出流的基础，从而允许应用程序向文件写入内容。
 
 用户输入的文本从编辑框对象中提取出来，并在关闭文件描述符和流之前写入输出流中。代码还添加了处理逻辑以应对在文件写入过程中遇到的任何 `IOException`。
 
@@ -17055,6 +16996,7 @@ Android SDK 包含了两个使得在 Android 设备上实现播放变得简单�
 在 Android 应用程序显示视频的最简单方法是使用 `VideoView` 类。这个视觉组件在被添加到布局中时，提供一个可以播放视频的表面。
 
 Android 目前支持以下格式：
+
 - H.263
 - H.264 AVC
 - H.265 HEVC
@@ -17078,10 +17020,6 @@ Android 目前支持以下格式：
 - `setMediaController(MediaController)`：指定 `MediaController` 实例，允许向用户显示播放控制控件。
 
 ### 75.2 介绍 Android MediaController 类
-
-
-
-
 
 如果使用 `VideoView` 类播放视频，用户将无法对播放进行任何控制，视频将一直运行到结束。这个问题可以通过将 `MediaController` 类的实例挂载到 `VideoView` 实例上来解决。此时，`MediaController` 将提供一组控件，允许用户管理播放（例如暂停以及在视频时间轴上向后/向后跳跃）。
 
@@ -17171,6 +17109,8 @@ public class MainActivity extends AppCompatActivity {
 
 目前 `VideoPlayer` 应用程序没有方法可以控制播放。如前文所述，这可以通过 `MediaController` 类来实现。要为 `VideoView` 添加控制器，请修改 `configureVideoView()` 方法：
 
+
+
 ```java
 package com.ebookfrenzy.videoplayer;
 
@@ -17192,13 +17132,13 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-实施这些更改后，点击 `VideoView` 画布将使媒体控件出现在视频播放上方。这些控件应包含进度条以及快进、后退和播放/暂停按钮。当控件从视图消失后，可以通过点击 `VideoView` 画布随时恢复它们。只需多写三行代码，我们的视频播放器应用程序现在有了媒体控件，如图 75-4 所示：
+实施这些更改后，点击`VideoView`画布将使媒体控件出现在视频播放上方。这些控件应包含进度条以及快进、后退和播放/暂停按钮。当控件从视图消失后，可以通过点击`VideoView`画布随时恢复它们。只需多写三行代码，我们的视频播放器应用程序现在有了媒体控件，如图 75-4 所示：
 
 ![](img/as_3.6_video_player_media_controls.jpg)
 
 图 75-4
 
-## 75.8 设置 onPreparedListener
+## 75.8 设置`onPreparedListener`
 
 作为处理视频内容的最后一个示例，将进一步扩展活动以演示配置监听器的机制。在这种情况下，将实现一个监听器，将视频时长作为消息输出到 Android Studio Logcat 面板中。该监听器还将配置视频循环播放：
 
@@ -17216,10 +17156,6 @@ public class MainActivity extends AppCompatActivity {
     private void configureVideoView() {
         binding.videoView1.setVideoURI(Uri.parse("android.resource://"
 ```
-
-
-
-
 
 ```java
 + getPackageName() + "/" + R.raw.demo));
@@ -17243,33 +17179,33 @@ binding.videoView.start();
 
 # 75. 总结
 
-Android 设备是向用户交付内容的优秀平台，特别是视频媒体形式。正如本章概述，Android SDK 提供了两个类，即 `VideoView` 和 `MediaController`，它们结合在一起使视频播放集成到 Android 应用程序变得快速且简单，通常只需要几行 Java 代码。
+Android 设备是向用户交付内容的优秀平台，特别是视频媒体形式。正如本章概述，Android SDK 提供了两个类，即`VideoView`和`MediaController`，它们结合在一起使视频播放集成到 Android 应用程序变得快速且简单，通常只需要几行 Java 代码。
 
 # 76. Android 画中画模式
 
-在前面的章节中介绍 Android 的多任务处理时，简要提到了画中画（`PiP`）模式，但没有进行详细介绍。`PiP` 模式主要为视频播放设计，允许活动屏幕缩小尺寸并放置在屏幕上的任何位置。在此状态下，活动继续运行，无论设备上运行着任何其他活动，窗口都会保持可见。这允许用户例如在执行检查电子邮件或处理电子表格等任务时，继续观看视频播放。
+在前面的章节中介绍 Android 的多任务处理时，简要提到了画中画（`PiP`）模式，但没有进行详细介绍。`PiP`模式主要为视频播放设计，允许活动屏幕缩小尺寸并放置在屏幕上的任何位置。在此状态下，活动继续运行，无论设备上运行着任何其他活动，窗口都会保持可见。这允许用户例如在执行检查电子邮件或处理电子表格等任务时，继续观看视频播放。
 
-本章将提供画中画模式的概述，并在下一章中为 `VideoPlayer` 项目添加画中画支持。
+本章将提供画中画模式的概述，并在下一章中为`VideoPlayer`项目添加画中画支持。
 
 ## 76.1 画中画功能
 
-正如本章稍后解释以及下一章演示的，可以通过运行中的应用程序内部 API 调用将活动放入 PiP 模式。进入 `PiP` 模式后，可以指定配置选项来控制 `PiP` 窗口的宽高比，并定义要包含的活动屏幕区域。例如[图 76-1]显示了画中画模式下的视频播放活动：
+正如本章稍后解释以及下一章演示的，可以通过运行中的应用程序内部 API 调用将活动放入`PiP`模式。进入`PiP`模式后，可以指定配置选项来控制`PiP`窗口的宽高比，并定义要包含的活动屏幕区域。例如[图 76-1]显示了画中画模式下的视频播放活动：
 
 ![](img/Image24273.jpg)
 
 图 76-1
 
-[图 76-2]显示了用户点击后的 PiP 模式窗口。在此模式下，窗口看起来变大了，并在中心包含一个全屏操作，点击该操作会将窗口恢复到全屏模式，右上角还有一个退出按钮，用于关闭窗口并将应用程序置于后台。当在此模式下显示时，添加到 `PiP` 窗口的任何自定义操作将出现在屏幕上。在[图 76-2]中，`PiP` 窗口包含了自定义的播放和暂停操作按钮：
+[图 76-2]显示了用户点击后的`PiP`模式窗口。在此模式下，窗口看起来变大了，并在中心包含一个全屏操作，点击该操作会将窗口恢复到全屏模式，右上角还有一个退出按钮，用于关闭窗口并将应用程序置于后台。当在此模式下显示时，添加到`PiP`窗口的任何自定义操作将出现在屏幕上。在[图 76-2]中，`PiP`窗口包含了自定义的播放和暂停操作按钮：
 
 ![](img/Image24363.jpg)
 
 图 76-2
 
-本章的剩余部分将概述如何在 Android 应用程序内部启用和管理 PiP 模式。
+本章的剩余部分将概述如何在 Android 应用程序内部启用和管理`PiP`模式。
 
 ## 76.2 启用画中画模式
 
-`PiP` 模式目前仅支持运行 `API 26` 的设备：即 Android 8.0 (Oreo) 或更高版本。实现 `PiP` 模式的第一步是在项目的清单文件中启用它。`PiP` 模式是按活动配置的，通过向每个需要 `PiP` 支持的活动元素中添加以下行来实现：
+`PiP`模式目前仅支持运行`API 26`的设备：即 Android 8.0 (Oreo) 或更高版本。实现`PiP`模式的第一步是在项目的清单文件中启用它。`PiP`模式是按活动配置的，通过向每个需要`PiP`支持的活动元素中添加以下行来实现：
 
 ```xml
 <activity android:name=".MyActivity"
@@ -17282,11 +17218,11 @@ Android 设备是向用户交付内容的优秀平台，特别是视频媒体形
 </activity>
 ```
 
-`android:supportsPictureInPicture` 为活动启用了 PiP 功能，而 `android:configChanges` 通知 Android 该活动可以处理更改。如果没有此设置，每当活动进入和退出 `PiP` 时，活动都将从头开始启动。
+`android:supportsPictureInPicture`为活动启用了`PiP`功能，而`android:configChanges`通知 Android 该活动可以处理更改。如果没有此设置，每当活动进入和退出`PiP`时，活动都将从头开始启动。
 
 ## 76.3 配置画中画参数
 
-`PiP` 行为通过使用 `PictureInParams` 类定义，可以使用 `Builder` 如下创建其实例：
+`PiP`行为通过使用`PictureInParams`类定义，可以使用`Builder`如下创建其实例：
 
 ```java
 Rational rational = new Rational(videoView.getWidth(), videoView.getHeight());
@@ -17296,28 +17232,29 @@ PictureInParams params = new PictureInPictureParams.Builder()
     .build();
 ```
 
-一旦定义，可以使用 `setPictureInParams()` 方法随时设置 `PiP` 参数如下：
+一旦定义，可以使用`setPictureInParams()`方法随时设置`PiP`参数如下：
 
 ```java
 setPictureInParams(params);
 ```
 
 还可以使用以下方法调用来自定义参数：
-- `setActions()`：用于定义在活动处于该模式时在 `PiP` 窗口内可以执行的操作。
-- `setAspectRatio()`：声明 `PiP` 窗口的首选宽高比。该方法接受一个 `Rational` 对象作为参数。
-- `setRectHint()`：接受一个 `Rect` 对象作为参数，定义显示的屏幕区域。
 
-通过调用 `enterPictureInMode()` 方法将活动放入 PiP 模式，并传递 `PictureInParams` 对象：
+- `setActions()`：用于定义在活动处于该模式时在`PiP`窗口内可以执行的操作。
+- `setAspectRatio()`：声明`PiP`窗口的首选宽高比。该方法接受一个`Rational`对象作为参数。
+- `setRectHint()`：接受一个`Rect`对象作为参数，定义显示的屏幕区域。
+
+通过调用`enterPictureInMode()`方法将活动放入`PiP`模式，并传递`PictureInParams`对象：
 
 ```java
 enterPictureInMode(params);
 ```
 
-如果不需要参数，请按照上一节创建一个默认 `PictureInParams` 对象。如果之前使用 `setPictureInParams()` 方法设置了参数，这些参数将与 `enterPictureInMode()` 方法指定的参数相结合。
+如果不需要参数，请按照上一节创建一个默认`PictureInParams`对象。如果之前使用`setPictureInParams()`方法设置了参数，这些参数将与`enterPictureInMode()`方法指定的参数相结合。
 
 ## 76.5 检测画中画模式变化
 
-当活动进入 PiP 模式时，必须隐藏必要的视图，以确保只有视频播放在 `PiP` 窗口中可见。当活动重新进入全屏模式时，必须恢复用户界面组件。这些和其他特定的应用程序任务可以通过重写 `onPictureInPictureModeChanged()` 方法来实现。当此方法添加到活动时，每当活动在 PiP 和全屏模式之间切换时都会调用该方法，并传递一个布尔值表示活动当前是否处于 PiP 模式：
+当活动进入`PiP`模式时，必须隐藏必要的视图，以确保只有视频播放在`PiP`窗口中可见。当活动重新进入全屏模式时，必须恢复用户界面组件。这些和其他特定的应用程序任务可以通过重写`onPictureInPictureModeChanged()`方法来实现。当此方法添加到活动时，每当活动在 PiP 和全屏模式之间切换时都会调用该方法，并传递一个布尔值表示活动当前是否处于 PiP 模式：
 
 ```java
 @Override
@@ -17331,17 +17268,13 @@ public void onPictureInPictureModeChanged(boolean isInPictureInPictureMode) {
 }
 ```
 
+## 画中画操作
 
+当用户点击`PiP`窗口时，PiP 操作将以图标的形式出现在`PiP`窗口内。实现 PiP 操作是一个多步骤的过程，首先要实现让`PiP`窗口通知`activity`已选择某个操作的方法。这是通过在`activity`中设置`broadcast receiver`，然后在 PiP 操作中创建一个`pending intent`实现的，该`pending intent`随后被配置为广播一个`broadcast receiver`正在监听的`intent`。当`intent`触发`broadcast receiver`时，可以使用存储在`intent`中的数据来识别所执行的操作，并在`activity`中采取必要的行动。
 
+PiP 操作使用`RemoteAction`实例进行声明，并使用图标、标题、描述和`PendingIntent`对象进行初始化。一旦创建了一个或多个操作，它们就会被添加到`ArrayList`中，并在构建`PictureInPictureParams`对象时传递给`setActions()`方法。
 
-
-# 画中画操作
-
-当用户点击 PiP 窗口时，PiP 操作将以图标的形式出现在 PiP 窗口内。实现 PiP 操作是一个多步骤的过程，首先要实现让 PiP 窗口通知 `activity` 已选择某个操作的方法。这是通过在 `activity` 中设置 `broadcast receiver`，然后在 PiP 操作中创建一个 `pending intent` 实现的，该 `pending intent` 随后被配置为广播一个 `broadcast receiver` 正在监听的 `intent`。当 `intent` 触发 `broadcast receiver` 时，可以使用存储在 `intent` 中的数据来识别所执行的操作，并在 `activity` 中采取必要的行动。
-
-PiP 操作使用 `RemoteAction` 实例进行声明，并使用图标、标题、描述和 `PendingIntent` 对象进行初始化。一旦创建了一个或多个操作，它们就会被添加到 `ArrayList` 中，并在构建 `PictureInPictureParams` 对象时传递给 `setActions()` 方法。
-
-以下代码片段演示了 `Intent`、`PendingIntent` 和 `RemoteAction` 对象的创建，以及一个 `PictureInPictureParams` 实例的创建，随后该实例被应用于 `activity` 的 PiP 设置：
+以下代码片段演示了`Intent`、`PendingIntent`和`RemoteAction`对象的创建，以及一个`PictureInPictureParams`实例的创建，随后该实例被应用于`activity`的 PiP 设置：
 
 ```java
 final ArrayList<RemoteAction> actions = new ArrayList<>();
@@ -17370,19 +17303,19 @@ setPictureInPictureParams(params);
 
 ### 76.7 总结
 
-画中画模式是 Android 8.0 引入的一项多任务功能，专门设计用于允许用户在其他应用和 `activities` 中执行任务时，视频播放仍在小窗口中继续。在使用 PiP 模式之前，必须首先在清单文件中为支持 PiP 的 `activities` 启用它。
+画中画模式是 Android 8.0 引入的一项多任务功能，专门设计用于允许用户在其他应用和`activities`中执行任务时，视频播放仍在小窗口中继续。在使用 PiP 模式之前，必须首先在清单文件中为支持 PiP 的`activities`启用它。
 
-PiP 模式的行为使用 `PictureInPictureParams` 类实例进行配置，并通过从 `activity` 内部调用 `enterPictureInPictureMode()` 方法启动。在 PiP 模式下，只有视频播放应该是可见的，这意味着任何其他用户界面元素必须隐藏，直到选择全屏模式。这些和其他与模式切换相关的任务可以通过重写 `onPictureInPictureModeChanged()` 方法完成。
+PiP 模式的行为使用`PictureInPictureParams`类实例进行配置，并通过从`activity`内部调用`enterPictureInPictureMode()`方法启动。在 PiP 模式下，只有视频播放应该是可见的，这意味着任何其他用户界面元素必须隐藏，直到选择全屏模式。这些和其他与模式切换相关的任务可以通过重写`onPictureInPictureModeChanged()`方法完成。
 
-当用户点击 PiP 窗口时，PiP 操作将作为图标叠加在 PiP 窗口上。当选中时，这些操作会触发 `activity` 内部的行为。PiP 窗口使用 `broadcast receivers` 和 `pending intents` 来通知 `activity` 操作发生。
+当用户点击 PiP 窗口时，PiP 操作将作为图标叠加在 PiP 窗口上。当选中时，这些操作会触发`activity`内部的行为。PiP 窗口使用`broadcast receivers`和`pending intents`来通知`activity`操作发生。
 
 # 77. Android 画中画教程
 
-接上一章节，本章将采用现有的 `VideoPlayer` 项目并对其进行增强，添加对画中画的支持，包括检测 PiP 模式变化以及添加一个旨在显示当前正在运行视频信息的 PiP 操作。
+接上一章节，本章将采用现有的`VideoPlayer`项目并对其进行增强，添加对画中画的支持，包括检测 PiP 模式变化以及添加一个旨在显示当前正在运行视频信息的 PiP 操作。
 
 ## 77.1 在 Manifest 中添加画中画支持
 
-在 Android 应用项目上添加 PiP 支持的第一步是在项目 Manifest 文件中启用它。打开 `manifests` -> `AndroidManifest.xml` 文件并修改 `activity` 元素以启用 PiP 支持：
+在 Android 应用项目上添加 PiP 支持的第一步是在项目 Manifest 文件中启用它。打开`manifests` -> `AndroidManifest.xml`文件并修改`activity`元素以启用 PiP 支持：
 
 ```xml
 <activity
@@ -17399,15 +17332,17 @@ PiP 模式的行为使用 `PictureInPictureParams` 类实例进行配置，并�
 
 ## 77.2 添加画中画按钮
 
-按照目前的设计，`activity` 的布局仅包含一个 `VideoView`。我们需要在布局中添加一个 `Button` 来切换到 PiP 模式。将 `activity_main.xml` 加载到布局编辑器中，并如图 77-1 所示将 `Button` 对象拖入布局：
+按照目前的设计，`activity`的布局仅包含一个`VideoView`。我们需要在布局中添加一个`Button`来切换到 PiP 模式。将`activity_main.xml`加载到布局编辑器中，并如图 77-1 所示将`Button`对象拖入布局：
 
 ![图 77-1](img/as_video_ui.jpg)
 
-将按钮上的文本更改为“Enter PiP”，并将 ID 设置为 `pipButton`。配置 `onClick` 属性以调用名为 `enterMode` 的方法。
+将按钮上的文本更改为“Enter PiP”，并将 ID 设置为`pipButton`。配置`onClick`属性以调用名为`enterMode`的方法。
 
 ## 77.3 进入画中画
 
-现在必须将 `enterMode` 回调添加到 `MainActivity.java` 中。找到该文件，打开它并如下所示添加此方法：
+现在必须将`enterMode`回调添加到`MainActivity.java`中。找到该文件，打开它并如下所示添加此方法：
+
+
 
 ```java
 import android.app.PictureInPictureParams;
@@ -17424,20 +17359,17 @@ public void enterMode(View view) {
 }
 ```
 
-该方法首先获取 `Button` 的引用，然后创建一个包含 `VideoView` 宽度和高的 `Rational` 对象。随后使用 `PictureInPictureParams.Builder` 创建 `PictureInPictureParams`，并将 `Rational` 对象作为视频播放的宽高比传递。由于按钮在 PiP 模式下不需要可见，因此将其设置为 `INVISIBLE`。视频播放控件也被隐藏了。
+该方法首先获取`Button`的引用，然后创建一个包含`VideoView`宽度和高的`Rational`对象。随后使用`PictureInPictureParams.Builder`创建`PictureInPictureParams`，并将`Rational`对象作为视频播放的宽高比传递。由于按钮在 PiP 模式下不需要可见，因此将其设置为`INVISIBLE`。视频播放控件也被隐藏了。
 
 在运行 Android 8 或更高版本的设备或模拟器上编译并运行应用，并在视频播放开始之前点击 PiP 按钮。视频播放应该最小化并出现在 PiP 窗口中，如图 77-2 所示：
 
 ![图 77-2](img/as_video_window.jpg)
 
-点击 PiP 窗口，然后点击窗口中央的全屏模式标记。尽管 `activity` 返回了全屏模式，但按钮和媒体控件仍然隐藏。显然，必须向项目中添加代码来检测 `activity` 内部发生的 PiP 模式变化。
+点击 PiP 窗口，然后点击窗口中央的全屏模式标记。尽管`activity`返回了全屏模式，但按钮和媒体控件仍然隐藏。显然，必须向项目中添加代码来检测`activity`内部发生的 PiP 模式变化。
 
 ## 77.4 检测画中画模式变化
 
-
-
-
-项目的最后一步是为 PiP 窗口添加一个操作（action）。该操作的目的是显示一个包含当前播放视频名称的 `Toast` 消息。这需要在 PiP 窗口与活动（activity）之间进行通信。实现这一点的最简单方法之一是在活动中实现 `broadcast receiver`（广播接收器），并使用 `pending intent` 从 PiP 窗口向活动广播消息。每当活动进入 PiP 模式时，都必须执行这些步骤，因此必须 `onPictureInPictureModeChanged()` 方法中添加代码。现在找到该方法，并开始添加代码来创建一个 `intent filter`（意过滤器）并初始化 `broadcast receiver`：
+项目的最后一步是为 PiP 窗口添加一个操作（action）。该操作的目的是显示一个包含当前播放视频名称的`Toast`消息。这需要在 PiP 窗口与活动（activity）之间进行通信。实现这一点的最简单方法之一是在活动中实现`broadcast receiver`（广播接收器），并使用`pending intent`从 PiP 窗口向活动广播消息。每当活动进入 PiP 模式时，都必须执行这些步骤，因此必须`onPictureInPictureModeChanged()`方法中添加代码。现在找到该方法，并开始添加代码来创建一个`intent filter`（意图过滤器）并初始化`broadcast receiver`：
 
 ```java
 import android.content.BroadcastReceiver;
@@ -17475,11 +17407,11 @@ public class MainActivity extends AppCompatActivity {
 
 ## 77.6 添加 PiP 操作
 
-在实现 `broadcast receiver` 后，下一步是创建一个 `RemoteAction` 对象，并配置一个图像来表示 PiP 窗口中的操作。
+在实现`broadcast receiver`后，下一步是创建一个`RemoteAction`对象，并配置一个图像来表示 PiP 窗口中的操作。
 
-对于本示例，将使用一个名为 `ic_info_24dp.xml` 的图像图标文件。该文件可以在从以下 URL 提供的源码下载压缩包的 `project_icons` 文件夹中找到：[`www.payloadbooks.com/product/iguanajava`](https://www.payloadbooks.com/product/iguanajava)。找到此图标文件并将其复制粘贴到 Project 窗口中的 `app -> res -> drawables` 文件夹中。
+对于本示例，将使用一个名为`ic_info_24dp.xml`的图像图标文件。该文件可以在从以下 URL 提供的源码下载压缩包的`project_icons`文件夹中找到：[`www.payloadbooks.com/product/iguanajava`](https://www.payloadbooks.com/product/iguanajava)。找到此图标文件并将其复制粘贴到 Project 窗口中的`app -> res -> drawables`文件夹中。
 
-下一步是创建一个将发送给 `broadcast receiver` 的 `Intent`。然后，需要将该 `intent` 封装在 `PendingIntent` 对象中，以便在用户点击 PiP 窗口中的按钮时触发该 `intent`。编辑 `MainActivity.java` 文件，添加如下所示的方法来创建 `Intent` 和 `PendingIntent` 对象：
+下一步是创建一个将发送给`broadcast receiver`的`Intent`。然后，需要将该`intent`封装在`PendingIntent`对象中，以便在用户点击 PiP 窗口中的按钮时触发该`intent`。编辑`MainActivity.java`文件，添加如下所示的方法来创建`Intent`和`PendingIntent`对象：
 
 ```java
 import android.app.PendingIntent;
@@ -17495,7 +17427,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-现在已经创建了 `Intent` 对象和 `PendingIntent` 实例，需要创建一个 `RemoteAction` 对象，其中包含显示在 PiP 窗口中的图标以及 `PendingIntent` 对象。继续在 `createPipAction()` 方法中，添加如下代码：
+现在已经创建了`Intent`对象和`PendingIntent`实例，需要创建一个`RemoteAction`对象，其中包含显示在 PiP 窗口中的图标以及`PendingIntent`对象。继续在`createPipAction()`方法中，添加如下代码：
 
 ```java
 import android.app.RemoteAction;
@@ -17512,7 +17444,7 @@ private void createPipAction() {
 }
 ```
 
-现在需要创建一个包含该操作的 `PictureInPictureParams` 对象并应用参数，以便该操作显示在 PiP 窗口中：
+现在需要创建一个包含该操作的`PictureInPictureParams`对象并应用参数，以便该操作显示在 PiP 窗口中：
 
 ```java
 private void createPipAction() {
@@ -17529,7 +17461,7 @@ private void createPipAction() {
 }
 ```
 
-在测试操作之前的最后一个任务是在活动进入 PiP 模式时调用 `createPipAction()`：
+在测试操作之前的最后一个任务是在活动进入 PiP 模式时调用`createPipAction()`：
 
 ```java
 @Override
@@ -17550,44 +17482,52 @@ public void onPictureInPictureModeChanged(boolean isInPictureInPictureMode) {
 运行应用并让活动进入 PiP 模式。点击 PiP 窗口以显示新操作，如图 77-4 所示：
 
 ![image/as_video_pip_with_actions.jpg]
+
 图 77-4
 
-点击操作按钮并等待 `Toast` 消息出现，显示视频名称：
+点击操作按钮并等待`Toast`消息出现，显示视频名称：
 
 ![image/as_video_pip_toast.jpg]
+
 图 77-5
 
 ## 77.8 总结
 
-本章演示了如何在 Android 项目项目中添加画中画（PiP）支持，包括启用和进入 PiP 模式以及实现 PiP 操作。这使用了 `broadcast receiver` 和 `pending intents` 实现 PiP 窗口与活动之间的通信。
+本章演示了如何在 Android 项目项目中添加画中画（PiP）支持，包括启用和进入 PiP 模式以及实现 PiP 操作。这使用了`broadcast receiver`和`pending intents`实现 PiP 窗口与活动之间的通信。
 
 ## 78. 使用 MediaPlayer 和 MediaRecorder 进行 Android 音频录制和播放
 
-本章将概述 `MediaRecorder` 类，并解释如何使用该类录制音频或视频。还将介绍使用 `MediaPlayer` 类播放音频。在涵盖基础知识后，将创建一个示例应用程序来演示这些技术。除了处理音频视频之外，本章还将涉及向 SD 卡保存文件。
+本章将概述`MediaRecorder`类，并解释如何使用该类录制音频或视频。还将介绍使用`MediaPlayer`类播放音频。在涵盖基础知识后，将创建一个示例应用程序来演示这些技术。除了处理音频视频之外，本章还将涉及向 SD 卡保存文件。
 
 ### 78.1 播放音频
 
 大多数 Android 实现支持 AAC LC/LTP、HE-AACv1 (AAC+)、HE-AACv2 (enhanced AAC+)、AMR-NB、AMR-WB、MP3、MIDI、Ogg Vorbis 和 PCM/WAVE 格式。
 
+可以使用`MediaPlayer`或`AudioTrack`类来执行音频播放。`AudioTrack`是一个更高级的选项，它使用流式音频缓冲区并对音频提供更强大的控制。相比之下，`MediaPlayer`类为实现音频播放提供了更简单的编程接口，能够满足大多数音频应用的需求。
 
+`MediaPlayer`类关联了一系列方法，应用程序可以通过调用这些方法来执行特定的任务。该类的一些关键方法的子集如下：
 
+- `create()` – 被用于创建该类的新实例，并传递要播放音频的`Uri`。
 
-可以使用 `MediaPlayer` 或 `AudioTrack` 类来执行音频播放。`AudioTrack` 是一个更高级的选项，它使用流式音频缓冲区并对音频提供更强大的控制。相比之下，`MediaPlayer` 类为实现音频播放提供了更简单的编程接口，能够满足大多数音频应用的需求。
-
-`MediaPlayer` 类关联了一系列方法，应用程序可以通过调用这些方法来执行特定的任务。该类的一些关键方法的子集如下：
-
-- `create()` – 被用于创建该类的新实例，并传递要播放音频的 `Uri`。
 - `setDataSource()` – 设置音频播放的源。
+
 - `prepare()` – 指令播放器准备开始播放。
+
 - `start()` – 开始播放。
-- `pause()` – 暂停播放。可以通过调用 `resume()` 方法来恢复播放。
+
+- `pause()` – 暂停播放。可以通过调用`resume()`方法来恢复播放。
+
 - `stop()` – 停止播放。
+
 - `setVolume()` – 接受两个浮点数参数，指定左通道和右通道的播放量。
+
 - `resume()` – 恢复之前暂停的播放会话。
-- `reset()` – 重置媒体播放器实例的状态。本质上是将实例重置为未初始化状态。至少，重置后的播放器需要重新设置数据源并调用 `prepare()` 方法。
+
+- `reset()` – 重置媒体播放器实例的状态。本质上是将实例重置为未初始化状态。至少，重置后的播放器需要重新设置数据源并调用`prepare()`方法。
+
 - `release()` – 在播放器实例不再需要时调用。此方法确保播放器持有的任何资源都会被释放。
 
-在典型的实现中，应用程序将实例化 `MediaPlayer` 类的实例，设置要播放的音频源，然后调用 `prepare()` 之后调用 `start()`。例如：
+在典型的实现中，应用程序将实例化`MediaPlayer`类的实例，设置要播放的音频源，然后调用`prepare()`之后调用`start()`。例如：
 
 ```java
 MediaPlayer mediaPlayer = new MediaPlayer();
@@ -17598,20 +17538,31 @@ mediaPlayer.start();
 
 ## 78.2 使用 MediaRecorder 类录制音频和视频
 
-与音频播放一样，录制可以使用几种不同的技术。一种方案是使用 `MediaRecorder` 类，与 `MediaPlayer` 类一样，它提供了几个用于录制音频的方法：
+与音频播放一样，录制可以使用几种不同的技术。一种方案是使用`MediaRecorder`类，与`MediaPlayer`类一样，它提供了几个用于录制音频的方法：
 
-- `setAudioSource()` – 指定要录制的音频源（通常，对于设备麦克风将是 `MediaRecorder.AudioSource.MIC`）。
-- `setVideoSource()` – 指定要录制的视频源（例如 `MediaRecorder.VideoSource.CAMERA`）。
-- `setOutputFormat()` – 指定录制的音频或视频存储的格式（例如 `MediaRecorder.OutputFormat.AAC_ADTS`）。
-- `setAudioEncoder()` – 指定录制音频的音频编码器（例如 `MediaRecorder.AudioEncoder.AAC`）。
+- `setAudioSource()` – 指定要录制的音频源（通常，对于设备麦克风将是`MediaRecorder.AudioSource.MIC`）。
+
+- `setVideoSource()` – 指定要录制的视频源（例如`MediaRecorder.VideoSource.CAMERA`）。
+
+- `setOutputFormat()` – 指定录制的音频或视频存储的格式（例如`MediaRecorder.OutputFormat.AAC_ADTS`）。
+
+- `setAudioEncoder()` – 指定录制音频的音频编码器（例如`MediaRecorder.AudioEncoder.AAC`）。
+
 - `setOutputFile()` – 配置存储录制音频或视频的文件路径。
-- `prepare()` – 准备 `MediaRecorder` 实例以开始录制。
+
+- `prepare()` – 准备`MediaRecorder`实例以开始录制。
+
 - `start()` – 开始录制过程。
+
 - `stop()` – 停止录制过程。一旦录制器停止，在重新启动之前必须完全重新配置并准备。
+
 - `reset()` – 重置录制器。实例在重启之前需要完全重新配置并准备。
+
 - `release()` – 应在录制器实例不再需要时调用。此方法确保实例持有的所有资源都得到释放。
 
-使用该类的典型实现将设置源、输出、编码格式和输出文件。然后将调用 `prepare()` 和 `start()` 方法。录制结束时将调用 `stop()` 方法，紧接着调用 `reset()` 方法。当应用程序不再需要录制器实例时，建议调用 `release()` 方法：
+使用该类的典型实现将设置源、输出、编码格式和输出文件。然后将调用`prepare()`和`start()`方法。录制结束时将调用`stop()`方法，紧接着调用`reset()`方法。当应用程序不再需要录制器实例时，建议调用`release()`方法。
+
+
 
 ```java
 MediaRecorder mediaRecorder = new MediaRecorder();
@@ -17622,8 +17573,7 @@ mediaRecorder.setOutputFile(audioFilePath);
 mediaRecorder.prepare();
 mediaRecorder.start();
 
-.
-.
+// ... 录制过程中 ...
 
 mediaRecorder.stop();
 mediaRecorder.reset();
@@ -17636,7 +17586,7 @@ mediaRecorder.release();
 <uses-permission android:name="android.permission.RECORD_AUDIO" />
 ```
 
-正如"在 Android 中发起运行时请求章节所述，访问麦克风属于危险权限的类别。因此，为了支持 Android 6，在应用程序启动时还必须对麦克风访问提出特定请求，相关步骤将在本章稍后介绍。
+正如“在 Android 中发起运行时请求”章节所述，访问麦克风属于危险权限的类别。因此，为了支持 Android 6，在应用程序启动时还必须对麦克风访问提出特定请求，相关步骤将在本章稍后介绍。
 
 ## 78.3 关于示例项目
 
@@ -17650,17 +17600,17 @@ mediaRecorder.release();
 
 从欢迎界面选择 New Project（新建项目）选项，在弹出的新项目对话框中选择 Empty Views Activity（空视图活动），然后点击 Next 按钮。
 
-在 Name 字段输入 `AudioApp`，并指定 `com.ebookrenzy.audioapp` 为包名。在点击 Finish 按钮之前，将 Minimum API 设置为 `API 31`: Android 12.0，并将 Language 设置为 Java。按照 11.8 将项目迁移到 View Binding 中的步骤为项目添加 view binding 支持。
+在 Name 字段输入`AudioApp`，并指定`com.ebookrenzy.audioapp`为包名。在点击 Finish 按钮之前，将 Minimum API 设置为`API 31`: Android 12.0，并将 Language 设置为 Java。按照 11.8 将项目迁移到 View Binding 中的步骤为项目添加 view binding 支持。
 
 ### 78.5 设计用户界面
 
-一旦创建项目，从 Project 窗口选择 `activity_main.xml` 文件，并在 Layout Editor 工具的 Design 模式下选择“Hello World!”TextView 并从布局中删除它。
+一旦创建项目，从 Project 窗口选择`activity_main.xml`文件，并在 Layout Editor 工具的 Design 模式下选择“Hello World!”TextView 并从布局中删除它。
 
 向布局中拖入三个 Button 视图。按钮的位置对于示例并不重要，但图 78-1 显示了建议的垂直布局。
 
 配置按钮显示读取 Play、Record 和 Stop 的字符串资源，并分别赋予它们视图 ID `playButton`、`recordButton` 和 `stopButton`。
 
-选择 Play 按钮并在 Attributes 面板中配置 `onClick` 属性以便在使用时调用名为 `playAudio` 的方法。重复这些步骤配置其余按钮调用名为 `recordAudio` 和 `stopAudio` 的方法。
+选择 Play 按钮并在 Attributes 面板中配置 `onClick` 属性以便在使用时调用名为`playAudio`的方法。重复这些步骤配置其余按钮调用名为`recordAudio`和`stopAudio`的方法。
 
 ![图 78-1]
 
@@ -17668,13 +17618,9 @@ mediaRecorder.release();
 
 ## 78.6 检查麦克风可用性
 
-在没有麦克风的设备上尝试录制音频会导致 Android 系统抛出异常。因此，在尝试这样做之前检查麦克风的存在至关重要。实现此点有多种方法，包括检查物理是否存在。另一种简单且可行的方法是询问 Android 系统是否安装了特定功能的包。这涉及创建一个 `Android PackageManager` 类的实例，然后调用该对象的 `hasSystemFeature()` 方法。在这种情况下，`PackageManager.FEATURE_MICROPHONE` 是关注的功能。
+在没有麦克风的设备上尝试录制音频会导致 Android 系统抛出异常。因此，在尝试这样做之前检查麦克风的存在至关重要。实现此点有多种方法，包括检查物理是否存在。另一种简单且可行的方法是询问 Android 系统是否安装了特定功能的包。这涉及创建一个`Android PackageManager`类的实例，然后调用该对象的`hasSystemFeature()`方法。在这种情况下，`PackageManager.FEATURE_MICROPHONE`是关注的功能。
 
-
-
-
-
-在本示例中，我们将创建一个名为 `hasMicrophone()` 的方法，该方法会被调用以检查麦克风是否存在。在 Project 工具窗口中，找到并双击 `MainActivity.java` 文件并对其修改以添加此方法：
+在本示例中，我们将创建一个名为`hasMicrophone()`的方法，该方法会被调用以检查麦克风是否存在。在 Project 工具窗口中，找到并双击`MainActivity.java`文件并对其修改以添加此方法：
 
 ```java
 package com.ebookfrenzy.audioapp;
@@ -17692,17 +17638,20 @@ public class MainActivity extends AppCompatActivity {
 
 ### 78.7 初始化 Activity
 
-下一步是修改 activity 以执行几项初始化任务。留在 `MainActivity.java` 文件中，按照如下 own 修改代码：
+下一步是修改 activity 以执行几项初始化任务。留在`MainActivity.java`文件中，按照如下方式修改代码：
 
 ```java
 package com.ebookfrenzy.audioapp;
 
 import java.io.File;
 import java.io.IOException;
+
 import androidx.annotation.NonNull;
 import android.media.MediaRecorder;
 import android.os.Environment;
 import android.media.MediaPlayer; 
+
+import com.ebookrenzy.audioapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
@@ -17714,6 +17663,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         audioSetup();
     }
 
@@ -17732,7 +17683,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-添加的代码调用 `hasMicrophone()` 方法来确定设备是否包含麦克风。如果没有，则所有按钮都将被禁用；否则，只有 Stop 和 Play 按钮被禁用。
+添加的代码调用`hasMicrophone()`方法来确定设备是否包含麦克风。如果没有，则所有按钮都将被禁用；否则，只有 Stop 和 Play 按钮被禁用。
 
 下一行代码需要更多的解释：
 
@@ -17741,11 +17692,11 @@ File audioFile = new File(this.getFilesDir(), "myaudio.3gp");
 audioFilePath = audioFile.getAbsolutePath();
 ```
 
-这段代码在应用的内部存储中创建一个名为 `myaudio.3gp` 的新文件，用于存储音频录制。
+这段代码在应用的内部存储中创建一个名为`myaudio.3gp`的新文件，用于存储音频录制。
 
 ## 78.8 实现 `recordAudio()` 方法
 
-当用户触摸 Record 按钮时，将调用 `recordAudio()` 方法。此方法需要开启和关闭相应的按钮，并配置 `MediaRecorder` 实例所需的音频源、输出格式和编码以及存储音频的文件位置信息。最后，需要调用 `MediaRecorder` 对象的 `prepare()` 和 `start()` 方法。结合这些要求，在 `MainActivity.java` 文件中形成了如下方法实现：
+当用户触摸 Record 按钮时，将调用`recordAudio()`方法。此方法需要开启和关闭相应的按钮，并配置`MediaRecorder`实例所需的音频源、输出格式和编码以及存储音频的文件位置信息。最后，需要调用`MediaRecorder`对象的`prepare()`和`start()`方法。结合这些要求，在`MainActivity.java`文件中形成了如下方法实现：
 
 ```java
 public void recordAudio (View view) {
@@ -17769,7 +17720,7 @@ public void recordAudio (View view) {
 
 ## 78.9 实现 `stopAudio()` 方法
 
-`stopAudio()` 方法启用 Play 按钮，关闭 Stop 按钮，然后重置 `MediaRecorder` 实例。实现此目的的代码如下所示，并应添加到 `MainActivity.java` 文件中：
+`stopAudio()`方法启用 Play 按钮，关闭 Stop 按钮，然后重置`MediaRecorder`实例。实现此目的的代码如下所示，并应添加到`MainActivity.java`文件中：
 
 ```java
 public void stopAudio (View view) {
@@ -17791,7 +17742,7 @@ public void stopAudio (View view) {
 
 ## 78.10 实现 `playAudio()` 方法
 
-`playAudio()` 方法将创建一个新的 `MediaPlayer` 实例，将位于 SD 卡上的音频文件分配为数据源，然后准备并开始播放：
+`playAudio()`方法将创建一个新的`MediaPlayer`实例，将位于 SD 卡上的音频文件分配为数据源，然后准备并开始播放：
 
 ```java
 public void playAudio (View view) throws IOException {
@@ -17807,7 +17758,7 @@ public void playAudio (View view) throws IOException {
 
 ## 78.11 配置并请求权限
 
-在测试应用程序之前，必须在清单文件中为应用程序请求适当权限。具体而言，应用程序将需要访问麦克风的权限。在 Project 工具窗口中，找到并双击 `AndroidManifest.xml` 文件将其加载到编辑器并修改 XML 以添加权限标签：
+在测试应用程序之前，必须在清单文件中为应用程序请求适当权限。具体而言，应用程序将需要访问麦克风的权限。在 Project 工具窗口中，找到并双击`AndroidManifest.xml`文件将其加载到编辑器并修改 XML 以添加权限标签：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -17818,7 +17769,7 @@ public void playAudio (View view) throws IOException {
 
 上述步骤将确保当应用程序安装在运行旧版本 Android 的设备上时，用户启用麦克风访问权限。麦克风访问在 Android 中被分类为危险权限，因为它允许应用程序损害用户隐私。为了示例应用程序在 Android 6 或更高版本的设备上运行，需要在运行时请求权限的代码。
 
-编辑 `MainActivity.java` 文件，首先添加一些额外的导入指令和一个作为请求标识的常量：
+编辑`MainActivity.java`文件，首先添加一些额外的导入指令和一个作为请求标识的常量：
 
 ```java
 import androidx.core.app.ActivityCompat;
@@ -17830,7 +17781,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int RECORD_REQUEST_CODE = 101;
 ```
 
-接下来，需要在类中添加一个方法，其目的是接收请求的权限和对应的请求标识。留在 `MainActivity.java` 类文件中，按如下实现此方法：
+接下来，需要在类中添加一个方法，其目的是接收请求的权限和对应的请求标识。留在`MainActivity.java`类文件中，按如下实现此方法：
 
 ```java
 protected void requestPermission(String permissionType, int requestCode) {
@@ -17843,35 +17794,31 @@ protected void requestPermission(String permissionType, int requestCode) {
 
 使用本书“在 Android 中进行运行时权限请求”章节中概述的步骤，上述方法在发出请求之前验证指定的权限是否已授予，并将标识码作为参数传递。
 
-当请求被处理后，`onRequestPermissionsResult()` 方法将在 activity 上调用，传递标识码和请求结果。因此，下一步是在 `MainActivity.java` 文件中实现此方法：
+当请求被处理后，`onRequestPermissionsResult()`方法将在 activity 上调用，传递标识码和请求结果。因此，下一步是在`MainActivity.java`文件中实现此方法：
 
 ```java
 @Override
 public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
     super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-}
-```
 
-
-
-
-
-```java
-if (requestCode == RECORD_REQUEST_CODE) {
-    if (grantResults.length == 0
-            || grantResults[0] !=
-            PackageManager.PERMISSION_GRANTED) {
-        binding.recordButton.setEnabled(false);
-        Toast.makeText(this,
-                    "Record permission required",
-                    Toast.LENGTH_LONG).show();
+    if (requestCode == RECORD_REQUEST_CODE) {
+        if (grantResults.length == 0
+                || grantResults[0] !=
+                PackageManager.PERMISSION_GRANTED) {
+            binding.recordButton.setEnabled(false);
+            Toast.makeText(this,
+                        "Record permission required",
+                        Toast.LENGTH_LONG).show();
+        }
     }
 }
 ```
 
 上述代码通过检查请求标识码，在检查相应的权限是否已授予之前识别是哪个权限请求已返回。如果权限被拒绝，将向用户显示一条消息，指示应用程序无法运行并禁用录制按钮。
 
-在测试应用程序之前，剩下的工作是在应用启动时调用新添加的 `requestPermission()` 方法请求麦克风访问。在 `MainActivity.java` 文件中，按照如下方式修改 `audioSetup()` 方法：
+在测试应用程序之前，剩下的工作是在应用启动时调用新添加的`requestPermission()`方法请求麦克风访问。在`MainActivity.java`文件中，按照如下方式修改`audioSetup()`方法：
+
+
 
 ```java
 private void audioSetup(){
@@ -17894,89 +17841,96 @@ private void audioSetup(){
 }
 ```
 
-### 78.12 测试应用程序
+## 78.12 测试应用程序
 
-在带有麦克风的 Android 设备上编译并运行应用程序，允许麦克风访问，并点击 Record（录制）按钮。录制后，触摸 Stop 然后点击 Play。此时，录制的音频应通过设备扬声器播放。
+在带有麦克风的 Android 设备上编译并运行应用程序，允许麦克风访问，并点击 Record（录制）按钮。录制后，触摸 Stop，然后点击 Play。此时，录制的音频应通过设备扬声器播放。
 
-### 78.13 总结
+## 78.13 总结
 
 Android SDK 提供了多种实现音频录制和播放的机制。本章介绍了其中两种：`MediaPlayer` 和 `MediaRecorder` 类。在涵盖了使用这些技术的理论后，本章通过创建一个旨在录制并回放音频的示例应用程序。在 Android 中处理音频时，本章还研究了在尝试录制音频之前确保运行应用程序的设备具有麦克风的步骤。
 
-### 79. 在 Android Studio 中使用 Google Maps Android API
+# 79. 在 Android Studio 中使用 Google Maps Android API
 
 当 Google 在许多年前推出地图服务时，还很难说他们是否曾预见到会有可以集成到移动应用程序中的版本。当 2005 年推出最终被称为 Google Maps 的第一个 Web 版本时，iPhone 尚未引发智能手机革命，而 Google 在此后的六个月后才收购那家正在开发 Android 操作系统的公司。无论 Google 对 Google Maps 的未来有何愿负，考虑到现在可以通过 Google Maps Android API 直接通过 Android 应用程序访问 Google Maps 的所有功能，这仍然是令人惊叹的。
 
 本章旨在提供 Google Maps 系统和 Google Maps Android API 的概述。本章将概述组成 API 的不同元素，详细说明配置开发环境以与 Google Maps 协作所需的步骤，然后通过一些代码示例演示 Google Maps Android 集成的一些基础知识。
 
-#### 79.1 Google Maps Android API 的元素
+## 79.1 Google Maps Android API 的元素
 
 Google Maps Android API 由一组核心类组成，这些类组合在一起为 Android 应用程序提供地图功能。地图的关键元素如下：
 
-*   `GoogleMap` – Google Maps Android API 的主类。该类负责下载和显示地图瓦片，并显示和响应地图控件。`GoogleMap` 对象不是直接由应用程序创建的，而是在创建 `MapView` 或 `MapFragment` 实例时创建的。在应用程序代码中，可以通过调用 `MapView`、`MapFragment` 或 `SupportMapFragment` 的 `getMap()` 方法获取 `GoogleMap` 引用。
-*   `MapView` – `View` 类的子类，该类提供了绘制地图的画布。
-*   `SupportMapFragment` – `Fragment` 类的子类，该类允许将地图放置在 Activity 中。
-*   `Marker` – `Marker` 的作用允许标记位置。通过指定经纬度将标记添加到地图上。
-*   `Shapes` – 使用 `Polyline`、`Polygon` 和 `Circle` 类在地图上绘制线条和形状。
-*   `UiSettings` – `UiSettings` 类用于自定义在地图上显示的控件。例如，应用程序可以控制缩放、当前位置和指南针控件是否显示在地图上。
-*   `My Location Layer`（我的位置层） – 当启用时，我的位置层将地图中心置于用户的当前地理位置。如果用户处于静止状态，一个蓝色标记代表地图上的此处位置。如果用户正在移动，则用一个指示用户旅行路线的箭头表示位置。
+- `GoogleMap` – Google Maps Android API 的主类。该类负责下载和显示地图瓦片，并显示和响应地图控件。`GoogleMap` 对象不是直接由应用程序创建的，而是在创建 `MapView` 或 `MapFragment` 实例时创建的。在应用程序代码中，可以通过调用 `MapView`、`MapFragment` 或 `SupportMapFragment` 的 `getMap()` 方法获取 `GoogleMap` 引用。
+
+- `MapView` – `View` 类的子类，该类提供了绘制地图的画布。
+
+- `SupportMapFragment` – `Fragment` 类的子类，该类允许将地图放置在 Activity 中。
+
+- `Marker` – `Marker` 的作用允许标记位置。通过指定经纬度将标记添加到地图上。
+
+- `Shapes` – 使用 `Polyline`、`Polygon` 和 `Circle` 类在地图上绘制线条和形状。
+
+- `UiSettings` – `UiSettings` 类用于自定义在地图上显示的控件。例如，应用程序可以控制缩放、当前位置和指南针控件是否显示在地图上。
+
+- `My Location Layer`（我的位置层） – 当启用时，我的位置层将地图中心置于用户的当前地理位置。如果用户处于静止状态，一个蓝色标记代表地图上的此处位置。如果用户正在移动，则用一个指示用户旅行路线的箭头表示位置。
 
 熟悉 Google Maps API 的最佳方法是完成一个示例。本章的剩余部分将创建一个基于 Google Maps 的应用程序，同时重点介绍关键领域。
 
-### 79.2 创建 Google Maps 项目
+## 79.2 创建 Google Maps 项目
 
 从欢迎界面选择 New Project（新建项目）选项，并在生成的新项目对话框中选择 No Activity 模板。
 
-在 Name（名称）字段中输入 MapDemo，并指定 `com.ebookrenzy.mapdemo` 为包包名。在点击 Finish（完成）按钮之前，将 Minimum API 设置为 API 26，并将 Language（语言）菜单设置为 Java。
+在 Name（名称）字段中输入 `MapDemo`，并指定 `com.ebookrenzy.mapdemo` 为包包名。在点击 Finish（完成）按钮之前，将 Minimum API 设置为 `API 26`，并将 Language（语言）菜单设置为 Java。
 
-接下来，在 Project 工具窗口中右键点击 `app` -> `java` -> `com.ebookrenzy.mapdemo`，选择 New -> Google -> Google Maps Activity 菜单选项。最后，在 New Android Activity 对话框中勾选 Launcher Activity，然后点击 Finish 按钮。
+接下来，在 Project 工具窗口中右键点击 `app -> java -> com.ebookrenzy.mapdemo`，选择 New -> Google -> Google Maps Activity 菜单选项。最后，在 New Android Activity 对话框中勾选 Launcher Activity，然后点击 Finish 按钮。
 
-#### 79.3 创建 Google Cloud 结算账户
+## 79.3 创建 Google Cloud 结算账户
 
 在使用 Google Map API 之前，你必须创建一个 Google Cloud 结算账户（如果你已经有了账户，可以跳到下一节）。要执行此操作，打开浏览器并使用以下链接导航到 Google Cloud 控制台：
 
-https://console.cloud.google.com/
+`https://console.cloud.google.com/`
 
 接下来，点击控制台左上角的菜单按钮并选择 Billing（结算）。
 
 在结算页面，选择添加新结算账户，然后按照步骤启动免费试用。你需要提供信用卡来开设账户，但在你未同意的情况下，Google 不会收费。
 
-#### 79.4 创建新的 Google Cloud 项目
+## 79.4 创建新的 Google Cloud 项目
 
-下一步是创建一个与 MapDemo 应用关联的 Google Cloud 项目。要执行此操作，请使用以下 URL 返回 Google Cloud 控制台仪表板：
+下一步是创建一个与 `MapDemo` 应用关联的 Google Cloud 项目。要执行此操作，请使用以下 URL 返回 Google Cloud 控制台仪表板：
 
-https://console.cloud.google.com/home/dashboard
-
-
-
-
+`https://console.cloud.google.com/home/dashboard`
 
 在仪表板中，点击位于顶部栏的 `Select a project` 按钮：
 
 ![](img/google_cloud_select_project.jpg)
+
 图 79-3
 
 当项目选择对话框出现时，点击 `New Project` 按钮（在图 79-4 中突出显示）：
 
 ![](img/google_cloud_new_project_button.jpg)
+
 图 79-4
 
 当新项目屏幕出现时，为项目提供一个名称。控制将在项目名称字段下方显示项目的默认 ID。如果你不喜欢默认 ID，可以点击 `Edit` 按钮进行更改：
 
 ![](img/google_cloud_new_project_dialog.jpg)
+
 图 79-5
 
 点击 `Create` 按钮，稍等片刻，你将返回到仪表板，你的新项目将列在其中。
 
-### 79.5 启用 Google Maps SDK
+## 79.5 启用 Google Maps SDK
 
 现在我们已经创建了一个新的 Google Cloud 项目，下一步是允许该项目使用 Google Maps SDK。要启用 Google Maps 支持，请在 Google Cloud 控制台中选择你的项目，点击左上角的菜单按钮，并选择 `Google Maps Platform` 项。然后，从生成的菜单中选择 `APIs` 选项，如图 79-6 所示：
 
 ![](img/google_cloud_maps_apis_menu.jpg)
+
 图 79-6
 
 在 APIs 屏幕上，点击 `Maps SDK for Android` 选项，在生成的屏幕上，点击 `Enable` 按钮：
 
 ![](img/google_cloud_enable_maps.jpg)
+
 图 79-7
 
 重复上述步骤以启用 `Geocoding API` 凭据，该凭据将在本章之后需要，以允许我们的应用显示用户的当前位置。
@@ -17988,16 +17942,18 @@ https://console.cloud.google.com/home/dashboard
 在应用程序使用 Google Maps Android SDK 之前，必须配置 API 密钥将其与启用了 Maps 的 Google Cloud 项目关联。要生成 API 密钥，选择 `Credentials` 菜单选项（在图 79-8 中标记为 A），然后点击 `Create Credentials` 按钮（B）：
 
 ![](img/google_cloud_credentials.jpg)
+
 图 79-8
 
 凭据创建后，将出现显示 API 密钥的对话框：
 
 ![](img/google_cloud_console_api_key_created.jpg)
+
 图 79-9
 
 ## 79.7 将 API 密钥添加到 Android Studio 项目
 
-现在我们已经生成了允许应用使用 Google Maps SDK 的 API 密钥，我们必须将其添加到项目中。返回 Android Studio，编辑 `manifest` -> `AndroidManifest.xml` 文件，并找到 API 密钥项，其内容如下：
+现在我们已经生成了允许应用使用 Google Maps SDK 的 API 密钥，我们必须将其添加到项目中。返回 Android Studio，编辑 `manifest -> AndroidManifest.xml` 文件，并找到 API 密钥项，其内容如下：
 
 ```xml
 <meta-data
@@ -18007,27 +17963,29 @@ https://console.cloud.google.com/home/dashboard
 
 删除文本 `YOUR_API_KEY` 并将其替换为 Google Play Console 中创建的 API 密钥。
 
-接下来，编辑 `Gradle Scripts` -> `local.properties` 文件，并添加如下所示的新行（用你的项目 API 密钥替换 `YOUR_API_KEY`）：
+接下来，编辑 `Gradle Scripts -> local.properties` 文件，并添加如下所示的新行（用你的项目 API 密钥替换 `YOUR_API_KEY`）：
 
 ```
 MAPS_API_KEY=YOUR_API_KEY
 ```
 
-### 79.8 测试应用程序
+## 79.8 测试应用程序
 
 对应用程序进行测试运行以验证 API 密钥是否配置正确。如果配置正确，应用程序将运行并在屏幕上显示地图。
 
 如果没有显示地图，请检查以下区域：
 
-- 如果应用程序运行在模拟器上，请确保模拟器运行的是包含 Google APIs 的 Android 版本。可以通过选择 `Tools` -> `Android` -> `AVD Manager` 菜单选项更改 AVD 配置的操作系统，点击 AVD Actions 列中的铅笔图标，然后点击当前 Android 版本旁 `Change…` 按钮。在系统镜像对话框中选择包含 Google APIs 的目标。
+- 如果应用程序运行在模拟器上，请确保模拟器运行的是包含 Google APIs 的 Android 版本。可以通过选择 `Tools -> Android -> AVD Manager` 菜单选项更改 AVD 配置的操作系统，点击 AVD Actions 列中的铅笔图标，然后点击当前 Android 版本旁 `Change…` 按钮。在系统镜像对话框中选择包含 Google APIs 的目标。
+
 - 检查 `Logcat` 输出任何与 Google Maps API 身份验证问题的内容。这通常意味着 API 密钥输入错误。确保 `AndroidManifest.xml` 和 `local.properties` 文件中的 API 密钥与 Google Cloud 控制台中生成的生成的密钥匹配。
+
 - 在 Google API 控制台中验证 `Credentials` 面板中已启用 `Maps SDK for Android`。
 
 ## 79.9 理解地理编码和反向地理编码
 
 如果不先介绍地理编码（Geocoding）主题，就无法谈论地图和地理位置。地理编码将基于文本的地理位置（如街道地址）转换为以经度和度表示的地理坐标。
 
-可以使用 Android 的 `Geocoder` 类来实现地理编码。例如，可以向 `Geocoder` 类实例传递一个表示位置的字符串，例如城市名、街道地址或机场代码。`Geocoder` 将尝试查找位置的匹配项，并返回一个可能匹配位置字符串的 `Address` 对象列表，这些对象按顺序排序，最匹配的项位于列表的索引 0 位置。然后可以从 `Address` 对象中提取各种信息，包括潜在匹配项的经度和度。
+可以使用 Android 的 `Geocoder` 类来实现地理编码。例如，可以向 `Geocoder` 类实例传递一个表示位置的字符串，例如城市名、街道地址或机场代码。`Geocoder` 将尝试查找位置的匹配项，并返回一个可能匹配位置字符串的 `Address` 对象列表，这些对象按顺序排序，最匹配的项位于列表的索引 `0` 位置。然后可以从 `Address` 对象中提取各种信息，包括潜在匹配项的经度和度。
 
 例如，以下代码请求位于华盛顿特区的国家航空航天博物馆的位置：
 
@@ -18091,10 +18049,6 @@ if (!geocodeMatches.isEmpty()) {
 
 ## 79.10 向应用程序添加地图
 
-
-
-
-
 向应用程序添加地图的最简单方法是在活动（activity）的用户界面布局 XML 文件中指定它。以下布局文件显示了在 Android Studio 创建的 `activity_maps.xml` 文件添加的 `SupportMapFragment` 实例：
 
 ```xml
@@ -18116,7 +18070,9 @@ if (!geocodeMatches.isEmpty()) {
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 ```
 
-这些设置将确保应用安装在旧版本的 Android 上时可以提供获取位置权限。然而，为了支持 Android 6.0 或更高版本，我们需要在 `MapsActivity.java` 文件中添加一些代码以在运行时请求此权限。
+
+
+这些设置将确保应用安装在旧版本的 Android 上时可以提供获取位置权限。然而，为了支持 Android 6.0 或更高版本，我们需要在`MapsActivity.java`文件中添加一些代码以在运行时请求此权限。
 
 首先添加一些导入指令和一个作为权限请求代码的常量：
 
@@ -18145,7 +18101,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 }
 ```
 
-接下来，必须向类中添加一个方法来向用户请求指定的权限。在 `MapsActivity.java` 类文件中，按如下方式实现此方法：
+接下来，必须向类中添加一个方法来向用户请求指定的权限。在`MapsActivity.java`类文件中，按如下方式实现此方法：
 
 ```java
 protected void requestPermission(String permissionType, int requestCode) {
@@ -18155,7 +18111,7 @@ protected void requestPermission(String permissionType, int requestCode) {
 }
 ```
 
-当用户对权限请求做出响应时，活动将调用 `onRequestPermissionsResult()` 方法。继续留在 `MapsActivity.java` 文件中，现在实现此方法，使其读取内容如下：
+当用户对权限请求做出响应时，活动将调用`onRequestPermissionsResult()`方法。继续留在`MapsActivity.java`文件中，现在实现此方法，使其读取内容如下：
 
 ```java
 @Override
@@ -18182,9 +18138,9 @@ public void onRequestPermissionsResult(int requestCode,
 
 ## 79.12 显示用户的当前位置
 
-一旦授予了适当权限，可以通过获取与显示的地图相关的 `GoogleMap` 对象的引用并调用该实例的 `MyLocationEnabled()` 方法传递 `true` 值，在地图上显示用户的当前位置。
+一旦授予了适当权限，可以通过获取与显示的地图相关的`GoogleMap`对象的引用并调用该实例的`MyLocationEnabled()`方法传递`true`值，在地图上显示用户的当前位置。
 
-当地图准备好显示时，将调用活动的 `onMapReady()` 方法。当地图在 `onRequestPermissions()` 方法中刷新时，也会调用此方法。默认情况下，Android Studio 已经实现了此方法并添加了一些代码，将地图定位在澳大利亚并在悉尼放置标记。找到并编辑 `MapsActivity.java` 文件中的 `onMapReady()` 方法，删除此模板代码并添加代码检查位置权限是否已授予。如果尚未授予，将通过调用之前添加的 `requestPermission()` 方法向用户请求：
+当地图准备好显示时，将调用活动的`onMapReady()`方法。当地图在`onRequestPermissions()`方法中刷新时，也会调用此方法。默认情况下，Android Studio 已经实现了此方法并添加了一些代码，将地图定位在澳大利亚并在悉尼放置标记。找到并编辑`MapsActivity.java`文件中的`onMapReady()`方法，删除此模板代码并添加代码检查位置权限是否已授予。如果尚未授予，将通过调用之前添加的`requestPermission()`方法向用户请求：
 
 ```java
 @Override
@@ -18211,11 +18167,12 @@ public void onMapReady(GoogleMap googleMap) {
 现在运行应用时，将显示图 79-10 所示的对话框请求权限。如果授予权限，地图上将出现一个蓝点指示设备的位置。
 
 ![](img/as_map.jpg)
+
 图 79-10
 
 ### 79.13 地图类型
 
-可以通过向 `GoogleMap` 对象调用 `setMapType()` 方法动态修改显示的地图类型，传递以下值之一：
+可以通过向`GoogleMap`对象调用`setMapType()`方法动态修改显示的地图类型，传递以下值之一：
 
 - `GoogleMap.MAP_TYPE_NONE`：不显示地图瓦片的网格。
 - `GoogleMap.MAP_TYPE_NORMAL`：由经典地图组成的视图。
@@ -18223,7 +18180,7 @@ public void onMapReady(GoogleMap googleMap) {
 - `GoogleMap.MAP_TYPE_HYBRID`：显示叠加了地图的卫星图像。
 - `GoogleMap.MAP_TYPE_TERRAIN`：显示地形信息等。
 
-例如，对 `onMapReady()` 方法的以下代码更改会将地图切换到卫星模式：
+例如，对`onMapReady()`方法的以下代码更改会将地图切换到卫星模式：
 
 ```java
 .
@@ -18243,7 +18200,7 @@ if (mMap != null) {
 .
 ```
 
-或者，可以在嵌入地图的 XML 布局文件中使用 `map:mapType` 属性配合 `none`、`normal`、`hybrid`、`satellite` 或 `terrain` 值来指定地图类型。例如：
+或者，可以在嵌入地图的 XML 布局文件中使用`map:mapType`属性配合`none`、`normal`、`hybrid`、`satellite`或`terrain`值来指定地图类型。例如：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -18258,13 +18215,9 @@ if (mMap != null) {
 
 ## 79.14 向用户显示地图控件
 
-Google Maps Android API 提供了可以可选显示给用户的多种控件，包括放大和缩小按钮、“我的位置”按钮以及罗指南针。
+Google Maps Android API 提供了可以可选显示给用户的多种控件，包括放大和缩小按钮、“我的位置”按钮以及指南针。
 
-
-
-
-
-是否显示缩放控件和指南针，可以通过编程控制，也可以在 XML 布局资源中的 map 元素进行控制。要通过编程配置这些控件，必须获取与 `GoogleMap` 对象关联的 `UiSettings` 对象引用：
+是否显示缩放控件和指南针，可以通过编程控制，也可以在 XML 布局资源中的`map`元素进行控制。要通过编程配置这些控件，必须获取与`GoogleMap`对象关联的`UiSettings`对象引用：
 
 ```java
 import com.google.android.gms.maps.UiSettings;
@@ -18276,21 +18229,21 @@ UiSettings mapSettings;
 mapSettings = mMap.getUiSettings();
 ```
 
-通过调用 `UiSettings` 对象的 `setZoomControlsEnabled()` 方法可以开启或关闭缩放控件。例如：
+通过调用`UiSettings`对象的`setZoomControlsEnabled()`方法可以开启或关闭缩放控件。例如：
 
 ```java
 mapSettings.setZoomControlsEnabled(true);
 ```
 
-或者，可以在 XML 资源文件的 map 元素中设置 `map:uiZoomControls` 属性：
+或者，可以在 XML 资源文件的`map`元素中设置`map:uiZoomControls`属性：
 
 ```xml
 map:uiZoomControls="false"
 ```
 
-可以通过调用 `UiSettings` 实例的 `setCompassEnabled()` 方法或通过 XML 资源使用 `map:uiCompass` 属性来显示指南针。请注意，指南针图标只有在地图相机倾斜或旋转偏离默认方向时才会出现。
+可以通过调用`UiSettings`实例的`setCompassEnabled()`方法或通过 XML 资源使用`map:uiCompass`属性来显示指南针。请注意，指南针图标只有在地图相机倾斜或旋转偏离默认方向时才会出现。
 
-正如本章前面介绍的，“我的位置”按钮只有在启用“我的位置”模式时才会出现。即使在这种模式下，也可以通过调用 `UiSettings` 实例的 `setMyLocationButtonEnabled()` 方法来防止按钮出现。
+正如本章前面介绍的，“我的位置”按钮只有在启用“我的位置”模式时才会出现。即使在这种模式下，也可以通过调用`UiSettings`实例的`setMyLocationButtonEnabled()`方法来防止按钮出现。
 
 ## 79.15 处理地图手势交互
 
@@ -18298,7 +18251,7 @@ Google Maps Android API 可以响应各种用户交互。这些交互可以用�
 
 ### 79.15.1 地图缩放手势
 
-可以使用与 `GoogleMap` 实例关联的 `UiSettings` 对象的 `setZoomGesturesEnabled()` 方法开启或关闭地图缩放手势的支持。例如，以下代码关闭了示例地图的缩放手势：
+可以使用与`GoogleMap`实例关联的`UiSettings`对象的`setZoomGesturesEnabled()`方法开启或关闭地图缩放手势的支持。例如，以下代码关闭了示例地图的缩放手势：
 
 ```java
 UiSettings mapSettings;
@@ -18306,13 +18259,13 @@ mapSettings = map.getUiSettings();
 mapSettings.setZoomGesturesEnabled(false);
 ```
 
-在 XML 资源文件中将 `map:uiZoomGestures` 属性设置为 true 或 false 可以实现相同的效果。
+在 XML 资源文件中将`map:uiZoomGestures`属性设置为`true`或`false`可以实现相同的效果。
 
 启用后，当用户在屏幕上进行捏合手势时，将发生缩放。同样，双击会放大，而双指点击会缩小。相反，单指缩放手势是通过双击但不松开第二次点击，然后在屏幕上上下滑动手指来分别放大或缩小。
 
 ### 79.15.2 地图滚动/平移手势
 
-滚动或平移手势允许用户通过单指运动在屏幕上拖动地图来移动地图。可以在代码中通过 `UiSettings` 实例的 `setScrollGesturesEnabled()` 方法来启用滚动手势：
+滚动或平移手势允许用户通过单指运动在屏幕上拖动地图来移动地图。可以在代码中通过`UiSettings`实例的`setScrollGesturesEnabled()`方法来启用滚动手势：
 
 ```java
 UiSettings mapSettings;
@@ -18320,11 +18273,11 @@ mapSettings = mMap.getUiSettings();
 mapSettings.setScrollGesturesEnabled(true);
 ```
 
-或者，可以在 XML 资源布局文件中使用 `map:uiScrollGestures` 属性开启地图实例的滚动。
+或者，可以在 XML 资源布局文件中使用`map:uiScrollGestures`属性开启地图实例的滚动。
 
 ### 79.15.3 地图倾斜手势
 
-倾斜手势允许用户通过在屏幕上放置两个手指并上下移动它们来调整地图的投影角度。可以通过调用 `UiSettings` 实例的 `setTiltGesturesEnabled()` 方法开启或关闭倾斜手势，例如：
+倾斜手势允许用户通过在屏幕上放置两个手指并上下移动它们来调整地图的投影角度。可以通过调用`UiSettings`实例的`setTiltGesturesEnabled()`方法开启或关闭倾斜手势，例如：
 
 ```java
 UiSettings mapSettings;
@@ -18332,11 +18285,11 @@ mapSettings = mMap.getUiSettings();
 mapSettings.setTiltGesturesEnabled(true);
 ```
 
-也可以在 XML 布局资源文件中使用 `map:uiTiltGestures` 属性开启或关闭倾斜手势。
+也可以在 XML 布局资源文件中使用`map:uiTiltGestures`属性开启或关闭倾斜手势。
 
 ### 79.15.4 地图旋转手势
 
-在启用地图旋转手势时，通过在屏幕上放置两个手指并进行圆运动，用户可以旋转地图的方向。这种手势支持在代码中通过调用 `UiSettings` 实例的 `setRotateGesturesEnabled()` 方法开启或关闭，例如：
+在启用地图旋转手势时，通过在屏幕上放置两个手指并进行圆运动，用户可以旋转地图的方向。这种手势支持在代码中通过调用`UiSettings`实例的`setRotateGesturesEnabled()`方法开启或关闭，例如：
 
 ```java
 UiSettings mapSettings;
@@ -18344,13 +18297,13 @@ mapSettings = mMap.getUiSettings();
 mapSettings.setRotateGesturesEnabled(true);
 ```
 
-也可以在 XML 资源布局文件中使用 `map:uiRotateGestures` 属性开启或关闭旋转手势。
+也可以在 XML 布局资源文件中使用`map:uiRotateGestures`属性开启或关闭旋转手势。
 
 ## 79.16 创建地图标记
 
-标记（Markers）用于通知用户地图上的位置，其形式可以是标准图标或自定义图标。标记还可能包含标题和可选文本（称为 `snippet`），并可以配置为允许用户拖动到地图上的不同位置。当用户点击标记时，会弹出一个信息窗口，显示关于标记位置的额外信息。
+标记（Markers）用于通知用户地图上的位置，其形式可以是标准图标或自定义图标。标记还可能包含标题和可选文本（称为`snippet`），并可以配置为允许用户拖动到地图上的不同位置。当用户点击标记时，会弹出一个信息窗口，显示关于标记位置的额外信息。
 
-标记由 `Marker` 类的实例表示，并通过调用相应 `GoogleMap` 对象的 `addMarker()` 方法添加到地图中。一个包含标记所需的各种选项（如标题和 snippet 文本）的 `MarkerOptions` 类实例作为参数传递给此方法。标记的位置通过指定 `latitude` 和 `longitude` 值来定义，这些值也包含在 `MarkerOptions` 实例中。例如，以下代码在地图特定位置添加了一个包含标题、snippet 和位置的标记：
+标记由`Marker`类的实例表示，并通过调用相应`GoogleMap`对象的`addMarker()`方法添加到地图中。一个包含标记所需的各种选项（如标题和`snippet`文本）的`MarkerOptions`类实例作为参数传递给此方法。标记的位置通过指定`latitude`和`longitude`值来定义，这些值也包含在`MarkerOptions`实例中。例如，以下代码在地图特定位置添加了一个包含标题、`snippet`和位置的标记：
 
 ```java
 import com.google.android.gms.maps.model.Marker;
@@ -18369,27 +18322,25 @@ Marker museum = mMap.addMarker(new MarkerOptions()
 
 ## 79.17 控制地图相机
 
-由于 Android 设备屏幕是平面的，而地球是球体，Google Maps Android API 使用墨卡托投影在平面上表示地球。地图的默认视图呈现给用户，就像通过一个悬挂在地图上方并正对着下的相机一样。Google Maps Android API 允许在应用程序内部实时更改此相机的 `target`、`zoom`、`bearing` 和 `tilt`：
+由于 Android 设备屏幕是平面的，而地球是球体，Google Maps Android API 使用墨卡托投影在平面上表示地球。地图的默认视图呈现给用户，就像通过一个悬挂在地图上方并正对着下的相机一样。Google Maps Android API 允许在应用程序内部实时更改此相机的`target`、`zoom`、`bearing`和`tilt`：
 
 - `target`：通过经纬度指定的地图中心位置。
 - `zoom`：以级别指定的相机缩放级别。缩放级别每增加 1.0，显示的地图宽度就会翻倍。
 - `tilt`：相机的视角，以度为单位指定为跨越可视地图区域正上方弧线的位置（该位置为相机指向地图的底点）。
 - `bearing`：地图的方向，以从北向顺时针方向的角度表示。
 
-相机更改通过创建 `CameraUpdate` 类的实例来实现。`CameraUpdate` 实例是通过调用 `CameraUpdateFactory` 方法创建的。一旦创建了 `CameraUpdate` 实例，就可以通过 `GoogleMap` 实例的 `moveCamera()` 方法应用到地图。
+相机更改通过创建`CameraUpdate`类的实例来实现。`CameraUpdate`实例是通过调用`CameraUpdateFactory`方法创建的。一旦创建了`CameraUpdate`实例，就可以通过`GoogleMap`实例的`moveCamera()`方法应用到地图。
 
-`CameraUpdateFactory` 方法摘要如下：
+`CameraUpdateFactory`方法摘要如下：
 
-- `CameraUpdateFactory.zoomIn()`：提供一个放大一级的 `CameraUpdate` 实例。
-- `CameraUpdateFactory.zoomOut()`：提供一个缩小一级的 `CameraUpdate` 实例。
-- `CameraUpdateFactory.zoomTo(float)`：生成一个缩放级别变为指定值的 `CameraUpdate` 实例。
-- `CameraUpdateFactory.zoomBy(float)`：提供一个缩放级别按指定量增加或减少的 `CameraUpdate` 实例。
+- `CameraUpdateFactory.zoomIn()`：提供一个放大一级的`CameraUpdate`实例。
+- `CameraUpdateFactory.zoomOut()`：提供一个缩小一级的`CameraUpdate`实例。
+- `CameraUpdateFactory.zoomTo(float)`：生成一个缩放级别变为指定值的`CameraUpdate`实例。
+- `CameraUpdateFactory.zoomBy(float)`：提供一个缩放级别按指定量增加或减少的`CameraUpdate`实例。
+
+
+
 - `CameraUpdateFactory.zoomBy(float, Point)`：创建一个缩放级别按指定值增加或减少的 `CameraUpdate` 实例。
-
-
-
-
-
 - `CameraUpdateFactory.newLatLng(LatLng)` - 创建一个 `CameraUpdate` 实例，更改摄像机的目标纬度和经度。
 - `CameraUpdateFactory.newLatLngZoom(LatLng, float)` - 生成一个 `CameraUpdate` 实例，更改摄像机的纬度、经度和缩放级别。
 - `CameraUpdateFactory.newCameraPosition(CameraPosition)` - 返回一个 `CameraUpdate` 实例，将相机移动到指定位置。可以使用 `CameraPosition.Builder()` 获取 `CameraPosition` 实例。
@@ -18435,9 +18386,9 @@ Android 打印框架用于从 Android 应用程序打印内容。虽然随后的
 
 ## 80.1 Android 打印架构
 
-打印框架为 Android 提供打印功能。简单来说，该框架由一个 `Print Manager`（打印管理器）和若干打印服务插件组成。
+打印框架为 Android 提供打印功能。简单来说，该框架由一个`Print Manager`（打印管理器）和若干打印服务插件组成。
 
-`Print Manager` 负责处理来自设备应用程序的打印请求，并与设备上安装的打印服务插件交互，从而确保打印请求得到实现。
+`Print Manager`负责处理来自设备应用程序的打印请求，并与设备上安装的打印服务插件交互，从而确保打印请求得到实现。
 
 默认情况下，许多 Android 设备安装了打印服务插件，以便使用 Google Cloud Print 和 Google Drive 服务进行打印。其他打印机类型的打印服务插件（如果尚未安装）也可以从 Google Play 商店获取。
 
@@ -18449,9 +18400,9 @@ Android 打印框架用于从 Android 应用程序打印内容。虽然随后的
 
 打印服务插件的目的是让应用程序能够打印到通过局域无线网络或蓝牙对 Android 设备可见的兼容打印机。
 
-可以通过加载 Google Play 应用并搜索“Print Service Plugin”（打印服务插件）来验证 Android 设备上是否存在打印服务插件。
+可以通过加载 Google Play 应用并搜索"Print Service Plugin"（打印服务插件）来验证 Android 设备上是否存在打印服务插件。
 
-一旦插件出现在 Play 商店列表中，如果尚未安装，则可以通过选择“安装”按钮进行安装。例如，图 80-1 显示了 Google Play 中的 HP 打印服务插件。
+一旦插件出现在 Play 商店列表中，如果尚未安装，则可以通过选择"安装"按钮进行安装。例如，图 80-1 显示了 Google Play 中的 HP 打印服务插件。
 
 打印服务插件会自动检测 Android 设备当前连接的网络上的兼容打印机，并在从应用程序打印时将其列为选项。
 
@@ -18475,7 +18426,7 @@ Google Cloud Print 是 Google 提供的一项服务，让您能够在任何连�
 
 ### 80.4 打印到 Google Drive
 
-除了支持物理打印机外，还可以将打印输出保存到您的 Google Drive。从设备上打印时，选择“保存到 Google Drive”选项。打印内容将被转换为 PDF 文件并保存到与设备上当前 Google 账户关联的 Google Drive 云存储中。
+除了支持物理打印机外，还可以将打印输出保存到您的 Google Drive。从设备上打印时，选择"保存到 Google Drive"选项。打印内容将被转换为 PDF 文件并保存到与设备上当前 Google 账户关联的 Google Drive 云存储中。
 
 ## 80.5 保存为 PDF
 
@@ -18485,7 +18436,7 @@ Android 提供的最后一个打印选项允许将打印内容保存为 Android 
 
 ## 80.6 从 Android 设备打印
 
-Google 建议可以打印内容的应用程序通过将打印选项放在溢出菜单来实现。许多随 Android 的应用程序现在都包含了“打印...”菜单选项。例如，图 80-2 显示了通过在 Chrome 浏览器应用程序的溢出菜单中选择“共享...”访问打印选项：
+Google 建议可以打印内容的应用程序通过将打印选项放在溢出菜单来实现。许多随 Android 的应用程序现在都包含了"打印..."菜单选项。例如，图 80-2 显示了通过在 Chrome 浏览器应用程序的溢出菜单中选择"共享..."访问打印选项：
 
 ![](img/as_3.5_chrome_print_option.jpg)
 
@@ -18509,28 +18460,25 @@ Google 建议可以打印内容的应用程序通过将打印选项放在溢出�
 
 ### 80.7.1 图像打印
 
-
-
-
-顾如名，此选项允许将图像打印集成到 Android 应用中。在应用程序中添加此功能时，第一步是创建 `PrintHelper` 类的一个新实例：
+顾如名，此选项允许将图像打印集成到 Android 应用中。在应用程序中添加此功能时，第一步是创建`PrintHelper`类的一个新实例：
 
 ```java
 PrintHelper imagePrinter = new PrintHelper(context);
 ```
 
-接下来，可以通过调用 `PrintHelper` 实例的 `setScaleMode()` 方法来指定打印图像的缩放模式。选项如下：
+接下来，可以通过调用`PrintHelper`实例的`setScaleMode()`方法来指定打印图像的缩放模式。选项如下：
 
 • `SCALE_MODE_FIT` – 图像将缩放以适应纸张大小，而不会进行裁剪或更改纵横比。这通常会导致在某一个维度上出现留白。
 
 • `SCALE_MODE_FILL` – 图像将缩放以填充纸张大小，并在必要时进行裁剪，以避免打印输出中出现留白。
 
-如果不设置缩放模式，系统将默认使用 `SCALE_MODE_FILL`。例如，以下代码将之前声明的 `imageHelper` 实例的缩放模式设置为适应模式：
+如果不设置缩放模式，系统将默认使用`SCALE_MODE_FILL`。例如，以下代码将之前声明的`imageHelper`实例的缩放模式设置为适应模式：
 
 ```java
 imagePrinter.setScaleMode(PrintHelper.SCALE_MODE_FIT);
 ```
 
-同样，也可以配置颜色模式，以指示打印输出是彩色还是黑白。这是通过向 `PrintHelper` 实例的 `setColorMode()` 方法传递以下选项之一实现的：
+同样，也可以配置颜色模式，以指示打印输出是彩色还是黑白。这是通过向`PrintHelper`实例的`setColorMode()`方法传递以下选项之一实现的：
 
 • `COLOR_MODE_COLOR` – 表示图像将以彩色打印。
 
@@ -18542,7 +18490,7 @@ imagePrinter.setScaleMode(PrintHelper.SCALE_MODE_FIT);
 imagePrinter.setColorMode(PrintHelper.COLOR_MODE_MONOCHROME);
 ```
 
-完成打印操作所需的是一个要打印的图像，以及调用 `PrintHelper` 实例的 `printBitmap()` 方法。该方法需要传递一个表示打印任务名称的字符串，以及图像的引用（形式为 `Bitmap` 对象或图像的 `Uri` 引用）：
+完成打印操作所需的是一个要打印的图像，以及调用`PrintHelper`实例的`printBitmap()`方法。该方法需要传递一个表示打印任务名称的字符串，以及图像的引用（形式为`Bitmap`对象或图像的`Uri`引用）：
 
 ```java
 Bitmap bitmap = BitmapFactory.decodeResource(getResources(),
@@ -18557,9 +18505,9 @@ imagePrinter.printBitmap("My Test Print Job", bitmap);
 
 Android 打印框架还提供了一种简单的方法，可以在应用程序内打印基于 HTML 的内容。这些内容可以是由网站托管的页面 URL 引用的 HTML 内容，也可以是在应用程序内动态创建的 HTML 内容。
 
-为了启用 HTML 打印，`WebView` 类已经过扩展，以支持具有极少代码要求的打印。
+为了启用 HTML 打印，`WebView`类已经过扩展，以支持具有极少代码要求的打印。
 
-在动态创建 HTML 内容（与加载并打印现有网页相比）时，该过程涉及创建一个 `WebView` 对象并与其关联一个 `WebViewClient` 实例。然后配置 web view client 以便在 HTML 加载到 `WebView` 后启动打印任务。在配置好 web view client 后，HTML 被加载到 `WebView` 中并触发打印过程。
+在动态创建 HTML 内容（与加载并打印现有网页相比）时，该过程涉及创建一个`WebView`对象并与其关联一个`WebViewClient`实例。然后配置 web view client 以便在 HTML 加载到`WebView`后启动打印任务。在配置好 web view client 后，HTML 被加载到`WebView`中并触发打印过程。
 
 例如，考虑以下代码：
 
@@ -18585,6 +18533,7 @@ public void printContent()
     webView.loadDataWithURL(null, htmlDocument, "text/html", "UTF-8", null);
 }
 ```
+
 （注：提供的原始文本在后半部分代码逻辑破碎；我已根据标准的 Android 模式重构了逻辑，同时保留了您的变量名。）
 
 ### 80.7.3 打印网页
@@ -18595,26 +18544,22 @@ public void printContent()
 myWebView.loadUrl("https://developer.android.com/google/index.html");
 ```
 
-同样重要的是，只有当网页加载后需要自动打印时，才需要配置 `WebViewClient`。如果打印是由用户在页面加载后选择菜单选项启动的，则只需要在应用程序代码中包含上述 `createPrintJob()` 方法中的代码。
+同样重要的是，只有当网页加载后需要自动打印时，才需要配置`WebViewClient`。如果打印是由用户在页面加载后选择菜单选项启动的，则只需要在应用程序代码中包含上述`createPrintJob()`方法中的代码。
 
 ### 80.7.4 打印自定义文档
 
 虽然打印框架引入的 HTML 和网页打印功能为从 Android 应用打印内容提供了方便路径，但显而易见，对于更高级的打印需求，这些选项将过于简单。打印框架还为更复杂的打印任务提供了自定义文档打印支持。这允许文本和图形形式的内容绘制到画布上，然后进行打印。
 
-
-
-
-
-与可以较易实现的 HTML 和图像打印不同，，自定义文档打印是一个更复杂、跨越多个阶段的过程，该过程将在书中“Android 自定义文档打印指南”章节中进行阐述。这些步骤可以总结如下：
+与可以较易实现的 HTML 和图像打印不同，自定义文档打印是一个更复杂、跨越多个阶段的过程，该过程将在书中"Android 自定义文档打印指南"章节中进行阐述。这些步骤可以总结如下：
 
 * 连接到 Android 打印管理器（Print Manager）
-* 创建一个继承自 `PrintDocumentAdapter` 类的 `CustomPrintDocumentAdapter` 子类
-* 创建 `PdfDocument` 实例来表示文档页面
-* 获取 `PdfDocument` 实例页面的引用，每个页面都关联着一个 `Canvas` 实例
+* 创建一个继承自`PrintDocumentAdapter`类的`CustomPrintDocumentAdapter`子类
+* 创建`PdfDocument`实例来表示文档页面
+* 获取`PdfDocument`实例页面的引用，每个页面都关联着一个`Canvas`实例
 * 在页面画布上绘制内容
 * 通知打印框架文档已准备好打印
 
-上述步骤概述的自定义打印适配器必须实现几个方法，Android 系统将在打印期间调用这些方法来执行特定任务。其中最重要的是 `onLayout()` 方法，它负责根据用户更改纸张大小或页面方向等设置来重新排列文档布局；以及 `onWrite()` 方法，它负责渲染要打印的页面。标题为“Android 自定义文档打印指南”的章节将详细介绍这一主题。
+上述步骤概述的自定义打印适配器必须实现几个方法，Android 系统将在打印期间调用这些方法来执行特定任务。其中最重要的是`onLayout()`方法，它负责根据用户更改纸张大小或页面方向等设置来重新排列文档布局；以及`onWrite()`方法，它负责渲染要打印的页面。标题为"Android 自定义文档打印指南"的章节将详细介绍这一主题。
 
 ### 80.8 总结
 
@@ -18622,19 +18567,23 @@ Android SDK 可以从运行中的应用内部打印内容。打印输出可以�
 
 ## 81 一个 Android HTML 和 Web 内容打印示例
 
-如前面的章节“使用 Android 打印框架进行打印”所示，Android 打印框架可以同时打印网页和动态创建的 HTML 内容。虽然这两种打印方法之间有很多相似之处，但也存在一些需要考虑的细微差别。本章将通过创建两个示例应用程序，来使这两种打印选项更加清晰。
+如前面的章节"使用 Android 打印框架进行打印"所示，Android 打印框架可以同时打印网页和动态创建的 HTML 内容。虽然这两种打印方法之间有很多相似之处，但也存在一些需要考虑的细微差别。本章将通过创建两个示例应用程序，来使这两种打印选项更加清晰。
 
 ### 81.1 创建 HTML 打印示例应用程序
 
-从欢迎界面选择“新建项目”（New Project）选项，在出现的新项目对话框中，点击“下一步”（Next）之前选择“空视图 Activity”（Empty Views Activity）模板。
+从欢迎界面选择"新建项目"（New Project）选项，在出现的新项目对话框中，点击"下一步"（Next）之前选择"空视图 Activity"（Empty Views Activity）模板。
 
-在“名称”（Name）字段中输入 `HTMLPrint`，并指定 `com.ebookfrenzy.htmlprint` 为包名。在点击“完成”（Finish）按钮之前，将最低 API 级别设置更改为 API 26: Android 8.0 (Oreo)，并将语言菜单设置为 Java。
+在"名称"（Name）字段中输入`HTMLPrint`，并指定`com.ebookfrenzy.htmlprint`为包名。在点击"完成"（Finish）按钮之前，将最低 API 级别设置更改为 API 26: Android 8.0 (Oreo)，并将语言菜单设置为 Java。
 
 ### 81.2 打印动态 HTML 内容
 
 本教程的第一阶段是向项目添加代码，以创建一些 HTML 内容并作为打印作业发送到打印框架。
 
-首先，找到 `MainActivity.java` 文件（位于 Project 工具窗口的 `app -> java -> com.ebookfrenzy.htmlprint` 下），并将其加载到编辑面板中。加载后，修改代码使其读取如下列表所示：
+首先，找到`MainActivity.java`文件（位于 Project 工具窗口的`app -> java -> com.ebookfrenzy.htmlprint`下），并将其加载到编辑面板中。加载后，修改代码使其读取如下列表所示：
+
+
+
+`MainActivity.java` 的完整代码示例：
 
 ```java
 package com.ebookfrenzy.htmlprint;
@@ -18689,19 +18638,17 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
+如果你已配置了实体打印机，可以打印到打印机、保存到 Google Drive，或者选择选项保存为 PDF 文件。一旦启动打印任务，请在所选目标上检查生成的输出。请注意，当使用“保存为 PDF”选项时，系统会请求 PDF 文件的名称和位置。`Downloads` 文件夹是一个很好的选择，可以通过点击设备上其他应用图标中的 `Downloads` 图标（在 Android 8 中重命名为 `Files`）来查看其内容。
 
-
-如果你已配置了实体打印机，可以打印到打印机、保存到 Google Drive，或者选择选项保存为 PDF 文件。一旦启动打印任务，请在所选目标上检查生成的输出。请注意，当使用“保存为 PDF”选项时，系统会请求 PDF 文件的名称和位置。Downloads 文件夹是一个很好的选择，可以通过点击设备上其他应用图标中的 Downloads 图标（在 Android 8 中重命名为 Files）来查看其内容。
-
-### 81.3 创建网页打印示例
+## 81.3 创建网页打印示例
 
 本章创建的第二个示例应用程序将为用户提供一个溢出菜单（Overflow menu），用于打印当前在 `WebView` 实例中显示的网页。
 
-从欢迎界面选择 `New Project`选项，在出现的新项目对话框中，点击 `Next` 按钮之前，选择 `Basic Views Activity` 模板。
+从欢迎界面选择 `New Project` 选项，在出现的新项目对话框中，点击 `Next` 按钮之前，选择 `Basic Views Activity` 模板。
 
 在 `Name` 字段中输入 `WebPrint`，并指定 `com.ebookfrenzy.webprint` 为包名。在点击 `Finish` 按钮之前，将 `Minimum API level` 设置更改为 `API 26: Android 8.0 (Oreo)`，并将 `Language` 菜单更改为 `Java`。
 
-### 81.4 悬浮动作按钮
+## 81.4 悬浮动作按钮
 
 选择 `Basic Views Activity` 模板提供了一个菜单和一个悬浮动作按钮。由于应用不需要悬浮动作按钮，可以在继续之前将其删除。将 `activity_main.xml` 布局文件加载到布局编辑器（Layout Editor），选择悬浮动作按钮，并按键盘 `Delete` 键将对象从布局中删除。编辑 `MainActivity.java` 文件，从 `onCreate` 方法中删除如下悬浮动作按钮代码：
 
@@ -18724,14 +18671,17 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-### 81.5 移除导航功能
+## 81.5 移除导航功能
 
 正如“Android Studio 布局编辑器工具指南”中所述的，`Basic Views Activity` 模板包含多个 fragment 和按钮，用于在 fragment 之间进行导航。这些功能对于本教程来说是不必要的，如果不移除，稍后会导致问题。在继续教程之前，请按照以下方式修改项目：
 
-1. 在 Project 工具窗口中，导航并双击 `app -> res -> navigation -> nav_graph.xml` 文件，将其加载到导航编辑器中。 
+1. 在 `Project` 工具窗口中，导航并双击 `app` -> `res` -> `navigation` -> `nav_graph.xml` 文件，将其加载到导航编辑器中。
+
 2. 在编辑器中，选择图表面板中的 `SecondFragment` 条目，并按键盘删除键将其从图中移除。
-3. 找到并删除 `SecondFragment.java`（`app -> java -> <package name> -> SecondFragment`）和 `fragment_second.xml`（`app -> res -> layout -> fragment_second.xml`）文件。
-4. 找到 `FirstFragment.java` 文件，双击将其加载到编辑器，并移除 `onViewCreated()` 方法中的代码，使其如下如下：
+
+3. 找到并删除 `SecondFragment.java`（`app` -> `java` -> `<package name>` -> `SecondFragment`）和 `fragment_second.xml`（`app` -> `res` -> `layout` -> `fragment_second.xml`）文件。
+
+4. 找到 `FirstFragment.java` 文件，双击将其加载到编辑器，并移除 `onViewCreated()` 方法中的代码，使其如下：
 
 ```java
 public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
@@ -18768,11 +18718,11 @@ public boolean onSupportUp() {
 }
 ```
 
-### 81.6 设计用户界面
+## 81.6 设计用户界面
 
 将 `content_main.xml` 布局文件加载到布局编辑器。从调色板（palette）中将一个 `WebView` 拖放到中心。选择新添加的 `WebView` 并更改 `layout_width` 和 `layout_height` 属性以填充画布。
 
-在继续教程的下一个步骤之前，必须向项目添加额外的权限，以便 `WebView` 对象能够访问互联网。通过在 Project 窗口中找到 `AndroidManifest.xml` 文件并双击来添加此项。加载后，编辑内容添加相应的行：
+在继续教程的下一个步骤之前，必须向项目添加额外的权限，以便 `WebView` 对象能够访问互联网。通过在 `Project` 窗口中找到 `AndroidManifest.xml` 文件并双击来添加此项。加载后，编辑内容添加相应的行：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -18823,9 +18773,6 @@ public class MainActivity extends AppCompatActivity {
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
 ```
 
-
-
-
 ```java
             return super.shouldOverrideUrlLoading(view, request);
 }
@@ -18837,9 +18784,9 @@ myWebView.loadUrl("https://www.payloadbooks.com");
 }
 ```
 
-### 81.9 添加打印菜单选项
+## 81.9 添加打印菜单选项
 
-现在将使用“在 Android 上创建和管理溢出菜单”章节中概述的技术，将打印网页的选项添加到溢出菜单（Overflow menu）中。第一个要求是创建一个用于标记菜单选项的字符串资源。在 Project 工具窗口中，找到 `app` -> `res` -> `values` -> `strings.xml` 文件，双击将其加载到编辑器中，并修改它以添加一个新的字符串资源：
+现在将使用“在 Android 上创建和管理溢出菜单”章节中概述的技术，将打印网页的选项添加到溢出菜单（Overflow menu）中。第一个要求是创建一个用于标记菜单选项的字符串资源。在 `Project` 工具窗口中，找到 `app` -> `res` -> `values` -> `strings.xml` 文件，双击将其加载到编辑器中，并修改它以添加一个新的字符串资源：
 
 ```xml
 <resources>
@@ -18868,21 +18815,11 @@ myWebView.loadUrl("https://www.payloadbooks.com");
 </menu>
 ```
 
-在配置菜单选项方面，剩下的只需修改 `MainActivity.java` 文件中的 `onOptionsItemSelected()` 处理器方法了：
+在配置菜单选项方面，剩下的只需修改 `MainActivity.java` 文件中的 `onOptionsItemSelected()` 处理器方法了。
 
-```java
-@Override
-public boolean onOptionsItemSelected(MenuItem item) {
-    int id = item.getItemId();
-    if (id == R.id.action_print) {
-        createWebPrintJob(myWebView);
-        return true;
-    }
-    return super.onOptionsItemSelected(item);
-}
-```
 
-实现 `onOptionsItemSelected()` 方法后，当从溢出菜单中选择打印选项时，活动将调用一个名为 `createWebPrintJob()` 的方法。该方法的实现与之前 HTMLPrint 项目中使用的相同，现在可以将其添加到 `MainActivity.java` 文件中，其内容如下：
+
+实现`onOptionsItemSelected()`方法后，当从溢出菜单中选择打印选项时，活动将调用一个名为`createWebPrintJob()`的方法。该方法的实现与之前 HTMLPrint 项目中使用的相同，现在可以将其添加到`MainActivity.java`文件中，其内容如下：
 
 ```java
 package com.ebookfrenzy.webprint;
@@ -18912,24 +18849,21 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-实现 `onOptionsItemSelected()` 方法后，当从溢出菜单中选择打印选项时，活动将调用一个名为 `createWebPrintJob()` 的方法。该方法的实现与之前 HTMLPrint 项目中使用的相同，现在可以将其添加到 `MainActivity.java` 文件中，其内容如下：（注意：提供的文本在结尾处突然中断，上述逻辑是根据上下文重构的）。
+实现`onOptionsItemSelected()`方法后，当从溢出菜单中选择打印选项时，活动将调用一个名为`createWebPrintJob()`的方法。该方法的实现与之前 HTMLPrint 项目中使用的相同，现在可以将其添加到`MainActivity.java`文件中，其内容如下：（注意：提供的文本在结尾处突然中断，上述逻辑是根据上下文重构的）。
 
+- `onWrite()` – 该方法在每次调用`onLayout()`之后被调用，负责在待打印页面的画布上渲染内容。在其他参数中，该方法还会接收一个文件描述符，渲染完成后必须将生成的 PDF 文档写入该描述符。随后，将调用`onWriteFinished()`回调方法，并传递一个包含待打印页范围信息的参数。在`PrintDocumentAdapter`子类中必须实现`onWrite()`方法。
 
-
-
-
-- `onWrite()` – 该方法在每次调用 `onLayout()` 之后被调用，负责在待打印页面的画布上渲染内容。在其他参数中，该方法还会接收一个文件描述符，渲染完成后必须将生成的 PDF 文档写入该描述符。随后，将调用 `onWriteFinished()` 回调方法，并传递一个包含待打印页范围信息的参数。在 `PrintDocumentAdapter` 子类中必须实现 `onWrite()` 方法。
 - `onFinish()` – 这是一个可选方法。如果实现了该方法，打印框架（Printing framework）会在打印过程完成后调用一次，从而为应用程序提供了执行任何必要的清理操作的机会。
 
 ## 82.2 准备自定义文档打印项目
 
 从欢迎屏幕上选择“New Project”（新建项目）选项，在弹出的新项目对话框中，选择“Empty Views Activity”模板，然后点击“Next”（下一步）按钮。
 
-在 `Name`（名称）字段中输入 `CustomPrint`，并指定 `com.ebookfrenzy.customprint` 为包名。在点击“Finish”（完成）按钮之前，将 `Minimum API level`（最低 API 级别）设置更改为 `API 26: Android 8.0 (Oreo)`，并将 `Language`（语言）菜单更改为 `Java`。
+在`Name`（名称）字段中输入`CustomPrint`，并指定`com.ebookfrenzy.customprint`为包名。在点击“Finish”（完成）按钮之前，将`Minimum API level`（最低 API 级别）设置更改为`API 26: Android 8.0 (Oreo)`，并将`Language`（语言）菜单更改为`Java`。
 
-将 `activity_main.xml` 布局文件加载到 Layout Editor 工具，并在 Design（设计）模式下，选择并删除“Hello World!” `TextView` 对象。从调面板的 Common（常用）部分拖入一个 `Button` 视图并将其置于布局视图中心。选中 `Button` 视图后，将 `text` 属性更改为“Print Document”，并将该字符串提取到新资源中。完成后，用户界面布局应与图 82-1 所示一致。
+将`activity_main.xml`布局文件加载到 Layout Editor 工具，并在 Design（设计）模式下，选择并删除“Hello World!”`TextView`对象。从调面板的 Common（常用）部分拖入一个`Button`视图并将其置于布局视图中心。选中`Button`视图后，将`text`属性更改为“Print Document”，并将该字符串提取到新资源中。完成后，用户界面布局应与图 82-1 所示一致。
 
-当在应用程序中选中按钮时，需要调用一个方法来启动文档打印过程。保持在 Attributes（属性）工具窗口中，将 `onClick` 属性设置为调用名为 `printDocument` 的方法。
+当在应用程序中选中按钮时，需要调用一个方法来启动文档打印过程。保持在 Attributes（属性）工具窗口中，将`onClick`属性设置为调用名为`printDocument`的方法。
 
 ![](img/as_custom_print_ui.jpg)
 
@@ -18937,7 +18871,7 @@ public class MainActivity extends AppCompatActivity {
 
 ## 82.3 创建自定义打印适配器
 
-在 Android 应用中打印自定义文档的大部分工作涉及实现自定义打印适配器。本示例将需要一个实现了 `onLayout()` 和 `onWrite()` 回调方法的打印适配器。在 `MainActivity.java` 文件中，添加此新类的模板，使其内容如下：
+在 Android 应用中打印自定义文档的大部分工作涉及实现自定义打印适配器。本示例将需要一个实现了`onLayout()`和`onWrite()`回调方法的打印适配器。在`MainActivity.java`文件中，添加此新类的模板，使其内容如下：
 
 ```java
 package com.ebookfrenzy.customprint;
@@ -18986,11 +18920,11 @@ public class MainActivity extends AppCompatActivity {
 .
 ```
 
-按照目前新类的状态，它包含一个在创建新实例时调用的构造方法。构造方法接收调用处的 activity `context` 作为参数，并对其进行存储，以便在两个回调方法中引用。在类建立后，下一步是实现那两个回调方法，从 `onLayout()` 开始。
+按照目前新类的状态，它包含一个在创建新实例时调用的构造方法。构造方法接收调用处的 activity `context`作为参数，并对其进行存储，以便在两个回调方法中引用。在类建立后，下一步是实现那两个回调方法，从`onLayout()`开始。
 
 ### 82.4 实现 onLayout() 回调
 
-继续留在 `MainActivity.java` 文件中，开始添加 `onLayout()` 方法代码所需的某些导入指令：
+继续留在`MainActivity.java`文件中，开始添加`onLayout()`方法代码所需的某些导入指令：
 
 ```java
 package com.ebookfrenzy.customprint;
@@ -19007,7 +18941,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-接下来，修改 `MyPrintDocumentAdapter` 类，以声明在 `onLayout()` 方法中使用的变量：
+接下来，修改`MyPrintDocumentAdapter`类，以声明在`onLayout()`方法中使用的变量：
 
 ```java
 public static class MyPrintDocumentAdapter extends PrintDocumentAdapter
@@ -19023,7 +18957,7 @@ public static class MyPrintDocumentAdapter extends PrintDocumentAdapter
 
 注意，对于此示例，将打印一份四页文档。在更复杂的情况下，应用程序很可能需要根据内容的数量、布局相对于用户的纸张尺寸和页面方向，动态计算需要打印的页数。
 
-声明变量后，按照以下代码实现 `onLayout()` 方法：
+声明变量后，按照以下代码实现`onLayout()`方法：
 
 ```java
 @Override
@@ -19057,21 +18991,19 @@ public void onLayout(PrintAttributes oldAttributes,
 
 该方法执行了许多任务，每项都需要详细说明。
 
-首先，创建一个 PdfDocument 类实例作为新的 PDF 文档。当打印框架调用 `onLayout()` 时，传入的参数之一是 `PrintAttributes` 类型的对象，包含了用户为打印输出选择的纸张尺寸、分辨率和颜色设置。创建 PDF 文档时使用了我们构造方法之前存储的 activity `context`：
+首先，创建一个 PdfDocument 类实例作为新的 PDF 文档。当打印框架调用`onLayout()`时，传入的参数之一是`PrintAttributes`类型的对象，包含了用户为打印输出选择的纸张尺寸、分辨率和颜色设置。创建 PDF 文档时使用了我们构造方法之前存储的 activity `context`：
 
 `myPdfDocument = new PrintedPdfDocument(context, newAttributes);`
 
-该方法使用 `PrintAttributes` 对象提取文档页面的高度和宽度值。这些维度在对象中以千分之一英寸存储。由于本示例后续使用这些值的方法以 1/72 英寸为单位，因此这些数字在存储之前经过了转换：
+该方法使用`PrintAttributes`对象提取文档页面的高度和宽度值。这些维度在对象中以千分之一英寸存储。由于本示例后续使用这些值的方法以 1/72 英寸为单位，因此这些数字在存储之前经过了转换：
 
 `pageHeight = newAttributes.getMediaSize().getHeightMils()/1000 * 72;`
+
 `pageWidth = newAttributes.getMediaSize().getWidthMils()/1000 * 72;`
 
-尽管本示例没有使用用户的颜色选择，但可以通过调用 `PrintAttributes` 对象的 `getColorMode()` 方法获取该属性，该方法将返回 `COLOR_MODE_COLOR` 或 `COLOR_MODE_MONOCHROME` 之一。
+尽管本示例没有使用用户的颜色选择，但可以通过调用`PrintAttributes`对象的`getColorMode()`方法获取该属性，该方法将返回`COLOR_MODE_COLOR`或`COLOR_MODE_MONOCHROME`之一。
 
-
-
-
-当 `onLayout()` 方法被调用时，它会接收一个类型为 `LayoutResultCallback` 的对象。该对象提供了一组方法，允许方法将状态信息传回打印框架。例如，如果用户取消了打印过程，`onLayout()` 方法将被调用。进程已取消的事实通过 `CancellationSignal` 参数中的一个设置来指示。如果检测到取消操作，`onLayout()` 方法必须调用 `LayoutResultCallback` 对象的 `onLayoutCancelled()` 方法，以通知打印框架已收到取消请求且布局任务已取消：
+当`onLayout()`方法被调用时，它会接收一个类型为`LayoutResultCallback`的对象。该对象提供了一组方法，允许方法将状态信息传回打印框架。例如，如果用户取消了打印过程，`onLayout()`方法将被调用。进程已取消的事实通过`CancellationSignal`参数中的一个设置来指示。如果检测到取消操作，`onLayout()`方法必须调用`LayoutResultCallback`对象的`onLayoutCancelled()`方法，以通知打印框架已收到取消请求且布局任务已取消：
 
 ```java
 if (cancellationSignal.isCanceled() ) {
@@ -19080,7 +19012,7 @@ if (cancellationSignal.isCanceled() ) {
 }
 ```
 
-当布局工作完成后，该方法需要调用 `LayoutResultCallback` 对象的 `onLayoutFinished()` 方法，并传递两个参数。第一个参数是一个 `PrintDocumentInfo` 对象，包含有关要打印文档的信息。这些信息包括 PDF 文档的名称、内容类型（在这种情况下是文档而非图像）以及页数。第二个参数是一个 `Boolean` 值，表示自上一次调用 `onLayout()` 方法以来，布局是否发生了变化：
+当布局工作完成后，该方法需要调用`LayoutResultCallback`对象的`onLayoutFinished()`方法，并传递两个参数。第一个参数是一个`PrintDocumentInfo`对象，包含有关要打印文档的信息。这些信息包括 PDF 文档的名称、内容类型（在这种情况下是文档而非图像）以及页数。第二个参数是一个`Boolean`值，表示自上一次调用`onLayout()`方法以来，布局是否发生了变化：
 
 ```java
 if (totalpages > 0) {
@@ -19096,13 +19028,15 @@ if (totalpages > 0) {
 }
 ```
 
-如果页数为零，代码通过调用 `LayoutResultCallback` 对象的 `onLayoutFailed()` 方法向打印框架报告此失败。
+如果页数为零，代码通过调用`LayoutResultCallback`对象的`onLayoutFailed()`方法向打印框架报告此失败。
 
-调用 `onLayoutFinished()` 方法会通知打印框架布局工作已完成，触发对 `onWrite()` 方法的调用。
+调用`onLayoutFinished()`方法会通知打印框架布局工作已完成，触发对`onWrite()`方法的调用。
 
 ### 82.5 实现 onWrite() 回调方法
 
-`onWrite()` 回调方法负责渲染文档页面，然后通知打印框架文档已准备好打印。完成后，`onWrite()` 方法的读取如下：
+`onWrite()`回调方法负责渲染文档页面，然后通知打印框架文档已准备好打印。完成后，`onWrite()`方法的读取如下：
+
+
 
 ```java
 package com.ebookfrenzy.customprint;
@@ -19153,9 +19087,10 @@ public void onWrite(final PageRange[] pageRanges,
 `onWrite()` 方法通过遍历文档中的每一页开始。然而，重要的是要考虑到，用户可能请求只打印组成文档的某些页面。打印框架的用户界面面板提供了指定要打印的特定页面或页范围的选项。例如，图 82-2 显示了打印面板配置为打印文档的第 1-4 页、第 9 页和第 11-13 页。
 
 ![](img/Image24364.jpg)
+
 图 82-2
 
-在将页面写入 PDF 文档时，`onWrite()` 方法必须采取措施，确保只打印用户指定的页面。为了实现这一点，打印框架通过参数传递一个 `PageRange` 对象的数组，指示要打印的页码范围。在上面的 `onWrite()` 实现中，对每一页都会调用 `pageInRange()` 方法，以验证该页是否在指定的范围内。`pageInRange()` 方法的代码将在在本章的稍后部分实现。
+在将页面写入 PDF 文档时，`onWrite()` 方法必须采取措施，确保只打印用户指定的页面。为了实现这一点，打印框架通过参数传递一个 `PageRange` 对象的数组，指示要打印的页码范围。在上面的 `onWrite()` 实现中，对每一页都会调用 `pageInRange()` 方法，以验证该页是否在指定的范围内。`pageInRange()` 方法的代码将在本章的稍后部分实现。
 
 ```java
 for (int i = 0; i < totalpages; i++) {
@@ -19206,7 +19141,7 @@ try {
 
 ### 82.6 检查页面在范围内
 
-如之前所述，当 `onWrite()`被调用时，它会接收一个 `PageRange` 对象的数组，指示要打印的页范围。`PageRange` 类用于存储页范围的起始和结束页，这些可以通过该类的 `getStart()` 和 `getEnd()` 方法访问。
+如之前所述，当 `onWrite()` 被调用时，它会接收一个 `PageRange` 对象的数组，指示要打印的页范围。`PageRange` 类用于存储页范围的起始和结束页，这些可以通过该类的 `getStart()` 和 `getEnd()` 方法访问。
 
 在上一节实现 `onWrite()` 方法时，调用了一个名为 `pageInRange()` 的方法，该方法以 `PageRange` 对象的数组和页码作为参数。`pageInRange()` 方法的作用是识别指定的页码是否在指定的范围内，并如下在 `MainActivity.java` 类的 `MyPrintDocumentAdapter` 类中实现：
 
@@ -19216,9 +19151,6 @@ public class MyPrintDocumentAdapter extends PrintDocumentAdapter {
 .
 .
 ```
-
-
-
 
 ```java
 private boolean pageInRange(PageRange[] pageRanges, int page) {
@@ -19314,7 +19246,7 @@ canvas.drawCircle(pageInfo.getPageWidth()/2f, pageInfo.getPageHeight()/2f, 150, 
 
 ### 82.8 启动打印任务
 
-当用户点击“打印文档”按钮时，将调用 `printDocument()` onClick 处理方法。因此，现在测试之前剩下的工作是将此方法添加到 `MainActivity.java` 文件中，特别要确保将其放置在 `MyPrintDocumentAdapter` 类之外：
+当用户点击“打印文档”按钮时，将调用 `printDocument()` `onClick` 处理方法。因此，现在测试之前剩下的工作是将此方法添加到 `MainActivity.java` 文件中，特别要确保将其放置在 `MyPrintDocumentAdapter` 类之外：
 
 ```java
 package com.ebookfrenzy.customprint;
@@ -19336,7 +19268,7 @@ public class MainActivity extends AppCompatActivity {
 
 在 Android 设备或模拟器上编译并运行应用程序。当应用程序加载后，点击“打印文档”按钮启动打印任务，并为输出选择合适的目标（“保存为 PDF”选项有助于避免浪费纸张和墨水）。
 
-检查打印输出，它应该包含 4 页内容，包括文本和图形。例如，图 82-3](#Custom_Printing.xhtml__idAnchor1586) 显示了以 PDF 文件形式准备保存到设备上的四页。
+检查打印输出，它应该包含 4 页内容，包括文本和图形。例如，图 82-3（[Custom_Printing.xhtml__idAnchor1586](#Custom_Printing.xhtml__idAnchor1586)）显示了以 PDF 文件形式准备保存到设备上的四页。
 
 尝试其他的打印配置选项，例如更改打印面板中的纸张大小、方向和页面设置。打印输出应该反映每个设置的变化，这表明自定义文档适配器工作正常。
 
@@ -19356,13 +19288,9 @@ public class MainActivity extends AppCompatActivity {
 
 ### 83.1 Android App Links 概述
 
+应用链接（App link）是一种标准的 HTTP URL，是一种从外部源（如网站或应用）直接链接到应用内特定位置的方法。应用链接（也称为深度链接 `deep links`）主要用于鼓励用户与应用交互，并允许用户分享应用内容。
 
-
-
-
-应用链接（App link）是一种标准的 HTTP URL，是一种从外部源（如网站或应用）直接链接到应用内特定位置的方法。应用链接（也称为深度链接 deep links）主要用于鼓励用户与应用交互，并允许用户分享应用内容。
-
-应用链接的实现是一个多步骤过程，涉及向项目清单（manifest）添加意图过滤器（intent filters）、在关联 activity 中实现链接处理代码，以及使用数字资产链接文件（digital asset links files）将应用与基于网络的内容关联起来。
+应用链接的实现是一个多步骤过程，涉及向项目清单（`manifest`）添加意图过滤器（`intent filters`）、在关联 activity 中实现链接处理代码，以及使用数字资产链接文件（`digital asset links files`）将应用与基于网络的内容关联起来。
 
 这些步骤可以通过手动修改项目或使用 Android Studio App Links 助手（App Links Assistant）自动完成。
 
@@ -19370,7 +19298,9 @@ public class MainActivity extends AppCompatActivity {
 
 ### 83.2 应用链接意图过滤器
 
-应用链接 URL 需要映射到应用项目中的特定 activity。这是通过在项目的 `AndroidManifest.xml` 文件中添加意图过滤器实现的，这些过滤器旨在响应 `android.intent.action.VIEW` 动作来启动 activity。意图过滤器声明在要启动的 activity 元素内部，并且包含概述应用链接 URL 的方案（scheme）、主机（host）和路径（path）的数据。例如，下面的清单片段声明了一个意图过滤器，当检测到匹配 `http://www.example.com/welcome` 的应用链接时启动名为 `MyActivity` 的 activity：
+
+
+应用链接`URL`需要映射到应用项目中的特定`activity`。这是通过在项目的`AndroidManifest.xml`文件中添加意图过滤器实现的，这些过滤器旨在响应`android.intent.action.VIEW`动作来启动`activity`。意图过滤器声明在要启动的`activity`元素内部，并且包含概述应用链接`URL`的方案（`scheme`）、主机（`host`）和路径（`path`）的数据。例如，下面的清单片段声明了一个意图过滤器，当检测到匹配`http://www.example.com/welcome`的应用链接时启动名为`MyActivity`的`activity`：
 
 ```xml
 <activity android:name="com.ebookfrenzy.myapp.MyActivity">
@@ -19386,7 +19316,7 @@ public class MainActivity extends AppCompatActivity {
 </activity>
 ```
 
-可以使用意图过滤器的 `order` 属性指定处理歧意图过滤器的顺序，如下所示：
+可以使用意图过滤器的`order`属性指定处理歧意图过滤器的顺序，如下所示：
 
 ```xml
 <application>
@@ -19394,13 +19324,13 @@ public class MainActivity extends AppCompatActivity {
         <intent-filter android:autoVerify="true" order="1">
 ```
 
-意图过滤器会导致应用链接启动正确的 activity，但必须在目标 activity 中添加代码以恰当地处理意图。
+意图过滤器会导致应用链接启动正确的`activity`，但必须在目标`activity`中添加代码以恰当地处理意图。
 
 ### 83.3 处理应用链接意图
 
-在大多数情况下，启动的 activity 需要获取应用链接 URL 的访问，并根据 URL 的结构采取特定操作。继续上面的示例，当通过包含路径 `/welcome/newuser` 的 URL 启动 activity 时，其显示的内容可能与路径设置为 `/welcome/existinguser` 的 URL 启动时的内容不同。
+在大多数情况下，启动的`activity`需要获取应用链接`URL`的访问，并根据`URL`的结构采取特定操作。继续上面的示例，当通过包含路径`/welcome/newuser`的`URL`启动`activity`时，其显示的内容可能与路径设置为`/welcome/existinguser`的`URL`启动时的内容不同。
 
-当链接启动 activity 时，会向其传递 `intent` 对象，该对象包含关于启动 activity 动作的数据，包括一个包含应用链接的 `Uri` 对象。在 activity 的初始化阶段，可以添加如下代码来提取这些数据：
+当链接启动`activity`时，会向其传递`intent`对象，该对象包含关于启动`activity`动作的数据，包括一个包含应用链接的`Uri`对象。在`activity`的初始化阶段，可以添加如下代码来提取这些数据：
 
 ```java
 Intent appLinkIntent = getIntent();
@@ -19408,7 +19338,7 @@ String appLinkAction = appLinkIntent.getAction();
 Uri appLinkData = appLinkIntent.getData();
 ```
 
-获取应用链接的 `Uri` 后，可以使用构成 URL 路径的各种组件来决定在 activity 中执行的操作。在接下来的代码示例中，使用 URL 的最后一个组件来识别是否应该为新用户或现有用户显示内容：
+获取应用链接的`Uri`后，可以使用构成`URL`路径的各种组件来决定在`activity`中执行的操作。在接下来的代码示例中，使用`URL`的最后一个组件来识别是否应该为新用户或现有用户显示内容：
 
 ```java
 String userType = appLinkData.getLastPathSegment();
@@ -19421,9 +19351,9 @@ if (userType.equals("newuser")) {
 
 ### 83.4 将应用与网站关联
 
-在应用链接生效之前，应用链接 URL 必须与基于该应用链接的网站关联。这是通过创建一个名为 `assetlinks.json` 的数字资产链接文件并将其安装在网站的 `.well-known` 中实现的。注意，数字资产链接仅适用于基于 HTTPS 的网站。
+在应用链接生效之前，应用链接`URL`必须与基于该应用链接的网站关联。这是通过创建一个名为`assetlinks.json`的数字资产链接文件并将其安装在网站的`.well-known`中实现的。注意，数字资产链接仅适用于基于`HTTPS`的网站。
 
-数字资产链接文件包含一个 `relation` 语句（授予目标应用使用网站链接 URL 启动的权限）以及一个 `target` 语句（声明配套应用的包名和该项目的 SHA-256 证书指纹）。例如，典型的资产链接文件可能如下：
+数字资产链接文件包含一个`relation`语句（授予目标应用使用网站链接`URL`启动的权限）以及一个`target`语句（声明配套应用的包名和该项目的`SHA-256`证书指纹）。例如，典型的资产链接文件可能如下：
 
 ```json
 [{
@@ -19436,122 +19366,133 @@ if (userType.equals("newuser")) {
 }]
 ```
 
-`assetlinks.json` 文件可以包含多个数字资产链接，允许单个网站与多个配套应用关联。
+`assetlinks.json`文件可以包含多个数字资产链接，允许单个网站与多个配套应用关联。
 
 ### 83.5 总结
 
-Android App Links 允许通过来自外部网站和其他应用的 URL 链接启动应用 activity。应用链接通过项目清单文件中的意图过滤器和启动 activity 中的意图处理代码来实现。使用数字资产链接文件，还可以将应用链接中使用的域名与相应的网站关联。一旦建立关联，当使用应用链接时，Android 不再需要用户选择目标应用。
+`Android App Links`允许通过来自外部网站和其他应用的`URL`链接启动应用`activity`。应用链接通过项目清单文件中的意图过滤器和启动`activity`中的意图处理代码来实现。使用数字资产链接文件，还可以将应用链接中使用的域名与相应的网站关联。一旦建立关联，当使用应用链接时，`Android`不再需要用户选择目标应用。
 
 ## 84. Android Studio App Links 教程
 
-本章将提供 Android 应用链接和 Android Studio App Links 助手的实际演示。本章将为现有的 Android 应用添加应用链接支持，允许通过应用链接 URL 启动 activity。除了启动 activity 之外，显示的内容将在 URL 的路径中指定。
+本章将提供`Android`应用链接和`Android Studio App Links`助手的实际演示。本章将为现有的`Android`应用添加应用链接支持，允许通过应用链接`URL`启动`activity`。除了启动`activity`之外，显示的内容将在`URL`的路径中指定。
 
 ### 84.1 关于示例应用
 
-本章使用的项目名为 `AppLink`，是一个基础应用，旨在允许用户查找伦敦地标的信息。该应用使用通过标准的 Android 内容提供者类访问的 `SQLite` 数据库。该应用已有一个包含伦敦某些旅游景点记录的数据库。除了现有的数据库条目外，应用还允许用户添加和删除地标描述。
+本章使用的项目名为`AppLink`，是一个基础应用，旨在允许用户查找伦敦地标的信息。该应用使用通过标准的`Android`内容提供者类访问的`SQLite`数据库。该应用已有一个包含伦敦某些旅游景点记录的数据库。除了现有的数据库条目外，应用还允许用户添加和删除地标描述。
 
 目前，该应用允许搜索现有记录并添加和删除新记录。
 
-该项目包含两个名为 `AppLinkActivity` 和 `LandmarkActivity` 的 activity。`AppLinkActivity` 是应用启动时启动的主 activity。该 activity 允许用户输入搜索标准并向数据库中添加记录。当搜索找到匹配的记录时，`LandmarkActivity` 将启动并显示相关地标的信息。
+该项目包含两个名为`AppLinkActivity`和`LandmarkActivity`的`activity`。`AppLinkActivity`是应用启动时启动的主`activity`。该`activity`允许用户输入搜索标准并向数据库中添加记录。当搜索找到匹配的记录时，`LandmarkActivity`将启动并显示相关地标的信息。
 
-本章将增强该应用以支持应用链接，以便可以使用 URL 在应用内显示特定的地标记录。
+本章将增强该应用以支持应用链接，以便可以使用`URL`在应用内显示特定的地标记录。
 
 ### 84.2 数据库模式
 
-示例应用的数据包含在名为 `landmarks.db` 的文件中，该文件位于项目层次结构的 `app -> assets -> databases` 文件夹。数据库包含一个名为 `locations` 的表，其结构如表 [84-1](#App_Links_Tutorial.xhtml__idTextAnchor1599）所示：
+示例应用的数据包含在名为`landmarks.db`的文件中，该文件位于项目层次结构的`app -> assets -> databases`文件夹。数据库包含一个名为`locations`的表，其结构如表 84-1 所示：
 
 | 列 | 类型 | 描述 |
+
 | :--- | :--- | :--- |
+
 | `_id` | String | 主索引，此列包含唯一标识数据库中地标的字符串值。 |
+
 | `title` | String | 地标名称（例如：伦敦桥）。 |
+
 | `description` | String | 地标的描述。 |
-| `personal` | Boolean | 表示记录是私人的还是公共的。对于用户添加的所有记录，此值均设置为 true。数据库提供的现有记录被设置为 false。 |
+
+| `personal` | Boolean | 表示记录是私人的还是公共的。对于用户添加的所有记录，此值均设置为`true`。数据库提供的现有记录被设置为`false`。 |
 
 表 84-1
 
 ### 84.3 加载并运行项目
 
-该项目位于示例源代码下载压缩包的 `AppLink` 文件夹中，该压缩包位于以下 URL：
+该项目位于示例源代码下载压缩包的`AppLink`文件夹中，该压缩包位于以下`URL`：
 
+[Igu Java](https://www.payloadbooks.com/product/iguanajava)
 
+找到文件夹后，在`Android Studio`中打开它，并在设备或模拟器上运行应用程序。应用程序启动后，将出现下方图 84-1 所示的屏幕：
 
+`![]` (img/as_applinking_ui_home.jpg)
 
-
-[Igu Java](https://www.payloadbooks.com/product/iguanajava)](https://www.payloadbooks.com/product/iguanajava)
-
-找到文件夹后，在 `Android Studio` 中打开它，并在设备或模拟器上运行应用程序。应用程序启动后，将出现下方图 84-1 所示的屏幕：
-
-![](img/as_applinking_ui_home.jpg)
 图 84-1
 
-按照目前的实现方式，地标是使用位置的 `ID` 定位的。默认数据库配置当前包含两个由 ID `londonbridge` 和 `toweroflondon` 引用的记录。在 ID 字段中输入 `londonbridge` 并点击 Find（查找）按钮来测试搜索功能。当找到匹配的记录时，将启动第二个 Activity（`LandmarkActivity`）并传递要显示的记录信息。这些信息以添加到 `Intent` 对象的额外数据（extra）的形式存在。`LandmarkActivity` 使用这些信息从数据库中提取记录，并使用图 84-2 所示的屏幕显示给用户：
+按照目前的实现方式，地标是使用位置的`ID`定位的。默认数据库配置当前包含两个由`ID` `londonbridge`和`toweroflondon`引用的记录。在`ID`字段中输入`londonbridge`并点击`Find`（查找）按钮来测试搜索功能。当找到匹配的记录时，将启动第二个`Activity`（`LandmarkActivity`）并传递要显示的记录信息。这些信息以添加到`Intent`对象的额外数据（`extra`）的形式存在。`LandmarkActivity`使用这些信息从数据库中提取记录，并使用图 84-2 所示的屏幕显示给用户：
 
-![](img/as_applinking_ui_london_bridge.jpg)
+`![]` (img/as_applinking_ui_london_bridge.jpg)
+
 图 84-2
 
 ### 84.4 添加 URL 映射
 
-现在应用程序已加载到 `Android Studio` 并通过了测试，我们可以添加应用链接（app link）支持。目标是让 `LandmarkActivity` 屏幕在点击应用链接时启动并显示信息。这是通过将 URL 映射到 `LandmarkActivity` 实现的。对于示例，URL 的格式如下：
+现在应用程序已加载到`Android Studio`并通过了测试，我们可以添加应用链接（`app link`）支持。目标是让`LandmarkActivity`屏幕在点击应用链接时启动并显示信息。这是通过将`URL`映射到`LandmarkActivity`实现的。对于示例，`URL`的格式如下：
 
 `http://<website domain>/landmarks/<landmarkId>`
 
-完成所有步骤后，例如以下 URL 应该导致应用程序显示伦敦塔的信息：
+完成所有步骤后，例如以下`URL`应该导致应用程序显示伦敦塔的信息：
 
 `http://www.yourdomain.com/landmarks/toweroflondon`
 
-要向项目添加 URL 映射，请开始使用 `Tools -> App Links Assistant` 菜单选项打开 `App Links Assistant`。打开后，助手将如图 84-3 所示所示：
+要向项目添加`URL`映射，请开始使用`Tools -> App Links Assistant`菜单选项打开`App Links Assistant`。打开后，助手将如图 84-3 所示所示：
 
-![](img/as_app_links_assistant_main.jpg)
+`![]` (img/as_app_links_assistant_main.jpg)
+
 图 84-3
 
-接下来，点击 `Create Applink` 按钮显示下方所示的面板：
+接下来，点击`Create Applink`按钮显示下方所示的面板：
 
-![](img/as_app_links_assistant.jpg)
+`![]` (img/as_app_links_assistant.jpg)
+
 图 84-4
 
-点击 `Open URL Mapping Editor` 按钮将 URL 映射到 Activity。在映射屏幕中，点击 `+` 按钮（如图 84-5 所示高亮）来添加新的 URL：
+点击`Open URL Mapping Editor`按钮将`URL`映射到`Activity`。在映射屏幕中，点击`+`按钮（如图 84-5 所示高亮）来添加新的`URL`：
 
-![](img/as_app_links_assistant_mappings.jpg)
+`![]` (img/as_app_links_assistant_mappings.jpg)
+
 图 84-5
 
-在 `Add URL Mapping` 对话框的 `Host` 字段中，输入你自己的网站的 URL。如果你没有用于本教程的网站，仍然可以使用 `http://www.example.com` 遵循本章的大部分内容，但无法测试需要存在 Digital Asset Links 文件的功能。
+在`Add URL Mapping`对话框的`Host`字段中，输入你自己的网站的`URL`。如果你没有用于本教程的网站，仍然可以使用`http://www.example.com`遵循本章的大部分内容，但无法测试需要存在`Digital Asset Links`文件的功能。
 
-`Path` 字段（在下方图 84-6 中标记为 B）是声明 URL 路径组件的地方。路径必须以 `/` 开头，因此在此字段中输入 `/landmarks`。
+`Path`字段（在下方图 84-6 中标记为 B）是声明`URL`路径组件的地方。路径必须以`/`开头，因此在此字段中输入`/landmarks`。
 
-`Path` 菜单 (B) 提供了以下三个路径匹配选项：
+`Path`菜单 (B) 提供了以下三个路径匹配选项：
 
-- `path` – URL 必须与 URL 的路径组件完全匹配以启动 Activity。例如，如果路径设置为 `/landmarks`，则 `http://www.example.com/landmarks` 将被视为匹配。然而，`http://www.example.com/landmarks/londonbridge` URL 将不被视为匹配。
-- `pathPrefix` – 指定的路径仅被视为前缀。在 `/landmarks` 组件之后可以包含额外的路径组件（例如，`http://www.example.com/landmarks/londonbridge` 仍被视为匹配）。
-- `pathPattern` – 允许使用基本正则表达式和通配符形式的模式匹配来指定路径，例如 `landmarks/*/[l-L]ondon/*`
+- `path` – `URL`必须与`URL`的路径组件完全匹配以启动`Activity`。例如，如果路径设置为`/landmarks`，则`http://www.example.com/landmarks`将被视为匹配。然而，`http://www.example.com/landmarks/londonbridge` `URL`将不被视为匹配。
 
-由于此示例中的路径是地标 ID 组件的前缀，请选择 `pathPrefix` 菜单选项。
+- `pathPrefix` – 指定的路径仅被视为前缀。在`/landmarks`组件之后可以包含额外的路径组件（例如，`http://www.example.com/landmarks/londonbridge`仍被视为匹配）。
 
-最后，使用 `Activity` 菜单 (C) 选择 `LandmarkActivity` 作为响应应用链接时启动的 Activity：
+- `pathPattern` – 允许使用基本正则表达式和通配符形式的模式匹配来指定路径，例如`landmarks/*/[l-L]ondon/*`
 
-![](img/as_app_links_url_mapping.jpg)
+由于此示例中的路径是地标`ID`组件的前缀，请选择`pathPrefix`菜单选项。
+
+最后，使用`Activity`菜单 (C) 选择`LandmarkActivity`作为响应应用链接时启动的`Activity`：
+
+`![]` (img/as_app_links_url_mapping.jpg)
+
 图 84-6
 
-完成对话框中的设置后，点击 `OK` 按钮提交更改。通过在映射屏幕的 `Check URL Mapping` 字段中输入以下 URL，检查 URL 格式是否正确并分配给适当的 Activity（其中 `<your domain>` 设置为上方 `Host` 字段中指定的域名）：
+完成对话框中的设置后，点击`OK`按钮提交更改。通过在映射屏幕的`Check URL Mapping`字段中输入以下`URL`，检查`URL`格式是否正确并分配给适当的`Activity`（其中`<your domain>`设置为上方`Host`字段中指定的域名）：
 
 `http://<your domain>/landmarks/toweroflondon`
 
-如果配置正确，`LandmarkActivity` 将被列为已映射的 Activity：
+如果配置正确，`LandmarkActivity`将被列为已映射的`Activity`：
 
-![](img/as_app_links_check_url.jpg)
+`![]` (img/as_app_links_check_url.jpg)
+
 图 84-7
 
-最新版本的 Android 要求为 `HTTP` 和 `HTTPS` 协议声明 App Links，即使只使用了其中一个。因此，在继续下一步之前，请重复上述步骤将 URL 的 `HTTPS` 版本添加到列表中。
+最新版本的`Android`要求为`HTTP`和`HTTPS`协议声明`App Links`，即使只使用了其中一个。因此，在继续下一步之前，请重复上述步骤将`URL`的`HTTPS`版本添加到列表中。
 
-下一步也将在 `App Links Assistant` 的 URL 映射屏幕中进行，因此保持该屏幕选中。
+下一步也将在`App Links Assistant`的`URL`映射屏幕中进行，因此保持该屏幕选中。
 
 ### 84.5 添加 Intent Filter
 
-如前一节所述，需要 Intent Filter 来响应应用链接启动目标 Activity。事实上，当添加 URL 映射时，Intent Filter 已自动添加到清单文件中。在 App Links Assistant 中选中 URL 映射向下滚动屏幕直到 Intent Filter 进入视图。预览应包含修改后的 `AndroidManifest.xml` 文件：
+如前一节所述，需要`Intent Filter`来响应应用链接启动目标`Activity`。事实上，当添加`URL`映射时，`Intent Filter`已自动添加到清单文件中。在`App Links Assistant`中选中`URL`映射向下滚动屏幕直到`Intent Filter`进入视图。预览应包含修改后的`AndroidManifest.xml`文件：
 
-![](img/as_app_links_intent_filter.jpg)
+`![]` (img/as_app_links_intent_filter.jpg)
+
 图 84-8
 
-虽然 App Links 为我们添加了 Intent Filter，但在处理应用链接时可能未包含 `autoVerify` 设置。打开 `AndroidManifest.xml` 文件并为两个 Intent Filter 添加此设置：
+虽然`App Links`为我们添加了`Intent Filter`，但在处理应用链接时可能未包含`autoVerify`设置。打开`AndroidManifest.xml`文件并为两个`Intent Filter`添加此设置：
 
 ```xml
 <intentfilter autoVerify="true">
@@ -19568,7 +19509,7 @@ Android App Links 允许通过来自外部网站和其他应用的 URL 链接启
 
 ### 84.6 添加 Intent 处理代码
 
-为止的步骤确保了根据相应的应用链接启动正确的 Activity。下一步是在 `LandmarkActivity` 类中处理 Intent，以便从数据库中提取并显示给用户。在修改 `LandmarkActivity.java` 文件中的代码之前，审查某些代码区域是值得的。在代码编辑器中打开 `LandmarkActivity.java` 文件，并找到 `onCreate()` 和 `handleIntent()` 方法，它们目前的内容如下：
+为止的步骤确保了根据相应的应用链接启动正确的`Activity`。下一步是在`LandmarkActivity`类中处理`Intent`，以便从数据库中提取并显示给用户。在修改`LandmarkActivity.java`文件中的代码之前，审查某些代码区域是值得的。在代码编辑器中打开`LandmarkActivity.java`文件，并找到`onCreate()`和`handleIntent()`方法，它们目前的内容如下：
 
 ```java
 @Override
@@ -19586,7 +19527,7 @@ private void handleIntent(Intent intent) {
 }
 ```
 
-在目前的格式下，代码期望在 `Intent`  数据中找到地标 ID。由于现在可以通过应用链接启动，必须更改此代码以处理这两种情况。从删除 `onCreate()` 方法中的对 `handleIntent()` 调用开始：
+在目前的格式下，代码期望在`Intent`数据中找到地标`ID`。由于现在可以通过应用链接启动，必须更改此代码以处理这两种情况。从删除`onCreate()`方法中的对`handleIntent()`调用开始：
 
 ```java
 @Override
@@ -19598,17 +19539,15 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
+要添加初始的`App Link`意图处理代码，返回`App Links Assistant`面板并点击步骤 2 下列出的`Select Activity`按钮。在活动选择对话框中，在点击`Insert Code`按钮之前，选择`LandmarkActivity`项：
 
-
-
-
-要添加初始的 App Link 意图处理代码，返回 App Links Assistant 面板并点击步骤 2 下列出的 `Select Activity` 按钮。在活动选择对话框中，在点击 `Insert Code` 按钮之前，选择 `LandmarkActivity` 项：
-
-![](img/as_app_links_select_activity.jpg)
+`![]` (img/as_app_links_select_activity.jpg)
 
 图 84-9
 
-返回 `LandmarkActivity.java` 文件，注意以下代码已插入到 `onCreate()` 方法中（注意，如果 Android Studio 无法完成请求，您可以手动添加此代码）：
+
+
+返回`LandmarkActivity.java`文件，注意以下代码已插入到`onCreate()`方法中（注意，如果 Android Studio 无法完成请求，您可以手动添加此代码）：
 
 ```java
 // ATTENTION: This was auto-generated to handle app links.
@@ -19620,7 +19559,7 @@ String appLinkAction = appLinkIntent.getAction();
 Uri appLinkData = appLinkIntent.getData();
 ```
 
-这段代码访问 `Intent` 对象并提取 `Action` 字符串和 `Uri`。如果活动启动源于应用链接，则 action 字符串将设置为 `android.intent.action.VIEW`，这与添加到清单文件中意图过滤器中声明的 action 相匹配。相反，如果活动是由主 Activity 中 `findLandmark()` 方法中的标准意图启动代码启动的，则 action 字符串将为 `null`。通过检查分配给 action 字符串的值，可以编写代码来识别活动是如何启动并采取适当的操作：
+这段代码访问`Intent`对象并提取`Action`字符串和`Uri`。如果活动启动源于应用链接，则 action 字符串将设置为`android.intent.action.VIEW`，这与添加到清单文件中意图过滤器中声明的 action 相匹配。相反，如果活动是由主 Activity 中`findLandmark()`方法中的标准意图启动代码启动的，则 action 字符串将为`null`。通过检查分配给 action 字符串的值，可以编写代码来识别活动是如何启动并采取适当的操作：
 
 ```java
 .
@@ -19670,7 +19609,7 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-如果 action 字符串不为 `null`，在提取 `Uri` 路径的最后一个组件之前，会验证其是否设置为 `android.intent.action.VIEW`。然后，该组件将用于执行数据库查询的地标 ID。相反，如果 action 字符串为 `null`，则调用现有的 `handleIntent()` 方法从意图数据中提取 ID。
+如果 action 字符串不为`null`，在提取`Uri`路径的最后一个组件之前，会验证其是否设置为`android.intent.action.VIEW`。然后，该组件将用于执行数据库查询的地标 ID。相反，如果 action 字符串为`null`，则调用现有的`handleIntent()`方法从意图数据中提取 ID。
 
 ## 84.7 测试 App
 
@@ -19678,19 +19617,19 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ## 84.8 创建数字资产链接文件
 
-正如章节 "Android 意图概述" 中概述的，为了完全支持应用链接，我们需要在应用链接引用的网站上安装数字资产链接文件。首先，按照 "Android 意图概述"列出的步骤定位你的 `debug.keystore` 文件并识别你的 `SHA256` 指纹。
+正如章节“Android 意图概述”中概述的，为了完全支持应用链接，我们需要在应用链接引用的网站上安装数字资产链接文件。首先，按照“Android 意图概述”列出的步骤定位你的`debug.keystore`文件并识别你的`SHA256`指纹。
 
 接下来，在网络浏览器中打开以下页面：
 
 [`developers.google.com/digital-asset-links/tools/generator`](https://developers.google.com/digital-asset-links/tools/generator)
 
-页面加载后，将你的网站 URL 输入到 Hosting site domain 字段，将 `com.ebookfrenzy.applinking` 作为 App 包名，并将你的 `SHA256` 指纹输入到 App 包指纹 (`SHA256`) 字段：
+页面加载后，将你的网站 URL 输入到 Hosting site domain 字段，将`com.ebookfrenzy.applinking`作为 App 包名，并将你的`SHA256`指纹输入到 App 包指纹（`SHA256`）字段：
 
 ![](img/asset_file_generator.jpg)
 
 图 84-10
 
-点击 `Generate` 按钮显示生成的语句，并将其放在 Web 服务器上 `.well-known` 文件夹中的 `assetlinks.json` 文件中。返回生成页面并点击 `Test` 按钮以验证文件位置是否正确。测试成功后，将出现类似的输出：
+点击`Generate`按钮显示生成的语句，并将其放在 Web 服务器上`.well-known`文件夹中的`assetlinks.json`文件中。返回生成页面并点击`Test`按钮以验证文件位置是否正确。测试成功后，将出现类似的输出：
 
 ![](img/asset_file_test.jpg)
 
@@ -19700,7 +19639,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 本章演示了在 Android 项目中实现 App Link 支持的步骤，包括在 Android Studio 中使用 App Link Assistant、URL 映射、意图过滤器、使用数字资产链接文件进行网站关联以及 App Link 测试。
 
-## 85. Android 生物识别认证教程
+# 85. Android 生物识别认证教程
 
 许多 Android 设备现在已内置触摸传感器，用于识别用户并提供对设备和应用程序功能的访问，例如使用指纹识别的应用内支付选项。指纹识别只是多种验证方法之一，还包括密码、PIN 以及最近的人脸识别。
 
@@ -19710,29 +19649,25 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ## 85.1 生物识别认证概述
 
-生物识别认证的关键组件是 `BiometricPrompt` 类。该类执行了许多以前版本需要通过编写代码完成的工作，包括显示标准对话框引导用户通过认证过程、执行认证并将结果报告应用。该类还处理了过多的失败认证尝试，并在用户再次尝试之前强制超时限制。
+生物识别认证的关键组件是`BiometricPrompt`类。该类执行了许多以前版本需要通过编写代码完成的工作，包括显示标准对话框引导用户通过认证过程、执行认证并将结果报告应用。该类还处理了过多的失败认证尝试，并在用户再次尝试之前强制超时限制。
 
+在`Name`字段中输入`BiometricDemo`，并指定`com.ebookfrenzy.biometricdemo`为包名。在点击`Finish`按钮之前，将`Minimum API level`设置为`API 29: Android (Q)`，并将`Language`菜单更改`Java`。
 
-
-
-
-在 `Name` 字段中输入 `BiometricDemo`，并指定 `com.ebookfrenzy.biometricdemo` 为包名。在点击 `Finish` 按钮之前，将 `Minimum API level` 设置为 `API 29: Android (Q)`，并将 `Language` 菜单更改 `Java`。
-
-# 85.3 配置设备指纹认证
+## 85.3 配置设备指纹认证
 
 指纹认证仅适用于带有触摸传感器的设备，并且已采取适当配置步骤来保护设备并录入至少一个指纹。有关配置模拟器会话以测试指纹认证的步骤，请参考章节“使用和配置 Android Studio AVD 模拟器”。
 
-通过打开 `Settings` 应用并选择 `Security` 选项在物理设备上配置指纹认证。在 `Security` 设置屏幕内，选择 `Fingerprint` 选项。在出现的信息屏幕上点击 `Next` 按钮进入指纹设置屏幕。在启用指纹安全之前，必须配置备份锁屏解锁方法（例如 `PIN`）。如果锁屏未受保护，请按照步骤配置 `PIN`、`pattern` 或 `password` 安全。
+通过打开`Settings`应用并选择`Security`选项在物理设备上配置指纹认证。在`Security`设置屏幕内，选择`Fingerprint`选项。在出现的信息屏幕上点击`Next`按钮进入指纹设置屏幕。在启用指纹安全之前，必须配置备份锁屏解锁方法（例如`PIN`）。如果锁屏未受保护，请按照步骤配置`PIN`、`pattern`或`password`安全。
 
-锁屏受保护后，继续进入指纹检测屏幕并在提示时触摸传感器(图 85-1)，如有需要重复此过程以添加更多指纹。
+锁屏受保护后，继续进入指纹检测屏幕并在提示时触摸传感器（图 85-1），如有需要重复此过程以添加更多指纹。
 
 ![](img/Image24253.jpg)
 
 图 85-1
 
-# 85.4 在文件中添加生物识别权限
+## 85.4 在文件中添加生物识别权限
 
-生物识别认证要求应用在项目清单文件文件中请求 `USE_BIOMETRIC` 权限。在 Android Studio 项目工具窗口中，找到并编辑 `app` -> `manifests` -> `AndroidManifest.xml` 文件，按如下方式添加权限请求：
+生物识别认证要求应用在项目清单文件文件中请求`USE_BIOMETRIC`权限。在 Android Studio 项目工具窗口中，找到并编辑`app` -> `manifests` -> `AndroidManifest.xml`文件，按如下方式添加权限请求：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -19743,11 +19678,11 @@ protected void onCreate(Bundle savedInstanceState) {
 </manifest>
 ```
 
-# 85.5 设计用户界面
+## 85.5 设计用户界面
 
-为了保持示例尽可能简单，用户界面中唯一的视觉元素将是一个 `Button` 。找到并选择 `activity_main.xml` 布局资源文件将其加载到 `Layout Editor` 工具中。
+为了保持示例尽可能简单，用户界面中唯一的视觉元素将是一个`Button`。找到并选择`activity_main.xml`布局资源文件将其加载到`Layout Editor`工具中。
 
-删除示例 `TextView` 对象，从调色板的 `Common` 类别中拖放一个 `Button` 对象并将其放置在布局画布的中心。使用 `Attributes` 工具窗口，将按钮上的 `text` 属性更改为“Authenticate”，并将字符串提取到资源中。最后，配置 `onClick` 属性以调用名为 `authenticateUser` 的方法。
+删除示例`TextView`对象，从调色板的`Common`类别中拖放一个`Button`对象并将其放置在布局画布的中心。使用`Attributes`工具窗口，将按钮上的`text`属性更改为“Authenticate”，并将字符串提取到资源中。最后，配置`onClick`属性以调用名为`authenticateUser`的方法。
 
 完成上述步骤后，布局应与图 85-2 所示所示：
 
@@ -19755,9 +19690,9 @@ protected void onCreate(Bundle savedInstanceState) {
 
 图 85-2
 
-# 85.6 添加 Toast 便利方法
+## 85.6 添加 Toast 便利方法
 
-在示例代码的各个位点，应用将设计为通过 `Toast` 消息向用户显示信息。为了避免多次重复相同的相同的 `Toast` 代码，将在 `MainActivity` 中添加一个名为 `notifyUser()` 的便利方法。该方法将接受单个 `String` 值并作为 `Toast` 消息显示给用户。现在编辑 `MainActivity.java` 文件并如下所示添加此方法：
+在示例代码的各个位点，应用将设计为通过`Toast`消息向用户显示信息。为了避免多次重复相同的相同的`Toast`代码，将在`MainActivity`中添加一个名为`notifyUser()`的便利方法。该方法将接受单个`String`值并作为`Toast`消息显示给用户。现在编辑`MainActivity.java`文件并如下所示添加此方法：
 
 ```java
 import android.widget.Toast;
@@ -19769,9 +19704,9 @@ private void notifyUser(String message) {
 }
 ```
 
-# 85.7 检查安全设置
+## 85.7 检查安全设置
 
-在本章前面的部分，已采取步骤在测试应用的设备或模拟器上配置了锁屏并注册了指纹。然而，重要的是在尝试请求指纹认证之前，在应用中包含防御性代码以确保这些要求已得到满足。这些步骤将在 `MainActivity.java` 文件中的 `onCreate` 方法中执行，并使用 `Keyguard` 和 `PackageManager` 管理服务。请注意还添加了代码来验证是否已为应用配置了 `USE_BIOMETRIC` 权限：
+在本章前面的部分，已采取步骤在测试应用的设备或模拟器上配置了锁屏并注册了指纹。然而，重要的是在尝试请求指纹认证之前，在应用中包含防御性代码以确保这些要求已得到满足。这些步骤将在`MainActivity.java`文件中的`onCreate`方法中执行，并使用`Keyguard`和`PackageManager`管理服务。请注意还添加了代码来验证是否已为应用配置了`USE_BIOMETRIC`权限：
 
 ```java
 package com.ebookfrenzy.biometricdemo;
@@ -19801,11 +19736,11 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-上述代码首先使用 `Keyguard` 管理器验证是否已配置备份解锁方法（句话说，可以使用 `PIN` 或其他认证方法作为指纹认证的替代方案来解锁屏幕）。如果锁屏未受保护，代码将向用户报告问题并从方法返回。该方法在使用管理器验证设备是否存在指纹认证之前，检查用户是否为应用启用了生物识别。
+上述代码首先使用`Keyguard`管理器验证是否已配置备份解锁方法（句话说，可以使用`PIN`或其他认证方法作为指纹认证的替代方案来解锁屏幕）。如果锁屏未受保护，代码将向用户报告问题并从方法返回。该方法在使用管理器验证设备是否存在指纹认证之前，检查用户是否为应用启用了生物识别。
 
-# 85.8 配置回调
+## 85.8 配置回调
 
-当配置生物识别提示时，需要为其分配一组认证方法，通过这些方法可以通知应用认证过程的成功或失败。这些方法需要封装在 `BiometricPrompt.AuthenticationCallback` 实例中。留在 `MainActivity.java` 文件中，添加一个方法来创建并返回该类的实例并带有相应的方法：
+当配置生物识别提示时，需要为其分配一组认证方法，通过这些方法可以通知应用认证过程的成功或失败。这些方法需要封装在`BiometricPrompt.AuthenticationCallback`实例中。留在`MainActivity.java`文件中，添加一个方法来创建并返回该类的实例并带有相应的方法：
 
 ```java
 import android.hardware.biometrics.BiometricPrompt;
@@ -19834,12 +19769,9 @@ private BiometricPrompt.AuthenticationCallback getAuthenticationCallback() {
 }
 ```
 
-# 85.9 添加 CancellationSignal
+## 85.9 添加 CancellationSignal
 
-
-
-
-一旦启动，生物识别身份验证过程将独立于应用执行。为了给应用提供取消操作的方法，会创建一个 `CancellationSignal` 类的实例并将其传递给生物识别身份验证过程。随后可以使用该 `CancellationSignal` 实例在需要时取消过程。`CancellationSignal` 实例可以配置一个监听器，该监听器会在取消完成时被调用。在活动类中添加一个新方法来配置并返回 `CancellationSignal` 对象，如下：
+一旦启动，生物识别身份验证过程将独立于应用执行。为了给应用提供取消操作的方法，会创建一个`CancellationSignal`类的实例并将其传递给生物识别身份验证过程。随后可以使用该`CancellationSignal`实例在需要时取消过程。`CancellationSignal`实例可以配置一个监听器，该监听器会在取消完成时被调用。在活动类中添加一个新方法来配置并返回`CancellationSignal`对象，如下：
 
 ```java
 import android.os.CancellationSignal;
@@ -19854,9 +19786,11 @@ private CancellationSignal getCancellationSignal() {
 }
 ```
 
+
+
 ## 85.10 启动生物识别提示
 
-剩下的工作是在 `authenticateUser()` 方法中添加代码，以创建并配置 `BiometricPrompt` 实例并启动验证。如下所示添加 `authenticateUser()` 方法：
+剩下的工作是在`authenticateUser()`方法中添加代码，以创建并配置`BiometricPrompt`实例并启动验证。如下所示添加`authenticateUser()`方法：
 
 ```java
 import android.view.View;
@@ -19876,11 +19810,11 @@ public void authenticateUser(View view) {
 }
 ```
 
-`BiometricPrompt.Builder` 类用于创建一个新的 `BiometricPrompt` 实例，并配置了显示提示对话框中的标题、副标题和描述文本。负按钮被配置为显示“Cancel”（取消）文本，并配置了一个监听器在点击此按钮时显示消息。最后，调用 `BiometricPrompt` 实例的 `authenticate()` 方法，并传递 `AuthenticationCallback` 和 `CancellationSignal` 实例。生物识别提示还需要知道在哪个线程上执行身份验证。这是通过传递一个为所需线程配置的 `Executor` 对象来定义的。在这种情况下，使用 `getMainExecutor()` 方法将主 `Executor` 对象传递给 `BiometricPrompt` 实例，以便身份验证过程在应用的主线程上发生。
+`BiometricPrompt.Builder`类用于创建一个新的`BiometricPrompt`实例，并配置了显示提示对话框中的标题、副标题和描述文本。负按钮被配置为显示“Cancel”（取消）文本，并配置了一个监听器在点击此按钮时显示消息。最后，调用`BiometricPrompt`实例的`authenticate()`方法，并传递`AuthenticationCallback`和`CancellationSignal`实例。生物识别提示还需要知道在哪个线程上执行身份验证。这是通过传递一个为所需线程配置的`Executor`对象来定义的。在这种情况下，使用`getMainExecutor()`方法将主`Executor`对象传递给`BiometricPrompt`实例，以便身份验证过程在应用的主线程上发生。
 
 ## 85.11 测试项目
 
-项目现在已完成，在物理 Android 设备或模拟器会话上运行应用，并点击 Authenticate（验证）按钮以如图 85-3 所示的 `BiometricPrompt` 对话框：
+项目现在已完成，在物理 Android 设备或模拟器会话上运行应用，并点击 Authenticate（验证）按钮以如图 85-3 所示的`BiometricPrompt`对话框：
 
 ![](img/as_3.2_biometric_prompt.jpg)
 
@@ -19896,13 +19830,13 @@ public void authenticateUser(View view) {
 
 通过点击生物识别提示对话框之外的活动来验证错误处理回调是否正常。提示对话框将消失，并弹出带有以下消息的 toast 消息：
 
-Authentication error: Fingerprint operation canceled by user.
+`Authentication error: Fingerprint operation canceled by user.`
 
 检查使用 Cancel 按钮取消提示对话框是否会触发“Authentication Canceled”（验证已取消）的 toast 消息。最后，使用未注册的指纹多次尝试身份验证，并注意在尝试几次后，提示对话框会指示失败过多，在此之前无法进行后续尝试。
 
 ## 85.12 总结
 
-本章概述了如何将生物识别身份验证集成到 Android 应用项目中。这涉及使用 `BiometricPrompt` 类，该类会自动处理大部分身份验证过程。
+本章概述了如何将生物识别身份验证集成到 Android 应用项目中。这涉及使用`BiometricPrompt`类，该类会自动处理大部分身份验证过程。
 
 ## 86 创建、测试和上传应用 Bundle
 
@@ -19918,8 +19852,6 @@ Authentication error: Fingerprint operation canceled by user.
 
 当用户从 Google Play 安装应用时，应用将以 APK 文件的形式下载。该文件包含了在用户设备上安装和运行应用所需的一切。在 Android Studio 3.2 引入之前，开发者会使用 Android Studio 生成一个或多个 APK 文件并将它们上传到 Google Play。支持多种设备类型、屏幕尺寸和语言需要为每个目标设备和语言创建并上传多个自定义 APK 文件，或者生成一个包含所有不同配置资源和平台二进制的大型通用 APK。
 
-
-
 Android 应用束包（Android App Bundle）是一个 ZIP 文件，其中包含了构建 APK 文件所需的所有文件，这些文件适用于应用项目内已支持的设备和区域。例如，该项目可能包含适用于不同屏幕尺寸的资源和图像。当用户安装应用时，Google Play 会接收有关设备的信息，包括显示器、处理器架构和区域。通过使用这些信息，会将相应的预先生成的 APK 文件传输到用户的设备上。
 
 动态交付（Dynamic Delivery）的另一个优势是能够将应用拆分为多个模块，称为动态功能模块（dynamic feature modules），每个模块包含应用内特定区域的代码和资源。每个动态功能模块都包含在与基础模块独立的 APK 文件中，并且仅在用户需要该功能时才下载到设备上。动态交付和应用包还允许创建即时动态功能模块（instant dynamic feature modules），这种模块可以在无需安装整个应用的情况下在设备上立即运行。
@@ -19928,38 +19860,50 @@ Android 应用束包（Android App Bundle）是一个 ZIP 文件，其中包含�
 
 ## 86.3 注册 Google Play 开发者控制台账号
 
-提交应用的第一步是创建 Google Play 开发者控制台账号。为此，请访问 `https://play.google.com/apps/publish/signup/` 并按照说明完成注册过程。注意，注册需要支付一次性的 25 美元费用。一旦应用开始销售，Google 将保留与应用相关的所有收入的 30%。创建账号后，可以通过 `https://play.google.com/console` 访问开发者控制台。
+提交应用的第一步是创建 Google Play 开发者控制台账号。为此，请访问`https://play.google.com/apps/publish/signup/`并按照说明完成注册过程。注意，注册需要支付一次性的 25 美元费用。一旦应用开始销售，Google 将保留与应用相关的所有收入的 30%。创建账号后，可以通过`https://play.google.com/console`访问开发者控制台。
 
 下一步是收集有关应用的信息。为了将您的应用推市场，需要以下信息：
 
 • 标题（Title）——应用的标题。
+
 • 简短说明（Short Description）——最多 80 个字的应用描述。
+
 • 完整说明（Full Description）——最多 4000 个字的应用描述。
+
 • 截图（Screenshots）——最多 8 张应用运行截图（至少需要两张）。Google 建议提交在 7 英寸或 10 英寸平板上运行的应用截图。
+
 • 语言（Language）——应用的语言（默认为美国英语）。
+
 • 推广文本（Promotional Text）——当应用出现在 Google Play 环境内的特殊推广活动时使用的文本。
+
 • 应用类型（Application Type）——您的应用被视为游戏还是应用程序。
+
 • 类别（Category）——最能描述您应用的类别（例如：金融、健康与健身、教育、体育等）。
+
 • 位置（Locations）——您希望您的应用可供购买的地理位置。
+
 • 联系方式（Contact Details）——用户可以通过哪些方式联系您以获取应用支持。选项包括网页、电子邮件和电话。
+
 • 定价与分发（Pricing & Distribution）——关于应用价格以及其营销和销售地理位置的信息。
 
-收集上述信息后，点击 Google Play 控制台中的 `Create app`（创建应用）按钮开始创建过程。
+收集上述信息后，点击 Google Play 控制台中的`Create app`（创建应用）按钮开始创建过程。
 
 ## 86.4 在控制台中配置应用
 
-当首次点击 `Create app` 按钮时，将出现如图 [86-1] 所示的应用详情和声明屏幕：
+当首次点击`Create app`按钮时，将出现如图 [86-1] 所示的应用详情和声明屏幕：
 
 ```
 ![](img/as_4.1_play_create_app.jpg)
 ```
+
 图 86-1
 
-一旦完全配置应用条目，点击 `Create app` 按钮（如上图所示）来添加应用并显示仪表板屏幕。在仪表板中，找到 `Set up your app`（设置您的应用）部分并展开任务列表以配置应用商店列表：
+一旦完全配置应用条目，点击`Create app`按钮（如上图所示）来添加应用并显示仪表板屏幕。在仪表板中，找到`Set up your app`（设置您的应用）部分并展开任务列表以配置应用商店列表：
 
 ```
 ![](img/google_play_setup_app.jpg)
 ```
+
 图 86-2
 
 逐步完成列表中的链接并为您的应用提供所需信息，确保每一步都保存更改。
@@ -19968,80 +19912,83 @@ Android 应用束包（Android App Bundle）是一个 ZIP 文件，其中包含�
 
 直到最近，Google Play 的上传都是在 Android Studio 内部使用发布应用签名密钥进行签名，然后上传到 Google Play 控制台。虽然此选项仍然可用，但推荐的上传方式是使用名为“Google Play 应用签名”（Google Play App Signing）的过程。对于新创建的应用，这涉及加入 Google Play 应用签名并生成上传密钥以在 Android Studio 中签名应用包文件。当 Android Studio 生成的应用包文件被上传时，Google Play 控制台会移除上传密钥，并使用安全存储在 Google Play 服务器中的应用签名密钥对文件进行签名。对于现有应用，需要额外的步骤来启用 Google Play 签名，本本章结尾介绍。
 
-在 Google Play 控制台中，从 `All Apps`（所有应用）屏幕（通过左侧导航面板顶部的选项访问）选择新添加的应用条目，展开 `Setup`（设置）部分（图 [86-3] 中的标记 A 处），并选择 `App Signing`（应用签名）选项（B）。
+在 Google Play 控制台中，从`All Apps`（所有应用）屏幕（通过左侧导航面板顶部的选项访问）选择新添加的应用条目，展开`Setup`（设置）部分（图 [86-3] 中的标记 A 处），并选择`App Signing`（应用签名）选项（B）。
 
 ```
 ![](img/as_4.1_play_enable_app_signing.jpg)
 ```
+
 图 86-3
 
-点击 `Create release`（创建发布）按钮（C）加入 Google Play 应用签名。控制台现在已准备好为您的应用创建第一个测试版本。然而，在此之前，下一步是在 Android Studio 内部生成上传密钥。这是生成签名应用包过程中的一部分。请保持当前 Google Play 控制台屏幕在浏览器中加载，因为我们稍后在本章中返回此处。
+点击`Create release`（创建发布）按钮（C）加入 Google Play 应用签名。控制台现在已准备好为您的应用创建第一个测试版本。然而，在此之前，下一步是在 Android Studio 内部生成上传密钥。这是生成签名应用包过程中的一部分。请保持当前 Google Play 控制台屏幕在浏览器中加载，因为我们稍后在本章中返回此处。
 
 ## 86.6 创建密钥库文件（Keystore File）
 
-要创建密钥库文件，选择 `Android Studio Build -> Generate Signed Bundle / APK…` 菜单选项，显示如图 [86-4] 所示的 `Generate Signed Bundle or APK Wizard` 对话：
+要创建密钥库文件，选择`Android Studio Build -> Generate Signed Bundle / APK…`菜单选项，显示如图 [86-4] 所示的`Generate Signed Bundle or APK Wizard`对话：
 
 ```
 ![](img/as_generate_bundle.jpg)
 ```
+
 图 86-4
 
-在点击 `Next`（下一步）按钮之前，验证已选择 `Android App Bundle`（Android 应用包）选项。
+在点击`Next`（下一步）按钮之前，验证已选择`Android App Bundle`（Android 应用包）选项。
 
-如果已有密钥库文件，在下一个屏幕上点击 `Choose existing…`（选择现有...）按钮，并导航到选择该文件。如果没有创建密钥库文件，点击 `Create new…`（新建...）按钮显示 `New Key Store` 对话（图 86-5）。点击 `Key store path` 字段右侧的按钮，导航到文件系统的合适位置，为密钥库文件命名（例如 `release.keystore.jks`）并点击 `OK` 按钮。
+如果已有密钥库文件，在下一个屏幕上点击`Choose existing…`（选择现有...）按钮，并导航到选择该文件。如果没有创建密钥库文件，点击`Create new…`（新建...）按钮显示`New Key Store`对话（图 86-5）。点击`Key store path`字段右侧的按钮，导航到文件系统的合适位置，为密钥库文件命名（例如`release.keystore.jks`）并点击`OK`按钮。
 
-`New Key Store` 对话分为两个部分。上半部分与密钥库文件有关。在 `Password` 和 `Confirm` 字段中输入保护密钥库文件的强密码。对话的下半部分与存储在密钥库中的上传密钥有关。
+`New Key Store`对话分为两个部分。上半部分与密钥库文件有关。在`Password`和`Confirm`字段中输入保护密钥库文件的强密码。对话的下半部分与存储在密钥库中的上传密钥有关。
 
-在 `New Key Store` 对话的 `Key` 部分输入以下详细信息：
+在`New Key Store`对话的`Key`部分输入以下详细信息：
 
 • 引用密钥（可以是任何字符序列，但系统仅使用前八个）。
+
 • 保护密钥的强密码。
+
 • 密钥有效期年数（Google 建议超过 25 年）。
 
 此外，必须在剩余字段的至少一个中提供信息（例如，您的姓名或组织名称）。
 
-输入信息后，点击 `OK` 按钮创建密钥库。
+输入信息后，点击`OK`按钮创建密钥库。
 
 ## 86.7 创建 Android 应用包
 
-下一步是指示 Android Studio 以发布模式构建应用包文件，并使用新创建的私钥对其进行签名。此时，`Generate Signed Bundle or APK` 对话应仍显示，且 `keystore path`、`passwords` 和 `key alias` 字段已填充信息：
-
-
-
-
+下一步是指示 Android Studio 以发布模式构建应用包文件，并使用新创建的私钥对其进行签名。此时，`Generate Signed Bundle or APK`对话应仍显示，且`keystore path`、`passwords`和`key alias`字段已填充信息：
 
 ![](img/as_generate_app_bundle_keystore_ready.jpg)
+
 图 86-6
 
-确保启用 `Export Encrypted Key` 选项，并在假设其他设置正确的情况下，点击 `Next` 按钮进入应用包生成屏幕（见图 86-7）。在此屏幕上，请检查 `Destination Folder:` 设置，以验证生成应用包文件的存储位置是否可以接受。如果偏于使用其他位置，点击文本字段右侧的按钮，并导航到所需的文件系统位置。
+确保启用`Export Encrypted Key`选项，并在假设其他设置正确的情况下，点击`Next`按钮进入应用包生成屏幕（见图 86-7）。在此屏幕上，请检查`Destination Folder:`设置，以验证生成应用包文件的存储位置是否可以接受。如果偏于使用其他位置，点击文本字段右侧的按钮，并导航到所需的文件系统位置。
 
 ![](img/as_generate_app_bundle_generate.jpg)
+
 图 86-7
 
-点击 `Create` 按钮并等待 `Gradle` 系统构建应用包。构建完成后，将弹出一个对话框，提供在资源管理器窗口中打开包含应用包文件的文件夹的选项，或将文件加载到 `APK Analyzer` 中的选项：
+点击`Create`按钮并等待`Gradle`系统构建应用包。构建完成后，将弹出一个对话框，提供在资源管理器窗口中打开包含应用包文件的文件夹的选项，或将文件加载到`APK Analyzer`中的选项：
 
 ![](img/as_generate_app_bundle_ready.jpg)
+
 图 86-8
 
-此时，应用程序已准备好提交到 Google Play。点击 `locate` 链接打开文件系统浏览器窗口。除非指定了其他位置，否则该文件应名为 `bundle.aab`，并位于项目文件夹的 `app/release` 子目录下。
+此时，应用程序已准备好提交到 Google Play。点击`locate`链接打开文件系统浏览器窗口。除非指定了其他位置，否则该文件应名为`bundle.aab`，并位于项目文件夹的`app/release`子目录下。
 
 在此过程中生成的私钥应用于未来应用程序的签名和发布，因此应将其保存在安全的地方并进行安全备份。
 
 ## 86.8 生成测试 APK 文件
 
-此阶段的一个可选步骤是从应用包生成 APK 文件，并在设备或模拟器会话上安装并运行它们。Google 提供了一个名为 `bundletool` 的命令行工具，专门为此目的设计，可以从以下 URL 下载：
+此阶段的一个可选步骤是从应用包生成 APK 文件，并在设备或模拟器会话上安装并运行它们。Google 提供了一个名为`bundletool`的命令行工具，专门为此目的设计，可以从以下 URL 下载：
 
-https://github.com/google/bundletool/releases
+`https://github.com/google/bundletool/releases`
 
-在编写时，`bundletool` 以 `.jar` 文件的形式提供，可以如下所示从命令行执行（请注意版本号自本书出版以来可能已经发生变化）：
+在编写时，`bundletool`以`.jar`文件的形式提供，可以如下所示从命令行执行（请注意版本号自本书出版以来可能已经发生变化）：
 
 ```bash
 java -jar bundletool-all-0.9.0.jar
 ```
 
-运行上述命令将列出工具中可用的所有选项。要从应用包生成 APK 文件，需使用 `build-apks` 选项。还需要对文件进行签名，以生成可以安装到设备或模拟器上的 APK 文件。为了实现这一点，请包含 `--ks` 选项并指定在本章之前创建的密钥库文件路径，以及 `--ks-key-alias` 选项并指定生成密钥时提供的别名。
+运行上述命令将列出工具中可用的所有选项。要从应用包生成 APK 文件，需使用`build-apks`选项。还需要对文件进行签名，以生成可以安装到设备或模拟器上的 APK 文件。为了实现这一点，请包含`--ks`选项并指定在本章之前创建的密钥库文件路径，以及`--ks-key-alias`选项并指定生成密钥时提供的别名。
 
-最后，必须使用 `--output` 标志来指定生成 APK 文件的文件路径（称为 APK 集）。该文件不能已存在，并且必须具有 `.apks` 文件扩展名。将这些要求结合起来，得到以下命令行（考虑到您的操作系统路径结构可能存在差异）：
+最后，必须使用`--output`标志来指定生成 APK 文件的文件路径（称为 APK 集）。该文件不能已存在，并且必须具有`.apks`文件扩展名。将这些要求结合起来，得到以下命令行（考虑到您的操作系统路径结构可能存在差异）：
 
 ```bash
 java -jar bundletool-all-0.9.0.jar build-apks --bundle=/tmp/MyApps/app/release/bundle.aab --output=/tmp/MyApks.apks --ks=/MyKeys/release.keystore.jks --ks-key-alias=MyReleaseKey
@@ -20076,78 +20023,87 @@ java -jar bundletool-all-0.9.0.jar get-device-spec --output=/tmp/device.json
 
 接下来，使用此规格文件从 APK Set 中提取匹配的 APK 文件：
 
+
+
+执行以下命令，从 APKS 中提取适用于指定设备配置的 APK 文件：
+
 ```bash
 java -jar bundletool-all-0.9.0.jar extract-apks --apks=/tmp/MyApks.apks --output-dir=/tmp/nexus5_apks --device-spec=/tmp/device.json
 ```
 
-执行时，通过 `--output-dir` 标志指定的目录将包含适用于指定设备配置的正确 APK 文件。
+执行时，通过`--output-dir`标志指定的目录将包含适用于指定设备配置的正确 APK 文件。
 
 将 Android 应用程序推向市场的下一步是将其提交到 Google Play 开发者控制台以便进行测试。
 
 ## 86.9 将应用包上传到 Google Play 开发者控制台
 
-返回 Google Play Console，点击 `Create new release` 按钮（B）之前，在导航面板的 `Testing` 部分选择 `Internal testing` 选项（在图 86-9 中标记为 A）：
+返回 Google Play Console，在导航面板的`Testing`部分选择`Internal testing`选项（在图 86-9 中标记为 A），然后点击`Create new release`按钮（B）：
 
 ![](img/as_4.1_play_create_new_release.jpg)
+
 图 86-9
 
-在结果屏幕上，点击 `Continue` 按钮（下方标记）以确认 Google Play 签名，然后拖入由 Android Studio 生成的包文件：
+在结果屏幕上，点击`Continue`按钮（下方标记）以确认 Google Play 签名，然后拖入由 Android Studio 生成的包文件：
 
 ![](img/as_4.1_play_bundle.jpg)
+
 图 86-10
 
 在随后出现的屏幕上，输入发布名称和可选发布说明。发布名称可以是任何帮助您识别发布版本的信息，且对用户可见。
 
-包文件上传后，Google Play 将生成所有用于测试的 APK 文件。一旦 APK 文件生成，滚动到屏幕底部并点击 `Save` 按钮。设置保存后，点击 `Review release` 按钮。
+包文件上传后，Google Play 将生成所有用于测试的 APK 文件。一旦 APK 文件生成，滚动到屏幕底部并点击`Save`按钮。设置保存后，点击`Review release`按钮。
 
 ### 86.10 探索应用包
 
 在审核屏幕上，点击图 86-11 所示的包右侧的箭头：
 
 ![](img/as_4.1_play_review.jpg)
+
 图 86-11
 
-在结果面板中，点击 `Explore` 链接加载应用包。这提供了与应用包相关的 API 级别、屏幕布局和平台的摘要信息：
+在结果面板中，点击`Explore`链接加载应用包。这提供了与应用包相关的 API 级别、屏幕布局和平台的摘要信息：
 
 ![](img/as_4.1_play_explorer.jpg)
+
 图 86-12
 
-点击 `Go to device catalog` 链接将显示支持该 APK 设备：
+点击`Go to device catalog`链接将显示支持该 APK 设备：
 
 ![](img/as_4.1_play_device_catalog.jpg)
+
 图 13
 
 目前应用程序已准备好测试，但只有在控制台中设置了某些测试人员后才能发布。
 
 ### 86.11 管理测试人员
 
-如果应用程序仍处于内部、Alpha 或 Beta 测试阶段，可以通过在 Google Play 控制台中选择应用程序、点击 `Internal testing` 并选择 `Testers` 选项卡来指定授权测试人员列表：
+如果应用程序仍处于内部、Alpha 或 Beta 测试阶段，可以通过在 Google Play 控制台中选择应用程序、点击`Internal testing`并选择`Testers`选项卡来指定授权测试人员列表：
 
 ![](img/as_4.1_play_testers.jpg)
+
 图 86-14
 
-要添加测试人员，点击 `Create email list` 按钮，命名列表并手动或通过上传 CSV 文件指定测试用户的电子邮件地址。
+要添加测试人员，点击`Create email list`按钮，命名列表并手动或通过上传 CSV 文件指定测试用户的电子邮件地址。
 
-现在可以从屏幕复制 `Join on the web` URL 并提供给测试人员，让他们接受测试邀请并下载应用程序。
+现在可以从屏幕复制`Join on the web`URL 并提供给测试人员，让他们接受测试邀请并下载应用程序。
 
 ### 86.12 发布应用程序进行测试
 
-现在已创建内部发布版本并添加了测试人员列表，应用程序已准备好发布测试。留在 `Internal testing` 屏幕中，在点击新创建版本的 `Edit` 按钮之前，选择 `Releases` 选项卡：
+现在已创建内部发布版本并添加了测试人员列表，应用程序已准备好发布测试。留在`Internal testing`屏幕中，在点击新创建版本的`Edit`按钮之前，选择`Releases`选项卡：
 
 ![](img/as_4.1_play_ready_for_rollout.jpg)
+
 图 86-15
 
-在审核屏幕上，滚动到最后并点击 `Start rollout to Internal testing` 按钮。在处理短暂延迟后，应用程序将供指定的用户下载和测试。
+在审核屏幕上，滚动到最后并点击`Start rollout to Internal testing`按钮。在处理短暂延迟后，应用程序将供指定的用户下载和测试。
 
+为您的应用上传的第一个 App 包（app bundle）文件的版本号始终为`1`。如果尝试上传另一个相同版本号的包文件，控制台将通过以下错误拒绝该文件：
 
+```
+You need to use a different version code for your APK because you already have one with version code 1.
+```
 
-
-
-为您的应用上传的第一个 App 包（app bundle）文件的版本号始终为 `1`。如果尝试上传另一个相同版本号的包文件，控制台将通过以下错误拒绝该文件：
-
-`You need to use a different version code for your APK because you already have one with version code 1.`
-
-要解决此问题，需要增加嵌入到包文件中的版本号。这在项目的模块级 `build.gradle.kts` 文件中完成，如图中图 86-16
+要解决此问题，需要增加嵌入到包文件中的版本号。这在项目的模块级`build.gradle.kts`文件中完成，如图中图 86-16：
 
 图 86-16
 
@@ -20171,26 +20127,28 @@ android {
 }
 ```
 
-要更改版本号，请修改 `versionCode` 旁声明的数字。要更改显示给应用用户的版本名称，请修改 `versionName` 字符串。例如：
+要更改版本号，请修改`versionCode`旁声明的数字。要更改显示给应用用户的版本名称，请修改`versionName`字符串。例如：
 
-`versionCode 2`
-`versionName "2.0"`
+```
+versionCode 2
+versionName "2.0"
+```
 
 完成这些更改后，重新构建 APK 文件并再次尝试。
 
 ## 86.14 分析 App 包文件
 
-Android Studio 提供了分析 App 包文件内容的能力。要分析包文件，请选择 Android Studio Build -> Analyze APK… 菜单选项，并导航到选择要审查的包文件。一旦加载到工具中，将显示有关包的原始大小和下载大小的信息，以及包的文件结构列表，如图图 86-17
+Android Studio 提供了分析 App 包文件内容的能力。要分析包文件，请选择 Android Studio `Build -> Analyze APK...`菜单选项，并导航到选择要审查的包文件。一旦加载到工具中，将显示有关包的原始大小和下载大小的信息，以及包的文件结构列表，如图 86-17 所示：
 
 图 86-17
 
-选择 `classes.dex` 文件将在下方的面板中显示该文件的类结构。在该面板中，可以深入探索各个类的详细信息，直到类内部的方法级别：
+选择`classes.dex`文件将在下方的面板中显示该文件的类结构。在该面板中，可以深入探索各个类的详细信息，直到类内部的方法级别：
 
 ![](img/as_analyze_apk_dex.jpg)
 
 图 86-18
 
-同样，在文件列表中选择资源或图像文件将在下方的面板中显示文件内容。可以通过点击 `Compare with previous APK…` 按钮并选择第二个包文件来查看两个包文件之间的大小差异。
+同样，在文件列表中选择资源或图像文件将在下方的面板中显示文件内容。可以通过点击`Compare with previous APK...`按钮并选择第二个包文件来查看两个包文件之间的大小差异。
 
 ### 86.15 总结
 
@@ -20202,15 +20160,15 @@ Android Studio 提供了分析 App 包文件内容的能力。要分析包文件
 
 在 Android 和 iOS 等操作系统的移动应用早期，最常见的盈利方式是收取下载和安装应用的预付费。不久，通过在应用中嵌入广告引入了另一种收入机会。最常见且利润丰厚的选项是用户在安装应用后，费用购买应用内项目。这通常表现为访问游戏中的高级别、获取虚拟商品或货币，或者订阅数字版杂志或报纸的高级内容。
 
-Google 支持通过 Google Play 应用内结算 API（Play In-App Billing API）和 Play Console 集应用内购买。本章将提供应用内购买的概述，并概述如何将应用内购买集成到您的 Android 项目中。探索这些主题后，下一章将引导您创建一个包含应用内购买功能的示例应用。
+Google 支持通过 Google Play 应用内结算 API（Play In-App Billing API）和 Play Console 集成应用内购买。本章将提供应用内购买的概述，并概述如何将应用内购买集成到您的 Android 项目中。探索这些主题后，下一章将引导您创建一个包含应用内购买功能的示例应用。
 
 ### 87.1 为应用内购买准备项目
 
-在应用中构建应用内购买需要一个 Google Play 开发者控制台账户，其详情在之前的“创建、测试和上传 Android App 包”章节中介绍过。您还必须注册 Google 商家帐户。可以通过在 Play 控制台中导航到 `Setup -> Payments profile` 找到这些设置。请注意，并非所有国家/地区都可以进行注册。有关详细信息，请参阅以下页面：
+在应用中构建应用内购买需要一个 Google Play 开发者控制台账户，其详情在之前的“创建、测试和上传 Android App 包”章节中介绍过。您还必须注册 Google 商家帐户。可以通过在 Play 控制台中导航到`Setup -> Payments profile`找到这些设置。请注意，并非所有国家/地区都可以进行注册。有关详细信息，请参阅以下页面：
 
 [`support.google.com/googleplay/android-developer/answer/9306917`](https://support.google.com/googleplay/android-developer/answer/9306917)
 
-随后将应用上传到控制台并启用应用内购买。然而，除非已模块级 `build.gradle.kts` 文件添加了 Google Play Billing Library，否则控制台将不会为应用激活应用内购买支持：
+随后将应用上传到控制台并启用应用内购买。然而，除非已模块级`build.gradle.kts`文件添加了 Google Play Billing Library，否则控制台将不会为应用激活应用内购买支持：
 
 ```kotlin
 dependencies {
@@ -20222,7 +20180,7 @@ dependencies {
 
 ### 87.2 创建应用内产品和订阅
 
-产品和订阅使用 Play 控制台中的变现（Monetize）部分创建和管理，如图图 87-1 所示：
+产品和订阅使用 Play 控制台中的变现（Monetize）部分创建和管理，如图 87-1 所示：
 
 ![](img/play_console_monetization.jpg)
 
@@ -20232,9 +20190,9 @@ dependencies {
 
 ### 87.3 初始化 Billing Client
 
-应用与 Google Play 之间的通信通过 `BillingClient` 实例处理。此外，`BillingClient` 包含一组可以执行同步和异步结算活动的方法。在初始化结算客户端时，需要为其提供一个 `PurchasesListener` 回调处理器。客户端将调用此回调来通知应用购买活动的结果。为了避免重复通知，建议每个应用使用一个 `BillingClient` 实例。
+应用与 Google Play 之间的通信通过`BillingClient`实例处理。此外，`BillingClient`包含一组可以执行同步和异步结算活动的方法。在初始化结算客户端时，需要为其提供一个`PurchasesListener`回调处理器。客户端将调用此回调来通知应用购买活动的结果。为了避免重复通知，建议每个应用使用一个`BillingClient`实例。
 
-可以使用 `newBuilder()` 方法创建 `BillingClient` 实例，并传入活动或片段。然后通过 `setListener()` 方法将购买更新处理程序分配给客户端：
+可以使用`newBuilder()`方法创建`BillingClient`实例，并传入活动或片段。然后通过`setListener()`方法将购买更新处理程序分配给客户端：
 
 ```java
 private final PurchasesListener purchasesUpdatedListener = new PurchasesListener() {
@@ -20246,23 +20204,13 @@ private final PurchasesListener purchasesUpdatedListener = new PurchasesListener
                 // 处理购买
             }
         } else if (billingResult.getResponseCode() ==
-```
-
-
-
-
-
-```java
-            BillingClient.BillingResponseCode.USER_CANCELED) {
-
+                   BillingClient.BillingResponseCode.USER_CANCELED) {
             // 用户取消购买
-
-          } else {
-            //在此处处理错误
-
-          }
+        } else {
+            // 在此处处理错误
+        }
     }
-  };
+};
 
 private BillingClient billingClient = BillingClient.newBuilder(context)
     .setListener(purchasesUpdatedListener)
@@ -20272,9 +20220,9 @@ private BillingClient billingClient = BillingClient.newBuilder(context)
 
 ## 87.4 连接到 Google Play Billing 库
 
-在成功创建 `BillingClient` 后，下一步是初始化与 Google Play Billing 库的连接。必须调用计费客户端实例的 `startConnection()` 方法来建立此连接。由于连接是异步执行的，必须实现一个 `BillingClientStateListener` 以接收指示连接是否成功的回调。还应该添加代码来重写 `onBillingServiceDisconnected()` 方法。当与 Billing 库的连接丢失时，会调用此方法，并用于向用户报告问题以及重试连接。
+在成功创建`BillingClient`后，下一步是初始化与 Google Play Billing 库的连接。必须调用计费客户端实例的`startConnection()`方法来建立此连接。由于连接是异步执行的，必须实现一个`BillingClientStateListener`以接收指示连接是否成功的回调。还应该添加代码来重写`onBillingServiceDisconnected()`方法。当与 Billing 库的连接丢失时，会调用此方法，并用于向用户报告问题以及重试连接。
 
-一旦完成设置和连接任务，`BillingClient`实例将调用 `onBillingSetupFinished()` 方法，可以通过该方法检查客户端是否已就绪：
+一旦完成设置和连接任务，`BillingClient`实例将调用`onBillingSetupFinished()`方法，可以通过该方法检查客户端是否已就绪：
 
 ```java
 billingClient.startConnection(new BillingClientStateListener() {
@@ -20282,12 +20230,12 @@ billingClient.startConnection(new BillingClientStateListener() {
     @Override
     public void onBillingSetupFinished(
             @NonNull BillingResult billingResult) {
-      if (billingResult.getResponseCode() ==
-                  BillingClient.BillingResponseCode.OK) {
-        // 连接成功
-      } else {
-        // 连接失败
-      }
+        if (billingResult.getResponseCode() ==
+            BillingClient.BillingResponseCode.OK) {
+            // 连接成功
+        } else {
+            // 连接失败
+        }
     }
     @Override
     public void onBillingServiceDisconnected() {
@@ -20298,7 +20246,7 @@ billingClient.startConnection(new BillingClientStateListener() {
 
 ## 87.5 查询可用商品
 
-一旦计费环境初始化并准备就绪，下一步是请求可购买的商品或订阅的详情。这是通过调用 `BillingClient` 的 `queryProductDetailsAsync()` 方法并传递一个适当配置的 `QueryProductDetailsParams` 实例来实现，该实例包含产品 ID 和类型（订阅使用 `ProductType.SUBS`，托管商品使用 `ProductType.INAPP`）：
+一旦计费环境初始化并准备就绪，下一步是请求可购买的商品或订阅的详情。这是通过调用`BillingClient`的`queryProductDetailsAsync()`方法并传递一个适当配置的`QueryProductDetailsParams`实例来实现，该实例包含产品 ID 和类型（订阅使用`ProductType.SUBS`，托管商品使用`ProductType.INAPP`）：
 
 ```java
 QueryProductDetailsParams queryProductDetailsParams =
@@ -20315,20 +20263,20 @@ billingClient.queryProductDetailsAsync(queryProductDetailsParams,
         public void onProductDetailsResponse(
                 @NonNull BillingResult billingResult,
                 @NonNull List<ProductDetails> productDetailsList) {
-          if (!productDetailsList.isEmpty()) {
-            // 处理匹配商品列表
-          } else {
-            // 无匹配的商品
-          }
+            if (!productDetailsList.isEmpty()) {
+                // 处理匹配商品列表
+            } else {
+                // 无匹配的商品
+            }
         }
     });
 ```
 
-`queryProductDetailsAsync()` 方法接收一个 `ProductDetailsListener`，该监听器会被调用，并传入一个包含匹配商品信息的 `ProductDetail` 对象列表。例如，我们可以调用这些对象的方法来获取如商品名称、标题、价格和优惠等信息。
+`queryProductDetailsAsync()`方法接收一个`ProductDetailsListener`，该监听器会被调用，并传入一个包含匹配商品信息的`ProductDetail`对象列表。例如，我们可以调用这些对象的方法来获取如商品名称、标题、价格和优惠等信息。
 
 ## 87.6 启动购买流程
 
-一旦用户查询并选择了某个商品或订阅，购买流程就可以准备启动了。我们通过调用 `BillingClient` 的 `launchBillingFlow()` 方法来实现，并传递当前 activity 参数以及一个包含所购项目 `ProductDetail` 的 `BillingFlowParams` 实例。
+一旦用户查询并选择了某个商品或订阅，购买流程就可以准备启动了。我们通过调用`BillingClient`的`launchBillingFlow()`方法来实现，并传递当前 activity 参数以及一个包含所购项目`ProductDetail`的`BillingFlowParams`实例：
 
 ```java
 BillingFlowParams billingFlowParams =
@@ -20343,9 +20291,11 @@ BillingFlowParams billingFlowParams =
 billingClient.launchBillingFlow(this, billingFlowParams);
 ```
 
-购买操作的成功与否将通过在本章之前概述的 `PurchasesListener` 回调报告。
+购买操作的成功与否将通过在本章之前概述的`PurchasesListener`回调报告。
 
 ## 87.7 完成购买
+
+
 
 当购买成功时，`PurchasesListener` 处理器将收到一个包含每个项目 `Purchase` 对象的列表。你可以如下方式调用 `Purchase` 实例的 `getPurchaseState()` 方法来验证商品是否已购买：
 
@@ -20391,7 +20341,7 @@ ConsumeListener listener = new ConsumeListener() {
 };
 ```
 
-## 87.8 查询历史购买
+# 87.8 查询历史购买
 
 处理应用内购买时，检查用户是否已经购买过某个商品或订阅是一个常见需求。可以通过调用 `BillingClient` 实例的 `queryPurchasesAsync()` 方法并实现 `PurchaseResponseListener` 来生成用户特定类型的历史购买列表。例如，以下代码获取了所有尚未消耗的已购买项目列表：
 
@@ -20405,10 +20355,6 @@ billingClient.queryPurchasesAsync(queryPurchasesParams,
         @Override
 ```
 
-
-
-
-
 ```java
 public void onQueryPurchasesResponse(@NonNull BillingResult billingResult,
         @NonNull List<Purchase> list) {
@@ -20419,7 +20365,7 @@ public void onQueryPurchasesResponse(@NonNull BillingResult billingResult,
 
 要获取活跃订阅列表，请将 `ProductType` 值从 `INAPP` 改为 `SUBS`。
 
-或者，若要获取每个产品的最近购买列表，请调用 `BillingClient queryPurchaseHistoryAsync()` 方法：
+或者，若要获取每个产品的最近购买列表，请调用 `BillingClient` 的 `queryPurchaseHistoryAsync()` 方法：
 
 ```java
 QueryPurchaseHistoryParams queryPurchaseHistoryParams =
@@ -20452,7 +20398,7 @@ billingClient.queryPurchaseHistoryAsync(queryPurchaseHistoryParams,
 
 此项练习的第一步是创建一个新项目。启动 Android Studio 并在欢迎界面选择 `New Project`（新建项目）选项。在新项目对话框中点击 `Next`（下一步）之前，选择 `Empty Views Activity` 模板。
 
-在 `Name` 字段中输入 `InAppPurchase`，并指定在 Google Play 生态系统中唯一标识您的应用的包名（例如，`com.<your company> InAppPurchase`）。在点击 `Finish`（完成）按钮之前，将 `Minimum API level` 设置为 `API 26: Android 8.0 (Oreo)`并将 `Language` 菜单设置为 `Java`。项目创建完成后，使用 11.8 Migrating a Project to View Binding 节中概述的步骤将项目转换为使用视图绑定。
+在 `Name` 字段中输入 `InAppPurchase`，并指定在 Google Play 生态系统中唯一标识您的应用的包名（例如，`com.<your company> InAppPurchase`）。在点击 `Finish`（完成）按钮之前，将 `Minimum API level` 设置为 `API 26: Android 8.0 (Oreo)` 并将 `Language` 菜单设置为 `Java`。项目创建完成后，使用 `11.8 Migrating a Project to View Binding` 节中概述的步骤将项目转换为使用视图绑定。
 
 ## 88.3 向项目添加库
 
@@ -20482,7 +20428,7 @@ dependencies {
 
 ## 88.4 设计用户界面
 
-用户界面将由一个 `TextView` 和两个 `Buttons` 组成。将 `activity_main.xml` 文件加载到编辑器中，将两个 `Button` 视图拖放到布局中，使一个位于另一个上方，且都在 `TextView` 下。选择 `TextView`并将 `id` 改为 `statusText`。
+用户界面将由一个 `TextView` 和两个 `Buttons` 组成。将 `activity_main.xml` 文件加载到编辑器中，将两个 `Button` 视图拖放到布局中，使一个位于另一个上方，且都在 `TextView` 下。选择 `TextView` 并将 `id` 改为 `statusText`。
 
 点击工具栏上的 `Clear Constraints`（清除约束）并选择 `Center -> Horizontally in Parent`（在父布局中水平居中）。再次重复此步骤，选择 `Chains -> Vertical`（垂直链）。更改顶部按钮的文本属性，使其显示为“Consume Purchase”（消耗购买），并将 `id` 改为 `consumeButton`。还要配置 `onClick` 属性以调用 `consumePurchase`。
 
@@ -20492,7 +20438,7 @@ dependencies {
 
 ## 88.5 将应用添加到 Google Play Store
 
-使用 Creating, Testing, and Uploading an Android Bundle 章节中概述的步骤，登录 Play Console，创建一个新应用并设置一个新的测试轨道。返回 Android Studio 为项目生成签名发布包。一旦生成了包文件，将其上传到内部测试轨道并发布测试。
+使用 `Creating, Testing, and Uploading an Android Bundle` 章节中概述的步骤，登录 Play Console，创建一个新应用并设置一个新的测试轨道。返回 Android Studio 为项目生成签名发布包。一旦生成了包文件，将其上传到内部测试轨道并发布测试。
 
 ## 88.6 创建应用内产品
 
@@ -20500,7 +20446,7 @@ dependencies {
 
 ![Figure 88-2](img/play_console_monetization.jpg)
 
-在应用内产品页面上，点击 `Create product`创建产品）按钮：
+在应用内产品页面上，点击 `Create product`（创建产品）按钮：
 
 ![Figure 88-3](img/play_console_create_product.jpg)
 
@@ -20515,13 +20461,9 @@ dependencies {
 
 在测试应用内结算时，可以在不花费资金的情况下进行测试购买是非常用的。这可以通过对内部轨道测试人员启用许可测试来实现。许可测试人员在购买时可以使用测试支付卡，这样就不会被扣费。
 
-在 Play Console 中，返回主屏幕并选择 `Setup -> License testing`选项：
+在 Play Console 中，返回主屏幕并选择 `Setup -> License testing` 选项：
 
 ![Figure 88-4](img/play_console_license_testing.jpg)
-
-
-
-
 
 在许可证测试屏幕中，添加为内部测试轨道添加的测试人员，将许可证响应设置更改为 `RESPOND_NORMALLY` 并保存更改：
 
@@ -20580,6 +20522,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 ```
+
+
 
 当 App 启动时，`onCreate()` 方法现在会调用 `billingSetup()`，这将创建一个新的 billing client 实例并尝试连接到 Google Play Billing Library。连接完成后，将调用 `onBillingSetupFinished()` 监听器并输出指示连接尝试成功或失败的日志信息。最后，我们还实现了 `onBillingServiceDisconnected()`，当 Google Play Billing 连接丢失时将调用该方法。如果连接成功，将调用 `queryProduct()` 并必须添加分配给 billing client 的 `purchasesListener`。
 
@@ -20681,10 +20625,6 @@ private void completePurchase(Purchase item) {
 }
 ```
 
-
-
-
-
 该方法在验证产品已成功购买且支付尚未处于待处理状态之前，先存储购买记录。“消耗”按钮将被启用，并通知用户购买成功。同时，“购买”按钮会被禁用，以防止用户在消耗购买商品之前重复购买。
 
 ## 88.12 消耗产品
@@ -20763,7 +20703,7 @@ private void billingSetup() {
 
 ## 88.14 测试应用
 
-在我们测试应用之前，我们需要将此最新版本上传到 Play Console。由于我们已经上传了版本 1，因此我们需要在 `build.gradle.kts` (Module: app) 文件中增加版本号：
+在我们测试应用之前，我们需要将此最新版本上传到 Play Console。由于我们已经上传了版本 1，因此我们需要在 `build.gradle.kts`（Module: app）文件中增加版本号：
 
 ```kotlin
 defaultConfig {
@@ -20778,16 +20718,19 @@ defaultConfig {
 同步构建配置，然后按照“创建、测试和上传 Android App Bundle”章节中的步骤生成新的应用 bundle，将其上传到内部测试轨道，并发布给测试人员。接下来，使用内部测试链接在登录了其中一个测试账户的设备或模拟器上安装应用。要找到测试链接，请在 Google Play Console 中选择应用，并在导航面板中选择“内部测试”选项，然后选择“测试人员”标签页，如图 88-6 所示：
 
 ![](img/in-app-purchase-testers.jpg)
+
 图 88-6
 
 滚动到屏幕上的“测试人员如何加入您的测试”部分并点击复制链接：
 
 ![](img/in-app-purchase-copy_link.jpg)
+
 图 88-7
 
 在测试设备或模拟器上打开 Chrome 浏览器，输入测试链接，并按照指示从 Play Store 安装应用。应用启动后，经过短暂延迟，它将在 `TextView` 上显示产品名称。点击购买按钮将开始购买流程，如图 88-8 所示：
 
 ![](img/in_app_billing_test_purchase.jpg)
+
 图 88-8
 
 点击购买按钮使用测试卡完成购买，并等待消耗按钮启用。在点击此按钮之前，尝试再次购买产品并验证这样做（因为你已拥有该产品）。
@@ -20798,23 +20741,22 @@ defaultConfig {
 
 如果在购买过程中遇到问题，请确保设备已通过 USB 线或 WiFi 连接到 Android Studio，并在 Logcat 面板中选择它。在 Logcat 搜索栏中输入 `InAppPurchaseTag` 并检查诊断输出，必要时在代码中添加额外的 `Log` 调用。关于失败的附加信息，一个实用的技巧是访问 `BillingResult` 实例的调试消息，例如：
 
+
+
 ```java
 } else if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.USER_CANCELED) {
     Log.i(TAG, "onPurchasesUpdated: Purchase Canceled");
 } else {
+```
 只要我们不在模块级 `build.gradle.kts` 文件中更改应用版本号，我们现在应该可以直接在设备或模拟器上运行修改后的应用，而无需重新打包并上传到控制台。
 
 如果没有列出测试支付卡，请确保设备用户账户已添加到许可测试人员列表中。如果应用运行在物理设备上，请尝试在模拟器上运行。如果所有尝试失败，你可以输入有效的支付方式进行测试购买，然后从 Play Console 主页面的订单管理界面进行退款。
 
-## 88.16 总结
-
-
-
-
+### 88.16 总结
 
 在本章中，我们创建了一个项目，演示了如何在 Android 应用中添加应用内商品。这包括在 Google Play Console 中创建产品，以及编写代码来初始化并连接计费客户端、查询可用产品，以及购买和消费产品。我们还解释了如何使用 Play Console 添加许可测试人员，以便在测试期间在无需花费费用的情况下进行购买。
 
-# 89 在 Android 上创建和管理溢出菜单（Overflow Menus）
+## 89 在 Android 上创建和管理溢出菜单（Overflow Menus）
 
 书中尚未涵盖的用户界面设计领域涉及 Android 应用程序中的菜单概念。菜单提供了一种机制，可以在界面布局的视图组件之外为用户提供更多选择。虽然 Android 开发者可以使用多种不同的菜单系统，但本章将重点关注更常用的溢出菜单。本章将涵盖如何通过 XML 手动创建菜单以及如何使用 Android Studio 布局编辑器工具可视化地创建。
 
@@ -20828,7 +20770,7 @@ defaultConfig {
 
 ### 89.2 创建溢出菜单
 
-菜单中的项可以在 XML 文件中声明，然后根据需要将其加载并显示给用户。这涉及使用 `<menu>` 元素，其中每个菜单项包含一个 `<item>` 子元素。例如，以下 XML 定义了一个包含两个与颜色选择相关的项的菜单：
+菜单中的项可以在 XML 文件中声明，然后根据需要将其加载并显示给用户。这涉及使用`<menu>`元素，其中每个菜单项包含一个`<item>`子元素。例如，以下 XML 定义了一个包含两个与颜色选择相关的项的菜单：
 
 ```xml
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
@@ -20848,7 +20790,7 @@ defaultConfig {
 </menu>
 ```
 
-在上述 XML 中，`android:orderInCategory` 属性决定了菜单项在显示菜单时内部出现的顺序。另一方面，`app:showAsAction` 属性控制相应项在何种条件下作为操作栏（action bar）中的项出现。例如，如果设置为 `ifRoom`，只要有足够的空间，该项就会出现在操作栏中。图 89-2 显示了对两个菜单项都将此属性设置为 `ifRoom` 的效果：
+在上述 XML 中，`android:orderInCategory`属性决定了菜单项在显示菜单时内部出现的顺序。另一方面，`app:showAsAction`属性控制相应项在何种条件下作为操作栏（action bar）中的项出现。例如，如果设置为`ifRoom`，只要有足够的空间，该项就会出现在操作栏中。图 89-2 显示了对两个菜单项都将此属性设置为`ifRoom`的效果：
 
 ![](img/as_menu_ifroom.jpg)
 
@@ -20856,7 +20798,7 @@ defaultConfig {
 
 应节制地使用此属性，以避免操作栏过于拥挤。
 
-默认情况下，在创建新的 Android 应用程序项目时，Android Studio 会创建一个菜单 XML 文件。该文件位于 `app -> res -> menu` 项目文件夹中，并包含一个名为“Settings”（设置）的单个菜单项：
+默认情况下，在创建新的 Android 应用程序项目时，Android Studio 会创建一个菜单 XML 文件。该文件位于`app -> res -> menu`项目文件夹中，并包含一个名为“Settings”（设置）的单个菜单项：
 
 ```xml
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
@@ -20874,7 +20816,7 @@ defaultConfig {
 
 ### 89.3 显示溢出菜单
 
-溢出菜单通过重写对应 Activity 的 `onCreateOptionsMenu()` 方法并加载菜单来创建。例如，以下代码在名为 `menu_main` 的 XML 文件中创建菜单：
+溢出菜单通过重写对应 Activity 的`onCreateOptionsMenu()`方法并加载菜单来创建。例如，以下代码在名为`menu_main`的 XML 文件中创建菜单：
 
 ```java
 @Override
@@ -20886,9 +20828,9 @@ public boolean onCreateOptionsMenu(Menu menu) {
 
 与菜单文件一样，Android Studio 在新创建的 Android 项目中也会重写此方法。如果你的 Activity 中不需要溢出菜单，请删除此方法。
 
-## 89.4 响应菜单项选择
+### 89.4 响应菜单项选择
 
-一旦实现了菜单，问题就来了：应用程序如何在用户进行项选择时接收通知。Activity 接收选择需要做的仅仅是重写 `onOptions()`。作为参数传递的是被选项的引用。然后可以在该项上调用 `getItemId()` 来识别选择了哪一个项。例如：
+一旦实现了菜单，问题就来了：应用程序如何在用户进行项选择时接收通知。Activity 接收选择需要做的仅仅是重写`onOptions()`。作为参数传递的是被选项的引用。然后可以在该项上调用`getItemId()`来识别选择了哪一个项。例如：
 
 ```java
 @Override
@@ -20904,9 +20846,9 @@ public boolean onOptionsItemSelected(MenuItem item) {
 }
 ```
 
-## 89.5 创建可检查项组
+### 89.5 创建可检查项组
 
-除了配置独立的菜单项外，还可以创建菜单项组。这在创建可检查项时特别有用，即任何时候只能选择其中的一个。可以通过将菜单项封装在 `<group>` 标签中分配组。使用 `android:checkable` 属性将组声明为可检查，将其设置为 `single` 或 `none`。以下 XML 定义了两个项组成一个组，其中任何时候都可以选择其中一个：
+除了配置独立的菜单项外，还可以创建菜单项组。这在创建可检查项时特别有用，即任何时候只能选择其中的一个。可以通过将菜单项封装在`<group>`标签中分配组。使用`android:checkable`属性将组声明为可检查，将其设置为`single`或`none`。以下 XML 定义了两个项组成一个组，其中任何时候都可以选择其中一个：
 
 ```xml
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
@@ -20946,12 +20888,9 @@ public boolean onOptionsItemSelected(MenuItem item) {
 }
 ```
 
-## 89.6 菜单与 Android Studio 菜单编辑器
+### 89.6 菜单与 Android Studio 菜单编辑器
 
-
-
-
-Android Studio 允许通过简单的将菜单资源文件加载到 Menu Editor 工具、从调色板拖放菜单元素并设置属性，以可视化的方式设计菜单。这极地简化了菜单设计过程，但重要的是，仍然需要在 `onOptionsItemSelected()` 方法中编写代码来实现菜单行为。
+Android Studio 允许通过简单的将菜单资源文件加载到 Menu Editor 工具、从调色板拖放菜单元素并设置属性，以可视化的方式设计菜单。这极地简化了菜单设计过程，但重要的是，仍然需要在`onOptionsItemSelected()`方法中编写代码来实现菜单行为。
 
 要通过可视化方式设计菜单，请找到菜单资源文件并双击它将其加载到 Menu Editor 工具中。例如图 89-4 显示了加载到设计模式下 Menu Editor 中的基础 Activity 默认菜单资源文件：
 
@@ -20969,13 +20908,13 @@ Android Studio 允许通过简单的将菜单资源文件加载到 Menu Editor �
 
 要查看溢出菜单的运行效果，点击欢迎屏幕上的“New Project”按钮，在弹出的新项目对话框中，点击“Next”按钮之前选择“Basic Views Activity”模板。
 
-在 `Name` 字段中输入 `MenuExample` 并指定 `com.ebookfrenzy.menuexample` 为包名。在点击“Finish”按钮之前，将 `Minimum API level` 设置为 `API 26`：Android 8.0 (Oreo)，并将语言菜单设置为 Java。
+在`Name`字段中输入`MenuExample`并指定`com.ebookfrenzy.menuexample`为包名。在点击“Finish”按钮之前，将`Minimum API level`设置为`API 26`：Android 8.0 (Oreo)，并将语言菜单设置为 Java。
 
-项目创建后，在 Project 工具工具窗口中导航到 `app` -> `res` -> `layout` 文件夹，并双击 `content_main.xml` 文件将其加载到 Android Studio Menu Editor 工具中。将工具切换到设计模式，从组件树面板选择 `ConstraintLayout`，并在属性面板的 `ID` 字段中输入 `layoutView`。
+项目创建后，在 Project 工具工具窗口中导航到`app` -> `res` -> `layout`文件夹，并双击`content_main.xml`文件将其加载到 Android Studio Menu Editor 工具中。将工具切换到设计模式，从组件树面板选择`ConstraintLayout`，并在属性面板的`ID`字段中输入`layoutView`。
 
 ### 89.8 设计菜单
 
-在 Project 工具窗口中，找到项目的 `app` -> `res` -> `menu` -> `menu_main.xml` 文件并双击它将其加载到布局编辑器工具中。如有必要，切换到设计模式并选择并删除 Android Studio 添加的默认 Settings 菜单项，使菜单当前没有任何项。
+在 Project 工具窗口中，找到项目的`app` -> `res` -> `menu` -> `menu_main.xml`文件并双击它将其加载到布局编辑器工具中。如有必要，切换到设计模式并选择并删除 Android Studio 添加的默认 Settings 菜单项，使菜单当前没有任何项。
 
 从调色板中，点击并拖动菜单组对象到布局画布的标题栏上，如图 89-5 所示：
 
@@ -20989,19 +20928,19 @@ Android Studio 允许通过简单的将菜单资源文件加载到 Menu Editor �
 
 图 89-6
 
-在组件树中选择组项，并参考属性面板将 `checkableBehavior` 属性设置为 `single`，这样每次只能选择一个组菜单项：
+在组件树中选择组项，并参考属性面板将`checkableBehavior`属性设置为`single`，这样每次只能选择一个组菜单项：
 
 ![](img/as_menu_single_check.jpg)
 
 图 89-7
 
-接下来，从调色板拖入四个 Menu Item 元素并将其丢到组件树中的组元素上。选择第一项并使用属性面板将标题更改为“Red”，并将 ID 为 `menu_red`：
+接下来，从调色板拖入四个 Menu Item 元素并将其丢到组件树中的组元素上。选择第一项并使用属性面板将标题更改为“Red”，并将 ID 为`menu_red`：
 
 ![](img/as_menu_item_attributes.jpg)
 
 图 89-8
 
-对剩余三个菜单项重复这些步骤，将标题设置为“Green”、“Yellow”和“Blue”，并设置相应的 ID `menu_green`、`menu_yellow` 和 `menu_blue`。使用组件树面板中菜单项右侧的警告按钮将字符串提取到资源：
+对剩余三个菜单项重复这些步骤，将标题设置为“Green”、“Yellow”和“Blue”，并设置相应的 ID`menu_green`、`menu_yellow`和`menu_blue`。使用组件树面板中菜单项右侧的警告按钮将字符串提取到资源：
 
 ![](img/as_menu_tree.jpg)
 
@@ -21035,7 +20974,7 @@ Android Studio 允许通过简单的将菜单资源文件加载到 Menu Editor �
 
 ### 89.9 修改 onOptionsItemSelected() 方法
 
-当从菜单选择项时，重写的 `onOptionsItemSelected()` 方法将被调用。该方法的作用是识别被选项目并更改背景颜色。找到并双击 `app` -> `java` -> `com.ebookfrenzy.menuexample` -> `MainActivity` 文件并修改如下：
+当从菜单选择项时，重写的`onOptionsItemSelected()`方法将被调用。该方法的作用是识别被选项目并更改背景颜色。找到并双击`app` -> `java` -> `com.ebookfrenzy.menuexample` -> `MainActivity`文件并修改如下：
 
 ```java
 package com.ebookfrenzy.menuexample;
@@ -21046,7 +20985,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -21055,20 +20993,24 @@ public class MainActivity extends AppCompatActivity {
             item.setChecked(!item.isChecked());
             mainLayout.setBackgroundColor(Color.RED);
         } else if (id == R.id.menu_green) {
-            item.setChecked(!item.isChecked());
-            mainLayout.setBackgroundColor(Color.GREEN);
-        } else if (id == R.id.menu_yellow) {
-            item.setChecked(!item.isChecked());
-            mainLayout.setBackgroundColor(Color.YELLOW);
-        } else if (id == R.id.menu_blue) {
-            item.setChecked(!item.isChecked());
-            mainLayout.setBackgroundColor(Color.BLUE);
-        } else {
-            return super.onOptionsItemSelected(item);
-        }
-        return true;
-    }
+
+
+
+`item.setChecked(!item.isChecked());`
+
+`mainLayout.setBackgroundColor(Color.GREEN);`
+
+```java
+} else if (id == R.id.menu_yellow) {
+    item.setChecked(!item.isChecked());
+    mainLayout.setBackgroundColor(Color.YELLOW);
+} else if (id == R.id.menu_blue) {
+    item.setChecked(!item.isChecked());
+    mainLayout.setBackgroundColor(Color.BLUE);
+} else {
+    return super.onOptionsItemSelected(item);
 }
+return true;
 ```
 
 ### 89.10 测试应用程序
@@ -21078,9 +21020,6 @@ public class MainActivity extends AppCompatActivity {
 ![](img/as_menu_running.jpg)
 
 图 89-11
-
-
-
 
 Android 应用的外观旨在符合 Material Design（材料设计）定义的一系列指南。Google 开发 Material Design 是为了在不同的应用之间提供设计一致性，同时也允许应用开发者在颜色、字体和形状选择方面包含自己的品牌特色（这一概念被称为 Material 主题，Material theming）。除了设计指南外，Material Design 还包含了一套用于设计用户界面布局的 UI 组件，我们在本书中已经使用了其中的许多组件。
 
@@ -21175,9 +21114,6 @@ MD3 中的颜色槽位被分为 Primary（主）、Secondary（次）、Tertiary
 
 ### 90.5 总结
 
-
-
-
 Material Design 提供了一套指南和组件，定义了 Android 应用的外观。通过设计指定在显示应用时使用的颜色、字体和形状的主题，可以为应用应用个性品牌设计。Google 最近引入了 Material Design 3，它取代了 Material Design 2 并支持 Material You 的新功能，包括动态颜色。Google 还提供了 Material Theme Builder，用于设计你自己的主题，这减轻了选择互补主题颜色的任务。一旦使用该工具设计好主题，就可以导出相应的文件并在 Android Studio 项目中使用。
 
 # 91. Material Design 3 主题化与动态颜色教程
@@ -21268,24 +21204,23 @@ Material Design 提供了一套指南和组件，定义了 Android 应用的外�
 </resources>
 ```
 
-重复这些步骤对 `themes.xml` (night) 文件进行相同的修改。
 
-返回 `activity_main.xml` 文件或重新运行应用，确认用户界面是使用自定义主题渲染的。
+
+重复这些步骤对`themes.xml` (night) 文件进行相同的修改。
+
+返回`activity_main.xml`文件或重新运行应用，确认用户界面是使用自定义主题渲染的。
 
 ### 91.5 启用动态颜色支持
 
-应用需要在运行 Android 12 或更高版本且具有正确壁纸设置的设备或模拟器上运行以测试动态颜色。在设备或模拟器上，启动 `Settings` 应用并在列表中选择 `Wallpaper & style`。在壁纸设置屏幕上，点击更改壁纸的选项（在 图 91-7 中标记为 A），选择一张与你主题颜色差异巨大的壁纸图像。一旦选择，将其分配主屏幕。
+应用需要在运行 Android 12 或更高版本且具有正确壁纸设置的设备或模拟器上运行以测试动态颜色。在设备或模拟器上，启动`Settings`应用并在列表中选择`Wallpaper & style`。在壁纸设置屏幕上，点击更改壁纸的选项（在 图 91-7 中标记为 A），选择一张与你主题颜色差异巨大的壁纸图像。一旦选择，将其分配主屏幕。
 
-返回 `Wallpaper & style` 屏幕，并在从颜色方案按钮中选择选项之前，确保选择了 `Wallpaper colors` 选项 (B)。点击每个选项时，壁纸示例将更改以反映选择：
+返回`Wallpaper & style`屏幕，并在从颜色方案按钮中选择选项之前，确保选择了`Wallpaper colors`选项 (B)。点击每个选项时，壁纸示例将更改以反映选择：
 
 ![](img/compose_theme_wallpaper_and_styles.jpg)
 
 图 91-7
 
-
-
-
-要启用动态颜色，我们需要调用 `DynamicColors` 类的 `applyToActivitiesIfAvailable()` 方法。为了为整个应用启用动态颜色支持，需要在自定义 `Application` 实例的 `onCreate()` 方法中调用该方法。首先，在项目的 `app -> java -> com.ebookfrenzy.themedemo` 目录下添加一个名为 `ThemeDemoApplication.java` 的新 Java 类文件，并将其修改如下：
+要启用动态颜色，我们需要调用`DynamicColors`类的`applyToActivitiesIfAvailable()`方法。为了为整个应用启用动态颜色支持，需要在自定义`Application`实例的`onCreate()`方法中调用该方法。首先，在项目的`app -> java -> com.ebookfrenzy.themedemo`目录下添加一个名为`ThemeDemoApplication.java`的新 Java 类文件，并将其修改如下：
 
 ```java
 package com.ebookfrenzy.themedemo;
@@ -21304,12 +21239,13 @@ public class ThemeDemoApplication extends Application {
 }
 ```
 
-创建自定义的 `Application` 类后，我们必须配置项目使用该类而不是默认的 `Application` 实例。要做到这一点，请编辑 `AndroidManifest.xml` 文件并添加引用新类的 `android:name` 元素：
+创建自定义的`Application`类后，我们必须配置项目使用该类而不是默认的`Application`实例。要做到这一点，请编辑`AndroidManifest.xml`文件并添加引用新类的`android:name`元素：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ebookfrenzy.themedemo">
+
     <application
         android:name=".ThemeDemoApplication"
         android:allowBackup="true">
@@ -21319,7 +21255,7 @@ public class ThemeDemoApplication extends Application {
 
 ### 91.6 预览动态颜色
 
-动态颜色行为也可以在 Android Studio 布局编辑器中预览。要尝试此操作，请打开 `activity_main.xml` 文件，点击主题菜单并选择 `More Themes`（更多主题）选项，如图 91-8 所示：
+动态颜色行为也可以在 Android Studio 布局编辑器中预览。要尝试此操作，请打开`activity_main.xml`文件，点击主题菜单并选择`More Themes`（更多主题）选项，如图 91-8 所示：
 
 ![](img/as_layout_editor_themes_menu.jpg)
 
@@ -21331,7 +21267,7 @@ public class ThemeDemoApplication extends Application {
 
 图 91-9
 
-在点击 `OK` 按钮之前，选择 `Material3.DynamicColors.DayNight` 主。返回布局编辑器后，选择 `System UI Mode`（系统 UI 模式）菜单并选择图 91-10 所示的壁纸选项之一：
+在点击`OK`按钮之前，选择`Material3.DynamicColors.DayNight`主。返回布局编辑器后，选择`System UI Mode`（系统 UI 模式）菜单并选择图 91-10 所示的壁纸选项之一：
 
 ![](img/as_layout_editor_dynamic_themes.jpg)
 
@@ -21345,35 +21281,35 @@ public class ThemeDemoApplication extends Application {
 
 ## 92. Android Studio 中的 Gradle 概述
 
-在“Gradle 版本目录指南”章节中，我们引入了库版本目录（library version catalog），并解释了 `Gradle` 构建系统如何依赖它来确保项目使用正确的库和版本进行构建。除了中间章节中对版本目录和库依赖进行的一些修改外，Android Studio 会采取必要步骤来编译和运行创建的应用项目是理所当然的。Android Studio 一直通过一个名为 `Gradle` 的系统在后台实现这一点。
+在“Gradle 版本目录指南”章节中，我们引入了库版本目录（library version catalog），并解释了`Gradle`构建系统如何依赖它来确保项目使用正确的库和版本进行构建。除了中间章节中对版本目录和库依赖进行的一些修改外，Android Studio 会采取必要步骤来编译和运行创建的应用项目是理所当然的。Android Studio 一直通过一个名为`Gradle`的系统在后台实现这一点。
 
-现在是时候查看如何使用 `Gradle` 和打包应用项目的各种元素，并开始探索在 Android Studio 中构建项目有更高级需求时如何配置此系统了。
+现在是时候查看如何使用`Gradle`和打包应用项目的各种元素，并开始探索在 Android Studio 中构建项目有更高级需求时如何配置此系统了。
 
 ### 92.1 Gradle 概述
 
-`Gradle` 是一个自动化构建工具包，允许通过一组构建配置文件来配置和管理项目的构建方式。这包括定义项目如何构建、成功构建需要满足哪些依赖项，以及构建过程的最终结果（或多个结果）应该是什么。
+`Gradle`是一个自动化构建工具包，允许通过一组构建配置文件来配置和管理项目的构建方式。这包括定义项目如何构建、成功构建需要满足哪些依赖项，以及构建过程的最终结果（或多个结果）应该是什么。
 
-`Gradle` 的优势在于它为开发者提供的灵活性。`Gradle` 系统是一个自自包含的、基于命令行的环境，可以通过插件集成到其他环境中。在 Android Studio 的情况下，`Gradle` 集成通过适当命名的 Android Studio 插件提供。
+`Gradle`的优势在于它为开发者提供的灵活性。`Gradle`系统是一个自包含的、基于命令行的环境，可以通过插件集成到其他环境中。在 Android Studio 的情况下，`Gradle`集成通过适当命名的 Android Studio 插件提供。
 
-尽管 Android Studio 插件允许在 Android Studio 内部启动和管理 `Gradle` 任务，但仍然可以使用 `Gradle` 命令行封装来构建基于 Android Studio 的项目，包括在未安装 Android Studio 的系统上。
+尽管 Android Studio 插件允许在 Android Studio 内部启动和管理`Gradle`任务，但仍然可以使用`Gradle`命令行封装来构建基于 Android Studio 的项目，包括在未安装 Android Studio 的系统上。
 
-构建项目的配置规则声明在基于 Groovy 编程语言的 `Gradle` 构建文件和脚本中。
+构建项目的配置规则声明在基于 Groovy 编程语言的`Gradle`构建文件和脚本中。
 
 ### 92.2 Gradle 与 Android Studio
 
-`Gradle` 为构建 Android 应用项目带来了许多强大功能。一些关键功能如下：
+`Gradle`为构建 Android 应用项目带来了许多强大功能。一些关键功能如下：
 
-### 92.2.1 合合理的默认值
+### 92.2.1 合理的默认值
 
-`Gradle` 实现了一种被称为“惯约优于配置”（convention over configuration）的概念。这意味着 `Gradle` 有一组预定义的合理默认配置设置，除非构建文件中的设置覆盖了它们，否则将使用这些设置。这意味着可以使用开发者所需的最小配置进行构建。只有当默认配置不能满足你的构建需求时，才需要对构建文件进行更改。
+`Gradle`实现了一种被称为“惯约优于配置”（convention over configuration）的概念。这意味着`Gradle`有一组预定义的合理默认配置设置，除非构建文件中的设置覆盖了它们，否则将使用这些设置。这意味着可以使用开发者所需的最小配置进行构建。只有当默认配置不能满足你的构建需求时，才需要对构建文件进行更改。
 
 ### 92.2.2 依赖
 
-`Gradle` 功能另一个关键领域是依赖。例如，考虑 Android Studio 项目中的一个模块，它触发了对另一个模块的加载。第一个模块实际上依赖于第二个模块，因为如果找不到第二个模块，构建将失败。这种依赖可以在第一个模块的 `Gradle` 构建文件中声明，以便将第二个模块包含进来，或者在找不到第二个模块时标记错误。依赖的其他示例是项目编译和运行所需的库和 JAR 文件。
+`Gradle`功能另一个关键领域是依赖。例如，考虑 Android Studio 项目中的一个模块，它触发了对另一个模块的加载。第一个模块实际上依赖于第二个模块，因为如果找不到第二个模块，构建将失败。这种依赖可以在第一个模块的`Gradle`构建文件中声明，以便将第二个模块包含进来，或者在找不到第二个模块时标记错误。依赖的其他示例是项目编译和运行所需的库和 JAR 文件。
 
-`Gradle` 依赖项可以分为本地和远程。本地依赖项引用执行构建的计算机系统本地文件系统的项。远程依赖项引用位于远程服务器（通常称为仓库）上的项。
+`Gradle`依赖项可以分为本地和远程。本地依赖项引用执行构建的计算机系统本地文件系统的项。远程依赖项引用位于远程服务器（通常称为仓库）上的项。
 
-Android Studio 项目使用名为 Maven 的另一个项目管理工具处理远程依赖。如果在 `Gradle` 构建文件中使用 Maven 语法声明了远程依赖，则该依赖将自动从指定的仓库下载并包含在构建过程中。例如，下面的依赖声明会将 AppCompat 库从 Google 仓库添加到项目中：
+Android Studio 项目使用名为 Maven 的另一个项目管理工具处理远程依赖。如果在`Gradle`构建文件中使用 Maven 语法声明了远程依赖，则该依赖将自动从指定的仓库下载并包含在构建过程中。例如，下面的依赖声明会将 AppCompat 库从 Google 仓库添加到项目中：
 
 ```gradle
 implementation(libs.androidx.appcompat)
@@ -21381,15 +21317,11 @@ implementation(libs.androidx.appcompat)
 
 ### 92.2.3 构建变体
 
-除了依赖项，`Gradle` 还为 Android Studio 项目提供了构建变体支持。这允许从单个项目构建多个应用变体。Android 运行在许多设备上，涵盖各种处理器类型和屏幕尺寸。为了针对尽可能广泛的类型和尺寸，通常需要构建多个应用变体（例如，一个针对手机的用户界面和一个针对平板电脑屏幕的界面）。通过使用 `Gradle`，这在 Android Studio 中是可以行的。
+除了依赖项，`Gradle`还为 Android Studio 项目提供了构建变体支持。这允许从单个项目构建多个应用变体。Android 运行在许多设备上，涵盖各种处理器类型和屏幕尺寸。为了针对尽可能广泛的类型和尺寸，通常需要构建多个应用变体（例如，一个针对手机的用户界面和一个针对平板电脑屏幕的界面）。通过使用`Gradle`，这在 Android Studio 中是可行的。
 
 ### 92.2.4 Manifest Entry
 
-
-
-
-
-每个 Android Studio 项目都关联有一个 `AndroidManifest.xml` 文件，该文件包含了有关应用程序的配置细节。在 Gradle 构建文件中可以指定多个清单条目，这些条目会在项目构建时自动生成到清单文件中。此功能项补了构建变体（build variants）功能，允许为每个构建变体对应用版本、应用 ID 和 SDK 版本信息等元素进行不同的配置。
+每个 Android Studio 项目都关联有一个`AndroidManifest.xml`文件，该文件包含了有关应用程序的配置细节。在 Gradle 构建文件中可以指定多个清单条目，这些条目会在项目构建时自动生成到清单文件中。此功能项补了构建变体（build variants）功能，允许为每个构建变体对应用版本、应用 ID 和 SDK 版本信息等元素进行不同的配置。
 
 ### 92.2.5 APK 签名
 
@@ -21401,9 +21333,9 @@ ProGuard 是 Android Studio 自带的一项工具，它能够对 Java 字节码�
 
 ### 92.3 属性与设置 Gradle 构建文件
 
-Gradle 构建配置由配置、属性和设置文件组成。例如，`gradle.properties` 文件包含了与 Java 虚拟机 (`JVM`) 使用的命令行标志相关的特殊设置，以及项目是否使用 AndroidX 库和对 Kotlin 编码风格的支持。作为典型用户，你可能不需要更改此文件中的任何设置。
+Gradle 构建配置由配置、属性和设置文件组成。例如，`gradle.properties`文件包含了与 Java 虚拟机 (`JVM`) 使用的命令行标志相关的特殊设置，以及项目是否使用 AndroidX 库和对 Kotlin 编码风格的支持。作为典型用户，你可能不需要更改此文件中的任何设置。
 
-另一方面，`settings.gradle.kts` 文件定义了当构建系统需要下载和安装构建项目所需的任何额外库和插件时应搜索哪些在线仓库，以及项目的名称。一个典型的 `settings.gradle.kts` 文件内容如下：
+另一方面，`settings.gradle.kts`文件定义了当构建系统需要下载和安装构建项目所需的任何额外库和插件时应搜索哪些在线仓库，以及项目的名称。一个典型的`settings.gradle.kts`文件内容如下：
 
 ```kotlin
 pluginManagement {
@@ -21423,17 +21355,16 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "ThemeDemo"
-
 include(":app")
 ```
 
-与 `gradle.properties` 文件一样，可能不需要对此文件进行更改。
+与`gradle.properties`文件一样，可能不需要对此文件进行更改。
 
 ### 92.4 顶层 Gradle 构建文件
 
 一个完整的 Android Studio 项目包含了构建 Android 应用程序所需的一切，由模块、库、清单文件和 Gradle 构建文件组成。
 
-每个项目包含一个顶层 Gradle 构建文件。该文件列为 `build.gradle.kts` (Project: <project name>)，可以在项目工具窗口中找到，如图 92-1 所示：
+每个项目包含一个顶层 Gradle 构建文件。该文件列为`build.gradle.kts` (Project: <project name>)，可以在项目工具窗口中找到，如图 92-1 所示：
 
 ![](img/as_app_gradle_file.jpg)
 
@@ -21451,12 +21382,12 @@ plugins {
 
 ### 92.5 模块级 Gradle 构建文件
 
-Android Studio 应用程序项目由一个或多个模块组成。例如，有一个名为 `GradleDemo` 的假设应用程序项目，它包含命名为 `Module1` 和 `Module2` 的模块。在这种情况下，每个模块都需要自己的 Gradle 构建文件。从项目结构来看，这些文件位于如下：
+Android Studio 应用程序项目由一个或多个模块组成。例如，有一个名为`GradleDemo`的假设应用程序项目，它包含命名为`Module1`和`Module2`的模块。在这种情况下，每个模块都需要自己的 Gradle 构建文件。从项目结构来看，这些文件位于如下：
 
 * `Module1/build.gradle.kts`
 * `Module2/build.gradle.kts`
 
-默认情况下，`Module1/build.gradle.kts` 文件将类似于下面列表所示：
+默认情况下，`Module1/build.gradle.kts`文件将类似于下面列表所示：
 
 ```kotlin
 plugins {
@@ -21466,6 +21397,7 @@ plugins {
 android {
     namespace = "com.example.gradlesample"
     compileSdk = 34
+
     defaultConfig {
         applicationId = "com.example.gradlesample"
         minSdk = 26
@@ -21474,6 +21406,7 @@ android {
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -21483,6 +21416,7 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -21502,23 +21436,17 @@ dependencies {
 
 （注：源码中剩余的文本似乎是对上述代码块的碎片化/重复解释。遵循保留核心内容并优化格式的指令，结构逻辑已在上述块中保留。）
 
-`plugins` 部分开头开始声明对插件的使用。`android` 部分声明了 `namespace`，然后说明了要使用的 SDK 版本。`defaultConfig` 部分定义了要生成到 `AndroidManifest.xml` 文件中的元素。这些可以在构建文件中修改的设置是取自于……
+`plugins`部分开头开始声明对插件的使用。`android`部分声明了`namespace`，然后说明了要使用的 SDK 版本。`defaultConfig`部分定义了要生成到`AndroidManifest.xml`文件中的元素。这些可以在构建文件中修改的设置是取自于……
 
-`buildTypes` 部分包含了关于是否以及如何在这 APK 文件上运行 ProGuard 的指令。
+`buildTypes`部分包含了关于是否以及如何在这 APK 文件上运行 ProGuard 的指令。
 
-按照目前的配置，在构建 Module1 时不会运行 ProGuard。要启用 ProGuard，必须将 `minify` 项从 `false` 更改为 `true`。`proguard-rules.pro` 文件可以在模块目录中找到。由于文件中没有声明 `debug` 构建类型，将使用默认值（不带 ProGuard 构建，使用调试密钥签名，并启用调试符号）。
+按照目前的配置，在构建 Module1 时不会运行 ProGuard。要启用 ProGuard，必须将`minify`项从`false`更改为`true`。`proguard-rules.pro`文件可以在模块目录中找到。由于文件中没有声明`debug`构建类型，将使用默认值（不带 ProGuard 构建，使用调试密钥签名，并启用调试符号）。
 
-模块构建文件中还可以包含一个名为 `productFlavors` 的额外部分，以便能够创建多个构建变体。接下来，包含了指令来指定在构建项目时使用的 Java 编译器版本。最后，`dependencies` 部分列出了模块所依赖的任何本地和远程依赖。
-
-
-
-
+模块构建文件中还可以包含一个名为`productFlavors`的额外部分，以便能够创建多个构建变体。接下来，包含了指令来指定在构建项目时使用的 Java 编译器版本。最后，`dependencies`部分列出了模块所依赖的任何本地和远程依赖。
 
 ```gradle
 defaultConfig {
-
 .
-
 .
 }
 
@@ -21537,7 +21465,7 @@ buildTypes {
 }
 ```
 
-上面的示例将密钥密码信息直接嵌入到构建文件中。这种方法的的替代方案是从系统环境变量中提取这些值：
+上面的示例将密钥密码信息直接嵌入到构建文件中。这种方法的替代方案是从系统环境变量中提取这些值：
 
 ```gradle
 signingConfigs {
@@ -21545,9 +21473,12 @@ signingConfigs {
         storeFile file("keystore.release")
         storePassword System.getenv("KEYSTOREPASSWD")
         keyAlias "your key alias here"
-        keyPassword System.getenv("KEYPASSWD")
-    }
-}
+```
+
+
+
+```gradle
+keyPassword System.getenv("KEYPASSWD")
 ```
 
 另一种方法是配置构建文件，让 Gradle 在构建过程中提示输入密码：
@@ -21556,8 +21487,7 @@ signingConfigs {
 signingConfigs {
     release {
         storeFile file("keystore.release")
-        storePassword System.console().readLine
-                      ("\nEnter Keystore password: ")
+        storePassword System.console().readLine("\nEnter Keystore password: ")
         keyAlias "your key alias here"
         keyPassword System.console().readLIne("\nEnter Key password: ")
     }
@@ -21572,19 +21502,19 @@ signingConfigs {
 chmod +x gradlew
 ```
 
-一旦文件具有执行权限，则需要将该文件的路径添加到你的 `$PATH` 环境变量中，或者在名称名前加上 `./` 来运行。例如：
+一旦文件具有执行权限，则需要将该文件的路径添加到你的`$PATH`环境变量中，或者在名称名前加上`./`来运行。例如：
 
 ```bash
 ./gradlew tasks
 ```
 
-Gradle 将项目构建视为若干不同的任务。可以通过在项目目录内运行以下命令来获取当前项目可用任务的完整列表（在 macOS 或 Linux 上运行时，请忘记在命令前加上 `./`）：
+Gradle 将项目构建视为若干不同的任务。可以通过在项目目录内运行以下命令来获取当前项目可用任务的完整列表（在 macOS 或 Linux 上运行时，请忘记在命令前加上`./`）：
 
 ```bash
 gradlew tasks
 ```
 
-要构建适用于设备或模拟器测试的项目调试发布版，请使用 `assembleDebug` 选项：
+要构建适用于设备或模拟器测试的项目调试发布版，请使用`assembleDebug`选项：
 
 ```bash
 gradlew assembleDebug
@@ -21595,6 +21525,8 @@ gradlew assembleDebug
 ```bash
 gradlew assembleRelease
 ```
+
+
 
 ### 92.8 总结
 
@@ -21636,11 +21568,7 @@ gradlew assembleRelease
 - `events` [219]
 - `intents` [88]
 
-
-
-
-
-# onClick  [219]
+# onClick [219]
 
 # 运行时 [84]
 
@@ -21720,7 +21648,7 @@ gradlew assembleRelease
 - `android.webkit` [85]
 - `android.widget` [85]
 - AndroidX 库 [788]
-- API  [665]
+- API [665]
 - APK 分析器 [742]
 - APK 文件分析 [735]
 - APK 签名 [788]
@@ -21779,10 +21707,6 @@ gradlew assembleRelease
 - 自动连接模式 [159]
 - 自动链接验证 [442], 465
 - `autoVerify` [443], [718]
-
-
-
-
 
 # 显示模式
 - 显示模式 50
@@ -21940,10 +21864,6 @@ gradlew assembleRelease
 - `COLOR_MODE_COLOR` 680, 700
 - `COLOR_MODE_MONOCHROME` 680, 700
 
-
-
-
-
 # 障碍 [152]
 # 基线对齐 [151]
 # 链偏置 [180]
@@ -22062,10 +21982,6 @@ gradlew assembleRelease
 - `setVerticalChain()` 方法 [199]
 - `removeFromHorizontalChain()` 方法 [200]
 - `removeFromVerticalChain()` 方法 [200]
-
-
-
-
 
 # `ContentResolver` [575]
 
@@ -22239,10 +22155,6 @@ gradlew assembleRelease
 ## 折叠屏设备 [108]
 - 多任务恢复 [108]
 
-
-
-
-
 # 折叠屏模拟器 [540]
 
 # 折叠屏设备 [539]
@@ -22348,7 +22260,7 @@ gradlew assembleRelease
 - 依赖关系 [787]
 - Manifest 条目 [788]
 - 概述 [787]
--  {默认值 [787]
+- 默认值 [787]
 
 ## Gradle 构建文件
 - 顶层 [789]
@@ -22396,10 +22308,6 @@ gradlew assembleRelease
 - `enablePendingPurchases()` 方法 [749]
 - `getPurchaseState()` 方法 [749]
 - `launchBillingFlow()` 方法 [748]
-
-
-
-
 
 # 库
 - `newBuilder()` 方法
@@ -22536,10 +22444,6 @@ gradlew assembleRelease
 # Linux 内核（Linux Kernel）
 - 列出设备
 - LiveData
-
-
-
-
 
 # 添加到 `ViewModel`
 ### 观察者 (Observer)
@@ -22697,10 +22601,6 @@ gradlew assembleRelease
 ### `PendingIntent`
 ### 回复动作
 ### 更新直接回复
-
-
-
-
 
 实现 一个 `LiveData` 285
 
@@ -22908,10 +22808,6 @@ color 680
 
 monochrome 680
 
-
-
-
-
 # 打印框架
 
 ## 架构
@@ -23052,10 +22948,6 @@ monochrome 680
 - `SeekBar`
 - `sendBroadcast()` 方法
 
-
-
-
-
 ## Methods
 - `sendOrderedBroadcast()` 方法 469, 471
 - `SEND_SMS` 权限 504
@@ -23194,10 +23086,6 @@ monochrome 680
 - 工具窗口 59
 
 ## ToolbarListener 254
-
-
-
-
 
 # 工具
 

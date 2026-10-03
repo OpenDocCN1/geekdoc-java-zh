@@ -1,18 +1,9 @@
-# 使用 Sensei 进行安全高质量的 Java 编码：使用 Secure Code Warrior Sensei IntelliJ 插件编写安全高质量代码指南
 
+# 使用 Sensei 进行安全高质量的 Java 编码：使用 Secure Code Warrior Sensei IntelliJ 插件编写安全高质量代码指南
 
 ![](img/cover.jpeg)
 
-
-
-
-
-
-
-
-
-
-# 引言
+## 引言
 
 [Sensei](https://scw.buzz/38n5uPu) 是来自 [Secure Code Warrior](https://scw.buzz/2PBhLJp) 的免费 IntelliJ 插件，它可以帮助将高质量编码实践规范化为 IDE 中的实时警告，并创建快速修复解决方案来教育你或重写代码。
 
@@ -24,7 +15,7 @@
 - [Sensei](https://scw.buzz/38n5uPu) 帮助你将高质量编码实践规范化为 IDE 中的实时警告，并创建快速修复解决方案来教育你或重写代码。
 - [Image00000.jpg](https://scw.buzz/38n5uPu)
 
-## 什么是 Sensei？
+### 什么是 Sensei？
 
 [Sensei](https://scw.buzz/38n5uPu) 是来自 [Secure Code Warrior](https://scw.buzz/2PBhLJp) 的免费 IntelliJ 插件，它可以帮助将高质量编码实践规范化为 IDE 中的实时警告，并创建快速修复解决方案来教育你或重写代码。
 
@@ -36,7 +27,7 @@
 - [Sensei](https://scw.buzz/38n5uPu) 帮助你将高质量编码实践规范化为 IDE 中的实时警告，并创建快速修复解决方案来教育你或重写代码。
 - [Image00000.jpg](https://scw.buzz/38n5uPu)
 
-## 什么是静态分析？
+### 什么是静态分析？
 
 静态分析是在不执行代码的情况下评估代码的过程。它用于发现潜在的漏洞、安全漏洞以及违反编码标准的行为。
 
@@ -48,7 +39,7 @@
 - [Sensei](https://scw.buzz/38n5uPu) 帮助你将高质量编码实践规范化为 IDE 中的实时警告，并创建快速修复解决方案来教育你或重写代码。
 - [Image00000.jpg](https://scw.buzz/38n5uPu)
 
-## 示例 Recipe 仓库
+### 示例 Recipe 仓库
 
 我们提供了几个你可以快速使用的 Recipe 仓库。这些常见 Java 漏洞和实践的 Recipe。
 
@@ -60,7 +51,7 @@
 - [Sensei](https://scw.buzz/38n5uPu) 帮助你将高质量编码实践规范化为 IDE 中的实时警告，并创建快速修复解决方案来教育你或重写代码。
 - [Image00000.jpg](https://scw.buzz/38n5uPu)
 
-## 有用文档和链接
+### 有用文档和链接
 
 欲更多信息，请参考文档和社区论坛。
 
@@ -72,7 +63,7 @@
 - [Sensei](https://scw.buzz/38n5uPu) 帮助你将高质量编码实践规范化为 IDE 中的实时警告，并创建快速修复解决方案来教育你或重写代码。
 - [Image00000.jpg](https://scw.buzz/38n5uPu)
 
-## Sensei 团队支持
+### Sensei 团队支持
 
 如果你有任何问题或反馈，请联系我们的团队。
 
@@ -84,7 +75,7 @@
 - [Sensei](https://scw.buzz/38n5uPu) 帮助你将高质量编码实践规范化为 IDE 中的实时警告，并创建快速修复解决方案来教育你或重写代码。
 - [Image00000.jpg](https://scw.buzz/38n5uPu)
 
-## 从持续集成中运行 IntelliJ 检查
+### 从持续集成中运行 IntelliJ 检查
 
 你可以将 IntelliJ 检查作为 CI/CD 流水的一部分运行，以确保代码符合你的标准。
 
@@ -96,7 +87,7 @@
 - [Sensei](https://scw.buzz/38n5uPu) 帮助你将高质量编码实践规范化为 IDE 中的实时警告，并创建快速修复解决方案来教育你或重写代码。
 - [Image00000.jpg](https://scw.buzz/38n5uPu)
 
-# Sensei GUI 概述
+## Sensei GUI 概述
 
 Sensei GUI 提供了管理 Recipe 和查看问题的界面。
 
@@ -109,95 +100,122 @@ Sensei GUI 提供了管理 Recipe 和查看问题的界面。
 - [Image00000.jpg](https://scw.buzz/38n5uPu)
 
 ### Sensei 菜单
+
 Sensei 菜单可以通过 IntelliJ 菜单栏访问，并提供所有 Sensei 功能。
 
 ### 菜谱管理器 (Cookbook Manager)
+
 菜谱管理器允许你查看和管理你的 Recipe。
 
 ### 管理 Recipe
+
 在此章节中，你可以启用、禁用或删除 Recipe。
 
 ### Recipe 编辑器列表
+
 此列表显示当前菜谱中所有用的 Recipe。
 
 ### Recipe 编辑器
+
 Recipe 编辑器是你创建和编辑单个 Recipe 的地方。
 
 ### General 设置
+
 通用设置允许你配置 Sensei 插件的行为。
 
 ### Recipe - 搜索
+
 此章节允许你搜索特定的 Recipe。
 
 ### QuickFix 设置
+
 这些设置允许你配置如何显示和应用快速修复。
 
 ### 创建 Recipe
+
 此章节解释了如何从头开始创建一个 Recipe。
 
 ### 在 IDE 中发现问题
+
 Sensei 会在你编写代码时高亮问题。
 
 ### 触发快速修复
+
 你可以通过点击高亮的问题来触发快速修复。
 
-# 章节 - 用例
+## 章节 - 用例
 
 此章节探索了 Java 开发中使用 Sensei 的各种场景。
 
-## POJO 用例
+### POJO 用例
+
 这些与简单旧 Java 对象（Plain Old Java Objects）相关的用例。
 
-### 将 `System.out.println` 转换为 `logger`
+#### 将 `System.out.println` 转换为 `logger`
+
 此示例展示了如何将 `System.out.println` 替换为正确的日志语句。
 
-# Junit 5 用例
+### Junit 5 用例
+
 这些与 JUnit 5 测试相关的用例。
 
-### 添加注解和方法重命名
+#### 添加注解和方法重命名
+
 Sensei 可以帮助你根据标准添加注解并重命名方法。
 
-### 使用重写操作为注解添加参数
+#### 使用重写操作为注解添加参数
+
 这展示了如何使用重写操作为注解添加参数。
 
-### 文档链接
+#### 文档链接
+
 相关文档链接。
 
-# Guice 用例
+### Guice 用例
+
 与 Google Guice 依赖注入框架相关的用例。
 
-### 如何使用 Sensei 捕获并修复依赖注入问题
+#### 如何使用 Sensei 捕获并修复依赖注入问题
+
 此示例演示了如何使用 Sensei 识别并解决依赖注入问题。
 
 ## 下一步
+
 你可以这样做：
 
 ### 安装 Sensei
+
 从 IntelliJ Marketplace 安装 Sensei 插件。
 
 ### 研究示例
+
 查看提供的示例以理解 Sensei 的工作原理。
 
 ### 阅读文档
+
 查阅官方文档以获取更多细节。
 
 ### 实验
+
 尝试创建自己的 Recipe 并探索各项功能。
 
 ## 总结
+
 已涵盖内容的总结。
 
-# 关于 Secure Code Warrior
+## 关于 Secure Code Warrior
+
 关于 Secure Code Warrior 的信息。
 
-# 关于作者
+## 关于作者
+
 关于指南作者的信息。
 
 1. 标题页
 2. 封面
 3. 目录
 
-## 什么是 Sensei？
+### 什么是 Sensei？
 
 [Sensei](https://scw.buzz/38n5uPu) 是来自 [Secure Code Warrior](https://scw.buzz/2PBhLJp) 的免费 IntelliJ 插件，它可以帮助将高质量编码实践规范化为 IDE 中的实时警告，并创建快速修复解决方案来教育你或重写代码。
 
@@ -205,25 +223,22 @@ Sensei 可以帮助你根据标准添加注解并重命名方法。
 - [Secure Code Warrior](https://scw.buzz/2PBhLJp) 帮助你将高质量编码实践规范化为 IDE 中的实时警告，并创建快速修复解决方案来教育你或重写代码。
 - [Sensei](https://scw.buzz/38n5uPu) 帮助你将高质量编码实践规范化为 IDE 中的实时警告，并创建快速修复解决方案来教育你或重写代码。
 
-
-
-
 从 [Intellij Marketplace](https://plugins.jetbrains.com/plugin/14015) 下载并安装 Sensei。我们推荐通过 IntelliJ 偏好设置中的插件管理器进行安装（只需搜索“Sensei secure code”即可找到它）。
 
 我们还在 Intellij Marketplace 上创建了一份入门指南 - [入门介绍页](https://scw.buzz/3rveXvC)。
 
 一旦你下载并安装了 Sensei，要让它为你服务的最简单方法是观察你的编码过程并考虑：
 
-*   你经常需要查阅哪些文档？
-    *   你可以添加一些 Sensei 配方（recipes），将它们链接回这些文档。
-*   你总是在犯哪些简单错误？
-    *   你可以临时地将那种糟糕的编码模式代码化为一个匹配器（matcher），并编写一个 `Quick Fix` 重写程序，将代码修正为你真正想写的样子。
-*   使用某个库时，你需要编写哪些样板代码？
-    *   你可以创建一个 `Quick Fix` 规则来为你编写代码。
+- 你经常需要查阅哪些文档？
+  - 你可以添加一些 Sensei 配方（recipes），将它们链接回这些文档。
+- 你总是在犯哪些简单错误？
+  - 你可以临时地将那种糟糕的编码模式代码化为一个匹配器（matcher），并编写一个 `Quick Fix` 重写程序，将代码修正为你真正想写的样子。
+- 使用某个库时，你需要编写哪些样板代码？
+  - 你可以创建一个 `Quick Fix` 规则来为你编写代码。
 
 Sensei 的设计旨在与你正在使用的任何静态分析工具协同工作。这意味着，如果你发现静态分析报告了相同的违规项，那么你可以在 Sensei 配方中复制该条件。然后你可以添加一个 `Quick Fix`，帮助训练自己不仅能识别错误，还能快速切换到编写正确的代码。
 
-## 什么是静态分析？
+### 什么是静态分析？
 
 静态分析是在不执行应用程序的情况下对源代码进行自动化分析。
 
@@ -231,12 +246,12 @@ Sensei 的设计旨在与你正在使用的任何静态分析工具协同工作�
 
 静态分析通常用于检测：
 
-*   安全漏洞。
-*   性能问题。
-*   不符合标准的情况。
-*   使用了过时的编程结构。
+- 安全漏洞。
+- 性能问题。
+- 不符合标准的情况。
+- 使用了过时的编程结构。
 
-### 静态分析工具是如何工作的？
+#### 静态分析工具是如何工作的？
 
 所有静态分析工具的共同基本概念是搜索源代码，以识别出带有某种警告或信息的特定编码模式。
 
@@ -244,15 +259,17 @@ Sensei 的设计旨在与你正在使用的任何静态分析工具协同工作�
 
 静态分析工具在实现此功能的方式上各不相同：
 
-*   使用源代码解析技术来创建抽象语法树 (`AST`)；
-*   文本正则表达式匹配；
-*   或是上述两者的结合。
+- 使用源代码解析技术来创建抽象语法树（`AST`）；
+- 文本正则表达式匹配；
+- 或是上述两者的结合。
 
 文本的正则表达式匹配非常灵活，且易于编写匹配规则，但往往会导致大量的误报，而且匹配规则忽略了周围代码的上下文。
 
-`AST` 匹配将源代码视为程序代码，而不仅仅是填充了文本的文件。这允许进行更具体的、基于上下文的匹配，并可以减少针对代码报告的误报数量。
 
-### 持续集成中的静态分析
+
+`AST`匹配将源代码视为程序代码，而不仅仅是填充了文本的文件。这允许进行更具体的、基于上下文的匹配，并可以减少针对代码报告的误报数量。
+
+## 持续集成中的静态分析
 
 静态分析通常在持续集成（CI）过程中执行，以生成合规性问题报告，通过审查这些报告可以获得代码库随时间推移的客观视图。
 
@@ -264,7 +281,7 @@ Sensei 的设计旨在与你正在使用的任何静态分析工具协同工作�
 
 为了帮助团队更加关注静态分析的结果，通常可以在构建过程中配置一个阈值指标，如果指标超过该阈值则导致构建失败，例如触发的规则数量。
 
-### IDE 中的静态分析
+## IDE 中的静态分析
 
 为了更快地接收反馈，有很多 IDE 插件可以根据需要或随着代码更改定期在 IDE 中运行静态分析规则。
 
@@ -272,13 +289,13 @@ Sensei 的设计旨在与你正在使用的任何静态分析工具协同工作�
 
 我个人发现这是一个改进我编码的有用方法，特别是在处理被静态分析工具覆盖的新库时。尽管它可能会由于误报而产生“噪音”，或者包含一些对你不感兴趣的规则。但这可以通过多花一个步骤，配置静态分析工具来忽略某些规则来解决。
 
-### 根据静态分析规则修复代码
+## 根据静态分析规则修复代码
 
 对于大多数静态分析工具，修复规则的工作被留给了程序员，因此他们必须理解规则违规的原因以及如何修复它。
 
 极少数静态分析工具也包含修复违规项的能力，因为修复通常取决于团队、所用技术以及他们约定的编码风格。
 
-### 默认规则
+## 默认规则
 
 当静态分析工具带有默认规则时，可能会对规则的质量产生盲目的自信。人们很容易相信这些规则涵盖了程序员可能遇到的所有问题以及规则应该适用的所有情况。有时，规则应该适用的情况可能是微妙的，并且并不容易检测。
 
@@ -286,7 +303,7 @@ Sensei 的设计旨在与你正在使用的任何静态分析工具协同工作�
 
 当领域需要上下文相关的规则时，静态分析工具可能没有任何匹配你领域或库的规则。此外，这些工具通常难以配置和扩展。
 
-### 困扰之处
+## 困扰之处
 
 这些“困扰”并不是不可逾越的。它们包括：
 
@@ -328,9 +345,6 @@ Sensei 的设计旨在与你正在使用的任何静态分析工具协同工作�
 
 这些是在 IDE 中标记的静态分析规则。其中一些还有 `QuickFix` 选项，可以重写代码以解决问题。
 
-
-
-
 规则可以开启或关闭，并可以选择用于在 IDE 中高亮它的错误级别。
 
 ![](img/Image00002.jpg)
@@ -341,7 +355,7 @@ IntelliJ 检查的伟大之处在于它们随 IDE 免费提供，并且可以帮
 
 * 在编写代码时注意到源码中的警告和错误。
 * 将鼠标悬停在被标记的代码上以学习规则违规情况。
-* 使用 `alt+enter` 为问题应用 `QuickFix`。
+* 使用`alt+enter`为问题应用`QuickFix`。
 
 ![](img/Image00003.jpg)
 
@@ -349,17 +363,17 @@ IntelliJ 检查的伟大之处在于它们随 IDE 免费提供，并且可以帮
 
 [SpotBugs](https://plugins.jetbrains.com/plugin/14014-spotbugs) IntelliJ 插件使用静态分析来尝试提醒你代码中的 bug。
 
-可以从 IntelliJ 偏好设置（Preferences）配置 SpotBugs 来扫描你的代码。实际使用的规则可以在 `Detector` 标签页中找到。
+可以从 IntelliJ 偏好设置（Preferences）配置 SpotBugs 来扫描你的代码。实际使用的规则可以在`Detector`标签页中找到。
 
 ![](img/Image00004.jpg)
 
-我倾向于在编写并审查代码后使用 SpotBugs。我会运行 `Analyze Project Files Including Test Sources`。
+我倾向于在编写并审查代码后使用 SpotBugs。我会运行`Analyze Project Files Including Test Sources`。
 
 ![](img/Image00005.jpg)
 
 这确实帮助我识别 bug、死代码以及明显的优化点。它还迫使我研究一些被标记的违规项，帮助我决定如何处理。
 
-SpotBugs 会发现问题，但没有提供任何尝试解决问题的 `QuickFix` 动作。
+SpotBugs 会发现问题，但没有提供任何尝试解决问题的`QuickFix`动作。
 
 SpotBugs 很容易配置，我发现它是我在 IDE 中咨询的非常有用的客观第二意见。
 
@@ -381,7 +395,7 @@ SonarLint 不提供快速修复（quick fixes），但与违规报告相关的�
 
 [CheckStyle](https://plugins.jetbrains.com/plugin/1065-checkstyle-idea) 插件提供了格式和代码质量规则的混合。
 
-CheckStyle 插件内置了 `Sun Checks` 和 `Google Checks`。
+CheckStyle 插件内置了`Sun Checks`和`Google Checks`。
 
 这些定义可以很容易[在线找到](https://checkstyle.sourceforge.io/style_configs.html)。
 
@@ -391,25 +405,25 @@ CheckStyle 经常用作 CI 过程的构建失败插件，当 CheckStyle 违规�
 
 ### Sensei
 
-[Sensei](https://scw.buzz/38n5uPu) 使用基于抽象语法树 (`AST`) 的静态分析来匹配代码并创建 `Quick Fixes`，这允许对有问题的代码进行特定的识别。
+[Sensei](https://scw.buzz/38n5uPu) 使用基于抽象语法树（`AST`）的静态分析来匹配代码并创建`Quick Fixes`，这允许对有问题的代码进行特定的识别。
 
-`AST` 允许与配方（recipe）相关的 `Quick Fixes` 理解周围的代码，例如，当在代码中添加新类时，该类的任何 import 仅会被添加到源文件中一次，而不是每次替换都添加一次。
+`AST`允许与配方（recipe）相关的`Quick Fixes`理解周围的代码，例如，当在代码中添加新类时，该类的任何 import 仅会被添加到源文件中一次，而不是每次替换都添加一次。
 
 Sensei 的创建是为了方便构建自定义匹配规则，这些规则在其他工具中可能不存在，或者很难配置。
 
-与其修改配置文件，所有配置都可以在 GUI 中完成。在创建新配方时，GUI 可以让你轻松看到该配方匹配哪些代码。在定义 `Quick Fixes` 时，可以立即比较代码的修改前之后的状态。这使得创建非常有上下文的配方变得更容易，即针对特定团队、技术甚至是个人程序员的配方。
+与其修改配置文件，所有配置都可以在 GUI 中完成。在创建新配方时，GUI 可以让你轻松看到该配方匹配哪些代码。在定义`Quick Fixes`时，可以立即比较代码的修改前之后的状态。这使得创建非常有上下文的配方变得更容易，即针对特定团队、技术甚至是个人程序员的配方。
 
 ![](img/Image00007.jpg)
 
-我将 Sensei 与其他静态分析工具结合使用，例如大多数静态分析工具会发现问题但不修复它们。Sensei 的常见用例是在 Sensei 中复制其他工具的匹配搜索，并用 `Quick Fix` 将其扩展。这样做的好处是，所应用的自定义修复已经符合你项目的编码标准。
+我将 Sensei 与其他静态分析工具结合使用，例如大多数静态分析工具会发现问题但不修复它们。Sensei 的常见用例是在 Sensei 中复制其他工具的匹配搜索，并用`Quick Fix`将其扩展。这样做的好处是，所应用的自定义修复已经符合你项目的编码标准。
 
-我经常发现自己创建了已经在 IntelliJ 意图（Intensions）集中存在的 Sensei 配方，因为意图报告并不完全符合我创建的上下文，或者因为 IntelliJ 提供的 `QuickFix` 不匹配我想要使用的代码模式。
+我经常发现自己创建了已经在 IntelliJ 意图（Intensions）集中存在的 Sensei 配方，因为意图报告并不完全符合我创建的上下文，或者因为 IntelliJ 提供的`QuickFix`不匹配我想要使用的代码模式。
 
 我是在增强现有的工具，而不是尝试完全取代它们。
 
 当你识别出常用规则的上下文变体时，Sensei 也非常有用，例如，如果你在使用一个静态分析工具不支持的 SQL 库，但静态分析引擎中的常用 SQL 规则仍然适用，那么你可以使用 Sensei 创建这些规则的特定库变体。
 
-Sensei 并不是开箱即用提供像上述静态分析工具那样的通用配方，它的优势在于可以轻松创建新配方，并带有配置好以匹配你特定编码风格和用例的 `Quick Fixes`。
+Sensei 并不是开箱即用提供像上述静态分析工具那样的通用配方，它的优势在于可以轻松创建新配方，并带有配置好以匹配你特定编码风格和用例的`Quick Fixes`。
 
 *注意：我们正在维护一个公共配方仓库，[你可以在这里找到](https://scw.buzz/30pkFN)。
 
@@ -417,11 +431,11 @@ Sensei 并不是开箱即用提供像上述静态分析工具那样的通用配�
 
 我结合使用所有提到的工具：
 
-* IntelliJ 意图帮助开箱发现常见问题，通常带有 `QuickFix`。
+* IntelliJ 意图帮助开箱发现常见问题，通常带有`QuickFix`。
 * SpotBugs 发现我可能错过的 bug 并提醒我性能问题。
 * SonarLint 识别我未知的 Java 特性，并提醒我建模代码的其他方式。
 * CheckStyle 帮助我符合约定的编码风格，该风格在 CI 期间执行。
-* Sensei 帮助我创建针对静态分析发现的常见场景的 `Quick Fix`，并创建难以配置的特定项目或技术配方。
+* Sensei 帮助我创建针对静态分析发现的常见场景的`Quick Fix`，并创建难以配置的特定项目或技术配方。
 
 ## 示例仓库
 
@@ -443,7 +457,7 @@ Sensei 并不是开箱即用提供像上述静态分析工具那样的通用配�
 * 示例 Sensei 配方将被加载。
 * 阅读用例查看配方如何识别问题并修复代码。
 
-*这是一个多模块 Maven 项目。当你克隆此项目或下载为 zip 包时，请记住将顶层 `pom.xml` 作为项目打开。`.sensei` 文件夹包含支持示例和嵌入 `readme.md` 文件的示例配方。*
+*这是一个多模块 Maven 项目。当你克隆此项目或下载为 zip 包时，请记住将顶层`pom.xml`作为项目打开。`.sensei`文件夹包含支持示例和嵌入`readme.md`文件的示例配方。*
 
 ### 公共配方
 
@@ -457,9 +471,6 @@ Sensei 并不是开箱即用提供像上述静态分析工具那样的通用配�
 * 可以作为它们所覆盖技术的配方使用。
 * 用于学习如何创建配方。
 * 理解 Sensei 配方可以应用的领域范围。
-
-
-
 
 * [官方文档](https://scw.buzz/3emSI7l)
 * [`sensei-docs-beta.securecodewarrior.com/`](https://scw.buzz/3emSI7l)
@@ -486,8 +497,8 @@ Sensei 并不是开箱即用提供像上述静态分析工具那样的通用配�
 * [Github 示例项目](https://scw.buzz/3cixLrq)
     * [`github.com/SecureCodeWarrior/sensei-blog-examples`](https://scw.buzz/3cixLrq)
 * [公开 Sensei 菜谱索引](https://scw.buzz/30pk1FN)
-    * [`github.com/SecureCodeWarrior/public-cookbooks](https://scw.buzz/30pk1FN)
-    * [`securecodewarrior.github.io/public-cookbooks/](https://scw.buzz/3btJZhV)
+    * [`github.com/SecureCodeWarrior/public-cookbooks`](https://scw.buzz/30pk1FN)
+    * [`securecodewarrior.github.io/public-cookbooks/`](https://scw.buzz/3btJZhV)
 
 ## Sensei 团队支持
 
@@ -514,21 +525,21 @@ Sensei 提供了多种共享菜谱的机制：
 
 ### 将菜谱存储在受版本控制的项目中
 
-创建菜谱文件时，`.sensei` 文件夹是默认选项。
+创建菜谱文件时，`.sensei`文件夹是默认选项。
 
 * `project://.sensei`
 
-所有菜谱和配方都将存储在项目中的 `.sensei` 文件夹中。
+所有菜谱和配方都将存储在项目中的`.sensei`文件夹中。
 
-最简单的共享方法是将项目的 `.sensei` 文件夹添加到版本控制中。
+最简单的共享方法是将项目的`.sensei`文件夹添加到版本控制中。
 
-然后，`.sensei` 文件夹就可以像项目相关的其他共享代码产物一样进行管理。菜谱以 YAML 配置的形式存储，使其在任何提交和审查过程中易于合并。
+然后，`.sensei`文件夹就可以像项目相关的其他共享代码产物一样进行管理。菜谱以 YAML 配置的形式存储，使其在任何提交和审查过程中易于合并。
 
-这是公开项目 `sensei-blog-examples` 采用的方法。
+这是公开项目`sensei-blog-examples`采用的方法。
 
 `https://github.com/SecureCodeWarrior/sensei-blog-examples`
 
-`.sensei` 文件夹包含了包含所有配方的菜谱，任何克隆仓库的人都可以使用它们。
+`.sensei`文件夹包含了包含所有配方的菜谱，任何克隆仓库的人都可以使用它们。
 
 ### 将菜谱存储在任何文件夹中
 
@@ -544,7 +555,7 @@ Sensei 还可以访问存储在 Github 仓库中的配方。支持私有仓库�
 
 #### 通过 SSH 访问 Github
 
-使用以下 `Location` 语法来配置 SSH 仓库访问：
+使用以下`Location`语法来配置 SSH 仓库访问：
 
 `git@github.com:SecureCodeWarrior/acookbook.git`
 
@@ -554,7 +565,7 @@ Sensei 还可以访问存储在 Github 仓库中的配方。支持私有仓库�
 
 `git@github.com:SecureCodeWarrior/cookbook-basic-protection-set.git`
 
-还可以配置菜谱的分支和子文件夹，例如在 `master` 分支的 `cookbook` 子文件夹中
+还可以配置菜谱的分支和子文件夹，例如在`master`分支的`cookbook`子文件夹中
 
 例如：
 
@@ -568,7 +579,7 @@ Sensei 还可以访问存储在 Github 仓库中的配方。支持私有仓库�
 
 #### 通过 HTTPS 访问 Github
 
-也可以通过 HTTPS 访问公共仓库，使用相同的 `repo.git|branch|folder` 语法，例如：
+也可以通过 HTTPS 访问公共仓库，使用相同的`repo.git|branch|folder`语法，例如：
 
 `https://github.com/SecureCodeWarrior/sensei-blog-examples.git|master|.sensei`
 
@@ -583,6 +594,8 @@ Sensei 还可以通过 HTTP 或 HTTPS 访问压缩的菜谱。
 压缩文件应包含菜谱文件夹的内容，例如：
 
 `rules.sensei`
+
+
 
 ### 共享总结
 
@@ -600,10 +613,10 @@ IntelliJ IDEA 提供了在编写代码时通过 IDE 帮助改进代码的功能�
 
 IntelliJ 的检查功能驱动了在编写代码时动态在 IDE 中报告的许多错误，例如：
 
-* 检测可以转换为接口的抽象类。
-* 识别冗余的类字段（本地）。
-* 关于使用弃用方法的警告。
-* 等。
+- 检测可以转换为接口的抽象类。
+- 识别冗余的类字段（本地）。
+- 关于使用弃用方法的警告。
+- 等。
 
 这些检查在 IDE 中高亮匹配代码的意操作，通常带有关联的快速修复。
 
@@ -617,15 +630,15 @@ IntelliJ 的检查功能驱动了在编写代码时动态在 IDE 中报告的许
 
 检查可以在 IDE 内以批处理运行，也可以从命令行或在集成过程中运行。
 
-通过批处理运行 IntelliJ 检查的关键是使用检查配置（Inspections Profile）。
+通过批处理运行 IntelliJ 检查的关键是使用检查配置（Inspection Profile）。
 
 IntelliJ 有两个默认检查配置：存储在项目中，存储在 IDE 中。
 
 可以创建新的检查配置以配置特定的插件或用例，例如：
 
-* 仅运行 Checkstyle 扫描
-* 运行特定的 Sensei 规则
-* 运行 HTML 检查
+- 仅运行 Checkstyle 扫描。
+- 运行特定的 Sensei 规则。
+- 运行 HTML 检查。
 
 配置中的检查可以在 IntelliJ 偏好设置中启用或禁用。偏好设置也是了解可用检查范围的简单方法。
 
@@ -647,10 +660,6 @@ IntelliJ 有两个默认检查配置：存储在项目中，存储在 IDE 中。
 (Image 00011.jpg)
 ```
 
-
-
-
-
 `Analyze` 功能允许你控制 `Inspection` 运行的范围，例如整个项目（包括或排除测试源），或针对特定的文件集。
 
 ![](img/Image00012.jpg)
@@ -669,11 +678,11 @@ IntelliJ 将在 `Inspection Results`（检查结果）标签页中报告运行 `
 
 IntelliJ 具有如 JetBrains 文档所描述的那样从命令行运行检查的能力：
 
-* https://www.jetbrains.com/help/idea/working-with-the-ide-features-from-command-line.html
+- https://www.jetbrains.com/help/idea/working-with-the-ide-features-from-command-line.html
 
 我主要使用 Mac OS，可以通过以下命令从命令行运行单个 IntelliJ 实例：
 
-```
+```bash
 open -na "IntelliJ IDEA CE.app"
 ```
 
@@ -698,17 +707,17 @@ Intelliij 官方文档描述了检查命令的一般形式为：
 
 在实践中，我使用了全路径：
 
-```
+```bash
 idea inspect /Users/user/GitHub/sensei-blog-examples /Users/user/GitHub/sensei-blog-examples/.idea/inspectionProfiles/senseiprofile.xml /Users/user/GitHub/sensei-blog-examples/scan-results
 ```
 
 或者使用相对于我用户目录的路径：
 
-```
+```bash
 idea inspect ~/Documents/GitHub/sensei-blog-examples ~/Documents/GitHub/sensei-blog-examples/.idea/inspectionProfiles/senseiprofile.xml scan-results
 ```
 
-这会运行我添加到 `senseiprofile` 中的所有 `Inspections`并将结果报告在 `scan-results` 文件夹中。
+这会运行我添加到 `senseiprofile` 中的所有 `Inspections` 并将结果报告在 `scan-results` 文件夹中。
 
 ![](img/Image00014.jpg)
 
@@ -726,7 +735,7 @@ idea inspect ~/Documents/GitHub/sensei-blog-examples ~/Documents/GitHub/sensei-b
 
 这在 JetBrains 网站上有官方文档记录：
 
-* https://www.jetbrains.com/help/idea/command-line-code-inspector.html#inspection-results
+- https://www.jetbrains.com/help/idea/command-line-code-inspector.html#inspection-results
 
 如果将命令行执行整合到持续集成过程中，并且审查人员想要检查任何检查结果条目的完整源码上下文，则可能会在代码审查过程中使用此功能。
 
@@ -736,20 +745,20 @@ idea inspect ~/Documents/GitHub/sensei-blog-examples ~/Documents/GitHub/sensei-b
 
 TeamCity 为持续集成中的 `Inspection Profiles` 提供了开箱用的支持。
 
-* https://www.jetbrains.com/help/teamcity/inspections.html
+- https://www.jetbrains.com/help/teamcity/inspections.html
 
 Jenkins Warnings NG 插件支持 IntelliJ 检查的命令行输出作为报告格式之一。
 
-* https://github.com/jenkinsci/warnings-ng-plugin
-* https://github.com/jenkinsci/warnings-ng-plugin/blob/master/SUPPORTED-FORMATS.md
+- https://github.com/jenkinsci/warnings-ng-plugin
+- https://github.com/jenkinsci/warnings-ng-plugin/blob/master/SUPPORTED-FORMATS.md
 
 存在如 `idea CLI Inspector` 这样的社区项目，用于在其他 CI 工具中使用 `Inspection Profiles`，例如：
 
-* https://github.com/bentolor/idea-cli-inspector
+- https://github.com/bentolor/idea-cli-inspector
 
 随着 JetBrains Qodana 项目的引入，检查配置在 CI 过程中的未来看起来更加明亮。Qodana 项目是 IntelliJ 的无头版本，带有官方的 Github Actions 和 Docker 镜像。
 
-* https://github.com/JetBrains/Qodana
+- https://github.com/JetBrains/Qodana
 
 *Qodana 目前处于测试阶段，但 Sensei 团队正在监控它，使其作为持续集成中运行 Sensei 规则的官方支持平台。*
 
@@ -783,7 +792,7 @@ Sensei 插件允许我创建搜索来匹配我想修改的代码并创建快速�
 
 ![](img/Image0018.jpg)
 
-## 食谱管理器 (Cookbook Manager)
+## 食谱管理器（Cookbook Manager）
 
 我们可以在这里显示食谱管理器，它将列出我可用的“食谱”（配方列表）。
 
@@ -795,7 +804,7 @@ Sensei 插件允许我创建搜索来匹配我想修改的代码并创建快速�
 
 由于这是来自 Github 的示例项目，我在项目的 `.sensei` 文件夹中存储了一些配方，并且它们已自动加载。
 
-可以通过点击 `[Manage recipes]` 按钮来管理它们并查看哪些配方可用
+可以通过点击 `[Manage recipes]` 按钮来管理它们并查看哪些配方可用。
 
 ## 配方编辑器列表
 
@@ -809,10 +818,10 @@ Sensei 插件允许我创建搜索来匹配我想修改的代码并创建快速�
 
 配方编辑器有四个主要组件：
 
-* 配方列表，可以在此处添加、删除和复制配方。
-* 通用设置标签页，可以在此处配置配方。
-* 配方设置标签页，创建搜索和匹配条件。
-* 修复设置，配置修改或生成代码的快速修复更改。
+- 配方列表，可以在此处添加、删除和复制配方。
+- 通用设置标签页，可以在此处配置配方。
+- 配方设置标签页，创建搜索和匹配条件。
+- 修复设置，配置修改或生成代码的快速修复更改。
 
 ![](img/Image0021.jpg)
 
@@ -820,13 +829,10 @@ Sensei 插件允许我创建搜索来匹配我想修改的代码并创建快速�
 
 通用设置是我们在主要配置此处：
 
-* `Name` 和 `Description` 在使用 `alt+enter` 时显示在意图快速修复弹出窗口中。
-* `Level` 定义了匹配的配方在 IDE 中如何渲染。
+- `Name` 和 `Description` 在使用 `alt+enter` 时显示在意图快速修复弹出窗口中。
+- `Level` 定义了匹配的配方在 IDE 中如何渲染。
 
 如果我将一个配方标记为“错误”（Error），则代码将带有红色下划线并显示为语法错误，但警告将会有轻量高亮。
-
-
-
 
 还有其他设置，但这些用于更高级用法，将在文档中介绍。
 
@@ -834,7 +840,7 @@ Sensei 插件允许我创建搜索来匹配我想修改的代码并创建快速�
 
 ![](img/Image00022.jpg)
 
-## 配方设置 - 搜索
+## 配方设置——搜索
 
 “配方设置”（Recipe Settings）包含了搜索配置。
 
@@ -900,9 +906,7 @@ Sensei 插件允许我创建搜索来匹配我想修改的代码并创建快速�
 
 ### 使用问题选项卡
 
-在“问题”选项卡中。
-
-右键点击报告的问题并选择“显示快速修复”（Show Quick Fixes）。
+在“问题”选项卡中，右键点击报告的问题并选择“显示快速修复”（Show Quick Fixes）。
 
 ![](img/Image00031.jpg)
 
@@ -922,11 +926,11 @@ Sensei 插件允许我创建搜索来匹配我想修改的代码并创建快速�
 
 如果文件中有多个出现之处，我可以一次性修复它们。
 
-按下 `alt+enter` 并导航到快速修复菜单的下一层级，我们找到了了修复当前源文件中所有问题的选项。
+按下 `alt+enter` 并导航到快速修复菜单的下一层级，我们找到了修复当前源文件中所有问题的选项。
 
 ![](img/Image00034.jpg)
 
-# 章节 - 用用例
+# 章节——用例
 
 Sensei 可以帮助提高高质量代码的编写，无论底层的领域或技术如何。
 
@@ -953,25 +957,23 @@ Sensei 可以帮助提高高质量代码的编写，无论底层的领域或技�
 
 在编写以下代码时，我犯了一些错误：
 
+```java
+private String getCountdownString() {
+
+    String output =
 ```
- private String getCountdownString() {
-
-        String output =
-```
-
-
 
 注意，我将 `SysOutTest` 修改为了 mustache 变量，这样它就能获取我在此配方中所使用的任何类名。同样，由于我不记得 mustache 的语法，我使用了 GUI 命令 `show variables` 来找到我需要的替换内容。
 
 而且通过将 `Logger` 全限定限定为 `java.util.logging.Logger`，Sensei 将添加导入项并编写我想要的代码行，即：
 
-```
- Logger logger = Logger.getLogger(SysOutTest.class.getName());
+```java
+Logger logger = Logger.getLogger(SysOutTest.class.getName());
 ```
 
 ![](img/Image00040.jpg)
 
-这个配方的一个有用之处是，因为它只会添加一次 logger 字段，因此我可以将其应用于任何使用过 `System.out.println` 的现有代码中，并使用 Sensei 更改我代码中所有出现的地方。
+这个配方的一个有用之处是，因为它只会添加一次 `logger` 字段，因此我可以将其应用于任何使用过 `System.out.println` 的现有代码中，并使用 Sensei 更改我代码中所有出现的地方。
 
 ![](img/Image00041.jpg)
 
@@ -985,16 +987,16 @@ Sensei 可以帮助提高高质量代码的编写，无论底层的领域或技�
 
 我创建了一个级别为 `Information` 的配方：
 
-```
- Name: Logger: add logger
+```yaml
+Name: Logger: add logger
 Description: Add logger to class
 Level: Information
 ```
 
 匹配不带 logger 字段的类：
 
-```
- search:
+```yaml
+search:
   class:
     without:
       child:
@@ -1002,10 +1004,10 @@ Level: Information
           name: "logger"
 ```
 
-然后我将复用之前之前看到的 QuickFix 的部分：
+然后我将复用之前看到的 QuickFix 的部分：
 
-```
- availableFixes:
+```yaml
+availableFixes:
   - name: "Add Logger"
     actions:
       - addField:
@@ -1014,23 +1016,24 @@ Level: Information
           target: "self"
 ```
 
-注意这里 `target` 与第一个 QuickFix 相比的区别。这里使用 `self` 是因为我们的搜索匹配了类。第一个 QuickFix 使用 `parentClass` 是因为我们匹配的是类内部的代码。*
+
+
+注意这里 `target` 与第一个 QuickFix 相比的区别。这里使用 `self` 是因为我们的搜索匹配了类。第一个 QuickFix 使用 `parentClass` 是因为我们匹配的是类内部的代码。
 
 ## 总结
 
 这代表了使用 Sensei 帮助提高个人编程技能的关键流程之一：
 
-* 创建一个配方来帮助实现即时的“最佳实践”。
-* 一旦你知道如何使用该最佳实践……就创建一个配方来加速你的工作流。
+- 创建一个配方来帮助实现即时的“最佳实践”。
+- 一旦你知道如何使用该最佳实践……就创建一个配方来加速你的工作流。
 
 ## 代码链接
 
-在 Github 仓库中：
+在 GitHub 仓库中：
 
-* https://github.com/SecureCodeWarrior/sensei-blog-examples
-* module: `pojoexamples`
-
-* `src\test\java\logging`
+- https://github.com/SecureCodeWarrior/sensei-blog-examples
+- 模块：`pojoexamples`
+- 路径：`src\test\java\logging`
 
 `AddLoggerTest.java` 包含一些应用配方的指令。
 
@@ -1042,7 +1045,7 @@ Level: Information
 
 [youtu.be/qPlNm0yaSto](https://youtu.be/qPlNm0yaSto)
 
-# Junit 5 用例
+# JUnit 5 用例
 
 [JUnit 5](https://junit.org/junit5/) 是一个流行的 Java 单元测试框架。
 
@@ -1050,7 +1053,7 @@ Level: Information
 
 ## 添加注解和重命名方法
 
-*使用 Sensei 改进个人编程流程*
+使用 Sensei 改进个人编程流程。
 
 对于这一部分，我重现了学习 JUnit 时使用的一种“糟糕”的编码方法，并将演示如何使用 Sensei 将这种“糟糕”模式转换为公认的且“更好”的编码模式。
 
@@ -1058,7 +1061,7 @@ Level: Information
 
 如果我们是在团队中工作，可以使用拉取请求（pull requests）的代码审查来帮助强制执行编码风格。与经验丰富的程序员进行结对编程时，我们还可以缩短反馈周期。
 
-我们还可以通过工具增强我们的流程，让工具提示我们做正确的事。Thoughtworks 在其[针对 Sensei 的技术雷达列表](https://www.thoughtworks.com/radar/tools/sensei) 中将其描述为：
+我们还可以通过工具增强我们的流程，让工具提示我们做正确的事。Thoughtworks 在其[针对 Sensei 的技术雷达列表](https://www.thoughtworks.com/radar/tools/sensei)中将其描述为：
 
 > “让做正确的事变得简单，比应用类似清单的治理规则和程序更容易”
 
@@ -1066,45 +1069,46 @@ Level: Information
 
 理想情况下，正如大家所知，我应该使用 `@Disabled` 注解并写成：
 
-```
- @Disabled
-    @Test
-    void canWeAddTwoNumbers(){
-        Assertions.fail("this test was skipped and should not run");
-    }
+```java
+@Disabled
+@Test
+void canWeAddTwoNumbers() {
+    Assertions.fail("this test was skipped and should not run");
+}
 ```
 
 但在学习期间，我不得不训练自己使用 `@Disabled`。
 
 当我忘记如何禁用测试方法时，我会删除 `@Test` 注解并重命名测试：
 
-```
- class SkipThisTest {
+```java
+class SkipThisTest {
 
-    void SKIPTHIScanWeAddTwoNumbers(){
+    void SKIPTHIScanWeAddTwoNumbers() {
         Assertions.fail("this test was skipped and should not run");
-    }   
+    }
 }
 ```
 
 这并不好，但完成了任务。我当时没有像 Sensei 这样的工具来帮助我记忆，所以我陷入了使用糟糕编码模式中。
 
-我为此 readme 采取的任务是：
+我为此 README 采取的任务是：
 
-* 创建一条规则，通过重命名方法来找到被“跳过”或“禁用”的方法。
-* 创建一个 QuickFix 来重命名方法并同时添加 `@Test` 和 `@Disabled` 注解。
+- 创建一条规则，通过重命名方法来找到被“跳过”或“禁用”的方法。
+- 创建一个 QuickFix 来重命名方法并同时添加 `@Test` 和 `@Disabled` 注解。
 
 ### 配方设置
 
 我使用 Sensei 的第一步是“打开设置”。
 
-```
- Name: open Sensei
+```yaml
+Name: open Sensei
 ```
 
 为了匹配方法，我在配方中使用了以下内容：
-```
- search:
+
+```yaml
+search:
   method:
     name:
       matches: ".*.*"
@@ -1118,14 +1122,14 @@ QuickFix 稍微复杂一些，因为它将重写代码，我将使用 `sed`。
 
 我想做：
 
-* 为方法添加 `@Test` 注解。
-* 为方法添加 `@Disabled` 注解。
-* 修改方法名。
+- 为方法添加 `@Test` 注解。
+- 为方法添加 `@Disabled` 注解。
+- 修改方法名。
 
 使用 `addAnnotation` 添加注解非常简单。如果我为注解使用全限定名，Sensei 将自动添加导入项。
 
-```
- availableFixes:
+```yaml
+availableFixes:
   - name: "Add @Disabled and @Test"
     actions:
       - addAnnotation:
@@ -1144,16 +1148,16 @@ QuickFix 稍微复杂一些，因为它将重写代码，我将使用 `sed`。
 
 经过思考，我想在执行演示的 `SkipThisTest` 类中找到带有 `@Disabled` 注解的方法：
 
-```
- Name: JUnit: demo in SkipThisTest remove @Disabled and revert to SKIPTHIS
+```yaml
+Name: JUnit: demo in SkipThisTest remove @Disabled and revert to SKIPTHIS
 Short Description: 为了项目演示目的移除 @Disabled 并恢复为 SKIPTHIS
 Level: warning
 ```
 
 配方设置搜索非常简单，匹配特定类中的注解。
 
-```
- search:
+```yaml
+search:
   method:
     annotation:
       type: "Disabled"
@@ -1164,17 +1168,13 @@ Level: warning
 
 对于 Quick fix，由于我们已经匹配了方法，我们使用重写动作并使用变量填充模板。
 
-
-
-
-
-```
- availableFixes:
-- name: "Remove Disabled and rename to SKIPTHIS..."
-  actions:
-  - rewrite:
-      to: "{{{ returnTypeElement }}} SKIPTHIS{{{ nameIdentifier }}}{{{ parameterList\
-        \ }}}{{{ body }}}"
+```yaml
+availableFixes:
+  - name: "Remove Disabled and rename to SKIPTHIS..."
+    actions:
+      - rewrite:
+          to: "{{{ returnTypeElement }}} SKIPTHIS{{{ nameIdentifier }}}{{{ parameterList\
+            \ }}}{{{ body }}}"
 ```
 
 我基本上添加了除了修饰符以外的所有变量（因为我想去掉这些注释），并在模板中添加了 `SKIPTHIS` 文本。
@@ -1185,27 +1185,27 @@ Level: warning
 
 我可以添加另一个具名的修复方案，这样当在使用 `alt+enter` 显示 `QuickFix` 时，我可以有一个选择。
 
-```
- availableFixes:
-- name: "Remove Disabled and rename to SKIPTHIS..."
-  actions:
-  - rewrite:
-      to: "{{{ returnTypeElement }}} SKIPTHIS{{{ nameIdentifier }}}{{{ parameterList\
-        \ }}}{{{ body }}}"
-      target: "self"
-- name: "Remove Disabled, keep other annotations, and rename to SKIPTHIS..."
-  actions:
-  - rewrite:
-      to: "{{#sed}}s/(@Disabled\n.*@Test)//,{{{ modifierList }}}{{/sed}}\n\
-        {{{ returnTypeElement }}} SKIPTHIS{{{ nameIdentifier }}}{{{ parameterList\
-        \ }}}{{{ body }}}"
-      target: "self"
+```yaml
+availableFixes:
+  - name: "Remove Disabled and rename to SKIPTHIS..."
+    actions:
+      - rewrite:
+          to: "{{{ returnTypeElement }}} SKIPTHIS{{{ nameIdentifier }}}{{{ parameterList\
+            \ }}}{{{ body }}}"
+          target: "self"
+  - name: "Remove Disabled, keep other annotations, and rename to SKIPTHIS..."
+    actions:
+      - rewrite:
+          to: "{{#sed}}s/(@Disabled\n.*@Test)//,{{{ modifierList }}}{{/sed}}\n\
+            {{{ returnTypeElement }}} SKIPTHIS{{{ nameIdentifier }}}{{{ parameterList\
+            \ }}}{{{ body }}}"
+          target: "self"
 ```
 
 在这里，我在新的 Quick Fix 中添加了额外的行。
 
-```
- {{#sed}}s/(@Disabled\n.*@Test)//,{{{ modifierList }}}{{/sed}}
+```text
+{{#sed}}s/(@Disabled\n.*@Test)//,{{{ modifierList }}}{{/sed}}
 ```
 
 这会获取修饰符列表，将其编码为字符串，然后使用 `sed` 移除字符串中包含 `@Disabled` 的行，但保留修饰符中的所有其他行，即保留所有其他注释。
@@ -1218,8 +1218,8 @@ Level: warning
 
 如果代码更复杂，我想要执行一系列 `sed` 命令，那么我可以通过嵌套它们来实现：
 
-```
- {{#sed}}s/@Test//,{{#sed}}s/@Disabled\n//,{{{ modifierList }}}{{/sed}}{{/sed}}
+```text
+{{#sed}}s/@Test//,{{#sed}}s/@Disabled\n//,{{{ modifierList }}}{{/sed}}{{/sed}}
 ```
 
 在上面的示例中，我对先对 `{{{ modifierList }}}` 应用 `@Disabled` 替换的结果再次应用 `@Test` 替换。
@@ -1228,7 +1228,7 @@ Level: warning
 
 `sed` 是一种实现代码重写的非常灵活的方法，并且可以为复杂的重写条件嵌套 `sed` 函数调用。
 
-像这样的食谱方通常是临时的，因为我们使用它们是为了改进编程流程，一旦我们建立了肌肉记忆并且不再使用那种糟糕的编程模式，我们就可以从 Cookbook 中删除或禁用它们。
+像这样的食谱通常是临时的，因为我们使用它们是为了改进编程流程，一旦我们建立了肌肉记忆并且不再使用那种糟糕的编程模式，我们就可以从 Cookbook 中删除或禁用它们。
 
 注意：与其添加两个可用修复，我可以复制配方，但如果这样做，我记得取消勾选“Add disable entry for cloned recipe”（为克隆配方添加禁用项）复选框，否则只有克隆的配方可用。
 
@@ -1236,8 +1236,8 @@ Level: warning
 
 在这个示例中，我们将：
 
-* 演示搜索和匹配注释。
-* 使用 mustache 模板修改注释。
+- 演示搜索和匹配注释。
+- 使用 mustache 模板修改注释。
 
 Sensei 提供了匹配问题代码模式并将其修改为约定实现的能力。在这个示例中，我使用不带参数的 `@Disabled` 作为问题代码模式。
 
@@ -1251,9 +1251,9 @@ Sensei 提供了匹配问题代码模式并将其修改为约定实现的能力�
 
 没有指定原因的禁用测试长期来看可能会产生问题，因为我们会忘记为什么要禁用它们。
 
-```
- @Disabled
-void thisTestMethodHasNoDisabledReason(){
+```java
+@Disabled
+void thisTestMethodHasNoDisabledReason() {
     Assertions.fail("This test is disabled and should not run");
 }
 ```
@@ -1262,9 +1262,9 @@ void thisTestMethodHasNoDisabledReason(){
 
 在代码审查期间，我们经常会指出作为注释参数添加解释性描述是一个好主意。
 
-```
- @Disabled("Disabled to demonstrate adding a reason")
-void thisTestMethodHasDisabledReason(){
+```java
+@Disabled("Disabled to demonstrate adding a reason")
+void thisTestMethodHasDisabledReason() {
     Assertions.fail("This test is disabled and should not run");
 }
 ```
@@ -1275,8 +1275,8 @@ void thisTestMethodHasDisabledReason(){
 
 当我思考要做什么时，我必须：
 
-* 匹配不带任何参数的 `Disabled` 注释。
-* 将 `Disabled` 注释更改为带有标记文本“TODO: add a description here”参数的注释。
+- 匹配不带任何参数的 `Disabled` 注释。
+- 将 `Disabled` 注释更改为带有标记文本“TODO: add a description here”参数的注释。
 
 ### 创建警告食谱
 
@@ -1290,8 +1290,8 @@ void thisTestMethodHasDisabledReason(){
 
 通用：
 
-```
- name: remember to add disabled description
+```yaml
+name: remember to add disabled description
 short description: @Disabled should really have a description explaining why
 Level: Warning
 ```
@@ -1310,13 +1310,12 @@ Level: Warning
 
 例如：
 
-```
- search:
+```yaml
+search:
   annotation:
     type: "org.jupiter.api.Disabled"
     without:
-      parameters:
-      {}
+      parameters: {}
 ```
 
 ### 创建重写修复方案
@@ -1333,18 +1332,18 @@ Level: Warning
 
 例如 QuickFix：
 
-```
- availableFixes:
-- name: "Add a todo comment"
-  actions:
-  - rewrite:
-      to: "{{{ }}}(\"TODO: add a description\")
-      target: "self"
+```yaml
+availableFixes:
+  - name: "Add a todo comment"
+    actions:
+      - rewrite:
+          to: "{{{ }}}(\"TODO: add a description\")"
+          target: "self"
 ```
 
 ## 总结
 
-构建写 Quick Fix 时，如果我们可以操作 `self`实体将会更容易。
+构建 Quick Fix 时，如果我们可以操作 `self` 实体将会更容易。
 
 在示例中，我使用 rewrite action 来修改注释。Rewrite 是一种通用的操作，适用于任何代码元素，并且是一个很好的探索方向。
 
@@ -1359,7 +1358,7 @@ Level: Warning
 在 Java 中，我们有 JavaDoc 注释，它可以包含一个 `see` 注解：
 
 ```java
- /**
+/**
  * @see <a href="https://junit.org/junit5/docs/current/user-guide/#writing-tests-annotations">Junit 5 Annotation docs</a>a>
  */
 ```
@@ -1378,10 +1377,6 @@ Sensei 提供了匹配库注释和方法的能力，从而提供指向 wiki 或�
 
 JavaDoc 非常详细，`Quick Documentation` 视图解释了如何使用该注释。
 
-
-
-
-
 但网站上的官方文档通常更容易读，并且包含更多示例。
 
 当团队开始学习一个库时，拥有一套推荐的教程会非常有用。
@@ -1390,10 +1385,10 @@ Sensei 有一个 `goto` 操作，可以打开 URL，允许我们链接到外部�
 
 ## 实现 `goto` URL
 
-为了实现这一点，我将创建一个匹配 Junit `@Test` 注解的搜索。
+为了实现这一点，我将创建一个匹配 JUnit `@Test` 注解的搜索。
 
-```
- search:
+```yaml
+search:
   annotation:
     owner:
       method: {}
@@ -1404,22 +1399,21 @@ Sensei 有一个 `goto` 操作，可以打开 URL，允许我们链接到外部�
 
 例如：
 
-* https://junit.org/junit5/docs/current/user-guide/#writing-tests-annotations
+- https://junit.org/junit5/docs/current/user-guide/#writing-tests-annotations
+- https://junit.org/junit5/docs/current/user-guide/#writing-tests-classes-and-methods
 
-* https://junit.org/junit5/docs/current/user-guide/#writing-tests-classes-and-methods
+下面的示例将创建一个单一的操作 `JUnit Annotations (learn)`，它将在浏览器中同时打开这两个 URL。
 
-下面的示例将创建一个单一的操作 `JUnit Annotations (learn)`，它将在浏览器中同时打开这两个两个 URL。
-
-```
- availableFixes:
-- name: "Learn about JUnit Annotations"
-  actions:
-  - goto:
-      type: "URL"
-      value: "https://junit.org/junit5/docs/current/user-guide/#writing-tests-annotations"
-  - goto:
-      type: "URL"
-      value: "https://junit.org/junit5/docs/current/user-guide/#writing-tests-classes-and-methods"
+```yaml
+availableFixes:
+  - name: "Learn about JUnit Annotations"
+    actions:
+      - goto:
+          type: "URL"
+          value: "https://junit.org/junit5/docs/current/user-guide/#writing-tests-annotations"
+      - goto:
+          type: "URL"
+          value: "https://junit.org/junit5/docs/current/user-guide/#writing-tests-classes-and-methods"
 ```
 
 当我在 IntelliJ 中通过 `alt+Enter` 激活它时，我看到了上下文菜单，可以选择它跳转到文档。
@@ -1428,18 +1422,19 @@ Sensei 有一个 `goto` 操作，可以打开 URL，允许我们链接到外部�
 
 ## 多操作
 
+
+
 我可能会选择多个操作，以便每个 URL 或教程在 `alt+enter` QuickFix 弹出菜单中都有自己的选项。
 
 例如，对于 `@Parameterized` 注解，我可能想链接到官方文档和一组在线示例代码。
 
 * https://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests
-
 * https://github.com/eviltester/junitexamples/blob/master/src/test/java/parameterized/junit5/InitialExampleTest.java
 
 我只需简单的创建一个搜索该注解的配方（recipe）：
 
 ```
- search:
+search:
   annotation:
     owner:
       method: {}
@@ -1449,7 +1444,7 @@ Sensei 有一个 `goto` 操作，可以打开 URL，允许我们链接到外部�
 并链接到我认为有用的站点：
 
 ```
- availableFixes:
+availableFixes:
 - name: "JUnit Annotations (learn)"
   actions:
   - goto:
@@ -1482,18 +1477,18 @@ Sensei 有一个 `goto` 操作，可以打开 URL，允许我们链接到外部�
 
 ## 如何使用 Sensei 捕捉并修复依赖注入问题
 
-Sensei 项目本身拥有随时间积累的配方，这是 Sensei 团队构建配方覆盖的场景示例示例：Guice 的配置错误导致在测试期间运行时报告了 `NullPointerException`。
+Sensei 项目本身拥有随时间积累的配方，这是 Sensei 团队构建配方覆盖的场景示例：Guice 的配置错误导致在测试期间运行时报告了 `NullPointerException`。
 
 这可以推广到许多依赖注入场景，在这些场景中，代码语法上是正确的，但因为连接配置错误，导致错误漏掉。
 
-这通常在我们学习某项技术时发生，我们不断犯下忘记连接的简单错误。但也会发生在经验丰富的人士身上，因为……我们都都会犯错，而且我们可能没有单元测试来覆盖一切。
+这通常在我们学习某项技术时发生，我们不断犯下忘记连接的简单错误。但也会发生在经验丰富的人士身上，因为……我们都会犯错，而且我们可能没有单元测试来覆盖一切。
 
 ### 错误的依赖注入连接导致的运行时异常
 
 下面的代码在运行时因 `NullPointerException` 失败。
 
 ```
- Injector injector = Guice.createInjector(new SystemOutModule());
+Injector injector = Guice.createInjector(new SystemOutModule());
 CountReporter reporter = injector.getInstance(CountReporter.class);
 
 String [] lines5 = {"1: line", "2: line", "3: line", "4: line", "5: line"};
@@ -1505,7 +1500,7 @@ Assertions.assertEquals(5, reporter.getCount());
 代码语法上是正确的，但失败是因为我们在 `SystemOutModule` 配置中漏掉了 `requestStaticInjection`。
 
 ```
- public class SystemOutModule extends AbstractModule {
+public class SystemOutModule extends AbstractModule {
 
     @Override
     protected void configure() {
@@ -1526,14 +1521,10 @@ Assertions.assertEquals(5, reporter.getCount());
 
 我们可能不会使用 Sensei 来发现 `requestStaticInjection`，因为我们所有的 Guice 配置连接都需要像这个用例一样简单。
 
-
-
-
-
 配方中的 QuickFix 会修改被注入的类，但并不是唯一需要修改的代码。
 
 ```
- availableFixes:
+availableFixes:
 - name: "Change class to public. Remember to also request injection on this class"
   actions:
   - changeModifiers:
@@ -1544,7 +1535,7 @@ Assertions.assertEquals(5, reporter.getCount());
 当配方被触发时，我仍然需要在代码中执行一个手动步骤，即添加包含 `requestStaticInjection` 的行，以完全实例化该对象。
 
 ```
- public class SystemOutModule extends AbstractModule {
+public class SystemOutModule extends AbstractModule {
 
     @Override
     protected void configure() {
@@ -1635,4 +1626,3 @@ Secure Code Warrior 是一家全球安全公司，致力于让软件开发变得
 Alan Richardson 是 Secure Code Warrior 的开发者关系负责人。Alan 拥有二十多年的专业软件开发经验，是书籍《Automating and Testing a REST API》和《Java For Testers》的作者。
 
 有关 Alan 的更多信息请访问 [EvilTester.com](https://eviltester.com)
-

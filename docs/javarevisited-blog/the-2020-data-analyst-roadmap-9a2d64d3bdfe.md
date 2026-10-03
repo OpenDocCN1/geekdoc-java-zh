@@ -1,3 +1,4 @@
+
 # 2023 年数据分析师路线图
 
 > 原文：<https://medium.com/javarevisited/the-2020-data-analyst-roadmap-9a2d64d3bdfe?source=collection_archive---------0----------------------->
@@ -8,7 +9,7 @@
 
 大家好，如果你想成为一名数据分析师，但不确定你需要哪些技能以及如何获得这些技能，那么你来对地方了。
 
-之前我已经分享了 [Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)、 [Python 开发者 RoadMa](https://javarevisited.blogspot.com/2022/05/the-python-developer-roadmap.html) p、 [Web 开发者路线图](https://javarevisited.blogspot.com/2019/02/the-2019-web-developer-roadmap.html)、 [iOS 开发者路线图](https://javarevisited.blogspot.com/2022/05/ios-developer-roadmap.html)和 [DevOps 工程师 RoadMa](https://javarevisited.blogspot.com/2018/09/the-2018-devops-roadmap-your-guide-to-become-DevOps-Engineer.html) p，在这篇文章中，我将分享数据分析师路线图，帮助你在 2023 年成为一名数据分析师。
+之前我已经分享了 [Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)、 [Python 开发者路线图](https://javarevisited.blogspot.com/2022/05/the-python-developer-roadmap.html)、 [Web 开发者路线图](https://javarevisited.blogspot.com/2019/02/the-2019-web-developer-roadmap.html)、 [iOS 开发者路线图](https://javarevisited.blogspot.com/2022/05/ios-developer-roadmap.html)和 [DevOps 工程师路线图](https://javarevisited.blogspot.com/2018/09/the-2018-devops-roadmap-your-guide-to-become-DevOps-Engineer.html)，在这篇文章中，我将分享数据分析师路线图，帮助你在 2023 年成为一名数据分析师。
 
 所有公司都有关于客户的数据，以改善服务，获得有价值的见解，更好地了解客户的行为。这可以通过在贵公司雇佣数据分析师来实现，以利用这种拥抱客户数据的好处。
 
@@ -26,15 +27,15 @@
 
 ## 1.学习 Python 语言
 
-如果您通过学习 python 语言开始您的数据分析之旅，那将是最好的，因为大多数数据分析师的工作都要求您具备编写 python 代码的技能。
+如果您通过学习 Python 语言开始您的数据分析之旅，那将是最好的，因为大多数数据分析师的工作都要求您具备编写 Python 代码的技能。
 
-此外，大多数数据分析和可视化包都支持 python 语言。参加 Python 课程的另一个好处是它很容易学习，而且它有一个庞大的社区来为你在职业生涯中可能遇到的任何问题找到解决方案。
+此外，大多数数据分析和可视化包都支持 Python 语言。参加 Python 课程的另一个好处是它很容易学习，而且它有一个庞大的社区来为你在职业生涯中可能遇到的任何问题找到解决方案。
 
-由于 python 有一个庞大的社区，所以毫无疑问，互联网上充斥着 YouTube 视频、博客帖子、付费课程等等的 Python 课程。不过，我还是会推荐 Coursera 的这个 python 专门化，你可以在两到三个月内成为 Python 的中级用户:
+由于 Python 有一个庞大的社区，所以毫无疑问，互联网上充斥着 YouTube 视频、博客帖子、付费课程等等的 Python 课程。不过，我还是会推荐 Coursera 的这个 Python 专门化，你可以在两到三个月内成为 Python 的中级用户:
 
-## **1。** [**Python 为大家上 Coursera**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fpython)
+### 1.1 [Python 为大家上 Coursera](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fpython)
 
-参加由 Coursera 提供的密歇根大学 python 语言课程，你不会后悔开始你的职业生涯。您将首先学习 Python 的基础知识，例如数据结构、变量、循环等等。
+参加由 Coursera 提供的密歇根大学 Python 语言课程，你不会后悔开始你的职业生涯。您将首先学习 Python 的基础知识，例如数据结构、变量、循环等等。
 
 然后，您将使用 Python 访问 web，并使用这种语言和更多语言与数据库进行交互。
 
@@ -48,9 +49,9 @@
 
 它每月花费大约 59 美元，但很值得，因为你可以访问 7000 多门课程和项目，还可以获得无限的证书。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
-# 2.学习数据处理和可视化
+## 2.学习数据处理和可视化
 
 你可以说，如果你不知道数据可视化或者在这个领域不够好，你就不是数据分析师，因为你的工作涉及分析数据并从这些数据中获得洞察力。
 
@@ -58,43 +59,43 @@
 
 要成为一名数据分析师，您需要学习很多数据可视化和处理库，每种工具都有其优势，所以尽可能多的了解会更好。以下是其中的几个例子:
 
-**2.1。Numpy:**
+### 2.1 Numpy
 
 您需要从这个旨在处理数组和执行数学计算的库开始您的旅程。它速度快，被数据分析师广泛使用。如果你需要资源，你可以从查看这些 [**最好的 Numpy 课程**](/javarevisited/6-best-online-courses-to-learn-numpy-for-beginners-60120f611e06) 开始。
 
-</javarevisited/6-best-online-courses-to-learn-numpy-for-beginners-60120f611e06>  
+</javarevisited/6-best-online-courses-to-learn-numpy-for-beginners-60120f611e06>
 
-**2.2。熊猫:**
+### 2.2 熊猫
 
 如果您想要导入数据或更改其中的某些内容，您可能需要使用旨在分析和清理数据的 pandas。如果你需要资源，你可以从这些 [**最佳熊猫课程**](/javarevisited/5-best-courses-to-learn-pythons-pandas-libary-for-data-analysis-and-data-science-34b62abb0e96) 开始。
 
-<https://becominghuman.ai/5-best-courses-to-learn-pythons-pandas-libary-for-data-analysis-and-data-science-34b62abb0e96>  
+<https://becominghuman.ai/5-best-courses-to-learn-pythons-pandas-libary-for-data-analysis-and-data-science-34b62abb0e96>
 
-**2.3。Matplotlib:**
+### 2.3 Matplotlib
 
-你可以说 matplotlib 是数据分析师中最著名和最常用的数据可视化库，因为它是开源的，提供了无限的绘图空间，并且如果你没有找到可视化问题的解决方案，它有一个巨大的社区来支持你。如果你需要资源，你可以从这些 [**最好的 Matplotlib 课程**](/javarevisited/5-best-matplotlib-online-courses-for-python-developer-and-data-scientist-9f3bf4359b86) 入手。
+你可以说 Matplotlib 是数据分析师中最著名和最常用的数据可视化库，因为它是开源的，提供了无限的绘图空间，并且如果你没有找到可视化问题的解决方案，它有一个巨大的社区来支持你。如果你需要资源，你可以从这些 [**最好的 Matplotlib 课程**](/javarevisited/5-best-matplotlib-online-courses-for-python-developer-and-data-scientist-9f3bf4359b86) 入手。
 
-</javarevisited/5-best-matplotlib-online-courses-for-python-developer-and-data-scientist-9f3bf4359b86>  
+</javarevisited/5-best-matplotlib-online-courses-for-python-developer-and-data-scientist-9f3bf4359b86>
 
-**2.4。Seaborn:**
+### 2.4 Seaborn
 
 另一个很棒的数据可视化库，以定制其图形和提供无穷多种图形而闻名，学习起来很简单。如果你需要资源，你可以从这些最好的 Seaborn 课程开始。
 
-</javarevisited/top-10-machine-learning-and-data-science-certifications-and-training-courses-for-beginners-and-a6308497b764>  
+</javarevisited/top-10-machine-learning-and-data-science-certifications-and-training-courses-for-beginners-and-a6308497b764>
 
-**2.5。画面:**
+### 2.5 画面
 
 你可以使用这个软件来可视化你的数据，而不需要学习任何编程语言。只需导入您的数据，开始可视化，并自定义您的绘图。如果你需要资源，你可以从这些 [**最好的 Tableau 课程**](https://javarevisited.blogspot.com/2019/07/top-5-tableau-online-courses-and-certifications-for-data-science-engineers.html) 入手。
 
 [![](img/1db518303f086e2392c8c02a7b54a7cf.png)](https://www.java67.com/2020/07/top-5-data-visualization-tools-every.html)
 
-# 3.学习统计学
+## 3.学习统计学
 
 你也可以说，如果你不具备统计技能，你就错过了被这位员工聘用的大好机会。你不能低估学习统计学的力量，因为你要处理大量的数据。
 
 你需要从你的数据中提取更深刻的见解，基于这些数据做出决策，做出预测。
 
-## **3.1。** [**统计学简介**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fstanford-statistics)
+### 3.1 [统计学简介](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fstanford-statistics)
 
 这是斯坦福大学通过 Coursera 平台为初学者提供的学习统计学基础知识的一门很棒的课程。你将了解如何进行探索性数据分析，了解抽样、概率、抽样分布、回归等原理。
 
@@ -104,7 +105,7 @@
 
 ## 结论
 
-这些都包含在这份 **2023 年数据分析师路线图中。**感谢阅读！这是数据分析师开始时最简单的路线图。还可以学习很多其他用于这个领域的语言，比如 R 语言和很多用于数据可视化的 python 包比如 Plotly&folius。
+这些都包含在这份 **2023 年数据分析师路线图中。**感谢阅读！这是数据分析师开始时最简单的路线图。还可以学习很多其他用于这个领域的语言，比如 R 语言和很多用于数据可视化的 Python 包比如 Plotly 和 Folium。
 
 其他有用的**数据分析和可视化**资源
 

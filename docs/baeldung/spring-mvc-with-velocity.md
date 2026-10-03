@@ -1,16 +1,18 @@
+
+
 # 带速度的 Spring MVC 快速指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-mvc-with-velocity>
 
-## 1.介绍
+## 1. 介绍
 
 [Velocity](https://web.archive.org/web/20220815031134/https://velocity.apache.org/) 是 Apache Software Foundation 的一个模板引擎，可以处理普通文本文件、SQL、XML、Java 代码和许多其他类型。
 
-在本文中，我们将重点关注在一个典型的 Spring MVC web 应用程序中利用 Velocity。
+在本文中，我们将重点关注在一个典型的 Spring MVC Web 应用程序中利用 Velocity。
 
-## 2.Maven 依赖性
+## 2. Maven 依赖性
 
-让我们从启用 Velocity 支持开始，包括以下依赖项:
+让我们从启用 Velocity 支持开始，包括以下依赖项：
 
 ```java
 <dependency>
@@ -26,13 +28,13 @@
 </dependency>
 ```
 
-两者的最新版本可以在这里找到: [velocity](https://web.archive.org/web/20220815031134/https://mvnrepository.com/artifact/org.apache.velocity/velocity) 和 [velocity-tools](https://web.archive.org/web/20220815031134/https://mvnrepository.com/artifact/org.apache.velocity/velocity-tools) 。
+两者的最新版本可以在这里找到： [velocity](https://web.archive.org/web/20220815031134/https://mvnrepository.com/artifact/org.apache.velocity/velocity) 和 [velocity-tools](https://web.archive.org/web/20220815031134/https://mvnrepository.com/artifact/org.apache.velocity/velocity-tools)。
 
-## 3。配置
+## 3. 配置
 
-### 3.1。网络配置
+### 3.1. Web 配置
 
-如果我们不想使用`web.xml`，让我们使用 Java 和初始化器`:`来配置我们的 web 项目
+如果我们不想使用`web.xml`，让我们使用 Java 和初始化器来配置我们的 Web 项目：
 
 ```java
 public class MainWebAppInitializer implements WebApplicationInitializer {
@@ -51,7 +53,7 @@ public class MainWebAppInitializer implements WebApplicationInitializer {
 }
 ```
 
-或者，我们当然可以使用传统的`web.xml`:
+或者，我们当然可以使用传统的`web.xml`：
 
 ```java
 <web-app ...>
@@ -84,9 +86,9 @@ public class MainWebAppInitializer implements WebApplicationInitializer {
 
 注意，我们将 servlet 映射到了“/*”路径上。
 
-### 3.2。弹簧配置
+### 3.2. Spring 配置
 
-现在让我们来看一个简单的 Spring 配置——还是从 Java 开始:
+现在让我们来看一个简单的 Spring 配置——还是从 Java 开始：
 
 ```java
 @Configuration
@@ -127,7 +129,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 }
 ```
 
-让我们快速看一下配置的 XML 版本:
+让我们快速看一下配置的 XML 版本：
 
 ```java
 <beans ...>
@@ -149,23 +151,23 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 </beans>
 ```
 
-这里我们告诉 Spring 在哪里寻找带注释的 bean 定义:
+这里我们告诉 Spring 在哪里寻找带注释的 bean 定义：
 
 ```java
 <context:component-scan base-package="com.baeldung.mvc.velocity.*" />
 ```
 
-我们用下面一行来表示我们将在我们的项目中使用注释驱动的配置:
+我们用下面一行来表示我们将在我们的项目中使用注释驱动的配置：
 
 ```java
 <context:annotation-config />
 ```
 
-通过创建"`velocityConfig`"和"`viewResolver`" bean，我们告诉`VelocityConfigurer`在哪里寻找模板，告诉`VelocityLayoutViewResolver`在哪里寻找视图和布局。
+通过创建`velocityConfig`和`viewResolver` bean，我们告诉`VelocityConfigurer`在哪里寻找模板，告诉`VelocityLayoutViewResolver`在哪里寻找视图和布局。
 
-## 4.速度模板
+## 4. Velocity 模板
 
-最后，让我们创建我们的模板——从一个通用标题开始:
+最后，让我们创建我们的模板——从一个通用标题开始：
 
 ```java
 <div style="...">
@@ -175,7 +177,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 </div>
 ```
 
-和页脚:
+和页脚：
 
 ```java
 <div style="...">
@@ -183,7 +185,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 </div>
 ```
 
-让我们为我们的站点定义一个公共布局，我们将在下面的代码中使用上面带有`parse` 的片段:
+让我们为我们的站点定义一个公共布局，我们将在下面的代码中使用上面带有`parse`的片段：
 
 ```java
 <html>
@@ -207,7 +209,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
 你可以检查一下`$screen_content`变量是否有页面的内容。
 
-最后，我们将为主要内容创建一个模板:
+最后，我们将为主要内容创建一个模板：
 
 ```java
 <h1>Index</h1>
@@ -231,9 +233,9 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 </table>
 ```
 
-## 5.控制器侧
+## 5. 控制器侧
 
-我们已经创建了一个简单的控制器，它返回一个教程列表，作为我们布局的内容，其中包含:
+我们已经创建了一个简单的控制器，它返回一个教程列表，作为我们布局的内容，其中包含：
 
 ```java
 @Controller
@@ -257,10 +259,11 @@ public class MainController {
 } 
 ```
 
-最后，我们可以在本地访问这个简单的例子——例如在:[localhost:8080/spring-MVC-velocity/](https://web.archive.org/web/20220815031134/http://localhost:8080/spring-mvc-velocity/)
+最后，我们可以在本地访问这个简单的例子——例如在：[`localhost:8080/spring-MVC-velocity/`](https://web.archive.org/web/20220815031134/http://localhost:8080/spring-mvc-velocity/)
 
-## 6.结论
+## 6. 结论
 
-在这个简单的教程中，我们已经用`Velocity`模板引擎配置了`Spring MVC` web 应用程序。
+在这个简单的教程中，我们已经用`Velocity`模板引擎配置了`Spring MVC` Web 应用程序。
 
 本教程的完整示例代码可以在我们的 [GitHub 库](https://web.archive.org/web/20220815031134/https://github.com/eugenp/tutorials/tree/master/spring-web-modules/spring-mvc-velocity)中找到。
+

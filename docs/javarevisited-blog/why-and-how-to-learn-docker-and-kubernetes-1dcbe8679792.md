@@ -1,3 +1,4 @@
+
 # 2023 年为什么要学 Docker 和 Kubernetes，怎么学？
 
 > 原文：<https://medium.com/javarevisited/why-and-how-to-learn-docker-and-kubernetes-1dcbe8679792?source=collection_archive---------0----------------------->
@@ -18,15 +19,15 @@ image_credit — Udemy
 
 容器允许你构建你的应用程序，并把它和它所有的依赖项放在一个容器里，包括操作系统，比如 Linux 或者 Windows，运行时，比如 T2，Java，T4。NET 或[节点](https://javarevisited.blogspot.com/2018/01/top-5-nodejs-and-express-js-online-courses-for-web-developers.html)，以及您的应用程序正在使用的任何第三方库和框架代码。
 
-这极大地简化了应用程序部署过程，因为您可以快速构建新环境，并且您可以将 docker 映像(一个包含您的应用程序所需的所有内容的大 tar 文件)发送给其他开发人员，或者将其部署到任何主机甚至云平台，如 [AWS](https://javarevisited.blogspot.com/2020/02/top-5-courses-to-crack-aws-certified-cloud-practitioner-exam-certification-clf-c01.html) 、 [GCP](https://javarevisited.blogspot.com/2019/07/top-5-google-cloud-platform-gcp-courses-certifications-online.html) 和 [Azure](https://javarevisited.blogspot.com/2020/09/top-5-courses-to-learn-microsoft-azure.html#axzz6co28cbJC) 。
+这极大地简化了应用程序部署过程，因为您可以快速构建新环境，并且您可以将 docker 映像（一个包含您的应用程序所需的所有内容的大 tar 文件）发送给其他开发人员，或者将其部署到任何主机甚至云平台，如 [AWS](https://javarevisited.blogspot.com/2020/02/top-5-courses-to-crack-aws-certified-cloud-practitioner-exam-certification-clf-c01.html) 、 [GCP](https://javarevisited.blogspot.com/2019/07/top-5-google-cloud-platform-gcp-courses-certifications-online.html) 和 [Azure](https://javarevisited.blogspot.com/2020/09/top-5-courses-to-learn-microsoft-azure.html#axzz6co28cbJC) 。
 
 您也不需要担心单独升级它们，也不需要冒它们可能与主机中的其他东西不兼容的风险。这意味着改善开发和运营以及 [DevOps 体验](/javarevisited/13-best-courses-to-learn-devops-for-senior-developers-in-2020-a2997ff7c33c)。
 
-虽然容器确实简化了开发和部署(特别是对于[微服务](/javarevisited/top-5-courses-to-learn-microservices-in-java-and-spring-framework-e9fed1ba804d))，但如果您必须手动管理成百上千个用于不同流程的容器，那将是一件痛苦的事情，这就是 Kubernetes 的用武之地。Kubernetes 通过自动为您创建和部署容器来消除这种痛苦。这使得扩展你的应用程序变得非常容易，而这一直是全球各种规模的成长型初创公司和公司面临的主要挑战。事实上，Kubernetes 是世界各地软件公司最受欢迎的技能之一，如果你希望获得一项将伴随你整个职业生涯的技能，就像 SQL 和 UNIX 一样，那么学习 Kubernetes 是一个很好的选择。
+虽然容器确实简化了开发和部署（特别是对于[微服务](/javarevisited/top-5-courses-to-learn-microservices-in-java-and-spring-framework-e9fed1ba804d)），但如果您必须手动管理成百上千个用于不同流程的容器，那将是一件痛苦的事情，这就是 Kubernetes 的用武之地。Kubernetes 通过自动为您创建和部署容器来消除这种痛苦。这使得扩展你的应用程序变得非常容易，而这一直是全球各种规模的成长型初创公司和公司面临的主要挑战。事实上，Kubernetes 是世界各地软件公司最受欢迎的技能之一，如果你希望获得一项将伴随你整个职业生涯的技能，就像 SQL 和 UNIX 一样，那么学习 Kubernetes 是一个很好的选择。
 
 顺便说一句，如果你已经下定决心学习 Docker 和 Kubernetes，只是需要一个好的资源，那么你可以从 Udemy 上 Stephen Grider 的 [**Docker 和 Kubernetes:完全指南**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdocker-and-kubernetes-the-complete-guide%2F) 课程开始。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdocker-and-kubernetes-the-complete-guide%2F>  
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdocker-and-kubernetes-the-complete-guide%2F>
 
 这是一门非常引人入胜、内容丰富、动手操作的课程，可以学习 Docker 和 Kubernetes。它也非常实惠，你只需花 9.99 美元就可以在不时发生的疯狂的 Udemy 大甩卖上买到。
 
@@ -87,4 +88,4 @@ image_credit — Udemy
 
 **P. S. —** 如果你想深入学习 Docker 和 Kubernetes，并寻找最好的在线课程，那么你也可以看看这份名单 [**5 个最好的 Docker 和 Kubernetes 课程**](https://javarevisited.blogspot.com/2019/05/top-5-courses-to-learn-docker-and-kubernetes-for-devops.html) 你可以在 2023 年甚至 2023 年加入，学习这些热门工具。
 
-</javarevisited/top-15-online-courses-to-learn-docker-kubernetes-and-aws-for-fullstack-developers-and-devops-d8cc4f16e773> 
+</javarevisited/top-15-online-courses-to-learn-docker-kubernetes-and-aws-for-fullstack-developers-and-devops-d8cc4f16e773>

@@ -1,28 +1,29 @@
+
 # BDDMockito 快速指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/bdd-mockito>
 
-## 1。概述
+## 1. 概述
 
 **BDD 这个术语最早是由[丹·诺斯于 2006 年](https://web.archive.org/web/20220926190436/https://dannorth.net/introducing-bdd/)创造的。**
 
 BDD 鼓励用自然的、人类可读的语言编写测试，关注应用程序的行为。
 
-它定义了一种清晰的结构化方法来编写测试，遵循三个部分(安排、动作、断言):
+它定义了一种清晰的结构化方法来编写测试，遵循三个部分（安排、动作、断言）：
 
-*   `given`一些前提条件(安排)
+*   `given`一些前提条件（安排）
 *   一个动作发生了
-*   `then`验证输出(断言)
+*   `then`验证输出（断言）
 
-**mock ITO 库附带了一个`BDDMockito`类，它引入了 BDD 友好的 API。**这个 API 允许我们采用一种更加 BDD 友好的方法，使用`given()`安排我们的测试，使用`then()`进行断言。
+**`Mockito`库附带了一个`BDDMockito`类，它引入了 BDD 友好的 API。** 这个 API 允许我们采用一种更加 BDD 友好的方法，使用`given()`安排我们的测试，使用`then()`进行断言。
 
-在本文中，我们将解释如何设置基于 BDD 的 Mockito 测试。我们还将讨论`Mockito` 和`BDDMockito`API 之间的差异，最终聚焦于`BDDMockito` API。
+在本文中，我们将解释如何设置基于 BDD 的 Mockito 测试。我们还将讨论`Mockito`和`BDDMockito`API 之间的差异，最终聚焦于`BDDMockito` API。
 
-## 2。设置
+## 2. 设置
 
-### 2.1。Maven 依赖关系
+### 2.1. Maven 依赖关系
 
-**mock ITO 的 BDD 版本是`mockito-core`库**的一部分，为了开始，我们只需要包含工件:
+**`Mockito`的 BDD 版本是`mockito-core`库**的一部分，为了开始，我们只需要包含工件：
 
 ```java
 <dependency>
@@ -34,9 +35,9 @@ BDD 鼓励用自然的、人类可读的语言编写测试，关注应用程序�
 
 有关 Mockito 的最新版本，请查看 [Maven Central](https://web.archive.org/web/20220926190436/https://search.maven.org/classic/#search%7Cga%7C1%7Cg%3A%22org.mockito%22%2C%20a%3A%22mockito-core%22) 。
 
-### 2.2。进口
+### 2.2. 导入
 
-如果我们包含以下静态导入，我们的测试将变得更具可读性:
+如果我们包含以下静态导入，我们的测试将变得更具可读性：
 
 ```java
 import static org.mockito.BDDMockito.*;
@@ -44,15 +45,15 @@ import static org.mockito.BDDMockito.*;
 
 注意`BDDMockito`扩展了`Mockito`，所以我们不会错过传统`Mockito` API 提供的任何特性。
 
-## 3\. Mockito vs. BDDMockito
+## 3. Mockito vs. BDDMockito
 
-Mockito 中的传统嘲讽是使用 *when(obj)* 来执行的。`then*()`在排列步骤中。
+Mockito 中的传统嘲讽是使用`when(obj)`来执行的。`then*()`在安排步骤中。
 
-稍后，可以在 Assert 步骤中使用`verify()`来验证与我们的 mock 的交互。
+稍后，可以在断言步骤中使用`verify()`来验证与我们的 mock 的交互。
 
-**`BDDMockito`为各种`Mockito`方法提供了 BDD 别名，因此我们可以使用`given`(而不是`when`)编写我们的安排步骤，同样，我们可以使用`then`(而不是`verify`)编写我们的断言步骤。**
+**`BDDMockito`为各种`Mockito`方法提供了 BDD 别名，因此我们可以使用`given`（而不是`when`）编写我们的安排步骤，同样，我们可以使用`then`（而不是`verify`）编写我们的断言步骤。**
 
-让我们看一个使用传统 Mockito 的测试体的例子:
+让我们看一个使用传统 Mockito 的测试体的例子：
 
 ```java
 when(phoneBookRepository.contains(momContactName))
@@ -64,7 +65,7 @@ verify(phoneBookRepository)
   .insert(momContactName, momPhoneNumber);
 ```
 
-让我们看看这与`BDDMockito`相比如何:
+让我们看看这与`BDDMockito`相比如何：
 
 ```java
 given(phoneBookRepository.contains(momContactName))
@@ -77,9 +78,9 @@ then(phoneBookRepository)
   .insert(momContactName, momPhoneNumber);
 ```
 
-## 4。`BDDMockito`嘲讽着
+## 4. `BDDMockito`嘲讽着
 
-让我们试着测试一下`PhoneBookService`，我们需要模拟一下`PhoneBookRepository:`
+让我们试着测试一下`PhoneBookService`，我们需要模拟一下`PhoneBookRepository`：
 
 ```java
 public class PhoneBookService {
@@ -101,11 +102,11 @@ public class PhoneBookService {
 }
 ```
 
-`BDDMockito` as `Mockito`允许我们返回一个固定或动态的值。它还允许我们抛出一个异常:
+`BDDMockito`和`Mockito`一样，允许我们返回一个固定或动态的值。它还允许我们抛出一个异常：
 
-### 4.1。返回固定值
+### 4.1. 返回固定值
 
-使用`BDDMockito,` ,我们可以很容易地将 Mockito 配置为每当调用我们的模拟对象目标方法时返回一个固定的结果:
+使用`BDDMockito`，我们可以很容易地将 Mockito 配置为每当调用我们的模拟对象目标方法时返回一个固定的结果：
 
 ```java
 given(phoneBookRepository.contains(momContactName))
@@ -118,9 +119,9 @@ then(phoneBookRepository)
   .insert(momContactName, momPhoneNumber);
 ```
 
-### 4.2。返回一个动态值
+### 4.2. 返回一个动态值
 
-`BDDMockito`允许我们提供一种更复杂的方式来返回值。我们可以根据输入返回一个动态结果:
+`BDDMockito`允许我们提供一种更复杂的方式来返回值。我们可以根据输入返回一个动态结果：
 
 ```java
 given(phoneBookRepository.contains(momContactName))
@@ -136,9 +137,9 @@ then(phoneBookRepository)
   .getPhoneNumberByContactName(momContactName); 
 ```
 
-### 4.3。抛出异常
+### 4.3. 抛出异常
 
-告诉 Mockito 抛出异常非常简单:
+告诉 Mockito 抛出异常非常简单：
 
 ```java
 given(phoneBookRepository.contains(xContactName))
@@ -159,10 +160,10 @@ then(phoneBookRepository)
 
 注意我们如何交换了`given`和`will*`的位置，这是强制性的，以防我们模仿一个没有返回值的方法。
 
-还要注意，我们使用了类似(`any`， `eq`)的参数匹配器来提供一种基于标准而不是依赖于固定值的更通用的模拟方式。
+还要注意，我们使用了类似（`any`，`eq`）的参数匹配器来提供一种基于标准而不是依赖于固定值的更通用的模拟方式。
 
-## 5。结论
+## 5. 结论
 
-在这个快速教程中，我们讨论了 BDDMockito 如何试图将 BDD 相似性引入到我们的 Mockito 测试中，我们还讨论了`Mockito` 和`BDDMockito`之间的一些差异。
+在这个快速教程中，我们讨论了`BDDMockito`如何试图将 BDD 相似性引入到我们的 Mockito 测试中，我们还讨论了`Mockito`和`BDDMockito`之间的一些差异。
 
 和往常一样，源代码可以在 GitHub 的[中找到——在测试包`com.baeldung.bddmockito`中。](https://web.archive.org/web/20220926190436/https://github.com/eugenp/tutorials/tree/master/testing-modules/mockito)

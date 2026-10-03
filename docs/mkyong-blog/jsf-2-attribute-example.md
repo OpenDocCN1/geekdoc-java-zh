@@ -1,13 +1,14 @@
+
 # JSF 2 属性示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jsf2/jsf-2-attribute-example/>
 
-在 JSF 中，“ **f:attribute** ”标签允许您将属性值传递给组件，或者通过动作监听器将参数传递给组件。举个例子，
+在 JSF 中，`f:attribute`标签允许您将属性值传递给组件，或者通过动作监听器将参数传递给组件。举个例子：
 
-1.为组件分配属性值。
+1. 为组件分配属性值。
 
 ```java
- <h:commandButton">
+<h:commandButton">
     <f:attribute name="value" value="Click Me" />				
 </h:commandButton>
 
@@ -16,16 +17,16 @@
 <h:commandButton value="Click Me" /> 
 ```
 
-2.将参数分配给一个组件，并通过动作监听器获取它。
+2. 将参数分配给一个组件，并通过动作监听器获取它。
 
 ```java
- <h:commandButton actionListener="#{user.attrListener}" >
+<h:commandButton actionListener="#{user.attrListener}" >
     <f:attribute name="username" value="mkyong" />
 </h:commandButton> 
 ```
 
 ```java
- @ManagedBean(name="user")
+@ManagedBean(name="user")
 @SessionScoped
 public class UserBean{
 
@@ -37,16 +38,16 @@ public class UserBean{
   } 
 ```
 
-## JSF f:属性示例
+## JSF `f:attribute`示例
 
 好了，让我们来看一个 JSF 2.0 的完整例子。
 
- ## 1.受管 Bean
+## 1. 受管 Bean
 
-一个名为“user”的受管 bean，带有一个操作监听器方法。
+一个名为`user`的受管 bean，带有一个操作监听器方法。
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -79,14 +80,14 @@ public class UserBean{
 } 
 ```
 
- ## 2.JSF·佩奇
+## 2. JSF 页面
 
-JSF 页面展示了如何使用" **f:attribute** "标签将一个属性值传递给一个" *h:commandButton* "组件。
+JSF 页面展示了如何使用`f:attribute`标签将一个属性值传递给一个`h:commandButton`组件。
 
-*default.xhtml*
+`default.xhtml`
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html    
@@ -114,10 +115,10 @@ JSF 页面展示了如何使用" **f:attribute** "标签将一个属性值传递
 </html> 
 ```
 
-*result.xhtml*
+`result.xhtml`
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html    
@@ -135,7 +136,7 @@ JSF 页面展示了如何使用" **f:attribute** "标签将一个属性值传递
 </html> 
 ```
 
-## 3.演示
+## 3. 演示
 
 这是结果。
 
@@ -147,14 +148,8 @@ Download It – [JSF-2-Attribute-Example.zip](http://web.archive.org/web/2019022
 
 ## 参考
 
-1.  [JSF 2 属性 JavaDoc](http://web.archive.org/web/20190220131503/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/f/attribute.html)
-2.  [JSF 2 行动监听器示例](http://web.archive.org/web/20190220131503/http://www.mkyong.com/jsf2/jsf-2-actionlistener-example/)
+1. [JSF 2 属性 JavaDoc](http://web.archive.org/web/20190220131503/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/f/attribute.html)
+
+2. [JSF 2 行动监听器示例](http://web.archive.org/web/20190220131503/http://www.mkyong.com/jsf2/jsf-2-actionlistener-example/)
 
 [jsf2](http://web.archive.org/web/20190220131503/http://www.mkyong.com/tag/jsf2/)
-
-
-
-
-
-
-

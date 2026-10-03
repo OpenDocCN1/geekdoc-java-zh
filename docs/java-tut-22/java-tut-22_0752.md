@@ -1,3 +1,4 @@
+
 # 教程：Java API for XML Processing (JAXP)
 
 > 原文：[`docs.oracle.com/javase/tutorial/jaxp/index.html`](https://docs.oracle.com/javase/tutorial/jaxp/index.html)
@@ -8,13 +9,10 @@
 
 要充分利用 Java API for XML Processing (JAXP) 教程中的信息，您应该具备以下技术知识：
 
-+   Java 编程语言及其开发环境。
-
-+   可扩展标记语言（XML）
-
-+   文档对象模型（DOM），由万维网联盟（W3C）DOM 工作组定义。
-
-+   简单 XML API（SAX），由 XML-DEV 邮件列表成员合作开发。
++ Java 编程语言及其开发环境。
++ 可扩展标记语言（XML）
++ 文档对象模型（DOM），由万维网联盟（W3C）DOM 工作组定义。
++ 简单 XML API（SAX），由 XML-DEV 邮件列表成员合作开发。
 
 假定具有一些 DOM 和 SAX 的先验知识。本教程详细讨论了仅特定于 JAXP API 的代码。
 

@@ -1,3 +1,4 @@
+
 # 将所有内容整合在一起
 
 > 原文：[`docs.oracle.com/javase/tutorial/security/userperm/together.html`](https://docs.oracle.com/javase/tutorial/security/userperm/together.html)
@@ -10,8 +11,6 @@
 
 这里是步骤：
 
-+   HighScore 开发者（克里斯）的步骤
-
-+   ExampleGame 开发者（特里）的步骤
-
-+   运行 ExampleGame 的用户（金）的步骤
++ HighScore 开发者（克里斯）的步骤
++ ExampleGame 开发者（特里）的步骤
++ 运行 ExampleGame 的用户（金）的步骤

@@ -1,24 +1,5 @@
+
 # Agorava 企业级 2.0：Java 平台的社交框架
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 任何开放社会的基石由两件事组成——言论自由和法治。如果你没有这些东西，你就没有一个自由的国家。—— 萨尔曼·鲁迪爵士
 
@@ -33,6 +14,7 @@
 此外，我找不到比 Werner 更适合写这本书的人了。多年来，他证明了自己对开放、标准化、Java 和 Java EE 的个人承诺，以及对社交媒体行业和 Agorava 的清晰掌握。
 
 Reza Rahman
+
 Java EE Guardians 创始人，前 Oracle Java EE 传教士 @ Oracle
 
 ## 古代史
@@ -52,10 +34,6 @@ Java EE Guardians 创始人，前 Oracle Java EE 传教士 @ Oracle
 Usenet 起于 1979 年，为用户提供论坛和新闻组。惊讶的是，它们的大部分功能几乎没有变化，并且仍然存在。
 
 网络中继聊天（IRC）始于 1988 年，在学术网络中广泛使用，随后进入了现在被称为互联网。IRC 在今天仍然相当活跃，尽管它主要在
-
-
-
-
 
 # 引言
 
@@ -99,8 +77,6 @@ Java 语言发挥了越来越重要的作用，首先是在桌面端（早期主
 
 虽然 Google 开始在其 Orkut 服务中使用 OpenSocial（在拉丁美洲和印度等其他几个国家流行），但最初计划支持它的其他供应商相继放弃了这些计划。LinkedIn 和 XING 特别是出于安全原因这样做的。关于 XING，我们稍后的安全和隐私部分也会有更多内容，后者也是如此。不是 Facebook 或 Twitter，这两个是上个十年后半叶统治者。
 
-
-
 # 标准化
 
 你是否曾关注过 OpenSocial？更重要的是，当情况显而易见时，Google 杀了自己的产物。Google+ 也永远不会支持它。少数主要来自服务器和大型企业部门的供应商（如 IBM、SAP 或 Confluence 的作者 Atlassian）仍然支持 OpenSocial。
@@ -130,27 +106,47 @@ W3C 的工作进度非常缓慢，类似于（甚至慢于）HTML5，例如始�
 ### 高级标准
 
 - 用于……的通用货币：
+
   社交参与
+
   - 点赞
+
   - 转发
+
   - 评论
+
   - 贴子
+
   - 等
+
 - 用于……的数据跟踪模型：
+
   社交行为
+
   - 浏览
+
   - 参与
+
   - 推荐
+
   - 活动
+
   - 等
+
 - 针对……的领域特定衡量：
+
   社交指标
+
   - 净推荐值 (NPS)
+
   - 社交业务指数
+
   - 客户满意度 (OSAT)
+
   - 客户留存率 (LTR)
 
 ### 基础标准
+
 （正式和临时的）
 
 ![](img/0b9ef25bba76e41e13d568c065fdf1e4_10_0.png)
@@ -158,32 +154,55 @@ W3C 的工作进度非常缓慢，类似于（甚至慢于）HTML5，例如始�
 ![](img/0b9ef25bba76e41e13d568c065fdf1e4_10_1.png)
 
 - 社交身份/图谱
+
   - LDAP/活动目录
+
   - Facebook Graph API
+
   - Twitter 朋友/关注者 API
+
   - 可移植联系人
+
   - Google Contacts API
+
 - 社交活动
+
   - 活动流
+
   - RSS
+
   - ATOM
+
   - Pubsubhubbub
+
   - Salmon
+
   - OSStatus
+
 - 社交整合
+
   - OpenSocial
+
   - Open Graph
+
   - OAuth/xAuth
+
 - 安全/隐私/策略
+
   - SAML
+
   - OpenID
+
   - OAuth
+
   - P2P
+
   - DNT
 
 ![](img/0b9ef25bba76e41e13d568c065fdf1e4_10_2.png)
 
 > socialbusinessbydesign.com 的持续讨论
+
 > 图设计：Dion Hincliffe & Bill Keaggy
 
 图 2 – 社交业务标准中缺少了什么？
@@ -191,17 +210,25 @@ W3C 的工作进度非常缓慢，类似于（甚至慢于）HTML5，例如始�
 主要有两个类别：
 
 - 1. 高级标准：面向行为和领域驱动的业务导向标准和 API。[16] 的作者并未详细说明大部分内容。
+
 - 2. 基础标准：之前提到了一些，这里将其分为 4 个子类：
+
   - a. 联系人
+
   - b. 活动/消息
+
   - c. 整合/互操作性
+
   - d. 安全
 
 你可以观察社交标准、框架和库的通信方式。通过以下方式：
 
 - 消费信息
+
 - 分析信息
+
 - 转换信息
+
 - 提供示例信息
 
 消费信息的典型示例是在另一个应用程序（例如，你的博客或公司网站）中显示你喜爱的社交网络中的状态。
@@ -217,6 +244,7 @@ W3C 的工作进度非常缓慢，类似于（甚至慢于）HTML5，例如始�
 根据 IDC [图 3]，查看社交网络标准、产品的另一种方式是：
 
 - 具有社交属性的独立产品或服务，可以单独安装和使用。由于其性质，采用 OpenSocial 的某些目标是与其他具有互操作性。
+
 - 嵌入在大型产品或套件中的社交事实或功能。经典示例是包含社交功能的 Oracle Fusion Middleware [13] 或其他特定的。
 
 # 标准化
@@ -228,16 +256,18 @@ W3C 的工作进度非常缓慢，类似于（甚至慢于）HTML5，例如始�
 OPENI（一个由欧盟资助的社交研究小组）[17] 尝试以某种上下文的方式分类标准和 API：
 
 - 广告和分析 API：通过收集、聚合和分析用户的需求、兴趣和偏好，基于他们与广告/应用程序行为数据的交互
+
 - 位置 API：通过签到、路线、评论和提示实现位置感知。这是一个关于位置的强 API，可以由 GPS 传感器提取并映射到地图上。相关类别：地图、位置服务。
+
 - 媒体 API：将照片、音乐和视频共享服务与文件传输和同步功能相结合。它与相册应用程序和设备的文件系统相关。相关类别：文件传输与同步、位置服务。
+
 - 产品和服务 API：涵盖支付和购物服务。这种商业化相关的特殊对象需要具有事务能力的强 API 以及更高的安全性。它与手机商店应用程序相关。相关类别：位置服务、支付、购物。
+
 - 配置 API：根据分析、联系人、游戏、健康、位置服务、消息与聊天、音乐、社交等服务提取人的信息。通常，人们可以用多种方式表示，拥有多个配置文件。该 API 汇总了所有信息：头像、配置文件、联系人和账户，关联不同服务中的配置。它与智能手机日程应用程序直接相关。
 
+
+
 虽然 OpenNI 没有在 GitHub 上发布任何他们的 API（正如其网站在 2013 年承诺的那样 ;-)），但它的工作引起了例如 W3C OpenSocial [15] 的关注。因此，即使没有它自己的 API，OpenNI 及其概念在某些方面也有帮助。我们在查看 1.4.2 Apache Shindig 时更详细地介绍 OpenSocial。
-
-
-
-
 
 # 标准化
 
@@ -250,7 +280,9 @@ OPENI（一个由欧盟资助的社交研究小组）[17] 尝试以某种上下�
 除了上述对社交媒体标准进行剖析和分类外，这些是 API 及相关标准具有的三个最重要的共同点：
 
 - 几乎所有的社交媒体服务都使用 REST 作为传输协议
+
 - 它们大部分以 JSON 格式传输数据，部分使用 XML 或其他格式
+
 - 身份识别与验证几乎总是基于 OAuth 协议
 
 你会发现图 2 中缺失了像 REST、XML 或 JSON 这样“琐碎”的基础标准，因为 [16] 的作者认为这些内容现在应该已经被掌握。基于此，我也认为读者对这些内容已经很熟悉。
@@ -262,6 +294,7 @@ OPENI（一个由欧盟资助的社交研究小组）[17] 尝试以某种上下�
 遵循 Portlet API 或 Java Enterprise 的各个部分等 Java 标准，有几个用于社交媒体的 Java 框架和库。
 
 1. 1. 1.
+
 2.
 
 ### Twitter4j
@@ -313,14 +346,14 @@ DaliCore 在 Java EE 6 之上增加了用户管理、内容或权限的功能。
 DaliCore 的重要方面：
 
 - 大多数带有社交功能的社交容器和 CMS
+
 - 支持 EJB、IPA 或类似的 Java 持久化
+
 - 模块没有分离，特别是 API/规范与实现，大多数情况下共享同一个模块甚至相同的包空间。这使得复用和扩展变得困难，尽管通过 Dali 模块尝试这样做。
+
 - 目前显得有些沉，对全 Java EE 栈有强依赖，即目前仅使用其 Web Profile 似乎可行
+
 - 在 GlassFish 作为首选应用程序服务器的情况下，支持和集成是积极的。对于 Java EE 标准是不可能的，但在其他容器中使用可能更困难。
-
-
-
-
 
 # 标准化
 
@@ -343,9 +376,13 @@ Spring Social [25] 是一个用于消费信息的绑定库。尽管将 OAuth 集
 Spring Social 的重要方面包括：
 
 - 出于明显的原因，它主要与 Spring Framework 或 Spring 生态的其他部分一起工作
+
 - Spring MVC 之外的 UI 框架相对难以集成
+
 - 官方 Spring Social 连接主要关注 Facebook，到目前为止示例仅显示了单服务方法。没有对多个服务或提供者的直接支持。
+
 - 尽管 Spring 社区一直活跃，即使在 Pivotal/VMware 内部，对其支持和活动也存在怀疑，特别是在一些人离开两家公司之后。这得到了高级架构师的确认，他们表示重心在其他地方，尽管没有完全放弃的计划。
+
 - 然而，事实是，Spring Social 最活跃的评论者和推动者之一受雇于单一公司。
 
 Spring Social 目前也支持 .NET。我无法说任何代码是否具有迁移性，但那些需要支持多个平台的人可能会喜欢 Java 和 .NET 通用的 API。事实上，Pivotal 最近（2015 年第一季度）宣布它将停止对更大的开源项目（如流行的 Groovy / Grails 生态系统的商业支持。没有证据表明 Pivotal 计划将其进一步资源投入到像 Spring Social 这样小得多的“鱼类”。
@@ -374,8 +411,6 @@ IBM 认为，正如其某些支持者如 Adjuvi 的 Hinchcliffe [16] 所解释�
 
 杀掉 Java 社交“王位”的继承者，特别是通过法国式的划分，可能会引发一场名为 Agora 的 Java 框架“法国大革命”。
 
-
-
 ## 社会安全
 
 ## 授权
@@ -386,11 +421,13 @@ IBM 认为，正如其某些支持者如 Adjuvi 的 Hinchcliffe [16] 所解释�
 
 ### 1.1. Java 授权
 
-Java 拥有一种安全架构，可以保护系统免受移动/动态或静态代码的未经授权访问。问题在于如何确定执行库或应用程序所需的安全访问权限集。常用的策略是执行代码、记录授权失败、分配额外的访问权限并再次测试。这个过程会不断迭代，直到代码在使用的用例中成功运行。。这些用例并不总是能覆盖代码中的所有路径，因此在部署的系统中可能会发生失败。另一方面，可能允许代码拥有广泛的访问权限，以防止授权失败的发生。然而，这通常会导致违反**最小权限**设计原则 [27]。
+
+
+Java 拥有一种安全架构，可以保护系统免受移动/动态或静态代码的未经授权访问。问题在于如何确定执行库或应用程序所需的安全访问权限集。常用的策略是执行代码、记录授权失败、分配额外的访问权限并再次测试。这个过程会不断迭代，直到代码在使用的用例中成功运行。这些用例并不总是能覆盖代码中的所有路径，因此在部署的系统中可能会发生失败。另一方面，可能允许代码拥有广泛的访问权限，以防止授权失败的发生。然而，这通常会导致违反**最小权限**设计原则 [27]。
 
 最小权限原则代表了向特定信息和工具授予访问权限的极简方法。此外，访问权限应该是基于时间的，以将对资源的访问限制在完成必要任务所需的时间。超出此范围的授权授予将导致不必要的访问，并可能导致数据在批准的上下文之外被更新。权限的分配将限制用户（无论是故意还是无意）对系统的破坏。
 
-基础 SE 安全依赖于权限，例如 `FilePermission` 用于访问文件系统，或 `AWTPermission` 用于在 AWT/Swing 应用中使用剪贴板等资源。
+基础 SE 安全依赖于权限，例如`FilePermission`用于访问文件系统，或`AWTPermission`用于在 AWT/Swing 应用中使用剪贴板等资源。
 
 如果有人想为特定应用程序允许新类型的权限，可以通过在策略文件中添加条目来实现。
 
@@ -411,15 +448,15 @@ Java EE 的安全性基于一些核心术语：
 - 安全域（Security Realm）是应用程序服务器获取用户和组信息的访问通道。
 - 角色（Role）是 Java EE 中访问级别的概念。Java EE 开发者指定哪些角色可以访问一组应用程序功能。这些角色随后通过特定厂商的配置数据映射到用户和组。
 - 主体（Principal）是具有已知凭据的身份，可以使用身份验证协议进行验证。
-- 凭据（Credential）包含或引用用于身份验证 Java EE 应用主体的信息。例如，通过输入密码或调用外部服务。更多请参见“2.2 身份验证-
+- 凭据（Credential）包含或引用用于身份验证 Java EE 应用主体的信息。例如，通过输入密码或调用外部服务。更多请参见“2.2 身份验证”。
 
 Agora 正在争夺 CDI，CDI 是一种 Java 标准，称为“上下文和依赖注入”（Context and Dependency Injection），与从 6 版本开始的 Java EE 的其他部分类似。我们认为读者对 CDI 标准相当熟悉，如果你需要学习它，请参阅 [28]。
 
 你可能从第 1.3 章记得，几乎每个社交服务或类似的 API 都使用 RESTful Web 服务。REST 代表“表述状态转换”（Representational State Transfer）。JAX-RS 是用于 RESTful Web 服务的 Java API（当前版本为 2 或 JSR 339）。
 
-这里有一个简单的示例，展示了如何通过使用 `@Context` 注解注入 JAX-RS SecurityContext 实例来实现授权。注入的安全上下文运行在底层的 `HttpServletRequest` API 之上。注入的安全上下文取决于实际的 JAX-RS 应用程序部署。
+这里有一个简单的示例，展示了如何通过使用`@Context`注解注入 JAX-RS `SecurityContext`实例来实现授权。注入的安全上下文运行在底层的`HttpServletRequest` API 之上。注入的安全上下文取决于实际的 JAX-RS 应用程序部署。
 
-SecurityContext 可以与子资源定位器（sub-resource locators）结合使用，根据用户主体所属的特定角色返回不同的资源。例如，如果用户是“优惠客户”，子资源定位器可以返回不同的资源。
+`SecurityContext`可以与子资源定位器（sub-resource locators）结合使用，根据用户主体所属的特定角色返回不同的资源。例如，如果用户是“优惠客户”，子资源定位器可以返回不同的资源。
 
 ```java
 @Path("basket")
@@ -451,9 +488,9 @@ public static class MyResource {
 
 ### 将 SecurityContext 注入单例资源中
 
-当 JAX-RS 应用部署在 Servlet 容器中时，你可以依赖 Servlet 容器提供的标准 Java EE Web 应用程序安全性，并通过 `web.xml` 描述符进行配置。
+当 JAX-RS 应用部署在 Servlet 容器中时，你可以依赖 Servlet 容器提供的标准 Java EE Web 应用程序安全性，并通过`web.xml`描述符进行配置。
 
-通过在 `web.xml` 中定义 `<security-constraint>` 并分配能够访问这些资源的角色。你还可以定义允许执行的 HTTP 方法。查看以下示例：
+通过在`web.xml`中定义`<security-constraint>`并分配能够访问这些资源的角色。你还可以定义允许执行的 HTTP 方法。查看以下示例：
 
 ```xml
 <security-constraint>
@@ -504,18 +541,13 @@ OAuth “舞蹈”包含三个主要步骤：
 
 图 6 详细显示了 OAuth 1.0a 的步骤和身份验证流。
 
-
-
-
-
 ## 社会安全
 
 图 7 - OAuth 2 “之舞”
+
 图 7 展示了 OAuth 2 的流程。你可以看到通信已经变得简化，而且每次交换必须经过 SSL 加密。在 OAuth 1.0 中，这是可选的，因此大多数实现案例都忽略了它。相比之下，OAuth 2 面临着更大的被拦截或篡改的风险。
 
 ## 身份验证
-
-- 1.
 
 “Authentication”（身份验证）一词也源自希腊语术语。它源自希腊语“aftentikos”，是名词“authentes”（执行者、主宰）的派生词，而该词由“autos”（自我）和词根 -hentes（执行者、存在者）组成。
 
@@ -523,9 +555,10 @@ OAuth “舞蹈”包含三个主要步骤：
 
 ### OpenID
 
-OpenID 协议最初由 Brad Fitzpatrick 在 2005 年创建，在他将社交网络 LiveJournal 卖给这家博客公司之后。这个名字似乎与“Six Degrees of Separation”（六度隔阂）有六天的区别，但它最初代号为 Yadis（“另一种身份系统”的缩写），随后在 David Cohn 曾考虑过类似的单点登录项目后被正式命名为 OpenID，并捐赠了 "openid.net"  [29]。
+OpenID 协议最初由 Brad Fitzpatrick 在 2005 年创建，在他将社交网络 LiveJournal 卖给这家博客公司之后。这个名字似乎与“Six Degrees of Separation”（六度隔阂）有六天的区别，但它最初代号为 Yadis（“另一种身份系统”的缩写），随后在 David Cohn 曾考虑过类似的单点登录项目后被正式命名为 OpenID，并捐赠了 "openid.net" [29]。
 
 **使用 OAuth 的伪身份验证**
+
 - 1. 你是谁。不要忘记你的电子邮箱！
 - 2. 这是证书。请写一封信。
 - 3. 你在这里
@@ -602,7 +635,7 @@ PicketLink 是 Red Hat/JBoss 生态系统中多个相关项目的伞。虽然 Ag
 
 **图 11 - PicketLink 概述**
 
-然而 Agora 使用了 PicketLink 的许多功能，如身份验证 API 或 CDI 集成。特定的 OAuth 和社交连接由 PicketLink 要素执行。这里是扩展 BaseAuthenticator 的示例：
+然而 Agora 使用了 PicketLink 的许多功能，如身份验证 API 或 CDI 集成。特定的 OAuth 和社交连接由 PicketLink 要素执行。这里是扩展`BaseAuthenticator`的示例：
 
 ```java
 public class SimpleAuthenticator extends BaseAuthenticator {
@@ -626,7 +659,7 @@ public class SimpleAuthenticator extends BaseAuthenticator {
 
 不，这不是“JSR 375”的误转，尽管许多安全方面已经过计划，特别是与 CDI 的紧密集成已非常熟悉 [30]。
 
-## 数字身份 
+## 数字身份
 
 ### 谁是 No.6？
 
@@ -640,98 +673,89 @@ Privacy（隐私）一词源自“private”，源于拉丁语“privatus”，�
 
 虽然古代罗马人可能向公众观众和当时的著名作家隐藏他们的某些事务，而且从事情实际发生到写下来被读者阅读之间至少有几天、几个月甚至几年，但现在有时只需要眨眼或点击一下鼠标按钮的时间。
 
-
-
-
-
 ## 社会安全
 
 告密人爱德华·斯诺登（Edward Snowden）的揭露是最广泛的，但绝对不是首次将社交网络或类似的在线服务的隐私问题带入公众视野 [32]。将来自各种来源和日常生活各个方面的数据合并成用户的数字肖像和数字足迹的能力，在过去的几十年里主要是隐私和秘密部门工具领域，例如“拖网”（Dragnet，虽然不是那部电影，但它幽默地指代该系统）。
 
-不仅是斯诺登，他现在供其俄罗斯东主的技能也清楚地表明，西方国家和机构并非对这类信息感兴趣的唯一。如果社交网络所在国家的情报机构（通常是美国）不为其提供相同的关键信息访问权限，许多国家就会尝试控制、阻止或限制进入。中国、俄罗斯或土耳其，临时或永久封锁提供商的国家名单不断增加。如果所有权或托管被外包（不是为了避税，而是为了廉价劳动力），那么这些国家也可以运行某些服务。我们听过的最流行的之一是 LiveJournal，因为那里曾创建过 OpenID 1.0。2007年12月，它被俄罗斯媒体集团 SUP 卖出。
 
-2009年后，其大部分生产工作也转移到了俄罗斯，并在硅谷聘佣了员工。尽管 SUP Media 是私有所有的，但它显然受到俄罗斯秘密情报部门的控制和审查。例如，2007年，俄罗斯博主萨瓦·特伦廷耶耶夫（Savva Terentyev）被指控煽动对内政部人员的仇恨，并因他在当地一名记者日志中的评论被判处一年缓刑。更不用说最近发生的谋杀案，如在莫斯科的政权反对人士鲍里斯·内姆索索夫（Boris Nemsov），他在宣布将披露有关俄罗斯参与乌克兰的信息后不久便遇害。讽刺的是，即使在俄罗斯这样一个审查最严格的国家之一，仍有一丝微的希望：社交媒体如果不能带来真正的改革，或许有助于找到他被杀案的线索 [33]。
+
+不仅是斯诺登，他现在供其俄罗斯东主的技能也清楚地表明，西方国家和机构并非对这类信息感兴趣的唯一。如果社交网络所在国家的情报机构（通常是美国）不为其提供相同的关键信息访问权限，许多国家就会尝试控制、阻止或限制进入。中国、俄罗斯或土耳其，临时或永久封锁提供商的国家名单不断增加。如果所有权或托管被外包（不是为了避税，而是为了廉价劳动力），那么这些国家也可以运行某些服务。我们听过的最流行的之一是 `LiveJournal`，因为那里曾创建过 `OpenID 1.0`。2007年12月，它被俄罗斯媒体集团 `SUP` 卖出。
+
+2009年后，其大部分生产工作也转移到了俄罗斯，并在硅谷聘佣了员工。尽管 `SUP Media` 是私有所有的，但它显然受到俄罗斯秘密情报部门的控制和审查。例如，2007年，俄罗斯博主萨瓦·特伦廷耶耶夫（`Savva Terentyev`）被指控煽动对内政部人员的仇恨，并因他在当地一名记者日志中的评论被判处一年缓刑。更不用说最近发生的谋杀案，如在莫斯科的政权反对人士鲍里斯·内姆索索夫（`Boris Nemsov`），他在宣布将披露有关俄罗斯参与乌克兰的信息后不久便遇害。讽刺的是，即使在俄罗斯这样一个审查最严格的国家之一，仍有一丝微的希望：社交媒体如果不能带来真正的改革，或许有助于找到他被杀案的线索 [33]。
 
 虽然“国家安全”的努力以及试图在网上捕捉恐怖分子或严重罪犯的行为被用来证明全球范围内大规模监控，但批判性博主或记者如果他们的生活暴露在他们所批评的人和机构面前，往往面临的不仅是隐私风险。
 
-虽然欧洲托管供应商和其他移动公司付诸了“数据保留”（Vorratsdatensicherung）等努力，但欧洲也没有完全的隐私；与美国和世界其他许多地区相比，大多数欧盟国家（如德国）拥有强大的隐私和数据保护法。少数国家如冰岛（目前不在欧盟，但属于 EFTA）以及斯堪的纳维亚国家拥有更强的数据保护法。
+虽然欧洲托管供应商和其他移动公司付诸了“数据保留”（`Vorratsdatensicherung`）等努力，但欧洲也没有完全的隐私；与美国和世界其他许多地区相比，大多数欧盟国家（如德国）拥有强大的隐私和数据保护法。少数国家如冰岛（目前不在欧盟，但属于 `EFTA`）以及斯堪的纳维亚国家拥有更强的数据保护法。
 
-真正位于这些国家的社交网络，例如德国的 XING，以及德国电信和来自德国的其它互联网公司 GMX/1&1，其数据免受美国国家安全局（NSA）或其他间谍的直接访问。尽管如果对用户存在谋杀、恐怖、组织犯罪或色情等严重罪行的合理理由，这些机构将执行当地和国际调查，但这些服务都不可能像 NSA 以及美国和其他国家的机构那样，每天对每个用户进行大规模筛选。在没有授权访问记录或预先嗅探通信内容的情况下，如果提供商及其服务器确实位于欧洲，且数据通过连接传输是安全的，大多数欧洲用户应该感到安全。
+真正位于这些国家的社交网络，例如德国的 `XING`，以及德国电信和来自德国的其它互联网公司 `GMX/1&1`，其数据免受美国国家安全局（`NSA`）或其他间谍的直接访问。尽管如果对用户存在谋杀、恐怖、组织犯罪或色情等严重罪行的合理理由，这些机构将执行当地和国际调查，但这些服务都不可能像 `NSA` 以及美国和其他国家的机构那样，每天对每个用户进行大规模筛选。在没有授权访问记录或预先嗅探通信内容的情况下，如果提供商及其服务器确实位于欧洲，且数据通过连接传输是安全的，大多数欧洲用户应该感到安全。
 
-此外，XING 等服务还为其用户提供了更细粒度的访问权限级别和控制。在某些情况下，可以限制例如谁可以看到每个单独的数据项。假设你想向所有访问你个人资料的人显示你的名字和出生日期，但不显示年份或年龄，或者只允许你的朋友看到你的手机号码，这些及更多都可以通过 XING 这样的系统进行控制。
+此外，`XING` 等服务还为其用户提供了更细粒度的访问权限级别和控制。在某些情况下，可以限制例如谁可以看到每个单独的数据项。假设你想向所有访问你个人资料的人显示你的名字和出生日期，但不显示年份或年龄，或者只允许你的朋友看到你的手机号码，这些及更多都可以通过 `XING` 这样的系统进行控制。
 
-这也是 XING 放弃 OpenSocial 的主要原因之一，因为它无法提供这种细粒度的访问控制，或者在某些情况下不提供任何，而是向所有人显示所有内容，或至少向你所有朋友显示数据。
+这也是 `XING` 放弃 `OpenSocial` 的主要原因之一，因为它无法提供这种细粒度的访问控制，或者在某些情况下不提供任何，而是向所有人显示所有内容，或至少向你所有朋友显示数据。
 
-与之相反，Agorava 可以利用各个社交网络的安全机制和访问控制。并且能够连接到选定的服务，即使是多个服务，并且可以通过各个社交网络的安全机制和访问控制来利用。你可以根据你信任的多个服务来处理 Agorava。
-
+与之相反，`Agorava` 可以利用各个社交网络的安全机制和访问控制。并且能够连接到选定的服务，即使是多个服务，并且可以通过各个社交网络的安全机制和访问控制来利用。你可以根据你信任的多个服务来处理 `Agorava`。
 
 ## 概述
 
-Agorava [34] 是一个社交框架，提供 CDI 模块和扩展，用于与主要的社交网络或类似服务交互。它为 Java 应用提供了这些服务，并允许进行混合（mashups）[12]。
+`Agorava` [34] 是一个社交框架，提供 `CDI` 模块和扩展，用于与主要的社交网络或类似服务交互。它为 `Java` 应用提供了这些服务，并允许进行混合（`mashups`）[12]。
 
-（此处为图片占位符：图12 - Agorava 架构）
+（此处为图片占位符：图12 - `Agorava` 架构）
 
-图 12 - Agorava 架构
+图 12 - `Agorava` 架构
 
-这些是 Agorava 的关键特点和功能：
+这些是 `Agorava` 的关键特点和功能：
 
-- 通用 REST 客户端
-- 处理 OAuth 1.0 和 2.0 服务的通用 API
-- 用于 JSON 序列化和反序列化的通用 API
-- 从社交服务（作为身份提供商）检索基本信息的通用 API
-- 允许在同一个应用程序中处理多个 OAuth 应用的应用管理器
+- 通用 `REST` 客户端
+- 处理 `OAuth 1.0` 和 `2.0` 服务的通用 `API`
+- 用于 `JSON` 序列化和反序列化的通用 `API`
+- 从社交服务（作为身份提供商）检索基本信息的通用 `API`
+- 允许在同一个应用程序中处理多个 `OAuth` 应用的应用管理器
 - 目前开箱连接到：
-  - Twitter
-  - Facebook
-  - LinkedIn
+  - `Twitter`
+  - `Facebook`
+  - `LinkedIn`
   - 并通过创建任何其他服务的模块来扩展它
 
-Agorava 独立于 CDI 实现，并在 Java EE 6（最低）和 Servlet 环境之间完全可移植。它已经在 CDI 实现（Jeld）上进行了充分测试。从 0.5 版本起也支持 Open Web Beans 和 Caucho Resin。
+`Agorava` 独立于 `CDI` 实现，并在 `Java EE 6`（最低）和 `Servlet` 环境之间完全可移植。它已经在 `CDI` 实现（`Jeld`）上进行了充分测试。从 `0.5` 版本起也支持 `Open Web Beans` 和 `Caucho Resin`。
 
-Agorar 通常被解释为某种“社交 Java 连接架构”。事实上，Agorar 背后的思想与 Java 连接架构（JCA）在 Java EE 伞下的功能有着惊人的相似之处。
+`Agorar` 通常被解释为某种“社交 `Java` 连接架构”。事实上，`Agorar` 背后的思想与 `Java` 连接架构（`JCA`）在 `Java EE` 伞下的功能有着惊人的相似之处。
 
-Java EE 连接架构定义了一种标准架构，将 Java EE 平台连接到异构信息系统（EIS），包括 CICS 事务处理系统和 SAP 等企业资源计划（ERP）系统。特别是所谓的通用客户端接口（CCI），它定义了标准的客户端 API，允许应用程序访问多个资源适配器。
-
+`Java EE` 连接架构定义了一种标准架构，将 `Java EE` 平台连接到异构信息系统（`EIS`），包括 `CICS` 事务处理系统和 `SAP` 等企业资源计划（`ERP`）系统。特别是所谓的通用客户端接口（`CCI`），它定义了标准的客户端 `API`，允许应用程序访问多个资源适配器。
 
 ## 客户端接口
 
-（此处为图片占位符：图13 - JCA 通用接口）
+（此处为图片占位符：图13 - `JCA` 通用接口）
 
-图 13 - JCA 通用接口
+图 13 - `JCA` 通用接口
 
-必须补充的是，JCA 是 Java EE 伞下的一个相当老的部分，最后是在 EE 6 中更新的。它在大约年前获得过维护发布，也支持 CDI，但与 Salesforce 等的一些新的云和 API 解决方案相比，它显得有些过时，也是 Java EE 生态系统中较少为人知和使用的部分。
+必须补充的是，`JCA` 是 `Java EE` 伞下的一个相当老的部分，最后是在 `EE 6` 中更新的。它在大约年前获得过维护发布，也支持 `CDI`，但与 `Salesforce` 等的一些新的云和 `API` 解决方案相比，它显得有些过时，也是 `Java EE` 生态系统中较少为人知和使用的部分。
 
-尽管 JSR 357 提案没有明确表述为“JCA 方式”，但也可能是某些支持者和 JCA 专家（除了主要是 IBM 或 SAP 的 Oracle，大多数公司在 JCA 设计时甚至不存在）担心他们培养的小“恐龙”会被新的 Java 社交连接 API 所威胁。
+尽管 `JSR 357` 提案没有明确表述为“`JCA` 方式”，但也可能是某些支持者和 `JCA` 专家（除了主要是 `IBM` 或 `SAP` 的 `Oracle`，大多数公司在 `JCA` 设计时甚至不存在）担心他们培养的小“恐龙”会被新的 `Java` 社交连接 `API` 所威胁。
 
-Core 包含了与特定提供者无关的通用社交网络服务。提供如下功能：
+`Core` 包含了与特定提供者无关的通用社交网络服务。提供如下功能：
 
-- 用于向 OAuth 提供者进行身份验证的 OAuth 连接器
+- 用于向 `OAuth` 提供者进行身份验证的 `OAuth` 连接器
 - 支持通用身份验证和用户配置管理
 - 支持多账户的社交服务
   - 多个社交网络连接
   - 同一社交网络提供者的多个会话（例如同时连接到多个账户或查询）
 
-
-
-
-
 ## Agorava
 
-Agora Core 也提供了这些服务的实现。目前主要的实现基于基于 CDI 和 DeltaSpike，但大多数服务已经使用 JSR 330（依赖注入）进行了泛化，这允许使用轻量级的 Java SE 替代方案，例如 Google Guice、Dagger 或 CDI 实现的 SE 版本。
+`Agora Core` 也提供了这些服务的实现。目前主要的实现基于基于 `CDI` 和 `DeltaSpike`，但大多数服务已经使用 `JSR 330`（依赖注入）进行了泛化，这允许使用轻量级的 `Java SE` 替代方案，例如 `Google Guice`、`Dagger` 或 `CDI` 实现的 `SE` 版本。
 
-图 14 - Agora Core API 架构
+图 14 - `Agora Core API` 架构
 
 ## Agora PicketLink
 
-Agora Core 与 OAuth 功能和用户配置谱管理协同工作，包含一个基于 PicketLink 的安全子系统。
+`Agora Core` 与 `OAuth` 功能和用户配置谱管理协同工作，包含一个基于 `PicketLink` 的安全子系统。
 
-正如 2.3.2 中承诺的那样，专门的 Agora 版本的 PicketLinkBaseAuthenticator:@Generic
+正如 `2.3.2` 中承诺的那样，专门的 `Agora` 版本的 `PicketLinkBaseAuthenticator:@Generic`
 
 ```java
 public class AgoraAuthenticator extends BaseAuthenticator { @InjectWithQualifier
 OAuthAppSettings settings; @Inject
 ```
-
 
 ```java
 DefaultLoginCredentials credentials;
@@ -765,42 +789,42 @@ setStatus(AuthenticationStatus.DEFERRED);
 
 ## Connectors
 
-Agorava 目前带有连接到以下平台的默认连接器：
+`Agorava` 目前带有连接到以下平台的默认连接器：
 
-- Facebook
-- LinkedIn
-- Twitter
+- `Facebook`
+- `LinkedIn`
+- `Twitter`
 
-此外，还为以下服务创建了第三方 Agorava 连接器：
+此外，还为以下服务创建了第三方 `Agorava` 连接器：
 
-- EmpireAvenue
-- GitHub
-- Google+
-- Instagram
-- Meetup
-- StackOverflow
-- Triplit
-- WordPress
-- XING
-- Yammer
+- `EmpireAvenue`
+- `GitHub`
+- `Google+`
+- `Instagram`
+- `Meetup`
+- `StackOverflow`
+- `Triplit`
+- `WordPress`
+- `XING`
+- `Yammer`
 
 ### 连接器的剖析
 
 ## Socializer
 
-Socializer 是 Agorava 的一个真实世界演示 Web 应用。
+`Socializer` 是 `Agorava` 的一个真实世界演示 `Web` 应用。
 
 它允许你连接到各种社交媒体，并查看你的时间线和发布更新。
 
-Socializer 曾从 Java Server Faces 迁移到 Apache Wicket Web 框架，最近迁移到了 AngularJS。
+`Socializer` 曾从 `Java Server Faces` 迁移到 `Apache Wicket Web` 框架，最近迁移到了 `AngularJS`。
 
-这两个迁移版本目前仍然具有实验性，因此不是 Agorava 生态系统的正式部分。
+这两个迁移版本目前仍然具有实验性，因此不是 `Agorava` 生态系统的正式部分。
 
 ### 集成连接器
 
-在 Socializer 中添加新连接器非常简单。我们将以 XING 连接器为例来说如何操作。
+在 `Socializer` 中添加新连接器非常简单。我们将以 `XING` 连接器为例来说如何操作。
 
-在克隆 https://github.com/agorava/agorava-socializer 后，在 Socializer pom.xml 中添加以下行
+在克隆 `https://github.com/agorava/agorava-socializer` 后，在 `Socializer pom.xml` 中添加以下行
 
 ```xml
 <!-- XING -->
@@ -816,8 +840,9 @@ Socializer 曾从 Java Server Faces 迁移到 Apache Wicket Web 框架，最近�
 </dependency>
 ```
 
-为 XING API 和 CDI 实现定义依赖项。
-接下来，我们在 CDI 生产者类 org.agorava.socializer.SettingsProducer.java 中为 XING 添加应用设置。
+为 `XING API` 和 `CDI` 实现定义依赖项。
+
+接下来，我们在 `CDI` 生产者类 `org.agorava.socializer.SettingsProducer.java` 中为 `XING` 添加应用设置。
 
 ```java
 @ApplicationScoped
@@ -828,15 +853,18 @@ public OAuthAppSettings settings;
 ```
 
 由属性文件支持
-src/main/resources/local/agorava.properties
-xing.apiKey=<your API Key>
-xing.apiSecret=<your API Secret>
 
-对于本地 Socializer ，必须在所选的社交媒体账户中定义 API key 和 API secret，XING 请访问 https://dev.xing.com/applications/dashboard。
+`src/main/resources/local/agorava.properties`
+
+`xing.apiKey=<your API Key>`
+
+`xing.apiSecret=<your API Secret>`
+
+对于本地 `Socializer` ，必须在所选的社交媒体账户中定义 `API key` 和 `API secret`，`XING` 请访问 `https://dev.xing.com/applications/dashboard`。
 
 ## Agorava
 
-遗憾的是，有些平台（尤其是 Facebook）现在忽视了对开发者的需求。Facebook 在最新版本 (v2.5) 中的 Graph API 也包含一个已弃用的调用。
+遗憾的是，有些平台（尤其是 `Facebook`）现在忽视了对开发者的需求。`Facebook` 在最新版本 (`v2.5`) 中的 `Graph API` 也包含一个已弃用的调用。
 
 ```xml
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
@@ -874,41 +902,29 @@ xmlns="http://primefaces.org/ui">
 
 ## 参考文献
 
-1. Agora: http://en.wikipedia.org/wiki/Agora
-2. 论坛: http://en.wikipedia.org/wiki/Forum
-3. 信息历史 – 论坛帖子: http://www.historyofinformation.com/expanded.php?category=Social+Media+Networks
-4. The Role of Social Media in Mobilisation, delineation by Madeline Storck, 2020: http://www.culturaldiplomacy.org/content/pdf/participating-papers/
-
-
-
+1. `Agora`: `http://en.wikipedia.org/wiki/Agora`
+2. 论坛: `http://en.wikipedia.org/wiki/Forum`
+3. 信息历史 – 论坛帖子: `http://www.historyofinformation.com/expanded.php?category=Social+Media+Networks`
+4. `The Role of Social Media in Mobilisation`, delineation by `Madeline Storck`, 2020: `http://www.culturaldiplomacy.org/content/pdf/participating-papers/`
 
 # 企业社交
 
-26. 最小权限原则 - 维基百科: https://en.wikipedia.org/wiki/Principle_of_least_privilege
-
-27. EE 版的上下文与依赖注入: http://cdi-spec.org/
-
-28. 上下文与 OpenID: http://openid.net/
-
-30. TechCrunch - Sutter Sidney 锁定了数千个2015年的账户: http://techcrunch.com/2015/10/02/account-locked/
-
-31. 社交网络隐私问题 - 维基百科: http://en.wikipedia.org/wiki/Privacy_concerns_with_social_networking_services
-
-32. 社交媒体能破解 Boris Nevmtov 杀案吗？http://medianyum.wordpress/social-media-solve-boris-nevsov-murder/
-
-33. Agora 项目: http://agorava.org
-
-34. 社交网络网站列表 - 维基百科: http://en.wikipedia.org/wiki/List_of_social_networking_websites
-
+26. 最小权限原则 - 维基百科: `https://en.wikipedia.org/wiki/Principle_of_least_privilege`
+27. `EE` 版的上下文与依赖注入: `http://cdi-spec.org/`
+28. 上下文与 `OpenID`: `http://openid.net/`
+30. `TechCrunch` - `Sutter Sidney` 锁定了数千个2015年的账户: `http://techcrunch.com/2015/10/02/account-locked/`
+31. 社交网络隐私问题 - 维基百科: `http://en.wikipedia.org/wiki/Privacy_concerns_with_social_networking_services`
+32. 社交媒体能破解 `Boris Nevmtov` 杀案吗？`http://medianyum.wordpress/social-media-solve-boris-nevsov-murder/`
+33. `Agora` 项目: `http://agorava.org`
+34. 社交网络网站列表 - 维基百科: `http://en.wikipedia.org/wiki/List_of_social_networking_websites`
 35.
 
 # 关于作者
 
-Werner Keil 是某顶尖媒体世界领军企业的 DevOps 构建经理、Java 和 .NET 专家；他曾担任领先实时/嵌入式系统供应商的 Scrum Master 和 Eclipse/Java 顾问，默克（Merck）的 DevOps 构建经理，一家金融服务公司的敏捷教练、首席顾问和区域架构师，并在一家敏捷咨询公司工作。他曾帮助过跨越移动/电信、Web 2.0、金融、旅游/物流、汽车、医疗保健、环境与公共服务等多个行业的全球 500 强企业，以及 Oracle 或 IBM 等 IT 供应商。他的早期客户之一包括索尼，他在那里为在线移动端口设计并实施了基于微格式（micro-format）的标签。
+`Werner Keil` 是某顶尖媒体世界领军企业的 `DevOps` 构建经理、`Java` 和 `.NET` 专家；他曾担任领先实时/嵌入式系统供应商的 `Scrum Master` 和 `Eclipse/Java` 顾问，默克（`Merck`）的 `DevOps` 构建经理，一家金融服务公司的敏捷教练、首席顾问和区域架构师，并在一家敏捷咨询公司工作。他曾帮助过跨越移动/电信、`Web 2.0`、金融、旅游/物流、汽车、医疗保健、环境与公共服务等多个行业的全球 500 强企业，以及 `Oracle` 或 `IBM` 等 `IT` 供应商。他的早期客户之一包括索尼，他在那里为在线移动端口设计并实施了基于微格式（`micro-format`）的标签。
 
-他拥有25多年的开发、项目经理、软件架构师、分析师和顾问经验，专注于银行、保险、电信/移动、媒体和公共部门的前沿技术。Werner 使用 Java/JEE、Oracle、IBM 或 Microsoft 开发企业级系统，并使用 Adobe、Ajax/JavaScript 以及动态或函数式语言进行 Web 设计和开发。
+他拥有25多年的开发、项目经理、软件架构师、分析师和顾问经验，专注于银行、保险、电信/移动、媒体和公共部门的前沿技术。`Werner` 使用 `Java/JEE`、`Oracle`、`IBM` 或 `Microsoft` 开发企业级系统，并使用 `Adobe`、`Ajax/JavaScript` 以及动态或函数式语言进行 `Web` 设计和开发。
 
-在为大型公司工作之余，他利用业余时间运营自己的创意与人才机构 Creative Arts & Technologies，运行并支持开源项目，并创作歌词、小说、剧本以及技术书籍和文章。
+在为大型公司工作之余，他利用业余时间运营自己的创意与人才机构 `Creative Arts & Technologies`，运行并支持开源项目，并创作歌词、小说、剧本以及技术书籍和文章。
 
-Werner 是首批提交 Sysdeo Tomcat Launcher（Eclipse WTP 的前身）的人之一，特别负责了其 UI 设计。他是 Apache 基金会、Eclipse 基金会、Baseline Language 的委员会成员，Momo 项目负责人，Java 社区进程（JCP）的活跃成员，参与了 JSRs 321 (Trusted Java)、331 (CP)、344 (JSR 2.2)、358/364 (JCP.next)、350 (Java State)、351 (Java Identity)、354 (Money and Currency)、360/361 (ME Embedded)、363 (Portlet 3)、366 (Unit-API，同时也担任规范主导) 以及 367 (桌面/嵌入式应用框架)，他是美国境外唯一的执行委员会个人成员。
-
+`Werner` 是首批提交 `Sysdeo Tomcat Launcher`（`Eclipse WTP` 的前身）的人之一，特别负责了其 `UI` 设计。他是 `Apache` 基金会、`Eclipse` 基金会、`Baseline Language` 的委员会成员，`Momo` 项目负责人，`Java` 社区进程（`JCP`）的活跃成员，参与了 `JSRs 321` (`Trusted Java`)、`331` (`CP`)、`344` (`JSR 2.2`)、`358/364` (`JCP.next`)、`350` (`Java State`)、`351` (`Java Identity`)、`354` (`Money and Currency`)、`360/361` (`ME Embedded`)、`363` (`Portlet 3`)、`366` (`Unit-API`，同时也担任规范主导) 以及 `367` (桌面/嵌入式应用框架)，他是美国境外唯一的执行委员会个人成员。

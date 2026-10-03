@@ -1,3 +1,4 @@
+
 # DayOfWeek 和 Month 枚举
 
 > 原文：[`docs.oracle.com/javase/tutorial/datetime/iso/enum.html`](https://docs.oracle.com/javase/tutorial/datetime/iso/enum.html)
@@ -12,7 +13,6 @@
 
 ```java
 System.out.printf("%s%n", DayOfWeek.MONDAY.plus(3));
-
 ```
 
 使用[`getDisplayName(TextStyle, Locale)`](https://docs.oracle.com/javase/8/docs/api/java/time/DayOfWeek.html#getDisplayName-java.time.format.TextStyle-java.util.Locale-)方法，您可以检索一个字符串来标识用户所在地区的星期几。[`TextStyle`](https://docs.oracle.com/javase/8/docs/api/java/time/format/TextStyle.html)枚举允许您指定要显示的字符串类型：`FULL`、`NARROW`（通常是一个字母）或`SHORT`（缩写）。`STANDALONE`的`TextStyle`常量在某些语言中使用，当作为日期的一部分时输出不同于单独使用时的输出。以下示例打印了“Monday”三种主要形式的`TextStyle`：
@@ -23,7 +23,6 @@ Locale locale = Locale.getDefault();
 System.out.println(dow.getDisplayName(TextStyle.FULL, locale));
 System.out.println(dow.getDisplayName(TextStyle.NARROW, locale));
 System.out.println(dow.getDisplayName(TextStyle.SHORT, locale));
-
 ```
 
 此代码在`en`区域设置下的输出如下：
@@ -32,7 +31,6 @@ System.out.println(dow.getDisplayName(TextStyle.SHORT, locale));
 Monday
 M
 Mon
-
 ```
 
 ## 月
@@ -43,7 +41,6 @@ Mon
 
 ```java
 System.out.printf("%d%n", Month.FEBRUARY.maxLength());
-
 ```
 
 `Month`枚举还实现了[`getDisplayName(TextStyle, Locale)`](https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#getDisplayName-java.time.format.TextStyle-java.util.Locale-)方法，使用指定的`TextStyle`检索一个字符串来标识用户所在地区的月份。如果特定的`TextStyle`未定义，则返回表示常量数值的字符串。以下代码使用三种主要文本样式打印八月份的月份：
@@ -54,7 +51,6 @@ Locale locale = Locale.getDefault();
 System.out.println(month.getDisplayName(TextStyle.FULL, locale));
 System.out.println(month.getDisplayName(TextStyle.NARROW, locale));
 System.out.println(month.getDisplayName(TextStyle.SHORT, locale));
-
 ```
 
 此代码在`en`区域设置下的输出如下：
@@ -63,5 +59,4 @@ System.out.println(month.getDisplayName(TextStyle.SHORT, locale));
 August
 A
 Aug
-
 ```

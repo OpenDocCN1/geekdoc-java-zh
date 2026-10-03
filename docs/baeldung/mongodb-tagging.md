@@ -1,13 +1,17 @@
+
 # 用 MongoDB 实现简单的标记
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/mongodb-tagging>
 
 [This article is part of a series:](javascript:void(0);)[• A Simple Tagging Implementation with Elasticsearch](/web/20220625175311/https://www.baeldung.com/elasticsearch-tagging)
+
 [• A Simple Tagging Implementation with JPA](/web/20220625175311/https://www.baeldung.com/jpa-tagging)
+
 [• An Advanced Tagging Implementation with JPA](/web/20220625175311/https://www.baeldung.com/jpa-tagging-advanced)
+
 • A Simple Tagging Implementation with MongoDB (current article)
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将看看一个使用 Java 和 MongoDB 的简单标记实现。
 
@@ -17,9 +21,9 @@
 
 让我们看看如何实现这个场景。
 
-## 2。依赖性
+## 2. 依赖性
 
-为了查询数据库，我们必须在我们的`pom.xml`中包含 MongoDB 驱动程序依赖性:
+为了查询数据库，我们必须在`pom.xml`中包含 MongoDB 驱动程序依赖性:
 
 ```java
 <dependency>
@@ -31,7 +35,7 @@
 
 这个依赖关系的当前版本可以在[这里](https://web.archive.org/web/20220625175311/https://search.maven.org/classic/#search%7Cga%7C1%7Cg%3A%22org.mongodb%22%20AND%20a%3A%22mongo-java-driver%22)找到。
 
-## 3。数据模型
+## 3. 数据模型
 
 首先，让我们从规划一个帖子文档应该是什么样子开始。
 
@@ -59,7 +63,7 @@ public class Post {
 }
 ```
 
-## 4。更新标签
+## 4. 更新标签
 
 既然我们已经建立了数据库并插入了几篇示例文章，让我们看看如何更新它们。
 
@@ -104,12 +108,14 @@ db.posts.updateOne(
 });
 ```
 
-## 5。查询
+## 5. 查询
 
 最后但同样重要的是，让我们浏览一些在使用标签时我们可能感兴趣的最常见的查询。为此，我们将特别利用三个数组运算符:
 
 *   `**$in –**` 返回文档，其中**字段包含指定数组的任意值**
+
 *   `**$nin –**`返回文档，其中**字段不包含指定数组的任何值**
+
 *   `**$all –**`返回文档，其中**字段包含指定数组的所有值**
 
 **我们将定义三种方法来查询与作为参数**传递的标签集合相关的帖子。它们将返回与至少一个标签匹配的帖子，所有标签匹配的帖子，没有标签匹配的帖子。我们还将使用 Java 8 的流 API 创建一个映射方法来处理文档和模型之间的转换:
@@ -164,7 +170,7 @@ db.posts.find({
 });
 ```
 
-## 6。结论
+## 6. 结论
 
 在本文中，我们展示了如何构建标记机制。当然，除了博客之外，我们还可以将这种方法用于其他目的。
 

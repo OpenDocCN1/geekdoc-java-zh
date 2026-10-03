@@ -1,19 +1,5 @@
+
 # Java 编程：入门指南 (初学者指南) (第 1 卷)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 关于《初学者指南》系列
 
@@ -30,10 +16,13 @@
 希望这个过程对你来说像对我们教学一样充满回报。
 
 如果你有任何问题或建议，请直接发送邮件给我：mark@learntoprogram.tv。
+
 -Mark Lassoff, LearnToProgram Media 创始人
 
 ## 免费课程！
+
 一小时创建你的第一个 App
+
 Mark Lassoff 带你入门开发世界
 
 感谢你阅读本电子书，我们为你提供免费参加由导师 Mark Lassoff 授课的新在线课程——**一小时创建你的第一个 App**。
@@ -45,6 +34,7 @@ Mark Lassoff 带你入门开发世界
 该程序专为像你这样的初级开发者开发。
 
 报名请访问：
+
 http://bit.ly/oneHourApp
 
 learntoprogram.tv
@@ -54,14 +44,14 @@ learntoprogram.tv
 ![](img/e5a8dc568f1f48bb56665e2d6b74cfce_4_0.png)
 
 ## 是的！
+
 请开始我的免费订阅：learntoprogram.tv MAGAZINE
 
 兑换请访问：
+
 bit.ly/LearnToProgramMagazine
 
 learntoprogram Media
-
-
 
 # 第1章：编写你的第一个程序
 
@@ -75,12 +65,9 @@ learntoprogram Media
 
 在本介绍章节中——专为略微疑虑的初学者设计——我将带你一步到位。（注：原文此处开始出现大量重复乱码，翻译已按原意处理）。
 
-
-
-
 它们列在屏幕底部以供你参考。最需要注意的是 `CTRL-L` 用于保存文件，而 `CTRL-X` 用于退出 nano 并返回命令行。
 
-默认情况下，nano 将把文件保存在你打开 nano 时所所在的文件夹中。
+默认情况下，nano 将把文件保存在你打开 nano 时所在的文件夹中。
 
 ![](img/e5a8dc568f1f48bb56665e2d6b74cfce_9_0.png)
 
@@ -100,7 +87,7 @@ vi 是一个稍微复杂一点（甚至是“老派”）的文本编辑器。�
 
 现在你应该已经启动了文本编辑器，并准备好输入代码了。请按照所示在你的编辑器中输入以下代码：
 
-```
+```java
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("This is my first program!"); System.out.println("Programmers are rockstars!"); 
@@ -118,7 +105,10 @@ public class HelloWorld {
 
 现在你已经已经在编辑器中输入了代码，打开终端，光标应该出现在提示符处。在提示符处输入以下内容来运行程序（不要输入 `$`——它代表提示符本身）：
 
-$ javac HelloWorld.java java HelloWorld
+```
+$ javac HelloWorld.java
+java HelloWorld
+```
 
 第二行指示 Java 实际运行 `class` 文件中的内容。并不是说 `class` 是隐含的，当你运行代码时不需要输入它。不过，如果你打开保存文件的文件夹，你会看到它作为一个 `class` 文件。
 
@@ -141,22 +131,19 @@ $ javac HelloWorld.java java HelloWorld
 
 ### 表达式：表达式是求值为一个值的数学运算。
 
-
-
-
 在使用变量之前必须声明它们。通常的语法是数据类型，后跟着引用变量的名称。
 
 你可能在好奇什么是数据类型。数据类型决定了变量可以包含的内容，以及可以对其执行哪些操作。数据类型的示例包括整数、字符串和浮点数。
 
 这里有一个整数变量声明的示例：
 
-int name;
+`int name;`
 
 注意：表示该变量的数据类型为整数。
 
 在声明 Scanner 对象之前，记得使用 `Scanner` 对象或导入 `util` 库。否则，你的程序将遇到错误。
 
-让我们尝试一个新的例子。在你的文本编辑器中创建一个名为 `StringInput.java` 的新文件。你可以在 `vi` 中执行，例如在命令行输入以下命令：**StringInput.java**。
+让我们尝试一个新的例子。在你的文本编辑器中创建一个名为 `StringInput.java` 的新文件。你可以在 `vi` 中执行，例如在命令行输入以下命令：`StringInput.java`。
 
 在你的代码中输入：
 
@@ -171,7 +158,7 @@ public class StringInput{
 }
 ```
 
-退出编辑器并从命令行使用命令 **StringInput.java** 编译程序。
+退出编辑器并从命令行使用命令 `StringInput.java` 编译程序。
 
 ```
 StringInput... Terminal +
@@ -203,12 +190,13 @@ public static void main(String[] args) {
 ```
 
 注意：scanner 有一个函数可以获取各种类型的数据。
+
 这里是一些示例：
 
-- nextLine() : 字符串
-- nextInt() : 整数
-- nextFloat() : 浮点数
-- nextDouble() : 双精度浮点数
+- `nextLine()` : 字符串
+- `nextInt()` : 整数
+- `nextFloat()` : 浮点数
+- `nextDouble()` : 双精度浮点数
 
 你可能发现了这种模式。Scanner 对象的文档可以通过：
 
@@ -231,23 +219,26 @@ http://docs.oracle.com/Java/7/docs/api/Java/util/Scanner.html
 这三种类型是：
 
 ### 语法错误（Syntax errors）：
+
 语法错误是代码格式上的问题。示例包括忘记分号、未关闭括号或拼写错误方法名。文本编辑器通常能很好地指出这些问题，因此修复它们相当简单。
 
 ### 运行时错误（Runtime errors）：
+
 运行时错误稍难捕捉。从语法上说，所有的运行时错误都是正确的，因此你的文本编辑器不会指出它们。问题发生在意外情况时，导致程序在运行时无法编译或执行。结果是你的程序运行失败。示例包括尝试除以零或尝试调用不存在的文件。在你尝试执行代码之前，你不会遇到该错误。
 
 ### 逻辑错误（Logic errors）：
+
 这些是程序实际逻辑中的错误。它们是最难修复的错误，因为代码在技术上并没有错，它只是没有给出正确的结果。某些逻辑错误在程序发布后仍未被检测到。例如在应该用乘法时使用了除法、打印了错误的输出或打开了错误的文件。如果你有逻辑错误，你就陷入了 **PICNIC**。（Problem In Chair, Not In Computer——问题在椅子上而不是电脑里）。
 
 ## 参数化输入
 
 你的工作流要求你在传递输入之前先编译并运行代码。在你的 Java 命令中包含参数可以同时传递输入并执行代码。生成的命令看起来如下：
 
-$ java className arg1 arg2 arg
+`$ java className arg1 arg2 arg`
 
 在上面的示例中，我们仍然使用 Java 命令和想要运行的程序类名。我们在命令后跟了参数，这些参数作为输入传递给程序。这在我们希望在无人值守的情况下运行程序（例如当我们在计算数字时）时是有优势的。例如，如果我们想让程序接收用户名和年龄作为输入，参数可能像这样：
 
-$ java moreInput Keshav 17
+`$ java moreInput Keshav 17`
 
 值“Keshav”和“17”由单个空格隔开，被传递给程序。让我们看看是如何实现的。在以下示例中输入内容并将其保存为 `MoreInput.java`：
 
@@ -262,7 +253,8 @@ public class MoreInput{
 ```
 
 接下来，让我们运行程序并提供命令行参数作为输入：
-$ java StringInput Keshav 17
+
+`$ java StringInput Keshav 17`
 
 你应该得到一个与图 2.4 所示的结果：
 
@@ -277,7 +269,7 @@ patel: ~ $
 
 图 2.4：命令行参数在 Koding 命令行上作为输入处理。
 
-**注意：** 参数进入 Java 时是按顺序编号的，因此在我们的情况下，用户名是参数 0，年龄是参数 1。在代码中，我们分别调用 **args[0]** 和 **args[1]**。是因为 Java 从 0 开始，而不是 1。
+**注意：** 参数进入 Java 时是按顺序编号的，因此在我们的情况下，用户名是参数 0，年龄是参数 1。在代码中，我们分别调用 `args[0]` 和 `args[1]`。是因为 Java 从 0 开始，而不是 1。
 
 ## 输出到文件
 
@@ -319,13 +311,11 @@ System.out.println(name + " and " + band + " has been stored to " + fname);
 
 注意：我将文件写在独立的文件夹中，因此预需要先使用 `cd`（切换目录）命令进入文件所在的位置。
 
-
-
 我们传入了文件名。这是必要的，因为 `PrintWriter` 需要知道它所创建的文件应该命名上什么名字。
 
 程序的下一个部分是执行操作的地方：
 
-```
+```java
 public static void main(String[] args) {
   try { PrintWriter saver = new PrintWriter(fname);
   saver.println("Name:" + name);
@@ -338,10 +328,11 @@ catch (FileNotFoundException e){
 }
 ```
 
-System.out.println(name + " |" + band + " has been stored to " + name + 
-".txt");
 
-我们在程序中做的第一件事是创建一个 `PrintWriter`。这是一个允许我们创建并向原始文本（.txt）文件的对象。我们将其命名为 `saver`，并将字符串 `name` 作为参数传入。当写入器创建我们的文件时，这个字符串就变成了文件名。接下来，我们使用这个 `PrintWriter` 对象并向文本文件打印字符串。最后，我们关闭了对象并在控制台上打印出我们已经创建了一个包含用户提供的信息的文件。
+
+System.out.println(name + " |" + band + " has been stored to " + name + ".txt");
+
+我们在程序中做的第一件事是创建一个 `PrintWriter`。这是一个允许我们创建并向原始文本（.txt）文件写入的对象。我们将其命名为 `saver`，并将字符串 `name` 作为参数传入。当写入器创建我们的文件时，这个字符串就变成了文件名。接下来，我们使用这个 `PrintWriter` 对象并向文本文件打印字符串。最后，我们关闭了对象并在控制台上打印出我们已经创建了一个包含用户提供的信息的文件。
 
 注意，整个过程是在一个 `try-catch` 语句内完成的。`try-catch` 语句用于处理异常，即干扰程序执行的事件。在 `try` 块中，我们放置可能导致（又抛出）异常的代码。在 `catch` 块中，我们放置在发生异常时执行的代码。括号包含异常的类型以及我们给它的名字。在这种情况下，如果发生异常，我们只需打印“Oh no, it didn't work!”。
 
@@ -387,6 +378,7 @@ int name = 93;
 类类型变量（也称为引用类型变量）通常比基本类型更复杂。在大多数情况下，基本类型是类类型变量的构建模块。当你声明并初始化一个类变量时，名称并不代表对象本身，而是指向内存位置，该位置包含了组成对象的所有信息部分。
 
 有数百种不同的类类型变量，它们的功能各不相同。你已经遇到过的一个是 `Scanner`。
+
 这里再次给出声明和初始化：
 
 ```
@@ -405,25 +397,23 @@ String blogName = new String("Edukwest!");
 
 注意：由于字符串是类，因此不能像基本类型那样使用 `<`、`>` 或 `==` 等通用比较运算符进行比较。
 
-在这里，我们创建了一个变量 **blogName** 并用字符串值 **Edukwest** 对其进行了初始化。在此语文中，等号是赋值运算符。字符串值 **Edukwest** 被赋值给变量 **blogName**。
+在这里，我们创建了一个变量 `blogName` 并用字符串值 `Edukwest` 对其进行了初始化。在此语境中，等号是赋值运算符。字符串值 `Edukwest` 被赋值给变量 `blogName`。
 
 一旦变量被声明，通常你可以对它做很多事情。以下代码展示了使用变量更改句子中打印内容的示例。（你可以自由为变量替换你自己的值。）注意，注释由两个斜杠（//）表示。多行注释可以使用斜杠、星号和星号来创建。
 
-```
+```java
 public class Variables {
     public static void main(String[] args) {
         float gpa = 3.95f;
         int age = 17;
         String name = "Keshav";
-        Note:
+        // Note:
         System.out.println(name + " is " + age + " " + gpa);
     }
 }
 ```
 
 将此代码保存为 `Variables.java` 并运行它。你的输出应该是类似的。
-
-## 字符串
 
 ## 整数
 
@@ -456,7 +446,7 @@ public class Var {
 
 输入代码并运行以下内容将产生：
 
-```
+```java
 public class MathDemo {
     public static void main(String[] args) {
         int alpha = 3;
@@ -471,9 +461,6 @@ public class MathDemo {
 }
 ```
 
-
-
-
 然而，这两个数字都是整数。整数只能是 (2^31)-1 到 -2^31 之间的整数字。因此，整数数据类型的表达式中，小数点后的任何数字都会被截断。
 
 这意味着，如果一个表达式的结果是 3.9，但以 `int`（整数）类型打印，它将简单地打印 3。
@@ -483,6 +470,7 @@ public class MathDemo {
 Java 要求你识别变量的类型。当使用不同类型的变量时，你可能需要显式地说明你希望结果是什么种类型的变量。根据经验法则：较小的变量会自动向上转换，但较大的变量必须手动向下转换。
 
 以下是层级结构：
+
 byte < short < int < long < float < double
 
 配合 `float` 使用 `int` 不需要类型转换。但使用 `float` 和 `int` 获取一个 `int` 类型的答案则**需要**你显式地转换变量。
@@ -522,10 +510,12 @@ public class Order0Ops {
 
 结果总是你预期的吗？运算符优先级决定了数学表达式的哪部分先评估。表达式通常从左到右评估，但具体的运算符优先级是：
 
-+ 1) 括号 2) 幂
-3) 乘法 4) 除法
-5) 加法
-6) 减法
+1. 括号
+2. 幂
+3. 乘法
+4. 除法
+5. 加法
+6. 减法
 
 **注意：**尽管乘法在除法之前、加法在减法之前，但 Java 将它们视为处于同一水平，并从左到右进行评估。
 
@@ -545,20 +535,21 @@ http://docs.oracle.com/Javease/7/docs/api/Java/String.html
 
 让我们处理一些字符串方法。复制以下程序。该程序演示了几个字符串函数。注释仅供参考。
 
-```
+```java
 public class Strings {
-public static void main (String[] args) {
-  String phrase = "The quick brown fox jumped over the lazy dog";
-// 输出字符串的长度
-  System.out.println(phrase.length());
-  // 查找单词的索引
-  System.out.println(phrase.indexOf("fox"));
-  // 将一个单词替换为另一个
-  System.out.println(phrase.replace("jumped", "hopped"));
-  // 转换为大写
-  System.out.println(phrase.toUpperCase());
-  // 转换为小写
-  System.out.println(phrase.toLowerCase());
+    public static void main (String[] args) {
+        String phrase = "The quick brown fox jumped over the lazy dog";
+        // 输出字符串的长度
+        System.out.println(phrase.length());
+        // 查找单词的索引
+        System.out.println(phrase.indexOf("fox"));
+        // 将一个单词替换为另一个
+        System.out.println(phrase.replace("jumped", "hopped"));
+        // 转换为大写
+        System.out.println(phrase.toUpperCase());
+        // 转换为小写
+        System.out.println(phrase.toLowerCase());
+    }
 }
 ```
 
@@ -611,21 +602,16 @@ kpatel: ~ $
 ```java
 import java.util.*;
 public class Drink{
-```
-
-
-
-
-```java
-public static void main(String[] args) {
-Scanner ageGetter = new Scanner(System.in);
-System.out.println("How old are you?");
-int age = ageGetter.nextInt();
-if(age >= 21) {
-System.out.println("You can legally drink!");
-} else{
-System.out.println("You're not of drinking age.");
-}
+    public static void main(String[] args) {
+        Scanner ageGetter = new Scanner(System.in);
+        System.out.println("How old are you?");
+        int age = ageGetter.nextInt();
+        if(age >= 21) {
+            System.out.println("You can legally drink!");
+        } else{
+            System.out.println("You're not of drinking age.");
+        }
+    }
 }
 ```
 
@@ -638,34 +624,38 @@ System.out.println("You're not of drinking age.");
 图 4.2 添加了 else 语句后的结果
 
 你可以看出，添加 else 语句后，当输入小于 21 的值时会产生结果。当用户输入小于 21 的值时，条件被求值为 false，并触发 else 语句块。再次，只有括号内的代码被视为语句块的一部分。
+
 让我们在程序中多添加一点代码：
 
 ```java
 import java.util.*;
 public class Drink {
-public static void main(String[] args) {
-Scanner ageGetter = new Scanner(System.in);
-System.out.println("How old are you?");
-int age = ageGetter.nextInt();
-if(age >= 21){
-  System.out.println("You can legally drink!");
-}else{
-  System.out.println("You're not drinking age.");
-  if(age == 21){
-    System.out.println("Congratulations, Here's a free drink.");
-  }
+    public static void main(String[] args) {
+        Scanner ageGetter = new Scanner(System.in);
+        System.out.println("How old are you?");
+        int age = ageGetter.nextInt();
+        if(age >= 21){
+            System.out.println("You can legally drink!");
+        }else{
+            System.out.println("You're not drinking age.");
+            if(age == 21){
+                System.out.println("Congratulations, Here's a free drink.");
+            }
+        }
+    }
 }
 ```
 
 现在，如果用户说他们恰好是 21 岁，程序将打印出祝贺信息。注意，使用了比较运算符 `==` 来表示相等。如果 age 中的值恰好是 21，则该条件被求值为 true。
 
 以下是你可以在语句中使用的所有比较运算符：
-- = 等于
-- > 大于
-- >= 大于等于
-- < 小于
-- <= 小于等于
-- != 不等于
+
+- `=` 等于
+- `>` 大于
+- `>=` 大于等于
+- `<` 小于
+- `<=` 小于等于
+- `!=` 不等于
 
 注意：这些运算符只能用于基本类型，如 ints 或 floats！对于引用类型，通常可以使用一个方法来比较元素。通常情况下是使用 `.equals()` 方法。
 
@@ -676,6 +666,8 @@ if(age >= 21){
 假设我们正在为一所大学编写软件，以判断某个特定学生是否进入了荣誉名单（honor roll）。在我们的大学里，为了获得荣誉资格，你的 GPA 必须大于 3.5 且修读学分超过 12 个学分。
 
 在你的文本编辑器创建一个名为 `Honors.java` 的新程序，并在文件中输入以下代码：
+
+
 
 ```java
 import java.util.*;
@@ -718,15 +710,16 @@ kpatel: ~ $ |
 
 图 4.3：同时测试了两个条件。
 
-你会注意到，在 if 语句中，我们通过两个和符号（&&）连接了两个条件，在这种情况下，它充当了运算符。在该语句中，由 && 连接的两个条件都必须求值为 true，整个语句才会被求值为 true。在其他情况下，你可以使用竖线（||）作为运算符，即其中一个条件必须为真。你可以在 if-else、&& 和 || 运算符在单个语句中连接任意数量的条件。
+你会注意到，在 `if` 语句中，我们通过两个和符号（`&&`）连接了两个条件，在这种情况下，它充当了运算符。在该语句中，由 `&&` 连接的两个条件都必须求值为 `true`，整个语句才会被求值为 `true`。在其他情况下，你可以使用竖线（`||`）作为运算符，即其中一个条件必须为真。你可以在 `if-else`、`&&` 和 `||` 运算符在单个语句中连接任意数量的条件。
 
-术语交流：通常在阅读代码时，程序员会将 '&&' 读作“and”（与），将 '||' 读作“or”（或）。因此，`if (a>b && c<d)` 将读作“如果 a 大于 b 且小于 d，或者如果 小于 c（该条件）为真”。
+术语交流：通常在阅读代码时，程序员会将 `&&` 读作“and”（与），将 `||` 读作“or”（或）。因此，`if (a>b && c<d)` 将读作“如果 a 大于 b 且小于 d，或者如果 小于 c（该条件）为真”。
 
 ## 使用 else-if 的复杂条件
 
-到目前为止，我们创建的条件语句可以在二选一的情况下做出决策——要么你有饮酒资格，要么没有。然而，生活比这复杂得多。这就是为什么 if 语句可以与 else-if 配对。
+到目前为止，我们创建的条件语句可以在二选一的情况下做出决策——要么你有饮酒资格，要么没有。然而，生活比这复杂得多。这就是为什么 `if` 语句可以与 `else-if` 配对。
 
 ## While 循环
+
 循环允许你运行多次一段代码。每次执行该代码块称为一次迭代。想象一种轮回合制的卡牌游戏。如果你仔细考虑，可能可以在每天使用的许多类型软件中识别出循环。让我们编写一个简单的循环：
 
 ```java
@@ -771,8 +764,6 @@ kpatel: ~ $
 
 图 4.4：while 循环的结果
 
-
-
 ```java
 band = bandName.nextLine();
 if(!band.equals("XXX")){
@@ -786,7 +777,7 @@ if(!band.equals("XXX")){
 
 ![](img/e5a8dc568f1f48bb56665e2d6b74cfce_39_0.png)
 
-图 4.5 用户在循环内部输入文本。变量 *band* 被设置为空字符串。每次通过循环时，都会将 *band* 的值与字符串 "XXX" 进行比较。如果循环的内容不是 "XXX"，则循环将再次迭代。如果值不是 XXX，则会将乐队名称回显到控制台。
+图 4.5 用户在循环内部输入文本。变量 `band` 被设置为空字符串。每次通过循环时，都会将 `band` 的值与字符串 "XXX" 进行比较。如果循环的内容不是 "XXX"，则循环将再次迭代。如果值不是 XXX，则会将乐队名称回显到控制台。
 
 请注意，所有的左括号都有对应的右括号。如果你在一段有连续多个右括号的代码中迷失了方向，这里有一个技巧：类中的左括号和右括号的数量必须是相同的——如果你有更多的左括号，尝试对每一个进行配对，直到你发现缺少了括号。
 
@@ -807,7 +798,7 @@ x*=30000; //
 }
 ```
 
-你会注意到，在这个例子中，继续条件将**始终**为真——x 的值将始终大于零。x 的值会非常迅速地失控，事实上它变得大到无法存储在内存中。我在 Koding.com 环境中运行了它。我花了大约 10 分钟才停止了程序的执行，因为 koding 的环境由于该程序而卡顿。
+你会注意到，在这个例子中，继续条件将**始终**为真——`x` 的值将始终大于零。`x` 的值会非常迅速地失控，事实上它变得大到无法存储在内存中。我在 Koding.com 环境中运行了它。我花了大约 10 分钟才停止了程序的执行，因为 koding 的环境由于该程序而卡顿。
 
 ![](img/e5a8dc568f1f48bb56665e2d6b74cfce_40_0.png)
 
@@ -815,7 +806,7 @@ x*=30000; //
 
 你可以尝试自己运行这个例子。我不对任何造成的损害负责。（损害不会是永久的……玩得开心！）
 
-## for 循环 (For loops)
+## for 循环
 
 所以我们已经确定，忘记使用正确的迭代器对你的程序是有害的。我们如何避免死循环呢？答案是 `for` 循环。`for` 循环的作用与 `while` 循环相同，但它们只会执行指定的次数，你被强制迭代一个迭代器，并且作为循环语法的一部分，除了条件之外。因此，创建一个无限执行的 `for` 循环极其困难。
 
@@ -828,7 +819,7 @@ for(int x = 0; x<100; x+=5) { System.out.println(x); }
 }
 ```
 
-循环的语法非常简单。首先，我们有一个初始化并声明的局部变量 x。局部变量不能在循环外部访问或更改。然后，我们有一个条件。该条件的作用与 `while` 循环中相同。当它不再为真时，循环将停止迭代。最后，我们有一个被称为迭代器（iterator）的部分。这是对最初为此循环声明的变量的重新赋值。迭代器就是为什么通常很难意外导致死循环的原因。注意，这三个语句是用分号隔开，就像它们是行尾一样。这是执行此代码的结果：
+循环的语法非常简单。首先，我们有一个初始化并声明的局部变量 `x`。局部变量不能在循环外部访问或更改。然后，我们有一个条件。该条件的作用与 `while` 循环中相同。当它不再为真时，循环将停止迭代。最后，我们有一个被称为迭代器（`iterator`）的部分。这是对最初为此循环声明的变量的重新赋值。迭代器就是为什么通常很难意外导致死循环的原因。注意，这三个语句是用分号隔开，就像它们是行尾一样。这是执行此代码的结果：
 
 ```text
 Terminal  • Loop3.java ++
@@ -859,11 +850,11 @@ kpatel: ~$
 
 图 4.7：`for` 循环的结果与我们的原始循环相同。
 
-# 第 5 章：处理数据 (Dealing with Data)
+# 第 5 章：处理数据
 
-在上一章中，我们检查了控制结构、条件判断和循环，这些在某些语言中是至关重要的。它们允许你的程序根据你作为开发者设置的标准来做出决策。在这一章中，我们将切换思路检查数据及其存储方式。我们将仔细观察四种数据结构：数组 (Arrays)、动态列表 (ArrayLists)、不可变对象 (Imutables) 和表格 (Tables)。你以前可能没有对数据进行思考。概念化数据最简单的方法将其视为组织化的。不同类型的信息适合以不同的方式组织。例如，如果你的数据是一份购物清单，那么数组将组织你数据的最佳方式。但是，如果你想存储一段时间内的学生成绩，数组就完全不起作用了。程序员使用了许多不同的数据结构，每种数据结构都针对不同类型的数据进行了优化。
+在上一章中，我们检查了控制结构、条件判断和循环，这些在某些语言中是至关重要的。它们允许你的程序根据你作为开发者设置的标准来做出决策。在这一章中，我们将切换思路检查数据及其存储方式。我们将仔细观察四种数据结构：数组、动态列表、不可变对象 和表格。你以前可能没有对数据进行思考。概念化数据最简单的方法将其视为组织化的。不同类型的信息适合以不同的方式组织。例如，如果你的数据是一份购物清单，那么数组将组织你数据的最佳方式。但是，如果你想存储一段时间内的学生成绩，数组就完全不起作用了。程序员使用了许多不同的数据结构，每种数据结构都针对不同类型的数据进行了优化。
 
-## 数组 (Arrays)
+## 数组
 
 让我们从一个简单的购物清单开始。我们都列列过购物清单，但你可能没有把它存储在 Java 代码中。让我们现在使用以下代码来实现这一点：（记得把这放在你的 `main` 方法中！）
 
@@ -912,7 +903,7 @@ kpatel: ~
 
 我们的购物清单会有以下索引：
 
-| 索引 (Index) | 成员 (Member) |
+| 索引 | 成员 |
 | :--- | :--- |
 | 0 | oranges |
 | 1 | apples |
@@ -924,7 +915,8 @@ kpatel: ~
 | 7 | sugar |
 | 8 | pears |
 
-结合打印方法时，从数组获取数据的通用形式是：ArrayName[#]
+结合打印方法时，从数组获取数据的通用形式是：`ArrayName[#]`
+
 其中“#”是你指向的索引。
 
 需要记住的一点是，你的数组长度取决于你最初设置。如果你尝试访问不存在的数组索引，你的程序将报错退出。让我们在当前的程序中添加一行：
@@ -948,7 +940,7 @@ kpatel: ~ $
 
 图 5.2：使用范围外的索引会导致异常
 
-### 声明空数组 (Declaring Empty Arrays)
+### 声明空数组
 
 我们到为止填充的所有数组都是手动填充的。然后我们通过调用索引来单独打印它们。我们不必这样做。只要你知道计划在数组中放入多少元素，就可以在没有值的情况下声明并实例化（创建的高级词汇）数组。
 
@@ -956,12 +948,11 @@ kpatel: ~ $
 int[] vals = new int[10];
 ```
 
-### 修改数组成员 (Editing Array Members)
+### 修改数组成员
 
 你还可以使用数组成员的索引来更改列表中不同成员的值。这是通过赋值语句实现的，就像给标准变量赋值一样。以下语句将更改 GPA 列表的零索引值：
-gpas[0] = 4.0
 
-
+`gpas[0] = 4.0`
 
 到目前为止，我们已经处理并存储了大量数据。然而，我们还没有对数据进行组织。
 
@@ -972,6 +963,7 @@ Arrays.sort(Array);
 ```
 
 创建一个新文件并复制这段代码。我的文件是 `ArraySortDemo.java`：
+
 ```java
 import java.util.Arrays;
 public class ArraySortDemo{
@@ -995,6 +987,7 @@ public class ArraySortDemo{
 ```
 
 注意：如果你不懂循环，请担心。它们被用于打印我们的数组。我们将在下一节介绍它们。
+
 使用 Java 命令运行你的程序。你的输出应该看起来像这样：
 
 ```
@@ -1009,6 +1002,7 @@ kpat: $ _|
 ```
 
 图 5.3：在 `sort()` 函数返回后，杂货列表被索引了。现在它们是按字母顺序排列的！
+
 `sort` 方法还会从小到大顺序对数字进行排序，并组织其他的原始数据类型。
 
 ## 打印数组
@@ -1016,6 +1010,7 @@ kpat: $ _|
 到目前为止，我们打印数组信息的唯一方法是通过引用单个数组元素。但如果我们需要打印整个数组呢？
 
 复制下面的文件：
+
 ```java
 public class PrintingArrays{
     public static void main (String[] args) {
@@ -1039,7 +1034,12 @@ kpatel: ~ $
 
 ## 使用 for 循环
 
-第一种使用简单的 `for` 循环来打印数组。将 `PrintingArrays` 中的打印方法替换为这几行代码：
+
+
+# 第一种使用简单的 `for` 循环来打印数组
+
+将 `PrintingArrays` 中的打印方法替换为这几行代码：
+
 ```java
 for(int x = 0; x<oneToOne.length; x++){ System.out.println(oneToOne[x]); }
 ```
@@ -1064,6 +1064,7 @@ kpatel: ~ $ Awesome!
 ```
 
 图 5.5：太棒了！我们打印了数组。
+
 这个循环的工作原理非常简单。我们创建用于跟踪迭代次数的局部变量在调用数组元素时被用作索引值。结果是在迭代之后，变量的值增加了 1，我们所引用的位置也发生了变化。
 
 换句话说：`x` 从零开始。下一次迭代将 `x` 的值从零变为一。由于方括号中包含的是动态变量 `x` 而不是静态数字，我们调用的索引（原本是索引 0）切换到了索引 1。
@@ -1088,16 +1089,19 @@ for(int i=0;i<len;i++){System.out.println(array[i]);};
 循环括号内的语句由一个变量声明组成，其类型必须与你打算对其循环的数组类型匹配，并且是你打算在循环中使用的数组名称。
 
 例如，如果我们想打印我们的杂货列表数组，`for-each` 循环看起来像这样：
+
 ```java
 for(String item: groceries){
     System.out.println(item);
 }
 ```
 
-
-
 将以下行添加到你的代码中，重新编译并运行以查看其效果：
+
+```java
 System.out.println(languages.get(0));
+```
+
 当你重新编译并运行后，输出应该类似于下所示：
 
 ```
@@ -1112,15 +1116,17 @@ kpatel ~ $
 
 图 5.8：
 
-我们打印了 ArrayList 的第一个元素。
-ArrayList 还有许多其他非常有用的方法。最著名的是 .set(it) 方法，它可以在不重新分配数组的情况下替换原来的值。
+我们打印了 `ArrayList` 的第一个元素。
+
+`ArrayList` 还有许多其他非常有用的方法。最著名的是 `.set(it)` 方法，它可以在不重新分配数组的情况下替换原来的值。
 
 官方文档位于此处：
+
 http://docs.oracle.com/Java/7/docs/api/Java/util/ArrayList.html
 
 ## 不变对象 (Immutables)
 
-不可变对象与 ArrayList 非常相似，但有一个重要的区别：不可变对象是非动态的（non-dynamic）。这意味着一旦定义了不可变对象，其包含的值就无法更改。让我们开始一个新程序，在其中我们将定义一个不可变对象。
+不可变对象与 `ArrayList` 非常相似，但有一个重要的区别：不可变对象是非动态的（non-dynamic）。这意味着一旦定义了不可变对象，其包含的值就无法更改。让我们开始一个新程序，在其中我们将定义一个不可变对象。
 
 ```java
 将此代码复制到名为 ImmutablesDemo.java 的文件中：
@@ -1164,11 +1170,12 @@ kpatel ~ $ _
 
 ## 哈希表 (HashTables)
 
-HashTables 是另一种数据结构。它们非常适合存储对数据，有时被称为键值对（key: value）数据。在这种数据类型中，每个数据点不是通过数值索引，而是通过由程序员指定的键来索引的。州和州首府，或者城市和邮政编码都是 HashTables 可用于存储数据的例子。
+`HashTables` 是另一种数据结构。它们非常适合存储对数据，有时被称为键值对（key: value）数据。在这种数据类型中，每个数据点不是通过数值索引，而是通过由程序员指定的键来索引的。州和州首府，或者城市和邮政编码都是 `HashTables` 可用于存储数据的例子。
 
-丰富的程序员可能会发现 HashTables 与字典（Dictionaries）非常相似。这是因为 HashTables 是派生自。（字典是 Hashtables 的父类）
+丰富的程序员可能会发现 `HashTables` 与字典（Dictionaries）非常相似。这是因为 `HashTables` 是派生自。（字典是 `Hashtables` 的父类）
 
 考虑以下程序：
+
 ```java
 import java.util.*;
 public class HashTables {
@@ -1184,9 +1191,9 @@ public class HashTables {
 }
 ```
 
-当你使用 Java 命令运行程序时，你将看到输出 "Hartford"。这是由于 "Hartford" 的键（或索引）为 "Connecticut" 的结果。注意打印命令 System.out.println 它是如何被用来访问 HashTable 中的值的。
+当你使用 Java 命令运行程序时，你将看到输出 "Hartford"。这是由于 "Hartford" 的键（或索引）为 "Connecticut" 的结果。注意打印命令 `System.out.println` 它是如何被用来访问 `HashTable` 中的值的。
 
-和数组一样，Java 的 HashTable 是一个对象，并具有可以与之关联的函数。让我们看看这些函数之一。更新你的代码使其显示如下所示：
+和数组一样，Java 的 `HashTable` 是一个对象，并具有可以与之关联的函数。让我们看看这些函数之一。更新你的代码使其显示如下所示：
 
 ```java
 import java.util.*;
@@ -1202,8 +1209,10 @@ public class HashTables {
     }
 }
 ```
+
 ![](img/ea8dc568f1f48bb5665e2d6b74ce53.png)
-图 5.10：输出演示了字典使用的两个函数——values 和 keySet()。你会注意到 values() 函数返回字典中的所有的值，而 keySet() 函数返回所有的键。这一章向你提供了关于处理数据的广泛介绍。几乎每个程序在某种程度上都与数据打交道。有效地处理数据是任何程序员工具箱中的重要部分。
+
+图 5.10：输出演示了字典使用的两个函数——`values` 和 `keySet()`。你会注意到 `values()` 函数返回字典中的所有的值，而 `keySet()` 函数返回所有的键。这一章向你提供了关于处理数据的广泛介绍。几乎每个程序在某种程度上都与数据打交道。有效地处理数据是任何程序员工具箱中的重要部分。
 
 # 第 6 章：整合一切
 
@@ -1213,7 +1222,6 @@ public class HashTables {
 
 我经常告诉学生把类想象成一个蓝图。
 
-
 ```java
 public class AnimalDriver {
     public static void main(String[] args) {
@@ -1222,16 +1230,17 @@ public class AnimalDriver {
 }
 ```
 
-我们正在创建的 Animal 特定实例名为 `myDog`，长度为 19，重量为 12，棕色且有毛。构造函数的前四行分配了传递给实例的这些值。你可能在想我们是如何确定放入类中的信息顺序的。答案非常简单；构造函数按照代码编写顺序接受参数。在我们的代码中，数据类型的顺序是：`int`、`double`、`String` 和 `Boolean`。这意味着当我们调用构造函数时，参数必须遵循该顺序。
+我们正在创建的 `Animal` 特定实例名为 `myDog`，长度为 19，重量为 12，棕色且有毛。构造函数的前四行分配了传递给实例的这些值。你可能在想我们是如何确定放入类中的信息顺序的。答案非常简单；构造函数按照代码编写顺序接受参数。在我们的代码中，数据类型的顺序是：`int`、`double`、`String` 和 `Boolean`。这意味着当我们调用构造函数时，参数必须遵循该顺序。
 
 ![](img/e5a8dc568f1f48bb56665e2d6b74cfce_57_0.png)
 
 图 6.1：在 Koding 中创建类（左侧）和驱动类（右）
 
 检查以下行：
+
 `numOfAnimals++;`
 
-这一行的设计用于增加 `numOfAnimals` 的值，它是我们生成的 Animal 内部管理变量。实际实例是通过驱动类中的代码生成的，可以在名为 `AnimalDriver.java` 的文件中看到。
+这一行的设计用于增加 `numOfAnimals` 的值，它是我们生成的 `Animal` 内部管理变量。实际实例是通过驱动类中的代码生成的，可以在名为 `AnimalDriver.java` 的文件中看到。
 
 ```java
 public class AnimalDriver{
@@ -1281,7 +1290,7 @@ public class Animal{
 
 既然我们已经向动物类添加了内容，我们需要向驱动类添加内容以继续测试。
 
-重写你的 AnimalDriver 文件中的代码使其如下所示，然后重新编译并运行。
+重写你的 `AnimalDriver` 文件中的代码使其如下所示，然后重新编译并运行。
 
 ```java
 public class AnimalDriver{
@@ -1309,39 +1318,45 @@ kpatel: $ [ ]
 
 图 6.2：创建类实例并对其操作
 
-你会注意到我向类添加了一个额外的属性，数据类型为 `Boolean`：`hungry`。这个属性的设计用于跟踪 Animal 实例是否饥饿。当我们创建一个名为 `myDog` 的 Animal 实例时，我们将 `hungry` 属性的值设置为 `true`。
+你会注意到我向类添加了一个额外的属性，数据类型为 `Boolean`：`hungry`。这个属性的设计用于跟踪 `Animal` 实例是否饥饿。当我们创建一个名为 `myDog` 的 `Animal` 实例时，我们将 `hungry` 属性的值设置为 `true`。
 
 我们还向类中添加了两个方法。第一个方法 `walk()` 简单地打印出“Animal is walking”这条消息。
 
-第二个方法 `eat()` 与对象的属性进行交互。首先，`eat()` 方法将 `hungry` 属性的值设置为`false`。它通过打印语句告知用户动物正在吃东西。最后，由于动物正在吃东西，我们访问了 `weight` 属性并在其值上加上了 `.1`。
+第二个方法 `eat()` 与对象的属性进行交互。首先，`eat()` 方法将 `hungry` 属性的值设置为 `false`。它通过打印语句告知用户动物正在吃东西。最后，由于动物正在吃东西，我们访问了 `weight` 属性并在其值上加上了 `.1`。
 
 在类定义和 `myDog` 实例实例化之后，我们运行了 `walk()` 和 `eat()` 方法。
+
 你会注意到所有这些方法都使用了 `return` 关键字。
 
 这些方法的定义包含了所谓的“返回类型”。它出现在方法声明中可见性层级之后。这就是为什么 `Scanner` 对象需要几个方法来从提示中获取输入的原因；方法只能返回一种数据类型和对象。在我们所有的实例中，我们返回的都是字符串。当我们调用 `AnimalDriver` 类中的方法时，返回的方法将是一个字符串。这意味着我们可以设置一个 `String` 来捕捉方法的返回值：`public String walkText = myDog.walk();`
 
 注意，到目前为止我们返回了如 `int`、`float` 或 `boolean` 等原始类型，我们也可以返回如 `ArrayList` 等引用类型。
+
 `return` 本身做了两件事。
 
 第一件事是将你放在行剩余部分的任何内容发送回给方法调用。如果你放入一个表达式，它会返回结果。如果你放入一个字符串，它会返回整个字符串。
 
 `return` 关键字做的下一件事是完成方法。一旦你的方法返回，无论代码中 `return` 之后是什么，它都会停止执行。这非常有用，因为你可以将 `return` 语句放置在 `if` 语句中，使其在满足标准时提前退出。
 
-某些方法不需要返回任何内容。我们在 `print` 方法中遇到过一个例子。在这种情况下，返回类型是 `"void"`，它占据了数据类型的位置。以下是一个具有此类分类的方法示例：
+
+
+# 某些方法不需要返回任何内容
+
+我们在 `print` 方法中遇到过一个例子。在这种情况下，返回类型是 `void`，它占据了数据类型的位置。以下是一个具有此类分类的方法示例：
 
 ```java
-public void name(<Datatype>Parameter){}
+public void name(<Datatype> Parameter) {}
 ```
 
-应该注意的是，`return` 关键字也可以用于强制方法退出。只需输入 `"return"` 结束该行，并用分号来停止方法的执行。
+应该注意的是，`return` 关键字也可以用于强制方法退出。只需输入 `return` 结束该行，并用分号来停止方法的执行。
 
-## 多个实例
+# 多个实例
 
 你可能记得我们最初的讨论，类仅仅是一个蓝图，可以从该类中构建多个对象。在你的文本编辑器中输入这段修改后的代码：
 
 ```java
-public class Animal{
-    private static int numberOfAnimals = 0; 
+public class Animal {
+    private static int numberOfAnimals = 0;
     public String name;
     public int length;
     public String color;
@@ -1349,26 +1364,26 @@ public class Animal{
     public boolean hasFur;
     public boolean isHungry;
 
-    public Animal(String Name, String Color, int Length, double Weight, boolean Fur, boolean Hungry){
+    public Animal(String Name, String Color, int Length, double Weight, boolean Fur, boolean Hungry) {
         color = Color;
-        weight = Weight; 
+        weight = Weight;
         hasFur = Fur;
-        isHungry = Hungry; 
+        isHungry = Hungry;
         length = Length;
-        numberOfAnimals ++;
+        numberOfAnimals++;
     }
 
-    public String walk(){
+    public String walk() {
         return "Animal is walking";
     }
 
-    public String eat(){
+    public String eat() {
         isHungry = false;
         weight += .1;
         return "Animal has eaten.\n" + "Animal now weighs: " + weight + " pounds";
     }
 
-    public String getLength(){
+    public String getLength() {
         return "Animal’s length is " + length;
     }
 }
@@ -1376,17 +1391,16 @@ public class Animal{
 
 *(注：由于原文后续部分存在大量重复和逻辑混乱，译文已根据要求对核心逻辑内容进行了梳理并去除了冗余的重复文本，以符合文档工程师的专业性要求)*
 
+# 继承与子类
 
-
-
-
-通过扩展车辆类（vehicle class），我们创建了子类。子类继承了父类（在本例中为 `Vehicle` 类）的字段、方法甚至是构造函数。
+通过扩展车辆类（`Vehicle` 类），我们创建了子类。子类继承了父类（在本例中为 `Vehicle` 类）的字段、方法甚至是构造函数。
 
 在你的文本编辑器中打开一个新文件，并将以下代码保存为 `GroundVehicle.java`：
 
 ```java
-public class GroundVehicle extends Vehicle{
-    int numWheels; String vehicleType;
+public class GroundVehicle extends Vehicle {
+    int numWheels;
+    String vehicleType;
 
     public GroundVehicle(int setSpeed, String setColor, double setWeight, boolean tellIfMoving, int setNumWheels, String type) {
         super(setSpeed, setColor, setWeight, tellIfMoving);
@@ -1394,17 +1408,17 @@ public class GroundVehicle extends Vehicle{
         vehicleType = type;
     }
 
-    public String startingMoving(){
+    public String startingMoving() {
         isMoving = true;
         return vehicleType + " driving";
     }
 
-    public String stopMoving(){
+    public String stopMoving() {
         isMoving = false;
         return vehicleType + " isn driving";
     }
 
-    public String getColor(){
+    public String getColor() {
         return color;
     }
 }
@@ -1415,11 +1429,12 @@ public class GroundVehicle extends Vehicle{
 在 Java 中，所有类无论是否使用了 `extends` 关键字，都是 `Object` 类的扩展。结果是，每个层次树都以 `Object` 类为根。
 
 我们的树结构如下所示：
-GroundVehicle 是一个 Vehicle，而 Vehicle 是一个 Object。
 
-**专业术语：** 在面向对象的编程中，当程序员引用子类时，他们说该类与父类之间存在“是”（is/an）的关系。
+> GroundVehicle 是一个 Vehicle，而 Vehicle 是一个 Object。
 
-接下来的代码行为我们的对象添加了两个新字段。`VehicleType` 变量允许我们传入字符串“car”（汽车）、“motorcycle”（摩托车）或“truck”（卡车）。这两个新变量与 `Vehicle` 类中的所有变量共同存在。Vehicle 的变量可以通过 `super` 关键字访问。由于 `GroundVehicle` 是 `Vehicle` 的子类，因此 `GroundVehicle` 继承了 `Vehicle` 的属性和功能。
+**专业术语：** 在面向对象的编程中，当程序员引用子类时，他们说该类与父类之间存在“是”（is-a）的关系。
+
+接下来的代码行为我们的对象添加了两个新字段。`vehicleType` 变量允许我们传入字符串“car”（汽车）、“motorcycle”（摩托车）或“truck”（卡车）。这两个新变量与 `Vehicle` 类中的所有变量共同存在。`Vehicle` 的变量可以通过 `super` 关键字访问。由于 `GroundVehicle` 是 `Vehicle` 的子类，因此 `GroundVehicle` 继承了 `Vehicle` 的属性和功能。
 
 `super` 关键字允许你引用直接父类（`extends` 关键字之后的类）的字段、构造函数和方法。
 
@@ -1427,54 +1442,48 @@ GroundVehicle 是一个 Vehicle，而 Vehicle 是一个 Object。
 
 正常的实例化看起来如下：
 
-```
-new Vehicle(100,"Orange",1034.2, false);
+```java
+new Vehicle(100, "Orange", 1034.2, false);
 ```
 
-在构造函数内部，“new Vehicle”已被“super”取代，结果由于调用了父类的构造函数，`GroundVehicle` 中所有的隐藏字段在构造时都将得到填充。
+在构造函数内部，“new Vehicle”已被 `super` 取代，结果由于调用了父类的构造函数，`GroundVehicle` 中所有的隐藏字段在构造时都将得到填充。
 
-构造函数之后，我们有三个方法。它们更改了车辆类中的一个变量，然后返回一个确认该更改的字符串。阅读 `GroundVehicle` 中前两个方法的名称，然后看 `Vehicle` 中的两个方法。当子类中的方法与其父类方法同名时，它们会重写（override）父类方法。我们只是更改了方法的功能，仅此而已。如果我们更改了任何其他内容，例如返回类型，我们就是重载（overloading）了该方法。
+构造函数之后，我们有三个方法。它们更改了车辆类中的一个变量，然后返回一个确认该更改的字符串。阅读 `GroundVehicle` 中前两个方法的名称，然后看 `Vehicle` 中的两个方法。当子类中的方法与其父类方法同名时，它们会**重写**（override）父类方法。我们只是更改了方法的功能，仅此而已。如果我们更改了任何其他内容，例如返回类型，我们就是**重载**（overloading）了该方法。
 
 记住，我们需要一个驱动类来使用我们的对象。
 
 将以下代码复制到名为 `VehicleDriver.java` 的文件中：
 
 ```java
-public class VehicleDriver{
-  public static void main(String[] args) {
-    Vehicle transportationMachine = new Vehicle(50,"Blue",210,false);
-    System.out.println(transportationMachine.startMoving());
-  }
+public class VehicleDriver {
+    public static void main(String[] args) {
+        Vehicle transportationMachine = new Vehicle(50, "Blue", 210, false);
+        System.out.println(transportationMachine.startMoving());
+    }
 }
 ```
 
 这段代码的输出是：
-
-| Terminal | Vehicle.Java | VehicleDri... | + |
-| --- | --- | --- | --- |
-| kpath: - $ javac VehicleDriver.java | | | |
-| kpath: - $ Java VehicleDriver | | | |
-| Vehicle is moving. | | | |
-| kpath: - $ [] | | | |
-
-图 6.4 输出是我们在 `VehicleDriver` 类中输入的字符串，因为那是我们放在 `return` 语句之后的内容。
 
 ```
 kpatel: ~ $ javac VehicleDriver.java
 kpatel: ~ $ java VehicleDriver
 Vehicle is moving.
 Horse and Buggy is driving
-kpatel: ~ $ 
+kpatel: ~ $
 ```
 
 图 6.5：我们在 `GroundVehicle` 类中更具体的方法导致了更具体的输出。
+
 此代码段的第一行是 `GroundVehicle` 对象的实例化，我们用它制作了一辆马车（horse and buggy）。下一行创建了一个字符串，并将其设置为 `startMoving` 方法的输出。最后一行打印结果。
 
 最后，让我们看看类扩展能够实现的另一种功能。
 
 将最后几行复制到驱动类中：
-`Vehicle goKart = new GroundVehicle(25,"Yellow", 3, true, 4, "GoKart");`
-`System.out.println(goKart.startMoving());`
+
+```java
+Vehicle goKart = new GroundVehicle(25, "Yellow", 3, true, 4, "GoKart");
+System.out.println(goKart.startMoving());
+```
 
 观察对象的声明和实例化。它们并不匹配。然而当我们编译并运行这段代码时没有问题，因为 `GroundVehicle` 是 `Vehicle` 的一种类型。由于 `GroundVehicle` 类派自 `Vehicle` 类，可以使用 `Vehicle` 变量。
-

@@ -1,3 +1,4 @@
+
 # 为你的类提供构造函数
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/javaOO/constructors.html`](https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html)
@@ -10,14 +11,12 @@ public Bicycle(int startCadence, int startSpeed, int startGear) {
     cadence = startCadence;
     speed = startSpeed;
 }
-
 ```
 
 要创建一个名为`myBike`的新`Bicycle`对象，需要通过`new`运算符调用构造函数：
 
 ```java
 Bicycle myBike = new Bicycle(30, 0, 8);
-
 ```
 
 `new Bicycle(30, 0, 8)`在内存中为对象创建空间并初始化其字段。
@@ -30,7 +29,6 @@ public Bicycle() {
     cadence = 10;
     speed = 0;
 }
-
 ```
 
 `Bicycle yourBike = new Bicycle();`调用无参数构造函数以创建一个名为`yourBike`的新`Bicycle`对象。
@@ -43,8 +41,4 @@ public Bicycle() {
 
 你可以在构造函数的声明中使用访问修饰符来控制哪些其他类可以调用该构造函数。
 
-* * *
-
 **注意：**如果另一个类无法调用`MyClass`构造函数，则无法直接创建`MyClass`对象。
-
-* * *

@@ -1,19 +1,23 @@
-# 如何在 Java web 服务客户机中绕过证书检查
+
+
+# 如何在 Java Web 服务客户端中绕过证书检查
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/webservices/jax-ws/how-to-bypass-certificate-checking-in-a-java-web-service-client/>
 
-在 Java web 服务开发环境中，开发人员总是使用`keytool`来生成测试证书。在进行客户端测试时，web 服务测试客户端经常会遇到以下错误消息:
+在 Java Web 服务开发环境中，开发人员总是使用`keytool`来生成测试证书。在进行客户端测试时，Web 服务测试客户端经常会遇到以下错误消息：
 
-1.  [Java . security . cert . certificate 异常:找不到与本地主机匹配的名称](http://web.archive.org/web/20190303105144/http://www.mkyong.com/webservices/jax-ws/java-security-cert-certificateexception-no-name-matching-localhost-found/)
-2.  [SunCertPathBuilderException:无法找到请求目标的有效认证路径](http://web.archive.org/web/20190303105144/http://www.mkyong.com/webservices/jax-ws/suncertpathbuilderexception-unable-to-find-valid-certification-path-to-requested-target/)
+1. [Java.security.cert.CertificateException：找不到与本地主机匹配的名称](http://web.archive.org/web/20190303105144/http://www.mkyong.com/webservices/jax-ws/java-security-cert-certificateexception-no-name-matching-localhost-found/)
 
-这里有一个源代码，是我从马丁·卡琳的书《Java Web Services:启动并运行，第一版》中复制过来的。一个在测试环境中非常**有用的代码唯一**，推荐学习并收藏备查:)
+2. [SunCertPathBuilderException：无法找到请求目标的有效认证路径](http://web.archive.org/web/20190303105144/http://www.mkyong.com/webservices/jax-ws/suncertpathbuilderexception-unable-to-find-valid-certification-path-to-requested-target/)
+
+这里有一段源代码，是我从马丁·卡琳的书《Java Web Services：启动并运行，第一版》中复制过来的。在测试环境中非常有用，推荐学习并收藏备查。
 
 **Warning**
+
 Don’t try it at production environment, unless you have a very solid reason to by pass all the certificate checking. Ans if yes, why are you still using SSL connection? :)
 
 ```java
- package com.mkyong.client;
+package com.mkyong.client;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -143,11 +147,5 @@ public class HttpsClient{
 } 
 ```
 
-[jax-ws](http://web.archive.org/web/20190303105144/http://www.mkyong.com/tag/jax-ws/) [web services](http://web.archive.org/web/20190303105144/http://www.mkyong.com/tag/web-services/)![](img/b9101bf7a141404684e92c4443ba135f.png) (function (i,d,s,o,m,r,c,l,w,q,y,h,g) { var e=d.getElementById(r);if(e===null){ var t = d.createElement(o); t.src = g; t.id = r; t.setAttribute(m, s);t.async = 1;var n=d.getElementsByTagName(o)[0];n.parentNode.insertBefore(t, n); var dt=new Date().getTime(); try{i[l][w+y](h,i[l][q+y](h)+'&amp;'+dt);}catch(er){i[h]=dt;} } else if(typeof i[c]!=='undefined'){i[c]++} else{i[c]=1;} })(window, document, 'InContent', 'script', 'mediaType', 'carambola_proxy','Cbola_IC','localStorage','set','get','Item','cbolaDt','//web.archive.org/web/20190303105144/http://route.carambo.la/inimage/getlayer?pid=myky82&amp;did=112239&amp;wid=0')<input type="hidden" id="mkyong-postId" value="7918">
-
-
-
-
-
-
+[jax-ws](http://web.archive.org/web/20190303105144/http://www.mkyong.com/tag/jax-ws/) [web services](http://web.archive.org/web/20190303105144/http://www.mkyong.com/tag/web-services/)
 

@@ -1,8 +1,9 @@
+
 # 弹簧云断路器快速指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-cloud-circuit-breaker>
 
-## 1.概观
+## 1. 概观
 
 在本教程中，**我们将介绍 Spring Cloud 断路器项目**，并学习如何利用它。
 
@@ -10,7 +11,7 @@
 
 请注意，我们在[Hystrix 简介](/web/20221208143837/https://www.baeldung.com/introduction-to-hystrix)、 [Spring Cloud 网飞 Hystrix](/web/20221208143837/https://www.baeldung.com/spring-cloud-netflix-hystrix) 和[resilience 4j 指南](/web/20221208143837/https://www.baeldung.com/resilience4j)中获得了更多关于断路器及其工作原理的信息。
 
-## 2.弹簧云断路器
+## 2. 弹簧云断路器
 
 直到最近，Spring Cloud 只为我们提供了一种在应用程序中添加断路器的方法。这是通过使用网飞海斯特里克斯作为春天云网飞项目的一部分。
 
@@ -20,7 +21,7 @@ Spring Cloud 网飞项目实际上只是一个基于注释的包装器库。因�
 
 对于我们的例子，**我们将只关注 Resilience4J 的实现。然而，这些技术可以用于其他插件。**
 
-## 3.自动配置
+## 3. 自动配置
 
 **为了在我们的应用中使用特定的断路器实现，我们需要添加合适的弹簧启动器。**在我们的例子中，让我们用 [`spring-cloud-starter-circuitbreaker-resilience4j`](https://web.archive.org/web/20221208143837/https://search.maven.org/search?q=spring-cloud-starter-circuitbreaker-resilience4j) :
 
@@ -36,7 +37,7 @@ Spring Cloud 网飞项目实际上只是一个基于注释的包装器库。因�
 
 如果我们想要禁用 Resilience4J 自动配置，我们可以将`spring.cloud.circuitbreaker.resilience4j.enabled`属性设置为`false`。
 
-## 4.一个简单的断路器示例
+## 4. 一个简单的断路器示例
 
 让我们使用 Spring Boot 创建一个 web 应用程序，来探索 Spring Cloud 断路器库是如何工作的。
 
@@ -46,7 +47,7 @@ Spring Cloud 网飞项目实际上只是一个基于注释的包装器库。因�
 https://jsonplaceholder.typicode.com/albums
 ```
 
-### 4.1.创建一个断路器
+### 4.1. 创建一个断路器
 
 让我们创造我们的第一个断路器。我们将从注入一个`CircuitBreakerFactory` bean 的实例开始:
 
@@ -68,7 +69,7 @@ public class AlbumService {
 CircuitBreaker circuitBreaker = circuitBreakerFactory.create("circuitbreaker");
 ```
 
-### 4.2.将任务包装在断路器中
+### 4.2. 将任务包装在断路器中
 
 为了包装和运行受断路器保护的任务，我们需要调用 r `un`方法，该方法将一个`Supplier`作为参数。
 
@@ -101,7 +102,7 @@ public String getAlbumList() {
 
 如果外部调用以异常结束，并且没有提供回退，Spring 就会抛出一个`NoFallbackAvailableException`。
 
-### 4.3.构建控制器
+### 4.3. 构建控制器
 
 现在，让我们完成我们的示例并创建一个简单的控制器，该控制器调用服务方法并通过浏览器呈现结果:
 
@@ -126,7 +127,7 @@ public class Controller {
 [GET] http://localhost:8080/albums
 ```
 
-## 5.全局自定义配置
+## 5. 全局自定义配置
 
 通常情况下，默认配置是不够的。出于这个原因，我们需要根据我们的用例创建带有定制配置的断路器。
 
@@ -165,7 +166,7 @@ public class Resilience4JConfiguration {
 }
 ```
 
-## 6.特定自定义配置
+## 6. 特定自定义配置
 
 当然，在我们的应用中可以有多个断路器。因此，在某些情况下，我们需要对每个断路器进行特定配置。
 
@@ -198,21 +199,23 @@ public Customizer<Resilience4JCircuitBreakerFactory> specificCustomConfiguration
 }
 ```
 
-## 7.替代实现
+## 7. 替代实现
 
 我们已经看到了如何使用`Resilience4j`实现创建一个或多个带有 Spring Cloud 断路器的断路器。
 
 然而，Spring Cloud 断路器还支持其他实现，我们可以在我们的应用中加以利用:
 
 *   [Hystrix](/web/20221208143837/https://www.baeldung.com/spring-cloud-netflix-hystrix)
+
 *   [哨兵](https://web.archive.org/web/20221208143837/https://github.com/alibaba/Sentinel)
+
 *   [弹簧重试](/web/20221208143837/https://www.baeldung.com/spring-retry)
 
 **值得一提的是，我们可以在应用中混合搭配不同的断路器实施**。我们不仅仅局限于一个图书馆。
 
 上述库比我们在这里探索的功能更多。然而，Spring Cloud 断路器只是断路器部分的抽象。例如，除了本文使用的`CircuitBreaker`和`TimeLimiter`模块之外，Resilience4j 还提供了其他类似`RateLimiter`、`Bulkhead`、`Retry`的模块。
 
-## 8.结论
+## 8. 结论
 
 在本文中，我们发现了 Spring Cloud 断路器项目。
 

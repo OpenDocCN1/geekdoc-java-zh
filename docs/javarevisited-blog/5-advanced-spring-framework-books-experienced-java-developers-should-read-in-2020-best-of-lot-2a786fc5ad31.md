@@ -1,3 +1,4 @@
+
 # 6 本高级 Spring 框架书籍，有经验的 Java 开发人员应该在 2023 年阅读——最好的
 
 > 原文：<https://medium.com/javarevisited/5-advanced-spring-framework-books-experienced-java-developers-should-read-in-2020-best-of-lot-2a786fc5ad31?source=collection_archive---------0----------------------->
@@ -8,7 +9,7 @@
 
 H ello 伙计们，Spring 框架在过去几年里发生了很大的变化。在过去的几年里，我们已经看到了 Spring、Spring Boot 和 Spring Security 的主要版本。
 
-这些新版本引入了几个令人兴奋的功能，以满足最新的软件开发趋势，如反应式编程，支持用于开发 Spring 应用程序的 [Kotlin](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html) ，Spring web flux——一个开发非阻塞和反应式 web 应用程序的新框架——等等。
+这些新版本引入了几个令人兴奋的功能，以满足最新的软件开发趋势，如反应式编程，支持用于开发 Spring 应用程序的 [Kotlin](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html)，Spring web flux——一个开发非阻塞和反应式 web 应用程序的新框架——等等。
 
 由于软件世界正在发生变化，并且大多数开发都是在云上进行的，其中[微服务架构](http://javarevisited.blogspot.sg/2018/02/top-5-spring-microservices-courses-with-spring-boot-and-spring-cloud.html)处于领先地位，所以现在是有经验的 Java 开发人员自我升级的时候了。
 
@@ -16,7 +17,7 @@ H ello 伙计们，Spring 框架在过去几年里发生了很大的变化。在
 
 在 Java SE 8 发布之后，大多数 Java 框架都得到了升级，以支持新的 Java 编码风格。它现在已经成为 Java 的标准——使用旧风格编写的代码已经不再实用。
 
-技术领导和架构师在同行代码评审中拒绝这样的代码，并鼓励有经验的 Java 开发人员，比如有 5 到 8 年经验的人，学习 [Java 8](http://www.java67.com/2014/09/top-10-java-8-tutorials-best-of-lot.html) 和 [Spring 5](http://javarevisited.blogspot.sg/2018/01/how-to-learn-spring-core-spring-mvc-boot-security-framework.html#axzz55IgfKjy8) 。
+技术领导和架构师在同行代码评审中拒绝这样的代码，并鼓励有经验的 Java 开发人员，比如有 5 到 8 年经验的人，学习 [Java 8](http://www.java67.com/2014/09/top-10-java-8-tutorials-best-of-lot.html) 和 [Spring 5](http://javarevisited.blogspot.sg/2018/01/how-to-learn-spring-core-spring-mvc-boot-security-framework.html#axzz55IgfKjy8)。
 
 > 这是有道理的:如果有更好的选择，可读性更好，更直观，并提供更好的性能，你就不能用老方法编写代码。反应式编程模型也是如此。
 
@@ -26,11 +27,11 @@ H ello 伙计们，Spring 框架在过去几年里发生了很大的变化。在
 
 但是如果你正在为一家创业公司工作，这家公司非常敏捷地采用最新最棒的[框架](/javarevisited/top-10-frameworks-full-stack-java-developers-can-learn-in-2020-5995021401e5)、[库](/javarevisited/10-of-the-most-popular-javascript-frameworks-libraries-for-web-development-in-2019-a2c8cea68094)和[技术](/javarevisited/these-are-the-highest-paying-tech-jobs-programmers-can-aim-to-increase-their-pay-c59e1eeb6904)，你可能会更频繁地升级自己。
 
-# 2023 年面向 Java 开发人员的 6 本高级春季书籍
+## 2023 年面向 Java 开发人员的 6 本高级春季书籍
 
 无论如何，如果你想给你的职业生涯一个推动，打破束缚，这里有几本我认为有经验的 Java 开发人员应该阅读的 Spring 书籍，以了解 Spring 5、Spring Boot、Spring Cloud 的新功能，以及如何使用 Spring 框架开发面向云的 Java 应用程序。
 
-## 1.[弹簧微服务在行动](https://www.amazon.com/Spring-Microservices-Action-John-Carnell/dp/1617293989/?tag=javamysqlanta-20)
+### 1. [弹簧微服务在行动](https://www.amazon.com/Spring-Microservices-Action-John-Carnell/dp/1617293989/?tag=javamysqlanta-20)
 
 围绕微服务有很多讨论，Spring 通过提供用 Java 构建基于微服务的应用程序所需的技术而处于领先地位。
 
@@ -44,7 +45,7 @@ H ello 伙计们，Spring 框架在过去几年里发生了很大的变化。在
 
 [![](img/6c8491fb53781041eb3df03a0d9c80b0.png)](https://www.amazon.com/Spring-Microservices-Action-John-Carnell/dp/1617293989/?tag=javamysqlanta-20)
 
-## 2.[云原生 Java](https://www.amazon.com/Cloud-Native-Java-Designing-Resilient/dp/1449374646?tag=javamysqlanta-20)
+### 2. [云原生 Java](https://www.amazon.com/Cloud-Native-Java-Designing-Resilient/dp/1449374646?tag=javamysqlanta-20)
 
 这是 2023 年 Java 开发人员的必读春季书籍之一，他们希望学习如何为云设计和开发生产质量的 Java 应用程序。
 
@@ -62,7 +63,7 @@ H ello 伙计们，Spring 框架在过去几年里发生了很大的变化。在
 
 如果你对微服务或 Spring Boot 感兴趣，并想知道为什么许多公司都在使用 Cloud Foundry，那么你应该看看这本书。
 
-## 3.[学习 Spring Boot 2.0](https://www.amazon.com/Learning-Spring-Boot-2-0-microservices/dp/1786463784?tag=javamysqlanta-20)
+### 3. [学习 Spring Boot 2.0](https://www.amazon.com/Learning-Spring-Boot-2-0-microservices/dp/1786463784?tag=javamysqlanta-20)
 
 这本书用复杂的反应主题的详细解释解释了这些例子，并且它被很好地组织以在反应范例上从头构建一个应用程序。
 
@@ -78,9 +79,9 @@ H ello 伙计们，Spring 框架在过去几年里发生了很大的变化。在
 
 或者，你也可以使用他们的 1 [0 天免费试用](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn)来免费观看这个课程。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>
 
-## 4.[春季 5 食谱:解决问题的方法](https://www.amazon.com/Spring-5-Recipes-Problem-Solution-Approach/dp/1484227891?tag=javamysqlanta-20)
+### 4. [春季 5 食谱:解决问题的方法](https://www.amazon.com/Spring-5-Recipes-Problem-Solution-Approach/dp/1484227891?tag=javamysqlanta-20)
 
 如果你喜欢通过阅读操作指南和食谱来学习新概念，那么这本书就是为你准备的。它不仅涵盖了 Spring 5.0 的新特性，还教你如何使用 [Spring 5](https://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html) 和 [Java 9](http://www.java67.com/2018/01/top-10-java-9-tutorials-and-courses.html) 进行开发。
 
@@ -92,7 +93,7 @@ H ello 伙计们，Spring 框架在过去几年里发生了很大的变化。在
 
 [![](img/7396638ce4f51a9392ce0bc262e6475c.png)](https://www.amazon.com/Spring-5-Recipes-Problem-Solution-Approach/dp/1484227891?tag=javamysqlanta-20)
 
-## 5.[临春 5](https://www.amazon.com/Pro-Spring-Depth-Guide-Framework/dp/1484228073?tag=javamysqlanta-20)
+### 5. [临春 5](https://www.amazon.com/Pro-Spring-Depth-Guide-Framework/dp/1484228073?tag=javamysqlanta-20)
 
 这应该是你 2023 年最先读的几本书之一，当然是在你读完《有效的 Java》之后。这本书将帮助你发现 Spring Framework 5 中的新特性，比如反应特性、WebFlux 等。
 
@@ -102,7 +103,7 @@ H ello 伙计们，Spring 框架在过去几年里发生了很大的变化。在
 
 [![](img/ce56f3615247050dc5bbf5c8c8bd0682.png)](https://medium.com/javarevisited/top-10-courses-to-learn-spring-boot-in-2020-best-of-lot-6ffce88a1b6e)
 
-## 6.[春天在行动第五版](https://www.amazon.com/Spring-Action-Craig-Walls/dp/1617294942?tag=javamysqlanta-20)
+### 6. [春天在行动第五版](https://www.amazon.com/Spring-Action-Craig-Walls/dp/1617294942?tag=javamysqlanta-20)
 
 虽然 Spring in Action 不需要任何介绍或推荐，是目前学习 Spring 框架的最佳书籍，但它也更新到了 Spring 5，这意味着您可以使用它来学习和发现 [Spring Framework 5](/javarevisited/10-best-online-courses-to-learn-spring-framework-in-2020-f7f73599c2fd) 中的新功能，如 Reactive 特性、 [WebFlux](/javarevisited/7-best-webflux-and-reactive-spring-boot-courses-for-java-programmers-33b7c6fa8995) 等。
 
@@ -110,24 +111,26 @@ H ello 伙计们，Spring 框架在过去几年里发生了很大的变化。在
 
 如果你正在学习 2023 年的 Spring 框架，我建议你跟着这本书走。它是最新的，并且遵循了使用 Spring 开发 Java 应用程序的最新实践。
 
+
+
 如果你愿意，还可以将本书与 Udemy 上的 [**Spring Framework 5:初学者到宗师**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fspring-framework-5-beginner-to-guru%2F) 课程结合使用，这也是 2023 年学习 Spring Framework 的最新课程。
 
 [![](img/0a2ee25cee0e4a82ad8c23a43b64e88c.png)](https://www.amazon.com/Spring-Action-Craig-Walls/dp/1617294942?tag=javamysqlanta-20)
 
 以上是一些**为有经验的开发者提供的学习 Spring 框架的最佳书籍**。这些书将帮助你学习所有的关键技术和框架，像 Spring Boot、Spring Cloud、Spring 5 updates 和 Spring Security 5 updates，这些对于 Java web 开发者来说都是非常重要的。
 
-您可能想探索的其他 **Web 开发资源文章**
+## 您可能想探索的其他 Web 开发资源文章
 
-1.  [完整的 Web 开发者路线图](/hackernoon/the-2019-web-developer-roadmap-ab89ac3c380e)
-2.  [为有经验的程序员开设的 10 门高级 Spring Boot 课程](/javarevisited/10-advanced-spring-boot-courses-for-experienced-java-developers-5e57606816bd?source=collection_home---4------0-----------------------)
-3.  [15 面向 Web 开发人员的 Docker、Kubernetes 和 AWS 课程](/javarevisited/top-15-online-courses-to-learn-docker-kubernetes-and-aws-for-fullstack-developers-and-devops-d8cc4f16e773)
-4.  [Web 开发者可以学习的 10 个 JavaScript 框架](/javarevisited/10-of-the-most-popular-javascript-frameworks-libraries-for-web-development-in-2019-a2c8cea68094)
-5.  [学习 Web 开发的前 5 门课程](/better-programming/my-5-favorite-courses-to-learn-web-development-in-2019-a5e74167f8b2)
-6.  [我最喜欢的学习 HTML 和 CSS 的免费课程](/javarevisited/5-free-html-and-css-courses-to-learn-front-end-web-development-online-8b04517c6ecb?source=collection_home---4------0-----------------------)
-7.  面向前端开发人员的 5 门免费 Docker 课程
-8.  [初学者学习 SQL 和数据库的 7 门免费课程](/javarevisited/7-free-courses-to-learn-database-and-sql-for-programmers-and-data-scientist-e7ae19514ed2)
-9.  [完整的 React.js 开发者路线图](/javarevisited/the-2019-react-js-developer-roadmap-9a8e290b8a56)
-10.  [2023 年学习棱角分明的 10 本书和课程](/javarevisited/top-10-angular-books-and-courses-for-beginners-and-experienced-web-developers-best-of-lot-9a2dae87f04c)
+1. [完整的 Web 开发者路线图](/hackernoon/the-2019-web-developer-roadmap-ab89ac3c380e)
+2. [为有经验的程序员开设的 10 门高级 Spring Boot 课程](/javarevisited/10-advanced-spring-boot-courses-for-experienced-java-developers-5e57606816bd?source=collection_home---4------0-----------------------)
+3. [15 面向 Web 开发人员的 Docker、Kubernetes 和 AWS 课程](/javarevisited/top-15-online-courses-to-learn-docker-kubernetes-and-aws-for-fullstack-developers-and-devops-d8cc4f16e773)
+4. [Web 开发者可以学习的 10 个 JavaScript 框架](/javarevisited/10-of-the-most-popular-javascript-frameworks-libraries-for-web-development-in-2019-a2c8cea68094)
+5. [学习 Web 开发的前 5 门课程](/better-programming/my-5-favorite-courses-to-learn-web-development-in-2019-a5e74167f8b2)
+6. [我最喜欢的学习 HTML 和 CSS 的免费课程](/javarevisited/5-free-html-and-css-courses-to-learn-front-end-web-development-online-8b04517c6ecb?source=collection_home---4------0-----------------------)
+7. 面向前端开发人员的 5 门免费 Docker 课程
+8. [初学者学习 SQL 和数据库的 7 门免费课程](/javarevisited/7-free-courses-to-learn-database-and-sql-for-programmers-and-data-scientist-e7ae19514ed2)
+9. [完整的 React.js 开发者路线图](/javarevisited/the-2019-react-js-developer-roadmap-9a8e290b8a56)
+10. [2023 年学习棱角分明的 10 本书和课程](/javarevisited/top-10-angular-books-and-courses-for-beginners-and-experienced-web-developers-best-of-lot-9a2dae87f04c)
 
 感谢您阅读本文。如果你喜欢这些网络开发课程，请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
@@ -139,8 +142,10 @@ H ello 伙计们，Spring 框架在过去几年里发生了很大的变化。在
 
 **附言——**如果你更喜欢在线课程而不是书本，并且正在为 Java 开发人员寻找高级春季课程，那么我强烈推荐你在 Udemy 上查看 [**Go Java 全栈和 Angular**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ffull-stack-application-development-with-spring-boot-and-angular%2F) 课程。成为 Spring Boot 的全栈 Java 开发人员是一门很棒的课程。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ffull-stack-application-development-with-spring-boot-and-angular%2F>  
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ffull-stack-application-development-with-spring-boot-and-angular%2F>
 
-**其他你可能喜欢的关于编程书籍的中型文章:**
+## 其他你可能喜欢的关于编程书籍的中型文章
 
-</javarevisited/10-best-books-for-data-structure-and-algorithms-for-beginners-in-java-c-c-and-python-5e3d9b478eb1>  </swlh/top-10-java-books-for-programmers-all-time-great-82b0ee0b831a>  </hackernoon/top-5-spring-boot-and-spring-cloud-books-for-java-developers-75df155dcedc> 
+- [10 本最适合初学者的数据结构和算法书籍（Java、C、C++ 和 Python）](/javarevisited/10-best-books-for-data-structure-and-algorithms-for-beginners-in-java-c-c-and-python-5e3d9b478eb1)
+- [10 本 Java 程序员有史以来最伟大的书籍](/swlh/top-10-java-books-for-programmers-all-time-great-82b0ee0b831a)
+- [面向 Java 开发人员的 5 本顶级 Spring Boot 和 Spring Cloud 书籍](/hackernoon/top-5-spring-boot-and-spring-cloud-books-for-java-developers-75df155dcedc)

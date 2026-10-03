@@ -1,3 +1,4 @@
+
 # @lombok。数据和 MyBatis
 
 > 原文：<https://medium.com/javarevisited/lombok-data-and-mybatis-f43bd8ba0c7?source=collection_archive---------4----------------------->
@@ -36,8 +37,13 @@ public class Some {
 ```
 
 其他**有趣的文章**你可能喜欢探讨的
+
 [2019 年 Java 开发者应该学习的 10 件事](http://javarevisited.blogspot.sg/2017/12/10-things-java-programmers-should-learn.html#axzz53JaDYLsP)
+
 [2019 年要探讨的 10 种编程语言](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html)
+
 [2019 年 Java 和 Web 开发者应该学习的 10 种框架](http://javarevisited.blogspot.sg/2018/01/10-frameworks-java-and-web-developers-should-learn.html)
+
 [2019 年你可以阅读的 20 本 Java 书籍](http://javarevisited.blogspot.sg/2017/12/top-20-java-books-of-2017-which-you-can-read-in-2018.html)
+
 [10 本教程学习 Java 8 更好的](http://www.java67.com/2014/09/top-10-java-8-tutorials-best-of-lot.html)

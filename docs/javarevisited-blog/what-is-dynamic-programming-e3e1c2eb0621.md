@@ -1,3 +1,4 @@
+
 # 什么是动态编程？
 
 > 原文：<https://medium.com/javarevisited/what-is-dynamic-programming-e3e1c2eb0621?source=collection_archive---------3----------------------->
@@ -30,23 +31,29 @@
 
 由 [Max Harlynking](https://unsplash.com/es/@harlynkingm?utm_source=medium&utm_medium=referral) 在 [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral) 上拍摄的照片
 
-**动态规划(DP)** 是一种算法技术，通过将优化问题分解为更小的子问题，并利用整体问题的最佳解决方案由其子问题的最佳解决方案决定的事实，来解决优化问题。当我告诉你这个的时候，你的大脑会突然想到“哦哦等等，它是 T2 递归对吗😳?"但答案不是。让我们看看两者有何不同。
+**动态规划(DP)** 是一种算法技术，通过将优化问题分解为更小的子问题，并利用整体问题的最佳解决方案由其子问题的最佳解决方案决定的事实，来解决优化问题。当我告诉你这个的时候，你的大脑会突然想到“哦哦等等，它是递归对吗😳?"但答案不是。让我们看看两者有何不同。
 
 当一个函数可能被调用并自己执行时，就会出现递归，而动态编程是通过将大问题分解成小问题来解决大问题的过程。[递归](https://www.java67.com/2021/07/recursion-programming-exercises-in-java.html)是一个函数可以被调用并自己执行，而动态编程是通过将问题分解成子问题来解决困难问题的过程。动态编程可以不使用递归技术。我已经通过下面的[斐波那契数列例子](https://javarevisited.blogspot.com/2020/05/fibonacci-series-in-java-8-with.html)阐明了递归和动态编程的区别。
 
 ```
-**# Fibonacci** **Series by Resursive Approach** def fib(n): 
+# Fibonacci Series by Resursive Approach
+def fib(n):
     if (n == 0):
-      return 0 
+      return 0
     if (n == 1):
-      return 1 
-    return fibo(n-1) + fibo(n-2)**# Fibonacci** **Series by DP Approach** def fib(n):
-    return fiboRec(n, new int[n+1])def fiboRec(n,memo):
+      return 1
+    return fibo(n-1) + fibo(n-2)
+
+# Fibonacci Series by DP Approach
+def fib(n):
+    return fiboRec(n, new int[n+1])
+
+def fiboRec(n,memo):
     if (n == 0)
        return 0
-    if (n == 1): 
+    if (n == 1):
        return 1
-    if (memo[n] == 0): 
+    if (memo[n] == 0):
        memo[n] = fibRec(n-1, memo) + fibRec(n-2, memo)
     return memo[n]
 ```

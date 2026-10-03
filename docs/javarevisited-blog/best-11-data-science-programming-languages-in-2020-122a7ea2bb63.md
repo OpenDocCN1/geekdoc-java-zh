@@ -1,3 +1,4 @@
+
 # 2021 年最佳的 11 种数据科学编程语言
 
 > 原文：<https://medium.com/javarevisited/best-11-data-science-programming-languages-in-2020-122a7ea2bb63?source=collection_archive---------0----------------------->
@@ -8,13 +9,13 @@
 
 出于这个原因，数据科学专家被认为是未来十年最受欢迎的职业，最优秀的技术头脑将继续提出新的工具来更有效地处理数据。在本文中，我们决定列出一份数据科学编程语言的清单，并展示每种语言的实际能力。
 
-# **可供选择的 11 种数据科学语言**
+## 可供选择的 11 种数据科学语言
 
-数据科学有很多编程语言。这里是由 Kdnuggets 进行的[研究，显示了最受欢迎和最常用的方法。Python 一如既往地保持领先地位。然而，还有许多其他有用的工具可以适用于数据科学任务，下面也将对它们进行讨论。](https://www.kdnuggets.com/2019/05/poll-top-data-science-machine-learning-platforms.html)
+数据科学有很多编程语言。这里是由 Kdnuggets 进行的[研究](https://www.kdnuggets.com/2019/05/poll-top-data-science-machine-learning-platforms.html)，显示了最受欢迎和最常用的方法。Python 一如既往地保持领先地位。然而，还有许多其他有用的工具可以适用于数据科学任务，下面也将对它们进行讨论。
 
 [![](img/1030dd64490ae646bbe9b61ab0ec8b3b.png)](https://medium.com/javarevisited/top-10-resources-to-learn-data-science-and-machine-learning-best-of-lot-f153e1f44e89)
 
-# 1.计算机编程语言
+### 1. 计算机编程语言
 
 [Python](/javarevisited/top-10-courses-to-learn-python-for-web-development-in-2020-best-of-lot-efe11fb6d212) 是开始钻研数据科学的理想语言。此外，它的应用范围不仅限于处理数据。Python 的功能允许你从头开始编写一个机器学习任务的程序，并使用各种库和工具。多年来，这种语言在全世界程序员的使用频率和它允许解决的任务数量方面一直处于领先地位。
 
@@ -41,7 +42,7 @@
 
 Python 对于分析和定量计算应该是强项的项目是理想的，例如在金融领域。更重要的是，Python 被用于人工智能开发，这是金融领域最有前途的创新之一。此外，这种语言被谷歌和 YouTube 用来改善内部基础设施。ForecastWatch analytics 使用这种语言处理天气数据。
 
-# 2.稀有
+### 2. 稀有
 
 [R](https://www.r-project.org/about.html) 也是数据科学的顶级编程语言之一。此外，它还是对现有工具进行统计分析的最有力工具。R 不仅仅是一种语言，而是一个完整的统计计算环境。它允许您执行数据处理、数学建模等操作，还可以处理图形。
 
@@ -79,7 +80,7 @@ Python 对于分析和定量计算应该是强项的项目是理想的，例如�
 
 简单地说，这些语言中的每一种都有一个特殊的包目录，其中一些使得在另一种语言中使用包变得很容易。因此，当需要使用一种语言解决另一种语言的非典型问题时，项目获得了更大的灵活性和更容易的互换性。
 
-# 3.结构化查询语言
+### 3. 结构化查询语言
 
 结构化查询语言是处理大数据的[关键工具之一](https://jelvix.com/blog/top-5-big-data-frameworks)，因为它结合了分析能力和事务能力。此外， [SQL](https://en.wikipedia.org/wiki/SQL) 技能是数据科学专家的关键要求之一。
 
@@ -102,7 +103,7 @@ Python 对于分析和定量计算应该是强项的项目是理想的，例如�
 
 基本上， [SQL](https://javarevisited.blogspot.com/2015/06/5-websites-to-learn-sql-online-for-free.html) 用于线上和线下 app 中的数据管理。因此，选择这个工具作为数据科学的最佳语言之一将取决于项目细节。
 
-# 4.Java 语言(一种计算机语言，尤用于创建网站)
+### 4. Java 语言(一种计算机语言，尤用于创建网站)
 
 作为一种高性能语言， [Java](https://www.java.com/en/) 可能是编写[机器学习算法](https://jelvix.com/blog/machine-learning-algorithms-how-this-technology-can-be-used)的正确选择。另外，将 Java 代码与专门的数据科学工具结合起来是完全可能的。
 
@@ -110,7 +111,7 @@ Python 对于分析和定量计算应该是强项的项目是理想的，例如�
 
 **事实与统计:**
 
-*   由于其广泛的适用性， [Java](/javarevisited/top-5-java-online-courses-for-beginners-best-of-lot-1e1e240a758) 是全球使用最频繁的编程语言之一，根据 2019 年的[统计。对了，上面提到的 SQL 和 Python 也在这个列表上；](https://www.statista.com/statistics/793628/worldwide-developer-survey-most-used-languages/)
+*   由于其广泛的适用性， [Java](/javarevisited/top-5-java-online-courses-for-beginners-best-of-lot-1e1e240a758) 是全球使用最频繁的编程语言之一，根据 2019 年的[统计](https://www.statista.com/statistics/793628/worldwide-developer-survey-most-used-languages/)。对了，上面提到的 SQL 和 Python 也在这个列表上；
 *   Java 被认为有利于大数据和物联网；
 *   95%的公司使用 Java 进行 web 和移动应用程序开发。然而，由于这些概念相对较新，没有关于数据科学和大数据的 Java 使用的统计数据。
 
@@ -128,7 +129,7 @@ Python 对于分析和定量计算应该是强项的项目是理想的，例如�
 
 当最初打算将创建的产品与现有解决方案集成时，这种技术是合适的。
 
-# 5.Java Script 语言
+### 5. Java Script 语言
 
 看到最流行的通用编程语言成为大数据的最佳编程语言，这是相当出乎意料的，不是吗？是的，一些专家认为，这种语言在数据科学专家的军火库中占据尊贵的位置还需要很长时间，但现在有足够多的[原生库](https://towardsdatascience.com/top-javascript-machine-learning-libraries-in-2019-cb63b95bdd10)来帮助解决大数据和机器学习工作中的各种问题。而热门 [Tensorflow.js](https://www.tensorflow.org/js) 就是其中之一。
 
@@ -148,7 +149,7 @@ Python 对于分析和定量计算应该是强项的项目是理想的，例如�
 
 当在 web 和大数据技术的交叉点上创建项目时，这个工具非常合适。
 
-# 6.矩阵实验室
+### 6. 矩阵实验室
 
 顾名思义，当需要最深奥的数学运算时， [Matlab](https://www.mathworks.com/help/matlab/index.html?s_tid=CRUX_lftnav) 是数据科学的最佳编程语言。这项技术在数据分析、图像处理和数学建模方面非常强大。
 
@@ -167,13 +168,13 @@ Python 对于分析和定量计算应该是强项的项目是理想的，例如�
 
 Matlab 适合需要强大算术支持的应用——例如信号处理。它也可以用于教育和工业部门的解决方案。
 
-# 7.斯卡拉
+### 7. 斯卡拉
 
 Scala 最好的特性是在处理大型数据数组时能够运行并行进程。由于 Scala 致力于 JWM，它提供了对 Java 生态系统的访问。更重要的是， [Scala](/javarevisited/why-java-developer-should-learn-scala-programming-in-2020-3ca01a47eb0d) 是以这样一种方式创建的，数据科学可以使用几种不同的方法来执行某种操作。这为开发过程提供了更大的灵活性。
 
 [![](img/907cbfcf84ff4ffcb45c6456ca84d890.png)](https://javarevisited.blogspot.com/2019/01/5-free-scala-programming-courses-for-java-programmers-learn-online.html)
 
-赞成者:
+**优点:**
 
 *   Scala 结合了面向对象和函数式编程语言，这使它成为最适合大数据的语言之一；
 *   Scala 有很多适合数据科学任务的库，比如 Breeze，Vegas，Smile。
@@ -186,7 +187,7 @@ Scala 最好的特性是在处理大型数据数组时能够运行并行进程�
 
 当数据量足以实现技术的全部潜力时，Scala 对于项目来说是非常棒的。数据少得多的情况下， [Python](https://www.java67.com/2018/02/5-free-python-online-courses-for-beginners.html) 或者 R 可能会更有效率。
 
-# 8.朱莉娅
+### 8. 朱莉娅
 
 在用于数据分析的编程语言中，它是一个相当新的、动态的、高效的工具。最初， [Julia](https://julialang.org/) 被设计为一种科学编程语言，其速度足以满足交互式语言建模的需求，随后是编译语言(如 [C](/javarevisited/10-best-c-programming-courses-for-beginners-2c2c1f6bcb12) 或 Fortran)中不可避免的代码处理。这就是为什么使用这种语言的结果是与 Python 和 C 语言库完美结合的原因。
 
@@ -201,82 +202,93 @@ Scala 最好的特性是在处理大型数据数组时能够运行并行进程�
 **缺点:**
 
 *   由于这是一个相当新的工具，用户注意到一个狭窄的社区，在搜索错误和故障时可能出现的问题，以及有限的选项集；
-*   建模是使用 [Python 库、](https://javarevisited.blogspot.com/2018/10/top-8-python-libraries-for-data-science-machine-learning.html)完成的，在质量和性能上有逻辑损失；
-*   部分实现的可视化:由于 PyPlot、Winston 和牛虻库，数据可以用 2D 图形显示。
 
-**适合的任务和项目:**
 
-这项技术非常适合金融领域的项目，而且当它变得更加成熟时，Julia 很有希望能够与 [Python](https://javarevisited.blogspot.com/2019/07/top-5-books-to-learn-python-in-2019.html) 和 [R](https://dev.to/javinpaul/5-free-courses-to-learn-r-programming-for-data-science-1gn8) 展开全面竞争。
 
-# 9.斯堪的纳维亚航空公司
+建模是使用 [Python 库](https://javarevisited.blogspot.com/2018/10/top-8-python-libraries-for-data-science-machine-learning.html)完成的，在质量和性能上有逻辑损失；
 
-SAS，就像 R 一样，是一种数据分析编程语言，它处理统计数据的灵活可能性是它的主要优势。 [SAS](https://www.sas.com/en_us/software/base-sas.html) 和 R 唯一的区别就是第一个不是开源的。
+部分实现的可视化：由于 `PyPlot`、`Winston` 和牛虻库，数据可以用 2D 图形显示。
+
+**适合的任务和项目：**
+
+这项技术非常适合金融领域的项目，而且当它变得更加成熟时，`Julia` 很有希望能够与 [Python](https://javarevisited.blogspot.com/2019/07/top-5-books-to-learn-python-in-2019.html) 和 [R](https://dev.to/javinpaul/5-free-courses-to-learn-r-programming-for-data-science-1gn8) 展开全面竞争。
+
+# 9. 斯堪的纳维亚航空公司
+
+`SAS`，就像 `R` 一样，是一种数据分析编程语言，它处理统计数据的灵活可能性是它的主要优势。[SAS](https://www.sas.com/en_us/software/base-sas.html) 和 `R` 唯一的区别就是第一个不是开源的。
 
 ![](img/ea0bd5b778e1936f850ffa8e423cc2c6.png)
 
-## 优点:
+## 优点：
 
 *   尽管这是最古老的语言之一，但开发人员有机会使用一个独特的功能包来进行高级分析、预测建模和业务分析。
 
-**缺点:**
+**缺点：**
 
 *   它是一个闭源软件——然而，它被大量用于统计分析和机器学习的库和包所抵消。
 
-**适合的任务和项目:**
+**适合的任务和项目：**
 
-SAS 适用于对稳定性和安全性要求较高的项目。
+`SAS` 适用于对稳定性和安全性要求较高的项目。
 
-# 10.八度音阶
+# 10. 八度音阶
 
-它是我们上面提到的 Matlab 的主要替代品。总的来说，这两种技术并没有极其根本的区别，只是有一些例外。
+它是我们上面提到的 `Matlab` 的主要替代品。总的来说，这两种技术并没有极其根本的区别，只是有一些例外。
 
 ![](img/2455db102efff2058fc1036d3ed9e4d4.png)
 
-**优点:**
+**优点：**
 
 *   使用该产品不需要许可证。
 
-**缺点:**
+**缺点：**
 
-*   如果您需要继续使用 Matlab 使用 [Octave](https://www.gnu.org/software/octave/) 创建的代码，请准备好一些函数可能不同的事实。
+*   如果您需要继续使用 `Matlab` 使用 [Octave](https://www.gnu.org/software/octave/) 创建的代码，请准备好一些函数可能不同的事实。
 
-**适合的任务和项目:**
+**适合的任务和项目：**
 
-和 Matlab 一样，如果需要强大的算术计算，Octave 可以用在数据量相对较小的项目中。
+和 `Matlab` 一样，如果需要强大的算术计算，`Octave` 可以用在数据量相对较小的项目中。
 
-# 11.迅速发生的
+# 11. 迅速发生的
 
-[Swift](https://swift.org/) 是为 [iOS](/javarevisited/top-5-online-courses-to-learn-ios-12-swift-in-2019-a35ae1be7b2b?source=---------56------------------) 、macOS、watchOS、tvOS 等操作系统开发应用的主要语言。然而，今天这种技术的能力大大扩展了。[大数据](/swlh/5-free-online-courses-to-learn-big-data-hadoop-and-spark-in-2019-a553e6ccfe30)不一定存在于云中——它可以存在于用户的智能手机中。因此，当需要连接大数据和人工智能时，可以使用 Swift 为前述操作系统创建移动应用程序。
+[Swift](https://swift.org/) 是为 [iOS](/javarevisited/top-5-online-courses-to-learn-ios-12-swift-in-2019-a35ae1be7b2b?source=---------56------------------) 、`macOS`、`watchOS`、`tvOS` 等操作系统开发应用的主要语言。然而，今天这种技术的能力大大扩展了。[大数据](/swlh/5-free-online-courses-to-learn-big-data-hadoop-and-spark-in-2019-a553e6ccfe30)不一定存在于云中——它可以存在于用户的智能手机中。因此，当需要连接大数据和人工智能时，可以使用 `Swift` 为前述操作系统创建移动应用程序。
 
 ![](img/22125f386632f070dcbc8e5c5b141d7a.png)
 
-**优点:**
+**优点：**
 
-*   类似 Python 的 syntaxis，但相比 [Python](https://www.java67.com/2020/05/top-5-courses-to-learn-python-in-depth.html) ，它是一种更高效、更稳定、更安全的编程语言；
+*   类似 `Python` 的 `syntaxis`，但相比 [Python](https://www.java67.com/2020/05/top-5-courses-to-learn-python-in-depth.html) ，它是一种更高效、更稳定、更安全的编程语言；
+
 *   庞大的社区；
-*   由于 [Swift](/javarevisited/7-free-courses-to-learn-swift-programming-language-in-2020-f40ac9d3ee53) 是 iOS 原生的，所以在有这个操作系统的移动设备上部署创建的应用是非常容易的；
-*   开源的 Swift 内部编译器和静态类型允许你在构建时创建定制的 AI 芯片组；
-*   结合 Swift 有效使用 C 和 C ++库是可能的。
 
-**缺点:**
+*   由于 [Swift](/javarevisited/7-free-courses-to-learn-swift-programming-language-in-2020-f40ac9d3ee53) 是 `iOS` 原生的，所以在有这个操作系统的移动设备上部署创建的应用是非常容易的；
 
-*   它是一项相当新的技术，但这并不妨碍它成为 iOS 开发者最喜爱的工具之一；
-*   只有在 iOS7 之后发布的操作系统才可以使用 [Swift](https://www.java67.com/2019/03/5-free-courses-to-learn-swift.html) 。
+*   开源的 `Swift` 内部编译器和静态类型允许你在构建时创建定制的 `AI` 芯片组；
 
-**适合的任务和项目:**
+*   结合 `Swift` 有效使用 `C` 和 `C++` 库是可能的。
 
-改善内存操作意味着减少未经授权访问数据的机会。在 Swift 中实施的更高效的错误处理大大减少了崩溃的数量和紧急情况的出现。不可预测的行为被最小化。这意味着这项技术非常适合创建使用敏感用户数据的移动应用程序，并且是基于人工智能的。
+**缺点：**
+
+*   它是一项相当新的技术，但这并不妨碍它成为 `iOS` 开发者最喜爱的工具之一；
+
+*   只有在 `iOS7` 之后发布的操作系统才可以使用 [Swift](https://www.java67.com/2019/03/5-free-courses-to-learn-swift.html) 。
+
+**适合的任务和项目：**
+
+改善内存操作意味着减少未经授权访问数据的机会。在 `Swift` 中实施的更高效的错误处理大大减少了崩溃的数量和紧急情况的出现。不可预测的行为被最小化。这意味着这项技术非常适合创建使用敏感用户数据的移动应用程序，并且是基于人工智能的。
 
 ![](img/d4ad301f312a2c5ec2df246cdea65a4a.png)
 
 # 结论
 
-现代数据科学专家有大量的技术可供选择来实现各种各样的任务。开发项目的效率和成本都将取决于所选择的[编程语言](/hackernoon/10-best-programming-languages-to-learn-in-2019-e5b05af4a972)或[框架](/javarevisited/5-essential-frameworks-every-java-developer-should-learn-6ed83315f1fb)。因此，这是你应该注意的一点。例如:
+现代数据科学专家有大量的技术可供选择来实现各种各样的任务。开发项目的效率和成本都将取决于所选择的[编程语言](/hackernoon/10-best-programming-languages-to-learn-in-2019-e5b05af4a972)或[框架](/javarevisited/5-essential-frameworks-every-java-developer-should-learn-6ed83315f1fb)。因此，这是你应该注意的一点。例如：
 
-*   如果你要分析一个庞大的数据数组，进行大量的统计计算，那么 R 是最好的选择(有时结合 Python)；
-*   Python 非常适合 [NLP](https://en.wikipedia.org/wiki/Neuro-linguistic_programming) 和借助神经网络的密集型数据处理；
-*   Java 和 Scala 适合需要最高性能的解决方案，并进一步集成到现有的应用程序中。
+*   如果你要分析一个庞大的数据数组，进行大量的统计计算，那么 `R` 是最好的选择（有时结合 `Python`）；
+
+*   `Python` 非常适合 [NLP](https://en.wikipedia.org/wiki/Neuro-linguistic_programming) 和借助神经网络的密集型数据处理；
+
+*   `Java` 和 `Scala` 适合需要最高性能的解决方案，并进一步集成到现有的应用程序中。
 
 我们的数据科学专家团队在解决各种问题方面拥有丰富的经验。因此，如果您想以数据的形式为您的业务提供更多动力，请考虑创建一个合适的解决方案，并[立即联系我们](https://jelvix.com/contact-us)寻求建议！
 
-【https://jelvix.com】最初发表于<https://jelvix.com/blog/top-data-science-programming-languages>**。**
+【https://jelvix.com】最初发表于<https://jelvix.com/blog/top-data-science-programming-languages>。

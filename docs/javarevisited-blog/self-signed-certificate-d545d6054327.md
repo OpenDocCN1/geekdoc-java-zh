@@ -1,3 +1,4 @@
+
 # 正在生成自签名证书
 
 > 原文：<https://medium.com/javarevisited/self-signed-certificate-d545d6054327?source=collection_archive---------0----------------------->
@@ -10,16 +11,16 @@
 
 下面的帖子解释了[为什么我们需要 SSL](https://suriyaprakhash.medium.com/ssl-certificate-67b4e3bdee38#4332) 和[签署 CA 签名证书](https://suriyaprakhash.medium.com/ssl-certificate-67b4e3bdee38#66e2)的步骤。
 
-<https://suriyaprakhash.medium.com/ssl-certificate-67b4e3bdee38>  
+<https://suriyaprakhash.medium.com/ssl-certificate-67b4e3bdee38>
 
 **内容**
 
-1.  [先决条件](#69e4)
-2.  [默认 http 上的示例 web 应用](#e25e)
-3.  [生成**自签名公钥证书**](#59d2)
-4.  [生成的证书验证](#94f3)
-5.  [将生成的密钥&证书导入服务器](#d020)
-6.  [设置本地设备信任证书](#3336)
+1. [先决条件](#69e4)
+2. [默认 http 上的示例 web 应用](#e25e)
+3. [生成**自签名公钥证书**](#59d2)
+4. [生成的证书验证](#94f3)
+5. [将生成的密钥&证书导入服务器](#d020)
+6. [设置本地设备信任证书](#3336)
 
 让我们看看*如何生成*我们的**自己的自签名证书**并**在*我们的开发环境*中信任它们**。
 
@@ -27,9 +28,9 @@
 
 > 先决条件
 
-1.  [Openssl](https://www.openssl.org/) CLI 生成[密钥](https://suriyaprakhash.medium.com/cryptography-algorithms-e86ce7e2bb9b#abf6)和[证书](https://suriyaprakhash.medium.com/cryptography-algorithms-e86ce7e2bb9b#41bc)。(必需)
-2.  [密钥库浏览器](https://keystore-explorer.org/)(非强制)
-3.  Nginx 服务器(用于演示)
+1. [Openssl](https://www.openssl.org/) CLI 生成[密钥](https://suriyaprakhash.medium.com/cryptography-algorithms-e86ce7e2bb9b#abf6)和[证书](https://suriyaprakhash.medium.com/cryptography-algorithms-e86ce7e2bb9b#41bc)。(必需)
+2. [密钥库浏览器](https://keystore-explorer.org/)(非强制)
+3. Nginx 服务器(用于演示)
 
 > 默认 http 上的示例 web 应用程序
 
@@ -45,7 +46,7 @@
 
 要了解什么是[密钥](https://suriyaprakhash.medium.com/cryptography-algorithms-e86ce7e2bb9b#abf6)和[证书](https://suriyaprakhash.medium.com/cryptography-algorithms-e86ce7e2bb9b#41bc)，
 
-<https://suriyaprakhash.medium.com/exploring-java-keystore-keys-9eb4805fa4ec>  
+<https://suriyaprakhash.medium.com/exploring-java-keystore-keys-9eb4805fa4ec>
 
 现在我们知道我们想要什么，所以让我们使用下面的命令生成私钥***domain Key . PEM***。
 
@@ -56,7 +57,7 @@ openssl genrsa -out DomainKey.pem 4096
 使用上面生成的私钥***domain Key . PEM***发出下面的命令来生成一个**自签名证书**
 
 ```
-openssl req -new -x509 -sha256 -days 1000 -addext 'subjectAltName = IP:172.24.0.1' -key DomainKey.pem -out DomainCert.pem 
+openssl req -new -x509 -sha256 -days 1000 -addext 'subjectAltName = IP:172.24.0.1' -key DomainKey.pem -out DomainCert.pem
 ```
 
 这里，我们添加了一个**扩展**，
@@ -144,6 +145,6 @@ openssl req -new -x509 -sha256 -days 1000 -addext 'subjectAltName = IP:172.24.0.
 
 如果你想模拟证书颁发机构的签名，请随意查看下面的帖子，
 
-<https://suriyaprakhash.medium.com/ssl-certificate-67b4e3bdee38>  
+<https://suriyaprakhash.medium.com/ssl-certificate-67b4e3bdee38>
 
 祝本地主机运行愉快！

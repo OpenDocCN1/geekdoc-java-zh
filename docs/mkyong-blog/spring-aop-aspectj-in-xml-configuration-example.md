@@ -1,3 +1,4 @@
+
 # XML 配置示例中的 Spring AOP + AspectJ
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring3/spring-aop-aspectj-in-xml-configuration-example/>
@@ -6,10 +7,10 @@
 
 对于那些不喜欢注释或使用 JDK 1.4 的人，可以使用基于 XML 的 AspectJ。
 
-再次回顾上一个 customerBo 接口，用几个方法，稍后你将学习如何通过 AspectJ 在 XML 文件中截取它。
+再次回顾上一个`customerBo`接口，用几个方法，稍后你将学习如何通过 AspectJ 在 XML 文件中截取它。
 
 ```java
- package com.mkyong.customer.bo;
+package com.mkyong.customer.bo;
 
 public interface CustomerBo {
 
@@ -20,15 +21,15 @@ public interface CustomerBo {
 	void addCustomerThrowException() throws Exception;
 
 	void addCustomerAround(String name);
-} 
+}
 ```
 
-## 1.AspectJ<before>= @之前</before>
+## 1. AspectJ `<before>` = @Before
 
 AspectJ @Before 示例。
 
 ```java
- package com.mkyong.aspect;
+package com.mkyong.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -41,37 +42,31 @@ public class LoggingAspect {
 	public void logBefore(JoinPoint joinPoint) {
 		//...
 	}
-
-} 
+}
 ```
 
-XML 中的等效功能，用 **< aop:在>** 之前。
+XML 中的等效功能，用 `<aop:before>` 之前。
 
 ```java
- <!-- Aspect -->
+<!-- Aspect -->
 <bean id="logAspect" class="com.mkyong.aspect.LoggingAspect" />
 
 <aop:config>
-
   <aop:aspect id="aspectLoggging" ref="logAspect" >
-
      <!-- @Before -->
      <aop:pointcut id="pointCutBefore"
 	expression="execution(* com.mkyong.customer.bo.CustomerBo.addCustomer(..))" />
-
      <aop:before method="logBefore" pointcut-ref="pointCutBefore" />
-
   </aop:aspect>
-
-</aop:config> 
+</aop:config>
 ```
 
- ## 2.AspectJ <after>= @After</after>
+## 2. AspectJ `<after>` = @After
 
 AspectJ @After 示例。
 
 ```java
- package com.mkyong.aspect;
+package com.mkyong.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -84,37 +79,31 @@ public class LoggingAspect {
 	public void logAfter(JoinPoint joinPoint) {
 		//...
 	}
-
-} 
+}
 ```
 
-XML 中的等效功能，用**<:AOP:在>** 之后。
+XML 中的等效功能，用 `<aop:after>` 之后。
 
 ```java
- <!-- Aspect -->
+<!-- Aspect -->
 <bean id="logAspect" class="com.mkyong.aspect.LoggingAspect" />
 
 <aop:config>
-
   <aop:aspect id="aspectLoggging" ref="logAspect" >
-
      <!-- @After -->
      <aop:pointcut id="pointCutAfter"
 	expression="execution(* com.mkyong.customer.bo.CustomerBo.addCustomer(..))" />
-
      <aop:after method="logAfter" pointcut-ref="pointCutAfter" />
-
   </aop:aspect>
-
-</aop:config> 
+</aop:config>
 ```
 
- ## 3.AspectJ <after-returning>= @AfterReturning</after-returning>
+## 3. AspectJ `<after-returning>` = @AfterReturning
 
 AspectJ @AfterReturning 示例。
 
 ```java
- package com.mkyong.aspect;
+package com.mkyong.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -129,38 +118,32 @@ public class LoggingAspect {
    public void logAfterReturning(JoinPoint joinPoint, Object result) {
 	//...
    }
-
-} 
+}
 ```
 
-XML 中的等效功能，用 **< aop:返回后>** 。
+XML 中的等效功能，用 `<aop:after-returning>` 。
 
 ```java
- <!-- Aspect -->
+<!-- Aspect -->
 <bean id="logAspect" class="com.mkyong.aspect.LoggingAspect" />
 
 <aop:config>
-
   <aop:aspect id="aspectLoggging" ref="logAspect" >
-
     <!-- @AfterReturning -->
     <aop:pointcut id="pointCutAfterReturning"
       expression="execution(* com.mkyong.customer.bo.CustomerBo.addCustomerReturnValue(..))" />
-
     <aop:after-returning method="logAfterReturning" returning="result" 
       pointcut-ref="pointCutAfterReturning" />
-
   </aop:aspect>
-
-</aop:config> 
+</aop:config>
 ```
 
-## 4.AspectJ <after-throwing>= @AfterReturning</after-throwing>
+## 4. AspectJ `<after-throwing>` = @AfterThrowing
 
-AspectJ @AfterReturning 示例。
+AspectJ @AfterThrowing 示例。
 
 ```java
- package com.mkyong.aspect;
+package com.mkyong.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -175,37 +158,32 @@ public class LoggingAspect {
   public void logAfterThrowing(JoinPoint joinPoint, Throwable error) {
 	//...
   }
-} 
+}
 ```
 
-XML 中的等效功能，用 **< aop:抛出后>** 。
+XML 中的等效功能，用 `<aop:after-throwing>` 。
 
 ```java
- <!-- Aspect -->
+<!-- Aspect -->
 <bean id="logAspect" class="com.mkyong.aspect.LoggingAspect" />
 
 <aop:config>
-
   <aop:aspect id="aspectLoggging" ref="logAspect" >
-
     <!-- @AfterThrowing -->
     <aop:pointcut id="pointCutAfterThrowing"
       expression="execution(* com.mkyong.customer.bo.CustomerBo.addCustomerThrowException(..))" />
-
     <aop:after-throwing method="logAfterThrowing" throwing="error" 
       pointcut-ref="pointCutAfterThrowing"  />
-
   </aop:aspect>
-
-</aop:config> 
+</aop:config>
 ```
 
-## 5.AspectJ<after-around>= @左右</after-around>
+## 5. AspectJ `<around>` = @Around
 
 AspectJ @Around 示例。
 
 ```java
- package com.mkyong.aspect;
+package com.mkyong.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -218,29 +196,23 @@ public class LoggingAspect {
 	public void logAround(ProceedingJoinPoint joinPoint) throws Throwable {
 		//...
 	}
-
-} 
+}
 ```
 
-XML 中的等效功能，用 **< aop:after-around >** 。
+XML 中的等效功能，用 `<aop:around>` 。
 
 ```java
- <!-- Aspect -->
+<!-- Aspect -->
 <bean id="logAspect" class="com.mkyong.aspect.LoggingAspect" />
 
 <aop:config>
-
    <aop:aspect id="aspectLoggging" ref="logAspect" >
-
     <!-- @Around -->
    <aop:pointcut id="pointCutAround"
       expression="execution(* com.mkyong.customer.bo.CustomerBo.addCustomerAround(..))" />
-
    <aop:around method="logAround" pointcut-ref="pointCutAround"  />
-
   </aop:aspect>
-
-</aop:config> 
+</aop:config>
 ```
 
 ## 完整的 XML 示例
@@ -248,7 +220,7 @@ XML 中的等效功能，用 **< aop:after-around >** 。
 参见完整的基于 AspectJ XML 的配置文件。
 
 ```java
- <beans 
+<beans 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
@@ -264,46 +236,36 @@ XML 中的等效功能，用 **< aop:after-around >** 。
 <bean id="logAspect" class="com.mkyong.aspect.LoggingAspect" />
 
 <aop:config>
-
   <aop:aspect id="aspectLoggging" ref="logAspect">
-
     <!-- @Before -->
     <aop:pointcut id="pointCutBefore"
       expression="execution(* com.mkyong.customer.bo.CustomerBo.addCustomer(..))" />
-
     <aop:before method="logBefore" pointcut-ref="pointCutBefore" />
 
     <!-- @After -->
     <aop:pointcut id="pointCutAfter"
        expression="execution(* com.mkyong.customer.bo.CustomerBo.addCustomer(..))" />
-
     <aop:after method="logAfter" pointcut-ref="pointCutAfter" />
 
     <!-- @AfterReturning -->
     <aop:pointcut id="pointCutAfterReturning"
        expression="execution(* com.mkyong.customer.bo.CustomerBo.addCustomerReturnValue(..))" />
-
     <aop:after-returning method="logAfterReturning"
       returning="result" pointcut-ref="pointCutAfterReturning" />
 
     <!-- @AfterThrowing -->
     <aop:pointcut id="pointCutAfterThrowing"
       expression="execution(* com.mkyong.customer.bo.CustomerBo.addCustomerThrowException(..))" />
-
     <aop:after-throwing method="logAfterThrowing"
       throwing="error" pointcut-ref="pointCutAfterThrowing" />
 
     <!-- @Around -->
     <aop:pointcut id="pointCutAround"
       expression="execution(* com.mkyong.customer.bo.CustomerBo.addCustomerAround(..))" />
-
     <aop:around method="logAround" pointcut-ref="pointCutAround" />
-
   </aop:aspect>
-
 </aop:config>
-
-</beans> 
+</beans>
 ```
 
 ## 下载源代码
@@ -312,15 +274,10 @@ Download it – [Spring3-AOP-AspectJ-XML-Example.zip](http://web.archive.org/web
 
 ## 参考
 
-1.  [Spring AOP + AspectJ 注释示例](http://web.archive.org/web/20190224164145/http://www.mkyong.com/spring3/spring-aop-aspectj-annotation-example/)
-2.  [AspectJ 编程指南](http://web.archive.org/web/20190224164145/http://www.eclipse.org/aspectj/doc/released/progguide/index.html)
-3.  [Spring AOP + AspectJ 引用](http://web.archive.org/web/20190224164145/http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/aop.html)
+1. [Spring AOP + AspectJ 注释示例](http://web.archive.org/web/20190224164145/http://www.mkyong.com/spring3/spring-aop-aspectj-annotation-example/)
+2. [AspectJ 编程指南](http://web.archive.org/web/20190224164145/http://www.eclipse.org/aspectj/doc/released/progguide/index.html)
+3. [Spring AOP + AspectJ 引用](http://web.archive.org/web/20190224164145/http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/aop.html)
+
+
 
 [aop](http://web.archive.org/web/20190224164145/http://www.mkyong.com/tag/aop/) [aspectj](http://web.archive.org/web/20190224164145/http://www.mkyong.com/tag/aspectj/) [spring](http://web.archive.org/web/20190224164145/http://www.mkyong.com/tag/spring/)
-
-
-
-
-
-
-

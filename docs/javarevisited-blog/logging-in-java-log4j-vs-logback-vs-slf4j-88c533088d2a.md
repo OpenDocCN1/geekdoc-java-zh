@@ -1,3 +1,4 @@
+
 # 用 Java 登录—Log4j vs . log back vs . SLF4J
 
 > 原文：<https://medium.com/javarevisited/logging-in-java-log4j-vs-logback-vs-slf4j-88c533088d2a?source=collection_archive---------0----------------------->

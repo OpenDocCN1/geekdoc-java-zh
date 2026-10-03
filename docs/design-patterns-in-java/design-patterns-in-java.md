@@ -1,25 +1,15 @@
+
 # JAVA 设计模式
-
-
-
-
-
-
-
-
-
 
 ## 前言
 
 本技术电子书以最易于理解的方式提供了关于 Java 设计模式的信息。它包含了对每个 Java 设计模式的详细描述，并结合了最简单的真实世界案例。书中提供的所有示例均已在我的开发环境中经过编译和运行。我已尽力在书中提供最简单的示例。
 
-本书面向 Java 开发者，无论初学者还是资深人士均适用。只要他/她通读全文并并提供的示例，任何 Java 开发者都能从中受益。我在编写本书时，考虑到了每个级别的开发者都能从中获益。
+本书面向 Java 开发者，无论初学者还是资深人士均适用。只要他/她通读全文并提供的示例，任何 Java 开发者都能从中受益。我在编写本书时，考虑到了每个级别的开发者都能从中获益。
 
 编写本电子书的动力源于我学习 Java 设计模式的时期。想要在一或两次阅读中理解每一种模式并不是易事。我查阅了该主题的各种书籍和材料，并尝试提取关于不同模式的相关事实，以便快速轻松地理解它们。我将所有这些相关且关键的点都包含了书中。
 
 在开始之前，我想介绍一下我自己。我是一个 Java 开发者，在 Java/J2EE 技术领域拥有超过 10 年的经验。目前，我在一家跨国软件公司工作。我的爱好之一是编写技术内容。我花了一些时间写了这本书，并非常高兴能与其他开发者分享我的经验和知识。如果你在阅读本电子书期间有任何建议、更正或疑问，请随时与我联系 erdsingh24@gmail.com
-
-
 
 ## 关于设计模式
 
@@ -112,11 +102,14 @@ public class SingletonR {
 ```
 
 ### 输出：
+
+```
 Creating...
 Object: s1, Hashcode: [hash]
 Object: s2, Hashcode: [hash]
 Creating...
 Object: s3, Hashcode: [hash]
+```
 
 如何修复：如果实例已存在，有人尝试实例化，则抛出运行时异常。这段代码将进入单例类的私有构造函数。
 
@@ -129,14 +122,13 @@ private SingletonR() {
 }
 ```
 
-# 修复后的输出：
+### 修复后的输出：
+
+```
 Creating...
 Object: s1, Hashcode: [hash]
 Object: s2, Hashcode: [hash]
-
-
-
-
+```
 
 ### 克隆：如果我们尝试通过克隆来创建实例，生成的克隆副本哈希值与实际对象不匹配，因此它违反了单例原则。
 
@@ -173,14 +165,16 @@ public class Singleton Cloneable {
 }
 ```
 
-Output:
+输出：
 
+```
 Creating...
 Object : s1, Hashcode: 31168322
 Object : s2, Hashcode: 31168322
 Object : s3, Hashcode: 17225372
+```
 
-如何修复：如果有人尝试创建另一个实例，则从 clone() 方法中抛出 `CloneNotSupportedException`。取消 clone() 方法中注释掉的行。
+如何修复：如果有人尝试创建另一个实例，则从 `clone()` 方法中抛出 `CloneNotSupportedException`。取消 `clone()` 方法中注释掉的行。
 
 修复后的输出：
 
@@ -226,14 +220,16 @@ public class Singleton implements Serializable {
 }
 ```
 
-## 输出:
+### 输出：
 
+```
 Creating...
 Object : s1, Hashcode: 31168322
 Object : s2, Hashcode: 31168322
 Object : s3, Hashcode: 6585861
+```
 
-### 如何修复：在单例类中实现所示所示 `readResolve()` 方法。
+### 如何修复：在单例类中实现所示 `readResolve()` 方法。
 
 ```java
 private Object readResolve() {
@@ -242,13 +238,15 @@ private Object readResolve() {
 }
 ```
 
-# 修复后的输出：
+### 修复后的输出：
 
+```
 Creating...
 Object : s1, Hashcode: 31168322
 Object : s2, Hashcode: 31168322
 applying read resolve...
 Object : s3, Hashcode: 31168322
+```
 
 - 多线程：只有在执行了饿汉实例化的情况下，单例在多线程环境下才能正常工作，因为这种实例创建只会在类加载时发生。但对于懒加载实例化，我们必须考虑多个线程。如果我们因为成本原因想延迟实例化，则会使用懒加载。
 
@@ -287,9 +285,11 @@ public class SingletonT {
 }
 ```
 
+```
 Creating...
 Object : singleton, Hashcode: 14229844
 Object : singleton, Hashcode: 14229844
+```
 
 当你多次运行程序时，你会发现在多线程环境下，单例原则有时有效，但有时会违反。因此，我们需要像下面所示对 `getInstance()` 方法进行同步。
 
@@ -303,6 +303,8 @@ public static synchronized SingletonT getInstance(){
 ```
 
 在 `getInstance()` 方法中应用 `synchronized` 关键字后，程序将正常执行而没有任何问题，但 Java 并没有同步整个方法，我们可以只同步创建实例时受影响的代码块，以避免额外的开销，如下：
+
+
 
 ```java
 public static SingletonT getInstance(){
@@ -336,7 +338,9 @@ public static SingletonT getInstance() {
 private static volatile Singleton instance=null;//懒加载初始化
 ```
 
-Holder 类（ Pugh 方法）：** Pugh 使用内部静态辅助类了一种创建单例类的不同方法。
+## Holder 类（Pugh 方法）
+
+Pugh 使用内部静态辅助类了一种创建单例类的不同方法。
 
 ```java
 package com.dev.op.singleton;
@@ -370,11 +374,16 @@ public class Singleton {
 ```
 
 Creating...
+
 Object : s1, Hashcode: 31168322
+
 Object : s2, Hashcode: 31168322
+
 Object : s3, Hashcode: 31168322
 
-Enum 单例：Joshua Bloch 建议使用 Enum 来实现单例设计模式，因为 Java 确保任何枚举值在 Java Java 程序中只实例化一次。由于 Java 枚举值是全局可见的，单例也是可见的。缺点是枚举类型不够灵活；例如，它不允许懒加载初始化。
+## Enum 单例
+
+Joshua Bloch 建议使用 Enum 来实现单例设计模式，因为 Java 确保任何枚举值在 Java Java 程序中只实例化一次。由于 Java 枚举值是全局可见的，单例也是可见的。缺点是枚举类型不够灵活；例如，它不允许懒加载初始化。
 
 ```java
 package com.dev.dp.creational.singleton;
@@ -390,26 +399,22 @@ public enum EnumSingleton {
 
 Enum 单例在上述描述的任何情况下都不会违反单例原则。
 
-
-
-
-
 ## 工厂模式
 
 当我们有一个具有多个子类的父类，并且根据输入需要返回其中一个子类时，就会使用工厂模式。这种模式将类实例化的责任从客户端程序中转移到工厂类中。我们可以在工厂类上使用单例模式，或者将工厂方法设为静态方法。
 
 工厂模式中的父类可以是一个接口，也可以是一个普通的 Java 类。
 
-**优点：**
+### 优点
 
 - 工厂模式提供了一种面向接口而非实现的方法。
 - 工厂模式从客户端代码中移除了具体实现类的实例化，使其更加健壮、低耦合且易于扩展。例如，我们可以轻松地更改 PC 类的实现，因为客户端程序并感知此。
 - 工厂模式通过继承在实现类和客户端类之间提供了抽象。
 
-**在 JDK 中的用法：**
+### 在 JDK 中的用法
 
-- java.util.Calendar、ResourceBundle 和 NumberFormat 的 getInstance() 方法使用了工厂模式。
-- 包装类（如 Boolean、Integer 等）中的 valueOf() 方法。
+- `java.util.Calendar`、`ResourceBundle` 和 `NumberFormat` 的 `getInstance()` 方法使用了工厂模式。
+- 包装类（如 `Boolean`、`Integer` 等）中的 `valueOf()` 方法。
 
 ```java
 package com.dev.dp.creational.factory;
@@ -490,16 +495,16 @@ public class FactoryTest {
 }
 ```
 
-# 输出:
+### 输出
 
-```
+```text
 Lenovo created
 Lenovo battery power starts from 2500 mAh
 Samsung created
 Samsung Cost starts from 6000
 ```
 
-其他示例：动物：狗、猫、狐等等
+其他示例：动物：狗、猫、狐等等。
 
 ## 抽象工厂模式
 
@@ -509,17 +514,17 @@ Samsung Cost starts from 6000
 
 例如，你可以有一个本田（Honda）工厂，它返回与本田工厂相关的汽车对象（Brio、Civic 等）。你也可以有一个现代（Hyundai）工厂，它返回与现代工厂相关的汽车对象（Santro、EON）。我们可以创建一个抽象工厂，根据我们感兴趣的汽车来返回这些不同类型的工厂。然后我们可以从这些汽车工厂中获取汽车对象。通过多态，我们可以使用通用接口来获取不同的工厂，然后再次使用通用接口来获取不同的汽车。
 
-### 优点：
+### 优点
 
 - 抽象工厂模式提供了一种面向接口而非实现的代码方法。
 - 抽象工厂模式是“工厂的工厂”，可以轻松扩展以容纳更多产品，例如，我们可以添加另一个子类 Cerio 和一个工厂 MarutiFactory。
 - 抽象工厂模式是健壮的，并且避免了工厂模式中的条件逻辑。
 
-### 在 JDK 中的用法:
+### 在 JDK 中的用法
 
-- javax.xml.parsers.DocumentBuilderFactory#newInstance()
-- javax.xml.transform.TransformerFactory#newInstance()
-- javax.xml.xpath.XPathFactory#newInstance()
+- `javax.xml.parsers.DocumentBuilderFactory#newInstance()`
+- `javax.xml.transform.TransformerFactory#newInstance()`
+- `javax.xml.xpath.XPathFactory#newInstance()`
 
 何时使用：当一组相关的产品对象被设计为一起使用，并且我们需要强制这一约束时。
 
@@ -565,13 +570,15 @@ public class AbstractFactoryTest {
 }
 ```
 
-# 输出:
+### 输出
 
 Lenovo camera capacity starts from 10 MP
 
 其他示例：
-本田工厂：Brio, Civic,
-现代工厂：Santro, EON 等。
+
+本田工厂：Brio、Civic。
+
+现代工厂：Santro、EON 等。
 
 ## 构建器模式
 
@@ -585,13 +592,9 @@ Lenovo camera capacity starts from 10 MP
 
 构建器模式建议使用一个专用的构建器，称为导演（Director），它负责调用构建最终对象所需的各种构建器方法。不同的客户端可以使用导演来创建所需的对象。一旦对象构建完成，客户端可以直接从构建器处获取完全构建的对象。为了方便这一过程，可以在通用构建器接口中声明一个新方法 `getObject()`，由不同的具体构建器来实现。
 
-### Builder (构建器)
+### Builder（构建器）
 
 - 定义了创建产品对象部分的抽象接口。
-
-
-
-
 
 ### ConcreteBuilder
 
@@ -608,30 +611,31 @@ Lenovo camera capacity starts from 10 MP
 - 代表正在构建的复杂对象。ConcreteBuilder 构建产品的内部表示，并定义了其组装过程。
 - 包含定义组成部分的类，包括将部分组装成最终结果的接口。
 
-示例：
-com.dev.dp.creational.builder2
-- BuilderTest.java
-- IndianMealBuilder.java
-- JapaneseMealBuilder.java
-- Meal.java
-- MealBuilder.java
-- MealDirector.java
+### 示例
 
-### 构建器模式的另一种形式：
+`com.dev.dp.creational.builder2`
+
+- `BuilderTest.java`
+- `IndianMealBuilder.java`
+- `JapaneseMealBuilder.java`
+- `Meal.java`
+- `MealBuilder.java`
+- `MealDirector.java`
+
+### 构建器模式的另一种形式
 
 有时一个对象具有很很长的属性列表。
 
 问题是，对于此类类我们应该编写什么样的构造函数？编写一个带有长参数列表的构造函数并不是一个好的选择，这会让客户端感到困扰，特别是当重要的字段只有几个时。这可能会增加错误的范围；客户端可能会无意中为错误的字段提供值。类型相同的参数长序列会导致微妙的 bug。如果客户端反转了两个这样的参数，编译器不会报错，但程序在运行时会发生异常。
 
+
+
 客户端不是直接创建所需的对象，而是调用带有所有必需参数的构造函数并获取一个构建器对象。客户端在构建器对象上调用 setter 方法来设置感兴趣的每个可选参数。最后，客户端调用一个无参数的方法来生成对象。
 
-- 首先，你需要创建一个静态内部类，并将所有参数拷贝到外层类的 Builder 类中。我们应该遵循命名规范，如果类名是 Cake，那么构建器类应该被命名为 CakeBuilder。
-
-- Builder 类应该有一个公有构造函数，并将所有必需属性作为参数传入。
-
-- Builder 应该有方法来设置可选参数，并且在设置可选属性后应该返回同一个 Builder 对象。
-
-- 最后一步是在构建器类中提供一个 `build()` 方法，该方法将返回客户端程序所需的对象。为了实现这一点，我们需要在类中有一个以 Builder 为参数的私有构造函数。
+- 首先，你需要创建一个静态内部类，并将所有参数拷贝到外层类的 `Builder` 类中。我们应该遵循命名规范，如果类名是 `Cake`，那么构建器类应该被命名为 `CakeBuilder`。
+- `Builder` 类应该有一个公有构造函数，并将所有必需属性作为参数传入。
+- `Builder` 应该有方法来设置可选参数，并且在设置可选属性后应该返回同一个 `Builder` 对象。
+- 最后一步是在构建器类中提供一个 `build()` 方法，该方法将返回客户端程序所需的对象。为了实现这一点，我们需要在类中有一个以 `Builder` 为参数的私有构造函数。
 
 ```java
 class Cake {
@@ -706,28 +710,28 @@ public class BuilderPattern {
 }
 ```
 
-输出：Cake[sugar=1.0, butter=0.5, milk=0.5, cherry=0]
+输出：`Cake[sugar=1.0, butter=0.5, milk=0.5, cherry=0]`
 
 在静态设置属性时，我们可以使用 setter 方法作为另一种选择。
-如你清楚看到的，现在客户端只需要提供强制性字段以及对他重要的字段。要形成该对象，我们需要调用带有强制性字段的 CakeBuilder 构造函数，然后调用所需的方法，最后调用 build 方法来获取对象对象。
 
-### 何时使用构建器模式：
+如你清楚看到的，现在客户端只需要提供强制性字段以及对他重要的字段。要形成该对象，我们需要调用带有强制性字段的 `CakeBuilder` 构造函数，然后调用所需的方法，最后调用 `build()` 方法来获取对象对象。
+
+### 何时使用构建器模式
 
 - 创建复杂对象的算法应该独立于组成对象的各个部分以及它们的组装方式。
-
 - 构建过程必须允许为所构建的对象提供不同的表示。
 
-### JDK 中的构建器模式：
+### JDK 中的构建器模式
 
-- java.lang.StringBuilder#append() (非同步)
-- java.lang.StringBuilder#append() (同步)
-- java.nio.ByteBuffer#put() (也用于 CharBuffer, ShortBuffer, IntBuffer, LongBuffer, FloatBuffer 和 DoubleBuffer)
-- javax.swing.GroupLayout.Group#addComponent()
-- java.lang.Appendable 的所有实现。
+- `java.lang.StringBuilder#append()`（非同步）
+- `java.lang.StringBuilder#append()`（同步）
+- `java.nio.ByteBuffer#put()`（也用于 `CharBuffer`、`ShortBuffer`、`IntBuffer`、`LongBuffer`、`FloatBuffer` 和 `DoubleBuffer`）
+- `javax.swing.GroupLayout.Group#addComponent()`
+- `java.lang.Appendable` 的所有实现。
 
 ## 原型模式
 
-原型模式是创建型模式之一，因此它提供了一种对象创建机制。当对象的创建是一项昂贵事务，需要大量的时间资源，且你已经存在一个相似的对象时，可以使用原型模式。这种模式提供了一种将原始对象拷贝到新对象的机制，然后根据我们的需要对其修改。该模式使用 java 的克隆机制到对象。
+原型模式是创建型模式之一，因此它提供了一种对象创建机制。当对象的创建是一项昂贵事务，需要大量的时间资源，且你已经存在一个相似的对象时，可以使用原型模式。这种模式提供了一种将原始对象拷贝到新对象的机制，然后根据我们的需要对其修改。该模式使用 Java 的克隆机制到对象。
 
 通过示例可以很容易理解这种模式，假设我们有一个从数据库加载数据的对象。现在我们需要在程序中多次修改这些数据，因此使用 `new` 关键字创建对象并从数据库加载所有数据并不是一个好主意。更好的方法是将现有对象克隆到新对象中，然后进行数据操作。
 
@@ -791,19 +795,17 @@ public class PrototypeTest {
 }
 ```
 
-### 输出：
+### 输出
 
 Prototype Design Pattern: Jaguar
+
 Prototype Design Pattern: Bike [gears=6, bitype=Advanced, model=Jaguar]
-
-
-
 
 而不是每次都带有适当的状态手动实例化该类。
 
-**在 JDK 中的用法：** java.lang.Object#clone()
+**在 JDK 中的用法：** `java.lang.Object#clone()`
 
-## 适配器模式 (ADAPTER PATTERN)
+## 适配器模式（ADAPTER PATTERN）
 
 有时可能会出现两个对象无法配合工作，但它们又需要完成任务。这种情况在我们尝试将遗留代码与新代码集成，或者在代码中更改第三方 API 时可能会发生。这是由于两个对象的接口不兼容，导致它们无法匹配。
 
@@ -858,9 +860,9 @@ public class AdapterPatternTest {
 
 ![](img/776807b1115a8bf86c1ed9d6357c6fe1_31_0.png)
 
-Orange 是被适配者，apple 是目标，AppleAdapter 是适配器。这里的思想是在适配器的构造函数中传递被适配者以实现目标。
+`Orange` 是被适配者，`apple` 是目标，`AppleAdapter` 是适配器。这里的思想是在适配器的构造函数中传递被适配者以实现目标。
 
-### 何时使用适配器模式：
+### 何时使用适配器模式
 
 在以下情况下应该使用适配器模式：
 
@@ -868,13 +870,13 @@ Orange 是被适配者，apple 是目标，AppleAdapter 是适配器。这里的
 - 你想创建一个可重用的类，与无关或不可预见的类协作，即这些类不一定具有兼容的接口。
 - 有多个现有的子类可以使用，但通过对每个子类进行子化来适配它们的接口是不现实的。对象适配器可以适配其父类的接口。
 
-### JDK 中的适配器模式示例：
+### JDK 中的适配器模式示例
 
-- java.util.Arrays#asList()
-- java.io.InputStreamReader(InputStream) (返回一个 Reader)
-- java.io.OutputStreamWriter(OutputStream) (返回一个 Writer)
+- `java.util.Arrays#asList()`
+- `java.io.InputStreamReader(InputStream)`（返回一个 `Reader`）
+- `java.io.OutputStreamWriter(OutputStream)`（返回一个 `Writer`）
 
-## 组合模式 (COMPOSITE PATTERN)
+## 组合模式（COMPOSITE PATTERN）
 
 有时你会觉得代码中需要一种树形数据结构。树形结构有很多变体，但有时需要一种树，树的分支和叶子应该被同等对待。
 
@@ -886,25 +888,27 @@ Orange 是被适配者，apple 是目标，AppleAdapter 是适配器。这里的
 
 换句话说，组合模式由以下对象组成。
 
-**基础组件 (Base Component)** – 组件是组合中所有对象的接口，客户端程序使用基础组件与组合中的对象进行交互。它可以是一个接口，也可以是一个包含所有对象通用方法的抽象类。
+**基础组件（Base Component）**：组件是组合中所有对象的接口，客户端程序使用基础组件与组合中的对象进行交互。它可以是一个接口，也可以是一个包含所有对象通用方法的抽象类。
 
-**叶子 (Leaf)** – 定义组合中元素的行为。它是组合的构建块并实现基础组件。它不包含指向其他组件的引用。
+**叶子（Leaf）**：定义组合中元素的行为。它是组合的构建块并实现基础组件。它不包含指向其他组件的引用。
 
-**组合 (Composite)** – 它由叶子元素组成并实现基础组件中的操作。
+**组合（Composite）**：它由叶子元素组成并实现基础组件中的操作。
 
 ![](img/776807b1115a8bf86c1ed9d6357c6fe1_37_0.png)
+
+
 
 ```java
 package com.dev.dp.structural.composite;
 
 /**
-* 首先我们先创建一个组件接口。
-* 表示组合中的对象
-* 它包含了适用于经理和开发者的所有常用操作。
-* *
-* Manager(Composite)
-* Developer(Leaf)
-* Employee(Component)
+ * 首先我们先创建一个组件接口。
+ * 表示组合中的对象。
+ * 它包含了适用于经理和开发者的所有常用操作。
+ *
+ * Manager(Composite)
+ * Developer(Leaf)
+ * Employee(Component)
  */
 public interface Employee {
     public void add(Employee emp);
@@ -916,11 +920,12 @@ public interface Employee {
 }
 
 /**
-* 现在我们将来创建一个经理(组合类)。
-* 关键点是所有公共方法都将其操作委托给子对象。
-* 它有访问和修改其子类方法。
+ * 现在我们将来创建一个经理(组合类)。
+ * 关键点是所有公共方法都将其操作委托给子对象。
+ * 它有访问和修改其子类方法。
  */
 import java.util.ArrayList;
+
 public class Manager implements Employee {
     private String name;
     private double salary;
@@ -929,6 +934,7 @@ public class Manager implements Employee {
         this.name = name;
         this.salary = salary;
     }
+
     List<Employee> employees = new ArrayList<Employee>();
 
     @Override
@@ -964,14 +970,14 @@ public class Manager implements Employee {
     }
 
     Iterator<Employee> empIterator = employees.iterator();
-    while(empIterator.hasNext()) {
+    while (empIterator.hasNext()) {
         Employee emp = empIterator.next();
         emp.print();
     }
 }
 ```
 
-- 在这个类中，有很多不适用于开发者的方法
+- 在这个类中，有很多不适用于开发者的方法。
 - 它是一个叶子节点。
 
 ```java
@@ -1012,23 +1018,18 @@ public class Developer implements Employee {
 
     @Override
     public void print() {
-        System.out.println("--- Name="+getName());
-        System.out.println("Salary="+getSalary());
+        System.out.println("--- Name=" + getName());
+        System.out.println("Salary=" + getSalary());
         System.out.println("---------------------");
     }
 }
 ```
 
-
-
-
 ```java
 package com.dev.dp.structural.composite;
 
 public class CompositePatternTest {
-
     public static void main(String[] args) {
-
         Employee emp1 = new Developer("John", 10000);
         Employee emp2 = new Developer("David", 15000);
         Employee manager1 = new Manager("Daniel", 25000);
@@ -1044,18 +1045,18 @@ public class CompositePatternTest {
 }
 ```
 
-# 输出:
+## 输出
 
 ![](img/776807b1115a8bf86c1ed9d6357c6fe1_39_0.png)
 
-### 何时使用组合模式：
+### 何时使用组合模式
 
 - 当你想要表示对象的部分-整体层次结构结构时。
 - 当你希望客户端能够忽略对象组合与单个对象之间的差异时。客户端将统一处理组合结构中的所有对象。
 
-### 在 JDK 中的用法：
+### 在 JDK 中的用法
 
-java.awt.Container#add (Component) 是 Java 中组合模式的一个极佳示例，并在 Swing 中广泛使用。
+`java.awt.Container#add(Component)` 是 Java 中组合模式的一个极佳示例，并在 Swing 中广泛使用。
 
 ## 代理模式
 
@@ -1141,6 +1142,7 @@ public class FolderProxy implements IFolder {
 
 ```java
 package com.dev.dp.proxyPatternTest;
+
 public class ProxyPatternTest {
     public static void main(String[] args) {
         User user = new User("dev", "dev");
@@ -1148,6 +1150,7 @@ public class ProxyPatternTest {
         System.out.println("***** username and password are correct:*");
         folderProxy.performOperations();
         System.out.println("****************************************");
+
         // 如果用户名和密码错误
         User userWrong = new User("abc", "abc");
         FolderProxy folderProxyWrong = new FolderProxy(userWrong);
@@ -1157,7 +1160,7 @@ public class ProxyPatternTest {
 }
 ```
 
-输出：
+## 输出
 
 ```text
 When userName and password are correct:
@@ -1167,7 +1170,7 @@ When userName and password are incorrect:
 You don't have access to this folder
 ```
 
-### 何时使用代理模式：
+### 何时使用代理模式
 
 每当需要对对象进行比简单指针更通用或更复杂的引用时，代理模式都适用。以下是代理模式的几种常见情况：
 
@@ -1175,14 +1178,14 @@ You don't have access to this folder
 - 虚拟代理按需创建昂贵的对象。
 - 保护代理控制对原始对象的访问。当对象应该具有不同的访问权限时，保护代理非常有用。
 
-### JDK 中的代理模式：
+### JDK 中的代理模式
 
 以下用例是 JDK 中使用代理模式的示例。
 
-- java.lang.reflect.Proxy
-- java.rmi.rmi.* (整个包)
+- `java.lang.reflect.Proxy`
+- `java.rmi.rmi.*`（整个包）
 
-## 外观模式 (FACADE PATTERN)
+## 外观模式（FACADE PATTERN）
 
 外观模式是一种结构性设计模式。在外观模式中，使用一个外观类为一组类提供单一接口。外观模式通过将交互局部化到单一接口中，简化了客户端与复杂系统的交互。因此，客户端可以与单个对象进行交互，而不需要直接以复杂的方式与组成子系统的对象交互。
 
@@ -1198,17 +1201,20 @@ You don't have access to this folder
 
 ```java
 package com.dev.dp.structural.facade;
+
 public class Class {
-// Class's doSomethingComplicated(method) 接收一个整数并返回它的立方。
-public int doSomethingComplicated(int x) {
-    return x * x * x;
+    // Class's doSomethingComplicated(method) 接收一个整数并返回它的立方。
+    public int doSomethingComplicated(int x) {
+        return x * x * x;
+    }
 }
 ```
 
 ```java
 package com.dev.structural.facade;
+
 public class Class2 {
-    /*Class2.doAnotherThing() 将整数的立方翻倍并返回它*/
+    /* Class2.doAnotherThing() 将整数的立方翻倍并返回它 */
     public int doAnotherThing(Class1 class1, int x) {
         return 2 * class1.doSomethingComplicated(x);
     }
@@ -1217,16 +1223,23 @@ public class Class2 {
 
 ```java
 package com.dev.structural.facade;
+
 public class Class3 {
-    /*Class3.doMoreStuff() 接收一个 Class1 对象、一个 Class2 对象，并将它们相乘。
+    /*
+     * Class3.doMoreStuff() 接收一个 Class1 对象、一个 Class2 对象，并将它们相乘。
+     */
     public int doMoreStuff(Class1 class1, Class2 class2, int x) {
-        return class1.doSomethingComplicated(x) * class2.doAnotherThing(class1, x);
+        return class1.doSomethingComplicated(x)
+                * class2.doAnotherThing(class1, x);
     }
 }
 ```
 
+
+
 ```java
 package com.dev.structural.facade;
+
 public class facade {
     // 我们需要它来简化与这一类系统的交互
     // 以便客户端能够以简单、标准化的方式与这些类交互。
@@ -1253,6 +1266,7 @@ public class facade {
 
 ```java
 package com.dev.dp.structural.facade;
+
 public class FacadeTest {
     public static void main(String[] args) {
         Facade facade = new Facade();
@@ -1264,7 +1278,7 @@ public class FacadeTest {
 }
 ```
 
-输出：
+### 输出
 
 ```text
 Cube of 3:27
@@ -1272,24 +1286,20 @@ Cube of 3 times 2:54
 multiply class1 & class2 :1458
 ```
 
-### 重要要点：
+### 重要要点
 
-- 外观模式更像是客户端应用程序的助手；它并没有隐藏子系统
-
-
-来自客户端的接口。是否使用 Facade（外观模式）完全取决于客户端代码。
-
+- 外观模式更像是客户端应用程序的助手；它并没有隐藏子系统来自客户端的接口。是否使用 Facade（外观模式）完全取决于客户端代码。
 - Facade 模式可以应用于开发的任何阶段，通常在接口数量增加且系统变得复杂时使用。
 - 子系统感知不到 Facade，且它们不应该包含任何 Facade 接口的引用。
 - Facade 模式应该应用于相同类型的接口；其目的是提供一个单一接口，而不是多个执行相似任务的接口。
 - 子系统之间可能相互依赖。在这种情况下，Facade 可以充当协调者，解耦子系统之间的依赖关系。
 - 我们可以结合工厂设计模式与 Facade 使用，为客户端系统提供更好的接口。
 
-### 在 Java 中的用法：
+### 在 Java 中的用法
 
 在 `javax.faces.context` 中，`ExternalContext` 内部使用了 `ServletContext`、`HttpSession`、`HttpServletRequest`、`HttpServletResponse` 等。它允许 Faces API 无需感知所包含的应用环境的性质。
 
-## 桥接模式 (BRIDGE PATTERN)
+## 桥接模式（BRIDGE PATTERN）
 
 当接口和实现中都存在接口层次结构时，使用构建器设计模式将接口与实现解耦，并向客户端程序隐藏实现细节。
 
@@ -1311,6 +1321,7 @@ multiply class1 & class2 :1458
 
 ```java
 package com.dev.dp.structural.bridge;
+
 /**
  * 桥接模式中的抽象
  */
@@ -1319,7 +1330,7 @@ public abstract class Vehicle {
     protected VehicleType type2;
 
     public Vehicle(VehicleType type1, VehicleType type2) {
-    this.type1 = type1;
+        this.type1 = type1;
         this.type2 = type2;
     }
 
@@ -1329,6 +1340,7 @@ public abstract class Vehicle {
 
 ```java
 package com.dev.dp.structural.bridge;
+
 /**
  * 桥接模式的实现者
  */
@@ -1339,6 +1351,7 @@ public interface VehicleType {
 
 ```java
 package com.dev.dp.structural.bridge;
+
 /**
  * 桥接模式中的细化抽象 1
  */
@@ -1346,6 +1359,7 @@ public class Car extends Vehicle {
     public Car(VehicleType type1, VehicleType type2) {
         super(type1, type2);
     }
+
     @Override
     public void purchase() {
         System.out.print("Car");
@@ -1357,6 +1371,7 @@ public class Car extends Vehicle {
 
 ```java
 package com.dev.dp.structural.bridge;
+
 /**
  * 桥接模式中的细化抽象 2
  */
@@ -1364,6 +1379,7 @@ public class Bike extends Vehicle {
     public Bike(VehicleType type1, VehicleType type2) {
         super(type1, type2);
     }
+
     @Override
     public void purchase() {
         System.out.print("Bike");
@@ -1375,6 +1391,7 @@ public class Bike extends Vehicle {
 
 ```java
 package com.dev.dp.structural.bridge;
+
 /**
  * 桥接模式的具体实现 1
  */
@@ -1388,6 +1405,7 @@ public class NewVehicle implements VehicleType {
 
 ```java
 package com.dp.structural.bridge;
+
 /**
  * 桥接模式的具体实现 2
  */
@@ -1402,23 +1420,25 @@ public class OldVehicle implements VehicleType {
 
 ```java
 package com.dp.structural.bridge;
+
 public class BridgePatternTest {
     public static void main(String[] args) {
-        Vehicle vehicle1 = new Car(new NewVehicle(),new OldVehicle());
+        Vehicle vehicle1 = new Car(new NewVehicle(), new OldVehicle());
         vehicle1.purchase();
 
-        Bike vehicle2 = new Bike(new NewVehicle(),new OldVehicle());
+        Bike vehicle2 = new Bike(new NewVehicle(), new OldVehicle());
         vehicle2.purchase();
     }
 }
 ```
 
-## 输出:
+## 输出
 
 Car New Vehicle Old Vehicle
+
 Bike New Vehicle Old Vehicle
 
-### 桥接模式总结：
+### 桥接模式总结
 
 - 创建两个不同的层次结构：一个用于抽象，另一个用于实现。
 - 通过移除抽象与实现之间的依赖关系，避免了永久绑定。
@@ -1428,30 +1448,32 @@ Bike New Vehicle Old Vehicle
 - 如果抽象的实现发生修改，客户端不应受到影响。
 - 当你有多个实现时，效果最佳。
 
-### 在 Java 中的用法：
+### 在 Java 中的用法
 
 - AWT
 - JDBC
 
-## 装饰器模式 (DECORATOR PATTERN)
+## 装饰器模式（DECORATOR PATTERN）
 
 装饰器模式的意图是动态地给对象附加额外的职责。这为扩展功能提供了比子类化更灵活的替代。
 
 装饰器类与它封装的对象具有相同的接口。它包含一个指向实际对象的引用。装饰器接收来自客户端的所有请求，并将这些调用转发给底层对象。
 
-组件接口（Component Interface）—— 定义将实现的方法的接口或抽象类。在本例中，Icecream（冰淇淋）将作为组件接口。
+组件接口（Component Interface）—— 定义将实现的方法的接口或抽象类。在本例中，`Icecream`（冰淇淋）将作为组件接口。
 
 ```java
 package com.dev.dp.structural.decorator;
+
 public interface Icecream {
     public String makeIcecream();
 }
 ```
 
-组件实现（Component Implementation）—— 组件接口的基本实现。我们可以有一个 Simpleicecream 这种组件实现。
+组件实现（Component Implementation）—— 组件接口的基本实现。我们可以有一个 `Simpleicecream` 这种组件实现。
 
 ```java
 package com.dev.dp.structural.decorator;
+
 public class Simpleicecream implements Icecream {
     @Override
     public String makeIcecream() {
@@ -1460,106 +1482,118 @@ public class Simpleicecream implements Icecream {
 }
 ```
 
-装饰器（Decorator）—— 装饰器类实现了组件接口，并且与组件接口具有“拥有”（HAS-A）关系。组件变量应该允许子装饰器类访问，因此我们将此变量设为 protected。
+装饰器（Decorator）—— 装饰器类实现了组件接口，并且与组件接口具有“拥有”（HAS-A）关系。组件变量应该允许子装饰器类访问，因此我们将此变量设为 `protected`。
 
 ```java
 package com.dev.dp.structural.decorator;
+
 public abstract class IcecreamDecorator implements Icecream {
-protected Icecream specialIcecream;
-  public IcecreamDecorator(Icecream specialIcecream) {
-    this.specialIcecream = specialIcecream;
-  }
-  @Override
-  public String makeIcecream() {
-    return specialIcecream.makeIcecream();
-  }
+    protected Icecream specialIcecream;
+
+    public IcecreamDecorator(Icecream specialIcecream) {
+        this.specialIcecream = specialIcecream;
+    }
+
+    @Override
+    public String makeIcecream() {
+        return specialIcecream.makeIcecream();
+    }
 }
 ```
 
-### 具体装饰器（Concrete Decorators）—— 扩展基础装饰器功能并相应地修改组件行为。我们可以有 NuttyIcecreamDecorator 和 HoneyIcecreamDecorator 等具体装饰器类。
+### 具体装饰器（Concrete Decorators）
+
+扩展基础装饰器功能并相应地修改组件行为。我们可以有 `NuttyIcecreamDecorator` 和 `HoneyIcecreamDecorator` 等具体装饰器类。
 
 ```java
 package com.dev.dp.structural.decorator;
+
 public class NuttyDecorator extends IcecreamDecorator {
-  public NuttyDecorator(Icecream specialIcecream) {
-    super(specialIcecream);
-  }
-  public String makeIcecream() {
-    return specialIcecream.makeIcecream() + addNuts();
-  }
-  private String addNuts() {
-    return "+ Crunchy Nuts";
-  }
+    public NuttyDecorator(Icecream specialIcecream) {
+        super(specialIcecream);
+    }
+
+    public String makeIcecream() {
+        return specialIcecream.makeIcecream() + addNuts();
+    }
+
+    private String addNuts() {
+        return "+ Crunchy Nuts";
+    }
 }
 ```
 
 ```java
 package com.dev.dp.structural.decorator;
+
 public class HoneyDecorator extends IcecreamDecorator {
-  public HoneyDecorator(Icecream specialIcecream) {
-    super(specialIcecream);
-  }
-  public String makeIcecream() {
-    return specialIcecream.makeIcecream() + addHoney();
-  }
-  private String addHoney() {
-    return "+ Sweet Honey";
-  }
+    public HoneyDecorator(Icecream specialIcecream) {
+        super(specialIcecream);
+    }
+
+    public String makeIcecream() {
+        return specialIcecream.makeIcecream() + addHoney();
+    }
+
+    private String addHoney() {
+        return "+ Sweet Honey";
+    }
 }
 ```
 
-
-
 ```java
 package com.dev.dp.structural.decorator;
+
 public class DecoratorPatternTest {
     public static void main(String[] args) {
-        Icecream icecream = new HoneyDecorator(new NuttyDecorator(new SimpleIcecream()));
+        Icecream icecream = new HoneyDecorator(
+            new NuttyDecorator(new SimpleIcecream())
+        );
         System.out.println(icecream.makeIcecream());
     }
 }
 ```
 
-# 输出:
+## 输出
 
 基础冰淇淋 + 脆坚果 + 甜蜂蜜
 
-### 何时使用装饰器模式：
+### 何时使用装饰器模式
 
 在以下情况下使用装饰器模式：
 
-- * 动态且透明地为单个对象添加职责，即不影响其他对象。
-- * 适用于可以撤销的职责。
-- * 当通过子类进行扩展不实际可行时。有时可能存在大量的独立扩展，这会导致子类爆炸。或者类的定义可能被隐藏或在情况下不可用。
-- * 当选择较多时，易于维护和扩展。
+- 动态且透明地为单个对象添加职责，即不影响其他对象。
+- 适用于可以撤销的职责。
+- 当通过子类进行扩展不实际可行时。有时可能存在大量的独立扩展，这会导致子类爆炸。或者类的定义可能被隐藏或在情况下不可用。
+- 当选择较多时，易于维护和扩展。
 
-### 在 Java 中的用法：
+### 在 Java 中的用法
 
-- * 装饰器模式广泛用于 Java IO 类，例如 FileReader、BufferedReader 等。
-- * 装饰器模式的缺点是它使用了许多相似类型的对象（装饰器）。
+- 装饰器模式广泛用于 Java IO 类，例如 `FileReader`、`BufferedReader` 等。
+- 装饰器模式的缺点是它使用了许多相似类型的对象（装饰器）。
 
-## 享量模式 (FLYWEIGHT PATTERN)
+## 享量模式（FLYWEIGHT PATTERN）
 
 在享量模式中，我们不再创建大量相似的对象，而是复用对象。这可以用于减少内存需求、实例化时间以及相关成本。
 
-当我们我们需要创建一个类的创建大量对象时，就会使用享量模式。由于每个对象都会消耗内存空间，这对于低内存设备（如移动设备或嵌入式系统）至关重要，因此可以使用享量模式通过共享对象来减轻内存负载。
+当我们需要创建一个类的大量对象时，就会使用享量模式。由于每个对象都会消耗内存空间，这对于低内存设备（如移动设备或嵌入式系统）至关重要，因此可以使用享量模式通过共享对象来减轻内存负载。
 
 在应用享量模式之前，我们需要考虑以下因素：
 
-- * 应用需要创建的对象数量可能是巨大的。
-- * 创建非常消耗内存，而且可能耗时。
+- 应用需要创建的对象数量可能是巨大的。
+- 创建非常消耗内存，而且可能耗时。
 
-有时过多的对象会减慢速度。过对象可能会消耗大量内存并降低应用速度，甚至导致内存溢出问题。作为一个优秀的程序员，应该记录实例化的对象并控制应用程序中的对象创建。当我们有许多相似的对象，且池中的两个对象之间差异不大时，这一点尤为真实。
+有时过多的对象会减慢速度。过多对象可能会消耗大量内存并降低应用速度，甚至导致内存溢出问题。作为一个优秀的程序员，应该记录实例化的对象并控制应用程序中的对象创建。当我们有许多相似的对象，且池中的两个对象之间差异不大时，这一点尤为真实。
 
 有时应用程序中的对象可能具有很高的相似性并属于相似类型（这里的相似类型意味着它们的大部分属性具有相似的值，只有少数属性的值不同）。如果这些是重量密集型对象，应该由应用程序开发者进行控制。否则，它们可能会消耗大量内存并最终减慢整个应用的运行。
 
 享量模式旨在控制此类对象的创建，并为你提供一种基本的缓存机制。它允许你为每个类型创建一个对象（类型通过该对象的属性进行区分），如果你请求具有相同属性（已创建）的对象，它将返回同一个对象，而不是创建一个新的。
 
-## JDK 中的享量模式示例：
+## JDK 中的享量模式示例
 
-所有包装类类的 `valueOf` 方法都使用了缓存对象，这展示了享量设计模式的使用。最好的例子是 Java String 类的字符串池实现。
+所有包装类类的 `valueOf` 方法都使用了缓存对象，这展示了享量设计模式的使用。最好的例子是 Java `String` 类的字符串池实现。
 
-## 模板方法模式 (TEMPLATE METHOD PATTERN)
+## 模板方法模式（TEMPLATE METHOD PATTERN）
 
 模板模式在操作中定义了算法的骨架，并将某些步骤留给子类。模板方法允许子类在不改变算法结构的情况下重新定义算法的某些步骤。
 
@@ -1567,9 +1601,11 @@ public class DecoratorPatternTest {
 
 模板类并不一定需要将所有实现完全留给子类。相反，作为提供算法大纲的一部分，模板类也可以提供一些可以认为在不同实现之间保持不变的实现。如果合适，它甚至为变体部分提供默认实现。只有特定的细节将在不同的子类中实现。这种实现消除了重复代码的需求，这意味着需要编写的代码最少。
 
-- * 模板方法应该由某些顺序固定的步骤组成，对于某些方法，其实现从基类到子类有所不同。模板方法应该是 `final` 的。
-- * 大多数情况下，子类调用父类的方法，但在模板模式中，父类的模板方法调用子类的方法，这被称为“好莱坞原则”——“不要叫我们，我们来叫你”。
-- * 基类中具有默认实现的方法称为钩子方法 (Hooks)，它们旨在让子类重写。如果你希望某些方法不被重写，可以将它们设为 `final`，例如在我们的案例中，我们可以将 `doPack()` 方法设为 `final`，因为我们不希望子类重写它。
+
+
+- 模板方法应该由某些顺序固定的步骤组成，对于某些方法，其实现从基类到子类有所不同。模板方法应该是`final`的。
+- 大多数情况下，子类调用父类的方法，但在模板模式中，父类的模板方法调用子类的方法，这被称为“好莱坞原则”——“不要叫我们，我们来叫你”。
+- 基类中具有默认实现的方法称为钩子方法（Hooks），它们旨在让子类重写。如果你希望某些方法不被重写，可以将它们设为`final`，例如在我们的案例中，我们可以将`doPack()`方法设为`final`，因为我们不希望子类重写它。
 
 ```java
 public abstract class PurchaseOrderTemplate {
@@ -1638,25 +1674,21 @@ public class TemplateMethodPatternTest {
 }
 ```
 
-输出:
+输出：
 
 ![](img/776807b1115a8bf86c1ed9d6357c6fe1_60_0.png)
 
-### 何时使用模板设计模式：
+### 何时使用模板设计模式
 
-- * 为了一次实现算法的不变部分，并让子类来实现可变化的行为。
-- * 当子类之间的公共行为应该被提取并定位在公共类中以避免代码重复时。你首先识别现有代码中的差异，然后将差异分离到新操作中。最后，你用调用这些新操作之一的模板方法来替换不同的代码。
+- 为了一次实现算法的不变部分，并让子类来实现可变化的行为。
+- 当子类之间的公共行为应该被提取并定位在公共类中以避免代码重复时。你首先识别现有代码中的差异，然后将差异分离到新操作中。最后，你用调用这些新操作之一的模板方法来替换不同的代码。
 
-### JDK 中的用法：
+### JDK 中的用法
 
-- * java.io.InputStream、java.io.OutputStream、java.io.Reader 和 java.io.Writer 的所有非抽象方法。例如 - `java.io.InputStream#skip()`，`java.io.InputStream#read()`
-- * java.util.AbstractList、java.util.AbstractSet 和 java.util.AbstractMap 的所有非抽象方法。例如 - `java.util.AbstractList#indexOf()`，`java.util.Collections#sort()`。
+- `java.io.InputStream`、`java.io.OutputStream`、`java.io.Reader`和`java.io.Writer`的所有非抽象方法。例如：`java.io.InputStream#skip()`、`java.io.InputStream#read()`。
+- `java.util.AbstractList`、`java.util.AbstractSet`和`java.util.AbstractMap`的所有非抽象方法。例如：`java.util.AbstractList#indexOf()`、`java.util.Collections#sort()`。
 
-
-
-
-
-## 中者模式 (MEDIATOR PATTERN)
+## 中者模式（MEDIATOR PATTERN）
 
 中者模式通过防止对象之间显式的相互引用来实现松耦合，并允许你独立地改变它们之间的交互。
 
@@ -1670,9 +1702,9 @@ public class TemplateMethodPatternTest {
 
 中者模式的主要参与者有：
 
-- *中者 (Mediator)*：定义了与同事（Colleague）对象通信的接口。
-- *具体中者 (ConcreteMediator)*：通过协调同事对象来实现协作行为。它还知道并维护它的同事们。
-- *同事类 (Colleague Classes)*：每个同事类都知道它的中者对象。每当同事本该与另一个同事进行通信时，它都会与其中者通信。
+- 中者（Mediator）：定义了与同事（Colleague）对象通信的接口。
+- 具体中者（ConcreteMediator）：通过协调同事对象来实现协作行为。它还知道并维护它的同事们。
+- 同事类（Colleague Classes）：每个同事类都知道它的中者对象。每当同事本该与另一个同事进行通信时，它都会与其中者通信。
 
 ```java
 /**
@@ -1774,27 +1806,25 @@ public class MediatorTest {
 }
 ```
 
-### 什么时候使用中者模式：
+### 什么时候使用中者模式
 
 - 一组对象以定义良好但复杂的方式进行通信。产生的相互依赖关系是非结构化的且难以理解的。
 - 重用一个对象是困难的，因为它引用并与许多其他对象通信。
 - 分布在几个类中的行为应该是可定制的，而不需要进行大量的子类化。
 
-### JDK 中的中者模式：
+### JDK 中的中者模式
 
-- java.util.Timer 类的 scheduleXXX () 方法。
-- java Concurrency Executor 执行器的 execute () 方法。
-- java.lang.reflect.Method 的 invoke () 方法。
+- `java.util.Timer`类的`scheduleXXX()`方法。
+- Java Concurrency Executor 执行器的`execute()`方法。
+- `java.lang.reflect.Method`的`invoke()`方法。
 
-## 责任链模式 (CHAIN OF RESPONSIBILITY)
+## 责任链模式（CHAIN OF RESPONSIBILITY）
 
 责任链模式用于在软件设计中实现松耦合，将客户端的请求传递给一个对象链进行处理。然后，链中的对象将自行决定由谁来处理请求，以及是否需要将请求发送到链中的下一个对象。
 
-当有多个对象可以处理或满足客户端请求时，该模式建议给这些对象中的每一个提供一个按照某种顺序顺序处理请求的机会。在这种情况下应用该模式时，这些潜在的处理器可以排列成链，每个对象都拥有指向链中下一个对象的引用。链中的第一个对象接收请求，并决定是处理请求还是将其传递给链中的下一个对象。请求逐个通过链中的所有对象，直到请求被链中的某个处理器处理，或者到达链的末尾而未被处理。
+当有多个对象可以处理或满足客户端请求时，该模式建议给这些对象中的每一个提供一个按照某种顺序处理请求的机会。在这种情况下应用该模式时，这些潜在的处理器可以排列成链，每个对象都拥有指向链中下一个对象的引用。链中的第一个对象接收请求，并决定是处理请求还是将其传递给链中的下一个对象。请求逐个通过链中的所有对象，直到请求被链中的某个处理器处理，或者到达链的末尾而未被处理。
 
-让我们看看 JDK 中责任链模式的示例，然后我们将开始实现该模式的真实示例。我们知道在 try-catch 块代码中可以有多个块。每个 catch 块都是处理该特定异常的处理器。因此，当 try 块中发生任何异常时，将其发送到第一个 catch 块进行处理。如果 catch 块无法处理它，它会将请求转发给链中的下一个对象，即下一个 catch 块。即使最后一个块也无法处理它，异常也会抛出到外部。
-
-
+让我们看看 JDK 中责任链模式的示例，然后我们将开始实现该模式的真实示例。我们知道在`try-catch`块代码中可以有多个块。每个`catch`块都是处理该特定异常的处理器。因此，当`try`块中发生任何异常时，将其发送到第一个`catch`块进行处理。如果`catch`块无法处理它，它会将请求转发给链中的下一个对象，即下一个`catch`块。即使最后一个块也无法处理它，异常也会抛出到外部。
 
 ```java
 package com.dev.dp.behavioral.chainOfResponsibility;
@@ -1817,11 +1847,11 @@ public class CORPatternTest {
 }
 ```
 
-# 输出:
+### 输出
 
 ![](img/776807b1115a8bf86c1ed9d6357c6fe1_69_0.png)
 
-### 何时使用责任链模式：
+### 何时使用责任链模式
 
 在以下情况下请使用责任链模式：
 
@@ -1829,11 +1859,10 @@ public class CORPatternTest {
 - 当你想要向多个对象中的一个发送请求，而不显式地指定接收者时。
 - 当可以处理请求的对象集合应该是动态指定的时。
 
-### JDK 中的责任链模式示例：
+### JDK 中的责任链模式示例
 
-- java.util.logging.Logger#log()
-
-- javax.servlet.Filter#doFilter()
+- `java.util.logging.Logger#log()`
+- `javax.servlet.Filter#doFilter()`
 
 ## 观察者模式
 
@@ -1846,20 +1875,20 @@ public class CORPatternTest {
 - 多个观察者可以订阅通知。
 - 主题发布通知。
 - 主题仅发送关于状态已更改的通知。它不传递任何状态信息。
-
 - 一旦收到来自主题的通知，观察者会调用主题并获取已变化的数据。
+
 观察者模式的实现并没有严格遵循上述两点。在某些实现中，通知的同时也会传递状态，这样观察者就不需要回查询状态。最好不要这样做这样做。
 
 观察者模式有四个参与者：
 
 - 主题（Subject）：用于注册观察者。对象使用此接口注册为观察者，并将其从观察者列表中移除。
-- 观察者（Observer）：为应该被通知主题变化的对象定义一个更新接口。所有观察者都需要实现 Observer 接口。该接口有一个 `update()` 方法，当主题状态发生变化时会被调用。
-- 具体主题（ConcreteSubject）：存储具体观察者（ConcreteObserver）感兴趣的状态。具体主题始终实现 接口。每当状态变化时，使用 `notifyObservers()` 方法更新所有当前观察者。
-- 具体观察者（ConcreteObserver）：维护对具体主题对象的引用并实现 Observer 接口。每个观察者都向具体主题注册以接收更新。
+- 观察者（Observer）：为应该被通知主题变化的对象定义一个更新接口。所有观察者都需要实现`Observer`接口。该接口有一个`update()`方法，当主题状态发生变化时会被调用。
+- 具体主题（ConcreteSubject）：存储具体观察者（ConcreteObserver）感兴趣的状态。具体主题始终实现接口。每当状态变化时，使用`notifyObservers()`方法更新所有当前观察者。
+- 具体观察者（ConcreteObserver）：维护对具体主题对象的引用并实现`Observer`接口。每个观察者都向具体主题注册以接收更新。
 
-Java 通过 `java.util.Observer` 类和 `java.util.Observer` 接口提供了实现观察者模式的内置平台。然而它并没有被广泛使用，因为实现非常简单，而且大多数时候我们不想通过扩展类来实现观察者模式，因为 Java 类不支持多重继承。
+Java 通过`java.util.Observer`类和`java.util.Observer`接口提供了实现观察者模式的内置平台。然而它并没有被广泛使用，因为实现非常简单，而且大多数时候我们不想通过扩展类来实现观察者模式，因为 Java 类不支持多重继承。
 
-让我们以一个博客和订阅者的例子来说观察者设计模式的实现。当博客中发布新文章时，它将向注册用户发送更新通知，明有新文章发布。然后用户将访问博客并阅读发布的新文章。在这个例子中，博客是主题，用户是观察者。
+让我们以一个博客和订阅者的例子来说观察者设计模式的实现。当博客中发布新文章时，它将向注册用户发送更新通知，说明有新文章发布。然后用户将访问博客并阅读发布的新文章。在这个例子中，博客是主题，用户是观察者。
 
 ```java
 package com.dev.dp.behavioral.observer;
@@ -1871,15 +1900,18 @@ public interface Subject {
 }
 ```
 
+
+
 ```java
 package com.dev.dp.behavioral.observer;
+
 public interface Observer {
     public void update();
     public void setSubject(Subject sub);
 }
 ```
 
-//具体主题
+// 具体主题
 
 ```java
 public class Blog implements Subject {
@@ -1914,8 +1946,8 @@ public class Blog implements Subject {
     @Override
     public Object getUpdate() {
         Object changedState = null;
-        //应该有逻辑将
-        //状态变化发送给查询观察者
+        // 应该有逻辑将
+        // 状态变化发送给查询观察者
         if (stateChange) {
             changedState = "Observer Design Pattern";
         }
@@ -1935,6 +1967,7 @@ public class Blog implements Subject {
 public class User implements Observer {
     private String article;
     private Subject blog;
+
     @Override
     public void update() {
         System.out.println("State change reported by Subject.");
@@ -1955,15 +1988,19 @@ public class User implements Observer {
 
 ```java
 package com.dp.behavioral.observer;
+
 public class ObserverTest {
     public static void main(String[] args) {
         Blog blog = new Blog();
         User user1 = new User();
         User user2 = new User();
+
         blog.registerObserver(user1);
         blog.registerObserver(user2);
+
         user1.setSubject(blog);
         user2.setSubject(blog);
+
         System.out.println(user1.getArticle());
         blog.postNewArticle();
         System.out.println(user1.getArticle());
@@ -1971,9 +2008,9 @@ public class ObserverTest {
 }
 ```
 
-# 输出:
+### 输出
 
-```
+```text
 No New Article!
 State change reported by Subject.
 Observer notified !
@@ -1982,7 +2019,7 @@ Observer notified !
 Observer Design Pattern
 ```
 
-### 何时使用观察者模式：
+### 何时使用观察者模式
 
 在以下任何情况下请使用观察者模式：
 
@@ -1990,39 +2027,41 @@ Observer Design Pattern
 - 当一个对象的改变需要改变其他对象时，且你不知道需要改变多少个对象时？
 - 当一个对象能够通知其他对象，而不对这些对象的性质做任何假设时。换句话说，你不希望这些对象紧密耦合。
 
-### 在 Java 中的用法：
+### 在 Java 中的用法
 
-- Swing 中的 java.util.EventListener
-- javax.servlet.http.HttpSessionBindingListener
-- javax.servlet.http.HttpSessionAttributeListener
+- Swing 中的`java.util.EventListener`
+- `javax.servlet.http.HttpSessionBindingListener`
+- `javax.servlet.http.HttpSessionAttributeListener`
 
 ## 策略模式
 
 当存在一组相关的算法，并且客户端对象需要动态地从该集合中选择适合其当前需求的算法时，策略模式非常有用。策略模式建议将每个算法的实现保持在单独类中。每个封装在单独类中的算法被称为策略。使用策略对象的对象通常称为上下文对象（context object）。
 
-换句话说，当特定任务有多种算法且客户端在运行时选择具体实现时，使用了策略模式。策略模式也被称为策略模式（Policy Pattern）。我们定义多个算法，并让应用程序将算法作为参数传递给我们。该模式的最佳示例之一是 `Collections.sort()` 方法，它接受 `Comparator` 参数。根据 `Comparator` 接口的不同实现，对象以不同的方式进行排序。
+换句话说，当特定任务有多种算法且客户端在运行时选择具体实现时，使用了策略模式。策略模式也被称为策略模式（Policy Pattern）。我们定义多个算法，并让应用程序将算法作为参数传递给我们。该模式的最佳示例之一是`Collections.sort()`方法，它接受`Comparator`参数。根据`Comparator`接口的不同实现，对象以不同的方式进行排序。
 
-策略模式是一种组合，可以作为子类化的替代方案。策略模式不是通过子类重写父类的方法来提供不同的行为，而是允许将不同的行为放在共享公共策略 接口的具体策略类中。上下文对象包含对策略的引用。通过改变上下文的策略，可以获得不同的行为。
+策略模式是一种组合，可以作为子类化的替代方案。策略模式不是通过子类重写父类的方法来提供不同的行为，而是允许将不同的行为放在共享公共策略接口的具体策略类中。上下文对象包含对策略的引用。通过改变上下文的策略，可以获得不同的行为。
 
 ```java
 public interface Strategy {
-    public void sort(int [] numbers);
+    public void sort(int[] numbers);
 }
 ```
 
 ```java
 package com.dev.dp.behavioral.strategy;
+
 public class Context {
     private Strategy strategy;
-    public Context(Strategy strategy){
-        this.strategy=strategy;
+
+    public Context(Strategy strategy) {
+        this.strategy = strategy;
     }
-    public void arrange(int [] input){
+
+    public void arrange(int[] input) {
         strategy.sort(input);
     }
 }
 ```
-
 
 ```java
 public class BubbleSort implements Strategy {
@@ -2062,64 +2101,58 @@ public class QuickSort implements Strategy {
 
 ```java
 package com.dev.dp.behavioral.strategy;
+
 public class StrategyPatternTest {
     public static void main(String[] args) {
-        int[] var = {1, 2, 3, 4, 5 };
+        int[] var = {1, 2, 3, 4, 5};
+
         // We can provide any strategy to do the sorting
         Context ctx = new Context(new BubbleSort());
         ctx.arrange(var);
 
-        // we can change the strategy without changing Context class
+        // We can change the strategy without changing Context class
         Context ctx = new Context(new QuickSort());
         ctx.arrange(var);
     }
 }
 ```
 
-使用泡泡排序策略排序数组
-使用快速排序策略排序数组
+使用泡泡排序策略排序数组。
+
+使用快速排序策略排序数组。
 
 ### 何时使用策略设计模式
 
 在以下情况下使用策略模式：
 
-- * 许多相关的类仅在行为上不同。策略提供了一种为类配置多种行为之一一种的方法。
+- 许多相关的类仅在行为上不同。策略提供了一种为类配置多种行为之一的方法。
+- 你需要算法的不同变体。例如，你可能定义反映不同空间/时间权衡的算法。当这些变体作为算法的类层次结构实现时，可以使用策略。
+- 算法使用了客户端不应该感知的数据。使用策略模式可以避免暴露复杂的、特定算法的数据结构。
+- 一个类定义了许多行为，这些行为在它的操作中表现为多个条件语句。与其使用许多条件语句，不如将相关的条件分支移动到它自己的策略类中。
 
-- * 你需要算法的不同变体。例如，你可能定义反映不同空间/时间权衡的算法。当这些变体作为算法的类层次结构实现时，可以使用策略。
+### JDK 中的策略模式
 
-- * 算法使用了客户端不应该感知的数据。使用策略模式可以避免暴露复杂的、特定算法的数据结构。
-
-- * 一个类定义了许多行为，这些行为在它的操作中表现为多个条件语句。与其使用许多条件语句，不如将相关的条件分支移动到它自己的策略类中。
-
-### JDK 中的策略模式：
-
-- * java.util.Comparator#compare()
-
-- * javax.servlet.http.HttpServlet
-
-- * javax.servlet.Filter#doFilter()
+- `java.util.Comparator#compare()`
+- `javax.servlet.http.HttpServlet`
+- `javax.servlet.Filter#doFilter()`
 
 ## 命令模式
 
-命令模式是一种行为设计模式。在命令模式中，Command 接口声明了一个执行 `execute()` 特定动作的方法。具体命令类实现 Command 接口的 `execute()` 方法，而此 `execute()` 调用具体命令类所包含的 Receiver 类的适当动作方法。Receiver 执行一个特定的动作。Client 类负责创建具体命令并设置该具体命令的 Receiver。Invoker 类包含一个对 Command 的引用，并有一个执行该命令的方法。
+命令模式是一种行为设计模式。在命令模式中，`Command`接口声明了一个执行`execute()`特定动作的方法。具体命令类实现`Command`接口的`execute()`方法，而此`execute()`调用具体命令类所包含的`Receiver`类的适当动作方法。`Receiver`执行一个特定的动作。`Client`类负责创建具体命令并设置该具体命令的`Receiver`。`Invoker`类包含一个对`Command`的引用，并有一个执行该命令的方法。
 
 在命令模式中，调用者与接收者执行的动作解耦。调用者对接收者一无不知。调用者调用命令，而该命令执行接收者的适当动作。因此，调用者可以在不知道要执行的动作细节的情况下调用命令。此外，这种解耦意味着对接收者动作的更改不会直接影响动作的调用。
 
-命令模式可以用于执行“撤销（undo）”功能。在这种情况下，Command 接口应该包含一个 `execute()` 方法。
+命令模式可以用于执行“撤销（undo）”功能。在这种情况下，`Command`接口应该包含一个`execute()`方法。
 
-换句话之，它用于在请求-响应模型中实现松耦合。在命令模式中，请求发送给调用者，调用者将其传递给封装的命令对象。命令对象将请求传递给 Receiver 的适当方法以执行特定动作。客户端程序创建接收者对象并将其附加到命令上。然后它创建调用者对象并将命令对象附加以执行动作。现在当客户端执行动作时，它将根据命令和接收者对象进行处理。
+换句话说，它用于在请求-响应模型中实现松耦合。在命令模式中，请求发送给调用者，调用者将其传递给封装的命令对象。命令对象将请求传递给`Receiver`的适当方法以执行特定动作。客户端程序创建接收者对象并将其附加到命令上。然后它创建调用者对象并将命令对象附加以执行动作。现在当客户端执行动作时，它将根据命令和接收者对象进行处理。
 
 为了理解命令设计模式，我们应该理解相关的关键术语，如客户端、命令实现、调用者和接收者。
 
-- * Command 是一个带有 `execute` 方法的接口。它是约的核心。
-
-- * 客户端创建一个命令实现的实例，并将其与接收者关联。
-
-- * 调用者指示命令执行某项动作。
-
-- * 命令实现的实例在接收者和动作之间创建了绑定。
-
-- * Receiver 是知道执行动作的实际步骤的对象。任何类都可以充当接收者。
+- `Command`是一个带有`execute`方法的接口。它是约的核心。
+- 客户端创建一个命令实现的实例，并将其与接收者关联。
+- 调用者指示命令执行某项动作。
+- 命令实现的实例在接收者和动作之间创建了绑定。
+- `Receiver`是知道执行动作的实际步骤的对象。任何类都可以充当接收者。
 
 ```java
 /**
@@ -2146,7 +2179,7 @@ public class Lunch {
 
 ```java
 /**
-LunchCommand 实现 Command。它包含一个对 Lunch（接收者）的引用。
+ * LunchCommand 实现 Command。它包含一个对 Lunch（接收者）的引用。
  * 它的 execute() 方法调用接收者上的适当动作。
  */
 public class LunchCommand implements Command {
@@ -2166,7 +2199,7 @@ public class LunchCommand implements Command {
 
 ```java
 /**
-Dinner 也是一个接收者。
+ * Dinner 也是一个接收者。
  */
 public class Dinner {
 
@@ -2178,7 +2211,7 @@ public class Dinner {
 
 ```java
 /**
-DinnerCommand 与 LunchCommand 类似。
+ * DinnerCommand 与 LunchCommand 类似。
  * 它包含一个对 Dinner（接收者）的引用。
  * 它的 execute() 方法调用 Dinner 的 makeDinner() 动作。
  */
@@ -2199,7 +2232,7 @@ public class DinnerCommand implements Command {
 
 ```java
 /**
-* MealInvoker 是用于调用的类，调用者。
+ * MealInvoker 是用于调用的类，调用者。
  * 它包含一个对要调用的命令的引用。
  * 它的 invoke() 方法调用 Command 的 execute() 方法。
  */
@@ -2223,6 +2256,7 @@ public class MealInvoker {
 
 ```java
 package com.dev.dp.behavioral.command;
+
 public class CommandPatternDemo {
     public static void main(String[] args) {
         Lunch lunch = new Lunch(); // 接收者
@@ -2240,35 +2274,36 @@ public class CommandPatternDemo {
 }
 ```
 
-### 输出：
+### 输出
 
+```text
 Lunch is being made
+
 Dinner is being made.
+```
+
+## 访问者模式（VISITOR PATTERN）
 
 
 
-
-
-## 访问者模式 (VISITOR PATTERN)
+# 访问者模式（Visitor Pattern）
 
 当我们对一组相同类型的对象执行某些操作时，可以使用访问者模式。通过访问者模式，我们可以将操作逻辑从对象移动到另一个类。例如，想象一个购物车，其中我们可以添加不同类型的物品（元素），当点击结账按钮时，它会计算需要支付的总金额。现在我们可以将计算逻辑放在物品类中，也可以使用访问者模式将此逻辑移到另一个类。因此，使用访问者模式，我们可以将逻辑移到另一个类中。
 
-访问者模式允许在不改变集合中任何对象的类的情况下定义操作。为了实现这一点，访问者模式建议在一个名为访问者类（visitor class）的独立类中定义操作。这使得操作与其所操作的对象集合分离离开来。每一个要定义的操作，都会创建一个新的访问者类。由于操作是在一组对象上执行的，访问者需要一种访问这些对象公共成员的方法。
+访问者模式允许在不改变集合中任何对象的类的情况下定义操作。为了实现这一点，访问者模式建议在一个名为访问者类（visitor class）的独立类中定义操作。这使得操作与其所操作的对象集合分离开来。每一个要定义的操作，都会创建一个新的访问者类。由于操作是在一组对象上执行的，访问者需要一种访问这些对象公共成员的方法。
 
-访问者模式涉及以下组件：
+## 访问者模式涉及的组件
 
-- **Visitor（访问者）：** 为对象结构中的每个具体元素（ConcreteElement）类声明一个访问（Visit）。操作名称和签名标识了向访问者发送访问请求的类。这让访问者能够确定被访问元素的具体类。然后，访问者可以通过其特定的接口直接访问元素。
-
-- **ConcreteVisitor（具体访问者）：** 实现 Visitor 声明的每个操作。每个操作都实现了为结构中对应对象类定义的算法片段。ConcreteVisitor 为算法提供了上下文，并将其存储在它的本地状态中。该状态通常在遍历结构期间累积结果。
-
+- **Visitor（访问者）：** 为对象结构中的每个具体元素（`ConcreteElement`）类声明一个访问（Visit）。操作名称和签名标识了向访问者发送访问请求的类。这让访问者能够确定被访问元素的具体类。然后，访问者可以通过其特定的接口直接访问元素。
+- **ConcreteVisitor（具体访问者）：** 实现 `Visitor` 声明的每个操作。每个操作都实现了为结构中对应对象类定义的算法片段。`ConcreteVisitor` 为算法提供了上下文，并将其存储在它的本地状态中。该状态通常在遍历结构期间累积结果。
 - **Element（元素）：** 定义一个接受访问者作为参数的 `Accept` 操作。
-
 - **ConcreteElement（具体元素）：** 实现一个接受访问者作为参数的 `Accept` 操作。
-
 - **ObjectStructure（对象结构）：**
-    - 可以遍历它的元素。
-    - 可以提供一个高级接口，允许访问者访问它的元素。
-    - 可以是复合对象也可以是如列表或集合之类的集合。
+  - 可以遍历它的元素。
+  - 可以提供一个高级接口，允许访问者访问它的元素。
+  - 可以是复合对象，也可以是如列表或集合之类的集合。
+
+## 创建购物车元素
 
 为了实现访问者模式，首先我们将创建用于购物车的不同种的物品（元素）。
 
@@ -2285,6 +2320,7 @@ public interface ShoppingCartElement {
 
 ```java
 package com.dev.dp.behavioral.visitor;
+
 public class Book implements ShoppingCartElement {
     private int price;
     private String isbnNumber;
@@ -2346,11 +2382,226 @@ public class Fruit implements ShoppingCartElement {
 }
 ```
 
-我们在 Visitor 接口中为不同种的物品提供了 `visit()` 方法，将由具体访问者类实现。
+我们在 `Visitor` 接口中为不同种的物品提供了 `visit()` 方法，将由具体访问者类实现。
 
 ```java
 public interface ShoppingCartVisitor {
     // Visitor 接口中为不同种的物品提供的 visit() 方法
+    // 将由具体访问者类实现。
+    int visit(Book book);
+    int visit(Fruit fruit);
+}
+```
+
+现在我们将实现访问者接口，每个物品将有它自己的计算成本逻辑。
+
+```java
+public class ShoppingCartVisitorImpl implements ShoppingCartVisitor {
+    @Override
+    public int visit(Book book) {
+        // 如果书籍价格大于 50，则打 5% 折
+        int cost;
+        if(book.getPrice() > 50) {
+            cost = book.getPrice() - 5;
+        } else {
+            cost = book.getPrice();
+        }
+        System.out.println("Book ISBN:"+book.getIsbnNumber() + " - cost=" + cost + "");
+        return cost;
+    }
+
+    @Override
+    public int visit(Fruit fruit) {
+        int cost = fruit.getPricePerKg() * fruit.getWeight();
+        System.out.println(fruit.getName() + " - cost=" + cost + "");
+        return cost;
+    }
+}
+```
+
+## 在客户端应用程序中使用访问者模式
+
+让我们看看如何在客户端应用程序中使用它。
+
+```java
+public class VisitorTest {
+    public static void main(String[] args) {
+        ShoppingCartElement[] items = new ShoppingCartElement[]{
+            new Book(20, "1234"),
+            new Book(10, "5678"),
+            new Fruit(10, 1, "Banana"), new Fruit(5, 5, "Apple")
+        };
+        ShoppingCartVisitor visitor = new ShoppingCartVisitorImpl();
+        int total = 0;
+        for (ShoppingCartElement item : items) {
+            total += item.accept(visitor);
+        }
+        System.out.println("Total Cost " + total);
+    }
+
+    private static int calculatePrice(ShoppingCartElement[] items) {
+        ShoppingCartVisitor visitor = new ShoppingCartVisitorImpl();
+        int sum = 0;
+        for (ShoppingCartElement item : items) {
+            sum += item.accept(visitor);
+        }
+        return sum;
+    }
+}
+```
+
+输出：
+
+```text
+Book ISBN:1234 - cost=20
+Book ISBN:5678 - cost=10
+Banana - cost=10
+Apple - cost=25
+Total Cost 65
+```
+
+
+
+```java
+public class VisitorTest {
+    public static void main(String[] args) {
+        ShoppingCartElement[] items = new ShoppingCartElement[]{
+            new Book(20, "1234"),
+            new Book(10, "5678"),
+            new Fruit(10, 1, "Banana"), new Fruit(5, 5, "Apple")
+        };
+        ShoppingCartVisitor visitor = new ShoppingCartVisitorImpl();
+        int total = 0;
+        for (ShoppingCartElement item : items) {
+            total += item.accept(visitor);
+        }
+        System.out.println("Total Cost " + total);
+    }
+
+    private static int calculatePrice(ShoppingCartElement[] items) {
+        ShoppingCartVisitor visitor = new ShoppingCartVisitorImpl();
+        int sum = 0;
+        for (ShoppingCartElement item : items) {
+            sum += item.accept(visitor);
+        }
+        return sum;
+    }
+}
+```
+
+输出：
+
+```text
+Book ISBN:1234 - cost=20
+Book ISBN:5678 - cost=10
+Banana - cost=10
+Apple - cost=25
+Total Cost 65
+```
+
+## 访问者模式（VISITOR PATTERN）
+
+当我们对一组相同类型的对象执行某些操作时，可以使用访问者模式。通过访问者模式的帮助，我们可以将操作逻辑从对象移动到另一个类。
+
+例如，想象一个购物车，其中我们可以添加不同类型的物品（元素）。当点击结账按钮时，它会计算需要支付的总金额。现在我们可以将计算逻辑放在物品类中，也可以使用访问者模式将此逻辑移到另一个类。因此，使用访问者模式，我们可以将逻辑移到另一个类中。
+
+访问者模式允许在不改变集合中任何对象的类的情况下定义操作。为了实现这一点，访问者模式建议在一个名为访问者类（visitor class）的独立类中定义操作。这使得操作与其所操作的对象集合分离。每一个要定义的操作，都会创建一个新的访问者类。
+
+由于操作是在一组对象上执行的，访问者需要一种访问这些对象公共成员的方法。
+
+访问者模式涉及以下组件：
+
+- **Visitor（访问者）：** 为对象结构中的每个具体元素（ConcreteElement）类声明一个访问（Visit）。操作名称和签名标识了向访问者发送访问请求的类。这让访问者能够确定被访问元素的具体类。然后，访问者可以通过其特定的接口直接访问元素。
+- **ConcreteVisitor（具体访问者）：** 实现 Visitor 声明的每个操作。每个操作都实现了为结构中对应对象类定义的算法片段。ConcreteVisitor 为算法提供了上下文，并将其存储在它的本地状态中。该状态通常在遍历结构期间累积结果。
+- **Element（元素）：** 定义一个接受访问者作为参数的 `Accept` 操作。
+- **ConcreteElement（具体元素）：** 实现一个接受访问者作为参数的 `Accept` 操作。
+- **ObjectStructure（对象结构）：**
+  - 可以遍历它的元素。
+  - 可以提供一个高级接口，允许访问者访问它的元素。
+  - 可以是复合对象，也可以是如列表或集合之类的集合。
+
+为了实现访问者模式，首先我们将创建用于购物车的不同种类的物品（元素）。
+
+```java
+public interface ShoppingCartElement {
+    // 注意 accept 方法接收 Visitor 类型的参数，
+    // 为了简单起见，我们也可以有针对物品的其他方法，
+    // 例如，仅关注访问者模式的 addItem() 和 removeItem()。
+    public int accept(ShoppingCartVisitor visitor);
+}
+```
+
+让我们为不同种类的物品创建一些具体类。
+
+```java
+package com.dev.dp.behavioral.visitor;
+
+public class Book implements ShoppingCartElement {
+    private int price;
+    private String isbnNumber;
+
+    public Book(int cost, String isbn) {
+        this.price=cost;
+        this.isbnNumber=isbn;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public String getIsbnNumber() {
+        return isbnNumber;
+    }
+
+    @Override
+    // 注意具体类中 accept() 方法的实现，
+    // 它调用了 Visitor 的 visit() 方法并将自身作为参数传递。
+    public int accept(ShoppingCartVisitor visitor) {
+        // TODO Auto-generated method stub
+        return visitor.visit(this);
+    }
+}
+```
+
+```java
+package com.dp.behavioral.visitor;
+
+public class Fruit implements ShoppingCartElement {
+    private int pricePerKg;
+    private int weight;
+    private String name;
+
+    public Fruit(int priceKg, int wt, String name) {
+        this.pricePerKg=priceKg;
+        this.weight=wt;
+        this.name = name;
+    }
+
+    public int getPricePerKg() {
+        return pricePerKg;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
+    public int accept(ShoppingCartVisitor visitor) {
+        // TODO Auto-generated method stub
+        return visitor.visit(this);
+    }
+}
+```
+
+我们在 Visitor 接口中为不同种类的物品提供了 `visit()` 方法，将由具体访问者类实现。
+
+```java
+public interface ShoppingCartVisitor {
+    // Visitor 接口中为不同种类的物品提供的 visit() 方法
     // 将由具体访问者类实现。
     int visit(Book book);
     int visit(Fruit fruit);
@@ -2413,382 +2664,39 @@ public class VisitorTest {
 ```
 
 输出：
+
+```text
 Book ISBN:1234 - cost=20
 Book ISBN:5678 - cost=10
 Banana - cost=10
 Apple - cost=25
 Total Cost 65
-
-[continued]
-## 访问者模式 (VISITOR PATTERN)
-
-当我们对一组相同类型的对象执行某些操作时，可以使用访问者模式。通过访问者模式的帮助，我们可以将操作逻辑从对象移动到另一个类。例如，想象一个购物车，其中我们可以添加不同类型的物品（元素），当点击结账按钮时，它会计算需要支付的总金额。现在我们可以将计算逻辑放在物品类中，也可以使用访问者模式将此逻辑移到另一个类。因此，使用访问者模式，我们可以将逻辑移到另一个类中。
-
-访问者模式允许在不改变集合中任何对象的类的情况下定义操作。为了实现这一点，访问者模式建议在一个名为访问者类（visitor class）的独立类中定义操作。这使得操作与其所操作的对象集合离开来。每一个要定义的操作，都会创建一个新的访问者类。由于操作是在一组对象上执行的，访问者需要一种访问这些对象公共成员的方法。
-
-访问者模式涉及以下组件：
-
-- **Visitor（访问者）：** 为对象结构中的每个具体元素（ConcreteElement）类声明一个访问（Visit）。操作名称和签名标识了向访问者发送访问请求的类。这让访问者能够确定被访问元素的具体类。然后，访问者可以通过其特定的接口直接访问元素。
-
-- **ConcreteVisitor（具体访问者）：** 实现 Visitor 声明的每个操作。每个操作都实现了为结构中对应对象类定义的算法片段。ConcreteVisitor 为算法提供了上下文，并将其存储在它的本地状态中。该状态通常在遍历结构期间累积结果。
-
-- **Element（元素）：** 定义一个接受访问者作为参数的 `Accept` 操作。
-
-- **ConcreteElement（具体元素）：** 实现一个接受访问者作为参数的 `Accept` 操作。
-
-- **ObjectStructure（对象结构）：**
-    - 可以遍历它的元素。
-    - 可以提供一个高级接口，允许访问者访问它的元素。
-    - 可以是复合对象也可以是如列表或集合之类的集合。
-
-为了实现访问者模式，首先我们将创建用于购物车的不同种的物品（元素）。
-
-```java
-public interface ShoppingCartElement {
-    // 注意 accept 方法接收 Visitor 类型的参数，
-    // 为了简单起见，我们也可以有针对物品的其他方法，
-    // 例如，仅关注访问者模式的 addItem() 和 removeItem()。
-    public int accept(ShoppingCartVisitor visitor);
-}
 ```
 
-让我们为不同种的物品创建一些具体类。
-
-```java
-package com.dev.dp.behavioral.visitor;
-public class Book implements ShoppingCartElement {
-    private int price;
-    private String isbnNumber;
-
-    public Book(int cost, String isbn) {
-        this.price=cost;
-        this.isbnNumber=isbn;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public String getIsbnNumber() {
-        return isbnNumber;
-    }
-
-    @Override
-    // 注意具体类中 accept() 方法的实现，
-    // 它调用了 Visitor 的 visit() 方法并将自身作为参数传递。
-    public int accept(ShoppingCartVisitor visitor) {
-        // TODO Auto-generated method stub
-        return visitor.visit(this);
-    }
-}
-```
-
-```java
-package com.dp.behavioral.visitor;
-
-public class Fruit implements ShoppingCartElement {
-    private int pricePerKg;
-    private int weight;
-    private String name;
-
-    public Fruit(int priceKg, int wt, String name) {
-        this.pricePerKg=priceKg;
-        this.weight=wt;
-        this.name = name;
-    }
-
-    public int getPricePerKg() {
-        return pricePerKg;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    @Override
-    public int accept(ShoppingCartVisitor visitor) {
-        // TODO Auto-generated method stub
-        return visitor.visit(this);
-    }
-}
-```
-
-我们在 Visitor 接口中为不同种的物品提供了 `visit()` 方法，将由具体访问者类实现。
-
-```java
-public interface ShoppingCartVisitor {
-    // Visitor 接口中为不同种的物品提供的 visit() 方法
-    // 将由具体访问者类实现。
-    int visit(Book book);
-    int visit(Fruit fruit);
-}
-```
-
-现在我们将实现访问者接口，每个物品将有它自己的计算成本逻辑。
-
-```java
-public class ShoppingCartVisitorImpl implements ShoppingCartVisitor {
-    @Override
-    public int visit(Book book) {
-        // 如果书籍价格大于 50，则打 5% 折
-        int cost;
-        if(book.getPrice() > 50) {
-            cost = book.getPrice() - 5;
-        } else {
-            cost = book.getPrice();
-        }
-        System.out.println("Book ISBN:"+book.getIsbnNumber() + " - cost=" + cost + "");
-        return cost;
-    }
-
-    @Override
-    public int visit(Fruit fruit) {
-        int cost = fruit.getPricePerKg() * fruit.getWeight();
-        System.out.println(fruit.getName() + " - cost=" + cost + "");
-        return cost;
-    }
-}
-```
-
-让我们看看如何在客户端应用程序中使用它。
-
-```java
-public class VisitorTest {
-    public static void main(String[] args) {
-        ShoppingCartElement[] items = new ShoppingCartElement[]{
-            new Book(20, "1234"),
-            new Book(10, "5678"),
-            new Fruit(10, 1, "Banana"), new Fruit(5, 5, "Apple")
-        };
-        ShoppingCartVisitor visitor = new ShoppingCartVisitorImpl();
-        int total = 0;
-        for (ShoppingCartElement item : items) {
-            total += item.accept(visitor);
-        }
-        System.out.println("Total Cost " + total);
-    }
-
-    private static int calculatePrice(ShoppingCartElement[] items) {
-        ShoppingCartVisitor visitor = new ShoppingCartVisitorImpl();
-        int sum = 0;
-        for (ShoppingCartElement item : items) {
-            sum += item.accept(visitor);
-        }
-        return sum;
-    }
-}
-```
-
-输出：
-Book ISBN:1234 - cost=20
-Book ISBN:5678 - cost=10
-Banana - cost=10
-Apple - cost=25
-Total Cost 65
-
-## 访问者模式 (VISITOR PATTERN)
-
-当我们对一组相同类型的对象执行某些操作时，可以使用访问者模式。通过访问者模式的帮助，我们可以将操作逻辑从对象移动到另一个类。例如，想象一个购物车，其中我们可以添加不同类型的物品（元素），当点击结账按钮时，它会计算需要支付的总金额。现在我们可以将计算逻辑放在物品类中，也可以使用访问者模式将此逻辑移到另一个类。因此，使用访问者模式，我们可以将逻辑移到另一个类中。
-
-访问者模式允许在不改变集合中任何对象的类的情况下定义操作。为了实现这一点，访问者模式建议在一个名为访问者类（visitor class）的独立类中定义操作。这使得操作与其所操作的对象集合离开来。每一个要定义的操作，都会创建一个新的访问者类。由于操作是在一组对象上执行的，访问者需要一种访问这些对象公共成员的方法。
-
-访问者模式涉及以下组件：
-
-- **Visitor（访问者）：** 为对象结构中的每个具体元素（ConcreteElement）类声明一个访问（Visit）。操作名称和签名标识了向访问者发送访问请求的类。这让访问者能够确定被访问元素的具体类。然后，访问者可以通过其特定的接口直接访问元素。
-
-- **ConcreteVisitor（具体访问者）：** 实现 Visitor 声明的每个操作。每个操作都实现了为结构中对应对象类定义的算法片段。ConcreteVisitor 为算法提供了上下文，并将其存储在它的本地状态中。该状态通常在遍历结构期间累积结果。
-
-- **Element（元素）：** 定义一个接受访问者作为参数的 `Accept` 操作。
-
-- **ConcreteElement（具体元素）：** 实现一个接受访问者作为参数的 `Accept` 操作。
-
-- **ObjectStructure（对象结构）：**
-    - 可以遍历它的元素。
-    - 可以提供一个高级接口，允许访问者访问它的元素。
-    - 可以是复合对象也可以是如列表或集合之类的集合。
-
-为了实现访问者模式，首先我们将创建用于购物车的不同种的物品（元素）。
-
-```java
-public interface ShoppingCartElement {
-    // 注意 accept 方法接收 Visitor 类型的参数，
-    // 为了简单起见，我们也可以有针对物品的其他方法，
-    // 例如，仅关注访问者模式的 addItem() 和 removeItem()。
-    public int accept(ShoppingCartVisitor visitor);
-}
-```
-
-让我们为不同种的物品创建一些具体类。
-
-```java
-package com.dev.dp.behavioral.visitor;
-public class Book implements ShoppingCartElement {
-    private int price;
-    private String isbnNumber;
-
-    public Book(int cost, String isbn) {
-        this.price=cost;
-        this.isbnNumber=isbn;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public String getIsbnNumber() {
-        return isbnNumber;
-    }
-
-    @Override
-    // 注意具体类中 accept() 方法的实现，
-    // 它调用了 Visitor 的 visit() 方法并将自身作为参数传递。
-    public int accept(ShoppingCartVisitor visitor) {
-        // TODO Auto-generated method stub
-        return visitor.visit(this);
-    }
-}
-```
-
-```java
-package com.dp.behavioral.visitor;
-
-public class Fruit implements ShoppingCartElement {
-    private int pricePerKg;
-    private int weight;
-    private String name;
-
-    public Fruit(int priceKg, int wt, String name) {
-        this.pricePerKg=priceKg;
-        this.weight=wt;
-        this.name = name;
-    }
-
-    public int getPricePerKg() {
-        return pricePerKg;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    @Override
-    public int accept(ShoppingCartVisitor visitor) {
-        // TODO Auto-generated method stub
-        return visitor.visit(this);
-    }
-}
-```
-
-我们在 Visitor 接口中为不同种的物品提供了 `visit()` 方法，将由具体访问者类实现。
-
-```java
-public interface ShoppingCartVisitor {
-    // Visitor 接口中为不同种的物品提供的 visit() 方法
-    // 将由具体访问者类实现。
-    int visit(Book book);
-    int visit(Fruit fruit);
-}
-```
-
-现在我们将实现访问者接口，每个物品将有它自己的计算成本逻辑。
-
-```java
-public class ShoppingCartVisitorImpl implements ShoppingCartVisitor {
-    @Override
-    public int visit(Book book) {
-        // 如果书籍价格大于 50，则打 5% 折
-        int cost;
-        if(book.getPrice() > 50) {
-            cost = book.getPrice() - 5;
-        } else {
-            cost = book.getPrice();
-        }
-        System.out.println("Book ISBN:"+book.getIsbnNumber() + " - cost=" + cost + "");
-        return cost;
-    }
-
-    @Override
-    public int visit(Fruit fruit) {
-        int cost = fruit.getPricePerKg() * fruit.getWeight();
-        System.out.println(fruit.getName() + " - cost=" + cost + "");
-        return cost;
-    }
-}
-```
-
-让我们看看如何在客户端应用程序中使用它。
-
-```java
-public class VisitorTest {
-    public static void main(String[] args) {
-        ShoppingCartElement[] items = new ShoppingCartElement[]{
-            new Book(20, "1234"),
-            new Book(10, "5678"),
-            new Fruit(10, 1, "Banana"), new Fruit(5, 5, "Apple")
-        };
-        ShoppingCartVisitor visitor = new ShoppingCartVisitorImpl();
-        int total = 0;
-        for (ShoppingCartElement item : items) {
-            total += item.accept(visitor);
-        }
-        System.out.println("Total Cost " + total);
-    }
-
-    private static int calculatePrice(ShoppingCartElement[] items) {
-        ShoppingCartVisitor visitor = new ShoppingCartVisitorImpl();
-        int sum = 0;
-        for (ShoppingCartElement item : items) {
-            sum += item.accept(visitor);
-        }
-        return sum;
-    }
-}
-```
-
-输出：
-Book ISBN:1234 - cost=20
-Book ISBN:5678 - cost=10
-Banana - cost=10
-Apple - cost=25
-Total Cost 65
-
-### 何时使用访问者模式：
+### 何时使用访问者模式
 
 在以下情况使用访问者模式：
 
 - 对象结构包含许多具有不同接口的类，并且你想执行依赖于这些具体类的操作。对象结构被许多应用程序共享，你希望避免用操作“污染”它们的类。
 - 定义对象结构的类很少改变，但你经常想要定义新的操作。更改对象结构需要重新定义所有的访问者，这可能是高昂成本的。如果对象结构类经常变化，那么在这些类中定义操作可能更好。
 
-### JDK 中的访问者模式：
+### JDK 中的访问者模式
 
 - `javax.lang.model.element.Element` 和 `javax.lang.model.element.ElementVisitor`
 - `javax.lang.model.type.TypeMirror` 和 `javax.lang.model.type.TypeVisitor`
 
-## 状态模式 (STATE PATTERN)
+## 状态模式（STATE PATTERN）
 
 当对象在其内部状态改变时改变其行为，可以使用状态设计模式。
 
 对象的状态可以定义为在任何给定时间的精确状况，取决于其属性的值。一个类实现的方法集构成了实例的行为。每当属性值发生变化时，我们就说对象的状态改变了。
 
-当 Context 对象首次创建时，它初始化为其初始状态对象。该状态对象成为当前的当前状态对象。通过将当前状态对象替换为新的状态对象，上下文切换到新状态。当应用程序对象调用 Context 方法时，它将方法转发给它的状态对象。
+当 Context 对象首次创建时，它初始化为其初始状态对象。该状态对象成为当前状态对象。通过将当前状态对象替换为新的状态对象，上下文切换到新状态。当应用程序对象调用 Context 方法时，它将方法转发给它的状态对象。
 
-**Context（上下文）：** 定义客户端感兴趣的接口。
-
-    - 维护一个 ConcreteState 子类的实例，以定义当前状态。
-
-**State（状态）：** 定义一个用于封装与 Context 特定状态相关行为的接口。
-
-**ConcreteState 子类（具体状态子类）：** 每个子类实现与 Context 的某个状态相关的行为。
-
-
+- **Context（上下文）：** 定义客户端感兴趣的接口。
+  - 维护一个 ConcreteState 子类的实例，以定义当前状态。
+- **State（状态）：** 定义一个用于封装与 Context 特定状态相关行为的接口。
+- **ConcreteState 子类（具体状态子类）：** 每个子类实现与 Context 的某个状态相关的行为。
 
 ```java
 public class Ringing implements MobileState {
@@ -2820,12 +2728,15 @@ public class Vibration implements MobileState {
 ```java
 public class MobileContext implements MobileState{
     private MobileState mobileState;
+
     public void setMobileState(MobileState state) {
         mobileState=state;
     }
+
     public MobileContext(MobileState mobileState) {
         this.mobileState= mobileState;
     }
+
     public void getState() {
         mobileState.getState();
     }
@@ -2852,19 +2763,18 @@ public class StatePatternTest {
 
 使用状态模式实现多态行为的优势显而易见，出错概率较低，且非常容易为额外的行为添加更多状态，使其更加健壮、易于维护且灵活。此外，状态模式有助于避免在此场景下出现 if-else 或 switch-case 条件逻辑。
 
-### 何时使用状态设计模式：
+### 何时使用状态设计模式
 
 在以下情况下使用状态模式：
 
--get对象的行为取决于它的状态，并且必须根据该状态在运行时改变其行为。
-
+- 对象的行为取决于它的状态，并且必须根据该状态在运行时改变其行为。
 - 操作具有依赖对象状态的大型多部分条件语句。这种状态通常由一个或多个枚举常量表示。通常，多个操作会包含相同的条件结构。状态模式将条件的每个分支放在单独的类中。这允许你将对象的状态视为一个独立的对象，它可以与其他对象独立地变化。
 
-### Java 中的状态设计模式：
+### Java 中的状态设计模式
 
-- javax.faces.lifecycle.Lifecycle#execute()
+- `javax.faces.lifecycle.Lifecycle#execute()`
 
-## 迭代器模式 (ITERATOR PATTERN)
+## 迭代器模式（ITERATOR PATTERN）
 
 迭代器模式是行为模式之一，用于提供遍历一组对象的标准方法。迭代器模式在 Java 集合框架中广泛使用，Iterator 接口提供了遍历集合的方法。
 
@@ -2872,64 +2782,65 @@ public class StatePatternTest {
 
 迭代器模式不仅关于遍历集合；我们还可以根据需求提供不同的迭代器。迭代器模式隐藏了遍历集合的实际实现，客户端程序只需使用迭代器方法。迭代器对象包含公共方法，允许客户端对象导航通过容器内部的对象列表。
 
-### 迭代器 (Iterator)
+### 迭代器（Iterator）
 
 - 定义了一个用于访问和遍历元素的接口。
 
-### 具体的迭代器 (ConcreteIterator)
+### 具体的迭代器（ConcreteIterator）
 
 - 实现 Iterator 接口。
+
+
+
 - 跟踪聚合对象遍历中的当前位置。
 
-### 聚合 (Aggregate)
+### 聚合（Aggregate）
 
 - 定义了一个创建迭代器对象的接口。
 
-### 具体的聚合 (ConcreteAggregate)
+### 具体聚合（ConcreteAggregate）
 
 - 实现迭代器创建接口，以返回相应具体迭代器的实例。
 
-### 何时使用迭代器设计模式：
+### 何时使用迭代器设计模式
 
 使用迭代器模式：
 
 - 在不暴露其内部表示的情况下访问聚合对象的内容。
 - 支持对聚合对象进行多次遍历。
-- 为遍历不同的聚合结构提供统一的接口（即支持多态迭代）。
+- 为遍历不同的聚合结构提供统一的接口，即支持多态迭代。
 - 当你想提供一种遍历集合的标准方法并向客户端程序隐藏实现时，迭代器模式非常有用。
 
-### JDK 中的迭代器模式：
+### JDK 中的迭代器模式
 
-- java.util.Iterator
-- java.util.Enumeration
+- `java.util.Iterator`
+- `java.util.Enumeration`
 
-## 解释器模式 (INTERPRETER PATTERN)
+## 解释器模式（Interpreter Pattern）
 
 解释器模式是行为设计模式之一，用于为语言定义句法表示，并提供一个解释器来处理这种句法。该模式的最好例子是 Java 编译器，它将源代码解释为 JVM 可以理解的字节码。Google 翻译器也是解释器模式的一个例子，输入可以是任何语言，而我们可以得到翻译成另一种语言的输出。
 
-要实现解释器模式，我们需要创建一个解释器上下文引擎来执行解释工作，然后我们需要创建不同的表达式（Expression）实现，它们将消耗解释器上下文提供的功能。最后，我们需要创建一个客户端，它接收用户的输入并决定使用哪种表达式，然后为用户生成输出。
+要实现解释器模式，我们需要创建一个解释器上下文引擎来执行解释工作，然后我们需要创建不同的表达式（`Expression`）实现，它们将消耗解释器上下文提供的功能。最后，我们需要创建一个客户端，它接收用户的输入并决定使用哪种表达式，然后为用户生成输出。
 
 ### 何时使用解释器设计模式
 
 当存在需要解释的语言，并且你可以将语言中的语句表示为抽象语法树时，请使用解释器模式。解释器模式在以下情况下效果最好：
 
 - 语法简单。对于复杂的语法，语法的类层次结构会变得巨大且不可管理。在这种情况下，解析器生成器等工具是更好的选择。它们可以在不构建抽象语法树的情况下解析表达式，从而节省空间和时间。
+- 效率不是关键考虑因素。最高效的解释器通常不是通过直接解释解析树实现的，而是通过将其转换为另一种形式。例如，正则表达式通常转换为状态机。但即使如此，翻译器也可以通过解释器模式实现，因此该模式仍然适用。
 
-- 效率不是关键考虑因素。最高解释器通常不是通过直接解释解析树实现的，而是通过将其转换为另一种形式。例如，正则表达式通常转换为状态机。但即使如此，翻译器也可以通过解释器模式实现，因此该模式仍然适用。
+### JDK 中的解释器模式
 
-### JDK 中的解释器模式：
+- `java.util.Pattern`
+- `java.text.Normalizer`
+- `java.text.Format`
 
-- java.util.Pattern
-- java.text.Normalizer
-- java.text.Format
+## 备忘录模式（Memento Pattern）
 
-## 备忘模式 (MEMENTO PATTERN)
+备忘录模式是行为模式之一。当我们想要保存对象的状态以便以后恢复时，就会使用备忘录模式。备忘录模式的实现方式使得保存的对象数据在对象外部是不可见的；这保护了保存状态数据的完整性。
 
-备忘模式是行为模式之一。当我们想要保存对象的状态以便以后恢复时，就会使用备忘模式。备忘模式的实现方式使得保存的对象数据在对象外部是不可见的；这保护了保存状态数据的完整性。
+备忘录模式通过两个对象实现——源发者（Originator）和看护者（Caretaker）。源发者是需要保存和恢复状态的对象，它使用一个内部类来保存状态。该内部类被称为备忘录（Memento），它是私有的，因此不能从其他对象访问。
 
-备忘模式通过两个对象实现——源源者（Originator）和被护者（Caretaker）。源者是需要保存和恢复状态的对象，它使用一个内部类来保存状态。该内部类被称为备忘录（Memento），它是私有的，因此不能从其他对象访问。
+看护者是辅助类，负责通过备忘录对象存储和恢复源发者的状态。由于备忘录对源发者是私有的，看护者无法访问它，它作为对象存储在看护者内部。
 
-被护者是辅助类，负责通过备忘录对象存储和恢复源者的状态。由于备忘录对源者是私有的，被护者无法访问它，它作为对象存储在被护者内部。
-
-现实生活中最好的例子之一是文本编辑器，我们可以随时保存数据并使用撤销（undo）将其恢复到之前保存的状态。我们将实现相同的功能，并提供一个实用程序，随时将内容写入并保存到文件中，然后将其恢复到上次保存的状态。为了简单起见，我将不会使用任何 IO 操作将数据写入文件。
-
+现实生活中最好的例子之一是文本编辑器，我们可以随时保存数据并使用撤销（`undo`）将其恢复到之前保存的状态。我们将实现相同的功能，并提供一个实用程序，随时将内容写入并保存到文件中，然后将其恢复到上次保存的状态。为了简单起见，我将不会使用任何 IO 操作将数据写入文件。

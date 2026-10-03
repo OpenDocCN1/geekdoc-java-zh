@@ -1,3 +1,4 @@
+
 # 2020 年 HTML、CSS 和 UI 界面的 9 本最佳网页设计书籍
 
 > 原文：<https://medium.com/javarevisited/the-best-9-web-design-books-for-html-css-and-ui-interfaces-in-2020-e1513836a3a9?source=collection_archive---------0----------------------->
@@ -12,7 +13,7 @@
 
 他们不仅会教你设计规范，还会帮助你开发自己的艺术设计水平。现在让我们来看看它们。
 
-## 1.[深度 CSS](https://amzn.to/3l0R4rK)
+## 1. [深度 CSS](https://amzn.to/3l0R4rK)
 
 ![](img/17d7c54ca0c1cbe465e3a55a3d59efa1.png)
 
@@ -24,7 +25,7 @@ Web 开发人员必须至少了解 HTML 和 CSS 的基础知识。如果你想�
 
 有了最先进的例子和练习，这本书一定会让你的 CSS 技能更上一层楼。从基本的设计到高级的 CSS 设计概念，在你掌握 CSS 的过程中，你会体验到这一切。这本书的目的是让你成为一个更好的网页设计师，让你的网页应用看起来更壮观。
 
-## 2.[持久 CSS](https://amzn.to/364kctW)
+## 2. [持久 CSS](https://amzn.to/364kctW)
 
 ![](img/45f19a6096a7b155fbc0238408ad4cd9.png)
 
@@ -42,17 +43,17 @@ Web 开发人员必须至少了解 HTML 和 CSS 的基础知识。如果你想�
 
 这本书旨在帮助我们在不改变其整体功能的情况下，重新编写模块化和可扩展的设计元素和属性。它向我介绍了重构 CSS 代码的最佳实践、示例和概念，并对它们进行了单元测试。总的来说，这本书提供了大量关于 CSS 如何工作以及重构如何使代码更有效，以及从长远来看如何扩展的知识。
 
-## 4.[原子设计](https://bradfrost.com/blog/post/atomic-web-design/)
+## 4. [原子设计](https://bradfrost.com/blog/post/atomic-web-design/)
 
 ![](img/79f92456660d94d78e0920b18d4757b9.png)
 
-Brad Frost 写的《原子设计》一书介绍了将我们的[ui](https://javarevisited.blogspot.com/2020/06/top-5-courses-to-learn-ux-design-in.html)设计成有思想层次的技术。这本书还讨论了有效模式库的品质以及转换团队设计和开发工作流的方法。
+Brad Frost 写的《原子设计》一书介绍了将我们的 [ui](https://javarevisited.blogspot.com/2020/06/top-5-courses-to-learn-ux-design-in.html) 设计成有思想层次的技术。这本书还讨论了有效模式库的品质以及转换团队设计和开发工作流的方法。
 
 作为一个设计关注点，本书提供的这个原子设计概念将设计组件分为原子、分子、有机体、模板、页面等不同层次。它们基本上有助于理解被称为原子的最奇异的设计单位，当适当地构造时，原子变成分子。
 
 具有正确组合模式的分子设计成为一个有机体。有机体用我们应用于页面的模板中的适当设计模式准确地放置。因此，从这本书里学习设计基本上就像学习化学一样，设计元素就是化学物质。这的确是一本有趣的书。
 
-## [5。CSS 秘密](https://amzn.to/3fxAVZM)
+## 5. [CSS 秘密](https://amzn.to/3fxAVZM)
 
 ![](img/cfb81f7346a808c79f9b736acb94ce50.png)
 
@@ -62,7 +63,7 @@ Brad Frost 写的《原子设计》一书介绍了将用户界面设计成有思
 
 具有正确组合模式的分子设计成为一个有机体。有机体用我们应用于页面的模板中的适当设计模式准确地放置。因此，从这本书里学习设计基本上就像学习化学一样，设计元素就是化学物质。这的确是一本有趣的书。
 
-## [6。HTML & CSS(也是 jQuery one)](https://amzn.to/3nY8rv0)
+## 6. [HTML & CSS(也是 jQuery one)](https://amzn.to/3nY8rv0)
 
 ![](img/01e6c9720e1fec7274377e5483bec588.png)
 
@@ -70,9 +71,9 @@ Brad Frost 写的《原子设计》一书介绍了将用户界面设计成有思
 
 在一天结束时，你将能够设计自己的网页，并让他们在瞬间上线。课程很简单，有一步一步的指导，从头开始构建设计概念。
 
-主要亮点是最常见的 web 开发任务的逐步说明，应用[设计模式](/javarevisited/7-best-online-courses-to-learn-object-oriented-design-pattern-in-java-749b6399af59)的实际例子，以及帮助您测试课程知识积累的练习。总的来说，这本书可以让你成为网页设计和开发领域的专家。
+主要亮点是最常见的 web 开发任务的逐步说明，应用 [设计模式](/javarevisited/7-best-online-courses-to-learn-object-oriented-design-pattern-in-java-749b6399af59) 的实际例子，以及帮助您测试课程知识积累的练习。总的来说，这本书可以让你成为网页设计和开发领域的专家。
 
-## [7。准备 CSS 网格布局](https://abookapart.com/products/get-ready-for-css-grid-layout)
+## 7. [准备 CSS 网格布局](https://abookapart.com/products/get-ready-for-css-grid-layout)
 
 ![](img/5a8ec081869e74c15a2e419c542fd578.png)
 
@@ -82,7 +83,7 @@ Brad Frost 写的《原子设计》一书介绍了将用户界面设计成有思
 
 通过学习本书的内容，你可以快速掌握网格布局的第二级，并深入研究可以立即进行实验的工作示例。您将能够利用子网格的能力和潜力，这使得将嵌套网格项目与主网格结合起来变得简单而容易。
 
-## [8。CSS:权威指南:Web 的可视化展示](https://amzn.to/3nUkOby)
+## 8. [CSS:权威指南:Web 的可视化展示](https://amzn.to/3nUkOby)
 
 ![](img/c3d12c5bd49704360553506a47e2ff3b.png)
 
@@ -92,7 +93,7 @@ Brad Frost 写的《原子设计》一书介绍了将用户界面设计成有思
 
 体验本书的知识深度，你将能够通过布局、过渡和动画、边框、背景、文本属性和许多其他工具和技术，将令人敬畏的设计元素深度添加到你的应用程序中。这本提升你网页设计技能的指南是必读的。
 
-## [9。面向网页设计师的 CSS3】](https://abookapart.com/products/css3-for-web-designers)
+## 9. [面向网页设计师的 CSS3](https://abookapart.com/products/css3-for-web-designers)
 
 ![](img/74db083212af3d040e545ece643b1d82.png)
 
@@ -108,7 +109,7 @@ CSS3 通过引入高级选择器为 web 字体、渐变、阴影、圆角以及�
 
 为了获得专业知识，一个人必须深入 CSS 样式坑，从最佳实践和技术中学习，并用所有可能的设计标准挑战它们。
 
-因此，这些书籍将帮助你做到这一点。用关于[网页设计](/javarevisited/7-free-courses-to-learn-bootstrap-for-web-designers-and-developers-5135215648f1)的最佳书籍来启发自己，将你的设计生涯带到新的高度。
+因此，这些书籍将帮助你做到这一点。用关于 [网页设计](/javarevisited/7-free-courses-to-learn-bootstrap-for-web-designers-and-developers-5135215648f1) 的最佳书籍来启发自己，将你的设计生涯带到新的高度。
 
 学习标准的 CSS 样式机制对于任何 web 开发人员来说都是必不可少的。如果你想踏上成为专家 web 开发人员的旅程，你可以查看一些标准的和成熟的 web 开发教程。让自己熟悉 web 开发伦理和不同的 [*JavaScript 框架*](/javarevisited/10-javascript-frameworks-and-libraries-to-learn-in-2020-best-of-lot-5f61f86c60b4) 。
 

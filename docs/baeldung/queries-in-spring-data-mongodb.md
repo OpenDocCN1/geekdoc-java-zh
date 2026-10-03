@@ -1,3 +1,4 @@
+
 # Spring Data MongoDB 中的查询指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/queries-in-spring-data-mongodb>
@@ -433,32 +434,34 @@ List<User> findUsersByRegexpName(String regexp);
 List<User> users = userRepository.findUsersByRegexpName("^A"); 
 ```
 
+
+
 ```java
 List<User> users = userRepository.findUsersByRegexpName("c$");
 ```
 
-### 4.3。`$lt`和`$gt`
+### 4.3. `$lt` 和 `$gt`
 
-现在让我们实现 lt 和`gt`查询:
+现在让我们实现 `lt` 和 `gt` 查询：
 
 ```java
 @Query("{ 'age' : { $gt: ?0, $lt: ?1 } }")
 List<User> findUsersByAgeBetween(int ageGT, int ageLT);
 ```
 
-现在这个方法有两个参数，我们在原始查询中通过索引引用每个参数，`?0`和`?1:`
+这个方法有两个参数，我们在原始查询中通过索引引用每个参数，即 `?0` 和 `?1`：
 
 ```java
 List<User> users = userRepository.findUsersByAgeBetween(20, 50);
 ```
 
-## 5。QueryDSL 查询
+## 5. QueryDSL 查询
 
-`MongoRepository`很好地支持了 [QueryDSL](https://web.archive.org/web/20220625163339/http://www.querydsl.com/) 项目，所以我们也可以在这里利用这个漂亮的、类型安全的 API。
+`MongoRepository` 很好地支持了 [QueryDSL](https://web.archive.org/web/20220625163339/http://www.querydsl.com/) 项目，所以我们也可以在这里利用这个类型安全的 API。
 
-### 5.1。美芬依赖
+### 5.1. Maven 依赖
 
-首先，让我们确保在 pom 中定义了正确的 Maven 依赖项:
+首先，在 `pom` 中定义正确的 Maven 依赖项：
 
 ```java
 <dependency>
@@ -473,11 +476,11 @@ List<User> users = userRepository.findUsersByAgeBetween(20, 50);
 </dependency>
 ```
 
-### 5.2。 `Q`-班级
+### 5.2. `Q` 类
 
-QueryDSL 使用 Q-class 来创建查询，但是由于我们并不真的想要手工创建这些查询，**我们需要以某种方式生成它们**。
+QueryDSL 使用 `Q` 类来创建查询。由于我们不想手工创建这些类，**我们需要以某种方式生成它们**。
 
-我们将使用 apt-maven-plugin 来完成这项工作:
+我们将使用 `apt-maven-plugin` 来完成这项工作：
 
 ```java
 <plugin>    
@@ -500,7 +503,7 @@ QueryDSL 使用 Q-class 来创建查询，但是由于我们并不真的想要�
 </plugin>
 ```
 
-让我们看看`User`类，特别关注`@QueryEntity`注释:
+让我们看看 `User` 类，特别关注 `@QueryEntity` 注释：
 
 ```java
 @QueryEntity 
@@ -516,7 +519,7 @@ public class User {
 }
 ```
 
-在运行了 Maven 生命周期的`process` 目标(或之后的任何其他目标)之后，apt 插件**将在`target/generated-sources/java/{your package structure}`下生成新的类**:
+在运行了 Maven 生命周期的 `process` 目标（或之后的任何其他目标）之后，`apt` 插件**将在 `target/generated-sources/java/{your package structure}` 下生成新的类**：
 
 ```java
 /**
@@ -549,15 +552,15 @@ public class QUser extends EntityPathBase<User> {
 }
 ```
 
-正是因为有了这个类，我们才不需要创建查询。
+正是因为有了这个类，我们才不需要手动创建查询。
 
-顺便提一下，如果我们使用 Eclipse，引入这个插件将在 pom 中生成以下警告:
+顺便提一下，如果我们使用 Eclipse，引入这个插件将在 `pom` 中生成以下警告：
 
 > `You need to run build with JDK or have tools.jar on the classpath. If this occurs during eclipse build make sure you run eclipse under JDK as well (com.mysema.maven:apt-maven-plugin:1.1.3:process:default:generate-sources`
 
-Maven `install`工作正常，并且生成了`QUser`类，但是 pom 中突出显示了一个插件。
+Maven `install` 工作正常，并且生成了 `QUser` 类，但是 `pom` 中突出显示了一个插件。
 
-一个快速解决方法是手动指向`eclipse.ini`中的 JDK:
+一个快速解决方法是手动指向 `eclipse.ini` 中的 JDK：
 
 ```java
 ...
@@ -565,20 +568,20 @@ Maven `install`工作正常，并且生成了`QUser`类，但是 pom 中突出�
 {path_to_jdk}\jdk{your_version}\bin\javaw.exe
 ```
 
-### 5.3。`The New Repository`
+### 5.3. 新仓库
 
-现在我们需要在我们的存储库中实际启用 QueryDSL 支持，这可以通过简单地用**扩展`QueryDslPredicateExecutor` 接口**来完成:
+现在我们需要在存储库中实际启用 QueryDSL 支持，这可以通过简单地**扩展 `QueryDslPredicateExecutor` 接口**来完成：
 
 ```java
 public interface UserRepository extends 
   MongoRepository<User, String>, QuerydslPredicateExecutor<User>
 ```
 
-### 5.4。`Eq`
+### 5.4. 相等查询
 
-启用支持后，**现在让我们实现与我们之前演示的相同的查询**。
+启用支持后，**现在让我们实现与之前演示的相同查询**。
 
-我们从简单的等式开始:
+我们从简单的等式开始：
 
 ```java
 QUser qUser = new QUser("user");
@@ -586,9 +589,9 @@ Predicate predicate = qUser.name.eq("Eric");
 List<User> users = (List<User>) userRepository.findAll(predicate);
 ```
 
-### 5.5。`StartingWith`和`EndingWith`
+### 5.5. `StartingWith` 和 `EndingWith`
 
-类似地，让我们实现前面的查询，并查找名称以`A`开头的用户:
+类似地，实现前面的查询，查找名称以 `A` 开头的用户：
 
 ```java
 QUser qUser = new QUser("user");
@@ -596,7 +599,7 @@ Predicate predicate = qUser.name.startsWith("A");
 List<User> users = (List<User>) userRepository.findAll(predicate); 
 ```
 
-以及以`c`结尾:
+以及以 `c` 结尾：
 
 ```java
 QUser qUser = new QUser("user");
@@ -606,9 +609,9 @@ List<User> users = (List<User>) userRepository.findAll(predicate);
 
 结果与第 2.2、3.2 和 4.2 节中的结果相同。
 
-### 5.6。`Between`
+### 5.6. 范围查询
 
-下一个查询将返回年龄在 20 到 50 岁之间的用户，类似于前面的部分:
+下一个查询将返回年龄在 20 到 50 岁之间的用户，类似于前面的部分：
 
 ```java
 QUser qUser = new QUser("user");
@@ -616,10 +619,10 @@ Predicate predicate = qUser.age.between(20, 50);
 List<User> users = (List<User>) userRepository.findAll(predicate);
 ```
 
-## 6。结论
+## 6. 结论
 
-在本文中，我们探索了使用 Spring 数据 MongoDB 进行查询的许多方法。
+在本文中，我们探索了使用 Spring Data MongoDB 进行查询的多种方法。
 
-后退一步，看看我们查询 MongoDB 的所有强大方法是很有趣的，从有限的控制一直到原始查询的完全控制。
+回顾一下，我们看到了从有限控制到原始查询完全控制的各种查询 MongoDB 的强大方式。
 
-所有这些例子和代码片段的实现都可以在 GitHub 项目中找到。
+所有这些示例和代码片段的实现都可以在 GitHub 项目中找到。

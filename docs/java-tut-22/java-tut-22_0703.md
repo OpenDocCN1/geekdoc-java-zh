@@ -1,3 +1,4 @@
+
 # 事件
 
 > 原文：[`docs.oracle.com/javase/tutorial/javabeans/writing/events.html`](https://docs.oracle.com/javase/tutorial/javabeans/writing/events.html)
@@ -7,7 +8,6 @@
 ```java
 public void add*<Event>*Listener(*<Event>*Listener a)
 public void remove*<Event>*Listener(*<Event>*Listener a)
-
 ```
 
 监听器类型必须是`java.util.EventListener`的子类。
@@ -17,7 +17,6 @@ public void remove*<Event>*Listener(*<Event>*Listener a)
 ```java
 public void addActionListener(ActionListener l);
 public void removeActionListener(ActionListener l);
-
 ```
 
 Bean 事件被构建工具识别，并可用于将组件进行连线。例如，您可以将按钮的`action`事件连接起来，以触发某些操作，比如调用另一个 bean 的方法。

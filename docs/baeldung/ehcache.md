@@ -1,22 +1,23 @@
+
 # Ehcache 简介
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/ehcache>
 
-## 1。概述
+## 1. 概述
 
-在本文中，我们将介绍 [Ehcache](https://web.archive.org/web/20220926202519/http://www.ehcache.org/) ，这是一个广泛使用的、基于 Java 的开源缓存。它具有内存和磁盘存储、监听器、缓存加载器、RESTful 和 SOAP APIs 以及其他非常有用的功能。
+在本文中，我们将介绍 [Ehcache](https://web.archive.org/web/20220926202519/http://www.ehcache.org/)，这是一个广泛使用的、基于 Java 的开源缓存。它具有内存和磁盘存储、监听器、缓存加载器、RESTful 和 SOAP APIs 以及其他非常有用的功能。
 
 为了展示缓存如何优化我们的应用程序，我们将创建一个简单的方法来计算所提供数字的平方值。在每次调用时，该方法将调用`calculateSquareOfNumber(int number)`方法并将信息消息打印到控制台。
 
 在这个简单的例子中，我们想展示平方值的计算只进行一次，并且具有相同输入值的所有其他调用都从缓存中返回结果。
 
-需要注意的是，我们完全专注于 Ehcache 本身(没有 Spring)；如果你想了解 Ehcache 如何与 Spring 一起工作，可以看看 read [这篇文章](/web/20220926202519/https://www.baeldung.com/spring-cache-tutorial)。
+需要注意的是，我们完全专注于 Ehcache 本身（没有 Spring）；如果你想了解 Ehcache 如何与 Spring 一起工作，可以看看 read [这篇文章](/web/20220926202519/https://www.baeldung.com/spring-cache-tutorial)。
 
-## 2。Maven 依赖关系
+## 2. Maven 依赖关系
 
-为了使用 Ehcache，我们需要添加这个 Maven 依赖项:
+为了使用 Ehcache，我们需要添加这个 Maven 依赖项：
 
-```java
+```xml
 <dependency>
     <groupId>org.ehcache</groupId>
     <artifactId>ehcache</artifactId>
@@ -26,18 +27,18 @@
 
 Ehcache 工件的最新版本可以在[这里](https://web.archive.org/web/20220926202519/https://search.maven.org/classic/#search%7Cga%7C1%7Cg%3A%22org.ehcache%22)找到。
 
-## 3。缓存配置
+## 3. 缓存配置
 
-Ehcache 有两种配置方式:
+Ehcache 有两种配置方式：
 
 *   第一种方式是通过 Java POJO，其中所有配置参数都是通过 Ehcache API 配置的
 *   第二种方式是通过 XML 文件配置，我们可以根据[提供的模式定义](https://web.archive.org/web/20220926202519/http://www.ehcache.org/documentation/3.1/xsds.html#core)配置 Ehcache
 
 在本文中，我们将展示这两种方法——Java 和 XML 配置。
 
-### 3.1。Java 配置
+### 3.1. Java 配置
 
-这一小节将展示用 POJOs 配置 Ehcache 是多么容易。此外，我们将创建一个助手类来简化缓存配置和可用性:
+这一小节将展示用 POJOs 配置 Ehcache 是多么容易。此外，我们将创建一个助手类来简化缓存配置和可用性：
 
 ```java
 public class CacheHelper {
@@ -65,7 +66,7 @@ public class CacheHelper {
 }
 ```
 
-为了初始化我们的缓存，首先，我们需要定义 Ehcache `CacheManager`对象。在这个例子中，我们用`newCacheManagerBuilder()` API `.`创建了一个默认缓存 `squaredNumber”`
+为了初始化我们的缓存，首先，我们需要定义 Ehcache `CacheManager`对象。在这个例子中，我们用`newCacheManagerBuilder()` API 创建了一个默认缓存 `squaredNumber`。
 
 缓存将简单地将`Integer`键映射到`Integer`值。
 
@@ -75,11 +76,11 @@ public class CacheHelper {
 
 用这几行代码，我们创建了第一个缓存，现在可以用于我们的应用程序。
 
-### 3.2。XML 配置
+### 3.2. XML 配置
 
-3.1 小节中的配置对象。等同于使用以下 XML 配置:
+3.1 小节中的配置对象等同于使用以下 XML 配置：
 
-```java
+```xml
 <cache-template name="squaredNumber">
     <key-type>java.lang.Integer</key-type>
     <value-type>java.lang.Integer</value-type>
@@ -87,7 +88,7 @@ public class CacheHelper {
 </cache-template>
 ```
 
-为了在 Java 应用程序中包含这个缓存，我们需要用 Java 读取 XML 配置文件:
+为了在 Java 应用程序中包含这个缓存，我们需要用 Java 读取 XML 配置文件：
 
 ```java
 URL myUrl = getClass().getResource(xmlFile); 
@@ -96,11 +97,11 @@ CacheManager myCacheManager = CacheManagerBuilder
   .newCacheManager(xmlConfig);
 ```
 
-## 4。Ehcache 测试
+## 4. Ehcache 测试
 
-在第三节。我们展示了如何为您的目的定义简单缓存。为了展示缓存实际工作，我们将创建`SquaredCalculator`类，它将计算所提供输入的平方值，并将计算值存储在缓存中。
+在第三节中，我们展示了如何为您的目的定义简单缓存。为了展示缓存实际工作，我们将创建`SquaredCalculator`类，它将计算所提供输入的平方值，并将计算值存储在缓存中。
 
-当然，如果缓存已经包含计算值，我们将返回缓存值并避免不必要的计算:
+当然，如果缓存已经包含计算值，我们将返回缓存值并避免不必要的计算：
 
 ```java
 public class SquaredCalculator {
@@ -124,7 +125,7 @@ public class SquaredCalculator {
 }
 ```
 
-为了完成我们的测试场景，我们还需要计算平方值的代码:
+为了完成我们的测试场景，我们还需要计算平方值的代码：
 
 ```java
 @Test
@@ -143,9 +144,9 @@ public void whenCalculatingSquareValueAgain_thenCacheHasAllValues() {
 }
 ```
 
-如果我们运行我们的测试，我们将在控制台中得到这个结果:
+如果我们运行我们的测试，我们将在控制台中得到这个结果：
 
-```java
+```text
 Calculating square value of 10 and caching result.
 Square value of 10 is: 100
 
@@ -170,11 +171,11 @@ Square value of 14 is: 196
 
 正如您所注意到的，`calculate()`方法只在第一次调用时进行计算。在第二次调用时，所有值都在缓存中找到并从缓存中返回。
 
-## 5。其他 Ehcache 配置选项
+## 5. 其他 Ehcache 配置选项
 
 当我们在前一个例子中创建缓存时，它是一个没有任何特殊选项的简单缓存。本节将展示在创建缓存时有用的其他选项。
 
-### 5.1。磁盘持久性
+### 5.1. 磁盘持久性
 
 如果有太多的值要存储到缓存中，我们可以在硬盘上存储一些值。
 
@@ -199,11 +200,11 @@ persistentCacheManager.close();
 
 从配置中，我们可以看到缓存将 10 个元素保存到内存中，并将在硬盘上分配 10MB 用于持久存储。
 
-### 5.2。数据到期
+### 5.2. 数据到期
 
 如果我们缓存大量数据，很自然地我们会将缓存的数据保存一段时间，这样我们就可以避免大量的内存使用。
 
-Ehcache 通过`Expiry`接口控制数据刷新:
+Ehcache 通过`Expiry`接口控制数据刷新：
 
 ```java
 CacheConfiguration<Integer, Integer> cacheConfiguration 
@@ -216,7 +217,7 @@ CacheConfiguration<Integer, Integer> cacheConfiguration
 
 在该缓存中，所有数据将存在 60 秒，在这段时间后，数据将从内存中删除。
 
-## 6。结论
+## 6. 结论
 
 在本文中，我们展示了如何在 Java 应用程序中使用简单的 Ehcache 缓存。
 

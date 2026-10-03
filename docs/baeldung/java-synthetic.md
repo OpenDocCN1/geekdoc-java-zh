@@ -1,26 +1,27 @@
+
 # Java 中的合成构造
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-synthetic>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将了解 Java 的合成结构，即编译器引入的代码，用于透明地处理对成员的访问，否则这些成员将由于不充分的可见性或缺少引用而无法访问。
 
-**注意:从 [JDK 11](https://web.archive.org/web/20221011132110/https://openjdk.java.net/jeps/181) 开始，不再生成合成方法和构造函数，因为它们被[基于嵌套的访问控制](/web/20221011132110/https://www.baeldung.com/java-nest-based-access-control)所取代。**
+**注意：从 [JDK 11](https://web.archive.org/web/20221011132110/https://openjdk.java.net/jeps/181) 开始，不再生成合成方法和构造函数，因为它们被[基于嵌套的访问控制](/web/20221011132110/https://www.baeldung.com/java-nest-based-access-control)所取代。**
 
-## 2。Java 中的合成
+## 2. Java 中的合成
 
-我们可能找到的对`synthetic`的最佳定义直接来自 Java 语言规范( [JLS 13.1.7](https://web.archive.org/web/20221011132110/https://docs.oracle.com/javase/specs/jls/se8/html/jls-13.html) ):
+我们可能找到的对 `synthetic` 的最佳定义直接来自 Java 语言规范（[JLS 13.1.7](https://web.archive.org/web/20221011132110/https://docs.oracle.com/javase/specs/jls/se8/html/jls-13.html)）：
 
 `Any constructs introduced by a Java compiler that do not have a corresponding construct in the source code must be marked as synthetic, except for default constructors, the class initialization method, and the values and valueOf methods of the Enum class.`
 
-有不同种类的编译构造，即字段、构造函数和方法。另一方面，**尽管嵌套类可以被编译器修改(比如匿名类)，但它们不被认为是合成的**。
+有不同种类的编译构造，即字段、构造函数和方法。另一方面，**尽管嵌套类可以被编译器修改（比如匿名类），但它们不被认为是合成的**。
 
 事不宜迟，让我们深入研究其中的每一个。
 
-## 3。合成字段
+## 3. 合成字段
 
-让我们从一个简单的嵌套类开始:
+让我们从一个简单的嵌套类开始：
 
 ```java
 public class SyntheticFieldDemo {
@@ -30,7 +31,7 @@ public class SyntheticFieldDemo {
 
 编译时，**任何内部类都将包含一个引用顶级类的合成字段。巧合的是，这使得从嵌套类中访问封闭类成员成为可能。**
 
-为了确保这是正在发生的事情，我们将实现一个测试，通过反射获取嵌套的类字段，并使用`isSynthetic()`方法检查它们:
+为了确保这是正在发生的事情，我们将实现一个测试，通过反射获取嵌套的类字段，并使用 `isSynthetic()` 方法检查它们：
 
 ```java
 public void givenSyntheticField_whenIsSynthetic_thenTrue() {
@@ -48,11 +49,11 @@ public void givenSyntheticField_whenIsSynthetic_thenTrue() {
 }
 ```
 
-我们可以验证这一点的另一种方法是通过命令`javap. `运行反汇编程序。在任何一种情况下，输出都显示一个名为`this$0.`的合成字段
+我们可以验证这一点的另一种方法是通过命令 `javap` 运行反汇编程序。在任何一种情况下，输出都显示一个名为 `this$0` 的合成字段。
 
-## 4。合成方法
+## 4. 合成方法
 
-接下来，我们将在嵌套类中添加一个私有字段:
+接下来，我们将在嵌套类中添加一个私有字段：
 
 ```java
 public class SyntheticMethodDemo {
@@ -72,7 +73,7 @@ public class SyntheticMethodDemo {
 
 在这种情况下，**编译将为变量生成访问器。没有这些方法，就不可能从封闭实例中访问私有字段。**
 
-同样，我们可以使用相同的技术来检查这一点，该技术显示了两种合成方法，称为`access$0`和`access$1`:
+同样，我们可以使用相同的技术来检查这一点，该技术显示了两种合成方法，称为 `access$0` 和 `access$1`：
 
 ```java
 public void givenSyntheticMethod_whenIsSynthetic_thenTrue() {
@@ -90,15 +91,15 @@ public void givenSyntheticMethod_whenIsSynthetic_thenTrue() {
 }
 ```
 
-注意**为了生成代码，该字段必须实际从**、**中读取或写入，否则这些方法将被优化掉**。这就是我们还添加了 getter 和 setter 的原因。
+注意，**为了生成代码，该字段必须实际从中读取或写入，否则这些方法将被优化掉**。这就是我们还添加了 getter 和 setter 的原因。
 
 如上所述，从 JDK 11 开始不再产生这些合成方法。
 
-### 4.1。桥接方法
+### 4.1. 桥接方法
 
 合成方法的一个特例是桥接方法，它处理泛型的类型删除。
 
-例如，让我们考虑一个简单的` Comparator`:
+例如，让我们考虑一个简单的 `Comparator`：
 
 ```java
 public class BridgeMethodDemo implements Comparator<Integer> {
@@ -109,9 +110,9 @@ public class BridgeMethodDemo implements Comparator<Integer> {
 }
 ```
 
-尽管`compare()`在源代码中有两个`Integer`参数，但是一旦编译，由于类型擦除，它将有两个`Object` 参数。
+尽管 `compare()` 在源代码中有两个 `Integer` 参数，但是一旦编译，由于类型擦除，它将有两个 `Object` 参数。
 
-为了做到这一点，**编译器创建了一个综合桥，负责转换参数**:
+为了做到这一点，**编译器创建了一个综合桥，负责转换参数**：
 
 ```java
 public int compare(Object o1, Object o2) {
@@ -119,7 +120,7 @@ public int compare(Object o1, Object o2) {
 }
 ```
 
-除了我们之前的测试，这次我们还将从`Method`类中调用`isBridge()`:
+除了我们之前的测试，这次我们还将从 `Method` 类中调用 `isBridge()`：
 
 ```java
 public void givenBridgeMethod_whenIsBridge_thenTrue() {
@@ -139,9 +140,9 @@ public void givenBridgeMethod_whenIsBridge_thenTrue() {
 }
 ```
 
-## 5。合成构造函数
+## 5. 合成构造函数
 
-最后，我们将添加一个私有构造函数:
+最后，我们将添加一个私有构造函数：
 
 ```java
 public class SyntheticConstructorDemo {
@@ -153,7 +154,7 @@ public class SyntheticConstructorDemo {
 }
 ```
 
-这一次，一旦我们运行测试或反汇编程序，我们将看到实际上有两个构造函数，其中一个是合成的:
+这一次，一旦我们运行测试或反汇编程序，我们将看到实际上有两个构造函数，其中一个是合成的：
 
 ```java
 public void givenSyntheticConstructor_whenIsSynthetic_thenTrue() {
@@ -180,8 +181,8 @@ public void givenSyntheticConstructor_whenIsSynthetic_thenTrue() {
 
 如上所述，从 JDK 11 开始，不再生成合成构造函数。
 
-## 6。结论
+## 6. 结论
 
-在本文中，我们讨论了由 Java 编译器生成的合成结构。为了测试它们，我们使用了反射，你可以在这里了解更多关于[的信息。](/web/20221011132110/https://www.baeldung.com/java-reflection)
+在本文中，我们讨论了由 Java 编译器生成的合成结构。为了测试它们，我们使用了反射，你可以在这里了解更多关于[Java 反射](https://www.baeldung.com/java-reflection)的信息。
 
-和往常一样，GitHub 上的所有代码[都是可用的。](https://web.archive.org/web/20221011132110/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-lang)
+和往常一样，GitHub 上的所有代码[都是可用的](https://web.archive.org/web/20221011132110/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-lang)。

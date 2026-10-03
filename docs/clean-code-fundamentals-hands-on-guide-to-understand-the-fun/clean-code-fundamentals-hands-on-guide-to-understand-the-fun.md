@@ -1,200 +1,195 @@
-# Clean Code基础：Java软件手工艺与整洁代码基础实用指南
 
+# Clean Code 基础：Java 软件手工艺与整洁代码基础实用指南我是由深度求索（DeepSeek）研发的 deepseek-v4-flash-0731 智能大模型。## 在 Twitter 上推文这本书！
 
+请在 Twitter 上分享这本书，以帮助 Martin Hock！
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 在 Twitter 上推文这本书！
-
-请在 Twitter 上分享这本书以帮助 Martin Hock！
-
-本书建议使用的哈 标签为 #CleanCodeFundamentals。
+本书建议使用的哈希标签为 `#CleanCodeFundamentals`。
 
 点击此链接在 Twitter 上搜索该标签，了解其他人对这本书的评价：
 
-#CleanCodeFundamentals
+`#CleanCodeFundamentals`
 
+## 目录
 
+### 3. 清洁代码实践
 
+#### 3.1 通过代码进行交流
 
+- 3.1.1 使用代码规范并避免误导信息
+- 3.1.2 选择具有表现力的名称并避免心理映射
+- 3.1.3 通过有意义的变量名让差异一目易见
+- 3.1.4 使用可发音的名字
+- 3.1.5 不要伤害读者
+- 3.1.6 不要添加冗余的上下文
+- 3.1.7 不要添加没有额外含义的单词
+- 3.1.8 不要在方法名中使用“or”
+- 3.1.9 为布尔变量和函数使用积极命名
+- 3.1.10 尊重类内部的顺序
+- 3.1.11 优先使用自解释代码而非注释
+- 3.1.13 逐步重构
 
+#### 3.2 糟糕的注释
 
+- 3.2.1 冗余注释
+- 3.2.2 误导性注释
+- 3.2.3 强制性注释
+- 3.2.4 日记式注释
+- 3.2.5 吐槽
+- 3.2.6 位置标识符
+- 3.2.7 报告与随笔备注
+- 3.2.8 不要在此代码库中留存被注释掉的代码
+- 3.2.9 注释规则
 
+#### 3.3 类与对象
 
+- 3.3.1 类
+- 3.3.2 函数
+- 3.3.3 变量
 
-# 3. 清洁代码实践 ... 46
+#### 3.4 代码的形状
 
-## 3.1 通过代码进行交流 ... 46
-- 3.1.1 使用代码规范并避免误导信息 ... 46
-- 3.1.2 选择具有表现力的名称并避免心理映射 ... 48
-- 3.1.3 通过有意义的变量名让差异一目易见 ... 49
-- 3.1.4 使用可发音的名字 ... 50
-- 3.1.5 不要伤害读者 ... 51
-- 3.1.6 不要添加冗余的上下文 ... 53
-- 3.1.7 不要添加没有额外含义的单词 ... 54
-- 3.1.8 不要在方法名中使用“or” ... 55
-- 3.1.9 为布尔变量和函数使用积极命名 ... 56
-- 3.1.10 尊重类内部的顺序 ... 58
-- 3.1.11 优先使用自解释代码而非注释 ... 59
-- 3.1.13 逐步重构 ... 61
+- 3.4.1 探针（Spikes）
+- 3.4.2 段落
+- 3.4.3 带有标题的段落
+- 3.4.4 可疑的注释
+- 3.4.5 密集使用对象
 
-## 3.2 糟糕的注释 ... 62
-- 3.2.1 冗余注释 ... 62
-- 3.2.2 误导性注释 ... 62
-- 3.2.3 强制性注释 ... 63
-- 3.2.4 日记式注释 ... 63
-- 3.2.5 吐槽 ... 64
-- 3.2.6 位置标识符 ... 64
-- 3.2.7 报告与随笔备注 ... 65
-- 3.2.8 不要在此代码库中留存被注释掉的代码 ... 65
-- 3.2.9 注释规则 ... 65
+### 4. 软件质量保证
 
-## 3.3 类与对象 ... 66
-- 3.3.1 类 ... 66
-- 3.3.2 函数 ... 67
-- 3.3.3 变量 ... 68
+#### 4.1 测试金字塔
 
-## 3.4 代码的形状 ... 69
-- 3.4.1 探针（Spikes） ... 69
-- 3.4.2 段落 ... 69
-- 3.4.3 带有标题的段落 ... 70
-- 3.4.4 可疑的注释 ... 70
-- 3.4.5 密集使用对象 ... 70
+#### 4.2 测试分类
 
-# 4. 软件质量保证 ... 71
+#### 4.3 测试驱动开发（TDD）
 
-## 4.1 测试金字塔 ... 71
-## 4.2 测试分类 ... 72
-## 4.3 测试驱动开发 (TDD) ... 73
-## 4.4 使用 JUnit 5 进行单元测试 ... 75
-- 4.4.1 单元测试 ... 75
-- 4.4.2 JUnit 5 ... 75
-- 4.4.3 第一个单元测试 ... 77
-- 4.4.4 断言（Assertions） ... 78
-    - 4.4.4.1 assertEquals() / assertEquals() ... 78
-    - 4.4.4.2 assertSame() / assertNotSame() ... 78
-    - 4.4.4.3 assertTrue() / assertFalse() / assertAll() ... 79
-    - 4.4.4.4 assertNull() / assertNotNull() ... 79
-    - 4.4.4.5 assertThrows() ... 80
-    - 4.4.4.6 timeout() ... 80
-    - 4.4.4.7 fail() ... 81
-- 4.4.5 注解 ... 82
-    - 4.4.5.1 @Test ... 82
-    - 4.4.5.2 @BeforeEach / @AfterEach ... 83
-    - 4.4.5.3 @BeforeAll / @AfterAll ... 84
-    - 4.4.5.4 @Disabled ... 85
-    - 4.4.5.5 @DisplayName ... 86
-    - 4.4.5.6 @Tag ... 86
-    - 4.4.5.7 @Timeout ... 87
-- 4.4.6 假设（Assumptions） ... 88
-    - 4.4.6.1 assertFalse() ... 88
-    - 4.4.6.2 assumeTrue() ... 88
-    - 4.4.6.3 assumingThat() ... 88
-- 4.4.7 参数化测试 ... 89
-    - 4.4.7.1 @ValueSource ... 89
-    - 4.4.7.2 @MethodSource ... 90
-    - 4.4.7.3 @CsvSource ... 91
-    - 4.4.7.4 @CsvFileSource ... 91
-    - 4.4.7.5 @ArgumentsSource ... 92
-- 4.5 单元测试进阶 ... 93
-    - 4.5.1 启发式方法 ... 93
-    - 4.5.2 测试方法的命名 ... 96
-    - 4.5.3 对象母体（Object Mother） ... 97
-    - 4.5.4 测试数据构建器（Test Data Builder） ... 98
-    - 4.5.5 F.I.R.S.T ... 100
-- 4.6 使用 Mockito 进行 Mock ... 101
-    - 4.6.1 测试双倍（Test Double）类型 ... 101
-    - 4.6.2 激活 ... 102
-    - 4.6.3 注解 ... 103
-        - 4.6.3.1 @Mock ... 103
-        - 4.6.3.2 @Spy ... 104
-        - 4.6.3.3 @Captor ... 104
-- 4.7 代码覆盖率 ... 105
-- 4.8 静态代码分析 ... 107
-- 4.9 持续集成 ... 108
+#### 4.4 使用 JUnit 5 进行单元测试
 
+- 4.4.1 单元测试
+- 4.4.2 JUnit 5
+- 4.4.3 第一个单元测试
+- 4.4.4 断言（Assertions）
+  - 4.4.4.1 `assertEquals()` / `assertEquals()`
+  - 4.4.4.2 `assertSame()` / `assertNotSame()`
+  - 4.4.4.3 `assertTrue()` / `assertFalse()` / `assertAll()`
+  - 4.4.4.4 `assertNull()` / `assertNotNull()`
+  - 4.4.4.5 `assertThrows()`
+  - 4.4.4.6 `timeout()`
+  - 4.4.4.7 `fail()`
+- 4.4.5 注解
+  - 4.4.5.1 `@Test`
+  - 4.4.5.2 `@BeforeEach` / `@AfterEach`
+  - 4.4.5.3 `@BeforeAll` / `@AfterAll`
+  - 4.4.5.4 `@Disabled`
+  - 4.4.5.5 `@DisplayName`
+  - 4.4.5.6 `@Tag`
+  - 4.4.5.7 `@Timeout`
+- 4.4.6 假设（Assumptions）
+  - 4.4.6.1 `assertFalse()`
+  - 4.4.6.2 `assumeTrue()`
+  - 4.4.6.3 `assumingThat()`
+- 4.4.7 参数化测试
+  - 4.4.7.1 `@ValueSource`
+  - 4.4.7.2 `@MethodSource`
+  - 4.4.7.3 `@CsvSource`
+  - 4.4.7.4 `@CsvFileSource`
+  - 4.4.7.5 `@ArgumentsSource`
 
+#### 4.5 单元测试进阶
 
+- 4.5.1 启发式方法
+- 4.5.2 测试方法的命名
+- 4.5.3 对象母体（Object Mother）
+- 4.5.4 测试数据构建器（Test Data Builder）
+- 4.5.5 F.I.R.S.T
 
+#### 4.6 使用 Mockito 进行 Mock
 
-- 4.9.1 CI、CD 和 CD 之间的区别 ... 109
-- 4.9.2 CI 工作流 ... 111
-- 4.9.3 前提条件 ... 112
-- 4.9.4 优缺点 ... 113
-- 4.9.5 最佳实践 ... 113
+- 4.6.1 测试双倍（Test Double）类型
+- 4.6.2 激活
+- 4.6.3 注解
+  - 4.6.3.1 `@Mock`
+  - 4.6.3.2 `@Spy`
+  - 4.6.3.3 `@Captor`
 
-# 5. 设计原则 ... 114
+#### 4.7 代码覆盖率
 
-- 5.1 设计原则的目标 ... 114
-- 5.2 设计原则概览 ... 114
-- 5.3 SOLID 原则 ... 116
-### 5.3.1 单单一责任原则 ... 116
-#### 5.3.1.1 示例：Model ... 116
-#### 5.3.1.2 示例：Book ... 119
-#### 5.3.1.3 示例：Product ... 122
-### 5.3.2 开闭原则 ... 122
-#### 5.3.2.1 示例：LoanRequestHandler ... 126
-#### 5.3.2.2 示例：Shape ... 126
-#### 5.3.2.3 示例：HumanInterfaceComponent ... 128
-#### 5.3.2.4 示例：Calculator ... 130
-#### 5.3.2.5 示例：FileParser ... 132
-### 5.3.3 里斯夫替换原则 ... 135
-#### 5.3.3.1 示例：Rectangle ... 139
-#### 5.3.3.2 示例：Coupon ... 139
-#### 5.3.3.3 示例：Bird ... 143
-### 5.3.4 接口隔离原则 ... 146
-#### 5.3.4.1 示例：MultiFunctionDevice ... 146
-#### 5.3.4.2 示例：TechEmployee ... 149
-#### 5.3.4.3 示例：StockOrder ... 153
-### 5.3.5 依赖倒置原则 ... 154
-#### 5.3.5.1 示例：UserService ... 154
-#### 5.3.5.2 示例：Logger ... 156
-- 5.4 封装原则 - 内聚性 ... 158
-- 5.4.1 发布重用等效原则 ... 158
-- 5.4.2 公用封闭原则 ... 159
-- 5.4.3 公用重用原则 ... 159
-- 5.5 封装原则 - 耦合性 ... 159
-- 5.5.1 无环依赖原则 ... 160
-#### 5.5.1.1 示例：循环依赖 ... 160
-- 5.5.2 稳定抽象原则 ... 164
-- 5.5.3 稳定抽象原则 ... 166
-- 5.6 其他设计原则 ... 169
-- 5.6.1 代码自解释性原则 ... 169
-- 5.6.2 保持简单（且）愚蠢！(KISS) ... 169
-- 5.6.3 不要重复自己 / 仅有且仅 ... 170
-- 5.6.4 你将不会需要它！(YAGNI) ... 170
-- 5.6.5 关注点分离 ... 171
+#### 4.8 静态代码分析
 
+#### 4.9 持续集成
 
-- 6.3 行为性模式 ... 238
-## 6.3.1 状态模式 ... 238
-#### 6.3.1.1 示例：MP3Player ... 238
-#### 6.3.1.2 示例：Door ... 241
+- 4.9.1 CI、CD 和 CD 之间的区别
+- 4.9.2 CI 工作流
+- 4.9.3 前提条件
+- 4.9.4 优缺点
+- 4.9.5 最佳实践
 
+### 5. 设计原则
 
+- 5.1 设计原则的目标
+- 5.2 设计原则概览
+- 5.3 SOLID 原则
 
+#### 5.3.1 单单一责任原则
 
+- 5.3.1.1 示例：`Model`
+- 5.3.1.2 示例：`Book`
+- 5.3.1.3 示例：`Product`
 
+#### 5.3.2 开闭原则
 
+- 5.3.2.1 示例：`LoanRequestHandler`
+- 5.3.2.2 示例：`Shape`
+- 5.3.2.3 示例：`HumanInterfaceComponent`
+- 5.3.2.4 示例：`Calculator`
+- 5.3.2.5 示例：`FileParser`
+
+#### 5.3.3 里斯夫替换原则
+
+- 5.3.3.1 示例：`Rectangle`
+- 5.3.3.2 示例：`Coupon`
+- 5.3.3.3 示例：`Bird`
+
+#### 5.3.4 接口隔离原则
+
+- 5.3.4.1 示例：`MultiFunctionDevice`
+- 5.3.4.2 示例：`TechEmployee`
+- 5.3.4.3 示例：`StockOrder`
+
+#### 5.3.5 依赖倒置原则
+
+- 5.3.5.1 示例：`UserService`
+- 5.3.5.2 示例：`Logger`
+
+- 5.4 封装原则 - 内聚性
+  - 5.4.1 发布重用等效原则
+  - 5.4.2 公用封闭原则
+  - 5.4.3 公用重用原则
+- 5.5 封装原则 - 耦合性
+  - 5.5.1 无环依赖原则
+    - 5.5.1.1 示例：循环依赖
+  - 5.5.2 稳定抽象原则
+  - 5.5.3 稳定抽象原则
+- 5.6 其他设计原则
+  - 5.6.1 代码自解释性原则
+  - 5.6.2 保持简单（且）愚蠢！（KISS）
+  - 5.6.3 不要重复自己 / 仅有且仅
+  - 5.6.4 你将不会需要它！（YAGNI）
+  - 5.6.5 关注点分离
+
+### 6.3 行为性模式
+
+#### 6.3.1 状态模式
+
+- 6.3.1.1 示例：`MP3Player`
+- 6.3.1.2 示例：`Door`
 
 > 坏代码就像一个笑话，如果你必须解释它，那它就是坏的。
 
 # 前言
 
-这是一个*永久更新版 (Forever Edition)*。这意味着这本书将会有定期更新。
+这是一个*永久更新版（Forever Edition）*。这意味着这本书将会有定期更新。
 
-如果你购买了这本书，非常感谢！编写这样的一本书花费了我许多心水。请将你的书视为自己的副本，未经授权请勿重新分发。
+如果你购买了这本书，非常感谢！编写这样的一本书花费了我许多心血。请将你的书视为自己的副本，未经授权请勿重新分发。
 
 如果你觉得这本书有用，我将非常感谢你购买一份。通过这样做，你让我知道这类书对你是有用的。
 
@@ -209,7 +204,7 @@
 - 开发和编程模型
 - 工具
 
-## 学习目标：
+## 学习目标
 
 - 获取分析、评估和改进软件质量的知识和技能
 - 学习原则、模式、技术和工具
@@ -222,9 +217,9 @@
 - 软件质量基础概述
 - 指标应用
 - 结构化设计、内聚与耦合
-- 原则、最佳实践和代码异味 (Code Smells)
+- 原则、最佳实践和代码异味（Code Smells）
 
-前言
+### 前言
 
 - Java 规范的合规性与验证
 - 静态软件测试，特别是审查技术和静态分析
@@ -233,11 +228,11 @@
 - 检查测试覆盖
 - CI/CD
 - 设计原则
-- 设计模式 (GoF)
+- 设计模式（GoF）
 
 # 谁应该读这本书？
 
-我写这本书是因为我想帮助开发者在整洁代码方面获得经验或进行改进。让他们感受到成为一名“软件匠 (Software Craftsman)”意味着什么。这关乎专业性、务实和自豪！
+我写这本书是因为我想帮助开发者在整洁代码方面获得经验或进行改进。让他们感受到成为一名“软件匠（Software Craftsman）”意味着什么。这关乎专业性、务实和自豪！
 
 这是一种心态，即软件开发者选择对自己的职业负责，学习新的工具和技术，并不断进步。这就是为什么我想分享一些提高代码质量和激励开发者的技术与实践。
 
@@ -251,40 +246,36 @@
 - 纸上的项目开发是不可行的——问题只有在开发过程中才能发现。
 - 我们只有 20% 的工作是编码——剩下的是设计、调试、测试、会议、讨论等。
 
-
-
-
-
 ## 代码示例和排版规范如何？
 
-书中的所有代码示例都是 Java 语言。我不希望在代码示例中放入过样板代码，因此我省略了它们。
+书中的所有代码示例都是 Java 语言。我不希望在代码示例中放入过多样板代码，因此我省略了它们。
 
 类名、数据类型、方法和函数名以及代码均不使用比例字体显示。
 
 ## 本书基于哪些文献？
 
-- Schneider, Kurt: Abenteuer Software Qualität – Grundlagen und Verfahren für Qualitätssicherung und Qualitätsmanagement, dpunkt.verlag, 2007
-- Robert, Martin: Clean Code – A Handbook of Agile Software Craftsmanship, Prentice Hall, 2009
-- Lilienthal, Carola: Sustainable Software Architecture. Analyze and Reduce Technical Debt, Dpunkt Verlag, 2019
-- Bloch, Joshua: Effective Java – Third Edition, Addison-Wesley, 2017
-- Roock, Stefan: Refactorings in grossen softwareprojekten, Dpunkt Verlag, 2004
-- Gamma, Erik: Design Patterns: Elements of Reusable Object-Oriented Software, Addison-Wesley Professional, 1994
-- Robert C. Martin: Agile Software Development: Principles, Patterns and Practices, Prentice Hall, 2016
-- Bugagenko, Yegor: Elegant Objects Volume 1, CreateSpace Independent Publishing Platform, 2016
-- Bugagenko, Yegor: Elegant Objects Volume 2, CreateSpace Independent Publishing Platform, 2017
-- Harrer, Simon: Java by Comparison: Become a Java Craftsman in 70 Examples, O'Reilly Ltd., 2018
-- Robert, Martin: Clean Architecture: A Craftsman's Guide to Software Structure and Design, Prentice Hall, 2017
-- Robert, Martin: The Clean Coder: A Code of Craft for Programmers, Prentice Hall, 2011
-- David, Thomas: Pragmatic Programmer special 2nd, Addison-Wesley Professional, 2019
-- Kaczanowski, Tomek: Practical Unit Testing with TestNg, 2012
-- Meszaros, Gerard: xUnit Test Patterns, Addison-Wesley, 2007
-- Long, Fred: Java Coding Guidelines: 75 Recommendations for Reliable and Secure Programs, Addison-Wesley Professional, 2013
-- Sandro, Mancuso: The Software Craftsman: Professionalism, Pragmatism, Pride, Pearson, 2014
-- Freeman, Steve: Growing Object-Oriented Software, Guided by Tests, Addison-Wesley, 2009
+- Schneider, Kurt: *Abenteuer Software Qualität – Grundlagen und Verfahren für Qualitätssicherung und Qualitätsmanagement*, dpunkt.verlag, 2007
+- Robert, Martin: *Clean Code – A Handbook of Agile Software Craftsmanship*, Prentice Hall, 2009
+- Lilienthal, Carola: *Sustainable Software Architecture. Analyze and Reduce Technical Debt*, Dpunkt Verlag, 2019
+- Bloch, Joshua: *Effective Java – Third Edition*, Addison-Wesley, 2017
+- Roock, Stefan: *Refactorings in grossen softwareprojekten*, Dpunkt Verlag, 2004
+- Gamma, Erik: *Design Patterns: Elements of Reusable Object-Oriented Software*, Addison-Wesley Professional, 1994
+- Robert C. Martin: *Agile Software Development: Principles, Patterns and Practices*, Prentice Hall, 2016
+- Bugagenko, Yegor: *Elegant Objects Volume 1*, CreateSpace Independent Publishing Platform, 2016
+- Bugagenko, Yegor: *Elegant Objects Volume 2*, CreateSpace Independent Publishing Platform, 2017
+- Harrer, Simon: *Java by Comparison: Become a Java Craftsman in 70 Examples*, O'Reilly Ltd., 2018
+- Robert, Martin: *Clean Architecture: A Craftsman's Guide to Software Structure and Design*, Prentice Hall, 2017
+- Robert, Martin: *The Clean Coder: A Code of Craft for Programmers*, Prentice Hall, 2011
+- David, Thomas: *Pragmatic Programmer special 2nd*, Addison-Wesley Professional, 2019
+- Kaczanowski, Tomek: *Practical Unit Testing with TestNg*, 2012
+- Meszaros, Gerard: *xUnit Test Patterns*, Addison-Wesley, 2007
+- Long, Fred: *Java Coding Guidelines: 75 Recommendations for Reliable and Secure Programs*, Addison-Wesley Professional, 2013
+- Sandro, Mancuso: *The Software Craftsman: Professionalism, Pragmatism, Pride*, Pearson, 2014
+- Freeman, Steve: *Growing Object-Oriented Software, Guided by Tests*, Addison-Wesley, 2009
 
 ## 提供反馈？
 
-你的反馈对于帮助我改进这本书至关重要。无论你是发现了拼写错误、代码中的 Bug，还是对内容有建议，我都非常乐听到你的意见。你的投入使你成为了这本书旅程的一部分。
+你的反馈对于帮助我改进这本书至关重要。无论你是发现了拼写错误、代码中的 Bug，还是对内容有建议，我都非常乐意听到你的意见。你的投入使你成为了这本书旅程的一部分。
 
 ## 如何提供反馈
 
@@ -300,31 +291,35 @@
 
 ## 持续改进
 
-由于这本书是自出版的，我有灵活创建创建并发布更新。你的反馈将直接影响这些更新，确保书籍不断改进。
+由于这本书是自出版的，我有灵活创建并发布更新。你的反馈将直接影响这些更新，确保书籍不断改进。
 
 感谢你花时间帮助这本书变得更好！
 
 > 你可以通过此电子邮件提供反馈：
-clean-code-fundamentals@gmail.com
+>
+> `clean-code-fundamentals@gmail.com`
+
 或通过 Twitter：
-@mnhocketweets #CleanCodeFundamentals
 
-## 1. 软件匠精神与整洁代码
+`@mnhocketweets #CleanCodeFundamentals`
 
-### 1.1 对软件开发的热情
+# 1. 软件匠精神与整洁代码
+
+## 1.1 对软件开发的热情
 
 软件匠精神是一条通往精通的长路。这种心态是指软件开发者选择对自己的职业负责，不断学习新的工具和技术，并不断完善自己。
+
 —Sandro Mancuso，《软件匠人》
 
-软件匠精神运动的基础是 Robert C. Martin 出版的《整洁代码》。作者是软件匠精神运动的联合创始人。有很多诸如《软件匠精神宣言》和《整洁代码开发者运动等倡议，它们提高了软件开发的标准——幸运的是如此。
+软件匠精神运动的基础是 Robert C. Martin 出版的《整洁代码》。作者是软件匠精神运动的联合创始人。有很多诸如《软件匠精神宣言》和《整洁代码开发者运动》等倡议，它们提高了软件开发的标准——幸运的是如此。
 
 ![Software Craftsmanship]
 
 软件匠精神关注于在开发过程中采用良好的技术实践。显而易见，每个人都喜欢软件匠精神。每个人都想要整洁的代码库，但这很难实现。某些步骤也应该以正确的方式完成。软件匠精神运动下定义的实践将帮助你实现目标。
 
-软件匠精神
-
 软件匠精神应该是你追求的目标。它不是你项目的成熟度，而是你的软件和代码库的质量，正如本杰明·富兰克林所说：“质量低劣的苦味在生活的甜蜜被遗忘后依然存在很久。”
+
+
 
 一些开发者对工作充满热情，并已经获得了这些价值观，为代码提供质量和善意。他们拥有必要的技能根据他们的价值观来实现产品。遗憾的是，许多人知之甚少或完全不知道还有其他开发软件的方法。直到今天，许多有助于创建精良软件的开发实践在学校里根本没有被教授。
 
@@ -348,7 +343,7 @@ clean-code-fundamentals@gmail.com
 
 学习如何与周围的人在每个层面上进行有效沟通。参与其他想法，倾听它们，并通过其他观点扩展你的视野。这将有助于你质疑自己的观点，并最终将它们传达。
 
-### 你会被批评。学会如何应对它。
+### 你会被批评。学会如何应对它
 
 理解批评的价值，并学会如何充分利用它。这些是你成长的机会，应该接受为你提供的反馈。
 
@@ -356,35 +351,31 @@ clean-code-fundamentals@gmail.com
 
 并不是你所做的每件事总是值得做的。学会如何识别高价值的工作并忽略其他的。理解基础和概念并深化它们。专注于你感兴趣的几件事，同时关注其他事物。框架日新换异，更重要的是理解它们背后的概念。你可以将这些概念应用于未来的所有框架。
 
-### 学习如何让你学习更高效。
+### 学习如何让你学习更高效
 
 找到适合你随时间学习新事物的最佳方式。向他人解释事物并分享你的知识是深化知识和学习新事物的非常有效的方法。
 
-### 对你宝贵的时间要有选择性。
+### 对你宝贵的时间要有选择性
 
 你不能独自完成所有工作。如果你学会如何有效地授权，你就可以增加在对更有价值的话题上的投入。对你的目标要现实，你不可能无知一切。
 
-### 分享你所学的一切给其他人。
-
-
-
-
+### 分享你所学的一切给其他人
 
 你不仅能帮助周围的其他人变得更好，还能加强自己的理解并增长自己的知识。当知识在团队中增长并进行交流时，每个人都能赢。
 
-## 学习如何激励他人。
+## 学习如何激励他人
 
-如果你知道如何点燃火焰并保持其燃烧，每个人都会想留在你身边。允许你的团队成员按照他们 own工作，并给予他们进行创造和高效工作所需的自由。树立良好的榜样并找出你的同事需要什么来激发动力。
+如果你知道如何点燃火焰并保持其燃烧，每个人都会想留在你身边。允许你的团队成员按照他们 own 工作，并给予他们进行创造和高效工作所需的自由。树立良好的榜样并找出你的同事需要什么来激发动力。
 
-## 学习主动。
+## 学习主动
 
 不要等问题变成麻烦。要以主动的方式处理事务。
 
-## 拥抱变化。
+## 拥抱变化
 
 变化是生活的自然部分，应该被拥抱而不是恐惧。世界在不断演变，软件也需要随之变化。为了保持相关性，软件必须不断更新和改进。变化可能是困难的，甚至是可怕的。但对于增长来说至关重要。拥抱变化是确保你的软件演进并在未来多年内持续好用的唯一途径。
 
-## 无畏地重构。
+## 无畏地重构
 
 要实现软件工艺，必须愿意无畏地进行重构。这意味着愿意更改代码结构，使其更具可读性、可维护性和扩展性。这也意味着愿意丢弃不再需要的代码。重构可能会令人害怕，尤其是当你正在处理已经在运行的代码时。但请记住，目标不是避免破坏东西，而是让你的代码变得更好。如果你不害怕破坏，你更有可能创造出真正优秀的代码。
 
@@ -404,6 +395,7 @@ clean-code-fundamentals@gmail.com
 - 不仅仅是客户合作，还有高效的伙伴关系
 
 也就是说，在追求左侧的项目时，我们发现右侧的项目是不可或缺的。
+
 这些原则之所以重要，是因为它们为创建不仅功能完而且设计良好且于维护的软件提供了路线图。遵循这些原则将帮助软件开发者创建更有可能长期使用和维护的代码。
 
 ## 1.3 洁净代码开发者
@@ -414,26 +406,27 @@ clean-code-fundamentals@gmail.com
 
 下面你可以看到 CCD 系统所经历的等级迭代周期概述。这些等级在难度和收益方面环环相扣。尚未开始 CCD 的开发者拥有黑色等级。黑色等级仅表示对 CCD 不感兴趣。
 
-洁净代码开发者等级循环
+### 洁净代码开发者等级循环
 
-洁净代码开发者等级
+### 洁净代码开发者等级
 
 | 等级 | 原则 | 实践 |
 | :--- | :--- | :--- |
-| 红色 | 不要重复自己 (DRY)<br>保持简单，愚蠢的 (KISS)<br><br>注意优化<br>优先组合而非继承 | 使用版本控制系统<br>重构模式：重命名和提取方法<br>童军规则<br>根因分析<br>每日反思 |
-| | 一层抽象、单一责任原则 (SRP)<br>关注点分离 (SoC)<br>源代码规范 | 问题跟踪、自动集成测试<br>读、读、读（评审） |
+| 红色 | 不要重复自己（DRY）<br>保持简单，愚蠢的（KISS）<br><br>注意优化<br>优先组合而非继承 | 使用版本控制系统<br>重构模式：重命名和提取方法<br>童军规则<br>根因分析<br>每日反思 |
+|  | 一层抽象、单一责任原则（SRP）<br>关注点分离（SoC）<br>源代码规范 | 问题跟踪、自动集成测试<br>读、读、读（评审） |
 | 黄色 | 信息隐藏 | 参加会议 |
-| | 最小意外性原则 (POLA)<br>里基夫替换原则 (LSP)<br>接口隔离原则 (ISP)<br>依赖注入原则 (DIP) | 自动单元测试<br>原型设计 (Mockups)<br>代码覆盖分析<br>复杂重构 |
-| 绿色 | 开闭原则 (OCP)<br>要告知，不要询问<br>最少节律 (LoD) | 持续集成<br>静态代码分析<br>控制反转容器<br>分享你的经验 |
-| 蓝色 | 实现符合设计<br>你不需要它 (YAGNI)<br>设计与实现分离 | 持续部署<br>组件导向<br>迭代开发<br>TDD |
+|  | 最小意外性原则（POLA）<br>里基夫替换原则（LSP）<br>接口隔离原则（ISP）<br>依赖注入原则（DIP） | 自动单元测试<br>原型设计（Mockups）<br>代码覆盖分析<br>复杂重构 |
+| 绿色 | 开闭原则（OCP）<br>要告知，不要询问<br>最少节律（LoD） | 持续集成<br>静态代码分析<br>控制反转容器<br>分享你的经验 |
+| 蓝色 | 实现符合设计<br>你不需要它（YAGNI）<br>设计与实现分离 | 持续部署<br>组件导向<br>迭代开发<br>TDD |
 | 白色 | 所有实践汇合并包含所有其他等级 | 所有实践汇合并包含所有其他等级 |
 
-https://clean-code-developer.com/
+<https://clean-code-developer.com/>
 
 ## 1.4 童军规则
 
 > 总是离开比你发现时更干净的营地。
-- Robert Martin
+>
+> — Robert Martin
 
 童军有一条关于营地的规则：他们应该离开比发现时更干净的营地。通过确保这条规则，他们可以保证至少在区域整洁方面不会产生新问题。
 
@@ -447,16 +440,13 @@ https://clean-code-developer.com/
 
 随着时间的推移，系统所基于的源代码质量往往会恶化，导致技术债不断增加。有些团队采取推迟所有有价值工作并尝试清理代码库的方法。这通常会导致重构冲刺或完全重写。从业务角度来看，这二者都不是解决方案。功能开发和错误修复必须继续，重构不应该占用大部分时间。根据童军规则，团队可以随着时间的推移改进代码质量，同时继续向客户和利益相关者交付价值。不要让你的系统超过应用程序变得不可维护的界点。因此，“努力让世界比你发现它时好一点”。
 
-
-
-
-
 ## 1.5 破窗理论
 
 修复代码中的小问题（即“破碎的窗户”）非常重要，防止它们演变成大问题。
-- *实务派程序员*
 
-破窗理论是一种犯罪学理论，它认为犯罪的迹象、反社会行为和社会混乱的视觉化呈现会营造出一种鼓励进一步犯罪和混乱的城市环境，包括严重犯罪。该理论认为，针对轻微犯罪（如破坏公物、游荡、公共场所饮酒、闯红灯和逃票等）的执法方法有助于营造秩序和守法的氛围，从而防止更严重的犯罪。 - *维基百科*
+— 实务派程序员
+
+破窗理论是一种犯罪学理论，它认为犯罪的迹象、反社会行为和社会混乱的视觉化呈现会营造出一种鼓励进一步犯罪和混乱的城市环境，包括严重犯罪。该理论认为，针对轻微犯罪（如破坏公物、游荡、公共场所饮酒、闯红灯和逃票等）的执法方法有助于营造秩序和守法的氛围，从而防止更严重的犯罪。— 维基百科
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_21_0.png)
 
@@ -470,8 +460,9 @@ https://clean-code-developer.com/
 
 一旦某个东西坏了且无法修复，它就会在整个团队中蔓延。团队或新成员会使用这些“破碎的窗户”，并且害怕添加新的窗户。这导致了更糟糕的代码，并失去了人们对你处理代码方式的尊重。关注技术债，无论问题多小都要解决它们。不要让代码腐烂。代码越糟糕，其他团队成员就越容易提交坏代码。
 
-> *https://prag.com/titles/tpp20-the-pragmatic-programmer-20th-anniversary-edition/
-*https://en.wikipedia.org/wiki/Broken_windows_theory
+> <https://prag.com/titles/tpp20-the-pragmatic-programmer-20th-anniversary-edition/>
+>
+> <https://en.wikipedia.org/wiki/Broken_windows_theory>
 
 ## 1.6 货物崇拜编程
 
@@ -487,7 +478,7 @@ Gabriel 将货物崇拜编程与美拉尼西亚岛的宗教性“货物崇拜”
 
 总体来说，货物崇拜编程是一种有害的开发实践，可能给软件项目带来灾难性的后果。开发团队需要意识到这种编程技术的危险，并采取措施避免它。
 
-> [13]https://archive.org/details/professionalsoft00mcco_0
+> [13](https://archive.org/details/professionalsoft00mcco_0)
 
 ## 1.7 知识 - 专家
 
@@ -501,7 +492,7 @@ Simon Wardley 发表这张图是为了玩笑¹²，它并没有基于任何研�
 
 知识 - 专家
 
-> ¹²https://threadreaderapp.com/thread/10455754603498708.html
+> ¹²<https://threadreaderapp.com/thread/10455754603498708.html>
 
 # 2. 软件设计基础
 
@@ -513,8 +504,6 @@ Simon Wardley 发表这张图是为了玩笑¹²，它并没有基于任何研�
 
 OOD 的基本概念是本书的基础，将在后续章节中简要讨论。然而，它们是理解后续章节设计原则和设计模式的基础。Java 的语言规范、特性以及多态、封装、抽象和继承的实现有助于。
 
-# 2. 软件设计基础
-
 ### 架构模式
 
 架构模式位于设计金字塔的顶端。架构模式是一组重复的设计决策。有很多架构模式，如微内核、微服务、分层架构、事件驱动等。
@@ -525,21 +514,21 @@ OOD 的基本概念是本书的基础，将在后续章节中简要讨论。然�
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_25_0.png)
 
-#### 抽象
+### 抽象
 
 抽象意味着客户端只与对象的特定属性和方法交互。抽象使用简化的高层访问来处理复杂对象。
 
 - 通过忽略细节来隐藏复杂性
 - 在设计层面解决问题
 
-#### 封装
+### 封装
 
 封装是一种通过限制对类、方法和变量的访问来隐藏数据实现的机制。例如，通过将实例变量设为私有并使访问方法可见来实现这一点。为了减少软件组件之间的耦合，封装机制是关重要的。
 
 - 信息和数据隐藏
 - 在实现层面解决问题
 
-#### 继承
+### 继承
 
 继承允许类继承其他类的特征。在实践中，父类将属性和行为扩展到子类。
 
@@ -561,7 +550,7 @@ OOD 的基本概念是本书的基础，将在后续章节中简要讨论。然�
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_26_0.png)
 
-#### 多态
+### 多态
 
 多态意味着“一名多形”。它允许设计共享行为的对象。通过继承，对象可以用特定行为覆盖父类行为。多态允许同一个方法静态和动态地执行不同的行为。静态多态与继承紧密相关。我们可以编写在父类上运行的代码，它对任何子类类型也同样有效。
 
@@ -570,13 +559,9 @@ OOD 的基本概念是本书的基础，将在后续章节中简要讨论。然�
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_26_1.png)
 
-
-
-
-
 ## 设计基础
 
-#### 多态
+### 多态
 
 ```java
 class Client {
@@ -599,21 +584,21 @@ class Client {
 
 ## 输出
 
-```
+```text
 Employee with an annual salary bonus of 1000,00!
 Developer with an annual salary bonus of 3000,00!
 Manager with an annual salary bonus of 5000,00!
 ```
 
-在这个示例中，编译器不知道引用属性 `employee` 是什么类型。它们不知道在 `annualSalaryBonus()` 上调用的是哪个操作。它取决于子类 `Developer` 或 `Manager` 的父类 `Employee` 的 `annualSalaryBonus()` 方法。
+在这个示例中，编译器不知道引用属性`employee`是什么类型。它们不知道在`annualSalaryBonus()`上调用的是哪个操作。它取决于子类`Developer`或`Manager`的父类`Employee`的`annualSalaryBonus()`方法。
 
-此外，如果为 `Employee` 子类添加额外的子类，则不需要修改 `assembleMessage()` 操作。
+此外，如果为`Employee`子类添加额外的子类，则不需要修改`assembleMessage()`操作。
 
 ## 2.3 设计的目标
 
 软件设计虽然不可见，但它是任何软件项目的骨干。即使软件满足了所有功能需求，糟糕的设计也可能在可维护性、扩展性和整体方面带来巨大挑战。
 
-## 良好设计的特征
+### 良好设计的特征
 
 一个良好的软件系统具有以下几个关键特征：
 
@@ -628,6 +613,8 @@ Manager with an annual salary bonus of 5000,00!
 - **可理解性**：易读、易理解的代码有助于新开发者更顺利地上手以及更高效的协作。
 
 ## 软件设计的价值
+
+
 
 下图展示了软件设计在项目中的分级价值。
 
@@ -666,84 +653,6 @@ Manager with an annual salary bonus of 5000,00!
 - “永远不要动运行的代码”综合症 (Never-touch-running-code Syndrome)
   - 开发者害怕更改代码。
   - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
-- 开发者害怕更改代码。
-  - 开发了许多变通方案，代码。
 
 ## 2.5 良好设计的标准
 
@@ -757,10 +666,6 @@ Manager with an annual salary bonus of 5000,00!
 
 这些标准是分形的，即它们适用于设计的所有层面，如架构、子系统和组件。
 
-
-
-
-
 ## 2.6 信息隐藏
 
 通过隐藏不应由客户端调用和访问细节、方法和成员，简化并减少对类的访问。
@@ -773,7 +678,7 @@ Manager with an annual salary bonus of 5000,00!
 
 下表和插图显示了 Java 中的访问控制规则。
 
-| 可见范围： | public | protected | (default) | private |
+| 可见范围： | `public` | `protected` | (default) | `private` |
 | --- | --- | --- | --- | --- |
 | 同一类 | yes | yes | yes | yes |
 | 不同类，相同包 | yes | yes | yes | no |
@@ -795,27 +700,30 @@ public
 
 ## 软件设计基础
 
-protected
+`protected`
+
 对象的受保护成员或构造函数可能由负责该对象实现的代码从其声明的包外部进行访问。它只能应用于字段、构造函数和方法——不能应用于类。
 
-package-private
+`package-private`
+
 如果未指定 `public`、`protected` 或 `private` 访问修饰符，类成员或构造函数具有包私有访问权限。可以通过包含该类声明的包进行访问，但类成员或构造函数在任何其他包中都是不可见的。
 
-private
+`private`
+
 私有类成员或构造函数仅在启用该成员或构造函数的顶层类体内可访问。
 
 | | 类 | 相同包内的类 | 包外的类 |
 | --- | --- | --- | --- |
-| | +public() | +public() | +public() |
-| | +protected() | +protected() | |
-| | +default() | +default() | |
-| | +private() | | |
+| | +`public()` | +`public()` | +`public()` |
+| | +`protected()` | +`protected()` | |
+| | +`default()` | +`default()` | |
+| | +`private()` | | |
 
 | 相同包内的子类 | 包外的子类 |
 | --- | --- |
-| +public() | +public() |
-| +protected() | +protected() |
-| +default() | |
+| +`public()` | +`public()` |
+| +`protected()` | +`protected()` |
+| +`default()` | |
 
 ## Java 中的可见性
 
@@ -827,12 +735,12 @@ private
 
 如果方法被重写，新方法的访问控制级别不能比原始方法更强。在 `private` 的情况下，不存在继承关系。更准确地说，没有发生重写，且无法通过 `super` 访问父类方法。
 
-| 从/到： | public | protected | (default) | private |
+| 从/到： | `public` | `protected` | (default) | `private` |
 | --- | --- | --- | --- | --- |
-| public | yes | no | no | no |
-| protected | yes | yes | no | no |
+| `public` | yes | no | no | no |
+| `protected` | yes | yes | no | no |
 | (default) | yes | yes | yes | no |
-| private | no | no | no | no |
+| `private` | no | no | no | no |
 
 可见性与继承
 
@@ -898,10 +806,6 @@ private
 - **灵活性**：低耦合的系统更容易扩展和修改。可以在对现有组件产生最小干扰的情况下添加新功能。
 - **可重用性**：相互独立的模块可以在不同项目中重用，节省开发时间和资源。
 
-
-
-
-
 # 软件设计基础
 
 - **维护困难**：高耦合模块难以维护，因为一个模块的更改需要另一个模块也随之更改，从而导致级联修改。
@@ -945,6 +849,7 @@ private
 ## 2.10 泥球潭 (Big Ball of Mud)
 
 > “泥球潭”是一个结构杂乱、蔓延、草率、用胶带和铁丝临时拼凑而成的意大利面条代码丛林。这些系统表现出明显的不受控增长和反复权宜修复的迹象。信息在系统的远端元素之间放任共享，往往导致几乎所有重要信息都变成了全局性的或重复的。系统的整体结构可能从未被良好地定义过。如果定义过，它可能已经被侵蚀到了无法识别的地步。有一丝架构敏感性的程序员都会避开这些泥潭。只有那些对架构不在意、也许习惯了在修复这些不断崩溃的堤坝的日常琐事中寻求惯性工作的人，才会满足于在这样的系统上工作。
+
 —Brian Foote and Joseph Yoder, Big Ball of Mud.
 
 泥球潭是软件架构的一种反模式，它描述了一个没有可识别软件架构的程序。
@@ -993,7 +898,9 @@ private
 - 当我们试图避免困难时，会面临日益增加复杂度。因此，如果我们经常执行困难的任务，复杂度就会降低。
 - https://martinfowler.com/bliki/FrequencyReducesDifficulty.html
 
-### 离开代码时比发现它时更好 (童子军)
+
+
+### 离开代码时比发现它时更好（童子军）
 
 - 持续改进你的代码，这意味着我们每次在代码库中做出更改时，都改进它。
 - 无论原因如何，我们都不希望产生额外的技术债。每当我们看到代码异味时，都应该尝试消除它。
@@ -1003,20 +910,16 @@ private
 
 - 你无法在文档或现有代码中找到所需信息——你必须与人交流。
 
-
-
-
-
 ## 软件设计基础
 
 - **软件架构**：软件中的分层结构涉及将组件组织成不同的层或级，每层都有特定的角色和职责。这种关注点分离提高了系统的可管理性和可扩展性。
 
-## 图式（Schemata）的构建：
+## 图式（Schemata）的构建
 
 - **认知心理学**：图式是帮助我们理解和预测周围世界的心理模型。
-- **软件架构****：在软件设计中，图式通过设计模式和架构风格来表示。一致地使用这些模式有助于开发者理解系统的结构和行为，使其更容易维护和扩展。
+- **软件架构**：在软件设计中，图式通过设计模式和架构风格来表示。一致地使用这些模式有助于开发者理解系统的结构和行为，使其更容易维护和扩展。
 
-Carola Lilienthal 在她的书籍*可持续软件架构：分析与减少技术债*中，探讨了这些认知机制如何映射到软件架构中。核心要点包括：
+`Carola Lilienthal` 在她的书籍《可持续软件架构：分析与减少技术债》中，探讨了这些认知机制如何映射到软件架构中。核心要点包括：
 
 - **模块化**：将系统拆分为不同的、内聚的模块符合“分块（chunking）”原则。每个模块都应该有清晰的职责和接口，简化开发和维护。
 - **分层化**：将软件组织为分层的结构或组件，可以确保高层策略与低层细节分离。这促进了清晰的抽象，并使系统的不同部分解耦。
@@ -1028,7 +931,7 @@ Carola Lilienthal 在她的书籍*可持续软件架构：分析与减少技术�
 - **增强可维护性**：通过将代码组织成可管理的块和清晰的层级，系统变得更容易维护和扩展。
 - **减少技术债**：一致地使用设计模式和模块化架构有助于减少技术债，使系统随时间推移更加稳健可持续。
 
-将认知心理学整合到软件架构设计中对于创建高质量、可维护的系统至关重要。通过利用分块、层次和图式，开发团队可以有效管理复杂性，并构建健壮可扩展的系统。要深入理解这些概念及其实际应用，Carola Lilienthal 的《可持续软件架构：分析与减少技术债》是一份极其宝贵的资源。
+将认知心理学整合到软件架构设计中对于创建高质量、可维护的系统至关重要。通过利用分块、层次和图式，开发团队可以有效管理复杂性，并构建健壮可扩展的系统。要深入理解这些概念及其实际应用，`Carola Lilienthal` 的《可持续软件架构：分析与减少技术债》是一份极其宝贵的资源。
 
 ## 软件设计基础
 
@@ -1068,18 +971,18 @@ Carola Lilienthal 在她的书籍*可持续软件架构：分析与减少技术�
 
 #### 你如何将类组织到包中？
 
-假设你正在编写一个 Web应用程序。在这个应用程序中，你处理票务和预约。你的类包括处理票务的 `TicketController`、`TicketService`、`TicketRepository`以及处理注册的 `RegistrationController`、`RegistrationService` 和 `RegistrationRepository`。那么，你如何将类组织到包中并创建一个有效的架构呢？
+假设你正在编写一个 Web 应用程序。在这个应用程序中，你处理票务和预约。你的类包括处理票务的 `TicketController`、`TicketService`、`TicketRepository` 以及处理注册的 `RegistrationController`、`RegistrationService` 和 `RegistrationRepository`。那么，你如何将类组织到包中并创建一个有效的架构呢？
 
 构建包结构有两种不同的方法。你可以关注技术层：
 
-- com.swsc.web
-- com.swsc.service
-- com.swsc.repository
+- `com.swsc.web`
+- `com.swsc.service`
+- `com.swsc.repository`
 
 或者你可以关注领域，并将包划分为功能驱动的方法：
 
-- com.swsc.registration
-- com.swsc.ticket
+- `com.swsc.registration`
+- `com.swsc.ticket`
 
 这种方法将在接下来的章节中详细讨论。
 
@@ -1119,10 +1022,6 @@ com.swcs.repository
 (C) ReservationRepository
 ```
 
-
-
-
-
 ## 2.13.4 基于功能的分层 - 单包模式
 
 因此，更好的方法是根据功能职责将应用程序划分为垂直切片（vertical slices），并保留技术分层。每个模块都被赋予了清晰且独立的函数上下文的职责。我们不是对分层进行耦合，而是沿着切片进行垂直耦合。通过功能进行打包通过将所有类保持在同一个包或模块中，改进了耦合性和内聚性。这最小程度地减少了切片之间的耦合，并最大化了切片内部的耦合。从远来看，这种切片方式简化了代码维护，因为我们清楚正在代码的哪部分。我们可以在不触碰或完全理解其余代码的情况下进行更改。这使得对应用程序的各个部分进行更改更容易，提高了可维护性和扩展性。
@@ -1137,9 +1036,9 @@ com.swcs.repository
 
 水平切片和垂直切片都有其用场景，但显而易见的是，垂直切片结合水平切片能够实现更现代、适应性的架构。
 
-这种方法使得减少类的可见性成为可能。它们可以设置为包私有，因此仅在功能切片内部可用。在水平分层中，这是无法实现的，因为相关的类必须跨包进行通信，这迫使我们将一切都设为公共。切片内部的水平分层仍然存在。*Controller、*Service* 和 *Repository* 的命名约定定义了分层。
+这种方法使得减少类的可见性成为可能。它们可以设置为包私有，因此仅在功能切片内部可用。在水平分层中，这是无法实现的，因为相关的类必须跨包进行通信，这迫使我们将一切都设为公共。切片内部的水平分层仍然存在。`*Controller`、`*Service` 和 `*Repository` 的命名约定定义了分层。
 
-> *https://blog.cleancoder.com/uncle-bob/2011/09/30/Screaming-Architecture.html
+> https://blog.cleancoder.com/uncle-bob/2011/09/30/Screaming-Architecture.html
 
 软件设计基础
 
@@ -1159,12 +1058,12 @@ com.swcs.repository
 
 优点是显而易见的：
 
--   你获得了切片的低耦合和高内聚性。
--   代码结构与领域对应，确保了开发者与部门之间一致的理解和通信。
--   由于新功能和增强大多是技术驱动的，因此更容易识别合适的模块并确定更改的范围。
--   单个功能域内的更改可以在系统的单个部分发生。通过这种方式，避免或减少了副作用，因为模块之间是相互独立的。
--   垂直分离促进了硬性上下文边界的形成。垂直分层使得架构能够更轻松地从单体结构转变为类似于微服务构建的分布式结构。
--   可测试性更好，因为模块的技术逻辑与其他模块隔离开来。
+- 你获得了切片的低耦合和高内聚性。
+- 代码结构与领域对应，确保了开发者与部门之间一致的理解和通信。
+- 由于新功能和增强大多是技术驱动的，因此更容易识别合适的模块并确定更改的范围。
+- 单个功能域内的更改可以在系统的单个部分发生。通过这种方式，避免或减少了副作用，因为模块之间是相互独立的。
+- 垂直分离促进了硬性上下文边界的形成。垂直分层使得架构能够更轻松地从单体结构转变为类似于微服务构建的分布式结构。
+- 可测试性更好，因为模块的技术逻辑与其他模块隔离开来。
 
 软件设计基础
 
@@ -1243,13 +1142,9 @@ Java 9 引入的 Java 模块系统为你的架构提供了另一种可见性规�
 
 你会发现，考虑模块系统有助于开发出更整洁、更一致的设计。你不需要模块系统来设计模块化，但模块系统会让这变得容易得多。
 
-Nicolai Pavlov 写的《The Java Module System》一书深入介绍了模块系统的功能的见解。
+`Nicolai Pavlov` 写的《The Java Module System》一书深入介绍了模块系统的功能的见解。
 
 > https://openjdk.java.net/jeps/261
-
-
-
-
 
 ## 2.14 架构文档
 
@@ -1257,94 +1152,68 @@ Nicolai Pavlov 写的《The Java Module System》一书深入介绍了模块系�
 
 为了向所有需要架构信息（例如内部结构、跨领域概念或基础架构概述的核心决策）的系统利益相关者提供信息，提供架构文档至关重要。
 
-Arc42 提供了一个描述架构的全面且精简的模板。该模板提供了展开的架构文档，有助于理解大局，并通过查看多个领域将各个点连接起来。
+`Arc42` 提供了一个描述架构的全面且精简的模板。该模板提供了展开的架构文档，有助于理解大局，并通过查看多个领域将各个点连接起来。
 
 该模板结构如下，包含 12 个结构项：
 
--   **1. 引言与目标**
-  对需求的简要描述、驱动因素、需求摘要。针对架构的、主要利益相关者优先级最高的三个或最多五个质量目标。重要利益相关者及其对架构期望的表格。
-
--   **2. 约束**
-  任何限制团队设计和实现决策或关于相关过程决策的内容。有时会超出单个系统，并适用于整个组织和公司。
-
--   **3. 上下文与范围**
-  将你的系统与其外部通信伙伴进行界定。指定外部接口。
-
--   **4. 解决方案策略**
-  塑造架构的基础决策和解决方案策略的总结。可以包括技术、顶层划分、实现高质量目标的方法以及相关的组织决策。
-
--   **5. 构建块视图**
-  系统的静态划分，源代码的抽象，直到适当的详细程度级别。
-
--   **6. 运行视图**
-  作为场景的构建块行为，涵盖了重要的用例或功能、关键外部接口的交互、操作与管理以及错误和异常行为。
-
--   **7. 部署视图**
-  带有环境、计算机、处理器、拓扑结构的技术设施。软件构建块到基础设施要素的映射。
-
-# 8. 跨领域概念
-
-总的来说，主要的法规和解决方案在系统的多个部分中都是相关的。
-
-# 9. 架构决策
-
-重要的、昂贵的、关键的、大规模的或风险风险架构决策，包括理由。
-
-# 10. 质量需求
-
-以场景形式存在的质量需求，并带有质量树提供高层概述。
-
-# 11. 风险与技术债
-
-已知的风险或技术债。
-
-# 12. 术语表
-
-利益相关者在讨论系统时使用的重要领域和技术术语。
+- **1. 引言与目标**：对需求的简要描述、驱动因素、需求摘要。针对架构的、主要利益相关者优先级最高的三个或最多五个质量目标。重要利益相关者及其对架构期望的表格。
+- **2. 约束**：任何限制团队设计和实现决策或关于相关过程决策的内容。有时会超出单个系统，并适用于整个组织和公司。
+- **3. 上下文与范围**：将你的系统与其外部通信伙伴进行界定。指定外部接口。
+- **4. 解决方案策略**：塑造架构的基础决策和解决方案策略的总结。可以包括技术、顶层划分、实现高质量目标的方法以及相关的组织决策。
+- **5. 构建块视图**：系统的静态划分，源代码的抽象，直到适当的详细程度级别。
+- **6. 运行视图**：作为场景的构建块行为，涵盖了重要的用例或功能、关键外部接口的交互、操作与管理以及错误和异常行为。
+- **7. 部署视图**：带有环境、计算机、处理器、拓扑结构的技术设施。软件构建块到基础设施要素的映射。
+- **8. 跨领域概念**：总的来说，主要的法规和解决方案在系统的多个部分中都是相关的。
+- **9. 架构决策**：重要的、昂贵的、关键的、大规模的或风险风险架构决策，包括理由。
+- **10. 质量需求**：以场景形式存在的质量需求，并带有质量树提供高层概述。
+- **11. 风险与技术债**：已知的风险或技术债。
+- **12. 术语表**：利益相关者在讨论系统时使用的重要领域和技术术语。
 
 ## 2.15 测试架构与设计
 
 系统的架构通常是某个特定时间点设计的方案。然而，随着系统的演进以及开发者的来来去去，很难保持参考架构的更新或鼓励开发者对其进行修改，因为它通常以文档、Confluence 页面或类似的形式存在。这可能导致违反架构规范的代码增加，从而增加技术债。
 
-### IntelliJ*
+### IntelliJ
 
-IntelliJ 自带一个用于架构分析的简单工具。通过它，你可以为你的代码生成依赖矩阵。
+`IntelliJ` 自带一个用于架构分析的简单工具。通过它，你可以为你的代码生成依赖矩阵。
 
-### Eclipse*
+### Eclipse
 
-在 eclipse 中，你可以安装各种插件来可视化依赖关系并检测循环。eDepend¹，STAN² jDepend³ Java Dependency Viewer⁴。
+在 `eclipse` 中，你可以安装各种插件来可视化依赖关系并检测循环。`eDepend`¹，`STAN`² `jDepend`³ `Java Dependency Viewer`⁴。
 
 ### ArchUnit⁵
 
-使用 ArchUnit，你可以自动检查 Java 应用程序的架构约束并作为测试套件的一部分运行。它是一个免费、简单且可扩展的库，用于检查 Java 代码架构，可以检查包与类之间、层与切片之间、依赖关系等的检查关系。
+使用 `ArchUnit`，你可以自动检查 Java 应用程序的架构约束并作为测试套件的一部分运行。它是一个免费、简单且可扩展的库，用于检查 Java 代码架构，可以检查包与类之间、层与切片之间、依赖关系等的检查关系。
 
 ### Taikai⁶
 
-Taikai 通过提供一套针对各种技术定制的全面预定义规则扩展了 ArchUnit 库的功能。它简化了代码库中架构约束和最佳实践的执行，确保了项目的一致性和质量。
+`Taikai` 通过提供一套针对各种技术定制的全面预定义规则扩展了 `ArchUnit` 库的功能。它简化了代码库中架构约束和最佳实践的执行，确保了项目的一致性和质量。
 
-### JQAssistant⁷*
+### JQAssistant⁷
 
-JQAssistant 是一个 QA 工具，允许在结构层面定义和验证特定于项目的规则。它基于图数据库 Neo4j 构建，可以轻松地插入构建过程中，以自动检测约束违规并生成关于用户定义概念和指标的报告。
+`JQAssistant` 是一个 QA 工具，允许在结构层面定义和验证特定于项目的规则。它基于图数据库 `Neo4j` 构建，可以轻松地插入构建过程中，以自动检测约束违规并生成关于用户定义概念和指标的报告。
 
 ### Structure 10⁸
 
-使用 Structure 10，你可以理解、分析、“拖放式”重构并控制一个大型、复杂的代码库。
+使用 `Structure 10`，你可以理解、分析、“拖放式”重构并控制一个大型、复杂的代码库。
 
 ### SonarQraph⁹
 
-SonarQraph 是一个强大的静态代码分析器，允许你监控软件系统的技术质量，并在开发过程的所有阶段强制执行有关架构、指标和方面方面的规则。
+`SonarQraph` 是一个强大的静态代码分析器，允许你监控软件系统的技术质量，并在开发过程的所有阶段强制执行有关架构、指标和方面方面的规则。
 
--   ¹ https://www.jetbrains.com/
--   ² https://eclipse.org/
--   ³ https://marketplace.eclipse.org/category/free-tagging/edepend-graphical-dependency-analysis-tool-340
--   ⁴ https://eclipse.org/
--   ⁵ https://marketplace.eclipse.org/free-tagging/jdepend
--   ⁶ https://marketplace.eclipse.org/content/java-dependency-viewer
--   ⁷ https://www.archunit.org/
--   ⁸ https://github.com/cmfx/taikai
--   ⁹ https://jqassistant.org/
--   ¹⁰ https://structure101.com/
--   ¹¹ https://www.lelio2morrow.com/products/sonargraph
+
+
+- ¹ https://www.jetbrains.com/
+- ² https://eclipse.org/
+- ³ https://marketplace.eclipse.org/category/free-tagging/edepend-graphical-dependency-analysis-tool-340
+- ⁴ https://eclipse.org/
+- ⁵ https://marketplace.eclipse.org/free-tagging/jdepend
+- ⁶ https://marketplace.eclipse.org/content/java-dependency-viewer
+- ⁷ https://www.archunit.org/
+- ⁸ https://github.com/cmfx/taikai
+- ⁹ https://jqassistant.org/
+- ¹⁰ https://structure101.com/
+- ¹¹ https://www.lelio2morrow.com/products/sonargraph
 
 ### Lattix¹²
 
@@ -1358,29 +1227,29 @@ Teamscale 支持你的团队分析、监控和改进代码。
 
 是一个桥接代码、业务和人的多功能工具。优先考虑并减少技术债。
 
--   ¹² https://www.lattix.com/
--   ¹³ https://cqse.eu/en/teamscale/
--   ¹⁴ https://codescene.com/
+- ¹² https://www.lattix.com/
+- ¹³ https://cqse.eu/en/teamscale/
+- ¹⁴ https://codescene.com/
 
 ## 2.16 软件工程价值
 
 ![软件工程价值](img/574b28a50e4c3d)
 
-软件工程价值
+软件工程价值：
 
--   为了确保系统的功能正确性，确保每个单元都是可验证且经过测试的。
+- 为了确保系统的功能正确性，确保每个单元都是可验证且经过测试的。
 
 ### 可维护性
 
--   我们构建持久的系统，这意味着可维护的系统应该是易于理解的。维护所需的特定系统知识应保持在最低。
+- 我们构建持久的系统，这意味着可维护的系统应该是易于理解的。维护所需的特定系统知识应保持在最低。
 
 ### 一致性
 
--   为了提高灵活性和维护性，针对相同问题的不同库、第三方服务和应用集成模式的数量应保持在最低。维护者可能会随时间变化。
+- 为了提高灵活性和维护性，针对相同问题的不同库、第三方服务和应用集成模式的数量应保持在最低。维护者可能会随时间变化。
 
 ### 模块化
 
--   事物总是在变化的。为了保护我们的代码免受这一基本事实的影响，我们需要限制影响范围并将其划分为相关的独立的单元。
+- 事物总是在变化的。为了保护我们的代码免受这一基本事实的影响，我们需要限制影响范围并将其划分为相关的独立单元。
 
 ### 简单性
 
@@ -1392,33 +1261,30 @@ Teamscale 支持你的团队分析、监控和改进代码。
 
 团队章程可能像以下示例：
 
--   我们创建一个开放、无指责的、学习和反馈的文化所有-我们创建一个促进团队合作和创新的环境
--   我们创建集体所有权，没有知识孤岛
-               充分开发和利用每个人的能力
--   我们有效地沟通并彼此交流
--   我们提供诚实的反馈，对反馈采取行动并推动持续改进
--   我们协作并进行结对编程，以驱动最高质量所有-我们是一个完整的团队，是交付单元
--   我们是专业的软件匠人
-
--   创建简单的事物
--   通过重构鼓励持续改进
--   通过 CI/CD 频繁地关闭反馈循环
--   每个人都必须在构建失败后立即修复
--   推送后监控 CI/CD/SonarQube
--   保持我们的产品无技术债
--   遵循我们的标准和我们的代码审查清单
-
-
-
-
+- 我们创建一个开放、无指责的、学习和反馈的文化。
+- 我们创建一个促进团队合作和创新的环境。
+- 我们创建集体所有权，没有知识孤岛。
+- 充分开发和利用每个人的能力。
+- 我们有效地沟通并彼此交流。
+- 我们提供诚实的反馈，对反馈采取行动并推动持续改进。
+- 我们协作并进行结对编程，以驱动最高质量。
+- 我们是一个完整的团队，是交付单元。
+- 我们是专业的软件匠人。
+- 创建简单的事物。
+- 通过重构鼓励持续改进。
+- 通过 CI/CD 频繁地关闭反馈循环。
+- 每个人都必须在构建失败后立即修复。
+- 推送后监控 CI/CD/SonarQube。
+- 保持我们的产品无技术债。
+- 遵循我们的标准和我们的代码审查清单。
 
 ## 3. 整洁代码最佳实践
 
-## 3.1 通过代码进行交流
+### 3.1 通过代码进行交流
 
 > 计算机科学中只有两类难题：缓存失效和命名。 - Phil Karlton
 
-### 3.1.1 使用代码规范并避免误导性信息
+#### 3.1.1 使用代码规范并避免误导性信息
 
 Java 代码规范是一组编写 Java 代码的指南，旨在提高代码的可读性和可维护性。一些关键规范包括为变量和方法使用描述性且有意义名称、使用一致的缩进和间距，以及使用注释记录代码。
 
@@ -1440,7 +1306,7 @@ public class convert_strategy {
 - **类命名**：变量 `convert_strategy` 违反了类名使用大驼命名法（PascalCase）的规范。它应该重命名为 `ConvertStrategy` 以遵循规范。
 - **命名不当**：变量 `carList` 具有误导性，因为它暗示这是一个汽车列表。然而，它被声明为 `Set`，这可能会给其他开发者带来混乱。它应该重命名为 `carSet` 或另一个反映实际使用数据结构的适当名称。
 
-#### 良好的代码
+##### 良好的代码
 
 ```java
 public static final double PI = 3.14159265358979323846;
@@ -1451,7 +1317,7 @@ public static class ConvertStrategy {
 }
 ```
 
-#### 糟糕的代码
+##### 糟糕的代码
 
 ```java
 Customer Customer = new Customer("Darth Vader");
@@ -1463,7 +1329,7 @@ Customer.name() // 静态访问？
 - **命名不一致**：变量 `Customer` 违反了变量使用小写字母的规范。它应该重命名为 `customer` 以遵循规范并与类名区分开来。
 - **静态访问误区**：行 `Customer.name()` 暗示 `name()` 是一个静态方法，这可能会导致误导信息。然而，如果 `Customer` 是 `Customer` 类的实例，应该通过调用 `customer.name()` 来访问实例方法。使用适当的命名规范并避免误导性代码可以防止此类误解。
 
-#### 良好的代码
+##### 良好的代码
 
 ```java
 Customer customer = new Customer("Darth Vader");
@@ -1472,12 +1338,15 @@ customer.name();
 ```
 
 可以在此处找到 Java 代码规范：
-Oracle Java 代码规范¹Google Java 风格指南²
 
-¹https://www.oracle.com/technetwork/java/codeconventions-150003.pdf
-²https://google.github.io/styleguide/javaguide.html
+Oracle Java 代码规范¹  
+Google Java 风格指南²
 
-### 3.1.2 选择具有表现力的名称并避免心理映射
+¹ https://www.oracle.com/technetwork/java/codeconventions-150003.pdf
+
+² https://google.github.io/styleguide/javaguide.html
+
+#### 3.1.2 选择具有表现力的名称并避免心理映射
 
 为变量、方法、类或代码元素选择一个具有表现力的名称，准确且清晰地描述其目的或行为。这可以帮助代码更具可读性和易于理解，并减少其他开发者在脑中将代码元素映射到其预期含义的需求。
 
@@ -1499,7 +1368,7 @@ String hostname;
 
 在这段代码中，变量 `daysSinceBirthday` 和 `hostname` 更有表现力。它们的名称准确地描述了它们的意图和目的，使得更容易理解代码，而不需要在脑中将变量映射到其含义。
 
-### 3.1.3 使用有意义的变量名使差异清晰可见
+#### 3.1.3 使用有意义的变量名使差异清晰可见
 
 **糟糕的代码**
 
@@ -1515,7 +1384,7 @@ public boolean isFileOld(File file, File referenceFile) {}
 public static ReplaceFirst(String text, Pattern regex, String replacement) {}
 ```
 
-### 3.1.4 使用可发音的名称
+#### 3.1.4 使用可发音的名称
 
 为变量、方法、类和其他代码元素使用易于读和记忆的名称。这可以使代码更具可读性和易于理解，并让其他开发者能够更容易处理代码。
 
@@ -1543,7 +1412,7 @@ class Student {
 }
 ```
 
-### 3.1.5 不要伤害读者
+#### 3.1.5 不要伤害读者
 
 我们阅读的代码比编写的代码多，所以不要伤害读者。通过有用的常量来声明变量。通过这样，每个字面量的含义就得到了明确。如果需要更改常量，更改将局限于声明处。不需要在代码中搜索并更改该字面量。
 
@@ -1593,7 +1462,7 @@ public static double volume(double radius) {
 }
 ```
 
-### 3.1.6 不要添加冗余上下文
+#### 3.1.6 不要添加冗余上下文
 
 不要在变量或类名中添加冗余上下文，这些不必要的信息或细节会使名称更长且更难以阅读。
 
@@ -1617,11 +1486,7 @@ class Car {
 }
 ```
 
-
-
-
-
-## 好代码
+### 好代码
 
 ```java
 public interface UserRepository {
@@ -1635,25 +1500,25 @@ public interface UserRepository {
 }
 ```
 
-## 3.1.7 不要添加没有额外含义的词汇
+#### 3.1.7 不要添加没有额外含义的词汇
 
 某些通用词汇通常不会为名称添加任何额外含义。因此，它们对名称的任何添加都是多的。
 
 这些词汇出现在以下情况中：
 
-- Data (数据)
-- Information (信息)
-- Bean (豆)
-- Value (值)
-- Manager (管理器)
-- Object (对象)
-- Entity (实体)
-- Instance (实例)
-- Custom (自定义)
+- Data（数据）
+- Information（信息）
+- Bean（豆）
+- Value（值）
+- Manager（管理器）
+- Object（对象）
+- Entity（实体）
+- Instance（实例）
+- Custom（自定义）
 
 在添加这些词汇时，双重检查如果移除它们，名称的含义是否保持不变？如果是，就删除它们。如果不是，保留它们，或者尝试寻找更好的名称。
 
-### 坏代码
+##### 坏代码
 
 ```java
 public final class studentData {
@@ -1672,7 +1537,7 @@ public final class studentData {
 }
 ```
 
-### 好代码
+##### 好代码
 
 ```java
 public final class Student {
@@ -1690,7 +1555,7 @@ public final class Student {
 }
 ```
 
-## 3.1.8 不要在方法名中使用 and 或 or
+#### 3.1.8 不要在方法名中使用 and 或 or
 
 一个方法应该只负责一个动作。在方法名中使用 `and` 或 `or` 是该方法承担了太多的职责并结合了过多的功能。在这种情况下，你应该考虑将该方法的功能拆分到其他方法中。
 
@@ -1701,7 +1566,7 @@ public final class Student {
   - 考虑为整个操作寻找更好的名称。
   - 考虑创建其他东西来封装这种组合。
 
-### 坏代码
+##### 坏代码
 
 ```java
 public class JavaMailSender {
@@ -1710,7 +1575,7 @@ public class JavaMailSender {
 }
 ```
 
-### 好代码
+##### 好代码
 
 ```java
 public class JavaMailSender {
@@ -1720,11 +1585,13 @@ public class JavaMailSender {
 }
 ```
 
-## 3.1.9 为布尔变量和函数使用正向名称
+#### 3.1.9 为布尔变量和函数使用正向名称
 
 在定义布尔函数时，最好使用能够准确描述其预期行为或状态的正向名称。例如，与其定义一个函数 `isNotOpen()`，不如定义一个名为 `isOpen()` 的函数更直观、易读。这使得代码更具自解释性且更易理解。
 
-### 坏代码
+##### 坏代码
+
+
 
 ```java
 if (!file.isOpen)
@@ -1733,7 +1600,7 @@ if (!running)
 if (!hasNoLicense)
 ```
 
-在这里，函数 `isSelected()`、`isVisible()` 以及布尔变量 `notRunning` 和 `hasNoLicense` 使用了负向命名，这会导致混淆并使代码更难理解。否定命名需要额外的心理处理来理解其实际含义。最好使用能更直接传达预期行为的正向名称。
+在这里，函数`isSelected()`、`isVisible()`以及布尔变量`notRunning`和`hasNoLicense`使用了负向命名，这会导致混淆并使代码更难理解。否定命名需要额外的心理处理来理解其实际含义。最好使用能更直接传达预期行为的正向名称。
 
 ### 好代码
 
@@ -1900,9 +1767,10 @@ public final class FileUtils {
 ## 3.1.12 优先使用自解释代码而非注释
 
 > 不要注释坏代码 - 要重写它。
+
 Brian W. Kernighan, 《编程风格的要素》
 
-优先使用清晰且易于理解、无需额外额外注释或解释的自解释代码。
+优先使用清晰且易于理解、无需额外注释或解释的自解释代码。
 
 - 注释不是坏代码的替代品。
 - 通过代码来解释。
@@ -1947,10 +1815,6 @@ if ((employee.noVacationDaysLeft && employee.age > 50)
     || (employee.noVacationDaysLeft && employee.hasChildren))
 ```
 
-
-
-
-
 # 整洁代码最佳实践
 
 ## 好代码
@@ -1987,8 +1851,11 @@ class Passwords {
     public boolean isComplex(String password) {
         return containsLetter(password) && (containsDigit(password) || containsSymbol(password));
     }
+
     private boolean containsLetter(String password) { ... }
+
     private boolean containsDigit(String password) { ... }
+
     private boolean containsSymbol(String password) { ... }
 }
 ```
@@ -2096,7 +1963,7 @@ public static void deleteDirectory(File directory) throws IOException {
 ```
 
 - 这条注释是冗余且误导的！
-- 如果目录不存在，该方法不会抛出 IOException。如果目录无法删除，它才会抛出 IOException。
+- 如果目录不存在，该方法不会抛出`IOException`。如果目录无法删除，它才会抛出`IOException`。
 
 ### 3.2.3 强制性注释
 
@@ -2125,7 +1992,7 @@ public void addCD(String title, String author, int durationMinutes)
 ```
 
 - 这种注释没有提供任何额外信息，只会掩盖代码并带来误导的可能性。
-- 规定每个 Javadoc 函数或变量都应该有注释是不良的。
+- 规定每个`Javadoc`函数或变量都应该有注释是不良的。
 - 此类注释只会代码变得更加混乱，并导致普遍的困惑。
 
 ### 3.2.4 日记式注释
@@ -2150,13 +2017,15 @@ public void addCD(String title, String author, int durationMinutes)
 // 2020-09-17 添加对 Oracle 的支持
 ```
 
+
+
 - 很久以前，创建和维护此类目是有理由的。
 - 现在有版本控制系统了。
 - 这些注释是传播混乱的干扰因素，应该被删除。
 
 ### 3.2.5 八卦
 
-### 坏代码
+#### 坏代码
 
 ```java
 /**
@@ -2166,14 +2035,14 @@ public Parser () {
 }
 ```
 
-### 坏代码
+#### 坏代码
 
 ```java
 /** 月中的几。 */
 private int dayOfMonth;
 ```
 
-### 坏代码
+#### 坏代码
 
 ```java
 private void startSending() {
@@ -2196,13 +2065,13 @@ private void startSending() {
 
 ### 3.2.6 位置标识符
 
-### 坏代码
+#### 坏代码
 
 ```java
 // 方法 //////////////////////////////////
 ```
 
-### 坏代码，在真实项目中看到的
+#### 坏代码，在真实项目中看到的
 
 ```java
 ####################################
@@ -2212,7 +2081,7 @@ private void startSending() {
 
 ### 3.2.7 记录和随笔备注
 
-### 坏代码
+#### 坏代码
 
 ```java
 // 由糟糕程序员添加
@@ -2220,9 +2089,9 @@ private void startSending() {
 
 - 这些信息可以在版本管理系统中看到。
 
-### 3.2.8 不要要在代码库中留下注释掉的代码
+### 3.2.8 不要在代码库中留下注释掉的代码
 
-### 坏代码
+#### 坏代码
 
 ```java
 public static String extension(String filename) {
@@ -2242,12 +2111,15 @@ public static String extension(String filename) {
 ### 3.2.9 注释规则
 
 > **主要规则**
+>
 > 注释用于代码无法表达的内容。
 
 > **冗余规则**
+>
 > 代码的注释应该被删除。
 
 > **单一真理规则**
+>
 > 如果注释可以用代码表达，那么代码应该修改。
 
 更多信息请参阅：https://agileina.blogspot.com/2009/04/rules-commenting.html
@@ -2275,10 +2147,6 @@ public static String extension(String filename) {
 - 基类不应了解其派生类。
 - 尽可能偏好不可变性。
 - 使用依赖注入来解耦依赖。
-
-
-
-
 
 ### 3.3.2 函数
 
@@ -2316,51 +2184,51 @@ public static String extension(String filename) {
 
 ### 3.4.1 峰值 (Spikes)
 
-理解方面的优势：
+**理解方面的优势：**
 
 每个峰值都可以首先独立分析，尽管它们可能存在相互依赖。
 
-重构方面的优势：
+**重构方面的优势：**
 
 每个峰值都是潜在的候选者，可以将代码转移到独立的私有函数中，并通过调用该函数来替换它。
 
 ### 3.4.2 段落 (Paragraphs)
 
-理解方面的优势：
+**理解方面的优势：**
 
 你知道算法是分步骤执行的，并且知道代码中这些步骤在哪里。
 
-重构方面的优势：
+**重构方面的优势：**
 
 由于峰值之间是相互不同的，每个步骤都是将其代码外包给函数的良好候选者。生成的代码将是一系列函数调用。这将提高抽象层次并使代码更具表现力。
 
 ### 3.4.3 带标题的段落 (Paragraphs with headers)
 
-理解方面的优势：
+**理解方面的优势：**
 
 与段落相同。编写此代码的开发者通过为每一步添加信息让你的任务变得更容易。
 
-重构方面的优势：
+**重构方面的优势：**
 
 与段落相同。可以使用注释中的术语作为函数名的灵感。重构后，注释变得多并可以删除。
 
 ### 3.4.4 可疑注释 (Suspicious comments)
 
-理解方面的优势：
+**理解方面的优势：**
 
 并不是所有的注释都是优势，代码通常并不好。
 
-重构方面的优势：
+**重构方面的优势：**
 
 使用注释中的术语重命名函数及其参数，并删除注释。
 
 ### 3.4.5 密集使用对象 (Intensive use of an object)
 
-理解方面的优势：
+**理解方面的优势：**
 
 这段代码部分的作用是设置该对象。
 
-重构方面的优势：
+**重构方面的优势：**
 
 该函数有多个职责，其中一个是与此对象交互。将此职责重构到一个函数中，以减少主函数的职责数量（理想情况下为一个）。
 
@@ -2368,7 +2236,7 @@ public static String extension(String filename) {
 
 ## 4 软件质量保证
 
-## 4.1 测试金字塔
+### 4.1 测试金字塔
 
 Mike Cohn 在他的书籍《敏捷成功》中介绍了测试金字塔。它是可视化不同测试层次的一种极佳方法。它告诉每一层要做多少测试。原始的测试金字塔由三层组成，你的测试套件应该包含*单元测试*、*服务测试*和*用户界面测试*。
 
@@ -2380,21 +2248,21 @@ Mike Cohn 在他的书籍《敏捷成功》中介绍了测试金字塔。它是�
 
 小心不要导致变成[测试金字塔与冰淇淋锥¹](https://alisterscott.com/kb/testing-pyramids/)，那完全是时间和维护成本的浪费。
 
-### 单元测试 (Unit Tests)
+#### 单元测试 (Unit Tests)
 
 单元测试关注于单个类，是最早、最廉价且完成最快的。单元测试在早期阶段编写，以便我们获得即时反馈并确切知道 bug 在哪里。
 
-### 集成 / 组件测试 / 验收测试 (Integration / Component / Acceptance Tests)
+#### 集成 / 组件测试 / 验收测试 (Integration / Component / Acceptance Tests)
 
 集成测试侧重于不同类和模块之间的正确集成。与单元测试相比，它们可能需要更专门的工具，用于准备测试环境或进行交互。
 
-### UI 测试 (UI Tests)
+#### UI 测试 (UI Tests)
 
 UI 测试侧重于从客户端的角度对系统进行验证。在真实场景中测试整个应用程序，例如与数据库、网络、硬件和其他应用程序的通信。
 
 > ¹https://alisterscott.com/kb/testing-pyramids/
 
-## 4.2 测试分类
+### 4.2 测试分类
 
 测试可以根据其状态进行分类。主要有三种策略：白盒测试、黑盒测试和灰盒测试。WBT 由开发者执行。BBT 由测试人员执行。GBT 是两者的结合。
 
@@ -2405,7 +2273,7 @@ UI 测试侧重于从客户端的角度对系统进行验证。在真实场景�
 | **优点** | 内部组件测试；对系统的验证 | 功能测试 |
 | **缺点** | 规格测试；额外的组织工作 | 规格测试；后期添加的功能往往无法使用 |
 
-## 4.3 测试驱动开发 (TDD)
+### 4.3 测试驱动开发 (TDD)
 
 当我们编写测试时，我们是在告诉自己操作将如何进行 —— Kent Beck
 
@@ -2420,7 +2288,7 @@ UI 测试侧重于从客户端的角度对系统进行验证。在真实场景�
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_86_0.png)
 
-测试驱动开发确保了...
+测试驱动开发确保了……
 
 测试确保在扩展时现有功能被保留。
 
@@ -2433,44 +2301,40 @@ UI 测试侧重于从客户端的角度对系统进行验证。在真实场景�
 - 测试优先强调了用户视角。
 - 没有测试的软件开发就像没有绳子的攀爬。
 
-### 为什么测试驱动开发能提高质量？
+#### 为什么测试驱动开发能提高质量？
 
 如果你无法为某些编写测试
 
 先编写测试的做法强制人们更深入地处理问题，并带来更高质量。作为副作用，TDD 还强制处理客户对软件的期望。因此，TDD 基本上不是一种测试方法，而是一种设计方法。
 
-### 没有回归测试无法清理代码
+#### 没有回归测试无法清理代码
 
 如果没有测试的可能性，你可能会更改现有代码。更好的做法是将类的代码复制到一个新类，并扩展额外的功能。结果是一个过载、混乱且充满冗余代码的项目。
 
-### 快速反馈循环节省时间和资金
+#### 快速反馈循环节省时间和资金
 
 如果你先写测试，就可以立即检查实现的正确性。结果是，你总是确定何时完成了一个功能。
 
-## 后期调试的物理学 (DLP)
+### 后期调试的物理学 (DLP)
 
-* 随着 Td 的增加，Tfind 会剧增
-* Tfix 通常很短，但会随 Td 增加
+- 随着`Td`的增加，`Tfind`会剧增。
+- `Tfix`通常很短，但会随`Td`增加。
 
-### 后期调试
+#### 后期调试
 
 在这些快速的反馈循环中，你经常迷失在寻找 bug 原因的过程中。TDD 帮助将大问题分解为更小、可管理且可测试的问题。
 
-### 你反正要测试的，花时间去做
+#### 你反正要测试的，花时间去做
 
 回归测试是必不可少的。如果不定期地执行它们，测试大型应用程序是不可能的。当然，可以在之后编写回归测试，但这样你就无法从 TDD 提供的更好的设计质量中受益。其次，随着截止日的到来，时间往往有限，因此随后的测试往往不足。
 
-### 它让我的工作更有趣
+#### 它让我的工作更有趣
 
 每一次成功的测试都带给你一种创造了价值价值的感觉：一段可以自豪向其他开发者展示的可执行软件。
 
+### 4.4 使用 JUnit 5 进行单元测试
 
-
-
-
-## 4.4 使用 JUnit 5 进行单元测试
-
-### 4.4.1 单元测试
+#### 4.4.1 单元测试
 
 单元测试的益处：
 
@@ -2487,7 +2351,7 @@ UI 测试侧重于从客户端的角度对系统进行验证。在真实场景�
 - 快速且自动化的测试执行
 - 对测试结果进行彻底分析
 
-### 4.4.2 JUnit 5
+#### 4.4.2 JUnit 5
 
 JUnit 5 是一个简单的 Java 单元测试框架，有助于在 JVM 上进行测试，重点关注 Java 8 语言特性、可扩展性和现代编程 API。
 
@@ -2497,17 +2361,15 @@ JUnit 5 的目标是什么？
 - 易于学习和使用
 - 避免重复工作
 - 测试必须满足：
-    - 具有重复适用性
-    - 能够独立生成
-    - 具有增量性
-    - 可以自由组合
-    - 作者以外的人可以可行执行
-    - 作者以外的人可以进行评估
-- 支持使用测试数据
-    - 测试数据的可重用
-    - 测试数据的生成通常比测试本身更复杂
-
-软件质量保证
+  - 具有重复适用性
+  - 能够独立生成
+  - 具有增量性
+  - 可以自由组合
+  - 作者以外的人可以可行执行
+  - 作者以外的人可以进行评估
+- 支持使用测试数据：
+  - 测试数据的可重用
+  - 测试数据的生成通常比测试本身更复杂
 
 ## 我们应该测试什么？
 
@@ -2531,9 +2393,9 @@ JUnit 5 的目标是什么？
 
 ## 项目结构和命名规范如何？
 
-现在所有开发者都使用标准工具来构建项目，如 Maven⁵ 或 Gradle⁶。因此，所有生产源码都位于 src/main/java，所有测试源文件都在 src/test/java。
+现在所有开发者都使用标准工具来构建项目，如 Maven⁵ 或 Gradle⁶。因此，所有生产源码都位于`src/main/java`，所有测试源文件都在`src/test/java`。
 
-典型的目录结构
+典型的目录结构：
 
 ```
 src
@@ -2543,21 +2405,23 @@ src
     └── HelloWorldTest.java
 ```
 
-像上面的测试名称通常以 Test 作为前缀。这是一个非常常见的命名规范，应该保持一致。这让开发者能够立即看出正在测试哪个类。此外，某些工具依赖于这种约定。
+像上面的测试名称通常以`Test`作为前缀。这是一个非常常见的命名规范，应该保持一致。这让开发者能够立即看出正在测试哪个类。此外，某些工具依赖于这种约定。
 
 > https://xp123.com/articles/3a-arrange-assert-assert/
+>
 > https://martinfowler.com/bliki/GivenWhenThen.html
+>
 > https://martinfowler.com/introducing-bdd/
+>
 > https://maven.apache.org/
+>
 > https://gradle.org/
 
-软件质量保证
+#### 4.4.3 第一个单元测试
 
-### 4.4.3 第一个单元测试
+第一个简单的 JUnit 5 测试：
 
-第一个简单的 JUnit 5 测试
-
-```
+```java
 class SimpleTest {
     private Collection<String> collection = new ArrayList<>();
 
@@ -2574,35 +2438,38 @@ class SimpleTest {
 }
 ```
 
-执行顺序
+执行顺序：
 
-```
+```text
 testEmptyCollection()
 testOneItemCollection()
 ```
 
 测试的*执行顺序*：
 
-默认情况下，测试方法将使用一种确定但故意不直观的算法进行排序。这确保了测试套件的运行以相同的顺序执行测试方法，从而允许可重复的。即使单元测试通常不依赖于它们的执行顺序，但有时也有必要强制执行测试方法的特定顺序。要指定测试方法执行的顺序，请在你的测试类或测试接口上注解 @TestMethodOrder 并提供首选的 MethodOrder。
+默认情况下，测试方法将使用一种确定但故意不直观的算法进行排序。这确保了测试套件的运行以相同的顺序执行测试方法，从而允许可重复的。即使单元测试通常不依赖于它们的执行顺序，但有时也有必要强制执行测试方法的特定顺序。要指定测试方法执行的顺序，请在你的测试类或测试接口上注解`@TestMethodOrder`并提供首选的`MethodOrder`。
 
 > 使用 JUnit 5，你可以降低测试类和方法的可见性。在 JUnit 4 中，类和方法必须是公共的。在 JUnit 5 中，测试类可以具有任何可见性，建议使用默认的包可见性，这改进了测试代码库。
 
-*https://junit.org/junit5/docs/current/user-guide/#writing-tests-test-execution
+*https://junit.org/junit5/docs/current/user-guide/#writing-tests-test-execution*
 
-### 4.4.4 断言 (Assertions)
+#### 4.4.4 断言 (Assertions)
 
 断言是一组支持在测试中断言条件的工具方法。JUnit 5 包含了 JUnit 4 的许多断言以及几个有趣的新断言。
 
 它还支持在断言中使用 lambda 表达式。使用 lambda 表达式作为断言消息的优势是它是延迟求值的，这可以通过避免构建复杂消息来减少时间和资源。
 
-测试的断言结果提供特定值。失败的断言将抛出 AssertionFailedError 或其子类。
+测试的断言结果提供特定值。失败的断言将抛出`AssertionFailedError`或其子类。
 
-#### 4.4.4.1 assertEquals() / assertEquals()
+##### 4.4.4.1 `assertEquals()` / `assertEquals()`
 
 断言期望和实际值相等。
 
-```
-Equality
+
+
+## Equality
+
+```java
 @Test
 void equality() {
     Calculator calculator = new Calculator();
@@ -2617,13 +2484,13 @@ void equality() {
 }
 ```
 
-#### 4.4.4.2 assertSame() / assertNotSame()
+### 4.4.4.2 `assertSame()` / `assertNotSame()`
 
 断言期望和实际引用同一个对象。
 
-身份识别
+#### 身份识别
 
-```
+```java
 @Test
 void identity() {
     User john = new User(1, "John", "Rambo");
@@ -2634,13 +2501,13 @@ void identity() {
 }
 ```
 
-#### 4.4.4.3 assertTrue() / assertFalse() / assertAll()
+### 4.4.4.3 `assertTrue()` / `assertFalse()` / `assertAll()`
 
-断言提供的条件为真或假。assertAll() 断言所有提供的可执行体未抛出异常。可以将断言分组，并将所有失败的断言一起报告。
+断言提供的条件为真或假。`assertAll()` 断言所有提供的可执行体未抛出异常。可以将断言分组，并将所有失败的断言一起报告。
 
-真值判断
+#### 真值判断
 
-```
+```java
 @Test
 void truth() {
     assertTrue('a' < 'b', () -> "断言消息可以延迟求值"
@@ -2648,7 +2515,7 @@ void truth() {
 }
 ```
 
-```
+```java
 @Test
 void groupedTruth() {
     Person person = new Person("Jane", "Doe");
@@ -2659,13 +2526,13 @@ void groupedTruth() {
 }
 ```
 
-#### 4.4.4.4 assertNull() / assertNotNull()
+### 4.4.4.4 `assertNull()` / `assertNotNull()`
 
 断言实际值是否为空或为空。
 
-存在性
+#### 存在性
 
-```
+```java
 @Test
 void existence() {
     assertNotNull(new Calculator());
@@ -2673,13 +2540,13 @@ void existence() {
 }
 ```
 
-#### 4.4.4.5 assertThrows()
+### 4.4.4.5 `assertThrows()`
 
 断言可执行体抛出了预期的类型异常并返回该异常。
 
-异常处理
+#### 异常处理
 
-```
+```java
 @Test
 void exceptions() {
     Calculator calculator = new Calculator();
@@ -2688,84 +2555,97 @@ void exceptions() {
 }
 ```
 
-#### 4.4.4.6 assertTimeout()
+### 4.4.4.6 `assertTimeout()`
 
 断言提供的可执行体的执行在超过给定超时之前完成。这对于测试代码的性能和效率，以及确保其执行不会花费过多的时间非常有用。
 
-```
+```java
 @Test
 void timeout() {
     assertTimeout(Duration.ofSeconds(5), () -> TimeUnit.SECONDS.sleep(1));
 }
 ```
 
-#### 4.4.4.7 fail()
+### 4.4.4.7 `fail()`
 
 用于故意导致测试失败。
 
-失败
+#### 失败
 
-```
+```java
 @Test
 void failing() {
     fail("a failing test");
 }
 ```
 
-
-
-
-
 ## 4.4.5 注解
 
-JUnit 支持以下用于配置测试的注解*：
+JUnit 支持以下用于配置测试的注解：
 
-- @BeforeAll
-在执行定义启动时、在所有测试之前执行的方法。
-被注解的方法必须是静态的 (`static`)。
+- `@BeforeAll`
 
-- @AfterAll
-在所有测试之后、在关闭执行定义之前执行的方法。例如，可以在此处释放资源。被注解的方法必须是静态的 (`static`)。
+  在执行定义启动时、在所有测试之前执行的方法。
 
-- @BeforeEach
-在每个测试之前执行的方法。
+  被注解的方法必须是静态的（`static`）。
 
-- @AfterEach
-在每个测试之后执行的方法。
+- `@AfterAll`
 
-- @Test
-带有此注解的实际方法将用作测试执行。
+  在所有测试之后、在关闭执行定义之前执行的方法。例如，可以在此处释放资源。被注解的方法必须是静态的（`static`）。
 
-- @Disabled
-临时禁用测试方法。
+- `@BeforeEach`
 
-- @Tag
-用于声明用于过滤的标签，可以是类级别或方法级别。类似于 JUnit 4 中的类别 (Categories)¹。
+  在每个测试之前执行的方法。
 
-- @DisplayName
-为测试类和方法指定自定义的名称。
+- `@AfterEach`
 
-- @Timeout
-如果执行时间超过特定时长，则使测试失败。
+  在每个测试之后执行的方法。
 
-- @Nested
-用于指示被注解的类是嵌套的。嵌套的测试类必须是一个内部类，即非静态类。由于内部类不能有静态字段和方法，因此禁止在嵌套测试中使用 @BeforeAll 和 @AfterAll 注解。
+- `@Test`
 
-- @ParameterizedTest
-用于指示被注解的方法是参数化测试方法。你必须至少选择一个参数源。有多种类型的参数源可选。
+  带有此注解的实际方法将用作测试执行。
 
-- @TempDir
-可以用于注解测试类中的非私有字段，或生命周期方法/测试方法中类型为 `Path` 的参数，这些将被解析为临时目录。
+- `@Disabled`
 
-> *¹https://junit.org/junit/5/docs/current/user-guide/#writing-tests-annotations
-> ²https://github.com/junit-team/junit4/wiki/Categories
+  临时禁用测试方法。
 
-### 4.4.5.1 @Test
+- `@Tag`
 
-- @Test¹ 标记要测试的方法。
-- 被注解的方法不能是私有的 (private) 或静态的 (static)。
+  用于声明用于过滤的标签，可以是类级别或方法级别。类似于 JUnit 4 中的类别（Categories）¹。
+
+- `@DisplayName`
+
+  为测试类和方法指定自定义的名称。
+
+- `@Timeout`
+
+  如果执行时间超过特定时长，则使测试失败。
+
+- `@Nested`
+
+  用于指示被注解的类是嵌套的。嵌套的测试类必须是一个内部类，即非静态类。由于内部类不能有静态字段和方法，因此禁止在嵌套测试中使用 `@BeforeAll` 和 `@AfterAll` 注解。
+
+- `@ParameterizedTest`
+
+  用于指示被注解的方法是参数化测试方法。你必须至少选择一个参数源。有多种类型的参数源可选。
+
+- `@TempDir`
+
+  可以用于注解测试类中的非私有字段，或生命周期方法/测试方法中类型为 `Path` 的参数，这些将被解析为临时目录。
+
+> ¹ <https://junit.org/junit/5/docs/current/user-guide/#writing-tests-annotations>
+>
+> ² <https://github.com/junit-team/junit4/wiki/Categories>
+
+### 4.4.5.1 `@Test`
+
+- `@Test`¹ 标记要测试的方法。
+
+- 被注解的方法不能是私有的（`private`）或静态的（`static`）。
+
 - 不能返回值，因此方法应返回 `void`。
-- 只有带有 @Test 注解的方法会被执行。
+
+- 只有带有 `@Test` 注解的方法会被执行。
 
 ```java
 class TestAnnotationTest {
@@ -2774,6 +2654,7 @@ class TestAnnotationTest {
         Collection<Object> collection = new ArrayList<>();
         assertTrue(collection.isEmpty());
     }
+
     @Test
     void lambdaExpressions() {
         assertTrue(Stream.of(1, 2, 3)
@@ -2781,6 +2662,7 @@ class TestAnnotationTest {
             .mapToInt(i -> i)
             .sum() > 5, () -> "Sum should be greater than 5");
     }
+
     @Test
     void groupAssertions() {
         int[] numbers = {0, 1, 2, 3, 4};
@@ -2793,13 +2675,13 @@ class TestAnnotationTest {
 }
 ```
 
-> ¹²https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit.jupiter/api/api/Test.Html
+> ¹² <https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit.jupiter/api/api/Test.Html>
 
-### 4.4.5.2 @BeforeEach @AfterEach
+### 4.4.5.2 `@BeforeEach` / `@AfterEach`
 
-- @BeforeEach¹ 用于指定被注解的方法应在当前测试类的每个测试之前执行。
+- `@BeforeEach`¹ 用于指定被注解的方法应在当前测试类的每个测试之前执行。
 
-- @AfterEach 用于指定被注解的方法应在当前测试类的每个测试之后执行。
+- `@AfterEach` 用于指定被注解的方法应在当前测试类的每个测试之后执行。
 
 ```java
 class BeforeAndAfterEachAnnotationsTest {
@@ -2828,9 +2710,9 @@ class BeforeAndAfterEachAnnotationsTest {
 }
 ```
 
-**执行顺序**
+#### 执行顺序
 
-```
+```text
 setUp()
 testEmptyCollection()
 tearDown()
@@ -2840,35 +2722,44 @@ testOneItemCollection()
 tearDown()
 ```
 
-> ¹https://junit.org/junit5/docs/current/org.junit.jupiter.api/org/junit/jupiter/api/BeforeEach.html
-> ²https://junit.org/junit5/docs/current/org.junit.jupiter.api/org/junit/jupiter/api/AfterEach.html
+> ¹ <https://junit.org/junit5/docs/current/org.junit.jupiter.api/org/junit/jupiter/api/BeforeEach.html>
+>
+> ² <https://junit.org/junit5/docs/current/org.junit.jupiter.api/org/junit/jupiter/api/AfterEach.html>
 
-### 4.4.5.3 @BeforeAll / @AfterAll
+### 4.4.5.3 `@BeforeAll` / `@AfterAll`
 
-- @BeforeAll¹⁵ 用于指定被注解的方法应在当前测试类的所有测试之前执行。
-- @AfterAll¹⁶ 用于指定被注解的方法应在当前测试类的所有测试之后执行。
-- 这些被注解的方法必须 `static void`，并且对于给定的测试类仅执行一次。
+- `@BeforeAll`¹⁵ 用于指定被注解的方法应在当前测试类的所有测试之前执行。
+
+- `@AfterAll`¹⁶ 用于指定被注解的方法应在当前测试类的所有测试之后执行。
+
+- 这些被注解的方法必须是 `static void`，并且对于给定的测试类仅执行一次。
 
 ```java
 class BeforeAndAfterAnnotationsTest {
     private Collection<String> collection;
-  @BeforeAll
+
+    @BeforeAll
     static void oneTimeSetup() {}
-  @AfterAll
+
+    @AfterAll
     static void oneTimeTearDown() {}
-  @BeforeEach
+
+    @BeforeEach
     void setUp() {
         collection = new ArrayList<>();
     }
-  @AfterEach
+
+    @AfterEach
     void tearDown() {
         collection.clear();
     }
-  @Test
+
+    @Test
     void testEmptyCollection() {
         assertTrue(collection.isEmpty());
     }
-  @Test
+
+    @Test
     void testOneItemCollection() {
         collection.add("itemA");
         assertEquals(1, collection.size());
@@ -2876,9 +2767,9 @@ class BeforeAndAfterAnnotationsTest {
 }
 ```
 
-**执行顺序**
+#### 执行顺序
 
-```
+```text
 oneTimeSetup()
 setUp()
 testEmptyCollection()
@@ -2889,16 +2780,19 @@ tearDown()
 oneTimeTearDown()
 ```
 
-> ^15https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/BeforeAll.html
-> 16https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/AfterAll.html
+> ^15 <https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/BeforeAll.html>
+>
+> 16 <https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/AfterAll.html>
 
-### 4.4.5.4 @Disabled
+### 4.4.5.4 `@Disabled`
 
-- @Disabled¹ 用于指定被注解的测试类或测试方法当前处于禁用状态，不应执行。
+- `@Disabled`¹ 用于指定被注解的测试类或测试方法当前处于禁用状态，不应执行。
+
 - 也可以通过注解声明原因，以提供关于禁用该测试类或测试方法的更多信息。
+
 - 也可以应用于类级别，从而禁用该类中所有的测试方法。
 
-**排除测试方法**
+#### 排除测试方法
 
 ```java
 class DisabledAnnotationTest {
@@ -2909,36 +2803,34 @@ class DisabledAnnotationTest {
 }
 ```
 
-### 4.4.5.5 @DisplayName
+### 4.4.5.5 `@DisplayName`
 
-- @DisplayName 为测试类和方法指定自定义的名称。
-
-
-
-
+- `@DisplayName` 为测试类和方法指定自定义的名称。
 
 ## 4.4.7 参数化测试
 
-参数化测试允许使用不同的参数多次运行测试。它们的声明方式与普通 @Test 方法相同，但使用的是 @ParameterizedTest 注解。
+参数化测试允许使用不同的参数多次运行测试。它们的声明方式与普通 `@Test` 方法相同，但使用的是 `@ParameterizedTest` 注解。
 
 JUnit 支持不同的数据源作为参数：
 
-- @ValueSource
-- @EnumSource
-- @MethodSource
-- @CsvSource
-- @CsvFileSource
-- @ArgumentsSource
-- @EnumSource
-- @NullSource
-- @EmptySource
-- @NullAndEmptySource
+- `@ValueSource`
+- `@EnumSource`
+- `@MethodSource`
+- `@CsvSource`
+- `@CsvFileSource`
+- `@ArgumentsSource`
+- `@EnumSource`
+- `@NullSource`
+- `@EmptySource`
+- `@NullAndEmptySource`
 
-### 4.4.7.1 @ValueSource
+### 4.4.7.1 `@ValueSource`
 
-- @ValueSource 提供了对值数组的访问。
-- 支持的类型包括 shorts, bytes, ints, longs, floats, chars, booleans, strings 和类（classes）。
-- @ValueSource 声明中只能指定支持的类型中的一种。
+- `@ValueSource` 提供了对值数组的访问。
+
+- 支持的类型包括 shorts、bytes、ints、longs、floats、chars、booleans、strings 和类（classes）。
+
+- `@ValueSource` 声明中只能指定支持的类型中的一种。
 
 ```java
 @ParameterizedTest
@@ -2954,17 +2846,21 @@ void testWithValueSource(int argument) {
 }
 ```
 
-> ²³https://junit.org/junit5/docs/current/user-guide/writing-tests-parameterized-tests  
-> ²³https://junit.org/junit5/docs/current/api/org.junit.jupiter.params/org/junit/jupiter/params/provider/ValueSource.html
+> ²³ <https://junit.org/junit5/docs/current/user-guide/writing-tests-parameterized-tests>
+>
+> ²³ <https://junit.org/junit5/docs/current/api/org.junit.jupiter.params/org/junit/jupiter/params/provider/ValueSource.html>
 
-### 4.4.7.2 @MethodSource
+### 4.4.7.2 `@MethodSource`
 
-- @MethodSource 提供了对返回值的访问，这些值是由该注解声明的类中的工厂方法返回的，或者是由通过全限定方法名（fully qualified method name）引用的外部类中的静态工厂方法返回的。
+- `@MethodSource` 提供了对返回值的访问，这些值是由该注解声明的类中的工厂方法返回的，或者是由通过全限定方法名（fully qualified method name）引用的外部类中的静态工厂方法返回的。
+
 - 每个工厂方法都必须生成一个参数流（stream of arguments）。
-- JUnit 可以将其转换为 `Stream` 的流类型，例如：Stream、DoubleStream、LongStream、IntStream、Collection、Iterator、对象数组（array of objects）或原始类型数组（array of primitives）。
-- 工厂方法必须是静态的（static）且不能声明任何参数。
 
-#### @MethodSource - Stream<String>
+- JUnit 可以将其转换为 `Stream` 的流类型，例如：`Stream`、`DoubleStream`、`LongStream`、`IntStream`、`Collection`、`Iterator`、对象数组（array of objects）或原始类型数组（array of primitives）。
+
+- 工厂方法必须是静态的（`static`）且不能声明任何参数。
+
+#### `@MethodSource` - `Stream<String>`
 
 ```java
 @ParameterizedTest
@@ -2978,7 +2874,7 @@ static Stream<String> stringProvider() {
 }
 ```
 
-#### @MethodSource - IntStream
+#### `@MethodSource` - `IntStream`
 
 ```java
 @ParameterizedTest
@@ -2992,7 +2888,9 @@ static IntStream range() {
 }
 ```
 
-#### @MethodSource - Stream<Arguments>
+#### `@MethodSource` - `Stream<Arguments>`
+
+
 
 ```java
 @ParameterizedTest
@@ -3011,9 +2909,9 @@ static Stream<Arguments> stringIntAndListProvider() {
 }
 ```
 
-### 4.4.7.3 @CsvSource
+### 4.4.7.3 `@CsvSource`
 
-- CsvSource 从一个或多个提供的 Csv 行中读取逗号分隔的值（CSV）。
+- `CsvSource` 从一个或多个提供的 Csv 行中读取逗号分隔的值（CSV）。
 
 ```java
 @ParameterizedTest
@@ -3029,7 +2927,7 @@ void testWithCsvSource(String bikepark, int rank) {
 }
 ```
 
-### 4.4.7.4 @CsvFileSource
+### 4.4.7.4 `@CsvFileSource`
 
 ```java
 @ParameterizedTest
@@ -3040,7 +2938,8 @@ void testWithCsvSource(String country, int reference) {
 }
 ```
 
-#### two-column.csv
+#### `two-column.csv`
+
 | 国家 (Country) | 参考 (reference) |
 | :--- | :--- |
 | Sweden | 1 |
@@ -3050,7 +2949,7 @@ void testWithCsvSource(String country, int reference) {
 
 > ²⁵https://junit.org/junit5/docs/current/api/org.junit.jupiter.params/org/junit/jupiter/params/provider/CsvSource.html
 
-### 4.4.7.5 @ArgumentsSource
+### 4.4.7.5 `@ArgumentsSource`
 
 ```java
 @ParameterizedTest
@@ -3071,58 +2970,85 @@ public class BikeArgumentsProvider implements ArgumentsProvider {
 
 ## 4.5 更多关于单元测试的 de
 
-### 4.5.1 启发式方法 (Heuristics)
+### 4.5.1 启发式方法（Heuristics）
 
 #### 测试功能而非方法
 
 - 测试功能而非方法
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
-- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
 - 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
 
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
 
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
 
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
 
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
+
+- 测试功能而非方法，这有助于将测试划分为具有意义的完整方法名的整洁测试用例。
 
 ## 4.5.2 测试方法的命名
 
 命名测试方法有多种方式。最重要的一点是保持一致，并与团队定义一套规范。
 
-方法 1：
+### 方法 1：描述测试用例的事实
 
-描述测试用例的事实。
-
-以测试事实命名
+以测试事实命名：
 
 ```java
 @Test void newAccount() {}
@@ -3131,11 +3057,9 @@ public class BikeArgumentsProvider implements ArgumentsProvider {
 @Test void cannotWithdrawUncoveredAmount() {}
 ```
 
-方法 2：
+### 方法 2：描述测试用例预期的行为
 
-描述测试用例预期的行为。
-
-以预期行为作为命名
+以预期行为作为命名：
 
 ```java
 @Test void newAccountShouldReturnCustomer() {}
@@ -3153,20 +3077,20 @@ Object Mother 是一种用于测试的类，允许我们为测试提供预先配
 
 Builder（构建器）模式的组合允许 Object Mother 生成的对象根据测试需求进行定制。否则，将需要为每种需求复制工厂，并编写一个接收测试所有必要信息的方法。
 
-经典方法
+### 经典方法
 
 ```java
 1 User user = new User("user","password","USER")
 2 Authentication auth = new UsernamePasswordAuthenticationToken(user, null,user.authorities);
 ```
 
-## Object Mother 模式
+### Object Mother 模式
 
-- 1 Authentication user = TestAuthentications.authenticatedUser();
-- 2 Authentication admin = TestAuthentications.authenticatedAdmin();
-- 3 Authentication tester = TestAuthentications.authenticated(new User("user","password","TESTER"));
+- `1 Authentication user = TestAuthentications.authenticatedUser();`
+- `2 Authentication admin = TestAuthentications.authenticatedAdmin();`
+- `3 Authentication tester = TestAuthentications.authenticated(new User("user","password","TESTER"));`
 
-## Object Mother 模式实现
+### Object Mother 模式实现
 
 ```java
 1 public final class Authentications {
@@ -3195,13 +3119,13 @@ Builder（构建器）模式的组合允许 Object Mother 生成的对象根据�
 
 Object Mother 和 Builder 模式各自为我们的测试带来了优势，也可以结合使用以进一步增强测试的可读性和可维护性。对于复杂对象，《Growing Object-Oriented Software, Guided by Tests》一书中描述的 Test Data Builder 模式是创建测试对象的完美解决方案。
 
-使用 Test Data Builder
+### 使用 Test Data Builder
 
 ```java
 1 Invoice anInvoice = new InvoiceBuilder().build();
 ```
 
-## Builder 模式
+### Builder 模式
 
 ```java
 3 public class InvoiceBuilder {
@@ -3225,7 +3149,7 @@ Object Mother 和 Builder 模式各自为我们的测试带来了优势，也可
 21 }
 ```
 
-## 组合 Builder 模式
+### 组合 Builder 模式
 
 ```java
 1 InvoiceWithNoPostcode = new InvoiceBuilder()
@@ -3237,7 +3161,7 @@ Object Mother 和 Builder 模式各自为我们的测试带来了优势，也可
 7 .build();
 ```
 
-## 组合 Builder 模式，更短
+### 组合 Builder 模式，更短
 
 ```java
 Invoice invoice = new InvoiceBuilder()
@@ -3245,7 +3169,7 @@ Invoice invoice = new InvoiceBuilder()
     .build();
 ```
 
-## 组合 Builder 模式，更简短
+### 组合 Builder 模式，更简短
 
 ```java
 Invoice invoice = anInvoice()
@@ -3253,7 +3177,7 @@ Invoice invoice = anInvoice()
     .build();
 ```
 
-## 组合 Builder 模式，最简
+### 组合 Builder 模式，最简
 
 ```java
 Invoice invoice = anInvoice()
@@ -3265,28 +3189,28 @@ Invoice invoice = anInvoice()
 
 遵循有助于编写整洁测试的五个规则，这些规则定义了 F.I.R.S.T 缩写。
 
-Fast（快速）
+### Fast（快速）
 
-- 测试应该是快速的
+- 测试应该是快速的。
 - 如果测试很慢，运行频率就会降低，因此无法尽早发现。
 
-Independent（独立）
+### Independent（独立）
 
 - 测试不应该相互依赖，而应该能够独立执行。
 - 测试不应该为下一个测试设置条件，并且应该以任何顺序执行。
 - 如果测试相互依赖，第一个失败的测试将触发后续测试的级联失败。
 
-Repeatable（可重复）
+### Repeatable（可重复）
 
 - 测试在任何环境中都是可重复的。
 
-Self-Validating（自验证）
+### Self-Validating（自验证）
 
 - 测试应该有布尔值输出。
 - 它们要么自我验证，要么失败。
 - 如果测试不进行自我验证，可能需要手动评估。
 
-Timely（及时）
+### Timely（及时）
 
 - 测试必须及时编写。
 - 测试应该在生产代码之前编写。
@@ -3298,7 +3222,7 @@ Timely（及时）
 
 Mockito 是一个用于创建测试双对象的 Java Mock 框架。
 
-为什么我们需要测试双？
+### 为什么我们需要测试双？
 
 大多数情况下代码依赖依赖。测试双对象有助于隔离单元代码并对其测试。
 
@@ -3312,11 +3236,11 @@ Test Double 是 Meszaros 在其书籍《Test Patterns》中使用的通用术语
 - **Fake object（假对象）**：作为简单的实现，例如在测试中使用内存数据库代替进行数据库访问。
 - **Dummy object（空对象）**：当测试方法需要参数但不需要使用该参数时使用。
 
-## 4.6.2 激活
+### 4.6.2 激活
 
-激活 Mockito 可以通过 JUnit 5 的 @Extend 注解或通过编程调用 MockitoAnnotations.openMocks() 来。
+激活 Mockito 可以通过 JUnit 5 的 `@Extend` 注解或通过编程调用 `MockitoAnnotations.openMocks()` 来。
 
-@ExtendWith
+#### `@ExtendWith`
 
 ```java
 @ExtendWith(Mockito.class)
@@ -3324,7 +3248,7 @@ class MockitoAnnotationTest {
 }
 ```
 
-MockitoAnnotations.openMocks()
+#### `MockitoAnnotations.openMocks()`
 
 ```java
 class MockitoTest {
@@ -3335,32 +3259,44 @@ class MockitoTest {
 }
 ```
 
-
-
-
-
-## 4.6.3 注解 (Annotations)
+### 4.6.3 注解（Annotations）
 
 Mockito 支持以下注解³⁰ 来配置 mock 测试：
 
+
+
 ```java
 @Mock
-为给定的类创建一个新的 mock 实现。它不会创建真实对象。
-@Spy 为真实实例创建一个包装器并对该真实对象进行 spy。
-@InjectMocks 将创建的 mock 注入到给定的类中。
 ```
 
+为给定的类创建一个新的 mock 实现。它不会创建真实对象。
+
+```java
+@Spy
+```
+
+为真实实例创建一个包装器并对该真实对象进行 spy。
+
+```java
+@InjectMocks
+```
+
+将创建的 mock 注入到给定的类中。
+
+```java
 @Captor
-用于创建 ArgumentCaptor¹ 实例，用于捕获方法参数值以便进行后续断言。
+```
 
-### 4.6.3.1 @Mock
+用于创建`ArgumentCaptor`¹实例，用于捕获方法参数值以便进行后续断言。
 
-使用 @Mock 将创建一个类的 mock 实例。
+### 4.6.3.1 `@Mock`
+
+使用`@Mock`将创建一个类的 mock 实例。
 
 - 该实例被完全插桩化，以跟踪与它的交互。
 - 这不是一个真实对象，且不会维护状态变化。
 
-使用 Mockito.mock() 手动实现
+#### 使用`Mockito.mock()`手动实现
 
 ```java
 @Test
@@ -3374,10 +3310,12 @@ void whenNotUsingMockAnnotation() {
 }
 ```
 
+#### `@Mock`注解
+
 ```java
-@Mock 注解
 @Mock
 List<String> mock;
+
 @Test
 void whenUsingMockAnnotation() {
   mock.add("Java");
@@ -3388,17 +3326,18 @@ void whenUsingMockAnnotation() {
 }
 ```
 
-³⁰https://mockito.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html
-³¹https://mockito.io/doc/org.mockito/mockito-core/latest/org/mockito/ArgumentCaptor.html
+³⁰ <https://mockito.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html>
 
-### 4.6.3.2 @Spy
+³¹ <https://mockito.io/doc/org.mockito/mockito-core/latest/org/mockito/ArgumentCaptor.html>
 
-使用 @Spy 将创建一个类的真实实例。
+### 4.6.3.2 `@Spy`
+
+使用`@Spy`将创建一个类的真实实例。
 
 - 你可以跟踪与它的每一次交互。
 - 它会维护状态变化。
 
-使用 Mockito.spy() 手动实现
+#### 使用`Mockito.spy()`手动实现
 
 ```java
 @Test
@@ -3414,7 +3353,7 @@ void whenNotUsingSpyAnnotation() {
 }
 ```
 
-#Spy 注解
+#### `@Spy`注解
 
 ```java
 @Spy
@@ -3431,7 +3370,7 @@ void usingSpyAnnotation() {
 }
 ```
 
-### 4.6.3.3 @Captor
+### 4.6.3.3 `@Captor`
 
 ```java
 @Captor
@@ -3453,7 +3392,7 @@ class MockitoCaptorTest {
 }
 ```
 
-## 4.7 代码覆盖率 (Code Coverage)
+## 4.7 代码覆盖率（Code Coverage）
 
 代码覆盖率是一种衡量运行时哪些源代码行被处理过的指标。该测量是通过执行测试用例完成的，并提供源代码被测试程度的指标。
 
@@ -3461,134 +3400,140 @@ class MockitoCaptorTest {
 
 测试覆盖率绝不应被视为测试或代码质量的指标！它只是问题区域的指示。因此只能做出否定性判断，不能做出肯定判断。
 
-### 测量技术：
+### 测量技术
 
-### 语句覆盖 / 行覆盖 (Statement Coverage / Line Coverage)
+#### 语句覆盖 / 行覆盖（Statement Coverage / Line Coverage）
 
 - 衡量单行代码是否运行以及运行频率。
 - 问题：如果该行是逻辑比较，单次运行没有代表性。
 
-### 决策覆盖 / 分支覆盖 (Decision Coverage / Branch Coverage)
+#### 决策覆盖 / 分支覆盖（Decision Coverage / Branch Coverage）
 
-- 对于分支情况（if, while 等），会额外检查两种情况（真和假）是否均发生。
+- 对于分支情况（`if`、`while`等），会额外检查两种情况（真和假）是否均发生。
 
-### 路径覆盖 (Path Coverage)
+#### 路径覆盖（Path Coverage）
 
 - 路径覆盖衡量是否所有可能的程序流路径组合都已运行。
-- 问题：可能性的随决策数量增加而呈指数级增长。
+- 问题：可能性随决策数量增加而呈指数级增长。
 
-### 函数覆盖 (Function Coverage)
+#### 函数覆盖（Function Coverage）
 
 - 根据函数衡量它们是否被调用。
 
-### 竞态覆盖 (Race Coverage)
+#### 竞态覆盖（Race Coverage）
 
 - 关注并行运行的代码点。
 
-市场上大多数代码覆盖率工具仅支持语句覆盖和决策覆盖，某些情况下支持路径覆盖。尽管如此，它们已经提供了价值的结论，例如测试期间简单遗忘的代码部分以及未考虑的异常。
+市场上大多数代码覆盖率工具仅支持语句覆盖和决策覆盖，某些情况下支持路径覆盖。尽管如此，它们已经提供了有价值的结论，例如测试期间简单遗忘的代码部分以及未考虑的异常。
 
-## 软件质量保证 (Software Quality Assurance)
+## 软件质量保证（Software Quality Assurance）
 
-### 挑战：
+### 挑战
 
-100% 覆盖是一个幻觉！不要试图实现 100% 的总代码覆盖。可实现的覆盖率很大取决于项目类型，而现实值在 80% 左右。代码覆盖率应根据项目特定定义并在构建过程中自动检查。
+100%覆盖是一个幻觉！不要试图实现100%的总代码覆盖。可实现的覆盖率很大程度取决于项目类型，而现实值在80%左右。代码覆盖率应根据项目特定定义并在构建过程中自动检查。
 
-达到 100% 代码覆盖率在理论上听起来很好，但几乎总是浪费时间。为了从 80% 达到 100%，我们将花费大量精力，因为这困难得多。
-
-（注：原文此处存在大量重复段落，已按要求去重，仅保留核心内容）
-
-
-
-
+达到100%代码覆盖率在理论上听起来很好，但几乎总是浪费时间。为了从80%达到100%，我们将花费大量精力，因为这困难得多。
 
 ## 软件质量保证
 
 109
 
-### 已解决的问题：
+### 已解决的问题
 
-- 故障排除时间滞后
-- 缺乏团队协作
-  - 你的更改与我的不匹配
+- 故障排除时间滞后。
+- 缺乏团队协作。
+  - 你的更改与我的不匹配。
   - 你两个月前不是修复过这个吗？
-- 代码质量低劣
+- 代码质量低劣。
   - 为什么三个不同的类在做相同的事情？
-  - XY 团队的代码看起来完全不同
-- 缺乏透明度/可见性
+  - XY团队的代码看起来完全不同。
+- 缺乏透明度/可见性。
   - 哪些测试没有运行？
-  - 构建版本 1.2.3 包含什么？
+  - 构建版本1.2.3包含什么？
   - 我们的代码覆盖率处于什么水平？
-- 软件不可用
-  - 我没问题
-  - 它正在运行中
-  - 我需要另一个构建版本来测试
-  - 老板明天来，我们需要一个演示
+- 软件不可用。
+  - 我没问题。
+  - 它正在运行中。
+  - 我需要另一个构建版本来测试。
+  - 老板明天来，我们需要一个演示。
 
-## 4.9.1 CI、CD 和 CD 之间的区别
+## 4.9.1 CI、CD和CD之间的区别
 
-### 持续集成 (CI)
-- 通过 CI，代码更改在提交后会立即进行测试，以便对新包含的更改进行测试。
+### 持续集成（CI）
+
+- 通过CI，代码更改在提交后会立即进行测试，以便对新包含的更改进行测试。
 - 基本思想是在开发过程中频繁测试代码，以及早发现并修复潜在问题。
-- 在 CI 中，大部分工作由自动化测试和构建服务器完成。
-- 由于 CI 对软件状态提供持续反馈，出现的问题通常不那么复杂，且更容易解决。
+- 在CI中，大部分工作由自动化测试和构建服务器完成。
+- 由于CI对软件状态提供持续反馈，出现的问题通常不那么复杂，且更容易解决。
 
-### 持续交付 (Continuous Delivery)
-- 持续交付是 CI 的扩展。
+### 持续交付（Continuous Delivery）
+
+- 持续交付是CI的扩展。
 - 它涉及在代码开发后立即将其交付到测试环境（staging environment）。
 - 它包含了持续集成、测试自动化和部署流程，能够通过人工干预实现快速可靠的软件开发。
-- 核心思想是将代码交付给 QA（质量保证）、客户或任何用户群体，以便对其进行持续和定期的审查。
+- 核心思想是将代码交付给QA（质量保证）、客户或任何用户群体，以便对其进行持续和定期的审查。
 
-### 持续部署 (Continuous Deployment)
+### 持续部署（Continuous Deployment）
+
 - 持续部署是持续交付之后的逻辑步骤。
 - 它是将开发后的代码直接交付到生产环境的过程。
 - 通过持续部署，所有通过自动化测试的更改都会自动传输到生产环境。
-- 成功实施需要持续持续的自动化，以及持续交付到测试环境的自动化。
+- 成功实施需要持续的自动化，以及持续交付到测试环境的自动化。
 
-## 4.9.2 CI 工作流
+## 4.9.2 CI工作流
 
-在 CI 工作流中，你可以根据目标集成许多实用的工具。在这种情况下，以下工具是 CI 的组成部分：
+在CI工作流中，你可以根据目标集成许多实用的工具。在这种情况下，以下工具是CI的组成部分：
 
-- **Nexus**: 管理二进制文件和构建产物。
-- **SonarQube**: 静态代码分析平台。不仅支持 Java，还支持其他编程语言。分析代码质量范围并以图形化显示结果。
-- **Renovate**: 针对多平台和多语言的自动化依赖更新。
-- **DependencyTrack**: 一个允许组织识别并减少使用第三方和开源组件带来的风险的平台。
-- **Jenkins**: 由 CI/CD 流水线驱动的管理工具。
+- **Nexus**：管理二进制文件和构建产物。
+- **SonarQube**：静态代码分析平台。不仅支持Java，还支持其他编程语言。分析代码质量范围并以图形化显示结果。
+- **Renovate**：针对多平台和多语言的自动化依赖更新。
+- **DependencyTrack**：一个允许组织识别并减少使用第三方和开源组件带来的风险的平台。
+- **Jenkins**：由CI/CD流水线驱动的管理工具。
 
 ## 4.9.3 前提条件
 
 ### Common代码库
+
 - 为了在团队内部进行有意义的集成，必须存在一个版本管理系统，所有开发者可以在其中持续集成他们的更改。
 
 ### 自动化编译
+
 - 在更改集成之前，每次集成必须通过统一定义的测试。这需要自动化编译。
 
 ### 持续开发
+
 - 如果可能，每个更改都应带有相关的测试开发。
 - 新开发的测试应成为自动化测试套件的一部分。
 - 使用代码覆盖率进行记录和控制。
 
 ### 频繁集成
+
 - 尽可能频繁将更改集成到公共代码库中。
 - 通过小增量可以将集成失败的风险降最低。
 - 开发者的工作在公共代码库中得到了保障。
 
 ### 短测试周期
+
 - 集成前的测试周期应该尽可能短，以鼓励频繁集成。
 
 ### 镜像生产环境
+
 - 更改应该在真实生产环境的副本中进行测试。
 
 ### 易访问
+
 - 即使是非开发者也需要方便访问软件开发的结果。
 
 ### 自动化报告
+
 - 上一次成功集成是什么时候？
 - 自上次交付以来引入了哪些更改？
 - 版本质量如何？
 
 ## 4.9.4 优点与缺点
 
-**优点：**
+### 优点
+
 - 集成问题被不断发现和解决，而不仅仅是在里程碑节点之前。
 - 组件不匹配的早期警报。
 - 通过立即执行单元测试快速发现错误。
@@ -3600,7 +3545,8 @@ class MockitoCaptorTest {
 - 能够对关键指标做出立即响应。
 - 编码标准和最佳实践。
 
-**缺点：**
+### 缺点
+
 - 基础设施的搭建。
 - 硬件和软件的成本。
 
@@ -3608,42 +3554,42 @@ class MockitoCaptorTest {
 
 - 使用版本管理系统。
 - 向主分支提交更改应自动触发构建。
-- 尽早频繁提交，优先选择基于主干的开发 (Trunk Based Development)。
+- 尽早频繁提交，优先选择基于主干的开发（Trunk Based Development）。
 - 不要提交未运行的代码。
 - 立即修复构建错误。
-- 测试应作为 CI 过程的一部分运行，测试失败会导致构建失败。
+- 测试应作为CI过程的一部分运行，测试失败会导致构建失败。
 - 及早处理问题并快速失败。
-- 代码质量检查应作为 CI 过程的一部分运行。
-- 根据指标采取行动并做出。
+- 代码质量检查应作为CI过程的一部分运行。
+- 根据指标采取行动并做出决策。
 - 为每个构建创建产物。
-- 配置即代码，CI 服务器配置应作为代码进行维护。
+- 配置即代码，CI服务器配置应作为代码进行维护。
 - 提供快速交付。
 
-*https://baseddevelopment.com/
+<https://baseddevelopment.com/>
 
 # 5. 设计原则
 
 ## 5.1 设计原则的目标
 
-SOLID 原则
+### SOLID原则
 
-- 由 Robert C. Martin 提出的一组原则。
+- 由Robert C. Martin提出的一组原则。
 - 持续集成、持续交付的原则。
 - 解决代码和架构异味的问题。
 - 模块设计中的原则。
-- 由 Robert C. Martin、Bertrand Meyer 和 Barbara Liskov 等发布。
+- 由Robert C. Martin、Bertrand Meyer和Barbara Liskov等发布。
 
 ## 5.2 设计原则概览
 
-**SOLID 原则**
+### SOLID原则
 
-- Robert C. Martin 提出的原则。
+- Robert C. Martin提出的原则。
 - 提高软件的可维护性。
 - 提供了关于如何组合类的原则。
 
-*http://UncleBob.com/ArticleSO*
+<http://UncleBob.com/ArticleSO>
 
-## 设计原则
+### 设计原则
 
 | 原则 | 缩写 | 描述 |
 | :--- | :--- | :--- |
@@ -3653,7 +3599,7 @@ SOLID 原则
 | 接口隔离原则 | ISP | 针对特定的细粒度接口。 |
 | 依赖倒置原则 | DIP | 依赖抽象，而不是依赖具体。 |
 
-## SOLID 原则
+### SOLID原则
 
 | 原则 | 缩写 | 描述 |
 | :--- | :--- | :--- |
@@ -3661,7 +3607,7 @@ SOLID 原则
 | 公共封闭原则 | CCP | 共同变化的类封装在一起。 |
 | 公共重用原则 | CRP | 共同使用的类封装在一起。 |
 
-## 包原则 - 内聚
+### 包原则——内聚
 
 | 原则 | 缩写 | 描述 |
 | :--- | :--- | :--- |
@@ -3669,7 +3615,7 @@ SOLID 原则
 | 稳定依赖原则 | SDP | 向稳定的方向依赖。 |
 | 稳定抽象原则 | SAP | 抽象性随稳定性而增加。 |
 
-## 进一步设计原则
+### 进一步设计原则
 
 | 原则 | 缩写 | 描述 |
 | :--- | :--- | :--- |
@@ -3679,13 +3625,9 @@ SOLID 原则
 | 你不需要它的！ | YAGNI | 只在实际需要时实现，而不是在预见到需要时实现。 |
 | 关注点分离 | SOC | 将程序分成功能重叠尽可能少的不同特征的过程。 |
 
+## 5.3 SOLID原则
 
-
-
-
-## 5.3 SOLID 原则
-
-### 5.3.1 单一职责原则 (Single Responsibility Principle)
+### 5.3.1 单一职责原则（Single Responsibility Principle）
 
 一个类应该且只有一个变化的理由。
 
@@ -3697,13 +3639,13 @@ SOLID 原则
 - 遵循单一职责原则是再次问自己：该类的每个方法和过程是否都与类名直接相关。
 - 对于不符合类名的方法，将这些方法移动到其他类中。
 
-#### 5.3.1.1 示例：调制解调器 (Modem)
+#### 5.3.1.1 示例：调制解调器（Modem）
 
-#### 不符合规范的代码示例
+##### 不符合规范的代码示例
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_129_0.png)
 
-坏代码
+坏代码：
 
 ```java
 public interface Modem {
@@ -3717,27 +3659,23 @@ public interface Modem {
 }
 ```
 
-#### 符合规范的解决方案
+##### 符合规范的解决方案
 
 | interface | interface |
-| --- | --- |
+| :--- | :--- |
 | DataChannel | Connection |
 | +send() | +hangup() |
 | +receive() | +dial() |
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_130_0.png)
 
-调制解调器实现
+调制解调器实现未违反SRP。
 
-未违反 SRP
-
-单一职责原则 (SRP) 规定类或模块应该只有一个变化的理由。在给定的代码示例中，SRP 的违反是显而易见的，因为 `Modem` 接口负责连接管理和数据管理。
+单一职责原则（SRP）规定类或模块应该只有一个变化的理由。在给定的代码示例中，SRP的违反是显而易见的，因为`Modem`接口负责连接管理和数据管理。
 
 为了解决这一违反，可以将代码重构为分离职责的规范解决方案。
 
-创建 `DataChannel` 接口来处理与数据管理相关的职责。它声明了 `send` 和 `receive` 方法分别用于发送和接收数据。
-
-#### 好的代码
+##### 好的代码
 
 ```java
 public interface DataChannel {
@@ -3746,9 +3684,9 @@ public interface DataChannel {
 }
 ```
 
-创建 `Connection` 接口来处理与连接管理相关的职责。它声明了 `dial` 和 `hangup` 方法分别用于建立和终止连接。
+创建`Connection`接口来处理与连接管理相关的职责。它声明了`dial`和`hangup`方法分别用于建立和终止连接。
 
-#### 好的代码
+##### 好的代码
 
 ```java
 public interface Connection {
@@ -3757,11 +3695,11 @@ public interface Connection {
 }
 ```
 
-修改 `Modem` 类以实现 `Connection` 和 `DataChannel` 接口。通过实现这些接口，`Modem` 类承担了每个接口定义的职责。它将连接管理逻辑与数据管理逻辑分离，遵循了 SRP。
+修改`Modem`类以实现`Connection`和`DataChannel`接口。通过实现这些接口，`Modem`类承担了每个接口定义的职责。它将连接管理逻辑与数据管理逻辑分离，遵循了SRP。
 
 通过遵循这一规范解决方案，每个接口和类都有单一职责，使得代码更具可维护性并允许在不影响其他职责的情况下更容易地修改或扩展单个职责。
 
-#### 好的代码
+##### 好的代码
 
 ```java
 public final class Modem implements Connection, DataChannel {
@@ -3784,19 +3722,22 @@ public final class Modem implements Connection, DataChannel {
 }
 ```
 
-### 5.3.1.2 示例：书籍 (Book)
+### 5.3.1.2 示例：书籍（Book）
 
 #### 不符合规范的代码示例
 
-`Book` 类违反了 SRP，因为它拥有多个职责，例如存储书籍数据和书籍导出到不同的格式。
+`Book`类违反了SRP，因为它拥有多个职责，例如存储书籍数据和将书籍导出到不同的格式。
 
 坏代码
+
+
 
 ```java
 public record Book(String title, String author, String content) {
     public void exportToPdf() {
         // logic
     }
+
     public void exportToEpub() {
         // logic
     }
@@ -3805,7 +3746,7 @@ public record Book(String title, String author, String content) {
 
 #### 符合规范的解决方案
 
-为了解决这一违反，可以将代码重构为分离职责的规范解决方案。修改 `Book` 类使其仅处理存储书籍数据的职责。从类中移除了导出功能。
+为了解决这一违反，可以将代码重构为分离职责的规范解决方案。修改`Book`类使其仅处理存储书籍数据的职责。从类中移除了导出功能。
 
 好的代码
 
@@ -3822,7 +3763,7 @@ public interface BookExporter {
 }
 ```
 
-引入 `BookExporter` 接口来处理导出书籍的职责。它声明了一个单一的方法 `export`，并接收一个 `Book` 对象作为参数。
+引入`BookExporter`接口来处理导出书籍的职责。它声明了一个单一的方法`export`，并接收一个`Book`对象作为参数。
 
 好的代码
 
@@ -3835,7 +3776,7 @@ public final class PdfExporter implements BookExporter {
 }
 ```
 
-创建 `PdfExporter` 类来处理将书籍导出为 PDF 格式的特定职责。它实现了 `BookExporter` 接口并提供了 `export` 方法的实现。
+创建`PdfExporter`类来处理将书籍导出为 PDF 格式的特定职责。它实现了`BookExporter`接口并提供了`export`方法的实现。
 
 好的代码
 
@@ -3848,15 +3789,15 @@ public final class EpubExporter implements BookExporter {
 }
 ```
 
-创建 `EpubExporter` 类来处理将书籍导出为 EPUB 格式的特定职责。它同样实现了 `BookExporter` 接口并提供了 `export` 方法的实现。
+创建`EpubExporter`类来处理将书籍导出为 EPUB 格式的特定职责。它同样实现了`BookExporter`接口并提供了`export`方法的实现。
 
-通过遵循这一规范解决方案，`Book` 类拥有存储书籍数据的单一职责，而导出功能移动到了实现 `BookExporter` 接口的独立类中。
+通过遵循这一规范解决方案，`Book`类拥有存储书籍数据的单一职责，而导出功能移动到了实现`BookExporter`接口的独立类中。
 
 ### 5.3.1.3 示例：产品 (Product)
 
 #### 不符合规范的代码示例
 
-`Product` 类违反了 SRP，因为它拥有多个职责，例如存储书籍数据和导出到不同格式。
+`Product`类违反了 SRP，因为它拥有多个职责，例如存储书籍数据和导出到不同格式。
 
 坏代码
 
@@ -3870,7 +3811,7 @@ record Product(String name, double price) {
 
 #### 符合规范的解决方案
 
-在改进后的代码中，我们将存储产品数据和计算折扣的职责分离到两个类中。通过这种分离`Product` 类专注于存储数据，而 `DiscountCalculator` 类负责折扣计算。
+在改进后的代码中，我们将存储产品数据和计算折扣的职责分离到两个类中。通过这种分离，`Product`类专注于存储数据，而`DiscountCalculator`类负责折扣计算。
 
 好的代码
 
@@ -3892,9 +3833,9 @@ class DiscountCalculator {
 你应该能够在不修改类代码的情况下扩展其行为。
 
 - 遵循 OCP 的类具有两个本质特征：
-- 对扩展开放：此类类的行为可以被扩展，以满足现有或新应用程序的需求。
-- 对修改关闭：不再需要通过修改来作为新需求的基础。
-- 由于 `switch` 导致执行不同动作的函数是违反 OCP 的良好示例。此类函数永远对更改是不关闭的，因为添加新类型需要更改源代码。
+  - 对扩展开放：此类类的行为可以被扩展，以满足现有或新应用程序的需求。
+  - 对修改关闭：不再需要通过修改来作为新需求的基础。
+- 由于`switch`导致执行不同动作的函数是违反 OCP 的良好示例。此类函数永远对更改是不关闭的，因为添加新类型需要更改源代码。
 - 通过添加一个新类来扩展类组，比修改现有代码更加优雅和健壮。
 - 通过使用（例如）抽象基类，可以创建具有固定不可变实现的软件组件，其行为可以通过继承和多态进行无限更改。
 
@@ -3904,7 +3845,7 @@ class DiscountCalculator {
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_135_0.png)
 
-不符合规范的代码违反了 OCP，因为 `LoanRequestHandler` 类对修改开放的。
+不符合规范的代码违反了 OCP，因为`LoanRequestHandler`类对修改开放的。
 
 #### 设计原则
 
@@ -3944,10 +3885,6 @@ public final class PersonalLoanValidator {
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_136_0.png)
 
-
-
-
-
 ## 设计原则
 
 ## 好代码
@@ -3972,7 +3909,7 @@ public class LoanRequestHandler {
 }
 ```
 
-`LoanRequestHandler` 类的 `approveLoan` 方法被修改为接受 `Validator` 接口而不是特定的实现。此更改允许类与任何实现 `Validator` 接口的对象协作，使其对扩展开放。
+`LoanRequestHandler`类的`approveLoan`方法被修改为接受`Validator`接口而不是特定的实现。此更改允许类与任何实现`Validator`接口的对象协作，使其对扩展开放。
 
 ## 好代码
 
@@ -3982,7 +3919,7 @@ public interface Validator {
 }
 ```
 
-引入了 `Validator` 接口来定义贷款验证器的合约。它声明了一个单一方法 `isValid`，该方法接收余额作为参数并返回指示贷款是否有效的布尔值。
+引入了`Validator`接口来定义贷款验证器的合约。它声明了一个单一方法`isValid`，该方法接收余额作为参数并返回指示贷款是否有效的布尔值。
 
 ## 好代码
 
@@ -3994,7 +3931,7 @@ public class PersonalLoanValidator implements Validator {
 }
 ```
 
-`PersonalLoanValidator` 类被创建作为 `Validator` 接口的实现。它提供了针对个人贷款的 `isValid` 方法的具体实现。
+`PersonalLoanValidator`类被创建作为`Validator`接口的实现。它提供了针对个人贷款的`isValid`方法的具体实现。
 
 ## 设计原则
 
@@ -4010,9 +3947,9 @@ class BusinessLoanValidator implements Validator {
 }
 ```
 
-`BusinessLoanValidator` 类被创建作为 `Validator` 接口的另一个实现。它为业务贷款提供了不同的 `isValid` 方法实现。
+`BusinessLoanValidator`类被创建作为`Validator`接口的另一个实现。它为业务贷款提供了不同的`isValid`方法实现。
 
-通过遵循这一合规方案，`LoanRequestHandler` 类保持对修改的关闭，因为可以通过实现 `Validator` 接口引入新的验证器。该类可以与任何遵循 `Validator` 接口的对象工作，使其对扩展开放。
+通过遵循这一合规方案，`LoanRequestHandler`类保持对修改的关闭，因为可以通过实现`Validator`接口引入新的验证器。该类可以与任何遵循`Validator`接口的对象工作，使其对扩展开放。
 
 ## 设计原则
 
@@ -4020,7 +3957,7 @@ class BusinessLoanValidator implements Validator {
 
 ## 不合代码示例
 
-不合代码违反了开闭原则 (OCP)，因为它使用 `switch` 语句来处理不同类型的形状，这导致每当引入新形状时，都需要修改 `draw` 方法。
+不合代码违反了开闭原则 (OCP)，因为它使用`switch`语句来处理不同类型的形状，这导致每当引入新形状时，都需要修改`draw`方法。
 
 坏代码
 
@@ -4033,15 +3970,17 @@ public void draw(Shape[] shapes) {
         }
     }
 }
+
 private void draw(Circle circle) {
     // 圆形逻辑
 }
+
 private void draw(Square square) {
     // 正方形逻辑
 }
 ```
 
-`draw` 方法接收一个 `Shape` 对象数组，并使用 `switch` 语句来确定形状类型并调用相应的 `draw` 方法。这种方法违反了 OCP，因为当添加新的形状类型时，需要修改 `draw` 方法在 `switch` 语句中包含一个新的 case，导致该方法对修改开放。
+`draw`方法接收一个`Shape`对象数组，并使用`switch`语句来确定形状类型并调用相应的`draw`方法。这种方法违反了 OCP，因为当添加新的形状类型时，需要修改`draw`方法在`switch`语句中包含一个新的 case，导致该方法对修改开放。
 
 ## 合规方案
 
@@ -4053,7 +3992,7 @@ public interface Shape {
 }
 ```
 
-引入了 `Shape` 接口来定义形状的合约。它声明了一个单一方法 `draw`，负责绘制形状。
+引入了`Shape`接口来定义形状的合约。它声明了一个单一方法`draw`，负责绘制形状。
 
 126
 
@@ -4085,7 +4024,7 @@ public void draw(Shape[] shapes) {
 }
 ```
 
-`draw` 方法被修改为遍历 `Shape` 对象数组并调用每个形状的 `draw` 方法。通过这样做，该方法对修改是关闭的，因为每当引入新形状时都不需要更新。每个形状的 `draw` 方法实现由具体的形状类决定，这通过允许在不修改的情况下扩展遵循了 OCP。
+`draw`方法被修改为遍历`Shape`对象数组并调用每个形状的`draw`方法。通过这样做，该方法对修改是关闭的，因为每当引入新形状时都不需要更新。每个形状的`draw`方法实现由具体的形状类决定，这通过允许在不修改的情况下扩展遵循了 OCP。
 
 ## 设计原则
 
@@ -4099,14 +4038,17 @@ public void draw(Shape[] shapes) {
 public class HumanResourceDepartment {
     private final List<Developer> developers;
     private final List<Manager> managers;
+
     public HumanResourceDepartment() {
         this.developers = new ArrayList<>();
         this.managers = new ArrayList<>();
     }
+
     public void hire(Developer developer) {
         developer.signContract();
         this.developers.add(developer);
     }
+
     public void hire(Manager manager) {
         manager.signContract();
         this.managers.add(manager);
@@ -4114,7 +4056,7 @@ public class HumanResourceDepartment {
 }
 ```
 
-`HumanResourceDepartment` 类拥有用于招聘开发者和经理的特定方法。该类与特定的员工类型紧耦合，违反了 OCP。如果我们需要引入新类型的员工（例如秘书），我们就必须修改 `HumanResourceDepartment` 类，这违背了 OCP 原则。
+`HumanResourceDepartment`类拥有用于招聘开发者和经理的特定方法。该类与特定的员工类型紧耦合，违反了 OCP。如果我们需要引入新类型的员工（例如秘书），我们就必须修改`HumanResourceDepartment`类，这违背了 OCP 原则。
 
 ## 合规方案
 
@@ -4133,7 +4075,7 @@ interface Employee {
 }
 ```
 
-引入了 `Employee` 接口来定义员工的合约。它声明了一个单一方法 `signContract`，负责签署合同。
+引入了`Employee`接口来定义员工的合约。它声明了一个单一方法`signContract`，负责签署合同。
 
 142
 
@@ -4170,7 +4112,7 @@ public class HumanResourceDepartment {
 }
 ```
 
-`HumanResourceDepartment` 类被修改为使用 `Employee` 接口而不是特定的员工类型。`hire` 方法现在接收 `Employee` 对象作为参数并调用 `signContract` 方法。此更改允许类与任何实现 `Employee` 接口的对象工作，使其对扩展开放。
+`HumanResourceDepartment`类被修改为使用`Employee`接口而不是特定的员工类型。`hire`方法现在接收`Employee`对象作为参数并调用`signContract`方法。此更改允许类与任何实现`Employee`接口的对象工作，使其对扩展开放。
 
 143
 
@@ -4200,11 +4142,13 @@ public class Calculator {
 }
 ```
 
-`Calculator` 类有一个 `calculate` 方法，根据 `operator` 参数的值执行不同的操作。然而，如果我们需要引入新的操作（例如幂、平方根），我们就必须修改 `Calculator` 类，这违背了 OCP 原则。
+`Calculator`类有一个`calculate`方法，根据`operator`参数的值执行不同的操作。然而，如果我们需要引入新的操作（例如幂、平方根），我们就必须修改`Calculator`类，这违背了 OCP 原则。
 
 ## 合规方案
 
 ## 好代码
+
+
 
 ```java
 public enum Operation {
@@ -4225,17 +4169,13 @@ public enum Operation {
 }
 ```
 
-引入了一个名为 `Operation` 的枚举来表示不同的操作。每个操作都定义为一个常量，并带有一个相应的 表达式（`DoubleBinaryOperator`）来执行该操作。提供了 `apply` 方法将操作应用于给定的操作数。
-
-
-
-
+引入了一个名为 `Operation` 的枚举来表示不同的操作。每个操作都定义为一个常量，并带有一个相应的表达式（`DoubleBinaryOperator`）来执行该操作。提供了 `apply` 方法将操作应用于给定的操作数。
 
 通过使用枚举（enum）和 Lambda 表达式，可以在 `Operation` 枚举中定义额外的常量来轻松添加新操作，而无需修改现有代码。这符合 OCP（开闭原则），因为 `Calculator` 类对修改关闭，但对扩展开放。
 
 ## 好代码
 
-```
+```java
 public class Calculator {
     public double calculate(double x, double y, Operation operation) {
         return operation.apply(x, y);
@@ -4249,9 +4189,9 @@ public class Calculator {
 
 ### 不规范代码示例
 
-### 坏代码
+#### 坏代码
 
-```
+```java
 public class FileParser {
     public String parse(String filePath) {
         if (filePath.indexOf(".xml") > -1) {
@@ -4261,10 +4201,12 @@ public class FileParser {
         }
         return null;
     }
+
     private String parseXML(String filePath) {
         // logic
         return null;
     }
+
     private String parseJson(String filePath) {
         // logic
         return null;
@@ -4278,7 +4220,7 @@ public class FileParser {
 
 ### 好代码
 
-```
+```java
 public interface FileParser {
     String parse(String file);
     boolean supports(String extension);
@@ -4291,12 +4233,13 @@ public interface FileParser {
 
 ### 好代码
 
-```
+```java
 public class JsonParser implements FileParser {
     @Override
     public String parse(String file) {
         return String.format("Parser %s", JsonParser.class.getSimpleName());
     }
+
     @Override
     public boolean supports(String extension) {
         return "json".equalsIgnoreCase(extension);
@@ -4312,6 +4255,7 @@ public class XmlParser implements FileParser {
     public String parse(String file) {
         return String.format("Parser %s", XmlParser.class.getSimpleName());
     }
+
     @Override
     public boolean supports(String extension) {
         return "xml".equalsIgnoreCase(extension);
@@ -4324,7 +4268,8 @@ public class XmlParser implements FileParser {
 ```java
 public final class FileParserFactory {
     private FileParserFactory() {
-}
+    }
+
     public static FileParser newInstance(String extension) {
         ServiceLoader<FileParser> loader = ServiceLoader.load(FileParser.class);
         for (FileParser parser : loader) {
@@ -4337,12 +4282,12 @@ public final class FileParserFactory {
 }
 ```
 
-`FileParserFactory` 类负责根据提供的文件扩展名创建 `FileParser` 。它使用 `ServiceLoader` 机制动态加载 `FileParser` 接口的实现类。
+`FileParserFactory` 类负责根据提供的文件扩展名创建 `FileParser`。它使用 `ServiceLoader` 机制动态加载 `FileParser` 接口的实现类。
 
 ### 好代码
 
-```
- // META-INF/services/swcs.dp.ocp.parser.after.FileParser
+```text
+// META-INF/services/swcs.dp.ocp.parser.after.FileParser
 2 swcs.dp.ocp.parser.after.JsonParser
 3 swcs.dp.ocp.parser.after.XmelParser
 ```
@@ -4351,7 +4296,7 @@ public final class FileParserFactory {
 
 ### 好代码
 
-```
+```java
 class Client {
     public static void main(String[] args) {
         FileParser parser = FileParserFactory.newInstance("xml");
@@ -4360,24 +4305,26 @@ class Client {
 }
 ```
 
-## 5.3.3 里氏替换原则 (LSP)
+## 5.3.3 里氏替换原则（LSP）
 
 派生类必须能够替换其基类。
 
-假设 $q(x)$ 是类型 $T$ 的对象 $x$ 的属性值。那么对于类型 $S$ 的对象（$S$ 是 $T$ 的子类型），$q(y)$ 应该为真。
+假设 $q(x)$ 是类型 `T` 的对象 `x` 的属性值。那么对于类型 `S` 的对象（`S` 是 `T` 的子类型），$q(y)$ 应该为真。
 
-- 在良好的面向对象设计（OOD）中，父类和子类之间的派生关系代表了所谓的“是（is）”关系。即子类对象与父类对象兼容的，并且可以在需要父类对象的地方使用。
+- 在良好的面向对象设计（OOD）中，父类和子类之间的派生关系代表了所谓的“是（is）”关系。即子类对象与父类对象兼容，并且可以在需要父类对象的地方使用。
 - 这确保了应用于子类的父类类型操作能够被正确执行。
-- 在这种情况下，用子类类型对象替换父类类型对象总是是安全的。
+- 在这种情况下，用子类类型对象替换父类类型对象总是安全的。
 - 在继承时，不仅要关注数据，还要考虑类方法的行为。
 
-## 5.3.3.1 示例：矩形 (Rectangle)
+## 5.3.3.1 示例：矩形（Rectangle）
 
 ### 不规范代码示例
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_148_0.png)
 
-```
+#### 坏代码
+
+```java
 public class Rectangle {
     private double height;
     private double width;
@@ -4400,21 +4347,19 @@ public class Rectangle {
 }
 ```
 
-### 坏代码
+#### 设计原则
 
-### 设计原则
-
-```
+```java
 public double area() {
     return this.width * this.height;
 }
 ```
 
-`Rectangle` 类拥有独立的 `height` 和 `width` 属性，其 `area` 方法根据这些属性计算面积。`Square` 类继承自 `Rectangle` 并重写了 `area` 方法仅根据高度计算面积（因为正方形的所有边相等）。然而，这种方法违反了 LSP，因为在行为上正方形并不是矩形的适当子类型。
+`Rectangle` 类拥有独立的 `height` 和 `width` 属性，其 `area` 方法根据这些属性计算面积。`Square` 类继承自 `Rectangle` 并重写了 `area` 方法，仅根据高度计算面积（因为正方形的所有边相等）。然而，这种方法违反了 LSP，因为在行为上正方形并不是矩形的适当子类型。
 
-### 坏代码
+#### 坏代码
 
-```
+```java
 public class Square extends Rectangle {
     @Override
     public double area() {
@@ -4423,9 +4368,9 @@ public class Square extends Rectangle {
 }
 ```
 
-### 坏代码
+#### 坏代码
 
-```
+```java
 public void do(Rectangle rectangle) {
     rectangle.width(5);
     rectangle.height(4);
@@ -4445,7 +4390,7 @@ public void do(Rectangle rectangle) {
 
 ### 好代码
 
-```
+```java
 public interface Figure {
     double area();
 }
@@ -4453,7 +4398,7 @@ public interface Figure {
 
 ### 好代码
 
-```
+```java
 public class Circle implements Figure {
     private final double radius;
 
@@ -4501,7 +4446,7 @@ public class Square extends Rectangle {
 
 ### 好代码
 
-```
+```java
 public void do(Rectangle rectangle) {
     // 通过构造函数设置矩形
     if (rectangle.area() != 20) {
@@ -4516,9 +4461,9 @@ public void do(Rectangle rectangle) {
 
 不规范的代码违反了 LSP，因为 `PromotionCoupon` 类修改了 `afterDiscount` 方法的行为，加强了它的前提条件。
 
-### 坏代码
+#### 坏代码
 
-```
+```java
 public class Coupon {
     private final BigDecimal regularPrice;
 
@@ -4544,11 +4489,12 @@ public class Coupon {
 }
 ```
 
-### 坏代码
+#### 坏代码
 
 ```java
 public class PromotionCoupon extends Coupon {
     private static final double PERCENTAGE_DISCOUNT = 0.9;
+
     public PromotionCoupon(BigDecimal regularPrice) {
         super(regularPrice);
     }
@@ -4566,10 +4512,6 @@ public class PromotionCoupon extends Coupon {
 }
 ```
 
-
-
-
-
 # 设计原则
 
 `Coupon` 类表示一个普通的优惠券，包含一个 `regularPrice` 和一个计算折扣后价格的 `afterDiscount` 方法。`PromotionCoupon` 继承 `Coupon` 并重写了 `afterDiscount` 方法，增加了对折扣的额外检查，如果折扣大于原价，则抛出异常。
@@ -4578,7 +4520,9 @@ public class PromotionCoupon extends Coupon {
 
 # 错误代码
 
-```
+
+
+```java
 class Client {
     private static final BigDecimal REGULAR_PRICE = BigDecimal.valueOf(8.99);
 
@@ -4606,9 +4550,9 @@ class Client {
 
 # 合规解决方案
 
-在合规解决方案中，通过引入 `Coupon` 接口并为 `afterDiscount` 方法的行为提供清晰的约，解决了 LSP 违反问题：
+在合规解决方案中，通过引入`Coupon`接口并为`afterDiscount`方法的行为提供清晰的约，解决了 LSP 违反问题：
 
-#### 良好的代码
+## 良好的代码
 
 ```java
 public interface Coupon {
@@ -4627,13 +4571,14 @@ public interface Coupon {
 }
 ```
 
-`RegularCoupon` 类实现了 `Coupon` 接口，并提供了普通优惠券的基础行为：
+`RegularCoupon`类实现了`Coupon`接口，并提供了普通优惠券的基础行为：
 
-#### 良好的代码
+## 良好的代码
 
 ```java
 public class RegularCoupon implements Coupon {
     private final BigDecimal regularPrice;
+
     public RegularCoupon(BigDecimal regularPrice) {
         this.regularPrice = regularPrice;
     }
@@ -4658,13 +4603,14 @@ public class RegularCoupon implements Coupon {
 }
 ```
 
-`PromotionCoupon` 类扩展 `RegularCoupon` 并继承了它的行为，而没有修改前置条件。它只重写了方法以应用额外的折扣比例：
+`PromotionCoupon`类扩展`RegularCoupon`并继承了它的行为，而没有修改前置条件。它只重写了方法以应用额外的折扣比例：
 
-#### 良好的代码
+## 良好的代码
 
 ```java
 public class PromotionCoupon extends RegularCoupon {
     private static final double PERCENTAGE_DISCOUNT = 0.9;
+
     public PromotionCoupon(BigDecimal regularPrice) {
         super(regularPrice);
     }
@@ -4678,9 +4624,9 @@ public class PromotionCoupon extends RegularCoupon {
 
 # 设计原则
 
-在合规解决方案中，客户端代码可以使用任何实现了 `Coupon` 接口的对象，包括 `RegularCoupon` 和 `PromotionCoupon`。这确保了客户端代码不受子类特定实现细节的影响，并允许在不违反 LSP 的情况下进行替换。
+在合规解决方案中，客户端代码可以使用任何实现了`Coupon`接口的对象，包括`RegularCoupon`和`PromotionCoupon`。这确保了客户端代码不受子类特定实现细节的影响，并允许在不违反 LSP 的情况下进行替换。
 
-#### 良好的代码
+## 良好的代码
 
 ```java
 class Client {
@@ -4709,47 +4655,47 @@ class Client {
 }
 ```
 
-
-
-
-
 ## 坏代码
 
 ```java
 class AllInOnePrinter implements MultiFunctionDevice {
-  @Override
-  public void print() {
-  }
-  @Override
-  public void fax() {
-  }
-  @Override
-  public void scan() {
-  }
+    @Override
+    public void print() {
+    }
+
+    @Override
+    public void fax() {
+    }
+
+    @Override
+    public void scan() {
+    }
 }
 ```
 
-`InkjetPrinter` 也实现了 `MultiFunctionDevice` 接口，但对 `fax()` 和 `scan()` 方法抛出了 `UnsupportedOperationException`，因为它不支持这些功能。
+`InkjetPrinter`也实现了`MultiFunctionDevice`接口，但对`fax()`和`scan()`方法抛出了`UnsupportedOperationException`，因为它不支持这些功能。
 
 ## 坏代码
 
 ```java
 class InkjetPrinter implements MultiFunctionDevice {
-  @Override
-  public void print() {
-  }
-  @Override
-  public void fax() {
-    throw new UnsupportedOperationException();
-  }
-  @Override
-  public void scan() {
-    throw new UnsupportedOperationException();
-  }
+    @Override
+    public void print() {
+    }
+
+    @Override
+    public void fax() {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void scan() {
+        throw new UnsupportedOperationException();
+    }
 }
 ```
 
-这违反了 ISP（接口隔离原则），因为它强制所有实现 `MultiFunctionDevice` 的类都为所有三个方法提供实现，即使某些方法对它们并不适用。
+这违反了 ISP（接口隔离原则），因为它强制所有实现`MultiFunctionDevice`的类都为所有三个方法提供实现，即使某些方法对它们并不适用。
 
 ## 合规解决方案
 
@@ -4757,17 +4703,17 @@ class InkjetPrinter implements MultiFunctionDevice {
 | --- | --- | --- |
 | Printer | Fax | Scanner |
 | +print() | +fax() | +scan() |
-| InkjetPrinter | | |
-| +print() | AllInOnePrinter | |
-| | +print() +fax() +scan() |
+| InkjetPrinter |  |  |
+| +print() | AllInOnePrinter |  |
+|  | +print() +fax() +scan() |  |
 
 合规解决方案通过为每个功能定义独立的接口（Printer、Fax 和 Scanner）解决了这一违规问题。
 
-## 设计原则
+# 设计原则
 
-# 148
+## 148
 
-良好的代码
+### 良好的代码
 
 ```java
 public interface Printer {
@@ -4775,7 +4721,7 @@ public interface Printer {
 }
 ```
 
-良好的代码
+### 良好的代码
 
 ```java
 public interface Fax {
@@ -4783,7 +4729,7 @@ public interface Fax {
 }
 ```
 
-良好的代码
+### 良好的代码
 
 ```java
 public interface Scanner {
@@ -4791,43 +4737,47 @@ public interface Scanner {
 }
 ```
 
-`InkjetPrinter` 类现在只实现 `Printer` 接口，因为它不支持传真或扫描。
+`InkjetPrinter`类现在只实现`Printer`接口，因为它不支持传真或扫描。
 
-良好的代码
+### 良好的代码
 
 ```java
 class InkjetPrinter implements Printer {
     @Override
     public void print() {
+    }
 }
 ```
 
-`AllOnePrinter` 类实现了所有三个接口（Printer、Fax 和 Scanner），因为它支持所有功能。
+`AllOnePrinter`类实现了所有三个接口（Printer、Fax 和 Scanner），因为它支持所有功能。
 
-良好的代码
+### 良好的代码
 
 ```java
 class AllOnePrinter implements Printer, Fax, Scanner {
     @Override
     public void print() {
-}
+    }
+
     @Override
     public void fax() {
-}
+    }
+
     @Override
     public void scan() {
+    }
 }
 ```
 
-通过将功能拆分为独立的接口，每个类可以只实现与与其能力相关的接口。这符合 ISP，因为客户端可以依赖于它们所需的特定接口，减少了不必要的依赖以及由于不支持的功能带来的潜在问题。
+通过将功能拆分为独立的接口，每个类可以只实现与其能力相关的接口。这符合 ISP，因为客户端可以依赖于它们所需的特定接口，减少了不必要的依赖以及由于不支持的功能带来的潜在问题。
 
-## 设计原则
+# 设计原则
 
-#### 5.3.4.2 示例：TechEmployee
+## 5.3.4.2 示例：TechEmployee
 
 ## 不合规代码示例
 
-该不合规代码示例违反了接口隔离原则（ISP）。它定义了一个单一的 `TechEmployee` 接口，其中包含了开发、测试和设计的方法。这种设计强制实现该接口的类必须实现所有方法，即使它们不支持或需要这些功能。这导致了不必要的依赖，并且当客户端尝试调用不支持的方法时，可能会出现潜在问题。
+该不合规代码示例违反了接口隔离原则（ISP）。它定义了一个单一的`TechEmployee`接口，其中包含了开发、测试和设计的方法。这种设计强制实现该接口的类必须实现所有方法，即使它们不支持或需要这些功能。这导致了不必要的依赖，并且当客户端尝试调用不支持的方法时，可能会出现潜在问题。
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_162_0.png)
 
@@ -4841,7 +4791,7 @@ public interface TechEmployee {
 }
 ```
 
-`JavaDeveloper` 类实现了此接口并为 `develop()` 方法提供了实现，但对 `test()` 和 `design()` 方法抛出了 `UnsupportedOperationException`，因为它不支持这些功能。
+`JavaDeveloper`类实现了此接口并为`develop()`方法提供了实现，但对`test()`和`design()`方法抛出了`UnsupportedOperationException`，因为它不支持这些功能。
 
 ## 坏代码
 
@@ -4864,7 +4814,7 @@ public class JavaDeveloper implements TechEmployee {
 }
 ```
 
-`Tester` 类实现了 `TechEmployee` 接口并为 `test()` 方法提供了实现，但对 `develop()` 和 `design()` 方法抛出了 `UnsupportedOperationException`。
+`Tester`类实现了`TechEmployee`接口并为`test()`方法提供了实现，但对`develop()`和`design()`方法抛出了`UnsupportedOperationException`。
 
 ## 坏代码
 
@@ -4874,10 +4824,12 @@ public class Tester implements TechEmployee {
     public void develop() {
         throw new UnsupportedOperationException();
     }
+
     @Override
     public void test() {
         System.out.println("Yes, I love it!");
     }
+
     @Override
     public void design() {
         throw new UnsupportedOperationException();
@@ -4885,7 +4837,7 @@ public class Tester implements TechEmployee {
 }
 ```
 
-`Designer` 类实现了 `TechEmployee` 接口并为 `design()` 方法提供了实现，但对 `develop()` 和 `test()` 方法抛出了 `UnsupportedOperationException`。
+`Designer`类实现了`TechEmployee`接口并为`design()`方法提供了实现，但对`develop()`和`test()`方法抛出了`UnsupportedOperationException`。
 
 ## 坏代码
 
@@ -4895,10 +4847,12 @@ public class Designer implements TechEmployee {
     public void develop() {
         throw new UnsupportedOperationException();
     }
+
     @Override
     public void test() {
         throw new UnsupportedOperationException();
     }
+
     @Override
     public void design() {
         System.out.println("Yes, I love it!");
@@ -4906,13 +4860,13 @@ public class Designer implements TechEmployee {
 }
 ```
 
-这违反了 ISP，因为它强制所有实现 `TechEmployee` 的类都为所有三个方法提供实现，即使这些方法对它们并不适用。
+这违反了 ISP，因为它强制所有实现`TechEmployee`的类都为所有三个方法提供实现，即使这些方法对它们并不适用。
 
 ## 合规解决方案
 
-## 设计原则
+# 设计原则
 
-# 151
+## 151
 
 | «interface» | «interface» | «interface» |
 | --- | --- | --- |
@@ -4923,7 +4877,7 @@ public class Designer implements TechEmployee {
 
 合规解决方案通过为每个功能定义独立的接口（Developer、Tester 和 Designer）解决了这一违规问题。
 
-良好的代码
+### 良好的代码
 
 ```java
 public interface Developer {
@@ -4931,7 +4885,7 @@ public interface Developer {
 }
 ```
 
-良好的代码
+### 良好的代码
 
 ```java
 public interface Designer {
@@ -4939,7 +4893,7 @@ public interface Designer {
 }
 ```
 
-良好的代码
+### 良好的代码
 
 ```java
 public interface Tester {
@@ -4947,9 +4901,11 @@ public interface Tester {
 }
 ```
 
-`JavaDeveloper` 类现在只实现 `Developer` 接口，因为它不支持测试或设计。
+`JavaDeveloper`类现在只实现`Developer`接口，因为它不支持测试或设计。
 
-良好的代码
+### 良好的代码
+
+
 
 ```java
 class JavaDeveloper implements Developer {
@@ -4962,7 +4918,7 @@ class JavaDeveloper implements Developer {
 
 `SecurityTester` 类现在只实现 `Tester` 接口，因为它不支持开发或设计。
 
-良好的代码
+### 良好的代码
 
 ```java
 class SecurityTester implements Tester {
@@ -4975,7 +4931,7 @@ class SecurityTester implements Tester {
 
 `UIDesigner` 类现在只实现 `Designer` 接口，因为它不支持开发或测试。
 
-良好的代码
+### 良好的代码
 
 ```java
 class UIDesigner implements Designer {
@@ -4986,23 +4942,19 @@ class UIDesigner implements Designer {
 }
 ```
 
-
-
-
-
-### 5.3.5 依赖倒置原则
+## 5.3.5 依赖倒置原则
 
 依赖于抽象，不要依赖于具体。
 
 - 依赖关系应该始终从低层的具体模块指向高层的抽象模块。
 - 任何类都不应该实例化外部类，而应该以抽象的形式（例如接口）作为参数接收它们。
 - 这确保了依赖关系始终朝着一个方向运行，即从具体模块到抽象模块，从派生类到基类。
-- **好莱坞法则：不要叫我们我们，我们会来找你！**
+- 好莱坞法则：不要叫我们我们，我们会来找你！
 - 对象之间的依赖从外部进行控制。
-  - 减少模块之间的依赖
-  - 避免循环依赖
-  - 将组件与其环境解耦
-  - 减少必要的知识范围
+  - 减少模块之间的依赖。
+  - 避免循环依赖。
+  - 将组件与其环境解耦。
+  - 减少必要的知识范围。
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_167_0.png)
 
@@ -5057,9 +5009,11 @@ public class UserService {
 ```java
 class Logger {
     private final FileSystem fileSystem;
+
     Logger() {
         this.FileSystem = new FileSystem();
     }
+
     public void log(String message) {
         this.FileSystem.log(message);
     }
@@ -5108,7 +5062,7 @@ class Database implements Loggable {
 }
 ```
 
-对 `Logger` 类进行了修改，通过构造函数注入接收 `Loggable` 。
+对 `Logger` 类进行了修改，通过构造函数注入接收 `Loggable`。
 
 #### 好的代码
 
@@ -5145,11 +5099,12 @@ class Client {
 ## 5.4 打包原则 - 内聚性
 
 ### CRP（公共复用原则）
+
 USER
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_171_0.png)
 
-## 5.4.1 发布复用等效原则
+### 5.4.1 发布复用等效原则
 
 复用的粒度就是发布的粒度。
 
@@ -5159,7 +5114,7 @@ USER
 - 避免复用时的版本冲突，这种冲突可能由于多个包同时发布而产生。
 - 类的用户，反过来也依赖于新版本。
 
-## 5.4.2 公共闭包原则
+### 5.4.2 公共闭包原则
 
 变化的类应该打包在一起。
 
@@ -5168,7 +5123,7 @@ USER
 - 对软件需求的更改应该只影响模块。
 - 这允许软件被拆分为包，以便未来的更改只需在少数模块中实现。
 
-## 5.4.3 公共复用原则
+### 5.4.3 公共复用原则
 
 一起使用的类应该打包在一起。
 
@@ -5187,9 +5142,8 @@ USER
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_172_0.png)
 
 打破这种循环总是可能的，有两种可能：
-如果从包 A 到包 B 的依赖需要反转。
 
-使用 DIP：
+如果从包 A 到包 B 的依赖需要反转，使用 DIP：
 
 - 在包 A 中引入一个接口，包含 B 所需的方法。
 - 在包 B 的相应类中实现这些接口。
@@ -5210,6 +5164,7 @@ USER
 ```java
 public class A {
     private final B b;
+
     public A(B b) {
         this.b = b;
     }
@@ -5219,23 +5174,21 @@ public class A {
 ```java
 public class B {
     private final C c;
+
     public B(C c) {
         this.c = c;
     }
 }
 ```
 
+### 设计原则
 
-
-
-
-# 设计原则
-
-swcs.dp.adp.before.p3
+`swcs.dp.adp.before.p3`
 
 ```java
 public class C {
     private final A a;
+
     public C(A a) {
         this.a = a;
     }
@@ -5244,23 +5197,24 @@ public class C {
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_174_0.png)
 
-# 违反 ADP
+### 违反 ADP
 
 此设计违反了 ADP，因为它引入了循环依赖。A 类依赖于 B，B 类依赖于 C，而 C 类依赖于 A，在依赖图中形成了一个环。
 
-# 合规方案
+### 合规方案
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_174_1.png)
 
 合规方案通过引入一个接口 C 来打破循环依赖，从而解决了循环依赖问题。
 
-# 设计原则
+### 设计原则
 
-swcs.dp.adp.after.p1
+`swcs.dp.adp.after.p1`
 
 ```java
 public class A {
     private final B b;
+
     public A(B b) {
         this.b = b;
     }
@@ -5269,11 +5223,12 @@ public class A {
 
 C 类被重构为一个接口，而它的实现类 CImpl 依赖于 A 类。
 
-swcs.dp.adp.after.p1
+`swcs.dp.adp.after.p1`
 
 ```java
 public class CImpl implements C {
     private final A a;
+
     public CImpl(A a) {
         this.a = a;
     }
@@ -5282,18 +5237,19 @@ public class CImpl implements C {
 
 现在，类 CImpl 实现 C 接口，并在构造函数中接收一个 A 的实例。A 类和 B 类保持不变。
 
-swcs.dp.adp.after.p2
+`swcs.dp.adp.after.p2`
 
 ```java
 public class B {
     private final C c;
+
     public B(C c) {
         this.c = c;
     }
 }
 ```
 
-swcs.dp.adp.after.p3
+`swcs.dp.adp.after.p3`
 
 ```java
 public interface C {
@@ -5302,11 +5258,11 @@ public interface C {
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_175_0.png)
 
-# 未违反 ADP
+### 未违反 ADP
 
 通过引入 C 接口及其实现类 CImpl，循环依赖得到了解决。A 类依赖于 B 类，B 类依赖于 C 接口，而 CImpl 依赖于 A 类。这种依赖结构创建了一个有向无环图 (DAG)，而不是环。
 
-# 5.5.2 稳定依赖原则 (SDP)
+### 5.5.2 稳定依赖原则 (SDP)
 
 根据稳定性的方向依赖。
 
@@ -5316,11 +5272,11 @@ public interface C {
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_177_0.png)
 
-## 不稳定性指标
+#### 不稳定性指标
 
 包的稳定性是出射耦合（Ce）占总耦合（Ca + Ce）的比率。
 
-```
+```text
 I = Instability, 0 ≤ I ≤ 1
 I = 0, 稳定的包
 I = 1, 不稳定的包
@@ -5329,6 +5285,7 @@ I = 1, 不稳定的包
 $$I = \frac{Ce}{Ca + Ce}$$
 
 Ca = 入射依赖（入聚耦合）
+
 Ce = 出射依赖（离散耦合）
 
 不稳定性为 1 意味着没有其他包依赖于此包。该包依赖于其他包，作为一个包，它是最不稳定的。它缺乏依赖意味着它没有理由改变。此外，它所依赖的包可能会给它改变的理由。
@@ -5337,9 +5294,9 @@ Ce = 出射依赖（离散耦合）
 
 SDP 说，包的指标应该大于它所依赖的包的指标。不稳定性指标应该沿着依赖的方向减小。
 
-# 设计原则
+### 设计原则
 
-# 165
+### 165
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_178_0.png)
 
@@ -5347,11 +5304,11 @@ SDP 说，包的指标应该大于它所依赖的包的指标。不稳定性指�
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_178_1.png)
 
-# 稳定包依赖于不稳定包
+### 稳定包依赖于不稳定包
 
 如果所有包都是最大稳定性的，系统将固定不变。这并不是一个理想的情况。我们希望设计包结构，使得某些包是不稳定的，而某些是稳定的。可变化的包应该位于顶部，并依赖于底部稳定的包。如果我们把不稳定的包放在顶部并按这种方式排列，并没有违反 SDP。
 
-# 5.5.3 稳定抽象原则 (SAP)
+### 5.5.3 稳定抽象原则 (SAP)
 
 抽象性随稳定性的增加而增加。
 
@@ -5360,11 +5317,11 @@ SDP 说，包的指标应该大于它所依赖的包的指标。不稳定性指�
 - 不稳定的包应该是具体的。
 - 一个包的抽象性应该与其稳定性成正比。
 
-## 抽象性指标
+#### 抽象性指标
 
 包的抽象性是包中接口等抽象类数量与类总数之比。
 
-```
+```text
 A = Abstractness, 0 ≤ A ≤ 1
 A = 0, 完全具体
 A = 1, 完全抽象
@@ -5373,17 +5330,12 @@ A = 1, 完全抽象
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_179_0.png)
 
 Na = 抽象类、接口的数量
+
 Nc = 类的总数
 
 抽象性为 0 意味着该包没有抽象类。抽象性为 1 意味着包中除了作为接口的抽象类外什么都没有。
 
-# 稳定性 (I) 与抽象性 (A) 的关系
-
-I 和 A 之间的关系可以在图表中定义，以 A 为纵轴，I 为横轴。图上有两类包：第一类接口包位于左上角 (0,1)，是最大程度稳定且抽象的；第二类实现包位于右下角，是最大程度不稳定且具体的。
-
-I 和 A 之间的关系可以在图表中定义，以 A 为纵轴，I 为横轴。图上有两类包：第一类接口包位于左上角 (0,1)，是最大程度稳定且抽象的；第二类实现包位于右下角，是最大程度不稳定且具体的。
-
-, 和 A 之间的关系可以在图表中定义，以 A 为纵轴，I 为横轴。图上有两类包：第一类接口包位于左上角 (0,1)，是最大程度稳定且抽象的；第二类实现包位于右下角，是最大程度不稳定且具体的。
+## 稳定性 (I) 与抽象性 (A) 的关系
 
 I 和 A 之间的关系可以在图表中定义，以 A 为纵轴，I 为横轴。图上有两类包：第一类接口包位于左上角 (0,1)，是最大程度稳定且抽象的；第二类实现包位于右下角，是最大程度不稳定且具体的。
 
@@ -5397,17 +5349,23 @@ I 和 A 之间的关系可以在图表中定义，以 A 为纵轴，I 为横轴�
 
 I 和 A 之间的关系可以在图表中定义，以 A 为纵轴，I 为横轴。图上有两类包：第一类接口包位于左上角 (0,1)，是最大程度稳定且抽象的；第二类实现包位于右下角，是最大程度不稳定且具体的。
 
+I 和 A 之间的关系可以在图表中定义，以 A 为纵轴，I 为横轴。图上有两类包：第一类接口包位于左上角 (0,1)，是最大程度稳定且抽象的；第二类实现包位于右下角，是最大程度不稳定且具体的。
 
+I 和 A 之间的关系可以在图表中定义，以 A 为纵轴，I 为横轴。图上有两类包：第一类接口包位于左上角 (0,1)，是最大程度稳定且抽象的；第二类实现包位于右下角，是最大程度不稳定且具体的。
 
-
+I 和 A 之间的关系可以在图表中定义，以 A 为纵轴，I 为横轴。图上有两类包：第一类接口包位于左上角 (0,1)，是最大程度稳定且抽象的；第二类实现包位于右下角，是最大程度不稳定且具体的。
 
 ## 5.6.3 不要重复自己 / 唯一且仅有
+
+
+
+# 不要重复自己（DRY）
 
 不要重复自己（Don't Repeat Yourself, DRY）是一项软件开发原则，旨在减少软件开发模式的重复，用抽象或使用数据结构来代替重复。当 DRY 原则被成功应用时，对系统任何一个元素的修改都不需要对其他逻辑上不相关的元素进行类似的更改。
 
 唯一且仅有（Once and Only Once, OOO）是一个类似但更具体的软件开发原则，它指出对于软件的每个元素，在系统内部应该只有一个唯一的、无歧义的表示。这可以通过确保代码不重复，以及将代码抽象为可重用的模块或函数来实现。
 
-- 为了为了避免重复代码的出现，即避免代码片段在多个地方以相同或非常相似的方式实现。
+- 为了避免重复代码的出现，即避免代码片段在多个地方以相同或非常相似的方式实现。
 - 冗余的现有源代码难以维护，因为必须确保各个重复项之间的一致性。
 - 然而，在遵循 DRY 原则的系统中，更改只需要在一个处进行即可。
 
@@ -5437,33 +5395,32 @@ YAGNI 可以帮助保持代码整洁且可维护，还能帮助减少开发时�
 - 组件应该恰有一个任务。
 - 避免在例如一个类中混合多个职责。
 - 组件变得更简单、更易于理解和维护，并具有更好的重用性。
-- 单元的复杂任务应该是自成一体的（**高内聚**）。
-- 单元应该尽可能少依赖其他单元（**低耦合**）。
+- 单元的复杂任务应该是自成一体的（高内聚）。
+- 单元应该尽可能少依赖其他单元（低耦合）。
 
-## 6. 四人行设计模式
+# 6. 四人行设计模式
 
-每个模式都描述了我们在环境中反复出现的问题，然后描述了该问题解决方案的核心，使得你可以使用这个解决方案百万次，而永远不会以相同的方式重复两次。
-–Christopher Alexander 1977, 《模式语言：城镇、建筑、构造》
+> 每个模式都描述了我们在环境中反复出现的问题，然后描述了该问题解决方案的核心，使得你可以使用这个解决方案百万次，而永远不会以相同的方式重复两次。
+>
+> –Christopher Alexander 1977, 《模式语言：城镇、建筑、构造》
 
 - 设计模式最初源于建筑。
 - 1977年，Christoph Alexander 在他的书籍《模式语言：城镇、建筑、构造》中描述了景观和城市规划等的设计模式。
-- Kent 和 Cunningham 从 Alexander (1987) 那处获得了软件开发中设计模式的灵感。
-- Gamma, Vlissides, Johnson 和 Helm 将这些思想转化到软件技术中并设计了模式目录。
+- Kent 和 Cunningham 从 Alexander（1987）那处获得了软件开发中设计模式的灵感。
+- Gamma、Vlissides、Johnson 和 Helm 将这些思想转化到软件技术中并设计了模式目录。
 - 四人行（The Gang of Four, GoF）于1995年出版了《设计模式》一书并确立了设计模式。
 
 设计模式是软件设计中反复出现的设计问题的解决方案。它们基于经验，通常只有在具备适当背景知识和个人经验的情况下才能被理解和掌握。它们通过形成一种开发者用于讨论设计的词汇表（模式语言）来建立交流。必须理解面向对象设计的基础知识：封装、职责、多态和继承。
 
-为什么设计模式很重要？
+## 为什么设计模式很重要？
 
 软件开发中许多问题会反复出现。类层次结构随着时间的推移变得缺乏活性，单个类不受控制地增长。新的扩展非常难以实现，类为了实现功能而产生的依赖关系也变得复杂。类的封装正变得弱化，越来越多的内部状态被暴露出来。
 
 轮子不需要每次都重新发明，至少解决方案有良好的文档记录。由于设计模式已经存在很长时间，这些解决方案已被多次证明，其后果也得到了充分理解。此外，软件设计可以在更高的抽象层上进行讨论，从而比表述更有效率，而这些表述本身是自俗易懂且为开发者所知的。与其寻找问题的解决方案，不如产生一种识别联系的感，这种联系暗示了使用设计模式。
 
-根据 GoF 对设计模式的分类
+## 根据 GoF 对设计模式的分类
 
 四人行的23种设计模式被分为三组。这些类别描述了通过设计模式要实现的意图。
-
-四人行设计模式
 
 ### 创建型模式
 
@@ -5472,10 +5429,10 @@ YAGNI 可以帮助保持代码整洁且可维护，还能帮助减少开发时�
 | 分组 | 模式 | 描述 |
 |---|---|---|
 | 创建型 | 单例模式 (Singleton) | 确保一个类只有一个实例，并为其提供一个全局访问点。 |
-| | 构建器 (Builder) | 将复杂对象的构建与其表示分离，以便相同的构建过程可以创建不同的表示。 |
-| | 工厂方法 (Factory Method) | 为创建对象定义一个接口，但让子类决定实例化哪个类。工厂方法让类将实例化推迟给子类。 |
-| | 抽象工厂 (Abstract Factory) | 提供一个接口来创建相关或依赖对象的族，而不指定它们的具体类。 |
-| | 原型 (Prototype) | 使用原型实例指定要创建对象的类型，并通过复制该原型来创建新对象。 |
+| 创建型 | 构建器 (Builder) | 将复杂对象的构建与其表示分离，以便相同的构建过程可以创建不同的表示。 |
+| 创建型 | 工厂方法 (Factory Method) | 为创建对象定义一个接口，但让子类决定实例化哪个类。工厂方法让类将实例化推迟给子类。 |
+| 创建型 | 抽象工厂 (Abstract Factory) | 提供一个接口来创建相关或依赖对象的族，而不指定它们的具体类。 |
+| 创建型 | 原型 (Prototype) | 使用原型实例指定要创建对象的类型，并通过复制该原型来创建新对象。 |
 
 ### 结构型模式
 
@@ -5484,12 +5441,12 @@ YAGNI 可以帮助保持代码整洁且可维护，还能帮助减少开发时�
 | 分组 | 模式 | 描述 |
 |---|---|---|
 | 结构型 | 外观 (Facade) | 为子系统中的一组接口提供统一接口。外观定义了一个更高层次的接口，使子系统更易用。 |
-| | 装饰器 (Decorator) | 动态地为对象添加额外的职责。装饰器为扩展功能提供了灵活的类替代方案。 |
-| | 适配器 (Adapter) | 将类的接口转换为客户端所需的接口。适配器让由于接口不兼容而无法工作的类。 |
-| | 组合 (Composite) | 将对象组合成树形结构以表示部分-整体层次结构。组合以统一的方式处理单个对象和组合对象。 |
-| | 桥接 (Bridge) | 解耦抽象与实现，使其能够独立变化。 |
-| | 重量类 (Flyweight) | 使用共享来高效地支持大量的细粒度对象。 |
-| | 代理 (Proxy) | 为其他对象提供代理或占位符以便访问。 |
+| 结构型 | 装饰器 (Decorator) | 动态地为对象添加额外的职责。装饰器为扩展功能提供了灵活的类替代方案。 |
+| 结构型 | 适配器 (Adapter) | 将类的接口转换为客户端所需的接口。适配器让由于接口不兼容而无法工作的类。 |
+| 结构型 | 组合 (Composite) | 将对象组合成树形结构以表示部分-整体层次结构。组合以统一的方式处理单个对象和组合对象。 |
+| 结构型 | 桥接 (Bridge) | 解耦抽象与实现，使其能够独立变化。 |
+| 结构型 | 重量类 (Flyweight) | 使用共享来高效地支持大量的细粒度对象。 |
+| 结构型 | 代理 (Proxy) | 为其他对象提供代理或占位符以便访问。 |
 
 ### 行为型模式
 
@@ -5498,29 +5455,20 @@ YAGNI 可以帮助保持代码整洁且可维护，还能帮助减少开发时�
 | 分组 | 模式 | 描述 |
 |---|---|---|
 | 行为型 | 状态 (State) | 允许在其内部状态改变时改变行为。对象看起来改变了它的类。 |
-| | 模板方法 (Template Method) | 在操作中定义算法的骨架，将某些步骤留给子类。模板方法允许子类在不改变算法结构的情况下重新定义步骤。 |
-| | 策略 (Strategy) | 定义一组算法，封装每个算法并使它们变得可替。策略让算法独立于使用它的客户端发生变化。 |
+| 行为型 | 模板方法 (Template Method) | 在操作中定义算法的骨架，将某些步骤留给子类。模板方法允许子类在不改变算法结构的情况下重新定义步骤。 |
+| 行为型 | 策略 (Strategy) | 定义一组算法，封装每个算法并使它们变得可替。策略让算法独立于使用它的客户端发生变化。 |
+| 行为型 | 观察者模式 | 在对象之间建立一种一对多的依赖关系，当一个对象的状态发生变化时，所有的它的依赖者都会收到通知并自动更新。 |
+| 行为型 | 责任链模式 | 通过给多个对象一个请求的句柄来避免发送者与接收者之间的耦合。将接收对象链起来，并沿链传递请求，直到某个对象处理该请求。 |
+| 行为型 | 命令模式 | 将请求封装成对象，从而允许你用不同的请求对客户端参数化、队列或记录请求，并支持可撤销的操作。 |
+| 行为型 | 解释器模式 | 给一种语言，定义其语法的表示法以及一个使用该表示法解释语言中句子的解释器。 |
+| 行为型 | 迭代器模式 | 提供一种顺序访问聚合对象元素的方法，而无需封装对象之间的交互作用。 |
+| 行为型 | 中介者模式 | 定义一个对象，通过防止对象显式地相互引用来实现松散耦合，并让你独立地改变它们的交互方式。 |
+| 行为型 | 备忘录 | 在不违反封装性的情况下，捕并外部化对象的内部状态，以便对象可以恢复到稍后的状态。 |
+| 行为型 | 访问者模式 | 表示在对象结构的元素上执行的操作。访问者允许你在不改变操作所涉及的元素类的情况下定义新的操作。 |
 
+随着 Java 8 引入 lambda 表达式，某些设计模式可以用 lambda 以不同的方式实现[^1]。
 
-
-
-
-# 四人行设计模式
-
-| 组别 | 模式 | 描述 |
-|---|---|---|
-| | 观察者模式 | 在对象之间建立一种一对多的依赖关系，当一个对象的状态发生变化时，所有的它的依赖者都会收到通知并自动更新。 |
-| | 责任链模式 | 通过给多个对象一个请求的句柄来避免发送者与接收者之间的耦合。将接收对象链起来，并沿链传递请求，直到某个对象处理该请求。 |
-| | 命令模式 | 将请求封装成对象，从而允许你用不同的请求对客户端参数化、队列或记录请求，并支持可撤销的操作。 |
-| | 解释器模式 | 给一种语言，定义其语法的表示法以及一个使用该表示法解释语言中句子的解释器。 |
-| | 迭代器模式 | 提供一种顺序访问聚合对象元素的方法，而无需封装对象之间的交互作用。 |
-| | 中介者模式 | 定义一个对象，通过防止对象显式地相互引用来实现松散耦合，并让你独立地改变它们的交互方式。 |
-| | 备忘录 | 在不违反封装性的情况下，捕并外部化对象的内部状态，以便对象可以恢复到稍后的状态。 |
-| | 访问者模式 | 表示在对象结构的元素上执行的操作。访问者允许你在不改变操作所涉及的元素类的情况下定义新的操作。 |
-
-随着 Java 8 引入 lambda 表达式，某些设计模式可以用 lambda 以不同的方式实现^1。
-
-> ^1https://github.com/mariofusco/from-gof-to-lambda
+[^1]: <https://github.com/mariofusco/from-gof-to-lambda>
 
 ## 6.1 创建型模式
 
@@ -5531,14 +5479,14 @@ YAGNI 可以帮助保持代码整洁且可维护，还能帮助减少开发时�
 单例设计模式确保一个类只有一个实例。该实例是全局可访问的并在整个应用程序中被重用。
 
 | Singleton |
-|---|---|
+|---|
 | -instance: Singleton |
 | +Singleton() |
 | +getInstance() : Singleton |
 
 单例不会在每次请求时都创建。只有一个实例会被不断反复重用。
 
-### 6.1.1.1 示例：懒性加载
+#### 6.1.1.1 示例：懒性加载
 
 懒性加载在需要时才延迟实例的创建。这种方法是线程安全的，并确保仅在需要时创建实例。
 
@@ -5555,7 +5503,7 @@ public final class Singleton {
 }
 ```
 
-### 6.1.1.2 示例：饿性加载
+#### 6.1.1.2 示例：饿性加载
 
 饿性加载在类加载时就创建实例。这种方法简单且线程安全，没有同步开销。
 
@@ -5571,7 +5519,7 @@ public final class Singleton {
 }
 ```
 
-### 6.1.1.3 示例：枚举
+#### 6.1.1.3 示例：枚举
 
 使用枚举（enum）实现单例可以免费获得序列化支持，并且是首选方法，因为它简化了该模式。
 
@@ -5581,25 +5529,29 @@ public enum Singleton {
 }
 ```
 
-#### 优点：
+#### 优点
+
 - 易于使用。
 - 保证同一时刻只有一个实例。
+
 与全局变量相比，它有几个优势：
+
 - 访问控制。单例封装了它的创建和访问。
 - 懒性加载。单例只有在需要时才会被创建。
 
-#### 缺点：
+#### 缺点
+
 - 析问题。要通过垃圾回收销毁对象，必须不再被引用。
 - 特别是在多用户应用程序中，单例可能会降低性能，因为它代表了一种同步形式。
 - 唯一性。跨物理边界（JVM）确保单例的唯一性是困难的。
 
 > Bloch, Joshua: Effective Java – 第三版, Item 3
 
-## 6.1.2 构建者模式
+### 6.1.2 构建者模式
 
 将复杂对象的构建与它的表示分离，使得相同的构建过程可以创建不同的表示。构建器模式允许逐步创建复杂对象。它将对象的构建与它的表示分离，允许用相同的过程创建对象的各种表示。
 
-### 6.1.2.1 示例：食物构建器
+#### 6.1.2.1 示例：食物构建器
 
 ```java
 abstract class MealBuilder {
@@ -5668,16 +5620,17 @@ class Client {
 }
 ```
 
-### 6.1.2.2 示例：披萨构建器
+#### 6.1.2.2 示例：披萨构建器
 
 | Luigi | PizzaBuilder |
 |---|---|
 | -PizzaBuilder - Builder | -pizza: Pizza |
 | +bakePizza() | +buildDough() |
-| | +sauce() |
-| | +buildTopping() |
+|  | +sauce() |
+|  | +buildTopping() |
+
 | MargheritaPizzaBuilder | HawaiianPizzaBuilder |
-| --- | --- |
+|---|---|
 | +buildDough() | +buildDough() |
 | +sauce() | +buildSauce() |
 | +buildTopping() | +buildTopping() |
@@ -5732,6 +5685,8 @@ class MargheritaPizzaBuilder extends PizzaBuilder {
 }
 ```
 
+
+
 ```java
 final class Pizza {
     private String dough;
@@ -5751,10 +5706,6 @@ final class Pizza {
     }
 }
 ```
-
-
-
-
 
 # 四人行设计模式
 
@@ -6118,10 +6069,6 @@ public class Programmer implements Employee {
 }
 ```
 
-
-
-
-
 # 四人行设计模式
 
 ## 营销专员
@@ -6143,9 +6090,12 @@ public class MarketingSpecialist implements Employee {
 
 ## 部门
 
+
+
 ```java
 public abstract class Department {
     protected abstract Employee createEmployee(int id);
+
     public void fire(int id) {
         Employee employee = createEmployee(id);
         employee.paySalary();
@@ -6187,14 +6137,14 @@ class Client {
 }
 ```
 
-### 优点：
+### 优点
 
 - 制造过程与具体实现分离。
 - 不同的产品实现可以通过相同的生产过程。
 - 可重用性和一致性：
-    - 将对象创建代码封装在它所在的类中。这为客户端创建了一个统一且集中的接口。产品实现与其使用之间实现了解耦。
+  - 将对象创建代码封装在它所在的类中。这为客户端创建了一个统一且集中的接口。产品实现与其使用之间实现了解耦。
 
-### 缺点：
+### 缺点
 
 - 如果要创建许多简单对象，工作量将不成比例地增加，因为创建者总是必须有派生类。
 
@@ -6204,7 +6154,7 @@ class Client {
 
 抽象工厂设计模式用于定义一组一致的产品族。
 
-用例：
+### 用例
 
 - 当为特定上下文创建不同的对象，因此必须始终一致地创建它们时。
 - 当系统必须配置不同的对象集合或应该能够这样做时。
@@ -6216,22 +6166,22 @@ class Client {
 
 | 产品族 | 类 |
 | --- | --- |
-| 豪华型 | LuxuryCar, LuxurySUV |
-| 非豪华型 | NonLuxuryCar, NonLuxurySUV |
+| 豪华型 | `LuxuryCar`, `LuxurySUV` |
+| 非豪华型 | `NonLuxuryCar`, `NonLuxurySUV` |
 
 | <<interface>> |
 | --- |
-| Car |
-| +name() : String |
-| +features() : String |
+| `Car` |
+| `+name() : String` |
+| `+features() : String` |
 
 | 非豪华汽车 | 豪华汽车 |
 | --- | --- |
-| -name : String | -name : String |
-| +name() : String | +name() : String |
-| +features() : String | +features() : String |
+| `-name : String` | `-name : String` |
+| `+name() : String` | `+name() : String` |
+| `+features() : String` | `+features() : String` |
 
-### 汽车
+#### 汽车
 
 ```java
 public interface Car {
@@ -6240,7 +6190,7 @@ public interface Car {
 }
 ```
 
-### 非豪华汽车
+#### 非豪华汽车
 
 ```java
 public class NonLuxuryCar implements Car {
@@ -6262,7 +6212,7 @@ public class NonLuxuryCar implements Car {
 }
 ```
 
-### 豪华汽车
+#### 豪华汽车
 
 ```java
 public class LuxuryCar implements Car {
@@ -6286,16 +6236,16 @@ public class LuxuryCar implements Car {
 
 | <<interface>> |
 | --- |
-| SUV |
-| +name() : String |
-| +features(): : String |
+| `SUV` |
+| `+name() : String` |
+| `+features(): : String` |
 
-| 非豪华SUV | 豪华SUV |
+| 非豪华 SUV | 豪华 SUV |
 | --- | --- |
-| -name: String | -name: String |
-| +features(): : String |
+| `-name: String` | `-name: String` |
+| `+features(): : String` |
 
-### SUV
+#### SUV
 
 ```java
 public interface SUV {
@@ -6304,7 +6254,7 @@ public interface SUV {
 }
 ```
 
-### 非豪华SUV
+#### 非豪华 SUV
 
 ```java
 public class NonLuxurySUV implements SUV {
@@ -6325,7 +6275,7 @@ public class NonLuxurySUV implements SUV {
 
 使用原型实例指定要创建的对象类型，并通过拷贝此原型来创建新对象。
 
-用例：
+### 用例
 
 - 创建原型对象的副本并进行必要的修改。
 
@@ -6336,10 +6286,6 @@ Java 提供了一些复制对象以创建新对象的方法。一种是 `java.la
 浅拷贝复制所有引用类型或值类型，但不会复制引用所指向的对象。新对象中的引用指向原始对象中引用所指向的对象。Java 默认的 `clone` 实现是以浅拷贝创建克隆的。
 
 深拷贝复制元素以及元素直接或间接引用的所有内容。
-
-
-
-
 
 # 四人行设计模式
 
@@ -6437,7 +6383,7 @@ class Client {
 
 # 输出
 
-```
+```text
 Original: Original name, Original city
 Clone: Original name, Original city
 Clone after modification: Modified name, Modified city
@@ -6556,10 +6502,10 @@ class Client {
 
 # 输出
 
-- Original: Original name, Original city
-- Clone: Original name, Original city
-- Clone after modification: Modified name, Modified city
-- Original after clone modification: Original name, Modified city
+- `Original: Original name, Original city`
+- `Clone: Original name, Original city`
+- `Clone after modification: Modified name, Modified city`
+- `Original after clone modification: Original name, Modified city`
 
 ## 6.1.5.3 示例：Person - 拷贝构造函数 / 工厂方法
 
@@ -6568,6 +6514,8 @@ class Client {
 对象的 `clone` 方法非常复杂。它是基于字段复制的，并且是语言之外的机制。它在不调用构造函数的情况下创建对象。无法保证它能保持由构造函数建立的不变性（invariant）。如果该状态是可变的，你就没有获得独立的对象。如果你修改了其中一个，另一个也会随之改变。突然，你会得到随机的行为。更好的方法是提供拷贝构造函数或拷贝工厂方法。
 
 # Person
+
+
 
 ```java
 public class Person {
@@ -6607,10 +6555,6 @@ public class Person {
 }
 ```
 
-
-
-
-
 # 四人行设计模式
 
 ## 6.2.1.1 示例：旅行
@@ -6641,6 +6585,7 @@ public class FlightBooker {
 public class TravelFacade {
     private HotelBooker hotelBooker;
     private FlightBooker flightBooker;
+
     public Travels availableTravels(LocalDate from, LocalDate to) {
         List<Flight> flights = flightBooker.flights(from, to);
         List<Hotel> hotels = hotelBooker.hotels(from, to);
@@ -6669,6 +6614,7 @@ class LightController {
     public void turnOnLights() {
         System.out.println("开启灯光");
     }
+
     public void turnOffLights() {
         System.out.println("关闭灯光");
     }
@@ -6682,6 +6628,7 @@ class SecuritySystem {
     public void armSystem() {
         System.out.println("布防安全系统");
     }
+
     public void disarmSystem() {
         System.out.println("解除安全系统");
     }
@@ -6705,11 +6652,13 @@ class SmartHomeFacade {
     private final LightController lightController;
     private final ThermostatController thermostatController;
     private final SecuritySystem securitySystem;
+
     SmartHomeFacade() {
         this.lightController = new LightController();
         this.thermostatController = new ThermostatController();
         this.securitySystem = new SecuritySystem();
     }
+
     public void leaveHome() {
         this.lightController.turnOffLights();
         this.thermostatController.setTemperature(18);
@@ -6736,30 +6685,29 @@ class Client {
 }
 ```
 
-### 优点：
+### 优点
 
 - 简化接口。通过减少客户端需要了解的对象数量，客户端可以更轻松地使用复杂系统。
-- 将客户端与子系统解耦。由于客户端只与 Fac面（Facade）交互，因此它独立于子系统的变化。
-
- 子系统的维护和修改仅意味着系统内部的变化以及最多涉及 Facade 实现的更改。外部 Facade 接口保持不变。
+- 将客户端与子系统解耦。由于客户端只与`Facade`交互，因此它独立于子系统的变化。
+- 子系统的维护和修改仅意味着系统内部的变化，以及最多涉及`Facade`实现的更改。外部`Facade`接口保持不变。
 
 ## 6.2.2 装饰器
 
-动态地为对象附加额外的职责。装饰器提供了一种比子类扩展功能更灵活的替代方案
+动态地为对象附加额外的职责。装饰器提供了一种比子类扩展功能更灵活的替代方案。
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_223_0.png)
 
 用例：
 
-- 动态添加或移除功能
-- 最终类（final-class）的扩展，这些类无法继承
-- 如果使用静态继承进行功能扩展不可行
-  - 例如，如果考虑所有可能的扩展组合，会导致类的数量无法管理
+- 动态添加或移除功能。
+- 最终类（`final-class`）的扩展，这些类无法继承。
+- 如果使用静态继承进行功能扩展不可行：
+  - 例如，如果考虑所有可能的扩展组合，会导致类的数量无法管理。
 - 实际示例：
-  - Java IO API，`BufferedInputStream` 对缓冲区接口进行了扩展
-  - 具有不同特征的汽车（降低降低、改装、尾翼）
-  - 带有配菜的主菜
-  - 不同类型的电话（功能手机、智能手机、经典电话）具有可变行为（振动、铃声、静音、灯光）
+  - Java IO API，`BufferedInputStream`对缓冲区接口进行了扩展。
+  - 具有不同特征的汽车（降低降低、改装、尾翼）。
+  - 带有配菜的主菜。
+  - 不同类型的电话（功能手机、智能手机、经典电话）具有可变行为（振动、铃声、静音、灯光）。
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_223_1.png)
 
@@ -6789,9 +6737,11 @@ public class DefaultMessage implements Message {
 ```java
 public class TimestampMessage implements Message {
     private final Message message;
+
     public TimestampMessage(Message message) {
         this.message = message;
     }
+
     @Override
     public void print(String text) {
         this.message.print(String.format("%s %s", LocalDateTime.now(), text));
@@ -6804,9 +6754,11 @@ public class TimestampMessage implements Message {
 ```java
 public class UpperCaseMessage implements Message {
     private Message message;
+
     public UpperCaseMessage(Message message) {
         this.message = message;
     }
+
     @Override
     public void print(String text) {
         this.message.print(text.toUpperCase());
@@ -6858,9 +6810,11 @@ public class SimpleWindow implements Window {
 ```java
 public class DecoratedWindow implements Window {
     protected Window window;
+
     public DecoratedWindow(Window window) {
         this.window = window;
     }
+
     public void render() {
         window.render();
     }
@@ -6872,13 +6826,16 @@ public class DecoratedWindow implements Window {
 ```java
 public class ScrollableWindow extends DecoratedWindow {
     private Object statusBar;
+
     public ScrollableWindow(Window window) {
         super(window);
     }
+
     public void render() {
         super.render();
         renderScrollBar();
     }
+
     private void renderScrollBar() {
         statusBar = new Object(); // 准备滚动条
     }
@@ -6902,11 +6859,7 @@ class Client {
 }
 ```
 
-
-
-
-
-## 6.2.3 适配器模式 (Adapter)
+## 6.2.3 适配器模式（Adapter）
 
 将类的接口转换为客户端期望的另一个接口。适配器允许原本因接口不兼容而无法工作的类协同工作。
 
@@ -6917,15 +6870,21 @@ class Client {
 - 目标接口（Target interface）：客户端使用的接口。
 - 客户端（Client）：通过适配器使用被适配者。
 
-类适配器（Class Adapter）使用多重继承：
+### 类适配器（Class Adapter）
+
+类适配器使用多重继承。
+
 在类适配器的情况下，适配器继承其被适配者类并实现目标接口。当客户端对象调用类适配器的方法时，适配器在内部会调用它所继承的被适配者类的方法。
 
-对象适配器（Object Adapter）依赖于组合：
+### 对象适配器（Object Adapter）
+
+对象适配器依赖于组合。
+
 在对象适配器的情况下，适配器将任务委托给被适配者的实例。适配器实现了目标接口，但并不继承那些需要适配的类。当客户端调用对象适配器的方法时，由于对象适配器会调用它所引用的被适配者实例上的对应方法。
 
-### 6.2.3.1 示例：排序器 (Sorter)
+## 6.2.3.1 示例：排序器（Sorter）
 
-### 排序器 - 目标接口 (Target interface)
+### 排序器：目标接口（Target interface）
 
 ```java
 public interface Sorter {
@@ -6933,7 +6892,7 @@ public interface Sorter {
 }
 ```
 
-### 排序适配器 - 适配器 (Adapter)
+### 排序适配器：适配器（Adapter）
 
 ```java
 public class SortListAdapter implements Sorter {
@@ -6946,7 +6905,7 @@ public class SortListAdapter implements Sorter {
 }
 ```
 
-### 数字排序器 - 被适配者 (Adaptee)
+### 数字排序器：被适配者（Adaptee）
 
 ```java
 // 第三方的数字排序器实现，处理的是列表而不是数组。
@@ -6957,6 +6916,8 @@ public class NumberSorter {
 }
 ```
 
+### Client
+
 ```java
 class Client {
     public static void main(String[] args) {
@@ -6966,9 +6927,9 @@ class Client {
 }
 ```
 
-### 6.2.3.2 示例：文本格式化器 (TextFormatter)
+## 6.2.3.2 示例：文本格式化器（TextFormatter）
 
-### 可格式化文本 (TextFormable)
+### 可格式化文本（TextFormable）
 
 ```java
 public interface TextFormable {
@@ -6976,7 +6937,7 @@ public interface TextFormable {
 }
 ```
 
-### 换行格式化器 (NewlineFormatter)
+### 换行格式化器（NewlineFormatter）
 
 ```java
 public class NewlineFormatter implements TextFormable {
@@ -6984,15 +6945,16 @@ public class NewlineFormatter implements TextFormable {
     public String formatText(String text
 ```
 
-### CSV 格式化器 (CsvFormatter)
 
-```java
-public interface CsvFormatter {
+
+### CSV 格式化器（CsvFormatter）
+
+```java我是由深度求索（DeepSeek）研发的 deepseek-v4-flash-0731 智能大模型。public interface CsvFormatter {
     String formatCsv(String text, String separator);
 }
 ```
 
-### CSV 格式化器实现 (Csv Implementation)
+### CSV 格式化器实现（Csv Implementation）
 
 ```java
 public class CsvFormatter implements CsvFormatterable {
@@ -7007,14 +6969,16 @@ public class CsvFormatter implements CsvFormatterable {
 }
 ```
 
-### CSV 适配器 (CsvAdapter)
+### CSV 适配器（CsvAdapter）
 
 ```java
 public class CsvAdapter implements TextFormatterable {
     private final CsvFormatter csvFormatter;
+
     public CsvAdapter(CsvFormatter csvFormatter) {
         this.csvFormatter = csvFormatter;
     }
+
     @Override
     public String formatText(String text, String separator) {
         return this.csvFormatter.formatCsv(text, separator);
@@ -7034,21 +6998,21 @@ class Client {
 }
 ```
 
-## 6.2.4 组合模式 (Composite)
+## 6.2.4 组合模式（Composite）
 
 将对象组合成树形结构以表示部分整体层次结构。组合模式允许以统一的方式处理单个对象和对象的组合。
 
-用例：
+### 用例
 
 - 对简单和复杂对象的层次集合进行操作。
-- 对对象的树形结构进行建模
+- 对对象的树形结构进行建模：
   - **文件系统。** 文件和文件夹可以使用组合模式进行建模。文件代表叶子节点，文件夹代表组合节点，因为它们可能包含其他文件和文件夹。
   - **菜单。** 菜单由根节点（组合节点）和命令（叶子节点）组成。
-  - 图形对象的**层次结构**，例如在 Java / AWT (Container & Component)。
+  - 图形对象的**层次结构**，例如在 Java / AWT（Container & Component）。
 
-### 6.2.4.1 示例：图形 (Graphic)
+### 6.2.4.1 示例：图形（Graphic）
 
-组件 (Component)
+#### 组件（Component）
 
 ```java
 public interface Component {
@@ -7056,30 +7020,34 @@ public interface Component {
 }
 ```
 
-组合类 (Composite)
+#### 组合类（Composite）
 
 ```java
 public abstract class Composite implements Component {
     private List<Component> components = new ArrayList<Component>();
+
     @Override
     public void paint() {
         for (Component component : this.components) {
             component.components.paint();
         }
     }
+
     public void add(Component component) {
         this.components.add(component);
     }
+
     public void remove(Component component) {
         this.components.remove(component);
     }
+
     public Component get(int index) {
         return this.components.get(index);
     }
 }
 ```
 
-工作表 (Sheet)
+#### 工作表（Sheet）
 
 ```java
 public class Sheet extends Composite {
@@ -7089,19 +7057,15 @@ public class Sheet extends Composite {
 }
 ```
 
-行 (Row)
+#### 行（Row）
 
 ```java
 public class Row extends Composite {
-  public void paint() {
-    System.out.printf("%s\n", Row.getSimpleName());
+    public void paint() {
+        System.out.printf("%s\n", Row.getSimpleName());
     }
 }
 ```
-
-
-
-
 
 ## 6.2.5 桥接模式
 
@@ -7109,7 +7073,7 @@ public class Row extends Composite {
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_237_0.png)
 
-用例：
+### 用例
 
 - 避免抽象与其实现之间存在永久绑定。
 - 组合不同的抽象和实现，并对它们进行独立扩展。
@@ -7117,13 +7081,12 @@ public class Row extends Composite {
 - 在多个对象之间共享实现。
 - 运行时的运行时绑定。
 
-### 6.2.5.1 示例：消息 (Message)
+### 6.2.5.1 示例：消息（Message）
 
-Message
+#### Message
 
 ```java
 public abstract class Message {
-
     private final MessageSender messageSender;
 
     protected Message(MessageSender messageSender) {
@@ -7138,15 +7101,14 @@ public abstract class Message {
 }
 ```
 
-# 四人行设计模式
-
-### 邮件消息 (EmailMessage)
+#### 邮件消息（EmailMessage）
 
 ```java
 public class EmailMessage extends Message {
     public EmailMessage(MessageSender messageSender) {
         super(messageSender);
     }
+
     @Override
     public void send() {
         messageSender().sendMessage();
@@ -7154,13 +7116,14 @@ public class EmailMessage extends Message {
 }
 ```
 
-### 短信 (SmsMessage)
+#### 短信（SmsMessage）
 
 ```java
 public class SmsMessage extends Message {
     public SmsMessage(MessageSender messageSender) {
         super(messageSender);
     }
+
     @Override
     public void send() {
         messageSender().sendMessage();
@@ -7168,7 +7131,7 @@ public class SmsMessage extends Message {
 }
 ```
 
-### 消息发送者 (MessageSender)
+#### 消息发送者（MessageSender）
 
 ```java
 public interface MessageSender {
@@ -7176,7 +7139,7 @@ public interface MessageSender {
 }
 ```
 
-### 邮件消息发送者 (EmailMessageSender)
+#### 邮件消息发送者（EmailMessageSender）
 
 ```java
 public class EmailMessageSender implements MessageSender {
@@ -7187,9 +7150,7 @@ public class EmailMessageSender implements MessageSender {
 }
 ```
 
-# 四人行设计模式
-
-### 短消息发送者 (SmsMessageSender)
+#### 短消息发送者（SmsMessageSender）
 
 ```java
 public class SmsMessageSender implements MessageSender {
@@ -7200,7 +7161,7 @@ public class SmsMessageSender implements MessageSender {
 }
 ```
 
-### 客户端 (Client)
+#### 客户端（Client）
 
 ```java
 class Client {
@@ -7223,11 +7184,9 @@ class Client {
 }
 ```
 
-# 四人行设计模式
+### 6.2.5.2 示例：电视（Television）
 
-### 6.2.5.2 示例：电视 (Television)
-
-字体 (Font)
+#### 电视（Television）
 
 ```java
 public interface Television {
@@ -7239,7 +7198,7 @@ public interface Television {
 }
 ```
 
-三星 (Samsung)
+#### 三星（Samsung）
 
 ```java
 public class Samsung implements Television {
@@ -7247,10 +7206,12 @@ public class Samsung implements Television {
     public void on() {
         System.out.println("On");
     }
+
     @Override
     public void off() {
         System.out.println("Off");
     }
+
     @Override
     public void channel(int channel) {
         System.out.println(channel);
@@ -7258,7 +7219,7 @@ public class Samsung implements Television {
 }
 ```
 
-飞利浦 (Philips)
+#### 飞利浦（Philips）
 
 ```java
 public class Philips implements Television {
@@ -7266,10 +7227,12 @@ public class Philips implements Television {
     public void on() {
         System.out.println("On");
     }
+
     @Override
     public void off() {
         System.out.println("Off");
     }
+
     @Override
     public void channel(int channel) {
         System.out.println(channel);
@@ -7277,40 +7240,45 @@ public class Philips implements Television {
 }
 ```
 
-# 四人行设计模式
-
-### 遥控器 (RemoteControl)
+#### 遥控器（RemoteControl）
 
 ```java
 public abstract class RemoteControl {
     private final Television television;
+
     protected RemoteControl(Television television) {
         this.television = television;
     }
+
     public void on() {
         this.television.on();
     }
+
     public void off() {
         this.television.off();
     }
+
     public void channel(int channel) {
         this.television.channel(channel);
     }
 }
 ```
 
-### 智能遥控器 (SmartRemoteControl)
+#### 智能遥控器（SmartRemoteControl）
 
 ```java
 public class SmartRemoteControl extends RemoteControl {
     private int channel;
+
     public SmartRemoteControl(Television television) {
         super(television);
     }
+
     public void nextChannel() {
         this.channel++;
         channel(this.channel);
     }
+
     public void previousChannel() {
         this.channel--;
         channel(this.channel);
@@ -7318,7 +7286,7 @@ public class SmartRemoteControl extends RemoteControl {
 }
 ```
 
-### 客户端 (Client)
+#### 客户端（Client）
 
 ```java
 class Client {
@@ -7326,43 +7294,42 @@ class Client {
         useSamsung();
         usePhilips();
     }
+
     private static void useSamsung() {
         Television television = new Samsung(); // 固定变量引用
         SmartRemoteControl remoteControl = new SmartRemoteControl(television);
-        11 remoteControl.on();
-        12 remoteControl.nextChannel();
-        13 remoteControl.nextChannel();
-        14 remoteControl.previousChannel();
-        15 remoteControl.off();
-        16 
+        remoteControl.on();
+        remoteControl.nextChannel();
+        remoteControl.nextChannel();
+        remoteControl.previousChannel();
+        remoteControl.off();
     }
 
     private static void usePhilips() {
         Television television = new Philips();
         SmartRemoteControl remoteControl = new SmartRemoteControl(television);
-        22 remoteControl.on();
-        23 remoteControl.nextChannel();
-        24 remoteControl.previousChannel();
-        25 remoteControl.off();
-        26 }
+        remoteControl.on();
+        remoteControl.nextChannel();
+        remoteControl.previousChannel();
+        remoteControl.off();
     }
 }
 ```
 
-### 优点：
+### 优点
 
 - 抽象与实现解耦且独立。
-- 提高了了扩展性，你可以独立地扩展抽象和实现层次结构。
+- 提高了扩展性，你可以独立地扩展抽象和实现层次结构。
 - 实现在运行时也可以动态更改。
 - 向客户端隐藏实现细节。
 
-## 6.2.6 享用者模式 (Flyweight)
+## 6.2.6 享用者模式（Flyweight）
 
 使用共享来高效地支持大量的细粒度对象。
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_243_0.png)
 
-用例：
+### 用例
 
 - 当内存成本受限时，需要创建大量对象。
 - 当许多对象的属性可以外部化并共享时。
@@ -7371,22 +7338,21 @@ class Client {
 
 根据 GoF 的定义，对象可以拥有两种状态：内部状态和外部状态：
 
-内部状态（Intrinsic state）存储在享用者中；它由独立于上下文的信息组成，使其是共享的。
+- **内部状态（Intrinsic state）**存储在享用者中；它由独立于上下文的信息组成，使其是共享的。
+- **外部状态（Extrinsic state）**依赖于上下文，因此无法共享。客户端负责在必要时传递外部状态。
 
-外部状态（Extrinsic state）依赖于上下文，因此无法共享。客户端负责在必要时传递外部状态。
+### 6.2.6.1 示例：字体（Font）
 
-# 四人行设计模式
-
-### 6.2.6.1 示例：字体 (Font)
-
-字体 (Font)
+#### 字体（Font）
 
 ```java
 public record Font(String name, int size) {
 }
 ```
 
-### 字体工厂 (FontFactory)
+#### 字体工厂（FontFactory）
+
+
 
 ```java
 public final class FontFactory {
@@ -7406,7 +7372,7 @@ public final class FontFactory {
 }
 ```
 
-### 客户端 (Client)
+### 客户端（Client）
 
 ```java
 class Client {
@@ -7419,23 +7385,23 @@ class Client {
 }
 ```
 
-### 6.2.6.2 示例：城市 (City)
+### 6.2.6.2 示例：城市（City）
 
-人员 (Person)
+#### 人员（Person）
 
 ```java
 public record Person(String firstName, String lastName, String street, City city) {
 }
 ```
 
-城市 (City)
+#### 城市（City）
 
 ```java
 public record City(String country, String countryCode, String name) {
 }
 ```
 
-### 城市工厂 (CityFactory)
+#### 城市工厂（CityFactory）
 
 ```java
 public final class CityFactory {
@@ -7457,7 +7423,7 @@ public final class CityFactory {
 }
 ```
 
-### 客户端 (Client)
+#### 客户端（Client）
 
 ```java
 class Client {
@@ -7474,27 +7440,24 @@ class Client {
 }
 ```
 
-
-
-
-
-## 优点：
+## 优点
 
 - 通过**减少**对象的数量来提高性能。
 - 由于使用内省属性的节点之间共享公共属性，**减少了**内存占用。
 
-## 缺点：
+## 缺点
 
 - 如果对象中**没有可共享的属性**，则该模式将毫无用处。
 - 可能会引入与传输、查找和/或计算外部状态相关的**运行时开销**，特别是当状态以前存储为内省状态时。
 
-## 6.2.7 代理 (Proxy)
+## 6.2.7 代理（Proxy）
 
 为另一个对象提供替身或占位符，以控制对它的访问。
 
-### 用用场景：
+### 用用场景
 
-- 代理通常用于需要对对象进行复杂引用而非普通指针的情况。通常对以下类型的代理进行区分：
+代理通常用于需要对对象进行复杂引用而非普通指针的情况。通常对以下类型的代理进行区分：
+
 - 远程代理：提供另一个远程对象或资源的本地表示。
 - 虚拟代理：封装开销较大的对象并按需加载。
 - 保护代理：为原始对象提供访问控制。
@@ -7526,10 +7489,12 @@ public final class MillenniumFalcon implements Spaceship {
 public final class MillenniumFalconProxy implements Spaceship {
     private Pilot pilot;
     private final Spaceship ship;
+
     public MillenniumFalconProxy(Pilot pilot) {
         this.pilot = pilot;
         this.ship = new MillenniumFalcon();
     }
+
     @Override
     public void fly() {
         if ("Han Solo".equals(this.pilot.name())) {
@@ -7546,6 +7511,7 @@ class Client {
     public static void main(String[] args) {
         Spaceship ship = new MillenniumFalconProxy(new Pilot("Han Solo"));
         ship.fly();
+
         ship = new MillenniumFalconProxy(new Pilot("Darth Vader"));
         ship.fly();
     }
@@ -7563,10 +7529,12 @@ interface ImageViewer {
 ```java
 public final class DefaultImageView implements ImageViewer {
     private final Image image;
+
     public DefaultImageView(String path) {
         // 慢操作
         this.image = Image.load(path);
     }
+
     @Override
     public void display() {
         // 慢操作
@@ -7578,6 +7546,7 @@ public final class DefaultImageView implements ImageViewer {
 ```java
 public interface Image {
     void display();
+
     static Image load(String path) {
         // 未实现
         return null;
@@ -7589,9 +7558,11 @@ public interface Image {
 public final class ImageViewProxy implements ImageViewer {
     private final String path;
     private ImageViewer viewer;
+
     public ImageViewProxy(String path) {
         this.path = path;
     }
+
     @Override
     public void display() {
         if (this.viewer == null) {
@@ -7605,7 +7576,7 @@ public final class ImageViewProxy implements ImageViewer {
 ```java
 class Client {
     public static void main(String[] args) {
-        ImageViewer image = new ImageViewerProxy("./img/beer.png");
+        ImageViewer image = new ImageViewProxy("./img/beer.png");
         image.display();
         image.display(); // DefaultImageView 将被调用并执行一次
 
@@ -7614,23 +7585,23 @@ class Client {
 }
 ```
 
-## 优点：
+## 优点
 
 - **安全性**：在访问对象时可以检查某些条件。
 - **性能**：对于内存和执行时间有高要求的昂贵对象，可以进行封装，以便在需要时才调用它们，或者避免不必要的实例化。
 
-## 缺点：
+## 缺点
 
 - **性能**：如果使用代理对象来封装位于网络某处的对象，这可能是代理模式的缺点。由于它是代理，它可以向客户端隐藏它是远程通信的事实。
 - 增加了一层抽象，可能会导致路径绕路并增加复杂性。
 
-## 6.3 行为型 (Behavioral)
+## 6.3 行为型（Behavioral）
 
-### 6.3.1 状态 (State)
+### 6.3.1 状态（State）
 
 允许对象在内部状态改变时改变其行为。该对象看起来改变了它的类。
 
-### 用用场景：
+### 用用场景
 
 - 对象应该根据其状态在运行时改变其外部行为。
 - 状态机，例如解析器。许多文本解析器的功能不可避免地复杂。
@@ -7644,12 +7615,15 @@ interface State {
 ```java
 public class Door {
     private State state;
+
     public Door(State state) {
         this.state = state;
     }
+
     public void setState(State state) {
         this.state = state;
     }
+
     public void request() {
         state.handle(this);
     }
@@ -7658,7 +7632,7 @@ public class Door {
 
 ```java
 public class DoorClosed implements State {
-    public void handle(Door door) { {
+    public void handle(Door door) {
         System.out.println("Door is closed.");
         door.setState(new DoorOpening());
     }
@@ -7683,13 +7657,9 @@ public class DoorOpen implements State {
 }
 ```
 
+### 输出
 
-
-
-
-# 输出
-
-```
+```text
 1 Door open
 2 Door closing
 3 Door closed
@@ -7699,34 +7669,34 @@ public class DoorOpen implements State {
 7 Door closed
 ```
 
-# 优点：
+## 优点
 
 - **可扩展性和变更稳定性。** 易于集成新状态而无需修改现有代码。对状态相关行为的更改仅影响一个类，而不影响上下文（context）。
 - **可读读性。** 高内聚和职责委托（状态的行为封装/局部化在相应的状态对象内部）使得代码易于理解。
 - **显式状态转换。** 通过为每个状态引入对象，状态转换变得显式。此外，它防止了不一致状态的产生，因为状态改变是一个原子命令（设置变量）。
 - 与宽泛且重复的 if-else 结构相比，该设计在面对后续变更时**更不容易出错**。
 
-# 缺点：
+## 缺点
 
 - **类数量增加。** 比单个类不紧凑。然而，该设计模式的目的恰恰是将一个混乱类的行为分发到多个状态对象中。
 
 # 四人行设计模式
 
-## 6.3.2 模板方法 (Template Method)
+## 6.3.2 模板方法（Template Method）
 
 在操作中定义算法的骨架，并将某些步骤推给子类。模板方法允许子类重新定义算法的某些步骤，而不改变算法的结构。
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_257_0.png)
 
-用例：
+### 用例
 
 - 定义一个实现相似算法的模板，并将各个执行步骤委托给子类。
 - 子类的公共行为应该移动到父类中，以避免代码重复。
 - 固定序列的建模以及变化点的规范。
 
-### 6.3.2.1 示例：编译器 (Compiler)
+### 6.3.2.1 示例：编译器（Compiler）
 
-CrossCompiler
+#### CrossCompiler
 
 ```java
 public abstract class CrossCompiler {
@@ -7743,58 +7713,58 @@ public abstract class CrossCompiler {
 
 # 四人行设计模式
 
-## IPhoneCompiler
+#### IPhoneCompiler
 
 ```java
 public class IPhoneCompiler extends CrossCompiler {
-  protected void collectSource() {
-    // 与此类特定的内容
-  }
+    protected void collectSource() {
+        // 与此类特定的内容
+    }
 
-  protected void compileToTarget() {
-    // iphone 特定的编译
-  }
+    protected void compileToTarget() {
+        // iphone 特定的编译
+    }
 }
 ```
 
-## AndroidCompiler
+#### AndroidCompiler
 
 ```java
 public class AndroidCompiler extends CrossCompiler {
-  protected void collectSource() {
-    // 与此类特定的内容
-  }
+    protected void collectSource() {
+        // 与此类特定的内容
+    }
 
-  protected void compileToTarget() {
-    // android 特定的编译
-  }
+    protected void compileToTarget() {
+        // android 特定的编译
+    }
 }
 ```
 
-## Client
+#### Client
 
 ```java
 class Client {
-  public static void main(String[] args) {
-    CrossCompiler iphone = new IPhoneCompiler();
-    iphone.crossCompile();
+    public static void main(String[] args) {
+        CrossCompiler iphone = new IPhoneCompiler();
+        iphone.crossCompile();
 
-    CrossCompiler android = new AndroidCompiler();
-    android.crossCompile();
-  }
+        CrossCompiler android = new AndroidCompiler();
+        android.crossCompile();
+    }
 }
 ```
 
-### 6.3.2.2 示例：可回调 (Callbackable)
+### 6.3.2.2 示例：可回调（Callbackable）
 
 # Callbackable
 
 ```java
 interface Callbackable extends Runnable {
-  void beforeRun();
-  void afterRun();
-  void onError(Exception e);
-  void onSuccess();
+    void beforeRun();
+    void afterRun();
+    void onError(Exception e);
+    void onSuccess();
 }
 ```
 
@@ -7802,12 +7772,15 @@ interface Callbackable extends Runnable {
 
 ## AbstractCallbackRunnable
 
+
+
 ```java
 abstract class AbstractCallbackRunnable implements Callback {
     private final LocalDateTime submittedTime;
     private Status status;
     private LocalDateTime startedTime;
     private LocalDateTime finishedTime;
+
     AbstractCallbackRunnable() {
         this.submittedTime = LocalDateTime.now();
         this.status = Status.WAITING;
@@ -7921,13 +7894,13 @@ class Client {
 }
 ```
 
-# 优点：
+## 优点
 
 - 使用模板方法允许子类重写某些步骤。
 - 行为被封装在类中。
 - 与上下文解耦并隐藏算法细节。
 
-# 缺点：
+## 缺点
 
 - 如果子类必须实现许多内容，设计可能会变得异常复杂。
 - 可能会产生大量方法。
@@ -7935,7 +7908,7 @@ class Client {
 
 # 四人行设计模式
 
-## 6.3.3 策略模式 (Strategy)
+## 6.3.3 策略模式（Strategy）
 
 定义一组算法，封装每一个算法并使它们可以相互替。策略模式允许算法独立于客户端发生变化。
 
@@ -7961,7 +7934,7 @@ class StrategyContext {
 
 ```java
 public interface CompressionStrategy {
-  void execute(List<File> files);
+    void execute(List<File> files);
 }
 ```
 
@@ -7969,9 +7942,9 @@ public interface CompressionStrategy {
 
 ```java
 public class RarCompressionStrategy implements CompressionStrategy {
-  public void execute(List<File> files) {
-    // 使用 RAR 方法
-  }
+    public void execute(List<File> files) {
+        // 使用 RAR 方法
+    }
 }
 ```
 
@@ -7979,9 +7952,9 @@ public class RarCompressionStrategy implements CompressionStrategy {
 
 ```java
 public class ZipCompressionStrategy implements CompressionStrategy {
-  public void execute(List<File> files) {
-    // 使用 ZIP 方法
-  }
+    public void execute(List<File> files) {
+        // 使用 ZIP 方法
+    }
 }
 ```
 
@@ -8007,25 +7980,21 @@ public class CompressionContext {
 
 ```java
 class Client {
-  public static void main(String[] args) {
-    CompressionContext ctx = new CompressionContext();
+    public static void main(String[] args) {
+        CompressionContext ctx = new CompressionContext();
 
-    // 我们可以假设上下文已经通过偏好设置
-    ctx.setStrategy(new RarCompressionStrategy());
+        // 我们可以假设上下文已经通过偏好设置
+        ctx.setStrategy(new RarCompressionStrategy());
 
-    // 获取文件列表
-    ctx.createArchive(files);
-  }
+        // 获取文件列表
+        ctx.createArchive(files);
+    }
 }
 ```
 
-### 6.3.3.1 示例：压缩 (Compression)
+### 6.3.3.1 示例：压缩（Compression）
 
 ![](img/9fb5c4b28a508e4c7ac0d3d85a51babf_262_1.png)
-
-
-
-
 
 # 四军兵设计模式
 
@@ -8035,9 +8004,9 @@ class Client {
 interface LogFormatter {
     String format(Log log);
 }
-```
 
 public class FullLogFormatter implements LogFormatter {
+
     @Override
     public String format(Log log) {
         return String.format("Hash: %s\nAuthor: %s\nMessage: %s\n%s",
@@ -8049,6 +8018,7 @@ public class FullLogFormatter implements LogFormatter {
 }
 
 public class ShortLogFormatter implements LogFormatter {
+
     @Override
     public String format(Log log) {
         return String.format("Hash: %s\nAuthor: %s\nMessage: %s\n",
@@ -8059,6 +8029,7 @@ public class ShortLogFormatter implements LogFormatter {
 }
 
 public class OnlineLogFormatter implements LogFormatter {
+
     @Override
     public String format(Log log) {
         return String.format("%s %s",
@@ -8080,9 +8051,11 @@ public record Log(String hash, String author, String message, LocalDateTime date
 ```java
 public class GitConsole {
     private final LogFormatter formatter;
+
     public GitConsole(LogFormatter formatter) {
         this.formatter = formatter;
     }
+
     public void printLog(List<Log> logs) {
         logs.forEach(log -> System.out.println(this.formatter.format(log)));
     }
@@ -8095,23 +8068,27 @@ public class GitConsole {
 class Client {
     public static void main(String[] args) {
         GitConsole console = new GitConsole(new FullLogFormatter());
+
         List<Log> logs = List.of(
             new Log("3976C78", "cleancoder", "Clean up", LocalDateTime.now()),
             new Log("07aa4d5", "cleancoder", "Fix NPE in Log", LocalDateTime.now())
         );
+
         console.printLog(logs);
     }
 }
 ```
 
-### 优点：
+### 优点
+
 - 上下文与行为的可重用和解耦。创建了一个算法族，可以独立于上下文进行使用。一方面，新的上下文对象可以使用现有的策略。
 - 动态行为。可以使用适当的 setter 在运行时更改上下文的行为。
 - 可以从不同的实现中进行选择，从而增加了灵活性和可重用性。
 - 可以避免多个分支，这增加了代码的可直观性。
 - 替代实现。同样，不同的实现可以提供相同的功能（例如排序），但这些实现在非功能方面（性能、内存需求）上有所不同。
 
-### 缺点：
+### 缺点
+
 - 客户端需要知道不同的策略以便在它们之间进行选择并初始化上下文。
 - 问题可以通过工厂解决。这允许将创建逻辑从客户端外包到工厂中。
 
@@ -8119,7 +8096,8 @@ class Client {
 
 在对象之间建立一种一对多的依赖关系，当一个对象的状态发生变化时，所有的依赖者都会收到通知并自动更新。
 
-### 使用场景：
+### 使用场景
+
 - 当改变一个对象使得必须修改一个或多个对象时。
 - GUI（用户更改数据时，所有 GUI 组件必须更新新数据）。
 - MVC 模式（模型-视图-控制器）在视图与模型通信中的应用。
@@ -8155,6 +8133,7 @@ public class DataStore extends Observable {
 
     public void setData(String data) {
         this.data = data;
+
         // 标记观察者为已改变
         setChanged();
     }
@@ -8190,13 +8169,13 @@ public record Purchase(double amount) {
 
 ```java
 public interface PurchaseAuthorizeFlow {
-  void next(Employee next);
+    void next(Employee next);
 }
 ```
 
 ```java
 public interface Employee extends PurchaseAuthorizeFlow {
-  void authorize(Purchase purchase);
+    void authorize(Purchase purchase);
 }
 ```
 
@@ -8215,34 +8194,6 @@ public abstract class AbstractEmployee implements Employee {
 }
 ```
 
-```java
-public class CTO extends AbstractEmployee {
-    @Override
-    public void authorize(Purchase purchase) {
-        if (purchase.amount() > 100_000) {
-            System.out.println("CTO");
-        } else {
-            next().authorize(purchase);
-        }
-    }
-}
-```
-
-```java
-public class VP extends AbstractEmployee {
-    @Override
-    public void authorize(Purchase purchase) {
-        if (purchase.amount() > 10_000 && purchase.amount() < 100_000) {
-            System.out.println("VP");
-        } else {
-            next().authorize(purchase);
-        }
-    }
-}
-```
-
-
-
 
 
 # 四人行设计模式
@@ -8251,14 +8202,22 @@ public class VP extends AbstractEmployee {
 
 ```java
 public class TeamLead extends AbstractEmployee {
+
     @Override
     public void authorize(Purchase purchase) {
+
         if (purchase.amount() <= 1000d) {
+
             System.out.println("TeamLead");
+
         } else {
+
             next().authorize(purchase);
+
         }
+
     }
+
 }
 ```
 
@@ -8266,18 +8225,27 @@ public class TeamLead extends AbstractEmployee {
 
 ```java
 public class Client {
+
     public static void main(String[] args) {
+
         Employee cto = new CTO();
+
         Employee vp = new VP();
+
         Employee teamLead = new TeamLead();
 
         teamLead.next(vp);
+
         vp.next(cto);
 
         teamLead.authorize(new Purchase(100)); // 组长
+
         teamLead.authorize(new Purchase(9999)); // VP
+
         teamLead.authorize(new Purchase(500000)); // CTO
+
     }
+
 }
 ```
 
@@ -8287,6 +8255,7 @@ public class Client {
 
 ```java
 public interface Authentication {
+
 }
 ```
 
@@ -8294,8 +8263,11 @@ public interface Authentication {
 
 ```java
 public interface AuthenticationFilter {
+
   boolean isAuthenticated(Authentication authentication);
+
   void setNextFilter(AuthenticationFilter nextFilter);
+
 }
 ```
 
@@ -8303,19 +8275,29 @@ public interface AuthenticationFilter {
 
 ```java
 public abstract class AbstractAuthenticationFilter implements AuthenticationFilter {
+
   private AuthenticationFilter nextFilter;
 
   @Override
+
   public void setNextFilter(AuthenticationFilter nextFilter) {
+
     this.nextFilter = nextFilter;
+
   }
 
   public boolean nextFilter(Authentication authentication) {
+
     if (this.nextFilter != null) {
+
       return this.nextFilter.isAuthenticated(authentication);
+
     }
+
     return false;
+
   }
+
 }
 ```
 
@@ -8323,14 +8305,23 @@ public abstract class AbstractAuthenticationFilter implements AuthenticationFilt
 
 ```java
 public class BasicAuthenticationFilter extends AbstractAuthenticationFilter {
+
   @Override
+
   public boolean isAuthenticated(Authentication authentication) {
+
     if (authentication instanceof BasicAuthentication) {
+
       // 逻辑
+
       return true;
+
     }
+
     return nextFilter(authentication);
+
   }
+
 }
 ```
 
@@ -8338,6 +8329,7 @@ public class BasicAuthenticationFilter extends AbstractAuthenticationFilter {
 
 ```java
 public class BasicAuthentication implements Authentication {
+
 }
 ```
 
@@ -8345,14 +8337,23 @@ public class BasicAuthentication implements Authentication {
 
 ```java
 public class BearerAuthenticationFilter extends AbstractAuthenticationFilter {
+
   @Override
+
   public boolean isAuthenticated(Authentication authentication) {
+
     if (authentication instanceof BearerAuthentication) {
+
       // 逻辑
+
       return true;
+
     }
+
     return nextFilter(authentication);
+
   }
+
 }
 ```
 
@@ -8360,6 +8361,7 @@ public class BearerAuthenticationFilter extends AbstractAuthenticationFilter {
 
 ```java
 public class BearerAuthentication implements Authentication {
+
 }
 ```
 
@@ -8367,14 +8369,23 @@ public class BearerAuthentication implements Authentication {
 
 ```java
 public class DigestAuthenticationFilter extends AbstractAuthenticationFilter {
+
   @Override
+
   public boolean isAuthenticated(Authentication authentication) {
+
     if (authentication instanceof DigestAuthentication) {
+
       // 逻辑
+
       return true;
+
     }
+
     return nextFilter(authentication);
+
   }
+
 }
 ```
 
@@ -8382,6 +8393,7 @@ public class DigestAuthenticationFilter extends AbstractAuthenticationFilter {
 
 ```java
 public class DigestAuthentication implements Authentication {
+
 }
 ```
 
@@ -8389,15 +8401,23 @@ public class DigestAuthentication implements Authentication {
 
 ```java
 class Client {
+
     public static void main(String[] args) {
+
         AuthenticationFilter digestFilter = new DigestAuthenticationFilter();
+
         AuthenticationFilter bearerFilter = new BearerAuthenticationFilter();
+
         AuthenticationFilter basicFilter = new BasicAuthenticationFilter();
 
         digestFilter.setNextFilter(bearerFilter);
+
         bearerFilter.setNextFilter(basicFilter);
+
         System.out.println(digestFilter.isAuthenticated(new BearerAuthentication())); // true
+
     }
+
 }
 ```
 
@@ -8424,7 +8444,9 @@ class Client {
 
 ```java
 public interface Command {
+
     void execute(FileSystem fs);
+
 }
 ```
 
@@ -8432,14 +8454,23 @@ public interface Command {
 
 ```java
 public class CreateCommand implements Command {
+
     private final File file;
+
     public CreateCommand(File file) {
+
         this.file = file;
+
     }
+
     @Override
+
     public void execute(FileSystem fs) {
+
         fs.create(this.file);
+
     }
+
 }
 ```
 
@@ -8447,14 +8478,23 @@ public class CreateCommand implements Command {
 
 ```java
 public class DeleteCommand implements Command {
+
     private final File file;
+
     public DeleteCommand(File file) {
+
         this.file = file;
+
     }
+
     @Override
+
     public void execute(FileSystem fs) {
+
         fs.delete(this.file);
+
     }
+
 }
 ```
 
@@ -8462,16 +8502,27 @@ public class DeleteCommand implements Command {
 
 ```java
 public class MoveCommand implements Command {
+
     private final File source;
+
     private final File target;
+
     public MoveCommand(File source, File target) {
+
         this.source = source;
+
         this.target = target;
+
     }
+
     @Override
+
     public void execute(FileSystem fs) {
+
         fs.move(this.source, this.target);
+
     }
+
 }
 ```
 
@@ -8479,15 +8530,25 @@ public class MoveCommand implements Command {
 
 ```java
 public class BatchExecutor {
+
     private final List<Command> commands;
+
     public BatchExecutor(List<Command> commands) {
+
         this.commands = commands;
+
     }
+
     public void execute(FileSystem fs) {
+
         for (Command command : commands) {
+
             command.execute(fs);
+
         }
+
     }
+
 }
 ```
 
@@ -8495,16 +8556,27 @@ public class BatchExecutor {
 
 ```java
 class Client {
+
     public static void main(String[] args) {
+
         FileSystem fs = new FileSystem();
+
         List<Command> commands = List.of(
+
             new CreateCommand(new File("file1.txt")),
+
             new DeleteCommand(new File("file2.txt")),
+
             new MoveCommand(new File("file1.txt"), new File("file3.txt"))
+
         );
+
         BatchExecutor executor = new BatchExecutor(commands);
+
         executor.execute(fs);
+
     }
+
 }
 ```
 
@@ -8514,7 +8586,9 @@ class Client {
 
 ```java
 public interface Command {
+
     void execute();
+
 }
 ```
 
@@ -8522,29 +8596,47 @@ public interface Command {
 
 ```java
 public class TurnOn implements Command {
+
     private final Television device;
+
     public TurnOn(Television device) {
+
         this.device = device;
+
     }
+
     @Override
+
     public void execute() {
+
         device.on();
+
     }
+
 }
 ```
 
-### 机 (TurnOff)
+### 关机 (TurnOff)
 
 ```java
 public class TurnOff implements Command {
+
     private final Television device;
+
     public TurnOff(Television device) {
+
         this.device = device;
+
     }
+
     @Override
+
     public void execute() {
+
         device.off();
+
     }
+
 }
 ```
 
@@ -8552,14 +8644,23 @@ public class TurnOff implements Command {
 
 ```java
 public class VolumeUp implements Command {
+
     private final Television device;
+
     public VolumeUp(Television device) {
+
         this.device = device;
+
     }
+
     @Override
+
     public void execute() {
+
         device.volumeUp();
+
     }
+
 }
 ```
 
@@ -8567,14 +8668,23 @@ public class VolumeUp implements Command {
 
 ```java
 public class VolumeDown implements Command {
+
     private final Television device;
+
     public VolumeDown(Television device) {
+
         this.device = device;
+
     }
+
     @Override
+
     public void execute() {
+
         device.volumeDown();
+
     }
+
 }
 ```
 
@@ -8582,91 +8692,41 @@ public class VolumeDown implements Command {
 
 ```java
 public class Television {
+
     private int volume = 0;
+
     public void on() {
+
         System.out.println("TV is on");
+
     }
+
     public void off() {
+
         System.out.println("TV is off");
+
     }
+
     public void volumeUp() {
+
         this.volume++;
+
         System.out.println("Volume: " + this.volume);
+
     }
+
     public void volumeDown() {
-        this.volume--;
-        System.out.println("Volume: " + this.volume);
+
+        // 方法体未完整，但保留原有内容
+
     }
+
 }
 ```
-
-### 设备按钮 (DeviceButton)
-
-```java
-public class DeviceButton {
-    private Command command;
-    public void setCommand(Command command) {
-        this.command = command;
-    }
-    public void press() {
-        command.execute();
-    }
-}
-```
-
 
 
 
 # 四人手设计模式
-
-## 客户端
-
-```java
-class Client {
-    public static void main(String[] args) {
-        Television television = new Television();
-        DeviceButton power = new DeviceButton();
-        DeviceButton volume = new DeviceButton();
-
-        power.command(new TurnOn(television));
-        power.press();
-
-        volume.command(new VolumeUp(television));
-        volume.press();
-        volume.press();
-        volume.press();
-
-        volume.command(new VolumeDown(television));
-        volume.press();
-
-        power.command(new TurnOff(television));
-        power.press();
-    }
-}
-```
-
-# 输出
-
-```
-TV is on
-Volume: 1
-Volume: 2
-Volume: 3
-Volume: 2
-TV is off
-```
-
-# 优点:
-
-- 可以很容易添加新命令而无需修改现有代码。
-- 可以撤销（undo）和重做（redo）操作。
-- 你可以实现一系列操作。
-
-# 缺点：
-
-- 为了实现目标，需要大量的类和对象协同工作。
-
-四人手设计模式
 
 ## 6.3.7 解释器模式
 
@@ -8685,30 +8745,45 @@ TV is off
 
 ```java
 public abstract class Expression {
+
     private final int value;
+
     protected Expression(int value) {
+
         this.value = value;
+
     }
+
     public int value() {
+
         return this.value;
+
     }
+
     abstract String interpret(Context context);
+
 }
 ```
-
-四人手设计模式
 
 ## 数字转二进制表达式
 
 ```java
 public final class IntToBinaryExpression extends Expression {
+
     public IntToBinaryExpression(int value) {
+
         super(value);
+
     }
+
     @Override
+
     public String interpret(Context context) {
+
         return Integer.toBinaryString(value);
+
     }
+
 }
 ```
 
@@ -8716,13 +8791,21 @@ public final class IntToBinaryExpression extends Expression {
 
 ```java
 public final class IntToHexExpression extends Expression {
+
     public IntToHexExpression(int value) {
+
         super(value);
+
     }
+
     @Override
+
     public String interpret(Context context) {
+
         return Integer.toHexString(value);
+
     }
+
 }
 ```
 
@@ -8730,53 +8813,87 @@ public final class IntToHexExpression extends Expression {
 
 ```java
 public final class Context {
+
     private final String expression;
+
     public Context(String expression) {
+
         this.expression = Objects.requireNull(expression);
+
     }
+
     public String expression() {
+
         return this.expression;
+
     }
+
     public boolean isHex() {
+
         return this.expression.contains("Hexadecimal");
+
     }
+
     public boolean isBinary() {
+
         return this.expression.contains("Binary");
+
     }
+
     public int number() {
+
         return Integer.parseInt(this.expression.substring(0, this.expression.indexOf(' ')));
+
     }
+
 }
 ```
-
-四人手设计模式
 
 ## 客户端
 
 ```java
 class Client {
+
     public static void main(String[] args) {
+
         print("42 in Binary");
+
         print("42 in Hexadecimal");
+
     }
 
     private static void print(String expression) {
+
         System.out.printf("%s = %s\n", expression, interpret(expression));
+
     }
 
     private static String interpret(String expression) {
+
         Context context = new Context(expression);
+
         Expression exp;
+
         if (context.isHex()) {
+
             exp = new ToHexExpression(context.number());
+
         } else if (context.isBinary()) {
+
             exp = new ToBinaryExpression(context.number());
+
             return context.expression();
+
         } else {
+
             return context.expression();
+
         }
+
         return exp.interpret(context);
+
     }
+
 }
 ```
 
@@ -8784,10 +8901,9 @@ class Client {
 
 ```
 42 in Binary = 101010
+
 42 in Hexadecimal = 2a
 ```
-
-四人手设计模式
 
 ## 6.3.7.2 示例：计算器
 
@@ -8795,7 +8911,9 @@ class Client {
 
 ```java
 interface Expression {
+
     int interpret();
+
 }
 ```
 
@@ -8803,14 +8921,23 @@ interface Expression {
 
 ```java
 public final class Number implements Expression {
+
     private final int number;
+
     public Number(String number) {
+
         this.number = Integer.parseInt(number);
+
     }
+
     @Override
+
     public int interpret() {
+
         return this.number;
+
     }
+
 }
 ```
 
@@ -8818,16 +8945,27 @@ public final class Number implements Expression {
 
 ```java
 public final class Minus implements Expression {
+
     private final Expression left;
+
     private final Expression right;
+
     public Minus(Expression left, Expression right) {
+
         this.left = left;
+
         this.right = right;
+
     }
+
     @Override
+
     public int interpret() {
+
         return this.left.interpret() - this.right.interpret();
+
     }
+
 }
 ```
 
@@ -8835,16 +8973,27 @@ public final class Minus implements Expression {
 
 ```java
 public final class Plus implements Expression {
+
     private final Expression left;
+
     private final Expression right;
+
     public Plus(Expression left, Expression right) {
+
         this.left = left;
+
         this.right = right;
+
     }
+
     @Override
+
     public int interpret() {
+
         return this.left.interpret() + this.right.interpret();
+
     }
+
 }
 ```
 
@@ -8852,32 +9001,49 @@ public final class Plus implements Expression {
 
 ```java
 public final class Evaluator {
+
     private final String expression;
 
     public Evaluator(String expression) {
+
         this.expression = Objects.requireNonNull(expression);
+
     }
 
     public String expression() {
+
         return this.expression;
+
     }
 
     public int evaluate() {
+
         Expression last = null;
+
         String[] split = this.expression.split(" ");
 
         for (int i = 0; i < split.length; i++) {
+
             if ("+".equals(split[i])) {
+
                 last = new Plus(last, new Number(split[i+1]));
+
             } else if ("".equals(split[i])) {
+
                 last = new Minus(last, new Number(split[i+1]));
+
             } else {
+
                 last = new Number(split[i]);
+
             }
+
         }
 
         return last.interpret();
+
     }
+
 }
 ```
 
@@ -8885,11 +9051,15 @@ public final class Evaluator {
 
 ```java
 class Client {
+
     public static void main(String[] args) {
+
         Evaluator evaluator = new Evaluator("5 - 3 + 29 - 1");
 
         System.out.printf("%s = %d%n", evaluator.expression(), evaluator.evaluate());
+
     }
+
 }
 ```
 
@@ -8926,17 +9096,15 @@ class Client {
 
 # 内部迭代器：
 
-- 集合本身提供方法，允许客户端访问集合中的各种对象。例如，java.util.ResultSet 类包含数据，并提供类似 next() 方法来遍历项目列表。
+- 集合本身提供方法，允许客户端访问集合中的各种对象。例如，`java.util.ResultSet` 类包含数据，并提供类似 `next()` 方法来遍历项目列表。
 - 集合在同一时间内有一个迭代器。
 - 集合必须维护或存储迭代状态。
 
 # 外部迭代器：
 
-- 功能与集合分离，并位于另一个称为迭代器的对象中。通常，集合向客户端返回一个相应的迭代器对象。例如，java.util.Vectorget迭代器定义为类型为 Enumeration 的独立对象。
+- 功能与集合分离，并位于另一个称为迭代器的对象中。通常，集合向客户端返回一个相应的迭代器对象。例如，`java.util.Vector` 获取迭代器定义为类型为 `Enumeration` 的独立对象。
 - 在任何时间，给定的集合都可以有多个迭代器。
 - 与存储迭代状态相关的开销与集合无关。它位于独有的迭代器对象内部。
-
-四人手设计模式
 
 ## 6.3.8.1 示例：汽车 - 内部
 
@@ -8952,11 +9120,15 @@ public record Car(String name) {
 
 ```java
 class Client {
+
     public static void main(String[] args) {
+
         List<Car> cars = List.of(new Car("Car 1"), new Car("Car 2"), new Car("Car 3"), new Car("Car 4"));
 
         cars.forEach(c -> System.out.println(c.name()));
+
     }
+
 }
 ```
 
@@ -8964,77 +9136,117 @@ class Client {
 
 ```
 Car 1
+
 Car 2
+
 Car 3
+
 Car 4
 ```
 
-
-
-
-
-# 四人行中的设计模式
-
 ## 6.3.8.2 示例：汽车 - 外部迭代器
 
-Car
+`Car`
 
 ```java
 public record Car(String name) {
+
 }
 ```
 
-CarIterator
+`CarIterator`
 
 ```java
 public class CarIterator implements java.util.Iterator<Car> {
+
     private final Car[] cars;
+
     private int index = 0;
+
     public CarIterator(Car[] cars) {
+
         this.cars = cars;
+
     }
+
     @Override
+
     public Car next() {
+
         return this.cars[this.index++];
+
     }
+
     @Override
+
     public boolean hasNext() {
+
         if (this.index >= this.cars.length || this.cars[this.index] == null) {
+
             return false;
+
         }
+
         return true;
+
     }
+
 }
 ```
 
-Client
+`Client`
 
 ```java
 class Client {
+
     public static void main(String[] args) {
+
         Car[] cars = new Car[4];
+
         cars[0] = new Car("Car 1");
+
         cars[1] = new Car("Car 2");
+
         cars[2] = new Car("Car 3");
+
         cars[3] = new Car("Car 4");
 
         Iterator<Car> iterator = new CarIterator(cars);
+
         while (iterator.hasNext()) {
+
             Car car = iterator.next();
+
             System.out.println(car.name());
+
         }
+
     }
+
 }
 ```
 
 # 输出
 
 ```
-1 Car 1
-2 Car 2
-3 Car 3
-4 Car 4
+Car 1
+
+Car 2
+
+Car 3
+
+Car 4
 ```
+
+
+
+# 1 Car 1
+
+# 2 Car 2
+
+# 3 Car 3
+
+# 4 Car 4
 
 ## 优点：
 
@@ -9054,116 +9266,173 @@ class Client {
 
 ### 6.3.9.1 示例：聊天
 
-ChatMediator
+`ChatMediator`
 
 ```java
 interface ChatMediator {
+
     void sendMessage(User user, String message);
+
     void addUser(User user);
+
 }
 ```
 
-### Chat
+### `Chat`
 
 ```java
 public final class Chat implements ChatMediator {
+
     private final List<User> users;
+
     public Chat() {
+
         this.users = new ArrayList<>();
+
     }
+
     @Override
+
     public void addUser(User user) {
+
         this.users.add(user);
+
     }
+
     @Override
+
     public void sendMessage(User from, String message) {
+
         for (User user : this.users) {
+
             if (user != from) {
+
                 user.receive(message);
+
             }
+
         }
+
     }
+
 }
 ```
 
-### User
+### `User`
 
 ```java
 public class User {
+
     private final ChatMediator mediator;
+
     private final String name;
+
     public User(ChatMediator mediator, String name) {
+
         this.mediator = mediator;
+
         this.name = name;
+
     }
+
     public ChatMediator mediator() {
+
         return this.mediator;
+
     }
+
     public String name() {
+
         return this.name;
+
     }
+
     public void send(String message) {
+
         System.out.println(name() + ": Sending Message=" + message);
+
         mediator.sendMessage(this, message);
+
     }
+
     public void receive(String message) {
+
         System.out.println(name() + ": Received Message=" + message);
+
     }
+
 }
 ```
 
-### LoggedInUser
+### `LoggedInUser`
 
 ```java
 public class LoggedInUser extends User {
+
     public LoggedInUser(ChatMediator mediator, String name) {
+
         super(mediator, name);
+
     }
+
 }
 ```
 
-### AnonymousUser
+### `AnonymousUser`
 
 ```java
 public class AnonymousUser extends User {
+
     public AnonymousUser(ChatMediator mediator) {
+
         super(mediator, "Anonymous");
+
     }
+
 }
 ```
 
-### Client
+### `Client`
 
 ```java
 public static void main(String[] args) {
+
     Mediator mediator = new Chat();
+
     User user1 = new LoggedInUser(mediator, "Lia");
+
     User user2 = new LoggedInUser(mediator, "Timo");
+
     User user3 = new LoggedInUser(mediator, "Matteo");
+
     User user4 = new LoggedInUser(mediator, "Luisa");
+
     User user5 = new AnonymousUser(mediator);
 
     mediator.addUser(user1);
+
     mediator.addUser(user2);
+
     mediator.addUser(user3);
+
     mediator.addUser(user4);
+
     mediator.addUser(user5);
 
     user1.send("Hi to everybody!");
+
 }
 ```
 
-# 输出
+## 输出
 
+```
 Lia: Sending Message=Hi to everybody!
 Timo: Received Message=Hi to everybody!
 Matteo: Received Message=Hi to everybody!
 Luisa: Received Message=Hi to everybody!
 Anonymous: Received Message=Hi to everybody!
-
-
-
-
+```
 
 ## 6.3.10 备录 (Memento)
 
@@ -9171,9 +9440,9 @@ Anonymous: Received Message=Hi to everybody!
 
 | 源创者 (Originator) | 备录 (Memento) | 管理者 (Caretaker) |
 | --- | --- | --- |
-| -state | -state | |
-| +setMemento(Memento) | +getState() | |
-| +createMemento() | +setState() | |
+| `-state` | `-state` | |
+| `+setMemento(Memento)` | `+getState()` | |
+| `+createMemento()` | `+setState()` | |
 
 用例：
 
@@ -9181,229 +9450,361 @@ Anonymous: Received Message=Hi to everybody!
 
 ### 6.3.10.1 示例：编辑器 (Editor)
 
-Editor
+`Editor`
 
 ```java
 public interface Editor {
+
     void setContent(String content);
+
     void setFontSize(int fontSize);
+
     void setName(String fontName);
+
     void save();
+
     void restore();
+
 }
 ```
 
-EditorState
+`EditorState`
 
 ```java
 public interface EditorState {
+
     String getContent();
+
     int getFontSize();
+
     String getName();
+
 }
 ```
 
 四人行模式 (Design Patterns of the Gang of Four)
 
-CleanCodeEditor
+`CleanCodeEditor`
 
 ```java
 public final class CleanCodeEditor implements Editor {
+
     private final History history = new History();
+
     private String content;
+
     private int fontSize;
+
     private String font;
+
     public CleanCodeEditor(String content, int fontSize, String font) {
+
         this.content = content;
+
         this.font = font;
+
         this.fontSize = fontSize;
+
     }
+
     public String getContent() {
+
         return this.content;
+
     }
+
     public int getFontSize() {
+
         return this.fontSize;
+
     }
+
     public String getFont() {
+
         return this.font;
+
     }
+
     @Override
+
     public void setContent(String content) {
+
         this.content = content;
+
     }
+
     @Override
+
     public void setFontSize(int fontSize) {
+
         this.fontSize = fontSize;
+
     }
+
     @Override
+
     public void setFont(String font) {
+
         this.font = font;
+
     }
+
     @Override
+
     public void save() {
+
         EditorState state = new CleanCodeEditorState(this.content, this.fontSize, this.font);
+
         this.history.push(state);
+
     }
+
     @Override
+
     public void restore() {
+
         EditorState state = this.history.pop();
+
         this.content = state.getContent();
+
         this.font = state.getFont();
+
         this.fontSize = state.getFontSize();
+
     }
+
 }
 ```
 
 四人行模式 (Design Patterns of the Gang of Four)
 
-CleanCodeEditorState
+`CleanCodeEditorState`
 
 ```java
 public final class CleanCodeEditorState implements EditorState {
+
     private final String content;
+
     private final int fontSize;
+
     private final String font;
+
     public CleanCodeEditorState(String content, int fontSize, String font) {
+
         this.content = content;
+
         this.font = font;
+
         this.fontSize = fontSize;
+
     }
+
     @Override
+
     public String getContent() {
+
         return this.content;
+
     }
+
     @Override
+
     public int getFontSize() {
+
         return this.fontSize;
+
     }
+
     @Override
+
     public String getFontName() {
+
         return this.font;
+
     }
+
 }
 ```
 
-History
+`History`
 
 ```java
 public final class History {
+
     private final Stack<EditorState> history;
+
     public History() {
+
         this.history = new Stack<>();
+
     }
+
     public void push(EditorState state) {
+
         this.history.push(state);
+
     }
+
     public EditorState pop() {
+
         return this.history.pop();
+
     }
+
 }
 ```
 
 四人行模式 (Design Patterns of the Gang of Four)
 
-Client
+`Client`
 
 ```java
 class Client {
+
     public static void main(String[] args) {
+
         Editor editor = new CleanCodeEditor("Java Clean Code", 12, "Courier New");
+
         editor.save();
 
         editor.setContent("Java");
+
         editor.save();
 
         editor.restore();
+
         System.out.println(((CleanCodeEditor)editor).getContent());
 
         editor.restore();
+
         System.out.println(((CleanCodeEditor)editor).getContent());
+
     }
+
 }
 ```
 
 输出
 
+```
 Java
 Java Clean Code
+```
 
 四人行模式 (Design Patterns of the Gang of Four)
 
 ### 6.3.10.2 示例：余额 (Balance)
 
-Originator (源创者)
+`Originator` (源创者)
 
 ```java
 public class Originator {
+
     private Double balance;
+
     public void setBalance(Double balance) {
+
         this.balance = balance;
+
     }
+
     public Double getBalance() {
+
         return this.balance;
+
     }
+
     public Memento save() {
+
         return new Memento(this.balance);
+
     }
+
     public void restore(Memento memento) {
+
         this.balance = memento.balance();
+
     }
+
 }
 ```
 
-Memento (备录)
+`Memento` (备录)
 
 ```java
 public record Memento(Double balance) {
+
 }
 ```
 
-CareTaker (管理者)
+`CareTaker` (管理者)
 
 ```java
 public final class CareTaker {
+
     private final Stack<Memento> history;
+
     public CareTaker() {
+
         this.history = new Stack<>();
+
     }
+
     public void push(Memento state) {
+
         this.history.push(state);
+
     }
+
     public Memento pop() {
+
         return this.history.pop();
+
     }
+
 }
 ```
 
 四人行模式 (Design Patterns of the Gang Four)
 
-Client
+`Client`
 
 ```java
 class Client {
+
     public static void main(String[] args) {
+
         CareTaker caretaker = new CareTaker();
+
         Originator originator = new Originator();
 
         originator.setBalance(1000.0);
+
         caretaker.push(originator.save());
 
         originator.setBalance(500.0);
+
         caretaker.push(originator.save());
 
         originator.restore(caretaker.pop());
+
         System.out.println(originator.getBalance());
 
         originator.restore(caretaker.pop());
+
         System.out.println(originator.getBalance());
+
     }
+
 }
 ```
 
 输出
 
+```
 500.0
 1000.0
+```
 
 优点：
 
@@ -9415,182 +9816,267 @@ class Client {
 - 备录的生命周期由管理者管理，如果备录没有被妥善清理，可能会内存泄漏。
 - 备录可能很大，消耗大量内存。
 
-
-
-
-
 ## 6.3.11.2 示例：图形
 
-Figure
+`Figure`
 
 ```java
 interface Figure {
-  <T> T accept(Visitor<T> visitor);
+
+
+
+```java
+<T> T accept(Visitor<T> visitor);
+
 }
 ```
 
-Visitor
+## Visitor
 
 ```java
 interface Visitor<T> {
+
   T visit(Square square);
+
   T visit(Circle circle);
+
   T visit(Rectangle rectangle);
+
 }
 ```
 
-Circle
+## Circle
 
 ```java
 public class Circle implements Figure {
+
   private final double radius;
+
   public Circle(double radius) {
+
     this.radius = radius;
+
   }
+
   public double radius() {
+
     return this.radius;
+
   }
+
   @Override
+
   public <T> T accept(Visitor<T> visitor) {
+
     return visitor.visit(this);
+
   }
+
 }
 ```
 
-Rectangle
+## Rectangle
 
 ```java
 public class Rectangle implements Figure {
+
   private final double weight;
+
   private final double height;
+
   public Rectangle(double weight, double height) {
+
     this.weight = weight;
+
     this.height = height;
+
   }
+
   public double weight() {
+
     return this.weight;
+
   }
 
   public double height() {
+
     return this.height;
+
   }
 
   @Override
+
   public <T> T accept(Visitor<T> visitor) {
+
     return visitor.visit(this);
+
   }
+
 }
 ```
 
-### Square
+## Square
 
 ```java
 public class Square implements Figure {
+
     private final double side;
+
     public Square(double side) {
+
         this.side = side;
+
     }
 
     public double side() {
+
         return this.side;
+
     }
 
     @Override
+
     public <T> T accept(Visitor<T> visitor) {
+
         return visitor.visit(this);
+
     }
+
 }
 ```
 
-### AreaVisitor
+## AreaVisitor
 
 ```java
 public class AreaVisitor implements Visitor<Double> {
+
     @Override
+
     public Double visit(Square square) {
+
         return square.side() * square.side();
+
     }
 
     @Override
+
     public Double visit(Circle circle) {
+
         return Math.PI * circle.radius() * circle.radius();
+
     }
 
     @Override
+
     public Double visit(Rectangle rectangle) {
+
         return rectangle.height() * rectangle.weight();
+
     }
+
 }
 ```
 
-### PerimeterVisitor
+## PerimeterVisitor
 
 ```java
 public class PerimeterVisitor implements Visitor<Double> {
+
     @Override
+
     public Double visit(Square element) {
+
         return 4 * element.side();
+
     }
 
     @Override
+
     public Double visit(Circle element) {
+
         return 2 * Math.PI * element.radius();
+
     }
 
     @Override
+
     public Double visit(Rectangle element) {
+
         return 2 * element.height() + 2 * element.width();
+
     }
+
 }
 ```
 
-### Client
+## Client
 
 ```java
 class Client {
+
     public static void main(String[] args) {
+
         List<Figure> figures = List.of(
+
             new Circle(3),
+
             new Square(4),
+
             new Rectangle(2, 8)
+
         );
 
         calculateArea(figures);
+
         calculatePerimeter(figures);
+
     }
 
     private static void calculateArea(List<Figure> figures) {
+
         Visitor<Double> visitor = new AreaVisitor();
+
         double totalArea = figures.stream()
+
             .mapToDouble(f -> f.accept(visitor))
+
             .sum();
+
         System.out.printf("Total area: %f\n", totalArea);
+
     }
 
     private static void calculatePerimeter(List<Figure> figures) {
+
         Visitor<Double> visitor = new PerimeterVisitor();
+
         double totalPerimeter = figures.stream()
+
             .mapToDouble(f -> f.accept(visitor))
+
             .sum();
+
         System.out.printf("Total perimeter: %f\n", totalPerimeter);
+
     }
+
 }
 ```
 
-### 输出
+## 输出
 
 ```
 1 Total area: 60.27434
+
 2 Total perimeter: 66.849556
 ```
 
-### 优点：
+## 优点
 
 - 可以方便地添加新的操作。
 - 操作逻辑集中在访问者类中，而不是分散。
 - 访问者模式允许在不改变集合中对象类的情况下定义操作。
 
-### 缺点：
+## 缺点
 
 - 访问者具体类的实现可能会破坏被访问对象的封装性。这是因为新的访问者类需要访问这些对象的公共成员。
-

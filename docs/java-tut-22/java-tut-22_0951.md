@@ -1,3 +1,4 @@
+
 # 介绍
 
 > 原文：[`docs.oracle.com/javase/tutorial/extra/generics/intro.html`](https://docs.oracle.com/javase/tutorial/extra/generics/intro.html)
@@ -14,7 +15,6 @@ JDK 5.0 引入了 Java 编程语言的几个新扩展之一就是*泛型*。
 List myIntList = new LinkedList(); // 1
 myIntList.add(new Integer(0)); // 2
 Integer x = (Integer) myIntList.iterator().next(); // 3        
-
 ```
 
 第 3 行的强制类型转换略显烦人。通常，程序员知道特定列表中放入了什么类型的数据。然而，强制类型转换是必不可少的。编译器只能保证迭代器返回一个`Object`。为了确保将其分配给类型为`Integer`的变量是类型安全的，需要进行强制类型转换。
@@ -28,7 +28,6 @@ List<Integer>
     myIntList = new LinkedList<Integer>(); // 1'
 myIntList.add(new Integer(0)); // 2'
 Integer x = myIntList.iterator().next(); // 3'
-
 ```
 
 注意变量`myIntList`的类型声明。它指定这不仅仅是一个任意的`List`，而是一个`Integer`的`List`，写作`List<Integer>`。我们说`List`是一个接受*类型参数*的泛型接口--在这种情况下是`Integer`。我们在创建列表对象时也指定了类型参数。

@@ -1,13 +1,9 @@
+
 # Java 编程简上手：通过实战项目、实用示例和清晰讲解学习 Java 的初学者指南
-
-
 
 ![](img/image_rsrc77G.jpg)
 
-
 ***
-
-
 
 # 序言
 
@@ -18,6 +14,7 @@
 ## 你将学到
 
 在本书结束，你将能够：
+
 - 使用 IntelliJ IDEA 或 VS Code 设置开发环境。
 - 编写简洁高效的代码。
 - 理解 Java 语法、变量和数据类型。
@@ -53,6 +50,7 @@ public class HelloWorld {
 ```
 
 解释：
+
 - `public class HelloWorld` 定义了一个名为 `HelloWorld` 的类。
 - `public static void main(String[] args)` 是任何 Java 程序的入口。
 - `System.out.println("Hello, Java!")` 将文本打印到控制台。
@@ -73,18 +71,16 @@ java HelloWorld
 ### 4. 使用附录和速查表
 
 在书的最后，你将找到一些快速参考资料，例如：
+
 - Java 语法速查表
 - IDE 快捷键
 - 额外的学习资源
 
 当你自己独立编码并需要快速回顾时，这些资料非常有帮助。
 
-
-
-
 最后一章将挑战你把所有内容整合成一个完整的基于控制的 Java 应用程序。我们将引导你逐步构建一个简单的图书管理系统或 ATM 模拟。你将学习如何跨多个类结构化代码、处理用户输入、管理文件，并像开发者一样思考。
 
-* *
+***
 
 # 第 1 章：Java 入门
 
@@ -92,7 +88,7 @@ java HelloWorld
 
 Java 是一种高级、面向对象且平台无关的编程语言，由 Sun Microsystems 公司于 1995 年开发（现归 Oracle 骨文所有）。它被广泛用于构建桌面应用程序、Web 应用程序、移动应用（尤其是 Android）以及企业系统。
 
-Java 最强大的特性之一是其“编写一次，随运行”的哲学。Java 代码被编译成字节码，并在 Java 虚拟机（`JVM`）上运行。这意味着你可以在一个操作系统（如 Windows）上编写 Java 程序，并在无需任何更改的情况下在另一个操作系统（如 macOS 或 Linux）上运行。
+Java 最强大的特性之一是其“编写一次，随处运行”的哲学。Java 代码被编译成字节码，并在 Java 虚拟机（`JVM`）上运行。这意味着你可以在一个操作系统（如 Windows）上编写 Java 程序，并在无需任何更改的情况下在另一个操作系统（如 macOS 或 Linux）上运行。
 
 ### Java 的主要特性：
 
@@ -102,11 +98,11 @@ Java 最强大的特性之一是其“编写一次，随运行”的哲学。Jav
 - **丰富的标准库**：Java 自带了一系列内置 API。
 - **被广泛采用**：用于从金融、电信到游戏和嵌入式系统的各个行业。
 
-从本质上说，Java 是成熟、健且经过实检验的。得益于性能、安全性和广泛适用性的结合，它仍然是全球最流行的语言之一。
+从本质上说，Java 是成熟、健壮且经过实战检验的。得益于性能、安全性和广泛适用性的结合，它仍然是全球最流行的语言之一。
 
-* *
+***
 
-## 1.2 为什么今天学习学习 Java？
+## 1.2 为什么今天学习 Java？
 
 即使在使用了几十年后，Java 仍然是最相关且需求量最大的编程语言之一。以下是它仍然是一门优秀学习语言的原因：
 
@@ -122,7 +118,7 @@ Java 最强大的特性之一是其“编写一次，随运行”的哲学。Jav
 - 有超过 800 万开发者活跃使用 Java。
 - Google、Amazon、Netflix 和 IBM 等公司广泛使用 Java。
 
-* *
+***
 
 ## 1.3 安装 Java 和 IntelliJ IDEA（或 VS Code）
 
@@ -136,20 +132,23 @@ Java 最强大的特性之一是其“编写一次，随运行”的哲学。Jav
 从 Oracle 或 OpenJDK 官方网站下载最新的 Java SE 开发工具包。
 
 **选项 A：Oracle JDK（推荐初学者使用）**
+
 - **网站**：`https://www.oracle.com/java/technologies/javase-downloads.html`
 
 **选项 B：OpenJDK**
+
 - **网站**：`https://jdk.java.net/`
 
 选择适用于你操作系统（Windows, macOS, Linux）的版本，下载安装程序并按照设置说明操作。
 
 安装完成后，验证安装情况：
 
-```
+```bash
 java -version
 ```
 
 预期输出（截至 2025 年）：
+
 ```
 java version "21.0.2" 2025-01-16 LTS
 Java(TM) SE Runtime Environment (build 21.0.2+13-LTS)
@@ -161,27 +160,12 @@ Java HotSpot(TM) 64-Bit Server VM (build 21.0.2+13-LTS, mixed mode)
 JetBrains 开发的 IntelliJ IDEA 是一款专为 Java 开发定制的功能丰富的 IDE。
 
 1. 从此处下载：`https://www.jetbrains.com/idea/download`
-2. JetBrains 开发的 IntelliJ IDEA 是一款专为 Java 开发定制的功能丰富的 IDE。
-3. 从此处下载：`https://www.jetbrains.com/idea/download`
-4. JetBrains 开发的 IntelliJ IDEA 是一款专为 Java 开发定制的功能丰富的 IDE。
-5. 从此处下载：`https://www.jetbrains.com/idea/download`
-6. JetBrains 开发的 IntelliJ IDEA 是一款专为 Java 开发定制的功能丰富的 IDE。
-7. 从此处下载：`https://www.jetbrains.com/idea/download`
-8. JetBrains 开发的 IntelliJ IDEA 是一款专为 Java 开发定制的功能丰富的 IDE。
-9. 从此处下载：`https://www.jetbrains.com/idea/download`
-10. JetBrains 开发的 IntelliJ IDEA 是一款专为 Java 开发定制的功能丰富的 IDE。
-11. 从此处下载：`https://www.jetbrains.com/idea/download`
-12. JetBrains 开发的 IntelliJ IDEA 是一款专为 Java 开发定制的功能丰富的 IDE。
-13. 从此处下载：`https://www.jetbrains.com/idea/download`
-14. JetBrains 开发的 IntelliJ IDEA 是一款专为 Java 开发定制的功能丰富的 IDE。
-15. 从此处下载：`https://www.jetbrains.com/idea/download`
-16. JetBrains 开发的 IntelliJ IDEA 是一款专为 Java 开发定制的功能丰富的 IDE。
-17. 从此处下载：`https://www.jetbrains.com/idea/download`
-18. JetBrains 开发的 IntelliJ IDEA 是一款专为 Java 开发定制的功能丰富的 IDE。
-19. 从此处下载：`https://www.jetbrains.com/idea/download`
-20. JetBrains 开发的 IntelliJ IDEA 是一款专为 Java 开发定制的功能丰富的 IDE。
+2. 选择 Community Edition（免费）或 Ultimate Edition（付费，含更多功能）。
+3. 运行安装程序并按照提示操作。
+4. 启动 IntelliJ IDEA，在首次运行时选择主题、键盘映射等偏好设置。
+5. 点击 New Project 开始。
 
-* *
+***
 
 ## 1.4 编写你的第一个程序
 
@@ -190,13 +174,14 @@ JetBrains 开发的 IntelliJ IDEA 是一款专为 Java 开发定制的功能丰�
 ### 逐步步骤：在 IntelliJ IDEA 中创建项目
 
 1. 打开 IntelliJ IDEA。
-2. New Project（新建项目）。
+2. 点击 New Project（新建项目）。
 3. 选择 Java 类型。
 4. 设置 SDK 为 `21`。
 5. 为你的项目命名为 `FirstApp`。
 6. 点击 Finish（完成）。
 
 现在，在 `src` 目录下：
+
 1. 右键点击 New → Java Class。
 2. 将类命名为 `Main`。
 
@@ -227,11 +212,12 @@ public class Main {
 - `System.out.println("Hello, World!");`：这是一个向控制台打印文本的语句。
     - `System` 是一个内置 Java 类。
     - `out` 是一个静态字段（`PrintStream` 的实例）。
-    - `println()` 是一个输出字符串并换跟换行的的方法。
+    - `println()` 是一个输出字符串并换行的方法。
 
 ### 编译并运行程序
 
 如果你使用 IntelliJ IDEA：
+
 1. 点击 `main` 方法旁边或右上角的绿色播放按钮。
 2. 你将在下方的控制台中看到输出：`Hello, World!`
 
@@ -242,16 +228,13 @@ javac Main.java // 编译文件
 java Main       // 运行编译后的程序
 ```
 
-
-
-
-# 常见错误及避免方法
+### 常见错误及避免方法
 
 - **文件名与类名不匹配**：如果你的类命名为 `Main`，那么你的文件必须命名为 `Main.java`。
 - **缺少分号**：Java 中的每条语句必须以分号 `;` 结尾。
 - **大小写错误**：Java 对大小写敏感。`System` 必须大写。`system.out.println` 将导致编译错误。
 
-## 扩展程序：添加第二行
+### 扩展程序：添加第二行
 
 你可以修改程序来打印多行：
 
@@ -266,18 +249,20 @@ public class Main {
 
 输出：
 
-```css
+```text
 Hello, World!
 Welcome to Java Programming.
 ```
 
 这展示了如何逐行构建程序以添加更多功能。
 
-## 从第一天开始良好实践
+### 从第一天开始良好实践
 
 - **使用有意义的类名**：在实际应用中，使用反映用途的名称，如 `InvoiceManager` 或 `StudentPortal`。
 - **保持代码整洁可读**：缩进、一致的空格和注释有助于让你的代码更容易理解。
 - **始终测试你的代码**：在编写完小部分后运行程序，以及早发现错误。
+
+***
 
 # 第 2 章：Java 基础
 
@@ -285,19 +270,19 @@ Welcome to Java Programming.
 
 ## 2.1 变量和数据类型
 
-每个 Java 程序都会处理数据——数字、文本、布尔逻辑等。为了处理这些数据，你需要一种将它们存储在内存中的方法。这就是变量用用。在本节中，我们将介绍变量是什么、如何使用以及 Java 提供的各种数据类型。
+每个 Java 程序都会处理数据——数字、文本、布尔逻辑等。为了处理这些数据，你需要一种将它们存储在内存中的方法。这就是变量的用处。在本节中，我们将介绍变量是什么、如何使用以及 Java 提供的各种数据类型。
 
-## 什么是变量？
+### 什么是变量？
 
 变量仅仅是计算机内存中一个命名的存储位置，用于存放值。你给它起一个名字，分配一个值，然后在代码中通过该名称引用它。
 
-### 变量声明语法
+#### 变量声明语法
 
 ```java
 dataType variableName = value;
 ```
 
-### 示例：
+#### 示例：
 
 ```java
 int age = 30;
@@ -306,15 +291,16 @@ double temperature = 22.5;
 ```
 
 在上面的示例中：
+
 - `int` 声明了一个整数变量 `age`，值为 `30`。
 - `String` 声明了一个文本变量 `name`，值为 `"Alice"`。
 - `double` 声明了一个小数数字 `temperature`，值为 `22.5`。
 
-## Java 的数据类型
+### Java 的数据类型
 
 Java 有两大类数据类型：
 
-### 1. 基本数据类型
+#### 1. 基本数据类型
 
 这些是最基础的数据类型，且不是对象。
 
@@ -329,7 +315,7 @@ Java 有两大类数据类型：
 | char | 16 | 单个字符 | `char c = 'A';` |
 | boolean | 1 | 真或假 | `boolean active = true;` |
 
-### 2. 引用类型
+#### 2. 引用类型
 
 这些包括对象和数组。目前最常用的引用类型是 `String`。
 
@@ -341,7 +327,7 @@ String greeting = "Welcome to Java!";
 
 Java 是静态类型，这意味着每个变量必须有一个声明的类型。有时，你需要将一种类型转换为另一种。
 
-### 隐式转换（宽化）
+#### 隐式转换（宽化）
 
 在转换为更大的类型时自动发生。
 
@@ -350,7 +336,7 @@ int x = 10;
 double y = x; // 将 int 转换为 double
 ```
 
-### 显式转换（窄化）
+#### 显式转换（窄化）
 
 在转换为较小类型时需要强制转换。
 
@@ -359,9 +345,9 @@ double a = 5.75;
 int b = (int) a; // 手动将 double 转换为 int (b 变为 5)
 ```
 
-## 最终变量（常量）
+### 最终变量（常量）
 
-使用 `final` 关键字声明一个值不应改变变量。
+使用 `final` 关键字声明一个值不应改变的变量。
 
 ```java
 final double PI = 3.14159;
@@ -369,14 +355,21 @@ final double PI = 3.14159;
 
 稍后重新赋值 `PI` 将导致编译错误。
 
-## 命名规范
+### 命名规范
 
 遵循 Java 命名规范有助于提高可读性：
+
 - 变量使用驼峰法 (`camelCase`)：`userAge`, `maxSpeed`。
 - 变量名应该有意义：`totalPrice` 比 `tp` 好。
 - 避免以数字开头或使用保留关键字（如 `class`, `int`, `static`）。
 
-## 实际示例
+### 实际示例
+
+
+
+# Java 基础教程
+
+## 数据类型演示
 
 让我们写一个短的 Java 程序来演示所有类型：
 
@@ -409,9 +402,6 @@ public class DataTypes {
 }
 ```
 
-
-
-
 ```java
 System.out.println("Access granted.");
 } else {
@@ -419,7 +409,7 @@ System.out.println("Access granted.");
 }
 ```
 
-* *
+---
 
 ### 5. 一元运算符
 
@@ -442,7 +432,7 @@ num++;  // num 变为 6
 System.out.println("Current value: " + num);
 ```
 
-* *
+---
 
 ### 6. 位运算符（高级）
 
@@ -465,7 +455,7 @@ System.out.println(a & b); // 1  (0001)
 System.out.println(a | b); // 7  (0111)
 ```
 
-* *
+---
 
 ### 7. 三元运算符
 
@@ -476,7 +466,7 @@ String result = (age >= 18) ? "Adult" : "Minor";
 System.out.println(result);
 ```
 
-* *
+---
 
 ## 表达式
 
@@ -489,13 +479,13 @@ int result = (a + b) * 2;
 System.out.println("Result: " + result); // 输出 30
 ```
 
-* *
+---
 
 ## 运算符优先级和结合性
 
 Java 根据运算符优先级和结合性评估表达式。
 
-- `*`, `/` 和 `%` 的优先级高于 `+` 和 `-`。
+- `*`、`/` 和 `%` 的优先级高于 `+` 和 `-`。
 - 括号 `()` 可以覆盖优先级。
 
 示例：
@@ -505,13 +495,13 @@ int result = 10 + 5 * 2;      // 输出 20
 int correct = (10 + 5) * 2;  // 输出 30
 ```
 
-* *
+---
 
 ## 2.3 Java 中的输入与输出
 
-输入和输出（I/O）是每个应用程序的基础方面。它们允许你的程序与用户进行交互——请求数据并显示结果。在本节中，你将学习如何使用现代且易于初者的技术在 Java 中执行输入输出。
+输入和输出（I/O）是每个应用程序的基础方面。它们允许你的程序与用户进行交互——请求数据并显示结果。在本节中，你将学习如何使用现代且易于初学者的技术在 Java 中执行输入输出。
 
-* *
+---
 
 ## 使用 System.out.println() 控制台输出
 
@@ -563,25 +553,25 @@ public class FormattedOutput {
 - `%d` 格式化整数。
 - `%n` 是与平台相关的换行。
 
-* *
+---
 
 ## 使用 Scanner 获取用户输入
 
 Java 提供了 `Scanner` 类（位于 `java.util` 包中）来从包括键盘在内的各种源读取输入。
 
-### 第 1 ：导入 Scanner 类
+### 步骤 1：导入 Scanner 类
 
 ```java
 import java.util.Scanner;
 ```
 
-### 第 2 ：创建 Scanner 对象
+### 步骤 2：创建 Scanner 对象
 
 ```java
 Scanner scanner = new Scanner(System.in);
 ```
 
-### 第 3 ：读取用户输入
+### 步骤 3：读取用户输入
 
 让我们来看基础示例，获取用户的姓名和年龄：
 
@@ -603,6 +593,8 @@ public class InputExample {
 }
 ```
 
+---
+
 ## Common Scanner 方法
 
 | 方法 | 描述 |
@@ -613,7 +605,7 @@ public class InputExample {
 | `nextDouble()` | 读取一个浮点数 |
 | `nextBoolean()` | 读取一个布尔值 |
 
-* *
+---
 
 ## Scanner 的常见陷阱
 
@@ -634,6 +626,8 @@ public class ScannerPitfall {
 }
 ```
 
+---
+
 ## 解决方法
 
 在 `nextInt()` 之后调用一次 `nextLine()` 来消耗掉换行符。
@@ -653,21 +647,19 @@ public class ScannerSolution {
 }
 ```
 
-
-
-
+---
 
 如果你正在编写库或可复用类，请使用 Javadoc 对公共方法和类进行文档。
 
-* * *
+---
 
-# 编码风格：编写美的 Java 代码
+# 编码风格：编写美观的 Java 代码
 
 注释有助于解释代码，但你的编码风格首先决定了代码的可读性。
 
 Java 有一种被广泛接受的编码风格。让我们来看一些要点：
 
-* * *
+---
 
 ### 1. 使用有意义的名称
 
@@ -683,7 +675,7 @@ int maxAttempts = 10;
 String customerName = "John";
 ```
 
-* * *
+---
 
 ### 2. 使用驼峰命名法 (Camel Case) 和大驼峰命名法 (Pascal Case)
 
@@ -700,7 +692,7 @@ void calculateTotal() {}
 public class BankAccount {}
 ```
 
-* * *
+---
 
 ### 3. 缩进与括号
 
@@ -711,19 +703,19 @@ public class BankAccount {}
 if (age >= 18)
     System.out.println("Adult");
 
-// GOOD: 致的括号
+// GOOD: 一致的括号
 if (age >= 18) {
     System.out.println("Adult");
 }
 ```
 
-* * *
+---
 
 ### 4. 保持行长度短
 
 每行目标为 80–100 个字符。如果某行太长，考虑将其断开。
 
-* * *
+---
 
 ### 5. 逻辑化组织代码
 
@@ -744,7 +736,7 @@ public class User {
 }
 ```
 
-* * *
+---
 
 ### 6. 带代码的注释块示例
 
@@ -754,8 +746,8 @@ public class User {
 import java.util.Scanner;
 
 /**
-* 此类演示了一个基础的用户登录模拟
-* 使用了良好的注释和编码风格。
+ * 此类演示了一个基础的用户登录模拟
+ * 使用了良好的注释和编码风格。
  */
 public class LoginApp {
     public static void main(String[] args) {
@@ -776,19 +768,19 @@ public class LoginApp {
     }
 
     /**
-    * 检查提供的用户名和密码是否有效。
-    * 这是一个用于演示的模拟检查。
-    * @param user 用户名
-    * @param pass 密码
-    * @return 如果凭据匹配则返回 true；否则返回 false
-    */
+     * 检查提供的用户名和密码是否有效。
+     * 这是一个用于演示的模拟检查。
+     * @param user 用户名
+     * @param pass 密码
+     * @return 如果凭据匹配则返回 true；否则返回 false
+     */
     public static boolean isAuthenticated(String user, String pass) {
         return user.equals("admin") && pass.equals("1234");
     }
 }
 ```
 
-* * *
+---
 
 # 实践项目：简单计算器
 
@@ -796,7 +788,7 @@ public class LoginApp {
 
 这个计算器将允许用户使用整洁的控制台界面执行基础算术运算——加、减、乘、除。
 
-* * *
+---
 
 ## 项目概述
 
@@ -804,9 +796,9 @@ public class LoginApp {
 - **涵盖技能**：变量、数据类型、输入输出、条件判断、操作符和方法使用。
 - **所需工具**：IntelliJ IDEA、VS Code 或任何 Java IDE/编辑器，以及安装 Java 17 或更高版本。
 
-* * *
+---
 
-## 第 1 ：设置项目
+## 步骤 1：设置项目
 
 在项目目录下创建一个名为 `SimpleCalculator.java` 的新 Java 文件。
 
@@ -817,20 +809,22 @@ SimpleCalculator/
 
 在你的 IDE 或编辑器中打开此文件。
 
-* * *
+---
 
-## 第 2 ：编写代码
+## 步骤 2：编写代码
 
 下面是完整的、带注释的代码。稍后我们将对其进行逐步解析。
 
 ### Java: SimpleCalculator.java
 
+
+
 ```java
 import java.util.Scanner;
 
 /**
-* SimpleCalculator
-* 一个执行基础算术运算的控制台计算器。
+ * SimpleCalculator
+ * 一个执行基础算术运算的控制台计算器。
  */
 public class SimpleCalculator {
     public static void main(String[] args) {
@@ -882,28 +876,33 @@ public class SimpleCalculator {
 }
 ```
 
-* * *
+---
 
-## 第 3 ：理解代码
+## 第 3 课：理解代码
 
 ### 导入 Scanner
+
 我们使用 `java.util` 中的 `Scanner` 来读取输入。
 
 ### 读取数字
+
 我们读取 `double` 类型的值。
 
 ### 选择操作
+
 我们使用 `char` 来捕获操作符。
 
 ### Switch 语句
+
 使用 `switch` 来处理不同的情况。
 
 ### 除法检查
+
 在除法之前，我们确保第二个数字不为零。
 
-* * *
+---
 
-## 第 4 ：示例输出
+## 第 4 课：示例输出
 
 ```text
 Welcome to the Simple Calculator
@@ -913,7 +912,7 @@ Choose an operation (+, -, *, /): +
 Result: 15.0
 ```
 
-* * *
+---
 
 ## 额外练习贴士
 
@@ -922,7 +921,7 @@ Result: 15.0
 - 扩展计算器更多功能：模 (`%`)、平方根或幂。
 - 使用 `try-catch` 处理输入错误。
 
-* * *
+---
 
 ## 你学到了
 
@@ -931,9 +930,6 @@ Result: 15.0
 - 使用 `switch-case` 逻辑进行分支
 - 在除法前进行条件检查
 - 编写注释整洁且可维护的代码
-
-
-
 
 ```java
 System.out.println("You passed the test.");
@@ -947,7 +943,7 @@ System.out.println("You passed the test.");
 - 如果 `score` 大于或等于 `60`，则显示第一个消息。
 - 否则，显示 `else` 块中的消息。
 
-***
+---
 
 ### if-else if 阶梯
 
@@ -974,7 +970,7 @@ if (grade >= 90) {
 - 条件从上到下进行评估。
 - 第一个结果为真的条件将执行其代码块，其余部分将被跳过。
 
-***
+---
 
 ### 条件中的逻辑运算符
 
@@ -995,7 +991,7 @@ if (age >= 18 && hasLicense) {
 }
 ```
 
-***
+---
 
 ### switch 语句
 
@@ -1042,7 +1038,7 @@ switch (day) {
 - `break` 用于停止检查后续的 case。
 - 如果没有 `case` 匹配，则执行 `default`。
 
-***
+---
 
 ### 增强型 switch (Java 14+)
 
@@ -1067,7 +1063,7 @@ System.out.println("Day: " + dayName);
 - 模板代码更少。
 - 更整洁且不易出错。
 
-***
+---
 
 ### 真实世界示例：简单登录
 
@@ -1089,7 +1085,7 @@ if (username.equals("admin") && password.equals("secret123")) {
 - 我们使用 `.equals()` 来比较字符串值。
 - 条件检查 `username` 和 `password` 是否都匹配。
 
-***
+---
 
 ### 最佳实践
 
@@ -1098,7 +1094,7 @@ if (username.equals("admin") && password.equals("secret123")) {
 - 保持条件的可读性；避免深度嵌套的 `if` 语句。
 - 在组合逻辑条件时对其进行分组并使用括号。
 
-***
+---
 
 ## 3.2 循环 (for, while, do-while)
 
@@ -1106,7 +1102,7 @@ if (username.equals("admin") && password.equals("secret123")) {
 
 在本节中，我们将探索 Java 中三种常见的循环类型：`for`、`while` 和 `do-while`。
 
-***
+---
 
 ### for 循环
 
@@ -1140,7 +1136,7 @@ public class ForLoopExample {
 
 该循环运行五次并打印从 1 到 5 的数字。
 
-***
+---
 
 ### while 循环
 
@@ -1173,7 +1169,7 @@ public class WhileLoopExample {
 - 条件 `i <= 5` 在每次迭代前进行检查。
 - 如果条件为真，则执行循环。
 
-***
+---
 
 ### do-while 循环
 
@@ -1206,7 +1202,7 @@ public class DoWhileExample {
 - 即使初始条件为假，体也会运行一次。
 - 适用于你需要至少执行一次块的情况（例如菜单）。
 
-***
+---
 
 ### 循环比较
 
@@ -1216,9 +1212,13 @@ public class DoWhileExample {
 | `while` | 未知次数 | 基于条件 |
 | `do-while` | 至少执行一次 | 保证运行 |
 
+---
 
+### 嵌套循环
 
+嵌套循环是指在一个循环内部放置另一个循环。它们常用于多维数据处理或模式打印。
 
+示例：乘法表
 
 ```java
 public static void main(String[] args) {
@@ -1232,11 +1232,13 @@ public static void main(String[] args) {
 ```
 
 ### 解析：
+
 - 外层循环从 `1` 运行到 `5`。
 - 对于每个 `i` 的值，内层循环打印 `j = 1` 到 `10` 的 `i * j`。
 - `\t` 添加间距用于格式化。
 
 ### 输出：
+
 ```
 1 2 3 4 5 6 7 8 9 10
 2 4 6 8 10 12 14 16 18 20
@@ -1245,12 +1247,14 @@ public static void main(String[] args) {
 5 10 15 20 25 30 35 40 45 50
 ```
 
-***
+---
 
 ### 使用嵌套循环打印模式
+
 嵌套循环经常用于编程练习中的模式生成。这是一个经典的例子。
 
 #### 示例：直角三角形模式
+
 ```java
 public class TrianglePattern {
     public static void main(String[] args) {
@@ -1266,10 +1270,12 @@ public class TrianglePattern {
 ```
 
 ### 解析：
+
 - 外层循环控制行数。
 - 内层循环按增加打印星号。
 
 ### 输出：
+
 ```
 *
 * *
@@ -1278,14 +1284,16 @@ public class TrianglePattern {
 * * * * *
 ```
 
-***
+---
 
 ### 循环控制语句
 
 #### 1. `break` 语句
+
 `break` 语句会立即退出其所在的循环，跳过所有剩余迭代。
 
 ##### 示例：在第一个偶数处停止
+
 ```java
 public class BreakExample {
     public static void main(String[] args) {
@@ -1300,12 +1308,14 @@ public class BreakExample {
 }
 ```
 
-***
+---
 
 #### 2. `continue` 语句
+
 `continue` 语句跳过当前迭代并跳转到下一个循环周期。
 
-#### 示例：跳过偶数
+##### 示例：跳过偶数
+
 ```java
 public class ContinueExample {
     public static void main(String[] args) {
@@ -1319,12 +1329,16 @@ public class ContinueExample {
 }
 ```
 
-***
+---
 
 ### 使用 `break` 和 `continue` 的嵌套循环
+
 你可以在嵌套循环中使用 `break` 和 `continue`，但重要的是知道你影响的是哪一个循环。
 
 #### 示例：从内层循环跳出外层循环
+
+
+
 ```java
 public class NestedBreakExample {
     public static void main(String[] args) {
@@ -1342,6 +1356,7 @@ public class NestedBreakExample {
 ```
 
 ### 输出：
+
 ```
 i = 1, j = 1
 i = 1, j = 2
@@ -1352,6 +1367,7 @@ i = 2, j = 1
 ***
 
 ### 最佳实践
+
 - 仅在必要时使用嵌套循环。过度使用会使代码变得复杂且效率低下。
 - 如果循环嵌套深度超过两层，请优先使用描述性的循环变量名。
 - 清晰地注释你的循环逻辑，特别是当使用控制语句时。
@@ -1360,9 +1376,11 @@ i = 2, j = 1
 ***
 
 ### 小挑战
+
 使用嵌套循环打印一个从 1 到 25 的数字正方形。
 
 #### 预期输出：
+
 ```
 1 2 3 4 5
 6 7 8 9 10
@@ -1372,6 +1390,7 @@ i = 2, j = 1
 ```
 
 #### 答案：
+
 ```java
 public class NumberGrid {
     public static void main(String[] args) {
@@ -1390,11 +1409,15 @@ public class NumberGrid {
 ***
 
 ### 动手实践项目：猜数字游戏
+
 ### 目标
+
 在这个项目中，计算机将随机选择一个 1 到 100 之间的数字。用户将尝试猜它。程序将提供反馈直到猜中。
 
 ### 第一步：设置
+
 我们将通过导入必要的库并定义结构开始。
+
 ```java
 import java.util.Scanner;
 import java.util.Random;
@@ -1408,10 +1431,14 @@ public class GuessingGame {
         int attempts = 0;
 
         System.out.println("欢迎来到猜数字游戏!");
+    }
+}
 ```
 
 ### 第二步：逻辑
+
 在我们学习了循环和条件语句之后，现在是时候付诸实践了。
+
 ```java
         while (guess != secretNumber) {
             System.out.print("输入你的猜测: ");
@@ -1432,10 +1459,13 @@ public class GuessingGame {
 ```
 
 ### 第三步：增强体验
+
 你可以通过添加更多功能来进一步改进游戏，例如：
 
 **输入验证**：目前程序假设用户总是输入有效的整数。如果用户输入了字符串或其他意外内容怎么办？添加输入验证会让游戏更健壮。
+
 输入验证示例：
+
 ```java
 if (!scanner.hasNextInt()) {
     System.out.println("请输入有效的数字!");
@@ -1446,7 +1476,9 @@ if (!scanner.hasNextInt()) {
 ```
 
 **范围更改**：不再是总是猜 1 到 100 之间的数字，而是允许用户在游戏开始时设置范围。
+
 范围自定义示例：
+
 ```java
 System.out.print("输入下限： ");
 int lowerBound = scanner.nextInt();
@@ -1456,30 +1488,21 @@ int secretNumber = random.nextInt(upperBound - lowerBound + 1) + lowerBound;
 ```
 
 **重玩选项**：在游戏结束后，询问用户是否想再次玩。这会让游戏更有趣！
+
 重玩功能示例：
+
 ```java
 System.out.print("你想再玩一次吗？(y/n) ");
 String playAgain = scanner.next();
 if (playAgain.equalsIgnoreCase("y")) {
     // 重新启动游戏的逻辑
-}
-```
-
-
-
-
-
-```java
-main(args); // 通过再次调用 main 方法来重启游戏
-
+    main(args); // 通过再次调用 main 方法来重启游戏
 } else {
-
     System.out.println("Thanks for playing!");
-
 }
 ```
 
-### 第 4 ：运行游戏
+### 第 4 步：运行游戏
 
 一旦你完成了代码，就可以运行该程序了。游戏将持续提示用户猜测，直到用户给出正确答案为止。
 
@@ -1493,7 +1516,7 @@ main(args); // 通过再次调用 main 方法来重启游戏
 
 ### 什么是方法？
 
-在 Java 中，方法是执行特定任务的 own 代码块。你可以将方法想象成其他编程语言中的函数，旨在处理特定的操作，例如打印消息、执行计算，甚至与用户输入进行交互。
+在 Java 中，方法是执行特定任务的代码块。你可以将方法想象成其他编程语言中的函数，旨在处理特定的操作，例如打印消息、执行计算，甚至与用户输入进行交互。
 
 ### 创建方法
 
@@ -1525,7 +1548,7 @@ public class HelloWorld {
     public static void main(String[] args) {
         // 调用 greet() 方法
         greet();  // 这将调用 greet() 方法并打印消息
-}
+    }
 }
 ```
 
@@ -1535,7 +1558,7 @@ public class HelloWorld {
 * 该方法在 `main()` 方法内部被调用，它是程序的入口点。
 * 当我们运行这段代码时，输出为：
 
-```css
+```
 Hello, welcome to learning Java!
 ```
 
@@ -1545,7 +1568,7 @@ Hello, welcome to learning Java!
 
 方法调用主要有两种类型：
 
-1. 静态方法方法调用（Static Method Call）：当你调用一个用 `static` 关键字定义的方法时。
+1. 静态方法调用（Static Method Call）：当你调用一个用 `static` 关键字定义的方法时。
 2. 实例方法调用（Instance Method Call）：当你调用属于类实例的方法时（即非静态方法）。
 
 #### 示例：调用方法
@@ -1571,10 +1594,10 @@ public class Calculator {
 
 * 我们定义了一个名为 `add()` 的方法，它接受两个 `int` 参数：`num1` 和 `num2`。
 * 它返回它们的和，其类型为 `int`。
-* 在 `main()` 方法中，我们调用 `add(10, 5)`并将结果存储在 `result` 变量中。
+* 在 `main()` 方法中，我们调用 `add(10, 5)` 并将结果存储在 `result` 变量中。
 * 打印输出为：
 
-```python
+```
 The sum is: 15
 ```
 
@@ -1618,7 +1641,7 @@ public class PersonalizedGreeting {
 Hello, John Doe!
 ```
 
- 方法签名（Method Signature）
+### 方法签名（Method Signature）
 
 方法签名由方法的名称及其参数列表组成。Java 使用它来标识方法。返回类型不属于方法签名。
 
@@ -1652,16 +1675,13 @@ public class Rectangle {
         return length * width;  // 返回长度和宽的乘积
     }
 
-### public static void main(String[] args) {
+    public static void main(String[] args) {
         // 带参数 5 和 10 调用 calculateArea() 方法
         int area = calculateArea(5, 10);
         System.out.println("The area of the rectangle is: " + area);  // 输出: 50
     }
 }
 ```
-
-
-
 
 当你调用一个方法时，你传递的是实际值（称为参数），这些值与方法定义中的参数相对应。参数的顺序和数据类型必须与方法签名匹配。
 
@@ -1681,7 +1701,8 @@ public class Sum {
 ```
 
 解释：
-- 我们定义了一个方法 `add()`，它接收两个类型为 `int` 的型参数。
+
+- 我们定义了一个方法 `add()`，它接收两个类型为 `int` 的参数。
 - 在方法内部，我们计算了 `num1` 和 `num2` 的和，然后返回结果。
 - 在调用方法时传递了参数 `3` 和 `4`，并打印了结果：`7`。
 
@@ -1711,13 +1732,16 @@ public class SquareCalculator {
 ```
 
 解释：
+
 - 方法 `square()` 的返回类型为 `int`，这意味着它返回一个整数。
 - 在方法内部，将数字与其相乘，并将结果返回给调用者。
 - 当我们调用 `square(5)` 时，打印了结果 `25`。
 
 #### void 方法：无返回值
 
-并不是所有方法都需要返回值。对于这些方法，你使用 `void` 返回类型。带有 `void` 的执行操作（例如打印消息或更新值），但不向调用者返回任何内容。
+并不是所有方法都需要返回值。对于这些方法，你使用 `void` 返回类型。带有 `void` 的方法执行操作（例如打印消息或更新值），但不向调用者返回任何内容。
+
+
 
 ```java
 public class MessagePrinter {
@@ -1734,11 +1758,12 @@ public class MessagePrinter {
 ```
 
 解释：
+
 - 方法 `printMessage()` 声明为 `void`，意味着它不返回任何值。
 - 该方法简单地向控制台打印消息。
 - 在 `main()` 方法中，我们调用了 `printMessage()`，它的输出为：
 
-```csharp
+```
 This is a message!
 ```
 
@@ -1775,6 +1800,7 @@ public class ShapeArea {
 ```
 
 解释：
+
 - 方法 `calculateArea()` 被重载了：一个版本接受矩形的长度和宽两个参数，而另一个版本接受正方形边的单个参数。
 - 当我们调用 `calculateArea(5, 10)` 时，它计算矩形的面积；当我们调用 `calculateArea(4)` 时，它计算正方形的面积。
 
@@ -1800,17 +1826,15 @@ public class AverageCalculator {
 ```
 
 解释：
+
 - 方法 `calculateAverage()` 接收三个参数。
 - 它返回三个数字的平均值。
 
-```csharp
+```
 The average is: 20.0
 ```
 
-
-
-
--   `add()` 方法被重载了三次，每个版本都具有不同的参数列表。
+- `add()` 方法被重载了三次，每个版本都具有不同的参数列表。
 - 第一个版本接受两个 `int` 参数。
 - 第二个版本接受三个 `int` 参数。
 - 第三个版本接受两个 `double` 参数。
@@ -1821,6 +1845,7 @@ The average is: 20.0
 虽然方法重载非常强大，但有几条重要的规则需要记住：
 
 ### 不同的参数数量
+
 你可以通过更改方法签名中参数的数量来重载方法。
 
 ```java
@@ -1834,6 +1859,7 @@ public static int multiply(int a, int b, int c) {
 ```
 
 ### 不同的参数类型
+
 你可以通过更改参数的类型来重载方法。
 
 ```java
@@ -1847,6 +1873,7 @@ public static int add(int a, int b) {
 ```
 
 ### 相同的数量和类型，不同的顺序
+
 当参数类型相同但顺序不同时，也可以发生重载。
 
 ```java
@@ -1870,7 +1897,7 @@ public static int add(int num1, int num2) {
     return num1 + num2;
 }
 
-public static double add(int num1, int num2) { // ：方法签名相同！
+public static double add(int num1, int num2) { // 方法签名相同！
     return num1 + num2;
 }
 ```
@@ -1912,6 +1939,7 @@ public class ShapePerimeter {
 ```
 
 **解释：**
+
 - 我们定义了三个重载方法，它们的名称都命名为 `perimeter()`，用于处理不同形状的周长计算：
     - 矩形，接受两个 `int` 值（`length` 和 `width`）。
     - 正方形，接受一个 `int` 值（`side`）。
@@ -1920,11 +1948,12 @@ public class ShapePerimeter {
 
 ## 动手实践项目：单位转换器应用
 
-在本章中，我们将运用目前学到的所有知识创建一个实用的应用程序：单位转换器。这个简单的应用将允许用户在不同的测量单位之间进行转换，例如长度、重量和温度。完成此项目后，你将对如何在 Java 中使用方法、循环、条件判断和用户输入有更深入的。
+在本章中，我们将运用目前学到的所有知识创建一个实用的应用程序：单位转换器。这个简单的应用将允许用户在不同的测量单位之间进行转换，例如长度、重量和温度。完成此项目后，你将对如何在 Java 中使用方法、循环、条件判断和用户输入有更深入的理解。
 
 ### 应用将实现什么？
 
 单位转换器应用将允许用户：
+
 - 转换距离（例如，公里到英里）。
 - 转换重量（例如，公斤到磅）。
 - 转换温度（例如，摄氏度到华氏度）。
@@ -1963,6 +1992,7 @@ public class UnitConverter {
 ```
 
 **解释：**
+
 - `kmToMiles`: 使用公式 `kilometers * 0.621371` 转换公里。
 - `kgToPounds`: 使用公式 `kilograms * 2.20462` 转换公斤。
 - `celsiusToFahrenheit`: 使用公式 `celsius * 9/5 + 32` 转换摄氏度。
@@ -1991,7 +2021,7 @@ public class UnitConverter {
     }
 
     public static void main(String[] args) {
-        // 创建一个 对象用于用户输入
+        // 创建一个 Scanner 对象用于用户输入
         Scanner scanner = new Scanner(System.in);
         System.out.println("欢迎使用单位转换器！");
 
@@ -2036,8 +2066,6 @@ public class UnitConverter {
 
 
 
-
-
 ```java
 System.out.println(inputValue + " kilometers is equal to " + convertedValue + " miles.");
 
@@ -2077,9 +2105,9 @@ scanner.close();
 
 ### 解释：
 
-● `Scanner`: 我们使用 `Scanner` 来获取用户输入。
-● `Switch Case`: 用户可以从三个选项中选择——公里转英里、公斤转磅或摄氏度华华氏。根据用户的选择，程序会要求输入转换的值，调用相应的方法并显示结果。
-● `Closing Scanner`: 使用后务必关闭 `scanner` 对象以防止资源泄漏。
+- `Scanner`：我们使用 `Scanner` 来获取用户输入。
+- `Switch Case`：用户可以从三个选项中选择——公里转英里、公斤转磅或摄氏度转华氏度。根据用户的选择，程序会要求输入转换的值，调用相应的方法并显示结果。
+- `Closing Scanner`：使用后务必关闭 `scanner` 对象以防止资源泄漏。
 
 ***
 
@@ -2161,8 +2189,8 @@ public class UnitConverter {
 
 ### 解释：
 
-● `Validation`: 我们检查用于公里或公斤的 `inputValue` 是否为负数。如果是，我们就会打印错误信息。否则，我们继续转换。
-● `Celsius to Fahrenheit`: 摄氏度到华氏度的转换允许正值和负值，因此我们在这里没有应用任何限制。
+- `Validation`：我们检查用于公里或公斤的 `inputValue` 是否为负数。如果是，我们就会打印错误信息。否则，我们继续转换。
+- `Celsius to Fahrenheit`：摄氏度到华氏度的转换允许正值和负值，因此我们在这里没有应用任何限制。
 
 ***
 
@@ -2189,7 +2217,7 @@ public class UnitConverter {
 
 ***
 
-# 第 5 章：Java 面向面向的编程
+# 第 5 章：Java 面向对象编程
 
 在本章中，我们将深入探索 Java 的面向对象编程 (OOP) 世界。OOP 是一种编程范式，它围绕数据或对象来组织软件设计，而不是围绕函数和逻辑。它是 Java 的基础，用于构建灵活、可重用且易维护的代码。我们将探索 OOP 的核心概念，并带你了解。
 
@@ -2246,12 +2274,12 @@ public class Person {
 
 在这个示例中：
 
-● `name` 和 `age` 字段是 `private` 的，这意味着它们在 `Person` 类之外无法直接访问。
-● 我们提供了 getter 和 setter 方法来访问和修改这些字段的值。`age` 的 setter 验证以确保年龄非负，展示了封装如何保护对象的完整性。
+- `name` 和 `age` 字段是 `private` 的，这意味着它们在 `Person` 类之外无法直接访问。
+- 我们提供了 getter 和 setter 方法来访问和修改这些字段的值。`age` 的 setter 验证以确保年龄非负，展示了封装如何保护对象的完整性。
 
 ***
 
-### 2. 抽象：隐藏复杂性
+### 抽象：隐藏复杂性
 
 抽象是指隐藏对象复杂实现细节并只暴露基本特征的概念。抽象并不关注“如何”工作，而是允许你思考对象“做什么”。
 
@@ -2262,22 +2290,12 @@ public class Person {
 ```java
 abstract class Animal {
     // 抽象方法（没有正体）
-}
-```
+    public abstract void sound();
 
-
-
-
-
-```java
-public abstract void sound();
-
-// 带有实现的普通方法
-
-public void sleep() {
-    System.out.println("This animal is sleeping.");
-}
-
+    // 带有实现的普通方法
+    public void sleep() {
+        System.out.println("This animal is sleeping.");
+    }
 }
 
 class Dog extends Animal {
@@ -2304,7 +2322,7 @@ class Cat extends Animal {
 
 ***
 
-### 3. 继承：在现有代码的基础上构建
+### 继承：在现有代码的基础上构建
 
 继承是一种允许一个类继承另一个类的属性和行为的机制。在 Java 中，这允许你基于现有的类（父类）创建一个新类（子类）。继承促进了代码的重用，并实现了层次化的类结构。
 
@@ -2335,13 +2353,13 @@ public class Main {
 在这个示例中：
 
 - `Dog` 是 `Animal` 的子类，继承了 `Animal` 的 `eat()` 方法。
-- `Dog` 类还定义了自己的方法 `bark()`，该方法是类 类特有的。
+- `Dog` 类还定义了自己的方法 `bark()`，该方法是 `Dog` 类特有的。
 
 继承允许我们在现有类的基础上进行构建而无需重写代码，使我们的程序更具可维护性和扩展性。
 
 ***
 
-### 4. 多态：一个接口，多种实现
+### 多态：一个接口，多种实现
 
 多态意味着“多种形状”，允许你使用单个方法或对象来表示不同的类型。这在 Java 中最常见有两种形式：方法重写和方法重载。
 
@@ -2377,7 +2395,7 @@ public class Main {
 在这里：
 
 - `sound()` 在 `Dog` 类中被重写以提供特定的实现。
-- 在运行时，Java 根据对象的实际类型 own 其引用类型来确定要调用的 `sound()` 方法的版本。这被称为运行时多态。
+- 在运行时，Java 根据对象的实际类型而非其引用类型来确定要调用的 `sound()` 方法的版本。这被称为运行时多态。
 
 ***
 
@@ -2411,6 +2429,8 @@ Java 被设计为一种面向对象的语言，采用 OOP 允许你：
 - **构造函数**：创建对象时初始化对象的特殊方法。
 
 #### 简单类的示例
+
+
 
 ```java
 public class Car {
@@ -2501,19 +2521,6 @@ public class Car {
         this.year = year;
         this.color = color;
     }
-}
-```
-
-
-
-
-
-```java
-public class Car {
-    this.model = model;  // 'this' 指向当前对象的实例变量
-    this.year = year;
-    this.color = color;
-    }
 
     // 启动引擎的方法
     public void startEngine() {
@@ -2533,8 +2540,8 @@ public class Main {
 
 在 `Car` 类的这个版本中：
 
-● 我们添加了一个构造函数 `public Car(String model, int year, String color)`，它接收参数来初始化 `model`、`year` 和 `color` 字段。
-● `this` 关键字用于引用当前对象的实例变量，将它们与构造函数中的参数区分开来。
+- 我们添加了一个构造函数 `public Car(String model, int year, String color)`，它接收参数来初始化 `model`、`year` 和 `color` 字段。
+- `this` 关键字用于引用当前对象的实例变量，将它们与构造函数中的参数区分开来。
 
 现在当我们创建 `myCar` 对象时，直接将值传递给构造函数，从而初始化对象的字段。
 
@@ -2544,7 +2551,8 @@ public class Main {
 
 你可能已经注意到在上面的构造函数示例中使用了 `this` 关键字。Java 中的 `this` 关键字是对类当前实例的引用。它通常用于构造函数和方法内部，以区分实例变量与具有相同名的局部变量或方法参数。
 
-● 在构造函数中，`this.model = model;` 意味着实例变量 `model`（与对象关联的那个）被赋值为参数 `model`（传递给构造函数的）的值。
+- 在构造函数中，`this.model = model;` 意味着实例变量 `model`（与对象关联的那个）被赋值为参数 `model`（传递给构造函数的）的值。
+
 如果没有 `this`，将无法确定你是指代实例变量还是构造函数参数。
 
 ***
@@ -2572,8 +2580,8 @@ public class Main {
 
 在这里：
 
-● 我们直接访问了 `myCar` 对象的 `model`、`year` 和 `color` 字段。
-● 我们还调用了对象上的 `startEngine()` 方法。
+- 我们直接访问了 `myCar` 对象的 `model`、`year` 和 `color` 字段。
+- 我们还调用了对象上的 `startEngine()` 方法。
 
 ***
 
@@ -2625,15 +2633,15 @@ public class Main {
 
 在上面的示例中：
 
-● `Car` 类有一个构造函数 `public Car(String model, int year, String color)`，它接收参数来初始化 `model`、`year` 和 `color` 字段。
-● 当使用 `new Car("Tesla", 2023, "Red")` 创建 `myCar` 对象时，构造函数使用提供的值初始化对象。
-● `displayInfo()` 方法用于显示汽车的详情。
+- `Car` 类有一个构造函数 `public Car(String model, int year, String color)`，它接收参数来初始化 `model`、`year` 和 `color` 字段。
+- 当使用 `new Car("Tesla", 2023, "Red")` 创建 `myCar` 对象时，构造函数使用提供的值初始化对象。
+- `displayInfo()` 方法用于显示汽车的详情。
 
 ***
 
 ### 构造函数重载
 
-Java 构造函数重载，这意味着可以在同一个类中拥有多个不同参数列表的构造函数。每个构造函数执行相同的初始化对象任务，但可以接受不同类型或数量的参数。
+Java 支持构造函数重载，这意味着可以在同一个类中拥有多个不同参数列表的构造函数。每个构造函数执行相同的初始化对象任务，但可以接受不同类型或数量的参数。
 
 #### 示例：构造函数重载
 
@@ -2685,7 +2693,7 @@ public class Main {
 
 ### 构造函数中的 `this` 关键字
 
-Java 中的 `this` 关键字指向当前对象实例。在构造函数需要区分实例变量（字段）和方法参数时（特别是当它们同相同时），它特别有用。
+Java 中的 `this` 关键字指向当前对象实例。在构造函数需要区分实例变量（字段）和方法参数时（特别是当它们同名时），它特别有用。
 
 如果没有 `this`，Java 会混淆局部参数和类字段。使用 `this` 可以明确表示你指代的是对象字段。
 
@@ -2714,11 +2722,7 @@ public class Car {
 }
 ```
 
-
-
-
-
-构造函数链（Constructor chaining）是指在同一个类中从一个构造函数调用另一个构造函数。这通常通过使用 `this()`关键字来实现。当你想要重用类代码的同时提供多种初始化对象的方式时，构造函数链非常有用。
+构造函数链（Constructor chaining）是指在同一个类中从一个构造函数调用另一个构造函数。这通常通过使用 `this()` 关键字来实现。当你想要重用类代码的同时提供多种初始化对象的方式时，构造函数链非常有用。
 
 ### 示例：构造函数链
 
@@ -2774,7 +2778,7 @@ public class Main {
 
 ### 实例成员
 
-实例变量和实例方法与类的特定实例（或对象）绑定。每当创建一个类的新对象时，都会创建这些这些成员的全新副本。
+实例变量和实例方法与类的特定实例（或对象）绑定。每当创建一个类的新对象时，都会创建这些成员的全新副本。
 
 - 实例变量是每个对象所独有的。
 - 实例方法绑定到单个对象，这意味着它们可以访问并修改该特定对象的实例变量。
@@ -2782,6 +2786,8 @@ public class Main {
 简而言之，实例成员是那些特定于对象的成员，每个对象都拥有这些成员的自己的副本。
 
 ### 示例：实例变量和方法
+
+
 
 ```java
 public class Car {
@@ -2814,8 +2820,9 @@ public class Car {
 ```
 
 在此示例中：
+
 - `Car` 类拥有实例变量 `model` 和 `year`。这些是每个 `Car` 对象独有的。
-- 每个汽车对象（`car1`, `car2`）都可以有自己的 `model` 和 `year`。
+- 每个汽车对象（`car1`、`car2`）都可以有自己的 `model` 和 `year`。
 - `displayInfo()` 方法是一个实例方法。它访问调用它的特定对象的实例变量，并作用于单个实例的数据。
 
 ***
@@ -2824,7 +2831,7 @@ public class Car {
 
 静态成员属于类而不是属于任何特定实例。当成员被声明为 `static` 时，意味着该成员只有一份副本，供类的所有实例共享。可以在不创建类实例的情况下访问静态变量和方法。
 
-- 静态变量在类的所有对象之间共享的。
+- 静态变量在类的所有对象之间共享。
 - 静态方法可以在不创建对象的情况下调用，但它们只能直接访问其他静态成员（包括变量和方法）。
 
 当你需要在类的所有实例之间共享数据或方法，或者当你想要执行不依赖特定对象状态的操作时，静态成员会特别有用。
@@ -2874,14 +2881,15 @@ public class Car {
 ```
 
 在此示例中：
+
 - `carCount` 是所有实例共享的静态变量。
-- `displayCarCount()` 是一个可以在不创建实例的情况下的静态方法。
+- `displayCarCount()` 是一个可以在不创建实例的情况下调用的静态方法。
 - `car1.displayInfo()` 和 `car2.displayInfo()` 是实例方法。
 - `Car.displayCarCount()` 使用类名调用。
 
 ***
 
-### 何时使用实例 静态
+### 何时使用实例与静态
 
 使用实例还是静态取决于类的设计和行为。
 
@@ -2900,18 +2908,12 @@ public class Car {
 | 用途 | 适用于特定对象的属性和行为。 | 适用于所有对象共享的属性和行为。 |
 | 关键字 | 不使用 `static` 关键字声明。 | 使用 `static` 关键字声明。 |
 
-
-
-
-
 ```java
 System.out.println("Account Holder: " + accountHolder);
 System.out.println("Balance: $" + balance);
-
 }
 
 // Static method to display the total number of accounts
-
 public static void displayTotalAccounts() {
     System.out.println("Total Accounts: " + totalAccounts);
 }
@@ -2926,7 +2928,6 @@ public static void main(String[] args) {
     // Displaying the total number of accounts
     BankAccount.displayTotalAccounts();  // Static method called via class name
 }
-
 }
 ```
 
@@ -3001,19 +3002,25 @@ public class BankAccount {
 #### 代码解释：
 
 - **实例变量**：
-    - `accountHolder`: 一个表示账户持有人姓名的字符串。
-    - `balance`: 一个用于存储账户当前余额的 double 类型。
+    - `accountHolder`：一个表示账户持有人姓名的字符串。
+    - `balance`：一个用于存储账户当前余额的 double 类型。
+
 - **静态变量**：
-    - `totalAccounts`: 一个跟踪已创建的银行账户总数的静态变量。该变量被 `BankAccount` 类的所有实例共享。
+    - `totalAccounts`：一个跟踪已创建的银行账户总数的静态变量。该变量被 `BankAccount` 类的所有实例共享。
+
 - **构造函数**：
     - 构造函数接收两个参数 `accountHolder` 和 `initialBalance`，并初始化实例变量。每当创建一个新账户时，它还会增加 `totalAccounts` 静态变量的值。
-- **存款方法 (deposit)**：
+
+- **存款方法 (`deposit`)**：
     - 该方法允许向账户存款。在将金额添加到余额之前，它会检查该金额是否为正数。
-- **取款方法 (withdraw)**：
+
+- **取款方法 (`withdraw`)**：
     - 该方法允许从账户中取款。它会检查取款金额是否为正数以及是否有足够的资金。
-- **显示方法 (display method)**：
+
+- **显示方法 (`display method`)**：
     - `displayAccountInfo()` 方法打印账户持有人的姓名和账户的当前余额。
-- **静态方法 (static method)**：
+
+- **静态方法 (`static method`)**：
     - 静态方法 `displayTotalAccounts()` 打印创建的账户总数，该数值由类的所有实例共享。
 
 ***
@@ -3036,7 +3043,8 @@ public class Main {
     }
 }
 ```
-*(注：原文提供的代码块在结束处不完整，此处翻译了可见部分)*
+
+*(注：原文提供的代码块在结束处不完整，此处保留了可见部分)*
 
 在此示例中：
 
@@ -3048,7 +3056,7 @@ public class Main {
 
 ## 动手项目：银行账户类
 
-在本次动手项目中，我们将使用 Java 构建一个简单的银行账户类。该类将管理银行账户，允许我们执行如存款、取款、检查账户余额和显示账户详情等操作。我们将利用实例变量处理特定账户的信息，并利用静态变量跟踪全局统计数据（例如创建的账户总数）。此项目将让你实践地理解如何应用类面向对象的编程概念，如类、对象、实例变量、方法和静态成员。
+在本次动手项目中，我们将使用 Java 构建一个简单的银行账户类。该类将管理银行账户，允许我们执行如存款、取款、检查账户余额和显示账户详情等操作。我们将利用实例变量处理特定账户的信息，并利用静态变量跟踪全局统计数据（例如创建的账户总数）。此项目将让你实践地理解如何应用面向对象的编程概念，如类、对象、实例变量、方法和静态成员。
 
 让我们立即开始，逐步构建 `BankAccount` 类。
 
@@ -3057,6 +3065,8 @@ public class Main {
 ### 第 1 步：定义 BankAccount 类
 
 我们将开始定义一个 `BankAccount` 类，它将包含用于账户持有人姓名、余额的实例变量，以及一个跟踪账户总数的静态变量。我们还提供了用于存款、取款和显示账户信息的方法。
+
+
 
 ```java
 public class BankAccount {
@@ -3106,22 +3116,28 @@ public class BankAccount {
 }
 ```
 
-#### 代码解释：
+#### 代码解释
 
-- **实例变量**：
-    - `accountHolder`: 一个表示账户持有人姓名的字符串。
-    - `balance`: 一个用于存储账户当前余额的 double 类型。
-- **静态变量**：
-    - `totalAccounts`: 一个跟踪已创建的银行账户总数的静态变量。该变量被 `BankAccount` 类的所有实例共享。
-- **构造函数**：
+- **实例变量**
+    - `accountHolder`：一个表示账户持有人姓名的字符串。
+    - `balance`：一个用于存储账户当前余额的 `double` 类型。
+
+- **静态变量**
+    - `totalAccounts`：一个跟踪已创建的银行账户总数的静态变量。该变量被 `BankAccount` 类的所有实例共享。
+
+- **构造函数**
     - 构造函数接收两个参数 `accountHolder` 和 `initialBalance`，并初始化实例变量。每当创建一个新账户时，它还会增加 `totalAccounts` 静态变量的值。
-- **存款方法 (deposit)**：
+
+- **存款方法 (`deposit`)**
     - 该方法允许向账户存款。在将金额添加到余额之前，它会检查该金额是否为正数。
-- **取款方法 (withdraw)**：
+
+- **取款方法 (`withdraw`)**
     - 该方法允许从账户中取款。它会检查取款金额是否为正数以及是否有足够的资金。
-- **显示方法 (display method)**：
+
+- **显示方法 (`display method`)**
     - `displayAccountInfo()` 方法打印账户持有人的姓名和账户的当前余额。
-- **静态方法 (static method)**：
+
+- **静态方法 (`static method`)**
     - 静态方法 `displayTotalAccounts()` 打印创建的账户总数，该数值由类的所有实例共享。
 
 ***
@@ -3144,6 +3160,7 @@ public class Main {
     }
 }
 ```
+
 *(注：原文提供的代码块在结束处不完整，此处翻译了可见部分)*
 
 在此示例中：
@@ -3214,22 +3231,28 @@ public class BankAccount {
 }
 ```
 
-#### 代码解释：
+#### 代码解释
 
-- **实例变量**：
-    - `accountHolder`: 一个表示账户持有人姓名的字符串。
-    - `balance`: 一个用于存储账户当前余额的 double 类型。
-- **静态变量**：
-    - `totalAccounts`: 一个跟踪已创建的银行账户总数的静态变量。该变量被 `BankAccount` 类的所有实例共享。
-- **构造函数**：
+- **实例变量**
+    - `accountHolder`：一个表示账户持有人姓名的字符串。
+    - `balance`：一个用于存储账户当前余额的 `double` 类型。
+
+- **静态变量**
+    - `totalAccounts`：一个跟踪已创建的银行账户总数的静态变量。该变量被 `BankAccount` 类的所有实例共享。
+
+- **构造函数**
     - 构造函数接收两个参数 `accountHolder` 和 `initialBalance`，并初始化实例变量。每当创建一个新账户时，它还会增加 `totalAccounts` 静态变量的值。
-- **存款方法 (deposit)**：
+
+- **存款方法 (`deposit`)**
     - 该方法允许向账户存款。在将金额添加到余额之前，它会检查该金额是否为正数。
-- **取款方法 (withdraw)**：
+
+- **取款方法 (`withdraw`)**
     - 该方法允许从账户中取款。它会检查取款金额是否为正数以及是否有足够的资金。
-- **显示方法 (display method)**：
+
+- **显示方法 (`display method`)**
     - `displayAccountInfo()` 方法打印账户持有人的姓名和账户的当前余额。
-- **静态方法 (static method)**：
+
+- **静态方法 (`static method`)**
     - 静态方法 `displayTotalAccounts()` 打印创建的账户总数，该数值由类的所有实例共享。
 
 ***
@@ -3252,6 +3275,7 @@ public class Main {
     }
 }
 ```
+
 *(注：原文提供的代码块在结束处不完整，此处翻译了可见部分)*
 
 在此示例中：
@@ -3283,7 +3307,7 @@ Balance: $800.0
 Total Accounts Created: 3
 ```
 
-### 输出中发生了什么：
+### 输出中发生了什么
 
 - 起初，每个账户的详情按照创建时进行显示。
 - 在执行存款和取款操作后，余额相应地更新了。
@@ -3295,53 +3319,52 @@ Total Accounts Created: 3
 
 这个简单的银行账户类提供了基本功能，但有许多方法可以扩展和改进它：
 
-1. **输入验证**：
+1. **输入验证**
+    - 你可以添加更详细的输入验证，以确保仅向 `deposit` 和 `withdraw` 方法传递有效值，例如检查负值或零值。
 
+2. **利息计算**
+    - 你可以添加方法来计算并随时间对余额应用利息。
 
+3. **交易历史**
+    - 你可以通过在 `BankAccount` 类中通过列表或数组存储交易来跟踪交易历史（存款和取款）。
 
-- 你可以添加更详细的输入验证，以确保仅向 `deposit` 和 `withdraw` 方法传递有效值，例如检查负值或零值。
-
-### 2. 利息计算：
-- 你可以添加方法来计算并随时间对余额应用利息。
-
-### 3. 交易历史：
-- 你可以通过在 `BankAccount` 类中通过列表或数组存储交易来跟踪交易历史（存款和取款）。
-
-### 4. 账户类型：
-- 你可以添加一个 `accountType` 实例变量（例如支票账户或储蓄账户）以及处理不同账户类型的方法。
+4. **账户类型**
+    - 你可以添加一个 `accountType` 实例变量（例如支票账户或储蓄账户）以及处理不同账户类型的方法。
 
 # 第 6 章：封装、继承与多态
 
-在本章中，我们将探索面向对象编程（OOP）中的三个核心概念：封装、继承和多态。这些原则帮助我们构建结构良好、易于维护且灵活的软件系统。在本章结束时，你将理解如何使用访问修符、通过继承创建类层次级，并利用多态来编写动态且高效的代码。
+在本章中，我们将探索面向对象编程（OOP）中的三个核心概念：封装、继承和多态。这些原则帮助我们构建结构良好、易于维护且灵活的软件系统。在本章结束时，你将理解如何使用访问修饰符、通过继承创建类层次结构，并利用多态来编写动态且高效的代码。
 
 ***
 
-## 6.1 访问修符与 Getter/Setter
+## 6.1 访问修饰符与 Getter/Setter
 
-在面向对象编程中，核心原则之一是封装。封装有助于确保对象的内部状态不受意外的干扰和误用。访问修符以及 getter 和 setter 的使用在实现封装方面起着至关重要的作用。
+在面向对象编程中，核心原则之一是封装。封装有助于确保对象的内部状态不受意外的干扰和误用。访问修饰符以及 getter 和 setter 的使用在实现封装方面起着至关重要的作用。
 
-### 访问修符
+### 访问修饰符
 
-访问修符是 Java 中用于设置类成员（字段、方法、构造函数）可见性的关键字。通过为每个类成员仔细地选择正确的访问修符，我们可以控制程序的其他部分如何与这些成员交互。
+访问修饰符是 Java 中用于设置类成员（字段、方法、构造函数）可见性的关键字。通过为每个类成员仔细地选择正确的访问修饰符，我们可以控制程序的其他部分如何与这些成员交互。
 
-Java 中有四种访问修符：
+Java 中有四种访问修饰符：
 
 1. `public`：成员可以从任何其他类访问。
 2. `private`：成员仅在定义它的类内部可访问。
 3. `protected`：成员可以在同一个包内或通过子类进行访问。
 4. `default`（无修饰符）：成员仅在同一个包内可访问。
 
-### 为什么要使用访问修符？
+### 为什么要使用访问修饰符？
 
-访问修符通过控制字段和方法的访问方式，帮助实现封装的目标：
+访问修饰符通过控制字段和方法的访问方式，帮助实现封装的目标：
 
 - `private` 确保字段对外部类隐藏，并且只能通过类内部的方法进行访问或修改。
 - `public` 暴露字段和方法以供常规访问，这在某些功能需要在类或包之间共享时非常有用。
 - `protected` 和 `default` 提供了中间级别的访问权限。
 
-### 示例：使用访问修符
+### 示例：使用访问修饰符
 
-让我们从一个示例开始，我们有一个 `Person` 类，它对其字段使用了不同的访问修符。
+让我们从一个示例开始，我们有一个 `Person` 类，它对其字段使用了不同的访问修饰符。
+
+
 
 ```java
 public class Person {
@@ -3386,15 +3409,20 @@ public class Person {
 }
 ```
 
-#### 代码解释：
+#### 代码解释
 
-1. **私有字段**：
+1. **私有字段**
+
    - `name` 和 `age` 字段被标记为 `private`，这意味着它们不能从类外部直接访问。
    - 这确保了 `Person` 类的内部状态受到保护，并防止了任何意外的外部修改。
-2. **公共 Getter 和 Setter 方法**：
+
+2. **公共 Getter 和 Setter 方法**
+
    - getter 方法 `getName()` 和 `getAge()` 是 `public` 的，允许外部类在不直接访问字段的情况下检索 `name` 和 `age` 的值。
    - setter 方法 `setName()` 和 `setAge()` 允许外部类修改这些字段，但带有一些控制。例如，`setAge()` 方法确保年龄不能被设置为负值，这是一种简单形式的验证。
-3. **显示方法**：
+
+3. **显示方法**
+
    - `displayInfo()` 方法是一个 `public` 方法，用于显示 `name` 和 `age` 的值。它允许其他类以受控的方式打印 `Person` 对象的状态。
 
 ### 为什么要使用 Getter 和 Setter？
@@ -3429,20 +3457,27 @@ public class Main {
 }
 ```
 
-#### 主类的解释：
+#### 主类的解释
 
-1. **创建 Person 对象**：
+1. **创建 Person 对象**
+
    - 使用构造函数创建了一个新的 `Person` 对象，将 `name` 初始化为 "John"，`age` 初始化为 25。
-2. **显示信息**：
+
+2. **显示信息**
+
    - 我们调用 `displayInfo()` 来打印 `name` 和 `age`。
-3. **使用 Setter 修改信息**：
+
+3. **使用 Setter 修改信息**
+
    - 使用 `setName()` 和 `setAge()` 方法修改 `name` 和 `age` 字段。这些更改通过 setter 方法进行，确保执行了任何必要的验证（如对年龄的检查）。
-4. **验证演示**：
+
+4. **验证演示**
+
    - 当我们尝试设置负年龄时，setter 方法阻止了该操作并打印了消息 "Age cannot be negative."
 
 ***
 
-#### 使用访问修符和 Getter/Setter 的最佳实践
+#### 使用访问修饰符和 Getter/Setter 的最佳实践
 
 1. **字段优先使用 `private`**：始终将类字段标记为 `private` 以防止外部访问并确保封装。这确保类的内部状态不会被其他类直接修改，从而引入错误或不一致。
 2. **使用 `public` Getter 和 Setter**：提供 getter 和 setter 方法以允许对字段进行受控访问。这些方法允许你在获取或设置值时执行检查、转换。
@@ -3453,10 +3488,7 @@ public class Main {
 
 ## 6.2 继承与 `super`
 
-
-
-
-继承是面向对象编程（OOP）的基础概念之一。它允许你基于现有类创建新类，从而促进代码复用并在类之间之间建立天然的层级结构。通过扩展一个类，子类（子类）会从父类继承字段和方法，使你能够在现有功能的基础上进行构建和扩展。
+继承是面向对象编程（OOP）的基础概念之一。它允许你基于现有类创建新类，从而促进代码复用并在类之间建立天然的层级结构。通过扩展一个类，子类（子类）会从父类继承字段和方法，使你能够在现有功能的基础上进行构建和扩展。
 
 在本章中，我们将探索 Java 中继承是如何运作的、`super` 关键字的作用，以及你如何结合使用这两者来创建更高效、模块化的代码。
 
@@ -3531,15 +3563,20 @@ public class Main {
 }
 ```
 
-#### 代码解释：
+#### 代码解释
 
-1. `Animal` 类：
+1. `Animal` 类
+
    - `Animal` 类拥有一个私有字段 `name` 和一个用于初始化它的构造函数。`speak()` 方法简单地打印一条表示动物正在发出声音的消息。
-2. `Dog` 类：
+
+2. `Dog` 类
+
    - `Dog` 类继承了 `Animal` 类，这意味着它继承了 `name` 字段和 `speak()` 方法。
    - 在 `Dog` 构造函数中，我们使用 `super(name)` 调用来调用 `Animal` 构造函数。这确保了 `name` 字段被正确初始化。
-   - `Dog` 类重写了 `speak()` 方法，为狗提供了更具体的实现，使其打印“barks”而不是通泛的“makes a sound”。
-3. 在 `Main` 类中：
+   - `Dog` 类重写了 `speak()` 方法，为狗提供了更具体的实现，使其打印“barks”而不是通用的“makes a sound”。
+
+3. 在 `Main` 类中
+
    - 我们创建了一个 `Dog` 对象并调用它的 `speak()` 方法。由于 `Dog` 类重写了 `speak()` 方法，它会打印“Buddy barks.”。
 
 ***
@@ -3548,10 +3585,8 @@ public class Main {
 
 `super` 关键字用于引用父类。它在 Java 中有两个主要用途：
 
-1. 调用父类构造函数：
-   - `super()` 调用允许你调用父类的构造函数。当父类没有默认构造函数，或者当你想用特定值初始化父类时，这一点尤为有用。
-2. 访问父类方法和字段：
-   - 如果子类重写了某个方法，你仍然可以使用 `super.methodName()` 访问父类的该方法版本。同样，你可以使用 `super.fieldName` 访问父类字段。
+1. **调用父类构造函数**：`super()` 调用允许你调用父类的构造函数。当父类没有默认构造函数，或者当你想用特定值初始化父类时，这一点尤为有用。
+2. **访问父类方法和字段**：如果子类重写了某个方法，你仍然可以使用 `super.methodName()` 访问父类的该方法版本。同样，你可以使用 `super.fieldName` 访问父类字段。
 
 ### 示例：使用 `super` 调用父类方法
 
@@ -3605,12 +3640,15 @@ public class Main {
 }
 ```
 
-#### 代码解释：
+#### 代码解释
 
-1. `Dog` 类：
+1. `Dog` 类
+
    - `speak()` 方法被重写了。
    - `eat()` 方法调用 `super.eat()`，执行父类的 `eat` 方法并添加狗特有的逻辑。
-2. 在 `Main` 类中：
+
+2. 在 `Main` 类中
+
    - 我们对 `Dog` 对象调用 `speak()` 和 `eat()`，结果是重写行为和父类行为。
 
 ***
@@ -3666,9 +3704,6 @@ public class Main {
 - **方法重写**：`Dog` 类重写了 `Animal` 类的 `sound()` 方法。
 - **方法重载**：`Animal` 类有两个 `sound()` 方法——一个没有参数，另一个接受一个 `String` 参数。
 
-
-
-
 方法重写在多态中起着重要作用，我们将在后面的章节中介绍这一内容。通过重写方法，你可以在子类中创建更特化的行为，同时仍使用父类中定义的相同方法签名。这确保了程序能够按预期运行，无论该对象属于哪个子类。
 
 让我们深入研究方法重写，探索它的工作原理并查看一些实际示例。
@@ -3686,6 +3721,8 @@ public class Main {
 ### 方法重写的示例
 
 让我们考虑一个简单的示例来说说明方法重写在实践中是如何工作的。
+
+
 
 ```java
 // 父类
@@ -3717,12 +3754,14 @@ public class Main {
 }
 ```
 
-#### 代码解释：
+#### 代码解释
 
 1. `Animal` 类：
    - `Animal` 类中的 `sound()` 方法打印一条通用消息：“Animal makes a sound.”
+
 2. `Dog` 类：
    - `Dog` 类继承了 `Animal` 并重写了 `sound()` 方法。这次，它打印“Dog barks”，而不是父类的通用消息。
+
 3. 在 `Main` 类中：
    - 我们同时创建了 `Animal` 和 `Dog` 的对象。当我们对 `Animal` 对象调用 `sound()` 方法时，它打印来自 `Animal` 类的消息。然而，当我们对 `Dog` 对象调用 `sound()` 方法时，它打印来自 `Dog` 类的重写后的消息。
 
@@ -3799,10 +3838,11 @@ public class Main {
 }
 ```
 
-在这个在这个示例中：
+在这个示例中：
+
 - 我们创建了 `Animal` 类型的引用，但赋值给了 `Dog` 和 `Cat` 对象。
 - 调用了 `sound()` 方法。由于使用了重写，每个对象都会调用它们自己的 `sound()` 方法。
-- 这展示了多态允许我们通过共同接口（Animal）处理对象，同时执行它们特定的行为。
+- 这展示了多态允许我们通过共同接口（`Animal`）处理对象，同时执行它们特定的行为。
 
 2. **行为的定制**：方法重写允许子类根据需要定制继承方法的行为。这样，你可以在父类中保留通用功能，只在需要时重写方法。
 
@@ -3815,7 +3855,7 @@ public class Main {
 3. **返回类型**：重写方法的返回类型必须与父方法的返回类型相同或为子类型（这被称为协变返回）。
 4. **异常处理**：重写方法抛出的检查异常不能大于父方法。
 
-### 方法重写与 final 方法
+### 方法重写与 `final` 方法
 
 在 Java 中，如果一个方法被声明为 `final`，则它不能被重写。`final` 关键字通常用于防止子类修改行为，以确保方法的功能在子类中保持不变。
 
@@ -3837,9 +3877,9 @@ class Dog extends Animal {
 
 在这种情况下，`Animal` 类中的 `sound()` 方法被标记为 `final`，意味着它不能在 `Dog` 类中被重写。
 
+---
 
-
-
+## 多态
 
 在本章中，我们将多态分解为各个组件，探索它在 Java 中如何工作，并观察它如何应用于真实场景。我们还将介绍两种主要的多态：编译时多态（也称为方法重载）和运行时多态（通过方法重写实现）。
 
@@ -3849,9 +3889,8 @@ class Dog extends Animal {
 
 Java 中有两种主要的多态：
 
-1.  编译时多态（方法重载）：当同一个类中两个或多个方法名称相同，但参数的数量或类型不同时，就会发生这种情况。执行的方法在编译时根据方法签名确定。
-
-2.  运行时多态（方法重写）：当子类为其父类中已经定义的方法提供了特定的实现时，就会发生这种情况。执行的方法在运行时根据引用对象的类型（而不是引用变量的类型）确定。
+1. **编译时多态（方法重载）**：当同一个类中两个或多个方法名称相同，但参数的数量或类型不同时，就会发生这种情况。执行的方法在编译时根据方法签名确定。
+2. **运行时多态（方法重写）**：当子类为其父类中已经定义的方法提供了特定的实现时，就会发生这种情况。执行的方法在运行时根据引用对象的类型（而不是引用变量的类型）确定。
 
 ### 编译时多态（方法重载）
 
@@ -3862,45 +3901,37 @@ Java 中有两种主要的多态：
 ```java
 class Calculator {
 
-// 添加两个整数的方法
+    // 添加两个整数的方法
+    public int add(int a, int b) {
+        return a + b;
+    }
 
-public int add(int a, int b) {
+    // 重载的添加三个整数的方法
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
 
-return a + b;
-}
-
-// 重载的添加三个整数的方法
-
-public int add(int a, int b, int c) {
-
-return a + b + c;
-}
-
-// 重载的添加两个双精度数的方法
-
-public double add(double a, double b) {
-return a + b;
-}
-
+    // 重载的添加两个双精度数的方法
+    public double add(double a, double b) {
+        return a + b;
+    }
 }
 
 public class Main {
-
-public static void main(String[] args) {
-Calculator calc = new Calculator();
-System.out.println(calc.add(2, 3));      // 调用 add(int, int) 方法
-System.out.println(calc.add(2, 3, 4));      // 调用 add(int, int, int) 方法
-System.out.println(calc.add(2.5, 3.5));      // 调用 add(double, double) 方法
-}
-
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        System.out.println(calc.add(2, 3));       // 调用 add(int, int) 方法
+        System.out.println(calc.add(2, 3, 4));    // 调用 add(int, int, int) 方法
+        System.out.println(calc.add(2.5, 3.5));   // 调用 add(double, double) 方法
+    }
 }
 ```
 
-### 解析：
+#### 解析
 
-1.  `Calculator` 类定义了三个同名方法 `add()`，但它们具有不同的参数类型和/或参数数量。
-2.  在 `Main` 类中，我们创建了 `Calculator` 的实例，并使用不同的参数组合调用了 `add()` 方法。
-3.  Java 编译器根据方法签名（即参数的数量和类型）在编译时解析出要调用的方法。
+1. `Calculator` 类定义了三个同名方法 `add()`，但它们具有不同的参数类型和/或参数数量。
+2. 在 `Main` 类中，我们创建了 `Calculator` 的实例，并使用不同的参数组合调用了 `add()` 方法。
+3. Java 编译器根据方法签名（即参数的数量和类型）在编译时解析出要调用的方法。
 
 这是一个编译时多态的示例，因为要执行的方法是在编译时确定的。
 
@@ -3914,57 +3945,48 @@ System.out.println(calc.add(2.5, 3.5));      // 调用 add(double, double) 方�
 
 ```java
 class Animal {
-
-// 父类中的方法
-
-public void sound() {
-System.out.println("Animal makes a sound");
-}
-
+    // 父类中的方法
+    public void sound() {
+        System.out.println("Animal makes a sound");
+    }
 }
 
 class Dog extends Animal {
-
-// 方法重写：在子类中提供特定实现
-
-@Override
-public void sound() {
-System.out.println("Dog barks");
-}
+    // 方法重写：在子类中提供特定实现
+    @Override
+    public void sound() {
+        System.out.println("Dog barks");
+    }
 }
 
 class Cat extends Animal {
-
-// 方法重写：在子类中提供特定实现
-
-@Override
-public void sound() {
-System.out.println("Cat meows");
-}
+    // 方法重写：在子类中提供特定实现
+    @Override
+    public void sound() {
+        System.out.println("Cat meows");
+    }
 }
 
 public class Main {
-
-public static void main(String[] args) {
-Animal myAnimal = new Animal();  // 父类引用
-Animal myDog = new Dog();      // 子类引用
-Animal myCat = new Cat();      // 子类引用
-myAnimal.sound();  // 输出：Animal makes a sound
-myDog.sound();  // 输出：Dog barks
-myCat.sound();  // 输出：Cat meows
-}
-
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();  // 父类引用
+        Animal myDog = new Dog();        // 子类引用
+        Animal myCat = new Cat();        // 子类引用
+        myAnimal.sound();  // 输出：Animal makes a sound
+        myDog.sound();     // 输出：Dog barks
+        myCat.sound();     // 输出：Cat meows
+    }
 }
 ```
 
-### 解析：
+#### 解析
 
-1.  `Animal` 类定义了一个 `sound()` 方法。
-2.  `Dog` 和 `Cat` 类重写了 `sound()` 方法以提供它们自己的特定实现。
-3.  在 `Main` 类中，我们创建了 `Animal`、`Dog` 和 `Cat` 对象。尽管引用变量的类型是 `Animal`，但 Java 运行时根据实际对象类型（即 `Dog` 或 `Cat`）确定要调用哪个 `sound()` 方法。
-4.  这是运行时多态，因为要执行的方法是在运行时决定的。
+1. `Animal` 类定义了一个 `sound()` 方法。
+2. `Dog` 和 `Cat` 类重写了 `sound()` 方法以提供它们自己的特定实现。
+3. 在 `Main` 类中，我们创建了 `Animal`、`Dog` 和 `Cat` 对象。尽管引用变量的类型是 `Animal`，但 Java 运行时根据实际对象类型（即 `Dog` 或 `Cat`）确定要调用哪个 `sound()` 方法。
+4. 这是运行时多态，因为要执行的方法是在运行时决定的。
 
-#### 核心洞察：
+#### 核心洞察
 
 当你想要统一处理不同对象但仍保持它们各自的行为时，多态特别有用。在上面的示例中，我们可以在任何对象上调用 `sound()` 方法。
 
@@ -3972,9 +3994,9 @@ myCat.sound();  // 输出：Cat meows
 
 多态在面向对象编程中提供了许多优势：
 
-1.  灵活性：多态允许不同类的对象被视为共同父类的对象，使代码更具活性和可扩展性。
-2.  可重用性：多态有助于减少代码重复。通过使用多态，你可以编写出适用于层次结构中任何对象的更通用代码。
-3.  可维护性：通过与特定类交互并使其与通用类工作，多态提高了可维护性。对子类行为的更改（通过方法重写）不需要对代码库进行更改。
+1. **灵活性**：多态允许不同类的对象被视为共同父类的对象，使代码更具活性和可扩展性。
+2. **可重用性**：多态有助于减少代码重复。通过使用多态，你可以编写出适用于层次结构中任何对象的更通用代码。
+3. **可维护性**：通过与特定类交互并使其与通用类工作，多态提高了可维护性。对子类行为的更改（通过方法重写）不需要对代码库进行更改。
 
 ### 多态的实践
 
@@ -3984,60 +4006,49 @@ myCat.sound();  // 输出：Cat meows
 
 ```java
 abstract class Transaction {
-
-abstract void process();  // 将重写的抽象方法
+    abstract void process();  // 将重写的抽象方法
 }
 
 class Deposit extends Transaction {
-
-@Override
-void process() {
-System.out.println("Processing deposit");
-}
+    @Override
+    void process() {
+        System.out.println("Processing deposit");
+    }
 }
 
 class Withdrawal extends Transaction {
-
-@Override
-void process() {
-System.out.println("Processing withdrawal");
-}
+    @Override
+    void process() {
+        System.out.println("Processing withdrawal");
+    }
 }
 
 class Transfer extends Transaction {
-
-@Override
-void process() {
-System.out.println("Processing transfer");
-}
+    @Override
+    void process() {
+        System.out.println("Processing transfer");
+    }
 }
 
 public class Main {
+    public static void main(String[] args) {
+        Transaction[] transactions = {
+            new Deposit(),
+            new Withdrawal(),
+            new Transfer()
+        };
 
-public static void main(String[] args) {
-
-Transaction[] transactions = {
-
-new Deposit(),
-new Withdrawal(),
-new Transfer()
-
-};
-
-// 多态实践：根据类型处理每种交易
-for (Transaction transaction : transactions) {
-
-transaction.process();  // 为每个子类调用正确的 process() 方法
-}
-
-}
-
+        // 多态实践：根据类型处理每种交易
+        for (Transaction transaction : transactions) {
+            transaction.process();  // 为每个子类调用正确的 process() 方法
+        }
+    }
 }
 ```
 
+---
 
-
-
+## 实战项目：构建 Animal 类层次结构
 
 在这个项目中，我们将构建一个 `Animal` 类层次结构，用以演示继承、多态和方法重写概念的实际应用。我们将创建一组代表不同动物的类，每个类都将具有共同的行为（例如发出声音），但每种动物将对该行为有自己的特定的实现。
 
@@ -4058,6 +4069,7 @@ public class Animal {
 ```
 
 在 `Animal` 类中：
+
 - 我们定义了一个简单的方法 `makeSound()`。
 - 该方法没有执行任何具体操作，而是作为一个占位符，供子类重写为它们特定的实现。
 
@@ -4092,10 +4104,13 @@ public class Bird extends Animal {
 ```
 
 在子类中：
+
 - 我们重写了 `makeSound()` 方法，为每种动物提供特定的声音。
 - `@Override` 注解表示我们正在重写在 `Animal` 类中定义的方法。
 
 ### 第 3 步：测试动物层次结构
+
+
 
 接下来，我们将编写一个测试类来创建 `Dog`、`Cat` 和 `Bird` 类的实例。我们在这里演示运行时多态，即使用基类引用（`Animal`）来引用子类对象。尽管引用的类型是 `Animal`，但将根据实际的对象类型（即 `Dog`、`Cat` 或 `Bird`）调用正确的 `makeSound()` 方法。
 
@@ -4115,11 +4130,16 @@ public class Main {
 }
 ```
 
-### 解析：
+### 解析
+
 1. 在 `Main` 类中，我们创建了 `Animal` 引用（`myDog`、`myCat` 和 `myBird`），它们分别指向类型为 `Dog`、`Cat` 和 `Bird` 的对象。
+
 2. 当我们在每个引用上调用 `makeSound()` 方法时，多态确保了运行时调用正确的方法。
+
    - 对于 `myDog`，执行 `Dog` 类中的 `makeSound()` 方法。
+
    - 对于 `myCat`，执行 `Cat` 类中的 `makeSound()` 方法。
+
    - 对于 `myBird`，执行 `Bird` 类中的 `makeSound()` 方法。
 
 这是一个运行时多态示例，因为执行的方法是根据对象类型而不是引用类型决定的。
@@ -4176,8 +4196,11 @@ public class Animal {
 ```
 
 更新后的 `Animal` 类中：
+
 - 我们添加了实例变量：`name` 和 `age`。
+
 - 我们为这些属性提供了 getter 和 setter 方法。
+
 - 我们还添加了 `displayInfo()` 方法来打印名称和年龄。
 
 让我们也更新子类以使用这些：
@@ -4240,14 +4263,11 @@ public class Main {
 }
 ```
 
-
-
+## 7.1 一维数组
 
 在 Java 中，数组是一个用于存储固定数量单一类型数值的容器。它是编程中最基础的数据结构之一，特别适用于在单个变量名下存储多个相同的值。当我们谈论一维数组时，我们简单地指的是存储在单行中的值列表。
 
 在本节中，我们将学习如何在 Java 中声明、初始化和操作一维数组，并结合一些实际示例来演示它们的用法。
-
-* * *
 
 ### 声明数组
 
@@ -4263,13 +4283,11 @@ int[] numbers;
 
 在上面的示例中，我们声明了一个名为 `numbers` 的数组，它将存储整数值。然而，此时数组仅被声明了，还没有为其分配内存。让我们进入初始化阶段。
 
-* * *
-
 ### 数组初始化
 
 一旦声明了数组，我们需要为它分配内存并用值对其进行初始化。在 Java 中，数组可以通过几种方式进行初始化：
 
-1.  使用 `new` 关键字：
+1. 使用 `new` 关键字：
 
 ```java
 // 为 5 个元素分配内存
@@ -4279,7 +4297,7 @@ int[] numbers = new int[5];
 
 在这种情况下，数组 `numbers` 可以存储五个整数，并且数组元素会自动初始化为它们的默认值（`int` 为 `0`，对象类型为 `null`）。
 
-2.  使用预定义值初始化：
+2. 使用预定义值初始化：
 
 如果你已经知道想要在数组中使用的值，可以一次性初始化数组：
 
@@ -4289,11 +4307,9 @@ int[] numbers = {1, 2, 3, 4, 5};
 
 通过这种方式，数组 `numbers` 被初始化为值 `1`、`2`、`3`、`4` 和 `5`。
 
-* * *
-
 ### 访问数组元素
 
-数组元素通过索引访问。在 Java 中，数组索引从 0 开始，这意味着第一个元素位于索引 0，第二个元素位于索引 1，以此此类推。要访问某个元素，你使用数组名后跟方括号中的索引。
+数组元素通过索引访问。在 Java 中，数组索引从 0 开始，这意味着第一个元素位于索引 0，第二个元素位于索引 1，以此类推。要访问某个元素，你使用数组名后跟方括号中的索引。
 
 这里是一个示例：
 
@@ -4309,11 +4325,13 @@ public class ArrayExample {
 }
 ```
 
-在示例示例中：
+在示例中：
 
-*   `numbers[0]` 访问第一个元素 (1)，
-*   `numbers[1]` 访问第二个元素 (2)，
-*   而 `numbers[4]` 访问最后一个元素 (5)。
+- `numbers[0]` 访问第一个元素 (1)，
+
+- `numbers[1]` 访问第二个元素 (2)，
+
+- 而 `numbers[4]` 访问最后一个元素 (5)。
 
 ### 修改数组元素
 
@@ -4331,9 +4349,7 @@ public class ModifyArray {
 }
 ```
 
-在段代码中，第三个元素（原始为 `30`）被改为 `100`。当我们访问 `numbers[2]` 时，可以看到更新后的值 (100)。
-
-* * *
+在代码中，第三个元素（原始为 `30`）被改为 `100`。当我们访问 `numbers[2]` 时，可以看到更新后的值 (100)。
 
 ### 遍历数组
 
@@ -4353,12 +4369,13 @@ public class ArrayLoop {
 
 在示例中：
 
-*   `numbers.length` 提供了数组的长度（在本例中为 5）。
-*   循环从 `i = 0` 运行到 `i = 4`，打印每个元素。
+- `numbers.length` 提供了数组的长度（在本例中为 5）。
+
+- 循环从 `i = 0` 运行到 `i = 4`，打印每个元素。
 
 输出将是：
 
-```perl
+```text
 Element at index 0: 1
 Element at index 1: 2
 Element at index 2: 3
@@ -4367,8 +4384,6 @@ Element at index 4: 5
 ```
 
 使用 `for` 循环允许我们高效地处理数组中的每个元素。
-
-* * *
 
 ### 增强 for 循环 (for-each 循环)
 
@@ -4387,8 +4402,6 @@ public class EnhancedForLoop {
 ```
 
 在此示例中，`number` 代表数组中的每一个值。
-
-* *
 
 ### 数组长度 (Array Length)
 
@@ -4422,8 +4435,6 @@ System.out.println(numbers[5]); // 将抛出异常
 
 在本节中，我们将深入多维数组的世界，学习如何声明和初始化它们，以及如何访问和操作存储的数据。我们将重点关注二维数组（类似于具有行和列的表格），也会涉及高维数组。
 
-* * *
-
 ### 声明多维数组
 
 在 Java 中声明多维数组的语法与声明一维数组相似，但为每个维度增加一组方括号。
@@ -4438,13 +4449,11 @@ int[][] matrix;
 
 在这里，`matrix` 被声明为整数的二维数组。让我们继续初始化该数组。
 
-* * *
-
 ### 初始化多维数组
 
 与一维数组一样，多维数组也需要初始化。你可以通过几种方式初始化多维数组。
 
-1.  使用 `new` 关键字：
+1. 使用 `new` 关键字：
 
 ```java
 // 创建一个 3 行 4 列的二维数组
@@ -4452,9 +4461,9 @@ int[][] matrix;
 int[][] matrix = new int[3][4];
 ```
 
-在这种情况下，`matrix` 是一个 3 行 4 列的二维数组。所有元素初始初始化为 `0`（Java 中整数的默认值）。
+在这种情况下，`matrix` 是一个 3 行 4 列的二维数组。所有元素初始化为 `0`（Java 中整数的默认值）。
 
-2.  使用预定义值初始化：
+2. 使用预定义值初始化：
 
 如果你已经知道想要存储的值，可以直接初始化数组。
 
@@ -4466,9 +4475,6 @@ int[][] matrix = {
 };
 ```
 
-
-
-
 ```java
 int[][] matrix = {
     {1, 2, 3, 4},
@@ -4476,6 +4482,7 @@ int[][] matrix = {
     {9, 10, 11, 12}
 };
 ```
+
 在这个示例中，`matrix` 数组被初始化为一个 3x4 的网格，其中每个内部数组代表行。行和列可以被看作是一个以网格格式排列数据的表格。
 
 ### 访问多维数组元素
@@ -4483,6 +4490,8 @@ int[][] matrix = {
 要访问多维数组中的元素，你需要使用两个索引：一个用于行，另一个用于列。
 
 以下是访问我们之前初始化的 `matrix` 中特定元素的示例：
+
+
 
 ```java
 public class MultidimensionalArrayExample {
@@ -4501,8 +4510,8 @@ public class MultidimensionalArrayExample {
 ```
 
 在此代码中：
-- `matrix[0][1]` 访问第 0 行第 1 列的元素，其值为 `2`。
 
+- `matrix[0][1]` 访问第 0 行第 1 列的元素，其值为 `2`。
 - `matrix[2][3]` 访问第 2 行第 3 列的元素，其值为 `12`。
 
 你可以使用与其在矩阵中位置对应的两个索引来访问任何元素。
@@ -4534,11 +4543,13 @@ public class ArrayIteration {
 ```
 
 在这个示例中：
+
 - 外层循环 `for (int i = 0; i < matrix.length; i++)` 遍历 `matrix` 的行。
 - 内层循环 `for (int j = 0; j < matrix[i].length; j++)` 遍历每一行中的列。
 - 我们逐行打印 `matrix` 中的元素。
 
 输出将是：
+
 ```
 1 2 3 4
 5 6 7 8
@@ -4604,10 +4615,6 @@ int[][] jaggedArray = {
 };
 ```
 
-
-
-
-
 - `fruits.remove(1)` 删除了索引为 1 的元素，即 "Banana"。
 - `fruits.remove("Apple")` 从列表中删除了元素 "Apple"。
 
@@ -4618,7 +4625,7 @@ int[][] jaggedArray = {
 
 ## LinkedList
 
-`LinkedList` 是一种集合，它以节点（nodes）的形式存储元素，每个节点都包含元素本身以及指向列表中下一个节点的引用（或链接）。这与 `ArrayList` 不同，后者将元素存储在连续的内存块（数组）中。`LinkedList` 是 `java.util` 包的一部分的一部分，并且实现了 `List` 接口。
+`LinkedList` 是一种集合，它以节点（nodes）的形式存储元素，每个节点都包含元素本身以及指向列表中下一个节点的引用（或链接）。这与 `ArrayList` 不同，后者将元素存储在连续的内存块（数组）中。`LinkedList` 是 `java.util` 包的一部分，并且实现了 `List` 接口。
 
 ### LinkedList 的工作原理
 
@@ -4651,7 +4658,7 @@ public class LinkedListExample {
 - 使用 `add()` 方法向列表添加元素。
 - 使用 `System.out.println()` 打印 `LinkedList`，输出如下：
 
-```makefile
+```
 Fruits: [Apple, Banana, Cherry]
 ```
 
@@ -4725,10 +4732,6 @@ public class LinkedListAddExample {
 | 使用场景 | 快速随机访问，大数据集 | 频繁的插入和删除 |
 
 当你需要通过索引快速访问元素，且不经常在列表中间插入或删除元素时，`ArrayList` 非常棒。它非常适合存储数据或维护项目列表等场景。当你需要在列表中间或开头执行大量插入和删除操作时，`LinkedList` 更合适；适用于集合大小频繁变化的情况，例如实现队列或栈。
-
-
-
-
 
 ```java
 public void addStudent(Student student) {
@@ -4824,6 +4827,8 @@ public class Main {
 
 ### 解释：
 
+
+
 - 我们创建了一个新的 `StudentRecordSystem` 对象。
 - 系统中添加了三个学生。
 - 我们使用 `displayStudents()` 显示系统中的所有学生。
@@ -4854,7 +4859,7 @@ Roll Number: 103, Name: Tom Brown, Marks: 78.5
 ### 核心概念与收获：
 
 1. 使用 `ArrayList` 来存储学生记录，是因为我们需要一个能够提供快速访问并允许动态调整大小的集合。
-2. 通过将学生详情保持在单独的 `Student` 类中，应用了**封装性**，这改进了代码的组织和可维护性。
+2. 通过将学生详情保持在单独的 `Student` 类中，应用了封装性，这改进了代码的组织和可维护性。
 3. **搜索和删除元素**：通过学号搜索学生和删除学生涉及遍历 `ArrayList` 并执行必要的操作。
 
 ### 增强与未来改进：
@@ -4948,10 +4953,6 @@ public class MultipleCatchExample {
 }
 ```
 
-
-
-
-
 ### 关键点：catch 块的顺序非常重要——从更具体的异常开始，向更通用的异常。如果你在捕获特定类型之前捕获了 `Exception`，则特定的 catch 块将永远不会到达。
 
 ***
@@ -4982,10 +4983,13 @@ public class MultiCatch {
 ### 最佳实践
 
 1.  **只捕获你能够处理的内容**
+
     除非绝对必要，否则不要使用通用的 `catch (Exception e)`。它可能会隐藏真实问题并增加调试难度。
 
 2.  **避免静默失败**
+
     永远不要编写空的 catch 块。始终要记录或做出有意义的响应。
+
     ```java
     // Bad practice
     catch (IOException e) {
@@ -4994,9 +4998,11 @@ public class MultiCatch {
     ```
 
 3.  **使用有意义的错误信息**
+
     提供用户友好且信息丰富的反馈。
 
 4.  **不要过度使用 try-catch**
+
     只对可能失败的代码进行封装——而不是不必要地封装整个方法。
 
 ***
@@ -5154,6 +5160,7 @@ public class CustomExceptionExample {
 ```
 
 解释：
+
 - 我们定义了一个扩展 `Exception` 的类 `InvalidScoreException`。
 - 当分数超出范围时我们抛出它。
 - 在 `main` 方法中，我们像处理其他任何异常一样捕获它。
@@ -5164,7 +5171,7 @@ public class CustomExceptionExample {
 
 在创建自定义异常时，理解检查异常和非检查异常是有帮助的：
 
-| 类型 | 自 | 是否在方法签名中声明 |
+| 类型 | 父类 | 是否在方法签名中声明 |
 | :--- | :--- | :--- |
 | 检查 (Checked) | Exception | 是 |
 | 非检查 (Unchecked) | RuntimeException | 否 |
@@ -5176,12 +5183,19 @@ public class CustomExceptionExample {
 ### 最佳实践
 
 1.  **在 `finally` 中关闭资源或使用 try-with-resources**
+
     Java 支持 try-with-resources，比手动使用 `finally` 更简洁。
+
 2.  **抛出特定异常**
+
     避免抛出通用的 `Exception`。始终使用最具体的类型。
+
 3.  **不要过度使用自定义异常**
+
     当内置异常无法提供意义上下文时使用它们。
+
 4.  **包含帮助信息**
+
     抛出时始终传递清晰的消息。
 
 ***
@@ -5191,10 +5205,13 @@ public class CustomExceptionExample {
 在这个动手项目中，我们将构建一个安全读取器应用，它可以读取文件内容并优雅地处理潜在异常。目标是实践本章中的概念——try-catch 块、`finally`、`throw` 和自定义异常——同时构建一个功能齐全且重用的文件读取工具。
 
 此应用将教你如何：
+
 - 妥善处理常见的 I/O 异常。
 - 使用 `finally` 确保资源释放。
 - 创建并使用自定义异常管理特定错误情况。
 - 实现清晰且用户友好的报告结构。
+
+
 
 让我们开始吧。
 
@@ -5205,21 +5222,17 @@ public class CustomExceptionExample {
 1. 提示用户输入文件路径。
 2. 尝试逐行读取文件。
 3. 处理异常：
-    - 文件找不到
-    - 文件为空
-    - 路径无效
+   - 文件找不到
+   - 文件为空
+   - 路径无效
 4. 如果文件为空，使用自定义异常。
 5. 始终使用 `finally` 块关闭文件读取器。
 
-***
+---
 
-###get 1：创建自定义异常
+### 步骤 1：创建自定义异常
 
 我们将定义一个名为 `EmptyFileException` 的自定义异常，用于文件存在但无数据的情况。
-
-
-
-
 
 ```java
 // EmptyFileException.java
@@ -5231,9 +5244,9 @@ public class EmptyFileException extends Exception {
 }
 ```
 
-* *
+---
 
-### 第 2 ：SafeFileReader 工具类
+### 步骤 2：SafeFileReader 工具类
 
 现在让我们来实现一个封装文件读取逻辑的工具类。
 
@@ -5256,7 +5269,7 @@ public class SafeFileReader {
             reader = new BufferedReader(new FileReader(file));
             StringBuilder content = new StringBuilder();
             String line;
-            //逐行读取文件内容
+            // 逐行读取文件内容
             while ((line = reader.readLine()) != null) {
                 content.append(line).append("\n");
             }
@@ -5283,9 +5296,9 @@ public class SafeFileReader {
 }
 ```
 
-* *
+---
 
-### 第 3 步：带有用户输入的主程序
+### 步骤 3：带有用户输入的主程序
 
 我们将创建一个 `Main` 类，与用户交互并调用文件读取器。
 
@@ -5308,11 +5321,11 @@ public class Main {
 }
 ```
 
-* *
+---
 
 ### 示例运行
 
-```pgsql
+```text
 Enter the path to the file you want to read: data/info.txt
 --- File Content ---
 Java is a versatile programming language.
@@ -5322,7 +5335,7 @@ File closed successfully.
 
 或者，如果文件是空的：
 
-```pgsql
+```text
 Enter the path to the file you want to read: empty.txt
 Custom Exception: The file is empty.
 File closed successfully.
@@ -5330,12 +5343,12 @@ File closed successfully.
 
 或者，如果文件不存在：
 
-```mathematica
+```text
 Enter the path to the file you want to read: missing.txt
 I/O Error: File does not exist.
 ```
 
-* *
+---
 
 ### 核心要点
 
@@ -5344,7 +5357,7 @@ I/O Error: File does not exist.
 - 抛出自定义异常使错误报告更具描述性并与业务逻辑相关。
 - 将逻辑分离到工具类（`SafeFileReader`）可以保持代码的整洁、模块化和可重用。
 
-* *
+---
 
 ### 挑战
 
@@ -5358,32 +5371,32 @@ I/O Error: File does not exist.
 
 在下一章中，随着进入类和对象，我们将更深入地探索 Java 的面向对象特性。
 
-* *
+---
 
 # 第 9 章：文件处理
 
 处理文件是许多 Java 应用程序的重要组成部分。无论是保存用户偏好、记录日志还是存储数据供以后使用，文件 I/O 操作都提供了一种持久化数据的实用方法。在本章中，你将学习如何使用 `java.io` 和 `java.util` 包中的各种类从文本文件中读取和写入内容。在章节结束时，你还将构建一个功能完整的待办事项列表，并将任务保存到文件中。
 
-* *
+---
 
-## 第 9.1 读取和写入文本文件
+## 9.1 读取和写入文本文件
 
 处理文件是任何 Java 开发者的基本技能。无论是存储配置数据、记录活动日志，还是处理用户生成的内容，文件 I/O（输入/输出）操作都赋予你的应用程序高效持久化和检索数据的能力。在本节中，我们将探索处理文本文件的核心类：`FileReader` 和 `FileWriter`。
 
 本章将保持简单且实用，重点关注你在真实世界 Java 应用程序中执行的最常见操作。
 
-* *
+---
 
 ### FileReader 和 FileWriter 简介
 
 Java 提供了 `java.io` 包来处理文件输入和输出。处理文本文件的两个常用类是：
 
-- `FileReader`: 从文件中读取字符数据。
-- `FileWriter`: 向文件中写入字符数据。
+- `FileReader`：从文件中读取字符数据。
+- `FileWriter`：向文件中写入字符数据。
 
 这些类适用于处理文本文件。
 
-* *
+---
 
 ### 使用 FileWriter 写入文件
 
@@ -5415,16 +5428,16 @@ public class FileWriterExample {
 
 解释：
 
-- `new FileWriter("example.txt")`: 创建文件。
-- `write(...)`: 写入字符串。
-- `\n`: 添加换行符。
-- `close()`: 刷新缓冲区并释放资源。
+- `new FileWriter("example.txt")`：创建文件。
+- `write(...)`：写入字符串。
+- `\n`：添加换行符。
+- `close()`：刷新缓冲区并释放资源。
 
-* *
+---
 
 ### 使用 FileReader 读取文件
 
-向文件中写入数据后，你可能想读取它。这就是 `FileReader` 派用用场。
+向文件中写入数据后，你可能想读取它。这就是 `FileReader` 派上用场。
 
 #### 示例：从文件中读取字符
 
@@ -5456,7 +5469,7 @@ public class FileReaderExample {
 - 转换为 `(char)` 显示实际字符。
 - 读取是逐个完成的，对于小文件可以，但对于大文件效率较低（稍后我们将用 `BufferedReader` 优化）。
 
-* *
+---
 
 ### 追加文件
 
@@ -5483,13 +5496,9 @@ public class AppendExample {
 }
 ```
 
-* *
+---
 
 ### 处理文件路径
-
-
-
-
 
 你可以在文件操作中使用相对路径和绝对路径。
 
@@ -5502,6 +5511,8 @@ FileWriter writer = new FileWriter("/Users/jane/Documents/log.txt", true);
 
 务必处理特定平台的路径分隔符（Windows 使用 `\`，macOS/Linux 使用 `/`），或使用 `File` 类来构建可移植的路径。
 
+---
+
 ### 最佳实践
 
 - 始终使用 `close()` 或 try-with-resources 关闭文件流，以避免内存泄漏。
@@ -5509,20 +5520,26 @@ FileWriter writer = new FileWriter("/Users/jane/Documents/log.txt", true);
 - 对于大文件，优先使用 `BufferedWriter` 或 `BufferedReader`（将在下一节介绍）。
 - 开发期间使用相对路径以获得更好的可移植性。
 
-## 第 9.2 节 BufferedReader 和 Scanner
+---
+
+## 9.2 BufferedReader 和 Scanner
 
 在 Java 中处理文本文件或用户输入时，性能和灵活性是关键。虽然 `FileReader` 和 `FileWriter` 适用于简单用例，但在读取大文件或逐行处理数据时，它们的效率可能较低。这就是 `BufferedReader` 和 `Scanner` 大显身手的地方。
 
 在本章，我们将探索这两个类，解释何时使用每一个，并向你展示可以在自己的应用程序中使用的示例。
 
+---
+
 ### 为什么使用 BufferedReader 和 Scanner？
 
 `BufferedReader` 和 `Scanner` 都用于读取文本，但它们的作用略不同：
 
-- `BufferedReader` 设计用于快速读取文本文件，特别是在读取大块文本或文本行时。
+- `BufferedReader` 设计用于快速读取文本文件，特别是在读取大块文件或文本行时。
 - `Scanner` 当你需要解析输入或从文件/用户输入中读取格式化数据时，它更加灵活且强大。
 
 让我们详细查看这两个类。
+
+---
 
 ### 使用 BufferedReader 读取文件
 
@@ -5557,19 +5574,22 @@ public class BufferedReaderExample {
 解释：
 
 - `readLine()` 每次读取一行，在换行符处停止。
+
+
+
 - 缓冲方法意味着更少的直接磁盘访问操作，从而提高了性能。
 
-#### BufferedReader 的优势
+### BufferedReader 的优势
 
 - 对于大文件处理效率高。
 - 可以使用 `readLine()` 读取整行。
 - API 简单且性能良好。
 
-### 使用 Scanner 读取输入
+## 使用 Scanner 读取输入
 
 `Scanner` 类是 `java.util` 包的一部分，非常适合解析数据，无论数据来自文件还是键盘。你可以逐行、逐单词甚至逐数字地扫描输入。
 
-#### 示例：读取用户输入
+### 示例：读取用户输入
 
 ```java
 import java.util.Scanner;
@@ -5593,7 +5613,7 @@ public class ScannerUserInputExample {
 - `nextInt()`, `nextDouble()` 等：读取特定类型。
 - `System.in`: 标准输入流（控制台）。
 
-#### 示例：使用 Scanner 读取文件
+### 示例：使用 Scanner 读取文件
 
 ```java
 import java.io.File;
@@ -5623,7 +5643,7 @@ public class ScannerFileExample {
 - `Scanner` 类从 `File` 读取。
 - `hasNextLine()` 检查是否有更多数据。
 
-### BufferedReader 与 Scanner 的对比
+## BufferedReader 与 Scanner 的对比
 
 | 特性 | BufferedReader | Scanner |
 | :--- | :--- | :--- |
@@ -5633,12 +5653,12 @@ public class ScannerFileExample {
 | 输入源 | 仅限读取器 | 键盘、文件等 |
 | 理想用例 | 高效文件读取 | 用户输入 |
 
-#### 何时使用何种工具
+### 何时使用何种工具
 
 - 当你想从文件快速逐行读取内容时，使用 `BufferedReader`。
 - 当你需要解析不同的数据时，使用 `Scanner`。
 
-### 处理字符编码
+## 处理字符编码
 
 除非指定，否则 `BufferedReader` 和 `Scanner` 都使用平台的默认编码。对于 UTF-8 编码的文件，使用 `InputStreamReader` 包装读取器：
 
@@ -5646,6 +5666,7 @@ public class ScannerFileExample {
 BufferedReader reader = new BufferedReader(
     new InputStreamReader(new FileInputStream("example.txt"), "UTF-8"));
 ```
+
 这确保了跨平台的行为。
 
 ## 第 9.3 节 FileWriter 和 BufferedWriter
@@ -5677,7 +5698,7 @@ public class FileWriterExample {
             FileWriter writer = new FileWriter("output.txt");
             // 向文件写入文本
             writer.write("Hello, world!\n");
-            writer.write("这是的一行。\n");
+            writer.write("这是第二行。\n");
             // 关闭写入器以刷新并释放资源
             writer.close();
             System.out.println("数据写入成功.");
@@ -5703,10 +5724,6 @@ public class FileWriterExample {
 ```java
 BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
 ```
-
-
-
-
 
 ```java
 public class BufferedWriterExample {
@@ -5737,7 +5754,7 @@ public class BufferedWriterExample {
 - `BufferedWriter` 对于较大的写入操作效率更高。
 - 可以与 `FileWriter` 或 `OutputStreamWriter` 链式，用于编码等高级场景。
 
-* * *
+---
 
 ### 向文件追加数据
 
@@ -5766,7 +5783,7 @@ public class AppendExample {
 }
 ```
 
-* * *
+---
 
 ### 在 FileWriter 和 BufferedWriter 之间选择
 
@@ -5779,7 +5796,7 @@ public class AppendExample {
 
 通常情况下，由于性能优势，在大多数实际应用中优先选择 `BufferedWriter`。
 
-* * *
+---
 
 ### 处理编码
 
@@ -5810,13 +5827,13 @@ public class UTF8WriterExample {
 }
 ```
 
-* * *
+---
 
 ## 动手项目：待办事项列表应用（保存到文件）
 
 这个动手项目结合了我们学到的所有文件处理知识。我们将创建一个简单的基于控制台的待办事项应用，允许用户添加任务、查看所有任务、删除任务并将他们的列表保存到文件中。它既实用又对初学者友好，为未来更高级的应用奠定了基础。
 
-* * *
+---
 
 ### 项目目标
 
@@ -5827,7 +5844,7 @@ public class UTF8WriterExample {
 - 在启动时从文件中读取保存的任务。
 - 执行添加、删除和查看任务等基本操作。
 
-* * *
+---
 
 ### 项目结构
 
@@ -5835,9 +5852,9 @@ public class UTF8WriterExample {
 
 任务将保存到当前目录下的 `tasks.txt` 中。
 
-* * *
+---
 
-### 第 1 ：设置与导入
+### 第 1 步：设置与导入
 
 从导入必要的类开始。
 
@@ -5848,9 +5865,9 @@ import java.util.List;
 import java.util.Scanner;
 ```
 
-* * *
+---
 
-### 第 2 ：类与 main 方法
+### 第 2 步：类与 main 方法
 
 我们将定义主类并初始化必要的变量。
 
@@ -5867,9 +5884,9 @@ public class ToDoApp {
 }
 ```
 
-* * *
+---
 
-### 第 3：从文件加载任务
+### 第 3 步：从文件加载任务
 
 我们想要加载之前保存在 `tasks.txt` 中的任务。
 
@@ -5881,15 +5898,15 @@ private static void loadTasks() {
             tasks.add(task);
         }
     } catch (IOException e) {
-            // 第一次运行时文件可能不存在；没关系
-            System.out.println("No existing task file found. Starting fresh.");
-        }
+        // 第一次运行时文件可能不存在；没关系
+        System.out.println("No existing task file found. Starting fresh.");
+    }
 }
 ```
 
-* * *
+---
 
-### 第 4：将任务保存到文件
+### 第 4 步：将任务保存到文件
 
 ```java
 private static void saveTasks() {
@@ -5905,11 +5922,13 @@ private static void saveTasks() {
 }
 ```
 
-* * *
+---
 
-### 第 5：运行应用程序
+### 第 5 步：运行应用程序
 
 提供一个友好的菜单与应用交互。
+
+
 
 ```java
 private static void runApp() {
@@ -5944,18 +5963,18 @@ private static void runApp() {
 }
 ```
 
-* * *
+---
 
-### 第 6：查看任务
+### 第 6 步：查看任务
 
 列出带编号的任务。
 
 ```java
 private static void viewTasks() {
     if (tasks.isEmpty()) {
-        System.out.println("列表中没有任务。
+        System.out.println("列表中没有任务。");
     } else {
-        System.out.println("\n 任务：");
+        System.out.println("\n任务：");
         for (int i = 0; i < tasks.size(); i++) {
             System.out.println((i + 1) + ". " + tasks.get(i));
         }
@@ -5963,9 +5982,9 @@ private static void viewTasks() {
 }
 ```
 
-* * *
+---
 
-### 第 7：添加任务
+### 第 7 步：添加任务
 
 获取用户输入并将任务添加到列表。
 
@@ -5975,16 +5994,16 @@ private static void addTask(Scanner scanner) {
     String task = scanner.nextLine().trim();
     if (!task.isEmpty()) {
         tasks.add(task);
-        System.out.println("任务已添加.");
+        System.out.println("任务已添加。");
     } else {
-        System.out.println("任务不能不能为空.");
+        System.out.println("任务不能为空。");
     }
 }
 ```
 
-* * *
+---
 
-### 第 8：删除任务
+### 第 8 步：删除任务
 
 根据编号删除任务。
 
@@ -6000,23 +6019,19 @@ private static void deleteTask(Scanner scanner) {
         int taskNumber = Integer.parseInt(scanner.nextLine());
         if (taskNumber > 0 && taskNumber <= tasks.size()) {
             tasks.remove(taskNumber - 1);
-            System.out.println("任务已删除.");
+            System.out.println("任务已删除。");
         } else {
-            System.out.println("无效的任务编号.");
+            System.out.println("无效的任务编号。");
         }
     } catch (NumberFormatException e) {
-        System.out.println("请输入有效的数字.");
+        System.out.println("请输入有效的数字。");
     }
 }
 ```
 
+在本节中，我们将逐步介绍构建一个简单的基于控制台的 Java 应用程序。在本章结束时，你将拥有一个功能完备的系统，并理解构建更复杂的 Java 应用程序所需的核心概念。在本示例中，我们将创建一个微型 ATM 系统，但你可以轻松地将其结构调整为图书馆管理系统或任何简单的基于控制台应用程序。这次练习将巩固你对 Java 核心特性的理解，例如面向对象编程（OOP）、输入/输出（I/O）操作以及基础控制流。
 
-
-
-
-在本节中，我们将逐步介绍构建一个简单的基于控制 Java Java 应用程序。在本章结束时，你将拥有一个功能完备的系统，并理解构建更复杂的 Java 应用程序所需的核心概念。在本示例中，我们将创建一个微型 ATM 系统（Mini ATM System），但你可以轻松地将其结构调整为图书馆管理系统或任何简单的基于控制台应用程序。这次练习将巩固你对 Java 核心特理解，例如面向对象编程（OOP）、输入/输出（I/O）操作以及基础控制流。
-
-### 目标
+## 目标
 
 在这个项目中，我们将：
 
@@ -6025,9 +6040,9 @@ private static void deleteTask(Scanner scanner) {
 * 针对常见的 ATM 相关问题实现基础的错误处理。
 * 在控制台中提供一个简单的用户界面以与系统进行交互。
 
-### 第 1 步：设置与基础结构
+## 第 1 步：设置与基础结构
 
-让我们首先创建一个名为 `ATMSystem.java` 的类，存放 ATM 系统的主逻辑。我们还将创建一个 `BankAccount.java` 类来表示银行账户。该类将存储账户详情，如余额、持卡姓名以及交易方法（存款和取款）。
+让我们首先创建一个名为 `ATMSystem.java` 的类，存放 ATM 系统的主逻辑。我们还将创建一个 `BankAccount.java` 类来表示银行账户。该类将存储账户详情，如余额、持卡人姓名以及交易方法（存款和取款）。
 
 ```java
 import java.util.Scanner;
@@ -6046,10 +6061,10 @@ public class ATMSystem {
         boolean exit = false;
         while (!exit) {
             System.out.println("\nATM Main Menu:");
-            System.out.println("1\. Check Balance");
-            System.out.println("2\. Deposit Money");
-            System.out.println("3\. Withdraw Money");
-            System.out.println("4\. Exit");
+            System.out.println("1. Check Balance");
+            System.out.println("2. Deposit Money");
+            System.out.println("3. Withdraw Money");
+            System.out.println("4. Exit");
             System.out.print("Please choose an option: ");
             String choice = scanner.nextLine();
             switch (choice) {
@@ -6099,7 +6114,7 @@ public class ATMSystem {
 }
 ```
 
-### 第 2 步：BankAccount 类
+## 第 2 步：BankAccount 类
 
 `BankAccount` 类是一个存储持卡人姓名和余额等信息的简单类。它还将包含存款和取款的方法，以及获取余额的 getter 方法。
 
@@ -6135,21 +6150,23 @@ public class BankAccount {
 }
 ```
 
-### 第 3 步：理解流程
+## 第 3 步：理解流程
 
 以下是应用程序流程的分解：
 
-1.  **ATMSystem 类**:
-    * `ATMSystem` 类包含 `main` 方法，程序从这里启动。它创建了一个带有初始余额的 `BankAccount` 实例，并将其传递给 `startATM` 方法以启动用户界面。
-    * `startATM` 方法显示简单的菜单并允许用户选择操作（查询余额、存款、取款或退出）。根据用户的选择，调用相应的方法。
-2.  **BankAccount 类**:
-    * `BankAccount` 类表示账户。它拥有持卡人姓名和余额的字段。
-    * `deposit` 方法根据存款金额增加余额，`withdraw` 方法减少余额，并确保资金充足。
-3.  **存款与取款**:
-    * 对于存款和取款，方法会确保输入的金额有效。如果金额为零或负数，将显示错误。
-    * 如果取款金额超过余额，系统会提示。
+1. **`ATMSystem` 类**：
+   * `ATMSystem` 类包含 `main` 方法，程序从这里启动。它创建了一个带有初始余额的 `BankAccount` 实例，并将其传递给 `startATM` 方法以启动用户界面。
+   * `startATM` 方法显示简单的菜单并允许用户选择操作（查询余额、存款、取款或退出）。根据用户的选择，调用相应的方法。
 
-### 第 4 步：测试系统
+2. **`BankAccount` 类**：
+   * `BankAccount` 类表示账户。它拥有持卡人姓名和余额的字段。
+   * `deposit` 方法根据存款金额增加余额，`withdraw` 方法减少余额，并确保资金充足。
+
+3. **存款与取款**：
+   * 对于存款和取款，方法会确保输入的金额有效。如果金额为零或负数，将显示错误。
+   * 如果取款金额超过余额，系统会提示。
+
+## 第 4 步：测试系统
 
 运行 `ATMSystem` 后，你应该能够通过控制台与系统进行交互。选项包括：
 
@@ -6186,7 +6203,7 @@ Enter withdrawal amount: 200
 Successfully withdrew $200.0
 ```
 
-### 第 5 步：改进与后续步骤
+## 第 5 步：改进与后续步骤
 
 这个基础 ATM 系统对于学习目的效果良好，但对于实际应用程序，你可以考虑以下改进措施：
 
@@ -6194,9 +6211,7 @@ Successfully withdrew $200.0
 2. **交易历史**：实现一个跟踪每笔存款和取款的功能，并允许用户查看其历史。
 3. **多账户**：你可以添加支持多个用户的功能，每个用户都有自己的账户。
 4. **错误处理**：针对边缘情况（如无效输入或系统故障）添加更全面的错误处理。
-5. **利与手续费**：引入诸如余额自动计息或交易手续费等功能。
-
-
+5. **利息与手续费**：引入诸如余额自动计息或交易手续费等功能。
 
 
 
@@ -6263,13 +6278,21 @@ private static void withdrawMoney(BankAccount account, Scanner scanner) {
 ### ATMSystem 类说明
 
 - **导入 Scanner**: 我们导入了 `Scanner` 类来捕获控制台用户输入。这允许我们实时与用户进行交互。
+
 - **Main 方法**: 在 `main` 方法中，我们创建了 `BankAccount` 类的实例，用账户持有人姓名和初始余额对其初始化。该对象被传递给 `startATM` 方法以开始 ATM 交互。
+
 - **startATM 方法**: 该方法包含 ATM 系统的主循环。循环一直运行，直到用户决定退出。用户将看到一个简单的菜单，可以在以下选项之间进行选择：
+
   - 检查余额
+
   - 存款
+
   - 取款
+
   - 退出系统。根据用户的选择，将触发相应的操作（检查余额、存款、取款或退出）。
+
 - **depositMoney 方法**: 该方法允许用户向其账户存款。它读取存款金额并检查其是否有效（大于 0）。如果有效，它将使用 `BankAccount` 类的 `deposit` 方法将存款添加到账户余额中。
+
 - **withdrawMoney 方法**: 该方法用于取款。它会检查输入的取款金额是否有效（大于 0）以及用户是否有足够的余额。如果满足这两个条件，它将使用 `BankAccount` 类的 `withdraw` 方法进行取款。
 
 ***
@@ -6311,11 +6334,17 @@ public class BankAccount {
 ### BankAccount 类说明
 
 - **类字段**: `BankAccount` 类有两个主要字段：
+
   - `accountHolderName`: 用于存储账户持有人姓名的字符串。
+
   - `balance`: 用于存储账户当前余额的双精度类型。
+
 - **构造函数**: 构造函数用账户持有人姓名和初始余额初始化账户。这些值是在 `ATMSystem` 类中创建 `BankAccount` 对象时传递的。
+
 - **余额 Getter**: `getBalance()` 方法简单地返回账户的当前余额。
+
 - **存款方法**: `deposit()` 方法将指定的金额添加到余额中。每当用户在 ATM 系统中存款时，都会调用此方法。
+
 - **取款方法**: `withdraw()` 方法检查取款金额是否小于或等于当前余额。如果资金充足，它将从余额中扣除指定的金额。否则，它会打印错误信息。
 
 ***
@@ -6323,20 +6352,23 @@ public class BankAccount {
 ### 代码流程总结
 
 - **模块化结构**: ATM 系统被分为两个主要类：`ATMSystem` 和 `BankAccount`。这种模块化方法有助于保持应用程序的条理，并使大型系统更易管理。
+
 - **用户交互**: `ATMSystem` 处理检查余额、存款和取款的用户交互。使用 `Scanner` 进行输入。
+
 - **面向对象设计**: 我们在项目中使用面向对象的原则。`BankAccount` 类封装了所有与账户的功能。`ATMSystem` 侧重于用户界面。
+
 - **控制流**: 程序利用基础控制结构（如 `while` 和 `if-else`）来处理各种情况，例如资金不足。
+
 - **错误处理**: 实现了简单的错误处理以防止无效操作，例如取款超过余额。
-
-
-
-
 
 例如，在一个图书馆管理系统中，你可能会有以下模块：
 
 - 用户身份验证：处理用户登录、注册和角色管理。
+
 - 物品库存管理：管理图书馆中的书籍、杂志和其他物品。
+
 - 图书借阅：管理书籍的借和和还流程。
+
 - 通知：处理电子邮件通知和告警。
 
 每个模块可以由多个类、接口和其他资源组成，这些资源共同工作以执行特定任务。
@@ -6491,16 +6523,18 @@ public class Authenticator {
 ```
 
 - `/src`：包含源代码。
+
 - `/lib`：包含第三方库。
+
 - `/resources`：包含配置文件、图像或数据库脚本等非代码文件。
 
 通过保持良好的组织，可以在应用程序增长时更容易找到并更新特定部分。
 
-* *
+***
 
 # 附录
 
-* *
+***
 
 ## Java 关键字与语法表
 
@@ -6513,18 +6547,16 @@ Java 有 53 个保留关键字，每个关键字都有特定的用途。这些�
 | 关键字 | 说明 | 示例 |
 | :--- | :--- | :--- |
 | `abstract` | 声明抽象类或方法。抽象类不能直接实例化，作为其他类的蓝图。 | `abstract class Animal { abstract void sound(); }` |
-| `assert` | 用于调试。它测试表达式，如果假则抛出异常。 | `assert x > 0 : "x is negative";` |
-| `boolean` | 定义布尔数据类型，可以存储真或假值。 | `boolean isActive = true;` |
-| `break` | 退出循环或 `switch` 语句。 | `if (x > 10) break;` |
-| `byte` | 定义一个 8 位符号整数数据类型。 | `byte b = 100;` |
-| `case` | 定义 `switch` 语句中的一个分支。 | `switch (day) { case 1: System.out.println("Monday"); }` |
-
-
 
 
 
 | 关键字 | 描述 | 示例 |
 | :--- | :--- | :--- |
+| `assert` | 用于调试。它测试表达式，如果假则抛出异常。 | `assert x > 0 : "x is negative";` |
+| `boolean` | 定义布尔数据类型，可以存储真或假值。 | `boolean isActive = true;` |
+| `break` | 退出循环或 `switch` 语句。 | `if (x > 10) break;` |
+| `byte` | 定义一个 8 位符号整数数据类型。 | `byte b = 100;` |
+| `case` | 定义 `switch` 语句中的一个分支。 | `switch (day) { case 1: System.out.println("Monday"); }` |
 | `catch` | 捕获由 `try` 块抛出的异常。 | `try { ... } catch (Exception e) { ... }` |
 | `char` | 定义字符数据类型。 | `char letter = 'A';` |
 | `class` | 声明一个类。 | `class Car { String model; }` |
@@ -6570,13 +6602,12 @@ Java 有 53 个保留关键字，每个关键字都有特定的用途。这些�
 | `volatile` | 指定字段可能会被多个线程修改。 | `private volatile boolean flag;` |
 | `while` | 定义条件真就持续的 `while` 循环。 | `while (x > 0) { ... }` |
 
-***
-
 ## Java 语法基础
 
 在涵盖了关键字之后，让我们来看您在编写 Java 代码时会遇到的一些基础语法规则。以下是快速概览：
 
 ### 类和方法
+
 每个 Java 应用程序至少有一个类，在类内部您通常定义方法来执行操作。
 
 ```java
@@ -6588,6 +6619,7 @@ public class MyFirstClass {
 ```
 
 ### 变量声明
+
 变量必须声明类型。
 
 ```java
@@ -6597,6 +6629,7 @@ boolean isActive = true;
 ```
 
 ### 流程结构
+
 Java 包含了 `if`、`for` 和 `switch` 等用于条件和迭代操作的结构。
 
 ```java
@@ -6606,6 +6639,7 @@ if (number > 5) {
 ```
 
 ### 循环
+
 Java 支持三种循环：`for`、`while` 和 `do-while`。
 
 ```java
@@ -6614,7 +6648,8 @@ for (int i = 0; i < 5; i++) {
 }
 ```
 
-#### 代码示例：使用 Java 关键字
+### 代码示例：使用 Java 关键字
+
 让我们通过一个使用了多个关键字的示例将一切整合起来：
 
 ```java
@@ -6667,26 +6702,33 @@ public class BankAccount {
 
 ---
 
-这份备查表在您刚开始学习或需要快速回顾 Java 基础元素时是一份很棒的。随着经验的增加，这些关键字和语法模式将成为本能，但随手可用非常有帮助。继续构建和测试小程序以强化这些概念。
+这份备查表在您刚开始学习或需要快速回顾 Java 基础元素时是一份很棒的资源。随着经验的增加，这些关键字和语法模式将成为本能，但随手可用非常有帮助。继续构建和测试小程序以强化这些概念。
 
 ## B. 推荐的 IDE 快捷键
 
 当你花更多时间编写 Java 代码时，你会很快发现开发环境可以加快你的速度，也可以拖慢你的速度。提高效率的最有效方法之一是掌握 IDE 的快捷键。无论你使用的是 IntelliJ IDEA、Eclipse 还是 Visual Studio Code (VS Code)，掌握正确的快捷键都能帮助更快地编写整洁的代码、更高效地调试并轻松地导航项目。
 
-## 1. IntelliJ IDEA（社区版或 Ultimate 版）
+### 1. IntelliJ IDEA（社区版或 Ultimate 版）
 
 IntelliJ IDEA 因其智能代码辅助、重构工具和无缝集成而深受 Java 开发者的青睐。以下是能够极大提高效率的常用快捷键。
 
-### 导航与编辑
+#### 导航与编辑
 
 | 操作 | 快捷键 (Windows/Linux) | 快捷键 (macOS) |
 | :--- | :--- | :--- |
-```
 
 
 
-| 转到类/文件/符号 | `Ctrl + N` / `Ctrl + Shift + N` / `Ctrl + Alt + Shift + N` | `Cmd + O` / `Cmd + Shift + O` / `Cmd + Alt + O` |
+# Java IDE 快捷键速查与学习资源指南
+
+## 1. IntelliJ IDEA
+
+### 导航与编辑
+
+| 操作 | 快捷键 | 快捷键 |
 | :--- | :--- | :--- |
+| | Windows/Linux | macOS |
+| 转到类/文件/符号 | `Ctrl + N` / `Ctrl + Shift + N` / `Ctrl + Alt + Shift + N` | `Cmd + O` / `Cmd + Shift + O` / `Cmd + Alt + O` |
 | 转到定义/声明 | `Ctrl + B` 或 `Ctrl + Click` | `Cmd + B` 或 `Cmd + Click` |
 | 查找用处 | `Alt + F7` | `Option + F7` |
 | 后退 | `Ctrl + Alt + Left` | `Cmd + Option + Left` |
@@ -6695,8 +6737,9 @@ IntelliJ IDEA 因其智能代码辅助、重构工具和无缝集成而深受 Ja
 
 ### 编辑与重构
 
-| 操作 | 快捷键 (Windows/Linux) | 快捷键 (macOS) |
+| 操作 | 快捷键 | 快捷键 |
 | :--- | :--- | :--- |
+| | Windows/Linux | macOS |
 | 自动补全 | `Ctrl + Space` | `Ctrl + Space` |
 | 智能补全 | `Ctrl + Shift + Space` | `Cmd + Shift + Space` |
 | 包裹代码 | `Ctrl + Alt + T` | `Cmd + Option + T` |
@@ -6708,8 +6751,9 @@ IntelliJ IDEA 因其智能代码辅助、重构工具和无缝集成而深受 Ja
 
 ### 调试
 
-| 操作 | 快捷键 (Windows/Linux) | 快捷键 (macOS) |
+| 操作 | 快捷键 | 快捷键 |
 | :--- | :--- | :--- |
+| | Windows/Linux | macOS |
 | 切换断点 | `Ctrl + F8` | `Cmd + F8` |
 | 步过 | `F8` | `F8` |
 | 步入 | `F7` | `F7` |
@@ -6719,7 +6763,7 @@ IntelliJ IDEA 因其智能代码辅助、重构工具和无缝集成而深受 Ja
 
 在调试复杂的 Java 代码时，结合 `Evaluate Expression`（评估表达式）和 `Step Into`（步入）可以帮助你理解复杂的逻辑流，而无需猜测底层发生了什么。
 
-***
+---
 
 ## 2. Eclipse
 
@@ -6727,8 +6771,9 @@ Eclipse 是另一个流行的 Java IDE，拥有庞大的用户群，特别是在
 
 ### 导航与编辑
 
-| 操作 | 快捷键 (Windows/Linux) | 快捷键 (macOS) |
+| 操作 | 快捷键 | 快捷键 |
 | :--- | :--- | :--- |
+| | Windows/Linux | macOS |
 | 打开类型/文件 | `Ctrl + Shift + T / R` | `Cmd + Shift + T / R` |
 | 转到声明 | `F3` | `F3` |
 | 在新窗口中打开声明 | `Ctrl + F3` | `Cmd + F3` |
@@ -6736,8 +6781,9 @@ Eclipse 是另一个流行的 Java IDE，拥有庞大的用户群，特别是在
 
 ### 编辑与重构
 
-| 操作 | 快捷键 (Windows/Linux) | 快捷键 (macOS) |
+| 操作 | 快捷键 | 快捷键 |
 | :--- | :--- | :--- |
+| | Windows/Linux | macOS |
 | 内容辅助 | `Ctrl + Space` | `Ctrl + Space` |
 | 重命名 | `Alt + Shift + R` | `Cmd + Shift + R` |
 | 提取方法 | `Alt + Shift + M` | `Cmd + Shift + M` |
@@ -6747,17 +6793,18 @@ Eclipse 是另一个流行的 Java IDE，拥有庞大的用户群，特别是在
 
 ### 调试
 
-| 操作 | 快捷键 (Windows/Linux) | 快捷键 (macOS) |
+| 操作 | 快捷键 | 快捷键 |
 | :--- | :--- | :--- |
+| | Windows/Linux | macOS |
 | 切换断点 | `Ctrl + Shift + B` | `Cmd + Shift + B` |
 | 步过 | `F6` | `F6` |
 | 步入 | `F5` | `F5` |
 | 步出 | `F7` | `F7` |
 | 恢复 | `F8` | `F8` |
 
-实际示例：在调试时，使用 `Step Into(F5)` 深入方法调用，理解对象之间的控制流流，这在处理递归逻辑或追踪异常时特别有用。
+实际示例：在调试时，使用 `Step Into(F5)` 深入方法调用，理解对象之间的控制流，这在处理递归逻辑或追踪异常时特别有用。
 
-***
+---
 
 ## 3. Visual Studio Code (带有 Java 扩展包)
 
@@ -6765,8 +6812,9 @@ VS Code 因其轻量级特性和广泛的扩展支持变得越来越流行。通
 
 ### 导航与编辑
 
-| 操作 | 快捷键 (Windows/Linux) | 快捷键 (macOS) |
+| 操作 | 快捷键 | 快捷键 |
 | :--- | :--- | :--- |
+| | Windows/Linux | macOS |
 | 快速打开文件 | `Ctrl + P` | `Cmd + P` |
 | 转到定义 | `F12` | `F12` |
 | 预览定义 | `Alt + F12` | `Option + F12` |
@@ -6774,8 +6822,9 @@ VS Code 因其轻量级特性和广泛的扩展支持变得越来越流行。通
 
 ### 编辑与重构
 
-| 操作 | 快捷键 (Windows/Linux) | 快捷键 (macOS) |
+| 操作 | 快捷键 | 快捷键 |
 | :--- | :--- | :--- |
+| | Windows/Linux | macOS |
 | 自动补全 | `Ctrl + Space` | `Ctrl + Space` |
 | 重命名符号 | `F2` | `F2` |
 | 格式化文档 | `Shift + Alt + F` | `Shift + Option + F` |
@@ -6783,8 +6832,9 @@ VS Code 因其轻量级特性和广泛的扩展支持变得越来越流行。通
 
 ### 调试
 
-| 操作 | 快捷键 (Windows/Linux) | 快捷键 (macOS) |
+| 操作 | 快捷键 | 快捷键 |
 | :--- | :--- | :--- |
+| | Windows/Linux | macOS |
 | 切换断点 | `Ctrl + F8` | `Cmd + F8` |
 | 步过 | `F8` | `F8` |
 | 步入 | `F7` | `F7` |
@@ -6802,9 +6852,9 @@ VS Code 因其轻量级特性和广泛的扩展支持变得越来越流行。通
 - Eclipse: `Preferences`
 - VS Code: `Keymap`
 
-***
+---
 
-## C. 持续学习顶级资源
+# C. 持续学习顶级资源
 
 学习 Java 并非读完本书就结束。Java 生态系统庞大且不断进化。在此部分，我将分享最有价值的资源。
 
@@ -6818,7 +6868,7 @@ VS Code 因其轻量级特性和广泛的扩展支持变得越来越流行。通
 - URL: `openjdk.org`
 - 关注 JEP（JDK 增强提案）。
 
-***
+---
 
 ## 2. 在线学习平台
 
@@ -6838,9 +6888,9 @@ VS Code 因其轻量级特性和广泛的扩展支持变得越来越流行。通
 - 推荐课程：`Java Programming Masterclass`
 - 提供终身访问和问答支持。
 
-***
+---
 
-## 3. YouTube YouTube 频道
+## 3. YouTube 频道
 
 ### Amigoscode
 - 以易于理解的方式讲解 Spring Boot、JPA 和微服务等 Java 话题。
@@ -6853,13 +6903,13 @@ VS Code 因其轻量级特性和广泛的扩展支持变得越来越流行。通
 
 个人建议：订阅一两个活跃频道并进行实战操作。暂停、编写代码并测试不同的输入。
 
-***
+---
 
 ## 4. 播客与通讯邮件
 
 ### Inside Java Podcast
 - URL: `https://inside.java/podcast/`
-- 由 Oracle 工程师主持，讨论 Java 开发的最新。
+- 由 Oracle 工程师主持，讨论 Java 开发的最新动态。
 
 ### The Java Pub House
 - URL: `https://javapubhouse.com`
@@ -6869,18 +6919,12 @@ VS Code 因其轻量级特性和广泛的扩展支持变得越来越流行。通
 - URL: `https://www.baeldung.com`
 - 订阅他们的邮件以获取每周 Java、Spring 和 DevOps 文章。
 
-***
+---
 
 ## 5. 高质量 Java 博客
 
 ### Baeldung
 非常适合 Spring、REST API 和现代 Java 实践的教程。
-
-
-
-
-
-# 示例：Java Streams 指南
 
 ### InfoQ 和 DZone
 - 关注企业级 Java 趋势、实际用例和架构模式。
@@ -6888,6 +6932,8 @@ VS Code 因其轻量级特性和广泛的扩展支持变得越来越流行。通
 ### Oracle 的 Dev.java
 - URL: [`dev.java`](https://dev.java)
 - 由 Java 创造者精心策划，包含教程、活动公告和示例项目。
+
+---
 
 ## 6. 实践导向型平台
 
@@ -6900,7 +6946,9 @@ VS Code 因其轻量级特性和广泛的扩展支持变得越来越流行。通
 - 来自导师和贡献者的反馈驱动型学习。
 
 ### GitHub 仓库
-- 关注并贡献开源 Java Java 项目。寻找如 `good first issue` 等对新手友好的标签。
+- 关注并贡献开源 Java 项目。寻找如 `good first issue` 等对新手友好的标签。
+
+---
 
 ## 7. 框架和特定工具学习
 
@@ -6914,6 +6962,8 @@ VS Code 因其轻量级特性和广泛的扩展支持变得越来越流行。通
 ### JUnit 和 TestNG
 - 学习单元测试和测试驱动开发 (TDD)。
 
+---
+
 ## 8. Java 社区与论坛
 
 ### Stack Overflow
@@ -6925,4 +6975,3 @@ VS Code 因其轻量级特性和广泛的扩展支持变得越来越流行。通
 
 ### Dev.to
 - 搜索 Java 标签，并关注分享教程和案例研究的顶级贡献者。
-

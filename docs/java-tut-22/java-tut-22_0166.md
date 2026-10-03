@@ -1,3 +1,4 @@
+
 # 字节流
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/io/bytestreams.html`](https://docs.oracle.com/javase/tutorial/essential/io/bytestreams.html)
@@ -39,7 +40,6 @@ public class CopyBytes {
         }
     }
 }
-
 ```
 
 `CopyBytes` 在一个简单的循环中花费大部分时间，逐字节读取输入流并写入输出流，如下图所示。
@@ -50,7 +50,7 @@ public class CopyBytes {
 
 ## 总是关闭流
 
-当不再需要流时关闭流非常重要非常重要，以至于`CopyBytes` 使用`finally`块来确保即使发生错误，两个流也将被关闭。这种做法有助于避免严重的资源泄漏。
+当不再需要流时关闭流非常重要——非常重要，以至于`CopyBytes` 使用`finally`块来确保即使发生错误，两个流也将被关闭。这种做法有助于避免严重的资源泄漏。
 
 一个可能的错误是`CopyBytes` 无法打开一个或两个文件。当发生这种情况时，对应于文件的流变量从未从其初始的`null`值更改。这就是为什么`CopyBytes` 确保每个流变量在调用`close`之前包含一个对象引用。
 

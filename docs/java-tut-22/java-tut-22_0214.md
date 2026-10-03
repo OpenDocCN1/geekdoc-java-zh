@@ -1,3 +1,4 @@
+
 # 不可变对象
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/concurrency/immutable.html`](https://docs.oracle.com/javase/tutorial/essential/concurrency/immutable.html)

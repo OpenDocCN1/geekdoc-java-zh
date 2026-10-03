@@ -1,8 +1,9 @@
+
 # 解决 Leetcode 问题，获得你梦想中的公司的报价
 
 > 原文：<https://medium.com/javarevisited/solve-leetcode-problems-and-get-offers-from-your-dream-companies-404b6c288d09?source=collection_archive---------2----------------------->
 
-问题编号 752。打开锁(BFS/图)
+问题编号 752。打开锁（BFS/图）
 
 ![](img/36ed3c688f10761fa68043f84e816347.png)
 

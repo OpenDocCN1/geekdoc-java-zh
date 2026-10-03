@@ -1,3 +1,4 @@
+
 # 检查两个字符串是否是 Java 中的变位词
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-strings-anagrams>
@@ -119,7 +120,7 @@ boolean isAnagramMultiset(String string1, String string2) {
 
 让我们调整算法来实现基于字母的变位词。我们只考虑不区分大小写的字母的重排，不考虑空格、标点等其他字符。例如，`“A decimal point”` 和 `“I’m a dot in place.”` 是彼此的变位词。
 
-要解决这个问题，我们可以先对两个输入字符串进行预处理，过滤掉不需要的字符，将字母转换成小写字母。然后我们可以使用上面的解决方案之一(比如说,`MultiSet `解决方案)来检查处理过的字符串上的变位词:
+要解决这个问题，我们可以先对两个输入字符串进行预处理，过滤掉不需要的字符，将字母转换成小写字母。然后我们可以使用上面的解决方案之一(比如说,`MultiSet `解决方案)来检查处理过的字符串上的变位词:
 
 ```java
 String preprocess(String source) {

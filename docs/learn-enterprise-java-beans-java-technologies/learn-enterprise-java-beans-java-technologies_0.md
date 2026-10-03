@@ -1,6 +1,5 @@
+
 # Enterprise Java Beans 入门指南 [Java 技术]
-
-
 
 ![](img/cover00330.jpeg)
 
@@ -8,7 +7,7 @@
 
 未经出版者明确书面许可，本书的任何部分不得复制、存储在检索系统中，或以任何形式或手段（电子、机械、复印、录音或其他）进行传输。
 
-我我想将此本书献给将使用它的学生们。祝愿你们未来职业成功，并希望你们永停止学习。
+我想将此本书献给将使用它的学生们。祝愿你们未来职业成功，并希望你们永不停上学习。
 
 # 目录
 
@@ -51,7 +50,7 @@ EJB 主要分为三类；下表列出了它们的名称及简要描述：
 | 序号 | 类型与描述 |
 | :--- | :--- |
 | 1 | 会话 Bean (Session Bean)。会话 Bean 为单个会话存储特定用户的数据。它可以是 `stateful`（有状态）或 `stateless`（无状态）。与实体 Bean 相比，它的资源消耗较低。会话 Bean 在用户会话结束时立即销毁。 |
-| 2 | 实体 Bean (Entity Bean)。**实体 Bean**代表持久数据存储。用户数据可以通过实体 Bean 保存到数据库，稍后可以通过实体 Bean 从数据库中检索。 |
+| 2 | 实体 Bean (Entity Bean)。**实体 Bean** 代表持久数据存储。用户数据可以通过实体 Bean 保存到数据库，稍后可以通过实体 Bean 从数据库中检索。 |
 | 3 | 消息驱动 Bean (Message Driven Bean)。**消息驱动 Bean** 用于 JMS（Java 服务）上下文。消息驱动 Bean 可以从外部实体消费 JMS 消息并采取相应的行动。 |
 
 ## 优势
@@ -77,7 +76,7 @@ EJB 是一个 Java 框架，因此首要要求是在你的机器上安装了 **J
 
 ### 步骤 1 - 验证系统中的 Java 安装
 
-现在打开控制并执行以下 `java` 命令。
+现在打开控制台并执行以下 `java` 命令。
 
 | 操作系统 | 任务 | 命令 |
 | :--- | :--- | :--- |
@@ -89,9 +88,9 @@ EJB 是一个 Java 框架，因此首要要求是在你的机器上安装了 **J
 
 | 操作系统 | 输出 |
 | :--- | :--- |
-| Windows | java version "1.6.0_21"Java(TM) SE Runtime Environment (build 1.6.0_21-b11)Java HotSpot(TM) 64-Bit Server VM (build 23.21-b01, mixed mode) |
-| Linux | java version "1.6.0_21"Java(TM) SE Runtime Environment (build 1.6.0_21-b11)Java HotSpot(TM) 64-Bit Server VM (build 23.21-b01, mixed mode) |
-| Mac | java version "1.6.0_21"Java(TM) SE Runtime Environment (build 1.6.0_21-b11)Java HotSpot(TM) 64-Bit Server VM (build 23.21-b01, mixed mode) |
+| Windows | `java version "1.6.0_21"` `Java(TM) SE Runtime Environment (build 1.6.0_21-b11)` `Java HotSpot(TM) 64-Bit Server VM (build 23.21-b01, mixed mode)` |
+| Linux | `java version "1.6.0_21"` `Java(TM) SE Runtime Environment (build 1.6.0_21-b11)` `Java HotSpot(TM) 64-Bit Server VM (build 23.21-b01, mixed mode)` |
+| Mac | `java version "1.6.0_21"` `Java(TM) SE Runtime Environment (build 1.6.0_21-b11)` `Java HotSpot(TM) 64-Bit Server VM (build 23.21-b01, mixed mode)` |
 
 如果尚未安装 Java，请从 **oracle.com** 安装 Java。
 
@@ -121,7 +120,7 @@ EJB 是一个 Java 框架，因此首要要求是在你的机器上安装了 **J
 
 ### 步骤 6 - 在 NetBeans 中配置 JBoss 服务器
 
-进入 Services 标签并右键点击 servers 添加服务器。打开 Add Server Instance 向导。选择 JBoss 并在下一步输入相关信息以在 netbeans 中配置服务器。
+进入 Services 标签并右键点击 servers 添加服务器。打开 Add Server Instance 向导。选择 JBoss 并在下一步输入相关信息以在 NetBeans 中配置服务器。
 
 ### 步骤 7 - 安装数据库服务器 (PostGreSql)
 
@@ -129,15 +128,11 @@ EJB 是一个 Java 框架，因此首要要求是在你的机器上安装了 **J
 
 # 创建应用
 
-创建一个简单的 EJB 模块，我们将使用 NetBeans 的 "New project" 向导。在下例示例中，我们将创建一个名为 Component 的 EJB 模块项目。
+创建一个简单的 EJB 模块，我们将使用 NetBeans 的 "New project" 向导。在下例示例中，我们将创建一个名为 `Component` 的 EJB 模块项目。
 
 ## 创建项目
 
 在 NetBeans IDE 中，选择 `File > New Project >`。在类别 `Java EE` 下选择项目类型，项目类型选择 `EJB Module`。点击 `Next >`。
-
-
-
-
 
 ![Image](img/image00320.jpeg)
 
@@ -155,8 +150,8 @@ EJB 是一个 Java 框架，因此首要要求是在你的机器上安装了 **J
 
 输入会话豆名称和包名。点击 **Finish** 按钮。你将看到 NetBeans 创建了以下 EJB 类。
 
-*   `LibrarySessionBean` — 无状态会话豆
-*   `LibrarySessionBeanLocal` — 会话豆的本地接口
+- `LibrarySessionBean` — 无状态会话豆
+- `LibrarySessionBeanLocal` — 会话豆的本地接口
 
 我正在将本地接口改为远程接口，因为我们将在基于控制台的应用程序中访问 EJB。远程/本地接口用于暴露 EJB 必须实现的业务方法。
 
@@ -172,13 +167,9 @@ import java.util.List;
 import javax.ejb.Remote;
 
 @Remote
-
-public  interface LibrarySessionBeanRemote  
-
-void addBook(String bookName);
-
-List getBooks();
-
+public interface LibrarySessionBeanRemote {
+    void addBook(String bookName);
+    List getBooks();
 }
 ```
 
@@ -188,43 +179,33 @@ List getBooks();
 package com.tutorialspoint.stateless;
 
 import java.util.ArrayList;
-
 import java.util.List;
 
 import javax.ejb.Stateless;
 
 @Stateless
+public class LibrarySessionBean implements LibrarySessionBeanRemote {
+    List<String> bookShelf;
 
-public  class LibrarySessionBean  implements LibrarySessionBeanRemote {
+    public LibrarySessionBean() {
+        bookShelf = new ArrayList<String>();
+    }
 
-List<String> bookShelf;
+    public void addBook(String bookName) {
+        bookShelf.add(bookName);
+    }
 
-public  LibrarySessionBean()  {
-
-bookShelf =  new ArrayList<String>();
-
-}
-
-public  void addBook(String bookName)  {
-
-bookShelf.add(bookName);
-
-}
-
-public  List<String> getBooks()  {
-
-return bookShelf;
-
-}
-
+    public List<String> getBooks() {
+        return bookShelf;
+    }
 }
 ```
 
 ## 构建项目
 
-*   在 Project Explorer 窗口中选择 `EjbComponent` 项目。
-*   右键点击它打开右键菜单。
-*   选择 clean and build（清理并构建）。
+- 在 Project Explorer 窗口中选择 `EjbComponent` 项目。
+- 右键点击它打开右键菜单。
+- 选择 clean and build（清理并构建）。
 
 你将在 NetBeans 控制台输出看到以下输出。
 
@@ -272,9 +253,9 @@ BUILD SUCCESSFUL (total time: 3 seconds)
 
 ## 启动应用程序服务器
 
-*   在 Services 窗口的 Servers 下选择 JBoss application server。
-*   右键点击它打开右键菜单。
-*   选择 start（启动）。
+- 在 Services 窗口的 Servers 下选择 JBoss application server。
+- 右键点击它打开右键菜单。
+- 选择 start（启动）。
 
 你将在 NetBeans 的 JBoss Application Server 输出下看到以下输出。
 
@@ -304,9 +285,9 @@ CLASSPATH: C:\jboss-5.1.0.GA\bin\run.jar
 
 ## 部署项目
 
-*   在 Project Explorer 窗口中选择 `EjbComponent` 项目。
-*   右键点击它打开右键菜单。
-*   选择 Deploy（部署）。
+- 在 Project Explorer 窗口中选择 `EjbComponent` 项目。
+- 右键点击它打开右键菜单。
+- 选择 Deploy（部署）。
 
 你将在 NetBeans 控制台看到以下输出。
 
@@ -329,24 +310,18 @@ BUILD SUCCESSFUL
 
 ## 创建访问 EJB 的客户端
 
-*   在 NetBeans IDE 中，选择 **File > New Project >**。
-*   在类别 **Java** 下选择项目类型，项目类型选择 **Java Application**。点击 Next > 按钮
-
-
-
-
-
-* 输入项目名称和位置。点击 `Finish >` 按钮。我们选择名称为 `EjbTester`。
-
-* 在项目资源管理器（Project explorer）窗口中右键点击项目名称。选择 `properties`。
-
-* 在 `compile` 标签页下，使用 `Add Project` 按钮将早先创建的 EJB 组件项目添加到 libraries。
-
-* 在 `compile` 标签页下，使用 `Add jar/folder` 按钮添加 jboss 库。Jboss 库位于 `<jboss installation folder>> client folder`。
+- 在 NetBeans IDE 中，选择 **File > New Project >**。
+- 在类别 **Java** 下选择项目类型，项目类型选择 **Java Application**。点击 `Next >` 按钮。
+- 输入项目名称和位置。点击 `Finish >` 按钮。我们选择名称为 `EjbTester`。
+- 在项目资源管理器（Project explorer）窗口中右键点击项目名称。选择 `properties`。
+- 在 `compile` 标签页下，使用 `Add Project` 按钮将早先创建的 EJB 组件项目添加到 libraries。
+- 在 `compile` 标签页下，使用 `Add jar/folder` 按钮添加 jboss 库。Jboss 库位于 `<jboss installation folder>> client folder`。
 
 在名为 `EjbTester` 的项目下创建 `jndi.properties`。
 
-### jndi.properties
+
+
+# jndi.properties
 
 ```properties
 java.naming.factory.initial=org.jnp.interfaces.NamingContextFactory
@@ -354,9 +329,9 @@ java.naming.factory.url.pkgs=org.jboss.naming:org.jnp.interfaces
 java.naming.provider.url=localhost
 ```
 
-创建包 `com.tutorialspoint.test` 并在其下创建 `EJBTester.java` 类。
+创建包`com.tutorialspoint.test`并在其下创建`EJBTester.java`类。
 
-### EJBTester.java
+# EJBTester.java
 
 ```java
 package com.tutorialspoint.test;
@@ -449,9 +424,9 @@ public class EJBTester {
 }
 ```
 
-## 运行客户端以访问 EJB
+# 运行客户端以访问 EJB
 
-在项目资源管理器中找到 `EJBTester.java`。右键点击 `EJBTester` 类并选择 `run file`。
+在项目资源管理器中找到`EJBTester.java`。右键点击`EJBTester`类并选择`run file`。
 
 在 Netbeans 控制台中核实以下输出。
 
@@ -481,18 +456,18 @@ BUILD SUCCESSFUL (total time: 13 seconds)
 
 在接下来的章节中，我们将涵盖此完整 EJB 应用的多个方面。
 
-## 无状态 Bean (Stateless Bean)
+# 无状态 Bean (Stateless Bean)
 
 无状态会话豆（Stateless session bean）是企业豆的一种，通常用于执行独立操作。正如其名，无状态会话豆没有关联的客户端状态，但它可以保留其实例状态。EJB 容器通常会创建一个池。
 
-## 创建无状态豆的步骤
+# 创建无状态豆的步骤
 
 创建无状态豆的步骤如下：
 
-*   在 `compile` 标签页下，使用 `Add Project` 按钮将早先创建的 EJB 组件添加到 libraries。
-*   在 `compile` 标签页下，使用 `Add jar/folder` 按钮添加 jboss 库。Jboss 库位于 `<jboss installation folder>> client folder`。
+- 在`compile`标签页下，使用`Add Project`按钮将早先创建的 EJB 组件添加到 libraries。
+- 在`compile`标签页下，使用`Add jar/folder`按钮添加 jboss 库。Jboss 库位于`<jboss installation folder>> client folder`。
 
-在项目 `EjbTester` 下创建 `jndi.properties`。
+在项目`EjbTester`下创建`jndi.properties`。
 
 ```properties
 java.naming.factory.initial=org.jnp.interfaces.NamingContextFactory
@@ -500,9 +475,9 @@ java.naming.factory.url.pkgs=org.jboss.naming:org.jnp.interfaces
 java.naming.provider.url=localhost
 ```
 
-创建包 `com.tutorialspoint.test` 并在其下创建 `EJBTester.java` 类。
+创建包`com.tutorialspoint.test`并在其下创建`EJBTester.java`类。
 
-### EJBTester.java
+# EJBTester.java
 
 ```java
 package com.tutorialspoint.test;
@@ -595,11 +570,13 @@ public class EJBTester {
 }
 ```
 
-## 运行客户端以访问 EJB
+# 运行客户端以访问 EJB
 
-在项目资源管理器中找到 `EJBTester.java`。右键点击 `EJBTester` 类并选择 `run file`。
+在项目资源管理器中找到`EJBTester.java`。右键点击`EJBTester`类并选择`run file`。
 
 在 Netbeans 控制台中核实以下输出。
+
+
 
 ```text
 run:
@@ -852,10 +829,6 @@ java.naming.provider.url=localhost
 jndi.properties not found
 ```
 
-
-
-
-
 16:30:02,723 INFO [SessionSpecContainer] Starting jboss.j2ee:jar=EjbComponent.jar,name=LibrarySessionBean,service=EJB3
 
 16:30:02,723 INFO [EJBContainer] STARTED EJB: com.tutorialspoint.stateless.LibrarySessionBeanRemote ejbName: LibrarySessionBean
@@ -882,6 +855,8 @@ java.naming.provider.url=localhost
 * `InitialContext` 对象将用于查找无状态会 Bean。
 
 ### EJBTester.java
+
+
 
 ```java
 package com.tutorialspoint.test;
@@ -979,26 +954,27 @@ public class EJBTester {
 
 `EJBTester` 执行以下任务：
 
-* 从 `jndi.properties` 加载属性并初始化 `InitialContext` 对象。
-* 在 `testStatelessEjb()` 方法中，通过名称 `"LibrarySessionBean/remote"` 进行 jndi 查找以获取远程业务对象（无状态 ejb）。
+* 从`jndi.properties`加载属性并初始化`InitialContext`对象。
+* 在`testStatelessEjb()`方法中，通过名称`"LibrarySessionBean/remote"`进行 jndi 查找以获取远程业务对象（无状态 ejb）。
 * 随后向用户显示书商店用户界面并要求其输入选择。
-* 如果用户输入 1，系统会提示书名并使用无状态会 Bean 的 `addBook()` 方法保存书籍。会 Bean 将书籍存储在其实例变量中。
-* 如果用户输入 2，系统使用无状态会 Bean 的 `getBooks()` 方法检索书籍并退出。
+* 如果用户输入 1，系统会提示书名并使用无状态会 Bean 的`addBook()`方法保存书籍。会 Bean 将书籍存储在其实例变量中。
+* 如果用户输入 2，系统使用无状态会 Bean 的`getBooks()`方法检索书籍并退出。
 
 ## 运行客户端到 EJB
-* 从 `jndi.properties` 加载属性并初始化 `InitialContext` 对象。
-* 在 `testStatelessEjb()` 方法中，通过名称 `"LibrarySessionBean/remote"` 进行 jndi 查找以获取远程业务对象（无状态 ejb）。
+
+* 从`jndi.properties`加载属性并初始化`InitialContext`对象。
+* 在`testStatelessEjb()`方法中，通过名称`"LibrarySessionBean/remote"`进行 jndi 查找以获取远程业务对象（无状态 ejb）。
 * 随后向用户显示书商店用户界面并要求其输入选择。
-* 如果用户输入 1，系统会提示书名并使用无状态会 Bean 的 `addBook()` 方法保存书籍。会 Bean 将书籍存储在其实例变量中。
-* 如果用户输入 2，系统使用无状态会 Bean 的 `getBooks()` 方法检索书籍并退出。
+* 如果用户输入 1，系统会提示书名并使用无状态会 Bean 的`addBook()`方法保存书籍。会 Bean 将书籍存储在其实例变量中。
+* 如果用户输入 2，系统使用无状态会 Bean 的`getBooks()`方法检索书籍并退出。
 
 ## 再次运行客户端到 EJB
-* 从 `jndi.properties` 加载属性并初始化 `InitialContext` 对象。
-* 在 `testStatelessEjb()` 方法中，通过名称 `"LibrarySessionBean/remote"` 进行 jndi 查找以获取远程业务对象（无状态 ejb）。
-* 随后向用户显示书商店用户界面并要求其输入选择。
-* 如果用户输入 1，系统会提示书名并使用无状态会 Bean 的 `addBook()` 方法保存书籍。会 Bean 将书籍存储在其实例变量中。
-* 如果用户输入 2，系统使用无状态会 Bean 的 `getBooks()` 方法检索书籍并退出。
 
+* 从`jndi.properties`加载属性并初始化`InitialContext`对象。
+* 在`testStatelessEjb()`方法中，通过名称`"LibrarySessionBean/remote"`进行 jndi 查找以获取远程业务对象（无状态 ejb）。
+* 随后向用户显示书商店用户界面并要求其输入选择。
+* 如果用户输入 1，系统会提示书名并使用无状态会 Bean 的`addBook()`方法保存书籍。会 Bean 将书籍存储在其实例变量中。
+* 如果用户输入 2，系统使用无状态会 Bean 的`getBooks()`方法检索书籍并退出。
 * 上述输出可能取决于 JBoss 维护的无状态对象数量。
 * 在维护单个无状态对象的情况下，每次查找后都会看到相同的列表。
 * EJB 容器每次查找都会返回相同的无状态对象。
@@ -1013,10 +989,10 @@ public class EJBTester {
 
 * 创建暴露业务方法的远程/本地接口。
 * 该接口将供 EJB 客户端使用。
-* 如果 EJB 客户端与 Bean 位于同一环境，请使用 `@Local`。
-* 如果 EJB 客户端与 Bean 位于不同环境，请使用 `@Remote`。
+* 如果 EJB 客户端与 Bean 位于同一环境，请使用`@Local`。
+* 如果 EJB 客户端与 Bean 位于不同环境，请使用`@Remote`。
 * 实现上述接口的有状态 Bean。
-* 使用 `@Stateful` 注解标记为有状态 Bean。EJB 容器在部署期间通过读取该注解自动创建所需的配置或接口。
+* 使用`@Stateful`注解标记为有状态 Bean。EJB 容器在部署期间通过读取该注解自动创建所需的配置或接口。
 
 ### 远程接口
 
@@ -1045,18 +1021,12 @@ public class LibraryStatefulSessionBean implements LibraryStatefulSessionBeanRem
 让我们创建一个应用程序来测试有状态 EJB。
 
 | 步骤 | 描述 |
-|---|---||
-| 1 | 根据 *EJB – Create Application* 章节在 `com.tutorialspoint.stateful` 包下创建一个名为 `EjbComponent` 的项目。你也可以按照 *EJB - Create Application* 章节创建的项目来理解有状态 EJB 概念。 |
-| 2 | 根据 *EJB – Create Application* 章节创建 `LibraryStatefulSessionBean.java` 和 `LibraryStatefulSessionBean`。保持其他文件不变。 |
+|---|---|
+| 1 | 根据 *EJB – Create Application* 章节在`com.tutorialspoint.stateful`包下创建一个名为`EjbComponent`的项目。你也可以按照 *EJB - Create Application* 章节创建的项目来理解有状态 EJB 概念。 |
+| 2 | 根据 *EJB – Create Application* 章节创建`LibraryStatefulSessionBean.java`和`LibraryStatefulSessionBean`。保持其他文件不变。 |
 | 3 | 清理并构建应用程序，确保业务逻辑符合要求。 |
-
-
-
-
-
-4. 最后，将应用程序以 jar 文件的形式部署在 `JBoss Application Server` 上。如果 `JBoss Application server` 尚未启动，它将自动启动。
-
-5. 现在创建 `EJB` 客户端，其创建方式与 `EJB - Create Application` 章节下 `Create Client to access EJB` 题目的解释方式相同，这是一个控制台应用程序。
+| 4 | 最后，将应用程序以 jar 文件的形式部署在`JBoss Application Server`上。如果`JBoss Application server`尚未启动，它将自动启动。 |
+| 5 | 现在创建`EJB`客户端，其创建方式与 *EJB - Create Application* 章节下 *Create Client to access EJB* 题目的解释方式相同，这是一个控制台应用程序。 |
 
 ## EJBComponent (EJB Module)
 
@@ -1108,9 +1078,9 @@ return bookShelf;
 }
 ```
 
-* 一只要你将 `EjbComponent` 项目部署到 `JBOSS` 上，请注意 `jboss log`。
-* `JBoss` 已自动为我们的会话 Session 豆创建了一个 `JNDI` 条目 —— `LibraryStatefulSessionBean/remote`。
-* 我们将使用此查找字符串来获取类型为 `com.tutorialspoint.stateful.LibraryStatefulSessionBeanRemote` 的远程业务对象。
+* 一只要你将`EjbComponent`项目部署到`JBOSS`上，请注意`jboss log`。
+* `JBoss`已自动为我们的会话 Session 豆创建了一个`JNDI`条目 —— `LibraryStatefulSessionBean/remote`。
+* 我们将使用此查找字符串来获取类型为`com.tutorialspoint.stateful.LibraryStatefulSessionBeanRemote`的远程业务对象。
 
 ### JBoss Application Server Log 输出
 
@@ -1138,10 +1108,12 @@ java.naming.factory.url.pkgs = org.jboss.naming:org.jnp.interfaces
 java.naming.provider.url = localhost
 ```
 
-* 这些属性用于初始化 `java naming service` 的 `InitialContext` 对象。
-* `InitialContext` 对象将被用于查找会话 Session Bean。
+* 这些属性用于初始化`java naming service`的`InitialContext`对象。
+* `InitialContext`对象将被用于查找会话 Session Bean。
 
 ### `EJBTester.java`
+
+
 
 ```java
 package com.tutorialspoint.test;
@@ -1243,22 +1215,18 @@ ex.printStackTrace();
 }
 ```
 
-
-
-
-
-*   `EntityManager` - 持久化接口，用于对持久化对象（实体）执行添加/删除/更新/查找数据操作。它还可以帮助使用 `Query` 接口执行查询。
-*   `Persistence unit (persistence.xml)` - 持久单元描述持久化机制的属性。
-*   `Data Source (*ds.xml)` - 数据源描述与数据存储相关的属性，如连接 URL、用户名、密码等。
+- `EntityManager` - 持久化接口，用于对持久化对象（实体）执行添加/删除/更新/查找数据操作。它还可以帮助使用 `Query` 接口执行查询。
+- `Persistence unit (persistence.xml)` - 持久单元描述持久化机制的属性。
+- `Data Source (*ds.xml)` - 数据源描述与数据存储相关的属性，如连接 URL、用户名、密码等。
 
 为了演示 EJB 持久化机制，我们需要完成以下任务：
 
-*   `Step 1` - 在数据库中创建表。
-*   `Step 2` - 创建与表对应的实体类（Entity class）。
-*   `Step 3` - 创建数据源（Data Source）和持久化单元（Persistence Unit）。
-*   `Step 4` - 创建一个拥有 `EntityManager` 实例的无状态 EJB。
-*   `Step 5` - 更新无状态 EJB。添加通过 entity manager 从数据库添加和获取记录的方法。
-*   `Step 6` - 创建一个控制台应用程序客户端访问无状态 EJB 以将数据持久化到数据库中。
+- `Step 1` - 在数据库中创建表。
+- `Step 2` - 创建与表对应的实体类（Entity class）。
+- `Step 3` - 创建数据源（Data Source）和持久化单元（Persistence Unit）。
+- `Step 4` - 创建一个拥有 `EntityManager` 实例的无状态 EJB。
+- `Step 5` - 更新无状态 EJB。添加通过 entity manager 从数据库添加和获取记录的方法。
+- `Step 6` - 创建一个控制台应用程序客户端访问无状态 EJB 以将数据持久化到数据库中。
 
 ## Create Table
 
@@ -1372,6 +1340,7 @@ public  class  LibraryPersistentBean  implements  LibraryPersistentBeanRemote  {
 ## EJB (EJB Module)
 
 ### Book.java
+
 ```java
 package com.tutorialspoint.entity;
 import java.io.Serializable;
@@ -1403,6 +1372,7 @@ public  class  Book  implements  Serializable{
 ```
 
 ### LibraryBeanRemote.java
+
 ```java
 package com.tutorialspoint.stateless;
 import com.tutorialspoint.entity.Book;
@@ -1417,6 +1387,7 @@ public  interface LibraryPersistentBeanRemote {
 ```
 
 ### LibraryPersistentBean.java
+
 ```java
 package com.tutorialspoint.stateless;
 import com.tutorialspoint.entity.Book;
@@ -1438,187 +1409,17 @@ public  class  LibraryPersistentBean  implements  LibraryPersistentBeanRemote  {
 }
 ```
 
+`java.naming.factory.initial=org.jnp.interfaces.NamingContextFactory`
+
+`java.naming.factory.url.pkgs=org.jboss.naming:org.jnp.interfaces`
+
+`java.naming.provider.url=localhost`
+
+- 这些属性用于初始化 java 命名服务的 `InitialContext` 对象。
 
 
 
-java.naming.factory.initial=org.jnp.interfaces.NamingContextFactory
-
-java.naming.factory.url.pkgs=org.jboss.naming:org.jnp.interfaces
-
-java.naming.provider.url=localhost
-
-*   这些属性用于初始化 java 命名服务的 `InitialContext` 对象。
-*   `InitialContext` 对象将用于查找无状态会话豆（stateless session bean）。
-
-### EJBTester.java
-
-```java
-package com.tutorialspoint.test;
-
-import com.tutorialspoint.stateless.LibraryPersistentBeanRemote;
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.List;
-import java.util.Properties;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
-
-public class EJBTester {
-    BufferedReader brConsoleReader = null;
-    Properties props;
-    InitialContext ctx;
-
-    {
-        props = new Properties();
-        try {
-            props.load(new FileInputStream("jndi.properties"));
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-        try {
-            ctx = new InitialContext(props);
-        } catch (NamingException ex) {
-            ex.printStackTrace();
-        }
-        brConsoleReader = new BufferedReader(new InputStreamReader(System.in));
-    }
-
-    public static void main(String[] args) {
-        EJBTester ejbTester = new EJBTester();
-        ejbTester.testEntityEjb();
-    }
-
-    private void showGUI() {
-        System.out.println("**********************");
-        System.out.println("Welcome to Book Store");
-        System.out.println("**********************");
-        System.out.print("Options \n1\. Add Book\n2\. Exit \nEnter Choice: ");
-    }
-
-    private void testEntityEjb() {
-        try {
-            int choice = 1;
-            LibraryPersistentBeanRemote libraryBean = (LibraryPersistentBeanRemote)ctx.lookup("LibraryPersistentBean/remote");
-            while (choice != 2) {
-                String bookName;
-                showGUI();
-                String strChoice = brConsoleReader.readLine();
-                choice = Integer.parseInt(strChoice);
-                if (choice == 1) {
-                    System.out.print("Enter book name: ");
-                    bookName = brConsoleReader.readLine();
-                    Book book = new Book();
-                    book.setName(bookName);
-                    libraryBean.addBook(book);
-                } else if (choice == 2) {
-                    break;
-                }
-            }
-            List<Book> booksList = libraryBean.getBooks();
-            System.out.println("Book(s) entered so far: " + booksList.size());
-            int i = 0;
-            for (Book book:booksList) {
-                System.out.println((i+1)+". " + book.getName());
-                i++;
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            e.printStackTrace();
-        } finally {
-            try {
-                if(brConsoleReader !=null) {
-                    brConsoleReader.close();
-                }
-            } catch (IOException ex) {
-                System.out.println(ex.getMessage());
-            }
-        }
-    }
-}
-```
-
-`EJBTester` 执行了以下任务。
-
-*   从 `jndi.properties` 加属性并初始化 `InitialContext` 对象。
-*   在 `testStatefulEjb()` 方法中，使用名称 `"LibraryStatefulSessionBean/remote"` 进行 jndi 查找，以获取远程业务对象（有状态 ejb）。
-*   然后向用户显示书店用户界面，并要求其输入选择。
-*   如果用户输入 1，系统会提示书名并使用无状态会话豆的 `addBook()` 方法保存书籍。Session Bean 通过调用 `EntityManager` 在数据库中持久化书籍。
-*   如果用户输入 2，系统使用有状态会话豆的 `getBooks()` 方法检索书籍并退出。
-*   然后再次使用名称 `"LibraryStatelessSessionBean/remote"` 进行另一个 jndi 查找，以再次获取远程业务对象（无状态 EJB）并列出书籍。
-
-## 运行客户端以访问 EJB
-
-在项目管理器中找到 `EJBTester.java`。右键点击 `EJBTester` 类并选择 `run file`。
-
-在 Netbeans 控制台中核实以下输出：
-
-```
-run:
-**********************
-Welcome to Book Store
-**********************
-Options
-1\. Add Book
-2\. Exit
-Enter Choice: 1
-Enter book name: Learn Java
-**********************
-Welcome to Book Store
-**********************
-Options
-1\. Add Book
-2\. Exit
-Enter Choice: 2
-Book(s) entered so far: 1
-1\. learn java
-BUILD SUCCESSFUL (total time: 15 seconds)
-```
-
-## 再次运行客户端以访问 EJB
-
-在访问 EJB 之前重启 JBoss。
-
-在项目管理器中找到 `EJBTester.java`。右键点击 `EJBTester` 类并选择 `run file`。
-
-在 Netbeans 控制台中核实以下输出。
-
-```
-run:
-**********************
-Welcome to Book Store
-**********************
-Options
-1\. Add Book
-2\. Exit
-Enter Choice: 1
-Enter book name: Learn Spring
-**********************
-Welcome to Book Store
-**********************
-Options
-1\. Add Book
-2\. Exit
-Enter Choice: 2
-Book(s) entered so far: 1
-1\. learn java
-BUILD SUCCESSFUL (total time: 15 seconds)
-```
-[/content]
-
-译文：
-
-[content]
-
-java.naming.factory.initial=org.jnp.interfaces.NamingContextFactory
-
-java.naming.factory.url.pkgs=org.jboss.naming:org.jnp.interfaces
-
-java.naming.provider.url=localhost
-
-*   这些属性用于初始化 java 命名服务的 `InitialContext` 对象。
-*   `InitialContext` 对象将用于查找无状态会话豆（stateless session bean）。
+`InitialContext` 对象将用于查找无状态会话豆（stateless session bean）。
 
 ### EJBTester.java
 
@@ -1712,10 +1513,15 @@ public class EJBTester {
 `EJBTester` 执行了以下任务。
 
 *   从 `jndi.properties` 加载属性并初始化 `InitialContext` 对象。
+
 *   在 `testStatefulEjb()` 方法中，使用名称 `"LibraryStatefulSessionBean/remote"` 进行 jndi 查找，以获取远程业务对象（有状态 ejb）。
+
 *   然后向用户显示书店用户界面，并要求其输入选择。
+
 *   如果用户输入 1，系统会提示书名并使用无状态会话豆的 `addBook()` 方法保存书籍。Session Bean 通过调用 `EntityManager` 在数据库中持久化书籍。
+
 *   如果用户输入 2，系统使用有状态会话豆的 `getBooks()` 方法检索书籍并退出。
+
 *   然后再次使用名称 `"LibraryStatelessSessionBean/remote"` 进行另一个 jndi 查找，以再次获取远程业务对象（无状态 EJB）并列出书籍。
 
 ## 运行客户端以访问 EJB
@@ -1752,7 +1558,7 @@ BUILD SUCCESSFUL (total time: 15 seconds)
 
 在项目管理器中找到 `EJBTester.java`。右键点击 `EJBTester` 类并选择 `run file`。
 
-在 Netbeans 控制台中核实以下输出。
+在 Netbeans 控制台中核实以下输出：
 
 ```
 run:
@@ -1778,26 +1584,85 @@ BUILD SUCCESSFUL (total time: 15 seconds)
 
 
 
+# 运行客户端以访问 EJB
+
+在访问 EJB 之前重启 JBoss。
+
+在项目管理器中找到`EJBTester.java`。右键点击`EJBTester`类并选择`run file`。
+
+在 Netbeans 控制台中核实以下输出。
+
+```
+run:
+**********************
+Welcome to Book Store
+**********************
+Options
+1\. Add Book
+2\. Exit
+Enter Choice: 1
+Enter book name: Learn Java
+**********************
+Welcome to Book Store
+**********************
+Options
+1\. Add Book
+2\. Exit
+Enter Choice: 2
+Book(s) entered so far: 1
+1\. learn java
+BUILD SUCCESSFUL (total time: 15 seconds)
+```
+
+## 再次运行客户端以访问 EJB
+
+在访问 EJB 之前重启 JBoss。
+
+在项目管理器中找到`EJBTester.java`。右键点击`EJBTester`类并选择`run file`。
+
+在 Netbeans 控制台中核实以下输出。
+
+```
+run:
+**********************
+Welcome to Book Store
+**********************
+Options
+1\. Add Book
+2\. Exit
+Enter Choice: 1
+Enter book name: Learn Spring
+**********************
+Welcome to Book Store
+**********************
+Options
+1\. Add Book
+2\. Exit
+Enter Choice: 2
+Book(s) entered so far: 1
+1\. learn java
+BUILD SUCCESSFUL (total time: 15 seconds)
+```
 
 ## 项目步骤
 
-1.  按照 `EJB - Create Application` 章节中的说明，在包 `com.tutorialspoint.entity` 下创建一个名为 `EjbComponent` 的项目。你也可以直接使用 `EJB - Create Application` 章节中创建的项目作为本章节的示例，以理解 EJB 持久化概念。
+1. 按照`EJB - Create Application`章节中的说明，在包`com.tutorialspoint.entity`下创建一个名为`EjbComponent`的项目。你也可以直接使用`EJB - Create Application`章节中创建的项目作为本章节的示例，以理解 EJB 持久化概念。
 
-2.  在 `com.tutorialspoint.entity` 包下创建 `Book.java`，如在 `EJB-Persistence` 章节中创建所示。
+2. 在`com.tutorialspoint.entity`包下创建`Book.java`，如在`EJB-Persistence`章节中创建所示。
 
-3.  按照 `EJB-Persistence` 章节创建 `LibraryPersistentBean.java` 和 `LibraryPersistentBeanRemote`。
+3. 按照`EJB-Persistence`章节创建`LibraryPersistentBean.java`和`LibraryPersistentBeanRemote`。
 
-4.  在 `EjbComponent > setup` 文件夹下创建 `jboss-ds.xml`，并在 `EjbComponent > src > conf` 文件夹下创建 `persistence.xml`。在 Netbeans 的文件标签中可以看到这些文件夹，如在 `EJB-Persistence` 章节中创建所示。
+4. 在`EjbComponent > setup`文件夹下创建`jboss-ds.xml`，并在`EjbComponent > src > conf`文件夹下创建`persistence.xml`。在 Netbeans 的文件标签中可以看到这些文件夹，如在`EJB-Persistence`章节中创建所示。
 
-5.  在 `com.tutorialspoint.messagebean` 包下创建 `LibraryMessageBean.java` 并按如下所示进行修改。
+5. 在`com.tutorialspoint.messagebean`包下创建`LibraryMessageBean.java`并按如下所示进行修改。
 
-6.  如上所述，在 Jboss 中创建 `BookQueue` 队列。
+6. 如上所述，在 Jboss 中创建`BookQueue`队列。
 
-7.  清理并构建（Clean and Build）应用程序，确保业务逻辑按照要求运行。
+7. 清理并构建（Clean and Build）应用程序，确保业务逻辑按照要求运行。
 
-8.  最后，以 jar 文件形式将应用程序部署到 JBoss 应用服务器。如果 JBoss 应用服务器尚未启动，它会自动启动。
+8. 最后，以 jar 文件形式将应用程序部署到 JBoss 应用服务器。如果 JBoss 应用服务器尚未启动，它会自动启动。
 
-9.  现在，按照 `EJB - Create Application` 章节中 `Create Client to access EJB` 主题下的说明，创建一个 EJB 客户端（基于控制台的应用程序）。按如下所示进行修改。
+9. 现在，按照`EJB - Create Application`章节中`Create Client to access EJB`主题下的说明，创建一个 EJB 客户端（基于控制台的应用程序）。按如下所示进行修改。
 
 ## EJBComponent (EJB 模块)
 
@@ -1960,7 +1825,7 @@ System.out.println(ex.getMessage());
 
 ## 运行客户端以访问 EJB
 
-在项目资源管理器中找到 `EJBTester.java`。右键点击 `EJBTester` 类并选择 `run file`。
+在项目资源管理器中找到`EJBTester.java`。右键点击`EJBTester`类并选择`run file`。
 
 在 Netbeans 控制台中验证以下输出：
 
@@ -1998,51 +1863,41 @@ EJB 容器使用编译器工具通过读取注解来生成所需的制品（如�
 | 序号 | 名称 | 描述 |
 | :--- | :--- | :--- |
 | 1 | `javax.ejb.Stateless` | 指定给定的 EJB 类为无状态会话豆（stateless session bean）。 |
+| | | 属性： |
+| | | * `name` — 用于指定会话豆（session bean）的名称。 |
+| | | * `mappedName` — 用于指定会话豆的 JNDI 名称。 |
+| | | * `description` — 用于提供会话豆的描述。 |
+| 2 | `javax.ejb.Stateful` | 指定指定的 EJB 类是有状态的会话豆（stateful session bean）。 |
+| | | 属性： |
+| | | * `name` — 用于指定会话豆的名称。 |
+| | | * `mappedName` — 用于指定会话豆的 JNDI 名称。 |
+| | | * `description` — 用于提供会话豆的描述。 |
+| 3 | `javax.ejb.MessageDrivenBean` | 指定指定的 EJB 类是消息驱动豆（message driven bean）。 |
+| | | 属性： |
+| | | * `name` — 用于指定消息驱动豆的名称。 |
+| | | * `messageListenerInterface` — 用于指定消息驱动豆的消息监听接口。 |
+| | | * `activationConfig` — 用于指定消息驱动豆在运行环境中的配置细节。 |
+| | | * `mappedName` — 用于指定会话豆的 JNDI 名称。 |
+| | | * `description` — 用于提供会话豆的描述。 |
+| 4 | `javax.ejb.EJB` | 用于将依赖作为 EJB 实例指定或注入另一个 EJB 中。 |
+| | | 属性： |
+| | | * `name` — 用于指定名称，该名称将用于在环境中定位被引豆。 |
+| | | * `beanInterface` — 用于指定被引用豆的接口类型。 |
+| | | * `beanName` — 用于提供被引用豆的名称。 |
+| | | * `mappedName` — 用于指定被引用豆的 JNDI 名称。 |
+| | | * `description` — 用于提供被引用豆的描述。 |
+| 5 | `javax.ejb.Local` | 用于指定会话豆的本地接口。此本地接口声明了会话豆的业务方法（豆可以是无状态的或有状态的）。此接口用于将业务方法暴露给运行在与 EJB 相同部署/应用程序中的本地客户端。 |
+| | | 属性： |
+| | | * `value` — 以接口数组的形式指定本地接口列表。 |
+| 6 | `javax.ejb.Remote` | 用于指定会话豆的远程接口。此远程接口声明了会话豆的业务方法（豆可以是无状态的或有状态的）。此接口用于将业务方法暴露给运行在与 EJB 不同部署/应用程序中的远程客户端。 |
+| | | 属性： |
+| | | * `value` — 以接口数组的形式指定远程接口列表。 |
+| 7 | `javax.ejb.ActivationConfigProperty` | 用于指定消息驱动豆所需的属性。例如，端点、目标地、消息选择器等。此注解作为参数传递给`javax.ejb.MessageDrivenBean`注解的`activationConfig`属性。 |
+| | | 属性： |
+| | | * `propertyName` — 属性名称。 |
+| | | * `propertyValue` — 属性值。 |
 
 
-
-
-
-* `name` — 用于指定会话豆（session bean）的名称。
-* `mappedName` — 用于指定会话豆的 JNDI 名称。
-* `description` — 用于提供会话豆的描述。
-
-| ID | Class | Description |
-| :--- | :--- | :--- |
-| 2 | `javax.ejb.Stateful` | 指定指定的 EJB 类是有状态的会话豆（stateful session bean）。属性： |
-
-* `name` — 用于指定会话豆的名称。
-* `mappedName` — 用于指定会话豆的 JNDI 名称。
-* `description` — 用于提供会话豆的描述。
-
-| 3 | `javax.ejb.MessageDrivenBean` | 指定指定的 EJB 类是消息驱动豆（message driven bean）。属性： |
-
-* `name` — 用于指定消息驱动豆的名称。
-* `messageListenerInterface` — 用于指定消息驱动豆的消息监听接口。
-* `activationConfig` — 用于指定消息驱动豆在运行环境中的配置细节。
-* `mappedName` — 用于指定会话豆的 JNDI 名称。
-* `description` — 用于提供会话豆的描述。
-
-| 4 | `javax.ejb.EJB` | 用于将依赖作为 EJB 实例指定或注入另一个 EJB 中。属性： |
-
-* `name` — 用于指定名称，该名称将用于在环境中定位被引豆。
-* `beanInterface` — 用于指定被引用豆的接口类型。
-* `beanName` — 用于提供被引用豆的名称。
-* `mappedName` — 用于指定被引用豆的 JNDI 名称。
-* `description` — 用于提供被引用豆的描述。
-
-| 5 | `javax.ejb.Local` | 用于指定会话豆的本地接口。此本地接口声明了会话豆的业务方法（豆可以是无状态的或有状态的）。此接口用于将业务方法暴露给运行在与 EJB 相同部署/应用程序中的本地客户端。属性： |
-
-* `value` — 以接口数组的形式指定本地接口列表。
-
-| 6 | `javax.ejb.Remote` | 用于指定会话豆的远程接口。此远程接口声明了会话豆的业务方法（豆可以是无状态的或有状态的）。此接口用于将业务方法暴露给运行在与 EJB 不同部署/应用程序中的远程客户端。属性： |
-
-* `value` — 以接口数组的形式指定远程接口列表。
-
-| 7 | `javax.ejb.ActivationConfigProperty` | 用于指定消息驱动豆所需的属性。例如，端点、目标地、消息选择器等。此注解作为参数传递给 `javax.ejb.MessageDrivenBean` 注解的 `activationConfig` 属性。属性： |
-
-* `propertyName` — 属性名称。
-* `propertyValue` — 属性值。
 
 | 8 | `javax.ejb.PostActivate` | 用于指定 EJB 生命期的回调方法。当 EJB 容器刚刚激活/重新激活豆实例时，该方法会被调用。此接口用于将业务方法暴露给运行在与 EJB 相同部署/应用程序中的本地客户端。 |
 
@@ -2169,10 +2024,6 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 ```
-
-
-
-
 
 ```java
 import javax.persistence.EntityListeners;
@@ -2334,7 +2185,7 @@ public interface LibraryPersistentBeanRemote {
 }
 ```
 
-- 一旦你在 JBOSS 上部署了 EjbComponent 项目，请注意 jboss 日志。
+- 一旦你在 JBOSS 上部署了 `EjbComponent` 项目，请注意 jboss 日志。
 - JBoss 已自动为我们的会话 Bean 创建 JNDI 条目 - `LibraryPersistentBean/remote`。
 - 我们将使用这个查找字符串来获取类型为 `com.tutorialspoint.stateless.LibraryPersistentBeanRemote` 的远程业务对象。
 
@@ -2358,6 +2209,8 @@ java.naming.factory.url.pkgs=org.jboss.naming:org.jnp.interfaces
 ```
 
 ### EJBTester.java
+
+
 
 ```java
 package com.tutorialspoint.test;
@@ -2431,7 +2284,8 @@ public class EJBTester {
     }
 }
 ```
-*(注：原文中的 EJBTester 代码是碎片化的，我已将其重组成完整的 Java 类结构，并保留了所有逻辑和变量。）*
+
+*注：原文中的 `EJBTester` 代码是碎片化的，我已将其重组成完整的 Java 类结构，并保留了所有逻辑和变量。*
 
 ## 运行客户端以访问 EJB
 
@@ -2460,10 +2314,6 @@ Enter Choice: 2
 Book(s) entered so far: 1
 1. Learn Java
 ```
-
-
-
-
 
 # 1. 学习 Java
 
@@ -2526,11 +2376,17 @@ public void timeOutHandler(Timer timer) {
 让我们创建一个测试 EJB 应用程序来测试 EJB 中的定时服务。
 
 | 步骤 |  |
+
 | :--- | :--- |
+
 | 1 | 如 `EJB - Create Application` 章节所示，在包 `com.tutorialspoint.timer` 下创建一个名为为 `EjbComponent` 的项目。 |
+
 | 2 | 如 `EJB - Create Application` 章节所示，创建 `TimerSessionBean.java` 和 `TimerSessionBeanRemote`。保持其他文件不变。 |
+
 | 3 | 清理并构建应用程序，确保业务逻辑符合要求。 |
+
 | 4 | 最后，以 jar 文件的形式在 JBoss 服务器上部署应用程序。如果 JBoss 服务器尚未启动，它将自动启动。 |
+
 | 5 | 现在，按照 `EJB - Create Application` 章节中 `Create Client to access EJB` 主题所述的方法，创建一个 EJB 客户端（基于控制台的应用程序）。 |
 
 ## EJBComponent (EJB 模块)
@@ -2577,7 +2433,9 @@ public interface TimerSessionBeanRemote {
 ```
 
 * 一旦你在 JBOSS 上部署了 `EjbComponent` 项目，请注意 jboss 日。
+
 * JBoss 已自动为我们的会豆创建了一个 JNDI 条目 − `TimerSessionBean/remote`。
+
 * 我们将使用此查找字符串来获取类型为 `com.tutorialspoint.timer.TimerSessionBeanRemote` 的远程业务对象。
 
 ### JBoss 服务器日志输出
@@ -2601,12 +2459,16 @@ java.naming.factory.url.pkgs=org.jboss.naming:org.jnp.interfaces
 ```
 
 `java.naming.factory.initial=org.jnp.interfaces.NamingContextFactory`
+
 `java.naming.factory.url.pkgs=org.jboss.naming:org.jnp.interfaces`
 
 * `java.naming.factory.initial=org.jnp.interfaces.NamingContextFactory`
+
 * `java.naming.factory.url.pkgs=org.jboss.naming:org.jnp.interfaces`
 
 ### EJBTester.java
+
+
 
 ```java
 package com.tutorialspoint.timer;
@@ -2654,15 +2516,16 @@ public class EJBTester {
 ```
 
 `EJBTester` 正在执行：
-* 从 `jndi.properties` 加载属性并初始化 `InitialContext`。
-* 使用 `InitialContext` 对象查找豆。
-* 在 `testTimerService()` 中，通过名称 `TimerSessionBean/remote` 获取远程业务对象（定时器 EJB）。
-* 然后调用 `createTimer` 并传递 2000 毫秒作为调度时间。
-* EJB 容器在 2 秒后调用 `timeoutHandler` 方法。
+
+- 从`jndi.properties`加载属性并初始化`InitialContext`。
+- 使用`InitialContext`对象查找豆。
+- 在`testTimerService()`中，通过名称`TimerSessionBean/remote`获取远程业务对象（定时器 EJB）。
+- 然后调用`createTimer`并传递 2000 毫秒作为调度时间。
+- EJB 容器在 2 秒后调用`timeoutHandler`方法。
 
 ## 运行访问 EJB
 
-在项目管理器中找到 `EJBTester.java`。右键点击 `EJBTester` 类并选择**运行文件**。
+在项目管理器中找到`EJBTester.java`。右键点击`EJBTester`类并选择**运行文件**。
 
 在 Netbeans 控制台中验证以下输出。
 
@@ -2676,12 +2539,12 @@ run:
 
 EJB 3.0 规范提供了注解，可以字段或 setter 方法以注入依赖。EJB 容器使用全局 JNDI 注册表来定位依赖。EJB 3.0 中用于依赖注入的注解有：
 
-* `@EJB` — 用于注入其他 EJB 引用。
-* `@Resource` — 用于注入数据源或单例服务，如 `sessionContext`、`timerService` 等。
+- `@EJB` — 用于注入其他 EJB 引用。
+- `@Resource` — 用于注入数据源或单例服务，如`sessionContext`、`timerService`等。
 
 ## 使用 @EJB 的步骤
 
-`@EJB` 可以如下应用于字段或方法：
+`@EJB`可以如下应用于字段或方法：
 
 ```java
 public class LibraryMessageBean implements MessageListener {
@@ -2703,10 +2566,6 @@ public class LibraryMessageBean implements MessageListener {
 }
 ```
 
-
-
-
-
 ```java
 @EJB(beanName="com.tutorialspoint.stateless.LibraryPersistentBean")
 public void setLibraryPersistentBean(LibraryPersistentBeanRemote libraryBean) {
@@ -2718,7 +2577,7 @@ public void setLibraryPersistentBean(LibraryPersistentBeanRemote libraryBean) {
 
 ## 使用 @Resource 的步骤
 
-`@Resource` 通常用于注入 EJB 容器提供的单例。
+`@Resource`通常用于注入 EJB 容器提供的单例。
 
 ```java
 public class LibraryMessageBean implements MessageListener {
@@ -2734,11 +2593,11 @@ public class LibraryMessageBean implements MessageListener {
 
 | 步骤 | 描述 |
 | :--- | :--- |
-| 1 | 在 `com.tutorialspoint.timer` 包下创建一个名为 `EjbComponent` 的项目，如 `EJB - Create Application` 章节中解释的。 |
-| 2 | 使用 `EJB - Message Driven Bean`（消息驱动会豆）章节中创建的 Beans。保持其他文件不变。 |
+| 1 | 在`com.tutorialspoint.timer`包下创建一个名为`EjbComponent`的项目，如`EJB - Create Application`章节中解释的。 |
+| 2 | 使用`EJB - Message Driven Bean`（消息驱动会豆）章节中创建的 Beans。保持其他文件不变。 |
 | 3 | 清理并构建应用程序，以确保业务逻辑符合要求。 |
 | 4 | 最后，将应用程序以 jar 文件格式部署在 JBoss 服务器上。如果 JBoss 服务器尚未启动，它将自动启动。 |
-| 5 | 现在按照 `EJB - Create Application` 章节中 `Create Client to access EJB` 主题下的解释，创建 EJB 客户端（一个基于控制台的应用程序）。 |
+| 5 | 现在按照`EJB - Create Application`章节中`Create Client to access EJB`主题下的解释，创建 EJB 客户端（一个基于控制台的应用程序）。 |
 
 ## EJBComponent (EJB 模块)
 
@@ -2884,16 +2743,19 @@ public class EJBTester {
 }
 ```
 
+
+
 `EJBTester` 执行以下任务：
-* 从 `jndi.properties` 加载属性并初始化 `InitialContext`。
-* 在 `testMessageBeanEjb()` 中，通过 JNDI 查找 `/queue/BookQueue` 获取 JBoss 中可用的队列。然后使用 `queue session` 创建 `sender`。
-* 然后向用户显示书商店界面并要求输入选择。
-* 如果用户输入 `1`，系统请求书名并通过 `sender` 将书发送到队列。当 JBoss 容器接收到队列中的此消息时，会调用消息驱动豆的 `onMessage` 方法。我们的消息驱动豆随后使用状态豆的 `addBook()` 方法保存书籍。状态豆通过 `EntityManager` 调用将书籍持久化到数据库。
-* 如果用户输入 `2`，则再次通过 JNDI 查找 `StatefulSessionBean/remote` 获取远程业务对象（状态豆 EJB）并列出书籍。
+
+- 从`jndi.properties`加载属性并初始化`InitialContext`。
+- 在`testMessageBeanEjb()`中，通过 JNDI 查找`/queue/BookQueue`获取 JBoss 中可用的队列。然后使用`queue session`创建`sender`。
+- 然后向用户显示书商店界面并要求输入选择。
+- 如果用户输入`1`，系统请求书名并通过`sender`将书发送到队列。当 JBoss 容器接收到队列中的此消息时，会调用消息驱动豆的`onMessage`方法。我们的消息驱动豆随后使用状态豆的`addBook()`方法保存书籍。状态豆通过`EntityManager`调用将书籍持久化到数据库。
+- 如果用户输入`2`，则再次通过 JNDI 查找`StatefulSessionBean/remote`获取远程业务对象（状态豆 EJB）并列出书籍。
 
 ## 运行客户端以访问 EJB
 
-在项目管理器中找到 `EJBTester.java`。右键点击 `EJBTester` 类并选择 **run file**。
+在项目管理器中找到`EJBTester.java`。右键点击`EJBTester`类并选择 **run file**。
 
 在 Netbeans 控制台中验证以下输出。
 
@@ -2921,11 +2783,11 @@ BUILD SUCCESSFUL (total time: 15 seconds)
 
 上述输出表明，我们的消息驱动豆正在接收消息并将其存储在持久化存储存储器中，并且从数据库中检索书籍。
 
-我们的消息驱动豆使用 `@EJB` 注解注入的 `LibraryPersistentBean`，并在异常情况下使用 `MessageDrivenContext` 对象回滚事务。
+我们的消息驱动豆使用`@EJB`注解注入的`LibraryPersistentBean`，并在异常情况下使用`MessageDrivenContext`对象回滚事务。
 
 # 拦截器 (Interceptors)
 
-EJB 3.0 提供了使用带有 `@AroundInvoke` 注解的方法拦截业务方法调用的规范。拦截器方法在 `ejbContainer` 调用被拦截的业务方法之前执行。以下是拦截器方法的示例签名
+EJB 3.0 提供了使用带有`@AroundInvoke`注解的方法拦截业务方法调用的规范。拦截器方法在`ejbContainer`调用被拦截的业务方法之前执行。以下是拦截器方法的示例签名
 
 ```java
 @AroundInvoke
@@ -2936,10 +2798,6 @@ public Object methodInterceptor(InvocationContext ctx) throws Exception {
 ```
 
 拦截器方法可以在三个级别上应用或绑定。
-
-
-
-
 
 - **Default（默认）** — 部署中的每个 bean 都会被默认拦截器调用。默认拦截器只能通过 xml（`ejb-jar.xml`）应用。
 - **Class（类）** — 类级拦截器会为 bean 的每个方法被调用。类级拦截器既可以通过注解也可以通过 xml（`ejb-jar.xml`）应用。
@@ -2993,8 +2851,8 @@ public class LibraryBean implements LibraryBeanRemote {
 
 | 步骤 | 描述 |
 | :--- | :--- |
-| 1 |按照 *EJB - Create Application* 章节中的说明，在包 `com.tutorialspoint.interceptor` 下创建一个名为 `EjbComponent` 的项目。你也可以直接使用 *EJB - Create Application* 章节中创建的项目用于本章节，以理解被拦截 EJB 的概念。 |
-| 2 |按照 *EJB - Create Application* 章节中的说明，在 `com.tutorialspoint.interceptor` 包下创建 `LibraryBean.java` 和 `LibraryBeanRemote`。保持其他文件不变。 |
+| 1 | 按照 *EJB - Create Application* 章节中的说明，在包`com.tutorialspoint.interceptor`下创建一个名为`EjbComponent`的项目。你也可以直接使用 *EJB - Create Application* 章节中创建的项目用于本章节，以理解被拦截 EJB 的概念。 |
+| 2 | 按照 *EJB - Create Application* 章节中的说明，在`com.tutorialspoint.interceptor`包下创建`LibraryBean.java`和`LibraryBeanRemote`。保持其他文件不变。 |
 | 3 | 清理并构建应用程序，以确保业务逻辑符合要求。 |
 | 4 | 最后，将应用程序以 jar 文件的形式部署在 JBoss 应用服务器上。如果 JBoss 应用服务器尚未启动，它会自动启动。 |
 | 5 | 现在，按照 *EJB - Create Application* 章节中 **Create Client to access EJB** 主题下的说明，同样创建一个 ejb 客户端（一个基于控制台的应用程序）。 |
@@ -3045,9 +2903,9 @@ public class LibraryBean implements LibraryBeanRemote {
 }
 ```
 
-- 一旦你在 JBOSS 上部署了 `EjbComponent` 项目，请注意 jboss 日志。
+- 一旦你在 JBOSS 上部署了`EjbComponent`项目，请注意 jboss 日志。
 - JBoss 已自动为我们的会 bean 创建了一个 JNDI 条目——`LibraryBean/remote`。
-- 我们使用此查找字符串来获取类型为 `com.tutorialspoint.interceptor.LibraryBeanRemote` 的远程业务对象。
+- 我们使用此查找字符串来获取类型为`com.tutorialspoint.interceptor.LibraryBeanRemote`的远程业务对象。
 
 ### JBoss 应用服务器日志输出
 
@@ -3074,8 +2932,8 @@ java.naming.factory.url.pkgs=org.jboss.naming:org.jnp.interfaces
 java.naming.provider.url=localhost
 ```
 
-- 这些属性用于初始化 java 命名服务的 `InitialContext` 对象。
-- `InitialContext` 对象将用于查找。
+- 这些属性用于初始化 java 命名服务的`InitialContext`对象。
+- `InitialContext`对象将用于查找。
 
 ### EJBTester.java
 
@@ -3086,15 +2944,9 @@ import org.jnp.interfaces.NamingContextFactory;
 // ... (省略部分以保持结构一致)
 ```
 
-
-
-
-
 ### JBoss Application Server 日输出
 
 在 JBoss Application server 日输出中验证以下输出。
-
-....
 
 ```
 09:55:40,741 INFO [STDOUT] *** Intercepting call to LibraryBean method: addBook
@@ -3104,7 +2956,7 @@ import org.jnp.interfaces.NamingContextFactory;
 
 # 可嵌入对象
 
-`EJB` `3.0` 提供了将 `JAVA POJO`（普通 Java 对象）嵌入到实体豆（entity bean）中的选项，并允许将列名映射到嵌入 POJO 类的方法。要嵌入的 Java POJO 必须标记为 `@Embeddable`。
+`EJB` `3.0` 提供了将`JAVA POJO`（普通 Java 对象）嵌入到实体豆（entity bean）中的选项，并允许将列名映射到嵌入 POJO 类的方法。要嵌入的 Java POJO 必须标记为`@Embeddable`。
 
 ```java
 @Embeddable
@@ -3115,7 +2967,7 @@ public class Publisher implements Serializable {
 }
 ```
 
-可以使用 `@Embedded` 注解来嵌入上述类。
+可以使用`@Embedded`注解来嵌入上述类。
 
 ```java
 @Entity
@@ -3138,16 +2990,16 @@ public class Book implements Serializable {
 
 ## 示例应用程序
 
-让我们创建一个测试 EJB 应用程序来测试 `EJB` `3.0` 中的嵌入对象。
+让我们创建一个测试 EJB 应用程序来测试`EJB` `3.0`中的嵌入对象。
 
 | 步骤 | 描述 |
 | :--- | :--- |
-| 1 | 在 `com.tutorialspoint.entity` 包下创建一个名为 `EjbComponent` 的项目，如 `EJB - Create Application` 章节所示。请在本章中使用在 `EJB - Persistence` 章节中创建的项目，以便于理解 `EJB` 概念中的嵌入对象。 |
-| 2 | 在 `com.tutorialspoint.entity` 包下创建 `Publisher.java`，如 `EJB - Create Application` 章节所示。保持其他文件不变。 |
-| 3 | 在 `com.tutorialspoint.entity` 包下创建 `Book.java`。参考 `EJB - Persistence` 章节。保持其他文件不变。 |
+| 1 | 在`com.tutorialspoint.entity`包下创建一个名为`EjbComponent`的项目，如`EJB - Create Application`章节所示。请在本章中使用在`EJB - Persistence`章节中创建的项目，以便于理解`EJB`概念中的嵌入对象。 |
+| 2 | 在`com.tutorialspoint.entity`包下创建`Publisher.java`，如`EJB - Create Application`章节所示。保持其他文件不变。 |
+| 3 | 在`com.tutorialspoint.entity`包下创建`Book.java`。参考`EJB - Persistence`章节。保持其他文件不变。 |
 | 4 | 清理并构建应用程序，确保业务逻辑按照要求运行。 |
-| 5 | 最后，以 `jar` 文件的形式将应用程序部署到 JBoss Application Server。如果 JBoss Application server 尚未启动，它将自动启动。 |
-| 6 | 现在按照 `EJB - Create Application` 章节中 `Create Client to access EJB` 主题下的说明，创建 EJB 客户端（一个基于控制的应用程序）。 |
+| 5 | 最后，以`jar`文件的形式将应用程序部署到 JBoss Application Server。如果 JBoss Application server 尚未启动，它将自动启动。 |
+| 6 | 现在按照`EJB - Create Application`章节中`Create Client to access EJB`主题下的说明，创建 EJB 客户端（一个基于控制的应用程序）。 |
 
 ### 创建/修改 Book 表
 
@@ -3205,6 +3057,8 @@ public class Publisher implements Serializable {
 ```
 
 ### Book.java
+
+
 
 ```java
 package com.tutorialspoint.entity;
@@ -3306,10 +3160,6 @@ public class LibraryPersistentBean implements LibraryPersistentRemote {
     }
 }
 ```
-
-
-
-
 
 ```java
 private void showGUI() {
@@ -3510,6 +3360,8 @@ public interface PersistenceBeanRemote {
 
 #### `PersistenceBean.java`
 
+
+
 ```java
 package com.tutorialspoint.stateless;
 
@@ -3535,8 +3387,8 @@ public class PersistenceBean implements PersistenceBeanRemote {
 }
 ```
 
-- 一旦你在 JBOSS 上部署了 EjbComponent 项目，请注意 jboss 日志。
-- JBoss 已自动为我们的会话 bean 创建了 JNDI 目 - `PersistenceBean/remote`。
+- 一旦你在 JBOSS 上部署了 `EjbComponent` 项目，请注意 `jboss` 日志。
+- JBoss 已自动为我们的会话 bean 创建了 JNDI 目录 - `PersistenceBean/remote`。
 - 我们将使用此查找字符串来获取类型为 `com.tutorialspoint.stateless.PersistenceBeanRemote` 的远程业务对象。
 
 ### JBoss 应用服务器日志
@@ -3554,13 +3406,9 @@ PersistenceBean/remote-com.tutorialspoint.stateless.PersistenceBeanRemote - EJB3
 16:30:02,723 INFO [EJBContainer] STARTED EJB: com.tutorialspoint.stateless.PersistenceBeanRemote ejbName: PersistenceBean
 ```
 
-
-
-
-
 `LibraryPersistentBean/remote-com.tutorialspoint.interceptor.LibraryPersistentBeanRemote` - EJB3.x 远程业务接口
 
-## EJBTester (EJB )
+## EJBTester (EJB)
 
 ### jndi.properties
 
@@ -3570,8 +3418,8 @@ java.naming.factory.url.pkgs=org.jboss.naming:org.jnp.interfaces
 java.naming.provider.url=localhost
 ```
 
-* 这些属性用于初始化 java 命名服务的 `InitialContext` 对象。
-* `InitialContext` 对象将用于查找无状态会话 bean（stateless session bean）。
+- 这些属性用于初始化 java 命名服务的 `InitialContext` 对象。
+- `InitialContext` 对象将用于查找无状态会话 bean（stateless session bean）。
 
 ### EJBTester.java
 
@@ -3678,15 +3526,17 @@ public class EJBTester {
 ```
 
 `EJBTester` 执行以下任务：
-* 从 `jndi.properties` 加载属性并初始化 `InitialContext` 对象。
-* 在 `testBlobClob()` 方法中，通过名称 `"LibraryPersistenceBean/remote"` 进行 jndi 查找以获取远程对象（无状态 EJB）。
-* 然后向用户显示库接口并要求输入选择。
-* 如果用户输入 1，系统会请求书名并使用无状态 bean `addBook()` 保存书籍。Session Bean 将书籍存储在数据库中。
-* 如果用户输入 2，系统将使用无状态 bean `getBooks()` 获取书籍并退出。
+
+- 从 `jndi.properties` 加载属性并初始化 `InitialContext` 对象。
+- 在 `testBlobClob()` 方法中，通过名称 `"LibraryPersistenceBean/remote"` 进行 jndi 查找以获取远程对象（无状态 EJB）。
+- 然后向用户显示库接口并要求输入选择。
+- 如果用户输入 1，系统会请求书名并使用无状态 bean `addBook()` 保存书籍。Session Bean 将书籍存储在数据库中。
+- 如果用户输入 2，系统将使用无状态 bean `getBooks()` 获取书籍并退出。
 
 ## 运行
 
 运行 `EJBTester` 执行以下任务：
+
 ```
 **********************
 Welcome to Book Store
@@ -3715,9 +3565,6 @@ Options
 2. Exit 
  Choice: 2
 ```
-
-
-
 
 ```java
 import javax.ejb.TransactionManagement;
@@ -3768,19 +3615,24 @@ public class AccountBean implements AccountBeanLocal {
 ## 安全核心术语
 
 - **身份验证 (Authentication)** − 确保访问系统或应用程序的用户身份真实的过程。
-- **授权 (Authorization)** − 确保经过验证的用户具有相应权限级别访问系统资源的过程。
-- **用户 (User)** − 用户代表访问应用程序的客户端或系统。
-- **用户组 (User Groups)** − 用户可能是具有特定权限的组的一部分，例如管理员组。
-- **用户角色 (User Roles)** − 角色定义了用户拥有的权限级别或访问系统资源的权限。
 
-## 容器管理的安全性 (Container Managed Security)
+
+
+## 授权与用户管理
+
+- **授权（Authorization）**：确保经过验证的用户具有相应权限级别访问系统资源的过程。
+- **用户（User）**：用户代表访问应用程序的客户端或系统。
+- **用户组（User Groups）**：用户可能是具有特定权限的组的一部分，例如管理员组。
+- **用户角色（User Roles）**：角色定义了用户拥有的权限级别或访问系统资源的权限。
+
+## 容器管理的安全性（Container Managed Security）
 
 EJB 3.0 指定了以下安全属性/注解，由 EJB 容器实现。
 
-- **DeclareRoles** − 指明该类将接受声明的角色。注解应用于类级别。
-- **RolesAllowed** − 指明该方法可以被指定角色的用户访问。它可以应用于类级别，导致类中的所有方法都可以被指定角色的用户访问。
-- **PermitAll** − 指明业务方法对所有人可见。它可以可以应用于类级别，也可以应用于方法级别。
-- **DenyAll** − 指明业务方法无法被类级别或方法级别指定的任何用户访问。
+- **DeclareRoles**：指明该类将接受声明的角色。注解应用于类级别。
+- **RolesAllowed**：指明该方法可以被指定角色的用户访问。它可以应用于类级别，导致类中的所有方法都可以被指定角色的用户访问。
+- **PermitAll**：指明业务方法对所有人可见。它可以应用于类级别，也可以应用于方法级别。
+- **DenyAll**：指明业务方法无法被类级别或方法级别指定的任何用户访问。
 
 ### 示例
 
@@ -3830,40 +3682,36 @@ public class LibraryBean implements LibraryRemote {
 </ejb-jar>
 ```
 
-# JNDI 绑定
+## JNDI 绑定
 
-JNDI 代表 Java Naming and Directory Interface（Java 命名和目录接口）。它是一组 API 和服务接口。Java 应用程序使用 JNDI 进行命名和目录服务。在 EJB 语文中，有两个术语。
+JNDI 代表 Java Naming and Directory Interface（Java 命名和目录接口）。它是一组 API 和服务接口。Java 应用程序使用 JNDI 进行命名和目录服务。在 EJB 语境中，有两个术语。
 
-- **绑定 (Binding)** − 指给 EJB 对象分配一个名称，以便以后使用。
-- **查找 (Lookup)** − 指查找并获取 EJB 对象。
+- **绑定（Binding）**：指给 EJB 对象分配一个名称，以便以后使用。
+- **查找（Lookup）**：指查找并获取 EJB 对象。
 
 在 Jboss 中，session beans 默认以以下格式绑定到 JNDI 中：
 
-- **local** − `EJB-name/local`
-- **remote** − `EJB-name/remote`
+- **local**：`EJB-name/local`
+- **remote**：`EJB-name/remote`
 
-如果 EJB 封封装在 `<application-name>.ear` 文件中，则默认格式如下：
+如果 EJB 封装在 `<application-name>.ear` 文件中，则默认格式如下：
 
-- **local** − `application-name/ejb-name/local`
-- **remote** − `application-name/ejb-name/remote`
+- **local**：`application-name/ejb-name/local`
+- **remote**：`application-name/ejb-name/remote`
 
 ## 默认绑定示例
 
 请参考 `Default Binding`。
 
+我们将在这里演示多对多（ManyToMany）映射的使用。为了表示多对多关系，需要以下三张表：
 
-
-
-
-我们将在这里演示多对多（ManyToMany）映射的使用。为了表示多对多关系，需要以下三张表——
-
-* `Book` — 书籍表，存储书籍记录。
-* `Author` — 作者表，存储作者记录。
-* `Book_Author` — 书籍作者表，存储上述书籍表和作者表之间的关联。
+- `Book`：书籍表，存储书籍记录。
+- `Author`：作者表，存储作者记录。
+- `Book_Author`：书籍作者表，存储上述书籍表和作者表之间的关联。
 
 ## 创建表
 
-在默认数据库 `postgres` 中创建表 `book`、`author``book_author`。
+在默认数据库 `postgres` 中创建表 `book`、`author`、`book_author`。
 
 ```sql
 CREATE TABLE book (
@@ -3933,7 +3781,7 @@ public class Book implements Serializable{
 | 5 | 最后，以 jar 文件的形式将应用程序部署到 JBoss 应用服务器上。如果 JBoss 应用服务器尚未启动，它将自动启动。 |
 | 6 | 现在，按照 `EJB - Create Application` 章节中**创建客户端以访问 EJB** 主题所述的方法，创建一个 EJB 客户端（一个基于控制台的应用程序）。 |
 
-## EJBComponent (EJB 模块)
+## EJBComponent（EJB 模块）
 
 ### Author.java
 
@@ -4039,8 +3887,6 @@ public class Book implements Serializable{
 
 
 
-
-
 ```java
 ejbTester.testEmbeddedObjects();
 
@@ -4112,15 +3958,15 @@ private void testEmbeddedObjects() {
 
 `EJBTester` 执行了以下任务：
 
-* 从 `jndi.properties` 加载属性并初始化 `InitialContext` 对象。
-* 在 `testInterceptedEjb()` 方法中，使用名称 `"LibraryPersistenceBean/remote"` 进行 JNDI 查找，以获取远程业务对象（无状态 EJB）。
+* 从`jndi.properties`加载属性并初始化`InitialContext`对象。
+* 在`testInterceptedEjb()`方法中，使用名称`"LibraryPersistenceBean/remote"`进行 JNDI 查找，以获取远程业务对象（无状态 EJB）。
 * 随后向用户显示一个书商店用户界面，并要求其输入选项。
-* 如果用户输入 1，系统会提示书名并使用无状态会话 Bean 的 `addBook()` 方法保存书籍。Session Bean 将书籍存储在数据库中。
-* 如果用户输入 2，系统使用无状态会话 Bean 的 `getBooks()` 方法检索书籍并退出。
+* 如果用户输入 1，系统会提示书名并使用无状态会话 Bean 的`addBook()`方法保存书籍。Session Bean 将书籍存储在数据库中。
+* 如果用户输入 2，系统使用无状态会话 Bean 的`getBooks()`方法检索书籍并退出。
 
 ## 运行客户端访问 EJB
 
-在项目资源管理器中找到 `EJBTester.java`。右键点击 `EJBTester` 类并选择 **run file**（运行文件）。
+在项目资源管理器中找到`EJBTester.java`。右键点击`EJBTester`类并选择 **run file**（运行文件）。
 
 在 Netbeans 控制台中核实以下输出。
 
@@ -4161,7 +4007,7 @@ BUILD SUCCESSFUL (total time: 21 seconds)
 
 ## 创建表
 
-在默认数据库 `postgres` 中创建表 `books`。
+在默认数据库`postgres`中创建表`books`。
 
 ```sql
 CREATE TABLE books (
@@ -4212,18 +4058,15 @@ public class LibraryPersistentBean implements LibraryPersistentBeanRemote {
 | 步骤 | 描述 |
 | :--- | :--- |
 | 1 | 创建一个名为 EjbComponent 的项目 |
-| 2 | 在包下创建 `Book.java` |
-| 3 | 如下所示创建 `LibraryPersistenceRemote.java` |
-| 4 | 如下所示创建 `LibraryPersistentBean.java` |
+| 2 | 在包下创建`Book.java` |
+| 3 | 如下所示创建`LibraryPersistenceRemote.java` |
+| 4 | 如下所示创建`LibraryPersistentBean.java` |
 | 5 | 最后，将应用程序部署在 JBoss 服务器上 |
 | 6 | 现在创建 EJB 客户端 |
 
 ## EJB (模块)
 
 ### Book.java
-
-
-
 
 ```java
 while (rs.next()) {
@@ -4246,9 +4089,9 @@ return books;
 }
 ```
 
-* 一旦你在 `JBOSS` 上部署了 `EjbComponent` 项目，请注意 jboss 日志。
-* `JBoss` 已经自动为我们的会话 bean 创建了一个 `JNDI` 条目 - `LibraryPersistentBean/remote`。
-* 我们将使用此查找字符串来获取类型为 `com.tutorialspoint.stateless.LibraryPersistentBeanRemote` 的远程业务对象。
+* 一旦你在`JBOSS`上部署了`EjbComponent`项目，请注意 jboss 日志。
+* `JBoss`已经自动为我们的会话 bean 创建了一个`JNDI`条目 - `LibraryPersistentBean/remote`。
+* 我们将使用此查找字符串来获取类型为`com.tutorialspoint.stateless.LibraryPersistentBeanRemote`的远程业务对象。
 
 ### JBoss 应用服务器日志输出
 
@@ -4277,106 +4120,21 @@ LibraryPersistentBean/remote-com.tutorialspoint.stateless.LibraryPersistentBeanR
 ### EJBTester (EJB Client)
 
 #### jndi.properties
+
 ```
 java.naming.factory.initial=org.jnp.interfaces.NamingContextFactory
 java.naming.factory.url.pkgs=org.jboss.naming:org.jnp.interfaces
 java.naming.provider.url=localhost
 ```
-* 这些属性用于初始化 java 命名服务的 `InitialContext` 对象。
-* `InitialContext` 对象将用于查找无无会话 bean。
+
+* 这些属性用于初始化 java 命名服务的`InitialContext`对象。
+* `InitialContext`对象将用于查找无无会话 bean。
 
 #### EJBTester.java
-```java
-package com.tutorialspoint.test;
-
-import com.tutorialspoint.stateless.LibraryPersistentBeanRemote;
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.List;
-import java.util.Properties;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
-
-public class EJBTester {
-    BufferedReader brConsoleReader = null;
-    Properties props;
-    InitialContext ctx;
-
-    {
-        props = new Properties();
-        try {
-            props.load(new FileInputStream("jndi.properties"));
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-        try {
-            ctx = new InitialContext(props);
-        } catch (NamingException ex) {
-            ex.printStackTrace();
-        }
-        brConsoleReader = new BufferedReader(new InputStreamReader(System.in));
-    }
-
-    public static void main(String[] args) {
-        EJBTester ejbTester = new EJBTester();
-        ejbTester.testEntityEjb();
-    }
-
-    private void showGUI() {
-        System.out.println("**********************");
-        System.out.println("Welcome to Book Store");
-        System.out.println("**********************");
-        System.out.print("Options \n1\. Add Book\n2\. Exit \nEnter Choice: ");
-    }
-
-    private void testEntityEjb() {
-        try {
-            int choice = 1;
-            LibraryPersistentBeanRemote libraryBean = (LibraryPersistentBeanRemote) ctx.lookup("LibraryPersistentBean/remote");
-            while (choice != 2) {
-                String bookName;
-                showGUI();
-                String strChoice = brConsoleReader.readLine();
-                choice = Integer.parseInt(strChoice);
-                if (choice == 1) {
-                    System.out.print("Enter book name: ");
-                    bookName = brConsoleReader.readLine();
-                    Book book = new Book();
-                    book.setName(bookName);
-                    libraryBean.addBook(book);
-                } else if (choice == 2) {
-                    break;
-                }
-            }
-            List<Book> booksList = libraryBean.getBooks();
-            System.out.println("Book(s) entered so far: " + booksList.size());
-            int i = 0;
-            for (Book book:booksList) {
-                System.out.println((i+1)+". " + book.getName());
-                i++;
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            e.printStackTrace();
-        } finally {
-            try {
-                if(brConsoleReader != null) {
-                    brConsoleReader.close();
-                }
-            } catch (IOException ex) {
-                System.out.println(ex.getMessage());
-            }
-        }
-    }
-}
-```
 
 
 
-
-| 6 | 现在创建 EJB 客户端，这是一个基于控制台的应用程序，方法与 *EJB - 创建应用程序* 章节中 *创建访问 EJB 的客户端* 主题下解释的一样。按照所示所示对其进行修改。 |
+现在创建 EJB 客户端，这是一个基于控制台的应用程序，方法与 *EJB - 创建应用程序* 章节中 *创建访问 EJB 的客户端* 主题下解释的一样。按照所示对其进行修改。
 
 ## EJBComponent (EJB 模块)
 
@@ -4468,9 +4226,11 @@ public class LibraryPersistentBean implements LibraryPersistentBeanRemote {
 }
 ```
 
-* 一旦你将 `EjbComponent` 项目部署到 `JBOSS` 上，请注意 `jboss` 日志。
-* `JBoss` 已自动为我们的会话 bean 创建了一个 `JNDI` 条目 —— `LibraryPersistentBean/remote`。
-* 我们将使用此查找字符串来获取类型为 `com.tutorialspoint.stateless.LibraryPersistentBeanRemote` 的远程业务对象。
+* 一旦你将`EjbComponent`项目部署到`JBOSS`上，请注意`jboss`日志。
+
+* `JBoss`已自动为我们的会话 bean 创建了一个`JNDI`条目 —— `LibraryPersistentBean/remote`。
+
+* 我们将使用此查找字符串来获取类型为`com.tutorialspoint.stateless.LibraryPersistentBeanRemote`的远程业务对象。
 
 ### JBoss 服务器日志输出
 
@@ -4497,10 +4257,100 @@ java.naming.factory.url.pkgs=org.jboss.naming:org.jnp.interfaces
 java.naming.provider.url=localhost
 ```
 
-* 这些属性用于初始化 `java` 命名服务的 `InitialContext` 对象。
-* `InitialContext` 对象将被用于查找无会话 bean。
+* 这些属性用于初始化`java`命名服务的`InitialContext`对象。
+
+* `InitialContext`对象将被用于查找无会话 bean。
 
 ### EJBTester.java
+
+```java
+package com.tutorialspoint.test;
+
+import com.tutorialspoint.stateless.LibraryPersistentBeanRemote;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.List;
+import java.util.Properties;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+public class EJBTester {
+    BufferedReader brConsoleReader = null;
+    Properties props;
+    InitialContext ctx;
+
+    {
+        props = new Properties();
+        try {
+            props.load(new FileInputStream("jndi.properties"));
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        try {
+            ctx = new InitialContext(props);
+        } catch (NamingException ex) {
+            ex.printStackTrace();
+        }
+        brConsoleReader = new BufferedReader(new InputStreamReader(System.in));
+    }
+
+    public static void main(String[] args) {
+        EJBTester ejbTester = new EJBTester();
+        ejbTester.testEntityEjb();
+    }
+
+    private void showGUI() {
+        System.out.println("**********************");
+        System.out.println("Welcome to Book Store");
+        System.out.println("**********************");
+        System.out.print("Options \n1\. Add Book\n2\. Exit \nEnter Choice: ");
+    }
+
+    private void testEntityEjb() {
+        try {
+            int choice = 1;
+            LibraryPersistentBeanRemote libraryBean = (LibraryPersistentBeanRemote) ctx.lookup("LibraryPersistentBean/remote");
+            while (choice != 2) {
+                String bookName;
+                showGUI();
+                String strChoice = brConsoleReader.readLine();
+                choice = Integer.parseInt(strChoice);
+                if (choice == 1) {
+                    System.out.print("Enter book name: ");
+                    bookName = brConsoleReader.readLine();
+                    Book book = new Book();
+                    book.setName(bookName);
+                    libraryBean.addBook(book);
+                } else if (choice == 2) {
+                    break;
+                }
+            }
+            List<Book> booksList = libraryBean.getBooks();
+            System.out.println("Book(s) entered so far: " + booksList.size());
+            int i = 0;
+            for (Book book:booksList) {
+                System.out.println((i+1)+". " + book.getName());
+                i++;
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        } finally {
+            try {
+                if(brConsoleReader != null) {
+                    brConsoleReader.close();
+                }
+            } catch (IOException ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+    }
+}
+```
+
+
 
 ```java
 package com.tutorialspoint.test;
@@ -4589,16 +4439,17 @@ public class EJBTester {
 ```
 
 `EJBTester` 执行以下任务：
-* 从 `jndi.properties` 加属性并初始化 `InitialContext` 对象。
-* 在 `testEntityEjb()` 方法中，通过名称 `"LibraryPersistentBean/remote"` 查找获取远程业务对象（会话）。
-* 然后向用户显示书商店界面，并要求其输入一个选择。
-* 如果用户输入 `1`，系统询问书名并使用无会话 bean `addBook()` 方法保存书籍。
-* 如果用户输入 `2`，系统使用无会话 bean `getBooks()` 方法检索书籍并退出。
-* 然后再次通过名称 `"LibraryPersistentBean/remote"` 查找获取远程业务对象（会话 EJB）并列出书籍。
+
+- 从`jndi.properties`加属性并初始化`InitialContext`对象。
+- 在`testEntityEjb()`方法中，通过名称`"LibraryPersistentBean/remote"`查找获取远程业务对象（会话）。
+- 然后向用户显示书商店界面，并要求其输入一个选择。
+- 如果用户输入`1`，系统询问书名并使用无会话 bean `addBook()`方法保存书籍。
+- 如果用户输入`2`，系统使用无会话 bean `getBooks()`方法检索书籍并退出。
+- 然后再次通过名称`"LibraryPersistentBean/remote"`查找获取远程业务对象（会话 EJB）并列出书籍。
 
 ## 运行客户端访问 EJB
 
-在项目资源管理器找到 `EJBTester.java`。右键点击 `EJBTester` 类并选择运行文件。
+在项目资源管理器找到`EJBTester.java`。右键点击`EJBTester`类并选择运行文件。
 
 在 Netbeans 控制台中验证以下输出。
 
@@ -4631,20 +4482,16 @@ EJB 是企业级应用程序的一部分，通常基于分布式环境。因此�
 
 EJB 容器以两种方式考虑异常：
 
-* **应用异常** —— 如果违反了业务规则或在执行业务逻辑时发生异常。
-* **系统异常** —— 任何不是由业务逻辑或业务代码引起的异常。`RuntimeException`、`RemoteException` 都是系统异常。例如，查找 EJB 期间错误。`RuntimeException`、`RemoteException` 都是系统异常。
+- **应用异常** —— 如果违反了业务规则或在执行业务逻辑时发生异常。
+- **系统异常** —— 任何不是由业务逻辑或业务代码引起的异常。`RuntimeException`、`RemoteException`都是系统异常。例如，查找 EJB 期间错误。`RuntimeException`、`RemoteException`都是系统异常。
 
+当`Application Exception`发生时，EJB 容器会拦截该异常，但将其原样返回给客户端。除非在代码中通过`EJBContext.setRollBackOnly()`方法明确指定，否则不会回滚事务。在发生`Application Exception`的情况下，EJB 容器不会对异常进行封装。
 
-
-
-
-当 `Application Exception` 发生时，EJB 容器会拦截该异常，但将其原样返回给客户端。除非在代码中通过 `EJBContext.setRollBackOnly()` 方法明确指定，否则不会回滚事务。在发生 `Application Exception` 的情况下，EJB 容器不会对异常进行封装。
-
-当 `System Exception` 发生时，EJB 容器会拦截该异常、回滚事务并启动清理任务。它会将异常封装进 `RemoteException` 并抛抛给客户端。
+当`System Exception`发生时，EJB 容器会拦截该异常、回滚事务并启动清理任务。它会将异常封装进`RemoteException`并抛抛给客户端。
 
 ## 处理应用程序异常
 
-应用程序异常通常在 Session EJB 方法中抛出，因为这些方法负责执行业务逻辑。应用程序异常应该在业务方法的 `throws` 子句中声明，并在业务逻辑失败时被抛出。
+应用程序异常通常在 Session EJB 方法中抛出，因为这些方法负责执行业务逻辑。应用程序异常应该在业务方法的`throws`子句中声明，并在业务逻辑失败时被抛出。
 
 ```java
 @Stateless
@@ -4663,7 +4510,7 @@ public class LibraryPersistentBean implements LibraryPersistentBeanRemote {
 
 ## 处理系统异常
 
-系统异常可能发生在任何时候，例如命名查找失败、获取数据时发生 SQL 错误。在这种情况下，此类异常应该封装在 `EJBException` 下并返回给客户端。
+系统异常可能发生在任何时候，例如命名查找失败、获取数据时发生 SQL 错误。在这种情况下，此类异常应该封装在`EJBException`下并返回给客户端。
 
 ```java
 @Stateless
@@ -4684,7 +4531,7 @@ public class LibraryPersistentBean implements LibraryPersistentBeanRemote {
 }
 ```
 
-在客户端，处理 `EJBException`。
+在客户端，处理`EJBException`。
 
 ```java
 public class EJBTester {
@@ -4707,7 +4554,7 @@ public class EJBTester {
 
 # Web Services
 
-EJB 3.0 提供了一个将 Session EJB 暴露为 Web 选项。使用 `@WebService` 注解标记类为 Web 服务端点，并使用 `@WebMethod` 将方法暴露为给客户端的 Web 方法。
+EJB 3.0 提供了一个将 Session EJB 暴露为 Web 选项。使用`@WebService`注解标记类为 Web 服务端点，并使用`@WebMethod`将方法暴露为给客户端的 Web 方法。
 
 ```java
 @Stateless
@@ -4728,8 +4575,8 @@ public class LibraryPersistentBean implements LibraryPersistentBeanRemote {
 
 | 步骤 | 描述 |
 | :--- | :--- |
-| 1 | 在包 `com.tutorialspoint.entity` 下创建一个名为 `EjbComponent` 的项目，如 EJB - Create Application 章节所示。请使用 EJB - Persistence 章节中创建的项目，以便在本章节中理解 EJB 概念中的 clob/blob 对象。 |
-| 2 | 在包 `com.tutorialspoint.stateless` 下创建 `LibraryPersistentBean.java`。参考 EJB - Persistence 章节。保持其他文件不变。 |
+| 1 | 在包`com.tutorialspoint.entity`下创建一个名为`EjbComponent`的项目，如 EJB - Create Application 章节所示。请使用 EJB - Persistence 章节中创建的项目，以便在本章节中理解 EJB 概念中的 clob/blob 对象。 |
+| 2 | 在包`com.tutorialspoint.stateless`下创建`LibraryPersistentBean.java`。参考 EJB - Persistence 章节。保持其他文件不变。 |
 | 3 | 清理并构建应用程序，确保业务逻辑按照要求运行。 |
 | 4 | 最后，以 jar 文件的形式将应用程序部署到 JBoss 应用服务器上。如果 JBoss 应用服务器尚未启动，它将自动启动。 |
 
@@ -4768,6 +4615,8 @@ public class LibraryPersistentBean implements LibraryPersistentBeanRemote {
 
 ### JBoss 应用服务器日志输出
 
+
+
 ```text
 10:51:37,271 INFO [EJBContainer] STARTED EJB: com.tutorialspoint.stateless.LibraryPersistentBean ejbName: LibraryPersistentBean
 10:51:37,287 INFO [JndiSessionRegistrarBase] Binding the following Entries in Global JNDI:
@@ -4779,7 +4628,7 @@ LibraryPersistentBean/remote-com.tutorialspoint.stateless.LibraryPersistentBeanR
 LibraryService3853081455302946642.wsdl
 ```
 
-## 创建客户端访问作为 Web  EJB
+## 创建客户端访问作为 Web EJB
 
 在 NetBeans IDE 中，选择 `File > New Project >`。在类别下选择项目类型 `Java`，项目类型选择 `Java Application`。点击 `Next >` 按钮。输入项目名称和位置。点击 `Finish >` 按钮。我们选择名称 `EJBWebServiceClient`。
 
@@ -4800,15 +4649,14 @@ public class EJBWebServiceClient {
 
 在项目资源管理器中右键点击项目名称。选择 `Run`。Netbeans 将构建客户端并运行它。验证以下输出。
 
-
-
-
 使用 EJB 3.0 打包应用程序的要求与 J2EE 平台相似。EJB 组件被封装成 `jar` 文件的模块，并封装成 `ear` 文件的企业级应用归档。
 
 任何企业级应用主要包含三个组件——
 
 - `jar` — Java 应用程序归档，包含 EJB 模块、EJB 客户端模块和工具类模块。
+
 - `war` — Web 应用程序归档，包含 Web 模块。
+
 - `ear` — 企业级应用程序归档，包含 `jars` 模块和 `war` 模块。
 
 ![Image](img/image00328.jpeg)
@@ -4823,7 +4671,7 @@ public class EJBWebServiceClient {
 
 在项目资源管理器中右键点击项目 `Enterprise Application` 并选择 Build（构建）。
 
-```
+```text
 ant -f D:\SVN\EnterpriseApplication dist
 
 pre-init:

@@ -1,3 +1,4 @@
+
 # 作为 Windows 服务的 Spring Boot 应用程序
 
 > 原文：<https://medium.com/javarevisited/spring-boot-application-as-a-windows-service-4c775556518e?source=collection_archive---------1----------------------->
@@ -12,15 +13,15 @@
 
 要将您的应用程序作为 Windows 服务运行，您应该执行几个步骤。
 
-# Maven 配置
+## Maven 配置
 
-您可以将应用程序打包成 JAR 或 WAR。这是由 ***pom.xml*** 文件配置的，如下图。对于这个主题，我们继续讨论 JAR 打包。
+您可以将应用程序打包成 JAR 或 WAR。这是由`pom.xml`文件配置的，如下图。对于这个主题，我们继续讨论 JAR 打包。
 
 ```
 <packaging>jar</packaging>
 ```
 
-之后你应该添加***spring-boot-maven-plugin***工件到你的 ***pom.xml*** 。
+之后你应该添加`spring-boot-maven-plugin`工件到你的`pom.xml`。
 
 ```
 <build>
@@ -36,11 +37,11 @@
 </build>
 ```
 
-pom.xml
+`pom.xml`
 
-如上所示，`<executable>`参数为真。 ***昭然若揭。MF*** 文件用此参数添加到 JAR 包中。这个清单包含一个 *Main-Class* 条目，指定哪个类定义了应用程序的 Main 方法。如果你不了解 Maven，想了解一下，也可以看看这些 [Maven 课程](https://dev.to/javinpaul/10-free-devops-courses-to-learn-jenkins-docker-and-maven-for-programmers-ohp)
+如上所示，`<executable>`参数为真。`昭然若揭.MF`文件用此参数添加到 JAR 包中。这个清单包含一个`Main-Class`条目，指定哪个类定义了应用程序的 Main 方法。如果你不了解 Maven，想了解一下，也可以看看这些 [Maven 课程](https://dev.to/javinpaul/10-free-devops-courses-to-learn-jenkins-docker-and-maven-for-programmers-ohp)
 
-<https://javarevisited.blogspot.com/2019/03/top-5-course-to-learn-apache-maven-for.html>  
+<https://javarevisited.blogspot.com/2019/03/top-5-course-to-learn-apache-maven-for.html>
 
 完成这些配置后，您应该编写下面的命令来将您的应用程序打包成 JAR。
 
@@ -54,20 +55,21 @@ $ mvn clean package
 $ java -jar yourApp.jar
 ```
 
-# Windows 服务包装程序(WinSW)
+## Windows 服务包装程序(WinSW)
 
-为了将 Java 应用程序作为 Windows 服务运行，我们需要一个名为 Windows 服务包装器(WinSW)的工具。你可以从这个[链接](https://github.com/kohsuke/winsw/releases/tag/winsw-v2.1.2)下载这个工具。也**。对于 WinSW，您的计算机中必须安装. Net Framework 4** 。
+为了将 Java 应用程序作为 Windows 服务运行，我们需要一个名为 Windows 服务包装器(WinSW)的工具。你可以从这个[链接](https://github.com/kohsuke/winsw/releases/tag/winsw-v2.1.2)下载这个工具。也**。对于 WinSW，您的计算机中必须安装. Net Framework 4**。
 
 下载 WinSW 后，必须按照以下步骤操作。
 
 *   将 JAR 文件、WinSW 可执行文件和配置文件放在同一个文件夹中。
-*   WinSW-xxx.xml 文件需要正确配置，如下所示。
+
+*   `WinSW-xxx.xml`文件需要正确配置，如下所示。
 
 ![](img/c7a28e98b5ce4207adc9e39f3299db8b.png)
 
 WinSW 目录
 
-*   最后两个标签可以保持不变。出于我们的目的，我们只想执行 java -jar。/XXX.jar。
+*   最后两个标签可以保持不变。出于我们的目的，我们只想执行`java -jar ./XXX.jar`。
 
 ```
 <configuration>
@@ -84,7 +86,7 @@ WinSW 目录
 </configuration>
 ```
 
-# 将 Spring Boot 应用程序作为 Windows 服务安装
+## 将 Spring Boot 应用程序作为 Windows 服务安装
 
 *   配置 XML 文件后，您必须以管理员身份打开 Windows CLI。您连续运行以下两个命令。
 
@@ -103,7 +105,7 @@ $ net start RC-XXX-SERVICE
 
 *   我们用第一个命令安装应用程序。第二个命令启动应用程序。此外，您可以从 Windows 服务启动该应用程序。
 
-# 感谢您的阅读！🙏你的想法对我很有价值。请随意分享。😄
+## 感谢您的阅读！🙏你的想法对我很有价值。请随意分享。😄
 
 您可能喜欢的其他 **Java 和 Spring 文章**
 

@@ -1,3 +1,4 @@
+
 # 评估 Python 中的逻辑回归
 
 > 原文：<https://medium.com/javarevisited/evaluating-the-logistic-regression-ae2decf42d61?source=collection_archive---------0----------------------->
@@ -111,9 +112,13 @@ False Negatives = **Type II Error**
 ![](img/eb94afbb78bb2f396894f58815dcb167.png)
 
 > 它经常被比作灵敏度，因为灵敏度和特异性成反比:**灵敏度越高，特异性越低，反之亦然。换句话说，不可能同时优化这两个指标。一般来说，**当你想最大化正确阳性的预测时，灵敏度比特异性更重要。**另一方面，**当你想最小化错误否定的预测时，特异性比敏感性更重要。****
+
 > 
+
 > 需要注意的一点是 [**阈值化**](https://analyticsindiamag.com/beginners-guide-to-understanding-roc-curve-how-to-find-the-perfect-probability-threshold/) 可以同时影响灵敏度和特异性。这意味着改变阴性预测和阳性预测的分界点会影响灵敏度和特异性。
+
 > 
+
 > 代码示例:
 
 ![](img/0ae32e5d8f9cec156ed15563bd2e04e2.png)
@@ -133,6 +138,7 @@ False Negatives = **Type II Error**
 有两种方法可以获得正类的最佳阈值:
 
 1.  [尤登氏 J 统计](https://en.wikipedia.org/wiki/Youden%27s_J_statistic)
+
 2.  [欧几里德距离](https://en.wikipedia.org/wiki/Euclidean_distance)
 
 我将使用 Youden 的 J 统计量来获得代码示例中的最佳概率阈值:

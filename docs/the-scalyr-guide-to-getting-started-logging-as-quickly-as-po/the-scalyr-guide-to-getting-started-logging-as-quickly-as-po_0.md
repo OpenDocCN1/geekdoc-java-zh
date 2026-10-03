@@ -1,10 +1,9 @@
-# Scalyr 快速上手日志指南：Java,Log4j2,PHP,Ruby,Rails,Swift,Scala,Django,Angular & Meteor 日志快速启动指南
 
-
+# Scalyr 快速上手日志指南：Java、Log4j2、PHP、Ruby、Rails、Swift、Scala、Django、Angular 与 Meteor 日志快速启动指南
 
 ![](img/cover.jpg)
-![cover.jpg](img/cover.jpg)
 
+![cover.jpg](img/cover.jpg)
 
 ## 第 1 章：集中式日志是大规模应用的现代解决方案
 
@@ -44,7 +43,7 @@
 
 微服务是开发需要扩展应用程序的极佳方法。但它们为日志记录带来了挑战。我们需要能够关联不同服务之间的日志语句，特别是当有大量请求快速涌入时。
 
-虽然这些听起来可能很复杂，但日志记录可能仍然识别问题根源的最佳方法。监控提供了应用程序健康状况的良好概览，但当出现问题时，我们通常需要回溯几步来查看是什么导致了问题。堆栈跟踪（stack trace）通常是不够的。
+虽然这些听起来可能很复杂，但日志记录可能仍然识别问题根源的最佳方法。监控提供了应用程序健康状况的良好概览，但当出现问题时，我们通常需要回溯几步来查看是什么导致了问题。堆栈跟踪（`stack trace`）通常是不够的。
 
 集中式日志允许我们跟踪用户请求跨多个服务的流，因此它是正确的选择。
 
@@ -64,15 +63,12 @@
 
 无服务器，或函数即服务（FaaS），是一种开发应用程序的新方法。我曾看到它描述为加强版的微服务。每个函数的范围非常有限。这意味着一个应用程序由几十个甚至数百个（或数千个！）独立的函数组成。
 
-
-
-
 *   自动化测试、构建和部署工具。
 *   低代码或无代码平台，允许你在几乎或完全没有编程经验的情况下构建应用程序。
 
 但尽管事情变得更容易了，但它们并没有变得更简单。事实上，它们变得更复杂了。我们现在不再构建单一独立的应用程序，而是编写由多个较小应用程序组成的程序。这些程序相互交互，并与我们无法控制的服务进行交互。
 
-这一切复杂性为我们带来了巨大的优势，例如更容易扩展和提高效率。但它们也增加了可能出现错误和问题的地方。幸运的是，我们拥有现代的监控工具，它们可以快速通知我们，甚至提供上下文和信息。但日志记录（logging）仍然查看问题产生源的最佳方式。
+这一切复杂性为我们带来了巨大的优势，例如更容易扩展和提高效率。但它们也增加了可能出现错误和问题的地方。幸运的是，我们拥有现代的监控工具，它们可以快速通知我们，甚至提供上下文和信息。但日志记录（`logging`）仍然查看问题产生源的最佳方式。
 
 在这些复杂的环境中，集中式日志是获取所有必要首要方法。集中式日志让我们的生活变得简单，并允许我们更快、更廉地解决问题。
 
@@ -179,11 +175,9 @@
 
 事实证明，我们简单的日志记录器在几个重要的方面上是不够的。
 
-
-
 首先，代码总是会覆盖日志文件。一个只让你看到最后一次事件的日志策略并没有那么好用，对吧？既然我们谈到了覆盖文件，那么考虑一下文件权限、如何处理并发访问以及其他类似的问题可能大无害。
 
-最后，在每次日志调用中都要编写大量的样板代码（boilerplate code）来获取日志级别、时间戳以及我在上一节中提到的所有这些内容，听起来像是一项极其繁琐的工作。
+最后，在每次日志调用中都要编写大量的样板代码（`boilerplate code`）来获取日志级别、时间戳以及我在上一节中提到的所有这些内容，听起来像是一项极其繁琐的工作。
 
 我可以一直说下去，但你心里有数了：构思一个合理的 Java 日志方案需要大量的思考。不过，我有一个好消息。事实证明，人们已经解决了这些问题。不仅如此，他们还以日志框架的形式为你们提供了解决方案，这些方案是开箱即用的，而且通常是免费的。
 
@@ -293,6 +287,8 @@ XML 配置文件是这种力量体现的地方之一。Log4j 提供的灵活性�
 
 从零开始学习某事可能是一项令人压力的任务。幸运的是，你不必这样做。为你提供了坚实且持久的知识基础。现在交给你了。
 
+
+
 本章由 Carlos Schults 贡献。[Carlos](http://carlossults.net/)是一位拥有桌面和 Web 开发经验的软件人员，正在尝试移动开发。他热爱编写简洁的代码，并且对有助于提高应用程序健康的实践非常感兴趣。
 
 ## 第 3 章：快速上手 Log4j 配置
@@ -311,11 +307,9 @@ Log4j 的功能使其成为 Java 最流行的日志框架之一。它可以被�
 
 我们在 Log4j 预定义的每个日志级别上记录了相同的消息：Trace、Debug、Info、Warn、Error 和 Fatal。
 
-我们将使用 Log4j 的 YAML 文件格式，因此你需要在 `pom.xml`（或 `build.gradle`）中添加一些额外的项。
+我们将使用 Log4j 的 YAML 文件格式，因此你需要在`pom.xml`（或`build.gradle`）中添加一些额外的项。
 
 ![](img/Image500.png)
-
-
 
 设置此代码，以便你使用喜喜欢的 Java 工具来构建并运行它。
 
@@ -325,77 +319,77 @@ Log4j 的功能使其成为 Java 最流行的日志框架之一。它可以被�
 
 #### 默认配置
 
-让我们在没有 Log4j 配置文件的情况下运行应用程序。如果你已经有了，请将其删除或移动到另一个文件名，这样 `Log4j` 就会忽略它。
+让我们在没有 Log4j 配置文件的情况下运行应用程序。如果你已经有了，请将其删除或移动到另一个文件名，这样`Log4j`就会忽略它。
 
 当我们运行应用程序时，会在控制台上看到以下内容：
 
 ![](img/Image507.png)
 
-六条日志消息中的两条（被指定为 `Error` 和 `Fatal` 的消息）被发送到了控制台。
+六条日志消息中的两条（被指定为`Error`和`Fatal`的消息）被发送到了控制台。
 
-注意：`Log4j` 有一个默认配置。它会将日志输出到控制台，显示分类为 `Error` 或更高级消息。
+注意：`Log4j`有一个默认配置。它会将日志输出到控制台，显示分类为`Error`或更高级消息。
 
-了解 `Log4j` 在没有配置文件时的行为是有用的，但让我们看看如何根据我们的需求对其进行设置。
+了解`Log4j`在没有配置文件时的行为是有用的，但让我们看看如何根据我们的需求对其进行设置。
 
 ##### 配置文件位置
 
-我们可以通过 `log4j.configurationFile` 系统属性为 `Log4j` 提供一个位于特定位置的配置文件。这是它查找配置的第一地方。
+我们可以通过`log4j.configurationFile`系统属性为`Log4j`提供一个位于特定位置的配置文件。这是它查找配置的第一地方。
 
-如果 `Log4j` 找不到该系统属性，它会在类路径（classpath）中查找文件。由于 `Log4j2` 支持四种不同的文件格式和两种不同的文件命名规范，定位文件的规则非常复杂。在我们涵盖不同的格式和命名选项之后，我们将介绍如何定位文件。
+如果`Log4j`找不到该系统属性，它会在类路径（classpath）中查找文件。由于`Log4j2`支持四种不同的文件格式和两种不同的文件命名规范，定位文件的规则非常复杂。在我们涵盖不同的格式和命名选项之后，我们将介绍如何定位文件。
 
 ##### 配置文件格式
 
-`Log4j` 会加载 Java properties 以及 YAML、JSON 和 XML 配置文件。它通过检查文件扩展名来识别文件格式。
+`Log4j`会加载 Java properties 以及 YAML、JSON 和 XML 配置文件。它通过检查文件扩展名来识别文件格式。
 
-*   对于 Java properties，扩展名为为 `.properties`
-*   对于 YAML，扩展名为为 `.yaml` 或 `.yml`
-*   对于 JSON，扩展名为为 `.json` 或 `.jsn`
-*   对于 XML，扩展名为为 `.xml`
+*   对于 Java properties，扩展名为为`.properties`
+*   对于 YAML，扩展名为为`.yaml`或`.yml`
+*   对于 JSON，扩展名为为`.json`或`.jsn`
+*   对于 XML，扩展名为为`.xml`
 
-由 `log4j.configurationFile` 系统属性指定的文件必须具有这些扩展名之一，但可以有任何基本文件名。`Log4j` 将根据扩展名指示的格式对其进行解析。
+由`log4j.configurationFile`系统属性指定的文件必须具有这些扩展名之一，但可以有任何基本文件名。`Log4j`将根据扩展名指示的格式对其进行解析。
 
-当 `Log4j` 扫描类路径中的文件时，它会按照上述顺序检查每种格式，并在找到匹配项时停止。例如，如果它找到了 YAML 配置，它将停止搜索并加载它。如果没有 YAML 文件但找到了 JSON 文件，它将停止搜索并改用后者。
+当`Log4j`扫描类路径中的文件时，它会按照上述顺序检查每种格式，并在找到匹配项时停止。例如，如果它找到了 YAML 配置，它将停止搜索并加载它。如果没有 YAML 文件但找到了 JSON 文件，它将停止搜索并改用后者。
 
 ##### 配置文件名称
 
-当 `Log4j` 扫描类路径时，它会寻找两个文件名之一：`log4j2-test.[extension]` 或 `log4j2.[extension]`。它会先测试文件，为开发者提供了一种方便的机制，可以在不更改标准配置的情况下，强制应用程序以 `Debug` 或 `Trace` 级别记录日志。
+当`Log4j`扫描类路径时，它会寻找两个文件名之一：`log4j2-test.[extension]`或`log4j2.[extension]`。它会先测试文件，为开发者提供了一种方便的机制，可以在不更改标准配置的情况下，强制应用程序以`Debug`或`Trace`级别记录日志。
 
 ##### 扫描配置
 
-我们将文件格式和名称的规则结合在一起时，就可以看到 `Log4j` 自行配置的算法。
+我们将文件格式和名称的规则结合在一起时，就可以看到`Log4j`自行配置的算法。
 
-如果以下步骤中的任何一个成功，`Log4j` 将会停止并加载生成的配置文件。
+如果以下步骤中的任何一个成功，`Log4j`将会停止并加载生成的配置文件。
 
-1.  检查 `log4j.configurationFile` 系统属性，如果找到则加载指定的文件。
-2.  在类路径中搜索 `log4j2-test.properties`。
-3.  扫描类路径查找 `log4j2-test.yaml` 或 `log4j2-test.yml`。
-4.  检查 `log4j2-test.json` 或 `log4j2-test.jsn`。
-5.  搜索 `log4j2-test.xml`。
-6.  查找 `log4j2.properties`。
-7.  搜索 `log4j2.yaml` 或 `log4j2.yml`。
-8.  扫描类路径查找 `log4j2.json` 或 `log4j2.jsn`。
-9.  检查 `log4j2.xml`。
+1.  检查`log4j.configurationFile`系统属性，如果找到则加载指定的文件。
+2.  在类路径中搜索`log4j2-test.properties`。
+3.  扫描类路径查找`log4j2-test.yaml`或`log4j2-test.yml`。
+4.  检查`log4j2-test.json`或`log4j2-test.jsn`。
+5.  搜索`log4j2-test.xml`。
+6.  查找`log4j2.properties`。
+7.  搜索`log4j2.yaml`或`log4j2.yml`。
+8.  扫描类路径查找`log4j2.json`或`log4j2.jsn`。
+9.  检查`log4j2.xml`。
 10. 使用默认配置。
 
 #### 良好的配置文件卫生习惯
 
-`Log4j` 共有 12 个潜在的配置文件名称。加载错误的文件会导致日志信息丢失或性能下降。这是因为应用程序在生产环境中可能会记录不必要的消息。
+`Log4j`共有 12 个潜在的配置文件名称。加载错误的文件会导致日志信息丢失或性能下降。这是因为应用程序在生产环境中可能会记录不必要的消息。
 
 在部署代码之前，确保你的应用程序有一个且仅有一个配置文件，并且你知道它在哪里。如果你坚持从类路径加载配置，请在发布代码之前扫描多余的文件。
 
 #### 基础配置
 
-现在我们已经知道如何为 `Log4j` 提供配置，让我们创建一个配置并使用它来定制我们的应用程序。
+现在我们已经知道如何为`Log4j`提供配置，让我们创建一个配置并使用它来定制我们的应用程序。
 
- # 重温 Log4j 的默认配置
+### 重温 Log4j 的默认配置
 
-我们将从默认配置开始，并在此基础上修改应用程序的行为。借鉴 `Log4j` 配置规则的提示，我们将使用 YAML。
+我们将从默认配置开始，并在此基础上修改应用程序的行为。借鉴`Log4j`配置规则的提示，我们将使用 YAML。
 
 默认配置如下：
 
 ![](img/Image515.png)
 
-创建一个名为 `log4j2.yaml` 的文件并包含这些内容，并将 `log4j.configurationFile` 指向其位置。
+创建一个名为`log4j2.yaml`的文件并包含这些内容，并将`log4j.configurationFile`指向其位置。
 
 接下来，运行应用程序。你会看到与之前相同的输出。
 
@@ -403,7 +397,7 @@ Log4j 的功能使其成为 Java 最流行的日志框架之一。它可以被�
 
 我们已经控制了应用程序的日志配置。现在让我们改进它。
 
-##### 日志文件位置
+#### 日志文件位置
 
 第一步是将日志从控制台移到文件中。为了做到这一点，我们需要理解 appenders（日志输出器）。
 
@@ -419,13 +413,11 @@ Appenders 将日志消息放置在它们所在的地方。默认配置提供了�
 
 （注：此处原文后续存在部分重复描述，已根据指令要求翻译并保持核心逻辑）
 
-
-
-添加第二个文件输出器（appender）。要做到这一点，创建一个列表，包含原始 appender 以及另一个具有不同名称和文件的 appender。你的 `Appenders` 部分如下所示：
+添加第二个文件输出器（appender）。要做到这一点，创建一个列表，包含原始 appender 以及另一个具有不同名称和文件的 appender。你的`Appenders`部分如下所示：
 
 ![](img/Image618.png)
 
-接下来，将 `LoggerChild` 日志指向新的 appender。你的 `Loggers` 部分如下所示。
+接下来，将`LoggerChild`日志指向新的 appender。你的`Loggers`部分如下所示。
 
 ![](img/Image629.png)
 
@@ -433,43 +425,45 @@ Appenders 将日志消息放置在它们所在的地方。默认配置提供了�
 
 ### 日志消息格式化
 
-我们的每个 appender 都有一个 `PatternLayout`。
+我们的每个 appender 都有一个`PatternLayout`。
 
-![](img/Image642.png)`PatternLayout` 是 Log4j 布局类的一个实例。`Log4j` 内置了多种布局，用于以 CSV、JSON、Syslog 以及多种不同格式记录消息。
+![](img/Image642.png)
 
-`PatternLayout` 拥有一组用于格式化消息的操作符，用法类似于 C 语言的 `sprintf` 函数。通过指定模式（pattern），我们可以控制日志消息在被 appender 写入时的格式。
+`PatternLayout`是 Log4j 布局类的一个实例。`Log4j`内置了多种布局，用于以 CSV、JSON、Syslog 以及多种不同格式记录消息。
+
+`PatternLayout`拥有一组用于格式化消息的操作符，用法类似于 C 语言的`sprintf`函数。通过指定模式（pattern），我们可以控制日志消息在被 appender 写入时的格式。
 
 我们的布局字符串看起来如下：
 
 ![](img/Image649.png)
 
-每个 `%` 对应日志消息中的一个字段。
+每个`%`对应日志消息中的一个字段。
 
 ![](img/Image657.png)
 
-`PatternLayout` 还有许多额外的操作符，你可以自己去探索。
+`PatternLayout`还有许多额外的操作符，你可以自己去探索。
 
 ### 变量替换
 
-随着 appenders 和 loggers 的数量增加，配置文件可能会变得重复。`Log4j` 支持变量替换，有助于减少重复并使维护变得更简单。让我们使用 `Properties` 来完善我们的配置。
+随着 appenders 和 loggers 的数量增加，配置文件可能会变得重复。`Log4j`支持变量替换，有助于减少重复并使维护变得更简单。让我们使用`Properties`来完善我们的配置。
 
 ![](img/Image664.png)
 
-在文件顶部，我们声明了两个 `Properties`，一个命名为 `LogDir`，另一个命名为 `DefaultPattern`。
+在文件顶部，我们声明了两个`Properties`，一个命名为`LogDir`，另一个命名为`DefaultPattern`。
 
-声明属性后，可以使用大括号和美元符号在配置中使用它：`${LogDir}` 或 `${DefaultPattern}`。
+声明属性后，可以使用大括号和美元符号在配置中使用它：`${LogDir}`或`${DefaultPattern}`。
 
-`LogDir` 是我们添加到两个日志文件文件名中的一个子目录名称。当我们运行应用程序时，`Log4j` 会创建此目录并将日志文件放置在其中。
+`LogDir`是我们添加到两个日志文件文件名中的一个子目录名称。当我们运行应用程序时，`Log4j`会创建此目录并将日志文件放置在其中。
 
-我们将 `DefaultPattern` 指定为两个日志文件的布局模式，将定义移动到了一个地方。现在，如果我们要修改日志文件格式，我们只需要担心修改一次就行了。
+我们将`DefaultPattern`指定为两个日志文件的布局模式，将定义移动到了一个地方。现在，如果我们要修改日志文件格式，我们只需要担心修改一次就行了。
 
-`Log4j` 还可以从环境中导入属性。（你可以在 [Apache Logging Services 网站上阅读更多相关信息。](https://logging.apache.org/log4j/2.x/manual/configuration.html#Property_Substitution））例如，如果我们想从 Java 系统属性导入日志文件目录，我们在 `Log4j` 配置中将其指定为 `${sys:LogDir}`，并将 `LogDir` 系统属性设置为所需的目录。
+`Log4j`还可以从环境中导入属性。（你可以在 [Apache Logging Services 网站上阅读更多相关信息。](https://logging.apache.org/log4j/2.x/manual/configuration.html#Property_Substitution)）例如，如果我们想从 Java 系统属性导入日志文件目录，我们在`Log4j`配置中将其指定为`${sys:LogDir}`，并将`LogDir`系统属性设置为所需的目录。
 
 ### 自动重配置
 
-`Log4j` 可以按定期间隔重新加载配置，这使我们能够在不重启应用程序的情况下更改其日志配置。
+`Log4j`可以按定期间隔重新加载配置，这使我们能够在不重启应用程序的情况下更改其日志配置。
 
-在文件的 `Configuration` 部分添加 `monitorInterval` 设置，`Log4j` 就会按照指定的间隔扫描文件。
+在文件的`Configuration`部分添加`monitorInterval`设置，`Log4j`就会按照指定的间隔扫描文件。
 
 ![](img/Image672.png)
 
@@ -477,7 +471,7 @@ Appenders 将日志消息放置在它们所在的地方。默认配置提供了�
 
 ### 总结
 
-`Log4j` 是一个强大的日志框架，允许我们配置应用程序以多种方式记录日志，并对不同组件使用日志文件的方式进行粒度控制。本教程涵盖了配置 `Log4j`的基本方面，但还有更多内容可以学习。你可以在该项目的[网站](https://logging.apache.org/log4j/2.x/manual/configuration.html)上学习 `Log4j` 配置。
+`Log4j`是一个强大的日志框架，允许我们配置应用程序以多种方式记录日志，并对不同组件使用日志文件的方式进行粒度控制。本教程涵盖了配置`Log4j`的基本方面，但还有更多内容可以学习。你可以在该项目的[网站](https://logging.apache.org/log4j/2.x/manual/configuration.html)上学习`Log4j`配置。
 
 本章由 Eric Goebelbecker 贡献。[Eric](http://ericgoebelbecker.com/) 在纽约市金融市场工作了 25 年，负责市场数据和金融信息交换 (FIX) 协议网络设施开发。他喜欢谈论什么让团队变得高效（或不高效）！
 
@@ -495,39 +489,39 @@ Appenders 将日志消息放置在它们所在的地方。默认配置提供了�
 
 为了本教程，我将使用安装了纯净版 [LAMP 堆栈](https://www.digitalocean.com/community/tags/lamp-stack?type=tutorials) 的 Linux。如果你使用的是 Mac 或 Windows 而不是 Linux，可能需要调整工具和命令。
 
-导航到 `/var/www/html` 文件夹并删除那里名为 `index.html` 的文件：
+导航到`/var/www/html`文件夹并删除那里名为`index.html`的文件：
 
 ![](img/Image687.png)
 
-然后创建一个新文件 `index.php` 并用你喜欢的文本编辑器打开它（我正在使用 Emacs）：
+然后创建一个新文件`index.php`并用你喜欢的文本编辑器打开它（我正在使用 Emacs）：
 
 ![](img/Image694.png)
 
-在 `index.php` 中添加以下 HTML 代码：
+在`index.php`中添加以下 HTML 代码：
 
 ![](img/Image702.png)
 
-这段 HTML 代码将创建一个简单的订阅表单。要查看生成的页面，打开浏览器并访问 `http://localhost`：
+这段 HTML 代码将创建一个简单的订阅表单。要查看生成的页面，打开浏览器并访问`http://localhost`：
 
 ![](img/Image711.png)
 
-尽管你可以在浏览器中看到表单，但它现在并没有任何实用的功能。为了让它运行，请在 `index.php` 文件的顶部、HTML 代码之前添加以下 PHP 脚本：
+尽管你可以在浏览器中看到表单，但它现在并没有任何实用的功能。为了让它运行，请在`index.php`文件的顶部、HTML 代码之前添加以下 PHP 脚本：
 
 ![](img/Image722.png)
 
-上面的代码将从提交请求中提取 name 和 email 参数，并将它们传递给 `subscribe` 函数。由于本教程是关于日志记录的，我们暂时保持 `subscribe` 函数体为空。
+上面的代码将从提交请求中提取 name 和 email 参数，并将它们传递给`subscribe`函数。由于本教程是关于日志记录的，我们暂时保持`subscribe`函数体为空。
 
-现在，假设你想创建一个记录所有订阅请求及其参数的文件。你可以通过在调用 `subscribe` 之前添加两行代码来实现：
+现在，假设你想创建一个记录所有订阅请求及其参数的文件。你可以通过在调用`subscribe`之前添加两行代码来实现：
 
 ![](img/Image736.png)
 
-这些代码将调用 PHP 的 `file_put_contents` 函数，将日志消息追加到 `server.log` 内容中。
+这些代码将调用 PHP 的`file_put_contents`函数，将日志消息追加到`server.log`内容中。
 
-现在如果你在浏览器中打开 `http://localhost`，填充字段并点击订阅按钮，此脚本会在 `/var/www/html` 中创建 `server.log` 文件并写入内容。我可以使用 `cat` 命令读取文件内容：
+现在如果你在浏览器中打开`http://localhost`，填充字段并点击订阅按钮，此脚本会在`/var/www/html`中创建`server.log`文件并写入内容。我可以使用`cat`命令读取文件内容：
 
 ![](img/Image743.png)
 
-恭喜！你记录了第一条 PHP 日。
+恭喜！你记录了第一条 PHP 日志。
 
 现在，让我们退一步。
 
@@ -544,9 +538,6 @@ Appenders 将日志消息放置在它们所在的地方。默认配置提供了�
 其次，你总是希望将日志存储在更持久的介质中。“更持久”的具体含义取决于你的需求和环境，但至少，即使应用程序或整个服务器崩溃，你也能够读取日志。
 
 虽然这个定义解释了什么是日志，但它并没有解释为什么要在程序中使用日志。这是一个重要的问题，我想详细讨论。
-
-
-
 
 但在某个某个时刻，你需要将应用程序发布给用户。他们会以原始的方式以及在你无法想象的环境中运行它，并且可能会有许多用户并发使用该应用程序。此外，你的应用程序需要运行更长的时间。在没有额外信息的情况下，在这种情况下调试错误是不可能的。
 
@@ -567,7 +558,7 @@ Appenders 将日志消息放置在它们所在的地方。默认配置提供了�
 在每条日志条目中包含以下信息是一项广泛的做法：
 
 *   时间戳，准确说明日志条目描述的事件发生的时间。为了方便你的工作，请使用 UTC 格式下格式正确的 [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) 日期时间。
-*   具有描述性的事件上下文。例如，记录 `name: testName; email: test@test.com` 是一个坏主意，因为一个月后，你可能会忘记这些是什么意思。这里有一些上下文可以让日志条目更具描述性：`Subscription; user: testName email: test@test.com`。
+*   具有描述性的事件上下文。例如，记录`name: testName; email: test@test.com`是一个坏主意，因为一个月后，你可能会忘记这些是什么意思。这里有一些上下文可以让日志条目更具描述性：`Subscription; user: testName email: test@test.com`。
 *   日志级别，如 Error（错误）、Warning（警告）、Info（信息）等。这些信息提供了额外的上下文，并允许你按级别轻松过滤日志。
 
 我建议你将上述列表视为日志策略的绝对基准，记录的信息不要少于此。否则，你在阅读和理解日志时会变得非常困难。
@@ -584,98 +575,112 @@ Appenders 将日志消息放置在它们所在的地方。默认配置提供了�
 
 #### 安装 Monolog PHP 日志框架
 
-如果你正在使用 PHP 框架（例如 Laravel）开发应用程序，很有可能该框架已经集成了 `Monolog`。请检查你的框架文档以获取详情。
+如果你正在使用 PHP 框架（例如 Laravel）开发应用程序，很有可能该框架已经集成了`Monolog`。请检查你的框架文档以获取详情。
 
-由于我正在处理一个简单的 PHP 项目，我可以向你展示如何从零安装并使用 `Monolog`。
+由于我正在处理一个简单的 PHP 项目，我可以向你展示如何从零安装并使用`Monolog`。
 
 首先，你需要安装 PHP [Composer](https://getcomposer.org/doc/00-intro.md) 包管理器。以下命令将实现该目标：
 
 ```
-![](img/Image751.png)```
+![](img/Image751.png)
+```
 
-一旦你的机器上安装了 `Composer`，进入你的项目根目录 `/var/www/html/` 并执行以下命令：
+一旦你的机器上安装了`Composer`，进入你的项目根目录`/var/www/html/`并执行以下命令：
 
 ```
-![](img/Image758.png)```
+![](img/Image758.png)
+```
 
-此命令将创建 `vendor` 目录并将 `Monolog` 文件导入到那里。下一步是在 PHP 代码中使用 `Monolog`。
+此命令将创建`vendor`目录并将`Monolog`文件导入到那里。下一步是在 PHP 代码中使用`Monolog`。
+
+
 
 #### 使用 Monolog
 
-要在你的代码中使用 `Monolog`，你将需要将其作为依赖项加载。出于此目的，`Composer` 方便地生成了一个 `autoload.php` 文件，你可以从代码中访问它。
+要在你的代码中使用`Monolog`，你将需要将其作为依赖项加载。出于此目的，`Composer`方便地生成了一个`autoload.php`文件，你可以从代码中访问它。
 
-将以下代码放在 `index.php` 文件的 PHP 脚本顶部：
-
-```
-![](img/Image766.png)```
-
-紧随其后，指定你将要使用的两个特定的 `Monolog` 依赖项：
+将以下代码放在`index.php`文件的 PHP 脚本顶部：
 
 ```
-![](img/Image773.png)```
+![](img/Image766.png)
+```
 
-`Logger` 是生成日志的实例，而 [StreamHandler](https://docs.python.org/2/library/logging.handlers.html) 是 `Logger` 内部用于将日志写入文件的特殊实例。正如你可能想到的，`Monolog` 支持不同的处理器，允许你将日志路由到不同的媒介。
-
-到目前为止，你已经加载了 `Monolog` 并导入了特定的依赖。现在实例化一个新的 `Logger` 并将其命名为 `SimpleLogger`：
+紧随其后，指定你将要使用的两个特定的`Monolog`依赖项：
 
 ```
-![](img/Image781.png)```
+![](img/Image773.png)
+```
 
-接下来，使用 `StreamHandler` 确保日志记录将日志存储到现有的 `server.log` 文件：
+`Logger`是生成日志的实例，而`StreamHandler`是`Logger`内部用于将日志写入文件的特殊实例。正如你可能想到的，`Monolog`支持不同的处理器，允许你将日志路由到不同的媒介。
+
+到目前为止，你已经加载了`Monolog`并导入了特定的依赖。现在实例化一个新的`Logger`并将其命名为`SimpleLogger`：
 
 ```
-![](img/Image788.png)```
+![](img/Image781.png)
+```
 
-`StreamHandler` 构造函数的第二个参数定义了它捕获的最低级别。由于在这种你想让它捕捉所有的日志条目，请指定最低级别，即 `Debug`。
-
-设置 `Logger` 对象后，你可以用 `Monolog` 的日志器替换旧的日志实现。因此，删除此行：
+接下来，使用`StreamHandler`确保日志记录将日志存储到现有的`server.log`文件：
 
 ```
-![](img/Image796.png)```
+![](img/Image788.png)
+```
+
+`StreamHandler`构造函数的第二个参数定义了它捕获的最低级别。由于在这种你想让它捕捉所有的日志条目，请指定最低级别，即`Debug`。
+
+设置`Logger`对象后，你可以用`Monolog`的日志器替换旧的日志实现。因此，删除此行：
+
+```
+![](img/Image796.png)
+```
 
 现在用以下调用替换它：
 
 ```
-![](img/Image805.png)```
+![](img/Image805.png)
+```
 
 如你所见，尽管你需要做一些前期准备，但这个过程让日志记录变得简单得多。鉴于在实际应用程序中你可能想要记录数百个事件，这种简洁性将非常有用。
 
-总而言之，你的 `index.php` 文件应该像这样：
+总而言之，你的`index.php`文件应该像这样：
 
 ```
-![](img/Image819.png)```
+![](img/Image819.png)
+```
 
 #### 读取 Monolog 日志
 
-如果你再次在浏览器中访问 `http://localhost`，指定相同的用户详情并点击订阅，一个新的日志条目将被添加到 `server.log` 文件中。让我们对比一下原始的日志条目和 `Monolog` 生成的条目。
+如果你再次在浏览器中访问`http://localhost`，指定相同的用户详情并点击订阅，一个新的日志条目将被添加到`server.log`文件中。让我们对比一下原始的日志条目和`Monolog`生成的条目。
 
 这是原始日志条目：
 
 ```
-![](img/Image833.png)```
+![](img/Image833.png)
+```
 
-而这是 `Monolog` 输出：
+而这是`Monolog`输出：
 
 ```
-![](img/Image840.png)```
+![](img/Image840.png)
+```
 
-你可以看到，`Monolog` 自动为日志条目添加了以下信息：
+你可以看到，`Monolog`自动为日志条目添加了以下信息：
 
-*   时间戳
-*   日志名称
-*   日志级别
+* 时间戳
+* 日志名称
+* 日志级别
 
 最棒的部分是你不需要自己编写所有内容。
 
 这个日志条目的唯一问题是时间戳不是 UTC。至少有两种方法可以修复这个问题：
 
-1.  在实例化 `Logger` 时指定 UTC 时区。
-2.  为整个 PHP 脚本指定 UTC 时区。
+1. 在实例化`Logger`时指定 UTC 时区。
+2. 为整个 PHP 脚本指定 UTC 时区。
 
 大多数情况下，你会希望整个应用程序使用 UTC 时间，因此我建议在 PHP 脚本顶部添加以下方法调用：
 
 ```
-![](img/Image848.png)```
+![](img/Image848.png)
+```
 
 此行之后的所有日期时间函数调用将默认使用 UTC 时区——非常有用。
 
@@ -683,10 +688,7 @@ Appenders 将日志消息放置在它们所在的地方。默认配置提供了�
 
 在本章中，我解释了 PHP 日志的基本知识，这应该足够让你开始。尽管，你可能想搜索更高级的信息来巩固你的理解。
 
-如果你打算使用 `Monolog`（你应该这样做），请花时间阅读它的[文档](https://github.com/Seldaek/monolog/blob/master/doc/01-usage.md)。这个日志框架非常强大且可配置，允许你支持几乎任何日志需求。
-
-
-
+如果你打算使用`Monolog`（你应该这样做），请花时间阅读它的[文档](https://github.com/Seldaek/monolog/blob/master/doc/01-usage.md)。这个日志框架非常强大且可配置，允许你支持几乎任何日志需求。
 
 随着你的应用程序规模不断扩大，日志文件变得越来越复杂，即使你遵循了所有最佳实践，也可能发现理解它们是具有挑战性的。这时，日志聚合工具就可以成为你的救命稻草。这些工具可以帮助你聚合、处理、搜索和可视化日志，让你在海量的日志条目中更容易找到你需要的内容。
 
@@ -702,9 +704,9 @@ Appenders 将日志消息放置在它们所在的地方。默认配置提供了�
 
 本章将涵盖：
 
-*   如何实现一个非常原始的日志器。
-*   我对日志基础知识的看法：为什么要记录日志、记录什么数据以及在何处记录。
-*   最后，在 `Logger` 类的帮助下，给出一个非常简单但真实的正确日志记录示例。
+* 如何实现一个非常原始的日志器。
+* 我对日志基础知识的看法：为什么要记录日志、记录什么数据以及在何处记录。
+* 最后，在`Logger`类的帮助下，给出一个非常简单但真实的正确日志记录示例。
 
 与之前的章节一样，我们将创建一个非常简单的玩具应用来演示如何记录日志。我们将从一个非常原始——虽然可行——的方法开始，然后将其演进为一个更复杂、更真实的解决方案。
 
@@ -722,7 +724,7 @@ Appenders 将日志消息放置在它们所在的地方。默认配置提供了�
 
 在演示中，我将使用 [JetBrain](https://www.jetbrains.com/ruby/)[’](https://www.jetbrains.com/ruby/s RubyMine IDE]。同时，请确保你已经安装了 [Ruby](https://www.ruby-lang.org)。
 
-一旦你准备好就绪，打开 RubyMine 并点击 `Create New Project`（创建新项目）：
+一旦你准备好就绪，打开 RubyMine 并点击`Create New Project`（创建新项目）：
 
 ![`blog.scalyr.com/wp-content/uploads/2018/02/Screenshot-2018-02-22-20.45.42.png`](img/Image864.png)
 
@@ -730,25 +732,25 @@ Appenders 将日志消息放置在它们所在的地方。默认配置提供了�
 
 ![`blog.scalyr.com/wp-content/uploads/2018/02/Screenshot-2018-02-22-20.52.59.png`](img/Image871.png)
 
-正如我已经提到的，我们不是在创建一个 Rails 应用，而是创建一个简单的 Ruby 应用。因此选择 `Empty Project`（空项目），它是左侧栏 Ruby 下的第一个选项。下一步是为项目设置位置/名称。完成后后，选择 Ruby SDK 的位置：
+正如我已经提到的，我们不是在创建一个 Rails 应用，而是创建一个简单的 Ruby 应用。因此选择`Empty Project`（空项目），它是左侧栏 Ruby 下的第一个选项。下一步是为项目设置位置/名称。完成后后，选择 Ruby SDK 的位置：
 
 ![`blog.scalyr.com/wp-content/uploads/2018/03/Highlighted.png`](img/Image879.png)
 
-完成后，点击 `Create`（创建）按钮。我们成功在 RubyMine 上创建了一个新的 Ruby 项目。是时候写代码了。
+完成后，点击`Create`（创建）按钮。我们成功在 RubyMine 上创建了一个新的 Ruby 项目。是时候写代码了。
 
-首先，让我们添加一个类。进入 `File > New... > Ruby class`：
+首先，让我们添加一个类。进入`File > New... > Ruby class`：
 
 ![`blog.scalyr.com/wp-content/uploads/2018/02/add-new-ruby-class.png`](img/Image886.png)
 
-将其命名为 `Greeter` 并点击 `OK`：
+将其命名为`Greeter`并点击`OK`：
 
 ![`blog.scalyr.com/wp-content/uploads/2018/02/Screenshot-2018-02-22-21.22.03.png`](img/Image894.png)
 
-RubyMine 将创建该类并打开进行编辑。让我们添加一个 `Greet` 方法，它接收用户名作为输入并打印一条友好的问候：
+RubyMine 将创建该类并打开进行编辑。让我们添加一个`Greet`方法，它接收用户名作为输入并打印一条友好的问候：
 
 ![](img/Image903.png)
 
-很好。现在让我们添加一个新文件。进入 `File` 菜单，然后 `New...`，最后点击 `File`。当对话框出现时，输入 `main.rb` 作为文件名并点击 `OK`：
+很好。现在让我们添加一个新文件。进入`File`菜单，然后`New...`，最后点击`File`。当对话框出现时，输入`main.rb`作为文件名并点击`OK`：
 
 ![`blog.scalyr.com/wp-content/uploads/2018/02/Screenshot-2018-02-22-20.45.42.png`](img/Image914.png)
 
@@ -762,18 +764,16 @@ greeter = Greeter.new
 greeter.greet(name)
 ```
 
-这段代码应该很容易理解。在第一行，我们加载了 `greeter.rb`。
-
-
+这段代码应该很容易理解。在第一行，我们加载了`greeter.rb`。
 
 这可能是不言而喻的，但软件是一项极其复杂的工作。在开发它时，你希望采用各种技术、工具和原则来尝试确保它的正确性。
 
 但当发布时间到来，你将你的应用程序发布到世界上时，你基本上放弃了控制权。事情可能会出问题，而且经常会发生。如果你没有一套适当的策略来监控应用程序在生产环境中的行为，你基本上就是在盲目运行。如果没有日志记录，你无法知诸如下信息：
 
-*   一切是否正常。
-*   当出现问题时，究竟发生了什么。你还不知道它是何时或如何发生的。
-*   人们最常使用哪些功能，哪些功能他们完全不使用。
-*   应用程序的哪个区域导致了大多数崩溃。
+* 一切是否正常。
+* 当出现问题时，究竟发生了什么。你还不知道它是何时或如何发生的。
+* 人们最常使用哪些功能，哪些功能他们完全不使用。
+* 应用程序的哪个区域导致了大多数崩溃。
 
 正如我们所看到的，应用程序日志不仅有助于帮助你理解和修复错误，还能帮助你收集数据以理解用户的需求。
 
@@ -787,18 +787,15 @@ greeter.greet(name)
 
 以下是一些你认为值得记录的内容的示例：
 
-*   `timestamp`（时间戳）。事件发生在什么时候？（你可能希望遵循处理日期时间的最佳实践，例如使用 `ISO-8601` 格式。）
-*   `Context`（上下文）。你需要让未来的读者尽可能容易地理解此条目关于什么。
-*   `Log levels`（日志级别）。日志条目的目的差异巨大。你必须有一种方法，将一个唯一目的是调试某些执行路径的条目与另一个记录业务相关事件（客户下了订单）的条目，甚至是记录致命崩溃详情供日后调查的条目区分开。`Log levels` 在这里是你的朋友。
+* `timestamp`（时间戳）。事件发生在什么时候？（你可能希望遵循处理日期时间的最佳实践，例如使用`ISO-8601`格式。）
+* `Context`（上下文）。你需要让未来的读者尽可能容易地理解此条目关于什么。
+* `Log levels`（日志级别）。日志条目的目的差异巨大。你必须有一种方法，将一个唯一目的是调试某些执行路径的条目与另一个记录业务相关事件（客户下了订单）的条目，甚至是记录致命崩溃详情供日后调查的条目区分开。`Log levels`在这里是你的朋友。
 
-在决定了你想记录什么类型的事件（每次方法调用？仅业务事件？仅致命错误？）以及你想记录关于它们的什么数据（`timestamp`、`description`、`log level`、`logged user` 或 `time of session`？）之后，下一步是决定你想记录日志到哪里。
+在决定了你想记录什么类型的事件（每次方法调用？仅业务事件？仅致命错误？）以及你想记录关于它们的什么数据（`timestamp`、`description`、`log level`、`logged user`或`time of session`？）之后，下一步是决定你想记录日志到哪里。
 
 你看，尽管演示应用记录日志到文件中，但没有什么阻止你将日志记录到各种目标，例如数据库、控制台，甚至是在线服务。
 
-
-
-
-本教程使用了 [Ruby v2.5.1](https://www.ruby-lang.org/en/downloads/) 和 [Rails 5.2.0](https://weblog.rubyonrails.org/2018/4/9/Rails-5-2-0-final/)。你需要安装这些版本才能跟上操作。这些指令将使用命令行来创建和配置应用程序，而不会依赖于特定的 IDE 或编辑器。我们将让 Rails 使用 `SQLite` 作为后端数据库。
+本教程使用了 [Ruby v2.5.1](https://www.ruby-lang.org/en/downloads/) 和 [Rails 5.2.0](https://weblog.rubyonrails.org/2018/4/9/Rails-5-2-0-final/)。你需要安装这些版本才能跟上操作。这些指令将使用命令行来创建和配置应用程序，而不会依赖于特定的 IDE 或编辑器。我们将让 Rails 使用`SQLite`作为后端数据库。
 
 ![](img/Image1007.png)
 
@@ -810,13 +807,13 @@ greeter.greet(name)
 
 在几屏输出后，Rails 已经创建了应用程序。
 
-接下来，我们将让 Rails 为我们创建一个模型（model）和一个控制器（controller），这样我们就有有趣的内容可以记录了。进入 `logging_app` 目录并运行此：
+接下来，我们将让 Rails 为我们创建一个模型（model）和一个控制器（controller），这样我们就有有趣的内容可以记录了。进入`logging_app`目录并运行此：
 
 ![](img/Image1026.png)
 
 Rails 为带有名称和电子邮件地址的用户记录创建了脚架（scaffolding）。
 
-最后，让 Rails 将应用程序迁移到 `SQLite`。
+最后，让 Rails 将应用程序迁移到`SQLite`。
 
 ![](img/Image1034.png)
 
@@ -824,7 +821,7 @@ Rails 为带有名称和电子邮件地址的用户记录创建了脚架（scaff
 
 ![](img/Image1042.png)
 
-将浏览器指向 `http://localhost:3000/users`，我们看到了管理用户的主页：
+将浏览器指向`http://localhost:3000/users`，我们看到了管理用户的主页：
 
 ![](img/Image1050.png)
 
@@ -832,25 +829,25 @@ Rails 为带有名称和电子邮件地址的用户记录创建了脚架（scaff
 
 ### Rails 日志器
 
-Rails 在初始化时创建一个 `ActiveSupport::Logger` 实例，并使用它将日志输出到标准输出。
+Rails 在初始化时创建一个`ActiveSupport::Logger`实例，并使用它将日志输出到标准输出。
 
-查看我们打开 `/users` 页面时应用程序的输出：
+查看我们打开`/users`页面时应用程序的输出：
 
 ![](img/Image1057.png)
 
-`Logger` 产生了这种输出。除了标准输出外，我们还可以在默认日志文件中找到相同的输入。停止服务器并查看日志文件的最后十行：
+`Logger`产生了这种输出。除了标准输出外，我们还可以在默认日志文件中找到相同的输入。停止服务器并查看日志文件的最后十行：
 
 ![](img/Image1064.png)
 
-日志文件的默认名称是环境名称。在开发环境中，它命名为 `development.log`；在生产环境中，它名为 `production.log`；以此此类推。
+日志文件的默认名称是环境名称。在开发环境中，它命名为`development.log`；在生产环境中，它名为`production.log`；以此此类推。
 
-默认日志器通过一个全局可用的实例 `logger` 供应用程序代码使用。让我们在应用程序显示用户时添加额外的调试消息。
+默认日志器通过一个全局可用的实例`logger`供应用程序代码使用。让我们在应用程序显示用户时添加额外的调试消息。
 
-首先，在 `app/user_controller.rb` 的 `show` 方法中添加日志消息。
+首先，在`app/user_controller.rb`的`show`方法中添加日志消息。
 
 ![](img/Image1071.png)
 
-然后启动应用程序。访问 `/users` 并添加一个名为 John Doe、电子邮件地址为 john@doe.com 的用户。
+然后启动应用程序。访问`/users`并添加一个名为 John Doe、电子邮件地址为 john@doe.com 的用户。
 
 你的日志应该有一个类似这样的条目：
 
@@ -896,13 +893,13 @@ Rails 记录了这些：
 
 ![](img/Image1100.png)
 
-Debug 发生了什么？我们在 `Debug` 级别调用了 `logger`，但该信息没有传递。在默认配置下，所有日志条目看起来都等价，降低了它们的用途。
+Debug 发生了什么？我们在`Debug`级别调用了`logger`，但该信息没有传递。在默认配置下，所有日志条目看起来都等价，降低了它们的用途。
 
 让我们开始更改 Rails 日志器的配置。
 
 ### 配置日志
 
-像大多数日志器一样，`ActiveSupport::Logger` 支持不同的级别。这些级别是 `Debug`、`Info`、`Warn`、`Error` 和 `Fatal`。
+像大多数日志器一样，`ActiveSupport::Logger`支持不同的级别。这些级别是`Debug`、`Info`、`Warn`、`Error`和`Fatal`。
 
 我们可以通过调用这些任何一个级别来记录消息：
 
@@ -910,7 +907,7 @@ Debug 发生了什么？我们在 `Debug` 级别调用了 `logger`，但该信�
 debug("message")
 ```
 
-这给了我们分类消息的方法。但让我们先看看过滤。`Debug` 消息对于调试是有用的。
+这给了我们分类消息的方法。但让我们先看看过滤。`Debug`消息对于调试是有用的。
 
 我们可以过滤哪些消息进入控制台：
 
@@ -918,25 +915,27 @@ debug("message")
 logger.level = :error
 ```
 
-Rails 具有分级配置方案。我们可以在 `config/application.rb` 或 `config/environment/{environment_name}.rb` 中配置。环境特定的文件具有优先级。
+Rails 具有分级配置方案。我们可以在`config/application.rb`或`config/environment/{environment_name}.rb`中配置。环境特定的文件具有优先级。
 
-所以当我们在 `config/application.rb` 中添加这些……
+所以当我们在`config/application.rb`中添加这些……
 
 ![](img/Image1119.png)
 
-并在 `config/development.rb` 中添加这些……
+并在`config/development.rb`中添加这些……
 
 ![](img/Image134.png)
 
-……我们仍然在开发环境中看到 `Debug` 消息，但在生产环境中只看到 `Error`。
+……我们仍然在开发环境中看到`Debug`消息，但在生产环境中只看到`Error`。
 
-我们可以通过向 Rails 提供初始化了我们偏好的 `logger` 实例来更改日志文件的名称和位置。
+
+
+我们可以通过向 Rails 提供初始化了我们偏好的`logger`实例来更改日志文件的名称和位置。
 
 ```ruby
 config.logger = ActiveSupport::Logger.new("log/development")
 ```
 
-这意味着如果我们想要，也可以创建 `Logger` 的新子类。
+这意味着如果我们想要，也可以创建`Logger`的新子类。
 
 但让我们改变现在最感兴趣的行为：日志消息格式。
 
@@ -946,9 +945,9 @@ Rails 配置有一种机制为 Rails 提供日志消息格式化实例。第一�
 
 ![](img/Image149.png)
 
-我们扩展了 `ActiveSupport::Logger::SimpleFormatter` 并重写了它的 `call` 方法。配置一个 `SimpleFormatter` 的实例。
+我们扩展了`ActiveSupport::Logger::SimpleFormatter`并重写了它的`call`方法。配置一个`SimpleFormatter`的实例。
 
-`Logger` 向 `call` 传递四个参数。它们是：
+`Logger`向`call`传递四个参数。它们是：
 
 - 日志级别（作为严重性）。
 - 消息的时间。
@@ -957,17 +956,17 @@ Rails 配置有一种机制为 Rails 提供日志消息格式化实例。第一�
 
 我们将严重性格式化为固定宽度字段，并将时间格式化为可读的字符串。然后我们将这些部分组合成熟悉的消息格式。
 
-我们有多种方法可以将此类添加到我们的代码中。在 Rails 中使用 `libs` 目录是有争议的，但为了安装格式化器，我们将使用它。
+我们有多种方法可以将此类添加到我们的代码中。在 Rails 中使用`libs`目录是有争议的，但为了安装格式化器，我们将使用它。
 
-首先，在 `logging_app/libs` 中创建 `message_formatter.rb`。
+首先，在`logging_app/libs`中创建`message_formatter.rb`。
 
-接下来，由于 Rails 5.x 不会自动加载 `lib` 中的类，在 `config/application.rb` 的 `LoggingApp` 类声明中添加这些行：
+接下来，由于 Rails 5.x 不会自动加载`lib`中的类，在`config/application.rb`的`LoggingApp`类声明中添加这些行：
 
 ```ruby
 config.autoload_paths << Rails.root.join('libs')
 ```
 
-最后，在 `config/environment/development.rb` 中添加格式化器：
+最后，在`config/environment/development.rb`中添加格式化器：
 
 ```ruby
 config.logger.formatter = MyCustomFormatter.new
@@ -976,10 +975,6 @@ config.logger.formatter = MyCustomFormatter.new
 当我们运行服务器并打开用户条目时，我们看到了带有自定义格式的日志消息。
 
 ![](img/Image1173.png)
-
-
-
-
 
 我们已经在消息中添加了日志严重性和时间戳。程序名称并非总是会被使用，如果在调用中指定了它，它就会出现。
 
@@ -1007,11 +1002,11 @@ config.logger.formatter = MyCustomFormatter.new
 
 让我们从在 Xcode 中创建一个项目开始。如果你还没有安装它，请前往 App Store 并从那里安装。
 
-接下来，启动 Xcode，并在第一个对话框中选择 `Create a new Xcode Project`（新建 Xcode 项目）。
+接下来，启动 Xcode，并在第一个对话框中选择`Create a new Xcode Project`（新建 Xcode 项目）。
 
 ![开始使用 swift 日志](img/Image1193.png)
 
-在教程中，我们将保持代码尽可能简单，因此请选择 `MacOS` 和 `Command Line Tool`，然后点击 `Next`。你会看到这个。
+在教程中，我们将保持代码尽可能简单，因此请选择`MacOS`和`Command Line Tool`，然后点击`Next`。你会看到这个。
 
 ![](img/Image1206.png)
 
@@ -1023,7 +1018,7 @@ config.logger.formatter = MyCustomFormatter.new
 
 ![](img/Image1221.png)
 
-在 IDE 中选择 `main.swift`，你就可以看到 Xcode 为我们添加的代码。
+在 IDE 中选择`main.swift`，你就可以看到 Xcode 为我们添加的代码。
 
 ![](img/Image1228.png)
 
@@ -1033,17 +1028,17 @@ Swift 的工作方式与我们之前过的许多其他语言不同。有多种�
 
 ![](img/Image1236.png)
 
-将文件名设置为一个让你快速定位它的名称。请记住，Xcode 项目的工作目录隐藏在你的 `Library` 目录的深处，所以你可能想将日志文件位置设置为你的主目录。
+将文件名设置为一个让你快速定位它的名称。请记住，Xcode 项目的工作目录隐藏在你的`Library`目录的深处，所以你可能想将日志文件位置设置为你的主目录。
 
 当你选好文件位置后，构建并运行项目。然后找到该文件并使用你喜欢的任何编辑器打开它。你会看到你的日志消息。
 
 我们首先声明了日志文件将放在哪里。如下文所示，这是重要的。这是所有组件都必须知道的——除非有一个框架为我们管理日志位置。
 
-接下来，我们将该文件名转换为 `URL`。所有的 Swift 字符串都可以将自己写入 `URL`，所以我们正在利用这一点。
+接下来，我们将该文件名转换为`URL`。所有的 Swift 字符串都可以将自己写入`URL`，所以我们正在利用这一点。
 
-最后，我们创建了一个字符串并将其写入 `URL`。
+最后，我们创建了一个字符串并将其写入`URL`。
 
-虽然这种方法对于简单的日志记录有效，但并不一定能良好运行。每条日志消息都打开一个 `URL` 并将其写入其中的代价是什么？我怀疑它对于成百上千条日志消息的扩展性并不良好。当有多条消息想要同时记录自己时会发生什么？这种机制是线程安全的吗？它会阻塞整个程序吗？
+虽然这种方法对于简单的日志记录有效，但并不一定能良好运行。每条日志消息都打开一个`URL`并将其写入其中的代价是什么？我怀疑它对于成百上千条日志消息的扩展性并不良好。当有多条消息想要同时记录自己时会发生什么？这种机制是线程安全的吗？它会阻塞整个程序吗？
 
 让我们看看更好的方法。
 
@@ -1067,17 +1062,17 @@ Swift 的工作方式与我们之前过的许多其他语言不同。有多种�
 
 随着 MacOS Sierra 和 iOS 10，Apple 引入了新的统一日志系统。虽然他们还没有弃用旧的日志系统，但这个新的日志器是他们所在的方向。
 
-统一日志器内置的安全和性能功能使其变得极具吸引力。但它确实有一个许多开发者不喜欢的特性：消息存储在内存和专有数据存储中。没有明文日志文件，消息只能通过 `Console.app` 读取。
+统一日志器内置的安全和性能功能使其变得极具吸引力。但它确实有一个许多开发者不喜欢的特性：消息存储在内存和专有数据存储中。没有明文日志文件，消息只能通过`Console.app`读取。
 
 让我们在 Swift 应用程序中使用统一日志器，并看看它如何提高你监控应用程序和追踪问题的能力。
 
-通过添加统一日志器来开始。我们需要导入 `OS` 包并添加 `os_log` 调用。
+通过添加统一日志器来开始。我们需要导入`OS`包并添加`os_log`调用。
 
 ![](img/Image243.png)
 
 嗯。这个程序无法构建。
 
-![开始使用 swift 日志](img/Image1250.png)我们只能向 `os_log` 传递静态字符串。所以我们将更改字符串定义。
+![开始使用 swift 日志](img/Image1250.png)我们只能向`os_log`传递静态字符串。所以我们将更改字符串定义。
 
 ![](img/Image258.png)
 
@@ -1085,9 +1080,9 @@ Swift 的工作方式与我们之前过的许多其他语言不同。有多种�
 
 但日志消息在哪里？
 
-运行 `Console` 。你可以在 `Applications/Utilities` 中找到它，或者通过 Spotlight 搜索它。
+运行`Console`。你可以在`Applications/Utilities`中找到它，或者通过 Spotlight 搜索它。
 
-在搜索框中搜索文本 `Process: Swift`，如下所示![](img/Image267.png)
+在搜索框中搜索文本`Process: Swift`，如下所示![](img/Image267.png)
 
 这就是我们的日志消息。
 
@@ -1109,9 +1104,6 @@ Swift 的工作方式与我们之前过的许多其他语言不同。有多种�
 
 而且当然，日志的用性并不仅于此。有时我们需要交易数据的额外副本，例如信用卡费用或其他金融交易。
 
-
-
-
 我们需要了解应用程序运行行为的可见性，我们可以通过记录日志来实现。
 
 ### 你应该如何记录日志？
@@ -1125,8 +1117,8 @@ Swift 的工作方式与我们之前过的许多其他语言不同。有多种�
 大多数日志系统在每条日志记录中至少包含以下信息：
 
 *   时间戳（Timestamp）：日志条目中描述的事件发生的时间。统一日志器为我们处理了这一点。
-*   事件上下文（Event context）：关于事件的有用信息。在调试期间，“它运行正常”或“它坏了”可能有用或很有趣。而在生产环境中，“连接到数据库 `192.168.3:5000` 失败”更有用。
-*   严重级别（Severity level）：日志通常有一个级别，以便与其他条目相比时提供上下文。统一日志器定义了 `Default`、`Info`、`Debug`、`Error` 和 `Fault`。我们将在下文中详细查看日志级别。
+*   事件上下文（Event context）：关于事件的有用信息。在调试期间，"它运行正常"或"它坏了"可能有用或很有趣。而在生产环境中，"连接到数据库`192.168.3:5000`失败"更有用。
+*   严重级别（Severity level）：日志通常有一个级别，以便与其他条目相比时提供上下文。统一日志器定义了`Default`、`Info`、`Debug`、`Error`和`Fault`。我们将在下文中详细查看日志级别。
 
 因此，统一日志器为我们处理了日志三个基本方面中的两个。但有效地管理我们消息的内容取决于我们自己。
 
@@ -1138,7 +1130,7 @@ Swift 的工作方式与我们之前过的许多其他语言不同。有多种�
 
 首先，我们将介绍如何让对统一日志器的使用更高效。我们已经可以通过一行代码将信息记录到持久化存储中。但我们还能做些什么呢？
 
-首先，让我们通过日志级别为日志添加一些额外的上下文。通过添加几个更多参数和日志消息文本来更改对 `os_log` 的调用。
+首先，让我们通过日志级别为日志添加一些额外的上下文。通过添加几个更多参数和日志消息文本来更改对`os_log`的调用。
 
 ![](img/Image1277.png)
 
@@ -1146,15 +1138,15 @@ Swift 的工作方式与我们之前过的许多其他语言不同。有多种�
 
 ![](img/Image1289.png)
 
-日志记录器为我们将消息标记为 `Error`，因为我们在类型参数（`type:` argument）中传递了 `.error`。我们也可以传递 `.info`、`.debug` 或 `.fatal`。如果我们省略了 `type:` 参数，消息将被记录为默认（default）。
+日志记录器为我们将消息标记为`Error`，因为我们在类型参数（`type:` argument）中传递了`.error`。我们也可以传递`.info`、`.debug`或`.fatal`。如果我们省略了`type:`参数，消息将被记录为默认（default）。
 
-为了做到这一点，我们必须在调用 `os_log` 时传递日志消息、一个日志器实例以及日志类型。
+为了做到这一点，我们必须在调用`os_log`时传递日志消息、一个日志器实例以及日志类型。
 
 在继续自定义我们的消息之前，让我们仔细查看一下日志实例（log instance）的概念。
 
 #### 日志实例
 
-在上一个练习之前，我们一直通过单次调用 `os_log` 来记录日志消息。这是一个便利函数。当我们只传递一个消息调用它时，它使用默认的日志器实例。当我们传递一个实例和日志类型调用它时，我们调用的是另一个不同的函数，该函数会处理我们传递的实例。
+在上一个练习之前，我们一直通过单次调用`os_log`来记录日志消息。这是一个便利函数。当我们只传递一个消息调用它时，它使用默认的日志器实例。当我们传递一个实例和日志类型调用它时，我们调用的是另一个不同的函数，该函数会处理我们传递的实例。
 
 让我们仔细查看控制台应用程序中的日志消息。
 
@@ -1164,15 +1156,15 @@ Swift 的工作方式与我们之前过的许多其他语言不同。有多种�
 
 如果我们想填充这些字段，我们需要自己的日志器实例——一个用我们的应用程序信息初始化的实例。让我们创建一个。
 
-第一步是创建一个带有日志配置信息的 `plist` 文件。
+第一步是创建一个带有日志配置信息的`plist`文件。
 
 在 Xcode 中，创建一个新文件。选择属性列表（property list）类型。
 
 ![swift logging new plist](img/Image1309.png)
 
-将其命名为 `com.scalyr.SwiftLogger` 并保存文件。
+将其命名为`com.scalyr.SwiftLogger`并保存文件。
 
-文件将在属性编辑器中打开。但人生太短，没时间浪费在上面。在项目导航器中右键点击文件名，选择“打开方式为”（open as），然后选择“源代码”（source code）。
+文件将在属性编辑器中打开。但人生太短，没时间浪费在上面。在项目导航器中右键点击文件名，选择"打开方式为"（open as），然后选择"源代码"（source code）。
 
 ![`www.hitsubscribe.com/wp-content/uploads/2018/09/open-as-source-code.png`](img/Image1317.png)
 
@@ -1180,22 +1172,19 @@ Swift 的工作方式与我们之前过的许多其他语言不同。有多种�
 
 ![](img/Image1324.png)
 
-此属性列表定义了一个定义处理 `Info` 级别消息的日志系统。我们将在示例之后详细介绍这一点。
+此属性列表定义了一个定义处理`Info`级别消息的日志系统。我们将在示例之后详细介绍这一点。
 
-将此文件复制到系统的 `/Library` 区域。
+将此文件复制到系统的`/Library`区域。
 
 你需要处于项目的工作目录并拥有 root 权限。
 
 ![](img/Image1332.png)
 
-
-
-
 ## 第 8 章：快速上手 Scala 日志
 
 现在我们已经讨论了使用不同语言和平台的日志记录，现在是向你们展示如何快速上手 Scala 日志记录了。
 
-首先，我将通过一个简单的 Scala 手动日志示例向你们演示。我将使用 `IntelliJ IDEA` 创建并运行一个 Scala 项目，并使用 `sbt` 来构建代码。这样，你就可以通过应用程序在任何支持 Scala 和 Java 的平台上启动。
+首先，我将通过一个简单的 Scala 手动日志示例向你们演示。我将使用`IntelliJ IDEA`创建并运行一个 Scala 项目，并使用`sbt`来构建代码。这样，你就可以通过应用程序在任何支持 Scala 和 Java 的平台上启动。
 
 接下来，我将讨论日志记录的细节以及为什么很重要。你可能已经听过其他人对此的看法，但我在这里也会分享我的见解。
 
@@ -1213,41 +1202,41 @@ Swift 的工作方式与我们之前过的许多其他语言不同。有多种�
 
 本教程将使用 [IntelliJ IDEA](https://www.jetbrains.com/idea/download/)，你可以下载其免费的社区版。
 
-首先，确保你已经安装并激活了 Scala 插件。设置完成后，启动 `IntelliJ`。在打开任何项目之前，从启动界面选择 `Preferences`（设置）。
+首先，确保你已经安装并激活了 Scala 插件。设置完成后，启动`IntelliJ`。在打开任何项目之前，从启动界面选择`Preferences`（设置）。
 
 ![scala logging start plugins](img/Image1450.png)
 
-从配置菜单中选择 `Plugins`（插件）。
+从配置菜单中选择`Plugins`（插件）。
 
 这将打开插件管理窗口。
 
 ![jetbrains plugins scala logging](img/Image1459.png)
 
-现在，点击窗口左下角的 `Install JetBrains plugin...`（安装 JetBrains 插件...）。这将弹出一个列出 IDEA 官方支持的插件的窗口。
+现在，点击窗口左下角的`Install JetBrains plugin...`（安装 JetBrains 插件...）。这将弹出一个列出 IDEA 官方支持的插件的窗口。
 
 ![scala logging plugin](img/Image1468.png)
 
-现在，选择顶部的 `Languages`（语言）类别并向下滚动直到找到 `Scala` 选项。如果尚未安装，请安装该插件。插件下载完成后，系统会提示你重启 IDE。
+现在，选择顶部的`Languages`（语言）类别并向下滚动直到找到`Scala`选项。如果尚未安装，请安装该插件。插件下载完成后，系统会提示你重启 IDE。
 
 你现在准备好编写 Scala 应用程序了！
 
 ![scala logging new project](img/Image1479.png)
 
-在下一个窗口中，如所示选择 `Scala` 和 `sbt`，然后点击 `Next`（下一步）。
+在下一个窗口中，如所示选择`Scala`和`sbt`，然后点击`Next`（下一步）。
 
 ![scala logging tutorial](img/Image1491.png)
 
-现在在顶部为项目命名。验证是否选择了你当前可用的最新 `JDK`，以及 `Scala SDK` 和 `sbt` 版本。
+现在在顶部为项目命名。验证是否选择了你当前可用的最新`JDK`，以及`Scala SDK`和`sbt`版本。
 
 ![scala logging last project window](img/Image1498.png)
 
-如果没有安装 `Scala`，将没有可用的 `SDK`。点击 `Create`（创建）按钮下载最新的可用版本（截至本文发布为 `2.12.7`）。现在点击 `Finish`（完成），`IDEA` 将创建你的项目。
+如果没有安装`Scala`，将没有可用的`SDK`。点击`Create`（创建）按钮下载最新的可用版本（截至本文发布为`2.12.7`）。现在点击`Finish`（完成），`IDEA`将创建你的项目。
 
 在开始编码之前，我们还需要完成最后一步。向项目添加 Scala 框架将让创建 Scala 类和对象变得更容易。项目加载完成后，在浏览器窗口中右键点击项目名称。
 
 ![scala logging Add Framework support](img/Image1506.png)
 
-如所示选择 `Add Framework Support...`（添加框架支持...）。这将弹出 `Add Frameworks`（添加框架）窗口。在左侧面板中向下滚动直到找到 `Scala`。勾选框并点击 `OK`。
+如所示选择`Add Framework Support...`（添加框架支持...）。这将弹出`Add Frameworks`（添加框架）窗口。在左侧面板中向下滚动直到找到`Scala`。勾选框并点击`OK`。
 
 ![Add scala framework](img/Image1513.png)
 
@@ -1255,21 +1244,21 @@ Swift 的工作方式与我们之前过的许多其他语言不同。有多种�
 
 #### 简单的 Scala 日志
 
-让我们从一个新类开始。在项目浏览器中打开 `src` 文件夹并导航到 `Scala` 文件夹。
+让我们从一个新类开始。在项目浏览器中打开`src`文件夹并导航到`Scala`文件夹。
 
 ![New Scala Class](img/Image1521.png)
 
-右键并选择 `Scala Class`。
+右键并选择`Scala Class`。
 
 ![](img/Image1528.png)
 
-将选择器从 `class` 改为 `object`，并给你的新对象命名。然后点击 `OK`。
+将选择器从`class`改为`object`，并给你的新对象命名。然后点击`OK`。
 
-`IDEA` 将创建一个文件并为其添加骨架代码。
+`IDEA`将创建一个文件并为其添加骨架代码。
 
 ![](img/Image1535.png)
 
-现在，修改新类以扩展 `App` 类。这样我们就可以运行它了。然后添加一行代码：
+现在，修改新类以扩展`App`类。这样我们就可以运行它了。然后添加一行代码：
 
 ![](img/Image1543.png)
 
@@ -1277,9 +1266,11 @@ Swift 的工作方式与我们之前过的许多其他语言不同。有多种�
 
 ![scala logging run first time](img/Image1552.png)
 
-如所示在菜单中选择 `Run`（运行）。
+如所示在菜单中选择`Run`（运行）。
 
-IDE 中打开一个运行面板，你将看到程序的输出。
+
+
+在 IDE 中打开一个运行面板，你将看到程序的输出。
 
 ![](img/Image1561.png)
 
@@ -1303,7 +1294,7 @@ IDE 中打开一个运行面板，你将看到程序的输出。
 
 让我们讨论一些日志的基础知识，然后看一种更好的 Scala 日志记录方法。
 
-#### 什么是应用程序日志？
+## 什么是应用程序日志？
 
 什么是日志？为什么我们需要它？我们我们需要它？
 
@@ -1320,10 +1311,12 @@ IDE 中打开一个运行面板，你将看到程序的输出。
 以下列表包含了你可能想记录在日志记录中的某些示例：
 
 *   时间戳。事件具体何时发生？（如果你记录到文件，你可能希望使用 `UTC` 时间并使用 `ISO8601` 等标准格式。）
-*   上下文，让读者清楚条目的含义。仅仅记录“Hello, user!”在几周或几个月后可能很难解释。更好的信息可能是“User greeting of‘Hello, user!”
+
+*   上下文，让读者清楚条目的含义。仅仅记录“Hello, user!”在几周或几个月后可能很难解释。更好的信息可能是“User greeting of‘Hello, user!’”
+
 *   日志级别，例如 `Error`、`Warning` 或 `Info`。这些提供了上下文。
 
-### 引入日志框架
+## 引入日志框架
 
 所以，这就是日志记录。我们上面的简单方案只触及了有效日志所需的表面。它还依赖开发者打开文件、关闭文件、管理日志条目格式并在应用程序重启时不覆盖旧日志。此外，该方案无法在多个对象之间扩展。我们需要为此编写库或框架。
 
@@ -1333,14 +1326,11 @@ IDE 中打开一个运行面板，你将看到程序的输出。
 
 让我们回到教程。
 
-#### 使用框架进行 Scala 日志记录
+### 使用框架进行 Scala 日志记录
 
 首先，我们需要将 `SLF4J` 添加到应用程序依赖中。在代码编辑器中打开 `build.sbt`。
 
 ![scala logging build.sbt](img/Image1599.png)
-
-
-
 
 添加 `scala-logging` 依赖，使文件内容如下：
 
@@ -1380,7 +1370,7 @@ IDE 中打开一个运行面板，你将看到程序的输出。
 
 `SLF4J` 将我们的日志消息传递给 `Logback`。然后，`Logback` 将它们打印到控制台，这是在未指定配置时的默认行为。你可以看到每条日志消息都有时间戳、与我们调用消息的函数对应的级别，以及记录日志的线程名称。我们已经满足了日志消息的要求，而且我们写的代码比上面的简单示例更少。
 
-### Scala 日志：任务完成
+## Scala 日志：任务完成
 
 我们做到了——在 `Scala` 中记录日志！但这仅仅是开始。Java 现有的日志框架支持 `Scala`，所以入门是容易的部分。
 
@@ -1388,21 +1378,25 @@ IDE 中打开一个运行面板，你将看到程序的输出。
 
 本章由 `Eric Goebelbecker` 贡献。[Eric](http://ericgoebelbecker.com/) 在纽约的金融市场工作了 25 年，为市场数据和金融信息交换 (`FIX`) 协议网络开发基础设施。他喜欢谈论什么让团队变得高效（或不够高效）！
 
-## 第 9 章：快速上手 Django 日志
+# 第 9 章：快速上手 Django 日志
 
 `Django` 是最流行的 `Python` Web 应用框架之一，这并非偶然。由于它采用了内置的 `Python` 日志设施，在 `Django` 中记录日志轻而易举。
 
 尽管如此，有一些特定的 `Django` 配置需要注意。在本章中，我们将：
 
 * 创建 `Python` 虚拟环境。
+
 * 设置一个小型 `Django` 项目进行操作。
+
 * 编写一个基础日志示例。
+
 * 配置 `Django` 日志器。
+
 * 探索 `Django` 日志扩展。
 
 如果你想跳过编写代码，可以在 GitHub 上找到本章的所有代码： [`github.com/caseydunham/django-logging`](https://github.com/caseydunham/django-logging)。
 
-### 创建 Python 虚拟环境
+## 创建 Python 虚拟环境
 
 `Python` 虚拟环境是保持系统无依赖的极佳方法。要创建虚拟环境，首先为你的项目创建一个目录：
 
@@ -1412,7 +1406,7 @@ IDE 中打开一个运行面板，你将看到程序的输出。
 
 ![](img/Image675.png)
 
-### 安装 Django
+## 安装 Django
 
 现在我们已经准备好了环境，让我们安装 `Django`：
 
@@ -1426,7 +1420,7 @@ pip install django
 python -m --version
 ```
 
-### 添加新的 Django 模块
+## 添加新的 Django 模块
 
 现在脚架已经就绪，让我们创建一个名为 `hello` 的模块：
 
@@ -1474,7 +1468,7 @@ python manage.py runserver
 
 除了默认的 Django 欢迎界面，我们将在 `http://127.0.0.1:8000` 看到我们平淡但实用的视图。
 
-### 日志的第一步
+## 日志的第一步
 
 我们能做的最简单的日志就是导入 `Python` 日志模块并开始记录。
 
@@ -1493,7 +1487,7 @@ def index(request):
 
 重启 Web 服务器并刷新页面，在控制窗口看到我们的消息。
 
-### 配置日志器
+## 配置日志器
 
 默认情况下，`Django` 使用 `dictConfig` 格式来配置日志处理器、过滤器和格式化器。这些设置通过 `LOGGING` 字典进行。让我们看一个简单的日志配置并逐一说明：
 
@@ -1522,10 +1516,6 @@ LOGGING = {
 }
 ```
 
-
-
-
-
 `disable_existing_loggers`: 此设置用于禁用现有的日志器。默认值为 `False`，但显式设置也无妨。当将此项设置为 `True` 时，请定义额外的日志器。否则，消息可能会丢失。
 
 `formatters`: 此部分定义了日志语句的外。让我们来看控制台日志格式：
@@ -1535,7 +1525,9 @@ LOGGING = {
 以下是其工作原理：
 
 * `%(name)`：这是发布日志消息的包名。
+
 * `%(levelname)`：消息的日志级别（Error, Warning, Info 等）。
+
 * `%(message)`：这是实际的日志消息。
 
 `-12s` 和 `-8s` 控制不同格式规范之间的间距。该格式下的示例消息如下：
@@ -1552,7 +1544,7 @@ LOGGING = {
 
 现在让我们更新配置并运行一下吧。
 
-### 更新并测试新配置
+## 更新并测试新配置
 
 更新 `app/views.py` 以包含上述日志配置。它看起来应该是这样的：
 
@@ -1568,16 +1560,22 @@ LOGGING = {
 
 这对于在任何 Django 项目中引入日志记录已经足够了。然而，我们还有一个主题要介绍：Django 提供的日志扩展。
 
-### 浏览 Django 日志扩展
+## 浏览 Django 日志扩展
 
 在 Web 服务器环境中，我们经常有需要记录的常规信息。Django 提供了几个日志扩展来涵盖这些用例。
 
 * `django`：这是一个用于 `django` 层次结构中消息的通型日志器。不会使用此日志器名称发布消息，因为将使用以下日志器之一。
+
 * `django.request`：此日志器处理 HTTP 请求的记录，并会对某些状态码抛出异常。所有的 HTTP 5xx 错误码将引发 `Error` 消息。同样，HTTP 4xx 码将显示为 `Warning` 消息。
+
 * `django.server`：当使用 `runserver` 命令运行服务器时（我们一直一直在这样做），它将记录与处理这些请求相关的消息，就像 `django.request` 日志器一样——只是所有其他消息都以 `Info` 级别记录。这些是不会触发 HTTP 5xx 或 4xx 状态码的消息。
+
 * `django.template`：无论我处理 Django 模板有多少次，从没有在第一次组合时不出错。`django.template` 日志器处理与模板渲染相关的错误。缺失的上下文变量将以 `Debug` 消息的形式出现在日志中。
+
 * `django.db.backends`：此日志器处理代码与数据库交互的所有消息。所有应用程序级别的 SQL 语句将以 `Debug` 级别出现。由于这可能会产生大量噪音，需要通过将 `settings.DEBUG` 改为 `True` 来启用 `Debug` 日志。
+
 * `django.security.*`：Django 为安全错误提供了处理器。特别是，日志器将接收任何由 `SuspiciousOperation` 错误引起的消息。Django 为每种安全错误定义了子类，例如 `DisallowedHost` 或 `InvalidSessionKey`。`SuspiciousOperation` 的其余子类可以在 [Django 网站](https://docs.djangoproject.com/en/2.1/ref/exceptions/#django.core.exceptions.SuspiciousOperation) [文档中的异常页面下](https://docs.djangoproject.com/en/2.1/ref/exceptions/#django.core.exceptions.SuspiciousOperation) 找到。提醒一下——如果 `django.security` 日志器处理了消息，它将不会通过 `django.request` 日志器发送。所以不要忽略来自 `django.security.*` 日志的消息！
+
 * `django.security.csrf`：此日志器没有继承自其他安全处理器扩展的 `SuspiciousOperation` 日志器。它处理由于跨站请求伪造（CSRF）攻击引起的任何异常。
 
 作为最后一个示例，让我们记录来自 `django.request` 扩展的消息。通过像所示将日志器添加到配置的日志部分来实现：
@@ -1590,26 +1588,27 @@ LOGGING = {
 
 请尽管尝试，不要忘记记录 `django.security.*` 消息！
 
-### 你可以的！
+## 你可以的！
 
 信息非常多，让我们总结一下：
 
 * Django 使用标准的 Python 日志设施。
+
 * 日志设置通过 `logging.dictConfig` 字典设置。
+
 * Django 提供了几个[日志扩展](https://docs.djangoproject.com/en/2.1/topics/logging/#django-logging-extensions) 来处理常见的服务器问题。
-
-
-
 
 以上就是关于 Angular 的一些背景介绍。现在，让我们开始在 AngularJS 中记录日志吧！
 
 # AngularJS 日志应用程序
 
+
+
 让我从回顾过去的往事开始，那时 Angular 还很年轻，被称为 AngularJS。尽管它现在是一个旧版本了，但仍有许多当前的应用程序在使用 Angular 1。在 AngularJS（最后一个版本 1.7.2）中，引导过程非常简单。让我们重新回顾一个使用 AngularJS 记录的简单示例。
 
 在 Windows 资源管理器中，创建一个名为 `angular-logging` 的新文件夹。将其放在硬盘上的开发文件夹中。此文件夹将包含我们的两个简单文件：`script.js`（包含日志逻辑）和 `index.html`（包含模板视图）。
 
-在 Visual Studio Code 中，通过选择 `File > Open Folder` 打开此文件夹。然后，点击 `File > New File` (`CTRL+N`) 并输入文件名：`script.js`。这个新文件将包含我们的 Angular 1 控制器，它将执行 Angular 日志逻辑。
+在 Visual Studio Code 中，通过选择 `File > Open Folder` 打开此文件夹。然后，点击 `File > New File`（`CTRL+N`）并输入文件名：`script.js`。这个新文件将包含我们的 Angular 1 控制器，它将执行 Angular 日志逻辑。
 
 ![](img/Image1897.png)
 
@@ -1617,7 +1616,7 @@ LOGGING = {
 
 最后一个参数是执行我们逻辑（……记录日志）的实际函数。为了保持简单，我们在全局 `$scope` 对象上添加两个变量：`logger` 和 `message`。
 
-`logger` 变量是实际的 `$log` ，而 `message` 变量将绑定到 HTML 模板 `index.html`。
+`logger` 变量是实际的 `$log`，而 `message` 变量将绑定到 HTML 模板 `index.html`。
 
 接下来，我们创建 HTML 模板——我们的视图——它将由 `LogController` 控制。
 
@@ -1627,7 +1626,7 @@ LOGGING = {
 
 在导入 Angular 库和我们的控制器代码后，开始将 HTML 元素绑定到 `LogController` 和 `message` 变量。此外，使用 Angular 1 指令 `ng-click` 添加点击监听器，这样当我们点击按钮时，控制器的函数就会被调用。
 
-### 测试我们的 AngularJS 日志应用程序
+## 测试我们的 AngularJS 日志应用程序
 
 在 Firefox 中，点击 `File > Open File` 并导航到 `index.html` 文件。文件加载后，调出 Firefox 开发者工具，然后点击 `Console` 选项卡。
 
@@ -1669,39 +1668,13 @@ LOGGING = {
 
 ![](img/Image1949.png)
 
-### 测试我们的新 Angular 应用程序
+## 测试我们的新 Angular 应用程序
 
 终于好了！现在你只需将浏览器指向 `localhost:4200` 并看到 Angular 图标。正如你看到的，哇——这可非易事。
 
 ![`www.hitsubscribe.com/wp-content/uploads/2018/11/angular4-hello-world-1.png`](img/Image1961.png)
 
 现在让我们看看 `hello-world` 文件夹，看看 Angular CLI 实际上为我们创建了什么：
-
-![`www.hitsubscribe.com/wp-content/uploads/2018/11/angular4-hello-world-1.png`](img/Image1961.png) (注：此处原文存在重复的图片链接，已按要求处理) 修正为：)
-
-![`www.hitsubscribe.com/wp-content/uploads/2018/11/angular4-hello-world-1.png`](img/Image1961.png)
-
-让我们看看 `hello-world` 文件夹，看看 Angular CLI 实际上为我们创建了什么：
-
-![`www.hitsubscribe.com/wp-content/uploads/2018/11/angular4-hello-world-1.png`](img/Image1961.png) (注：此处原文文本内容有重复，已按逻辑翻译)
-
-让我们看看 `hello-world` 文件夹，看看 Angular CLI 实际上为我们创建了什么：
-
-![`www.hitsubscribe.com/wp-content/uploads/2018/11/angular4-hello-world-1.png`](img/Image1961.png) (注：此处原文内容有重复，已按逻辑翻译)
-
-*注：由于原文在后半部分出现了大量段落重复，译文已根据要求进行了去重。*
-
-让我们看看 `hello-world` 文件夹，看看 Angular CLI 实际上为我们创建了什么：
-
-![`www.hitsubscribe.com/wp-content/uploads/2018/11/angular4-hello-world-1.png`](img/Image1961.png)
-
-让我们看看 `hello-world` 文件夹，看看 Angular CLI 实际上为我们创建了什么：
-
-![`www.hitsubscribe.com/wp-content/uploads/2018/11/angular4-hello-world-1.png`](img/Image1961.png)
-
-(注：由于原文文本存在严重重复，此处译文仅保留了核心逻辑部分的翻译)
-
-让我们看看 `hello-world` 文件夹，看看 Angular CLI 实际上为我们创建了什么：
 
 ![`www.hitsubscribe.com/wp-content/uploads/2018/11/angular4-hello-world-1.png`](img/Image1961.png)
 
@@ -1725,7 +1698,7 @@ LOGGING = {
 
 这样，一旦生成新组件就可以就可以使用它。让我们使用全新的 Angular 组件。
 
-### 在我们的 Angular 组件中添加日志逻辑
+## 在我们的 Angular 组件中添加日志逻辑
 
 为了开始添加日志逻辑，我们首先打开应用程序视图文件 `app.component.html`。我们在创建世界应用之初就生成了这个文件。
 
@@ -1739,9 +1712,6 @@ LOGGING = {
 
 查看我们的模型文件。我们的主方法是 `log(level, message)` 方法，它根据传入的级别将传入的消息记录到控制台。
 
-
-
-
 ![](img/Image2013.png)
 
 让我们在视图中注意几点。首先，注意第 1 行和第 6 行，它们是 `{{title}}` 和 `{{logStatement}}`。这些是我们绑定到视图的模型变量。在 Angular 中，它们是双向绑定的，这意味着如果视图中的值发生变化，模型值就会更新，反之亦然。如果你更改了模型中的值，视图中的值也会同步更新。
@@ -1754,7 +1724,7 @@ LOGGING = {
 
 在右侧，我们有 Google Chrome 控制台，它首先显示 `ngOnInit()` 方法中的消息。然后，随着我们点击各种日志按钮，我们就会以相应的日志级别向控制台记录日志。
 
-### 使用 Angular CLI 生成新服务
+## 使用 Angular CLI 生成新服务
 
 在 Angular 组件内部进行日志记录无疑是使用 Angular 记录日志非常快速的方法。但对于创建一个可以复用的日志工具以便在 Angular 应用中记录日志，这并不是正确的方法。
 
@@ -1770,7 +1740,7 @@ LOGGING = {
 
 但我选择不使用 Angular CLI 生成我们的新服务。让我们来讨论如何手动执行此。
 
-### 手动创建新的 Angular 日志服务
+## 手动创建新的 Angular 日志服务
 
 这次，让我们手动创建新的 Angular 日志服务。了解如何这样做是有好的，因为很多时候，当系统为我们生成内容时，看到背后发生了什么会有帮助。
 
@@ -1784,7 +1754,7 @@ LOGGING = {
 
 我们还将重构日志方法，使其更像标准的日志接口，为每个日志级别提供特定的方法。
 
-### 将日志逻辑移动到新的 Angular 服务
+## 将日志逻辑移动到新的 Angular 服务
 
 在此时，我们将简单地将现有的日志逻辑从日志组件移动到新的 `LogEngineService`。此外，我们将重构现有的 `log` 方法，并将其拆分为适用于每个日志级别的特定方法。这是一个更好的日志接口，因为它类似于著名的 `console` 控制台日志接口。
 
@@ -1796,7 +1766,7 @@ LOGGING = {
 
 现在，让我们连接 `LogEngineService` 并在我们的日志 Angular 组件中使用它。
 
-### 连接新的 Angular 日志服务
+## 连接新的 Angular 日志服务
 
 为了连接服务，我们将打开 `app.module.ts`。这里是我们定义应用级依赖的地方。我们需要将我们的新服务作为提供者（providers）之一。
 
@@ -1804,7 +1774,7 @@ LOGGING = {
 
 注意我们在 `providers` 列表中添加了 `LogEngineService`——`providers: [LogEngineService]`。
 
-#### 在我们的 Angular 组件中使用服务
+### 在我们的 Angular 组件中使用服务
 
 在快速使用 Angular 记录日志的旅程中，我们需要向 `logger.component.ts` 内部的日志组件添加 `LogEngineService`。让我们看看文件顶部的导入语句：
 
@@ -1818,7 +1788,7 @@ LOGGING = {
 
 ![](img/Image2084.png)
 
-#### 重构 HTML 视图并测试
+### 重构 HTML 视图并测试
 
 最后一步是更新我们的组件 HTML 视图（`logger.component.html`）以使用刚刚创建的新监听器：
 
@@ -1832,12 +1802,11 @@ LOGGING = {
 
 就是这样！这与我们之前在容器本身中记录日志时的功能完全相同。然而，现在我们有了一个独立的 Angular 服务，专门负责记录我们的消息，并带有日志级别和时间戳。
 
-### 增强你的日志服务！
+## 增强你的日志服务！
 
 在本章中，我们学习了如何使用 Angular 和 AngularJS 快速开始记录日志。我们还涉及了安装 Angular CLI 并使用它创建开发 Angular 的框架骨架。此外，我们重构了日志组件，使其使用 Angular 日志服务。这改进了我们代码和逻辑的组织。
 
 显然，除了调试，日志可能没什么价值。但在探索了 Angular 服务之后，你现在应该有了如何增强日志服务的想法，以便通过 REST 调用持久化日志或与日志聚合服务集成。所以，去吧，像专业人士一样在 Angular 中记录日志吧！
-
 
 
 
@@ -1860,17 +1829,17 @@ LOGGING = {
 
 ![Meteor_logging_image_with_scalyr_colors](img/Image2106.png)
 
-### Meteor 概述
+## Meteor 概述
 
 如果你带着使用 Meteor 的经验来到这一章，你可能不需要这一部分。但我想确保我们从同一个起点开始，所以这里有一些 Meteor 的快速信息。别担心，我会很短的。
 
 Meteor 提供了一个全栈 JavaScript 平台，用于开发 Web 和移动应用。它包含了许多来自 Node.js 和其他 JavaScript 库的包。它专注于提供全栈响应式，以便你的 UI 与后端服务器无缝交互。作为一个奖励，它开箱即提供了简单的 MongoDB 集成。
 
-### 基础日志
+## 基础日志
 
 正如我上面提到的，我们不会创建一个空白应用，而是将克隆 Meteor 团队提供的现有示例应用之一。由于我们已经在现有的应用中添加日志，我们将以极小的努力看到不同的日志输出。
 
-#### 设置
+### 设置
 
 如果你以前没有用过 Meteor，别担心——基础设置非常简单。首先，你需要安装 Node.js 和 `npm`。如果你使用的是 Mac，你还需要 Xcode。
 
@@ -1892,7 +1861,7 @@ Meteor 提供了一个全栈 JavaScript 平台，用于开发 Web 和移动应�
 
 你应该能够添加用户、向清单添加项目等。尽管去玩玩它吧。我会在下一节等候。
 
-#### 控制台日志
+### 控制台日志
 
 现在你已经有机会查看该应用程序，让我们开始吧。为了演示简单的日志记录，我们将向应用程序添加一些控制台日志。这对于在开发期间调试客户端问题很有帮助。但一旦你的应用程序被现实世界中的用户使用，它对你的帮助就不大了——你无法访问他们的控制台日志。
 
@@ -1912,35 +1881,31 @@ Meteor 提供了一个全栈 JavaScript 平台，用于开发 Web 和移动应�
 
 ![`library.scalyr.com/2019/02/15124821/031-1024x439.png`](img/Image2154.png)
 
-
-
-
 嗯，这取决于情况——不仅取决于你的应用程序的功能，还取决于你是在客户端还是服务器端记录日志。你还希望确保所记录的内容具有价值。记录每一个微小的操作通常是一个坏主意。
 
 事实上，上面的示例并不能代表我希望在自己的系统中记录的内容。我不在乎客户在待办事项列表中添加了什么。我关心的是指标、性能和错误。我需要的是能够帮助调试问题的特定信息。
 
 #### 我们可以记录什么类型的数据？
 
-*   **错误**：如果发生了问题，我们希望了解这些情况。
-*   **使用情况**：让我们看看应用程序的不同部分被使用的频率。如果我们有无人使用的功能，我们就可以将其弃用，或对其进行改进。
-*   **性能**：我们想知道客户在延迟方面的体验。如果应用程序对他们来说运行得太慢，我们需要进行调查。
+* **错误**：如果发生了问题，我们希望了解这些情况。
+* **使用情况**：让我们看看应用程序的不同部分被使用的频率。如果我们有无人使用的功能，我们就可以将其弃用，或对其进行改进。
+* **性能**：我们想知道客户在延迟方面的体验。如果应用程序对他们来说运行得太慢，我们需要进行调查。
 
 #### 具体针对错误日志，我们需要哪些信息？
 
-*   **时间戳**：准确告诉我们错误发生的时间。
-*   **用户 ID** 或上下文，以便我们知道受影响的是哪些用户。
-*   **相关参数**：帮助重现问题并找到解决方案。
-*   **唯一且特定的错误信息**：帮助准确定问题。
+* **时间戳**：准确告诉我们错误发生的时间。
+* **用户 ID** 或上下文，以便我们知道受影响的是哪些用户。
+* **相关参数**：帮助重现问题并找到解决方案。
+* **唯一且特定的错误信息**：帮助准确定问题。
 
-#### 你正处于正确的道路上
+### 你正处于正确的道路上
 
 你现在的状态非常棒。你有一个 Meteor 应用程序可以进行实验，还有关于如何在其中记录信息的指导。一旦从你的应用程序记录了数据，请记住定期查看日志。不断对记录的内容和格式进行迭代，直到你拥有一组有助于调试和优化应用程序的有用数据。现在，你可以放心了，因为你将能够在生产环境中支持你的 Meteor 应用程序。
 
-本章节由 Sylvia Fronczak 贡献。[Sylvia](https://sylviafronczak.com/ ) 是一位软件开发人员，曾在多个行业中使用过各种软件方法论。她目前专注于整个团队可以共同拥有、理解并随时间演化的设计实践。
+本章节由 Sylvia Fronczak 贡献。[Sylvia](https://sylviafronczak.com/) 是一位软件开发人员，曾在多个行业中使用过各种软件方法论。她目前专注于整个团队可以共同拥有、理解并随时间演化的设计实践。
 
-### 关于 Scalyr
+## 关于 Scalyr
 
 Scalyr 是针对新技术栈的日志管理和可观测平台。Scalyr 专为现代云架构的规模和复杂性而构建，通过允许工程师快速排除故障并专注于他们喜爱的领域——编码，改变了交付健康应用的动态。凭借 96% 的搜索在一秒内完成，并拥有数千名活跃用户，Scalyr 将日志从事后考虑转为了优势。
 
 访问 [scalyr.com](http://scalyr.com/) 了解更多信息并在 Twitter 上关注我们 (@scalyr)。
-

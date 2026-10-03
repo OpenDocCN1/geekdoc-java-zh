@@ -1,15 +1,16 @@
+
 # Spring EL 方法调用示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring3/spring-el-method-invocation-example/>
 
-Spring expression language (SpEL)允许开发人员使用表达式来执行方法，并将方法返回值注入到属性中，即所谓的“ **SpEL 方法调用**”。
+Spring expression language (SpEL)允许开发人员使用表达式来执行方法，并将方法返回值注入到属性中，即所谓的“**SpEL 方法调用**”。
 
-## 注释中的弹簧 EL
+## 注释中的 Spring EL
 
-查看如何使用 **@Value** 注释进行 Spring EL 方法调用。
+查看如何使用`@Value`注释进行 Spring EL 方法调用。
 
 ```java
- package com.mkyong.core;
+package com.mkyong.core;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -44,11 +45,11 @@ public class Customer {
 		return "Customer [name=" + name + ", amount=" + amount + "]";
 	}
 
-} 
+}
 ```
 
 ```java
- package com.mkyong.core;
+package com.mkyong.core;
 
 import org.springframework.stereotype.Component;
 
@@ -59,37 +60,37 @@ public class Price {
 		return new Double(99.99);
 	}
 
-} 
+}
 ```
 
 *输出*
 
 ```java
- Customer [name=MKYONG, amount=99.99] 
+Customer [name=MKYONG, amount=99.99]
 ```
 
-##### 说明
+### 说明
 
-在**字符串**文本上调用“`toUpperCase()`”方法。
+在**字符串**文本上调用`toUpperCase()`方法。
 
 ```java
- @Value("#{'mkyong'.toUpperCase()}")
-	private String name; 
+@Value("#{'mkyong'.toUpperCase()}")
+	private String name;
 ```
 
-对 bean ' **priceBean** '调用'`getSpecialPrice()`方法。
+对 bean `priceBean`调用`getSpecialPrice()`方法。
 
 ```java
- @Value("#{priceBean.getSpecialPrice()}")
-	private double amount; 
+@Value("#{priceBean.getSpecialPrice()}")
+	private double amount;
 ```
 
- ## XML 中的 Spring EL
+## XML 中的 Spring EL
 
 这是 bean 定义 XML 文件中的等效版本。
 
-```java
- <beans 
+```xml
+<beans
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
@@ -101,22 +102,17 @@ public class Price {
 
 	<bean id="priceBean" class="com.mkyong.core.Price" />
 
-</beans> 
+</beans>
 ```
 
 *输出*
 
 ```java
- Customer [name=MKYONG, amount=99.99] 
+Customer [name=MKYONG, amount=99.99]
 ```
 
- ## 下载源代码
+## 下载源代码
 
-Download It – [Spring3-EL-Method-Invocation-Example.zip](http://web.archive.org/web/20190220135005/http://www.mkyong.com/wp-content/uploads/2011/06/Spring3-EL-Method-Invocation-Example.zip) (6 KB)[spring el](http://web.archive.org/web/20190220135005/http://www.mkyong.com/tag/spring-el/) [spring3](http://web.archive.org/web/20190220135005/http://www.mkyong.com/tag/spring3/)
+Download It – [Spring3-EL-Method-Invocation-Example.zip](http://web.archive.org/web/20190220135005/http://www.mkyong.com/wp-content/uploads/2011/06/Spring3-EL-Method-Invocation-Example.zip) (6 KB)
 
-
-
-
-
-
-
+[spring el](http://web.archive.org/web/20190220135005/http://www.mkyong.com/tag/spring-el/) [spring3](http://web.archive.org/web/20190220135005/http://www.mkyong.com/tag/spring3/)

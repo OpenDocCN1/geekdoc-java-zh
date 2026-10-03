@@ -1,6 +1,7 @@
+
 # 如何从 Java 调用 Python
 
-> 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-working-with-python>
+> 原文:【https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-working-with-python】
 
 ## 1。概述
 
@@ -12,13 +13,13 @@ Python 是一种越来越受欢迎的编程语言，尤其是在科学界，因�
 
 在整个教程中，我们将使用一个非常简单的 Python 脚本，我们将在一个名为`hello.py`的专用文件中定义它:
 
-```java
+```
 print("Hello Baeldung Readers!!")
 ```
 
 假设我们有一个工作的 Python 安装，当我们运行我们的脚本时，我们应该看到打印的消息:
 
-```java
+```
 $ python hello.py 
 Hello Baeldung Readers!!
 ```
@@ -29,9 +30,9 @@ Hello Baeldung Readers!!
 
 ### 3.1。使用`ProcessBuilder`
 
-让我们首先来看看如何使用 [`ProcessBuilder` API](/web/20220812012137/https://www.baeldung.com/java-lang-processbuilder-api) 创建一个本地操作系统进程来启动`python`并执行我们的简单脚本:
+让我们首先来看看如何使用 [ProcessBuilder API](/web/20220812012137/https://www.baeldung.com/java-lang-processbuilder-api) 创建一个本地操作系统进程来启动`python`并执行我们的简单脚本:
 
-```java
+```
 @Test
 public void givenPythonScript_whenPythonProcessInvoked_thenSuccess() throws Exception {
     ProcessBuilder processBuilder = new ProcessBuilder("python", resolvePythonScriptPath("hello.py"));
@@ -51,7 +52,7 @@ public void givenPythonScript_whenPythonProcessInvoked_thenSuccess() throws Exce
 
 在第一个例子中，我们运行带有一个参数的`python`命令，该参数是我们的`hello.py`脚本的绝对路径。我们可以在我们的`test/resources`文件夹中找到它。
 
-总而言之，我们创建了我们的`ProcessBuilder`对象，将命令和参数值传递给构造函数。**同样重要的是，如果出现任何错误，对`redirectErrorStream(true).`的调用，错误输出将与标准输出合并。**
+总而言之，我们创建了我们的`ProcessBuilder`对象，将命令和参数值传递给构造函数。**同样重要的是，如果出现任何错误，对`redirectErrorStream(true)`的调用，错误输出将与标准输出合并。**
 
 这很有用，因为这意味着当我们在`Process`对象上调用`getInputStream()`方法时，我们可以从相应的输出中读取任何错误消息。如果我们不将这个属性设置为`true`，那么我们将需要使用`getInputStream()`和`getErrorStream()`方法从两个独立的流中读取输出。
 
@@ -61,15 +62,15 @@ public void givenPythonScript_whenPythonProcessInvoked_thenSuccess() throws Exce
 
 ### 3.2。使用 JSR-223 脚本引擎
 
-最初在 Java 6 中引入的 JSR-223 ，定义了一组提供基本脚本功能的脚本 API。这些方法提供了在 Java 和脚本语言之间执行脚本和共享值的机制。该标准的主要目标是试图为 Java 中不同脚本语言的互操作带来某种统一性。
+最初在 Java 6 中引入的 JSR-223，定义了一组提供基本脚本功能的脚本 API。这些方法提供了在 Java 和脚本语言之间执行脚本和共享值的机制。该标准的主要目标是试图为 Java 中不同脚本语言的互操作带来某种统一性。
 
-当然，我们可以为任何动态语言使用可插拔脚本引擎架构，只要它有一个 [JVM](/web/20220812012137/https://www.baeldung.com/jvm-languages) 实现。 **[Jython](https://web.archive.org/web/20220812012137/https://www.jython.org/) 是运行在 JVM 上的 Python 的 Java 平台实现。**
+当然，我们可以为任何动态语言使用可插拔脚本引擎架构，只要它有一个 [JVM](/web/20220812012137/https://www.baeldung.com/jvm-languages) 实现。**[Jython](https://web.archive.org/web/20220812012137/https://www.jython.org/) 是运行在 JVM 上的 Python 的 Java 平台实现。**
 
 假设我们在`CLASSPATH`上有 Jython，框架应该会自动发现我们有使用这个脚本引擎的可能性，并使我们能够直接请求 Python 脚本引擎。
 
 由于 Jython 可以从 [Maven Central](https://web.archive.org/web/20220812012137/https://search.maven.org/classic/#search%7Cga%7C1%7Ca%3A%22jython%22) 获得，我们可以将它包含在我们的`pom.xml`中:
 
-```java
+```
 <dependency>
     <groupId>org.python</groupId>
     <artifactId>jython</artifactId>
@@ -81,13 +82,13 @@ public void givenPythonScript_whenPythonProcessInvoked_thenSuccess() throws Exce
 
 让我们列出所有可用的脚本引擎:
 
-```java
+```
 ScriptEngineManagerUtils.listEngines();
 ```
 
 如果我们有可能使用 Jython，我们应该会看到显示的适当的脚本引擎:
 
-```java
+```
 ...
 Engine name: jython
 Version: 2.7.2
@@ -99,7 +100,7 @@ jython
 
 既然我们知道可以使用 Jython 脚本引擎，那么让我们来看看如何调用我们的`hello.py`脚本:
 
-```java
+```
 @Test
 public void givenPythonScriptEngineIsAvailable_whenScriptInvoked_thenOutputDisplayed() throws Exception {
     StringWriter writer = new StringWriter();
@@ -123,7 +124,7 @@ public void givenPythonScriptEngineIsAvailable_whenScriptInvoked_thenOutputDispl
 
 继续 Jython，我们也有可能将 Python 代码直接嵌入到我们的 Java 代码中。我们可以使用`PythonInterpretor`类来做到这一点:
 
-```java
+```
 @Test
 public void givenPythonInterpreter_whenPrintExecuted_thenOutputDisplayed() {
     try (PythonInterpreter pyInterp = new PythonInterpreter()) {
@@ -141,7 +142,7 @@ public void givenPythonInterpreter_whenPrintExecuted_thenOutputDisplayed() {
 
 现在让我们看一个将两个数字相加的例子:
 
-```java
+```
 @Test
 public void givenPythonInterpreter_whenNumbersAdded_thenOutputDisplayed() {
     try (PythonInterpreter pyInterp = new PythonInterpreter()) {
@@ -156,7 +157,7 @@ public void givenPythonInterpreter_whenNumbersAdded_thenOutputDisplayed() {
 
 在我们最后的 Jython 示例中，我们将看到当错误发生时会发生什么:
 
-```java
+```
 try (PythonInterpreter pyInterp = new PythonInterpreter()) {
     pyInterp.exec("import syds");
 }
@@ -164,7 +165,7 @@ try (PythonInterpreter pyInterp = new PythonInterpreter()) {
 
 当我们运行这段代码时，会抛出一个`PyException`,我们会看到相同的错误，就好像我们在使用原生 Python 一样:
 
-```java
+```
 Traceback (most recent call last):
   File "<string>", line 1, in <module>
 ImportError: No module named syds
@@ -173,7 +174,9 @@ ImportError: No module named syds
 有几点我们应该注意:
 
 *   作为`PythonIntepreter`的实现`AutoCloseable`，在处理这个类时使用 [`try-with-resources`](/web/20220812012137/https://www.baeldung.com/java-try-with-resources) 是个好习惯
+
 *   `PythonInterpreter`类名并不意味着我们的 Python 代码被解释了。Jython 中的 Python 程序是由 JVM 运行的，因此在执行之前要编译成 Java 字节码
+
 *   **虽然 Jython 是 Java 的 Python 实现，但它可能不包含与原生 Python 相同的所有子包**
 
 ## 5。Apache Commons Exec
@@ -182,7 +185,7 @@ ImportError: No module named syds
 
 `commons-exec`神器可以从 [Maven Central](https://web.archive.org/web/20220812012137/https://search.maven.org/classic/#search%7Cga%7C1%7Ca%3A%22commons-exec%22) 获得:
 
-```java
+```
 <dependency>
     <groupId>org.apache.commons</groupId>
     <artifactId>commons-exec</artifactId>
@@ -192,7 +195,7 @@ ImportError: No module named syds
 
 现在让我们看看如何使用这个库:
 
-```java
+```
 @Test
 public void givenPythonScript_whenPythonProcessExecuted_thenSuccess() 
   throws ExecuteException, IOException {
@@ -222,7 +225,7 @@ public void givenPythonScript_whenPythonProcessExecuted_thenSuccess()
 
 **事实上，Python 附带了一个简单的内置 HTTP 服务器，我们可以使用它通过 HTTP** 共享内容或文件:
 
-```java
+```
 python -m http.server 9000
 ```
 
@@ -232,7 +235,7 @@ python -m http.server 9000
 
 一旦我们有了可以访问的端点，我们就可以使用几个 [Java HTTP](/web/20220812012137/https://www.baeldung.com/java-http-request) 库中的任何一个来调用我们的 Python web 服务/应用程序实现。
 
-## 7 .**。结论**
+## 7。结论
 
 在本教程中，我们学习了一些最流行的从 Java 调用 Python 代码的技术。
 

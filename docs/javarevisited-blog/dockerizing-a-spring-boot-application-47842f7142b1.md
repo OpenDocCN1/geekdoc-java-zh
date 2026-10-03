@@ -1,3 +1,4 @@
+
 # 将 Spring Boot 的申请归档
 
 > 原文：<https://medium.com/javarevisited/dockerizing-a-spring-boot-application-47842f7142b1?source=collection_archive---------0----------------------->
@@ -17,7 +18,9 @@
 在本教程中，我将告诉你如何使用 [Docker](/javarevisited/top-15-online-courses-to-learn-docker-kubernetes-and-aws-for-fullstack-developers-and-devops-d8cc4f16e773) 和 [Spring Boot](/javarevisited/10-advanced-spring-boot-courses-for-experienced-java-developers-5e57606816bd?source=collection_home---4------0-----------------------) ，并给出一个使用 Spring Boot 和 Docker 的例子。
 
 *   这里使用了用于开发 REST APIs 的 Spring Boot 和 Spring 数据项目。
+
 *   Maven 用于自动化构建过程。
+
 *   使用典型的领域驱动开发方法，分离模型、存储库、服务和控制器类。
 
 你可以从这个 [**GitHub 链接**](https://github.com/ragcrix/LibraryInformationSystem) **下载项目源代码。**
@@ -37,6 +40,7 @@
 一个 Spring Boot 应用程序可以用两种最常用的方法来分类。
 
 *   **Dockerfile:** 它包含构建映像的本地 Docker 命令。
+
 *   它有一个插件来构建图像。
 
 # 使用 Dockerfile 归档
@@ -50,8 +54,11 @@ Dockerfile 文件
 我们的`Dockerfile`有四个命令。4️⃣
 
 *   `FROM`命令用于设置基础图像。在我们的`Dockerfile`，是`openjdk:13-jdk-alpine`。
+
 *   `ARG`命令用于在构建时将已定义的变量传递给构建器。这种情况下，就是我们的`.jar`文件。
+
 *   `COPY`命令将指定文件复制到图像中。这种情况下。我们创建的`.jar`文件将被复制到基础映像。
+
 *   `ENTRYPOINT`用于如何执行容器内部的应用程序。
 
 准备好`Dockerfile`之后，应该运行`maven package`命令来创建`.jar`文件。因为`Dockerfile`运行时需要这个`.jar`文件。💻
@@ -137,8 +144,11 @@ Docker 图像
 # 资源
 
 *   [https://spring.io/](https://spring.io/)
+
 *   [https://docs.docker.com/](https://docs.docker.com/)
+
 *   [面向初学者的免费 Spring Boot 课程](/javarevisited/10-free-spring-boot-tutorials-and-courses-for-java-developers-53dfe084587e)
+
 *   [面向初学者的免费 Docker 课程](/javarevisited/top-5-free-courses-to-learn-docker-for-beginners-best-of-lot-b2b1ad2b98ad)
 
 **注意:**本教程主要讲述如何以一种简单的方式对 Spring Boot 应用程序进行 dockerize。

@@ -1,3 +1,4 @@
+
 # 软件开发人员必须避免的 2 个代码抽象错误
 
 > 原文：<https://medium.com/javarevisited/abstraction-mistakes-to-avoid-d03b6f19294d?source=collection_archive---------1----------------------->

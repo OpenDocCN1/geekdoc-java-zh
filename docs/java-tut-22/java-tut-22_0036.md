@@ -1,3 +1,4 @@
+
 # `if-then` 和 `if-then-else` 语句
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html`](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html)
@@ -14,7 +15,6 @@ void applyBrakes() {
         currentSpeed--;
     }
 }
-
 ```
 
 如果这个测试评估为 `false`（意味着自行车没有在运动中），控制跳转到 `if-then` 语句的末尾。
@@ -27,7 +27,6 @@ void applyBrakes() {
     if (isMoving)
         currentSpeed--;
 }
-
 ```
 
 决定何时省略大括号是个人品味的问题。省略它们可能会使代码更脆弱。如果稍后向“then”子句添加第二个语句，一个常见的错误是忘记添加新需要的大括号。编译器无法捕捉到这种错误；你只会得到错误的结果。
@@ -44,13 +43,11 @@ void applyBrakes() {
         System.err.println("The bicycle has already stopped!");
     } 
 }
-
 ```
 
 以下程序，`IfElseDemo`，根据测试分数的值分配等级：90% 或以上为 A，80% 或以上为 B，依此类推。
 
 ```java
-
 class IfElseDemo {
     public static void main(String[] args) {
 
@@ -71,14 +68,12 @@ class IfElseDemo {
         System.out.println("Grade = " + grade);
     }
 }
-
 ```
 
 程序的输出是：
 
 ```java
-    Grade = C
-
+Grade = C
 ```
 
 你可能已经注意到 `testscore` 的值可以满足复合语句中的多个表达式：`76 >= 70` 和 `76 >= 60`。然而，一旦条件满足，适当的语句就会被执行（`grade = 'C';`），剩余的条件就不会被评估。

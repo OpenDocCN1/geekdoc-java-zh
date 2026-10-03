@@ -1,8 +1,9 @@
+
 # Spring Security OAuth 授权服务器
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-security-oauth-auth-server>
 
-## 1.介绍
+## 1. 介绍
 
 OAuth 是一个描述授权过程的开放标准。它可以用来授权用户访问 API。例如，REST API 可以限制只有具有适当角色的注册用户才能访问。
 
@@ -12,13 +13,13 @@ OAuth 授权服务器负责对用户进行身份验证，并发布包含用户�
 
 在这个过程中，我们将创建一个客户机-服务器应用程序，该应用程序将从 REST API 获取一系列 Baeldung 文章。客户端服务和服务器服务都需要 OAuth 认证。
 
-## 2.授权服务器实现
+## 2. 授权服务器实现
 
 让我们从查看 OAuth 授权服务器配置开始。它将作为文章资源和客户机服务器的认证源。
 
-### 2.1.属国
+### 2.1. 依赖
 
-首先，我们需要向我们的`pom.xml`文件添加一些依赖项:
+首先，我们需要向我们的`pom.xml`文件添加一些依赖项：
 
 ```java
 <dependency>
@@ -38,16 +39,16 @@ OAuth 授权服务器负责对用户进行身份验证，并发布包含用户�
 </dependency>
 ```
 
-### 2.2.配置
+### 2.2. 配置
 
-现在，让我们通过设置`application.yml`文件中的`server.port`属性来配置我们的认证服务器将运行的端口:
+现在，让我们通过设置`application.yml`文件中的`server.port`属性来配置我们的认证服务器将运行的端口：
 
 ```java
 server:
   port: 9000
 ```
 
-之后，我们可以转移到 Spring beans 配置。首先，我们需要一个`@Configuration`类，在其中我们将创建一些特定于 OAuth 的 beans。第一个将是客户服务的存储库。在我们的例子中，我们将有一个使用`RegisteredClient` builder 类创建的客户端:
+之后，我们可以转移到 Spring beans 配置。首先，我们需要一个`@Configuration`类，在其中我们将创建一些特定于 OAuth 的 beans。第一个将是客户服务的存储库。在我们的例子中，我们将有一个使用`RegisteredClient` builder 类创建的客户端：
 
 ```java
 @Configuration
@@ -71,16 +72,16 @@ public class AuthorizationServerConfig {
 }
 ```
 
-我们正在配置的属性是:
+我们正在配置的属性是：
 
 *   客户机 ID——Spring 将使用它来识别哪个客户机试图访问资源
-*   客户端密码–客户端和服务器都知道的秘密，在两者之间提供信任
-*   身份验证方法–在我们的例子中，我们将使用基本身份验证，它只是一个用户名和密码
-*   授权类型–我们希望允许客户端生成授权代码和刷新令牌
-*   重定向 URI–客户端将在基于重定向的流中使用它
-*   scope–该参数定义客户端可能拥有的授权。在我们的例子中，我们将需要`OidcScopes.OPENID`和我们的定制商品。阅读
+*   客户端密码——客户端和服务器都知道的秘密，在两者之间提供信任
+*   身份验证方法——在我们的例子中，我们将使用基本身份验证，它只是一个用户名和密码
+*   授权类型——我们希望允许客户端生成授权代码和刷新令牌
+*   重定向 URI——客户端将在基于重定向的流中使用它
+*   scope——该参数定义客户端可能拥有的授权。在我们的例子中，我们将需要`OidcScopes.OPENID`和我们的定制商品。阅读
 
-接下来，让我们配置一个 bean 来应用默认的 OAuth 安全性，并生成一个默认的表单登录页面:
+接下来，让我们配置一个 bean 来应用默认的 OAuth 安全性，并生成一个默认的表单登录页面：
 
 ```java
 @Bean
@@ -91,7 +92,7 @@ public SecurityFilterChain authServerSecurityFilterChain(HttpSecurity http) thro
 }
 ```
 
-每个授权服务器需要其令牌的签名密钥，以在安全域之间保持适当的边界。让我们生成一个 2048 字节的 RSA 密钥:
+每个授权服务器需要其令牌的签名密钥，以在安全域之间保持适当的边界。让我们生成一个 2048 字节的 RSA 密钥：
 
 ```java
 @Bean
@@ -118,7 +119,7 @@ private static KeyPair generateRsaKey() {
 }
 ```
 
-除了签名密钥之外，每个授权服务器还需要有一个唯一的发行者 URL。我们将通过创建`ProviderSettings` bean 将其设置为端口`9000` 上`http://auth-server` 的本地主机别名:
+除了签名密钥之外，每个授权服务器还需要有一个唯一的发行者 URL。我们将通过创建`ProviderSettings` bean 将其设置为端口`9000`上`http://auth-server`的本地主机别名：
 
 ```java
 @Bean
@@ -131,7 +132,7 @@ public ProviderSettings providerSettings() {
 
 此外，我们将在我们的`/etc/hosts`文件中添加一个`127.0.0.1 auth-server`条目。这允许我们在本地机器上运行客户机和 auth 服务器，并避免两者之间的会话 cookie 覆盖问题。
 
-最后，我们将使用一个`@EnableWebSecurity` 带注释的配置类来启用 Spring web 安全模块:
+最后，我们将使用一个`@EnableWebSecurity`带注释的配置类来启用 Spring web 安全模块：
 
 ```java
 @EnableWebSecurity
@@ -152,7 +153,7 @@ public class DefaultSecurityConfig {
 
 这里，我们调用`authorizeRequests.anyRequest().authenticated()`来要求对所有请求进行认证，并且我们通过调用`formLogin(defaults())`方法来提供基于表单的认证。
 
-此外，我们将定义一组用于测试的示例用户。对于这个例子，让我们创建一个只有一个管理员用户的存储库:
+此外，我们将定义一组用于测试的示例用户。对于这个例子，让我们创建一个只有一个管理员用户的存储库：
 
 ```java
 @Bean
@@ -165,13 +166,13 @@ UserDetailsService users() {
 }
 ```
 
-## 3.资源服务器
+## 3. 资源服务器
 
 现在，我们将创建一个资源服务器，它将从 GET 端点返回一个文章列表。端点应该只允许通过 OAuth 服务器验证的请求。
 
-### 3.1.属国
+### 3.1. 依赖
 
-首先，让我们包括所需的依赖项:
+首先，让我们包括所需的依赖项：
 
 ```java
 <dependency>
@@ -191,16 +192,16 @@ UserDetailsService users() {
 </dependency>
 ```
 
-### 3.2.配置
+### 3.2. 配置
 
-在我们开始实现代码之前，我们应该在`application.yml`文件中配置一些属性。第一个是服务器端口:
+在我们开始实现代码之前，我们应该在`application.yml`文件中配置一些属性。第一个是服务器端口：
 
 ```java
 server:
   port: 8090
 ```
 
-接下来，是安全配置的时候了。我们需要为我们的认证服务器设置正确的 URL，包括我们之前在`ProviderSettings` bean 中配置的主机和端口:
+接下来，是安全配置的时候了。我们需要为我们的认证服务器设置正确的 URL，包括我们之前在`ProviderSettings` bean 中配置的主机和端口：
 
 ```java
 spring:
@@ -211,7 +212,7 @@ spring:
           issuer-uri: http://auth-server:9000
 ```
 
-现在，我们可以设置我们的 web 安全配置。同样，我们想明确地说，对文章资源的每个请求都应该得到授权，并拥有适当的`articles.read`权限:
+现在，我们可以设置我们的 web 安全配置。同样，我们想明确地说，对文章资源的每个请求都应该得到授权，并拥有适当的`articles.read`权限：
 
 ```java
 @EnableWebSecurity
@@ -233,9 +234,9 @@ public class ResourceServerConfig {
 
 如此处所示，我们还调用了`oauth2ResourceServer()`方法，该方法将基于`application.yml`配置来配置 OAuth 服务器连接。
 
-### 3.3.物品控制器
+### 3.3. 文章控制器
 
-最后，我们将创建一个 REST 控制器，它将在`GET /articles`端点下返回一个文章列表:
+最后，我们将创建一个 REST 控制器，它将在`GET /articles`端点下返回一个文章列表：
 
 ```java
 @RestController
@@ -248,13 +249,13 @@ public class ArticlesController {
 }
 ```
 
-## 4.API 客户端
+## 4. API 客户端
 
 对于最后一部分，我们将创建一个 REST API 客户机，它将从资源服务器获取文章列表。
 
-### 4.1.属国
+### 4.1. 依赖
 
-首先，让我们包括所需的依赖项:
+首先，让我们包括所需的依赖项：
 
 ```java
 <dependency>
@@ -281,14 +282,16 @@ public class ArticlesController {
     <groupId>io.projectreactor.netty</groupId>
     <artifactId>reactor-netty</artifactId>
     <version>1.0.9</version>
-</dependency> 
+</dependency>
 ```
 
-### 4.2.配置
+### 4.2. 配置
 
-正如我们前面所做的，我们将定义一些用于身份验证的配置属性:
+正如我们前面所做的，我们将定义一些用于身份验证的配置属性：
 
-```java
+
+
+```yaml
 server:
   port: 8080
 
@@ -318,7 +321,7 @@ spring:
             issuer-uri: http://auth-server:9000
 ```
 
-现在，让我们创建一个`WebClient`实例来执行对资源服务器的 HTTP 请求。我们将使用标准实现，只增加一个 OAuth 授权过滤器:
+现在，让我们创建一个`WebClient`实例来执行对资源服务器的 HTTP 请求。我们将使用标准实现，只增加一个 OAuth 授权过滤器：
 
 ```java
 @Bean
@@ -331,7 +334,7 @@ WebClient webClient(OAuth2AuthorizedClientManager authorizedClientManager) {
 }
 ```
 
-`WebClient`需要一个`OAuth2AuthorizedClientManager`作为依赖项。让我们创建一个默认实现:
+`WebClient`需要一个`OAuth2AuthorizedClientManager`作为依赖项。让我们创建一个默认实现：
 
 ```java
 @Bean
@@ -352,7 +355,7 @@ OAuth2AuthorizedClientManager authorizedClientManager(
 }
 ```
 
-最后，我们将配置 web 安全性:
+最后，我们将配置 web 安全性：
 
 ```java
 @EnableWebSecurity
@@ -372,11 +375,11 @@ public class SecurityConfig {
 }
 ```
 
-在这里，以及在其他服务器中，我们需要对每个请求进行身份验证。此外，我们需要配置登录页面 URL(在`.yml` config 中定义)和 OAuth 客户端。
+在这里，以及在其他服务器中，我们需要对每个请求进行身份验证。此外，我们需要配置登录页面 URL（在`.yml`配置中定义）和 OAuth 客户端。
 
-### 4.3.文章客户端控制器
+### 4.3. 文章客户端控制器
 
-最后，我们可以创建数据访问控制器。我们将使用之前配置的`WebClient`向我们的资源服务器发送一个 HTTP 请求:
+最后，我们可以创建数据访问控制器。我们将使用之前配置的`WebClient`向资源服务器发送一个 HTTP 请求：
 
 ```java
 @RestController
@@ -399,22 +402,22 @@ public class ArticlesController {
 }
 ```
 
-在上面的例子中，我们以`OAuth2AuthorizedClient`类的形式从请求中获取 OAuth 授权令牌。它由 Spring 使用带有适当标识的`@RegisterdOAuth2AuthorizedClient`注释自动绑定。在我们的例子中，它来自我们之前在`.yml`文件中配置的`article-client-authorizaiton-code`。
+在上面的例子中，我们以`OAuth2AuthorizedClient`类的形式从请求中获取 OAuth 授权令牌。它由 Spring 使用带有适当标识的`@RegisterdOAuth2AuthorizedClient`注解自动绑定。在我们的例子中，它来自我们之前在`.yml`文件中配置的`article-client-authorizaiton-code`。
 
 这个授权令牌被进一步传递给 HTTP 请求。
 
-### 4.4.访问文章列表
+### 4.4. 访问文章列表
 
-现在，当我们进入浏览器并尝试访问`http://127.0.0.1:8080/articles`页面时，我们将被自动重定向到`http://auth-server:9000/login` URL 下的 OAuth 服务器登录页面:
+现在，当我们进入浏览器并尝试访问`http://127.0.0.1:8080/articles`页面时，我们将被自动重定向到`http://auth-server:9000/login` URL 下的 OAuth 服务器登录页面：
 
 [![](img/315ef2f9b7a008cccf560ffeb31c1109.png)](/web/20220626080629/https://www.baeldung.com/wp-content/uploads/2021/03/loginPage.png)
 
 提供正确的用户名和密码后，授权服务器会将我们重定向回所请求的 URL——文章列表。
 
-对 articles 端点的进一步请求不需要登录，因为访问令牌将存储在 cookie 中。
+对`/articles`端点的进一步请求不需要登录，因为访问令牌将存储在 cookie 中。
 
-## 5.结论
+## 5. 结论
 
 在本文中，我们学习了如何设置、配置和使用 Spring Security OAuth 授权服务器。
 
-和往常一样，GitHub 上的所有源代码[都是可用的。](https://web.archive.org/web/20220626080629/https://github.com/Baeldung/spring-security-oauth/tree/master/oauth-authorization-server)
+和往常一样，GitHub 上的所有源代码[都是可用的](https://web.archive.org/web/20220626080629/https://github.com/Baeldung/spring-security-oauth/tree/master/oauth-authorization-server)。

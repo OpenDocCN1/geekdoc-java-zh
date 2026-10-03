@@ -1,31 +1,22 @@
+
 # 使用布局管理器
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/layout/using.html`](https://docs.oracle.com/javase/tutorial/uiswing/layout/using.html)
 
-布局管理器是实现`LayoutManager`接口*的对象，确定容器内组件的大小和位置。尽管组件可以提供大小和对齐提示，但容器的布局管理器最终决定容器内组件的大小和位置。
+布局管理器是实现`LayoutManager`接口的对象，确定容器内组件的大小和位置。尽管组件可以提供大小和对齐提示，但容器的布局管理器最终决定容器内组件的大小和位置。
 
-* * *
-
-**注意：**本课程涵盖了手动编写布局代码，这可能具有挑战性。如果您不想学习布局管理的所有细节，可以选择使用`GroupLayout`布局管理器结合构建工具来布局您的 GUI。其中一个构建工具是 NetBeans IDE。否则，如果您想手动编写代码并且不想使用`GroupLayout`，那么建议使用`GridBagLayout`作为下一个最灵活和强大的布局管理器。
-
-* * *
+**注意：** 本课程涵盖了手动编写布局代码，这可能具有挑战性。如果您不想学习布局管理的所有细节，可以选择使用`GroupLayout`布局管理器结合构建工具来布局您的 GUI。其中一个构建工具是 NetBeans IDE。否则，如果您想手动编写代码并且不想使用`GroupLayout`，那么建议使用`GridBagLayout`作为下一个最灵活和强大的布局管理器。
 
 如果您有兴趣使用 JavaFX 创建 GUI，请参阅[JavaFX 中的布局](https://docs.oracle.com/javase/8/javafx/layout-tutorial/index.html)。
 
 本节讨论了与使用布局管理器相关的一些常见任务：
 
 +   设置布局管理器
-
 +   向容器添加组件
-
 +   提供大小和对齐提示
-
 +   在组件之间放置空间
-
 +   设置容器的方向
-
 +   选择布局管理器的提示
-
 +   第三方布局管理器
 
 ## 设置布局管理器
@@ -36,7 +27,6 @@
 
 ```java
 JPanel panel = new JPanel(new BorderLayout());
-
 ```
 
 创建容器后，可以使用`setLayout`方法设置其布局管理器。例如：
@@ -44,10 +34,9 @@ JPanel panel = new JPanel(new BorderLayout());
 ```java
 Container contentPane = frame.getContentPane();
 contentPane.setLayout(new FlowLayout());
-
 ```
 
-尽管我们*强烈建议*您使用布局管理器，但您也可以在没有布局管理器的情况下进行布局。通过将容器的布局属性设置为 null，您使容器不使用布局管理器。使用这种策略，称为*绝对定位*，您必须指定容器内每个组件的大小和位置。绝对定位的一个缺点是，当顶层容器调整大小时，它不会调整得很好。它也无法很好地适应用户和系统之间的差异，例如不同的字体大小和区域设置。
+尽管我们强烈建议您使用布局管理器，但您也可以在没有布局管理器的情况下进行布局。通过将容器的布局属性设置为`null`，您使容器不使用布局管理器。使用这种策略，称为*绝对定位*，您必须指定容器内每个组件的大小和位置。绝对定位的一个缺点是，当顶层容器调整大小时，它不会调整得很好。它也无法很好地适应用户和系统之间的差异，例如不同的字体大小和区域设置。
 
 ## 向容器添加组件
 
@@ -55,7 +44,6 @@ contentPane.setLayout(new FlowLayout());
 
 ```java
 pane.add(aComponent, BorderLayout.PAGE_START);
-
 ```
 
 每个布局管理器的操作指南中都详细说明了您需要为`add`方法指定哪些参数（如果有的话）。一些布局管理器，如`GridBagLayout`和`SpringLayout`，需要复杂的设置过程。然而，许多布局管理器只是根据它们添加到容器中的顺序来放置组件。
@@ -71,7 +59,6 @@ pane.add(aComponent, BorderLayout.PAGE_START);
 ```java
 component.setMaximumSize(new Dimension(Integer.MAX_VALUE,
                                        Integer.MAX_VALUE));
-
 ```
 
 许多布局管理器不关注组件的请求的最大尺寸。然而，`BoxLayout`和`SpringLayout`会关注。此外，`GroupLayout`提供了明确设置最小、首选或最大尺寸的能力，而无需触及组件。
@@ -82,15 +69,15 @@ component.setMaximumSize(new Dimension(Integer.MAX_VALUE,
 
 影响容器中可见组件之间空间量的三个因素：
 
-布局管理器
+**布局管理器**
 
 一些布局管理器会自动在组件之间放置空间；其他则不会。有些允许您指定组件之间的空间量。有关间距支持的信息，请参见每个布局管理器的操作页面。
 
-不可见组件
+**不可见组件**
 
 你可以创建轻量级组件，不进行绘制，但可以在 GUI 中占据空间。通常情况下，您可以在由`BoxLayout`控制的容器中使用不可见组件。参见如何使用 BoxLayout 以查看使用不可见组件的示例。
 
-空边框
+**空边框**
 
 无论使用何种布局管理器，您都可以通过向组件添加空边框来影响组件之间的视觉空间量。最适合空边框的候选组件是通常没有默认边框的组件，例如面板和标签。一些其他组件可能在某些外观和感觉实现中无法很好地与边框配合工作，因为它们的绘制代码的实现方式不同。有关边框的信息，请参见如何使用边框。
 
@@ -108,7 +95,6 @@ Container contentPane = frame.getContentPane();
 contentPane.applyComponentOrientation(
     ComponentOrientation.getOrientation(
         contentPane.getLocale()));
-
 ```
 
 这里有两张图片展示了`FlowLayout`在完全相同的容器中以不同方向布局组件的方式。
@@ -123,11 +109,7 @@ contentPane.applyComponentOrientation(
 
 支持组件方向的标准布局管理器包括`FlowLayout`、`BorderLayout`、`BoxLayout`、`GridBagLayout`和`GridLayout`。
 
-* * *
-
 **注意：** 必须注意将组件方向应用于渲染器、编辑器和通过容器层次结构的正常遍历无法访问的任何其他组件。
-
-* * *
 
 ## 选择布局管理器的提示
 
@@ -166,9 +148,6 @@ contentPane.applyComponentOrientation(
 Swing 社区创建了其他第三方布局管理器，以补充 Java 平台提供的布局管理器。以下列表并非绝对，但下面列出的布局管理器是最受欢迎的：
 
 +   [MiGLayout](http://www.miglayout.com/)
-
 +   [Karsten Lentzsch 的 FormLayout](http://www.jgoodies.com/)
 
-* * *
-
-*早在 JDK 1.1 时引入了第二个接口`LayoutManager2`。`LayoutManager2`扩展了`LayoutManager`，提供了最大尺寸和对齐支持。`LayoutManager2`还添加了`addLayoutComponent`方法，接受一个`Object`，以及`invalidateLayout`方法。布局管理器还需要`LayoutManager2`提供的通知，因此任何现代布局管理器都需要实现它。
+*早在 JDK 1.1 时引入了第二个接口`LayoutManager2`。`LayoutManager2`扩展了`LayoutManager`，提供了最大尺寸和对齐支持。`LayoutManager2`还添加了`addLayoutComponent`方法，接受一个`Object`，以及`invalidateLayout`方法。布局管理器还需要`LayoutManager2`提供的通知，因此任何现代布局管理器都需要实现它。*

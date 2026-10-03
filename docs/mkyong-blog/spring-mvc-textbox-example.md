@@ -1,29 +1,30 @@
+
 # Spring MVC 文本框示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring-mvc/spring-mvc-textbox-example/>
 
-在 Spring MVC 中，可以使用 **< form:input / >** 标签来呈现一个 HTML textbox 字段。举个例子，
+在 Spring MVC 中，可以使用`<form:input />`标签来呈现一个 HTML textbox 字段。举个例子：
 
 ```java
- <form:input path="userName" /> 
+<form:input path="userName" />
 ```
 
-它将呈现以下 HTML 代码
+它将呈现以下 HTML 代码：
 
 ```java
- <input id="userName" name="userName" type="text" value=""/> 
+<input id="userName" name="userName" type="text" value=""/>
 ```
 
-在本教程中，我们将向您展示如何使用 Spring 的表单标签" **input** "来**呈现一个 HTML textbox** 来存储"**用户名**"。此外，添加一个空检查验证器来确保 textbox 值不为空。
+在本教程中，我们将向您展示如何使用 Spring 的表单标签`input`来**呈现一个 HTML textbox** 以存储“**用户名**”。此外，添加一个空检查验证器来确保 textbox 值不为空。
 
-## 1.控制器
+## 1. 控制器
 
-一个 **SimpleFormController** 来处理表单值，并将表单值链接到客户对象。
+一个`SimpleFormController`来处理表单值，并将表单值链接到客户对象。
 
-*文件:TextBoxController.java*
+*文件：`TextBoxController.java`*
 
 ```java
- package com.mkyong.customer.controller;
+package com.mkyong.customer.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -48,33 +49,33 @@ public class TextBoxController extends SimpleFormController{
 		return new ModelAndView("CustomerSuccess","customer",customer);
 
 	}
-} 
+}
 ```
 
- ## 2.模型
+## 2. 模型
 
 存储文本框值的客户对象。
 
-*文件:Customer.java*
+*文件：`Customer.java`*
 
 ```java
- package com.mkyong.customer.model;
+package com.mkyong.customer.model;
 
 public class Customer{
 
 	String userName;
 	//getter and setter methods
-} 
+}
 ```
 
- ## 3.表单验证器
+## 3. 表单验证器
 
-创建一个表单验证器类，并使用 **ValidationUtils** 类来确保“用户名”不为空，否则，从相应的资源包(属性文件)中获取“ **required.userName** 消息。
+创建一个表单验证器类，并使用`ValidationUtils`类来确保“用户名”不为空，否则，从相应的资源包（属性文件）中获取`required.userName`消息。
 
-*文件:CustomerValidator.java*
+*文件：`CustomerValidator.java`*
 
 ```java
- package com.mkyong.customer.validator;
+package com.mkyong.customer.validator;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -96,24 +97,23 @@ public class CustomerValidator implements Validator{
 			"required.userName", "Field name is required.");
 
 	}
-
-} 
+}
 ```
 
-*文件:message.properties*
+*文件：`message.properties`*
 
 ```java
- required.userName = username is required! 
+required.userName = username is required!
 ```
 
-## 4.视角
+## 4. 视图
 
-一个 JSP 页面使用 Spring 的表单标签" **input** "来呈现一个 HTML textbox，并放置一些 CSS 样式来突出显示错误消息。
+一个 JSP 页面使用 Spring 的表单标签`input`来呈现一个 HTML textbox，并放置一些 CSS 样式来突出显示错误消息。
 
-*文件:CustomerForm.jsp*
+*文件：`CustomerForm.jsp`*
 
 ```java
- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
 <style>
@@ -152,30 +152,30 @@ public class CustomerValidator implements Validator{
 	</form:form>
 
 </body>
-</html> 
+</html>
 ```
 
 如果表单已提交，则呈现成功的页面并显示已提交的文本框值。
 
-*文件:CustomerSuccess.jsp*
+*文件：`CustomerSuccess.jsp`*
 
 ```java
- <html>
+<html>
 <body>
 	<h2>Spring's form textbox example</h2>
 
 	userName : ${customer.userName}
 
 </body>
-</html> 
+</html>
 ```
 
-## 5.弹簧豆配置
+## 5. Spring Bean 配置
 
 全部链接起来~
 
 ```java
- <beans 
+<beans 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
@@ -209,12 +209,12 @@ public class CustomerValidator implements Validator{
 		</property>
 	</bean>
 
-</beans> 
+</beans>
 ```
 
-## 6.演示
+## 6. 演示
 
-访问页面-**http://localhost:8080/SpringMVCForm/textbox . htm**
+访问页面 - `http://localhost:8080/SpringMVCForm/textbox.htm`
 
 ![SpringMVC-TextBox-Example-1](img/64d1b4cfc7f64420bfb8e37e7b5ef5dd.png "SpringMVC-TextBox-Example-1")
 
@@ -228,11 +228,6 @@ public class CustomerValidator implements Validator{
 
 ## 下载源代码
 
-Download it – [SpringMVCForm-TextBox-Example.zip](http://web.archive.org/web/20190210093604/http://www.mkyong.com/wp-content/uploads/2010/08/SpringMVCForm-TextBox-Example.zip) (9KB)[spring mvc](http://web.archive.org/web/20190210093604/http://www.mkyong.com/tag/spring-mvc/) [textbox](http://web.archive.org/web/20190210093604/http://www.mkyong.com/tag/textbox/)
+Download it – [SpringMVCForm-TextBox-Example.zip](http://web.archive.org/web/20190210093604/http://www.mkyong.com/wp-content/uploads/2010/08/SpringMVCForm-TextBox-Example.zip) (9KB)
 
-
-
-
-
-
-
+[spring mvc](http://web.archive.org/web/20190210093604/http://www.mkyong.com/tag/spring-mvc/) [textbox](http://web.archive.org/web/20190210093604/http://www.mkyong.com/tag/textbox/)

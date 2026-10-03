@@ -1,14 +1,15 @@
+
 # 将卷添加到 Docker 时排除子文件夹
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/ops/docker-exclude-sub-folder-when-adding-volume>
 
-## 1.概观
+## 1. 概观
 
 当我们需要将容器资源链接到主机时，我们挂载 [Docker 卷](/web/20221222154222/https://www.baeldung.com/ops/docker-volumes)。我们可以使用不同的卷，如命名卷或绑定装载。此外，无论它们是否持久，我们都可以使用本地或远程资源。但是，在挂载时，我们可能需要排除一些不需要的文件或文件夹。
 
 在本教程中，**我们将通过一些 [Docker Compose](/web/20221222154222/https://www.baeldung.com/ops/docker-compose) 的例子来学习如何在挂载卷时排除文件夹。**
 
-## 2.创建 nodejs docker 映像
+## 2. 创建 nodejs docker 映像
 
 那么为什么我们需要排除一些文件或者一个文件夹带有 [Docker](/web/20221222154222/https://www.baeldung.com/ops/docker-guide) ？首先，我们来讨论 Docker 图像。
 
@@ -41,13 +42,13 @@ $ docker build -t node-docker .
 
 当我们构建 Docker 映像时，我们会将文件发送到存储映像的 Docker 服务器。Docker 基于`copy`或`run`等命令创建分层图像。
 
-让我们运行`docker [history](https://web.archive.org/web/20221222154222/https://docs.docker.com/engine/reference/commandline/history/)`命令来查看图像的不同图层:
+让我们运行`docker history`命令来查看图像的不同图层:
 
 ```java
 $ docker history --format "ID-> {{.ID}} | Created-> {{.CreatedSince}} | Created By-> {{.CreatedBy}} | Size: {{.Size}}" e870a50eed97
 ```
 
-我们可以使用`–format`选项创建自定义输出，并显示相关命令或大小等信息:
+我们可以使用`--format`选项创建自定义输出，并显示相关命令或大小等信息:
 
 ```java
 ID-> e870a50eed97 | Created-> 36 hours ago | Created By-> /bin/sh -c #(nop)  CMD ["node" "server.js"] | Size: 0B
@@ -56,14 +57,14 @@ ID-> d49b84f48e41 | Created-> 36 hours ago | Created By-> /bin/sh -c npm install
 ID-> a351be0717a1 | Created-> 36 hours ago | Created By-> /bin/sh -c #(nop) COPY multi:9959dc16241ba60… | Size: 80.7kB
 ID-> 56b22d35f315 | Created-> 36 hours ago | Created By-> /bin/sh -c #(nop) WORKDIR /app | Size: 0B
 ID-> c28b64493ce8 | Created-> 36 hours ago | Created By-> /bin/sh -c #(nop)  ENV NODE_ENV=production | Size: 0B
-ID-> f5be1883c8e0 | Created-> 2 years ago | Created By-> /bin/sh -c #(nop)  CMD ["node"] | Size: 0B 
+ID-> f5be1883c8e0 | Created-> 2 years ago | Created By-> /bin/sh -c #(nop)  CMD ["node"] | Size: 0B
 ```
 
-## 3.从映像构建中排除文件和文件夹
+## 3. 从映像构建中排除文件和文件夹
 
 让我们考虑这样一种情况，我们有一个大文件，例如，一个日志、一个 zip 或一个 jar 文件。或者我们可能有不想在最终版本中公开的文件，比如密钥或密码。
 
-**我们可以使用 [`.dockerignore`](https://web.archive.org/web/20221222154222/https://docs.docker.com/engine/reference/builder/#dockerignore-file) 文件来避免将这些文件发送到 Docker 服务器。**与 [`.gitignore`](https://web.archive.org/web/20221222154222/https://git-scm.com/docs/gitignore) 文件类似。
+**我们可以使用 [`.dockerignore`](https://web.archive.org/web/20221222154222/https://docs.docker.com/engine/reference/builder/#dockerignore-file) 文件来避免将这些文件发送到 Docker 服务器。** 与 [`.gitignore`](https://web.archive.org/web/20221222154222/https://git-scm.com/docs/gitignore) 文件类似。
 
 假设我们的项目中有一个带密码的文件。我们可以创建一个，例如:
 
@@ -74,7 +75,7 @@ $ echo 'password' >secret.txt
 现在，我们想从映像中排除这个文件。我们可以将它添加到我们的。`dockerignore`文件:
 
 ```java
-# Ignoring the password file 
+# Ignoring the password file
 secret.txt
 ```
 
@@ -93,7 +94,7 @@ logs/
 $ docker run -d --publish 8000:8000 node-docker
 ```
 
-或者，如果我们使用 Docker Compose，我们可以用一个`docker-compose.yml`文件运行`[docker-compose up](https://web.archive.org/web/20221222154222/https://docs.docker.com/engine/reference/commandline/compose_up/)`，例如:
+或者，如果我们使用 Docker Compose，我们可以用一个`docker-compose.yml`文件运行`docker-compose up`，例如:
 
 ```java
 services:
@@ -109,9 +110,9 @@ services:
 $ docker exec -it d8938bc93406 bash
 ```
 
-一旦进入容器，如果我们检查内容，例如，用`ls` 命令，没有`secret.txt`文件或其他被排除的资源必须在运行的容器中。
+一旦进入容器，如果我们检查内容，例如，用`ls`命令，没有`secret.txt`文件或其他被排除的资源必须在运行的容器中。
 
-## 4.排除 Docker 卷中的文件和文件夹
+## 4. 排除 Docker 卷中的文件和文件夹
 
 我们已经了解了如何在构建映像时排除文件和文件夹。我们可能想对运行使用[卷](/web/20221222154222/https://www.baeldung.com/ops/docker-volumes)的容器做同样的事情。
 
@@ -143,7 +144,7 @@ $ docker-compose up -d
 
 让我们来看几个避免删除主机中资源的解决方案。
 
-### 4.1.排除文件
+### 4.1. 排除文件
 
 我们可以从排除容器中文件的挂载开始。一旦我们设置了音量，我们可以使用`/dev/null`命令来解决这个问题:
 
@@ -162,7 +163,7 @@ services:
 
 当使用`/dev/null`时，我们丢弃任何写入文件的东西。在这种情况下，我们将以空的`secret.txt`结束。此外，由于该文件与`/dev/null`绑定，因此无法修改。
 
-### 4.2.排除文件夹
+### 4.2. 排除文件夹
 
 更有趣的是，我们可以排除文件夹和子文件夹。我们可以通过在特定目录或子目录上创建一个匿名或[命名的卷](https://web.archive.org/web/20221222154222/https://docs.docker.com/storage/volumes/)来实现这一点。
 
@@ -195,8 +196,8 @@ volumes:
 
 最后，我们可以尝试修改容器中`/node_modules`目录的内容。在这种情况下，对我们的主机不会有任何影响。
 
-## 5.结论
+## 5. 结论
 
 在本文中，我们学习了如何使用 Docker 排除文件或文件夹等资源。我们查看了从映像构建到运行容器的例子。对于容器，我们看到了使用 Docker Compose 的例子以及使用卷来排除子文件夹的可能性。
 
-一如既往，我们可以在 GitHub 上找到工作代码示例[。](https://web.archive.org/web/20221222154222/https://github.com/eugenp/tutorials/tree/master/docker-modules/docker-compose/)
+一如既往，我们可以在 GitHub 上找到工作代码示例。

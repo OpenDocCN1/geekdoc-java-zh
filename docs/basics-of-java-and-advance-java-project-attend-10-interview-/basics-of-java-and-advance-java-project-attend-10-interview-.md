@@ -1,45 +1,15 @@
+
 # Java 基础与高级 Java 项目：在软件公司参加 10 面试并获得 5 个录用通知书
-
-
-
-
-
-
-
-
-
-
-
-
 
 在本书中，你将学习到带有图解的解释和实操练习，成功执行练习并带有输出的现成解决方案以及逐步说明。
 
 ## AMIT K
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 逐步学习 Java。
 
-# 第1 章：引言
+## 第 1 章：引言
 
-- 1 Java 虚拟机 ( JVM )
+- 1 Java 虚拟机（JVM）
 
 Java 是关于如何编写一种可以在不同平台上运行的程序。**一次编写，到处运行**。
 
@@ -49,33 +19,33 @@ Java 是关于如何编写一种可以在不同平台上运行的程序。**一�
 
 JVM 编写的程序被编译成字节码（Byte Code），一种可以在 JVM 环境中运行的特殊代码。JVM 帮助将字节码翻译成宿主机的代码。这就是为什么 Java 可以在不同平台上运行的原理。
 
-## JDK 和 JRE
+### JDK 和 JRE
 
-### JRE ( Java 运行环境 )
+#### JRE（Java 运行环境）
 
 ![](img/687999f111d1584abe7fc92b1c74ca2a_4_2.png)
 
 JRE 是 Java Runtime Environment 的缩写，包含了 JVM（Java 虚拟机）和许多支持执行 Java 语言编写的程序的 Java 类。
 
-### JDK ( Java 开发工具包 )
+#### JDK（Java 开发工具包）
 
 ![](img/687999f111d1584abe7fc92b1c74ca2a_5_1.png)
 
 JDK 代表 Java Development Kit，它由两个部分组成：JRE 和 Java 开发工具。
 
-JDK 对程序员来说是必须的，因为 Java 开发工具为 Java 应用程序开发提供了工具，例如 Javac，它可以将开发者的源代码编译成字节码等，然后在开发过程中使用 JRE 运行应用程序。
+JDK 对程序员来说是必须的，因为 Java 开发工具为 Java 应用程序开发提供了工具，例如 `Javac`，它可以将开发者的源代码编译成字节码等，然后在开发过程中使用 JRE 运行应用程序。
 
-# 第2 章：Java 中的数据类型
+## 第 2 章：Java 中的数据类型
 
 - 1 数据类型概览
-- 2 byte
-- 3 boolean
-- 4 char
-- 5 short
-- 6 int
-- 7 long
-- 8 float
-- 9 double
+- 2 `byte`
+- 3 `boolean`
+- 4 `char`
+- 5 `short`
+- 6 `int`
+- 7 `long`
+- 8 `float`
+- 9 `double`
 - 10 引用类型
 
 ## 数据类型概览
@@ -83,15 +53,14 @@ JDK 对程序员来说是必须的，因为 Java 开发工具为 Java 应用程�
 数据类型是关于如何处理数据的约定。
 
 - 基本类型（Primitive Types）
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
+  - `byte`
+  - `boolean`
+  - `char`
+  - `short`
+  - `int`
+  - `long`
+  - `float`
+  - `double`
 - 引用类型（Reference Types）
 
 引用类型是存储对象的引用。
@@ -117,142 +86,142 @@ JDK 对程序员来说是必须的，因为 Java 开发工具为 Java 应用程�
 
 基本类型是存储值的类型。
 
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
+- `byte`
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
 
 基本类型存储的是值。
 
 引用类型存储的是指向对象的地址。
 
-### byte
+#### `byte`
 
-byte 是一个 8 位的符号整数类型。
+`byte` 是一个 8 位的符号整数类型。
 
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### boolean
-
-boolean 是存储真或假值的类型。
-
-- byte
-- char
-- short
-- int
-- long
-- float
-- double
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
 
 基本类型存储的是值。
 
 引用类型存储的是指向对象的地址。
 
-### char
+#### `boolean`
 
-char 是一个 16 位的 Unicode 字符类型。
+`boolean` 是存储真或假值的类型。
 
-- boolean
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### short
-
-short 是一个 16 位的符号整数类型。
-
-- boolean
-- char
-- int
-- long
-- float
-- double
+- `byte`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
 
 基本类型存储的是值。
 
 引用类型存储的是指向对象的地址。
 
-### int
+#### `char`
 
-int 是一个 32 位的符号整数类型。
+`char` 是一个 16 位的 Unicode 字符类型。
 
-- boolean
-- char
-- short
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### long
-
-long 是一个 64 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- float
-- double
+- `boolean`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
 
 基本类型存储的是值。
 
 引用类型存储的是指向对象的地址。
 
-### float
+#### `short`
 
-float 是一个 32 位的单浮点数类型。
+`short` 是一个 16 位的符号整数类型。
 
-- boolean
-- char
-- short
-- int
-- long
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### double
-
-double 是一个 64 位的双精度浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
+- `boolean`
+- `char`
+- `int`
+- `long`
+- `float`
+- `double`
 
 基本类型存储的是值。
 
 引用类型存储的是指向对象的地址。
 
-### 引用类型
+#### `int`
+
+`int` 是一个 32 位的符号整数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+#### `long`
+
+`long` 是一个 64 位的符号整数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+#### `float`
+
+`float` 是一个 32 位的单浮点数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+#### `double`
+
+`double` 是一个 64 位的双精度浮点数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+### 引用类型（重复出现，但保留原始内容）
 
 引用类型是存储对象的引用。
 
@@ -265,7 +234,7 @@ double 是一个 64 位的双精度浮点数类型。
 
 引用类型存储的是指向对象的地址。
 
-### 类
+#### 类
 
 类是对象的蓝图。
 
@@ -277,7 +246,7 @@ double 是一个 64 位的双精度浮点数类型。
 
 引用类型存储的是指向对象的地址。
 
-### 数组
+#### 数组
 
 数组是存储相同类型元素的集合。
 
@@ -288,7 +257,7 @@ double 是一个 64 位的双精度浮点数类型。
 
 引用类型存储的是指向对象的地址。
 
-### 接口
+#### 接口
 
 接口是定义一组方法的类。
 
@@ -299,20 +268,698 @@ double 是一个 64 位的双精度浮点数类型。
 
 引用类型存储的是指向对象的地址。
 
-### 包装类
+#### 包装类
 
 包装类是基本类型的对象的表示。
 
-- Byte
-- Boolean
-- Character
-- Short
-- Integer
-- Long
-- Float
-- Double
+- `Byte`
+- `Boolean`
+- `Character`
+- `Short`
+- `Integer`
+- `Long`
+- `Float`
+- `Double`
 
 基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+（注意：原文中“数据类型概览”及其后的内容重复出现四次，此处按照原文保留重复部分，仅调整格式。）
+
+### 数据类型概览（第二次出现）
+
+数据类型是关于如何处理数据的约定。
+
+- 基本类型（Primitive Types）
+  - `byte`
+  - `boolean`
+  - `char`
+  - `short`
+  - `int`
+  - `long`
+  - `float`
+  - `double`
+- 引用类型（Reference Types）
+
+引用类型是存储对象的引用。
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+#### 基本类型
+
+基本类型是存储值的类型。
+
+- `byte`
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `byte`
+
+`byte` 是一个 8 位的符号整数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `boolean`
+
+`boolean` 是存储真或假值的类型。
+
+- `byte`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `char`
+
+`char` 是一个 16 位的 Unicode 字符类型。
+
+- `boolean`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `short`
+
+`short` 是一个 16 位的符号整数类型。
+
+- `boolean`
+- `char`
+- `int`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `int`
+
+`int` 是一个 32 位的符号整数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `long`
+
+`long` 是一个 64 位的符号整数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `float`
+
+`float` 是一个 32 位的单浮点数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `double`
+
+`double` 是一个 64 位的双精度浮点数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+#### 引用类型
+
+引用类型是存储对象的引用。
+
+- 类（Classes）
+- 数组（Arrays）
+- 接口（Interfaces）
+- 包装类（Wrapper Classes）
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### 类
+
+类是对象的蓝图。
+
+- 字段（Fields）
+- 方法（Methods）
+- 构造函数（Constructors）
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### 数组
+
+数组是存储相同类型元素的集合。
+
+- 一维数组
+- 二维数组
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### 接口
+
+接口是定义一组方法的类。
+
+- 方法签名（Method Signatures）
+- 常量（Constants）
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### 包装类
+
+包装类是基本类型的对象的表示。
+
+- `Byte`
+- `Boolean`
+- `Character`
+- `Short`
+- `Integer`
+- `Long`
+- `Float`
+- `Double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+### 数据类型概览（第三次出现）
+
+数据类型是关于如何处理数据的约定。
+
+- 基本类型（Primitive Types）
+  - `byte`
+  - `boolean`
+  - `char`
+  - `short`
+  - `int`
+  - `long`
+  - `float`
+  - `double`
+- 引用类型（Reference Types）
+
+引用类型是存储对象的引用。
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+#### 基本类型
+
+基本类型是存储值的类型。
+
+- `byte`
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `byte`
+
+`byte` 是一个 8 位的符号整数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `boolean`
+
+`boolean` 是存储真或假值的类型。
+
+- `byte`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `char`
+
+`char` 是一个 16 位的 Unicode 字符类型。
+
+- `boolean`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `short`
+
+`short` 是一个 16 位的符号整数类型。
+
+- `boolean`
+- `char`
+- `int`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `int`
+
+`int` 是一个 32 位的符号整数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `long`
+
+`long` 是一个 64 位的符号整数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `float`
+
+`float` 是一个 32 位的单浮点数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `double`
+
+`double` 是一个 64 位的双精度浮点数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+#### 引用类型
+
+引用类型是存储对象的引用。
+
+- 类（Classes）
+- 数组（Arrays）
+- 接口（Interfaces）
+- 包装类（Wrapper Classes）
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### 类
+
+类是对象的蓝图。
+
+- 字段（Fields）
+- 方法（Methods）
+- 构造函数（Constructors）
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### 数组
+
+数组是存储相同类型元素的集合。
+
+- 一维数组
+- 二维数组
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### 接口
+
+接口是定义一组方法的类。
+
+- 方法签名（Method Signatures）
+- 常量（Constants）
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### 包装类
+
+包装类是基本类型的对象的表示。
+
+- `Byte`
+- `Boolean`
+- `Character`
+- `Short`
+- `Integer`
+- `Long`
+- `Float`
+- `Double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+### 数据类型概览（第四次出现）
+
+数据类型是关于如何处理数据的约定。
+
+- 基本类型（Primitive Types）
+  - `byte`
+  - `boolean`
+  - `char`
+  - `short`
+  - `int`
+  - `long`
+  - `float`
+  - `double`
+- 引用类型（Reference Types）
+
+引用类型是存储对象的引用。
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+#### 基本类型
+
+基本类型是存储值的类型。
+
+- `byte`
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `byte`
+
+`byte` 是一个 8 位的符号整数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `boolean`
+
+`boolean` 是存储真或假值的类型。
+
+- `byte`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `char`
+
+`char` 是一个 16 位的 Unicode 字符类型。
+
+- `boolean`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `short`
+
+`short` 是一个 16 位的符号整数类型。
+
+- `boolean`
+- `char`
+- `int`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `int`
+
+`int` 是一个 32 位的符号整数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `long`
+
+`long` 是一个 64 位的符号整数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `float`
+
+`float` 是一个 32 位的单浮点数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### `double`
+
+`double` 是一个 64 位的双精度浮点数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+#### 引用类型
+
+引用类型是存储对象的引用。
+
+- 类（Classes）
+- 数组（Arrays）
+- 接口（Interfaces）
+- 包装类（Wrapper Classes）
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### 类
+
+类是对象的蓝图。
+
+- 字段（Fields）
+- 方法（Methods）
+- 构造函数（Constructors）
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### 数组
+
+数组是存储相同类型元素的集合。
+
+- 一维数组
+- 二维数组
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### 接口
+
+接口是定义一组方法的类。
+
+- 方法签名（Method Signatures）
+- 常量（Constants）
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+##### 包装类
+
+包装类是基本类型的对象的表示。
+
+- `Byte`
+- `Boolean`
+- `Character`
+- `Short`
+- `Integer`
+- `Long`
+- `Float`
+- `Double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+
 
 引用类型存储的是指向对象的地址。
 
@@ -321,15 +968,14 @@ double 是一个 64 位的双精度浮点数类型。
 数据类型是关于如何处理数据的约定。
 
 - 基本类型（Primitive Types）
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
+  - `byte`
+  - `boolean`
+  - `char`
+  - `short`
+  - `int`
+  - `long`
+  - `float`
+  - `double`
 - 引用类型（Reference Types）
 
 引用类型是存储对象的引用。
@@ -342,136 +988,136 @@ double 是一个 64 位的双精度浮点数类型。
 
 基本类型是存储值的类型。
 
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
+- `byte`
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
 
 基本类型存储的是值。
 
 引用类型存储的是指向对象的地址。
 
-### byte
+#### `byte`
 
-byte 是一个 8 位的符号整数类型。
+`byte` 是一个 8 位的符号整数类型。
 
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### boolean
-
-boolean 是存储真或假值的类型。
-
-- byte
-- char
-- short
-- int
-- long
-- float
-- double
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
 
 基本类型存储的是值。
 
 引用类型存储的是指向对象的地址。
 
-### char
+#### `boolean`
 
-char 是一个 16 位的 Unicode 字符类型。
+`boolean` 是存储真或假值的类型。
 
-- boolean
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### short
-
-short 是一个 16 位的符号整数类型。
-
-- boolean
-- char
-- int
-- long
-- float
-- double
+- `byte`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
 
 基本类型存储的是值。
 
 引用类型存储的是指向对象的地址。
 
-### int
+#### `char`
 
-int 是一个 32 位的符号整数类型。
+`char` 是一个 16 位的 Unicode 字符类型。
 
-- boolean
-- char
-- short
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### long
-
-long 是一个 64 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- float
-- double
+- `boolean`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
 
 基本类型存储的是值。
 
 引用类型存储的是指向对象的地址。
 
-### float
+#### `short`
 
-float 是一个 32 位的单浮点数类型。
+`short` 是一个 16 位的符号整数类型。
 
-- boolean
-- char
-- short
-- int
-- long
-- double
+- `boolean`
+- `char`
+- `int`
+- `long`
+- `float`
+- `double`
 
 基本类型存储的是值。
 
 引用类型存储的是指向对象的地址。
 
-### double
+#### `int`
 
-double 是一个 64 位的双精度浮点数类型。
+`int` 是一个 32 位的符号整数类型。
 
-- boolean
-- char
-- short
-- int
-- long
-- float
+- `boolean`
+- `char`
+- `short`
+- `long`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+#### `long`
+
+`long` 是一个 64 位的符号整数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `float`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+#### `float`
+
+`float` 是一个 32 位的单浮点数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `double`
+
+基本类型存储的是值。
+
+引用类型存储的是指向对象的地址。
+
+#### `double`
+
+`double` 是一个 64 位的双精度浮点数类型。
+
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
 
 基本类型存储的是值。
 
@@ -490,7 +1136,7 @@ double 是一个 64 位的双精度浮点数类型。
 
 引用类型存储的是指向对象的地址。
 
-### 类
+#### 类
 
 类是对象的蓝图。
 
@@ -502,7 +1148,7 @@ double 是一个 64 位的双精度浮点数类型。
 
 引用类型存储的是指向对象的地址。
 
-### 数组
+#### 数组
 
 数组是存储相同类型元素的集合。
 
@@ -513,7 +1159,7 @@ double 是一个 64 位的双精度浮点数类型。
 
 引用类型存储的是指向对象的地址。
 
-### 接口
+#### 接口
 
 接口是定义一组方法的类。
 
@@ -524,183 +1170,166 @@ double 是一个 64 位的双精度浮点数类型。
 
 引用类型存储的是指向对象的地址。
 
-### 包装类
+#### 包装类
 
 包装类是基本类型的对象的表示。
 
-- Byte
-- Boolean
-- Character
-- Short
-- Integer
-- Long
-- Float
-- Double
+- `Byte`
+- `Boolean`
+- `Character`
+- `Short`
+- `Integer`
+- `Long`
+- `Float`
+- `Double`
 
 基本类型存储的是值。
 
 引用类型存储的是指向对象的地址。
+
+
+
+# 第 2 章：Java 中的数据类型
 
 ## 数据类型概览
 
 数据类型是关于如何处理数据的约定。
 
 - 基本类型（Primitive Types）
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
+  - `byte`
+  - `boolean`
+  - `char`
+  - `short`
+  - `int`
+  - `long`
+  - `float`
+  - `double`
 - 引用类型（Reference Types）
 
 引用类型是存储对象的引用。
 
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
+基本类型存储的是值。引用类型存储的是指向对象的地址。
 
 ### 基本类型
 
 基本类型是存储值的类型。
 
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
+- `byte`
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
 
-基本类型存储的是值。
+基本类型存储的是值。引用类型存储的是指向对象的地址。
 
-引用类型存储的是指向对象的地址。
+### `byte`
 
-### byte
+`byte` 是一个 8 位的符号整数类型。
 
-byte 是一个 8 位的符号整数类型。
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
 
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
+基本类型存储的是值。引用类型存储的是指向对象的地址。
 
-基本类型存储的是值。
+### `boolean`
 
-引用类型存储的是指向对象的地址。
+`boolean` 是存储真或假值的类型。
 
-### boolean
+- `byte`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
 
-boolean 是存储真或假值的类型。
+基本类型存储的是值。引用类型存储的是指向对象的地址。
 
-- byte
-- char
-- short
-- int
-- long
-- float
-- double
+### `char`
 
-基本类型存储的是值。
+`char` 是一个 16 位的 Unicode 字符类型。
 
-引用类型存储的是指向对象的地址。
+- `boolean`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
 
-### char
+基本类型存储的是值。引用类型存储的是指向对象的地址。
 
-char 是一个 16 位的 Unicode 字符类型。
+### `short`
 
-- boolean
-- short
-- int
-- long
-- float
-- double
+`short` 是一个 16 位的符号整数类型。
 
-基本类型存储的是值。
+- `boolean`
+- `char`
+- `int`
+- `long`
+- `float`
+- `double`
 
-引用类型存储的是指向对象的地址。
+基本类型存储的是值。引用类型存储的是指向对象的地址。
 
-### short
+### `int`
 
-short 是一个 16 位的符号整数类型。
+`int` 是一个 32 位的符号整数类型。
 
-- boolean
-- char
-- int
-- long
-- float
-- double
+- `boolean`
+- `char`
+- `short`
+- `long`
+- `float`
+- `double`
 
-基本类型存储的是值。
+基本类型存储的是值。引用类型存储的是指向对象的地址。
 
-引用类型存储的是指向对象的地址。
+### `long`
 
-### int
+`long` 是一个 64 位的符号整数类型。
 
-int 是一个 32 位的符号整数类型。
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `float`
+- `double`
 
-- boolean
-- char
-- short
-- long
-- float
-- double
+基本类型存储的是值。引用类型存储的是指向对象的地址。
 
-基本类型存储的是值。
+### `float`
 
-引用类型存储的是指向对象的地址。
+`float` 是一个 32 位的单浮点数类型。
 
-### long
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `double`
 
-long 是一个 64 位的符号整数类型。
+基本类型存储的是值。引用类型存储的是指向对象的地址。
 
-- boolean
-- char
-- short
-- int
-- float
-- double
+### `double`
 
-基本类型存储的是值。
+`double` 是一个 64 位的双精度浮点数类型。
 
-引用类型存储的是指向对象的地址。
+- `boolean`
+- `char`
+- `short`
+- `int`
+- `long`
+- `float`
 
-### float
-
-float 是一个 32 位的单浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### double
-
-double 是一个 64 位的双精度浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
+基本类型存储的是值。引用类型存储的是指向对象的地址。
 
 ### 引用类型
 
@@ -711,9 +1340,7 @@ double 是一个 64 位的双精度浮点数类型。
 - 接口（Interfaces）
 - 包装类（Wrapper Classes）
 
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
+基本类型存储的是值。引用类型存储的是指向对象的地址。
 
 ### 类
 
@@ -723,9 +1350,7 @@ double 是一个 64 位的双精度浮点数类型。
 - 方法（Methods）
 - 构造函数（Constructors）
 
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
+基本类型存储的是值。引用类型存储的是指向对象的地址。
 
 ### 数组
 
@@ -734,9 +1359,7 @@ double 是一个 64 位的双精度浮点数类型。
 - 一维数组
 - 二维数组
 
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
+基本类型存储的是值。引用类型存储的是指向对象的地址。
 
 ### 接口
 
@@ -745,1545 +1368,28 @@ double 是一个 64 位的双精度浮点数类型。
 - 方法签名（Method Signatures）
 - 常量（Constants）
 
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
+基本类型存储的是值。引用类型存储的是指向对象的地址。
 
 ### 包装类
 
 包装类是基本类型的对象的表示。
 
-- Byte
-- Boolean
-- Character
-- Short
-- Integer
-- Long
-- Float
-- Double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-## 数据类型概览
-
-数据类型是关于如何处理数据的约定。
-
-- 基本类型（Primitive Types）
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-- 引用类型（Reference Types）
-
-引用类型是存储对象的引用。
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 基本类型
-
-基本类型是存储值的类型。
-
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### byte
-
-byte 是一个 8 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### boolean
-
-boolean 是存储真或假值的类型。
-
-- byte
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### char
-
-char 是一个 16 位的 Unicode 字符类型。
-
-- boolean
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### short
-
-short 是一个 16 位的符号整数类型。
-
-- boolean
-- char
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### int
-
-int 是一个 32 位的符号整数类型。
-
-- boolean
-- char
-- short
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### long
-
-long 是一个 64 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### float
-
-float 是一个 32 位的单浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### double
-
-double 是一个 64 位的双精度浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 引用类型
-
-引用类型是存储对象的引用。
-
-- 类（Classes）
-- 数组（Arrays）
-- 接口（Interfaces）
-- 包装类（Wrapper Classes）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 类
-
-类是对象的蓝图。
-
-- 字段（Fields）
-- 方法（Methods）
-- 构造函数（Constructors）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 数组
-
-数组是存储相同类型元素的集合。
-
-- 一维数组
-- 二维数组
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 接口
-
-接口是定义一组方法的类。
-
-- 方法签名（Method Signatures）
-- 常量（Constants）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 包装类
-
-包装类是基本类型的对象的表示。
-
-- Byte
-- Boolean
-- Character
-- Short
-- Integer
-- Long
-- Float
-- Double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-## 数据类型概览
-
-数据类型是关于如何处理数据的约定。
-
-- 基本类型（Primitive Types）
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-- 引用类型（Reference Types）
-
-引用类型是存储对象的引用。
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 基本类型
-
-基本类型是存储值的类型。
-
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### byte
-
-byte 是一个 8 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### boolean
-
-boolean 是存储真或假值的类型。
-
-- byte
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### char
-
-char 是一个 16 位的 Unicode 字符类型。
-
-- boolean
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### short
-
-short 是一个 16 位的符号整数类型。
-
-- boolean
-- char
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### int
-
-int 是一个 32 位的符号整数类型。
-
-- boolean
-- char
-- short
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### long
-
-long 是一个 64 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### float
-
-float 是一个 32 位的单浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### double
-
-double 是一个 64 位的双精度浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 引用类型
-
-引用类型是存储对象的引用。
-
-- 类（Classes）
-- 数组（Arrays）
-- 接口（Interfaces）
-- 包装类（Wrapper Classes）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 类
-
-类是对象的蓝图。
-
-- 字段（Fields）
-- 方法（Methods）
-- 构造函数（Constructors）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 数组
-
-数组是存储相同类型元素的集合。
-
-- 一维数组
-- 二维数组
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 接口
-
-接口是定义一组方法的类。
-
-- 方法签名（Method Signatures）
-- 常量（Constants）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 包装类
-
-包装类是基本类型的对象的表示。
-
-- Byte
-- Boolean
-- Character
-- Short
-- Integer
-- Long
-- Float
-- Double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-## 数据类型概览
-
-数据类型是关于如何处理数据的约定。
-
-- 基本类型（Primitive Types）
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-- 引用类型（Reference Types）
-
-引用类型是存储对象的引用。
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 基本类型
-
-基本类型是存储值的类型。
-
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### byte
-
-byte 是一个 8 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### boolean
-
-boolean 是存储真或假值的类型。
-
-- byte
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### char
-
-char 是一个 16 位的 Unicode 字符类型。
-
-- boolean
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### short
-
-short 是一个 16 位的符号整数类型。
-
-- boolean
-- char
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### int
-
-int 是一个 32 位的符号整数类型。
-
-- boolean
-- char
-- short
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### long
-
-long 是一个 64 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### float
-
-float 是一个 32 位的单浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### double
-
-double 是一个 64 位的双精度浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 引用类型
-
-引用类型是存储对象的引用。
-
-- 类（Classes）
-- 数组（Arrays）
-- 接口（Interfaces）
-- 包装类（Wrapper Classes）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 类
-
-类是对象的蓝图。
-
-- 字段（Fields）
-- 方法（Methods）
-- 构造函数（Constructors）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 数组
-
-数组是存储相同类型元素的集合。
-
-- 一维数组
-- 二维数组
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 接口
-
-接口是定义一组方法的类。
-
-- 方法签名（Method Signatures）
-- 常量（Constants）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 包装类
-
-包装类是基本类型的对象的表示。
-
-- Byte
-- Boolean
-- Character
-- Short
-- Integer
-- Long
-- Float
-- Double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-## 数据类型概览
-
-数据类型是关于如何处理数据的约定。
-
-- 基本类型（Primitive Types）
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-- 引用类型（Reference Types）
-
-引用类型是存储对象的引用。
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 基本类型
-
-基本类型是存储值的类型。
-
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### byte
-
-byte 是一个 8 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### boolean
-
-boolean 是存储真或假值的类型。
-
-- byte
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### char
-
-char 是一个 16 位的 Unicode 字符类型。
-
-- boolean
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### short
-
-short 是一个 16 位的符号整数类型。
-
-- boolean
-- char
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### int
-
-int 是一个 32 位的符号整数类型。
-
-- boolean
-- char
-- short
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### long
-
-long 是一个 64 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### float
-
-float 是一个 32 位的单浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### double
-
-double 是一个 64 位的双精度浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 引用类型
-
-引用类型是存储对象的引用。
-
-- 类（Classes）
-- 数组（Arrays）
-- 接口（Interfaces）
-- 包装类（Wrapper Classes）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 类
-
-类是对象的蓝图。
-
-- 字段（Fields）
-- 方法（Methods）
-- 构造函数（Constructors）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 数组
-
-数组是存储相同类型元素的集合。
-
-- 一维数组
-- 二维数组
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 接口
-
-接口是定义一组方法的类。
-
-- 方法签名（Method Signatures）
-- 常量（Constants）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 包装类
-
-包装类是基本类型的对象的表示。
-
-- Byte
-- Boolean
-- Character
-- Short
-- Integer
-- Long
-- Float
-- Double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-## 数据类型概览
-
-数据类型是关于如何处理数据的约定。
-
-- 基本类型（Primitive Types）
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-- 引用类型（Reference Types）
-
-引用类型是存储对象的引用。
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 基本类型
-
-基本类型是存储值的类型。
-
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### byte
-
-byte 是一个 8 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### boolean
-
-boolean 是存储真或假值的类型。
-
-- byte
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### char
-
-char 是一个 16 位的 Unicode 字符类型。
-
-- boolean
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### short
-
-short 是一个 16 位的符号整数类型。
-
-- boolean
-- char
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### int
-
-int 是一个 32 位的符号整数类型。
-
-- boolean
-- char
-- short
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### long
-
-long 是一个 64 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### float
-
-float 是一个 32 位的单浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### double
-
-double 是一个 64 位的双精度浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 引用类型
-
-引用类型是存储对象的引用。
-
-- 类（Classes）
-- 数组（Arrays）
-- 接口（Interfaces）
-- 包装类（Wrapper Classes）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 类
-
-类是对象的蓝图。
-
-- 字段（Fields）
-- 方法（Methods）
-- 构造函数（Constructors）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 数组
-
-数组是存储相同类型元素的集合。
-
-- 一维数组
-- 二维数组
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 接口
-
-接口是定义一组方法的类。
-
-- 方法签名（Method Signatures）
-- 常量（Constants）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 包装类
-
-包装类是基本类型的对象的表示。
-
-- Byte
-- Boolean
-- Character
-- Short
-- Integer
-- Long
-- Float
-- Double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-## 数据类型概览
-
-数据类型是关于如何处理数据的约定。
-
-- 基本类型（Primitive Types）
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-- 引用类型（Reference Types）
-
-引用类型是存储对象的引用。
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 基本类型
-
-基本类型是存储值的类型。
-
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### byte
-
-byte 是一个 8 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### boolean
-
-boolean 是存储真或假值的类型。
-
-- byte
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### char
-
-char 是一个 16 位的 Unicode 字符类型。
-
-- boolean
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### short
-
-short 是一个 16 位的符号整数类型。
-
-- boolean
-- char
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### int
-
-int 是一个 32 位的符号整数类型。
-
-- boolean
-- char
-- short
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### long
-
-long 是一个 64 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### float
-
-float 是一个 32 位的单浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### double
-
-double 是一个 64 位的双精度浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 引用类型
-
-引用类型是存储对象的引用。
-
-- 类（Classes）
-- 数组（Arrays）
-- 接口（Interfaces）
-- 包装类（Wrapper Classes）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 类
-
-类是对象的蓝图。
-
-- 字段（Fields）
-- 方法（Methods）
-- 构造函数（Constructors）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 数组
-
-数组是存储相同类型元素的集合。
-
-- 一维数组
-- 二维数组
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 接口
-
-接口是定义一组方法的类。
-
-- 方法签名（Method Signatures）
-- 常量（Constants）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 包装类
-
-包装类是基本类型的对象的表示。
-
-- Byte
-- Boolean
-- Character
-- Short
-- Integer
-- Long
-- Float
-- Double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-## 数据类型概览
-
-数据类型是关于如何处理数据的约定。
-
-- 基本类型（Primitive Types）
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-- 引用类型（Reference Types）
-
-引用类型是存储对象的引用。
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 基本类型
-
-基本类型是存储值的类型。
-
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### byte
-
-byte 是一个 8 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### boolean
-
-boolean 是存储真或假值的类型。
-
-- byte
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### char
-
-char 是一个 16 位的 Unicode 字符类型。
-
-- boolean
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### short
-
-short 是一个 16 位的符号整数类型。
-
-- boolean
-- char
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### int
-
-int 是一个 32 位的符号整数类型。
-
-- boolean
-- char
-- short
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### long
-
-long 是一个 64 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### float
-
-float 是一个 32 位的单浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### double
-
-double 是一个 64 位的双精度浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-## 引言
+- `Byte`
+- `Boolean`
+- `Character`
+- `Short`
+- `Integer`
+- `Long`
+- `Float`
+- `Double`
+
+基本类型存储的是值。引用类型存储的是指向对象的地址。
+
+# 引言
 
 Java 是关于如何编写一种可以在不同平台上运行的程序。**一次编写，到处运行**。
 
-## 引言
-
-- 1 Java 虚拟机 ( JVM )
+## Java 虚拟机（JVM）
 
 在 Java 诞生之前，在 Windows 操作系统上编写并编译为运行机器码的程序由于许多差异无法在 Linux 操作系统上运行。
 
@@ -2291,436 +1397,29 @@ Java 是关于如何编写一种可以在不同平台上运行的程序。**一�
 
 JVM 编写的程序被编译成字节码，一种可以在 JVM 环境中运行的特殊代码。JVM 帮助将字节码翻译成宿主机的代码。这就是为什么 Java 可以在不同平台上运行的原理。
 
-## JDK 和 JRE
+# JDK 和 JRE
 
-### JRE ( Java 运行环境 )
+## JRE（Java 运行环境）
 
 ![](img/687999f111d1584abe7fc92b1c74ca2a_4_2.png)
 
 JRE 是 Java Runtime Environment 的缩写，包含了 JVM（Java 虚拟机）和许多支持执行 Java 语言编写的程序的 Java 类。
 
-### JDK ( Java 开发工具包 )
+## JDK（Java 开发工具包）
 
 ![](img/687999f111d1584abe7fc92b1c74ca2a_5_1.png)
 
 JDK 代表 Java Development Kit，它由两个部分组成：JRE 和 Java 开发工具。
 
-JDK 对程序员来说是必须的，因为 Java 开发工具为 Java 应用程序开发提供了工具，例如 Javac，它可以将开发者的源代码编译成字节码等，然后在开发过程中使用 JRE 运行应用程序。
+JDK 对程序员来说是必须的，因为 Java 开发工具为 Java 应用程序开发提供了工具，例如 `Javac`，它可以将开发者的源代码编译成字节码等，然后在开发过程中使用 JRE 运行应用程序。
 
-# 第2 章：Java 中的数据类型
-
-- 1 数据类型概览
-- 2 byte
-- 3 boolean
-- 4 char
-- 5 short
-- 6 int
-- 7 long
-- 8 float
-- 9 double
-- 10 引用类型
-
-## 数据类型概览
-
-数据类型是关于如何处理数据的约定。
-
-- 基本类型（Primitive Types）
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-- 引用类型（Reference Types）
-
-引用类型是存储对象的引用。
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 基本类型
-
-基本类型是存储值的类型。
-
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### byte
-
-byte 是一个 8 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### boolean
-
-boolean 是存储真或假值的类型。
-
-- byte
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### char
-
-char 是一个 16 位的 Unicode 字符类型。
-
-- boolean
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### short
-
-short 是一个 16 位的符号整数类型。
-
-- boolean
-- char
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### int
-
-int 是一个 32 位的符号整数类型。
-
-- boolean
-- char
-- short
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### long
-
-long 是一个 64 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### float
-
-float 是一个 32 位的单浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### double
-
-double 是一个 64 位的双精度浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 引用类型
-
-引用类型是存储对象的引用。
-
-- 类（Classes）
-- 数组（Arrays）
-- 接口（Interfaces）
-- 包装类（Wrapper Classes）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 类
-
-类是对象的蓝图。
-
-- 字段（Fields）
-- 方法（Methods）
-- 构造函数（Constructors）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 数组
-
-数组是存储相同类型元素的集合。
-
-- 一维数组
-- 二维数组
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 接口
-
-接口是定义一组方法的类。
-
-- 方法签名（Method Signatures）
-- 常量（Constants）
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 包装类
-
-包装类是基本类型的对象的表示。
-
-- Byte
-- Boolean
-- Character
-- Short
-- Integer
-- Long
-- Float
-- Double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-## 数据类型概览
-
-数据类型是关于如何处理数据的约定。
-
-- 基本类型（Primitive Types）
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-- 引用类型（Reference Types）
-
-引用类型是存储对象的引用。
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### 基本类型
-
-基本类型是存储值的类型。
-
-- byte
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### byte
-
-byte 是一个 8 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### boolean
-
-boolean 是存储真或假值的类型。
-
-- byte
-- char
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### char
-
-char 是一个 16 位的 Unicode 字符类型。
-
-- boolean
-- short
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### short
-
-short 是一个 16 位的符号整数类型。
-
-- boolean
-- char
-- int
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### int
-
-int 是一个 32 位的符号整数类型。
-
-- boolean
-- char
-- short
-- long
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### long
-
-long 是一个 64 位的符号整数类型。
-
-- boolean
-- char
-- short
-- int
-- float
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### float
-
-float 是一个 32 位的单浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- double
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-### double
-
-double 是一个 64 位的双精度浮点数类型。
-
-- boolean
-- char
-- short
-- int
-- long
-- float
-
-基本类型存储的是值。
-
-引用类型存储的是指向对象的地址。
-
-# 第3 章：Java 中的 if else 语句
-
-- 1 if 语句
-- 2 if - else 语句
-- 3 if - else if - else 语句
-- 4 布尔值
-- 5 条件表达式中涉及的运算符
+# 第 3 章：Java 中的 if else 语句
 
 ## 1 if 语句
 
-if 语句是关于控制流最基本的结构。它根据条件来决定是否执行某些代码。
+`if` 语句是关于控制流最基本的结构。它根据条件来决定是否执行某些代码。
 
-if 语句是关于控制流最基本的结构。
-
-#  if 语句允许执行代码块，，如果条件为真。
+`if` 语句允许执行代码块，如果条件为真。
 
 ```java
 if (condition) {
@@ -2728,11 +1427,9 @@ if (condition) {
 }
 ```
 
-# 2 if - else 语句
+## 2 if - else 语句
 
-if - else 语句是比 if 语句稍微复杂一点的。它允许你在条件为真时执行一个块，而在条件为假时执行另一个块。
-
-if - else 语句是比 if 语句稍微复杂一点的。它。
+`if - else` 语句是比 `if` 语句稍微复杂一点的。它允许你在条件为真时执行一个块，而在条件为假时执行另一个块。
 
 ```java
 if (condition) {
@@ -2742,11 +1439,9 @@ if (condition) {
 }
 ```
 
-# 3 if - else if - else 语句
+## 3 if - else if - else 语句
 
-if - else if - else 语句允许你检查多个条件。程序将按顺序检查条件，执行第一个为真的代码块，并跳过其余部分。
-
-if - else if - else 语句允许你检查多个条件。
+`if - else if - else` 语句允许你检查多个条件。程序将按顺序检查条件，执行第一个为真的代码块，并跳过其余部分。
 
 ```java
 if (condition1) {
@@ -2760,9 +1455,7 @@ if (condition1) {
 
 ## 4 布尔值
 
-布尔值只有两个值：真（true）或假（false）。它是逻辑判断的基础。
-
-布尔值只有两个值：真（true）或假（false）。
+布尔值只有两个值：真（`true`）或假（`false`）。它是逻辑判断的基础。
 
 ```java
 boolean isJavaFun = true;
@@ -2773,20 +1466,14 @@ boolean isPythonHard = false;
 
 运算符用于比较值并产生布尔值。
 
-- 比较运算符：`==`, `!=`, `<`, `<=`, `>=`, `>=
-- 逻辑运算符：`&&` (与), `||` (或), `!` (非)
+- 比较运算符：`==`, `!=`, `<`, `<=`, `>=`, `>`
+- 逻辑运算符：`&&`（与），`||`（或），`!`（非）
 
-运算符用于比较值并产生布尔值。
-
-# 第4 章：Java 中的 Switch 语句
-
-- 1 switch 语句的结构
-- 2 switch 示例
-- 3 Java 中的 break 语句
+# 第 4 章：Java 中的 Switch 语句
 
 ## 1 switch 语句的结构
 
-switch 语句允许根据变量的值来执行多个代码块中的一个。
+`switch` 语句允许根据变量的值来执行多个代码块中的一个。
 
 ```java
 switch (expression) {
@@ -2803,7 +1490,9 @@ switch (expression) {
 
 ## 2 switch 示例
 
-这里有一个如何使用 switch 语句的简单示例。
+
+
+这里有一个如何使用`switch`语句的简单示例。
 
 ```java
 int day = 3;
@@ -2824,9 +1513,9 @@ switch (day) {
 
 ## 3 Java 中的 break 语句
 
-break 语句用于退出 switch 语句。如果没有 break，程序将继续执行后续 case 的代码，这被称为“穿透”现象。
+`break`语句用于退出`switch`语句。如果没有`break`，程序将继续执行后续`case`的代码，这被称为“穿透”现象。
 
-# 第5 章：Java 中的循环
+# 第5章：Java 中的循环
 
 - 1 Java 中的循环
 - 2 for 循环
@@ -2843,7 +1532,7 @@ break 语句用于退出 switch 语句。如果没有 break，程序将继续执
 
 ## 2 for 循环
 
-for 循环通常用于在知道迭代次数的情况下执行代码。
+`for`循环通常用于在知道迭代次数的情况下执行代码。
 
 ```java
 for (int i = 0; i < 5; i++) {
@@ -2853,7 +1542,7 @@ for (int i = 0; i < 5; i++) {
 
 ## 3 for-each 循环
 
-for-each 循环是用于遍历数组或集合的便利循环。
+`for-each`循环是用于遍历数组或集合的便利循环。
 
 ```java
 for (String name : names) {
@@ -2863,7 +1552,7 @@ for (String name : names) {
 
 ## 4 while 循环
 
-while 循环在条件为真时重复执行代码。
+`while`循环在条件为真时重复执行代码。
 
 ```java
 int i = 0;
@@ -2875,7 +1564,7 @@ while (i < 5) {
 
 ## 5 do-while 循环
 
-do-while 循环至少执行一次代码，然后检查条件。
+`do-while`循环至少执行一次代码，然后检查条件。
 
 ```java
 int i = 0;
@@ -2887,17 +1576,17 @@ do {
 
 ## 6 循环中的 break 语句
 
-break 语句可以终止循环。
+`break`语句可以终止循环。
 
 ## 7 循环中的 continue 语句
 
-continue 语句跳过当前迭代并继续下一次迭代。
+`continue`语句跳过当前迭代并继续下一次迭代。
 
 ## 8 标签循环
 
 标签循环允许从嵌套循环中跳出特定的外循环。
 
-# 第6 章：Java 中的数组
+# 第6章：Java 中的数组
 
 - 1 什么是数组
 - 2 一维数组
@@ -2911,7 +1600,7 @@ continue 语句跳过当前迭代并继续下一次迭代。
 
 ## 2 一维数组
 
-一维数组是数组简单的数组形式。
+一维数组是最简单的数组形式。
 
 ```java
 int[] numbers = {1, 2, 3, 4, 5};
@@ -2919,7 +1608,7 @@ int[] numbers = {1, 2, 3, 4, 5};
 
 ## 3 一维数组与 for-each 循环
 
-使用 for-each 循环遍历一维数组非常简单。
+使用`for-each`循环遍历一维数组非常简单。
 
 ```java
 for (int number : numbers) {
@@ -2929,7 +1618,7 @@ for (int number : numbers) {
 
 ## 4 一维数组的工具方法
 
-`java.util.Arrays` 类提供了许多处理数组的方法。
+`java.util.Arrays`类提供了许多处理数组的方法。
 
 ## 5 二维数组
 
@@ -2942,7 +1631,7 @@ int[][] matrix = {
 };
 ```
 
-# 第7 章：Java 中的继承与多态
+# 第7章：Java 中的继承与多态
 
 - 1 引言
 - 2 类、构造函数和实例
@@ -2959,13 +1648,13 @@ int[][] matrix = {
 
 ## 3 Java 中的继承
 
-使用 `extends` 关键字来实现继承。
+使用`extends`关键字来实现继承。
 
 ## 4 Java 中的多态
 
 多态允许一个对象以许多不同类的形式存在。
 
-# 第8 章：Java 中的抽象类和接口
+# 第8章：Java 中的抽象类和接口
 
 - 1 引言
 - 2 抽象类
@@ -2996,9 +1685,7 @@ int[][] matrix = {
 
 ## 6 类实现接口
 
-类使用 `implements` 关键字来实现一个接口。
-
-
+类使用`implements`关键字来实现一个接口。
 
 ```java
 // Do something here
@@ -3041,21 +1728,24 @@ else {
 ### 输出
 
 Your score = 70
+
 You are pass
 
-更改上方变量 "score"的值并运行 ElseExample1 类：
-int score = 20;
+更改上方变量`score`的值并运行`ElseExample1`类：
+
+`int score = 20;`
 
 ### 输出
 
 Your score = 20
+
 You are not pass
 
 ### 4 Boolean
 
-boolean 数据类型只有两个值：true 或 false。
+`boolean`数据类型只有两个值：`true`或`false`。
 
-创建 BooleanExample 类：
+创建`BooleanExample`类：
 
 ### BooleanExample.java
 
@@ -3087,6 +1777,7 @@ public class BooleanExample {
 ### 输出
 
 | It's true |
+
 | It's true |
 
 示例：
@@ -3141,13 +1832,13 @@ else {
 
 You are between 19 and 39
 
-# 第 4 章：Java 中的 Switch语句
+# 第4章：Java 中的 Switch 语句
 
-- 1 switch语句结构
+- 1 switch 语句结构
 - 2 switch 示例
-- 3 switch 中的 break语句
+- 3 switch 中的 break 语句
 
-# 1 switch语句结构
+## 1 switch 语句结构
 
 ```java
 // variable_to_test: 要测试的变量。
@@ -3163,25 +1854,25 @@ switch ( variable_to_test ) {
 }
 ```
 
-# switch语句的特点：
+## switch 语句的特点：
 
-switch 会检查变量的值，并从上到下与每个不同的值进行比较。每个待比较的值被称为 case。当某个 case 为真时，执行该 case 的语句块。
+`switch`会检查变量的值，并从上到下与每个不同的值进行比较。每个待比较的值被称为`case`。当某个`case`为真时，执行该`case`的语句块。
 
 ![](img/687999f111d1584abe7fc92b1c74ca2a_18_0.png)
 
-如果所有 case 都为假，将执行 default 语句块。注意：在 switch 结构中，可能存在也可能不存在 default 语句块。
+如果所有`case`都为假，将执行`default`语句块。注意：在`switch`结构中，可能存在也可能不存在`default`语句块。
 
 ![](img/687999f111d1584abe7fc92b1c74ca2a_19_0.png)
 
-当找到 true case 时，如果该块中没有 break 语句，程序将继续执行下面的块，直到遇到 break 语句或没有语句块执行。
+当找到`true case`时，如果该块中没有`break`语句，程序将继续执行下面的块，直到遇到`break`语句或没有语句块执行。
 
-**break** 语句使程序退出 **switch**。（见下图）。
+**break**语句使程序退出**switch**。（见下图）。
 
 ![](img/687999f111d1584abe7fc92b1c74ca2a_19_1.png)
 
 ![](img/687999f111d1584abe7fc92b1c74ca2a_20_0.png)
 
-注意 case 语句是一个特定值，你不能进行以下操作：
+注意`case`语句是一个特定值，你不能进行以下操作：
 
 ```java
 // 这是不允许的！！
@@ -3227,15 +1918,12 @@ You are 18 year old
 
 ## 3 switch 中的 break 语句
 
-break 语句用于退出 switch 块。如果没有它，程序将继续执行后续 case，即使它们不匹配（这被称为贯穿/fall-through）。
-
-
+`break`语句用于退出`switch`块。如果没有它，程序将继续执行后续`case`，即使它们不匹配（这被称为贯穿/fall-through）。
 
 ```java
 System.out.println("Total = " + total);
 
 }
-
 ```
 
 ### 输出
@@ -3275,20 +1963,23 @@ public class ForeachExample {
 ### 输出
 
 Apple
+
 Apricot
+
 Banana
 
 ## 4 while 循环
 
-while 循环用于在条件为真时重复执行程序段。
-while 循环通常在迭代次数未定义（非固定）时使用。
+`while`循环用于在条件为真时重复执行程序段。
 
-这是 while 循环的结构：
+`while`循环通常在迭代次数未定义（非固定）时使用。
 
-```
+这是`while`循环的结构：
+
+```java
 // 当条件为真时执行
 while ( condition ) {
-    // 在处执行某些操作...
+    // 在此处执行某些操作...
 }
 ```
 
@@ -3316,15 +2007,15 @@ public class WhileExample1 {
 
 ## 5 do-while 循环
 
-do-while 循环用于多次执行一段程序。do-while 的特点是该语句块至少会被执行一次。在每次迭代后，程序会检查条件，如果条件仍然成立，则将执行该语句块。
+`do-while`循环用于多次执行一段程序。`do-while`的特点是该语句块至少会被执行一次。在每次迭代后，程序会检查条件，如果条件仍然成立，则将执行该语句块。
 
-这是 do-while 循环的结构：
+这是`do-while`循环的结构：
 
-```
+```java
 // do-while 循环至少执行一次迭代。
 // 只要条件为真，它就会继续工作
 do {
-    // 在处执行某些操作。
+    // 在此处执行某些操作。
 }
 while (condition);
 ```
@@ -3354,16 +2045,20 @@ public class DoWhileExample1 {
 ### 输出
 
 | Value = 3 |
+
 | Value = 6 |
+
 | Value = 9 |
 
 ## 6 循环中的 break 语句
 
-break 语句可以出现在循环中。它是帮助程序退出循环的语句。
+`break`语句可以出现在循环中。它是帮助程序退出循环的语句。
 
 ![](img/687999f111d1584abe7fc92b1c74ca2a_28_0.png)
 
 ### LoopBreakExample.java
+
+
 
 ```java
 package com.abd.java.javabasic.loop;
@@ -3406,7 +2101,7 @@ public class LoopBreakExample {
 
 ## 7 循环中的 continue 语句
 
-continue 语句可以出现在循环中。当遇到 continue 语句时，程序将忽略语句块内的语句以及 continue 之外的语句，并开始新的迭代（如果条件仍然成立）。
+`continue` 语句可以出现在循环中。当遇到 `continue` 语句时，程序将忽略语句块内的语句以及 `continue` 之外的语句，并开始新的迭代（如果条件仍然成立）。
 
 ![](img/687999f111d1584abe7fc92b1c74ca2a_30_0.png)
 
@@ -3455,9 +2150,9 @@ public class LoopContinue {
 
 Java 允许为循环标记一个标签。这就像给循环命名，当你在程序中使用嵌套循环时非常有用。
 
-你可以使用 `break labelX;` 来跳出带有 labelX 的循环。
+你可以使用 `break labelX;` 来跳出带有 `labelX` 的循环。
 
-你可以使用 `continue labelX;` 来继续带有 labelX 的循环。
+你可以使用 `continue labelX;` 来继续带有 `labelX` 的循环。
 
 ![](img/687999f111d1584abe7fc92b1c74ca2a_31_0.png)
 
@@ -3526,10 +2221,6 @@ public class LabelledLoopBreakExample {
 | i = 0 |
 | Done! |
 
-
-
-
-
 ```java
 for (int index = 0; index < myArray.length; index++) {
     System.out.println("Element " + index + " = " + myArray[index]);
@@ -3582,7 +2273,7 @@ public class ArrayExample2 {
 
 ## 3. 一维数组和 for-each 循环
 
-Java 5 为你提供了 for-each 循环，允许你在不使用索引变量的情况下遍历数组的所有元素。
+Java 5 为你提供了 `for-each` 循环，允许你在不使用索引变量的情况下遍历数组的所有元素。
 
 示例：
 
@@ -3609,9 +2300,9 @@ public class ArrayForeachExample {
 
 ## 4. 一维数组的工具方法
 
-Java 了一了一些数组的静态方法，例如排序数组、为所有数组元素赋值、搜索、比较数组等。这些方法定义在 `Arrays` 类中。
+Java 提供了一些数组的静态方法，例如排序数组、为所有数组元素赋值、搜索、比较数组等。这些方法定义在 `Arrays` 类中。
 
-下面是 `Arrays` 类中定义常用静态方法。这些方法适用于 byte, char, double, float, long, int, short, boolean 类型的元素数组。
+下面是 `Arrays` 类中定义的常用静态方法。这些方法适用于 `byte`, `char`, `double`, `float`, `long`, `int`, `short`, `boolean` 类型的元素数组。
 
 ```java
 // 相同类型的参数，并返回一个 List。
@@ -3692,7 +2383,7 @@ Name: Donald
 
 ## 5. 二维数组
 
-二维数组的行和列用索引 0, 1, 2, .... 标记。要访问二维维数组的元素，你需要通过两个索引来访问：行索引和列索引。
+二维数组的行和列用索引 0, 1, 2, .... 标记。要访问二维数组的元素，你需要通过两个索引来访问：行索引和列索引。
 
 | 索引 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -3702,14 +2393,12 @@ Name: Donald
 | 3 | 30 | 31 | 32 | 33 | 34 | 35 | 36 | 37 | 38 | 39 |
 | 4 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 |
 
-你可以通过以下方式访问访问二维数组：
+你可以通过以下方式访问二维数组：
 
 ```java
 int[][] matrix = new int[5][10];
 int value = matrix[1][2]; // 访问第 1 行第 2 列的元素
 ```
-
-
 
 ```java
 for (int row = 0; row < teamAndPlayers.length; row++) {
@@ -3724,12 +2413,19 @@ for (int row = 0; row < teamAndPlayers.length; row++) {
 ### 输出
 
 团队数量: 2
+
 美国球员数量: 3
+
 越南球员数量: 2
+
 Player at[0][0]=Sam
+
 Player at[0][1]=Smith
+
 Player at[0][2]=Robert
+
 Player at[1][0]=Tran
+
 Player at[1][1]=Nguyen
 
 # 示例：
@@ -3772,8 +2468,11 @@ public class TwoDimensionalExample {
 # 第 7 章：继承与多态
 
 ## 1 简介
+
 ## 2 类、构造函数和实例
+
 ## 3 Java 中的继承
+
 ## 4 多态
 
 ### 1 简介
@@ -3782,8 +2481,11 @@ public class TwoDimensionalExample {
 
 ### Person.java
 
+
+
 ```java
 package com.abd.java.inheritance.basic;
+
 public class Person {
 
     // 字段名 - name
@@ -3840,6 +2542,7 @@ public class Person {
 
 ```java
 package com.abd.java.inheritance.basic;
+
 public class PersonDemo {
 
     public static void main(String[] args) {
@@ -3862,11 +2565,11 @@ public class PersonDemo {
 }
 ```
 
-# 区分类、构造函数和实例：
+## 区分类、构造函数和实例
 
-Person 模拟了一个类，它是抽象的，但它包含了信息；在上面的示例中，信息是姓名、出生年份和出生地。
+`Person` 模拟了一个类，它是抽象的，但它包含了信息；在上面的示例中，信息是姓名、出生年份和出生地。
 
-# 构造函数
+## 构造函数
 
 构造函数的名称始终与类名相同。
 
@@ -3896,10 +2599,10 @@ public class Person {
 
 我们需要一些类来参与其中。
 
-- Animal：模拟类。
-- Duck：继承自 Animal。
-- Cat：继承自 Animal。
-- Mouse：继承自 Animal。
+- `Animal`：模拟类。
+- `Duck`：继承自 `Animal`。
+- `Cat`：继承自 `Animal`。
+- `Mouse`：继承自 `Animal`。
 
 ```java
 public abstract String getAnimalName();
@@ -3911,6 +2614,7 @@ public abstract String getAnimalName();
 
 ```java
 package com.abd.java.inheritance.animal;
+
 // 该类至少有一个抽象方法。
 public abstract class Animal {
 
@@ -3937,9 +2641,9 @@ public abstract class Animal {
 }
 ```
 
-# 接下来看 Cat，继承自 Animal。
+## 接下来看 Cat，继承自 Animal
 
-Cat 也有构造函数和字段。在构造函数的第一行必须调用 `super()`，这意味着调用父类的构造函数来分配字段。如果你不调用 `super()`，java 会在编译时在构造函数的第一行插入 `super()`。
+`Cat` 也有构造函数和字段。在构造函数的第一行必须调用 `super()`，这意味着调用父类的构造函数来分配字段。如果你不调用 `super()`，Java 会在编译时在构造函数的第一行插入 `super()`。
 
 ### Cat.java
 
@@ -3991,12 +2695,9 @@ public class Cat extends Animal {
 }
 ```
 
-
-
-
-
 ```java
 package com.abd.java.inheritance.animal;
+
 public class Mouse extends Animal {
 
     private int weight;
@@ -4037,7 +2738,7 @@ public class Mouse extends Animal {
 }
 ```
 
-# InstanceofDemo.java
+## InstanceofDemo.java
 
 ```java
 package com.abd.java.inheritance.demo;
@@ -4045,6 +2746,7 @@ package com.abd.java.inheritance.demo;
 import com.abd.java.inheritance.animal.Animal;
 import com.abd.java.inheritance.animal.Cat;
 import com.abd.java.inheritance.animal.Mouse;
+
 public class InstanceofDemo {
 
     public static void main(String[] args) {
@@ -4069,17 +2771,24 @@ public class InstanceofDemo {
     }
 }
 ```
-### 输出：
-name: Tom
-tom is a cat
-tom is an animal
 
-# InheritDemo.java
+### 输出
+
+```text
+name: Tom
+
+tom is a cat
+
+tom is an animal
+```
+
+## InheritDemo.java
 
 ```java
 package com.abd.java.inheritance.demo;
 
 import com.abd.java.inheritance.animal.Cat;
+
 public class InheritDemo {
 
     public static void main(String[] args) {
@@ -4099,14 +2808,21 @@ public class InheritDemo {
 }
 ```
 
-### 输出：
-name: Tom
-animalName: Cat
---------
-Age: 3
-Height: 20
+### 输出
 
-# Casting injava
+```text
+name: Tom
+
+animalName: Cat
+
+--------
+
+Age: 3
+
+Height: 20
+```
+
+## Casting in Java
 
 ```java
 package com.abd.java.inheritance.demo;
@@ -4150,22 +2866,36 @@ public class CastDemo {
     }
 }
 ```
-### 输出：
+
+### 输出
+
+```text
 Cat height: 20
+```
+
 或
+
+```text
 Mouse weight: 5
+```
 
 ## 4 Java 中的多态
 
-你有一只亚洲猫 AsianCat，你可以说它是一个 Cat，也可以说它是一个 Animal，这是多态的一个方面。
+你有一只亚洲猫 `AsianCat`，你可以说它是一个 `Cat`，也可以说它是一个 `Animal`，这是多态的一个方面。
 
 或者另一个例子：在你的简历上记录你是一个亚洲男性，而你实际上是一个越南人。
 
-下面的示例展示了你如何在声明与现实之间表现
+下面的示例展示了你如何在声明与现实之间表现。
 
-AsianCat 是 Cat 类的子类。
+`AsianCat` 是 `Cat` 类的子类。
 
 ### AsianCat.java
+
+
+
+# 1 继承示例
+
+以下代码演示了`AsianCat`类继承`Cat`类的过程，并重写了`getAnimalName()`方法：
 
 ```java
 package com.abd.java.inheritance.animal;
@@ -4184,7 +2914,7 @@ public class AsianCat extends Cat {
 }
 ```
 
-
+接下来是`BuildHouse`类继承`ManualJob`并实现其抽象方法的示例：
 
 ```java
 // 所以它必须实现剩余抽象方法。
@@ -4199,7 +2929,9 @@ public class BuildHouse extends ManualJob {
 }
 ```
 
-### JobDemo.java
+## JobDemo.java
+
+`JobDemo`类展示了如何创建抽象类的子类对象并调用其方法：
 
 ```java
 package com.abd.java.abs;
@@ -4230,6 +2962,8 @@ public class JobDemo {
 
 ### 输出
 
+运行上述代码将产生以下输出：
+
 ```
 Coding Java...
 Job Name 1= Java
@@ -4237,7 +2971,7 @@ Build a House
 Job Name 2= Manual Job
 ```
 
-## 4 接口概览 (Overview of the interface)
+# 4 接口概览 (Overview of the interface)
 
 我们知道一个类只能继承一个父类。
 
@@ -4267,7 +3001,7 @@ public class Cat extends Animal implements CanEat, CanDrink {
 }
 ```
 
-## 5 接口的结构 (Structure of an Interface)
+# 5 接口的结构 (Structure of an Interface)
 
 ```java
 package com.abd.java.it;
@@ -4280,7 +3014,7 @@ interface NoAccessModifierInterface {
 }
 ```
 
-### CanMove.java
+## CanMove.java
 
 ```java
 package com.abd.java.it;
@@ -4301,7 +3035,7 @@ public interface CanMove {
 }
 ```
 
-### CanDrink.java
+## CanDrink.java
 
 ```java
 package com.abd.java.it;
@@ -4321,9 +3055,9 @@ public interface CanDrink {
 }
 ```
 
-## 6 类实现接口 (Class implements Interface)
+# 6 类实现接口 (Class implements Interface)
 
-Animal.java
+## Animal.java
 
 ```java
 package com.abd.java.jcls;
@@ -4346,7 +3080,7 @@ public abstract class Animal implements CanMove {
 }
 ```
 
-### Cat.java
+## Cat.java
 
 ```java
 package com.abd.java.jcls;
@@ -4407,11 +3141,7 @@ public class Mouse extends Cat implements CanMove {
 }
 ```
 
-
-
-
-
-## 3 Jdk1.6 的安装与 Eclipse 中的配置
+# 3 Jdk1.6 的安装与 Eclipse 中的配置
 
 ![](img/687999f111d1584abe7fc92b1c74ca2a_77_0.png)
 
@@ -4452,6 +3182,7 @@ Eclipse 指向 Jdk1.6 的位置
 ### 第 9 步：
 
 窗口首选项（Window Preferences）显示软件
+
 你可以从 Eclipse 中选择任何想要配置的内容
 
 ![](img/687999f111d1584abe7fc92b1c74ca2a_82_0.png)
@@ -4474,22 +3205,33 @@ Eclipse 指向 Jdk1.6 的位置
 
 ### 第 18 步：
 
+```
 Apr 27, 2023 2:17:10 PM org.apache.catalina.core.Lifecycle: The APR based Apache Tomcat native library allows optimal
+
 Apr 27, 2023 2:17:11 PM org.coyote.http111Protocol.startProtocol: Initializing Coyote HTTP/1.1 on http-8080 processed in 236 ms
+
 Apr 27, 2023 2:17:11 PM org.apache.catalina.core.StandardService: Starting service
+
 Apr 27, 2023 2:17:11 PM org.apache.catalina.core.StandardEngine: Starting Service Engine: Tomcat/6.0.29
+
 Apr 27, 2023 2:17:14 PM org.coyote.http111Protocol: Starting Coyote HTTP/1.1 on http-8080
+
 Apr 27, 2023 2:17:14 PM org.coyote.common.ChannelSocket: insert on /0.0.0.0:8009
+
 Apr 27, 2023 2:17:14 PM org.apache.jk.server.Main: JK running in IDE (Files=466) Configuration
+
 Apr 27, 2023 2:17:14 PM org.apache.catalina.startup.Catalina: Server startup in 303 ms
+```
 
 ### 第 19 步：
 
 ### 第 20 步：
 
-## JAVA
-## SPRING
-## HIBERNATE
+# JAVA
+
+# SPRING
+
+# HIBERNATE
 
 在本书中，你将学习从零开始使用 Spring Hibernate 开发 Java Web 应用，提供现成的解决方案并逐步解释。AMIT K
 
@@ -4502,26 +3244,39 @@ Apr 27, 2023 2:17:14 PM org.apache.catalina.startup.Catalina: Server startup in 
 当用户通过（浏览器）提交请求时
 
 Action 将接收请求、继续执行并连接数据库
+
 Service 接口（包含方法）、对表进行什么操作
+
 CRUD 操作（创建、更新、查询、删除）。
 
 Service 接口的实现（方法）
+
 包含依赖（持久化对象信息）。
 
 DAO 接口（方法）、如何与表通信
+
 用于 CRUD 操作（创建、更新、查询、删除）。
+
 负责与表进行通信
+
 POJO（简单 Java 对象）
+
 所有请求数据来自（浏览器）
+
 所有结果数据从（表）传输到（浏览器）
 
 MVC（模型-视图-控制器）架构
 
 用于视图（向浏览器显示结果数据）
+
 结果数据来自（表）
+
 连接数据库之后
+
 前端控制器（Front Controller）将获取合适的（JSP 页面）并将数据放入（JSP 页面）
+
 并将（JSP 页面）发送回浏览器
+
 浏览器将显示
 
 ## 首页
@@ -4544,43 +3299,67 @@ MVC（模型-视图-控制器）架构
 ## 项目资源
 
 - hospital
+
 - IAX-WS Web Services
+
 - 部署描述符: hospital
+
 - Java Resources
+
     - com.abd.action
+
         - AllAction.java
+
     - com.abd.biz
+
         - AdminBiz.java
+
         - DoctorBiz.java
+
         - PatientBiz.java
+
     - com.abd.biz.impl
 
 当用户通过（浏览器）提交请求时
+
 Action 将接收请求、继续执行并连接数据库
 
 Service 接口（包含方法）、对表进行什么操作
+
 CRUD 操作（创建、更新、查询、删除）
 
 Service 接口的实现（方法）
+
 包含依赖（持久化对象信息）
 
 - AdminDaoImpl.java
+
 - DoctorDaoImpl.java
+
 - PatientDaoImpl.java
 
 - com.abd.dao
+
     - AdminDao.java
+
     - AppointmentDao.java
+
     - CuraymentDao.java
+
     - DoctorDao.java
+
     - HistoryDao.java
+
     - PatientDao.java
 
 DAO 接口（方法）、如何与表通信
+
 用于 CRUD 操作（创建、更新、查询、删除）。
 
 - AdminDaoImpl.java
+
 - DoctorDaoImpl.java
+
 - PatientDaoImpl.java
 
 ```
@@ -4596,10 +3375,6 @@ pinqueue
 7 rows in set (0.00 sec)
 ```
 
-
-
-
-
 # JBG 医疗保健
 
 - 返回首页
@@ -4607,11 +3382,15 @@ pinqueue
 医生已添加
 
 - 查看医院医生信息
+
 - 添加医生账号
+
 - 移除医生账号
+
 - 登出
 
 - 患者用户
+
 - 医生用户
 
 # 查看医院医生信息
@@ -4631,6 +3410,15 @@ pinqueue
 | Ajay | 44 | 0 | MBBS | 内科医生 | 感冒 | 67082300 |
 | Supriya | 35 | 1 | 外科医生 | 牙科 | 牙齿 | 68082300 |
 | Ritu | 21 | 1 | MBBS | 眼科 | 近视 | 87200000 |
+
+
+
+# 患者模块 II
+
+## 患者注册
+
+| 全名 | 年龄 | 性别 | 职称 | 科室 | 长 | 电话 |
+| --- | --- | --- | --- | --- | --- | --- |
 | Diuple | 39 | 0 | 教授 | 鼻科 | 打鼾 | 63000223 |
 | Bhavna | 40 | 1 | 外科医生 | 内科 | 感冒 | 56000823 |
 | Tripti | 34 | 1 | MBBS | 内科 | 牙科 | 47200020 |
@@ -4640,10 +3428,6 @@ pinqueue
 | Dipti | 39 | 1 | 教授 | 头部 | 头痛 | 35400032 |
 | Bhavna | 40 | 1 | 外科医生 | 鼻科 | 打鼾 | 32300230 |
 | Ajay | 44 | 0 | MBBS | 内科 | 感冒 | 57008230 |
-
-# 患者模块 II
-
-## 患者注册
 
 | 全名 | 年龄 | 性别 | 职称 | 科室 | 长 | 电话 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -4665,7 +3449,10 @@ pinqueue
 | Dinesh | 28 | 女 | 教授 | 眼科 | 近视 | 2388000 |
 | Digpti | 39 | 男 | 教授 | 头部 | 头痛 | 3540032 |
 | Bhavna | 40 | 女 | 外科医生 | 无 | 打鼾 | 3238029 |
-![](img/687999f111d1584abe7fc92b1c74ca2a_117_0) # 患者注册成功
+
+![](img/687999f111d1584abe7fc92b1c74ca2a_117_0)
+
+## 患者注册成功
 
 ## JBG 医疗保健
 
@@ -4689,7 +3476,7 @@ pinqueue
 点击医生姓名查看医生预约信息
 
 | 全名 | 序号 | 年龄 | 性别 (0男1女) | 职称 | 科室 | 长 | 电话 |
-|---|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | Indra | 1 | 25 | 0 | 教授 | 眼科 | 近视 | 8233000 |
 | Japan | 2 | 30 | 0 | 外科医生 | 鼻科 | 头痛 | 1234002 |
 | Christian | 3 | 40 | 0 | 外科医生 | 牙科 | 牙齿 | 1234002 |
@@ -4727,10 +3514,10 @@ pinqueue
 - 医生用户
 - 管理员用户
 
-科室：内科医生
-职称：MBBS
-擅长：感冒
-时间：周二上午
+科室：内科医生  
+职称：MBBS  
+擅长：感冒  
+时间：周二上午  
 确认
 
 # 查询可用医生的预约列表
@@ -4740,7 +3527,7 @@ pinqueue
 点击医生姓名查看医生预约信息
 
 | 全名 | 序号 | 年龄 | 性别 (0男1女) | 职称 | 科室 | 长 | 电话 |
-|---|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | Ajay | 10 | 44 | 0 | MBBS | 内科 | 感冒 | 67300082 |
 | Ajay | 12 | 42 | 1 | MBBS | 内科 | 感冒 | 546008 |
 | Tripti | 16 | 34 | 1 | MBBS | 内科 | 感冒 | 5600023 |
@@ -4764,7 +3551,7 @@ pinqueue
 点击“预约医生号码”进行预约
 
 | 返回首页 | 点击医生姓名查看预约信息 |
-|---|---|
+| --- | --- |
 | 查看所有医生 | 日 Mon Tue Wed Thu Fri Sat |
 | 预约 | 当前预约的号码 1 1 1 1 1 1 |
 | 查看我的预约 | |
@@ -4799,7 +3586,7 @@ pinqueue
 ## JBG 医疗保健
 
 | 预约号 | 医生号 | 0-周日 | 1-周一 | 下午 | 预约日期 |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | 1 | 1 | 25 | 0 | | 2024-01-21 19:51 |
 | 2 | 10 | 44 | 0 | | 2024-01-21 19:49 |
 | 3 | 2 | 30 | 1 | | 2024-01-21 19:14 |
@@ -4817,26 +3604,16 @@ pinqueue
 
 ## JBG 医疗保健
 
-返回首页
-
-预约取消成功！
-
-查看所有医生
-
-预约
-
-查看我的预约
-
-取消预约
-
-查询医生信息
-
-查询记录
-
-登出
-
-医生用户
-
+返回首页  
+预约取消成功！  
+查看所有医生  
+预约  
+查看我的预约  
+取消预约  
+查询医生信息  
+查询记录  
+登出  
+医生用户  
 管理员用户
 
 # 查询医生记录
@@ -4844,13 +3621,9 @@ pinqueue
 ## JBG 医疗保健
 
 | 医生姓名 | 医生序号 | 年龄 | 性别 | 职称 | 科室 | 长 | 电话 |
-|---|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | Indira | 1 | 28 | 0 | 教授 | 眼科 | 近视 | 8233000 |
 | Ajay | 10 | 44 | 0 | MBBS | 内科 | 感冒 | 67300082 |
-
-
-
-
 
 ## JGB 医疗保健
 
@@ -4872,7 +3645,7 @@ pinqueue
 - 医生用户
 - 管理员用户
 
-## 医生模块模块 III
+# 医生模块模块 III
 
 ## 医生登录
 
@@ -4913,7 +3686,7 @@ pinqueue
 
 - 返回首页
 - 修改密码
-- 查看预约患者信息。
+- 查看预约患者信息
 - 创建记录
 - 查看患者记录
 - 修改患者记录
@@ -4943,20 +3716,16 @@ pinqueue
 - 患者用户
 - 管理员用户
 
-症状：流体流出
-
-诊断：检查、呼吸困难
-
-处方：软药、Abbinsol 250mg
-
+症状：流体流出  
+诊断：检查、呼吸困难  
+处方：软药、Abbinsol 250mg  
 创建
 
 ## 创建患者记录成功
 
 ## JGB 医疗保健
 
-- 返回首页
-
+- 返回首页  
 超越医疗成功
 
 - 修改密码
@@ -4977,8 +3746,7 @@ pinqueue
 
 ## JGB 医疗保健
 
-- 返回首页
-
+- 返回首页  
 更新成功！
 
 - 修改密码
@@ -5009,7 +3777,7 @@ pinqueue
 - 管理员用户
 
 | 全名 年龄 性别 地址 | 电话 | 症状诊断 | 处方 | 开始时间 | 结束时间 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 | 修改结束时间 Amar | 20 0 | I.A. AMAR | 3453254523 | 眼检近视 | 眼药水、绿色/蔬菜 | 2024-01-21 |
 
 ## 治疗结束
@@ -5018,10 +3786,10 @@ pinqueue
 
 ## 医院流程
 
-步骤 1：医生 → 预约
-步骤 2：医生 → 治疗
-步骤 3：患者 → 治疗
-步骤 4：医生 → 结束
+步骤 1：医生 → 预约  
+步骤 2：医生 → 治疗  
+步骤 3：患者 → 治疗  
+步骤 4：医生 → 结束  
 步骤 5：患者 → 状态
 
 ### 医院设计
@@ -5029,20 +3797,24 @@ pinqueue
 ### 1. 整体功能
 
 #### 1. 医院
+
 - 医生
 - 患者
 - 预约
 
 #### 2. 患者
+
 - 修改密码
 - 你的密码
 - 你的信息
 
 #### 3. 医生
+
 - 你的密码
 - 你的记录
 
 #### 4. 管理员
+
 - 增加或删除
 
 ### 2. 设计
@@ -5101,8 +3873,7 @@ mysql>
 
 ## 部署你的 (医院 Web 应用)
 
-到 Tomcat 服务器
-
+到 Tomcat 服务器  
 主页将如下所示
 
 ## 首页
@@ -5112,6 +3883,7 @@ mysql>
 ## JGB 医疗保健
 
 请选择：
+
 - 患者用户
 - 医生用户
 - 管理员用户
@@ -5120,20 +3892,15 @@ mysql>
 
 ## 再次进入 MySQL (服务器)
 
-show tables;
-
-这次会出现自动生成的表
-由于你已经在运行 (医院 Web 应用)
-在 Tomcat 服务器中
-
-
-
-
-
+`show tables;`  
+这次会出现自动生成的表  
+由于你已经在运行 (医院 Web 应用)  
+在 Tomcat 服务器中  
 表将自动创建。
 
+
+
 ```sql
-************************************/
 create sequence dl_admin_seq;
 create table dl_admin (
   aid number(2) primary key,
@@ -5145,27 +3912,26 @@ create table dl_admin (
 );
 ```
 
-********************** 医生可以接受的最大预约次数
+### 医生可以接受的最大预约次数
 
-| DID | 医生编号 | 主键 | 外键 dl_doctor(DID) |
+| DID | 医生编号 | 主键 | 外键 `dl_doctor(DID)` |
 | :--- | :--- | :--- | :--- |
-| SunA | 周日上午 | 最大预约数 | |
-| SunP | 周日下午 | 最大预约数 | |
-| MonA | 周一上午 | 最大预约数 | |
-| MonP | 周一下午 | 最大预约数 | |
-| Tue | 周二上午 | 最大预约数 | |
-| P | 周二下午 | 最大预约数 | |
-| WedA | 周三上午 | 最大预约数 | |
-| WedP | 周三下午 | 最大预约数 | |
-| ThA | 周四上午 | 最大预约数 | |
-| ThuP | 周四下午 | 最大预约数 | |
-| FriA | 周五上午 | 最大预约数 | |
-| FriP | 周五下午 | 最大预约数 | |
-| SatA | 周六上午 | 最大预约数 | |
-| SatP | 周六下午 | 最大预约数 | |
+| `SunA` | 周日上午 | 最大预约数 | |
+| `SunP` | 周日下午 | 最大预约数 | |
+| `MonA` | 周一上午 | 最大预约数 | |
+| `MonP` | 周一下午 | 最大预约数 | |
+| `Tue` | 周二上午 | 最大预约数 | |
+| `P` | 周二下午 | 最大预约数 | |
+| `WedA` | 周三上午 | 最大预约数 | |
+| `WedP` | 周三下午 | 最大预约数 | |
+| `ThA` | 周四上午 | 最大预约数 | |
+| `ThuP` | 周四下午 | 最大预约数 | |
+| `FriA` | 周五上午 | 最大预约数 | |
+| `FriP` | 周五下午 | 最大预约数 | |
+| `SatA` | 周六上午 | 最大预约数 | |
+| `SatP` | 周六下午 | 最大预约数 | |
 
 ```sql
-********************************
 create table dl_appointment(
   did number(5) primary key references dl_doctor(did),
   sunA number(3) default '0',
@@ -5185,25 +3951,24 @@ create table dl_appointment(
 );
 ```
 
-****************************
-当前可以预约的医生人数
+### 当前可以预约的医生人数
 
-DID 数量 主键 外键 dl_doctor(DID)
+`DID` 数量 主键 外键 `dl_doctor(DID)`
 
-- SunA: 周日上午最大预约数
-- SunP: 周日下午最大预约数
-- MonA: 周一上午最大预约数
-- MonP: 周一下午最大预约数
-- Tue: 周二上午最大预约数
-- P: 周二下午最大预约数
-- WedA: 周三上午最大预约数
-- WedP: 周三下午最大预约数
-- ThA: 周四上午最大预约数
-- ThuP: 周四下午最大预约数
-- FriA: 周五上午最大预约数
-- FriP: 周五下午最大预约数
-- SatA: 周六上午最大预约数
-- SatP: 周六下午最大预约数
+- `SunA`: 周日上午最大预约数
+- `SunP`: 周日下午最大预约数
+- `MonA`: 周一上午最大预约数
+- `MonP`: 周一下午最大预约数
+- `Tue`: 周二上午最大预约数
+- `P`: 周二下午最大预约数
+- `WedA`: 周三上午最大预约数
+- `WedP`: 周三下午最大预约数
+- `ThA`: 周四上午最大预约数
+- `ThuP`: 周四下午最大预约数
+- `FriA`: 周五上午最大预约数
+- `FriP`: 周五下午最大预约数
+- `SatA`: 周六上午最大预约数
+- `SatP`: 周六下午最大预约数
 
 ```sql
 create table dl_curappointment(
@@ -5225,10 +3990,9 @@ create table dl_curappointment(
 );
 ```
 
-****************************
 ### 医生表
 
-- DID 医生编号
+- `DID` 医生编号
 - 姓名
 - 密码
 - 年龄
@@ -5252,17 +4016,17 @@ create table dl_doctor (
 );
 ```
 
-病历列表按顺序生成
+### 病历列表按顺序生成
 
-- HID 病历记录号
-- 医生主编号 (外键 dl_doctor(DID))
+- `HID` 病历记录号
+- 医生主编号 (外键 `dl_doctor(DID)`)
 - 症状描述
 - 诊断结果
-- 患者编号 (外键 dl_patient(DID))
-- Rx 处方
+- 患者编号 (外键 `dl_patient(DID)`)
+- `Rx` 处方
 - 是否完成治疗 (0-否, 1-是)
-- Fdate 开始时间 (2024-01-23 00:00)
-- SDate 结束时间 (2024-01-21 00:00)
+- `Fdate` 开始时间 (2024-01-23 00:00)
+- `SDate` 结束时间 (2024-01-21 00:00)
 
 ```sql
 create sequence dl_history_seq;
@@ -5279,10 +4043,9 @@ create table dl_history (
 );
 ```
 
-***********************************
 ### 患者表
 
-- PID 序列生成
+- `PID` 序列生成
 - 姓名
 - 用户名 (登录名)
 - 密码
@@ -5292,8 +4055,9 @@ create table dl_history (
 - 电话号码
 - 患者病史
 
-**********************************
+```sql
 create sequence dl_patient_seq;
+
 create table dl_patient (
   pid number(8) primary key,
   name varchar2(12) not null,
@@ -5304,13 +4068,13 @@ create table dl_patient (
   address varchar2(32),
   phone varchar2(24)
 );
+```
 
-**********************************
 ### 预约记录表
 
-- QID 记录号按序列生成
-- 患者编号 (外键 dl_patient(PID))
-- 医生主编号 医生 (外键 dl_doctor(DID))
+- `QID` 记录号按序列生成
+- 患者编号 (外键 `dl_patient(PID)`)
+- 医生主编号 医生 (外键 `dl_doctor(DID)`)
 - 预约日期：
   - 0-周日
   - 1-周一
@@ -5319,10 +4083,10 @@ create table dl_patient (
   - 4-周四
   - 5-周五
   - 6-周六
-- AP 预约时间：
+- `AP` 预约时间：
   - 0-上午
   - 1-下午
-- Dat 预约时间 (2024-01-21 00:00:00)
+- `Dat` 预约时间 (2024-01-21 00:00:00)
 
 ```sql
 create sequence dl_pinqueue_seq;
@@ -5337,11 +4101,11 @@ create table dl_pinqueue (
 );
 ```
 
-## ADMIN 表
+### ADMIN 表
 
 插入给定的 SQL 语句凭据
 
-- DID
+- `DID`
 - 用户名
 - 密码
 - 邮箱
@@ -5370,10 +4134,9 @@ INSERT INTO dl_admin (aid, username, password, email, name) VALUES (19, 'Dinesh'
 INSERT INTO dl_admin (aid, username, password, email, name) VALUES (20, 'Dipti', 'password', 'Dipti@abc.com', 'Professor');
 ```
 
+### 4 `dl_curappointment` 当前预约表
 
 
-
-### 4 dl_curappointment 当前预约表
 
 ```sql
 INSERT INTO `dl_curappointment` (`DID`, `SunA`, `SunP`, `MonA`, `Mo`)
@@ -5401,7 +4164,7 @@ INSERT INTO `dl_curappointment` VALUES ('021', 1, 1, 1, 1, 1, 1,
 INSERT INTO `dl_curappointment` VALUES ('022', 1, 1, 1, 1, 1, 1,
 ```
 
-### 5 dl_patient 患者表
+### 5 `dl_patient` 患者表
 
 ```sql
 INSERT INTO `dl_patient` (`PID`, `Name`, `Username`, `Password`, `Age`),
@@ -5412,14 +4175,14 @@ INSERT INTO `dl_patient` VALUES (1004, 'Gopal', 'Gopal', 'Gopal', 40),
 INSERT INTO `dl_patient` VALUES (1005, 'Shyam', 'Shyam', 'Shyam', 45),
 ```
 
-## 6 dl_history 历史记录表
+### 6 `dl_history` 历史记录表
 
 ```sql
 INSERT INTO `dl_history` (`HID`, `Description`, `Diag`)
 INSERT INTO `dl_history` VALUES (2, '001', 'Headache',
 ```
 
-数据会自动获取
+数据会自动获取。
 
 ## 实体关系图
 
@@ -5439,18 +4202,18 @@ INSERT INTO `dl_history` VALUES (2, '001', 'Headache',
 | :--- | :--- | :--- | :--- | :--- |
 | 浏览器, html | WAP/net | JEE框架 | JSON, XML | DBMS |
 | 移动端,工作站 | 手持设备 | Web 服务 | AS/400 | |
-| swing | 防火墙 | COTS | 遗留系统 |
+| swing | 防火墙 | COTS | 遗留系统 | |
 
-通过浏览器提交请求，Action 进入数据库（增删改查），服务接口实现（持久化对象，增删改查）。负责通信的表：
+通过浏览器提交请求，`Action` 进入数据库（增删改查），服务接口实现（持久化对象，增删改查）。负责通信的表：
 
-- dl_curappointment
-- dl_doctor
-- dl_history
-- dl_patient
-- dl_queue
-- mysql
+- `dl_curappointment`
+- `dl_doctor`
+- `dl_history`
+- `dl_patient`
+- `dl_queue`
+- `mysql`
 
-### abd/action/AllAction.java
+### `abd/action/AllAction.java`
 
 ```java
 package com.abd.action;
@@ -5557,10 +4320,6 @@ public class AllAction extends DispatchAction {
 }
 ```
 
-
-
-
-
 ```java
 ApplicationContext ctx = this.getAppContext();
 PatientBiz patient = (PatientBiz)ctx.getBean("servicePatient");
@@ -5571,20 +4330,22 @@ return mapping.findForward("getDoc");
 
 // 医生预约所需信息
 
+
+
 ```java
 public ActionForward getAppointment(ActionMapping mapping, ActionForm \
 HttpServletRequest request, HttpServletResponse response) throws Exception {
-ApplicationContext ctx = this.getAppContext();
-PatientBiz patient = (PatientBiz)ctx.getBean("servicePatient");
-List<Doctor> set = patient.queryAllDoctor();
-Set l1 = new HashSet();
-Set l2 = new HashSet();
-Set l3 = new HashSet();
-for(Doctor d:set) {
-l1.add(d.getSection());
-l2.add(d.getLevel());
-l3.add(d.getSpe());
-}
+    ApplicationContext ctx = this.getAppContext();
+    PatientBiz patient = (PatientBiz)ctx.getBean("servicePatient");
+    List<Doctor> set = patient.queryAllDoctor();
+    Set l1 = new HashSet();
+    Set l2 = new HashSet();
+    Set l3 = new HashSet();
+    for(Doctor d:set) {
+        l1.add(d.getSection());
+        l2.add(d.getLevel());
+        l3.add(d.getSpe());
+    }
 }
 ```
 
@@ -5601,17 +4362,17 @@ return mapping.findForward("pqd");
 public ActionForward patientQueryMessage(ActionMapping mapping, ActionForm \
 ,
 HttpServletRequest request, HttpServletResponse response) throws Exception {
-ApplicationContext ctx = this.getAppContext();
-PatientBiz patient = (PatientBiz)ctx.getBean("servicePatient");
-DynamicActionForm da = (DynamicActionForm)form;
-String section = da.getString("section");
-String levels = da.getString("level");
-String spe = da.getString("spe");
-int day = Integer.parseInt(da.getString("day"));
-int ap = Integer.parseInt(da.getString("ap"));
-List<Doctor> l = patient.queryDoctor(section,levels,spe,day,ap);
-request.getSession(true).setAttribute("doctors", l);
-return mapping.findForward("getDocs");
+    ApplicationContext ctx = this.getAppContext();
+    PatientBiz patient = (PatientBiz)ctx.getBean("servicePatient");
+    DynamicActionForm da = (DynamicActionForm)form;
+    String section = da.getString("section");
+    String levels = da.getString("level");
+    String spe = da.getString("spe");
+    int day = Integer.parseInt(da.getString("day"));
+    int ap = Integer.parseInt(da.getString("ap"));
+    List<Doctor> l = patient.queryDoctor(section,levels,spe,day,ap);
+    request.getSession(true).setAttribute("doctors", l);
+    return mapping.findForward("getDocs");
 }
 ```
 
@@ -5621,263 +4382,293 @@ return mapping.findForward("getDocs");
 public ActionForward patientAppointment(ActionMapping mapping , ActionForm \
 form,
 HttpServletRequest request, HttpServletResponse response) throws Exception {
-ApplicationContext ctx = this.getAppContext();
-PatientBiz patient=(PatientBiz)ctx.getBean("servicePatient");
-Integer did=new Integer(Integer.parseInt(request.getParameter("did")));
-int day = Integer.parseInt(request.getParameter("day"));
-int ap = Integer.parseInt(request.getParameter("ap"));
-Patient p=(Patient)request.getSession(true).getAttribute("patient");
-patient.appointment(p,did, day, ap);
-return mapping.findForward("make");
+    ApplicationContext ctx = this.getAppContext();
+    PatientBiz patient=(PatientBiz)ctx.getBean("servicePatient");
+    Integer did=new Integer(Integer.parseInt(request.getParameter("did")));
+    int day = Integer.parseInt(request.getParameter("day"));
+    int ap = Integer.parseInt(request.getParameter("ap"));
+    Patient p=(Patient)request.getSession(true).getAttribute("patient");
+    patient.appointment(p,did, day, ap);
+    return mapping.findForward("make");
 }
 ```
 
 // 患者信息检查医生的预约
+
+```java
 public ActionForward patientAppointmentMessage(ActionMapping mapping
 ActionForm form,
 HttpServletRequest request,HttpServletResponse response) throws Exception {
-AppContext ctx = this.getServletContext();
-PatientBiz patient=(PatientBiz)ctx.getBean("servicePatient");
-DynaActionForm def=(DynaActionForm)form;
-Integer did = new Integer(def.getString("did"));
-Appointment cur=patient.queryById(did);
-request.getSession(true).setAttribute("appointment",cur);
-return mapping.findForward("appointment");
+    AppContext ctx = this.getServletContext();
+    PatientBiz patient=(PatientBiz)ctx.getBean("servicePatient");
+    DynaActionForm def=(DynaActionForm)form;
+    Integer did = new Integer(def.getString("did"));
+    Appointment cur=patient.queryById(did);
+    request.getSession(true).setAttribute("appointment",cur);
+    return mapping.findForward("appointment");
 }
 ```
 
 // 带有预约看医生
+
+```java
 public ActionForward patientMyAppointment(ActionMapping mapping
 ActionForm form,
 HttpServletRequest request,HttpServletResponse response) throws Exception {
-AppContext ctx = this.getServletContext();
-PatientBiz patient=(PatientBiz)ctx.getBean("servicePatient");
-Integer pid=new Integer(Integer.parseInt(request.getParameter("pid")));
-List<Pinqueue> list=list.getPinqueuesById(pid);
-request.getSession(true).setAttribute("pinqueues",list);
-return mapping.findForward("getApp");
+    AppContext ctx = this.getServletContext();
+    PatientBiz patient=(PatientBiz)ctx.getBean("servicePatient");
+    Integer pid=new Integer(Integer.parseInt(request.getParameter("pid")));
+    List<Pinqueue> list=list.getPinqueuesById(pid);
+    request.getSession(true).setAttribute("pinqueues",list);
+    return mapping.findForward("getApp");
 }
 ```
 
 // 预约取消
+
+```java
 public ActionForward patientCancelAppointment(ActionMapping mapping
 ActionForm form,
 HttpServletRequest request,HttpServletResponse response) throws Exception {
-AppContext ctx = this.getServletContext();
-PatientBiz patient=(PatientBiz)ctx.getBean("servicePatient");
-Integer qid = new Integer(Integer.parseInt(request.getParameter("qid")));
-patient.cancelAppointment(qid);
-return mapping.findForward("cancel");
+    AppContext ctx = this.getServletContext();
+    PatientBiz patient=(PatientBiz)ctx.getBean("servicePatient");
+    Integer qid = new Integer(Integer.parseInt(request.getParameter("qid")));
+    patient.cancelAppointment(qid);
+    return mapping.findForward("cancel");
 }
 ```
 
 // 患者获取医生信息
+
+```java
 public ActionForward patientGetDoctorMessage(ActionMapping mapping ,ActionForm
 form ,
 HttpServletRequest request,HttpServletResponse response) throws Exception {
-AppContext ctx = this.getServletContext();
-PatientBiz patient=(PatientBiz)ctx.getBean("servicePatient");
-Integer pid=new Integer(Integer.parseInt(request.getParameter("pid")));
-List<Doctor> l=patient.queryHistoryByPid(pid);
-request.getSession(true).setAttribute("dMessages", l);
-return mapping.forward("current");
+    AppContext ctx = this.getServletContext();
+    PatientBiz patient=(PatientBiz)ctx.getBean("servicePatient");
+    Integer pid=new Integer(Integer.parseInt(request.getParameter("pid")));
+    List<Doctor> l=patient.queryHistoryByPid(pid);
+    request.getSession(true).setAttribute("dMessages", l);
+    return mapping.forward("current");
 }
 ```
 
 // 患者病历
 
+```java
 public ActionForward queryHistory(ActionMapping mapping , ActionForm form ,
 HttpRequest request,HttpServletResponse response)throws Exception {
-ApplicationContext ctx=this.getWebApplicationContext();
-PatientBiz patient=(PatientBiz)ctx.getBean("servicePatient");
-Integer pid=new Integer(Integer.parseInt(request.getParameter("pid")));
-List<History> l=patient.queryHistoryByPid(pid);
-request.getSession(true).setAttribute("histories", l);
-return mapping.forward("his");
+    ApplicationContext ctx=this.getWebApplicationContext();
+    PatientBiz patient=(PatientBiz)ctx.getBean("servicePatient");
+    Integer pid=new Integer(Integer.parseInt(request.getParameter("pid")));
+    List<History> l=patient.queryHistoryByPid(pid);
+    request.getSession(true).setAttribute("histories", l);
+    return mapping.forward("his");
 }
 ```
 
 // 登录
 
+```java
 public ActionForward login(ActionMapping mapping , ActionForm form ,
 HttpServletRequest request,HttpServletResponse response)throws Exception {
-ApplicationContext ctx=this.getWebApplicationContext();
-Doctor doctor=(Doctor)ctx.getBean("serviceDoctor");
-DynaForm daf=(DynaForm)form;
-String name=daf.getString("name");
-String password=daf.getString("password");
-Doctor d=doctor.login(name,password);
-request.getSession(true).setAttribute("doctor", d);
-return mapping.forward("login");
+    ApplicationContext ctx=this.getWebApplicationContext();
+    Doctor doctor=(Doctor)ctx.getBean("serviceDoctor");
+    DynaForm daf=(DynaForm)form;
+    String name=daf.getString("name");
+    String password=daf.getString("password");
+    Doctor d=doctor.login(name,password);
+    request.getSession(true).setAttribute("doctor", d);
+    return mapping.forward("login");
 }
 ```
 
 // 修改密码
+
+```java
 public ActionForward updatePassword(ActionMapping mapping
 ActionForm form ,
 HttpRequest request,HttpServletResponse response) throws Exception {
-ApplicationContext ctx=this.getWebApplicationContext();
-Doctor doctor=(Doctor)ctx.getBean("serviceDoctor");
-DynaForm daf=(DynaForm)form;
-String newPassword=daf.getString("password");
-String name=(request.getSession(true).getAttribute("doctor")).getName();
-doctor.updatePassword(name,newPassword);
-request.setAttribute("newPassword",newPassword);
-return mapping.forward("upd");
+    ApplicationContext ctx=this.getWebApplicationContext();
+    Doctor doctor=(Doctor)ctx.getBean("serviceDoctor");
+    DynaForm daf=(DynaForm)form;
+    String newPassword=daf.getString("password");
+    String name=(request.getSession(true).getAttribute("doctor")).getName();
+    doctor.updatePassword(name,newPassword);
+    request.setAttribute("newPassword",newPassword);
+    return mapping.forward("upd");
 }
 ```
 
 // 获取预约患者信息
+
+```java
 public ActionForward getAppointmentMessage(ActionMapping mapping
 ActionForm form ,
 HttpServletRequest request,HttpServletResponse response) throws Exception {
-ApplicationContext ctx=this.getWebApplicationContext();
-DoctorBiz doctor=(DoctorBiz)ctx.getBean("serviceDoctor");
-Integer did=new Integer(Integer.parseInt(request.getParameter("did")));
-List<DoctorPinqueue> pinqueue=doctor.getAllpinqueue(did);
-request.getSession(true).setAttribute("pinqueue", pinqueue);
-return mapping.findForward("getPatient");
+    ApplicationContext ctx=this.getWebApplicationContext();
+    DoctorBiz doctor=(DoctorBiz)ctx.getBean("serviceDoctor");
+    Integer did=new Integer(Integer.parseInt(request.getParameter("did")));
+    List<DoctorPinqueue> pinqueue=doctor.getAllpinqueue(did);
+    request.getSession(true).setAttribute("pinqueue", pinqueue);
+    return mapping.findForward("getPatient");
 }
 ```
 
 // 转换模型
+
+```java
 public ActionForward createHistory(ActionMapping mapping, ActionForm form, 
 HttpServletRequest request, HttpServletResponse response) throws Exception {
-ApplicationContext ctx=this.getWebApplicationContext();
-DoctorBiz doctor=(DoctorBiz)ctx.getBean("serviceDoctor");
-DynaActionForm df=(DynaActionForm)form;
-Integer pid=new Integer(Integer.parseInt(request.getParameter("pid")));
-String description=df.getString("description");
-String diagnose=df.getString("diagnose");
-String rx=df.getString("rx");
-int pd=1;
-doctor.createPinpqueue(pid,description, diagnose, rx, pd);
-request.setAttribute("bind", pd);
-return mapping.findForward("create");
+    ApplicationContext ctx=this.getWebApplicationContext();
+    DoctorBiz doctor=(DoctorBiz)ctx.getBean("serviceDoctor");
+    DynaActionForm df=(DynaActionForm)form;
+    Integer pid=new Integer(Integer.parseInt(request.getParameter("pid")));
+    String description=df.getString("description");
+    String diagnose=df.getString("diagnose");
+    String rx=df.getString("rx");
+    int pd=1;
+    doctor.createPinpqueue(pid,description, diagnose, rx, pd);
+    request.setAttribute("bind", pd);
+    return mapping.findForward("create");
 }
 ```
 
 // 检查患者记录
+
+```java
 public ActionForward queryPatientHistory(ActionMapping mapping, ActionForm form, 
 HttpServletRequest request, HttpServletResponse response) throws Exception {
-ApplicationContext ctx=this.getWebApplicationContext();
-DoctorBiz doctor=(DoctorBiz)ctx.getBean("serviceDoctor");
-Integer did=new Integer(Integer.parseInt(request.getParameter("did")));
-List<DoctorQueryHistory> dqh=doctor.getAllHistory(did);
-request.getSession(true).setAttribute("dqhs", dqh);
-return mapping.findForward("gph");
+    ApplicationContext ctx=this.getWebApplicationContext();
+    DoctorBiz doctor=(DoctorBiz)ctx.getBean("serviceDoctor");
+    Integer did=new Integer(Integer.parseInt(request.getParameter("did")));
+    List<DoctorQueryHistory> dqh=doctor.getAllHistory(did);
+    request.getSession(true).setAttribute("dqhs", dqh);
+    return mapping.findForward("gph");
 }
 ```
 
 // 修改患者记录记录
+
+```java
 public ActionForward updatePatientHistory(ActionMapping mapping, ActionForm form, 
 HttpServletRequest request, HttpServletResponse response) throws Exception {
-ApplicationContext ctx=this.getWebApplicationContext();
-DoctorBiz doctor=(DoctorBiz)ctx.getBean("serviceDoctor");
-Integer hid=new Integer(Integer.parseInt(request.getParameter("hid")));
-String description=request.getParameter("description");
-String diagnose=request.getParameter("diagnose");
-String rx=request.getParameter("rx");
-doctor.updateHistory(hid, description, diagnose, rx);
-request.setAttribute("upda", hid);
-return mapping.findForward("upok");
+    ApplicationContext ctx=this.getWebApplicationContext();
+    DoctorBiz doctor=(DoctorBiz)ctx.getBean("serviceDoctor");
+    Integer hid=new Integer(Integer.parseInt(request.getParameter("hid")));
+    String description=request.getParameter("description");
+    String diagnose=request.getParameter("diagnose");
+    String rx=request.getParameter("rx");
+    doctor.updateHistory(hid, description, diagnose, rx);
+    request.setAttribute("upda", hid);
+    return mapping.findForward("upok");
 }
 ```
-
-
-
-
 
 ```java
 }
-// 正在治疗结束患者的医生
-public ActionActionForward finishHistory(ActionMapping mapping ,ActionForm form ,
-HttpServletRequest request, HttpServletResponse response)throws Exception(
-    ApplicationContext ctx = this.getWebApplicationContext();
-    DoctorBiz doctor = (DoctorBiz)ctx.getBean("serviceDoctor");
-    Integer hid = new Integer(Integer.parseInt(request.getParameter("hid")));
-    doctor.finish(hid);
-    return mapping.findForward("finishOk");
-}
-// 注销
-public ActionActionForward exit(ActionMapping mapping ,ActionForm form ,
-HttpServletRequest request, HttpServletResponse response)throws Exception(
-    HttpSession session=request.getSession(true);
-    if(session.getAttribute("admin")!=null){session.setAttribute("admin", null);}
-    if(session.getAttribute("doctor")!=null){session.setAttribute("doctor", null);}
-    if(session.getAttribute("patient")!=null){session.setAttribute("patient", null);}
-    return mapping.findForward("default");
-}
 ```
 
-![](img/687999f111d1584abe7fc92b1c74ca2a_168_0.png)
+// 正在治疗结束患者的医生
 
-# 业务逻辑层代码将位于下方
+```java
+public ActionActionForward finishHistory(ActionMapping mapping ,ActionForm form ,
+```
+
+
+
+`HttpServletRequest request, HttpServletResponse response` `throws Exception(`
+
+```java
+ApplicationContext ctx = this.getWebApplicationContext();
+DoctorBiz doctor = (DoctorBiz)ctx.getBean("serviceDoctor");
+Integer hid = new Integer(Integer.parseInt(request.getParameter("hid")));
+doctor.finish(hid);
+return mapping.findForward("finishOk");
+```
+
+`// 注销`
+
+`public ActionActionForward exit(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception(`
+
+```java
+HttpSession session=request.getSession(true);
+if(session.getAttribute("admin")!=null){session.setAttribute("admin", null);}
+if(session.getAttribute("doctor")!=null){session.setAttribute("doctor", null);}
+if(session.getAttribute("patient")!=null){session.setAttribute("patient", null);}
+return mapping.findForward("default");
+```
+
+`![](img/687999f111d1584abe7fc92b1c74ca2a_168_0.png)`
+
+## 业务逻辑层代码将位于下方
 
 # 项目资源生成器
 
-+ hospital
-  - JAX-WS Web 服务
-  - 部署描述符: hospital
+- `hospital`
+  - `JAX-WS` Web 服务
+  - 部署描述符: `hospital`
   - Java 资源
+- `src`
+  - `com.abd.action`
+    - `AllAction.java`
+  - `com.abd.biz`
+    - `AdminDao.java`
+    - `DoctorDao.java`
+    - `PatientDao.java`
+  - `com.abd.bizimpl`
+    - `AdminDaoImpl.java`
+    - `DoctorDaoImpl.java`
+    - `PatientDaoImpl.java`
+  - `com.abd.dao`
+    - `AdminDao.java`
+    - `AppointmentDao.java`
+    - `CurrapmentDao.java`
+    - `DoctorDao.java`
+    - `HistoryDao.java`
+    - `PatientDao.java`
+    - `PinqueueDao.java`
+  - `com.abd.daoimpl`
+    - `AdminDaoImpl.java`
+    - `AppointmentDaoImpl.java`
+    - `CurrapmentDaoImpl.java`
+    - `DoctorDaoImpl.java`
+    - `PatientDaoImpl.java`
+    - `PinqueueDaoImpl.java`
 
-+ src
-  - com.abd.action
-    - AllAction.java
-  - com.abd.biz
-    - AdminDao.java
-    - DoctorDao.java
-    - PatientDao.java
-  - com.abd.bizimpl
-    - AdminDaoImpl.java
-    - DoctorDaoImpl.java
-    - PatientDaoImpl.java
-  - com.abd.dao
-    - AdminDao.java
-    - AppointmentDao.java
-    - CurrapmentDao.java
-    - DoctorDao.java
-    - HistoryDao.java
-    - PatientDao.java
-    - PinqueueDao.java
-  - com.abd.daoimpl
-    - AdminDaoImpl.java
-    - AppointmentDaoImpl.java
-    - CurrapmentDaoImpl.java
-    - DoctorDaoImpl.java
-    - PatientDaoImpl.java
-    - PinqueueDaoImpl.java
+当用户通过（浏览器）提交请求时，`Action` 将接收请求、继续执行并连接数据库。
 
-当用户通过（浏览器）提交请求时
-Action 将接收请求、继续执行并连接数据库
+服务接口（包含方法），需要操作的表。CURD 操作（创建、更新、删除）。
 
-服务接口（包含方法），需要操作的表
-CURD 操作（创建、更新、删除）
+服务接口实现（方法），包含依赖（持久对象信息）。
 
-服务接口实现（方法）
-包含依赖（持久对象信息）
-
-DAO 接口（方法），如何与表通信
-用于 CURD 操作（创建、读取、删除）
-
-负责与表通信
+DAO 接口（方法），如何与表通信，用于 CURD 操作（创建、读取、删除），负责与表通信。
 
 ```mysql
 mysql>
+
 show tables;
+
 Tables_in_tarena1
+
 | :--- |
+
 |dl_admin |
+
 |dl_appointment |
+
 |dl_delete |
+
 |dl_history |
+
 |dl_pinqueue |
+
 7 rows in set (0.00 sec)
 ```
 
-# src\com\abd\biz
+# `src\com\abd\biz`
 
-### AdminBiz.java
+### `AdminBiz.java`
 
 ```java
 package com.abd.biz;
@@ -5888,60 +4679,58 @@ import java.util.*;
 import com.abd.ext.SystemException;
 import com.abd.entity.*;
 
-public interface AdminBiz (
+public interface AdminBiz {
 
-// 管理员登录
-public void login(String username ,String password)throws IOException
-,SQLException,SystemException;
-// 管理员添加医生
-public void add(Integer did,String name,int age,int sex,String levels,String spe,
-int[] pPerDay,String dPhone,String section)throws IOException
-,SQLException,SystemException;
-// 管理员删除医生
-public void removeDoctor(Integer did)throws
-IOException,SQLException,SystemException;
-// 系统管理员查看所有医生信息
-public List<Doctor> getAllDoctor()throws IOException
-,SQLException,SystemException;
+    // 管理员登录
+    public void login(String username, String password) throws IOException, SQLException, SystemException;
+
+    // 管理员添加医生
+    public void add(Integer did, String name, int age, int sex, String levels, String spe, int[] pPerDay, String dPhone, String section) throws IOException, SQLException, SystemException;
+
+    // 管理员删除医生
+    public void removeDoctor(Integer did) throws IOException, SQLException, SystemException;
+
+    // 系统管理员查看所有医生信息
+    public List<Doctor> getAllDoctor() throws IOException, SQLException, SystemException;
 }
 ```
 
-### DoctorBiz.java
+### `DoctorBiz.java`
 
 ```java
 package com.abd.entity.*;
-import com.abd.expt.SystemException;
 
+import com.abd.expt.SystemException;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
 public interface DoctorBiz {
-// 医生登录返回一个医生对象
-public Doctor login(String name ,String password)throws IOException
-,SQLException,SystemException;
-// 医生修改密码
-public void updatePassword(String name ,String newPassword)throws
-IOException,SQLException,SystemException;
-// 根据 did 检查所有预约记录，根据 pid 识别患者信息，返回专门针对此方法的对象列表
-public List<DoctorQueryQueue> getAllPinqueue(Integer did)throws
-IOException,SQLException,SystemException;
-// 转诊医生挂号
-public void doctorCreatePinqueue(Integer did,Doctor d,String description,String
-diagnose,String rx,int pd)throws IOException,SQLException,SystemException;
-// 通过 did 检查其所有的病历和患者信息，返回一个特殊对象
-public List<DoctorQueryHistory> getAllHistory(Integer did) throws IOException
-,SQLException,SystemException;
-// 更新记录
-public void updateHistory(Integer hid,String description,String diagnose,String
-rx)throws IOException ,SQLException,SystemException;
-// 治疗结束，需要记录结束时间，状态更改为
-public void finish(Integer hid) throws IOException
-,SQLException,SystemException;
+
+    // 医生登录返回一个医生对象
+    public Doctor login(String name, String password) throws IOException, SQLException, SystemException;
+
+    // 医生修改密码
+    public void updatePassword(String name, String newPassword) throws IOException, SQLException, SystemException;
+
+    // 根据 did 检查所有预约记录，根据 pid 识别患者信息，返回专门针对此方法的对象列表
+    public List<DoctorQueryQueue> getAllPinqueue(Integer did) throws IOException, SQLException, SystemException;
+
+    // 转诊医生挂号
+    public void doctorCreatePinqueue(Integer did, Doctor d, String description, String diagnose, String rx, int pd) throws IOException, SQLException, SystemException;
+
+    // 通过 did 检查其所有的病历和患者信息，返回一个特殊对象
+    public List<DoctorQueryHistory> getAllHistory(Integer did) throws IOException, SQLException, SystemException;
+
+    // 更新记录
+    public void updateHistory(Integer hid, String description, String diagnose, String rx) throws IOException, SQLException, SystemException;
+
+    // 治疗结束，需要记录结束时间，状态更改为
+    public void finish(Integer hid) throws IOException, SQLException, SystemException;
 }
 ```
 
-### PatientBiz.java
+### `PatientBiz.java`
 
 ```java
 package com.abd.biz;
@@ -5949,38 +4738,50 @@ package com.abd.biz;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.sql.util.*;
-
 import com.abd.entity.*;
 import com.abd.expt.SystemException;
 
 public interface PatientBiz {
+
     // 所有医生
     public List<Doctor> queryAllDoctor() throws IOException;
-    // 注册患者需要的方法
-    public void register(String name,String password,int age,String address,String phone) throws IOException,SQLException;
-    // 患者登录
-    public void login(String username, String password) throws IOException,SQLException;
-    // 根据 did 查询当前预约
-    public void queryByDid(Integer did) throws IOException,SQLException;
-    // 预约
-    public void appointment(Integer did, int day, int ap) throws IOException,SQLException;
-    // 获取挂号信息
-    public List<Pinqueue> getPinqueueById(Integer pid) throws IOException,SystemException;
-    // 取消预约
-    public void cancelAppointment(Integer qid) throws IOException,SQLException;
-    // 根据 pid 查询患者信息
-    public List<Doctor> queryByPid(Integer pid) throws IOException,SystemException;
-    // 患者病历
-    public List<History> queryHistoryByPid(Integer pid) throws IOException,SystemException;
-    // 医生挂号
-    public List<Doctor> queryDoctor(String section,String spe,int day,int ap) throws IOException;
-}
 
-# src\abd\biz\impl
-AdminBizImpl.java
+    // 注册患者需要的方法
+    public void register(String name, String password, int age, String address, String phone) throws IOException, SQLException;
+
+    // 患者登录
+    public void login(String username, String password) throws IOException, SQLException;
+
+    // 根据 did 查询当前预约
+    public void queryByDid(Integer did) throws IOException, SQLException;
+
+    // 预约
+    public void appointment(Integer did, int day, int ap) throws IOException, SQLException;
+
+    // 获取挂号信息
+    public List<Pinqueue> getPinqueueById(Integer pid) throws IOException, SystemException;
+
+    // 取消预约
+    public void cancelAppointment(Integer qid) throws IOException, SQLException;
+
+    // 根据 pid 查询患者信息
+    public List<Doctor> queryByPid(Integer pid) throws IOException, SystemException;
+
+    // 患者病历
+    public List<History> queryHistoryByPid(Integer pid) throws IOException, SystemException;
+
+    // 医生挂号
+    public List<Doctor> queryDoctor(String section, String spe, int day, int ap) throws IOException;
+}
+```
+
+# `src\abd\biz\impl`
+
+### `AdminBizImpl.java`
 
 ```java
 package com.abd.biz;
+
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.*;
@@ -5995,10 +4796,12 @@ import com.abd.expt.SystemException;
 import com.abd.expt.UsernameException;
 
 public class AdminBizImpl implements AdminBiz {
-    private AdminDao daoA=null;
-    private DoctorDao daoB=null;
-    private AppointmentDao daoC=null;
-    private CurappointmentDao daoD=null;
+
+    private AdminDao daoA = null;
+    private DoctorDao daoB = null;
+    private AppointmentDao daoC = null;
+    private CurappointmentDao daoD = null;
+
     public AppointmentDao getDao() {
         return daoC;
     }
@@ -6016,91 +4819,85 @@ public class AdminBizImpl implements AdminBiz {
     }
 
     public AdminDao getDao() {
-      return daoA;
+        return daoA;
     }
 
     public void setDao(AdminDao dao) {
-      this.daoA = dao;
+        this.daoA = dao;
     }
 
     public DoctorDao getDao() {
-      return daoB;
+        return daoB;
     }
 
     public void setDao(DoctorDao dao) {
-      this.daoB = dao;
+        this.daoB = dao;
     }
 
-    public void addDoctor(Integer did, String name, int age, int sex,
-String levels, String spe, int[] perDay, String phone,
-String section) throws IOException, SQLException,SystemException{
-  Doctor doctor=daoB.getByById(did);
-  if(doctor==null) {
-  throw new Exception("did cuzai");
-  } else {
-  doctor = new Doctor();
-  doctor.setId(did);
-  doctor.setName(name);
-  doctor.setAge(age);
-  doctor.setSex(sex);
-  doctor.setLevels(levels);
-  doctor.setSpe(spe);
-  doctor.setPhone(phone);
-  doctor.setPassword("123456");
-  doctor.setSection(section);
-  Appointment app=new
-Appointment(perDay[0],perDay[1],perDay[2],perDay[3],perDay[4],
-perDay[5],perDay[6],perDay[7],perDay[8],perDay[9],perDay[10],perDay[11],
-perDay[12],perDay[13]);
-  app.setDoctor(doctor);
-  Curappointment cuu=new
-Curappointment(perDay[0],perDay[1],perDay[2],perDay[3],perDay[4],
-perDay[5],perDay[6],perDay[7],perDay[8],perDay[9],perDay[10],perDay[11],
-perDay[12],perDay[13]);
-  cuu.setDoctor(doctor);
-  doctor.setCuu(cuu);
-  doctor.setApp(app);
-  daoB.addDoctor(doctor);
-}
+    public void addDoctor(Integer did, String name, int age, int sex, String levels, String spe, int[] perDay, String phone, String section) throws IOException, SQLException, SystemException {
+
+        Doctor doctor = daoB.getByById(did);
+        if (doctor == null) {
+            throw new Exception("did cuzai");
+        } else {
+            doctor = new Doctor();
+            doctor.setId(did);
+            doctor.setName(name);
+            doctor.setAge(age);
+            doctor.setSex(sex);
+            doctor.setLevels(levels);
+            doctor.setSpe(spe);
+            doctor.setPhone(phone);
+            doctor.setPassword("123456");
+            doctor.setSection(section);
+
+            Appointment app = new Appointment(perDay[0], perDay[1], perDay[2], perDay[3], perDay[4], perDay[5], perDay[6], perDay[7], perDay[8], perDay[9], perDay[10], perDay[11], perDay[12], perDay[13]);
+            app.setDoctor(doctor);
+
+            Curappointment cuu = new Curappointment(perDay[0], perDay[1], perDay[2], perDay[3], perDay[4], perDay[5], perDay[6], perDay[7], perDay[8], perDay[9], perDay[10], perDay[11], perDay[12], perDay[13]);
+            cuu.setDoctor(doctor);
+
+            doctor.setCuu(cuu);
+            doctor.setApp(app);
+            daoB.addDoctor(doctor);
+        }
+    }
 }
 ```
-
-
 
 
 
 ```java
 }
-    public List<Doctor> getAllDoctor() throws IOException, SQLException, SystemException {
-        return daoB.getAllDoctor();
-    }
+public List<Doctor> getAllDoctor() throws IOException, SQLException, SystemException {
+    return daoB.getAllDoctor();
+}
 
-    public void login(String username, String password) throws IOException, SQLException, SystemException {
-        Admin admin = daoA.login(username);
-        if (admin == null) {
-            throw new UsernameException("不存在此账户 ");
-        }
-        if (!admin.getPassword().equals(password)) {
-            throw new PasswordException("密码无效");
-        }
+public void login(String username, String password) throws IOException, SQLException, SystemException {
+    Admin admin = daoA.login(username);
+    if (admin == null) {
+        throw new UsernameException("不存在此账户 ");
     }
+    if (!admin.getPassword().equals(password)) {
+        throw new PasswordException("密码无效");
+    }
+}
 
-    public void removeDoctor(Integer did) throws IOException, SQLException, SystemException {
-        Appointment app = daoC.queryApp(did);
-        app.setDoctor(null);
-        daoC.removeApp(app);
-        Curappointment cuu = daoD.queryByDid(did);
-        cuu.setDoctor(null);
-        daoD.removeCur(cuu);
-        Doctor doctor = daoB.queryById(did);
-        doctor.setApp(null);
-        doctor.setCuu(null);
-        daoB.delete(doctor);
-    }
+public void removeDoctor(Integer did) throws IOException, SQLException, SystemException {
+    Appointment app = daoC.queryApp(did);
+    app.setDoctor(null);
+    daoC.removeApp(app);
+    Curappointment cuu = daoD.queryByDid(did);
+    cuu.setDoctor(null);
+    daoD.removeCur(cuu);
+    Doctor doctor = daoB.queryById(did);
+    doctor.setApp(null);
+    doctor.setCuu(null);
+    daoB.delete(doctor);
 }
 ```
 
-### DoctorBizImpl.java
+### `DoctorBizImpl.java`
 
 ```java
 package com.abd.biz.impl;
@@ -6314,7 +5111,9 @@ public class DoctorBizImpl implements DoctorBiz {
 }
 ```
 
-### PatientBizImpl.java
+### `PatientBizImpl.java`
+
+
 
 ```java
 package com.abd.biz.impl;
@@ -6410,88 +5209,95 @@ public class PatientBiz implements PatientBiz {
 
 
 ```java
-//今天，医生可以确定是否进行预约
-if(cuu.getSunA()<0){
+// 今天，医生可以确定是否进行预约
+if (cuu.getSunA() < 0) {
     throw new WrongException();
-}else{
-    cuu.setSunP(cuu.getSunP()-1);
-    if(cuu.getSunP()<0){
+} else {
+    cuu.setSunP(cuu.getSunP() - 1);
+    if (cuu.getSunP() < 0) {
         throw new WrongException();
     }
     break;
-    case 1:if(ap==0){
-        cuu.setMonA(cuu.getMonA()-1);
-        if(cuu.getMonA()<0){
-            throw new WrongException();
+    case 1:
+        if (ap == 0) {
+            cuu.setMonA(cuu.getMonA() - 1);
+            if (cuu.getMonA() < 0) {
+                throw new WrongException();
+            }
+        } else {
+            cuu.setMonP(cuu.getMonP() - 1);
+            if (cuu.getMonP() < 0) {
+                throw new WrongException();
+            }
         }
-    }else{
-        cuu.setMonP(cuu.getMonP()-1);
-        if(cuu.getMonP()<0){
-            throw new WrongException();
+        break;
+    case 2:
+        if (ap == 0) {
+            cuu.setTueA(cuu.getTueA() - 1);
+            if (cuu.getTueA() < 0) {
+                throw new WrongException();
+            }
+        } else {
+            cuu.setTueP(cuu.getTueP() - 1);
+            if (cuu.getTueP() < 0) {
+                throw new WrongException();
+            }
         }
-    }
-    break;
-    case 2:if(ap==0){
-        cuu.setTueA(cuu.getTueA()-1);
-        if(cuu.getTueA()<0){
-            throw new WrongException();
+        break;
+    case 3:
+        if (ap == 0) {
+            cuu.setWedA(cuu.getWedA() - 1);
+            if (cuu.getWedA() < 0) {
+                throw new WrongException();
+            }
+        } else {
+            cuu.setWedP(cuu.getWedP() - 1);
+            if (cuu.getWedP() < 0) {
+                throw new WrongException();
+            }
         }
-    }else{
-        cuu.setTueP(cuu.getTueP()-1);
-        if(cuu.getTueP()<0){
-            throw new WrongException();
+        break;
+    case 4:
+        if (ap == 0) {
+            cuu.setThuA(cuu.setThuA() - 1);
+            if (cuu.getThuA() < 0) {
+                throw new WrongException();
+            }
+        } else {
+            cuu.setThuP(cuu.getThuP() - 1);
+            if (cuu.getThuP() < 0) {
+                throw new WrongException();
+            }
         }
-    }
-    break;
-    case 3:if(ap==0){
-        cuu.setWedA(cuu.getWedA()-1);
-        if(cuu.getWedA()<0){
-            throw new WrongException();
+        break;
+    case 5:
+        if (ap == 0) {
+            cuu.setFriA(cuu.getFriA() - 1);
+            if (cuu.getFriA() < 0) {
+                throw new WrongException();
+            }
+        } else {
+            cuu.setFriP(cuu.getFriP() - 1);
+            if (cuu.getFriP() < 0) {
+                throw new WrongException();
+            }
         }
-    }else{
-        cuu.setWedP(cuu.getWedP()-1);
-        if(cuu.getWedP()<0){
-            throw new WrongException();
+        break;
+    case 6:
+        if (ap == 0) {
+            cuu.setSatA(cuu.getSatA() - 1);
+            if (cuu.getSatA() < 0) {
+                throw new WrongException();
+            }
+        } else {
+            cuu.setSatP(cuu.getSatP() - 1);
+            if (cuu.getSatP() < 0) {
+                throw new WrongException();
+            }
         }
-    }
-    break;
-    case 4:if(ap==0){
-        cuu.setThuA(cuu.getThuA()-1);
-        if(cuu.getThuA()<0){
-            throw new WrongException();
-        }
-    }else{
-        cuu.setThuP(cuu.getThuP()-1);
-        if(cuu.getThuP()<0){
-            throw new WrongException();
-        }
-    }
-    break;
-    case 5:if(ap==0){
-        cuu.setFriA(cuu.getFriA()-1);
-        if(cuu.getFriA()<0){
-            throw new WrongException();
-        }
-    }else{
-        cuu.setFriP(cuu.getFriP()-1);
-        if(cuu.getFriP()<0){
-            throw new WrongException();
-        }
-    }
-    break;
-    case 6:if(ap==0){
-        cuu.setSatA(cuu.getSatA()-1);
-        if(cuu.getSatA()<0){
-            throw new WrongException();
-        }
-    }else{
-        cuu.setSatP(cuu.getSatP()-1);
-        if(cuu.getSatP()<0){
-            throw new WrongException();
-        }
-    }
-    break;
+        break;
 }
+
 q.setDay(day);
 q.setDoctor(d);
 q.setPatient(p);
@@ -6502,73 +5308,84 @@ daoQ.addPin(q);
 }
 
 public void cancelAppointment(Integer qid) throws IOException, SQLException, SystemException {
-    //通过医生操作更新 Q
-    Appointment pin=daoQ.queryById(qid);
-    int day=pin.getDay();
-    int ap=pin.getAp();
+    // 通过医生操作更新 Q
+    Appointment pin = daoQ.queryById(qid);
+    int day = pin.getDay();
+    int ap = pin.getAp();
+
     // 获取 CU，更新 CU
-    Appointment cuu=pin.getDoctor().getCuu();
-    switch(day){
-    case 0:if(ap==0){
-        cuu.setSunA(cuu.getSunA()-1);
-    }else{
-        cuu.setSunP(cuu.getSunP()-1);
+    Appointment cuu = pin.getDoctor().getCuu();
+    switch (day) {
+        case 0:
+            if (ap == 0) {
+                cuu.setSunA(cuu.getSunA() - 1);
+            } else {
+                cuu.setSunP(cuu.getSunP() - 1);
+            }
+            break;
+        case 1:
+            if (ap == 0) {
+                cuu.setMonA(cuu.getMonA() - 1);
+            } else {
+                cuu.setMonP(cuu.getMonP() - 1);
+            }
+            break;
+        case 2:
+            if (ap == 0) {
+                cuu.setTueA(cuu.getTueA() - 1);
+            } else {
+                cuu.setTueP(cuu.getTueP() - 1);
+            }
+            break;
+        case 3:
+            if (ap == 0) {
+                cuu.setWedA(cuu.getWedA() - 1);
+            } else {
+                cuu.setWedP(cuu.getWedP() - 1);
+            }
+            break;
+        case 4:
+            if (ap == 0) {
+                cuu.setThuA(cuu.getThuA() - 1);
+            } else {
+                cuu.setThuP(cuu.getThuP() - 1);
+            }
+            break;
+        case 5:
+            if (ap == 0) {
+                cuu.setFriA(cuu.getFriA() - 1);
+            } else {
+                cuu.setFriP(cuu.getFriP() - 1);
+            }
+            break;
+        case 6:
+            if (ap == 0) {
+                cuu.setSatA(cuu.getSatA() - 1);
+            } else {
+                cuu.setSatP(cuu.getSatP() - 1);
+            }
+            break;
     }
-    break;
-    case 1:if(ap==0){
-        cuu.setMonA(cuu.getMonA()-1);
-    }else{
-        cuu.setMonP(cuu.getMonP()-1);
-    }
-    break;
-    case 2:if(ap==0){
-        cuu.setTueA(cuu.getTueA()-1);
-    }else{
-        cuu.setTueP(cuu.getTueP()-1);
-    }
-    break;
-    case 3:if(ap==0){
-        cuu.setWedA(cuu.getWedA()-1);
-    }else{
-        cuu.setWedP(cuu.getWedP()-1);
-    }
-    break;
-    case 4:if(ap==0){
-        cuu.setThuA(cuu.getThuA()-1);
-    }else{
-        cuu.setThuP(cuu.getThuP()-1);
-    }
-    break;
-    case 5:if(ap==0){
-        cuu.setFriA(cuu.getFriA()-1);
-    }else{
-        cuu.setFriP(cuu.getFriP()-1);
-    }
-    break;
-    case 6:if(ap==0){
-        cuu.setSatA(cuu.getSatA()-1);
-    }else{
-        cuu.setSatP(cuu.getSatP()-1);
-    }
-    break;
-    }
-pin.setDoctor(null);
-pin.setPatient(null);
-// 删除 PIN
-daoQ.deletePin(pin);
+
+    pin.setDoctor(null);
+    pin.setPatient(null);
+
+    // 删除 PIN
+    daoQ.deletePin(pin);
 }
 
 public List<Appointment> getPinById(Integer pid) throws IOException, SQLException, SystemException {
-    Patient p=daoP.queryById(pid);
+    Patient p = daoP.queryById(pid);
     return daoQ.queryPatient(p);
 }
 
-public Patient login(String username, String password) throws IOException, SQLException, SystemException {
-    Patient p=daoP.queryUsername(username);
-    if( p == null){
+public Patient login(String username, String password)
+        throws IOException, SQLException, SystemException {
+    Patient p = daoP.queryUsername(username);
+    if (p == null) {
         throw new IdException("无此类账户");
     }
-    if(p.getPassword().equals(password)){
+    if (p.getPassword().equals(password)) {
         throw new PasswordException("密码错误");
     }
     return p;
@@ -6578,31 +5395,46 @@ public List<Doctor> queryAllDoctor() throws IOException, SQLException {
     return dao.getAllDoctor();
 }
 
-public Appointment queryByDid(Integer did) throws IOException, SQLException, SystemException {
+public Appointment queryByDid(Integer did)
+        throws IOException, SQLException, SystemException {
     return dao.queryByDid(did);
 }
 
-public List<Doctor> queryByPid(Integer pid) throws IOException, SQLException, SystemException {
-    Patient p=daoP.queryPid(pid);
-    List<Doctor> list=new ArrayList<Doctor>();
-    for(History h:list){ // 注意：此处此处可能存在笔误 (list vs h)
-        Doctor doc=dao.queryByDid(h.getDoctor().getDid());
+public List<Doctor> queryByPid(Integer pid)
+        throws IOException, SQLException, SystemException {
+    Patient p = daoP.queryPid(pid);
+    List<Doctor> list = new ArrayList<Doctor>();
+
+    for (History h : list) {
+        // 注意：此处此处可能存在笔误 (list vs h)
+        Doctor doc = dao.queryByDid(h.getDoctor().getDid());
         list.add(doc);
     }
+
     return list;
 }
 
-public List<History> queryByPid(Integer pid) throws IOException, SQLException, SystemException {
-    Patient p=daoP.queryPid(pid);
+public List<History> queryByPid(Integer pid)
+        throws IOException, SQLException, SystemException {
+    Patient p = daoP.queryPid(pid);
     return dao.queryByPatient(p);
 }
 
-public Patient register(String name, String username, String password, int age, int sex, String address, String phone) throws IOException, SQLException, SystemException {
-    Patient p=daoP.queryUsername(username);
-    if(p==null){
+public Patient register(
+        String name,
+        String username,
+        String password,
+        int age,
+        int sex,
+        String address,
+        String phone
+) throws IOException, SQLException, SystemException {
+    Patient p = daoP.queryUsername(username);
+    if (p == null) {
         throw new UsernameException("用户名异常");
     }
-    p=new Patient();
+
+    p = new Patient();
     p.setAddress(address);
     p.setAge(age);
     p.setName(name);
@@ -6611,158 +5443,177 @@ public Patient register(String name, String username, String password, int age, 
     p.setSex(sex);
     p.setUsername(username);
     daoP.register(p);
+
     return p;
 }
 
-public List<Doctor> queryDoctor(String section, String levels, String spe, int day, int ap) throws SQLException, SystemException {
-    List<Doctor> dao=dao.getAllDoctor();
-    List<Doctor> list=new ArrayList<Doctor>();
-    for(Doctor doctor:list){
-        if(section.equals("se")) {
-            if(doctor.getSection().equals(section)) {
+public List<Doctor> queryDoctor(
+        String section,
+        String levels,
+        String spe,
+        int day,
+        int ap
+) throws SQLException, SystemException {
+    List<Doctor> dao = dao.getAllDoctor();
+    List<Doctor> list = new ArrayList<Doctor>();
+
+    for (Doctor doctor : list) {
+        if (section.equals("se")) {
+            if (doctor.getSection().equals(section)) {
                 continue;
             }
         }
-        if(levels.equals("le")) {
-            if(doctor.getLevels().equals(levels)) {
+
+        if (levels.equals("le")) {
+            if (doctor.getLevels().equals(levels)) {
                 continue;
             }
         }
-        if(spe.equals("nn")) {
-            if(doctor.getSpe().equals(spe)) {
+
+        if (spe.equals("nn")) {
+            if (doctor.getSpe().equals(spe)) {
                 continue;
             }
         }
+
         list.add(doctor);
-        Appointment cuu=doctor.getCuu();
-        if(day==9){
-            switch(day){
-            case 0:if(ap==0){
-                if(cuu.getSunA()==0){
-                    list.remove(doctor);
-                }
-            else if(ap==1){
-                if(cuu.getSunP()==0){
-                    list.remove(doctor);
-                }
-            }else if(ap==3){
-                if(cuu.getSunA()==0&&cuu.getSunP()==0){
-                    list.remove(doctor);
-                }
-            }
-            break;
-            case 1:if(ap==0){
-                if(cuu.getMonA()==0){
-                    list.remove(doctor);
-                }
-            else if(ap==1){
-                if(cuu.getMonP()==0){
-                    list.remove(doctor);
-                }
-            }else if(ap==3){
-                if(cuu.getMonA()==0&&cuu.getMonP()==0){
-                    list.remove(doctor);
-                }
-            }
-            break;
-            case 2:if(ap==0){
-                if(cuu.getTueA()==0){
-                    list.remove(doctor);
-                }
-            else if(ap==1){
-                if(cuu.getTueP()==0){
-                    list.remove(doctor);
-                }
-            }else if(ap==3){
-                if(cuu.getTueA()==0&&cuu.getTueP()==0){
-                    list.remove(doctor);
-                }
-            }
-            break;
-            case 3:if(ap==0){
-                if(cuu.getWedA()==0){
-                    list.remove(doctor);
-                }
-            else if(ap==1){
-                if(cuu.getWedP()==0){
-                    list.remove(doctor);
-                }
-            }else if(ap==3){
-                if(cuu.getWedA()==0&&cuu.getWedP()==0){
-                    list.remove(doctor);
-                }
-            }
-            break;
-            case 4:if(ap==0){
-                if(cuu.getThuA()==0){
-                    list.remove(doctor);
-                }
-            else if(ap==1){
-                if(cuu.getThuP()==0){
-                    list.remove(doctor);
-                }
-            }else if(ap==3){
-                if(cuu.getThuA()==0&&cuu.getThuP()==0){
-                    list.remove(doctor);
-                }
-            }
-            break;
-            case 5:if(ap==0){
-                if(cuu.getFriA()==0){
-                    list.remove(doctor);
-                }
-            else if(ap==1){
-                if(cuu.getFriP()==0){
-                    list.remove(doctor);
-                }
-            }else if(ap==3){
-                if(cuu.getFriA()==0&&cuu.getFriP()==0){
-                    list.remove(doctor);
-                }
-            }
-            break;
-            case 6:if(ap==0){
-                if(cuu.getSatA()==0){
-                    list.remove(doctor);
-                }
-            else if(ap==1){
-                if(cuu.getSatP()==0){
-                    list.remove(doctor);
-                }
-            }else if(ap==3){
-                if(cuu.getSatA()==0&&cuu.getSatP()==0){
-                    list.remove(doctor);
-                }
-            }
-            break;
+        Appointment cuu = doctor.getCuu();
+
+        if (day == 9) {
+            switch (day) {
+                case 0:
+                    if (ap == 0) {
+                        if (cuu.getSunA() == 0) {
+                            list.remove(doctor);
+                        }
+                    } else if (ap == 1) {
+                        if (cuu.getSunP() == 0) {
+                            list.remove(doctor);
+                        }
+                    } else if (ap == 3) {
+                        if (cuu.getSunA() == 0 && cuu.getSunP() == 0) {
+                            list.remove(doctor);
+                        }
+                    }
+                    break;
+                case 1:
+                    if (ap == 0) {
+                        if (cuu.getMonA() == 0) {
+                            list.remove(doctor);
+                        }
+                    } else if (ap == 1) {
+                        if (cuu.getMonP() == 0) {
+                            list.remove(doctor);
+                        }
+                    } else if (ap == 3) {
+                        if (cuu.getMonA() == 0 && cuu.getMonP() == 0) {
+                            list.remove(doctor);
+                        }
+                    }
+                    break;
+                case 2:
+                    if (ap == 0) {
+                        if (cuu.getTueA() == 0) {
+                            list.remove(doctor);
+                        }
+                    } else if (ap == 1) {
+                        if (cuu.getTueP() == 0) {
+                            list.remove(doctor);
+                        }
+                    } else if (ap == 3) {
+                        if (cuu.getTueA() == 0 && cuu.getTueP() == 0) {
+                            list.remove(doctor);
+                        }
+                    }
+                    break;
+                case 3:
+                    if (ap == 0) {
+                        if (cuu.getWedA() == 0) {
+                            list.remove(doctor);
+                        }
+                    } else if (ap == 1) {
+                        if (cuu.getWedP() == 0) {
+                            list.remove(doctor);
+                        }
+                    } else if (ap == 3) {
+                        if (cuu.getWedA() == 0 && cuu.getWedP() == 0) {
+                            list.remove(doctor);
+                        }
+                    }
+                    break;
+                case 4:
+                    if (ap == 0) {
+                        if (cuu.getThuA() == 0) {
+                            list.remove(doctor);
+                        }
+                    } else if (ap == 1) {
+                        if (cuu.getThuP() == 0) {
+                            list.remove(doctor);
+                        }
+                    } else if (ap == 3) {
+                        if (cuu.getThuA() == 0 && cuu.getThuP() == 0) {
+                            list.remove(doctor);
+                        }
+                    }
+                    break;
+                case 5:
+                    if (ap == 0) {
+                        if (cuu.getFriA() == 0) {
+                            list.remove(doctor);
+                        }
+                    } else if (ap == 1) {
+                        if (cuu.getFriP() == 0) {
+                            list.remove(doctor);
+                        }
+                    } else if (ap == 3) {
+                        if (cuu.getFriA() == 0 && cuu.getFriP() == 0) {
+                            list.remove(doctor);
+                        }
+                    }
+                    break;
+                case 6:
+                    if (ap == 0) {
+                        if (cuu.getSatA() == 0) {
+                            list.remove(doctor);
+                        }
+                    } else if (ap == 1) {
+                        if (cuu.getSatP() == 0) {
+                            list.remove(doctor);
+                        }
+                    } else if (ap == 3) {
+                        if (cuu.getSatA() == 0 && cuu.getSatP() == 0) {
+                            list.remove(doctor);
+                        }
+                    }
+                    break;
             }
         }
     }
 }
 ```
 
-[content]# 概念多层架构 I
+
+
+
+# 概念多层架构 I
 
 | 用户与接口 | 表现层 | 业务逻辑 | 数据访问集成 | 数据源 |
 | --- | --- | --- | --- | --- |
-| 浏览器 html | | | | Web 服务 |
-| 移动 JME/WAP | | | | XML, 过期的 Web 服务 |
+| 浏览器 `html` | | | | Web 服务 |
+| 移动 `JME/WAP` | | | | XML，过期的 Web 服务 |
 | Windows 工作站查看 | | | | 遗留 OS/290 Linux |
-| 软件 JME / 组件框架 | | | | 遗留 COTS SAP 系统 |
+| 软件 `JME` / 组件框架 | | | | 遗留 COTS SAP 系统 |
 | 外部系统 | | | | |
 | 供应商/分销/零售商业务合作伙伴 | 防火墙 | | 供应商/分销/处理业务合作伙伴 | |
 
-数据访问集成层代码将出现在下方
-
-
-
-
+数据访问集成层代码将出现在下方。
 
 ## Hibernate 设置与流程
 
-## src\com\abd\dao
+## `src\com\abd\dao`
 
-### AdminDao.java
+### `AdminDao.java`
+
 ```java
 package com.abd.dao;
 import com.abd.entity.Admin;
@@ -6771,7 +5622,8 @@ public interface AdminDao {
 }
 ```
 
-### AppointmentDao.java
+### `AppointmentDao.java`
+
 ```java
 package com.abd.dao;
 import com.abd.entity.*;
@@ -6781,7 +5633,8 @@ public interface AppointmentDao {
 }
 ```
 
-### CurappointmentDao.java
+### `CurappointmentDao.java`
+
 ```java
 package com.abd.dao;
 import java.util.List;
@@ -6793,7 +5646,8 @@ public interface CurappointmentDao {
 }
 ```
 
-### DoctorDao.java
+### `DoctorDao.java`
+
 ```java
 package com.abd.dao;
 import java.util.List;
@@ -6808,7 +5662,8 @@ public interface DoctorDao {
 }
 ```
 
-### HistoryDao.java
+### `HistoryDao.java`
+
 ```java
 package com.abd.dao;
 import java.util.List;
@@ -6822,7 +5677,8 @@ public interface HistoryDao {
 }
 ```
 
-### PatientDao.java
+### `PatientDao.java`
+
 ```java
 package com.abd.dao;
 import com.abd.entity.Patient;
@@ -6833,7 +5689,8 @@ public interface PatientDao {
 }
 ```
 
-### PinqueueDao.java
+### `PinqueueDao.java`
+
 ```java
 package com.abd.dao;
 import java.util.List;
@@ -6848,9 +5705,10 @@ public interface PinqueueDao {
 }
 ```
 
-## src\com\abd\dao\impl
+## `src\com\abd\dao\impl`
 
-### AdminDaoImpl.java
+### `AdminDaoImpl.java`
+
 ```java
 package com.abd.impl;
 import java.util.List;
@@ -6871,7 +5729,8 @@ public class AdminDaoImpl extends HibernateDaoSupport implements AdminDao {
 }
 ```
 
-### AppointmentDaoImpl.java
+### `AppointmentDaoImpl.java`
+
 ```java
 package com.abd.impl;
 import org.springframework.framework.orm.hibernate3.support.HibernateDaoSupport;
@@ -6888,7 +5747,8 @@ public class AppointmentDaoImpl extends HibernateDaoSupport implements Appointme
 }
 ```
 
-### CurappointmentDaoImpl.java
+### `CurappointmentDaoImpl.java`
+
 ```java
 package com.abd.impl;
 import java.util.List;
@@ -6909,7 +5769,8 @@ public class CurappointmentDaoImpl extends HibernateDaoSupport implements Curapp
 }
 ```
 
-### DoctorDaoImpl.java
+### `DoctorDaoImpl.java`
+
 ```java
 package com.abd.impl;
 import java.util.List;
@@ -6945,7 +5806,8 @@ public class DoctorDaoImpl extends HibernateDaoSupport implements DoctorDao {
 }
 ```
 
-### HistoryDaoImpl.java
+### `HistoryDaoImpl.java`
+
 ```java
 package com.abd.impl;
 import java.util.List;
@@ -6976,7 +5838,8 @@ public class HistoryDaoImpl extends HibernateDaoSupport implements HistoryDao {
 }
 ```
 
-### PatientDaoImpl.java
+### `PatientDaoImpl.java`
+
 ```java
 package com.abd.impl;
 import java.util.List;
@@ -7003,9 +5866,14 @@ public class PatientDaoImpl extends HibernateDaoSupport implements PatientDao {
 }
 ```
 
-### PinqueueDaoImpl.java
+### `PinqueueDaoImpl.java`
+
+
+
+
 ```java
 package com.abd.impl;
+
 import java.util.List;
 import org.springframework.framework.orm.hibernate3.support.HibernateDaoSupport;
 import com.abd.dao.PinqueueDao;
@@ -7015,22 +5883,27 @@ public class PinqueueDaoImpl extends HibernateDaoSupport implements PinqueueDao 
     public void addPinqueue(Pinqueue q) {
         getHibernateTemplate().save(q);
     }
+
     public void deletePinqueue(Pinqueue q) {
         getHibernateTemplate().delete(q);
     }
+
     public Pinqueue queryByQid(Integer qid) {
-        return (Pinqueue)getHibernateTemplate().get(Pinqueue.class, qid);
+        return (Pinqueue) getHibernateTemplate().get(Pinqueue.class, qid);
     }
+
     public List<Pinqueue> queryByDoctor(Doctor d) {
         Object args[] = {d};
         List<Pinqueue> l = getHibernateTemplate().find("from Pinqueue q where q.doctor?", args);
         return l;
     }
+
     public List<Pinqueue> queryByPatient(Patient p) {
         Object args[] = {p};
         List<Pinqueue> l = getHibernateTemplate().find("from Pinqueue q where q.patient?", args);
         return l;
     }
+
     public Pinqueue queryByDoctorAndPatient(Doctor doctor, Patient patient) {
         Object args[] = {doctor, patient};
         List<Pinqueue> list = getHibernateTemplate().find("from Pinqueue q where q.doctor=? and q.patient?", args);
@@ -7044,20 +5917,16 @@ public class PinqueueDaoImpl extends HibernateDaoSupport implements PinqueueDao 
 }
 ```
 
+### `src/com/abd/entity`
 
-
-
-
-### src/com/abd/entity
-
-### Admin.java
+#### `Admin.java`
 
 ```java
 package com.abd.entity;
 
 import java.io.*;
 
-public class Admin implements Serializable{
+public class Admin implements Serializable {
     private Integer aid;
     private String username;
     private String password;
@@ -7068,51 +5937,64 @@ public class Admin implements Serializable{
     public Integer getId() {
         return aid;
     }
+
     public void setAid(Integer aid) {
         this.aid = aid;
     }
+
     public String getUsername() {
         return username;
     }
+
     public void setUsername(String username) {
         this.username = username;
     }
+
     public String getPassword() {
         return password;
     }
+
     public void setPassword(String password) {
         this.password = password;
     }
+
     public String getEmail() {
         return email;
     }
+
     public void setEmail(String email) {
         this.email = email;
     }
+
     public String getPhone() {
         return phone;
     }
+
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
 }
 ```
 
-### Appointment.java
+#### `Appointment.java`
 
 ```java
 package com.abd.entity;
+
 import java.io.Serializable;
+
 /************
 假设没有无构造函数参数
 */
-public class Appointment implements Serializable{
+public class Appointment implements Serializable {
     private Integer did;
     private int sunA;
     private int sunP;
@@ -7134,9 +6016,22 @@ public class Appointment implements Serializable{
         super();
     }
 
-    public Appointment(int sunA, int sunP, int monA, int monP, int tueA,
-        int tueP, int wedA, int wedP, int thuA, int thuP, int friA,
-        int friP, int satA, int satP) {
+    public Appointment(
+        int sunA,
+        int sunP,
+        int monA,
+        int monP,
+        int tueA,
+        int tueP,
+        int wedA,
+        int wedP,
+        int thuA,
+        int thuP,
+        int friA,
+        int friP,
+        int satA,
+        int satP
+    ) {
         this.sunA = sunA;
         this.sunP = sunP;
         this.monA = monA;
@@ -7164,105 +6059,136 @@ public class Appointment implements Serializable{
     public Integer getDid() {
         return did;
     }
+
     public void setDid(Integer did) {
         this.did = did;
     }
+
     public int getSunA() {
         return sunA;
     }
+
     public void setSunA(int sunA) {
         this.sunA = sunA;
     }
+
     public int getSunP() {
         return sunP;
     }
+
     public void setSunP(int sunP) {
         this.sunP = sunP;
     }
+
     public int getMonA() {
         return monA;
     }
+
     public void setMonA(int monA) {
         this.monA = monA;
     }
+
     public int getMonP() {
         return monP;
     }
+
     public void setMonP(int monP) {
         this.monP = monP;
     }
+
     public int getTueA() {
         return tueA;
     }
+
     public void setTueA(int tueA) {
         this.tueA = tueA;
     }
+
     public int getTueP() {
         return tueP;
     }
+
     public void setTueP(int tueP) {
         this.tueP = tueP;
     }
+
     public int getWedA() {
         return wedA;
     }
+
     public void setWedA(int wedA) {
         this.wedA = wedA;
     }
+
     public int getWedP() {
         return wedP;
     }
+
     public void setWedP(int wedP) {
         this.wedP = wedP;
     }
+
     public int getThuA() {
         return thuA;
     }
+
     public void setThuA(int thuA) {
         this.thuA = thuA;
     }
+
     public int getThuP() {
         return thuP;
     }
+
     public void setThuP(int thuP) {
         this.thuP = thuP;
     }
+
     public int getFriA() {
         return friA;
     }
+
     public void setFriA(int friA) {
         this.friA = friA;
     }
+
     public int getFriP() {
         return friP;
     }
+
     public void setFriP(int friP) {
         this.friP = friP;
     }
+
     public int getSatA() {
         return satA;
     }
+
     public void setSatA(int satA) {
         this.satA = satA;
     }
+
     public int getSatP() {
         return satP;
     }
+
     public void setSatP(int satP) {
         this.satP = satP;
     }
 }
+```
 
-# Curaprointment.java
+#### `Curaprointment.java`
 
 ```java
 package com.abd.entity;
 
 import java.io.Serializable;
+
 /**
  * 提供了无参数构造函数
  */
-public class Curaprointment implements Serializable{
+public class Curaprointment implements Serializable {
     private Integer did;
     private int sunA;
     private int sunP;
@@ -7285,9 +6211,22 @@ public class Curaprointment implements Serializable{
     }
 
     // 生成的存根
-    public Curaprointment(int sunA, int sunP, int monA, int monP, int tueA,
-        int tueP, int wedA, int wedP, int thuA, int thuP, int friA,
-        int friP, int satA, int satP) {
+    public Curaprointment(
+        int sunA,
+        int sunP,
+        int monA,
+        int monP,
+        int tueA,
+        int tueP,
+        int wedA,
+        int wedP,
+        int thuA,
+        int thuP,
+        int friA,
+        int friP,
+        int satA,
+        int satP
+    ) {
         this.sunA = sunA;
         this.sunP = sunP;
         this.monA = monA;
@@ -7307,103 +6246,138 @@ public class Curaprointment implements Serializable{
     public Integer getDid() {
         return did;
     }
+
     public void setDid(Integer did) {
         this.did = did;
     }
+
     public int getSunA() {
         return sunA;
     }
+
     public void setSunA(int sunA) {
         this.sunA = sunA;
     }
+
     public int getSunP() {
         return sunP;
     }
+
     public void setSunP(int sunP) {
         this.sunP = sunP;
     }
+
     public int getMonA() {
         return monA;
     }
+
     public void setMonA(int monA) {
         this.monA = monA;
     }
+
     public int getMonP() {
         return monP;
     }
+
     public void setMonP(int monP) {
         this.monP = monP;
     }
+
     public int getTueA() {
         return tueA;
     }
+
     public void setTueA(int tueA) {
         this.tueA = tueA;
     }
+
     public int getTueP() {
         return tueP;
     }
+
     public void setTueP(int tueP) {
         this.tueP = tueP;
     }
+
     public int getWedA() {
         return wedA;
     }
+
     public void setWedA(int wedA) {
         this.wedA = wedA;
     }
+
     public int getWedP() {
         return wedP;
     }
+
     public void setWedP(int wedP) {
         this.wedP = wedP;
-    }
-    public int getThuA() {
-        return thuA;
-    }
-    public void setThuA(int thuA) {
-        this.thuA = thuA;
-    }
-    public int getThuP() {
-        return thuP;
-    }
-    public void setThuP(int thuP) {
-        this.thuP = thuP;
-    }
-    public int getFriA() {
-        return friA;
-    }
-    public void setFriA(int friA) {
-        this.friA = friA;
-    }
-    public int getFriP() {
-        return friP;
-    }
-    public void setFriP(int friP) {
-        this.friP = friP;
-    }
-    public int getSatA() {
-        return satA;
-    }
-    public void setSatA(int satA) {
-        this.satA = satA;
-    }
-    public int getSatP() {
-        return satP;
-    }
-    public void setSatP(int satP) {
-        this.satP = satP;
-    }
-    public Doctor getDoctor() {
-        return doctor;
-    }
-    public void setDoctor(Doctor doctor) {
-        this.doctor = doctor;
-    }
+``` 
+
+
+
+```java
+}
+
+public int getThuA() {
+    return thuA;
+}
+
+public void setThuA(int thuA) {
+    this.thuA = thuA;
+}
+
+public int getThuP() {
+    return thuP;
+}
+
+public void setThuP(int thuP) {
+    this.thuP = thuP;
+}
+
+public int getFriA() {
+    return friA;
+}
+
+public void setFriA(int friA) {
+    this.friA = friA;
+}
+
+public int getFriP() {
+    return friP;
+}
+
+public void setFriP(int friP) {
+    this.friP = friP;
+}
+
+public int getSatA() {
+    return satA;
+}
+
+public void setSatA(int satA) {
+    this.satA = satA;
+}
+
+public int getSatP() {
+    return satP;
+}
+
+public void setSatP(int satP) {
+    this.satP = satP;
+}
+
+public Doctor getDoctor() {
+    return doctor;
+}
+
+public void setDoctor(Doctor doctor) {
+    this.doctor = doctor;
 }
 ```
 
-### Doctor.java
+### `Doctor.java`
 
 ```java
 package com.ad.entity;
@@ -7449,72 +6423,90 @@ public class Doctor implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+
     public int getAge() {
         return age;
     }
+
     public void setAge(int age) {
         this.age = age;
     }
+
     public int getSex() {
         return sex;
     }
+
     public void setSex(int sex) {
         this.sex = sex;
     }
+
     public String getLevels() {
         return levels;
     }
+
     public void setLevels(String levels) {
         this.levels = levels;
     }
+
     public String getSection() {
         return section;
     }
+
     public void setSection(String section) {
         this.section = section;
     }
+
     public String getSpe() {
         return spe;
     }
+
     public void setSpe(String spe) {
         this.spe = spe;
     }
+
     public String getPhone() {
         return phone;
     }
+
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
     public Curaprointment getCuu() {
         return cuu;
     }
+
     public void setCuu(Curaprointment cuu) {
         this.cuu = cuu;
     }
+
     public Appointment getApp() {
         return app;
     }
+
     public void setApp(Appointment app) {
         this.app = app;
     }
 }
 ```
 
-
-
-}
+```java
 public void setApp(Appointment app) {
     this.app = app;
 }
+
 public Set<Pincue> getPin() {
     return pin;
 }
+
 public void setPin(Set<Pincue> pin) {
     this.pin = pin;
 }
+
 public Set<History> getHistory() {
     return history;
 }
+
 public void setHistory(Set<History> history) {
     this.history = history;
 }
@@ -7540,13 +6532,23 @@ public class DoctorQueryHistory implements Serializable {
     private String rx;
     private Date fdate;
     private Date sdate;
+
     public DoctorQueryHistory() {
         super();
     }
 
-    public DoctorQueryHistory(Integer hid, String name, int age, int sex,
-        String address, String phone, String diagnose, String description,
-        String rx, Date date, Date date2) {
+    public DoctorQueryHistory(
+            Integer hid,
+            String name,
+            int age,
+            int sex,
+            String address,
+            String phone,
+            String diagnose,
+            String description,
+            String rx,
+            Date date,
+            Date date2) {
         this.hid = hid;
         this.name = name;
         this.age = age;
@@ -7559,69 +6561,91 @@ public class DoctorQueryHistory implements Serializable {
         this.fdate = date;
         this.sdate = date2;
     }
+
     public Integer getHid() {
         return hid;
     }
+
     public void setHid(Integer hid) {
         this.hid = hid;
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public int getAge() {
         return age;
     }
+
     public void setAge(int age) {
         this.age = age;
     }
+
     public int getSex() {
         return sex;
     }
+
     public void setSex(int sex) {
         this.sex = sex;
     }
+
     public String getAddress() {
         return address;
     }
+
     public void setAddress(String address) {
         this.address = address;
     }
+
     public String getPhone() {
         return phone;
     }
+
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
     public String getDiagnose() {
         return diagnose;
     }
+
     public void setDiagnose(String diagnose) {
         this.diagnose = diagnose;
     }
+
     public String getDescription() {
         return description;
     }
+
     public void setDescription(String description) {
         this.description = description;
     }
+
     public String getRx() {
         return rx;
     }
+
     public void setRx(String rx) {
         this.rx = rx;
     }
+
     public Date getFdate() {
         return fdate;
     }
+
     public void setFdate(Date fdate) {
         this.fdate = fdate;
     }
+
     public Date getSdate() {
         return sdate;
     }
+
     public void setSdate(Date sdate) {
         this.sdate = sdate;
     }
@@ -7635,10 +6659,9 @@ package com.abd.entity;
 
 import java.io.Serializable;
 
-***********************************
-* 医生预约问诊的患者信息
-**
-```
+/**
+ * 医生预约问诊的患者信息
+ */
 public class DoctorQueryPinque implements Serializable {
     private Integer pid;
     private String name;
@@ -7647,7 +6670,14 @@ public class DoctorQueryPinque implements Serializable {
     private String address;
     private String phone;
     private Integer qid;
-    public DoctorQueryPinque(Integer pid, String name, int age, int sex, String phone, Integer qid) {
+
+    public DoctorQueryPinque(
+            Integer pid,
+            String name,
+            int age,
+            int sex,
+            String phone,
+            Integer qid) {
         this.pid = pid;
         this.name = name;
         this.age = age;
@@ -7656,45 +6686,59 @@ public class DoctorQueryPinque implements Serializable {
         this.phone = phone;
         this.qid = qid;
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public int getAge() {
         return age;
     }
+
     public void setAge(int age) {
         this.age = age;
     }
+
     public int getSex() {
         return sex;
     }
+
     public void setSex(int sex) {
         this.sex = sex;
     }
+
     public String getAddress() {
         return address;
     }
+
     public void setAddress(String address) {
         this.address = address;
     }
+
     public String getPhone() {
         return phone;
     }
+
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
     public Integer getPid() {
         return pid;
     }
+
     public void setPid(Integer pid) {
         this.pid = pid;
     }
+
     public Integer getQid() {
         return qid;
     }
+
     public void setQid(Integer qid) {
         this.qid = qid;
     }
@@ -7721,91 +6765,119 @@ public class History implements Serializable {
     private String rx;
     private Date fdate;
     private Date sdate;
+
     public History() {
         super();
     }
 
     public History(Integer hid, String name, int age, int sex,
-        String address, String phone, String diagnose, String description,
-        String rx, Date date, Date date2) {
-        this.hid = hid;
-        this.name = name;
-        this.age = age;
-        this.sex = sex;
-        this.address = address;
-        this.phone = phone;
-        this.diagnose = diagnose;
-        this.description = description;
-        this.rx = rx;
-        this.fdate = date;
-        this.sdate = date2;
-    }
-    public Integer getHid() {
-        return hid;
-    }
-    public void setHid(Integer hid) {
-        this.hid = hid;
-    }
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public int getAge() {
-        return age;
-    }
-    public void setAge(int age) {
-        this.age = age;
-    }
-    public int getSex() {
-        return sex;
-    }
-    public void setSex(int sex) {
-        this.sex = sex;
-    }
-    public String getAddress() {
-        return address;
-    }
-    public void setAddress(String address) {
-        this.address = address;
-    }
-    public String getPhone() {
-        return phone;
-    }
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-    public String getDiagnose() {
-        return diagnose;
-    }
-    public void setDiagnose(String diagnose) {
-        this.diagnose = diagnose;
-    }
-    public String getDescription() {
-        return description;
-    }
-    public void setDescription(String description) {
-        this.description = description;
-    }
-    public String getRx() {
-        return rx;
-    }
-    public void setRx(String rx) {
-        this.rx = rx;
-    }
-    public Date getFdate() {
-        return fdate;
-    }
-    public void setFdate(Date fdate) {
-        this.fdate = fdate;
-    }
-    public Date getSdate() {
-        return sdate;
-    }
-    public void setSdate(Date sdate) {
-        this.sdate = sdate;
-    }
+```
+
+
+
+```java
+String address, String phone, String diagnose, String description,
+String rx, Date date, Date date2) {
+    this.hid = hid;
+    this.name = name;
+    this.age = age;
+    this.sex = sex;
+    this.address = address;
+    this.phone = phone;
+    this.diagnose = diagnose;
+    this.description = description;
+    this.rx = rx;
+    this.fdate = date;
+    this.sdate = date2;
+}
+
+public Integer getHid() {
+    return hid;
+}
+
+public void setHid(Integer hid) {
+    this.hid = hid;
+}
+
+public String getName() {
+    return name;
+}
+
+public void setName(String name) {
+    this.name = name;
+}
+
+public int getAge() {
+    return age;
+}
+
+public void setAge(int age) {
+    this.age = age;
+}
+
+public int getSex() {
+    return sex;
+}
+
+public void setSex(int sex) {
+    this.sex = sex;
+}
+
+public String getAddress() {
+    return address;
+}
+
+public void setAddress(String address) {
+    this.address = address;
+}
+
+public String getPhone() {
+    return phone;
+}
+
+public void setPhone(String phone) {
+    this.phone = phone;
+}
+
+public String getDiagnose() {
+    return diagnose;
+}
+
+public void setDiagnose(String diagnose) {
+    this.diagnose = diagnose;
+}
+
+public String getDescription() {
+    return description;
+}
+
+public void setDescription(String description) {
+    this.description = description;
+}
+
+public String getRx() {
+    return rx;
+}
+
+public void setRx(String rx) {
+    this.rx = rx;
+}
+
+public Date getFdate() {
+    return fdate;
+}
+
+public void setFdate(Date fdate) {
+    this.fdate = fdate;
+}
+
+public Date getSdate() {
+    return sdate;
+}
+
+public void setSdate(Date sdate) {
+    this.sdate = sdate;
+}
 }
 ```
 
@@ -7824,9 +6896,11 @@ public class Patient implements Serializable {
     private String address;
     private String phone;
     private Set<History> history;
+
     public Patient() {
         super();
     }
+
     public Patient(Integer pid, String name, int age, int sex, String address, String phone) {
         this.pid = pid;
         this.name = name;
@@ -7835,45 +6909,59 @@ public class Patient implements Serializable {
         this.address = address;
         this.phone = phone;
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public int getAge() {
         return age;
     }
+
     public void setAge(int age) {
         this.age = age;
     }
+
     public int getSex() {
         return sex;
     }
+
     public void setSex(int sex) {
         this.sex = sex;
     }
+
     public String getAddress() {
         return address;
     }
+
     public void setAddress(String address) {
         this.address = address;
     }
+
     public String getPhone() {
         return phone;
     }
+
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
     public Set<History> getHistory() {
         return history;
     }
+
     public void setHistory(Set<History> history) {
         this.history = history;
     }
+
     public Integer getPid() {
         return pid;
     }
+
     public void setPid(Integer pid) {
         this.pid = pid;
     }
@@ -7895,59 +6983,73 @@ public class Pinqueue implements Serializable {
     private int day;
     private int ap;
     private Date t_date;
+
     public Integer getQid() {
         return qid;
     }
+
     public void setQid(Integer qid) {
         this.qid = qid;
     }
+
     public Patient getPatient() {
         return patient;
     }
+
     public void setPatient(Patient patient) {
         this.patient = patient;
     }
+
     public Doctor getDoctor() {
         return doctor;
     }
+
     public void setDoctor(Doctor doctor) {
         this.doctor = doctor;
     }
+
     public int getDay() {
         return day;
     }
+
     public void setDay(int day) {
         this.day = day;
     }
+
     public int getAp() {
         return ap;
     }
+
     public void setAp(int ap) {
         this.ap = ap;
     }
+
     public Date getT_date() {
         return t_date;
     }
+
     public void setT_date(Date t_date) {
         this.t_date = t_date;
     }
 }
 ```
 
-
-
 ```java
 this.day = day;
 }
+
 public int getAp() {
     return ap;
 }
+
 public void setAp(int ap) {
     this.ap = ap;
 }
+
 public Date getT_date() {
     return t_date;
 }
+
 public void setT_date(Date t_date) {
     this.t_date = t_date;
 }
@@ -7957,9 +7059,11 @@ public void setT_date(Date t_date) {
 
 ```xml
 <?xml version="1.0"?>
+
 <!DOCTYPE hibernate-mapping PUBLIC
     "//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
 <hibernate-mapping package="com.abd.entity">
     <!-- 管理员 -->
     <class name="Admin" table="dl_admin">
@@ -7967,12 +7071,14 @@ public void setT_date(Date t_date) {
             <!-- generator class="assigned" /-->
             <generator class="increment" />
         </id>
+
         <property name="username" />
         <property name="password" />
         <property name="email" />
         <property name="phone" />
         <property name="name" />
     </class>
+
     <!-- 预约 -->
     <class name="Appointment" table="dl_appointment">
         <id name="did" column="did" type="java.lang.Integer">
@@ -7980,6 +7086,7 @@ public void setT_date(Date t_date) {
                 <param name="property">doctor</param>
             </generator>
         </id>
+
         <property name="sunA" />
         <property name="sunP" />
         <property name="monA" />
@@ -7994,10 +7101,12 @@ public void setT_date(Date t_date) {
         <property name="friP" />
         <property name="satA" />
         <property name="satP" />
+
         <!-- 映射与医生 -->
         <one-to-one name="doctor" class="Doctor" constrained="true" cascade="save-" />
         <one-to-one>
         <class>
+
         <!-- 会诊 -->
         <class name="Courappointment" table="dl_courappointment">
             <id name="did" type="java.lang.Integer">
@@ -8005,6 +7114,7 @@ public void setT_date(Date t_date) {
                     <param name="property">doctor</param>
                 </generator>
             </id>
+
             <property name="sunA" />
             <property name="sunP" />
             <property name="monA" />
@@ -8019,17 +7129,20 @@ public void setT_date(Date t_date) {
             <property name="friP" />
             <property name="satA" />
             <property name="satP" />
+
             <!-- 医生映射 -->
             <one-to-one name="doctor" class="Doctor" constrained="true" cascade="save-" />
             <one-to-one>
             <class>
         </class>
         </class>
+
         <!-- 医生 -->
         <class name="Doctor" table="dl_doctor">
             <id name="did" column="did">
                 <generator class="increment" />
             </id>
+
             <property name="name" />
             <property name="password" />
             <property name="age" />
@@ -8037,77 +7150,144 @@ public void setT_date(Date t_date) {
             <property name="levels" />
             <property name="section" />
             <property name="spe" column="specialism" />
-            <property name="phone" />
-            <!-- 预约映射 -->
-            <many-to-one name="app" class="Appointment" cascade="save-update" />
-            <many-to-one>
-            <!-- 诊疗映射 -->
-            <many-to-one name="cau" class="Curappointment" cascade="save-update" />
-            <many-to-one>
-            <!-- 等队队列映射 -->
-            <set name="pin" table="dl_pinque" inverse="true" cascade="save-update">
-                <key column="doctor_did" class="key" />
-                <many-to-many class="Pinqueue" />
-            </set>
-            <!-- 历史映射 -->
-            <set name="history" table="dl_history" inverse="true" cascade="save-update">
-                <key column="doctor_did" class="key" />
-                <many-to-one class="History" />
-            </set>
-        </class>
-        <!-- 历史 -->
-        <class name="History" table="dl_history">
-            <id name="hid" column="hid" type="java.lang.Integer">
-                <generator class="increment" />
-            </id>
-            <property name="description" />
-            <property name="diagnose" />
-            <property name="rx" />
-            <property name="finished" />
-            <property name="idate" column="fdate" type="java.sql.Date" />
-            <property name="sdate" column="sdate" type="java.sql.Date" />
-            <!-- 医生映射 -->
-            <many-to-one name="doctor" column="doctor_did" cascade="save-update" />
-            <many-to-one>
-            <!-- 医生映射 -->
-            <many-to-one name="doctor" column="doctor_did" cascade="save-" />
-        </class>
-        <!-- 患者 -->
-        <class name="Patient" table="dl_patient">
-            <id name="did" column="did">
-                <generator class="increment" />
-            </id>
-            <property name="name" />
-            <property name="password" />
-            <property name="age" />
-            <property name="sex" />
-            <property name="levels" />
-            <property name="section" />
-            <property name="spe" column="specialism" />
-            <property name="phone" />
-            <!-- 预约映射 -->
-            <many-to-one name="app" class="Appointment" cascade="save-update" />
-            <many-to-one>
-            <!-- 诊疗映射 -->
-            <many-to-one name="cau" class="Curappointment" cascade="save-update" />
-            <many-to-one>
-            <!-- 等队队列映射 -->
-            <set name="pin" table="dl_pinque" inverse="true" cascade="save-update">
-                <key column="doctor_did" class="key" />
-                <many-to-many class="Pinqueue" />
-            </set>
-            <!-- 历史映射 -->
-            <set name="history" table="dl_history" inverse="true" cascade="save-update">
-                <key column="doctor_did" class="key" />
-                <many-to-one class="History" />
-            </set>
-        </class>
-    </class>
-    </class>
-</hibernate-mapping>
-```
 
 
+
+`<property name="phone" />`
+
+<!-- 预约映射 -->
+
+`<many-to-one name="app" class="Appointment" cascade="save-update" />`
+
+`<many-to-one>`
+
+<!-- 诊疗映射 -->
+
+`<many-to-one name="cau" class="Curappointment" cascade="save-update" />`
+
+`<many-to-one>`
+
+<!-- 等队队列映射 -->
+
+`<set name="pin" table="dl_pinque" inverse="true" cascade="save-update">`
+
+`<key column="doctor_did" class="key" />`
+
+`<many-to-many class="Pinqueue" />`
+
+`</set>`
+
+<!-- 历史映射 -->
+
+`<set name="history" table="dl_history" inverse="true" cascade="save-update">`
+
+`<key column="doctor_did" class="key" />`
+
+`<many-to-one class="History" />`
+
+`</set>`
+
+`</class>`
+
+<!-- 历史 -->
+
+`<class name="History" table="dl_history">`
+
+`<id name="hid" column="hid" type="java.lang.Integer">`
+
+`<generator class="increment" />`
+
+`</id>`
+
+`<property name="description" />`
+
+`<property name="diagnose" />`
+
+`<property name="rx" />`
+
+`<property name="finished" />`
+
+`<property name="idate" column="fdate" type="java.sql.Date" />`
+
+`<property name="sdate" column="sdate" type="java.sql.Date" />`
+
+<!-- 医生映射 -->
+
+`<many-to-one name="doctor" column="doctor_did" cascade="save-update" />`
+
+`<many-to-one>`
+
+<!-- 医生映射 -->
+
+`<many-to-one name="doctor" column="doctor_did" cascade="save-" />`
+
+`</class>`
+
+<!-- 患者 -->
+
+`<class name="Patient" table="dl_patient">`
+
+`<id name="did" column="did">`
+
+`<generator class="increment" />`
+
+`</id>`
+
+`<property name="name" />`
+
+`<property name="password" />`
+
+`<property name="age" />`
+
+`<property name="sex" />`
+
+`<property name="levels" />`
+
+`<property name="section" />`
+
+`<property name="spe" column="specialism" />`
+
+`<property name="phone" />`
+
+<!-- 预约映射 -->
+
+`<many-to-one name="app" class="Appointment" cascade="save-update" />`
+
+`<many-to-one>`
+
+<!-- 诊疗映射 -->
+
+`<many-to-one name="cau" class="Curappointment" cascade="save-update" />`
+
+`<many-to-one>`
+
+<!-- 等队队列映射 -->
+
+`<set name="pin" table="dl_pinque" inverse="true" cascade="save-update">`
+
+`<key column="doctor_did" class="key" />`
+
+`<many-to-many class="Pinqueue" />`
+
+`</set>`
+
+<!-- 历史映射 -->
+
+`<set name="history" table="dl_history" inverse="true" cascade="save-update">`
+
+`<key column="doctor_did" class="key" />`
+
+`<many-to-one class="History" />`
+
+`</set>`
+
+`</class>`
+
+`</class>`
+
+`</class>`
+
+`</hibernate-mapping>`
 
 ```java
 import java.servlet.FilterChain;
@@ -8119,13 +7299,16 @@ import java.servlet.http.HttpServletRequest;
 import java.servlet.http.HttpServletResponse;
 ```
 
-public class EncodingFilter implements Filter {
+`public class EncodingFilter implements Filter` {
 
+```
     @Override
     public void destroy() {
         // TODO 自动生成的存根
     }
+```
 
+```
     @Override
     public void doFilter(ServletRequest request, ServletResponse response,
         FilterChain chain) throws IOException, ServletException {
@@ -8136,17 +7319,20 @@ public class EncodingFilter implements Filter {
         req.setCharacterEncoding("UTF-8");
         chain.doFilter(req, res);
     }
+```
 
+```
     @Override
     public void init(FilterConfig arg0) throws ServletException {
         // TODO 自动生成的方法存根
     }
-}
 ```
 
-## src\com\abd\util
+}
 
-### Util.java
+## `src\com\abd\util`
+
+### `Util.java`
 
 ```java
 package com.abd.util;
@@ -8173,9 +7359,9 @@ public class Util {
 }
 ```
 
-## src\res
+## `src\res`
 
-### AppResources.properties
+### `AppResources.properties`
 
 ```properties
 errors.password=密码
@@ -8193,7 +7379,7 @@ errors.header=<font color="red">
 errors.footer=</font>
 ```
 
-### AppResources_zh.properties
+### `AppResources_zh.properties`
 
 ```properties
 errors.password=密码错误！
@@ -8211,9 +7397,9 @@ errors.header=<font color="red">
 errors.footer=</font>
 ```
 
-### src
+### `src`
 
-### log4j.properties
+### `log4j.properties`
 
 ```properties
 ### 将日志输出到 stdout
@@ -8267,18 +7453,30 @@ log4j.logger.hibernate.DriverManagerProvider=trace
 ## 概念多层架构
 
 | 用户 & 接口 | 表示层 | 业务逻辑 | 数据访问 | 数据源 |
+
 | :--- | :--- | :--- | :--- | :--- |
+
 | 浏览器, html | | | DBMS | |
+
 | IDE, JSP | | | XML, Web Services | |
+
 | 工作站, swing | 表单 | | Framework | COBOL, OS, Unix |
+
 | 表格 | | | COTS, Peoplesoft | |
+
 | 外部系统 | | | 防火墙 | |
+
 | 供应商合作伙伴 | | | | 遗留合作伙伴 |
+
 | 供应商合作伙伴 | | | | |
 
 ## 表示层将位于下方
 
-### WebContent/admin/addDoctor.jsp
+### `WebContent/admin/addDoctor.jsp`
+
+
+
+# 添加医生页面
 
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
@@ -8322,7 +7520,7 @@ log4j.logger.hibernate.DriverManagerProvider=trace
 </html>
 ```
 
-## getDoctor.jsp
+# getDoctor.jsp
 
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
@@ -8374,8 +7572,6 @@ log4j.logger.hibernate.DriverManagerProvider=trace
 </body>
 </html>
 ```
-
-
 
 ```html
 </tr>
@@ -8549,9 +7745,14 @@ bgcolor="#666666">
 ```
 
 # WebContent/hospital.sql
-hospital.sql 详情
+
+`hospital.sql` 详情
 
 # WebContent/createHistory.jsp
+
+
+
+# 创建病历
 
 ```html-jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -8694,8 +7895,6 @@ bgcolor="#666666">
 </body>
 ```
 
-
-
 ```html
 <table>
   <tr>
@@ -8736,7 +7935,7 @@ bgcolor="#666666">
 </html>
 ```
 
-## getPatientInQueue.jsp
+# getPatientInQueue.jsp
 
 ```html
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
@@ -8789,7 +7988,11 @@ bgcolor="#666666">
 </body>
 ```
 
-## login.jsp
+# login.jsp
+
+
+
+## 医生登录页面
 
 ```html
 <%@ page language="java" contentType="text/html; charset="UTF-8" pageEncoding="UTF-8"%>
@@ -8955,9 +8158,7 @@ bgcolor="#666666">
 </td>
 </tr>
 </table>
-
-
-
+```
 
 ## WebContentinclude
 
@@ -8965,25 +8166,45 @@ bgcolor="#666666">
 
 ```html
 <%@ page contentType="text/html; charset=UTF-8"%>
+
 <td width="167" height="290" valign="top" bgcolor="#8FBEE8">
+
 <div align="center">
+
 <br>
+
 <p><a href="/hospital/default.jsp">返回首页</a></p>
+
 <br>
+
 <c:if test="${empty admin}">
+
 <p><a href="/hospital/admin.login.jsp">登录（管理员用户）</a></p>
+
 </c:if>
+
 <c:if test="${empty admin}">
+
 <p><a href="/hospital/allAction.do?method=getDoctor">查看医院医生信息</a></p>
+
 <p><a href="/hospital/admin/addDoctor.jsp">添加医生账号</a></p>
+
 <p><a href="/hospital/allAction.do?method=getDoctor">删除医生账号</a></p>
+
 <p><a href="/hospital/allAction.do?method=exit">退出</a></p>
+
 </c:if>
+
 <br>
+
 <p><a href="/hospital/patient/main.jsp">患者用户</a></p>
+
 <p><a href="/hospital/doctor/main.jsp">医生用户</a></p>
+
 <br>
+
 </div>
+
 </td>
 ```
 
@@ -8991,27 +8212,49 @@ bgcolor="#666666">
 
 ```css
 <style type="text/css">
+
 <!--
+
 body,td.th {
+
     font-size: 12px;
+
     color: #000033;
+
 }
+
 a {
+
     font-size: 12px;
+
 }
+
 a:link {
+
     text-decoration: none;
+
 }
+
 a:visited {
+
     text-decoration: none;
+
 }
+
 a:hover {
+
     text-decoration: none;
+
 }
+
 a:active {
+
 text-decoration: none;
+
 }
+
 -->
+
 </style>
 ```
 
@@ -9019,32 +8262,46 @@ text-decoration: none;
 
 ```html
 <%@ page contentType="text/html; charset=UTF-8"%>
+
 <td width="167" height="290" valign="top" bgcolor="#8FBEE8">
+
 <div align="empty doctor">
+
 <br>
+
 <p><a href="/hospital/default.jsp">返回首页</a></p>
+
 <br>
+
 <c:if test="${empty doctor}">
+
 <p><a href="/hospital/login.jsp">登录（医生用户）</a></p>
+
 </c:if>
+
 <c:if test="${empty doctor}">
+
 <p><a href="/hospital/updatePassword.jsp">修改密码</a></p>
+
 <p><a href="/hospital/allAction.jsp?did=${doctor.did}">method=getAppointmentMessage&did=${doctor.did}">查看预约患者信息</a></p>
+
 <p><a href="/hospital/allAction.jsp">allAction</a></p>
-<p><a href="/hospital/allAction.jsp?queryPatientHistory&did=${doctor.did}">method=getAppointmentMessage&did=${doctor.did}">创建记录</a></p>
-<p><a href="/hospital/allAction.jsp?queryPatientHistory&did=${doctor.did}">查看患者记录</a></p>
-<p><a href="/hospital/allAction.jsp/allAction/allAction">allAction</a></p>
-<p><a href="/hospital/allAction.jsp?queryPatientHistory&did=${doctor.did}">修改患者记录</a></p>
-<p><a href="/hospital/allAction.jsp/allAction/allAction">allAction</a></p>
-<p><a href="/hospital/allAction.jsp?queryPatientHistory&did=${doctor.did}">结束治疗</a></p>
-<p><a href="/hospital/allAction.jsp?method=exit">退出</a></p>
-<br>
-<p><a href="/hospital/patient/main.jsp">患者用户</a></p>
-<p><a href="/hospital/admin/main.jsp">管理员用户</a></p>
-<br>
-</div>
-</td>
 ```
+
+
+
+## 页面链接与导航
+
+- [创建记录](/hospital/allAction.jsp?queryPatientHistory&did=${doctor.did})
+- [查看患者记录](/hospital/allAction.jsp?queryPatientHistory&did=${doctor.did})
+- [allAction](/hospital/allAction.jsp/allAction/allAction)
+- [修改患者记录](/hospital/allAction.jsp?queryPatientHistory&did=${doctor.did})
+- [allAction](/hospital/allAction.jsp/allAction/allAction)
+- [结束治疗](/hospital/allAction.jsp?queryPatientHistory&did=${doctor.did})
+- [退出](/hospital/allAction.jsp?method=exit)
+
+- [患者用户](/hospital/patient/main.jsp)
+- [管理员用户](/hospital/admin/main.jsp)
 
 ## head.inc
 
@@ -9052,29 +8309,53 @@ text-decoration: none;
 
 ```html
 <%@ page contentType="text/html; charset=UTF-8%">
+
 <td width="167" height="290" valign="top" bgcolor="#8FBEE8">
+
 <div align="center">
+
 <br>
+
 <p><a href="${empty patient}/default.jsp">返回首页</a></p>
+
 <br>
+
 <c:if test="${empty patient}">
+
 <p><a href="/hospital/patient/login.jsp">登录（患者用户）</a></p>
+
 <p><a href="/hospital/patient/register.jsp">注册</a></p>
+
 </c:if>
+
 <c:if test="${empty patient}">
+
 <p><a href="/hospital/allAction.do?method=allDoctorMessage">查看所有医生</a></p>
+
 <p><a href="/hospital/allAction.do?method=getMessage">预约</a></p>
+
 <p><a href="/hospital/allAction.do?method=patientMyAppointment&pid=${patient.pid}">检查我的预约</a></p>
+
 <p><a href="/hospital/allAction.do?method=patientMyAppointment&pid=${patient.pid}">取消预约</a></p>
+
 <p><a href="/hospital/allAction.do?method=getDoctorMessage&pid=${patient.pid}">医生信息</a></p>
+
 <p><a href="/hospital/allAction.do?method=queryHistory&pid=${patient.pid}">查询记录</a></p>
+
 <p><a href="/hospital/allAction.do?method=exit">退出</a></p>
+
 </c:if>
+
 <br>
+
 <p><a href="/hospital/doctor/main.jsp">医生用户</a></p>
+
 <p><a href="/hospital/admin/main.jsp">管理员用户</a></p>
+
 <br>
+
 </div>
+
 </td>
 ```
 
@@ -9082,41 +8363,67 @@ text-decoration: none;
 
 ```html
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <%@ page isELIgnored="false" %>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <%@ include file="../include/css.inc" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html40.dtd">
+
 <html>
+
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <title>取消预约</title>
+
 </head>
+
 <body bgcolor="#ffffff">
+
 <table width="770" height="423" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#000000">
+
 <tr>
+
 <td height="421" bgcolor="#FFFFFFFF"><@ include file="../include/head.inc" %>
+
 <table width="770" height="290" border="0" align="center" cellpadding="0">
+
 <tr>
+
 <%@ include file="../include/patient.inc" %>
+
 <td width="603" align="center" valign="top">
+
 <table width="100%" height="85%" border="0" cellpadding="3" cellspacing="1" bgcolor="#666666">
+
 <tr
+
 <td width="488" height="400" align="center" valign="top">
+
 <br>
+
 <p>预约取消成功！</p>
+
 </td>
+
 </tr>
+
 </table>
+
 </td>
 
-
-
-
+<<tr><td></td></tr>
 
 <<tr><td></td></tr>
-<<tr><td></td></tr>
+
 </table>
+
 </body>
+
 </html>
 ```
 
@@ -9124,51 +8431,97 @@ text-decoration: none;
 
 ```html
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <%@ page isELIgnored="false" %>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <%@ include file="../include/css.inc" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html40.dtd">
+
 <html>
+
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <title>插入</title>
+
 </head>
+
 <body bgcolor="#FFFFFF">
+
 <table width="770" height="423" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#000000">
+
 <tr bgcolor="#FFFFFF"><td height="421"><@ include file="../include/head.inc" %>
+
 <table width="770" height="290" border="0" align="center" cellpadding="0">
+
 <tr>
+
 <%@ include file="../include/patient.inc" %>
+
 <td width="603" align="center" valign="top">
+
 <table width="100%" height="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#666666">
+
 <tr
+
 <td width="100%" height="400" align="center" valign="top" bgcolor="#E3EDFF">
+
 <p align="left"><strong>取消预约编号：</strong></p>
+
 <table width="100%">
+
 <tr>
+
 <th>预约编号</th>
+
 <th>医生编号</th>
+
 </tr>
+
 <tr><td>0 - 周日</td>1 - 周一，以此类推</td></tr>
+
 <tr><td>0 - 上午</td>1 - 下午</td></tr><th>预约日期</th></tr>
+
 <c:forEach var="pi" items="${pinues}">
+
 <tr align="center">
+
 <td><a href="/hospital/AllAction.do?method=cancelAppointment&qid=${pi.qid}" onclick="return confirm('要取消这个预约吗？')">${pi.qid}</a></td>
+
 <td>${pi.did}</td>
+
 <td>${pi.day}</td>
+
 <td>${pi.ap}</td>
+
 <td>${pi.t_date}</td>
+
 </tr>
+
 </c:forEach>
+
 </table>
+
 </td>
+
 </tr>
+
 </table>
+
 </td>
+
 </tr>
+
 </tr>
+
 </table>
+
 </body>
+
 </html>
 ```
 
@@ -9176,78 +8529,143 @@ text-decoration: none;
 
 ```html
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <%@ page isELIgnored="false" %>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <%@ include file="../include/css.inc" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html40.dtd">
+
 <html>
+
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <title>医生查询信息</title>
+
 </head>
+
 <body bgcolor="#ffffff">
+
 <table width="770" height="423" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#000000">
+
 <tr>
+
 <td width="421" bgcolor="#FFFFFC"><@ include file="../include/head.inc" %>
+
 <table width="770" height="290" border="0" align="center" cellpadding="0">
+
 <tr
+
 <%@ include file="../include/patient.inc" %>
+
 <td width="603" align="center" valign="top">
+
 <table width="100%" height="85%" border="0" cellpadding="3" cellspacing="1" bgcolor="#666666">
+
 <tr
+
 <td width="100%" height="400" align="center" valign="top" bgcolor="#E3EDFF">
+
 <table width="100%">
+
 <tr>
+
 <th>医生姓名</th>
+
 <th>医生编号</th>
+
 <th>年龄</th>
+
 <th>性别</th>
+
 <th>职称</th>
+
 <th>科室</th>
+
 <th>专长</th>
+
 <th>电话</th>
+
 </tr>
+
 <c:forEach var="m" items="${dMessages}">
+
 <tr align="center">
+
 <td>${m.name}</td>
+
 <td>${m.did}</td>
+
 <td>${m.age}</td>
+
 <td>${m.sex}</td>
+
 <td>${m.title}</td>
+
 <td>${m.dept}</td>
+
 <td>${m.spec}</td>
+
 <td>${m.phone}</td>
+
 </tr>
+
 </c:forEach>
+
 </table>
+
 </td>
+
 </tr>
+
 </table>
+
 </td>
+
 </tr>
+
 </tr>
+
 </table>
+
 </body>
+
 </html>
 ```
 
-
-
 ```html
 <table>
+
   <c:forEach var="m" items="${list}">
+
     <tr>
+
       <td>${m.name}</td>
+
       <td>${m.did}</td>
+
       <td>${m.age}</td>
+
       <td>${m.sex}</td>
+
       <td>${m.levels}</td>
+
       <td>${m.section}</td>
+
       <td>${m.spe}</td>
+
       <td>${m.phone}</td>
+
     </tr>
+
   </c:forEach>
+
 </table>
+
 </body>
 ```
 
@@ -9255,55 +8673,94 @@ text-decoration: none;
 
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
+
 <%@ pageEncoding="UTF-8"%>
+
 <%@ page isIgnored="false"%>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <%@ include file="../include/ccs.inc" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+
 "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
+
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <title>医生预约信息</title>
+
 </head>
+
 <body bgcolor="#FFFFFF">
+
 <table width="770" height="423" border="0" align="center" cellpadding="0"
+
 cellspacing="1" bgcolor="#000000">
+
 <tr>
+
 <td height="421" bgcolor="#FFFFFF"><@include file="../include/head.inc" %>
 
 <table width="770" height="290" border="0" align="center" cellpadding="0">
+
 <tr>
+
 <@ include file="../include/patient.inc" %>
+
 <td width="603" align="center" valign="top">
+
   <table width="100%" height="85%" border="0" cellpadding="3" cellspacing="1" bgcolor="#66666">
+
     <tr>
+
       <td width="100%" height="400" align="center" valign="top" bgcolor="#E3EDFF">
+
         <br>
+
         <p align="left">点击当前数字进行预约</p>
+
         <table width="100%" border="0" cellspacing="0">
+
           <tr>
+
             <td></td>
+
             <td>周日</td>
+
             <td>周一</td>
+
             <td>周二</td>
+
             <td>周三</td>
+
             <td>周四</td>
+
             <td>周五</td>
+
             <td>周六</td>
+
           </tr>
+
           <!-- 预约数据将根据逻辑循环生成 -->
-        </table>
-      </td>
-    </tr>
-  </table>
+```
+
+
+
+```html
+</table>
 </td>
 </tr>
 </table>
-</td></td>
+</td>
+</td>
 </tr>
 <tr align="center">
-  <td>当前可用预约数量</td>
+<td>当前可用预约数量</td>
 </tr>
 </table>
 <td><a href="/hospital/allAction.do?method=patientAppointment&did=${curappointment.did}&day=0&ap=0">${curappointment.sunA}</a></td>
@@ -9329,64 +8786,72 @@ cellspacing="1" bgcolor="#000000">
 </html>
 ```
 
-# getDoctorInfo.jsp
+## `getDoctorInfo.jsp`
 
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page isIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ include file="../include/header.jsp" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>所有医生</title>
 </head>
+
 <body bgcolor="#FFFFFF">
-<table width="770" height="423" border="0" align="center" cellpadding="0"
-cellspacing="1" bgcolor="#000000">
+<table width="770" height="423" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#000000">
 <tr>
-<td height="421" bgcolor="#FFFFFF"><@include file="../include/head.inc" %>
+<td height="421" bgcolor="#FFFFFF">
+<@include file="../include/head.inc" %>
+
 <table width="770" height="290" border="0" align="center" cellpadding="0">
 <tr>
 <@include file="../include/patient.inc" %>
+
 <td width="603" align="center" valign="top">
-  <table width="100%" height="85%" border="0" cellpadding="3" cellspacing="6"
-  bgcolor="#66666">
-    <tr>
-      <td width="100%" height="400" align="center" valign="top" bgcolor="#E3EDFF">
-        <br>
-        <c:if test="${empty doctors}">
-          <p align="left">点击医生姓名查看医生预约信息：</p>
-        </c:if>
-        <table width="100%" border="0" cellspacing="0">
-          <tr>
-            <th>全名</th>
-            <th>序列号</th>
-            <th>年龄</th>
-            <th>性别（0男 1女）</th>
-            <th>职称</th>
-            <th>科室</th>
-            <th>专长</th>
-            <th>电话</th>
-          </tr>
-          <c:forEach var="dd" items="${doctors}">
-            <tr align="center">
-              <td><a href="/hospital/allAction.do?method=patientAppointment&did=${dd.did}">${dd.name}</a></td>
-              <td>${dd.did}</td>
-              <td>${dd.age}</td>
-              <td>${dd.sex}</td>
-              <td>${dd.levels}</td>
-              <td>${dd.section}</td>
-              <td>${dd.spe}</td>
-              <td>${dd.phone}</td>
-            </tr>
-          </c:forEach>
-        </table>
-      </td>
-    </tr>
-  </table>
+<table width="100%" height="85%" border="0" cellpadding="3" cellspacing="6" bgcolor="#66666">
+<tr>
+<td width="100%" height="400" align="center" valign="top" bgcolor="#E3EDFF">
+<br>
+
+<c:if test="${empty doctors}">
+<p align="left">点击医生姓名查看医生预约信息：</p>
+</c:if>
+
+<table width="100%" border="0" cellspacing="0">
+<tr>
+<th>全名</th>
+<th>序列号</th>
+<th>年龄</th>
+<th>性别（0男 1女）</th>
+<th>职称</th>
+<th>科室</th>
+<th>专长</th>
+<th>电话</th>
+</tr>
+
+<c:forEach var="dd" items="${doctors}">
+<tr align="center">
+<td><a href="/hospital/allAction.do?method=patientAppointment&did=${dd.did}">${dd.name}</a></td>
+<td>${dd.did}</td>
+<td>${dd.age}</td>
+<td>${dd.sex}</td>
+<td>${dd.levels}</td>
+<td>${dd.section}</td>
+<td>${dd.spe}</td>
+<td>${dd.phone}</td>
+</tr>
+</c:forEach>
+</table>
+
+</td>
+</tr>
+</table>
 </td>
 </tr>
 </table>
@@ -9398,41 +8863,44 @@ cellspacing="1" bgcolor="#000000">
 </body>
 </html>
 ```
-```
 
-# getDoctorInfo2.jsp
+## `getDoctorInfo2.jsp`
 
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page isIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ include file="../include/ccs.inc" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
 "http://www.w3.org/TR/HTML4/loose.dtd">
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>所有医生</title>
 </head>
-<body bgcolor="#FFFFFF">
-  <table width="770" height="423" border="0" align="center" cellpadding="0"
-cellspacing="1" bgcolor="#000000">
-    <tr>
-      <td height="421" bgcolor="#FFFFFF"><@include file="../include/head.inc" %>
-      <table width="770" height="290" border="0" align="center" cellpadding="0">
-        <tr>
-          <@include file="../include/patient.inc" %>
-          <td width="603" align="center" valign="top">
-            <table width="100%" height="85%" border="0" cellpadding="3" cellspacing="1"
-            bgcolor="#66666">
-              <tr>
-                <td width="100%" height="400" align="center" valign="top" bgcolor="#E3EDFF">
-                  <br>
-                  <c:if test="${empty doctors}">
-                  <p align="left">点击医生姓名查看医生预约信息：</p>
-                  </c:if>
-```
 
+<body bgcolor="#FFFFFF">
+<table width="770" height="423" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#000000">
+<tr>
+<td height="421" bgcolor="#FFFFFF">
+<@include file="../include/head.inc" %>
+
+<table width="770" height="290" border="0" align="center" cellpadding="0">
+<tr>
+<@include file="../include/patient.inc" %>
+
+<td width="603" align="center" valign="top">
+<table width="100%" height="85%" border="0" cellpadding="3" cellspacing="1" bgcolor="#66666">
+<tr>
+<td width="100%" height="400" align="center" valign="top" bgcolor="#E3EDFF">
+<br>
+
+<c:if test="${empty doctors}">
+<p align="left">点击医生姓名查看医生预约信息：</p>
+</c:if>
+```
 
 ```html
 <table>
@@ -9449,7 +8917,9 @@ cellspacing="1" bgcolor="#000000">
 </table>
 ```
 
-## getHistory.jsp
+## `getHistory.jsp`
+
+
 
 ```jsp
 <%@ page language="java"" contentType="text/html; charset=UTF-8" %>
@@ -9458,7 +8928,7 @@ cellspacing="1" bgcolor="#000000">
 <%@ taglib uri="http://java.sun.com/jsp/jst/core" prefix="c" %>
 <%@ include file="../include/ccs.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>患者记录</title>
@@ -9504,16 +8974,16 @@ cellspacing="1" bgcolor="#000000">
                                     <td></td>
                                 </tr>
                                 <td></td>
-                                </tr>
-                                <td></td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+                            </tr>
+                            <td></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+</table>
 </body>
 </html>
 ```
@@ -9526,7 +8996,7 @@ cellspacing="1" bgcolor="#000000">
 <%@ taglib uri="http://java.sun.com/jsp/jst/core" prefix="c" %>
 <%@ include file="../include/ccs.inc" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>患者登录</title>
@@ -9550,7 +9020,9 @@ cellspacing="1" bgcolor="#000000">
                                         <form action="/hospital/loginAction.do" method="POST">
                                             <p>用户名:<input type="text" name="username"></p>
                                             <p>密码:<input type="password" name="password"></p>
-                                            <p><input type="submit" style="background:url(images/land.gif);height:50px;width:200px;border:0" value="登录"/></p>
+                                            <p>
+                                                <input type="submit" style="background:url(images/land.gif);height:50px;width:200px;border:0" value="登录"/>
+                                            </p>
                                         </form>
                                     </c:if>
                                 </td>
@@ -9572,7 +9044,7 @@ cellspacing="1" bgcolor="#000000">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ include file="./include/css.inc" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>用户页面</title>
@@ -9604,6 +9076,10 @@ cellspacing="1" bgcolor="#000000">
 ```
 
 ## makeAppointment.jsp
+
+
+
+## `patientQueryDoctor.jsp`
 
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
@@ -9643,7 +9119,7 @@ cellspacing="1" bgcolor="#000000">
 </html>
 ```
 
-## patientQueryDoctor.jsp
+## `patientQueryDoctor.jsp`
 
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
@@ -9728,11 +9204,47 @@ cellspacing="1" bgcolor="#000000">
 </html>
 ```
 
+## `register.jsp`
+
+```jsp
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page isIgnored="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jst/core" prefix="c" %>
+<%@ include file="../include/ccs.inc" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>预约</title>
+</head>
+<body bgcolor="#FFFFFF">
+    <table width="770" height="423" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#000000">
+        <tr>
+            <td width="421" bgcolor="#FFFFFFFF">
+                <%@ include file="../include/head.inc" %>
+                <table width="770" height="290" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <%@ include file="../include/patient.inc" %>
+                        <td width="603" align="center" valign="top">
+                            <table width="100%" height="85%" align="center" cellpadding="3" bgcolor="#666666">
+                                <tr>
+                                    <td width="488" height="400" align="center" valign="top">
+                                        <br>
+                                        <p><strong>恭喜！预约成功</strong></p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+```
 
 
-
-
-# register.jsp
 
 ```jsp
 <@page language="java" contentType="text/html; charset=UTF-8"
@@ -9808,34 +9320,35 @@ width:200px;border="0" value="注册" />
 </html>
 ```
 
-- patient (患者)
-- circleAppointment.jsp (循环挂号)
-- getAppointmentInfo.jsp (获取挂号信息)
-- getCurrentDoctorInfo.jsp (获取当前医生信息)
-- getDoctorAppointmentInfo.jsp (获取医生挂号信息)
-- getDoctorInfo.jsp (获取医生信息)
-- getDoctor2.jsp (获取医生2)
-- getHistory.jsp (获取历史记录)
-- login.jsp (登录)
-- main.jsp (主页)
-- makeAppointment.jsp (挂号)
-- patientQueryDoctor.jsp (患者查询医生)
-- register.jsp (注册)
-- register1.jsp (注册1)
-- WEB-INF
-  - spring-servlet.xml (spring servlet配置)
-  - struts-config.xml (struts配置)
-  - web.xml (web部署)
-- default.jsp (默认)
-- error.jsp (错误页面)
-- Servers (服务器)
+- `patient` (患者)
+- `circleAppointment.jsp` (循环挂号)
+- `getAppointmentInfo.jsp` (获取挂号信息)
+- `getCurrentDoctorInfo.jsp` (获取当前医生信息)
+- `getDoctorAppointmentInfo.jsp` (获取医生挂号信息)
+- `getDoctorInfo.jsp` (获取医生信息)
+- `getDoctor2.jsp` (获取医生2)
+- `getHistory.jsp` (获取历史记录)
+- `login.jsp` (登录)
+- `main.jsp` (主页)
+- `makeAppointment.jsp` (挂号)
+- `patientQueryDoctor.jsp` (患者查询医生)
+- `register.jsp` (注册)
+- `register1.jsp` (注册1)
+- `WEB-INF`
+  - `spring-servlet.xml` (spring servlet配置)
+  - `struts-config.xml` (struts配置)
+  - `web.xml` (web部署)
+- `default.jsp` (默认)
+- `error.jsp` (错误页面)
+- `Servers` (服务器)
 
-初始化资源并注入依赖对象
-- struts-config.xml 接收请求，处理
-- web.xml 所有请求将交给 web.xml
-- Next web.xml 将交给处理器
+## 初始化资源并注入依赖对象
 
-# WebContent/WEB-INF/spring-servlet.xml
+- `struts-config.xml` 接收请求，处理
+- `web.xml` 所有请求将交给 `web.xml`
+- Next `web.xml` 将交给处理器
+
+## WebContent/WEB-INF/spring-servlet.xml
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -10007,8 +9520,6 @@ width:200px;border="0" value="注册" />
 
 
 
-
-
 ```xml
 <form-bean>
   <form-property name="did" type="java.lang.String" />
@@ -10078,10 +9589,12 @@ width:200px;border="0" value="注册" />
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="http://www.w3.org/2001/XMLSchema-instance" 
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-         xmlns="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee/http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+<web-app xmlns="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee/http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         id="WebApp_ID"
+         version="2.5">
   <display-name>hospital</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -10120,7 +9633,7 @@ width:200px;border="0" value="注册" />
 
 ```jsp
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/REC/html41/strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/REC-html41/strict.dtd">
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -10158,6 +9671,7 @@ width:200px;border="0" value="注册" />
 ```javascript
 var speed = 30;
 gun2.innerHTML = gun1.innerHTML;
+
 function Marquee3() {
   if (gun2.offsetLeft) {
     gun.scrollLeft = gun1.offsetWidth;
@@ -10165,12 +9679,17 @@ function Marquee3() {
     gun.scrollLeft++;
   }
 }
+
 var MyMar3 = setInterval(Marquee3, speed);
-gun.onmouseover = function() { clearInterval(MyMar3); };
+gun.onmouseover = function() {
+  clearInterval(MyMar3);
+};
 ```
 
 ```javascript
-gun.onmouseover = function() { MyMar3 = setInterval(Marquee3, speed); }
+gun.onmouseover = function() {
+  MyMar3 = setInterval(Marquee3, speed);
+};
 ```
 
 ### error.jsp
@@ -10181,9 +9700,8 @@ gun.onmouseover = function() { MyMar3 = setInterval(Marquee3, speed); }
 <%@taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 
 <h1>
-    <html:errors />
-    <br>
-    <a>Please return</a>
+  <html:errors />
+  <br>
+  <a>Please return</a>
 </h1>
 ```
-

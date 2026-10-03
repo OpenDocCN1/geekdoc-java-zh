@@ -1,3 +1,4 @@
+
 # 向方法或构造函数传递信息
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/javaOO/arguments.html`](https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html)
@@ -18,16 +19,11 @@ public double computePayment(
                     - ((futureValue * partial1) / denominator);
     return answer;
 }
-
 ```
 
 该方法有四个参数：贷款金额、利率、未来价值和期数。前三个是双精度浮点数，第四个是整数。这些参数在方法体中被使用，并在运行时将采用传递的参数的值。
 
-* * *
-
 **注意：** *参数*指的是方法声明中的变量列表。*参数*是在调用方法时传递的实际值。当您调用方法时，使用的参数必须与声明的参数在类型和顺序上匹配。
-
-* * *
 
 ## 参数类型
 
@@ -39,14 +35,9 @@ public double computePayment(
 public Polygon polygonFrom(Point[] corners) {
     // method body goes here
 }
-
 ```
 
-* * *
-
 **注意：**如果您想将一个方法传递给另一个方法，那么请使用 lambda 表达式或方法引用。
-
-* * *
 
 ## 任意数量的参数
 
@@ -67,7 +58,6 @@ public Polygon polygonFrom(Point... corners) {
     // more method body code follows that creates and returns a 
     // polygon connecting the Points
 }
-
 ```
 
 您可以看到，在方法内部，`corners`被视为数组。该方法可以使用数组或一系列参数调用。方法体中的代码将在任何情况下将参数视为数组。
@@ -76,21 +66,18 @@ public Polygon polygonFrom(Point... corners) {
 
 ```java
 public PrintStream printf(String format, Object... args)
-
 ```
 
 允许您打印任意数量的对象。可以这样调用：
 
 ```java
 System.out.printf("%s: %d, %s%n", name, idnum, address);
-
 ```
 
-或者像这样
+或者像这样：
 
 ```java
 System.out.printf("%s: %d, %s, %s, %s%n", name, idnum, address, phone, email);
-
 ```
 
 或者使用不同数量的参数。
@@ -101,7 +88,7 @@ System.out.printf("%s: %d, %s, %s, %s%n", name, idnum, address, phone, email);
 
 参数的名称在其作用域内必须是唯一的。它不能与同一方法或构造函数的另一个参数的名称相同，也不能与方法或构造函数内的局部变量的名称相同。
 
-参数可以与类的字段之一具有相同的名称。如果是这种情况，则说参数遮蔽了字段。字段遮蔽可能会使您的代码难以阅读，并且通常仅在设置特定字段的构造函数和方法中使用。例如，考虑以下 `Circle` 类及其 `setOrigin` 方法：
+参数可以与类的字段之一具有相同的名称。如果是这种情况，则说参数遮蔽了字段。字段遮蔽可能会使您的代码难以阅读，并且通常仅在设置特定字段的构造函数和方法中使用。例如，考虑以下`Circle`类及其`setOrigin`方法：
 
 ```java
 public class Circle {
@@ -110,14 +97,13 @@ public class Circle {
         ...
     }
 }
-
 ```
 
-`Circle` 类有三个字段：`x`、`y` 和 `radius`。`setOrigin` 方法有两个参数，每个参数的名称与一个字段的名称相同。每个方法参数都会遮蔽与其名称相同的字段。因此，在方法体内使用简单名称 `x` 或 `y` 指的是参数，*而不是*字段。要访问字段，必须使用限定名称。这将在本课程的后面部分“使用 `this` 关键字”中讨论。
+`Circle`类有三个字段：`x`、`y`和`radius`。`setOrigin`方法有两个参数，每个参数的名称与一个字段的名称相同。每个方法参数都会遮蔽与其名称相同的字段。因此，在方法体内使用简单名称`x`或`y`指的是参数，*而不是*字段。要访问字段，必须使用限定名称。这将在本课程的后面部分“使用`this`关键字”中讨论。
 
 ## 传递原始数据类型参数
 
-原始参数，如 `int` 或 `double`，是通过值传递给方法的。这意味着对参数值的任何更改仅存在于方法的范围内。当方法返回时，参数消失，对它们的任何更改都将丢失。以下是一个例子：
+原始参数，如`int`或`double`，是通过值传递给方法的。这意味着对参数值的任何更改仅存在于方法的范围内。当方法返回时，参数消失，对它们的任何更改都将丢失。以下是一个例子：
 
 ```java
 public class PassPrimitiveByValue {
@@ -141,21 +127,19 @@ public class PassPrimitiveByValue {
         p = 10;
     }
 }
-
 ```
 
 运行此程序时，输出为：
 
 ```java
 After invoking passMethod, x = 3
-
 ```
 
 ## 传递引用数据类型参数
 
 引用数据类型参数，如对象，也是通过值传递给方法的。这意味着当方法返回时，传入的引用仍然引用与之前相同的对象。*但是*，如果对象的字段值具有适当的访问级别，则可以在方法中更改对象的字段值。
 
-例如，考虑一个在任意类中移动 `Circle` 对象的方法：
+例如，考虑一个在任意类中移动`Circle`对象的方法：
 
 ```java
 public void moveCircle(Circle circle, int deltaX, int deltaY) {
@@ -166,14 +150,12 @@ public void moveCircle(Circle circle, int deltaX, int deltaY) {
     // code to assign a new reference to circle
     circle = new Circle(0, 0);
 }
-
 ```
 
 让方法使用这些参数被调用：
 
 ```java
 moveCircle(myCircle, 23, 56)
-
 ```
 
-在方法内部，`circle` 最初指向 `myCircle`。该方法更改了 `circle` 引用的对象（即 `myCircle`）的 x 和 y 坐标分别为 23 和 56。这些更改将在方法返回时保留。然后 `circle` 被赋予一个新的 `Circle` 对象的引用，其中 `x = y = 0`。然而，这种重新赋值并不具有永久性，因为引用是通过值传递的，不能更改。在方法内部，`circle` 指向的对象已经改变，但是，当方法返回时，`myCircle` 仍然引用与调用方法之前相同的 `Circle` 对象。
+在方法内部，`circle`最初指向`myCircle`。该方法更改了`circle`引用的对象（即`myCircle`）的 x 和 y 坐标分别为 23 和 56。这些更改将在方法返回时保留。然后`circle`被赋予一个新的`Circle`对象的引用，其中`x = y = 0`。然而，这种重新赋值并不具有永久性，因为引用是通过值传递的，不能更改。在方法内部，`circle`指向的对象已经改变，但是，当方法返回时，`myCircle`仍然引用与调用方法之前相同的`Circle`对象。

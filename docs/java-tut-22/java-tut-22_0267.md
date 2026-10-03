@@ -1,3 +1,4 @@
+
 # 查找和加载数据文件
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/applet/data.html`](https://docs.oracle.com/javase/tutorial/deployment/applet/data.html)
@@ -12,11 +13,7 @@
 
 applet 可能需要的数据，或者需要依赖的备份数据，通常相对于代码库指定。通常由 applet 开发人员指定的数据，通常通过使用参数指定，通常相对于文档库指定。
 
-* * *
-
 **注意：**出于安全原因，浏览器限制了不受信任的 applet 可以读取的 URL。例如，大多数浏览器不允许不受信任的 applet 使用 ".." 访问代码库或文档库上面的目录。此外，由于不受信任的 applet 不能读取除了位于 applet 源主机上的文件之外的文件，因此如果文档和不受信任的 applet 位于不同的服务器上，则文档库通常是无用的。
-
-* * *
 
 `JApplet` 类定义了方便的图像加载和声音加载方法，使您能够相对于基本 URL 指定图像和声音。例如，假设 applet 设置为以下图中显示的其中一个目录结构。
 
@@ -26,5 +23,4 @@ applet 可能需要的数据，或者需要依赖的备份数据，通常相对�
 
 ```java
 Image image = getImage(getCodeBase(), "imgDir/a.gif");
-
 ```

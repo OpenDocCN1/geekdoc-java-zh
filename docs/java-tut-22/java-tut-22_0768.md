@@ -1,3 +1,4 @@
+
 # 课程：文档对象模型
 
 > 原文：[`docs.oracle.com/javase/tutorial/jaxp/dom/index.html`](https://docs.oracle.com/javase/tutorial/jaxp/dom/index.html)

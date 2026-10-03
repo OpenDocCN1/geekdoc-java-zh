@@ -1,22 +1,23 @@
+
 # 检查一个字符串是否是 Java 中的盘符
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-string-pangram>
 
-## 1.概观
+## 1. 概观
 
-在本教程中，我们将学习使用一个简单的 Java 程序来检查一个给定的字符串是否有效。一个 **[盘符](https://web.archive.org/web/20221208143832/https://en.wikipedia.org/wiki/Pangram)是任何一个包含给定字母表中所有字母至少一次的字符串。**
+在本教程中，我们将学习使用一个简单的 Java 程序来检查一个给定的字符串是否有效。一个 [盘符](https://web.archive.org/web/20221208143832/https://en.wikipedia.org/wiki/Pangram) 是任何一个包含给定字母表中所有字母至少一次的字符串。
 
-## 2.潘格拉姆
+## 2. 潘格拉姆
 
 字谜不仅适用于英语，也适用于任何其他具有固定字符集的语言。
 
 例如，一个常见的英语 pangram 是“一只敏捷的棕色狐狸跳过了懒狗”。同样，这些也有其他语言版本。
 
-## 3.使用`for`循环
+## 3. 使用`for`循环
 
-首先，让我们尝试一个 [`for `循环](/web/20221208143832/https://www.baeldung.com/java-loops) `.` 我们将为字母表中的每个字符填充一个带有**标记的`Boolean `数组。**
+首先，让我们尝试一个 `for` 循环。我们将为字母表中的每个字符填充一个带有标记的`Boolean`数组。
 
-当标记数组中的所有值都设置为`true`时，代码返回 *true* :
+当标记数组中的所有值都设置为`true`时，代码返回`true`：
 
 ```java
 public static boolean isPangram(String str) {
@@ -42,7 +43,7 @@ public static boolean isPangram(String str) {
 }
 ```
 
-让我们测试一下我们的实现:
+让我们测试一下我们的实现：
 
 ```java
 @Test
@@ -52,11 +53,11 @@ public void givenValidString_isPanagram_shouldReturnSuccess() {
 }
 ```
 
-## 4.使用 Java 流
+## 4. 使用 Java 流
 
-另一种方法是使用 [Java Streams API](/web/20221208143832/https://www.baeldung.com/java-8-streams-introduction) 。我们可以**从给定的输入文本中创建一个过滤后的字符流，并使用流** `.` 创建一个字母表`Map`
+另一种方法是使用 Java Streams API。我们可以从给定的输入文本中创建一个过滤后的字符流，并使用流创建一个字母表`Map`。
 
-如果`Map`的大小等于字母表的大小，代码返回成功。对于英语，预期大小为 26:
+如果`Map`的大小等于字母表的大小，代码返回成功。对于英语，预期大小为 26：
 
 ```java
 public static boolean isPangramWithStreams(String str) {
@@ -76,7 +77,7 @@ public static boolean isPangramWithStreams(String str) {
 }
 ```
 
-当然，让我们测试一下:
+当然，让我们测试一下：
 
 ```java
 @Test
@@ -86,11 +87,11 @@ public void givenValidString_isPangramWithStreams_shouldReturnSuccess() {
 }
 ```
 
-## 5.为完美的 Pangrams 修改
+## 5. 为完美的 Pangrams 修改
 
 完美的盘龙和普通的盘龙有点不同。一个完美的字谜由字母表中的每个字母恰好一次组成，而字谜至少有一次。
 
-当`Map`的大小等于字母表的大小并且字母表中每个字符的频率正好为 1 时，代码返回*真*:
+当`Map`的大小等于字母表的大小并且字母表中每个字符的频率正好为 1 时，代码返回`true`：
 
 ```java
 public static boolean isPerfectPangram(String str) {
@@ -110,7 +111,7 @@ public static boolean isPerfectPangram(String str) {
 }
 ```
 
-让我们测试一下:
+让我们测试一下：
 
 ```java
 @Test
@@ -120,19 +121,19 @@ public void givenPerfectPangramString_isPerfectPangram_shouldReturnSuccess() {
 }
 ```
 
-一个完美的盘符应该每个字符都出现一次。因此，我们之前的 pangram 应该会失败:
+一个完美的盘符应该每个字符都出现一次。因此，我们之前的 pangram 应该会失败：
 
 ```java
 String input = "Two driven jocks help fax my big quiz";
 assertFalse(Pangram.isPerfectPangram(input));
 ```
 
-在上面的代码中，给定的字符串输入有几个重复项，比如它有两个 o。因此输出为`false`。
+在上面的代码中，给定的字符串输入有几个重复项，比如它有两个`o`。因此输出为`false`。
 
-## 5.结论
+## 6. 结论
 
 在本文中，我们讨论了各种解决方法，以确定给定的字符串是否是有效的 pangram。
 
-我们还讨论了 pangram 的另一种风格，称为 perfect pangram &如何以编程方式识别它。
+我们还讨论了 pangram 的另一种风格，称为 perfect pangram，以及如何以编程方式识别它。
 
-GitHub 上的[提供了代码示例。](https://web.archive.org/web/20221208143832/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-string-algorithms)
+GitHub 上的提供了代码示例。

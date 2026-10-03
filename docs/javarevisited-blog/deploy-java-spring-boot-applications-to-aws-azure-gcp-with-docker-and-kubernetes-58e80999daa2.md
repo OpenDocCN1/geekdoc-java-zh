@@ -1,10 +1,11 @@
+
 # 使用 Docker 和 Kubernetes 将 Java Spring Boot 应用程序部署到 AWS、Azure 和 GCP
 
 > 原文：<https://medium.com/javarevisited/deploy-java-spring-boot-applications-to-aws-azure-gcp-with-docker-and-kubernetes-58e80999daa2?source=collection_archive---------0----------------------->
 
 在本文中，我们将注意力集中在云上。我们为什么需要云？您如何学习云？
 
-# 你会学到的
+## 你会学到的
 
 *   什么是云？
 *   我们为什么需要云？
@@ -14,13 +15,13 @@
 *   什么是 Kubernetes？
 *   AWS、Azure 和 GCP 提供了哪些 PAAS 产品？
 
-# 介绍
+## 介绍
 
 你想了解云。但是你不知道从哪里开始。
 
 学习云的最佳选择之一是将您开发的一些应用程序部署到不同的云提供商。
 
-当我们谈到 Java Spring Boot 世界时，我们通常会谈到
+当我们谈到 Java Spring Boot 世界时，我们通常会谈到：
 
 *   网络应用
 *   REST APIs
@@ -33,19 +34,19 @@
 
 ![](img/7e1c2dbbb49d612a6b8d3b3b2e79b8c2.png)
 
-# 云简介
+## 云简介
 
 让我们从理解我们为什么需要云开始。
 
-# 我们为什么需要云？
+### 我们为什么需要云？
 
-这三个原因是
+这三个原因是：
 
 *   按需资源供应
 *   避免“无差别举重”
 *   改进的延迟和可用性
 
-## 按需资源供应
+#### 按需资源供应
 
 如果你是亚马逊或者一家初创公司，你的应用程序负载在一年中变化很大。节假日等旺季的负载可能是正常负载的 2-10 倍。如果您在数据中心中为峰值负载调配基础架构，那么在一年的剩余时间里它会做什么？闲坐着！
 
@@ -53,7 +54,7 @@
 
 您可以按需供应和释放资源。
 
-## 避免“无差别举重”
+#### 避免“无差别举重”
 
 一个企业的重点是什么？
 
@@ -63,7 +64,7 @@
 
 为什么不把“无差别的重担”留给云提供商呢？
 
-## 改进的延迟和可用性
+#### 改进的延迟和可用性
 
 每个云提供商在多个大洲和多个国家都有多个数据中心。
 
@@ -73,20 +74,20 @@
 
 云提供商让您可以轻松地在全球范围内部署多个应用。
 
-# IAAS 对 PAAS
+### IAAS 对 PAAS
 
 现在，你想去云端。你要做一个重要的选择。
 
 您是希望以使用数据中心时的相同方式部署应用程序，还是希望使用云提供商提供的设施？
 
-例如，如果您正在使用 [AWS](https://www.java67.com/2018/05/top-5-amazon-web-services-or-aws-courses-to-learn-online.html) (Amazon Web Services)，您有两种选择
+例如，如果您正在使用 [AWS](https://www.java67.com/2018/05/top-5-amazon-web-services-or-aws-courses-to-learn-online.html) (Amazon Web Services)，您有两种选择：
 
 *   方法 1 —您可以创建虚拟服务器(EC2 —弹性计算云)并将您的应用程序部署到虚拟服务器上。
 *   方法 2——您可以使用 AWS 提供的服务——例如，AWS Elastic Beanstalk——来部署您的应用程序，而不必担心虚拟服务器。
 
 方法 1 通常被称为 IAAS，即基础设施即服务。您将从云提供商那里获得基础架构，并以通常的方式部署应用程序。云提供商只负责提供虚拟服务器。您负责安装操作系统、操作系统升级、安装运行时、运行时升级以及随之而来的一切。
 
-不同的云提供不同的 IAAS 服务。在不同的云中，虚拟服务器的名称也不同
+不同的云提供不同的 IAAS 服务。在不同的云中，虚拟服务器的名称也不同：
 
 *   AWS 称之为 EC2(弹性计算云)
 *   Azure 虚拟机
@@ -105,13 +106,13 @@ PAAS 的例子是由不同的云提供商提供的托管服务。提供的数据
 *   有效性
 *   备份
 
-如果您想了解更多关于 AWS 的信息，您还可以查看以下免费课程:
+如果您想了解更多关于 AWS 的信息，您还可以查看以下免费课程：
 
-<https://hackernoon.com/top-5-amazon-web-services-or-aws-courses-to-learn-online-free-and-best-of-lot-d94e192054b7>  
+<https://hackernoon.com/top-5-amazon-web-services-or-aws-courses-to-learn-online-free-and-best-of-lot-d94e192054b7>
 
-# 平台即服务的深度
+### 平台即服务的深度
 
-如果我们深入了解 PAAS，就会发现不同的云提供商提供了许多应用 PAAS 服务
+如果我们深入了解 PAAS，就会发现不同的云提供商提供了许多应用 PAAS 服务：
 
 *   AWS 弹性豆茎
 *   谷歌应用引擎
@@ -119,7 +120,7 @@ PAAS 的例子是由不同的云提供商提供的托管服务。提供的数据
 
 这些服务使得将 Java 应用、[容器](https://javarevisited.blogspot.com/2018/02/10-free-docker-container-courses-for-Java-Developers.html)和各种各样的应用部署到云变得容易。
 
-这些 PAAS 产品支持
+这些 PAAS 产品支持：
 
 *   多重环境
 *   多平台和语言支持
@@ -129,16 +130,16 @@ PAAS 的例子是由不同的云提供商提供的托管服务。提供的数据
 *   负载平衡
 *   CI/CD (AWS 代码管道、AWS 代码构建、Azure DevOps、Google 云构建)
 
-## 特定于云的容器编排解决方案
+#### 特定于云的容器编排解决方案
 
 过去几年的重要发展之一是容器作为平台中立、语言中立的部署选项的演变。
 
-云提供商围绕容器和容器编排提供 PAAS 选项。最重要的产品有
+云提供商围绕容器和容器编排提供 PAAS 选项。最重要的产品有：
 
 *   AWS Fargate 或 ECS(弹性集装箱服务)
 *   Azure 容器实例——Azure 实际上正在向 AKS (Azure Kubernetes 服务)发展
 
-## 基于云中性 Kubernetes 的容器编排解决方案
+#### 基于云中性 Kubernetes 的容器编排解决方案
 
 过去几年的另一个重要发展是 Kubernetes 作为云中性容器编排服务的发展。
 
@@ -148,15 +149,15 @@ PAAS 的例子是由不同的云提供商提供的托管服务。提供的数据
 *   Azure Kubernetes 服务
 *   EKS(为 Kubernetes 提供 AWS 集装箱服务)
 
-如果您想了解更多关于云计算的知识，您也可以查看以下资源:
+如果您想了解更多关于云计算的知识，您也可以查看以下资源：
 
-<https://javarevisited.blogspot.com/2019/07/top-5-online-courses-to-learn-cloud-computing-aws.html>  
+<https://javarevisited.blogspot.com/2019/07/top-5-online-courses-to-learn-cloud-computing-aws.html>
 
-# 从 Spring Boot 到 AWS、Azure、GCP、Docker 和 Kubernetes
+## 从 Spring Boot 到 AWS、Azure、GCP、Docker 和 Kubernetes
 
 这里有一些令人惊叹的课程，通过将各种各样的 [Spring Boot](https://www.java67.com/2018/06/5-best-courses-to-learn-spring-boot-in.html) 应用程序部署到云上，帮助你学习云、容器和编排。
 
-# 面向 Java 开发人员的 docker——Spring Boot 微服务
+### 面向 Java 开发人员的 docker——Spring Boot 微服务
 
 Docker 是容器化 Java Spring Boot 应用程序的首选工具。Learning Docker 将帮助您简化部署流程，并轻松体验新的框架和工具。
 
@@ -166,7 +167,7 @@ https://rebrand.ly/MISC-DOCKER
 
 ![](img/1904573493aa7413081686b58895df48.png)
 
-在本实践课程中，您将容器化(创建 docker 映像和容器)各种 Spring Boot 应用程序:
+在本实践课程中，您将容器化(创建 docker 映像和容器)各种 Spring Boot 应用程序：
 
 *   REST API—Hello World 和 Todo — Jar
 *   Todo Web 应用程序战争
@@ -178,13 +179,13 @@ https://rebrand.ly/MISC-DOCKER
 
 您将学习 Docker 架构和 Docker 的基础——注册表、存储库、标签、图像、容器和卷，还将学习重要的 Docker 命令。
 
-您将学习使用 Dockerfile 来自动构建您的 Docker 映像，并使用各种 maven 插件(Dockerfile Spotify 插件、JIB 插件和 Fabric8 Docker Maven 插件)来创建 Docker 映像。您还将学习通过创建 Docker 映像来遵循最佳实践——改进 Docker 映像的缓存并创建多阶段 Docker 构建。
+您将学习使用 `Dockerfile` 来自动构建您的 Docker 映像，并使用各种 maven 插件(`Dockerfile Spotify` 插件、`JIB` 插件和 `Fabric8 Docker Maven` 插件)来创建 Docker 映像。您还将学习通过创建 Docker 映像来遵循最佳实践——改进 Docker 映像的缓存并创建多阶段 Docker 构建。
 
-如果你需要更多的选择，你可以看看这篇文章:
+如果你需要更多的选择，你可以看看这篇文章：
 
-<https://javarevisited.blogspot.com/2019/05/top-5-courses-to-learn-docker-and-kubernetes-for-devops.html>  
+<https://javarevisited.blogspot.com/2019/05/top-5-courses-to-learn-docker-and-kubernetes-for-devops.html>
 
-# 了解 AWS——将 Java Spring Boot 部署到 AWS 弹性豆茎
+### 了解 AWS——将 Java Spring Boot 部署到 AWS 弹性豆茎
 
 AWS 是最受欢迎的云，AWS Elastic Beanstalk 可以轻松地将各种应用程序部署到 AWS。
 
@@ -194,7 +195,7 @@ AWS 是最受欢迎的云，AWS Elastic Beanstalk 可以轻松地将各种应用
 
 ![](img/a86156af6e3a548e8384a58859e26553.png)
 
-在本课程中，您将学习如何将各种 Spring Boot 应用程序部署到云中:
+在本课程中，您将学习如何将各种 Spring Boot 应用程序部署到云中：
 
 *   REST API—Hello World 和 Todo — Jar
 *   Todo Web 应用程序战争
@@ -208,7 +209,7 @@ AWS 是最受欢迎的云，AWS Elastic Beanstalk 可以轻松地将各种应用
 
 你将使用许多 AWS 服务——EC2、S3、AWS CodePipeLine、AWS CodeBuild、SQS、IAM、CloudWatch。
 
-# Master AWS Fargate & ECS 与 Java Spring Boot 微服务
+### Master AWS Fargate & ECS 与 Java Spring Boot 微服务
 
 我们之前了解了 docker。AWS 弹性容器服务和 AWS Fargate 是 AWS 提供的容器编排服务。
 
@@ -226,7 +227,7 @@ https://rebrand.ly/MISC-FARGATE
 
 您将学习为您的 Java Spring Boot 微服务项目构建容器映像。
 
-您将为您的微服务实现以下特性
+您将为您的微服务实现以下特性：
 
 *   通过 AWS 参数存储进行集中式配置管理
 *   AWS X 射线分布式跟踪
@@ -241,11 +242,11 @@ https://rebrand.ly/MISC-FARGATE
 
 您将使用许多 AWS 服务——ECS——弹性容器服务、AWS Fargate、EC2——弹性计算云、S3、AWS CodePipeLine、AWS CodeBuild、IAM、CloudWatch、ELB、Target Groups、X-Ray、AWS Parameter Store、AWS App Mesh 和 Route 53。
 
-此外，如果你想有更多的选择来学习 Spring Boot 的微服务，这里有更多的资源可以查看:
+此外，如果你想有更多的选择来学习 Spring Boot 的微服务，这里有更多的资源可以查看：
 
-<https://dev.to/javinpaul/top-10-courses-to-learn-spring-boot-and-microservices-for-java-programmers-3hjg>  
+<https://dev.to/javinpaul/top-10-courses-to-learn-spring-boot-and-microservices-for-java-programmers-3hjg>
 
-# 借助 Spring Boot 微服务的 Master Pivotal 云代工厂
+### 借助 Spring Boot 微服务的 Master Pivotal 云代工厂
 
 Pivotal Cloud Foundry (PCF)为部署 Spring Boot 应用程序提供了一个出色的云原生平台。
 
@@ -263,7 +264,7 @@ Spring Boot 微服务公司的 Master Pivotal Cloud Foundry 是一门很好的�
 
 作为 PCF 和云的入门课程，本课程将是完美的第一步。
 
-# 掌握 Azure Web 应用程序—将 Java Spring Boot 应用程序带到 Azure
+### 掌握 Azure Web 应用程序—将 Java Spring Boot 应用程序带到 Azure
 
 微软 Azure 是当今第二受欢迎的云平台。Azure Web App 是 Azure 的 PAAS 产品，可以帮助你轻松地将应用程序部署到云中。
 
@@ -273,7 +274,7 @@ https://rebrand.ly/MISC-AZURE
 
 ![](img/9bc228f4bd8fc777caf0a0a56ebe891f.png)
 
-在本课程中，您将把各种 Spring Boot 应用程序部署到云中:
+在本课程中，您将把各种 Spring Boot 应用程序部署到云中：
 
 *   REST API—Hello World 和 Todo — Jar
 *   Todo Web 应用程序战争
@@ -287,7 +288,7 @@ https://rebrand.ly/MISC-AZURE
 
 您将使用许多 Azure 服务——Azure 应用服务、Azure Web 应用、Azure DevOps、用于 MySQL 服务的 Azure 数据库、资源组、Azure 应用服务计划和 Azure 订阅。
 
-# kubernetes Google Cloud Java 开发人员速成班
+### kubernetes Google Cloud Java 开发人员速成班
 
 Kubernetes 可以轻松管理包含 1000 个容器、运行 1000 个微服务的集群。谷歌 Kubernetes 引擎(GKE)使得创建 Kubernetes 集群变得非常容易。
 
@@ -299,11 +300,13 @@ Kubernetes 针对 Java 开发人员的 Google Cloud 速成课程是一门非常�
 
 ![](img/fcdfc2e34fab202d57e170e6efa5d688.png)
 
-在本实践课程中，您将使用 Docker 和 Kubernetes 在使用 Google Kubernetes 引擎的 Google 云上部署各种 Spring Boot 应用程序:
+在本实践课程中，您将使用 Docker 和 Kubernetes 在使用 Google Kubernetes 引擎的 Google 云上部署各种 Spring Boot 应用程序：
 
 *   REST API—Hello World
 *   Todo Web 应用程序战争
 *   Spring Boot 微服务公司
+
+
 
 您将为部署在 Kubernetes 集群中的 Spring Boot 微服务实现服务发现、集中配置、分布式跟踪和负载平衡。
 
@@ -313,13 +316,13 @@ Kubernetes 针对 Java 开发人员的 Google Cloud 速成课程是一门非常�
 
 # 其他 Java 和 Web 开发资源
 
-1.  [2020 年 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
-2.  [面向 Java 开发者的 5 门免费 Spring 框架课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
-3.  [2020 年学习 Spring Boot 的五大课程](https://javarevisited.blogspot.com/2018/05/top-5-courses-to-learn-spring-boot-in.html)
-4.  [学习大数据和 Apache Spark 的 5 门课程](http://javarevisited.blogspot.com/2017/12/top-5-courses-to-learn-big-data-and.html)
-5.  [学习 Java 设计模式的前 5 门课程](https://javarevisited.blogspot.com/2018/02/top-5-java-design-pattern-courses-for-developers.html)
-6.  [5 门免费的数据结构与算法课程](https://javarevisited.blogspot.com/2018/01/top-5-free-data-structure-and-algorithm-courses-java--c-programmers.html)
-7.  [学习 React JS 框架的 5 门免费课程](http://www.java67.com/2018/02/5-free-react-courses-for-web-developers.html)
-8.  [2020 年学习网页开发的五大课程](https://javarevisited.blogspot.com/2018/02/top-5-online-courses-to-learn-web-development.html)
+1. [2020 年 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
+2. [面向 Java 开发者的 5 门免费 Spring 框架课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
+3. [2020 年学习 Spring Boot 的五大课程](https://javarevisited.blogspot.com/2018/05/top-5-courses-to-learn-spring-boot-in.html)
+4. [学习大数据和 Apache Spark 的 5 门课程](http://javarevisited.blogspot.com/2017/12/top-5-courses-to-learn-big-data-and.html)
+5. [学习 Java 设计模式的前 5 门课程](https://javarevisited.blogspot.com/2018/02/top-5-java-design-pattern-courses-for-developers.html)
+6. [5 门免费的数据结构与算法课程](https://javarevisited.blogspot.com/2018/01/top-5-free-data-structure-and-algorithm-courses-java--c-programmers.html)
+7. [学习 React JS 框架的 5 门免费课程](http://www.java67.com/2018/02/5-free-react-courses-for-web-developers.html)
+8. [2020 年学习网页开发的五大课程](https://javarevisited.blogspot.com/2018/02/top-5-online-courses-to-learn-web-development.html)
 
-<https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html#123> 
+<https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html#123>

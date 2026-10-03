@@ -1,4 +1,5 @@
-# Java:编码风格还是糟糕的实践？
+
+# Java：编码风格还是糟糕的实践？
 
 > 原文：<https://medium.com/javarevisited/coding-style-or-bad-practice-d75095bdb39b?source=collection_archive---------1----------------------->
 

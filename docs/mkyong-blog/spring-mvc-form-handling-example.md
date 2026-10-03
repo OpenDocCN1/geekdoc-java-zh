@@ -1,41 +1,44 @@
+
 # Spring MVC 表单处理示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring-mvc/spring-mvc-form-handling-example/>
 
 ![spring-mvc-form-handling-demo](img/a67762df31785350afe2948e0821f4bb.png)
 
-在本教程中，我们将向您展示一个 Spring MVC 表单处理项目来完成以下工作:
+在本教程中，我们将向您展示一个 Spring MVC 表单处理项目来完成以下工作：
 
-1.  表单值绑定 JSP 和模型。
-2.  表单验证并显示错误消息。
-3.  形成 POST/REDIRECT/GET 模式，并将消息添加到 flash 属性。
-4.  CRUD 操作，用一个 HTML 表单添加、获取、更新和删除。
+1. 表单值绑定 JSP 和模型。
+2. 表单验证并显示错误消息。
+3. 形成 POST/REDIRECT/GET 模式，并将消息添加到 flash 属性。
+4. CRUD 操作，用一个 HTML 表单添加、获取、更新和删除。
 
-**使用的技术:**
+**使用的技术：**
 
-1.  弹簧 4.1.6 释放
-2.  maven3
-3.  自举 3
-4.  HSQLDB 驱动程序 2.3.2
-5.  回溯 1.1.3
-6.  JDK 1.7
-7.  JSTL 1.2
-8.  Eclipse IDE
+1. 弹簧 4.1.6 释放
+2. maven3
+3. 自举 3
+4. HSQLDB 驱动程序 2.3.2
+5. 回溯 1.1.3
+6. JDK 1.7
+7. JSTL 1.2
+8. Eclipse IDE
 
 一个简单的用户管理项目，你可以通过 HTML 表单列出、创建、更新和删除一个用户。您还将看到如何执行表单验证并有条件地显示错误消息。该项目使用 Bootstrap 3 进行设计，数据存储在 HSQL 嵌入式数据库中。
 
-**URI 结构:**
+**URI 结构：**
 
-| 上呼吸道感染 | 方法 | 行动 |
-| /用户 | 得到 | 列表，显示所有用户 |
-| /用户 | 邮政 | 保存或更新用户 |
-| /users/{id} | 得到 | 显示用户{id} |
-| /用户/添加 | 得到 | 显示添加用户表单 |
-| /users/{id}/update | 得到 | 显示{id}的更新用户表单 |
-| /users/{id}/delete | 邮政 | 删除用户{id} |
+| URI | 方法 | 行动 |
+| --- | --- | --- |
+| `/users` | GET | 列表，显示所有用户 |
+| `/users` | POST | 保存或更新用户 |
+| `/users/{id}` | GET | 显示用户`{id}` |
+| `/users/add` | GET | 显示添加用户表单 |
+| `/users/{id}/update` | GET | 显示`{id}`的更新用户表单 |
+| `/users/{id}/delete` | POST | 删除用户`{id}` |
 
-**Note**
-In the old days, before Spring 3.0, we use `[SimpleFormController](http://web.archive.org/web/20190303052227/http://docs.spring.io/spring/docs/3.0.x/api/org/springframework/web/portlet/mvc/SimpleFormController.html)` to do the form handling. As Spring 3.0, this class is deprecated in favor of Spring annotated @Controller.
+**注意**
+
+在过去，Spring 3.0 之前，我们使用`SimpleFormController`来做表单处理。从 Spring 3.0 开始，这个类已被弃用，取而代之的是 Spring 注解的`@Controller`。
 
 ## Spring MVC 表单绑定
 
@@ -44,188 +47,192 @@ In the old days, before Spring 3.0, we use `[SimpleFormController](http://web.ar
 1.1 在 controller 中，将对象添加到模型属性中。
 
 ```java
- @RequestMapping(value = "/users/add", method = RequestMethod.GET)
-	public String showAddUserForm(Model model) {
+@RequestMapping(value = "/users/add", method = RequestMethod.GET)
+public String showAddUserForm(Model model) {
 
-		User user = new User();
-		model.addAttribute("userForm", user);
-		//...
-	} 
+    User user = new User();
+    model.addAttribute("userForm", user);
+    //...
+}
 ```
 
 1.2 在 HTML 表单中，你使用`spring:form`标签，通过`modelAttribute`绑定控制器对象。
 
 ```java
- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
-	<form:form method="post" modelAttribute="userForm" action="${userActionUrl}">
-		<form:input path="name" type="text" /> <!-- bind to user.name-->
-		<form:errors path="name" />
-	</form:form> 
+<form:form method="post" modelAttribute="userForm" action="${userActionUrl}">
+    <form:input path="name" type="text" /> <!-- bind to user.name-->
+    <form:errors path="name" />
+</form:form>
 ```
 
 1.3 当 HTML 表单为“POST”时，通过`@ModelAttribute`获取值。
 
 ```java
- @RequestMapping(value = "/users", method = RequestMethod.POST)
+@RequestMapping(value = "/users", method = RequestMethod.POST)
 public String saveOrUpdateUser(@ModelAttribute("userForm") User user,
-		BindingResult result, Model model) {
-	//...
-} 
+        BindingResult result, Model model) {
+    //...
+}
 ```
 
 完成了。让我们开始教程。
 
- ## 1.项目目录
+## 1. 项目目录
 
 这是最终的项目目录结构。标准的 Maven 项目。
 
-[![spring-mvc-form-handling-directory](img/85a99fadbd10f80849e9a71532a69a09.png)](http://web.archive.org/web/20190303052227/http://www.mkyong.com/wp-content/uploads/2010/08/spring-mvc-form-handling-directory.png) ## 2.项目相关性
+[![spring-mvc-form-handling-directory](img/85a99fadbd10f80849e9a71532a69a09.png)](http://web.archive.org/web/20190303052227/http://www.mkyong.com/wp-content/uploads/2010/08/spring-mvc-form-handling-directory.png)
+
+## 2. 项目相关性
 
 开发一个 Spring MVC 项目，需要`spring-webmvc`。
 
-pom.xml
+`pom.xml`
 
-```java
- <project  
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-	http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.mkyong.form</groupId>
-	<artifactId>spring-mvc-form</artifactId>
-	<packaging>war</packaging>
-	<version>1.0-SNAPSHOT</version>
-	<name>SpringMVC + Form Handling Example</name>
+```xml
+<project  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+    http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.mkyong.form</groupId>
+    <artifactId>spring-mvc-form</artifactId>
+    <packaging>war</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>SpringMVC + Form Handling Example</name>
 
-	<properties>
-		<jdk.version>1.7</jdk.version>
-		<spring.version>4.1.6.RELEASE</spring.version>
-		<hsqldb.version>2.3.2</hsqldb.version>
-		<logback.version>1.1.3</logback.version>
-		<jcl.slf4j.version>1.7.12</jcl.slf4j.version>
-		<jstl.version>1.2</jstl.version>
-		<servletapi.version>3.1.0</servletapi.version>
-	</properties>
+    <properties>
+        <jdk.version>1.7</jdk.version>
+        <spring.version>4.1.6.RELEASE</spring.version>
+        <hsqldb.version>2.3.2</hsqldb.version>
+        <logback.version>1.1.3</logback.version>
+        <jcl.slf4j.version>1.7.12</jcl.slf4j.version>
+        <jstl.version>1.2</jstl.version>
+        <servletapi.version>3.1.0</servletapi.version>
+    </properties>
 
-	<dependencies>
+    <dependencies>
 
-		<!-- Spring Core -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>${spring.version}</version>
-			<exclusions>
-			   <exclusion>
-				<groupId>commons-logging</groupId>
-				<artifactId>commons-logging</artifactId>
-			    </exclusion>
-			</exclusions>
-		</dependency>
+        <!-- Spring Core -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 
-		<!-- Spring Web -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
+        <!-- Spring Web -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
 
-		<!-- Spring JDBC -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
+        <!-- Spring JDBC -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
 
-		<!-- HyperSQL DB -->
-		<dependency>
-			<groupId>org.hsqldb</groupId>
-			<artifactId>hsqldb</artifactId>
-			<version>${hsqldb.version}</version>
-		</dependency>
+        <!-- HyperSQL DB -->
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>${hsqldb.version}</version>
+        </dependency>
 
-		<!-- logging -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jcl-over-slf4j</artifactId>
-			<version>${jcl.slf4j.version}</version>
-		</dependency>
+        <!-- logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${jcl.slf4j.version}</version>
+        </dependency>
 
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>${logback.version}</version>
-		</dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
 
-		<!-- jstl -->
-		<dependency>
-			<groupId>jstl</groupId>
-			<artifactId>jstl</artifactId>
-			<version>${jstl.version}</version>
-		</dependency>
+        <!-- jstl -->
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl.version}</version>
+        </dependency>
 
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>${servletapi.version}</version>
-			<scope>provided</scope>
-		</dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servletapi.version}</version>
+            <scope>provided</scope>
+        </dependency>
 
-	</dependencies>
+    </dependencies>
 
-	<build>
-		<plugins>
+    <build>
+        <plugins>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
-				<configuration>
-					<source>${jdk.version}</source>
-					<target>${jdk.version}</target>
-				</configuration>
-			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                </configuration>
+            </plugin>
 
-			<!-- embedded Jetty server, for testing -->
-			<plugin>
-				<groupId>org.eclipse.jetty</groupId>
-				<artifactId>jetty-maven-plugin</artifactId>
-				<version>9.2.11.v20150529</version>
-				<configuration>
-				  <scanIntervalSeconds>10</scanIntervalSeconds>
-				  <webApp>
-					<contextPath>/spring-mvc-form</contextPath>
-				  </webApp>
-				</configuration>
-			</plugin>
+            <!-- embedded Jetty server, for testing -->
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.2.11.v20150529</version>
+                <configuration>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <webApp>
+                        <contextPath>/spring-mvc-form</contextPath>
+                    </webApp>
+                </configuration>
+            </plugin>
 
-			<!-- configure Eclipse workspace -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.9</version>
-				<configuration>
-					<downloadSources>true</downloadSources>
-					<downloadJavadocs>true</downloadJavadocs>
-					<wtpversion>2.0</wtpversion>
-					<wtpContextName>spring-mvc-form</wtpContextName>
-				</configuration>
-			</plugin>
+            <!-- configure Eclipse workspace -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <version>2.9</version>
+                <configuration>
+                    <downloadSources>true</downloadSources>
+                    <downloadJavadocs>true</downloadJavadocs>
+                    <wtpversion>2.0</wtpversion>
+                    <wtpContextName>spring-mvc-form</wtpContextName>
+                </configuration>
+            </plugin>
 
-		</plugins>
-	</build>
-</project> 
+        </plugins>
+    </build>
+</project>
 ```
 
-## 3.控制器
+## 3. 控制器
 
 Spring `@Controller`类向你展示如何通过`@ModelAttribute`绑定表单值，添加表单验证器，将消息添加到 flash 属性中，填充下拉列表和复选框的值等等。阅读评论，不言自明。
 
-UserController.java
+`UserController.java`
+
+
 
 ```java
- package com.mkyong.form.web;
+package com.mkyong.form.web;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -436,17 +443,23 @@ public class UserController {
 
 	}
 
-} 
+}
 ```
 
-## 4.表单验证器
+## 4. 表单验证器
 
-4.1 Spring 验证器示例。
+### 4.1 Spring 验证器示例
 
-UserFormValidator.java
+`UserFormValidator.java`
+
+
+
+## 1. 用户表单验证器
+
+以下是一个 Spring MVC 表单验证器的示例，使用 `UserFormValidator` 实现 `Validator` 接口。
 
 ```java
- package com.mkyong.form.validator;
+package com.mkyong.form.validator;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -512,13 +525,15 @@ public class UserFormValidator implements Validator {
 
 	}
 
-} 
+}
 ```
 
-validation.properties
+## 2. 验证消息配置
+
+`validation.properties` 文件定义了验证失败时显示的错误消息。
 
 ```java
- NotEmpty.userForm.name = Name is required!
+NotEmpty.userForm.name = Name is required!
 NotEmpty.userForm.email = Email is required!
 NotEmpty.userForm.address = Address is required!
 NotEmpty.userForm.password = Password is required!
@@ -529,13 +544,15 @@ NotEmpty.userForm.country = Country is required!
 Valid.userForm.framework = Please select at least two frameworks!
 Valid.userForm.skill = Please select at least three skills!
 Diff.userform.confirmPassword = Passwords do not match, please retype!
-Pattern.userForm.email = Invalid Email format! 
+Pattern.userForm.email = Invalid Email format!
 ```
 
-要运行 Spring 验证器，通过`@InitBinder`添加验证器，并用`@Validated`注释模型
+## 3. 运行验证器
+
+要运行 Spring 验证器，通过`@InitBinder`添加验证器，并用`@Validated`注释模型。
 
 ```java
- @InitBinder
+@InitBinder
 protected void initBinder(WebDataBinder binder) {
 	binder.setValidator(userFormValidator);
 }
@@ -546,29 +563,30 @@ public String saveOrUpdateUser(... @Validated User user,
 
 	//...
 
-} 
+}
 ```
 
 或者手动运行。
 
 ```java
- @RequestMapping(value = "/users", method = RequestMethod.POST)
+@RequestMapping(value = "/users", method = RequestMethod.POST)
 public String saveOrUpdateUser(... User user,
 		...) {
 	userFormValidator.validate(user, result);	
 	//...
-} 
+}
 ```
 
-## 5.HTML 表单
+## 4. HTML 表单
 
 所有的 HTML 表单都是 css 样式，使用 Bootstrap 框架，并使用 Spring form 标签进行显示和表单绑定。
-5.1 用户列表。
 
-list.jsp
+### 4.1 用户列表
+
+`list.jsp` 文件展示了用户列表页面。
 
 ```java
- <%@ page session="false"%>
+<%@ page session="false"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -640,13 +658,13 @@ list.jsp
 	<jsp:include page="../fragments/footer.jsp" />
 
 </body>
-</html> 
+</html>
 ```
 
-show.jsp
+`show.jsp` 文件展示了用户详细信息页面。
 
 ```java
- <%@ page session="false"%>
+<%@ page session="false"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
@@ -727,13 +745,15 @@ show.jsp
 <jsp:include page="../fragments/footer.jsp" />
 
 </body>
-</html> 
+</html>
 ```
 
-userform.jsp
+`userform.jsp` 文件用于用户表单的展示与绑定。
+
+
 
 ```java
- <%@ page session="false"%>
+<%@ page session="false"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
@@ -918,17 +938,17 @@ userform.jsp
 <jsp:include page="../fragments/footer.jsp" />
 
 </body>
-</html> 
+</html>
 ```
 
-## 6.数据库的东西
+## 6. 数据库的东西
 
-6.1 创建一个表，并插入一些测试数据。
+### 6.1 创建一个表，并插入一些测试数据。
 
-create-db.sql
+`create-db.sql`
 
 ```java
- CREATE TABLE users (
+CREATE TABLE users (
   id INTEGER GENERATED BY DEFAULT AS IDENTITY(START WITH 100, INCREMENT BY 1) PRIMARY KEY,
   name VARCHAR(30),
   email  VARCHAR(50),
@@ -940,63 +960,29 @@ create-db.sql
   NUMBER INTEGER,
   COUNTRY VARCHAR(10),
   SKILL VARCHAR(500)
-); 
+);
 ```
 
-insert-data.sql
+`insert-data.sql`
 
 ```java
- INSERT INTO users (name, email, framework) VALUES ('mkyong', 'mkyong@gmail.com', 'Spring MVC, GWT');
+INSERT INTO users (name, email, framework) VALUES ('mkyong', 'mkyong@gmail.com', 'Spring MVC, GWT');
 INSERT INTO users (name, email) VALUES ('alex', 'alex@yahoo.com', 'Spring MVC, GWT');
-INSERT INTO users (name, email) VALUES ('joel', 'joel@gmail.com', 'Spring MVC, GWT'); 
+INSERT INTO users (name, email) VALUES ('joel', 'joel@gmail.com', 'Spring MVC, GWT');
 ```
 
-6.2 启动一个 HSQLDB 嵌入式数据库，创建一个数据源和 jdbcTemplate。
+### 6.2 启动一个 HSQLDB 嵌入式数据库，创建一个数据源和 `jdbcTemplate`。
 
-SpringDBConfig.java
+`SpringDBConfig.java`
 
-```java
- package com.mkyong.form.config;
 
-import javax.sql.DataSource;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
-@Configuration
-public class SpringDBConfig {
+## 6.3 用户对象
 
-	@Autowired
-	DataSource dataSource;
-
-	@Bean
-	public NamedParameterJdbcTemplate getNamedParameterJdbcTemplate() {
-		return new NamedParameterJdbcTemplate(dataSource);
-	}
-
-	@Bean
-	public DataSource getDataSource() {
-		EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
-		EmbeddedDatabase db = builder.setName("testdb")
-                        .setType(EmbeddedDatabaseType.HSQL)
-			.addScript("db/sql/create-db.sql")
-                        .addScript("db/sql/insert-data.sql").build();
-		return db;
-	}
-
-} 
-```
-
-6.3 用户对象。
-
-user.java
+`user.java`
 
 ```java
- package com.mkyong.form.model;
+package com.mkyong.form.model;
 
 import java.util.List;
 
@@ -1044,15 +1030,15 @@ public class User {
 
 	//...
 
-} 
+}
 ```
 
-## 7.服务和一体行动
+## 7. 服务和一体行动
 
-UserService.java
+`UserService.java`
 
 ```java
- package com.mkyong.form.service;
+package com.mkyong.form.service;
 
 import java.util.List;
 import com.mkyong.form.model.User;
@@ -1067,13 +1053,13 @@ public interface UserService {
 
 	void delete(int id);
 
-} 
+}
 ```
 
-UserServiceImpl.java
+`UserServiceImpl.java`
 
 ```java
- package com.mkyong.form.service;
+package com.mkyong.form.service;
 
 import java.util.List;
 
@@ -1119,13 +1105,13 @@ public class UserServiceImpl implements UserService {
 		userDao.delete(id);
 	}
 
-} 
+}
 ```
 
-UserDao.java
+`UserDao.java`
 
 ```java
- package com.mkyong.form.dao;
+package com.mkyong.form.dao;
 
 import java.util.List;
 
@@ -1143,13 +1129,15 @@ public interface UserDao {
 
 	void delete(Integer id);
 
-} 
+}
 ```
 
-UserDaoImpl.java
+`UserDaoImpl.java`
+
+
 
 ```java
- package com.mkyong.form.dao;
+package com.mkyong.form.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -1305,17 +1293,17 @@ public class UserDaoImpl implements UserDao {
 
 	}
 
-} 
+}
 ```
 
-## 8.弹簧配置
+## 8. 弹簧配置
 
 混合 Spring XML 和 JavaConfig。
 
-SpringWebConfig.java
+`SpringWebConfig.java`
 
 ```java
- package com.mkyong.form.config;
+package com.mkyong.form.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -1354,13 +1342,13 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter {
 		return rb;
 	}
 
-} 
+}
 ```
 
-spring-web-servlet.xml
+`spring-web-servlet.xml`
 
 ```java
- <beans 
+<beans 
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
@@ -1375,56 +1363,58 @@ spring-web-servlet.xml
     <!-- Scan the JavaConfig -->
 	<context:component-scan base-package="com.mkyong.form.config" />
 
-</beans> 
+</beans>
 ```
 
-web.xml
+`web.xml`
+
+
 
 ```java
- <web-app  
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
-	      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-	version="3.0">
+<web-app
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+        http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    version="3.0">
 
-	<display-name>Spring3 MVC Application</display-name>
+    <display-name>Spring3 MVC Application</display-name>
 
-	<servlet>
-		<servlet-name>spring-web</servlet-name>
-		<servlet-class>
-			org.springframework.web.servlet.DispatcherServlet
-		</servlet-class>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
+    <servlet>
+        <servlet-name>spring-web</servlet-name>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
 
-	<servlet-mapping>
-		<servlet-name>spring-web</servlet-name>
-		<url-pattern>/</url-pattern>
-	</servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>spring-web</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
 
-	<error-page>
-		<error-code>500</error-code>
-		<location>/WEB-INF/views/jsp/error.jsp</location>
-	</error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/views/jsp/error.jsp</location>
+    </error-page>
 
-	<error-page>
-		<error-code>404</error-code>
-		<location>/WEB-INF/views/jsp/error.jsp</location>
-	</error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/views/jsp/error.jsp</location>
+    </error-page>
 
-	<error-page>
-		<location>/WEB-INF/views/jsp/error.jsp</location>
-	</error-page>
+    <error-page>
+        <location>/WEB-INF/views/jsp/error.jsp</location>
+    </error-page>
 
-</web-app> 
+</web-app>
 ```
 
-## 9.演示
+## 9. 演示
 
 下载项目并键入`mvn jetty:run`
 
 ```java
- $ mvn jetty:run
+$ mvn jetty:run
 [INFO] Scanning for projects...
 [INFO]
 [INFO] ------------------------------------------------------------------------
@@ -1432,44 +1422,45 @@ web.xml
 [INFO] ------------------------------------------------------------------------
 //...
 [INFO] Started Jetty Server
-[INFO] Starting scanner at interval of 10 seconds. 
+[INFO] Starting scanner at interval of 10 seconds.
 ```
 
-**9.1 列出所有用户。***http://localhost:8080/spring-MVC-form/users*
+### 9.1 列出所有用户
+
+`http://localhost:8080/spring-MVC-form/users`
 
 [![spring-mvc-form-handling-demo1](img/a40402d5846339d1134575f4b05996d0.png)](http://web.archive.org/web/20190303052227/http://www.mkyong.com/wp-content/uploads/2010/08/spring-mvc-form-handling-demo1.png)
 
-**9.2 添加用户。***http://localhost:8080/spring-MVC-form/users/add*
+### 9.2 添加用户
+
+`http://localhost:8080/spring-MVC-form/users/add`
 
 [![spring-mvc-form-handling-demo-add](img/5dcbef246dcdf461947a76c90923b049.png)](http://web.archive.org/web/20190303052227/http://www.mkyong.com/wp-content/uploads/2010/08/spring-mvc-form-handling-demo-add.png)
 
-**9.3 表单验证。**
+### 9.3 表单验证
 
 [![spring-mvc-form-handling-demo-add-error](img/7e0033e87929a5084cc82153c42f20ab.png)](http://web.archive.org/web/20190303052227/http://www.mkyong.com/wp-content/uploads/2010/08/spring-mvc-form-handling-demo-add-error.png)
 
-**9.4 新增用户。***http://localhost:8080/spring-MVC-form/users*
+### 9.4 新增用户
+
+`http://localhost:8080/spring-MVC-form/users`
 
 [![spring-mvc-form-handling-demo-add-done](img/eda9b1e5aea7d30e4a365219e2dfe50f.png)](http://web.archive.org/web/20190303052227/http://www.mkyong.com/wp-content/uploads/2010/08/spring-mvc-form-handling-demo-add-done.png)
 
-**9.5 删除用户。***http://localhost:8080/spring-MVC-form/users/104/delete*
+### 9.5 删除用户
+
+`http://localhost:8080/spring-MVC-form/users/104/delete`
 
 [![spring-mvc-form-handling-demo-delete](img/1cc23c9601605614f79ffea8326854e2.png)](http://web.archive.org/web/20190303052227/http://www.mkyong.com/wp-content/uploads/2010/08/spring-mvc-form-handling-demo-delete.png)
 
 ## 下载源代码
 
-Download it - [spring4-form-handle-example.zip](http://web.archive.org/web/20190303052227/http://www.mkyong.com/wp-content/uploads/2010/08/spring4-form-handle-example.zip) (80 kb)Github - TBD
+下载 [spring4-form-handle-example.zip](http://web.archive.org/web/20190303052227/http://www.mkyong.com/wp-content/uploads/2010/08/spring4-form-handle-example.zip)（80 KB）。Github - TBD
 
 ## 参考
 
-1.  [使用 Spring 的表单标签库](http://web.archive.org/web/20190303052227/http://docs.spring.io/spring/docs/current/spring-framework-reference/html/view.html#view-jsp-formtaglib)
-2.  [Spring MVC 3 验证](http://web.archive.org/web/20190303052227/http://docs.spring.io/spring/docs/current/spring-framework-reference/html/validation.html#validation-mvc)
-3.  [RedirectAttributes JavaDoc](http://web.archive.org/web/20190303052227/http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/servlet/mvc/support/RedirectAttributes.html)
+1. [使用 Spring 的表单标签库](http://web.archive.org/web/20190303052227/http://docs.spring.io/spring/docs/current/spring-framework-reference/html/view.html#view-jsp-formtaglib)
+2. [Spring MVC 3 验证](http://web.archive.org/web/20190303052227/http://docs.spring.io/spring/docs/current/spring-framework-reference/html/validation.html#validation-mvc)
+3. [RedirectAttributes JavaDoc](http://web.archive.org/web/20190303052227/http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/servlet/mvc/support/RedirectAttributes.html)
 
 [form handling](http://web.archive.org/web/20190303052227/http://www.mkyong.com/tag/form-handling/) [spring mvc](http://web.archive.org/web/20190303052227/http://www.mkyong.com/tag/spring-mvc/)
-
-
-
-
-
-
-

@@ -1,19 +1,20 @@
+
 # Struts 2 模型驱动示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts2/struts-2-modeldriven-example/>
 
-Download it – [Struts2-ModelDriven-Example.zip](http://web.archive.org/web/20210506213157/http://www.mkyong.com/wp-content/uploads/2010/07/Struts2-ModelDriven-Example.zip)
+下载：[Struts2-ModelDriven-Example.zip](http://web.archive.org/web/20210506213157/http://www.mkyong.com/wp-content/uploads/2010/07/Struts2-ModelDriven-Example.zip)
 
-如果一个动作实现了" **ModelDriven** "接口，它将获得额外的能力**将表单数据自动转移到对象中**。请参见下面的完整示例:
+如果一个动作实现了`ModelDriven`接口，它将获得额外的能力**将表单数据自动转移到对象中**。请参见下面的完整示例：
 
-## 1.域对象
+## 1. 域对象
 
 一个客户对象，带有 setter 和 getter 方法。
 
 **Customer.java**
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 public class Customer{
 
@@ -33,19 +34,19 @@ public class Customer{
 		this.age = age;
 	}
 
-} 
+}
 ```
 
-## 2.行动
+## 2. 行动
 
-Action 类，实现了 **ModelDriven** 接口，声明了 **getModel()** 方法返回客户的对象。当表单数据提交给此操作时，它会自动将表单数据传输到客户属性中。
+`Action`类实现了`ModelDriven`接口，声明了`getModel()`方法返回客户的对象。当表单数据提交给此操作时，它会自动将表单数据传输到客户属性中。
 
-The customer object have to be initialize manually.
+客户对象必须手动初始化。
 
 **CustomerAction.java**
 
 ```java
- package com.mkyong.common.action;
+package com.mkyong.common.action;
 
 import com.mkyong.common.Customer;
 import com.opensymphony.xwork2.ActionSupport;
@@ -68,17 +69,17 @@ public class CustomerAction extends ActionSupport
 		return customer;
 
 	}
-} 
+}
 ```
 
-## 3.JSP 页面
+## 3. JSP 页面
 
 模型驱动的演示的 JSP 页面。
 
 **addCustomer.jsp**
 
 ```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
 </head>
@@ -94,13 +95,13 @@ public class CustomerAction extends ActionSupport
 </s:form>
 
 </body>
-</html> 
+</html>
 ```
 
 **success.jsp**
 
 ```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
 </head>
@@ -113,15 +114,15 @@ Name : <s:property value="name" /><br>
 Age : <s:property value="age" /><br>
 
 </body>
-</html> 
+</html>
 ```
 
-## 4.struts.xml
+## 4. struts.xml
 
 全部链接起来~
 
 ```java
- <?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
@@ -143,23 +144,23 @@ Age : <s:property value="age" /><br>
 
 	</package>
 
-</struts> 
+</struts>
 ```
 
-## 5.演示
+## 5. 演示
 
-进入客户表格，**填写表格(姓名:【mkyong】，年龄:【123456】)**点击提交按钮，**表格数据(姓名:&年龄)将自动转入客户房产(姓名:&年龄)**(按房产名称匹配)。
+进入客户表格，**填写表格（姓名：【mkyong】，年龄：【123456】）**点击提交按钮，**表格数据（姓名：&年龄）将自动转入客户房产（姓名：&年龄）**（按房产名称匹配）。
 
-*http://localhost:8080/struts 2 example/addcustomeraction . action*
+*http://localhost:8080/struts2example/addcustomeraction.action*
 
 ![Struts2 model driven example](img/dabcc893932d6c1501d31588f6581b27.png "Struts2-ModelDriven-Example1")
 
-*http://localhost:8080/struts 2 example/customer action . action*
+*http://localhost:8080/struts2example/customeraction.action*
 
 ![Struts 2 model driven example](img/084c656f05803d68c4f7abc94bcbd933.png "Struts2-ModelDriven-Example2")
 
 ## 参考
 
-1.  [模型驱动文档](http://web.archive.org/web/20210506213157/https://struts.apache.org/2.1.6/struts2-core/apidocs/com/opensymphony/xwork2/ModelDriven.html)
+1. [模型驱动文档](http://web.archive.org/web/20210506213157/https://struts.apache.org/2.1.6/struts2-core/apidocs/com/opensymphony/xwork2/ModelDriven.html)
 
-Tags : [struts2](http://web.archive.org/web/20210506213157/https://mkyong.com/tag/struts2/)<input type="hidden" id="mkyong-current-postId" value="6327">
+标签：[struts2](http://web.archive.org/web/20210506213157/https://mkyong.com/tag/struts2/)

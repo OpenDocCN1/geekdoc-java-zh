@@ -1,19 +1,20 @@
+
 # Struts 2 调试标记示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts2/struts-2-debug-tag-example/>
 
 Download It – [Struts2-Debug-Tag-Example.zip](http://web.archive.org/web/20190304032231/http://www.mkyong.com/wp-content/uploads/2010/07/Struts2-Debug-Tag-Example.zip)
 
-在 Struts 2 中，“ **debug** 标签是一个非常有用的调试标签，用来输出“**值栈**的内容，以及 web 页面中的“**栈上下文**细节。在本教程中，它展示了在 JSP 页面中使用“ **debug** ”标记。
+在 Struts 2 中，`debug`标签是一个非常有用的调试标签，用来输出`值栈`的内容，以及 web 页面中的`栈上下文`细节。在本教程中，它展示了在 JSP 页面中使用`debug`标记。
 
-## 1.行动
+## 1. 行动
 
-一个简单的 Action 类，带有一个“ **propertyInStack** 属性，稍后显示在值堆栈中。
+一个简单的 Action 类，带有一个`propertyInStack`属性，稍后显示在值堆栈中。
 
-**DebugTagAction.java**
+`DebugTagAction.java`
 
 ```java
- package com.mkyong.common.action;
+package com.mkyong.common.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -29,18 +30,18 @@ public class DebugTagAction extends ActionSupport{
 		this.propertyInStack = propertyInStack;
 	}
 
-} 
+}
 ```
 
- ## 2.日期标签示例
+## 2. 日期标签示例
 
-一个 JSP 页面，显示使用" **debug** "标签输出系统的"**值栈**"和"**栈上下文**"。
+一个 JSP 页面，显示使用`debug`标签输出系统的`值栈`和`栈上下文`。
 
-**debug.jsp**
+`debug.jsp`
 
 ```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
- <html>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<html>
 <head>
 </head>
 
@@ -50,15 +51,17 @@ public class DebugTagAction extends ActionSupport{
 <s:debug />
 
 </body>
-</html> 
+</html>
 ```
 
-The **<s:debug />** will generate a text link named “**debug**“, you need to click on the text link to expand the debugging details. ## 3.struts.xml
+`<s:debug />`会生成一个名为`debug`的文本链接，你需要点击该文本链接以展开调试详细信息。
+
+## 3. struts.xml
 
 链接一下~
 
 ```java
- <?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
@@ -73,12 +76,12 @@ The **<s:debug />** will generate a text link named “**debug**“, you need to
 		</action>
 
 	</package>
-</struts> 
+</struts>
 ```
 
-## 4.演示
+## 4. 演示
 
-*http://localhost:8080/struts 2 example/debugtagaction . action*
+`http://localhost:8080/struts2example/debugtagaction.action`
 
 **输出**
 
@@ -86,13 +89,6 @@ The **<s:debug />** will generate a text link named “**debug**“, you need to
 
 ## 参考
 
-1.  [Struts 2 调试标签文档](http://web.archive.org/web/20190304032231/http://struts.apache.org/2.0.14/docs/debug.html)
+1. [Struts 2 调试标签文档](http://web.archive.org/web/20190304032231/http://struts.apache.org/2.0.14/docs/debug.html)
 
 [struts2](http://web.archive.org/web/20190304032231/http://www.mkyong.com/tag/struts2/)
-
-
-
-
-
-
-

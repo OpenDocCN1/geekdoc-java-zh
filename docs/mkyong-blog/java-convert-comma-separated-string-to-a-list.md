@@ -1,3 +1,4 @@
+
 # Java–将逗号分隔的字符串转换为列表
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/java-convert-comma-separated-string-to-a-list/>
@@ -6,10 +7,10 @@
 
 ## 1.要列出的逗号分隔的字符串
 
-TestApp1.java
+`TestApp1.java`
 
 ```java
- package com.mkyong.utils;
+package com.mkyong.utils;
 
 import java.util.Arrays;
 import java.util.List;
@@ -20,29 +21,29 @@ public class TestApp1 {
 
         String alpha = "A, B, C, D";
 
-		//Remove whitespace and split by comma 
+        //Remove whitespace and split by comma 
         List<String> result = Arrays.asList(alpha.split("\\s*,\\s*"));
 
         System.out.println(result);
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- [A, B, C, D] 
+[A, B, C, D]
 ```
 
 ## 2.列表为逗号分隔的字符串
 
 不需要循环`List`，使用新的 Java 8 `String.join`
 
-TestApp2.java
+`TestApp2.java`
 
 ```java
- package com.mkyong.utils;
+package com.mkyong.utils;
 
 import java.util.Arrays;
 import java.util.List;
@@ -57,18 +58,17 @@ public class TestApp2 {
         System.out.println(result);
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- A,B,C,D 
+A,B,C,D
 ```
 
 ## 参考
 
-1.  [StringJoiner JavaDoc](http://web.archive.org/web/20221206211041/https://docs.oracle.com/javase/8/docs/api/java/util/StringJoiner.html)
-2.  [Java 8–string joiner 示例](http://web.archive.org/web/20221206211041/https://www.mkyong.com/java8/java-8-stringjoiner-example/)
+1. [StringJoiner JavaDoc](http://web.archive.org/web/20221206211041/https://docs.oracle.com/javase/8/docs/api/java/util/StringJoiner.html)
 
-<input type="hidden" id="mkyong-current-postId" value="14535">
+2. [Java 8–string joiner 示例](http://web.archive.org/web/20221206211041/https://www.mkyong.com/java8/java-8-stringjoiner-example/)

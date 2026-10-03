@@ -1,3 +1,4 @@
+
 # 课程：类和对象
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/javaOO/index.html`](https://docs.oracle.com/javase/tutorial/java/javaOO/index.html)
@@ -6,7 +7,7 @@
 
 您将学会使用您的类来创建对象，以及如何使用您创建的对象。
 
-本课程还涵盖了将类嵌套在其他类中以及枚举的内容
+本课程还涵盖了将类嵌套在其他类中以及枚举的内容。
 
 ## 类
 

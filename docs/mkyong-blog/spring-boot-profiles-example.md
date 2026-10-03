@@ -1,26 +1,29 @@
+
 # Spring Boot 配置文件示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-boot-profiles-example/>
 
 在本文中，我们将向您展示如何在 Spring Boot 使用`@Profile`以及如何测试它。
 
-使用的工具:
+使用的工具：
 
-1.  Spring Boot 1.5.1 .版本
-2.  专家
+1. Spring Boot 1.5.1 版本
+2. Maven
 
-## 1.项目结构
+## 1. 项目结构
 
 一个标准的 Maven 项目结构。
 
-![project directory](img/5103388209b96fc7609931050a2dcb0b.png) ## 2.项目依赖性
+![project directory](img/5103388209b96fc7609931050a2dcb0b.png)
+
+## 2. 项目依赖性
 
 标准`spring-boot-starter`和`spring-boot-starter-test`
 
-pom.xml
+`pom.xml`
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
@@ -68,33 +71,33 @@ pom.xml
             </plugin>
         </plugins>
     </build>
-</project> 
+</project>
 ```
 
- ## 3.Spring Boot
+## 3. Spring Boot
 
-在 Spring Boot，默认配置文件是“`default`”。查看以下天气服务。
+在 Spring Boot 中，默认配置文件是`default`。查看以下天气服务。
 
-3.1 一个接口。
+### 3.1 一个接口
 
-WeatherService.java
+`WeatherService.java`
 
 ```java
- package com.mkyong.service;
+package com.mkyong.service;
 
 public interface WeatherService {
 
     String forecast();
 
-} 
+}
 ```
 
-3.2 简介:阳光默认。
+### 3.2 简介：阳光默认
 
-SunnyDayService.java
+`SunnyDayService.java`
 
 ```java
- package com.mkyong.service;
+package com.mkyong.service;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
@@ -108,15 +111,15 @@ public class SunnyDayService implements WeatherService {
         return "Today is sunny day!";
     }
 
-} 
+}
 ```
 
-3.3 简介:下雨。
+### 3.3 简介：下雨
 
-RainingDayService.java
+`RainingDayService.java`
 
 ```java
- package com.mkyong.service;
+package com.mkyong.service;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
@@ -130,15 +133,15 @@ public class RainingDayService implements WeatherService {
         return "Today is raining day!";
     }
 
-} 
+}
 ```
 
-3.4 启动 Spring Boot 应用程序。
+### 3.4 启动 Spring Boot 应用程序
 
-Application.java
+`Application.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.mkyong.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -162,31 +165,33 @@ public class Application implements CommandLineRunner {
         SpringApplication.run(Application.class, args);
     }
 
-} 
+}
 ```
 
-3.5 属性文件。
+### 3.5 属性文件
 
-application.properties
+`application.properties`
 
 ```java
- # default profile is 'defau;t'
+# default profile is 'defau;t'
 #spring.profiles.active=sunny
 
 logging.level.=error
-spring.main.banner-mode=off 
+spring.main.banner-mode=off
 ```
 
-## 4.单元测试
+## 4. 单元测试
 
 一些单元测试的例子。
 
-4.1 服务类的单元测试。通过`@ActiveProfiles`设置激活的个人信息
+### 4.1 服务类的单元测试
 
-TestWeatherService.java
+通过`@ActiveProfiles`设置激活的配置文件。
+
+`TestWeatherService.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.mkyong.service.WeatherService;
 import org.junit.Test;
@@ -211,15 +216,17 @@ public class TestWeatherService {
         String output = weatherService.forecast();
         assertThat(output).contains("Today is raining day!");
     }
-} 
+}
 ```
 
-4.2 对 Spring Boot 应用程序进行单元测试。您可以通过属性`spring.profiles.active`设置活动配置文件
+### 4.2 对 Spring Boot 应用程序进行单元测试
 
-TestApplication.java
+您可以通过属性`spring.profiles.active`设置活动配置文件。
+
+`TestApplication.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.junit.After;
 import org.junit.Rule;
@@ -260,17 +267,17 @@ public class TestApplication {
         System.clearProperty("spring.profiles.active");
     }
 
-} 
+}
 ```
 
 这个 Spring Boot 的例子值得称赞。
 
-## 5.演示
+## 5. 演示
 
 打包并运行它。
 
 ```java
- $ mvn package
+$ mvn package
 
 #default profile, sunny day!
 $ java -jar target/spring-boot-profile-1.0.jar
@@ -278,7 +285,7 @@ Today is sunny day!
 
 # set a profile
 $ java -jar -Dspring.profiles.active=raining target/spring-boot-profile-1.0.jar
-Today is raining day! 
+Today is raining day!
 ```
 
 ## 下载源代码
@@ -287,15 +294,8 @@ Download – [spring-boot-profile-example.zip](http://web.archive.org/web/201903
 
 ## 参考
 
-1.  [弹簧轮廓示例](http://web.archive.org/web/20190304003719/https://www.mkyong.com/spring/spring-profiles-example/)
-2.  [Spring Boot–属性&配置](http://web.archive.org/web/20190304003719/https://docs.spring.io/spring-boot/docs/current/reference/html/howto-properties-and-configuration.html)
-3.  [Spring Boot–简介](http://web.archive.org/web/20190304003719/https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-profiles.html)
+1. [Spring Profiles 示例](http://web.archive.org/web/20190304003719/https://www.mkyong.com/spring/spring-profiles-example/)
+2. [Spring Boot – 属性 & 配置](http://web.archive.org/web/20190304003719/https://docs.spring.io/spring-boot/docs/current/reference/html/howto-properties-and-configuration.html)
+3. [Spring Boot – 简介](http://web.archive.org/web/20190304003719/https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-profiles.html)
 
 [profiles](http://web.archive.org/web/20190304003719/http://www.mkyong.com/tag/profiles/) [spring boot](http://web.archive.org/web/20190304003719/http://www.mkyong.com/tag/spring-boot/) [spring profile](http://web.archive.org/web/20190304003719/http://www.mkyong.com/tag/spring-profile/)
-
-
-
-
-
-
-

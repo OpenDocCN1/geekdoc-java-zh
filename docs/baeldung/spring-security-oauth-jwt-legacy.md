@@ -1,8 +1,9 @@
-# 将 JWT 与 Spring Security OAuth 一起使用(传统堆栈)
+
+# 将 JWT 与 Spring Security OAuth 一起使用（传统堆栈）
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-security-oauth-jwt-legacy>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将讨论如何让我们的 Spring Security OAuth2 实现利用 JSON Web 令牌。
 
@@ -14,9 +15,9 @@
 
 好吧，让我们开始吧。
 
-## 2。Maven 配置
+## 2. Maven 配置
 
-首先，我们需要将`spring-security-jwt`依赖项添加到我们的`pom.xml`中:
+首先，我们需要将`spring-security-jwt`依赖项添加到我们的`pom.xml`中：
 
 ```java
 <dependency>
@@ -27,9 +28,9 @@
 
 注意，我们需要向授权服务器和资源服务器添加`spring-security-jwt`依赖关系。
 
-## 3。授权服务器
+## 3. 授权服务器
 
-接下来，我们将配置我们的授权服务器来使用`JwtTokenStore`–如下所示:
+接下来，我们将配置我们的授权服务器来使用`JwtTokenStore`——如下所示：
 
 ```java
 @Configuration
@@ -68,9 +69,9 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
 
 注意，我们在`JwtAccessTokenConverter`中使用了一个**对称密钥**来签署我们的令牌——这意味着我们也需要为资源服务器使用完全相同的密钥。
 
-## 4。资源服务器
+## 4. 资源服务器
 
-现在，让我们来看看我们的资源服务器配置——它与授权服务器的配置非常相似:
+现在，让我们来看看我们的资源服务器配置——它与授权服务器的配置非常相似：
 
 ```java
 @Configuration
@@ -105,13 +106,13 @@ public class OAuth2ResourceServerConfig extends ResourceServerConfigurerAdapter 
 
 请记住，我们将这两个服务器定义为完全分离和可独立部署的。这就是为什么我们需要在新的配置中再次声明一些相同的 beans。
 
-## 5。令牌中的自定义声明
+## 5. 令牌中的自定义声明
 
-现在让我们建立一些基础设施，以便能够在访问令牌中添加一些**自定义声明。框架提供的标准声明都很好，但是大多数时候我们需要令牌中的一些额外信息，以便在客户端使用。**
+现在让我们建立一些基础设施，以便能够在访问令牌中添加一些**自定义声明**。框架提供的标准声明都很好，但是大多数时候我们需要令牌中的一些额外信息，以便在客户端使用。
 
 我们将定义一个`TokenEnhancer`来用这些附加声明定制我们的访问令牌。
 
-在下面的例子中，我们将向我们的访问令牌添加一个额外的字段“`organization`”——使用这个`CustomTokenEnhancer`:
+在下面的例子中，我们将向我们的访问令牌添加一个额外的字段“`organization`”——使用这个`CustomTokenEnhancer`：
 
 ```java
 public class CustomTokenEnhancer implements TokenEnhancer {
@@ -129,7 +130,7 @@ public class CustomTokenEnhancer implements TokenEnhancer {
 }
 ```
 
-然后，我们将它连接到我们的**授权服务器**配置中，如下所示:
+然后，我们将它连接到我们的**授权服务器**配置中，如下所示：
 
 ```java
 @Override
@@ -150,7 +151,7 @@ public TokenEnhancer tokenEnhancer() {
 }
 ```
 
-随着这一新配置的启动和运行，令牌令牌有效负载将会是这样的:
+随着这一新配置的启动和运行，令牌令牌有效负载将会是这样的：
 
 ```java
 {
@@ -170,11 +171,11 @@ public TokenEnhancer tokenEnhancer() {
 }
 ```
 
-### 5.1。使用 JS 客户端中的访问令牌
+### 5.1. 使用 JS 客户端中的访问令牌
 
 最后，我们希望利用 AngualrJS 客户端应用程序中的令牌信息。为此，我们将使用 [angular-jwt](https://web.archive.org/web/20220629003903/https://github.com/auth0/angular-jwt) 库。
 
-所以我们要做的是利用`index.html`中的“`organization`”声明:
+所以我们要做的是利用`index.html`中的“`organization`”声明：
 
 ```java
 <p class="navbar-text navbar-right">{{organization}}</p>
@@ -199,11 +200,11 @@ app.controller('mainCtrl', function($scope, $cookies, jwtHelper,...) {
 });
 ```
 
-## 6。访问资源服务器上的额外声明
+## 6. 访问资源服务器上的额外声明
 
 但是，我们如何在资源服务器端访问这些信息呢？
 
-我们在这里要做的是–从访问令牌中提取额外的声明:
+我们在这里要做的是——从访问令牌中提取额外的声明：
 
 ```java
 public Map<String, Object> getExtraInfo(OAuth2Authentication auth) {
@@ -215,11 +216,11 @@ public Map<String, Object> getExtraInfo(OAuth2Authentication auth) {
 }
 ```
 
-在下一节中，我们将讨论如何通过使用自定义的`AccessTokenConverter`将额外的信息添加到我们的`Authentication`细节中
+在下一节中，我们将讨论如何通过使用自定义的`AccessTokenConverter`将额外的信息添加到我们的`Authentication`细节中。
 
-### 6.1。`AccessTokenConverter`风俗
+### 6.1. `AccessTokenConverter` 自定义
 
-让我们创建`CustomAccessTokenConverter`并用访问令牌声明设置身份验证细节:
+让我们创建`CustomAccessTokenConverter`并用访问令牌声明设置身份验证细节：
 
 ```java
 @Component
@@ -235,11 +236,11 @@ public class CustomAccessTokenConverter extends DefaultAccessTokenConverter {
 }
 ```
 
-注意:`DefaultAccessTokenConverter`用于将认证细节设置为空。
+注意：`DefaultAccessTokenConverter`用于将认证细节设置为空。
 
-### 6.2。配置`JwtTokenStore`
+### 6.2. 配置`JwtTokenStore`
 
-接下来，我们将配置我们的`JwtTokenStore`来使用我们的`CustomAccessTokenConverter`:
+接下来，我们将配置我们的`JwtTokenStore`来使用我们的`CustomAccessTokenConverter`：
 
 ```java
 @Configuration
@@ -264,9 +265,9 @@ public class OAuth2ResourceServerConfigJwt
 }
 ```
 
-### 6.3。认证对象中可用的额外声明
+### 6.3. 认证对象中可用的额外声明
 
-既然授权服务器在令牌中添加了一些额外的声明，我们现在可以在资源服务器端直接在身份验证对象中访问:
+既然授权服务器在令牌中添加了一些额外的声明，我们现在可以在资源服务器端直接在身份验证对象中访问：
 
 ```java
 public Map<String, Object> getExtraInfo(Authentication auth) {
@@ -277,9 +278,11 @@ public Map<String, Object> getExtraInfo(Authentication auth) {
 }
 ```
 
-### 6.4。认证细节测试
+### 6.4. 认证细节测试
 
-让我们确保我们的身份验证对象包含额外的信息:
+让我们确保我们的身份验证对象包含额外的信息：
+
+
 
 ```java
 @RunWith(SpringRunner.class)
@@ -317,11 +320,11 @@ public class AuthenticationClaimsIntegrationTest {
 }
 ```
 
-注意:我们从授权服务器获得了带有额外声明的访问令牌，然后我们从中读取了包含细节对象中额外信息“organization”的`Authentication`对象。
+注意：我们从授权服务器获得了带有额外声明的访问令牌，然后我们从中读取了包含细节对象中额外信息`organization`的`Authentication`对象。
 
-## 7。非对称密钥对
+## 7. 非对称密钥对
 
-在我们之前的配置中，我们使用对称密钥对令牌进行签名:
+在我们之前的配置中，我们使用对称密钥对令牌进行签名：
 
 ```java
 @Bean
@@ -332,11 +335,11 @@ public JwtAccessTokenConverter accessTokenConverter() {
 }
 ```
 
-我们还可以使用非对称密钥(公钥和私钥)来完成签名过程。
+我们还可以使用非对称密钥（公钥和私钥）来完成签名过程。
 
-### 7.1。生成 JKS Java 密钥库文件
+### 7.1. 生成 JKS Java 密钥库文件
 
-让我们首先使用命令行工具:生成密钥——更具体地说是一个`.jks`文件
+让我们首先使用命令行工具生成密钥——更具体地说是一个`.jks`文件：
 
 ```java
 keytool -genkeypair -alias mytest 
@@ -350,15 +353,15 @@ keytool -genkeypair -alias mytest
 
 还要确保`keypass`和`storepass`相同。
 
-### 7.2。导出公钥
+### 7.2. 导出公钥
 
-接下来，我们需要从生成的 JKS 中导出我们的公钥，我们可以使用下面的命令来这样做:
+接下来，我们需要从生成的 JKS 中导出我们的公钥，我们可以使用下面的命令来这样做：
 
 ```java
 keytool -list -rfc --keystore mytest.jks | openssl x509 -inform pem -pubkey
 ```
 
-示例响应如下所示:
+示例响应如下所示：
 
 ```java
 -----BEGIN PUBLIC KEY-----
@@ -391,7 +394,7 @@ lLFCUGhA7hxn2xf3x1JW
 -----END CERTIFICATE-----
 ```
 
-我们只取我们的公钥，并将其复制到我们的**资源服务器** `src/main/resources/public.txt`:
+我们只取我们的公钥，并将其复制到我们的**资源服务器**`src/main/resources/public.txt`：
 
 ```java
 -----BEGIN PUBLIC KEY-----
@@ -405,15 +408,15 @@ eQIDAQAB
 -----END PUBLIC KEY-----
 ```
 
-或者，我们可以通过添加`-noout`参数只导出公钥:
+或者，我们可以通过添加`-noout`参数只导出公钥：
 
 ```java
 keytool -list -rfc --keystore mytest.jks | openssl x509 -inform pem -pubkey -noout
 ```
 
-### 7.3。Maven 配置
+### 7.3. Maven 配置
 
-接下来，我们不希望 JKS 文件被 maven 过滤过程拾取——所以我们将确保在`pom.xml`中排除它:
+接下来，我们不希望 JKS 文件被 maven 过滤过程拾取——所以我们将确保在`pom.xml`中排除它：
 
 ```java
 <build>
@@ -429,7 +432,7 @@ keytool -list -rfc --keystore mytest.jks | openssl x509 -inform pem -pubkey -noo
 </build>
 ```
 
-如果我们使用 Spring Boot，我们需要确保通过 Spring Boot Maven 插件将我们的 JKS 文件添加到应用程序类路径中。
+如果我们使用 Spring Boot，我们需要确保通过 Spring Boot Maven 插件将我们的 JKS 文件添加到应用程序类路径中：
 
 ```java
 <build>
@@ -445,9 +448,9 @@ keytool -list -rfc --keystore mytest.jks | openssl x509 -inform pem -pubkey -noo
 </build>
 ```
 
-### 7.4。授权服务器
+### 7.4. 授权服务器
 
-现在，我们将配置`JwtAccessTokenConverter`使用来自`mytest.jks`的密钥对，如下所示:
+现在，我们将配置`JwtAccessTokenConverter`使用来自`mytest.jks`的密钥对，如下所示：
 
 ```java
 @Bean
@@ -460,9 +463,9 @@ public JwtAccessTokenConverter accessTokenConverter() {
 }
 ```
 
-### 7.5。资源服务器
+### 7.5. 资源服务器
 
-最后，我们需要配置我们的资源服务器来使用公钥——如下所示:
+最后，我们需要配置我们的资源服务器来使用公钥，如下所示：
 
 ```java
 @Bean
@@ -480,7 +483,7 @@ public JwtAccessTokenConverter accessTokenConverter() {
 }
 ```
 
-## 8。结论
+## 8. 结论
 
 在这篇简短的文章中，我们重点介绍了如何设置 Spring Security OAuth2 项目来使用 JSON Web 令牌。
 

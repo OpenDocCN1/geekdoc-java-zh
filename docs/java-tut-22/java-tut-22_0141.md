@@ -1,3 +1,4 @@
+
 # 包命名
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/package/namingpkgs.html`](https://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html)
@@ -10,7 +11,7 @@
 
 包名全部小写以避免与类或接口的名称冲突。
 
-公司使用其反转的互联网域名作为其包名的起始部分例如，`com.example.mypackage` 表示由 `example.com` 的程序员创建的名为 `mypackage` 的包。
+公司使用其反转的互联网域名作为其包名的起始部分，例如，`com.example.mypackage` 表示由 `example.com` 的程序员创建的名为 `mypackage` 的包。
 
 公司内部发生的名称冲突需要在公司内部通过约定处理，也许可以在公司名称后面加上地区或项目名称（例如，`com.example.region.mypackage`）。
 

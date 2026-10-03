@@ -1,26 +1,27 @@
-# 2022 年破解 1z 0–811 考试的 7 门最佳 Java 基础课程和实践测试
+
+# 2022 年破解 1z0-811 考试的 7 门最佳 Java 基础课程和实践测试
 
 > 原文：<https://medium.com/javarevisited/7-best-java-foundations-courses-and-practice-test-to-crack-1z0-811-exam-e32819a12f5a?source=collection_archive---------2----------------------->
 
-## 我最喜欢的 Java 在线课程和练习测试，为 1z 0–811 考试做准备，并成为一名认证 Java 基础工程师。
+## 我最喜欢的 Java 在线课程和练习测试，为 1z0-811 考试做准备，并成为一名认证 Java 基础工程师。
 
 [![](img/600ed50fa7e297a229dd540c02b7cfa1.png)](https://www.udemy.com/course/java-foundations-exam-1z0-811-practice-tests-new/?referralCode=FE9DD7923503304B7EE3)
 
-大家好，如果你正在准备代码为 1z 0–811 的 Java 基础认证考试，并且正在寻找最好的准备材料，如书籍、在线课程和教程，那么你来对地方了。
+大家好，如果你正在准备代码为 1z0-811 的 Java 基础认证考试，并且正在寻找最好的准备材料，如书籍、在线课程和教程，那么你来对地方了。
 
-在过去，我已经分享了 [**最佳 Java 课程**](/javarevisited/top-5-java-online-courses-for-beginners-best-of-lot-1e1e240a758) 和 [**最佳初学者 Java 书籍**](/javarevisited/5-best-core-java-books-for-beginners-20e3f723e3a) ，在本文中，我将分享最佳在线课程和实践测试，您可以参加这些课程和实践测试来准备 2022 年的 Java 基础考试。
+在过去，我已经分享了[最佳 Java 课程](/javarevisited/top-5-java-online-courses-for-beginners-best-of-lot-1e1e240a758)和[最佳初学者 Java 书籍](/javarevisited/5-best-core-java-books-for-beginners-20e3f723e3a)，在本文中，我将分享最佳在线课程和实践测试，您可以参加这些课程和实践测试来准备 2022 年的 Java 基础考试。
 
 但是，在我告诉你可以用来提高你在 Java 基础中的机会的最佳课程和实践测试之前，让我告诉你 Java 基础认证到底是什么，因为许多 Java 开发人员和 Java 初学者不熟悉这个考试。
 
-他们认为成为一名认证 Java 开发人员的唯一途径是通过[Java SE Developer 1z 0–819 考试](/javarevisited/5-best-books-courses-and-practice-tests-to-crack-java-se-11-certification-ocajp-11-1z0-815-6c861d6d147f)，这个考试相当难考，但是你不用担心，**通过 Java Foundations 1z 0–811 考试你还有另外一个选择。**
+他们认为成为一名认证 Java 开发人员的唯一途径是通过[Java SE Developer 1z0-819 考试](/javarevisited/5-best-books-courses-and-practice-tests-to-crack-java-se-11-certification-ocajp-11-1z0-815-6c861d6d147f)，这个考试相当难考，但是你不用担心，**通过 Java Foundations 1z0-811 考试你还有另外一个选择。**
 
 正如我所说的，这是一个初级认证考试，提供了实际操作 Java 知识和技能的具体证据。
 
-Java 基础认证**也被称为 Oracle 认证基础助理考试。获得相关认证意味着您能够胜任 [Java 编程](/javarevisited/review-of-courseras-java-programming-software-engineering-fundamentals-specialization-4dcfa0ed2de4)的基础知识，使您能够展示概念性知识和实践技能。**
+Java 基础认证**也被称为 Oracle 认证基础助理考试。获得相关认证意味着您能够胜任[Java 编程](/javarevisited/review-of-courseras-java-programming-software-engineering-fundamentals-specialization-4dcfa0ed2de4)的基础知识，使您能够展示概念性知识和实践技能。**
 
 您还将充分意识到自己的能力，使您能够展示自己的潜力，并随着技能、知识和认证水平的提高，成为公司越来越有价值的资产。
 
-[*Oracle Certified Foundations Associate certification for Java*](/javarevisited/7-best-online-courses-to-prepare-for-oracles-java-se-8-certification-ocajp-8-and-ocpjp-8-2fd0d6779a9e)主要面向参加过 Oracle Academy 计划的大专院校学生。
+[Oracle Certified Foundations Associate certification for Java](/javarevisited/7-best-online-courses-to-prepare-for-oracles-java-se-8-certification-ocajp-8-and-ocpjp-8-2fd0d6779a9e)主要面向参加过 Oracle Academy 计划的大专院校学生。
 
 理想情况下，他们还应该学习计算机科学，包括相关的 Java 课程。尽管考试并不假设你有任何 Java 的专业实践经验，但你应该对 Java 编程语言和概念有一个基本的了解，并具备数学、逻辑和分析解决问题的技能。
 
@@ -30,7 +31,7 @@ Java 基础认证**也被称为 Oracle 认证基础助理考试。获得相关�
 
 我建议您首先通过在线课程学习 Java，然后尽可能多地解决练习题，以评估您的知识，并提高在给定时间内正确解决所有问题所需的速度和准确性。
 
-## 1.[完整的 Java 开发训练营](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-java-development-bootcamp%2F)
+## 1. [完整的 Java 开发训练营](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-java-development-bootcamp%2F)
 
 这是 Udemy 上的一门新的 Java 课程，我加入它是因为它是由何塞·波尔蒂利亚和他的导师团队如 Ryan Slim 和 Jad Slim 创建的。我加入是因为我看到了波尔蒂利亚的名字，这是我从他的经典 Python 训练营课程中知道的，我必须说，我没有失望。
 
@@ -58,7 +59,7 @@ Java 基础认证**也被称为 Oracle 认证基础助理考试。获得相关�
 
 [![](img/a2c0ce66ef7819b9b459a90c13ce8e76.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjava-the-complete-java-developer-course%2F)
 
-## 3.[专业 Java 开发人员职业入门:Java 基础](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fneutrino-java-foundations%2F)
+## 3. [专业 Java 开发人员职业入门:Java 基础](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fneutrino-java-foundations%2F)
 
 在本课程中，您将学习基本的编程概念，如函数、for 循环和条件语句。你也将能够像程序员一样解决问题。
 
@@ -82,9 +83,9 @@ Java 基础认证**也被称为 Oracle 认证基础助理考试。获得相关�
 
 不过，你需要一个 [Pluralsight 会员](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Fskills)才能加入这个课程，费用大约是每月 29 美元或每年 299 美元(14%的折扣)。我向所有程序员强烈推荐这个订阅，因为它提供了超过 7000 个在线课程的即时访问，以学习任何技术技能。或者，你也可以使用他们的 [**10 天免费通行证**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial) 免费观看这门课程。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial>
 
-## 5.[学习 Java【领英学习】](https://linkedin-learning.pxf.io/c/1193463/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Flearning-java-4%3Ftrk%3Dlearning-serp_learning-search-card_search-card%26upsellOrderOrigin%3Ddefault_guest_learning)
+## 5. [学习 Java【领英学习】](https://linkedin-learning.pxf.io/c/1193463/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Flearning-java-4%3Ftrk%3Dlearning-serp_learning-search-card_search-card%26upsellOrderOrigin%3Ddefault_guest_learning)
 
 这是 LinkedIn 学习平台上最受欢迎、评分最高的初级 Java 课程之一。这门课程的讲师是凯瑟琳·霍奇(Kathryn Hodge)，她是 LinkedIn Learning 的作者，也是康卡斯特 NBC 环球公司的软件工程师。
 
@@ -98,15 +99,13 @@ Java 基础认证**也被称为 Oracle 认证基础助理考试。获得相关�
 
 顺便说一下，你需要一个 LinkedIn Learning 会员才能观看这个课程，费用大约为每月*29.99 美元*，但你也可以通过参加他们的 [**1 个月免费试用**](http://linkedin-learning.pxf.io/c/1193463/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fsubscription%2Fproducts) 来免费观看这个课程，这是探索他们 17000 多门最新技术在线课程的一个好方法。
 
-  
-
-# 2022 年 Java 基础考试[1z 0–811]的 2 个最佳实践测试
+# 2022 年 Java 基础考试[1z0-811]的 2 个最佳实践测试
 
 既然我们已经看到了学习 Java 编程语言和准备 Java 基础考试的在线课程，那么是时候看看最佳 Java 基础考试实践测试了。
 
 这些模拟测试对于备考至关重要，因为它让您有机会在真实的考试环境中解决问题。我建议你解决尽可能多的问题，以便在第一次尝试中真正破解它。
 
-## 1. [Java 基础考试 1z 0–811 模拟考试 2022 新增](https://www.udemy.com/course/java-foundations-exam-1z0-811-practice-tests-new/?referralCode=FE9DD7923503304B7EE3)【Udemy】
+## 1. [Java 基础考试 1z0-811 模拟考试 2022 新增](https://www.udemy.com/course/java-foundations-exam-1z0-811-practice-tests-new/?referralCode=FE9DD7923503304B7EE3)【Udemy】
 
 这是我自己的 Udemy 课程，在这里我分享了 3 个 Java 基础考试的全长练习题。每个模拟测试包含 75 个问题，它们与教学大纲紧密相关，并模拟真实的考试。
 
@@ -116,7 +115,9 @@ Java 基础认证**也被称为 Oracle 认证基础助理考试。获得相关�
 
 如果你有更多的时间，也检查一下哪个问题是正确的，并阅读他们的解释，以进一步巩固你的知识。这和我过去准备 Java 认证的方法一模一样，将帮助你在考试中获得 100 分。
 
-**这里是加入本课程的链接** — [Java 基础考试 1z 0–811 模拟考试 2022 新](https://www.udemy.com/course/java-foundations-exam-1z0-811-practice-tests-new/?referralCode=FE9DD7923503304B7EE3)
+**这里是加入本课程的链接** — [Java 基础考试 1z0-811 模拟考试 2022 新](https://www.udemy.com/course/java-foundations-exam-1z0-811-practice-tests-new/?referralCode=FE9DD7923503304B7EE3)
+
+
 
 [![](img/276d7a3a59813183df5c1a6780d37507.png)](https://www.udemy.com/course/java-foundations-exam-1z0-811-practice-tests-new/?referralCode=FE9DD7923503304B7EE3)
 
@@ -172,4 +173,4 @@ Java 基础认证**也被称为 Oracle 认证基础助理考试。获得相关�
 
 **P. S.** —如果您是 Java 新手，并且正在寻找一门全面的课程来深入学习 Java，既有助于工作又能获得该证书，那么我强烈建议您查看 Udemy 上的 [**完整的 Java Masterclass**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjava-the-complete-java-developer-course%2F) 课程。这是学习 Java 的最全面和最新的课程之一，涵盖了 Java 最新版本的新特性。
 
-<https://javarevisited.blogspot.com/2018/05/top-5-java-courses-for-beginners-to-learn-online.html> 
+<https://javarevisited.blogspot.com/2018/05/top-5-java-courses-for-beginners-to-learn-online.html>

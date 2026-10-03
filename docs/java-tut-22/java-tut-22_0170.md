@@ -1,3 +1,4 @@
+
 # 扫描
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/io/scanning.html`](https://docs.oracle.com/javase/tutorial/essential/io/scanning.html)
@@ -30,7 +31,6 @@ public class ScanXan {
         }
     }
 }
-
 ```
 
 请注意，当`ScanXan`完成对扫描器对象的操作时，会调用`Scanner`的`close`方法。即使扫描器不是一个流，你也需要关闭它以表示你已经完成了对其底层流的操作。
@@ -47,19 +47,17 @@ A
 stately
 pleasure-dome
 ...
-
 ```
 
-要使用不同的标记分隔符，调用`useDelimiter()`，指定一个正则表达式。例如，假设您希望标记分隔符是逗号，后面可以跟随空白。您可以调用，
+要使用不同的标记分隔符，调用`useDelimiter()`，指定一个正则表达式。例如，假设您希望标记分隔符是逗号，后面可以跟随空白。您可以调用：
 
 ```java
 s.useDelimiter(",\\s*");
-
 ```
 
 ## 翻译单个标记
 
-`ScanXan`示例将所有输入标记视为简单的`String`值。`Scanner`还支持所有 Java 语言的基本类型（除了`char`），以及`BigInteger`和`BigDecimal`。此外，数值可以使用千位分隔符。因此，在`US`区域设置中，`Scanner`可以正确地将字符串"32,767"读取为整数值。
+`ScanXan`示例将所有输入标记视为简单的`String`值。`Scanner`还支持所有 Java 语言的基本类型（除了`char`），以及`BigInteger`和`BigDecimal`。此外，数值可以使用千位分隔符。因此，在`US`区域设置中，`Scanner`可以正确地将字符串`"32,767"`读取为整数值。
 
 我们必须提及区域设置，因为千位分隔符和小数符是与区域设置相关的。因此，如果我们没有指定扫描器应该使用`US`区域设置，下面的示例在所有区域设置中都不会正确工作。这通常不是您需要担心的事情，因为您的输入数据通常来自与您相同区域设置的源。但是，这个示例是 Java 教程的一部分，会分发到世界各地。
 
@@ -96,17 +94,15 @@ public class ScanSum {
         System.out.println(sum);
     }
 }
-
 ```
 
-这是示例输入文件，`usnumbers.txt`
+这是示例输入文件，`usnumbers.txt`：
 
 ```java
 8.5
 32,767
 3.14159
 1,000,000.1
-
 ```
 
-输出字符串为"1032778.74159"。在某些区域设置中，句号可能是不同的字符，因为`System.out`是一个`PrintStream`对象，该类不提供覆盖默认区域设置的方法。我们可以为整个程序覆盖区域设置，或者我们可以使用格式化，如下一主题中所述，格式化。
+输出字符串为`"1032778.74159"`。在某些区域设置中，句号可能是不同的字符，因为`System.out`是一个`PrintStream`对象，该类不提供覆盖默认区域设置的方法。我们可以为整个程序覆盖区域设置，或者我们可以使用格式化，如下一主题中所述，格式化。

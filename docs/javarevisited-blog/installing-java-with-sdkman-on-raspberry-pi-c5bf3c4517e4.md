@@ -1,3 +1,4 @@
+
 # 用 SDKMAN 在 Raspberry Pi 上安装 Java
 
 > 原文：<https://medium.com/javarevisited/installing-java-with-sdkman-on-raspberry-pi-c5bf3c4517e4?source=collection_archive---------1----------------------->
@@ -20,9 +21,11 @@ SDKMAN 可以根据操作系统和架构向您展示可用的 JDK 发行版列�
 
 ```
 $ sudo apt install zip
-$ curl -s “https://beta.sdkman.io" | bash# Open a new terminal or run this command
-$ source “$HOME/.sdkman/bin/sdkman-init.sh”
-$ sdk list java===================================================================
+$ curl -s "https://beta.sdkman.io" | bash
+# Open a new terminal or run this command
+$ source "$HOME/.sdkman/bin/sdkman-init.sh"
+$ sdk list java
+===================================================================
 Available Java Versions for Linux ARM 32bit Hard Float
 ===================================================================
 Vendor   | Use | Version | Dist   | Status | Identifier
@@ -38,24 +41,28 @@ Zulu     |     | 11.0.13 | zulu   |        | 11.0.13-zulu
 ```
 $ sdk install java 11.0.13-zulu
 $ java -version
-openjdk version “11.0.13” 2021–10–19 LTS
+openjdk version "11.0.13" 2021–10–19 LTS
 OpenJDK Runtime Environment Zulu11.52+13-CA (build 11.0.13+8-LTS)
 OpenJDK Client VM Zulu11.52+13-CA (build 11.0.13+8-LTS, mixed mode)
 ```
 
 确认！安装了 SDKMAN 的 Azul Zulu 11 在树莓 Pi 上运行良好。
 
-边注:虽然 Liberica 和 Zulu 都被列为“Linux ARM 32bit 硬浮点”，但是**只有 Zulu 在 ARMv6 上工作，比如树莓派 Zero 1** 。目前，BellSoft 没有计划支持这种处理器。
+边注：虽然 Liberica 和 Zulu 都被列为“Linux ARM 32bit 硬浮点”，但是**只有 Zulu 在 ARMv6 上工作，比如树莓派 Zero 1**。目前，BellSoft 没有计划支持这种处理器。
 
 # 关于处理器架构
 
-由于自 2013 年以来有多个 Raspberry Pi 版本(维基百科上的[完整历史](https://en.wikipedia.org/wiki/Raspberry_Pi#Specifications))，因此使用了不同的 ARM 处理器类型。ARMv6 仅支持 32 位，而 ARMv7 是 64 位处理器。
+由于自 2013 年以来有多个 Raspberry Pi 版本（[维基百科上的完整历史](https://en.wikipedia.org/wiki/Raspberry_Pi#Specifications)），因此使用了不同的 ARM 处理器类型。ARMv6 仅支持 32 位，而 ARMv7 是 64 位处理器。
 
-可以使用`uname`命令检查架构，以下是一些输出:
+可以使用`uname`命令检查架构，以下是一些输出：
 
-板操作系统`uname -m`树莓 Pi Zero 132-bitar mv 6 树莓 Pi 432-bitar mv 7 lrasp berry Pi 464-bitaarch 64
+| 板 | 操作系统 | `uname -m` |
+|---|---|---|
+| 树莓 Pi Zero 1 | 32-bit | armv6 |
+| 树莓 Pi 4 | 32-bit | armv7l |
+| 树莓 Pi 4 | 64-bit | aarch64 |
 
-如果您想更多地了解您的系统，请使用`lscpu`命令，这是 32 位操作系统的 Raspberry Pi 4 的输出:
+如果您想更多地了解您的系统，请使用`lscpu`命令，这是 32 位操作系统的 Raspberry Pi 4 的输出：
 
 ```
 $ lscpu
@@ -78,16 +85,19 @@ Flags: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae
 
 # 64 位操作系统
 
-经过长时间的测试版测试，2 月 2 日，Raspberry Pi 正式发布了他们操作系统的 64 位版本。你可以[在 Raspberry Pi 博客](https://www.raspberrypi.com/news/raspberry-pi-os-64-bit/)上了解更多关于这个版本的信息。而且因为这是比较常用的架构，所以 SDKMAN 的输出真的很可观…
+经过长时间的测试版测试，2 月 2 日，Raspberry Pi 正式发布了他们操作系统的 64 位版本。你可以[在 Raspberry Pi 博客](https://www.raspberrypi.com/news/raspberry-pi-os-64-bit/)上了解更多关于这个版本的信息。而且因为这是比较常用的架构，所以 SDKMAN 的输出真的很可观……
 
 ```
 ===================================================================
 Available Java Versions for Linux ARM 64bit
-===================================================================Vendor         | Use | Version      | Dist   | Identifier
+===================================================================
+Vendor         | Use | Version      | Dist   | Identifier
 AdoptOpenJDK   |     | 8.0.275+1.hs | adpt   | 8.0.275+1.hs-adpt
                |     | 8.0.252.hs   | adpt   | 8.0.252.hs-adpt
 Corretto       |     | 17.0.2.8.1   | amzn   | 17.0.2.8.1-amzn
-               |     | 17.0.0.35.1  | amzn   | 17.0.0.35.1-amzn… 45 EXTRA LINES HERE !!!Temurin        |     | 17.0.2       | tem    | 17.0.2-tem
+               |     | 17.0.0.35.1  | amzn   | 17.0.0.35.1-amzn
+… 45 EXTRA LINES HERE !!!
+Temurin        |     | 17.0.2       | tem    | 17.0.2-tem
                |     | 11.0.14      | tem    | 11.0.14-tem
                |     | 8.0.322      | tem    | 8.0.322-tem
 Zulu           |     | 17.0.2       | zulu   | 17.0.2-zulu
@@ -96,7 +106,7 @@ Zulu           |     | 17.0.2       | zulu   | 17.0.2-zulu
 ===================================================================
 ```
 
-所以使用 Temurin 17 版本就像`sdk install java 17.0.2-tem`一样简单:
+所以使用 Temurin 17 版本就像`sdk install java 17.0.2-tem`一样简单：
 
 ```
 $ sdk install java 17.0.2-tem
@@ -106,8 +116,10 @@ Repackaging Java 17.0.2-tem…
 Done repackaging…
 Installing: java 17.0.2-tem
 Done installing!
-Setting java 17.0.2-tem as default.$ java -version
-openjdk version “17.0.2” 2022–01–18
+Setting java 17.0.2-tem as default.
+
+$ java -version
+openjdk version "17.0.2" 2022–01–18
 OpenJDK Runtime Environment Temurin-17.0.2+8 (build 17.0.2+8)
 OpenJDK 64-Bit Server VM Temurin-17.0.2+8 (build 17.0.2+8, mixed mode, sharing)
 ```

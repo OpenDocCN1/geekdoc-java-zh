@@ -1,4 +1,5 @@
-# 使用关键字 super
+
+# 使用关键字 `super`
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/IandI/super.html`](https://docs.oracle.com/javase/tutorial/java/IandI/super.html)
 
@@ -13,7 +14,6 @@ public class Superclass {
         System.out.println("Printed in Superclass.");
     }
 }
-
 ```
 
 这里是一个名为`Subclass`的子类，覆盖了`printMethod()`：
@@ -31,7 +31,6 @@ public class Subclass extends Superclass {
         s.printMethod();    
     }
 }
-
 ```
 
 在`Subclass`中，简单名称`printMethod()`指的是在`Subclass`中声明的那个，它覆盖了`Superclass`中的那个。因此，要引用从`Superclass`继承的`printMethod()`，`Subclass`必须使用一个限定名称，使用`super`如所示。编译和执行`Subclass`将打印以下内容：
@@ -39,7 +38,6 @@ public class Subclass extends Superclass {
 ```java
 Printed in Superclass.
 Printed in Subclass
-
 ```
 
 ## 子类构造函数
@@ -54,31 +52,28 @@ public MountainBike(int startHeight,
     super(startCadence, startSpeed, startGear);
     seatHeight = startHeight;
 }   
-
 ```
 
 调用超类构造函数必须是子类构造函数中的第一行。
 
-调用超类构造函数的语法是
+调用超类构造函数的语法是：
 
 ```java
 super();  
-
 ```
 
 或者：
 
 ```java
 super(parameter list);
-
 ```
 
 使用`super()`时，将调用超类的无参数构造函数。使用`super(parameter list)`时，将调用具有匹配参数列表的超类构造函数。
 
-* * *
+---
 
 **注意：**如果构造函数没有显式调用超类的构造函数，Java 编译器会自动插入对超类的无参数构造函数的调用。如果超类没有无参数构造函数，您将会得到一个编译时错误。`Object`确实有这样一个构造函数，所以如果`Object`是唯一的超类，就不会有问题。
 
-* * *
+---
 
 如果子类构造函数显式或隐式地调用其超类的构造函数，您可能会认为会有一整个构造函数链被调用，一直回溯到`Object`的构造函数。事实上，情况确实如此。这被称为*构造函数链*，当存在长串的类继承时，您需要注意这一点。

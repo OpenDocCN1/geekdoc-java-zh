@@ -1,3 +1,4 @@
+
 # Java 正则表达式示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/java-regular-expression-examples/>
@@ -5,16 +6,17 @@
 Java 8 流和正则表达式示例。
 
 **Note**
+
 Learn the basic regular expression at [Wikipedia](http://web.archive.org/web/20221129224605/https://en.wikipedia.org/wiki/Regular_expression)
 
-## 1.字符串匹配(正则表达式)
+## 1. 字符串匹配（正则表达式）
 
 1.1 本例中，检查字符串是否为数字。
 
-JavaRegEx1.java
+`JavaRegEx1.java`
 
 ```java
- package com.mkyong.regex;
+package com.mkyong.regex;
 
 import java.util.Arrays;
 import java.util.List;
@@ -38,29 +40,29 @@ public class JavaRegEx1 {
                 .forEach(System.out::println);
 
     }
-} 
+}
 ```
 
 输出
 
 ```java
- 1
+1
 20
 333
 
 1
 20
-333 
+333
 ```
 
-## 2.String.replaceAll(正则表达式，替换)
+## 2. `String.replaceAll(正则表达式，替换)`
 
 2.1 本例用`#`替换所有数字
 
-JavaRegEx2.java
+`JavaRegEx2.java`
 
 ```java
- package com.mkyong.regex;
+package com.mkyong.regex;
 
 import java.util.Arrays;
 import java.util.List;
@@ -81,13 +83,13 @@ public class JavaRegEx2 {
                 .forEach(System.out::println);
 
     }
-} 
+}
 ```
 
 输出
 
 ```java
- #
+#
 ##
 A#
 ###
@@ -97,17 +99,17 @@ A#A###
 ##
 A#
 ###
-A#A### 
+A#A###
 ```
 
-## 3.模式和匹配器
+## 3. 模式和匹配器
 
 3.1 从字符串列表中查找所有数字。
 
-JavaRegEx3.java
+`JavaRegEx3.java`
 
 ```java
- package com.mkyong.regex;
+package com.mkyong.regex;
 
 import java.util.Arrays;
 import java.util.List;
@@ -132,46 +134,46 @@ public class JavaRegEx3 {
         }
 
 	}
-} 
+}
 ```
 
 输出
 
 ```java
- 1
+1
 20
 1
 333
 2
-211 
+211
 ```
 
-3.2 对于 Java 8 流，首先我们尝试这样转换:
+3.2 对于 Java 8 流，首先我们尝试这样转换：
 
 ```java
- numbers.stream()
+numbers.stream()
 		.map(x -> pattern.matcher(x))
 		.filter(Matcher::find)          // A2A211, will it loop?
 		.map(x -> x.group())
-		.forEach(x -> System.out.println(x)); 
+		.forEach(x -> System.out.println(x));
 ```
 
 输出，最后一个 211 不见了？
 
 ```java
- 1
+1
 20
 1
 333
-2 
+2
 ```
 
-该流不能循环使用`.filter`来获取所有的组，我们需要一个自定义的`Spliterators`hack
+该流不能循环使用`.filter`来获取所有的组，我们需要一个自定义的`Spliterators` hack
 
-JavaRegEx4.java
+`JavaRegEx4.java`
 
 ```java
- package com.mkyong.regex;
+package com.mkyong.regex;
 
 import java.util.Arrays;
 import java.util.List;
@@ -211,46 +213,46 @@ public class JavaRegEx4 {
         }
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- 1
+1
 20
 1
 333
 2
-211 
+211
 ```
 
-## 4.Java 9，Scanner.findAll(regex)
+## 4. Java 9，`Scanner.findAll(regex)`
 
 4.1 Java 9，我们可以使用`Scanner.findAll(regex)`返回一个匹配结果流，匹配提供的正则表达式。
 
 ```java
- Scanner scan = new Scanner("A2A211");
-	List<String> collect = scan
-			.findAll("\\d+")
-			.map(m -> m.group())
-			.collect(Collectors.toList());
-	collect.forEach(x -> System.out.println(x)); 
+Scanner scan = new Scanner("A2A211");
+List<String> collect = scan
+        .findAll("\\d+")
+        .map(m -> m.group())
+        .collect(Collectors.toList());
+collect.forEach(x -> System.out.println(x));
 ```
 
 输出
 
 ```java
- 2
-211 
+2
+211
 ```
 
 最终版本，用 Java 9。
 
-JavaRegEx5.java
+`JavaRegEx5.java`
 
 ```java
- package com.mkyong.regex;
+package com.mkyong.regex;
 
 import java.util.Arrays;
 import java.util.List;
@@ -278,23 +280,21 @@ public class JavaRegEx5 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- 1
+1
 20
 1
 333
 2
-211 
+211
 ```
 
 ## 参考
 
-*   [Scanner.findAll JavaDocs](http://web.archive.org/web/20221129224605/https://docs.oracle.com/javase/9/docs/api/java/util/Scanner.html#findAll-java.lang.String-)
-*   [维基百科–正则表达式](http://web.archive.org/web/20221129224605/https://en.wikipedia.org/wiki/Regular_expression)
-
-<input type="hidden" id="mkyong-current-postId" value="15145">
+* [Scanner.findAll JavaDocs](http://web.archive.org/web/20221129224605/https://docs.oracle.com/javase/9/docs/api/java/util/Scanner.html#findAll-java.lang.String-)
+* [维基百科 – 正则表达式](http://web.archive.org/web/20221129224605/https://en.wikipedia.org/wiki/Regular_expression)

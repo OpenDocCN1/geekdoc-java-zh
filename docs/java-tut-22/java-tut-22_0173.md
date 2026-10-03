@@ -1,3 +1,4 @@
+
 # 数据流
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/io/datastreams.html`](https://docs.oracle.com/javase/tutorial/essential/io/datastreams.html)
@@ -26,7 +27,6 @@ static final String[] descs = {
     "Java Pin",
     "Java Key Chain"
 };
-
 ```
 
 然后`DataStreams`打开一个输出流。由于`DataOutputStream`只能作为现有字节流对象的包装器创建，`DataStreams`提供了一个带缓冲的文件输出字节流。
@@ -34,7 +34,6 @@ static final String[] descs = {
 ```java
 out = new DataOutputStream(new BufferedOutputStream(
               new FileOutputStream(dataFile)));
-
 ```
 
 `DataStreams`写出记录并关闭输出流。
@@ -45,7 +44,6 @@ for (int i = 0; i < prices.length; i ++) {
     out.writeInt(units[i]);
     out.writeUTF(descs[i]);
 }
-
 ```
 
 `writeUTF`方法以修改后的 UTF-8 形式写出`String`值。这是一种只需要一个字节来表示常见西方字符的可变宽度字符编码。
@@ -60,7 +58,6 @@ double price;
 int unit;
 String desc;
 double total = 0.0;
-
 ```
 
 现在`DataStreams`可以读取流中的每个记录，并报告遇到的数据。
@@ -77,7 +74,6 @@ try {
     }
 } catch (EOFException e) {
 }
-
 ```
 
 请注意，`DataStreams`通过捕获[`EOFException`](https://docs.oracle.com/javase/8/docs/api/java/io/EOFException.html)来检测文件结束条件，而不是测试无效的返回值。所有`DataInput`方法的实现都使用`EOFException`而不是返回值。

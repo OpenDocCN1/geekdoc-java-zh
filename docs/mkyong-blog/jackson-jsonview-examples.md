@@ -1,4 +1,5 @@
-# Jackson @JsonView 示例
+
+# Jackson `@JsonView` 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://www.mkyong.com/java/jackson-jsonview-examples/>
 
@@ -6,10 +7,10 @@
 
 用于测试的 POJO。
 
-Staff.java
+`Staff.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 public class Staff {
 
@@ -19,20 +20,20 @@ public class Staff {
     private List<String> skills;
     private Map<String, BigDecimal> salary;
 
-	// getters , setters , boring stuff
-} 
+    // getters , setters , boring stuff
+}
 ```
 
 *用杰克逊 2.9.8 测试的 PS*
 
-## 1.视图
+## 1. 视图
 
-一个标准的 Java 类来定义 3 个视图:普通视图、经理视图和人力资源视图。
+一个标准的 Java 类来定义 3 个视图：普通视图、经理视图和人力资源视图。
 
-CompanyViews.java
+`CompanyViews.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 public class CompanyViews {
 
@@ -42,10 +43,10 @@ public class CompanyViews {
 
     public static class HR extends Normal{};
 
-} 
+}
 ```
 
-## 2.Json 视图
+## 2. Json 视图
 
 将`@JsonView`置于字段级别，以限制不同视图的字段显示。
 
@@ -55,10 +56,10 @@ public class CompanyViews {
 
 P.S .经理无权查看薪资字段，HR 不关心你有什么技能🙂
 
-Staff.java
+`Staff.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.fasterxml.jackson.annotation.JsonView;
 
@@ -83,17 +84,18 @@ public class Staff {
     private List<String> skills;
 
     @JsonView(CompanyViews.HR.class)
-    private Map<String, BigDecimal> salary; 
+    private Map<String, BigDecimal> salary;
+}
 ```
 
-## 3.Jackson–启用@JsonView
+## 3. Jackson–启用`@JsonView`
 
 3.1 下面的例子向您展示了如何使用`mapper.writerWithView()`来启用`JsonView`
 
-JacksonExample.java
+`JacksonExample.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -157,13 +159,13 @@ public class JacksonExample {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- Normal views
+Normal views
 {
   "name" : "mkyong",
   "age" : 38
@@ -187,7 +189,7 @@ HR views
     "2012" : 12000,
     "2010" : 10000
   }
-} 
+}
 ```
 
 ## 参考
@@ -197,4 +199,4 @@ HR views
 *   [杰克逊数据绑定](http://web.archive.org/web/20210814221730/https://github.com/FasterXML/jackson-databind/)
 *   [Jackson 2–将 Java 对象转换成 JSON 从 JSON 转换过来](http://web.archive.org/web/20210814221730/https://www.mkyong.com/java/jackson-2-convert-java-object-to-from-json/)
 
-Tags : [jackson](http://web.archive.org/web/20210814221730/https://mkyong.com/tag/jackson/) [json](http://web.archive.org/web/20210814221730/https://mkyong.com/tag/json/)<input type="hidden" id="mkyong-current-postId" value="15082">
+Tags : [jackson](http://web.archive.org/web/20210814221730/https://mkyong.com/tag/jackson/) [json](http://web.archive.org/web/20210814221730/https://mkyong.com/tag/json/)

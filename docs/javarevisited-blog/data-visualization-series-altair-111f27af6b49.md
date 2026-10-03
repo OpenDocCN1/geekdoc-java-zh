@@ -1,4 +1,5 @@
-# 数据可视化系列:牛郎星
+
+# 数据可视化系列：牛郎星
 
 > 原文：<https://medium.com/javarevisited/data-visualization-series-altair-111f27af6b49?source=collection_archive---------1----------------------->
 
@@ -10,4 +11,4 @@
 
 # 介绍
 
-这个系列由 python 中不同的可视化库组成。您可以尝试不同的库。由你决定哪一个更适合你的数据，哪一个你觉得舒服。
+这个系列由 Python 中不同的可视化库组成。您可以尝试不同的库。由你决定哪一个更适合你的数据，哪一个你觉得舒服。

@@ -1,38 +1,17 @@
+
 # Spring Cloud 基础指南
 
+## 第 1 模块：课程概述
 
+云，或云计算，真的在改变我们作为开发者思考设计和开发软件的方式。这正是 Spring Cloud 大显身手的地方。Spring Cloud 帮助你通过将 Spring Boot 的优势与经过证明的云策略相结合，充分利用这些新范式，帮助你设计和开发云原生应用程序。我们将涵盖的一些主要主题包括使用 Spring Cloud 和 Netflix Eureka 进行服务发现、使用 Spring Cloud Config Server 进行分布式配置、使用 Spring Cloud 和 Netflix Ribbon 进行客户端负载均衡、通过网关服务使用 Spring Cloud 和 Netflix Zuul 进行智能路由，以及使用 Spring Cloud 和 Netflix Hystrix 进行容错。读完这本书后，你将知道如何构建充分利用云的应用程序。在开始本书之前，你应该熟悉 Java、Spring Boot，并且对微服务有至少入门级别的理解。
 
+## 第 2 模块：熟悉 Spring Cloud
 
+### 著名的云
 
+云，或云计算，真的在改变我们作为开发者思考设计和开发软件的方式。这正是 Spring Cloud 大显身手的地方。Spring Cloud 帮助你通过将 Spring Boot 的优势与经过证明的云策略相结合，充分利用这些新范式，帮助你设计和开发云原生应用程序。我们将涵盖的一些主要主题包括使用 Spring Cloud 和 Netflix Eureka 进行服务发现、使用 Spring Cloud Config Server 进行分布式配置、使用 Spring Cloud 和 Netflix Ribbon 进行客户端负载均衡、通过网关服务使用 Spring Cloud 和 Netflix Zuul 进行智能路由、以及使用 Spring Cloud 和 Netflix Hystrix 进行容错。读完这本书后，你将知道如何构建充分利用云的应用程序。在开始本书之前，你应该熟悉 Java、Spring Boot，并且对微服务有至少入门级别的理解。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 第 1 模块：课程概述
-
-云，或云计算，真的在改变我们作为开发者思考设计和开发软件的方式。这正是 Spring Cloud 大派用用场。Spring Cloud 帮助你通过将 Spring Boot 的优势与经过证明的云策略相结合，充分利用这些新范式，帮助你设计和开发云原生应用程序。我们将涵盖的一些主要主题包括使用 Spring Cloud 和 Netflix Eureka 进行服务发现、使用 Spring Cloud Config Server 进行分布式配置、使用 Spring Cloud 和 Netflix Ribbon 进行客户端负载均衡、通过网关服务使用 Spring Cloud 和 Netflix Zuul 进行智能路由，以及使用 Spring Cloud 和 Netflix Hystrix 进行容错。读完这本书后，你将知道如何构建充分利用云的应用程序。在开始本书之前，你应该熟悉 Java、Spring Boot，并且对微服务有至少入门级别的理解。
-
-# 第 2 模块：熟悉 Spring Cloud
-
-## 著名的云
-
-云，或云计算，真的在改变我们作为开发者思考设计和开发软件的方式。这正是 Spring Cloud 大派用用场。Spring Cloud 帮助你通过将 Spring Boot 的优势与经过证明的云策略相结合，充分利用这些新范式，帮助你设计和开发云原生应用程序。我们将涵盖的一些主要主题包括使用 Spring Cloud 和 Netflix Eureka 进行服务发现、使用 Spring Cloud Config Server 进行分布式配置、使用 Spring Cloud 和 Netflix Ribbon 进行客户端负载均衡、通过网关服务使用 Spring Cloud 和 Netflix Zuul 进行智能路由、以及使用 Spring Cloud 和 Netflix Hystrix 进行容错。读完这本书后，你将知道如何构建充分利用云的应用程序。在开始本书之前，你应该熟悉 Java、Spring Boot，并且对微服务有至少入门级别的理解。
-
-
-
-
-
-# 前提条件
+### 前提条件
 
 - Java 8+
 - Spring Boot 1.4+
@@ -46,67 +25,66 @@
 
 接下来，我们来谈谈为了在本书中获得成功你需要哪些软件。当然，你需要 Java、Java 8，而且你还需要 Maven（至少是 Maven 3）来构建 Spring Boot 应用。我们将使用 Spring Tool Suite（或者叫它 Eclipse STS）进行所有的开发。请确保你安装了至少 3.8 版本的版本。
 
-# 模块 3：使用服务发现查找服务
+## 模块 3：使用服务发现查找服务
 
-## 什么是服务发现？
+### 什么是服务发现？
 
-- 在本模块中：
-  - 服务发现
-  - 使用 Spring Cloud 发现服务
-    - 使用 Eureka 客户端和服务
-    - 配置
-    - 健康状况与高可用性
-    - 控制面板
-    - AWS 可用性
+**在本模块中：**
+
+- 服务发现
+- 使用 Spring Cloud 发现服务
+  - 使用 Eureka 客户端和服务
+  - 配置
+  - 健康状况与高可用性
+  - 控制面板
+  - AWS 可用性
 
 在本模块中，我们将介绍服务发现如何帮助你在云端定位你的应用服务。让我们快速开始谈谈这个模块的内容，首先我们将查看服务发现。显然，这个模块是关于服务发现的，因此我们将讨论它是什么以及它为什么重要。然后，我们将查看 Spring Cloud 如何实现服务发现。它使用了一个来自 Netflix 的开源项目，叫做 Eureka，我们将讨论 Eureka Client 和 Eureka Server。接着，我们将转向配置，配置 Eureka Client、Eureka Server 和 Eureka Instance（实例），以及它们之间有何不同，以及你如何根据自己的需求对它们进行调整或配置。然后，我们将进入健康状况和高可用性部分。Eureka Server 如何知道你的应用程序何时宕机或处于不健康状态？你如何确保 Eureka Server 是高可用的？然后我们将查看 Eureka Dashboard，这是一个非常棒 Web UI，可以显示你所有注册的服务、有多少个实例，以及它们是运行还是离线状态。
 
 最后，我们将介绍 Eureka 如何对 AWS 提供特定的支持。让我们从最重要的问题开始：什么是服务发现，我们为什么需要它？记住，云端正在改变我们构建软件的方式。我们正在从构建这些单一大型应用，转变为将其拆分成更小的碎片，称为“服务”。每一个独立的服务都可以独立进行部署和扩展，而它们共同作为一个整体，构成了整个……问题就出于此。一个服务如何知道另一个服务在哪里、它的主机和端口是什么，以便它可以调用并使用它？首先，我们可以简单地配置所有的服务，让它们知道所调用的其他服务的位置和端口。根据需求，这实际上可以让我们走得很远。但过了一段时间，我们会发现这种方法存在问题。例如，如果你有一个特定服务的两个实例怎么办？在我们的示例中，我们有 Application Service A 调用 Application Service B。如果我们使用配置，每当我们添加或移除 Application Service B 的新实例时，我们都必须更新该配置。嗯，在我们的示例中，我们只有两个实例。想象一下如果你有数百个实例呢。光是配置管理就是不可持续的。当我们迁移到云环境时，我们的简单配置会进一步瓦解。在云环境中，你的服务实例可以根据需求随时出现或消失。例如，Application Service B 有时启动两个实例，考虑一下你可能有巨大的流量涌入，也许是你的电子商务网站正在进行闪购活动，然后自动化进程启动并开启了另外两个实例来处理所有这些流量。嗯，如果你使用简单配置，Application Service B 的所有调用者（如 Application Service A）将不知道为了响应需求而添加的新实例。对它们来说，它们的配置显示仍然只有它们已知的两个实例。另一个需要考虑的因素是，应用服务最终会失败。无论发生什么，无论是内存问题还是硬件问题，如果你使用简单配置，你的服务将尝试向那些失败的实例发送流量。例如这里，我们有 Application Service A 调用 Application Service B，并且它有两个实例。如果其中一个实例失败了，Application Service A 并不会知情，并将继续向那个失败的实例发送流量。我们需要一种更动态的方法。当一种方法太过于静态时，对于我们在云端的需求来说，它太僵化了。这就是服务发现大显身手的地方。
 
-- 服务发现提供了：
-  - 服务注册自身的方式
-  - 服务注销自身的方式
-  - 客户端发现其他服务的方式
-  - 检查服务健康状况并移除不健康实例的方式
+**服务发现提供了：**
+
+- 服务注册自身的方式
+- 服务注销自身的方式
+- 客户端发现其他服务的方式
+- 检查服务健康状况并移除不健康实例的方式
 
 服务发现通常提供以下功能：服务注册自身的方式。这意味着当一个服务上线时，它可以调用 Service Discovery Server 并告知其服务的位置和端口，以便其他服务使用它。出于恰相反的原因，服务发现提供了服务注销自身的方式。所以如果一个服务关闭或临时离开，它会希望 Service Discovery Server 知道它不再可用。最重要的是，服务发现提供了客户端发现其他服务的方式。我所说的客户端指的是其他应用服务。所以如果你是一个需要使用另一个服务的应用服务，你需要找到该服务的位置和端口，你可以向 Service Discovery Server 查询。最后，服务发现提供了检查服务健康状况并移除不健康实例的方式。因此每个应用服务都会实现健康检查（通常通过 REST 端点），然后 Service Discovery Server 会调用其注册表中的实例。
 
-## 介绍 Spring Cloud Netflix
+### 介绍 Spring Cloud Netflix
 
 在了解了服务发现是什么以及它为什么重要之后，让我们学习 Spring Cloud 如何帮助我们实现它。
 
-- 使用以下项目发现服务：
-  - Spring Cloud Consul
-  - Spring Cloud Zookeeper
-  - Spring Cloud Netflix
+**使用以下项目发现服务：**
+
+- Spring Cloud Consul
+- Spring Cloud Zookeeper
+- Spring Cloud Netflix
 
 实际上有多种使用 Spring Cloud 发现的方法。有 Spring Cloud Consul 项目、Spring Cloud Zookeeper 项目以及 Spring Cloud Netflix 项目。我们将专门关注最后一个，Spring Cloud Netflix 项目。
 
-- Netflix OSS + Spring + Spring Boot = Spring Cloud Netflix
+**Netflix OSS + Spring + Spring Boot = Spring Cloud Netflix**
 
 Spring Cloud 项目获取了 Netflix 的开源项目并添加了一些 Spring 和 Boot 的特性。你可以说他们是对它们进行了“Spring 化”。由此诞生了 Spring Cloud Netflix 项目。类似于 Spring Cloud 项目，Spring Cloud Netflix 项目本身实际上并不是一个项目。相反，它是一个项目的集合。对于服务发现，我们感兴趣的是其中的两个项目：Spring Cloud Netflix Eureka Server 和 Spring Cloud Netflix Eureka Client。
 
-
-
-
-
-## 参与服务发现的关键组件
+### 参与服务发现的关键组件
 
 在我们深入研究 Spring Cloud Eureka 服务器和客户端之前，了解参与服务发现的关键组件以及它们之间如何交互将很有帮助。最少有三个组件参与了服务发现：发现服务器（Discovery Server）、应用程序服务（application service）和应用程序客户端（application client）。全面理解所有组件如何协同工作将非常有帮助，从那里开始我们将深入探讨每个组件，并查看 Spring Cloud 如何帮助我们实现这些特定的组件。
 
-- (1) 服务注册位置
-- (2) 客户端查找服务位置
-- (3) 发现服务器返回位置
-- (4) 客户端在位置请求服务
-- (5) 服务发送响应
+1. 服务注册位置
+2. 客户端查找服务位置
+3. 发现服务器返回位置
+4. 客户端在位置请求服务
+5. 服务发送响应
 
 首先发生的是应用程序服务的启动。当它启动时，它会调用发现服务器并注册自己。它会告诉发现服务器它的位置、端口以及其他可以用来找到它的服务标识符。然后，在稍后的某个时刻，客户端需要调用该应用程序服务，但它不知道该服务的位置和端口，因此它向发现服务器发送请求并带上服务标识符。发现服务器根据该服务标识符知道你请求的是哪个服务，并返回该服务的位置和端口。从那里开始，一切按正常程序进行，客户端可以请求服务及其位置，而服务可以返回数据。
 
-### 发现服务器
+#### 发现服务器
 
-我们将深入探讨服务发现中的每个关键组件，并从发现服务器开始。发现服务器的核心是一个主动管理的服务位置注册表。它负责允许其他实体能够发现服务，并允许服务进行自我注册和注销。如果可以这么说，它是“真理之源”。你通常不会运行超过一个发现服务器实例，因为它是定位其他其他服务的组件。如果你无法定位其他服务，那么这就是整个架构中非常重要的一个部分。你可以在 Spring Cloud Eureka Server 项目中找到发现服务器的实现。在整本书中，我们将进行非常简单的演示，即易于设置和巩固概念的内容。在这个示例中，我们将学习如何使用 Spring Cloud 创建发现服务器。我将详细说明每一步，然后我们将跟进一个真实示例。使用 Spring Cloud Eureka Server 项目创建发现服务器非常简单。事实上，它简单到几乎令人大为情。
+我们将深入探讨服务发现中的每个关键组件，并从发现服务器开始。发现服务器的核心是一个主动管理的服务位置注册表。它负责允许其他实体能够发现服务，并允许服务进行自我注册和注销。如果可以这么说，它是“真理之源”。你通常不会运行超过一个发现服务器实例，因为它是定位其他其他服务的组件。如果你无法定位其他服务，那么这就是整个架构中非常重要的一个部分。你可以在 Spring Cloud Eureka Server 项目中找到发现服务器的实现。在整本书中，我们将进行非常简单的演示，即易于设置和巩固概念的内容。在这个示例中，我们将学习如何使用 Spring Cloud 创建发现服务器。我将详细说明每一步，然后我们将跟进一个真实示例。使用 Spring Cloud Eureka Server 项目创建发现服务器非常简单。事实上，它简单到几乎令人大为惊叹。
 
-pom.xml :
+**pom.xml :**
 
 ```xml
 <dependencyManagement>
@@ -133,16 +111,22 @@ pom.xml :
 
 仍在你的 `pom.xml` 中，定义一个新依赖 `spring-cloud-starter-eureka-server`。确保将其放置在 `dependency` 部分，而不是 `dependencyManagement` 部分。
 
-Application.properties :
+**Application.properties :**
+
+```properties
 spring.application.name=discovery-server
+```
 
 或者
 
-Application.yml :
+**Application.yml :**
+
+```yaml
 spring:
   application.name: discovery-server
+```
 
-在在你的 `application.properties` 或 `application.yml` 中，定义一个新属性 `spring.application.name`。你可以给它任何想要的值。在我们的案例中，我们将使用 `discovery-server`。
+在你的 `application.properties` 或 `application.yml` 中，定义一个新属性 `spring.application.name`。你可以给它任何想要的值。在我们的案例中，我们将使用 `discovery-server`。
 
 ```java
 @SpringBootApplication
@@ -159,22 +143,21 @@ public class Application{
 ### 演示：设置服务发现服务器
 
 在这个演示中，我们将使用 Spring Cloud Eureka Server 项目创建并启动我们自己的服务发现服务器。首先，让我们前往 start.spring.io，我们将使用这个 Spring Initializr 为我们的项目创建存根。它是一个非常棒的小骨架创建器，可以为我们节省大量时间。
+
 在 Group 部分，我将放入 `io.ajay.kumar`，在 Artifact 部分，我将其命名为 `discovery-server`。在 dependencies 部分，我将添加 Eureka Server（这就是发现服务器），我还会添加 DevTools 和 Spring Boot Actuator 项目。
 
-### 生成 Spring Boot 项目元数据
+#### 生成 Spring Boot 项目元数据
 
-## Artifact 坐标
+**Artifact 坐标**
 
 | 字段 | 值 |
 | :--- | :--- |
 | Group | io.ajay.kumar |
 | Artifact | discovery-server |
 
-### 依赖
+**依赖**
 
 向你的应用程序添加 Spring Boot Starters 和依赖
-
-搜索依赖
 
 | 搜索 | 选定的依赖 |
 | :--- | :--- |
@@ -186,7 +169,7 @@ public class Application{
 Generate Project Alt + d
 ```
 
-一旦你添加了所有依赖，点击 Generate Project。一旦你添加了所有依赖，点击 Generate Project 按钮。点击该按钮后，将为你下载一个 zip 文件，其中包含了我们的项目存根。解压下载的文件。然后我们将打开 IDE 并导入。我切换到了 IDE，即 Spring Tool Suite。在 Package Explorer 标签页的空白区域，右键点击 Import。选择 Existing Maven Projects。点击 Next，浏览解压项目的位置，然后点击 Open。在 Projects 下你应该能看到 `pom.xml`。点击 Finish，等待它导入。
+一旦你添加了所有依赖，点击 Generate Project。点击该按钮后，将为你下载一个 zip 文件，其中包含了我们的项目存根。解压下载的文件。然后我们将打开 IDE 并导入。我切换到了 IDE，即 Spring Tool Suite。在 Package Explorer 标签页的空白区域，右键点击 Import。选择 Existing Maven Projects。点击 Next，浏览解压项目的位置，然后点击 Open。在 Projects 下你应该能看到 `pom.xml`。点击 Finish，等待它导入。
 
 一旦项目导入完成，展开它并打开主应用程序类。它应该是 `DiscoveryServerApplication`，这就是我们要添加注解以启用发现服务器的地方。因此在 `@SpringBootApplication` 注解上方，我们可以添加一个新的注解 `@EnableEurekaServer`。保存它。
 
@@ -207,26 +190,25 @@ public class DiscoveryServerApplication {
 
 我们现在准备好启动我们的发现服务器了，所以右键点击主应用程序类，选择 Run As，选择 Spring Boot App。
 
-一旦应用程序加载完成，展开 Console 窗口。你会发现这里有几个异常。停止应用程序服务器；否则它将继续抛出这些异常。让我们滚动到其中一个异常处，看看问题在哪里。Cannot execute request on any known server。如果你查看的话，它源自这个 `DiscoveryClient.getAndStoreFullRegistry` 方法。发生的情况是发现服务器正在启动，它正尝试与对等发现服务器进行自我注册。这主要是为了高可用性。然而，当我们运行单机模式或开发模式时，每次都要设置多个实例可能会有点麻烦。因此，我们将配置 Eureka Server 不要与其对等节点进行自我注册。你绝对只想在开发模式下这样做，因为在生产环境中我们需要那种高可用性。
 
 
+一旦应用程序加载完成，展开 Console 窗口。你会发现这里有几个异常。停止应用程序服务器；否则它将继续抛出这些异常。让我们滚动到其中一个异常处，看看问题在哪里。`Cannot execute request on any known server`。如果你查看的话，它源自这个 `DiscoveryClient.getAndStoreFullRegistry` 方法。发生的情况是发现服务器正在启动，它正尝试与对等发现服务器进行自我注册。这主要是为了高可用性。然而，当我们运行单机模式或开发模式时，每次都要设置多个实例可能会有点麻烦。因此，我们将配置 Eureka Server 不要与其对等节点进行自我注册。你绝对只想在开发模式下这样做，因为在生产环境中我们需要那种高可用性。
 
+由于我们本身就是发现服务器，而且我们运行在独立模式下，因此我们不需要向任何其他节点注册，因为根本没有其他节点。所以，请确保你将该值设置为 `false`。下一个属性也是一个 Eureka Client 属性，请直接输入 `eureka.client.fetch-registry`。此属性控制 Eureka Client 是否会从 Eureka Server 获取注册表，由于我们是唯一的 Eureka Server，没有其他地方可以从别人那里获取内容，因此我们将此设置为 `false`。我们要添加的最后一个属性是 Eureka 发现服务器的默认端口。一旦你设置好了这些属性，即 `server.port`，我们将将其设置为 `8761`。转到主应用程序类，右键点击它，并选择“作为 Spring Boot 运行”。当你的应用启动完成后，展开控制台，你将看到它启动了 Eureka Server 并将其状态更改为 `UP`。现在，你拥有了一个正在运行的服务发现服务器。
 
-由于我们本身就是发现服务器（Discovery Server），而且我们运行在独立模式下，因此我们不需要向任何其他节点注册，因为根本没有其他节点。所以，请确保你将该值设置为 `false`。下一个属性也是一个 Eureka Client 属性，请直接输入 `eureka.client.fetch-registry`。此属性控制 Eureka Client 是否会从 Eureka Server 获取注册表，由于我们是唯一的 Eureka Server，没有其他地方可以从别人那里获取内容，因此我们将此设置为 `false`。 我们要添加的最后一个属性是 Eureka 发现服务器的默认端口。一旦你设置好了这些属性，即 `server.port`，我们将将其设置为 `8761`。转到主应用程序类，右键点击它，并选择“作为 Spring Boot 运行”（Run As Spring Boot App）。当你的应用启动完成后，展开控制台，你将看到它启动了 Eureka Server 并将其状态更改为 `UP`。现在，你拥有了一个正在运行的服务发现服务器。
-
-### 应用服务
+## 应用服务
 
 - 提供某些应用程序功能
 - 请求的接收者
 - 其他服务的依赖项
 - 一个或多个实例
 - 发现客户端的使用
-  - 注册 (Register)
-  - 注销 (Deregister)
+  - 注册
+  - 注销
 
-记住，我们正在深入研究服务发现的每个组件，我们列表中的下一个是应用服务。这是任何提供功能的实体。它是接收请求并返回响应的实体。它是其他服务的依赖项。因此，其他服务依赖于它的功能。你通常运行应用服务的一个或多个实例。应用服务是发现客户端的用户。它将使用它来调用发现服务器并进行注册和注销。就像我们对服务服务器（Service Server）做的那样，我们将详细说明向应用服务添加 Eureka Client 所需的步骤，然后我们实际创建一个。
+记住，我们正在深入研究服务发现的每个组件，我们列表中的下一个是应用服务。这是任何提供功能的实体。它是接收请求并返回响应的实体。它是其他服务的依赖项。因此，其他服务依赖于它的功能。你通常运行应用服务的一个或多个实例。应用服务是发现客户端的用户。它将使用它来调用发现服务器并进行注册和注销。就像我们对服务服务器做的那样，我们将详细说明向应用服务添加 Eureka Client 所需的步骤，然后我们实际创建一个。
 
-#### 在服务中使用 Spring Cloud Eureka Client
+### 在服务中使用 Spring Cloud Eureka Client
 
 ```xml
 <dependencyManagement>
@@ -242,7 +224,7 @@ public class DiscoveryServerApplication {
 </dependencyManagement>
 ```
 
-在你的 Maven 项目的 `pom.xml` 中，添加一个新的 `dependencyManagement` ，然后添加一个新的依赖 `spring-cloud-dependencies`。再次确保它的类型为 `pom` 且作用域为 `import`。
+在你的 Maven 项目的 `pom.xml` 中，添加一个新的 `dependencyManagement`，然后添加一个新的依赖 `spring-cloud-dependencies`。再次确保它的类型为 `pom` 且作用域为 `import`。
 
 ```xml
 <dependency>
@@ -254,6 +236,7 @@ public class DiscoveryServerApplication {
 仍在 `pom.xml` 中，在 `dependencies` 内部添加一个新的依赖，这个依赖叫做 `spring-cloud-starter-eureka`。然后在在你的 `application.properties` 或 `application.yml` 中，添加新属性。
 
 application.properties
+
 ```properties
 spring.application.name=service
 eureka.client.service-url.defaultZone=http://localhost:8761/eureka
@@ -262,6 +245,7 @@ eureka.client.service-url.defaultZone=http://localhost:8761/eureka
 或者
 
 application.yml
+
 ```yaml
 spring:
   application:
@@ -286,21 +270,26 @@ public class Application {
 
 然后在你应用服务的主 `Application` 类中添加一个注解。再次，Spring Cloud 的同事们为我们简化了工作，即提供了 `@EnableDiscoveryClient` 注解。它的作用是让我们的应用服务向发现服务器注册自己，然后其他服务就可以找到它。
 
-### 演示：让应用服务变得可发现
+## 演示：让应用服务变得可发现
 
 我们将使用 Spring Initializr 来创建我们的应用服务，所以请前往 start.spring.io。在这里的 Group 处你输入 `io.ajay.kumar`，我们将 Artifact 命名为 `service-name`。你将拥有几乎相同的依赖，但这次你想要的是 Eureka Discovery 依赖而不是 Eureka Server 依赖。你可以直接添加 DevTools 和 Actuator。
 
 ### 生成一个带有 Java 和 Spring Boot 2.1.0 的 Maven 项目
 
 ### 项目元数据 Artifact 坐标
-Group: io.ajay.kumar
-Artifact: service
+
+Group: `io.ajay.kumar`
+
+Artifact: `service`
 
 ### 依赖
+
 向你的应用程序添加 Spring Boot Starters 和依赖
+
 搜索依赖：Web, Security, JPA, Actuator, Devtools...
 
 已选依赖
+
 - DevTools
 - Actuator
 - Eureka Discovery
@@ -338,10 +327,7 @@ public class ServiceApplication {
 
 在我们的应用服务的主类 `ServiceApplication` 中，我们添加 `@EnableDiscoveryClient` 注解。这让让我们的应用服务变成发现服务器的客户端，并导致它在启动时向发现服务器注册。在 `@SpringBootApplication` 注解下方，添加一个新的注解 `@RestController`。记住，我们正在通过快速简易的演示来巩固概念，我们在这里使用的某些内容并不是最佳实践，你不应该在常规应用程序中使用它们。例如，你通常不会在主类上放置 `@RestController`，但由于我们正在用它来快速演示，所以这是可以的。让我们在这里添加一个新方法 `public String message()`。我们可能需要为它添加 `@RequestMapping` 注解，我们将将其设为根路径。我们的计划是能够启动该应用服务的多个实例。我们将这里添加一个属性 `private String instance`。我们将为它添加 `@Value` 注解，并传入一个 `service.instance.name` 的占位符。
 
-
-
-
-选择类，点击 Run As，然后进入 Run Configurations。突出 Spring Boot App 部分并点击 New。在 Project 下我们选择 service，在 Main type 下我们选择 io.ajay.kumar.ServiceApplication。在 Override properties 区域，我们将添加 `server.port`，并给它赋值为 `8081`。然后，我们还要为实例命名，即 `service.instance.name`。这就是我们想出来的属性。我们将此实例命名为 `instance 1`。别忘记给你的实例命名，我们将其命名为 `instance 1`。
+选择类，点击 Run As，然后进入 Run Configurations。突出 Spring Boot App 部分并点击 New。在 Project 下我们选择 service，在 Main type 下我们选择 `io.ajay.kumar.ServiceApplication`。在 Override properties 区域，我们将添加 `server.port`，并给它赋值为 `8081`。然后，我们还要为实例命名，即 `service.instance.name`。这就是我们想出来的属性。我们将此实例命名为 `instance 1`。别忘记给你的实例命名，我们将其命名为 `instance 1`。
 
 然后，我们将复制此运行配置来创建第二个实例。点击这里的 Duplicate（复制）按钮，点击它，给它一个新名字 `instance 2`。我们将端口更改为 `8082`，并将实例更改为 `2`。点击 Apply 并关闭窗口。在我们启动服务应用程序的实例之前，我们需要先启动 Discovery Server（发现服务器），以便它们能够注册自己。展开 `discovery-server`，右键点击主应用程序类，选择 Run As -> Spring Boot App。一旦服务发现服务器启动，我们就可以启动应用程序实例了。回到主 `ServiceApplication` 类，右键点击 Run As，然后进入 Run Configurations。突出 `instance 1` 并点击 Run。你可以对 `instance 2` 执行同样的操作。右键点击 `ServiceApplication`，Run As，Run Configurations，突出 `instance 2` 并点击 Run。你可以点击此处的下拉菜单查看每个实例。你可以看到 `discovery-server` 已启动，`instance 1` 已启动，`instance 2` 已启动。我们目前正在查看 `instance 2`。如果展开 Console 并滚动，我们可以看到应用程序成功在 Discovery Server 中注册了自己。它显示正在注册服务，注册状态为 204。
 
@@ -370,7 +356,7 @@ Registered instance SERVICE/DESKTOP-OIHUU6JB:service:8082 with status UP (replic
 Registered instance SERVICE/DESKTOP-OIHUU6JB:service:8082 with status UP (replication=true)
 ```
 
-## 应用程序客户端 (Application Client)
+## 应用程序客户端
 
 - 调用另一个应用程序服务来实现其功能
 - 请求发布者
@@ -382,12 +368,12 @@ Registered instance SERVICE/DESKTOP-OIHUU6JB:service:8082 with status UP (replic
 
 ### 应用程序客户端详情
 
-| 特性 (Feature) | same (Description) |
+| 特性 | 说明 |
 | :--- | :--- |
-| 角色 (Role) | 请求发布者 |
-| 依赖 (Dependency) | 依赖其他服务 |
-| 发现 (Discovery Usage) | 发现客户端的用户 |
-| 目的 (Purpose) | 查找服务位置 |
+| 角色 | 请求发布者 |
+| 依赖 | 依赖其他服务 |
+| 发现 | 发现客户端的用户 |
+| 目的 | 查找服务位置 |
 
 让我们继续深入探讨参与服务发现的组件。接下来是应用程序客户端，它是负责调用另一个应用程序服务以来实现其服务中某些功能的部分。它是请求的发布者，并依赖于其他服务。与应用程序服务类似，应用程序客户端也是发现客户端的用户，但方式不同。它不是使用它来注册或注销任何内容，而是使用它来查找服务位置。明确一下，一个应用程序既是服务又是客户端是完全合理的。
 
@@ -397,8 +383,8 @@ Registered instance SERVICE/DESKTOP-OIHUU6JB:service:8082 with status UP (replic
 
 #### 依赖选项
 
-- 使用 EurekaClient
-- 使用 DiscoveryClient
+- 使用 `EurekaClient`
+- 使用 `DiscoveryClient`
 
 ```xml
 <dependency>
@@ -425,6 +411,8 @@ spring:
       register-with-eureka: false
 ```
 
+
+
 ```java
 @SpringBootApplication
 @EnableDiscoveryClient
@@ -435,42 +423,43 @@ public class Application {
 }
 ```
 
-## Demo：作为应用程序客户端查找并调用服务
+# Demo：作为应用程序客户端查找并调用服务
 
-为了创建我们的客户端，我们将再次从 start.spring.io 开始。我们将给它一个相同的 group ID，即 io.ajay.kumar，并把 Artifact 命名为 client。它将具有我们在应用程序服务中使用的相同依赖项。我们需要 Eureka Discovery、DevTools 以及 Actuator。
+为了创建我们的客户端，我们将再次从 start.spring.io 开始。我们将给它一个相同的 group ID，即 `io.ajay.kumar`，并把 Artifact 命名为 `client`。它将具有我们在应用程序服务中使用的相同依赖项。我们需要 Eureka Discovery、DevTools 以及 Actuator。
 
 ![](img/e33dbe7cce1ed533e80ee7389d9ce1d8_36_0.png)
-
-
-
 
 ## 使用 Java 和 Spring Boot 2.1.0 生成 Maven 项目
 
 ### 项目元数据
-Artifact 坐标
-- Group: io.ajay.kumar
-- Artifact: client
+
+**Artifact 坐标**
+
+- Group: `io.ajay.kumar`
+- Artifact: `client`
 
 ### 依赖
+
 为你的应用程序添加 Spring Boot Starters 和依赖
 
-搜索依赖
-Web, Security, JPA, Actuator, Devtools...
+搜索依赖: `Web, Security, JPA, Actuator, Devtools...`
 
 已选择的依赖
+
 - Eureka Server
 - DevTools
 - Actuator
 - Eureka Discovery
 
-生成项目 (alt +)
+生成项目 (`alt +`)
 
-点击 Generate Project。这会自动创建并下载一个 zip 文件。现在去解压该文件，我们将将其导入 IDE 中。在 Spring Tool Suite 的 Package Explorer（包管理器）区域，在空白处右键点击，选择 Import，然后选择 Existing Maven Projects，浏览到解压文件的位置，确保 Projects 标题下显示出 pom.xml，然后点击 Finish 完成导入。
+点击 Generate Project。这会自动创建并下载一个 zip 文件。现在去解压该文件，我们将将其导入 IDE 中。在 Spring Tool Suite 的 Package Explorer（包管理器）区域，在空白处右键点击，选择 Import，然后选择 Existing Maven Projects，浏览到解压文件的位置，确保 Projects 标题下显示出 `pom.xml`，然后点击 Finish 完成导入。
 
-展开 client 项目，转到 src/main/java，打开主应用程序类并进行以下更改。
+展开 client 项目，转到 `src/main/java`，打开主应用程序类并进行以下更改。
 
 ```java
 package io.ajay.kumar.client;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -502,13 +491,13 @@ public class ClientApplication {
 }
 ```
 
-在主应用程序中，添加新注解 @EnableDiscoveryClient。我们还会添加一个 @RestController 注解，并添加一个处理方法 `public String callService`。我们将给它添加一个 @RequestMapping，并将其映射到根路径。我们需要自动注入 DiscoveryClient 或 EurekaClient。我们将使用 EurekaClient，`private EurekaClient client`。我们使用 @Autowired 调用它。你也可以使用 @Inject。我们还需要一个 RestTemplate 来实际调用服务，所以我们会写 `private RestTemplateBuilder restTemplateBuilder`，并调用这个 restTemplateBuilder。我们也会对其进行自动注入。
+在主应用程序中，添加新注解 `@EnableDiscoveryClient`。我们还会添加一个 `@RestController` 注解，并添加一个处理方法 `public String callService`。我们将给它添加一个 `@RequestMapping`，并将其映射到根路径。我们需要自动注入 DiscoveryClient 或 EurekaClient。我们将使用 EurekaClient，即 `private EurekaClient client`。我们使用 `@Autowired` 调用它。你也可以使用 `@Inject`。我们还需要一个 RestTemplate 来实际调用服务，所以我们会写 `private RestTemplateBuilder restTemplateBuilder`，并调用这个 restTemplateBuilder。我们也会对其进行自动注入。
 
-在我们的 callService 方法中，我们将使用 RestTemplateBuilder 创建一个新的 RestTemplate，即 `RestTemplate rest = restTemplateBuilder.build();`。然后我们将使用 client 获取服务的 URL，即 `client.getNextServerFromEureka(...)`。关于虚拟主机名，请记得我们为服务设置了 spring.application.name——我们直接将其命名为 "service"。这将是一个非安全请求，所以填入 false。这返回一个 InstanceInfo 对象，我们将其命名为 `instanceInfo`。
+在我们的 `callService` 方法中，我们将使用 RestTemplateBuilder 创建一个新的 RestTemplate，即 `RestTemplate rest = restTemplateBuilder.build();`。然后我们将使用 client 获取服务的 URL，即 `client.getNextServerFromEureka(...)`。关于虚拟主机名，请记得我们为服务设置了 `spring.application.name`——我们直接将其命名为 `"service"`。这将是一个非安全请求，所以填入 `false`。这返回一个 InstanceInfo 对象，我们将其命名为 `instanceInfo`。
 
-然后我们获取基础 URL 并调用 RestTemplate，`String baseURL = instanceInfo.getHomePageUrl();`。接着我们使用 RestTemplate 调用该服务。RestTemplate 返回 ResponseEntity 的 String。我们将调用该响应，并使用 `RestTemplate.exchange(...)`。我们将传入 baseURL 和 HttpMethod GET。由于我们没有请求体，所以将 requestEntity 设置为 null，restType 为 String，我们也没有任何 uri 变量，因此删掉该参数。
+然后我们获取基础 URL 并调用 RestTemplate，`String baseURL = instanceInfo.getHomePageUrl();`。接着我们使用 RestTemplate 调用该服务。RestTemplate 返回 ResponseEntity 的 String。我们将调用该响应，并使用 `RestTemplate.exchange(...)`。我们将传入 baseURL 和 HttpMethod GET。由于我们没有请求体，所以将 requestEntity 设置为 `null`，restType 为 String，我们也没有任何 uri 变量，因此删掉该参数。
 
-在我们完成之前，让我们再回顾一遍。EurekaClient 正在调用发现服务器（Discovery Server），获取名为 "service" 的服务 ID 信息，并以 instanceInfo 的形式返回给我们。然后从该 instanceInfo 中，我们获取 HomePageUrl，即我们服务的基础 URL，然后我们使用 RestTemplate 调用该服务，具体是对该服务执行 GET 请求，它向我们返回一个字符串。最后我们只需返回该响应，即 `response.getBody()`。
+在我们完成之前，让我们再回顾一遍。EurekaClient 正在调用发现服务器（Discovery Server），获取名为 `"service"` 的服务 ID 信息，并以 instanceInfo 的形式返回给我们。然后从该 instanceInfo 中，我们获取 HomePageUrl，即我们服务的基础 URL，然后我们使用 RestTemplate 调用该服务，具体是对该服务执行 GET 请求，它向我们返回一个字符串。最后我们只需返回该响应，即 `response.getBody()`。
 
 ```properties
 application.properties :
@@ -517,15 +506,15 @@ eureka.client.service-url.defaultZone=http://localhost:8761/eureka
 eureka.client.register-with-eureka=false
 ```
 
-接下来，我们需要配置应用程序客户端。转到 src/main/resources 并打开 application.properties，我们将添加标准的 spring.application.name。我们将其命名为 client。然后我们将粘贴服务 URL 以免手动输入，接着进行 eureka.client.register-with-eureka。我们将将其设置为 false。记住，我们是一个客户端，不需要向 Eureka 注册，因为我们不需要任何人发现我们。
+接下来，我们需要配置应用程序客户端。转到 `src/main/resources` 并打开 `application.properties`，我们将添加标准的 `spring.application.name`。我们将其命名为 `client`。然后我们将粘贴服务 URL 以免手动输入，接着进行 `eureka.client.register-with-eureka`。我们将将其设置为 `false`。记住，我们是一个客户端，不需要向 Eureka 注册，因为我们不需要任何人发现我们。
 
 现在，在启动应用程序客户端之前，我们需要启动发现服务器以及每个应用程序服务实例，并且要按照特定的顺序进行。如果你一直在跟着操作，这些项目应该出现在你的运行历史中。你可以点击下拉菜单并选择每一个项目来启动它们。为了确认，我们检查下拉菜单，可以看到 discovery-server 正在运行，服务应用程序的实例 1 和实例 2 运行。
 
-现在我们准备好启动客户端应用程序了。我们可以右键点击主应用程序类，选择 Run As，然后选择 Spring Boot App。打开浏览器并访问 localhost:8080。按下回车，你应该能看到来自客户端的响应。它会显示 "Hello from instance 1"。如果你刷新它，它会显示 "Hello from instance 2"。我们可以不断重复此操作，每次我们都能看到它从 Eureka 注册表中获取了不同的实例。
+现在我们准备好启动客户端应用程序了。我们可以右键点击主应用程序类，选择 Run As，然后选择 Spring Boot App。打开浏览器并访问 `localhost:8080`。按下回车，你应该能看到来自客户端的响应。它会显示 "Hello from instance 1"。如果你刷新它，它会显示 "Hello from instance 2"。我们可以不断重复此操作，每次我们都能看到它从 Eureka 注册表中获取了不同的实例。
 
-## Spring Cloud Eureka Dashboard
+# Spring Cloud Eureka Dashboard
 
-Spring Cloud Eureka Server 提供的非常有用的功能之一就是仪表板。它是默认启用的，是一个基于 Web 的仪表板。它显示许多有用信息，例如服务是否在线或离线，以及注册了多少个实例。如果你仍在运行上一个演示中的程序，打开浏览器并访问 localhost:8761。你会看到这个 Spring Eureka Dashboard，让我们逐一查看这里的每个部分。
+Spring Cloud Eureka Server 提供的非常有用的功能之一就是仪表板。它是默认启用的，是一个基于 Web 的仪表板。它显示许多有用信息，例如服务是否在线或离线，以及注册了多少个实例。如果你仍在运行上一个演示中的程序，打开浏览器并访问 `localhost:8761`。你会看到这个 Spring Eureka Dashboard，让我们逐一查看这里的每个部分。
 
 ![](img/e33dbe7cce1ed533e80ee7389d9ce1d8_42_0.png)
 
@@ -557,21 +546,17 @@ Spring Cloud Eureka Server 提供的非常有用的功能之一就是仪表板�
 
 首先是系统状态（System Status），它会告诉你当前时间，以及过去一分钟内发生了多少次更新。DS Replicas（即发现服务器副本）部分显示了 Eureka 服务器的对等实例。如果我们有多个实例，我们会在这里列出每一个实例。但由于我们只有一个实例，所以只看到 localhost。下一部分可能是最有用的部分，因为它显示了当前注册到 Eureka 的所有实例。在 Application 标题下，我们在这里看到了服务 ID，即 SERVICE。AMI 指的是 Amazon Machine Image（亚马逊机器镜像）。由于我们没有在 Amazon 上运行，所以是 n/a。可用区（Availability Zones）有两个，且这两个实例都处于 UP（运行状态）。你可以看到 UP 旁的数字 2，这表示该服务有两个实例，且它们都处于 UP 状态。紧接着其后，你可以看到这两个实例，一个运行在 8082，另一个运行在 8081。
 
-
-
-
-
-### 配置
+# 配置
 
 你可以在多个不同的区域配置 Spring Cloud Eureka。我们将查看三个主要的区域：第一个是 `eureka.server` 前缀，第二个是 `eureka.client` 前缀，第三个是 `eureka.instance` 前缀。让我们详细介绍这些配置区域的每一个部分。第一个是 Eureka 服务器配置（Eureka Server Configuration），即 `eureka.server` 前缀下的所有配置。它将控制所有与配置发现服务器（Discovery Server）相关的内容。第二个是 Eureka 客户端配置（Eureka Client Configuration），即 `eureka.client` 前缀下的所有配置。它负责控制发现客户端如何与发现服务器交互。例如，你有像 `eureka.client.eureka-server-connect-timeout-seconds` 等属性，这会控制客户端在连接到 Eureka 服务器并超时之前等待连接的时间。第三个配置区域是 Eureka 实例（Eureka Instance），即 `eureka.instance` 前缀下的所有配置。Eureka 实例是指任何向 Eureka 服务器注册自己以便能够被其他实例发现的实体。`eureka.instance` 前缀下的属性控制着实例如何向 Eureka 服务器注册自己。例如，你有像 `eureka.hostname` 或 `eureka.health-check-url` 等属性，实例可以在那里配置自定义值，并以此方式向 Eureka 服务器注册。
 
-### 健康检查与高可用性
+# 健康检查与高可用性
 
-Spring Cloud Eureka 服务器还具有一些关于健康和高可用性的额外功能。它会不断确保它返回或交付给客户端的应用程序是健康且可用的。它还确保在发现服务器宕机的情况下，所有客户端都能继续运行。正如我提到的，Eureka 服务器持续关注其交付给客户端的应用程序健康状况。它会评估这种健康状况，至少默认情况下，每 30 秒向客户端发送一次心跳。如果如果 90 秒后没有收到来自该心跳的回包，它将将其从注册表中移除。默认配置下会发送心跳，但你也可以配置 Eureka 服务器访问某个端点（例如考虑到 `/health` 可用性），它实现这一目标的方法之一是当客户端请求时，实际上返回一份注册表副本。结果是注册表分发到了所有客户端上。如果发现服务器宕机，这些客户端就可以继续运行。发现服务器实际上会返回注册表的副本。你可能在想，等一下，如果发现服务器有了新信息或者其中一个服务宕机了怎么办？嗯，客户端必须定期续租许可或获取新的注册表，它是通过获取增量（deltas）来更新注册表来实现的。因此它在不再获取完整注册表而只获取更改方面非常智能。
+Spring Cloud Eureka 服务器还具有一些关于健康和高可用性的额外功能。它会不断确保它返回或交付给客户端的应用程序是健康且可用的。它还确保在发现服务器宕机的情况下，所有客户端都能继续运行。正如我提到的，Eureka 服务器持续关注其交付给客户端的应用程序健康状况。它会评估这种健康状况，至少默认情况下，每 30 秒向客户端发送一次心跳。如果 90 秒后没有收到来自该心跳的回包，它将将其从注册表中移除。默认配置下会发送心跳，但你也可以配置 Eureka 服务器访问某个端点（例如考虑到 `/health` 可用性），它实现这一目标的方法之一是当客户端请求时，实际上返回一份注册表副本。结果是注册表分发到了所有客户端上。如果发现服务器宕机，这些客户端就可以继续运行。发现服务器实际上会返回注册表的副本。你可能在想，等一下，如果发现服务器有了新信息或者其中一个服务宕机了怎么办？嗯，客户端必须定期续租许可或获取新的注册表，它是通过获取增量（deltas）来更新注册表来实现的。因此它在不再获取完整注册表而只获取更改方面非常智能。
 
-### AWS 支持
+# AWS 支持
 
-众周知，Netflix 是 AWS 的深度用户。鉴于 Eureka 诞生于 Netflix，包含 AWS 支持也完全合理。让我们来看看各种支持以及典型的部署架构。当使用 Eureka 客户端的应用程序启动时，它会检查自己是否运行在 AWS 实例上。如果是，它会调用本地元数据服务并检索该实例的一些元数据。它会获取 AWS 特有的信息，如正在运行的 Amazon 映像（AMI）或其所在的区域，然后在注册时将这些信息发送到发现服务器。鉴于 AWS 中的事物变化非常频繁，确保发现服务器位于已知位置是非常重要的。Eureka 增增加了对弹性 IP（Elastic IP）绑定的支持。当 Eureka 服务器启动并发现它运行在 AWS 上时，它将尝试绑定到下一个可用的弹性 IP，以便拥有静态或已知的 IP。Eureka 客户端也具有区域感知能力（zone aware），并优先选择它所在的区域。因此，它会尝试联系当前区域的发现服务器，如果无法访问，它将尝试下一个区域并找到下一个可用的发现服务器。最后，你可以配置 Eureka 客户端获取不同远程区域的注册表。为了利用 AWS 支持，需要一些额外的配置。
+众所周知，Netflix 是 AWS 的深度用户。鉴于 Eureka 诞生于 Netflix，包含 AWS 支持也完全合理。让我们来看看各种支持以及典型的部署架构。当使用 Eureka 客户端的应用程序启动时，它会检查自己是否运行在 AWS 实例上。如果是，它会调用本地元数据服务并检索该实例的一些元数据。它会获取 AWS 特有的信息，如正在运行的 Amazon 映像（AMI）或其所在的区域，然后在注册时将这些信息发送到发现服务器。鉴于 AWS 中的事物变化非常频繁，确保发现服务器位于已知位置是非常重要的。Eureka 增加了对弹性 IP（Elastic IP）绑定的支持。当 Eureka 服务器启动并发现它运行在 AWS 上时，它将尝试绑定到下一个可用的弹性 IP，以便拥有静态或已知的 IP。Eureka 客户端也具有区域感知能力（zone aware），并优先选择它所在的区域。因此，它会尝试联系当前区域的发现服务器，如果无法访问，它将尝试下一个区域并找到下一个可用的发现服务器。最后，你可以配置 Eureka 客户端获取不同远程区域的注册表。为了利用 AWS 支持，需要一些额外的配置。
 
 ```java
 @Configuration
@@ -593,17 +578,19 @@ public class AppConfig{
 | 34.192.167 |
 | 34.193.246 |
 
-- * application.properties 中的可用区配置
-- eureka.client.availability-zones=[az1]
+- `application.properties` 中的可用区配置
+- `eureka.client.availability-zones=[az1]`
 
-### EC2 仪表板
+# EC2 仪表板
+
+
 
 | 名称 | 实例 ID | 实例类型 | 可用区 |
 | :--- | :--- | :--- | :--- |
 | spring-cloud-server-1 | i-7b2c5578 | t2.micro | us-east-1b |
 | spring-cloud-server-2 | i-8bf8cb41 | t2.micro | us-east-1e |
 
-例如，如果你在 us-east-1b 区域有一个发现服务器，并且在 us-east-1e 区域有另一个发现服务器，你可以这样设置属性：`eureka.client.availability-zones`，然后区域是 `us-east-1`，你将设置 `us-east-1b` 和 `us-east-1e` 的逗号分隔列表。在 `application.properties` 中需要类似的配置用于你的服务 URL。
+例如，如果你在 `us-east-1b` 区域有一个发现服务器，并且在 `us-east-1e` 区域有另一个发现服务器，你可以这样设置属性：`eureka.client.availability-zones`，然后区域是 `us-east-1`，你将设置 `us-east-1b` 和 `us-east-1e` 的逗号分隔列表。在 `application.properties` 中需要类似的配置用于你的服务 URL。
 
 | DS 副本 |
 | :--- |
@@ -615,8 +602,8 @@ public class AppConfig{
 | DISCOVERY-SERVER-1 |
 | DISCOVERY-SERVER-2 |
 
-- * application.properties 中的服务 URL 配置
-- eureka.client.service-url.[zone]=http://[eip-dns]/eureka
+- `application.properties` 中的服务 URL 配置
+- `eureka.client.service-url.[zone]=http://[eip-dns]/eureka`
 
 ### 弹性 IP 仪表板
 
@@ -624,10 +611,7 @@ public class AppConfig{
 
 你会在 DS Replicas 下有两个实例，然后将有两个发现服务器实例，分别位于各自的可用区。
 
-
-
-
-同样，你可以在那些每一个发现服务器（Discovery Server）实例上打开仪表板，你会发现其中填充了 AWS 特有的元数据，例如实例类型（instance-type）、ami-id 或实例 ID（instance-id）。
+同样，你可以在那些每一个发现服务器（Discovery Server）实例上打开仪表板，你会发现其中填充了 AWS 特有的元数据，例如实例类型（`instance-type`）、AMI ID（`ami-id`）或实例 ID（`instance-id`）。
 
 现在我们已经了解了 Eureka 中提供的 AWS 支持，让我们来看看部署架构。通常情况下，你每个可用区（availability zone）都会拥有一个或多个发现服务器，然后你有多个可用区。在这些区域中的每一个，你会为每个发现服务器配置一个弹性 IP（Elastic IP）。然后，你通常会设置一个自动伸缩组（auto scaling group），将这些发现服务器均匀地分布在各个可用区。
 
@@ -639,7 +623,7 @@ public class AppConfig{
 
 ## 什么是配置服务器？
 
-在本模块中，我们将讨论如何在像云这样的分布式系统中管理你的应用程序配置。我们将直接进入分布式系统中的配置，以及为什么它比非分布式系统更不同、更具挑战性，更重要的是，我们为什么需要这种配置服务器（Configuration Server）。从那里，我们将深入研究 Spring Cloud 如何通过 Spring Cloud Config Server 实现配置服务器的细节。我们还将看到如何设置 Config Client 和 Config Server 并让它们相互通信。我们还会介绍 Spring Cloud Config Server 的各种后端存储选项，例如 Git 仓库或 SVN 仓库。接下来，也是我认为最酷的事情之一，我们将学习如何在不重启应用程序服务器的情况下动态更新我们的配置。我们将通过多种方法实现这一点，包括 Spring Cloud Actuator、Spring Cloud Bus 和 Spring Cloud Monitor 项目。我们还将学习 @RefreshScope 注解以及它为什么被需要以及在哪里使用它。最后我们将通过一个关于如何使用对称和非对称加密检索并存储敏感配置值的章节来结束本模块。
+在本模块中，我们将讨论如何在像云这样的分布式系统中管理你的应用程序配置。我们将直接进入分布式系统中的配置，以及为什么它比非分布式系统更不同、更具挑战性，更重要的是，我们为什么需要这种配置服务器（Configuration Server）。从那里，我们将深入研究 Spring Cloud 如何通过 Spring Cloud Config Server 实现配置服务器的细节。我们还将看到如何设置 Config Client 和 Config Server 并让它们相互通信。我们还会介绍 Spring Cloud Config Server 的各种后端存储选项，例如 Git 仓库或 SVN 仓库。接下来，也是我认为最酷的事情之一，我们将学习如何在不重启应用程序服务器的情况下动态更新我们的配置。我们将通过多种方法实现这一点，包括 Spring Cloud Actuator、Spring Cloud Bus 和 Spring Cloud Monitor 项目。我们还将学习 `@RefreshScope` 注解以及它为什么被需要以及在哪里使用它。最后我们将通过一个关于如何使用对称和非对称加密检索并存储敏感配置值的章节来结束本模块。
 
 那么，在云原生应用与非云原生应用中，管理配置到底有什么不同之处？答案源于事实：云原生应用是一个分布式系统，而非云原生应用不是分布式的。在分布式应用中，你通常只有少数配置文件。系统与其配置之间通常是一对一的关系。而当你转向分布式系统时，这种配置就会发生爆炸式增长。你从一个或多个配置文件变为了许多、许多配置文件，因为你有许多、许多系统共同构成了一个整体系统。例如，如果你使用微服务，构成你整个应用程序的每个单独微服务都将有自己的配置文件。
 
@@ -663,9 +647,6 @@ public class AppConfig{
 
 正如我们讨论过的，Spring Cloud Config Server 是配置服务器的一种实现。让我们深入查看它提供的功能以及如何设置。核心上，Config Server 只是一个 Web 应用程序，它提供了一个基于 REST 的接口来访问你的配置文件。你设置好配置文件，对它们进行命名，然后告诉配置服务器它们在哪里，它就会为你提供服务。重要的是指出，Config Server 不负责写入任何配置文件，它只关注提供这些文件。
 
-
-
-
 ```xml
 </dependency>
 </dependencies>
@@ -684,6 +665,7 @@ public class AppConfig{
 然后，在你的 `pom.xml` 中，为 `spring-cloud-config-server` 定义一个新的依赖项。接下来，创建一个文件夹来存储所有你想让 Configuration Server 提供的配置。在那个文件夹中，你可以选择性创建一个 `application.properties` 文件或 `application.yml` 文件。该文件用于适用于所有应用程序的全局配置，而不是适用于某个特定的应用程序。一个例子是跨越所有应用程序共享的数据库配置。你将它放在这个 `application.properties` 或 `application.yml` 文件中。接下来，在该文件夹中添加特定于应用和环境（profile）的配置文件，你可以使用 properties 或 YAML 格式。并使用特殊的特殊命名模式来命名文件，即 `application-profile.extension`，其中 `application` 是你的应用程序名称，而 `profile` 是适用于该配置的 Spring Profile。如果你没有使用 Spring Profile，可以省略文件名中的 `-profile` 部分，仅使用 `application.file` 扩展名。接下来，你在包含所有配置文件的文件夹中运行 `git init`。此示例假设你正在使用默认的后端存储，即 Git。从那里开始，你 `git add` 你的配置文件，`git commit` 它们，然后最后一步（可选的，但强烈建议）是设置远程 Git 仓库，并 `git push` 将配置推送到远程仓库。现在我们需要配置实际 Configuration Server 本身。不要将这与 Configuration Server 将提供的配置文件混淆。这是用于实际 Configuration Server 本身的应用程序配置。
 
 **application.properties**:
+
 ```properties
 server.port=8888
 spring.cloud.config.server.git.uri=<uri_to_git_repo>
@@ -692,6 +674,7 @@ spring.cloud.config.server.git.uri=<uri_to_git_repo>
 或者
 
 **application.yml**:
+
 ```yaml
 server:
   port: 8888
@@ -699,7 +682,8 @@ spring:
   cloud:
     config:
       server:
-        git:uri:<uri_to_git_repo>
+        git:
+          uri: <uri_to_git_repo>
 ```
 
 在 Config Server 的 `application.properties` 文件中，你指定 `server.port` 属性并赋值为 `8888`。这不是强制要求的，但该端口是 Configuration Server 使用的约定端口。然后，你需要配置包含所有提供服务的文件的 Git 仓库位置。你可以通过指定 `spring.cloud.config.server.git.uri` 属性来实现这一点，然后将其设置为 Git 仓库的位置。如果你将其上传到远程仓库，这将是你仓库的克隆 URL。如果你倾向于使用 YAML 文件进行配置，我包含了等效的 `application.yml`。
@@ -709,7 +693,7 @@ spring:
 @EnableConfigServer
 public class Application {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class,args);
+        SpringApplication.run(Application.class, args);
     }
 }
 ```
@@ -720,131 +704,73 @@ public class Application {
 
 通常，当你与 Config Server 的 REST 端点交互时，你是在使用 Config Client 进行的；然而，了解可用的端点是有用的，至少是为了调试目的，而且如果你想在另一种语言中使用它的话。Config Server 上的每个可用 REST 端点都共享一组公共参数。这些参数的值会影响返回的配置。
 
-- {application} 映射到客户端上的 `spring.application.name`
-- {profile} 映射到客户端上的 `spring.profiles.active`
-- {label} 服务端功能，用于通过名称引用一组配置文件
+- `{application}` 映射到客户端上的 `spring.application.name`
+- `{profile}` 映射到客户端上的 `spring.profiles.active`
+- `{label}` 服务端功能，用于通过名称引用一组配置文件
 
-第一个参数是应用参数。{application} 映射到客户端上的 `spring.application.name`。{profile} 映射到客户端上的 `spring.profiles.active`。{label} 服务端功能，用于通过名称引用一组配置文件。
-
-第一个参数是应用参数。{application} 映射到客户端上的 `spring.application.name`。下一个参数是 profile 参数。{profile} 映射到客户端上的 `spring.profiles.active`。最后一个参数是 label 参数。{label} 服务端功能，用于通过名称引用一组配置文件。
-
-第一个参数是应用参数。{application} 映射到客户端上的 `spring.application.name`。下一个参数是 profile 参数。{profile} 映射到客户端上的 `spring.profiles.active`。label 参数是 {label} 服务端功能，用于通过名称引用一组配置文件。
-
-第一个参数是应用参数。{application} 映射到客户端上的 `spring.application.name`。下一个参数是 profile 参数。{profile} 映射到客户端上的 `spring.profiles.active`。最后一个参数是 label 参数。{label} 服务端功能，用于通过名称引用一组配置文件。
-
-（此处省略原文中重复的段落翻译，保持逻辑一致）
-...
-（重复内容略）
-...
-...。{profile} 映射到客户端上的 `spring.profiles.active`。最后一个参数是 label 参数。{label} 服务端功能，用于通过名称引用一组配置文件。
-
-第一个参数是应用参数。{application} 映射到客户端上的 `spring.application.name`。下一个参数是 profile 参数。{profile} 映射到客户端上的 `spring.profiles.active`。
-
-参数。
+第一个参数是应用参数。`{application}` 映射到客户端上的 `spring.application.name`。下一个参数是 profile 参数。`{profile}` 映射到客户端上的 `spring.profiles.active`。最后一个参数是 label 参数。`{label}` 服务端功能，用于通过名称引用一组配置文件。
 
 ## Config Server REST 支持：端点
 
 通常当你与 Config Server 的 REST 端点交互时，你是在使用 Config Client 进行的；然而，了解可用的端点是有用的，至少是为了调试目的，而且如果你想在另一种语言中使用它。Config Server 上的每个可用 REST 端点都共享一组公共参数。这些参数的值会影响返回的配置。
 
-- GET /{application}/{profile}
-- GET /{application}/{profile}/{label}
-- POST /{application}/{profile}
-- POST /{application}/{profile}/{label}
-- PUT /{application}/{profile}
-- PUT /{application}/{profile}/{label}
-- DELETE /{application}/{profile}
-- DELETE /{application}/{profile}/{label}
+- `GET /{application}/{profile}`
+- `GET /{application}/{profile}/{label}`
+- `POST /{application}/{profile}`
+- `POST /{application}/{profile}/{label}`
+- `PUT /{application}/{profile}`
+- `PUT /{application}/{profile}/{label}`
+- `DELETE /{application}/{profile}`
+- `DELETE /{application}/{profile}/{label}`
 
-第一个参数是应用参数。{application} 映射到客户端上的 `spring.application.name`。下一个参数是 profile 参数。{profile} 映射到客户端上的 `spring.profiles.active`。最后一个参数是 label 参数。{label} 服务端功能，用于通过名称引用一组配置文件。
-
-（重复性段落略）
-...
-
-## Config Server REST 支持：端点
-
-- GET /{application}/{profile}
-- GET /{application}/{profile}/{label}
-- POST /{application}/{profile}
-- POST /{application}/{profile}/{label}
-
-- [-profile]
-
-第一个参数是应用参数。{application} 映射到客户端上的 `spring.application.name`。下一个参数是 profile 参数。{profile} 映射到客户端上的 `spring.profiles.active`。最后一个参数是 label 参数。{label} 服务端功能，用于通过名称引用一组配置文件。
-
-（重复性段落略）
-
-
+第一个参数是应用参数。`{application}` 映射到客户端上的 `spring.application.name`。下一个参数是 profile 参数。`{profile}` 映射到客户端上的 `spring.profiles.active`。最后一个参数是 label 参数。`{label}` 服务端功能，用于通过名称引用一组配置文件。
 
 默认表示默认配置，然后你以属性格式对其进行请求。
 
 ## 演示：设置配置服务器
 
-在这个演示中，我们将构建并启动自己的 Config Server（配置服务器）。因此最简单的方法是访问 start.spring.io。对于 Group ID，我们将使用 `io.ajay.kumar`。对于 Artifact，我们将使用 `configserver`。在依赖项，我们将添加 Config Server 依赖，还会添加 Eureka Discovery 依赖。这是一个可选的依赖，但它将允许我们的 Config Server 将自身注册到 Discovery Server（发现服务器），以便 Config 客户端能够找到它。最后，我们还要使用 Actuator 依赖。
 
-| Maven 项目 |
-| --- |
-| Java |
-| --- |
-| 2.1.0 |
-| --- |
 
-## 项目
+# 构建并启动 Config Server
 
-Artifact 坐标
+在这个演示中，我们将构建并启动自己的 Config Server（配置服务器）。因此最简单的方法是访问 `start.spring.io`。
 
-| Group |
-| --- |
-| io.ajay.kumar |
-| --- |
-| Artifact |
-| --- |
-| config-server |
-| --- |
+## 项目配置
 
-## 依赖 Spring Boot
+对于 Group ID，我们将使用 `io.ajay.kumar`。对于 Artifact，我们将使用 `configserver`。
 
-搜索 depend
+### 依赖项
 
-| web, security |
-| --- |
-| 已选依赖 |
-| Config Server |
-| --- |
+在依赖项中，我们将添加 Config Server 依赖，还会添加 Eureka Discovery 依赖。这是一个可选的依赖，但它将允许我们的 Config Server 将自身注册到 Discovery Server（发现服务器），以便 Config 客户端能够找到它。最后，我们还要使用 Actuator 依赖。
 
-## 使用 Java 和 Spring Boot 2.1.0 生成 Maven 项目
-
-### 项目元数据
-
-Artifact 坐标
-
-| Group | Artifact |
+| 项目属性 | 值 |
 | :--- | :--- |
-| io.ajay.kumar | config-server |
+| 类型 | Maven 项目 |
+| 语言 | Java |
+| Spring Boot 版本 | 2.1.0 |
 
-### 依赖
+| 项目坐标 | 值 |
+| :--- | :--- |
+| Group | `io.ajay.kumar` |
+| Artifact | `config-server` |
 
-向你的应用程序添加 Spring Boot Starters 和依赖
+| 已选依赖 |
+| :--- |
+| Config Server |
+| Eureka Discovery |
+| Actuator |
 
-搜索依赖：Web, Security, JPA, Actuator, Devtools...
+点击 **Generate Project (alt + g)** 生成项目。这将创建一个 zip 文件，请将其解压，然后进入你的 IDE。在 Eclipse 或 STS 中，右键点击空的 Package（包）区域，选择 **Import**（导入），选择 **Existing Maven Projects**（现有 Maven 项目），点击 **Next**（下一步），浏览到下载的 zip 文件位置（我的在 `Downloads/configserver`），打开它并点击 **Finish**（完成）完成导入。
 
-已选依赖
+## 启用 Config Server
 
-- Config Server
-- Eureka Discovery
-- Actuator
-
-```
-Generate Project (alt + g)
-```
-
-一旦你选好了所有内容，请点击 Generate Project（生成项目）。这将创建一个 zip 文件，请将其解压，然后进入你的 IDE。在 Eclipse 或 STS 中，右键点击空的 Package（包）区域，选择 Import（导入），选择 Existing Maven Projects（现有 Maven 项目），点击 Next（下一步），浏览到下载的 zip 文件位置（我的在 Downloads/configserver），打开它并点击 Finish（完成）完成导入。
-
-展开 config-server 项目并导航到主应用程序类。
+展开 `config-server` 项目并导航到主应用程序类。
 
 ```java
 package io.ajay.kumar.configserver;
-import org.springframework.framework.boot.SpringApplication;
-import org.springframework.framework.boot.autoconfigure.SpringBootApplication;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication
@@ -856,79 +782,116 @@ public class ConfigServerApplication {
 }
 ```
 
-在主应用程序类中，添加 @EnableConfigServer 注解。保存并关闭文件。接下来，展开 src/main/resources 文件夹并打开 application.properties。
+在主应用程序类中，添加 `@EnableConfigServer` 注解。保存并关闭文件。
+
+## 配置应用属性
+
+接下来，展开 `src/main/resources` 文件夹并打开 `application.properties`。
 
 ```properties
-application.properties :
 server.port=8888
 spring.cloud.config.server.git.uri=
 ```
 
-在 application.properties 中，添加 `server.port` 属性并设置为 `8888`。接下来，我们需要配置 Config Server 以知道配置仓库所在的位置。因此，我们将使用 `spring.cloud.config.server.git.uri`，我们将使用一个 Git 仓库，然后将其设置为配置仓库。通常情况下，你会将其设置为你自己的配置仓库位置，但对于这个演示，我们将使用 GitHub 上一个预构建的仓库。请打开浏览器。在地址栏中输入 `https://github.com/ajay-kumar/config-repository`。我们将 fork（派叉）这个仓库，这意味着我们将在自己的 GitHub 账户中创建一个本地副本。这需要你拥有自己的 GitHub 账户。如果你还没有，请确保注册一个。登录后，点击右上角的 Fork 按钮，就会弹出一个窗口显示你已创建 fork，它看起来和 fork 前版本非常相似，但在顶部仓库名称下方会显示 `forked from ajay-kumar/config-repository`。接下来我们需要获取 clone URL，找到那个绿色按钮，点击它并将 clone URL 复制到剪贴板上，然后返回 IDE。在 Eclipse 或 STS 中，我们需要访问 Git 仓库视图。你可以通过进入 Window -> Show View -> Other 并选择 Git Repositories 来实现。在 Git Repositories 视图中，点击显示“Clone a Git repository”的链接。会弹出一个新窗口。选择 Clone URI。点击 Next。由于我们已将其复制到剪贴板，它应该会自动显示在 URI 部分，并填充好主机名和仓库路径。如果没有，只需将我们复制的 clone URL 粘贴到 URI 中。点击 Next，选择 master 分支并点击 Finish。
+在 `application.properties` 中，添加 `server.port` 属性并设置为 `8888`。接下来，我们需要配置 Config Server 以知道配置仓库所在的位置。因此，我们将使用 `spring.cloud.config.server.git.uri`，我们将使用一个 Git 仓库，然后将其设置为配置仓库。通常情况下，你会将其设置为你自己的配置仓库位置，但对于这个演示，我们将使用 GitHub 上一个预构建的仓库。
+
+请打开浏览器，在地址栏中输入 `https://github.com/ajay-kumar/config-repository`。我们将 **fork**（派叉）这个仓库，这意味着我们将在自己的 GitHub 账户中创建一个本地副本。这需要你拥有自己的 GitHub 账户。如果你还没有，请确保注册一个。登录后，点击右上角的 **Fork** 按钮，就会弹出一个窗口显示你已创建 fork，它看起来和 fork 前版本非常相似，但在顶部仓库名称下方会显示 `forked from ajay-kumar/config-repository`。
+
+接下来我们需要获取 clone URL，找到那个绿色按钮，点击它并将 clone URL 复制到剪贴板上，然后返回 IDE。在 Eclipse 或 STS 中，我们需要访问 Git 仓库视图。你可以通过进入 `Window` -> `Show View` -> `Other` 并选择 `Git Repositories` 来实现。
+
+在 Git Repositories 视图中，点击显示“Clone a Git repository”的链接。会弹出一个新窗口。选择 **Clone URI**，点击 **Next**。由于我们已将其复制到剪贴板，它应该会自动显示在 URI 部分，并填充好主机名和仓库路径。如果没有，只需将我们复制的 clone URL 粘贴到 URI 中。点击 **Next**，选择 `master` 分支并点击 **Finish**。
 
 ```properties
-application.properties :
 server.port=8888
 spring.cloud.config.server.git.uri=https://github.com/ajay-kumar/config-repository.git
 ```
 
-由于我们的剪贴板上仍有 clone URL，通过点击 application.properties 并粘贴该值来设置 Config Server 的 Git URL。确保保存，然后就可以关闭该文件。返回 Git Repositories 视图并展开仓库。右键点击 Working Tree（工作树）并选择 Import Projects（导入项目）。会弹出一个新对话，点击 Finish。
+由于我们的剪贴板上仍有 clone URL，通过点击 `application.properties` 并粘贴该值来设置 Config Server 的 Git URL。确保保存，然后就可以关闭该文件。
 
-在 Package Explorer 中，展开 config，发现有三个文件。让我们来看第一个文件 application.properties。这是存放全局属性的地方。application.properties 适用于每个应用程序。接下来，打开 config-client-app.properties。这是应用程序特定的配置。注意，其上面的属性源会覆盖任何全局属性源，它是 config-client-app.properties。
+返回 Git Repositories 视图并展开仓库。右键点击 **Working Tree**（工作树）并选择 **Import Projects**（导入项目）。会弹出一个新对话框，点击 **Finish**。
 
+## 验证配置仓库
 
+在 Package Explorer 中，展开 `config`，发现有三个文件。让我们来看第一个文件 `application.properties`。这是存放全局属性的地方，`application.properties` 适用于每个应用程序。
 
+接下来，打开 `config-client-app.properties`。这是应用程序特定的配置。注意，其上面的属性源会覆盖任何全局属性源。
+
+### 配置优先级演示
+
+如果我们请求默认配置，返回的 JSON 结构如下（按优先级从高到低排列）：
 
 ```json
-"state":null,
-  "propertySources":[
+{
+  "state": null,
+  "propertySources": [
     {
-      "name":"https://github.com/ajaycucek/config-repository.git/config-client-app-prod.properties",
-      "source":{
-        "some.property":"profile specific value",
-        "some.other.property":"profile specific value"
+      "name": "https://github.com/ajaycucek/config-repository.git/config-client-app-prod.properties",
+      "source": {
+        "some.property": "profile specific value",
+        "some.other.property": "profile specific value"
       }
     },
     {
-      "name":"https://github.com/ajaycucek/config-repository.git/config-client-app.properties",
-      "source":{
-        "some.property":"app specific overridden value"
+      "name": "https://github.com/ajaycucek/config-repository.git/config-client-app.properties",
+      "source": {
+        "some.property": "app specific overridden value"
       }
     },
     {
-      "name":"https://github.com/ajaycucek/config-repository.git/application.properties",
-      "source":{
-        "some.property":"global",
-        "some.other.property":"global"
+      "name": "https://github.com/ajaycucek/config-repository.git/application.properties",
+      "source": {
+        "some.property": "global",
+        "some.other.property": "global"
       }
     }
   ]
+}
 ```
 
-如果我们修改 URL 并将 default 替换为 prod，我们将看到它引入了 `config-client-app-prod.properties` 文件，该文件会覆盖其下方所有的属性源。不要忘记，我们还有其他端点，例如请求 `.properties` 文件或 `.yml` 文件的端点。
+如果我们修改 URL 并将 `default` 替换为 `prod`，我们将看到它引入了 `config-client-app-prod.properties` 文件，该文件会覆盖其下方所有的属性源。
+
+不要忘记，我们还有其他端点，例如请求 `.properties` 文件或 `.yml` 文件的端点。
+
+**请求 `.properties` 端点返回：**
 
 ```properties
-some.other.property: global
-some.property: app specific overridden value
+some.other.property=global
+some.property=app specific overridden value
 ```
 
-所以如果我们回到这里，去掉 `/prod` 并将其替换为 `.properties`，我们将看到它返回了一个属性文件。你会发现它实际上按照优先级顺序应用了所有的属性源。所以你会看到 `some.other.property` 仍然是 `global`，但 `some.property` 被 `app specific overridden value` 覆盖了。
+你会发现它实际上按照优先级顺序应用了所有的属性源。所以你会看到 `some.other.property` 仍然是 `global`，但 `some.property` 被 `app specific overridden value` 覆盖了。
+
+**请求 `.yml` 端点返回：**
 
 ```yaml
 some:
-other:
-  property: global
+  other:
+    property: global
 property: app specific overridden value
 ```
 
-你也可以对 YAML 执行同样的操作。它实际上会为你将 source.properties 文件转换为 YAML 格式。所以，我们不再使用 `.properties`，而是将其替换为 `.yml`，然后按回车，你就可以看到它输出了相同 YAML 格式的配置。
+你也可以对 YAML 执行同样的操作。它实际上会为你将 source.properties 文件转换为 YAML 格式。
 
-## 使用 Spring Cloud Config Client
+---
 
-现在我们已经看到了 Spring Cloud Config Server 是如何工作的，以及如何设置它，让我们来看看等式的另一端：客户端（Client）。从核心角度来说，Config Client 负责引导（bootstrapping）和获取应用程序配置。当我说 Config Client 负责引导应用程序配置时，什么意思？嗯，当 Spring 应用程序启动时，它需要解析它的属性源。而且它需要在启动过程的早期完成工作。这样做的某些原因包括你的占位符（placeholders）。当你解析这些占位符时，它实际上需要具体的值来解析这些占位符。由于配置位于 Configuration Server 上，这意味着 Config Client 需要在 Spring 应用程序上下文在技术上启动之前就获取应用程序配置。如果它等到应用程序启动后再获取，那么在过程中就太晚了。这有两种方法可以获取 Config Client 引导你的应用程序属性，它们都使用一个名为 `bootstrap.properties` 或 `bootstrap.yml` 的特殊文件。第一种方法是配置优先（Config First），你通过配置 `bootstrap.yml` 或 `bootstrap.properties` 来实现，其中包含应用程序名称以及指向 Configuration Server 的 URL。第二种方法是发现优先（Discovery First），即使用服务发现。因此，你需要配置 `bootstrap.properties` 或 `bootstrap.yml` 包含应用程序名称和服务发现服务器的位置。它将使用该位置查找 Config Server，从而获取你的配置。设置一个使用 Spring Cloud Config Client 的应用程序比设置 Spring Cloud Config Server 还要简单。
+# 使用 Spring Cloud Config Client
+
+现在我们已经看到了 Spring Cloud Config Server 是如何工作的，以及如何设置它，让我们来看看等式的另一端：客户端（Client）。
+
+从核心角度来说，Config Client 负责引导（bootstrapping）和获取应用程序配置。当 Spring 应用程序启动时，它需要解析它的属性源，而且它需要在启动过程的早期完成工作。这样做的某些原因包括你的占位符（placeholders）。当你解析这些占位符时，它实际上需要具体的值来解析这些占位符。由于配置位于 Configuration Server 上，这意味着 Config Client 需要在 Spring 应用程序上下文在技术上启动之前就获取应用程序配置。如果它等到应用程序启动后再获取，那么在过程中就太晚了。
+
+这有两种方法可以获取 Config Client 引导你的应用程序属性，它们都使用一个名为 `bootstrap.properties` 或 `bootstrap.yml` 的特殊文件：
+
+1.  **配置优先**：通过配置 `bootstrap.yml` 或 `bootstrap.properties` 来实现，其中包含应用程序名称以及指向 Configuration Server 的 URL。
+2.  **发现优先**：即使用服务发现。因此，你需要配置 `bootstrap.properties` 或 `bootstrap.yml` 包含应用程序名称和服务发现服务器的位置。它将使用该位置查找 Config Server，从而获取你的配置。
+
+设置一个使用 Spring Cloud Config Client 的应用程序比设置 Spring Cloud Config Server 还要简单。
+
+## 客户端依赖配置
+
+在 `pom.xml` 中添加依赖管理：
 
 ```xml
-pom.xml :
 <dependencyManagement>
   <dependencies>
     <dependency>
@@ -941,73 +904,56 @@ pom.xml :
 </dependencyManagement>
 ```
 
-（，，正正
-
-第一种方法是配置优先（Config First），你通过配置 `bootstrap.yml` 或 `bootstrap.properties` 来实现，其中包含应用程序名称以及指向 Configuration Server 的 URL。第二种方法是发现优先（Discovery First），即使用服务发现。因此，你需要配置你的 `bootstrap.properties` 或 `bootstrap.yml` 包含应用程序名称和服务发现服务器的位置。它将使用该位置查找 Config Server，从而获取你的配置。设置一个使用 Spring Cloud Config Client 的应用程序比设置 Spring Cloud Config Server 还要简单。
-
-```xml
-pom.xml :
-<dependencyManagement>
-  <dependencies>
-    <dependency>
-.<groupId>org.
-<artifactId>spring-cloud-cloud</groupId>
-      <artifactId>spring.cloud-dependencies</artifactId>
-      <version>Camden.SR2</version>
-      <type>pom</type>
-    </dependency>
-  </dependencies>
-</dependencyManagement>
-```
-（注：此处原文文本似乎存在部分重复和乱码，翻译时已根据逻辑进行了梳理，但严格遵循了翻译要求。）
-
-由于您提供的原文在后半部分存在大量的重复和碎片（如 `pom.xml` 部分重复），我已基于逻辑为您提供了连贯的翻译。
-
----
-
-**由于您提供的待翻译文本后半部分存在严重的重复和格式错误，以下是基于原文逻辑整理后的完整高质量译文：**
-
-[content]
-（前文 JSON 译 已已已，，，，文 Spring文，，，，，，，，，逻辑的译翻译。）
-
-
-
 请记住，我们不需要为 Config Client 添加任何特殊的注解来获取其配置。只要库在类路径上且设置正确，它应该能够从 Configuration Server 获取配置。
+
+## 客户端主应用程序类
 
 ```java
 package io.ajay.kumar.configclientapp;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
 @SpringBootApplication
 @EnableDiscoveryClient
 public class ConfigClientAppApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ConfigClientAppConfiguration.class, args);
+        SpringApplication.run(ConfigClientAppApplication.class, args);
     }
 }
 ```
 
-我们确实想要参与服务发现，所以让我们添加 @EnableDiscoveryClient 注解。继续并保存它。接下来，让我们创建一个新类。点击 New、Class，我们将这个类命名为 ConfigClientConfiguration。点击 Finish。
+我们确实想要参与服务发现，所以让我们添加 `@EnableDiscoveryClient` 注解。继续并保存它。
+
+## 创建配置属性绑定类
+
+接下来，让我们创建一个新类。点击 **New** -> **Class**，我们将这个类命名为 `ConfigClientConfiguration`。点击 **Finish**。
 
 ```java
 package io.ajay.kumar.configclientapp;
+
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+
 @Component
-@ConfigurationProperties(prefix="some")
-public class ConfigClientAppConfiguration {
+@ConfigurationProperties(prefix = "some")
+public class ConfigClientConfiguration {
     private String property;
+
     public String getProperty() {
         return property;
     }
+
     public void setProperty(String property) {
         this.property = property;
     }
 }
 ```
 
-让我们在这个类上添加 @Component 和 @ConfigurationProperties 注解。我们将给它设置一个等于 some 的前缀。这个 ConfigurationProperties 将代表我们名为 some.property 的属性。我们将有一个字符串类型的实例变量，即 private String property。它的名字也叫 property，再次代表 some.property。确保你没有忘记 getter 和 setter。你可以通过进入 Source、Generate Getters and Setters、选择 property、点击 OK 并保存文件来实现。返回主应用程序类，让我们注入（autowire）我们的配置属性类。
+
+
+让我们在这个类上添加 `@Component` 和 `@ConfigurationProperties` 注解。我们将给它设置一个等于 `some` 的前缀。这个 `ConfigurationProperties` 将代表我们名为 `some.property` 的属性。我们将有一个字符串类型的实例变量，即 `private String property`。它的名字也叫 `property`，再次代表 `some.property`。确保你没有忘记 getter 和 setter。你可以通过进入 `Source`、`Generate Getters and Setters`、选择 `property`、点击 `OK` 并保存文件来实现。返回主应用程序类，让我们注入（autowire）我们的配置属性类。
 
 ```java
 package io.ajay.kumar.configclientapp;
@@ -1042,29 +988,27 @@ public class ConfigClientAppApplication {
 }
 ```
 
-所以进入这里，我们将编写 private ConfigClientAppConfiguration，并将其命名为 properties。我们对它进行 @Autowired 注入。你也可以在这里使用 @Inject。我们将添加另一个实例变量 private String someOtherProperty，并给它添加一个 @Value 注解。我们将使用占位符格式来注入 someOtherProperty 的值，即 ${some.other.property}。
+所以进入这里，我们将编写 `private ConfigClientAppConfiguration`，并将其命名为 `properties`。我们对它进行 `@Autowired` 注入。你也可以在这里使用 `@Inject`。我们将添加另一个实例变量 `private String someOtherProperty`，并给它添加一个 `@Value` 注解。我们将使用占位符格式来注入 `someOtherProperty` 的值，即 `${some.other.property}`。
 
-现在我们要为主应用程序类添加 @RestController 注解。来到这里，@EnableDiscoveryClient 下方，添加 @RestController。继续保存。请注意，你通常不会在主应用程序类上放置 REST controller；但由于我们现在只是在演示概念，目前这样做是可以接受的。我们还需要添加处理方法，所以来到这里 main，编写 public String printConfig()。然后我们为它添加 @RequestMapping 注解。在方法体中，我们将构造一个字符串，包含从 Configuration Server 获取的每个配置属性的值。因此我们需要一个构造器，即 StringBuilder sb = new StringBuilder()。然后写 sb.append。接着获取第一个值，即 properties.getProperty()。然后用双竖线和空格（sb.append(" || ")）将其隔开，然后 sb.append someOtherProperty 的值。最后，我们返回 sb.toString()。接下来，让我们关闭这两个文件。在 src/main/resources 目录下创建一个新文件 bootstrap.properties。
+现在我们要为主应用程序类添加 `@RestController` 注解。来到这里，`@EnableDiscoveryClient` 下方，添加 `@RestController`。继续保存。请注意，你通常不会在主应用程序类上放置 REST controller；但由于我们现在只是在演示概念，目前这样做是可以接受的。我们还需要添加处理方法，所以来到这里 `main`，编写 `public String printConfig()`。然后我们为它添加 `@RequestMapping` 注解。在方法体中，我们将构造一个字符串，包含从 Configuration Server 获取的每个配置属性的值。因此我们需要一个构造器，即 `StringBuilder sb = new StringBuilder()`。然后写 `sb.append`。接着获取第一个值，即 `properties.getProperty()`。然后用双竖线和空格（`sb.append(" || ")`）将其隔开，然后 `sb.append someOtherProperty` 的值。最后，我们返回 `sb.toString()`。接下来，让我们关闭这两个文件。在 `src/main/resources` 目录下创建一个新文件 `bootstrap.properties`。
 
 **bootstrap.properties：**
+
 ```properties
 spring.application.name=config-client-app
 spring.cloud.config.discovery.enabled=true
 eureka.client.server-url.defaultZone=http://localhost:8761/eureka
 ```
 
-在 bootstrap.properties 中，将 spring.application.name 属性设置为值 config-client-app。然后我们将设置另一个属性，告诉 Config Client 通过服务发现查找 Config Server，即 spring.cloud.config.discovery.enabled=true。eureka.client.server-url.defaultZone=http://localhost:8761/eureka。
-
-
-
+在 `bootstrap.properties` 中，将 `spring.application.name` 属性设置为值 `config-client-app`。然后我们将设置另一个属性，告诉 Config Client 通过服务发现查找 Config Server，即 `spring.cloud.config.discovery.enabled=true`。`eureka.client.server-url.defaultZone=http://localhost:8761/eureka`。
 
 监控端点可以确定哪些服务需要更新其配置。让我们将其视觉化吧。想象一下，你对某些配置提交了更改，并将其推送到配置仓库。仓库知道发生了哪些变化，并将该变更集发送到监控端点，然后它决定只需要通知三个应用程序中的两个来更新它们的配置。无论你选择哪种方法来通知应用程序配置更新，最后一步都是重要的。那便是庆祝。你可以向同事炫耀你可以在无需重新启动应用程序的情况下即时更改配置。你可以一次性完成所有这些操作，甚至可以全自动地完成。最后，由于你使用了 Git，你对配置所进行的所有更改都拥有一份完整的审计日志。
 
 ## 使用 @RefreshScope 注解
 
-我们已经讨论过当配置刷新时，@ConfigurationProperties 和日志级别将如何被更新，但遗憾的是，这并没有涵盖所有的用例。任何仅在初始化时获取其值的对象（例如 `@Bean` 或 `@Value`）都不会像其他对象那样自动刷新。为了为了更好地理解这一点，看一个示例会有帮助。
+我们已经讨论过当配置刷新时，`@ConfigurationProperties` 和日志级别将如何被更新，但遗憾的是，这并没有涵盖所有的用例。任何仅在初始化时获取其值的对象（例如 `@Bean` 或 `@Value`）都不会像其他对象那样自动刷新。为了更好地理解这一点，看一个示例会有帮助。
 
-```
+```java
 @Configuration
 public class SomeConfiguration{
     @Bean
@@ -1074,16 +1018,16 @@ public class SomeConfiguration{
 }
 ```
 
-- 示例：刷新后 @Bean 不会看到新的配置值
+- 示例：刷新后 `@Bean` 不会看到新的配置值
 - 已更新配置
-    - 注意 FooProperties 是一个 @ConfigurationProperties 类
-- POST 请求到 /refresh
+    - 注意 `FooProperties` 是一个 `@ConfigurationProperties` 类
+- POST 请求到 `/refresh`
 - **结果：FooService 仍包含旧的配置值**
     - 仅在初始化期间获取配置
 
 假设你有一个 `@Configuration` 类，它声明了一个名为 `FooService` 的新 bean。要构造 `FooService`，你需要从 `FooProperties` 给它一个配置值，它是 bean 方法的参数。`FooProperties` 是一个 `@Configuration` 类。然后你对绑定到 `FooProperties` 的属性进行了一些配置更改，并向刷新端点发送一个 POST 请求。如果你此时查看 `FooService`，即使你调用了刷新，它实际上仍然拥有旧的配置值。这是因为它只在初始化时获取其配置。这里是另一个示例。
 
-```
+```java
 @Configuration
 public class SomeConfiguration{
     @Value("${some.config.value}")
@@ -1095,15 +1039,15 @@ public class SomeConfiguration{
 }
 ```
 
-- 示例：刷新后 @Value 不会看到新的配置值
+- 示例：刷新后 `@Value` 不会看到新的配置值
 - 已更新配置
-- POST 请求到 /refresh
+- POST 请求到 `/refresh`
 - **结果：FooService 仍包含旧的配置值**
     - 仅在初始化期间获取配置
 
-再次，我们有一个 `@Configuration` 类，这次我们有一个需要注入的 `@Value` 注解。我们将使用该配置作为构造函数参数来构造 `FooService` bean。所以我们经历了相同的流程：更新配置，向刷新端点发送 POST 请求，我们再次发现我们的配置值仍然是旧值。它没有被更新。现在你可能在想，我该如何刷新一个仅在初始化时获取配置的 `@Bean` 或 `@Value` 呢？答案就是使用 `@RefreshScope` 注解。让我们回到第一个示例，看看我们是如何是如何利用 `@RefreshScope` 注解的。
+再次，我们有一个 `@Configuration` 类，这次我们有一个需要注入的 `@Value` 注解。我们将使用该配置作为构造函数参数来构造 `FooService` bean。所以我们经历了相同的流程：更新配置，向刷新端点发送 POST 请求，我们再次发现我们的配置值仍然是旧值。它没有被更新。现在你可能在想，我该如何刷新一个仅在初始化时获取配置的 `@Bean` 或 `@Value` 呢？答案就是使用 `@RefreshScope` 注解。让我们回到第一个示例，看看我们是如何利用 `@RefreshScope` 注解的。
 
-```
+```java
 @Configuration
 public class SomeConfiguration{
     @Bean @RefreshScope
@@ -1113,39 +1057,39 @@ public class SomeConfiguration{
 }
 ```
 
-- 示例：对 @Bean 使用 @RefreshScope 注解
-- 在 @Bean 上添加 @RefreshScope 注解
-- POST 请求到 /refresh
+- 示例：对 `@Bean` 使用 `@RefreshScope` 注解
+- 在 `@Bean` 上添加 `@RefreshScope` 注解
+- POST 请求到 `/refresh`
 - > 结果：FooService 现在将包含新的配置值！
-- @RefreshScope 通知 Spring 重新初始化此 @Bean
+- `@RefreshScope` 通知 Spring 重新初始化此 `@Bean`
 
 在你的 `@Configuration` 类中，你只需要为你的 `@Bean` 添加 `@RefreshScope` 注解即可。一旦你向刷新端点发送 POST 请求，`FooService` 现在就会看到最新的配置值。RefreshScope 的作用就像它的名字一样。它是提示 Spring 该 `@Bean` 或该 `@Value` 应该包含在刷新范围内。
 
 ## 演示：在重启应用的情况下刷新配置
 
-在演示中，我们将学习如何在运行时刷新配置，以及如何使用 `@RefreshScope` 注解。在开始演示之前，请确保你已经安装了 Postman。你可以通过访问 www.getpostman.com 获取它。我们将使用这个工具来调用 REST 端点。它是一个很好用的 REST 客户端。我们要做的第一件事是启动所有的应用程序，所以提前启动 Discovery Server、Config Server 和 Config Client 应用。记住，你需要按照正确的顺序启动它们。先启动 Discovery Server，然后是 Config Server，最后是 Config Client 应用。如果你在启动时遇到任何问题，请确保你按照该顺序启动。打开浏览器并访问 localhost:8080。
+在演示中，我们将学习如何在运行时刷新配置，以及如何使用 `@RefreshScope` 注解。在开始演示之前，请确保你已经安装了 Postman。你可以通过访问 `www.getpostman.com` 获取它。我们将使用这个工具来调用 REST 端点。它是一个很好用的 REST 客户端。我们要做的第一件事是启动所有的应用程序，所以提前启动 Discovery Server、Config Server 和 Config Client 应用。记住，你需要按照正确的顺序启动它们。先启动 Discovery Server，然后是 Config Server，最后是 Config Client 应用。如果你在启动时遇到任何问题，请确保你按照该顺序启动。打开浏览器并访问 `localhost:8080`。
 
 ![](img/e33dbe7cce1ed533e80ee7389d9ce1d_88_0.png)
 
-你会看到从 Configuration Server 解析出的配置值。现在，我们想要更新这些值中的每一个，我们将更新第一个（特定应用程序的覆盖值）以及全局值。因此，回到 IDE。在 IDE 中，展开 config-repository 项目，并打开 `config-client.properties` 文件。
+你会看到从 Configuration Server 解析出的配置值。现在，我们想要更新这些值中的每一个，我们将更新第一个（特定应用程序的覆盖值）以及全局值。因此，回到 IDE。在 IDE 中，展开 `config-repository` 项目，并打开 `config-client.properties` 文件。
 
-config-client.properties
-```
+**config-client.properties**
+
+```properties
 ## application-specific (application name: client)
 some.property=coffee
 some.other.property=good
 ```
 
-我们将特定应用程序的覆盖值改为 `coffee`。同时我们也要修改另一个，我们将 `some.other.property` 设置为 `good`。保存这些更改。关闭文件。然后我们要提交这些更改，右键点击 config-repository，选择 Commit，输入提交信息“Updating configuration”，点击 Commit and Push。它会弹出一个对话框显示你已推送更改。点击 OK。退出 Git 视图。现在我们更新了配置，并推送到配置仓库。如果你回到浏览器并刷新页面，值仍然是旧的。
+我们将特定应用程序的覆盖值改为 `coffee`。同时我们也要修改另一个，我们将 `some.other.property` 设置为 `good`。保存这些更改。关闭文件。然后我们要提交这些更改，右键点击 `config-repository`，选择 `Commit`，输入提交信息“Updating configuration”，点击 `Commit and Push`。它会弹出一个对话框显示你已推送更改。点击 `OK`。退出 Git 视图。现在我们更新了配置，并推送到配置仓库。如果你回到浏览器并刷新页面，值仍然是旧的。
 
 ![](img/e33dbe7cce1ed533e80ee7389d9ce1d_89_0.png)
 
-我们还没有显式要求应用程序刷新其配置。为了实现这一点，启动 Postman ，在新建标签页中点击 GET 下拉菜单并选择 POST。然后在请求 URL 中输入 `http://localhost:8080/refresh`。一旦输入完成，点击 Send，服务器将返回所有更改的属性。它有一个名为 `config.client.version` 的内部属性，以及我们更改的两个属性 `some.other.property` 和 `some.property`。回到浏览器刷新页面。
+我们还没有显式要求应用程序刷新其配置。为了实现这一点，启动 Postman ，在新建标签页中点击 `GET` 下拉菜单并选择 `POST`。然后在请求 URL 中输入 `http://localhost:8080/refresh`。一旦输入完成，点击 `Send`，服务器将返回所有更改的属性。它有一个名为 `config.client.version` 的内部属性，以及我们更改的两个属性 `some.other.property` 和 `some.property`。回到浏览器刷新页面。
 
 ![](img/e33dbe7cce1ed533e80ee7389d9ce1d_89_1.png)
 
 噢，这很有趣。第一个值已经为刷新，我们得到了设置的 `coffee` 值，但第二个值仍然指向全局配置值。这种现象的原因是第二个值不是使用 `@Value` 注解获取的，而且当调用刷新端点时，`@Value` 注解不会刷新。我们可以通过 `@RefreshScope` 注解来修复这个问题。回到 IDE，停止 Config Client 应用。然后在主应用程序类中，找到 `someOtherProperty`。我们这里有一个获取 `some.other.property` 值的 `@Value` 注解。为了解决 `@Value` 注解不更新的问题，让我们在主应用程序类上添加 `@RefreshScope`。
-
 
 ```java
 package io.aj.kumar.configclientapp;
@@ -1184,16 +1128,20 @@ public class ConfigClientAppApplication {
 
 所以你输入了 `@RefreshScope`。继续保存并重启应用程序。现在，由于我们重新启动了应用程序，程序将在启动时获取最新的配置值。因此，我们实际上并不会演示 `@RefreshScope` 的用法，因为无论如何它都会获取最新值。所以，我们需要做的是再次更新该值。请打开 `config-client-app`，将 `some.other.property` 修改为 `really good`。
 
-config-client-app.properties :
-```properties
+**config-client-app.properties :**
+
+
+
 ### 在此处放置特定应用的配置（应用名称：client-config-app）
+
+```properties
 some.property=coffee
 some.other.property=really good
 ```
 
 保存并关闭该文件，将其提交到 Git 仓库。团队成员，再次更新配置，并点击“Commit and Push”（提交并推送）按钮。你可以退出 Git Stage 视图。返回浏览器并刷新页面。
 
-如你所见，它显示 coffee is good。`is good` 是它在启动时检索的值。但一旦我们添加了 `refresh scope` 并进行刷新，它将为该 `@Value` 注解获取最新值。现在请打开 Postman，在新标签页中点击显示 `GET` 的地方，点击下拉菜单并选择 `POST`。然后在请求 URL 中类型输入 `http://localhost:8080/refresh`。输入完成后，点击 `Send`（发送），你可以看到 `some.other.property` 发生了变化。回到浏览器并刷新页面。
+如你所见，它显示 coffee is good。`is good` 是它在启动时检索的值。但一旦我们添加了 `refresh scope` 并进行刷新，它将为该 `@Value` 注解获取最新值。现在请打开 Postman，在新标签页中点击显示 `GET` 的地方，点击下拉菜单并选择 `POST`。然后在请求 URL 中输入 `http://localhost:8080/refresh`。输入完成后，点击 `Send`（发送），你可以看到 `some.other.property` 发生了变化。回到浏览器并刷新页面。
 
 你可以看到，这次我们的属性从 `is good` 变为 `is really good`。
 
@@ -1218,6 +1166,7 @@ my.datasource.password={cipher}ASFIOWRODSKSDFIR32KJL
 ```
 
 application.yml :
+
 ```yaml
 my:
   datasource:
@@ -1243,10 +1192,10 @@ my:
 第二步（对称）：配置 Config Server
 
 ```properties
-application.properties :
 encrypt.key=<your_secret_key>
+```
 
-application.yml :
+```yaml
 encrypt.key: <your_secret_key>
 ```
 
@@ -1255,10 +1204,10 @@ encrypt.key: <your_secret_key>
 ### 第二步（非对称）：配置 Config Server 选项 1
 
 ```properties
-application.properties :
 encrypt.key=<pem_encoded_key_as_text>
+```
 
-application.yml :
+```yaml
 encrypt.key: <pem_encoded_key_as_text>
 ```
 
@@ -1267,12 +1216,12 @@ encrypt.key: <pem_encoded_key_as_text>
 ### 第二步（非对称）：配置 Config Server 选项 2
 
 ```properties
-application.properties :
 crypt.keyStore.location=<path_to_keystore>
 crypt.keyStore.password=<keystore_password>
 crypt.keyStore.alias=<key_name_in_keystore>
+```
 
-application.yml :
+```yaml
 crypt:
   keyStore:
     location: <path_to_keystore>
@@ -1282,10 +1231,6 @@ crypt:
 
 如果你使用非对称密钥，第二种方式是使用 Java KeyStore。一旦将公钥和私钥创建或导入到现有的或新的密钥库中，你只需配置密钥库的位置、密钥库密码以及你在创建或导入密钥到密钥库时选择的别名即可。
 
-
-
-
-
 ## 加密和解密 REST 端点
 
 一旦你配置了用于加密的 Config Server，你就可以利用一些工具类 REST 端点对你从配置中提取或获取的值进行加密和解密。这两个端点的使用都非常、非常简单。
@@ -1293,22 +1238,22 @@ crypt:
 ### 工具类 REST 端点：加密值
 
 - 端点
-  - POST /encrypt
+  - `POST /encrypt`
 - 示例
-  - 请求: /encrypt
-  - 数据: <value_to_encrypt>
+  - 请求: `/encrypt`
+  - 数据: `<value_to_encrypt>`
 
-第一个是加密端点，你会用它来生成在配置中将使用的加密值。正如我所说，它的使用非常简单。你只需要向 /encrypt 端点发送 POST 请求，并将你想要加密的值作为请求体（body）传递过去。Config Server 将使用其配置的密钥（无论是对称密钥还是非对称密钥）来加密该值。再次，我必须强调这一点：请务必使用 Spring Security 或其他手段确保该端点是安全的，以便只有授权用户才能访问它。
+第一个是加密端点，你会用它来生成在配置中将使用的加密值。正如我所说，它的使用非常简单。你只需要向 `/encrypt` 端点发送 POST 请求，并将你想要加密的值作为请求体（body）传递过去。Config Server 将使用其配置的密钥（无论是对称密钥还是非对称密钥）来加密该值。再次，我必须强调这一点：请务必使用 Spring Security 或其他手段确保该端点是安全的，以便只有授权用户才能访问它。
 
 ### 工具类 REST 端点：解密值
 
 - 端点
-  - POST /decrypt
+  - `POST /decrypt`
 - 示例
-  - 请求: /decrypt
-  - 数据: <value_to_decrypt>
+  - 请求: `/decrypt`
+  - 数据: `<value_to_decrypt>`
 
-解密端点与加密端点几乎完全相同，除了名称和输入之外。你主要将其用于调试目的。所以，要解密一个值，你需要向 /decrypt 发送 POST，并将加密值作为请求体发送，它将向你返回未加密的值。
+解密端点与加密端点几乎完全相同，除了名称和输入之外。你主要将其用于调试目的。所以，要解密一个值，你需要向 `/decrypt` 发送 POST，并将加密值作为请求体发送，它将向你返回未加密的值。
 
 ## 总结
 
@@ -1381,9 +1326,6 @@ crypt:
 ```xml
 <dependency>
   <groupId>org.springframework.cloud</groupId>
-```
-
-```xml
   <artifactId>spring-cloud-starter-zuul</artifactId>
 </dependency>
 ```
@@ -1405,7 +1347,6 @@ public class Application {
 ## 使用 Spring Cloud & Netflix Zuul 使用服务发现
 
 ```properties
-application.properties
 spring.application.name=gateway-service
 eureka.client.defaultZone=http://localhost:8761/eureka
 ```
@@ -1413,25 +1354,19 @@ eureka.client.defaultZone=http://localhost:8761/eureka
 或者
 
 ```yaml
-application.yml
 spring:
   application:
     name: gateway-service
 eureka:
   client:
     defaultZone: http://localhost:8761/eureka
-``` （修正了 YAML 缩进）。
+```
 
 如果你使用服务发现，请按照常规定义应用程序名称和服务发现服务器位置的参数。
-
-
-
-
 
 ## 在不使用服务发现的情况下使用 Spring Cloud & Netflix Zuul
 
 ```properties
-application.properties :
 spring.application.name=gateway-service
 ribbon.eureka.enabled=false
 ```
@@ -1439,7 +1374,6 @@ ribbon.eureka.enabled=false
 或者
 
 ```yaml
-application.yml :
 spring:
   application:
     name: gateway-service
@@ -1458,6 +1392,8 @@ ribbon:
 
 - 请求：`/foo` 映射到服务：`spring.application.name=foo`
 - 请求：`/foo` 映射到服务：`spring.application.name=categories`
+
+
 
 例如，如果你请求了 `/foo`，Zuul 将使用服务发现找到名为 `foo` 的服务，并将请求发送到 1 个服务。这里有另一个例子。如果你请求 `/categories/1`，Zuul 将定位名为 `categories` 的服务，并将 `/1` 请求发送到该服务。默认情况下，前缀会从请求中剥离，因此服务实际获得的是请求的 `/1` 部分。如果你想发送完整的请求 `/categories/1`，可以将属性 `zuul.stripPrefix` 设置为 `false`，这样服务就会接收到 `/categories/1` 请求。另外注意，所有服务默认都会被添加，因此你可能需要使用 `zuul.ignoredServices`，你可以将其设置为一个模式，以忽略特定的服务。
 
@@ -1517,16 +1453,16 @@ spring:
 
 前往 start.spring.io，我们将在这里创建三个不同的项目。Group ID 使用 `io.ajay.kumar`，对于我们要创建的第一个 Artifact，我们将命名为 `gateway-service`。对于依赖项，我们需要添加 `Zuul`，然后还要添加 `Eureka Discovery`。
 
-## 使用 Spring Boot 生成项目
+### 使用 Spring Boot 生成项目
 
-### 项目元数据
+#### 项目元数据
 
 | Artifact 坐标 | | |
 | :--- | :--- | :--- |
 | Group | io.ajay.kumar | |
 | Artifact | gateway-service | |
 
-### 依赖项
+#### 依赖项
 
 向你的应用程序添加 Spring Boot Starters 和依赖项
 
@@ -1543,10 +1479,6 @@ Generate Project (Alt + Enter)
 
 点击 "Generate Project"。解压所有这些 zip 文件并进入你的 IDE。在 IDE 中，在 Package Explorer 的空白处点击右键，选择 "Import"（导入），然后选择 "Existing Maven Projects"。导航到项目所在位置。
 
-
-
-
-
 ```java
 @RequestMapping
 public String hello() {
@@ -1557,6 +1489,7 @@ public String hello() {
 在主应用程序类中，我们将添加 `@EnableDiscoveryClient` 注解，并且将其配置为一个 `RestController`。现在，如果你在实际应用中这样做通常不是个好主意，但我们只是将其作为一个简单的示例来操作，所以目前是没问题的。因此，我们继续添加 `@RestController`。然后进行保存。我们需要一个处理方法 `public String hello`。它将仅仅返回 `Hello!`，我们将为它加上 `@RequestMapping` 注解。现在我们需要配置我们的 `hello-service` 应用程序，请打开 `src/main/resources` 并打开 `application.properties`。
 
 application.properties
+
 ```properties
 spring.application.name=hello
 server.port=1111
@@ -1615,16 +1548,12 @@ Netflix Zuul 的核心功能之一是定义过滤器（Filters）。过滤器允
 
 ## 过滤器类型
 
--   pre : 请求之前
--   post : 请求之后
--   route : 路由请求
--   error : 处理请求错误
+- `pre` : 请求之前
+- `post` : 请求之后
+- `route` : 路由请求
+- `error` : 处理请求错误
 
 第一个是 `pre` 类型过滤器，它在请求路由之前执行。接下来是 `route` 类型。
-
-
-
-
 
 ### Demo：创建和使用 ZuulFilter
 
@@ -1649,13 +1578,10 @@ public class AddRequestHeaderFilter extends ZuulFilter {
     public String filterType() {
         return "pre";
     }
-}
-```
-
-```java
-@Override
-public int filterOrder() {
-    return 0;
+    @Override
+    public int filterOrder() {
+        return 0;
+    }
 }
 ```
 
@@ -1685,6 +1611,8 @@ public class GatewayServiceApplication {
 }
 ```
 
+
+
 然后我们将 `AddRequestHeaderFilter` 定义为 `@Bean`，所以我们写 `public AddRequestHeaderFilter` 并返回一个新的 `AddRequestHeaderFilter`。再次，确保为它加上 `@Bean` 注解。这就是让 `gateway-service` 所需的所有更改，所以让我们关闭它并折叠 `gateway-service`。让我们打开 `hello-service` 并打开主应用类。
 
 ```java
@@ -1707,6 +1635,7 @@ public class HelloServiceApplication {
     public String hello(@RequestHeader("x-location") String location) {
         return "Hello from " + location + "!";
     }
+}
 ```
 
 在我们的处理方法中，我们将添加一个新的参数。我们写 `String location`。我们将为它加上 `@RequestHeader` 注解，然后给它 `gateway-service` 添加的标头名称 `x-location`。最后，我们将字符串修改为 `"Hello from " + location` 并保存。这就是为此应用所需的所有更改，所以我们可以关闭此并折叠 `hello-service`，准备启动它们。首先我们将启动 `discovery-server`。展开 `discovery-server`，找到主应用类，右键 Run Spring Boot App。之后我们将启动 `gateway-service`，展开 `gateway-service`，找到主应用类，右键 Run Spring Boot App。最后让我们启动 `hello-service`。折叠 `gateway-service` 转到 `hello-service`，右键 Run Spring Boot App。接下来，启动并访问 `localhost:8080/hello`。
@@ -1750,22 +1679,17 @@ public class HelloServiceApplication {
 - Server-side
   - Server distributes requests
   - Hardware or software based
-
-
-
-
-
--   额外的跳数
--   支持多种负载均衡算法
--   发生在请求过程之外
--   集中式或分布式
--   客户端负载
+  - 额外的跳数
+  - 支持多种负载均衡算法
+  - 发生在请求过程之外
+  - 集中式或分布式
+- 客户端负载
   - 客户端分发请求
   - 基于软件
   - 无额外跳数
--   支持多种负载均衡算法
--   发生在请求过程之内
--   通常是分布式的
+  - 支持多种负载均衡算法
+  - 发生在请求过程之内
+  - 通常是分布式的
 
 使用服务端负载均衡时，服务器显然分发请求；而使用客户端负载均衡时，客户端显然分发请求。服务端负载均衡通常是基于硬件的，但也可以基于软件的。另一方面，客户端负载均衡是基于软件的。在服务端负载均衡中，你会产生一次额外的跳数，因为请求不会直接到达服务，而是必须先通过中间件。而在客户端负载均衡中，一旦你知道了服务的位置，就不会产生任何额外的跳数。服务端和客户端负载均衡都支持多种负载均衡算法。在服务端负载均衡中，实际的负载均衡发生在请求过程之外，而在客户端负载均衡中，实际的负载均衡发生在请求过程之内。最后，服务端负载均衡可以是集中式的也可以是分布式的，而客户端负载均衡通常是分布式的。考虑到所有这些差异，显而易见，客户端负载均衡是云原生架构的天然选择。
 
@@ -1773,7 +1697,9 @@ public class HelloServiceApplication {
 
 我们已经为客户端负载均衡做好了准备。现在让我们来讨论如何使用 Spring Cloud 实现它。正如我在本模块的介绍中提到的，我们将使用一个名为 Netflix Ribbon 的库来实现客户端负载均衡。Netflix Ribbon 是一个进程间通信库，内置了软件负载均衡器。Spring Cloud 将 Netflix Ribbon 的全功能集成到了 Spring 的 `RestTemplate` 类中。我们将详细介绍这具体意味着什么，但本质上，我们的 `RestTemplate` 现在将理解如何处理跨多个云实例的请求。Spring Cloud 还增加了功能，可以非常方便地声明不同类型的负载均衡算法和可用性检查。接下来，让我们讨论如何使用 Spring Cloud 和 Netflix Ribbon。在开始之前，简单说明一下：在这些章节中的每一个，我都会解释启动所需的所有步骤，最后我们将通过一个演示（demo）让你跟进操作。在 Spring Cloud 中使用 Netflix Ribbon 极其简单，就像所有其他 Spring Cloud 项目一样。
 
-使用 SpringCloud &Netflix Ribbon 的 pom.xml
+### 使用 SpringCloud & Netflix Ribbon 的 pom.xml
+
+在你的 `pom.xml` 的 `dependencyManagement` 中，定义对 `spring-cloud-dependencies` 的新依赖。
 
 ```xml
 <dependencyManagement>
@@ -1787,7 +1713,7 @@ public class HelloServiceApplication {
 </dependencyManagement>
 ```
 
-在你的 `pom.xml` 的 `dependencyManagement` 中，定义对 `spring-cloud-dependencies` 的新依赖。
+并确保它的类型为 `pom` 且范围为 `import`。同样在 `pom.xml` 的 `dependency` 中，定义对 `spring-cloud-starter-ribbon` 的新依赖。
 
 ```xml
 <dependency>
@@ -1796,11 +1722,11 @@ public class HelloServiceApplication {
 </dependency>
 ```
 
-并确保它的类型为 `pom` 且范围为 `import`。同样在 `pom.xml` 的 `dependency` 中，定义对 `spring-cloud-starter-ribbon` 的新依赖。Spring Cloud 的 Netflix Ribbon 支持增加了两个新注解。
+Spring Cloud 的 Netflix Ribbon 支持增加了两个新注解。
 
--   两个新注解
-  - @LoadBalanced : 标记一个 RestTemplate 支持负载均衡
-  - @RibbonClient : 用于自定义配置以及在缺少服务发现（Service Discovery）时使用
+- 两个新注解
+  - `@LoadBalanced` : 标记一个 `RestTemplate` 支持负载均衡
+  - `@RibbonClient` : 用于自定义配置以及在缺少服务发现（Service Discovery）时使用
 
 第一个是 `@LoadBalanced` 注解，该注解在你创建 `RestTemplate` 时使用。它用于标记该 `RestTemplate` 应该是一个负载均衡的 `RestTemplate`，而不仅仅是一个标准的 `RestTemplate`。第二个注解是 `@RibbonClient` 注解，该注解主要用于配置。你可以使用它来配置自定义的 Ribbon ，以及在不使用服务发现时设置实际的 Ribbon 。让我们先看如何使用 `@LoadBalanced` 注解。
 
@@ -1809,7 +1735,6 @@ public class HelloServiceApplication {
 开始并创建一个负载均衡的 `RestTemplate` 非常简单。
 
 ```java
-Creating a Load Balanced RestTemplate
 @Configuration
 public class MyConfiguration{
     @Bean
@@ -1820,7 +1745,7 @@ public class MyConfiguration{
 }
 ```
 
-在你的 `@Configuration` 类中，你定义了一个带有 `@Bean` 的返回 `RestTemplate` 的新方法。然后用 `@LoadBalanced` 对其进行注解。此做的作用是告诉 Spring 该 `RestTemplate` 应该是一个负载均衡的 `RestTemplate`，而不是一个标准的 `RestTemplate`。在服务端负载均衡中，实际的负载均衡发生在请求过程之外，而在客户端负载均衡中，实际的负载均衡发生在请求过程之内。服务端和客户端负载均衡都支持多种负载均衡算法。在服务端负载均衡中，实际的负载均衡发生在请求过程之外，而在客户端负载均衡中，实际的负载均衡发生在请求过程之内。最后，服务端负载均衡可以是集中式的也可以是分布式的，而客户端负载均衡通常是分布式的。考虑到所有这些差异，显而易见，客户端负载均衡是云原生架构的天然选择。
+在你的 `@Configuration` 类中，你定义了一个带有 `@Bean` 的返回 `RestTemplate` 的新方法。然后用 `@LoadBalanced` 对其进行注解。此做的作用是告诉 Spring 该 `RestTemplate` 应该是一个负载均衡的 `RestTemplate`，而不是一个标准的 `RestTemplate`。
 
 ## 结合服务发现使用负载均衡 RestTemplate
 
@@ -1830,12 +1755,9 @@ public class MyConfiguration{
 
 在这个演示中，我们将设置一个利用服务发现的 Ribbon 客户端，并在服务的多个实例之间平衡请求。如果你一直跟了课程之前的模块，那么你应该已经设置好了发现服务器。一旦准备好开始，打开浏览器并访问 start.spring.io。在 Group 部分，将其更改为 `io.ajay.kumar`。对于 artifact 的名称，我们将将其命名为 `ribbon-time-service`。在 Dependencies 部分，添加 Web 依赖和 Eureka Discovery 依赖。
 
-
-
-
 再次，一旦你填写了所有内容，点击生成项目（Generate Project）按钮，它将为你创建并下载一个 zip 文件。解压这两个 zip 文件并回到你的 IDE。我已经导入了 `ribbon-time-service` 和 `ribbon-time-app`。在包资源管理器（Package Explorer）的空白区域上右键点击，选择导入（Import），选择现有 Maven 项目（Existing Maven Projects），点击下一步（Next），点击浏览（Browse），浏览到下载的 zip 文件所在位置，点击打开（Open），然后点击完成（Finish）。我们将先处理 `ribbon-time-service`，展开项目并打开主应用类。
 
-在主应用类中，添加两个注解：@RestController 注解和 @EnableDiscoveryClient 注解。
+在主应用类中，添加两个注解：`@RestController` 注解和 `@EnableDiscoveryClient` 注解。
 
 ```java
 package io.ajay.kumar.ribbontimeservice;
@@ -1864,30 +1786,30 @@ public class RibbonTimeServiceApplication {
 }
 ```
 
-然后我们需要添加一个请求处理方法，所以按几次回车键并输入 `public String getTime`。我们将使用简写版本 @GetMapping 对其进行注解，这只是一个 GET 请求映射。然后在方法体中，我们将返回“The current time is”，并构造一个新的 `Date` 对象并将其转换为字符串。为了演示目的，我们想知道是哪个实例在响应请求。目前我们没有办法判断出来，我们无法区分它们。因此，我们要在响应中添加一些内容。我们将写上“by service running on”，然后设置一个端口变量，最后关闭括号。
+然后我们需要添加一个请求处理方法，所以按几次回车键并输入 `public String getTime`。我们将使用简写版本 `@GetMapping` 对其进行注解，这只是一个 GET 请求映射。然后在方法体中，我们将返回“The current time is”，并构造一个新的 `Date` 对象并将其转换为字符串。为了演示目的，我们想知道是哪个实例在响应请求。目前我们没有办法判断出来，我们无法区分它们。因此，我们要在响应中添加一些内容。我们将写上“by service running on”，然后设置一个端口变量，最后关闭括号。
 
-由于我们的每个部分运行在不同的端口上，我们可以区分出每一个。所以，让我们确保我们确实定义了那个端口变量。回到这里添加一个 `private int port`，然后用 @Value 注解对其进行注解，并通过 `server.port` 变量进行注入。在启动之前，我们需要在 `application.properties` 中配置一些属性。请关闭并重新打开 `src/main/resources` 中的 `application.properties`。
+由于我们的每个部分运行在不同的端口上，我们可以区分出每一个。所以，让我们确保我们确实定义了那个端口变量。回到这里添加一个 `private int port`，然后用 `@Value` 注解对其进行注解，并通过 `server.port` 变量进行注入。在启动之前，我们需要在 `application.properties` 中配置一些属性。请关闭并重新打开 `src/main/resources` 中的 `application.properties`。
 
-**application.properties**
+### application.properties
+
 ```properties
 spring.application.name=time-service
 eureka.client.service-url.defaultZone=http://localhost:8761/eureka
 ```
 
+
+
 在 `application.properties` 中，我们将设置两个属性。第一个是 `spring.application.name` 属性，将其设置为 `timeservice`。第二个属性将配置服务发现服务器的地址，即 `eureka.client.service-url.defaultZone`。然后将其设置为 `localhost:8761/eureka`。现在我们已经拥有了设置 `ribbon-time-service` 所需的所有内容，所以可以关闭并最小化此窗口。我们要做的第一件事是启动发现服务器。所以展开 `discovery-server` 项目并导航到主应用类。在主应用类上右键点击，选择运行方式（Run As）-> Spring Boot App。接着最小化 `discovery-server` 并展开 `ribbon-time-service`，导航到主应用类，右键点击它。
-
-
-
 
 ## 使用 @RibbonClient 注解
 
 现在让我们来看看另一个注解：@RibbonClient 注解。首先，我们将看到如何将此注解与 @LoadBalanced 注解结合使用，在没有服务发现的情况下实现客户端负载均衡。
 
-```
+```java
 @Configuration
 @RibbonClient(name="someservice")
 public class MyConfiguration{
-...
+    ...
 }
 ```
 
@@ -1906,10 +1828,10 @@ application.yml
   ribbon:
     eureka:
       enabled: false
-    listServers=http://host:9000, http://host:9001
+    listOfServers: http://host:9000, http://host:9001
 ```
 
--   将 `<ribbon_client_name>` 替换为 @RibbonClient 的 `name` 字段值。
+- 将 `<ribbon_client_name>` 替换为 @RibbonClient 的 `name` 字段值。
 
 然后，在你的 application.properties 或 application.yml 中，定义两个新属性。记住我们在 @RibbonClient 注解上设置的 name 元素。你为每个属性使用该值作为前缀。因此，第一个属性 `ribbon_client_name.ribbon.eureka.enabled=false` 告诉 Ribbon 禁用服务发现支持。下一个属性 `ribbon_client_name.ribbon.listOfServers` 是一个用逗号分隔的 URL 列表，Ribbon 将使用它来分配请求。在这种情况下，我们将不同的 URL 设置为两个不同的地址，一个运行在端口 9000，另一个运行在端口 9001。
 
@@ -1926,8 +1848,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.framework.web.bind.annotation.GetMapping;
-import org.springframework.framework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @SpringBootApplication
@@ -1960,14 +1882,14 @@ spring.application.name=time-service
 @RibbonClient(name="time-service")
 @SpringBootApplication
 public class RibbonTimeAppApplication {
-    @Inject
+    @Autowired
     private RestTemplate restTemplate;
     public static void main(String[] args) {
         SpringApplication.run(RibbonTimeAppApplication.class, args);
     }
     @GetMapping
     public String getTime() {
-        return restTemplate.getEntity("http://time-service",
+        return restTemplate.getForEntity("http://time-service",
         String.class).getBody();
     }
     @Bean
@@ -1978,15 +1900,15 @@ public class RibbonTimeAppApplication {
 }
 ```
 
-就像我们在 ribbon-time-service 中做的那样，我们也想要删除这个 @EnableDiscoveryClient。现在我们将添加一个新的注解：@RibbonClient 注解，并将 `name` 元素设置为 time-service。这与我们在使用服务发现时使用的同一个 time-service，我们将以几乎相同的方式使用它。我们在 RestTemplate URL 中将其作为逻辑服务标识符进行它，然后在配置中配置代表该服务的特定实例。让我们关闭这里，打开 src/main/resources 和 application.properties。
+就像我们在 ribbon-time-service 中做的那样，我们也想要删除这个 @EnableDiscoveryClient。现在我们将添加一个新的注解：@RibbonClient 注解，并将 `name` 元素设置为 time-service。这与我们在使用服务发现时使用的同一个 time-service，我们将以几乎相同的方式使用它。我们在 RestTemplate URL 中将其作为逻辑服务标识符进行使用，然后在配置中配置代表该服务的特定实例。让我们关闭这里，打开 src/main/resources 和 application.properties。
 
 ```properties
 application.properties
 time-service.ribbon.eureka.enabled=false
-time-service.ribbon.listOfServers=http://host:4444, http://host:5555
+time-service.ribbon.listOfServers=http://localhost:4444, http://localhost:5555
 ```
 
-在我们的 application properties 中，我们将为所有用于配置 Ribbon 客户端的属性加上 Ribbon 客户端名称的前缀。假设我们使用 time-service。那么我们就说 time-service-ribbon-eureka-enabled=false。这是告诉 Ribbon 不要使用服务发现的属性。我们还有一个属性要设置，即 time-service.ribbon.listOfServers。我们将其设置为所有 time-service 实例位置的逗号分隔列表。因此我们有 http://localhost:4444，以及 5555 的那一个。
+在我们的 application properties 中，我们将为所有用于配置 Ribbon 客户端的属性加上 Ribbon 客户端名称的前缀。假设我们使用 time-service。那么我们就说 time-service.ribbon.eureka.enabled=false。这是告诉 Ribbon 不要使用服务发现的属性。我们还有一个属性要设置，即 time-service.ribbon.listOfServers。我们将其设置为所有 time-service 实例位置的逗号分隔列表。因此我们有 http://localhost:4444，以及 5555 的那一个。
 
 这就是我们需要的全部配置，所以我们可以关闭这里。我们可以回到应用程序类，右键点击它，选择“Run As”，选择“Spring Boot App”。接下来，启动浏览器访问 localhost:8080。
 
@@ -1999,9 +1921,9 @@ time-service.ribbon.listOfServers=http://host:4444, http://host:5555
 ```java
 @Configuration
 @RibbonClient(name="otherservice",
-configuration=SystemServiceConfig.class)
+configuration=OtherServiceConfig.class)
 public class MyConfiguration{
-...
+    ...
 }
 ```
 
@@ -2015,24 +1937,24 @@ public class OtherServiceConfig {
 }
 ```
 
-这个额外的 @Configuration 类将包含针对特定 Ribbon 客户端的所有自定义配置。该配置是由标记了 @Bean 注解的方法定义的。所以这个
-
-
-配置与任何其他 `@Configuration` 类一样。它没有什么特别的。你只需要像往常一样配置你的 `@Beans`。但由于此配置仅属于特定的 Ribbon 客户端，它不应该受任何形式的组件扫描。如果是这样，在那个 `@Configuration` 中定义的配置将应用于所有的 Ribbon 客户端，而不是仅仅是特定的 Ribbon 客户端。
+这个额外的 @Configuration 类将包含针对特定 Ribbon 客户端的所有自定义配置。该配置是由标记了 @Bean 注解的方法定义的。所以这个配置与任何其他 `@Configuration` 类一样。它没有什么特别的。你只需要像往常一样配置你的 `@Beans`。但由于此配置仅属于特定的 Ribbon 客户端，它不应该受任何形式的组件扫描。如果是这样，在那个 `@Configuration` 中定义的配置将应用于所有的 Ribbon 客户端，而不是仅仅是特定的 Ribbon 客户端。
 
 ```java
 @Configuration
 public class OtherServiceConfig {
     @Bean
     public <bean_type> <method_name>(){
+    }
 }
 ```
 
 默认 Ribbon 客户端 `@Beans`
+
 使用值替换 `<bean_type>` 和 `<method_name>` 以覆盖：http://cloud.spring.io/spring-cloud-static/Camden.SR6#customizing_the_ribbon_client
+
 最可能被自定义的：IRule 和 IPing
 
-设置 Ribbon 客户端需要许多不同的类，默认情况下，Spring Cloud 将它们定义为 `@Beans` 并允许你覆盖其中任何一个以进行自定义配置。让我们看看 Spring Cloud 文档，看看你可以覆盖哪些 `@Beans`。我已经加载了 Spring Cloud 文档，我们正在查看设置 Ribbon 客户端所需的若干不同的 bean。在大多数情况下，你通常不需要覆盖其中的任何一个，其中两个 bean 除外。那就是 IRule bean 和 IPing bean。IRule bean 控制负载均衡算法，IPing bean 控制对被负载均衡实例的可用性检查。让我们稍后详细查看这些这些 bean。
+设置 Ribbon 客户端需要许多不同的类，默认情况下，Spring Cloud 将它们定义为 `@Beans` 并允许你覆盖其中任何一个以进行自定义配置。让我们看看 Spring Cloud 文档，看看你可以覆盖哪些 `@Beans`。我已经加载了 Spring Cloud 文档，我们正在查看设置 Ribbon 客户端所需的若干不同的 bean。在大多数情况下，你通常不需要覆盖其中的任何一个，其中两个 bean 除外。那就是 IRule bean 和 IPing bean。IRule bean 控制负载均衡算法，IPing bean 控制对被负载均衡实例的可用性检查。让我们稍后详细查看这些 bean。
 
 ### 自定义你的 RibbonClient 配置：IRule Bean
 
@@ -2044,7 +1966,7 @@ public class OtherServiceConfig {
   - RandomRule
   - ZoneAvoidanceRule
 
-有 `RoundRobinRule` 实现，顾如其名，它是轮询均衡算法的实现，在所有实例之间均匀地分配负载。有 `ResponseTimeWeightedIRule` 实现，它也是轮询算法，但它会根据每个实例的平均响应时间动态分配权重。有 `RandomRule` 实现，它随机选择一个实例发送流量。还有 `ZoneAvoidanceRule`，它也是一种轮询算法实现；然而，它会根据 AWS 区域和可用性过滤掉服务器以发送流量。让我们来看一个例子让它更具体。
+有 `RoundRobinRule` 实现，顾名思义，它是轮询均衡算法的实现，在所有实例之间均匀地分配负载。有 `ResponseTimeWeightedRule` 实现，它也是轮询算法，但它会根据每个实例的平均响应时间动态分配权重。有 `RandomRule` 实现，它随机选择一个实例发送流量。还有 `ZoneAvoidanceRule`，它也是一种轮询算法实现；然而，它会根据 AWS 区域和可用性过滤掉服务器以发送流量。让我们来看一个例子让它更具体。
 
 ```java
 @Configuration
@@ -2060,14 +1982,14 @@ public class OtherServiceConfig{
 
 ### 自定义你的 RibbonClient 配置：IPing Bean
 
-IPing bean 负责选择检查被负载均衡的给定实例存活性或可用性的策略。就像 IRule bean 一样，你也可以实现自己的自定义 IPing 实现，或者从几个不同的默认值中选择一个。让我们看看哪些是可。
+IPing bean 负责选择检查被负载均衡的给定实例存活性或可用性的策略。就像 IRule bean 一样，你也可以实现自己的自定义 IPing 实现，或者从几个不同的默认值中选择一个。让我们看看哪些是可用的。
 
 - IPingImplementations
   - DummyPing
   - PingUrl
   - NIWSDiscoveryPing
 
-有 `DummyPing` 实现，就像它的名字听起来一样“笨”。在被询问服务的存活性时，它总是返回 `true`。如果你根本不在乎检查存活性或可用性，并且始终想将流量发送到所有实例，就会使用它。有 `PingUrl` 实现，这种实现允许你设置一个预期响应，然后对服务进行实际的 HTTP 调用并检查结果。因此，你通常会将它指向类似服务的健康检查 URL。然后是 `DiscoveryPing` 实现，如果你使用类似 Eureka 服务发现的工具，它将自动为你配置这个。它的作用只是咨询发现客户端来确定任何特定实例的存活性。再次，让我们来看一个例子让它更具体。
+有 `DummyPing` 实现，就像它的名字听起来一样“笨”。在被询问服务的存活性时，它总是返回 `true`。如果你根本不在乎检查存活性或可用性，并且始终想将流量发送到所有实例，就会使用它。有 `PingUrl` 实现，这种实现允许你设置一个预期响应，然后对服务进行实际的 HTTP 调用并检查结果。因此，你通常会将它指向类似服务的健康检查 URL。然后是 `NIWSDiscoveryPing` 实现，如果你使用类似 Eureka 服务发现的工具，它将自动为你配置这个。它的作用只是咨询发现客户端来确定任何特定实例的存活性。再次，让我们来看一个例子让它更具体。
 
 ### IPing：存活性检查
 
@@ -2089,11 +2011,6 @@ public class OtherServiceConfig{
 
 在这个演示中，我们将学习如何自定义用于调用 `ribbon-time-service` 的 Ribbon 客户端。再次，我们将基于上一个演示进行构建。
 
-[注：原文后续部分包含大量重复和损坏的 OCR 文本，已根据逻辑流进行清理并保留核心结构。]
-
-
-
-
 ## 总结
 
 我们已经到了这个模块的最后，让我们快速回顾一下学到的内容。
@@ -2104,9 +2021,11 @@ public class OtherServiceConfig{
     - 带有与不带服务发现的情况
 - 自定义 Ribbon 客户端配置
 
-我们首先讨论了什么是负载均衡，以及客户端负载均衡与服务端负载均衡之间的区别。然后，我们介绍了 Netflix Ribbon 项目，并学习了如何使用 @LoadBalanced 和 @RibbonClient 注解，在带有和不带服务发现的情况下设置客户端负载均衡。在最后一节中，我们看到了如何使用 @RibbonClient 注解配合单独的 @Configuration 类，为特定的 Ribbon 客户端设置自定义配置。
 
-## 模块 7：使用断路器创建自愈服务
+
+# 我们首先讨论了什么是负载均衡，以及客户端负载均衡与服务端负载均衡之间的区别。然后，我们介绍了 Netflix Ribbon 项目，并学习了如何使用 `@LoadBalanced` 和 `@RibbonClient` 注解，在带有和不带服务发现的情况下设置客户端负载均衡。在最后一节中，我们看到了如何使用 `@RibbonClient` 注解配合单独的 `@Configuration` 类，为特定的 Ribbon 客户端设置自定义配置。
+
+# 模块 7：使用断路器创建自愈服务
 
 ## 引言
 
@@ -2116,14 +2035,14 @@ public class OtherServiceConfig{
   - 级联故障
   - 断路器模式
 - Netflix Hystrix 项目
-  - @EnableCircuitBreaker
-  - @HystrixCommand
+  - `@EnableCircuitBreaker`
+  - `@HystrixCommand`
 - Hystrix Dashboard
-  - @EnableHystrixDashboard
+  - `@EnableHystrixDashboard`
   - 使用 Turbine 聚合 Hystrix 流
-  - @EnableTurbine
+  - `@EnableTurbine`
 
-我们将从一个关于云原生或分布式系统中故障的简短章节开始本模块。我们将观察为什么故障更加普遍，并理解一种被称为“级联故障”的常见副作用。然后，我们将介绍并理解断路器模式，并学习它如何帮助构建更具容错性的服务。接下来，我们将深入研究 Netflix Hystrix，这是一个容错库，其中其他功能之一就是实现了断路器模式。我们将看到 Spring Cloud 如何通过 @EnableCircuitBreaker 注解让我们轻松上手，然后我们理解如何使用 @HystrixCommand 注解在我们的自己的服务中实现断路器模式。最后，我们将通过查看 Hystrix 非常非常棒的功能之一——Hystrix Dashboard 来结束模块。我们将看到如何启用它、指标是如何收集的、如何解释这些结果，以及如何使用 Netflix 的另一个项目 Turbine 来聚合这些结果。
+我们将从一个关于云原生或分布式系统中故障的简短章节开始本模块。我们将观察为什么故障更加普遍，并理解一种被称为“级联故障”的常见副作用。然后，我们将介绍并理解断路器模式，并学习它如何帮助构建更具容错性的服务。接下来，我们将深入研究 Netflix Hystrix，这是一个容错库，其中其他功能之一就是实现了断路器模式。我们将看到 Spring Cloud 如何通过 `@EnableCircuitBreaker` 注解让我们轻松上手，然后我们理解如何使用 `@HystrixCommand` 注解在我们的自己的服务中实现断路器模式。最后，我们将通过查看 Hystrix 非常非常棒的功能之一——Hystrix Dashboard 来结束模块。我们将看到如何启用它、指标是如何收集的、如何解释这些结果，以及如何使用 Netflix 的另一个项目 Turbine 来聚合这些结果。
 
 ## 级联故障与资源过载
 
@@ -2134,7 +2053,7 @@ public class OtherServiceConfig{
   - 网络故障
   - 软件故障
 
-硬件会故障，网络会故障，软件肯定会故障。分布式系统在这一方面也无不同，只是故障发生的概率简单来说大得多。你有更多的硬件、更多的网络以及更多的软件。随着这些数量的增加，故障的概率也随之增加。增加故障可能的另一个因素是分布式系统中进程间通信的方式。曾经在进程内部的进程通信现在跨越了整个网络。即使我们现在的网络是韧性的，跨网络通信故障的概率仍然比进程内故障大得多。分布式系统故障一个特别糟糕的方面被称为“级联故障”。级联故障是某个系统中的一种故障，这种故障会像多米诺骨牌一样级联到系统的其他部分，导致它们也发生故障。为了让这更具体一点，假设你有三个服务：Service A、Service B 和 Service C。Service A 调用 Service B，Service B 调用 Service C。假设 Service C 内存耗尽，为 Service B 提供服务的速度非常慢。尽管 Service B 在调用 Service C 时设置了超时，但如果有足够的请求堆积在 Service B 上，且这些请求需要以足够的速度使用 Service C，那么 Service B 的资源将在达到超时之前被完全耗尽，反过来会导致 Service B 失败。同样的问题可能会沿着整个链条向上发生。
+硬件会故障，网络会故障，软件肯定会故障。分布式系统在这一方面也无不同，只是故障发生的概率简单来说大得多。你有更多的硬件、更多的网络以及更多的软件。随着这些数量的增加，故障的概率也随之增加。增加故障可能的另一个因素是分布式系统中进程间通信的方式。曾经在进程内部的进程通信现在跨越了整个网络。即使我们现在的网络是韧性的，跨网络通信故障的概率仍然比进程内故障大得多。分布式系统故障一个特别糟糕的方面被称为“级联故障”。级联故障是某个系统中的一种故障，这种故障会像多米诺骨牌一样级联到系统的其他部分，导致它们也发生故障。为了让这更具体一点，假设你有三个服务：`Service A`、`Service B` 和 `Service C`。`Service A` 调用 `Service B`，`Service B` 调用 `Service C`。假设 `Service C` 内存耗尽，为 `Service B` 提供服务的速度非常慢。尽管 `Service B` 在调用 `Service C` 时设置了超时，但如果有足够的请求堆积在 `Service B` 上，且这些请求需要以足够的速度使用 `Service C`，那么 `Service B` 的资源将在达到超时之前被完全耗尽，反过来会导致 `Service B` 失败。同样的问题可能会沿着整个链条向上发生。
 
 - 多个问题的共同作用
   - 容错问题
@@ -2154,8 +2073,6 @@ public class OtherServiceConfig{
 
 （注：OCR 文本在提供的后续页面中似乎截断或包含重复的伪影。我已根据提供的输入清理了流程和结构。）
 
-等一下，再次查看提供的文本，最后几页（168-169）包含了对断路器的重复定义。我将提供逻辑流的清理版本。
-
 ## 使用 Netflix Hystrix 和 Spring Cloud 实现容错
 
 Spring Cloud 通过来自 Netflix 的名为 Hystrix 的库来实现容错。Hystrix 是一个延迟和容错库，它的设计目标是停止级联故障并实现分布式系统的韧性。
@@ -2170,17 +2087,13 @@ Spring Cloud 通过来自 Netflix 的名为 Hystrix 的库来实现容错。Hyst
 - 防止服务被过载
   - 线程池、信号量与级联故障
 
-它是断路器模式的一种具体实现，允许你轻松封装调用，并自动监控在给定窗口内满足特定数量和百分比阈值的故障。滚动窗口默认为 10 秒，请求量必须至少为 20 个。如果 50% 或更多的请求是错误，那么断路器将被触发且不允许任何请求。例如，如果你在 10 秒窗口内有一千次请求，其中 500 个是错误，断路器就会触发。Hystrix 会定期检查断路器是否应该关闭，它通过每 5 秒允许一次请求来实现。这是默认设置。如果该请求成功，它将关闭断路器；如果失败，它将保持开启状态。任何短路、超时、被拒绝或失败的请求都有机会执行所谓的降级方法（fallback method）。而且，正如我之前提到的，降级处理可能是
-
-
-类似于返回缓存数据、默认值，或者只是一个空响应。除了断路器（Circuit Breaker）模式外，Hystrix 还具有额外的功能来保护服务不被过载。所有 Hystrix 封装的调用都受到线程池或信号量的限制。这样做的作用是限制资源的使用，正如我们之前讨论过的那样，以防止请求堆积并耗尽所有宝贵的资源。在所有可用资源都被用尽的情况下，任何新请求将立即失败并执行回退方法（fallback method），如果存在可用的话。
+它是断路器模式的一种具体实现，允许你轻松封装调用，并自动监控在给定窗口内满足特定数量和百分比阈值的故障。滚动窗口默认为 10 秒，请求量必须至少为 20 个。如果 50% 或更多的请求是错误，那么断路器将被触发且不允许任何请求。例如，如果你在 10 秒窗口内有一千次请求，其中 500 个是错误，断路器就会触发。Hystrix 会定期检查断路器是否应该关闭，它通过每 5 秒允许一次请求来实现。这是默认设置。如果该请求成功，它将关闭断路器；如果失败，它将保持开启状态。任何短路、超时、被拒绝或失败的请求都有机会执行所谓的降级方法（`fallback method`）。而且，正如我之前提到的，降级处理可能是类似于返回缓存数据、默认值，或者只是一个空响应。除了断路器（Circuit Breaker）模式外，Hystrix 还具有额外的功能来保护服务不被过载。所有 Hystrix 封装的调用都受到线程池或信号量的限制。这样做的作用是限制资源的使用，正如我们之前讨论过的那样，以防止请求堆积并耗尽所有宝贵的资源。在所有可用资源都被用尽的情况下，任何新请求将立即失败并执行回退方法（`fallback method`），如果存在可用的话。
 
 ## 使用 Spring Cloud 和 Netflix Hystrix
 
 使用 Spring Cloud 和 Netflix Hystrix 极其简单。在我们开始之前，简单说明一下：我将解释启动所需的所有步骤，并在最后带你完成一个演示，你可以跟上操作。在该模块的剩余部分中，我将遵循这种模式，但请记住这一点。
 
 ```xml
-pom.xml
 <dependencyManagement>
   <dependencies>
     <dependency>
@@ -2204,9 +2117,6 @@ pom.xml
 <dependency>
   <groupId>org.springframework.boot</groupId>
   <artifactId>spring-boot-actuator</artifactId>
-```
-
-```xml
 </dependency>
 ```
 
@@ -2215,9 +2125,9 @@ pom.xml
 ```java
 @SpringBootApplication
 @EnableCircuitBreaker
-public class Application{
-    public static void main(String[] args){
-        SpringApplication.run(Application.class,args);
+public class Application {
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
     }
 }
 ```
@@ -2226,12 +2136,13 @@ public class Application{
 
 ```java
 @Service
-public class Service{
-    @HystrixCommand(fallbackMethod="somethingElse")
-    public void doSomething(){
+public class Service {
+    @HystrixCommand(fallbackMethod = "somethingElse")
+    public void doSomething() {
         ...
     }
-    public void somethingElse(){
+
+    public void somethingElse() {
         ...
     }
 }
@@ -2242,7 +2153,7 @@ public class Service{
 - **小心处理 Hystrix 超时**
   - 确保超时时间包含调用者超时以及任何重试
   - 默认值：1000ms
-  - hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds<timeout_ms>
+  - `hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=<timeout_ms>`
 
 但有一个你必须注意的坑，就是关于 Hystrix 超时的。你需要确保你的 Hystrix 超时包含了调用者超时加上任何重试时间，然后留出一点缓冲区。默认超时设置为 1000ms（即 1 秒），如果你需要更改它，可以使用这个长属性以毫秒为单位设置超时。
 
@@ -2255,42 +2166,39 @@ public class Service{
 ### 2.1.1 项目元数据
 
 | Artifact coordinates | | |
-| :--- | :--- |
-| Group | io.ajay.kumar |
-| Artifact | weather-service |
+| :--- | :--- | :--- |
+| Group | io.ajay.kumar | |
+| Artifact | weather-service | |
 
 ### Dependencies (依赖)
 
 ### 向你的应用添加 Spring Boot Starters 和依赖
 
 **搜索依赖：**
+
 Web, Security, JPA, Actuator, Devtools...
 
 **已选依赖：**
+
 - Web
 - Eureka Discovery
 
 **生成项目** (Alt + Enter)
 
-一旦填写完所有，点击 Generate Project 按钮，它将为你创建并下载一个 zip 文件。我们还将使用此页面来生成天气应用项目，所以在此页面上将 artifact 的名称从 weather-service 改为 weather-app。
+一旦填写完所有，点击 Generate Project 按钮，它将为你创建并下载一个 zip 文件。我们还将使用此页面来生成天气应用项目，所以在此页面上将 artifact 的名称从 `weather-service` 改为 `weather-app`。
 
-
-
-找到 weather-service 的 application 类，右键点击它，选择“运行（Run As）”，“Spring Boot App”。接下来，打开浏览器并访问 `http://localhost:9000/weather`。
+找到 `weather-service` 的 application 类，右键点击它，选择“运行（Run As）”，“Spring Boot App”。接下来，打开浏览器并访问 `http://localhost:9000/weather`。
 
 只需确保你在这里收到了响应。你可以刷新几次，看到你获得了不同的响应。现在我们的天气服务已经运行了，让我们回到 IDE 并在我们的天气应用中使用它。
 
-回到你的 IDE，展开 weather-app 并导航到主应用程序类。在主应用程序类中，我们将定义三个新的注解。
+回到你的 IDE，展开 `weather-app` 并导航到主应用程序类。在主应用程序类中，我们将定义三个新的注解。
 
 ```java
 package io.ajay.kumar.weatherapp;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-```
-
-```java
-import
-org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
@@ -2305,6 +2213,7 @@ public class WeatherApplication {
     public static void main(String[] args) {
         SpringApplication.run(WeatherApplication.class, args);
     }
+
     @Bean
     @LoadBalanced
     public RestTemplate restTemplate() {
@@ -2313,14 +2222,12 @@ public class WeatherApplication {
 }
 ```
 
-第一个是 @EnableCircuitBreaker 注解，下一个是 @EnableDiscoveryClient 注解，最后一个是 @RestController 注解。接下来，我们将定义一个 RestTemplate 以便调用我们的天气服务，所以来到这里，输入 `public RestTemplate restTemplate()` 并使用 @Bean 注解和 @LoadBalanced 注解调用它。然后，在方法体中，返回一个新的 RestTemplate。记住，Hystrix 命令只能在 @Component 或 @Service 类中定义，所以让我们回到这里创建一个新类。右键点击，选择“新建（New）”，“选择“类（Class）”，我们将其命名为 WeatherService。
+第一个是 `@EnableCircuitBreaker` 注解，下一个是 `@EnableDiscoveryClient` 注解，最后一个是 `@RestController` 注解。接下来，我们将定义一个 `RestTemplate` 以便调用我们的天气服务，所以来到这里，输入 `public RestTemplate restTemplate()` 并使用 `@Bean` 注解和 `@LoadBalanced` 注解调用它。然后，在方法体中，返回一个新的 `RestTemplate`。记住，Hystrix 命令只能在 `@Component` 或 `@Service` 类中定义，所以让我们回到这里创建一个新类。右键点击，选择“新建（New）”，“选择“类（Class）”，我们将其命名为 `WeatherService`。
 
 ```java
-package io.anjay.kumar.weatherapp;
+package io.ajay.kumar.weatherapp;
+
 import javax.inject.Inject;
-```
-
-```java
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
@@ -2329,10 +2236,10 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 public class WeatherService {
     @Inject
     private RestTemplate restTemplate;
+
     @HystrixCommand(fallbackMethod = "unknown")
     public String getWeather() {
-        return restTemplate.getForEntity("http://weather-service/weather",
-            String.class).getBody();
+        return restTemplate.getForEntity("http://weather-service/weather", String.class).getBody();
     }
 
     public String unknown() {
@@ -2341,7 +2248,9 @@ public class WeatherService {
 }
 ```
 
-在类的顶部，为它加上 @Service 注解。然后我们需要 RestTemplate，所以是 `private RestTemplate restTemplate`。并确保我们使用了 @Inject。此外，我们需要一个方法来调用我们的天气服务，在它下方输入 `public String getWeather`。然后，在方法体中，我们将使用 `restTemplate.getForEntity`。我们使用的 URL 是 `http://weather-service/weather`。响应类型将是字符串，所以我们写 `String.class`。然后我们确保调用 `.getBody` 来获取响应体。这就是我们想要用 Hystrix 命令对其进行注解的地方。回到方法顶部，输入 @HystrixCommand，我们将使用一个名为 `unknown` 的备用方法（fallbackMethod）。然后我们必须确保定义该方法，在 getWeather 方法下方定义一个新方法 `public String unknown`。这是一个非常简单的方法，它将只返回字符串 "unknown"。为了清楚起见，我们将在主应用程序类中使用这个 WeatherService 来获取实际天气。如果获取天气时出现问题，或者 WeatherService 宕机，它将调用该备用方法并直接返回 unknown 作为天气结果。让我们回到主应用程序类并使用 WeatherService。
+
+
+在类的顶部，为它加上 `@Service` 注解。然后我们需要 `RestTemplate`，所以是 `private RestTemplate restTemplate`。并确保我们使用了 `@Inject`。此外，我们需要一个方法来调用我们的天气服务，在它下方输入 `public String getWeather`。然后，在方法体中，我们将使用 `restTemplate.getForEntity`。我们使用的 URL 是 `http://weather-service/weather`。响应类型将是字符串，所以我们写 `String.class`。然后我们确保调用 `.getBody` 来获取响应体。这就是我们想要用 Hystrix 命令对其进行注解的地方。回到方法顶部，输入 `@HystrixCommand`，我们将使用一个名为 `unknown` 的备用方法（`fallbackMethod`）。然后我们必须确保定义该方法，在 `getWeather` 方法下方定义一个新方法 `public String unknown`。这是一个非常简单的方法，它将只返回字符串 "unknown"。为了清楚起见，我们将在主应用程序类中使用这个 `WeatherService` 来获取实际天气。如果获取天气时出现问题，或者 `WeatherService` 宕机，它将调用该备用方法并直接返回 unknown 作为天气结果。让我们回到主应用程序类并使用 `WeatherService`。
 
 ```java
 @SpringBootApplication
@@ -2370,11 +2279,11 @@ public class WeatherApplicationApplication {
 }
 ```
 
-现在回到主应用程序类中，定义一个新的实例变量 `private WeatherService weatherService`，并将其命名为 weatherService。不要忘记添加 @Inject 注解。然后我们添加一个名为 `getWeather` 的新方法。来到这里 main 方法下方，输入 `public String getWeather`。我们将在这里返回一个表示“当前天气是”的字符串，然后调用 weatherService 获取天气。由于这是我们的处理方法，所以我们需要 @GetMapping。在在该方法顶部定义一个 @GetMapping，然后指定 URL `/current/weather`。这就是我们需要的全部内容。
+现在回到主应用程序类中，定义一个新的实例变量 `private WeatherService weatherService`，并将其命名为 weatherService。不要忘记添加 `@Inject` 注解。然后我们添加一个名为 `getWeather` 的新方法。来到这里 main 方法下方，输入 `public String getWeather`。我们将在这里返回一个表示“当前天气是”的字符串，然后调用 weatherService 获取天气。由于这是我们的处理方法，所以我们需要 `@GetMapping`。在在该方法顶部定义一个 `@GetMapping`，然后指定 URL `/current/weather`。这就是我们需要的全部内容。
 
-回到主应用程序类中，定义一个新的实例变量 `private WeatherService weatherService`，并将其命名为 weatherService。不要忘记添加 @Inject 注解。然后我们添加一个名为 `getWeather` 的新方法。来到这里 main 方法下方，输入 `public String getWeather`。我们将在这里返回一个表示“当前天气是”的字符串，然后调用 weatherService 获取天气。由于这是我们的处理方法，所以我们需要 @GetMapping。在在该方法顶部定义一个 @GetMapping，然后指定 URL `/current/weather`。这就是我们需要的全部内容。
+回到主应用程序类中，定义一个新的实例变量 `private WeatherService weatherService`，并将其命名为 weatherService。不要忘记添加 `@Inject` 注解。然后我们添加一个名为 `getWeather` 的新方法。来到这里 main 方法下方，输入 `public String getWeather`。我们将在这里返回一个表示“当前天气是”的字符串，然后调用 weatherService 获取天气。由于这是我们的处理方法，所以我们需要 `@GetMapping`。在在该方法顶部定义一个 `@GetMapping`，然后指定 URL `/current/weather`。这就是我们需要的全部内容。
 
-天气应用的属性与天气服务的非常相似，所以我把它们复制到了这里。然后我们将修改其中的一些值。对于 server.port，我们将改为 8000；对于 spring.application.name，我们将改为 weather-app。我们准备好启动天气应用了，所以关闭该文件并查看 Console。检查发现服务器和天气服务仍在运行，然后来到 WeatherApplication 类，右键点击它，选择“运行（Run As）”，“Spring Boot App”。接下来，打开浏览器并访问 `http://localhost:9000/weather`。
+天气应用的属性与天气服务的非常相似，所以我把它们复制到了这里。然后我们将修改其中的一些值。对于 `server.port`，我们将改为 8000；对于 `spring.application.name`，我们将改为 weather-app。我们准备好启动天气应用了，所以关闭该文件并查看 Console。检查发现服务器和天气服务仍在运行，然后来到 `WeatherApplication` 类，右键点击它，选择“运行（Run As）”，“Spring Boot App”。接下来，打开浏览器并访问 `http://localhost:9000/weather`。
 
 ```
 http://localhost:9000/weather
@@ -2400,15 +2309,12 @@ Netflix Hystrix 跟踪保护调用的执行状态，以便知道何时触发断�
   * 流量
   * 成功请求
   * 拒绝请求
-  * 超
+  * 超时
   * 延迟百分位数
 - 监控保护调用
   * 单个服务器或集群
 
-要使用它，只需在 pom.xml 中声明几个依赖并添加单个注解即可。
-
-
-
+要使用它，只需在 `pom.xml` 中声明几个依赖并添加单个注解即可。
 
 ## 使用 Spring Cloud 和 Netflix Hystrix Dashboard
 
@@ -2511,7 +2417,6 @@ Pool Size 10 Queue Size 5
 
 从第一行第一列开始，深绿色的数字代表成功请求的数量。紧接其下，蓝色数字代表短路请求的数量。这些是由于路器开启而甚至没有尝试执行的请求。在第一列的底行，浅绿色的数字代表错误请求的数量。这些请求是错误，但并不一定由于执行失败导致。它们是由于非法参数等原因。移动到第二列第一行，橙色数字代表超时请求的数量。这些是尝试执行但未在规定时间内收到响应的请求。在其下方，紫色数字代表被拒绝请求的数量。这些是当路器开启时被拒绝的请求。在第二列的底行，红色数字代表失败请求的数量。这些是在执行时抛出异常的请求。移动到第三列第一行，黄色数字代表错误百分比。这些是由于执行失败而产生的请求百分比。现在我们已经了 Hystrix Dashboard 的可视化，让我们开始演示。
 
-
 这应该加载 Hystrix Dashboard板。在我们查看任何指标之前，我们实际上需要生成一些指标。因此，打开新标签页并访问你的天气应用 `localhost:8000/current/weather`。
 
 然后直接刷新几次该页面以生成一些指标。回到 Hystrix Dashboard板，我们将输入天气应用的 Hystrix 流 URL。即 `http://localhost:8000/hystrix.stream`。对于仪表板的标题，我们将命名为“Weather App”。接下来，点击 Monitor Stream（监控流）按钮，你应该就能看到一些指标了。
@@ -2530,7 +2435,7 @@ Hystrix 指标是按服务进行跟踪的。现在，单个 Hystrix 流可能包
 
 那么，我们如何开始使用 Turbine 呢？嗯，如果你一直在跟着这本书，你可能已经猜到了。
 
-```
+```xml
 pom.xml
 <dependencyManagement>
   <dependencies>
@@ -2546,7 +2451,7 @@ pom.xml
 
 首先，在你的 `pom.xml` 的 `dependencyManagement` 部分定义对 `spring-cloud-dependencies` 的新依赖。一如既往，确保它的类型为 `pom` 且范围为 `import`。
 
-```
+```xml
 pom.xml
 <dependency>
   <groupId>org.springframework.cloud</groupId>
@@ -2556,7 +2461,7 @@ pom.xml
 
 然后，同样在 `pom.xml` 的 `dependency` 部分，定义对 `spring-cloud-starter-turbine` 的新依赖。紧接着在你的主 Application 类上添加一个新注解：`@EnableTurbine` 注解。
 
-```
+```java
 @SpringBootApplication
 @EnableTurbine
 public class Application{
@@ -2569,29 +2474,36 @@ public class Application{
 最后，我们还有一点配置需要添加。在你的 `application.properties` 或 `application.yml` 中，我们将添加两个新属性。
 
 application.properties
+
+```properties
 turbine.app-config=<list_of_service_ids>
 turbine.cluster-name-expression='default'
+```
 
 OR
 
 application.yml
+
+```yaml
 turbine:
   appConfig:<list_of_service_ids>
   clusterNameExpression="default"
+```
 
 - 除了标准的 Spring 应用名称和发现服务器位置属性外
 - 第一个属性是 `turbine.app-config` 属性，你将其设置为由逗号分隔的服务 ID 列表。这些与你用于服务发现的 service ID 相同。第二个属性 `turbine.cluster-name-expression` 属性可以是一个 Spring 表达式语言（SpEL）值，用于你的集群。在 Turbine 中，集群仅仅是需要一起监控的服务分组。为了我们的目的，为了简单起见，我们将该值设置为单引号包裹的 `default`。
+
+
+
 - 注意此一点：如果你使用 YAML 而不是 properties，你需要用双引号来转义单引号。
 
-一旦你完成了所有配置并启动了 Hystrix Dashboard板，你就不需要输入 `hystrix.stream` URL，而是输入你的 Turbine 服务器的 URL 并以 `turbine.stream` 结尾。让我们通过创建自己的 Turbine 服务器来应用所学知识，可以用它来聚合我们在上一个演示中创建的服务流以及一个新服务。
+一旦你完成了所有配置并启动了 Hystrix Dashboard，你就不需要输入 `hystrix.stream` URL，而是输入你的 Turbine 服务器的 URL 并以 `turbine.stream` 结尾。让我们通过创建自己的 Turbine 服务器来应用所学知识，可以用它来聚合我们在上一个演示中创建的服务流以及一个新服务。
 
 ## 演示：使用 Turbine 聚合多个 Hystrix 流
 
-在此演示中，我们将利用 Turbine 结合来自两个不同服务的 Hystrix 流，以便它们都可以在同一个仪表板中查看。（*注：原文后续内容存在大量重复，此处已按原意处理*）
+在此演示中，我们将利用 Turbine 结合来自两个不同服务的 Hystrix 流，以便它们都可以在同一个仪表板中查看。
 
-
-
-这一次，我们不再使用 hystrix.stream URL，而是使用 turbine.stream URL。所以，请输入 http://localhost:3000/turbine.stream。在 Title（标题）文本框中输入 Turbine。之后，点击 Monitor Stream（监控流）按钮，你应该就能看到来自 datetime 应用的指标，即 `getCurrentDateTime` 调用，你还会看到来自 weather 应用的指标，即 `getWeather` 调用。
+这一次，我们不再使用 `hystrix.stream` URL，而是使用 `turbine.stream` URL。所以，请输入 `http://localhost:3000/turbine.stream`。在 Title（标题）文本框中输入 Turbine。之后，点击 Monitor Stream（监控流）按钮，你应该就能看到来自 datetime 应用的指标，即 `getCurrentDateTime` 调用，你还会看到来自 weather 应用的指标，即 `getWeather` 调用。
 
 如果没有看到，请返回那些服务并刷新几次以生成一些指标。
 
@@ -2602,8 +2514,8 @@ turbine:
 - 容错性是一项需求
 - Netflix Hystrix
   - 熔路器模式
-  - @HystrixCommand
-  - @EnableCircuitBreaker
+  - `@HystrixCommand`
+  - `@EnableCircuitBreaker`
 - Netflix Hystrix Dashboard & Turbine
   - 监控一个或多个流
 
@@ -2631,16 +2543,12 @@ turbine:
 问题是，它们是如何结合在一起形成一个云原生系统的？首先，让我们回顾一下涉及的所有部分。这一切都从一个或多个应用服务开始。
 
 ![](img/e33dbe7cce1ed533e80ee7389d9ce1d8_210_0.png)
-
 ![](img/e33dbe7cce1ed533e80ee7389d9ce1d8_210_1.png)
-
 ![](img/e33dbe7cce1ed533e80ee7389d9ce1d8_210_2.png)
-
 ![](img/e33dbe7cce1ed533e80ee7389d9ce1d8_210_3.png)
-
 ![](img/e33dbe7cce1ed533e80ee7389d9ce1d8_210_4.png)
 
-在我们的示例中，有两个应用服务，应用 A 和应用服务 B，它们都运行着多个实例。然后，这一切的核心是服务发现服务器（Service Discovery Server）。它是系统的电话簿或目录，允许所有人自己的位置并发现他人的位置。记得我们在整本书中利用 Netflix Eureka 来满足服务发现需求。接下来，我们有配置服务器（Config Server）来处理动态和分布式配置需求。记住我们使用 Spring Cloud Config Server 来此。之后，我们有网关（gateway），即系统的大门，负责接收并将请求路由到后端服务。我们使用 Netflix Zuul 来实现。然后，我们有一个客户端负载均衡器，在我们为了高可用性而运行的实例之间分配请求。记得在我们的案例中使用了 Netflix Ribbon。最后，我们有容错机制（fault tolerance），能够容忍并衡量故障，并防止它们导致其他系统的级联故障。我们使用 Netflix Hystrix 来实现。
+在我们的示例中，有两个应用服务，应用 A 和应用服务 B，它们都运行着多个实例。然后，这一切的核心是服务发现服务器（Service Discovery Server）。它是系统的电话簿或目录，允许所有人注册自己的位置并发现他人的位置。记得我们在整本书中利用 Netflix Eureka 来满足服务发现需求。接下来，我们有配置服务器（Config Server）来处理动态和分布式配置需求。记住我们使用 Spring Cloud Config Server 来实现。之后，我们有网关（gateway），即系统的大门，负责接收并将请求路由到后端服务。我们使用 Netflix Zuul 来实现。然后，我们有一个客户端负载均衡器，在我们为了高可用性而运行的实例之间分配请求。记得在我们的案例中使用了 Netflix Ribbon。最后，我们有容错机制（fault tolerance），能够容忍并衡量故障，并防止它们导致其他系统的级联故障。我们使用 Netflix Hystrix 来实现。
 
 ## 整合一切：启动时
 
@@ -2648,7 +2556,7 @@ turbine:
 
 ![](img/e33dbe7cce1ed533e80ee7389d9ce1d8_212_0.png)
 
-这一切从服务发现服务器开始。它是系统的电话簿或目录，允许所有人注册位置并发现他人的位置。记得我们在整本书中利用 Netflix Eureka 来满足服务发现需求。接下来，我们有配置服务器来处理动态和分布式配置需求。记住我们使用 Spring Cloud Config Server 来此。之后，我们有网关，即系统的大门，负责接收并将请求路由到后端服务。我们使用 Netflix Zuul 来实现。然后，我们有一个客户端负载均衡器，在我们为了高可用性而运行的实例之间分配请求。记得在我们的案例中使用了 Netflix Ribbon。最后，我们有容错机制，能够容忍并衡量故障，并防止它们导致其他系统的级联故障。我们使用 Netflix Hystrix 来实现。
+这一切从服务发现服务器开始。它是系统的电话簿或目录，允许所有人注册位置并发现他人的位置。记得我们在整本书中利用 Netflix Eureka 来满足服务发现需求。接下来，我们有配置服务器来处理动态和分布式配置需求。记住我们使用 Spring Cloud Config Server 来实现。之后，我们有网关，即系统的大门，负责接收并将请求路由到后端服务。我们使用 Netflix Zuul 来实现。然后，我们有一个客户端负载均衡器，在我们为了高可用性而运行的实例之间分配请求。记得在我们的案例中使用了 Netflix Ribbon。最后，我们有容错机制，能够容忍并衡量故障，并防止它们导致其他系统的级联故障。我们使用 Netflix Hystrix 来实现。
 
 ![](img/e33dbe7cce1ed533e80ee7389d9ce1d8_212_1.png)
 
@@ -2659,8 +2567,5 @@ turbine:
 ![](img/e33dbe7cce1ed533e80ee7389d9ce1d8_214_0.png)
 
 给定路径的请求从网关开始，在我们案例中是 Zuul。Zuul 将路径映射到特定服务，然后通过向服务发现服务器请求或使用缓存结果来定位该服务。一旦定位，它将进行受 Hystrix 保护的调用。在我们的示例中，请求被发送到服务 A。现在，假设服务 A 也依赖服务 B 来完成请求。接收请求后，服务 A 利用发现定位 B，并使用 Ribbon 进行客户端负载均衡调用 B 的一个实例。B 返回给 A，然后 A 返回给网关，最后，网关响应原始请求。
-
-
-
 
 了解存在哪些工具非常有帮助，这样你就能针对正确的事情使用正确的工具。

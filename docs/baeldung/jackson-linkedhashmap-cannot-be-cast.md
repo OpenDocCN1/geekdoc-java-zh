@@ -1,8 +1,9 @@
-# Jackson:Java . util . linked hashmap 不能转换为 X
+
+# Jackson: `java.util.LinkedHashMap` 不能转换为 `X`
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/jackson-linkedhashmap-cannot-be-cast>
 
-## 1.概观
+## 1. 概观
 
 Jackson 是一个广泛使用的 Java 库，它允许我们方便地序列化/反序列化 JSON 或 XML。
 
@@ -10,11 +11,11 @@ Jackson 是一个广泛使用的 Java 库，它允许我们方便地序列化/�
 
 在本教程中，我们将讨论为什么会出现这个异常，以及如何解决这个问题。
 
-## 2.理解问题
+## 2. 理解问题
 
 让我们创建一个简单的 Java 应用程序来重现这个异常，以了解异常何时会发生。
 
-### 2.1.创建 POJO 类
+### 2.1. 创建 POJO 类
 
 让我们从一个简单的 POJO 类开始:
 
@@ -47,7 +48,7 @@ public class Book {
 
 接下来，我们将看到当我们尝试将 JSON 实例反序列化到`List<Book>`时会发生什么。
 
-### 2.2.将 JSON 反序列化到`List<Book>`
+### 2.2. 将 JSON 反序列化到`List<Book>`
 
 让我们看看是否可以通过将这个 JSON 文件反序列化为一个`List<Book>`对象并从中读取元素来重现类转换问题:
 
@@ -68,15 +69,15 @@ void givenJsonString_whenDeserializingToList_thenThrowingClassCastException()
 
 测试通过，意味着我们成功地重现了问题。
 
-### 2.3.引发异常的原因
+### 2.3. 引发异常的原因
 
 如果我们仔细看看异常消息`class java.util.LinkedHashMap cannot be cast to class … Book`，可能会出现几个问题。
 
-我们已经用类型`List<Book>`声明了变量`bookList`，但是为什么 Jackson 试图将`LinkedHashMap` 类型转换成我们的`Book` 类？再者，`LinkedHashMap`从何而来？
+我们已经用类型`List<Book>`声明了变量`bookList`，但是为什么 Jackson 试图将`LinkedHashMap`类型转换成我们的`Book`类？再者，`LinkedHashMap`从何而来？
 
-首先，我们确实用类型`List<Book>`声明了`bookList`。然而，当我们调用 [`objectMapper.readValue()`](https://web.archive.org/web/20221208143917/https://fasterxml.github.io/jackson-databind/javadoc/2.7/com/fasterxml/jackson/databind/ObjectMapper.html#readValue(java.lang.String,%20java.lang.Class)) 方法时，**我们将`ArrayList.class`作为`Class`对象传递。因此，Jackson 会将 JSON 内容反序列化为一个 [`ArrayList`](/web/20221208143917/https://www.baeldung.com/java-arraylist) 对象，但是它不知道`ArrayList` 对象中应该有什么类型的元素。**
+首先，我们确实用类型`List<Book>`声明了`bookList`。然而，当我们调用 [`objectMapper.readValue()`](https://web.archive.org/web/20221208143917/https://fasterxml.github.io/jackson-databind/javadoc/2.7/com/fasterxml/jackson/databind/ObjectMapper.html#readValue(java.lang.String,%20java.lang.Class)) 方法时，**我们将`ArrayList.class`作为`Class`对象传递。因此，Jackson 会将 JSON 内容反序列化为一个 [`ArrayList`](/web/20221208143917/https://www.baeldung.com/java-arraylist) 对象，但是它不知道`ArrayList`对象中应该有什么类型的元素。**
 
-其次，**当 Jackson 试图在 JSON 中反序列化一个对象，但没有给出目标类型信息时，它将使用默认类型:`[LinkedHashMap](/web/20221208143917/https://www.baeldung.com/java-linked-hashmap)`。**换句话说，在反序列化之后，我们将得到一个`ArrayList<LinkedHashMap>`对象。在`Map`中，关键字是属性的名称，例如`“bookId”`、`“title”`等。
+其次，**当 Jackson 试图在 JSON 中反序列化一个对象，但没有给出目标类型信息时，它将使用默认类型:`[LinkedHashMap](/web/20221208143917/https://www.baeldung.com/java-linked-hashmap)`。**换句话说，在反序列化之后，我们将得到一个`ArrayList<LinkedHashMap>`对象。在`Map`中，关键字是属性的名称，例如`"bookId"`、`"title"`等。
 
 这些值是相应属性的值:
 
@@ -84,7 +85,7 @@ void givenJsonString_whenDeserializingToList_thenThrowingClassCastException()
 
 既然我们了解了问题的原因，让我们来讨论如何解决它。
 
-## 3.通过`TypeReference`到`objectMapper.readValue()`
+## 3. 通过`TypeReference`到`objectMapper.readValue()`
 
 为了解决这个问题，我们需要以某种方式让 Jackson 知道元素的类型。但是，编译器不允许我们做类似于`objectMapper.readValue(jsonString, ArrayList<Book>.class)`的事情。
 
@@ -105,13 +106,13 @@ void givenJsonString_whenDeserializingWithTypeReference_thenGetExpectedList()
 
 如果我们进行测试，它会通过的。所以，传递一个`TypeReference`对象就解决了我们的问题。
 
-## 4.通过`JavaType`到`objectMapper.readValue()`
+## 4. 通过`JavaType`到`objectMapper.readValue()`
 
 在上一节中，我们谈到了将一个`Class`对象或一个`TypeReference`对象作为第二个参数来调用`objectMapper.readValue()`方法。
 
 `objectMapper.readValue()`方法仍然接受一个`[JavaType](https://web.archive.org/web/20221208143917/https://fasterxml.github.io/jackson-databind/javadoc/2.7/com/fasterxml/jackson/databind/JavaType.html)`对象作为第二个参数。**`JavaType`是类型标记类的基类。它将被反序列化器使用，以便反序列化器在反序列化期间知道目标类型是什么。**
 
-我们可以通过一个 [`TypeFactory`](https://web.archive.org/web/20221208143917/https://fasterxml.github.io/jackson-databind/javadoc/2.7/com/fasterxml/jackson/databind/type/TypeFactory.html) 实例构造一个`JavaType `对象，我们可以从`objectMapper.getTypeFactory()`中检索到`TypeFactory`对象。
+我们可以通过一个 [`TypeFactory`](https://web.archive.org/web/20221208143917/https://fasterxml.github.io/jackson-databind/javadoc/2.7/com/fasterxml/jackson/databind/type/TypeFactory.html) 实例构造一个`JavaType`对象，我们可以从`objectMapper.getTypeFactory()`中检索到`TypeFactory`对象。
 
 让我们回到书中的例子。在这个例子中，我们想要的目标类型是`ArrayList<Book>`。
 
@@ -138,7 +139,7 @@ void givenJsonString_whenDeserializingWithJavaType_thenGetExpectedList()
 
 如果我们运行它，测试就通过了。所以，这个问题也可以这样解决。
 
-## 5.使用`JsonNode`对象和`objectMapper.convertValue()`方法
+## 5. 使用`JsonNode`对象和`objectMapper.convertValue()`方法
 
 我们已经看到了向`objectMapper.readValue()`方法传递一个`TypeReference`或`JavaType`对象的解决方案。
 
@@ -148,7 +149,7 @@ void givenJsonString_whenDeserializingWithJavaType_thenGetExpectedList()
 
 让我们看看每种方法的实际应用。
 
-首先，让我们使用一个`TypeReference `对象和`objectMapper.convertValue()`方法创建一个测试方法:
+首先，让我们使用一个`TypeReference`对象和`objectMapper.convertValue()`方法创建一个测试方法:
 
 ```java
 @Test
@@ -179,13 +180,15 @@ void givenJsonString_whenDeserializingWithConvertValueAndJavaType_thenGetExpecte
 
 如果我们运行这两个测试，它们都会通过。因此，使用`objectMapper.convertValue()`方法是解决问题的替代方法。
 
-## 6.创建泛型反序列化方法
+## 6. 创建泛型反序列化方法
 
 到目前为止，我们已经讨论了如何解决将 JSON 数组反序列化为 Java 集合时的类转换问题。在现实世界中，我们可能希望创建一个通用方法来处理不同的元素类型。
 
 现在对我们来说这不是一件难事。
 
-**我们可以在调用`objectMapper.readValue()` 方法**时传递一个`JavaType`对象:
+**我们可以在调用`objectMapper.readValue()`方法**时传递一个`JavaType`对象:
+
+
 
 ```java
 public static <T> List<T> jsonArrayToList(String json, Class<T> elementClass) throws IOException {
@@ -234,7 +237,7 @@ java.lang.ClassCastException: class java.util.LinkedHashMap cannot be cast to cl
 
 因为我们的方法是通用的。**类型参数`T`不能在运行时**具体化，即使我们用类型参数`T`传递一个`TypeReference`实例。
 
-## 7.用 Jackson 进行 XML 反序列化
+## 7. 用 Jackson 进行 XML 反序列化
 
 除了 JSON 序列化/反序列化，Jackson 库也可以用来序列化/反序列化 XML。
 
@@ -296,7 +299,7 @@ void givenXml_whenDeserializingWithTypeReference_thenGetExpectedList()
 } 
 ```
 
-## 8.结论
+## 8. 结论
 
 在本文中，我们已经讨论了为什么在使用 Jackson 反序列化 JSON 或 XML 时会出现`java.util.LinkedHashMap cannot be cast to X`异常。
 

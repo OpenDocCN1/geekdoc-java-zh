@@ -1,8 +1,9 @@
+
 # JPA 查询语言指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/querydsl-with-jpa-tutorial>
 
- ![announcement-icon.png](img/3389c2017376cafcdb912bf911dd5a62.png)
+![announcement-icon.png](img/3389c2017376cafcdb912bf911dd5a62.png)
 
 JPA can behave very differently depending on the exact circumstances under which it is used. Code that works in our local environment or in staging performs very poorly (or even flat out fails) when thrown against real-scale databases in production environments.
 
@@ -14,7 +15,7 @@ In addition, instrumenting Lightrun Metrics at runtime allows you to track down 
 
 [>> Debugging Spring Persistence and JPA Issues Using Lightrun](/web/20220525013414/https://www.baeldung.com/lightrun-n-jpa)
 
-## 1。概述
+## 1. 概述
 
 Querydsl 是一个扩展的 Java 框架，它有助于用类似于 SQL 的领域特定语言创建和运行**类型安全查询。**
 
@@ -22,9 +23,9 @@ Querydsl 是一个扩展的 Java 框架，它有助于用类似于 SQL 的领域
 
 这里有一个小提示，Hibernate 的 HQL 是 Querydsl 的第一个目标语言，但是现在它支持 JPA、JDO、JDBC、Lucene、Hibernate Search、MongoDB、Collections 和 RDFBean 作为后端。
 
-## 2。准备工作
+## 2. 准备工作
 
-让我们首先将必要的依赖项添加到 Maven 项目中:
+让我们首先将必要的依赖项添加到 Maven 项目中：
 
 ```java
 <properties>
@@ -51,7 +52,7 @@ Querydsl 是一个扩展的 Java 框架，它有助于用类似于 SQL 的领域
 </dependency>
 ```
 
-现在让我们配置 Maven APT 插件:
+现在让我们配置 Maven APT 插件：
 
 ```java
 <project>
@@ -82,15 +83,15 @@ Querydsl 是一个扩展的 Java 框架，它有助于用类似于 SQL 的领域
 
 `JPAAnnotationProcessor`将找到用`javax.persistence.Entity`注释标注的域类型，并为它们生成查询类型。
 
-## 3。使用 Querydsl 的查询
+## 3. 使用 Querydsl 的查询
 
 查询是基于生成的查询类型构造的，这些查询类型反映了您的域类型的属性。同样，函数/方法调用是以完全类型安全的方式构造的。
 
 查询路径和操作在所有实现中都是相同的，而且`Query`接口有一个公共的基本接口。
 
-### 3.1。一个实体和 Querydsl 查询类型
+### 3.1. 一个实体和 Querydsl 查询类型
 
-让我们首先定义一个简单的实体，我们将在下面的例子中使用它:
+让我们首先定义一个简单的实体，我们将在下面的例子中使用它：
 
 ```java
 @Entity
@@ -121,21 +122,21 @@ public class Person {
 
 Querydsl 将生成一个简单名称为`QPerson`的查询类型，并将其放入与`Person`相同的包中。`QPerson`可以作为 Querydsl 查询中的静态类型变量，作为`Person`类型的代表。
 
-首先–`QPerson`有一个默认的实例变量，可以作为静态字段访问:
+首先–`QPerson`有一个默认的实例变量，可以作为静态字段访问：
 
 ```java
 QPerson person = QPerson.person;
 ```
 
-或者，您可以像这样定义自己的`Person`变量:
+或者，您可以像这样定义自己的`Person`变量：
 
 ```java
 QPerson person = new QPerson("Erich", "Gamma");
 ```
 
-### 3.2。使用`JPAQuery` 构建查询
+### 3.2. 使用`JPAQuery` 构建查询
 
-我们现在可以使用`JPAQuery`实例进行查询:
+我们现在可以使用`JPAQuery`实例进行查询：
 
 ```java
 JPAQuery query = new JPAQuery(entityManager);
@@ -143,7 +144,7 @@ JPAQuery query = new JPAQuery(entityManager);
 
 注意`entityManager`是一个 JPA `EntityManager`。
 
-现在让我们检索名字为“`Kent`”的所有人，作为一个简单的例子:
+现在让我们检索名字为“`Kent`”的所有人，作为一个简单的例子：
 
 ```java
 QPerson person = QPerson.person;
@@ -152,37 +153,37 @@ List<Person> persons = query.from(person).where(person.firstName.eq("Kent")).lis
 
 `from`调用定义查询源和投影，`where`部分定义过滤器，`list`告诉 Querydsl 返回所有匹配的元素。
 
-我们也可以使用多个过滤器:
+我们也可以使用多个过滤器：
 
 ```java
 query.from(person).where(person.firstName.eq("Kent"), person.surname.eq("Beck"));
 ```
 
-或者:
+或者：
 
 ```java
 query.from(person).where(person.firstName.eq("Kent").and(person.surname.eq("Beck")));
 ```
 
-在原生 JPQL 格式中，查询将如下所示:
+在原生 JPQL 格式中，查询将如下所示：
 
 ```java
 select person from Person as person where person.firstName = "Kent" and person.surname = "Beck"
 ```
 
-如果您想通过“或”来组合过滤器，请使用以下模式:
+如果您想通过“或”来组合过滤器，请使用以下模式：
 
 ```java
 query.from(person).where(person.firstName.eq("Kent").or(person.surname.eq("Beck")));
 ```
 
-## 4。Querydsl 中的排序和聚合
+## 4. Querydsl 中的排序和聚合
 
 现在让我们看看 Querydsl 库中的排序和聚合是如何工作的。
 
-### 4.1。订购
+### 4.1. 订购
 
-我们将从按`surname`字段降序排列我们的结果开始:
+我们将从按`surname`字段降序排列我们的结果开始：
 
 ```java
 QPerson person = QPerson.person;
@@ -192,20 +193,20 @@ List<Person> persons = query.from(person)
     .list(person);
 ```
 
-### 4.2。聚合
+### 4.2. 聚合
 
-现在让我们使用一个简单的聚合，因为我们有几个可用的(总和、平均值、最大值、最小值):
+现在让我们使用一个简单的聚合，因为我们有几个可用的（总和、平均值、最大值、最小值）：
 
 ```java
 QPerson person = QPerson.person;    
 int maxAge = query.from(person).list(person.age.max()).get(0);
 ```
 
-### 4.3。`GroupBy`聚合着
+### 4.3. `GroupBy`聚合着
 
 `com.mysema.query.group.GroupBy`类提供了聚合功能，我们可以用它来聚合内存中的查询结果。
 
-这里有一个简单的例子，结果以`Map`的形式返回，其中`firstname`是键，`max age`是值:
+这里有一个简单的例子，结果以`Map`的形式返回，其中`firstname`是键，`max age`是值：
 
 ```java
 QPerson person = QPerson.person;   
@@ -214,9 +215,9 @@ Map<String, Integer> results =
       GroupBy.groupBy(person.firstname).as(GroupBy.max(person.age)));
 ```
 
-## 5。使用 Querydsl 进行测试
+## 5. 使用 Querydsl 进行测试
 
-现在，让我们使用 Querydsl 定义一个 DAO 实现——并定义以下搜索操作:
+现在，让我们使用 Querydsl 定义一个 DAO 实现——并定义以下搜索操作：
 
 ```java
 public List<Person> findPersonsByFirstnameQuerydsl(String firstname) {
@@ -226,7 +227,7 @@ public List<Person> findPersonsByFirstnameQuerydsl(String firstname) {
 }
 ```
 
-现在让我们使用这个新的 DAO 构建几个测试，让我们使用 Querydsl 来搜索新创建的`Person`对象(在`PersonDao`类中实现),并在另一个使用`GroupBy`类的测试聚合中进行测试:
+现在让我们使用这个新的 DAO 构建几个测试，让我们使用 Querydsl 来搜索新创建的`Person`对象（在`PersonDao`类中实现），并在另一个使用`GroupBy`类的测试聚合中进行测试：
 
 ```java
 @Autowired
@@ -256,10 +257,10 @@ public void givenExistingPersons_whenFindingMaxAgeByName_thenFound() {
 }
 ```
 
-## 6。结论
+## 6. 结论
 
 本教程演示了如何使用 Querydsl 构建 JPA 项目。
 
 本文的**完整实现**可以在 github 项目的[中找到——这是一个基于 Eclipse 的 maven 项目，因此它应该很容易导入和运行。](https://web.archive.org/web/20220525013414/https://github.com/eugenp/tutorials/tree/master/persistence-modules/querydsl)
 
-这里需要注意的是——运行一个简单的 maven 构建(mvn clean install)来将类型生成到`target/generated-sources`中——然后，如果您使用的是 Eclipse——将该文件夹作为项目的源文件夹。
+这里需要注意的是——运行一个简单的 maven 构建（`mvn clean install`）来将类型生成到`target/generated-sources`中——然后，如果您使用的是 Eclipse——将该文件夹作为项目的源文件夹。

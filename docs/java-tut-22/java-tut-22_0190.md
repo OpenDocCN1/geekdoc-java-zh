@@ -1,3 +1,4 @@
+
 # 查找文件
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/io/find.html`](https://docs.oracle.com/javase/tutorial/essential/io/find.html)
@@ -6,7 +7,6 @@
 
 ```java
 % ls *.html
-
 ```
 
 `java.nio.file`包为这一有用功能提供了编程支持。每个文件系统实现都提供了一个[`PathMatcher`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/PathMatcher.html)。你可以通过在`FileSystem`类中使用[`getPathMatcher(String)`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileSystem.html#getPathMatcher-java.lang.String-)方法来检索文件系统的`PathMatcher`。以下代码片段获取默认文件系统的路径匹配器：
@@ -15,7 +15,6 @@
 String pattern = ...;
 PathMatcher matcher =
     FileSystems.getDefault().getPathMatcher("glob:" + pattern);
-
 ```
 
 传递给`getPathMatcher`的字符串参数指定语法风格和要匹配的模式。本示例指定了*glob*语法。如果你不熟悉 glob 语法，请参阅什么是 Glob。
@@ -34,7 +33,6 @@ Path filename = ...;
 if (matcher.matches(filename)) {
     System.out.println(filename);
 }
-
 ```
 
 ## 递归模式匹配
@@ -47,14 +45,12 @@ if (matcher.matches(filename)) {
 
 ```java
 % java Find <path> -name "<glob_pattern>"
-
 ```
 
 模式被放置在引号内，以防止 shell 解释任何通配符。例如：
 
 ```java
 % java Find . -name "*.html"
-
 ```
 
 这里是`Find`示例的源代码：
@@ -156,7 +152,6 @@ public class Find {
         finder.done();
     }
 }
-
 ```
 
 递归遍历文件树的内容在遍历文件树中有详细介绍。

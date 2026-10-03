@@ -1,61 +1,31 @@
-# Java 编程：7 天轻松学会 Java 逐步指南指南
 
-
+# Java 编程：7 天轻松学会 Java 逐步指南
 
 ![](img/cover.jpg)
-
-
 
 iCode Academy
 
 初学者 Java
 
-
-
-
-
-
-
-
-
-
-| ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png) |
-
-![image](img/chapter_title_above.png)
-
-- 查看 iCode Academy 其他书籍
-
-| ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png) |
-
-![image](img/chapter_title_above.png)
-
 # 引言
-
-![image](img/chapter_title_below.png)
 
 编程世界是非常多样化的世界，每种编程语言都有其特定的优势。有像 C 和汇编语言这样的语言关注操作系统指令和其他计算机软件，而也有像 HTML 和 JavaScript 这样的语言关注基于 Web 的应用程序。Java 就是兼顾这两者的编程语言示例。本电子书包含了指南和说明，帮助你在一天内学习并理解 Java。
 
 ## 什么是 Java？
 
-Java 实际上是由 Sun Microsystems 开发的一种优秀的编程语言。它最初用于内核应用程序或小程序（applets）。这些小程序嵌入网页并在浏览器中运行。Java 使用一种名为字节码（byte code）的特殊格式，而不是普通的机器码。在 Java 解释程序的帮助下，字节码可以在任何计算机上执行。这个 Java 解释器程序被称为 Java 虚拟机或 `JVM`。它在大多数计算机系统中都是可。Java 可能使用字节码格式，但 Java 没有任何部分要求使用这种字节码技术。存在一些编译器可以生成真正的机器码，或者更广为人知的原生代码。
+Java 实际上是由 Sun Microsystems 开发的一种优秀的编程语言。它最初用于内核应用程序或小程序（applets）。这些小程序嵌入网页并在浏览器中运行。Java 使用一种名为字节码（`byte code`）的特殊格式，而不是普通的机器码。在 Java 解释程序的帮助下，字节码可以在任何计算机上执行。这个 Java 解释器程序被称为 Java 虚拟机或 `JVM`。它在大多数计算机系统中都是可用的。Java 可能使用字节码格式，但 Java 没有任何部分要求使用这种字节码技术。存在一些编译器可以生成真正的机器码，或者更广为人知的原生代码。
 
 Java 程序由一系列类组成。这些程序的源代码使用 `.java` 编写。这些源文件然后被编译成 `.class` 文件，其中包含字节码而不是针对特定 CPU 的机器码。`.class` 文件在运行时由 Java 虚拟机（`JVM` 或解释器）执行。
 
 Java 并不限于互联网应用程序。从技术上讲，它是一种完整的通用面向对象编程语言，可以开发各种应用程序。Java 的语法与 C++ 的语法非常相似，但去除了其容易出错的特性和复杂性。
 
-不要将 Java 误认为 JavaScript。JavaScript 是一种完全不同的语言。JavaScript 是一种解释型编程语言，作为网页或网站内容生成的三个基本组成部分之一。Java 和 JavaScript 的区别在于 Java 是面向对象的语言，而 JavaScript 是面向对象的脚本语言。Java 编写的代码需要编译，而 JavaScript 编写的代码全是文本。种语言在虚拟机和浏览器中都需要不同的插件。
+不要将 Java 误认为 JavaScript。JavaScript 是一种完全不同的语言。JavaScript 是一种解释型编程语言，作为网页或网站内容生成的三个基本组成部分之一。Java 和 JavaScript 的区别在于 Java 是面向对象的语言，而 JavaScript 是面向对象的脚本语言。Java 编写的代码需要编译，而 JavaScript 编写的代码全是文本。两种语言在虚拟机和浏览器中都需要不同的插件。
 
-创建 Java 的 Sun Microsystems 为开发 Java 软件提供了免费工具。如果你想了解更多关于这些工具的信息，可以访问网站 ([`www.sun.com`](https://www.sun.com)) 获取更多信息，例如针对不同计算机系统（UNIX、Microsoft Windows、OSX）的 Java 编译器以及详细文档。Java 编译器是免费的，可以从给定链接下载。
+创建 Java 的 Sun Microsystems 为开发 Java 软件提供了免费工具。如果你想了解更多关于这些工具的信息，可以访问网站 [`www.sun.com`](https://www.sun.com) 获取更多信息，例如针对不同计算机系统（UNIX、Microsoft Windows、OSX）的 Java 编译器以及详细文档。Java 编译器是免费的，可以从给定链接下载。
 
 在整个电子书中，我们将讨论 Java 程序编译的基础、简单表达式和声明、类、对象和语句，直到你能够在一天内学习、理解并编写一个完整的 Java 程序。
 
-| ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png) |
-
-![image](img/chapter_title_above.png)
-
 # 第一章：Java 基础
-
-![image](img/chapter_title_below.png)
 
 ## 编译和运行 Java 程序
 
@@ -71,10 +41,6 @@ javac Hello.java
 java Hello
 ```
 
-
-
-
-
 上述命令加载并执行了 `Hello` 类及其 `main` 方法。如果该类包含了对其他类的扩展（将在接下来的章节中进一步讨论），这些类会在需要时自动加载。如果你有一个源文件扩展了其他源文件，可以使用以下命令编译所有文件：
 
 ```bash
@@ -87,9 +53,9 @@ javac *.java
 
 Java 中有八种基本数据类型。所谓基本类型，意味着这些类型不是基于其他类型定义的；本质上是原子的。它们是 CPU 准备好处理的位序列。这些类型是：
 
-`Byte`, `short`, `int`, `long`, `float`, `double`, `char`, `Boolean`
+`byte`、`short`、`int`、`long`、`float`、`double`、`char`、`boolean`
 
-如果一个变量类型不是基本类型，则它被视为引用类型。引用类型可以可以是类、接口或数组类型。任何引用类型的变量都可以被设置为 `null`。这意味着它可以不包含任何内容。
+如果一个变量类型不是基本类型，则它被视为引用类型。引用类型可以是类、接口或数组类型。任何引用类型的变量都可以被设置为 `null`。这意味着它可以不包含任何内容。
 
 Java 支持通常的一组数据类型，如整数、字符、布尔型和其他变量。以下是一些示例：
 
@@ -109,7 +75,7 @@ a = 2 * (3 + 1);
 b = c / 4.12643;
 p = q % 2;
 o = true;
-s = ‘L’;
+s = 'L';
 ```
 
 在声明变量时，可以直接为其分配一个初始值：
@@ -129,7 +95,7 @@ a = 1.0 / 9.0;  // a 的结果将是 0.111...
 
 第一个操作执行了整除，因此结果为 `0`。如果你想得到 `1` 和 `9` 的精确商，你需要将 `1` 和 `9` 表示为实值，以便除法变为浮点除法。
 
-在 Java 中，可以为整数变量分配实值。该值会自动转换为对应的类型。这被称为类型转换（typecasting）。
+在 Java 中，可以为整数变量分配实值。该值会自动转换为对应的类型。这被称为类型转换（`typecasting`）。
 
 Java 支持类型转换，但不会自动执行转换。程序员需要通过在表达式前的括号中写入所需的类型，来指示在何处以及进行哪些转换。
 
@@ -198,7 +164,7 @@ s1.c = 0;
 ```java
 public class HelloWorld{
     public static void main(String[] args){
-        System.out.print("Hello World!”);
+        System.out.print("Hello World!");
     }
 }
 ```
@@ -211,7 +177,7 @@ public class HelloWorld{
 
 第三是 `args` 参数。该参数从 Java 解释器执行的类名以外的信息中获取值（如果有的话）。
 
-注意：`System.out.print` 是显示程序员在引号（ ” ）内编写内容的方法。如果你想在运行时换行，可以使用 `System.out.println`。这将为输出创建一个新行。
+注意：`System.out.print` 是显示程序员在引号（"）内编写内容的方法。如果你想在运行时换行，可以使用 `System.out.println`。这将为输出创建一个新行。
 
 示例 #2：
 
@@ -233,9 +199,6 @@ public class User{
 }
 ```
 
-
-
-
 现在，上面的代码是一个 Java 基础输入输出程序的示例。首先，让我们来讨论一下 `import java.util.Scanner;` 这一行的含义。`Scanner` 类是一个在处理用户输入时非常有用的类。要使用 `Scanner` 类，我们需要通过关键字 `import` 将其引用到我们的代码中。`Import` 基本上与 C 语言中的 `#include` 相同。这意味着 `import` 引用了我们的程序可以直接使用的外部库。
 
 接下来是这一行 `Scanner inp = new Scanner(System.in);`。
@@ -249,11 +212,11 @@ l_name = inp.next();
 
 上述两行代码演示了输入如何分别存储在 `f_name` 和 `l_name` 中。`inp.next();` 行意味着用户接下来输入的任何内容，都将存储在赋值给它的相应变量中。
 
-`full_name = f_name + “ ” + l_name;` 这一行。`f_name` 之后和 `l_name` 之前的 `+` 符号表示你可以在它们之间定义的字符串或字符。`+` 符号仅将两个用户输入以及字符或符号连接在一个行或语句中。
+`full_name = f_name + " " + l_name;` 这一行。`f_name` 之后和 `l_name` 之前的 `+` 符号表示你可以在它们之间定义的字符串或字符。`+` 符号仅将两个用户输入以及字符或符号连接在一个行或语句中。
 
 # 第 2 章：条件语句、迭代语句和分支语句
 
- Java 中的语句的编写方式与其他语言相同。与在 C 或 Pascal 中编写语句的方式类似，这些语句可以使用 ‘{‘ 和 ‘}’ 在部分中分组在一起。
+Java 中的语句的编写方式与其他语言相同。与在 C 或 Pascal 中编写语句的方式类似，这些语句可以使用 `{` 和 `}` 在部分中分组在一起。
 
 ## If-then-else 语句
 
@@ -261,10 +224,10 @@ l_name = inp.next();
 
 ```java
 void isZero() {
-  If( x == 0 ) {
-    System.out.println(“x is zero.”);
+  if( x == 0 ) {
+    System.out.println("x is zero.");
   }
-  System.out.println(“X is not equal to zero.”);
+  System.out.println("X is not equal to zero.");
 }
 ```
 
@@ -273,20 +236,20 @@ void isZero() {
 现在，看看下方的代码：
 
 ```java
-Import Java.util.Scanner;
+import java.util.Scanner;
 
-Class ConditionCheck {
-  Public static void main ( String[] args ) {
+class ConditionCheck {
+  public static void main ( String[] args ) {
     int grade;
     Scanner sc = new Scanner( );
-    System.out.print.ln(“Enter your grade (0 – 100):”);
-    number = sc.next();
+    System.out.println("Enter your grade (0 – 100):");
+    grade = sc.nextInt();
     if (grade == 100) {
-      System.out.println(“ You had a perfect score! Congratulations!”);
+      System.out.println(" You had a perfect score! Congratulations!");
     } else if (grade >= 60) {
-      System.out.println(“You passed the exam with a score of “ + grade + ”%.”);
+      System.out.println("You passed the exam with a score of " + grade + "%.");
     } else if (grade < 60 ) {
-      System.out.println(“You failed the exam. You should study more to pass the next one.”);
+      System.out.println("You failed the exam. You should study more to pass the next one.");
     }
   }
 }
@@ -297,6 +260,7 @@ Class ConditionCheck {
 ## 布尔表达式
 
 布尔表达式可以与逻辑运算符如‘and’‘or’和‘not’一起使用。这些运算符在 Java 中的写法为：
+
 - `&&`
 - `||`
 - `!`
@@ -304,14 +268,20 @@ Class ConditionCheck {
 以下是一个示例：
 
 ```java
-If(a == 0 && b) {
-  B++;
+if(a == 0 && b) {
+  b++;
 }
 ```
 
 ## Switch-Case 语句
 
-虽然 `switch` 语句也是像 `if-then` 和 `if-then-else` 一样的条件语句，但它在许多方面有所不同。`switch` 语句与 `byte`、`char` 和 `int` 等原始类型一起。`Switch` 语句也适用于枚举数据，如 `string` 以及少数覆盖原始类型（如 `byte`、`char` 和 `int`）的特殊类——换句话说，即记录。
+虽然 `switch` 语句也是像 `if-then` 和 `if-then-else` 一样的条件语句，但它在许多方面有所不同。`switch` 语句与 `byte`、`char` 和 `int` 等原始类型一起工作。`switch` 语句也适用于枚举数据，如 `String` 以及少数覆盖原始类型（如 `byte`、`char` 和 `int`）的特殊类——换句话说，即记录。
+
+
+
+# Java 控制流语句
+
+## Switch 语句
 
 ```java
 public class SwitchCase {
@@ -340,7 +310,7 @@ public class SwitchCase {
 
 上面的代码演示了在 Java 中如何编写 `switch` 语句。注意 `int month` 的值为 `8`，并且编写了 `13` 种情况，包括一个 `default` 情况，用于检查 `month` 的值是否为 `1` 到 `12` 之间的整数。考虑到 `int month` 的值，`println` 的结果将是 ‘August’。
 
-`if-else` 语句和 `switch` 语句之间的区别在于 `switch` 语句更易读。想象一下在 `if-else` 中写了多个条件。它将很难编写也难以阅读。另一个区别是关键字 `break`。在 `if-else` 中，程序每次只进入一个条件块，而在 `switch` 语句中；程序可以按顺序通过所有情况。这里有一个示例：
+`if-else` 语句和 `switch` 语句之间的区别在于 `switch` 语句更易读。想象一下在 `if-else` 中写了多个条件。它将很难编写也难以阅读。另一个区别是关键字 `break`。在 `if-else` 中，程序每次只进入一个条件块，而在 `switch` 语句中，程序可以按顺序通过所有情况。这里有一个示例：
 
 ```java
 int month = 8;
@@ -361,11 +331,14 @@ switch (month) {
 ```
 
 由于 `month` 的值为 `8` 且编写了 `13` 种情况（包括一个用于检查 `month` 值是否为 `1` 到 `12` 之间整数的 `default` 情况），程序将跳转到 `case 8`。输出将是：
+
+```
 September
 October
 December
+```
 
-## Switch 语句与字符串
+### Switch 语句与字符串
 
 在 Java SE 7 及更高版本中，可以在 switch 语句中使用 `String` 类型。以下是一个示例：
 
@@ -409,13 +382,9 @@ public class getDate {
 
 注意：上面的代码还检查了 switch 语句中的表达式是否为 null。记住，为了防止 `NullPointerException` 产生或被抛出，任何 switch 语句中的表达式都不能为 null。
 
-
-
-
-
 ## 循环与迭代语句
 
-## while 语句
+### while 语句
 
 Java 中的 `while` 语句与其他编程语言中的 `while` 语句并没有太大区别。`while` 语句在指定的条件为真时，会持续执行一段指令。它的语法可以写为：
 
@@ -451,7 +420,7 @@ while (true){
 
 由于 `expression` 始终求为 `true`，`while` 语句将一直执行块内部的指令；因此形成了无限循环。
 
-## do-while 语句
+### do-while 语句
 
 在 Java 编程语言中，也有 `do-while` 语句。与其他编程语言的 `do-while` 语句相比，`do-while` 语句并没有太大区别。`do-while` 语句可以如下：
 
@@ -463,7 +432,7 @@ do {
 
 当程序进入 `do-while` 语句时，它会立即执行块内部的指令和语句。之后，它才会检查 `expression` 是否为 `true`。
 
-## do-while 和 while 之间有什么区别？
+#### do-while 和 while 之间有什么区别？
 
 `do-while` 和 `while` 的区别在于 `do-while` 在循环的底部评估其 `expression`，而不是顶部。因此，`do` 块中的语句至少会被执行一次。下面的代码演示了带有简单 `do-while` 循环的 Java 程序是如何运行的：
 
@@ -479,7 +448,7 @@ class DoWhileSample {
 }
 ```
 
-## for 语句
+### for 语句
 
 在 Java 编程语言中，`for` 语句提供了一个精确的任务来循环或迭代一个值范围。开发者和程序员员对 `for` 语句的常用术语是“for 循环”，因为它在满足其条件之前会进行重复迭代。一个 `for` 循环可以写为：
 
@@ -502,10 +471,13 @@ class sample_For {
 ```
 
 上面的示例代码展示了 Java 中 `for` 循环的常见用法。程序的输出将是：
+
+```
 The current value is: 1
 The current value is: 2
 ...
 The current value is: 9
+```
 
 如果你注意到，代码在 `expression` 中声明了一个变量。循环的作用范围了从变量声明直到循环区域的结束。对于 `for` 语句，这在 `expression` 的 `terminating` 和 `incrementing` 部分可能很有用。如果循环内部的变量在其他不需要，更好的做法是在循环内部声明变量以减少错误。`for` 循环内部的表达式不是必须的。换句话说，如果程序进入 `for` 循环且没有表达式存在，将没有内容可以评估。这将导致如下示例代码所示的无限循环：
 
@@ -529,6 +501,8 @@ class EnhancedFor {
 ```
 
 这种 `enhanced for statement` 看起来与普通的 `for` 循环有些不同。`list` 变量的作用是访问当前值。上述程序的输出将是：
+
+```
 The number is: 11
 The number is: 12
 The number is: 13
@@ -539,10 +513,11 @@ The number is: 17
 The number is: 18
 The number is: 19
 The number is: 20
+```
 
 ## 分支语句
 
-## Break 语句
+### Break 语句
 
 我们已经见过 `break` 语句是如何工作的。一旦程序遇到 `break` 语句，它就会终止其包含的区域。确实，这是 `break` 语句最常见的应用。另一种应用是带标签的 `break`。虽然它与无标签的 `break` 几乎相同，但 `label` 产生了区别。这里有一个示例代码：
 
@@ -565,11 +540,14 @@ class Hello{
 ```
 
 通过添加语句 `loop`，标签 `break` 变得可能。根据上面的代码，当 `y` 的值为 3 且 `x` 的值为 2 时，`break` 语句将终止由标签 `loop` 覆盖的区域。上述程序的结果是：
+
+```
 x x x x x
 x x x x x
 x x x
+```
 
-## Continue 语句
+### Continue 语句
 
 `continue` 语句实际上是 `break` 语句的相反。在某种意义上，当 `expression` 内部的条件求为 `true` 时，它保持区域运行。但它完全相反，因为它会跳过 `for`、`while` 和 `do-while` 循环的当前迭代。
 
@@ -593,70 +571,72 @@ class Hello{
 ```
 
 上述代码的输出将是：
+
+```
 x x x x x
 x x x x x
-
-
-
-
-
 x x x x x
-
 x x x x x
-
 x x x x x
+```
 
 注意：由于上面的代码是一个未标记的 continue 语句，代码将不会跳过包含的表达式，尽管它仍然会评估该表达式的真假。
 
 相反，带标签的 continue 会跳过从该标签开始的循环。这里是有一个带标签的 continue 语句的示例：
 
+
+
 ```java
-public class Hello{
-    public static void main(String[] args){
-        int x,y;
+public class Hello {
+    public static void main(String[] args) {
+        int x, y;
         loop:
-        for(x=0;x<5;x++){
+        for (x = 0; x < 5; x++) {
             System.out.println(" ");
-            for(y=0;y<5;y++){
+            for (y = 0; y < 5; y++) {
                 System.out.print("x ");
-                if(y==3 && x==2 ){
+                if (y == 3 && x == 2) {
                     continue loop;
                 }
             }
         }
-    } 
+    }
 }
 ```
 
 程序的输出将是：
 
 x x x x x
-x x x x x
-x x x x
-x x x x x
+
 x x x x x
 
-注意第三行没有 5 个 x 吗？那是因为当表达式 `if ( y == 3 && x == 2 )` 为真时，continue 标签直接跳回 `( x = 0; x < 5; x ++ )` 循环。这意味着当程序运行到表达式 `if( y == 3 && x == 2 )` 为真时，continue 语句跳过了。这就是带标签的 continue 语句的作用。
+x x x x
+
+x x x x x
+
+x x x x x
+
+注意第三行没有 5 个 x 吗？那是因为当表达式 `if (y == 3 && x == 2)` 为真时，`continue loop` 直接跳回 `for (x = 0; x < 5; x++)` 循环。这意味着当程序运行到表达式 `if (y == 3 && x == 2)` 为真时，`continue` 语句跳过了剩余迭代。这就是带标签的 `continue` 语句的作用。
 
 ## return 语句
 
-return 语句与 `break` 和 `continue` 语句都不同。它退出方法并返回到调用方法的地方。
+`return` 语句与 `break` 和 `continue` 语句都不同。它退出方法并返回到调用方法的地方。
 
-与其他编程语言中的 return 语句一样，return 语句有两种形式：返回值的和不返回返回的。为了返回一个值，只需在 `return` 关键字后编写计算该值的值或表达式即可。这是一个示例：
+与其他编程语言中的 `return` 语句一样，`return` 语句有两种形式：返回值的和不返回值的。为了返回一个值，只需在 `return` 关键字后编写计算该值的值或表达式即可。这是一个示例：
 
 ```java
 return answer;
 ```
 
-这是一个不带值的 return 语句示例：
+这是一个不带值的 `return` 语句示例：
 
 ```java
 return;
 ```
 
-注意：使用 return 语句时，方法的返回类型应该是 `int`。如果为方法声明为 `void`，则 return 语句将无法工作。返回值后的数据类型必须与方法中声明的参数类型相同。否则，程序将运行错误。
+注意：使用 `return` 语句时，方法的返回类型应与返回值匹配。如果方法声明为 `void`，则不能返回值。返回值的数据类型必须与方法声明的返回类型相同。否则，程序将报错。
 
-我们将在第 4 章看到更多 return 语句的用法。
+我们将在第 4 章看到更多 `return` 语句的用法。
 
 # 第 3 章：数组
 
@@ -669,7 +649,7 @@ return;
 考虑一个整数变量 `sample_array`。为了让 `sample_array` 成为整数数组，在 `int` 之后添加 `[]`。这是一个示例：
 
 ```java
-int[ ] sample_array;
+int[] sample_array;
 ```
 
 你刚刚声明了一个名为 `sample_array` 的整数数组。现在，数组声明可以分为两个部分：数组的数据类型和数组本身的名称。根据上面的示例，数组的数据类型是 `int[]`，数组的名称是 `sample_array`。`[]` 保持为空，因为它们不是数据类型的一部分。它只是表示你将该变量声明为数组。虽然你已经声明了数组，但并不意味着你已经创建了一个。
@@ -692,23 +672,23 @@ short[] short_array_sample;
 以下代码是为特定数组索引赋值值（元素）的示例：
 
 ```java
-sample_array [ 0 ] = 24;
-char_array_sample[ 4 ] = “E”;
+sample_array[0] = 24;
+char_array_sample[4] = 'E';
 ```
 
 为了访问并显示数组，可以使用数组的名称和你想访问的元素索引：
 
 ```java
-System.out.println (“The value is: “ + sample_array [ 0 ] );
-System.out.println (“The element is: “ + char_array_sample [ 4 ] );
-System.out.println (“The element in the index is “ + sample_array [ 5 ] + “.”);
+System.out.println("The value is: " + sample_array[0]);
+System.out.println("The element is: " + char_array_sample[4]);
+System.out.println("The element in the index is " + sample_array[5] + ".");
 ```
 
 另一种声明数组的方法可以如下代码所示：
 
 ```java
-int[ ] sample_array = {
-    20,444, 195,
+int[] sample_array = {
+    20, 444, 195,
     23, 0, 100,
     32, 55, 195
 };
@@ -718,13 +698,13 @@ int[ ] sample_array = {
 
 ```java
 public class simple_array {
-    public static void main (String[ ] args) {
+    public static void main(String[] args) {
         int x = 10;
-        int[ ] sample_array;
-        sample_array = new int [ x ];
-        for ( x = 0; x < 10; x ++ ){
-            sample_array [ x ] = x;
-            System.out.println(“ The element of index “ + x + “ is “ + sample_array [ x ] +“.”);
+        int[] sample_array;
+        sample_array = new int[x];
+        for (x = 0; x < 10; x++) {
+            sample_array[x] = x;
+            System.out.println("The element of index " + x + " is " + sample_array[x] + ".");
         }
     }
 }
@@ -733,22 +713,28 @@ public class simple_array {
 上述代码的输出将是：
 
 The element of index 0 is 0.
+
 The element of index 1 is 1.
+
 The element of index 2 is 2.
+
 The element of index 3 is 3.
+
 The element of index 4 is 4.
+
 The element of index 5 is 5.
+
 The element of index 6 is 6.
+
 The element of index 7 is 7.
+
 The element of index 8 is 8.
+
 The element of index 9 is 9.
-
-
-
 
 仔细检查这段代码。你会发现数组的大小被设置为 `x`，其值为 `10`。你还会看到，代码中并没有逐个地声明元素，而是编写了一个 `for` 循环来遍历数组所有元素的存储和打印。`for` 循环遍历每个索引，并在 `x` 增加时存储其当前值，然后移动到下一个索引。
 
-在 Java 中，也可以声明数组的数组，换句话说就是多维数组。通过在数据类型后添加两个或多个组括号，而不是仅一组，就可以创建一个多维数组。数组中的每个元素都可以通过特定的索引组合来访问。
+在 Java 中，也可以声明数组的数组，换句话说就是多维数组。通过在数据类型后添加两个或多个方括号，而不是仅一组，就可以创建一个多维数组。数组中的每个元素都可以通过特定的索引组合来访问。
 
 Java 中的多维数组与 C 或其他语言中的多维数组略不同，因为 Java 中多维数组的组件也是数组。
 
@@ -761,19 +747,23 @@ class sample_md_array {
             {"Sgt. ", "Lt. ", "Capt. "},
             {"John", "Maximus"}
         };
-        System.out.println(rankings[0][0] + names[1][0]);
-        System.out.println(rankings[0][1] + names[1][1]);
+        System.out.println(rankings[0][0] + rankings[1][0]);
+        System.out.println(rankings[0][1] + rankings[1][1]);
     }
 }
 ```
 
 代码的输出结果为：
+
 Sgt. John
+
 Lt. Maximus
 
 现在，既然我们可以声明数组的元素，现在就可以使用内置的 `length` 属性来获取任何数组的大小。这可以写成：
 
-`System.out.println(sample_array.length);`
+```java
+System.out.println(sample_array.length);
+```
 
 这将打印出数组中元素的个数。
 
@@ -781,7 +771,9 @@ Lt. Maximus
 
 Java 的 `System` 类提供了一个内置方法，可以将数据从一个数组复制到另一个数组。该方法称为 `arraycopy`。这是一个示例：
 
-`System.arraycopy(...)`
+```java
+System.arraycopy(src, srcPos, dest, destPos, length)
+```
 
 对象 `src` 和 `dest` 决定了源数组和目标数组。换句话说，`src` 意味着数据来源数组，而 `dest` 意味着数据复制到的数组。`srcPos` 决定了 `arraycopy` 方法开始的起始位置或起始索引。`destPos` 的功能与 `srcPos` 相同，但决定的是目标数组中的起始位置。整数 `length` 决定了程序员想要复制的元素数量。
 
@@ -790,11 +782,11 @@ Java 的 `System` 类提供了一个内置方法，可以将数据从一个数�
 ```java
 class arr_copy_sample {
     public static void main(String[] args) {
-        int[] sourceArr = { 0, 2, 4, 6, 8, 10, 12, 14, 16 };
+        int[] sourceArr = {0, 2, 4, 6, 8, 10, 12, 14, 16};
         int[] destArr = new int[7];
         int x;
         System.arraycopy(sourceArr, 1, destArr, 0, 7);
-        for(x = 0; x < 7; x++){
+        for (x = 0; x < 7; x++) {
             System.out.print(destArr[x] + " ");
         }
     }
@@ -802,21 +794,22 @@ class arr_copy_sample {
 ```
 
 该程序的输出为：
-2 4 6 8 10 12 14 16
+
+2 4 6 8 10 12 14
 
 ## 数组元素操作
 
 在编程世界，数组的使用是一个非常强大且高效的概念。在 Java SE 中，有一些方法允许程序员执行一些最常见的数组操作。其中一个例子是 `arr_copy_sample` 类。示例代码中的 `arraycopy` 方法利用了 `System` 类，而不是手动遍历源数组的每一个元素并将每个元素复制到目标数组。这一过程发生在程序运行期间。它只是允许开发者使用代码来调用该方法。
 
-为了避免手动迭代并提供便利，Java SE 提供了了一些操作数组的方法。这些方法包含了常见的过程，如复制、搜索和排序数组。`java.util.Arrays` 类提供了这些方法。其中一个示例可以应用于 `arr_copy_sample` 代码中。
+为了避免手动迭代并提供便利，Java SE 提供了一些操作数组的方法。这些方法包含了常见的过程，如复制、搜索和排序数组。`java.util.Arrays` 类提供了这些方法。其中一个示例可以应用于 `arr_copy_sample` 代码中。
 
 ```java
 class Hello {
     public static void main(String[] args) {
-        int[] sourceArr = { 0, 2, 4, 6, 8, 10, 12, 14, 16 };
+        int[] sourceArr = {0, 2, 4, 6, 8, 10, 12, 14, 16};
         int x;
-        int [] destArr = java.util.Arrays.copyOfRange(sourceArr, 1, 8);
-        for(x = 0; x < 7; x++){
+        int[] destArr = java.util.Arrays.copyOfRange(sourceArr, 1, 8);
+        for (x = 0; x < 7; x++) {
             System.out.print(destArr[x] + " ");
         }
     }
@@ -829,95 +822,46 @@ class Hello {
 
 `java.util.Arrays` 类包含的其他方法包括：
 
-- `BinarySearch` 方法：
+- `binarySearch` 方法：
     - 该方法通过定位特定值所在的索引来在数组中搜索该值。
-- `Equals` 方法：
+- `equals` 方法：
     - 该方法通过比较两个数组来确定它们的值是否相等。
-- `Fill` 方法：
+- `fill` 方法：
     - 该方法用于存储值。它通过在每个索引处放置特定值来填充数组。
-- `ParallelSort`：
+- `parallelSort` 方法：
     - 该方法仅在 Java SE 8 中引入。它并发地将元素按升序排列。
-- `Sort` 方法：
-    - 该方法的作用与 `ParallelSort` 相同，但它是按顺序对元素进行排序。
+- `sort` 方法：
+    - 该方法的作用与 `parallelSort` 相同，但它是按顺序对元素进行排序。
 
-
-
-代码 `new Example (0, 10, 5)` 在内存中为初始化对象及其值创建了空间。
+代码 `new Example(0, 10, 5)` 在内存中为初始化对象及其值创建了空间。
 
 构造函数中的参数不是必须的。例如：
 
 ```java
-Public Example ( ) {
-    Int start = 0;
-    Int final = 10;
-    Int middle = 5;
+public Example() {
+    int start = 0;
+    int end = 10;
+    int middle = 5;
 }
 ```
 
 创建对象的方式也是相同的，但不需要参数：
 
 ```java
-samp Example = new Example ( );
-```
-
-这两个构造函数都可以声明。构造函数可以根据参数的数量和类型来区分。
-[/content] [content]
-代码 `new Example (0, 10, 5)` 在内存中为初始化对象及其值创建了空间。
-
-构造函数中的参数不是必须的。例如：
-
-```java
-Public Example ( ) {
-    Int start = 0;
-    Int final = 10;
-    Int middle = 5;
-}
-```
-
-创建对象的方式也是相同的，但不需要参数：
-
-```java
-samp Example = new Example ( );
-```
-
-这两个构造函数都可以声明。构造函数可以根据参数的数量和类型来区分。
-[/content]
-
-由于，由于您提供的待翻译文本后半部分存在重复且逻辑较为混乱的描述，我将为您提供**完整且准确**的翻译版本：
-
-[content]
-代码 `new Example (0, 10, 5)` 在内存中为初始化对象及其值创建了空间。
-
-构造函数中的参数不是必须的。例如：
-
-```java
-Public Example ( ) {
-    Int start = 0;
-    Int final = 10;
-    Int middle = 5;
-}
-```
-
-创建对象的方式也是相同的，但不需要参数：
-
-```java
-samp Example = new Example ( );
+Example example = new Example();
 ```
 
 这两个构造函数都可以声明。构造函数可以根据参数的数量和类型来区分。
 
-
-
-
 ```java
-Public MyOwnClass solveMethod( MyOwnClass sample1, myOwnClass sample2) {
+public MyOwnClass solveMethod(MyOwnClass sample1, MyOwnClass sample2) {
     MyOwnClass example_1;
-    //insert some code here
-    Return example_1;
+    // insert some code here
+    return example_1;
 }
 ```
 
-## 语句 (This Statement)
+## this 语句
 
 我们在之前的章节中已经见过 `this` 的用法。`this` 实际上指的是当前正在调用的方法或构造函数的当前对象。通过使用 `this`，可以在实例方法内部引用当前对象的任何成员或属性。
 
@@ -926,12 +870,12 @@ Public MyOwnClass solveMethod( MyOwnClass sample1, myOwnClass sample2) {
 看下面的示例：
 
 ```java
-public class sample{
+public class Sample {
     public int a;
     public int b;
-    public sample (int i, int j) {
+    public Sample(int i, int j) {
         a = i;
-        b= j;
+        b = j;
     }
 }
 ```
@@ -939,43 +883,45 @@ public class sample{
 通过使用 `this` 语句，代码可以重写为：
 
 ```java
-public class sample{
+public class Sample {
     public int a;
     public int b;
-    public sample (int a, int b) {
+    public Sample(int a, int b) {
         this.a = a;
         this.b = b;
     }
 }
 ```
 
-构造函数的每个参数都遮蔽了对象的每个属性。构造函数 `sample` 内部的属性 `x` 属于类 `sample` 参数的本地副本。为了引用样本属性 `x`，构造函数需要使用 `this.x`。
+构造函数的每个参数都遮蔽了对象的每个属性。构造函数 `Sample` 内部的属性 `a` 属于类 `Sample` 参数的本地副本。为了引用样本属性 `a`，构造函数需要使用 `this.a`。
 
 可以使用 `this` 语句调用同一类中的另一个构造函数，前提是它位于构造函数内部。这个过程可以称为显式构造函数调用。例如：
 
 ```java
-public class sample {
+public class Sample {
     private int a, b, var1, var2;
-    public sample( ) {
+    public Sample() {
         this(0, 1, 3, 3);
     }
-    public sample(int var1, int var2) {
+    public Sample(int var1, int var2) {
         this(0, 1, var1, var2);
     }
-    public sample ( int a, int b, int var1, int var2)     {
+    public Sample(int a, int b, int var1, int var2) {
         this.a = a;
-        this.b = b; 
+        this.b = b;
         this.var1 = var1;
         this.var2 = var2;
-    }  
+    }
 }
 ```
 
-上面的代码包含了一组构造函数。每个构造函数都提供了一个默认值，并创建了类 `sample` 成员变量的实例。
+上面的代码包含了一组构造函数。每个构造函数都提供了一个默认值，并创建了类 `Sample` 成员变量的实例。
 
 # 第 5 章：接口与继承
 
 在编程和软件工程中，在某些情况下，不同的程序员或不同的程序员小组之间拥有“共同基础”是至关重要的，这使得他们的代码和软件具有交互性。这些程序员在不知道其他程序员代码如何编写的情况下也能编写自己的代码。这些程序员的“共同基础”被称为接口。
+
+
 
 例如，一个社区中存在可以在没有人类操作员的情况下运行并传输人的先进车辆。为了让这些车辆运行，车辆制造商开发了用 Java 编写的软件，可以在无需人工操作的情况下操控车辆。想象你的车辆或汽车自动启动并加速，能够管理速度以避免事故。
 
@@ -983,7 +929,7 @@ public class sample {
 
 现在，`GPS` 软件和车辆的自动化软件显然是由不同的程序员团队开发的。开发自动化软件的程序员小组不知道 `GPS` 软件的代码长什么样，也不知道它是如何实现的，但他们可以通过单一的共同基础进行交互。那就是接口。只要他们保持接口的交互性，每个程序员小组实际上都可以让另一个小组修改代码。
 
-## Java 接口 (Java Interfaces)
+# Java 接口
 
 Java 编程语言将接口视为一种引用类型。它被认为类似于类，只能包含常量、默认方法和静态方法、方法签名和嵌套类类型。接口的方法体仅用于默认方法和静态方法的目的。
 
@@ -992,14 +938,14 @@ Java 编程语言将接口视为一种引用类型。它被认为类似于类，
 这里是一个接口的示例：
 
 ```java
-Public interface automateVehicle {
-    //静态变量声明
+public interface automateVehicle {
+    // 静态变量声明
     // 方法签名
     int init(Speed s, float distance, float gas, float angle, boolean collision);
-    int accelerate (Speed s, float gas, float distance);
-    int decelerate (Speed s, float gas, float distance, boolean collision) ;
-    int steerWheel (Speed s, float distance, boolean collision);
-    //其他方法
+    int accelerate(Speed s, float gas, float distance);
+    int decelerate(Speed s, float gas, float distance, boolean collision);
+    int steerWheel(Speed s, float distance, boolean collision);
+    // 其他方法
 }
 ```
 
@@ -1010,25 +956,25 @@ Public interface automateVehicle {
 以下代码是一个示例：
 
 ```java
-Public class Car implements automateVehicle {
-    Int init (Speed s, float distance, float gas, float angle, boolean collision)
-    //上面的代码包含了方法签名和实现
-    //让类 car 初始的代码写在这里
+public class Car implements automateVehicle {
+    int init(Speed s, float distance, float gas, float angle, boolean collision)
+    // 上面的代码包含了方法签名和实现
+    // 让类 car 初始的代码写在这里
     // 更多代码
-    //其他类成员可以写在这里
+    // 其他类成员可以写在这里
 }
 ```
 
 如果你还记得，接口 `automateVehicle` 的开发者并不是类 `car` 的开发者。其他的汽车 `car` 类可以使用 `automateVehicle` 接口，并有不同的实现。这些汽车开发者随后将构建如 `GPS` 系统和数字地图，并通过接口的方法使其可用且有效。
 
-## 接口的声明与定义 (Interface Declaration and Definition)
+# 接口的声明与定义
 
 接口的声明需要五个组件：修饰符、接口名称、父接口列表（如果有的话）、体、以及 `interface` 关键字。
 
 ```java
 public interface SampleInterface extends AnotherInterface, ThatInterface, SampleInterfaceAgain {
     float value = 1.54;
-    void doSomething (int i, double x);
+    void doSomething(int i, double x);
     int doSomethingElse(String s);
 }
 ```
@@ -1039,10 +985,6 @@ public interface SampleInterface extends AnotherInterface, ThatInterface, Sample
 
 现在，接口的体可以包含多种方法，例如抽象方法、默认方法和静态方法。每个方法与其他方法略有不同。
 
-
-
-
-
 抽象方法（abstract method）与方法签名几乎相同。它不需要实现。默认方法（default method）是在 `default` 修饰符内声明的方法。而 `static` 修饰符是在 `static` 修饰符内声明的。接口中的抽象方法、`static` 方法和默认方法默认都是公共的（public）。
 
 除了方法之外，接口中还可能使用常量声明。接口中声明的每个常量值都可以是任何修饰符（`public`、`static`、`final`）。
@@ -1052,7 +994,7 @@ public interface SampleInterface extends AnotherInterface, ThatInterface, Sample
 想象一个定义了对象大小比较的接口：
 
 ```java
-public interface Comparison{
+public interface Comparison {
     public int isSmallerThan(Comparison object_1);
 }
 ```
@@ -1061,9 +1003,9 @@ public interface Comparison{
 
 只要有一个方法可以比较从该类实例化的对象的相似字段，任何类都可以实现 `Comparison` 接口。对于 `strings` 等其他数据类型，可以比较字符数。对于 `person` 等其他对象，可以使用 `height` 和 `age` 等字段。对于几何对象等数学情况，可以对面积进行比较，而像体积等其他情况则适用于三维对象的比较。`isSmallerThan()` 方法可以由所有上述类实现。
 
-如果已知某个类可以实现 `Comparison` 接口，那么比较从该类实例化的对象大小也是一个肯定的的事实。
+如果已知某个类可以实现 `Comparison` 接口，那么比较从该类实例化的对象大小也是一个肯定的事实。
 
-## 继承 (Inheritance)
+# 继承
 
 我们在之前的某些章节中已经看到过继承的应用。Java 编程语言允许类派生自其他类。由于这种可能性的存在，父类的属性和方法将由派生类或子类继承。
 
@@ -1075,13 +1017,13 @@ public class Vehicle {
     Float gas;
     Float angle;
 
-    public Vehicle(float Vgas, float Vdistance, float Vangle ) {
+    public Vehicle(float Vgas, float Vdistance, float Vangle) {
         gas = Vgas;
         distance = Vdistance;
         angle = Vangle;
-    } 
+    }
 
-    public void setDistance(int Ndistance){
+    public void setDistance(int Ndistance) {
         distance = Ndistance;
     }
 
@@ -1089,17 +1031,17 @@ public class Vehicle {
         gas = Ngas;
     }
 
-    public void turnStraight(int value){
-        angle-= value;
+    public void turnStraight(int value) {
+        angle -= value;
     }
 
-    public void turn(int value){
-        Angle+= value;
+    public void turn(int value) {
+        angle += value;
     }
 }
 ```
 
-作为 `Vehicle` 类子类的 `Car` 类声明看起来所示：
+作为 `Vehicle` 类子类的 `Car` 类声明看起来如下所示：
 
 ```java
 public class Car extends Vehicle {
@@ -1108,18 +1050,18 @@ public class Car extends Vehicle {
     public Car(float heatR, float sDistance, float sGas, float sAngle) {
         super(sDistance, sGas, sAngle);
         heatRate = heatR;
-    } 
+    }
 
     // 汽车子类增加了一个方法
     public void setHeatRate(int newValue) {
         heatRate = newValue;
-    } 
+    }
 }
 ```
 
 子类 `Car` 继承了其父类 `Vehicle` 的所有字段和方法。它还增加了另一个名为 `setHeatRate` 的方法及其字段 `heatRate`。除了构造函数之外，编写子类 `Vehicle` 看起来就像是完全凭空创建的另一个类，连同它的字段和方法。感觉是这样，但现在它是这样创建的。如果父类 `Vehicle` 中的方法更复杂且调试需要很长时间，这种技术将非常重要。
 
-子类是派生自另一个类的类。它也可以被称为派生类或子类。子类的对面是父类（superclass）。父类是子类派生的那个类。父类的另一个术语是父母类（parent class）。
+子类是派生自另一个类的类。它也可以被称为派生类或子类。子类的对面是父类。父类是子类派生的那个类。父类的另一个术语是父母类。
 
 父类的所有成员，包括属性、方法和其他嵌套类，都由子类继承。虽然它不继承构造函数，但可以从子类调用父类的构造函数。
 
@@ -1129,39 +1071,32 @@ Java 编程语言不支持多父类继承。这意味着每个类只能有一个
 
 例如，想象一个 `Mountain` 类和一个 `Valley` 类。与其将 `Mountain` 类的所有属性重写到 `Valley` 类中，不如创建一个 `Landform` 类，它包含了 `Mountain` 和 `Valley` 类都拥有的所有相同属性和方法。这减少了错误的可能性并缩短了调试时间。
 
-# Java 平台层次结构 (Java Platform Hierarchy)
+# Java 平台层次结构
 
 在 Java 编程语言中，`Object` 类基本上是所有类的核心类。它是最常见的类。所有类都派生自 `Object` 类。这些类然后又有子类，依此类推。这被称为类的层次结构。与其父类相比，层次结构底部的类倾向于执行更具体的方法。
 
-## 子类 (Subclasses)
+## 子类
 
 子类可以继承其父类的公共和保护成员，无论子类位于哪个包。如果子类和它的父类在同一个包中，子类还可以继承所有的私有成员。如此，子类可以对其继承的成员进行操作，例如：
 
--   直接使用继承的字段
--   在子类中声明与父类相同的字段
--   声明父类未包含的新字段
--   直接使用从父类继承的所有方法
--   在子类中创建一个实例方法，其方法签名与父类相同（方法重写）
--   创建一个与父类同名的静态方法
--   在子类中声明父类未包含的新方法
--   创建一个调用父类构造函数的子类构造函数
+- 直接使用继承的字段
+- 在子类中声明与父类相同的字段
+- 声明父类未包含的新字段
+- 直接使用从父类继承的所有方法
+- 在子类中创建一个实例方法，其方法签名与父类相同（方法重写）
+- 创建一个与父类同名的静态方法
+- 在子类中声明父类未包含的新方法
+- 创建一个调用父类构造函数的子类构造函数
 
 子类不能继承父类的私有成员。只有当子类和父类位于同一个包时才是可能的。
 
 如果父类访问私有字段的方法是公共或保护的，那么这些方法对子类是可访问的。嵌套类可以访问其所在类的所有私有字段和方法。因此，如果嵌套类是公共或保护的，其子类可以访问父类的所有私有成员。
 
-
-
-
 上面的代码声明 `obj1` 同时被声明为 `Object` 和 `MyOwnClass`。这种方法被称为隐式转换。
 
 相比之下，下面的代码被称为显式转换：
 
-––––––––
-
-![image](img/scene_break.png)
-
-```
+```java
 MyOwnClass sample = obj1;
 
 MyOwnClass sample = (MyOwnClass) obj;
@@ -1171,8 +1106,8 @@ MyOwnClass sample = (MyOwnClass) obj;
 
 可以使用 `instanceof` 来确定特定对象的类型。这减少了因转换不当而导致运行时错误的几率。
 
-```
-if (obj1 instanceof MMyOwnClass) {
+```java
+if (obj1 instanceof MyOwnClass) {
     MyOwnClass sample = (MyOwnClass) obj1;
 }
 ```
@@ -1181,7 +1116,7 @@ if (obj1 instanceof MMyOwnClass) {
 
 ## 多重继承
 
-类和接口之间的区别在于，接口不允许拥有字段，而类可以。另一个区别是，接口不能创建自身的实例来创建对象，而类可以被实例化来创建对象。正如第 4 节过的，对象可以将其当前状态存储在字段中，这些字段可以通过类来定义。
+类和接口之间的区别在于，接口不允许拥有字段，而类可以。另一个区别是，接口不能创建自身的实例来创建对象，而类可以被实例化来创建对象。正如第 4 节所述，对象可以将其当前状态存储在字段中，这些字段可以通过类来定义。
 
 Java 语言不允许一个类拥有多个父类，的原因是为了避免状态多重继承的可能性，换句话说，避免从多个类继承字段的能力。
 
@@ -1197,7 +1132,7 @@ Java 语言具有支持类型多重继承的能力。这在技术上是指实现
 
 ## 实例方法
 
-在子类中，与父类实例方法具有相同签名和返回类型的实例方法具有覆盖（override）父类实例方法的能力。
+在子类中，与父类实例方法具有相同签名和返回类型的实例方法具有覆盖父类实例方法的能力。
 
 由于子类的重写能力，允许类继承特征相对相似的父类，并根据需要修改这些特征。重写方法的组件（名称、参数类型和参数数量、返回值）必须与它将重写的方法相同。重写方法还可以返回被重写方法返回类型的子类型；换句话说，即协变返回类型。
 
@@ -1205,7 +1140,7 @@ Java 语言具有支持类型多重继承的能力。这在技术上是指实现
 
 ## 静态方法
 
-当在子类中定义与父类相同的静态方法（方法签名相同）时，子类的方法将隐藏（hide）来自父类的方法。
+当在子类中定义与父类相同的静态方法（方法签名相同）时，子类的方法将隐藏来自父类的方法。
 
 实例方法重写和静态方法重写的区别在于：
 
@@ -1220,19 +1155,15 @@ Java 语言具有支持类型多重继承的能力。这在技术上是指实现
 
 ## 多态
 
-在生物学中，多态（polymorphism）术语指的是生物或物种可以呈现多种不同的阶段或形式。在 Java 语言中，这个概念同样适用。独特的行为由它们自己的子类定义，但仍然共享父类的一些功能。
+在生物学中，多态术语指的是生物或物种可以呈现多种不同的阶段或形式。在 Java 语言中，这个概念同样适用。独特的行为由它们自己的子类定义，但仍然共享父类的一些功能。
 
-为了演示多态，我们将对 `Vehicle` 类进行一些调整。例如，可以在类中添加一个名为 `displayData` 方法。该方法显示存储在实例中的所有数据。
-
-––––––––
-
-![image](img/scene_break.png)
+为了演示多态，我们将对 `Vehicle` 类进行一些调整。例如，可以在类中添加一个名为 `displayData` 的方法。该方法显示存储在实例中的所有数据。
 
 ```java
-public void displayData( ){
+public void displayData() {
     System.out.println("\nThe Vehicle is " + "in the correct" +
-+ with a gas in liters of " + this.gas +
-" and currently have  a total distance of " + this.distance + ". ");
+            + with a gas in liters of " + this.gas +
+            " and currently have  a total distance of " + this.distance + ". ");
 }
 ```
 
@@ -1243,56 +1174,50 @@ public class Car extends Vehicle {
     private String breaks;
 
     public Car(
-        int sDistance,
-        int sGas,
-        int sAngle,
-        String breakType){
+            int sDistance,
+            int sGas,
+            int sAngle,
+            String breakType) {
         super(sDistance,
-        sGas,
-        sAngle);
+                sGas,
+                sAngle);
         this.setBreaks(breakType);
     }
 
-    public String getBreaks(){
+    public String getBreaks() {
         return this.breaks;
     }
 }
 ```
 
-––––––––
 
-![image](img/scene_break.png)
 
 ```java
 public void setBreaks(String breakType) {
     this.break = breakType;
 }
 
-public void displayData( ) {
+public void displayData() {
     super.displayData();
     System.out.println("The " + "car has a" +
-    getBreaks( ) + " type as breaks");
+    getBreaks() + " type as breaks");
 }
 }
 ```
 
-注意重写的方法 `displayData`。另一个需要考虑的细节是输出中包含的关于刹车（breaks）的数据。
-
-
-
-
+注意重写的方法 `displayData()`。另一个需要考虑的细节是输出中包含的关于刹车（breaks）的数据。
 
 下一步是创建 `RallyCar` 类。由于拉赛车（Rally cars）使用不同的轮组能够在地上转弯，因此在字段集中添加了一个新字段 `WheelWidth`。以下是 `RallyCar` 类：
 
 ```java
-public class RallyCar extends Vehicle{
+public class RallyCar extends Vehicle {
 
     private int WheelWidth;
 
     public RallyCar(int sDistance,
     int sGas,
     int sAngle,
-    int newWheelWidth){
+    int newWheelWidth) {
 
         super(startDistance,
         startGas,
@@ -1301,15 +1226,15 @@ public class RallyCar extends Vehicle{
         this.setWheelWidth(newWheelWidth);
     }
 
-    public int getWheelWidth(){
+    public int getWheelWidth() {
         return this.WheelWidth;
     }
 
-    public void setWheelWidth(int newWheelWidth){
+    public void setWheelWidth(int newWheelWidth) {
         this.WheelWidth = newWheelWidth;
     }
 
-    public void displayData(){
+    public void displayData() {
         super.displayData();
         System.out.println("The Rally Car" + " has " + getWheelWidth() +
         "set of  wheels.");
@@ -1319,13 +1244,13 @@ public class RallyCar extends Vehicle{
 
 Java 虚拟机（`JVM`）能够为每个变量引用的对象调用相应的方法。它没有能力根据变量类型来调用方法。这种特性可以被称为虚方法调用。这展示了 Java 编程语言中多态性这一重要特性的一个方面。
 
-# 第 6 章：包（Packages）
+# 第 6 章：包
 
-在编程中，开发者倾向于将相关的类型分组成组以便更容易找到并避免命名冲突。这些组被称为包（packages）。
+在编程中，开发者倾向于将相关的类型分组成组以便更容易找到并避免命名冲突。这些组被称为包。
 
 包本质上是一组相关的类型，它们允许访问保护和命名空间管理。
 
-**注意：** 请记住，类型可以被称为类（class）、接口（interface）、注解（annotation）或枚举（enumeration）。
+**注意：** 请记住，类型可以被称为类（`class`）、接口（`interface`）、注解（`annotation`）或枚举（`enumeration`）。
 
 特殊的类类型是枚举，而特殊的接口被称为注解，但通常情况下，类型通常被称为类和接口。
 
@@ -1337,11 +1262,11 @@ Java 虚拟机（`JVM`）能够为每个变量引用的对象调用相应的方�
 
 *   对于其他程序员来说，定位特定类型（如图形相关的函数）更加方便且易于访问。
 *   由于包利用了新的命名空间，因此类型名称与开发的类型名称之间不会发生冲突。
-*   同一包内的类型之间可以进行无限制的访问，但对来自其他包的类型保留受保护访问（protected access）。
+*   同一包内的类型之间可以进行无限制的访问，但对来自其他包的类型保留受保护访问。
 
 ## 包的创建
 
-在创建包时，重要的是首先选择一个名称并在其前面加上一个包语句（package statement），该名称必须写在包含你想要从包中包含的类型的每个源文件的顶部。
+在创建包时，重要的是首先选择一个名称并在其前面加上一个包语句，该名称必须写在包含你想要从包中包含的类型的每个源文件的顶部。
 
 例如：
 
@@ -1379,9 +1304,9 @@ Java 编程语言中的包（准确来说是 Java 语言）以 `java.` 开头，
 
 ## 包成员的使用
 
-包内部的组件通常被称为包成员（package members）。为了从外部使用包成员（`public`），可以通过其全名来引用包成员。导入包本身也是可能的。另一种方法是导入成员所在的整个包。这些解决方案适用于特定的情况。
+包内部的组件通常被称为包成员。为了从外部使用包成员（`public`），可以通过其全名来引用包成员。导入包本身也是可能的。另一种方法是导入成员所在的整个包。这些解决方案适用于特定的情况。
 
-名称引用（Name referral）可能是我们在之前的章节中看到的引用方法或类型的最常用方式。如果所开发的代码和包成员来自同一个包，或者包本身已被导入，则可以使用包成员的简单名称。
+名称引用可能是我们在之前的章节中看到的引用方法或类型的最常用方式。如果所开发的代码和包成员来自同一个包，或者包本身已被导入，则可以使用包成员的简单名称。
 
 尽管这种方法很有用，但在尝试使用来自未导入的包的成员时，需要使用包含包名的成员全限定名。
 
@@ -1395,9 +1320,6 @@ Java 编程语言中的包（准确来说是 Java 语言）以 `java.` 开头，
 
 为了能够导入包内的所有组件，使用与导入成员相同的方法，但使用星号 `*` 代替成员名。这会导入所有成员而仅仅是一个。
 
-
-
-
 如果来自不同包的两个成员具有相同的名称，则需要通过使用完全限定名的方法来导入这些成员。这样做是为了避免不同包之间的名称之间出现任何歧义。
 
 ## 静态导入语句
@@ -1408,25 +1330,25 @@ Java 编程语言中的包（准确来说是 Java 语言）以 `java.` 开头，
 
 ## 源文件与类文件管理
 
-Java 编程语言平台有许多实现依赖于层次文件系统来管理类和源文件，尽管这在 Java 语言规范中并不是强制要求的。为了实现这一点，必须执行以下步骤：
+Java 编程语言平台有许多实现依赖于层次文件系统来管理类和源文件，虽然这在 Java 语言规范中并不是强制要求的。为了实现这一点，必须执行以下步骤：
 
-1. 将类型的源代码放在一个文本文件中，文件名与类型名相同，且扩展名为 `.java`。
+1.  将类型的源代码放在一个文本文件中，文件名与类型名相同，且扩展名为 `.java`。
 
 ```java
-//来自一个名为 sample.java 的文件
+// 来自一个名为 sample.java 的文件
 
 package example;
 
-public class sample{
-//code
+public class sample {
+// code
 }
 ```
 
-2. 之后，将源文件放在与其所属包名相同的目录中。
+2.  之后，将源文件放在与其所属包名相同的目录中。
 
 包成员的名称与文件的路径名称应该是平行的。假设文件名分隔符是反斜杠（Microsoft Windows）。
 
-正如我们在之前的主题中讨论过的，包名源自其公司域名的是一种常见做法。记住示例域名 `sample.net` 的包名将 `net.sample`。包内的所有组件都将对应一个子目录。因此，如果域名 `sample.net` 的公司有一个名为 `net.sample.packagemember` 的包成员，其中包含一个文件 `sample.java`，它将被放置在系列子目录下，如：
+正如我们在之前的主题中讨论过的，包名源自其公司域名的是一种常见做法。记住示例域名 `sample.net` 的包名将为 `net.sample`。包内的所有组件都将对应一个子目录。因此，如果域名 `sample.net` 的公司有一个名为 `net.sample.packagemember` 的包成员，其中包含一个文件 `sample.java`，它将被放置在系列子目录下，如：
 
 `....\net\sample\package\sample.java`
 
@@ -1454,7 +1376,7 @@ Java 最初设计时就将网络计算作为其特性之一。它是最早为远
 
 这种优势在涉及网络编程时非常有用。能够运行一个从文件系统或远程源加载类的程序是一个非常高效的概念。Java 语言编写的程序还可以在执行过程中修改自己的代码。然而，用 Java 编写的程序带有某些反馈执行并随着时间的推移改进生成的代码更符合现实且可能的。
 
-在 Java 中，释放内存不再是程序员的责任范围。Java 虚拟机 (`JVM`) 会跟踪并记录所有使用的内存。当内存不再被使用时，它会自动释放。在这一发生时，`JVM` 在后台执行另一项任务：释放未引用的、未使用的内存，这也称为垃圾回收（Garbage Collection）。垃圾回收器始终运行。这一特性使得编写复杂的服务器端程序变得简单。现在程序员唯一做的就是观察对象创建的速度。如果应用程序创建对象的速度快于垃圾回收释放的速度，就会导致内存问题。应用程序可能会耗尽内存或抛出异常，或者停下来给垃圾回收留出应对并执行任务的时间。
+在 Java 中，释放内存不再是程序员的责任范围。Java 虚拟机 (`JVM`) 会跟踪并记录所有使用的内存。当内存不再被使用时，它会自动释放。在这一发生时，`JVM` 在后台执行另一项任务：释放未引用的、未使用的内存，这也称为垃圾回收。垃圾回收器始终运行。这一特性使得编写复杂的服务器端程序变得简单。现在程序员唯一做的就是观察对象创建的速度。如果应用程序创建对象的速度快于垃圾回收释放的速度，就会导致内存问题。应用程序可能会耗尽内存或抛出异常，或者停下来给垃圾回收留出应对并执行任务的时间。
 
 关于 Java 还有一点可以说明，其背后的人也是 `applet`（插件）概念的创建者。Java 程序具有在网络浏览器中运行的能力。Java 最初是为 Web 应用程序设计的。Java 语言的承诺在于浏览器端，代码可以下载并作为 `applet` 在浏览器中执行。
 
@@ -1462,10 +1384,8 @@ Java 最初设计时就将网络计算作为其特性之一。它是最早为远
 
 作为最后的总结，Java 是一种能够交付结果并实现其目标的编程语言。Java 语言不仅仅是其他语言之一，因为它允许创建高级数据类型（对象），这些对象可以是现实世界事物的表示。这些对象还可以可以修改的字段。
 
-
-
 Java 是一种非常灵活的编程语言。从软件开发到 Applet 开发，Java 已在许多方面证明了自己是一种强大的语言。但它的灵活性远未于此。
 
-由于它是平台无关，相同的 Java 程序可以在不同的操作系统上运行，而无需重新创建或重写代码，这与 `C` 和 `C++` 等编程语言不同。这一切之所以可能，归功于`Java Runtime Environment`（Java 环境），它可以解释 Java 源码并告知操作系统需要执行的操作。
+由于它是平台无关，相同的 Java 程序可以在不同的操作系统上运行，而无需重新创建或重写代码，这与 `C` 和 `C++` 等编程语言不同。这一切之所以可能，归功于 `Java Runtime Environment`（Java 环境），它可以解释 Java 源码并告知操作系统需要执行的操作。
 
 当然，这种语言也有一些缺点，但它仍然易于理解和学习。在一天的时间内，任何人都可以创建属于自己的 Java 程序。

@@ -1,12 +1,13 @@
+
 # 支持用户交互
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/advanced/user.html`](https://docs.oracle.com/javase/tutorial/2d/advanced/user.html)
 
-为了让用户与您显示的图形进行交互，您需要能够确定用户何时点击其中一个图形。[`Graphics2D`](https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html) 类的 `hit` 方法提供了一种简单确定鼠标点击是否发生在特定 [`Shape`](https://docs.oracle.com/javase/8/docs/api/java/awt/Shape.html) 对象上的方法。或者，您可以获取鼠标点击的位置并在 `Shape` 上调用 `contains` 方法来确定点击是否在 `Shape` 的边界内。
+为了让用户与您显示的图形进行交互，您需要能够确定用户何时点击其中一个图形。`Graphics2D` 类的 `hit` 方法提供了一种简单确定鼠标点击是否发生在特定 `Shape` 对象上的方法。或者，您可以获取鼠标点击的位置并在 `Shape` 上调用 `contains` 方法来确定点击是否在 `Shape` 的边界内。
 
-如果您使用基本文本，可以通过获取与文本对应的轮廓 `Shape`，然后使用该 `Shape` 调用 `hit` 或 `contains` 方法来执行简单的点击测试。支持文本编辑需要更复杂的点击测试。如果要允许用户编辑文本，通常应使用 Swing 可编辑文本组件之一。如果您使用基本文本并使用 [`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html) 类来管理文本的形状和位置，则还可以使用 `TextLayout` 来执行文本编辑的点击测试。有关更多信息，请参阅 [Java 2D 程序员指南](https://docs.oracle.com/javase/8/docs/technotes/guides/2d/spec/j2d-bookTOC.html) 中的文本和字体章节，或查看下面的 HitTestSample 示例，该示例使用 `TextLayout` 执行简单的点击测试。
+如果您使用基本文本，可以通过获取与文本对应的轮廓 `Shape`，然后使用该 `Shape` 调用 `hit` 或 `contains` 方法来执行简单的点击测试。支持文本编辑需要更复杂的点击测试。如果要允许用户编辑文本，通常应使用 Swing 可编辑文本组件之一。如果您使用基本文本并使用 `TextLayout` 类来管理文本的形状和位置，则还可以使用 `TextLayout` 来执行文本编辑的点击测试。有关更多信息，请参阅 [Java 2D 程序员指南](https://docs.oracle.com/javase/8/docs/technotes/guides/2d/spec/j2d-bookTOC.html) 中的文本和字体章节，或查看下面的 `HitTestSample` 示例，该示例使用 `TextLayout` 执行简单的点击测试。
 
-## 示例：ShapeMover
+## 示例：`ShapeMover`
 
 此小程序允许用户在小程序窗口内拖动 `Shape`。`Shape` 在每个鼠标位置重新绘制，以提供用户拖动时的反馈。
 
@@ -40,7 +41,7 @@ public void updateLocation(MouseEvent e){
 
 您可能会注意到，在每个鼠标位置重新绘制 `Shape` 是很慢的，因为填充的矩形每次移动时都会重新渲染。使用双缓冲可以消除这个问题。如果使用 Swing，绘图将自动双缓冲；您无需更改渲染代码。这个程序的 Swing 版本的代码是 `SwingShapeMover.java`。
 
-## 示例：HitTestSample
+## 示例：`HitTestSample`
 
 这个应用程序通过在用户点击 `TextLayout` 上的位置绘制默认插入符来说明点击测试，如下图所示。
 
@@ -52,7 +53,7 @@ public void updateLocation(MouseEvent e){
 
 * * *
 
-``HitTestSample.java`` 包含了这个小程序的完整代码。
+`HitTestSample.java` 包含了这个小程序的完整代码。
 
 `mouseClicked` 方法使用 `TextLayout.hitTestChar` 返回一个包含鼠标点击位置（插入索引）的 `java.awt.font.TextHitInfo` 对象在 `TextLayout` 对象中。
 

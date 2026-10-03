@@ -1,3 +1,4 @@
+
 # 与遗留代码互操作
 
 > 原文：[`docs.oracle.com/javase/tutorial/extra/generics/legacy.html`](https://docs.oracle.com/javase/tutorial/extra/generics/legacy.html)
@@ -12,7 +13,7 @@
 
 如何在使用自己的代码时使用旧代码，同时仍享受泛型的好处？
 
-举个例子，假设你想使用包 `com.Example.widgets`。Example.com 的人们推出了一个用于库存控制的系统，其亮点如下所示：
+举个例子，假设你想使用包`com.Example.widgets`。Example.com 的人们推出了一个用于库存控制的系统，其亮点如下所示：
 
 ```java
 package com.Example.widgets;
@@ -35,10 +36,9 @@ public interface Assembly {
     // *Returns a collection of Parts*
     Collection getParts();
 }
-
 ```
 
-现在，你想添加新代码，使用上面的 API。最好确保你总是使用正确的参数调用 `addAssembly()` - 也就是说，你传入的集合确实是 `Part` 的 `Collection`。当然，泛型正是为此而设计的：
+现在，你想添加新代码，使用上面的 API。最好确保你总是使用正确的参数调用`addAssembly()` - 也就是说，你传入的集合确实是`Part`的`Collection`。当然，泛型正是为此而设计的：
 
 ```java
 package com.mycompany.inventory;
@@ -61,18 +61,17 @@ public class Main {
         Collection<Part> k = Inventory.getAssembly("thingee").getParts();
     }
 }
-
 ```
 
-当我们调用 `addAssembly` 时，它期望第二个参数是 `Collection` 类型。实际参数是 `Collection<Part>` 类型。这样也能工作，但为什么呢？毕竟，大多数集合不包含 `Part` 对象，因此一般情况下，编译器无法知道 `Collection` 类型引用的是什么类型的集合。
+当我们调用`addAssembly`时，它期望第二个参数是`Collection`类型。实际参数是`Collection<Part>`类型。这样也能工作，但为什么呢？毕竟，大多数集合不包含`Part`对象，因此一般情况下，编译器无法知道`Collection`类型引用的是什么类型的集合。
 
-在适当的通用代码中，`Collection` 总是伴随着一个类型参数。当像 `Collection` 这样的通用类型在没有类型参数的情况下使用时，它被称为*原始类型*。
+在适当的通用代码中，`Collection`总是伴随着一个类型参数。当像`Collection`这样的通用类型在没有类型参数的情况下使用时，它被称为*原始类型*。
 
-大多数人的第一反应是 `Collection` 真的意味着 `Collection<Object>`。然而，正如我们之前看到的，将 `Collection<Part>` 传递到需要 `Collection<Object>` 的地方是不安全的。更准确地说，类型 `Collection` 表示某种未知类型的集合，就像 `Collection<?>` 一样。
+大多数人的第一反应是`Collection`真的意味着`Collection<Object>`。然而，正如我们之前看到的，将`Collection<Part>`传递到需要`Collection<Object>`的地方是不安全的。更准确地说，类型`Collection`表示某种未知类型的集合，就像`Collection<?>`一样。
 
-但等等，这也不对！考虑一下对 `getParts()` 的调用，它返回一个 `Collection`。然后将其赋给 `k`，它是一个 `Collection<Part>`。如果调用的结果是 `Collection<?>`，那么赋值就会出错。
+但等等，这也不对！考虑一下对`getParts()`的调用，它返回一个`Collection`。然后将其赋给`k`，它是一个`Collection<Part>`。如果调用的结果是`Collection<?>`，那么赋值就会出错。
 
-实际上，这种赋值是合法的，但会生成一个*未经检查的警告*。这个警告是必要的，因为事实上编译器无法保证其正确性。我们无法检查 `getAssembly()` 中的遗留代码，以确保返回的确实是一个 `Part` 集合。代码中使用的类型是 `Collection`，可以合法地向这样的集合中插入各种对象。
+实际上，这种赋值是合法的，但会生成一个*未经检查的警告*。这个警告是必要的，因为事实上编译器无法保证其正确性。我们无法检查`getAssembly()`中的遗留代码，以确保返回的确实是一个`Part`集合。代码中使用的类型是`Collection`，可以合法地向这样的集合中插入各种对象。
 
 那么，这不应该是一个错误吗？从理论上讲，是的；但从实际上讲，如果通用代码要调用遗留代码，这必须被允许。这取决于你，程序员，要确信在这种情况下，赋值是安全的，因为`getAssembly()`的契约规定它返回一个`Part`的集合，即使类型签名没有显示这一点。
 
@@ -95,7 +94,6 @@ public String loophole(Integer x) {
     xs.add(x); // *Compile-time unchecked warning*
     return ys.iterator().next();
 }
-
 ```
 
 在这里，我们给字符串列表和普通旧列表取了别名。我们将一个`Integer`插入列表，并尝试提取一个`String`。这显然是错误的。如果我们忽略警告并尝试执行此代码，它将在我们尝试使用错误类型的地方失败。在运行时，此代码的行为如下：
@@ -107,7 +105,6 @@ public String loophole(Integer x) {
     xs.add(x); 
     return(String) ys.iterator().next(); // *run time error*
 }
-
 ```
 
 当我们从列表中提取一个元素，并尝试将其强制转换为`String`以将其视为字符串时，我们将收到`ClassCastException`。与`loophole()`的泛型版本发生的事情完全相同。
@@ -147,7 +144,6 @@ public interface Assembly {
     // *Returns a collection of Parts*
     Collection<Part> getParts();
 }
-
 ```
 
 客户端代码如下：
@@ -176,7 +172,6 @@ public class Main {
         Collection k = Inventory.getAssembly("thingee").getParts();
     }
 }
-
 ```
 
 客户端代码是在引入泛型之前编写的，但它使用了`com.Example.widgets`包和集合库，两者都使用了泛型类型。客户端代码中所有泛型类型声明的使用都是原始类型。
@@ -184,5 +179,3 @@ public class Main {
 第 1 行生成了一个未经检查的警告，因为一个原始`Collection`被传递到一个期望`Part`集合的`Collection`位置，编译器无法确保原始`Collection`确实是`Part`集合。
 
 作为一种替代方案，您可以使用源 1.4 标志编译客户端代码，确保不会生成任何警告。然而，在这种情况下，您将无法使用 JDK 5.0 引入的任何新语言特性。
-
-* * *

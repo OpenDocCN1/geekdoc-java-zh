@@ -1,32 +1,34 @@
+
 # Spring MVC 密码示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring-mvc/spring-mvc-password-example/>
 
-在 Spring MVC 中，可以使用 **< form:password / >** 标签来呈现一个 HTML 密码字段。举个例子，
+在 Spring MVC 中，可以使用`<form:password />`标签来呈现一个 HTML 密码字段。举个例子：
 
 ```java
- <form:password path="password" /> 
+<form:password path="password" />
 ```
 
-它将呈现以下 HTML 代码
+它将呈现以下 HTML 代码：
 
 ```java
- <input id="password" name="password" type="password" value=""/> 
+<input id="password" name="password" type="password" value=""/>
 ```
 
-**Note**
-In Spring’s documentation, it mention about the ‘**showPassword**‘ attribute will display the password value, but it’s failed in my testing, may be you can try it yourself.
+**注意**
 
-在本教程中，我们将向您展示如何使用 Spring 的表单标签“ **password** ”来**呈现两个 HTML 密码**字段——“password”和“confirmPassword”。此外，添加一个验证器检查两个密码字段:不得为空，并且“密码”字段必须与“确认密码”字段匹配。
+在 Spring 的文档中提到，`showPassword`属性可以显示密码值，但在我的测试中失败了，也许你可以自己尝试一下。
 
-## 1.控制器
+在本教程中，我们将向您展示如何使用 Spring 的表单标签`password`来**呈现两个 HTML 密码**字段——`password`和`confirmPassword`。此外，添加一个验证器检查两个密码字段：不得为空，并且`password`字段必须与`confirmPassword`字段匹配。
 
-一个 **SimpleFormController** 来处理表单值。
+## 1. 控制器
 
-*文件:PasswordController.java*
+一个`SimpleFormController`来处理表单值。
+
+*文件：`PasswordController.java`*
 
 ```java
- package com.mkyong.customer.controller;
+package com.mkyong.customer.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -53,34 +55,34 @@ public class PasswordController extends SimpleFormController{
 
 	}
 
-} 
+}
 ```
 
- ## 2.模型
+## 2. 模型
 
 存储密码值的客户对象。
 
-*文件:Customer.java*
+*文件：`Customer.java`*
 
 ```java
- package com.mkyong.customer.model;
+package com.mkyong.customer.model;
 
 public class Customer{
 
 	String password;
 	String confirmPassword;
 	//getter and setter methods for password and confirmPassword
-} 
+}
 ```
 
- ## 3.表单验证器
+## 3. 表单验证器
 
-创建一个密码验证器类来检查两个密码字段:不得为空，“密码”和“确认密码”必须匹配。否则，从资源包(属性文件)中获取相应的消息。
+创建一个密码验证器类来检查两个密码字段：不得为空，`password`和`confirmPassword`必须匹配。否则，从资源包（属性文件）中获取相应的消息。
 
-*文件:PasswordValidator.java*
+*文件：`PasswordValidator.java`*
 
 ```java
- package com.mkyong.customer.validator;
+package com.mkyong.customer.validator;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -113,25 +115,25 @@ public class PasswordValidator implements Validator{
 
 	}
 
-} 
+}
 ```
 
-*文件:message.properties*
+*文件：`message.properties`*
 
 ```java
- required.password = Password is required!
+required.password = Password is required!
 required.passwordConfirm = Confirm password is required!
-notmatch.password = Password and Conform password is not match! 
+notmatch.password = Password and Conform password is not match!
 ```
 
-## 4.视角
+## 4. 视图
 
-一个 JSP 页面使用 Spring 的表单标签" **password** "来呈现两个 HTML 密码字段，并放置一些 CSS 样式来突出显示错误消息。
+一个 JSP 页面使用 Spring 的表单标签`password`来呈现两个 HTML 密码字段，并放置一些 CSS 样式来突出显示错误消息。
 
-*文件:CustomerForm.jsp*
+*文件：`CustomerForm.jsp`*
 
 ```java
- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
 <style>
@@ -177,15 +179,15 @@ notmatch.password = Password and Conform password is not match!
 	</form:form>
 
 </body>
-</html> 
+</html>
 ```
 
 如果表单已提交，则呈现成功页面并显示提交的密码值。
 
-*文件:CustomerSuccess.jsp*
+*文件：`CustomerSuccess.jsp`*
 
 ```java
- <html>
+<html>
 <body>
 	<h2>Spring's form password example</h2>
 
@@ -193,15 +195,15 @@ notmatch.password = Password and Conform password is not match!
 	<br /> Confirm Password : ${customer.confirmPassword}
 
 </body>
-</html> 
+</html>
 ```
 
-## 5.弹簧豆配置
+## 5. Spring Bean 配置
 
 全部链接起来~
 
 ```java
- <beans 
+<beans 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
@@ -235,16 +237,16 @@ notmatch.password = Password and Conform password is not match!
 		</property>
 	</bean>
 
-</beans> 
+</beans>
 ```
 
-## 6.演示
+## 6. 演示
 
-访问页面-**http://localhost:8080/SpringMVCForm/password . htm**
+访问页面 - `http://localhost:8080/SpringMVCForm/password.htm`
 
 ![SpringMVC-Password-Example-1](img/ca40f9f2d1d9516c6628cb13d3c0be16.png "SpringMVC-Password-Example-1")
 
-如果提交表单时“密码”与“确认密码”不匹配，则显示并突出显示错误消息。
+如果提交表单时`password`与`confirmPassword`不匹配，则显示并突出显示错误消息。
 
 ![SpringMVC-Password-Example-2](img/f58c1c3ea8911c4ef35c723adfd6332a.png "SpringMVC-Password-Example-2")
 
@@ -254,11 +256,6 @@ notmatch.password = Password and Conform password is not match!
 
 ## 下载源代码
 
-Download it – [SpringMVCForm-Password-Example.zip](http://web.archive.org/web/20190223082357/http://www.mkyong.com/wp-content/uploads/2010/08/SpringMVCForm-Password-Example.zip) (9KB)[password](http://web.archive.org/web/20190223082357/http://www.mkyong.com/tag/password/) [spring mvc](http://web.archive.org/web/20190223082357/http://www.mkyong.com/tag/spring-mvc/)
+Download it – [SpringMVCForm-Password-Example.zip](http://web.archive.org/web/20190223082357/http://www.mkyong.com/wp-content/uploads/2010/08/SpringMVCForm-Password-Example.zip) (9KB)
 
-
-
-
-
-
-
+[password](http://web.archive.org/web/20190223082357/http://www.mkyong.com/tag/password/) [spring mvc](http://web.archive.org/web/20190223082357/http://www.mkyong.com/tag/spring-mvc/)

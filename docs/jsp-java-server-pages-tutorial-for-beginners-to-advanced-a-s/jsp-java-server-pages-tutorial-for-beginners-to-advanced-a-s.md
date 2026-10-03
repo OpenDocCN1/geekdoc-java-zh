@@ -1,38 +1,25 @@
+
 # JSP (Java Server Pages) 入门到高级教程：分步指南
 
-
-
-
-
-
-
-
-![](img/74dc853ebf79a1ba6264764c7e97f221_0_0.png)
-
-
-![](img/74dc853ebf79a1ba6264764c7e97f221_1_0.png)
-
-
-作者
-Ravi Prasad
-
-
+作者：Ravi Prasad
 
 # 第 3 章：架构
 
-JSP 处理过程
+## JSP 处理过程
 
 # 第 4 章：生命周期
 
-- JSP 遵循路径
-JSP 编译
-JSP 初始化
-JSP 执行
-JSP 清理
+## JSP 遵循的路径
+
+1. JSP 编译
+2. JSP 初始化
+3. JSP 执行
+4. JSP 清理
 
 # 第 5 章：语法
 
-- JSP 元素
+## JSP 元素
+
 - 脚本段 (Scriptlet)
 - JSP 声明 (Declarations)
 - JSP 表达式 (Expression)
@@ -56,24 +43,28 @@ JSP 清理
 
 # 第 7 章：动作 (Actions)
 
-- 常用属性
+## 常用属性
+
 - Id 属性
 - scope 属性
-- <jsp:include> 动作
+
+## 核心动作
+
+- `<jsp:include>` 动作
 - 示例
 - include 动作示例
-- <jsp:useBean> 动作
-- <jsp:setProperty> 动作
-- <jsp:getProperty> 动作
+- `<jsp:useBean>` 动作
+- `<jsp:setProperty>` 动作
+- `<jsp:getProperty>` 动作
 - 示例
 - 在 JSP 中使用 JavaBeans
-- <jsp:forward> 动作
+- `<jsp:forward>` 动作
 - 示例
-- <jsp:plugin> 动作
-- <jsp:element> 动作
-- <jsp:attribute> 动作
-- <jsp:body> 动作
-- <jsp:text> 动作
+- `<jsp:plugin>` 动作
+- `<jsp:element>` 动作
+- `<jsp:attribute>` 动作
+- `<jsp:body>` 动作
+- `<jsp:text>` 动作
 
 # 第 8 章：隐式对象
 
@@ -105,7 +96,7 @@ JSP 清理
 - 设置 HTTP 状态码的方法
 - HTTP 状态码示例
 
-# 第 12 章：HTTP 状态 407 - 需要认证！！！
+# 第 12 章：HTTP 状态 407 - 需要认证
 
 - Apache Tomcat/5.5.29
 
@@ -114,28 +105,24 @@ JSP 清理
 - 表单处理中的方法
 - GET 方法
 - POST 方法
-
-使用 JSP 读取表单数据
-
-使用 URL 的 GET 方法示例
+- 使用 JSP 读取表单数据
+- 使用 URL 的 GET 方法示例
 
 # 第 14 章：使用 GET 读取表单数据
 
 - 使用表单的 GET 方法示例
 - 使用表单的 POST 方法示例
-
-将选择框数据传递给 JSP 页面
+- 将选择框数据传递给 JSP 页面
 
 # 第 15 章：读取选择框数据
 
-- 读取所有表单参数
 - 读取所有表单参数
 
 # 第 16 章：过滤器 (Filters)
 
 - Servlet Filter 方法
-- JSP Filter示例
-- Web.xml 中的 JSP Filter映射
+- JSP Filter 示例
+- Web.xml 中的 JSP Filter 映射
 - 使用多个过滤器
 
 ## Filter 应用顺序
@@ -143,36 +130,38 @@ JSP 清理
 # 第 17 章：Cookie 处理
 
 - Cookie 的结构
-Servlet Cookies 方法
-使用 JSP 设置 Cookie
-第 1 步：创建 Cookie 对象
-第 2 步：设置有效期
-第 3 步：将 Cookie 发送到 HTTP 响应头中
-示例
-使用 JSP 读取 Cookie
-示例
-找到 Cookie 名称和值
-使用 JSP 删除 Cookie
-示例
-Cookie 名称和值
-找到 Cookie 名称和值
+- Servlet Cookies 方法
+- 使用 JSP 设置 Cookie
+
+### 第 1 步：创建 Cookie 对象
+### 第 2 步：设置有效期
+### 第 3 步：将 Cookie 发送到 HTTP 响应头中
+
+- 示例
+- 使用 JSP 读取 Cookie
+- 示例
+- 找到 Cookie 名称和值
+- 使用 JSP 删除 Cookie
+- 示例
+- Cookie 名称和值
+- 找到 Cookie 名称和值
 
 # 第 18 章：会话跟踪 (Session Tracking)
 
 - 在 Web 客户端和服务器之间维持 Session
-Cookies
-隐藏表单字段
-URL 重写
-session 对象
-会话跟踪示例
-欢迎访问我的网站
-欢迎回到我的网站
-删除会话数据
+- Cookies
+- 隐藏表单字段
+- URL 重写
+- session 对象
+- 会话跟踪示例
+- 欢迎访问我的网站
+- 欢迎回到我的网站
+- 删除会话数据
 
 # 第 19 章：文件上传
 
 - 创建文件上传表单
-编写后端 JSP 脚本
+- 编写后端 JSP 脚本
 
 # 第 20 章：处理日期
 
@@ -181,13 +170,13 @@ session 对象
 # 第 21 章：显示当前日期
 
 - Mon Jun 21 21:46:49 GMT+04:00 2010
-日期比较
-使用 SimpleDateFormat 进行日期格式化
+- 日期比较
+- 使用 SimpleDateFormat 进行日期格式化
 
 # 第 22 章：显示当前日期
 
 - Mon 2010.06.21 at 10:06:44 PM GMT+04:00
-SimpleDateFormat 格式代码
+- SimpleDateFormat 格式代码
 
 # 第 23 章：页面跳转
 
@@ -198,60 +187,60 @@ SimpleDateFormat 格式代码
 # 第 25 章：自动刷新
 
 - 动态页面
-自动刷新示例
-自动 Header 示例
+- 自动刷新示例
+- 自动 Header 示例
 
 # 第 26 章：发送邮件
 
 - 动态内容
-发送邮件
+- 发送邮件
 
 # 第 27 章：使用
 
 - 动态页面
-使用 servlet
+- 使用 servlet
 
 # 第 28 章：标准标签库 (JSTL)
 
 - 核心库
-核心标签
-格式化标签
-SQL 标签
-XML 标签
-函数
+- 核心标签
+- 格式化标签
+- SQL 标签
+- XML 标签
+- 函数
 
 # 第 29 章：数据库
 
 - 第 1 步
 - 第 2 步
 - 第 3 步
-SELECT 操作
-INSERT 操作
-DELETE 操作
+- SELECT 操作
+- INSERT 操作
+- DELETE 操作
 
 # 第 30 章：XML
 
 - 动态页面
-展示 XML
-使用 JSP 创建 XML
+- 展示 XML
+- 使用 JSP 创建 XML
 
 # 第 31 章：JavaBeans
 
 - 普通页面
-访问 JavaBeans
-访问属性
+- 访问 JavaBeans
+- 访问属性
 
 # 第 32 章：自定义标签
 
 - “Hello”
-访问标签
-访问属性
+- 访问标签
+- 访问属性
 
 # 第 33 章：表达式语言 (EL)
 
 - 基础语法
-在 JSP 中
-在 servlets 中
+- 在 JSP 中
+- 在 servlets 中
 - pageContext 对象
 - param 对象
 - scope 对象
@@ -266,7 +255,7 @@ DELETE 操作
 - 异常异常
 - 运行时异常
 - 错误
-使用 exception 对象
+- 使用 exception 对象
 
 # 第 36 章：try/Catch 块
 
@@ -274,12 +263,12 @@ DELETE 操作
 
 # 第 37 章：调试
 
-- System.out.println()
-调试工具
-使用调试器
-使用注释
-客户端与服务器
-重要提示
+- `System.out.println()`
+- 调试工具
+- 使用调试器
+- 使用注释
+- 客户端与服务器
+- 重要提示
 
 # 第 38 章：安全
 
@@ -292,13 +281,9 @@ DELETE 操作
 - 检测本地语言
 - 示例
 - 设置
-日期
-货币
-百分比
-
-
-
-
+- 日期
+- 货币
+- 百分比
 
 SSI 确实是用于简单的包含，而不是用于那些使用数据、建立数据库连接等的“真实”程序。
 
@@ -324,22 +309,22 @@ JavaScript 可以在客户端动态生成 HTML，但很难与 Web 服务器交�
 
 ## 搭建 Java 开发工具包 (JDK)
 
-这一步涉及下载 Java 软件开发包 (SDK) 的实现，并相应地设置 PATH 环境变量。
+这一步涉及下载 Java 软件开发包 (SDK) 的实现，并相应地设置 `PATH` 环境变量。
 
 你可以从 Oracle 的 Java 网站下载 SDK – Java SE Downloads。
 
-一旦下载了 Java 实现，请按照给出的说明进行安装和配置。最后，将 PATH 和 JAVA_HOME 环境变量指向包含 java 和 javac 的目录，通常分别为 java_install_dir/bin 和 java_install_dir。
+一旦下载了 Java 实现，请按照给出的说明进行安装和配置。最后，将 `PATH` 和 `JAVA_HOME` 环境变量指向包含 `java` 和 `javac` 的目录，通常分别为 `java_install_dir/bin` 和 `java_install_dir`。
 
-如果你在 Windows 上运行并将 SDK 安装在 jdk1.5.0_20 中，你需要在需要在你的 C:\autocec.bat 文件中添加该行。
+如果你在 Windows 上运行并将 SDK 安装在 `jdk1.5.0_20` 中，你需要在你的 `C:\autocec.bat` 文件中添加该行。
 
 ```
 set PATH = C:\jdk1.5.0_20;bin;%PATH%
 set JAVA_HOME = C:\jdk1.5.0_20
 ```
 
-或者，在 Windows NT/2000/XP 上，你也可以右键点击“我的电脑”，选择“属性”，然后点击“高级”，最后点击“环境变量”。然后更新 PATH 值并点击确定 按钮。
+或者，在 Windows NT/2000/XP 上，你也可以右键点击“我的电脑”，选择“属性”，然后点击“高级”，最后点击“环境变量”。然后更新 `PATH` 值并点击“确定”按钮。
 
-在 Unix（Solaris, Linux 等）上，如果 SDK 安装在 /usr/local/jdk1.5.0_20 且你使用 C shell，你会将以下内容放入 .shrc 文件。
+在 Unix（Solaris, Linux 等）上，如果 SDK 安装在 `/usr/local/jdk1.5.0_20` 且你使用 C shell，你会将以下内容放入 `.shrc` 文件。
 
 ```
 setenv PATH /usr/local/jdk1.5.0_20/bin:$PATH
@@ -354,36 +339,41 @@ setenv JAVA_HOME /usr/local/jdk1.5.0_20
 
 Apache Tomcat 是 JavaServer Pages 和 Servlet 技术的开源软件实现，可以作为独立的服务器用于测试 JSP 和 Servlets，并可以与 Apache Web 服务器集成。以下是在你的机器上设置 Tomcat 的步骤：
 
-- 1. 从 https://tomcat.apache.org/ 下载最新版本的 Tomcat。
-- 2. 一旦下载了安装包，请将二进制发行包解压到方便的位置。例如，在 Windows 上的 **C:\apache-tomcat-5.5.29** 或 Linux/Unix 上的 **/usr/local/apache-tomcat-5.5.29**，并创建指向这些位置的 **CATALINA_HOME** 环境变量。
+1. 从 `https://tomcat.apache.org/` 下载最新版本的 Tomcat。
+2. 一旦下载了安装包，请将二进制发行包解压到方便的位置。例如，在 Windows 上的 `C:\apache-tomcat-5.5.29` 或 Linux/Unix 上的 `/usr/local/apache-tomcat-5.5.29`，并创建指向这些位置的 `CATALINA_HOME` 环境变量。
 
 可以通过在 Windows 机器上执行以下命令启动 Tomcat ——
-%CATALINA_HOME%bin/startup.bat
+
+```
+%CATALINA_HOME%\bin\startup.bat
+```
+
+或
 
 ```
 C:\apache-tomcat-5.5.29\bin\startup.bat
 ```
 
 可以通过在 Unix (Solaris, Linux 等) 机器上执行以下命令启动 Tomcat ——
+
+```
 $CATALINA_HOME/bin/startup.sh
+```
+
+或
 
 ```
 /usr/local/apache-tomcat-5.5.29/bin/startup.sh
 ```
 
-成功启动后，通过访问 http://localhost:8080 可以看到 Tomcat 的默认页面。![](img/74dc53ebf79a1ba626476c7e97f221_0)如果你看到此页面，说明你已成功启动了 Tomcat。恭喜！
-
-
-
+成功启动后，通过访问 `http://localhost:8080` 可以看到 Tomcat 的默认页面。如果你看到此页面，说明你已成功启动了 Tomcat。恭喜！
 
 6. Web 服务器以静态 HTML 内容的形式将 HTTP 响应转发到您的浏览器。
 7. 最后，网页浏览器处理 HTTP 响应中动态生成的 HTML 页面，就像处理静态页面一样。
 
 所有提到的步骤都可以在图中看到——
 
-![](img/74dc853ebf79a1ba6264764c7e97f221_13_0.png)
-
-通常情况下，JSP 引擎会检查是否已经存在该 文件的 servlet，以及 JSP 的修改日期是否早于该 servlet。如果 JSP 比生成的 servlet 要旧，则 JSP 容器会假设 JSP 尚未发生变化，且生成的 servlet 仍然与 JSP 内容匹配。这使得过程比其他脚本语言（如 PHP）更高效，因此速度也更快。
+通常情况下，JSP 引擎会检查是否已经存在该文件的 servlet，以及 JSP 的修改日期是否早于该 servlet。如果 JSP 比生成的 servlet 要旧，则 JSP 容器会假设 JSP 尚未发生变化，且生成的 servlet 仍然与 JSP 内容匹配。这使得过程比其他脚本语言（如 PHP）更高效，因此速度也更快。
 
 在某种程度上，JSP 页面只是编写 servlet 的另一种方式，而不需要成为 Java 编程高手。除了翻译阶段外，JSP 页面的处理方式与普通 servlet 完全相同。
 
@@ -397,14 +387,12 @@ JSP 生命周期被定义为从创建到销毁的过程。Servlet 生命周期�
 
 以下是 JSP 遵循的路径——
 
-- 1. 编译
+1. 编译
 2. 初始化
 3. 执行
 4. 清理
 
 JSP 生命周期的四个主要阶段与 Servlet 生命周期非常相似。这四个阶段在下方描述——
-
-![](img/74dc853ebf79a1ba6264764c7e97f221_14_0.png)
 
 ## JSP 编译
 
@@ -412,49 +400,50 @@ JSP 生命周期的四个主要阶段与 Servlet 生命周期非常相似。这�
 
 编译过程涉及三个步骤：
 
-- 1. 解析 JSP。
+1. 解析 JSP。
 2. 将 JSP 转换为 servlet。
 3. 编译 servlet。
 
 ## JSP 初始化
 
-当容器加载一个 JSP 时，它会在处理请求之前调用 **jspinit()** 方法。如果您需要执行特定于 JSP 的初始化，请重写 **jspinit()** 方法——
+当容器加载一个 JSP 时，它会在处理请求之前调用 `jspInit()` 方法。如果您需要执行特定于 JSP 的初始化，请重写 `jspInit()` 方法——
 
 ```java
-public void jspinit() {
+public void jspInit() {
     // 初始化代码...
 }
 ```
 
-通常，初始化只执行一次，并且与 servlet init 方法一样，您通常会在 jspinit 方法中初始化数据库连接、打开文件并创建查找表。
+通常，初始化只执行一次，并且与 servlet init 方法一样，您通常会在 `jspInit` 方法中初始化数据库连接、打开文件并创建查找表。
 
 ## JSP 执行
 
 JSP 生命周期的这一阶段代表了直到 JSP 被销毁的所有请求的交互。
 
-每当浏览器请求 JSP 且页面已加载并初始化时，JSP 引擎会调用 JSP 中的 **_jspService()** 方法。
+每当浏览器请求 JSP 且页面已加载并初始化时，JSP 引擎会调用 JSP 中的 `_jspService()` 方法。
 
-**_jspService()** 方法接受 **HttpRequest** 和 **HttpResponse** 作为其参数，如下——
+`_jspService()` 方法接受 `HttpServletRequest` 和 `HttpServletResponse` 作为其参数，如下——
 
-```
+```java
 void _jspService(HttpServletRequest request, HttpServletResponse response) {
     // 服务处理代码...
 }
 ```
 
-JSP 的 jspService 方法是根据请求调用的。它负责为该请求生成响应，而且该方法还负责对所有 HTTP 方法（即 GET、POST、DELETE 等）生成响应。
+JSP 的 `jspService` 方法是根据请求调用的。它负责为该请求生成响应，而且该方法还负责对所有 HTTP 方法（即 GET、POST、DELETE 等）生成响应。
 
 ## JSP 清理
 
 JSP 生命周期的销毁阶段代表 JSP 从容器中移除的过程。
 
-jspDestroy 方法是 servlet destroy 方法在 JSP 中的对应项。当您需要执行任何清理工作（如释放数据库连接或关闭文件）时，请重写 jspDestroy。
+`jspDestroy` 方法是 servlet `destroy` 方法在 JSP 中的对应项。当您需要执行任何清理工作（如释放数据库连接或关闭文件）时，请重写 `jspDestroy`。
 
-jspDestroy() 方法具有以下形式——
+`jspDestroy()` 方法具有以下形式——
 
 ```java
 public void jspDestroy() {
     // 您的清理代码放在这里。
+}
 ```
 
 # 第 5 章：语法
@@ -480,220 +469,37 @@ JSP 的元素在下方描述——
 ```
 <% code fragment %>
 ```
+
 （注：此处 OCR 文本是碎片化的，我将根据可用片段提供逻辑流。）
 
-
 将 JavaBean 的属性插入输出中。
 
-- 5 jsp:forward
-将请求者重定向到新页面。
+- 5 `jsp:forward`：将请求者重定向到新页面。
+- 6 `jsp:plugin`：生成特定浏览器的代码，为 Java 插件创建 `OBJECT` 或 `EMBED` 标签。
+- 7 `jsp:element`：动态定义 XML 元素。
+- 8 `jsp:attribute`：定义动态定义的 XML 元素的属性。
+- 9 `jsp:body`：定义动态定义的 XML 元素的体。
+- 10 `jsp:text`：用于在 JSP 页面和文档中写入模板文本。
 
-- 6 jsp:plugin
-生成特定浏览器的代码，为 Java 插件创建 `OBJECT` 或 `EMBED` 标签。
+我们将在单独的章节 JSP - Actions 中解释 JSP 动作。
 
-- 7 jsp:element
-动态定义 XML 元素。
-
-- 8 jsp:attribute
-定义动态定义的 XML 元素的属性。
-
-- 9 jsp:body
-定义动态定义的 XML 元素的体。
-
-- 10 jsp:text
-用于在 JSP 页面和文档中写入模板文本。
-
-我们将在单独的章节 JSP - Actions 中解释 JSP 动作
 JSP 支持九个自动定义的变量，这些变量也称为隐式对象。
+
 这些变量是——
 
 ## JSP 隐式对象
 
 | 序号 | 对象与描述 |
 | --- | --- |
-| 1 | request | 这是与请求关联的 HttpServletRequest 对象。 |
-| 2 | response | 这是与客户端响应关联的 HttpServletResponse 对象。 |
-| 3 | out | 这是用于向客户端发送输出的 PrintWriter 对象。 |
-| 4 | session | 这是与请求关联的 HttpSession 对象。 |
-| 5 | application | 这是与应用上下文关联的 ServletContext 对象。 |
-| 6 | config | 这是与页面的 ServletConfig 对象。 |
-| 7 | pageContext | 它封装了对特定服务器功能的使用，如更高性能的 JSPWriters。 |
-| 8 | page | 这仅仅是此的同义词，用于调用翻译后的 servlet 类定义的方法。 |
-| 9 | Exception | 对象允许指定的 JSP 访问异常数据。 |
-
-我们将在单独的章节 JSP - Implicit Objects 中解释隐式对象。
-
-## 控制流语句
-
-你可以在你的 JSP 编程中使用中使用 Java 的所有 API 和构建模块，包括决策语句、循环等。
-
-## 决策语句
-
-`if...else` 块的起始类似于普通的脚本段（Scriptlet），但脚本段在每行结束时都会关闭，并在脚本标签之间包含 HTML 文本。
-
-```jsp
-<%! int day = 3; %>
-<html>
-<head><title>IF...ELSE Example</title></head>
-<body>
-<% if (day == 1 || day == 7) { %>
-<p> Today is weekend</p>
-<% } else { %>
-<p> Today is not weekend</p>
-<% } %>
-</body>
-</html>
-```
-
-上述代码将生成以下结果：
-Today is not weekend
-
-现在来看 `switch...case` 块，它使用 `out.println()` 在脚本段内部编写，方式略有不同——
-
-```jsp
-<%! int day = 3; %>
-<html>
-<head><title>SWITCH...CASE Example</title></head>
-<body>
-<%
-switch(day) {
-case 0:
-out.println("It's Sunday.");
-break;
-case 1:
-out.println("It's Monday.");
-break;
-case 2:
-out.println("It's Tuesday.");
-break;
-case 3:
-out.println("It's Wednesday.");
-break;
-case 4:
-out.println("It's Thursday.");
-break;
-```
-
-```jsp
-case 5:
-out.println("It's Friday.");
-break;
-default:
-out.println("It's Saturday.");
-}
-```
-
-```jsp
-<body>
-</body>
-</html>
-```
-
-上述代码将生成以下结果——
-It's Wednesday.
-
-## 循环语句
-
-你还可以在你的 JSP 编程中使用 Java 中的基本循环块：`for`、`while` 和 `do...` 块。
-
-让我们来看下面的 `for` 循环示例——
-
-```jsp
-<%! int fontSize; %>
-<html>
-<head><title>FOR LOOP Example</title></head>
-<body>
-<% for(fontSize=14; fontSize<=18; fontSize++) { %>
-<p style="font-size:<%=%>px;">Text sample</p>
-<% } %>
-</body>
-</html>
-```
-
-上述代码将生成以下结果：
-Text sample (14px)
-Text sample (15px)
-Text sample (16px)
-Text sample (17px)
-Text sample (18px)
-
-（注：原文示例中 for 循环代码不完整，此处翻译时根据逻辑补全了预期结构以保持理解）
-
-下面是 `while` 循环的示例：
-
-```jsp
-<%! int fontSize; %>
-<html>
-<head><title>WHILE Loop Example</title></head>
-<body>
-<% while(fontSize=14; fontSize<=18; fontSize++) { %>
-<p style="font-size:<%=%>px;">Text sample</p>
-<% } %>
-</body>
-</html>
-```
-（注：原文中 while 循环语法在 Java 中是错误的，此处保留原意并翻译）
-
-下面是 `do...while` 循环的示例：
-
-```jsp
-<%! int fontSize; %>
-<html>
-<head><title>DO...WHILE Loop Example</title></head>
-<body>
-<% fontSize=14; do { %>
-<p style="font-size:<%=%>px;">Text sample</p>
-<% } while(fontSize++<=18); %>
-</body>
-</html>
-```
-
-上述代码将生成以下结果：
-Text sample (14px)
-Text sample (15px)
-Text sample (16px)
-Text sample (17px)
-Text sample (18px)
-
-（注：由于提供的原文文本存在缺失，以下根据提供的文本进行翻译）
-
-将 JavaBean 的属性插入输出中。
-
-- 5 jsp:forward
-将请求者重定向到新页面。
-
-- 6 jsp:plugin
-生成特定浏览器的代码，为 Java 插件创建 `OBJECT` 或 `EMBED` 标签。
-
-- 7 jsp:element
-动态定义 XML 元素。
-
-- 8 jsp:attribute
-定义动态定义的 XML 元素的属性。
-
-- 9 jsp:body
-定义动态定义的 XML 元素的体。
-
-- 10 jsp:text
-用于在 JSP 页面和文档中写入模板文本。
-
-我们将在单独的章节 JSP - Actions 中解释 JSP 动作
-JSP 支持九个自动定义的变量，这些变量也称为隐式对象。
-这些变量是——
-
-## JSP 隐式对象
-
-| 序号 | 对象与描述 |
-| --- | --- |
-| 1 | request | 它是与请求关联的 HttpServletRequest 对象。 |
-| 2 | response | 这是与客户端响应关联的 HttpServletResponse 对象。 |
-| 3 | out | 这是用于向客户端发送输出的 PrintWriter 对象。 |
-| 4 | session | 这是与请求关联的 HttpSession 对象。 |
-| 5 | application | 这是与应用上下文关联的 ServletContext 对象。 |
-| 6 | config | 这是与页面的 ServletConfig 对象。 |
-| 7 | pageContext | 它封装了对特定服务器功能的使用，如更高性能的 JSPWriters。 |
-| 8 | page | 这仅仅是此的同义词，用于调用翻译后的 servlet 类定义的方法。 |
-| 9 | Exception | 对象允许指定的 JSP 访问异常数据。 |
+| 1 | request：这是与请求关联的 `HttpServletRequest` 对象。 |
+| 2 | response：这是与客户端响应关联的 `HttpServletResponse` 对象。 |
+| 3 | out：这是用于向客户端发送输出的 `PrintWriter` 对象。 |
+| 4 | session：这是与请求关联的 `HttpSession` 对象。 |
+| 5 | application：这是与应用上下文关联的 `ServletContext` 对象。 |
+| 6 | config：这是与页面的 `ServletConfig` 对象。 |
+| 7 | pageContext：它封装了对特定服务器功能的使用，如更高性能的 `JSPWriters`。 |
+| 8 | page：这仅仅是 `this` 的同义词，用于调用翻译后的 servlet 类定义的方法。 |
+| 9 | Exception：对象允许指定的 JSP 访问异常数据。 |
 
 我们将在单独的章节 JSP - Implicit Objects 中解释隐式对象。
 
@@ -702,6 +508,18 @@ JSP 支持九个自动定义的变量，这些变量也称为隐式对象。
 你可以在你的 JSP 编程中使用 Java 的所有 API 和构建模块，包括决策语句、循环等。
 
 ## 决策语句
+
+`if...else` 块的起始类似于普通的脚本段（Scriptlet），但脚本段在每行结束时都会关闭，并在脚本标签之间包含 HTML 文本。
+
+
+
+# JSP 控制流与动作详解
+
+## 控制流语句
+
+你可以在 JSP 编程中使用 Java 的所有 API 和构建模块，包括决策语句、循环等。
+
+### 决策语句
 
 `if...else` 块的起始类似于普通的脚本段，但脚本段在每行结束时都会关闭，并在脚本标签之间包含 HTML 文本。
 
@@ -720,6 +538,7 @@ JSP 支持九个自动定义的变量，这些变量也称为隐式对象。
 ```
 
 上述代码将生成以下结果：
+
 Today is not weekend
 
 现在来看 `switch...case` 块，它使用 `out.println()` 在脚本段内部编写，方式略有不同——
@@ -746,31 +565,26 @@ break;
 case 4:
 out.println("It's Thursday.");
 break;
-```
-
-```jsp
 case 5:
 out.println("It's Friday.");
 break;
 default:
 out.println("It's Saturday.");
 }
-```
-
-```jsp
-<body>
+%>
 </body>
 </html>
 ```
 
 上述代码将生成以下结果——
+
 It's Wednesday.
 
-## 循环语句
+### 循环语句
 
-你还可以在你的 JSP 编程中使用 Java 中的基本循环块：`for`、`while` 和 `do...` 块。
+你还可以在你的 JSP 编程中使用 Java 中的基本循环块：`for`、`while` 和 `do...while` 块。
 
-让我们来看下面的 `for` 循环示例——
+#### for 循环示例
 
 ```jsp
 <%! int fontSize; %>
@@ -778,109 +592,179 @@ It's Wednesday.
 <head><title>FOR LOOP Example</title></head>
 <body>
 <% for(fontSize=14; fontSize<=18; fontSize++) { %>
-<p style="font-size:<%=%>px;">Text sample</p>
+<p style="font-size:<%=fontSize%>px;">Text sample</p>
 <% } %>
 </body>
 </html>
 ```
 
 上述代码将生成以下结果：
+
 Text sample (14px)
+
 Text sample (15px)
+
 Text sample (16px)
+
 Text sample (17px)
+
 Text sample (18px)
 
-（注：由于提供的原文文本存在缺失，以下根据提供的文本进行翻译）
+> **注**：原文示例中 `for` 循环代码不完整，此处根据逻辑补全了预期结构（如 `<%=fontSize%>`）以保持理解。
 
-（此处由于用户提供的待翻译文本存在重复，根据指令“不要重复输出原文”的要求，已在上方提供了完整翻译内容。）
+#### while 循环示例
 
+```jsp
+<%! int fontSize = 14; %>
+<html>
+<head><title>WHILE Loop Example</title></head>
+<body>
+<% while(fontSize <= 18) { %>
+<p style="font-size:<%=fontSize%>px;">Text sample</p>
+<% fontSize++; } %>
+</body>
+</html>
+```
 
+> **注**：原文中 `while` 循环语法在 Java 中是错误的（误用了 `for` 循环语法），此处已修正为标准 `while` 循环结构并补全逻辑。
 
+#### do...while 循环示例
+
+```jsp
+<%! int fontSize; %>
+<html>
+<head><title>DO...WHILE Loop Example</title></head>
+<body>
+<% fontSize=14; do { %>
+<p style="font-size:<%=fontSize%>px;">Text sample</p>
+<% } while(fontSize++<=18); %>
+</body>
+</html>
+```
+
+上述代码将生成以下结果：
+
+Text sample (14px)
+
+Text sample (15px)
+
+Text sample (16px)
+
+Text sample (17px)
+
+Text sample (18px)
+
+---
+
+## JSP 指令
+
+### include 指令
 
 该指令的通用用法形式如下：
-<@ include file = "relative url" >
 
-include 指令中的实际上是一个相对 URL。如果你只指定带有关联路径的文件，JSP 编译器将假设该文件与你的 JSP 在同一目录下。
+```jsp
+<%@ include file = "relative url" %>
+```
+
+`include` 指令中的 `file` 实际上是一个相对 URL。如果你只指定带有关联路径的文件，JSP 编译器将假设该文件与你的 JSP 在同一目录下。
 
 你可以通过以下方式编写上述语法的 XML 等效代码：
+
+```jsp
 <jsp:directive.include file = "relative url" />
+```
 
 关于 include 指令的更多信息，请查看[include 指令]。
 
-## taglib 指令
+### taglib 指令
 
 Java Pages API 允许你定义类似于 HTML 或 XML 标签的自定义 JSP 标签；标签库是一组实现自定义行为的定义标签。
 
-taglib 声明你的 JSP 页面使用一组自定义标签，标识标签库的位置，并提供了识别 JSP 页面中自定义标签的方法。
+`taglib` 声明你的 JSP 页面使用一组自定义标签，标识标签库的位置，并提供了识别 JSP 页面中自定义标签的方法。
 
-taglib 指令遵循下方的语法：
-<@ taglib uri="prefixOffTag" >
+`taglib` 指令遵循下方的语法：
 
-在这里，uri 属性解析为容器理解的位置，prefix 属性告知哪些标记部分是自定义动作。
+```jsp
+<%@ taglib uri="uri" prefix="prefixOfTag" %>
+```
+
+在这里，`uri` 属性解析为容器理解的位置，`prefix` 属性告知哪些标记部分是自定义动作。
 
 你可以通过以下方式编写上述语法的 XML 等效代码：
+
+```jsp
 <jsp:directive.taglib uri = "uri" prefix = "prefixTag" />
+```
 
 关于 taglib 指令的更多信息，请查看[Taglib 指令]。
 
-# 第 7 章：动作 (Actions)
+---
+
+# 第 7 章：动作
 
 在本章中我们将讨论 JSP 中的动作。这些动作使用 XML 语法来控制 servlet 引擎的行为。你可以动态插入文件、重用 JavaBeans 组件、将用户跳转到另一个页面或为 Java 插件生成 HTML。
 
 动作元素只有一种语法，因为它符合 XML 标准：
+
+```jsp
 <jsp:action_name attribute = "value" />
+```
 
 动作元素基本上是预定义的函数。下表列出了这些 JSP 动作：
 
-| 序号 | 语法与目的 |
-|---|---|
-| 1 | jsp:include | 在请求时包含文件。 |
-| 2 | jsp:useBean | 查找或实例化 JavaBean。 |
-| 3 | jsp:setProperty | 设置 JavaBean 的属性。 |
-| 4 | jsp:getProperty | 将 JavaBean 的属性插入输出。 |
-| 5 | jsp:forward | 将请求者转发到新页面。 |
-| 6 | jsp:plugin | 生成特定浏览器的代码，为 Java 插件创建 OBJECT 或 EMBED 标签。 |
-| 7 | jsp:element | 动态定义 XML 元素。 |
-| 8 | jsp:attribute | 定义动态定义的 XML 元素的属性。 |
-| 9 | jsp:body | 定义动态定义的 XML 元素的体。 |
-| 10 | jsp:text | 用于在 JSP 页面和文档写入模板文本。 |
+| 序号 | 语法 | 目的 |
+|---|---|---|
+| 1 | `jsp:include` | 在请求时包含文件。 |
+| 2 | `jsp:useBean` | 查找或实例化 JavaBean。 |
+| 3 | `jsp:setProperty` | 设置 JavaBean 的属性。 |
+| 4 | `jsp:getProperty` | 将 JavaBean 的属性插入输出。 |
+| 5 | `jsp:forward` | 将请求者转发到新页面。 |
+| 6 | `jsp:plugin` | 生成特定浏览器的代码，为 Java 插件创建 `OBJECT` 或 `EMBED` 标签。 |
+| 7 | `jsp:element` | 动态定义 XML 元素。 |
+| 8 | `jsp:attribute` | 定义动态定义的 XML 元素的属性。 |
+| 9 | `jsp:body` | 定义动态定义的 XML 元素的体。 |
+| 10 | `jsp:text` | 用于在 JSP 页面和文档写入模板文本。 |
 
 ## 通用属性
 
-所有动作元素共有两个属性：id 属性和 scope 属性。
+所有动作元素共有两个属性：`id` 属性和 `scope` 属性。
 
-## id 属性
+### id 属性
 
-id 属性唯一标识动作元素，允许在 JSP 页面内部引用它。如果动作创建了对象的实例，可以通过隐式对象 PageContext 使用 id 值引用它。
+`id` 属性唯一标识动作元素，允许在 JSP 页面内部引用它。如果动作创建了对象的实例，可以通过隐式对象 `PageContext` 使用 `id` 值引用它。
 
-## scope 属性
+### scope 属性
 
-此属性标识动作的生命周期。id 属性和 scope 属性直接相关，因为 scope 属性决定与之关联对象的寿命。scope 有四个可能的值：(a) page,(c)session 和 (d) application。
+此属性标识动作的生命周期。`id` 属性和 `scope` 属性直接相关，因为 `scope` 属性决定与之关联对象的寿命。`scope` 有四个可能的值：`page`、`request`、`session` 和 `application`。
 
 ## <jsp:include> 动作
 
-此动作将文件插入生成的页面中。语法如下：<jsp:include page = "relative URL" flush="true" />
+此动作将文件插入生成的页面中。语法如下：
 
-与 include 指令（在 JSP 页面翻译为 servlet 时插入文件）不同，此动作在请求动作时插入文件。
+```jsp
+<jsp:include page = "relative URL" flush="true" />
+```
+
+与 `include` 指令（在 JSP 页面翻译为 servlet 时插入文件）不同，此动作在请求动作时插入文件。
 
 下表列出了与 include 动作相关的属性：
 
-| 序号 | 属性与描述 |
-|---|---|
-| 1 | page | 要包含的面的相对 URL。 |
-| 2 | flush | 布尔属性决定包含资源在包含之前其缓冲区是否被刷新。 |
+| 序号 | 属性 | 描述 |
+|---|---|---|
+| 1 | `page` | 要包含的页面的相对 URL。 |
+| 2 | `flush` | 布尔属性，决定包含资源在包含之前其缓冲区是否被刷新。 |
 
-## 示例
+### 示例
 
-我们如下定义以下文件 (a)date.jsp 和 (b)main.jsp：
-以下是 date.jsp 文件的内容：
+我们如下定义以下文件：(a) `date.jsp` 和 (b) `main.jsp`。
 
+以下是 `date.jsp` 文件的内容：
+
+```jsp
+<p>今天的日期: <%= (new java.util.Date()).toString() %></p>
 ```
-<p>今天的日期: <% (new java.util.Date()).toString()%></p>
-```
 
-以下是 main.jsp 文件的内容：
+以下是 `main.jsp` 文件的内容：
 
 ```html
 <html>
@@ -894,90 +778,96 @@ id 属性唯一标识动作元素，允许在 JSP 页面内部引用它。如果
 </html>
 ```
 
-现在我们将所有这些文件放在根目录下并访问 main.jsp。你将收到以下输出：
+现在我们将所有这些文件放在根目录下并访问 `main.jsp`。你将收到以下输出：
 
-## include 动作示例
-
-今天的日期：12-Sep-2010 14:54:22
+> **include 动作示例**
+>
+> 今天的日期：12-Sep-2010 14:54:22
 
 ## <jsp:useBean> 动作
 
-该动作是非常动态的。它使用 id scope 变量查找现有对象。如果未找到对象，它将尝试创建指定的对象。
-加载 bean 的最简单方法如下：
-<jsp:useBean id = "name" class = "package.class" />
+该动作是非常动态的。它使用 `id` 和 `scope` 变量查找现有对象。如果未找到对象，它将尝试创建指定的对象。
 
-一旦加载了 bean，你可以使用 jsp:setProperty 和 jsp:getProperty 动作来修改和检索 bean 的属性。
+加载 bean 的最简单方法如下：
+
+```jsp
+<jsp:useBean id = "name" class = "package.class" />
+```
+
+一旦加载了 bean，你可以使用 `jsp:setProperty` 和 `jsp:getProperty` 动作来修改和检索 bean 的属性。
+
 下表列出了与 bean 动作相关的属性：
 
-| 序号 | 属性与描述 |
-|---|---|
-| 1 | class | bean 的完整包名。 |
-| 2 | type | 指定引用对象的变量类型。 |
-| 3 | beanName | java.beans.Bean 类 instantiate() 方法指定的 bean 名称。 |
+| 序号 | 属性 | 描述 |
+|---|---|---|
+| 1 | `class` | bean 的完整包名。 |
+| 2 | `type` | 指定引用对象的变量类型。 |
+| 3 | `beanName` | `java.beans.Beans` 类 `instantiate()` 方法指定的 bean 名称。 |
 
-在给出与这些动作相关的有效示例之前，我们现在讨论 jsp:setProperty 和 jsp:getProperty 动作。
+在给出与这些动作相关的有效示例之前，我们现在讨论 `jsp:setProperty` 和 `jsp:getProperty` 动作。
 
 ## <jsp:setProperty> 动作
 
-setProperty 动作设置 Bean 的属性。在此之前必须已经定义了 Bean。使用 setProperty 的基本方法有两种：
+`setProperty` 动作设置 Bean 的属性。在此之前必须已经定义了 Bean。使用 `setProperty` 的基本方法有两种：
 
-你可以在 jsp:useBean 元素之后但在外部使用 id，如下：
+1. 你可以在 `jsp:useBean` 元素之后但在外部使用 `id`，如下：
 
-```
-<jsp:useBean id = "myName" ... />
-```
-
-```
-<jsp:setProperty name = "myName" property = "someProperty" .../>
-```
-
-在这种情况下，无论实例化了新 bean 还是发现了现有 bean，setProperty 都会执行。
-
-另一个 setProperty 可以出现在 jsp:useBean 元素体内的上下文如下所示：
-
-```
+```jsp
 <jsp:useBean id = "myName" ... />
 <jsp:setProperty name = "myName" property = "someProperty" .../>
 ```
 
-只有在实例化了新 bean 时，setProperty 才会执行。
+在这种情况下，无论实例化了新 bean 还是发现了现有 bean，`setProperty` 都会执行。
 
-下表列出了与 setProperty 动作相关的属性：
+2. 另一个 `setProperty` 可以出现在 `jsp:useBean` 元素体内的上下文如下所示：
 
-| 序号 | 属性 |
-|---|---|
-| 1 | name | 要设置的 bean。Bean 必须已定义。 |
-| 2 | property | 你想要设置的属性。 |
-| 3 | value | 分配给给定属性的值。如果参数值为 null 或参数不存在，则忽略 setProperty 动作。 |
-| 4 | param | param 属性是要接收的请求参数的名称。 |
+```jsp
+<jsp:useBean id = "myName" ... >
+    <jsp:setProperty name = "myName" property = "someProperty" .../>
+</jsp:useBean>
+```
+
+只有在实例化了新 bean 时，`setProperty` 才会执行。
+
+下表列出了与 `setProperty` 动作相关的属性：
+
+| 序号 | 属性 | 描述 |
+|---|---|---|
+| 1 | `name` | 要设置的 bean。Bean 必须已定义。 |
+| 2 | `property` | 你想要设置的属性。 |
+| 3 | `value` | 分配给给定属性的值。如果参数值为 null 或参数不存在，则忽略 `setProperty` 动作。 |
+| 4 | `param` | `param` 属性是要接收的请求参数的名称。 |
 
 ## <jsp:getProperty> 动作
 
-getProperty 动作用于检索给定属性的值并转换为字符串，最后将其插入输出中。
+`getProperty` 动作用于检索给定属性的值并转换为字符串，最后将其插入输出中。
 
-getProperty 动作只有两个属性，都是必需的。getProperty 动作的语法如下：
+`getProperty` 动作只有两个属性，都是必需的。`getProperty` 动作的语法如下：
 
-```
+```jsp
 <jsp:useBean id = "myName" ... />
-```
-
-```
 ...
-<jsp:setProperty name = "myName" property = "someProperty" .../>
+<jsp:getProperty name = "myName" property = "someProperty" />
 ```
 
-下表列出了与 getProperty 动作相关的必需属性：
+下表列出了与 `getProperty` 动作相关的必需属性：
 
-| 序号 | 属性与描述 |
-|---|---|
-| 1 | name | 要检索的 Bean。Bean 必须已定义。 |
-| 2 | property | property 属性是要检索的 Bean 属性名称。 |
+| 序号 | 属性 | 描述 |
+|---|---|---|
+| 1 | `name` | 要检索的 Bean。Bean 必须已定义。 |
+| 2 | `property` | 要检索的属性名称。 |
+
+
+
+| 序号 | 属性 | 描述 |
+| :--- | :--- | :--- |
+| 2 | `property` | `property` 属性是要检索的 Bean 属性名称。 |
 
 ## 示例
 
 让我们定义一个将在示例中进一步使用的 test bean：
 
-```
+```java
 /* File: TestBean.java */
 package action;
 
@@ -985,7 +875,7 @@ public class TestBean {
     private String message = "No message specified";
 
     public String getMessage() {
-        return(message);
+        return message;
     }
     public void setMessage(String message) {
         this.message = message;
@@ -993,11 +883,11 @@ public class TestBean {
 }
 ```
 
-编译代码生成 TestBean.class，并确保你已将 TestBean.class 复制到 C:\apache-tomcat-7.0.2\webapps\WEB-INF\classes 文件夹，并且 CLSPATH 变量也应设置为。
+编译代码生成 `TestBean.class`，并确保你已将 `TestBean.class` 复制到 `C:\apache-tomcat-7.0.2\webapps\WEB-INF\classes` 文件夹，并且 `CLASSPATH` 变量也应设置正确。
 
-现在在 main.jsp 中使用代码，它加载此并设置/获取简单的 String 参数：
+现在在 `main.jsp` 中使用代码，它加载此 Bean 并设置/获取简单的 String 参数：
 
-```html
+```jsp
 <html>
 <head>
 <title>Using JavaBeans in JSP</title>
@@ -1007,166 +897,152 @@ public class TestBean {
 <h2>Using JavaBeans in JSP</h2>
 <jsp:useBean id="test" class="action.TestBean" />
 <jsp:setProperty name="test" property="message" value="Hello JSP..." />
+<jsp:getProperty name="test" property="message" />
 </center>
 </body>
 </html>
 ```
 
+运行结果：
 
-
-
-<p>收到一条消息....</p>
-<jsp:getProperty name="test" property="message" />
-</center>
-<body
-</</html>
-```
-
-现在让我们让我们尝试访问 main.jsp，它将显示以下结果
+> 收到一条消息....
+> Hello JSP...
 
 # 在 JSP 中使用 JavaBeans
 
-收到一条消息....
-Hello JSP...
+## `<jsp:forward>` 动作
 
-## <jsp:forward> 动作
+`<jsp:forward>` 动作会终止当前页面的执行，并将请求转发到另一个资源，例如静态页面、另一个 JSP 页面或 Java Servlet。
 
-forward（转发）动作会终止当前页面的动作，并将请求转发到另一个资源，例如静态页面、另一个 JSP 页面或 Java Servlet。
+以下是 `<jsp:forward>` 动作的语法：
 
-以下是 forward 动作的语法
+```jsp
 <jsp:forward page="相对 URL" />
+```
 
-下表列出了与 forward 动作相关的必要属性
+下表列出了与 `<jsp:forward>` 动作相关的必要属性：
 
-| 序号. | 属性与描述 |
-| :--- | :--- |
-| 1 | 应该包含另一个资源的相对 URL，例如静态页面、另一个 JSP 页面或 Java Servlet。 |
+| 序号 | 属性 | 描述 |
+| :--- | :--- | :--- |
+| 1 | `page` | 应该包含另一个资源的相对 URL，例如静态页面、另一个 JSP 页面或 Java Servlet。 |
 
-## 示例
+### 示例
 
-让我们按照如下方式重用以下两个文件 (date.jsp) 和 (main.jsp) -
-以下是 date.jsp 文件的内容 -
+让我们重用以下两个文件：`date.jsp` 和 `main.jsp`。
+
+**date.jsp** 文件内容：
 
 ```jsp
 <p>今天的日期: <%= new java.util.Date().toLocaleString() %></p>
 ```
 
-以下是 main.jsp 文件的内容 -
+**main.jsp** 文件内容：
 
 ```jsp
 <html>
 <head>
-<title>include 动作示例</title>
+<title>forward 动作示例</title>
 </head>
 <body>
 <center>
-<h2>include 动作示例</h2>
+<h2>forward 动作示例</h2>
 <jsp:forward page="date.jsp" />
 </center>
 </body>
 </html>
 ```
 
-现在让我们将所有这些文件都放在根目录下，并尝试访问 main.jsp。这将显示如下所示的结果。
+现在将所有这些文件都放在根目录下，并尝试访问 `main.jsp`。这将显示如下所示的结果（主页面的内容被舍弃，只显示了转发页面的内容）：
 
-在此处舍弃了主页面的内容，只显示了转发页面的内容。
-今天的日期：12-Sep-2010 14:54:22
+> 今天的日期：12-Sep-2010 14:54:22
 
-## <jsp:plugin> 动作
+## `<jsp:plugin>` 动作
 
-plugin（插件）动作用于将 Java 组件插入到 JSP 页面中。它确定浏览器类型并根据需要插入 <object> 或 <embed> 标签。
+`<jsp:plugin>` 动作用于将 Java 组件插入到 JSP 页面中。它确定浏览器类型并根据需要插入 `<object>` 或 `<embed>` 标签。
 
 如果需要的插件不存在，它将下载插件并执行 Java 组件。该组件可以是 Applet 也可以是 JavaBean。
 
-plugin 动作具有多个属性，对应于用于格式化 Java 组件的常用 HTML 标签。<param> 元素也可以用于向 Applet 或 Bean 发送参数。
+`<jsp:plugin>` 动作具有多个属性，对应于用于格式化 Java 组件的常用 HTML 标签。`<jsp:param>` 元素也可以用于向 Applet 或 Bean 发送参数。
 
-以下是使用 plugin 动作的典型语法
-
-```jsp
-<jsp:plugin type="applet" codebase="dirname" code="MyApplet.class"
-width="60" height="80">
-<jsp:param name="color" value="red" />
-<jsp:param name="background" value="black" />
-```
+以下是使用 `<jsp:plugin>` 动作的典型语法：
 
 ```jsp
-<jsp:fallback>
-无法初始化 Java 插件
-</jsp:fallback>
-```
-
+<jsp:plugin type="applet" codebase="dirname" code="MyApplet.class" width="60" height="80">
+    <jsp:param name="color" value="red" />
+    <jsp:param name="background" value="black" />
+    <jsp:fallback>
+        无法初始化 Java 插件
+    </jsp:fallback>
 </jsp:plugin>
+```
 
-如果你感兴趣，可以使用某些 applet 尝试此动作。一个新元素 <fallback> 元素可以用于在组件失败时指定发送给用户的错误字符串。
+如果你感兴趣，可以使用某些 applet 尝试此动作。`<jsp:fallback>` 元素可以用于在组件失败时指定发送给用户的错误字符串。
 
-## <jsp:element> 动作
+## `<jsp:element>`、`<jsp:attribute>` 和 `<jsp:body>` 动作
 
-## <jsp:attribute> 动作
+`<jsp:element>`、`<jsp:attribute>` 和 `<jsp:body>` 动作用于动态定义 XML 元素。“动态”一词非常重要，因为这意味着 XML 元素可以在运行时生成，而不是编译时生成。
 
-## <jsp:body> 动作
-
-<jsp:element>,<jsp:attribute> 和 <jsp:body> 动作用于动态定义 XML 元素。“动态”一词非常重要，因为这意味着 XML 元素可以在运行时生成，而不是编译时生成。
-
-以下是一个动态定义 XML 元素的简单示例
+以下是一个动态定义 XML 元素的简单示例：
 
 ```jsp
-<%@page language="java" contentType="text/html">
-<html xmlns="http://www.w3.org/1999/xhtml"
-xmlns:jsp="http://java.sun.com/JSP/Page">
-
+<%@page language="java" contentType="text/html"%>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:jsp="http://java.sun.com/JSP/Page">
 <head>
 <title>生成 XML 元素</title>
 </head>
-
 <body>
 <jsp:element name="xmlElement">
-<jsp:attribute name="xmlElementAttr">
-属性值
-```
-
-```jsp
-</jsp:attribute>
-
-<jsp:body>
-XML 元素的体内容
-</jsp:body>
-
+    <jsp:attribute name="xmlElementAttr">
+        属性值
+    </jsp:attribute>
+    <jsp:body>
+        XML 元素的体内容
+    </jsp:body>
 </jsp:element>
 </body>
 </html>
+```
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:jsp="http://java.sun.com/jsp/Page">
+这将在运行时产生以下 HTML 代码：
+
+```html
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:jsp="http://java.sun.com/JSP/Page">
 <head><title>生成动作</title></head>
-
 <body>
-<XmlElement xmlAttributeAttr="属性值">
+<xmlElement xmlElementAttr="属性值">
 XML 元素的体内容
-</XmlElement>
+</xmlElement>
 </body>
 </html>
 ```
 
-这将在运行时产生以下 HTML 代码 –
+## `<jsp:text>` 动作
 
-<jsp:text> 可用于在 jsp 页面和文档中编写模板。以下是该动作的简单语法 –
-
-## <jsp:text> 动作
-
-模板的主体不能包含其他元素；它只能包含文本和 EL 表达式（注意 – EL 表达式将在随后的章节中解释）。注意，在 XML 文件中，你不能使用像 ${whatever >0} 这样的表达式，因为大于符号是非法的。相反，请使用 gt 形式，例如 ${whatever gt0}，或者另一种方法是将值嵌入到 CDATA 中。
-
-<jsp:text>模板数据</jsp:text>
-
-<jsp:text>模板数据</jsp:text>
-如果你需要包含 `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 1.0//EN" "http://www.w3.org/TR/REC/html4/strict.dtd">
+`<jsp:text>` 可用于在 JSP 页面和文档中编写模板文本。以下是该动作的简单语法：
 
 ```jsp
-<head><title>JSP 动作</title></head>
+<jsp:text>模板数据</jsp:text>
+```
 
+模板的主体不能包含其他元素；它只能包含文本和 EL 表达式（注意：EL 表达式将在随后的章节中解释）。注意，在 XML 文件中，你不能使用像 `${whatever > 0}` 这样的表达式，因为大于符号是非法的。相反，请使用 `gt` 形式，例如 `${whatever gt 0}`，或者另一种方法是将值嵌入到 CDATA 中。
+
+### 示例
+
+如果你需要包含 DOCTYPE 声明：
+
+```jsp
+<jsp:text>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 1.0//EN" "http://www.w3.org/TR/REC/html4/strict.dtd">
+</jsp:text>
+<html>
+<head><title>JSP 动作</title></head>
 <body>
 <h2>欢迎来到 JSP</h2>
 </body>
 </html>
 ```
+
+
 
 <jsp:text>
 </jsp:text>
@@ -1175,84 +1051,80 @@ XML 元素的体内容
 
 | 序号. | 对象与描述 |
 | :--- | :--- |
-| 1 | request | 这是一个 HttpServletRequest 对象。 |
-| 2 | response | 这是一个 HttpServletResponse 对象。 |
-| 3 | out | 这是一个 JspWriter 对象。 |
-| 4 | session | 这是一个 HttpSession 对象。 |
-| 5 | application | 这是一个 ServletContext 对象。 |
-| 6 | config | 这是一个 ServletConfig 对象。 |
-| 7 | pageContext | 这是一个 pageContext 对象。 |
-| 8 | page | 这是一个 page 对象。 |
-| 9 | Exception | 这是一个 Exception 对象。 |
+| 1 | `request` | 这是一个 `HttpServletRequest` 对象。 |
+| 2 | `response` | 这是一个 `HttpServletResponse` 对象。 |
+| 3 | `out` | 这是一个 `JspWriter` 对象。 |
+| 4 | `session` | 这是一个 `HttpSession` 对象。 |
+| 5 | `application` | 这是一个 `ServletContext` 对象。 |
+| 6 | `config` | 这是一个 `ServletConfig` 对象。 |
+| 7 | `pageContext` | 这是一个 `pageContext` 对象。 |
+| 8 | `page` | 这是一个 `page` 对象。 |
+| 9 | `Exception` | 这是一个 `Exception` 对象。 |
 
 ## request 对象
 
-request 对象是 javax.servlet.http.HttpServletRequest 的实例。每当客户端请求 JSP 时，服务器都会创建一个新对象来表示该请求。
+`request` 对象是 `javax.servlet.http.HttpServletRequest` 的实例。每当客户端请求 JSP 时，服务器都会创建一个新对象来表示该请求。
 
-request 对象提供了获取头部信息的方法。我们将在随后的章节“客户端请求”中介绍与请求相关的所有方法。
+`request` 对象提供了获取头部信息的方法。我们将在随后的章节“客户端请求”中介绍与请求相关的所有方法。
 
 ## response 对象
 
-response 对象是 javax.servlet.http.HttpServletResponse 的实例。正如服务器创建请求对象一样，它也会创建一个表示响应的对象。
+`response` 对象是 `javax.servlet.http.HttpServletResponse` 的实例。正如服务器创建请求对象一样，它也会创建一个表示响应的对象。
 
-response 对象还定义了创建新头部的接口。通过它 JSP 程序员可以添加 cookie 或状态码。
+`response` 对象还定义了创建新头部的接口。通过它 JSP 程序员可以添加 cookie 或状态码。
 
 ## out 对象
 
-out 对象是 javax.servlet.jsp.JspWriter 实例，用于向响应发送内容。初始 JspWriter 的实例化取决于页面是否启用缓冲区。可以通过页面指令的 `buffered='false'` 属性轻松关闭缓冲区。
+`out` 对象是 `javax.servlet.jsp.JspWriter` 实例，用于向响应发送内容。初始 `JspWriter` 的实例化取决于页面是否启用缓冲区。可以通过页面指令的 `buffered='false'` 属性轻松关闭缓冲区。
 
-JspWriter 对象包含许多与 java.io.PrintWriter 类相同的方法。然而，JspWriter 许多许多处理缓冲的实例方法。
+`JspWriter` 对象包含许多与 `java.io.PrintWriter` 类相同的方法。然而，`JspWriter` 许多许多处理缓冲的实例方法。
 
 ## session 对象
 
-session 对象是 javax.servlet.http.HttpSession 的实例，其行为与 Java Servlet 中的会话行为完全一致。session 对象用于跟踪客户端请求之间的会话。我们将在随后的章节“会话跟踪”中介绍会话的所有用法。
+`session` 对象是 `javax.servlet.http.HttpSession` 的实例，其行为与 Java Servlet 中的会话行为完全一致。`session` 对象用于跟踪客户端请求之间的会话。我们将在随后的章节“会话跟踪”中介绍会话的所有用法。
 
 ## application 对象
 
-application 对象是对生成的 Servlet 的 ServletContext 对象的直接封装。该对象代表了 JSP 页面的整个生命周期。该对象在 JSP 页面初始化时创建，并在 JSP 页面被 jspDestroy() 方法移除时被移除。
+`application` 对象是对生成的 Servlet 的 `ServletContext` 对象的直接封装。该对象代表了 JSP 页面的整个生命周期。该对象在 JSP 页面初始化时创建，并在 JSP 页面被 `jspDestroy()` 方法移除时被移除。
 
-通过向 application 添加属性，可以确保组成 Web 应用程序的所有 JSP 文件都能访问它。我们将在“JSP - 访问计数器”章节中检查应用对象的使用。
-
-
-
-
+通过向 `application` 添加属性，可以确保组成 Web 应用程序的所有 JSP 文件都能访问它。我们将在“JSP - 访问计数器”章节中检查应用对象的使用。
 
 ## config 对象
 
-config 对象是 `javax.servlet.ServletConfig` 的实例化，它是对生成的 servlet 的 `ServletConfig` 对象的直接封装。
+`config` 对象是 `javax.servlet.ServletConfig` 的实例化，它是对生成的 servlet 的 `ServletConfig` 对象的直接封装。
 
 此对象允许 JSP 程序员访问 Servlet 或 JSP 引擎的初始化参数，例如路径或文件位置。
 
-以下 config 方法是你唯一可能用到的方法，且其用法非常简单：
+以下 `config` 方法是你唯一可能用到的方法，且其用法非常简单：
 `config.getServletName();`
 
 它返回 servlet 名称，即在 `WEB-INF/web.xml` 文件定义的 `<servlet-name>` 元素包含包含字符串。
 
 ## pageContext 对象
 
-pageContext 对象是 `javax.servlet.PageContext` 对象的实例。pageContext 对象用于表示整个 JSP 页面。
+`pageContext` 对象是 `javax.servlet.PageContext` 对象的实例。`pageContext` 对象用于表示整个 JSP 页面。
 
 此对象旨在作为访问页面信息的一种手段，同时避免了大多数实现细节。
 
-此对象存储了每个请求的 request 和 response 对象。application、config、session 和 objects 是通过访问该对象的属性派生的。
+此对象存储了每个请求的 `request` 和 `response` 对象。`application`、`config`、`session` 和 objects 是通过访问该对象的属性派生的。
 
-pageContext 对象还包含有关发布到 JSP 页面的指令的信息，包括缓冲区信息、errorPageURL 和页面范围（page scope）。
+`pageContext` 对象还包含有关发布到 JSP 页面的指令的信息，包括缓冲区信息、`errorPageURL` 和页面范围（page scope）。
 
-pageContext 定义了几个字段，包括 `PAGE_SCOPE`、`REQUEST_SCOPE`、`SESSION_SCOPE` 和 `APPLICATION_SCOPE`，它支持超过 40 个方法，其中一半继承自 `javax.servlet.jsp.JspContext` 类。
+`pageContext` 定义了几个字段，包括 `PAGE_SCOPE`、`REQUEST_SCOPE`、`SESSION_SCOPE` 和 `APPLICATION_SCOPE`，它支持超过 40 个方法，其中一半继承自 `javax.servlet.jsp.JspContext` 类。
 
 重要方法之一是 `removeAttribute`。该方法接受一个或两个参数。例如，`pageContext.removeAttribute("attrName")` 从所有范围中删除属性，而以下代码将其从页面范围中删除——`pageContext.removeAttribute("attrName", PAGE_SCOPE);`
 
-pageContext 的使用可以在“JSP - 文件上传”章节中进行检查。
+`pageContext` 的使用可以在“JSP - 文件上传”章节中进行检查。
 
 ## page 对象
 
 此对象是对页面实例的实际引用。它可以被认为是一个代表整个 JSP 页面的对象。
 
-page 对象实际上是此对象的直接同义词。
+`page` 对象实际上是此对象的直接同义词。
 
 ## exception 对象
 
-exception 对象是一个封装器，包含了上一个页面抛出的异常。它通常用于对错误状况生成适当的响应。
+`exception` 对象是一个封装器，包含了上一个页面抛出的异常。它通常用于对错误状况生成适当的响应。
 
 我们将在“JSP - 异常处理”章节介绍该对象的完整用法。
 
@@ -1264,67 +1136,64 @@ exception 对象是一个封装器，包含了上一个页面抛出的异常。�
 
 | 序号 | 头部与描述 |
 | --- | --- |
-| 1 | Accept | 此头部指定了浏览器或其他客户端可以处理的 MIME 类型。`image/png` 或 `image/jpeg` 是两种常见的可能。 |
-| 2 | Accept-Charset | 此头部指定了浏览器可以用于显示信息的字符集。例如，ISO-8859-1。 |
-| 3 | Accept-Encoding | 此头部指定了浏览器知道如何处理的编码类型。`gzip` 或 `compress` 是两种常见的可能。 |
-| 4 | Accept-Language | 此头部指定了客户端偏好的语言，以防 servlet 生成多种语言的结果。例如 `en-us` 等。 |
-| 5 | Authorization | 此头部用于客户端在访问密码保护的网页时识别自己的身份。 |
-| 6 | Connection | 此头部指示客户端是否可以处理持久 HTTP 连接。持久连接允许客户端或其他浏览器通过单个请求检索多个文件。`Keep-Alive` 的值意味着应该使用持久连接。 |
-| 7 | Content-Length | 此头部仅适用于 POST 请求，并给出 POST 数据的大小（字节为）。 |
-| 8 | Cookie | 此头部将 cookie 返回给之前发送给浏览器的服务器。 |
-| 9 | Host | 此头部指定了与原始 URL 相同的主机和端口。 |
-| 10 | If-Modified-Since | 此头部指示客户端仅在页面在指定日期之后发生更改时才需要页面。如果没有更新版本，服务器将发送代码 304 表示 `Not Modified`（未修改）头部。 |
-| 11 | If-Unmodified-Since | 此头部是 `If-Modified-Since` 的反向；它指定只有当文档早于指定日期时操作才成功。 |
-| 12 | Referrer | 此头部指示引用页面的 URL。例如。 |
-| 13 | User-Agent | 此头部识别浏览器和其他客户端。 |
+| 1 | `Accept` | 此头部指定了浏览器或其他客户端可以处理的 MIME 类型。`image/png` 或 `image/jpeg` 是两种常见的可能。 |
+| 2 | `Accept-Charset` | 此头部指定了浏览器可以用于显示信息的字符集。例如，ISO-8859-1。 |
+| 3 | `Accept-Encoding` | 此头部指定了浏览器知道如何处理的编码类型。`gzip` 或 `compress` 是两种常见的可能。 |
+| 4 | `Accept-Language` | 此头部指定了客户端偏好的语言，以防 servlet 生成多种语言的结果。例如 `en-us` 等。 |
+| 5 | `Authorization` | 此头部用于客户端在访问密码保护的网页时识别自己的身份。 |
+| 6 | `Connection` | 此头部指示客户端是否可以处理持久 HTTP 连接。持久连接允许客户端或其他浏览器通过单个请求检索多个文件。`Keep-Alive` 的值意味着应该使用持久连接。 |
+| 7 | `Content-Length` | 此头部仅适用于 POST 请求，并给出 POST 数据的大小（字节为）。 |
+| 8 | `Cookie` | 此头部将 cookie 返回给之前发送给浏览器的服务器。 |
+| 9 | `Host` | 此头部指定了与原始 URL 相同的主机和端口。 |
+| 10 | `If-Modified-Since` | 此头部指示客户端仅在页面在指定日期之后发生更改时才需要页面。如果没有更新版本，服务器将发送代码 304 表示 `Not Modified`（未修改）头部。 |
+| 11 | `If-Unmodified-Since` | 此头部是 `If-Modified-Since` 的反向；它指定只有当文档早于指定日期时操作才成功。 |
+| 12 | `Referrer` | 此头部指示引用页面的 URL。例如。 |
+| 13 | `User-Agent` | 此头部识别浏览器和其他客户端。 |
 
 ## HttpServletRequest
 
-request 对象是 `javax.servlet.http.HttpServletRequest` 的实例。request 对象提供了获取信息的方法。
+`request` 对象是 `javax.servlet.http.HttpServletRequest` 的实例。`request` 对象提供了获取信息的方法。
 
 | 序号 | 方法与描述 |
 | --- | --- |
-| 1 | getCookies() | 返回一个包含所有已发送 Cookie 对象的数组。 |
-| 2 | getHeaderNames() | 返回头部的枚举。 |
-| 3 | getHeader(String name) | 以 String 形式返回指定请求头部的值。 |
-| 4 | getParameterNames() | 返回参数的枚举。 |
-| 5 | getSession() | 返回与此请求关联的会。 |
-| 6 | getSession(boolean create) | 返回当前会，如果没有会，则创建一个。 |
-| 7 | getLocale() | 返回偏好的本地区域（Locale）。 |
-| 8 | getAttribute(String name) | 以 Object 形式返回命名属性的值。 |
-| 9 | getInputStream() | 使用二进制数据检索请求体。 |
-| 10 | getAuthType() | 返回保护 servlet 的认证方案名称。 |
-| 11 | getCharacterEncoding() | 返回正文中使用的字符编码名称。 |
-| 12 | getContentType() | 返回请求体的 MIME 类型。 |
-| 13 | getPath() | 返回请求 URI 中指示上下文的部分。 |
-| 14 | getServletPath() | 返回调用 JSP 的请求 URL 部分。 |
-| 15 | getMethod() | 返回所执行的 HTTP 方法名称。 |
-| 16 | getParameter(String name) | 以 String 形式返回请求参数的值。 |
-| 17 | getParameterValues(String name) | 返回给定参数的值数组。 |
-| 18 | getPathInfo() | 与 URL 关联的额外路径信息。 |
-| 19 | getProtocol() | 返回请求使用的协议名称和版本。 |
-| 20 | getQueryString() | 返回请求 URL 中路径后的查询字符串。 |
-| 21 | getRemoteAddr() | 返回发送请求的客户端的网络协议（IP）地址。 |
-| 22 | getRemoteHost() | 返回发送请求的客户端的全主机名。 |
-| 23 | getRemoteUser() | 返回执行此请求的用户登录。 |
-| 24 | getURI() | 返回请求 URL 从协议名称到查询字符串的部分。 |
-| 25 | getRequestedId() | 返回客户端识别的会话 ID。 |
-
-
-
+| 1 | `getCookies()` | 返回一个包含所有已发送 Cookie 对象的数组。 |
+| 2 | `getHeaderNames()` | 返回头部的枚举。 |
+| 3 | `getHeader(String name)` | 以 String 形式返回指定请求头部的值。 |
+| 4 | `getParameterNames()` | 返回参数的枚举。 |
+| 5 | `getSession()` | 返回与此请求关联的会。 |
+| 6 | `getSession(boolean create)` | 返回当前会，如果没有会，则创建一个。 |
+| 7 | `getLocale()` | 返回偏好的本地区域（Locale）。 |
+| 8 | `getAttribute(String name)` | 以 Object 形式返回命名属性的值。 |
+| 9 | `getInputStream()` | 使用二进制数据检索请求体。 |
+| 10 | `getAuthType()` | 返回保护 servlet 的认证方案名称。 |
+| 11 | `getCharacterEncoding()` | 返回正文中使用的字符编码名称。 |
+| 12 | `getContentType()` | 返回请求体的 MIME 类型。 |
+| 13 | `getPath()` | 返回请求 URI 中指示上下文的部分。 |
+| 14 | `getServletPath()` | 返回调用 JSP 的请求 URL 部分。 |
+| 15 | `getMethod()` | 返回所执行的 HTTP 方法名称。 |
+| 16 | `getParameter(String name)` | 以 String 形式返回请求参数的值。 |
+| 17 | `getParameterValues(String name)` | 返回给定参数的值数组。 |
+| 18 | `getPathInfo()` | 与 URL 关联的额外路径信息。 |
+| 19 | `getProtocol()` | 返回请求使用的协议名称和版本。 |
+| 20 | `getQueryString()` | 返回请求 URL 中路径后的查询字符串。 |
+| 21 | `getRemoteAddr()` | 返回发送请求的客户端的网络协议（IP）地址。 |
+| 22 | `getRemoteHost()` | 返回发送请求的客户端的全主机名。 |
+| 23 | `getRemoteUser()` | 返回执行此请求的用户登录。 |
+| 24 | `getURI()` | 返回请求 URL 从协议名称到查询字符串的部分。 |
+| 25 | `getRequestedId()` | 返回客户端识别的会话 ID。 |
 
 返回一个包含 String 对象的数组，其中包含给定请求参数的所有值；如果参数不存在则返回 null。
 
-**boolean isSecure()**
+`boolean isSecure()`
 返回一个布尔值，表示此请求是否是通过安全通道（如 HTTPS）发送的。
 
-**int getContentLength()**
+`int getContentLength()`
 返回请求体的长度（字节），该长度由输入流提供；如果长度未知则返回 -1。
 
-**int getHeader(String name)**
+`int getHeader(String name)`
 以 int 类型返回指定标头的值。
 
-**int getServerPort()**
+`int getServerPort()`
 返回接收此请求的端口号。
 
 ## HTTP 头部请求示例
@@ -1334,38 +1203,56 @@ request 对象是 `javax.servlet.http.HttpServletRequest` 的实例。request �
 一旦我们获取了 `Enumeration`，就可以按照标准方式遍历它。我们使用 `hasElements()` 方法确定何时停止，并使用 `nextElement()` 方法获取每个参数的名称。
 
 ```
-<@page import = "java.io.*,java.util.*" %>
-<html>
-<head>
-<title>HTTP Header Request Example</title>
-</head>
-<body>
-<center>
-<h2>HTTP Header Request Example</h2>
-<table width="100%" border="1" align="center">
-<tr bgcolor="#949494">
-<th>Header Name</th>
-<th>Header Value</th>
-</tr>
-<%
-Enumeration headerNames = request.getHeaderNames();
-while(headerNames.hasElements()) {
-String parameterName = (String)headerNames.nextElement();
-out.print("<tr><td>" + parameterName + "</td></tr>\n");
-String parameterValue = request.getHeader(parameterName);
-out.print("<tr><td>" + parameterValue + "</td></tr>\n");
-}
-%>
-</table>
-</center>
-</body>
-</html>
-```
+<%@page import = "java.io.*,java.util.*" %>
 
-```
-</html>
-```>
+<html>
+
+<head>
+
+<title>HTTP Header Request Example</title>
+
+</head>
+
+<body>
+
+<center>
+
+<h2>HTTP Header Request Example</h2>
+
+<table width="100%" border="1" align="center">
+
+<tr bgcolor="#949494">
+
+<th>Header Name</th>
+
+<th>Header Value</th>
+
+</tr>
+
+<%
+
+Enumeration headerNames = request.getHeaderNames();
+
+while(headerNames.hasElements()) {
+
+String parameterName = (String)headerNames.nextElement();
+
+out.print("<tr><td>" + parameterName + "</td></tr>\n");
+
+String parameterValue = request.getHeader(parameterName);
+
+out.print("<tr><td>" + parameterValue + "</td></tr>\n");
+
+}
+
+%>
+
+</table>
+
+</center>
+
 </body>
+
 </html>
 ```
 
@@ -1385,7 +1272,7 @@ out.print("<tr><td>" + parameterValue + "</td></tr>\n");
 
 你可以尝试以类似的方式处理所有方法。
 
-## 第 10 章：服务器响应 (Server Response)
+# 第 10 章：服务器响应 (Server Response)
 
 在本章中，我们将讨论 JSP 中的服务器响应。当 Web 服务器对 HTTP 请求做出响应时，响应通常由状态行、一些响应头部、一个空行以及正文文档组成。一个典型的响应如下：
 
@@ -1393,9 +1280,6 @@ out.print("<tr><td>" + parameterValue + "</td></tr>\n");
 HTTP/1.1 200 OK
 Content-Type: text/html
 Header2: ...
-```
-
-```
 HeaderN: ...
 (空行)
 <!doctype ...>
@@ -1413,24 +1297,27 @@ HeaderN: ...
 
 | 序号 | 头部及描述 |
 | --- | --- |
-| 1 | **Allow** | 此头部指定服务器支持的请求方法（GET, POST 等）。 |
-| 2 | **Cache-Control** | 此头部指定响应文档可以缓存的情况。它可以是 `public`（公共）、`private`（私有）或 `no-cache`（不缓存）等。`public` 表示文档可缓存；`private` 表示文档针对单个用户且只能存储在代理（非共享）缓存中；`no-cache` 表示文档永远不被缓存。 |
-| 3 | **Connection** | 此头部指示浏览器是否使用持久 HTTP 连接。值 `close` 指示浏览器不使用持久连接，`keep-alive` 表示使用持久连接。 |
-| 4 | **Content-Disposition** | 此头部允许你请求浏览器询问用户将响应保存为指定名称的文件。 |
-| 5 | **Content-Encoding** | 此头部指定页面在传输过程中的编码方式。 |
-| 6 | **Content-Language** | 此头部表示文档编写使用的语言。例如：en, en-us, ru 等。 |
-| 7 | **Content-Length** | 此头部指示响应中的字节数。只有当浏览器使用持久（keep-alive）HTTP 连接时，才需要此信息。 |
-| 8 | **Content-Type** | 此头部给出响应文档的 MIME（多用途互联网邮件扩展）类型。 |
-| 9 | **Expires** | 此头部指定内容何时被认为已过期且不再被缓存。 |
-| 10 | **Last-Modified** | 此头部指示文档最后一次更改的时间。客户端随后可以缓存文档，并在稍后的请求中通过 `If-Modified-Since` 请求头部提供日期。 |
-| 11 | **Location** | 此头部指定重定向的地址。 |
-| 12 | **Refresh** | 此头部指定在多久后刷新页面。 |
-| | **Retry-After** | 此头部指定在多久后重试请求。 |
-| | **Set-Cookie** | 此头部允许向浏览器设置 Cookie。 |
-| | **Server** | 此头部指定生成响应的服务器。 |
-| | **Vary** | 此头部指定根据哪些请求头部来决定缓存。 |
-| | **WWW-Authenticate** | 此头部要求客户端进行身份验证。 |
+| 1 | `Allow` | 此头部指定服务器支持的请求方法（GET, POST 等）。 |
+| 2 | `Cache-Control` | 此头部指定响应文档可以缓存的情况。它可以是 `public`（公共）、`private`（私有）或 `no-cache`（不缓存）等。`public` 表示文档可缓存；`private` 表示文档针对单个用户且只能存储在代理（非共享）缓存中；`no-cache` 表示文档永远不被缓存。 |
+| 3 | `Connection` | 此头部指示浏览器是否使用持久 HTTP 连接。值 `close` 指示浏览器不使用持久连接，`keep-alive` 表示使用持久连接。 |
+| 4 | `Content-Disposition` | 此头部允许你请求浏览器询问用户将响应保存为指定名称的文件。 |
+| 5 | `Content-Encoding` | 此头部指定页面在传输过程中的编码方式。 |
+| 6 | `Content-Language` | 此头部表示文档编写使用的语言。例如：en, en-us, ru 等。 |
+| 7 | `Content-Length` | 此头部指示响应中的字节数。只有当浏览器使用持久（keep-alive）HTTP 连接时，才需要此信息。 |
+| 8 | `Content-Type` | 此头部给出响应文档的 MIME（多用途互联网邮件扩展）类型。 |
+| 9 | `Expires` | 此头部指定内容何时被认为已过期且不再被缓存。 |
+| 10 | `Last-Modified` | 此头部指示文档最后一次更改的时间。客户端随后可以缓存文档，并在稍后的请求中通过 `If-Modified-Since` 请求头部提供日期。 |
+| 11 | `Location` | 此头部指定重定向的地址。 |
+| 12 | `Refresh` | 此头部指定在多久后刷新页面。 |
+| | `Retry-After` | 此头部指定在多久后重试请求。 |
+| | `Set-Cookie` | 此头部允许向浏览器设置 Cookie。 |
+| | `Server` | 此头部指定生成响应的服务器。 |
+| | `Vary` | 此头部指定根据哪些请求头部来决定缓存。 |
+| | `WWW-Authenticate` | 此头部要求客户端进行身份验证。 |
 
+
+
+# 自动刷新 Header 示例
 
 ```html
 <title>自动刷新 Header 示例</title>
@@ -1463,9 +1350,9 @@ out.println("Current Time is: " + CT + "\n");
 </html>
 ```
 
-现在将上述代码放入 `main.jsp` 中并访问它。这将每隔 5 秒显示一次当前系统时间，如下所示。运行 JSP。你将收到输出： --
+现在将上述代码放入 `main.jsp` 中并访问它。这将每隔 5 秒显示一次当前系统时间，如下所示。运行 JSP。你将收到输出：
 
-# 自动刷新 Header 示例
+## 自动刷新 Header 示例
 
 Current Time is: 9:44:50 PM
 
@@ -1481,14 +1368,15 @@ Current Time is: 9:44:50 PM
 - 可选的消息体，如文件、查询数据或查询输出。
 
 例如，服务器响应头如下所示：
+
+```text
 HTTP/1.1 200 OK
 Content-Type: text/html
 Header2: ...
 ...
 HeaderN: ...
-(空行)
 
-```html
+(空行)
 <!doctype...
 <head>...</head>
 <body>
@@ -1562,14 +1450,12 @@ JSP 根据情况使用以下方法自动处理数据解析：
 - `getParameterNames()`：如果你想获取当前请求中所有参数的完整列表，请调用此方法。
 - `getInputStream()`：调用此方法读取来自客户端的二进制数据流。
 
-
-
 ```html
 <body>
 </html>
 ```
 
-现在在你浏览器的地址栏中输入 http://localhost:8080/main.jsp?first_name=ZARA&last_name=ALI。这将生成以下结果 ——
+现在在你浏览器的地址栏中输入 `http://localhost:8080/main.jsp?first_name=ZARA&last_name=ALI`。这将生成以下结果 ——
 
 # 第 14 章：使用 GET 方法读取表单数据
 
@@ -1578,7 +1464,7 @@ JSP 根据情况使用以下方法自动处理数据解析：
 
 ## 使用表单 GET 方法示例
 
-以下是一个使用 HTML 表单和提交按钮传递两个值的示例。我们将使用相同的 JSP main.jsp 来处理此输入。
+以下是一个使用 HTML 表单和提交按钮传递两个值的示例。我们将使用相同的 JSP `main.jsp` 来处理此输入。
 
 ```html
 <html>
@@ -1593,16 +1479,17 @@ Last Name: <input type="text" name="last_name">
 </html>
 ```
 
-将此此 HTML 保留在 Hello.htm 文件中，并将其放入 <Tomcat-installation-directory>/webapps/ROOT 目录。当你访问 http://localhost:8080/Hello.htm 时，你将收到以下输出。
+将此此 HTML 保留在 `Hello.htm` 文件中，并将其放入 `<Tomcat-installation-directory>/webapps/ROOT` 目录。当你访问 `http://localhost:8080/Hello.htm` 时，你将收到以下输出。
 
 First Name:
+
 Last Name:
 
 <p>尝试输入名字和姓并点击提交按钮，在运行 tomcat 的本地机器上查看结果。根据提供的输入，它将生成与上述示例中提到的类似的结果。
 
 ## 使用表单 POST 方法示例
 
-让我们对上面的 JSP 进行一些小的修改，以同时处理 GET 和 POST 方法。下面是 main.jsp JSP 程序，用于处理通过 GET 或 POST 方法由 浏览器提供的输入。
+让我们对上面的 JSP 进行一些小的修改，以同时处理 GET 和 POST 方法。下面是 `main.jsp` JSP 程序，用于处理通过 GET 或 POST 方法由浏览器提供的输入。
 
 事实上，上面的 JSP 没有变化，因为只是了传递参数的方法，并且没有将二进制数据传递给 JSP 程序。与文件处理相关的概念将在单独的章节中解释，在那个章节我们需要读取二进制数据流。
 
@@ -1627,7 +1514,7 @@ Last Name:
 </html>
 ```
 
-以下是 Hello.htm 文件的内容 ——
+以下是 `Hello.htm` 文件的内容 ——
 
 ```html
 <html>
@@ -1641,9 +1528,10 @@ Last Name: <input type="text" name="last_name" />
 </html>
 ```
 
-现在让我们将 main.jsp 和 hello.htm 保放在 **Tomcat-installation directory=webappROOT directory** 中。当你访问 http://localhost:8080/Hello.htm 时，你将收到以下输出。
+现在让我们将 `main.jsp` 和 `hello.htm` 保放在 `<Tomcat-installation-directory>/webapps/ROOT` 目录中。当你访问 `http://localhost:8080/Hello.htm` 时，你将收到以下输出。
 
 First Name:
+
 Last Name:
 
 尝试输入名字和姓并点击提交按钮，在运行 tomcat 的本地机器上查看结果。
@@ -1653,6 +1541,7 @@ Last Name:
 ## 向 JSP 程序传递复选框数据
 
 当需要选择多个选项时，使用了复选框（Checkboxes）。
+
 是一个带有两个复选框的表单的 **HTML 代码，CheckBox.htm** 示例。
 
 ```html
@@ -1669,8 +1558,10 @@ Last Name:
 ```
 
 上述代码将生成以下结果 ——
+
 Maths Physics Chemistry
-下面是处理浏览器提供的输入的 main.jsp JSP 程序。
+
+下面是处理浏览器提供的输入的 `main.jsp` JSP 程序。
 
 ```html
 <html>
@@ -1706,7 +1597,7 @@ Maths Physics Chemistry
 
 以下使用 `getParameterNames()` 方法来确定可用参数的通用示例。一旦我们有了 `Enumeration`，就可以使用 `hasMoreElements()` 方法进行循环。
 
-```html
+```jsp
 <%@ page import="java.io.*;java.util.*;" %>
 <html>
 <head>
@@ -1737,22 +1628,22 @@ Maths Physics Chemistry
 
 在本章中，我们将讨论 JSP 中的过滤器（Filters）。Servlet 和 JSP 过滤器是用于以下目的的 Java 类：
 
-- 1. 在客户端访问资源之前拦截请求。
-- 2. 在服务器发送回客户端之前处理请求。
+1. 在客户端访问资源之前拦截请求。
+2. 在服务器发送回客户端之前处理请求。
 
 规范建议了各种类型的过滤器：
 
-- 1. 身份验证过滤器
-- 2. 数据压缩过滤器
-- 3. 加密过滤器
-- 4. 触发资源访问过滤器
-- 5. 图像转换过滤器
-- 6. 日志和审计过滤器
-- 7. MIME-TYPE 链过滤器
-- 8. 分词过滤器
-- 9. XML 过滤器
+1. 身份验证过滤器
+2. 数据压缩过滤器
+3. 加密过滤器
+4. 触发资源访问过滤器
+5. 图像转换过滤器
+6. 日志和审计过滤器
+7. MIME-TYPE 链过滤器
+8. 分词过滤器
+9. XML 过滤器
 
-过滤器部署在部署文件 web.xml 中，然后映射到 servlet 或 JSP 名称或 URL 模式。部署文件 web.xml 位于 <Tomcat-installation-directory>\conf 目录。
+过滤器部署在部署文件 `web.xml` 中，然后映射到 servlet 或 JSP 名称或 URL 模式。部署文件 `web.xml` 位于 `<Tomcat-installation-directory>\conf` 目录。
 
 当 JSP 容器启动你的应用程序时，它会为你在部署文件中声明的每个过滤器创建一个实例。过滤器按照声明的顺序执行。
 
@@ -1772,14 +1663,14 @@ Maths Physics Chemistry
 
 下面的示例显示了每次访问任何 JSP 文件时，如何打印客户端的 IP 地址和当前日期时间。这个示例将让你对 JSP 过滤器有一个基本的了解，但你可以使用该概念编写更复杂的过滤器应用程序。
 
-
-
 ```java
 // Import required java libraries
 import java.io.*;
 import javax.servlet.*;
 import java.util.*;
 ```
+
+
 
 ```java
 // Implements Filter class
@@ -1807,7 +1698,7 @@ public class LogFilter implements Filter {
 }
 ```
 
-以通常方式编译 LogFilter.java，并将你的 LogFilter.class 文件放入 `<Tomcat-installation-directory>/webapps/ROOT/WEB-INF/classes` 中。
+以通常方式编译 `LogFilter.java`，并将你的 `LogFilter.class` 文件放入 `<Tomcat-installation-directory>/webapps/ROOT/WEB-INF/classes` 中。
 
 ## Web.xml 中的 JSP Filter Mapping
 
@@ -1835,7 +1726,7 @@ public class LogFilter implements Filter {
 
 ## 使用多个过滤器
 
-你的 Web 可能会定义多个具有特定目的的各种过滤器。假设你定义了两个过滤器 AuthenFilter 和 LogFilter。其余过程将如上文所示，但你需要按照下文所示创建一个不同的映射 -
+你的 Web 可能会定义多个具有特定目的的各种过滤器。假设你定义了两个过滤器 `AuthenFilter` 和 `LogFilter`。其余过程将如上文所示，但你需要按照下文所示创建一个不同的映射 -
 
 ```xml
 <filter>
@@ -1869,9 +1760,9 @@ public class LogFilter implements Filter {
 
 ## 过滤器应用顺序
 
-web.xml 中 filter-mapping 元素的顺序决定了 Web 容器包含过滤器到 servlet 或 JSP 的顺序。要反转过滤器顺序，你只需要反转 web.xml 文件中的 filter-mapping 元素。
+web.xml 中 `filter-mapping` 元素的顺序决定了 Web 容器包含过滤器到 servlet 或 JSP 的顺序。要反转过滤器顺序，你只需要反转 web.xml 文件中的 `filter-mapping` 元素。
 
-例如，上面的示例将应用 LogFilter，然后应用 AuthenFilter 到任何 servlet 或 JSP；下面的示例将反转顺序：
+例如，上面的示例将应用 `LogFilter`，然后应用 `AuthenFilter` 到任何 servlet 或 JSP；下面的示例将反转顺序：
 
 ```xml
 <filter-mapping>
@@ -1906,7 +1797,7 @@ Server: Apache/1.3 (UNIX)
 Set-Cookie: name=xyz; expires=Fri, 04 Nov-2000 22:03:38 GMT; path=/; domain=tutorials.com
 ```
 
-Set-Cookie 头部包含键值对、过期日期和路径。浏览器将保留这些信息直到过期日期。如果用户指向匹配路径和域的任何页面，会将 cookie 重送到服务器。浏览器的头部可能如下 –
+`Set-Cookie` 头部包含键值对、过期日期和路径。浏览器将保留这些信息直到过期日期。如果用户指向匹配路径和域的任何页面，会将 cookie 重送到服务器。浏览器的头部可能如下 –
 
 ```http
 GET / HTTP/1.0
@@ -1928,18 +1819,18 @@ Cookie: name=xyz
 
 | 序号 | 方法与描述 |
 | :--- | :--- |
-| 1 | **public void setDomain(String pattern)**: 该方法设置 cookie 应用域；例如 tutorialpoint.com。 |
-| 2 | **public String getDomain()**: 该方法获取 cookie 应用域；例如 tutorialpoint.com。 |
-| 3 | **public void setMaxAge(int expiry)**: 该方法设置 cookie 过期前应经过多少时间（秒）。如果不设置，cookie 将仅对当前会话有效。 |
-| 4 | **public int getMaxAge()**: 该方法返回以秒为单位的 cookie 最大年龄。默认情况下，-1 表示 cookie 持到浏览器关闭。 |
-| 5 | **public String getName()**: 该方法返回 cookie 的名称。创建后无法更改。 |
-| 6 | **public void setValue(String newValue)**: 该方法设置与 cookie 关联的值。 |
-| 7 | **public String getValue()**: 该方法获取与 cookie 关联的值。 |
-| 8 | **public void setPath(String uri)**: 该方法设置 cookie 应用路径。如果不指定路径，cookie 将适用于当前页面及其子目录的所有 URL。 |
-| 9 | **public String getPath()**: 该方法获取 cookie 应用路径。 |
-| 10 | **public void setSecure(boolean flag)**: 该方法设置布尔值，指示 cookie 是否仅通过加密连接（即 SSL）发送。 |
-| 11 | **public void setComment(String purpose)**: 该方法指定描述 cookie 目的的注释。如果浏览器向用户展示 cookie，则该注释很有用。 |
-| 12 | **public String getComment()**: 该方法返回描述 cookie 目的的注释，如果 cookie 没有注释则返回 null。 |
+| 1 | `public void setDomain(String pattern)`: 该方法设置 cookie 应用域；例如 tutorialpoint.com。 |
+| 2 | `public String getDomain()`: 该方法获取 cookie 应用域；例如 tutorialpoint.com。 |
+| 3 | `public void setMaxAge(int expiry)`: 该方法设置 cookie 过期前应经过多少时间（秒）。如果不设置，cookie 将仅对当前会话有效。 |
+| 4 | `public int getMaxAge()`: 该方法返回以秒为单位的 cookie 最大年龄。默认情况下，-1 表示 cookie 持到浏览器关闭。 |
+| 5 | `public String getName()`: 该方法返回 cookie 的名称。创建后无法更改。 |
+| 6 | `public void setValue(String newValue)`: 该方法设置与 cookie 关联的值。 |
+| 7 | `public String getValue()`: 该方法获取与 cookie 关联的值。 |
+| 8 | `public void setPath(String uri)`: 该方法设置 cookie 应用路径。如果不指定路径，cookie 将适用于当前页面及其子目录的所有 URL。 |
+| 9 | `public String getPath()`: 该方法获取 cookie 应用路径。 |
+| 10 | `public void setSecure(boolean flag)`: 该方法设置布尔值，指示 cookie 是否仅通过加密连接（即 SSL）发送。 |
+| 11 | `public void setComment(String purpose)`: 该方法指定描述 cookie 目的的注释。如果浏览器向用户展示 cookie，则该注释很有用。 |
+| 12 | `public String getComment()`: 该方法返回描述 cookie 目的的注释，如果 cookie 没有注释则返回 null。 |
 
 ## 在 JSP 中设置 Cookies
 
@@ -1947,14 +1838,15 @@ Cookie: name=xyz
 
 ### 步骤 1：创建 Cookie 对象
 
-你调用 Cookie 构造函数并传入 cookie 名称和 cookie 值，两者都是字符串。
+你调用 `Cookie` 构造函数并传入 cookie 名称和 cookie 值，两者都是字符串。
 
 ```java
 Cookie cookie = new Cookie("key", "value");
 ```
 
 请记住，名称或值都不应包含空格或以下任何字符：
-[]() = "" / ? @ : ;
+
+`[]() = "" / ? @ : ;`
 
 ### 步骤 2：设置最大年龄
 
@@ -1972,27 +1864,9 @@ cookie.setMaxAge(60*24);
 response.addCookie(cookie);
 ```
 
+### 示例
 
-
-
-
-<ul>
-  <li>
-    <p><b>First Name：</b></p>
-    <p><%= request.getParameter("first_name")%></p>
-  </li>
-  <li>
-    <p><b>Last Name：</b></p>
-    <p><%= request.getParameter("last_name")%></p>
-  </li>
-</ul>
-
-```html
-</body>
-</html>
-```
-
-让我们将上述代码放入 <b>main.jsp</b> 文件中，并在接下来的 HTML 页面中使用它——
+让我们将上述代码放入 `main.jsp` 文件中，并在接下来的 HTML 页面中使用它——
 
 ```html
 <html>
@@ -2007,20 +1881,21 @@ Last Name: <input type="text" name="last_name" />
 </html>
 ```
 
-将上述 HTML 内容保存在一个名为 <b>hello.jsp</b> 的文件文件中，并将 <b>hello.jsp</b> 和 <b>main.jsp</b> 放在 <b>Tomcat-installation-directory/webapp/ROOT</b> 目录下。当你访问 <code>http://localhost:8080/hello.jsp</code> 时，这里是表单的实际输出。
+将上述 HTML 内容保存在一个名为 `hello.jsp` 的文件中，并将 `hello.jsp` 和 `main.jsp` 放在 `Tomcat-installation-directory/webapp/ROOT` 目录下。当你访问 `http://localhost:8080/hello.jsp` 时，这里是表单的实际输出。
 
 First Name:
+
 Last Name:
 
-尝试在屏幕上输入 First Name 和 Last Name，这会设置两个 Cookie：<b>firstName</b> 和 <b>lastName</b>。当你下次点击 Submit 按钮时，这些 Cookie 将被传回服务器。
+尝试在屏幕上输入 First Name 和 Last Name，这会设置两个 Cookie：`firstName` 和 `lastName`。当你下次点击 Submit 按钮时，这些 Cookie 将被传回服务器。
 
 在下一节中，我们将解释你如何在你的 Web 应用程序中访问这些 Cookie。
 
-# 使用 JSP 读取 Cookies
+## 使用 JSP 读取 Cookies
 
-要读取 Cookie，你需要通过调用 HttpServletRequest 的 <code>getCookies()</code> 方法来创建一个 <code>javax.servlet.Cookie</code> 对象的数组。循环遍历该数组，并使用 <code>getName()</code> 和 <code>getValue()</code> 方法来访问每个 Cookie 及其关联的值。
+要读取 Cookie，你需要通过调用 `HttpServletRequest` 的 `getCookies()` 方法来创建一个 `javax.servlet.Cookie` 对象的数组。循环遍历该数组，并使用 `getName()` 和 `getValue()` 方法来访问每个 Cookie 及其关联的值。
 
-## 示例
+### 示例
 
 现在让我们来读取上一个示例中设置的 Cookie ——
 
@@ -2031,8 +1906,6 @@ Last Name:
 </head>
 <body>
 ```
-
-# 读取 Cookies
 
 ```jsp
 <%
@@ -2060,25 +1933,25 @@ if (cookies == null) {
 </html>
 ```
 
-让我们将上述代码放入 main.jsp 文件并访问它。如果你将 **first_name cookie** 设置为 "John"，并将 **last_name cookie** 设置为 "Player"，那么运行 http://localhost:8080/main.jsp 将显示以下结果 ——
+让我们将上述代码放入 `main.jsp` 文件并访问它。如果你将 `first_name cookie` 设置为 "John"，并将 `last_name cookie` 设置为 "Player"，那么运行 `http://localhost:8080/main.jsp` 将显示以下结果 ——
 
-# Found Cookies Name and Value
+Found Cookies Name and Value
 
 Name : first_name, Value: John
 
 Name : last_name, Value: Player
 
-# 使用 JSP 删除 Cookies
+## 使用 JSP 删除 Cookies
 
 删除 Cookie 非常简单。如果你想删除一个 Cookie，只需要按照以下步骤操作 ——
 
-- 1. 读取一个已存在的 Cookie 并将其存储在 Cookie 对象中。
-- 2. 使用 setMaxAge() 方法将 cookie 期设置为零以删除已存在的 Cookie。
-- 3. 将此 cookie 添加回响应头。
+1. 读取一个已存在的 Cookie 并将其存储在 Cookie 对象中。
+2. 使用 `setMaxAge()` 方法将 cookie 期设置为零以删除已存在的 Cookie。
+3. 将此 cookie 添加回响应头。
 
-## 示例
+### 示例
 
-接下来的示例将向你展示如何删除名为 **first_name** 的现有 Cookie，当你下次运行 main.jsp 时，它将为 first_name 返回 null 值。
+接下来的示例将向你展示如何删除名为 `first_name` 的现有 Cookie，当你下次运行 `main.jsp` 时，它将为 `first_name` 返回 null 值。
 
 ```html
 <html>
@@ -2086,6 +1959,8 @@ Name : last_name, Value: Player
 <title>Reading Cookies</title>
 </head>
 ```
+
+
 
 ```html
 <body>
@@ -2121,7 +1996,7 @@ if (cookies != null) {
 </html>
 ```
 
-让我们将上述代码放入 main.jsp 文件并尝试访问它。它将显示如下：
+让我们将上述代码放入 `main.jsp` 文件并尝试访问它。它将显示如下：
 
 # Cookies Name and Value
 
@@ -2131,7 +2006,7 @@ Name : first_name, Value: John
 
 Name : last_name, Value: Player
 
-现在再次运行 http://localhost:8080/main.jsp，它应该只显示一个 Cookie 如下 ——
+现在再次运行 `http://localhost:8080/main.jsp`，它应该只显示一个 Cookie 如下 ——
 
 # Found Cookies Name and Value
 
@@ -2141,26 +2016,28 @@ Name : last_name, Value: Player
 
 # 第18 章：会话跟踪
 
-在本章中，我们将讨论会话跟踪。HTTP 是一个无状态协议，JSP 默认为每个客户端创建一个新的 HttpSession 对象。禁用会话跟踪需要通过设置页面指令属性为 false，如下：
+在本章中，我们将讨论会话跟踪。HTTP 是一个无状态协议，JSP 默认为每个客户端创建一个新的 `HttpSession` 对象。禁用会话跟踪需要通过设置页面指令属性为 false，如下：
 
+```jsp
 <%@page session="false"%>
+```
 
-JSP 引擎通过隐式 session 对象将 HttpSession 暴露出来。由于 session 对象已经提供给 JSP 程序员，可以立即开始从对象中存储和检索数据。
+JSP 引擎通过隐式 `session` 对象将 `HttpSession` 暴露出来。由于 `session` 对象已经提供给 JSP 程序员，可以立即开始从对象中存储和检索数据。
 
-这里是 session 对象提供的常用方法总结：
+这里是 `session` 对象提供的常用方法总结：
 
-| 序号. | 方法 & 描述 |
+| 序号 | 方法 & 描述 |
 |---|---|
-| 1 | **public Object getAttribute(String name)** | 返回会话中绑定到指定名称的对象，如果没有绑定该名称则返回 null。 |
-| 2 | **public Enumeration getAttributeNames()** | 返回包含绑定到此会话的所有名称的枚举。 |
-| 3 | **public long getCreationTime()** | 返回会话创建的时间，自 1970 年 1 月 1 日起的毫秒数。 |
-| 4 | **public String getId()** | 返回分配给此会话的唯一标识符字符串。 |
-| 5 | **public long getLastAccessedTime()** | 返回上次与此会话相关的请求时间，自 1970 年 1 月 1 日起的毫秒数。 |
-| 6 | **public int getInactiveInterval()** | 返回客户端访问之间保持此会话开启的最大间隔（秒）。 |
-| 7 | **public void invalidate()** | 使会话失效并解除绑定到它的所有对象。 |
-| 8 | **public boolean isNew()** | 如果客户端尚不知道会话，或者客户端选择加入会话，则返回 true。 |
-| 9 | **public void removeAttribute(String name)** | 从此会话中移除绑定到指定名称的对象。 |
-| 10 | **public void setAttribute(String name, Object value)** | 将值绑定到指定名称的会话中。 |
+| 1 | `public Object getAttribute(String name)` | 返回会话中绑定到指定名称的对象，如果没有绑定该名称则返回 null。 |
+| 2 | `public Enumeration getAttributeNames()` | 返回包含绑定到此会话的所有名称的枚举。 |
+| 3 | `public long getCreationTime()` | 返回会话创建的时间，自 1970 年 1 月 1 日起的毫秒数。 |
+| 4 | `public String getId()` | 返回分配给此会话的唯一标识符字符串。 |
+| 5 | `public long getLastAccessedTime()` | 返回上次与此会话相关的请求时间，自 1970 年 1 月 1 日起的毫秒数。 |
+| 6 | `public int getInactiveInterval()` | 返回客户端访问之间保持此会话开启的最大间隔（秒）。 |
+| 7 | `public void invalidate()` | 使会话失效并解除绑定到它的所有对象。 |
+| 8 | `public boolean isNew()` | 如果客户端尚不知道会话，或者客户端选择加入会话，则返回 true。 |
+| 9 | `public void removeAttribute(String name)` | 从此会话中移除绑定到指定名称的对象。 |
+| 10 | `public void setAttribute(String name, Object value)` | 将值绑定到指定名称的会话中。 |
 
 # Cookies
 
@@ -2170,13 +2047,13 @@ JSP 引擎通过隐式 session 对象将 HttpSession 暴露出来。由于 sessi
 
 服务器可以发送 session ID，如下：
 
-```
+```html
 <input type="hidden" name="session">
 ```
 
 # URL 重写
 
-你可以在 URL 末尾添加 session id，例如：http://tutorialsp.com/file?sessionid=12345
+你可以在 URL 末尾添加 session id，例如：`http://tutorialsp.com/file?sessionid=12345`
 
 # 会话对象
 
@@ -2190,23 +2067,23 @@ JSP 引擎通过隐式 session 对象将 HttpSession 暴露出来。由于 sessi
 
 你可以在 Internet 中手动删除你的 Cookie。
 
-
-
-
-
 此方法使用指定的名称将对象绑定到此会话。
 
-public void setMaxInactiveInterval(int interval)
+`public void setMaxInactiveInterval(int interval)`
+
 此方法指定了客户端请求之间在 servlet 容器失效此会话之前的时间间隔（单位为秒）。
 
 ## 会话跟踪示例
 
 此示例描述了如何使用 `HttpSession` 对象来查找会话的创建时间和最后访问时间。如果不存在会话，我们将为请求关联一个新的会话。
 
+```jsp
+<%@page import "java.io.*,java.util.*" %>
 ```
-<@page import "java.io.*,java.util.*" %>
+
+```java
 // 获取会话创建时间。
-Date createdAt = new Date(session.getCreation());
+Date createdAt = new Date(session.getCreationTime());
 // 获取此网页的最后访问时间。
 Date lastAccessTime = new Date(session.getLastAccessedTime());
 ```
@@ -2261,7 +2138,7 @@ session.setAttribute(visitCountKey, visitCount);
 </tr>
 <tr>
 <td>Creation Time</td>
-<td><% out.print(createTime); %> </td>
+<td><% out.print(createdAt); %> </td>
 </tr>
 <tr>
 <td>Time of Last Access</td>
@@ -2280,14 +2157,14 @@ session.setAttribute(visitCountKey, visitCount);
 </html>
 ```
 
-现在将上述代码放在 `main.jsp` 中并尝试访问 http://localhost:8080/main.jsp。一旦运行该 URL，你将收到以下结果 =
+现在将上述代码放在 `main.jsp` 中并尝试访问 `http://localhost:8080/main.jsp`。一旦运行该 URL，你将收到以下结果 =
 
 # 欢迎来到我的网站
 
 # 会话信息
 
-| | | value |
-| :--- | :--- | :--- |
+| info type | value |
+| :--- | :--- |
 | id | 0AE3EC93FF44E3C5255B4351B77ABB2D5 |
 | Creation Time | Tue Jun 08 17:26:40 GMT+04:00 2010 |
 | Time of Last Access | Tue Jun 08 17:26:40 GMT+04:00 2010 |
@@ -2312,11 +2189,11 @@ session.setAttribute(visitCountKey, visitCount);
 
 当你完成用户会话数据的处理时，你有几种选择：
 
-- 1. **移除特定属性** — 你可以调用公共的 **void removeAttribute(String name)** 方法来删除与特定键关联的值。
-- 2. **删除整个会话** — 你可以调用公共的 **void invalidate()** 方法来丢弃整个会话。
-- 3. **设置会话超时** — 你可以调用公共的 **void setInactiveInterval(int interval)** 方法单独为会话设置超时时间。
-- 4. **注销用户** — 对于支持 2.4 的服务器，你可以调用 **logout** 来让客户端登出 Web 服务器并失效属于该用户的所有会话。
-- 5. **web.xml 配置** — 如果你使用 Tomcat，除了上述方法外，你还可以如下所示在 web.xml 文件中配置会话超时。
+- 1. **移除特定属性** — 你可以调用 `public void removeAttribute(String name)` 方法来删除与特定键关联的值。
+- 2. **删除整个会话** — 你可以调用 `public void invalidate()` 方法来丢弃整个会话。
+- 3. **设置会话超时** — 你可以调用 `public void setMaxInactiveInterval(int interval)` 方法单独为会话设置超时时间。
+- 4. **注销用户** — 对于支持 2.4 的服务器，你可以调用 `logout` 来让客户端登出 Web 服务器并失效属于该用户的所有会话。
+- 5. **web.xml 配置** — 如果你使用 Tomcat，除了上述方法外，你还可以如下所示在 `web.xml` 文件中配置会话超时。
 
 ```xml
 <session-config>
@@ -2326,7 +2203,7 @@ session.setAttribute(visitCountKey, visitCount);
 
 超时时间以分钟表示，Tomcat 中的默认超时时间为 30 分钟。
 
-**getMaxInactiveInterval()** 方法返回该会话以秒为单位的超时时间。如果你的会话在 web.xml 中配置为 15 分钟，**getMaxInactiveInterval()** 将返回 900。
+`getMaxInactiveInterval()` 方法返回该会话以秒为单位的超时时间。如果你的会话在 `web.xml` 中配置为 15 分钟，`getMaxInactiveInterval()` 将返回 900。
 
 ## 第19 章：上传
 
@@ -2337,11 +2214,11 @@ session.setAttribute(visitCountKey, visitCount);
 现在让我们如何创建
 
 - 1. 表单应设置为 **POST**。
-- 2. 表单 enctype 应设置为 **multipart/data**。
+- 2. 表单 enctype 应设置为 **multipart/form-data**。
 - 3. 输入框类型应为 **file**。
 - 4. 输入框应具有 `name` 属性。
 - 5. 输入框应具有 `size` 属性。
-- 6. 文件将被到服务器。
+- 6. 文件将被上传到服务器。
 
 ```html
 <html>
@@ -2350,7 +2227,7 @@ session.setAttribute(visitCountKey, visitCount);
 </head>
 <body>
   <h3>File Upload</h3>
-  <form action="Upload" method="post" enctype="multipart/data">
+  <form action="Upload" method="post" enctype="multipart/form-data">
     <input type="file" name="file" size="50" />
     <br>
     <input type="submit" value="Upload" />
@@ -2383,14 +2260,14 @@ session.setAttribute(visitCountKey, visitCount);
 </web-app>
 ```
 
-以下是用于的
+以下是用于
 
 - 1. 文件应设置为。
 - 2. 使用以下代码。
 
-```java
-<@page import "java.io.*,java.servlet.*" %>
-<%@ page import = "java.servlet.http.*" %>
+```jsp
+<%@page import "java.io.*,java.servlet.*" %>
+<%@ page import = "javax.servlet.http.*" %>
 <%@ page import = "org.apache.commons.fileupload.*" %>
 <%@ page import = "org.apache.commons.fileupload.disk.*" %>
 <%@ page import = "org.apache.commons.fileupload.servlet.*" %>
@@ -2403,39 +2280,38 @@ File file;
 int maxSize = 5000 * 1024;
 int maxMemSize = 5000 * 1024;
 ServletContext context = pageContext.getServletContext();
-String filePath = request.getParameter("file-upload");
+String filePath = context.getInitParameter("file-upload");
 
 // 验证内容类型
 String contentType = request.getContentType();
 
-if ((contentType.indexOf("multipart/form-data") >= 0) {
-DiskFileItemFactory factory = new DiskFileItemFactory();
-// 内存中存储的最大大小
-factory.setSizeThreshold(maxMemSize);
+if ((contentType.indexOf("multipart/form-data") >= 0)) {
+    DiskFileItemFactory factory = new DiskFileItemFactory();
+    // 内存中存储的最大大小
+    factory.setSizeThreshold(maxMemSize);
 
-// 大于 maxSize 的数据保存位置
-factory.setRepository(new File("c:\temp"));
+    // 大于 maxSize 的数据保存位置
+    factory.setRepository(new File("c:\\temp"));
 
-// 创建一个新的文件上传处理器
-ServletFileUpload upload = new ServletFileUpload(factory);
+    // 创建一个新的文件上传处理器
+    ServletFileUpload upload = new ServletFileUpload(factory);
 
-// 要更新的最大文件大小。
-upload.setMaxSize(maxSize );
+    // 要更新的最大文件大小。
+    upload.setMaxSize(maxSize);
 
-try {
-// 解析请求以获取文件项。
-List fileitems = upload.parseRequest(request);
+    try {
+        // 解析请求以获取文件项。
+        List fileitems = upload.parseRequest(request);
 
-// 处理上传的文件项
-Iterator i = fileitems.iterator();
+        // 处理上传的文件项
+        Iterator i = fileitems.iterator();
 
-out.println("<html>");
-out.println("<head>");
-out.println("<title>File Upload</title>");
-out.println("</head>");
-out.println("<body>");
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>File Upload</title>");
+        out.println("</head>");
+        out.println("<body>");
 ```
-
 
 ```java
 while (i.hasNext()) {
@@ -2447,20 +2323,48 @@ while (i.hasNext()) {
         boolean isInMemory = fi.isInMemory();
         long sizeBytes = fi.getSize();
         // 写入文件
-        if (fileName.indexOf("\\")
-```else {
-    out.println("<html>");
-    out.println("<head>");
-    out.println("<title>Servlet 上传</title>");
-    out.println("</head>");
-    out.println("<body>");
-    out.println("<p>没有上传文件</p>");
-    out.println("</body>");
-    out.println("</html>");
+        if (fileName.indexOf("\\") >= 0) {
+            file = new File(filePath + fileName.substring(fileName.lastIndexOf("\\")));
+        } else {
+            file = new File(filePath + fileName.substring(fileName.lastIndexOf("\\") + 1));
+        }
+        fi.write(file);
+        out.println("文件名: " + fileName + "<br>");
+    }
 }
-}
-}
+out.println("</body>");
+out.println("</html>");
 ```
+
+```java
+} catch (Exception ex) {
+    System.out.println(ex);
+}
+} else {
+
+    out.println("<html>");
+
+    out.println("<head>");
+
+    out.println("<title>Servlet 上传</title>");
+
+    out.println("</head>");
+
+    out.println("<body>");
+
+    out.println("<p>没有上传文件</p>");
+
+    out.println("</body>");
+
+    out.println("</html>");
+
+}
+
+}
+%>
+```
+
+
 
 现在尝试使用你上面创建的 HTML 表单上传文件。当你访问 `http://localhost:8080/UploadFile.htm` 时，它将显示以下结果。这将帮助你从本地机器上传任何文件。
 
@@ -2476,11 +2380,15 @@ while (i.hasNext()) {
 
 `Date` 类支持两个构造函数。第一个构造函数用当前日期和时间初始化对象。
 
+```
 Date()
+```
 
 以下构造函数接受一个参数，等于于自 1970 年 1 月 1 日午夜以来经过的毫秒数。
 
+```
 Date(long millisec)
+```
 
 一旦你有了一个 `Date` 对象，你就可以调用任何以下支持方法来处理日期 ——
 
@@ -2488,16 +2396,16 @@ Date(long millisec)
 
 | 序号 | 方法与描述 |
 | :--- | :--- |
-| 1 | boolean after(Date date) 如果调用的 Date 对象包含的日期比 date 指定的日期晚，则返回 true，否则返回 false。 |
-| 2 | boolean before(Date date) 如果调用的 Date 对象包含的日期比 date 指定的日期早，则返回 true，否则返回 false。 |
-| 3 | Object clone() 复制调用的 Date 对象。 |
-| 4 | int compareTo(Date date) 比较调用的对象的值与 date 的值。如果值相等，返回 0。如果调用的对象比 date 早，返回负值。如果调用的对象比 date 晚，返回正值。 |
-| 5 | int compareTo(Object obj) 如果 obj 是 Date 类，则操作方式与 compareTo(Date) 相同。否则，它抛出 ClassCastException。 |
-| 6 | boolean equals(Object date) 如果调用的 Date 对象包含与 date 指定的日期和时间，则返回 true，否则返回 false。 |
-| 7 | long getTime() 返回自 1970 年 1 月 1 日午夜以来经过的毫秒数。 |
-| 8 | int hashCode() 返回调用的对象的哈希码。 |
-| 9 | void setTime(long time) 设置 time 指定的时间和日期，该时间表示自 1970 年 1 月 1 日午夜以来经过的毫秒数。 |
-| 10 | String toString() 将调用的 Date 对象转换为字符串并返回结果。 |
+| 1 | `boolean after(Date date)` 如果调用的 `Date` 对象包含的日期比 `date` 指定的日期晚，则返回 `true`，否则返回 `false`。 |
+| 2 | `boolean before(Date date)` 如果调用的 `Date` 对象包含的日期比 `date` 指定的日期早，则返回 `true`，否则返回 `false`。 |
+| 3 | `Object clone()` 复制调用的 `Date` 对象。 |
+| 4 | `int compareTo(Date date)` 比较调用的对象的值与 `date` 的值。如果值相等，返回 `0`。如果调用的对象比 `date` 早，返回负值。如果调用的对象比 `date` 晚，返回正值。 |
+| 5 | `int compareTo(Object obj)` 如果 `obj` 是 `Date` 类，则操作方式与 `compareTo(Date)` 相同。否则，它抛出 `ClassCastException`。 |
+| 6 | `boolean equals(Object date)` 如果调用的 `Date` 对象包含与 `date` 指定的日期和时间，则返回 `true`，否则返回 `false`。 |
+| 7 | `long getTime()` 返回自 1970 年 1 月 1 日午夜以来经过的毫秒数。 |
+| 8 | `int hashCode()` 返回调用的对象的哈希码。 |
+| 9 | `void setTime(long time)` 设置 `time` 指定的时间和日期，该时间表示自 1970 年 1 月 1 日午夜以来经过的毫秒数。 |
+| 10 | `String toString()` 将调用的 `Date` 对象转换为字符串并返回结果。 |
 
 ## 获取当前日期和时间
 
@@ -2505,19 +2413,33 @@ Date(long millisec)
 
 ```jsp
 <% page import = "java.io.*,java.util.*,javax.servlet.*" %>
+
 <html>
+
 <head>
+
 <title>显示当前日期和时间</title>
+
 </head>
+
 <body>
+
 <center>
+
 <h1>显示当前日期和时间</h1>
+
 </center>
+
 <%
+
     Date date = new Date();
+
     out.print("<h2 align=\"center\">"+date.toString()+"</h2>");
+
 %>
+
 </body>
+
 </html>
 ```
 
@@ -2543,20 +2465,35 @@ Mon Jun 21 21:46:49 GMT+04:00
 
 ```jsp
 <%@ page import = "java.io.*,java.util.*,javax.servlet.*" %>
+
 <html>
+
 <head>
+
 <title>显示当前日期和时间</title>
+
 </head>
+
 <body>
+
 <center>
+
 <h1>显示当前日期和时间</h1>
+
 </center>
+
 <%
+
     Date date = new Date();
+
     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss z");
+
     out.print("<h2 align=\"center\">"+dateFormat.format(date)+"</h2>");
+
 %>
+
 </body>
+
 </html>
 ```
 
@@ -2588,9 +2525,9 @@ Mon Jun 21 21:46:49 GMT+04:00
 | k | 小时 (0-23小时) | 24 |
 | K | 小时 (0-11小时) | 0 |
 | z | 时区 | Eastern Standard Time |
-| | 转义符 | ' |
+| ' | 转义符 |  |
 
-## 第 22 章：页面跳转
+# 第 22 章：页面跳转
 
 跳转
 
@@ -2606,7 +2543,9 @@ public void sendRedirect(String location) throws IOException
 
 ```java
 String site = "http://www.newpage.com";
+
 response.setStatus(response.SC_MOVED_TEMPORARILY);
+
 response.setHeader("Location", site);
 ```
 
@@ -2616,35 +2555,47 @@ response.setHeader("Location", site);
 
 ```jsp
 <%@ page import = "java.io.*,java.util.*" %>
+
 <html>
+
 <head>
+
 <title>页面跳转</title>
+
 </head>
+
 <body>
+
 <center>
+
 <h1>页面跳转</h1>
+
 </center>
+
 <%
+
 // 要跳转的新位置
+
 String site = new String("http://www.photofuntools.com");
+
 response.setStatus(response.SC_MOVED_TEMPORARILY);
+
 response.setHeader("Location", site);
+
 %>
+
 </body>
+
 </html>
 ```
 
 现在让我们将上面的代码保存在 `PageRedirection.jsp` 中，并使用 URL `http://localhost:8080/PageRedirection.jsp` 调用此 JSP。这将带你进入指定的 `http://www.photofuntools.com`。
 
-## 第 23 章：访问计数器
+# 第 23 章：访问计数器
 
 访问计数器
 
 在本章中，我们将讨论 JSP 中的访问计数器。访问计数器可以告诉你网站上特定页面的访问次数。通常你第一次进入首页时，会在 `index.jsp` 页面上挂载访问计数器。
-
-
-
-
 
 ## 示例
 
@@ -2652,47 +2603,67 @@ response.setHeader("Location", site);
 
 ```jsp
 <%@ page import="java.io.*,java.util.*" %>
+
 <html>
+
 <head>
+
 <title>JSP 中的 application 对象</title>
+
 </head>
+
 <body>
+
 <%
+
 Integer hitsCount = (Integer)application.getAttribute("hitCounter");
+
 if(hitsCount==null || hitsCount == 0) {
+
 /* 第一次访问 */
+
 out.println("Welcome to my website!");
+
 hitsCount = 1;
+
 } else {
+
 /* 再次访问 */
+
 out.println("Welcome back to my website!");
+
 hitsCount += 1;
+
 }
+
 application.setAttribute("hitCounter", hitsCount);
+
 %>
+
 <p>Total number of visits: <%= hitsCount%></p>
 
 </body>
+
 </html>
 ```
 
-让我们将上述代码放入 `main.jsp` 中，并使用 URL http://localhost:8080/main.jsp 调用此 JSP。这将显示访问计数值，该值会随着你刷新页面而增加。你可以尝试使用不同的浏览器访问页面，你会发现访问计数器会随着每次访问不断增加，你将收到如下结果——
+让我们将上述代码放入 `main.jsp` 中，并使用 URL `http://localhost:8080/main.jsp` 调用此 JSP。这将显示访问计数值，该值会随着你刷新页面而增加。你可以尝试使用不同的浏览器访问页面，你会发现访问计数器会随着每次访问不断增加，你将收到如下结果——
 
 Welcome to my website!
 
 Total number of hits: 12
 
-# 访问计数器重置
+## 访问计数器重置
 
 当你重启应用程序（即 Web 服务器）时，这将重置你的应用程序变量，计数器将重置为零。为了避免这种损失，请考虑以下几点：
 
 - 定义一个带有计数字段数据库表，假设名为 `hitcount`。为其赋值为 0。
 - 每次访问时，读取表获取 `hitcount` 的值。
 - 将 `hitcount` 的值加1并用新值更新表。
-- 4. 显示 `hitcount` 的新值为总页面访问次数。
-- 5. 如果你想统计所有页面的访问次数，请对所有页面实现上述逻辑。
+- 显示 `hitcount` 的新值为总页面访问次数。
+- 如果你想统计所有页面的访问次数，请对所有页面实现上述逻辑。
 
-# 第25 章：自动刷新
+# 第 25 章：自动刷新
 
 在本章中，我们将讨论 JSP 中的自动刷新。考虑一个显示实时游戏得分、股票市场状况或货币汇率的网页。对于所有此类页面，你需要定期使用浏览器的刷新或重新加载按钮刷新你的 Web 页面。
 
@@ -2702,52 +2673,73 @@ JSP 通过提供一种机制使这项工作变得简单，你可以构建网页�
 
 此方法向浏览器发送 "Refresh" 头部，并带有一个整数值，表示以秒为单位的时间间隔。
 
-# 页面自动刷新示例
+## 页面自动刷新示例
 
 在接下来的示例中，我们将使用 `setHeader()` 方法设置 `Refresh` 头部。这将有助于模拟数字时钟——
 
 ```jsp
 <%@ page import "java.io.*,java.util.*" %>
+
 <html>
+
 <head>
+
 <title>Auto Refresh Header Example</title>
+
 </head>
 
 <body>
+
 <center>
+
 <h2>Auto Refresh Header Example</h2>
+
 <%
+
 // 设置刷新自动加载时间为5秒
+
 response.setHeader("Refresh", 5);
 
 // 获取当前时间
+
 Calendar calendar = new GregorianCalendar();
+
 String am_pm;
 
 int hour = calendar.get(Calendar.HOUR);
+
 int minute = calendar.get(Calendar.MINUTE);
+
 int second = calendar.get(Calendar.SECOND);
 
 if(calendar.get(Calendar.AM_PM) == 0)
+
     am_pm = "AM";
+
 else
+
     am_pm = "PM";
 
 String CT = hour+":"+minute+":"+second+": " + am_pm;
+
 out.print("Current Time: " + CT + "\n");
+
 %>
+
 </center>
+
 </body>
+
 </html>
 ```
 
 现在将上述代码放入 `main.jsp` 并尝试访问它。它将每隔5秒显示一次当前系统时间，如下。只需运行 JSP 并等待结果即可——
 
-# 自动刷新头部示例
+## 自动刷新头部示例
 
 Current Time is: 9:44:50
 
-# 第26 章：发送电子邮件
+# 第 26 章：发送电子邮件
 
 在本章中，我们将讨论如何使用 JSP 发送电子邮件。要使用 JSP 发送电子邮件，你需要在你的机器上安装 Java API 和 Java 激活框架 (JAF)。
 
@@ -2756,89 +2748,106 @@ Current Time is: 9:44:50
 
 下载并解压这些文件到新创建的顶层目录中。你会发现这两个应用程序都有多个 jar 文件。你需要在 CLSPATH 中添加 `mail.jar` 和 `activation.jar` 文件。
 
-# 发送简单电子邮件
+## 发送简单电子邮件
 
 这是一个从你的机器发送简单电子邮件的示例。假设你的本地已连接到互联网并能够发送电子邮件。确保 Java Email API 包和 JAF 包中的所有文件都已在 CL 中可用。
 
 ```jsp
 <%@ page import="java.io.*,java.util.*,javax.mail.*" %>
+
 <%@ page import="javax.mail.internet.*,javax.activation.*" %>
+
 <%@ page import="javax.servlet.http.*,javax.servlet.*" %>
+
 <%
+
 String result;
+
 // 需要指定收件人邮箱 ID
+
 String to = "abcd@gmail.com";
 
 // 需要指定发件人邮箱 ID
+
 String from = "mohd@gmail.com";
 
 // 假设你从本地发送电子邮件
+
 String host = "localhost";
 
 // 获取系统属性
+
 Properties properties = System.getProperties();
 
 // 设置邮件服务器
+
 properties.setProperty("mail.smtp.host", host);
 
 // 获取默认 Session 对象。
+
 Session mailSession = Session.getInstance(properties);
 
 try {
+
 // 创建默认的 MimeMessage 对象。
+
 MimeMessage message = new MimeMessage(mailSession);
 
 // 设置头部的 From: 字段。
+
 message.setFrom(new InternetAddress(from));
 
 // 设置 To: 字段。
+
 message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
 // 设置 Subject: 头部
+
 message.setSubject("This is the Subject!");
 
 // 现在设置实际消息
+
 message.setText("This is actual message");
 
 // 发送消息
+
 transport.send(message);
+
 result = "Sent message successfully...";
+
 } catch (MessagingException mex) {
+
   result = "Error: unable to send";
+
   mex.printStackTrace();
+
 }
+
 %>
 
 <html>
+
 <head>
-<title>Send Email using JSP</title>
-</head>
-<body>
-<center>
-<h1>Send Email using JSP</h1>
-</center>
-</body>
-</html>
 ```
 
-现在将上述代码放入 `main.jsp` 并尝试访问它。它将每隔5秒显示一次当前系统时间，如下。只需运行 JSP 并等待结果即可——
+
 
 # 第27 章：使用 JSP 发送电子邮件
 
-使用 URL http://localhost:8080/main.jsp 调用此 JSP。这将帮助向 abcd@gmail.com 发送。结果：Sent message successfully...
+使用 URL `http://localhost:8080/main.jsp` 调用此 JSP。这将帮助向 `abcd@gmail.com` 发送。结果：Sent message successfully...
 
 如果你想向多个收件人发送邮件，使用以下方法指定收件人：
 
-1. type – 将是 TO, CC 或 BCC。这里 CC 代表抄送，BCC 代表密抄。
-2. addresses – 这是邮箱 ID 的数组。你需要使用 InternetAddress() 方法指定邮箱 ID。
+1.  `type` – 将是 `TO`、`CC` 或 `BCC`。这里 `CC` 代表抄送，`BCC` 代表密抄。
+2.  `addresses` – 这是邮箱 ID 的数组。你需要使用 `InternetAddress()` 方法指定邮箱 ID。
 
 ```java
-void addRecipients(Message.RecipientType type
+void addRecipients(Message.RecipientType type)
 ```
 
-# 发送 HTML 电子邮件
+## 发送 HTML 电子邮件
 
-这是一个从你的机器发送 HTML 电子邮件的示例。假设你的本地已连接到互联网并能够发送电子邮件。确保 Java Email API 包和 JAF 包中的所有文件都已在 classpath 中可用。此示例与上一个非常相似，只是这里我们使用了 `setContent()` 方法，其第二个参数为 "text/html" 以指定 HTML 内容。
+这是一个从你的机器发送 HTML 电子邮件的示例。假设你的本地已连接到互联网并能够发送电子邮件。确保 Java Email API 包和 JAF 包中的所有文件都已在 classpath 中可用。此示例与上一个非常相似，只是这里我们使用了 `setContent()` 方法，其第二个参数为 `"text/html"` 以指定 HTML 内容。
 
 使用此示例，你可以按需要发送 HTML 内容。
 
@@ -2848,6 +2857,7 @@ void addRecipients(Message.RecipientType type
 <%@ page import="javax.servlet.http.*,javax.servlet.*" %>
 <%
 String result;
+
 // 需要指定收件人邮箱 ID
 String to = "abcd@gmail.com";
 
@@ -2867,31 +2877,32 @@ properties.setProperty("mail.smtp.host", host);
 Session mailSession = Session.getInstance(properties);
 
 try {
-// 创建默认的 MimeMessage 对象。
-MimeMessage message = new MimeMessage(mailSession);
+    // 创建默认的 MimeMessage 对象。
+    MimeMessage message = new MimeMessage(mailSession);
 
-// 设置头部的 From: 字段。
-message.setFrom(new InternetAddress(from));
+    // 设置头部的 From: 字段。
+    message.setFrom(new InternetAddress(from));
 
-// 设置 To: 字段。
-message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+    // 设置 To: 字段。
+    message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
-// 设置 Subject: 头部
-message.setSubject("This is the Subject!");
+    // 设置 Subject: 头部
+    message.setSubject("This is the Subject!");
 
-// 现在设置实际消息
-message.setText("This is actual message", "text/html");
+    // 现在设置实际消息
+    message.setText("This is actual message", "text/html");
 
-// 发送消息
-transport.send(message);
-result = "Sent message successfully...";
+    // 发送消息
+    transport.send(message);
+
+    result = "Sent message successfully...";
+
 } catch (MessagingException mex) {
-  result = "Error: unable to send";
-  mex.printStackTrace();
+    result = "Error: unable to send";
+    mex.printStackTrace();
 }
 %>
-
-<html
+<html>
 <head>
 <title>Send Email using JSP</title>
 </head>
@@ -2902,8 +2913,6 @@ result = "Sent message successfully...";
 </body>
 </html>
 ```
-
-
 
 ```java
 // 设置 To: header 的 header 字段。
@@ -2964,7 +2973,7 @@ result = "Sent message successfully...";
 ```
 
 ```java
-<% 
+<%
 String result;
 
 // 需要指定收件者的邮件 ID。
@@ -2984,37 +2993,55 @@ properties.setProperty("mail.smtp.host", host);
 
 // 获取默认 Session 对象。
 Session mailSession = Session.getDefaultInstance(properties);
+
 try {
     // 创建一个 MimeMessage 对象。
     MimeMessage message = new MimeMessage(mailSession);
+
     // 设置 From: header 的 header 字段。
     message.setFrom(new InternetAddress(from));
+
     // 设置 To: header 的 header 字段。
     message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+
     // 设置 Subject: header 字段
     message.setSubject("This is the Subject Line!");
+
     // 创建消息部分
     BodyPart messageBody = new MimeBodyPart();
+
     // 填充消息
     messageBody.setText("This is this message");
+
     // 创建一个多部分消息
     Multipart multipart = new MimeMultipart();
+
     // 设置文本消息部分
     multipart.addBodyPart(messageBody);
+
     // 第二部分是附件
     messageBody = new MimeBodyPart();
+
     String filename = "file.txt";
+
     DataSource source = new FileDataSource(filename);
+
     messageBody.setDataHandler(new DataHandler(source));
+
     messageBody.setFileName(filename);
+
     multipart.addBodyPart(messageBody);
+
     // 发送完整的消息部分
     message.setContent(multipart);
 
     // 发送消息
     Transport.send(message);
+
     String title = "Send Email";
+
     String result = "Sent message successfully...";
+
 } catch (MessagingException mex) {
     mex.printStackTrace();
     result = "Error: unable to send message....";
@@ -3052,7 +3079,7 @@ props.setProperty("mail.password", "mypawd");
 
 ## 使用表单发送邮件
 
-你可以使用 HTML 表单来接收邮件参数，然后可以使用 request 对象来获取所有信息，如下：
+你可以使用 HTML 表单来接收邮件参数，然后可以使用 `request` 对象来获取所有信息，如下：
 
 ```java
 String to = request.getParameter("to");
@@ -3063,7 +3090,7 @@ String messageText = request.getParameter("body");
 
 一旦获取了所有信息，你就可以使用上述程序发送邮件。
 
-## 第 28 章：标准标签库 (JSTL) 教程
+# 第 28 章：标准标签库 (JSTL) 教程
 
 在本章中，我们将理解 JSP 中不同的标签。Java 页面标签库 (JSTL) 是一组实用的 JSP 标签，它封装了许多 JSP 应用共同的核心功能。
 
@@ -3077,17 +3104,17 @@ JSTL 支持常见的结构化任务，如迭代和条件、用于处理 XML 文�
 
 **步骤 2** – 将 JAR 文件复制到你的目录。
 
-要使用任何这些标签，你需要在顶部包含 taglib 指令。
+要使用任何这些标签，你需要在顶部包含 `taglib` 指令。
 
 ## JSTL 标签分类
 
-JSTL 标签可以根据其功能分类为
+JSTL 标签可以根据其功能分类为：
 
-1. 核心标签 (Core Tags)
-2. 格式化标签 (Formatting tags)
-3. SQL 标签 (SQL tags)
-4. XML 标签 (XML tags)
-5. 函数 (Functions)
+1.  核心标签 (Core Tags)
+2.  格式化标签 (Formatting tags)
+3.  SQL 标签 (SQL tags)
+4.  XML 标签 (XML tags)
+5.  函数 (Functions)
 
 ## 核心标签
 
@@ -3097,24 +3124,24 @@ JSTL 标签可以根据其功能分类为
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 ```
 
-下表列出了核心标签
+下表列出了核心标签：
 
-| 序号. | 标签 & 描述 |
-|---|---|
-| 1 | <c:out> | 用于表达式。 |
-| 2 | <c:set> | 在作用域内设置结果。 |
-| 3 | <c:remove> | 从特定的作用域移除变量。 |
-| 4 | <c:catch> | 捕获发生的 Throwable 并可选地暴露。 |
-| 5 | <c:if> | 条件为真时执行主体的条件标签。 |
-| 6 | <c:choose> | 互斥操作标签，由 <when> 和 <otherwise> 标记。 |
-| 7 | <c:when> | <choose> 的子标签，当条件为真时包含其主体。 |
-| 8 | <c:otherwise> | <choose> 的子标签，当所有之前的条件为假时运行。 |
-| 9 | <c:import> | 获取绝对或相对 URL 并将其内容暴露给页面、String 或 Reader。 |
-| 10 | <c:forEach> | 基础迭代标签，接受许多集合类型并支持子集功能。 |
-| 11 | <c:forTokens> | 对由分隔符分隔的标记进行迭代。 |
-| 12 | <c:param> | 为 'import' 标签的 URL 添加参数。 |
-| 13 | <c:redirect> | 重定向到一个 URL。 |
-| 14 | <c:url> | 创建带有可选查询参数的 URL |
+| 序号 | 标签 | 描述 |
+|---|---|---|
+| 1 | `<c:out>` | 用于表达式。 |
+| 2 | `<c:set>` | 在作用域内设置结果。 |
+| 3 | `<c:remove>` | 从特定的作用域移除变量。 |
+| 4 | `<c:catch>` | 捕获发生的 `Throwable` 并可选地暴露。 |
+| 5 | `<c:if>` | 条件为真时执行主体的条件标签。 |
+| 6 | `<c:choose>` | 互斥操作标签，由 `<when>` 和 `<otherwise>` 标记。 |
+| 7 | `<c:when>` | `<choose>` 的子标签，当条件为真时包含其主体。 |
+| 8 | `<c:otherwise>` | `<choose>` 的子标签，当所有之前的条件为假时运行。 |
+| 9 | `<c:import>` | 获取绝对或相对 URL 并将其内容暴露给页面、`String` 或 `Reader`。 |
+| 10 | `<c:forEach>` | 基础迭代标签，接受许多集合类型并支持子集功能。 |
+| 11 | `<c:forTokens>` | 对由分隔符分隔的标记进行迭代。 |
+| 12 | `<c:param>` | 为 `import` 标签的 URL 添加参数。 |
+| 13 | `<c:redirect>` | 重定向到一个 URL。 |
+| 14 | `<c:url>` | 创建带有可选查询参数的 URL。 |
 
 ## 格式化标签
 
@@ -3124,50 +3151,42 @@ JSTL 格式化标签用于格式国际化网站的文本、日期、时间和数
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 ```
 
-下表列出了格式化 JSTL 标签
+下表列出了格式化 JSTL 标签：
 
-| 序号. | 标签 & 描述 |
-|---|---|
-| 1 | <fmt:formatNumber> | 使用特定的精度或格式渲染数值值。 |
-| 2 | <fmt:parseNumber> | 解析数字、货币或百分比的字符串表示。 |
-| 3 | <fmt:dateFormat> | 使用提供的样式和模式格式化日期和时间。 |
-| 4 | <fmt:parseDate> | 解析日期和时间的字符串表示。 |
-| 5 | <fmt:bundle> | 加载供其标签主体使用的资源包。 |
-| 6 | <fmt:setLocale> | 将给定的区域存储在区域配置变量中。 |
-| 7 | <fmt:setBundle> | |
-
-
-
-加载资源包并通过包的配置变量将其存储在命名的作用域变量中。
-
-- <fmt:timeZone>
-为嵌套在其体内的时间格式化或解析操作指定时区。
-
-- <fmt:setTime>
-将给定的时区存储在时区配置变量中。
-
-- <fmt:message>
-显示国际化消息。
-
-- <fmt:requestEncoding>
-设置请求字符编码
+| 序号 | 标签 | 描述 |
+|---|---|---|
+| 1 | `<fmt:formatNumber>` | 使用特定的精度或格式渲染数值值。 |
+| 2 | `<fmt:parseNumber>` | 解析数字、货币或百分比的字符串表示。 |
+| 3 | `<fmt:formatDate>` | 使用提供的样式和模式格式化日期和时间。 |
+| 4 | `<fmt:parseDate>` | 解析日期和时间的字符串表示。 |
+| 5 | `<fmt:bundle>` | 加载供其标签主体使用的资源包。 |
+| 6 | `<fmt:setLocale>` | 将给定的区域存储在区域配置变量中。 |
+| 7 | `<fmt:setBundle>` | 加载资源包并通过包的配置变量将其存储在命名的作用域变量中。 |
+| 8 | `<fmt:timeZone>` | 为嵌套在其体内的时间格式化或解析操作指定时区。 |
+| 9 | `<fmt:setTimeZone>` | 将给定的时区存储在时区配置变量中。 |
+| 10 | `<fmt:message>` | 显示国际化消息。 |
+| 11 | `<fmt:requestEncoding>` | 设置请求字符编码。 |
 
 # SQL 标签
 
 JSP SQL 标签库提供了用于与关系型数据库（RDBMS）如 Oracle、MySQL 或 Microsoft SQL Server 交互的标签。
 
-以下是在 JSP 中引入 JSTL SQL 库的语法—— `<@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql">`
+以下是在 JSP 中引入 JSTL SQL 库的语法：
+
+```jsp
+<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
+```
 
 下表列出了 SQL JSTL 标签：
 
-| 序号 | 标签与描述 |
-|---|---|
-| 1 | <sql:setDataSource> 创建一个仅适用于原型制作的简单 DataSource |
-| 2 | <sql:query> 执行在体内或通过 sql 属性定义的 SQL 查询。 |
-| 3 | <sql:update> 执行在体内或通过 sql 属性定义的 SQL 更新。 |
-| 4 | <sql:param> 将 SQL 语句中的参数设置为指定指定的值。 |
-| 5 | <sql:dateParam> 将 SQL 语句中的参数设置为指定的 java.util.Date 值。 |
-| 6 | <sql:transaction> 提供具有共享连接的嵌套数据库操作元素，配置为将所有语句作为一个事务来执行。 |
+| 序号 | 标签 | 描述 |
+|---|---|---|
+| 1 | `<sql:setDataSource>` | 创建一个仅适用于原型制作的简单 `DataSource`。 |
+| 2 | `<sql:query>` | 执行在体内或通过 `sql` 属性定义的 SQL 查询。 |
+| 3 | `<sql:update>` | 执行在体内或通过 `sql` 属性定义的 SQL 更新。 |
+| 4 | `<sql:param>` | 将 SQL 语句中的参数设置为指定指定的值。 |
+| 5 | `<sql:dateParam>` | 将 SQL 语句中的参数设置为指定的 `java.util.Date` 值。 |
+| 6 | `<sql:transaction>` | 提供具有共享连接的嵌套数据库操作元素，配置为将所有语句作为一个事务来执行。 |
 
 # XML 标签
 
@@ -3176,27 +3195,29 @@ JSTL 标签提供了一种以 JSP 为中心创建和操作 XML 文档的方法�
 JSTL XML 标签库拥有用于与 XML 数据交互的自定义标签。这包括解析 XML、转换 XML 数据以及基于 XPath 表达式的流控制。
 
 ```jsp
-<%@taglib prefix="x" uri="http://java.sun.com/jsp/jst/xml" %>
+<%@taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
 ```
+
+
 
 在继续后续示例之前，您需要将两个 XML 和 XPath 相关的库复制到您的 `<Tomcat 安装目录>\lib` 中——
 
-- 1. Xercesimpl.jar - 从 https://www.apache.org/dist/xerces/j/ 下载
-- 2. xalan-j - 从 http://xml.apache.org/xalan-j/index.html 下载
+- 1. `Xercesimpl.jar` - 从 https://www.apache.org/dist/xerces/j/ 下载
+- 2. `xalan-j` - 从 http://xml.apache.org/xalan-j/index.html 下载
 
 以下是 JSTL 标签列表——
 
 | 序号 | 标签与描述 |
 |---|---|
-| 1 | <x:out> 类似于 <%= ... %>，用于 XPath 表达式。 |
-| 2 | <x:parse> 用于解析通过属性或标签主体指定的 XML 数据。 |
-| 3 | <x:set> 将变量设置为 XPath 表达式的值。 |
-| 4 | <x:if> 评估测试 XPath 表达式，如果为真，则处理其正文。如果条件为假，则忽略该正文。 |
-| 5 | <x:forEach> 用于遍历 XML 文档中的节点。 |
-| 6 | <x:choose> 简单条件标签，为互斥的条件操作建立上下文，由 <when> 和 <otherwise> 标签标记。 |
-| 7 | <x:when> <choose> 的子标签，如果其表达式求值为 'true' 则包含其正文。 |
-| 8 | <x:otherwise> <choose> 的子标签，跟在 <when> 标签之后，仅当所有先前的条件求值为 'false' 时才运行。 |
-| 9 | <x:transform> 对 XML 文档应用 XSL 转换 |
+| 1 | `<x:out>` 类似于 `<%= ... %>`，用于 XPath 表达式。 |
+| 2 | `<x:parse>` 用于解析通过属性或标签主体指定的 XML 数据。 |
+| 3 | `<x:set>` 将变量设置为 XPath 表达式的值。 |
+| 4 | `<x:if>` 评估测试 XPath 表达式，如果为真，则处理其正文。如果条件为假，则忽略该正文。 |
+| 5 | `<x:forEach>` 用于遍历 XML 文档中的节点。 |
+| 6 | `<x:choose>` 简单条件标签，为互斥的条件操作建立上下文，由 `<when>` 和 `<otherwise>` 标签标记。 |
+| 7 | `<x:when>` `<choose>` 的子标签，如果其表达式求值为 'true' 则包含其正文。 |
+| 8 | `<x:otherwise>` `<choose>` 的子标签，跟在 `<when>` 标签之后，仅当所有先前的条件求值为 'false' 时才运行。 |
+| 9 | `<x:transform>` 对 XML 文档应用 XSL 转换 |
 
 # JSTL 函数
 
@@ -3210,28 +3231,28 @@ JSTL 包含许多标准函数，其中包含常用的字符串处理函数。以
 
 | 序号 | 函数与描述 |
 |---|---|
-| 1 | fn:contains() 测试输入字符串是否包含指定的子字符串。 |
-| 2 | fn:containsIgnoreCase() 忽略大小写地测试输入字符串是否包含指定的子字符串。 |
-| 3 | fn:endsWith() 测试输入字符串是否以指定的后缀结束。 |
-| 4 | fn:escapeXml() 转义可以解释为 XML 标记的字符。 |
-| 5 | fn:indexOf() 返回字符串中首次出现指定子字符串的索引。 |
-| 6 | fn:join() 将数组的所有元素连接成一个字符串。 |
-| 7 | fn:length() 返回集合中的项数或字符串中的字符数。 |
-| 8 | fn:replace() 返回将输入字符串中所有指定出现替换后的字符串。 |
-| 9 | fn:split() 将字符串拆分为子字符串数组。 |
-| 10 | fn:startsWith() 测试输入字符串是否以指定的前缀开头。 |
-| 11 | fn:substring() 返回字符串的子集。 |
-| 12 | fn:substringAfter() 返回指定子字符串之后的字符串子集。 |
-| 13 | fn:substringBefore() 返回指定子字符串之前的字符串子集。 |
-| 14 | fn:toLowerCase() 将字符串的所有字符转换为小写。 |
-| 15 | fn:toUpperCase() 将字符串的所有字符转换为大写。 |
-| 16 | fn:trim() 字符串两端的空格。 |
+| 1 | `fn:contains()` 测试输入字符串是否包含指定的子字符串。 |
+| 2 | `fn:containsIgnoreCase()` 忽略大小写地测试输入字符串是否包含指定的子字符串。 |
+| 3 | `fn:endsWith()` 测试输入字符串是否以指定的后缀结束。 |
+| 4 | `fn:escapeXml()` 转义可以解释为 XML 标记的字符。 |
+| 5 | `fn:indexOf()` 返回字符串中首次出现指定子字符串的索引。 |
+| 6 | `fn:join()` 将数组的所有元素连接成一个字符串。 |
+| 7 | `fn:length()` 返回集合中的项数或字符串中的字符数。 |
+| 8 | `fn:replace()` 返回将输入字符串中所有指定出现替换后的字符串。 |
+| 9 | `fn:split()` 将字符串拆分为子字符串数组。 |
+| 10 | `fn:startsWith()` 测试输入字符串是否以指定的前缀开头。 |
+| 11 | `fn:substring()` 返回字符串的子集。 |
+| 12 | `fn:substringAfter()` 返回指定子字符串之后的字符串子集。 |
+| 13 | `fn:substringBefore()` 返回指定子字符串之前的字符串子集。 |
+| 14 | `fn:toLowerCase()` 将字符串的所有字符转换为小写。 |
+| 15 | `fn:toUpperCase()` 将字符串的所有字符转换为大写。 |
+| 16 | `fn:trim()` 字符串两端的空格。 |
 
 # 第 9 章：数据库访问
 
 在本章中，我们将讨论如何使用 JSP 访问数据库。假设您已经熟悉了 JDBC 的工作原理。在通过 JSP 访问数据库之前，请确保已正确配置环境。关于如何使用 JDBC 访问数据库的更多细节，可以参考我们的教程。
 
-# 创建表
+## 创建表
 
 要在 TEST 数据库中创建 Employees 表，请使用以下步骤——
 
@@ -3245,35 +3266,46 @@ JSTL 包含许多标准函数，其中包含常用的字符串处理函数。以
 
 步骤 3
 如下所示在 TEST 数据库中创建 Employees 表——
+
 ```sql
 mysql> create table Employees (
+
 id int not null,
+
 age int not null,
+
 first varchar (255),
+
 last varchar (255)
+
 );
+
 Query OK;
 ```
 
-# 创建数据
+## 创建数据
 
 让我们在表中创建几条记录——
 
 ```sql
 mysql> INSERT INTO Employees VALUES (100, 18, 'Zara', 'Ali');
+
 Query OK, 1 row affected (0 sec)
 
 mysql> INSERT INTO Employees VALUES (101, 25, 'Mahnaz', 'Fatma');
+
 Query OK, 1 row affected (0 sec)
 
 mysql> INSERT INTO Employees VALUES (102, 30, 'Zaid', 'Khan');
+
 Query OK, 1 row affected (0 sec)
 
 mysql> INSERT INTO Employees VALUES (103, 28, 'Sumit', 'Mittal');
+
 Query OK, 1 row affected (0 sec)
 ```
 
-# SELECT 操作
+## SELECT 操作
 
 以下示例展示了如何在 JSP 编程中使用 JSTL 执行 SQL 语句——
 
@@ -3281,7 +3313,7 @@ Query OK, 1 row affected (0 sec)
 <%@page import="java.io.*,java.util.*,java.sql"%>
 <%@page import="javax.servlet.http.*,javax.servlet.*" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@taglib uri="http://java.sun.com/jsp/jst/sql" prefix="sql" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 ```
 
 ```jsp
@@ -3289,16 +3321,13 @@ Query OK, 1 row affected (0 sec)
 <head>
 <title>SELECT 操作</title>
 </head>
-
 <body>
 <sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
   url="jdbc:mysql://localhost/TEST"
   user="root" password="pass123"/>
-
 <sql:query dataSource="${snapshot}" result="result">
 SELECT * from Employees;
 </sql:query>
-
 <table border="100%">
 <tr>
 <th>Emp ID</th>
@@ -3306,7 +3335,6 @@ SELECT * from Employees;
 <th>Last Name</th>
 <th>Age</th>
 </tr>
-
 <c:forEach var="row" items="${result.rows}">
 <tr>
 <td><c:out value="${row.id}"/></td>
@@ -3316,7 +3344,6 @@ SELECT * from Employees;
 </tr>
 </c:forEach>
 </table>
-
 </body>
 </html>
 ```
@@ -3327,7 +3354,7 @@ SELECT * from Employees;
 |---|---|---|---|
 | 100 | Zara | Ali | 18 |
 
-# INSERT 操作
+## INSERT 操作
 
 以下示例展示了我们如何在 JSP 编程中使用 JSTL 执行 SQL INSERT 语句——
 
@@ -3335,7 +3362,7 @@ SELECT * from Employees;
 <%@page import="java.io.*,java.util.*,java.sql"%>
 <%@page import="javax.servlet.http.*,javax.servlet.*" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl" prefix="sql"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 ```
 
 ```jsp
@@ -3347,15 +3374,12 @@ SELECT * from Employees;
 <sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
   url="jdbc:mysql://localhost/TEST"
   user="root" password="pass123"/>
-
 <sql:update dataSource="${snapshot}" var="result">
 INSERT INTO Employees VALUES (104, 2, 'Nuha', 'Ali');
 </sql:update>
-
 <sql:query dataSource="${snapshot}" var="result">
 SELECT * FROM Employees;
 </sql:query>
-
 <table border="1" width="100%">
 <tr>
 <th>Emp ID</th>
@@ -3363,7 +3387,6 @@ SELECT * FROM Employees;
 <th>Last Name</th>
 <th>Age</th>
 </tr>
-
 <c:forEach var="row" items="${result.rows}">
 <tr>
 <td><c:out value="${row.id}"/></td>
@@ -3373,12 +3396,9 @@ SELECT * FROM Employees;
 </tr>
 </c:forEach>
 </table>
-
 </body>
 </html>
 ```
-
-
 
 访问上述 JSP，将显示以下结果：
 
@@ -3390,35 +3410,29 @@ SELECT * FROM Employees;
 | 103 | Sumit | Mittel | 28 |
 | 104 | Nuha | Ali | 20 |
 
-# DELETE 操作
+## DELETE 操作
 
-```html
+```jsp
 <%@page import="java.io.*,java.util.*,java.sql.*" %>
-<%@page import="java.servlet.http.*,javax.servlet.*" %>
-<%@taglib uri="http://java.sun.com/jsp/jst/core" prefix="c" %>
-<%@taglib uri="http://java.sun.com/jsp/jst/sql" prefix="sql" %>
-
+<%@page import="javax.servlet.http.*,javax.servlet.*" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 <html>
 <head>
 <title>DELETE Operation</title>
 </head>
-
 <body>
 <sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
 url="jdbc:mysql://localhost/TEST"
 user="root" password="pass123"/>
-
 <c:set var="empid" value="103"/>
-
 <sql:update dataSource="${snapshot}" var="count">
 DELETE FROM Employees WHERE Id = ?
 <sql:param value="${empid}" />
 </sql:update>
-
 <sql:query dataSource="${snapshot}" var="result">
 SELECT * FROM Employees;
 </sql:query>
-
 <table border="1" width="100%">
 <tr>
 <th>Emp ID</th>
@@ -3426,24 +3440,14 @@ SELECT * FROM Employees;
 <th>Last Name</th>
 <th>Age</th>
 </tr>
-<!-- ... -->
-</table>
-</body>
-</html>
-```
-
-```html
 <c:forEach var="row" items="${result.rows}">
 <tr>
-  <td><c:out value="${row.id}"//></td>
-  <td><c:out value="${row.first}"//></td>
-  <td><c:out value="${row.last}"//></td>
-  <td><c:out value="${row.age}"//></td>
+<td><c:out value="${row.id}"/></td>
+<td><c:out value="${row.first}"/></td>
+<td><c:out value="${row.last}"/></td>
+<td><c:out value="${row.age}"/></td>
 </tr>
 </c:forEach>
-```
-
-```html
 </table>
 </body>
 </html>
@@ -3457,38 +3461,35 @@ SELECT * FROM Employees;
 | 101 | Mahnaz | Fatma | 25 |
 | 102 | Zaid | Khan | 30 |
 
-# UPDATE 操作
+## UPDATE 操作
 
 以下示例展示了如何使用 JSTL JSP 编程执行 SQL UPDATE 语句：
 
 ```jsp
 <%@ page import="java.io.*,java.util.*,java.sql.*" %>
 <%@ page import="javax.servlet.http.*,javax.servlet.*" %>
-<%@ taglib uri="http://java.sun.com/jsp/jst/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jst/sql" prefix="sql" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 ```
 
 ```jsp
 <html>
 <head>
-<title>DELETE Operation</title>
+<title>UPDATE Operation</title>
 </head>
 <body>
-<sql:dataSource var="${snapshot}" driver="com.mysql.jdbc.Driver"
+<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
 url="jdbc:mysql://localhost/TEST"
 user="root" password="pass123"/>
 <c:set var="empid" value="102"/>
 <sql:update dataSource="${snapshot}" var="count">
-UPDATE Employees SET WHERE last='Ali'
+UPDATE Employees SET last='Ali' WHERE id = ?
 <sql:param value="${empid}" />
 </sql:update>
 <sql:query dataSource="${snapshot}" var="result">
 SELECT * FROM Employees;
 </sql:query>
-```
-
-```html
-<table border="1" width = "100%">
+<table border="1" width="100%">
 <tr>
 <th>Emp ID</th>
 <th>First Name</th>
@@ -3497,13 +3498,15 @@ SELECT * FROM Employees;
 </tr>
 <c:forEach var="row" items="${result.rows}">
 <tr>
-<td><c:out value="${row.id}" /> </td>
-<td><c:out value="${row.first}" /> </td>
-<td><c:out value="${row.last}" /> </td>
-<td><c:out value="${row.age}" /> </td>
+<td><c:out value="${row.id}"/></td>
+<td><c:out value="${row.first}"/></td>
+<td><c:out value="${row.last}"/></td>
+<td><c:out value="${row.age}"/></td>
 </tr>
 </c:forEach>
 </table>
+</body>
+</html>
 ```
 
 访问上述 JSP，将显示以下结果
@@ -3539,29 +3542,31 @@ SELECT * FROM Employees;
 </books>
 ```
 
+
+
 使用不同的浏览器访问上述 XML 以查看效果。
 
 ## 在 JSP 中处理 XML
 
-在使用 JSP 处理 XML 之前，你需要将以下两个库拷贝到 "Tomcat/lib"：
+在使用 JSP 处理 XML 之前，你需要将以下两个库拷贝到 `Tomcat/lib`：
 
-- Xerces.jar - 从 https://www.apache.org/dist/xerces/ 下载
-- xalan.jar - 从 https://www.apache.org/dist/xalan/ 下载
+- `Xerces.jar` - 从 https://www.apache.org/dist/xerces/ 下载
+- `xalan.jar` - 从 https://www.apache.org/dist/xalan/ 下载
 
 在 `books.xml` 中放入以下内容：
 
 ```xml
 <books>
-<book>
-<name>History</name>
-<author>Zara</author>
-<price>100</price>
-</book>
-<book>
-<name>History</name>
-<author>Nuha</author>
-<price>2000</price>
-</book>
+  <book>
+    <name>History</name>
+    <author>Zara</author>
+    <price>100</price>
+  </book>
+  <book>
+    <name>History</name>
+    <author>Nuha</author>
+    <price>2000</price>
+  </book>
 </books>
 ```
 
@@ -3584,7 +3589,7 @@ SELECT * FROM Employees;
 </html>
 ```
 
-使用 http://localhost:8080/main.jsp 访问上述 JSP，将显示以下结果：
+使用 `http://localhost:8080/main.jsp` 访问上述 JSP，将显示以下结果：
 
 Books Info:
 第一个书籍的名字是： History
@@ -3609,9 +3614,9 @@ Books Info:
 <table border="1" width="100%">
 <xsl:for-each select="book">
 <tr>
-<td><xsl:value-of select="name"/></</td>
-<td><xsl:value-of select="author"/></</td>
-<td><xsl:value-of select="price"/></</td>
+<td><xsl:value-of select="name"/></td>
+<td><xsl:value-of select="author"/></td>
+<td><xsl:value-of select="price"/></td>
 </tr>
 </xsl:for-each>
 </table>
@@ -3662,10 +3667,10 @@ History Nuha 2000
 
 JavaBean 是一种根据 JavaBeans API 规范编写并编码的特殊构造 Java 类。以下是区分 JavaBean 与其他 Java 类的特征：
 
-- 1. 它提供了一个默认的无参构造函数。
-- 2. 它应该是可序列化的，并实现 `Serializable` 接口。
-- 3. 它可能有许多可读或可写的属性。
-- 4. 它可能为属性提供许多“getter”和“setter”方法。
+1. 它提供了一个默认的无参构造函数。
+2. 它应该是可序列化的，并实现 `Serializable` 接口。
+3. 它可能有许多可读或可写的属性。
+4. 它可能为属性提供许多“getter”和“setter”方法。
 
 # JavaBean 属性
 
@@ -3673,7 +3678,7 @@ JavaBean 属性是可以被对象用户访问的命名属性。该属性可以�
 
 | 序号 | 方法与描述 |
 |---|---|
-| 1 | getPropertyName() 例如，如果属性是 `firstName`，你的方法名将是 `getFirstName()` 以读取该属性。该方法称为访问器（accessor）。setPropertyName() 例如，如果属性是 `firstName`，你的方法名将是 `setName()` 以写入该属性。该方法称为变变器（mutator）。 |
+| 1 | `getPropertyName()` 例如，如果属性是 `firstName`，你的方法名将是 `getFirstName()` 以读取该属性。该方法称为访问器（accessor）。<br>`setPropertyName()` 例如，如果属性是 `firstName`，你的方法名将是 `setFirstName()` 以写入该属性。该方法称为变更器（mutator）。 |
 
 只读属性只有 `getProperty()` 方法，只写属性只有 `setProperty()` 方法。
 
@@ -3683,28 +3688,36 @@ JavaBean 属性是可以被对象用户访问的命名属性。该属性可以�
 
 ```java
 package com.tutorial.point;
+
 public class StudentsBean implements java.io.Serializable {
+
     private String firstName = null;
     private String lastName = null;
     private int age = 0;
 
     public StudentsBean() {
     }
+
     public String getFirstName() {
         return firstName;
     }
+
     public String getLastName() {
         return lastName;
     }
+
     public int getAge() {
         return age;
     }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
     public void setAge(Integer age) {
         this.age = age;
     }
@@ -3713,19 +3726,15 @@ public class StudentsBean implements java.io.Serializable {
 
 # 访问 JavaBean
 
-
-
-
-
-useBean 动作声明了一个用于 JSP 的 JavaBean。一旦声明完成，该 bean 就会变成一个脚本变量，可以被 JSP 中的脚本元素以及其他其他自定义标签访问。useBean 标签的完整语法如下：
+`useBean` 动作声明了一个用于 JSP 的 JavaBean。一旦声明完成，该 bean 就会变成一个脚本变量，可以被 JSP 中的脚本元素以及其他自定义标签访问。`useBean` 标签的完整语法如下：
 
 ```
 <jsp:useBean id = "bean's name" scope = "bean's scope" typeSpec/>
 ```
 
-根据你的需求，`scope` 属性的值可以是 `page`、`request`、`session` 或 `application`。`id` 属性的值可以是任何值，只要它在同一个 JSP 的其他 useBean 声明中是唯一的。
+根据你的需求，`scope` 属性的值可以是 `page`、`request`、`session` 或 `application`。`id` 属性的值可以是任何值，只要它在同一个 JSP 的其他 `useBean` 声明中是唯一的。
 
-接下来的示例展示了如何使用 useBean 动作：
+接下来的示例展示了如何使用 `useBean` 动作：
 
 ```html
 <html>
@@ -3744,7 +3753,7 @@ The date/time is Thu 30 11:18:11 GST 2010
 
 ## 访问 JavaBeans 属性
 
-除了 <jsp:useBean...> 动作外，你还可以使用 <jsp:getProperty/> 动作来访问方法。这里是完整语法：
+除了 `<jsp:useBean...>` 动作外，你还可以使用 `<jsp:getProperty/>` 动作来访问方法。这里是完整语法：
 
 ```
 <jsp:useBean id = "id" class = "bean's class" scope = "bean's scope">
@@ -3753,7 +3762,7 @@ The date/time is Thu 30 11:18:11 GST 2010
 </jsp:useBean>
 ```
 
-属性引用了之前通过 useBean 动作引入 JSP 的 JavaBean 的 `id`。`property` 属性是应该调用的 get 或 set 方法get。
+属性引用了之前通过 `useBean` 动作引入 JSP 的 JavaBean 的 `id`。`property` 属性是应该调用的 get 或 set 方法。
 
 接下来的示例展示了如何使用该语法访问数据：
 
@@ -3768,19 +3777,15 @@ The date/time is Thu 30 11:18:11 GST 2010
 <jsp:setProperty name = "students" property = "lastName" value = "Ali"/>
 <jsp:setProperty name = "students" property = "age" value = "10"/>
 </jsp:useBean>
-
 <p>Student First Name:
 <jsp:getProperty name="students" property="firstName"/>
 </p>
-
 <p>Student Last Name:
 <jsp:getProperty name="students" property="lastName"/>
 </p>
-
 <p>Student Age:
 <jsp:getProperty name="students" property="age"/>
 </p>
-
 </body>
 </html>
 ```
@@ -3788,9 +3793,7 @@ The date/time is Thu 30 11:18:11 GST 2010
 现在让我们使用 CLASSPATH 中可用 `StudentsBean.class`。访问上面的 JSP。将显示以下结果：
 
 Student First Name: Zara
-
 Student Last Name: Ali
-
 Student Age: 10
 
 ## 第 3 章：自定义标签
@@ -3819,6 +3822,7 @@ import javax.servlet.jsp.*;
 import java.io.*;
 
 public class HelloTag extends SimpleTagSupport {
+
     public void doTag() throws JspException, IOException {
         JspWriter out = getJspContext().getOut();
         out.print("Hello Tag!");
@@ -3826,7 +3830,7 @@ public class HelloTag extends SimpleTagSupport {
 }
 ```
 
-上面的代码简单，`doTag()` 方法使用 `getJspContext()` 获取当前的 JspContext，并将 "Hello Tag!" 发送到当前的 JspWriter 对象。让我们将上述类拷贝到环境目录。最后，创建以下库文件：webapp/WEB-INF/custom.tld`
+上面的代码简单，`doTag()` 方法使用 `getJspContext()` 获取当前的 JspContext，并将 "Hello Tag!" 发送到当前的 JspWriter 对象。让我们将上述类拷贝到环境目录。最后，创建以下库文件：`webapp/WEB-INF/custom.tld`
 
 ```xml
 <taglib>
@@ -3872,20 +3876,23 @@ Hello Tag!
 
 ```java
 package com.tutorialpoint;
+
 import javax.servlet.jsp.tagext.*;
 import javax.servlet.jsp.*;
 import java.io.*;
 
 public class HelloTag extends SimpleTagSupport {
+
     StringWriter sw = new StringWriter();
-    public void doGetTag() throws JspException, IOException {
+
+    public void doTag() throws JspException, IOException {
         getJspBody().invoke(sw);
         getJspContext().getOut().println(sw.toString());
     }
 }
 ```
 
-在这里，调用产生的输出首先被捕获到与标签关联的 StringWriter 中。我们需要如下修改 TLD 文件：
+在这里，调用产生的输出首先被捕获到与标签关联的 `StringWriter` 中。我们需要如下修改 TLD 文件：
 
 ```xml
 <taglib>
@@ -3916,6 +3923,16 @@ public class HelloTag extends SimpleTagSupport {
 </html>
 ```
 
+
+
+</ex:Hello>
+
+</body>
+
+</html>
+
+```
+
 你将获得以下结果：
 This is message body
 
@@ -3925,17 +3942,21 @@ This is message body
 
 ```java
 package com.tutorialpoint;
+
 import javax.servlet.jsp.tagext.*;
 import javax.servlet.jsp.*;
 import java.io.*;
 
 public class HelloTag extends SimpleTagSupport {
+
     private String message;
 
     public void setMessage(String msg) {
         this.message = msg;
     }
+
     StringBuilder sw = new StringBuilder();
+
     public void doTag() throws JspException, IOException {
         if (message != null) {
             /* 使用属性中的消息 */
@@ -4026,15 +4047,11 @@ This is custom tag
 </attribute>
 ```
 
-
-
-
-
 ## 第 33 章节：表达式语言 (EL)
 
-JSP 表达式语言 (EL) 使得能够轻松访问存储在 JavaBeans 组件中的应用程序数据，JSP EL 允许你创建 (a) 算术表达式和 (b) 逻辑表达式。在 JSP 表达式中，你可以使用整数、浮点数、字符串、用于布尔值的内置构造 true true 和 false，以及 `null`。
+JSP 表达式语言 (EL) 使得能够轻松访问存储在 JavaBeans 组件中的应用程序数据，JSP EL 允许你创建 (a) 算术表达式和 (b) 逻辑表达式。在 JSP 表达式中，你可以使用整数、浮点数、字符串、用于布尔值的内置构造 `true` 和 `false`，以及 `null`。
 
-## 简单语法
+### 简单语法
 
 通常，当你在 JSP 标签中指定属性值时，你直接使用字符串。例如 -
 
@@ -4042,22 +4059,21 @@ JSP 表达式语言 (EL) 使得能够轻松访问存储在 JavaBeans 组件中�
 <jsp:setProperty name="box" property="perimeter" value="100"/>
 ```
 
-JSP EL 允许你为这些任何一个属性值指定表达式。JSP EL 的简单语法如下
+JSP EL 允许你为这些任何一个属性值指定表达式。JSP EL 的简单语法如下：
 
 ```
 ${expr}
 ```
 
-这里 `expr` 指定的是表达式本身。JSP EL 中最常用的运算符是 `and` 和 `[]`。这两个运算符允许你访问 Java Beans 和内置对象的各种属性。
+这里 `expr` 指定的是表达式本身。JSP EL 中最常用的运算符是 `.` 和 `[]`。这两个运算符允许你访问 Java Beans 和内置对象的各种属性。
 
 例如，上述语法 `<jsp:setProperty>` 可以用表达式写为 -
 
 ```jsp
-<jsp:setProperty name="box" property="perimeter"
-value="${2.box.width+2.height}"/>
+<jsp:setProperty name="box" property="perimeter" value="${2.box.width+2.height}"/>
 ```
 
-当 JSP 编译属性中的 `{}` 形式时，它会生成代码来评估表达式并替换表达式的值。
+当 JSP 编译属性中的 `${}` 形式时，它会生成代码来评估表达式并替换表达式的值。
 你还可以在标签的模板文本中使用 JSP EL 表达式。例如，`<jsp:text>` 标签简单地将其内容插入到 JSP 的正文中。以下 `<jsp:text>` 声明将 `<h1>Hello JSP!</h1>` 插入到 JSP 输出中 -
 
 ```jsp
@@ -4066,7 +4082,7 @@ value="${2.box.width+2.height}"/>
 </jsp:text>
 ```
 
-你现在可以使用与用于属性时相同的 `{}` 语法，在 `<jsp:text>` 标签（或任何其他标签）的正文中包含一个 JSP 表达式。-
+你现在可以使用与用于属性时相同的 `${}` 语法，在 `<jsp:text>` 标签（或任何其他标签）的正文中包含一个 JSP 表达式。
 
 ```jsp
 <jsp:text>
@@ -4078,14 +4094,15 @@ Box Perimeter: is ${2.box.width + 2.box.height}
 
 EL 表达式可以使用括号来分组子表达式。例如，`${(1 + 2) * 3}` 等于 9，而不是 7。
 
-要禁用 EL 表达式的评估，你只需指定页面指令的 `isELIgnored` 属性 - 
+要禁用 EL 表达式的评估，你只需指定页面指令的 `isELIgnored` 属性 -
+
 ```jsp
 <% page isELIgnored = "true/false" %>
 ```
 
 该属性的有效值为 `true` 和 `false`。如果是 `true`，当 EL 表达式出现在静态文本或标签属性中时将会被忽略。如果是 `false`，EL 表达式将由容器评估。
 
-## EL 中的基本运算符
+### EL 中的基本运算符
 
 JSP 表达式语言 (EL) 支持 Java 支持的大多数算术和逻辑运算符。下表列出了最常用的运算符 –
 
@@ -4106,13 +4123,14 @@ JSP 表达式语言 (EL) 支持 Java 支持的大多数算术和逻辑运算符�
 | 13 | <= or le | 测试小于或等于 |
 | 14 | >= or ge | 测试大于或等于 |
 | 15 | && or and | 测试逻辑与 AND |
-| 16 | || or or | 测试逻辑或 OR |
+| 16 | \|\| or or | 测试逻辑或 OR |
 | 17 | ! or not | 一元布尔取反 |
 | 18 | empty | 测试变量值为空 |
 
-## JSP EL 中的函数
+### JSP EL 中的函数
 
-JSP 表达式语言 (EL) 允许在表达式中使用函数。这些函数定义在自定义标签库中。函数的用法语法如下 –
+JSP 表达式语言 (EL) 允许在表达式中使用函数。这些函数定义在自定义标签库中。函数的用法语法如下：
+
 `${ns:func(param1, param2, ...)}`
 
 `ns` 是函数的命名空间，`func` 是函数名，`param1` 是第一个参数。例如，函数 `fn:length` 是 JSTL 库的一部分。该函数可以用于获取字符串的长度。
@@ -4121,9 +4139,9 @@ JSP 表达式语言 (EL) 允许在表达式中使用函数。这些函数定义�
 ${fn:length("my string")}
 ```
 
-要使用任何函数库（标准或自定义），你必须在服务器上安装库，并在 JSP 中使用 `<taglib>` 指令，如 JSTL 章节中所说明的那样
+要使用任何函数库（标准或自定义），你必须在服务器上安装库，并在 JSP 中使用 `<taglib>` 指令，如 JSTL 章节中所说明的那样。
 
-## JSP EL 隐式对象
+### JSP EL 隐式对象
 
 JSP 表达式语言支持以下隐式对象 –
 
@@ -4140,11 +4158,11 @@ JSP 表达式语言支持以下隐式对象 –
 | 9 | init | 初始化参数 |
 | 10 | cookie | Cookie 值 |
 
-## pageContext
+### pageContext
 
-当前页面的 PageContext 对象你可以像使用变量一样在表达式中使用这些对象。以下示例将帮助你理解这些概念 –
+当前页面的 PageContext 对象。你可以像使用变量一样在表达式中使用这些对象。以下示例将帮助你理解这些概念 –
 
-## pageContext 对象
+#### pageContext 对象
 
 pageContext 对象提供了对 pageContext 对象的访问。通过 pageContext 对象，你可以访问请求对象。例如，要访问请求的查询字符串，可以使用以下表达式 –
 
@@ -4152,18 +4170,17 @@ pageContext 对象提供了对 pageContext 对象的访问。通过 pageContext 
 ${pageContext.request.queryString}
 ```
 
-### 范围对象 (Scope Objects)
+#### 范围对象 (Scope Objects)
 
-pageScope、requestScope、sessionScope 和 applicationScope 变量提供了对每个范围内变量的访问。例如，如果你需要显式访问 application 范围中的变量，可以通过 applicationScope.box 进行访问。
+pageScope、requestScope、sessionScope 和 applicationScope 变量提供了对每个范围内变量的访问。例如，如果你需要显式访问 application 范围中的变量，可以通过 `applicationScope.box` 进行访问。
 
-### param 和 paramValues 对象
+#### param 和 paramValues 对象
 
-param 和 paramValues 对象提供了对通过 request.getParameter 和 request.getParameterValues 方法通常获取的参数值的访问。例如，要访问名为 `order` 的参数，使用表达式 `${param.order}` 或 `${param["order"]}`
+param 和 paramValues 对象提供了对通过 `request.getParameter` 和 `request.getParameterValues` 方法通常获取的参数值的访问。例如，要访问名为 `order` 的参数，使用表达式 `${param.order}` 或 `${param["order"]}`
 
 ```jsp
 <%@page import = "java.io.*,java.util.*" %>
 <% String title = "Accessing Request Param"; %>
-
 <html>
 <head>
 <title><% out.print(title); %></title>
@@ -4172,6 +4189,7 @@ param 和 paramValues 对象提供了对通过 request.getParameter 和 request.
 <!-- 这里是内容 -->
 </body>
 </html>
+```
 
 ## 第 34 章节：用户示例
 
@@ -4206,20 +4224,16 @@ JSP 提供选项为每个页面指定错误页面 (Error Page)。每当页面抛
 | 5 | public StackTraceElement [] getStackTrace() | 返回包含堆栈轨迹每个元素的数组。0 表示调用栈的顶端，数组的最后一个元素表示调用栈底端的方法。 |
 | 6 | public Throwable fillStackTrace() | 用当前堆栈轨迹填充此 Throwable 对象的堆栈轨迹，添加堆栈轨迹中的任何先前信息。 |
 
-
-
-
-
 ```html
-<<body>
-%%
+<body>
+<%
 // 抛出异常以调用错误页面
 int x = 1;
 
 if (x == 1) {
     throw new RuntimeException("Error condition!!!");
 }
-%
+%>
 </body>
 </html>
 ```
@@ -4227,7 +4241,7 @@ if (x == 1) {
 现在我们来编写一个错误处理 JSP `ShowError.jsp`，如下所示。请注意，错误处理页面包含了指令 `<% page isErrorPage = "true" %>`。该指令会导致 JSP 编译器生成异常实例变量。
 
 ```jsp
-<@page isErrorPage = "true" %>
+<%@ page isErrorPage = "true" %>
 ```
 
 ```html
@@ -4243,18 +4257,25 @@ if (x == 1) {
 </html>
 ```
 
-访问 **main.jsp**，你将得到类似下面的输出—— java.lang.RuntimeException: Error condition!!!
+访问 `main.jsp`，你将得到类似下面的输出——
+java.lang.RuntimeException: Error condition!!!
+
 ......
 
 Opps...
+
 抱歉，发生了一个错误。
+
 这里是异常堆栈跟踪：
 
-## 使用 JSTL 标签处理错误页面
+### 使用 JSTL 标签处理错误页面
 
 你可以使用 JSTL 来编写错误页面 `ShowError.jsp`。该页面的逻辑与上面的示例几乎相同，具有更好的结构和更多的信息——
+
+```jsp
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page isErrorPage = "true" %>
+```
 
 ```html
 <html>
@@ -4264,35 +4285,30 @@ Opps...
 <body>
 <h1>Opps...</h1>
 <table width="100%" border="1">
-```
-
-```html
 <tr valign="top">
 <td width="40%"><b>Error: </b></td>
 <td>${pageContext.exception} </td>
 </tr>
-```
-
-```html
 <tr valign="top">
 <td><b>URI: </b></td>
 <td>${pageContext.errorData.requestURI} </td>
 </tr>
-```
-
-```html
 <tr valign="top">
 <td><b>Status code: </b></td>
 <td>${pageContext.errorData.statusCode} </td>
 </tr>
+</table>
+</body>
+</html>
 ```
+
+
 
 ```html
 <tr valign="top">
 <td><b>Stack trace: </b></td>
 <td>
-<c:forEach var = "trace"
-items="${pageContext.stackTrace}">
+<c:forEach var="trace" items="${pageContext.stackTrace}">
 <p>${trace}</p>
 </c:forEach>
 </td>
@@ -4301,32 +4317,35 @@ items="${pageContext.stackTrace}">
 
 ```html
 </table>
-<body>
+</body>
 </html>
 ```
 
-访问 main.jsp，将生成如下页面——
+访问 `main.jsp`，将生成如下页面——
 
 ## 第 36 章：Opps...
 
-**Error:** java.lang.RuntimeException: Error condition!!!
+**Error:** `java.lang.RuntimeException: Error condition!!!`
 
-**URI:** /main.jsp
+**URI:** `/main.jsp`
 
 **Status code:** 500
 
-org.apache.jsp.main_jsp_jspService(main_jsp.jsp_JspBase.java:65)
-org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:68)
+`org.apache.jsp.main_jsp_jspService(main_jsp.jsp_JspBase.java:65)`
 
-**Stack trace:** javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
-org.apache.jasper.servlet.JspServlet.service(JspServlet.java:265)
-javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
+`org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:68)`
+
+**Stack trace:** `javax.servlet.http.HttpServlet.service(HttpServlet.java:722)`
+
+`org.apache.jasper.servlet.JspServlet.service(JspServlet.java:265)`
+
+`javax.servlet.http.HttpServlet.service(HttpServlet.java:722)`
 
 ## 使用 Try..Catch 块
 
-如果你想在同一个页面中处理错误，并希望采取某些操作而不是触发错误页面，你可以利用 `try....catch` 块。
+如果你想在同一个页面中处理错误，并希望采取某些操作而不是触发错误页面，你可以利用 `try...catch` 块。
 
-以下是一个如何使用 `try...catch` 块的简单示例。我们将以下代码放入 main.jsp 中
+以下是一个如何使用 `try...catch` 块的简单示例。我们将以下代码放入 `main.jsp` 中：
 
 ```html
 <html>
@@ -4334,7 +4353,7 @@ javax.servlet.http.HttpServlet.service(HttpServlet.java:722)
 <title>Try..Catch Example</title>
 </head>
 <body>
-%%
+<%
 try {
   int i = 1;
   i = 0;
@@ -4348,12 +4367,15 @@ catch (Exception e) {
 </html>
 ```
 
-访问 main.jsp，它应该生成类似下面的输出 =
-An exception occurred: / zero
+访问 `main.jsp`，它应该生成类似下面的输出：
+
+```
+An exception occurred: / by zero
+```
 
 # 第 37 章：调试
 
-在本章中，我们将讨论如何调试 JSP。测试/调试 JSP 和 servlet 总是很困难的。JSP 和 servlets 往往涉及大量的客户端/服务器交互，导致错误容易发生但难以重现。
+在本章中，我们将讨论如何调试 JSP。测试/调试 JSP 和 Servlet 总是很困难的。JSP 和 Servlet 往往涉及大量的客户端/服务器交互，导致错误容易发生但难以重现。
 
 以下是一些可能帮助你进行调试的提示和建议。
 
@@ -4361,48 +4383,48 @@ An exception occurred: / zero
 
 `System.out.println()` 很容易使用，可以作为标记来测试某些代码是否被执行。我们也可以打印变量。考虑以下额外点：
 
-- 1. 由于 `System` 对象是核心 Java 对象的一部分，因此可以在任何地方使用，而不需要安装额外的类。这包括 Servlets、JSP、RMI、EJBs、普通的 bean 和类以及独立应用程序。
-- 2. 与停止在断点处相比，写入 `System.out` 不会对应用程序的正常执行流产生太大干扰，这使得它在时机至关时非常有价值。
+1. 由于 `System` 对象是核心 Java 对象的一部分，因此可以在任何地方使用，而不需要安装额外的类。这包括 Servlets、JSP、RMI、EJBs、普通的 Bean 和类以及独立应用程序。
 
-以下是使用 `System.out.println()` 的语法——
+2. 与停止在断点处相比，写入 `System.out` 不会对应用程序的正常执行流产生太大干扰，这使得它在时机至关重要时非常有价值。
+
+以下是使用 `System.out.println()` 的语法：
 
 ```
 System.out.println("Debugging message");
 ```
 
-下面的示例显示了如何使用 **System.out.print()** - 
-<%@taglib prefix="c" uri = "http://java.sun.com/jsp/jstl/core" %>
+下面的示例显示了如何使用 `System.out.print()`：
 
-```html
+```jsp
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head><title>System.out.println()</title></head>
 <body>
 <c:forEach var="counter" begin="1" end="10" step="1">
-
-  <c:out value="${counter-5}"/> + pageContext.findAttribute("counter") ); %>
-<%System.out.println("counter = " + counter); %>
+  <c:out value="${counter-5}"/><br>
+  <% System.out.println("counter = " + pageContext.findAttribute("counter")); %>
 </c:forEach>
-
 </body>
 </html>
 ```
 
-访问上面的 JSP，浏览器将显示以下结果 -
+访问上面的 JSP，浏览器将显示以下结果：
 
 - -4
--3
--2
--1
-0
-1
-2
-3
-4
-5
+- -3
+- -2
+- -1
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
 
-如果你使用的是 Tomcat，你还会在日志目录下的 **stdout.log** 末尾发现这些行。
+如果你使用的是 Tomcat，你还会在日志目录下的 `stdout.log` 末尾发现这些行：
 
-- counter = 1
+```
+counter = 1
 counter = 2
 counter = 3
 counter = 4
@@ -4412,41 +4434,36 @@ counter = 7
 counter = 8
 counter = 9
 counter = 10
+```
 
 你可以这种方式将变量和其他信息引入系统日志，通过分析这些可以找到问题的根源或各种原因。
 
 ## 使用 JDK Logger
 
-**J2SE** 日志框架旨在为运行在 JVM 中的任何类提供日志服务。我们可以利用这个框架来记录任何信息。让我们使用 JDK API 重写示例——
+**J2SE** 日志框架旨在为运行在 JVM 中的任何类提供日志服务。我们可以利用这个框架来记录任何信息。让我们使用 JDK API 重写示例：
 
 ```jsp
-<%@taglib prefix="c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<%@page import = "java.util.logging.Logger" %>
-```
-
-```html
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page import="java.util.logging.Logger" %>
 <html>
 <head><title>Logger.info</title></head>
 <body>
 <% Logger logger = Logger.getLogger(this.getClass().getName()); %>
 <c:forEach var="counter" begin="1" end="10" step="1">
-<c:set var="myCount" value="${counter-5}" />
-<c:out value="${myCount}"/><br>
-<% String message = "counter = "
-+ pageContext.findAttribute("counter") + " myCount = " +
-+ pageContext.findAttribute("myCount");
-logger.info(message);
-%>
+  <c:set var="myCount" value="${counter-5}" />
+  <c:out value="${myCount}"/><br>
+  <%
+    String message = "counter = " + pageContext.findAttribute("counter") + " myCount = " + pageContext.findAttribute("myCount");
+    logger.info(message);
+  %>
 </c:forEach>
 </body>
 </html>
 ```
 
-访问上面的 JSP，浏览器将显示以下结果 -
+访问上面的 JSP，浏览器将显示以下结果（此处原文未提供具体输出内容，但根据上文应为日志输出）。
 
-（此处原文未提供具体输出内容，但根据上文应为日志输出）
-
-上面的代码会在浏览器中生成类似下面的输出，但你可以在 stdout.log 中看到这些信息。我们可以使用 logger 来记录信息，根据严重性来调试。
+上面的代码会在浏览器中生成类似下面的输出，但你可以在 `stdout.log` 中看到这些信息。我们可以使用 logger 来记录信息，根据严重性来调试。
 
 你可以使用 Log4J 框架根据其严重性级别发送消息。
 
@@ -4454,36 +4471,32 @@ logger.info(message);
 
 NetBeans 是一个免费的开源 Java 开发环境，支持 Java 应用和 Web 应用开发。
 
-NetBeans 支持以下调试功能
+NetBeans 支持以下调试功能：
 
-- 1. 断点
-- 2. 逐步执行代码
-- 3. 视点
+1. 断点
+2. 逐步执行代码
+3. 视点
 
 你可以参考 NetBeans 文档了解上述调试功能。
 
 ## 使用 JDB 调试器
 
-你可以调试 JSP 和 servlet，可以使用 jdb 命令来调试应用。
+你可以调试 JSP 和 Servlet，可以使用 `jdb` 命令来调试应用。
 
-要调试 JSP 或 servlet，你可以调试 sun.servlet.HttpServer，然后观察 HttpServer 如何响应 HTTP 请求。
+要调试 JSP 或 Servlet，你可以调试 `sun.servlet.HttpServer`，然后观察 `HttpServer` 如何响应 HTTP 请求。
 
-大多数调试器通过自动知道如何调试 applet 而隐藏了细节。在它们对 JSP 这样做之前，你必须通过以下方式帮助你的调试器
+大多数调试器通过自动知道如何调试 Applet 而隐藏了细节。在它们对 JSP 这样做之前，你必须通过以下方式帮助你的调试器：
 
-- 1. 设置调试器的类路径。这有助于找到 sun.servlet.Server 以及调试器相关的类。
-- 2. 设置调试器的类路径。这有助于找到你的 JSP 和支持类，ROOT:WEB-INF-classes。
+1. 设置调试器的类路径。这有助于找到 `sun.servlet.Server` 以及调试器相关的类。
+2. 设置调试器的类路径。这有助于找到你的 JSP 和支持类，`ROOT/WEB-INF/classes`。
 
-一旦有了服务器类路径，就可以调试 sun.servlet.HttpServer。你可以在感兴趣的 JSP 中设置断点，然后使用网络浏览器向服务器请求该 JSP（http://localhost:8080/JSPToDebug）。执行会在断点处停止。
+一旦有了服务器类路径，就可以调试 `sun.servlet.HttpServer`。你可以在感兴趣的 JSP 中设置断点，然后使用网络浏览器向服务器请求该 JSP（`http://localhost:8080/JSPToDebug`）。执行会在断点处停止。
 
-
-
-
-
-# Internet Explorer 使用 Shift 刷新。
+## Internet Explorer 使用 Shift 刷新
 
 # 第 38 章：安全
 
-Java 页面（Pages）和 Servlet（servlets）为  提供了多种机制来保护应用程序。资源是通过声明式的受保护的，通过在应用部署描述符中标识它们并为它们分配角色来实现。
+JSP 和 Servlet 为 Web 应用提供了多种机制来保护应用程序。资源是通过声明式的受保护的，通过在应用部署描述符中标识它们并为它们分配角色来实现。
 
 提供了多个层级的身份验证，范围从使用标识符和密码的普通身份验证到使用证书的复杂身份验证。
 
@@ -4494,7 +4507,7 @@ Servlet 规范中的身份验证机制使用名为基于角色的安全（role-b
 你可以在 `tomcat-users.xml` 文件中定义不同的角色，该文件位于 Tomcat 目录下的 `conf` 中。下面是一个示例：
 
 ```xml
-<xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <tomcat-users>
   <role name="tomcat"/>
   <role name="role1"/>
@@ -4509,7 +4522,7 @@ Servlet 规范中的身份验证机制使用名为基于角色的安全（role-b
 
 此文件定义了用户名、密码和角色之间的简单映射。注意，给用户可能拥有多个角色；例如，用户名="both" 属于 "tomcat" 且角色为 "role1"。
 
-一旦你识别并定义了不同的角色，就可以使用 `WEB-INF` 目录下 `web.xml` 文件中的`<security-constraint>` 元素对不同的 Web 应用资源设置基于角色的安全限制。
+一旦你识别并定义了不同的角色，就可以使用 `WEB-INF` 目录下 `web.xml` 文件中的 `<security-constraint>` 元素对不同的 Web 应用资源设置基于角色的安全限制。
 
 以下是 `web.xml` 中的示例条目：
 
@@ -4517,17 +4530,18 @@ Servlet 规范中的身份验证机制使用名为基于角色的安全（role-b
 <web-app>
 ...
   <security-constraint>
-    <web-resource-name>SecuredBookSite</web-resource-name>
-    <url-pattern>/secured/*</url-pattern>
-    <http-method>GET</http-method>
-    <http-method>POST</http-method>
-  </web-resource-collection>
-  <auth-constraint>
-    <description>
-      Let only managers use this app
-    </description>
-    <role-name>manager</role-name>
-  </auth-constraint>
+    <web-resource-collection>
+      <web-resource-name>SecuredBookSite</web-resource-name>
+      <url-pattern>/secured/*</url-pattern>
+      <http-method>GET</http-method>
+      <http-method>POST</http-method>
+    </web-resource-collection>
+    <auth-constraint>
+      <description>
+        Let only managers use this app
+      </description>
+      <role-name>manager</role-name>
+    </auth-constraint>
   </security-constraint>
 
   <security-role>
@@ -4546,16 +4560,15 @@ Servlet 规范中的身份验证机制使用名为基于角色的安全（role-b
 2. 具有 manager 角色的人员将获得访问受保护资源的权限。
 3. `login-config` 元素用于描述 BASIC 形式的身份验证。
 
-如果你正在浏览包括 `/security` 目录的任何 URL，将显示请求用户名和密码的对话框。如果你提供了用户 "admin" 和密码 "secret"，那么你就可以访问匹配 `/secured/` 的 URL，因为你已经定义了允许访问此资源的 manager 角色用户。
+如果你正在浏览包括 `/secured` 目录的任何 URL，将显示请求用户名和密码的对话框。如果你提供了用户 "admin" 和密码 "secret"，那么你就可以访问匹配 `/secured/` 的 URL，因为你已经定义了允许访问此资源的 manager 角色用户。
 
 ## 基于表单的认证
 
-当你使用该身份验证方法时，必须提供一个登录表单来提示用户输入用户名和密码。以下是 `login.jsp` 的简单代码。这有助于创建一个相同目的的表单——
+当你使用该身份验证方法时，必须提供一个登录表单来提示用户输入用户名和密码。以下是 `login.jsp` 的简单代码。这有助于创建一个相同目的的表单：
 
 ```html
 <html>
 <body bgcolor="#ffffff">
-
 <form method="POST" action="j_security_check">
 <table>
   <tr>
@@ -4569,14 +4582,13 @@ Servlet 规范中的身份验证机制使用名为基于角色的安全（role-b
 </table>
 <input type="submit" value="Login! (登录!)">
 </form>
-
 </body>
 </html>
 ```
 
-你必须确保登录表单必须包含 name 命名为 `j_username` 和 `j_password` 的表单元素（等等，更正：代码中写的是 `j_username` 和 `j_password`，所以是 `j_username` 和 `j_password`）。`<form>` 标签中的 `action` 必须是 `j_security_check`。
+你必须确保登录表单必须包含 name 命名为 `j_username` 和 `j_password` 的表单元素。`<form>` 标签中的 `action` 必须是 `j_security_check`。
 
-必须使用 POST 作为表单方法。同时，你将不得不修改`<login-config>` 标签将 `auth-method` 指定为 FORM ——
+必须使用 POST 作为表单方法。同时，你将不得不修改 `<login-config>` 标签将 `auth-method` 指定为 FORM：
 
 ```xml
 <web-app>
@@ -4606,42 +4618,38 @@ Servlet 规范中的身份验证机制使用名为基于角色的安全（role-b
 </web-app>
 ```
 
-如果你正在浏览包括 `/security` 目录的任何 URL，将显示请求用户名和密码的对话框。如果你提供了用户 "admin" 和密码 "secret"，那么你就可以访问匹配 `/secured/` 的 URL，因为你已经定义了允许访问此资源的 manager 角色用户。
+如果你正在浏览包括 `/secured` 目录的任何 URL，将显示登录表单。如果你提供了用户 "admin" 和密码 "secret"，那么你就可以访问匹配 `/secured/` 的 URL，因为你已经定义了允许访问此资源的 manager 角色用户。
 
-（注：原文中存在多处重复段落，已按要求去重处理）
-
-
-
-
+## 区域语言
 
 下划线。例如，“en_US”代表美国的英语区域。
 
 在构建全球网站时，有许多项目需要注意。本教程将不会提供这些细节，但将为你提供一个很好的示例，说明如何通过区分不同的位置（即区域语言，locale）向互联网社区提供不同语言的网页。
 
-JSP 可以根据请求者的区域语言（locale）选取站点版本，并根据当地语言、文化和需求提供相应的站点版本。以下是返回 `Locale` 对象的请求对象方法：`java.util.Locale.getLocale()`
+JSP 可以根据请求者的区域语言（locale）选取站点版本，并根据当地语言、文化和需求提供相应的站点版本。以下是返回 `Locale` 对象的请求对象方法：`request.getLocale()`
 
-## 检测区域语言 (Locale)
+## 检测区域语言
 
 以下是你可以用于检测请求者位置、语言以及区域语言的重要 locale 方法。以下所有方法都会显示请求者浏览器中设置的国家名称和语言。
 
 | 序号 | 方法与描述 |
 |---|---|
-| 1 | **String getCountry()**
-该方法返回该区域语言对应的、ISO 3166 2 位格式的大写国家/地区代码。 |
-| 2 | **String getDisplayCountry()**
-该方法返回一个适用于显示给用户的区域国家名称。 |
-| 3 | **String getLanguage()**
-该方法返回该区域语言对应的、ISO 639 格式的小写语言代码。 |
-| 4 | **String getDisplayLanguage()**
-该方法返回一个适用于显示给用户的区域语言名称。 |
-| 5 | **String getISO3Country()**
-该方法返回该区域语言国家的三位字母缩写。 |
-| 6 | **String getISO3Language()**
-该方法返回该区域语言的三位字母缩写。 |
+| 1 | **`String getCountry()`**<br>该方法返回该区域语言对应的、ISO 3166 2 位格式的大写国家/地区代码。 |
+| 2 | **`String getDisplayCountry()`**<br>该方法返回一个适用于显示给用户的区域国家名称。 |
+| 3 | **`String getLanguage()`**<br>该方法返回该区域语言对应的、ISO 639 格式的小写语言代码。 |
+| 4 | **`String getDisplayLanguage()`**<br>该方法返回一个适用于显示给用户的区域语言名称。 |
+| 5 | **`String getISO3Country()`**<br>该方法返回该区域语言国家的三位字母缩写。 |
+| 6 | **`String getISO3Language()`**<br>该方法返回该区域语言的三位字母缩写。 |
 
 ## 示例
 
 以下示例展示了如何在 JSP 中为请求显示语言及关联国家：
+
+
+
+# JSP 国际化示例
+
+## 检测区域设置
 
 ```jsp
 <%@ page import = "java.io.*,java.util.Locale" %>
@@ -4673,11 +4681,11 @@ out.print("Country : " + country + "<br/>");
 </html>
 ```
 
-## 语言设置 (Languages Setting)
+## 语言设置
 
-JSP 可以输出用西欧语言编写的页面，如英语、西班牙语、德语、法语、意大利语、荷兰语等。在这里设置 Content-Language 头部对于正确显示所有字符非常。
+JSP 可以输出用西欧语言编写的页面，如英语、西班牙语、德语、法语、意大利语、荷兰语等。在这里设置 `Content-Language` 头部对于正确显示所有字符非常重要。
 
-另一个重点点使用 HTML 实体显示所有特殊字符；例如，“&241;”代表“ñ”，“&161;”代表“¡”，如下所示：
+另一个重点是使用 HTML 实体显示所有特殊字符；例如，“`&#241;`”代表“ñ”，“`&#161;`”代表“¡”，如下所示：
 
 ```jsp
 <%@ page import = "java.io.*;java.util.Locale" %>
@@ -4713,14 +4721,14 @@ String title = "En Español";
 </html>
 ```
 
-## 特定区域日期 (Locale Specific Dates)
+## 特定区域日期
 
-你可以使用 `java.text.DateFormat` 类及其静态 `dateTimeInstance()` 方法来格式化特定区域的日期。以下是如何格式化给定区域日期的示例：
+你可以使用 `java.text.DateFormat` 类及其静态 `getDateTimeInstance()` 方法来格式化特定区域的日期。以下是如何格式化给定区域日期的示例：
 
 ```jsp
 <%@ page import = "java.io.*,java.util.Locale" %>
 <%@ page import = "javax.servlet.*,javax.servlet.http.*" %>
-<%@ page import = "java.text.java.util.Date" %>
+<%@ page import = "java.text.DateFormat,java.util.Date" %>
 <%
 String title = "Locale Dates";
 
@@ -4749,9 +4757,9 @@ locale).format(new Date());
 </html>
 ```
 
-## 特定区域货币 (Locale Specific Currency)
+## 特定区域货币
 
-你可以使用 `java.text.NumberFormat` 类及其静态 `getCurrencyInstance()` 方法将数字（long 或 double 类型）格式化为特定区域的货币。以下是格式化给定区域货币的示例：
+你可以使用 `java.text.NumberFormat` 类及其静态 `getCurrencyInstance()` 方法将数字（`long` 或 `double` 类型）格式化为特定区域的货币。以下是格式化给定区域货币的示例：
 
 ```jsp
 <%@ page import = "java.io.*,java.util.Locale" %>
@@ -4784,7 +4792,7 @@ String formattedCurr = nf.format(1000000);
 </html>
 ```
 
-## 特定区域百分比 (Locale Specific Percentage)
+## 特定区域百分比
 
 你可以使用 `java.text.NumberFormat` 类及其静态 `getInstance()` 方法获取特定区域的百分比。以下示例展示了如何格式化给定区域的百分比：
 
@@ -4818,4 +4826,3 @@ String formattedPerc = nf.format(0.51);
 </body>
 </html>
 ```
-

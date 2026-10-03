@@ -1,3 +1,4 @@
+
 # 2023 年学习的 5 本最好的 Scala 和函数式编程书籍
 
 > 原文：<https://medium.com/javarevisited/5-best-scala-and-functional-programming-books-to-learn-in-2021-97ec9e56f2bd?source=collection_archive---------0----------------------->
@@ -6,7 +7,7 @@
 
 [![](img/d6106c654f67d9e7ad3c49de99bf0dba.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Frock-the-jvm-scala-for-beginners%2F)
 
-大家好，如果你想在 2023 年学习 Scala 和函数式编程，并寻找最好的书籍和课程，那么你来对地方了。前面我分享了[为什么 Java 开发者要学习 Scala](/javarevisited/why-java-developer-should-learn-scala-programming-in-2020-3ca01a47eb0d) 以及面向 Java 开发者的 [**最佳 Scala 课程**](/javarevisited/10-best-scala-and-functional-programming-online-courses-for-beginners-b6461b27bf) ，而在这篇文章中，我将分享 2023 年面向初学者的**最佳 Scala 书籍**。
+大家好，如果你想在 2023 年学习 Scala 和函数式编程，并寻找最好的书籍和课程，那么你来对地方了。前面我分享了[为什么 Java 开发者要学习 Scala](/javarevisited/why-java-developer-should-learn-scala-programming-in-2020-3ca01a47eb0d) 以及面向 Java 开发者的[**最佳 Scala 课程**](/javarevisited/10-best-scala-and-functional-programming-online-courses-for-beginners-b6461b27bf) ，而在这篇文章中，我将分享 2023 年面向初学者的**最佳 Scala 书籍**。
 
 Scala 是相对较新的编程语言之一，它包含了许多编程语言的最佳实践。 [Scala](https://javarevisited.blogspot.com/2018/01/10-reasons-to-learn-scala-programming.html) 最大的优势在于它提供了[面向对象编程](/javarevisited/my-favorite-courses-to-learn-object-oriented-programming-and-design-in-2019-197bab351733?source=---------103------------------)和[函数式编程](/javarevisited/8-best-lambdas-stream-and-functional-programming-courses-for-java-developers-3d1836a97a1d)的完美融合。
 
@@ -20,7 +21,7 @@ Scala 是相对较新的编程语言之一，它包含了许多编程语言的�
 
 尽管网上有很多免费资料，甚至 Scala 文档也是学习 Scala 的绝佳来源，但我发现从书中学习是学习新编程语言的最佳方式，但如果你喜欢在线课程，那么你可以查看一下 [**摇滚 JVM！Udemy 上的 Scala 和函数式编程初学者**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Frock-the-jvm-scala-for-beginners%2F) 课程。
 
-<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Frock-the-jvm-scala-for-beginners%2F>  
+<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Frock-the-jvm-scala-for-beginners%2F>
 
 # 2023 年面向初学者的前 5 本 Scala 和函数式编程书籍
 
@@ -30,7 +31,7 @@ Scala 是相对较新的编程语言之一，它包含了许多编程语言的�
 
 很多程序员认为仅仅学习像 **case 类**、 **traits** 、 **scala collection** 、 **optional** 这样的 scala 基础知识就足以获得一份 scala 程序员的工作，但事实并非如此。
 
-如果你真的想成为一名 Scala 开发者，你必须理解函数式编程的概念，比如映射(map)、[归约(reduce)](https://www.java67.com/2016/09/map-reduce-example-java8.html)、折叠(fold)、[平面映射(flat map)](http://www.java67.com/2016/03/how-to-use-flatmap-in-java-8-stream.html)、单子(monads)以及 [lambda](/javarevisited/7-best-java-tutorials-and-books-to-learn-lambda-expression-and-stream-api-and-other-features-3083e6038e14?source=---------14------------------) 。仅仅学习 Scala 基础知识不足以在 Twitter、Linked In 或 Intel 上找到一份 Scala 编程工作。
+如果你真的想成为一名 Scala 开发者，你必须理解函数式编程的概念，比如映射(`map`)、[归约(`reduce`)](https://www.java67.com/2016/09/map-reduce-example-java8.html)、折叠(`fold`)、[平面映射(`flat map`)](http://www.java67.com/2016/03/how-to-use-flatmap-in-java-8-stream.html)、单子(`monads`)以及 [lambda](/javarevisited/7-best-java-tutorials-and-books-to-learn-lambda-expression-and-stream-api-and-other-features-3083e6038e14?source=---------14------------------) 。仅仅学习 Scala 基础知识不足以在 Twitter、Linked In 或 Intel 上找到一份 Scala 编程工作。
 
 不管怎样，现在让我们从书开始:
 
@@ -46,9 +47,9 @@ Scala 是相对较新的编程语言之一，它包含了许多编程语言的�
 
 [![](img/ee6a0a3966f4def01a785e62f2751dde.png)](https://www.amazon.sg/Programming-Scala-Fourth-Martin-Odersky-dp-098153161X/dp/098153161X?tag=javamysqlanta-20)
 
-简而言之，Martin Odersky、Lex Spoon 和 Bill Venners 的《Scala 第三版编程》是 Scala 程序员的必读书籍，如果你想学得更好，可以将这本书与[**Rock JVM 结合起来！Udemy 上的 Scala 和函数式编程初学者**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Frock-the-jvm-scala-for-beginners%2F) 课程。
+简而言之，Martin Odersky、Lex Spoon 和 Bill Venners 的《Scala 第三版编程》是 Scala 程序员的必读书籍，如果你想学得更好，可以将这本书与[**Rock JVM！Udemy 上的 Scala 和函数式编程初学者**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Frock-the-jvm-scala-for-beginners%2F) 课程。
 
-<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Frock-the-jvm-scala-for-beginners%2F>  
+<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Frock-the-jvm-scala-for-beginners%2F>
 
 ## 2.Scala 中的函数式编程
 
@@ -109,24 +110,29 @@ Scala 是相对较新的编程语言之一，它包含了许多编程语言的�
 *因此，祝 Scala 一切顺利，有更好的工作和更高的薪水。
 
 **进修**
+
 [Scala:入门](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fscala-getting-started)
+
 [学以致用:Scala](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Flearn-by-example-scala%2F)
-[摇滚 JVM！Scala 与函数式编程初学者](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Frock-the-jvm-scala-for-beginners%2F)
 
-其他**我推荐的书籍**你可能喜欢去探究*
 
-*   *[2023 年学习 Spring 框架的前 5 本书](http://www.java67.com/2016/12/5-spring-framework-books-for-java-programmers.html)*
-*   *[2023 年学习核心 Java 的前 5 本书](http://javarevisited.blogspot.sg/2017/02/top-5-core-java-books-for-beginners.html)*
-*   *[我最喜欢的书学习 Spring Boot 和春云](/hackernoon/top-5-spring-boot-and-spring-cloud-books-for-java-developers-75df155dcedc?source=---------23------------------)*
-*   *[程序员最好的 10 本算法书](http://www.java67.com/2015/09/top-10-algorithm-books-every-programmer-read-learn.html)*
-*   *[学习 Linux 和 UNIX 基本技能的 10 本书](http://javarevisited.blogspot.sg/2017/01/top-10-unix-and-linux-system-programming-books-best-of-lot-must-read.html)*
-*   *[学习 REST 和 RESTful Web 服务的 5 本书](http://javarevisited.blogspot.sg/2017/02/top-5-books-to-learn-rest-and-restful-web-services-in-java.html)*
-*   *[提高你的编码技能的 5 本书](http://www.java67.com/2016/02/5-books-to-improve-coding-skills-of.html)*
-*   *[每个 Java 开发人员都应该阅读的 10 本最佳书籍](/swlh/top-10-java-books-for-programmers-all-time-great-82b0ee0b831a?source=---------126------------------)*
-*   *每个程序员都应该读的 10 本书*
-*   *[面向有经验开发人员的 5 本高级 SQL 书籍](http://www.java67.com/2017/02/2-best-books-to-learn-hibernate-for-Java-Developers.html)*
-*   *[掌握 Java 编程语言的 10 本书](http://www.java67.com/2017/01/12-advanced-java-programming-books-for-experienced-programmers.html)*
 
-***附言——**如果你正在寻找一份 Scala 的工作，你可能想练习一些常见的 Scala 面试问题，这些问题已经被很多公司要求了。你可以在这里查看它们[，如果你需要一些学习 Scala 的在线课程，可以查看](http://javarevisited.blogspot.sg/2017/03/top-30-scala-and-functional-programming.html) [**摇滚 JVM！Udemy 上的 Scala 和函数式编程初学者**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Frock-the-jvm-scala-for-beginners%2F) 课程。*
+# [摇滚 JVM！Scala 与函数式编程初学者](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Frock-the-jvm-scala-for-beginners%2F)
 
-*<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Frock-the-jvm-scala-for-beginners%2F> *
+其他**我推荐的书籍**你可能喜欢去探究：
+
+- [2023 年学习 Spring 框架的前 5 本书](http://www.java67.com/2016/12/5-spring-framework-books-for-java-programmers.html)
+- [2023 年学习核心 Java 的前 5 本书](http://javarevisited.blogspot.sg/2017/02/top-5-core-java-books-for-beginners.html)
+- [我最喜欢的书学习 Spring Boot 和春云](/hackernoon/top-5-spring-boot-and-spring-cloud-books-for-java-developers-75df155dcedc?source=---------23------------------)
+- [程序员最好的 10 本算法书](http://www.java67.com/2015/09/top-10-algorithm-books-every-programmer-read-learn.html)
+- [学习 Linux 和 UNIX 基本技能的 10 本书](http://javarevisited.blogspot.sg/2017/01/top-10-unix-and-linux-system-programming-books-best-of-lot-must-read.html)
+- [学习 REST 和 RESTful Web 服务的 5 本书](http://javarevisited.blogspot.sg/2017/02/top-5-books-to-learn-rest-and-restful-web-services-in-java.html)
+- [提高你的编码技能的 5 本书](http://www.java67.com/2016/02/5-books-to-improve-coding-skills-of.html)
+- [每个 Java 开发人员都应该阅读的 10 本最佳书籍](/swlh/top-10-java-books-for-programmers-all-time-great-82b0ee0b831a?source=---------126------------------)
+- 每个程序员都应该读的 10 本书
+- [面向有经验开发人员的 5 本高级 SQL 书籍](http://www.java67.com/2017/02/2-best-books-to-learn-hibernate-for-Java-Developers.html)
+- [掌握 Java 编程语言的 10 本书](http://www.java67.com/2017/01/12-advanced-java-programming-books-for-experienced-programmers.html)
+
+**附言**——如果你正在寻找一份 Scala 的工作，你可能想练习一些常见的 Scala 面试问题，这些问题已经被很多公司要求了。你可以在这里查看它们，如果你需要一些学习 Scala 的在线课程，可以查看[**摇滚 JVM！Udemy 上的 Scala 和函数式编程初学者**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Frock-the-jvm-scala-for-beginners%2F)课程。
+
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Frock-the-jvm-scala-for-beginners%2F>

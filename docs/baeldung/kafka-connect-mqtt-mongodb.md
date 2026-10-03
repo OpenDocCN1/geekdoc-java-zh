@@ -1,8 +1,9 @@
+
 # Kafka 与 MQTT 和 MongoDB 的连接示例
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/kafka-connect-mqtt-mongodb>
 
-## 1。概述
+## 1. 概述
 
 在之前的一篇文章中，我们对 Kafka Connect 进行了快速介绍，包括不同类型的连接器、Connect 的基本特性以及 REST API。
 
@@ -10,21 +11,21 @@
 
 我们将使用连接器通过 MQTT 收集数据，并将收集的数据写入 MongoDB。
 
-## 2。使用 Docker 进行设置
+## 2. 使用 Docker 进行设置
 
 我们将使用 [Docker Compose](https://web.archive.org/web/20220628150737/https://docs.docker.com/compose/) 来建立基础设施。其中包括作为源的 MQTT 代理、Zookeeper、一个 Kafka 代理以及作为中间件的 Kafka Connect，最后还有一个 MongoDB 实例，其中包括作为接收器的 GUI 工具。
 
-### 2.1。连接器安装
+### 2.1. 连接器安装
 
 在我们的例子中，MQTT source 和 MongoDB sink 连接器所需的连接器不包含在 plain Kafka 或 Confluent Platform 中。
 
-正如我们在上一篇文章中讨论的，我们可以从汇合中心下载连接器( [MQTT](https://web.archive.org/web/20220628150737/https://www.confluent.io/connector/kafka-connect-mqtt/) 以及 [MongoDB](https://web.archive.org/web/20220628150737/https://www.confluent.io/connector/kafka-connect-mongodb-sink/) )。之后，我们必须将 jar 解压缩到一个文件夹中，在下一节中，我们将把这个文件夹安装到 Kafka Connect 容器中。
+正如我们在上一篇文章中讨论的，我们可以从汇合中心下载连接器（[MQTT](https://web.archive.org/web/20220628150737/https://www.confluent.io/connector/kafka-connect-mqtt/) 以及 [MongoDB](https://web.archive.org/web/20220628150737/https://www.confluent.io/connector/kafka-connect-mongodb-sink/)）。之后，我们必须将 jar 解压缩到一个文件夹中，在下一节中，我们将把这个文件夹安装到 Kafka Connect 容器中。
 
 让我们使用文件夹`/tmp/custom/jars`来做这件事。在下面的部分中，我们必须在启动 compose 栈之前将 jar 移动到那里，因为 Kafka Connect 在启动期间在线加载连接器。
 
-### 2.2 .坞站构成文件
+### 2.2. 坞站构成文件
 
-我们将我们的设置描述为一个简单的 Docker 合成文件，它由六个容器组成:
+我们将我们的设置描述为一个简单的 Docker 合成文件，它由六个容器组成：
 
 ```java
 version: '3.3'
@@ -131,25 +132,25 @@ services:
 
 最后，`mongo-db`定义了我们的接收器数据库，以及基于 web 的`mongoclient`，它帮助我们验证发送的数据是否正确到达数据库。
 
-我们可以使用以下命令启动堆栈:
+我们可以使用以下命令启动堆栈：
 
 ```java
 docker-compose up
 ```
 
-## 3。连接器配置
+## 3. 连接器配置
 
 由于 Kafka Connect 现在已经启动并运行，我们现在可以配置连接器了。
 
-### 3.1。配置源连接器
+### 3.1. 配置源连接器
 
-让我们使用 REST API 配置源连接器:
+让我们使用 REST API 配置源连接器：
 
 ```java
-curl -d @<path-to-config-file>/connect-mqtt-source.json -H "Content-Type: application/json" -X POST http://localhost:8083/connectors
+curl -d @<path-to-config-file>/connect-mqtt-source.json -H "Content-Type: application/json" -X POST http://localhost:8083/connectors
 ```
 
-我们的`connect-mqtt-source.json`文件看起来像这样:
+我们的`connect-mqtt-source.json`文件看起来像这样：
 
 ```java
 {
@@ -167,27 +168,27 @@ curl -d @<path-to-config-file>/connect-mqtt-source.json -H "Content-Type: appli
 }
 ```
 
-有几个我们以前没有使用过的属性:
+有几个我们以前没有使用过的属性：
 
 *   `mqtt.server.uri`是我们的连接器将要连接的端点
 *   `mqtt.topics`是我们的连接器将订阅的 MQTT 主题
 *   `kafka.topic`定义连接器将接收的数据发送到的 Kafka 主题
 *   `value.converter`定义一个将应用于接收到的有效载荷的转换器。我们需要`ByteArrayConverter`，因为 MQTT 连接器默认使用 Base64，而我们希望使用纯文本
 *   最新版本的连接器需要`confluent.topic.bootstrap.servers`
-*   这同样适用于`confluent.topic.replication.factor`:它定义了一个汇合内部主题的复制因子——因为我们的集群中只有一个节点，所以我们必须将该值设置为 1
+*   这同样适用于`confluent.topic.replication.factor`：它定义了一个汇合内部主题的复制因子——因为我们的集群中只有一个节点，所以我们必须将该值设置为 1
 
-### 3.2。测试源连接器
+### 3.2. 测试源连接器
 
-让我们通过向 MQTT 代理发布一条短消息来运行一个快速测试:
+让我们通过向 MQTT 代理发布一条短消息来运行一个快速测试：
 
 ```java
 docker run \
 -it --rm --name mqtt-publisher --network 04_custom_default \
 efrecon/mqtt-client \
-pub -h mosquitto  -t "baeldung" -m "{\"id\":1234,\"message\":\"This is a test\"}"
+pub -h mosquitto -t "baeldung" -m "{\"id\":1234,\"message\":\"This is a test\"}"
 ```
 
-而如果我们听题目，`connect-custom`:
+而如果我们听题目，`connect-custom`：
 
 ```java
 docker run \
@@ -198,15 +199,15 @@ kafka-console-consumer --network 04_custom_default --bootstrap-server kafka:9092
 
 然后我们应该会看到我们的测试消息。
 
-### 3.3。设置接收器连接器
+### 3.3. 设置接收器连接器
 
-接下来，我们需要我们的接收器连接器。让我们再次使用 REST API:
+接下来，我们需要我们的接收器连接器。让我们再次使用 REST API：
 
 ```java
-curl -d @<path-to-config file>/connect-mongodb-sink.json -H "Content-Type: application/json" -X POST http://localhost:8083/connectors
+curl -d @<path-to-config file>/connect-mongodb-sink.json -H "Content-Type: application/json" -X POST http://localhost:8083/connectors
 ```
 
-我们的`connect-mongodb-sink.json`文件看起来像这样:
+我们的`connect-mongodb-sink.json`文件看起来像这样：
 
 ```java
 {
@@ -225,22 +226,22 @@ curl -d @<path-to-config file>/connect-mongodb-sink.json -H "Content-Type: appl
 }
 ```
 
-这里我们有以下特定于 MongoDB 的属性:
+这里我们有以下特定于 MongoDB 的属性：
 
 *   `mongodb.connection.uri`包含我们的 MongoDB 实例的连接字符串
 *   `mongodb.collection`定义集合
 *   由于 MongoDB 连接器期待 JSON，我们必须为`key.converter`和`value.converter`设置`JsonConverter`
 *   而且我们还需要 MongoDB 的无模式 JSON，所以我们必须将`key.converter.schemas.enable`和`value.converter.schemas.enable`设置为`false`
 
-### 3.4。测试接收器连接器
+### 3.4. 测试接收器连接器
 
 由于我们的主题`connect-custom`已经包含来自 MQTT 连接器测试的消息，**MongoDB 连接器应该在创建**之后直接获取它们。
 
 因此，我们应该立即在 MongoDB 中找到它们。**我们可以使用网络界面，打开网址 [`http://localhost:3000/`](https://web.archive.org/web/20220628150737/http://localhost:3000/) 。**登录后，我们可以在左侧选择我们的`MyCollection`，点击`Execute`，我们的测试信息应该会显示出来。
 
-### 3.5。端到端测试
+### 3.5. 端到端测试
 
-现在，我们可以使用 MQTT 客户机发送任何 JSON 结构:
+现在，我们可以使用 MQTT 客户机发送任何 JSON 结构：
 
 ```java
 {
@@ -270,9 +271,11 @@ MongoDB 支持无模式的 JSON 文档，当我们为转换器禁用模式时，
 
 同样，我们可以在 [`http://localhost:3000/`](https://web.archive.org/web/20220628150737/http://localhost:3000/) 使用 web 界面。
 
-### 3.6。清理
+### 3.6. 清理
 
-一旦我们完成，我们可以清理我们的实验，并删除两个连接器:
+一旦我们完成，我们可以清理我们的实验，并删除两个连接器：
+
+
 
 ```java
 curl -X DELETE http://localhost:8083/connectors/mqtt-source
@@ -281,7 +284,7 @@ curl -X DELETE http://localhost:8083/connectors/mongodb-sink
 
 之后，我们可以用`Ctrl + C`关闭 Compose 栈。
 
-## 4。结论
+## 4. 结论
 
 在本教程中，我们使用 Kafka Connect 构建了一个示例，通过 MQTT 收集数据，并将收集的数据写入 MongoDB。
 

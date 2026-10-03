@@ -1,3 +1,4 @@
+
 # 如何使用分隔符
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/components/separator.html`](https://docs.oracle.com/javase/tutorial/uiswing/components/separator.html)
@@ -22,10 +23,9 @@ menu.add(cbMenuItem1);
 menu.add(cbMenuItem2);
 menu.addSeparator();
 menu.add(submenu);
-
 ```
 
-将分隔符添加到工具栏类似。您可以在菜单和工具栏的操作部分找到完整的代码解释。如果您想对菜单和工具栏中的分隔符有更多控制，可以直接使用实现它们的`JSeparator`子类：[JPopupMenu.Separator](https://docs.oracle.com/javase/8/docs/api/javax/swing/JPopupMenu.Separator.html)和[JToolBar.Separator](https://docs.oracle.com/javase/8/docs/api/javax/swing/JToolBar.Separator.html)。特别是，`JToolBar.Separator`具有用于指定分隔符大小的 API。
+将分隔符添加到工具栏类似。您可以在菜单和工具栏的操作部分找到完整的代码解释。如果您想对菜单和工具栏中的分隔符有更多控制，可以直接使用实现它们的`JSeparator`子类：[`JPopupMenu.Separator`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JPopupMenu.Separator.html)和[`JToolBar.Separator`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JToolBar.Separator.html)。特别是，`JToolBar.Separator`具有用于指定分隔符大小的 API。
 
 ## 使用 JSeparator
 
@@ -50,10 +50,9 @@ buttonPane.add(Box.createHorizontalStrut(5));
 buttonPane.add(employeeName);
 buttonPane.add(hireButton);
 buttonPane.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
-
 ```
 
-正如代码所示，按钮、分隔符和文本字段都共享一个容器  一个使用从左到右的盒式布局的 `JPanel` 实例。由于布局管理器（以及分隔符具有无限的最大尺寸），分隔符会自动调整为其可用的显示区域一样高。
+正如代码所示，按钮、分隔符和文本字段都共享一个容器 — 一个使用从左到右的盒式布局的`JPanel`实例。由于布局管理器（以及分隔符具有无限的最大尺寸），分隔符会自动调整为其可用的显示区域一样高。
 
 在上述代码中，水平支撑是不可见的组件，用于在分隔符周围提供空间。5 像素的空边框在面板周围提供缓冲，并防止分隔符延伸到其上方的组件和下方窗口的边缘。
 
@@ -75,40 +74,26 @@ panel.add(new JSeparator(JSeparator.VERTICAL),
           BorderLayout.LINE_START);
 panel.add(addressDisplay,
           BorderLayout.CENTER);
-
 ```
 
-与上一个示例一样，面板使用空边框，以便分隔符不会延伸到其容器的边缘。将分隔符放在由 `BorderLayout` 控制的容器的最左侧区域使分隔符与容器中心的地址显示组件一样高。有关边框布局工作原理的详细信息，请参阅如何使用 BorderLayout。
+与上一个示例一样，面板使用空边框，以便分隔符不会延伸到其容器的边缘。将分隔符放在由`BorderLayout`控制的容器的最左侧区域使分隔符与容器中心的地址显示组件一样高。有关边框布局工作原理的详细信息，请参阅如何使用 BorderLayout。
 
 ## 分隔符 API
 
 使用分隔符的 API 很少，因为它们没有内容，也不响应用户输入。
 
-创建和初始化分隔符
+### 创建和初始化分隔符
 
 | 构造函数或方法 | 目的 |
 | --- | --- |
-
-| [void addSeparator()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JToolBar.html#addSeparator--) [void addSeparator(Dimension)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JToolBar.html#addSeparator-java.awt.Dimension-)
-
-*(在 `JToolBar` 中)* | 在工具栏的当前末尾附加一个工具栏分隔符（在大多数情况下是不可见的），可选参数指定分隔符的大小。此方法的无参数版本使用默认大小的分隔符，由当前外观和感觉确定。 |
-
-| [void addSeparator()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JMenu.html#addSeparator--) [void insertSeparator(int)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JMenu.html#insertSeparator-int-)
-
-*(在 `JMenu` 中)* | 在菜单中放置一个分隔符。`addSeparator` 方法将分隔符放在菜单的当前末尾。`insertSeparator` 方法在指定位置将分隔符插入菜单中。 |
-
-| [void addSeparator()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JPopupMenu.html#addSeparator--) *(在 `JPopupMenu` 中)* | 在弹出菜单的当前末尾放置一个分隔符。 |
-| --- | --- |
-| [JSeparator()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JSeparator.html#JSeparator--) [JSeparator(int)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JSeparator.html#JSeparator-int-) | 创建一个分隔符。如果不指定参数，分隔符是水平的。参数可以是`SwingConstants.HORIZONTAL`或`SwingConstants.VERTICAL`。 |
-
-| [void setOrientation(int)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JSeparator.html#setOrientation-int-) [int getOrientation()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JSeparator.html#getOrientation--)
-
-*(在`JSeparator`中)* | 获取或设置分隔符的方向，可以是`SwingConstants.HORIZONTAL`或`SwingConstants.VERTICAL`。 |
-
-| [JToolBar.Separator()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JToolBar.Separator.html#JToolBar.Separator--) [JToolBar.Separator(Dimension)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JToolBar.Separator.html#JToolBar.Separator-java.awt.Dimension-) | 创建用于工具栏的分隔符。可选参数指定分隔符的大小。 |
-| --- | --- |
-| [setSeparatorSize(Dimension)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JToolBar.Separator.html#setSeparatorSize-java.awt.Dimension-) *(在`JToolBar.Separator`中)* | 指定分隔符的大小。更具体地说，指定的`Dimension`用作分隔符的最小、首选和最大大小。 |
-| [JPopupMenu.Separator()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JPopupMenu.Separator.html#JPopupMenu.Separator--) | 创建用于菜单的分隔符。 |
+| [`void addSeparator()`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JToolBar.html#addSeparator--) [`void addSeparator(Dimension)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JToolBar.html#addSeparator-java.awt.Dimension-) *(在`JToolBar`中)* | 在工具栏的当前末尾附加一个工具栏分隔符（在大多数情况下是不可见的），可选参数指定分隔符的大小。此方法的无参数版本使用默认大小的分隔符，由当前外观和感觉确定。 |
+| [`void addSeparator()`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JMenu.html#addSeparator--) [`void insertSeparator(int)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JMenu.html#insertSeparator-int-) *(在`JMenu`中)* | 在菜单中放置一个分隔符。`addSeparator`方法将分隔符放在菜单的当前末尾。`insertSeparator`方法在指定位置将分隔符插入菜单中。 |
+| [`void addSeparator()`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JPopupMenu.html#addSeparator--) *(在`JPopupMenu`中)* | 在弹出菜单的当前末尾放置一个分隔符。 |
+| [`JSeparator()`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JSeparator.html#JSeparator--) [`JSeparator(int)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JSeparator.html#JSeparator-int-) | 创建一个分隔符。如果不指定参数，分隔符是水平的。参数可以是`SwingConstants.HORIZONTAL`或`SwingConstants.VERTICAL`。 |
+| [`void setOrientation(int)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JSeparator.html#setOrientation-int-) [`int getOrientation()`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JSeparator.html#getOrientation--) *(在`JSeparator`中)* | 获取或设置分隔符的方向，可以是`SwingConstants.HORIZONTAL`或`SwingConstants.VERTICAL`。 |
+| [`JToolBar.Separator()`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JToolBar.Separator.html#JToolBar.Separator--) [`JToolBar.Separator(Dimension)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JToolBar.Separator.html#JToolBar.Separator-java.awt.Dimension-) | 创建用于工具栏的分隔符。可选参数指定分隔符的大小。 |
+| [`setSeparatorSize(Dimension)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JToolBar.Separator.html#setSeparatorSize-java.awt.Dimension-) *(在`JToolBar.Separator`中)* | 指定分隔符的大小。更具体地说，指定的`Dimension`用作分隔符的最小、首选和最大大小。 |
+| [`JPopupMenu.Separator()`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JPopupMenu.Separator.html#JPopupMenu.Separator--) | 创建用于菜单的分隔符。 |
 
 ## 使用分隔符的示例
 

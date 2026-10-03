@@ -1,4 +1,5 @@
-# 使用@Valid 和@Validated 注释是否有误？
+
+# 使用`@Valid`和`@Validated`注释是否有误？
 
 > 原文：<https://medium.com/javarevisited/are-you-using-valid-and-validated-annotations-wrong-b4a35ac1bca4?source=collection_archive---------0----------------------->
 

@@ -1,16 +1,18 @@
-# JMapper 指南
+
+
+## JMapper 指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/jmapper>
 
-## 1。概述
+### 1. 概述
 
 在本教程中，我们将探索一个快速易用的映射框架。
 
-我们将讨论配置 JMapper 的不同方法，如何执行定制转换，以及关系映射。
+我们将讨论配置`JMapper`的不同方法，如何执行定制转换，以及关系映射。
 
-## 2。Maven 配置
+### 2. Maven 配置
 
-首先，我们需要将 [JMapper 依赖关系](https://web.archive.org/web/20221127215441/https://search.maven.org/classic/#search%7Cga%7C1%7Cjmapper-core)添加到我们的`pom.xml`:
+首先，我们需要将[JMapper 依赖关系](https://web.archive.org/web/20221127215441/https://search.maven.org/classic/#search%7Cga%7C1%7Cjmapper-core)添加到我们的`pom.xml`:
 
 ```java
 <dependency>
@@ -20,7 +22,7 @@
 </dependency>
 ```
 
-## 3。源模型和目的模型
+### 3. 源模型和目的模型
 
 在我们开始配置之前，让我们看一下我们将在本教程中使用的简单 beans。
 
@@ -34,7 +36,7 @@ public class User {
 }
 ```
 
-还有我们的目的地比恩，`UserDto:`
+还有我们的目的地 bean，`UserDto`:
 
 ```java
 public class UserDto {
@@ -45,15 +47,15 @@ public class UserDto {
 
 **我们将使用这个库将属性从我们的源 bean `User`映射到我们的目的 bean `UserDto`。**
 
-配置 JMapper 有三种方式:通过使用 API、注释和 XML 配置。
+配置`JMapper`有三种方式：通过使用 API、注释和 XML 配置。
 
 在接下来的几节中，我们将逐一介绍这些内容。
 
-## 4。使用 API
+### 4. 使用 API
 
 让我们看看如何使用 API 配置`JMapper`。
 
-这里，我们不需要向源类和目的类添加任何配置。相反，所有的**配置都可以使用** `**JMapperAPI**,`来完成，这使得它成为最灵活的配置方法:
+这里，我们不需要向源类和目的类添加任何配置。相反，所有的**配置都可以使用** `JMapperAPI`**来完成**，这使得它成为最灵活的配置方法：
 
 ```java
 @Test
@@ -65,7 +67,7 @@ public void givenUser_whenUseApi_thenConverted(){
 
     JMapper<UserDto, User> userMapper = new JMapper<>
       (UserDto.class, User.class, jmapperApi);
-    User user = new User(1L,"[[email protected]](/web/20221127215441/https://www.baeldung.com/cdn-cgi/l/email-protection)", LocalDate.of(1980,8,20));
+    User user = new User(1L,"[[email protected]](/web/20221127215441/https://www.baeldung.com/cdn-cgi/l/email-protection)", LocalDate.of(1980,8,20));
     UserDto result = userMapper.getDestination(user);
 
     assertEquals(user.getId(), result.getId());
@@ -73,13 +75,13 @@ public void givenUser_whenUseApi_thenConverted(){
 }
 ```
 
-这里，我们使用`mappedClass()`方法来定义我们的映射类`UserDto.`，然后，我们使用`attribute()`方法来定义每个属性及其映射值。
+这里，我们使用`mappedClass()`方法来定义我们的映射类`UserDto`。然后，我们使用`attribute()`方法来定义每个属性及其映射值。
 
 接下来，我们基于配置创建了一个`JMapper`对象，并使用它的`getDestination()`方法来获得`UserDto`结果。
 
-## 5。使用注释
+### 5. 使用注释
 
-让我们看看**如何使用`@JMap`注释来配置我们的映射**:
+让我们看看**如何使用`@JMap`注释来配置我们的映射**：
 
 ```java
 public class UserDto {  
@@ -97,7 +99,7 @@ public class UserDto {
 @Test
 public void givenUser_whenUseAnnotation_thenConverted(){
     JMapper<UserDto, User> userMapper = new JMapper<>(UserDto.class, User.class);
-    User user = new User(1L,"[[email protected]](/web/20221127215441/https://www.baeldung.com/cdn-cgi/l/email-protection)", LocalDate.of(1980,8,20));
+    User user = new User(1L,"[[email protected]](/web/20221127215441/https://www.baeldung.com/cdn-cgi/l/email-protection)", LocalDate.of(1980,8,20));
     UserDto result = userMapper.getDestination(user);
 
     assertEquals(user.getId(), result.getId());
@@ -107,15 +109,15 @@ public void givenUser_whenUseAnnotation_thenConverted(){
 
 注意，对于`id`属性，我们不需要提供目标字段名，因为它与源 bean 同名，而对于`username`字段，我们提到它对应于`User`类中的`email`字段。
 
-然后，**我们只需要将源 beanss 和目的 bean 传递给我们的`JMapper`**——不需要进一步的配置。
+然后，**我们只需要将源 bean 和目的 bean 传递给我们的`JMapper`**——不需要进一步的配置。
 
 总的来说，这种方法很方便，因为它使用的代码最少。
 
-## 6。使用 XML 配置
+### 6. 使用 XML 配置
 
 我们还可以使用 XML 配置来定义我们的映射。
 
-下面是我们在`user_jmapper.xml`的示例 XML 配置:
+下面是我们在`user_jmapper.xml`的示例 XML 配置：
 
 ```java
 <jmapper>
@@ -137,7 +139,7 @@ public void givenUser_whenUseAnnotation_thenConverted(){
 public void givenUser_whenUseXml_thenConverted(){
     JMapper<UserDto, User> userMapper = new JMapper<>
       (UserDto.class, User.class,"user_jmapper.xml");
-    User user = new User(1L,"[[email protected]](/web/20221127215441/https://www.baeldung.com/cdn-cgi/l/email-protection)", LocalDate.of(1980,8,20));
+    User user = new User(1L,"[[email protected]](/web/20221127215441/https://www.baeldung.com/cdn-cgi/l/email-protection)", LocalDate.of(1980,8,20));
     UserDto result = userMapper.getDestination(user);
 
     assertEquals(user.getId(), result.getId());
@@ -147,9 +149,9 @@ public void givenUser_whenUseXml_thenConverted(){
 
 我们也可以将 XML 配置作为一个`String`直接传递给`JMapper`，而不是一个文件名。
 
-## 7。全球地图
+### 7. 全局地图
 
-如果在源 beanss 和目标 bean 中有多个同名字段，我们可以利用全局映射。
+如果在源 bean 和目标 bean 中有多个同名字段，我们可以利用全局映射。
 
 例如，如果我们有一个包含两个字段`id`和`email`的`UserDto1`:
 
@@ -164,7 +166,7 @@ public class UserDto1 {
 
 全局映射将更容易使用，因为它们被映射到在`User`源 bean 中具有相同名称的字段。
 
-### 7.1。使用 API
+#### 7.1. 使用 API
 
 对于`JMapperAPI`配置，我们将使用`global()`:
 
@@ -175,7 +177,7 @@ public void givenUser_whenUseApiGlobal_thenConverted() {
       .add(mappedClass(UserDto.class).add(global())) ;
     JMapper<UserDto1, User> userMapper1 = new JMapper<>
       (UserDto1.class, User.class,jmapperApi);
-    User user = new User(1L,"[[email protected]](/web/20221127215441/https://www.baeldung.com/cdn-cgi/l/email-protection)", LocalDate.of(1980,8,20));
+    User user = new User(1L,"[[email protected]](/web/20221127215441/https://www.baeldung.com/cdn-cgi/l/email-protection)", LocalDate.of(1980,8,20));
     UserDto1 result = userMapper1.getDestination(user);
 
     assertEquals(user.getId(), result.getId());
@@ -183,9 +185,9 @@ public void givenUser_whenUseApiGlobal_thenConverted() {
 }
 ```
 
-### 7.2。使用注释
+#### 7.2. 使用注释
 
-对于注释配置，我们将在类级别使用`@JGlobalMap` :
+对于注释配置，我们将在类级别使用`@JGlobalMap`：
 
 ```java
 @JGlobalMap
@@ -195,7 +197,7 @@ public class UserDto1 {
 }
 ```
 
-这里有一个简单的测试:
+这里有一个简单的测试：
 
 ```java
 @Test
@@ -203,7 +205,7 @@ public void whenUseGlobalMapAnnotation_thenConverted(){
     JMapper<UserDto1, User> userMapper= new JMapper<>(
       UserDto1.class, User.class);
     User user = new User(
-      1L,"[[email protected]](/web/20221127215441/https://www.baeldung.com/cdn-cgi/l/email-protection)", LocalDate.of(1980,8,20));
+      1L,"[[email protected]](/web/20221127215441/https://www.baeldung.com/cdn-cgi/l/email-protection)", LocalDate.of(1980,8,20));
     UserDto1 result = userMapper.getDestination(user);
 
     assertEquals(user.getId(), result.getId());
@@ -211,9 +213,9 @@ public void whenUseGlobalMapAnnotation_thenConverted(){
 }
 ```
 
-### 7.3。XML 配置
+#### 7.3. XML 配置
 
-对于 XML 配置，我们有`<global/>`元素:
+对于 XML 配置，我们有`<global/>`元素：
 
 ```java
 <jmapper>
@@ -223,14 +225,14 @@ public void whenUseGlobalMapAnnotation_thenConverted(){
 </jmapper>
 ```
 
-然后传递 XML 文件名:
+然后传递 XML 文件名：
 
 ```java
 @Test
 public void givenUser_whenUseXmlGlobal_thenConverted(){
     JMapper<UserDto1, User> userMapper = new JMapper<>
       (UserDto1.class, User.class,"user_jmapper1.xml");
-    User user = new User(1L,"[[email protected]](/web/20221127215441/https://www.baeldung.com/cdn-cgi/l/email-protection)", LocalDate.of(1980,8,20));
+    User user = new User(1L,"[[email protected]](/web/20221127215441/https://www.baeldung.com/cdn-cgi/l/email-protection)", LocalDate.of(1980,8,20));
     UserDto1 result = userMapper.getDestination(user);
 
     assertEquals(user.getId(), result.getId());
@@ -238,11 +240,11 @@ public void givenUser_whenUseXmlGlobal_thenConverted(){
 }
 ```
 
-## 8。自定义转换
+### 8. 自定义转换
 
 现在，让我们看看如何使用`JMapper`应用自定义转换。
 
-在我们的`UserDto`中有一个新字段`age`，我们需要从`User` `birthDate`属性中计算它:
+在我们的`UserDto`中有一个新字段`age`，我们需要从`User` `birthDate`属性中计算它：
 
 ```java
 public class UserDto {
@@ -263,7 +265,7 @@ public class UserDto {
 }
 ```
 
-因此，**我们使用`@JMapConversion`来应用从`User's birthDate`到`UserDto's` `age`属性的复杂转换**。因此，当我们将`User`映射到`UserDto`时，将计算`age`字段:
+因此，**我们使用`@JMapConversion`来应用从`User`的`birthDate`到`UserDto`的`age`属性的复杂转换**。因此，当我们将`User`映射到`UserDto`时，将计算`age`字段：
 
 ```java
 @Test
@@ -271,7 +273,7 @@ public void whenUseAnnotationExplicitConversion_thenConverted(){
     JMapper<UserDto, User> userMapper = new JMapper<>(
       UserDto.class, User.class);
     User user = new User(
-      1L,"[[email protected]](/web/20221127215441/https://www.baeldung.com/cdn-cgi/l/email-protection)", LocalDate.of(1980,8,20));
+      1L,"[[email protected]](/web/20221127215441/https://www.baeldung.com/cdn-cgi/l/email-protection)", LocalDate.of(1980,8,20));
     UserDto result = userMapper.getDestination(user);
 
     assertEquals(user.getId(), result.getId());
@@ -280,7 +282,7 @@ public void whenUseAnnotationExplicitConversion_thenConverted(){
 }
 ```
 
-## 9。关系映射
+### 9. 关系映射
 
 最后，我们将讨论关系映射。使用这个方法，我们每次都需要使用一个目标类来定义我们的`JMapper`。
 
@@ -295,7 +297,7 @@ public class User {
 }
 ```
 
-和两个目的地 bean`UserDto1`:
+和两个目的地 bean `UserDto1`:
 
 ```java
 public class UserDto1 {  
@@ -313,11 +315,13 @@ public class UserDto2 {
 }
 ```
 
-让我们看看如何利用我们的`RelationalJMapper.`
+让我们看看如何利用我们的`RelationalJMapper`。
 
-### 9.1。使用 API
+#### 9.1. 使用 API
 
-对于我们的 API 配置，我们可以使用`targetClasses()`为每个属性定义目标类:
+对于我们的 API 配置，我们可以使用`targetClasses()`为每个属性定义目标类：
+
+
 
 ```java
 @Test
@@ -350,9 +354,9 @@ public void givenUser_whenUseApi_thenConverted(){
 
 `RelationalJMapper`只接受一个类——映射类。
 
-### 9.2。使用注释
+### 9.2. 使用注释
 
-对于注释方法，我们也将定义`classes`:
+对于注释方法，我们也将定义`classes`：
 
 ```java
 public class User {
@@ -366,7 +370,7 @@ public class User {
 }
 ```
 
-像往常一样，当我们使用注释时，不需要进一步的配置:
+像往常一样，当我们使用注释时，不需要进一步的配置：
 
 ```java
 @Test
@@ -386,11 +390,11 @@ public void givenUser_whenUseAnnotation_thenConverted(){
 }
 ```
 
-### 9.3。XML 配置
+### 9.3. XML 配置
 
 对于 XML 配置，我们使用`<classes>`来定义每个属性的目标类。
 
-这是我们的`user_jmapper2.xml`:
+这是我们的`user_jmapper2.xml`：
 
 ```java
 <jmapper>
@@ -416,7 +420,7 @@ public void givenUser_whenUseAnnotation_thenConverted(){
 </jmapper>
 ```
 
-然后将 XML 配置文件传递给`RelationalJMapper`:
+然后将 XML 配置文件传递给`RelationalJMapper`：
 
 ```java
 @Test
@@ -436,8 +440,8 @@ public void givenUser_whenUseXml_thenConverted(){
 }
 ```
 
-## 10。结论
+## 10. 结论
 
 在本教程中，我们学习了配置 JMapper 的不同方法以及如何执行自定义转换。
 
-示例的完整源代码可以在 GitHub 的[中找到。](https://web.archive.org/web/20221127215441/https://github.com/eugenp/tutorials/tree/master/libraries-data)
+示例的完整源代码可以在 GitHub 的[中找到](https://web.archive.org/web/20221127215441/https://github.com/eugenp/tutorials/tree/master/libraries-data)。

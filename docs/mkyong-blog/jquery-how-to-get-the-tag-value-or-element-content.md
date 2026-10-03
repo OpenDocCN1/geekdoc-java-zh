@@ -1,33 +1,34 @@
+
 # jQuery——如何获取标签值或元素内容
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jquery/jquery-how-to-get-the-tag-value-or-element-content/>
 
 在 jQuery 中，您可以从选定的标记中获取标记值或元素内容。
 
-举个例子，
+举个例子：
 
-1.选择标记名“p”并显示其标记值。
+1. 选择标记名 `p` 并显示其标记值。
 
 ```java
- $('p').html(); 
+$('p').html();
 ```
 
-2.选择类名为“class1”的元素并显示其值。不管标签名称如何。
+2. 选择类名为 `class1` 的元素并显示其值。不管标签名称如何。
 
 ```java
- $('.class1').html(); 
+$('.class1').html();
 ```
 
-3.选择 id 为“id1”的元素并显示其值。不管标签名称如何。
+3. 选择 id 为 `id1` 的元素并显示其值。不管标签名称如何。
 
 ```java
- $('#id1').html(); 
+$('#id1').html();
 ```
 
 ## jQuery 示例
 
 ```java
- <html>
+<html>
 <head>
 <title>jQuery Get Tag Value</title>
 
@@ -67,7 +68,7 @@ $(document).ready(function(){
 	</div>
 
 </body>
-</html> 
+</html>
 ```
 
 [Try Demo](http://web.archive.org/web/20220618072947/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-get-tag-value.html)<input type="hidden" id="mkyong-current-postId" value="4866">

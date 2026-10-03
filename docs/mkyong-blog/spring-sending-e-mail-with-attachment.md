@@ -1,17 +1,18 @@
+
 # spring–发送带附件的电子邮件
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring/spring-sending-e-mail-with-attachment/>
 
-这里有一个使用 Spring 通过 Gmail SMTP 服务器发送带有附件的电子邮件的例子。为了在你的电子邮件中包含附件，你必须使用 Spring 的**Java mail sender&mime message**，而不是**mail sender&simple mail message**。
+这里有一个使用 Spring 通过 Gmail SMTP 服务器发送带有附件的电子邮件的例子。为了在你的电子邮件中包含附件，你必须使用 Spring 的`JavaMailSender`和`MimeMessage`，而不是`MailSender`和`SimpleMailMessage`。
 
 ## 1.项目依赖性
 
 添加 JavaMail 和 Spring 的依赖项。
 
-*文件:pom.xml*
+*文件:`pom.xml`*
 
 ```java
- <project  
+<project  
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
   http://maven.apache.org/maven-v4_0_0.xsd">
@@ -57,18 +58,16 @@
 </project> 
 ```
 
-freestar.config.enabled_slots.push({ placementName: "mkyong_incontent_1", slotId: "mkyong_incontent_1" });
-
 ## 2.春天的邮件发送者
 
-你要用 **JavaMailSender** 代替 MailSender 发送附件，用 **MimeMessageHelper** 附加资源。在本例中，它将从您的文件系统(FileSystemResource)中获取“c:\\log.txt”文本文件作为电子邮件附件。
+你要用`JavaMailSender`代替`MailSender`发送附件，用`MimeMessageHelper`附加资源。在本例中，它将从你的文件系统（`FileSystemResource`）中获取`c:\log.txt`文本文件作为电子邮件附件。
 
-除了文件系统，你还可以从 URL path( **UrlResource** )、class path(**class path resource**)、InputStream(**InputStream resource**)……请参考 Spring 的 **AbstractResource** 实现类。
+除了文件系统，你还可以从 URL 路径（`UrlResource`）、classpath（`ClassPathResource`）、InputStream（`InputStreamResource`）……请参考 Spring 的`AbstractResource`实现类。
 
-*文件:MailMail.java*
+*文件:`MailMail.java`*
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
@@ -118,12 +117,12 @@ public class MailMail
 
 ## 3.Bean 配置文件
 
-配置 mailSender bean、电子邮件模板，并指定 Gmail SMTP 服务器的电子邮件详细信息。
+配置`mailSender`bean、电子邮件模板，并指定 Gmail SMTP 服务器的电子邮件详细信息。
 
-*文件:Spring-Mail.xml*
+*文件:`Spring-Mail.xml`*
 
 ```java
- <beans 
+<beans 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
@@ -169,7 +168,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 ## 4.运行它
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -191,12 +190,14 @@ public class App
 输出
 
 ```java
- Dear Yong Mook Kim,
- Mail Content : This is text content
+Dear Yong Mook Kim,
+Mail Content : This is text content
 
- Attachment : log.txt 
+Attachment : log.txt 
 ```
 
 ## 下载源代码
 
-Download it – [Spring-Email-Attachment-Example.zip](http://web.archive.org/web/20210224142829/http://www.mkyong.com/wp-content/uploads/2010/03/Spring-Email-Attachment-Example.zip)Tags : [email](http://web.archive.org/web/20210224142829/https://mkyong.com/tag/email/) [spring](http://web.archive.org/web/20210224142829/https://mkyong.com/tag/spring/)freestar.config.enabled_slots.push({ placementName: "mkyong_leaderboard_btf", slotId: "mkyong_leaderboard_btf" });<input type="hidden" id="mkyong-current-postId" value="4088">
+Download it – [Spring-Email-Attachment-Example.zip](http://web.archive.org/web/20210224142829/http://www.mkyong.com/wp-content/uploads/2010/03/Spring-Email-Attachment-Example.zip)
+
+Tags : [email](http://web.archive.org/web/20210224142829/https://mkyong.com/tag/email/) [spring](http://web.archive.org/web/20210224142829/https://mkyong.com/tag/spring/)

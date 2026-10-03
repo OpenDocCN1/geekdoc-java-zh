@@ -1,12 +1,13 @@
+
 # 将 Spring Boot 应用部署到 Cloud Foundry
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-boot-app-deploy-to-cloud-foundry>
 
-## 1。概述
+## 1. 概述
 
 将 Spring Boot 应用部署到 Cloud Foundry 是一项简单的工作。在本教程中，我们将告诉你如何做。
 
-## 2。春云相依
+## 2. 春云依赖
 
 由于该项目需要 Spring Cloud 项目的新依赖项，我们将添加 Spring Cloud 依赖项 BOM:
 
@@ -26,7 +27,7 @@
 
 我们可以在 [Maven Central](https://web.archive.org/web/20220926194005/https://search.maven.org/search?q=g:org.springframework.cloud%20AND%20a:spring-cloud-dependencies&core=gav) 上找到最新版本的`spring-cloud-dependencies`库。
 
-现在，我们想要为 Cloud Foundry 维护一个单独的构建，所以我们将在 Maven `pom.xml.`中创建一个名为 *cloudfoundry* 的概要文件
+现在，我们想要为 Cloud Foundry 维护一个单独的构建，所以我们将在 Maven `pom.xml`中创建一个名为 *cloudfoundry* 的概要文件。
 
 我们还将添加编译器排除和 Spring Boot 插件来配置包的名称:
 
@@ -92,7 +93,7 @@
 </dependency>
 ```
 
-## 3。云代工厂配置
+## 3. 云代工厂配置
 
 要浏览本教程，我们需要在这里注册一个试用版[或者下载](https://web.archive.org/web/20220926194005/https://run.pivotal.io/)[原生 Linux](https://web.archive.org/web/20220926194005/https://github.com/cloudfoundry-incubator/cfdev) 或者[虚拟盒子](https://web.archive.org/web/20220926194005/https://docs.pivotal.io/pcf-dev/)的预配置开发环境。
 
@@ -106,7 +107,7 @@
 cf login -a <url>
 ```
 
-**Cloud Foundry market place 是一个服务目录**,如数据库、消息、电子邮件、监控、日志等等。大多数服务提供免费或试用计划。
+**Cloud Foundry market place 是一个服务目录**，如数据库、消息、电子邮件、监控、日志等等。大多数服务提供免费或试用计划。
 
 让我们在市场上搜索“MySQL ”,并为我们的应用程序创建一个服务:
 
@@ -124,7 +125,7 @@ cleardb     spark, boost*, amp*, shock*         Highly available MySQL for your 
 接下来，我们使用以下代码列出服务的详细信息:
 
 ```java
-cf marketplace -s cleardb
+cf marketplace -s cleardb
 ```
 
 ```java
@@ -142,9 +143,9 @@ shock        Designed for apps where you need real MySQL reliability, power and 
 cf create-service cleardb spark spring-bootstrap-db
 ```
 
-## 4。应用程序配置
+## 4. 应用程序配置
 
-接下来，我们添加一个带注释的类`@Configuration`，该类扩展了`AbstractCloudConfig`以在名为`org.baeldung.cloud.config`的包中创建一个`DataSource `:
+接下来，我们添加一个带注释的类`@Configuration`，该类扩展了`AbstractCloudConfig`以在名为`org.baeldung.cloud.config`的包中创建一个`DataSource`:
 
 ```java
 @Configuration
@@ -158,7 +159,7 @@ public class CloudDataSourceConfig extends AbstractCloudConfig {
 }
 ```
 
-添加`@Profile(“cloud”)`可以确保当我们进行本地测试时，云连接器不会被激活。我们还将`@ActiveProfiles(profiles = {“local”})`添加到集成测试中。
+添加`@Profile("cloud")`可以确保当我们进行本地测试时，云连接器不会被激活。我们还将`@ActiveProfiles(profiles = {"local"})`添加到集成测试中。
 
 然后使用以下内容构建应用程序:
 
@@ -183,7 +184,7 @@ applications:
   - spring-bootstrap-db
 ```
 
-## 5。部署
+## 5. 部署
 
 部署应用程序现在就像:
 
@@ -265,12 +266,12 @@ HTTP/1.1 200 OK
 ] 
 ```
 
-## 6。扩展应用程序
+## 6. 扩展应用程序
 
 最后，在 Cloud Foundry 上扩展应用程序就像使用`scale`命令一样简单:
 
 ```java
-cf scale spring-cloud-bootstrap-cloudfoundry <options>
+cf scale spring-cloud-bootstrap-cloudfoundry <options>
 Options:
 -i <instances>
 -m <memory-allocated> # Like 512M or 1G
@@ -284,7 +285,7 @@ Options:
 cf delete spring-cloud-bootstrap-cloudfoundry
 ```
 
-## 7。结论
+## 7. 结论
 
 在本文中，我们介绍了 Spring Cloud libraries，它使用 Spring Boot 简化了云原生应用程序的开发。使用 Cloud Foundry CLI 的部署在[这里](https://web.archive.org/web/20220926194005/https://docs.cloudfoundry.org/cf-cli/cf-help.html)有很好的记录。
 

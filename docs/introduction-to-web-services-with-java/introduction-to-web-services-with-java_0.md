@@ -1,196 +1,316 @@
+
 # Java Web 服务入门指南
 
+## 序言
 
+本书基于我在三叉国际大学（Trident University International）提供的课程，侧重于 Web 服务编程的实战方法细节，而非其规范；然而，为了帮助读者更容易理解这些概念，我们在前三章中对 Web 服务、`SOAP` 和 `WSDL` 进行了简单介绍。规范中的许多细节被刻意忽略，以保持内容的易于掌握。
 
-
-
-
-
-
-
-# 序言
-
-本书基于我在三叉国际大学（Trident University International）提供的课程，侧重于 Web 服务编程的实战方法细节，而非其规范；然而，为了帮助读者更容易理解这些概念，我们在前三章中对 Web 服务、SOAP 和 WSDL 进行了简单介绍。规范中的许多细节被刻意忽略，以保持内容的易于掌握。
-
-## 目标
+### 目标
 
 * 理解 Web 服务的基本概念：
-    - SOAP
-    - WSDL
+
+    - `SOAP`
+
+    - `WSDL`
+
 * 使用以下主要的编程工具开发基础 Web 服务：
+
     - Java JDK 6 或更高版本
+
     - Apache CXF 2.7 或更高版本
-    - Oracle Middleware WebLogic Server (WLS) 12.1 或更高版本
+
+    - Oracle Middleware WebLogic Server (`WLS`) 12.1 或更高版本
 
 本书的背景要求：
 
 * 基础 Java 编程经验
+
 * 基础 Web 编程知识
+
 * 基础 XML 知识
-
-
-
-
 
 Web Service (`WS`) 是一种技术、流程和软件范式，主要为基于互联网的环境下的业务集成提供支持。本书介绍了 `WS` 的基本概念、协议栈和应用。除了学习三个支持性标准 `SOAP`、`WSDL` 和 `UDDI` 之外，学生们将学学习如何使用以 Java 为中心的技术（如 `JAXP`、`JAXRPC`、`SAAJ` 和 `JAXB`）来实现 `WS`。学生们还将学习如何通过 `BPEL` 使用 `WS` 实现业务流程。
 
 `WS` 是一种由 `URI` 标识的软件应用程序，其接口和绑定可以由 `XML` 构件进行定义、描述和发现，并且它支持通过基于互联网的协议使用基于 `XML` 的消息与其他应用程序进行直接交互（W3C: [http://www.w3.org/TR/ws-desc-reqs]）。`WS` 主要用于机器与机器之间的通信。`WS` 标准依赖其他标准——即 `SOAP`、`WSDL` 和 `UDDI`——才能高效运行。`SOAP` 是一种应用协议，用于在 `WS` 客户端和 `WS` 服务器之间传输消息。`HTTP` 是 `SOAP` 的优选传输协议；但 `JMS` 和 `SMTP` 协议也曾在使用。`WSDL` 用于描述外部应用程序可以调用的服务。`UDDI` 用于发布和广告服务，以便他人发现并使用它们。`UDDI` 同样使用 `SOAP` 作为其应用协议。
 
 - **第 1 章 – 引言**。本章提供了 Web 服务的概述。简要介绍了过去企业集成困难的背景以及 `WS` 能提供的优势。本章介绍了一个使用 Java Web 服务的入门级 `WS` 程序。
+
 - **第 2 章 – SOAP**。利用上一章的示例（即一个用于交换复杂数据结构的 `WS`），本章解释了基本的 `SOAP` 消息交换是如何工作的。
+
 - **第 3 章 – WSDL**。本章深入探讨了服务如何被他人描述和理解。随后，在上一个模块练习的基础上构建一个更复杂的 `WS` 应用程序。
+
 - **第 4 章 – 示例应用程序**
+
 - **第 5 章 – Apache CXF 和 Tomcat 服务器**
-- **第 6 章 – 在 Oracle WebLogic Server 12 上部署 CXF **
+
+- **第 6 章 – 在 Oracle WebLogic Server 12 上部署 CXF**
+
 - **第 7 章 – 附录 A – 开发环境**
 
 本书侧重于 `WS` 的工作机制，并带有使用基础 Java `WS` 框架的实践编程练习。该框架运行在独立的 Java 应用程序、Oracle WebLogic Server (`WLS`) 和 Apache Tomcat 服务器上。因此，预计读者具备足够的 `Java` 和 `XML` 知识。
 
-# 图表列表
+## 图表列表
 
 - 图 1-1 早期的 Web 应用程序
+
 - 图 1-2 二层 Web 应用程序
+
 - 图 1-3 n 层 Web 架构
+
 - 图 1-4 人机交互
-- 图 1-5 远程过程调用 (`RPC)
+
+- 图 1-5 远程过程调用 (`RPC`)
+
 - 图 1-6 业务对集成 (B2B)
+
 - 图 1-7 `SOAP` 序图
+
 - 图 1-8 Web 服务架构
+
 - 图 1-9 用于 HelloWorld Web 服务的 Eclipse Java 项目
+
 - 图 1-10 HelloWorld Web 服务的 `WSDL`
+
 - 图 1-11 与 HelloWorld Web 服务关联的 `XML` 模式
+
 - 图 1-12 为 HelloWorld Web 服务创建 SOAPUI 项目
+
 - 图 1-13 打开 HelloWorld `WSDL`
+
 - 图 1-14 调用 Web 服务的操作（方法）
+
 - 图 2-1 `SOAP` 消息结构
+
 - 图 2-2 `SOAP` 消息交换
+
 - 图 3-1 `WSDL` 结构
+
 - 图 3-2 `WSDL` 内部链接
+
 - 图 4-1 n 层应用程序
+
 - 图 4-2 用例图
+
 - 图 4-3 `getEmployee` 操作的序图
+
 - 图 4-4 简单的部署图
+
 - 图 4-5 数据库模式 (Chua Hock Chuan)
+
 - 图 4-6 Java 项目：`data-svc`
+
 - 图 4-7 选择导入类型
+
 - 图 4-8 导入归档文件屏幕
+
 - 图 4-9 Java 构建路径
+
 - 图 4-10 JAR 选择屏幕
+
 - 图 4-11 Java 构建路径
+
 - 图 4-12 `java-ws` Java 项目
+
 - 图 4-13 创建 SOAPUI 项目
+
 - 图 4-14 Web 服务的操作列表
+
 - 图 4-15 执行 `SOAP` 操作
+
 - 图 4-16 创建新的 SOAPUI 项目 3
+
 - 图 4-17 创建 Web 服务客户端的活动
+
 - 图 4-18 `java-ws-client` Java 项目截图
+
 - 图 5-1 `CXF` Web 服务类图
+
 - 图 5-2 `CXF` Web 服务部署图
+
 - 图 5-3 创建 Web 服务应用程序的活动
+
 - 图 5-4 动态 Web 项目的截图
+
 - 图 5-5 创建新的 SOAPUI 项目
+
 - 图 5-6 执行 Web 服务操作
+
 - 图 5-7 `cxf-ws-client` Java 项目截图
+
 - 图 6-1 `CXF` Web 服务应用程序和 Oracle WebLogic 服务器的部署图
+
 - 图 6-2 创建 `WLS` 域
+
 - 图 6-3 添加扩展 (`JAX-WS` 和 `JAX-RPC`)
+
 - 图 6-4 输入域名
+
 - 图 6-5 输入用户 ID 和密码
+
 - 图 6-6 选择默认 `JDK`
+
 - 图 6-7 添加配置
+
 - 图 6-8 域的配置摘要
+
 - 图 6-9 域创建状态
+
 - 图 6-10 `WLS` 管理服务器的输出
+
 - 图 6-11 OracleWLS 控制台登录屏幕
+
 - 图 6-12 Oracle `WLS` 部署
+
 - 图 6-13 Oracle `WLS` 管理服务器
+
 - 图 6-14 部署类型
+
 - 图 6-15 部署的额外设置
+
 - 图 6-16 调用结果
+
 - 图 6-17 Web 服务应用程序
+
 - 图 6-18 Web 服务客户端
+
 - 图 6-19 Java 服务项目
+
 - 图 6-20 `getEmployee` 操作
+
 - 图 7-1 创建 Java 项目
+
 - 图 7-2 图 7- 创建
+
 - 图 7-3 动态 Web 项目
+
 - 图 7-4 Java
+
 - 图 7-5 创建动态 Web 项目
+
 - 图 7-6 Java
+
 - 图 7-7 模式
 
-# 代码列表
+## 代码列表
 
 - 代码 1-1 `HelloWorld.java`
+
 - 代码 1-2 带有注解的 `HelloWorld.java`
+
 - 代码 1-3 `Server.java`
+
 - 代码 1-4 `WSDL`
+
 - 代码 1-5 `XSD`
+
 - 代码 1-6 `SOAP` 请求
+
 - 代码 1-7 `SOAP` 响应
+
 - 代码 1-8 `HelloWorldSOAP.java`
+
 - 代码 2-1 `SOAP` 消息请求
+
 - 代码 2-2 `SOAP` 消息响应
+
 - 代码 2-3 `SOAP` 错误
+
 - 代码 2-4 `HTTP` POST
+
 - 代码 2-5 另一个 `HTTP` POST
+
 - 代码 2-6 `HTTP` 响应
+
 - 代码 2-7 另一个 `HTTP` 响应
+
 - 代码 3-1 示例 `WSDL`
+
 - 代码 3-2 另一个 `WSDL`
+
 - 代码 4-1 `DbConfig.java`
+
 - 代码 4-2 `SvrConfig.java`
+
 - 代码 4-3 员工表
+
 - 代码 4-4 `Employee.java`
+
 - 代码 4-5 `Employee` 中的 `XSD`
+
 - 代码 4-6 使用 Java 编写 Web 服务
+
 - 代码 4-7 类图
+
 - 代码 4-8 `DbConnection.java`
+
 - 代码 4-9 `EmployeeDao.java`
+
 - 代码 4-10 `EmployeeDaoTest.java`
+
 - 代码 4-11 JUnit 测试结果
+
 - 代码 4-12 `data-svc` 的 `build.xml`
+
 - 代码 4-13 `EmployeeDocData.java`
+
 - 代码 4-14 `EmployeeRpcData.java`
+
 - 代码 4-15 `Server.java` 类
+
 - 代码 4-16 `java-ws` 项目的 `build.xml`
+
 - 代码 4-17 DOCUMENT 风格的 `WSDL`
+
 - 代码 4-18 服务的 `XSD`
+
 - 代码 4-19 RPC 风格的 `WSDL`
+
 - 代码 4-20 RPC 服务的 `XSD`
+
 - 代码 4-21 服务的额外 `XSD`
+
 - 代码 4-22 `EmployeesDocClient.java`
+
 - 代码 4-23 `EmployeesRpcClient.java`
+
 - 代码 5-1 带有注解的 `EmployeeDataIf.java`
+
 - 代码 5-2 `EmployeeData.java`: Web 服务接口实现
+
 - 代码 5-3 `web.xml` 内容
+
 - 代码 5-4 `beans.xml` 内容
+
 - 代码 5-5 动态 Web 项目的 `build.xml`
+
 - 代码 5-6 `CXF` Web 服务的 `WSDL`
+
 - 代码 5-7 `EmployeeDataClient.java` 类
+
 - 代码 5-8 `cxf-ws-client` 项目的 `build.xml`
-
-
-
-
 
 列表 7-1 用于创建 Employees 表的 DDL
 
-# 表格索引
+## 表格索引
 
 - 表 1 数据库配置参数
+
 - 表 2 服务器配置参数
 
-# 1 引言
+## 1 引言
 
-## 目标
+### 目标
 
 在学习本章之后，你应该能够：
 
 1. 描述 Web 服务应用程序的基本元素
+
 2. 比较并对比 Web 应用与 Web 服务应用的目的
+
 3. 描述 Web 服务的优势
+
 4. 使用 Java 开发工具包（`JDK`）或更高版本编写简单的 Web 服务应用程序
+
 5. 验证并测试 Web 服务应用程序
 
 在互联网的早期，Web 应用通过 `HTML` 交付静态网页。无疑，当时的网站开发要简单；然而，静态内容会迅速过时；因此，网站的内容管理至关重要。
@@ -209,7 +329,7 @@ Web Service (`WS`) 是一种技术、流程和软件范式，主要为基于互�
 
 Web 服务器和应用程序服务器通常运行在同一台机器上；然而，最佳实践是将数据库服务器运行在独立的机器上。在软件开发环境中，所有三个服务器都可以托管在单台机器上。在本书中，服务器通常指一种软件应用程序。
 
-## 1.1 浏览互联网
+### 1.1 浏览互联网
 
 在 Web 2.0 构想之前（约 1999 年），万维网（`WWW`）和互联网的基本用法非常简单，基于传统的客户端-服务器模型，使用了较旧的技术，如远程过程调用（`RPC`）、事务处理（`TP`）监控或其他允许编程客户端的中间件。
 
@@ -219,7 +339,7 @@ Web 服务器和应用程序服务器通常运行在同一台机器上；然而�
 
 互联网架构最初是为人类用户设计的。`HTTP` 协议用于交换文档（Web 或 `HTML` 页面）。`HTML` 是为基础图形用户界面（`GUI`）应用程序设计的。用户浏览互联网时，浏览器上的计算资源通常是空闲的。这些可用资源引发了提供更健壮的网络浏览体验的想法。此外，企业对企业（`B2B`）数据交换模型也变得更加可行。因此，引入了 `WS` 架构来支持这种新类型的数据交换。
 
-## 1.2 Web 服务架构
+### 1.2 Web 服务架构
 
 服务可以是三种交互类型之一：人人交互、人机或机机交互。餐厅服务是人人交互的例子。从自动取款机（`ATM`）上取钱是人机交互的例子。机机交互的例子是手持设备（如智能设备，例如手机或平板电脑）与 Microsoft Outlook 同步通讯录。Web 服务是一种使用特定 Web 标准和技术的机机交互。Web 服务是一组编程接口，而不是一组网页。
 
@@ -228,9 +348,6 @@ Web 服务器和应用程序服务器通常运行在同一台机器上；然而�
 > Web 服务是一组编程接口，而不是一组网页。
 
 > 服务可以是三种交互类型之一：人人交互、人机或机机交互。餐厅服务是人人交互的例子。从自动取款机（`ATM`）上取钱是人机交互的例子。机机交互的例子是手持设备（如智能设备，例如手机或平板电脑）与 Microsoft Outlook 同步通讯录。Web 服务是一种使用特定 Web 标准和技术的机机交互。
-
-
-
 
 可以使用某种服务注册中心来定义、发布和发现服务。目前支持的服务注册中心包括电子业务 XML (ebXML)、通用发现、描述和集成 (UDDI) 以及元数据注册表 (MDR)。UDDI 通常是一个好主意；但在私有网络之外，它并没有被广泛使用。
 
@@ -241,14 +358,16 @@ RPC 是一种强大的技术，它为跨机器网络提供了分布式计算能�
 Web 服务可以帮助解决企业应用集成 (EAI) 中的几个问题。为业务解决方案集成现有的应用程序是一项复杂且耗时的任务。使用不同计算机语言（如 C/C++、JAVA、Visual Basic 和 FORTRAN）编写的应用程序对外部世界具有独特的逻辑接口，这使得这些程序的集成变得困难、复杂且耗时。运行在不同机器架构（如 SUN、个人电脑、IBM 主机、IBM A/S 400）上的应用程序对外部世界具有独特的物理接口。集成这些应用程序也具有挑战性。运行通过网络连接的机器上的应用程序也难以集成。EAI 的挑战出现在三个主要领域：
 
 * 语言障碍 – XML 是一种用于消息交换的标准化语言
+
 * 平台障碍 – SOAP 已在许多平台（如 Unix、Windows）上实现
+
 * 网络障碍 – HTTP 和 SMTP 是标准化的网络协议
 
 WS（Web 服务）可以作为应用程序集成的实现技术。如前所述，WS 重点关注以下主要标准：XML、SOAP、WSDL、UDDI 和 HTTP。
 
 ![Image835.PNG](img/Image835_fmt.jpeg) **图 1-6** 业务机集成
 
-### SOAP 序图
+#### SOAP 序图
 
 ![843.jpg](img/843.jpg) **图 1-7** SOAP 序图
 
@@ -260,39 +379,55 @@ WS（Web 服务）可以作为应用程序集成的实现技术。如前所述�
 
 ![Image851.PNG](img/Image851_fmt.jpeg) **图 1-8** Web 服务架构
 
-## 1.3 Web 服务的优势
+### 1.3 Web 服务的优势
 
 Web 服务提供了许多优势：
 
 1. 平台无关性：Web 服务现在几乎适用于所有平台：
+
 2. a) 硬件：主机、中端设备、个人和移动设备
+
 3. b) 操作系统：UNIX、Windows、主机操作系统、Android 和 iPhone
+
 4. 复用现有的网络基础设施：HTTP、SMTP 和 JMS 协议
+
 5. 软件组件的松耦合促进了软件复用
+
 6. 降低集成成本并提高速度
+
 7. 开放架构和通信协议
 
-## 1.4 编写一个 HelloWorld Web 服务
+### 1.4 编写一个 HelloWorld Web 服务
 
 如果没有看到创建和使用 Web 服务的具体示例，Web 服务的概念可能很难理解。自上而下的方法从一个描述服务的 WSDL 文件开始。自上而下的方法可能会增加互操作性，并允许对 WS 有更多控制，而自下而上的方法从 Java Bean 或企业 Java Bean (EJB) 的低级开始，速度更快且更简单。
 
 可以使用以下步骤创建和测试简单的 WS 应用：
 
+
+
 1. 运行 Eclipse IDE，创建一个新的 Java 项目，并命名为 `java-ws`。
+
 2. 将 `Server.java` 作为 Java 程序运行。
+
 3. 验证服务端点的 WSDL 和关联架构：`http://localhost:9999/HelloWorld?wsdl`。
+
 4. 使用 SOAPUI 软件测试 HelloWorld Web 服务。
+
 5. 创建 Java Web 服务客户端代码。
 
 ### 1.4.1 创建项目
 
-在上面的示例中，使用了自下而上的方法。此示例需要 Java 6 或更高版本。创建了一个名为“Hello World”的 Web 服务，其方法名为 `say`，需要一个 String 参数。在 Eclipse IDE 下创建 Java 项目，执行以下步骤：
+在上面的示例中，使用了自下而上的方法。此示例需要 Java 6 或更高版本。创建了一个名为“Hello World”的 Web 服务，其方法名为 `say`，需要一个 `String` 参数。在 Eclipse IDE 下创建 Java 项目，执行以下步骤：
 
 1. 运行 Eclipse IDE。
+
 2. 选择 File → New → Java Project。使用所有默认设置并命名为 `java-ws`。
+
 3. 展开 `java-ws` 项目，右键点击 `src` 目录并选择 New → Package。命名包 `com.bemach.ws.hello`。
+
 4. 同样，创建另一个 Java 包 `com.bemach.ws.server`。
-5. 创建两个 Java 类 – `com.bemach.ws.hello.HelloWorld.java` 和 `com.bemach.ws.server.Server.java`。
+
+5. 创建两个 Java 类：`com.bemach.ws.hello.HelloWorld.java` 和 `com.bemach.ws.server.Server.java`。
 
 ### 1.4.2 创建 Web 服务
 
@@ -300,23 +435,72 @@ Java 的经典 HelloWorld 类可以用几行代码编写。其目的是确保 Ja
 
 #### 列表 1-1 HelloWorld.java
 
-| package com.bemach.ws.hello; |
-| :--- |
-| `/*** 2013 (C) BEM, Inc., Fairfax, Virginia** 除非适用法律要求或书面同意，否则分发的软件按“现状”基础分发，不提供任何形式的保证或条件，无论是明示还是隐含的.**/**public class HelloWorld { public String say (String name) {return String.format("Hello, %s!", name);} public static void main (String[] args) {String msg = new HelloWorld().say("Johnny, B. Good");System.out.println(msg);}}**` |
+```java
+package com.bemach.ws.hello;
+```
 
-**输出**:
+```java
+/**
+ * 2013 (C) BEM, Inc., Fairfax, Virginia
+ * 除非适用法律要求或书面同意，否则分发的软件按“现状”基础分发，
+ * 不提供任何形式的保证或条件，无论是明示还是隐含的。
+ */
+public class HelloWorld {
+    public String say(String name) {
+        return String.format("Hello, %s!", name);
+    }
 
+    public static void main(String[] args) {
+        String msg = new HelloWorld().say("Johnny, B. Good");
+        System.out.println(msg);
+    }
+}
+```
+
+**输出**：
+
+```text
 Hello, Johnny B. Good!
+```
 
 通过这种方式，HelloWorld 程序被转换为 WS 应用。这是使用 Java 语言实现的简单 WS。
 
-要将 HelloWorld 程序从简单的 Java Bean 转换为 WS 应用，四个 WS 注解 – 即 `@WebService`、`@SOAPBinding`、`@WebMethod` 和 `@WebParam` – 装饰如下：
+要将 HelloWorld 程序从简单的 Java Bean 转换为 WS 应用，四个 WS 注解——即 `@WebService`、`@SOAPBinding`、`@WebMethod` 和 `@WebParam`——装饰如下：
 
 #### 列表 1-2 带有 Web 服务注解的 HelloWorld.java
 
-| package com.bemach.ws.hello; |
-| :--- |
-| `/*** 2013 (C) BEM, Inc., Fairfax, Virginia** 除非适用法律要求或书面同意，否则分发的软件按“现状”基础分发，不提供任何形式的保证或条件，无论是明示还是隐含的.**/**import java.util.logging.Logger;import javax.jws.WebMethod;import javax.jws.WebParam;import javax.jws.WebService;import javax.jws.soap.SOAPBinding;@WebService@SOAPBinding(style=SOAPBinding.Style.DOCUMENT*)public class HelloWorld {private static final Logger LOG = Logger.getLogger(HelloWorld.class.getName());@WebMethodpublic String say (@WebParam(name="name") String name) {LOG.info("Web service is called!");return String.format("Hello, %s!", name);}public static void main (String[] args) {String msg = new HelloWorld().say("Johnny, B. Good");LOG.info(msg);}}` |
+```java
+package com.bemach.ws.hello;
+
+import java.util.logging.Logger;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
+
+/**
+ * 2013 (C) BEM, Inc., Fairfax, Virginia
+ * 除非适用法律要求或书面同意，否则分发的软件按“现状”基础分发，
+ * 不提供任何形式的保证或条件，无论是明示还是隐含的。
+ */
+@WebService
+@SOAPBinding(style = SOAPBinding.Style.DOCUMENT)
+public class HelloWorld {
+    private static final Logger LOG =
+        Logger.getLogger(HelloWorld.class.getName());
+
+    @WebMethod
+    public String say(@WebParam(name = "name") String name) {
+        LOG.info("Web service is called!");
+        return String.format("Hello, %s!", name);
+    }
+
+    public static void main(String[] args) {
+        String msg = new HelloWorld().say("Johnny, B. Good");
+        LOG.info(msg);
+    }
+}
+```
 
 为了托管服务端点，WS 需要一个 HTTP 服务器。可以使用 Apache JEE Tomcat 服务器；但也可以仅用 Java 创建基础服务器。在示例中，我们创建了一个绑定到 WS 实现的特定 URL 的端点。在这种情况下，URL 为 `http://localhost:9999/java-ws/hello`，实现是 `HelloWorld` 对象 `svc`。
 
@@ -324,15 +508,32 @@ Hello, Johnny B. Good!
 
 #### 列表 1-3 Server.java 类
 
-
-
-
-
 ```java
-package com.bemach.ws.server;/*** 2013 (C) BEM, Inc., Fairfax, Virginia** Unless required by applicable law or agreed to in writing,* software distributed is distributed on an* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY* KIND, either express or implied.**/**import java.util.logging.Logger;**import javax.xml.ws.Endpoint;**import javax.xml.ws.EndpointReference;**import com.bemach.data.DbConfig;**import com.bemach.ws.doc.employees.EmployeeDocData;**import com.bemach.ws.hello.HelloWorld;**import com.bemach.ws.rpc.employees.EmployeeRpcData;/****/**public final class Server {
- 
-    private static final Logger LOG = Logger.getLogger(Server.class.getName());
-    private static final String MYSQL_DRIVER="com.mysql.jdbc.Driver";
+package com.bemach.ws.server;
+
+/**
+ * 2013 (C) BEM, Inc., Fairfax, Virginia
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.
+ */
+
+import java.util.logging.Logger;
+import javax.xml.ws.Endpoint;
+import javax.xml.ws.EndpointReference;
+
+import com.bemach.data.DbConfig;
+import com.bemach.ws.doc.employees.EmployeeDocData;
+import com.bemach.ws.hello.HelloWorld;
+import com.bemach.ws.rpc.employees.EmployeeRpcData;
+
+public final class Server {
+    private static final Logger LOG =
+        Logger.getLogger(Server.class.getName());
+
+    private static final String MYSQL_DRIVER = "com.mysql.jdbc.Driver";
     private static final String DB_HOST = "saintmonica";
     private static final String DB_PORT = "3306";
     private static final String DB_SID = "employees";
@@ -369,10 +570,18 @@ package com.bemach.ws.server;/*** 2013 (C) BEM, Inc., Fairfax, Virginia** Unless
     }
 
     protected static Endpoint publish(SvrConfig cfg, Object svc) {
-        String url = String.format("%s://%s:%s/%s",cfg.getListenProtocol(),cfg.getListenHostname(),cfg.getListenPort(),cfg.getListenInterface());
+        String url = String.format(
+            "%s://%s:%s/%s",
+            cfg.getListenProtocol(),
+            cfg.getListenHostname(),
+            cfg.getListenPort(),
+            cfg.getListenInterface()
+        );
+
         Endpoint ep = Endpoint.publish(url, svc);
         EndpointReference epr = ep.getEndpointReference();
-        LOG.info("\nEndpoint Ref:\n"+epr.toString());
+
+        LOG.info("\nEndpoint Ref:\n" + epr.toString());
         return ep;
     }
 
@@ -382,8 +591,10 @@ package com.bemach.ws.server;/*** 2013 (C) BEM, Inc., Fairfax, Virginia** Unless
         cfg.setListenInterface(HELLO_SVC_NAME);
         cfg.setListenPort(PORT_NO);
         cfg.setListenProtocol(PROTOCOL);
+
         HelloWorld hello = new HelloWorld();
         publish(cfg, hello);
+
         LOG.info("HelloWorld service started successfully ...");
     }
 
@@ -393,10 +604,13 @@ package com.bemach.ws.server;/*** 2013 (C) BEM, Inc., Fairfax, Virginia** Unless
         svrCfg.setListenInterface(RPC_EMPL_SVC_NAME);
         svrCfg.setListenPort(PORT_NO);
         svrCfg.setListenProtocol(PROTOCOL);
+
         DbConfig dbCfg = getDbConfig();
         svrCfg.setDbCfg(dbCfg);
+
         EmployeeRpcData rpcEmpl = new EmployeeRpcData(dbCfg);
         publish(svrCfg, rpcEmpl);
+
         LOG.info("Employees (RPC) service started successfully ...");
     }
 
@@ -406,15 +620,21 @@ package com.bemach.ws.server;/*** 2013 (C) BEM, Inc., Fairfax, Virginia** Unless
         svrCfg.setListenInterface(DOC_EMPL_SVC_NAME);
         svrCfg.setListenPort(PORT_NO);
         svrCfg.setListenProtocol(PROTOCOL);
+
         DbConfig dbCfg = getDbConfig();
         svrCfg.setDbCfg(dbCfg);
+
         EmployeeDocData docEmpl = new EmployeeDocData(dbCfg);
         publish(svrCfg, docEmpl);
+
         LOG.info("Employees (Document) service started successfully ...");
     }
 
-    /** Start WS Server with multiple service endpoints...
-    * @param args*/
+    /**
+     * Start WS Server with multiple service endpoints...
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         startHelloWorld();
         startRpcEmployees();
@@ -431,11 +651,13 @@ package com.bemach.ws.server;/*** 2013 (C) BEM, Inc., Fairfax, Virginia** Unless
 
 在 Eclipse 中，执行以下操作：
 
-1. 运行 `Server.java`。选择 `运行` -> `Java `。
+1. 运行 `Server.java`。选择 `运行` → `Java`。
 
 Eclipse 项目如下：
 
-![6540.jpg](img/6540.jpg) **图 9** *启动 Web 服务*
+![6540.jpg](img/6540.jpg)
+
+**图 9**：*启动 Web 服务*
 
 ## 1.6 验证 Web 服务
 
@@ -443,7 +665,9 @@ Eclipse 项目如下：
 
 [`localhost:9999/java-ws/hello`](http://localhost:9999/java-ws/hello)
 
-![6582.jpg](img/6582.jpg) **图 10** *WSDL*
+![6582.jpg](img/6582.jpg)
+
+**图 10**：*WSDL*
 
 要查看关联架构，请访问：
 
@@ -467,30 +691,42 @@ Eclipse 项目如下：
   </element>
 </schema>
 ```
-**列表 5** *架构*
+
+**列表 5**：*架构*
 
 ## 1.7 使用 SOAPUI 测试 Web 服务
 
 SOAPUI 是一种允许软件开发人员和集成人员测试 Web 服务的软件。类似于 Eclipse：
 
 1. 运行 SOAPUI 程序。
-2. 选择 `文件` -> `新建 SOAP 项目`。
+
+2. 选择 `文件` → `新建 SOAP 项目`。
+
 3. 输入项目名称和初始 WSDL。
 
-![Image144.png](img/Image144.png) **图 12** *为 HelloWorld SOAPUI 项目*
+![Image144.png](img/Image144.png)
+
+**图 12**：*为 HelloWorld SOAPUI 项目*
 
 要执行 SOAP 操作，请采取以下步骤：
 
 1. 在左面板双击 `Request 1`。
+
 2. 在 `<arg0>` 和 `</arg0>` 之间填充。
+
 3. 点击顶部的绿色三角形。
+
 4. 在右面板查看 SOAP 响应。
 
-![1178.jpg](img/1178.jpg) **图 13** *打开 WSDL*
+![1178.jpg](img/1178.jpg)
 
-### 1.7.1 SOAP 请求：
+**图 13**：*打开 WSDL*
+
+### 1.7.1 SOAP 请求
 
 SOAP 处理器生成此请求并将其通过网络发送到带有简单字符串参数的 `say` 操作。
+
+
 
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hel="http://hello.ws.bemach.com/">
@@ -502,9 +738,10 @@ SOAP 处理器生成此请求并将其通过网络发送到带有简单字符串
    </soapenv:Body>
 </soapenv:Envelope>
 ```
+
 **列表 6** *SOAP 请求消息*
 
-### 1.7.2 SOAP 响应：
+### 1.7.2 SOAP 响应
 
 SOAP 响应显示了消息字符串的简单返回。
 
@@ -517,14 +754,12 @@ SOAP 响应显示了消息字符串的简单返回。
    </S:Body>
 </S:Envelope>
 ```
+
 **列表 7** *SOAP 响应消息*
 
 ![6653.jpg](img/6653.jpg) **图 14** *调用 Web 服务的操作（方法）*
 
 ## 1.8 创建 Web 服务客户端
-
-
-
 
 编写 WS 客户端代码非常简单；然而，为了减轻客户端的编码工作，后台所需的代码量可能是巨大的。生成的代码使得客户端应用程序能够像调用其他 Java Bean 一样调用 WS 操作。这使得客户端 WS 应用程序的编程变得简单了一些。在下一章节中，我们将使用 SAAJ API 创建一个调用 HelloWorld Web 服务的 Java 客户端代码。
 
@@ -550,21 +785,25 @@ SOAP 响应显示了消息字符串的简单返回。
 ```
 wsimport -d . http://localhost:9999/java-ws/hello?wsdl
 ```
+
 7. 将生成的客户端代码打包：
 
 ```
 jar cvf ../java-ws-generated.jar *
 ```
+
 8. 将 `java-ws-generated.jar` 文件移动到 `lib` 目录。
 
 ### 1.8.3 创建 Web 服务客户端
 
 9. 返回 Eclipse 并刷新 Java 项目：
+
    a) 选择 `java-ws` 项目。
    b) 选择 `File` → `Refresh`。
    c) 从项目属性中，选择 `Java Build Path/Libraries`。
    d) 点击 `Add JARs` 并添加 `java-ws-generated.jar` 文件。
    e) 点击 `OK`。
+
 10. 创建一个新的 Java 包：`com.bemach.ws.hello.client`。
 11. 创建一个新的 Java 类：`HelloWorldClient.java`。
 
@@ -612,8 +851,6 @@ Web 服务响应：Hello, Johnny B. Good!
 
 ## 1.10 引用
 
-
-
 Gottschalk, K., Graham, S., Kreger, H., & Snell, J. (2002). Introduction to Web Services architecture. *IBM Systems Journal, 41*(2), 170–177.
 
 Kleijnen, S., & Raju, S. (2003). An Open Web Services Architecture. *Queue, 1*(1), 38–46.
@@ -645,17 +882,15 @@ SOAP 消息封装在一个 SOAP 封中，其中包含 SOAP Header 和 SOAP Body�
 
 以下显示了三种形式的 SOAP 消息：请求、响应和故障。
 
-
-
 消息可以使用 HTTP 协议进行交换；因此，防火墙会允许消息通过。SOAP 消息也可以自然地通过 HTTPS 协议在安全信道上运行。SOAP 促进了一种松耦合的计算范式，其中软件组件的知识仅限于服务的接口。
 
 ### 2.1.1 SOAP 请求消息
 
 该请求表示对 `getEmployee` 方法的调用，其参数 `emplNo` 为 `100011`。注意，正文包含一个带有有一个 XML 元素 `<emp:getEmployee>` 的单个主体块。请求在通过网络传输到远程 SOAP 服务器之前，会被封化（序列化）为一个 XML 文档。当消息到达服务器时，它由 SOAP 引擎进行“反序列化”，并调用目标方法。
 
-- • 在这种情况下，没有使用 SOAP Header。
-- • SOAP 主体包含一个元素 `emp:getEmployee`。
-- • `getEmployee`：为了获取员工记录，需要员工编号（`emplNo`）。
+- 在这种情况下，没有使用 SOAP Header。
+- SOAP 主体包含一个元素 `emp:getEmployee`。
+- `getEmployee`：为了获取员工记录，需要员工编号（`emplNo`）。
 
 #### 列表 2-1. SOAP 消息请求
 
@@ -667,8 +902,8 @@ SOAP 消息封装在一个 SOAP 封中，其中包含 SOAP Header 和 SOAP Body�
 
 当 SOAP 服务器成功处理请求时，响应将会被封化为 XML 文档，并作为 HTTP 响应的一部分返回给客户端。客户端 SOAP 引擎随后将反序列化消息，以进一步处理调用结果。
 
-- • 未使用 SOAP Header。
-- • SOAP 主体包含一个元素 `ns2:getEmployeeResponse`。注意，使用了并引用了命名空间 `ns2`。
+- 未使用 SOAP Header。
+- SOAP 主体包含一个元素 `ns2:getEmployeeResponse`。注意，使用了并引用了命名空间 `ns2`。
 - 在 SOAP 主体中，返回了一个员工记录。
 
 #### 列表 2-2. SOAP 消息响应
@@ -709,19 +944,55 @@ POST /rpc/employees HTTP/1.1Accept-Encoding: gzip,deflateContent-Type: text/xml;
 
 #### 列表 2-6. 一个 HTTP 响应
 
+
+
 ```http
-HTTP/1.1 200 OKTransfer-encoding: chunkedContent-type: text/xml;charset="UTF-8"5e<?xml version="1.0" ?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body>88<ns2:sayResponse xmlns:ns2="http://hello.ws.bemach.com/"><return>Hello, Johnny B. Good!</return></ns2:sayResponse></S:Body></S:Envelope> |
+HTTP/1.1 200 OK
+Transfer-encoding: chunked
+Content-type: text/xml;charset="UTF-8"
+5e
+<?xml version="1.0" ?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+    <S:Body>
+        88
+        <ns2:sayResponse xmlns:ns2="http://hello.ws.bemach.com/">
+            <return>Hello, Johnny B. Good!</return>
+        </ns2:sayResponse>
+    </S:Body>
+</S:Envelope>
+|
 ```
 
 #### 列表 2-7. 另一个 HTTP 响应
 
 ```http
-HTTP/1.1 200 OKTransfer-encoding: chunkedContent-type: text/xml;charset=UTF-8Date: Thu, 11 Apr 2013 10:20:49 GMT5e<?xml version="1.0" ?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body>167<ns3:getEmployeeResponse xmlns:ns2="http://bemach.com" xmlns:ns3="http://employees.ws.bemach.com/"><return><emplNo>10002</emplNo><firstName>Bezalel</firstName><lastName>Simmel</lastName><birthDate>1964-06-02T00:00:00-04:00</birthDate><gender>F</gender><hireDate>1985-11-21T00:00:00-05:00</hireDate></return></ns3:getEmployeeResponse></S:Body></S:Envelope> |
+HTTP/1.1 200 OK
+Transfer-encoding: chunked
+Content-type: text/xml;charset=UTF-8
+Date: Thu, 11 Apr 2013 10:20:49 GMT
+5e
+<?xml version="1.0" ?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+    <S:Body>
+        167
+        <ns3:getEmployeeResponse xmlns:ns2="http://bemach.com" xmlns:ns3="http://employees.ws.bemach.com/">
+            <return>
+                <emplNo>10002</emplNo>
+                <firstName>Bezalel</firstName>
+                <lastName>Simmel</lastName>
+                <birthDate>1964-06-02T00:00:00-04:00</birthDate>
+                <gender>F</gender>
+                <hireDate>1985-11-21T00:00:00-05:00</hireDate>
+            </return>
+        </ns3:getEmployeeResponse>
+    </S:Body>
+</S:Envelope>
+|
 ```
 
 ## 2.3 SAAJ 客户端
 
-Java SOAP 附件 API (SAAJ) 编写起来更为复杂。它允许开发者直接访问创建 SOAP 消息的方法。可以使用 Java API 直接操作 XML。与第 1 章中编写使用 JAX-RPC 的客户端代码相比，编写 SAAJ 客户端可能非常辛苦。
+Java SOAP 附件 API（SAAJ）编写起来更为复杂。它允许开发者直接访问创建 SOAP 消息的方法。可以使用 Java API 直接操作 XML。与第 1 章中编写使用 JAX-RPC 的客户端代码相比，编写 SAAJ 客户端可能非常辛苦。
 
 使用 SAAJ 创建 SOAP 客户端的步骤如下：
 
@@ -731,13 +1002,9 @@ Java SOAP 附件 API (SAAJ) 编写起来更为复杂。它允许开发者直接�
 4. 将 SOAP 消息发送到 SOAP 服务器。
 5. 处理响应消息。
 
-有了 SOAP 消息的基础知识，就可以用 Java 编写 客户端。HelloWorld 服务的客户端代码如下。
+有了 SOAP 消息的基础知识，就可以用 Java 编写客户端。HelloWorld 服务的客户端代码如下。
 
-#### 列表 2-8. 使用 SAAJ 的 HelloWorldSOAPClient.java 类
-
-
-
-
+#### 列表 2-8. 使用 SAAJ 的 `HelloWorldSOAPClient.java` 类
 
 ```java
 package com.bemach.ws.hello.client;
@@ -764,11 +1031,18 @@ public final class HelloWorldSOAPClient {
 ```
 
 ```xml
-<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><ns2:sayResponse xmlns:ns2="http://hello.ws.bemach.com/"><return>Hello, Johnny!</return></ns2:sayResponse></S:Body></S:Envelope>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+    <S:Body>
+        <ns2:sayResponse xmlns:ns2="http://hello.ws.bemach.com/">
+            <return>Hello, Johnny!</return>
+        </ns2:sayResponse>
+    </S:Body>
+</S:Envelope>
 ```
 
 ```java
 private HelloWorldSOAPClient() {}
+
 public static void main(String[] args) {
     try {
         // 1. 创建一个 SOAP 消息
@@ -778,27 +1052,31 @@ public static void main(String[] args) {
         SOAPHeader sh = sm.getSOAPHeader();
         SOAPBody sb = sm.getSOAPBody();
         sh.detachNode();
+
         // 2. 在标头和正文中添加必要的元素
-        Name bodyName = sf.createName("say","m","http://hello.ws.bemach.com/");
+        Name bodyName = sf.createName("say", "m", "http://hello.ws.bemach.com/");
         SOAPBodyElement be = sb.addBodyElement(bodyName);
         Name name = sf.createName("name");
         SOAPElement arg0 = be.addChildElement(name);
         arg0.addTextNode("Johnny");
+
         // 3. 创建一个 SOAP 连接
-        URL ep = new URL(String.format("http://localhost:%s/java-ws/hello?WSDL",args[0]));
+        URL ep = new URL(String.format("http://localhost:%s/java-ws/hello?WSDL", args[0]));
         SOAPConnectionFactory scf = SOAPConnectionFactory.newInstance();
         SOAPConnection sc = scf.createConnection();
+
         // 4. 使用连接发送 SOAP 消息
         SOAPMessage response = sc.call(sm, ep);
         sc.close();
+
         // 5. 处理响应消息
         SOAPBody respBody = response.getSOAPBody();
         Iterator it = respBody.getChildElements();
-        SOAPBodyElement el = (SOAPBodyElement)it.next();
-        LOG.info("resp="+el.getNodeName());
+        SOAPBodyElement el = (SOAPBodyElement) it.next();
+        LOG.info("resp=" + el.getNodeName());
         it = el.getChildElements();
         SOAPElement ret = (SOAPElement) it.next();
-        LOG.info(String.format("%s=%s",ret.getNodeName(),ret.getTextContent()));
+        LOG.info(String.format("%s=%s", ret.getNodeName(), ret.getTextContent()));
     } catch (UnsupportedOperationException e) {
         LOG.severe(e.getMessage());
     } catch (SOAPException e) {
@@ -809,15 +1087,15 @@ public static void main(String[] args) {
 }
 ```
 
-SAAJ 许多许多功能可以用于处理 SOAP 消息。关于此主题的更多信息，请参阅本书末尾的参考文献。
+SAAJ 许多功能可以用于处理 SOAP 消息。关于此主题的更多信息，请参阅本书末尾的参考文献。
 
 SOAP 消息可以以两种方式结构：文档样式（document style）和 RPC 样式（RPC style）。最初只支持 RPC 样式。对于 RPC 模型，SOAP 正文定义了一个带有关联参数的特定方法，客户端调用该方法。因此，客户端与服务器之间的消息交换可以受到限制。方法调用与输入输出参数直接绑定。
 
-然而，与 RPC 样式不同，文档样式允许客户端和服务器以它们选择任何格式交换消息。SOAP 正文包含不遵循任何 SOAP 格式规则的消息。正文可以根据架构进行验证。
+然而，与 RPC 样式不同，文档样式允许客户端和服务器以它们选择的任何格式交换消息。SOAP 正文包含不遵循任何 SOAP 格式规则的消息。正文可以根据架构进行验证。
 
 ## 2.4 总结
 
-SOAP 是 Web 服务的的基础。SOAP 仍然是用于 B2B 集成的主流消息交换协议。注意，SOAP 中没有刻意提到安全问题。SOAP 主要关于两个系统之间的消息交换。它促进了松耦合计算。为了避免协议的复杂性，安全和其他功能被省略在外。
+SOAP 是 Web 服务的基础。SOAP 仍然是用于 B2B 集成的主流消息交换协议。注意，SOAP 中没有刻意提到安全问题。SOAP 主要关于两个系统之间的消息交换。它促进了松耦合计算。为了避免协议的复杂性，安全和其他功能被省略在外。
 
 在下一章中，我们将讨论 Web 服务如何使用 SOAP 作为传输协议来促进面向服务的计算范式。
 
@@ -825,26 +1103,24 @@ SOAP 是 Web 服务的的基础。SOAP 仍然是用于 B2B 集成的主流消息
 
 可以在以下在线文档中找到更多信息：
 
-Albrecht, C.C. (2004). “How clean is the future of SOAP?” Commun. ACM 47**(2): 66–68.**
+Albrecht, C.C. (2004). “How clean is the future of SOAP?” Commun. ACM 47(2): 66–68.
 
 SOAP Version 1.2 Part 0: Primer (Second Edition), Retrieved August 27, 2007 from:
 
 - `http://www.w3.org/TR/2007/soap12-part0`
 - `http://www.w3schools.com/soap/default.asp`
 
-
-
-
-
 WSDL 是一个根元素名为 `definitions` 的 XML 文档。该定义包含两个部分：抽象部分和具体部分。抽象描述由 `types`、`message` 和 `portType` 组成。具体部分由 `binding` 和 `service` 组成。抽象部分描述了与服务实现方式无关的操作，而具体部分指定了可以调用服务的协议和位置。
 
-![Image1445.PNG](img/Image1445_fmt.jpeg)**图 3-1*** *WSDL 结构*
+![Image1445.PNG](img/Image1445_fmt.jpeg)
+
+**图 3-1** WSDL 结构
 
 在接下来的章节中，我们将更细致地检查 WSDL 的结构，以理解抽象接口与具体实现之间的关系。
 
 *列表 3-1 示例 WSDL*
 
-*![6843.jpg](img/6843.jpg)*
+![6843.jpg](img/6843.jpg)
 
 *列表 3-2 另一个示例 WSDL*
 
@@ -868,10 +1144,10 @@ WSDL 是一个根元素名为 `definitions` 的 XML 文档。该定义包含两�
 
 `<portType>` 元素由一组抽象操作组成。这些操作可能由一个或多个端点支持。操作用于在服务消费者和服务者之间交换消息。消息交换协议可以采用以下模式之一：
 
-*   单向 – 服务端点接收消息
-*   请求-响应 – 服务端点接收消息并发送关联消息
-*   征询-响应 – 服务端点发送消息并接收关联消息
-*   通知 – 服务端点发送消息
+- 单向 – 服务端点接收消息
+- 请求-响应 – 服务端点接收消息并发送关联消息
+- 征询-响应 – 服务端点发送消息并接收关联消息
+- 通知 – 服务端点发送消息
 
 在上面的示例（列表 3-2）中，WS 包含一个操作（即 `createEmployee`），它具有两个消息——一个输入消息和一个输出消息。输入消息命名为 `tns:createEmployee`，输出消息命名为 `tns:createEmployeeResponse`。这两个消息可以追溯到消息元素。将 `portType` 想象成类似于 Java 类，在其中定义了方法和属性。
 
@@ -885,7 +1161,7 @@ WSDL 的 `<binding>` 元素将 WSDL 抽象接口连接到具体实现。在本�
 
 ### 3.3.1 `<binding>` 元素
 
-Binding 将 `<portType>` 映射到 `<service>` 元素中指定的实现。从列表 3-1 可以，`<portType>` `HelloWorld` 被绑定到 `<service>` 元素内部的 `<port>` `HelloWorldPort`。`HelloWorld` 的实现基于 HTTP 的 SOAP（`<soap:binding>`）。SOAP 指定了数据格式，而 HTTP 是用于提供服务的特定协议。
+Binding 将 `<portType>` 映射到 `<service>` 元素中指定的实现。从列表 3-1 可以看出，`<portType>` `HelloWorld` 被绑定到 `<service>` 元素内部的 `<port>` `HelloWorldPort`。`HelloWorld` 的实现基于 HTTP 的 SOAP（`<soap:binding>`）。SOAP 指定了数据格式，而 HTTP 是用于提供服务的特定协议。
 
 Binding 在实现中没有指定任何特定语言。服务的实现方式超出了 WSDL 的范围。
 
@@ -893,11 +1169,13 @@ Binding 在实现中没有指定任何特定语言。服务的实现方式超出
 
 服务是渲染该服务的网络特定地址（`<port>`）的集合。`<port>` 和 `<portType>` 通过 `<binding>` 元素链接。这种连接对于服务消费者和服务者之间的运行时动态绑定至关重要。
 
-`<port>` 元素描述了允许服务消费者与提供的服务进行交互的网络地址。服务可能具有多个端口；因此，选择权留给消费者。在示例 WSDL 中，只提供了一个端口，其位置指定为 `[`localhost:9999/java-ws/hello`](http://localhost:9999/java-ws/hello)`。注意，主机名和端口号可以在运行时修改，以指向托管服务的任何服务器。
+`<port>` 元素描述了允许服务消费者与提供的服务进行交互的网络地址。服务可能具有多个端口；因此，选择权留给消费者。在示例 WSDL 中，只提供了一个端口，其位置指定为 [`localhost:9999/java-ws/hello`](http://localhost:9999/java-ws/hello)。注意，主机名和端口号可以在运行时修改，以指向托管服务的任何服务器。
 
 以下描述了 WSDL 主要元素之间的链接。
 
-![Image1774.PNG](img/Image1774_fmt.jpeg)**图 3-2** WSDL 内部的链接
+![Image1774.PNG](img/Image1774_fmt.jpeg)
+
+**图 3-2** WSDL 内部的链接
 
 ## 3.4 参考文献
 
@@ -909,7 +1187,9 @@ Web Services Description Language (WSDL) 1.1, Retrieved August 27, 2007 from:
 
 [`www.w3.org/TR/wsdl`](http://www.w3.org/TR/wsdl)
 
-WSDL Tutorial, Retrieved November 7, 2007 from: [`www.w3schools.com/wsdl/default.asp`](http://www.w3schools.com/wsdl/default.asp)
+WSDL Tutorial, Retrieved November 7, 2007 from:
+
+[`www.w3schools.com/wsdl/default.asp`](http://www.w3schools.com/wsdl/default.asp)
 
 # 4 示例应用程序
 
@@ -917,12 +1197,21 @@ WSDL Tutorial, Retrieved November 7, 2007 from: [`www.w3schools.com/wsdl/default
 
 完成本章后，你将能够：
 
-1.  编写一个访问存储在关系型数据库中的记录的 Web 服务
-2.  使用 JDK 6 或更高版本编写 Web 服务
-3.  使用基础 Java 端点类发布 Web 服务
-4.  使用 SOAPUI 测试工具测试 Web 服务
-5.  使用 `wsimport` 为客户端生成 Web 服务存根
-6.  编写一个简单的 Web 服务消费者来调用 Web 服务
+1. 编写一个访问存储在关系型数据库中的记录的 Web 服务
+
+
+
+## 目标
+
+2. 使用 JDK 6 或更高版本编写 Web 服务。
+
+3. 使用基础 Java 端点类发布 Web 服务。
+
+4. 使用 SOAPUI 测试工具测试 Web 服务。
+
+5. 使用 `wsimport` 为客户端生成 Web 服务存根。
+
+6. 编写一个简单的 Web 服务消费者来调用 Web 服务。
 
 ## 4.1 示例应用程序
 
@@ -930,16 +1219,14 @@ WSDL Tutorial, Retrieved November 7, 2007 from: [`www.w3schools.com/wsdl/default
 
 在本应用程序中，我们使用基础 Java JDK 部署了一个简单的 SOAP 服务器。为了使此应用程序运行，你需要从互联网下载以下软件包（更多说明请见附录 A）。
 
-*   • Java JDK 6
-*   • MySQL Community Server 5.6
-*   • MySQL 示例数据库
-*   • MySQL JDBC 驱动程序
+- Java JDK 6
+- MySQL Community Server 5.6
+- MySQL 示例数据库
+- MySQL JDBC 驱动程序
 
-![1780.jpg](img/1780.jpg)**图 4-1*** *n 分层应用程序*
+![1780.jpg](img/1780.jpg)
 
-
-
-
+**图 4-1. 分层应用程序**
 
 为了避免给已经复杂的概念增加复杂性，本示例中没有考虑安全问题。从远程机器（即 `WS` 客户端）在不经过适当身份验证的情况下访问数据库不是良好的做法；但在本应用程序中，使用固定的用户 ID 和密码访问数据库是为了简单化，而非安全考虑。此外，使用直接的 `JDBC` 调用使用数据源要高效得多，但示例代码并没有遵循这一标准约定。
 
@@ -954,6 +1241,7 @@ WSDL Tutorial, Retrieved November 7, 2007 from: [`www.w3schools.com/wsdl/default
 资源可以被创建、读取（或获取）、更新（或更改）和删除。`CRUD` 概念自计算机科学诞生以来一直是计算机编程的基础。我们在数据库中存储了一组员工记录，并希望从远程机器上通过 `WS` 技术使用 `SOAP` 对它们进行操纵。
 
 ![image/1787.jpg]
+
 **图 4-2. 用例**
 
 #### 用例 1：创建员工
@@ -961,36 +1249,40 @@ WSDL Tutorial, Retrieved November 7, 2007 from: [`www.w3schools.com/wsdl/default
 主要参与者：服务消费者
 
 主成功场景：
+
 1. 终端用户输入所需的员工信息。
 2. 服务消费者随后验证这些信息。
 3. 服务消费者随后调用 `employees` 数据服务创建一个新员工。
 4. 服务消费者向终端用户展示一个新的员工编号。
 
-### 用例 2：更新员工
+#### 用例 2：更新员工
 
 主要参与者：服务消费者
 
 主成功场景：
+
 1. 终端用户更新所需的员工信息。
 2. 服务消费者随后验证这些信息。
 3. 服务消费者随后调用 `employees` 数据服务进行更新。
 4. 服务消费者告知终端用户更新状态。
 
-### 用例 3：获取（读取）员工
+#### 用例 3：获取（读取）员工
 
 主要参与者：服务消费者
 
 主成功场景：
+
 1. 终端用户输入员工编号。
 2. 服务消费者随后验证该编号。
 3. 服务消费者随后调用 `employees` 数据服务检索员工记录。
 4. 服务消费者向终端用户展示员工记录。
 
-### 用例 4：删除员工
+#### 用例 4：删除员工
 
 主要参与者：服务消费者
 
 主成功场景：
+
 1. 终端用户输入员工编号。
 2. 服务消费者随后验证该编号。
 3. 服务消费者随后调用 `employees` 数据服务移除员工记录。
@@ -998,12 +1290,13 @@ WSDL Tutorial, Retrieved November 7, 2007 from: [`www.w3schools.com/wsdl/default
 
 当发生错误情况时，会抛出 `SOAP` 异常。
 
-## 4.1.2 序序图
+### 4.1.2 时序图
 
 在典型的 `WS` 调用中，涉及许多层软件；但在高层面上，动作序列可以像如下时序图所示。
 
 ![image/1796.jpg]
-**图 4-3. getEmployee 操作的时序图**
+
+**图 4-3. `getEmployee` 操作的时序图**
 
 由于所有四个操作都是基础的请求-响应类型的消息交换，因此显示了 `getEmployee` 操作的单一时序图。
 
@@ -1020,6 +1313,7 @@ WSDL Tutorial, Retrieved November 7, 2007 from: [`www.w3schools.com/wsdl/default
 该 `WS` 应用程序的简单部署所示：
 
 ![image/7013.jpg]
+
 **图 4-4. 部署图**
 
 在现实应用中，IT 组织可能会部署复杂的服务器和数据库网来管理他们的 `WS` 活动。可以有很多客户端。在本示例 `WS` 应用程序中，我们创建了一个包含客户端、服务器和数据库机器的环境。这些机器可以是虚拟的，这意味着所有三个都可以由单台物理机托管。
@@ -1034,28 +1328,24 @@ WSDL Tutorial, Retrieved November 7, 2007 from: [`www.w3schools.com/wsdl/default
 
 `jdbc:<subprotocol>:<subname>`
 
-其中
+其中：
 
-* `<subprotocol>` 是注册到 Oracle 的驱动名称。在本应用程序中使用 `‘mysql’`。
-
-* `<subname>` 是资源的标识。它具有以下格式：
+- `<subprotocol>` 是注册到 Oracle 的驱动名称。在本应用程序中使用 `‘mysql’`。
+- `<subname>` 是资源的标识。它具有以下格式：
 
 `//host:port/subsubname`
 
-subsubname 由数据库架构名称、用户标识符和密码组成。
+`subsubname` 由数据库架构名称、用户标识符和密码组成。
 
 在本示例中，完整的 JDBC URL 可以写为：
 
-```
+```text
 jdbc:mysql://localhost:3306/employees?user=empl_1&password=password
 ```
 
-
-
-
 为了通过 `JDBC` 连接访问数据库，创建了一个数据库账户并将其分配给 `employees` 数据库。它拥有 `employees` 数据库的所有权限。MySQL 的默认访问端口为 `3306`。在运行 SOAP 服务器程序之前，请确保下载了 `JDBC` 驱动程序并将其包含在 Java 的 `classpath` 中。
 
-### 4.1.4.1 DbConfig.java
+#### 4.1.4.1 `DbConfig.java`
 
 在此示例代码中，连接 MySQL 数据库的默认值如下（参见 `DbConnection.java`）：
 
@@ -1065,14 +1355,14 @@ jdbc:mysql://localhost:3306/employees?user=empl_1&password=password
 | 账户 | empl_1 |
 | 密码 | Password |
 | 数据库名 | Employees |
-| JDBC 驱动名称 | com.mysql.jdbc.Driver |
+| JDBC 驱动名称 | `com.mysql.jdbc.Driver` |
 | 子协议 | Mysql |
 
-**表 1.** *数据库配置参数*
+**表 1. 数据库配置参数**
 
-#### 列表 41. DbConfig.java 类
+#### 列表 4-1. `DbConfig.java` 类
 
-| 包名 | com.bemach.data; |
+| 包名 | `com.bemach.data;` |
 | :--- | :--- |
 
 ```java
@@ -1154,20 +1444,20 @@ public class DbConfig {
 
 `<scheme>:<hier-part>?query`
 
-其中
+其中：
 
-* `<scheme>` 是 `http` 协议
-* `<hier-part>` 是 `//host:port/path`
+- `<scheme>` 是 `http` 协议。
+- `<hier-part>` 是 `//host:port/path`。
 
 在示例中，服务端点定义为：
 
 `http://localhost:9999/doc/employees`
 
-以及
+以及：
 
 `http://localhost:9999/rpc/employees`
 
-### 4.1.5.1 SvrConfig.java
+#### 4.1.5.1 `SvrConfig.java`
 
 为了将 HTTP 连接用于 SOAP，示例代码必须使用以下默认值：
 
@@ -1176,11 +1466,11 @@ public class DbConfig {
 | 端口号 | 9999 |
 | 协议 | http |
 
-**表 2.** *服务器配置参数*
+**表 2. 服务器配置参数**
 
-#### 列表 4-2. SvrConfig.java 类
+#### 列表 4-2. `SvrConfig.java` 类
 
-| 包名 | com.bemach.ws.server; |
+| 包名 | `com.bemach.ws.server;` |
 | :--- | :--- |
 
 ```java
@@ -1240,30 +1530,30 @@ public class SvrConfig {
 
 `SvrConfig` 类包含了用于形成两种样式（文档和 RPC）服务端点的信息。此外，该类包含了数据访问代码访问数据库所需的配置参数。
 
-### 4.1.6 关于 employees 示例数据库
+### 4.1.6 关于 `employees` 示例数据库
 
 `employees` 数据库是 MySQL 的示例数据库。该数据库架构是由新加坡南理工大学的蔡华宽（Chua Hock Chuan）教授开发的。可以访问该网站：`http://www.ntu.edu.sg/home/ehchua/programming/sql/SampleDatabases.html`。
 
-![数据库图](img/Image1967_fmt.jpeg) **图 4-5.** *数据库架构（蔡华宽）*
+![数据库图](img/Image1967_fmt.jpeg)
+
+**图 4-5. 数据库架构（蔡华宽）**
 
 在示例应用程序中，我们只使用 `employees` 表。该表可以使用以下 DDL 创建：
 
-#### 列表 4-3. Employees 表定义
+#### 列表 4-3. `Employees` 表定义
 
-| (图像) |
+| （图像） |
 | :--- |
 
-`employees` 表中的所有字段都是必填的，主键为员工编号。`employees` 数据记录可以使用 Java  中的 `Employee` 类来表示。该类的定义如下：
+`employees` 表中的所有字段都是必填的，主键为员工编号。`employees` 数据记录可以使用 Java 中的 `Employee` 类来表示。该类的定义如下：
 
-### 4.1.6.1 Employee.java
-
-我们创建一个包含员工记录的 `Employee` 数据对象。`Employee` 是一个 Java 类，它使用了 Java XML 绑定架构 (`JAXB`) 注解来辅助序列化过程。`JAXB` 允许 Java 开发人员使用 Java API 从 XML 文档中读取和写入对象。它简化了 Java 中读取和写入 XML 文档的过程。特别是，该注解为 SOAP 引擎将 Java 对象转换为 XML 以及反之的操作提供了一种更简单的机制。
-
-#### 列表 4-4. Employee.java 类
+#### 4.1.6.1 `Employee.java`
 
 
 
+我们创建一个包含员工记录的`Employee`数据对象。`Employee`是一个 Java 类，它使用了 Java XML 绑定架构（`JAXB`）注解来辅助序列化过程。`JAXB`允许 Java 开发人员使用 Java API 从 XML 文档中读取和写入对象。它简化了 Java 中读取和写入 XML 文档的过程。特别是，该注解为 SOAP 引擎将 Java 对象转换为 XML 以及反之的操作提供了一种更简单的机制。
 
+### 列表 4-4. Employee.java 类
 
 ```java
 package com.bemach.data;
@@ -1350,9 +1640,9 @@ public class Employee implements Serializable {
 }
 ```
 
-所有必需字段都反映在序列中的 XML 元素中。可选元素通常包含 `numOccurs="0"`。Java 数据类型被整齐地映射到 XML 内生数据类型，如架构所示。
+所有必需字段都反映在序列中的 XML 元素中。可选元素通常包含`numOccurs="0"`。Java 数据类型被整齐地映射到 XML 内生数据类型，如架构所示。
 
-#### 列表 4-5. XSD 中“employee’的数据类型
+### 列表 4-5. XSD 中“employee’的数据类型
 
 ```xml
 <xs:schema xmlns:tns="http://employees.rpc.ws.bemach.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://employees.rpc.ws.bemach.com/">
@@ -1389,14 +1679,14 @@ public class Employee implements Serializable {
 
 ![7274.jpg](img/7274.jpg) **列表 4-6. 使用 Java 编写 Web 服务的活动**
 
-我们在 Eclipse 下创建了两个 Java 项目——`data-svc` 和 `java-ws`。`data-svc` 项目持有通过 `JDBC` 与数据库交互的 Java 代码。该项目创建了一个名为 `data-svc.jar` 的库。该库包含四个 Java 类：
+我们在 Eclipse 下创建了两个 Java 项目——`data-svc`和`java-ws`。`data-svc`项目持有通过`JDBC`与数据库交互的 Java 代码。该项目创建了一个名为`data-svc.jar`的库。该库包含四个 Java 类：
 
 *   `DbConfig.java`
 *   `DbConnection.java`
 *   `Employee.java`
 *   `EmployeeDao.java`
 
-`java-ws` 项目生成了 `java-ws.jar` 库，由以下 Java 类组成：
+`java-ws`项目生成了`java-ws.jar`库，由以下 Java 类组成：
 
 *   `SvrConfig.java`
 *   `Server.java`
@@ -1415,46 +1705,43 @@ public class Employee implements Serializable {
 
 ### 4.2.2 编写数据访问
 
-数据访问对象（DAO）模式用于提供对数据的访问。首先，我们创建一个名为 `data-svc` 的 Java 项目。
+数据访问对象（DAO）模式用于提供对数据的访问。首先，我们创建一个名为`data-svc`的 Java 项目。
 
 ![7274.jpg](img/7274.jpg) **图 4-6 data-svc**
 
 ### 4.2.1 导入 JDBC 驱动
 
-按照第 7 节的说明下载并下载适用于 JDBC 驱动，应用程序使用的 JDBC 驱动是 `mysql-connector-java-5.1.24-bin.jar`。
+按照第 7 节的说明下载并下载适用于 JDBC 驱动，应用程序使用的 JDBC 驱动是`mysql-connector-java-5.1.24-bin.jar`。
 
-在 `data-svc` 项目下创建一个 `lib` 文件夹。该文件夹将包含库。
+在`data-svc`项目下创建一个`lib`文件夹。该文件夹将包含库。
 
-通过点击 `lib` 文件夹导入已下载的 JDBC 驱动。选择 `File` -> `Import...`。选择窗口所示：
+通过点击`lib`文件夹导入已下载的 JDBC 驱动。选择`File` -> `Import...`。选择窗口所示：
 
 ![2116.jpg](img/2116.jpg) **图 4-7 选择**
 
-选择 `General` -> `Archive File`，然后点击 `Next` 按钮。存档文件窗口所示：
+选择`General` -> `Archive File`，然后点击`Next`按钮。存档文件窗口所示：
 
 ![2124.jpg](img/2124.jpg) **图 4-8 存档文件**
 
-如果您知道 MySQL JDBC 驱动的位置，请输入文件名和位置。否则，使用右侧的 `Browse` 按钮并选择文件。然后点击 `Finish` 按钮。
+如果您知道 MySQL JDBC 驱动的位置，请输入文件名和位置。否则，使用右侧的`Browse`按钮并选择文件。然后点击`Finish`按钮。
 
 ### 4.2.2 引用库
 
-接下来，确保项目引用了 MySQL 驱动。首先，选择 `data-svc` 项目。然后选择 `Project` -> `Properties`。`data-svc` 属性窗口所示：
+接下来，确保项目引用了 MySQL 驱动。首先，选择`data-svc`项目。然后选择`Project` -> `Properties`。`data-svc`属性窗口所示：
 
 ![2131.jpg](img/2131.jpg) **图 4-9 构建路径**
 
-在屏幕左侧面板中，选择 `Java Build Path`。选择右面板顶部的 `Libraries` 选项卡。点击 `Add JARs...` 按钮。JAR 选择窗口所示：
+在屏幕左侧面板中，选择`Java Build Path`。选择右面板顶部的`Libraries`选项卡。点击`Add JARs...`按钮。JAR 选择窗口所示：
 
 ![2138.jpg](img/2138.jpg) **图 4-10 JAR 选择**
 
-展开 `data-svc/lib` 文件夹。选择 JDBC 驱动。然后点击 `OK`。您的 Java 构建路径屏幕应该是这样的：
+展开`data-svc/lib`文件夹。选择 JDBC 驱动。然后点击`OK`。您的 Java 构建路径屏幕应该是这样的：
 
 ![2147.jpg](img/2147.jpg) **图 4-11 构建路径**
 
+在之前的章节中，我们创建了`DbConfig.java`类来存储访问数据库的配置参数。接下来的逻辑步骤是创建一个类来管理该应用程序所有的`JDBC`连接。虽然也可以`DataSource`类来获取数据库连接，但在本书中，我们使用一种基础方法来获取 JDBC 数据库连接。
 
-
-
-在之前的章节中，我们创建了 `DbConfig.java` 类来存储访问数据库的配置参数。接下来的逻辑步骤是创建一个类来管理该应用程序所有的 `JDBC` 连接。虽然也可以 `DataSource` 类来获取数据库连接，但在本书中，我们使用一种基础方法来获取 JDBC 数据库连接。
-
-###  4-8. DbConnection.java 类
+### 4-8. DbConnection.java 类
 
 ```java
 package com.bemach.data;
@@ -1504,25 +1791,29 @@ public final class DbConnection {
 }
 ```
 
-`DriverManager` 类通过三种方式帮助创建 JDBC 连接：
+`DriverManager`类通过三种方式帮助创建 JDBC 连接：
 
 - `getConnection(String url)`
 - `getConnection(String url, Properties)`
 - `getConnection(String url, String user, String password)`
 
 在本示例中，使用了第一个方法，URL 如下：
+
 `jdbc:mysql://localhost:3306/employees?user=empl&password=password`
 
-`getConn()` 方法需要连接数据库的所有配置参数。当不再需要 JDBC 连接时，必须显式调用 `close()` 方法。积累的连接会消耗资源。在大多数 JDBC 程序中，关闭连接会导致关联的 `Statement` 和 `ResultSet` 被关闭。
+`getConn()`方法需要连接数据库的所有配置参数。当不再需要 JDBC 连接时，必须显式调用`close()`方法。积累的连接会消耗资源。在大多数 JDBC 程序中，关闭连接会导致关联的`Statement`和`ResultSet`被关闭。
 
-4.2 EmployeeDao.java
+### 4.2 EmployeeDao.java
 
-该类提供了对数据库 `employees` 表的基本访问。使用 `PreparedStatement` 可以避免 SQL 注入攻击。我们的任务是开发一个名为 `EmployeeDao` 的类，允许客户端创建、读取、更新和删除 `employees` 表中的行。目前，我们不关心安全性——只是想展示如何通过自下而上的方法来创建该类。`EmployeeDao` 类使用 Java 数据库连接 (JDBC) 创建数据库连接、发布 SQL 语句并处理返回值。这是一个基础 JDBC 应用。
+该类提供了对数据库`employees`表的基本访问。使用`PreparedStatement`可以避免 SQL 注入攻击。我们的任务是开发一个名为`EmployeeDao`的类，允许客户端创建、读取、更新和删除`employees`表中的行。目前，我们不关心安全性——只是想展示如何通过自下而上的方法来创建该类。`EmployeeDao`类使用 Java 数据库连接 (JDBC) 创建数据库连接、发布 SQL 语句并处理返回值。这是一个基础 JDBC 应用。
 
 ### 4-9. EmployeeDao.java 类
 
+
+
 ```java
 package com.bemach.data;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -1530,14 +1821,25 @@ import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.logging.Logger;
 
-/** 该类允许应用程序对 Employee 资源执行四种基本操作：1. 创建 2. 读取 3. 更新 4. 删除。额外的方法有：getEmployeeByLastName, getplByFirstName */
+/**
+ * 该类允许应用程序对 Employee 资源执行四种基本操作：
+ * 1. 创建
+ * 2. 读取
+ * 3. 更新
+ * 4. 删除
+ *
+ * 额外的方法有：`getEmployeeByLastName`、`getplByFirstName`
+ */
 class EmployeeDao {
     public static final Logger LOG = Logger.getLogger(EmployeeDao.class.getName());
     private DbConfig cfg = null;
 
-    public EmployeeDao() {}
+    public EmployeeDao() {
+    }
 
-    /** 构造函数
+    /**
+     * 构造函数
+     *
      * @param cfg
      */
     public EmployeeDao(DbConfig cfg) {
@@ -1545,144 +1847,232 @@ class EmployeeDao {
         LOG.info("Constructing EmployeeDao ...");
     }
 
-    /** 从 ResultSet 返回一个 Employee 记录。
+    /**
+     * 从 ResultSet 返回一个 Employee 记录。
+     *
      * @param rs
      * @return
      */
     protected Employee getEmpl(ResultSet rs) throws SQLException {
         Employee empl = new Employee();
         Calendar cal = Calendar.getInstance();
+
         empl.setEmNo(rs.getInt("emp_no"));
         cal.setTimeInMillis(rs.getTimestamp("birth_date").getTime());
         empl.setBirthDate(cal);
         empl.setFirstName(rs.getString("first_name"));
         empl.setLastName(rs.getString("last_name"));
         empl.setGender(rs.getString("gender"));
+
         cal = Calendar.getInstance();
         cal.setTimeInMillis(rs.getTimestamp("hire_date").getTime());
         empl.setHireDate(cal);
+
         return empl;
     }
 
-    /** 创建新员工。
+    /**
+     * 创建新员工。
+     *
      * @param empl
      * @return
      */
     public int createEmpl(Employee empl) throws SQLException {
         LOG.info("Create an employee");
-        DbConnection dbConn = DbConnection.getInstance(cfg.getDriverName(), cfg.getSubprot(), cfg.getHost(), cfg.getPort(), cfg.getDb(), cfg.getUid(), cfg.getPsw());
+
+        DbConnection dbConn = DbConnection.getInstance(
+            cfg.getDriverName(),
+            cfg.getSubprot(),
+            cfg.getHost(),
+            cfg.getPort(),
+            cfg.getDb(),
+            cfg.getUid(),
+            cfg.getPsw()
+        );
+
         String sql = "SELECT MAX(EMP_NO) FROM EMPLOYEES";
         PreparedStatement stmt = null;
         ResultSet rs = null;
+
         try {
             stmt = dbConn.getConn().prepareStatement(sql);
             stmt.execute();
             rs = stmt.getResultSet();
             rs.next();
+
             int nextEmplNo = rs.getInt(1);
+
             stmt.close();
             rs.close();
-            sql = "INSERT INTO EMPLOYEES (EMP_NO, BIRTH_DATE, FIRST_NAME, LAST_NAME, GENDER, HIRE_DATE) VALUES (?,?,?,?,?,?)";
+
+            sql = "INSERT INTO EMPLOYEES "
+                + "(EMP_NO, BIRTH_DATE, FIRST_NAME, LAST_NAME, GENDER, HIRE_DATE) "
+                + "VALUES (?,?,?,?,?,?)";
+
             stmt = dbConn.getConn().prepareStatement(sql);
+
             int idx = 1;
             stmt.setInt(idx++, ++nextEmplNo);
+
             Timestamp ts = new Timestamp(empl.getBirthDate().getTimeInMillis());
             stmt.setTimestamp(idx++, ts);
             stmt.setString(idx++, empl.getFirstName());
             stmt.setString(idx++, empl.getLastName());
             stmt.setString(idx++, empl.getGender());
+
             ts = new Timestamp(empl.getHireDate().getTimeInMillis());
             stmt.setTimestamp(idx++, ts);
+
             stmt.execute();
             return nextEmplNo;
         } finally {
-            if (stmt != null) stmt.close();
-            if (rs != null) rs.close();
+            if (stmt != null) {
+                stmt.close();
+            }
+            if (rs != null) {
+                rs.close();
+            }
             dbConn.close();
         }
     }
-}
-```
 
+    /**
+     * 更新员工记录。
+     *
+     * @param empl
+     * @return
+     */
+    public boolean updateEmpl(Employee empl) throws SQLException {
+        LOG.info("Update an employee");
 
+        DbConnection dbConn = DbConnection.getInstance(
+            cfg.getDriverName(),
+            cfg.getSubprot(),
+            cfg.getHost(),
+            cfg.getPort(),
+            cfg.getDb(),
+            cfg.getUid(),
+            cfg.getPsw()
+        );
 
+        String sql = "UPDATE EMPLOYEES SET "
+            + "BIRTH_DATE=?, FIRST_NAME=?, LAST_NAME=?, GENDER=?, HIRE_DATE=? "
+            + "WHERE EMP_NO=?";
 
-```java
-/*** 更新员工记录.** @param empl* @return*/public boolean updateEmpl(Employee empl) throws SQLException {
-    LOG.info("Update an employee");
-    DbConnection dbConn = DbConnection.getInstance(cfg.getDriverName(),cfg.getSubprot(), cfg.getHost(),cfg.getPort(), cfg.getDb(),cfg.getUid(), cfg.getPsw());
-    String sql = "UPDATE EMPLOYEES SET BIRTH_DATE=?, FIRST_NAME=?, LAST_NAME=?, GENDER=?, HIRE_DATE=? " +"WHERE EMP_NO=?";
-    PreparedStatement stmt = null;
-    try {
-        stmt = dbConn.getConn().prepareStatement(sql);
-        int idx = 1;
-        Timestamp ts = new Timestamp(empl.getBirthDate().getTimeInMillis());
-        stmt.setTimestamp(idx++, ts);
-        stmt.setString(idx++, empl.getFirstName());
-        stmt.setString(idx++, empl.getLastName());
-        stmt.setString(idx++, empl.getGender());
-        ts = new Timestamp(empl.getHireDate().getTimeInMillis());
-        stmt.setTimestamp(idx++, ts);
-        stmt.setInt(idx++, (int)empl.getEmplNo());
-        stmt.execute();
-        return true;
-    } finally {
-        if (stmt != null) {
-            stmt.close();
-        }
-        dbConn.close();
-    }
-}
+        PreparedStatement stmt = null;
 
-/*** 根据员工编号删除员工* @param emplNo* @return*/public boolean deleteEmpl(int emplNo) throws SQLException {
-    LOG.info("Delete an employee");
-    DbConnection dbConn = DbConnection.getInstance(cfg.getDriverName(),cfg.getSubprot(), cfg.getHost(),cfg.getPort(), cfg.getDb(),cfg.getUid(), cfg.getPsw());
-    String sql = "DELETE FROM EMPLOYEES WHERE EMP_NO=?";
-    PreparedStatement stmt = null;
-    try {
-        stmt = dbConn.getConn().prepareStatement(sql);
-        stmt.setInt(1, emplNo);
-        stmt.execute();
-        return true;
-    } finally {
-        if (stmt != null) {
-            stmt.close();
-        }
-        dbConn.close();
-    }
-}
+        try {
+            stmt = dbConn.getConn().prepareStatement(sql);
 
-/*** 根据给定的唯一员工编号获取员工 ..** @param emplNo* @return*/public Employee getEmpl (int emplNo) throws SQLException {
-    LOG.info("Getting employee by Employee number: "+emplNo);
-    DbConnection dbConn = DbConnection.getInstance(cfg.getDriverName(),cfg.getSubprot(), cfg.getHost(),cfg.getPort(), cfg.getDb(),cfg.getUid(), cfg.getPsw());
-    String sql = "SELECT * FROM EMPLOYEES WHERE EMP_NO=?";
-    PreparedStatement stmt = null;
-    ResultSet rs = null;
-    try {
-        stmt = dbConn.getConn().prepareStatement(sql);
-        stmt.setInt(1, emplNo);
-        if (stmt.execute()) {
-            rs = stmt.getResultSet();
-            if (rs != null && rs.next()) {
-                return getEmpl(rs);
+            int idx = 1;
+            Timestamp ts = new Timestamp(empl.getBirthDate().getTimeInMillis());
+            stmt.setTimestamp(idx++, ts);
+            stmt.setString(idx++, empl.getFirstName());
+            stmt.setString(idx++, empl.getLastName());
+            stmt.setString(idx++, empl.getGender());
+
+            ts = new Timestamp(empl.getHireDate().getTimeInMillis());
+            stmt.setTimestamp(idx++, ts);
+            stmt.setInt(idx++, (int) empl.getEmplNo());
+
+            stmt.execute();
+            return true;
+        } finally {
+            if (stmt != null) {
+                stmt.close();
             }
+            dbConn.close();
         }
-    } finally {
-        if (stmt != null) {
-            stmt.close();
-        }
-        if (rs != null) {
-            rs.close();
-        }
-        dbConn.close();
     }
-    return null;
+
+    /**
+     * 根据员工编号删除员工。
+     *
+     * @param emplNo
+     * @return
+     */
+    public boolean deleteEmpl(int emplNo) throws SQLException {
+        LOG.info("Delete an employee");
+
+        DbConnection dbConn = DbConnection.getInstance(
+            cfg.getDriverName(),
+            cfg.getSubprot(),
+            cfg.getHost(),
+            cfg.getPort(),
+            cfg.getDb(),
+            cfg.getUid(),
+            cfg.getPsw()
+        );
+
+        String sql = "DELETE FROM EMPLOYEES WHERE EMP_NO=?";
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = dbConn.getConn().prepareStatement(sql);
+            stmt.setInt(1, emplNo);
+            stmt.execute();
+
+            return true;
+        } finally {
+            if (stmt != null) {
+                stmt.close();
+            }
+            dbConn.close();
+        }
+    }
+
+    /**
+     * 根据给定的唯一员工编号获取员工。
+     *
+     * @param emplNo
+     * @return
+     */
+    public Employee getEmpl(int emplNo) throws SQLException {
+        LOG.info("Getting employee by Employee number: " + emplNo);
+
+        DbConnection dbConn = DbConnection.getInstance(
+            cfg.getDriverName(),
+            cfg.getSubprot(),
+            cfg.getHost(),
+            cfg.getPort(),
+            cfg.getDb(),
+            cfg.getUid(),
+            cfg.getPsw()
+        );
+
+        String sql = "SELECT * FROM EMPLOYEES WHERE EMP_NO=?";
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        try {
+            stmt = dbConn.getConn().prepareStatement(sql);
+            stmt.setInt(1, emplNo);
+
+            if (stmt.execute()) {
+                rs = stmt.getResultSet();
+
+                if (rs != null && rs.next()) {
+                    return getEmpl(rs);
+                }
+            }
+        } finally {
+            if (stmt != null) {
+                stmt.close();
+            }
+            if (rs != null) {
+                rs.close();
+            }
+            dbConn.close();
+        }
+
+        return null;
+    }
 }
 ```
 
 该类包含四个重要方法，可以从数据库的 `employees` 表中创建、读取、更新和删除员工记录。这些方法稍后通过名为 `EmployeeDocData` 和 `EmployeeRpcData` 的两个 Web 服务的四个操作反映。
 
-### 4.2.1 createEmpl(Employee empl)
+### 4.2.1 `createEmpl(Employee empl)`
 
 此方法接收一个名为 `empl` 的新员工记录，并使用 JDBC `PreparedStatement` 类将其插入到 `employees` 表中。该方法假设此方法的调用者已经对员工记录的内容进行了验证。另一种方法是在此类中包含一个验证方法，并在四个操作中的每一个调用。请注意，所有涉及数据库的操作都是通过 `PreparedStatement` 完成的，以限制来自外部的 SQL 注入攻击。
 
@@ -1690,15 +2080,15 @@ class EmployeeDao {
 
 一旦接收到新的员工编号，该方法会将记录插入数据库，并向调用者返回一个新的员工编号；但是，最后的子句会首先确保数据库连接已关闭。这是确保在方法完成任务后妥善释放资源的众多技术之一。
 
-### 4.2.2 getEmpl(emplNo)
+### 4.2.2 `getEmpl(emplNo)`
 
 此方法从数据库的 `employees` 表中检索员工记录。唯一的员工编号是输入输入。如果找到了记录，则将其返回给调用者。否则，将抛出异常。无论如何，在此时数据库连接会被关闭。
 
-### 4.2.3 updateEmpl(empl)
+### 4.2.3 `updateEmpl(empl)`
 
 此方法根据输入记录更新除员工编号以外的所有值的记录。处理完成后，将返回一个 `true` 或 `false` 的布尔值。如果记录存在且更新成功，则返回真值的布尔值。否则，方法返回 `false`。
 
-### 4.2.4 deleteEmpl(emplNo)
+### 4.2.4 `deleteEmpl(emplNo)`
 
 与该类的其他方法类似，此方法打开数据库连接，然后发布 SQL 语句来完成任务。成功完成后，员工记录将从表中移除并返回一个真值的布尔值。否则，方法返回 `false`。
 
@@ -1710,11 +2100,9 @@ class EmployeeDao {
 
 我们为 `EmployeeDao.java` 类提供了一个基本的 JUnit 测试。该类被称为 `EmployeeDataTest.java`。
 
-#### 列表 4-10: EmployeeDataTest.java 类
+#### 列表 4-10：`EmployeeDataTest.java` 类
 
 （代码块保持原样）
-
-
 
 
 
@@ -1860,7 +2248,9 @@ private void printOutput(Employee empl) {
 通过包含以下注解来编写 Web Services：
 
 *   `@WebService`：指示该类的 Web 服务
+
 *   `@SOAPBinding`：指定绑定方式
+
 *   `@WebMethod`：将方法暴露的操作
 
 #### 列表 4-13. EmployeeData 类
@@ -1872,10 +2262,15 @@ private void printOutput(Employee empl) {
 `WebService` 注解表示该类（或接口）实现 Web 服务。该注解有六（6）可选元素，用于更详细地定义 Web 服务：
 
 1.  `endpointInterface`：服务端点的接口完整名称
+
 2.  `name`：WSDL 中 `<portType>` 元素的名称
+
 3.  `portName`：WSDL 中 `<port>` 元素的名称
+
 4.  `serviceName`：WSDL 中 `<service>` 元素的名称
+
 5.  `targetNamespace`：WSDL 中 `<definition>` 元素的 targetNamespace 属性
+
 6.  `wsdlLocation`：`<soap:address>` 元素 `location` 属性的内容
 
 在本应用程序中，我们没有包含这些可选元素。我们会在服务器代码创建 Endpoint 时定义 WSDL 的位置。
@@ -1885,17 +2280,17 @@ private void printOutput(Employee empl) {
 `SOAPBinding` 注解指定如何将 Web 服务映射到 SOAP 消息协议。这些涉及三个可选元素：
 
 1.  `parameterStyle`：可以是 BARE 或 WRAPPED
+
 2.  `style`：可以是 DOCUMENT 或 RPC
+
 3.  `use`：可以是 LITERAL 或 ENCODED
-
-
-
-
 
 此注解用于自定义一个暴露为 WS（Web 服务）操作的方法。该注解有三个（3）个可选元素可以使用：
 
 1. `action`：在 WSDL 中定义的操作名称。
+
 2. `exclude`：将该方法排除在 Web 服务的操作之外。
+
 3. `operationName`：操作名称。
 
 #### 4.2.4.1.4 @WebParam 注解
@@ -1903,9 +2298,13 @@ private void printOutput(Employee empl) {
 操作的单个参数命名方式与方法相同。使用此注解可以在 WSDL 中更改为不同的名称。可选参数如下：
 
 1. `header`：如果为 `true`，则参数从消息头中提取，而不是从消息体中提取。
+
 2. `mode`：三种基本模式 – `IN`、`OUT` 和 `INOUT`。
+
 3. `name`：参数映射到表示该参数的 XML 元素中的 `name`。如果使用 `DOCUMENT` 样式，则必须指定 `name`。
+
 4. `partName`：如果使用 `RPC` 样式，这是 `wsdl:part` 元素中的名称。
+
 5. `targetNamespace`：如果使用 `DOCUMENT` 样式，参数将映射到头信息。
 
 ### 4.2.4.2 EmployeeRpcData.java
@@ -1984,10 +2383,14 @@ Web 服务需要由提供某些基本 HTTP 服务端点的服务器进行托管�
 该类实现了一个 HTTP 服务器，用于托管多个 Web 服务（例如，HelloWorld、EmployeeDocDataService 和 EmployeeRpcDataService）。每个 WS 通过服务端点唯一标识。
 
 * HelloWorld Web 服务：`http://localhost:9999/java-ws/hello?WSDL`
-* Employee 文档 Web 服务：`http://localhost:9999/doc/employees?wsdl`
-* Employee RPC Web 服务：`http://localhost:9999/rpc/employees?wsdl`
 
-#### Listing 4-15. Server.java 类
+* Employee 文档 Web 服务：`http://localhost:9999/doc/employees?wsdl`
+
+
+
+- Employee RPC Web 服务：`http://localhost:9999/rpc/employees?wsdl`
+
+#### Listing 4-15. `Server.java` 类
 
 ```java
 package com.bemach.ws.server;
@@ -2073,10 +2476,8 @@ class SvrConfig {
     public void setProtocol(String protocol) { this.protocol = protocol; }
 }
 ```
-*(注：由于原文代码块中存在逻辑不完整或变量未定义的情况，翻译时保持了代码结构，并对注释进行了对齐以确保文档可读性)*
 
-
-
+> 注：由于原文代码块中存在逻辑不完整或变量未定义的情况，翻译时保持了代码结构，并对注释进行了对齐以确保文档可读性。
 
 ```java
 protected static void startDocEmployees() {
@@ -2105,7 +2506,7 @@ public static void main(String[] args) {
 
 此 Ant 构建脚本构建 `java-ws.jar` 库并将其存储在 `dist` 目录中。此构建需要两个 Java 库：`data-svc.jar` 和 `mysql-connector-java-5.1.24-bin.jar`。
 
-#### 4-16. java-ws Java 项目的 build.xml
+#### 4-16. `java-ws` Java 项目的 `build.xml`
 
 ```xml
 <project name="java-ws" default="dist" basedir=".">
@@ -2172,15 +2573,11 @@ java -cp ./dist/java-ws.jar;../data-svc/dist/data-svc.jar;./lib/mysql-connector-
 
 ## 4.4 检查 WSDL 和 XSD
 
-我们生成具有三个不同服务端点的三个服务。服务器运行后，我们验证这些服务端点处于激活状态并准备好接受服务调用。从浏览器访问这些 URL。`HelloWorld` 示例的服务端点 `[`localhost:999`](http://localhost:999)` 在之前的章节中已经检查过。
+我们生成具有三个不同服务端点的三个服务。服务器运行后，我们验证这些服务端点处于激活状态并准备好接受服务调用。从浏览器访问这些 URL。`HelloWorld` 示例的服务端点 `localhost:999` 在之前的章节中已经检查过。
 
 ### 4.4.5. WSDL 和 XSD
 
 WSDL 和 XSD 所示列表所示：
-
-
-
-
 
 ```xml
 <xs:schema xmlns:tns="http://employees.doc.ws.bemach.com/*" xmlns:ns1="http://bemach.com*" xmlns:xs="http://www.w3.org/2001/XMLSchema*" version="1.0" targetNamespace="http://employees.doc.ws.bemach.com/*">
@@ -2210,13 +2607,17 @@ WSDL 和 XSD 所示列表所示：
     </xs:sequence>
   </xs:complexType>
 ```
+
 ![7933.jpg](img/7933.jpg)
+
+```xml
 <xs:complexType name="createEmployeeResponse">
   <xs:sequence>
     <xs:element name="return" type="xs:long"/>
   </xs:sequence>
 </xs:complexType>
 ```
+
 ![7943.jpg](img/7943.jpg)
 
 ```xml
@@ -2224,17 +2625,31 @@ WSDL 和 XSD 所示列表所示：
   <xs:sequence>
     <xs:element name="message" type="xs:string" minOccurs="0"/>
   </xs:sequence>
-  </xs:complexType>
+</xs:complexType>
+
 <xs:complexType name="updateEmployee">
   <xs:sequence>
-    <xs:element name="employee" type="tns:employee" minOccurs="0"/>
-  </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="updateEmployeeResponse">
-    <xs:sequence>
-    <xs:element name="return" type="xs:boolean"/>
-    </xs:sequence>
-  </xs:complexType>
+```
+
+
+
+```xml
+<xs:element name="employee" type="tns:employee" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+<xs:complexType name="updateEmployeeResponse">
+
+<xs:sequence>
+
+<xs:element name="return" type="xs:boolean"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
 </xs:schema>
 ```
 
@@ -2246,84 +2661,105 @@ RPC 样式与文档样式的 WSDL 之间的差异很难检测；然而，XSD 则
 
 ```xml
 <definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://employees.rpc.ws.bemach.com/*" xmlns:xsd="http://www.w3.org/2001/XMLSchema*" xmlns="http://schemas.xmlsoap.org/wsdl/*" targetNamespace="http://employees.rpc.ws.bemach.com/*" name="EmployeeRpcDataService">
+
   <types>
     <xsd:schema>
       <xsd:import namespace="http://employees.rpc.ws.bemach.com/*" schemaLocation="http://localhost:9999/rpc/employees?xsd=1"/>
     </xsd:schema>
+
     <xsd:schema>
       <xsd:import namespace="http://bemach.com*" schemaLocation="http://localhost:9999/rpc/employees?xsd=2"/>
     </xsd:schema>
   </types>
+
   <message name="getEmployee">
     <part name="emplNo" type="xsd:long"/>
   </message>
+
   <message name="getEmployeeResponse">
     <part name="return" type="tns:employee"/>
   </message>
+
   <message name="SOAPException">
     <part name="fault" element="tns:SOAPException"/>
   </message>
+
   <message name="createEmployee">
     <part name="employee" type="tns:employee"/>
   </message>
+
   <message name="createEmployeeResponse">
     <part name="return" type="xsd:long"/>
   </message>
+
   <message name="updateEmployee">
     <part name="employee" type="tns:employee"/>
   </message>
+
   <message name="updateEmployeeResponse">
     <part name="return" type="xsd:boolean"/>
   </message>
+
   <message name="deleteEmployee">
     <part name="emplNo" type="xsd:long"/>
   </message>
+
   <message name="deleteEmployeeResponse">
     <part name="return" type="xsd:boolean"/>
   </message>
+
   <portType name="EmployeeRpcData">
     <operation name="getEmployee">
       <input message="getEmployee"/>
       <output message="getEmployeeResponse"/>
       <fault name="tns:SOAPException"/>
     </operation>
+
     <operation name="createEmployee">
       <input message="createEmployee"/>
       <output message="createEmployeeResponse"/>
     </operation>
+
     <operation name="updateEmployee">
       <input message="updateEmployee"/>
       <output message="updateEmployeeResponse"/>
     </operation>
+
     <operation name="deleteEmployee">
       <input message="deleteEmployee"/>
       <output message="deleteEmployeeResponse"/>
     </operation>
   </portType>
+
   <binding name="EmployeeDataBinding" type="tns:EmployeeRpcData">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/soap/" style="rpc"/>
+
     <operation name="getEmployee">
       <soap:operation soapAction=""/>
       <input><soap:body use="literal" namespace="http://employees.rpc.ws.bemach.com/"></input>
       <output><soap:body use="literal" namespace="http://employees.rpc.ws.bemach.com/"></output>
       <fault name="tns:SOAPException"><soap:body use="literal" namespace="http://employees.rpc.ws.bemach.com/"></fault>
     </operation>
+
     <operation name="createEmployee">
       <soap:operation soapAction=""/>
       <input><soap:body use="literal" namespace="http://employees.rpc.ws.bemach.com/"></input>
       <output><soap:body use="literal" namespace="http://employees.rpc.ws.bemach.com/"></output>
     </operation>
+
     <operation name="updateEmployee">
       <soap:operation soapAction=""/>
       <input><soap:body use="literal" namespace="http://employees.rpc.ws.bemach.com/"></input>
       <output><soap:body use="literal" namespace="http://employees.rpc.ws.bemach.com/"></output>
     </operation>
+
     <operation name="deleteEmployee">
       <soap:operation soapAction=""/>
       <input><soap:body use="literal" namespace="http://employees.rpc.ws.bemach.com/"></input>
       <output><soap:body use="literal" namespace="http://employees.rpc.ws.bemach.com/"></output>
     </operation>
   </binding>
+
   <service name="EmployeeRpcDataService">
     <port name="EmployeeDataPort" binding="tns:EmployeeDataBinding">
       <soap:address location="http://localhost:9999/rpc/employees"/>
@@ -2338,7 +2774,9 @@ RPC 样式与文档样式的 WSDL 之间的差异很难检测；然而，XSD 则
 
 ```xml
 <xs:schema xmlns:tns="http://employees.rpc.ws.bemach.com/*" xmlns:xs="http://www.w3.org/2001/XMLSchema*" version="1.0" targetNamespace="http://employees.rpc.ws.bemach.com/*">
+
   <xs:element name="SOAPException" type="tns:SOAPException"/>
+
   <xs:complexType name="employee">
     <xs:sequence>
       <xs:element name="emplNo" type="xs:long"/>
@@ -2349,6 +2787,7 @@ RPC 样式与文档样式的 WSDL 之间的差异很难检测；然而，XSD 则
       <xs:element name="hireDate" type="xs:dateTime"/>
     </xs:sequence>
   </xs:complexType>
+
   <xs:complexType name="SOAPException">
     <xs:sequence>
       <xs:element name="message" type="xs:string" minOccurs="0"/>
@@ -2361,16 +2800,14 @@ RPC 样式与文档样式的 WSDL 之间的差异很难检测；然而，XSD 则
 
 ```xml
 <xs:schema xmlns:ns1="http://employees.rpc.ws.bemach.com/*" xmlns:xs="http://www.w3.org/2001/XMLSchema*" version="1.0" targetNamespace="http://bemach.com*">
+
   <xs:import namespace="http://employees.rpc.ws.bemach.com/*" schemaLocation="http://localhost:9999/rpc/employees?xsd=1"/>
+
   <xs:element name="EmployeeService" type="ns1:employee"/>
 </xs:schema>
 ```
 
 ## 4.5 使用 SOAPUI 测试 Web 服务
-
-
-
-
 
 首先，为每个 WS 端点创建一个 `SOAPUI` 项目。然后，运行每个 Web 服务的各项。
 
@@ -2414,7 +2851,9 @@ RPC 风格的 Web 服务也可以以类似的方式测试。唯一的区别是�
 
 ```bash
 wsimport -d . http://localhost:9999/doc/employees?WSDL
+
 wsimport -d . http://localhost:9999/rpc/employees?WSDL
+
 wsimport -d . http://localhost:9999/java-ws/hello?WSDL
 ```
 
@@ -2434,44 +2873,83 @@ jar –tf ../lib/java-ws-generated.jar *
 
 ```text
 META-INF/
+
 META-INF/MANIFEST.MF
+
 com/
+
 com/bemach/
+
 com/bemach/ObjectFactory.class
+
 com/bemach/ws/
+
 com/bemach/ws/doc/
+
 com/bemach/ws/doc/employees/
+
 com/bemach/ws/doc/employees/CreateEmployee.class
+
 com/bemach/ws/doc/employees/CreateEmployeeResponse.class
+
 com/bemach/ws/doc/employees/DeleteEmployee.class
+
 com/bemach/ws/doc/employees/DeleteEmployeeResponse.class
+
 com/bemach/ws/doc/employees/Employee.class
+
 com/bemach/ws/doc/employees/EmployeeDocData.class
+
 com/bemach/ws/doc/employees/EmployeeDocDataService.class
+
 com/bemach/ws/doc/employees/GetEmployee.class
+
 com/bemach/ws/doc/employees/GetEmployeeResponse.class
-com/bemach/ws/doc/employees/ObjectFactory.class
-com/bemach/ws/doc/employees/package-info.class
-com/bemach/ws/doc/employees/SOAPException.class
-com/bemach/ws/doc/employees/SOAPException_Exception.class
-com/bemach/ws/doc/employees/UpdateEmployee.class
-com/bemach/ws/doc/employees/UpdateEmployeeResponse.class
-com/bemach/ws/hello/
-com/bemach/ws/hello/HelloWorld.class
-com/bemach/ws/hello/HelloWorldService.class
-com/bemach/ws/hello/ObjectFactory.class
-com/bemach/ws/hello/package-info.class
-com/bemach/ws/hello/Say.class
-com/bemach/ws/hello/SayResponse.class
-com/bemach/ws/rpc/employees/
-com/bemach/ws/rpc/Employee.class
-com/bemach/ws/rpc/EmployeeDocData.class
-com/bemach/ws/rpc/EmployeeDataService.class
-com/bemach/ws/rpc/ObjectFactory.class
-com/bemach/ws/rpc/package-info.class
-com/bemach/ws/rpc/SOAPException.class
-com/bemach/ws/rpc/SOAPException_Exception.class
 ```
+
+
+
+`com/bemach/ws/doc/employees/ObjectFactory.class`
+
+`com/bemach/ws/doc/employees/package-info.class`
+
+`com/bemach/ws/doc/employees/SOAPException.class`
+
+`com/bemach/ws/doc/employees/SOAPException_Exception.class`
+
+`com/bemach/ws/doc/employees/UpdateEmployee.class`
+
+`com/bemach/ws/doc/employees/UpdateEmployeeResponse.class`
+
+`com/bemach/ws/hello/`
+
+`com/bemach/ws/hello/HelloWorld.class`
+
+`com/bemach/ws/hello/HelloWorldService.class`
+
+`com/bemach/ws/hello/ObjectFactory.class`
+
+`com/bemach/ws/hello/package-info.class`
+
+`com/bemach/ws/hello/Say.class`
+
+`com/bemach/ws/hello/SayResponse.class`
+
+`com/bemach/ws/rpc/employees/`
+
+`com/bemach/ws/rpc/Employee.class`
+
+`com/bemach/ws/rpc/EmployeeDocData.class`
+
+`com/bemach/ws/rpc/EmployeeDataService.class`
+
+`com/bemach/ws/rpc/ObjectFactory.class`
+
+`com/bemach/ws/rpc/package-info.class`
+
+`com/bemach/ws/rpc/SOAPException.class`
+
+`com/bemach/ws/rpc/SOAPException_Exception.class`
 
 这些命令生成的 Java 二进制代码可以作为客户端程序的一部分。接下来，创建一个包含生成代码的 Java 库：`java-ws-generated.jar`。该库在执行时应包含在 Eclipse 设置中。
 
@@ -2487,71 +2965,115 @@ com/bemach/ws/rpc/SOAPException_Exception.class
 
 此代码使用生成的客户端存根向远程服务器调用 WS。一个重要的类是 `QName`，我们在此处创建一个包含 WSDL 中 `definitions` 元素的 `targetNamespace` 和 `name` 属性的限定名称。另一个重要的类是 `URL`，我们在此处根据 WSDL 中 `soap:address` 元素的 `location` 属性创建一个服务端点。通过这两个类，我们可以创建一个服务，并将其映射到服务提供的系列操作上。将端口映射到 `EmployeeDocData` 是通过 WSDL 中 `binding` 元素的 `type` 属性指定的。一旦获取端口，我们就可以像在 Java 中调用本地方法一样调用这些操作。
 
-
-
-
 ```java
 public class EmployeesDocClient {
+
     private static final Logger LOG = Logger.getLogger(EmployeesDocClient.class.getName());
+
     private EmployeeDocData emplDs = null;
 
     public EmployeesDocClient(String urlStr, String targetNs, String name) throws MalformedURLException {
+
         LOG.info("Constructor ...");
+
         QName qName = new QName(targetNs, name);
+
         URL url = new URL(urlStr);
+
         Service service = EmployeeRpcDataService.create(url, qName);
+
         emplDs = service.getPort(EmployeeDocData.class);
+
     }
 
     public Employee get(long id) throws SOAPException_Exception {
+
         return emplDs.getEmployee(id);
+
     }
 
     public long create(Employee empl) {
+
         return emplDs.createEmployee(empl);
+
     }
 
     public boolean delete(long id) {
+
         return emplDs.deleteEmployee(id);
+
     }
 
     public boolean update(Employee empl) {
+
         return emplDs.updateEmployee(empl);
+
     }
 
     /**
+
      * @param args
+
      * @throws MalformedURLException
+
      * @throws SOAPException_Exception
+
      */
+
     public static void main(String[] args) throws MalformedURLException, SOAPException_Exception {
+
         LOG.info("Calling Employee (Document) data service ... ");
+
         String targetNameSpace = "http://employees.doc.ws.bemach.com/";
+
         String name = "EmployeeDocDataService";
+
         String urlStr = String.format("http://localhost:%s/doc/employees", args[0]);
+
         EmployeesDocClient cli = new EmployeesDocClient(urlStr, targetNameSpace, name);
+
         long oldEmplNo = Integer.valueOf(args[1]);
+
         Employee empl = cli.get(oldEmplNo);
+
         LOG.info("last=" + empl.getLastName());
+
         LOG.info("hire=" + empl.getHireDate());
+
         LOG.info("last=" + empl.getLastName());
+
         LOG.info("first=" + empl.getFirstName());
 
         empl.setFirstName("Silvester");
+
         empl.setLastName("Johnny");
+
         long newEmplNo = cli.create(empl);
+
         LOG.info("emplNo=" + newEmplNo);
+
         Employee newEmpl = cli.get(newEmplNo);
+
         newEmpl.setLastName("New-name");
+
         newEmpl.setEmplNo(newEmplNo);
+
         boolean status = cli.update(newEmpl);
+
         LOG.info("update:" + status);
+
         LOG.info("last=" + newEmpl.getLastName());
+
         LOG.info("first=" + newEmpl.getFirstName());
+
         status = cli.delete(newEmplNo);
+
         LOG.info("deleteEmployee:" + status);
+
         LOG.info("Exit!");
+
     }
+
 }
 ```
 
@@ -2565,94 +3087,161 @@ public class EmployeesDocClient {
 package com.bemach.ws.employees.client;
 
 /**
+
  * 2013 (C) BEM, Inc., Fairfax, Virginia
+
  * Unless required by applicable law or agreed to in writing,
+
  * software distributed is distributed on an
+
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+
  * KIND, either express or implied.
+
  */
+
 import java.net.MalformedURLException;
+
 import java.net.URL;
+
 import java.util.logging.Logger;
+
 import javax.xml.namespace.QName;
+
 import javax.xml.ws.Service;
+
 import com.bemach.ws.rpc.employees.Employee;
+
 import com.bemach.ws.rpc.employees.EmployeeRpcData;
+
 import com.bemach.ws.rpc.employees.EmployeeRpcDataService;
+
 import com.bemach.ws.rpc.employees.SOAPException_Exception;
 
 /**
+
  * 此代码依赖于使用 wsimport 程序生成的 ws 代码：
+
  * wsimport -d . http://localhost:9999/rpc/Employees?WSDL
+
  * jar cvf ../ws-ch-1-generated.jar
+
  */
+
 public class EmployeesRpcClient {
+
     private static final Logger LOG = Logger.getLogger(EmployeesRpcClient.class.getName());
+
     private EmployeeRpcData emplDs = null;
 
     public EmployeesRpcClient(String urlStr, String targetNs, String name) throws MalformedURLException {
+
         LOG.info("Constructor ...");
+
         QName qName = new QName(targetNs, name);
+
         URL url = new URL(urlStr);
+
         Service service = EmployeeRpcDataService.create(url, qName);
+
         emplDs = service.getPort(EmployeeRpcData.class);
+
     }
 
     public Employee get(long id) throws SOAPException_Exception {
+
         return emplDs.getEmployee(id);
+
     }
 
     public long create(Employee empl) {
+
         return emplDs.createEmployee(empl);
+
     }
 
     public boolean delete(long id) {
+
         return emplDs.deleteEmployee(id);
+
     }
 
     public boolean update(Employee empl) {
+
         return emplDs.updateEmployee(empl);
+
     }
 
     /**
+
      * @param args
+
      * @throws MalformedURLException
+
      * @throws SOAPException_Exception
+
      */
+
     public static void main(String[] args) throws MalformedURLException, SOAPException_Exception {
+
         LOG.info("Calling Employee (Document) data service ... ");
+
         String targetNameSpace = "http://employees.doc.ws.bemach.com/";
+
         String name = "EmployeeDocDataService";
+
         String urlStr = String.format("http://localhost:%s/doc/employees", args[0]);
+
         EmployeesDocClient cli = new EmployeesDocClient(urlStr, targetNameSpace, name);
+
         long oldEmplNo = Integer.valueOf(args[1]);
+
         Employee empl = cli.get(oldEmplNo);
+
         LOG.info("last=" + empl.getLastName());
+
         LOG.info("hire=" + empl.getHireDate());
+
         LOG.info("last=" + empl.getLastName());
+
         LOG.info("first=" + empl.getFirstName());
 
         empl.setFirstName("Silvester");
+
         empl.setLastName("Johnny");
+
         long newEmplNo = cli.create(empl);
+
         LOG.info("emplNo=" + newEmplNo);
+
         Employee newEmpl = cli.get(newEmplNo);
+
         newEmpl.setLastName("New-name");
+
         newEmpl.setEmplNo(newEmplNo);
+
         boolean status = cli.update(newEmpl);
+
         LOG.info("update:" + status);
+
         LOG.info("last=" + newEmpl.getLastName());
+
         LOG.info("first=" + newEmpl.getFirstName());
+
         status = cli.delete(newEmplNo);
+
         LOG.info("deleteEmployee:" + status);
+
         LOG.info("Exit!");
+
     }
+
 }
 ```
 
 ### 4.6.3 运行客户端
 
-我们在每个客户端中都实现了用于测试的 main 方法。运行这些程序可以使用以下命令：
+我们在每个客户端中都实现了用于测试的 `main` 方法。运行这些程序可以使用以下命令：
 
 ```bash
 java -cp java-client.jar;lib/java-generated.jar com.bemach.ws.employees.client.EmployeesDocClient
@@ -2664,7 +3253,9 @@ java -cp java-client.jar;lib/java-generated.jar com.bemach.ws.employees.client.E
 java -cp java-client.jar;lib/ws-ch-1-generated.jar com.bemach.ws.employees.client.EmployeesRpcClient
 ```
 
-# 5 Apache CXF 和 Tomcat 服务器
+
+
+# 5. Apache CXF 和 Tomcat 服务器
 
 ## 目标
 
@@ -2674,32 +3265,30 @@ java -cp java-client.jar;lib/ws-ch-1-generated.jar com.bemach.ws.employees.clien
 2. 打包。
 3. 将其部署到 Tomcat 服务器。
 
+## 5.1 在 Java 中创建 Web 服务
 
+## 5.2 打包 WAR 文件
 
+## 5.3 将 WAR 文件部署到 Tomcat 7 服务器
 
+![2955.jpg](img/2955.jpg)
 
-## 2. 在 Java 中创建 Web 服务。
-
-## 3. 打包 WAR 文件。
-
-## 4. 将 WAR 文件部署到 Tomcat 7 服务器上。
-
-![2955.jpg](img/2955.jpg) **图 5-3. 创建 Web 服务应用的活动**
+**图 5-3. 创建 Web 服务应用的活动**
 
 ### 5.3.3 创建动态 Web 应用
 
 在 Eclipse 中，创建一个新的动态 Web 项目（Dynamic Web Project）。步骤如下：
 
-* 选择 `File` → `New` → `Other …` → `Web` → `Dynamic Web Project`
-* 选择所有默认值，并将项目命名为 `cxf-ws`。
-* 从左侧面板选择 `cxf-ws` 项目，选择 `File` → `New` → `Folder`。将新文件夹命名为 `lib`。
-* 现在，我们需要以下 Java 库：
-    - `mysql-connector-java-5.1.24-bin.jar`: 包含 MySQL 数据库的 JDBC 驱动程序。
-    - `java-ws.jar`: 包含访问数据库的主逻辑。
-    - `data-svc.jar`: 包含数据访问类。
-* 将这些文件（来自之前的项目和 Apache CXF 分发包）导入到我们之前创建的 `lib` 文件夹中：
+- 选择 `File` → `New` → `Other …` → `Web` → `Dynamic Web Project`
+- 选择所有默认值，并将项目命名为 `cxf-ws`。
+- 从左侧面板选择 `cxf-ws` 项目，选择 `File` → `New` → `Folder`。将新文件夹命名为 `lib`。
+- 现在，我们需要以下 Java 库：
+  - `mysql-connector-java-5.1.24-bin.jar`：包含 MySQL 数据库的 JDBC 驱动程序。
+  - `java-ws.jar`：包含访问数据库的主逻辑。
+  - `data-svc.jar`：包含数据访问类。
+- 将这些文件（来自之前的项目和 Apache CXF 分发包）导入到我们之前创建的 `lib` 文件夹中：
 
-```
+```text
 mysql-connector-java-5.1.24-bin.jar
 ws-ch-1.jar
 aopalliance-1.0.jar
@@ -2738,21 +3327,56 @@ xmlschema-core-2.0.jar
 
 在我们完成为 `cxf-ws` 编写 Java 类后，项目看起来应该是这样的：
 
-![Image2964.PNG](img/Image2964_fmt.jpeg) **图 5-4. 动态 Web 项目截图**
+![Image2964.PNG](img/Image2964_fmt.jpeg)
+
+**图 5-4. 动态 Web 项目截图**
 
 ### 5.3.4 创建 Web 服务
 
 从 `cxf-ws/Java Resources/src` 目录，创建一个名为 `com.bemach.ws.cxf` 的 Java 包。从该包中，创建一个 Java 接口和一个 Java 类。
 
-### 5.3.4.1 EmployeeDataIf.java
+#### 5.3.4.1 EmployeeDataIf.java
 
 我们介绍了另一种使用 Java 接口创建 Web 服务的方法。这为我们在实现 Web 服务之前提供了一种更、更整洁的方式来指定服务接口。通常用于 Java 类的所有 WS 注解都以类似的方式使用。
 
-#### 列表 5-1. 带有 Web 服务注解的 EmployeeDataIf.java 类
+##### 列表 5-1. 带有 Web 服务注解的 EmployeeDataIf.java 类
 
-| package |
-| :--- |
-| `com.bemach.ws.cxf;` /** 2013 (C) BEM, Inc., Fairfax, Virginia** 除非适用法律要求或书面同意，否则分发的软件按“原样”状况分发，**不提供任何形式的保证或条件（无论是明示还是暗示的）。**/**import java.sql.SQLException;import javax.jws.WebMethod;import javax.jws.WebParam;import javax.jws.WebService;import javax.jws.soap.SOAPBinding;import javax.xml.soap.SOAPException;import com.bemach.data.Employee;@WebService@SOAPBinding(style=SOAPBinding.Style.*DOCUMENT*)public interface EmployeeDataIf {@WebMethodEmployee getEmployee(@WebParam(name="emplNo")long emplNo) throws SOAPException, SQLException;@WebMethodlong createEmployee(@WebParam (name="employee")Employee employee) throws SOAPException, SQLException;@WebMethodboolean updateEmployee(@WebParam (name="employee")Employee employee) throws SOAPException, SQLException;@WebMethodboolean deleteEmployee(@WebParam (name="emplNo")long emplNo) throws SOAPException, SQLException;} |
+```java
+package com.bemach.ws.cxf;
+
+/** 2013 (C) BEM, Inc., Fairfax, Virginia
+ * 除非适用法律要求或书面同意，否则分发的软件按“原样”状况分发，
+ * 不提供任何形式的保证或条件（无论是明示还是暗示的）。
+ */
+
+import java.sql.SQLException;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
+import javax.xml.soap.SOAPException;
+import com.bemach.data.Employee;
+
+@WebService
+@SOAPBinding(style = SOAPBinding.Style.DOCUMENT)
+public interface EmployeeDataIf {
+    @WebMethod
+    Employee getEmployee(@WebParam(name = "emplNo") long emplNo)
+        throws SOAPException, SQLException;
+
+    @WebMethod
+    long createEmployee(@WebParam(name = "employee") Employee employee)
+        throws SOAPException, SQLException;
+
+    @WebMethod
+    boolean updateEmployee(@WebParam(name = "employee") Employee employee)
+        throws SOAPException, SQLException;
+
+    @WebMethod
+    boolean deleteEmployee(@WebParam(name = "emplNo") long emplNo)
+        throws SOAPException, SQLException;
+}
+```
 
 该服务将包含四个基本操作：
 
@@ -2761,15 +3385,82 @@ xmlschema-core-2.0.jar
 3. `updateEmployee` 方法，如果成功则返回 `true`，否则如此；
 4. `deleteEmployee` 方法，如果成功则返回 `true`，否则如此。
 
-### 5.3.4.2 EmployeeData.java
+#### 5.3.4.2 EmployeeData.java
 
 该类是 `EmployeeDao` 的包装器。它实现了 `EmployeeDataIf`。
 
-#### 列表 5-2. EmployeeData.java：实现
+##### 列表 5-2. EmployeeData.java：实现
 
-| package |
-| :--- |
-| `com.bemach.ws.cxf;` /** 2013 (C) BEM, Inc., Fairfax, Virginia 除非适用法律要求或书面同意，否则分发的软件按“原样”状况分发，**不提供任何形式的保证或条件（无论是明示还是暗示的）。**/**import java.sql.SQLException;import javax.jws.WebMethod;import javax.jws.WebParam;import javax.jws.WebService;import javax.jws.soap.SOAPBinding;import javax.xml.soap.SOAPException;import com.bemach.data.Employee;import com.bemach.data.EmployeeDao;import java.util.logging.Logger;@WebService class EmployeeData implements EmployeeData {static Logger LOG = Logger.getLogger(EmployeeData.getName());static DbConfig cfg = new DbConfig();static DbConfig getCfg() {return cfg;}static void setCfg(DbConfig cfg) {cfg = cfg;}EmployeeData(DbConfig cfg) {cfg = cfg;}@Override Employee getEmployee(long emplNo) throws SOAPException, SQLException {LOG.info("read employee");EmployeeDao dao = new EmployeeDao(cfg);Employee employee;employee = dao.getpl((int)emplNo);if (employee == null) {throw new SOAPException("GetEmployee: No such employee!");}return employee;}@Override long createEmployee(Employee employee) throws SOAPException, SQLException {LOG.info("create employee");EmployeeDao dao = new EmployeeDao(cfg);return dao.createpl(employee);}@Override boolean updateEmployee(Employee employee) throws SOAPException, SQLException {LOG.info("update employee.");EmployeeDao dao = new EmployeeDao(cfg);return dao.updatepl(employee);}@Override boolean deleteEmployee(long emplNo) throws SOAPException, SQLException {LOG.info("delete employee.");EmployeeDao dao = new EmployeeDao(cfg);return dao.deletepl((int)emplNo);}} |
+```java
+package com.bemach.ws.cxf;
+
+/** 2013 (C) BEM, Inc., Fairfax, Virginia
+ * 除非适用法律要求或书面同意，否则分发的软件按“原样”状况分发，
+ * 不提供任何形式的保证或条件（无论是明示还是暗示的）。
+ */
+
+import java.sql.SQLException;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
+import javax.xml.soap.SOAPException;
+import com.bemach.data.Employee;
+import com.bemach.data.EmployeeDao;
+import java.util.logging.Logger;
+
+@WebService
+class EmployeeData implements EmployeeDataIf {
+    static Logger LOG = Logger.getLogger(EmployeeData.class.getName());
+    static DbConfig cfg = new DbConfig();
+
+    static DbConfig getCfg() {
+        return cfg;
+    }
+
+    static void setCfg(DbConfig cfg) {
+        EmployeeData.cfg = cfg;
+    }
+
+    EmployeeData(DbConfig cfg) {
+        EmployeeData.cfg = cfg;
+    }
+
+    @Override
+    Employee getEmployee(long emplNo) throws SOAPException, SQLException {
+        LOG.info("read employee");
+        EmployeeDao dao = new EmployeeDao(cfg);
+        Employee employee = dao.getpl((int) emplNo);
+
+        if (employee == null) {
+            throw new SOAPException("GetEmployee: No such employee!");
+        }
+
+        return employee;
+    }
+
+    @Override
+    long createEmployee(Employee employee) throws SOAPException, SQLException {
+        LOG.info("create employee");
+        EmployeeDao dao = new EmployeeDao(cfg);
+        return dao.createpl(employee);
+    }
+
+    @Override
+    boolean updateEmployee(Employee employee) throws SOAPException, SQLException {
+        LOG.info("update employee.");
+        EmployeeDao dao = new EmployeeDao(cfg);
+        return dao.updatepl(employee);
+    }
+
+    @Override
+    boolean deleteEmployee(long emplNo) throws SOAPException, SQLException {
+        LOG.info("delete employee.");
+        EmployeeDao dao = new EmployeeDao(cfg);
+        return dao.deletepl((int) emplNo);
+    }
+}
+```
 
 使用了默认配置。必要可以使用 `EmployeeData` 构造函数修改 `cfg` 对象。
 
@@ -2777,56 +3468,100 @@ xmlschema-core-2.0.jar
 
 两个重要的文件——`beans.xml` 和 `web.xml` 存储在 WAR 文件的 `WEB-INF` 目录。这些文件协助 Tomcat 服务器和 CXF 实现具体的 Web 服务。记住，我们使用部署在 Web 服务器（Tomcat 或其他）上的 Web 应用来实现示例 Web 服务。
 
-### 5.3.5.1 创建 web.xml
+#### 5.3.5.1 创建 web.xml
 
-#### 列表 5-3. web.xml 的内容
-
-| web.xml |
-| :--- |
-| `<?xml version="1.0" encoding="UTF-8"?><web-app><context-param><param-name>contextConfigLocation</param-name><param-value>WEB-INF/beans.xml</param-value></context-param><listener><listener-class>org.springframework.web.context.ContextLoaderListener</listener-class></listener><servlet><servlet-name>CXFServlet</servlet-name><display-name>CXF Servlet</display-name><servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class><load-on-startup>1</load-on-startup></servlet><servlet-mapping><servlet-name>CXFServlet</servlet-name><url-pattern>/*</url-pattern></servlet-mapping></web-app>` |
-
-### 5.3.5.2 创建 beans.xml
-
-#### 列表 5-4. beans.xml 的内容
-
-
-
-
+##### 列表 5-3. web.xml 的内容
 
 ```xml
-<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxws="http://cxf.apache.org/jaxws" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>WEB-INF/beans.xml</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>
+            org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>CXFServlet</servlet-name>
+        <display-name>CXF Servlet</display-name>
+        <servlet-class>
+            org.apache.cxf.transport.servlet.CXFServlet
+        </servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CXFServlet</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+</web-app>
+```
+
+#### 5.3.5.2 创建 beans.xml
+
+##### 列表 5-4. beans.xml 的内容
+
+```xml
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://cxf.apache.org/jaxws
+           http://cxf.apache.org/schemas/jaxws.xsd">
+
     <import resource="classpath:META-INF/cxf/cxf.xml" />
+
     <import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+
     <import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
-    <jaxws:endpoint id="com.bemach.ws.cxf.EmployeeDataIf" implementor="com.bemach.ws.cxf.EmployeeData" address="/employees" />
+
+    <jaxws:endpoint
+        id="com.bemach.ws.cxf.EmployeeDataIf"
+        implementor="com.bemach.ws.cxf.EmployeeData"
+        address="/employees" />
+
 </beans>
 ```
 
-### 5.3.5.3 构建 Web 应用程序 (WAR)
+#### 5.3.5.3 构建 Web 应用程序（WAR）
 
 此构建脚本创建一个 Java Web 应用程序（WAR 文件），并将其封装为 `cxf-ws.war`。该应用程序存储在 `dist` 目录。
 
-#### 列表 5-5. cxf-ws 动态 Web 项目的 build.xml 内容
+##### 列表 5-5. cxf-ws 动态 Web 项目的 build.xml 内容
 
 ```xml
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<project name="cxf-ws" basedir=".*" default="dist">
+
+<project name="cxf-ws" basedir="." default="dist">
+
     <property environment="env" />
+
     <path id="classpath.base">
         <fileset dir="./lib" includes="**/*.jar" />
     </path>
+
     <path id="classpath.compile">
         <path refid="classpath.base" />
     </path>
+
     <target name="init">
         <mkdir dir="./bin" />
         <mkdir dir="./dist" />
     </target>
+
     <target name="compile" depends="init" description="compile the source">
         <javac srcdir="./src" destdir="./bin" debug="true">
             <classpath refid="classpath.compile" />
         </javac>
     </target>
+
     <target name="copylibs" depends="compile">
         <echo message="copying libraries ..." />
         <copy todir="WebContent/WEB-INF/lib">
@@ -2835,12 +3570,15 @@ xmlschema-core-2.0.jar
             </fileset>
         </copy>
     </target>
+
     <target name="dist" depends="buildwar">
         <echo message="Building ..." />
     </target>
+
     <target name="buildwar" depends="copylibs">
-        <echo message="building war . />
-        <tstamp/>
+        <echo message="building war ." />
+        <tstamp />
+
         <manifest file="MANIFEST.MF">
             <attribute name="Built-By" value="Kiet T. Tran" />
             <attribute name="Build-Version" value="1" />
@@ -2848,21 +3586,27 @@ xmlschema-core-2.0.jar
             <attribute name="Built-Date" value="April 28, 2013" />
         </manifest>
     </target>
-    <war destfile="./dist/cxf-ws.war" webxml="WebContent/WEB-INF/web.xml" update="true" manifest="MANIFEST.MF">
-        <classes dir="./bin" />
-        <fileset dir="WebContent">
-            <exclude name="WEB-INF/web.xml" />
-        </fileset>
-    </war>
-    <delete file="MANIFEST.MF" />
-    </target>
-    <target name="clean">
-        <echo message="cleaning ..." />
-        <delete dir="./dist" />
-        <delete dir="./bin" />
-    </target>
-</project>
 ```
+
+
+
+<war destfile="./dist/cxf-ws.war" webxml="WebContent/WEB-INF/web.xml" update="true" manifest="MANIFEST.MF">
+    <classes dir="./bin" />
+    <fileset dir="WebContent">
+        <exclude name="WEB-INF/web.xml" />
+    </fileset>
+</war>
+
+<delete file="MANIFEST.MF" />
+</target>
+
+<target name="clean">
+    <echo message="cleaning ..." />
+    <delete dir="./dist" />
+    <delete dir="./bin" />
+</target>
+
+</project>
 
 ## 5.4 部署服务
 
@@ -2876,9 +3620,9 @@ xmlschema-core-2.0.jar
 - `webapps`
 - `work`
 
-我们最关注的是 `bin` 和 `webapps` 目录，用于部署和发布我们的 Web 服务。要运行 Tomcat，进入 `bin` 目录并运行 `startup.cmd` (WINDOWS) 或 `startup.sh` (UNIX)。
+我们最关注的是`bin`和`webapps`目录，用于部署和发布我们的 Web 服务。要运行 Tomcat，进入`bin`目录并运行`startup.cmd`（WINDOWS）或`startup.sh`（UNIX）。
 
-要部署包含示例 Web 服务的 Web 应用程序，将 `cxf-web.war` 复制到 `webapps` 目录。你不需要每次部署 Web 应用程序都重启 Tomcat 服务器。
+要部署包含示例 Web 服务的 Web 应用程序，将`cxf-web.war`复制到`webapps`目录。你不需要每次部署 Web 应用程序都重启 Tomcat 服务器。
 
 ## 5.5 使用 SOAPUI 测试服务
 
@@ -2909,13 +3653,9 @@ xmlschema-core-2.0.jar
 </wsdl:definitions>
 ```
 
+### 5.5.2 SOAPUI 项目
 
-
-
-
-## 5.5.2 SOAPUI 项目
-
-下图显示了对 `getEmployee` 的调用。
+下图显示了对`getEmployee`的调用。
 
 ![Image203.PNG](img/Image203.jpeg)
 图 5-5：创建新的 SOAP 服务
@@ -2924,22 +3664,28 @@ xmlschema-core-2.0.jar
 
 ### 5.6.1 创建 Stub
 
-首先，在 Eclipse 下创建一个 Java 项目并将其命名为 `cxf-ws`。
+首先，在 Eclipse 下创建一个 Java 项目并将其命名为`cxf-ws`。
 
-1. 在命令提示符中，进入 `cxf-ws` 项目。
-2. 创建名为 `generated` 的文件夹。
+1. 在命令提示符中，进入`cxf-ws`项目。
+2. 创建名为`generated`的文件夹。
 3. 要生成 Web 服务 stubs，运行以下命令：
+
 ```bash
 wsdlimport -d . http://localhost:8080/cxf
 ```
+
 4. 要创建一个 Java 库，运行以下命令：
+
 ```bash
 jar -cvf ../lib/cxf-generated.jar
 ```
+
 5. 现在，验证创建 jar 包的内容：
+
 ```bash
 jar -tf ../lib/cxf-generated.jar
 ```
+
 库的内容应该如下：
 
 ```
@@ -2966,7 +3712,7 @@ com/bemach/ws/cxf/SOAPException_Exception.class
 
 ### 5.6.2.1 EmployeeDataClientjava
 
-该 Java 类包含可以调用 Tomcat 7 服务器托管的 `EmployeeDataService` 提供的四个操作的代码。
+该 Java 类包含可以调用 Tomcat 7 服务器托管的`EmployeeDataService`提供的四个操作的代码。
 
 #### 列表 5-7：EmployeeDataClient 类
 
@@ -2979,6 +3725,7 @@ package com.bemach.ws.cxf.client;
  * 软件按“原样”分发，不提供任何形式的
  * 保证，无论是明确或隐含的。
  */
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.logging.Logger;
@@ -3010,29 +3757,204 @@ public class EmployeeDataClient {
 }
 ```
 
+```java
+/**
+ * 此方法根据唯一的 ID 获取员工记录。
+ * @param id – 唯一的员工 ID。
+ * @return – 员工记录。
+ * @throws SOAPException_Exception – 抛出异常。
+ */
+public Employee get(long id) throws SOAPException_Exception {
+    return emplDs.getEmployee(id);
+}
 
+/**
+ * 此方法创建一个员工记录。
+ * @param empl
+ * @return
+ */
+public long create(Employee empl) {
+    return emplDs.createEmployee(empl);
+}
 
+/**
+ * 此方法根据唯一的 ID 删除员工记录。
+ * @param id
+ * @return
+ */
+public boolean delete(long id) {
+    return emplDs.deleteEmployee(id);
+}
 
-| /*** 此方法根据唯一的 ID 获取员工记录。**@param** `id` – 唯一的员工 ID。**@return** – 员工记录。**@throws** `SOAPException_Exception` – 抛出异常。*/**`public` `Employee get(long id)` `throws SOAPException_Exception` {`return emplDs.getEmployee(id);}/*** 此方法创建一个员工记录。**@param** `empl`* **@return***/**`public` `long create(Employee empl)` {`return emplDs.createEmployee(empl);}/*** 此方法根据唯一的 ID 删除员工记录。**@param** `id`* **@return***/**`public` `boolean delete(long id)` {`return emplDs.deleteEmployee(id);}/*** 此方法用新记录更新员工记录。**@param** `empl`* **@return***/**`public` `boolean update(Employee empl)` {`return emplDs.updateEmployee(empl);}/*** 这是代码的主入口。**@param** `args`* **@throws** `MalformedURLException`* **@throws** `SOAPException_Exception*/ |
+/**
+ * 此方法用新记录更新员工记录。
+ * @param empl
+ * @return
+ */
+public boolean update(Employee empl) {
+    return emplDs.updateEmployee(empl);
+}
 
-| `public` `static` `void` `main(String[] args)` `throws MalformedURLException, SOAPException_Exception` {`LOG.info("Calling Employee (CXF) data service ... ");``String targetNameSpace = "http://cxf.ws.bemach.com/";``String name = "EmployeeDataService";``String portNo = args[0];``String urlStr = String.format("http://localhost:%s/cxf-ws/employees?WSDL",portNo);``EmployeeDataClient cli = new EmployeeDataClient(urlStr, targetNameSpace, name);``LOG.info("URL="+urlStr);``long oldEmplNo = Integer.valueOf(args[1]);``Employee empl = cli.get(oldEmplNo);``LOG.info("last="+empl.getLastName());``LOG.info("hire="+empl.getHireDate());``LOG.info("last="+empl.getLastName());``LOG.info("first="+empl.getFirstName());``empl.setFirstName("Silvester");``empl.setLastName("Johnny");``long newEmplNo = cli.create(empl);``LOG.info("emplNo="+newEmplNo);``Employee newEmpl = cli.get(newEmplNo);``newEmpl.setLastName("New-name");``newEmpl.setEmNo(newEmplNo);``boolean status = cli.update(newEmpl);``LOG.info("update:"+status);``LOG.info("last="+newEmpl.getLastName());``LOG.info("first="+newEmpl.getFirstName());``status = cli.delete(newEmplNo);``LOG.info("deleteEmployee:"+status);``LOG.info("Exit!");}}}} |
+/**
+ * 这是代码的主入口。
+ * @param args
+ * @throws MalformedURLException
+ * @throws SOAPException_Exception
+ */
+public static void main(String[] args) throws MalformedURLException, SOAPException_Exception {
+    LOG.info("Calling Employee (CXF) data service ... ");
+    String targetNameSpace = "http://cxf.ws.bemach.com/";
+    String name = "EmployeeDataService";
+    String portNo = args[0];
+    String urlStr = String.format("http://localhost:%s/cxf-ws/employees?WSDL", portNo);
+    EmployeeDataClient cli = new EmployeeDataClient(urlStr, targetNameSpace, name);
+    LOG.info("URL=" + urlStr);
+    long oldEmplNo = Integer.valueOf(args[1]);
+    Employee empl = cli.get(oldEmplNo);
+    LOG.info("last=" + empl.getLastName());
+    LOG.info("hire=" + empl.getHireDate());
+    LOG.info("last=" + empl.getLastName());
+    LOG.info("first=" + empl.getFirstName());
+    empl.setFirstName("Silvester");
+    empl.setLastName("Johnny");
+    long newEmplNo = cli.create(empl);
+    LOG.info("emplNo=" + newEmplNo);
+    Employee newEmpl = cli.get(newEmplNo);
+    newEmpl.setLastName("New-name");
+    newEmpl.setEmNo(newEmplNo);
+    boolean status = cli.update(newEmpl);
+    LOG.info("update:" + status);
+    LOG.info("last=" + newEmpl.getLastName());
+    LOG.info("first=" + newEmpl.getFirstName());
+    status = cli.delete(newEmplNo);
+    LOG.info("deleteEmployee:" + status);
+    LOG.info("Exit!");
+}
+```
 
 在此类中，我们将端口号作为第一个程序参数提供。Tomcat 端口号为 8080。
 
 ### 5.6.3 构建 Java 库
 
-此构建脚本创建一个名为 `cxf-ws-client.jar` 的 Java 库。它需要存储在 `dist` 目录下的 `cxf-ws-generated.jar` 库。
+此构建脚本创建一个名为`cxf-ws-client.jar`的 Java 库。它需要存储在`dist`目录下的`cxf-ws-generated.jar`库。
 
 #### 图 5-8. cxf-ws-client Java 项目的 build.xml 内容
 
 ```xml
-<project name="cxf-ws-client" default="dist" basedir="."><description>Client for employees data service.Assumed that cxf-ws-generated.jar is generated and built elsehwere</description><![– set global properties for this build –><property environment="env"/><path id="classpath.base"><fileset dir="./lib" includes="/*.jar" /></path><path id="classpath.compile"><path refid="classpath.base"/></path><target name="init"><mkdir dir="./bin"/><mkdir dir="./dist"/></target><target name="compile" depends="init" description="compile the source "><javac srcdir="./src" destdir="./bin" debug="true"><classpath refid="classpath.compile"/></javac></target><target name="dist" depends="compile" description="generate the distribution"><![– Create the distribution directory –><jar jarfile="./dist/cxf-ws-client.jar" basedir="./bin"/></target><target name="clean" description="clean up"><![– Delete the ${build} directory trees –><delete dir="./dist"/><delete dir="./bin"/></target></project>```### 5.6.4 运行客户端应用程序要运行客户端应用程序，请进入 `cxf-ws-client` 项目目录。在命令提示符上运行以下命令：```bashjava -cp ./lib/cxf-ws-generated.jar;./dist/cxf-ws-client.jar com.bemach.ws.cxf.client.EmployeeDataClient 8080```输出如下：```Calling Employee (CXF) data service ...URL=http://localhost:8080/cxf-ws/employees?WSDLlast=Fecellohire=1986-06-26T00:00:00-04:00last=Fecellofirst=SilvesteremplNo=500001update:truelast=New-namefirst=SilvesterdeleteEmployee:trueExit!```# 6. CXF 与 Web 服务## 目标完成本章后，你应该能够：1. 理解 WebLogic Server 的基础知识 2. 创建一个基础 WebLogic 域 3. 使用 WebLogic 部署 CXF 应用程序在本章中，我们将介绍 `WebLogic Server` 12。## 6.1 WebLogic ServerWebLogic Server (`WLS`) 也称为`企业版`。它是构建安全、高可用且可扩展应用程序的基础。它提供了用于数据库、消息和外部系统的 API。### 6.1.1 编程 WLS 包含以下内容：* Java (JSP 和 Servlet)* Web 服务 (`JAX-WS`, `JAX-RPC`, `JAX-RS`)* XML 编程 (`JAXB`)* Java 消息 (`JMS`)* Java 数据库连接 (`JDBC`)* 企业信息系统* 企业 JavaBean (`EJB`)* 远程方法调用 (`RMI`)* 安全 API* Tuxedo 连接 (`WTC`)### 6.1.2 高可用关键任务可以通过以下技术支持：* WebLogic 集* 工作管理器* 负载保护* 网络通道* WebLogic 持久化存储* 转发服务* 企业级开发工具* 生产重部署## 6.2 部署图![3308.jpg](img/3308.jpg) 图 6-1. CXF 部署图
+```
+
+
+
+<project name="cxf-ws-client" default="dist" basedir=".">
+  <description>Client for employees data service. Assumed that `cxf-ws-generated.jar` is generated and built elsewhere</description>
+  <!-- set global properties for this build -->
+  <property environment="env"/>
+  <path id="classpath.base">
+    <fileset dir="./lib" includes="/*.jar" />
+  </path>
+  <path id="classpath.compile">
+    <path refid="classpath.base"/>
+  </path>
+  <target name="init">
+    <mkdir dir="./bin"/>
+    <mkdir dir="./dist"/>
+  </target>
+  <target name="compile" depends="init" description="compile the source ">
+    <javac srcdir="./src" destdir="./bin" debug="true">
+      <classpath refid="classpath.compile"/>
+    </javac>
+  </target>
+  <target name="dist" depends="compile" description="generate the distribution">
+    <!-- Create the distribution directory -->
+    <jar jarfile="./dist/cxf-ws-client.jar" basedir="./bin"/>
+  </target>
+  <target name="clean" description="clean up">
+    <!-- Delete the ${build} directory trees -->
+    <delete dir="./dist"/>
+    <delete dir="./bin"/>
+  </target>
+</project>
+
+### 5.6.4 运行客户端应用程序
+
+要运行客户端应用程序，请进入 `cxf-ws-client` 项目目录。在命令提示符上运行以下命令：
+
+```bash
+java -cp ./lib/cxf-ws-generated.jar;./dist/cxf-ws-client.jar com.bemach.ws.cxf.client.EmployeeDataClient 8080
+```
+
+输出如下：
+
+```
+Calling Employee (CXF) data service ...
+URL=http://localhost:8080/cxf-ws/employees?WSDL
+last=Fecello
+hire=1986-06-26T00:00:00-04:00
+last=Fecello
+first=Silvester
+emplNo=500001
+update:true
+last=New-name
+first=Silvester
+deleteEmployee:true
+Exit!
+```
+
+# 6. CXF 与 Web 服务
+
+## 目标
+
+完成本章后，你应该能够：
+
+1. 理解 `WebLogic Server` 的基础知识
+2. 创建一个基础 `WebLogic` 域
+3. 使用 `WebLogic` 部署 `CXF` 应用程序
+
+在本章中，我们将介绍 `WebLogic Server` 12。
+
+## 6.1 WebLogic Server
+
+`WebLogic Server`（`WLS`）也称为`企业版`。它是构建安全、高可用且可扩展应用程序的基础。它提供了用于数据库、消息和外部系统的 API。
+
+### 6.1.1 编程
+
+`WLS` 包含以下内容：
+
+* Java（`JSP` 和 `Servlet`）
+* Web 服务（`JAX-WS`、`JAX-RPC`、`JAX-RS`）
+* XML 编程（`JAXB`）
+* Java 消息（`JMS`）
+* Java 数据库连接（`JDBC`）
+* 企业信息系统
+* 企业 JavaBean（`EJB`）
+* 远程方法调用（`RMI`）
+* 安全 API
+* Tuxedo 连接（`WTC`）
+
+### 6.1.2 高可用
+
+关键任务可以通过以下技术支持：
+
+* `WebLogic` 集
+* 工作管理器
+* 负载保护
+* 网络通道
+* `WebLogic` 持久化存储
+* 转发服务
+* 企业级开发工具
+* 生产重部署
+
+## 6.2 部署图
+
+![3308.jpg](img/3308.jpg)
+
+图 6-1. CXF 部署图
 
 ## 6.3 创建 WebLogic 域
 
-WebLogic Server 域是 WLS 资源的逻辑组。它由一种特殊的服务器类型`管理服务器`管理。该服务器实例用于管理这些资源的配置。应用程序和服务不应部署在`管理服务器`上，而应部署在`托管服务器`实例上。一个 WLS 域可以包含一个或多个托管服务器实例。
+`WebLogic Server` 域是 `WLS` 资源的逻辑组。它由一种特殊的服务器类型`管理服务器`管理。该服务器实例用于管理这些资源的配置。应用程序和服务不应部署在`管理服务器`上，而应部署在`托管服务器`实例上。一个 `WLS` 域可以包含一个或多个托管服务器实例。
 
-两个或多个托管服务器可以组成一个集群。域可以管理集群。为了简单起见，我们将 CXF 服务应用程序部署在管理服务器上。首先，我们按照以下步骤创建一个 WLS 域：
+两个或多个托管服务器可以组成一个集群。域可以管理集群。为了简单起见，我们将 `CXF` 服务应用程序部署在管理服务器上。首先，我们按照以下步骤创建一个 `WLS` 域：
 
 1. 假设你在 Windows 上安装了 Oracle WebLogic，进入 `C:\Oracle\Middleware\wlserver_12.1\common\bin`。
 2. 运行 `config.cmd`（或 `config.sh`）。
@@ -3040,17 +3962,25 @@ WebLogic Server 域是 WLS 资源的逻辑组。它由一种特殊的服务器�
 4. 选择所有默认参数。
 5. 完成后，域创建并存储在此处：`C:\Oracle\Middleware\user_projects\domains\base_domain`。
 
-![Image3317.PNG](img/Image3317_fmt.jpeg) 图 6-2. 创建 WLS 域
+![Image3317.PNG](img/Image3317_fmt.jpeg)
 
+图 6-2. 创建 WLS 域
 
+![Image3347.PNG](img/Image3347_fmt.jpeg)
 
+**图 6-6.** 选择默认 JDK
 
+![Image3356.PNG](img/Image3356_fmt.jpeg)
 
-![Image3347.PNG](img/Image3347_fmt.jpeg) **图 6-6.** 选择默认 JDK
+**图 6-7.** 额外配置
 
-![Image3356.PNG](img/Image3356_fmt.jpeg) **图 6-7.** 额外配置
-![Image3364.PNG](img/Image3364_fmt.jpeg) **图 6-8.** 域配置摘要
-![Image3373.PNG](img/Image3373_fmt.jpeg) **图 6-9.** 域创建状态
+![Image3364.PNG](img/Image3364_fmt.jpeg)
+
+**图 6-8.** 域配置摘要
+
+![Image3373.PNG](img/Image3373_fmt.jpeg)
+
+**图 6-9.** 域创建状态
 
 ### 6.3.1 启动管理服务器 (Administration Server)
 
@@ -3062,7 +3992,9 @@ WebLogic Server 域是 WLS 资源的逻辑组。它由一种特殊的服务器�
 2. 运行以下命令：
 `startweblogic.cmd`
 
-![3437.jpg](img/3437.jpg) **图 6-10.** WLS 管理服务器的输出
+![3437.jpg](img/3437.jpg)
+
+**图 6-10.** WLS 管理服务器的输出
 
 服务器成功启动后，将在命令行窗口中显示以下消息：
 
@@ -3074,67 +4006,113 @@ WebLogic Server 域是 WLS 资源的逻辑组。它由一种特殊的服务器�
 
 ### 6.4.1 weblogic.xml
 
-此文件包含 WebLogic 特有的配置参数。在 WebLogic 服务器上部署 CXF WS 应用时需要该文件。
+此文件包含 `WebLogic` 特有的配置参数。在 `WebLogic` 服务器上部署 `CXF WS` 应用时需要该文件。
 
 #### 列表 6-1. cxf-ws.war Web 应用包含的 weblogic.xml 内容
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?><weblogic-web-app xmlns="http://xmlns.oracle.com/weblogic/weblogic-web-app" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.oracle.com/weblogic/weblogic-web-app http://xmlns.oracle.com/weblogic/weblogic-web-app/1.0/weblogic-web-app.xsd"><context-root>cxf-ws</context-root><jsp-descriptor><precompile>true</precompile></jsp-descriptor><session-descriptor><timeout-secs>900</timeout-secs><invalidation-interval-secs>10</invalidation-interval-secs><max-in-memory-sessions>500</max-in-memory-sessions></session-descriptor></weblogic-web-app>
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-web-app xmlns="http://xmlns.oracle.com/weblogic/weblogic-web-app" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.oracle.com/weblogic/weblogic-web-app http://xmlns.oracle.com/weblogic/weblogic-web-app/1.0/weblogic-web-app.xsd">
+  <context-root>cxf-ws</context-root>
+  <jsp-descriptor>
+    <precompile>true</precompile>
+  </jsp-descriptor>
+  <session-descriptor>
+    <timeout-secs>900</timeout-secs>
+    <invalidation-interval-secs>10</invalidation-interval-secs>
+    <max-in-memory-sessions>500</max-in-memory-sessions>
+  </session-descriptor>
+</weblogic-web-app>
 ```
 
-要在 WebLogic 服务器上部署 CXF Web 应用，请执行以下步骤：
+要在 `WebLogic` 服务器上部署 `CXF` Web 应用，请执行以下步骤：
 
 1. 打开浏览器并访问 [`localhost:7001/console`](http://localhost:7001/console)。使用你在域创建步骤中定义的用户名/密码以 `weblogic/weblogic1` 登录。
 
-![Image3471.PNG](img/Image3471_fmt.jpeg) **图 6-11.** OracleWLS 控制台登录界面
+![Image3471.PNG](img/Image3471_fmt.jpeg)
 
-2. 在左侧面板中，选择`Deployments`部署）选项。
+**图 6-11.** Oracle WLS 控制台登录界面
 
-![Image3478.PNG](img/Image3478_fmt.jpeg) **图 6-12.** Oracle WLS 部署界面
+2. 在左侧面板中，选择`Deployments`（部署）选项。
 
-3. 在右侧面板中，点击`Install`安装）按钮。
+![Image3478.PNG](img/Image3478_fmt.jpeg)
+
+**图 6-12.** Oracle WLS 部署界面
+
+3. 在右侧面板中，点击`Install`（安装）按钮。
 
 4. 选择位于 `cxf-ws` 项目 `dist` 目录下的 `cxf-ws.war` 文件。
 
-![Image3486.PNG](img/Image3486_fmt.jpeg) **图 6-13.** Oracle WLS 安装应用程序界面
+![Image3486.PNG](img/Image3486_fmt.jpeg)
+
+**图 6-13.** Oracle WLS 安装应用程序界面
 
 5. 点击‘Next’（下一步）。
 
-![Image3494.PNG](img/Image3494_fmt.jpeg) **图 6-14.** 部署类型
+![Image3494.PNG](img/Image3494_fmt.jpeg)
+
+**图 6-14.** 部署类型
 
 6. 点击‘Next’（下一步）。
 
-![Image3502.PNG](img/Image3502_fmt.jpeg) **图 6-15.** 部署设置
+![Image3502.PNG](img/Image3502_fmt.jpeg)
 
-7. 点击‘Finish’（完成）。![3546.jpg](img/3546.jpg) **图 6-16.** 状态必须显示为 Active
+**图 6-15.** 部署设置
 
-我们现在准备好测试由 WebLogic 服务器托管的 CXF Web 服务。
+7. 点击‘Finish’（完成）。
+
+![3546.jpg](img/3546.jpg)
+
+**图 6-16.** 状态必须显示为 Active
+
+我们现在准备好测试由 `WebLogic` 服务器托管的 `CXF` Web 服务。
 
 ## 6.5 使用 WebLogic 测试 CXF Web 服务
 
-![Image3554.PNG](img/Image3554_fmt.jpeg) **图 6-17.** 测试应用程序
+![Image3554.PNG](img/Image3554_fmt.jpeg)
 
-![Image3563.PNG](img/Image3563_fmt.jpeg) **图 6-18.** 结果显示
+**图 6-17.** 测试应用程序
 
-![Image3571.PNG](img/Image3571_fmt.jpeg) **图 6-19.** 测试客户端
+![Image3563.PNG](img/Image3563_fmt.jpeg)
 
-![3613.jpg](img/3613.jpg) **图 6-20.** 调用 getEmployee 操作的结果
+**图 6-18.** 结果显示
 
-![3625.PNG](img/Image3625_fmt.jpeg) **图 6-21.** 执行 getEmployee 操作
+![Image3571.PNG](img/Image3571_fmt.jpeg)
+
+**图 6-19.** 测试客户端
+
+![3613.jpg](img/3613.jpg)
+
+**图 6-20.** 调用 `getEmployee` 操作的结果
+
+![3625.PNG](img/Image3625_fmt.jpeg)
+
+**图 6-21.** 执行 `getEmployee` 操作
 
 WSDL 位于：
 [`localhost:7001/cxf-ws/wsdl`](http://localhost:7001/cxf-ws/wsdl)
 
-
-
-
-
 ```xml
-<wsdl:message name="updateEmployeeResponse"><wsdl:part name="return" type="xsd:boolean"></wsdl:part></wsdl:message>
-<wsdl:message name="deleteEmployeeResponse"><wsdl:part name="return" type="xsd:boolean"></wsdl:part></wsdl:message>
-<wsdl:message name="getEmployee"><wsdl:part name="emplNo" type="xsd:long"></wsdl:part></wsdl:message>
-<wsdl:message name="createEmployee"><wsdl:part name="employee" type="tns:employee"></wsdl:part></wsdl:message>
-<wsdl:message name="deleteEmployee"><wsdl:part name="emplNo" type="xsd:long"></wsdl:part></wsdl:message>
+<wsdl:message name="updateEmployeeResponse">
+  <wsdl:part name="return" type="xsd:boolean"></wsdl:part>
+</wsdl:message>
+
+<wsdl:message name="deleteEmployeeResponse">
+  <wsdl:part name="return" type="xsd:boolean"></wsdl:part>
+</wsdl:message>
+
+<wsdl:message name="getEmployee">
+  <wsdl:part name="emplNo" type="xsd:long"></wsdl:part>
+</wsdl:message>
+
+<wsdl:message name="createEmployee">
+  <wsdl:part name="employee" type="tns:employee"></wsdl:part>
+</wsdl:message>
+
+<wsdl:message name="deleteEmployee">
+  <wsdl:part name="emplNo" type="xsd:long"></wsdl:part>
+</wsdl:message>
+
 <wsdl:portType name="EmployeeDataIf">
   <wsdl:operation name="createEmployee">
     <wsdl:input message="tns:createEmployee" name="createEmployee"></wsdl:input>
@@ -3154,6 +4132,7 @@ WSDL 位于：
     <wsdl:fault message="tns:SOAPException" name="SOAPException"></wsdl:fault>
   </wsdl:operation>
 </wsdl:portType>
+
 <wsdl:binding name="EmployeeDataServiceSoapBinding" type="tns:EmployeeDataIf">
   <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http*"/>
   <wsdl:operation name="createEmployee">
@@ -3180,12 +4159,18 @@ WSDL 位于：
       <soap:body namespace="http://cxf.ws.bemach.com/*" use="literal"/>
     </wsdl:input>
     <wsdl:output name="getEmployeeResponse">
-      <soap:body namespace="http://cxf.ws.bemach.com/*" use="literal"/>
-    </wsdl:output>
-    <wsdl:fault name="SOAPException">
-      <soap:fault name="SOAPException" use="literal"/>
-    </wsdl:fault>
+</wsdl:output>
   </wsdl:operation>
+</wsdl:binding>
+```
+
+
+
+以下是一个 WSDL 文档片段，展示了 `EmployeeDataService` 服务的绑定与服务定义：
+
+```
+<wsdl:binding name="EmployeeDataServiceSoapBinding" type="tns:EmployeeDataService">
+  <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
   <wsdl:operation name="updateEmployee">
     <soap:operation soapAction="" style="rpc"/>
     <wsdl:input name="updateEmployee">
@@ -3196,12 +4181,12 @@ WSDL 位于：
     </wsdl:output>
   </wsdl:operation>
 </wsdl:binding>
+
 <wsdl:service name="EmployeeDataService">
   <wsdl:port binding="tns:EmployeeDataServiceSoapBinding" name="EmployeeDataPort">
     <soap:address location="http://localhost:7001/cxf-ws/employees*"/>
   </wsdl:port>
 </wsdl:service>
-</wsdl:definitions>
 ```
 
 ## 6.6 运行客户端应用程序
@@ -3218,25 +4203,17 @@ Calling Employee (CXF) data service ...
 URL=http://localhost:7001/cxf-ws/employees*
 ```
 
-Calling Employee (CXF) data service ...
-
-URL=http://localhost:7001/cxf-ws/employees*
-
-Calling Employee (CXF) data service ...
-
-URL=http://localhost:7001/cxf-ws/employees*
-
 ## 附录 – 开发
 
 现在有很多开发工具可用。
 
 ## 7.1 Java 开发包 (JDK)
 
-访问 Oracle 网站 ([`www.oracle.com`](http://www.oracle.com)) 下载 JDK。
+访问 Oracle 网站（[`www.oracle.com`](http://www.oracle.com)）下载 JDK。
 
 ## 7.2 Eclipse (IDE)
 
-访问 Eclipse ([`www.eclipse.org/`](http://www.eclipse.org/)) 下载 IDE。
+访问 Eclipse（[`www.eclipse.org/`](http://www.eclipse.org/)）下载 IDE。
 
 ### 7.2.1 在 Eclipse 中创建 Java 项目
 
@@ -3244,18 +4221,18 @@ URL=http://localhost:7001/cxf-ws/employees*
 
 1. 选择 `File` -> `New` -> `Java Project`。弹出向导。
 2. 输入项目名称并点击 `Next`。
-3. 在 Java Settings 界面，选择默认值并点击 `Finish`。
+3. 在 `Java Settings` 界面，选择默认值并点击 `Finish`。
 
 ### 7.2.2 在 Eclipse 中创建动态 Web 项目
 
-1. 选择 `File` -> `New` -> `Other...` 弹出“选择向导”窗口：
+1. 选择 `File` -> `New` -> `Other...` 弹出“选择向导”窗口。
 2. 输入项目名称并点击 `Next`。
-3. 在 Java 界面点击 `Next`。
+3. 在 `Java` 界面点击 `Next`。
 4. 勾选 `Generate web.xml deployment descriptor`。
 
 ## 7.3 MySQL 社区数据库
 
-访问 MySQL 网站 ([`www.mysql.com`](http://www.mysql.com)) 下载 MySQL Community Server。运行安装程序并选择默认选项。请记住你的 root 密码。
+访问 MySQL 网站（[`www.mysql.com`](http://www.mysql.com)）下载 MySQL Community Server。运行安装程序并选择默认选项。请记住你的 `root` 密码。
 
 从 MySQL 网站下载并安装 Employees 数据库：[`dev.mysql.com/doc/employee/en/index.html`](http://dev.mysql.com/doc/employee/en/index.html)。按照安装说明使用所有默认选项。
 
@@ -3277,13 +4254,9 @@ CREATE TABLE employees (
 );
 ```
 
-下载并解压用于访问 MySQL 数据库的 JDBC 驱动程序：
+下载并解压用于访问 MySQL 数据库的 JDBC 驱动程序。
 
 ## 7.4 安装 Oracle Fusion Middleware 软件
-
-
-
-
 
 访问 Oracle 网站（[`www.oracle.com`](http://www.oracle.com)）并下载 Oracle Fusion Middleware（原“WebLogic Server”）版本为 12.1.1。Oracle 可能要求用户注册账户。该版本对开发者来说功能完备；但受限于五个（5）个客户端连接。请确保下载 Windows 或 Linux 安装版本。警告：这是一个巨大的下载（1.2 GB）。安装程序版本包含 JDK 和一个为 Oracle 中间件定制的 Eclipse IDE。运行安装程序并选择所有默认选项。
 
@@ -3335,7 +4308,7 @@ xml-resolver-1.2.jar
 xmlschema-core-2.0.jar
 ```
 
-## 7.7 安装 SOAPUI 
+## 7.7 安装 SOAPUI
 
 访问 SOAPUI 网站（[`www.soapui.org`](http://www.soapui.org)）并下载免费版的 SOAPUI 软件。
 
@@ -3347,4 +4320,3 @@ xmlschema-core-2.0.jar
 
 1. 注意 `employees` 是数据库的实际名称。
 2. 注意 `employees` 是 `employees` 数据库中一个表的名称。
-

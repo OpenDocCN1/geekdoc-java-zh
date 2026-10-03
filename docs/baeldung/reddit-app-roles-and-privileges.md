@@ -1,16 +1,17 @@
+
 # 向 Reddit 应用程序添加角色和权限
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/reddit-app-roles-and-privileges>
 
-## 1。概述
+## 1. 概述
 
 在这一期中，我们将在我们的 Reddit 应用程序中引入简单的角色和权限，然后能够做一些有趣的事情，例如——限制普通用户每天可以在 Reddit 上发布多少帖子。
 
 由于我们将有一个管理员角色，也就是管理员用户，我们还将添加一个管理员管理区域。
 
-## 2。`User`、`Role`和`Privilege`实体
+## 2. `User`、`Role`和`Privilege`实体
 
-首先，我们将修改`User`实体——我们通过我们的 [Reddit 应用程序系列](/web/20210917093839/https://www.baeldung.com/case-study-a-reddit-app-with-spring)使用它——来添加角色:
+首先，我们将修改`User`实体——我们通过我们的 [Reddit 应用程序系列](/web/20210917093839/https://www.baeldung.com/case-study-a-reddit-app-with-spring)使用它——来添加角色：
 
 ```java
 @Entity
@@ -31,9 +32,9 @@ public class User {
 
 接下来，我们将定义`Role`和`Privilege`实体。有关该实现的全部细节，请查看[关于 Baeldung](/web/20210917093839/https://www.baeldung.com/role-and-privilege-for-spring-security-registration) 的这篇文章。
 
-## 3。设置
+## 3. 设置
 
-接下来，我们将在项目引导上运行一些基本设置，以创建这些角色和权限:
+接下来，我们将在项目引导上运行一些基本设置，以创建这些角色和权限：
 
 ```java
 private void createRoles() {
@@ -48,7 +49,7 @@ private void createRoles() {
 }
 ```
 
-并让我们的测试用户成为管理员:
+并让我们的测试用户成为管理员：
 
 ```java
 private void createTestUser() {
@@ -59,9 +60,9 @@ private void createTestUser() {
 }
 ```
 
-## 4。注册标准用户
+## 4. 注册标准用户
 
-我们还需要确保我们通过`registerNewUser()`实现注册了标准用户:
+我们还需要确保我们通过`registerNewUser()`实现注册了标准用户：
 
 ```java
 @Override
@@ -72,15 +73,15 @@ public void registerNewUser(String username, String email, String password) {
 }
 ```
 
-请注意，系统中的角色包括:
+请注意，系统中的角色包括：
 
-1.  对于普通用户(默认角色)——他们有一天可以安排多少帖子的限制
-2.  `ROLE_SUPER_USER`:无调度限制
-3.  `ROLE_ADMIN`:附加管理选项
+1. 对于普通用户（默认角色）——他们有一天可以安排多少帖子的限制
+2. `ROLE_SUPER_USER`：无调度限制
+3. `ROLE_ADMIN`：附加管理选项
 
-## 5。本金
+## 5. 本金
 
-接下来，让我们将这些新特权集成到我们的主要实现中:
+接下来，让我们将这些新特权集成到我们的主要实现中：
 
 ```java
 public class UserPrincipal implements UserDetails {
@@ -99,13 +100,13 @@ public class UserPrincipal implements UserDetails {
 }
 ```
 
-## 6。限制标准用户的预定帖子
+## 6. 限制标准用户的预定帖子
 
 现在，让我们利用新的角色和权限，**限制标准用户每天安排的新文章不超过 3 篇**，以避免向 Reddit 发送垃圾邮件。
 
-### 6.1。发布存储库
+### 6.1. 发布存储库
 
-首先，我们将在我们的`PostRepository`实现中添加一个新操作——统计特定用户在特定时间段内的预定帖子:
+首先，我们将在`PostRepository`实现中添加一个新操作——统计特定用户在特定时间段内的预定帖子：
 
 ```java
 public interface PostRepository extends JpaRepository<Post, Long> {
@@ -116,9 +117,9 @@ public interface PostRepository extends JpaRepository<Post, Long> {
 }
 ```
 
-### 5.2。预定后控制器
+### 6.2. 预定后控制器
 
-然后，我们将向`schedule()`和`updatePost()`方法添加一个简单的检查:
+然后，我们将向`schedule()`和`updatePost()`方法添加一个简单的检查：
 
 ```java
 public class ScheduledPostRestController {
@@ -151,15 +152,15 @@ public class ScheduledPostRestController {
 
 然而，如果他们没有这种特权，他们每天最多只能排 3 个帖子。
 
-## 7。管理员用户页面
+## 7. 管理员用户页面
 
 接下来——现在我们已经根据用户的角色对他们进行了明确的划分——让我们为小型 Reddit 应用的管理员实现一些非常简单的用户管理。
 
-### 7.1。显示所有用户
+### 7.1. 显示所有用户
 
-首先，让我们创建一个列出系统中所有用户的基本页面:
+首先，让我们创建一个列出系统中所有用户的基本页面：
 
-这里列出所有用户的 API:
+这里列出所有用户的 API：
 
 ```java
 @PreAuthorize("hasRole('ADMIN_READ_PRIVILEGE')")
@@ -170,7 +171,7 @@ public List<User> getUsersList() {
 }
 ```
 
-和服务层实现:
+和服务层实现：
 
 ```java
 @Transactional
@@ -179,9 +180,9 @@ public List<User> getUsersList() {
 }
 ```
 
-然后，简单的前端:
+然后，简单的前端：
 
-```java
+```html
 <table>
     <thead>
         <tr>
@@ -214,9 +215,9 @@ function extractRolesName(roles){
 </script>
 ```
 
-### 7.2。修改用户的角色
+### 7.2. 修改用户的角色
 
-接下来，一些简单的逻辑来管理这些用户的角色；让我们从控制器开始:
+接下来，一些简单的逻辑来管理这些用户的角色；让我们从控制器开始：
 
 ```java
 @PreAuthorize("hasRole('USER_WRITE_PRIVILEGE')")
@@ -236,7 +237,7 @@ public List<Role> getRolesList() {
 }
 ```
 
-服务层:
+服务层：
 
 ```java
 @Transactional
@@ -257,9 +258,9 @@ public void modifyUserRoles(Long userId, String ids) {
 }
 ```
 
-最后，简单的前端:
+最后，简单的前端：
 
-```java
+```html
 <div id="myModal">
     <h4 class="modal-title">Modify User Roles</h4>
     <input type="hidden" name="id" id="userId"/>
@@ -305,9 +306,11 @@ function modifyUserRoles(){
 </script>
 ```
 
-## 8。安全配置
+## 8. 安全配置
 
-最后，我们需要修改安全配置，将管理员用户重定向到系统中这个新的独立页面:
+
+
+最后，我们需要修改安全配置，将管理员用户重定向到系统中这个新的独立页面：
 
 ```java
 @Autowired 
@@ -324,7 +327,7 @@ protected void configure(HttpSecurity http) throws Exception {
 }
 ```
 
-我们使用一个定制的身份验证成功处理程序来**决定用户登录**后的位置:
+我们使用一个定制的身份验证成功处理程序来决定用户登录后的位置：
 
 ```java
 @Component
@@ -344,7 +347,7 @@ public class MyAuthenticationSuccessHandler implements AuthenticationSuccessHand
 }
 ```
 
-以及极其简单的管理主页`adminHome.html`:
+以及极其简单的管理主页 `adminHome.html`：
 
 ```java
 <html>
@@ -356,6 +359,6 @@ public class MyAuthenticationSuccessHandler implements AuthenticationSuccessHand
 </html>
 ```
 
-## 9。结论
+## 9. 结论
 
-在案例研究的这个新部分中，我们在应用程序中添加了一些简单的安全构件——角色和权限。在这种支持下，**我们构建了两个简单的特性**——标准用户的调度限制和管理用户的基本管理。
+在案例研究的这个新部分中，我们在应用程序中添加了一些简单的安全构件——角色和权限。在这种支持下，我们构建了两个简单的特性——标准用户的调度限制和管理用户的基本管理。

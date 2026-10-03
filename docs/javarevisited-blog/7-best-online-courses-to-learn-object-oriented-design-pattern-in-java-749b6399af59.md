@@ -1,3 +1,4 @@
+
 # 2023 年学习 Java 面向对象设计模式的 7 门最佳在线课程
 
 > 原文：<https://medium.com/javarevisited/7-best-online-courses-to-learn-object-oriented-design-pattern-in-java-749b6399af59?source=collection_archive---------0----------------------->
@@ -76,13 +77,15 @@ OOP 设计原则和 GOF 设计模式的知识对于 Java 开发者来说非常�
 
 **这是加入本课程的链接** : [软件设计模式:软件开发人员的最佳实践](https://www.educative.io/courses/software-design-patterns-best-practices?affiliate_id=5073518643380224)
 
+
+
 [![](img/7870fd3e5a7d62be68183925fdac2db4.png)](https://www.educative.io/courses/software-design-patterns-best-practices?affiliate_id=5073518643380224)
 
-此外，如果你觉得教育平台和他们的互动课程很有用，那么你还可以获得 [**教育订阅**](https://www.educative.io/subscription?affiliate_id=5073518643380224) ，每月只需 14.9 美元，不仅可以访问这门课程，还可以访问他们的 210 多门课程。它非常划算，非常适合获得一些实践学习经验。
+此外，如果你觉得教育平台和他们的互动课程很有用，那么你还可以获得[教育订阅](https://www.educative.io/subscription?affiliate_id=5073518643380224)，每月只需 14.9 美元，不仅可以访问这门课程，还可以访问他们的 210 多门课程。它非常划算，非常适合获得一些实践学习经验。
 
-<https://www.educative.io/subscription?affiliate_id=5073518643380224>  
+<https://www.educative.io/subscription?affiliate_id=5073518643380224>
 
-## 4.[体验 Java 中的设计模式](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fexperience-design-patterns%2F)
+## 4. 体验 Java 中的设计模式
 
 这是学习 Java 设计模式的另一个很棒的课程。它将教你如何通过理解常见问题和应用设计模式来获得更好的解决方案，从而写出更好的软件。
 
@@ -94,7 +97,7 @@ OOP 设计原则和 GOF 设计模式的知识对于 Java 开发者来说非常�
 
 [![](img/714ea5c8baf0553651c193f453854847.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fexperience-design-patterns%2F)
 
-## [**5。Java 中的软件架构基础&设计模式**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fbasics-of-software-architecture-design-in-java%2F)
+## 5. Java 中的软件架构基础与设计模式
 
 本课程指导你用坚实的原理和设计模式用 Java 创建智能的、可重用的软件。
 
@@ -102,11 +105,11 @@ OOP 设计原则和 GOF 设计模式的知识对于 Java 开发者来说非常�
 
 简而言之，这是一门很好的课程，涵盖了软件设计、架构和 Java 设计模式的基础知识，有助于编写更好的代码。
 
-**这里是加入本课程的链接—** [软件架构基础&Java 中的设计模式](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fbasics-of-software-architecture-design-in-java%2F)
+**这里是加入本课程的链接—** [软件架构基础与 Java 中的设计模式](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fbasics-of-software-architecture-design-in-java%2F)
 
 [![](img/96acb06761cadbddba7b1b8b3ded33a9.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fbasics-of-software-architecture-design-in-java%2F)
 
-## [**6。Java 设计模式—完整的大师级**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-design-patterns-the-complete-masterclass%2F)
+## 6. Java 设计模式—完整的大师级
 
 这是 Paulo Dichone 的一门相当新的课程，他写了几本最畅销的 Java 和 Android 课程，如 [Java Masterclass 初学者到专家指南](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-java-9-masterclass-beginner-to-expert%2F)，我最近浏览了一下，以了解 Java 的新特性。
 
@@ -120,7 +123,7 @@ OOP 设计原则和 GOF 设计模式的知识对于 Java 开发者来说非常�
 
 [![](img/ba757e5e68ac8cc249314b1bf2832eed.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-design-patterns-the-complete-masterclass%2F)
 
-## [**7。从 0 到 Java 中的设计模式——24 种重要模式**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Ffrom-0-to-1-design-patterns%2F)
+## 7. 从 0 到 Java 中的设计模式——24 种重要模式
 
 这是从著名的 GOF 书中学习 24 种面向对象设计模式的又一门综合课程。
 
@@ -132,7 +135,7 @@ OOP 设计原则和 GOF 设计模式的知识对于 Java 开发者来说非常�
 
 [![](img/6fee2ad0d935d5112d59ee7b5ad268c0.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Ffrom-0-to-1-design-patterns%2F)
 
-## 8.[钻研面向对象设计面试](https://www.educative.io/collection/5668639101419520/5692201761767424?affiliate_id=5073518643380224)
+## 8. 钻研面向对象设计面试
 
 虽然本课程与设计模式没有直接关系，但面向对象的基础知识和设计是理解和在代码中使用设计模式的关键。
 
@@ -148,30 +151,32 @@ OOP 设计原则和 GOF 设计模式的知识对于 Java 开发者来说非常�
 
 [![](img/8dd7cb08f48dc1bef7d1929970a39dc7.png)](https://www.educative.io/collection/5668639101419520/5692201761767424?affiliate_id=5073518643380224)
 
-以上是关于学习 Java 设计模式的一些最好的在线培训课程。这些课程是提高你对面向对象设计和久经考验的 g of 模式的理解的好方法。完成这些课程后，你就知道这些模式意味着什么，以及什么时候可以使用它们来创建更好的代码。这也有助于你向你的团队和同事传达你的想法。
+以上是关于学习 Java 设计模式的一些最好的在线培训课程。这些课程是提高你对面向对象设计和久经考验的 GOF 模式的理解的好方法。完成这些课程后，你就知道这些模式意味着什么，以及什么时候可以使用它们来创建更好的代码。这也有助于你向你的团队和同事传达你的想法。
 
-其他 **Java 和编程资源**你可能喜欢的
-[5 门免费为 Java 开发者提供的 Spring 框架课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
-[5 门免费学习 Linux 中 Shell 脚本的课程](http://javarevisited.blogspot.sg/2018/02/5-courses-to-learn-shell-scripting-in-linux.html)
-[5 门免费学习核心 Java 的在线课程](http://javarevisited.blogspot.sg/2017/11/top-5-free-java-courses-for-beginners.html#axzz4zuIICRs9)
-[5 门免费学习 Angular 的在线培训课程](http://www.java67.com/2018/01/top-5-free-angular-js-online-courses-for-web-developers.html)
-[5 门免费学习数据结构和算法的课程](http://javarevisited.blogspot.sg/2018/01/top-5-free-data-structure-and-algorithm-courses-java--c-programmers.html#axzz55lOcYrUM)
-[10 本书和课程学习 Angular in](/javarevisited/top-10-angular-books-and-courses-for-beginners-and-experienced-web-developers-best-of-lot-9a2dae87f04c)
-[Java 开发者 10 门高级 Spring Boot 课程](/javarevisited/10-advanced-spring-boot-courses-for-experienced-java-developers-5e57606816bd)
-[2023 年 10 门免费课程学习 Spring Boot](/javarevisited/10-free-spring-boot-tutorials-and-courses-for-java-developers-53dfe084587e)
-[7 门课程学习 Java 中的微服务与 Spring Boot](/javarevisited/top-5-courses-to-learn-microservices-in-java-and-spring-framework-e9fed1ba804d)
-[我最喜欢的课程学习 Spring Boot](/javarevisited/top-10-courses-to-learn-spring-boot-in-2020-best-of-lot-6ffce88a1b6e)
-[我最喜欢的免费 JavaScript 教程初学者](/javarevisited/my-favorite-free-tutorials-and-courses-to-learn-javascript-8f4d0a71faf2)
-[7 门最好的课程学习网页设计与开发](/javarevisited/7-free-online-courses-to-become-a-web-designer-and-frontend-developer-in-2020-dca73bc7fdc4)
-[7](/javarevisited/7-free-courses-to-learn-bootstrap-for-web-designers-and-developers-5135215648f1) [2023 年学习人工智能的 7 门最佳课程](/javarevisited/7-best-courses-to-learn-artificial-intelligence-in-2020-26d59d62f6fe)
-[面向 Java 程序员的 25 道软件设计面试题](/javarevisited/25-software-design-interview-questions-to-crack-any-programming-and-technical-interviews-4b8237942db0)
+其他 **Java 和编程资源**你可能喜欢的：
+
+- [5 门免费为 Java 开发者提供的 Spring 框架课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
+- [5 门免费学习 Linux 中 Shell 脚本的课程](http://javarevisited.blogspot.sg/2018/02/5-courses-to-learn-shell-scripting-in-linux.html)
+- [5 门免费学习核心 Java 的在线课程](http://javarevisited.blogspot.sg/2017/11/top-5-free-java-courses-for-beginners.html#axzz4zuIICRs9)
+- [5 门免费学习 Angular 的在线培训课程](http://www.java67.com/2018/01/top-5-free-angular-js-online-courses-for-web-developers.html)
+- [5 门免费学习数据结构和算法的课程](http://javarevisited.blogspot.sg/2018/01/top-5-free-data-structure-and-algorithm-courses-java--c-programmers.html#axzz55lOcYrUM)
+- [10 本书和课程学习 Angular](/javarevisited/top-10-angular-books-and-courses-for-beginners-and-experienced-web-developers-best-of-lot-9a2dae87f04c)
+- [Java 开发者 10 门高级 Spring Boot 课程](/javarevisited/10-advanced-spring-boot-courses-for-experienced-java-developers-5e57606816bd)
+- [2023 年 10 门免费课程学习 Spring Boot](/javarevisited/10-free-spring-boot-tutorials-and-courses-for-java-developers-53dfe084587e)
+- [7 门课程学习 Java 中的微服务与 Spring Boot](/javarevisited/top-5-courses-to-learn-microservices-in-java-and-spring-framework-e9fed1ba804d)
+- [我最喜欢的课程学习 Spring Boot](/javarevisited/top-10-courses-to-learn-spring-boot-in-2020-best-of-lot-6ffce88a1b6e)
+- [我最喜欢的免费 JavaScript 教程初学者](/javarevisited/my-favorite-free-tutorials-and-courses-to-learn-javascript-8f4d0a71faf2)
+- [7 门最好的课程学习网页设计与开发](/javarevisited/7-free-online-courses-to-become-a-web-designer-and-frontend-developer-in-2020-dca73bc7fdc4)
+- [7 门免费课程学习 Bootstrap](/javarevisited/7-free-courses-to-learn-bootstrap-for-web-designers-and-developers-5135215648f1)
+- [2023 年学习人工智能的 7 门最佳课程](/javarevisited/7-best-courses-to-learn-artificial-intelligence-in-2020-26d59d62f6fe)
+- [面向 Java 程序员的 25 道软件设计面试题](/javarevisited/25-software-design-interview-questions-to-crack-any-programming-and-technical-interviews-4b8237942db0)
 
 感谢您阅读本文。如果你喜欢这些 Java 设计模式课程，请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
-**p . s .**——如果你对提升你的设计模式技能感兴趣，但正在寻找免费的在线培训课程，那么你也可以在 Udemy 上查看 [**Java 设计模式和架构**](http://bit.ly/java-design-patterns-tutorial) 课程。这是完全免费的，你只需要一个 Udemy 帐户就可以注册这门课程。
+**P.S.**——如果你对提升你的设计模式技能感兴趣，但正在寻找免费的在线培训课程，那么你也可以在 Udemy 上查看 [Java 设计模式和架构](http://bit.ly/java-design-patterns-tutorial) 课程。这是完全免费的，你只需要一个 Udemy 帐户就可以注册这门课程。
 
-<http://bit.ly/java-design-patterns-tutorial>  
+<http://bit.ly/java-design-patterns-tutorial>
 
-**P. P. S —** 快速更新，[**Pluralsight 免费周末 2023**](https://pluralsight.pxf.io/c/1193463/871467/7490) 就在这里，你可以在这个周末免费访问所有 7000+ Pluralsight 课程和项目。好好利用这一点，学习一项新技能或提升现有技能。不要错过这个，这只是这个周末。这又是一个链接:
+**P. P. S —** 快速更新，[Pluralsight 免费周末 2023](https://pluralsight.pxf.io/c/1193463/871467/7490) 就在这里，你可以在这个周末免费访问所有 7000+ Pluralsight 课程和项目。好好利用这一点，学习一项新技能或提升现有技能。不要错过这个，这只是这个周末。这又是一个链接：
 
-<https://pluralsight.pxf.io/c/1193463/871467/7490> 
+<https://pluralsight.pxf.io/c/1193463/871467/7490>

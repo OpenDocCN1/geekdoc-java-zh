@@ -1,8 +1,6 @@
+
+
 # Java 创建型模式使用指南
-
-
-
-
 
 ## 序言
 
@@ -26,23 +24,23 @@
 
 在 Java 中，创建对象的方法是使用 `new` 操作符。
 
-```
+```java
 Foo = new Foo() ; // Foo 类的实例
 ```
 
 假设是你编写了 `Foo` 类并将库提供给某人使用。正如你看到的，该库的用户可以实例化任意数量的 `Foo` 类，而完全没有任何控制。此外，在这里我们硬编码了对象的实例化方式。在许多情况下，需要创建的精确对象取决于运行时行为。创建设计模式抽象了对象的创建方式。它可以使程序变得更加灵活和通用。
 
-* **工厂方法**：它提供了一个类，根据提供的输入数据，从派生自共同抽象类的类族中决定需要实例化的对象。
-* **抽象工厂**：它提供了创建多个类族实例的能力。
-* **构建器**：它提供了将对象的构造与其表示分离的能力。因此，根据需要可以创建不同的表示。
-* **原型**：它提供了一种通过克隆或复制现有实例创建新对象的轻量级方法。
-* **单例**：它提供了通过限制为单个实例来控制可以创建实例数量的能力。
+- **工厂方法**：它提供了一个类，根据提供的输入数据，从派生自共同抽象类的类族中决定需要实例化的对象。
+- **抽象工厂**：它提供了创建多个类族实例的能力。
+- **构建器**：它提供了将对象的构造与其表示分离的能力。因此，根据需要可以创建不同的表示。
+- **原型**：它提供了一种通过克隆或复制现有实例创建新对象的轻量级方法。
+- **单例**：它提供了通过限制为单个实例来控制可以创建实例数量的能力。
 
-## 第一章
+# 第一章
 
-### 工厂
+## 工厂
 
-#### 背景
+### 背景
 
 工厂设计模式在需要从相关的类族创建类实例的场景下非常有用。例如，假设有一个生产电子玩具的工厂。所有电子玩具都有一些共同特征，比如它们都有播放和停止按钮。如果你需要一只泰迪熊，你只需要告诉工厂“嘿，给我做一个泰迪熊”，工厂就会为你制作一个并交给你。
 
@@ -53,10 +51,6 @@ Foo = new Foo() ; // Foo 类的实例
 通常，所有的类都有一个父类和一些公共函数。但每个函数在执行任务时的运作不同。此外，还有一个工厂类负责理解用户需要哪种类、实例化所需的类并返回该实例。在电子玩具工厂的示例中，所有玩具都有一个名为 `play` 的公共函数，每个玩具的播放方式不同。当泰迪熊被要求播放时，它可能会唱一首歌。当老虎被要求播放时，它可能会发出咆哮声。这种关系在下图所示。
 
 ![Image](img/image00046.jpeg)
-
-
-
-
 
 这里 `IElectronicToy` 是一个包含两个函数（`play` 和 `stop`）的接口。它代表了每个电子玩具应该实现的合约。该合约由两个方法 `play()` 和 `stop()` 规定。`TeddyBear` 和 `Lion` 是两个实现 `IElectronicToy` 接口的类。通过重写 `play()` 和 `stop()` 方法，`TeddyBear` 和 `Lion` 分对 `play()` 和 `stop()` 方法有不同的实现。`ToyFactory` 是一个包含单一静态方法 `CreateToy(..)` 的类。该方法接受 `ToyType` 枚举，并根据 `ToyType` 的值返回 `TeddyBear` 或 `Lion`，且返回类型被强制类型转换为 `IElectronicToy`。`Client` 代表一个外部类，它调用 `ToyFactory` 类的静态方法 `createToy` 并传递适当的 `ToyType` 值。反，它获得一个 `IElectronicToy` 类型的对象，该对象在内部可能是 `TeddyBear` 或 `Lion`。
 
@@ -153,7 +147,8 @@ public class Client {
 ```
 
 输出：
-```
+
+```text
 Grrrr…….
 stopped grrrr....
 Roar
@@ -163,7 +158,7 @@ Process finished with exit code 0
 
 ### 益处
 
-**重用。** 如果我想在许多地方从一组相关的类中实例化一个类，可以在我需要的地方地方使用工厂类，而不需要实例化单个类。
+**重用。** 如果我想在许多地方从一组相关的类中实例化一个类，可以在我需要的地方使用工厂类，而不需要实例化单个类。
 
 **可单元测试性。** 我可以为工厂编写 2 个测试，以确保它在正确的条件下返回正确的类型，然后调用类只需要测试它是否调用了工厂以及随后调用了返回类上的所需方法即可。它不需要对工厂本身的实现或具体类一无所知。
 
@@ -173,9 +168,9 @@ Process finished with exit code 0
 
 # 第二章
 
-### 抽象工厂
+## 抽象工厂
 
-#### 背景
+### 背景
 
 抽象工厂设计模式比工厂模式高出一个层级的抽象。当你需要从几个相关的“族”中返回一个对象时，可以使用这种模式。
 
@@ -292,9 +287,6 @@ public class ThreedDrawingFactory implements IDrawingPlatform {
 
 ![Image](img/image0047.jpeg)
 
-
-
-
 ```java
 break;
 
@@ -340,47 +332,43 @@ return theTree;
 }
 ```
 
-File : `Client.java`
+文件：`Client.java`
+
+
+
 
 ```java
 public class Client {
 
-public static void main(String[] args)
+    public static void main(String[] args) {
 
-{
+        DrawingPlatformFactory drawingPlatform = new DrawingPlatformFactory();
 
-    DrawingPlatformFactory drawingPlatform = new DrawingPlatformFactory();
+        IMonkey theMonkey = drawingPlatform.getMonkey(DrawingType.TwoD);
 
-    IMonkey theMonkey = drawingPlatform.getMonkey(DrawingType.TwoD);
+        ITree theTree = drawingPlatform.getTree(DrawingType.TwoD);
 
-    ITree theTree = drawingPlatform.getTree(DrawingType.TwoD);
+        // Draw 2D Scene
+        drawScene(theMonkey, theTree);
 
-    //Draw 2D Scene
-    drawScene(theMonkey, theTree);
+        theMonkey = drawingPlatform.getMonkey(DrawingType.ThreeD);
 
-    theMonkey = drawingPlatform.getMonkey(DrawingType.ThreeD);
+        theTree = drawingPlatform.getTree(DrawingType.ThreeD);
 
-    theTree = drawingPlatform.getTree(DrawingType.ThreeD);
+        // Draw 3D Scene
+        drawScene(theMonkey, theTree);
+    }
 
-    //Draw 3D Scene
-    drawScene(theMonkey, theTree);
+    private static void drawScene(IMonkey theMonkey, ITree theTree) {
 
-}
+        theMonkey.jump();
 
-private static void drawScene(IMonkey theMonkey, ITree theTree)
-
-{
-
-    theMonkey.jump();
-
-    theTree.sway();
-
-}
-
+        theTree.sway();
+    }
 }
 ```
 
-输出:
+输出：
 
 这是 2d 猴子在跳
 
@@ -390,258 +378,252 @@ private static void drawScene(IMonkey theMonkey, ITree theTree)
 
 这是 3d 树在摇晃
 
-**优势**
+## 优势
 
 **封装性：** 抽象工厂模式将具体类完全与客户端隔离开。这允许自由地交换产品族。
 
 **扩展性：** 抽象工厂模式是“工厂的工厂”，可以轻松地扩展以适应更多产品，例如，我们可以添加另一个子类 `FourDDrawingFactory`、`FourDMonkey` 和 `FourDTree`。客户端代码需要极少的更改。
 
-## **第三章**
+## 第三章：构建器（Builder）
 
-### **构建器 (Builder)**
+### 背景
 
-**背景**
+构建器设计模式用于将对象的构建与其表示分离。相同的构建机制可以用于构建多个不同的表示。构建器工厂侧重于逐步构建对象。
 
-构建器设计模式用于将对象的构建与其表示分离。相同的构建机制可以用于构建多个不同的表示。构建器工厂侧重于逐步构建对象。考虑一个披萨店的例子。客户可以订购各种类型的披萨，如意大利腊肠披萨、至尊鸡肉披萨或素食披萨。创建每个披萨的步骤都是相同的。最终结果取决于步骤内部执行的操作。
+考虑一个披萨店的例子。客户可以订购各种类型的披萨，如意大利腊肠披萨、至尊鸡肉披萨或素食披萨。创建每个披萨的步骤都是相同的。最终结果取决于步骤内部执行的操作。
 
-*   订购披萨（电话/网站/去商店）
-*   获取披萨饼底
-*   添加番茄酱
-*   添加奶酪
-*   添加配料（意大利腊肠/蔬菜/鸡肉）
-*   烘烤披萨
-*   将披萨交给客户（外带或外送）
+- 订购披萨（电话/网站/去商店）
+- 获取披萨饼底
+- 添加番茄酱
+- 添加奶酪
+- 添加配料（意大利腊肠/蔬菜/鸡肉）
+- 烘烤披萨
+- 将披萨交给客户（外带或外送）
 
-**实现**
+### 实现
 
-这里的用例是根据客户的规格构建披萨。`PizzaBuilder` 是一个抽象类，规定了构建披萨的步骤并协调披萨的制作步骤。`VeggiePizzaBuilder`、`PizzaPepperoniBizzaBuilder` 和 `ChickenPizzaBuildera` 自 `PizzaBuilder`。它们唯一覆盖的方法是 `addToppings()`。`VeggiePizzaBuilder` 添加西柿、青椒和洋葱等配料。`PeopporoniPizzaBuilder` 添加意大利腊肠片。`ChickenPizzaBuilder` 添加烤鸡肉配料。三种披萨的其他方法保持相同。`Director` 类根据客户提供的 `PizzaType` 规格决定应该调用哪个 `PizzaBuilder` 类。`Client` 类代表下订单的客户。这种关系在下图所示。注意，方法前的 `+` 前缀表示公共方法，而 `#` 前缀表示受保护的方法。
+这里的用例是根据客户的规格构建披萨。`PizzaBuilder` 是一个抽象类，规定了构建披萨的步骤并协调披萨的制作步骤。`VeggiePizzaBuilder`、`PizzaPepperoniBizzaBuilder` 和 `ChickenPizzaBuildera` 自 `PizzaBuilder`。它们唯一覆盖的方法是 `addToppings()`。
+
+`VeggiePizzaBuilder` 添加西柿、青椒和洋葱等配料。`PeopporoniPizzaBuilder` 添加意大利腊肠片。`ChickenPizzaBuilder` 添加烤鸡肉配料。三种披萨的其他方法保持相同。
+
+`Director` 类根据客户提供的 `PizzaType` 规格决定应该调用哪个 `PizzaBuilder` 类。`Client` 类代表下订单的客户。这种关系在下图所示。注意，方法前的 `+` 前缀表示公共方法，而 `#` 前缀表示受保护的方法。
 
 ![Image](img/image00048.jpeg)
 
 以下是实现上述类的 Java 代码。
 
-File: `PizzaType.java`
+文件：`PizzaType.java`
 
 ```java
 public enum PizzaType {
 
-Veggie,
+    Veggie,
 
-Pepperoni,
+    Pepperoni,
 
-Chicken
- }
+    Chicken
+}
 ```
 
-File: `PizzaBuilder.java`
+文件：`PizzaBuilder.java`
 
 ```java
 public abstract class PizzaBuilder {
 
-protected String telNum = "";
+    protected String telNum = "";
 
-public void orderPizza(String telNum) {
+    public void orderPizza(String telNum) {
 
-    this.telNum = telNum;
+        this.telNum = telNum;
 
-    System.out.println("Creating pizza for " + telNum);
+        System.out.println("Creating pizza for " + telNum);
 
-    buildPizza();
+        buildPizza();
+    }
 
-}
+    protected void getPizzaBase() {
 
-protected void getPizzaBase() {
+        System.out.println("Getting pizza base");
+    }
 
-    System.out.println("Getting pizza base");
+    protected void addTomatoSauce() {
 
-}
+        System.out.println("Adding tomato sauce");
+    }
 
-protected void addTomatoSauce() {
+    protected void addCheese() {
 
-    System.out.println("Adding tomato sauce");
+        System.out.println("Adding cheese");
+    }
 
-}
+    protected void bakePizza() {
 
-protected void addCheese() {
+        System.out.println("baking pizza. Smells great");
+    }
 
-    System.out.println("Adding cheese");
+    protected void sendPizza() {
 
-}
+        System.out.println("sending pizza to customer " + this.telNum);
+    }
 
-protected void bakePizza() {
+    protected void buildPizza() {
 
-    System.out.println("baking pizza. Smells great");
+        getPizzaBase();
 
-}
+        addTomatoSauce();
 
-protected void sendPizza() {
+        addCheese();
 
-    System.out.println("sending pizza to customer " + this.telNum);
+        addToppings();
 
-}
+        bakePizza();
 
-protected void buildPizza() {
+        sendPizza();
+    }
 
-    getPizzaBase();
-
-    addTomatoSauce();
-
-    addCheese();
-
-    addToppings();
-
-    bakePizza();
-
-    sendPizza();
-
-}
-
-protected abstract void addToppings();
-
+    protected abstract void addToppings();
 }
 ```
 
-File: `VeggiePizzaBuilder.java`
+文件：`VeggiePizzaBuilder.java`
 
 ```java
 public class VeggiePizzaBuilder extends PizzaBuilder {
 
-@Override protected void addToppings() {
+    @Override
+    protected void addToppings() {
 
-    System.out.println("Adding onions, tomators and spinach") ;
-
-}
-
+        System.out.println("Adding onions, tomators and spinach");
+    }
 }
 ```
 
-File: `PepporoniPizzaBuilder.java`
+文件：`PepporoniPizzaBuilder.java`
 
 ```java
 public class PepporoniPizzaBuilder extends PizzaBuilder {
 
-@Override protected void addToppings() {
+    @Override
+    protected void addToppings() {
 
-    System.out.println("Adding Pepporoni") ;
-
-}
-
+        System.out.println("Adding Pepporoni");
+    }
 }
 ```
 
-File: `ChickenPizzaBuilder.java`
+文件：`ChickenPizzaBuilder.java`
 
 ```java
 public class ChickenPizzaBuilder extends PizzaBuilder {
 
-@Override protected void addToppings() {
+    @Override
+    protected void addToppings() {
 
-    System.out.println("Adding grilled checkin")
-
-}
-
+        System.out.println("Adding grilled checkin");
+    }
 }
 ```
 
-File: `Director.java`
+文件：`Director.java`
 
 ```java
 public class Director {
 
-public static PizzaBuilder CreatePizza(PizzaType pizzaType, String telNum)
+    public static PizzaBuilder CreatePizza(PizzaType pizzaType, String telNum) {
 
-{
+        PizzaBuilder pizzaBuilder = null;
 
-PizzaBuilder pizzaBuilder = null;
+        switch (pizzaType) {
 
-switch(pizzaType)
+            case Veggie:
 
-{
+                pizzaBuilder = new VeggiePizzaBuilder();
 
-case Veggie:
+                break;
 
-pizzaBuilder = new VeggiePizzaBuilder();
+            case Pepperoni:
 
-break;
+                pizzaBuilder = new PepporoniPizzaBuilder();
 
-case Pepperoni:
+                break;
 
-pizzaBuilder = new PepporoniPizzaBuilder();
+            case Chicken:
 
-break;
+                pizzaBuilder = new ChickenPizzaBuilder();
 
-case Chicken:
+                break;
+        }
 
-pizzaBuilder = new ChickenPizzaBuilder();
+        pizzaBuilder.orderPizza(telNum);
 
-break;
-}
-
-pizzaBuilder.orderPizza(telNum);
-
-return pizzaBuilder;
-
-}
-
+        return pizzaBuilder;
+    }
 }
 ```
 
-File: `Client.java`
+文件：`Client.java`
 
 ```java
 public class Client {
 
-public static void main(String[] args)
+    public static void main(String[] args) {
 
-{
+        System.out.println("******* Ordering Pepperoni Pizza *************");
 
-    System.out.println("******* Ordering Pepperoni Pizza *************");
+        Director.CreatePizza(PizzaType.Pepperoni, "408-231-1234");
 
-    Director.CreatePizza(PizzaType.Pepperoni, "408-231-1234");
+        System.out.println("******* Ordering Veggie Pizza *************");
 
-    System.out.println("******* Ordering Veggie Pizza *************");
-
-    Director.CreatePizza(PizzaType.Veggie, "408-231-1244");
-
-}
-
+        Director.CreatePizza(PizzaType.Veggie, "408-231-1244");
+    }
 }
 ```
 
-输出:
+输出：
 
 ******* 订购意大利腊肠披萨 *************
 
 正在为 408-231-1234 创建披萨
+
 获取披萨饼底
+
 添加番茄酱
+
 添加奶酪
+
 添加意大利腊肠
+
 烘烤披萨。闻气很香
+
 正在向客户 408-231-1234 送披萨
 
 ******* 订购素食披萨 *************
 
 正在为 408-231-1244 创建披萨
+
 获取披萨饼底
+
 添加番茄酱
+
 添加奶酪
+
 添加洋葱、西柿和菠菜
+
 烘烤披萨。闻气很香
+
 正在向客户 408-231-1244 送披萨
 
-**第四章**
+## 第四章：原型（Prototype）
 
-### **原型 (Prototype)**
+### 背景
 
-**背景**
+原型设计模式用于类的实例化非常耗时或复杂的情况。在这种情况下，与其每次从头创建新实例，不如创建一个实例并进行复制，根据需要进行更新。
 
-原型设计模式用于类的实例化非常耗时或复杂的情况。在这种情况下，与其每次从头创建新实例，不如创建一个实例并进行复制，根据需要进行更新。例如，如果需要多次查询以获取员工的更多信息，更好的方法是只在内存中获取一次员工信息的结果集，为每个查询创建其副本，然后进行处理。这将防止多次访问数据库，从而减少网络开销。数据库连接往往是 SaaS 应用中有限且昂贵的资源之一。原型模式通过减少对象构建时间和数据库往返来帮助减少开销。
+例如，如果需要多次查询以获取员工的更多信息，更好的方法是只在内存中获取一次员工信息的结果集，为每个查询创建其副本，然后进行处理。这将防止多次访问数据库，从而减少网络开销。数据库连接往往是 SaaS 应用中有限且昂贵的资源之一。原型模式通过减少对象构建时间和数据库往返来帮助减少开销。
 
+原型模式在创建类设计模式中是独一无二，因为它不需要类，只需要一个对象。这里的核心思想是对象可以产生与自身相似的其他对象。
 
-
-
-原型模式在创建类设计模式中是独一无二，因为它不需要类，只需要一个对象。这里的核心思想是对象可以产生与自身相似的其他对象。如果你在计算机游戏中有一棵树，你只需克隆这棵树就可以创建很多棵树。所有现代语言（如 `Java`、`C#`）在 `System.Object` 级别提供了内置的 `clone` 函数，自定义类可以通过重写该函数来实现原型功能。
+如果你在计算机游戏中有一棵树，你只需克隆这棵树就可以创建很多棵树。所有现代语言（如 `Java`、`C#`）在 `System.Object` 级别提供了内置的 `clone` 函数，自定义类可以通过重写该函数来实现原型功能。
 
 ### 实现
 
@@ -649,7 +631,9 @@ public static void main(String[] args)
 
 `DBContext` 是一个辅助类，从数据库中获取默认宽度和高度。当 `home` 需要第一扇门时，我们可以从零创建一个基础门并将其准备好。第一扇门是通过构造函数创建的，它会调用 `DbContext.getDefaultDoorHeight()` 和 `DbContext.getDefaultDoorWidth()` 来获取门的默认宽度和高度。这是一个耗时的调用，并且需要与数据库交互往返。
 
-当 `home` 需要另一扇门时，我们不需要从零开始，而是从第一扇门复制数据并根据需要修改其属性。`IClonable` 接口表示复制对象的能力，它仅包含 `clone()` 函数。任何需要实现复制功能的类都可以重写 `clone()` 函数并提供自己的 `clone()` 实现。`Door` 和 `Window` 类实现了 `IClonable` 接口，从而提供了克隆能力。客户端可以调用 `door` 和 `window` 对象上的 `clone` 函数，为 `home` 创建所需的任意数量的门和窗户。当门或窗户被克隆时，我们只需创建现有对象的副本，然后根据需要进行更新。这种克隆能力避免了昂贵的数据库往返操作。
+当 `home` 需要另一扇门时，我们不需要从零开始，而是从第一扇门复制数据并根据需要修改其属性。`IClonable` 接口表示复制对象的能力，它仅包含 `clone()` 函数。任何需要实现复制功能的类都可以重写 `clone()` 函数并提供自己的 `clone()` 实现。
+
+`Door` 和 `Window` 类实现了 `IClonable` 接口，从而提供了克隆能力。客户端可以调用 `door` 和 `window` 对象上的 `clone` 函数，为 `home` 创建所需的任意数量的门和窗户。当门或窗户被克隆时，我们只需创建现有对象的副本，然后根据需要进行更新。这种克隆能力避免了昂贵的数据库往返操作。
 
 下图所示。
 
@@ -661,28 +645,45 @@ public static void main(String[] args)
 
 ```java
 public class DBContext {
+
     public static double getDefaultDoorHeight() {
-        //模拟数据库连接值* System.out.println("Connecting to database...");
+        // 模拟数据库连接值
+        System.out.println("Connecting to database...");
+
         System.out.println("Fetching default door height...");
-        //模拟从数据库获取的值* return 20.0;
+
+        // 模拟从数据库获取的值
+        return 20.0;
     }
 
     public static double getDefaultDoorWidtht() {
-        //模拟数据库连接值* System.out.println("Connecting to database...");
+        // 模拟数据库连接值
+        System.out.println("Connecting to database...");
+
         System.out.println("Fetching default door width...");
-        //模拟从数据库获取的值* return 10.0;
+
+        // 模拟从数据库获取的值
+        return 10.0;
     }
 
     public static double getDefaultWindowHeight() {
-        //模拟数据库连接值* System.out.println("Connecting to database...");
+        // 模拟数据库连接值
+        System.out.println("Connecting to database...");
+
         System.out.println("Fetching default window height...");
-        //模拟从数据库获取的值* return 5.0;
+
+        // 模拟从数据库获取的值
+        return 5.0;
     }
 
     public static double getDefaultWindowWidth() {
-        //模拟数据库连接值* System.out.println("Connecting to database...");
+        // 模拟数据库连接值
+        System.out.println("Connecting to database...");
+
         System.out.println("Fetching default window width...");
-        //模拟从数据库获取的值* return 6.0;
+
+        // 模拟从数据库获取的值
+        return 6.0;
     }
 }
 ```
@@ -699,6 +700,7 @@ public interface IClonable {
 
 ```java
 public class Door implements IClonable {
+
     public double hingSize = 4.0;
     public double width = 0.0;
     public double height = 0.0;
@@ -711,14 +713,17 @@ public class Door implements IClonable {
     @Override
     public Object clone() {
         Door theDoor = new Door();
+
         theDoor.hingSize = this.hingSize;
         theDoor.width = this.width;
         theDoor.height = this.height;
+
         return theDoor;
     }
 
     public void fixHinge() {
         System.out.println("Fixing hinge to the door");
+
         this.hingSize = 20.0;
     }
 }
@@ -728,6 +733,7 @@ public class Door implements IClonable {
 
 ```java
 public class Window implements IClonable {
+
     public double glassSize = 10.0;
     public double width = 0.0;
     public double height = 0.0;
@@ -740,14 +746,17 @@ public class Window implements IClonable {
     @Override
     public Object clone() {
         Window theWindow = new Window();
+
         theWindow.glassSize = this.glassSize;
         theWindow.width = this.width;
         theWindow.height = this.height;
+
         return theWindow;
     }
 
     public void fixGlass() {
         this.glassSize = 5.0;
+
         System.out.println("Fixing glass to the window");
     }
 }
@@ -755,16 +764,22 @@ public class Window implements IClonable {
 
 文件：`Client.java`
 
+
+
 ```java
 public class Client {
     public static void main(String[] args) {
         //构建一栋有 2 扇门和 4 扇窗户的房屋
-        //从零创建第一扇门* Door door1 = new Door();
-        //通过克隆第一扇门构建第二扇门* Door door2 = (Door)door1.clone();
+        //从零创建第一扇门
+        Door door1 = new Door();
+        //通过克隆第一扇门构建第二扇门
+        Door door2 = (Door)door1.clone();
         door1.fixHinge();
         door2.fixHinge();
-        //从零创建第一扇窗户* Window window1 = new Window();
-        //通过克隆第一扇窗户构建另外 3 扇窗户* Window window2 = (Window)window1.clone();
+        //从零创建第一扇窗户
+        Window window1 = new Window();
+        //通过克隆第一扇窗户构建另外 3 扇窗户
+        Window window2 = (Window)window1.clone();
         Window window3 = (Window)window1.clone();
         Window window4 = (Window)window1.clone();
         window2.fixGlass();
@@ -776,7 +791,7 @@ public class Client {
 
 输出：
 
-```
+```text
 Connecting to database...
 Fetching default door height...
 Connecting to database...
@@ -808,9 +823,6 @@ Fixing glass to the window
 Fixing glass to the window
 Fixing glass to the window
 ```
-
-
-
 
 由于各处都需要以只读方式读取配置信息，我们只需要一个配置读取器实例。`ConfigReader` 是一个单例类。它的构造函数是私有的，因此客户端无法直接实例化它。它拥有 `getInstance()` 方法，`Client` 可以使用该方法来访问唯一的实例。`loadConfig()` 信息用于在初始化部分从文本文件中读取信息，并将其存储在内部哈希表中。一旦客户端拥有了 `ConfigReader` 实例，就可以通过传入目标键值并调用 `getValue()` 方法来获取配置键的值。`getValue()` 函数通过查找哈希表获取指定键的值并将其返回。类图如图所示。
 
@@ -887,13 +899,15 @@ public class Client {
 ```
 
 文件：`config.txt`
+
 ```text
 DbConectionString#provider=oracle11;trusted_connection=yes
 username#admin
 ```
 
 输出：
-```
+
+```text
 loading config from file
 getting config for key DbConectionString
 provider=oracle11;trusted_connection=yes
@@ -911,8 +925,8 @@ provider=oracle11;trusted_connection=yes
 
 非常感谢阅读整本关于创建型设计模式的书。以下是所有创建型设计模式的简要总结。
 
-*   **工厂模式**用于根据提供给工厂的数据，从许多相似的类中选择并获取某个类的实例。
-*   **抽象工厂模式**用于获取若干相关类中的某一组。在某些情况下，它返回适用于该组类的工厂。
-*   **构建器模式**根据提供的数据构建多个对象以组合成一个新对象。
-*   **原型模式**在创建新实例的开销较大时，通过克隆现有类而不是创建新实例。
-*   **单例模式**是一种确保对象只有一个实例的模式，并允许全局访问该实例的模式。
+- **工厂模式**用于根据提供给工厂的数据，从许多相似的类中选择并获取某个类的实例。
+- **抽象工厂模式**用于获取若干相关类中的某一组。在某些情况下，它返回适用于该组类的工厂。
+- **构建器模式**根据提供的数据构建多个对象以组合成一个新对象。
+- **原型模式**在创建新实例的开销较大时，通过克隆现有类而不是创建新实例。
+- **单例模式**是一种确保对象只有一个实例的模式，并允许全局访问该实例的模式。

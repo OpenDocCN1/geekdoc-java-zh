@@ -1,3 +1,4 @@
+
 # 定义和使用 Applet 参数
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/applet/param.html`](https://docs.oracle.com/javase/tutorial/deployment/applet/param.html)
@@ -27,7 +28,6 @@
      </applet-desc>
      <!-- ... -->
 </jnlp>
-
 ```
 
 `paramOutsideJNLPFile` 参数在传递给部署工具包脚本的 `runApplet` 函数的 `parameters` 变量中指定在 `AppletPage.html`。
@@ -55,7 +55,6 @@
 
   </body>
 </html>
-
 ```
 
 查看 部署 Applet 获取有关 `runApplet` 函数的更多信息。
@@ -65,7 +64,6 @@
 你可以使用 `Applet` 类的 [`getParameter`](https://docs.oracle.com/javase/8/docs/api/java/applet/Applet.html#getParameter-java.lang.String-) 方法来检索 applet 的输入参数。`AppletTakesParams.java` applet 检索并显示其所有输入参数（`paramStr`，`paramInt` 和 `paramOutsideJNLPFile`）。
 
 ```java
-
 import javax.swing.JApplet;
 import javax.swing.SwingUtilities;
 import javax.swing.JLabel;
@@ -94,23 +92,23 @@ public class AppletTakesParams extends JApplet {
         add(lbl);
     }
 }
-
 ```
 
 下面显示了 `AppletTakesParams` applet。
 
-//&lt;![CDATA[ var attributes = { code:'AppletTakesParams.class', archive:'examples/dist/applet_AppletWithParameters/applet_AppletWithParameters.jar', width:800, height:50} ; var parameters = { jnlp_href: 'examples/dist/applet_AppletWithParameters/applettakesparams.jnlp', paramOutsideJNLPFile: 'fooOutsideJNLP' }; deployJava.runApplet(attributes, parameters, '1.6'); //]]&gt;
-
-* * *
+```
+//<![CDATA[
+var attributes = { code:'AppletTakesParams.class',
+    archive:'examples/dist/applet_AppletWithParameters/applet_AppletWithParameters.jar',
+    width:800, height:50} ;
+var parameters = { jnlp_href: 'examples/dist/applet_AppletWithParameters/applettakesparams.jnlp',
+    paramOutsideJNLPFile: 'fooOutsideJNLP' };
+deployJava.runApplet(attributes, parameters, '1.6');
+//]]>
+```
 
 **注意：** 如果你看不到 applet 运行，你需要安装至少 [Java SE Development Kit (JDK) 6 update 10](http://www.oracle.com/technetwork/java/javase/downloads/index.html) 版本。
 
-* * *
-
-* * *
-
 **注意：** 如果你看不到示例运行，可能需要在浏览器中启用 JavaScript 解释器，以便部署工具包脚本能够正常运行。
-
-* * *
 
 下载源代码 以进一步进行实验。

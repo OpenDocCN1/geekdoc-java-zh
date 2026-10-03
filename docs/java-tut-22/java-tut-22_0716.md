@@ -1,3 +1,4 @@
+
 # 建立连接
 
 > 原文：[`docs.oracle.com/javase/tutorial/jdbc/basics/connecting.html`](https://docs.oracle.com/javase/tutorial/jdbc/basics/connecting.html)
@@ -44,7 +45,6 @@ public Connection getConnection() throws SQLException {
     System.out.println("Connected to database");
     return conn;
 }
-
 ```
 
 方法`DriverManager.getConnection`建立数据库连接。此方法需要数据库 URL，具体取决于您的 DBMS。以下是一些数据库 URL 的示例：
@@ -77,7 +77,6 @@ public Connection getConnection() throws SQLException {
 
 ```java
 jdbc:derby:[*subsubprotocol*:][*databaseName*][;*attribute*=*value*]*
-
 ```
 
 +   `*subsubprotocol*` 指定 Java DB 应在何处搜索数据库，可以是目录、内存、类路径或 JAR 文件。通常会省略。
@@ -105,7 +104,6 @@ jdbc:mysql://[*host*][,*failoverhost*...]
     [:*port*]/[*database*]
     [?*propertyName1*][=*propertyValue1*]
     [&*propertyName2*][=*propertyValue2*]...
-
 ```
 
 +   `*host*:*port*` 是托管数据库的计算机的主机名和端口号。如果未指定，默认值为 `*host*` 和 `*port*` 分别为 127.0.0.1 和 3306。

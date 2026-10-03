@@ -1,26 +1,27 @@
+
 # 让我们去 Java 流
 
 > 原文：<https://medium.com/javarevisited/lets-go-to-the-java-stream-6db12f16eff5?source=collection_archive---------2----------------------->
 
 ![](img/8df715240621bafe33d550a6fcc57139.png)
 
-啊啊——清爽的溪流，冲过森林中的岩石。好吧，不是那种流。 [Java API stream](/javarevisited/7-best-java-collections-and-stream-api-courses-for-beginners-in-2020-3ad18d52c38) 允许将多个操作一个接一个地应用于对象组(集合、数组、I/O 资源)。
+啊啊——清爽的溪流，冲过森林中的岩石。好吧，不是那种流。[Java API stream](/javarevisited/7-best-java-collections-and-stream-api-courses-for-beginners-in-2020-3ad18d52c38) 允许将多个操作一个接一个地应用于对象组（集合、数组、I/O 资源）。
 
 ![](img/dd26572cc355fbdb35938aff6561388d.png)
 
-首先，我们需要获得一个流。需要注意的是，stream 不是一个数据结构，它不会改变初始数据。可以通过多种方式获得流。集合接口有 [stream()](https://javarevisited.blogspot.com/2021/05/java-8-stream-lambda-expression-d.html) 方法为此:
+首先，我们需要获得一个流。需要注意的是，`stream` 不是一个数据结构，它不会改变初始数据。可以通过多种方式获得流。集合接口有 `stream()` 方法为此：
 
-```
-List<String> lettersList = Arrays.*asList*(**"a"**, **"b"**, **"c"**, **"d"**, **"ef"**);
+```java
+List<String> lettersList = Arrays.asList("a", "b", "c", "d", "ef");
 lettersList.stream();
 ```
 
 可以在流上执行的操作被分为中间和终端，并且是流管道的一部分。流管道由一个源、零个或多个中间操作以及一个终端操作组成。
 
-让我们看看流管道的例子，其中[过滤器()](https://www.java67.com/2018/03/java-8-stream-find-first-and-filter-example.html)是中间操作，而[计数](https://www.java67.com/2014/04/java-8-stream-examples-and-tutorial.html)是终端:
+让我们看看流管道的例子，其中 `filter()` 是中间操作，而 `count()` 是终端：
 
-```
-**long** numberOfLetters = lettersList.stream()
+```java
+long numberOfLetters = lettersList.stream()
         .filter(letter -> letter.length() > 0)
         .count();
 ```
@@ -39,6 +40,6 @@ lettersList.stream();
 
 ![](img/fc38148734d6e0f378b1336f509ec577.png)
 
-代码可在此处找到:
+代码可在此处找到：
 
-<https://github.com/forfireonly/MediumArticlesJava> 
+<https://github.com/forfireonly/MediumArticlesJava>

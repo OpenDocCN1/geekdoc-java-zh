@@ -1,3 +1,4 @@
+
 # 处理双向文本
 
 > 译文：[`docs.oracle.com/javase/tutorial/2d/text/textlayoutbidirectionaltext.html`](https://docs.oracle.com/javase/tutorial/2d/text/textlayoutbidirectionaltext.html)
@@ -6,33 +7,21 @@
 
 下列主题包括：
 
-+   文本排序
++ 文本排序
++ 操作双向文本
+  + 显示插入符
+  + 移动插入符
+  + 点击测试
+  + 突出显示选择
++ 在 Java 应用程序中执行文本布局
++ 使用 `TextLayout` 类管理文本布局
+  + 使用 `TextLayout` 类布局文本
+  + 使用 `TextLayout` 类显示双插入符
+  + 使用 `TextLayout` 类移动插入符
+  + 使用 `TextLayout` 类进行点击测试
+  + 使用 `TextLayout` 类突出显示选择
 
-+   操作双向文本
-
-    +   显示插入符
-
-    +   移动插入符
-
-    +   点击测试
-
-    +   突出显示选择
-
-+   在 Java 应用程序中执行文本布局
-
-+   使用 TextLayout 类管理文本布局
-
-    +   使用 TextLayout 类布局文本
-
-    +   使用 TextLayout 类显示双插入符
-
-    +   使用 TextLayout 类移动插入符
-
-    +   使用 TextLayout 类进行点击测试
-
-    +   使用 TextLayout 类突出显示选择
-
-如果您计划使用 Swing 组件，请参阅使用 JTextComponent 类处理双向文本和使用文本组件获取更多信息。
+如果您计划使用 Swing 组件，请参阅使用 `JTextComponent` 类处理双向文本和使用文本组件获取更多信息。
 
 ## 文本排序
 
@@ -58,25 +47,22 @@ Java SE 使用[Unicode 双向算法](http://unicode.org/reports/tr9/)，这是�
 
 为了允许用户编辑双向文本，您必须能够执行以下操作：
 
-+   显示插入符
-
-+   移动插入符
-
-+   点击测试
-
-+   突出显示选择
++ 显示插入符
++ 移动插入符
++ 点击测试
++ 突出显示选择
 
 ### 显示插入符
 
 在可编辑文本中，*插入符*用于图形化表示当前插入点，即文本中新字符将被插入的位置。通常，插入符显示为两个字形之间闪烁的垂直条。新字符被插入并显示在插入符的位置。
 
-计算插入符位置可能会很复杂，特别是对于双向文本。在方向边界上的插入偏移量有两个可能的插入符位置，因为对应于字符偏移量的两个字形不会相邻显示。如下图所示。在此图中，插入符显示为方括号，表示插入符对应的字形。 
+计算插入符位置可能会很复杂，特别是对于双向文本。在方向边界上的插入偏移量有两个可能的插入符位置，因为对应于字符偏移量的两个字形不会相邻显示。如下图所示。在此图中，插入符显示为方括号，表示插入符对应的字形。
 
 ![双插入符](img/9151e5f35105d66dbdf6214007279f42.png)
 
-字符偏移量 8 对应于下划线后和*A*之前的位置。如果用户输入阿拉伯字符，其字形将显示在*A*的右侧；如果用户输入英文字符，其字形将显示在下划线的右侧。
+字符偏移量 8 对应于下划线后和 *A* 之前的位置。如果用户输入阿拉伯字符，其字形将显示在 *A* 的右侧；如果用户输入英文字符，其字形将显示在下划线的右侧。
 
-为了处理这种情况，一些系统显示双插入符，一个强（主要）插入符和一个弱（次要）插入符。强插入符指示插入的字符的方向与文本基础方向相同时将显示在何处。弱插入符显示插入的字符的方向与基础方向相反时将显示在何处[`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html)自动支持双插入符。
+为了处理这种情况，一些系统显示双插入符，一个强（主要）插入符和一个弱（次要）插入符。强插入符指示插入的字符的方向与文本基础方向相同时将显示在何处。弱插入符显示插入的字符的方向与基础方向相反时将显示在何处。[`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html)自动支持双插入符。
 
 当处理双向文本时，不能简单地将字符偏移量之前的字形宽度相加以计算插入符位置。如果这样做，插入符将被绘制在错误的位置，如下图所示：
 
@@ -118,17 +104,17 @@ Java SE 使用[Unicode 双向算法](http://unicode.org/reports/tr9/)，这是�
 
 这导致双向文本中突出选择的两种策略：
 
-+   *逻辑高亮*：使用逻辑高亮，所选字符在文本模型中始终是连续的，而高亮区域允许是不连续的。以下是逻辑高亮的示例：
++ *逻辑高亮*：使用逻辑高亮，所选字符在文本模型中始终是连续的，而高亮区域允许是不连续的。以下是逻辑高亮的示例：
 
-    ![逻辑高亮示例（连续字符）](img/9e592b6d7e76ccbdac05b9d2207e30ee.png)
+  ![逻辑高亮示例（连续字符）](img/9e592b6d7e76ccbdac05b9d2207e30ee.png)
 
-+   *可视高亮*：使用可视高亮，可能会有多个选定字符范围，但高亮区域始终是连续的。以下是可视高亮的示例：
++ *可视高亮*：使用可视高亮，可能会有多个选定字符范围，但高亮区域始终是连续的。以下是可视高亮的示例：
 
-    ![可视高亮示例（连续高亮区域）](img/b9968b8b5e84c6c695459a8778694571.png)
+  ![可视高亮示例（连续高亮区域）](img/b9968b8b5e84c6c695459a8778694571.png)
 
 逻辑高亮更容易实现，因为所选字符在文本中始终是连续的。
 
-示例`SelectionSample.java`演示了逻辑高亮：
+示例 `SelectionSample.java` 演示了逻辑高亮：
 
 ![选择示例；逻辑高亮演示](img/e88eed1bd0b81ce5fe1b2dd7439e2210.png)
 
@@ -136,13 +122,13 @@ Java SE 使用[Unicode 双向算法](http://unicode.org/reports/tr9/)，这是�
 
 根据您使用的 Java API，您可以根据需要对文本布局进行精细或粗略的控制：
 
-+   如果您只想显示一块文本或需要一个可编辑的文本控件，您可以使用[`JTextComponent`](https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html)，它将为您执行文本布局。[`JTextComponent`](https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html)旨在处理大多数国际应用程序的需求，并支持双向文本。有关[`JTextComponent`](https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html)的更多信息，请参见使用 JTextComponent 类处理双向文本和使用文本组件。
++ 如果您只想显示一块文本或需要一个可编辑的文本控件，您可以使用[`JTextComponent`](https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html)，它将为您执行文本布局。[`JTextComponent`](https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html)旨在处理大多数国际应用程序的需求，并支持双向文本。有关[`JTextComponent`](https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html)的更多信息，请参见使用 `JTextComponent` 类处理双向文本和使用文本组件。
 
-+   如果您想显示一个简单的文本字符串，您可以调用方法[`Graphics2D.drawString`](https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html#drawString-java.text.AttributedCharacterIterator-int-int-)，让 Java 2D 为您布局字符串。您还可以使用[`Graphics2D.drawString`](https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html#drawString-java.text.AttributedCharacterIterator-int-int-)来呈现带样式的字符串和包含双向文本的字符串。有关通过[`Graphics2D`](https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html)呈现文本的更多信息，请参见使用文本 API。
++ 如果您想显示一个简单的文本字符串，您可以调用方法[`Graphics2D.drawString`](https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html#drawString-java.text.AttributedCharacterIterator-int-int-)，让 Java 2D 为您布局字符串。您还可以使用[`Graphics2D.drawString`](https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html#drawString-java.text.AttributedCharacterIterator-int-int-)来呈现带样式的字符串和包含双向文本的字符串。有关通过[`Graphics2D`](https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html)呈现文本的更多信息，请参见使用文本 API。
 
-+   如果您想实现自己的文本编辑例程，可以使用 [`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html) 来管理文本布局、高亮显示和点击检测。[`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html) 提供的功能处理了大多数常见情况，包括具有混合字体、混合语言和双向文本的文本字符串。有关使用 TextLayout 的更多信息，请参见管理文本布局。
++ 如果您想实现自己的文本编辑例程，可以使用 [`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html) 来管理文本布局、高亮显示和点击检测。[`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html) 提供的功能处理了大多数常见情况，包括具有混合字体、混合语言和双向文本的文本字符串。有关使用 `TextLayout` 的更多信息，请参见管理文本布局。
 
-+   如果您想完全控制文本的形状和位置，可以使用 [`Font`](https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html) 类构建自己的 [`GlyphVector`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/GlyphVector.html) 实例，然后通过 [`Graphics2D`](https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html) 类进行渲染。
++ 如果您想完全控制文本的形状和位置，可以使用 [`Font`](https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html) 类构建自己的 [`GlyphVector`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/GlyphVector.html) 实例，然后通过 [`Graphics2D`](https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html) 类进行渲染。
 
 通常，您不需要自己执行文本布局操作。对于大多数应用程序，[`JTextComponent`](https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html) 是显示静态和可编辑文本的最佳解决方案。但是，[`JTextComponent`](https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html) 不支持双插入符或双向文本中的不连续选择的显示。如果您的应用程序需要这些功能，或者您更喜欢实现自己的文本编辑例程，可以使用 Java 2D 文本布局 API。
 
@@ -156,27 +142,25 @@ Java SE 使用[Unicode 双向算法](http://unicode.org/reports/tr9/)，这是�
 
 [`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html) 类为您管理字形的定位和排序。您可以使用[`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html) 来执行以下操作：
 
-+   使用 TextLayout 类进行文本布局
-
-+   使用 TextLayout 类显示双光标
-
-+   使用 TextLayout 类移动光标
-
-+   使用 TextLayout 类进行点击测试
-
-+   使用 TextLayout 类突出显示选择内容
++ 使用 `TextLayout` 类进行文本布局
++ 使用 `TextLayout` 类显示双光标
++ 使用 `TextLayout` 类移动光标
++ 使用 `TextLayout` 类进行点击测试
++ 使用 `TextLayout` 类突出显示选择内容
 
 ### 使用 TextLayout 类进行文本布局
 
 [`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html) 自动布局文本，包括双向文本，具有正确的形状和顺序。为了正确形状和排序表示一行文本的字形，[`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html) 必须了解文本的完整上下文：
 
-+   如果文本适合单行，例如按钮的单词标签或对话框中的一行文本，您可以直接从文本构造一个[`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html)。
++ 如果文本适合单行，例如按钮的单词标签或对话框中的一行文本，您可以直接从文本构造一个[`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html)。
 
-+   如果您有更多文本无法适合单行或想要在单行文本上分隔制表符段，您不能直接构造一个[`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html)。您必须使用[`LineBreakMeasurer`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/LineBreakMeasurer.html) 提供足够的上下文。有关更多信息，请参见绘制多行文本。
+
+
+如果您有更多文本无法适合单行或想要在单行文本上分隔制表符段，您不能直接构造一个[`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html)。您必须使用[`LineBreakMeasurer`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/LineBreakMeasurer.html) 提供足够的上下文。有关更多信息，请参见绘制多行文本。
 
 文本的基本方向通常由文本上的属性（样式）设置。如果该属性缺失，[`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html) 将遵循 Unicode 双向算法，并从段落中的初始字符推导基本方向。
 
-### 使用 TextLayout 类显示双光标
+## 使用 `TextLayout` 类显示双光标
 
 [`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html) 保留光标信息，如光标[`Shape`](https://docs.oracle.com/javase/8/docs/api/java/awt/Shape.html)、位置和角度。您可以使用此信息轻松地在单向和双向文本中显示光标。在为双向文本绘制光标时，使用[`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html) 可确保光标位置正确。
 
@@ -190,19 +174,19 @@ Java SE 使用[Unicode 双向算法](http://unicode.org/reports/tr9/)，这是�
 
 示例`HitTestSample.java`演示了双插入符。
 
-点击希伯来文本旁边的*o*会记录用户在*o*之后点击的位置，这部分属于英文文本。这将使弱（黑色）插入符位于*o*旁边，而强插入符（红色）位于*H*之前：
+点击希伯来文本旁边的`o`会记录用户在`o`之后点击的位置，这部分属于英文文本。这将使弱（黑色）插入符位于`o`旁边，而强插入符（红色）位于`H`之前：
 
 ![点击希伯来文本旁边的'o'的命中测试示例](img/a77278839b55763ccb169d33e878f78b.png)
 
-点击*o*右侧的空格会记录用户点击了空格，这部分属于希伯来文本。这将使强（红色）插入符位于*o*旁边，而弱插入符（黑色）位于*H*之前：
+点击`o`右侧的空格会记录用户点击了空格，这部分属于希伯来文本。这将使强（红色）插入符位于`o`旁边，而弱插入符（黑色）位于`H`之前：
 
 ![点击'o'右侧的空格的命中测试示例](img/e656d8548d9dc6f3466d5bfeb33310ba.png)
 
-### 使用 TextLayout 类移动插入符
+## 使用 `TextLayout` 类移动插入符
 
 您还可以使用[`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html)类确定用户按下左箭头或右箭头键时的插入偏移量。给定表示当前插入偏移量的`TextHitInfo`对象，[`getNextRightHit`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html#getNextRightHit-java.awt.font.TextHitInfo-)方法返回一个表示正确插入偏移量的[`TextHitInfo`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextHitInfo.html)对象，如果按下右箭头键。[`getNextLeftHit`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html#getNextLeftHit-java.awt.font.TextHitInfo-)方法为左箭头键提供相同的信息。
 
-来自示例``ArrowKeySample.java``的以下摘录演示了确定用户按下左箭头或右箭头键时的插入偏移量的方法：
+来自`ArrowKeySample.java`的以下摘录演示了确定用户按下左箭头或右箭头键时的插入偏移量的方法：
 
 ```java
 public class ArrowKeySample extends JPanel implements KeyListener {
@@ -246,14 +230,13 @@ public class ArrowKeySample extends JPanel implements KeyListener {
     }
   }
 }
-
 ```
 
-### 使用 TextLayout 类进行命中测试
+## 使用 `TextLayout` 类进行命中测试
 
-[`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html)类提供了一个简单的文本命中测试机制。`hitTextChar`方法以鼠标的*x*和*y*坐标作为参数，并返回一个[`TextHitInfo`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextHitInfo.html)对象。[`TextHitInfo`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextHitInfo.html)包含指定位置的插入偏移量和命中位置的侧面。插入偏移量是最接近命中位置的偏移量：如果命中位置超过行尾，将返回行尾的偏移量。
+[`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html)类提供了一个简单的文本命中测试机制。`hitTextChar`方法以鼠标的`x`和`y`坐标作为参数，并返回一个[`TextHitInfo`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextHitInfo.html)对象。[`TextHitInfo`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextHitInfo.html)包含指定位置的插入偏移量和命中位置的侧面。插入偏移量是最接近命中位置的偏移量：如果命中位置超过行尾，将返回行尾的偏移量。
 
-来自``HitTestSample.java``的以下摘录从鼠标点击中检索偏移量：
+来自`HitTestSample.java`的以下摘录从鼠标点击中检索偏移量：
 
 ```java
 private class HitTestMouseListener extends MouseAdapter {
@@ -270,14 +253,13 @@ private class HitTestMouseListener extends MouseAdapter {
       repaint();
     }
   }
-
 ```
 
-### 使用 TextLayout 类进行高亮选择
+## 使用 `TextLayout` 类进行高亮选择
 
 你可以从[`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html)获取代表高亮区域的[`Shape`](https://docs.oracle.com/javase/8/docs/api/java/awt/Shape.html)。在计算高亮区域的尺寸时，[`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html)会自动考虑上下文。[`TextLayout`](https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextLayout.html)支持逻辑和视觉高亮。
 
-来自``SelectionSample.java``的以下摘录演示了显示高亮文本的一种方法：
+来自`SelectionSample.java`的以下摘录演示了显示高亮文本的一种方法：
 
 ```java
 public void paint(Graphics g) {
@@ -336,7 +318,6 @@ public void paint(Graphics g) {
       frame.repaint();
     }
   }
-
 ```
 
 方法`SelectionMouseListener.mousePressed`指定了变量`anchorEnd`，它是鼠标点击的文本位置。方法`SelectionMouseMotionListener.mouseDragged`指定了变量`activeEnd`，它是鼠标拖动到的文本位置。`paint`方法检索一个代表所选文本的[`Shape`](https://docs.oracle.com/javase/8/docs/api/java/awt/Shape.html)对象（即`anchorEnd`和`activeEnd`位置之间的文本）。然后`paint`方法用高亮颜色填充[`Shape`](https://docs.oracle.com/javase/8/docs/api/java/awt/Shape.html)对象。

@@ -1,8 +1,9 @@
+
 # 实战 Groovy: @Delegate 注释
 
 *探索静态类型语言中的 duck 类型的极限*
 
-Scott Davis 将继续有关 Groovy 元编程的讨论，这一次他将深入研究 `@Delegate` 注释，@Delegate 注释模糊了数据类型和行为以及静态和动态类型之间的区别。
+Scott Davis 将继续有关 Groovy 元编程的讨论，这一次他将深入研究 `@Delegate` 注释，`@Delegate` 注释模糊了数据类型和行为以及静态和动态类型之间的区别。
 
 在过去几期 [*实战 Groovy*](http://www.ibm.com/developerworks/cn/java/j-pg/) 文章中，您已经了解了闭包和元编程之类的 Groovy 语言特性如何将动态功能添加到 Java™ 开发中。本文提供了更多这方面的内容。您将看到 `@Delegate` 注释如何演变自 `ExpandoMetaClass` 使用的 `delegate`。您将再一次领略到 Groovy 的动态功能如何使它成为单元测试的理想语言。
 
@@ -245,11 +246,13 @@ public class FixedList extends java.lang.Object
 
 * * *
 
+
+
 ## 使用 `GroovyTestCase` 测试 `@Delegate`
 
-要开始测试 `@Delegate`，编写一个单元测试，验证您可以将比您实际可添加的更多元素添加到 `FixedList`。清单 10 展示了这样一个测试：
+要开始测试`@Delegate`，编写一个单元测试，验证您可以将比您实际可添加的更多元素添加到`FixedList`。清单 10 展示了这样一个测试：
 
-##### 清单 10\. 首先编写一个失败的测试
+### 清单 10\. 首先编写一个失败的测试
 
 ```java
 class FixedListTest extends GroovyTestCase{
@@ -271,9 +274,9 @@ There was 1 failure:
    expected:<3> but was:<4> 
 ```
 
-似乎 `add()` 方法应当在 `FixedList` 中被重写，如清单 11 所示。重新运行这些测试仍然失败，但是这一次是因为抛出了异常。
+似乎`add()`方法应当在`FixedList`中被重写，如清单 11 所示。重新运行这些测试仍然失败，但是这一次是因为抛出了异常。
 
-##### 清单 11\. 重写 `ArrayList` 的 `add()` 方法
+### 清单 11\. 重写`ArrayList`的`add()`方法
 
 ```java
 class FixedList{
@@ -299,9 +302,9 @@ There was 1 error:
    Error adding Shemp: the size of this FixedList is limited to 3. 
 ```
 
-由于使用了 `GroovyTestCase` 的方便的 `shouldFail` 方法，您可以捕捉到这个预期的异常，如清单 12 所示，这一次您终于成功运行了测试：
+由于使用了`GroovyTestCase`的方便的`shouldFail`方法，您可以捕捉到这个预期的异常，如清单 12 所示，这一次您终于成功运行了测试：
 
-##### 清单 12\. `shouldFail()` 方法捕捉到预期的异常
+### 清单 12\. `shouldFail()`方法捕捉到预期的异常
 
 ```java
 class FixedListTest extends GroovyTestCase{
@@ -318,13 +321,13 @@ class FixedListTest extends GroovyTestCase{
 } 
 ```
 
-* * *
+---
 
 ## 测试操作符重载
 
-在 “[美妙的操作符](http://www.ibm.com/developerworks/cn/java/j-pg10255.html)” 中，您了解到 Groovy 支持*操作符重载*。对于 `List`，可以使用 `&lt;&lt;` 添加元素以及传统的 `add()` 方法。编写如清单 13 所示的快速单元测试，确定使用 `&lt;&lt;` 不会意外破坏 `FixedList`：
+在“[美妙的操作符](http://www.ibm.com/developerworks/cn/java/j-pg10255.html)”中，您了解到 Groovy 支持*操作符重载*。对于`List`，可以使用`<<`添加元素以及传统的`add()`方法。编写如清单 13 所示的快速单元测试，确定使用`<<`不会意外破坏`FixedList`：
 
-##### 清单 13\. 测试操作员重载
+### 清单 13\. 测试操作员重载
 
 ```java
 class FixedListTest extends GroovyTestCase{
@@ -341,9 +344,9 @@ class FixedListTest extends GroovyTestCase{
 
 这次测试的成功应该能够让您感到轻松一些。
 
-您还可以测试出错的情况。比如，清单 14 测试了在创建包含一个负数元素的 `FixedList` 时出现的情况：
+您还可以测试出错的情况。比如，清单 14 测试了在创建包含一个负数元素的`FixedList`时出现的情况：
 
-##### 清单 14\. 测试极端情况
+### 清单 14\. 测试极端情况
 
 ```java
 class FixedListTest extends GroovyTestCase{
@@ -356,13 +359,13 @@ class FixedListTest extends GroovyTestCase{
 } 
 ```
 
-* * *
+---
 
 ## 测试将一个元素插入到列表中间的情况
 
-现在，您已经确信这个简单的重写过的 `add()` 方法可以正常工作，下一步是实现重载的 `add()` 方法，可以获取索引以及元素，如清单 15 所示：
+现在，您已经确信这个简单的重写过的`add()`方法可以正常工作，下一步是实现重载的`add()`方法，可以获取索引以及元素，如清单 15 所示：
 
-##### 清单 15\. 使用索引添加元素
+### 清单 15\. 使用索引添加元素
 
 ```java
 class FixedList{
@@ -384,15 +387,15 @@ class FixedList{
 } 
 ```
 
-注意，您可以（也应该）在任何可能的情况下使用 delegate 自带的功能 — 毕竟，这正是您优先选择 delegate 的原因。在这种情况下，您将让 `ArrayList` 执行添加操作，并去掉任何超出 `FixedList` 的大小的元素。（这个 `add()` 方法是否应该像另一个 `add()` 方法那样抛出一个 `UnsupportedOperationException`，您可以自己做出这个设计决策）。
+注意，您可以（也应该）在任何可能的情况下使用 delegate 自带的功能 — 毕竟，这正是您优先选择 delegate 的原因。在这种情况下，您将让`ArrayList`执行添加操作，并去掉任何超出`FixedList`的大小的元素。（这个`add()`方法是否应该像另一个`add()`方法那样抛出一个`UnsupportedOperationException`，您可以自己做出这个设计决策）。
 
-`trimToSize()` 方法包含了一些值得关注的语法糖。首先，`pop()` 方法是由 Groovy 元编程到所有 `List` 中的内容。它删除了 `List` 中的最后一个元素，使用后进先出（last-in first-out，LIFO）的方式。
+`trimToSize()`方法包含了一些值得关注的语法糖。首先，`pop()`方法是由 Groovy 元编程到所有`List`中的内容。它删除了`List`中的最后一个元素，使用后进先出（last-in first-out，LIFO）的方式。
 
-接下来，注意 `each` 循环中使用了一个 Groovy `range`。使用实数替换变量可能有助于使这一行为更加清晰。假设 `FixedList` 的 `sizeLimit` 的值为 `3`，并且在添加了新元素后，它的 `size()` 的值为 `5`。那么这个范围看上去应当类似于 `(3..5).each{}`。但是 `List` 使用的是基于 0 的标记法，因此列表中的元素不会拥有值为 `5` 的索引。通过指定 `(3..&lt;5).each{}`，您将 5 排除到了这个范围之外。
+接下来，注意`each`循环中使用了一个 Groovy `range`。使用实数替换变量可能有助于使这一行为更加清晰。假设`FixedList`的`sizeLimit`的值为`3`，并且在添加了新元素后，它的`size()`的值为`5`。那么这个范围看上去应当类似于`(3..5).each{}`。但是`List`使用的是基于 0 的标记法，因此列表中的元素不会拥有值为`5`的索引。通过指定`(3..<5).each{}`，您将 5 排除到了这个范围之外。
 
-编写两个测试，如清单 16 所示，检验新的重载后的 `add()` 方法是否如期望的那样运行：
+编写两个测试，如清单 16 所示，检验新的重载后的`add()`方法是否如期望的那样运行：
 
-##### 清单 16\. 测试将元素添加到 `FixedList` 中的情况
+### 清单 16\. 测试将元素添加到`FixedList`中的情况
 
 ```java
 class FixedListTest extends GroovyTestCase{
@@ -426,13 +429,13 @@ class FixedListTest extends GroovyTestCase{
 
 您是否注意到编写的测试代码的数量要多于生产代码？很好！我想说的是，对于每一段生产代码，您应当编写至少两倍数量的测试代码。
 
-* * *
+---
 
-## 实现 `addAll()` 方法
+## 实现`addAll()`方法
 
-要实现 `FixedList` 类，重写 `ArrayList` 中的 `addAll()` 方法，如清单 17 所示：
+要实现`FixedList`类，重写`ArrayList`中的`addAll()`方法，如清单 17 所示：
 
-##### 清单 17\. 实现 `addAll()` 方法
+### 清单 17\. 实现`addAll()`方法
 
 ```java
 class FixedList{
@@ -455,7 +458,7 @@ class FixedList{
 
 现在编写相应的单元测试，如清单 18 所示：
 
-##### 清单 18\. 测试 `addAll()` 方法
+### 清单 18\. 测试`addAll()`方法
 
 ```java
 class FixedListTest extends GroovyTestCase{
@@ -480,9 +483,9 @@ class FixedListTest extends GroovyTestCase{
 } 
 ```
 
-您现在完成了全部工作。感谢 `@Delegate` 注释的强大威力，我们只使用大约 50 代码就创建了 `FixedList` 类。感谢 `GroovyTestCase` 使我们能够测试代码，从而允许您将其放入到生产环境中，并且确信它可以按照期望的那样操作。清单 19 展示了完整的 `FixedList` 类：
+您现在完成了全部工作。感谢`@Delegate`注释的强大威力，我们只使用大约 50 代码就创建了`FixedList`类。感谢`GroovyTestCase`使我们能够测试代码，从而允许您将其放入到生产环境中，并且确信它可以按照期望的那样操作。清单 19 展示了完整的`FixedList`类：
 
-##### 清单 19\. 完整的 `FixedList` 类
+### 清单 19\. 完整的`FixedList`类
 
 ```java
 class FixedList{
@@ -537,15 +540,15 @@ class FixedList{
 } 
 ```
 
-* * *
+---
 
 ## 结束语
 
-通过将新的*行为* 添加到类中而不是转换其*类型*，Groovy 的元编程功能实现了一组全新的动态可能性，同时不会违背 Java 语言的静态类型系统的规则。通过使用 `ExpandoMetaClass`（让您能够通过执行映射将任何新方法添加到现有类）和 `@Delegate`（让您能够通过外部包装类公开复合内部类的功能），Groovy 让 JVM 焕发新光彩。
+通过将新的*行为*添加到类中而不是转换其*类型*，Groovy 的元编程功能实现了一组全新的动态可能性，同时不会违背 Java 语言的静态类型系统的规则。通过使用`ExpandoMetaClass`（让您能够通过执行映射将任何新方法添加到现有类）和`@Delegate`（让您能够通过外部包装类公开复合内部类的功能），Groovy 让 JVM 焕发新光彩。
 
-在下一期文章中，我将演示一个得益于 Groovy 的灵活语法 Swing 而重新焕发生机的旧有技术。是的，Swing 的复杂性因为 Groovy 的 `SwingBuilder` 而消失。这使得桌面开发变得更加有趣和简单。到那时，希望您能够发现大量有关 Groovy 的实际应用。
+在下一期文章中，我将演示一个得益于 Groovy 的灵活语法 Swing 而重新焕发生机的旧有技术。是的，Swing 的复杂性因为 Groovy 的`SwingBuilder`而消失。这使得桌面开发变得更加有趣和简单。到那时，希望您能够发现大量有关 Groovy 的实际应用。
 
-* * *
+---
 
 ## 下载
 

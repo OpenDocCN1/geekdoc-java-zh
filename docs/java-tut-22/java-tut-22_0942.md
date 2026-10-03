@@ -1,3 +1,4 @@
+
 # 列出网络接口地址
 
 > 原文：[`docs.oracle.com/javase/tutorial/networking/nifs/listing.html`](https://docs.oracle.com/javase/tutorial/networking/nifs/listing.html)
@@ -30,7 +31,6 @@ public class ListNets {
         out.printf("\n");
      }
 }  
-
 ```
 
 以下是示例程序的输出样本：
@@ -43,5 +43,4 @@ InetAddress: /127.0.0.1
 Display name: Wireless Network Connection
 Name: eth0
 InetAddress: /192.0.2.0
-
 ```

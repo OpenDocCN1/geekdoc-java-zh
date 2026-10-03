@@ -1,19 +1,13 @@
-# Spring, Hibernate、数据建模、REST 与 TDD：敏捷 Java 设计与开发
 
-
+# Spring、Hibernate、数据建模、REST 与 TDD：敏捷 Java 设计与开发
 
 ![](img/cover.jpeg)
-
-
-
-
-
 
 各章节包含了完整源代码的片段，因此我认为为读者提供完整的源代码将很有用。我强烈建议读者亲自动手，并实现此书中描述的所有代码。经验丰富的架构师和开发者可以根据自己的判断跳过。书中涵盖的整个应用程序的 Github 地址为：[`github.com/Spring-Hibernate-Book/spring-hibernate-datamodeling-tdd-rest`](http://github.com/Spring-Hibernate-Book/spring-hibernate-datamodeling-tdd-rest)。下载不需要密码。
 
 `Appendix`（附录）包含了开发应用程序时使用的软件安装信息。在本书出版时，这些版本可能已经升级，因此仅提供了名称。可以下载最新的可用版本，但可能需要进行少量的调整。
 
-祝您好运连，阅读愉快！
+祝您好运连连，阅读愉快！
 
 # 第一部分：数据驱动开发简介
 
@@ -27,28 +21,25 @@
 
 软件架构表示软件系统的层次级构建块。就像现实世界中的架构一样，软件架构定义了软件组件的高级系统结构、创建组件层次结构的规范以及对该结构的文档化。它还形成了一套架构设计决策，这些决策决定了结构及其背后的原理。在产品开发初期，架构师会创建一个软件架构，该架构是根据业务需求转换而来的技术需求的设计和开发的基础。
 
-当我们观察软件开发是如何开始的时，主要看到的关注点在于所需的功能和数据驱动流。然而，现代应用开发扩展了对质量属性的关注，例如扩展性、可靠性、性能、可伸性、维护性、可用性、安全性、后兼容性和易用性。这些质量属性在很大程度上驱动着软件架构，并被称为非功能性需求。随着时间的推移，功能性和非功能需求演出了许多架构模式和风格。软件架构通常基于这些经过验证的架构机制之一构建在坚实的基础之上。糟糕的架构可能会暴露风险，例如系统不稳定、无法执行即时或未来的业务需求，或者在生产环境中难以管理。
+当我们观察软件开发是如何开始的时，主要看到的关注点在于所需的功能和数据驱动流。然而，现代应用开发扩展了对质量属性的关注，例如扩展性、可靠性、性能、可伸缩性、维护性、可用性、安全性、向后兼容性和易用性。这些质量属性在很大程度上驱动着软件架构，并被称为非功能性需求。随着时间的推移，功能性和非功能性需求演出了许多架构模式和风格。软件架构通常基于这些经过验证的架构机制之一构建在坚实的基础之上。糟糕的架构可能会暴露风险，例如系统不稳定、无法执行即时或未来的业务需求，或者在生产环境中难以管理。
 
 当架构师最初研究要开发的新系统需求时，他应该首先检查用例是否可以使用已建立的架构模式进行设计和实现。因为在项目后期更改架构的时间和金钱成本通常非常高，所以初始阶段非常重要。在创建软件架构时必须非常小心，因为它不仅成本高昂，而且难以更改，可能会让您的应用程序面临风险。
 
 软件架构除了基本功能外还应该有很多目标。它应该是灵活的，并能够适应新的业务需求和挑战。例如，一个开发中的系统可能具有一年内注册用户数量翻倍的需求。架构的每个模块或组件都应该具有单一职责或内聚功能的聚合。特定组件不应该感知其他组件或模块的细节。应该避免重复，并且特定功能应在一个且仅在一个相关的模块中实现。
 
-利益相关者之间的通信是良好架构的另一个关键。与软件架构计划一样，有经过验证的模式和最佳实践可以赖以获得最佳成功。减少复杂性的流行方法是引入关注点分离和视图，这些可以通过特定的利益相关者来处理。
+利益相关者之间的通信是良好架构的另一个关键。与软件架构计划一样，有经过验证的模式和最佳实践可以依赖以获得最佳成功。减少复杂性的流行方法是引入关注点分离和视图，这些可以通过特定的利益相关者来处理。
 
-现代产品开发不允许前期的、大规模的设计；它推崇使用敏捷方法将设计拆分为更易管理的部分。它还应该通过建模技术和可视化对系统进行分析来降低风险。例如，系统可以使用企业级建模工具（如 Enterprise Architect 或 Rational Rose）进行草拟。整个团队可以并行工作，使用这些工具描述设计和架构。最后，开发的架构可以通过经过验证的技术进行评估，例如软件架构分析方法 (SAAM)。SAAM 是第一个文档记录在案的软件架构分析方法，开发于 20 世纪 90 年，用于分析非功能性需求和变更灵活性。对这些技术的深入讨论超本书的范围。
+现代产品开发不允许前期的、大规模的设计；它推崇使用敏捷方法将设计拆分为更易管理的部分。它还应该通过建模技术和可视化对系统进行分析来降低风险。例如，系统可以使用企业级建模工具（如 Enterprise Architect 或 Rational Rose）进行草拟。整个团队可以并行工作，使用这些工具描述设计和架构。最后，开发的架构可以通过经过验证的技术进行评估，例如软件架构分析方法 (SAAM)。SAAM 是第一个文档记录在案的软件架构分析方法，开发于 20 世纪 90 年代，用于分析非功能性需求和变更灵活性。对这些技术的深入讨论超出本书的范围。
 
 ### 什么是 REST？
 
-REST（REpresentation State Transfer，表现状态转移）是网络系统的架构风格，例如 Web 应用程序。REST 首次由 Roy Fielding 在 2000 年的博士论文中提出，他是 HTTP 规范的编写者之一。REST 是一种简单的无状态架构，通常运行在 HTTP 之上。一个良好的 REST 原则是：客户端和服务器之间的请求交互在本质上是无状态的。每个请求都能够通信处理该请求所需的所有信息。在服务器端，所有请求通过通用资源标识符 (URI) 识别。URI 对于 Web 应用程序来说应该是唯一的。可以使用标准的 HTTP 方法，如 `POST`、`GET`、`DELETE` 和 `PUT`。REST 架构很好地扩展到大量的客户端请求，因为它在本质上是轻量级的并简化了客户端与服务器之间的交互。我们还将查看一些 REST 概念，如资源、表示、连接器和组件。在 HTTP 上实现 REST 时，可以使用全局标识符访问资源。表示是代表资源当前状态的文档。组件是一段软件指令，其状态可以通过暴露的接口进行修改。连接器调解组件之间的通信。
+REST（REpresentational State Transfer，表现状态转移）是网络系统的架构风格，例如 Web 应用程序。REST 首次由 Roy Fielding 在 2000 年的博士论文中提出，他是 HTTP 规范的编写者之一。REST 是一种简单的无状态架构，通常运行在 HTTP 之上。一个良好的 REST 原则是：客户端和服务器之间的请求交互在本质上是无状态的。每个请求都能够通信处理该请求所需的所有信息。在服务器端，所有请求通过通用资源标识符 (URI) 识别。URI 对于 Web 应用程序来说应该是唯一的。可以使用标准的 HTTP 方法，如 `POST`、`GET`、`DELETE` 和 `PUT`。REST 架构很好地扩展到大量的客户端请求，因为它在本质上是轻量级的并简化了客户端与服务器之间的交互。我们还将查看一些 REST 概念，如资源、表示、连接器和组件。在 HTTP 上实现 REST 时，可以使用全局标识符访问资源。表示是代表资源当前状态的文档。组件是一段软件指令，其状态可以通过暴露的接口进行修改。连接器调解组件之间的通信。
 
 ### RESTful Web 服务的框架
 
 有三个流行的 RESTful Web 服务框架：Jersey、Restlet 和 Spring。Jersey RESTful Web Services 是一个用于 Java 开发 RESTful 服务的开源框架，支持 JAX-RS API（由 Oracle 的 Java EE 7 JAX-RS 规范组成 `JSR 311` & `JSR 339`）。Jersey 是参考实现。Restlet 是一个 Java 平台的轻量级开源 REST 框架。Restlet API 直接从 REST 概念（资源、表示、连接器、组件、媒体类型、语言）派生类名称，表明人们能够以 REST 的方式思考并更容易地将解决方案转化为代码。第三个构建 RESTful Web 服务框架是 Spring 框架，REST 支持无缝地整合到 Spring MVC 中。在书中，我们将重点关注使用 Spring 框架构建 REST 服务。
 
 ### Web 框架
-
-
-
 
 目前有两种主要的 Web 开发方法：服务端 MVC 和客户端 MVC。服务端 MVC 在服务器上渲染所有页面。此类框架的流行示例包括 Java Server Faces (JSF)、Oracle ADF、JBoss Seam 和 `Spring MVC`。客户端 MVC 将 Java Server Pages (JSP) 和 `jQuery` 结合 REST API 结合在一起。可以使用 `jQuery` 的特化（专用）形式，如 `Angular` 和 `Backbone`，并可以使用 `Spring REST` 支持开发 REST API。在本书中，我们将广泛使用客户端 MVC。我们将使用 `JSP` 和 `jQuery` 构建用户界面，并使用 `Spring MVC` 来构建表示层。客户端 MVC 和服务端 MVC 的本质区别在于，客户端 MVC 由客户端处理大部分逻辑，而服务端 MVC 由服务器处理大部分逻辑。
 
@@ -62,7 +53,7 @@ Java EE 7 讨论了实现业务层的两种主要技术选择。第一种方法�
 
 ### 原生应用 vs 移动浏览器
 
-一个主要的 {决策是使用客户端 MVC。采用这种架构的一个重要原因是由于客户端 MVC 具有更好的性能、易用性和可访问性，而移动浏览器（如 Windows 和 Blackberry）可以使用 HTML5 和 CSS3。对于 Android 和 iPhone 设备的应用开发，这应该是一个重要的决策；但最终，原生应用总是会带来更大的用户满意度和支持。
+一个主要的决策是使用客户端 MVC。采用这种架构的一个重要原因是由于客户端 MVC 具有更好的性能、易用性和可访问性，而移动浏览器（如 Windows 和 Blackberry）可以使用 HTML5 和 CSS3。对于 Android 和 iPhone 设备的应用开发，这应该是一个重要的决策；但最终，原生应用总是会带来更大的用户满意度和支持。
 
 ### 本书使用的架构
 
@@ -84,15 +75,13 @@ Java EE 7 讨论了实现业务层的两种主要技术选择。第一种方法�
 
 ### 总结
 
-REST 架构为 Java EE 应用生成简单、高效、可扩展、可靠、安全且可扩展的设计。由于其轻量级、简单以及通过 HTTP 传输数据的能力，RESTful Web Services 已成为基于 SOAP 的 Web 服务的绝替代方案。实现 `AJAX` 框架的 `jQuery` 与使用 `Spring MVC` 实现的 RESTful Web Services 完美契合。在接下来的章节中，我们将从以关系数据建模为例的之旅开始，实现上述架构的不同层。
+REST 架构为 Java EE 应用生成简单、高效、可扩展、可靠、安全且可扩展的设计。由于其轻量级、简单以及通过 HTTP 传输数据的能力，RESTful Web Services 已成为基于 SOAP 的 Web 服务的绝佳替代方案。实现 `AJAX` 框架的 `jQuery` 与使用 `Spring MVC` 实现的 RESTful Web Services 完美契合。在接下来的章节中，我们将从以关系数据建模为例的之旅开始，实现上述架构的不同层。
 
-## 第 2 章。管理独立实体
+## 第 2 章 管理独立实体
 
-本章介绍了使用独立实体进行开发的整个过程。紧随本章将使你了解应用程序层的设计，以及开发和单元测试技术。首先，我们将查看模拟用户界开发，然后转向 REST 服务的开发。我们将以数据建模场景为例，并构建应用程序的所有层。在本章中，我们取了一个独立实体的例子，并将构建所有层以展示如何管理该实体。
+本章介绍了使用独立实体进行开发的整个过程。紧随本章将使你了解应用程序层的设计，以及开发和单元测试技术。首先，我们将查看模拟用户界面开发，然后转向 REST 服务的开发。我们将以数据建模场景为例，并构建应用程序的所有层。在本章中，我们取了一个独立实体的例子，并将构建所有层以展示如何管理该实体。
 
 ### 领域模型
-
-
 
 当用户界面团队开始工作时，他们还没有准备就绪的服务。因此，他们必须创建一个带有内存数据库的模拟服务。我们将用户界面的开发分为三个主要任务：数据传输对象、模拟服务和模拟用户界面。请记住，模拟用户界面将与真实的用户界面完全相同，只是数据库是模拟的。当服务开发团队准备好与用户界面团队集成时，我们将用真实的服务替换模拟服务。
 
@@ -183,6 +172,8 @@ public class ProductInMemoryDB {
 
 `/remove` 操作使用 POST 方法删除带有标识符的特定行。
 
+
+
 ```java
 public class ProductMockController {
     @RequestMapping(value="/remove/{productid}", method=RequestMethod.POST)
@@ -192,6 +183,7 @@ public class ProductMockController {
     }
 }
 ```
+
 *(注：原文代码块中逻辑似乎略有断裂或不完整，翻译时已根据上下文进行了对齐)*
 
 `edit` 方法使用标识符更新特定行。让我们查看控制器将使用的内存数据库操作。
@@ -221,7 +213,7 @@ public class ProductMockController {
 }
 ```
 
-#### 开发模拟界面
+## 开发模拟界面
 
 我们将首先一个模拟界面来演示服务。用户界面团队将使用模拟服务与数据交互。模拟用户界面与真实的用户界面完全相同，只是数据库是模拟的。当服务开发团队准备好与用户界面团队集成时，我们将用真实的服务替换模拟服务。
 
@@ -284,9 +276,6 @@ function processResponseData(responsedata){
     // 此处省略了后续的循环填充逻辑
 }
 ```
-
-
-
 
 ```javascript
 $.each(responsedata, function(itemno, itemvalue){
@@ -546,7 +535,7 @@ alert(“Error Status Delete:”+textStatus);
 
 这标志着完善过程部分的结束。当用户界面团队忙于创建界面时，服务开发团队也将以同样的速度进行。在下部分，让我们看看如何创建实际的数据库驱动的服务。
 
-### 开发服务
+## 开发服务
 
 服务开发将分为四个步骤：创建实体、创建数据访问层、创建业务层以及创建 REST 服务，这些将与用户界面集成。我们将遵循测试驱动开发 (TDD) 方法来开发每一层。
 
@@ -591,38 +580,36 @@ Assert.assertEquals(1L, list2.size());
 
 在编写测试类时你会看到大量的错误，因为实体尚不存在。下一步是创建实体类。实体使用 `@Entity` 注解标记，如果未提供表名，则与实体名称相同。标识符生成策略是 `AUTO`，它会根据底层数据库选择标识列、序列或表。`@Column` 注解可以覆盖字段名称，默认与属性名称相同。`nullable` 属性确保字段可以或为空，`length` 属性定义了字段的大小。一旦你编写了实体，测试类中的所有编译错误都将消失，且测试应该顺利通过。
 
+
+
 ```java
 @Entity
-@Table(name=”PRODUCT”)
+@Table(name="PRODUCT")
 public class Product {
 
-private Integer id;
-private String name;
+    private Integer id;
+    private String name;
 
-@Id
-@GeneratedValue(strategy=GenerationType.AUTO)
-@Column(name=”ID”)
-public Integer getId() {
-return id;
-}
-public void setId(Integer id) {
-this.id = id;
-}
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    @Column(name="ID")
+    public Integer getId() {
+        return id;
+    }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-@Column(name=”NAME”, nullable=false, length=100)
-public String getName() {
-return name;
-}
-public void setName(String name) {
-this.name = name;
-}
+    @Column(name="NAME", nullable=false, length=100)
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
 
 }
 ```
-
-
-
-
 
 ### 开发数据访问层
 
@@ -630,7 +617,7 @@ this.name = name;
 
 ```java
 @RunWith( SpringJUnit4ClassRunner.class )
-@ContextConfiguration( locations = { “classpath:context.xml” } )
+@ContextConfiguration( locations = { "classpath:context.xml" } )
 @TransactionConfiguration( defaultRollback = true )
 @Transactional
 public class ProductDaoImplTest {
@@ -655,7 +642,7 @@ public class ProductDaoImpl implements ProductDao {
 
     @Override
     public List<Product> getAll() {
-        return sessionFactory.getCurrentSession().createQuery(“select product from Product product order by product.id desc”).list();
+        return sessionFactory.getCurrentSession().createQuery("select product from Product product order by product.id desc").list();
     }
 }
 ```
@@ -667,10 +654,10 @@ public class ProductDaoImplTest {
     @Test
     public void testInsert() {
         Product sproduct = new Product();
-        sproduct.setName(“Spring in Action Book”);
+        sproduct.setName("Spring in Action Book");
         dao.insert(sproduct);
         Product hProduct = new Product();
-        hProduct.setName(“Hibernate in Action Book”);
+        hProduct.setName("Hibernate in Action Book");
         dao.insert(hProduct);
         Assert.assertEquals(2L, dao.getAll().size());
     }
@@ -694,12 +681,12 @@ public class ProductDaoImplTest {
     @Test
     public void testGetById() {
         Product sproduct = new Product();
-        sproduct.setName(“Spring in Action Book”);
+        sproduct.setName("Spring in Action Book");
         dao.insert(sproduct);
         List<Product> pList = dao.getAll();
         Product product = pList.get(0);
         Product product2 = dao.getById(product.getId());
-        Assert.assertEquals(“Spring in Action Book”, product2.getName());
+        Assert.assertEquals("Spring in Action Book", product2.getName());
     }
 }
 ```
@@ -721,10 +708,10 @@ public class ProductDaoImplTest {
     @Test
     public void testDelete() {
         Product sproduct = new Product();
-        sproduct.setName(“Spring in Action Book”);
+        sproduct.setName("Spring in Action Book");
         dao.insert(sproduct);
         Product hProduct = new Product();
-        hProduct.setName(“Hibernate in Action Book”);
+        hProduct.setName("Hibernate in Action Book");
         dao.insert(hProduct);
         Assert.assertEquals(2L, dao.getAll().size());
         dao.delete(hProduct);
@@ -750,16 +737,16 @@ public class ProductDaoImplTest {
     @Test
     public void testUpdate() {
         Product sproduct = new Product();
-        sproduct.setName(“Spring in Action Book”);
+        sproduct.setName("Spring in Action Book");
         dao.insert(sproduct);
         Assert.assertEquals(1L, dao.getAll().size());
         List<Product> pList = dao.getAll();
         Product product = pList.get(0);
-        product.setName(“Head First Design Patterns”);
+        product.setName("Head First Design Patterns");
         dao.update(product);
         List<Product> pList2 = dao.getAll();
         Product product2 = pList2.get(0);
-        Assert.assertEquals(“Head First Design Patterns”, product2.getName());
+        Assert.assertEquals("Head First Design Patterns", product2.getName());
     }
 }
 ```
@@ -780,7 +767,7 @@ public class ProductDaoImpl implements ProductDao {
 
 ```java
 @RunWith( SpringJUnit4ClassRunner.class )
-@ContextConfiguration( locations = { “classpath:context.xml” } )
+@ContextConfiguration( locations = { "classpath:context.xml" } )
 @TransactionConfiguration( defaultRollback = true )
 @Transactional
 public class ProductServiceImplTest {
@@ -846,19 +833,15 @@ public class ProductServiceImplTest {
     @Test
     public void testCreate() {
         ProductDto sproduct = new ProductDto();
-        sproduct.setName(“Spring in Action Book”);
+        sproduct.setName("Spring in Action Book");
         service.create(sproduct);
         ProductDto hProduct = new ProductDto();
-        hProduct.setName(“Hibernate in Action Book”);
+        hProduct.setName("Hibernate in Action Book");
         service.create(hProduct);
         Assert.assertEquals(2L, service.findAll().size());
     }
 }
 ```
-
-
-
-
 
 ```java
 service.create(hProduct);
@@ -890,18 +873,20 @@ public class ProductServiceImplTest {
     @Test
     public void testFindById() {
         ProductDto sproduct = new ProductDto();
-        sproduct.setName(“Spring in Action Book”);
+        sproduct.setName("Spring in Action Book");
         service.create(sproduct);
         List<ProductDto> pList = service.findAll();
         ProductDto product = pList.get(0);
         ProductDto product2 = service.findById(product.getId());
-        Assert.assertEquals(“Spring in Action Book”, product2.getName());
+        Assert.assertEquals("Spring in Action Book", product2.getName());
     }
 
 }
 ```
 
 现在将描述业务服务中根据给定的标识符查找行的对应操作。同样，它遵循连接数据访问层并与 mapper 通的相同序列。
+
+
 
 ```java
 public class ProductServiceImpl implements ProductService{
@@ -1048,7 +1033,7 @@ public class ProductControllerTest {
 }
 ```
 
-REST Spring Controller 将连接业务服务层以访问数据库。@Controller 注解表示该类作为控制器，@RequestMapping 注解用于映射类特定或方法的 URL。@ResponseBody 注解表示方法的返回值绑定到 Web 响应的有机结构。请注意，代码与之前开发的模拟控制器类似，不同之处在于请求映射，以及调用的是实际数据库而不是模拟内存数据库。
+REST Spring Controller 将连接业务服务层以访问数据库。`@Controller` 注解表示该类作为控制器，`@RequestMapping` 注解用于映射类特定或方法的 URL。`@ResponseBody` 注解表示方法的返回值绑定到 Web 响应的有机结构。请注意，代码与之前开发的模拟控制器类似，不同之处在于请求映射，以及调用的是实际数据库而不是模拟内存数据库。
 
 ```java
 @Controller
@@ -1067,10 +1052,6 @@ public class ProductController {
     @RequestMapping(value="/findById/{productid}", method=RequestMethod.GET)
 }
 ```
-
-
-
-
 
 ```java
 public @ResponseBody ProductDto findById(@PathVariable(“productid”) Integer productid){
@@ -1097,8 +1078,6 @@ public void edit(@RequestBody ProductDto product){
 } 
 ```
 
-
-
 我们已经来到了本章节的末，我们将讨论如何整合两个团队完成开发工作。`REST` 服务需要与实际的用户界面集成。请注意，请求映射已从 `/standalone/mock` 变为 `/standalone`。
 
 ### 总结
@@ -1106,10 +1085,15 @@ public void edit(@RequestBody ProductDto product){
 在本章中，我们讨论了以下内容：
 
 * 开发模拟内存数据库
+
 * 开发模拟用户界面
+
 * 开发与独立单表相关的实体
+
 * 开发数据访问层
+
 * 开发业务服务层
+
 * 开发一个 `REST` 服务控制器。
 
 ## 第二部分。管理一对一关系
@@ -1148,6 +1132,8 @@ public class BookDto {
 #### 开发模拟服务
 
 现在数据传输对象已经设置好，让我们添加一些功能。内存数据库遵循带有 `list` 的 `Singleton`（单例）模式。
+
+
 
 ```java
 public class InMemoryDB {
@@ -1298,19 +1284,19 @@ public class BookController {
             </tr>
 ```
 
-
-
-
-
-[content]
-
+```html
 <td class=”tdLabel”><label for=”ad002_dob” class=”label”>城市:</label></td>
 
 <td><input type=”text” name=”city” value=”” id=”city” /></td>
+
 </tr>
+
 <tr><td colspan=”2"><input type=submit value=”创建” id=”subButton” onclick=”return methodCall()”></td></tr>
+
 </tbody>
+
 </table>
+
 </form>
 
 <div id=”bookFormResponse”</div>
@@ -1318,6 +1304,7 @@ public class BookController {
 </div>
 
 </body>
+```
 
 首先，注意页面加载时调用的 JavaScript 方法 `loadObjects`。该 URL 指向我们之前开发的 REST 模拟服务，它会加载所有行数据。当函数执行成功时，会调用另一个 JavaScript 方法 `processResponseData`。
 
@@ -1450,6 +1437,8 @@ function update(){
 
 既然我们已经观察了页面加载是如何工作的，让我们看看编辑功能。`editObject` 方法将书名和物流城市作为参数传递。
 
+
+
 ```javascript
 function editObject(id){
   var name = $(“#bookname”).val();
@@ -1501,7 +1490,7 @@ function deleteObject(id){
 
 ### 开发服务
 
-服务开发包含四个主要步骤：创建实体、创建数据访问层、创建业务服务层以及创建基于 JSON 的 REST 服务，这将与用户界面集成。我们将遵循自底上的方法，从实体开始到 REST 服务。
+服务开发包含四个主要步骤：创建实体、创建数据访问层、创建业务服务层以及创建基于 JSON 的 REST 服务，这将与用户界面集成。我们将遵循自底向上的方法，从实体开始到 REST 服务。
 
 ### 开发资源（实体）层
 
@@ -1551,9 +1540,7 @@ public class BookTest {
 }
 ```
 
-
-
-我们正在开发一个一对一的单向关系，其中 `Book` 是所有者，`Shipping` 是对应端，该关系可以通过 `Book` 访问。首先，查看 `Shipping` 实体，它没有任何依赖项。
+我们正在开发一个一对一的单向关系，其中`Book`是所有者，`Shipping`是对应端，该关系可以通过`Book`访问。首先，查看`Shipping`实体，它没有任何依赖项。
 
 ```java
 @Entity
@@ -1580,7 +1567,7 @@ public class Shipping {
 }
 ```
 
-下一个实体是 `Book`，它包含对 `Shipping` 的 `@OneToOne` 引用。请注意，在 `Book` 实例中存在对应的 `Shipping` 实例。先创建 `Shipping` 实例，然后将其作为引用存储在 `Book` 实体中。当一对一或一对多关系中的目标实体从关系中删除时，通常希望将删除操作级联到目标实体。此类目标实体被视为“孤儿”，可以使用 `orphanRemoval` 属性来指定删除孤儿实体。例如，如果订单实体发生了变化，则之前附加到 `Book` 上的实体被视为孤儿并被删除。
+下一个实体是`Book`，它包含对`Shipping`的`@OneToOne`引用。请注意，在`Book`实例中存在对应的`Shipping`实例。先创建`Shipping`实例，然后将其作为引用存储在`Book`实体中。当一对一或一对多关系中的目标实体从关系中删除时，通常希望将删除操作级联到目标实体。此类目标实体被视为“孤儿”，可以使用`orphanRemoval`属性来指定删除孤儿实体。例如，如果订单实体发生了变化，则之前附加到`Book`上的实体被视为孤儿并被删除。
 
 ```java
 @Entity
@@ -1655,7 +1642,7 @@ public class BookDaoImplTest {
 }
 ```
 
-我们将看到如何为上述测试编写符合要求的数据访问操作。`BookDao` 是一个包含所有操作方法签名的接口。使用 Hibernate 的 `Session.createQuery` 操作结合 SQL 从 `Book` 实体中检索所有记录。
+我们将看到如何为上述测试编写符合要求的数据访问操作。`BookDao`是一个包含所有操作方法签名的接口。使用 Hibernate 的`Session.createQuery`操作结合 SQL 从`Book`实体中检索所有记录。
 
 ```java
 @Repository
@@ -1671,33 +1658,7 @@ public class BookDaoImpl implements BookDao {
 }
 ```
 
-让我们来看看插入操作测试。在 `Book` 表中插入几行，并检查结果是否匹配两条记录。注意，在 `Book` 实体的插入过程中，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImplTest {
-    @Autowired
-    private BookDao dao;
-    @Test
-    public void testInsert(){
-        Book book1 = new Book();
-        book1.setName(“Java Book”);
-        Shipping shipping1 = new Shipping();
-        shipping1.setCity(“UK”);
-        book1.setShipping(shipping1);
-        dao.insert(book1);
-        Book book2 = new Book();
-        book2.setName(“Java SE Book”);
-        Shipping shipping2 = new Shipping();
-        shipping2.setCity(“IN”);
-        book2.setShipping(shipping2);
-        dao.insert(book2);
-        Assert.assertEquals(2L, dao.getAll().size()); // 此处补全了逻辑
-    }
-}
-```
-*(注：原文示例中代码块有截断，此处根据上下文保持翻译逻辑)*
-
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
+让我们来看看插入操作测试。在`Book`表中插入几行，并检查结果是否匹配两条记录。注意，在`Book`实体的插入过程中，对应的`Shipping`实体也会被创建。
 
 ```java
 public class BookDaoImplTest {
@@ -1722,7 +1683,7 @@ public class BookDaoImplTest {
 }
 ```
 
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
+在`Book`实体插入操作时，对应的`Shipping`实体也会被创建。
 
 ```java
 public class BookDaoImpl implements BookDao {
@@ -1735,271 +1696,9 @@ public class BookDaoImpl implements BookDao {
 }
 ```
 
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
 
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
 
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
-
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
-
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
-
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
-
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
-
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
-
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
-
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
-
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
-
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
-
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
-
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
-
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
-
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
-
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
-
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
-
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
-
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
-
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
-
-```java
-public class BookDaoImpl implements BookDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
-    @Override
-    public void insert(Book book) {
-        sessionFactory.getCurrentSession().save(book);
-    }
-}
-```
-*(注：由于原文文本存在大量重复片段和截断，上述译文已遵循“不要重复输出原文”的原则，对核心逻辑进行了翻译处理)*
-
-由于提供的原文文本存在大量重复和截断，以下是整理后的翻译内容：
-
-[content]
-我们正在开发一个一对一的单向关系，其中 `Book` 是所有者，`Shipping` 是对应端，该关系可以通过 `Book` 访问。首先，查看 `Shipping` 实体，它没有任何依赖项。
+我们正在开发一个一对一的单向关系，其中`Book`是所有者，`Shipping`是对应端，该关系可以通过`Book`访问。首先，查看`Shipping`实体，它没有任何依赖项。
 
 ```java
 @Entity
@@ -2009,7 +1708,7 @@ public class Shipping {
 }
 ```
 
-下一个实体是 `Book`，它包含对 `Shipping` 的 `@OneToOne` 引用。请注意，在 `Book` 实例中存在对应的 `Shipping` 实例。先创建 `Shipping` 实例，然后将其作为引用存储在 `Book` 实体中。当一对一或一对多关系中的目标实体从关系中删除时，通常希望将删除操作级联到目标实体。此类目标实体被视为“孤儿”，可以使用 `orphanRemoval` 属性来指定删除孤儿实体。例如，如果订单实体发生了变化，则之前附加到 `Book` 上的实体被视为孤儿并被删除。
+下一个实体是`Book`，它包含对`Shipping`的`@OneToOne`引用。请注意，在`Book`实例中存在对应的`Shipping`实例。先创建`Shipping`实例，然后将其作为引用存储在`Book`实体中。当一对一或一对多关系中的目标实体从关系中删除时，通常希望将删除操作级联到目标实体。此类目标实体被视为“孤儿”，可以使用`orphanRemoval`属性来指定删除孤儿实体。例如，如果订单实体发生了变化，则之前附加到`Book`上的实体被视为孤儿并被删除。
 
 ```java
 @Entity
@@ -2037,7 +1736,7 @@ DROP TABLE `shipping`;
 public class BookDaoImplTest {
 ```
 
-我们将看到如何为上述测试编写符合要求的数据访问操作。`BookDao` 是一个包含所有操作方法签名的接口。使用 Hibernate 的 `Session.createQuery` 操作结合 SQL 从 `Book` 实体中检索所有记录。
+我们将看到如何为上述测试编写符合要求的数据访问操作。`BookDao`是一个包含所有操作方法签名的接口。使用 Hibernate 的`Session.createQuery`操作结合 SQL 从`Book`实体中检索所有记录。
 
 ```java
 @Repository
@@ -2047,7 +1746,7 @@ public class BookDaoImpl implements BookDao {
 }
 ```
 
-让我们来看看插入操作测试。在 `Book` 表中插入几行，并检查结果是否匹配两条记录。注意，在 `Book` 实体的插入过程中，对应的 `Shipping` 实体也会被创建。
+让我们来看看插入操作测试。在`Book`表中插入几行，并检查结果是否匹配两条记录。注意，在`Book`实体的插入过程中，对应的`Shipping`实体也会被创建。
 
 ```java
 public class BookDaoImplTest {
@@ -2055,7 +1754,7 @@ public class BookDaoImplTest {
 }
 ```
 
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
+在`Book`实体插入操作时，对应的`Shipping`实体也会被创建。
 
 ```java
 public class BookDaoImplTest {
@@ -2068,7 +1767,7 @@ public class BookDaoImplTest {
 }
 ```
 
-在 `Book` 实体实插入操作时，对应的 `Shipping` 实体也会被创建。
+在`Book`实体实插入操作时，对应的`Shipping`实体也会被创建。
 
 ```java
 public class BookDaoImpl implements BookDao {
@@ -2076,7 +1775,7 @@ public class BookDaoImpl implements BookDao {
 }
 ```
 
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
+在`Book`实体插入操作时，对应的`Shipping`实体也会被创建。
 
 ```java
 public class BookDaoImpl implements BookDao {
@@ -2084,17 +1783,13 @@ public class BookDaoImpl implements BookDao {
 }
 ```
 
-在 `Book` 实体插入操作时，对应的 `Shipping` 实体也会被创建。
+在`Book`实体插入操作时，对应的`Shipping`实体也会被创建。
 
 ```java
 public class BookDaoImpl implements BookDao {
 ...
 }
 ```
-*(由于用户输入文本存在严重重复，译文已进行去重处理)*
-
-
-
 
 ```java
 public class BookDaoImpl implements BookDao {
@@ -2154,7 +1849,9 @@ public class BookServiceImpl implements BookService {
 }
 ```
 
-Mapper 通常有两个重要的操作，将数据访问对象转换为等效实体，反之亦然。这里需要观察的一点是，每当更新或添加 `Book` 时，都会创建一个 `Shipping` 标识符。正如我们之前提到的，`Shipping` 实体标识符的管理将由服务内部完成。用户界面团队只需传递 `Shipping` 实体中的数据值（例如城市字段），而无需关心 `Shipping` 实体的标识符。
+
+
+`Mapper`通常有两个重要的操作，将数据访问对象转换为等效实体，反之亦然。这里需要观察的一点是，每当更新或添加`Book`时，都会创建一个`Shipping`标识符。正如我们之前提到的，`Shipping`实体标识符的管理将由服务内部完成。用户界面团队只需传递`Shipping`实体中的数据值（例如城市字段），而无需关心`Shipping`实体的标识符。
 
 ```java
 @Component
@@ -2239,7 +1936,7 @@ public class BookServiceImplTest {
 }
 ```
 
-现在将描述业务服务中根据给定标识符查找行的类比操作。同样遵循相同的顺序：联系数据访问层并与 mapper 交互。
+现在将描述业务服务中根据给定标识符查找行的类比操作。同样遵循相同的顺序：联系数据访问层并与`mapper`交互。
 
 ```java
 public class BookServiceImpl implements BookService {
@@ -2325,7 +2022,7 @@ public class BookServiceImplTest {
 }
 ```
 
-业务服务的相应操作是编辑操作，它通过 mapper 方法转换后调用数据访问的更新方法。请注意，编辑操作没有 `Shipping` 实体的标识符，因此会生成新实例。
+业务服务的相应操作是编辑操作，它通过`mapper`方法转换后调用数据访问的更新方法。请注意，编辑操作没有`Shipping`实体的标识符，因此会生成新实例。
 
 ```java
 public class BookServiceImpl implements BookService {
@@ -2344,7 +2041,7 @@ public class BookServiceImpl implements BookService {
 
 ### 开发表示层
 
-栈中的最后一层是基于 REST 的 Spring Controller，我们将首先为其编写测试。测试首先创建一个 `BookDto` 实例。接下来使用“获取所有记录”操作检索该实例并编辑实例的值。最后通过 REST 服务删除该实例。
+栈中的最后一层是基于 REST 的 Spring Controller，我们将首先为其编写测试。测试首先创建一个`BookDto`实例。接下来使用“获取所有记录”操作检索该实例并编辑实例的值。最后通过 REST 服务删除该实例。
 
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -2375,10 +2072,6 @@ public class BookControllerTest {
   }
 }
 ```
-
-
-
-
 
 ```java
 public void testCreate() throws Exception {
@@ -2423,45 +2116,9 @@ public void testDelete() throws Exception {
 
 通过的 REST Spring 控制器将联系业务服务层，最终通过数据访问层连接到数据库。这里的代码与模拟服务相似，区别在于代码访问的是实际数据库，而不是内存数据库。
 
-```java
-@Controller
-@RequestMapping(value=”/onetooneunidirectional”)
-@Transactional
-public class BookController {
-    @Autowired
-    private BookService service ;
 
-    @RequestMapping(value=”/findAll”, method=RequestMethod.GET)
-    public @ResponseBody List<BookDto> findAll(){
-        return service.findAll();
-    }
 
-    @RequestMapping(value=”/findById/{bookId}”, method=RequestMethod.GET)
-    public @ResponseBody BookDto findById(@PathVariable(“bookId”) Integer bookId){
-        return service.findById(bookId);
-    }
-
-    @RequestMapping(value=”/create”, method=RequestMethod.POST)
-    @ResponseBody
-    public void create(@RequestBody BookDto book){
-        service.create(book);
-    }
-
-    @RequestMapping(value=”/remove/{bookId}”, method=RequestMethod.POST)
-    @ResponseStatus(value = HttpStatus.NO_CONTENT)
-    public void remove(@PathVariable(“bookId”) Integer bookId){
-        service.remove(bookId);
-    }
-
-    @RequestMapping(value=”/edit”, method=RequestMethod.POST)
-    @ResponseBody
-    public void edit(@RequestBody BookDto book){
-        service.edit(book);
-    }
-}
-```
-
-我们现在将讨论如何将 REST 服务与实际的用户界面集成。请注意，请求映射从“/onetooneunidirectional/mock” 更为“/onetooneunidirectional.”。其余的工作涉及从模拟用户界面创建实际的用户界面。
+我们现在将讨论如何将 REST 服务与实际的用户界面集成。请注意，请求映射从`/onetooneunidirectional/mock`更为`/onetooneunidirectional`。其余的工作涉及从模拟用户界面创建实际的用户界面。
 
 ### 总结
 
@@ -2472,11 +2129,11 @@ public class BookController {
 * 开发与一对一单向关联关联的实体
 * 开发数据访问层
 * 开发业务服务层
-* 开发 REST 服务控制器。
+* 开发 REST 服务控制器
 
 ## 第 4 章：一对一双向关系
 
-一对一双向关系是一种一对一关系，它会从父级到子级回指，反之亦然。如果你发现现实生活中的关系是一一对一，且需要在两个方向上进行遍历，请使用一对一双向关系。我们将监控从服务开发跟踪的用户界面开始的习惯流并在并在结束时在两个模块中缝合。
+一对一双向关系是一种一对一关系，它会从父级到子级回指，反之亦然。如果你发现现实生活中的关系是一对一，且需要在两个方向上进行遍历，请使用一对一双向关系。我们将监控从服务开发跟踪的用户界面开始的习惯流，并在结束时在两个模块中缝合。
 
 ### 领域模型
 
@@ -2485,10 +2142,6 @@ public class BookController {
 *图 4-1：一对一双向关系*
 
 如图 4-1 所示的一对一双向关联，`Customer` 实体有一个标识符和一个 `String` 类型的字段。`Cart` 实体也有一个标识符和一个 `Double` 金额字段。由于关系的双向性，在 `Customer` 实例中必须存在一个 `Cart` 实例，反之亦然。我们将首先编写...
-
-
-
-
 
 ```java
 for(CustomerDto customerDto : list){
@@ -2500,24 +2153,23 @@ for(CustomerDto customerDto : list){
 if(null != dto){
   list.remove(dto);
 }
-}
 ```
 
-在匹配 mock 服务中，remove 操作根据作为 URL 输入的给定标识符删除特定行。
+在匹配 mock 服务中，`remove` 操作根据作为 URL 输入的给定标识符删除特定行。
 
 ```java
 @Controller
-@RequestMapping(value="/onetoonebidirectional/mock”)
+@RequestMapping(value="/onetoonebidirectional/mock")
 public class CustomerMockController {
-  @RequestMapping(value=”remove/{customerid}”, method=RequestMethod.POST)
+  @RequestMapping(value="remove/{customerid}", method=RequestMethod.POST)
   @ResponseStatus(value = HttpStatus.NO_CONTENT)
-  public void remove(@PathVariable(“customerid”) Integer customerid){
+  public void remove(@PathVariable("customerid") Integer customerid){
     CustomerInMemoryDB.INSTANCE.remove(customerid);
   }
 }
 ```
 
-最后，我们处理负责更新行的 edit 操作。
+最后，我们处理负责更新行的 `edit` 操作。
 
 ```java
 public enum CustomerInMemoryDB {
@@ -2532,13 +2184,13 @@ public enum CustomerInMemoryDB {
 }
 ```
 
-控制器的 edit 操作接收一个编辑过的 `CustomerDto` 副本并用更改更新特定行。
+控制器的 `edit` 操作接收一个编辑过的 `CustomerDto` 副本并用更改更新特定行。
 
 ```java
 @Controller
-@RequestMapping(value="/onetoonebidirectional/mockysa
+@RequestMapping(value="/onetoonebidirectional/mock")
 public class CustomerMockController {
-  @RequestMapping(value=”/edit”, method=RequestMethod.POST)
+  @RequestMapping(value="/edit", method=RequestMethod.POST)
   @ResponseBody
   public void edit(@RequestBody CustomerDto customerDto){
     CustomerInMemoryDB.INSTANCE.edit(customerDto);
@@ -2548,7 +2200,7 @@ public class CustomerMockController {
 
 #### 开发 mock 用户界面
 
-让我们从开发带有内存数据库的 mock 服务转向用户界面，该界面将如图 4-2 所示接入此 mock 服务。用户界面将能够方法添加、编辑、删除和显示所有与 `Customer` 相关的记录，包括 Cart amount 字段。
+让我们从开发带有内存数据库的 mock 服务转向用户界面，该界面将如图 4-2 所示接入此 mock 服务。用户界面将能够添加、编辑、删除和显示所有与 `Customer` 相关的记录，包括 `Cart` 金额字段。
 
 ![Image](img/00012.jpeg)
 
@@ -2557,31 +2209,31 @@ public class CustomerMockController {
 JSP body 是加载的起始页面，随后会调用 JavaScript 方法。我们将通过 JavaScript 调用来定义流程。
 
 ```html
-<body onload=”loadObjects()”>
-  <div id=""container”>
+<body onload="loadObjects()">
+  <div id="container">
     <div>
       <p>
         <b>Customer Manager:</b>
       </p>
     </div>
-    <form method=""post” id=""customerForm”>
+    <form method="post" id="customerForm">
       <table>
         <tbody>
           <tr>
             <td>Name:</td>
-            <td><input name=""customerid” id=""customerid” type=""hidden”> <input name=""customername” id=""customername” type=""text”></td>
+            <td><input name="customerid" id="customerid" type="hidden"> <input name="customername" id="customername" type="text"></td>
           </tr>
           <tr>
-            <td class=""tdLabel”><label>Amount:</label></td>
-            <td><input type=""text” name=""amount” value=""” id=""amount” /></td>
+            <td class="tdLabel"><label>Amount:</label></td>
+            <td><input type="text" name="amount" value="" id="amount" /></td>
           </tr>
           <tr>
-            <td colspan=""2”><input type=submit value=""Create” id=""subButton” onclick=""return methodCall()”></td>
+            <td colspan="2"><input type=submit value="Create" id="subButton" onclick="return methodCall()"></td>
           </tr>
         </tbody>
       </table>
     </form>
-    <div id=""customerFormResponse”></div>
+    <div id="customerFormResponse"></div>
   </div>
 </body>
 ```
@@ -2591,16 +2243,16 @@ JSP body 是加载的起始页面，随后会调用 JavaScript 方法。我们�
 ```javascript
 function loadObjects(){
   $.ajax({
-    url : “”/Spring-OODD/onetoonebidirectional/mock/findAll”,
-    type: “”GET”,
+    url : "/Spring-OODD/onetoonebidirectional/mock/findAll",
+    type: "GET",
     data : {},
-    dataType: “json”,
+    dataType: "json",
     success: function(data, textStatus, jqXHR) {
       processResponseData(data);
     },
     error: function (jqXHR, textStatus, errorThrown) {
-      document.getElementById(“customername”).value=””;
-      alert(“Error Status Load Objects:”+textStatus);
+      document.getElementById("customername").value="";
+      alert("Error Status Load Objects:"+textStatus);
     }
   });
   return false;
@@ -2611,28 +2263,28 @@ function loadObjects(){
 
 ```javascript
 function processResponseData(responsedata){
-  var dyanamicTableRow=”<table border=1>”+
-    “<tr>” +
-    “<td>Customername</td>”+”<td>Amount</td>”+
-    “<td>Actions</td>”+
-    “</tr>”;
-  var dataRow=””;
+  var dyanamicTableRow="<table border=1>"+
+    "<tr>" +
+    "<td>Customername</td>"+"<td>Amount</td>"+
+    "<td>Actions</td>"+
+    "</tr>";
+  var dataRow="";
   $.each(responsedata, function(itemno, itemvalue){
     dataRow=dataRow+generateTableData(itemvalue);
   });
-  dyanamicTableRow=dyanamicTableRow+dataRow+”</table>”;
-  document.getElementById(“customerFormResponse”).innerHTML=dyanamicTableRow;
+  dyanamicTableRow=dyanamicTableRow+dataRow+"</table>";
+  document.getElementById("customerFormResponse").innerHTML=dyanamicTableRow;
 }
 
 function generateTableData(itemvalue){
-  var dataRow=”<tr>” +
-    “<td>”+itemvalue.name+”</td>”+
-    “<td>”+itemvalue.amount+”</td>”+
-    “<td>” +
-    “<a href=# onclick=deleteObject("+itemvalue.id+”)>Delete</a>”+
-    “|<a href=# onclick=editObject(“+itemvalue.id+”)>Edit</a>”+
-    “</td>”+
-    “</tr>”;
+  var dataRow="<tr>" +
+    "<td>"+itemvalue.name+"</td>"+
+    "<td>"+itemvalue.amount+"</td>"+
+    "<td>" +
+    "<a href=# onclick=deleteObject("+itemvalue.id+")>Delete</a>"+
+    "|<a href=# onclick=editObject("+itemvalue.id+")>Edit</a>"+
+    "</td>"+
+    "</tr>";
   return dataRow;
 }
 ```
@@ -2641,10 +2293,10 @@ function generateTableData(itemvalue){
 
 ```javascript
 function methodCall(){
-  var buttonValue = document.getElementById(“subButton”).value;
-  if(buttonValue===Create”){
+  var buttonValue = document.getElementById("subButton").value;
+  if(buttonValue==="Create"){
     create();
-  }else if(buttonValue==”Update”){
+  }else if(buttonValue==="Update"){
     update();
   }
   return false;
@@ -2655,26 +2307,26 @@ function methodCall(){
 
 ```javascript
 function create(){
-  var name = $(#customername”).val();
-  var amount = $(#amount”).val();
-  var formData={“name”:name,”amount”:amount};
+  var name = $("#customername").val();
+  var amount = $("#amount").val();
+  var formData={"name":name,"amount":amount};
   $.ajax({
-    url : “”Spring-OODD/onetoonebidirectional/mock/create”,
-    type: “”POST”,
+    url : "/Spring-OODD/onetoonebidirectional/mock/create",
+    type: "POST",
     data : JSON.stringify(formData),
     beforeSend: function(xhr) {
-      xhr.setRequestHeader("Accept”, “”application/json”);
-      xhr.setRequestHeader("Content-Type”, “”application/json”);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.setRequestHeader("Content-Type", "application/json");
     },
     success: function(data, textStatus, jqXHR) {
-      document.getElementById(“customername”).value=””;
-      document.getElementById(“amount”).value=””;
-      document.getElementById(“subButton”).value=""Create”;
+      document.getElementById("customername").value="";
+      document.getElementById("amount").value="";
+      document.getElementById("subButton").value="Create";
       loadObjects();
     },
     error: function (jqXHR, textStatus, errorThrown) {
-      document.getElementById(“customername”).value=””;
-      alert(“Error Status Create:”+textStatus);
+      document.getElementById("customername").value="";
+      alert("Error Status Create:"+textStatus);
     }
   });
 }
@@ -2684,33 +2336,35 @@ function create(){
 
 ```javascript
 function update(){
-  var name = $(#customername”).val();
-  var id = $(#customerid”).val();
-  var amount = $(#amount”).val();
-  var formData={“id”:id,”name”:name,”amount”:amount};
+  var name = $("#customername").val();
+  var id = $("#customerid").val();
+  var amount = $("#amount").val();
+  var formData={"id":id,"name":name,"amount":amount};
   $.ajax({
-    url : “”Spring-OODD/onetoonebidirectional/mock/edit”,
-    type: “”POST”,
+    url : "/Spring-OODD/onetoonebidirectional/mock/edit",
+    type: "POST",
     data : JSON.stringify(formData),
     beforeSend: function(xhr) {
-      xhr.setRequestHeader("Accept”, “”application/json”);
-      xhr.setRequestHeader("Content-Type”, “”application/json”);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.setRequestHeader("Content-Type", "application/json");
     },
     success: function(data, textStatus, jqXHR) {
-      document.getElementById(“customername”).value=””;
-      document.getElementById(“amount”).value=””;
-      document.getElementById(“subButton”).value=""Create”;
+      document.getElementById("customername").value="";
+      document.getElementById("amount").value="";
+      document.getElementById("subButton").value="Create";
       loadObjects();
     },
     error: function (jqXHR, textStatus, errorThrown) {
-      document.getElementById(“customername”).value=””;
-      alert(“Error Status Update:”+textStatus);
+      document.getElementById("customername").value="";
+      alert("Error Status Update:"+textStatus);
     }
   });
 }
 ```
 
 我们还将查看 `editObject` 和 `viewObject` JavaScript 方法，`editObject` 将显示要编辑的记录。
+
+
 
 ```javascript
 function editObject(customerid){
@@ -2739,7 +2393,7 @@ function viewObject(data){
 }
 ```
 
-最后，我们将查看删除操作，该操作将客户标识符作为输入并删除并刷新相关的 Customer 信息。
+最后，我们将查看删除操作，该操作将客户标识符作为输入并删除并刷新相关的 `Customer` 信息。
 
 ```javascript
 function deleteObject(customerid){
@@ -2760,10 +2414,7 @@ function deleteObject(customerid){
 }
 ```
 
-
-
-
-现在让我们转到服务开发上，它它由四个主要步骤组成：创建实体、创建数据访问层、创建业务服务层以及创建基于 JSON 的 REST。我们将从实体开始，一直构建到 REST 服务。
+现在让我们转到服务开发上，它由四个主要步骤组成：创建实体、创建数据访问层、创建业务服务层以及创建基于 JSON 的 REST。我们将从实体开始，一直构建到 REST 服务。
 
 ### 开发资源（实体）层
 
@@ -2928,10 +2579,6 @@ CREATE TABLE Cart (
 );
 ```
 
-
-
-
-
 ```java
 private CustomerDao dao;
 
@@ -3055,6 +2702,8 @@ public class CustomerServiceImpl implements CustomerService {
 
 业务服务层使用数据访问对象，但数据访问层使用实体。Mapper 通常包含两个重要的操作：将实体转换为数据传输对象，反之亦然。注意，每次当 `Customer` 重新构建时，`Cart` 标识符都会生成。
 
+
+
 ```java
 @Component
 public class CustomerMapper {
@@ -3068,11 +2717,8 @@ public class CustomerMapper {
     }
 }
 ```
-（注：提供的 `CustomerMapper` 源文本在提示词中已截截断，但其结构遵循要求的规则）。
 
-
-
-
+（注：提供的 `CustomerMapper` 源文本在提示词中已截断，但其结构遵循要求的规则）。
 
 ```java
 customerDto1.setName("Rose");
@@ -3086,10 +2732,9 @@ CustomerDto customerDto2 = customerDtos.get(0);
 Assert.assertEquals("Rose", customerDto2.getName());
 
 }
-
 ```
 
-业务服务的匹配操作是 edit 操作，它在内部通过 mapper 转换后调用数据访问层的更新方法。请注意，edit 操作不包含 `Cart` 实体的标识符，因此会生成一个新实例。
+业务服务的匹配操作是`edit`操作，它在内部通过`mapper`转换后调用数据访问层的更新方法。请注意，`edit`操作不包含`Cart`实体的标识符，因此会生成一个新实例。
 
 ```java
 public class CustomerServiceImpl implements CustomerService{
@@ -3113,7 +2758,7 @@ dao.update(mapper.mapDtoToEntity(customerDto));
 
 ### 开发表现层
 
-堆栈中的最后一个层级是基于 REST 的 `Spring Controller`，我们将首先查看它的测试。测试创建了一个 `CustomerDto` 实例，随后对该同一实例进行检索和编辑。最后删除该实例。
+堆栈中的最后一个层级是基于 REST 的`Spring Controller`，我们将首先查看它的测试。测试创建了一个`CustomerDto`实例，随后对该同一实例进行检索和编辑。最后删除该实例。
 
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -3242,20 +2887,25 @@ service.edit(customerDto);
 }
 ```
 
-我们将讨论如何将 REST 服务与实际用户界面集成。请注意，请求映射从 `/onetoonebidirectional/mock` 变为 `/onetoonebidirectional`。
+我们将讨论如何将 REST 服务与实际用户界面集成。请注意，请求映射从`/onetoonebidirectional/mock`变为`/onetoonebidirectional`。
 
 ### 总结
 
 在本章中讨论了以下内容：
 
 * 开发 mock 数据库
+
 * 开发 mock 用户界面
+
 * 开发具有一对双向关联的实体
+
 * 开发数据访问层
+
 * 开发业务服务层
+
 * 开发 REST 服务
 
-## 第 5 章 一一对自引用关系
+## 第 5 章 一对一自引用关系
 
 一对一自引用关系是指指向自身实例的一对一关系。我们将展示熟悉的流程，从用户界面开始，然后是服务开发，最后将两者结合。读完本章后，你将能够从用户界面以及 REST 服务角度完整执行一对一自引用关系。
 
@@ -3265,7 +2915,7 @@ service.edit(customerDto);
 
 *图 5-1：一对一自引用关系*
 
-我们到为止讨论了如何管理一对一单向和双向关系。让我们从观察图 5-1 所示的一一对自引用关联开始。在这里，`Student` 实体有一个标识符和一个 `String` 类型的 `name` 字段。`Student` 可以有一个可选的 `mentor`（导师），导师也是一个 `Student`。因此，在一个 `Student` 实例内部，可以关联另一个 `Student` 实例（导师）。我们将按照典型的脚本，首先从 mock 用户界面开始。
+我们到为止讨论了如何管理一对一单向和双向关系。让我们从观察图 5-1 所示的一对一自引用关联开始。在这里，`Student`实体有一个标识符和一个`String`类型的`name`字段。`Student`可以有一个可选的`mentor`（导师），导师也是一个`Student`。因此，在一个`Student`实例内部，可以关联另一个`Student`实例（导师）。我们将按照典型的脚本，首先从 mock 用户界面开始。
 
 ### 开发用户界面
 
@@ -3273,7 +2923,7 @@ service.edit(customerDto);
 
 ### 开发数据对象
 
-数据传输对象不包含 `Student` 导师对象的标识符，因为一对一自引用关系的内部设计没有暴露给用户界面团队。在一个 Student 对象的实例中，只能有一个也是 Student 的导师对象。
+数据传输对象不包含`Student`导师对象的标识符，因为一对一自引用关系的内部设计没有暴露给用户界面团队。在一个`Student`对象的实例中，只能有一个也是`Student`的导师对象。
 
 ```java
 public class StudentDto {
@@ -3288,11 +2938,7 @@ private String mentorName;
 
 ```
 
-
-
-
-
-模拟服务将与一个内存自定义数据库交互以保存数据，该数据将被模拟用户界面消耗。我们将先从添加功能开始。我们有一个 `StudentDto` 列表，每当有一个新条目时，就会向列表中添加一个包含 `Student` 和导师的 `StudentDto` 实例。内存数据库的实现使用了基于枚举的单例设计模式。标识符字段从 1 开始，每计数一次递加 1。
+模拟服务将与一个内存自定义数据库交互以保存数据，该数据将被模拟用户界面消耗。我们将先从添加功能开始。我们有一个`StudentDto`列表，每当有一个新条目时，就会向列表中添加一个包含`Student`和导师的`StudentDto`实例。内存数据库的实现使用了基于枚举的单例设计模式。标识符字段从 1 开始，每计数一次递加 1。
 
 ```java
 public enum StudentInMemoryDB {
@@ -3311,7 +2957,7 @@ public enum StudentInMemoryDB {
 }
 ```
 
-现在让我们来看等效的模拟服务实现。`create` 方法接收来自用户界面的 `StudentDto` 实例，并通过模拟数据库增强列表。
+现在让我们来看等效的模拟服务实现。`create`方法接收来自用户界面的`StudentDto`实例，并通过模拟数据库增强列表。
 
 ```java
 @Controller
@@ -3340,7 +2986,7 @@ public enum StudentInMemoryDB {
 }
 ```
 
-在模拟服务中，查找所有行产生一个 `StudentDto` 列表，通过标识符查找获取一个 `StudentDto` 实例。
+在模拟服务中，查找所有行产生一个`StudentDto`列表，通过标识符查找获取一个`StudentDto`实例。
 
 ```java
 @Controller
@@ -3359,6 +3005,8 @@ public class StudentMockController {
 ```
 
 现在实现删除操作，该操作根据指定的标识符删除特定行。
+
+
 
 ```java
 public enum StudentInMemoryDB {
@@ -3379,17 +3027,17 @@ public enum StudentInMemoryDB {
 
 ```java
 @Controller
-@RequestMapping(value=”/onetooneselfreference/mock”)
+@RequestMapping(value="/onetooneselfreference/mock")
 public class StudentMockController {
-    @RequestMapping(value=”/remove/{stuid}”, method=RequestMethod.POST)
+    @RequestMapping(value="/remove/{stuid}", method=RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
-    public void remove(@PathVariable“stuid”) Integer stuid){
+    public void remove(@PathVariable("stuid") Integer stuid){
         StudentInMemoryDB.INSTANCE.remove(stuid);
     }
 }
 ```
 
-用于更改行内容的编辑操作所示。
+用于更改行内容的编辑操作如下所示。
 
 ```java
 public enum StudentInMemoryDB {
@@ -3405,21 +3053,23 @@ public enum StudentInMemoryDB {
 }
 ```
 
-编辑操作接收修改后的 `StudentDto`拷贝并更新特定行。
+编辑操作接收修改后的`StudentDto`拷贝并更新特定行。
 
 ```java
 @Controller
-@RequestMapping(value=”/onetooneselfreference/mock”)
+@RequestMapping(value="/onetooneselfreference/mock")
 public class StudentMockController {
-    @RequestMapping(value=”/edit”, method=RequestMethod.POST)
+    @RequestMapping(value="/edit", method=RequestMethod.POST)
     @ResponseBody
     public void edit(@RequestBody StudentDto student){
         StudentInMemoryDB.INSTANCE.edit(student);
     }
 }
-```# 开发用户界面
+```
 
-我们在前面的部分看到了如何使用内存数据库开发模拟服务。现在我们将查看图 2 所示的调用模拟服务的用户界面。该用户界面将具有添加、编辑和显示所有与 `Student` 相关记录（包括导师）的方法。
+# 开发用户界面
+
+我们在前面的部分看到了如何使用内存数据库开发模拟服务。现在我们将查看图 2 所示的调用模拟服务的用户界面。该用户界面将具有添加、编辑和显示所有与`Student`相关记录（包括导师）的方法。
 
 ![Image](img/0014.jpeg)
 
@@ -3428,210 +3078,206 @@ public class StudentMockController {
 JSP 是加载的初始页面，之后调用 JavaScript 过程。我们将通过 JSP 概述流程。
 
 ```html
-<body onload=”loadObjects()”>
-<div id=”container”>
+<body onload="loadObjects()">
+<div id="container">
     <div>
         <p>
             <b>Student:</b>
         </p>
     </div>
-    <form method=”post” id=”studentForm”>
+    <form method="post" id="studentForm">
         <table>
             <tbody>
                 <tr>
                     <td>Name:</td>
-                    <td><input name=”stuid” id=”stuid” type=”hidden”> <input
-                    name=”uname” type=”text”></td>
+                    <td><input name="stuid" id="stuid" type="hidden"> <input
+                    name="uname" type="text"></td>
                 </tr>
                 <tr>
-                    <td class=”tdLabel”><label>Mentor Name:</label></td>
-                    <td><input type=”text” name=”mentor” id=”mentor” /></td>
+                    <td class="tdLabel"><label>Mentor Name:</label></td>
+                    <td><input type="text" name="mentor" id="mentor" /></td>
                 </tr>
                 <tr>
-                    <td colspan=”2”><input type=submit value=”Create”
-                    id=”subButton” onclick=”return methodCall()”></td>
+                    <td colspan="2"><input type=submit value="Create"
+                    id="subButton" onclick="return methodCall()"></td>
                 </tr>
             </tbody>
         </table>
     </form>
-    <div id=”studentResponse”></div>
+    <div id="studentResponse"></div>
 </div>
 </body>
 ```
 
-首先，我们将查看 `loadObjects` 方法，它在页面初始化时调用。
+首先，我们将查看`loadObjects`方法，它在页面初始化时调用。
 
 ```javascript
 function loadObjects(){
     $.ajax({
-        url: ”/Spring-OODD/onetooneselfreference/mock/findAll”,
-        type: “GET”,
+        url: "/Spring-OODD/onetooneselfreference/mock/findAll",
+        type: "GET",
         data : {},
-        dataType: “json”,
+        dataType: "json",
         success: function(data, textStatus, jqXHR) {
             processResponse(data);
         },
         error: function (jqXHR, textStatus, errorThrown) {
-            document.getElementById(“stuname”).value=””;
-            alert(“Error Status:”+textStatus);
+            document.getElementById("stuname").value="";
+            alert("Error Status:"+textStatus);
         }
     });
     return false;
 }
 ```
 
-上述服务调用成功后调用的 `processResponse` 过程所示。形成表格的 `generateTableData` 方法也显示。
+上述服务调用成功后调用的`processResponse`过程如下所示。形成表格的`generateTableData`方法也一并显示。
 
 ```javascript
 function processResponse(responsedata){
-    var dynamicTableRow=”<table border=1>
+    var dynamicTableRow="<table border=1>
     <tr>
         <th>Name</th>
         <th>Mentor</th>
         <th>Actions</th>
-    </tr>”;
-    var dataRow=””;
+    </tr>";
+    var dataRow="";
     $.each(responsedata, function(itemno, itemvalue){
-        dataRow=dataRow+“<tr>
-        <td>”+itemvalue.name+”</td>
-        <td>”+itemvalue.mentorName+”</td>
-        <td>”+
-        <a href=# onclick=deleteObject(“+itemvalue.id+”)>Delete</a>+
-+”|<a href=# onclick=editObject(“+itemvalue.id+”)>Edit</a>”+
+        dataRow=dataRow+"<tr>
+        <td>"+itemvalue.name+"</td>
+        <td>"+itemvalue.mentorName+"</td>
+        <td>"+
+        <a href=# onclick=deleteObject("+itemvalue.id+")>Delete</a>+
+"|<a href=# onclick=editObject("+itemvalue.id+")>Edit</a>"+
         </td></td>
-    </tr>”;
+    </tr>";
     });
-    document.getElementById(“studentResponse”).innerHTML=dynamicTableRow+dataRow+</table>”;
+    document.getElementById("studentResponse").innerHTML=dynamicTableRow+dataRow+</table>";
 }
 
 function generateTableData(itemvalue){
     var mentorName = itemvalue.mentorName;
-    if(null == mentorName) mentorName=””;
-    var dataRow=””;
-    if(mentorName!=””){
-        dataRow=“<tr>
-        <td>”+itemvalue.name+”</td>
-        <td>”+mentorName+”</td>
-        <td>”+
-        <a href=# onclick=deleteObject(“+itemvalue.id+”)>Delete</a>+
-+”|<a href=# onclick=editObject(“+itemvalue.id+”)>Edit</a>”+
-        ”</td>
-    </tr>”;
+    if(null == mentorName) mentorName="";
+    var dataRow="";
+    if(mentorName!=""){
+        dataRow="<tr>
+        <td>"+itemvalue.name+"</td>
+        <td>"+mentorName+"</td>
+        <td>"+
+        <a href=# onclick=deleteObject("+itemvalue.id+")>Delete</a>+
+"|<a href=# onclick=editObject("+itemvalue.id+")>Edit</a>"+
+        "</td>
+    </tr>";
     }
     return dataRow;
 }
 ```
 
-我们已经查看了页面加载代码。一旦你理解了 JSP 片段的工作原理，你就知道正在调用 JavaScript 方法 `methodCall`，它适用于创建和更新功能。
+我们已经查看了页面加载代码。一旦你理解了 JSP 片段的工作原理，你就知道正在调用 JavaScript 方法`methodCall`，它适用于创建和更新功能。
 
 ```javascript
 function methodCall(){
-    var buttonValue = document.getElementById(“subButton”).value;
-    if(buttonValue==”Create”){
+    var buttonValue = document.getElementById("subButton").value;
+    if(buttonValue=="Create"){
         create();
-    }else if(buttonValue==”Update”){
+    }else if(buttonValue=="Update"){
         update();
     }
     return false;
 }
 ```
 
-接下来，我们将记录 `create` JavaScript 方法，它收集来自文本框学生姓名和导师的内容，并将 JSON 对象作为没有标识符的 `StudentDto` 传递。
+接下来，我们将记录`create`JavaScript 方法，它收集来自文本框学生姓名和导师的内容，并将 JSON 对象作为没有标识符的`StudentDto`传递。
 
 ```javascript
 function create(){
-    var name = $(“stuname”).val();
-    var mentor=$(“#mentor”).val();
-    var formData={“name”:name,”mentorName”:mentor};
+    var name = $("stuname").val();
+    var mentor=$("#mentor").val();
+    var formData={"name":name,"mentorName":mentor};
     $.ajax({
-        url : ”/Spring-OODD/onetooneselfreference/mock/create”,
-        type: “POST”,
+        url : "/Spring-OODD/onetooneselfreference/mock/create",
+        type: "POST",
         data : JSON.stringify(formData),
         beforeSend: function(xhr) {
-            xhr.setRequestHeader(“Accept”, “application/json”);
-            xhr.setRequestHeader(“Content-Type”, “application/json”);
+            xhr.setRequestHeader("Accept", "application/json");
+            xhr.setRequestHeader("Content-Type", "application/json");
         },
         success: function(data, textStatus, jqXHR) {
-            document.getElementById(“stuname”).value=””;
-            document.getElementById(“mentor”).value=””;
-            document.getElementById(“subButton”).value=”Create”;
+            document.getElementById("stuname").value="";
+            document.getElementById("mentor").value="";
+            document.getElementById("subButton").value="Create";
             loadObjects();
         },
         error: function (jqXHR, textStatus, errorThrown) {
-            document.getElementById(“stuname”).value=””;
-            document.getElementById(“mentor”).value=””;
-            alert(“Error Status Create:”+textStatus);
+            document.getElementById("stuname").value="";
+            document.getElementById("mentor").value="";
+            alert("Error Status Create:"+textStatus);
         }
     });
     return false;
 }
 ```
 
-我们将查看 `update` JavaScript 方法。
+我们将查看`update`JavaScript 方法。
 
 ```javascript
 function update(){
 ```
 
-
-
-
-
 ```javascript
-var name = $(“#stuname”).val();
-var id = $(“#stuid”).val();
-var mentor = $(“#mentor”).val();
-var formData={“id”:id,”name”:name,”mentorName”:mentor};
+var name = $("#stuname").val();
+var id = $("#stuid").val();
+var mentor = $("#mentor").val();
+var formData={"id":id,"name":name,"mentorName":mentor};
 
 $.ajax({
-  url : “/Spring-OODD/onetooneselfreference/mock/edit”,
-  type: “POST”,
+  url : "/Spring-OODD/onetooneselfreference/mock/edit",
+  type: "POST",
   data : JSON.stringify(formData),
   beforeSend: function(xhr) {
-    xhr.setRequestHeader(“Accept”, “application/json”);
-    xhr.setRequestHeader(“Content-Type”, “application/json”);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.setRequestHeader("Content-Type", "application/json");
   },
   success: function(data, textStatus, jqXHR) {
-    document.getElementById(“stuname”).value=””;
-    document.getElementById(“mentor”).value=””;
-    document.getElementById(“subButton”).value=”Create”;
+    document.getElementById("stuname").value="";
+    document.getElementById("mentor").value="";
+    document.getElementById("subButton").value="Create";
     loadObjects();
   },
   error: function (jqXHR, textStatus, errorThrown) {
-    document.getElementById(“stuname”).value=””;
-    document.getElementById(“mentor”).value=””;
-    alert(“Error Status Update:”+textStatus);
+    document.getElementById("stuname").value="";
+    document.getElementById("mentor").value="";
+    alert("Error Status Update:"+textStatus);
   }
 });
 return false;
 }
 ```
 
-`editObject` 和 `viewObject` JavaScript 方法调用允许选择一条记录进行编辑操作。
+`editObject`和`viewObject`JavaScript 方法调用允许选择一条记录进行编辑操作。
 
 ```javascript
 function editObject(stuid){
-  editurl=”/Spring-OODD/onetooneselfreference/mock/findById/”+stuid;
+  editurl="/Spring-OODD/onetooneselfreference/mock/findById/"+stuid;
   var studentForm={id:stuid};
   $.ajax({
     url : editurl,
-    type: “GET”,
+    type: "GET",
     data : studentForm,
-    dataType: “json”,
+    dataType: "json",
     success: function(data, textStatus, jqXHR) {
       viewObject(data);
-      document.getElementById(“subButton”).value=”Update”;
+      document.getElementById("subButton").value="Update";
     },
     error: function (jqXHR, textStatus, errorThrown) {
-      alert(“Error Status Find Object:”+textStatus);
+      alert("Error Status Find Object:"+textStatus);
     }
   });
 }
 
 function viewObject(data){
-  document.getElementById(“stuname”).value=data.name;
-  document.getElementById(“mentor”).value=data.mentorName;
-  document.getElementById(“stuid”).value=data.id;
+  document.getElementById("stuname").value=data.name;
+  document.getElementById("mentor").value=data.mentorName;
+  document.getElementById("stuid").value=data.id;
 }
 ```
 
@@ -3640,17 +3286,17 @@ function viewObject(data){
 ```javascript
 function deleteObject(stuid){
   var studentForm={id:stuid};
-  delurl=”/Spring-OODD/onetooneselfreference/mock/remove/”+stuid;
+  delurl="/Spring-OODD/onetooneselfreference/mock/remove/"+stuid;
   $.ajax({
     url : delurl,
-    type: “POST”,
+    type: "POST",
     data : studentForm,
-    dataType: “json”,
+    dataType: "json",
     success: function(data, textStatus, jqXHR) {
       loadObjects();
     },
     error: function (jqXHR, textStatus, errorThrown) {
-      alert(“Error Status Delete:”+textStatus);
+      alert("Error Status Delete:"+textStatus);
     }
   });
 }
@@ -3662,7 +3308,9 @@ function deleteObject(stuid){
 
 ### 开发资源（实体）层
 
-作为一种实践，我们遵循测试驱动开发（TDD）方法，因此我们首先为实体编写测试，然后编写实体的实现代码。首先，创建两个 `Student` 实例，并为每个学生实例挂载 `Mentor` 实例，最后检查是否有四个 `Student` 实例，如下代码所示。检查实例名称是否可以被更新以及删除。
+
+
+作为一种实践，我们遵循测试驱动开发（TDD）方法，因此我们首先为实体编写测试，然后编写实体的实现代码。首先，创建两个`Student`实例，并为每个学生实例挂载`Mentor`实例，最后检查是否有四个`Student`实例，如下代码所示。检查实例名称是否可以被更新以及删除。
 
 ```java
 @RunWith( SpringJUnit4ClassRunner.class )
@@ -3707,7 +3355,7 @@ public class StudentTest {
 }
 ```
 
-由于我们正在开发一个一对一的自引用关系，`Student` 实例挂载一个 `Mentor` 实例，`Student` 实例可能会被删除。使用 `orphanRemoval=true` 是因为如果分配了 `Student`，该实体会被删除。注意 `nullable` 属性的使用，因为如果分配了 `Student`，该实体会被删除。
+由于我们正在开发一个一对一的自引用关系，`Student`实例挂载一个`Mentor`实例，`Student`实例可能会被删除。使用`orphanRemoval=true`是因为如果分配了`Student`，该实体会被删除。注意`nullable`属性的使用，因为如果分配了`Student`，该实体会被删除。
 
 ```java
 @Entity
@@ -3745,7 +3393,7 @@ public class Student {
 }
 ```
 
-### 表结构
+## 表结构
 
 ```sql
 DROP TABLE `student`;
@@ -3759,7 +3407,7 @@ CREATE TABLE `student` (
 );
 ```
 
-### 开发数据访问层
+## 开发数据访问层
 
 现在转向数据访问层。我们将从获取所有记录的测试用例开始。
 
@@ -3778,7 +3426,7 @@ public class StudentDaoImplTest {
 }
 ```
 
-对于上面的测试，让我们对应的数据操作。使用 `Session.createQuery` 方法从 `Student` 实体中检索所有记录。
+对于上面的测试，让我们对应的数据操作。使用`Session.createQuery`方法从`Student`实体中检索所有记录。
 
 ```java
 @Repository
@@ -3794,7 +3442,7 @@ public class StudentDaoImpl implements StudentDao {
 }
 ```
 
-让我们观察插入操作的测试。向 `Student` 实体插入几行数据及其导师，并检查结果是否与 `Student` 实体中的四条记录匹配。
+让我们观察插入操作的测试。向`Student`实体插入几行数据及其导师，并检查结果是否与`Student`实体中的四条记录匹配。
 
 ```java
 public class StudentDaoImplTest {
@@ -3819,7 +3467,7 @@ public class StudentDaoImplTest {
 }
 ```
 
-插入操作只是请求 `Session.save` 方法。`Student` 实体的标识符会与其导师的标识符一起创建。
+插入操作只是请求`Session.save`方法。`Student`实体的标识符会与其导师的标识符一起创建。
 
 ```java
 public class StudentDaoImpl implements StudentDao {
@@ -3831,10 +3479,6 @@ public class StudentDaoImpl implements StudentDao {
   }
 }
 ```
-
-
-
-
 
 接下来，注意如何通过标识符查找行。如果你显式指定标识符，它在你的系统中可能有效，但在另一个系统中可能会失败，因此代码将不可移植的。
 
@@ -3860,7 +3504,7 @@ public class StudentDaoImplTest {
 }
 ```
 
-下面使用了 Hibernate 4 `Session.get()` 过程的数据访问方法，它接受标识符并检索匹配的 `Student` 实体。
+下面使用了 Hibernate 4 `Session.get()`过程的数据访问方法，它接受标识符并检索匹配的`Student`实体。
 
 ```java
 public class StudentDaoImpl implements StudentDao{
@@ -3874,7 +3518,7 @@ public class StudentDaoImpl implements StudentDao{
 }
 ```
 
-此时我们将查看删除测试过程。首先，我们插入四条 `Student` 和导师的记录，然后删除一个 `Student` 及其导师，最后检查数据库中是否还存在一条记录。
+此时我们将查看删除测试过程。首先，我们插入四条`Student`和导师的记录，然后删除一个`Student`及其导师，最后检查数据库中是否还存在一条记录。
 
 ```java
 public class StudentDaoImplTest {
@@ -3904,7 +3548,7 @@ public class StudentDaoImplTest {
 }
 ```
 
-删除操作使用了下面提到的 Hibernate 4 `Session.delete()` 方法。
+删除操作使用了下面提到的 Hibernate 4 `Session.delete()`方法。
 
 ```java
 public class StudentDaoImpl implements StudentDao{
@@ -3946,7 +3590,7 @@ public class StudentDaoImplTest {
 }
 ```
 
-更新数据访问操作随后练习了 Hibernate 4 `Session.merge()` 操作。
+更新数据访问操作随后练习了 Hibernate 4 `Session.merge()`操作。
 
 ```java
 public class StudentDaoImpl implements StudentDao{
@@ -3960,18 +3604,20 @@ public class StudentDaoImpl implements StudentDao{
 }
 ```
 
-### 开发业务服务层
+## 开发业务服务层
 
 现在现在跳转到业务服务层。首先，我们将回顾获取所有记录操作的测试。
 
+
+
 ```java
-@RunWith( SpringJUnit4ClassRunner.class )
-@ContextConfiguration( locations = { "classpath:context.xml" } )
-@TransactionConfiguration( defaultRollback = true )
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {"classpath:context.xml"})
+@TransactionConfiguration(defaultRollback = true)
 @Transactional
 public class StudentServiceImplTest {
     @Autowired
-    private StudentService service ;
+    private StudentService service;
 
     @Test
     public void testFindAll() {
@@ -3980,24 +3626,24 @@ public class StudentServiceImplTest {
 }
 ```
 
-让我们看看如何在业务服务中编写匹配方法。我们使用数据访问操作检索所有记录，并使用映射器返回一个 `StudentDto` 列表。
+让我们看看如何在业务服务中编写匹配方法。我们使用数据访问操作检索所有记录，并使用映射器返回一个`StudentDto`列表。
 
 ```java
 @Service
 @Transactional
-public class StudentServiceImpl implements StudentService{
+public class StudentServiceImpl implements StudentService {
     @Autowired
-    private StudentDao dao ;
+    private StudentDao dao;
 
     @Autowired
-    private StudentMapper mapper ;
+    private StudentMapper mapper;
 
     @Override
     public List<StudentDto> findAll() {
         List<StudentDto> studentDTOs = new ArrayList<StudentDto>();
         List<Student> students = dao.getAll();
-        if(null != students){
-            for(Student student : students){
+        if (null != students) {
+            for (Student student : students) {
                 studentDTOs.add(mapper.mapEntityToDto(student));
             }
         }
@@ -4006,7 +3652,7 @@ public class StudentServiceImpl implements StudentService{
 }
 ```
 
-正如所讨论的，我们在业务服务中有一个映射器来将实体转换为 DTO，反之亦然。这种映射器对于 `Student` 的管理是至关重要的。用户界面将 `Student` 转换，如下所示。
+正如所讨论的，我们在业务服务中有一个映射器来将实体转换为 DTO，反之亦然。这种映射器对于`Student`的管理是至关重要的。用户界面将`Student`转换，如下所示。
 
 ```java
 @Component
@@ -4039,12 +3685,12 @@ public class StudentMapper {
 }
 ```
 
-创建测试操作构建了一个带有导师的 `Student` 实例，并检查获取所有记录有两个记录。
+创建测试操作构建了一个带有导师的`Student`实例，并检查获取所有记录有两个记录。
 
 ```java
 public class StudentServiceImplTest {
     @Autowired
-    private StudentService service ;
+    private StudentService service;
 
     @Test
     public void testCreate() {
@@ -4060,12 +3706,12 @@ public class StudentServiceImplTest {
 业务服务层接收数据访问对象，将其转换为等效实体并传递给数据访问层保存到数据库。
 
 ```java
-public class StudentServiceImpl implements StudentService{
+public class StudentServiceImpl implements StudentService {
     @Autowired
-    private StudentDao dao ;
+    private StudentDao dao;
 
     @Autowired
-    private StudentMapper mapper ;
+    private StudentMapper mapper;
 
     @Override
     public void create(StudentDto studentDTO) {
@@ -4079,7 +3725,7 @@ public class StudentServiceImpl implements StudentService{
 ```java
 public class StudentServiceImplTest {
     @Autowired
-    private StudentService service ;
+    private StudentService service;
 
     @Test
     public void testFindById() {
@@ -4098,17 +3744,17 @@ public class StudentServiceImplTest {
 通过给定标识符查找行的业务服务操作所示。
 
 ```java
-public class StudentServiceImpl implements StudentService{
+public class StudentServiceImpl implements StudentService {
     @Autowired
-    private StudentDao dao ;
+    private StudentDao dao;
 
     @Autowired
-    private StudentMapper mapper ;
+    private StudentMapper mapper;
 
     @Override
     public StudentDto findById(Integer id) {
         Student student = dao.getById(id);
-        if(null != student){
+        if (null != student) {
             return mapper.mapEntityToDto(student);
         }
         return null;
@@ -4116,29 +3762,20 @@ public class StudentServiceImpl implements StudentService{
 }
 ```
 
-
-
-
-
 ```java
 return mapper.mapEntityToDto(student);
-
 }
-
 return null;
-
 }
-
 }
 ```
 
-`remove` 的测试操作会创建两个实例，移除其中一个，并检查数据库中是否仅存在记录。这是为了检查 `remove` 操作是否真的删除了该实例。
+`remove`的测试操作会创建两个实例，移除其中一个，并检查数据库中是否仅存在记录。这是为了检查`remove`操作是否真的删除了该实例。
 
 ```java
 public class StudentServiceImplTest {
-
     @Autowired
-    private StudentService service ;
+    private StudentService service;
 
     @Test
     public void testRemove() {
@@ -4162,30 +3799,28 @@ public class StudentServiceImplTest {
 定义了业务服务方法，通过标识符检索实例，并通过数据访问层程序从目录中移除该实例。
 
 ```java
-public class StudentServiceImpl implements StudentService{
+public class StudentServiceImpl implements StudentService {
+    @Autowired
+    private StudentDao dao;
 
     @Autowired
-    private StudentDao dao ;
-
-    @Autowired
-    private StudentMapper mapper ;
+    private StudentMapper mapper;
 
     @Override
     public void remove(Integer id) {
         Student student = dao.getById(id);
-        if(null != student)
+        if (null != student)
             dao.delete(student);
     }
 }
 ```
 
-下一个测试操作是 `edit`，它创建一个实例，编辑学生姓名和导师姓名，然后检查编辑功能是否正常。
+下一个测试操作是`edit`，它创建一个实例，编辑学生姓名和导师姓名，然后检查编辑功能是否正常。
 
 ```java
 public class StudentServiceImplTest {
-
     @Autowired
-    private StudentService service ;
+    private StudentService service;
 
     @Test
     public void testEdit() {
@@ -4204,16 +3839,15 @@ public class StudentServiceImplTest {
 }
 ```
 
-业务服务的等效操作是 edit 操作，它跳过了对数据访问的调用，在通过 mapper 方法转换后进行更新。注意，`edit` 操作没有 `Student` 导师实体的标识符，因此生成了一个新的。
+业务服务的等效操作是`edit`操作，它跳过了对数据访问的调用，在通过`mapper`方法转换后进行更新。注意，`edit`操作没有`Student`导师实体的标识符，因此生成了一个新的。
 
 ```java
-public class StudentServiceImpl implements StudentService{
+public class StudentServiceImpl implements StudentService {
+    @Autowired
+    private StudentDao dao;
 
     @Autowired
-    private StudentDao dao ;
-
-    @Autowired
-    private StudentMapper mapper ;
+    private StudentMapper mapper;
 
     @Override
     public void edit(StudentDto studentDTO) {
@@ -4224,7 +3858,9 @@ public class StudentServiceImpl implements StudentService{
 
 ### 开发表现层
 
-栈中的最后一层是基于 REST 的 Spring `StudentController`。在这里，我们首先描述测试。测试首先使用 REST 创建服务创建一个 `StudentDto` 实例。接着是检索所有记录，并对唯一的 `StudentDto` 实例进行更新。最后，测试通过从获取所有记录的服务获取标识符来移除该实例。
+栈中的最后一层是基于 REST 的 Spring `StudentController`。在这里，我们首先描述测试。测试首先使用 REST 创建服务创建一个`StudentDto`实例。接着是检索所有记录，并对唯一的`StudentDto`实例进行更新。最后，测试通过从获取所有记录的服务获取标识符来移除该实例。
+
+
 
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -4339,19 +3975,20 @@ public class StudentController {
 在本章中我们讨论了：
 
 *   开发 mock 内存数据库
+
 *   开发 mock 用户界面
+
 *   开发与一对自关联相关的实体
+
 *   开发数据访问层
+
 *   开发业务服务层
+
 *   开发 REST 服务控制器。
 
 # 第三部分. 管理多对多关系
 
 ## 第 6 章 多对多单向关系
-
-
-
-
 
 一对多单向关系是一种具有从父对象到子对象的引用，但反则没有的一对多关系。我们将遵循习惯的流程：从用户界面开始，然后是服务开发，最后在章节末尾整合这两个模块。紧跟本章节将使你能够掌握用户界面以及与一对多单向关系相关的 REST 服务。
 
@@ -4478,6 +4115,8 @@ public class PersonMockController {
 
 接下来，看负责更新行的 `edit` 操作。名称和号码集将根据 `PersonDto` 中的标识符进行更新。
 
+
+
 ```java
 public enum PersonInMemoryDB {
   public void edit(PersonDto personDto) {
@@ -4502,7 +4141,7 @@ public class PersonMockController {
   }
 ```
 
-### 开发用户界面
+## 开发用户界面
 
 既然我们已经学习了如何使用内存数据库编写模拟服务，让我们编写使用该模拟服务的用户界面。该用户界面将具有添加、编辑、删除与 `Person` 相关记录的功能，包括电话号码。用户界面的截图见 `Figure 6-2`。
 
@@ -4556,10 +4195,6 @@ function loadObjects(){
     },
     error: function (jqXHR, textStatus, errorThrown){
 ```
-
-
-
-
 
 ```javascript
 document.getElementById(“name”).value=””;
@@ -4667,6 +4302,7 @@ flag=true;
 }
 
 }
+
 }
 
 if(flag==false){numbers=null;}
@@ -4855,7 +4491,9 @@ error: function (jqXHR, textStatus, errorThrown){
 }
 
 }
-```}
+```
+
+
 
 ```javascript
 function viewObject(data){
@@ -4907,7 +4545,7 @@ phoneBoxGroupDiv.appendChild(phoneDiv);
 }
 ```
 
-最后，审查删除操作，该操作接收传入的标识符并移除相关的 Person 信息。
+最后，审查删除操作，该操作接收传入的标识符并移除相关的 `Person` 信息。
 
 ```javascript
 function deleteObject(personid){
@@ -4976,10 +4614,6 @@ phoneDiv.parentNode.removeChild(phoneDiv);
 
 ```
 
-
-
-
-
 ```javascript
 phoneBoxGroupDiv.appendChild(phoneDiv);
 }
@@ -4996,11 +4630,11 @@ function removePhone(index){
 }
 ```
 
-### 开发服务
+## 开发服务
 
 下一步是真正的服务开发，涉及四个主要步骤：创建实体、创建数据访问层、创建业务服务层以及创建基于 JSON 的 REST 设施。我们将从底向上开始，从实体一直到 REST 服务。
 
-### 开发资源（实体）层
+## 开发资源（实体）层
 
 首先，我们创建两个带有电话号码的 `Person` 实例，并检查这两个 `Person` 实例。接下来，我们进行更新并测试更改是否已反映。最后，我们删除其中一个并测试计数是否变为唯一。
 
@@ -5147,7 +4781,7 @@ CREATE TABLE `phone` (
 );
 ```
 
-### 开发数据访问层
+## 开发数据访问层
 
 我们将查看数据访问层。`Person` 实体标识符用于 `Phone`。
 
@@ -5168,7 +4802,7 @@ public class PersonDaoImpl {
 }
 ```
 
-随后，查看 insert 的测试。`Person` 实体标识符用于 `Phone`。
+随后，查看 `insert` 的测试。`Person` 实体标识符用于 `Phone`。
 
 ```java
 @Test
@@ -5210,6 +4844,12 @@ public class PersonDaoImpl {
 }
 ```
 
+
+
+### 测试数据访问层
+
+以下代码展示了 `PersonDaoImplTest` 测试类，用于验证插入和查询操作。该测试首先插入两个 `Person` 对象及其关联的 `Phone` 对象，然后通过 `getAll()` 和 `getById()` 方法验证数据是否正确持久化。
+
 ```java
 @Test
 public class PersonDaoImplTest {
@@ -5219,36 +4859,32 @@ public class PersonDaoImplTest {
   @Test
   public void testGetById() {
     Person p1 = new Person();
-    p1.setName(“Alex”);
+    p1.setName("Alex");
     List<Phone> phones = new ArrayList<Phone>();
     Phone ph1 = new Phone();
-    ph1.setNumber(“7798989138”);
+    ph1.setNumber("7798989138");
     Phone ph2 = new Phone();
-    ph2.setNumber(“7798989169”);
+    ph2.setNumber("7798989169");
     phones.add(ph1);
     phones.add(ph2);
     p1.setPhones(phones);
     dao.insert(p1);
     Person p2 = new Person();
-    p2.setName(“Fred”);
+    p2.setName("Fred");
     List<Phone> phones2 = new ArrayList<Phone>();
     Phone phone1 = new Phone();
-    phone1.setNumber(“8836987”);
+    phone1.setNumber("8836987");
     phones2.add(phone1);
     p2.setPhones(phones2);
     dao.insert(p2);
-    Assert.assertEquals(2L,dao.getAll().size());
+    Assert.assertEquals(2L, dao.getAll().size());
     List<Person> persons = dao.getAll();
     Person p3 = persons.get(1);
     Person p4 = dao.getById(p3.getId());
-    Assert.assertEquals(“Alex”,p4.getName());
+    Assert.assertEquals("Alex", p4.getName());
   }
 }
 ```
-
-
-
-
 
 接下来，设置删除测试程序。首先，插入两个 `Person` 账户及其手机号码，然后删除其中一条记录。最后检查数据库中是否还存在一条记录。
 
@@ -5278,11 +4914,11 @@ public class PersonDaoImplTest {
         phones.add(phone1);
         p2.setPhones(phones2);
         dao.insert(p2);
-        Assert.assertEquals(2L,dao.getAll().size());
+        Assert.assertEquals(2L, dao.getAll().size());
         List<Person> persons = dao.getAll();
         Person p = persons.get(1);
         dao.delete(p);
-        Assert.assertEquals(1L,dao.getAll().size());
+        Assert.assertEquals(1L, dao.getAll().size());
     }
 }
 ```
@@ -5321,7 +4957,7 @@ public class PersonDaoImplTest {
         phones.add(ph2);
         p1.setPhones(phones);
         dao.insert(p1);
-        Assert.assertEquals(1L,dao.getAll().size());
+        Assert.assertEquals(1L, dao.getAll().size());
         List<Person> persons = dao.getAll();
         Person p = persons.get(0);
         p.setName("Jhon");
@@ -5338,8 +4974,8 @@ public class PersonDaoImplTest {
         p.setPhones(phones1);
         dao.update(p);
         persons = dao.getAll();
-        Person p2=persons.get(0);
-        Assert.assertEquals("Jhon",p2.getName());
+        Person p2 = persons.get(0);
+        Assert.assertEquals("Jhon", p2.getName());
         Assert.assertEquals(3L, p2.getPhones().size());
     }
 }
@@ -5364,9 +5000,9 @@ public class PersonDaoImpl implements PersonDao{
 现在我们将跳转到业务服务层。首先，检查获取所有记录操作的测试。
 
 ```java
-@RunWith( SpringJUnit4ClassRunner.class )
-@ContextConfiguration( locations = { "classpath:context.xml" } )
-@TransactionConfiguration( defaultRollback = true )
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = { "classpath:context.xml" })
+@TransactionConfiguration(defaultRollback = true)
 @Transactional
 public class PersonServiceImplTest {
     @Autowired
@@ -5394,8 +5030,10 @@ public class PersonServiceImpl implements PersonService{
     public List<PersonDto> findAll() {
         List<Person> persons = dao.getAll();
         List<PersonDto> personDtos = new ArrayList<PersonDto>();
-        if(null !=persons){
-            for(Person person : persons){personDtos.add(mapper.mapEntityToDto(person));}
+        if (null != persons) {
+            for (Person person : persons) {
+                personDtos.add(mapper.mapEntityToDto(person));
+            }
         }
         return personDtos;
     }
@@ -5407,17 +5045,21 @@ public class PersonServiceImpl implements PersonService{
 ```java
 @Component
 public class PersonMapper {
-    public Person mapDtoToEntity(PersonDto personDto){
+    public Person mapDtoToEntity(PersonDto personDto) {
         Person person = new Person();
-        if(null !=personDto.getId()){person.setId(personDto.getId());}
-        if(null !=personDto.getName()){person.setName(personDto.getName());}
-        if(null !=personDto.getNumbers()&& personDto.getNumbers().size() > 0){
+        if (null != personDto.getId()) {
+            person.setId(personDto.getId());
+        }
+        if (null != personDto.getName()) {
+            person.setName(personDto.getName());
+        }
+        if (null != personDto.getNumbers() && personDto.getNumbers().size() > 0) {
             List<Phone> phoneList = new ArrayList<Phone>();
-            if(personDto.getNumbers()!=null && personDto.getNumbers().size()>0){
-                for(String number : personDto.getNumbers()){
+            if (personDto.getNumbers() != null && personDto.getNumbers().size() > 0) {
+                for (String number : personDto.getNumbers()) {
                     Phone phone = new Phone();
                     phone.setNumber(number);
-                    phoneList.add(phone);}
+                    phoneList.add(phone);
                 }
             }
             person.setPhones(phoneList);
@@ -5425,9 +5067,11 @@ public class PersonMapper {
         return person;
     }
 
-    public PersonDto mapEntityToDto(Person person){
+    public PersonDto mapEntityToDto(Person person) {
         PersonDto personDto = new PersonDto();
-        if(null !=person.getId()){personDto.setId(person.getId());}
+        if (null != person.getId()) {
+            personDto.setId(person.getId());
+        }
         // ... (省略部分逻辑以保持结构一致)
         return personDto;
     }
@@ -5436,18 +5080,14 @@ public class PersonMapper {
 
 （注：由于原文后部分存在大量逻辑重复和碎片化的代码描述，翻译已根据提供的结构进行了对应处理。）
 
-
-
-
-
 ```java
-personDto1.setName(“Alex”);
+personDto1.setName("Alex");
 
 List<String> phones = new ArrayList<String>();
 
-phones.add(“9158798405”);
+phones.add("9158798405");
 
-phones.add(“7798989134”);
+phones.add("7798989134");
 
 personDto1.setNumbers(phones);
 
@@ -5455,13 +5095,13 @@ service.create(personDto1);
 
 PersonDto personDto2 = new PersonDto();
 
-personDto2.setName(“Fred”);
+personDto2.setName("Fred");
 
 List<String> phones2 = new ArrayList<String>();
 
-phones2.add(“9158798408”);
+phones2.add("9158798408");
 
-phones2.add(“7798989139”);
+phones2.add("7798989139");
 
 personDto2.setNumbers(phones2);
 service.create(personDto1);
@@ -5475,7 +5115,6 @@ PersonDto deletePerson = personDtos.get(1);
 service.remove(deletePerson.getId());
 
 Assert.assertEquals(1L, service.findAll().size());
-}
 ```
 
 关联的业务服务方法接收一个标识符，并在数据访问层过程从索引中删除该特定的实例。
@@ -5483,68 +5122,72 @@ Assert.assertEquals(1L, service.findAll().size());
 ```java
 public class PersonServiceImpl implements PersonService {
 
-@Autowired
-private PersonDao dao;
+    @Autowired
+    private PersonDao dao;
 
-@Autowired
-private PersonMapper mapper;
+    @Autowired
+    private PersonMapper mapper;
 
-@Override
-public void remove(Integer id) {
-Person person = dao.getById(id);
-if(null !=person){dao.delete(person);}
+    @Override
+    public void remove(Integer id) {
+        Person person = dao.getById(id);
+        if (null != person) {
+            dao.delete(person);
+        }
+    }
 }
-}
-``` 
+```
 
 结束的测试操作是编辑操作，它创建一个实例，编辑电话号码，然后检查编辑是否生效。
 
 ```java
 public class PersonServiceImplTest {
 
-@Autowired
-private PersonService service;
+    @Autowired
+    private PersonService service;
 
-@Test
-public void testEdit(){
-PersonDto personDto1 = new PersonDto();
+    @Test
+    public void testEdit() {
+        PersonDto personDto1 = new PersonDto();
 
-personDto1.setName(“Alex”);
+        personDto1.setName("Alex");
 
-List<String> phones = new ArrayList<String>();
+        List<String> phones = new ArrayList<String>();
 
-phones.add(“9158798405”);
+        phones.add("9158798405");
 
-phones.add(“7798989134”);
+        phones.add("7798989134");
 
-personDto1.setNumbers(phones);
+        personDto1.setNumbers(phones);
 
-service.create(personDto1);
+        service.create(personDto1);
 
-Assert.assertEquals(1L, service.findAll().size());
+        Assert.assertEquals(1L, service.findAll().size());
 
-List<PersonDto> personDtos = service.findAll();
+        List<PersonDto> personDtos = service.findAll();
 
-PersonDto dto = personDtos.get(0);
+        PersonDto dto = personDtos.get(0);
 
-phones = new ArrayList<String>();
+        phones = new ArrayList<String>();
 
-phones.add(“9158798406”);
+        phones.add("9158798406");
 
-phones.add(“9158798407”);
+        phones.add("9158798407");
 
-phones.add(“9158798408”);
+        phones.add("9158798408");
 
-dto.setNumbers(phones);
+        dto.setNumbers(phones);
 
-service.edit(dto);
+        service.edit(dto);
 
-Assert.assertEquals(3L, service.findAll().get(0).getNumbers().size());
-}
+        Assert.assertEquals(3L, service.findAll().get(0).getNumbers().size());
+    }
 }
 ```
 
-编辑业务服务操作在处理后将对数据访问更新方法的调用替换为 mapper 方法。注意，编辑操作没有 Phone 实体的标识符，因此每次调用都会生成一个新的。
+编辑业务服务操作在处理后将对数据访问更新方法的调用替换为 `mapper` 方法。注意，编辑操作没有 `Phone` 实体的标识符，因此每次调用都会生成一个新的。
+
+
 
 ```java
 public class PersonServiceImpl implements PersonService{
@@ -5699,17 +5342,22 @@ service.remove(personid);
 }
 ```
 
-最后一步是将 REST 服务与真实的用户界面集成。注意请求映射从“/onetomanyunidirectional/mock”更改为“/onetomanyunidirectional”。
+最后一步是将 REST 服务与真实的用户界面集成。注意请求映射从`/onetomanyunidirectional/mock`更改为`/onetomanyunidirectional`。
 
 ### 总结
 
 在本章中，我们讨论了以下内容：
 
 *   开发 mock 内存数据库
+
 *   开发 mock 用户界面
+
 *   开发与一对多单向关联的实体
+
 *   开发数据访问层
+
 *   开发业务服务层
+
 *   开发 REST 服务控制器。
 
 ## 第 7 章\. 一对多的双向关系
@@ -5719,9 +5367,6 @@ service.remove(personid);
 **![Image](img/00017.jpeg)**
 
 *图 7-1: 一对多的双向关系*
-
-
-
 
 在本章中，我们将演示一个一对多的双向关系，如图 7-1 所示。`Item` 实体有一个标识符和一个类型为 `String` 的名称字段。`Feature` 实体也有一个标识符和一个 `String` 类型的数字字段。在 `Item` 的一个实例中，必须关联一个或多个 `Feature` 实例。同样，在 `Feature` 的一个实例中，必须链接一个 `Item` 实例。由于该关系是双向的，你可以从 `Item` 遍历 `Features` 列表，也可以从 `Feature` 实例跳转到对应的 `Item`。我们将首先介绍通过模拟用户界面编写的经典通道，然后是简单易懂的服务。
 
@@ -5873,6 +5518,8 @@ public enum ItemInMemoryDB {
 
 独有的编辑操作接受修改后的 `ItemDto` 副本并根据差异更新特定行。
 
+
+
 ```java
 public class ItemMockController {
 
@@ -5883,7 +5530,7 @@ public class ItemMockController {
     }
 ```
 
-### 开发用户界面
+## 开发用户界面
 
 我们在上一个节中检查了如何通过内存存储编写模拟服务。现在我们决定如何通过内存存储编写用户界面。用户界面将包含添加、编辑和删除功能。用户界面的截图如图 7-2 所示![Figure7-2](img/001.jpeg)
 
@@ -5953,8 +5600,6 @@ function generateTableData(object){
     return dataRow;
 }
 ```
-
-
 
 我们已经看到了页面加载技术。如果你诊断了 JSP 片段是如何运作的，你会注意到调用了 Javascript 方法 `methodCall`，它适用于创建和更新功能。
 
@@ -6116,6 +5761,8 @@ function viewObject(data){
 
 为了完成任务，我们将查看 `deleteObject` 操作，其中项目标识符作为响应传递，并且相关的 `Item` 以及 `Feature` 信息被移除。
 
+
+
 ```javascript
 function deleteObject(itemid){
   var itemForm={id:itemid};
@@ -6135,7 +5782,7 @@ function deleteObject(itemid){
 }
 ```
 
-此外，作为最后的脚注，描述了如何添加和删除特性区域的文本框以便管理多个特性这是通过 `addMoreFeature` 和 `removeFeature` 方法调用实现的。
+此外，作为最后的脚注，描述了如何添加和删除特性区域的文本框以便管理多个特性。这是通过`addMoreFeature`和`removeFeature`方法调用实现的。
 
 ```javascript
 var counter = 1;
@@ -6159,13 +5806,13 @@ function removeFeature(index){
 }
 ```
 
-### 开发服务
+## 开发服务
 
 下一步是实际的服务开发，涉及四个主要步骤——创建实体、创建数据访问层、创建业务服务层以及创建基于 JSON 的 REST 能力。我们将从实体开始，自底向上构建 REST 服务。
 
-### 开发资源（实体）层
+## 开发资源（实体）层
 
-作为一种实现技术，我们遵循测试驱动开发方法，因此我们首先对实体进行测试，然后进行实际开发。首先，我们创建带有特性列表的两个 Item 实例，并检查这两个 Item 实例。
+作为一种实现技术，我们遵循测试驱动开发方法，因此我们首先对实体进行测试，然后进行实际开发。首先，我们创建带有特性列表的两个`Item`实例，并检查这两个`Item`实例。
 
 ```java
 @RunWith( SpringJUnit4ClassRunner.class )
@@ -6194,8 +5841,6 @@ public class ItemTest {
   }
 }
 ```
-
-
 
 ```java
 Item item2 = new Item();
@@ -6237,9 +5882,9 @@ Assert.assertEquals(1L,ppItem.size());
 }
 ```
 
-### Feature 实体
+## Feature 实体
 
-我们将探索 `Feature` 实体，它包含一个标识符和一个名称的 `String` 字段。由于该实体位于反端且是一个双向关联，因此对 `Item` 的引用以 `@ManyToOne` 关联的形式出现。
+我们将探索`Feature`实体，它包含一个标识符和一个名称的`String`字段。由于该实体位于反端且是一个双向关联，因此对`Item`的引用以`@ManyToOne`关联的形式出现。
 
 ```java
 @Entity
@@ -6281,9 +5926,9 @@ public class Feature {
 }
 ```
 
-### Item 实体
+## Item 实体
 
-我们正在开发一个一对多的双向关系。一个 `Item` 实例必须有一个或多个 `Feature` 实例。由于关系是双向的，因此声明了对 `Feature` 列表的引用。我们还使用了 `orphanRemoval=true`，因为如果一组 `Features` 被重新分配，旧的 `Features` 将被删除。`Item` 是所有者，并通过 `@OneToMany` 注解维护对 `Feature` 的引用。
+我们正在开发一个一对多的双向关系。一个`Item`实例必须有一个或多个`Feature`实例。由于关系是双向的，因此声明了对`Feature`列表的引用。我们还使用了`orphanRemoval=true`，因为如果一组`Features`被重新分配，旧的`Features`将被删除。`Item`是所有者，并通过`@OneToMany`注解维护对`Feature`的引用。
 
 ```java
 @Entity
@@ -6324,7 +5969,7 @@ public class Item {
 }
 ```
 
-### 表结构
+## 表结构
 
 ```sql
 DROP TABLE `feature`;
@@ -6344,7 +5989,7 @@ CREATE TABLE `feature` (
 );
 ```
 
-### 开发数据访问层
+## 开发数据访问层
 
 接下来我们将观察数据访问层。我们将从获取所有记录方法的测试用例开始。
 
@@ -6364,7 +6009,7 @@ public class ItemDaoImplTest {
 }
 ```
 
-我们将掌握如何直接为上面的测试用例编写模拟的数据访问操作。使用 `SessionFactory.createQuery` 方法结合 SQL 从 `Item` 实体中检索所有记录。
+我们将掌握如何直接为上面的测试用例编写模拟的数据访问操作。使用`SessionFactory.createQuery`方法结合 SQL 从`Item`实体中检索所有记录。
 
 ```java
 @Repository
@@ -6382,9 +6027,7 @@ public class ItemDaoImpl implements ItemDao {
 }
 ```
 
-
-
-删除任务使用了 `Hibernate 4` 的 `Session.delete()` 方法。
+删除任务使用了`Hibernate 4`的`Session.delete()`方法。
 
 ```java
 public class ItemDaoImpl implements ItemDao {
@@ -6400,6 +6043,8 @@ public class ItemDaoImpl implements ItemDao {
 ```
 
 最后，我们将使用更新测试方法，它会插入两条记录，更新该行，并测试计数是否相同以及翻新是否生效。
+
+
 
 ```java
 public class ItemDaoImplTest {
@@ -6609,9 +6254,8 @@ public class ItemServiceImplTest {
     }
 }
 ```
+
 （注：原文提供的文本片段似乎存在逻辑重复或错乱，此处已根据要求进行了翻译和格式对齐）
-
-
 
 ```java
 public class ItemServiceImplTest {
@@ -6641,7 +6285,7 @@ public class ItemServiceImplTest {
 }
 ```
 
-业务服务的对应操作是编辑操作，它交替调用数据访问层、以及在通过 mapper 方法进行重构后的更新方法。请注意，编辑操作没有 Feature 实体的标识符，因此每次调用都会产生一个新的实体。
+业务服务的对应操作是编辑操作，它交替调用数据访问层、以及在通过 mapper 方法进行重构后的更新方法。请注意，编辑操作没有 `Feature` 实体的标识符，因此每次调用都会产生一个新的实体。
 
 ```java
 public class ItemServiceImpl implements ItemService{
@@ -6662,6 +6306,8 @@ public class ItemServiceImpl implements ItemService{
 ### 开发表现层
 
 这部分的最后一层是基于 REST 的 Spring Controller，我们将先为其编写测试。该测试涵盖了创建、编辑，然后是删除操作。
+
+
 
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -6761,10 +6407,6 @@ public class ItemController {
     }
 }
 ```
-
-
-
-
 
 `Category` 数据传输对象包含一个标识符、分类名称以及父分类标识符。父分类可以被多个子分类共享；因此，我们无法在每次创建新分类时都重新创建父分类。所以我们跳过了父级标识符，但保留了父分类名称。如果我们也跳过父分类名称，则必须重新创建父分类，并且通过更新父分类来重新创建所有相关的分类，这是一项繁琐的任务。
 
@@ -6897,6 +6539,8 @@ public enum CategoryInMemoryDB {
 
 `edit` 操作接收 `CategoryDto` 的转换副本并偏移更新特定行。
 
+
+
 ```java
 public class CategoryMockController {
     @RequestMapping(value="/edit", method=RequestMethod.POST)
@@ -6907,7 +6551,7 @@ public class CategoryMockController {
 }
 ```
 
-#### 开发 mock 用户界面
+## 开发 mock 用户界面
 
 我们测试了上一部分如何使用内存构建 mock 服务。现在来编写接收该 mock 服务的用户界面。用户界面将具有添加、编辑、删除和显示所有相关 `Category` 记录的功能。用户界面的截图如图 8-2 所示。
 
@@ -7027,10 +6671,6 @@ function methodCall() {
     }
 }
 ```
-
-
-
-
 
 ```javascript
 }else if(buttonValue==”Update”){
@@ -7165,13 +6805,15 @@ function deleteObject(Id){
 }
 ```
 
-### 开发 Service
+## 开发 Service
 
 后续步骤开发涉及四个主要步骤：创建实体、创建数据访问层、创建业务服务层和基于 JSON 的创建。
 
-#### 开发实体层
+### 开发实体层
 
 作为执行方法，我们遵循测试驱动的方法，因此首先创建两个 `Category` 实例，其中一个是根节点，另一个以根节点为父级的类别。稍后，我们进行修改并测试更改。最后，我们移除一个实例并测试计数。
+
+
 
 ```java
 @RunWith( SpringJUnit4ClassRunner.class )
@@ -7301,13 +6943,6 @@ public class CategoryDaoImpl implements CategoryDao {
 }
 ```
 
-
-
-
-}
-
-}
-
 现在让我们见证插入操作的测试。我们插入一个根分类，接着插入一个子分类，然后检查数量是否为双。
 
 ```java
@@ -7333,7 +6968,7 @@ public class CategoryDaoImplTest {
 }
 ```
 
-相应的插入操作请求了 Hibernate 的 `Session.save` 方法。Category 实体的标识符会与其父级一起被可靠地设置。
+相应的插入操作请求了 Hibernate 的 `Session.save` 方法。`Category` 实体的标识符会与其父级一起被可靠地设置。
 
 ```java
 public class CategoryDaoImpl implements CategoryDao {
@@ -7387,7 +7022,7 @@ public class CategoryDaoImpl implements CategoryDao {
 }
 ```
 
-我们在这个阶段将建立删除测试程序。首先，我们插入两个版本的 Category，然后删除其中一个账户，最后测试孤立的记录是否仍然存在内存中。
+我们在这个阶段将建立删除测试程序。首先，我们插入两个版本的 `Category`，然后删除其中一个账户，最后测试孤立的记录是否仍然存在内存中。
 
 ```java
 public class CategoryDaoImplTest {
@@ -7433,16 +7068,22 @@ public class CategoryDaoImpl implements CategoryDao {
 
 最后，我们将查看更新测试方法，该方法插入了三条记录，评估该行并测试更改是否产生了反映。
 
+
+
+## 数据访问层测试
+
+以下测试操作验证了更新数据访问操作，它使用了 Hibernate 4 的 `Session.merge()` 操作。
+
 ```java
 public class CategoryDaoImplTest {
 
     @Test
     public void testUpdate() {
         Category rootCategory = new Category();
-        rootCategory.setName(“Java”);
+        rootCategory.setName("Java");
         dao.insert(rootCategory);
         Category nextCategory = new Category();
-        nextCategory.setName(“Ejb 2.1”);
+        nextCategory.setName("Ejb 2.1");
         List<Category> categories = dao.getAll();
         rootCategory = categories.get(0);
         nextCategory.setCategory(rootCategory);
@@ -7450,22 +7091,24 @@ public class CategoryDaoImplTest {
         categories = dao.getAll();
         Category parentCategory = categories.get(0);
         Category subCategory = new Category();
-        subCategory.setName(“JEE”);
+        subCategory.setName("JEE");
         subCategory.setCategory(parentCategory);
         dao.insert(subCategory);
         categories = dao.getAll();
         Category searchCategory = categories.get(0);
-        searchCategory.setName(“Spring 3.0”);
+        searchCategory.setName("Spring 3.0");
         rootCategory = categories.get(2);
         searchCategory.setCategory(rootCategory);
         dao.update(searchCategory);
         categories = dao.getAll();
-        Assert.assertEquals(“Java”, categories.get(0).getCategory().getName());
+        Assert.assertEquals("Java", categories.get(0).getCategory().getName());
     }
 }
 ```
 
-更新数据访问操作可以在下方，它使用了 Hibernate 4 的 `Session.merge()` 操作。
+## 数据访问层实现
+
+更新数据访问操作可以在下方获取，它使用了 Hibernate 4 的 `Session.merge()` 操作。
 
 ```java
 public class CategoryDaoImpl implements CategoryDao {
@@ -7479,23 +7122,7 @@ public class CategoryDaoImpl implements CategoryDao {
 }
 ```
 
-业务服务层
-
-数据访问操作可以通过下方获取，它使用了 Hibernate 4 的 `Session.merge()` 操作。
-
-```java
-public class CategoryDaoImpl implements CategoryDao {
-    @Autowired
-    private SessionFactory sessionFactory;
-
-    @Override
-    public void update(Category category) {
-        sessionFactory.getCurrentSession().merge(category);
-    }
-}
-```
-
-业务服务层
+## 业务服务层
 
 符合规范的业务服务层收集数据访问对象，通过 Mapper 转换为实体，并发送到数据访问层加载到数据库。
 
@@ -7518,7 +7145,7 @@ public class CategoryServiceImpl implements CategoryService{
 }
 ```
 
-业务服务层
+## 业务服务层 Mapper
 
 我们现在进入业务服务层。首先，我们有一个 Mapper 用于数据访问对象和实体之间的相互转换。
 
@@ -7542,9 +7169,9 @@ public class CategoryMapper {
 }
 ```
 
-业务服务层
+## 业务服务层测试
 
-创建测试操作，它创建了两个 Category 实例，链接其父级，并检查实例数量与获取所有记录的操作一致。
+创建测试操作，它创建了两个 `Category` 实例，链接其父级，并检查实例数量与获取所有记录的操作一致。
 
 ```java
 public class CategoryServiceImplTest {
@@ -7554,20 +7181,18 @@ public class CategoryServiceImplTest {
     @Test
     public void testCreate() {
         CategoryDto parent = new CategoryDto();
-        parent.setName(“Java”);
+        parent.setName("Java");
         service.create(parent);
         Assert.assertEquals(1L, service.findAll().size());
         parent = service.findAll().get(0);
         CategoryDto jee = new CategoryDto();
-        jee.setName(“Java EE”);
+        jee.setName("Java EE");
         jee.setParentId(parent.getId());
         service.create(jee);
         Assert.assertEquals(2L, service.findAll().size());
     }
 }
 ```
-
-业务服务层
 
 以下测试操作是根据给定标识符查找行。
 
@@ -7584,9 +7209,7 @@ public class CategoryServiceImplTest {
 }
 ```
 
-
-
-### 开发表现层
+## 开发表现层
 
 栈中的最终层级是基于 REST 的 Spring Controller，我们将先编写它的测试。测试涵盖了创建、编辑和删除操作。
 
@@ -7682,6 +7305,8 @@ public class CategoryControllerTest {
 
 最后的 REST Spring Controller 将与业务服务层连接，后者最终通过数据访问层连接数据库。该阶段与模拟服务相似，不同在于代码与真实的数据库交互，而不是内存中的数据库。
 
+
+
 ```java
 @Controller
 @RequestMapping(value="/onetomanyselfreference")
@@ -7714,9 +7339,6 @@ public class CategoryController {
 }
 ```
 
-
-
-
 ```java
 public void edit(@RequestBody CategoryDto categoryDto){
     service.edit(categoryDto);
@@ -7724,7 +7346,7 @@ public void edit(@RequestBody CategoryDto categoryDto){
 }
 ```
 
-最后一步是将 REST 服务与直观的用户界面进行整合。请注意，请求映射从 `/onetomanyselfreference/mock` 更改为 `/onetomanyselfreference/`。剩余的任务包括以 mock 用户界面为参考，编写实际的用户界面。
+最后一步是将 REST 服务与直观的用户界面进行整合。请注意，请求映射从`/onetomanyselfreference/mock`更改为`/onetomanyselfreference/`。剩余的任务包括以 mock 用户界面为参考，编写实际的用户界面。
 
 ### 总结
 
@@ -7751,7 +7373,7 @@ public void edit(@RequestBody CategoryDto categoryDto){
 
 *图 9-1：多对多单向关系*
 
-我们已经在之前的章节中看到了如何管理一对多的关系的不同形式。在本章中，我们将查看如图 9-1 所示的多对多单向关联。`User` 实体有一个标识符和一个类型为 `String` 的名称字段。`Group` 实体也有一个标识符和一个 `String` 类型的字段。每个多对多关系都有一个所有者。在这个例子中，`User` 是所有者。在 `User` 实例中，必须链接一个或多个 `Group` 实例，而这些 `Group` 实体反过来被许多 `User` 实体共享。由于关系是单向的，你可以从 `User` 遍历 `Group` 列表，但不允许进行反向遍历。我们将遵循常规通道，先编写 mock 用户界面，然后是真实的服务。
+我们已经在之前的章节中看到了如何管理一对多的关系的不同形式。在本章中，我们将查看如图 9-1 所示的多对多单向关联。`User`实体有一个标识符和一个类型为`String`的名称字段。`Group`实体也有一个标识符和一个`String`类型的字段。每个多对多关系都有一个所有者。在这个例子中，`User`是所有者。在`User`实例中，必须链接一个或多个`Group`实例，而这些`Group`实体反过来被许多`User`实体共享。由于关系是单向的，你可以从`User`遍历`Group`列表，但不允许进行反向遍历。我们将遵循常规通道，先编写 mock 用户界面，然后是真实的服务。
 
 ### 开发用户界面
 
@@ -7759,7 +7381,7 @@ public void edit(@RequestBody CategoryDto categoryDto){
 
 ### 开发数据传输对象
 
-`UserDto` 数据传输对象包含一个标识符和用户名。同样，`GroupDto` 对象也有一个标识符和一个名称。连接对象 `UserGroupDto` 包含 `UserDto` 和 `GroupDto` 的实例。
+`UserDto`数据传输对象包含一个标识符和用户名。同样，`GroupDto`对象也有一个标识符和一个名称。连接对象`UserGroupDto`包含`UserDto`和`GroupDto`的实例。
 
 ```java
 public class UserDto {
@@ -7783,7 +7405,7 @@ public class UserGroupDto {
 
 ### 开发 mock 服务
 
-我们将只看到如何管理 `User` 和 `Group` 之间的连接。正如前面的章节所讨论，针对 `User` 以及 `Group` 的常规创建、读取、删除和编辑操作保持相同的实现。为了方便参考，如果你在理解流程时遇到任何问题，附录中提供了完整源代码链接。mock 服务将与内存数据库交互以保存数据，这些数据将被数据消耗。
+我们将只看到如何管理`User`和`Group`之间的连接。正如前面的章节所讨论，针对`User`以及`Group`的常规创建、读取、删除和编辑操作保持相同的实现。为了方便参考，如果你在理解流程时遇到任何问题，附录中提供了完整源代码链接。mock 服务将与内存数据库交互以保存数据，这些数据将被数据消耗。
 
 ```java
 public class UserGroupDB {
@@ -7841,7 +7463,7 @@ public class UserGroupController {
 
 #### 开发 mock 用户界面
 
-我们在上一节检查了如何使用内存数据库开发 mock 服务。现在我们选择编写调用该 mock 服务的用户界面，如图 9-2 所示。我们将讨论与连接相关的用户界面，因为 `User` 和 Group 的创建、读取、更新和删除方法保持不变。如果你觉得困惑，请下载源代码查看如何继续。
+我们在上一节检查了如何使用内存数据库开发 mock 服务。现在我们选择编写调用该 mock 服务的用户界面，如图 9-2 所示。我们将讨论与连接相关的用户界面，因为`User`和`Group`的创建、读取、更新和删除方法保持不变。如果你觉得困惑，请下载源代码查看如何继续。
 
 ![Image](img/00022.jpeg)
 
@@ -7879,10 +7501,7 @@ JSP body 是初始加载页面，之后会调用 JavaScript 操作。我们将�
 </body>
 ```
 
-
-
-
-最初，我们将学习 JavaScript 的 `loadObjects` 方法，该方法在页面通过 `onload` 事件初始化时被调用。
+最初，我们将学习 JavaScript 的`loadObjects`方法，该方法在页面通过`onload`事件初始化时被调用。
 
 ```javascript
 function loadObjects(){
@@ -7934,7 +7553,7 @@ function loadObjects(){
 }
 ```
 
-当上述服务调用执行时，会调用 `processUserGroupResponseData` JavaScript 方法。页面将打印出内存数据库的资源。此外，还展示了构建表格结构的 `generateUserGroupTableData` JavaScript 方法。
+当上述服务调用执行时，会调用`processUserGroupResponseData`JavaScript 方法。页面将打印出内存数据库的资源。此外，还展示了构建表格结构的`generateUserGroupTableData`JavaScript 方法。
 
 ```javascript
 function processUserGroupResponseData(responsedata){
@@ -7962,30 +7581,33 @@ function generateUserGroupTableData(itemvalue){
 }
 ```
 
-我们已经掌握了页面加载技术。如果你能分析 JSP 片段的工作原理，就会预见到调用了 JavaScript 方法 `methodCall`，它调用了 User 和 Group 的 `create` 和 `update` 操作，以及 User 和 Group 的关联（join）。
+我们已经掌握了页面加载技术。如果你能分析 JSP 片段的工作原理，就会预见到调用了 JavaScript 方法`methodCall`，它调用了 User 和 Group 的`create`和`update`操作，以及 User 和 Group 的关联（join）。
+
+
 
 ```javascript
 function methodCall(){
-  var buttonValue = document.getElementById(“subButtonUser”).value;
-  if(buttonValue==“Create User”){
+  var buttonValue = document.getElementById("subButtonUser").value;
+  if(buttonValue=="Create User"){
     createUser();
-  } else if(buttonValue==“Update User”){
+  } else if(buttonValue=="Update User"){
     updateUser();
   }
-  var groupButtonValue = document.getElementById(“subButtonGroup”).value;
-  if(groupButtonValue==“Create Group”) {
+  var groupButtonValue = document.getElementById("subButtonGroup").value;
+  if(groupButtonValue=="Create Group") {
     createGroup();
-  } else if(groupButtonValue==“Update Group”) {
+  } else if(groupButtonValue=="Update Group") {
     updateGroup();
   }
-  var userGroupButtonValue = document.getElementById(“subButtonGroup”).value;
-  if(userGroupButtonValue==“Assign”) {
+  var userGroupButtonValue = document.getElementById("subButtonGroup").value;
+  if(userGroupButtonValue=="Assign") {
     isPresent();
   }
   return false;
+}
+```
 
-
-首先，我们将识别 `isPresent` 方法来检查 User 和 Group 之间是否存在关联。如果关系不存在，则形成一个新的关联。
+首先，我们将识别`isPresent`方法来检查`User`和`Group`之间是否存在关联。如果关系不存在，则形成一个新的关联。
 
 ```javascript
 function isPresent(){
@@ -7993,25 +7615,26 @@ function isPresent(){
   var groupid = $(groupSelectBox).val();
   var username = $(userSelectBox).find('option:selected').text();
   var groupname = $(groupSelectBox).find('option:selected').text();
+
   if(null != userid && userid != "" && null != groupid && groupid != "") {
-    var formData={“userDto”:{id”:userid},”groupDto”:{id”:groupID}};
+    var formData={"userDto":{id:userid},"groupDto":{id:groupID}};
     $.ajax({
-      url : “/Spring-OODD/manytomanyunidirectional/usergroup/mock/isPresent”,
-      type: “POST”,
+      url : "/Spring-OODD/manytomanyunidirectional/usergroup/mock/isPresent",
+      type: "POST",
       data : JSON.stringify(formData),
       beforeSend: function(xhr) {
-        xhr.setRequestHeader(“Accept”, “application/json”);
-        xhr.setRequestHeader(“Content-Type”, “application/json”);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.setRequestHeader("Content-Type", "application/json");
       },
       success: function(data, textStatus, jqXHR) {
         if(!data) {
           createUserGroup(userid, groupid, groupname);
         } else {
-          alert(“User already assigned to this group”);
+          alert("User already assigned to this group");
         }
       },
       error: function (jqXHR, textStatus, errorThrown) {
-        alert(“Error Status Create:”+errorThrown);
+        alert("Error Status Create:"+errorThrown);
       }
     });
   }
@@ -8019,50 +7642,50 @@ function isPresent(){
 }
 ```
 
-我们还将查看 `createUserGroup` 方法，它创建了选定的 User 和 Group 之间的关联。
+我们还将查看`createUserGroup`方法，它创建了选定的`User`和`Group`之间的关联。
 
 ```javascript
 function createUserGroup(userid,groupid, username, groupname){
-  var formData={“userDto”:{id”:userid, “name”:username},”groupDto”:{id”:groupid,“name”:groupname}};
+  var formData={"userDto":{id:userid, "name":username},"groupDto":{id:groupid,"name":groupname}};
   $.ajax({
-    url : “/Spring-OODD/manytomanyunidirectional/usergroup/mock/create”,
-    type: “POST”,
+    url : "/Spring-OODD/manytomanyunidirectional/usergroup/mock/create",
+    type: "POST",
     data : JSON.stringify(formData),
     beforeSend: function(xhr) {
-      xhr.setRequestHeader(“Accept”, “application/json”);
-      xhr.setRequestHeader(“Content-Type”, “application/json”);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.setRequestHeader("Content-Type", "application/json");
     },
     success: function(data, textStatus, jqXHR) {
       loadObjects();
     },
     error: function (jqXHR, textStatus, errorThrown) {
-      alert(“Error Status Create:”+textStatus);
+      alert("Error Status Create:"+textStatus);
     }
   });
   return false;
 }
 ```
 
-接下来，我们将审查 `deleteUserGroupObject` JavaScript 方法，它接收 User ID 和 Group ID 作为输入并从关联中移除。
+接下来，我们将审查`deleteUserGroupObject` JavaScript 方法，它接收`User ID`和`Group ID`作为输入并从关联中移除。
 
 ```javascript
 function deleteUserGroupObject(userid,groupid){
-  var formData={“userDto”:{id”:userid},”groupDto”:{id”:groupid}};
-  delurl=”/Spring-OODD/manytomanyunidirectional/usergroup/mock/remove”;
+  var formData={"userDto":{id:userid},"groupDto":{id:groupid}};
+  delurl="/Spring-OODD/manytomanyunidirectional/usergroup/mock/remove";
   $.ajax({
     url : delurl,
-    type: “POST”,
+    type: "POST",
     data : JSON.stringify(formData),
-    dataType: “json”,
+    dataType: "json",
     beforeSend: function(xhr) {
-      xhr.setRequestHeader(“Accept”, “application/json”);
-      xhr.setRequestHeader(“Content-Type”, “application/json”);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.setRequestHeader("Content-Type", "application/json");
     },
     success: function(data, textStatus, jqXHR) {
       loadObjects();
     },
     error: function (jqXHR, textStatus, errorThrown) {
-      alert(“Error Status Delete:”+textStatus);
+      alert("Error Status Delete:"+textStatus);
     }
   });
 }
@@ -8070,43 +7693,51 @@ function deleteUserGroupObject(userid,groupid){
 
 ### 开发服务
 
-接下来的步骤是实际的服务开发，涉及四个主要步骤：创建实体、创建数据访问层、创建业务服务层以及创建基于 JSON 的 REST 能力。我们将从实体开始直到 服务。
+接下来的步骤是实际的服务开发，涉及四个主要步骤：创建实体、创建数据访问层、创建业务服务层以及创建基于 JSON 的 REST 能力。我们将从实体开始直到服务。
 
 ### 开发资源（实体）层
 
-首先，我们创建两个 `User` 实例，最后检查两个 User 实例。随后，我们进行更新并测试修改是否生效。最后，我们删除一个实例并测试数量是否唯一。此外，我们添加两个 `Group` 变体并与剩余的 `User` 实例关联。
+首先，我们创建两个`User`实例，最后检查两个`User`实例。随后，我们进行更新并测试修改是否生效。最后，我们删除一个实例并测试数量是否唯一。此外，我们添加两个`Group`变体并与剩余的`User`实例关联。
 
 ```java
-@RunWith( SpringJUnit4ClassRunner.class )
-@ContextConfiguration( locations = { “classpath:context.xml” } )
-@TransactionConfiguration( defaultRollback = true )
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {"classpath:context.xml"})
+@TransactionConfiguration(defaultRollback = true)
 @Transactional
 public class UserTest {
   @Autowired
   private SessionFactory sessionFactory;
-  @SuppressWarnings("unchecked”)
+
+  @SuppressWarnings("unchecked")
   @Test
   public void testCRUD()
   {
     User u1 = new User();
-    u1.setName(“A”);
+    u1.setName("A");
     User u2 = new User();
-    u2.setName(“B”);
+    u2.setName("B");
+
     sessionFactory.getCurrentSession().save(u1);
     sessionFactory.getCurrentSession().save(u2);
-    u1.setName(“C”);
+
+    u1.setName("C");
     sessionFactory.getCurrentSession().merge(u1);
-    List<User> list = sessionFactory.getCurrentSession().createQuery(“from User”).list();
+
+    List<User> list = sessionFactory.getCurrentSession().createQuery("from User").list();
     Assert.assertEquals(2L, list.size());
+
     sessionFactory.getCurrentSession().delete(u1);
-    List<User> list2 = sessionFactory.getCurrentSession().createQuery(“from User”).list();
+    List<User> list2 = sessionFactory.getCurrentSession().createQuery("from User").list();
     Assert.assertEquals(1L, list2.size());
+
     Group g1 = new Group();
-    g1.setName(“A”);
+    g1.setName("A");
     Group g2 = new Group();
-    g2.setName(“B”);
+    g2.setName("B");
+
     sessionFactory.getCurrentSession().save(g1);
     sessionFactory.getCurrentSession().save(g2);
+
     User u3 = list2.get(0);
     u3.getGroups().add(g1);
     u3.getGroups().add(g2);
@@ -8115,16 +7746,12 @@ public class UserTest {
 }
 ```
 
-我们将查看 `Group` 实体，它包含一个标识符和名称 String 字段。由于该实体位于反向侧且是单向关联，因此没有对 User 的引用。
+我们将查看`Group`实体，它包含一个标识符和名称`String`字段。由于该实体位于反向侧且是单向关联，因此没有对`User`的引用。
 
 ```java
 @Entity
-@Table(name=”GROUPS”)
+@Table(name="GROUPS")
 ```
-
-
-
-
 
 ```java
 public class Group {
@@ -8153,7 +7780,7 @@ public class Group {
 }
 ```
 
-我们正在演进一个多对多的关联。`User` 实例可能拥有一个或多个 `Group` 实例，这些实例可以与其他 `User` 共享。由于该关系是单向的，对 `Group` 列表的引用是在所有方指定的。`@ManyToMany` 注解定义了一个具有多对多重数性的多值关联。连接表指定在所有方上，在本例中是 `User`。`@JoinTable` 注解通常指定连接表名称以及连接列和反向连接列。
+我们正在演进一个多对多的关联。`User`实例可能拥有一个或多个`Group`实例，这些实例可以与其他`User`共享。由于该关系是单向的，对`Group`列表的引用是在所有方指定的。`@ManyToMany`注解定义了一个具有多对多重数性的多值关联。连接表指定在所有方上，在本例中是`User`。`@JoinTable`注解通常指定连接表名称以及连接列和反向连接列。
 
 ```java
 @Entity
@@ -8231,7 +7858,7 @@ CREATE TABLE user_group (
 
 ### 开发数据访问层
 
-接下来我们将查看数据访问层。我们将跳转到获取所有记录操作的测试用例。请注意，我们将讨论数据访问层，它主要管理 `User` 和 `Group` 的连接。User 数据访问层与 Group 数据访问实现保持与早期章节中讨论的相同。
+接下来我们将查看数据访问层。我们将跳转到获取所有记录操作的测试用例。请注意，我们将讨论数据访问层，它主要管理`User`和`Group`的连接。`User`数据访问层与`Group`数据访问实现保持与早期章节中讨论的相同。
 
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -8253,12 +7880,19 @@ public class UserGroupDaoImplTest {
 }
 ```
 
-我们将理解为测试编写数据访问操作。使用 Hibernate `createQuery` 方法配合 SQL 从 `User` 实体和 `Groups` 检索所有记录。SQL 从连接表中检索 `User` 和 `Group` 的唯一组合。
+我们将理解为测试编写数据访问操作。使用 Hibernate `createQuery`方法配合 SQL 从`User`实体和`Groups`检索所有记录。SQL 从连接表中检索`User`和`Group`的唯一组合。
 
 ```java
 @Repository
-@Transactional
+```
+
+
+
+`@Transactional`
+
+```java
 public class UserGroupDaoImpl implements UserGroupDao {
+
     @Autowired
     private SessionFactory sessionFactory;
 
@@ -8273,10 +7907,13 @@ public class UserGroupDaoImpl implements UserGroupDao {
 
 ```java
 public class UserGroupDaoImpl {
+
     @Autowired
     private UserDao userDao;
+
     @Autowired
     private GroupDao groupDao;
+
     @Autowired
     private UserGroupDao userGroupDao;
 
@@ -8309,6 +7946,7 @@ public class UserGroupDaoImpl {
 @Repository
 @Transactional
 public class UserGroupDaoImpl implements UserGroupDao {
+
     @Autowired
     private SessionFactory sessionFactory;
 
@@ -8333,10 +7971,13 @@ public class UserGroupDaoImpl implements UserGroupDao {
 @TransactionConfiguration(defaultRollback = true)
 @Transactional
 public class UserGroupServiceImplTest {
+
     @Autowired
     private UserService userService;
+
     @Autowired
     private GroupService groupService;
+
     @Autowired
     private UserGroupService userGroupService;
 
@@ -8353,14 +7994,19 @@ public class UserGroupServiceImplTest {
 @Service
 @Transactional
 public class UserGroupServiceImpl implements UserGroupService {
+
     @Autowired
     private GroupDao groupDao;
+
     @Autowired
     private UserDao userDao;
+
     @Autowired
     private UserGroupDao userGroupDao;
+
     @Autowired
     private UserMapper userMapper;
+
     @Autowired
     private GroupMapper groupMapper;
 
@@ -8388,10 +8034,13 @@ public class UserGroupServiceImpl implements UserGroupService {
 
 ```java
 public class UserGroupServiceImplTest {
+
     @Autowired
     private UserService userService;
+
     @Autowired
     private GroupService groupService;
+
     @Autowired
     private UserGroupService userGroupService;
 
@@ -8416,10 +8065,6 @@ public class UserGroupServiceImplTest {
     }
 }
 ```
-
-
-
-
 
 ```java
 userGroupDto.setGroupDto(groupDto1);
@@ -8479,17 +8124,22 @@ public class UserGroupServiceImplTest {
         UserDto userDto = new UserDto();
         userDto.setName("Frodo Baggins");
         userService.create(userDto);
+
         GroupDto groupDto = new GroupDto();
         groupDto.setName("The Lord of the Rings");
         groupService.create(groupDto);
+
         List<UserDto> userDtos = userService.findAll();
         UserDto userDto1 = userDtos.get(0);
+
         List<GroupDto> groupDtos = groupService.findAll();
         GroupDto groupDto1 = groupDtos.get(0);
+
         userGroupDto.setUserDto(userDto1);
         userGroupDto.setGroupDto(groupDto1);
         userGroupService.create(userGroupDto);
         Assert.assertEquals(1L, userGroupService.findAll().size());
+
         List<UserGroupDto> uList = userGroupService.findAll();
         UserGroupDto userGroupDto1 = uList.get(0);
         userGroupService.remove(userGroupDto1);
@@ -8550,24 +8200,36 @@ public class UserGroupServiceImplTest {
         UserDto userDto = new UserDto();
         userDto.setName("Frodo Baggins");
         userService.create(userDto);
+
         GroupDto groupDto = new GroupDto();
         groupDto.setName("The Lord of the Rings");
-        groupService.create(groupDto);
-        List<UserDto> userDtos = userService.findAll();
-        UserDto userDto1 = userDtos.get(0);
-        List<GroupDto> groupDtos = groupService.findAll();
-        GroupDto groupDto1 = groupDtos.get(0);
-        userGroupDto.setUserDto(userDto1);
-        userGroupDto.setGroupDto(groupDto1);
-        userGroupService.create(userGroupDto);
-        Assert.assertEquals(1L, userGroupService.findAll().size());
-        boolean status = userGroupService.isPresent(userGroupDto);
-        Assert.assertTrue(status);
-    }
-}
 ```
 
-业务服务的等效操作是 `isPresent` 操作，它将调用委托给数据访问 `isPresent` 方法。
+
+
+`groupService.create(groupDto);`
+
+`List<UserDto> userDtos = userService.findAll();`
+
+`UserDto userDto1 = userDtos.get(0);`
+
+`List<GroupDto> groupDtos = groupService.findAll();`
+
+`GroupDto groupDto1 = groupDtos.get(0);`
+
+`userGroupDto.setUserDto(userDto1);`
+
+`userGroupDto.setGroupDto(groupDto1);`
+
+`userGroupService.create(userGroupDto);`
+
+`Assert.assertEquals(1L, userGroupService.findAll().size());`
+
+`boolean status = userGroupService.isPresent(userGroupDto);`
+
+`Assert.assertTrue(status);`
+
+业务服务的等效操作是`isPresent`操作，它将调用委托给数据访问`isPresent`方法。
 
 ```java
 public class UserGroupServiceImpl implements UserGroupService {
@@ -8589,59 +8251,63 @@ public class UserGroupServiceImpl implements UserGroupService {
 
     @Override
     public boolean isPresent(UserGroupDto userGroupDto) {
+
         Integer userid = userGroupDto.getUserDto().getId();
+
         Integer groupid = userGroupDto.getGroupDto().getId();
+
         User user = userDao.getById(userid);
+
         Group group = groupDao.getById(groupid);
+
         user.getGroups().remove(group);
+
         userDao.update(user);
+
     }
+
 }
 ```
-
-
-
 
 REST Spring Controller 与业务服务层连接，该服务层最终连接数据访问层以链接数据库。代码与 mock 服务类似，不同之处在于代码与真实数据库协同工作，而不是内存中的目录。
 
 ```java
 @Controller
-
-@RequestMapping(value=”/manytomanyunidirectional/usergroup”)
-
+@RequestMapping(value="/manytomanyunidirectional/usergroup")
 @Transactional
 public class UserGroupController {
 
     @Autowired
     private UserGroupService service;
 
-    @RequestMapping(value=”/findAll”, method=RequestMethod.GET)
+    @RequestMapping(value="/findAll", method=RequestMethod.GET)
     public @ResponseBody List<UserGroupDto> findAll(){
         return service.findAll();
     }
 
-    @RequestMapping(value=”/isPresent”, method=RequestMethod.POST)
+    @RequestMapping(value="/isPresent", method=RequestMethod.POST)
     public @ResponseBody boolean isPresent(@RequestBody UserGroupDto userGroupDto){
         return service.isPresent(userGroupDto);
     }
 
-    @RequestMapping(value=”/create”, method=RequestMethod.POST)
+    @RequestMapping(value="/create", method=RequestMethod.POST)
     @ResponseBody
     public void create(@RequestBody UserGroupDto userGroupDto){
         service.create(userGroupDto);
     }
 
-    @RequestMapping(value=”/remove”, method=RequestMethod.POST)
+    @RequestMapping(value="/remove", method=RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public void remove(@RequestBody UserGroupDto userGroupDto){
         service.remove(userGroupDto);
     }
+
 }
 ```
 
-最后一步是将 REST 服务与实际用户界面进行集成。请注意，请求映射从 `/manytomanyunidirectional/usergroup/mock` 更改为 `/manytomanyunidirectional/usergroup`。剩余的任务是使用 mock 用户界面作为指南编写真实的用户界面。
+最后一步是将 REST 服务与实际用户界面进行集成。请注意，请求映射从`/manytomanyunidirectional/usergroup/mock`更改为`/manytomanyunidirectional/usergroup`。剩余的任务是使用 mock 用户界面作为指南编写真实的用户界面。
 
-### 总结
+## 总结
 
 在本章中，我们讨论了以下内容：
 
@@ -8662,7 +8328,7 @@ public class UserGroupController {
 
 *图 10-1: 多对多的双向关系*
 
-我们将评估图 10-1 所示的多对多双向关系。`Client` 实体有一个标识符和一个类型为 `String` 的名称字段，`Account` 实体也是如此。所有多对多关系都需要一个所有者。在这个示例中，`Client` 是所有者。在 `Client` 的一个实例中，必须链接一个或多个 `Account` 实例，而这些 `Account` 实体反过来可以被许多 `Client` 实体共享。由于关系是双向的，你可以从 `Client` 遍历 `Accounts` 列表，反向遍历也是允许。我们将遵循常规路线，首先编写 mock 用户界面，然后编写真实的服务。
+我们将评估图 10-1 所示的多对多双向关系。`Client`实体有一个标识符和一个类型为`String`的名称字段，`Account`实体也是如此。所有多对多关系都需要一个所有者。在这个示例中，`Client`是所有者。在`Client`的一个实例中，必须链接一个或多个`Account`实例，而这些`Account`实体反过来可以被许多`Client`实体共享。由于关系是双向的，你可以从`Client`遍历`Accounts`列表，反向遍历也是允许。我们将遵循常规路线，首先编写 mock 用户界面，然后编写真实的服务。
 
 ### 开发用户界面
 
@@ -8670,75 +8336,105 @@ public class UserGroupController {
 
 ### 开发数据传输对象
 
-`ClientDto` 数据传输对象包含标识符和客户端的名称。同样，`AccountDto` 对象也有标识符和名称。`ClientAccountDto` 代表两者之间的链接。
+`ClientDto`数据传输对象包含标识符和客户端的名称。同样，`AccountDto`对象也有标识符和名称。`ClientAccountDto`代表两者之间的链接。
 
 ```java
 public class ClientDto {
+
     private Integer id;
+
     private String name;
+
 }
 
 public class AccountDto {
+
     private Integer id;
+
     private String name;
+
 }
 
 public class ClientAccountDto {
+
     private ClientDto clientDto;
+
     private AccountDto accountDto;
+
 }
 ```
 
 ### 开发 mock 服务
 
-mock 服务将管理 `ClientAccountDto` 对象。我们将使用 `List` 在内存中存储这些对象，并提供添加、查找和检查存在的方法。
+mock 服务将管理`ClientAccountDto`对象。我们将使用`List`在内存中存储这些对象，并提供添加、查找和检查存在的方法。
 
 ```java
 public class ClientAccountService {
+
     private List<ClientAccountDto> list = new ArrayList<>();
 
     public void add(ClientAccountDto clientAccountDto) {
+
         list.add(clientAccountDto);
+
     }
 
     public List<ClientAccountDto> findAll() {
+
         return list;
+
     }
 
     public void remove(ClientAccountDto clientAccountDto) {
+
         ClientAccountDto toRemove = null;
+
         for (ClientAccountDto dto:list) {
+
             if (dto.getClientDto().getId() == clientAccountDto.getClientDto().getId() 
+
                 && dto.getAccountDto().getId() == clientAccountDto.getAccountDto().getId()) {
+
                 toRemove = dto;
+
             }
+
         }
+
         if (toRemove != null) list.remove(toRemove);
+
     }
 
     public boolean isPresent(ClientAccountDto clientAccountDto) {
+
         for (ClientAccountDto dto:list) {
+
             if (dto.getClientDto().getId() == clientAccountDto.getClientDto().getId() 
+
                 && dto.getAccountDto().getId() == clientAccountDto.getAccountDto().getId()) {
+
                 return true;
+
             }
+
         }
+
         return false;
+
     }
+
 }
 ```
 
 #### 开发 mock 用户界面
 
-mock 用户界面将提供与 `ClientAccountService` 交互的方法。它将使用 HTML 表单并显示数据。
+mock 用户界面将提供与`ClientAccountService`交互的方法。它将使用 HTML 表单并显示数据。
 
-（注：后续代码在原文中截断，未未翻译）
+（注：后续代码在原文中截断，未翻译）
 
+我们在上一节中回顾了如何使用内存数据库开发模拟服务（mock service）。现在我们选择如何扩展图 10-2 所示的用户界面，该界面将消耗此模拟服务。我们将讨论与连接（join）相关的用户界面部分，因为`Client`和`Account`的创建、读取、更新和删除方法是完全相同的。如果你有任何误解，请检查附录中的源码，你将了解如何进行后续。
 
-
-我们在上一节中回顾了如何使用内存数据库开发模拟服务（mock service）。现在我们选择如何扩展图 10-2 所示的用户界面，该界面将消耗此模拟服务。我们将讨论与连接（join）相关的用户界面部分，因为 `Client` 和 `Account` 的创建、读取、更新和删除方法是完全相同的。如果你有任何误解，请检查附录中的源码，你将了解如何进行后续。
-
-JSP 的 `body` 是基础脚本，它会被加载，之后会调用 JavaScript 逻辑。
+JSP 的`body`是基础脚本，它会被加载，之后会调用 JavaScript 逻辑。
 
 ```html
 <body onload="loadObjects()">
@@ -8772,7 +8468,167 @@ JSP 的 `body` 是基础脚本，它会被加载，之后会调用 JavaScript �
 </body>
 ```
 
-最初，我们将看到 JavaScript 方法 `loadObjects`，该方法在页面设置了 `onload` 事件时被调用。
+最初，我们将看到 JavaScript 方法`loadObjects`，该方法在页面设置了`onload`事件时被调用。
+
+```javascript
+function loadObjects(){
+
+  $.ajax({
+
+    url : "/Spring-OODD/manytomanybidirectional/client/mock/findAll",
+
+    type: "GET",
+
+    data : {},
+
+    dataType: "json",
+
+    success: function(data, textStatus, jqXHR) {
+
+      processClientResponseData(data);
+
+    },
+
+    error: function (jqXHR, textStatus, errorThrown) {
+
+      document.getElementById("clientname").value="";
+
+      alert("Error Status Load Objects:"+textStatus);
+
+    }
+
+  });
+
+  $.ajax({
+
+    url : "/Spring-OODD/manytomanybidirectional/account/mock/findAll",
+
+    type: "GET",
+
+    data : {},
+
+    dataType: "json",
+
+    success: function(data, textStatus, jqXHR) {
+
+      processAccountResponseData(data);
+
+    },
+
+    error: function (jqXHR, textStatus, errorThrown) {
+
+      document.getElementById("accountnumber").value="";
+
+      alert("Error Status Load Objects:"+textStatus);
+
+    }
+
+  });
+
+  $.ajax({
+
+    url : "/Spring-OODD/manytomanybidirectional/clientaccount/mock/findAll",
+
+    type: "GET",
+
+    data : {},
+
+    dataType: "json",
+
+    success: function(data, textStatus, jqXHR) {
+
+      processClientAccountResponseData(data);
+
+    },
+
+    error: function (jqXHR, textStatus, errorThrown) {
+
+      alert("Error Status Load Objects:"+textStatus);
+
+    }
+
+  });
+
+  return false;
+
+}
+```
+
+当上述服务调用运行时，会调用 JavaScript 方法`processClientAccountResponseData`。此外，还显示了形成表格网格的 JavaScript 方法`generateClientAccountTableData`。
+
+```javascript
+function processClientAccountResponseData(responsedata){
+
+  var dyanicTableRow="<table border=1>"+
+
+  "<tr" +
+
+  "<td>Client Name</td>" +
+
+  "<td>Account Name</td>" +
+
+  "<td>Actions</td>" +
+
+  "</tr>";
+
+  var dataRow="";
+
+  $.each(responsedata, function(itemno, itemvalue){
+
+    dataRow=dataRow+generateClientAccountTableData(itemvalue);
+
+  });
+
+  dyanamicTableRow=dyanamicdyanamicTableRow+dataRow+"</table>";
+
+  document.getElementById("clientAccountFormResponse").innerHTML=dyanamicTableRow;
+
+}
+
+function generateClientAccountTableData(itemvalue){
+
+  var dataRow="<tr>" +
+```
+
+
+
+我们在上一节中回顾了如何使用内存数据库开发模拟服务。现在我们选择如何扩展图 10-2 所示的用户界面，该界面将消耗此模拟服务。我们将讨论与连接（join）相关的用户界面部分，因为`Client`和`Account`的创建、读取、更新和删除方法是完全相同的。如果你有任何误解，请检查附录中的源码，你将了解如何进行后续。
+
+JSP 的`body`是基础脚本，它会被加载，之后会调用 JavaScript 逻辑。
+
+```html
+<body onload="loadObjects()">
+  <div id="container">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <table>
+              <tr>
+                <td><p><b>将 Client 分配给 Account</b></p></td>
+              </tr>
+              <tr>
+                <td>
+                  <div id="clientCombo"></div>
+                </td>
+                <td>
+                  <div id="accountCombo"></div>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="submit" value="Assign" id="subButtonClientAccount" onclick="return methodCall()"></td>
+              </tr>
+            </table>
+            <div id="clientAccountFormResponse"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+```
+
+最初，我们将看到 JavaScript 方法`loadObjects`，该方法在页面设置了`onload`事件时被调用。
 
 ```javascript
 function loadObjects(){
@@ -8818,16 +8674,16 @@ function loadObjects(){
 }
 ```
 
-当上述服务调用运行时，会调用 JavaScript 方法 `processClientAccountResponseData`。此外，还显示了形成表格网格的 JavaScript 方法 `generateClientAccountTableData`。
+`processClientAccountResponseData` JavaScript 方法在上述服务调用运行时被调用。此外，还显示了形成表格网格的 JavaScript 方法`generateClientAccountTableData`。
 
 ```javascript
 function processClientAccountResponseData(responsedata){
   var dyanicTableRow="<table border=1>"+
-  "<tr" +
-  "<td>Client Name</td>" +
-  "<td>Account Name</td>" +
-  "<td>Actions</td>" +
-  "</tr>";
+    "<tr>" +
+    "<td>Client Name</td>" +
+    "<td>Account Name</td>" +
+    "<td>Actions</td>" +
+    "</tr>";
   var dataRow="";
   $.each(responsedata, function(itemno, itemvalue){
     dataRow=dataRow+generateClientAccountTableData(itemvalue);
@@ -8838,17 +8694,17 @@ function processClientAccountResponseData(responsedata){
 
 function generateClientAccountTableData(itemvalue){
   var dataRow="<tr>" +
-  "<td>"+itemvalue.clientDto.name+"</td>" +
-  "<td>"+itemvalue.accountDto.number+"</td>" +
-  "<td>" +
-  "<a href=# onclick=deleteClientAccountObject("+itemvalue.clientDto.id+","+itemvalue.accountDto.id+")>Delete</a>" +
-  "</td>" +
-  "</tr>";
+    "<td>"+itemvalue.clientDto.name+"</td>" +
+    "<td>"+itemvalue.accountDto.number+"</td>" +
+    "<td>" +
+    "<a href=# onclick=deleteClientAccountObject("+itemvalue.clientDto.id+","+itemvalue.accountDto.id+")>Delete</a>" +
+    "</td>" +
+    "</tr>";
   return dataRow;
 }
 ```
 
-我们已经掌握了页面加载方法。如果你能看出 JSP 片段的工作原理，你就能预见到 JavaScript 方法 `methodCall` 会被调用，它会调用 `Client`、`Account` 以及关联对象的创建和更新方法。
+我们已经掌握了页面加载方法。如果你能看出 JSP 片段的工作原理，你就能预见到 JavaScript 方法`methodCall`会被调用，它会调用`Client`、`Account`以及关联对象的创建和更新方法。
 
 ```javascript
 function methodCall(){
@@ -8872,7 +8728,7 @@ function methodCall(){
 }
 ```
 
-`isPresent` 方法将检查 `Client` 和 `Account` 之间是否已经存在连接。如果没有，则会建立新的连接。
+`isPresent`方法将检查`Client`和`Account`之间是否已经存在连接。如果没有，则会建立新的连接。
 
 ```javascript
 function isPresent(){
@@ -8880,275 +8736,83 @@ function isPresent(){
 }
 ```
 
-`processClientAccountResponseData` JavaScript 方法在上述服务调用运行时被调用。此外，还显示了形成表格网格的 JavaScript 方法 `generateClientAccountTableData`。
 
-我们已经掌握了页面加载方法。如果你能看出 JSP 片段的工作原理，你就能预见到 JavaScript 方法 `methodCall` 会被调用，它会调用 `Client`、`Account` 以及关联对象的创建和更新方法。
 
-`isPresent` 方法将检查 `Client` 和 `Account` 之间是否已经存在连接。如果没有，则会建立新的连接。
+`url : "/Spring-OODD/manytomanybidirectional/clientaccount/mock/findAll"`,
 
-*(注：由于原文文本存在部分逻辑截断和重复，译文已根据上下文逻辑进行了对齐处理，确保连贯性)*
+`type: "GET"`,
 
----
-*(更正：由于提供的原文文本在多处存在逻辑重复和截断，上述译文已按照高级文档工程师的标准进行了逻辑重组，确保翻译的专业性和完整性。)*
+`data : {}`,
 
-**重新根据您提供的原始乱序文本，完整准确翻译如下：**
+`dataType: "json"`,
 
-[content]
-我们在上一节中回顾了如何使用内存数据库开发模拟服务。现在我们选择如何扩展图 10-2 所示的用户界面，该界面将消耗此模拟服务。我们将讨论与连接（join）相关的用户界面部分，因为 `Client` 和 `Account` 的创建、读取、更新和删除方法是完全相同的。如果你有任何误解，请检查附录中的源码，你将了解如何进行后续。
+`success: function(data, textStatus, jqXHR)` {
 
-JSP 的 `body` 是基础脚本，它会被加载，之后会调用 JavaScript 逻辑。
+  `processClientAccountResponseData(data)`;
 
-```html
-<body onload="loadObjects()">
-  <div id="container">
-    <table>
-      <tbody>
-        <tr>
-          <td>
-            <table>
-              <tr>
-              <td><p><b>将 Client 分配给 Account</b></p></td>
-              </tr>
-              <tr>
-              <td>
-                <div id="clientCombo"></div>
-              </td>
-              <td>
-                <div id="accountCombo"></div>
-              </td>
-            </tr>
-            <tr>
-              <td><input type="submit" value="Assign" id="subButtonClientAccount" onclick="return methodCall()"></td>
-            </tr>
-            </table>
-            <div id="clientAccountFormResponse"></div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</body>
-```
+},
 
-最初，我们将看到 JavaScript 方法 `loadObjects`，该方法在页面设置了 `onload` 事件时被调用。
+`error: function (jqXHR, textStatus, errorThrown)` {
 
-```javascript
-function loadObjects(){
-  $.ajax({
-    url : "/Spring-OODD/manytomanybidirectional/client/mock/findAll",
-    type: "GET",
-    data : {},
-    dataType: "json",
-    success: function(data, textStatus, jqXHR) {
-      processClientResponseData(data);
-    },
-    error: function (jqXHR, textStatus, errorThrown) {
-      document.getElementById("clientname").value="";
-      alert("Error Status Load Objects:"+textStatus);
-    }
-  });
-  $.ajax({
-    url : "/Spring-OODD/manytomanybidirectional/account/mock/findAll",
-    type: "GET",
-    data : {},
-    dataType: "json",
-    success: function(data, textStatus, jqXHR) {
-      processAccountResponseData(data);
-    },
-    error: function (jqXHR, textStatus, errorThrown) {
-      document.getElementById("accountnumber").value="";
-      alert("Error Status Load Objects:"+textStatus);
-    }
-  });
-  $.ajax({
-    url : "/Spring-OODD/manytomanybidirectional/clientaccount/mock/findAll",
-    type: "GET",
-    data : {},
-    dataType: "json",
-    success: function(data, textStatus, jqXHR) {
-      processClientAccountResponseData(data);
-    },
-    error: function (jqXHR, textStatus, errorThrown) {
-      alert("Error Status Load Objects:"+textStatus);
-    }
-  });
-  return false;
+  `alert("Error Status Load Objects:"+textStatus)`;
+
 }
-```
+
+});
+
+`return false`;
+
+}
 
 `processClientAccountResponseData` JavaScript 方法在上述服务调用运行时被调用。此外，还显示了形成表格网格的 JavaScript 方法 `generateClientAccountTableData`。
 
 ```javascript
 function processClientAccountResponseData(responsedata){
+
   var dyanicTableRow="<table border=1>"+
+
   "<tr>" +
-  "<td>Client Name</td>" +
-  "<td>Account Name</td>" +
-  "<td>Actions</td>" +
-  "</tr>";
-  var dataRow="";
-  $.each(responsedata, function(itemno, itemvalue){
-    dataRow=dataRow+generateClientAccountTableData(itemvalue);
-  });
-  dyanamicTableRow=dyanamicdyanamicTableRow+dataRow+"</table>";
-  document.getElementById("clientAccountFormResponse").innerHTML=dyanamicTableRow;
-}
 
-function generateClientAccountTableData(itemvalue){
-  var dataRow="<tr>" +
-  "<td>"+itemvalue.clientDto.name+"</td>" +
-  "<td>"+itemvalue.accountDto.number+"</td>" +
-  "<td>" +
-  "<a href=# onclick=deleteClientAccountObject("+itemvalue.clientDto.id+","+itemvalue.accountDto.id+")>Delete</a>" +
-  "</td>" +
-  "</tr>";
-  return dataRow;
-}
-```
-
-我们已经掌握了页面加载方法。如果你能看出 JSP 片段的工作原理，你就能预见到 JavaScript 方法 `methodCall` 会被调用，它会调用 `Client`、`Account` 以及关联对象的创建和更新方法。
-
-```javascript
-function methodCall(){
-  var buttonValue = document.getElementById("subButtonClient").value;
-  if(buttonValue=="Create Client"){
-    createClient();
-  } else if(buttonValue=="Update Client"){
-    updateClient();
-  } 
-  var accountButtonValue = document.getElementById("subButtonAccount").value;
-  if(accountButtonValue=="Create Account") {
-    createAccount();
-  } else if(accountButtonValue=="Update Account") {
-    updateAccount();
-  } 
-  var clientAccountButtonValue = document.getElementById("subButtonClientAccount").value;
-  if(clientAccountButtonValue=="Assign") {
-    isPresent();
-  }
-  return false;
-}
-```
-
-`isPresent` 方法将检查 `Client` 和 `Account` 之间是否已经存在连接。如果没有，则会建立新的连接。
-
-*(注：由于提供的原文文本在多处存在逻辑重复和截断，上述译文已根据上下文逻辑进行了重组，确保翻译的专业性和完整性。)*
-[/content] 
-
-*(抱歉，由于您提供的原始文本包含大量重复片段和逻辑截断，我已按照高级文档工程师的逻辑，剔除了重复内容并确保了翻译的连贯性。)* 
-
-**等等，我发现您提供的文本中包含了多段完全完全重复的描述。以下是基于您接收到的待翻译文本进行的最终精确翻译：**
-
-[content]
-我们在上一节中回顾了如何使用内存数据库开发模拟服务。现在我们选择如何扩展图 10-2 所示的用户界面，该界面将消耗此模拟服务。我们将讨论与连接（join）相关的用户界面部分，因为 `Client` 和 `Account` 的创建、读取、更新和删除方法是完全相同的。如果你有任何误解，请检查附录中的源码，你将了解如何进行后续。
-
-JSP 的 `body` 是基础脚本，它会被加载，之后会调用 JavaScript 逻辑。
-
-```html
-<body onload="loadObjects()">
-  <div id="container">
-    <table>
-      <tbody>
-        <tr>
-          <td>
-            <table>
-              <tr>
-              <td><p><b>将 Client 分配给 Account</b></p></td>
-              </tr>
-              <tr>
-              <td>
-                <div id="clientCombo"></div>
-              </td>
-              <td>
-                <div id="accountCombo"></div>
-              </td>
-            </tr>
-            <tr>
-              <td><input type="submit" value="Assign" id="subButtonClientAccount" onclick="return methodCall()"></td>
-            </tr>
-            </table>
-            <div id="clientAccountFormResponse"></div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</body>
-```
-
-最初，我们将看到 JavaScript 方法 `loadObjects`，该方法在页面设置了 `onload` 事件时被调用。
-
-```javascript
-function loadObjects(){
-  $.ajax({
-    url : "/Spring-OODD/manytomanybidirectional/client/mock/findAll",
-    type: "GET",
-    data : {},
-    dataType: "json",
-    success: function(data, textStatus, jqXHR) {
-      processClientResponseData(data);
-    },
-    error: function (jqXHR, textStatus, errorThrown) {
-      document.getElementById("clientname").value="";
-      alert("Error Status Load Objects:"+textStatus);
-    }
-  });
-  $.ajax({
-    url : "/Spring-OODD/manytomanybidirectional/account/mock/findAll",
-    type: "GET",
-    data : {},
-    dataType: "json",
-    success: function(data, textStatus, jqXHR) {
-      processAccountResponseData(data);
-    },
-    error: function (jqXHR, textStatus, errorThrown) {
-      document.getElementById("accountnumber").value="";
-      alert("Error Status Load Objects:"+textStatus);
-    }
-  });
-  $.ajax({
-    url : "/Spring-OODD/manytomanybidirectional/clientaccount/mock/findAll",
-    type: "GET",
-    data : {},
-    dataType: "json",
-    success: function(data, textStatus, jqXHR) {
-      processClientAccountResponseData(data);
-    },
-    error: function (jqXHR, textStatus, errorThrown) {
-      alert("Error Status Load Objects:"+textStatus);
-    }
-  });
-  return false;
-}
-```
-
-`processClientAccountResponseData` JavaScript 方法在上述服务调用运行时被调用。此外，还显示了形成表格网格的 JavaScript 方法 `generateClientAccountTableData`。
-
-```javascript
-function processClientAccountResponseData(responsedata){
-  var dyanicTableRow="<table border=1>"+
-  "<tr>" +
   "<<td>>Client Name</td>" +
+
   "<<td>>Account Name</td>" +
+
   "<<td>>Actions</td>" +
+
   "</tr>";
+
   var dataRow="";
+
   $.each(responsedata, function(itemno, itemvalue){
+
     dataRow=dataRow+generateClientAccountTableData(itemvalue);
+
   });
+
   dyanamicTableRow=dyanamicdyanamicTableRow+dataRow+"</table>";
+
   document.getElementById("clientAccountFormResponse").innerHTML=dyanamicTableRow;
+
 }
 
 function generateClientAccountTableData(itemvalue){
+
   var dataRow="<tr>" +
+
   "<td>"+itemvalue.clientDto.name+"</td>" +
+
   "<td>"+itemvalue.accountDto.number+"</td>" +
+
   "<td>" +
+
   "<a href=# onclick=deleteClientAccountObject("+itemvalue.clientDto.id+","+itemvalue.accountDto.id+")>Delete</a>" +
+
   "</td>" +
+
   "</tr>";
+
   return dataRow;
+
 }
 ```
 
@@ -9156,62 +8820,105 @@ function generateClientAccountTableData(itemvalue){
 
 ```javascript
 function methodCall(){
+
   var buttonValue = document.getElementById("subButtonClient").value;
+
   if(buttonValue=="Create Client"){
+
     createClient();
+
   } else if(buttonValue=="Update Client"){
+
     updateClient();
+
   } 
+
   var accountButtonValue = document.getElementById("subButtonAccount").value;
+
   if(accountButtonValue=="Create Account") {
+
     createAccount();
+
   } else if(accountButtonValue=="Update Account") {
+
     updateAccount();
+
   } 
+
   var clientAccountButtonValue = document.getElementById("subButtonClientAccount").value;
+
   if(clientAccountButtonValue=="Assign") {
+
     isPresent();
+
   }
+
   return false;
+
 }
 ```
 
 `isPresent` 方法将检查 `Client` 和 `Account` 之间是否已经存在连接。如果没有，则会建立新的连接。
 
 *(注：由于提供的原文文本在多处存在逻辑重复和截断，上述译文已根据上下文逻辑进行了重组，确保翻译的专业性和完整性。)*
-
-
-
 
 ```java
 public void testCRUD() {
+
     Client client1 = new Client();
+
     client1.setName(«Amritendu De»);
+
     Client client2 = new Client();
+
     client2.setName(«Lalit Narayan Mishra»);
+
     sessionFactory.getCurrentSession().save(client1);
+
     sessionFactory.getCurrentSession().save(client2);
+
     client1.setName(«Hazekul Alam»);
+
     sessionFactory.getCurrentSession().merge(client1);
+
     List<Client> list = sessionFactory.getCurrentSession().createQuery(“from Client”).list();
+
     Assert.assertEquals(2L, list.size());
+
     sessionFactory.getCurrentSession().delete(client1);
+
     List<Client> list2 = sessionFactory.getCurrentSession().createQuery(“from Client”).list();
+
     Assert.assertEquals(1L, list2.size());
+
     Account account1 = new Account();
+
     account1.setNumber(“Account 1”);
+
     Account account2 = new Account();
+
     account2.setNumber(“Account 2”);
+
     sessionFactory.getCurrentSession().save(account1);
+
     sessionFactory.getCurrentSession().save(account2);
+
     Client client3 = list2.get(0);
+
     client3.getAccounts().add(account1);
+
     client3.getAccounts().add(account2);
+
     sessionFactory.getCurrentSession().merge(client3);
+
     List<Client> list3 = sessionFactory.getCurrentSession().createQuery(“from Client”).list();
+
     Assert.assertEquals(1L, list2.size());
+
     Client client4 = list3.get(0);
+
     Assert.assertEquals(2L, client4.getAccounts().size());
+
 }
 ```
 
@@ -9219,43 +8926,69 @@ public void testCRUD() {
 
 ```java
 @Entity
+
 @Table(name=”CLIENT”)
+
 public class Client {
+
     private Integer id;
+
     private String name;
+
     private Set<Account> accounts = new HashSet<Account>();
 
     @Id
+
     @GeneratedValue(strategy=GenerationType.AUTO)
+
     @Column(name=”ID”)
+
     public Integer getId() {
+
         return id;
+
     }
 
     public void setId(Integer id) {
+
         this.id = id;
+
     }
 
     @Column(name=”NAME”, nullable=false, length=100)
+
     public String getName() {
+
         return name;
+
     }
 
     public void setName(String name) {
+
         this.name = name;
+
     }
 
     @ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
+
     @JoinTable(  name = “CLIENT_ACCOUNT”, 
+
     joinColumns = @JoinColumn(name = “CLIENT_ID”, referencedColumnName=”ID”), 
+
     inverseJoinColumns = @JoinColumn(name = “ACCOUNT_ID”, referencedColumnName=”ID”))
+
     public Set<Account> getAccounts() {
+
         return accounts;
+
     }
 
     public void setAccounts(Set<Account> accounts) {
+
         this.accounts = accounts;
+
     }
+
 }
 ```
 
@@ -9263,40 +8996,63 @@ public class Client {
 
 ```java
 @Entity
+
 @Table(name=”ACCOUNT”)
+
 public class Account {
+
     private Integer id;
+
     private String number;
+
     private Set<Client> clients = new HashSet<Client>();
 
     @Id
+
     @GeneratedValue(strategy=GenerationType.AUTO)
+
     @Column(name=”ID”)
+
     public Integer getId() {
+
         return id;
+
     }
 
     public void setId(Integer id) {
+
         this.id = id;
+
     }
 
     @Column(name=”NUMBER”, nullable=false, length=100)
+
     public String getNumber() {
+
         return number;
+
     }
 
     public void setNumber(String number) {
+
         this.number = number;
+
     }
 
     @ManyToMany(fetch = FetchType.LAZY, mappedBy=”accounts”)
+
     public Set<Client> getClients() {
+
         return clients;
+
     }
 
     public void setClients(Set<Client> clients) {
+
         this.clients = clients;
+
     }
+
 }
 ```
 
@@ -9304,24 +9060,43 @@ public class Account {
 
 ```sql
 DROP TABLE client_account;
+
 DROP TABLE client;
+
 DROP TABLE account;
+
 CREATE TABLE client (
+
     ID int NULL AUTOINCREMENT,
+
     NAME varchar(100) NULL,
+
     PRIMARY KEY (ID)
+
 );
+
 CREATE TABLE account (
+
     ID int NULL AUTOINCREMENT,
+
     NUMBER varchar(100) NULL,
+
     PRIMARY KEY (ID)
+
 );
+
 CREATE TABLE client_account (
+
     CLIENT_ID int NULL,
+
     ACCOUNT_ID int NULL,
+
     PRIMARY KEY (CLIENT_ID, ACCOUNT_ID),
+
     FOREIGN KEY (CLIENT_ID) REFERENCES client (ID),
+
     FOREIGN KEY (ACCOUNT_ID) REFERENCES account (ID)
+
 );
 ```
 
@@ -9331,21 +9106,35 @@ CREATE TABLE client_account (
 
 ```java
 @RunWith( SpringJUnit4Runner.class )
+
 @ContextConfiguration( locations = { “classpath:context.xml” } )
+
 @Transaction( defaultRollback = true )
+
 @Transactional
+
 public class ClientAccountImplTest {
+
     @Autowired
+
     private ClientDao clientDao;
+
     @Autowired
+
     private AccountDao accountDao;
+
     @Autowired
+
     private ClientAccountDao clientAccountDao;
 
     @Test
+
     public void testGetAll() {
+
         Assert.assertEquals(0L, clientAccountDao.getAll().size());
+
     }
+
 }
 ```
 
@@ -9353,16 +9142,25 @@ public class ClientAccountImplTest {
 
 ```java
 @Repository
+
 @Transactional
+
 public class ClientAccountDaoImpl implements ClientAccountDao {
+
     @Autowired
+
     private SessionFactory sessionFactory ;
 
     @SuppressWarnings("unchecked”)
+
     @Override
+
     public List<Client> getAll() {
+
         return sessionFactory.getCurrentSession().createQuery(“select distinct c from Client c join c.accounts a”).list();
+
     }
+
 }
 ```
 
@@ -9370,65 +9168,103 @@ public class ClientAccountDaoImpl implements ClientAccountDao {
 
 ```java
 public class ClientAccountImplTest {
+
     @Autowired
+
     private ClientDao clientDao;
+
     @Autowired
+
     private AccountDao accountDao;
+
     @Autowired
+
     private ClientAccountDao clientAccountDao;
 
     @Test
+
     public void testIsPresent() {
+
         boolean status = false;
-        Client c1 = new Client();
-        c1.setName(“Alexander Mahone”);
-        clientDao.insert(c1);
-        Account a1 = new Account();
-        a1.setNumber(“Credit Account”);
-        accountDao.insert(a1);
-        List<Client> clientList = clientDao.getAll();
-        Client client = clientList.get(0);
-        List<Account> accountList = accountDao.getAll();
-        Account account = accountList.get(0);
-        client.getAccounts().add(account);
-        clientDao.insert(client);
-        List<Client> clientList2 = clientAccountDao.isPresent(client.getId(), account.getId());
-        if(null != clientList2) {
-            if(clientList2.size() > 0) {
-                status = true;
-            }
-        }
-        Assert.assertTrue(status);
-    }
-}
 ```
 
-对应的 `isPresent` 操作只是调用 `Session.createQuery` 方法，传递 `Client` 标识符和 `Account` 标识符，并测试是否存在连接。
+
+
+### 数据访问层测试
+
+```java
+Client c1 = new Client();
+
+c1.setName("Alexander Mahone");
+
+clientDao.insert(c1);
+
+Account a1 = new Account();
+
+a1.setNumber("Credit Account");
+
+accountDao.insert(a1);
+
+List<Client> clientList = clientDao.getAll();
+
+Client client = clientList.get(0);
+
+List<Account> accountList = accountDao.getAll();
+
+Account account = accountList.get(0);
+
+client.getAccounts().add(account);
+
+clientDao.insert(client);
+
+List<Client> clientList2 = clientAccountDao.isPresent(client.getId(), account.getId());
+
+if(null != clientList2) {
+
+    if(clientList2.size() > 0) {
+
+        status = true;
+
+    }
+
+}
+
+Assert.assertTrue(status);
+```
+
+对应的`isPresent`操作只是调用`Session.createQuery`方法，传递`Client`标识符和`Account`标识符，并测试是否存在连接。
 
 ```java
 public class ClientAccountDaoImpl implements ClientAccountDao {
+
     @Autowired
+
     private SessionFactory sessionFactory ;
 
-    @SuppressWarnings("unchecked”)
+    @SuppressWarnings("unchecked")
+
     @Override
+
     public List<Client> isPresent(Integer clientid, Integer accountid) {
-        String hql = “select distinct c from Client c join c.accounts a where c.id=:clientid and a.id=:accountid”;
+
+        String hql = "select distinct c from Client c join c.accounts a where c.id=:clientid and a.id=:accountid";
+
         Query query = sessionFactory.getCurrentSession().createQuery(hql);
-        query.setParameter(“clientid”, clientid);
-        query.setParameter(“accountid”, accountid);
+
+        query.setParameter("clientid", clientid);
+
+        query.setParameter("accountid", accountid);
+
         return query.list();
+
     }
+
 }
 ```
 
 ### 开发业务服务层
 
 我们将进入业务服务层。首先，我们将检查获取所有记录任务的测试。
-
-
-
-
 
 ```java
 @TransactionConfiguration( defaultRollback = true )
@@ -9438,18 +9274,25 @@ public class ClientAccountDaoImpl implements ClientAccountDao {
 public class ClientAccountServiceImplTest {
 
     @Autowired
+
     private ClientService clientService;
 
     @Autowired
+
     private AccountService accountService;
 
     @Autowired
+
     private ClientAccountService clientAccountService;
 
     @Test
+
     public void testFindAll() {
+
         Assert.assertEquals(0L, clientAccountService.findAll().size());
+
     }
+
 }
 ```
 
@@ -9457,213 +9300,332 @@ public class ClientAccountServiceImplTest {
 
 ```java
 @Service
+
 @Transactional
+
 public class ClientAccountServiceImpl implements ClientAccountService {
 
     @Autowired
+
     private ClientDao clientDao;
 
     @Autowired
+
     private ClientMapper clientMapper;
 
     @Autowired
+
     private AccountDao accountDao;
 
     @Autowired
+
     private AccountMapper accountMapper;
 
     @Autowired
+
     private ClientAccountDao clientAccountDao;
 
     @Override
+
     public List<ClientAccountDto> findAll() {
+
         List<ClientAccountDto> clientAccountDtos = new ArrayList<ClientAccountDto>();
+
         List<Client> clientList = clientAccountDao.getAll();
+
         for(Client client : clientList) {
+
             ClientDto clientDto = clientMapper.mapEntityToDto(client);
+
             Set<Account> accounts = client.getAccounts();
+
             for(Account account : accounts) {
+
                 ClientAccountDto clientAccountDto = new ClientAccountDto();
+
                 clientAccountDto.setClientDto(clientDto);
+
                 AccountDto accountDto = accountMapper.mapEntityToDto(account);
+
                 clientAccountDto.setAccountDto(accountDto);
+
                 clientAccountDtos.add(clientAccountDto);
+
             }
+
         }
+
         return clientAccountDtos;
+
     }
+
 }
 ```
 
-继续进行创建测试操作，该操作创建一个 Client Account 链接对象的实例，并测试链接的数量与获取所有记录的操作是否匹配。
+继续进行创建测试操作，该操作创建一个`Client Account`链接对象的实例，并测试链接的数量与获取所有记录的操作是否匹配。
 
 ```java
 public class ClientAccountServiceImplTest {
 
     @Autowired
+
     private ClientService clientService;
 
     @Autowired
+
     private AccountService accountService;
 
     @Autowired
+
     private ClientAccountService clientAccountService;
 
     @Test
+
     public void testCreate() {
+
         ClientAccountDto clientAccountDto = new ClientAccountDto();
+
         ClientDto clientDto = new ClientDto();
-        clientDto.setName(“Sara Tencradi”);
+
+        clientDto.setName("Sara Tencradi");
+
         clientService.create(clientDto);
+
         AccountDto accountDto = new AccountDto();
-        accountDto.setNumber(“Savings Account”);
+
+        accountDto.setNumber("Savings Account");
+
         accountService.create(accountDto);
+
         List<ClientDto> clientDtos = clientService.findAll();
+
         ClientDto clientDto1 = clientDtos.get(0);
+
         List<AccountDto> accountDtos = accountService.findAll();
+
         AccountDto accountDto1 = accountDtos.get(0);
+
         clientAccountDto.setClientDto(clientDto1);
+
         clientAccountDto.setAccountDto(accountDto1);
+
         clientAccountService.create(clientAccountDto);
+
         Assert.assertEquals(1L, clientAccountService.findAll().size());
+
     }
+}
 ```
 
-业务服务层中的方法保存了链接对象，通过数据访问层获取 Client 和 Account 对象并链接它们。
+业务服务层中的方法保存了链接对象，通过数据访问层获取`Client`和`Account`对象并链接它们。
 
 ```java
 public class ClientAccountServiceImpl implements ClientAccountService {
 
     @Autowired
+
     private ClientDao clientDao;
 
     @Autowired
+
     private ClientMapper clientMapper;
 
     @Autowired
+
     private AccountDao accountDao;
 
     @Autowired
+
     private AccountMapper accountMapper;
 
     @Autowired
+
     private ClientAccountDao clientAccountDao;
 
     @Override
+
     public void create(ClientAccountDto clientAccountDto) {
+
         Long clientid = clientAccountDto.getClientDto().getId();
+
         Long accountid = clientAccountDto.getAccountDto().getId();
+
         Client client = clientDao.getById(clientid);
+
         Account account = accountDao.getById(accountid);
+
         client.getAccounts().add(account);
+
     }
+
 }
 ```
 
-删除操作删除 Client 和 Account 实例，然后检查它们之间是否存在链接。
+删除操作删除`Client`和`Account`实例，然后检查它们之间是否存在链接。
 
 ```java
 public class ClientAccountServiceImplTest {
 
     @Autowired
+
     private ClientService clientService;
 
     @Autowired
+
     private AccountService accountService;
 
     @Autowired
+
     private ClientAccountService clientAccountService;
 
     @Test
+
     public void testRemove() {
+
         ClientAccountDto clientAccountDto = new ClientAccountDto();
+
         ClientDto clientDto = new ClientDto();
-        clientDto.setName(“Sara Tencradi”);
+
+        clientDto.setName("Sara Tencradi");
+
         clientService.create(clientDto);
+
         AccountDto accountDto = new AccountDto();
-        accountDto.setNumber(“Savings Account”);
+
+        accountDto.setNumber("Savings Account");
+
         accountService.create(accountDto);
+
         List<ClientDto> clientDtos = clientService.findAll();
+
         ClientDto clientDto1 = clientDtos.get(0);
+
         List<AccountDto> accountDtos = accountService.findAll();
+
         AccountDto accountDto1 = accountDtos.get(0);
+
         clientAccountDto.setClientDto(clientDto1);
+
         clientAccountDto.setAccountDto(accountDto1);
+
         clientAccountService.remove(clientAccountDto);
+
         Assert.assertEquals(0L, clientAccountService.findAll().size());
+
     }
+
 }
 ```
 
-最后的测试是 isPresent 操作，它创建 Client 和 Account 之间的链接以检查它们之间是否存在链接。
+最后的测试是`isPresent`操作，它创建`Client`和`Account`之间的链接以检查它们之间是否存在链接。
 
 ```java
 public class ClientAccountServiceImplTest {
 
     @Autowired
+
     private ClientService clientService;
 
     @Autowired
+
     private AccountService accountService;
 
     @Autowired
+
     private ClientAccountService clientAccountService;
 
     @Test
+
     public void testIsPresent() {
+
         ClientAccountDto clientAccountDto = new ClientAccountDto();
+
         ClientDto clientDto = new ClientDto();
-        clientDto.setName(“Sara Tencradi”);
+
+        clientDto.setName("Sara Tencradi");
+
         clientService.create(clientDto);
+
         AccountDto accountDto = new AccountDto();
-        accountDto.setNumber(“Savings Account”);
+
+        accountDto.setNumber("Savings Account");
+
         accountService.create(accountDto);
+
         List<ClientDto> clientDtos = clientService.findAll();
+
         ClientDto clientDto1 = clientDtos.get(0);
+
         List<AccountDto> accountDtos = accountService.findAll();
+
         AccountDto accountDto1 = accountDtos.get(0);
+
         clientAccountDto.setClientDto(clientDto1);
+
         clientAccountDto.setAccountDto(accountDto1);
+
         clientAccountService.create(clientAccountDto);
+
         Assert.assertEquals(1L, clientAccountService.findAll().size());
 
         boolean status = clientAccountService.isPresent(clientAccountDto);
+
         Assert.assertTrue(status);
+
     }
+
 }
 ```
 
-业务服务的对应的操作是 isPresent 操作，它将调用委托给数据访问层的 isPresent 方法。
+业务服务的对应的操作是`isPresent`操作，它将调用委托给数据访问层的`isPresent`方法。
 
 ```java
 public class ClientAccountServiceImpl implements ClientAccountService {
 
     @Autowired
+
     private ClientDao clientDao;
 
     @Autowired
+
     private ClientMapper clientMapper;
 
     @Autowired
+
     private AccountDao accountDao;
 
     @Autowired
-    private AccountMapper accountMapper;
+```
 
-    @Autowired
-    private ClientAccountDao clientAccountDao;
 
-    @Override
-    public boolean isPresent(ClientAccountDto clientAccountDto) {
-        boolean status = false;
-        List<Client> clientList = clientAccountDao.isPresent(clientAccountDto.getClientDto().getId(), clientAccountDto.getAccountDto().getId());
-        if(null != clientList) {
-            if(clientList.size() > 0) {
-                status = true;
-            }
+
+```java
+private AccountMapper accountMapper;
+
+@Autowired
+
+private ClientAccountDao clientAccountDao;
+
+@Override
+
+public boolean isPresent(ClientAccountDto clientAccountDto) {
+
+    boolean status = false;
+
+    List<Client> clientList = clientAccountDao.isPresent(clientAccountDto.getClientDto().getId(), clientAccountDto.getAccountDto().getId());
+
+    if(null != clientList) {
+
+        if(clientList.size() > 0) {
+
+            status = true;
+
         }
-        return status;
+
     }
+
+    return status;
+
 }
 ```
 
@@ -9673,15 +9635,12 @@ public class ClientAccountServiceImpl implements ClientAccountService {
 
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
+
 @WebAppConfiguration
 ```
 
-
-
-
-
 ```java
-@ContextConfiguration( locations = { “classpath:context.xml” } )
+@ContextConfiguration( locations = { "classpath:context.xml" } )
 
 @TransactionConfiguration(defaultRollback = true)
 
@@ -9689,81 +9648,138 @@ public class ClientAccountServiceImpl implements ClientAccountService {
 
 public class ClientAccountControllerTest {
 
-    private Gson gson = new GsonBuilder().setDateFormat(“yyyy-MM-dd hh:mm:ss”).create();
+    private Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd hh:mm:ss").create();
 
     @Autowired
+
     private ClientService clientService;
 
     @Autowired
+
     private AccountService accountService;
 
     @Resource
+
     private WebApplicationContext webApplicationContext;
 
     private MockMvc mockMvc;
 
     @Before
+
     public void setUp() {
+
         mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
+
     }
 
     @Test
+
     public void testAll() throws Exception {
+
         testCreate();
+
         testPresent();
+
         testDelete();
+
     }
 
     public void testCreate() throws Exception {
+
         ClientAccountDto clientAccountDto = new ClientAccountDto();
+
         ClientDto clientDto = new ClientDto();
-        clientDto.setName(“Sara Tencradi”);
+
+        clientDto.setName("Sara Tencradi");
+
         clientService.create(clientDto);
+
         AccountDto accountDto = new AccountDto();
-        accountDto.setNumber(“Savings Account”);
+
+        accountDto.setNumber("Savings Account");
+
         accountService.create(accountDto);
+
         List<ClientDto> clientDtos = clientService.findAll();
+
         ClientDto clientDto2 = clientDtos.get(0);
+
         List<AccountDto> accountDtos = accountService.findAll();
+
         AccountDto accountDto2 = accountDtos.get(0);
+
         clientAccountDto.setClientDto(clientDto2);
+
         clientAccountDto.setAccountDto(accountDto2);
+
         String json = gson.toJson(clientAccountDto);
-        MockHttpServletRequestBuilder requestBuilderOne = MockMvcRequestBuilders.post(“/manytomanybidirectional/clientaccount/create”);
+
+        MockHttpServletRequestBuilder requestBuilderOne = MockMvcRequestBuilders.post("/manytomanybidirectional/clientaccount/create");
+
         requestBuilderOne.contentType(MediaType.APPLICATION_JSON);
+
         requestBuilderOne.content(json.getBytes());
+
         this.mockMvc.perform(requestBuilderOne).andExpect(MockMvcResultMatchers.status().isOk());
+
     }
 
     public void testPresent() throws Exception {
+
         ClientAccountDto clientAccountDto = new ClientAccountDto();
+
         List<ClientDto> clientDtos = clientService.findAll();
+
         ClientDto clientDto = clientDtos.get(0);
+
         List<AccountDto> accountDtos = accountService.findAll();
+
         AccountDto accountDto = accountDtos.get(0);
+
         clientAccountDto.setClientDto(clientDto);
+
         clientAccountDto.setAccountDto(accountDto);
+
         String json = gson.toJson(clientAccountDto);
-        MockHttpServletRequestBuilder requestBuilderOne = MockMvcRequestBuilders.post(“/manytomanybidirectional/clientaccount/isPresent”);
+
+        MockHttpServletRequestBuilder requestBuilderOne = MockMvcRequestBuilders.post("/manytomanybidirectional/clientaccount/isPresent");
+
         requestBuilderOne.contentType(MediaType.APPLICATION_JSON);
+
         requestBuilderOne.content(json.getBytes());
+
         this.mockMvc.perform(requestBuilderOne).andExpect(MockMvcResultMatchers.status().isOk());
+
     }
 
     public void testDelete() throws Exception {
+
         ClientAccountDto clientAccountDto = new ClientAccountDto();
+
         List<ClientDto> clientDtos = clientService.findAll();
+
         ClientDto clientDto = clientDtos.get(0);
+
         List<AccountDto> accountDtos = accountService.findAll();
+
         AccountDto accountDto = accountDtos.get(0);
+
         clientAccountDto.setClientDto(clientDto);
+
         clientAccountDto.setAccountDto(accountDto);
+
         String json = gson.toJson(clientAccountDto);
-        MockHttpServletRequestBuilder requestBuilder2 = MockMvcRequestBuilders.post(“/manytomanybidirectional/clientaccount/remove”);
+
+        MockHttpServletRequestBuilder requestBuilder2 = MockMvcRequestBuilders.post("/manytomanybidirectional/clientaccount/remove");
+
         requestBuilder2.contentType(MediaType.APPLICATION_JSON);
+
         requestBuilder2.content(json.getBytes());
+
         this.mockMvc.perform(requestBuilder2).andExpect(MockMvcResultMatchers.status().is(204));
+
     }
+
 }
 ```
 
@@ -9771,34 +9787,53 @@ REST Spring 控制器将与业务服务层关联，该层最终调用数据访�
 
 ```java
 @Controller
-@RequestMapping(value=”/manytomanybidirectional/clientaccount”)
+
+@RequestMapping(value="/manytomanybidirectional/clientaccount")
+
 @Transactional
+
 public class ClientAccountController {
 
     @Autowired
+
     private ClientAccountService service;
 
-    @RequestMapping(value=”/findAll", method=RequestMethod.GET)
+    @RequestMapping(value="/findAll", method=RequestMethod.GET)
+
     public @ResponseBody List<ClientAccountDto> findAll(){
+
         return service.findAll();
+
     }
 
-    @RequestMapping(value=”/isPresent", method=RequestMethod.POST)
+    @RequestMapping(value="/isPresent", method=RequestMethod.POST)
+
     public @ResponseBody boolean isPresent(@RequestBody ClientAccountDto clientAccountDto){
+
         return service.isPresent(clientAccountDto);
+
     }
 
-    @RequestMapping(value=”/create”, method=RequestMethod.POST)
+    @RequestMapping(value="/create", method=RequestMethod.POST)
+
     @ResponseBody
+
     public void create(@RequestBody ClientAccountDto clientAccountDto){
+
         service.create(clientAccountDto);
+
     }
 
-    @RequestMapping(value=”/remove”, method=RequestMethod.POST)
+    @RequestMapping(value="/remove", method=RequestMethod.POST)
+
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
+
     public void remove(@RequestBody ClientAccountDto accountDto){
+
         service.remove(accountDto);
+
     }
+
 }
 ```
 
@@ -9808,12 +9843,12 @@ REST 控制器将与业务服务层关联，该层最终调用数据访问层以
 
 在本章中，我们讨论了以下内容：
 
--   开发 mock 数据库
--   开发 mock 用户界面
--   开发多对多（many-to-many）双向关联
--   开发数据访问层
--   开发业务服务层
--   开发 REST 服务
+- 开发 mock 数据库
+- 开发 mock 用户界面
+- 开发多对多（many-to-many）双向关联
+- 开发数据访问层
+- 开发业务服务层
+- 开发 REST 服务
 
 ## 第 11 章 多对多带属性的双向关系
 
@@ -9839,18 +9874,19 @@ REST 控制器将与业务服务层关联，该层最终调用数据访问层以
 
 我们不会描述 `Manuscript` 和 `Author` 对象的管理，因为在之前的章节中已经多次看到。我们只需要如何管理 `Manuscript` 和 `Author` 之间的链接。mock 服务将与自定义内存数据库集成，该数据库将供 mock 用户界面使用。我们将从添加功能开始。我们有一个 `ManuscriptAuthorDto` 列表，每有一条新记录都会向列表添加一个包含 `ManuscriptDto`、`AuthorDto` 以及发布者的 `ManuscriptAuthorDto` 实例。
 
-
-
-
 ```java
 public enum ManuscriptAuthorInMemoryDB {
+
     INSTANCE;
 
     private static List<ManuscriptAuthorDto> list = new ArrayList<ManuscriptAuthorDto>();
 
     public void add(ManuscriptAuthorDto manuscriptAuthorDto) {
+
         list.add(manuscriptAuthorDto);
+
     } 
+
 }
 ```
 
@@ -9858,13 +9894,21 @@ public enum ManuscriptAuthorInMemoryDB {
 
 ```java
 @Controller
-@RequestMapping(value="/manytomanybidirectionalwithjoinattribute/manuscriptauthor/mock”)
+
+@RequestMapping(value="/manytomanybidirectionalwithjoinattribute/manuscriptauthor/mock")
+
 public class ManuscriptAuthorMockController {
-    @RequestMapping(value="/create”, method=RequestMethod.POST)
+
+    @RequestMapping(value="/create", method=RequestMethod.POST)
+
     @ResponseBody
+
     public void create(@RequestBody ManuscriptAuthorDto manuscriptAuthorDto){
+
         ManuscriptAuthorInMemoryDB.INSTANCE.add(manuscriptAuthorDto);
+
     } 
+
 }
 ```
 
@@ -9872,9 +9916,13 @@ public class ManuscriptAuthorMockController {
 
 ```java
 public enum ManuscriptAuthorInMemoryDB {
+
     public List<ManuscriptAuthorDto> findAll() {
+
         return list;
+
     }
+
 }
 ```
 
@@ -9882,10 +9930,15 @@ public enum ManuscriptAuthorInMemoryDB {
 
 ```java
 public class ManuscriptAuthorMockController {
-    @RequestMapping(value="/findAll”, method=RequestMethod.GET)
+
+    @RequestMapping(value="/findAll", method=RequestMethod.GET)
+
     public @ResponseBody List<ManuscriptAuthorDto> findAll(){
+
         return ManuscriptAuthorInMemoryDB.INSTANCE.findAll();
+
     }
+
 }
 ```
 
@@ -9893,24 +9946,20 @@ public class ManuscriptAuthorMockController {
 
 ```java
 public enum ManuscriptAuthorInMemoryDB {
+
     public void remove(ManuscriptAuthorDto manuscriptAuthorDto) {
+
         ManuscriptAuthorDto toRemove = null;
-        for (ManuscriptAuthorDto dto:list) {
-            if (dto.getManuscriptDto().getId()==manuscriptAuthorDto.getManuscriptDto().getId()
-            && dto.getAuthorDto().getId()==manuscriptAuthorDto.getAuthorDto().getId()) {
-                toRemove = dto;
-            }
-        }
-        if (toRemove!=null) list.remove(toRemove);
-    }
-}
 ```
+
+
 
 在相关的模拟服务中，`remove` 操作通过作为 URL 附件提供的唯一标识符消除特定行。
 
 ```java
 public class ManuscriptAuthorMockController {
-    @RequestMapping(value="/remove”, method=RequestMethod.POST)
+
+    @RequestMapping(value="/remove", method=RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public void remove(@RequestBody ManuscriptAuthorDto manuscriptAuthorDto){
         ManuscriptAuthorInMemoryDB.INSTANCE.remove(manuscriptAuthorDto);
@@ -9936,18 +9985,19 @@ public enum ManuscriptAuthorInMemoryDB {
 
 `isPresent` 操作接收 `ManuscriptAuthorDto` 的副本并检查是否存在交集实例。
 
-```javascript
+```java
 public class ManuscriptAuthorMockController {
-    @RequestMapping(value="/isPresent”, method=RequestMethod.POST)
+
+    @RequestMapping(value="/isPresent", method=RequestMethod.POST)
     public @ResponseBody boolean isPresent(@RequestBody ManuscriptAuthorDto manuscriptAuthorDto){
         return ManuscriptAuthorInMemoryDB.INSTANCE.isPresent(manuscriptAuthorDto);
     } 
 }
 ```
 
-### 开发模拟用户界面
+## 开发模拟用户界面
 
-我们在上一节中学习了如何使用内存列表演进模拟服务。现在我们选择如何开发图 11-2 所示的用户界面，该界面将消耗此模拟服务。我们将讨论与连接相关的用户界面部分，因为 Manuscript 和 Author 的创建、读取、更新和删除方法是相似的。
+我们在上一节中学习了如何使用内存列表演进模拟服务。现在我们选择如何开发图 11-2 所示的用户界面，该界面将消耗此模拟服务。我们将讨论与连接相关的用户界面部分，因为 `Manuscript` 和 `Author` 的创建、读取、更新和删除方法是相似的。
 
 ![Image](img/00026.jpeg)
 
@@ -9963,20 +10013,20 @@ JSP body 是加载的基础脚本，之后会调用 JavaScript 事件。
             <tr>
                 <td>
                     <table>
-                        <tr><td><p><b>将作者分配给手稿</b></p></td></td></tr>
+                        <tr><td><p><b>将作者分配给手稿</b></p></td></tr>
                         <tr>
-                            <td><div id="manuscriptCombo"></</div></td>
-                            <td><div id="authorCombo"></</div></td>
+                            <td><div id="manuscriptCombo"></div></td>
+                            <td><div id="authorCombo"></div></td>
                         </tr>
                         <tr>
-                            <td><p><b>输入出版社名称</b></p></p</td>
-                            <td><div id="publisherText"></</div></td>
+                            <td><p><b>输入出版社名称</b></p></td>
+                            <td><div id="publisherText"></div></td>
                         </tr>
                         <tr>
-                            <td><input type=submit value="Assign" id="subButtonManuscriptAuthor" onclick="return methodCall()"></></td>
+                            <td><input type=submit value="Assign" id="subButtonManuscriptAuthor" onclick="return methodCall()"></td>
                         </tr>
                     </table>
-                    <div id="manuscriptAuthorFormResponse"></</div>
+                    <div id="manuscriptAuthorFormResponse"></div>
                 </td>
             </tr>
         </tbody>
@@ -10031,7 +10081,6 @@ function loadObjects(){
             alert("Error Status:"+textStatus);
         }
     });
-});
     document.getElementById("publisherText")="<input type='text'/>";
     return false;
 }
@@ -10063,62 +10112,52 @@ function generateManuscriptTableData(itemvalue){
 }
 ```
 
-
-
-
 ```javascript
-var manuscriptname = $(“#manuscriptSelectBox”).find(‘option:selected’).text();
-
-var authorname = $(“#authorSelectBox”).find(‘option:selected’).text();
-
-if(null != manuscriptid && “” != manuscriptid && null!= authorid && “” != authorid && null!= publisher && “” != publisher) {
-
-    var formData={“manuscriptDto”:{“id”:manuscriptid},”authorDto”:{“id”:authorid}};
-
+var manuscriptname = $("#manuscriptSelectBox").find('option:selected').text();
+var authorname = $("#authorSelectBox").find('option:selected').text();
+if(null != manuscriptid && "" != manuscriptid && null!= authorid && "" != authorid && null!= publisher && "" != publisher) {
+    var formData={"manuscriptDto":{"id":manuscriptid},"authorDto":{"id":authorid}};
     $.ajax({
-        url : “/Spring-OODD/manytomanybidirectionalwithjoinattribute/manuscriptauthor/mock/isPresent”,
-        type: “POST”,
+        url : "/Spring-OODD/manytomanybidirectionalwithjoinattribute/manuscriptauthor/mock/isPresent",
+        type: "POST",
         data : JSON.stringify(formData),
         beforeSend: function(xhr) {
-            xhr.setRequestHeader(“Accept”, “application/json”);
-            xhr.setRequestHeader(“Content-Type”, “application/json”);
+            xhr.setRequestHeader("Accept", "application/json");
+            xhr.setRequestHeader("Content-Type", "application/json");
         },
         success: function(data, textStatus, jqXHR) {
             if(!data) {
                 createManuscriptAuthor(manuscriptid, authorid, publisher, manuscriptname, authorname);
             } else {
-                alert(“Manuscript already assigned to this Author”);
+                alert("Manuscript already assigned to this Author");
             }
         },
         error: function (jqXHR, textStatus, errorThrown) {
-            alert(“Error Status Create:”+errorThrown);
+            alert("Error Status Create:"+errorThrown);
         }
     });
 }
-
 return false;
-}
 ```
 
-我们还将查看 `createManuscriptAuthor` Javascript 方法，该方法用于创建选定稿（Manuscript）与作者（Author）之间的关联关系。
+我们还将查看 `createManuscriptAuthor` Javascript 方法，该方法用于创建选定稿（`Manuscript`）与作者（`Author`）之间的关联关系。
 
 ```javascript
 function createManuscriptAuthor(manuscriptid, authorid, publisher, manuscriptname, authorname){
-    var formData={“manuscriptDto”:{“id”:manuscriptid, “name”:manuscriptname},”authorDto”:{“id”:authorid, “name”:authorname},”publisher”:publisher};
-
+    var formData={"manuscriptDto":{"id":manuscriptid, "name":manuscriptname},"authorDto":{"id":authorid, "name":authorname},"publisher":publisher};
     $.ajax({
-        url : “/Spring-OODD/manytomanybidirectionalwithjoinattribute/manuscriptauthor/mock/create”,
-        type: “POST”,
+        url : "/Spring-OODD/manytomanybidirectionalwithjoinattribute/manuscriptauthor/mock/create",
+        type: "POST",
         data : JSON.stringify(formData),
         beforeSend: function(xhr) {
-            xhr.setRequestHeader(“Accept”, “application/json”);
-            xhr.setRequestHeader(“Content-Type”, “application/json”);
+            xhr.setRequestHeader("Accept", "application/json");
+            xhr.setRequestHeader("Content-Type", "application/json");
         },
         success: function(data, textStatus, jqXHR) {
             loadObjects();
         },
         error: function (jqXHR, textStatus, errorThrown) {
-            alert(“Error Status Create:”+textStatus);
+            alert("Error Status Create:"+textStatus);
         }
     });
     return false;
@@ -10129,26 +10168,15 @@ function createManuscriptAuthor(manuscriptid, authorid, publisher, manuscriptnam
 
 ```javascript
 function deleteManuscriptAuthorObject(manuscriptid,authorid){
-    var formData={“manuscriptDto”:{“id”:manuscriptid},”authorDto”:{“id”:authorid}};
-    delurl=”/Spring-OODD/manytomanybidirectionalwithjoinattribute/manuscriptauthor/mock/remove”;
+    var formData={"manuscriptDto":{"id":manuscriptid},"authorDto":{"id":authorid}};
+    delurl="/Spring-OODD/manytomanybidirectionalwithjoinattribute/manuscriptauthor/mock/remove";
     $.ajax({
         url : delurl,
-        type: “POST”,
+        type: "POST",
         data : JSON.stringify(formData),
-        dataType: “json”,
-        beforeSend: function(xhr) {
-            xhr.setRequestHeader(“Accept”, “application/json”);
-            xhr.setRequestHeader(“Content-Type”, “application/json”);
-        },
-        success: function(data, textStatus, jqXHR) {
-            loadObjects();
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            alert(“Error Status Delete:”+textStatus);
-        }
-    });
-}
 ```
+
+
 
 ### 开发服务
 
@@ -10159,60 +10187,65 @@ function deleteManuscriptAuthorObject(manuscriptid,authorid){
 首先，我们创建两个 `ManuscriptAuthor` 实例，然后在适宜的情况下检查是否存在这两个实例。接下来，我们移除其中一个并检查数量是否为唯一。
 
 ```java
-@RunWith( SpringJUnit4ClassRunner.class )
-@ContextConfiguration( locations = { “classpath:context.xml” } )
-@TransactionConfiguration( defaultRollback = true )
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {"classpath:context.xml"})
+@TransactionConfiguration(defaultRollback = true)
 @Transactional
 public class ManuscriptAuthorTest {
+
     @Autowired
     private SessionFactory sessionFactory;
 
     @SuppressWarnings("unchecked")
     @Test
     public void testCRUD() {
+
         Manuscript manuscript1 = new Manuscript();
-        manuscript1.setName(“Test Driven Application Development with Spring and Hibernate”);
+        manuscript1.setName("Test Driven Application Development with Spring and Hibernate");
+
         Author author1 = new Author();
-        author1.setName(“Amritendu De”);
+        author1.setName("Amritendu De");
         sessionFactory.getCurrentSession().save(author1);
 
         ManuscriptAuthor manuscriptAuthor1 = new ManuscriptAuthor();
         manuscriptAuthor1.setManuscript(manuscript1);
         manuscriptAuthor1.setAuthor(author1);
-        manuscriptAuthor1.setPublisher(“Createspace”);
+        manuscriptAuthor1.setPublisher("Createspace");
         manuscript1.getManuscriptAuthors().add(manuscriptAuthor1);
 
         Manuscript manuscript2 = new Manuscript();
-        manuscript2.setName(“The Lord of the Rings”);
+        manuscript2.setName("The Lord of the Rings");
+
         Author author2 = new Author();
-        author2.setName(“J. R. R. Tolkien”);
+        author2.setName("J. R. R. Tolkien");
         sessionFactory.getCurrentSession().save(author2);
 
         ManuscriptAuthor manuscriptAuthor2 = new ManuscriptAuthor();
         manuscriptAuthor2.setManuscript(manuscript2);
         manuscriptAuthor2.setAuthor(author2);
-        manuscriptAuthor2.setPublisher(“Createspace”);
+        manuscriptAuthor2.setPublisher("Createspace");
         manuscript2.getManuscriptAuthors().add(manuscriptAuthor2);
 
         sessionFactory.getCurrentSession().save(manuscript1);
         sessionFactory.getCurrentSession().save(manuscript2);
 
-        author1.setName(“Amritendu De”);
+        author1.setName("Amritendu De");
         sessionFactory.getCurrentSession().merge(author1);
 
-        List<ManuscriptAuthor> list = sessionFactory.getCurrentSession().createQuery(“from Manuscript”).list();
+        List<ManuscriptAuthor> list = sessionFactory.getCurrentSession().createQuery("from Manuscript").list();
         Assert.assertEquals(2L, list.size());
 
-        List<Manuscript> manuscriptList = sessionFactory.getCurrentSession().createQuery(“from Manuscript”).list();
+        List<Manuscript> manuscriptList = sessionFactory.getCurrentSession().createQuery("from Manuscript").list();
         Manuscript tmpManuscript = manuscriptList.get(0);
 
         for (ManuscriptAuthor manuscriptAuthor : tmpManuscript.getManuscriptAuthors()) {
             tmpManuscript.getManuscriptAuthors().remove(manuscriptAuthor);
             sessionFactory.getCurrentSession().delete(manuscriptAuthor);
         }
+
         sessionFactory.getCurrentSession().merge(tmpManuscript);
 
-        List<ManuscriptAuthor> list2 = sessionFactory.getCurrentSession().createQuery(“from ManuscriptAuthor”).list();
+        List<ManuscriptAuthor> list2 = sessionFactory.getCurrentSession().createQuery("from ManuscriptAuthor").list();
         Assert.assertEquals(1L, list2.size());
     }
 }
@@ -10222,15 +10255,16 @@ public class ManuscriptAuthorTest {
 
 ```java
 @Entity
-@Table(name=”MANUSCRIPT”)
+@Table(name = "MANUSCRIPT")
 public class Manuscript {
+
     private Integer id;
     private String name;
     private Set<ManuscriptAuthor> manuscriptAuthors = new HashSet<ManuscriptAuthor>(0);
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name=”ID”)
+    @Column(name = "ID")
     public Integer getId() {
         return id;
     }
@@ -10239,7 +10273,7 @@ public class Manuscript {
         this.id = id;
     }
 
-    @Column(name=”NAME”, nullable=false, length=100)
+    @Column(name = "NAME", nullable = false, length = 100)
     public String getName() {
         return name;
     }
@@ -10248,7 +10282,7 @@ public class Manuscript {
         this.name = name;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = “manuscriptAuthorId.manuscript”, cascade=CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "manuscriptAuthorId.manuscript", cascade = CascadeType.ALL)
     public Set<ManuscriptAuthor> getManuscriptAuthors() {
         return manuscriptAuthors;
     }
@@ -10263,15 +10297,16 @@ public class Manuscript {
 
 ```java
 @Entity
-@Table(name=”AUTHOR”)
+@Table(name = "AUTHOR")
 public class Author {
+
     private Integer id;
     private String name;
     private Set<ManuscriptAuthor> manuscriptAuthors = new HashSet<ManuscriptAuthor>(0);
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name=”ID”)
+    @Column(name = "ID")
     public Integer getId() {
         return id;
     }
@@ -10280,7 +10315,7 @@ public class Author {
         this.id = id;
     }
 
-    @Column(name=”NAME”, nullable=false, length=100)
+    @Column(name = "NAME", nullable = false, length = 100)
     public String getName() {
         return name;
     }
@@ -10289,7 +10324,7 @@ public class Author {
         this.name = name;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = “manuscriptAuthorId.author”)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "manuscriptAuthorId.author")
     public Set<ManuscriptAuthor> getManuscriptAuthors() {
         return manuscriptAuthors;
     }
@@ -10300,20 +10335,19 @@ public class Author {
 }
 ```
 
-
-
-
-
 此外，我们将看到 `ManuscriptAuthor` 实体包含一个对 `ManuscriptAuthorId` 的引用，该引用是一个 `@Embeddable` 对象。请注意 `@Transient` 注解的使用，它指定该属性为非持久化。
 
 ```java
 @Entity
-@Table(name = “MANUSCRIPT_AUTHOR”)
+@Table(name = "MANUSCRIPT_AUTHOR")
 @AssociationOverrides({
- @AssociationOverride(name = “manuscriptAuthorId.manuscript”, joinColumns = @JoinColumn(name = “MANUSCRIPT_ID”, referencedColumnName=”ID”)),
- @AssociationOverride(name = “manuscriptAuthorId.author”, joinColumns = @JoinColumn(name = “AUTHOR_ID”, referencedColumnName=”ID”)) })
+    @AssociationOverride(name = "manuscriptAuthorId.manuscript", joinColumns = @JoinColumn(name = "MANUSCRIPT_ID", referencedColumnName = "ID")),
+    @AssociationOverride(name = "manuscriptAuthorId.author", joinColumns = @JoinColumn(name = "AUTHOR_ID", referencedColumnName = "ID"))
+})
 public class ManuscriptAuthor implements Serializable {
+
     private static final long serialVersionUID = 3182293188081684002L;
+
     private ManuscriptAuthorId manuscriptAuthorId = new ManuscriptAuthorId();
     private String publisher;
 
@@ -10344,7 +10378,7 @@ public class ManuscriptAuthor implements Serializable {
         getManuscriptAuthorId().setAuthor(author);
     }
 
-    @Column(name=”PUBLISHER”, nullable=false, length=100)
+    @Column(name = "PUBLISHER", nullable = false, length = 100)
     public String getPublisher() {
         return publisher;
     }
@@ -10360,7 +10394,9 @@ public class ManuscriptAuthor implements Serializable {
 ```java
 @Embeddable
 public class ManuscriptAuthorId implements java.io.Serializable {
+
     private static final long serialVersionUID = 8395881050435165891L;
+
     private Manuscript manuscript;
     private Author author;
 
@@ -10370,7 +10406,7 @@ public class ManuscriptAuthorId implements java.io.Serializable {
     }
 
     public void setManuscript(Manuscript manuscript) {
-        this.mancript = manuscript;
+        this.manuscript = manuscript;
     }
 
     @ManyToOne
@@ -10390,42 +10426,52 @@ public class ManuscriptAuthorId implements java.io.Serializable {
 DROP TABLE `manuscript_author`;
 DROP TABLE `manuscript`;
 DROP TABLE `author`;
+
 CREATE TABLE `author` (
- `ID` int(11) NOT NULL AUTO_INCREMENT,
- `NAME` varchar(100) NOT NULL,
- PRIMARY KEY (`ID`)
+    `ID` int(11) NOT NULL AUTO_INCREMENT,
+    `NAME` varchar(100) NOT NULL,
+    PRIMARY KEY (`ID`)
 );
+```
+
+
+
+```sql
 CREATE TABLE `manuscript` (
- `ID` int(11) NOT NULL AUTO_INCREMENT,
- `NAME` varchar(100) NOT NULL,
- PRIMARY KEY (`ID`)
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `NAME` varchar(100) NOT NULL,
+  PRIMARY KEY (`ID`)
 );
+
 CREATE TABLE `manuscript_author` (
- `PUBLISHER` varchar(100) NOT NULL,
- `MANUSCRIPT_ID` int(11) NOT NULL DEFAULT ‘0’,
- `AUTHOR_ID` int(11) NOT NULL DEFAULT ‘0’,
- PRIMARY KEY (`AUTHOR_ID` , `MANUSCRIPT_ID`),
- KEY (`MANUSCRIPT_ID`),
- KEY (`AUTHOR_ID`),
- CONSTRAINT FOREIGN KEY (`AUTHOR_ID`) REFERENCES `author` (`ID`),
- CONSTRAINT FOREIGN KEY (`MANUSCRIPT_ID`) REFERENCES `manuscript` (`ID`)
+  `PUBLISHER` varchar(100) NOT NULL,
+  `MANUSCRIPT_ID` int(11) NOT NULL DEFAULT '0',
+  `AUTHOR_ID` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`AUTHOR_ID`, `MANUSCRIPT_ID`),
+  KEY (`MANUSCRIPT_ID`),
+  KEY (`AUTHOR_ID`),
+  CONSTRAINT FOREIGN KEY (`AUTHOR_ID`) REFERENCES `author` (`ID`),
+  CONSTRAINT FOREIGN KEY (`MANUSCRIPT_ID`) REFERENCES `manuscript` (`ID`)
 );
 ```
 
 ### 开发数据访问层
 
-接下来我们将查看如何开发数据访问层。我们将跳转到获取所有记录操作的测试用例。请注意，我们将在 `Manuscript` 与 `Author` 链接数据访问层讨论。`Manuscript` 数据访问层以及 `Author` 数据访问层的操作保持不变，如之前章节中所涵盖的。
+接下来我们将查看如何开发数据访问层。我们将跳转到获取所有记录操作的测试用例。请注意，我们将在`Manuscript`与`Author`链接数据访问层讨论。`Manuscript`数据访问层以及`Author`数据访问层的操作保持不变，如之前章节中所涵盖的。
 
 ```java
-@RunWith( SpringJUnit4ClassRunner.class )
-@ContextConfiguration( locations = { “classpath:context.xml” } )
-@TransactionConfiguration( defaultRollback = true )
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {"classpath:context.xml"})
+@TransactionConfiguration(defaultRollback = true)
 @Transactional
 public class ManuscriptAuthorDaoImplTest {
+
     @Autowired
     private AuthorDao authorDao;
+
     @Autowired
     private ManuscriptDao manuscriptDao;
+
     @Autowired
     private ManuscriptAuthorDao manuscriptAuthorDao;
 
@@ -10436,31 +10482,35 @@ public class ManuscriptAuthorDaoImplTest {
 }
 ```
 
-接下来我们将评估如何为上述测试编写等效的数据访问操作。使用 `Session.createQuery` 方法结合 SQL 从 `ManuscriptAuthor` 实体中检索所有记录。
+接下来我们将评估如何为上述测试编写等效的数据访问操作。使用`Session.createQuery`方法结合SQL从`ManuscriptAuthor`实体中检索所有记录。
 
 ```java
 @Repository
 @Transactional
 public class ManuscriptAuthorDaoImpl implements ManuscriptAuthorDao {
-    @Autowired
-    private SessionFactory sessionFactory ;
 
-    @SuppressWarnings("unchecked”)
+    @Autowired
+    private SessionFactory sessionFactory;
+
+    @SuppressWarnings("unchecked")
     @Override
     public List<ManuscriptAuthor> getAll() {
-        return sessionFactory.getCurrentSession().createQuery(“select distinct ma from ManuscriptAuthor ma”).list();
+        return sessionFactory.getCurrentSession().createQuery("select distinct ma from ManuscriptAuthor ma").list();
     }
 }
 ```
 
-紧接着，让我们查看 `isPresent` 过程的测试。我们在 `Manuscript` 实体中插入单行，并使用 `Author` 实体将它们链接。之后我们检查 `isPresent` 是否返回 true。
+紧接着，让我们查看`isPresent`过程的测试。我们在`Manuscript`实体中插入单行，并使用`Author`实体将它们链接。之后我们检查`isPresent`是否返回`true`。
 
 ```java
 public class ManuscriptDaoImplTest {
+
     @Autowired
     private AuthorDao authorDao;
+
     @Autowired
     private ManuscriptDao manuscriptDao;
+
     @Autowired
     private ManuscriptAuthorDao manuscriptAuthorDao;
 
@@ -10472,8 +10522,8 @@ public class ManuscriptDaoImplTest {
         manuscriptDao.insert(manuscript);
         author.insert(author);
         List<ManuscriptAuthor> manuscriptList = manuscriptAuthorDao.isPresent(manuscript.getId(), author.getId());
-        if(null != manuscriptList) {
-            if(manusList.size() > 0) {
+        if (null != manuscriptList) {
+            if (manuscriptList.size() > 0) {
                 status = true;
             }
         }
@@ -10482,22 +10532,23 @@ public class ManuscriptDaoImplTest {
 }
 ```
 
-`isPresent` 操作通过 `Manuscript` 标识符以及 `Author` 标识符请求 `Session.createQuery` 方法，并测试是否存在连接。
+`isPresent`操作通过`Manuscript`标识符以及`Author`标识符请求`Session.createQuery`方法，并测试是否存在连接。
 
 ```java
 @Repository
 @Transactional
 public class ManuscriptAuthorDaoImpl implements ManuscriptAuthorDao {
+
     @Autowired
     private SessionFactory sessionFactory;
 
-    @SuppressWarnings("unchecked”)
+    @SuppressWarnings("unchecked")
     @Override
     public List<ManuscriptAuthor> isPresent(Integer manuscriptId, Integer authorId) {
-        String hql = “select distinct ma from ManuscriptAuthor ma where ma.manuscriptId.mancript.id=:mancriptId and ma.manuscriptId.author.id=:authorId”;
+        String hql = "select distinct ma from ManuscriptAuthor ma where ma.manuscriptId.manuscript.id=:manuscriptId and ma.manuscriptId.author.id=:authorId";
         Query query = sessionFactory.getCurrentSession().createQuery(hql);
-        query.setParameter(“mancriptId”, manuscriptId);
-        query.setParameter(“authorId”, authorId);
+        query.setParameter("manuscriptId", manuscriptId);
+        query.setParameter("authorId", authorId);
         return query.list();
     }
 }
@@ -10508,15 +10559,18 @@ public class ManuscriptAuthorDaoImpl implements ManuscriptAuthorDao {
 我们将转向业务服务层。首先，我们将回顾获取所有记录的任务测试。
 
 ```java
-@RunWith( SpringJUnit4ClassRunner.class )
-@ContextConfiguration( locations = { “classpath:context.xml” } )
-@TransactionConfiguration( defaultRollback = true )
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {"classpath:context.xml"})
+@TransactionConfiguration(defaultRollback = true)
 @Transactional
 public class ManuscriptAuthorServiceImplTest {
+
     @Autowired
     private ManuscriptService manuscriptService;
+
     @Autowired
     private AuthorService authorService;
+
     @Autowired
     private ManuscriptAuthorService manuscriptAuthorService;
 
@@ -10533,14 +10587,19 @@ public class ManuscriptAuthorServiceImplTest {
 @Service
 @Transactional
 public class ManuscriptAuthorServiceImpl implements ManuscriptAuthorService {
+
     @Autowired
     private ManuscriptDao manuscriptDao;
+
     @Autowired
     private ManuscriptMapper manuscriptMapper;
+
     @Autowired
     private AuthorDao authorDao;
+
     @Autowired
     private AuthorMapper authorMapper;
+
     @Autowired
     private ManuscriptAuthorDao manuscriptAuthorDao;
 
@@ -10548,231 +10607,233 @@ public class ManuscriptAuthorServiceImpl implements ManuscriptAuthorService {
     public List<ManuscriptAuthorDto> findAll() {
         List<ManuscriptAuthorDto> manuscriptAuthorDtos = new ArrayList<ManuscriptAuthorDto>();
         List<ManuscriptAuthor> manuscriptList = manuscriptAuthorDao.getAll();
-        for(ManuscriptAuthor manuscriptAuthor : manuscriptList) {
-```
-
-
-
-
-```java
-ManuscriptAuthorDto manuscriptAuthorDto = new ManuscriptAuthorDto();
-
-manuscriptAuthorDto.setManuscriptDto(manuscriptMapper.mapEntityToDto(manuscriptAuthor.getManuscript()));
-
-manuscriptAuthorDto.setAuthorDto(authorMapper.mapEntityToDto(manuscriptAuthor.getAuthor()));
-
-manuscriptAuthorDto.setPublisher(manuscriptAuthor.getPublisher());
-
-manuscriptAuthorDtos.add(manuscriptAuthorDto);
-
-}
-
-return manuscriptAuthorDtos;
-
-}
-
+        for (ManuscriptAuthor manuscriptAuthor : manuscriptList) {
+            ManuscriptAuthorDto manuscriptAuthorDto = new ManuscriptAuthorDto();
+            manuscriptAuthorDto.setManuscriptDto(manuscriptMapper.mapEntityToDto(manuscriptAuthor.getManuscript()));
+            manuscriptAuthorDto.setAuthorDto(authorMapper.mapEntityToDto(manuscriptAuthor.getAuthor()));
+            manuscriptAuthorDto.setPublisher(manuscriptAuthor.getPublisher());
+            manuscriptAuthorDtos.add(manuscriptAuthorDto);
+        }
+        return manuscriptAuthorDtos;
+    }
 }
 ```
 
-接下来是创建测试操作，该操作会创建一个 `Manuscript Author` 链接对象的实例，并检查关系数量是否与获取所有记录的操作相等。
+接下来是创建测试操作，该操作会创建一个`ManuscriptAuthor`链接对象的实例，并检查关系数量是否与获取所有记录的操作相等。
 
 ```java
 public class ManuscriptAuthorServiceImplTest {
 
-@Autowired
-private ManuscriptService manuscriptService;
+    @Autowired
+    private ManuscriptService manuscriptService;
 
-@Autowired
-private AuthorService authorService;
+    @Autowired
+    private AuthorService authorService;
 
-@Autowired
-private ManuscriptAuthorService manuscriptAuthorService;
+    @Autowired
+    private ManuscriptAuthorService manuscriptAuthorService;
 
-@Test
-public void testCreate() {
-ManuscriptAuthorDto manuscriptAuthorDto = new ManuscriptAuthorDto();
-ManuscriptDto manuscriptDto = new ManuscriptDto();
-manuscriptDto.setName(“The Immortals of Meluha”);
-manuscriptService.create(manuscriptDto);
-AuthorDto authorDto = new AuthorDto();
-authorDto.setName(“Amish Tripathi”);
-authorService.create(authorDto);
-List<ManuscriptDto> manuscriptDtos = manuscriptService.findAll();
-ManuscriptDto manuscriptDto1 = manuscriptDtos.get(0);
-List<AuthorDto> authorDtos = authorService.findAll();
-AuthorDto authorDto1 = authorDtos.get(0);
-manuscriptAuthorDto.setManuscriptDto(manuscriptDto1);
-manuscriptAuthorDto.setAuthorDto(authorDto1);
-manuscriptAuthorDto.setPublisher(“Createspace”);
-manuscriptAuthorService.create(manuscriptAuthorDto);
-Assert.assertEquals(1L, manuscriptAuthorService.findAll().size());
-}
+    @Test
+    public void testCreate() {
+        ManuscriptAuthorDto manuscriptAuthorDto = new ManuscriptAuthorDto();
+        ManuscriptDto manuscriptDto = new ManuscriptDto();
+        manuscriptDto.setName("The Immortals of Meluha");
+        manuscriptService.create(manuscriptDto);
+        AuthorDto authorDto = new AuthorDto();
+        authorDto.setName("Amish Tripathi");
+        authorService.create(authorDto);
+        List<ManuscriptDto> manuscriptDtos = manuscriptService.findAll();
+        ManuscriptDto manuscriptDto1 = manuscriptDtos.get(0);
+        List<AuthorDto> authorDtos = authorService.findAll();
+        AuthorDto authorDto1 = authorDtos.get(0);
+        manuscriptAuthorDto.setManuscriptDto(manuscriptDto1);
+        manuscriptAuthorDto.setAuthorDto(authorDto1);
+        manuscriptAuthorDto.setPublisher("Createspace");
+        manuscriptAuthorService.create(manuscriptAuthorDto);
+        Assert.assertEquals(1L, manuscriptAuthorService.findAll().size());
+    }
 }
 ```
 
-后续是移除测试操作，它会在 `Manuscript` 和 `Author` 的单个实例之间建立链接，然后删除该链接，并检查这两个项目之间不再存在链接。
+后续是移除测试操作，它会在`Manuscript`和`Author`的单个实例之间建立链接，然后删除该链接，并检查这两个项目之间不再存在链接。
 
 ```java
 public class ManuscriptAuthorServiceImplTest {
 
-@Autowired
-private ManuscriptService manuscriptService;
+    @Autowired
+    private ManuscriptService manuscriptService;
 
-@Autowired
-private AuthorService authorService;
+    @Autowired
+    private AuthorService authorService;
 
-@Autowired
-private ManuscriptAuthorService manuscriptAuthorService;
+    @Autowired
+    private ManuscriptAuthorService manuscriptAuthorService;
 
-@Test
-public void testRemove() {
-ManuscriptAuthorDto manuscriptAuthorDto = new ManuscriptAuthorDto();
-ManuscriptDto manuscriptDto = new ManuscriptDto();
-manuscriptDto.setName(“The Immortals of Meluha”);
-manuscriptService.create(manuscriptDto);
-AuthorDto authorDto = new AuthorDto();
-authorDto.setName(“Amish Tripathi”);
-authorService.create(authorDto);
-List<ManuscriptDto> manuscriptDtos = manuscriptService.findAll();
-ManuscriptDto manuscriptDto1 = manuscriptDtos.get(0);
-List<AuthorDto> authorDtos = authorService.findAll();
-AuthorDto authorDto1 = authorDtos.get(0);
-manuscriptAuthorDto.setManuscriptDto(manuscriptDto1);
-manuscriptAuthorDto.setAuthorDto(authorDto1);
-manuscriptAuthorDto.setPublisher(“Createspace”);
-manuscriptAuthorService.create(manuscriptAuthorDto);
-Assert.assertEquals(1L, manuscriptAuthorService.findAll().size());
-List<ManuscriptAuthorDto> manuscriptAuthorList = manuscriptAuthorService.findAll();
-ManuscriptAuthorDto manuscriptAuthorDto1 = manuscriptAuthorList.get(0);
-manuscriptAuthorService.remove(manuscriptAuthorDto1);
-Assert.assertEquals(0, manuscriptAuthorService.findAll().size());
-}
+    @Test
+    public void testRemove() {
+        ManuscriptAuthorDto manuscriptAuthorDto = new ManuscriptAuthorDto();
+        ManuscriptDto manuscriptDto = new ManuscriptDto();
+        manuscriptDto.setName("The Immortals of Meluha");
+        manuscriptService.create(manuscriptDto);
+        AuthorDto authorDto = new AuthorDto();
+        authorDto.setName("Amish Tripathi");
+        authorService.create(authorDto);
+        List<ManuscriptDto> manuscriptDtos = manuscriptService.findAll();
+        ManuscriptDto manuscriptDto1 = manuscriptDtos.get(0);
+        List<AuthorDto> authorDtos = authorService.findAll();
+        AuthorDto authorDto1 = authorDtos.get(0);
+        manuscriptAuthorDto.setManuscriptDto(manuscriptDto1);
+        manuscriptAuthorDto.setAuthorDto(authorDto1);
+        manuscriptAuthorDto.setPublisher("Createspace");
+        manuscriptAuthorService.create(manuscriptAuthorDto);
+        Assert.assertEquals(1L, manuscriptAuthorService.findAll().size());
+        List<ManuscriptAuthorDto> manuscriptAuthorList = manuscriptAuthorService.findAll();
+        ManuscriptAuthorDto manuscriptAuthorDto1 = manuscriptAuthorList.get(0);
+        manuscriptAuthorService.remove(manuscriptAuthorDto1);
+        Assert.assertEquals(0, manuscriptAuthorService.findAll().size());
+    }
 }
 ```
 
-连接的业务服务方法接收一个链接的 `Manuscript` 和 `Author` 对象，并通过数据访问方法从数据库中删除该链接。
+连接的业务服务方法接收一个链接的`Manuscript`和`Author`对象，并通过数据访问方法从数据库中删除该链接。
 
 ```java
 public class ManuscriptAuthorServiceImpl implements ManuscriptAuthorService {
 
-@Autowired
-private ManuscriptDao manuscriptDao;
-
-@Autowired
-private ManuscriptMapper manuscriptMapper;
-
-@Autowired
-private AuthorDao authorDao;
-
-@Autowired
-private AuthorMapper authorMapper;
-
-@Autowired
-private ManuscriptAuthorDao manuscriptAuthorDao;
-
-@Override
-public void create(ManuscriptAuthorDto manuscriptAuthorDto) {
-Integer manuscriptId = manuscriptAuthorDto.getManuscriptDto().getId();
-Integer authorId = manuscriptAuthorDto.getAuthorDto().getId();
-Manuscript manuscript = manuscriptDao.getById(manuscriptId);
-Author author = authorDao.getById(authorId);
-ManuscriptAuthor manuscriptAuthor = new ManuscriptAuthor();
-manuscriptAuthor.setManuscript(manuscript);
-manuscriptAuthor.setAuthor(author);
-manuscriptAuthor.setPublisher(manuscriptAuthorDto.getPublisher());
-manuscript.getManuscriptAuthors().add(manuscriptAuthor);
-manuscriptDao.insert(manuscript);
-}
-}
+    @Autowired
 ```
 
-测试设置是 `isPresent` 操作，它在 `Manuscript` 和 `Author` 之间建立链接，然后检查两个对象之间是否存在链接。
+
+
+`private ManuscriptDao manuscriptDao;`
+
+`@Autowired`
+
+`private ManuscriptMapper manuscriptMapper;`
+
+`@Autowired`
+
+`private AuthorDao authorDao;`
+
+`@Autowired`
+
+`private AuthorMapper authorMapper;`
+
+`@Autowired`
+
+`private ManuscriptAuthorDao manuscriptAuthorDao;`
+
+`@Override`
+
+`public void create(ManuscriptAuthorDto manuscriptAuthorDto) {`
+
+`Integer manuscriptId = manuscriptAuthorDto.getManuscriptDto().getId();`
+
+`Integer authorId = manuscriptAuthorDto.getAuthorDto().getId();`
+
+`Manuscript manuscript = manuscriptDao.getById(manuscriptId);`
+
+`Author author = authorDao.getById(authorId);`
+
+`ManuscriptAuthor manuscriptAuthor = new ManuscriptAuthor();`
+
+`manuscriptAuthor.setManuscript(manuscript);`
+
+`manuscriptAuthor.setAuthor(author);`
+
+`manuscriptAuthor.setPublisher(manuscriptAuthorDto.getPublisher());`
+
+`manuscript.getManuscriptAuthors().add(manuscriptAuthor);`
+
+`manuscriptDao.insert(manuscript);`
+
+`}`
+
+`}`
+
+测试设置是`isPresent`操作，它在`Manuscript`和`Author`之间建立链接，然后检查两个对象之间是否存在链接。
 
 ```java
 public class ManuscriptAuthorServiceImplTest {
 
-@Autowired
-private ManuscriptService manuscriptService;
+    @Autowired
+    private ManuscriptService manuscriptService;
 
-@Autowired
-private AuthorService authorService;
+    @Autowired
+    private AuthorService authorService;
 
-@Autowired
-private ManuscriptAuthorService manuscriptAuthorService;
+    @Autowired
+    private ManuscriptAuthorService manuscriptAuthorService;
 
-@Test
-public void testIsPresent() {
-ManuscriptAuthorDto manuscriptAuthorDto = new ManuscriptAuthorDto();
-ManuscriptDto manuscriptDto = new ManuscriptDto();
-manuscriptDto.setName(“The Immortals of Meluha”);
-manuscriptService.create(manuscriptDto);
-AuthorDto authorDto = new AuthorDto();
-authorDto.setName(“Amish Tripathi”);
-authorService.create(authorDto);
-List<ManuscriptDto> manuscriptDtos = manuscriptService.findAll();
-ManuscriptDto manuscriptDto1 = manuscriptDtos.get(0);
-List<AuthorDto> authorDtos = authorService.findAll();
-AuthorDto authorDto1 = authorDtos.get(0);
-manuscriptAuthorDto.setManuscriptDto(manuscriptDto1);
-manuscriptAuthorDto.setAuthorDto(authorDto1);
-manuscriptAuthorDto.setPublisher(“Createspace”);
-manuscriptAuthorService.create(manuscriptAuthorDto);
-Assert.assertEquals(1L, manuscriptAuthorService.findAll().size());
-boolean status = manuscriptAuthorService.isPresent(manuscriptAuthorDto);
-Assert.assertTrue(status);
-}
+    @Test
+    public void testIsPresent() {
+        ManuscriptAuthorDto manuscriptAuthorDto = new ManuscriptAuthorDto();
+        ManuscriptDto manuscriptDto = new ManuscriptDto();
+        manuscriptDto.setName("The Immortals of Meluha");
+        manuscriptService.create(manuscriptDto);
+        AuthorDto authorDto = new AuthorDto();
+        authorDto.setName("Amish Tripathi");
+        authorService.create(authorDto);
+        List<ManuscriptDto> manuscriptDtos = manuscriptService.findAll();
+        ManuscriptDto manuscriptDto1 = manuscriptDtos.get(0);
+        List<AuthorDto> authorDtos = authorService.findAll();
+        AuthorDto authorDto1 = authorDtos.get(0);
+        manuscriptAuthorDto.setManuscriptDto(manuscriptDto1);
+        manuscriptAuthorDto.setAuthorDto(authorDto1);
+        manuscriptAuthorDto.setPublisher("Createspace");
+        manuscriptAuthorService.create(manuscriptAuthorDto);
+        Assert.assertEquals(1L, manuscriptAuthorService.findAll().size());
+        boolean status = manuscriptAuthorService.isPresent(manuscriptAuthorDto);
+        Assert.assertTrue(status);
+    }
 }
 ```
 
-业务服务的对应操作是 `isPresent` 操作，它将调用委托给数据层的 `isPresent` 方法。
+业务服务的对应操作是`isPresent`操作，它将调用委托给数据层的`isPresent`方法。
 
 ```java
 public class ManuscriptAuthorServiceImpl implements ManuscriptAuthorService {
 
-@Autowired
-private ManuscriptDao manuscriptDao;
+    @Autowired
+    private ManuscriptDao manuscriptDao;
 
-@Autowired
-private ManuscriptMapper manuscriptMapper;
+    @Autowired
+    private ManuscriptMapper manuscriptMapper;
 
-@Autowired
-private AuthorDao authorDao;
+    @Autowired
+    private AuthorDao authorDao;
 
-@Autowired
-private AuthorMapper authorMapper;
+    @Autowired
+    private AuthorMapper authorMapper;
 
-@Autowired
-private ManuscriptAuthorDao manuscriptAuthorDao;
+    @Autowired
+    private ManuscriptAuthorDao manuscriptAuthorDao;
 
-@Override
-public boolean isPresent(ManuscriptAuthorDto manuscriptAuthorDto) {
-boolean status = false;
-List<ManuscriptAuthor> manuscriptAuthorList = manuscriptAuthorDao.isPresent(manuscriptAuthorDto.getManuscriptDto().getId(), manuscriptAuthorDto.getAuthorDto().getId());
-if(null != manuscriptAuthorList) {
-if(manuscriptAuthorList.size() > 0) {
-status = true;
-}
-}
-
-return status;
-
-}
+    @Override
+    public boolean isPresent(ManuscriptAuthorDto manuscriptAuthorDto) {
+        boolean status = false;
+        List<ManuscriptAuthor> manuscriptAuthorList = manuscriptAuthorDao.isPresent(manuscriptAuthorDto.getManuscriptDto().getId(), manuscriptAuthorDto.getAuthorDto().getId());
+        if(null != manuscriptAuthorList) {
+            if(manuscriptAuthorList.size() > 0) {
+                status = true;
+            }
+        }
+        return status;
+    }
 }
 ```
 
-
-
-栈中的最后一层是基于 REST 的 Spring Controller，我们将首先对其进行测试测试。该测试会创建一个链接对象，然后检查它是否存在，最后执行删除操作。
+栈中的最后一层是基于 REST 的 Spring Controller，我们将首先对其进行测试。该测试会创建一个链接对象，然后检查它是否存在，最后执行删除操作。
 
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-@ContextConfiguration( locations = { “classpath:context.xml” })
+@ContextConfiguration(locations = { "classpath:context.xml" })
 @TransactionConfiguration(defaultRollback = true)
 @Transactional
 public class ManuscriptAuthorControllerTest {
 
-    private Gson gson = new GsonBuilder().setDateFormat(“yyyy-MM-dd hh:mm:ss”).create();
+    private Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd hh:mm:ss").create();
 
     @Autowired
     private ManuscriptService manuscriptService;
@@ -10800,10 +10861,10 @@ public class ManuscriptAuthorControllerTest {
     public void testCreate() throws Exception {
         ManuscriptAuthorDto manuscriptAuthorDto = new ManuscriptAuthorDto();
         ManuscriptDto manuscriptDto = new ManuscriptDto();
-        manuscriptDto.setName(“The Immortals of Meluha”);
+        manuscriptDto.setName("The Immortals of Meluha");
         manuscriptService.create(manuscriptDto);
         AuthorDto authorDto = new AuthorDto();
-        authorDto.setName(“Amish Tripathi”);
+        authorDto.setName("Amish Tripathi");
         authorService.create(authorDto);
         List<ManuscriptDto> manuscriptDtos = manuscriptService.findAll();
         ManuscriptDto manuscriptDto1 = manuscriptDtos.get(0);
@@ -10811,9 +10872,9 @@ public class ManuscriptAuthorControllerTest {
         AuthorDto authorDto1 = authorDtos.get(0);
         manuscriptAuthorDto.setManuscriptDto(manuscriptDto1);
         manuscriptAuthorDto.setAuthorDto(authorDto1);
-        manuscriptAuthorDto.setPublisher(“Createspace”);
+        manuscriptAuthorDto.setPublisher("Createspace");
         String json = gson.toJson(manuscriptAuthorDto);
-        MockHttpServletRequestBuilder requestBuilderOne = MockMvcRequestBuilders.post(“/manytomanybidirectionalwithjoinattribute/manuscriptauthor/create”);
+        MockHttpServletRequestBuilder requestBuilderOne = MockMvcRequestBuilders.post("/manytomanybidirectionalwithjoinattribute/manuscriptauthor/create");
         requestBuilderOne.contentType(MediaType.APPLICATION_JSON);
         requestBuilderOne.content(json.getBytes());
         this.mockMvc.perform(requestBuilderOne).andExpect(MockMvcResultMatchers.status().isOk());
@@ -10822,10 +10883,10 @@ public class ManuscriptAuthorControllerTest {
     public void testPresent() throws Exception {
         ManuscriptAuthorDto manuscriptAuthorDto = new ManuscriptAuthorDto();
         ManuscriptDto manuscriptDto = new ManuscriptDto();
-        manuscriptDto.setName(“The Immortals of Meluha”);
+        manuscriptDto.setName("The Immortals of Meluha");
         manuscriptService.create(manuscriptDto);
         AuthorDto authorDto = new AuthorDto();
-        authorDto.setName(“Amish Tripathi”);
+        authorDto.setName("Amish Tripathi");
         authorService.create(authorDto);
         List<ManuscriptDto> manuscriptDtos = manuscriptService.findAll();
         ManuscriptDto manuscriptDto1 = manuscriptDtos.get(0);
@@ -10833,9 +10894,9 @@ public class ManuscriptAuthorControllerTest {
         AuthorDto authorDto1 = authorDtos.get(0);
         manuscriptAuthorDto.setManuscriptDto(manuscriptDto1);
         manuscriptAuthorDto.setAuthorDto(authorDto1);
-        manuscriptAuthorDto.setPublisher(“Createspace”);
+        manuscriptAuthorDto.setPublisher("Createspace");
         String json = gson.toJson(manuscriptAuthorDto);
-        MockHttpServletRequestBuilder requestBuilderOne = MockMvcRequestBuilders.post(“/manytomanybidirectionalwithjoinattribute/manuscriptauthor/isPresent”);
+        MockHttpServletRequestBuilder requestBuilderOne = MockMvcRequestBuilders.post("/manytomanybidirectionalwithjoinattribute/manuscriptauthor/isPresent");
         requestBuilderOne.contentType(MediaType.APPLICATION_JSON);
         requestBuilderOne.content(json.getBytes());
         this.mockMvc.perform(requestBuilderOne).andExpect(MockMvcResultMatchers.status().isOk());
@@ -10844,10 +10905,10 @@ public class ManuscriptAuthorControllerTest {
     public void testDelete() throws Exception {
         ManuscriptAuthorDto manuscriptAuthorDto = new ManuscriptAuthorDto();
         ManuscriptDto manuscriptDto = new ManuscriptDto();
-        manuscriptDto.setName(“The Immortals of Meluha”);
+        manuscriptDto.setName("The Immortals of Meluha");
         manuscriptService.create(manuscriptDto);
         AuthorDto authorDto = new AuthorDto();
-        authorDto.setName(“Amish Tripathi”);
+        authorDto.setName("Amish Tripathi");
         authorService.create(authorDto);
         List<ManuscriptDto> manuscriptDtos = manuscriptService.findAll();
         ManuscriptDto manuscriptDto1 = manuscriptDtos.get(0);
@@ -10855,9 +10916,9 @@ public class ManuscriptAuthorControllerTest {
         AuthorDto authorDto1 = authorDtos.get(0);
         manuscriptAuthorDto.setManuscriptDto(manuscriptDto1);
         manuscriptAuthorDto.setAuthorDto(authorDto1);
-        manuscriptAuthorDto.setPublisher(“Createspace”);
+        manuscriptAuthorDto.setPublisher("Createspace");
         String json = gson.toJson(manuscriptAuthorDto);
-        MockHttpServletRequestBuilder requestBuilder2 = MockMvcRequestBuilders.post(“/manytomanybidirectionalwithjoinattribute/manuscriptauthor/remove”);
+        MockHttpServletRequestBuilder requestBuilder2 = MockMvcRequestBuilders.post("/manytomanybidirectionalwithjoinattribute/manuscriptauthor/remove");
         requestBuilder2.contentType(MediaType.APPLICATION_JSON);
         requestBuilder2.content(json.getBytes());
         this.mockMvc.perform(requestBuilder2).andExpect(MockMvcResultMatchers.status().is(204));
@@ -10869,66 +10930,99 @@ REST Spring Controller 将与业务服务层交互，后者最后调用数据访
 
 ```java
 @Controller
-@RequestMapping(value=”/manytomanybidirectionalwithjoinattribute/manuscriptauthor”)
-@Transactional
-public class ManuscriptAuthorController {
-    @Autowired
-    private ManuscriptAuthorService service;
-
-    @RequestMapping(value=”/findAll”, method=RequestMethod.GET)
-    public @ResponseBody List<ManuscriptAuthorDto> findAll() {
-        return service.findAll();
-    }
-
-    @RequestMapping(value=”/isPresent”, method=RequestMethod.POST)
-    public @ResponseBody boolean isPresent(@RequestBody ManuscriptAuthorDto manuscriptAuthorDto) {
-        return service.isPresent(manuscriptAuthorDto);
-    }
-
-    @RequestMapping(value=”/create”, method=RequestMethod.POST)
-    @ResponseBody
-    public void create(@RequestBody ManuscriptAuthorDto manuscriptAuthorDto) {
-        service.create(manuscriptAuthorDto);
-    }
-
-    @RequestMapping(value=”/remove”, method=RequestMethod.POST)
-    @ResponseStatus(value = HttpStatus.NO_CONTENT)
-    public void remove(@RequestBody ManuscriptAuthorDto manuscriptAuthorDto) {
-        service.remove(manuscriptAuthorDto);
-    }
-}
 ```
 
 
 
+`@RequestMapping(value="/manytomanybidirectionalwithjoinattribute/manuscriptauthor")`
+
+`@Transactional`
+
+`public class ManuscriptAuthorController` {
+
+    `@Autowired`
+
+    `private ManuscriptAuthorService service;`
+
+    `@RequestMapping(value="/findAll", method=RequestMethod.GET)`
+
+    `public @ResponseBody List<ManuscriptAuthorDto> findAll()` {
+
+        `return service.findAll();`
+
+    }
+
+    `@RequestMapping(value="/isPresent", method=RequestMethod.POST)`
+
+    `public @ResponseBody boolean isPresent(@RequestBody ManuscriptAuthorDto manuscriptAuthorDto)` {
+
+        `return service.isPresent(manuscriptAuthorDto);`
+
+    }
+
+    `@RequestMapping(value="/create", method=RequestMethod.POST)`
+
+    `@ResponseBody`
+
+    `public void create(@RequestBody ManuscriptAuthorDto manuscriptAuthorDto)` {
+
+        `service.create(manuscriptAuthorDto);`
+
+    }
+
+    `@RequestMapping(value="/remove", method=RequestMethod.POST)`
+
+    `@ResponseStatus(value = HttpStatus.NO_CONTENT)`
+
+    `public void remove(@RequestBody ManuscriptAuthorDto manuscriptAuthorDto)` {
+
+        `service.remove(manuscriptAuthorDto);`
+
+    }
+
+}
 
 `MemberDto` 数据传输对象包含一个标识符和成员名称。连接对象 `MemberMemberDto` 包含两个 `MemberDto` 实例。
 
 ```java
 public class MemberDto {
+
     private Integer id;
+
     private String name;
+
     // getters and setters
+
 }
 
 public class MemberMemberDto {
+
     private MemberDto memberId1;
+
     private MemberDto memberId2;
+
     // getters and setters
+
 }
 ```
 
-#### 开发模拟服务
+## 开发模拟服务
 
 我们不再详细描述 `Member` 对象的管理，因为在前面的章节中我们已经多次看到它了。我们将只关注如何管理两个 `Member` 实例之间的链接。模拟服务将与一个内存标准数据库结合，用于持久化数据，该数据将供模拟用户界面使用。我们将开始添加功能。我们有一个 `MemberMemberDto` 列表，每当有一个新记录，就会向列表中添加一个包含两个 `MemberDto` 实例的 `MemberMemberDto` 实例。
 
 ```java
 public enum MemberMemberInMemoryDB {
+
     INSTANCE;
+
     private static List<MemberMemberDto> list = new ArrayList<MemberMemberDto>();
+
     public void add(MemberMemberDto memberMemberDto) {
+
         list.add(memberMemberDto);
+
     }
+
 }
 ```
 
@@ -10936,13 +11030,21 @@ public enum MemberMemberInMemoryDB {
 
 ```java
 @Controller
+
 @RequestMapping(value="/manytomanyselfreference/membermember/mock")
+
 public class MemberMemberMockController {
+
     @RequestMapping(value="/create", method=RequestMethod.POST)
+
     @ResponseBody
+
     public void create(@RequestBody MemberMemberDto memberMemberDto){
+
         MemberMemberInMemoryDB.INSTANCE.add(memberMemberDto);
+
     }
+
 }
 ```
 
@@ -10950,9 +11052,13 @@ public class MemberMemberMockController {
 
 ```java
 public enum MemberMemberInMemoryDB {
+
     public List<MemberMemberDto> findAll() {
+
         return list;
+
     }
+
 }
 ```
 
@@ -10960,10 +11066,15 @@ public enum MemberMemberInMemoryDB {
 
 ```java
 public class MemberMemberMockController {
+
     @RequestMapping(value="/findAll", method=RequestMethod.GET)
+
     public @ResponseBody List<MemberMemberDto> findAll(){
+
         return MemberMemberInMemoryDB.INSTANCE.findAll();
+
     }
+
 }
 ```
 
@@ -10971,16 +11082,27 @@ public class MemberMemberMockController {
 
 ```java
 public enum MemberMemberInMemoryDB {
+
     public void remove(MemberMemberDto memberMemberDto) {
+
         MemberMemberDto toRemove = null;
+
         for (MemberMemberDto dto:list) {
+
             if (dto.getMemberId1().getId()==memberMemberDto.getMemberId1().getId()
+
             && dto.getMemberId2().getId() == memberMemberDto.getMemberId2().getId()) {
+
                 toRemove = dto;
+
             }
+
         }
+
         if (toRemove!=null) list.remove(toRemove);
+
     }
+
 }
 ```
 
@@ -10988,11 +11110,17 @@ public enum MemberMemberInMemoryDB {
 
 ```java
 public class MemberMemberMockController {
+
     @RequestMapping(value="/remove", method=RequestMethod.POST)
+
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
+
     public void remove(@RequestBody MemberMemberDto memberMemberDto){
+
         MemberMemberInMemoryDB.INSTANCE.remove(memberMemberDto);
+
     }
+
 }
 ```
 
@@ -11000,18 +11128,31 @@ public class MemberMemberMockController {
 
 ```java
 public enum MemberMemberInMemoryDB {
+
     public boolean isPresent(MemberMemberDto memberMemberDto) {
+
         for (MemberMemberDto dto:list) {
+
             if (dto.getMemberId1().getId() == memberMemberDto.getMemberId1().getId()
+
             && dto.getMemberId2().getId() == memberMemberDto.getMemberId2().getId()) {
+
                 return true;
+
             } else if (dto.getMemberId1().getId() == memberMemberDto.getMemberId2().getId()
+
             && dto.getMemberId2().getId() == memberMemberDto.getMemberId1().getId()) {
+
                 return true;
+
             }
+
         }
+
         return false;
+
     }
+
 }
 ```
 
@@ -11019,14 +11160,19 @@ public enum MemberMemberInMemoryDB {
 
 ```java
 public class MemberMemberMockController {
+
     @RequestMapping(value="/isPresent", method=RequestMethod.POST)
+
     public @ResponseBody boolean isPresent(@RequestBody MemberMemberDto memberMemberDto){
+
         return MemberMemberInMemoryDB.INSTANCE.isPresent(memberMemberDto);
+
     }
+
 }
 ```
 
-### 开发模拟用户界面
+## 开发模拟用户界面
 
 在前面的部分中我们考虑了如何通过内存目录扩展模拟服务。现在我们指示如何构建图 12-2 所示的用户界面，它将消耗此模拟服务。我们将讨论与连接相关的界面部分，因为 `Member` 的创建、读取、更新和删除方法保持一致。
 
@@ -11038,23 +11184,41 @@ JSP 体是初始的编程代码，之后会调用 Javascript 事件。
 
 ```html
 <body onload="loadObjects()">
+
     <div id="container">
+
         <table>
+
             <tbody>
+
                 <tr>
+
                     <td>
+
                         <table>
+
                             <tr><td><p><b>将成员分配给成员</b></p></td></tr>
+
                             <tr><td><div id="memberCombo1"></div></td></tr>
+
                             <tr><td><div id="memberCombo2"></div></td></tr>
+
                             <tr><input type="submit" value="分配成员" onclick="methodCall()"></td></tr>
+
                         </table>
+
                         <div id="memberMemberResponse"></div>
+
                     </td>
+
                 </tr>
+
             </tbody>
+
         </table>
+
     </div>
+
 </body>
 ```
 
@@ -11062,78 +11226,133 @@ JSP 体是初始的编程代码，之后会调用 Javascript 事件。
 
 ```javascript
 function loadObjects(){
+
     $.ajax({
+
         url: "/manytomanyselfreference/membermember/mock/findAll",
+
         type: "GET",
+
         data: {},
+
         dataType: "json",
+
         success: function(data, textStatus) {
+
             processMemberResponse(data);
+
         },
+
         error: function (jqX, textStatus, error) {
+
             alert("Error:"+textStatus);
+
         }
+
     });
+
 }
 
 function processMemberResponse(responsedata){
+
     var dyanmicTableRow="<table border=1>" +
+
         "<tr><td>成员名称</td><td>成员名称</td><td>操作</td></tr>";
+
     // 循环处理
+
     // ...
+
     document.getElementById("memberMemberResponse").innerHTML=tableHtml;
+
 }
 
 function isPresent(){
+
     $.ajax({
+
         url: "/manytomanyselfreference/membermember/mock/isPresent",
+
         type: "POST",
+
         data: {
+
             memberId1: $("#memberSelect1").val(),
+
             memberId2: $("#memberSelect2").val()
+
         },
+
         dataType: "json",
+
         success: function(data, textStatus) {
+
             if(data) {
+
                 alert("成员已存在");
+
             } else {
+
                 alert("成员不存在");
+
             }
+
         }
+
     });
+
 }
 ```
 
 *(注：由于原文提供的 HTML/JS 代码片段不完整且存在逻辑断层，译文根据上下文逻辑对结构进行了补全对齐)*
 
-
-
-
-
 ```javascript
-if(null != memberid1 && “” != memberid1 && null!= memberid2 && “” != memberid2) {
-  var formData={“memberId1”:{“id”:memberid1},”memberId2”:{“id”:memberid2}};
+if(null != memberid1 && "" != memberid1 && null!= memberid2 && "" != memberid2) {
+
+  var formData={"memberId1":{"id":memberid1},"memberId2":{"id":memberid2}};
+
   $.ajax({
-    url : “/Spring-OODD/manytomanyselfreference/membermember/mock/isPresent”,
-    type: “POST”,
+
+    url : "/Spring-OODD/manytomanyselfreference/membermember/mock/isPresent",
+
+    type: "POST",
+
     data : JSON.stringify(formData),
+
     beforeSend: function(xhr) {
-      xhr.setRequestHeader(“Accept”, “application/json”);
-      xhr.setRequestHeader(“Content-Type”, “application/json”);
+
+      xhr.setRequestHeader("Accept", "application/json");
+
+      xhr.setRequestHeader("Content-Type", "application/json");
+
     },
+
     success: function(data, textStatus, jqXHR) {
+
       if(!data) {
+
         createMemberMember(memberid1, memberid2, membername1, membername2);
+
       } else {
-        alert(“Member already assigned to this Member”);
+
+        alert("Member already assigned to this Member");
+
       }
+
     },
+
     error: function (jqXHR, textStatus, errorThrown) {
-      alert(“Error Status Create:”+errorThrown);
+
+      alert("Error Status Create:"+errorThrown);
+
     }
+
   });
+
 }
+
 return false;
+
 }
 ```
 
@@ -11141,56 +11360,61 @@ return false;
 
 ```javascript
 function createMemberMember(memberid1, memberid2, membername1, membername2){
-  var formData={“memberId1”:{“id”:memberid1, “name”:membername1},”memberId2”:{“id”:memberid2, “name”:membername2}};
-  if(memberid1 != memberid2) {
-    $.ajax({
-      url : “/Spring-OODD/manytomanyselfreference/membermember/mock/create”,
-      type: “POST”,
-      data : JSON.stringify(formData),
-      beforeSend: function(xhr) {
-        xhr.setRequestHeader(“Accept”, “application/json”);
-        xhr.setRequestHeader(“Content-Type”, “application/json”);
-      },
-      success: function(data, textStatus, jqXHR) {
-        loadObjects();
-      },
-      error: function (jqXHR, textStatus, errorThrown) {
-        alert(“Error Status Create:”+textStatus);
-      }
-    });
-  } else {
-    alert(“Can’t assign member to itself. Please choose a different member.”);
-  }
-  return false;
-}
 ```
 
-接下来，我们将检查 `deleteMemberMemberObject` JavaScript 方法，该方法接收两个 Member 标识符并终止该关系。
 
-```javascript
-function deleteMemberMemberObject(memberid1,memberid2){
-  var formData={“memberId1”:{“id”:memberid1},”memberId2”:{“id”:memberid2}};
-  delurl=”/Spring-OODD/manytomanyselfreference/membermember/mock/remove”;
+
+`var formData={"memberId1":{"id":memberid1, "name":membername1},"memberId2":{"id":memberid2, "name":membername2}};`
+
+```
+if(memberid1 != memberid2) {
   $.ajax({
-    url : delurl,
-    type: “POST”,
+    url : "/Spring-OODD/manytomanyselfreference/membermember/mock/create",
+    type: "POST",
     data : JSON.stringify(formData),
-    dataType: “json”,
     beforeSend: function(xhr) {
-      xhr.setRequestHeader(“Accept”, “application/json”);
-      xhr.setRequestHeader(“Content-Type”, “application/json”);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.setRequestHeader("Content-Type", "application/json");
     },
     success: function(data, textStatus, jqXHR) {
       loadObjects();
     },
     error: function (jqXHR, textStatus, errorThrown) {
-      alert(“Error Status Delete:”+textStatus);
+      alert("Error Status Create:"+textStatus);
+    }
+  });
+} else {
+  alert("Can't assign member to itself. Please choose a different member.");
+}
+return false;
+```
+
+接下来，我们将检查 `deleteMemberMemberObject` JavaScript 方法，该方法接收两个 `Member` 标识符并终止该关系。
+
+```javascript
+function deleteMemberMemberObject(memberid1,memberid2){
+  var formData={"memberId1":{"id":memberid1},"memberId2":{"id":memberid2}};
+  delurl="/Spring-OODD/manytomanyselfreference/membermember/mock/remove";
+  $.ajax({
+    url : delurl,
+    type: "POST",
+    data : JSON.stringify(formData),
+    dataType: "json",
+    beforeSend: function(xhr) {
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.setRequestHeader("Content-Type", "application/json");
+    },
+    success: function(data, textStatus, jqXHR) {
+      loadObjects();
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+      alert("Error Status Delete:"+textStatus);
     }
   });
 }
 ```
 
-### 开发服务
+## 开发服务
 
 后续步骤是实际的服务开发，包括四个主要步骤：创建实体、创建数据访问层、创建业务服务层以及创建基于 JSON 的 REST 能力。我们将从实体开始，一直到 REST 服务。
 
@@ -11200,41 +11424,51 @@ function deleteMemberMemberObject(memberid1,memberid2){
 
 ```java
 @RunWith( SpringJUnit4ClassRunner.class )
-@ContextConfiguration( locations = { “classpath:context.xml” } )
+@ContextConfiguration( locations = { "classpath:context.xml" } )
 @TransactionConfiguration( defaultRollback = true )
 @Transactional
 public class MemberTest {
   @Autowired
   private SessionFactory sessionFactory;
+
   @SuppressWarnings("unchecked")
   @Test
   public void testCRUD() {
     Member member1 = new Member();
-    member1.setName(“Amritendu De”);
+    member1.setName("Amritendu De");
     Member member2 = new Member();
-    member2.setName(“Lalit Narayan Mishra”);
+    member2.setName("Lalit Narayan Mishra");
     Member member3 = new Member();
-    member3.setName(“Hazekul Alam”);
+    member3.setName("Hazekul Alam");
+
     sessionFactory.getCurrentSession().save(member1);
     sessionFactory.getCurrentSession().save(member2);
     sessionFactory.getCurrentSession().save(member3);
-    member1.setName(“Amish Tripathi”);
+
+    member1.setName("Amish Tripathi");
     sessionFactory.getCurrentSession().merge(member1);
-    List<Member> list = sessionFactory.getCurrentSession().createQuery(“from Member”).list();
+
+    List<Member> list = sessionFactory.getCurrentSession().createQuery("from Member").list();
     Assert.assertEquals(3L, list.size());
+
     sessionFactory.getCurrentSession().delete(member1);
-    List<Member> list2 = sessionFactory.getCurrentSession().createQuery(“from Member”).list();
+    List<Member> list2 = sessionFactory.getCurrentSession().createQuery("from Member").list();
     Assert.assertEquals(2L, list2.size());
+
     member2.getMembers1().add(member3);
     sessionFactory.getCurrentSession().merge(member2);
-    List<Member> list3 = sessionFactory.getCurrentSession().createQuery(“from Member”).list();
+
+    List<Member> list3 = sessionFactory.getCurrentSession().createQuery("from Member").list();
     Assert.assertEquals(3L, list.size());
+
     sessionFactory.getCurrentSession().delete(member1);
-    List<Member> list2 = sessionFactory.getCurrentSession().createQuery(“from Member”).list();
+    List<Member> list2 = sessionFactory.getCurrentSession().createQuery("from Member").list();
     Assert.assertEquals(2L, list2.size());
+
     member2.getMembers1().add(member3);
     sessionFactory.getCurrentSession().merge(member2);
-    List<Member> list3 = sessionFactory.getCurrentSession().createQuery(“from Member”).list();
+
+    List<Member> list3 = sessionFactory.getCurrentSession().createQuery("from Member").list();
     Assert.assertEquals(3L, list.size());
   }
 }
@@ -11244,80 +11478,74 @@ public class MemberTest {
 
 ```java
 @Entity
-@Table(name=”Member”)
+@Table(name="Member")
 public class Member {
   @Id
   @GeneratedValue(strategy=GenerationType.AUTO)
   private Integer id;
+
   @Column(length=100)
   private String name;
+
   @ManyToMany
   private Set<Member> members1 = new HashSet<>();
+
   public Integer getId() {
     return id;
   }
+
   public void setId(Integer id) {
     this.id = id;
   }
+
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
+
   public Set<Member> getMembers1() {
     return members1;
   }
+
   public void setMembers1(Set<Member> members1) {
     this.members1 = members1;
   }
 }
 ```
 
-
-
-
-
 ```java
 List<Member> memberList = memberDao.getAll();
-
 Member member = memberList.get(0);
-
 List<Member> memberList2 = memberDao.getAll();
-
 Member member2 = memberList2.get(0);
-
 member.getMembers1().add(member2);
-
 memberDao.insert(member);
-
 List<Member> memberList3 = memberMemberDao.isPresent(member.getId(), member2.getId());
-
 if(null != memberList3) {
   if(memberList3.size() > 0) {
     status = true;
   }
 }
-
 Assert.assertTrue(status);
-}
 ```
 
 模仿 `isPresent` 操作仅仅请求了 `Hibernate Session.createQuery` 方法，传递了实例标识符，并测试关系是否存在。
 
 ```java
 public class MemberMemberDaoImpl implements MemberMemberDao {
-
   @Autowired
   private SessionFactory sessionFactory ;
 
   @SuppressWarnings("unchecked")
   @Override
   public List<Member> isPresent(Integer memberId1, Integer memberId2) {
-    String hql = “select distinct m from Member m join m.members1 m1 where m.id=:memberId1 and m1.id=:memberId2”;
+    String hql = "select distinct m from Member m join m.members1 m1 where m.id=:memberId1 and m1.id=:memberId2";
     Query query = sessionFactory.getCurrentSession().createQuery(hql);
-    query.setParameter(“memberId1”, memberId1);
-    query.setParameter(“memberId2”, memberId2);
+    query.setParameter("memberId1", memberId1);
+    query.setParameter("memberId2", memberId2);
     return query.list();
   }
 }
@@ -11329,11 +11557,10 @@ public class MemberMemberDaoImpl implements MemberMemberDao {
 
 ```java
 @RunWith( SpringJUnit4ClassRunner.class )
-@ContextConfiguration( locations = { “classpath:context.xml” } )
+@ContextConfiguration( locations = { "classpath:context.xml" } )
 @TransactionConfiguration( defaultRollback = true )
 @Transactional
 public class MemberMemberServiceImplTest {
-
   @Autowired
   private MemberService memberService;
 
@@ -11353,7 +11580,6 @@ public class MemberMemberServiceImplTest {
 @Service
 @Transactional
 public class MemberMemberServiceImpl implements MemberMemberService {
-
   @Autowired
   private MemberDao memberDao;
 
@@ -11387,7 +11613,6 @@ public class MemberMemberServiceImpl implements MemberMemberService {
 
 ```java
 public class MemberMemberServiceImplTest {
-
   @Autowired
   private MemberService memberService;
 
@@ -11398,24 +11623,29 @@ public class MemberMemberServiceImplTest {
   public void testCreate() {
     MemberMemberDto memberMemberDto = new MemberMemberDto();
     MemberDto memberDto1 = new MemberDto();
-    memberDto1.setName(“Sara Tencradi”);
+    memberDto1.setName("Sara Tencradi");
     memberService.create(memberDto1);
+
     MemberDto memberDto2 = new MemberDto();
-    memberDto2.setName(“Mike Scofield”);
+    memberDto2.setName("Mike Scofield");
     memberService.create(memberDto2);
+
     List<MemberDto> memberDtos1 = memberService.findAll();
     MemberDto memberDto3 = memberDtos1.get(0);
+
     List<MemberDto> memberDtos2 = memberService.findAll();
     MemberDto memberDto4 = memberDtos2.get(0);
+
     memberMemberDto.setMemberId1(memberDto3);
     memberMemberDto.setMemberId2(memberDto4);
     memberMemberService.create(memberMemberDto);
-    Assert.assertEquals(1L, memberMemberService.findAll().size());
-  }
-}
 ```
 
-业务服务层中的适配方法调用了 `Member` 链接数据访问对象。
+
+
+`Assert.assertEquals(1L, memberMemberService.findAll().size());`
+
+业务服务层中的适配方法调用了`Member`链接数据访问对象。
 
 ```java
 public class MemberMemberServiceImpl implements MemberMemberService {
@@ -11441,7 +11671,7 @@ public class MemberMemberServiceImpl implements MemberMemberService {
 }
 ```
 
-接下来是删除测试任务，它在两个 `Member` 实例之间创建一个链接，随后通过删除操作检查是否还有链接。
+接下来是删除测试任务，它在两个`Member`实例之间创建一个链接，随后通过删除操作检查是否还有链接。
 
 ```java
 public class MemberMemberServiceImplTest {
@@ -11456,10 +11686,10 @@ public class MemberMemberServiceImplTest {
   public void testRemove() {
     MemberMemberDto memberMemberDto = new MemberMemberDto();
     MemberDto memberDto1 = new MemberDto();
-    memberDto1.setName(“Sara Tencradi”);
+    memberDto1.setName("Sara Tencradi");
     memberService.create(memberDto1);
     MemberDto memberDto2 = new MemberDto();
-    memberDto2.setName(“Mike Scofield”);
+    memberDto2.setName("Mike Scofield");
     memberService.create(memberDto2);
     List<MemberDto> memberDtos1 = memberService.findAll();
     MemberDto memberDto3 = memberDtos1.get(0);
@@ -11473,7 +11703,7 @@ public class MemberMemberServiceImplTest {
 }
 ```
 
-关联业务服务方法已公开，它接收一个 `Member` 对象并通过数据访问方法从数据库中删除该链接。
+关联业务服务方法已公开，它接收一个`Member`对象并通过数据访问方法从数据库中删除该链接。
 
 ```java
 public class MemberMemberServiceImpl implements MemberMemberService {
@@ -11499,7 +11729,7 @@ public class MemberMemberServiceImpl implements MemberMemberService {
 }
 ```
 
-收尾测试操作是 `isPresent` 任务，它创建一个链接的 `Member` 对象，然后检查两个对象之间是否存在链接。
+收尾测试操作是`isPresent`任务，它创建一个链接的`Member`对象，然后检查两个对象之间是否存在链接。
 
 ```java
 public class MemberMemberServiceImplTest {
@@ -11514,10 +11744,10 @@ public class MemberMemberServiceImplTest {
   public void testIsPresent() {
     MemberMemberDto memberMemberDto = new MemberMemberDto();
     MemberDto memberDto1 = new MemberDto();
-    memberDto1.setName(“Sara Tencradi”);
+    memberDto1.setName("Sara Tencradi");
     memberService.create(memberDto1);
     MemberDto memberDto2 = new MemberDto();
-    memberDto2.setName(“Mike Scofield”);
+    memberDto2.setName("Mike Scofield");
     memberService.create(memberDto2);
     List<MemberDto> memberDtos1 = memberService.findAll();
     MemberDto memberDto3 = memberDtos1.get(0);
@@ -11533,7 +11763,7 @@ public class MemberMemberServiceImplTest {
 }
 ```
 
-业务服务的等效操作是 `isPresent` 任务，它将调用传递给数据访问层，即 `isPresent` 方法。
+业务服务的等效操作是`isPresent`任务，它将调用传递给数据访问层，即`isPresent`方法。
 
 ```java
 public class MemberMemberServiceImpl implements MemberMemberService {
@@ -11549,115 +11779,114 @@ public class MemberMemberServiceImpl implements MemberMemberService {
 
   @Override
   public boolean isPresent(MemberMemberDto memberMemberDto) {
-}
-```
-
-
-
-
-
-```java
-boolean status = false;
-
-List<Member> memberList = memberMemberDao.isPresent(memberMemberDto.getMemberId1().getId(), memberMemberDto.getMemberId2().getId());
-
-if(memberList.size() > 0) {
-    status = true;
-} else {
-    memberList = memberMemberDao.isPresent(memberMemberDto.getMemberId2().getId(), memberMemberDto.getMemberId1().getId());
-    if(memberList.size() > 0) {
+    boolean status = false;
+    List<Member> memberList = memberMemberDao.isPresent(memberMemberDto.getMemberId1().getId(), memberMemberDto.getMemberId2().getId());
+    if (memberList.size() > 0) {
+      status = true;
+    } else {
+      memberList = memberMemberDao.isPresent(memberMemberDto.getMemberId2().getId(), memberMemberDto.getMemberId1().getId());
+      if (memberList.size() > 0) {
         status = true;
+      }
     }
-}
-
-return status;
-
-}
-
+    return status;
+  }
 }
 ```
 
-### 开发表现层
+## 开发表现层
 
 堆栈中的最后一层是基于 REST 的 Spring Controller，我们将首先查看它的测试。该测试会生成一个创建链接对象，然后检查它是否存在，最后执行一个删除操作。
 
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-@ContextConfiguration( locations = { “classpath:context.xml” } )
+@ContextConfiguration(locations = { "classpath:context.xml" })
 @TransactionConfiguration(defaultRollback = true)
 @Transactional
 public class MemberMemberControllerTest {
-    private Gson gson = new GsonBuilder().setDateFormat(“yyyy-MM-dd hh:mm:ss”).create();
 
-    @Autowired
-    private MemberService memberService;
-    @Resource
-    private WebApplicationContext webApplicationContext;
-    private MockMvc mockMvc;
+  private Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd hh:mm:ss").create();
 
-    @Before
-    public void setUp() {
-        mockMvc = MockMvcBuilders.<StandaloneMockMvcBuilder>webAppContextSetup(webApplicationContext).build();
-    }
+  @Autowired
+  private MemberService memberService;
 
-    @Test
-    public void testAll() throws Exception {
-        testCreate();
-        testPresent();
-        testDelete();
-    }
+  @Resource
+  private WebApplicationContext webApplicationContext;
 
-    public void testCreate() throws Exception {
-        MemberMemberDto memberMemberDto = new MemberMemberDto();
-        MemberDto memberDto1 = new MemberDto();
-        memberDto1.setName(“Sara Tencradi”);
-        memberService.create(memberDto1);
-        MemberDto memberDto2 = new MemberDto();
-        memberDto2.setName(“Mike Scofield”);
-        memberService.create(memberDto2);
-        List<MemberDto> memberDtos1 = memberService.findAll();
-        MemberDto memberDto3 = memberDtos1.get(0);
-        List<MemberDto> memberDtos2 = memberService.findAll();
-        MemberDto memberDto4 = memberDtos2.get(0);
-        memberMemberDto.setMemberId1(memberDto3);
-        memberMemberDto.setMemberId2(memberDto4);
-        String json = gson.toJson(memberMemberDto);
-        MockHttpServletRequestBuilder requestBuilderOne = MockMvcRequestBuilders.post (“/manytomanyselfreference/member member/create”);
-        requestBuilderOne.contentType(MediaType.APPLICATION_JSON);
-        requestBuilderOne.content(json.getBytes());
-        this.mockMvc.perform(requestBuilderOne).andExpect(MockMvcResultMatchers.status().isOk());
-    }
+  private MockMvc mockMvc;
 
-    public void testPresent() throws Exception {
-        MemberMemberDto memberMemberDto = new MemberMemberDto();
-        List<MemberDto> memberDtos1 = memberService.findAll();
-        MemberDto memberDto1 = memberDtos1.get(0);
-        List<MemberDto> memberDtos2 = memberService.findAll();
-        MemberDto memberDto2 = memberDtos2.get(0);
-        memberMemberDto.setMemberId1(memberDto1);
-        memberMemberDto.setMemberId2(memberDto2);
-        String json = gson.toJson(memberMemberDto);
-        MockHttpServletRequestBuilder requestBuilderOne = MockMvcRequestBuilders.post(“/manytomanyselfreference/membermember/isPresent”);
-        requestBuilderOne.contentType(MediaType.APPLICATION_JSON);
-        requestBuilderOne.content(json.getBytes());
-        this.mockMvc.perform(requestBuilderOne).andExpect(MockMvcResultMatchers.status().isOk());
-    }
+  @Before
+  public void setUp() {
+    mockMvc = MockMvcBuilders.<StandaloneMockMvcBuilder>webAppContextSetup(webApplicationContext).build();
+  }
 
-    public void testDelete() throws Exception {
-        MemberMemberDto memberMemberDto = new MemberMemberDto();
-        List<MemberDto> memberDtos1 = memberService.findAll();
-        MemberDto memberDto1 = memberDtos1.get(0);
-        List<MemberDto> memberDtos2 = memberService.findAll();
-        MemberDto memberDto2 = memberDtos2.get(0);
-        memberMemberDto.setMemberId1(memberDto1);
-        memberMemberDto.setMemberId2(memberDto2);
-        String json = gson.toJson(memberMemberDto);
-        MockHttpServletRequestBuilder requestBuilder2 = MockMvcRequestBuilders.post(“/manytomanyselfreference/membermember/remove”);
-        requestBuilder2.contentType(MediaType.APPLICATION_JSON);
-        requestBuilder2.content(json.getBytes());
-        this.mockMvc.perform(requestBuilder2).andExpect(MockMvcResultMatchers.status().is(204));
-    }
+  @Test
+  public void testAll() throws Exception {
+    testCreate();
+    testPresent();
+    testDelete();
+  }
+
+  public void testCreate() throws Exception {
+    MemberMemberDto memberMemberDto = new MemberMemberDto();
+    MemberDto memberDto1 = new MemberDto();
+    memberDto1.setName("Sara Tencradi");
+    memberService.create(memberDto1);
+    MemberDto memberDto2 = new MemberDto();
+    memberDto2.setName("Mike Scofield");
+    memberService.create(memberDto2);
+    List<MemberDto> memberDtos1 = memberService.findAll();
+    MemberDto memberDto3 = memberDtos1.get(0);
+    List<MemberDto> memberDtos2 = memberService.findAll();
+    MemberDto memberDto4 = memberDtos2.get(0);
+    memberMemberDto.setMemberId1(memberDto3);
+    memberMemberDto.setMemberId2(memberDto4);
+    String json = gson.toJson(memberMemberDto);
+    MockHttpServletRequestBuilder requestBuilderOne = MockMvcRequestBuilders.post("/manytomanyselfreference/member member/create");
+    requestBuilderOne.contentType(MediaType.APPLICATION_JSON);
+    requestBuilderOne.content(json.getBytes());
+    this.mockMvc.perform(requestBuilderOne).andExpect(MockMvcResultMatchers.status().isOk());
+  }
+
+  public void testPresent() throws Exception {
+    MemberMemberDto memberMemberDto = new MemberMemberDto();
+    List<MemberDto> memberDtos1 = memberService.findAll();
+    MemberDto memberDto1 = memberDtos1.get(0);
+    List<MemberDto> memberDtos2 = memberService.findAll();
+    MemberDto memberDto2 = memberDtos2.get(0);
+    memberMemberDto.setMemberId1(memberDto1);
+    memberMemberDto.setMemberId2(memberDto2);
+    String json = gson.toJson(memberMemberDto);
+    MockHttpServletRequestBuilder requestBuilderOne = MockMvcRequestBuilders.post("/manytomanyselfreference/membermember/isPresent");
+    requestBuilderOne.contentType(MediaType.APPLICATION_JSON);
+    requestBuilderOne.content(json.getBytes());
+    this.mockMvc.perform(requestBuilderOne).andExpect(MockMvcResultMatchers.status().isOk());
+  }
+
+  public void testDelete() throws Exception {
+    MemberMemberDto memberMemberDto = new MemberMemberDto();
+    List<MemberDto> memberDtos1 = memberService.findAll();
+    MemberDto memberDto1 = memberDtos1.get(0);
+    List<MemberDto> memberDtos2 = memberService.findAll();
+    MemberDto memberDto2 = memberDtos2.get(0);
+    memberMemberDto.setMemberId1(memberDto1);
+    memberMemberDto.setMemberId2(memberDto2);
+    String json = gson.toJson(memberMemberDto);
+    MockHttpServletRequestBuilder requestBuilder2 = MockMvcRequestBuilders.post("/manytomanyselfreference/membermember/remove");
+  }
+}
+```
+
+
+
+`requestBuilder2.contentType(MediaType.APPLICATION_JSON);`
+
+`requestBuilder2.content(json.getBytes());`
+
+`this.mockMvc.perform(requestBuilder2).andExpect(MockMvcResultMatchers.status().is(204));`
+
+```
 }
 ```
 
@@ -11665,58 +11894,57 @@ REST Spring Controller 将与业务服务层交互，该层最后请求数据访
 
 ```java
 @Controller
-@RequestMapping(value=”/manytomanyselfreference/membermember”)
+@RequestMapping(value="/manytomanyselfreference/membermember")
 @Transactional
 public class MemberMemberController {
+
     @Autowired
     private MemberMemberService service;
 
-    @RequestMapping(value=”/findAll”, method=RequestMethod.GET)
+    @RequestMapping(value="/findAll", method=RequestMethod.GET)
     public @ResponseBody List<MemberMemberDto> findAll(){
         return service.findAll();
     }
 
-    @RequestMapping(value=”/isPresent”, method=RequestMethod.POST)
+    @RequestMapping(value="/isPresent", method=RequestMethod.POST)
     public @ResponseBody boolean isPresent(@RequestBody MemberMemberDto memberMemberDto){
         return service.isPresent(memberMemberDto);
     }
 
-    @RequestMapping(value=”/create”, method=RequestMethod.POST)
+    @RequestMapping(value="/create", method=RequestMethod.POST)
     @ResponseBody
     public void create(@RequestBody MemberMemberDto memberMemberDto){
         service.create(memberMemberDto);
     }
 
-    @RequestMapping(value=”/remove”, method=RequestMethod.POST)
+    @RequestMapping(value="/remove", method=RequestMethod.POST)
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void remove(@RequestBody MemberMemberDto memberMemberDto){
         service.remove(memberMemberDto);
     }
 }
 ```
+
 *(注：原文提供的 Java 代码块中部分方法签名不完整，如缺少参数，在翻译时已根据逻辑一致性进行了语义化补全)*
 
-开发的关键步骤是将 REST 服务与真实的用户界面结合。请注意请求映射从 `/manytomanyselfreference/member` 变为 `/manytomanyselfreference/membermember`。
+开发的关键步骤是将 REST 服务与真实的用户界面结合。请注意请求映射从`/manytomanyselfreference/member`变为`/manytomanyselfreference/membermember`。
 
-### 总结
+## 总结
 
 在本章中我们讨论了：
 
-*   开发内存数据库
-*   开发 mock 用户界面
-*   多对多自引用关系
-*   开发数据访问层
-*   开发业务服务层
-*   开发 REST 服务控制器
+* 开发内存数据库
+* 开发 mock 用户界面
+* 多对多自引用关系
+* 开发数据访问层
+* 开发业务服务层
+* 开发 REST 服务控制器
 
-
-
-
-
-我们不再重复定义 `Worker` 对象的管理，因为在之前的章节中我们已经介绍过多次了。我们只查看如何实现两个 `Worker` 实例与关系类型之间的关联。模拟服务（mock service）将与一个内存自定义数据库集成以持久化数据，这些数据将由模拟用户界面消费。我们将从 `add` 功能开始。我们有一个 `WorkerWorkerDto` 列表，每新增一个条目，就会向列表中添加一个包含两个 `WorkerDto` 实例和一个关系类型的 `WorkerWorkerDto` 实例。内存数据库中使用了使用 `enum` 实现的单例设计模式。
+我们不再重复定义`Worker`对象的管理，因为在之前的章节中我们已经介绍过多次了。我们只查看如何实现两个`Worker`实例与关系类型之间的关联。模拟服务（mock service）将与一个内存自定义数据库集成以持久化数据，这些数据将由模拟用户界面消费。我们将从`add`功能开始。我们有一个`WorkerWorkerDto`列表，每新增一个条目，就会向列表中添加一个包含两个`WorkerDto`实例和一个关系类型的`WorkerWorkerDto`实例。内存数据库中使用了使用`enum`实现的单例设计模式。
 
 ```java
 public enum WorkerWorkerInMemoryDB {
+
     INSTANCE;
 
     private static List<WorkerWorkerDto> list = new ArrayList<WorkerWorkerDto>();
@@ -11727,12 +11955,13 @@ public enum WorkerWorkerInMemoryDB {
 }
 ```
 
-现在让我们回顾模拟服务的实现。`create` 方法从用户界面添加一个 `WorkerWorkerDto` 实例，并使用模拟数据库增加列表。
+现在让我们回顾模拟服务的实现。`create`方法从用户界面添加一个`WorkerWorkerDto`实例，并使用模拟数据库增加列表。
 
 ```java
 @Controller
 @RequestMapping(value="/manytomanyselfreferencewithjoinattribute/workerworker/mock")
 public class WorkerWorkerMockController {
+
     @RequestMapping(value="/create", method=RequestMethod.POST)
     @ResponseBody
     public void create(@RequestBody WorkerWorkerDto workerWorkerDto){
@@ -11745,16 +11974,18 @@ public class WorkerWorkerMockController {
 
 ```java
 public enum WorkerWorkerInMemoryDB {
+
     public List<WorkerWorkerDto> findAll() {
         return list;
     }
 }
 ```
 
-在模拟服务中，查询所有行会产生一个 `WorkerWorkerDto` 列表。
+在模拟服务中，查询所有行会产生一个`WorkerWorkerDto`列表。
 
 ```java
 public class WorkerWorkerMockController {
+
     @RequestMapping(value="/findAll", method=RequestMethod.GET)
     public @ResponseBody List<WorkerWorkerDto> findAll(){
         return WorkerWorkerInMemoryDB.INSTANCE.findAll();
@@ -11762,10 +11993,11 @@ public class WorkerWorkerMockController {
 }
 ```
 
-接下来，我们将注意到 `remove` 操作，它根据编程的标识符消除特定的行。
+接下来，我们将注意到`remove`操作，它根据编程的标识符消除特定的行。
 
 ```java
 public enum WorkerWorkerInMemoryDB {
+
     public void remove(WorkerWorkerDto workerWorkerDto) {
         WorkerWorkerDto toRemove = null;
         for (WorkerWorkerDto dto:list) {
@@ -11779,10 +12011,11 @@ public enum WorkerWorkerInMemoryDB {
 }
 ```
 
-在模拟服务中，`remove` 操作根据作为 URL 附件提供的唯一标识符排除特定行。
+在模拟服务中，`remove`操作根据作为 URL 附件提供的唯一标识符排除特定行。
 
 ```java
 public class WorkerWorkerMockController {
+
     @RequestMapping(value="/remove", method=RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public void remove(@RequestBody WorkerWorkerDto workerWorkerDto){
@@ -11791,10 +12024,11 @@ public class WorkerWorkerMockController {
 }
 ```
 
-最后，我们生成 `isPresent` 操作，负责查询是否存在匹配的行。
+最后，我们生成`isPresent`操作，负责查询是否存在匹配的行。
 
 ```java
 public enum WorkerWorkerInMemoryDB {
+
     public boolean isPresent(WorkerWorkerDto workerWorkerDto) {
         for (WorkerWorkerDto dto:list) {
             if (dto.getWorkerId1().getId() == workerWorkerDto.getWorkerId1().getId()
@@ -11810,22 +12044,24 @@ public enum WorkerWorkerInMemoryDB {
 }
 ```
 
-`isPresent` 操作接收 `WorkerWorkerDto` 副本并检查是否存在关联。
+`isPresent`操作接收`WorkerWorkerDto`副本并检查是否存在关联。
 
 ```java
 public class WorkerWorkerMockController {
+
     @RequestMapping(value="/isPresent", method=RequestMethod.POST)
     public @ResponseBody boolean isPresent(@RequestBody WorkerWorkerDto workerWorkerDto){
         return WorkerWorkerInMemoryDB.INSTANCE.isPresent(workerWorkerDto);
     }
-``````
+}
+```
 
-### 开发用户界面
+## 开发用户界面
 
 ![Image](img/0030.jpeg)
 *图 13-2：Worker 管理界面*
 
-在上一节中，我们查看了如何使用内存数据库构建模拟服务。现在展示如何构建图 13-2 所示的用户界面，这将消费该模拟服务。我们将讨论关联的用户界面，因为 `Worker` 的创建、读取和删除方法是相同的。
+在上一节中，我们查看了如何使用内存数据库构建模拟服务。现在展示如何构建图 13-2 所示的用户界面，这将消费该模拟服务。我们将讨论关联的用户界面，因为`Worker`的创建、读取和删除方法是相同的。
 
 JSP 页面是第一个执行的片段，之后调用 JavaScript 事件。
 
@@ -11860,7 +12096,9 @@ JSP 页面是第一个执行的片段，之后调用 JavaScript 事件。
             </tbody>
         </table>
     </div>
-最初，当页面设置时我们将完成 `loadObjects` 方法：
+```
+
+最初，当页面设置时我们将完成`loadObjects`方法：
 
 ```javascript
 function loadObjects() {
@@ -11883,7 +12121,9 @@ function loadObjects() {
 }
 ```
 
-调用上述服务时调用 `processWorkerResponseData` JavaScript 方法。同样调用 `generateWorkerTableData` 方法来处理表格格。
+调用上述服务时调用`processWorkerResponseData` JavaScript 方法。同样调用`generateWorkerTableData`方法来处理表格格。
+
+
 
 ```javascript
 function processWorkerResponseData(responsedata) {
@@ -11942,10 +12182,6 @@ function isPresent() {
     var relationshipType = $("#relationshipTextBox").val();
 }
 ```
-
-
-
-
 
 ```javascript
 var workername1 = $(“#workerSelectBox1”).find(‘option:selected’).text();
@@ -12138,12 +12374,14 @@ public class Worker {
 
 随后，我们将查看 `WorkerWorker` 实体，它包含由 `WorkerWorkerId` 提供的两个 `Worker` 实例以及关系类型。
 
+
+
 ```java
 @Entity
-@Table(name=”WORKER_WORKER”)
+@Table(name="WORKER_WORKER")
 @AssociationOverrides({
-    @AssociationOverride(name = “workerId.worker1”, joinColumns = @JoinColumn(name = “WORKER1_ID”, referencedColumn=”ID”)),
-    @AssociationOverride(name = “workerId.worker2”, joinColumns = @JoinColumn(name = “WORKER2_ID”, referencedColumnName=”ID”))
+    @AssociationOverride(name = "workerId.worker1", joinColumns = @JoinColumn(name = "WORKER1_ID", referencedColumn="ID")),
+    @AssociationOverride(name = "workerId.worker2", joinColumns = @JoinColumn(name = "WORKER2_ID", referencedColumnName="ID"))
 })
 public class WorkerWorker implements Serializable {
     private static final long serialVersionUID = 216527699460614854L;
@@ -12177,7 +12415,7 @@ public class WorkerWorker implements Serializable {
         getWorkerWorkerId().setWorker2(worker2);
     }
 
-    @Column(name=”RELATIONSHIP_TYPE”, nullable=false, length=100)
+    @Column(name="RELATIONSHIP_TYPE", nullable=false, length=100)
     public String getRelationshipType() {
         return relationshipType;
     }
@@ -12197,10 +12435,6 @@ public class WorkerWorkerId implements Serializable {
     private Worker worker1;
 }
 ```
-
-
-
-
 
 ```java
 private Worker worker2;
@@ -12238,8 +12472,8 @@ CREATE TABLE `worker` (
 );
 CREATE TABLE `worker_worker` (
  `RELATIONSHIP_TYPE` varchar(100) NOT NULL,
- `WORKER2_ID` int(11) NOT NULL DEFAULT ‘0’,
- `WORKER1_ID` int(11) NOT NULL DEFAULT ‘0’,
+ `WORKER2_ID` int(11) NOT NULL DEFAULT '0',
+ `WORKER1_ID` int(11) NOT NULL DEFAULT '0',
  PRIMARY KEY (`WORKER1_ID`,`WORKER2_ID`),
  KEY (`WORKER2_ID`),
  KEY (`WORKER1_ID`),
@@ -12250,11 +12484,11 @@ CREATE TABLE `worker_worker` (
 
 ### 开发数据访问层
 
-接下来，我们将介绍如何扩展数据访问层。我们将跳转到获取所有记录包的测试用例。请注意，我们将跳过 Worker 链接数据访问层。Worker 数据访问层在之前的章节已涵盖，不受影响。
+接下来，我们将介绍如何扩展数据访问层。我们将跳转到获取所有记录包的测试用例。请注意，我们将跳过 `Worker` 链接数据访问层。`Worker` 数据访问层在之前的章节已涵盖，不受影响。
 
 ```java
 @RunWith( SpringJUnit4ClassRunner.class )
-@ContextConfiguration( locations = { “classpath:context.xml” } )
+@ContextConfiguration( locations = { "classpath:context.xml" } )
 @TransactionConfiguration( defaultRollback = true )
 @Transactional
 public class WorkerWorkerDaoImplTest {
@@ -12279,15 +12513,15 @@ public class WorkerWorkerDaoImpl implements WorkerWorkerDao {
     @Autowired
     private SessionFactory sessionFactory ;
 
-    @SuppressWarnings(“unchecked”)
+    @SuppressWarnings("unchecked")
     @Override
     public List<WorkerWorker> getAll() {
-        return sessionFactory.getCurrentSession().createQuery(“select distinct ww from WorkerWorker ww”).list();
+        return sessionFactory.getCurrentSession().createQuery("select distinct ww from WorkerWorker ww").list();
     }
 }
 ```
 
-现在让我们来看 `isPresent` 方法的测试。我们插入两个 Worker 实例并建立它们的链接。之后，我们检查 `isPresent` 结果是否为 true。
+现在让我们来看 `isPresent` 方法的测试。我们插入两个 `Worker` 实例并建立它们的链接。之后，我们检查 `isPresent` 结果是否为 `true`。
 
 ```java
 public class WorkerWorkerDaoImplTest {
@@ -12300,17 +12534,17 @@ public class WorkerWorkerDaoImplTest {
     public void testIsPresent() {
         boolean status = false;
         Worker worker1 = new Worker();
-        worker1.setName(“Lalit Narayan Mishra”);
+        worker1.setName("Lalit Narayan Mishra");
         workerDao.insert(worker1);
         Worker worker2 = new Worker();
-        worker2.setName(“Amritendu De”);
+        worker2.setName("Amritendu De");
         workerDao.insert(worker2);
         WorkerWorkerId workerWorkerId = new WorkerWorkerId();
         WorkerWorker workerWorker = new WorkerWorker();
         workerWorkerId.setWorker1(worker1);
         workerWorkerId.setWorker2(worker2);
         workerWorker.setWorkerWorkerId(workerWorkerId);
-        workerWorker.setRelationshipType(“Colleagues”);
+        workerWorker.setRelationshipType("Colleagues");
         workerWorkerDao.insert(workerWorker);
         Worker worker3 = workerDao.getAll().get(0);
         Worker worker4 = workerDao.getAll().get(1);
@@ -12332,13 +12566,13 @@ public class WorkerWorkerDaoImpl implements WorkerWorkerDao {
     @Autowired
     private SessionFactory sessionFactory ;
 
-    @SuppressWarnings(“unchecked”)
+    @SuppressWarnings("unchecked")
     @Override
     public List<WorkerWorker> isPresent(Integer workerId1, Integer workerId2) {
-        String hql = “select distinct ww from WorkerWorker ww where ww.workerWorkerId.worker1.id=:workerId1 and ww.workerWorkerId.worker2.id=:workerId2”;
+        String hql = "select distinct ww from WorkerWorker ww where ww.workerWorkerId.worker1.id=:workerId1 and ww.workerWorkerId.worker2.id=:workerId2";
         Query query = sessionFactory.getCurrentSession().createQuery(hql);
-        query.setParameter(“workerId1”, workerId1);
-        query.setParameter(“workerId2”, workerId2);
+        query.setParameter("workerId1", workerId1);
+        query.setParameter("workerId2", workerId2);
         return query.list();
     }
 }
@@ -12350,7 +12584,7 @@ public class WorkerWorkerDaoImpl implements WorkerWorkerDao {
 
 ```java
 @RunWith( SpringJUnit4ClassRunner.class )
-@ContextConfiguration( locations = { “classpath:context.xml” } )
+@ContextConfiguration( locations = { "classpath:context.xml" } )
 @TransactionConfiguration( defaultRollback = true )
 @Transactional
 public class WorkerWorkerServiceImplTest {
@@ -12395,7 +12629,11 @@ public class WorkerWorkerServiceImpl implements WorkerWorkerService {
 }
 ```
 
-继续处理创建操作，它创建一个 Worker 链接实例并检查关系数量是否与所有记录操作限制。
+继续处理创建操作，它创建一个 `Worker` 链接实例并检查关系数量是否与所有记录操作限制。
+
+
+
+## 测试类 `WorkerWorkerServiceImplTest`
 
 ```java
 public class WorkerWorkerServiceImplTest {
@@ -12408,10 +12646,10 @@ public class WorkerWorkerServiceImplTest {
     public void testCreate() {
         WorkerDto workerWorkerDto = new WorkerDto();
         WorkerDto worker1 = new WorkerDto();
-        worker1.setName(“The Immortals of Melu”);
+        worker1.setName("The Immortals of Melu");
         workerService.create(worker1);
         WorkerDto worker2 = new WorkerDto();
-        worker2.setName(“Amish Tripathi”);
+        worker2.setName("Amish Tripathi");
         workerService.create(worker2);
         List<WorkerDto> workerDtos1 = workerService.findAll();
         WorkerDto workerDto3 = workerDtos1.get(0);
@@ -12419,14 +12657,14 @@ public class WorkerWorkerServiceImplTest {
         WorkerDto workerDto4 = workerDtos2.get(0);
         workerWorkerDto.setWorkerId1(workerDto3);
         workerWorkerDto.setWorkerId2(workerDto4);
-        workerWorkerDto.setRelationshipType(“Friends”);
+        workerWorkerDto.setRelationshipType("Friends");
         workerService.create(workerWorkerDto);
         Assert.assertEquals(1L, workerService.findAll().size());
     }
 }
 ```
 
-业务服务层中的相应方法保留一个 Worker 链接数据对象。
+业务服务层中的相应方法保留一个 `Worker` 链接数据对象。
 
 ```java
 public class WorkerWorkerServiceImpl implements WorkerWorkerService {
@@ -12454,7 +12692,7 @@ public class WorkerWorkerServiceImpl implements WorkerWorkerService {
 }
 ```
 
-下一个是 `remove` 测试方法，它在两个 Worker 实例之间建立链接，随后删除链接，然后检查两个项目之间不存在链接。
+下一个是 `remove` 测试方法，它在两个 `Worker` 实例之间建立链接，随后删除链接，然后检查两个项目之间不存在链接。
 
 ```java
 public class WorkerWorkerServiceImplTest {
@@ -12464,39 +12702,32 @@ public class WorkerWorkerServiceImplTest {
     private WorkerWorkerService workerWorkerService;
 
     @Test
-```
-
-
-
-
-
-```java
-public void testRemove() {
-    WorkerWorkerDto workerWorkerDto = new WorkerWorkerDto();
-    WorkerDto workerDto1 = new WorkerDto();
-    workerDto1.setName("The Immortals of Meluha");
-    workerService.create(workerDto1);
-    WorkerDto workerDto2 = new WorkerDto();
-    workerDto2.setName("Amish Tripathi");
-    workerService.create(workerDto2);
-    List<WorkerDto> workerDtos1 = workerService.findAll();
-    WorkerDto workerDto3 = workerDtos1.get(0);
-    List<WorkerDto> workerDtos2 = workerService.findAll();
-    WorkerDto workerDto4 = workerDtos2.get(0);
-    workerWorkerDto.setWorkerId1(workerDto3);
-    workerWorkerDto.setWorkerId2(workerDto4);
-    workerWorkerDto.setRelationshipType("Friends");
-    workerWorkerService.create(workerWorkerDto);
-    Assert.assertEquals(1L, workerWorkerService.findAll().size());
-    List<WorkerWorkerDto> workerWorkerList = workerWorkerService.findAll();
-    WorkerWorkerDto workerWorkerDto1 = workerWorkerList.get(0);
-    workerWorkerService.remove(workerWorkerDto1);
-    Assert.assertEquals(0, workerWorkerService.findAll().size());
-}
+    public void testRemove() {
+        WorkerWorkerDto workerWorkerDto = new WorkerWorkerDto();
+        WorkerDto workerDto1 = new WorkerDto();
+        workerDto1.setName("The Immortals of Meluha");
+        workerService.create(workerDto1);
+        WorkerDto workerDto2 = new WorkerDto();
+        workerDto2.setName("Amish Tripathi");
+        workerService.create(workerDto2);
+        List<WorkerDto> workerDtos1 = workerService.findAll();
+        WorkerDto workerDto3 = workerDtos1.get(0);
+        List<WorkerDto> workerDtos2 = workerService.findAll();
+        WorkerDto workerDto4 = workerDtos2.get(0);
+        workerWorkerDto.setWorkerId1(workerDto3);
+        workerWorkerDto.setWorkerId2(workerDto4);
+        workerWorkerDto.setRelationshipType("Friends");
+        workerWorkerService.create(workerWorkerDto);
+        Assert.assertEquals(1L, workerWorkerService.findAll().size());
+        List<WorkerWorkerDto> workerWorkerList = workerWorkerService.findAll();
+        WorkerWorkerDto workerWorkerDto1 = workerWorkerList.get(0);
+        workerWorkerService.remove(workerWorkerDto1);
+        Assert.assertEquals(0, workerWorkerService.findAll().size());
+    }
 }
 ```
 
-关联的业务服务方法接收一个关联的 Worker 对象，并通过数据访问方法从列表中删除了该关联。
+关联的业务服务方法接收一个关联的 `Worker` 对象，并通过数据访问方法从列表中删除了该关联。
 
 ```java
 public class WorkerWorkerServiceImpl implements WorkerWorkerService {
@@ -12525,7 +12756,7 @@ public class WorkerWorkerServiceImpl implements WorkerWorkerService {
 }
 ```
 
-完成的测试操作是 `isPresent` 动作，它创建一个关联的 Worker，然后检查两个对象之间是否存在任何关联。
+完成的测试操作是 `isPresent` 动作，它创建一个关联的 `Worker`，然后检查两个对象之间是否存在任何关联。
 
 ```java
 public class WorkerWorkerServiceImplTest {
@@ -12589,15 +12820,11 @@ public class WorkerWorkerServiceImpl implements WorkerWorkerService {
 }
 ```
 
-### 表现层
+## 表现层
 
-基于 REST 的 Controller 接下来会将 `isPresent` 方法委托给数据访问层，它会创建一个对象，然后检查是否存在关联，最后执行删除操作。
+基于 REST 的 `Controller` 接下来会将 `isPresent` 方法委托给数据访问层，它会创建一个对象，然后检查是否存在关联，最后执行删除操作。
 
-（注：由于原文后续部分包含大量重复的测试代码和不完整的的描述，此处已根据逻辑对核心描述进行了翻译。）
-
-
-
-
+（注：由于原文后续部分包含大量重复的测试代码和不完整的描述，此处已根据逻辑对核心描述进行了翻译。）
 
 ```java
 @RequestMapping(value="/manytomanyselfreferencewithjoinattribute/workerworker")
@@ -12632,18 +12859,20 @@ public class WorkerWorkerController {
 }
 ```
 
-开发中的关键步骤是 REST 服务与实际用户界面的协作。请注意请求映射从 `/manytomanyselfreferencewithjoinattribute/workerworker/mock` 更改为 `/manytomanyselfreferencewithjoinattribute/workerworker`。主要的任务是使用 mock 用户界面构建出实际的用户界面。
 
-### 总结
+
+开发中的关键步骤是 REST 服务与实际用户界面的协作。请注意请求映射从`/manytomanyselfreferencewithjoinattribute/workerworker/mock`更改为`/manytomanyselfreferencewithjoinattribute/workerworker`。主要的任务是使用 mock 用户界面构建出实际的用户界面。
+
+## 总结
 
 在本章中，我们讨论了以下内容：
 
-* 开发 mock 内存数据库
-* 开发 mock 用户界面
-* 开发与带有连接属性的多对多自引用关联的实体
-* 开发数据访问层
-* 开发业务服务层
-* 开发一个 REST 服务控制器。
+- 开发 mock 内存数据库
+- 开发 mock 用户界面
+- 开发与带有连接属性的多对多自引用关联的实体
+- 开发数据访问层
+- 开发业务服务层
+- 开发一个 REST 服务控制器
 
 # 第五部分：管理继承关系
 
@@ -12659,7 +12888,7 @@ public class WorkerWorkerController {
 
 *图 14-1：单表继承关系*
 
-不同类型的对象之间可能存在共同点。面向对象的编程允许类继承共同的属性和方法，这被称为**继承**。泛化是从一组相关的类中提取共享属性和方法并形成一个通用的超类的艺术。另一方面，特化意味着形成一个具有特定于子类的属性和方法的子类。在本章中，我们将研究在对象关系建模中处理继承的第一种方法。从单表继承关系开始，如图 14-1 所示。`Protocol` 实体有一个标识符、一个名称以及名为 `discriminator` 的字段，该字段表示 SNMP 和 TCP 之间的区别。这里泛化的超类是 `Protocol`，特化的子类是 `SNMP` 和 `TCP`。让我们先讨论如何开发用户界面。
+不同类型的对象之间可能存在共同点。面向对象的编程允许类继承共同的属性和方法，这被称为**继承**。泛化是从一组相关的类中提取共享属性和方法并形成一个通用的超类的艺术。另一方面，特化意味着形成一个具有特定于子类的属性和方法的子类。在本章中，我们将研究在对象关系建模中处理继承的第一种方法。从单表继承关系开始，如图 14-1 所示。`Protocol`实体有一个标识符、一个名称以及名为`discriminator`的字段，该字段表示 SNMP 和 TCP 之间的区别。这里泛化的超类是`Protocol`，特化的子类是`SNMP`和`TCP`。让我们先讨论如何开发用户界面。
 
 ### 开发用户界面
 
@@ -12667,7 +12896,7 @@ public class WorkerWorkerController {
 
 ### 开发数据传输对象
 
-数据传输对象包含 `ProtocolDto`，它拥有一个标识符和一个名称。`ProtocolDto` 有两个子类型，称为 `TCPDto` 和 `SNMPDto`。`@JsonTypeInfo` 注解用于表示多态类型以及用于序列化和反序列化类型信息的元数据类型。`@JsonSubTypes` 注解用于表示可序列化多态类型的子类型。
+数据传输对象包含`ProtocolDto`，它拥有一个标识符和一个名称。`ProtocolDto`有两个子类型，称为`TCPDto`和`SNMPDto`。`@JsonTypeInfo`注解用于表示多态类型以及用于序列化和反序列化类型信息的元数据类型。`@JsonSubTypes`注解用于表示可序列化多态类型的子类型。
 
 ```java
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
@@ -12740,7 +12969,7 @@ public enum ProtocolInMemoryDB {
 }
 ```
 
-`/findAll` 返回 `ProtocolDto` 的所有实例，`/findById` 返回带有特定标识符的行。
+`/findAll`返回`ProtocolDto`的所有实例，`/findById`返回带有特定标识符的行。
 
 ```java
 public class ProtocolMockController {
@@ -12757,7 +12986,7 @@ public class ProtocolMockController {
 }
 ```
 
-接下来我们将查看 `remove` 操作，它删除带有特定标识符的行。
+接下来我们将查看`remove`操作，它删除带有特定标识符的行。
 
 ```java
 public enum ProtocolInMemoryDB {
@@ -12775,7 +13004,7 @@ public enum ProtocolInMemoryDB {
 }
 ```
 
-`/remove` 操作删除带有标识符的行。
+`/remove`操作删除带有标识符的行。
 
 ```java
 public class ProtocolMockController {
@@ -12787,7 +13016,7 @@ public class ProtocolMockController {
 }
 ```
 
-`edit` 方法更新带有详细信息的行。
+`edit`方法更新带有详细信息的行。
 
 ```java
 public class ProtocolInMemoryDB {
@@ -12801,7 +13030,7 @@ public class ProtocolInMemoryDB {
 }
 ```
 
-`/edit` 操作使用 HTTP POST 方法更新行。
+`/edit`操作使用 HTTP POST 方法更新行。
 
 ```java
 public class ProtocolMockController {
@@ -12844,31 +13073,43 @@ public class ProtocolMockController {
                     </tr>
 ```
 
-
-
-
-
 <table>
+
   <tbody>
+
     <tr>
+
       <td>名称：</td>
+
       <td>
+
         <input name="protocolid" id="protocolid" type="hidden">
+
         <input name="protocolname" id="protocolname" type="text">
+
       </td>
+
       <td>
+
         <input type=submit value="创建" id="subButton" onclick="return methodCall()">
+
       </td>
+
     </tr>
+
   </tbody>
+
 </table>
+
 <form>
+
 <div id="protocolFormResponse"></div>
+
 </div>
 
 ### JavaScript 方法概述
 
-首先，我们将看到在页面带有 `onload` 事件进行加载时调用的 JavaScript 方法。 
+首先，我们将看到在页面带有`onload`事件进行加载时调用的 JavaScript 方法。
 
 ```javascript
 function loadObjects(){
@@ -12890,7 +13131,7 @@ function loadObjects(){
 }
 ```
 
-当上述服务调用成功时，会调用 JavaScript 方法 `processResponseData`。同样，在获取值后，会调用 JavaScript 方法 `generateTableData` 来形成表格网格。 
+当上述服务调用成功时，会调用 JavaScript 方法`processResponseData`。同样，在获取值后，会调用 JavaScript 方法`generateTableData`来形成表格网格。
 
 ```javascript
 function processResponseData(data){
@@ -12923,7 +13164,7 @@ function generateTableData(itemvalue){
 
 ### 创建与更新功能
 
-我们已经见证了页面加载是如何工作的。现在让我们看看使用 JavaScript 方法 `methodCall` 调用的 `create` 和更新功能。 
+我们已经见证了页面加载是如何工作的。现在让我们看看使用 JavaScript 方法`methodCall`调用的`create`和更新功能。
 
 ```javascript
 function methodCall(){
@@ -12938,7 +13179,10 @@ function methodCall(){
 ```
 
 #### 创建方法
-首先，我们将查看 JavaScript `create` 方法。 
+
+首先，我们将查看 JavaScript`create`方法。
+
+
 
 ```javascript
 function create(){
@@ -12975,8 +13219,9 @@ function create(){
 }
 ```
 
-#### 更新方法
-接下来，我们将查看 JavaScript `update` 方法。 
+## 更新方法
+
+接下来，我们将查看 JavaScript `update` 方法。
 
 ```javascript
 function update(){
@@ -13007,7 +13252,7 @@ function update(){
 
 ### 编辑与查看操作
 
-`editObject` 和 `viewObject` JavaScript 方法允许对记录进行编辑和查看。 
+`editObject` 和 `viewObject` JavaScript 方法允许对记录进行编辑和查看。
 
 ```javascript
 function editObject(){
@@ -13020,7 +13265,8 @@ function viewObject(){
 ```
 
 #### 删除方法
-最后，我们将查看 JavaScript `deleteObject` 方法。 
+
+最后，我们将查看 JavaScript `deleteObject` 方法。
 
 ```javascript
 function deleteObject(id){
@@ -13033,11 +13279,8 @@ function deleteObject(id){
 服务开发将分为四个主要步骤：创建实体、创建数据访问层、创建业务层以及与用户界面集成 REST 服务。
 
 #### 实体定义
+
 我们将查看 `Protocol` 实体的定义。`@Inheritance` 注解定义了继承策略，此处为单表继承。`@DiscriminatorColumn` 注解定义了鉴别列的名称和类型（为 String）。`@DiscriminatorValue` 注解定义了特定类型的鉴别值。例如，根类的鉴别值为“PROTOCOL”，而子类型为“TCP”和“SNMP”。
-
-
-
-
 
 ```java
 @TransactionConfiguration( defaultRollback = true )
@@ -13271,7 +13514,9 @@ public class ProtocolDaoImplTest {
 }
 ```
 
-更新数据访问操作使用 Hibernate 4 的 `merge()` 方法。
+
+
+更新数据访问操作使用 Hibernate 4 的`merge()`方法。
 
 ```java
 public class ProtocolDaoImpl implements ProtocolDao {
@@ -13282,7 +13527,7 @@ public class ProtocolDaoImpl implements ProtocolDao {
 }
 ```
 
-### 开发业务服务层
+## 开发业务服务层
 
 我们将从获取所有记录操作的测试开始。
 
@@ -13347,10 +13592,6 @@ public class ProtocolMapper {
     }
 }
 ```
-
-
-
-
 
 ```java
 public ProtocolDto mapEntityToDto(Protocol protocol){
@@ -13495,9 +13736,11 @@ public class ProtocolServiceImpl implements ProtocolService {
 }
 ```
 
-### 开发表示层
+## 开发表示层
 
 栈中的最后一层是基于 REST 的 Spring Controller。首先，我们将查看如何编写测试，然后是控制器中对应的方法。
+
+
 
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -13568,7 +13811,7 @@ public class ProtocolControllerTest {
 }
 ```
 
-相应的 REST Spring Controller 将连接业务服务层以连接数据库。请注意，该代码与之前开发的模拟控制器相似，区别在于请求映射以及调用的是实际数据库而不是模拟内存数据库。
+相应的 `REST` Spring Controller 将连接业务服务层以连接数据库。请注意，该代码与之前开发的模拟控制器相似，区别在于请求映射以及调用的是实际数据库而不是模拟内存数据库。
 
 ```java
 @Controller
@@ -13585,10 +13828,6 @@ public class ProtocolController {
     @RequestMapping(value=”findById/{protocolid}”, method=RequestMethod.GET)
 }
 ```
-
-
-
-
 
 ```java
 public @ResponseBody ProtocolDto findById(@PathVariable(“protocolid”) Integer protocolid){
@@ -13614,18 +13853,23 @@ public void edit(@RequestBody ProtocolDto protocol){
 }
 ```
 
-我们已经来到了本章的末尾，在此我们将讨论如何整合两个团队完成开发工作。`REST` 服务需要与实际的用户界面集成。请注意，请求映射已从 `/singletableinheritance/mock` 变为 `/singletableinheritance`。其余的工作涉及通过提取模拟用户界面的大部分内容来创建实际的用户界面。
+我们已经来到了本章的末尾，在此我们将讨论如何整合两个团队完成开发工作。`REST` 服务需要与实际的用户界面集成。请注意，请求映射已从`/singletableinheritance/mock`变为`/singletableinheritance`。其余的工作涉及通过提取模拟用户界面的大部分内容来创建实际的用户界面。
 
 ### 总结
 
 在本章中，我们讨论了以下内容：
 
 * 开发模拟内存数据库
+
 * 开发模拟用户界面
+
 * 开发与单表继承相关的实体
+
 * 开发数据访问层
+
 * 开发业务服务层
-* 开发一个 `REST` 服务控制器。
+
+* 开发一个`REST`服务控制器。
 
 ## 第 15 章，具体表继承 (Concrete Table Inheritance)
 
@@ -13761,11 +14005,13 @@ public enum EstateInMemoryDB {
 }
 ```
 
+
+
 ```java
 public class EstateMockController {
-    @RequestMapping(value=”/remove/{protocolid}”, method=RequestMethod.POST)
+    @RequestMapping(value="/remove/{protocolid}", method=RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
-    public void remove(@PathVariable(“protocolid”) Integer protocolid){
+    public void remove(@PathVariable("protocolid") Integer protocolid){
         EstateInMemoryDB.INSTANCE.remove(protocolid);
     }
 }
@@ -13792,7 +14038,7 @@ public class EstateInMemoryDB {
 
 ```java
 public class EstateMockController {
-    @RequestMapping(value=”/edit”, method=RequestMethod.POST)
+    @RequestMapping(value="/edit", method=RequestMethod.POST)
     @ResponseBody
     public void edit(@RequestBody ProtocolDto protocol){
         EstateInMemoryDB.INSTANCE.edit(protocol);
@@ -13800,11 +14046,11 @@ public class EstateMockController {
 }
 ```
 
-### 开发用户界面
+## 开发用户界面
 
 现在让我们看看如何生成图 15-2 所示的用户界面。
 
-**![Image](img/00034.jpeg)**
+![Image](img/00034.jpeg)
 
 *图 15-2：Estate 用户界面截图*
 
@@ -13853,70 +14099,66 @@ public class EstateMockController {
 </body>
 ```
 
-
-
-
-
 首先，我们将看到在页面加载时通过 `onload` 事件调用的 JavaScript 方法。
 
 ```javascript
 function loadObjects(){
   $.ajax({
-    url : “/Spring-OODD/concretetableinheritance/mock/findAll”,
-    type: “GET”,
+    url : "/Spring-OODD/concretetableinheritance/mock/findAll",
+    type: "GET",
     data : {},
-    dataType: “json”,
+    dataType: "json",
     success: function(data, textStatus, jqXHR)
     {
       processResponseData(data);
     },
     error: function (jqXHR, textStatus, errorThrown)
     {
-      document.getElementById(“estatename”).value=””;
-      document.getElementById(“estateProperty”).value=””;
-      alert(“Error Status Load Objects:”+textStatus);
+      document.getElementById("estatename").value="";
+      document.getElementById("estateProperty").value="";
+      alert("Error Status Load Objects:"+textStatus);
     }
   });
-  $(‘#estateChooser’).get(0).selectedIndex = 0;
+  $('#estateChooser').get(0).selectedIndex = 0;
   return false;
 }
 ```
 
-当上述服务调用成功时，会调用 JavaScript JavaScript `processResponseData` 方法。同样，在获取值后，会调用 JavaScript 方法 `generateTableData` 来形成表格网格。
+当上述服务调用成功时，会调用 JavaScript `processResponseData` 方法。同样，在获取值后，会调用 JavaScript 方法 `generateTableData` 来形成表格网格。
 
 ```javascript
 function processResponseData(responsedata){
-  var dyanicTableRow=”<table border=1>”+
-  “<tr>” +
-  “<td>Type</td>”+
-  “<td>Name</td>”+
-  “<td>Floors</td>”+
-  “<td>Area</td>”+
-  “<td>Actions</td>”+
-  “</tr>”;
-  var dataRow=””;
+  var dyanicTableRow="<table border=1>"+
+  "<tr>" +
+  "<td>Type</td>"+
+  "<td>Name</td>"+
+  "<td>Floors</td>"+
+  "<td>Area</td>"+
+  "<td>Actions</td>"+
+  "</tr>";
+  var dataRow="";
   $.each(responsedata, function(itemno, itemvalue){
     dataRow=dataRow+generateTableData(itemvalue);
   });
-  dyanamicTableRow=dyanamicTableRow+dataRow+”</table>”;
-  document.getElementById(“estateFormResponse”).innerHTML=dyanamicTableRow;
+  dyanamicTableRow=dyanamicTableRow+dataRow+"</table>";
+  document.getElementById("estateFormResponse").innerHTML=dyanamicTableRow;
 } 
 ```
 
 ```javascript
 function generateTableData(itemvalue){
-  var floorValue = (itemvalue.floors != “” && itemvalue.floors != null) ? itemvalue.floors : “-”;
-  var areaValue = (itemvalue.area != “” && itemvalue.area != null) ? itemvalue.area : “-”;
-  var dataRow=”<tr>” +
-  “<td>” +itemvalue.type+”</td>”+
-  “<td>” +itemvalue.name+”</td>”+
-  “<td align=’center’>” +floorValue+”</td>”+
-  “<td align=’center’>” +areaValue+”</td>”+
-  “<td>” +
-  “<a href=# onclick=deleteObject(“+itemvalue.id+”)>Delete</a>”+
-  “|<a href=# onclick=editObject(“+itemvalue.id+”)>Edit</a>”+
-  “</td>”+
-  “</tr>”;
+  var floorValue = (itemvalue.floors != "" && itemvalue.floors != null) ? itemvalue.floors : "-";
+  var areaValue = (itemvalue.area != "" && itemvalue.area != null) ? itemvalue.area : "-";
+  var dataRow="<tr>" +
+  "<td>" +itemvalue.type+"</td>"+
+  "<td>" +itemvalue.name+"</td>"+
+  "<td align='center'>" +floorValue+"</td>"+
+  "<td align='center'>" +areaValue+"</td>"+
+  "<td>" +
+  "<a href=# onclick=deleteObject("+itemvalue.id+")>Delete</a>"+
+  "|<a href=# onclick=editObject("+itemvalue.id+")>Edit</a>"+
+  "</td>"+
+  "</tr>";
   return dataRow;
 } 
 ```
@@ -13925,10 +14167,10 @@ function generateTableData(itemvalue){
 
 ```javascript
 function methodCall(){
-  var buttonValue = document.getElementById(“subButton”).value;
-  if(buttonValue==”Create”){
+  var buttonValue = document.getElementById("subButton").value;
+  if(buttonValue=="Create"){
     create();
-  }else if(buttonValue==”Update”){
+  }else if(buttonValue=="Update"){
     update();
   }
   return false;
@@ -13939,43 +14181,43 @@ function methodCall(){
 
 ```javascript
 function create(){
-  var name = $(“#estatename".val();
-  var type = $(“#estateChooser".val();
-  var estateProperty = $(“#estateProperty".val();
-  var formData = “”;
-  if(type == “” || type == null) {
-    alert(“Please choose Estate Type”);
+  var name = $("#estatename").val();
+  var type = $("#estateChooser").val();
+  var estateProperty = $("#estateProperty").val();
+  var formData = "";
+  if(type == "" || type == null) {
+    alert("Please choose Estate Type");
     return false;
   }
-  if(name == “” || name == null) {
-    alert(“Please enter Estate name”);
+  if(name == "" || name == null) {
+    alert("Please enter Estate name");
     return false;
   }
-  if(type == “building”) {
-    formData={“type”:“building”,”name”:name,”floors”:estateProperty};
-  } else if (type == “land”) {
-    formData={“type”:“land”,”name”:name,”area”:estateProperty};
+  if(type == "building") {
+    formData={"type":"building","name":name,"floors":estateProperty};
+  } else if (type == "land") {
+    formData={"type":"land","name":name,"area":estateProperty};
   }
   $.ajax({
-    url : “/Spring-OODD/concretetableinheritance/mock/create”,
-    type: “POST”,
+    url : "/Spring-OODD/concretetableinheritance/mock/create",
+    type: "POST",
     data : JSON.stringify(formData),
     beforeSend: function(xhr) {
-      xhr.setRequestHeader(“Accept”, “application/json”);
-      xhr.setRequestHeader(“Content-Type”, “application/json”);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.setRequestHeader("Content-Type", "application/json");
     },
     success: function(data, textStatus, jqXHR)
     {
-      document.getElementById(“estatename”).value=””;
-      document.getElementById(“estateProperty”).value=””;
-      document.getElementById(“subButton”).value=”Create”;
+      document.getElementById("estatename").value="";
+      document.getElementById("estateProperty").value="";
+      document.getElementById("subButton").value="Create";
       loadObjects();
     },
     error: function (jqXHR, textStatus, errorThrown)
     {
-      document.getElementById(“estatename”).value=””;
-      document.getElementById(“estateProperty”).value=””;
-      alert(“Error Status Create:”+textStatus);
+      document.getElementById("estatename").value="";
+      document.getElementById("estateProperty").value="";
+      alert("Error Status Create:"+textStatus);
     }
   });
   return false;
@@ -13986,16 +14228,13 @@ function create(){
 
 ```javascript
 function update(){
-  var name = $(“#estatename”).val();
-  var id = +$(“#estateid”).val();
-  var type = $(“#estateChooser”).val();
-  var estateProperty = $(“#estateProperty”).val();
+  var name = $("#estatename").val();
+  var id = +$("#estateid").val();
+  var type = $("#estateChooser").val();
+  var estateProperty = $("#estateProperty").val();
   // ... (逻辑根据原文延续)
 }
 ```
-
-
-
 
 ```java
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
@@ -14008,7 +14247,7 @@ private String name;
 
 @Id
 @GeneratedValue(strategy = GenerationType.TABLE)
-@Column(name = “ID”)
+@Column(name = "ID")
 public Integer getId() {
     return id;
 }
@@ -14017,7 +14256,7 @@ public void setId(Integer id) {
     this.id = id;
 }
 
-@Column(name = “NAME”, nullable = false, length = 100)
+@Column(name = "NAME", nullable = false, length = 100)
 public String getName() {
     return name;
 }
@@ -14029,7 +14268,9 @@ public void setName(String name) {
 }
 ```
 
-接下来，我们将查看 `Building` 实体的测试。 
+接下来，我们将查看 `Building` 实体的测试。
+
+
 
 ```java
 @RunWith( SpringJUnit4ClassRunner.class )
@@ -14062,7 +14303,7 @@ Assert.assertEquals(0L, list2.size());
 }
 ```
 
-根据上面的测试，我们复习 `Building` 实体的定义。 
+根据上面的测试，我们复习`Building`实体的定义。
 
 ```java
 @Entity
@@ -14085,7 +14326,7 @@ public void setFloors(Integer floors) {
 }
 ```
 
-最后，我们预见 `Land` 实体的测试，它与 `Building` 实体的测试相似。 
+最后，我们预见`Land`实体的测试，它与`Building`实体的测试相似。
 
 ```java
 @RunWith( SpringJUnit4ClassRunner.class )
@@ -14118,7 +14359,7 @@ Assert.assertEquals(0L, list2.size());
 }
 ```
 
-最后，我们查看 `Land` 实体。 
+最后，我们查看`Land`实体。
 
 ```java
 @Entity
@@ -14204,10 +14445,6 @@ public void testGetAll() {
 }
 ```
 
-
-
-
-
 ```java
 @TransactionConfiguration( defaultRollback = true )
 @Transactional
@@ -14247,7 +14484,7 @@ public class EstateServiceImpl implements EstateService {
 }
 ```
 
-Mapper 的特征是有有两个至关重要的操作，用于将数据访问对象转换为实体，反之亦然。
+`Mapper`的特征是有两个至关重要的操作，用于将数据访问对象转换为实体，反之亦然。
 
 ```java
 @Component
@@ -14337,6 +14574,8 @@ public class EstateServiceImplTest {
 ```
 
 业务服务中根据给定标识符查找行的等效操作现在将被标记。
+
+
 
 ```java
 public class EstateServiceImpl implements EstateService {
@@ -14474,10 +14713,6 @@ public class EstateControllerTest {
 }
 ```
 
-
-
-
-
 ```java
 EstateDto newEstateDto = new BuildingDto();
 
@@ -14569,10 +14804,15 @@ service.edit(estate);
 在本章中，我们讨论了以下内容：
 
 * 开发 mock 内存数据库
+
 * 开发 mock 用户界面
+
 * 开发与类表继承相关的实体
+
 * 开发数据访问层
+
 * 开发业务服务层
+
 * 开发 REST 服务控制器。
 
 ## 第 16 章 类表继承
@@ -14607,38 +14847,40 @@ private String name;
 }
 ```
 
+
+
 ```java
 public class PermanentEmployeeDto extends EmployeeDto {
-private Integer leaves;
-private Integer salary;
+    private Integer leaves;
+    private Integer salary;
 }
 ```
 
 ```java
 public class ContractorEmployeeDto extends EmployeeDto {
-private Integer hourlyRate;
-private Integer overtimeRate;
+    private Integer hourlyRate;
+    private Integer overtimeRate;
 }
 ```
 
-### 开发 mock 服务
+## 开发 mock 服务
 
 让我们从向内存数据库执行一个简单的 `add` 操作开始，该数据库是基于 `enum` 实现的 `Singleton` 模式。
 
 ```java
 public enum EmployeeInMemoryDB {
-INSTANCE;
-private static List<EmployeeDto> list = new ArrayList<EmployeeDto>();
-private static Integer lastId = 0;
+    INSTANCE;
+    private static List<EmployeeDto> list = new ArrayList<EmployeeDto>();
+    private static Integer lastId = 0;
 
-public Integer getId() {
-return ++lastId;
-}
+    public Integer getId() {
+        return ++lastId;
+    }
 
-public void add(EmployeeDto employeeDto) {
-employeeDto.setId(getId());
-list.add(employeeDto);
-}
+    public void add(EmployeeDto employeeDto) {
+        employeeDto.setId(getId());
+        list.add(employeeDto);
+    }
 }
 ```
 
@@ -14646,31 +14888,31 @@ list.add(employeeDto);
 
 ```java
 @Controller
-@RequestMapping(value=”classtableinheritance/mock”)
+@RequestMapping(value="classtableinheritance/mock")
 public class EmployeeMockController {
-@RequestMapping(value=”/create”, method=RequestMethod.POST)
-@ResponseBody
-public void create(@RequestBody EmployeeDto employee){
-EmployeeInMemoryDB.INSTANCE.add(employee);
-}
+    @RequestMapping(value="/create", method=RequestMethod.POST)
+    @ResponseBody
+    public void create(@RequestBody EmployeeDto employee){
+        EmployeeInMemoryDB.INSTANCE.add(employee);
+    }
 }
 ```
 
-接下来，我们将查看负责检索所有行的的方法。首先，我们将审查控制器将使用的内存数据库操作。
+接下来，我们将查看负责检索所有行的方法。首先，我们将审查控制器将使用的内存数据库操作。
 
 ```java
-public enum EmployeeInMemoryDB{
-public List<EmployeeDto> findAll() {
-return list;
-}
+public enum EmployeeInMemoryDB {
+    public List<EmployeeDto> findAll() {
+        return list;
+    }
 
-public EmployeeDto findById(Integer id) {
-for (EmployeeDto dto:list) {
-if (dto.getId()==id)
-return dto;
-}
-return null;
-}
+    public EmployeeDto findById(Integer id) {
+        for (EmployeeDto dto:list) {
+            if (dto.getId()==id)
+                return dto;
+        }
+        return null;
+    }
 }
 ```
 
@@ -14678,16 +14920,16 @@ return null;
 
 ```java
 public class EmployeeMockController {
-@RequestMapping(value=”/findAll”, method=RequestMethod.GET)
-public @ResponseBody EstateDto[] findAll(){
-List<EstateDto> list = EmployeeInMemoryDB.INSTANCE.findAll();
-return list.toArray(new EstateDto[list.size()]);
-}
+    @RequestMapping(value="/findAll", method=RequestMethod.GET)
+    public @ResponseBody EstateDto[] findAll(){
+        List<EstateDto> list = EmployeeInMemoryDB.INSTANCE.findAll();
+        return list.toArray(new EstateDto[list.size()]);
+    }
 
-@RequestMapping(value=”/findById/{employeeid}”, method=RequestMethod.GET)
-public @ResponseBody EstateDto findById(@PathVariable(“employeeid”) Integer employeeid){
-return EmployeeInMemoryDB.INSTANCE.findById(employeeid);
-}
+    @RequestMapping(value="/findById/{employeeid}", method=RequestMethod.GET)
+    public @ResponseBody EstateDto findById(@PathVariable("employeeid") Integer employeeid){
+        return EmployeeInMemoryDB.INSTANCE.findById(employeeid);
+    }
 }
 ```
 
@@ -14695,13 +14937,9 @@ return EmployeeInMemoryDB.INSTANCE.findById(employeeid);
 
 ```java
 public void remove(Integer id) {
-EmployeeDto toRemove = null;
+    EmployeeDto toRemove = null;
 }
 ```
-
-
-
-
 
 ```java
 for (EmployeeDto dto:list) 
@@ -14714,9 +14952,9 @@ for (EmployeeDto dto:list)
 
 ```java
 public class EmployeeMockController {
-    @RequestMapping(value="/remove/{employeeid}”, method=RequestMethod.POST)
+    @RequestMapping(value="/remove/{employeeid}", method=RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
-    public void remove(@PathVariable(“employeeid”) Integer employeeid){
+    public void remove(@PathVariable("employeeid") Integer employeeid){
         EmployeeInMemoryDB.INSTANCE.remove(employeeid);
     }
 }
@@ -14747,7 +14985,7 @@ public class EmployeeInMemoryDB {
 
 ```java
 public class EmployeeMockController {
-    @RequestMapping(value=”edit”, method=RequestMethod.POST)
+    @RequestMapping(value="edit", method=RequestMethod.POST)
     @ResponseBody
     public void edit(@RequestBody EmployeeDto employee){
         EmployeeInMemoryDB.INSTANCE.edit(employee);
@@ -14755,9 +14993,9 @@ public class EmployeeMockController {
 }
 ```
 
-### 开发模拟用户界面
+## 开发模拟用户界面
 
-现在让我们如何生成图 16-2 所示的用户界面。
+现在让我们看看如何生成图 16-2 所示的用户界面。
 
 ![Image](img/00036.jpeg)
 
@@ -14766,74 +15004,74 @@ public class EmployeeMockController {
 让我们首先回顾构成页面体的 JSP 片段。
 
 ```html
-<body onload=”loadObjects()”>
-    <div id=”container”>
+<body onload="loadObjects()">
+    <div id="container">
         <div>
             <p><b>Employee Manager:</b></p>
         </div>
-        <form method=”post” id=”employeeForm”>
+        <form method="post" id="employeeForm">
             <table>
                 <tbody>
                     <tr>
                         <td>选择员工</td>
                         <td>
-                            <select name=”employeeChooser” id=”employeeChooser” onchange=”setEmployeeValue()”>
-                                <option value=””>选择员工类型</option>
-                                <option value=”permanentEmployee”>正式员工</option>
-                                <option value=”contractorEmployee”>合同工</option>
+                            <select name="employeeChooser" id="employeeChooser" onchange="setEmployeeValue()">
+                                <option value="">选择员工类型</option>
+                                <option value="permanentEmployee">正式员工</option>
+                                <option value="contractorEmployee">合同工</option>
                             </select>
                         </td>
                     </tr>
                     <tr>
                         <td>名称：</td>
                         <td>
-                            <input name=”employeeid” id=”employeeid” type=”hidden”>
-                            <input name=”employeename” id=”employeename” type=”text”>
+                            <input name="employeeid" id="employeeid" type="hidden">
+                            <input name="employeename" id="employeename" type="text">
                         </td>
                     </tr>
                     <tr>
-                        <td><div id=”employeeFirstValue”>输入值</div></td>
+                        <td><div id="employeeFirstValue">输入值</div></td>
                         <td>
-                            <input name=”employeeFirstProperty” id=”employeeFirstProperty” type=”text”>
+                            <input name="employeeFirstProperty" id="employeeFirstProperty" type="text">
                         </td>
                     </tr>
                     <tr>
-                        <td><div id=”employeeSecondValue”>输入值</div></td>
+                        <td><div id="employeeSecondValue">输入值</div></td>
                         <td>
-                            <input name=”employeeSecondProperty” id=”employeeSecondProperty” type=”text”>
+                            <input name="employeeSecondProperty" id="employeeSecondProperty" type="text">
                         </td>
                     </tr>
                     <tr>
-                        <td colspan=”2”><input type=submit value=”创建” id=”subButton” onclick=”return methodCall()”></td>
+                        <td colspan="2"><input type=submit value="创建" id="subButton" onclick="return methodCall()"></td>
                     </tr>
                 </tbody>
             </table>
         </form>
-        <div id=”employeeFormResponse”></div>
+        <div id="employeeFormResponse"></div>
     </div>
 </body>
 ```
 
-首先我们将看到 JavaScript 方法 `loadObjects()`，它在页面通过 `onload` 事件加载加载时被调用。
+首先我们将看到 JavaScript 方法 `loadObjects()`，它在页面通过 `onload` 事件加载时被调用。
 
 ```javascript
 function loadObjects(){
     $.ajax({
-        url : “/Spring-OODD/clastableinheritance/mock/findAll”,
-        type: “GET”,
+        url : "/Spring-OODD/clastableinheritance/mock/findAll",
+        type: "GET",
         data : {},
-        dataType: “json”,
+        dataType: "json",
         success: function(data, textStatus, jqXHR) {
             processResponseData(data);
         },
         error: function (jqXHR, textStatus, errorThrown) {
-            document.getElementById(“employeename”).value=””;
-            document.getElementById(“employeeFirstProperty”).value=””;
-            document.getElementById(“employeeSecondProperty”).value=””;
-            alert(“Error Status Load Objects:”+textStatus);
+            document.getElementById("employeename").value="";
+            document.getElementById("employeeFirstProperty").value="";
+            document.getElementById("employeeSecondProperty").value="";
+            alert("Error Status Load Objects:"+textStatus);
         }
     });
-    $(‘#employeeChooser’).get(0).selectedIndex = 0;
+    $('#employeeChooser').get(0).selectedIndex = 0;
     return false;
 }
 ```
@@ -14842,40 +15080,44 @@ JavaScript `processResponseData` 方法在上述服务调用成功时被调用�
 
 ```javascript
 function processResponseData(responsedata){
-    var dyanicTableRow=”<table border=1>”+
-    “<tr>” +
-    “<td>类型</td>+
-    “<td>名称</td>+
-    “<td>休假</td>+
-    “<td>薪资</td>+
-    “<td>时薪</td>+
-    “<td>加班费</td>+
-    “<td>操作</td>+
-    “</tr>”;
-    var dataRow=””;
+    var dyanicTableRow="<table border=1>"+
+    "<tr>" +
+    "<td>类型</td>"+
+    "<td>名称</td>"+
+    "<td>休假</td>"+
+    "<td>薪资</td>"+
+    "<td>时薪</td>"+
+    "<td>加班费</td>"+
+    "<td>操作</td>"+
+    "</tr>";
+    var dataRow="";
     $.each(responsedata, function(itemno, itemvalue){
         dataRow=dataRow+generateTableData(itemvalue);
     });
-    dyanamicTableRow+=dataRow+“</table>”;
-    document.getElementById(“employeeFormResponse”).innerHTML=dyanamicTableRow;
+    dyanamicTableRow+=dataRow+"</table>";
+    document.getElementById("employeeFormResponse").innerHTML=dyanamicTableRow;
 }
 
 function generateTableData(itemvalue){
-    var leaves = (itemvalue.leaves != null) ? itemvalue.leaves : “-”;
-    var salary = (itemvalue.salary != null) ? itemvalue.salary : “-”;
-    var hourlyRate = (itemvalue.hourlyRate != null) ? itemvalue.hourlyRate : “-”;
-    var overtimeRate = (itemvalue.overtimeRate != null) ? itemvalue.overtimeRate : “-”;
-    return “<tr>”+itemvalue.type+</td>+
-    “<td>”+itemvalue.name+</td>+
-    “<td>”+leaves+</td>+
-    “<td>”+salary+</td>+
-    “<td>”+hourlyRate+</td>+
-    “<td>”+overtimeRate+</td>+
-    “<td><a href="#" onclick=\"deleteObject(+itemvalue.id)\>删除</a><a href="#" onclick=\"editObject(+itemvalue.id)\>编辑</a></td></tr>”+
+    var leaves = (itemvalue.leaves != null) ? itemvalue.leaves : "-";
+    var salary = (itemvalue.salary != null) ? itemvalue.salary : "-";
+    var hourlyRate = (itemvalue.hourlyRate != null) ? itemvalue.hourlyRate : "-";
+    var overtimeRate = (itemvalue.overtimeRate != null) ? itemvalue.overtimeRate : "-";
+    return "<tr>"+itemvalue.type+"</td>"+
+    "<td>"+itemvalue.name+"</td>"+
+    "<td>"+leaves+"</td>"+
+    "<td>"+salary+"</td>"+
+    "<td>"+hourlyRate+"</td>"+
+    "<td>"+overtimeRate+"</td>"+
+    "<td><a href=\"#\" onclick=\"deleteObject("+itemvalue.id+")\">删除</a><a href=\"#\" onclick=\"editObject("+itemvalue.id+")\">编辑</a></td></tr>";
 }
 ```
 
 我们已经看到了页面是如何加载的。现在让我们通过 JavaScript `methodCall` 方法查看 `create` 和 `update` 功能。
+
+
+
+首先，我们将回顾 JavaScript `create` 方法。
 
 ```javascript
 function methodCall(){
@@ -14888,8 +15130,6 @@ function methodCall(){
     return false;
 }
 ```
-
-首先，我们将回顾 JavaScript `create` 方法。
 
 ```javascript
 function create(){
@@ -14955,14 +15195,6 @@ function update(){
 }
 ```
 
-
-
-
-
-`employeeSecondProperty};
-
-}
-
 ```javascript
 $.ajax({
 url : “/Spring-OODD/classtableinheritance/mock/edit”,
@@ -14990,9 +15222,6 @@ alert(“Error Status Update:”+textStatus);
 }
 });
 ```
-
-`return false;`
-}
 
 `editObject` 和 `viewObject` JavaScript 方法调用允许选择一条记录进行更新操作。
 
@@ -15059,7 +15288,7 @@ alert(“Error Status Delete:”+textStatus);
 
 ### 开发服务
 
-服务开发将分四个主要任务展开：创建实体、创建数据访问层、创建业务服务层以及创建与用户界面集成的基于 JSON 的 REST 服务。让我们一个一个来看，并采用自底上的方法，从实体开始一直到 REST 服务。
+服务开发将分四个主要任务展开：创建实体、创建数据访问层、创建业务服务层以及创建与用户界面集成的基于 JSON 的 REST 服务。让我们一个一个来看，并采用自底向上的方法，从实体开始一直到 REST 服务。
 
 ### 开发资源（实体）层
 
@@ -15122,6 +15351,8 @@ this.name = name;
 ```
 
 接下来，我们将查看 `PermanentEmployee` 实体的测试。
+
+
 
 ```java
 @RunWith( SpringJUnit4ClassRunner.class )
@@ -15213,10 +15444,6 @@ Assert.assertEquals(0L, list2.size());
 }
 ```
 
-
-
-
-
 ```java
 List<ContractorEmployee> list2 = sessionFactory.getCurrentSession().createQuery(“from ContractorEmployee”).list();
 
@@ -15229,9 +15456,13 @@ Assert.assertEquals(0L, list2.size());
 最后，我们来看 `ContractorEmployee` 实体的定义。
 
 ```java
+
 @Entity
+
 @Table(name=”CONTRACTOR_EMPLOYEE”)
+
 @PrimaryKeyJoinColumn(name=”ID”) 
+
 public class ContractorEmployee extends Employee {
 
     private Integer hourlyRate;
@@ -15239,52 +15470,85 @@ public class ContractorEmployee extends Employee {
     private Integer overtimeRate;
 
     @Column(name = “HOURLEY_RATE”, nullable = false, length = 100)
+
     public Integer getHourlyRate() {
+
         return hourlyRate;
+
     }
 
     public void setHourlyRate(Integer hourlyRate) {
+
         this.hourlyRate = hourlyRate;
+
     }
 
     @Column(name = “OVERTIME_RATE”, nullable = false, length = 100)
+
     public Integer getOvertimeRate() {
+
         return overtimeRate;
+
     }
 
     public void setOvertimeRate(Integer overtimeRate) {
+
         this.overtimeRate = overtimeRate;
+
     }
+
 }
+
 ```
 
 ### 表结构
 
 ```sql
+
 DROP TABLE `permanent_employee`;
+
 DROP TABLE `contractor_employee`;
+
 DROP TABLE `employee`;
+
 CREATE TABLE `employee` (
+
     `ID` int(11) NOT NULL,
+
     `NAME` varchar(100) NOT NULL,
+
     PRIMARY KEY (`ID`)
+
 ) ;
 
 CREATE TABLE `permanent_employee` (
+
     `LEAVES` int(11) NOT NULL,
+
     `SALARY` int(11) NOT NULL,
+
     `ID` int(11) NOT NULL,
+
     PRIMARY KEY (`ID`),
+
     CONSTRAINT FOREIGN KEY (`ID`) REFERENCES `employee` (`ID`)
+
 ) ;
 
 CREATE TABLE `contractor_employee` (
+
     `HOURLEY_RATE` int(11) NOT NULL,
+
     `OVERTIME_RATE` int(11) NOT NULL,
+
     `ID` int(11) NOT NULL,
+
     PRIMARY KEY (`ID`),
+
     CONSTRAINT FOREIGN KEY (`ID`) REFERENCES `employee` (`ID`)
+
 ) ;
+
 ```
 
 ### 开发数据访问层
@@ -15292,155 +15556,258 @@ CREATE TABLE `contractor_employee` (
 我们将从查找所有记录操作的测试用例开始。
 
 ```java
+
 @RunWith( SpringJUnit4ClassRunner.class )
+
 @ContextConfiguration( locations = { “classpath:context.xml” } )
+
 @TransactionConfiguration( defaultRollback = true )
+
 @Transactional
+
 public class EmployeeDaoImplTest {
+
     @Autowired
+
     private EmployeeDao dao ;
 
     @Test
+
     public void testGetAll() {
+
         Assert.assertEquals(0L, dao.getAll().size());
+
     }
+
 }
+
 ```
 
 接接，我们将看到如何编写上述测试用例对应的数据访问操作。
 
 ```java
+
 @Repository
+
 @Transactional
+
 public class EmployeeDaoImpl implements EmployeeDao {
+
     @Autowired
+
     private SessionFactory sessionFactory ;
 
     @SuppressWarnings(“unchecked”)
+
     @Override
+
     public List<Employee> getAll() {
+
         return sessionFactory.getCurrentSession().createQuery(“select employee from Employee employee order by employee.id desc”).list();
+
     } 
+
 }
+
 ```
 
 让我们继续插入操作的测试。
 
 ```java
+
 public class EmployeeDaoImplTest {
+
     @Autowired
+
     private EmployeeDao dao ;
 
     @Test
+
     public void testInsert() {
+
         Employee temployee = new Employee();
+
         temployee.setName(“Lalit Narayan Mishra”);
+
         dao.insert(temployee);
+
         Employee sEmployee = new Employee();
+
         sEmployee.setName(“Amritendu De”);
+
         dao.insert(sEmployee);
+
         Assert.assertEquals(2L, dao.getAll().size());
+
     } 
+
 }
+
 ```
 
 数据访问类中对应的插入操作必须使用 Hibernate 4 的 `Session.save()` 函数实现。
 
 ```java
+
 public class EmployeeDaoImpl implements EmployeeDao {
+
     @Autowired
+
     private SessionFactory sessionFactory ;
 
     @Override
+
     public void insert(Employee employee) {
+
         sessionFactory.getCurrentSession().save(employee);
+
     } 
+
 }
+
 ```
 
 然后我们将跳转到下一个测试操作，即根据标识符查找行。
 
 ```java
+
 public class EmployeeDaoImplTest {
+
     @Test
+
     public void testGetById() {
+
         Employee semployee = new Employee();
+
         semployee.setName(“Lalit Narayan Mishra”);
+
         dao.insert(semployee);
+
         List<Employee> pList = dao.getAll();
+
         Employee employee = pList.get(0);
+
         Employee employee2 = dao.getById(employee.getId());
+
         Assert.assertEquals(“Lalit Narayan Mishra”, employee2.getName());
+
     }
+
 }
+
 ```
 
 对应的数据访问方法通过 Hibernate 4 的 `Session.get()` 操作执行。
 
 ```java
+
 public class EmployeeDaoImpl implements EmployeeDao {
+
     @Override
+
     public Employee getById(Integer id) {
+
         return (Employee) sessionFactory.getCurrentSession().get(Employee.class, id);
+
     } 
+
 }
+
 ```
 
 我们将首先编写删除操作的测试，然后是数据访问操作。
 
 ```java
+
 public class EmployeeDaoImplTest {
+
     @Test
+
     public void testDelete() {
+
         Employee semployee = new Employee();
+
         semployee.setName(“Lalit Narayan Mishra”);
+
         dao.insert(semployee);
+
         Employee tEmployee = new Employee();
+
         tEmployee.setName(“Amritendu De”);
+
         dao.insert(tEmployee);
+
         Assert.assertEquals(2L, dao.getAll().size());
+
         dao.delete(tEmployee);
+
         Assert.assertEquals(1L, dao.getAll().size());
+
     }
+
 }
+
 ```
 
 删除数据访问操作使用了 Hibernate 4 的 `Session.delete()` 操作。
 
 ```java
+
 public class EmployeeDaoImpl implements EmployeeDao {
+
     @Override
+
     public void delete(Employee employee) {
+
         sessionFactory.getCurrentSession().delete(employee);
+
     }
+
 }
+
 ```
 
 最后我们将查看更新测试。
 
 ```java
+
 public class EmployeeDaoImplTest {
+
     @Test
+
     public void testUpdate() {
+
         Employee semployee = new Employee();
+
         semployee.setName(“Lalit Narayan Mishra”);
+
         dao.insert(semployee);
+
         Assert.assertEquals(1L, dao.getAll().size());
-        List<Employee> pList = dao.getAll();
-        Employee employee = pList.get(0);
-        employee.setName(“Amritendu De”);
-        dao.update(employee);
-        List<Employee> pList2 = dao.getAll();
-        Employee employee2 = pList2.get(0);
-        Assert.assertEquals(“Amritendu De”, employee2.getName());
-    }
-}
+
+
+
+```
+List<Employee> pList = dao.getAll();
+
+Employee employee = pList.get(0);
+
+employee.setName("Amritendu De");
+
+dao.update(employee);
+
+List<Employee> pList2 = dao.getAll();
+
+Employee employee2 = pList2.get(0);
+
+Assert.assertEquals("Amritendu De", employee2.getName());
 ```
 
 更新数据访问操作所示，它使用了 Hibernate `Session.merge()` 方法。
 
 ```java
 public class EmployeeDaoImpl implements EmployeeDao {
+
     @Override
     public void update(Employee employee) {
         sessionFactory.getCurrentSession().merge(employee);
@@ -15453,11 +15820,12 @@ public class EmployeeDaoImpl implements EmployeeDao {
 我们将继续查找所有记录函数的测试。
 
 ```java
-@RunWith( SpringJUnit4ClassRunner.class )
-@ContextConfiguration( locations = { “classpath:context.xml” } )
-@TransactionConfiguration( defaultRollback = true )
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {"classpath:context.xml"})
+@TransactionConfiguration(defaultRollback = true)
 @Transactional
 public class EmployeeServiceImplTest {
+
     @Autowired
     private EmployeeService service;
 
@@ -15474,6 +15842,7 @@ public class EmployeeServiceImplTest {
 @Service
 @Transactional
 public class EmployeeServiceImpl implements EmployeeService {
+
     @Autowired
     private EmployeeDao employeeDao;
 
@@ -15484,7 +15853,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     public List<EmployeeDto> findAll() {
         List<Employee> employees = employeeDao.getAll();
         List<EmployeeDto> employeeDtos = new ArrayList<EmployeeDto>();
-        for(Employee employee : employees){
+        for (Employee employee : employees) {
             employeeDtos.add(employeeMapper.mapEntityToDto(employee));
         }
         return employeeDtos;
@@ -15492,27 +15861,23 @@ public class EmployeeServiceImpl implements EmployeeService {
 }
 ```
 
-Mapper 特有的包含两个关键操作，用于将数据对象转换为实体，反之亦然。
-
-
-
-
+`Mapper` 特有的包含两个关键操作，用于将数据对象转换为实体，反之亦然。
 
 ```java
-public EmployeeDto mapEntityToDto(Employee employee){
-    if(employee instanceof PermanentEmployee) {
+public EmployeeDto mapEntityToDto(Employee employee) {
+    if (employee instanceof PermanentEmployee) {
         PermanentEmployeeDto permanentEmployeeDto = new PermanentEmployeeDto();
-        if(null!=employee.getId()) permanentEmployeeDto.setId(employee.getId());
-        if(null!=employee.getName()) permanentEmployeeDto.setName(employee.getName());
-        if(null!=((PermanentEmployee)employee).getLeaves()) permanentEmployeeDto.setLeaves(((PermanentEmployee)employee).getLeaves());
-        if(null!=((PermanentEmployee)employee).getSalary()) permanentEmployeeDto.setSalary(((PermanentEmployee)employee).getSalary());
+        if (null != employee.getId()) permanentEmployeeDto.setId(employee.getId());
+        if (null != employee.getName()) permanentEmployeeDto.setName(employee.getName());
+        if (null != ((PermanentEmployee) employee).getLeaves()) permanentEmployeeDto.setLeaves(((PermanentEmployee) employee).getLeaves());
+        if (null != ((PermanentEmployee) employee).getSalary()) permanentEmployeeDto.setSalary(((PermanentEmployee) employee).getSalary());
         return permanentEmployeeDto;
-    } else if(employee instanceof ContractorEmployee) {
+    } else if (employee instanceof ContractorEmployee) {
         ContractorEmployeeDto contractorEmployeeDto = new ContractorEmployeeDto();
-        if(null!=employee.getId()) contractorEmployeeDto.setId(employee.getId());
-        if(null!=employee.getName()) contractorEmployeeDto.setName(employee.getName());
-        if(null!=((ContractorEmployee)employee).getHourlyRate()) contractorEmployeeDto.setHourlyRate(((ContractorEmployee)employee).getHourlyRate());
-        if(null!=((ContractorEmployee)employee).getOvertimeRate()) contractorEmployeeDto.setOvertimeRate(((ContractorEmployee)employee).getOvertimeRate());
+        if (null != employee.getId()) contractorEmployeeDto.setId(employee.getId());
+        if (null != employee.getName()) contractorEmployeeDto.setName(employee.getName());
+        if (null != ((ContractorEmployee) employee).getHourlyRate()) contractorEmployeeDto.setHourlyRate(((ContractorEmployee) employee).getHourlyRate());
+        if (null != ((ContractorEmployee) employee).getOvertimeRate()) contractorEmployeeDto.setOvertimeRate(((ContractorEmployee) employee).getOvertimeRate());
         return contractorEmployeeDto;
     }
     return null;
@@ -15523,20 +15888,23 @@ public EmployeeDto mapEntityToDto(Employee employee){
 
 ```java
 public class EmployeeServiceImplTest {
+
     @Test
     public void testCreate() {
         EmployeeDto bemployee = new PermanentEmployeeDto();
-        bemployee.setName(“Lalit Narayan Mishra”);
-        ((PermanentEmployeeDto)bemployee).setLeaves(30);
-        ((PermanentEmployeeDto)bemployee).setSalary(500000);
+        bemployee.setName("Lalit Narayan Mishra");
+        ((PermanentEmployeeDto) bemployee).setLeaves(30);
+        ((PermanentEmployeeDto) bemployee).setSalary(500000);
         service.create(bemployee);
+
         EmployeeDto hEmployee = new ContractorEmployeeDto();
-        hEmployee.setName(“Amritendu De”);
-        ((ContractorEmployeeDto)hEmployee).setHourlyRate(35);
-        ((ContractorEmployeeDto)hEmployee).setOvertimeRate(20);
+        hEmployee.setName("Amritendu De");
+        ((ContractorEmployeeDto) hEmployee).setHourlyRate(35);
+        ((ContractorEmployeeDto) hEmployee).setOvertimeRate(20);
         service.create(hEmployee);
+
         Assert.assertEquals(2L, service.findAll().size());
-    } 
+    }
 }
 ```
 
@@ -15544,10 +15912,11 @@ public class EmployeeServiceImplTest {
 
 ```java
 public class EmployeeServiceImpl implements EmployeeService {
+
     @Override
     public void create(EmployeeDto employeeDto) {
         employeeDao.insert(employeeMapper.mapDtoToEntity(employeeDto));
-    } 
+    }
 }
 ```
 
@@ -15555,18 +15924,20 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 ```java
 public class EmployeeServiceImplTest {
+
     @Test
     public void testFindById() {
         EmployeeDto bemployee = new PermanentEmployeeDto();
-        bemployee.setName(“Lalit Narayan Mishra”);
-        ((PermanentEmployeeDto)bemployee).setLeaves(30);
-        ((PermanentEmployeeDto)bemployee).setSalary(500000);
+        bemployee.setName("Lalit Narayan Mishra");
+        ((PermanentEmployeeDto) bemployee).setLeaves(30);
+        ((PermanentEmployeeDto) bemployee).setSalary(500000);
         service.create(bemployee);
+
         List<EmployeeDto> pList = service.findAll();
         EmployeeDto employee = pList.get(0);
         EmployeeDto employee2 = service.findById(employee.getId());
-        Assert.assertEquals(“Lalit Narayan Mishra”, employee2.getName());
-    } 
+        Assert.assertEquals("Lalit Narayan Mishra", employee2.getName());
+    }
 }
 ```
 
@@ -15574,15 +15945,16 @@ public class EmployeeServiceImplTest {
 
 ```java
 public class EmployeeServiceImpl implements EmployeeService {
+
     @Override
     public EmployeeDto findById(Integer id) {
         Employee employee = employeeDao.getById(id);
         EmployeeDto employeeDto = null;
-        if(null !=employee){
+        if (null != employee) {
             employeeDto = employeeMapper.mapEntityToDto(employee);
         }
         return employeeDto;
-    } 
+    }
 }
 ```
 
@@ -15590,19 +15962,23 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 ```java
 public class EmployeeServiceImplTest {
+
     @Test
     public void testRemove() {
         EmployeeDto bemployee = new PermanentEmployeeDto();
-        bemployee.setName(“Lalit Narayan Mishra”);
-        ((PermanentEmployeeDto)bemployee).setLeaves(30);
-        ((PermanentEmployeeDto)bemployee).setSalary(500000);
+        bemployee.setName("Lalit Narayan Mishra");
+        ((PermanentEmployeeDto) bemployee).setLeaves(30);
+        ((PermanentEmployeeDto) bemployee).setSalary(500000);
         service.create(bemployee);
+
         EmployeeDto hEmployee = new ContractorEmployeeDto();
-        hEmployee.setName(“Amritendu De”);
-        ((ContractorEmployeeDto)hEmployee).setHourlyRate(35);
-        ((ContractorEmployeeDto)hEmployee).setOvertimeRate(20);
+        hEmployee.setName("Amritendu De");
+        ((ContractorEmployeeDto) hEmployee).setHourlyRate(35);
+        ((ContractorEmployeeDto) hEmployee).setOvertimeRate(20);
         service.create(hEmployee);
+
         Assert.assertEquals(2L, service.findAll().size());
+
         List<EmployeeDto> pList = service.findAll();
         EmployeeDto employee = pList.get(0);
         service.remove(employee.getId());
@@ -15615,33 +15991,37 @@ public class EmployeeServiceImplTest {
 
 ```java
 public class EmployeeServiceImpl implements EmployeeService {
+
     @Override
     public void remove(Integer employeeId) {
         Employee employee = employeeDao.getById(employeeId);
         employeeDao.delete(employee);
-    } 
-} 
+    }
+}
 ```
 
 我们将进行的最后一个测试操作是编辑操作，它接受一个数据访问对象并应用数据访问方法将更改合并到数据库。
 
 ```java
 public class EmployeeServiceImplTest {
+
     @Test
     public void testEdit() {
         EmployeeDto bemployee = new PermanentEmployeeDto();
-        bemployee.setName(“Lalit Narayan Mishra”);
-        ((PermanentEmployeeDto)bemployee).setLeaves(30);
-        ((PermanentEmployeeDto)bemployee).setSalary(500000);
+        bemployee.setName("Lalit Narayan Mishra");
+        ((PermanentEmployeeDto) bemployee).setLeaves(30);
+        ((PermanentEmployeeDto) bemployee).setSalary(500000);
         service.create(bemployee);
         Assert.assertEquals(1L, service.findAll().size());
-        List<EmployeeDto> list = service.findAll ();
+
+        List<EmployeeDto> list = service.findAll();
         EmployeeDto employee = list.get(0);
-        employee.setName(“Amritendu De”);
+        employee.setName("Amritendu De");
         service.edit(employee);
+
         List<EmployeeDto> pList2 = service.findAll();
         EmployeeDto employee2 = pList2.get(0);
-        Assert.assertEquals(“Amritendu De”, employee2.getName());
+        Assert.assertEquals("Amritendu De", employee2.getName());
     }
 }
 ```
@@ -15650,10 +16030,11 @@ public class EmployeeServiceImplTest {
 
 ```java
 public class EmployeeServiceImpl implements EmployeeService {
+
     @Override
     public void edit(EmployeeDto employeeDto) {
         employeeDao.update(employeeMapper.mapDtoToEntity(employeeDto));
-    } 
+    }
 }
 ```
 
@@ -15664,9 +16045,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 ```java
 @RunWith(SpringJUnit4Runner.class)
 @WebAppConfiguration
-@ContextConfiguration( locations = {“classpath:context.xml”})
+@ContextConfiguration(locations = {"classpath:context.xml"})
 @Transactional(defaultRollback = true)
 public class EmployeeControllerTest {
+
     private Gson gson = new GsonBuilder().create();
 
     @Resource
@@ -15680,56 +16062,92 @@ public class EmployeeControllerTest {
     }
 
     @Test
-    public void testAll() throws Exception {
-        testCreate();
-        testUpdate();
-        testDelete();
-    }
-
-    public void testCreate() throws Exception {
-        EmployeeDto employeeDto = new PermanentEmployeeDto();
-        employeeDto.setName(“ABC”);
-        ((PermanentEmployeeDto)employeeDto).setLeaves(20);
-        ((PermanentEmployeeDto)employeeDto).setSalary(1000000);
-        String json = gson.toJson(employeeDto);
-        json= json.replace(“{“, “”);
-        json= json.replace(“}”, “”);
-        json = “{\”type\:\”permanentEmployee\",+json+”}”;
-        MockHttpServletRequestBuilder requestBuilderOne = MockMvcRequestBuilders.*post*(“stableinheritance/create”);
-        requestBuilderOne.contentType(MediaType.*APPLICATION_JSON*);
-        requestBuilderOne.content(json.getBytes());
-        this.mockMvc.perform(requestBuilderOne).andExpect(MockMvcResultMatchers.*status*().isOk());
-    }
-
-    public void testUpdate() throws Exception {
-        MockHttpServletRequestBuilder requestBuilder2 = MockMvcRequestBuilders.*get*(“stableinheritance/findAll”);
-        MvcResult result = this.mockMvc.perform(requestBuilder2).andReturn();
-        String response2 = result.getResponse().getContentAsString();
-        Type listType = new TypeToken<EmployeeDto[]>() {}.getType();
-        EmployeeDto[] employeeDtoList = gson.fromJson(response2, listType);
-        EmployeeDto employeeDto2 = employeeDtoList[0];
-        EmployeeDto newEmployeeDto = new PermanentEmployeeDto();
-        newEmployeeDto.setId(employeeDto2.getId());
-        newEmployeeDto.setName(“DEF”);
-        ((PermanentEmployeeDto)newEmployeeDto).setLeaves(20);
-        ((PermanentEmployeeDto)newEmployeeDto).setSalary(1000000);
-        String json2 = gson.toJson(newEmployeeDto);
-    }
-
-    public void testDelete() throws Exception {
-        // ... rest of test logic
-    }
-}
 ```
 
 
 
-
+以下代码展示了测试类中定义的多个测试方法，包括`testAll()`、`testCreate()`、`testUpdate()`和`testDelete()`：
 
 ```java
-json2= json2.replace(“}”, “”);
+public void testAll() throws Exception {
 
-json2 = “{\”type\”:\”permanentEmployee\”,”+json2+””;
+    testCreate();
+
+    testUpdate();
+
+    testDelete();
+
+}
+
+public void testCreate() throws Exception {
+
+    EmployeeDto employeeDto = new PermanentEmployeeDto();
+
+    employeeDto.setName("ABC");
+
+    ((PermanentEmployeeDto)employeeDto).setLeaves(20);
+
+    ((PermanentEmployeeDto)employeeDto).setSalary(1000000);
+
+    String json = gson.toJson(employeeDto);
+
+    json= json.replace("{", "");
+
+    json= json.replace("}", "");
+
+    json = "{\"type\":\"permanentEmployee\","+json+"}";
+
+    MockHttpServletRequestBuilder requestBuilderOne = MockMvcRequestBuilders.post("stableinheritance/create");
+
+    requestBuilderOne.contentType(MediaType.APPLICATION_JSON);
+
+    requestBuilderOne.content(json.getBytes());
+
+    this.mockMvc.perform(requestBuilderOne).andExpect(MockMvcResultMatchers.status().isOk());
+
+}
+
+public void testUpdate() throws Exception {
+
+    MockHttpServletRequestBuilder requestBuilder2 = MockMvcRequestBuilders.get("stableinheritance/findAll");
+
+    MvcResult result = this.mockMvc.perform(requestBuilder2).andReturn();
+
+    String response2 = result.getResponse().getContentAsString();
+
+    Type listType = new TypeToken<EmployeeDto[]>() {}.getType();
+
+    EmployeeDto[] employeeDtoList = gson.fromJson(response2, listType);
+
+    EmployeeDto employeeDto2 = employeeDtoList[0];
+
+    EmployeeDto newEmployeeDto = new PermanentEmployeeDto();
+
+    newEmployeeDto.setId(employeeDto2.getId());
+
+    newEmployeeDto.setName("DEF");
+
+    ((PermanentEmployeeDto)newEmployeeDto).setLeaves(20);
+
+    ((PermanentEmployeeDto)newEmployeeDto).setSalary(1000000);
+
+    String json2 = gson.toJson(newEmployeeDto);
+
+}
+
+public void testDelete() throws Exception {
+
+    // ... rest of test logic
+
+}
+```
+
+以下代码展示了`testUpdate()`和`testDelete()`方法的完整实现：
+
+```java
+json2= json2.replace("}", "");
+
+json2 = "{\"type\":\"permanentEmployee\","+json2+"";
 
 MockHttpServletRequestBuilder requestBuilder3 = MockMvcRequestBuilders.post("/classtableinheritance/edit");
 
@@ -15742,17 +16160,24 @@ this.mockMvc.perform(requestBuilder3).andExpect(MockMvcResultMatchers.status().i
 }
 
 public void testDelete() throws Exception {
-MockHttpServletRequestBuilder requestBuilder2 = MockMvcRequestBuilders.get("/classtableinheritance/findAll");
-MvcResult result = this.mockMvc.perform(requestBuilder2).andReturn();
-String response2 = result.getResponse().getContentAsString();
-Type listType = new TypeToken<EmployeeDto[]>() {}.getType();
-EmployeeDto[] employeeDtoList = gson.fromJson(response2, listType);
-EmployeeDto employeeDto2 = employeeDtoList[0];
-MockHttpServletRequestBuilder requestBuilder3 = MockMvcRequestBuilders.post("/classtableinheritance/remove/"+employeeDto2.getId());
-requestBuilder3.contentType(MediaType.APPLICATION_JSON);
-this.mockMvc.perform(requestBuilder3).andExpect(MockMvcResultMatchers.status().is(204));
 
-}
+MockHttpServletRequestBuilder requestBuilder2 = MockMvcRequestBuilders.get("/classtableinheritance/findAll");
+
+MvcResult result = this.mockMvc.perform(requestBuilder2).andReturn();
+
+String response2 = result.getResponse().getContentAsString();
+
+Type listType = new TypeToken<EmployeeDto[]>() {}.getType();
+
+EmployeeDto[] employeeDtoList = gson.fromJson(response2, listType);
+
+EmployeeDto employeeDto2 = employeeDtoList[0];
+
+MockHttpServletRequestBuilder requestBuilder3 = MockMvcRequestBuilders.post("/classtableinheritance/remove/"+employeeDto2.getId());
+
+requestBuilder3.contentType(MediaType.APPLICATION_JSON);
+
+this.mockMvc.perform(requestBuilder3).andExpect(MockMvcResultMatchers.status().is(204));
 
 }
 ```
@@ -15762,46 +16187,70 @@ this.mockMvc.perform(requestBuilder3).andExpect(MockMvcResultMatchers.status().i
 ```java
 @Controller
 
-@RequestMapping(value=”/classtableinheritance”)
+@RequestMapping(value="/classtableinheritance")
+
 @Transactional
+
 public class EmployeeController {
+
 @Autowired
+
 private EmployeeService service;
 
-@RequestMapping(value=”/findAll”, method=RequestMethod.GET)
+@RequestMapping(value="/findAll", method=RequestMethod.GET)
+
 public @ResponseBody EmployeeDto[] findAll(){
+
 List<EmployeeDto> list = service.findAll();
+
 return list.toArray(new EmployeeDto[list.size()]);
+
 }
 
-@RequestMapping(value=”/findById/{employeeid}”, method=RequestMethod.GET)
-public @ResponseBody EmployeeDto findById(@PathVariable(“employeeid”) Integer employeeid){
+@RequestMapping(value="/findById/{employeeid}", method=RequestMethod.GET)
+
+public @ResponseBody EmployeeDto findById(@PathVariable("employeeid") Integer employeeid){
+
 return service.findById(employeeid);
+
 }
 
-@RequestMapping(value=”/create”, method=RequestMethod.POST)
+@RequestMapping(value="/create", method=RequestMethod.POST)
+
 @ResponseBody
+
 public void create(@RequestBody EmployeeDto employee){
+
 service.create(employee);
+
 }
 
-@RequestMapping(value=”/remove/{employeeid}”, method=RequestMethod.POST)
+@RequestMapping(value="/remove/{employeeid}", method=RequestMethod.POST)
+
 @ResponseStatus(value = HttpStatus.NO_CONTENT)
-public void remove(@PathVariable(“employeeid”) Integer employeeid){
+
+public void remove(@PathVariable("employeeid") Integer employeeid){
+
 service.remove(employeeid);
+
 }
 
-@RequestMapping(value=”/edit”, method=RequestMethod.POST)
+@RequestMapping(value="/edit", method=RequestMethod.POST)
+
 @ResponseBody
+
 public void edit(@RequestBody EmployeeDto employee){
+
 service.edit(employee);
+
 }
+
 }
 ```
 
-我们已经到达本章的末尾，并将讨论如何整合两个团队完成开发工作。REST 服务需要与实际的用户界面集成。请注意，请求映射已从 `/classtetableinheritance/mock` 变为 `/classtableinheritance`。剩余工作涉及通过提取模拟用户界面的大部分内容来创建实际的用户界面。
+我们已经到达本章的末尾，并将讨论如何整合两个团队完成开发工作。REST 服务需要与实际的用户界面集成。请注意，请求映射已从`/classtetableinheritance/mock`变为`/classtableinheritance`。剩余工作涉及通过提取模拟用户界面的大部分内容来创建实际的用户界面。
 
-### 总结
+## 总结
 
 在本章中我们讨论了：
 
@@ -15906,11 +16355,7 @@ service.edit(employee);
 
 *图 17-12：选择项目*
 
-
-
-
-
-Tomcat 启动后，将根据 `web.xml` 中的配置自动加载索引页。可以使用索引页测试应用程序的所有模块，如图 17-13 所示。默认 URL 为 `http://localhost:8080/Spring-OODD/`。
+Tomcat 启动后，将根据`web.xml`中的配置自动加载索引页。可以使用索引页测试应用程序的所有模块，如图 17-13 所示。默认 URL 为`http://localhost:8080/Spring-OODD/`。
 
 ![Image](img/00049.jpeg)
 
@@ -15919,4 +16364,3 @@ Tomcat 启动后，将根据 `web.xml` 中的配置自动加载索引页。可�
 ### 总结
 
 最后，我想告诉大家，这个应用程序投入了大量的心血和勤奋工作。请不要在群组中将其作为免费资源分享。不过，欢迎在日常工作中使用这些概念。
-

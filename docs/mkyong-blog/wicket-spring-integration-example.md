@@ -1,29 +1,28 @@
+
 # Wicket + Spring 集成示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/wicket/wicket-spring-integration-example/>
 
 本教程演示了如何将 Wicket 与 Spring 框架集成在一起。
 
-本文中的库:
+本文中的库：
 
-1.  Wicket v1.4.17
-2.  小门弹簧 v1.4.17
-3.  Spring v3.0.5.RELEASE
+1. Wicket v1.4.17
+2. 小门弹簧 v1.4.17
+3. Spring v3.0.5.RELEASE
 
-## 1.项目结构
+## 1. 项目结构
 
 本教程的最终项目目录结构，没什么特别的，只是一个标准的 Maven 项目。
 
-
-
 ![wicket spring example](img/fa27945bc4173afa430b696ca1ce7419.png "wicket-spring-example")
 
-## 2.项目依赖性
+## 2. 项目依赖性
 
-获取 Wicket 和 Spring 的依赖关系，要集成两者，需要" **wicket-spring.jar** "。
+获取 Wicket 和 Spring 的依赖关系，要集成两者，需要 `wicket-spring.jar`。
 
 ```java
- <project ..>
+<project ..>
 
 	<dependencies>
 
@@ -69,25 +68,25 @@
 
 	</dependencies>
 
-</project> 
+</project>
 ```
 
-## 3.春豆
+## 3. Spring Bean
 
-创建一个 Spring bean，用 **@Service** 对其进行注释。
+创建一个 Spring bean，用 `@Service` 对其进行注释。
 
 ```java
- package com.mkyong.user;
+package com.mkyong.user;
 
 public interface HelloService {
 
 	String getHelloWorldMsg();
 
-} 
+}
 ```
 
 ```java
- package com.mkyong.user;
+package com.mkyong.user;
 
 import org.springframework.stereotype.Service;
 
@@ -98,17 +97,17 @@ public class HelloServiceImpl implements HelloService {
 		return "Spring : hello world";
 	}
 
-} 
+}
 ```
 
-## 4.注入弹簧容器
+## 4. 注入 Spring 容器
 
-创建一个标准的 Spring**application context . XML**文件，启用自动组件扫描特性。
+创建一个标准的 Spring `applicationContext.xml` 文件，启用自动组件扫描特性。
 
-*文件:applicationContext.xml*
+*文件：`applicationContext.xml`*
 
 ```java
- <beans 
+<beans 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
@@ -118,17 +117,17 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<context:component-scan base-package="com.mkyong.user" />
 
-</beans> 
+</beans>
 ```
 
-## 5.带弹簧的集成小门
+## 5. 集成 Wicket 与 Spring
 
-用这个“`addComponentInstantiationListener(new SpringComponentInjector(this));`”覆盖 Wicket 应用程序 **init()** 方法。
+用 `addComponentInstantiationListener(new SpringComponentInjector(this));` 覆盖 Wicket 应用程序的 `init()` 方法。
 
-*文件:Wicket 应用程序类*
+*文件：Wicket 应用程序类*
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
@@ -150,13 +149,13 @@ public class WicketApplication extends WebApplication {
 
 	}
 
-} 
+}
 ```
 
-现在，您可以通过 **@SpringBean** 将 Spring bean 注入 Wicket 组件。
+现在，您可以通过 `@SpringBean` 将 Spring bean 注入 Wicket 组件。
 
 ```java
- package com.mkyong.user;
+package com.mkyong.user;
 
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.basic.Label;
@@ -174,28 +173,28 @@ public class SimplePage extends WebPage {
 
 	}
 
-} 
+}
 ```
 
 ```java
- <html>
+<html>
 <body>
 	<h1>Wicket + Spring integration example</h1>
 
 	<h2 wicket:id="msg"></h2>
 
 </body>
-</html> 
+</html>
 ```
 
-## 6.web.xml
+## 6. web.xml
 
-最后一步，让你的 web 项目知道什么是 Wicket 和 Spring。在`web.xml`中声明两者。
+最后一步，让你的 web 项目知道什么是 Wicket 和 Spring。在 `web.xml` 中声明两者。
 
-*文件:web.xml*
+*文件：`web.xml`*
 
 ```java
- <?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <web-app  
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
@@ -223,37 +222,36 @@ public class SimplePage extends WebPage {
                 </listener-class>
 	</listener>
 
-</web-app> 
+</web-app>
 ```
 
-## 7.演示
+## 7. 演示
 
-开始并访问-*http://localhost:8080/wicket examples/*。
+开始并访问 `http://localhost:8080/wicket-examples/`。
 
 一个简单的 Wicket 页面，消息从 Spring 返回。
 
+![wicket spring demo](img/122b885c5081da89a0fd1e750efdd2f3.png "wicket-spring-example-demo")
 
-
-![wicket spring demo](img/122b885c5081da89a0fd1e750efdd2f3.png "wicket-spring-example-demo")Download it – [Wicket-Spring-Integration-Example.zip](http://web.archive.org/web/20210110024944/http://www.mkyong.com/wp-content/uploads/2011/06/Wicket-Spring-Integration-Example.zip) (8KB)
+下载：[Wicket-Spring-Integration-Example.zip](http://web.archive.org/web/20210110024944/http://www.mkyong.com/wp-content/uploads/2011/06/Wicket-Spring-Integration-Example.zip)（8KB）
 
 ## 参考
 
-1.  [小门+弹簧详细说明](http://web.archive.org/web/20210110024944/https://cwiki.apache.org/WICKET/spring.html)
-2.  [Spring Maven 详情](http://web.archive.org/web/20210110024944/http://blog.springsource.com/2009/12/02/obtaining-spring-3-artifacts-with-maven/)
-3.  [弹簧自动组件扫描](http://web.archive.org/web/20210110024944/http://www.mkyong.com/spring/spring-auto-scanning-components/)
+1. [Wicket + Spring 详细说明](http://web.archive.org/web/20210110024944/https://cwiki.apache.org/WICKET/spring.html)
+2. [Spring Maven 详情](http://web.archive.org/web/20210110024944/http://blog.springsource.com/2009/12/02/obtaining-spring-3-artifacts-with-maven/)
+3. [Spring 自动组件扫描](http://web.archive.org/web/20210110024944/http://www.mkyong.com/spring/spring-auto-scanning-components/)
 
-Tags : [integration](http://web.archive.org/web/20210110024944/https://mkyong.com/tag/integration/) [spring](http://web.archive.org/web/20210110024944/https://mkyong.com/tag/spring/) [wicket](http://web.archive.org/web/20210110024944/https://mkyong.com/tag/wicket/)<input type="hidden" id="mkyong-current-postId" value="9121">
+标签：[integration](http://web.archive.org/web/20210110024944/https://mkyong.com/tag/integration/) [spring](http://web.archive.org/web/20210110024944/https://mkyong.com/tag/spring/) [wicket](http://web.archive.org/web/20210110024944/https://mkyong.com/tag/wicket/)
 
 ### 相关文章
 
-*   [Wicket + Log4j 集成示例](/web/20210110024944/https://www.mkyong.com/wicket/wicket-log4j-integration-example/)
-*   [春天+ JDBC 的例子](/web/20210110024944/https://www.mkyong.com/spring/maven-spring-jdbc-example/)
-*   [Spring+JDBC template+JdbcDaoSupport 示例](/web/20210110024944/https://www.mkyong.com/spring/spring-jdbctemplate-jdbcdaosupport-examples/)
-*   [Spring + JDK 定时器调度器示例](/web/20210110024944/https://www.mkyong.com/spring/spring-jdk-timer-scheduler-example/)
-*   [Spring 3 + Quartz 1.8.6 调度器示例](/web/20210110024944/https://www.mkyong.com/spring/spring-quartz-scheduler-example/)
-
-*   [Struts + Spring 集成示例](/web/20210110024944/https://www.mkyong.com/struts/struts-spring-integration-example/)
-*   [Struts + Spring + Hibernate 集成示例](/web/20210110024944/https://www.mkyong.com/struts/struts-spring-hibernate-integration-example/)
-*   [Struts 1+Spring 2 . 5 . 6+Quartz 1.6 调度器 exa](/web/20210110024944/https://www.mkyong.com/struts/struts-spring-quartz-scheduler-integration-example/)
-*   [Struts 2 + Spring 集成示例](/web/20210110024944/https://www.mkyong.com/struts2/struts-2-spring-integration-example/)
-*   [Struts 2+Spring 2 . 5 . 6+Quartz 1.6 调度器 int](/web/20210110024944/https://www.mkyong.com/struts2/struts-2-spring-quartz-scheduler-integration-example/)
+- [Wicket + Log4j 集成示例](/web/20210110024944/https://www.mkyong.com/wicket/wicket-log4j-integration-example/)
+- [Spring + JDBC 的例子](/web/20210110024944/https://www.mkyong.com/spring/maven-spring-jdbc-example/)
+- [Spring + JDBC template + JdbcDaoSupport 示例](/web/20210110024944/https://www.mkyong.com/spring/spring-jdbctemplate-jdbcdaosupport-examples/)
+- [Spring + JDK 定时器调度器示例](/web/20210110024944/https://www.mkyong.com/spring/spring-jdk-timer-scheduler-example/)
+- [Spring 3 + Quartz 1.8.6 调度器示例](/web/20210110024944/https://www.mkyong.com/spring/spring-quartz-scheduler-example/)
+- [Struts + Spring 集成示例](/web/20210110024944/https://www.mkyong.com/struts/struts-spring-integration-example/)
+- [Struts + Spring + Hibernate 集成示例](/web/20210110024944/https://www.mkyong.com/struts/struts-spring-hibernate-integration-example/)
+- [Struts 1 + Spring 2.5.6 + Quartz 1.6 调度器示例](/web/20210110024944/https://www.mkyong.com/struts/struts-spring-quartz-scheduler-integration-example/)
+- [Struts 2 + Spring 集成示例](/web/20210110024944/https://www.mkyong.com/struts2/struts-2-spring-integration-example/)
+- [Struts 2 + Spring 2.5.6 + Quartz 1.6 调度器示例](/web/20210110024944/https://www.mkyong.com/struts2/struts-2-spring-quartz-scheduler-integration-example/)

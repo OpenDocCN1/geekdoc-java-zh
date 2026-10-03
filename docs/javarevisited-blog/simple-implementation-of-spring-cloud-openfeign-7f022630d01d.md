@@ -1,3 +1,4 @@
+
 # Spring Cloud OpenFeign 的简单实现
 
 > 原文：<https://medium.com/javarevisited/simple-implementation-of-spring-cloud-openfeign-7f022630d01d?source=collection_archive---------0----------------------->
@@ -8,8 +9,8 @@
 
 ## 背景
 
-顾名思义，OpenFeign 是一个开源项目。它最初由网飞开发，然后转移到开源社区。
+顾名思义，`OpenFeign` 是一个开源项目。它最初由网飞开发，然后转移到开源社区。
 
-Feign 是一个声明性的 rest 客户端，它创建了一个声明为 FeignClient 的接口的动态实现。
+`Feign` 是一个声明性的 `rest` 客户端，它创建了一个声明为 `FeignClient` 的接口的动态实现。
 
 ## 履行

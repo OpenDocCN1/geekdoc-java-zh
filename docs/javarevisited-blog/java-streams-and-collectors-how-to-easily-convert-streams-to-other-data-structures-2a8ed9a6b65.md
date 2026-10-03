@@ -1,3 +1,4 @@
+
 # Java 流 API——了解如何将流转换成其他数据结构
 
 > 原文：<https://medium.com/javarevisited/java-streams-and-collectors-how-to-easily-convert-streams-to-other-data-structures-2a8ed9a6b65?source=collection_archive---------1----------------------->

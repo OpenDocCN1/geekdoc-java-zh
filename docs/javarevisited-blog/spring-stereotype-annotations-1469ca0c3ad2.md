@@ -1,8 +1,9 @@
+
 # Spring 原型注释
 
 > 原文：<https://medium.com/javarevisited/spring-stereotype-annotations-1469ca0c3ad2?source=collection_archive---------2----------------------->
 
-*在上一篇文章中，我们讨论了不同的 spring 核心注释。这里我们讨论的是 Spring 中主要的原型注释。*
+*在上一篇文章中，我们讨论了不同的 Spring 核心注释。这里我们讨论的是 Spring 中主要的原型注释。*
 
 ![](img/706895cb65cc7403b821abadde7baaf7.png)
 

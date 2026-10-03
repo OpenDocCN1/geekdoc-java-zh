@@ -1,33 +1,34 @@
+
 # jQuery text()示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jquery/jquery-text-example/>
 
-jQuery **text()** 用于获取所有匹配元素的内容；而**text(‘新文本’)**用于替换或设置所有匹配元素的文本内容。
+jQuery `text()`用于获取所有匹配元素的内容；而`text('新文本')`用于替换或设置所有匹配元素的文本内容。
 
-举个例子，
+举个例子：
 
-```java
- <div class="TClass">TEXT 1</div>
-<div class="Tlass">TEXT 2</div> 
+```
+<div class="TClass">TEXT 1</div>
+<div class="Tlass">TEXT 2</div>
 ```
 
-## 1\. $(‘.TClass’).text()
+## 1. `$('.TClass').text()`
 
-这将组合所有匹配元素的内容，得到“ **TEXT 1 TEXT 2** ”作为返回。与 html()不同，只获取第一个元素的内容。
+这将组合所有匹配元素的内容，得到“TEXT 1 TEXT 2”作为返回。与`html()`不同，只获取第一个元素的内容。
 
-## 2.$('.t class’)。文本('**这是新文本【T1 ')**
+## 2. `$('.tClass').text('这是新文本【T1】')`
 
-所有 html 标签 **<和>将被替换为&lt；以及&gt；**，将不应用 html 效果。
+所有 html 标签`<`和`>`将被替换为`&lt;`以及`&gt;`，将不应用 html 效果。
 
-```java
- <div class="AClass"><b>This is new text</b></div>
-<div class="AClass"><b>This is new text</b></div> 
+```
+<div class="AClass"><b>This is new text</b></div>
+<div class="AClass"><b>This is new text</b></div>
 ```
 
 ## jQuery text()示例
 
-```java
- <html>
+```
+<html>
 <head>
 <script type="text/javascript" src="jquery-1.3.2.min.js"></script>
 
@@ -72,9 +73,9 @@ jQuery **text()** 用于获取所有匹配元素的内容；而**text(‘新文�
 
 </script>
 </body>
-</html> 
+</html>
 ```
 
 [http://web.archive.org/web/20220826132030if_/https://www.mkyong.com/wp-content/uploads/jQuery/jQuery-text-example.html](http://web.archive.org/web/20220826132030if_/https://www.mkyong.com/wp-content/uploads/jQuery/jQuery-text-example.html)
 
-[Try Demo](http://web.archive.org/web/20220826132030/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-text-example.html)<input type="hidden" id="mkyong-current-postId" value="5132">
+[Try Demo](http://web.archive.org/web/20220826132030/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-text-example.html)

@@ -1,17 +1,18 @@
+
 # Java–如何用逗号连接列表字符串
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/java-how-to-join-list-string-with-commas/>
 
 在 Java 中，我们可以使用`String.join(",", list)`用逗号连接一个列表字符串。
 
-## 1.Java 8
+## 1. Java 8
 
-1.1 `String.join`
+### 1.1 `String.join`
 
-JavaStringExample1.java
+`JavaStringExample1.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.Arrays;
 import java.util.List;
@@ -27,21 +28,21 @@ public class JavaStringExample1 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- a,b,c 
+a,b,c
 ```
 
-1.2 流`Collectors.joining`
+### 1.2 流`Collectors.joining`
 
-JavaStringExample2.java
+`JavaStringExample2.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.Arrays;
 import java.util.List;
@@ -59,23 +60,23 @@ public class JavaStringExample2 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- a,b,c 
+a,b,c
 ```
 
-## 2.在过去
+## 2. 在过去
 
 创建一个自定义方法来手动连接带分隔符的字符串。
 
-JavaStringExample3.java
+`JavaStringExample3.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.Arrays;
 import java.util.List;
@@ -113,20 +114,18 @@ public class JavaStringExample3 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- a
+a
 a,b
 a,b,c
-//empty 
+//empty
 ```
 
 ## 参考
 
-1.  [Java 8–string joiner 示例](http://web.archive.org/web/20221020142707/https://www.mkyong.com/java8/java-8-stringjoiner-example/)
-
-<input type="hidden" id="mkyong-current-postId" value="14846">
+1. [Java 8–string joiner 示例](http://web.archive.org/web/20221020142707/https://www.mkyong.com/java8/java-8-stringjoiner-example/)

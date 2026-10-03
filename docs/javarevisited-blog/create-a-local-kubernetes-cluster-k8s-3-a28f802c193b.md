@@ -1,3 +1,4 @@
+
 # 创建一个本地 Kubernetes 集群(K8s#3)
 
 > 原文：<https://medium.com/javarevisited/create-a-local-kubernetes-cluster-k8s-3-a28f802c193b?source=collection_archive---------1----------------------->

@@ -1,8 +1,9 @@
+
 # 用 Spring 数据创建只读存储库
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-data-read-only-repository>
 
-## 1.概观
+## 1. 概观
 
 在这个简短的教程中，**我们将讨论如何创建只读的[弹簧数据](/web/20221006111820/https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa)**
 
@@ -10,7 +11,7 @@
 
 它将提供读取数据的能力，而没有任何人更改数据的风险。
 
-## 2.延伸`Repository`
+## 2. 延伸`Repository`
 
 让我们从一个包含 [`spring-boot-starter-data-jpa`依赖项](https://web.archive.org/web/20221006111820/https://search.maven.org/search?q=g:org.springframework.boot%20AND%20a:spring-boot-starter-data-jpa)的 Spring Boot 项目开始:
 
@@ -42,7 +43,7 @@ public interface ReadOnlyRepository<T, ID> extends Repository<T, ID> {
 
 接下来，我们将看到如何将一个实体绑定到新的`ReadOnlyRepository`。
 
-## 3.延伸`ReadOnlyRepository`
+## 3. 延伸`ReadOnlyRepository`
 
 假设我们有一个想要访问的简单的`Book`实体:
 
@@ -114,7 +115,7 @@ public interface BookRepository
 
 我们能够测试所有四个只读方法，并且现在可以为其他实体重用`ReadOnlyRepository`接口。
 
-## 4.结论
+## 4. 结论
 
 我们学习了如何扩展 Spring Data 的`Repository`接口，以便创建一个可重用的只读存储库。之后，我们将它绑定到一个简单的`Book`实体上，并编写了一个测试，证明它的功能如我们预期的那样工作。
 

@@ -1,3 +1,4 @@
+
 # 写入/保存图像
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/images/saveimage.html`](https://docs.oracle.com/javase/tutorial/2d/images/saveimage.html)
@@ -12,16 +13,9 @@
 static boolean ImageIO.write(RenderedImage im, 
                              String formatName,
                              File output)  throws IOException
-
 ```
 
-* * *
-
 **注意：** `BufferedImage`类实现了`RenderedImage`接口。
-
-* * *
-
-。
 
 `formatName`参数选择要保存`BufferedImage`的图像格式。
 
@@ -34,7 +28,6 @@ try {
 } catch (IOException e) {
     ...
 }
-
 ```
 
 `ImageIO.write`方法调用实现 PNG 写入的代码，即“PNG 写入插件”。术语*插件*用于`Image I/O`是可扩展的，可以支持各种格式。
@@ -53,21 +46,16 @@ try {
 
 ```java
 String writerNames[] = ImageIO.getWriterFormatNames();
-
 ```
 
 返回的名称数组将包括任何已安装的附加插件，这些名称中的任何一个都可以用作格式名称来选择图像写入器。以下代码示例是一个简单版本的完整图像编辑/修饰程序，使用了修订版本的`ImageDrawingApplet.java`示例程序，可以按以下方式使用：
 
 +   图像首先通过 Image I/O 加载
-
 +   用户从下拉列表中选择一个滤镜，然后绘制一个新的更新图像
-
 +   用户从下拉列表中选择保存格式
-
 +   接下来会出现文件选择器，用户选择保存图像的位置
-
 +   修改后的图像现在可以被其他桌面应用程序查看。
 
 这个示例的完整代码在`SaveImage.java`中表示。
 
-在本课程中，您仅学习了`Image I/O`的基础知识，该知识提供了广泛的支持，包括直接使用`ImageWriter`插件来实现对编码过程的更精细控制。 ImageIO 可以写入多个图像、图像元数据，并确定质量与大小之间的权衡。更多信息请参见[Java Image I/O API 指南](https://docs.oracle.com/javase/8/docs/technotes/guides/imageio/spec/title.fm.html)。
+在本课程中，您仅学习了`Image I/O`的基础知识，该知识提供了广泛的支持，包括直接使用`ImageWriter`插件来实现对编码过程的更精细控制。`ImageIO`可以写入多个图像、图像元数据，并确定质量与大小之间的权衡。更多信息请参见[Java Image I/O API 指南](https://docs.oracle.com/javase/8/docs/technotes/guides/imageio/spec/title.fm.html)。

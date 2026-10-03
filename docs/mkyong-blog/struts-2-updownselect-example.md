@@ -1,15 +1,16 @@
-# struts 2 up down 选择示例
+
+# Struts 2 updownselect 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts2/struts-2-updownselect-example/>
 
 Download It – [Struts2-UpDownSelect-Example.zip](http://web.archive.org/web/20190304032252/http://www.mkyong.com/wp-content/uploads/2010/06/Struts2-UpDownSelect-Example.zip)
 
-在 Struts 2 中， **< s:updownselect >** 标签用于创建一个 HTML 选择组件，并带有按钮来上下移动选择组件中的选项。提交表单时，所有选择选项将按排列顺序提交。
+在 Struts 2 中，`<s:updownselect>`标签用于创建一个 HTML 选择组件，并带有按钮来上下移动选择组件中的选项。提交表单时，所有选择选项将按排列顺序提交。
 
-**< s:updownselect >示例**
+## `<s:updownselect>`示例
 
 ```java
- <s:updownselect
+<s:updownselect
 list="#{'KFC':'KFC', 'McDonald':'McDonald', 'Burger King':'Burger King',
 'Pizza Hut':'Pizza Hut', 'Fat Boy King':'Fat Boy King'}"
 name="favFastFood"
@@ -22,7 +23,7 @@ size="7"
 产生下面的 HTML 代码，选择组件，按钮和 JavaScript 来上下移动选择组件中的选项。(默认 xhtml 主题)
 
 ```java
- <tr> 
+<tr> 
 <td class="tdLabel"></td> 
 <td><script type="text/javascript" src="/Struts2Example/struts/optiontransferselect.js">
 </script> 
@@ -41,13 +42,13 @@ id="resultAction_favFastFood" multiple="multiple">
 name="__multiselect_favFastFood" value="" /> 
 </td></tr> 
 <tr><td> 
- <input type="button" value="^" onclick="
+ <input type="button" value="^" onclick="
 moveOptionUp(document.getElementById('resultAction_favFastFood'), 'key', '-1');" />
 
- <input type="button" value="v" onclick="
+ <input type="button" value="v" onclick="
 moveOptionDown(document.getElementById('resultAction_favFastFood'), 'key', '-1');" />
 
- <input type="button" value="*" onclick="selectAllOptionsExceptSome(
+ <input type="button" value="*" onclick="selectAllOptionsExceptSome(
 document.getElementById('resultAction_favFastFood'), 'key', '-1');" />
 </td></tr> 
 </table></td> 
@@ -63,18 +64,18 @@ StrutsUtils.addEventListener(containingForm, "submit",
 </script> 
 ```
 
-## Struts 2 <updownselect>示例</updownselect>
+## Struts 2 `<updownselect>`示例
 
-**< s:updownselect >** 标签的完整示例，展示了如何使用 OGNL 和 Java 列表将数据填充到 updown 选择列表中。
+`<s:updownselect>`标签的完整示例，展示了如何使用 OGNL 和 Java 列表将数据填充到 updown 选择列表中。
 
- ## 1.动作类
+### 1. 动作类
 
 操作类来生成和存储选择选项。
 
 **UpDownSelectAction.java**
 
 ```java
- package com.mkyong.common.action;
+package com.mkyong.common.action;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -135,14 +136,14 @@ public class UpDownSelectAction extends ActionSupport{
 } 
 ```
 
- ## 2.结果页面
+### 2. 结果页面
 
-通过“ **< s:updownselect >** ”标签渲染 updown select 组件。
+通过`<s:updownselect>`标签渲染 updown select 组件。
 
 **updownselect.jsp**
 
 ```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
 <s:head />
@@ -183,7 +184,7 @@ selectAllLabel="Select All" />
 **result.jsp**
 
 ```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 
 <body>
@@ -201,12 +202,12 @@ selectAllLabel="Select All" />
 </html> 
 ```
 
-## 3.struts.xml
+### 3. struts.xml
 
 全部链接起来~
 
 ```java
- <?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
@@ -230,9 +231,10 @@ selectAllLabel="Select All" />
 </struts> 
 ```
 
-## 4.演示
+### 4. 演示
 
-*http://localhost:8080/struts 2 example/updownselectaction . action*
+*http://localhost:8080/struts2example/updownselectaction.action*
+
 选择选项并上下移动。
 
 ![Struts 2 updownselect example](img/2f3f6da6a0de5bf73871a9204d49a2d5.png "struts2-updownselect-example-1")
@@ -243,14 +245,8 @@ selectAllLabel="Select All" />
 
 ## 参考
 
-1.  [Struts 2 updownselect 示例](http://web.archive.org/web/20190304032252/http://struts.apache.org/2.0.14/docs/updownselect.html)
-2.  [http://www . mkyong . com/struts 2/struts-2-sdoubleselect-example/](http://web.archive.org/web/20190304032252/http://www.mkyong.com/struts2/struts-2-sdoubleselect-example/)
+1. [Struts 2 updownselect 示例](http://web.archive.org/web/20190304032252/http://struts.apache.org/2.0.14/docs/updownselect.html)
+
+2. [http://www.mkyong.com/struts2/struts-2-sdoubleselect-example/](http://web.archive.org/web/20190304032252/http://www.mkyong.com/struts2/struts-2-sdoubleselect-example/)
 
 [struts2](http://web.archive.org/web/20190304032252/http://www.mkyong.com/tag/struts2/)
-
-
-
-
-
-
-

@@ -1,3 +1,4 @@
+
 # 2023 年学习 Docker、Kubernetes 和 AWS 的 15 大在线课程
 
 > 原文：<https://medium.com/javarevisited/top-15-online-courses-to-learn-docker-kubernetes-and-aws-for-fullstack-developers-and-devops-d8cc4f16e773?source=collection_archive---------0----------------------->
@@ -32,7 +33,7 @@ Kubernetes 可以说是世界上最重要的容器管理技术，在有许多容
 
 在不浪费你更多时间的情况下，这里是我列出的 2023 年学习 Docker 和 Kubernetes 的一些最佳课程。这些课程是由 DevOps 领域的一位专家创建的，他拥有使用这些工具的实际经验。
 
-## [1。Docker 和 Kubernetes:完全指南](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fdocker-and-kubernetes-the-complete-guide%2F)
+## 1. [Docker 和 Kubernetes:完全指南](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fdocker-and-kubernetes-the-complete-guide%2F)
 
 这是与 Docker 和 Kubernetes 一起学习 DevOps 的综合课程之一。在本课程中，您将学习如何使用 Kubernetes 构建、测试和部署 Docker 应用程序。
 
@@ -52,11 +53,12 @@ Kubernetes 可以说是世界上最重要的容器管理技术，在有许多容
 
 [![](img/3321b2739af456bf78182651ae409207.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fdocker-tutorial-for-devops-run-docker-containers%2F)
 
-## 3.[Docker(plural sight)入门](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fdocker-getting-started)
+## 3. [Docker(plural sight)入门](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fdocker-getting-started)
 
 这是一个伟大的在线课程，学习从零开始由奈杰尔波尔顿 Docker。如果你不认识 Nigel，他是一名 Docker 船长和流行的技术作者。他以关于云原生技术(如 Docker 和 Kubernetes)的精彩视频和书籍而闻名。
 
 在本课程中，您将学习如何在最常见的开发和生产平台上安装 Docker，包括 Windows 和 Mac 笔记本电脑、Windows Server 2016 和 Linux。
+
 之后，您将了解容器和图像的一些基本概念，包括如何执行常见的管理任务。
 
 您还将花费大量时间介绍 Docker 1.12 引入的所有新内容，包括群模式、服务、伸缩、滚动更新、堆栈和分布式应用程序包。
@@ -73,7 +75,7 @@ Kubernetes 可以说是世界上最重要的容器管理技术，在有许多容
 
 [![](img/94f2975a0902d4999783fbc42249ee40.png)](https://www.educative.io/courses/docker-for-developers?affiliate_id=5073518643380224)
 
-## 5.[Kubernetes 实用指南(教育性)](https://www.educative.io/courses/practical-guide-to-kubernetes?affiliate_id=5073518643380224)
+## 5. [Kubernetes 实用指南(教育性)](https://www.educative.io/courses/practical-guide-to-kubernetes?affiliate_id=5073518643380224)
 
 这是 Educative 的另一门课程，你可以和上一门课程一起学习 Docker 和 Kubernetes。正如我所说的，如果你喜欢基于文本的、边做边学的方法，这个网站很棒。
 
@@ -97,93 +99,95 @@ Kubernetes 可以说是世界上最重要的容器管理技术，在有许多容
 
 如果您正在准备 Docker 认证助理考试</javarevisited/10-best-courses-and-practice-tests-to-crack-docker-certified-associate-dca-certification-exam-b0b21648df4e>**，本课程也是不错的选择，因为完成本课程后，您将为 Docker 认证助理考试中出现的大多数主题做好准备，并准备好使用容器。**
 
-**[![](img/f3a37a8a312b997b98c645e320e2baef.png)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fdocker-deep-dive-update)**
+[![](img/f3a37a8a312b997b98c645e320e2baef.png)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fdocker-deep-dive-update)
 
-## **7.【Kubernetes 入门**
+## 7. [Kubernetes 入门](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fgetting-started-kubernetes)
 
-**对于希望在 2023 年学习 Kubernetes 的人来说，这是另一个很好的课程。这是前两个 Docker 课程的作者 Nigel Poulton 的另一个杰作。**
+对于希望在 2023 年学习 Kubernetes 的人来说，这是另一个很好的课程。这是前两个 Docker 课程的作者 Nigel Poulton 的另一个杰作。
 
-**在本课程中，您将学习 Kubernetes 的基础知识和“Kubernetes 之道”。首先，您将深入了解 [Kubernetes 架构](/javarevisited/10-best-kubernetes-courses-for-developers-and-devops-engineers-94c35cd3a2fd)，它的主要组件和服务是什么，以及它们是如何一起构建生产级容器基础设施的。**
+在本课程中，您将学习 Kubernetes 的基础知识和“Kubernetes 之道”。首先，您将深入了解 [Kubernetes 架构](/javarevisited/10-best-kubernetes-courses-for-developers-and-devops-engineers-94c35cd3a2fd)，它的主要组件和服务是什么，以及它们是如何一起构建生产级容器基础设施的。
 
-**之后，您将学习如何在几个云平台上安装和部署 Kubernetes。最后，您将深入研究如何使用 pod、部署和服务。**
+之后，您将学习如何在几个云平台上安装和部署 Kubernetes。最后，您将深入研究如何使用 pod、部署和服务。
 
-**本课程结束时，您将对 Kubernetes 及其工作原理有一个扎实的了解，并掌握部署 Kubernetes 集群和简单应用程序的技能。**
+本课程结束时，您将对 Kubernetes 及其工作原理有一个扎实的了解，并掌握部署 Kubernetes 集群和简单应用程序的技能。
 
-**[![](img/109107d4acd3d35e2ce1f4897da2d5c5.png)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fgetting-started-kubernetes)**
+[![](img/109107d4acd3d35e2ce1f4897da2d5c5.png)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fgetting-started-kubernetes)
 
-**顺便说一句，你需要一个 [**Pluralsight 会员**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing) 才能进入这个课程，费用大约是每月 29 美元或每年 299 美元(14%的折扣)。**
+顺便说一句，你需要一个 [**Pluralsight 会员**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing) 才能进入这个课程，费用大约是每月 29 美元或每年 299 美元(14%的折扣)。
 
-**如果你没有 Pluralsight 会员资格，我鼓励你申请一个，因为它可以让你访问他们 5000 多门关于所有最新主题的在线课程，如前端和后端开发、机器学习等。它还包括交互式测验、练习和最新的认证材料。**
+如果你没有 Pluralsight 会员资格，我鼓励你申请一个，因为它可以让你访问他们 5000 多门关于所有最新主题的在线课程，如前端和后端开发、机器学习等。它还包括交互式测验、练习和最新的认证材料。
 
-**这更像是软件开发人员的网飞，因为学习是我们工作的一个重要部分，Pluralsight 会员资格是在竞争中保持领先的一个很好的方式。**
+这更像是软件开发人员的网飞，因为学习是我们工作的一个重要部分，Pluralsight 会员资格是在竞争中保持领先的一个很好的方式。
 
-**Pluralsight 还有一个 [**10 天的免费试用期**](http://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 没有任何承诺，这是一个很好的方式，不仅可以免费参加这个课程，还可以在加入 Pluralsight 之前检查课程的质量。**
+Pluralsight 还有一个 [**10 天的免费试用期**](http://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 没有任何承诺，这是一个很好的方式，不仅可以免费参加这个课程，还可以在加入 Pluralsight 之前检查课程的质量。
 
-**<http://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn> ** 
 
-## **8.[学习 DevOps:完整的 Kubernetes 课程](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-devops-the-complete-kubernetes-course%2F)**
 
-**这是深入学习 Kubernetes 的最佳在线课程。正如您已经知道的，Kubernetes 可以运行和管理您的容器化应用程序。**
+<http://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>
 
-**本课程将教你如何构建、部署、使用和维护 Kubernetes。**
+## 8. [学习 DevOps:完整的 Kubernetes 课程](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-devops-the-complete-kubernetes-course%2F)
 
-**您将学习如何安装和配置 Kubernetes(在您的笔记本电脑/台式机上或在 [AWS](http://www.java67.com/2018/05/top-5-amazon-web-services-or-aws-courses-to-learn-online.html) 上的生产级集群上)。**
+这是深入学习 Kubernetes 的最佳在线课程。正如您已经知道的，Kubernetes 可以运行和管理您的容器化应用程序。
 
-**学完本课程后，你应该能够在 [Kubernetes](https://javarevisited.blogspot.com/2019/05/top-5-courses-to-learn-docker-and-kubernetes-for-devops.html) 上运行无状态和有状态应用程序。**
+本课程将教你如何构建、部署、使用和维护 Kubernetes。
 
-**[![](img/de2b7af00111a7bd17a2759e82e90103.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-devops-the-complete-kubernetes-course%2F)**
+您将学习如何安装和配置 Kubernetes(在您的笔记本电脑/台式机上或在 [AWS](http://www.java67.com/2018/05/top-5-amazon-web-services-or-aws-courses-to-learn-online.html) 上的生产级集群上)。
 
-## **9.[面向绝对初学者的 Docker 动手——devo PS](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-docker%2F)**
+学完本课程后，你应该能够在 [Kubernetes](https://javarevisited.blogspot.com/2019/05/top-5-courses-to-learn-docker-and-kubernetes-for-devops.html) 上运行无状态和有状态应用程序。
 
-**本课程提供了最著名的 DevOps 工具 Docker 的初级介绍。这门课程完全是动手操作，所以你不只是学习或听，而是做大量的练习来实际练习你所学的东西。**
+[![](img/de2b7af00111a7bd17a2759e82e90103.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-devops-the-complete-kubernetes-course%2F)
 
-**首先，您将通过动手练习学习基本的 [Docker 命令](https://javarevisited.blogspot.com/2018/02/10-free-docker-container-courses-for-Java-Developers.html)，然后您将学习如何使用 Docker 文件构建 Docker 映像。**
+## 9. [面向绝对初学者的 Docker 动手——devo PS](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-docker%2F)
 
-**您还将学习 Docker Swarm 和 Docker Compose，并使用 Docker Compose 文件构建应用程序堆栈。**
+本课程提供了最著名的 DevOps 工具 Docker 的初级介绍。这门课程完全是动手操作，所以你不只是学习或听，而是做大量的练习来实际练习你所学的东西。
 
-**简而言之，一个完整的 Docker 课程，适合初学者，有大量的动手练习。**
+首先，您将通过动手练习学习基本的 [Docker 命令](https://javarevisited.blogspot.com/2018/02/10-free-docker-container-courses-for-Java-Developers.html)，然后您将学习如何使用 Docker 文件构建 Docker 映像。
 
-**[![](img/d3af62880129db83ee5bb3118cd120d5.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-docker%2F)**
+您还将学习 Docker Swarm 和 Docker Compose，并使用 Docker Compose 文件构建应用程序堆栈。
 
-## **10.[AWS 的优点:穿过杂乱的东西](https://www.educative.io/courses/good-parts-of-aws?affiliate_id=5073518643380224)**
+简而言之，一个完整的 Docker 课程，适合初学者，有大量的动手练习。
 
-**这是学习实用 AWS 的最佳课程之一，你可以在网上找到。这个课程是由一位有着 15 年 AWS 工作经验的前亚马逊工程师创建的。**
+[![](img/d3af62880129db83ee5bb3118cd120d5.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-docker%2F)
 
-**这不是典型的 AWS 参考课程。你不会在 AWS 文档中找到这里分享的大部分知识。这里的目标是帮助你认识到不使用 AWS 的哪些功能是愚蠢的——这些功能已经通过了时间的考验，是互联网上大多数东西的支柱。**
+## 10. [AWS 的优点:穿过杂乱的东西](https://www.educative.io/courses/good-parts-of-aws?affiliate_id=5073518643380224)
 
-**在本课程中，你将学习一种技术，这种技术可以帮助你做出可靠的技术选择，而不会在面对如此多的选择时手足无措。你将从浏览 AWS 提供的最基本的服务开始，比如 DynamoDB、S3、EC2。每一部分都详细说明了它的用法、优缺点、为什么应该(或不应该)使用它，等等。**
+这是学习实用 AWS 的最佳课程之一，你可以在网上找到。这个课程是由一位有着 15 年 AWS 工作经验的前亚马逊工程师创建的。
 
-****这里是报名参加本课程的链接—**[**AWS 的好部分:穿越杂乱**](https://www.educative.io/courses/good-parts-of-aws?affiliate_id=5073518643380224)**
+这不是典型的 AWS 参考课程。你不会在 AWS 文档中找到这里分享的大部分知识。这里的目标是帮助你认识到不使用 AWS 的哪些功能是愚蠢的——这些功能已经通过了时间的考验，是互联网上大多数东西的支柱。
 
-**[![](img/b5a0b0db9c8f00cb112e8df946853fca.png)](https://www.educative.io/courses/good-parts-of-aws?affiliate_id=5073518643380224)**
+在本课程中，你将学习一种技术，这种技术可以帮助你做出可靠的技术选择，而不会在面对如此多的选择时手足无措。你将从浏览 AWS 提供的最基本的服务开始，比如 DynamoDB、S3、EC2。每一部分都详细说明了它的用法、优缺点、为什么应该(或不应该)使用它，等等。
 
-**你可以购买这门课程，也可以获得教育会员资格来学习这门课程。如果你问我，我建议你购买<https://www.educative.io/subscription?affiliate_id=5073518643380224>**教育订阅，每月花费**【17 美元】**(现在打五折)，对于需要不断学习的程序员和软件工程师来说完全值得。感谢[教育团队](https://medium.com/u/163aa84775f6?source=post_page-----d8cc4f16e773--------------------------------)提供了这个精彩的课程。****
+这里是报名参加本课程的链接—[AWS 的好部分:穿越杂乱](https://www.educative.io/courses/good-parts-of-aws?affiliate_id=5073518643380224)
 
-****本课程在 Gumroad 上也有电子书，如果你喜欢看书，那么你也可以看看 AWS 电子书中的 [**好的部分。如果你用这个链接买书，有 20%的折扣。**](https://gumroad.com/a/703100019/MsVlG?offer_code=javinpaul)****
+[![](img/b5a0b0db9c8f00cb112e8df946853fca.png)](https://www.educative.io/courses/good-parts-of-aws?affiliate_id=5073518643380224)
 
-****<https://gumroad.com/a/703100019/MsVlG?offer_code=javinpaul> **** 
+你可以购买这门课程，也可以获得教育会员资格来学习这门课程。如果你问我，我建议你购买<https://www.educative.io/subscription?affiliate_id=5073518643380224>教育订阅，每月花费【17 美元】(现在打五折)，对于需要不断学习的程序员和软件工程师来说完全值得。感谢[教育团队](https://medium.com/u/163aa84775f6?source=post_page-----d8cc4f16e773--------------------------------)提供了这个精彩的课程。
 
-## ****11.[面向绝对初学者的 Kubernetes 动手操作](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-kubernetes%2F)****
+本课程在 Gumroad 上也有电子书，如果你喜欢看书，那么你也可以看看 AWS 电子书中的[好的部分。如果你用这个链接买书，有 20%的折扣。](https://gumroad.com/a/703100019/MsVlG?offer_code=javinpaul)
 
-****Docker 提供了容器，但是如果你不管理它们，它们会很快变得很乱。Kubernetes 提供了一种管理它们的方法。****
+<https://gumroad.com/a/703100019/MsVlG?offer_code=javinpaul>
 
-****Kubernetes 已经成为最重要和最令人兴奋的集装箱管理平台之一，在本课程中，您将学习 Kubernetes 的基本原理和“Kubernetes 之道”****
+## 11. [面向绝对初学者的 Kubernetes 动手操作](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-kubernetes%2F)
 
-****首先，您将学习 Kubernetes 体系结构，理解主要组件和服务，以及它们如何组合起来构建生产级容器基础设施。****
+Docker 提供了容器，但是如果你不管理它们，它们会很快变得很乱。Kubernetes 提供了一种管理它们的方法。
 
-****之后，你将学习如何在几个云平台上安装和部署 Kubernetes，比如 [GCP](https://javarevisited.blogspot.com/2019/07/top-5-google-cloud-platform-gcp-courses-certifications-online.html) 、 [AWS](https://hackernoon.com/top-5-amazon-web-services-or-aws-courses-to-learn-online-free-and-best-of-lot-d94e192054b7) 和 [Azure](https://javarevisited.blogspot.com/2020/02/top-5-AZ-900-exam-Azure-Fundamentals-certification-practice-tests-and-mock-exams-to.html) 。最后，您将学习如何使用 pod、部署和服务。****
+Kubernetes 已经成为最重要和最令人兴奋的集装箱管理平台之一，在本课程中，您将学习 Kubernetes 的基本原理和“Kubernetes 之道”
 
-****[![](img/6c6fcd11fd615b813d2a39a55e285184.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-kubernetes%2F)****
+首先，您将学习 Kubernetes 体系结构，理解主要组件和服务，以及它们如何组合起来构建生产级容器基础设施。
 
-****学完本课程后，您将对 Kubernetes 及其工作原理有一个扎实的了解，并掌握部署 Kubernetes 集群和简单应用程序的技能。****
+之后，你将学习如何在几个云平台上安装和部署 Kubernetes，比如 [GCP](https://javarevisited.blogspot.com/2019/07/top-5-google-cloud-platform-gcp-courses-certifications-online.html) 、 [AWS](https://hackernoon.com/top-5-amazon-web-services-or-aws-courses-to-learn-online-free-and-best-of-lot-d94e192054b7) 和 [Azure](https://javarevisited.blogspot.com/2020/02/top-5-AZ-900-exam-Azure-Fundamentals-certification-practice-tests-and-mock-exams-to.html) 。最后，您将学习如何使用 pod、部署和服务。
 
-****以上是关于 Docker 和 Kubernetes 的一些最好的课程，它们是 [DevOps 工程师的两个最重要的工具](https://hackernoon.com/the-2018-devops-roadmap-31588d8670cb?gi=1490c6cb9f25)。正如我所说的，Docker 提供了一个容器，它现在已经成为部署应用程序的标准方式，因为它抽象了许多设置内容。不需要担心 OS、DB 版本等不一致的问题。环境之间。****
+[![](img/6c6fcd11fd615b813d2a39a55e285184.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-kubernetes%2F)
 
-****另一方面， [Kubernetes](https://dev.to/javinpaul/top-10-courses-to-learn-docker-and-kubernetes-for-programmers-4lg0) 是最好的容器管理技术，如果您打算在生产中使用容器，您肯定会需要它。****
+学完本课程后，您将对 Kubernetes 及其工作原理有一个扎实的了解，并掌握部署 Kubernetes 集群和简单应用程序的技能。
 
-****这些课程都很好，但你应该选择更适合你的课程。我非常关注老师的风格，以及我是否能和他交流，因此我建议你参加这个课程，在那里你可以和老师交流。如果你只需要一门课，那就去上 [**Docker 和 Kubernetes:完全指南**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fdocker-and-kubernetes-the-complete-guide%2F) **，仅仅是**学习 Docker 和 Kubernetes 的最好课程。****
+以上是关于 Docker 和 Kubernetes 的一些最好的课程，它们是 [DevOps 工程师的两个最重要的工具](https://hackernoon.com/the-2018-devops-roadmap-31588d8670cb?gi=1490c6cb9f25)。正如我所说的，Docker 提供了一个容器，它现在已经成为部署应用程序的标准方式，因为它抽象了许多设置内容。不需要担心 OS、DB 版本等不一致的问题。环境之间。
 
-****<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fdocker-and-kubernetes-the-complete-guide%2F>  
+另一方面， [Kubernetes](https://dev.to/javinpaul/top-10-courses-to-learn-docker-and-kubernetes-for-programmers-4lg0) 是最好的容器管理技术，如果您打算在生产中使用容器，您肯定会需要它。
+
+这些课程都很好，但你应该选择更适合你的课程。我非常关注老师的风格，以及我是否能和他交流，因此我建议你参加这个课程，在那里你可以和老师交流。如果你只需要一门课，那就去上 [Docker 和 Kubernetes:完全指南](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fdocker-and-kubernetes-the-complete-guide%2F) ，仅仅是学习 Docker 和 Kubernetes 的最好课程。
+
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fdocker-and-kubernetes-the-complete-guide%2F>
 
 您可能喜欢的其他**编程资源**
 
@@ -193,13 +197,13 @@ Kubernetes 可以说是世界上最重要的容器管理技术，在有许多容
 *   [5 门免费硒课程学习自动化测试](https://javarevisited.blogspot.sg/2018/02/top-5-selenium-webdriver-with-java-courses-for-testers.html)
 *   [面向 Java 开发人员的 6 门 Maven 课程](http://www.java67.com/2018/02/6-free-maven-and-jenkins-online-courses-for-java-developers.html)
 *   [2023 年 Java 开发人员应该学会的 10 件事](http://javarevisited.blogspot.sg/2017/12/10-things-java-programmers-should-learn.html#axzz53ENLS1RB)
-*   【Java 开发者可以从 Spring 框架中学到的 3 个最佳实践
+*   [Java 开发者可以从 Spring 框架中学到的 3 个最佳实践](https://javarevisited.blogspot.com/2018/05/10-best-spring-framework-books-java.html)
 *   [2023 年 Java 开发人员应该学习的 10 个工具](http://www.java67.com/2018/04/10-tools-java-developers-should-learn.html)
 *   [5 个自由弹簧框架和 Spring Boot 课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
 *   [面向 Java JEE 开发者的 5 大 Hibernate 和 JPA 课程](http://javarevisited.blogspot.sg/2018/01/top-5-hibernate-and-jpa-courses-for-java-programmers-learn-online.html)
 
 感谢阅读到目前为止。如果你喜欢这些 Docker 和 Kubernetes 的课程，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
 
-**P. S.** —如果你正在寻找一些免费课程来开始你的 DevOps 之旅，并学习 Jenkins、Docker 和 Kubernetes 等基本工具，那么你应该看看这个为 DevOps 和程序员提供的免费 Jenkins、Docker 和 Kubernetes 课程 列表。
+**P. S.** —如果你正在寻找一些免费课程来开始你的 DevOps 之旅，并学习 Jenkins、Docker 和 Kubernetes 等基本工具，那么你应该看看这个为 DevOps 和程序员提供的免费 Jenkins、Docker 和 Kubernetes 课程列表。
 
-</javarevisited/top-10-free-courses-to-learn-maven-jenkins-and-docker-for-java-developers-51fa7a1e66f6> ****
+</javarevisited/top-10-free-courses-to-learn-maven-jenkins-and-docker-for-java-developers-51fa7a1e66f6>

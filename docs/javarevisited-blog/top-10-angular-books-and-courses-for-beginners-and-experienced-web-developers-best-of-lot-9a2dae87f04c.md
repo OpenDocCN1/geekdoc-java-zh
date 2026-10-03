@@ -1,3 +1,4 @@
+
 # 2023 年面向初学者和有经验的 Web 开发人员的 10 大有价值的书籍和课程——最好的
 
 > 原文：<https://medium.com/javarevisited/top-10-angular-books-and-courses-for-beginners-and-experienced-web-developers-best-of-lot-9a2dae87f04c?source=collection_archive---------0----------------------->
@@ -20,7 +21,7 @@ image _ credit—[Ng-Book—Angular 大全](https://gumroad.com/a/221148275/FlvV
 
 在不浪费你更多时间的情况下，这里有我最喜欢的 2023 年学习 Angular 2+的课程、教程和书籍。列表包含免费和付费资源，适合初学者和中级前端开发者。
 
-## [**1。Angular —完整指南**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-guide-to-angular-2%2F)
+## 1. [Angular —完整指南](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-guide-to-angular-2%2F)
 
 我先告诉你，我是 Max 的教学风格和他的课程的忠实粉丝。它们可能是网上学习 Angular 的最佳资源，毫不奇怪，它们也是 Udemy 上的畅销书。
 
@@ -32,7 +33,7 @@ image _ credit—[Ng-Book—Angular 大全](https://gumroad.com/a/221148275/FlvV
 
 [![](img/90a45b2a1f6134fa5636be281ce9adfa.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-guide-to-angular-2%2F)
 
-## 2.[2023 年 ZTM 学院完成角开发者](https://academy.zerotomastery.io/a/aff_sfk5z7pb/external?affcode=441520_zytgk2dn)
+## 2. [2023 年 ZTM 学院完成角开发者](https://academy.zerotomastery.io/a/aff_sfk5z7pb/external?affcode=441520_zytgk2dn)
 
 如果你正在寻找一个全面的和最新的课程来学习 Angular 框架，那么这个 29.5 小时长的 ZTM 学院 Angular 在线培训课程是一个最好的开始。
 
@@ -52,9 +53,9 @@ image _ credit—[Ng-Book—Angular 大全](https://gumroad.com/a/221148275/FlvV
 
 顺便说一句，你需要一个 [**ZTM 会员**](https://academy.zerotomastery.io/a/aff_c0gnlvf7/external?affcode=441520_zytgk2dn) 才能观看这个课程，这个课程每月花费大约 39 美元，但也提供了许多像这样的超级有趣和有用的课程。你也可以*使用优惠券代码 FRIENDS10 在这门课程或你选择的任何订阅上获得 10%的折扣*。
 
-<https://academy.zerotomastery.io/a/aff_c0gnlvf7/external?affcode=441520_zytgk2dn>  
+<https://academy.zerotomastery.io/a/aff_c0gnlvf7/external?affcode=441520_zytgk2dn>
 
-## 3.[Ng-Book——关于 Angular 的全集](https://gumroad.com/a/221148275/FlvVl)
+## 3. [Ng-Book——关于 Angular 的全集](https://gumroad.com/a/221148275/FlvVl)
 
 这本书，也被称为 Ng-Book，经常被称为 Angular 的圣经。如果你正在寻找一个简单而详细的角度世界指南，那么这本书是给你的。
 
@@ -68,11 +69,11 @@ image _ credit—[Ng-Book—Angular 大全](https://gumroad.com/a/221148275/FlvV
 
 如果你愿意，你也可以将这本书与 Maximilian 在 Udemy 上的[**Angular——完整指南**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-guide-to-angular-2%2F) 课程结合起来，它也涵盖了 Angular 11，是任何寻求主动学习的人的可靠资源。
 
-## 4.[完整的角度课程:从初级到高级](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-angular-master-class%2F)
+## 4. [完整的角度课程:从初级到高级](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-angular-master-class%2F)
 
 Mosh Hamedani 的一门很棒的课程，旨在掌握 Angular 及其背后的 JavaScript 概念，设计定制指令，并构建单页面应用程序。
 
-如果你是 JavaScript T1 和 T2 Angular T3 的初学者，那么你可以参加这个课程，开始你在 web 开发美丽世界的旅程。
+如果你是 JavaScript 和 Angular 的初学者，那么你可以参加这个课程，开始你在 web 开发美丽世界的旅程。
 
 **教官—** [**摩西·哈姆丹奈**](https://codewithmosh.com/?affcode=146684_vi6jt6lm)
 
@@ -80,9 +81,9 @@ Mosh Hamedani 的一门很棒的课程，旨在掌握 Angular 及其背后的 Ja
 
 顺便说一下，如果你喜欢 Mosh 的教学风格，那么你也可以加入 [**CodeWithMosh**](https://codewithmosh.com/?affcode=146684_vi6jt6lm) 门户网站，在那里你只需支付一笔会员费就可以学习他的所有课程。他有许多很棒的课程，涵盖了基本的编程主题，如 git、JavaScript、SQL、Python 等，我个人认为 [**CodeWithMosh 订阅**](https://codewithmosh.com/p/all-access?affcode=146684_vi6jt6lm) 是值得的。
 
-<https://codewithmosh.com/p/all-access?affcode=146684_vi6jt6lm>  
+<https://codewithmosh.com/p/all-access?affcode=146684_vi6jt6lm>
 
-## **5。** [**棱角分明—教程:英雄之旅**](https://angular.io/tutorial) **【免费】**
+## 5. [棱角分明—教程:英雄之旅](https://angular.io/tutorial)【免费】
 
 这是 Angular 团队的官方教程，所以也是 2023 年学习 Angular 的最新资源。
 
@@ -92,7 +93,7 @@ Mosh Hamedani 的一门很棒的课程，旨在掌握 Angular 及其背后的 Ja
 
 [![](img/73526821da1aca8c44356560adf10b9c.png)](https://angular.io/tutorial)
 
-## 6。专业人士角度 2 笔记【免费书籍】
+## 6. 专业人士角度 2 笔记【免费书籍】
 
 我是 StackOverflow 的忠实粉丝，每天在做大量编程和 web 开发任务时都会使用它。
 
@@ -102,7 +103,7 @@ Mosh Hamedani 的一门很棒的课程，旨在掌握 Angular 及其背后的 Ja
 
 [![](img/b9ad7ac4b03b809bee5045344d156b6e.png)](https://goalkicker.com/Angular2Book/)
 
-## [**7。Angular 5 教程—您的第一个 Angular 5 应用程序的逐步指南**](https://www.toptal.com/angular/angular-5-tutorial)
+## 7. [Angular 5 教程—您的第一个 Angular 5 应用程序的逐步指南](https://www.toptal.com/angular/angular-5-tutorial)
 
 顾名思义，Toptal 是一个寻找任何技术领域顶尖人才的网站，但它也包含一些关于不同技术的最深入的教程。
 
@@ -110,7 +111,7 @@ Mosh Hamedani 的一门很棒的课程，旨在掌握 Angular 及其背后的 Ja
 
 [![](img/bb1ea8e255c8d3c3d42d275808c929a2.png)](https://javarevisited.blogspot.com/2018/06/5-best-courses-to-learn-angular.html)
 
-## **8。** [**忙碌开发者的棱角速成班**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fangular-crash-course%2F)
+## 8. [忙碌开发者的棱角速成班](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fangular-crash-course%2F)
 
 这是 Udemy 的另一个最畅销的角度课程，顾名思义，这是一个以 go 开始的速成课程。
 
@@ -120,9 +121,9 @@ Mosh Hamedani 的一门很棒的课程，旨在掌握 Angular 及其背后的 Ja
 
 [![](img/40d01d026e0eeb4338bba94d2597e8e9.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fangular-crash-course%2F)
 
-## **9。** [**角度 2+ —自由入门**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fgetting-started-with-angular-2%2F)
+## 9. [角度 2+ —自由入门](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fgetting-started-with-angular-2%2F)
 
-这是一个从 Udemy 学习 Angular 的免费课程，也是一个很棒的课程。通过遵循 Ryan Chenkie 在本课程中的说明，您可以轻松学会如何构建您的第一个 Angular 2+应用程序。
+这是一个从 Udemy 学习 Angular 的免费课程，也是一个很棒的课程。通过遵循 Ryan Chenkie 在本课程中的说明，你可以轻松学会如何构建你的第一个 Angular 2+应用程序。
 
 Udemy 中的[免费角课程主要是为了营销目的而创建的，但它们并不缺乏质量，因为教师希望推广他们最好的内容，以获得 Udemy 平台上数百万学生的关注。](http://www.java67.com/2018/01/top-5-free-angular-js-online-courses-for-web-developers.html)
 
@@ -130,7 +131,9 @@ Udemy 中的[免费角课程主要是为了营销目的而创建的，但它们�
 
 [![](img/bae6007f0cc3125df3b67eaedf615005.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fgetting-started-with-angular-2%2F)
 
-## 10。 [**棱角分明—掌握基础知识—自由自在**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fangular-mastering-the-basics%2F)
+
+
+## 10. [棱角分明—掌握基础知识—自由自在](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fangular-mastering-the-basics%2F)
 
 这是另一个免费学习 Angular 的很棒的课程。与马克斯的课程或 T2 的付费课程相比，这是一个相对较短的课程，但它是免费的。
 
@@ -140,7 +143,7 @@ Udemy 中的[免费角课程主要是为了营销目的而创建的，但它们�
 
 [![](img/0ab622670bd174e7527ebe31a2237192.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fangular-mastering-the-basics%2F)
 
-## **11。** [**棱角分明的快速速成班——免费**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fgetting-started-with-angular-2%2F)
+## 11. [棱角分明的快速速成班——免费](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fgetting-started-with-angular-2%2F)
 
 Udemy 的另一个超棒的免费角度课程。您可以通过本课程学习使用角度 2°、4°、5°、6°以及更大角度。
 
@@ -150,7 +153,7 @@ Udemy 的另一个超棒的免费角度课程。您可以通过本课程学习�
 
 [![](img/eba2b7ec85753b0389b631c817836ddd.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fgetting-started-with-angular-2%2F)
 
-## **12。** [**角度:入门—复数视线**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fangular-2-getting-started-update)
+## 12. [角度:入门—复数视线](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fangular-2-getting-started-update)
 
 这是 Pluralsight 的最佳角度课程之一。在本课程中，您将通过快速了解 Angular 的组件、模板和服务，学习如何创建出色的 web 应用程序，并了解最新的应用程序开发技术。
 
@@ -162,21 +165,21 @@ Udemy 的另一个超棒的免费角度课程。您可以通过本课程学习�
 
 月会员费约为 29 美元，[年会员费约为 299 美元(节省 14%)，不仅可以参加这门课程，还可以参加 5000 多门其他技术课程。如果你不确定，你还可以尝试一个](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing) [**10 天免费试用**](http://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) ，可以免费观看 200 分钟的课程内容。
 
-<http://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>  
+<http://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>
 
 以上就是学习 Angular 2+ Web 框架的一些**最佳教程和在线课程。我还包括了一些课程和书籍，因为它们提供了更全面的学习，而且大多数时候是最好的起点。如果你有任何其他的角度教程，你认为应该在这个列表中，然后随时下降的说明。**
 
 您可能喜欢的其他 **Web 开发资源**:
 
 *   [面向 Web 开发者的 5 大免费 JavaScript 课程](http://www.java67.com/2018/04/top-5-free-javascript-courses-to-learn.html)
-    [面向 Java 开发者的 5 大免费 Spring 框架课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
-    [2023 年学习 React Native 的 5 大课程](http://javarevisited.blogspot.sg/2018/02/5-react-native-courses-to-learn-mobile-development-using-JavaScript.html)
-    [2023 年学习 Web 开发的 5 大课程](https://javarevisited.blogspot.com/2018/02/top-5-online-courses-to-learn-web-development.html)
-    [面向 Web 开发者的 10 大 JavaScript 教程和课程](https://javarevisited.blogspot.com/2018/06/top-10-courses-to-learn-javascript-in.html)
-    [2023 年学习 Spring Boot 的 5 大课程](https://javarevisited.blogspot.com/2018/05/top-5-courses-to-learn-spring-boot-in.html)
-    [2023 年学习 2023 React JS 开发者路线图](http://www.java67.com/2018/02/5-free-python-online-courses-for-beginners.html)
-    [10 JavaScript 框架 Fullstack 开发者应该知道的](http://www.java67.com/2019/01/top-10-javascript-frameworks-and-libraries-for-web-developers.html)
-    [5 门免费课程学习 React 框架](http://www.java67.com/2018/02/5-free-react-courses-for-web-developers.html)
+*   [面向 Java 开发者的 5 大免费 Spring 框架课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
+*   [2023 年学习 React Native 的 5 大课程](http://javarevisited.blogspot.sg/2018/02/5-react-native-courses-to-learn-mobile-development-using-JavaScript.html)
+*   [2023 年学习 Web 开发的 5 大课程](https://javarevisited.blogspot.com/2018/02/top-5-online-courses-to-learn-web-development.html)
+*   [面向 Web 开发者的 10 大 JavaScript 教程和课程](https://javarevisited.blogspot.com/2018/06/top-10-courses-to-learn-javascript-in.html)
+*   [2023 年学习 Spring Boot 的 5 大课程](https://javarevisited.blogspot.com/2018/05/top-5-courses-to-learn-spring-boot-in.html)
+*   [2023 年学习 2023 React JS 开发者路线图](http://www.java67.com/2018/02/5-free-python-online-courses-for-beginners.html)
+*   [10 JavaScript 框架 Fullstack 开发者应该知道的](http://www.java67.com/2019/01/top-10-javascript-frameworks-and-libraries-for-web-developers.html)
+*   [5 门免费课程学习 React 框架](http://www.java67.com/2018/02/5-free-react-courses-for-web-developers.html)
 
 ## 结束语
 
@@ -188,8 +191,10 @@ Udemy 的另一个超棒的免费角度课程。您可以通过本课程学习�
 
 **P. S. S. —** 如果你更喜欢书籍而不是在线课程和教程，并且需要更多的选择，那么你也可以看看这份为初学者准备的 [**前 5 本有棱角的书**](https://www.java67.com/2020/03/top-5-books-to-learn-angular-for-beginners.html) 清单。
 
-<https://www.java67.com/2020/03/top-5-books-to-learn-angular-for-beginners.html>  
+<https://www.java67.com/2020/03/top-5-books-to-learn-angular-for-beginners.html>
 
 ## 您可能喜欢的关于 Angular 和 Web 开发的其他媒体文章:
 
-</hackernoon/the-2019-web-developer-roadmap-ab89ac3c380e>  </javarevisited/10-courses-to-learn-angular-for-web-development-6da1bd2856dc>  </javarevisited/top-10-free-courses-to-learn-html-5-css-3-and-web-development-872d62d97a97> 
+</hackernoon/the-2019-web-developer-roadmap-ab89ac3c380e>
+</javarevisited/10-courses-to-learn-angular-for-web-development-6da1bd2856dc>
+</javarevisited/top-10-free-courses-to-learn-html-5-css-3-and-web-development-872d62d97a97>

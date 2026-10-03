@@ -1,26 +1,14 @@
-# Java14：JavaFX 应用开发指南
 
 
-
-
-
-
-
+# Java 14：JavaFX 应用开发指南
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_0_0.png)
 
-
-
-
-
 Ove Thomsen, EA Dania 同评审
-
-
-
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_3_0.png)
 
-## 我们不重新发明轮子，我们重新发明光影。
+## 我们不重新发明轮子，我们重新发明光影
 
 迷人的光影提供了无限可能：创新的技术和新市场带来了机遇与挑战。在一个您的专业知识被高度渴求的环境中。在我们全球集团内享受支持性的工作环境，并从国际化的职业路径中获益。与其他专家紧密合作实施可持续理念，并为影响我们的未来贡献力量。加入我们，每天重新发明光影。
 
@@ -28,17 +16,7 @@ Ove Thomsen, EA Dania 同评审
 
 OSRAM SYLVANIA
 
-
-
-
 练习 24 79
-
-
-
-
-
-
-
 
 # 序言
 
@@ -48,19 +26,11 @@ OSRAM SYLVANIA
 
 正如标题所示，这系列软件开发书籍的目标是教导读者如何在 Java 中开发应用程序。
 
-
-
-
 # 导论
 
 ## 1.1 HelloFX
 
 作为开始，我将展示一个非常简单的应用程序，它打开一个带有几个按钮和其他内容的窗口，但这是一个使用 JavaFX 而非 Swing 的程序。我在 Netbeans 中新建了一个项目，但必须是一个 JavaFX 应用程序项目。我将其命名为 HelloFX，项目创建后，NetBeans 创建了一个类（我已删除了所有注释）：
-
-
-
-
-
 
 # 介绍言
 
@@ -110,10 +80,10 @@ public class HelloFX extends Application {
 
 点击按钮后，它会在控制台上打印一条消息。如果你观察代码，首先注意该类继承了 `Application`，这意味着它是一个 JavaFX 应用程序。该类与其他 Java 应用程序一样有一个 `main()` 方法，并通过调用静态方法 `launch()`（在 `Application` 类中）启动。它基本上执行了以下操作：
 
-- 1. 实例化类的对象（这里是 `HelloFX` 类）
-- 2. 执行 `init()` 方法，在 `Application` 中这是一个空方法
-- 3. 执行 `start()` 方法，在 `Application` 中这是一个空方法
-- 4. 等待程序终止，此时执行 `stop()` 方法，在 `Application` 中也是空方法
+1. 实例化类的对象（这里是 `HelloFX` 类）。
+2. 执行 `init()` 方法，在 `Application` 中这是一个空方法。
+3. 执行 `start()` 方法，在 `Application` 中这是一个空方法。
+4. 等待程序终止，此时执行 `stop()` 方法，在 `Application` 中也是空方法。
 
 如果你想让应用程序打开一个窗口，通常是重写 `Application` 类的 `start()` 方法，如上面的示例所示。
 
@@ -122,7 +92,6 @@ public class HelloFX extends Application {
 在上面的示例中，`start()` 方法首先创建一个按钮，它是一个节点。该对象名为 `btn`，在给按钮附加文本的同时，还关联了一个动作，该动作是一个具有单个方法的对象，它简单地执行 `System.out.println()`。你应该注意，这看起来像是 Swing 中常见的事件事件处理，但事实并非如此，它使用的是其他类型，尽管这些类型的名称与 Swing 中的某些已知类型相同。
 
 在 bookstore.com 免费下载电子书
-
 
 # 介绍
 
@@ -204,15 +173,17 @@ public class HelloFX extends Application {
 
 如果你运行该程序，它首先会在控制台上写入以下几行：
 
+```text
 Constructor 12
 Init 13
 Start 12
+```
 
-之后你将得到以下窗口
+之后你将得到以下窗口：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_13_0.png)
 
-如果你输入文本 *Frode Frodegod* 并点击 *Hello*，窗口将更新为：
+如果你输入文本 `Frode Frodegod` 并点击 `Hello`，窗口将更新为：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_13_1.png)
 
@@ -220,15 +191,17 @@ Start 12
 
 在 www.deloitte.ca/careers 发现真相
 
-# Deloitte.
+# Deloitte
 
 © Deloitte & Touche LLP 关联实体。
 
 在 bookboom.com 免费下载电子书
 
-点击 Exit 后，程序会在控制台上写入以下文本后终止：
+点击 `Exit` 后，程序会在控制台上写入以下文本后终止：
 
+```text
 Stop 12
+```
 
 这一次，`start()` 方法创建了一个带有 5 个叶子节点的根的场景图。注意根节点的类型是 `VBox`。除了显示有更多选项外，没有特殊的理由，而且该类型关系到图节点在窗口中的布局方式。5 个节点的类型分别为 `Label`、`TextField`、`Label`、`Button` 和 `Button`，其中第一个和最后一个是在它们被添加到根节点时创建的（最后一个通过 `createButton()` 方法），而另外三个是显式创建的。
 
@@ -236,7 +209,7 @@ Stop 12
 
 如果你查看 `dist` 目录，可以看到按照通常的方式创建了一个名为 `HelloFX.jar` 的 jar 文件，因此可以从命令行执行程序：
 
-```
+```bash
 java -jar HelloFX.jar
 ```
 
@@ -252,21 +225,16 @@ java -jar HelloFX.jar
 
 这些文件我不想在这里提到，但它们都与作为 Web 应用程序执行有关。
 
-
-
-
-
 ## 1.2 HELLOLINES
 
 作为 Java 程序的另一个示例，我将展示一个打开以下窗口的示例：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_15_0.png)
 
-“该项目名为 HelloLines，窗口包含一个场景图，由一个根节点和 4 个子节点组成：一个 Text 对象和三个 Line 对象。代码如下：
+该项目名为 `HelloLines`，窗口包含一个场景图，由一个根节点和 4 个子节点组成：一个 `Text` 对象和三个 `Line` 对象。代码如下：
 
 ```java
 package hellolines;
-
 ```
 
 ```java
@@ -285,36 +253,48 @@ public class HelloLines extends Application {
     private Line[] lines;
 
     public HelloLines() {
-        lines = new Line[] { createLine(20, 20, 320, 120, 3, Color.RED),
-                             createLine(320, 120, 120, 220, 5, Color.GREEN),
-                             createLine(120, 220, 20, 1, Color.BLUE) };
+        lines = new Line[] {
+            createLine(20, 20, 320, 120, 3, Color.RED),
+            createLine(320, 120, 120, 220, 5, Color.GREEN),
+            createLine(120, 220, 20, 1, Color.BLUE)
+        };
     }
 
-    private Line createLine(double x1, double y1, double x2, double y2, double width, Color color) {
+    private Line createLine(
+        double x1,
+        double y1,
+        double x2,
+        double y2,
+        double width,
+        Color color
+    ) {
 ```
 
 ```java
-Line line = new Line(x1, y1, x2, y2);
-line.setStroke(color);
-line.setStrokeWidth(width);
-return line;
+        Line line = new Line(x1, y1, x2, y2);
+        line.setStroke(color);
+        line.setStrokeWidth(width);
+        return line;
 ```
 
 ```java
-private Text createText() {
-  Text text = new Text("Hello");
-text.setText(200);
-text.setY(50);
-text.setFont(new Font(36));
-return text;
-}
+    private Text createText() {
+        Text text = new Text("Hello");
+        text.setText(200);
+        text.setY(50);
+        text.setFont(new Font(36));
+        return text;
+    }
 ```
+
+
+
 
 ```java
 @Override
 public void start(Stage stage) {
   Group root = new Group(lines);
-root.getChildren().add(createText());
+  root.getChildren().add(createText());
   Scene scene = new Scene(root, 350, 250);
 ```
 
@@ -333,7 +313,7 @@ public static void main(String[] args)
 
 看到这些代码，很容易理解，并且看起来和第一个示例相似。该类定义了一个 `Line` 元素数组（一个 `Line` 对象表示直线），该数组在构造函数中创建，因此包含了三个 `Line` 对象。`Line` 对象是通过 `createLine()` 方法创建的，你应该特别注意对象是如何初始化的以及使用了哪些类型。还有一个 `createText()` 方法，它创建并返回一个 `Text` 对象。如果你使用这些类型来创建 `Line` 和 `Text` 对象，它们与你在 Java2D 中熟悉的类型不同，但它们具有相同的名称，并且基本上具有相同的特性。场景图是以与一个示例相同的方式在 `start()` 方法中创建的，但这次根元素的类型是 `Group`，它是分支节点的基本类型。你应该特别注意如何通过 `getChildren()` 获取一个包含所有子节点的列表。
 
-这个示例非常简单，但你应该注意几何对象和文本元素是如何像 Button、Label 等其他节点一样，以节点的形式包含在场景图中的。
+这个示例非常简单，但你应该注意几何对象和文本元素是如何像 `Button`、`Label` 等其他节点一样，以节点的形式包含在场景图中的。
 
 SIMPLY CLEVER
 
@@ -342,12 +322,14 @@ SIMPLY CLEVER
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_16_0.png)
 
 你喜欢汽车吗？你愿意成为成功品牌的一部分吗？
+
 我们将感谢并奖励你的热情和才华。
+
 向我们发送你的简历。你会惊讶于它能带你去向哪里。
 
-在 www.employerforlife.com 向我们发送简历
+在 `www.employerforlife.com` 向我们发送简历
 
-在 bookboom.com 免费免费电子书
+在 `bookboom.com` 免费免费电子书
 
 点击广告阅读更多信息
 
@@ -355,46 +337,62 @@ SIMPLY CLEVER
 
 JavaFX 是用于创建 GUI 应用程序的完整 API，由分布在以下包中的类组成：
 
-1. javafx.animation
-2. javafx.application
-3. javafx.css
-4. javafx.event
-5. javafx.geometry
-6. javafx.stage
-7. javafx.scene
+1. `javafx.animation`
+
+2. `javafx.application`
+
+3. `javafx.css`
+
+4. `javafx.event`
+
+5. `javafx.geometry`
+
+6. `javafx.stage`
+
+7. `javafx.scene`
 
 其中后者有更多的子包。如所述，一个 JavaFX 程序由场景图组成，它是一棵包含节点的树，这些节点可能是：
 
-- 几何对象，可以是 2D 和 3D 对象，如 Circle、Sphere 等
-- UI 控件，如 Label、Button 等
-- 容器，如 StackPane、VBox、Group 等更多
+- 几何对象，可以是 2D 和 3D 对象，如 `Circle`、`Sphere` 等
+
+- UI 控件，如 `Label`、`Button` 等
+
+- 容器，如 `StackPane`、`VBox`、`Group` 等更多
+
 - 媒体元素，用于图像、音频和视频
 
 场景图中的每个节点都有唯一的父节点，根节点除外（它没有父节点），所有没有子节点的节点被称为所谓的叶子节点，而所有其他节点被称为分支节点。同一个节点只能在树中出现一次，且每个节点都可以定义效果、不透明度、变换和事件处理器。
 
 为了渲染图形，JavaFX 使用 OpenGL（在 Linux 系统上），并尽可能使用图形图的硬件加速器，结果是 JavaFX 在渲染图形方面非常高效。
 
-如上所述，JavaFX 应用程序由 `Stage` 对象表示，它包含了应用程序的所有对象，`Stage` 对象由实际平台创建。`Stage` 对象除了内容（场景图）外还有宽度和高度，以及标题行和框架等装饰。有以下类型的 Stage 对象：
+如上所述，JavaFX 应用程序由 `Stage` 对象表示，它包含了应用程序的所有对象，`Stage` 对象由实际平台创建。`Stage` 对象除了内容（场景图）外还有宽度和高度，以及标题行和框架等装饰。有以下类型的 `Stage` 对象：
 
-- 有装饰的 (Decorated)
-- 无装饰的 (Undecorated)
-- 透明的 (Transparent)
-- 统一的 (Unified)
-- 工具 (Utility)
+- 有装饰的 (`Decorated`)
+
+- 无装饰的 (`Undecorated`)
+
+- 透明的 (`Transparent`)
+
+- 统一的 (`Unified`)
+
+- 工具 (`Utility`)
 
 具体的对象将结合示例持续讨论。
 
-`Stage` 对象的的内容由 `Scene` 对象表示，它定义了宽度、高度以及场景图。具体的节点将结合示例讨论，每种用途都有许多节点。此外，还有不同的分支节点，其中最的是 `Group` 节点，它主要是子节点的集合。其他示例是具有特定派生类的 `Pane` 节点，它们的作用与 Swing 中的布局管理器相同。所有特定节点都是类层次结构的一部分，并派生自以下类之一：
+`Stage` 对象的内容由 `Scene` 对象表示，它定义了宽度、高度以及场景图。具体的节点将结合示例讨论，每种用途都有许多节点。此外，还有不同的分支节点，其中最的是 `Group` 节点，它主要是子节点的集合。其他示例是具有特定派生类的 `Pane` 节点，它们的作用与 Swing 中的布局管理器相同。所有特定节点都是类层次结构的一部分，并派生自以下类之一：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_19_0.png)
 
 > “在丹麦，你可以找到出色的工程工作并在专业领域发展自己。特别是在风能领域，你可以从行业中最优秀的人那里学习，并在稳定的就业市场中推进职业生涯。”
 
 Mireia Mare,
+
 来自西班牙的高级工程师。
+
 在风能行业工作。
 
 赋能你的职业
+
 - 丹麦
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_20.png)
@@ -405,24 +403,30 @@ Mireia Mare,
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_21.png)
 
-如果你点击 Add 按钮（并且两个框都输入了内容），列表框中将插入一行，名称和标题由逗号隔开。如果你点击另一个按钮，将删除列表框的内容。要求两个输入框的大小以及列表框的大小遵循窗口的大小，并且按钮遵循窗口边缘。
+如果你点击 `Add` 按钮（并且两个框都输入了内容），列表框中将插入一行，名称和标题由逗号隔开。如果你点击另一个按钮，将删除列表框的内容。要求两个输入框的大小以及列表框的大小遵循窗口的大小，并且按钮遵循窗口边缘。
 
 下面是 6 个人输入后的窗口。任务的一部分是找出使用了哪些控件以及如何将它们放在窗口中：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_22.png)
 
 我加入 MITAS是因为
+
 我想要真正的责任感
+
 针对工程师和地质科学家的毕业生计划
-www.discovermitas.com
+
+`www.discovermitas.com`
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_22.png)
 
 第6个月
+
 我在北海担任施工主管，提供建议并帮助工头解决问题
 
 真实的工作
+
 国际机会
+
 三次实习
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_23.png)
@@ -431,30 +435,37 @@ www.discovermitas.com
 
 在本章中，我将回顾如何在窗口中绘制几何形状，正如第1章的最后一个示例所示，它与 Java2D 几乎相同，只是使用了不同的类。几何形状是 `Shape2D` 类型的对象，因此是可以包含在场景图中的对象。通常有以下预定义的形状（节点）：
 
-- Line
-- Rectangle
-- Circle
-- Ellipse
-- Polygon
-- Polyline
-- CubicCurve
-- QuadCurve
-- Arc
+- `Line`
+
+- `Rectangle`
+
+- `Circle`
+
+- `Ellipse`
+
+- `Polygon`
+
+- `Polyline`
+
+- `CubicCurve`
+
+- `QuadCurve`
+
+- `Arc`
 
 此外，你还可以作为 `Path` 对象来定义通用曲线，它由以下类型的段组成：
 
-- Line
-- CubicCurve
-- QuadCurve
-- Arc
+- `Line`
+
+- `CubicCurve`
+
+- `QuadCurve`
+
+- `Arc`
 
 最后你可以定义一个类似 SVG Path 的形状。
 
-本章的目的是展示如何创建和应用上述几何形状，但不是回顾语法（这很多是你在 Java2D 中已知的内容），我将转而制定一系列练习，挑战主要是找出这些类型在 JavaFX 中被称为什么什么。
-
-
-
-
+本章的目的是展示如何创建和应用上述几何形状，但不是回顾语法（这很多是你在 Java2D 中已知的内容），我将转而制定一系列练习，挑战主要是找出这些类型在 JavaFX 中被称为什么。
 
 ## 练习 2
 
@@ -462,7 +473,7 @@ www.discovermitas.com
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_23_0.png)
 
-蓝线的端点为 (20, 20) 和 (320, 20)，宽度为 21；而红线的端点为 (20, 40) 和 (320, 40)，宽度为 1。最后，绿线的端点为 (20, 60) 和 (320, 60)，宽度为 21。
+蓝线的端点为 `(20, 20)` 和 `(320, 20)`，宽度为 21；而红线的端点为 `(20, 40)` 和 `(320, 40)`，宽度为 1。最后，绿线的端点为 `(20, 60)` 和 `(320, 60)`，宽度为 21。
 
 ## 练习 3
 
@@ -470,7 +481,7 @@ www.discovermitas.com
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_23_1.png)
 
-显示三个矩形，每个矩形的大小为 300 × 50。这三个矩形的左上角分别为 (20, 20)、(20, 90) 和 (20, 160)。顶部有一个宽度为 21 的蓝色边框，但内部为空。中间没有边框，而最后一个有一个宽度为 1 的黑色边框。
+显示三个矩形，每个矩形的大小为 `300 × 50`。这三个矩形的左上角分别为 `(20, 20)`、`(20, 90)` 和 `(20, 160)`。顶部有一个宽度为 21 的蓝色边框，但内部为空。中间没有边框，而最后一个有一个宽度为 1 的黑色边框。
 
 # 2D 形状
 
@@ -508,36 +519,35 @@ www.discovermitas.com
 
 ## 练习 8
 
-折线（polyline）被定义为多边形，由直线组成。该形状的定义方式相同，即一系列顶点，但不需要是一个闭合形状。通常情况下，折线不是填充形状，但如果你定义了填充颜色，该形状将像多边形一样被填充。在练习中，你必须编写一个程序，打开包含 4 个折线形状的窗口：
+折线（`polyline`）被定义为多边形，由直线组成。该形状的定义方式相同，即一系列顶点，但不需要是一个闭合形状。通常情况下，折线不是填充形状，但如果你定义了填充颜色，该形状将像多边形一样被填充。在练习中，你必须编写一个程序，打开包含 4 个折线形状的窗口：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_26_1.png)
-
 
 2D 形状
 
 ## 练习 9
 
-你必须编写一个程序，显示两条二次贝塞尔曲线（quad curves）。如果你不记得二次贝塞尔曲线的定义，可能想阅读《Java 10》书中关于曲线的内容。该程序必须打开以下窗口：
+你必须编写一个程序，显示两条二次贝塞尔曲线（`quad curves`）。如果你不记得二次贝塞尔曲线的定义，可能想阅读《Java 10》书中关于曲线的内容。该程序必须打开以下窗口：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_27_0.png)
 
 > “我学了16年英语，但……我最终只花了六节课就学会了说它。”
+
 Jane，中国建筑师
 
 英语走向世界
 
 点击听我在下载我独特的课程前后的语音录音
 
-在 bookboom.com 免费下载电子书
+在 `bookboom.com` 免费下载电子书
 
 点击广告阅读更多
-
 
 2D 形状
 
 ## 练习 10
 
-你必须编写一个程序，显示两条三次贝塞尔曲线（cubic curves）。如果你不记得三次贝塞尔曲线的定义，可能想阅读《Java 10》书中关于曲线的内容。该程序必须打开以下窗口：
+你必须编写一个程序，显示两条三次贝塞尔曲线（`cubic curves`）。如果你不记得三次贝塞尔曲线的定义，可能想阅读《Java 10》书中关于曲线的内容。该程序必须打开以下窗口：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_28_0.png)
 
@@ -547,26 +557,27 @@ Jane，中国建筑师
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_28_1.png)
 
-
 ## 3.1 SVG
 
 SVG 代表缩放矢量图形，在 JavaFX 中，通过字符串定义路径：
 
 - `M` 或 `m`：移动到（绝对或相对）。
+
 - `L` 或 `l`：画线（绝对或相对）。
+
 - `H` 或 `h`：水平线（绝对或相对）。
+
 - `V` 或 `v`：垂直线（绝对或相对）。
+
 - `C` 或 `c`：三次贝塞尔曲线（绝对或相对）。
+
 - `Q` 或 `q`：二次贝塞尔曲线（绝对或相对）。
+
 - `A` 或 `a`：圆弧（绝对或相对）。
+
 - `Z` 或 `z`：关闭路径。
 
-
-
-
-
-
-这里是课程中有趣的部分：两个 SVG 命令。你必须注意语法以及这些命令如何简单地定义为由空格分隔的列表。唯一不那么直观的是命令 A，它定义了一个圆弧。在这种情况下（在第一种情况下），它是从 (120, 120) 到 (20, 120) 的曲线，半径为 100 的圆，它提供了两个选项：
+这里是课程中有趣的部分：两个 SVG 命令。你必须注意语法以及这些命令如何简单地定义为由空格分隔的列表。唯一不那么直观的是命令 `A`，它定义了一个圆弧。在这种情况下（在第一种情况下），它是从 `(120, 120)` 到 `(20, 120)` 的曲线，半径为 100 的圆，它提供了两个选项：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_32_0.png)
 
@@ -574,11 +585,11 @@ SVG 代表缩放矢量图形，在 JavaFX 中，通过字符串定义路径：
 
 ## 练习 12
 
-编写一个程序打开以下窗口，该窗口显示两个 SVGPath 形状，其中蓝色曲线由一个移动到（move to）、两个画线到（line to）和一个圆弧到（arc to）操作组成，而红色曲线则由一个二次贝塞尔曲线（quad）、两个画线到（line to）、一个三次贝塞尔曲线（cubic to）和一个关闭（close）操作组成：
+编写一个程序打开以下窗口，该窗口显示两个 `SVGPath` 形状，其中蓝色曲线由一个移动到（`move to`）、两个画线到（`line to`）和一个圆弧到（`arc to`）操作组成，而红色曲线则由一个二次贝塞尔曲线（`quad`）、两个画线到（`line to`）、一个三次贝塞尔曲线（`cubic to`）和一个关闭（`close`）操作组成：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_32_1.png)
 
-在 bookbo.com 下载免费电子书
+在 `bookbo.com` 下载免费电子书
 
 2D 形状
 
@@ -586,17 +597,23 @@ SVG 代表缩放矢量图形，在 JavaFX 中，通过字符串定义路径：
 
 与其像上面所示通过定义字符串定义绘制操作来绘制路径，不如你可以将对象添加到 `Path` 对象中，该对象代表一组绘制对象的集合。这样做的好处主要是编译器可以检查语法，从而使任何错误在运行时之前被检测到。有以下绘制对象：
 
-- MoveTo
-- LineTo
-- HLineTo
-- VLineTo
-- ArcTo
-- QuadCurveTo
-- CubicCurveTo
+- `MoveTo`
+
+- `LineTo`
+
+- `HLineTo`
+
+- `VLineTo`
+
+- `ArcTo`
+
+- `QuadCurveTo`
+
+- `CubicCurveTo`
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_33_0.png)
 
-在 bookhoon.com 下载免费电子书 点击广告阅读更多
+在 `bookhoon.com` 下载免费电子书 点击广告阅读更多
 
 例如，以下程序绘制了与上一个示例相同的窗口：
 
@@ -672,7 +689,9 @@ public class PathProgram extends Application {
 轮廓——一条线/曲线——可以通过三种方式绘制：
 
 1. `Stroke.CENTERED`，这是默认值，意味着绘制轮廓时，形状的边缘恰好是轮廓线的中心。
+
 2. `StrokeType.INSIDE`，轮廓绘制在形状内部。
+
 3. `StrokeType.OUTSIDE`，轮廓绘制在形状外部。
 
 `Stroke` 程序打开以下窗口，展示了绘制轮廓的三种方式，其中第一种是默认的：
@@ -681,9 +700,11 @@ public class PathProgram extends Application {
 
 2D 形状
 
+
+
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_37_0.png)
 
-代码如下，展示了 `start()` 方法：
+代码如下，展示了`start()`方法：
 
 ```java
 public void start(Stage primaryStage) {
@@ -697,7 +718,8 @@ public void start(Stage primaryStage) {
   primaryStage.show();
 }
 ```
-（注：由于原文代码片段中 `circ1`, `circ2`, `circ3` 变量在示例中未完全定义，此处根据上下文保留翻译逻辑）
+
+（注：由于原文代码片段中`circ1`、`circ2`、`circ3`变量在示例中未完全定义，此处根据上下文保留翻译逻辑。）
 
 另一个点是由直线组成的形状（如多边形）的端点。有三种选项（你可能从 Java2D 了解过）：
 
@@ -741,14 +763,11 @@ private Polygon poly2() {
     poly.setStrokeLineJoin(StrokeLineJoin.BEVEL);
     return poly;
 }
-``` (注：原文此处代码不完整，`poly3`到`poly6` 未列出，翻译保留原文结构)
+```
 
+（注：原文此处代码不完整，`poly3`到`poly6`未列出，翻译保留原文结构。）
 
-
-
-
-
-# 2D 形状
+## 2D 形状
 
 ```java
 private Polygon poly3() {
@@ -793,28 +812,29 @@ private Polygon poly6() {
 
 指定线条端点有类似的选项（请查阅书籍 Java 10 以获取说明）：
 
-- 1. StrokeLineCap.BUTT
-- 2. StrokeLineCap.SQUARE
-- 3. StrokeLineCap.ROUND
+1. `StrokeLineCap.BUTT`
+2. `StrokeLineCap.SQUARE`
+3. `StrokeLineCap.ROUND`
 
-# 练习题 15
+## 练习题 15
 
-编写一个可以调用 LineCaps 的程序。该程序必须打开以下窗口，显示 6 个 Line 对象（每个长度为 200），并且每个端点（蓝色线条的）分别设置为 BUTT、SQUARE 和 ROUND：
+编写一个可以调用`LineCaps`的程序。该程序必须打开以下窗口，显示 6 个`Line`对象（每个长度为 200），并且每个端点（蓝色线条的）分别设置为`BUTT`、`SQUARE`和`ROUND`：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_41_0.png)
 
 ## 3.4 形状操作
 
-通常情况下，如果你向 Group 中添加两个 Shape 对象且这两个形状发生重叠，那么后添加的形状将覆盖第一个形状中重叠的部分。Shape 类有三个静态方法：
+通常情况下，如果你向`Group`中添加两个`Shape`对象且这两个形状发生重叠，那么后添加的形状将覆盖第一个形状中重叠的部分。`Shape`类有三个静态方法：
 
-- union()
-- intersect()
-- subtract()
+- `union()`
+- `intersect()`
+- `subtract()`
 
-这些这些方法都接受两个 Shape 对象作为参数，并将这两个对象合并成单一的 Shape 对象。OperationProgram 展示了如何应用此操作并打开以下窗口：
+这些方法都接受两个`Shape`对象作为参数，并将这两个对象合并成单一的`Shape`对象。`OperationProgram`展示了如何应用此操作并打开以下窗口：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_41_1.png)
-# 2D 形状
+
+## 2D 形状
 
 ```java
 public void start(Stage primaryStage)
@@ -863,12 +883,12 @@ private Shape shape3()
 }
 ```
 
-# 4 文本
+## 4 文本
 
-文本可以用 Text 对象表示，重要的是 Text 继承自 Shape，因此它可以像任何其他 Shape 对象一样被使用，并作为节点进入场景图。实际上，没什么需要解释的，但应用程序 Text/Program 会打开以下窗口：
+文本可以用`Text`对象表示，重要的是`Text`继承自`Shape`，因此它可以像任何其他`Shape`对象一样被使用，并作为节点进入场景图。实际上，没什么需要解释的，但应用程序`Text/Program`会打开以下窗口：
 
-| Strokes (描边) |
-| :--- |
+| Strokes（描边） |
+| --- |
 | Hello JavaFX geometry |
 | Hello World |
 
@@ -949,17 +969,13 @@ public class TextProgram extends Application {
 }
 ```
 
-
-
-
-
 # JAVA 14：使用 JAVAFX 开发应用程序：软件开发
 
 ## 效果
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_48_0.png)
 
-左图是原图，右图是调整后的图像。程序应该只显示使用 `ColorAdjust` 的语法，但在这种情况下，并没有对图像产生任何改进。程序还展示了如何从本地磁盘加载图片到 JavaFX 程序中。程序代码如下：
+左图是原图，右图是调整后的图像。程序应该只显示使用`ColorAdjust`的语法，但在这种情况下，并没有对图像产生任何改进。程序还展示了如何从本地磁盘加载图片到 JavaFX 程序中。程序代码如下：
 
 ```java
 package coloradjust;
@@ -1022,16 +1038,19 @@ adjust.setBrightness(-0.5);
 
 BI挪威商学院是欧洲最大的商学院之一——招收超过 20,000 名学生。我们的课程提供了一个充满活力且多元文化的学习环境，具有国际视野，能够为学生提供满足业务需求的专业技能。
 
-BI 提供四种不同的两年全日制科学硕士（MSc）课程，完全用英语授授，旨在提供专业技能以满足日益增长的业务需求。硕士课程提供了一个充满活力且多元文化的学习环境，为您开启职业生涯提供平台。
+
+
+BI 提供四种不同的两年全日制科学硕士（MSc）课程，完全用英语授课，旨在提供专业技能以满足日益增长的业务需求。硕士课程提供了一个充满活力且多元文化的学习环境，为您开启职业生涯提供平台。
 
 - 商业管理硕士
 - 金融经济学硕士
 - 战略营销管理硕士
 - 领导力与组织心理学硕士
 
-www.bi.edu/master
+`www.bi.edu/master`
 
-在 book.com 下载免费的电子书
+在 `book.com` 下载免费的电子书
+
 点击广告阅读更多
 
 ```java
@@ -1069,7 +1088,7 @@ public static void main(String[] args) {
 3. 径向渐变画漆和 `RadialGradient` 类对象
 4. 图像以及 `ImagePattern` 类对象
 
-在 bookboom.com 下载免费的电子书
+在 `bookboom.com` 下载免费的电子书
 
 `ColorProgram` 程序打开了以下窗口：
 
@@ -1130,13 +1149,9 @@ private Paint createRadial(){
 
 必须定义两个或多个颜色停止点，在这种情况下定义了三个。它们说明使用白色颜色，在 20% 之后颜色应该是红色，最后一个是蓝色。
 
-
-
-
-
 # JAVA 14: 使用 JAVAFX 开发应用程序：软件开发
 
-最后，还有一个 `ImagePattern`，这是一个绘制图像的 `Paint` 对象。在程序的 `start()` 方法中，图像（Bean.png）被加载为一个 `Image` 对象。然后可以使用此图像来创建一个 `ImagePattern` 对象：
+最后，还有一个 `ImagePattern`，这是一个绘制图像的 `Paint` 对象。在程序的 `start()` 方法中，图像（`Bean.png`）被加载为一个 `Image` 对象。然后可以使用此图像来创建一个 `ImagePattern` 对象：
 
 ```java
 private Paint createImage()
@@ -1289,33 +1304,32 @@ public class PixelsProgram extends Application
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_59_0.png)
 
-
-
-
 ## JAVA 14: 使用 JAVAFX 开发应用程序：软件开发
 
 ## 5.3 光 (LIGHT)
 
 在关于效果的章节介绍中，我列出了你可以应用的各种效果，在这里我并没有详尽说明所有的效果（也不会这样做），但我想用“光”这种效果作为本章的收尾。其原理是光源照射在图形上，而图形的颜色取决于光源的性质以及它相对于图形的位置。
 
-通常，你可以通过 `Lighting` 对象将光照效果与图形相关联，如果你没有指定光源，则将使用默认光源，它对应于直接射入图形的光，导致边缘产生微弱的 3D 效果。你也可以显式指定光源，共有三种选项：
 
-- 1. Light.Distant（远光）
-- 2. Light.Point（点光）
-- 3. Light.Spot（聚光灯）
+
+通常，你可以通过`Lighting`对象将光照效果与图形相关联。如果你没有指定光源，则将使用默认光源，它对应于直接射入图形的光，导致边缘产生微弱的 3D 效果。你也可以显式指定光源，共有三种选项：
+
+1. `Light.Distant`（远光）
+2. `Light.Point`（点光）
+3. `Light.Spot`（聚光灯）
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_61_0.png)
 
-## JAVA 14: 使用 JAVAFX 开发应用程序：软件开发
+## JAVA 14：使用 JAVAFX 开发应用程序：软件开发
 
 第一种对应于位于远处的光源，它从远程光源向一个方向发射光线：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_62_0.png)
 
-你可以设置两个值作为参数（均为 `double` 类型）：
+你可以设置两个值作为参数（均为`double`类型）：
 
-- 1. azimuth（方位），表示光源绕 z 轴旋转的角度。
-- 2. elevation（仰角），表示光源绕 x 轴旋转的角度。
+1. `azimuth`（方位），表示光源绕 z 轴旋转的角度。
+2. `elevation`（仰角），表示光源绕 x 轴旋转的角度。
 
 此外，你还可以指定光源的颜色。
 
@@ -1323,15 +1337,15 @@ public class PixelsProgram extends Application
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_62_1.png)
 
-光强度取决于光源到图形的距离。最后是第三种选项，与上述类似，但不同在于你可以指定一个 `specular`（高光）参数来控制光源的聚焦。
+光强度取决于光源到图形的距离。最后是第三种选项，与上述类似，但不同在于你可以指定一个`specular`（高光）参数来控制光源的聚焦。
 
-## JAVA 14: 使用 JAVAFX 开发应用程序效果
+## JAVA 14：使用 JAVAFX 开发应用程序效果
 
-如果你运行 `LightingProgram` 程序，它会打开以下窗口：
+如果你运行`LightingProgram`程序，它会打开以下窗口：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_63_0.png)
 
-该示例看起来像 `ColorProgram`，但程序展示的不是颜色的效果，而是光光的效果。顶行的图形分别显示了标准光源和远光源的效果，而底行的两个图形分别显示了聚光灯和点光源的效果。程序的代码如下：
+该示例看起来像`ColorProgram`，但程序展示的不是颜色的效果，而是光光的效果。顶行的图形分别显示了标准光源和远光源的效果，而底行的两个图形分别显示了聚光灯和点光源的效果。程序的代码如下：
 
 ```java
 package lightingprogram;
@@ -1350,11 +1364,11 @@ public class LightingProgram extends Application
     @Override
 ```
 
-## JAVA 14: 使用 JAVAFX 开发应用程序：软件开发 - 效果
-
-public void start(Stage primaryStage)
+## JAVA 14：使用 JAVAFX 开发应用程序：软件开发 - 效果
 
 ```java
+public void start(Stage primaryStage)
+
 {
 Group root = new Group();
 root.getChildren().add(text(140, 50, Color.rgb(232, 232, 232, new Lighting()));
@@ -1373,9 +1387,9 @@ primaryStage.setScene(scene);
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_64_0.png)
 
+```java
 private Text text(double x, double y, Paint fill, Lighting light) {
 
-```java
 Text text = new Text("Light");
 text.setFont(new Font("Liberation Sherif", FontWeight.BOLD, FontPosture.REGULAR, 72));
 text.setFill(fill);
@@ -1387,9 +1401,9 @@ text.setEffect(light);
 return text;
 ```
 
+```java
 private Circle circle(double x, double y, Paint fill, Lighting light) {
 
-```java
 Circle circ = new Circle(x, y, 100, fill);
 circ.setEffect(light);
 return circ;
@@ -1401,7 +1415,7 @@ public static void main(String[] args) {
 }
 ```
 
-这两个方法 `text()` 和 `circle()` 与之前的对应方法相似。你应该主要考虑 `start()` 方法，在这里通过创建 `Light` 对象作为 `Lighting` 对象（一种效果）的参数。注意，特定的 `Light` 类被定义为类中的内部类。
+这两个方法`text()`和`circle()`与之前的对应方法相似。你应该主要考虑`start()`方法，在这里通过创建`Light`对象作为`Lighting`对象（一种效果）的参数。注意，特定的`Light`类被定义为类中的内部类。
 
 ## 问题 2
 
@@ -1411,12 +1425,12 @@ public static void main(String[] args) {
 
 左侧的四个圆形使用了光源：
 
-- 1. default（默认）
-- 2. distant（远光）
-- 3. spot（聚光灯）
-- 4. point（点光）
+1. `default`（默认）
+2. `distant`（远光）
+3. `spot`（聚光灯）
+4. `point`（点光）
 
-这些设置选项通过 Slider 和 ComboBox 控件实现，并且名称反映在设置中。对于 Color 控件，必须将它们封装在以下包装类中：
+这些设置选项通过`Slider`和`ComboBox`控件实现，并且名称反映在设置中。对于`Color`控件，必须将它们封装在以下包装类中：
 
 ```java
 class ColorWrapper {
@@ -1454,7 +1468,7 @@ public String toString()
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_67_0.png)
 
-## 我们不发明轮子，我们重新发明光。
+## 我们不发明轮子，我们重新发明光
 
 迷人的光照领域提供了无限的可能性：创新技术和新市场提供了机遇与挑战。在这个你的专业知识备受青睐的环境中享受在全球范围内的支持性工作，并从国际职业道路中受益。与其他专家紧密合作实施可持续想法，为未来做出贡献。加入我们，每天重新发明光。
 
@@ -1462,7 +1476,7 @@ public String toString()
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_67_1.png)
 
-你可以使用适当数量的标准颜色初始化新的 ComboBox 控件（Color 类中的静态对象），但实际上可以使用以下方法决定所有的颜色：
+你可以使用适当数量的标准颜色初始化新的`ComboBox`控件（`Color`类中的静态对象），但实际上可以使用以下方法决定所有的颜色：
 
 ```java
 private java.util.List<ColorWrapper> getColors()
@@ -1485,18 +1499,14 @@ private java.util.List<ColorWrapper> getColors()
 }
 ```
 
-
-
-
-
 # 变换
 
 JavaFX 也支持对场景图中的节点进行变换，这在很大程度上与你在 Java2D 中熟悉的用法相同。通常，有 4 种变换：
 
-- 1. 平移 (Translate)
-- 2. 缩放 (Scaling)
-- 3. 旋转 (Rotation)
-- 4. 倾斜 (Shearing)
+1. 平移（`Translate`）
+2. 缩放（`Scaling`）
+3. 旋转（`Rotation`）
+4. 倾斜（`Shearing`）
 
 其含义与 Java2D 中的相同。作为一个简单的示例，以下程序对一个矩形执行平移：
 
@@ -1537,7 +1547,7 @@ public class TranslateProgram extends Application {
 }
 ```
 
-`createRect` 方法创建了一个固定位置和大小的矩形，并带有一个颜色参数。最后，还有一个参数可以指示变换，从而将矩形移动到另一个位置。也就是说，程序创建了两个大小和位置相同的矩形，但其中一个（红色的）在两个方向上都平移了 50 像素：
+`createRect`方法创建了一个固定位置和大小的矩形，并带有一个颜色参数。最后，还有一个参数可以指示变换，从而将矩形移动到另一个位置。也就是说，程序创建了两个大小和位置相同的矩形，但其中一个（红色的）在两个方向上都平移了 50 像素：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_70_0.png)
 
@@ -1565,26 +1575,28 @@ public class TranslateProgram extends Application {
 
 ## 6.1 动画
 
-在本节中，我将介绍动画，你也可以将其视为节点变换的一种形式。如果你在短间隔内多次更改节点的一个或多个属性并执行，那么对用户来说，该节点看起来就像是“活”的一样。正如 Java 10 中描述的，节点需要在短间隔内进行重绘，并且每次重绘时某个选项的值都发生了变化。在 JavaFX 中，这种逻辑封装在许多类中，每个类都为特定的值或属性定义了一个动画。基类称为 `Transition`，但还有以下特定的过渡类：
+在本节中，我将介绍动画，你也可以将其视为节点变换的一种形式。如果你在短间隔内多次更改节点的一个或多个属性并执行，那么对用户来说，该节点看起来就像是“活”的一样。正如 Java 10 中描述的，节点需要在短间隔内进行重绘，并且每次重绘时某个选项的值都发生了变化。在 JavaFX 中，这种逻辑封装在许多类中，每个类都为特定的值或属性定义了一个动画。基类称为`Transition`，但还有以下特定的过渡类：
 
-- FadeTransition
-- FillTransition
-- RotateTransition
-- ScaleTransition
-- StrokeTransition
-- TranslateTransition
-- PathTransition
-- SequentialTransition
-- PauseTransition
-- ParallelTransition
+- `FadeTransition`
+- `FillTransition`
+- `RotateTransition`
+- `ScaleTransition`
+- `StrokeTransition`
+- `TranslateTransition`
+- `PathTransition`
+- `SequentialTransition`
+- `PauseTransition`
+- `ParallelTransition`
 
-名称已经告诉了我们该类是针对什么属性的动画。例如，我将向你展示如何使用 `FadeTransition`。视觉节点有一个 `opacity`（不透明度）属性，表示节点显示透明的程度。如果你对该属性执行动画，你可以看到图形先是完全绘制的，然后它变得越来越透明，直到完全消失。这就是 `FadeTransition` 的任务。如果你运行 `FadeAnimation` 程序，下面的窗口显示一个红圆：
+名称已经告诉了我们该类是针对什么属性的动画。例如，我将向你展示如何使用`FadeTransition`。视觉节点有一个`opacity`（不透明度）属性，表示节点显示透明的程度。如果你对该属性执行动画，你可以看到图形先是完全绘制的，然后它变得越来越透明，直到完全消失。这就是`FadeTransition`的任务。如果你运行`FadeAnimation`程序，下面的窗口显示一个红圆：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_73_0.png)
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_73_1.png)
 
 圆变得越来越淡并最终消失。然后它再次增大直到回到原始状态。这个循环重复了 5 次。代码如下：
+
+
 
 ```java
 package fadeAnimation;
@@ -1639,17 +1651,13 @@ public class FadeAnimation extends Application {
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_75_0.png)
 
-然后程序使用 `FillTransition` 将颜色变为红色。动画必须持续 5 秒，然后再次从蓝色圆开始。该动画必须重复 50 次。请注意，`FillTransition` 不能应用于通用节点，它必须是一个 `Shape`（形状）。
-
-
-
-
+然后程序使用`FillTransition`将颜色变为红色。动画必须持续 5 秒，然后再次从蓝色圆开始。该动画必须重复 50 次。请注意，`FillTransition`不能应用于通用节点，它必须是一个`Shape`（形状）。
 
 # JAVA 14：使用 JAVAFX 开发应用程序：软件开发
 
 ## 练习 20
 
-编写一个可以调用 `ScaleAnimation` 的程序，该程序会打开一个包含红色圆的窗口：
+编写一个可以调用`ScaleAnimation`的程序，该程序会打开一个包含红色圆的窗口：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_76_0.png)
 
@@ -1657,17 +1665,17 @@ public class FadeAnimation extends Application {
 
 # 练习 21
 
-编写一个可以调用 `TranslateAnimation` 的程序。该程序必须打开如下所示的窗口，其中一个红色圆通过动画从左上角移动到右下角。你可以使用 `TranslateTransition`。动画周期必须
+编写一个可以调用`TranslateAnimation`的程序。该程序必须打开如下所示的窗口，其中一个红色圆通过动画从左上角移动到右下角。你可以使用`TranslateTransition`。动画周期必须
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_76_1.png)
 
-为 2 秒，且动画必须重复 50 次。你还必须将 `AutoReverse` 设置为 `true`。
+为 2 秒，且动画必须重复 50 次。你还必须将`AutoReverse`设置为`true`。
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_77_0.png)
 
 ## 练习 22
 
-你必须编写一个名为 `RotateAnimation` 的程序显示一个矩形。矩形应该从 0 度旋转到 360 度，同时颜色必须从红色变为蓝色——并在下次旋转时再次变回：
+你必须编写一个名为`RotateAnimation`的程序显示一个矩形。矩形应该从 0 度旋转到 360 度，同时颜色必须从红色变为蓝色——并在下次旋转时再次变回：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_77_1.png)
 
@@ -1675,13 +1683,13 @@ public class FadeAnimation extends Application {
 
 ## 练习 23
 
-编写一个程序 `PathAnimation`，其中一个红色圆沿着 `CubicCurve`（见下文）移动。该曲线必须定义为一个 `Path` 对象，并可以使用 `PathTransition` 作为过渡对象。圆的动画必须运行两秒，你必须将 `AutoReverse` 设置为 `true`。
+编写一个程序`PathAnimation`，其中一个红色圆沿着`CubicCurve`（见下文）移动。该曲线必须定义为一个`Path`对象，并可以使用`PathTransition`作为过渡对象。圆的动画必须运行两秒，你必须将`AutoReverse`设置为`true`。
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_78_0.png)
 
 ## 练习 24
 
-作为动画的最后一个示例，编写一个与上述类似的程序 `SequentialAnimation`，其中一个红色圆沿着 `CubicCurve` 移动，但动画只重复一次。当圆到达曲线末端时（动画停止），圆应该通过动画将颜色变为蓝色并变回红色。因此，该程序必须使用顺序执行的两个动画。
+作为动画的最后一个示例，编写一个与上述类似的程序`SequentialAnimation`，其中一个红色圆沿着`CubicCurve`移动，但动画只重复一次。当圆到达曲线末端时（动画停止），圆应该通过动画将颜色变为蓝色并变回红色。因此，该程序必须使用顺序执行的两个动画。
 
 JAVA 14：使用 JAVAFX 开发应用程序：软件开发
 
@@ -1693,25 +1701,34 @@ JAVA 14：使用 JAVAFX 开发应用程序：软件开发
 
 ## 7.1 布局
 
-程序的场景图（scene graph）由组件组成，这些组件可以像我结合几何对象时那样绝对放置，但通常，节点是使用布局面板（layout panes）放置在场景图中的，布局面板是一个分支节点。从程序员的角度来看，布局面板具有与 Swing 中的布局管理器（layout manager）相同的特性（目的），且理论与你从 Swing 中了解的相似。所有的布局面板都有一个共同的基类 `Pane`，并有以下特定的面板：
+程序的场景图（scene graph）由组件组成，这些组件可以像我结合几何对象时那样绝对放置，但通常，节点是使用布局面板（layout panes）放置在场景图中的，布局面板是一个分支节点。从程序员的角度来看，布局面板具有与 Swing 中的布局管理器（layout manager）相同的特性（目的），且理论与你从 Swing 中了解的相似。所有的布局面板都有一个共同的基类`Pane`，并有以下特定的面板：
 
 > 我加入 MITAS 是因为我想要真正的责任
 
 工程师与地质科学家
+
 研究生课程
+
 www.discovermates.com
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_79_0.png)
 
 第 16 个月
+
 我曾在北海
+
 担任施工
+
 主管
+
 提供建议并
+
 帮助工头解决问题
 
 真实的工作
+
 国际机会
+
 三次工作实习
 
 MAERSK
@@ -1722,19 +1739,27 @@ MAERSK
 
 # JAVA 14：使用 JAVAFX 开发应用程序：软件开发
 
-- HBox
-- VBox
-- BorderPane
-- StackPane
-- FlowPane
-- TextFlow
-- AnchorPane
-- TitlePane
-- Grid Pane
+- `HBox`
+
+- `VBox`
+
+- `BorderPane`
+
+- `StackPane`
+
+- `FlowPane`
+
+- `TextFlow`
+
+- `AnchorPane`
+
+- `TitlePane`
+
+- `GridPane`
 
 在这一节中，我将展示如何使用布局面板来布局组件，当然，它们可以像你在 Swing 中熟悉的那样进行相同的嵌套。以下示例彼此相似，并简要展示了不同面板的应用，但你应该查看在线文档以及可用的属性。
 
-我想从 `HBox` 开始（`HBoxProgram` 程序），它在窗口中水平放置组件，这里有三个按钮：
+我想从`HBox`开始（`HBoxProgram`程序），它在窗口中水平放置组件，这里有三个按钮：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_80_0.png)
 
@@ -1744,7 +1769,7 @@ MAERSK
 
 如你所见，组件默认是左对齐，但可以通过属性进行更改。代码如下：
 
-```
+```java
 package hboxprogram;
 
 import javafx.application.Application;
@@ -1784,15 +1809,15 @@ public class HBoxProgram extends Application {
 }
 ```
 
-你可能注意到最后一个方法 `createButton()` 分配了按钮的首选尺寸，在 JavaFX 中，基本上这也适用于组件的大小，正如你从 Swing 中了解的那样。对于 `start()` 方法，没什么好解释的，但你应该知道如何定义组件之间的间隙。`HBox` 是一个非常简单的布局面板，可以用于相对于其首选尺寸在行上排列组件。
+你可能注意到最后一个方法`createButton()`分配了按钮的首选尺寸，在 JavaFX 中，基本上这也适用于组件的大小，正如你从 Swing 中了解的那样。对于`start()`方法，没什么好解释的，但你应该知道如何定义组件之间的间隙。`HBox`是一个非常简单的布局面板，可以用于相对于其首选尺寸在行上排列组件。
 
 # JAVA 14：使用 JAVAFX 开发应用程序：软件开发
 
-有一种名为 `VBox` 的布局面板，它与 `HBox` 平行，区别在于它将组件放置在垂直直线上。`VBoxProgram` 程序展示了该面板的应用：
+有一种名为`VBox`的布局面板，它与`HBox`平行，区别在于它将组件放置在垂直直线上。`VBoxProgram`程序展示了该面板的应用：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_82_0.png)
 
-```
+```java
 public void start(Stage stage)
 {
   VBox root = new VBox();
@@ -1812,7 +1837,7 @@ public void start(Stage stage)
 
 # JAVA 14：使用 JAVAFX 开发应用程序：软件开发组件
 
-```
+```java
 public class BorderProgram extends Application
 {
 @Override
@@ -1820,10 +1845,6 @@ public void start(Stage stage)
 {
   BorderPane root =
 ```
-
-
-
-
 
 # JAVA 14：使用 JAVFX 开发应用程序：软件开发
 
@@ -1878,17 +1899,17 @@ launch(args);
 }
 ```
 
-这 5 个独立的区域是通过三个名为 `createField()` 的辅助方法创建的。第一个用于中心区域，并创建了一个带有 `TextArea` 组件的 `BorderPane`。你应该注意如何使用 `setPadding()` 为剩余的 4 个区域设置 10 的内边距。此外，`BorderPane` 构造函数指定了一个单个参数，即显示在中心的组件。第二个 `createField()` 用于创建分别放置在顶部和底部的 `BorderPane`。你为 `BorderPane` 的构造函数指定了 5 个参数，它们解释为中、上、右、下、左。特别要注意如何定义按钮在容器中具有外边距：
+这 5 个独立的区域是通过三个名为`createField()`的辅助方法创建的。第一个用于中心区域，并创建了一个带有`TextArea`组件的`BorderPane`。你应该注意如何使用`setPadding()`为剩余的 4 个区域设置 10 的内边距。此外，`BorderPane`构造函数指定了一个单个参数，即显示在中心的组件。第二个`createField()`用于创建分别放置在顶部和底部的`BorderPane`。你为`BorderPane`的构造函数指定了 5 个参数，它们解释为中、上、右、下、左。特别要注意如何定义按钮在容器中具有外边距：
 
 ```java
 BorderPane.setMargin(cmd, new Insets(0, 0, 0, 10));
 ```
 
-在这里，`setMargin()` 是 `BorderPane` 类中的静态方法，用于定义当前布局面板中第一个参数的外边距。最后一个 `createField()` 用于为右侧和左侧区域的内容创建 `BorderPane`，原则上它的工作原理与之前的方法相同。你应该注意这两个组件都定义了底部外边距。
+在这里，`setMargin()`是`BorderPane`类中的静态方法，用于定义当前布局面板中第一个参数的外边距。最后一个`createField()`用于为右侧和左侧区域的内容创建`BorderPane`，原则上它的工作原理与之前的方法相同。你应该注意这两个组件都定义了底部外边距。
 
-最后是 `start()` 方法，这一次的根元素是一个 `BorderPane`（分支节点）。
+最后是`start()`方法，这一次的根元素是一个`BorderPane`（分支节点）。
 
-`StackPane` 是一种布局面板，它按照组件添加的顺序将它们堆叠在一起。`StackProgram` 程序显示了三个堆叠在一起的按钮：
+`StackPane`是一种布局面板，它按照组件添加的顺序将它们堆叠在一起。`StackProgram`程序显示了三个堆叠在一起的按钮：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_85_0.png)
 
@@ -1896,7 +1917,7 @@ BorderPane.setMargin(cmd, new Insets(0, 0, 0, 10));
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_86_0.png)
 
-该应用可能局限限，但主要对于 `Shape` 对象，这种可能性是有用的。使用 `StackPane` 非常简单：
+该应用可能局限限，但主要对于`Shape`对象，这种可能性是有用的。使用`StackPane`非常简单：
 
 ```java
 public void start(Stage stage) {
@@ -1909,6 +1930,8 @@ public void start(Stage stage) {
   stage.show();
 }
 ```
+
+
 
 ```java
 private Button createButton(String text, int width, int height, int size) {
@@ -2016,10 +2039,6 @@ public void start(Stage stage)
 
 `GridPane` 是一种强大的布局面板，允许你自己在行和列的网格中排列组件。它对于创建表单和其他复杂的布局非常有用。
 
-
-
-
-
 # JAVA 14: 使用 JAVFX 开发应用程序：软件开发
 
 ```java
@@ -2074,11 +2093,11 @@ GridPane.setHalignment(cmd, HPos.RIGHT);
 
 JavaFX 有其自己的事件类型，基础类型称为 `Event`。特定事件类型的示例有：
 
-- MouseEvent
-- KeyEvent
-- DragEvent
-- WindowEvent
-- ActionEvent
+- `MouseEvent`
+- `KeyEvent`
+- `DragEvent`
+- `WindowEvent`
+- `ActionEvent`
 
 事件具有以下特征特征：
 
@@ -2086,9 +2105,9 @@ JavaFX 有其自己的事件类型，基础类型称为 `Event`。特定事件�
 2. 来源（source），即产生事件的物体，例如鼠标。
 3. 事件类型（event type），如鼠标按下、鼠标释放等。
 
-当事件发生时，我们称之为为“事件分发链”（event dispatch chain），它是从根阶段（stage）到该节点的路径。例如，如果是一个圆形（Circle）节点，它的路径可能是：
+当事件发生时，我们称之为为“事件分发链”（event dispatch chain），它是从根阶段（stage）到该节点的路径。例如，如果是一个圆形（`Circle`）节点，它的路径可能是：
 
-Stage – Scene – Group – Circle
+`Stage` – `Scene` – `Group` – `Circle`
 
 当事件发生时，它会从上到下发送到分发链中的所有节点。如果某个节点注册了该事件的过滤器（filter），则会执行操作，随后事件将发送到其目标节点，如果存在事件处理器（handler），则将在那里进行处理。这一阶段被称为**事件捕获阶段**（Event Capturing Phase）。之后，事件将沿着返回路径移动，对于每个节点，如果分配了处理器，则将在那里进行处理。这一阶段被称为**冒泡阶段**（Bubbling Phase）。因此，一个事件可能会导致多个事件处理器；捕获阶段的事件处理器被称为**过滤器**（filters），而冒泡阶段的事件处理器被称为**处理器**（handlers）。
 
@@ -2096,28 +2115,29 @@ Stage – Scene – Group – Circle
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_93_0.png)
 
-其中 VBox 下有 14 个节点。如果你打开该程序，会得到这个窗口：
+其中 `VBox` 下有 14 个节点。如果你打开该程序，会得到这个窗口：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_94_0.png)
+
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_94_1.png)
 
 例如，如果你点击绿色区域的某个位置，标准输出将显示以下内容：
 
-- Stage - capturing
-- Scene - capturing
-- BorderPane - capture
-- StackPane - capture
-- Rectangle - capture
-- Rectangle - bubbling
-- StackPane - bubbling
-- BorderPane - bubbling
-- Scene - bubbling
-- Stage - bubbling
+- `Stage` - capturing
+- `Scene` - capturing
+- `BorderPane` - capture
+- `StackPane` - capture
+- `Rectangle` - capture
+- `Rectangle` - bubbling
+- `StackPane` - bubbling
+- `BorderPane` - bubbling
+- `Scene` - bubbling
+- `Stage` - bubbling
 
 在这里你可以看到鼠标点击事件是如何贯穿整个分发链并返回的。你用于检查事件处理的含义应该被中断。例如，勾选 *Filter Scene* 并点击绿色矩形，将得到结果：
 
-- Stage - capturing
-- Scene - capturing
+- `Stage` - capturing
+- `Scene` - capturing
 
 鼓励你测试该程序，以及根据所选的不同复选框，在不同节点上点击鼠标会发生什么。以下是代码：
 
@@ -2167,10 +2187,6 @@ public class EventPhaseProgram extends Application {
 }
 ```
 
-
-
-
-
 # JAVA 14: 使用 JAVAFX 开发应用程序：软件开发组件
 
 ```java
@@ -2195,25 +2211,27 @@ private Button createButton()
 }
 ```
 
+
+
 ```java
 private Circle createCircle()
 {
     Circle circle = new Circle(20, 20, 100, Color.RED);
-circle.addEventFilter(MouseEvent.MOUSE_CLICKED,
-new Handler("Circle capture", filterCirc);
-circle.addEventHandler(MouseEvent.MOUSE_CLICKED,
-new Handler("Circle bubbling", handleCirc);
-return circle;
+    circle.addEventFilter(MouseEvent.MOUSE_CLICKED,
+        new Handler("Circle capture", filterCirc);
+    circle.addEventHandler(MouseEvent.MOUSE_CLICKED,
+        new Handler("Circle bubbling", handleCirc);
+    return circle;
 }
 
 private Rectangle createRect()
 {
     Rectangle rect = new Rectangle(0, 0, 220, 220);
-rect.setFill(Color.GREEN);
-rect.addEventFilter(MouseEvent.MOUSE_CLICKED,
-new Handler("Rectangle capture", filterRect));
-rect.addEventHandler(MouseEvent.MOUSE_CLICKED,
-new Handler("Rectangle bubbling", handleRect));
+    rect.setFill(Color.GREEN);
+    rect.addEventFilter(MouseEvent.MOUSE_CLICKED,
+        new Handler("Rectangle capture", filterRect));
+    rect.addEventHandler(MouseEvent.MOUSE_CLICKED,
+        new Handler("Rectangle bubbling", handleRect));
     return rect;
 }
 
@@ -2248,7 +2266,7 @@ class Handler implements EventHandler<MouseEvent>
 stage.addEventHandler(MouseEvent.MOUSE_CLICKED, new Handler("...", filterStage));
 ```
 
-其中第一个参数指示要监听哪个事件，而事件处理器中有一个对象（在本例中）实现了 `EventHandler<MouseEvent>` 接口。该对象由 `Handler` 类定义，它是一个内部类，其构造函数接收一个要在屏幕上打印的文本（text）作为参数，以及一个用于测试的 `CheckBox` 引用。该类应该实现该方法：
+其中第一个参数指示要监听哪个事件，而事件处理器中有一个对象（在本例中）实现了 `EventHandler<MouseEvent>` 接口。该对象由 `Handler` 类定义，它是一个内部类，其构造函数接收一个要在屏幕上打印的文本（`text`）作为参数，以及一个用于测试的 `CheckBox` 引用。该类应该实现该方法：
 
 ```java
 public void handle(MouseEvent e)
@@ -2354,18 +2372,16 @@ public static void main(String[] args) {
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_103_1.png)
 
+## JAVA 14：使用 JAVAFX 开发应用程序
 
-
-
-
-## JAVA 14: 使用 JAVAFX 开发应用程序
-软件开发组件
+### 软件开发组件
 
 ```java
 public class HandlerProgram extends Application
 {
     private boolean blue = true;
     private Transition trans;
+}
 ```
 
 ```java
@@ -2414,9 +2430,11 @@ private Circle createCircle() {
     Circle circle = new Circle(40, 80, 25, Color.BLUE);
     circle.setStrokeWidth(20);
     circle.setOnMouseClicked(
-e -> { blue = !blue; circle.setFill(blue ? Color.BLUE : Color.RED);
-return circle;
-});
+        e -> {
+            blue = !blue;
+            circle.setFill(blue ? Color.BLUE : Color.RED);
+            return circle;
+        });
 ```
 
 ```java
@@ -2460,8 +2478,9 @@ public static void main(String[] args)
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_106_0.png)
 
-## 赋能人类。
-改进商业。
+## 赋能人类
+
+### 改进商业
 
 BI挪威商学院（BI Norwegian Business School）是欧洲最大的商学院之一，欢迎超过 20,000 名学生。我们的课程提供了一个充满活力且多元文化的学习环境，具有国际视野，为学生提供满足商业需求的专业技能。
 
@@ -2472,7 +2491,7 @@ BI 提供四种不同的两年制全日制科学硕士（MSc）课程，均采�
 - 战略营销管理硕士
 - 领导与组织心理学硕士
 
-www.bi.edu/master
+`www.bi.edu/master`
 
 ## 练习 25
 
@@ -2492,122 +2511,66 @@ www.bi.edu/master
 
 你必须编写一个使用 ChoiceBox（选择框）的程序：
 
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_108_0.png)
 
-你必须从列表中选择一个人。选择人员后，姓名和职位名称必须通过 Label（标签）显示：
+
+你必须从列表中选择一个人。选择人员后，姓名和职位名称必须通过`Label`（标签）显示：
 
 ## 练习 28
 
-你必须编写与上一个练习相同的程序，但区别在于：不再使用 ChoiceBox，而是使用 ComboBox（组合框）。编写程序后，尝试研究 ChoiceBox 和 ComboBox 之间的区别。
+你必须编写与上一个练习相同的程序，但区别在于：不再使用`ChoiceBox`，而是使用`ComboBox`（组合框）。编写程序后，尝试研究`ChoiceBox`和`ComboBox`之间的区别。
 
 ## 问题 3
 
-从 Swing 中熟悉组件 JList，它是一个列表框，是常用组件之一。在 JavaFX 中，它被 ListView 替代，这是一个更先进的组件，具有许多新选项并涉及多个类。你必须编写一个应用程序来打开以下窗口，其中窗口显示四个控件（实际上是 5 个），每个 ListView 显示 10 个 Person 对象，Person 是练习 27 中的类。
+从 Swing 中熟悉组件`JList`，它是一个列表框，是常用组件之一。在 JavaFX 中，它被`ListView`替代，这是一个更先进的组件，具有许多新选项并涉及多个类。你必须编写一个应用程序来打开以下窗口，其中窗口显示四个控件（实际上是 5 个），每个`ListView`显示 10 个`Person`对象，`Person`是练习 27 中的类。
 
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_110_0.png)
+- 3. 左下角的`ListView`控件应该显示项目，每个元素都是一个`ChoiceBox`，你可以通过选择另一个`Person`对象来更新该项目（它也内置在组件中）。
 
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_110_1.png)
-
-
-
-
-
-# JAVA 14: 使用 JAVFX 开发应用程序：软件开发
-
-- 3. 左下角的 `ListView` 控件应该显示项目，每个元素都是一个 `ChoiceBox`，你可以通过选择另一个 `Person` 对象来更新该项目（它也内置在组件中）。
-- 4. 最后，最后一个 `ListView` 以 `Checkbox` 控件的形式显示项目（它也集成在 `ListView` 组件中）。如果你点击按钮，程序可能会打开一个消息框，显示已选择（通过复选框）的对象。
+- 4. 最后，最后一个`ListView`以`Checkbox`控件的形式显示项目（它也集成在`ListView`组件中）。如果你点击按钮，程序可能会打开一个消息框，显示已选择（通过复选框）的对象。
 
 该任务要求你查阅文档以确定要写的内容，也许你也可以在网上找到帮助。
 
 ## 练习 29
 
-JavaFX 拥有一个 `ColorPicker` 组件，这是一个用于选择色的相对复杂的组件。另一方面，该组件既灵活又易用。你必须编写一个程序，打开一个窗口，可以在其中选择一种颜色来给矩形上色：
-
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_111_0.png)
+JavaFX 拥有一个`ColorPicker`组件，这是一个用于选择色的相对复杂的组件。另一方面，该组件既灵活又易用。你必须编写一个程序，打开一个窗口，可以在其中选择一种颜色来给矩形上色：
 
 ## 练习 30
 
-JavaFX 有一个很好的 `DatePicker` 控件，用于选择日期。你必须编写一个程序，打开以下窗口，其中选择了 2017 年 11 月 15 日：
+JavaFX 有一个很好的`DatePicker`控件，用于选择日期。你必须编写一个程序，打开以下窗口，其中选择了 2017 年 11 月 15 日：
 
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_111_1.png)
-
-选择日期后，底部的 `Label` 必须更新。
-
-JAVA 14: 使用 JAVAFX 开发应用程序：软件开发组件
+选择日期后，底部的`Label`必须更新。
 
 ## 练习 31
 
-JavaFX 有像 Swing 一样的进度条，但也有 `ProgressIndicator`，区别在于这两个组件的绘制方式。`ProgressIndicator` 控件是 `ProgressBar` 的基类。进度组件的更新方式与 Swing 相同，使用由 `javafx.concurrent` 包中的 `Task` 对象表示的线程。你必须编写一个程序，显示一个 `ProgressIndicator` 和一个 `ProgressBar`，两者都可以通过点击按钮启动（停止）：
-
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_112_0.png)
-
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_112_1.png)
-
-到 2020 年，风能可以提供我们地球十分之一的电力需求。今天，SKF 的创新知识对于运行世界上大部分风力涡轮机至关重要。
-
-高达 25% 的发电成本与维护有关。通过我们的在线状态监控和自动调整系统可以大幅降低这些成本。我们帮助从空气中创造更便宜的能量变得具有经济效益。
-
-通过分享我们的经验、专业知识和创造力，行业可以获得超出预期的性能。与迎接挑战的最优秀员工并肩！
-
-知识工程的力量
-
-接入知识工程的力量。
-访问我们的网站：www.skf.com/knowledge
-
-在 bookboom.com 免费下载电子书
-
-JAVA 14: 使用 JAVAFX 开发应用程序：软件开发组件
+JavaFX 有像 Swing 一样的进度条，但也有`ProgressIndicator`，区别在于这两个组件的绘制方式。`ProgressIndicator`控件是`ProgressBar`的基类。进度组件的更新方式与 Swing 相同，使用由`javafx.concurrent`包中的`Task`对象表示的线程。你必须编写一个程序，显示一个`ProgressIndicator`和一个`ProgressBar`，两者都可以通过点击按钮启动（停止）：
 
 以下是点击两个按钮后的窗口：
 
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_113_0.png)
-
 以及是两个进度组件完成后的窗口：
-
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_113_1.png)
 
 ## 练习 33
 
-你必须编写一个程序，打开以下窗口，该窗口包含一个 `Label`、一个 `TextField` 和两个 `Button` 控件：
+你必须编写一个程序，打开以下窗口，该窗口包含一个`Label`、一个`TextField`和两个`Button`控件：
 
 | 名字 | 保存 | 关闭 |
 |---|---|---|
 
-按钮不需要动作，但输入字段必须有一个 `Tooltip`（提示框）。有趣的是，你可以为 `tooltip` 附加样式，而样式是下一章的主题。
-
-在 bookhoon.com 免费下载电子书
+按钮不需要动作，但输入字段必须有一个`Tooltip`（提示框）。有趣的是，你可以为`tooltip`附加样式，而样式是下一章的主题。
 
 ## 练习 34
 
-编写一个程序，拥有一个位于 `SplitPane` 中包含两个 `TextArea` 控件的窗口：
-
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_114_0.png)
+编写一个程序，拥有一个位于`SplitPane`中包含两个`TextArea`控件的窗口：
 
 ## 问题 4
 
 在此任务中，你应该处理 JavaFX 中的菜单。你必须编写一个打开以下窗口的应用程序：
 
-窗口有一个包含两个菜单的菜单栏，且窗口本身（中心）有一个 `Canvas` 对象。第一个菜单必须具有以下功能：
-
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_114_1.png)
-
-你想做什么？无论你对未来想要什么，一个业务遍及多个雇主始终意味着全球超过 150,000 个朋友和超过 80 位同事。我们提供极佳的机会——查看我们网站上的相关部分。我们期待认识你！
-
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_115_0.png)
-
-JAVA 14: 使用 JAVAFX 开发应用程序：软件开发组件
+窗口有一个包含两个菜单的菜单栏，且窗口本身（中心）有一个`Canvas`对象。第一个菜单必须具有以下功能：
 
 如果你点击三个顶部菜单项之一，窗口中应该出现一个带有黑框的绿色形状，例如：
 
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_116_0.png)
+第四个菜单项必须清除窗口，而最后一个应该关闭程序。`Options`（选项）菜单有一个菜单项和一个`Slider`（滑动条）。第一个菜单项必须指示是否绘制形状，而滑动条则指示大小。如果你移动滑动条，任何形状的周长都应该更新。如果你右键点击`canvas`对象，将获得一个上下文菜单：
 
-第四个菜单项必须清除窗口，而最后一个应该关闭程序。`Options`（选项）菜单有一个菜单项和一个 `Slider`（滑动条）。第一个菜单项必须指示是否绘制形状，而滑动条则指示大小。如果你移动滑动条，任何形状的周长都应该更新。如果你右键点击 `canvas` 对象，将获得一个上下文菜单：
-
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_116_2.png)
-
-并点击两个菜单项之一，窗口底部将出现一个 `ColorPicker` 对象，你可以选择其中一种颜色：
-
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_117_0.png)
+并点击两个菜单项之一，窗口底部将出现一个`ColorPicker`对象，你可以选择其中一种颜色：
 
 作为最后一项要求，所有菜单项都必须提供快捷键，并且必须为这三个形状定义加速键（accelerator keys）。
 
@@ -2615,38 +2578,19 @@ JAVA 14: 使用 JAVAFX 开发应用程序：软件开发组件
 
 你必须编写一个应用程序，打开以下窗口：
 
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_117_1.png)
-
 以及一个使用标签（tabs）的程序。在第一个标签上，你必须输入名称和注册日期，而在另一个标签上，你可以输入地址和电子邮件地址。如果你点击按钮，将得到一个显示所输入数据的消息框：
-
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_117_2.png)
-
-JAVA 14: 使用 JAVAFX 开发应用程序：软件开发组件
 
 ## 练习 36
 
-FX 有名为 `HTMLEditor` 的控件，它是一个完整的 HTML 编辑器。你必须编写一个应用程序，打开一个可以编辑 HTML 文档的窗口：
-
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_118_0.png)
+FX 有名为`HTMLEditor`的控件，它是一个完整的 HTML 编辑器。你必须编写一个应用程序，打开一个可以编辑 HTML 文档的窗口：
 
 程序必须拥有按钮，以便你加载和保存本地文件的 HTML 文档。
 
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_118_1.png)
-
 ## 7.4 对话框
 
-你可以使用对话框，就像 Swing 一样，有开箱即用的类；另一方面，也有自定义的对话框。最的是 `Alert`，它对应于 Swing 中的 `MessageDialog`。`AlertProgram` 应用程序打开以下窗口：
+你可以使用对话框，就像 Swing 一样，有开箱即用的类；另一方面，也有自定义的对话框。最的是`Alert`，它对应于 Swing 中的`MessageDialog`。`AlertProgram`应用程序打开以下窗口：
 
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_119_0.png)
-
-如果你点击 `Info` 按钮，将得到下方显示简单消息的消息框；点击 `Save` 按钮，可能会收到相应的消息框（但带有错误消息），最后最后一个按钮将产生一个带有警告的消息框，询问你是否要删除输入字段：
-
-
-
-
-
-# JAVA 14: 使用 JAVAFX 开发应用程序
-# 软件开发
+如果你点击`Info`按钮，将得到下方显示简单消息的消息框；点击`Save`按钮，可能会收到相应的消息框（但带有错误消息），最后最后一个按钮将产生一个带有警告的消息框，询问你是否要删除输入字段：
 
 ```java
 public class AlertProgram extends Application {
@@ -2703,11 +2647,6 @@ private class InfoListener implements EventHandler<ActionEvent> {
 }
 ```
 
-# JAVA 14: 使用 JAVAFX 开发应用程序
-# 软件开发
-
-组件
-
 ```java
 private class SaveListener implements EventHandler<ActionEvent> {
     @Override
@@ -2730,11 +2669,6 @@ private class SaveListener implements EventHandler<ActionEvent> {
 }
 ```
 
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_121_0.png)
-
-# JAVA 14: 使用 JAVAFX 开发应用程序
-# 软件开发
-
 ```java
 private class ClearListener implements EventHandler<ActionEvent> {
     @Override
@@ -2756,9 +2690,9 @@ public static void main(String [] args) {
 }
 ```
 
-按钮在 `createCommands()` 方法中创建，这里是有趣的 ActionEvent 监听器，它们定义为程序末尾类。`InfoListener` 类为 Info 缓冲区创建了一个事件对象，处理器中是一个类型为 `AlertType.INFORMATION` 的 `Alert` 对象，结果就是上面显示的对话框。你必须注意，对话框是单独初始化的，具体的消息显示在消息框中。对话框通过 `show()` 方法打开。该方法是非阻塞的，程序不会等待返回值。
+按钮在`createCommands()`方法中创建，这里是有趣的`ActionEvent`监听器，它们定义为程序末尾类。`InfoListener`类为`Info`缓冲区创建了一个事件对象，处理器中是一个类型为`AlertType.INFORMATION`的`Alert`对象，结果就是上面显示的对话框。你必须注意，对话框是单独初始化的，具体的消息显示在消息框中。对话框通过`show()`方法打开。该方法是非阻塞的，程序不会等待返回值。
 
-`SaveListener` 类定义了 Save 按钮的监听器，并模拟了保存输入的文本。它测试文本长度，如果长度小于 5，则会弹出与上面类似的警报。区别在于类型，这里是 `AlertType.ERROR` 对应于错误消息，然后通过 `showAndWait()` 方法打开对话框。这意味着消息框是阻塞的，随后的语句
+`SaveListener`类定义了`Save`按钮的监听器，并模拟了保存输入的文本。它测试文本长度，如果长度小于 5，则会弹出与上面类似的警报。区别在于类型，这里是`AlertType.ERROR`对应于错误消息，然后通过`showAndWait()`方法打开对话框。这意味着消息框是阻塞的，随后的语句
 
 ```java
 msg = "Invalid text entered";
@@ -2766,14 +2700,15 @@ msg = "Invalid text entered";
 
 只有在对话框关闭后才会执行。
 
-最后一个监听器类与其他类相似，但这次类型是 `AlertType.CONFIRMATION`，打开一个带有两个按钮的对话框，用户必须选择 YES 或 NO。它也通过 `showAndWait()` 打开，你应该注意这次有一个返回值，以及如何测试该值。
+最后一个监听器类与其他类相似，但这次类型是`AlertType.CONFIRMATION`，打开一个带有两个按钮的对话框，用户必须选择 YES 或 NO。它也通过`showAndWait()`打开，你应该注意这次有一个返回值，以及如何测试该值。
 
-还有一个 `ChoiceDialog`，用户可以在多个选项之间选择一个值。
-`ChoiceProgram` 程序打开一个带有按钮的窗口，点击该按钮将向你展示下图所示的对话框：
+还有一个`ChoiceDialog`，用户可以在多个选项之间选择一个值。
 
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_123_0.png)
+`ChoiceProgram`程序打开一个带有按钮的窗口，点击该按钮将向你展示下图所示的对话框：
 
 在下拉菜单中，你可以选择一个文本（在此处是一个丹麦国王的名字）。如果你点击 OK，所选的名称将返回给应用程序，它将显示在窗口中。代码如下：
+
+
 
 ```java
 public class ChoiceProgram extends Application {
@@ -2814,10 +2749,9 @@ public class ChoiceProgram extends Application {
 }
 ```
 
-# JAVA 14: 使用 JAVAFX 开发应用程序
-# 软件开发
+# Java 14：使用 JavaFX 开发应用程序
 
-组件
+## 软件开发组件
 
 ```java
 private void showDialog() {
@@ -2831,12 +2765,7 @@ private void showDialog() {
 }
 ```
 
-# JAVA 14: 使用 JAVAFX 开发应用程序
-# 软件开发
-
-组件
-
-作为最后一个标准对话框，你你有一个用于输入文本的 `TextInputDialog`。`InputProgram` 程序像之前的程序一样打开一个带有按钮的窗口，点击该按钮将给你显示一个可以在其中输入文本的对话框：
+作为最后一个标准对话框，你有一个用于输入文本的 `TextInputDialog`。`InputProgram` 程序像之前的程序一样打开一个带有按钮的窗口，点击该按钮将给你显示一个可以在其中输入文本的对话框：
 
 ```java
 private void showDialog() {
@@ -2853,8 +2782,6 @@ private void showDialog() {
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_125_1.png)
 
 如果你点击顶部的按钮，将得到一个对话框，在其中你应该输入人的姓名和职位，并选择一个日期（可以解释为生日、预约日期或其他内容）：
-
-
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_126_0.png)
 
@@ -2878,7 +2805,7 @@ public class Person
 ...
 ```
 
-# JAVA 14：使用 JAVFX 开发应用程序：软件开发组件
+## `Person.toString()`
 
 ```java
 @Override
@@ -2920,76 +2847,121 @@ EventHandler<ActionEvent> handler)
 }
 ```
 
+```java
 private void enterDialog(){
+
   Dialog<Person> dialog = new Dialog();
+
   dialog.setTitle("Enter person");
+
   dialog.setResizable(false);
+
   TextField name = new TextField();
+
   TextField job = new TextField();
+
   DatePicker date = new DatePicker();
+
   name.setPrefWidth(300);
+
   job.setPrefWidth(300);
+
   date.setPrefWidth(150);
+
   GridPane grid = new GridPane();
+
   grid.setHGap(10);
+
   grid.setVGap(20);
+
   grid.setPadding(new Insets(10, 10, 10, 10));
+
   grid.add(new Label("Name"), 0, 0);
+
   grid.add(new Label("Job"), 0, 1);
+
   grid.add(job, 1, 1);
+
   grid.add(new Label("Date"), 0, 2);
+
   grid.add(date, 1, 2);
+
   dialog.getDialogPane().setContent(grid);
+
   dialog.getDialogPane().getButtons().add(
+
     new Button("OK"), ButtonData.OK_DONE);
+
   dialog.getDialogPane().getButtons().add(
+
     new Button("Cancel"), ButtonData.CANCEL_CLOSE);
+
   dialog.setResultConverter(new Callback<ButtonType, Person>() {
+
     @Override
+
     public Person call(ButtonType type) {
+
       if (type == ButtonData.OK_DONE) {
+
         return new Person(name.getText(), job.getText(), date.getValue());
+
       }
+
       return null;
+
     }
+
   });
 ```
 
-# JAVA 14：使用 JAVFX 开发应用程序：软件开发
-
 ```java
 Optional<Person> result = dialog.showWait();
+
 if (result.isPresent()) persons.add(result.get());
 ```
 
 ```java
 private void showDialog() {
+
     ListView<Person> view = new ListView();
+
     view.setPref(400, 300);
+
     view.getItems().addAll(persons);
+
     BorderPane pane = new BorderPane(view);
+
     DialogList<Person>> dialog = new Dialog();
+
     dialog.setTitle("Persons");
+
     dialog.setHeaderText("You have entered the following persons:");
+
     dialog.getDialogPane().setContent(pane);
+
     dialog.getDialogPane().getButton().add(new ButtonType("Close", ButtonData.CANCEL_CLOSE));
+
     dialog.show();
+
 }
 ```
 
 ```java
 public static void main(String [] args) {
+
     launch(args);
+
 }
 ```
 
-在程序开始时，定义了一个 Person 对象的列表，这些对象是在输入对话框中创建的。`start()` 方法非常简单，唯一需要注意的是与两个按钮关联的事件处理器。第一个调用 `enterDialog()`，它创建了一个类型为 Person 对象的 Dialog 对象。参数类型 `Person` 指定了如果对话框通过点击 OK 结束，将返回哪个对象。接下来，必须定义对话框的内容，这是通过 `GridPane` 实现的，它布局了对话框组件，并将此 Pane 分给对话框：
+在程序开始时，定义了一个 `Person` 对象的列表，这些对象是在输入对话框中创建的。`start()` 方法非常简单，唯一需要注意的是与两个按钮关联的事件处理器。第一个调用 `enterDialog()`，它创建了一个类型为 `Person` 对象的 `Dialog` 对象。参数类型 `Person` 指定了如果对话框通过点击 OK 结束，将返回哪个对象。接下来，必须定义对话框的内容，这是通过 `GridPane` 实现的，它布局了对话框组件，并将此 Pane 分给对话框：
 
 ```java
 dialog.getDialogPane().setContent(grid);
 ```
 
-下一步定义了对话框应该包含哪些内容，然后定义了如何点击 OK 来创建一个 Person 对象，该对象必须是对话框的返回值。
+下一步定义了对话框应该包含哪些内容，然后定义了如何点击 OK 来创建一个 `Person` 对象，该对象必须是对话框的返回值。
 
 另一个对话框基本上是完全相同，但使用的是 `BorderPane`。主要的区别是它没有返回值。你应该注意这个对话框有一个标题文本（header text），而第一个没有，以及标题文本对结果意味着什么。
 
@@ -2999,44 +2971,11 @@ dialog.getDialogPane().setContent(grid);
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_126_0.png)
 
-在 Web 应用程序中，你使用级联样式表，你也可以在 JavaFX 中使用它。理念与 Web 应用程序相同，即将窗口及其内容的定义与呈现分离，这样你就可以在不更改代码的情况下更改程序的外观。另一方面，语法略有不同，像 Web 应用程序一样，最大的挑战是学习如何编写样式以及它们称为什么。这个主题通过示例来说效果最好，且 `StyleProgram` 程序打开了以下窗口：
-
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_126_0.png)
-
-在 Web 应用程序中，你使用级联样式表，你也可以在 JavaFX 中使用它。理念与 Web 应用程序相同，即将窗口及其内容的定义与呈现分离，这样你就可以在不更改代码的情况下更改程序的外观。另一方面，语法略有不同，像 Web 应用程序一样，最大的挑战是学习如何编写样式以及它们称为什么。这个主题通过示例来说效果最好，且 `StyleProgram` 程序打开了以下窗口：
-
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_126_0.png)
-
-在 Web 应用程序中，你使用级联样式表，你也可以在 JavaFX 中使用它。理念与 Web 应用程序相同，即将窗口及其内容的定义与呈现分离，这样你就可以在不更改代码的情况下更改程序的外观。另一方面，语法略有不同，像 Web 应用程序一样，最大的挑战是学习如何编写样式以及它们称为什么。这个主题通过示例来说效果最好，且 `StyleProgram` 程序打开了以下窗口：
-
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_126_0.png)
-
-在 Web 应用程序中，你使用级联样式表，你也可以在 JavaFX 中使用它。理念与 Web 应用程序相同，即将窗口及其内容的定义与呈现分离，这样你就可以在不更改代码的情况下更改程序的外观。另一方面，语法略有不同，像 Web 应用程序一样，最大的挑战是学习如何编写样式以及它们称为什么。这个主题通过示例来说效果最好，且 `StyleProgram` 程序打开了以下窗口：
-
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_126_0.png)
-
-（注：原文中存在大量重复段落，根据指令“不要重复输出原文”，此处仅保留翻译后的核心逻辑与格式结构）
-
-```css
-# 8 样式
-```
-
-
-
-
-
-# JAVA 14：使用 JAVAFX 开发应用程序：
-软件开发样式
-
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_133_0.png)
-
 因此，CSS 样式表作为资源存放在 `/css` 文件夹中（同样位于 `/src` 目录下）。这不是强制要求，但建议此这样做，因为该文件将成为项目 jar 文件的一部分。以下是上述程序的代码：
 
 ```java
 package styleprogram;
-```
 
-```java
 import javafx.application.Application;
 import javafx.event.*;
 import javafx.Scene;
@@ -3044,63 +2983,93 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import javafx.geometry.*;
-```
 
-![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_133_1.png)
-
-# JAVA 14：使用 JAVAFX 开发应用程序：
-软件开发样式
-
-```java
 public class StyleProgram extends Application {
     private TextField txtName;
     private TextField txtJob;
 
     @Override
-    public void start(Stage stage) {
-        HBox commands = new HBox(10);
-        createButton("Save", e -> {new Alert(Alert.Type.INFORMATION, "Object saved.", ButtonType.CLOSE).show();});
-        createButton("Clear", e -> { txtName.clear(); txtJob.clear(); });
-        commands.setAlignment(Pos.CENTER_RIGHT);
-        GridPane root = new GridPane();
-        root.add(0, createLabel("Name", "-fx-font-size: 18; -fx-text-fill: darkred"));
-        txtName = createField(300);
-        root.add(1, createLabel("Job", "-fx-font-size: 18; -fx-text-fill: darkgreen"));
-        txtJob = createField(300);
-        root.add(commands, 1, 2);
-        root.setHgap(10);
-        root.setPadding(new Insets(20, 20, 20, 20));
-        root.setStyleClass().add("border");
-        Scene scene = new Scene(root);
-        scene.getStylesheets().add("resources/css/styles.css");
-        stage.setTitle("StyleProgram");
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    private Label createLabel(String text, String style) {
-        Label label = new Label(text);
-        label.setStyle(style);
-        return label;
-    }
-
-    private TextField createField(double width) {
-        TextField field = new TextField();
-        field.setPrefWidth(width);
-        return field;
-    }
-
-    private Button createButton(String text, EventHandler<ActionEvent> handler) {
-        Button cmd = new Button(text);
-        cmd.setOnAction(handler);
-        return cmd;
-    }
-
-    public static void main(String[] args) {
-        launch(args);
-    }
-}
 ```
+
+![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_133_0.png)
+
+
+
+`public void start(Stage stage)` {
+
+    `HBox commands = new HBox(10);`
+
+    `createButton("Save", e -> {new Alert(Alert.Type.INFORMATION, "Object saved.", ButtonType.CLOSE).show();});`
+
+    `createButton("Clear", e -> { txtName.clear(); txtJob.clear(); });`
+
+    `commands.setAlignment(Pos.CENTER_RIGHT);`
+
+    `GridPane root = new GridPane();`
+
+    `root.add(0, createLabel("Name", "-fx-font-size: 18; -fx-text-fill: darkred"));`
+
+    `txtName = createField(300);`
+
+    `root.add(1, createLabel("Job", "-fx-font-size: 18; -fx-text-fill: darkgreen"));`
+
+    `txtJob = createField(300);`
+
+    `root.add(commands, 1, 2);`
+
+    `root.setHgap(10);`
+
+    `root.setPadding(new Insets(20, 20, 20, 20));`
+
+    `root.setStyleClass().add("border");`
+
+    `Scene scene = new Scene(root);`
+
+    `scene.getStylesheets().add("resources/css/styles.css");`
+
+    `stage.setTitle("StyleProgram");`
+
+    `stage.setScene(scene);`
+
+    `stage.show();`
+
+}
+
+`private Label createLabel(String text, String style)` {
+
+    `Label label = new Label(text);`
+
+    `label.setStyle(style);`
+
+    `return label;`
+
+}
+
+`private TextField createField(double width)` {
+
+    `TextField field = new TextField();`
+
+    `field.setPrefWidth(width);`
+
+    `return field;`
+
+}
+
+`private Button createButton(String text, EventHandler<ActionEvent> handler)` {
+
+    `Button cmd = new Button(text);`
+
+    `cmd.setOnAction(handler);`
+
+    `return cmd;`
+
+}
+
+`public static void main(String[] args)` {
+
+    `launch(args);`
+
+}
 
 这是一个简单的程序，使用 `GridPane` 布局组件。样式表可以分配给场景图或分支节点。在这种情况下，它被分配给了场景图：
 
@@ -3136,10 +3105,10 @@ root.getStyleClass().add("border");
 
 其中包含 2 个 `Label` 控件、1 个 `TextField` 控件、1 个 `PasswordField` 控件和 2 个 `Button` 控件。对于这些控件，必须设置以下属性：
 
-- Label: 字体必须为粗体
-- TextField: 字体必须为粗体
-- PasswordField: 必须有灰色背景
-- Button: 必须有灰色背景
+- `Label`: 字体必须为粗体
+- `TextField`: 字体必须为粗体
+- `PasswordField`: 必须有灰色背景
+- `Button`: 必须有灰色背景
 
 # JAVA 14：使用 JAVAFX 开发应用程序
 
@@ -3169,33 +3138,43 @@ FXML 文件是：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
+
 <AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofxml.FXMLDocumentController">
+
    <children>
+
       <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButton" fx:id="button" />
+
       <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
+
    </children>
+
 </AnchorPane>
 ```
-
-
-
-
 
 # JAVA 14: 使用 JAVAFX 开发应用程序：软件开发
 
 ```java
 @FXML
+
 private void handleButtonAction(ActionEvent event)
+
 {
+
     System.out.println("You clicked me!");
+
     label.setText("Hello World!");
+
 }
 ```
 
 ```java
 @Override
+
 public void initialize(URL url, ResourceBundle rb)
+
 {
+
 }
 ```
 
@@ -3207,38 +3186,63 @@ public void initialize(URL url, ResourceBundle rb)
 <?xml version="1.0" encoding="UTF-8"?>
 
 import java.lang.*;
+
 import javafx.util.*;
+
 import javafx.scene.*;
+
 import javafx.scene.control.*;
+
 import javafx.scene.layout.*;
+
 import javafx.scene.geometry.*
+
 import javafx.scene.text.*
 ```
 
 ```xml
 <VBox alignment="CENTER" spacing="20" prefWidth="400"
+
      xmlns:fx="http://javafx.com/fxml/1"
+
      fx:controller="hellofxml.FXMLDocumentController">
+
 <style>
+
     -fx-padding: 20;
+
     -fx-border-style: solid;
+
     -fx-border-width: 2;
+
     -fx-border-insets: 25;
+
     -fx-border-radius: 10;
+
     -fx-border-color: darkred;
+
 </style>
+
 <children>
+
 <TextField fx:id="name" prefWidth="300" maxWidth="300" />
 ```
 
 ```xml
 <Button text="Click Me!" prefWidth="100" onAction="#handleAction" fx:id="button" />
+
 <Label minHeight="20" fx:id="label" fillColor="red">
+
 <font>
+
 <Font name="Aria" size="24.0" />
+
 </font>
+
 </Label>
+
 </children>
+
 </VBox>
 ```
 
@@ -3250,32 +3254,53 @@ import javafx.scene.text.*
 
 ```java
 package hellofxml;
+
 import java.net.URL;
+
 import java.util.ResourceBundle;
+
 import javafx.event.ActionEvent;
+
 import javafx.fxml.FXML;
+
 import javafx.fxml.Initializable;
+
 import javafx.scene.control.Label;
+
 import javafx.scene.control.TextField;
 
 public class FXMLDocumentController implements Initializable
+
 {
+
 @FXML
+
 private Label label;
+
 @FXML
+
 private TextField name;
 
 @FXML
+
 private void handleButtonAction(ActionEvent event) 
+
 {
+
   label.setText("Hello: " + name.getText());
+
   name.setText("");
+
 }
 
 @Override
+
 public void initialize(URL url, ResourceBundle rb)
+
 {
+
 }
+
 }
 ```
 
@@ -3291,47 +3316,83 @@ public void initialize(URL url, ResourceBundle rb)
 
 ```xml
 <import java.lang.*?>
+
 <import java.util.*?>
+
 <import javafx.scene.*?>
+
 <import javafx.scene.control.*?>
+
 <import javafx.scene.layout.*?>
+
 <import javafx.scene.text.*?>
+
 <import javafx.geometry.*?>
+
 <import java.lang.*?>
+
 <import javafx.collections.*?>
+
 <import objectsfxml.*?>
 
 <VBox prefHeight="200" prefWidth="320" spacing="20" alignment="CENTER"
+
 xmlns:fx="http://javafx.com/fxml/1"
+
 fx:controller="objectsfxml.FXMLLoader">
+
 <padding>
+
   <Insets top="20" right="20" bottom="20" left="20"/>
+
 </padding>
+
 <children>
+
   <Text fx:id="header" />
+
   <ComboBox fx:id="lstPersons">
+
     <items>
+
       <FXCollections factory="observableArrayList">
+
         <String value="Gamle" />
+
         <String value="Harald" />
+
         <String value="Svend" />
+
         <String value="Harald 2." />
+
         <String value="Knud" />
+
       </FXCollections>
+
     </items>
+
   </ComboBox>
+
   <Button text="Select a king" onAction="#handleKings" fx:id="button" />
+
   <ComboBox fx:id="lstPersons">
+
     <Button text="Select a king" onAction="#handlePersons" />
+
     <Label fx:id="label">
+
       <String value="A Person" />
+
     </Label>
+
   </ComboBox>
+
 </children>
+
 </VBox>
 ```
 
-例如，如果你查看项 `<VBox prefHeight="200" ...`，这意味着正在实例化 `VBox` 类型的对象。首先，它需要一个包含 `VBox` 类的导入指令，并且该类有一个默认构造函数，因为语法中没有直接向构造函数传递值的方法。。
+例如，如果你查看项 `<VBox prefHeight="200" ...`，这意味着正在实例化 `VBox` 类型的对象。首先，它需要一个包含 `VBox` 类的导入指令，并且该类有一个默认构造函数，因为语法中没有直接向构造函数传递值的方法。
 
 ```xml
 <Text fx:id="header" />
@@ -3343,13 +3404,15 @@ fx:controller="objectsfxml.FXMLLoader">
 <String value="Gayle"/>
 ```
 
-通过执行 `valueOf()` 静态方法创建一个 `String` 对象。这要求要实例化对象的类具有此类方法，并且具有 `String` 类。结果是创建了一个带有 5 个 `String` 对象的 `ComboBox`。
 
-作为下一步，创建了一个没有任何说明的按钮，然后是一个名为 `lstPersons` 的空 `ComboBox` 以及另一个按钮。最后，创建了一个 `Label`，在这里你会注意到这个 `Label` 是用一个 `String` 对象初始化的。如果你运行程序，将得到如下窗口：
+
+通过执行`valueOf()`静态方法创建一个`String`对象。这要求要实例化对象的类具有此类方法，并且具有`String`类。结果是创建了一个带有5个`String`对象的`ComboBox`。
+
+作为下一步，创建了一个没有任何说明的按钮，然后是一个名为`lstPersons`的空`ComboBox`以及另一个按钮。最后，创建了一个`Label`，在这里你会注意到这个`Label`是用一个`String`对象初始化的。如果你运行程序，将得到如下窗口：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_145_0.png)
 
-其中在顶部组合框中选择一个名称，然后点击顶部按钮。另一个 `ComboBox` 也是初始化的，使用工厂完成的，如下所示。`ComboBox` 使用 `Person` 类型的对象初始化：
+其中在顶部组合框中选择一个名称，然后点击顶部按钮。另一个`ComboBox`也是初始化的，使用工厂完成的，如下所示。`ComboBox`使用`Person`类型的对象初始化：
 
 ```java
 package objectsfxml;
@@ -3359,40 +3422,41 @@ public class Person
     private String name;
     private String job;
 
-public Person(String name, String job)
-{
-    this.name = name;
-    this.job = job;
-}
+    public Person(String name, String job)
+    {
+        this.name = name;
+        this.job = job;
+    }
 
-public String getName()
-{
-    return name;
-}
+    public String getName()
+    {
+        return name;
+    }
 
-public void setName(String name)
-{
-    this.name = name;
-}
+    public void setName(String name)
+    {
+        this.name = name;
+    }
 
-public String getJob()
-{
-    return job;
-}
+    public String getJob()
+    {
+        return job;
+    }
 
-public void setJob(String job)
-{
-    this.job = job;
-}
+    public void setJob(String job)
+    {
+        this.job = job;
+    }
 
-@Override
-public String toString()
-{
-    return String.format("%s, %s", name, job);
+    @Override
+    public String toString()
+    {
+        return String.format("%s, %s", name, job);
+    }
 }
 ```
 
-这是一个我之前展示过的简单模型类。注意，该类没有默认构造函数，如果你想实例化对象，必须将参数传递给构造函数。因为你无法在 FXML 中这样做，所以使用了构建器类（builder class），即实现接口的类：
+这是一个我之前展示过的简单模型类。注意，该类没有默认构造函数，如果你想实例化对象，必须将参数传递给构造函数。因为你无法在FXML中这样做，所以使用了构建器类（builder class），即实现接口的类：
 
 ```java
 public interface Builder<T>
@@ -3401,16 +3465,16 @@ public interface Builder<T>
 }
 ```
 
-以及一个实现此接口的如何实例化类型 `T` 对象的类。该类被实现另一个接口的工厂类使用：
+以及一个实现此接口的如何实例化类型`T`对象的类。该类被实现另一个接口的工厂类使用：
 
 ```java
 public interface BuilderFactory
 {
-    public Builder<?> getBuilder(Class<? > type);
+    public Builder<?> getBuilder(Class<?> type);
 }
 ```
 
-如果 `FXMLLoader` 无法通过其他方式创建对象，它将使用 `BuilderFactory`，这是通过带参数调用 `getBuilder()` 方法实现的。如果该方法返回一个 `Builder` 对象，`FXMLLoader` 将使用它来初始化要实例化对象的所需的属性，并最终调用返回对象的 `build()` 方法。构建器类必须为构造函数的所有参数提供对应的 set 方法。在这种情况下，你必须为 `Person` 类定义一个 `Builder`：
+如果`FXMLLoader`无法通过其他方式创建对象，它将使用`BuilderFactory`，这是通过带参数调用`getBuilder()`方法实现的。如果该方法返回一个`Builder`对象，`FXMLLoader`将使用它来初始化要实例化对象的所需的属性，并最终调用返回对象的`build()`方法。构建器类必须为构造函数的所有参数提供对应的set方法。在这种情况下，你必须为`Person`类定义一个`Builder`：
 
 ```java
 package objectsfxml;
@@ -3421,109 +3485,108 @@ public class PersonBuilder implements Builder<Person>
 {
     private String name;
     private String job;
+}
 ```
-
-
 
 ```java
 public String getName() {
-  return name;
+    return name;
 }
 ```
 
 ```java
 public void setName(String name) {
-  this.name = name;
+    this.name = name;
 }
 ```
 
 ```java
 public String getJob() {
-  return job;
+    return job;
 }
 ```
 
 ```java
 public void setJob(String job) {
-  this.job = job;
+    this.job = job;
 }
 ```
 
 ```java
 @Override
 public Person build() {
-  return new Person(name, job);
+    return new Person(name, job);
 }
 ```
 
-因此，Builder 是一个解决无法在不向构造函数传递参数的情况下构造类（这里是 Person）对象的问题的类。
+因此，`Builder`是一个解决无法在不向构造函数传递参数的情况下构造类（这里是`Person`）对象的问题的类。
 
-除了 Builder 之外，你必须有一个 BuilderFactory，在这种情况下，它可以写成如下：
+除了`Builder`之外，你必须有一个`BuilderFactory`，在这种情况下，它可以写成如下：
 
 ```java
 package objectsfxml;
 
 import javafx.util.*;
 import javafx.fxml.*;
-```
 
-```java
 public class PersonFactory implements BuilderFactory {
-  private final JavaFXBuilder fxFactory = new JavaFXBuilder();
+    private final JavaFXBuilder fxFactory = new JavaFXBuilder();
 
-  @Override
-  public Builder<?> getBuilder(Class<?> type) {
-    if (type == Person.class) return new PersonBuilder();
-    return fxFactory.getBuilder(type);
+    @Override
+    public Builder<?> getBuilder(Class<?> type) {
+        if (type == Person.class) return new PersonBuilder();
+        return fxFactory.getBuilder(type);
+    }
 }
 ```
 
-# JAVA 14: 使用 JAVAFX 开发应用程序：软件开发
+## JAVA 14: 使用JAVAFX开发应用程序：软件开发
 
-getBuilder 方法有一个类型作为参数，如果该类型是 Person，则返回 PersonBuilder。否则，将返回该类型的默认 builder。
+`getBuilder`方法有一个类型作为参数，如果该类型是`Person`，则返回`PersonBuilder`。否则，将返回该类型的默认builder。
 
-对于 ObjectsXML 项目，我创建了一个目录 `resources /fxml`，并添加了一个名为 Persons.xml 的文件，其内容如下：
+对于`ObjectsXML`项目，我创建了一个目录`resources/fxml`，并添加了一个名为`Persons.xml`的文件，其内容如下：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import objectsfxml.*?>
 <?import java.util.ArrayList?>
-
 <ArrayList>
-<Person name="Hardeknud" job="Konge"/>
-<Person name="Magnus den Gode" job="Konge"/>
-<Person name="Sved Stridsen" job="Konge"/>
-<Person name="Harald Hen" job="Konge"/>
-<Person name="Knud Helligige" job="Konge"/>
+    <Person name="Hardeknud" job="Konge"/>
+    <Person name="Magnus den Gode" job="Konge"/>
+    <Person name="Sved Stridsen" job="Konge"/>
+    <Person name="Harald Hen" job="Konge"/>
+    <Person name="Knud Helligige" job="Konge"/>
 </ArrayList>
 ```
 
-也就是说，这是一个定义了 5 个 Person 对象的 XML 文档，但实例化这些对象需要 Builder。这发生在控制器中：
+也就是说，这是一个定义了5个`Person`对象的XML文档，但实例化这些对象需要`Builder`。这发生在控制器中：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_149_0.png)
 
-美国在线大学 LIGS 目前正在招收互动在线 BBA、MBA、MSc、DBA 和 PhD 课程：
+美国在线大学LIGS目前正在招收互动在线BBA、MBA、MSc、DBA和PhD课程：
 
-- 在 2014 年 9 月 30 日之前可节省高达 16% 的学费！
-- 分 10 期 / 2 年支付
+- 在2014年9月30日之前可节省高达16%的学费！
+- 分10期/2年支付
 - 互动式在线教育
-- 访问 www.liguniversity.com 了解更多信息！
+- 访问www.liguniversity.com了解更多信息！
 
-LIGS 大学未获得美国教育部长列出的任何国家认可的认证机构的认证。更多信息请点击此处。
+LIGS大学未获得美国教育部长列出的任何国家认可的认证机构的认证。更多信息请点击此处。
 
-在 bookoon.com 免费下载电子书，点击广告阅读更多
+在bookoon.com免费下载电子书，点击广告阅读更多
 
-# JAVA 14: 使用 JAVAFX 开发应用程序：软件开发
+## JAVA 14: 使用JAVAFX开发应用程序：软件开发
 
 ```java
 public class FXMLDocumentController implements Initializable {
     @FXML
     private Text header;
+
     @FXML
     private Label label;
+
     @FXML
     private ComboBox lstKings;
+
     @FXML
     private ComboBox lstPersons;
 
@@ -3566,38 +3629,36 @@ public class FXMLDocumentController implements Initializable {
 }
 ```
 
-注意，在控制器的开始处，定义了对应 FXML 文档中定义元素的变量。接下来是两个按钮的事件，不需要任何特殊解释。在 `initialize()` 方法中，header 对象由加载器初始化，listParsers [注：根据上下文可能是 listPersons 的误写] 也是如此，ComboBox 也是如此。这是通过调用 `loadPersons()` 方法实现的，使用 FXMLoader 配合 BuilderFactory（这里是 PersonFactory）来加载带有 Person 对象定义的 XML 文档。
+注意，在控制器的开始处，定义了对应FXML文档中定义元素的变量。接下来是两个按钮的事件，不需要任何特殊解释。在`initialize()`方法中，`header`对象由加载器初始化，`listPersons`也是如此，`ComboBox`也是如此。这是通过调用`loadPersons()`方法实现的，使用`FXMLLoader`配合`BuilderFactory`（这里是`PersonFactory`）来加载带有`Person`对象定义的XML文档。
 
-# 9.2 DIALOGFXML
+## 9.2 DIALOGFXML
 
-我将编写一个与第 7 章中的 DialogProgram 类似的程序，区别在于用户界面是用 FXML 编写的。我从一个 JavaFX FXML 应用开始，将其命名为 DialogFXML。主程序保持不变，但 FXMLDocument 变为如下：
+我将编写一个与第7章中的`DialogProgram`类似的程序，区别在于用户界面是用FXML编写的。我从一个JavaFX FXML应用开始，将其命名为`DialogFXML`。主程序保持不变，但`FXMLDocument`变为如下：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <VBox prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="dialogfxml.FXMLController"
-spacing="20" alignment="CENTER">
-<children>
-  <Button prefWidth="150" text="Enter person" onAction="#handleEnterAction" />
-  <Button prefWidth="150" text="Show persons" onAction="#handleShowAction" />
-</children>
+      fx:controller="dialogfxml.FXMLController"
+      spacing="20" alignment="CENTER">
+    <children>
+        <Button prefWidth="150" text="Enter person" onAction="#handleEnterAction" />
+        <Button prefWidth="150" text="Show persons" onAction="#handleShowAction" />
+    </children>
 </VBox>
 ```
 
-# JAVA 14: 使用 JAVAFX 开发应用程序：软件开发
+## JAVA 14: 使用JAVAFX开发应用程序：软件开发
 
-定义了带有两个按钮窗口的 FXML：
+定义了带有两个按钮窗口的FXML：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_152_0.png)
 
-然后我添加了 DialogProgram 项目中的 Person 类。窗口的控制器可以写如下：
+然后我添加了`DialogProgram`项目中的`Person`类。窗口的控制器可以写如下：
 
 ```java
 public class FXMLDocumentController implements Initializable
@@ -3606,67 +3667,62 @@ public class FXMLDocumentController implements Initializable
 
     @FXML
     private void handleEnterAction(ActionEvent event)
-{
+    {
+    }
+}
 ```
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_152_1.png)
 
-关于 e-Learning for Kids。e-Learning for Kids 成立于2004 年，是一个全球非营利基金会，致力于为 5-12 岁的儿童提供资金支持和免费互联网学习，涵盖数学、科学、语言艺术、计算机、健康和基础技能课程。自2005 年以来，超过 190 个国家的 1500 万儿童受益于 LU KI 的在线学习。我们的全志愿者员工团队由教育和在线学习专家、全球致力于改变世界的业务专业人士组成。我们需要在设立资金、志愿者、赞助商和内容开发者方面提供帮助。更多信息请访问 www.e-learningforkids.org。
+关于e-Learning for Kids。e-Learning for Kids成立于2004年，是一个全球非营利基金会，致力于为5-12岁的儿童提供资金支持和免费互联网学习，涵盖数学、科学、语言艺术、计算机、健康和基础技能课程。自2005年以来，超过190个国家的1500万儿童受益于LU KI的在线学习。我们的全志愿者员工团队由教育和在线学习专家、全球致力于改变世界的业务专业人士组成。我们需要在设立资金、志愿者、赞助商和内容开发者方面提供帮助。更多信息请访问www.e-learningforkids.org。
 
-- 小学教育第一 MOOC
-- 为 5-12 岁儿童提供的免费数字学习
-- 覆盖 1500 万儿童
+- 小学教育第一MOOC
+- 为5-12岁儿童提供的免费数字学习
+- 覆盖1500万儿童
 
-在 bookoon.com 免费下载电子书
+在bookoon.com免费下载电子书
 
 点击广告阅读更多
 
 ```java
 try {
-  FXMLLoader loader = new FXMLLoader(getClass().getResource("EnterDocument.fxml"));
-  Parent root = loader.load();
-  ((DocumentController)loader.getController()).setList(list);
-  Dialog<Person> dlg = new Dialog();
-  dlg.getDialogPane().setContent(root);
-  dlg.setTitle("Enter person");
-  dlg.showAndWait();
-} 
-catch (Exception ex) {
-
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("EnterDocument.fxml"));
+    Parent root = loader.load();
+    ((DocumentController)loader.getController()).setList(list);
+    Dialog<Person> dlg = new Dialog();
+    dlg.getDialogPane().setContent(root);
+    dlg.setTitle("Enter person");
+    dlg.showAndWait();
+} catch (Exception ex) {
 }
 ```
 
 ```java
 @FXML
 private void handleShowAction(ActionEvent e) {
-  try {
-    FXMLLoader loader = new FXMLLoader(getClass().getResource("ShowDocument.fxml"));
-    Parent root = loader.load();
-    ((DocumentController)loader.getController()).setList(list);
-    Dialog<Person> dlg = new Dialog();
-    dlg.setTitle("Persons");
-    dlg.setHeaderText("You have entered the following persons:");
-    dlg.getDialogPane().setContent(root);
-    dlg.showAndWait();
-  } 
-catch (Exception ex) {
-
-}
+    try {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ShowDocument.fxml"));
+        Parent root = loader.load();
+        ((DocumentController)loader.getController()).setList(list);
+        Dialog<Person> dlg = new Dialog();
+        dlg.setTitle("Persons");
+        dlg.setHeaderText("You have entered the following persons:");
+        dlg.getDialogPane().setContent(root);
+        dlg.showAndWait();
+    } catch (Exception ex) {
+    }
 }
 ```
 
 ```java
 @Override
 public void initialize(URL url, ResourceBundle rb) {
-
 }
 ```
 
-注意，定义了一个 Person 对象的列表，但该类类主要由两个按钮的事件处理器组成。原则上，这两个方法的工作方式相同，它们开始加载定义用户界面的 XML，然后必须将 Person 对象列表传递到对话框的控制器。在这里你应该特别注意如何引用控制器。为了创建一个对话框，我添加了一个空的 FXMLC：
 
 
-
-
+注意，定义了一个 `Person` 对象的列表，但该类主要由两个按钮的事件处理器组成。原则上，这两个方法的工作方式相同，它们开始加载定义用户界面的 XML，然后必须将 `Person` 对象列表传递到对话框的控制器。在这里你应该特别注意如何引用控制器。为了创建一个对话框，我添加了一个空的 FXML 文件。
 
 ## JAVA 14: 使用 JAVAFX 开发应用程序：软件开发
 
@@ -3674,11 +3730,11 @@ public void initialize(URL url, ResourceBundle rb) {
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_154_0.png)
 
-点击*Next* 之后，我必须输入名称（例如，*ShowDocument*），在下一个窗口中你可以选择是否创建控制器：
+点击 *Next* 之后，我必须输入名称（例如，*ShowDocument*），在下一个窗口中你可以选择是否创建控制器：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_154_1.png)
 
-最后，有一个窗口允许你指定是否有样式表，然后 NetBeans 添加了两个新文件。如果是为了输入人员信息的对话框，那么它们被称为 *EnterDocument.fxml* 和 *EnterDocumentController.java*。下面是定义 *GridPane:* 的 FXML 代码：
+最后，有一个窗口允许你指定是否有样式表，然后 NetBeans 添加了两个新文件。如果是为了输入人员信息的对话框，那么它们被称为 *EnterDocument.fxml* 和 *EnterDocumentController.java*。下面是定义 *GridPane* 的 FXML 代码：
 
 ```xml
 <xml version="1.0" encoding="UTF-8"?>
@@ -3742,7 +3798,7 @@ public class EnterDocumentController implements Initializable
 }
 ```
 
-同样，这里没什么新意，但你应该注意添加了一个 `setList()` 方法，因此在 OK 按钮的事件处理器中可以访问 Person 对象列表。你还应该注意通过获取表示窗口的 Stage 对象的引用来关闭窗口。如果你运行程序并点击顶部的按钮，将得到以下窗口：
+同样，这里没什么新意，但你应该注意添加了一个 `setList()` 方法，因此在 OK 按钮的事件处理器中可以访问 `Person` 对象列表。你还应该注意通过获取表示窗口的 `Stage` 对象的引用来关闭窗口。如果你运行程序并点击顶部的按钮，将得到以下窗口：
 
 ### FXML
 
@@ -3752,7 +3808,6 @@ public class EnterDocumentController implements Initializable
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.control.*?>
@@ -3774,7 +3829,7 @@ public class EnterDocumentController implements Initializable
 </BorderPane>
 ```
 
-它本质上是一个 BorderPane。注意中心是一个 ListView，它在这里没有初始化，而是在控制器中完成的，这很易事：
+它本质上是一个 `BorderPane`。注意中心是一个 `ListView`，它在这里没有初始化，而是在控制器中完成的，这很容易：
 
 ```java
 public class ShowDocumentController implements Initializable
@@ -3782,20 +3837,21 @@ public class ShowDocumentController implements Initializable
     @FXML
     private ListView lstPersons;
 
-public void setList(List<Person> list)
-{
-     lstPersons.getItems().addAll(list);
-}
+    public void setList(List<Person> list)
+    {
+        lstPersons.getItems().addAll(list);
+    }
 
-@FXML
-private void handleAction(ActionEvent e)
-{
- ((Stage)(Node) e.getSource()).getWindow().close();
-}
+    @FXML
+    private void handleAction(ActionEvent e)
+    {
+        ((Stage)(Node) e.getSource()).getWindow().close();
+    }
 
-@Override
-public void initialize(URL url, ResourceBundle rb)
-{
+    @Override
+    public void initialize(URL url, ResourceBundle rb)
+    {
+    }
 }
 ```
 
@@ -3814,19 +3870,19 @@ public void initialize(URL url, ResourceBundle rb)
 - 将用户界面与代码分离。
 - 使开发复杂的界面变得更容易。
 
-程序的开发是以原型的方式实现的，在下面我将简要描述它是如何完成的。从开始，我计划了以下迭代：
+程序的开发是以原型的方式实现的，在下面我将简要描述它是如何完成的。从一开始，我计划了以下迭代：
 
-- 1. 第一原型
-- 2. 增强原型
-- 3. 实现平方根和平方函数
-- 4. 实现存储和取回
-- 5. 实现其他函数
-- 6. 实现精度设置
-- 7. 实现菜单项表达式
-- 8. 实现文件菜单
-- 9. 实现缺失的功能
-- 10. 程序样式化
-- 11. 重构
+1. 第一原型
+2. 增强原型
+3. 实现平方根和平方函数
+4. 实现存储和取回
+5. 实现其他函数
+6. 实现精度设置
+7. 实现菜单项表达式
+8. 实现文件菜单
+9. 实现缺失的功能
+10. 程序样式化
+11. 重构
 
 # 10 最终示例
 
@@ -3836,11 +3892,7 @@ public void initialize(URL url, ResourceBundle rb)
 
 ## 10.1 开发
 
-
-
-
-目标是在完成最后迭代后，你将拥有一个完成的程序。
-迭代是小小的，但每次迭代后，你都会获得一个可以测试并使用已实现功能的程序版本。
+目标是在完成最后迭代后，你将拥有一个完成的程序。迭代是小小的，但每次迭代后，你都会获得一个可以测试并使用已实现功能的程序版本。
 
 ## 第一个原型
 
@@ -3854,7 +3906,7 @@ public void initialize(URL url, ResourceBundle rb)
 
 下一次迭代的结果仍然是用户界面原型，但在按钮方面有一些变化，并对组件进行了适当的间距和填充处理。
 
-## JAVA 14：使用 JAVFX 进行应用程序开发
+## JAVA 14：使用 JAVAFX 进行应用程序开发
 软件开发
 
 ## 最终示例
@@ -3892,7 +3944,7 @@ www.bi.edu/master
 
 然后我创建了 `bigcalc.ctrls` 包，并在其中创建了 `MainController` 类：
 
-```
+```java
 package bigcalc.ctrls;
 
 import bigcalc.models.*;
@@ -3949,7 +4001,7 @@ public class MainController
 
 为了跟踪变量，增加了以下模型类：
 
-```
+```java
 package bigcalc.models;
 
 import java.util.*;
@@ -3964,32 +4016,32 @@ public class Memory implements Iterable<String>
 
 ## 最终示例
 
-```
-public void store(String key, String value)
-{
-variables.put(key, value);
-}
-```
-
-```
-public String getValue(String key)
-{
-return variables.get(key);
-}
+```java
+    public void store(String key, String value)
+    {
+        variables.put(key, value);
+    }
 ```
 
-```
-public boolean remove(String key)
-{
-return variables.remove(key) != null;
-}
+```java
+    public String getValue(String key)
+    {
+        return variables.get(key);
+    }
 ```
 
+```java
+    public boolean remove(String key)
+    {
+        return variables.remove(key) != null;
+    }
 ```
-public Iterator<String> iterator()
-{
-return variables.keySet().iterator();
-}
+
+```java
+    public Iterator<String> iterator()
+    {
+        return variables.keySet().iterator();
+    }
 ```
 
 如果你点击列表框中的变量，相应的值将插入到编辑器字段中（光标位置）。使用了与上一个程序相同的语法，
@@ -4006,29 +4058,38 @@ return variables.keySet().iterator();
 
 窗口中心是一个 `ListView`，创建如下：
 
-```
+```java
 ListView view = new ListView();
 for (String key : memory)
 {
-Checkbox check = new CheckBox("");
-check.setPrefWidth(20);
-HBox pane = new HBox(10, check);
-pane.setAlignment(Pos.CENTER_LEFT);
-Label name = new Label(key);
-name.setPrefWidth(60);
-Label value = new Label(memory.getValue(key));
-pane.getChildren().add(name);
-pane.getChildren().add(value);
-view.getItems().add(pane);
-}
+    Checkbox check = new CheckBox("");
+    check.setPrefWidth(20);
+    HBox pane = new HBox(10, check);
 ```
 
-在这里请注意 `ListView` 可以包含任何内容，特别是带有组件的布局。它是一个极其灵活的组件，主窗口上的列表框最初以相同的方式初始化。
+
+
+`pane.setAlignment(Pos.CENTER_LEFT);`
+
+`Label name = new Label(key);`
+
+`name.setPrefWidth(60);`
+
+`Label value = new Label(memory.getValue(key));`
+
+`pane.getChildren().add(name);`
+
+`pane.getChildren().add(value);`
+
+`view.getItems().add(pane);`
+
+在这里请注意，`ListView` 可以包含任何内容，特别是带有组件的布局。它是一个极其灵活的组件，主窗口上的列表框最初以相同的方式初始化。
 
 ## JAVA 14：使用 JAVAFX 进行应用程序开发
+
 软件开发
 
-使用 JAFX 软件开发
+使用 JAVAFX 软件开发
 
 原则上，这个对话框包含了与按钮左侧列表框相同的信息，但该对话框用于删除变量并提供更好的概述。
 
@@ -4048,10 +4109,9 @@ private void calculate(ActionEvent e)
             lastValue = ctrl.calculate(expression, memory);
             updateResult();
         }
-
-progress.setVisible(true);
-        calculator.start();
-    }
+    };
+    progress.setVisible(true);
+    calculator.start();
 }
 ```
 
@@ -4068,12 +4128,9 @@ private void updateResult()
 
 在此迭代之后，计算器在原则上已经完成，但精度固定为 200。
 
-
-
-
-
 # JAVA 14：应用程序开发
-使用 JAVFX：软件开发
+
+使用 JAVAFX：软件开发
 
 # 最终示例
 
@@ -4087,16 +4144,15 @@ private void updateResult()
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_169_1.png)
 
-到 2020 年，风能可以提供我们地球十分之一的电力需求。时到今天，SKF 知道对于运行世界上大部分风力涡轮机来说，它是多么关键。
-高达 25% 的发电成本与维护有关。得益于我们的在线监控和自动调整系统，这些成本可以大幅降低。我们帮助让从空气中创造清洁能量变得更加便宜。
-通过分享我们的经验、专业知识和创意，行业可以提升超出预期的性能。与能够应对这一挑战的最佳员工共同努力！
+到 2020 年，风能可以提供我们地球十分之一的电力需求。时到今天，SKF 知道对于运行世界上大部分风力涡轮机来说，它是多么关键。高达 25% 的发电成本与维护有关。得益于我们的在线监控和自动调整系统，这些成本可以大幅降低。我们帮助让从空气中创造清洁能量变得更加便宜。通过分享我们的经验、专业知识和创意，行业可以提升超出预期的性能。与能够应对这一挑战的最佳员工共同努力！
 
 在 bookboom.com 下载免费电子书
+
 点击广告阅读更多
 
 # 实现“表达式 (Expressions)”菜单项
 
-此迭代是空的，该函数对应于点击 RCL，且该函数已经实现。由于 RCL 也有菜单项，因此该函数已存在于菜单中。
+此迭代是空的，该函数对应于点击 `RCL`，且该函数已经实现。由于 `RCL` 也有菜单项，因此该函数已存在于菜单中。
 
 # 实现“文件 (File)”菜单
 
@@ -4136,7 +4192,8 @@ public static Memory load(String filename)
 ```
 
 # JAVA 14：应用程序开发
-使用 JAVFX：软件开发
+
+使用 JAVAFX：软件开发
 
 # 最终示例
 
@@ -4147,21 +4204,23 @@ public static Memory load(String filename)
 缺失的内容不多，但应该添加以下内容：
 
 1. 如果你尝试从文件覆盖现有变量，或者关闭程序且变量未保存，应该有警告。
-2. 同样，如果你删除结果字段的内容，或者相应地在显示变量列表的对话框（RCL 命令）中删除变量，也应该有警告。这同样适用于输入变量名的对话框以及输入非法值时更改精度的对话框。
+2. 同样，如果你删除结果字段的内容，或者相应地在显示变量列表的对话框（`RCL` 命令）中删除变量，也应该有警告。这同样适用于输入变量名的对话框以及输入非法值时更改精度的对话框。
 3. 如果你使用许多有效数字（高精度），计算可能会花费很长时间，因此应该定义一个超时时间，程序在超时后将放弃。
 
 第一个点很容易解决，主要关乎包含一个布尔变量，以跟踪程序中变量的变化。因此，问题仅限于确保该变量在正确的位置被设置，并在“文件”菜单的事件处理器中测试该变量。此外，你可以重写 `stop()` 方法并测试该变量，以便在有未保存变量时不经警告就关闭程序。
 
 第二点同样简单，指的是在删除结果字段内容的事件处理器中显示一个确认框，并在两个对话框中进行测试。
 
-另一方面，最后一个问题解决起来并不简单简单。首先，我在控制器类（`MainController`）中包含了一个 `timeout` 属性，它表示超时值的秒数。默认值为 15。接下来，我通过以下对话框扩展了程序：
+另一方面，最后一个问题解决起来并不简单。首先，我在控制器类（`MainController`）中包含了一个 `timeout` 属性，它表示超时值的秒数。默认值为 15。接下来，我通过以下对话框扩展了程序：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_171_0.png)
 
 你可以在其中输入超时值。该对话框没有按钮，但可以通过菜单或快捷键打开。
 
 # JAVA 14：应用程序开发
-JAVAAVFX：软件开发
+
+使用 JAVAFX：软件开发
+
 一个最终示例
 
 当你点击主窗口中的 Enter 按钮时，会执行以下事件：
@@ -4191,7 +4250,8 @@ private void calculate(ActionEvent e)
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_172_0.png)
 
 # JAVA 14：应用程序开发
-使用 JAVFX：软件开发
+
+使用 JAVAFX：软件开发
 
 ```java
 @Override
@@ -4241,22 +4301,18 @@ private void updateResult() {
 
 有几种策略，你可以按照以下方式进行。程序（主窗口）具有以下组件组：
 
-- 1 个用于显示（结果）的 TextArea
-- 1 个用于编辑字段的 TextField
-- 1 个用于变量的 ListView
+- 1 个用于显示（结果）的 `TextArea`
+- 1 个用于编辑字段的 `TextField`
+- 1 个用于变量的 `ListView`
 - 1 个 Enter 按钮
-- 5 个用于命令的按钮（Clr Result, Clr Editor, Precision, RCL, STO）
-- 2 个用于常数的按钮（Pi, e）
+- 5 个用于命令的按钮（`Clr Result`, `Clr Editor`, `Precision`, `RCL`, `STO`）
+- 2 个用于常数的按钮（`Pi`, `e`）
 - 36 个用于功能的按钮
 - 7 个菜单控件
 - 41 个多项控件
-- 1 个进度条 (ProgressIndicator)
+- 1 个进度条 (`ProgressIndicator`)
 
-
-
-
-
-# JAVA 14: 使用 JAVFX 开发应用程序：软件开发
+# JAVA 14: 使用 JAVAFX 开发应用程序：软件开发
 
 一个最终示例
 
@@ -4264,7 +4320,7 @@ private void updateResult() {
 - 精确度的标签
 - 文件名的标签
 - 列表框中变量名的标签
-- 列表框中变量 val 的标签
+- 列表框中变量值的标签
 
 然后，你可以在样式表中为这些组中的每一组定义一个类（一个空类，总共 15 类），并将这些类与各个组件相关联。之后，你可以编写你想要使用的样式，其优势在于，你可以在不更改 Java 代码的情况下更改控件的呈现，而且最重要的一点是，你可以将这项工作委托给具有特殊样式设计技能的开发者。
 
@@ -4274,7 +4330,7 @@ private void updateResult() {
 
 # 重构
 
-现在程序在原则上已经完成，由以下文件：
+现在程序在原则上已经完成，由以下文件组成：
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_176_0.png)
 
@@ -4283,7 +4339,7 @@ private void updateResult() {
 - 如果有不再需要的导入语句（NetBeans 会显示哪些语句），应该将它们删除。
 - 如果有不再使用的变量，也应该删除它们。
 - 如果有未使用的代码（如方法），应该将其移除。
-- 确保实例变量和方法具有适当的。如果不是，考虑更改它们以便更好地反映其用途。
+- 确保实例变量和方法具有适当的名称。如果不是，考虑更改它们以便更好地反映其用途。
 - 考虑可见性，只有需要公开的才是公共的，其余的私有且可能是受保护的。
 - 变量和属性是否位于正确的位置（在正确的类中），在这里你必须记住 MVC 模式。用户界面将包含应该移动到控制器或模型中的变量。
 - 特别注意代码重复，即在多个地方编写了相同的代码。此类代码通常应该被移动到它自己的方法中，然后可以通过调用该方法来替换重复代码。
@@ -4298,7 +4354,6 @@ private void updateResult() {
 
 现在可能不是这样，但为了解释一下我的做法，我会提到当我必须阅读和理解外部代码时，我做的第一件事之一就是删除所有注释。它们对我来说似乎是干扰——至少这是一段良好的代码。这难道很重要吗？当然，写注释没有意义。当然，这与它是哪种代码有关，界面代码的注释很少有价值，而控制器和模型层中复杂算法的注释可能是需要的。
 
-我知道并不是所有人都会同意这些观点，但至少它们解释了为什么我的代码经常缺乏注释，这反映反映了我应该作为注释的大部分内容实际上书籍中的文本。
+我知道并不是所有人都会同意这些观点，但至少它们解释了为什么我的代码经常缺乏注释，这反映了我应该作为注释的大部分内容实际上书籍中的文本。
 
 ![](img/1e4e8c5aab4300ee5d8b230bc1305e5a_178_0.png)
-

@@ -1,11 +1,12 @@
+
 # Wicket 密码字段示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/wicket/wicket-password-field-example/>
 
-Wicket 教程向您展示了如何创建两个密码字段——“**密码**和“**确认密码**”，附加一个**强密码验证器**，并将密码值传递到下一页。
+Wicket 教程向您展示了如何创建两个密码字段——“密码”和“确认密码”，附加一个**强密码验证器**，并将密码值传递到下一页。
 
 ```java
- //Java 
+//Java 
 import org.apache.wicket.markup.html.form.PasswordTextField;
 ...
 final PasswordTextField password = new PasswordTextField("password", Model.of(""));
@@ -15,14 +16,14 @@ form.add(password);
 <input wicket:id="password" type="password" size="20" /> 
 ```
 
-## 1.Wicket 密码示例
+## 1. Wicket 密码示例
 
 呈现两个密码字段的用户页面。附加两个验证器，`PatternValidator`和`EqualPasswordInputValidator`用于密码检查。
 
-*文件:UserPage.java*
+**文件：`UserPage.java`**
 
 ```java
- package com.mkyong.user;
+package com.mkyong.user;
 
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.form.Form;
@@ -75,10 +76,10 @@ public class UserPage extends WebPage {
 } 
 ```
 
-*File : UserPage.html*
+**文件：`UserPage.html`**
 
-```java
- <html>
+```html
+<html>
 <head>
 <style>
 label {
@@ -111,41 +112,36 @@ label {
 </html> 
 ```
 
- ## 2.包.属性
+## 2. 包.属性
 
-将 string 放在一个“ **package.properties** 中，这样它就可以在其他页面之间共享。
+将字符串放在一个`package.properties`中，这样它就可以在其他页面之间共享。
 
-*文件:package.properties*
+**文件：`package.properties`**
 
-```java
- password.Required = ${label} is required
+```properties
+password.Required = ${label} is required
 cpassword.Required = ${label} is required
 password.PatternValidator = ${label} should contains at least 1 digit, ... (omitted) 
 cpassword.EqualPasswordInputValidator = "${label} did not match!" 
 ```
 
- ## 3.演示
+## 3. 演示
 
-开始并访问—*http://localhost:8080/wicket examples/*
+开始并访问 — *http://localhost:8080/wicket examples/*
 
-如果密码不符合正则表达式模式:
+如果密码不符合正则表达式模式：
 
 ![wicket pattern error](img/f27bee8fec54d4285caf89ca0d573ae1.png "wicket-password-validate-error1")
 
-如果密码和确认密码不匹配:
+如果密码和确认密码不匹配：
 
-![wicket password error](img/984b752d522991698ee0d5e7c96c27ae.png "wicket-password-validate-error2")Download it – [Wicket-password-example.zip](http://web.archive.org/web/20190310100512/http://www.mkyong.com/wp-content/uploads/2011/05/Wicket-password-example.zip) (8KB)
+![wicket password error](img/984b752d522991698ee0d5e7c96c27ae.png "wicket-password-validate-error2")
+
+下载它 – [Wicket-password-example.zip](http://web.archive.org/web/20190310100512/http://www.mkyong.com/wp-content/uploads/2011/05/Wicket-password-example.zip) (8KB)
 
 ## 参考
 
-1.  [用正则表达式验证密码](http://web.archive.org/web/20190310100512/http://www.mkyong.com/regular-expressions/how-to-validate-password-with-regular-expression/)
-2.  [Wicket PasswordTextField Javadoc](http://web.archive.org/web/20190310100512/http://wicket.apache.org/apidocs/1.4/org/apache/wicket/markup/html/form/PasswordTextField.html)
+1. [用正则表达式验证密码](http://web.archive.org/web/20190310100512/http://www.mkyong.com/regular-expressions/how-to-validate-password-with-regular-expression/)
+2. [Wicket PasswordTextField Javadoc](http://web.archive.org/web/20190310100512/http://wicket.apache.org/apidocs/1.4/org/apache/wicket/markup/html/form/PasswordTextField.html)
 
 [password](http://web.archive.org/web/20190310100512/http://www.mkyong.com/tag/password/) [wicket](http://web.archive.org/web/20190310100512/http://www.mkyong.com/tag/wicket/)
-
-
-
-
-
-
-

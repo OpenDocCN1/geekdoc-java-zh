@@ -1,3 +1,4 @@
+
 # 与清单文件一起工作：基础知识
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html`](https://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html)

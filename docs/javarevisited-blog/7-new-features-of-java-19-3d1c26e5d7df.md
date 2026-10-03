@@ -1,3 +1,4 @@
+
 # Java 19 的 7 个激动人心的新特性
 
 > 原文：<https://medium.com/javarevisited/7-new-features-of-java-19-3d1c26e5d7df?source=collection_archive---------1----------------------->

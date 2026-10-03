@@ -1,4 +1,5 @@
-# Oracle:使用 Oracle SQL Developer 进行实时 SQL 监控
+
+# Oracle：使用 Oracle SQL Developer 进行实时 SQL 监控
 
 > 原文：<https://medium.com/javarevisited/oracle-real-time-sql-monitoring-using-oracle-sql-developer-48c062060781?source=collection_archive---------1----------------------->
 

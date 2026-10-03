@@ -1,3 +1,4 @@
+
 # 如何用 Java 打印数字的金字塔图案？[编码练习]
 
 > 原文：<https://medium.com/javarevisited/how-to-print-pyramid-pattern-of-numbers-in-java-coding-exercise-b6d3c92314e8?source=collection_archive---------2----------------------->

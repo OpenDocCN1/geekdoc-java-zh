@@ -1,9 +1,7 @@
+
 # 轻松掌握 Lambda 表达式与流：Java 函数式编程快速指南（编程入门系列 1）
 
-
-
 ![](img/cover.jpeg)
-
 
 # 1. 引言
 
@@ -26,14 +24,23 @@ Lambda 表达式在 Java 中引入了箭头。它将 Lambda 表达式分为两�
 ### 1.1.2. 缩写
 
 - Lambda 中的参数是可选的：
+
   `(number, character) -> {System.out.println(number);}`
+
 - 有 1 个参数的 Lambda => 括号是可选的：
+
   `number -> {System.out.println(number);}`
+
 - 无参数的 Lambda => 括号是强制的：
+
   `() -> {System.out.println("Hello World");}`
+
 - 只有一个指令的 Lambda => 大括号是可选的：
+
   `number -> System.out.println(number);`
-- 只有一个返回指令的 Lambda => 关键字 return 是可选的：
+
+- 只有一个返回指令的 Lambda => 关键字 `return` 是可选的：
+
   `number -> number;`
 
 ## 1.2 Lambda 是函数式接口的实现
@@ -114,10 +121,6 @@ fruit1.length() - fruit2.length()
 `Stream` 接口中的方法接受 Lambda 作为参数，这使得代码变得非常短且易读。
 
 ## 3.1.1.foreach
-
-
-
-
 
 `forEach` 遍历集合并对集合中的每个元素执行指定的操作，直到所有元素都处理完毕或操作抛出异常。下面的示例将把每种水果打印到控制台：
 
@@ -309,11 +312,11 @@ class Main {
 
 ### 9.1 allMatch
 
-`allMatch` 方法在流中的所有值都匹配谓词时返回 true。我们将谓词作为 `allMatch()` 方法的参数。
+`allMatch` 方法在流中的所有值都匹配谓词时返回 `true`。我们将谓词作为 `allMatch()` 方法的参数。
 
 ### 9.2 anyMatch
 
-`anyMatch` 方法在任意一个值匹配谓词时返回 true。
+`anyMatch` 方法在任意一个值匹配谓词时返回 `true`。
 
 ## 10. Collect 流值
 
@@ -325,11 +328,7 @@ class Main {
 
 ### 10.2 List
 
-将流转换为列表需要使用流对象的 `collect()` 方法。`toList()` 收集器可将所有流元素收集到 List 实例中。
-
-
-
-
+将流转换为列表需要使用流对象的 `collect()` 方法。`toList()` 收集器可将所有流元素收集到 `List` 实例中。
 
 ```java
 class Main {
@@ -358,7 +357,9 @@ class Main {
 
 ## 10.4 Map
 
-在 map 中包含有一个键（key）和一个值（value）。在下面的示例中，我们将字符串的长度作为键，并根据名称长度对所有水果进行分组。
+在 `map` 中包含有一个键（`key`）和一个值（`value`）。在下面的示例中，我们将字符串的长度作为键，并根据名称长度对所有水果进行分组。
+
+
 
 ```java
 class Main {
@@ -394,7 +395,7 @@ class Main {
 
 ### 10.5.2 Sum
 
-返回 `IntStream` 的和
+返回`IntStream`的和
 
 ```java
 class Main {
@@ -407,7 +408,7 @@ class Main {
 
 ### 10.5.3 Min, max, average
 
-返回 `IntStream` 的最小值、最大值或平均值
+返回`IntStream`的最小值、最大值或平均值
 
 ```java
 class Main {
@@ -420,15 +421,15 @@ class Main {
 
 ## 10.6 Stats on long values
 
-`LongStream` 接口是一个用于 long 类型值的流。方法与 `IntStream` 相同。可以使用 `mapToLong()` 方法将 `IntStream` 转换为 `LongStream`。
+`LongStream`接口是一个用于`long`类型值的流。方法与`IntStream`相同。可以使用`mapToLong()`方法将`IntStream`转换为`LongStream`。
 
 ## 10.7 Stats on double values
 
-`DoubleStream` 接口是一个用于 double 类型值的流。方法与 `IntStream` 相同。可以使用 `mapToDouble()` 方法将 `IntStream` 转换为 `DoubleStream`。
+`DoubleStream`接口是一个用于`double`类型值的流。方法与`IntStream`相同。可以使用`mapToDouble()`方法将`IntStream`转换为`DoubleStream`。
 
 ## 10.8 Min and max of other values
 
-可以在 `min` 和 `max` 方法中传入 Lambda 表达式来确定哪些是最小值和最大值。该 lambda 将实现函数接口 `Comparator`。
+可以在`min`和`max`方法中传入 Lambda 表达式来确定哪些是最小值和最大值。该 lambda 将实现函数接口`Comparator`。
 
 ```java
 class Main {
@@ -442,9 +443,9 @@ class Main {
 
 # 11. Reduce
 
-`min`、`sum`、`max`… 等方法都将流的值归约为单个值。`reduce()` 方法执行相同的操作，但该方法能够将任何值归约为单个值（而不只是 `int`、`double`、`long` 值）。它是一个通用的归约方法。
+`min`、`sum`、`max`… 等方法都将流的值归约为单个值。`reduce()`方法执行相同的操作，但该方法能够将任何值归约为单个值（而不只是`int`、`double`、`long`值）。它是一个通用的归约方法。
 
-`reduce` 方法有两个版本：
+`reduce`方法有两个版本：
 
 ## 11.1 Stream.reduce() with Accumulator
 
@@ -461,7 +462,7 @@ class Main {
 
 ## 11.2 Stream.reduce() with Identity and Accumulator
 
-使用给定的标识值（identity）、累加函数和组合函数对给定流的元素执行归约。标识值必须是 `combiner` 函数的恒元。`Combiner` 是聚合累加器结果的函数。`Combiner` 仅在并行模式下调用，用于减少来自不同线程的累加器结果。
+使用给定的标识值（identity）、累加函数和组合函数对给定流的元素执行归约。标识值必须是`combiner`函数的恒元。`Combiner`是聚合累加器结果的函数。`Combiner`仅在并行模式下调用，用于减少来自不同线程的累加器结果。
 
 ```java
 class Main {
@@ -475,7 +476,6 @@ class Main {
 
 # 12. Conclusion
 
-感谢阅读关于 Java Lambda 和流的短介绍。本指南包含了你开始开始使用 Lambda 所需的所有信息。希望你学到了很多，并准备好将 Lambda 集成到你的代码中。如果你有任何问题，可以通过 `programming_made_easy@outlook.be` 与我联系。
+感谢阅读关于 Java Lambda 和流的短介绍。本指南包含了你开始开始使用 Lambda 所需的所有信息。希望你学到了很多，并准备好将 Lambda 集成到你的代码中。如果你有任何问题，可以通过`programming_made_easy@outlook.be`与我联系。
 
 祝你好运，编程愉快！
-

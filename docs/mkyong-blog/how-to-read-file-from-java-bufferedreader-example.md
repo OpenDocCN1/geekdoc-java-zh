@@ -1,30 +1,32 @@
+
 # 如何在 Java 中读取文件
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/how-to-read-file-from-java-bufferedreader-example/>
 
-在本文中，我们将向您展示如何使用`java.io.BufferedReader`从文件中读取内容
+在本文中，我们将向您展示如何使用`java.io.BufferedReader`从文件中读取内容。
 
-**Note**
-Read this [different ways read a file](http://web.archive.org/web/20220619003336/https://www.mkyong.com/java/java-how-to-read-a-file/)
+> **Note**
+>
+> Read this [different ways read a file](http://web.archive.org/web/20220619003336/https://www.mkyong.com/java/java-how-to-read-a-file/)
 
-## 1.Files.newBufferedReader (Java 8)
+## 1. `Files.newBufferedReader`（Java 8）
 
-在 Java 8 中，有一个新的方法`Files.newBufferedReader(Paths.get("file"))`来返回一个`BufferedReader`
+在 Java 8 中，有一个新的方法`Files.newBufferedReader(Paths.get("file"))`来返回一个`BufferedReader`。
 
-filename.txt
+`filename.txt`
 
-```java
- A
+```text
+A
 B
 C
 D
-E 
+E
 ```
 
-FileExample1.java
+`FileExample1.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -53,27 +55,27 @@ public class FileExample1 {
 
     }
 
-} 
+}
 ```
 
-输出
+输出：
 
-```java
- A
+```text
+A
 B
 C
 D
-E 
+E
 ```
 
-## 2.缓冲阅读器
+## 2. 缓冲阅读器
 
-2.1 经典的`BufferedReader`与 JDK 1.7 `try-with-resources`自动关闭资源。
+### 2.1 经典的 `BufferedReader` 与 JDK 1.7 `try-with-resources` 自动关闭资源
 
-FileExample2.java
+`FileExample2.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -97,15 +99,15 @@ public class FileExample2 {
         }
     }
 
-} 
+}
 ```
 
-2.2 在过去，我们必须手动关闭所有内容。
+### 2.2 在过去，我们必须手动关闭所有内容
 
-FileExample3.java
+`FileExample3.java`
 
 ```java
- package com.mkyong.calculator;
+package com.mkyong.calculator;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -145,14 +147,12 @@ public class FileExample3 {
 
     }
 
-} 
+}
 ```
 
 ## 参考
 
-*   [文件 JavaDocs](http://web.archive.org/web/20220619003336/https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html)
-*   [BufferedReader JavaDocs](http://web.archive.org/web/20220619003336/https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html)
-*   [Java–如何读取文件](http://web.archive.org/web/20220619003336/https://www.mkyong.com/java/java-how-to-read-a-file/)
-*   [try-with-resources 语句 javadoc](http://web.archive.org/web/20220619003336/https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html)
-
-<input type="hidden" id="mkyong-current-postId" value="452">
+- [文件 JavaDocs](http://web.archive.org/web/20220619003336/https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html)
+- [BufferedReader JavaDocs](http://web.archive.org/web/20220619003336/https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html)
+- [Java–如何读取文件](http://web.archive.org/web/20220619003336/https://www.mkyong.com/java/java-how-to-read-a-file/)
+- [try-with-resources 语句 javadoc](http://web.archive.org/web/20220619003336/https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html)

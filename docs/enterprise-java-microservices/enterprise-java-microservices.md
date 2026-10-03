@@ -1,10 +1,5 @@
+
 # 企业级 Java 微服务
-
-
-
-
-
-
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_0_0.png)
 
@@ -12,50 +7,48 @@
 
 www.allitebooks.com
 
-
-
-
-
-
-
-
-
-
 开发编辑：Karen Miller 和 Susan Kline
+
 技术开发编辑：Nick Watts
+
 审核编辑：Aleksandar Dragavljević
+
 项目经理：Deirdre Hiam
+
 文字编辑：Sharon Wilkey
+
 校对：Elizabeth Martin
+
 技术校对：John Clingan
+
 排字员：Gordan Salinovic
+
 封面设计：Marija Tudor
 
-
-
-
-
-
-
-
 前言 ix
+
 致谢 x
+
 关于本书 xi
+
 关于作者 xiv
+
 关于封面插图 xv
 
-
-
 ## 1.1 企业级 Java——简史 4
+
 什么是企业级 Java？4 • 典型的企业级 Java 架构 4 • 什么是单体？6 • 单体架构相关的问题有哪些？9
 
 ## 1.2 微服务与分布式架构 10
+
 做好事情 11 • 什么是分布式架构？11 • 为什么你应该关注分布式化？12 • 可以做什么来辅助开发微服务？14 • 产品而非项目 14 • 持续集成与交付 14
 
 ## 1.3 迁移到微服务的模式 15
+
 领域驱动设计 15 • “大爆炸”模式 17 • “绞杀者”模式 18 • “混合”模式 18
 
 ## 1.4 什么是企业级 Java 微服务？ 19
+
 为什么企业级 Java 适合微服务 21
 
 ## 2 开发简单的 RESTful 微服务 23
@@ -63,16 +56,21 @@ www.allitebooks.com
 ### 2.1 Cayambe 单体应用 23
 
 ### 2.2 新管理站点 25
+
 用例 27 • 应用架构 28 • 使用 JAX-RS 创建 RESTful 端点 30 • 运行它 33
 
 ## 3 适用于微服务的恰好应用服务器 36
 
 ### 3.1 恰好应用服务器 (JeAS) 37
+
 JeAS 是什么意思？37 • 哪些益处？41
+
 Eclipse MicroProfile 43
 
 ### 3.2 选择合适的应用服务器 44
+
 海滩度假示例应用 44 • Dropnizard——原始的有主张的微服务运行时 46 • Payara Micro——封装在 JAR 中的精简 Java EE 应用 49 • Spring Boot——有主张的 Spring 微服务 53 • Thorntail——最灵活的 JeAS 运行时 56
+
 它们如何比较？58
 
 ## 4 微服务测试 60
@@ -84,54 +82,82 @@ Eclipse MicroProfile 43
 ### 4.3 什么是不可变性？64
 
 ### 4.4 集成测试 66
+
 ### 4.5 消费者驱动测试 66
+
 ### 4.6 额外阅读 82
+
 ### 4.7 额外练习 82
 
 ## 5 云原生开发 83
+
 ### 5.1 什么是云？84
+
 ### 5.2 服务模型 84
+
 ### 5.3 云原生开发 86
+
 ### 5.4 部署到云端 88
+
 ### 5.5 微服务云 88
+
 ### 5.6 云端测试 94
+
 ### 5.7 额外练习 97
+
 ### 5.8 练习 97
 
 ## 第二部分 实现企业级微服务 99
 
 ## 调用微服务 101
+
 ### 6.1 使用 Java 库调用微服务 105
+
 ### 6.2 使用 JAX-RS 客户端调用微服务 110
+
 ### 6.3 使用 Spring 客户端调用微服务 113
+
 ### 6.4 使用 Dropnizard 调用微服务 115
 
 ## 发现用于调用的微服务 117
+
 ### 7.1 为什么微服务需要发现？118
+
 ### 7.2 在 Thorntail 中注册微服务 125
+
 ### 7.3 在 Ribbon 中注册微服务 131
 
 ## 容错与监控策略 138
+
 ### 8.1 什么是 Hystrix？142
+
 ### 8.2 缓解故障 145
+
 ### 8.3 回滚与故障 149
+
 ### 8.4 在你的微服务中添加 Hystrix 158
 
 ## 微服务安全防护 164
+
 ### 9.1 保护微服务的重要性 164
+
 ### 9.2 使用 Keycloak 168
+
 ### 9.3 保护 Stripe 微服务 172
+
 ### 9.4 捕获用户认证 180
 
 ## 混合微服务架构 188
+
 ...
+
 ## 11 使用 Apache Kafka 进行数据流 211
+
 ### 11.1 Apache Kafka 能为你做什么？212
+
 ### 11.2 通过流处理简化你的单体架构 216
+
 ### 11.3 部署并使用 Kafka 进行数据流 219
-
-
-
 
 # 致谢
 
@@ -167,7 +193,7 @@ Eclipse MicroProfile 43
 
 第 5 章讨论了“恰好应用服务器”运行时在不同环境中的应用，介绍了单元测试与集成测试的区别。我们还讨论了云原生开发以及如何融入微服务。
 
-第 6 章讨论了用于消费微服务的库，以及它们提供的抽象层。我们涵盖了如 java.net 和 Apache HttpClient 等低级库。
+第 6 章讨论了用于消费微服务的库，以及它们提供的抽象层。我们涵盖了如 `java.net` 和 Apache HttpClient 等低级库。
 
 第 7 章通过扩展第 6 章，引入了更高层抽象的库，如 JAX-RS 和 RESTEasy。
 
@@ -191,9 +217,6 @@ Eclipse MicroProfile 43
 
 Manning 对读者的承诺是提供读者之间以及读者与作者之间进行意义对话的场所。这并不意味着作者必须参与特定程度，作者对论坛的贡献完全是自愿且无报酬的。我们建议你向作者提出具有挑战性的问题！只要书籍仍在印刷，你就可以从出版网站访问论坛以及之前的讨论存档。
 
-
-
-
 # 关于作者
 
 KEN FINNIGAN 在 20 多年里一直担任全球各企业的顾问和软件工程师。他领导着 Thorntail 项目，该项目旨在让使用 Java 和 Java EE 为云开发微服务变得尽可能简单。他此前曾担任 LiveOak 以及其他 JBoss 项目的负责人。
@@ -205,13 +228,6 @@ KEN FINNIGAN 在 20 多年里一直担任全球各企业的顾问和软件工程
 自 19 世纪以来，着装规范已经发生了变化，当时那种丰富的地区多样性也已消失。现在，很难区分不同大陆的居民，更不用说不同的城镇或地区了。也许我们用文化多样性换取了更加丰富的个人生活——无疑是为了更加多样化且节奏更快的技术生活。
 
 在一个难以区分各类计算机书籍的时代，Manning 出版通过基于两个世纪前地区生活丰富多样性的封面，赞扬了计算机业务的创新性和主动性，而这些多样性通过此类收藏中的插图重新焕发活力。
-
-
-
-
-
-
-
 
 在深入学习之前，让我们回顾一下并讨论一下我希望你在阅读这本书期间获得的目标。我们都知道没有免费的午餐，因此我不会假装微服务是容易的。本章介绍了微服务——其概念、优点和缺点——为构建你的技术知识提供基础。第 2 章和第 3 章提供了一个 RESTful 微服务的示例，并涵盖了你企业级 Java 微服务的一些运行时和部署选项。
 
@@ -248,22 +264,26 @@ Java EE 包含了许多规范，每种规范都有一个或多个实现。Spring
 绿地开发提供了设计清洁架构的机会，如图 1.1 所示。在图 1.2 中，你可以看到层内功能之间的边界如何变得模糊，导致每层中的组件不再具有定义明确的目的。
 
 应用程序为单体（monolith）的指标可能包括：
+
 - 用户发出请求。
+
 - 视图（View）调用模型（Model）。
+
 - 控制器（Controller）调用模型（Model）。
+
 - 业务服务调用模型（Model）。
+
 - 业务服务调用其他服务。
+
 - 业务服务可以聚合数据。
+
 - 单个部署中的多个 WAR 包。
+
 - 包含几十个其他 WAR 包和 JAR 包的 EAR 包。
 
 ### 1.1.3 什么是单体？
 
 是什么定义了一个企业级 Java 应用为单体？单体是一个将所有组件都包含在单一部署中的应用程序，通常其发布周期为 3 到 18 个月。某些应用程序的发布周期可能达到两年，这对于敏捷企业来说是不利的。单体通常随着时间的推移，通过对应用程序进行快速迭代改进的尝试进化，而不考虑内部不同部分或组件之间的边界。
-
-
-
-
 
 ### 企业级 Java 简史 7
 
@@ -284,8 +304,12 @@ Java EE 包含了许多规范，每种规范都有一个或多个实现。Spring
 尽管单体 Java 应用程序看起来一片惨淡，事实真的如此吗？在很多情况下，企业继续使用或开发单体是有意义的。你如何知道是否应该坚持使用单体呢？
 
 - 你的企业可能只有几个活跃开发和维护的应用程序。当你只有极少数应用程序时，大幅增加开发、测试和发布负担可能没有意义。
-- 如果开发团队只有十几个人，将他们分成一个或两个人的微服务团队可能无法提供任何益处。在某些情况下，这种拆分会适得其反。[Basecamp](https://basecamp.com/) 是一个单体的完美范例，它由一个 12 人团队开发，并保持了现状。
-- 你的企业需要每周发布几次甚至每天发布一次吗？如果没有，而且现有的单体具有清晰的组件分离，降低发布节奏可能就是获得更高业务敏捷性和价值所需的全部。
+
+
+
+如果开发团队只有十几个人，将他们分成一个或两个人的微服务团队可能无法提供任何益处。在某些情况下，这种拆分会适得其反。[Basecamp](https://basecamp.com/) 是一个单体的完美范例，它由一个 12 人团队开发，并保持了现状。
+
+你的企业需要每周发布几次甚至每天发布一次吗？如果没有，而且现有的单体具有清晰的组件分离，降低发布节奏可能就是获得更高业务敏捷性和价值所需的全部。
 
 坚持单体对企业来说是否是正确的做法，取决于当前的状况和长期目标。
 
@@ -294,9 +318,13 @@ Java EE 包含了许多规范，每种规范都有一个或多个实现。Spring
 总的来说，类似于图 1.1 所示的架构设计是一个好主意，但也存在缺点：
 
 - **无法扩展单个组件**——这看起来可能不是一个主要问题，但某些因素会改变扩展性差的质量。如果应用程序的单个实例需要大量的内存或空间，那么扩展到数量不小的节点就需要硬件上进行大量投资。
+
 - **单个组件的性能**——在包含许多组件的单一部署中，某个组件的性能差于其他组件是常常的。这时你就拥有了一个拖慢整个系统的单个组件，这并不是什么好状况，运维人员将是不满意的。
+
 - **单个组件的可部署性**——当整个应用程序是一个单一部署时，任何更改都需要部署整个应用程序，即使你只是在某个组件中改了一行代码。这对业务敏捷性没有好处，通常会导致需要数月时间才能将许多更改包含在一个更新后的部署中。
+
 - **更大的复杂性**——当一个应用程序有许多组件时，它们之间的功能边界很容易变得模糊。模糊组件的分进一步增加了代码的复杂性，无论是在代码执行方面，还是开发者理解代码意图方面。
+
 - **难以准确测试应用程序**——当应用程序增长时，为了确保任何更改都不会导致回归，测试量和时间也会随之增长。看似最小、最不足道的更改很容易导致完全无关的组件出现意外的错误和问题。
 
 所有这些问题都给企业带来了成本，同时也降低了他们利用新机会的速度。但与从零开始相比，这些潜在缺点仍然是小小的。
@@ -339,10 +367,6 @@ Java EE 包含了许多规范，每种规范都有一个或多个实现。Spring
 
 图 1.4 显示了微服务的分布式架构可能是什么样的。在 във描述中，微服务实例被描述为运行在运行时，但并没有规定实例是如何打包的。它可以被打包为 uber jars 或 Linux 容器，但还有许多其他可用方案。运行时纯粹是为了界定微服务的运行环境，显示微服务正在独立运行。
 
-
-
-
-
 # 第 1 章 企业级 Java 微服务
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_28_0.png)
@@ -350,8 +374,11 @@ Java EE 包含了许多规范，每种规范都有一个或多个实现。Spring
 ## 1 微服务环境
 
 - 1 用户从浏览器发送请求以与某个特定服务进行交互。该请求可能来自移动设备，也可能来自之前获取的 UI 界面。
+
 - 2 当请求进入微服务环境时，它进入网关，由网关将请求路由到相应的微服务。
+
 - 3 微服务接收请求，并在调用另一个服务之前对其进行某些处理。
+
 - 4 链中的最后一个微服务与数据存储层进行交互，以检索/写入记录。
 
 图 1.4 典型的微服务架构
@@ -367,7 +394,9 @@ Java EE 包含了许多规范，每种规范都有一个或多个实现。Spring
 ## 微服务与分布式架构
 
 - 服务是**语言无关的**。虽然本书侧重于企业级 Java（Enterprise Java），但我们并不天真地认为不会有某些服务需要或希望用不同的语言进行开发。当服务不需要运行在相同的环境中时，你可以为不同的服务使用不同的语言。
+
 - **服务部署是微型且单一目的的**。部署的规模越小，测试所需的精力就越少，这使得将发布周期缩短到一周或更短成为可能。拥有小型、单一目的的部署使企业能够更容易以近实时的方式响应业务需求。
+
 - **新服务通过现有服务功能的重组来定义**。在整个架构中拥有离散的服务，极大地增强了你以新方式重新组合这些服务以创造额外价值的能力。这种组合可以简单到只需部署一个新的服务，并结合已经部署的一些服务。这使你能够在更短的时间内为业务创造新事物。
 
 听起来很棒——但如何正确地开发分布式应用呢？在这里你需要稍微收收马缰。是的，分布式确实改进了你多年来在使用企业级 Java 时遇到的很多问题，但它也引入了自己的挑战。开发分布式应用绝不是什么灵丹妙药，你很容易自得其反。
@@ -375,18 +404,18 @@ Java EE 包含了许多规范，每种规范都有一个或多个实现。Spring
 你已经看到了分布式的某些优势，但大多数事情没有免费的午餐——分布式架构也绝非如此。如果你有一堆通过通信运行且没有耦合的服务，会引入什么问题？
 
 - 服务的位置无关性很棒，但它们如何找到对方呢？你需要一种在逻辑上定义服务的方法，无论它们的物理位置或 IP 地址是什么。有了发现机制，你可以通过逻辑名称定位服务，并忽略它物理上可能位于何处。服务发现正是此目的。本书的第二部分将介绍如何使用服务发现。
+
 - 如何在不影响客户的情况下处理故障？你需要一种在服务失败时优雅地降级功能的方法，而不是让应用程序崩溃。你需要服务的韧性和容错能力，在服务失败时提供替代方案。第二部分涵盖了如何为你的服务提供容错和韧性。
+
 - 拥有数百或数千个服务会对运营带来额外负担。大多数运营团队没有处理大量服务的经验。你如何缓解这种复杂性？监控在这里需要发挥主要作用。监控需要扮演一个重要角色，这里（此处原文似乎有重复或截断，翻译已根据语境处理**）
 
 - 服务的位置无关性很棒，但它们如何找到对方呢？你需要一种在逻辑上定义服务的方法，无论它们的物理位置或 IP 地址是什么。有了发现机制，你可以通过逻辑名称定位服务，并忽略它物理上可能位于何处。服务发现正是此目的。本书的第二部分将介绍如何使用服务发现。
+
 - 如何在不影响客户的情况下处理故障？你需要一种在服务失败时优雅地降级功能的方法，而不是让应用程序崩溃。你需要服务的韧性和容错能力，在服务失败时提供替代方案。第二部分涵盖了如何为你的服务提供容错和韧性。
+
 - 拥有数百或数千个服务会对运营带来额外负担。大多数运营团队没有处理大量服务的经验。你如何缓解这种复杂性？监控在这里需要发挥主要作用。监控需要扮演一个重要角色，这里（此处原文似乎有重复或截断，翻译已根据语境处理*）
 
 *(注：由于原文最后一段存在明显的逻辑重复和截断，翻译严格遵循了原文的结构进行输出。)*
-
-
-
-
 
 ## 第1章 企业级 Java 微服务
 
@@ -433,11 +462,17 @@ Java EE 包含了许多规范，每种规范都有一个或多个实现。Spring
 现在你已经看了大爆炸模式和绞杀者模式，让我们来看看混合模式。我觉得这种模式将成为企业迁移和开发微服务的流模式。这种这种模式的起点与绞杀者模式相似。区别在于，你并没有完全丢失单体中的原始功能，而是与新的微服务集成。图 1.7 显示了请求通过现有 Java 单体和微服务架构的路径：
 
 1. 用户从浏览器发出请求，指定他们想要看到的视图。
+
 2. 视图调用控制器以获取构建所需的任何信息。
+
 3. 控制器调用业务服务，可能从不同的来源聚合数据。
+
 4. 业务服务将请求传入微服务环境，进入网关。
+
 5. 网关根据定义的路由规则将请求路由到相应的微服务。
+
 6. 一个微服务接收请求并在调用另一个微服务之前对其进行某些处理。
+
 7. 链中的最后一个微服务与数据存储层交互以读取/写入记录。
 
 像图 1.7 这样的架构提供了巨大的灵活性。
@@ -477,10 +512,6 @@ public class HelloRestController {
 }
 ```
 
-
-
-
-
 ### 1.4.1 为什么企业级 Java 适合微服务
 
 你已经看到作为企业级 Java 服务开发 RESTful 端点是多么简单了，但你难道不会认为使用专门为微服务构建的新框架或技术会更好吗？你现在有许多选择：Go、Rust 和 Node.js 仅仅是其中例子。
@@ -496,23 +527,35 @@ public class HelloRestController {
 在选择开发微服务的技术时，企业并不是需要考虑的因素。你还需要考虑以下因素：
 
 - 市场上开发者的经验和技能——如果你没有足够的资源池供你选择，那么为微服务开发选择特定的技术就没有意义了。庞大的开发者群体拥有企业级 Java 经验，因此这是一个优势。
+
 - 供应商支持——选择一种用于开发微服务的技术固然很好，但如果没有供应商提供该技术的支持，就会很困难。这种困难是因为企业希望有供应商能够 24/7 小时就绪，就技术问题提供支持，通常是在生产环境中。没有直接的供应商支持，企业需要雇用直接接触该技术的人员，以确保他们能够解决生产环境中微服务的任何问题。
+
 - 变更成本——如果一个企业已经使用企业级 Java 开发了十年或以上，并且有一组在那个时期工作过的项目的稳定开发者，那么企业放弃这段历史并使用不同的技术开辟新路径是否有意义呢？虽然在某些情况下这样做是有意义的，但大多数企业在迁移到微服务时也应该坚持自己的经验和技能。
+
 - 经验和基础设施——除了开发者之外，拥有多年企业级 Java 操作经验的便利性同样至重要。应用程序不会自我监控和修复，尽管如果可以那样就好了。在新的语言和框架上招聘或重新培训运维人员所花费的时间可能与对开发者进行培训一样耗。
 
 ### 总结
 
 - 一个微服务由在单个进程中执行的单个部署组成。
+
 - 企业级 Java 单体应用是一个所有组件都包含在一个部署中的应用程序。
+
 - 企业级微服务是使用企业级 Java 框架开发的微服务。
-- 企业级单体应用不适合快速的发布周期。
-- 实现微服务并不是万灵药，它需要额外的考虑才能成功实施。
-- 从单体应用迁移到微服务的最佳方式是使用混合模式（Hybrid pattern）。
-- 在实施微服务的决策中，不应忽视企业在企业级 Java 开发的历史。
 
-## 开发一个简单的 RESTful 微服务
 
-- 本章涵盖内容：
+
+企业级单体应用不适合快速的发布周期。
+
+实现微服务并不是万灵药，它需要额外的考虑才能成功实施。
+
+从单体应用迁移到微服务的最佳方式是使用混合模式（Hybrid pattern）。
+
+在实施微服务的决策中，不应忽视企业在企业级 Java 开发的历史。
+
+# 开发一个简单的 RESTful 微服务
+
+本章涵盖内容：
+
 - 介绍 Cayambe 单体应用
 - 开发一个简单的 RESTful 应用程序
 - 将你的简单 RESTful 应用程序作为微服务打包
@@ -523,8 +566,6 @@ public class HelloRestController {
 ## 2.1 Cayambe 单体应用
 
 Cayambe 是一个电子商务应用程序，在过去的 15 年中没有维护过，需要进行大量的现代化。从图 2.1 的首页很容易看出，它的外观与如今的现代网站并不相同。
-
-## 第 2 章 开发一个简单的 RESTful 微服务
 
 ## Cayambe 开源购物车参考实现
 
@@ -557,8 +598,6 @@ Cayambe EAR
 作为 Cayambe 现代化的一部分，你将拆分站点的管理部分，以便进行扩展。首要任务是开发一个提供管理功能的 JAX-RS 服务，并使用 ReactJS 为其新的 UI。对于已经熟悉 JAX-RS 的人来说，你会看到以前知识的重复。
 
 图 2.4 是 Cayambe 当前的管理界面。在 UI 中查看或更新类别是不可能的。
-
-## 第 2 章 开发一个简单的 RESTful 微服务
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_42_0.png)
 
@@ -594,12 +633,6 @@ Cayambe EAR
 
 UI 将调用维护类别的微服务的 CRUD 操作。微服务的 RESTful 端点可以从任何客户端调用，但你展示它们如何与 UI 交互。图 2.7 详细说明了在 UI 中管理类别时的状态及其转换。
 
-
-
-
-
-## 第 2 章 开发一个简单的 RESTful 微服务
-
 删除类别
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_44_0.png)
@@ -622,9 +655,13 @@ UI 将调用维护类别的微服务的 CRUD 操作。微服务的 RESTful 端�
 ### 新管理站点
 
 WAR
+
 微服务
+
 表示层
+
 API 层
+
 数据层
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_45_0.png)
@@ -639,7 +676,7 @@ API 层
 
 由于你将 UI 和服务拆分到不同的运行时，你需要添加对跨源资源共享（CORS）的支持。如果不这样做，浏览器将阻止 UI 向微服务发送 HTTP 请求。为了做到这一点，微服务需要一个过滤器。
 
-+ 列表 2.1 CORSFilter
+列表 2.1 CORSFilter
 
 ```java
 @Provider
@@ -655,8 +692,6 @@ public class CORSFilter implements ContainerResponseFilter {
     }
 }
 ```
-
-## 第 2 章 开发一个简单的 RESTful 微服务
 
 **提示** 记住 UI 从哪里检索数据，以及是否需要考虑 CORS。不这样做可能会在 RESTful 调用无故失败时，很容易导致令人沮丧的 UI 错误。相反，如果你的 UI 使用 API 网关与微服务交互，API 网关提供了直接处理 CORS 的配置，而不是通过微服务。
 
@@ -676,11 +711,11 @@ public class CORSFilter implements ContainerResponseFilter {
 
 ### 新管理站点
 
-默认情况下，JAX-RS 资源实例仅在每个请求的基础上是激活的。如果不更改这一点，每个请求将花费时间创建需要注入的 `EntityManager`。如果可以避免，这不会产生巨大的性能影响。为了避免重新创建 `EntityManager`，你需要将其标记为 @ApplicationScoped。这告诉运行时，你的 `CategoryResource` 生命周期将由 CDI 管理，而不是 JAX-RS。
+默认情况下，JAX-RS 资源实例仅在每个请求的基础上是激活的。如果不更改这一点，每个请求将花费时间创建需要注入的 `EntityManager`。如果可以避免，这不会产生巨大的性能影响。为了避免重新创建 `EntityManager`，你需要将其标记为 `@ApplicationScoped`。这告诉运行时，你的 `CategoryResource` 生命周期将由 CDI 管理，而不是 JAX-RS。
 
 你需要定义一个 JAX-RS 类来定义资源的根路径。
 
-### 列表 2.2 AdminApplication
+列表 2.2 AdminApplication
 
 ```java
 @ApplicationPath("/admin")
@@ -694,7 +729,7 @@ public class AdminApplication extends Application {
 
 你应用程序的主界面是类别树。填充屏幕上的列表需要一个 RESTful 端点从数据库中检索所有类别。
 
-### 列表 2.3 @GET on CategoryResource
+列表 2.3 @GET on CategoryResource
 
 ```java
 @GET("/")
@@ -711,17 +746,15 @@ public class CategoryResource {
 }
 ```
 
-- 指定了用于 EntityManager 的持久化单元 AdminPU
+- 指定了用于 `EntityManager` 的持久化单元 `AdminPU`
 - 指明该方法返回以 JSON 格式序列化的数据
-- 返回 CategoryTree 作为根节点。其他类别将作为子节点。
+- 返回 `CategoryTree` 作为根节点。其他类别将作为子节点。
 
 ### 删除类别
 
 当你有一个类别后，需要删除一个不再使用的旧类别。为了这一点，你需要添加一个从数据库删除类别的 RESTful 端点，如列表 2.4 所示。
 
-## 第 2 章 开发一个简单的 RESTful 微服务
-
-### 列表 2.4 @DELETE on CategoryResource
+列表 2.4 @DELETE on CategoryResource
 
 执行此端点需要事务
 
@@ -752,20 +785,20 @@ public class CategoryResource {
 }
 ```
 
-- @DELETE 指明该方法只接受 HTTP 请求。
-- 定义方法接受一个参数并将其命名为 categoryId。
-- 根据参数 categoryId 查找 Category 实例。
+- `@DELETE` 指明该方法只接受 HTTP 请求。
+- 定义方法接受一个参数并将其命名为 `categoryId`。
+- 根据参数 `categoryId` 查找 `Category` 实例。
 - 从持久化中移除该实例。
-- 如果遇到异常，使用 JAX-RS Response 返回服务器错误并携带异常消息。
+- 如果遇到异常，使用 JAX-RS `Response` 返回服务器错误并携带异常消息。
 - 如果类别成功删除，则返回空响应。
 
 ### 添加类别
 
 某些类别需要添加。为了这一点，你有一个 RESTful 端点向你的数据库中添加新类别。
 
-### 列表 2.5 @POST on CategoryResource
+列表 2.5 @POST on CategoryResource
 
-该方法还返回一个以 JSON 格式序列化的 Category。
+该方法还返回一个以 JSON 格式序列化的 `Category`。
 
 ```java
 @Path("")
@@ -779,15 +812,12 @@ public class CategoryResource {
     public Response create(Category category) throws Exception {
 ```
 
-- @POST 指明该方法只接受 HTTP POST 请求。
-- 指明该方法只接受可以序列化为 Category 实例的 JSON。
-
-
-
+- `@POST` 指明该方法只接受 HTTP POST 请求。
+- 指明该方法只接受可以序列化为 `Category` 实例的 JSON。
 
 ## 新的管理站点
 
-如果 Category 设置了 ID，则返回 409 响应状态，表示与尝试创建的记录存在冲突
+如果 `Category` 设置了 ID，则返回 409 响应状态，表示与尝试创建的记录存在冲突
 
 ```java
 if (category.getId() != null) {
@@ -798,7 +828,7 @@ if (category.getId() != null) {
 }
 ```
 
-将新的 Category 持化到数据库
+将新的 `Category` 持化到数据库
 
 ```java
 try {
@@ -814,9 +844,9 @@ return Response
   .build();
 ```
 
-作为 Response 的一部分，将位置设置为带有其标识符的新 Category。
+作为 `Response` 的一部分，将位置设置为带有其标识符的新 `Category`。
 
-此外，CategoryResource RESTful 端点定义了获取和更新分类。额外方法请参阅第 2 章源码。
+此外，`CategoryResource` RESTful 端点定义了获取和更新分类。额外方法请参阅第 2 章源码。
 
 ### 2.2.4 运行程序
 
@@ -826,7 +856,9 @@ return Response
 
 为了提供更多微服务的示例，例如你将使用 Thorntail 将其封装为一个 uber jar。Thorntail 提供了一种替代方法，可以将你的应用程序封装为 WAR 或 EAR 并部署到全 Java EE 应用程序服务器。它允许你从 WildFly 中选择需要的部分，并将其封装成可以从命令行运行的 uber jar。第 3 章将详细介绍 Thorntail 的功能。要运行该微服务，你需要将列表 2.6 中的插件添加到你的 `pom.xml` 中。
 
-## 列表 2.6 Maven 插件配置
+列表 2.6 Maven 插件配置
+
+
 
 ```xml
 <plugin>
@@ -851,7 +883,7 @@ return Response
 
 Thorntail 的最新版本
 
-执行时运行插件的 `package` 目标。
+执行时运行插件的`package`目标。
 
 指定端口偏移量为 1，这样你的微服务将在 8081 端口启动。
 
@@ -859,7 +891,7 @@ Thorntail 的最新版本
 
 ## 启动微服务
 
-打开终端或命令行窗口，导航到书籍示例代码的 `/chapter2/admin` 目录。从该目录运行以下命令：
+打开终端或命令行窗口，导航到书籍示例代码的`/chapter2/admin`目录。从该目录运行以下命令：
 
 ```bash
 mvn thorntail:run
@@ -869,7 +901,7 @@ mvn thorntail:run
 
 ## 启动 UI
 
-打开终端并导航到书籍示例代码的 `/chapter2/ui` 目录。从该目录运行以下命令：
+打开终端并导航到书籍示例代码的`/chapter2/ui`目录。从该目录运行以下命令：
 
 ```bash
 mvn package
@@ -937,9 +969,6 @@ Java EE 配置文件
 | Bean 验证 | ✓ | ✓ |
 | JAX-RS | ✓ | ✓ |
 
-
-
-
 # 恰好足够的应用程序服务器 (Just enough Application Server)
 
 | 特性 | Web Profile | Platform |
@@ -986,11 +1015,11 @@ JeAS 运行时提供了一种简单且易管理的方法，仅包含应用程序
 
 这种灵活性意味着 JeAS 运行时具有巨大的优势：
 
--   **减小包体积**——与它所部署的应用程序包相比。
--   **减少分配内存**——减少程度取决于许多因素，例如不再加载的类数量。
--   **减少安全范围**——各种功能开放的端口更少，运行的服务更少。此外，潜在关键漏洞 (CVE) 的攻击面显著缩小。
--   **应用程序之间的隔离**——许多应用程序通常部署在单个应用程序服务器上。
--   **简化升级**——升级仅影响单个应用程序。
+- **减小包体积**——与它所部署的应用程序包相比。
+- **减少分配内存**——减少程度取决于许多因素，例如不再加载的类数量。
+- **减少安全范围**——各种功能开放的端口更少，运行的服务更少。此外，潜在关键漏洞 (CVE) 的攻击面显著缩小。
+- **应用程序之间的隔离**——许多应用程序通常部署在单个应用程序服务器上。
+- **简化升级**——升级仅影响单个应用程序。
 
 应用程序之间更大的隔离意味着巨大的意义，因此值得额外的解释。在企业级 Java 应用部署到生产环境多年来，应用程序服务器很少包含单个应用程序。通常，一个应用程序服务器会在实例中运行几个到几十个应用程序。
 
@@ -1032,10 +1061,6 @@ JeAS 运行时
 | Open API | | | | ✓ |
 | Type-safe REST client | | | | |
 
-
-
-
-
 ## 第 3 章 微服务的“足够”应用服务器
 
 社区的目标是大约每季度发布一个新版本。该项目在保持进度方面表现良好，尽管 1.0 版本发布后提交给 Eclipse 基金会时出现了延迟。根据基金会的要求，需要时间对所有现有的项目代码和文档进行审查。
@@ -1052,7 +1077,7 @@ Eclipse MicroProfile 为企业级 Java 微服务创建了规范，其优势在�
 
 ### 3.2.1 海滩度假应用程序
 
-我们的海滩度假应用程序将是一个简单的购物车，它拥有一个 REST 接口和一个代表购物车中物品的单类。你将向购物车中预填充每个人在海滩度假时都需要的物品！为了保持简单，你只在 `CartItem` 中存储名称和数量。
+我们的海滩度假应用程序将是一个简单的购物车，它拥有一个 REST 接口和一个代表购物车中物品的单类。你将向购物车中预填充每个人在海滩度假时都需要的物品！为了保持简单，你只在`CartItem`中存储名称和数量。
 
 #### 列表 3.1 CartItem
 
@@ -1091,9 +1116,11 @@ public class CartItem {
 }
 ```
 
-你需要的另一个部分是你的 RESTful 接口。为了保持简单，你不会使用数据库存储物品；数据将仅存储在内存中。你的 `Cart-Controller` 将为你初始化一个物品列表，作为购物车的基础。列表 3.2 非常简单，你可以清楚地看到每个框架在类和方法中提供了什么。它提供了三个你将通过 REST 提供的方法：`all()`、`addOrUpdateItem()` 和 `getItem()`。`addOrUpdateItem` 方法最复杂，因为它处理向购物车中的任何物品添加数量，或添加完全新的物品。
+你需要的另一个部分是你的 RESTful 接口。为了保持简单，你不会使用数据库存储物品；数据将仅存储在内存中。你的`Cart-Controller`将为你初始化一个物品列表，作为购物车的基础。列表 3.2 非常简单，你可以清楚地看到每个框架在类和方法中提供了什么。它提供了三个你将通过 REST 提供的方法：`all()`、`addOrUpdateItem()` 和 `getItem()`。`addOrUpdateItem`方法最复杂，因为它处理向购物车中的任何物品添加数量，或添加完全新的物品。
 
 #### 列表 3.2 CartController
+
+
 
 ```java
 public class CartController {
@@ -1148,7 +1175,7 @@ Dropward 通过对开发者构建微服务的需求提出主张，提供了一�
 - 使用 Hibernate Validator
 - 使用 Dropward Metrics 提供对代码行为的洞察
 
-如果你的应用程序需要 Dropward 未包含的库，你还需要为项目添加必要的依赖项。请查看 www.dropward.io 获取完整列表。
+如果你的应用程序需要 Dropward 未包含的库，你还需要为项目添加必要的依赖项。请查看 `www.dropward.io` 获取完整列表。
 
 Dropward 起始于 2011 年，是第一个为微服务整合了具有主张的 JeAS 运行时的项目。Dropward 现在已超过版本 1.3.0。让我们回到讨论过的使用 JAX-RS 和 CDI 的示例微服务。图 3.5 显示了使用 Dropward 的微服务样式。
 
@@ -1192,13 +1219,8 @@ public String addOrUpdateItem(
 ```
 
 > 表示该方法仅支持 HTTP GET 请求
-
-> 端点可以通过 /add 访问。
-> 通过 URL 传递的方法参数，例如 /add?item=hat&qty=2
-
-
-
-
+> 端点可以通过 `/add` 访问。
+> 通过 URL 传递的方法参数，例如 `/add?item=hat&qty=2`
 
 ## 第 3 章 用于微服务的“足够”应用服务器
 
@@ -1259,7 +1281,7 @@ public void run(Chapter3Configuration configuration, Environment environment) {
 }
 ```
 
-用 jersey 注册你的 RESTful 端点的实例。现在你已经构建了应用程序，可以运行它了吗？通过 Maven 创建项目，它已经添加了构建所需的插件。你需要做的是确保 pom.xml 中的插件引用了你创建的应用程序类。现在构建应用程序：
+用 jersey 注册你的 RESTful 端点的实例。现在你已经构建了应用程序，可以运行它了吗？通过 Maven 创建项目，它已经添加了构建所需的插件。你需要做的是确保 `pom.xml` 中的插件引用了你创建的应用程序类。现在构建应用程序：
 
 ```bash
 mvn clean package
@@ -1271,7 +1293,7 @@ mvn clean package
 java -jar target/chapter3-dropwizard-1.0-SNAPSHOT.jar
 ```
 
-现在已经可以通过访问 http://localhost:8080/ 来访问应用程序了。这会返回当前项目的列表。你可以导航到 http://localhost:8080/get/hat 查看项目的详情。通过 http://localhost:8080/add?qty=1 更新现有项目的数量，或通过 http://localhost:8080/add?qty=2 添加新项目。Dropwizard 许多许多我们没有涵盖的功能，例如指标监控（Metrics）和健康检查（Health Checks）；请查看 www.dropwizard.io/1.0.0/docs.html 获取更多信息。
+现在已经可以通过访问 `http://localhost:8080/` 来访问应用程序了。这会返回当前项目的列表。你可以导航到 `http://localhost:8080/get/hat` 查看项目的详情。通过 `http://localhost:8080/add?qty=1` 更新现有项目的数量，或通过 `http://localhost:8080/add?qty=2` 添加新项目。Dropwizard 许多许多我们没有涵盖的功能，例如指标监控（Metrics）和健康检查（Health Checks）；请查看 `www.dropwizard.io/1.0.0/docs.html` 获取更多信息。
 
 ### 3.2.3 Payara Micro—精简 Java EE 应用
 
@@ -1314,14 +1336,14 @@ Payara Micro 提供了什么？图 3.6 对比了 Payara 发行版与 Web Profile
 </dependency>
 ```
 
-现在你已经有了项目，让我们修改基础代码以供 Payara Micro 使用。对于 CartItem Bean，你需要标识它是否被映射到 JAXB，创建一个默认构造函数，并使用命名良好的 setter 方法。
+现在你已经有了项目，让我们修改基础代码以供 Payara Micro 使用。对于 `CartItem` Bean，你需要标识它是否被映射到 JAXB，创建一个默认构造函数，并使用命名良好的 setter 方法。
 
 ### 列表 3.7 使用 JAXB 映射的 CartItem
 
 | 注解 | 描述 |
 |---|---|
-| @XmlRootElement | 将 Java 类作为 JAXB 映射元素 |
-| public class CartItem { | |
+| `@XmlRootElement` | 将 Java 类作为 JAXB 映射元素 |
+| `public class CartItem {` | |
 
 ```java
 @XmlRootElement
@@ -1343,7 +1365,7 @@ public class CartItem {
 
 > 注意：Payara Micro 要求 Bean 使用正确的 setter 方法，正如你在列表 3.7 中所示。包含构建器模式类型 setter 方法的 Bean 将无法正确序列化为 JSON。
 
-你的 CartController，如列表 3.8 所示，需要与 Dropwizard 相同的修改以使其符合 RESTful。用于 RESTful 端点的 JAX-RS API 
+你的 `CartController`，如列表 3.8 所示，需要与 Dropwizard 相同的修改以使其符合 RESTful。用于 RESTful 端点的 JAX-RS API
 
 # 列表 3.8 使用 Payara 的 CartController
 
@@ -1351,15 +1373,11 @@ public class CartItem {
 @Path("/
 ```
 
-端点可以通过 /id 访问。
+端点可以通过 `/id` 访问。
 
-通过 URL 传递的方法参数，例如 /add/item=hat&qty=2。
+通过 URL 传递的方法参数，例如 `/add/item=hat&qty=2`。
 
-作为 URL 路径定义的参数，/get/hat。
-
-
-
-
+作为 URL 路径定义的参数，`/get/hat`。
 
 ## 选择恰合适的的应用服务器
 
@@ -1372,27 +1390,28 @@ mvn clean package
 并运行应用程序：
 
 ```
-
 java -jar payara-micro.jar --deploy target/chapter3.war
 ```
 
-现在你可以在浏览器中通过 http://localhost:8080/chapter3/ 访问应用程序了。这会返回购物车中当前项目的列表。你可以导航到 http://localhost:8080/chapter3/get/hat 查看购物车中帽的详情。通过 http://localhost:8080/chapter3/addItem?qty=1 更新现有条目的数量，或者通过 http://localhost:8080/chapter3/add?item&qty=2 向购物车中添加新项目。
+现在你可以在浏览器中通过 `http://localhost:8080/chapter3/` 访问应用程序了。这会返回购物车中当前项目的列表。你可以导航到 `http://localhost:8080/chapter3/get/hat` 查看购物车中帽的详情。通过 `http://localhost:8080/chapter3/addItem?qty=1` 更新现有条目的数量，或者通过 `http://localhost:8080/chapter3/add?item&qty=2` 向购物车中添加新项目。
 
 ## 3.2.4 Spring Boot—有主张的微服务
 
 Spring Boot 的出现源于一种愿望：通过遵循约定而非手动配置来消除对样板配置的需求。它还引入了注解，提供了一种在无需配置的情况下启用 Spring Boot 部分功能的方法。
 
-Spring Boot 提供了许多启动器（starters）作为项目的依赖项，这些启动器将相关的库、框架以及配置相结合，满足你在开发微服务时可能需要的许多功能。例如，`spring-starter-data-jpa` 依赖引入了使用 Spring 和 JPA 访问数据库所需的所有内容。所有可用启动器的完整列表可以在 GitHub 仓库中找到：http://mng.bz/ciQ3。或者查看 http://start.spring.io，那里你可以使用应用程序所需的启动器来创建一个 Maven 项目。
+Spring Boot 提供了许多启动器（starters）作为项目的依赖项，这些启动器将相关的库、框架以及配置相结合，满足你在开发微服务时可能需要的许多功能。例如，`spring-starter-data-jpa` 依赖引入了使用 Spring 和 JPA 访问数据库所需的所有内容。所有可用启动器的完整列表可以在 GitHub 仓库中找到：`http://mng.bz/ciQ3`。或者查看 `http://start.spring.io`，那里你可以使用应用程序所需的启动器来创建一个 Maven 项目。
+
+
 
 图 3.8 显示了你的 JAX-RS、CDI、JMS 微服务是如何使用 Spring Boot 的。该微服务面临的最大挑战将重写现有的使用 CDI 依赖注入的代码。虽然可以使用启动器来让 CDI 在 Spring 内部工作，但如果你希望项目保持作为一个基于 Spring 的项目，那么将其重写为使用 Spring 注入会更有意义。
 
 通过启动器，Spring Boot 能够提供一个灵活的 JeAS 运行时，可以根据应用程序不断变化的需求进行扩展或收缩。修改应用程序的功能只需添加或删除 Spring 依赖并重新构建应用程序。
 
-如果你不确定可能需要哪些启动器，请前往 http://start.spring.io 查看选项。该网站包含一个项目生成器，是查看可用启动器全景以及它们提供的功能类型的绝佳之处，也可以查看哪些启动器适用于数据库访问等常规开发任务，同时也适用于断路器和服务服务发现等微服务编程模式。
+如果你不确定可能需要哪些启动器，请前往 `http://start.spring.io` 查看选项。该网站包含一个项目生成器，是查看可用启动器全景以及它们提供的功能类型的绝佳之处，也可以查看哪些启动器适用于数据库访问等常规开发任务，同时也适用于断路器和服务发现等微服务编程模式。
 
 注意：Spring Boot 起于 2012 年 10 月启动，目前版本已超过 1.5.10。
 
-你可以使用 http://start.spring.io 创建一个包含 Web 服务器的项目。这应该会为你提供一个 `pom.xml`，包含以下依赖：
+你可以使用 `http://start.spring.io` 创建一个包含 Web 服务器的项目。这应该会为你提供一个 `pom.xml`，包含以下依赖：
 
 ```xml
 <dependency>
@@ -1434,8 +1453,8 @@ public class CartController {
 
 你的 RESTful 端点已经定义完成，最后创建 Spring Boot 应用程序类。
 
-| 列表 3.11 Chapter3SpringBootApplication |
-| :--- |
+### 列表 3.11 Chapter3SpringBootApplication
+
 ```java
 @SpringBootApplication
 public class Chapter3SpringBootApplication {
@@ -1470,7 +1489,7 @@ mvn clean package
 java -jar payara-micro.jar --deploy target/chapter3.war
 ```
 
-现在你可以在浏览器中通过 http://localhost:8080/chapter3/ 访问应用程序了。这会返回购物车中当前项目的列表。你可以导航到 http://localhost:8080/chapter3/get/hat 查看购物车中帽的详情。通过 http://localhost:8080/chapter3/addItem?qty=1 更新现有条目的数量，或者通过 http://localhost:8080/chapter3/add?item&qty=2 向购物车中添加新项目。
+现在你可以在浏览器中通过 `http://localhost:8080/chapter3/` 访问应用程序了。这会返回购物车中当前项目的列表。你可以导航到 `http://localhost:8080/chapter3/get/hat` 查看购物车中帽的详情。通过 `http://localhost:8080/chapter3/addItem?qty=1` 更新现有条目的数量，或者通过 `http://localhost:8080/chapter3/add?item&qty=2` 向购物车中添加新项目。
 
 ## 3.2.5 Thorntall—最灵活的 JeAS 运行时
 
@@ -1478,33 +1497,27 @@ Thorntall 的诞生源于利用 WildFly 应用服务器模块化的愿望。这�
 
 Thorntall 定义了应用程序可以包含的依赖项，例如 JPA、JAX-RS 以及 Java EE 的大部分部分。除了 Java EE 依赖外，Thorntall 还提供了用于开发企业微服务的依赖项，如 Swagger、Keycloak 以及其他框架和库。
 
-如果你不确定应用程序可能需要哪些 Thorntall 依赖，你有几种选择。你可以访问 http://wildfly-swarm.org/generator 生成一个骨架项目，并选择微服务所需的功能类型。既有 Java EE 功能，也有非 Java EE 功能的选择，例如 Eclipse MicroProfile、Hibernate Search、容错和安全等。
+如果你不确定应用程序可能需要哪些 Thorntall 依赖，你有几种选择。你可以访问 `http://wildfly-swarm.org/generator` 生成一个骨架项目，并选择微服务所需的功能类型。既有 Java EE 功能，也有非 Java EE 功能的选择，例如 Eclipse MicroProfile、Hibernate Search、容错和安全等。
 
 开发 Thorntall 应用程序的另一种方法（如果你不确定需要哪些依赖）是将 Maven 插件添加到 `pom.xml` 中并自动检测你的应用程序代码以确定使用了哪些 API，从而确定所需的依赖项。这通常是使用 Thorntall 最简单的方法，特别是从现有的 Java EE 应用程序转换时；由于只在 `pom.xml` 中添加了一个新插件，应用程序的其他部分可以保持不变。
 
 虽然自动检测适用于入门，但这意味着插件打包应用程序的速度比直接指定依赖项要慢一点。
 
-
-
-
-
-## 选择恰好的的应用服务器
+## 选择恰好的应用服务器
 
 在开发者更熟悉可用的依赖项，或者需要插件无法检测到的依赖项后，切换到直接使用 Maven 依赖是非常的。查看插件检测到哪些依赖项的一种简单方法是查看构建项目时的日志输出。你可以将该列表作为需要添加的 Maven 依赖集。
 
 注意：Thorntail 于 2015 年 2 月成立，现在版本已超过了 2.2.0.Final。该项目在 2018 年 5 月从 WildFlySwarm 重命名为 Thorntail。
 
-3.9 展示了 JAX-RS、CDI、JMS 微服务如何在 Thorntail 中使用规范。在这里你可以看到 Thorntail 提供了你的微服务所需的全部内容——不多，也不少。Thorntail 提供了理想的 JeAS 运行时，因为它提供的内容恰好能让你的微服务如此紧密地匹配应用程序的需求。其他运行时有未使用的部分，或者要求在你的应用程序中包含额外的库。
+图 3.9 展示了 JAX-RS、CDI、JMS 微服务如何在 Thorntail 中使用规范。在这里你可以看到 Thorntail 提供了你的微服务所需的全部内容——不多，也不少。Thorntail 提供了理想的 JeAS 运行时，因为它提供的内容恰好能让你的微服务如此紧密地匹配应用程序的需求。其他运行时有未使用的部分，或者要求在你的应用程序中包含额外的库。
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_73_0.png)
 
 要创建你的项目，你将使用基础的 WAR 项目并添加以下插件定义。
 
-图 3.9 Thorntail 中的微服务使用
+### 列表 3.12 插件配置
 
-列表 3.12 插件配置
-
-```
+```xml
 <plugin>
   <groupId>io.thortail</groupId>
   <artifactId>thortail-maven-plugin</artifactId>
@@ -1519,13 +1532,15 @@ Thorntall 定义了应用程序可以包含的依赖项，例如 JPA、JAX-RS �
 </plugin>
 ```
 
+用于 Thorntail 插件的 Artifact ID 与 Thorntail 版本对应关系如下：
+
 | 用于 Thorntail 插件的 Artifact ID | Thorntail 版本 |
 |---|---|
 | 在 package 阶段执行插件。 | |
 
 然后你就在提供的 scope 范围内拥有了 Java EE Web APIs：
 
-```
+```xml
 <dependency>
   <groupId>javax</groupId>
   <artifactId>javaee-web-api</artifactId>
@@ -1538,11 +1553,11 @@ Thorntall 定义了应用程序可以包含的依赖项，例如 JPA、JAX-RS �
 
 ## 第 3 章 用于微服务的恰好的应用服务器
 
-对于 CartItem bean，你只需要向它添加 @XmlElement。CartController 需要与 Payara Micro 和 Dropwizard 使用的相同的 JAX-RS 注解。最后，你需要一个 Application 来激活 JAX-RS。
+对于 `CartItem` bean，你只需要向它添加 `@XmlElement`。`CartController` 需要与 Payara Micro 和 Dropwizard 使用的相同的 JAX-RS 注解。最后，你需要一个 `Application` 来激活 JAX-RS。
 
-## 列表 3.13 使用 Thorntail 的 JaxrsApplication
+### 列表 3.13 使用 Thorntail 的 JaxrsApplication
 
-```
+```java
 @ApplicationPath("/")
 public class JaxrsApplication extends Application {
 }
@@ -1555,15 +1570,15 @@ public class JaxrsApplication extends Application {
 
 与 Spring Boot 一样，Thorntail 提供了灵活性，开发者可以根据自己的需求选择运行方式。在不使用 Maven 构建应用程序的情况下，你可以使用以下命令启动 Thorntail JeAS 运行时：
 
-```
+```bash
 mvn thor:run
 ```
 
 这使用 Thorntail 的 Maven 插件执行应用程序，就像它已经被打包成 uber jar 一样。
 
-另一种方法是构建一个 uber jar。你像通常常一样构建 Maven 项目：
+另一种方法是构建一个 uber jar。你像通常一样构建 Maven 项目：
 
-```
+```bash
 mvn clean package
 ```
 
@@ -1573,13 +1588,13 @@ mvn clean package
 java -jar target/chapter3-thorntail.jar
 ```
 
-现在你可以在浏览器中访问 http://localhost:8080/ 上的应用程序。这将返回购物车中当前项目的列表。你可以导航到 http://localhost:8080/get/hat 查看购物车中帽的详情。通过 http://localhost:8080/add?item=towel&qty=1 更新现有项目的数量，或通过 http://localhost:8080/add/item=kite&qty=2 向你的购物车添加新项目。
+现在你可以在浏览器中访问 `http://localhost:8080/` 上的应用程序。这将返回购物车中当前项目的列表。你可以导航到 `http://localhost:8080/get/hat` 查看购物车中帽的详情。通过 `http://localhost:8080/add?item=towel&qty=1` 更新现有项目的数量，或通过 `http://localhost:8080/add/item=kite&qty=2` 向你的购物车添加新项目。
 
 ## 它们如何比较？
 
 你查看了一些 JEAS 运行时，以及对于暴露几个 RESTful 端点的简单应用程序，每个运行时代码的差异。让我们在表 3.2 中比较 JEAS 运行的一些特性。
 
-表 3.2 JeAS 运行时对比
+### 表 3.2 JeAS 运行时对比
 
 | 特性 | Dropwizard | Payara Micro | Spring Boot | Thorntail |
 |---|---|---|---|---|
@@ -1595,7 +1610,7 @@ java -jar target/chapter3-thorntail.jar
 
 - 是否具有 Java EE 或 Spring 的经验和知识？
 - 生产环境的首选打包方法是什么？
-- 是否之前过这些框架的非 JeAS 运行时？
+- 是否之前用过这些框架的非 JeAS 运行时？
 
 这些是影响应用程序选择哪个 JeAS 框架的因素。对于具有之前 Java EE 经验的开发者来说，Thorntail 可能是首选，但寻找不需要许多 Java EE API 的简单技术栈的开发者可能会选择 Dropwizard。
 
@@ -1634,10 +1649,6 @@ java -jar target/chapter3-thorntail.jar
 
 任何类型测试的关键点在于，你不是为了乐趣或单次执行而编写测试。编写任何测试的目的、益处是在代码更改和修改时能够持续执行它，通常作为持续集成的一部分。为什么你想在旧代码和更新的代码上一直运行这些测试？很简单，这可以减少进入生产代码的错误（或 Bug）数量。
 
-
-
-
-
 ### 4.2 单元测试
 
 单元测试通常由开发者在编写代码时创建，用于测试类和方法的内部行为。这需要使用模拟（mocks）或存桩（stubs）来模拟外部系统的行为。
@@ -1646,17 +1657,19 @@ java -jar target/chapter3-thorntail.jar
 
 我们为什么需要单元测试？你需要确保类中的某个方法按其预期执行功能。如果向方法传递了参数，则应该对这些参数进行验证以确保其恰当性。这可以简单到确保值不空，也可以复杂到验证电子邮件地址格式。例如，你需要验证传递特定参数是否返回了你从这些输入中预期的结果。单元测试是最低级别的测试，但通常是确保正确最关键的一步。如果你最小的代码单元（一个方法）没有按照你的预期运行，那么你的整个服务都可能运行错误。
 
-这种级别的测试最流行且使用广泛的两个框架是 JUnit (http://junit.org/) 和 TestNG (http://testng.org/doc/)。JUnit 出现的时间最早，它也是创建 TestNG 的灵感来源。它们的功能之间没有太大区别，甚至在某些情况下，注解的方式也一样！
+这种级别的测试最流行且使用广泛的两个框架是 JUnit (`http://junit.org/`) 和 TestNG (`http://testng.org/doc/`)。JUnit 出现的时间最早，它也是创建 TestNG 的灵感来源。它们的功能之间没有太大区别，甚至在某些情况下，注解的方式也一样！
 
 它们目标上最大的区别纯粹是个人选择。JUnit 的关注完全在于单元测试，它是采用测试驱动开发的巨大推动力。TestNG 的目标是支持使用单元测试进行测试。
 
-开发者选择哪一个完全取决于个人喜好。在任何时候，JUnit 或 TestNG 的功能都可能比另一个更多，但另一个可能很快就会赶上。通过多次的往复迭代，你可以看到你所添加的测试代码中的差异。这对于显示修复任何可怕的 Bug 所需的相关代码更改尤为重要。为了编写我们的单元测试，我使用 JUnit，仅仅是因为我在职业生涯中使用该框架最多，而且对它最熟悉。
 
-目前，管理微服务（admin microservice）专注于 Category 模型的 CRUD 操作，并有一个 JAX-RS 资源用于提供 RESTful 端点以与其交互。
+
+开发者选择哪一个完全取决于个人喜好。在任何时候，`JUnit` 或 `TestNG` 的功能都可能比另一个更多，但另一个可能很快就会赶上。通过多次的往复迭代，你可以看到你所添加的测试代码中的差异。这对于显示修复任何可怕的 Bug 所需的相关代码更改尤为重要。为了编写我们的单元测试，我使用 `JUnit`，仅仅是因为我在职业生涯中使用该框架最多，而且对它最熟悉。
+
+目前，管理微服务（admin microservice）专注于 `Category` 模型的 CRUD 操作，并有一个 `JAX-RS` 资源用于提供 RESTful 端点以与其交互。
 
 ## 单元测试
 
-当你处理单元测试时，Category 是你唯一可以在不模拟数据库的情况下通过单元测试测试的有效代码。虽然模拟 Entity-Manager 来测试 JAX-RS 资源也是可能的，但最好作为集成测试的一部分，配合数据库进行完整测试。
+当你处理单元测试时，`Category` 是你唯一可以在不模拟数据库的情况下通过单元测试测试的有效代码。虽然模拟 `EntityManager` 来测试 `JAX-RS` 资源也是可能的，但最好作为集成测试的一部分，配合数据库进行完整测试。
 
 你首先需要在你的 `pom.xml` 中添加测试所需的依赖项：
 
@@ -1673,7 +1686,7 @@ java -jar target/chapter3-thorntail.jar
 </dependency>
 ```
 
-现在让我们来看看 Category 的一些单元测试，因为它是运行时任何方法执行栈中的最低层级。
+现在让我们来看看 `Category` 的一些单元测试，因为它是运行时任何方法执行栈中的最低层级。
 
 ### 图 4.1 CategoryTest
 
@@ -1686,11 +1699,7 @@ java -jar target/chapter3-thorntail.jar
 | Category cat2 = createCategory(1, "Category"); | | |
 | assertEquals(cat1, cat2); | | |
 
-*(注：由于原文表格内容不完整且存在断句，此处根据上下文进行了逻辑性补全，如 assertEquals(cat1, cat2) 是单元测试中常见的写法)*
-
-
-
-
+*(注：由于原文表格内容不完整且存在断句，此处根据上下文进行了逻辑性补全，如 `assertEquals(cat1, cat2)` 是单元测试中常见的写法)*
 
 # 第 4 章 微服务测试
 
@@ -1703,7 +1712,7 @@ Objects.equals(version, category.version);
 
 在这里，你修改了父对象的等性检查，在比较 ID 值之前先验证父对象是否为空。这使得你的代码更加健壮且更不容易出错。
 
-`Category.hashCode()` 也需要进行类似的修改，以确保在为 Category 实例生成哈希值时包含父级类别的 ID。
+`Category.hashCode()` 也需要进行类似的修改，以确保在为 `Category` 实例生成哈希值时包含父级类别的 ID。
 
 你已经看到某些单元测试如何通过减少潜在的 bug 来帮助改进内部代码。让我们更进一步，编写一些集成测试吧！
 
@@ -1713,15 +1722,15 @@ Objects.equals(version, category.version);
 
 根据微服务集成的系统类型，可能无法在本地开发人员机器上执行这些测试。集成测试非常适合持续改进环境，在该环境中资源更丰富，并且可以安装任何所需的系统。
 
-通过集成测试，你可以扩展想要测试的范围，并验证其运行结果是否符合预期。它还允许你将外部系统作为测试的一部分，而不是去 mock任何内容。使用微服务在生产环境中将依赖的实际服务和系统进行测试，可以极大地增强你对代码在生产环境中不会产生错误的信心。你不会在生产系统上运行集成测试，但可以在镜像生产环境设置和数据的系统上运行。
+通过集成测试，你可以扩展想要测试的范围，并验证其运行结果是否符合预期。它还允许你将外部系统作为测试的一部分，而不是去 mock 任何内容。使用微服务在生产环境中将依赖的实际服务和系统进行测试，可以极大地增强你对代码在生产环境中不会产生错误的信心。你不会在生产系统上运行集成测试，但可以在镜像生产环境设置和数据的系统上运行。
 
-为了辅助开发集成测试，将使用 Aquillian。Aquillian 是一个高度可扩展的 JVM 测试平台，允许轻松创建集成测试、功能测试和验收测试。Aquillian 存在许多扩展可以处理特定的框架，例如 JSF，或用于使用 Selenium 的浏览器测试。Aquillian 可用的所有扩展详细信息可以在 http://aquillian.org/ 找到。
+为了辅助开发集成测试，将使用 `Aquillian`。`Aquillian` 是一个高度可扩展的 JVM 测试平台，允许轻松创建集成测试、功能测试和验收测试。`Aquillian` 存在许多扩展可以处理特定的框架，例如 JSF，或用于使用 Selenium 的浏览器测试。`Aquillian` 可用的所有扩展详细信息可以在 http://aquillian.org/ 找到。
 
 ## 集成测试
 
-我选择 Aquillian 来帮助集成测试，因为它有助于在不处于生产环境的情况下尽可能地模拟生产环境。你的服务运行在生产环境中相同的运行时容器中，因此你的服务可以访问 CDI 注入、持久化或服务所需的任何运行时组件。
+我选择 `Aquillian` 来帮助集成测试，因为它有助于在不处于生产环境的情况下尽可能地模拟生产环境。你的服务运行在生产环境中相同的运行时容器中，因此你的服务可以访问 CDI 注入、持久化或服务所需的任何运行时组件。
 
-为了能够使用 Aquillian 进行集成测试，你需要在 `pom.xml` 中添加必要的依赖：
+为了能够使用 `Aquillian` 进行集成测试，你需要在 `pom.xml` 中添加必要的依赖：
 
 ```xml
 <dependency>
@@ -1736,7 +1745,7 @@ Objects.equals(version, category.version);
 </dependency>
 ```
 
-第一个依赖为在 Aquillian 测试中使用提供了运行时容器，第二个依赖提供了 Aquillian 与 JUnit 之间的集成。为了让 Aquillian 部署任何内容，它需要访问运行时容器。thorntail 依赖向 Aquillian 注册自身为运行时容器，以便 Aquillian 可以进行部署。为了简化测试中执行 HTTP 请求所需的代码，你将使用 REST Assured，它需要添加到你的 `pom.xml` 中：
+第一个依赖为在 `Aquillian` 测试中使用提供了运行时容器，第二个依赖提供了 `Aquillian` 与 `JUnit` 之间的集成。为了让 `Aquillian` 部署任何内容，它需要访问运行时容器。`thorntail` 依赖向 `Aquillian` 注册自身为运行时容器，以便 `Aquillian` 可以进行部署。为了简化测试中执行 HTTP 请求所需的代码，你将使用 `REST Assured`，它需要添加到你的 `pom.xml` 中：
 
 ```xml
 <dependency>
@@ -1746,13 +1755,13 @@ Objects.equals(version, category.version);
 </dependency>
 ```
 
-集成测试的重点将放在 JAX-RS Resource 类上，因为它定义了消费者将交互的 RESTful 端点，以及对数据库的持久化。通过集成测试，我们关注微服务的提供端交互——你只是验证你的服务 API 按你的设计工作。这并没有考虑到消费者对 API 的期望；那是消费者驱动契约测试（contract testing）的事。
+集成测试的重点将放在 `JAX-RS Resource` 类上，因为它定义了消费者将交互的 RESTful 端点，以及对数据库的持久化。通过集成测试，我们关注微服务的提供端交互——你只是验证你的服务 API 按你的设计工作。这并没有考虑到消费者对 API 的期望；那是消费者驱动契约测试（contract testing）的事。
 
 如示例 4.2 所示，首先创建一个测试来验证从数据库中正确检索所有类别。这个单一集成测试将验证你的外部 API 返回了预期信息，并验证你的持久化代码正确读取了记录。任何方面不符合预期都会导致测试失败。
 
 ## 示例 4.2 在 4.1 CategoryResourceTest 中检索所有类别
 
-| 根据名称运行测试方法。 | 使用 Aquillian 运行器进行 JUnit 测试。 | 根据 Thorntail 项目类型（WAR 或 JAR）为 Aquillian 创建部署。 |
+| 根据名称运行测试方法。 | 使用 `Aquillian` 运行器进行 `JUnit` 测试。 | 根据 Thorntail 项目类型（WAR 或 JAR）为 `Aquillian` 创建部署。 |
 | :--- | :--- | :--- |
 | @RunWith(Aquillian.class)<br>@DefaultDeployment<br>@RunAsClient<br>@FixMethodOrder(Sorters.name, NAME_ASCENDING)<br>public class CategoryResourceTest | | 你正在作为客户端对微服务的 RESTful 端点进行测试。 |
 | REST Assured 用于执行 HTTP 请求的链式方法 | @Test<br>public void retrieveCategories() throws Exception {<br>Response response = when()..get("/admin/category").<br>.extract().response(); | | |
@@ -1762,7 +1771,7 @@ Objects.equals(version, category.version);
 
 ## 集成测试
 
-我选择 Aquillian 来帮助集成测试，因为它有助于在不处于生产环境的情况下尽可能地模拟生产环境。你的服务运行在生产环境中相同的运行时容器中，因此你的服务可以访问 CDI 注入、持久化或服务所需的任何运行时组件。
+我选择 `Aquillian` 来帮助集成测试，因为它有助于在不处于生产环境的情况下尽可能地模拟生产环境。你的服务运行在生产环境中相同的运行时容器中，因此你的服务可以访问 CDI 注入、持久化或服务所需的任何运行时组件。
 
 与单元测试一样，你通过以下命令执行集成测试：
 
@@ -1770,9 +1779,9 @@ Objects.equals(version, category.version);
 mvn test
 ```
 
-随着测试的执行，你会看到 Thorntail 容器启动并执行了插入初始类别的 SQL，如第 2 章所述。在第一次运行后，除了 CategoryTest 单元测试外，你还有一个成功的 CategoryResourceTest 测试。
+随着测试的执行，你会看到 Thorntail 容器启动并执行了插入初始类别的 SQL，如第 2 章所述。在第一次运行后，除了 `CategoryTest` 单元测试外，你还有一个成功的 `CategoryResourceTest` 测试。
 
-让我们添加一个检索单个类别的测试，同时将收到的 JSON 映射到对象上。这个测试与上一个测试的区别在于它在 EntityManager 上使用不同的方法来检索单个类别而不是所有类别。
+让我们添加一个检索单个类别的测试，同时将收到的 JSON 映射到对象上。这个测试与上一个测试的区别在于它在 `EntityManager` 上使用不同的方法来检索单个类别而不是所有类别。
 
 ### 检索类别
 
@@ -1802,16 +1811,13 @@ public void retrieveCategory() throws Exception (
 com.fasterxml.jackson.databind.JsonMappingException: Unexpected token (START_OBJECT), expected VALUE_STRING: Expected array or string.
 ```
 
-紧随该错误之后的是你收到的 JSON 消息，最后它引用了导致问题的数值部分，ejm.category4.admin.Category["created]。由此，你知道测试在将 Category 的 created 字段反序列化为 LocalDateTime 实例时存在问题。
+紧随该错误之后的是你收到的 JSON 消息，最后它引用了导致问题的数值部分，`ejm.category4.admin.Category["created]`。由此，你知道测试在将 `Category` 的 `created` 字段反序列化为 `LocalDateTime` 实例时存在问题。
 
-要解决这个问题，你需要引导 JSON 序列化库（在本例中为 Jackson），通过库将你的 LocalDateTime 实例转换为 JSON。
+要解决这个问题，你需要引导 JSON 序列化库（在本例中为 Jackson），通过库将你的 `LocalDateTime` 实例转换为 JSON。
 
+知道如何反序列化。借助 Jackson 的帮助，你需要注册一个 `JAX-RS` 提供者，并使用 `JavaTimeModule` 为 Jackson 添加配置。首先，你需要在 `pom.xml` 中添加依赖项以使其可用：
 
-
-
-知道如何反序列化。借助 Jackson 的帮助，你需要注册一个 JAX-RS 提供者，并使用 `JavaTimeModule` 为 Jackson 添加配置。首先，你需要在 `pom.xml` 中添加依赖项以使其可用：
-
-```
+```xml
 <dependency>
   <groupId>com.fasterxml.jackson.datatype</groupId>
   <artifactId>jackson-datatype-jsr310</artifactId>
@@ -1822,16 +1828,18 @@ com.fasterxml.jackson.databind.JsonMappingException: Unexpected token (START_OBJ
 
 ## 列表 4.4 ConfigureJacksonProvider
 
-| @Provider | 将该类标识为 JAX-RS 提供者。 |
+| @Provider | 将该类标识为 `JAX-RS` 提供者。 |
 | --- | --- |
-| public class ConfigureJacksonProvider implements ContextResolver<ObjectMapper> { | 指明此提供者用于解析 ObjectMapper 实例。 |
+| public class ConfigureJacksonProvider implements ContextResolver<ObjectMapper> { | 指明此提供者用于解析 `ObjectMapper` 实例。 |
 | private final ObjectMapper mapper = new ObjectMapper(); .registerModule(new JavaTimeModule()); | |
 | | @Override public ObjectMapper getContext(Class<?> type) { return mapper; } |
-| 向 mapper 注册 JavaTimeModule 以正确序列化 LocalDateTime。 | |
+| 向 mapper 注册 `JavaTimeModule` 以正确序列化 `LocalDateTime`。 | |
+
 } } |
 
 重新运行 `mvn test`，你会看到测试通过了。另一个通过测试解决的 Bug！
-你已经涵盖了从 RESTful 端点获取类别的两种情况。让我们看看你的 JAX-RS 资源是否能很好地存储数据。
+
+你已经涵盖了从 RESTful 端点获取类别的两种情况。让我们看看你的 `JAX-RS` 资源是否能很好地存储数据。
 
 ## 列表 4.5 在 CategoryResourceTest 中创建类别
 
@@ -1839,9 +1847,9 @@ com.fasterxml.jackson.databind.JsonMappingException: Unexpected token (START_OBJ
 | --- | --- |
 | public void createCategory() throws Exception | |
 | Category category = new Category(); | | |
-| category.setName("BMW"); | 将你创建的 Category 实例设置为请求体。 |
+| category.setName("BMW"); | 将你创建的 `Category` 实例设置为请求体。 |
 | category.setVisible(Boolean.TRUE); | | |
-| category.setHeader("header"); | Location 将为你创建的 Category 的 URL。 |
+| category.setHeader("header"); | Location 将为你创建的 `Category` 的 URL。 |
 | category.setImagePath("/t/a"); | | |
 | category.setParent(new CategoryObject(1009)); | | |
 | Response response = given(); | | |
@@ -1857,7 +1865,7 @@ com.fasterxml.jackson.databind.JsonMappingException: Unexpected token (START_OBJ
 
 71
 
-```
+```java
 Integer categoryId = Integer.valueOf(
 locationUrl.substring(locationUrl.lastIndexOf('/')) + 1)
 );
@@ -1881,19 +1889,22 @@ assertThat(category.getId()).isEqualTo(categoryId);
 ...
 ```
 
+
+
 断言现在获取的类别总数是 22 而不是 21。
 
-从 Location 提取获取的类别。
+从 `Location` 提取获取的类别。
 
-设置一个路径参数为从 Location 获取的类别 ID，用于新的请求。
+设置一个路径参数为从 `Location` 获取的类别 ID，用于新的请求。
 
-将你收到的 JSON 反序列化为 Category 实例。
+将你收到的 JSON 反序列化为 `Category` 实例。
 
 设置请求的路径，定义类别 ID 参数需要替换的位置。
 
-验证类别上的 ID 与你从 Location 提取的匹配。
+验证类别上的 ID 与你从 `Location` 提取的匹配。
 
-前面的测试通过创建一个 Category 实例并对其设置适当的值开始，包括设置一个 ID 为 109 的父级。接下来，你向 Category 的 RESTful 端点提交一个 POST 请求以创建一个新记录。我们验证响应是正确的，并提取新的类别 ID。
+前面的测试通过创建一个 `Category` 实例并对其设置适当的值开始，包括设置一个 ID 为 109 的父级。接下来，你向 `Category` 的 RESTful 端点提交一个 POST 请求以创建一个新记录。我们验证响应是正确的，并提取新的类别 ID。
+
 然后你获取所有类别，并验证你插入了 22 条记录而不是 21 条，最后获取新记录并验证其信息与你创建时提交的信息相同。
 
 让我们运行 `mvn test` 来检查你的代码是否有任何 Bug！这次，你的测试失败了，因为它期望接收到 HTTP 状态码 201，但你收到了 500。哪里出问题了？如果你回溯终端输出，你会发现你的微服务遇到了一个
@@ -1954,7 +1965,7 @@ public Response create(Category category) throws Exception {
 
 从持久层获取父类别并将其设置在新实例上。
 
-你已经完成了创建检索有效类别的所有工作。在第 2 章运行 mvn test，你现在看到所有测试都通过了！让我们增加一个测试，看看你的错误处理是否正确拒绝了错误的请求。
+你已经完成了创建检索有效类别的所有工作。在第 2 章运行 `mvn test`，你现在看到所有测试都通过了！让我们增加一个测试，看看你的错误处理是否正确拒绝了错误的请求。
 
 ## 列表 4.7 在 CategoryResourceTest 中失败创建类别
 
@@ -1965,7 +1976,7 @@ public void dFailCreateCategoryNullName() throws Exception {
     badCategory.setVisible(Boolean.TRUE);
 ```
 
-创建一个创建一个没有设置名称的 Category 实例。
+创建一个创建一个没有设置名称的 `Category` 实例。
 
 ## 集成测试
 
@@ -2007,7 +2018,8 @@ assertThat(jsonList.size()).isEqualTo(22);
 
 > 验证数据库中仍然只有22 个类别。
 
-带有此方法运行 mvn test 会导致失败。你的测试期望响应为为400，但你收到了 500。
+带有此方法运行 `mvn test` 会导致失败。你的测试期望响应为为400，但你收到了 500。
+
 滚动终端输出，你会看到这个：
 
 ```
@@ -2022,12 +2034,9 @@ messageTemplate='{javax.validation.constraints.NotNull message}'
 }
 ```
 
-虽然那是你预期日志中看到的正确错误，但你的微服务没有正确处理该错误。在 RESTful 方法完成时，事务尝试提交数据库更改，这失败了是因为你没有一个有效的 Category 实例。
+虽然那是你预期日志中看到的正确错误，但你的微服务没有正确处理该错误。在 RESTful 方法完成时，事务尝试提交数据库更改，这失败了是因为你没有一个有效的 `Category` 实例。
+
 你需要提前验证发生的时间点，这样你的方法就可以正确处理并返回你期望的响应码（见列表 4.8）。
-
-
-
-
 
 # 列表4.8 CategoryResource.create()
 
@@ -2104,7 +2113,7 @@ public class AdminClient {
 }
 ```
 
-使用 Jackson 将响应 JSON 映射到 Category，同时也注册了 `JavaTimeModule`。
+使用 Jackson 将响应 JSON 映射到 `Category`，同时也注册了 `JavaTimeModule`。
 
 你有了一个与 admin 微服务交互的基础客户端。为了让 Pact 为它创建必要的契约，你需要在 `pom.xml` 中将其添加为依赖。
 
@@ -2167,8 +2176,6 @@ public class ConsumerPactTest extends ConsumerPactTestMk2 {
 
 图 4.3 发送到微服务的请求
 
-
-
 ```json
 "version": "3.0.0"
 "pact-jvm": {
@@ -2185,6 +2192,8 @@ public class ConsumerPactTest extends ConsumerPactTestMk2 {
 为了验证提供者，由于你需要运行一个 admin 微服务的实例，因此你将需要 Maven 来执行 Pact 验证。验证将在 Maven 的集成测试阶段（integration test phase）进行。修改 `pom.xml` 以在集成测试阶段启动和停止 Thorntail 容器。
 
 ## 列表 4.12 用于集成测试的 Thorntail 插件执行
+
+
 
 ```xml
 <plugin>
@@ -2248,10 +2257,10 @@ public class ConsumerPactTest extends ConsumerPactTestMk2 {
 </plugin>
 ```
 
-- 定义 admin 服务提供者的位置。
+- 定义 `admin` 服务提供者的位置。
 - 设置可以找到 Pact 合约文件的目录。
-- Pact 验证在 Maven 的 integration-test 阶段运行。
-- 使用 Pact 插件的 verify 目标（goal）。
+- Pact 验证在 Maven 的 `integration-test` 阶段运行。
+- 使用 Pact 插件的 `verify` 目标（goal）。
 
 运行 `mvn verify` 将执行你之前定义的所有测试，但也将 Pact 验证作为最后一步运行。你应该能在终端中看到输出表示执行成功：
 
@@ -2261,7 +2270,7 @@ has status code 200 (OK)
 has a matching body (OK)
 ```
 
-嗯，这看起来很顺畅，但如果不起通会什么样？为了尝试这一点，你可以将以下代码添加到 `CategoryResource.get()` 方法中，在当前的 return 语句之前，以便你为 Pact 测试返回一个不同的分类：
+嗯，这看起来很顺畅，但如果不起通会什么样？为了尝试这一点，你可以将以下代码添加到 `CategoryResource.get()` 方法中，在当前的 `return` 语句之前，以便你为 Pact 测试返回一个不同的分类：
 
 ```java
 if (categoryId.equals(1015)) {
@@ -2281,10 +2290,11 @@ has a matching body (FAILED)
 
 失败：
 
-+ 0) 正在验证 admin_client_consumer 和 admin_service_provider 之间的 pact
++ 0) 正在验证 `admin_client_consumer` 和 `admin_service_provider` 之间的 pact
+
 - 获取分类返回一个具有匹配 body 的响应
-$.parent.parent.parent.parent -> 类型不匹配: 期望 Map Map(parent
--> null, -> Top, visible -> true, imagePath -> n/a, version -> 1, id -> 0, updated -> null, header -> header, created -> List(2002, 1, 1, 0, 0) received Null null
+
+`$.parent.parent.parent.parent` -> 类型不匹配: 期望 `Map Map(parent -> null, -> Top, visible -> true, imagePath -> n/a, version -> 1, id -> 0, updated -> null, header -> header, created -> List(2002, 1, 1, 0, 0)` received `Null null`
 
 ```json
 Diff:
@@ -2306,19 +2316,19 @@ Diff:
 }
 ```
 
-$.parent.parent.name -> 期望 'Transportation' 但接收到 'Top'
+`$.parent.parent.name` -> 期望 `'Transportation'` 但接收到 `'Top'`
 
-$.parent.parent.id -> 期望 1000 但接收到 0
+`$.parent.parent.id` -> 期望 `1000` 但接收到 `0`
 
-$.parent.parent.name -> 期望 'Automobiles' 但接收到 'Transportation'
+`$.parent.parent.name` -> 期望 `'Automobiles'` 但接收到 `'Transportation'`
 
-$.parent.parent.id -> 期望 1000 但接收到 0
+`$.parent.parent.id` -> 期望 `1000` 但接收到 `0`
 
-$.name -> 期望 'Cars' 但接收到 'Trucks'
+`$.name` -> 期望 `'Cars'` 但接收到 `'Trucks'`
 
-$.id -> 期望 1015 但接收到 1010
+`$.id` -> 期望 `1015` 但接收到 `1010`
 
-此日志消息提供了关于 ID 和 name 的详细信息，以及它是如何不同的。
+此日志消息提供了关于 ID 和 `name` 的详细信息，以及它是如何不同的。
 
 ## 第 4 章 微服务测试
 
@@ -2332,9 +2342,9 @@ $.id -> 期望 1015 但接收到 1010
 
 这里你可以编写一些额外练习：
 
-- 为 CategoryTest 添加一个可以更新的方法。
-- 添加一个方法验证可以从数据库中成功删除 Category。
-- 为 AdminClient 添加获取所有分类、添加分类、更新分类和删除分类的方法。然后为 ConsumerPTest.createPact() 添加请求响应对，并更新 ConsumerPTest.runTest() 执行它们。
+- 为 `CategoryTest` 添加一个可以更新的方法。
+- 添加一个方法验证可以从数据库中成功删除 `Category`。
+- 为 `AdminClient` 添加获取所有分类、添加分类、更新分类和删除分类的方法。然后为 `ConsumerPTest.createPact()` 添加请求响应对，并更新 `ConsumerPTest.runTest()` 执行它们。
 
 如果你执行了这些练习并希望将其包含在书籍的代码中，请提交 pull request。
 
@@ -2347,18 +2357,16 @@ $.id -> 期望 1015 但接收到 1010
 ## 云原生开发
 
 章节涵盖
+
 - 为什么云很重要？
 - 什么是云原生开发？
 - 将微服务部署到云端需要什么？
 - 你的应用程序在云中如何扩展？
 - 你可以在生产之前在云中测试应用程序吗？
 
-在本章中，你将扩展第4章的 admin 服务，使其具备部署到本地云环境的能力，并针对部署到该环境的服务运行测试。
-首先，你将了解云以及你可以选择的云供应商。你还将探索在本地机器上运行云的选项。在选择了云类型后，你将修改第4章的 admin 服务以部署到云中。完成部署后，你将扩展应用程序以展示它如何处理额外的负载，最后通过对部署在云中的应用程序运行测试来结束。
+在本章中，你将扩展第 4 章的 `admin` 服务，使其具备部署到本地云环境的能力，并针对部署到该环境的服务运行测试。
 
-
-
-
+首先，你将了解云以及你可以选择的云供应商。你还将探索在本地机器上运行云的选项。在选择了云类型后，你将修改第 4 章的 `admin` 服务以部署到云中。完成部署后，你将扩展应用程序以展示它如何处理额外的负载，最后通过对部署在云中的应用程序运行测试来结束。
 
 # 到底什么是云？
 
@@ -2422,19 +2430,15 @@ Minikube 是第一个可以在本地机器上运行的单节点 Kubernetes 集�
 
 图 5.3 Minishift 提供的内容
 
-
-
-
-
 直接使用 CaS（如 Kubernetes）并没有问题，但在其之上使用 PaaS 有许多优势。其中一个主要优势是提供了一个美观的 UI，用于可视化已部署的内容。由于其设置简单，且加上我们倾向于使用 PaaS 而非 CaS，我们将使用 Minishift 来创建我们的本地云环境。
 
 ### 5.4 部署到云端
 
 与云所提供的服务模型不同，云还可以有三种部署模型：
 
--   私有云——仅供单一企业使用的云，通常托管在内部内部。
--   公有云——云中的服务可以通过公共网络访问。它与私有云的主要区别在于安全性。无论是微服务还是数据库，它们都需要更严密的安全服务，因为这些服务可以在公共网络上被访问。
--   混合云——公有云和私有云的结合。这些云中的都可能使用不同的供应商。混合云部署模型正在迅速成为最常见的模式，因为它兼顾了双者的优势，特别是在想要增加容量和进行规模扩展时。
+- 私有云——仅供单一企业使用的云，通常托管在内部内部。
+- 公有云——云中的服务可以通过公共网络访问。它与私有云的主要区别在于安全性。无论是微服务还是数据库，它们都需要更严密的安全服务，因为这些服务可以在公共网络上被访问。
+- 混合云——公有云和私有云的结合。这些云中的都可能使用不同的供应商。混合云部署模型正在迅速成为最常见的模式，因为它兼顾了双者的优势，特别是在想要增加容量和进行规模扩展时。
 
 Minishift 本质上是为你提供了一个运行在本地机器上的专属云实例。Minishift 内部的 PaaS（即 OpenShift）与在公有云或混合云中使用的 PaaS 是同一个。区别在于它运行在本地。
 
@@ -2457,13 +2461,17 @@ minishift start
 OpenShift server started.
 
 可以通过 web 控制台访问服务器：
+
 https://192.168.64.11:8443
 
 你登录身份为：
+
 User: developer
+
 Password: <any value>
 
 要以管理员身份登录：
+
 oc login -u system:admin
 
 对于你大多数需要的操作，无论是通过 Web 控制台还是通过 OpenShift 命令行界面 (CLI)，都需要开发者凭据。还有一种方便的方法可以启动 OpenShift Web 控制台，无需记住 URL 和端口：
@@ -2480,13 +2488,15 @@ minishift console
 
 默认情况下，全新的 OpenShift 实例会为你创建一个名为 My Project 的空项目。你可以选择删除它并创建自己的，或者直接使用它；这种选择并不重要。
 
+
+
 你现在有了一个可以部署服务的云，但你首先需要让你的服务能够部署到它。
 
-### 5.6 微服务云部署
+## 5.6 微服务云部署
 
-你将采用第 4 章中更新的 admin 服务，并添加必要的配置以支持部署到云端。
+你将采用第 4 章中更新的 `admin` 服务，并添加必要的配置以支持部署到云端。
 
-目前为止，部署应用程序最简单的方法是使用 fabric8 Maven 插件 (https://maven.fabric8.io/)。该插件的一个巨大优势是可以将 Java 应用带到 OpenShift 或 Kubernetes！你可以从零开始配置部署，添加你所需的任何配置。
+目前为止，部署应用程序最简单的方法是使用 `fabric8` Maven 插件 (https://maven.fabric8.io/)。该插件的一个巨大优势是可以将 Java 应用带到 OpenShift 或 Kubernetes！你可以从零开始配置部署，添加你所需的任何配置。
 
 让我们从修改 `pom.xml` 开始，在名为 `openshift` 的 profile 中包含该插件。
 
@@ -2551,10 +2561,6 @@ minishift console
 }
 ```
 
-
-
-
-
 ## 微服务云部署
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_109_0.png)
@@ -2583,7 +2589,7 @@ mvn fabric8:undeploy OpenShift
 
 你现在可以在本地运行的 Minishift 中向 OpenShift 部署和卸载管理服务，但你能以同样的方式执行测试吗？这就是下一节的内容！
 
-### 5.7 云端测试
+## 5.7 云端测试
 
 由于你能够使用 Minishift 将管理服务部署到本地云，你是否也可以使用本地云来测试它？你当然可以！
 
@@ -2591,7 +2597,7 @@ mvn fabric8:undeploy OpenShift
 
 在云中执行测试与集成测试可以实现的成果相比，优势是什么？这完全归结于希望在一个尽可能接近生产环境环境中测试你的微服务。如果你在云中将微服务部署到生产环境，那么发现部署问题的最佳机会就是也能将你的测试部署到云。为了做到，你需要在 `pom.xml` 中添加以下内容。
 
-列表 5.3 Arquillian Cube 依赖
+### 列表 5.3 Arquillian Cube 依赖
 
 ```xml
 <dependencyManagement>
@@ -2693,9 +2699,9 @@ public class CategoryResourceIT {
 }
 ```
 
-> 注入指向 OpenShift 的 chapter5-admin URL。
+> 注入指向 OpenShift 的 `chapter5-admin` URL。
 
-> 等待最多 2 分钟直到 /admin/category 返回 200。
+> 等待最多 2 分钟直到 `/admin/category` 返回 200。
 
 > 设置供 RestAssured 使用根 URL。
 
@@ -2705,7 +2711,7 @@ public class CategoryResourceIT {
 
 是时候测试它了！
 
-### 总结
+## 总结
 
 首先你需要确保 Minishift 正在运行，并且你最近通过 `oc login` 登录过。身份验证会过期！如果一切就绪，运行以下命令：
 
@@ -2715,30 +2721,29 @@ mvn clean install -Popenshift -openshift-it
 
 在这里你激活了 `openshift` 和 `openshift-it` 配置。但如果没有 `openshift` 配置，管理服务将不会部署到 OpenShift！如果服务成功部署且测试通过，终端应该显示 Maven 构建无误。
 
-你仅仅接触了使用 fabric8 Maven 插件 Minishift 的冰山，但你已经拥有了自己探索的坚实基础。一段时间内可能不会再次使用 Minishift，让我们先停止它：
+你仅仅接触了使用 `fabric8` Maven 插件 Minishift 的冰山，但你已经拥有了自己探索的坚实基础。一段时间内可能不会再次使用 Minishift，让我们先停止它：
 
 ```
 minishift stop
 ```
 
-### 5.8 额外练习
+## 5.8 额外练习
 
 这里有一些额外的练习，可以帮助加深你对 OpenShift 的理解，并改进示例代码：
 
 - 在在 OpenShift 上运行时，将管理服务的部署更改为 PostgreSQL 或 MySQL。
+
 - 为 `CategoryResourceIT` 添加创建类别的测试方法，以及另一个验证名称失败的测试方法。
 
 如果你接受了这些练习并希望将它们包含在书籍的代码中，请向 GitHub 上的项目提交拉请求（pull request）。
 
-### 总结
+## 总结
 
 - 通过选择内部使用 SaaS 的平台服务（PaaS），你可以利用不可变容器镜像的优势。
+
 - Minishift 在你的本地机器上提供了一个带有 OpenShift 的云环境，从而简化了微服务的执行和测试，而无需配置大量机器。
-- fabric8 Maven 插件消除了在 OpenShift 或 Kubernetes 中定义资源和服务所需的全部样板代码，减少了在云中运行微服务之前的配置门槛。
 
-
-
-
+- `fabric8` Maven 插件消除了在 OpenShift 或 Kubernetes 中定义资源和服务所需的全部样板代码，减少了在云中运行微服务之前的配置门槛。
 
 # 第二部分：实现企业级 Java 微服务
 
@@ -2749,7 +2754,9 @@ minishift stop
 ## 消费微服务
 
 - 本章涵盖了
+
 - 如何消费微服务
+
 - 你在消费微服务时的选择
 
 对于许多人来说，消费微服务可能意味着许多含义。微服务的客户端可以是脚本、网页、其他微服务，或几乎任何可以发送 HTTP 请求的程序。如果我们涵盖了所有情况，这一章本身就可以写成一本书了！
@@ -2763,18 +2770,23 @@ minishift stop
 # 第 6 章 消费微服务
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_118_0.png)
+
 图 6.1 企业级 Java 业务服务调用
 
 服务调用可以通过方式实现：
 
 - 使用 EJB  EJB 注入
-- 使用 CDI 的 @Inject
+
+- 使用 CDI 的 `@Inject`
+
 - 通过静态方法或变量获取服务实例
+
 - Spring 依赖注入（基于 XML 或基于注解）
 
 所有这些选项都需要你的两个服务位于同一个 JVM 和运行环境中，如图 6.1 所示。
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_118_1.png)
+
 图 6.2 消费微服务
 
 在图中，一个微服务正在调用另一个微服务。在图示中，它们处于同一个微服务环境中，但并非必须如此。回顾图 1.4，图 6.2 突出了本章的重点：解决位于不同运行环境的两个微服务之间进行通信的方法。
@@ -2784,7 +2796,9 @@ minishift stop
 你将首先查看使用直接处理 HTTP 请求的低级库来消费微服务。因为它们直接处理 HTTP 请求，所以它们可以用于没有暴露 RESTful 端点的微服务。你将学习专门设计用于简化调用 RESTful 端点所需代码的客户端库。它们对 HTTP 请求提供了更高层次的抽象，这将显著简化客户端代码，正如我们在示例中所看到的。本节的代码可以在书籍示例的 `/chapter6` 目录中找到。
 
 Cayambe EAR
+
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_119_0.png)
+
 图 6.3 Cambambe 管理微服务客户端
 
 # 第 6 章 消费微服务
@@ -2795,7 +2809,9 @@ Cayambe EAR
 
 这些服务中的每一个都需要一个对象来表示你从管理服务收到的分类 JSON。为了方便起见，每个客户端库 Maven 模块将拥有自己的 `Category` 对象，它将用于反序列化来自管理服务的响应。
 
-###  列表 6.1 Category 模型类
+### 列表 6.1 Category 模型类
+
+
 
 ```java
 @JsonIdentity(generator = ObjectIdGenerators.PropertyGenerator.class,
@@ -2815,11 +2831,11 @@ public class Category {
     }
 ```
 
-> 将 ID 定义为 Category 的键，用于反序列化收到的以 JSON 格式的子节点集合
+> 将 `ID` 定义为 `Category` 的键，用于反序列化收到的以 JSON 格式的子节点集合
 
 > 初始化子节点集合以确保你始终有一个有效的集合，即使它是空的
 
-为了简洁起见，省略了 getter 和 setter 方法，但 `Category` 的完整源码可以在书籍源码中找到。
+为了简洁起见，省略了 `getter` 和 `setter` 方法，但 `Category` 的完整源码可以在书籍源码中找到。
 
 此外，这些服务中的每一个都需要访问 `ExecutorService` 以提交任务并在新线程中进行处理。你使用 Java EE 提供的服务，以便所有服务都以相同的方式获取：
 
@@ -2834,30 +2850,27 @@ private ManagedExecutorService executorService() throws Exception {
 
 这会对服务进行 JNDI 查询并返回你可以用于提交的实例。
 
-> 注意：Executor 由 WildFly 为你定义。你不需要做任何操作即可使其在 JNDI 中可用。
+> 注意：`Executor` 由 WildFly 为你定义。你不需要做任何操作即可使其在 JNDI 中可用。
 
 你的服务可以很容易地为所需的工作创建一个新 `Thread`，但你的新线程将位于 Java EE 管理之外。作为一般原则，最好直接创建线程，但使用 `ExecutorService`。
 
 由于你想展示同步和异步使用场景如何导致不同的消费微服务的客户端代码，你使用客户端库的每个资源将包含两个端点：
 
-- /sync—同步处理来自调用者的请求
-- /async—异步处理来自调用者的请求
+- `/sync`—同步处理来自调用者的请求
+
+- `/async`—异步处理来自调用者的请求
 
 ### 6.1 使用 Java 客户端库消费
 
 在本节中，你将看到使用低级库直接处理 HTTP 请求来消费微服务的示例。虽然这导致了更冗余的代码和额外的数据处理，但它确实为调用方式提供了最大的灵活性。例如，如果一个微服务需要与多种类型的 HTTP 资源通信，使用这些库可能是更好的选择，因为没有必要仅为了 RESTful 端点交互再添加另一个库。
 
-
-
-
-
-### 6.1.1 java.net
+### 6.1.1 `java.net`
 
 `java.net` 包中的类从 JDK 之初就是其组成部分。尽管它们在多年里得到了增强和更新，但它们侧重于底层的 HTTP 交互。它们完全不是为了消费 RESTful 端点的，因此需要编写某些繁琐的代码。
 
-让我们来看 DisplayResource 的第一个方法。
+让我们来看 `DisplayResource` 的第一个方法。
 
-代码列表 6.2 使用 java.net 的 DisplayResource
+代码列表 6.2 使用 `java.net` 的 `DisplayResource`
 
 ```java
 @GET
@@ -2888,7 +2901,7 @@ public Category getCategoryTreeSync() throws Exception {
 
 下一个列表显示了如果你想异步处理对你微服务的客户端请求，代码将如何变化。
 
-代码列表 6.3 异步使用 java.net 的 DisplayResource
+代码列表 6.3 异步使用 `java.net` 的 `DisplayResource`
 
 ```java
 @GET
@@ -2902,24 +2915,37 @@ public void getCategoryTreeAsync() {
 
 # 使用 Java 客户端库消费微服务
 
-executorService().execute(() -> {
+`executorService().execute(() -> {`
+
     // 将 lambda 表达式传递给执行器进行处理。
-    HttpURLConnection connection = null;
 
-    try {
+    `HttpURLConnection connection = null;`
+
+    `try {`
+
       // 打开连接、检查状态码
-      // 处理响应的代码与同步示例相同，
-      // 已移除。
-      asyncResponse.resume(category);
-    } catch (IOException e) {
-      asyncResponse.resume(e);
-    } finally {
-      assert connection != null;
-      connection.disconnect();
-    }
-    // 使用反序列化的 category 实例恢复 AsyncResponse。
-    // 使用异常恢复 AsyncResponse。
 
+      // 处理响应的代码与同步示例相同，
+
+      // 已移除。
+
+      `asyncResponse.resume(category);`
+
+    `} catch (IOException e) {`
+
+      `asyncResponse.resume(e);`
+
+    `} finally {`
+
+      `assert connection != null;`
+
+      `connection.disconnect();`
+
+    `}`
+
+    // 使用反序列化的 `category` 实例恢复 `AsyncResponse`。
+
+    // 使用异常恢复 `AsyncResponse`。
 
 该列表引入了你以前没过的概念——即 `@Suspended` 和 `AsyncResponse`。这两个部分是 JAX-RS 异步处理客户端请求的核心。`@Suspended` 通知 JAX-RS 运行时，客户端的 HTTP 请求应该被挂起，直到响应就绪。`AsyncResponse` 指明开发者如何通知运行时响应已就绪或完成失败。它看起来是什么样？看图 6.4。
 
@@ -2928,14 +2954,19 @@ executorService().execute(() -> {
 以下是图 6.4 中每一步发生的情况：
 
 - 1. 来自浏览器或另一个客户端的 HTTP 请求到达。
+
 - 2. `getCategoryTreeAsync()` 触发在单独线程中执行的代码。在 `getCategoryTreeAsync()` 完成后，客户端请求被挂起，处理它的 HTTP 请求线程被释放以处理额外的请求。
 
 # 第 6 章 消费微服务
 
 - 3. 向外部微服务发送 HTTP 请求。
+
 - 4. 从外部微服务接收 HTTP 响应。
+
 - 5. 将响应数据传递给 `asyncResponse.resume()`。
+
 - 6. 客户端请求在 HTTP 请求线程中重新激活，并构建响应。
+
 - 7. 将响应返回给浏览器或任何请求过它的客户端。
 
 **警告** 在 RESTful 端点中使用 `@Suspended` 并不会防止调用端点的客户端阻塞。它通过允许更大的请求吞吐量来使请求的服务端获益。如果不使用 `@Suspended`，JAX-RS 资源只能处理等于可用线程数量的请求，因为每个请求都会阻塞线程直到方法完成。
@@ -2948,7 +2979,7 @@ executorService().execute(() -> {
 mvn thorntail:run
 ```
 
-`CategoryResource` 将启动并可以在浏览器中通过 http://localhost:8081/admin/category-resource 访问。
+`CategoryResource` 将启动并可以在浏览器中通过 `http://localhost:8081/admin/category-resource` 访问。
 
 现在你启动 `DisplayResource`。进入 `/chapter6/java-net-directory` 目录并运行此命令：
 
@@ -2956,16 +2987,18 @@ mvn thorntail:run
 mvn thorntail:run
 ```
 
-现在可以通过在浏览器访问微服务了：http://localhost:8080/sync 和 http://localhost:8080/async。在浏览器中打开任一对应的 URL 都将显示当前管理微服务中存在的分类树。
+现在可以通过在浏览器访问微服务了：`http://localhost:8080/sync` 和 `http://localhost:8080/async`。在浏览器中打开任一对应的 URL 都将显示当前管理微服务中存在的分类树。
 
 ### 6.1.2 Apache HttpClient
 
 使用 Apache HttpClient，你获得了一个对在 `java.net` 中使用的类的抽象，减少了与底层 HTTP 连接交互时所需的代码。`DisplayResource` 中的代码与你之前的代码没有巨大区别，但它提高了代码的可读性。
 
-例如，让我们看看 DisplayResource 的第一个方法。
+例如，让我们看看 `DisplayResource` 的第一个方法。
 
-| 代码列表 6 使用 HttpClient 的 DisplayResource |
+| 代码列表 6 使用 HttpClient 的 `DisplayResource` |
+
 | :--- |
+
 ```java
 @GET
 @Path("/sync")
@@ -2979,19 +3012,30 @@ public Category getCategoryTreeSync() throws Exception {
 # 使用 Java 客户端库消费微服务
 
 | 使用 Java 客户端库消费微服务 |
-| :--- |
-| 执行 HttpGet，传递一个 Response 的处理器。 |
-| 使用 @Suspended 指示 JAX-RS 请求将被挂起。 |
-| 使用 URL 创建新的 HttpGet 实例。 |
-| 使用 addHeader("Accept", MediaType.APPLICATION_JSON); |
-| 使用 httpclient.execute(get, response -> { ... }); |
-| 获取 status = response.getStatus(); |
-| 如果 (status >= 200 && status < 300) { |
-| 使用 ObjectMapper 注册 JavaTimeModule。 |
-| 返回 mapper.readValue(response.getEntity(), Category.class); |
-| 否则 { 抛出 ClientException("Unexpected response " + status); |
 
-再次，这种方法与我们的同步方法相似，但你使用了 `@Suspended`。代码列表 6.5 使用 HttpClient 和 @Suspended 的 DisplayResource
+| :--- |
+
+| 执行 `HttpGet`，传递一个 `Response` 的处理器。 |
+
+| 使用 `@Suspended` 指示 JAX-RS 请求将被挂起。 |
+
+| 使用 URL 创建新的 `HttpGet` 实例。 |
+
+| 使用 `addHeader("Accept", MediaType.APPLICATION_JSON);` |
+
+| 使用 `httpclient.execute(get, response -> { ... });` |
+
+| 获取 `status = response.getStatus();` |
+
+| 如果 (`status >= 200 && status < 300`) { |
+
+| 使用 `ObjectMapper` 注册 `JavaTimeModule`。 |
+
+| 返回 `mapper.readValue(response.getEntity(), Category.class);` |
+
+| 否则 { 抛出 `ClientException("Unexpected response " + status);` |
+
+再次，这种方法与我们的同步方法相似，但你使用了 `@Suspended`。代码列表 6.5 使用 HttpClient 和 `@Suspended` 的 `DisplayResource`
 
 ```java
 @GET
@@ -3012,7 +3056,7 @@ public void getCategoryTreeAsync(@Suspended final AsyncResponse<HttpEntity> asyn
 }
 ```
 
-如果你已经在 http://localhost:8081 运行了 `CategoryResource` 微服务，你可以使用 Apache HttpClient 启动你的新微服务。**警告** 在运行此操作之前，你需要停止任何之前运行的微服务，因为它们使用相同的端口。
+如果你已经在 `http://localhost:8081` 运行了 `CategoryResource` 微服务，你可以使用 Apache HttpClient 启动你的新微服务。**警告** 在运行此操作之前，你需要停止任何之前运行的微服务，因为它们使用相同的端口。
 
 进入 `/chapter6/apache-client-directory` 目录并运行此命令：
 
@@ -3020,7 +3064,7 @@ public void getCategoryTreeAsync(@Suspended final AsyncResponse<HttpEntity> asyn
 mvn thorntail:run
 ```
 
-现在可以通过在浏览器访问微服务了：http://localhost:8080/sync 和 http://localhost:8080/async。通过之前的微服务，你将看到当前管理微服务中存在的分类树。
+现在可以通过在浏览器访问微服务了：`http://localhost:8080/sync` 和 `http://localhost:8080/async`。通过之前的微服务，你将看到当前管理微服务中存在的分类树。
 
 ## 6.2 使用 JAX-RS 客户端库消费微服务
 
@@ -3033,24 +3077,26 @@ JAX-RS 多年来被定义为 Java EE JSR 311 和 JSR 339 规范的一部分。�
 那么使用 JAX-RS 客户端库的好处是什么呢？它让你忘记连接到 RESTful 微服务所需的低级 HTTP 连接，以及所需的元数据，例如：
 
 - HTTP 方法
+
 - 要传递的参数
-- 参数和返回类型的 MediaType 格式
+
+- 参数和返回类型的 `MediaType` 格式
+
 - 所需的 Cookie
+
 - 消费 RESTful 微服务所需的任何其他元数据
 
 当使用 JAX-RS 客户端库时，你需要注册一个处理器来处理在处理响应时将 JSON 反序列化为实例。为此，你需要下面的代码列表，我们将在后续示例中使用它。
 
-| 代码列表 6.6 ClientJacksonProvider | 为 ObjectMapper 实例提供 ContextResolver。 |
+| 代码列表 6.6 `ClientJacksonProvider` | 为 `ObjectMapper` 实例提供 `ContextResolver`。 |
+
 | :--- |
+
 ```java
 创建一个新的 ObjectMapper 实例。
 public class ClientJacksonProvider implements ContextResolver<ObjectMapper> {
     private final ObjectMapper mapper = new ObjectMapper()
 ```
-
-
-
-
 
 ## 使用 JAX-RS 客户端库消费微服务
 
@@ -3068,7 +3114,7 @@ public ObjectMapper getContext(Class<?> type) {
 
 再次，从你的同步示例端点开始。
 
-## 列表 6.7 使用 JAX-RS 客户端 DisplayResource
+## 列表 6.7 使用 JAX-RS 客户端 `DisplayResource`
 
 ```java
 @GET
@@ -3100,7 +3146,9 @@ public Category getCategoryTreeSync() {
 
 JAX-RS 客户端库可以提高你用于异步使用的代码可读性吗？请看下一个列表。
 
-## 列表 6.8 使用 JAX-RS 客户端和 @Suspended 的 DisplayResource
+
+
+# 列表 6.8 使用 JAX-RS 客户端和 @Suspended 的 DisplayResource
 
 ```java
 @GET
@@ -3132,7 +3180,7 @@ public void getCategoryTreeAsync(@Suspended final AsyncResponse
 
 你可以验证 JAX-RS 客户端库本身的异步功能。
 
-## 列表 6.9 使用 JAX-RS 客户端和 InvocationCallback 的 DisplayResource
+# 列表 6.9 使用 JAX-RS 客户端和 InvocationCallback 的 DisplayResource
 
 ```java
 @GET
@@ -3180,7 +3228,7 @@ mvn wildfly:run
 
 可以通过浏览器访问微服务：http://localhost:8080/sync 和 http://localhost:8080/async。通过我们的示例，你会看到分类树。
 
-## 6.2asy 客户端
+# 6.2asy 客户端
 
 REasy 是 JAX-RS 规范的一种实现，在 WildFly 中可用。它的许多部分与 JAX-RS 提供的相同，REasy 提供了一个特别值得关注的功能。
 
@@ -3190,7 +3238,7 @@ REasy 是 JAX-RS 规范的一种实现，在 WildFly 中可用。它的许多部
 
 对于你的外部微服务，你会创建一个如下接口。
 
-### 列表 6.10 CategoryService
+## 列表 6.10 CategoryService
 
 ```java
 @Path("/category")
@@ -3222,33 +3270,29 @@ public Category getCategoryTreeSync() {
 }
 ```
 
-
-
-
-
 ## 使用 JAX-RS 客户端库消费微服务
 
 为你的请求设置目标 URL 基路径。
 
-```
+```java
 ResteasyWebTarget target = client.target(this.categoryUrl)
       register(ClientJacksonProvider.class);
 ```
 
-```
+```java
 CategoryService categoryService = target.proxy(CategoryService.class);
       return categoryService.getCategoryTree();
 ```
 
-生成你的 CategoryService 的代理实现。
+生成你的 `CategoryService` 的代理实现。
 
-通过这种方法，你将设置所有请求参数（如 URL 路径、媒体类型和返回类型）的工作转移到了你的 CategoryService 接口中。现在，你的客户端与代理的交互就像调用本地方法一样。通过将请求参数值分离并在一个地方，你进一步简化了代码。当不同的微服务可能需要在不同的 RESTful 端点中调用同一个微服务时，这变得尤为重要，因为你不希望在任何可能的地方重复那些不需要的信息。
+通过这种方法，你将设置所有请求参数（如 URL 路径、媒体类型和返回类型）的工作转移到了你的 `CategoryService` 接口中。现在，你的客户端与代理的交互就像调用本地方法一样。通过将请求参数值分离并在一个地方，你进一步简化了代码。当不同的微服务可能需要在不同的 RESTful 端点中调用同一个微服务时，这变得尤为重要，因为你不希望在任何可能的地方重复那些不需要的信息。
 
 让我们来看看使用代理接口的一些异步示例。
 
 ## 列表 6.2 使用 Resteasy 和 @Suspended 的 DisplayResource
 
-```
+```java
 GET
 @Path("/async")
 @Produces(MediaType.APPLICATION_JSON)
@@ -3285,7 +3329,7 @@ public void getCategoryTree(@Suspended final AsyncResponse
 
 进入 `/chapter6/resteasy-client` 目录并运行此命令：
 
-```
+```bash
 mvn thorntail:run
 ```
 
@@ -3296,17 +3340,23 @@ mvn thorntail:run
 ### 总结
 
 - 基于 Java 的客户端库（如 `java.net` 和 Apache HttpClient）提供了 Java 网络层的低级访问，但生成的代码比实际的更冗长。
+
 - 基于 JAX-RS 的客户端库提供了一种抽象，使得消费微服务变得更容易。
 
 ## 发现用于消费的微服务
 
 - 本章涵盖：
+
 - 为什么服务发现非常重要
+
 - 如何注册微服务以便客户端能够发现
+
 - Thorntail 支持哪些服务注册中心
+
 - 如何在客户端内部查找微服务
 
 作为将 Cayambe 单体应用拆分为多个独立微服务的一部分，你决定需要一个用于处理订单支付的服务。这个新的微服务将在第 10 章中在 Cayambe 单体应用中使用。
+
 有几十个甚至上百个提供提供支付处理服务。起初，你将开发与 Stripe (https://stripe.com/docs/quickstart) 的基本集成。为了方便未来支付提供者的扩展，你将在自己的微服务中与 Stripe 集成。新的支付微服务随后将使用 Stripe 微服务与 Stripe 在线服务进行处理和记录支付。
 
 在之前的章节中，你已经看到如何通过引用微服务运行的 URL 来直接访问不同的微服务。在本章中，你将通过将客户端与微服务的消费解耦，进一步提升调用微服务的水平，使其更容易扩展。
@@ -3327,7 +3377,7 @@ mvn thorntail:run
 
 进入 `/chapter6/resteasy-client` 目录并运行此命令：
 
-```
+```bash
 mvn thorntail:run
 ```
 
@@ -3338,17 +3388,23 @@ mvn thorntail:run
 ### 总结
 
 - 基于 Java 的客户端库（如 `java.net` 和 Apache HttpClient）提供了 Java 网络层的低级访问，但生成的代码比实际的更冗长。
+
 - 基于 JAX-RS 的客户端库提供了一种抽象，使得消费微服务变得更容易。
 
 ## 发现用于消费的微服务
 
 - 本章涵盖：
+
 - 为什么服务发现非常重要
+
 - 如何注册微服务以便客户端能够发现
+
 - Thorntail 支持哪些服务注册中心
+
 - 如何在客户端内部查找微服务
 
 作为将 Cayambe 单体应用拆分为多个独立微服务的一部分，你决定需要一个用于处理订单支付的服务。这个新的微服务将在第 10 章中在 Cayambe 单体应用中使用。
+
 有几十个甚至上百个提供提供支付处理服务。起初，你将开发与 Stripe (https://stripe.com/docs/quickstart) 的基本集成。为了方便未来支付提供者的扩展，你将在自己的微服务中与 Stripe 集成。新的支付微服务随后将使用 Stripe 微服务与 Stripe 在线服务进行处理和记录支付。
 
 在之前的章节中，你已经看到如何通过引用微服务运行的 URL 来直接访问不同的微服务。在本章中，你将通过将客户端与微服务的消费解耦，进一步提升调用微服务的水平，使其更容易扩展。
@@ -3369,37 +3425,39 @@ mvn thorntail:run
 
 进入 `/chapter6/resteasy-client` 目录并运行此命令：
 
+
+
+运行以下命令启动微服务：
+
 ```
 mvn thorntail:run
 ```
 
-现在可以通过 http://localhost:8080/sync 和 http://localhost:8080/async 访问微服务了。每个 URL 都将返回当前管理微服务中存在的类别树作为结果。
+现在可以通过`http://localhost:8080/sync`和`http://localhost:8080/async`访问微服务了。每个 URL 都将返回当前管理微服务中存在的类别树作为结果。
 
 现在我们涵盖了几个为与 RESTful 端点交互提供更高层次抽象的客户端库。这些示例展示了客户端代码在减少复杂性和提高可读性方面的优势。
 
 ### 总结
 
-- 基于 Java 的客户端库（如 `java.net` 和 Apache HttpClient）提供了 Java 网络层的低级访问，但生成的代码比实际的更冗长。
+- 基于 Java 的客户端库（如`java.net`和 Apache HttpClient）提供了 Java 网络层的低级访问，但生成的代码比实际的更冗长。
 - 基于 JAX-RS 的客户端库提供了一种抽象，使得消费微服务变得更容易。
 
 ## 发现用于消费的微服务
 
-- 本章涵盖：
+本章涵盖：
+
 - 为什么服务发现非常重要
 - 如何注册微服务以便客户端能够发现
 - Thorntail 支持哪些服务注册中心
 - 如何在客户端内部查找微服务
 
 作为将 Cayambe 单体应用拆分为多个独立微服务的一部分，你决定需要一个用于处理订单支付的服务。这个新的微服务将在第 10 章中在 Cayambe 单体应用中使用。
-有几十个甚至上百个提供提供支付处理服务。起初，你将开发与 Stripe (https://stripe.com/docs/quickstart) 的基本集成。为了方便未来支付提供者的扩展，你将在自己的微服务中与 Stripe 集成。新的支付微服务随后将使用 Stripe 微服务与 Stripe 在线服务进行处理和记录支付。
+
+有几十个甚至上百个提供支付处理服务的提供商。起初，你将开发与 Stripe (https://stripe.com/docs/quickstart) 的基本集成。为了方便未来支付提供者的扩展，你将在自己的微服务中与 Stripe 集成。新的支付微服务随后将使用 Stripe 微服务与 Stripe 在线服务进行处理和记录支付。
 
 在之前的章节中，你已经看到如何通过引用微服务运行的 URL 来直接访问不同的微服务。在本章中，你将通过将客户端与微服务的消费解耦，进一步提升调用微服务的水平，使其更容易扩展。
 
 除非你是在为自己开发一个微服务，否则几乎可以肯定你需要在生产环境中扩展微服务实例数量的能力。如果没有扩展能力，你的应用程序在应对负载时将始终存在问题。
-
-
-
-
 
 ## 为什么微服务需要被发现？
 
@@ -3407,9 +3465,9 @@ mvn thorntail:run
 
 过去，企业拥有内部基础设施来托管其所有的应用程序，无论是供内部使用还是公共使用。内部基础设施的主要成本在于初始设置。一旦完成，持续的硬件成本是微乎其微，尽管这确实会导致管理内部基础设施产生更大的运营成本。
 
-对于大多数企业来说，迁移到云端意味着不再在自己的基础设施上托管应用程序，而是部署到外部托管提供商。示例包括 Red OpenShift、Google Cloud 和 Amazon Web Services。这些提供商将成本从昂贵的前期硬件安装转变为按需付费（通常是按月计费）。这种成本机制的转变为在应用程序使用时进行低成本的缩容打开了大门。
+对于大多数企业来说，迁移到云端意味着不再在自己的基础设施上托管应用程序，而是部署到外部托管提供商。示例包括 Red Hat OpenShift、Google Cloud 和 Amazon Web Services。这些提供商将成本从昂贵的前期硬件安装转变为按需付费（通常是按月计费）。这种成本机制的转变为在应用程序使用时进行低成本的缩容打开了大门。
 
-可扩展环境的另一个优点是，当负载增加时可以进行扩容，而无需经过企业通常非常漫长的硬件准备过程。这对于在假期期间经历极高负载的企业来说特别有益。11 月和12 月对于大多数零售店来说是关键期，可扩展环境提供了扩展可用服务器的能力，而无需让服务器在年的剩余时间内处于闲置。
+可扩展环境的另一个优点是，当负载增加时可以进行扩容，而无需经过企业通常非常漫长的硬件准备过程。这对于在假期期间经历极高负载的企业来说特别有益。11 月和 12 月对于大多数零售店来说是关键期，可扩展环境提供了扩展可用服务器的能力，而无需让服务器在年的剩余时间内处于闲置。
 
 在云环境中快速轻松地扩展或缩容特定的微服务（甚至一组微服务），对于企业开发者来说是一个巨大的优势。它允许他们从过去转变过来——过去他们需要预测需求以留出准备新硬件的时间（这通常需要几个月）。部署到云端的企业开发者可以迈向这样的未来：新实例或系列实例可以在几分钟内运行并处理用户负载。
 
@@ -3421,16 +3479,16 @@ mvn thorntail:run
 
 在图 7.3 所示，这里是 Payment 微服务通过服务注册表发现 Stripe 微服务并进行调用的步骤；参见图 7.4：
 
-- 1. Payment 微服务从已知的服务注册表请求 Stripe 微服务的位置。
-- 2. 服务注册表返回所有可用的 Stripe 实例。
-- 3. Payment 微服务向从注册表获取的 Stripe 服务实例发送请求。
-- 4. Payment 微服务收到来自 Stripe 微服务的响应。
+1. Payment 微服务从已知的服务注册表请求 Stripe 微服务的位置。
+2. 服务注册表返回所有可用的 Stripe 实例。
+3. Payment 微服务向从注册表获取的 Stripe 服务实例发送请求。
+4. Payment 微服务收到来自 Stripe 微服务的响应。
 
 在图 7.3 中，你使用了运行在端口 8082 上的 Stripe 实例。但在图 7.4 中，你可以看到端口 8082 上的 Stripe 实例在注册表中不再运行。没关系；Payment 将调用服务注册表获取 Stripe 实例，并在两个可用实例选择运行在端口 8083 的那个。
 
 这听起来太棒了！你可以根据环境扩展性能的限制随时扩展或缩容微服务，而无需担心客户端如何找到它们。
 
-如果没有服务注册表为 Payment 提供 Stripe 的元数据，你的微服务将无法将自己从跟随者或迁移中隔离出来，也没有方法从中恢复。服务注册表的作用不仅是在某个实例失败时获得新生。它还处理将微服务迁移到不同环境，通过在 Payment 需要该信息之前对其隐藏 Stripe 的实际运行位置。
+如果没有服务注册表为 Payment 提供 Stripe 的元数据，你的微服务将无法将自己从故障或迁移中隔离出来，也没有方法从中恢复。服务注册表的作用不仅是在某个实例失败时获得新生。它还处理将微服务迁移到不同环境，通过在 Payment 需要该信息之前对其隐藏 Stripe 的实际运行位置。
 
 你可以轻松地在与现有环境完全不同的环境中为 Stripe 创建新实例，但让它们在同一个服务注册表中可用。
 
@@ -3444,11 +3502,11 @@ mvn thorntail:run
 
 ### 7.1.3 无状态与有状态微服务
 
-能够随心所欲扩展微服务无疑是极佳的，但有一个陷阱。到为止，你一直在隐式地处理无状态微服务，即微服务在请求之间不会保留内部任何数据。
+能够随心所欲扩展微服务无疑是极佳的，但有一个陷阱。到目前为止，你一直在隐式地处理无状态微服务，即微服务在请求之间不会保留内部任何数据。
 
 你的状态呢？微服务开发高度侧重于无状态化。这是微服务进行扩容且无需担心上一个请求的用户状态的关键能力。
 
-为了支持微服务的扩展，它们不可能是有状态的——至少不像 Java EE 中的那些有状态会话那样。正如常说的说的，我们希望我们的微服务更像“牲畜（cattle）”而不是“宠物（pets）”。最好拥有许多可以来随去而不产生影响的实例（牲畜），而不是少数几个其中某一个的消失就会导致严重问题的实例（宠物）。在你的微服务中使用上一个请求的用户数据，但它必须存储在某处以便你检索。
+为了支持微服务的扩展，它们不可能是有状态的——至少不像 Java EE 中的那些有状态会话那样。正如常说的，我们希望我们的微服务更像“牲畜（cattle）”而不是“宠物（pets）”。最好拥有许多可以来去随去而不产生影响的实例（牲畜），而不是少数几个其中某一个的消失就会导致严重问题的实例（宠物）。在你的微服务中使用上一个请求的用户数据，但它必须存储在某处以便你检索。
 
 向无服务的转变在过去几年的 Enterprise Java 中已经开始，但向微服务的推动使其变得更加显著。
 
@@ -3462,13 +3520,9 @@ mvn thorntail:run
 
 - 轮询（Round Robin）：按顺序选择可用服务器，不考虑具体是哪种服务器。
 - 可用性过滤（Availability Filtering）：跳过任何被认为“断路”、最近连接失败或当前连接数过高的服务器。
-- 加权响应时间（Weighted Response Time）：每个服务器根据响应时间赋予权重，并用于生成范围。例如，如果服务器 A 和 B 的范围范围为 1–5 (A) 和 6–30 (B)。在 1 到所有服务器权重之和之间生成一个随机数。权重越高、响应时间越短的服务器中的概率越大。
+- 加权响应时间（Weighted Response Time）：每个服务器根据响应时间赋予权重，并用于生成范围。例如，如果服务器 A 和 B 的范围为 1–5 (A) 和 6–30 (B)。在 1 到所有服务器权重之和之间生成一个随机数。权重越高、响应时间越短的服务器被选中的概率越大。
 - 区域感知轮询（Zone Aware Robin）：对于部署在 Amazon Web Services 的情况特别有用，服务器分布在不同的可用区。该规则根据服务器是否与客户端位于同一可用区进行选择。
 - 随机（Random）：在可用服务器之间进行纯随机分布。
-
-
-
-
 
 # 在 Thorntail 中注册微服务
 
@@ -3482,17 +3536,17 @@ mvn thorntail:run
 
 ### 7.2.1 Thorntail 的拓扑结构
 
-Thorntail 对服务注册提供了一种名为拓扑的的抽象。这种抽象提供了什么好处？这意味着如果你的微服务被移动到具有不同服务注册实现的环境中，你的客户端代码也不需要更改。最可能的用例是在本地针对某种类型的服务注册进行开发和测试，然后在测试和生产环境中使用另一种。
+Thorntail 对服务注册提供了一种名为拓扑的抽象。这种抽象提供了什么好处？这意味着如果你的微服务被移动到具有不同服务注册实现的环境中，你的客户端代码也不需要更改。最可能的用例是在本地针对某种类型的服务注册进行开发和测试，然后在测试和生产环境中使用另一种。
 
-在理想世界中，你可以在本地机器上运行一个与生产环境相同的的环境进行测试，但对于如今的企业来说，这并不可行。转向更基于云的基础设施（如 Kubernetes 和 OpenShift）结合 Linux 容器确实更容易用更少的资源复制这些环境。并不是所有企业都可能达到这种程度。
+在理想世界中，你可以在本地机器上运行一个与生产环境相同的环境进行测试，但对于如今的企业来说，这并不可行。转向更基于云的基础设施（如 Kubernetes 和 OpenShift）结合 Linux 容器确实更容易用更少的资源复制这些环境。并不是所有企业都可能达到这种程度。
 
 Thorntail 提供了哪些服务注册实现或拓扑类型？它提供以下这些：
 
-- JGroups—jGroups 是一个用于可靠消息的工具包，其中可以创建节点集群以便相互发送消息。Thorntail 能够通过为每个微服务创建一个集群，并在每个服务注册自身时通知它们可用的新服务，从而创建一个伪服务注册。
+- JGroups—JGroups 是一个用于可靠消息的工具包，其中可以创建节点集群以便相互发送消息。Thorntail 能够通过为每个微服务创建一个集群，并在每个服务注册自身时通知它们可用的新服务，从而创建一个伪服务注册。
 - OpenShift—Red Hat OpenShift 是一个使用 Kubernetes 管理容器的平台。你可以使用在线版本、将其本地安装到自己的环境中，或者如你之前看到的在 Minishift 中使用它。
 - Consul—开发用途？在某些情况下，选择取决于微服务的部署位置。如果部署到 Red Hat OpenShift，使用 OpenShift 拓扑是合理的。如何选择？JGroups 拓扑适用于本地开发或未安装完整服务发现实现的环境。正如你在第 5 章看到的，你也可以使用 Minishift 来确保你的本地环境尽可能接近生产环境。
 
-除了这些对齐之外，你的选择取决于服务发现的需求，以及哪种实现最符合你环境的需求。这种决策通常在开发者手中，除非他们属于允许每个团队构建自己偏好技术栈的 DevOps 文化。一个以 Consul 为例，使用 Consul 的拓扑实现相对于图 7.5 在什么位置？看看 7.6。
+除了这些对齐之外，你的选择取决于服务发现的需求，以及哪种实现最符合你环境的需求。这种决策通常在开发者手中，除非他们属于允许每个团队构建自己偏好技术栈的 DevOps 文化。以 Consul 为例，使用 Consul 的拓扑实现相对于图 7.5 在什么位置？看看图 7.6。
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_142_0.png)
 
@@ -3502,11 +3556,11 @@ Thorntail 提供了哪些服务注册实现或拓扑类型？它提供以下这�
 
 拓扑位于微服务和服务注册实现之间。这使得你的微服务无论是部署在使用 JGroups、OpenShift 还是 Consul 的环境中，都能保持不变。为了为你的微服务选择一种拓扑实现，你需要添加以下依赖：
 
-- topology-jgroups
-- topology-openshift
-- topology-consul
+- `topology-jgroups`
+- `topology-openshift`
+- `topology-consul`
 
-Thorntail 还通过 `topology-webapp` 依赖提供了一个拓扑 servlet（topology servlet），每当服务被注册或移除时它都会发送事件（SSEs）。该拓扑 servlet 与上述列表中的任何拓扑实现协同工作。要查看这些事件，请在 `pom.xml` 中添加以下内容：
+Thorntail 还通过`topology-webapp`依赖提供了一个拓扑 servlet（topology servlet），每当服务被注册或移除时它都会发送事件（SSEs）。该拓扑 servlet 与上述列表中的任何拓扑实现协同工作。要查看这些事件，请在`pom.xml`中添加以下内容：
 
 ```xml
 <dependency>
@@ -3515,13 +3569,13 @@ Thorntail 还通过 `topology-webapp` 依赖提供了一个拓扑 servlet（topo
 </dependency>
 ```
 
-微服务运行后（无论是在本地还是在云端），打开浏览器访问 http://host:port/topology/stream 查看事件。这允许 UI 可视化地看到每个存在的服务，并维护可用服务实例的当前列表。
+微服务运行后（无论是在本地还是在云端），打开浏览器访问`http://host:port/topology/stream`查看事件。这允许 UI 可视化地看到每个存在的服务，并维护可用服务实例的当前列表。
 
 ### 7.2.2 使用拓扑结构注册微服务
 
-在我们的示例中，你有 Payment 和 Stripe 微服务。因为 Payment 需要“发现”Stripe，所以它必须先被注册。在 Thorntail 中，你有注册微服务的多种选项。你从上一节选择的任何拓扑依赖都必须添加到应用程序的 `pom.xml` 中。
+在我们的示例中，你有 Payment 和 Stripe 微服务。因为 Payment 需要“发现”Stripe，所以它必须先被注册。在 Thorntail 中，你有注册微服务的多种选项。你从上一节选择的任何拓扑依赖都必须添加到应用程序的`pom.xml`中。
 
-在深入研究注册微服务的选项之前，让我们看看 Stripe 微服务的代码。这将有助于你理解本章稍后将发生的情况。对于 `pom.xml`，你将关注你需要的依赖。还有很多其他依赖，但对于理解发生的情况并不是必需的：
+在深入研究注册微服务的选项之前，让我们看看 Stripe 微服务的代码。这将有助于你理解本章稍后将发生的情况。对于`pom.xml`，你将关注你需要的依赖。还有很多其他依赖，但对于理解发生的情况并不是必需的：
 
 ```xml
 <dependency>
@@ -3539,15 +3593,13 @@ Thorntail 还通过 `topology-webapp` 依赖提供了一个拓扑 servlet（topo
 </dependency>
 ```
 
-前几个依赖添加 jaxrs 和 cdi 能力，这些在之前的示例中很熟悉。最后一个依赖提供了对 Stripe 的访问。
-
-前面的依赖添加 jaxrs 和 cdi 能力，这些在之前的示例中很熟悉。最后一个依赖提供了对 Stripe 的访问。
+前几个依赖添加`jaxrs`和`cdi`能力，这些在之前的示例中很熟悉。最后一个依赖提供了对 Stripe 的访问。
 
 Stripe (https://stripe.com) 是一个为商户提供交易处理的服务。Stripe 的一个优点是可以使用 API 密钥，如你在示例中使用那样，并使用令牌生成响应。
 
 要定义 Stripe 微服务，首先创建 Application 类。
 
-StripeApplication 与之前的示例类似。注意的是你设置了 JAX-RS 根路径。
+`StripeApplication`与之前的示例类似。注意的是你设置了 JAX-RS 根路径。
 
 #### 7.1 StripeApplication
 
@@ -3566,7 +3618,7 @@ metadata:
   name: service
 ```
 
-为了让拓扑在 OpenShift 中看到服务，你需要微服务的 view 角色。现在你需要定义角色绑定（role binding），将服务账户与该角色匹配。
+为了让拓扑在 OpenShift 中看到服务，你需要微服务的`view`角色。现在你需要定义角色绑定（role binding），将服务账户与该角色匹配。
 
 #### 7.3 service-rb.yml
 
@@ -3599,7 +3651,7 @@ spec:
 
 与部署关联的服务账户
 
-如果没有相反设置，部署通常将设置为 ${project.artifactId}。自定义的 deployment.yml 仅用于关联服务账户。
+如果没有相反设置，部署通常将设置为`${project.artifactId}`。自定义的`deployment.yml`仅用于关联服务账户。
 
 **ADVERTISE**
 
@@ -3633,10 +3685,6 @@ public class StripeResource {
 }
 ```
 
-
-
-
-
 ## 第 7 章 发现用于消费的微服务
 
 ```
@@ -3645,21 +3693,23 @@ return new ChargeResponse()
     .amount(charge.getAmount());
 ```
 
-> 返回一个包含从 Stripe 到的金额和费用 ID 的 ChargeResponse。
+> 返回一个包含从 Stripe 到的金额和费用 ID 的`ChargeResponse`。
 
-你已经向 Stripe 微服务添加了 @Advertise 注解，但这与拓扑结构有什么关系呢？
+你已经向 Stripe 微服务添加了`@Advertise`注解，但这与拓扑结构有什么关系呢？
 
-Thornt 拓扑结构将找到你为微服务中的 RESTful 端点添加的所有 @Advertise 注解，并将每个名称存储在运行时创建的部署文件中。添加到服务部署中的拓扑代码将在部署启动时，根据微服务所在位置的适当主机名和端口信息，向你所选择的每种实现（JGroups, OpenShift, Consul）发布这些名称。@Advertise 抽象了微服务代码无需了解注册微服务细节的需求。你只需为它提供一个名称即可。
 
-注意 使用 Topology 并部署到 OpenShift 时，广告功能本质上是一个 NoOp（无操作），因为 OpenShift 会通过其内部 DNS 注册所有微服务。在生产者微服务上使用 @Advertise 的主要优势在于你可以在不更改代码的情况下轻松切换拓扑环境。
+
+Thorntail 拓扑结构将找到你为微服务中的 RESTful 端点添加的所有 `@Advertise` 注解，并将每个名称存储在运行时创建的部署文件中。添加到服务部署中的拓扑代码将在部署启动时，根据微服务所在位置的适当主机名和端口信息，向你所选择的每种实现（JGroups、OpenShift、Consul）发布这些名称。`@Advertise` 抽象了微服务代码无需了解注册微服务细节的需求。你只需为它提供一个名称即可。
+
+**注意**：使用 Topology 并部署到 OpenShift 时，广告功能本质上是一个 NoOp（无操作），因为 OpenShift 会通过其内部 DNS 注册所有微服务。在生产者微服务上使用 `@Advertise` 的主要优势在于你可以在不更改代码的情况下轻松切换拓扑环境。
 
 ## TOPOLOGY.LOOKUP()
 
-你还可以通过 Topology.lookup() 以一种提供控制服务可用时间的方式来注册服务。Topology 针对每个服务实现提供了主要的抽象，提供了用于静态 `lookup()` 方法、添加和删除监听器以便在服务添加或删除时接收通知、通过 `advertise()` 注册微服务，以及使用 `asMap()` 获取当前注册表的方法。
+你还可以通过 `Topology.lookup()` 以一种提供控制服务可用时间的方式来注册服务。Topology 针对每个服务实现提供了主要的抽象，提供了用于静态 `lookup()` 方法、添加和删除监听器以便在服务添加或删除时接收通知、通过 `advertise()` 注册微服务，以及使用 `asMap()` 获取当前注册表的方法。
 
 无论你为微服务选择了哪种拓扑实现——JGroups、OpenShift 还是 Consul——Topology 始终可供微服务直接使用。
 
-假设你想使用 Topology 来发布和取消广告某个微服务。这种方法的优优势之一是，可以限制微服务在 RESTful 端点激活并能够处理请求之前，不被被添加到服务注册表中。
+假设你想使用 Topology 来发布和取消广告某个微服务。这种方法的优势之一是，可以限制微服务在 RESTful 端点激活并能够处理请求之前，不被添加到服务注册表中。
 
 ### 列表 7.6 Topology
 
@@ -3673,7 +3723,7 @@ AdvertisementHandle handle = Topology.lookup().advertise("allevents");
 
 ## 7.3 使用 Thorntail 消费已注册的微服务
 
-现在你已经注册了 Stripe 微服务，是时候开发 Payment 以能够发现它并进行消费了。本节涵盖服务服务的两种方法。每种方法使用不同的客户端库（Netflix Ribbon 和 RESTEasy），用于 Payment 的不同实现。
+现在你已经注册了 Stripe 微服务，是时候开发 Payment 以能够发现它并进行消费了。本节涵盖服务消费的两种方法。每种方法使用不同的客户端库（Netflix Ribbon 和 RESTEasy），用于 Payment 的不同实现。
 
 ### 7.3.1 使用 Netflix Ribbon 进行服务查找
 
@@ -3694,15 +3744,15 @@ AdvertisementHandle handle = Topology.lookup().advertise("allevents");
 | :--- | :--- |
 | `@Resource(name = "chapter7-stripe")`<br>`public interface StripeService {` | 你将调用的注册表中的服务名称 |
 | `StripeService INSTANCE = Ribbon.from(StripeService.class);` | 创建你正在使用的接口的代理 |
-| `@TemplateName(name = "charge")`<br>`@Http(method = HttpMethod.POST, uri = "/stripe/charge", headers = @Header(name = "Content-Type", value = "application/json"))` | 定义执行 charge(c) 外部请求的 HTTP 参数，包括 HTTP 方法、URI 路径和内容类型的 HTTP 请求头 |
-| `@ContentTransformer(ChargeTransformer.class)`<br>`RibbonRequest<ByteBuffer> charge(@Charge ChargeRequest request);` | 定义一个将 ChargeRequest 转换为 ByteBuffer 的转换器 |
-| `}` `}` | 标识 Ribbon 创建模板的方法（方法必须返回 RibbonRequest） |
+| `@TemplateName(name = "charge")`<br>`@Http(method = HttpMethod.POST, uri = "/stripe/charge", headers = @Header(name = "Content-Type", value = "application/json"))` | 定义执行 `charge(c)` 外部请求的 HTTP 参数，包括 HTTP 方法、URI 路径和内容类型的 HTTP 请求头 |
+| `@ContentTransformer(ChargeTransformer.class)`<br>`RibbonRequest<ByteBuffer> charge(@Charge ChargeRequest request);` | 定义一个将 `ChargeRequest` 转换为 `ByteBuffer` 的转换器 |
+| `}` `}` | 标识 Ribbon 创建模板的方法（方法必须返回 `RibbonRequest`） |
 
-如果 Stripe 拥有多个一个你想要对其发送请求的 REST 端点，那么接口中的每个方法定义都需要它们各自自己的 @TemplateName 和 @Http 注解来定义它们。
+如果 Stripe 拥有多个你想要对其发送请求的 REST 端点，那么接口中的每个方法定义都需要它们各自自己的 `@TemplateName` 和 `@Http` 注解来定义它们。
 
-7.7 使用了 Netflix Ribbon 基于注解的方法，但如果你更倾向于流式 API，可以使用 HttpGroup 和 RestTemplate 来构建等效的 HTTP 请求。
+7.7 使用了 Netflix Ribbon 基于注解的方法，但如果你更倾向于流式 API，可以使用 `HttpGroup` 和 `RestTemplate` 来构建等效的 HTTP 请求。
 
-现在让我们来看 ChargeTransformer，它负责将 ChargeRequest 转换为 ByteBuf。
+现在让我们来看 `ChargeTransformer`，它负责将 `ChargeRequest` 转换为 `ByteBuf`。
 
 ### 列表 7.8 ChargeTransformer
 
@@ -3723,10 +3773,10 @@ public class ChargeTransformer implements ContentTransformer<ChargeRequest> {
 }
 ```
 
-- 使用 ObjectMapper 将 ChargeRequest 转换为 JSON 格式。
+- 使用 `ObjectMapper` 将 `ChargeRequest` 转换为 JSON 格式。
 - 分配一个具有适当长度的新缓冲区。
 
-ChargeTransformer 仅在发送请求时处理转换。你需要在调用代码中处理将 ByteBuf 有意义的响应。
+`ChargeTransformer` 仅在发送请求时处理转换。你需要在调用代码中处理将 `ByteBuf` 转换为有意义的响应。
 
 让我们看看使用 Netflix Ribbon 时你的 Payment 资源看起来像什么样。
 
@@ -3780,10 +3830,6 @@ public class PaymentServiceResource {
 
 - 同步调用 Stripe。
 - 提取结果并返回它。
-
-
-
-
 
 ## 第 7 章 发现用于服务的微服务
 
@@ -3847,9 +3893,9 @@ data:
 </dependency>
 ```
 
-你将其标记为 `provided` 是因为存在于 Thorntail 的类路径中，但你在本地编译时需要它。接下来，你需要创建一个接口来表示你想调用的外部微服务 Stripe。
+你将其标记为 `provided` 是因为它存在于 Thorntail 的类路径中，但你在本地编译时需要它。接下来，你需要创建一个接口来表示你想调用的外部微服务 Stripe。
 
-列表 7.10 StripeService
+### 列表 7.10 StripeService
 
 ```java
 @Path("/stripe")
@@ -3864,11 +3910,9 @@ public interface StripeService {
 }
 ```
 
-## 第 7 章 发现用于服务的微服务
+如你所示，这段代码比 Ribbon 的等效代码简单得多且更容易理解。让我们看看使用 RESTEasy 时你的 `Payment` 资源是什么样子的。
 
-如你所示，这段代码比 Ribbon 的等效代码简单得多且更容易理解。让我们看看使用 RESTEASY 时你的 `Payment` 资源是什么样子的。
-
-列表 7.11 MessageResource
+### 列表 7.11 MessageResource
 
 ```java
 @Path("/*")
@@ -3901,7 +3945,7 @@ private URI getService(String name) throws Exception {
     Map<String, Topology.Entry> map = this.topology.asMap();
 
     if (map.isEmpty()) {
-        throw new Exception("未找到服务 ' + + name + "'");
+        throw new Exception("未找到服务 '" + name + "'");
     }
 
     Optional<Topology.Entry> seOptional = map
@@ -3910,7 +3954,7 @@ private URI getService(String name) throws Exception {
         .findFirst(); // 为 chapter7-stripe 服务的注册列表，找到第一个。
 
     Topology.Entry serviceEntry = seOptional.orElseThrow(
-        () -> new Exception("未找到服务 ' + + name + "'")
+        () -> new Exception("未找到服务 '" + name + "'")
     );
 
     return new URI("http", null, serviceEntry.getAddress(),
@@ -3924,37 +3968,42 @@ private URI getService(String name) throws Exception {
 
 然后从 `/chapter7/ribbon-client` 目录运行此命令：
 
-在 OpenShift 控制台中，点击 `ribbon-client` 微服务的 URL。然后在浏览器窗口的 URL 末尾添加 `/topology/system/stream`。浏览器将立即显示你将微服务 `chapter7-stripe` 和 `chapter7-ribbon-client` 注册到拓扑中的事件：
 
-你会注意到的一点是，每个微服务的 URL 都不包含 OpenShift URL 中常见的 IP 地址和 `nip.io` 后缀。这些是 OpenShift 内部 URL；在 OpenShift 环境之外使用它们将无法工作。
+
+在 OpenShift 控制台中，点击`ribbon-client`微服务的 URL。然后在浏览器窗口的 URL 末尾添加`/topology/system/stream`。浏览器将立即显示你将微服务`chapter7-stripe`和`chapter7-ribbon-client`注册到拓扑中的事件：
+
+你会注意到的一点是，每个微服务的 URL 都不包含 OpenShift URL 中常见的 IP 地址和`nip.io`后缀。这些是 OpenShift 内部 URL；在 OpenShift 环境之外使用它们将无法工作。
 
 ### 7.3.2 使用 RESTEasy 客户端进行服务查找
 
-除了使用客户端框架调用 Stripe 微服务外，在使用 RESTEasy 时，你将使用 `Topology.lookup` 方法从 `Topology` 获取信息。你需要这样做是因为 RESTEasy 无法执行你作为 Ribbon Bean 使用时所执行的操作。
+除了使用客户端框架调用 Stripe 微服务外，在使用 RESTEasy 时，你将使用`Topology.lookup`方法从`Topology`获取信息。你需要这样做是因为 RESTEasy 无法执行你作为 Ribbon Bean 使用时所执行的操作。
 
 要将 RESTEasy 作为你的客户端框架，首先需要将它作为依赖添加到你的 Maven 模块中：
 
-将其标记为 `provided` 是因为存在于 Thorntail 的类路径中，但你在本地编译时需要它。接下来需要你需要创建一个接口来表示你想调用的外部微服务 Stripe。
+将其标记为`provided`是因为存在于 Thorntail 的类路径中，但你在本地编译时需要它。接下来需要你需要创建一个接口来表示你想调用的外部微服务 Stripe。
 
-如你所示，这段代码比 Ribbon 的等效代码简单得多且更容易理解。让我们看看使用 RESTEASY 时你的 `Payment` 资源是什么样子的。
+如你所示，这段代码比 Ribbon 的等效代码简单得多且更容易理解。让我们看看使用 RESTEASY 时你的`Payment`资源是什么样子的。
 
 ### 总结
 
-你可能已经注意到通过查找 Topology 必须做的额外工作。要查看拓扑结构，你可以在 `ribbon-client` 上安装 `topology-webapp` 依赖以查看所有的注册事件。修改 `pom.xml` 包含以下内容：
+你可能已经注意到通过查找 Topology 必须做的额外工作。要查看拓扑结构，你可以在`ribbon-client`上安装`topology-webapp`依赖以查看所有的注册事件。修改`pom.xml`包含以下内容：
 
-然后从 `/chapter7/ribbon-client` 目录运行此命令：
+然后从`/chapter7/ribbon-client`目录运行此命令：
 
-在 OpenShift 控制台中，点击 `ribbon-client` 微服务的 URL。然后在浏览器窗口的 URL 末尾添加 `/topology/system/stream`。浏览器将立即显示你将微服务 `chapter7-stripe` 和 `chapter7-ribbon-client` 注册到拓扑中的事件：
+在 OpenShift 控制台中，点击`ribbon-client`微服务的 URL。然后在浏览器窗口的 URL 末尾添加`/topology/system/stream`。浏览器将立即显示你将微服务`chapter7-stripe`和`chapter7-ribbon-client`注册到拓扑中的事件：
 
-你会注意到的一点是，每个微服务的 URL 都不包含 OpenShift URL 中常见的 IP 地址和 `nip.io` 后缀。这些是 OpenShift 内部 URL；在 OpenShift 环境之外使用它们将无法工作。
+你会注意到的一点是，每个微服务的 URL 都不包含 OpenShift URL 中常见的 IP 地址和`nip.io`后缀。这些是 OpenShift 内部 URL；在 OpenShift 环境之外使用它们将无法工作。
 
 ## 容错与监控策略
 
 本章涵盖了
 
 - 什么是延迟？
+
 - 为什么微服务需要容错性？
+
 - 熔断器是如何运作的？
+
 - 哪些工具可以缓解分布式故障？
 
 你将使用之前章节的示例来扩展 Stripe 和 Payment 的功能，在探索容错和监控的概念时包含故障缓解。当你的 Payment 微服务通过网络与外部系统通信时，容错性尤为重要。在跨网络通信时，你需要预期故障和超时。
@@ -3964,10 +4013,6 @@ private URI getService(String name) throws Exception {
 图 8.1 回顾了你的微服务分布式架构。
 
 这种分布式架构与故障有什么关系？由于微服务包含较小的业务逻辑块，而不是包含所有内容的单体，你最终需要维护的服务数量要增多。你不再处理一个可能与处理其所有需求的单个后端服务的 UI。更有可能，该 UI 现在
-
-
-
-
 
 # 第 8 章 容错与监控策略
 
@@ -4010,8 +4055,11 @@ private URI getService(String name) throws Exception {
 为什么延迟对你的微服务很重要？它影响着你的微服务可能做的几乎任何事情：
 
 - 调用另一个微服务
+
 - 等待异步消息
+
 - 从数据库读取
+
 - 向数据库写入
 
 如果你不注意网络中延迟的存在，你就会假设所有消息和数据的通信都是瞬时完成的，并假设参与通信的网络设备彼此足够近。
@@ -4042,10 +4090,6 @@ img/d166e73dc5b37ac6ba449ba856b8eebf_159_0.png
 
 图 8.2 没有使用 Hystrix 时处理用户请求的微服务
 
-
-
-
-
 # 144 第 8 章 容错与监控策略
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_160_0.png)
@@ -4054,7 +4098,7 @@ img/d166e73dc5b37ac6ba449ba856b8eebf_159_0.png
 
 ## 缓解故障影响
 
-通过将外部服务 2 封装在 `hystrixCommand` 中，你限制了它从你的微服务并发调用的请求数量。虽然你已经为与该特定外部服务的交互添加了缓解措施，但你只是增加了微服务中请求失败的概率——你正在向外部服务拒绝额外的请求！这种情况下可能是可以的，也可能不可行；其结果取决于外部服务处理你请求的速度。
+通过将外部服务 2 封装在`hystrixCommand`中，你限制了它从你的微服务并发调用的请求数量。虽然你已经为与该特定外部服务的交互添加了缓解措施，但你只是增加了微服务中请求失败的概率——你正在向外部服务拒绝额外的请求！这种情况下可能是可以的，也可能不可行；其结果取决于外部服务处理你请求的速度。
 
 这引出了一个重要的点。在整个生态系统中，为单个微服务添加故障缓解措施是不有益的。让你的微服务成为分布式网络中一个更完善的“公民”是件极好的，但如果网络中的每个人在与你的微服务交互时没有采取相同的缓解措施，那么你只是移动了瓶颈和故障点的位置。因此，让故障缓解成为企业范围内关注的问题，或者至少是在所有相互通信的微服务组内进行，至关重要。
 
@@ -4079,24 +4123,31 @@ img/d166e73dc5b37ac6ba449ba856b8eebf_159_0.png
 当断路器处于 **Closed（关闭）**状态时，所有请求继续通过流程。当断路器处于 **Open（开启）**状态时，请求退出流程。你可以从图 8.5 中看到，你的断路器需要电路健康数据（Circuit Health Data），这些数据被用于判断电路应该是开启还是关闭。除了图 8.5 中的状态外，断路器还可以处于 **Half Open（半开）** 状态。见图 8.6。
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_162_0.png)
+
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_162_1.png)
 
 以下是断路器状态之间的转换：
 
-- - 所有请求不受阻碍地通过，因为电路处于 **Closed** 状态。
+- 所有请求不受阻碍地通过，因为电路处于 **Closed** 状态。
+
 - 当达到故障阈值时，电路变为 **Open**。
+
 - 当电路处于 **Open** 状态时，所有请求被拒绝，快速失败（failing fast）。
 
 ## 缓解故障影响
 
 - 4 电路的 Open 超时过期。电路移动到 **Half Open** 以允许单个请求通过。
+
 - 5 请求失败或成功；
+
     - a 单个请求失败，电路返回 **Open** 状态。
+
     - b 单个请求成功，电路返回 **Closed** 状态。
 
 在 **Half Open** 状态下，断路器正式上是关闭的。但在达到睡眠超时后，将允许单个请求通过。该请求的成功或失败随后决定了状态是切换回 **Closed** (a) 还是保持 **Open** 直到在时间间隔到达时进行下一次尝试。
 
 断路器只是允许或阻止请求通过的一种方式。关键在于你希望在电路健康数据中包含什么。如果不捕任何电路健康数据，断路器将始终保持 **Closed** 状态，无论有多少请求失败或失败原因是什么。
+
 Hystrix 为断路器提供了合理的默认值，以处理你发出的任何请求的超时、网络拥塞和延迟。让我们来看一个简单的 Hystrix 断路器。
 
 # 列表 8.1 StockCommand
@@ -4179,11 +4230,7 @@ Observable<String> stockObservable = new StockObservableCommand(stockCode).toObs
 
 使用哪种类型的 Observable 取决于你的情况。如果监听者可以错过初始数据，特别是当他们不是 Observable 的第一个订阅者时，那么热的是合适的；然而，如果你希望监听者接收所有数据，那么冷的是更好的选择。
 
-注意 虽然 HystrixCommand 支持从其响应方法 `execute()` 和 `queue()` 返回 Observable，但它们始终发射单个值。
-
-
-
-
+注意 虽然 HystrixCommand 支持从其响应方法`execute()`和`queue()`返回 Observable，但它们始终发射单个值。
 
 ## 第 8 章 容错与监控策略
 
@@ -4195,11 +4242,13 @@ Observable<String> stockObservable = new StockObservableCommand(stockCode).toObs
 
 请求详情会被提供给电路健康数据（Circuit Health Data），以便计数器可以更新计算电路状态所需的最新时间。
 
-作为一种软件隔舱，Hystrix 为线程池（THREAD）和命令（SEMAPH）提供了执行策略。默认情况下，HystrixCommand 使用 THREAD，而 HystrixObservableCommand 使用 SEMAPHORE。
 
-HystrixObservableCommand 不需要隔舱保护，因为它已经通过 Observable 在单独线程中执行。你可以在 HystrixObservableCommand 中使用 THREAD，但这样做并不会增加安全性。如果你想在 SEMAPHORE 中运行 StockCommand，它看起来像下面的代码所示。
 
-+ 列表 8.3 使用 SEMAPHORE 的 StockCommand
+作为一种软件隔舱，`Hystrix` 为线程池（`THREAD`）和命令（`SEMAPH`）提供了执行策略。默认情况下，`HystrixCommand` 使用 `THREAD`，而 `HystrixObservableCommand` 使用 `SEMAPHORE`。
+
+`HystrixObservableCommand` 不需要隔舱保护，因为它已经通过 `Observable` 在单独线程中执行。你可以在 `HystrixObservableCommand` 中使用 `THREAD`，但这样做并不会增加安全性。如果你想在 `SEMAPHORE` 中运行 `StockCommand`，它看起来像下面的代码所示。
+
++ 列表 8.3 使用 `SEMAPHORE` 的 `StockCommand`
 
 ```java
 public class StockCommand extends HystrixCommand<String> {
@@ -4219,7 +4268,7 @@ public class StockCommand extends HystrixCommand<String> {
 }
 ```
 
-该列表说明了如何为 Hystrix 设置额外配置以自定义特定命令的行为。在实践中，你不会在 HystrixCommand 中使用 SEMAPHORE，因为它没有提供任何关于执行耗时的超时功能。如果没有超时，如果你调用的服务未能提供及时响应，你很容易发现系统陷入了死锁。
+该列表说明了如何为 `Hystrix` 设置额外配置以自定义特定命令的行为。在实践中，你不会在 `HystrixCommand` 中使用 `SEMAPHORE`，因为它没有提供任何关于执行耗时的超时功能。如果没有超时，如果你调用的服务未能提供及时响应，你很容易发现系统陷入了死锁。
 
 ## 8.3.4 回退（Fallbacks）
 
@@ -4231,9 +4280,9 @@ public class StockCommand extends HystrixCommand<String> {
 
 图 8.8 带回退处理的故障缓解流程
 
-让我们如何为 StockCommand 实现回退处理器。
+让我们看看如何为 `StockCommand` 实现回退处理器。
 
-列表 8.4 带有回退的 StockCommand
+列表 8.4 带有回退的 `StockCommand`
 
 ```java
 public class StockCommand extends HystrixCommand<String> {
@@ -4245,9 +4294,9 @@ public class StockCommand extends HystrixCommand<String> {
 }
 ```
 
-处理 Hystrix-ObservableCommand 时，实现回退处理器的方法略有不同，但差别不大。
+处理 `HystrixObservableCommand` 时，实现回退处理器的方法略有不同，但差别不大。
 
-列表 8.5 带有回退的 StockObservableCommand
+列表 8.5 带有回退的 `StockObservableCommand`
 
 ```java
 public class StockObservableCommand extends HystrixObservableCommand<String> {
@@ -4268,15 +4317,15 @@ public class StockObservableCommand extends HystrixObservableCommand<String> {
 
 请求缓存提供了减少通过你微服务的请求的益处，而无需担心增加网络流量。启用请求缓存并不适用于所有情况，但在数据不变化时大有裨益。这种方法还简化了你微服务的接口。
 
-为了在 Hystrix 中启用请求缓存，你需要做两件事。首先，你需要激活 HystRequestContext 以获得缓存手段：
+为了在 `Hystrix` 中启用请求缓存，你需要做两件事。首先，你需要激活 `HystrixRequestContext` 以获得缓存手段：
 
 ```java
 HystrixRequestContext context = HystrixRequestContext.initializeContext();
 ```
 
-这发生在执行任何 Hystrix 命令之前。对于我们的情况，你可能会在后文所示进行调用。其次，你需要定义缓存请求和响应的键。
+这发生在执行任何 `Hystrix` 命令之前。对于我们的情况，你可能会在后文所示进行调用。其次，你需要定义缓存请求和响应的键。
 
-列表 8.6 带有请求缓存的 StockCommand
+列表 8.6 带有请求缓存的 `StockCommand`
 
 ```java
 public class StockCommand extends HystrixCommand<String> {
@@ -4296,25 +4345,21 @@ public class StockCommand extends HystrixCommand<String> {
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_170_0.png)
 
-在这里你添加 Execute 表示你正在调用外部服务。Execute 经历的任何故障或超时都会反馈到回退处理，同时也为电路健康数据提供数据。这些信息随后被熔断器用于判断是否达到了错误阈值，电路将切换到打开（Open）。
+在这里你添加 `Execute` 表示你正在调用外部服务。`Execute` 经历的任何故障或超时都会反馈到回退处理，同时也为电路健康数据提供数据。这些信息随后被熔断器用于判断是否达到了错误阈值，电路将切换到打开（`Open`）。
 
-图 8.11 进一步推进流程，展示了当 Hystrix 集成在你的微服务 A 和假设的服务 B 之间时，如何提供这些功能。
+图 8.11 进一步推进流程，展示了当 `Hystrix` 集成在你的微服务 A 和假设的服务 B 之间时，如何提供这些功能。
 
-当请求进入你的 Service A 方法或端点时，你创建一个请求并将其传递给 Hystrix。请求在在 Service B 上执行之前会通过所有已启用的检查。来自 Service B 的响应传回到
+当请求进入你的 `Service A` 方法或端点时，你创建一个请求并将其传递给 `Hystrix`。请求在在 `Service B` 上执行之前会通过所有已启用的检查。来自 `Service B` 的响应传回到
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_170_1.png)
 
-
-
-
-
 ## 缓解故障
 
-在为客户端构建响应之前，你的 Service A 需要进行任何必要的处理。
+在为客户端构建响应之前，你的 `Service A` 需要进行任何必要的处理。
 
-如你所见，在许多点上，Hystrix 可以提供不同的或缓存的响应，而无需直接调用 Service B。这种流程在直接减少故障方面具有许多优势，还能减少导致故障的因素。例如，使用请求缓存来减少微服务的负载。
+如你所见，在许多点上，`Hystrix` 可以提供不同的或缓存的响应，而无需直接调用 `Service B`。这种流程在直接减少故障方面具有许多优势，还能减少导致故障的因素。例如，使用请求缓存来减少微服务的负载。
 
-尽管你看到 Hystrix 实现了这些故障缓解功能，但其他提供相同功能的库或框架应该以类似的方式运行。不过，其他库或框架实现所需缓解措施的方法可能会有所不同。
+尽管你看到 `Hystrix` 实现了这些故障缓解功能，但其他提供相同功能的库或框架应该以类似的方式运行。不过，其他库或框架实现所需缓解措施的方法可能会有所不同。
 
 ## 8.3.7 Hystrix Dashboard
 
@@ -4322,23 +4367,22 @@ public class StockCommand extends HystrixCommand<String> {
 
 听起来你需要一种方法来监控你的容错库的性能，并查看特定微服务的细节。你可以查看并分析一切——运行微服务的节点数量、处理的请求、失败次数、超时等。
 
-Hystrix 还提供了一种可视化所有这些事件的方法：Hystrix Dashboard，如图 8.12 所示。Hystrix Dashboard 提供了从每个注册流接收的 SSE（服务器发送事件）的可视化表示。你就会看到什么是流。
+`Hystrix` 还提供了一种可视化所有这些事件的方法：`Hystrix Dashboard`，如图 8.12 所示。`Hystrix Dashboard` 提供了从每个注册流接收的 `SSE`（服务器发送事件）的可视化表示。你就会看到什么是流。
 
-图 8.12 显示了 Stock-Command 的信息。在小的 UI 中有很多数据点，但一些最关键的如下：
+图 8.12 显示了 `StockCommand` 的信息。在小的 UI 中有很多数据点，但一些最关键的如下：
 
 - 过去 10 秒内的错误率——100%
 - 运行微服务的节点数量——1
 - 过去 10 秒内的成功请求——0
 - 过去 10 秒内拒绝的断路请求——40
 - 过去 10 秒内的失败次数——0
-- 断路器开启或关闭——开启（Open）
+- 断路器开启或关闭——开启（`Open`）
 
 | StockCommand |
 | :--- |
 | 0 0 100.0% |
 | 40 |
 | 0 |
-
 | Host: 4.0s |
 | :--- |
 | Cluster: 4.0 |
@@ -4347,17 +4391,17 @@ Hystrix 还提供了一种可视化所有这些事件的方法：Hystrix Dashboa
 | Median 127 ms 999 s53 |
 | Mean 168 ms 99.5 ms |
 
-一个单个断路器 图 8.12 Hystrix Dashboard
+一个单个断路器 图 8.12 `Hystrix Dashboard`
 
 > TIP 断路器的指标详情可以在 https://github.com/Netflix/Hystrix/wiki/Dashboard 找到。
 
-让我们看看仪表板的运行情况。进入 /hystrix-dashboard 目录并构建项目：
+让我们看看仪表板的运行情况。进入`/hystrix-dashboard`目录并构建项目：
 
 ```
 mvn clean package
 ```
 
-## # 第 8 章 容错与监控策略
+## 第 8 章 容错与监控策略
 
 然后运行仪表板：
 
@@ -4365,19 +4409,19 @@ mvn clean package
 java -jar target/hystrix-dashboard-torntail.jar
 ```
 
-仪表板启动后，打开浏览器并导航到 http://localhost:8090/。为了让仪表板可视化指标数据，它需要从你的断路器获取这些数据！对于单个断路器，你可以通过在主输入框中添加 http://localhost:8080/hystrix-stream 直接添加 SSE 流，如图 8.13 所示。点击 Add Stream 按钮并点击 Monitor Streams。主页面将加载，但在你启动微服务之前，流中不会接收到任何 SSE，因此可视化将不会出现。
+仪表板启动后，打开浏览器并导航到 http://localhost:8090/。为了让仪表板可视化指标数据，它需要从你的断路器获取这些数据！对于单个断路器，你可以通过在主输入框中添加 http://localhost:8080/hystrix-stream 直接添加 `SSE` 流，如图 8.13 所示。点击 `Add Stream` 按钮并点击 `Monitor Streams`。主页面将加载，但在你启动微服务之前，流中不会接收到任何 `SSE`，因此可视化将不会出现。
 
-切换到 chapter8/stock-client 目录并启动微服务：
+切换到`chapter8/stock-client`目录并启动微服务：
 
 ```
 mvn hystrix:run
 ```
 
-在另一个浏览器窗口中，你可以访问 http://localhost:8080/single/AAPL 来查看由代码 AAPL 表示的股票价格详情。任何有效的股票代码都可以用于 URL 路径。
+在另一个浏览器窗口中，你可以访问 http://localhost:8080/single/AAPL 来查看由代码 `AAPL` 表示的股票价格详情。任何有效的股票代码都可以用于 `URL` 路径。
 
-如果你刷新页面，或者通过其他方式发送多次请求，你就可以切换回 Hystrix Dashboard 并查看你断路器的数据。
+如果你刷新页面，或者通过其他方式发送多次请求，你就可以切换回 `Hystrix Dashboard` 并查看你断路器的数据。
 
-你的 stock-client 内置了处理机制来展示 Hystrix 功能。例如，每十个请求就会向你的消费端微服务抛出一个异常，并且每第二个请求都将睡眠 10 秒以触发超时。这让你你能够看到故障在仪表板上是如何表示的。
+你的`stock-client`内置了处理机制来展示 `Hystrix` 功能。例如，每十个请求就会向你的消费端微服务抛出一个异常，并且每第二个请求都将睡眠 10 秒以触发超时。这让你能够看到故障在仪表板上是如何表示的。
 
 要查看缓存是如何工作的，你可以访问 http://localhost:8080/single/AAPL/4。注意控制台，向外部服务器仅发送了一次请求，且对浏览器的每个响应都有相同的请求次数。
 
@@ -4385,17 +4429,17 @@ mvn hystrix:run
 
 | Eureka URL: http://localhost:8080/eureka/stream | |
 | :--- | :--- |
-| Stream Type: Hystrix [在此处选择] | | |
-| http://localhost:8080/hystrix/stream | | |
-| Cluster by Turbine (default cluster): http://turbine-hystrix-hostname:port/turbine.stream | | |
-| Cluster by Turbine (custom cluster): http://turbine-hostname:port/turbine.stream?cluster=[clusterName] | | |
-| **Single Hystrix App: http://hystrix-app:port/hystrix.stream** | | |
-| Delay: 2000 ms Title: Example Hystrix App | | |
-| Authorization: Basic Zm5Ym9Jg== | | |
-| Add Stream | | |
-| Monitor Streams | | |
+| Stream Type: Hystrix [在此处选择] | |
+| http://localhost:8080/hystrix/stream | |
+| Cluster by Turbine (default cluster): http://turbine-hystrix-hostname:port/turbine.stream | |
+| Cluster by Turbine (custom cluster): http://turbine-hostname:port/turbine.stream?cluster=[clusterName] | |
+| **Single Hystrix App: http://hystrix-app:port/hystrix.stream** | |
+| Delay: 2000 ms Title: Example Hystrix App | |
+| Authorization: Basic Zm5Ym9Jg== | |
+| Add Stream | |
+| Monitor Streams | |
 
-图 8.13 Hystrix Dashboard 首页
+图 8.13 `Hystrix Dashboard` 首页
 
 ## 缓解故障
 
@@ -4405,10 +4449,6 @@ mvn hystrix:run
 curl http://localhost:8080/single/Aapl/
 ```
 
-
-
-
-
 ## 在你的支付微服务中添加 Hystrix
 
 ```java
@@ -4417,12 +4457,7 @@ this.chargeRequest = chargeRequest;
 }
 ```
 
-等同于
-第 7 章中的
-PaymentServiceResource
-方法，
-一切不再在
-JAX-RS Resource 中创建。
+等同于第 7 章中的`PaymentServiceResource`方法，一切不再在`JAX-RS Resource`中创建。
 
 ```java
 @Override
@@ -4444,9 +4479,9 @@ protected ChargeResponse getFallback() {
 }
 ```
 
-如果有问题，则回退到空的 ChargeResponse。
+如果有问题，则回退到空的`ChargeResponse`。
 
-现在你已经有了 StripeCommand，它与第 7 章的 PaymentServiceResource 相比有什么不同呢？
+现在你已经有了`StripeCommand`，它与第 7 章的`PaymentServiceResource`相比有什么不同呢？
 
 ## 8.9 PaymentServiceResource
 
@@ -4485,7 +4520,7 @@ try {
     HystrixCommandProperties.ExecutionIsolationStrategy.SEMAPHORE
 ```
 
-> 实例化命令和 Hystrix 属性。
+> 实例化命令和 `Hystrix` 属性。
 
 ```java
 );
@@ -4501,9 +4536,10 @@ payment.chargeId(response.getChargeId());
 }
 ```
 
+```java
 em.persist(payment);
-return PaymentResponse.newInstance(payment, response);
 
+return PaymentResponse.newInstance(payment, response);
 ```
 
 ```java
@@ -4512,42 +4548,52 @@ return PaymentResponse.newInstance(payment, response);
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public void chargeAsync(@suspended final AsyncResponse asyncResponse,
+
     PaymentRequest paymentRequest) throws Exception {
+
     PaymentRequest payment = setupPayment(paymentRequest);
 ```
 
 ```java
 URI url = getServer("chapter-8");
+
 StripeCommand stripeCommand =
+
 new StripeCommand(url, paymentRequest.getStripeRequest());
 ```
 
-获取命令的 Observable。
+获取命令的 `Observable`。
 
 ```java
 stripeCommand
     .toObservable()
     .subscribe(
         result -> {
-            payment.chargeId(result.getChargeId());
-            storePayment(payment);
-            asyncResponse.resume(PaymentResponse.newInstance(payment, result));
-        },
-        error -> {
-            payment.chargeStatus(ChargeStatus.FAILED);
-            storePayment(payment);
-            asyncResponse.resume(error);
-        }
-    );
 ```
 
-订阅 Observable，并传递成功和失败方法。
 
-你的 PaymentResource 表，当只期望一个响应时，你能够使用相同的 HystrixCommand 实现在同步和异步执行模式之间切换。
 
-从第 7 章的版本到这个版本并没有进行大量的重构，大部分工作是将消耗外部微服务的代码提取到新的方法和类（StripeCommand）中。
+`payment.chargeId(result.getChargeId());`
 
-现在你已经重构了资源，让我们运行它！切换到 /chapter8/restasy-client 目录并运行：
+`storePayment(payment);`
+
+`asyncResponse.resume(PaymentResponse.newInstance(payment, result));`
+
+```
+error -> {
+    payment.chargeStatus(ChargeStatus.FAILED);
+    storePayment(payment);
+    asyncResponse.resume(error);
+}
+```
+
+订阅 `Observable`，并传递成功和失败方法。
+
+你的 `PaymentResource` 表，当只期望一个响应时，你能够使用相同的 `HystrixCommand` 实现在同步和异步执行模式之间切换。
+
+从第 7 章的版本到这个版本并没有进行大量的重构，大部分工作是将消耗外部微服务的代码提取到新的方法和类（`StripeCommand`）中。
+
+现在你已经重构了资源，让我们运行它！切换到`/chapter8/restasy-client`目录并运行：
 
 ```bash
 mvn clean fabric8:deploy -Pshift
@@ -4555,25 +4601,26 @@ mvn clean fabric8:deploy -Pshift
 
 ## 在你的支付微服务中添加 Hystrix
 
-如果 Hystrix Dashboard 仍在运行，请返回主页以便添加新的数据流。如果它没有运行，请像你之前在本章节中所做的那样启动。
+如果 `Hystrix Dashboard` 仍在运行，请返回主页以便添加新的数据流。如果它没有运行，请像你之前在本章节中所做的那样启动。
 
-从 OpenShift 控制台复制 chapter8-restarts-client 的 URL，将其粘贴到 Hystrix Dashboard 主页的文本框中，并添加 hystrix 作为 URL 后缀。点击 Add Stream 和 Monitor Streams。
+从 OpenShift 控制台复制 `chapter8-restarts-client` 的 URL，将其粘贴到 `Hystrix Dashboard` 主页的文本框中，并添加 `hystrix` 作为 URL 后缀。点击 `Add Stream` 和 `Monitor Streams`。
 
-Hystrix Dashboard 不会立即显示任何内容，因为你还没有发送任何请求。要测试支付 服务，你可以执行几次请求或多次请求，后者在仪表板中更容易查看，特别是当它们的执行可以自动化时。
+`Hystrix Dashboard` 不会立即显示任何内容，因为你还没有发送任何请求。要测试支付服务，你可以执行几次请求或多次请求，后者在仪表板中更容易查看，特别是当它们的执行可以自动化时。
 
-使用早先的 chapter8 的 URL，你可以访问服务的同步 (/sync) 或异步 (/async) 版本。在这些端点上的一个或全部启动一系列请求后，Hystrix Dashboard 将显示所有已执行成功和失败请求的详情。
+使用早先的 `chapter8` 的 URL，你可以访问服务的同步（`/sync`）或异步（`/async`）版本。在这些端点上的一个或全部启动一系列请求后，`Hystrix Dashboard` 将显示所有已执行成功和失败请求的详情。
 
 ## 8.4.2 与 Ribbon 客户端配合 Hystrix
 
-你的 RESTeasy 客户端需要一些额外工作来添加 Hystrix 支持。现在你将查看 Ribbon 客户端所需的内容。
+你的 `RESTeasy` 客户端需要一些额外工作来添加 `Hystrix` 支持。现在你将查看 `Ribbon` 客户端所需的内容。
 
-- 首先，需要更新你的 Stripe 微服务接口定义，以便利用结合了 Ribbon 的 Hystrix 注解。
+- 首先，需要更新你的 `Stripe` 微服务接口定义，以便利用结合了 `Ribbon` 的 `Hystrix` 注解。
 
 ### 列表 8.10 StripeService
 
 ```java
 @ResourceGroup(name = "chapter8-stripe")
 public interface StripeService {
+
     StripeService INSTANCE = Ribbon.from(StripeService.class);
 
     @Template("charge")
@@ -4596,7 +4643,7 @@ public interface StripeService {
 
 ![](img/d16e73dc5b37ac6b44ba856eb8f177_0.png)这非常简单——只需要几行代码！
 
-> 注意：Hystrix 注解仅在结合 Ribbon 时可用。
+> 注意：`Hystrix` 注解仅在结合 `Ribbon` 时可用。
 
 现在代码无法编译，因为你缺少回退类。让我们添加它。
 
@@ -4604,11 +4651,14 @@ public interface StripeService {
 
 ```java
 public class StripeFallbackHandler implements FallbackHandler<ByteBuffer> {
+
     @Override
     public Observable<ByteBuffer> getFallback(
             HystrixObservableInvokable<ByteBuffer> hystrixInfo,
             Map<String, Object> requestProperties) {
+
         ChargeResponse response = new ChargeResponse();
+
         try {
             ByteBuffer bytes = new ObjectMapper().writeValueBytes(response);
         } catch (Exception e) {
@@ -4620,8 +4670,9 @@ public class StripeFallbackHandler implements FallbackHandler<ByteBuffer> {
 }
 ```
 
-最后，你需要更新第 7 章的 PaymentServiceClient。但并不如此！使用 Hystrix 的优点是，你的第 7 章资源不需要任何更改。只需添加注解和回退处理器即可。
-要运行它！检查 /chapter8/restasy-client 目录并运行以下命令：
+最后，你需要更新第 7 章的 `PaymentServiceClient`。但并不如此！使用 `Hystrix` 的优点是，你的第 7 章资源不需要任何更改。只需添加注解和回退处理器即可。
+
+要运行它！检查`/chapter8/restasy-client`目录并运行以下命令：
 
 ```bash
 mvn fabric8:deploy -Pshift
@@ -4630,8 +4681,8 @@ mvn fabric8:deploy -Pshift
 ### 总结
 
 - 延迟和容错性在考虑分布式部署时很重要，它们会影响你微服务的吞吐量和速度。
-- 你的消费微服务的代码可以使用 Hystrix 进行封装，以包含回退、请求缓存和隔离等容错功能。
-- Hystrix 本身并非完美容错的万药。通过 Hystrix Dashboard 等工具进行实时监控对于成功提高整体容错性至关重要。
+- 你的消费微服务的代码可以使用 `Hystrix` 进行封装，以包含回退、请求缓存和隔离等容错功能。
+- `Hystrix` 本身并非完美容错的万药。通过 `Hystrix Dashboard` 等工具进行实时监控对于成功提高整体容错性至关重要。
 
 ## 安全微服务
 
@@ -4646,10 +4697,6 @@ mvn fabric8:deploy -Pshift
 ## 9.1 安全微服务的重要性
 
 确保你的微服务安全是一项关键任务，需要从开发开始就进行考虑。不尽早这样做会导致以后集成安全性时花费更多开发时间。为什么？设计时如果不考虑安全性会导致代码在以后可能需要进行重大重构。虽然在开发典型的 Java 应用程序之前不考虑安全性可能会导致开发计划增加几个月的时间，但至少在微服务中，你需要重构的代码要少得多。
-
-
-
-
 
 ## 9.1.1 为什么安全如此重要？
 
@@ -4683,7 +4730,7 @@ mvn fabric8:deploy -Pshift
 
 既然你已经知道你需要安全性，你需要解决什么类型的问题？这本身就可以作为一本书的主题！因为你并不是想为微服务重写《战争与和平》，你将关注最感兴趣的领域。
 
-身份验证（Authentication）和授权（Authorization）是安全中与微服务最相关的两个方面。在深入研究之前，你需要概述这些术语的每一个含义。
+身份验证（`Authentication`）和授权（`Authorization`）是安全中与微服务最相关的两个方面。在深入研究之前，你需要概述这些术语的每一个含义。
 
 身份验证在图 9.1、9.2 和 9.3 中进行了说明。它专门处理用户是否有权访问托管的应用程序或微服务，甚至处理用户是属于企业内部还是外部。身份验证完全关注用户是否能够访问应用程序。
 
@@ -4693,7 +4740,7 @@ mvn fabric8:deploy -Pshift
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_183_0.png)
 
-你看到了管理员（Admin）、经理（Manager）和用户（User）角色，这些都是可能需要的典型角色。你的微服务需要的任何角色都会所不同，取决于需求，从零到多个不等。
+你看到了管理员（`Admin`）、经理（`Manager`）和用户（`User`）角色，这些都是可能需要的典型角色。你的微服务需要的任何角色都会所不同，取决于需求，从零到多个不等。
 
 企业可能也有微服务，如图 9.5 所示。在这种情况下，你有一个由内部用户管理的微服务，其角色为管理员。微服务的用户是企业外部的。
 
@@ -4705,26 +4752,26 @@ mvn fabric8:deploy -Pshift
 
 你如何向你的微服务中添加安全性？你完全可以开发自己的安全解决方案，但在许多情况下这远非理想。你会花费时间来开发它、维护它等等。开发自己的安全解决方案不仅会推迟你想要的东西（即你的微服务）的开发，还会为未来的开发者增加额外的维护负担。
 
-你想做的是利用一个由大型群体开发和维护的可靠项目，该项目提供了你需要的安全用例。虽然在本书中对于这样的项目可能有很多选择，但我们将选择 Keycloak。
+你想做的是利用一个由大型群体开发和维护的可靠项目，该项目提供了你需要的安全用例。虽然在本书中对于这样的项目可能有很多选择，但我们将选择 `Keycloak`。
 
 ## 9.2 使用 Keycloak 工作
 
-Keycloak 是一个为现代应用程序提供身份和访问管理的开源项目。通过最少的麻烦即可在应用程序和服务中添加身份验证。
+`Keycloak` 是一个为现代应用程序提供身份和访问管理的开源项目。通过最少的麻烦即可在应用程序和服务中添加身份验证。
 
 ### 9.2.1 理解 Keycloak 的功能
 
-Keycloak 提供了许多功能。以下是与微服务开发最相关的四个：
+`Keycloak` 提供了许多功能。以下是与微服务开发最相关的四个：
 
-- 单点登录（Single-sign-on）——允许用户针对 Keycloak 进行身份验证，而不是针对每个应用程序或服务。用户登录 Keycloak 后，他们可以访问任何通过 Keycloak 验证的应用程序或服务。
-- 社交登录（Social login）——使用 Keycloak 启用社交登录超级简单！在管理控制台中配置社交网络即可。不需要任何代码或应用程序的更改。
-- 用户联合（User federation）——如果你的用户注册在 LDAP 或 Active Directory 中，他们可以与 Keycloak 联合。如果用户位于不同类型的存储器中（例如关系型数据库），你也可以开发自己的提供程序来访问你的用户。
-- 标准协议（Standard protocols）——Keycloak 开箱提供了对 OpenID Connect、OAuth 2.0 和安全断声明语言（SAML）。
+- 单点登录（`Single-sign-on`）——允许用户针对 `Keycloak` 进行身份验证，而不是针对每个应用程序或服务。用户登录 `Keycloak` 后，他们可以访问任何通过 `Keycloak` 验证的应用程序或服务。
+- 社交登录（`Social login`）——使用 `Keycloak` 启用社交登录超级简单！在管理控制台中配置社交网络即可。不需要任何代码或应用程序的更改。
+- 用户联合（`User federation`）——如果你的用户注册在 `LDAP` 或 `Active Directory` 中，他们可以与 `Keycloak` 联合。如果用户位于不同类型的存储器中（例如关系型数据库），你也可以开发自己的提供程序来访问你的用户。
+- 标准协议（`Standard protocols`）——`Keycloak` 开箱提供了对 `OpenID Connect`、`OAuth 2.0` 和安全断声明语言（`SAML`）。
 
-关于 Keycloak 及其所有功能的详情可以在其网站 www.keycloak.org 上找到
+关于 `Keycloak` 及其所有功能的详情可以在其网站 `www.keycloak.org` 上找到
 
 ### 9.2.2 设置 Keycloak
 
-你首先需要下载一个供微服务和服务应用程序集成的 Keycloak 服务器。对于我们的目的，你有两种方法。你可以下载一个完整的 WildFly 发行版，或者下载使用 Thorntail 构建的 Keycloak 服务器。为了符合微服务的方式，请选择 Thorntail 版本。我们示例所需的版本可以从 http://mng.bz/s6r9 下载。
+你首先需要下载一个供微服务和服务应用程序集成的 `Keycloak` 服务器。对于我们的目的，你有两种方法。你可以下载一个完整的 `WildFly` 发行版，或者下载使用 `Thorntail` 构建的 `Keycloak` 服务器。为了符合微服务的方式，请选择 `Thorntail` 版本。我们示例所需的版本可以从 `http://mng.bz/s6r9` 下载。
 
 下载后，在单独端口启动此版本，以防干扰你的微服务：
 
@@ -4732,7 +4779,9 @@ Keycloak 提供了许多功能。以下是与微服务开发最相关的四个�
 java -Dswarm.http.port=9090 -jar keycloak-2018.1.0-swarm.jar
 ```
 
-服务器启动后，在浏览器中访问 http://localhost:9090/auth/。你会看到像图 9.6 所示的界面。
+
+
+服务器启动后，在浏览器中访问`http://localhost:9090/auth/`。你会看到像图 9.6 所示的界面。
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_185_0.png)
 
@@ -4751,10 +4800,6 @@ Keycloak 项目 | 邮件列表 | 报告问题
 
 图 9.6 设置 Keycloak 管理员用户
 
-
-
-
-
 ## 第 9 章 保护微服务
 
 在 Keycloak 服务器上输入管理员帐户的用户名和密码。然后点击“创建”（Create）。接下来，点击“管理控制”（Administration Console）链接查看图 9.7 所示的登录界面。
@@ -4763,8 +4808,7 @@ Keycloak 项目 | 邮件列表 | 报告问题
 
 图 9.7 登录 Keycloak 管理控制
 
-输入设置管理员帐户时提供的凭据，然后点击登录按钮。图 9.8 显示了 Keycloak 管理控制的主界面。在这里，可以根据需要修改和调整 Keycloak 的所有部分。默认情况下，系统会提供一个 Master 域（realm）。
-由于 Master 域包含管理员用户，良好的做法是不对于使用应用程序或微服务的身份验证的用户使用此域。
+输入设置管理员帐户时提供的凭据，然后点击登录按钮。图 9.8 显示了 Keycloak 管理控制的主界面。在这里，可以根据需要修改和调整 Keycloak 的所有部分。默认情况下，系统会提供一个 Master 域（realm）。由于 Master 域包含管理员用户，良好的做法是不对于使用应用程序或微服务的身份验证的用户使用此域。
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_186_1.png)
 
@@ -4790,11 +4834,9 @@ Keycloak 域管理一组用户以及它们的凭据、角色和组。域之间�
 4. 将 Keycloak 提供的持者令牌（bearer token）添加到请求的 HTTP 头部中。
 5. 从请求中提取令牌并传递给 Keycloak 进行验证。如果令牌有效，受保护的微服务即可处理该请求。如果令牌无效，则返回 HTTP 401 状态，表示未经授权的用户提出的请求。
 
-## 第 9 章 保护微服务
-
 定义：持者令牌（Bearer token）是一种具有特殊行为属性的安全令牌。持有令牌的任何方都可以像其他持有相同令牌的方一样使用它。使用持者令牌不需要持有者证明其拥有加密密钥。
 
-上述过程的细微变化涉及一个微服务进行身份验证，以便向受保护的微服务发送请求。图 9.10 阐释了这一点
+上述过程的细微变化涉及一个微服务进行身份验证，以便向受保护的微服务发送请求。图 9.10 阐释了这一点。
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_188_0.png)
 
@@ -4841,11 +4883,7 @@ Keycloak 域管理一组用户以及它们的凭据、角色和组。域之间�
 
 图 9.13 创建域
 
-点击“选择文件”从 `/keycloak` 目录定位 `keycloak-realm.json`。点击“添加域”按钮创建该域。图 9.14 显示了你创建的域。
-
-当你的 Keycloak 服务器运行时，下一步是为你的微服务定义一个供其关联的域。登录管理控制台后，悬停在左上角的 Master 域名称上，以显示“添加域”按钮，如图 9.12 所示。
-
-点击“添加域”按钮打开创建域的屏幕。图 9.13 显示了此屏幕。
+点击“选择文件”从`/keycloak`目录定位`keycloak-realm.json`。点击“添加域”按钮创建该域。图 9.14 显示了你创建的域。
 
 图 9.14 导入域
 
@@ -4903,9 +4941,9 @@ Keycloak 域管理一组用户以及它们的凭据、角色和组。域之间�
 
 第一步是保护 Stripe 微服务，以确保你在访问 Stripe API 时经过适当的身份验证。现在你已经知道如何正确连接到服务，你将需要必要的身份验证。
 
-如果你取用第 8 章的代码，你不需要修改 `StripeResource` 来添加安全性。很酷，对吧？你可以在不修改代码的情况下为任何 RESTful 端点添加安全性。它是如何工作的？
+如果你取用第 8 章的代码，你不需要修改`StripeResource`来添加安全性。很酷，对吧？你可以在不修改代码的情况下为任何 RESTful 端点添加安全性。它是如何工作的？
 
-首先要让 Maven 知道你想在 Thorntail 微服务中使用 Keycloak。为此，你需要在 `pom.xml` 中添加一个依赖：
+首先要让 Maven 知道你想在 Thorntail 微服务中使用 Keycloak。为此，你需要在`pom.xml`中添加一个依赖：
 
 ```xml
 <dependency>
@@ -4914,7 +4952,7 @@ Keycloak 域管理一组用户以及它们的凭据、角色和组。域之间�
 </dependency>
 ```
 
-剩下的任务是定义 Keycloak 的位置、如何配置它以及哪些需要保护。坦率地说，你需要在 Stripe 微服务的 `src/main/resources` 目录下添加一个 `project-defaults.yml` 文件，内容如下列表所示。
+剩下的任务是定义 Keycloak 的位置、如何配置它以及哪些需要保护。坦率地说，你需要在 Stripe 微服务的`src/main/resources`目录下添加一个`project-defaults.yml`文件，内容如下列表所示。
 
 # 列表 9.2 project-defaults.yml
 
@@ -4924,19 +4962,15 @@ Keycloak 域管理一组用户以及它们的凭据、角色和组。域之间�
 | auth-server: http://192.168.1.13:9090/auth ssl-required: external resource: stripe-service snable-core: deployment chapter-9.stripe.war web: | 为 chapter-9.stripe.war 定义部署特定的配置章节。这等同于可以在 web.xml 中提供的内容。 |
 | security-constraints: url-pattern: /stripe/* roles: [ stripe-service-access ] - | 只有拥有 stripe-service-access 角色的用户才能成功执行对此微服务的请求。 |
 
-
-
-
-
 ## 第 9 章 保护微服务
 
-你的 Stripe 微服务已经免受未经授权访问的保护！让我们尝试一下。切换到 /chapter9/serviceauth/stripe 目录并运行以下命令：
+你的 Stripe 微服务已经免受未经授权访问的保护！让我们尝试一下。切换到`/chapter9/serviceauth/stripe`目录并运行以下命令：
 
 ```
 mvn thorntail:run
 ```
 
-尝试在浏览器打开 http://localhost:8080/stripe/charge，它将显示 Unauthorized（未授权）。由于从浏览器发出的 HTTP 请求中没有携带 bearer token，导致你的请求被拒绝，因为你没有经过正确的身份验证。
+尝试在浏览器打开`http://localhost:8080/stripe/charge`，它将显示 Unauthorized（未授权）。由于从浏览器发出的 HTTP 请求中没有携带 bearer token，导致你的请求被拒绝，因为你没有经过正确的身份验证。
 
 要查看更多细节，可以使用显示 HTTP 网络的浏览器插件，或者在终端中使用 curl 命令。
 
@@ -4968,13 +5002,10 @@ $ -v http://localhost:8080/stripe/charge
 ```
 
 > HTTP 请求头信息
-
 > HTTP 请求头信息
-
 > HTTP 响应正文
 
-现在很容易看出你收到了 401 HTTP 响应码，表示你尝试未经身份验证访问该 URL。既然 Stripe 已经得到了正确的保护，另一个微服务如何在不接收凭据的情况下访问它？
-你也可以如下部署 Stripe Minish：
+现在很容易看出你收到了 401 HTTP 响应码，表示你尝试未经身份验证访问该 URL。既然 Stripe 已经得到了正确的保护，另一个微服务如何在不接收凭据的情况下访问它？你也可以如下部署 Stripe Minish：
 
 ```
 mvn clean fabric8:deploy -Popenshift
@@ -4996,7 +5027,7 @@ mvn clean fabric8:deploy -Popenshift
 </dependency>
 ```
 
-该依赖项提供了与 Keycloak 认证所需的所有工具类。现在，你需要定义你正在交互的是哪个 Keycloak，以及哪个 Payment 服务属于 cayrealm 领域。为此，你需要在 src/main/resources/ 下创建一个 `keycloak.json` 文件。
+该依赖项提供了与 Keycloak 认证所需的所有工具类。现在，你需要定义你正在交互的是哪个 Keycloak，以及哪个 Payment 服务属于 cayrealm 领域。为此，你需要在`src/main/resources/`下创建一个`keycloak.json`文件。
 
 ### 列表 9.4 Payment 服务的 keycloak.json
 
@@ -5008,7 +5039,7 @@ mvn clean fabric8:deploy -Popenshift
 | "secret": "secret" | |
 | 需要传递给 Keycloak 以认证此客户端的凭据。 | |
 
-这就是你需要的所有配置。添加与 Keycloak 认证的代码。由于你使用了 Hrix，你需要将认证处理逻辑加入到 `StripeCommand` 中。
+这就是你需要的所有配置。添加与 Keycloak 认证的代码。由于你使用了 Hrix，你需要将认证处理逻辑加入到`StripeCommand`中。
 
 ### 列表 9.5 StripeCommand—getAuthzClient 方法
 
@@ -5026,40 +5057,43 @@ mvn clean fabric8:deploy -Popenshift
   return this.authzClient;
 } | |
 
-一旦有了 AuthzClient，你就可以获取访问令牌，并将其添加到任何指向 Stripe 的请求中。为了做到，你必须在拥有 Resteasy Client 实例后，修改 `StripeCommand` 中的 `run()` 方法并添加请求过滤器。
+一旦有了 AuthzClient，你就可以获取访问令牌，并将其添加到任何指向 Stripe 的请求中。为了做到，你必须在拥有 Resteasy Client 实例后，修改`StripeCommand`中的`run()`方法并添加请求过滤器。
 
 ### 列表 9.6 StripeCommand—run 方法
 
 | 使用 AuthClient 从 Keycloak 获取访问令牌，为令牌添加 Bearer 前缀并将其添加到列表 | 注册一个匿名的 ClientRowFilter 以修改 HTTP 请求。 |
 | :--- | :--- |
+
 ```java
 protected ChangeResponse response() throws Exception {
   ResteasyClient client = new ResteasyClientBuilder().build();
-
   client.register((ClientFilter) clientRequestContext -> {
     List<Object> list = new ArrayList<>();
     list.add("Bearer +");
     getAuthClient().obtainAccessToken();
     clientRequestContext.getHeaders().put(Headers.AUTHORIZATION, list);
   });
-
   // 将列表添加到请求的 AUTHORIZATION 头中。
   ResteasyWebTarget target = client.target(serviceURI);
-  StripeService stripeService = target.proxy(StripeService.class);
-  return stripeService.charge();
-}
 ```
+
+
+
+`StripeService stripeService = target.proxy(StripeService.class);`
+
+`return stripeService.charge();`
+
 这就是你在向 Stripe 的任何请求中传递 bearer token 所需的所有内容。非常简单，对吧？
 
 ### 9.3.4 测试你的微服务
 
-现在你已经设置好了 Stripe 和 Payment，是时候查看所有服务的运行及其相互交互了。如果你还没有运行 Keycloak 服务器，请切换到 /chapter9/service 并启动它：
+现在你已经设置好了 Stripe 和 Payment，是时候查看所有服务的运行及其相互交互了。如果你还没有运行 Keycloak 服务器，请切换到`/chapter9/service`并启动它：
 
 ```
 mvn clean fabric8:deploy
 ```
 
-打开 OpenShift 控制台获取 Payment 的 URL。然后使用相应的工具对 /sync 端点执行 HTTP POST。如果你尝试直接访问微服务，仍将收到 HTTP 401 unauthorized 响应。为了在调用时查看 HTTP 头，你需要另一种输出方式。在此例中，你将取消 /chapter9/service-auth 下 project-defaults.yml 中以下内容的注释：
+打开 OpenShift 控制台获取 Payment 的 URL。然后使用相应的工具对`/sync`端点执行 HTTP POST。如果你尝试直接访问微服务，仍将收到 HTTP 401 unauthorized 响应。为了在调用时查看 HTTP 头，你需要另一种输出方式。在此例中，你将取消`/chapter9/service-auth`下`project-defaults.yml`中以下内容的注释：
 
 ```yaml
 undertow:
@@ -5072,11 +5106,7 @@ undertow:
             module: io.undertow
 ```
 
-
-
-
-
-#  9.7 cayambe-realm.json
+# 9.7 cayambe-realm.json
 
 ```json
 "realm": "cayambe",
@@ -5127,18 +5157,12 @@ undertow:
 ```
 
 > 指定 cayambe 领域（realm）名称
-
 > 创建用户 ken，他拥有 user 和 admin 领域角色
-
 > 创建用户 bob，他拥有 user 领域角色
-
 > 定义了 user 和 admin 领域角色
-
 > 你的 UI 的 Client ID
-
 > publicClient 表示客户端具有登录 Keycloak 的能力
-
-> 用于 UI  de的的 JAX-RS 端点的 Client ID。
+> 用于 UI 的 JAX-RS 端点的 Client ID。
 
 现在你已经准备好处理应用程序所需的更改了。
 
@@ -5153,7 +5177,7 @@ undertow:
 </dependency>
 ```
 
-接下来，你通过 `project-defaults.yml` 配置与 Keycloak 的集成。
+接下来，你通过`project-defaults.yml`配置与 Keycloak 的集成。
 
 | 列表 9.8 project-defaults.yml | 描述 |
 | --- | --- |
@@ -5237,11 +5261,11 @@ return Response
 
 ## 4.4.3 在 UI 中验证用户身份
 
-现在你的 REST 端点已经可以安全分类删除，你可以从应用程序 UI 中提供该功能。要查看你对 UI 做的更改，请查看章节代码中的 `/chapter9/admin_ui/ui` 目录。
+现在你的 REST 端点已经可以安全分类删除，你可以从应用程序 UI 中提供该功能。要查看你对 UI 做的更改，请查看章节代码中的`/chapter9/admin_ui/ui`目录。
 
-在这种情况下，你选择通过向包 `keycloak-js` 添加 NPM 依赖来包含 Keycloak 提供的 JavaScript。你也可以直接从服务器下载 JavaScript，来自 `http://localhost:9090/auth/js/keycloak.js`。
+在这种情况下，你选择通过向包`keycloak-js`添加 NPM 依赖来包含 Keycloak 提供的 JavaScript。你也可以直接从服务器下载 JavaScript，来自`http://localhost:9090/auth/js/keycloak.js`。
 
-作为基于 Java 的服务，你需要一个 `keycloak.json` 文件来配置与 Keycloak 服务器的连接。
+作为基于 Java 的服务，你需要一个`keycloak.json`文件来配置与 Keycloak 服务器的连接。
 
 ### 列表 9.10 用于 UI 的 keycloak.json
 
@@ -5255,12 +5279,13 @@ return Response
 }
 ```
 
-这段代码对你来说应该熟悉，因为它涵盖了连接 Keycloak 的需求。它在 `realm.json` 文件中定义了 Client ID。
+这段代码对你来说应该熟悉，因为它涵盖了连接 Keycloak 的需求。它在`realm.json`文件中定义了 Client ID。
 
 ### 列表 9.11 keycloak.js
 
 ```javascript
 import Keycloak from 'keycloak-js';
+
 const keycloakAuth = new Keycloak();
 
 keycloakAuth.init({ onload: 'check-sso' }).then((authenticated) => {
@@ -5281,7 +5306,7 @@ keycloakAuth.init({ onload: 'check-sso' }).then((authenticated) => {
 </li>
 ```
 
-最后一部分是在 UI 中提供一个删除分类的按钮。React 组件 CategoryListContainer 为 `adminRole` 属性设置一个布尔值，以指示用户是否拥有该角色。然后你只需使用 HTML 来根据该属性启用或禁用按钮：
+最后一部分是在 UI 中提供一个删除分类的按钮。React 组件`CategoryListContainer`为`adminRole`属性设置一个布尔值，以指示用户是否拥有该角色。然后你只需使用 HTML 来根据该属性启用或禁用按钮：
 
 ```html
 <button disabled={!this.props.adminRole} className="btn btn-danger"
@@ -5302,17 +5327,13 @@ keycloakAuth.init({ onload: 'check-sso' }).then((authenticated) => {
 
 忘记了 UI 和 Keycloak 是如何交互的了吗？让我们再次查看图 9.15。
 
+# 第 9 章 保护微服务
 
-
-
-
-## 第 9 章 保护微服务
-
-每当 UI 调用你的 RESTful 端点的 `delete` 方法时，如果存在令牌，它将被设置在请求中。因为来自 UI 的其他请求不会传递令牌，但如果需要保护额外的端点或记录发起请求的用户信息，也可以以类似的方式添加令牌。
+每当 UI 调用你的 RESTful 端点的`delete`方法时，如果存在令牌，它将被设置在请求中。因为来自 UI 的其他请求不会传递令牌，但如果需要保护额外的端点或记录发起请求的用户信息，也可以以类似的方式添加令牌。
 
 ### 9.4.4 测试新的 UI 和所有服务工作
 
-是时候让新的 UI 运行一下了。如果 Keycloak 尚未运行，请使用你在本节之前之前使用的命令启动它。启动你 Admin 服务的 RESTful 端点，切换到 `/chapter9/ui/admin`，并运行以下命令：
+是时候让新的 UI 运行一下了。如果 Keycloak 尚未运行，请使用你在本节之前使用的命令启动它。启动你 Admin 服务的 RESTful 端点，切换到`/chapter9/ui/admin`，并运行以下命令：
 
 ```
 mvn thorntail:run
@@ -5325,11 +5346,14 @@ mvn clean install
 java -jar target/chapter9-ui-thorntail.jar
 ```
 
-现在你可以导航到 http://localhost:8080，你将看到应用程序的主页，如图 9.16 所示。
+
+
+现在你可以导航到 `http://localhost:8080`，你将看到应用程序的主页，如图 9.16 所示。
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_202_0.png)
 
 你可以看到你的类别，但现在右上角有一个“登录”（Login）链接，并且每个类别都有可见的“删除”（Delete）按钮。
+
 点击登录，你将被重定向到 Keycloak 进行身份验证。输入 `bob` 作为用户名，输入 `password` 作为密码。你会被重定向回应用程序，现在你已通过身份验证，如图 9.17 所示。
 
 ![](img/d166e73dc5b37ac6ba449ba856b8eebf_202_1.png)
@@ -5415,30 +5439,33 @@ Cayambe (https://sourceforge.net/) 被描述为“基于 Java 的”。编译所
 
 ### 10.2.2 Wildfly 设置
 
-在你将 WildFly 11.0.0.Final 下载包解压到选择的目录后，你需要提供一些设置，以便 WildFly 知道 MySQL 驱动程序在哪里。为此，在解压 WildFly 的位置创建 /modules/system/layers/base/com/mysql/main。
+在你将 WildFly 11.0.0.Final 下载包解压到选择的目录后，你需要提供一些设置，以便 WildFly 知道 MySQL 驱动程序在哪里。为此，在解压 WildFly 的位置创建 `/modules/system/layers/base/com/mysql/main`。
+
 在你创建的目录中，复制之前下载的 Java MySQL Connector JAR 文件。在同一目录下，创建此文件。
 
 列表 10.2 用于 mysql 的 MySQL 驱动 module.xml
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
+
 <module xmlns="urn:jboss:module:1.3" name="com.mysql">
+
 <resources>
-```
-
-
-
-
 
 # 192 第 10 章 架构微服务混合体
 
-```xml
 <resource-root path="mysql-connector-Java-5.1.43-bin.jar"/>
+
 <resources>
+
   <dependencies>
+
     <module name="jax.api"/>
+
     <module name="javax.transaction.api"/>
+
   </dependencies>
+
 </resources>
 ```
 
@@ -5448,33 +5475,57 @@ Java MySQL 连接器 JAR 文件的路径。你的 JAR 文件名可能需要不�
 
 最后，你需要告诉 WildFly 新驱动程序存在，并定义一个 Cayame 可以用于数据库通信的新数据源。所有 WildFly 的配置都存在于 `standalone.xml` 中。你需要找到 WildFly 安装目录下的 `/standalone/configuration/` 里的 `standalone.xml`，然后替换该文件进行编辑。找到数据源子系统的部分，并用以下内容替换整个部分。
 
-+ 列表 10.3 standalone.xml 代码段
+列表 10.3 standalone.xml 代码段
 
 ```xml
 <subsystem xmlns="urn:jboss:domain:datasource:5.0">
+
   <datasources>
+
     <datasource name="ExampleDS" enabled="true" use-java-context="true">
+
       <pool pool-name="ExampleDS" enabled="true">
+
       <connection-url>jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE</connection-url>
+
       <driver>h2</driver>
+
       <security>
+
         <user-name>sa</user-name>
+
         <password>sa</password>
+
       </security>
+
     </datasource>
+
     <datasource jndi-name="java:jndi/java:Climb" pool-name="MySqlDS" enabled="true">
+
       <connection-url>jdbc:mysql://localhost:3206/cayame</connection-url>
+
       <driver>mysql</driver>
+
       <security>
+
         <user-name>cayame</user-name>
+
         <password>cayame</password>
+
       </security>
+
       <validation>
+
         <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker"/>
+
         <background-validation validation="true"/>
+
       </validation>
+
     </datasource>
+
   </datasources>
+
 </subsystem>
 ```
 
@@ -5494,19 +5545,33 @@ Java MySQL 连接器 JAR 文件的路径。你的 JAR 文件名可能需要不�
 
 ```xml
 <exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter"/>
+
 </validation>
+
 <datasource>
+
   <drivers>
+
     <driver name="h2" module="com.h2database.h2">
+
       <xa-datasource-class>org.jbx.jdbc.JdbcDataSource</xa-datasource-class>
+
     </driver>
+
     <driver name="mysql" module="com.mysql">
+
       <xa-datasource-class>com.mysql.jdbc.jdbc2.optional.MySqlXDataSource</xa-datasource-class>
+
     </driver>
+
     <xa-datasource-source>
+
     </xa-datasource-source>
+
   </drivers>
+
 </datasource>
+
 </subsystem>
 ```
 
@@ -5548,7 +5613,7 @@ Maven 将构建每个 JAR 和 WAR，然后将其打包成一个 EAR。构建完�
 WFLYSR0025: WildFly Full 1.0.0 started in 602ms
 ```
 
-你可以访问站点 http://localhost:8080，以及位于 http://localhost:8080/admin 的管理界面。
+你可以访问站点 `http://localhost:8080`，以及位于 `http://localhost:8080/admin` 的管理界面。
 
 # 10.3 Cayambe 混合体——单体结合微服务
 
@@ -5578,10 +5643,6 @@ WFLYSR0025: WildFly Full 1.0.0 started in 602ms
 
 由于你不再需要存储这些信息，让我们从 Cayambe 的 `billing_info` 表中将其删除。
 
-
-
-
-
 ## Cayambe 混合架构——带微服务的单体 197
 
 - name_on_card（卡持人姓名）
@@ -5597,292 +5658,47 @@ WFLYSR0025: WildFly Full 1.0.0 started in 602ms
 
 ```java
 public class OrderDAO {
+
     public void Save(OrderVO orderVO) {
+
         StringBuilder sqlBillingInfo = new StringBuilder(512);
+
         sqlBillingInfo.append('insert into billing_info (');
+
         sqlBillingInfo.append('order_id,name,address1,address2,city,state,zipcode,country,name,card_charge_id,email) ');
+
         sqlBillingInfo.append('values (');
+
         sqlBillingInfo.append(orderId);
+
         sqlBillingInfo.append(') ');
+
         sqlBillingInfo.append(orderVO.getBillingInfoVO().getCountry());
+
         sqlBillingInfo.append(',,');
+
         sqlBillingInfo.append(orderVO.getBillingInfoVO().getCardChargeId());
+
         sqlBillingInfo.append('');
+
     }
-
-    public OrderVO getOrderVO(OrderVO orderVO) {
-        b.setCardChargeId(rs.getString("billing_info.card_charge_id"));
-    }
-}
-```
-
-> 从选择语句中移除多余的列，并添加 `card_charge_id`。
-
-> 移除对已删除列的赋值，用新字段的 `getCardChargeId()` 替换它们。
-
-> 移除旧卡列的检索，并添加 `card_charge_id` 的检索。
-
-在这里你修改了 `OrderDAO`，它直接与数据库交互以存储和检索订单数据。由于你修改了 `BillingInfoVO` 中的方法，你现在也需要进行更改，如列表 10.5 所示。
-
-### 列表 10.5 BillingInfoVO
-
-```java
-public class BillingInfoVO implements Serializable {
-    private Long billingId = null;
-    private Long orderId = null;
-    private String name = null;
-    private String address = null;
-    private String address2 = null;
-    private String city = null;
-    private String state = null;
-    private String zipCode = null;
-    private String country = null;
-    private String phone = null;
-    private String email = null;
-```
-
-> 将 `nameOnCard`、`cardType`、`cardExpirationMonth`、`cardExpirationYear` 和 `authorizationCode` 替换为 `cardToken` 和 `cardCharge`。`cardToken` 用于从 UI 传递令牌，你稍后会实现。
-
-```java
-private String cardToken = null;
-private String cardCharge = null;
-```
-
-> 移除之前字段的 getter 和 setter 方法，并为 `cardToken` 和 `cardCharge` 添加这些方法。
-
-```java
-public void setCardToken ( String _cardToken ) { cardToken = _cardToken; }
-public String getCardToken() { return cardToken; }
-
-public void setCardChargeId ( String _cardChargeId ) { cardChargeId = _cardChargeId; }
-public String getCardChargeId() { return cardChargeId; }
-```
-
-现在你已经修改了正在传递的数据对象，让我们在 Cayolith 单体架构中添加调用 Payment 客户端代理所需的代码。
-
-为了能够发送 JSON 并将其转换为对象，你需要 `ChargeStatus`、`PaymentRequest` 和 `PaymentResponse`。为了方便起见，你已经从 Payment 微服务中复制了这些文件，所以你拥有了它们。接下来，你需要一个代表 Payment 的接口。
-
-### 列表 10.6 PaymentService
-
-```java
-@Path("/")
-public interface PaymentService {
-    @POST("/sync")
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    PaymentResponse charge(PaymentRequest request);
-}
-```
-
-> 你正在使用 Payment 微服务上的 `/sync` 端点。
-
-> RESTful 端点将消费并产生 JSON。
-
-> 将被代理的方法，它将调用 Payment。
-
-这就是定义外部 Payment 微服务所需的所有内容了。让我们看看如何将其集成到现有的 Struts 代码中。为了在保存订单之前处理卡片交易，你需要修改 `/cayambe-hybrid/checkout` 中的 `SubmitOrderAction`。
-
-## 10.7 SubmitOrderAction
-
-```java
-public class SubmitOrderAction extends Action {
-    public ActionForward perform(ActionMapping mapping, ActionForm form,
-                                HttpServletRequest request, HttpServletResponse response)
-                                throws IOException, ServletException {
-        // 处理订单响应的现有 Struts Action 类
-    }
-
-    OrderAction oaf = (OrderAction)form;
-
-    try {
-        delegate delegate = new CheckoutDelegate();
-        OrderVO orderVO = new OrderVO(); // 创建一个 RestyClient
-        orderVO = (OrderVO)oaf.toOrderVO(); // 在 session 中调用 Payment
-        orderVO.setCartVO(session.getAttribute("Cart")); // OpenShift.
-        // 调用 Payment Service
-        RestyClient client = new RestyClientBuilder().build();
-        RestyWebTarget target = client("http://cayambe-payment-service-project.192.168.64.33:nio");
-        PaymentService paymentService = target.proxy(PaymentService.class);
-        PaymentResponse paymentResponse = paymentService.charge(paymentService.amount((long) orderVO)); 
-        orderVO.getBillingInfoVO().setChargeId(paymentResponse.getChargeId());
-    } catch (Exception e) {
-        forwardMapping = ActionMapping.FAILURE;
-        errors.add(ActionErrors.GLOBAL, new ActionError(e.getMessage()));
-    }
-    return forwardMapping;
-}
-```
-
-## Cayambe 混合架构——带微服务的单体
-
-### 10.8 创建一个 Stripe JavaScript
-
-之前的代码在第 6、7 和 8 章中很熟悉。让我们修改结账页面以获取卡片详情。
-
-| 字段 | 说明 |
-| :--- | :--- |
-| nameOnCard | 替换为令牌 |
-| cardType | 替换为令牌 |
-| cardExpirationMonth | 替换为令牌 |
-| cardExpirationYear | 替换为令牌 |
-| authorizationCode | 替换为令牌 |
-| cardToken | 用于从 UI 传递令牌 |
-| cardCharge | 用于扣费信息 |
-
-最后，你添加以下字段和 setter：
-- nameOnCard
-- cardType
-- cardExpirationMonth
-- cardExpirationYear
-- authorizationCode
-- card-Token
-
-```javascript
-<script src="https://js.stripe.com/v3/"></script>
-var stripe = Stripe('STRIPE_PUBLABLE_KEY');
-var elements = stripe.elements();
-var card = elements.create('card', {style: {}});
-card.mount(document.getElementById('card-element'));
-
-card.addEventListener('change', function (event) {
-  var displayError = document.getElementById('card-errors');
-  if (event.error) {
-    displayError.textContent = event.error.message;
-  } else {
-    displayError.textContent = '';
-  }
-});
-
-function stripeTokenHandler(token) {
-  // 将令牌插入表单
-  document.getElementById('cardToken').value = token.id;
-  document.getElementById('orderForm').submit();
-}
-
-var form = document.getElementById('orderForm');
-form.addEventListener('submit', function(event) {
-  event.preventDefault();
-
-  stripe.createToken(card).then(function(result) {
-    if (result.error) {
-      // 如果用户遇到
-      var errorElement = document.getElementById('card-errors');
-      errorElement.textContent = result.error.message;
-    } else {
-      stripeTokenHandler(result.token);
-    }
-  });
-});
-</script>
-
-<form name="OrderForm" style="orderForm"
-  type="org.cayambe.web.form.OrderActionForm"
-  action="submitOrder.do" scope="request">
-
-<tr>
-  <td align="right">
-    <label for="card-element">
-      输入卡片详情
-    </label>
-  </td>
-  <td align="left">
-    <div id="card-element">
-      <!-- Stripe Element 将插入到此处 -->
-    </div>
-  </td>
-</tr>
-<!-- 使用此元素显示错误 -->
-<div id="card-errors" role="alert"></div>
-<div hidden property="cardToken" styleId="cardToken"></div>
-</form>
 ```
 
 
 
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
 
-这些就是 Payment 微服务集成所需的所有更改。现在该轮到集成 Admin 了！
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
 
-## 10.3.2 集成 Admin 微服务
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
 
-为了集成 Admin，你需要执行与 Payment 类似的操作——至少在这一点上，你希望为 Admin 提供接收对象所需的类，并从代表 Admin 的接口生成代理类。
-
-除了能够调用 Admin 之外，你还需要在目前使用类别的 Cayame 单体应用中集成类别检索。观察类别是如何定义为独立基础的，并且类别/父级关系存在于单独的表中。
-
-你还会看到类别是从 Cayame 单体应用内部的各个层被调用的，且 EJB 提供了许多与类别交互的方法，而这些方法分布在许多 Java 类中。这种状况对于 Admin 的平滑集成并不乐观，尤其是考虑到 Payment 的集成方式时。
-
-由于集成需要对几乎整个堆栈进行大量改动，你决定这种增强虽然有益，但伴随着太多的风险。在保持能力和敏捷的同时，你不希望因为处理问题而被拖误几周或几个月去集成 Admin。在集成 Cayame 类别时，问题可能源于任何方面——除了进行回归测试以确保更改不会对代码的其他部分产生连锁影响之外。遗憾的是，有时为了生产代码的稳定性，需要做出这样的艰难决定。
-
-那么，难道我刚刚浪费了书中很大篇幅让你为 Admin 写一个你不会使用的新 UI 和服务吗？绝非！在第 11 章中，你将通过使用事件流来减少对风险的担忧，让你能够保留 Cayame 单体应用中的现有代码，同时利用新的 Admin UI 和微服务。
-
-## 10.3.3 新管理 UI
-
-你已经看到了新的管理 UI 及其相关的微服务，但 Cayame 单体应用内部已经有一个管理部分了。你移除 /cayame-hybrid/admin 中的内容后，就不再需要现有的管理 UI 了。接下来，删除 /cayame-hybrid/cayame-ear 中存在的所有对 Admin war 的引用，因为 WAR 不再是 EAR 的依赖，且 EJB 不需要打包在它内部。
-
-## 10.3.4 Cayame 混合总结
-
-图 10.6 提供了你目前所处处的完整视图，以及尚未开发的剩余部分。你将在第 11 章添加剩余部分。
-
-## 将所有内容部署到混合云
-
-### Cayambe EAR
-
-![](img/d166e73dc5b37ac6ba449ba856b8eebf_219_0.png)
-
-图 10.6 Cayambe 混合单体应用
-
-## 10.4 将所有内容部署到混合云
-
-由于你已经将 Cayame 单体应用转换为混合模式，部署所有内容变得更加复杂——但你现在都是手动操作的。在真实环境中，你会希望部署是自动化的以使更加更加。
-
-本节涵盖了运行 Cayame 混合应用需要设置、配置或部署的所有部分。你首先需要做的是运行 Minishift。它还应该在一个干净的 OpenShift 环境启动，以移除可能存在的任何服务。你将在本地 OpenShift 中尽可能获取空间！所以，让我们删除任何现有的 Minishift VM（虚拟机）并从头开始：
-
-```bash
-> minishift delete
-> minishift start --cpus 3 --memory 4GB
+```
+if (condVar > someVal) {console.log("xxx")}
 ```
 
-与之前执行 Minishift 的主要区别在于你指定了三个虚拟 CPU 和 4 GB 内存。这是为了确保你有足够的空间安装所需的服务，并为下一章做准备。
 
-## 10.4.1 数据库
-
-让我们创建一个 MySQL 数据库来存储你的数据！运行 `minishift console` 并登录 OpenShift 控制台。
-
-打开默认的 My Project。点击顶部的 Add to Project 菜单项并选择 Browse Catalog。这提供了 OpenShift 可以为你安装的所有类型的预构建镜像，如图 10.7 所示。
-
-![](img/d166e73dc5b37ac6ba449ba856b8eebf_220_0.png)
-
-图 10.7 在 OpenShift 控制台中选择 Browse Catalog 选项
-
-点击底行的 Data Stores 框查看不同的不同的数据存储。在图 10.8 显示的 Data Stores 页面上，点击 MySQL (Persistent) 框中的 Select 按钮。
-
-你将看到一个包含 MySQL 配置的页面，大部分可以保持默认值。你只需要设置的选项是 MySQL Connection Username、MySQL Connection Password 和 MySQL Root User Password。为这些字段输入值，记录这些信息，然后点击 Create。
-
-> **警告** 不要使用 `cayambe` 作为 MySQL Connection Username，因为那可能与你稍后需要创建的用户发生冲突。
-
-My Project > Add to Project > Catalog > Data Stores
-
-### Data Stores
-
-存储和管理数据集合。
-
-按名称或描述过滤
-
-![](img/d166e73dc5b37ac6ba449ba856b8eebf_221_0.png)
-
-图 10.8 OpenShift 控制台—数据存储
-
-一两分钟后，OpenShift 中将提供一个 MySQL 服务。为了能够设置 Cayame 需要的数据库、表和数据，你需要远程访问。打开一个终端，使用 oc 登录 OpenShift，然后运行 oc get pods。命令返回如下列表：
-
-| NAME | READY | STATUS | RESTARTS | AGE |
-| :--- | :--- | :--- | :--- |
-| mysql-1xq9q | 1/1 | Running | 0 |
-
-你需要连接到 mysql-1xq9q pod，这种情况下：
-
-```bash
-oc r mysql-1xq9q
-```
 
 在 pod 内部，你可以运行以下命令进入 MySQL 提示符：
 
@@ -5890,26 +5706,26 @@ oc r mysql-1xq9q
 mysql -u root -p$MYSQL_ROOT_PASSWORD -h $HOSTNAME
 ```
 
-由于 $MYSQL_ROOT_PASSWORD 和 $HOSTNAME 被定义为环境变量，所以你不需要记住它们。现在你已进入 MySQL 内部，让我们设置你需要的数据！
+由于`$MYSQL_ROOT_PASSWORD`和`$HOSTNAME`被定义为环境变量，所以你不需要记住它们。现在你已进入 MySQL 内部，让我们设置你需要的数据！
 
 ## ADMIN 微服务数据
 
-以下命令为数据库创建一个 cayambe-admin 用户，为 cayambe_admin 数据库授予该用户所有权限，创建数据库，并切换到该数据库：
+以下命令为数据库创建一个`cayambe-admin`用户，为`cayambe_admin`数据库授予该用户所有权限，创建数据库，并切换到该数据库：
 
 ```sql
-``` 10.4.1：
 create user 'cayambe-admin' identified by 'cayambe-admin';
 grant all privileges on cayambe_admin.* to 'cayambe-admin' with grant option;
 create database cayambe_admin;
 use cayambe_admin;
+```
 
-在 cayambe_admin 数据库的上下文中，你现在可以执行某些 SQL 来创建表并填充初始数据。
+在`cayambe_admin`数据库的上下文中，你现在可以执行某些 SQL 来创建表并填充初始数据。
 
-打开 /chapter10/sql/admin/mysql.sql 并将内容粘贴到终端窗口。看到 SQL 语句闪过，如果一切顺利，没有错误！现在表已经存在了，对 /chapter10/sql/admin/data.sql 执行同样的操作来加载数据。
+打开`/chapter10/sql/admin/mysql.sql`并将内容粘贴到终端窗口。看到 SQL 语句闪过，如果一切顺利，没有错误！现在表已经存在了，对`/chapter10/sql/admin/data.sql`执行同样的操作来加载数据。
 
 ## PAYMENT 微服务数据
 
-现在为 cayambe-payment 用户和 cayambe_payment 数据库运行类似的命令：
+现在为`cayambe-payment`用户和`cayambe_payment`数据库运行类似的命令：
 
 ```sql
 create user 'cayambe-payment' identified by 'cayambe-payment';
@@ -5918,11 +5734,11 @@ create database cayambe_payment;
 use cayambe_payment;
 ```
 
-打开 /chapter10/sql/payment-service/mysql.sql 并将内容粘贴到登录了 MySQL 的终端窗口。这将创建你需要的两个表，并为 JPA 需要的 ID 序列生成器设置初始值。
+打开`/chapter10/sql/payment-service/mysql.sql`并将内容粘贴到登录了 MySQL 的终端窗口。这将创建你需要的两个表，并为 JPA 需要的 ID 序列生成器设置初始值。
 
-##  单体应用数据
+## 单体应用数据
 
-最后，为 cayambe 用户和数据库运行类似的命令：
+最后，为`cayambe`用户和数据库运行类似的命令：
 
 ```sql
 create user 'cayambe' identified by 'cayambe';
@@ -5931,9 +5747,9 @@ create database cayambe;
 use cayambe;
 ```
 
-打开 /chapter10/sql/cayame/mysql.sql 并将内容粘贴到终端窗口，这将为 Cayame 单体应用创建所有表。复制 /chapter10/sql/cayame/test_data.sql 的内容以加载初始测试数据。
+打开`/chapter10/sql/cayame/mysql.sql`并将内容粘贴到终端窗口，这将为 Cayame 单体应用创建所有表。复制`/chapter10/sql/cayame/test_data.sql`的内容以加载初始测试数据。
 
- 10.4.2 安全
+## 安全
 
 你已经在第 9 章中设置了一个 Keycloak 服务器，所以你将重用它：
 
@@ -5941,15 +5757,11 @@ use cayambe;
 /chapter10/keycloak> java -Dswarm.http.port=9090 -jar keycloak-2018.1.0-swarm.jar
 ```
 
-
-
-
-
 # 将所有内容部署到混合云
 
-打开 http://localhost:9090/auth/ 并登录管理控制台。从左侧菜单导航中选择“Clients（Clients）”。在可用客户端列表中，点击 `cave-admin-ui` 打开其详细信息。你只需要更新三个指定你的管理 UI 运行位置的 URL，将端口 8080 更改为 8090。
+打开`http://localhost:9090/auth/`并登录管理控制台。从左侧菜单导航中选择“Clients（Clients）”。在可用客户端列表中，点击`cave-admin-ui`打开其详细信息。你只需要更新三个指定你的管理 UI 运行位置的 URL，将端口 8080 更改为 8090。
 
-## 10.4.3 微服务
+## 微服务
 
 现在是时候开始将微服务部署到 OpenShift 中了。
 
@@ -5957,7 +5769,7 @@ use cayambe;
 
 由于 Admin 微服务在之前的章节中已经介绍过，因此在部署之前你不需要对它进行任何操作！
 
-```
+```bash
 /chapter10/admin mvn clean fabric8:deploy -Popenshift
 ```
 
@@ -5967,7 +5779,7 @@ use cayambe;
 
 作为管理员，你不需要在 Stripe 代码中进行任何操作，因此只需部署它即可：
 
-```
+```bash
 /chapter10/stripe> mvn clean fabric8:deploy -Popenshift
 ```
 
@@ -5975,34 +5787,32 @@ use cayambe;
 
 接下来，你需要部署 Payment（支付），其方法与其他服务相同：
 
-```
+```bash
 /chapter10/payment-service mvn clean fabric8:deploy -Popenshift
 ```
 
-## 10.4.4 Cayambe 混合
+## Cayambe 混合
 
-现在你已准备好为 Cayambe 混合云设置 Wildfly 。你可以复用本章早期下载的 WildFly 11 和 MySQL 连接器 JAR 包，并将它们解压到新目录。
+现在你已准备好为 Cayambe 混合云设置 Wildfly。你可以复用本章早期下载的 WildFly 11 和 MySQL 连接器 JAR 包，并将它们解压到新目录。
 
-在所有文件提取完成后，创建一个与 `/wildfly-11.0.0/Final/_modules/layers/base/com/mysql/main` 匹配的目录结构。在该目录中复制 MySQL 连接器的 JAR 文件，并创建一个包含以下内容的模块文件：
+在所有文件提取完成后，创建一个与`/wildfly-11.0.0/Final/_modules/layers/base/com/mysql/main`匹配的目录结构。在该目录中复制 MySQL 连接器的 JAR 文件，并创建一个包含以下内容的模块文件：
 
 列表 10.9 用于混合的 MySQL 驱动模块
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <module xmlns="urn:jboss:module:1.3" name="com.mysql">
-<resources>
-  <root-path path="mysql-connector-java-5.1.43-bin.jar"/>
-</resources>
-<dependencies>
-  <module name="javax.api/" />
-  <module name="javax.transaction.api/" />
-</dependencies>
+  <resources>
+    <root-path path="mysql-connector-java-5.1.43-bin.jar"/>
+  </resources>
+  <dependencies>
+    <module name="javax.api/" />
+    <module name="javax.transaction.api/" />
+  </dependencies>
 </module>
 ```
 
-## 第 10 章 微服务混合架构设计
-
-接下来，你需要为 WildFly 提供配置 Cayambe 数据源所需的信息。打开 `/wildfly-11.0.0.Final/standalone/configuration/standalone.xml`，并用以下内容替换当前的数据源子系统。
+接下来，你需要为 WildFly 提供配置 Cayambe 数据源所需的信息。打开`/wildfly-11.0.0.Final/standalone/configuration/standalone.xml`，并用以下内容替换当前的数据源子系统。
 
 列表 10.10 standalone.xml
 
@@ -6046,19 +5856,21 @@ use cayambe;
 </subsystem>
 ```
 
-### 总结
+## 总结
 
 列表 10.10 与 10.3 几乎相同，唯一的区别是：Cayambe 的 MySQL 实例端口号被设置为 53652。你可能好奇这个端口号是多少，因为它不是一个标准端口。嗯，你将通过转发 OpenShift 的 mysql 服务来定义它，以便你可以访问：
 
-```
+```bash
 oc port-forward mysql-pod-name 53652:3306
 ```
+
+
 
 注意：如果转发的端口关闭或你的机器重启，你将需要在 WildFly 能够找到数据库之前重新运行此命令。
 
 ## 10.4.5 Cayambe EAR
 
-现在 WildFly 已经启动，让我们部署修改后的 Cayambe EAR。由于 WildFly 已经启动，让我们部署修改后的 Cayambe EAR。首先你需要构建它：
+现在 WildFly 已经启动，让我们部署修改后的 Cayambe EAR。首先你需要构建它：
 
 构建完成后，部署修改后的 Cayambe EAR。
 
@@ -6071,10 +5883,6 @@ oc port-forward mysql-pod-name 53652:3306
 构建完成后，部署修改后的 Cayambe EAR。
 
 注意：如果转发的端口关闭或你的机器重启，你将需要在 WildFly 能够找到数据库之前重新运行此命令。
-
-[/content]
-
-[content]
 
 # 使用 Apache Kafka 进行数据流
 
@@ -6094,7 +5902,7 @@ oc port-forward mysql-pod-name 53652:3306
 
 数据流并不是指 Netflix 在所有设备上播放电影。它指的是从可能的多个源持续生成的数据流；每条数据或记录的尺寸都很小，并按照接收的顺序存储。这听起来可能有很多术语，但数据流仍然很新，新的使用方法不断被构思。
 
-什么类型的数据适用于数据流？简单来说，几乎任何类型的数据在数据流背景下都是用的。常见的例子包括车辆传感器的测量值、股票市场的实时价格以及社交网络和网站的热点。
+什么类型的数据适用于数据流？简单来说，几乎任何类型的数据在数据流背景下都是适用的。常见的例子包括车辆传感器的测量值、股票市场的实时价格以及社交网络和网站的热点。
 
 数据流的一个常见案例是你拥有大量数据记录，并希望对其进行模式或趋势分析。很可能大部分数据可以被完全忽略，只有关键数据记录是相关的。同一组数据记录也可能有不同的目的，取决于哪个系统在消费！
 
@@ -6104,17 +5912,13 @@ oc port-forward mysql-pod-name 53652:3306
 
 图 11.1 数据流管道
 
-
-
-
-
 # Apache Kafka 能为你做什么？
 
 定义 为了澄清本章使用的术语，数据流传输（data streaming）、数据流（data streams）和流式（streaming）均指的是同一个东西：从源头流数据以进行采集的过程。
 
 ## 11.2 Apache Kafka
 
-Apache Kafka (https://kafka.apache.org/) 最初由 LinkedIn 于 2010 年开发，作为其数据中心流水线的核心。目前，该流水线每天处理超过 2 万亿条消息！2021 年初，Kafka 被提为 Apache 的一个开源项目，并于 2012 年底移出了孵化阶段。在短短几年内，许多企业在使用 Apache Kafka，包括 Apple、eBay、Netflix、Spotify 和 Uber。
+Apache Kafka（https://kafka.apache.org/）最初由 LinkedIn 于 2010 年开发，作为其数据中心流水线的核心。目前，该流水线每天处理超过 2 万亿条消息！2021 年初，Kafka 被提为 Apache 的一个开源项目，并于 2012 年底移出了孵化阶段。在短短几年内，许多企业在使用 Apache Kafka，包括 Apple、eBay、Netflix、Spotify 和 Uber。
 
 什么是 Apache Kafka？它是一个分布式流处理平台。我在这里所说的“分布式”是指什么？Kafka 可以将单个流中的数据分区到集群内的多个服务器上。此外，每个分区都会跨服务器进行复制，以实现该数据的容错性。
 
@@ -6159,39 +5963,7 @@ Apache Kafka 还使用了与集成过消息系统的企业级 Java 开发者熟�
 
 ## 主题是如何工作的？
 
-Kafka 中的主题（Topics）涉及到可以发布和消费的记录类别或类型。例如，你会用一个主题用于实时数据，用另一个单独的主题用于测量。每个主题被分为 Kafka 集群内一个或多个服务器上的一个或多个分区。分区是一个单一的逻辑流或主题（如你在11.1 和 11.3 中看到的那些），它被分成多个物理流。图 11.4 显示主题的分区增加了可以实现的并行性。主题的分区意味着日志（或流）中的每次提交都是跨分区并复制的。一个关键点是，Kafka 知道记录何时被接收的，这在分区时变得至关重要（注：此处原文应为：时间戳对于 Kafka 知道何时接收到记录至关重要（当分区时，这一点会变得更加关键）。在图 11.3 中，你可以看到某个键并没有单一的记录。目前有三条，具有不同的值。这就是数据流的不可变性。*注：此处根据上下文逻辑翻译*）。Kafka 保证日志（或流）中的每次提交都是跨分区并复制的。
-
-描述 Apache Kafka 的另一种方式是将其视为“没有衣服的数据库”：衣服暴露在前端而不是被隐藏。数据库的核心与 Apache Kafka 一样使用提交日志来跟踪更改，并作为从服务器故障中恢复的手段，从而构成数据库。通过 Apache Kafka，数据库的衣服（表、索引等）被剥离了，只剩下提交。这使得 Kafka 比普通数据库更加简洁且易于访问。
-
-Apache Kafka 还使用了与集成过消息系统的企业级 Java 开发者熟悉的语义。有生产者它们生成并添加到流中的记录或事件，这等同于图 11.1 所示的多个源。每条记录流被称为主题，任何从流中读取内容的都是消费者。图 11.2 显示了生产者和消费者如何与 Apache Kafka 集成。
-
-此外，连接器使数据库或其他系统能够发送到 Apache Kafka 的记录源。最后，流处理器能够从一个或多个主题中流式记录，对数据进行某种类型的转换，然后将其输出到更多主题。
-
-Kafka 中的主题涉及到可以发布和消费的记录类别或类型。例如，你会用一个主题用于实时数据，用另一个单独的主题用于测量。每个主题被分为 Kafka 集群内一个或多个服务器上的一个或多个分区。分区是一个单一的逻辑流或主题（如你在 11.1 和 11.3 中看到的那些），它被分成多个物理流。图 11.4 显示主题的分区增加了可以实现的并行性。主题的分区意味着日志（或流）中的每次提交都是跨分区并复制的。一个关键点是，Kafka 知道记录何时被接收的，这在分区时会变得更加关键。Kafka 保证日志（或流）中的每次提交都是跨分区并复制的。
-
-一个关键点是，Kafka 知道记录何时被接收的，这在分区时会变得更加关键。Kafka 保证日志（或流）中的每次提交都是跨分区并复制的。
-
-一个关键点是，Kafka 知道记录何时被接收的，这在分区时会变得更加关键。Kafka 保证日志（或流）中的每次提交都是跨分区并复制的。
-
-一个关键点是，Kafka 知道记录何时被接收的，这在分区时会变得更加关键。Kafka 保证日志（或流）中的每次提交都是跨分区并复制的。
-
-一个关键点是，Kafka 知道记录何时被接收的，这在分区时会变得更加关键。Kafka 保证日志（或流）中的每次提交都是跨分区并复制的。
-
-（注：由于原文存在重复，已按要求处理翻译）
-
-不可变数据流的一个大优势是你可以拥有相同键的更改历史。在某些情况下，你可能只关心某事的当前值。但更重要的是，了解历史并能够确定随时间的变化至关重要。记录也是被持久化的：日志保留在文件系统上，允许在未来的任何时间对记录进行处理。话虽如此，记录的保留是有限制的。每条记录的持久时间仅取决于该特定主题的保留策略。主题可以定义为无限保留记录（使得磁盘空间不是问题），或者如果它没有被任何东西消费，则可以在几天后被清除。
-
-Kafka 中的主题涉及到可以发布和消费的记录类别或类型。例如，你会用一个主题用于实时数据，用另一个单独的主题用于测量。每个主题被分为 Kafka 集群内一个或多个服务器上的一个或多个分区。分区是一个单一的逻辑流或主题（如你在 11.1 和 11.3 中看到的那些），它被分成多个物理流。图 11.4 显示主题的分区增加了可以实现的并行性。主题的分区意味着日志（或流）中的每次提交都是跨分区并复制的。
-
-一个关键点是，Kafka 知道记录何时被接收的，这在分区时会变得更加关键。Kafka 保证日志（或流）中的每次提交都是跨分区并复制的。
-
-一个关键点是，Kafka 知道记录何时被接收的，这在分区时会变得更加关键。Kafka 保证日志（或流）中的每次提交都是跨分区并复制的。
-
-一个关键点是，Kafka 知道记录何时被接收的，这在分区时会变得更加关键。Kafka 保证日志（或流）中的每次提交都是跨分区并复制的。
-
-一个关键点是，Kafka 知道记录何时被接收的，这在分区时会变得更加关键。Kafka 保证日志（或流）中的每次提交都是跨分区并复制的。
-
-一个关键点是，Kafka 知道记录何时被接收的，这在分区时会变得更加关键。Kafka 保证日志（或流）中的每次提交都是跨分区并复制的。
+Kafka 中的主题（Topics）涉及到可以发布和消费的记录类别或类型。例如，你会用一个主题用于实时数据，用另一个单独的主题用于测量。每个主题被分为 Kafka 集群内一个或多个服务器上的一个或多个分区。分区是一个单一的逻辑流或主题（如你在 11.1 和 11.3 中看到的那些），它被分成多个物理流。图 11.4 显示主题的分区增加了可以实现的并行性。主题的分区意味着日志（或流）中的每次提交都是跨分区并复制的。一个关键点是，Kafka 知道记录何时被接收的，这在分区时会变得更加关键。Kafka 保证日志（或流）中的每次提交都是跨分区并复制的。
 
 ## 主题的解剖
 
@@ -6205,22 +5977,10 @@ Kafka 中的主题涉及到可以发布和消费的记录类别或类型。例�
 | 5 | | | | | | | | | | | | |
 | 6 | | | | | | | | | | | | |
 | 7 | | | | | | | | | | | | |
-| 8 | | | | | | | | | | | | | |
+| 8 | | | | | | | | | | | | |
 | 9 | | | | | | | | | | | | |
 
 图 11.4 分区（重制自 https://kafka.apache.org/intro.html）
-
-一个关键点是，Kafka 知道记录何时被接收的，这在分区时会变得更加关键。Kafka 保证日志（或流）中的每次提交都是跨分区并复制的。
-
-一个关键点是，Kafka 知道记录何时被接收的，这在分区时会变得更加关键。Kafka 保证日志（或流）中的每次提交都是跨分区并复制的。
-
-一个关键点是，Kafka 知道记录何时被接收的，这在分区时会变得更加关键。Kafka 保证日志（或流）中的每次提交都是跨分区并复制的。
-
-一个关键点是，Kafka 知道记录何时被接收的，这在分区时会变得更加关键。Kafka 保证日志（或流）中的每次提交都是跨分区并复制的。
-
-一个关键点是，Kafka 知道记录何时被接收的，这在分区时会变得更加关键。Kafka 保证日志（或流）中的每次提交都是跨分区并复制的。
-
-一个关键点是，Kafka 知道记录何时被接收的，这在分区时会变得更加关键。Kafka 保证日志（或流）中的每次提交都是跨分区并复制的。
 
 | Topic | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -6235,10 +5995,6 @@ Kafka 中的主题涉及到可以发布和消费的记录类别或类型。例�
 | | | | | | | | | | | | | |
 | | | | | | | | | | | | | |
 | | | | | | | | | | | | | |
-
-
-
-
 
 ## 使用流式处理简化单体架构
 
@@ -6259,7 +6015,7 @@ Apache Kafka.
 
 ## 第 11 章 使用 Apache Kafka 进行数据流
 
-你将对 Apache Kafka、数据流以及它们如何集成到你的微服务中有有更好的理解，在本章中，我们不会为 Cayambe 混合架构实现 Debezium。我将其留作你的额外练习。
+你将对 Apache Kafka、数据流以及它们如何集成到你的微服务中有更好的理解，在本章中，我们不会为 Cayambe 混合架构实现 Debezium。我将其留作你的额外练习。
 
 对于 Cayambe 混合架构，你将直接向 Apache Kafka 产生事件，然后在另一端消费它们。图 11.7 显示了你将对架构进行的更改，以支持展示 Apache Kafka 工作原理的更多细节。
 
@@ -6277,19 +6033,21 @@ Cayambe EAR
 
 ### 11.3 部署和使用 Kafka 进行数据流
 
-在查看与 Kafka 集成的的微服务实现之前，让我们在 OpenShift 上运行 Kafka 吧！如果你还没有运行 Minishift，让我们现在启动它，就像你在第 10 章中做的那样：
+在查看与 Kafka 集成的微服务实现之前，让我们在 OpenShift 上运行 Kafka 吧！如果你还没有运行 Minishift，让我们现在启动它，就像你在第 10 章中做的那样：
 
 ```bash
-> minishift start --cpus 3 --memory 4GB
-```
 
-### 11.3.1 OpenShift  Kafka
+
+
+> `minishift start --cpus 3 --memory 4GB`
+
+### 11.3.1 OpenShift Kafka
 
 在 Minishift 运行后，启动 OpenShift 控制台并登录。在你现有的项目中，点击“Add to Project”（添加项目），然后点击“Import YAML/JSON”（导入 YAML/JSON）。
 
 粘贴 `/chapter11/resources/Kafka_OpenShift.yml` 的文本内容，其中一些片段如下所示：
 
-# 列表 11.1 Kafka OpenShift 模板
+**列表 11.1 Kafka OpenShift 模板**
 
 ```yaml
 apiVersion: v1
@@ -6348,31 +6106,29 @@ sh-4.45
 要使用 Kafka，你需要创建一个主题。让我们在终端中执行此操作：
 
 ```bash
- kafka-0 --create --topic category_topic --replication-factor 1 --partitions 1 --zookeeper 172.30.93.118:2181
+kafka-0 --create --topic category_topic --replication-factor 1 --partitions 1 --zookeeper 172.30.93.118:2181
 ```
 
-你使用脚本创建一个名为 category_topic 的主题，它具有单分区和单副本。你之所以只指定副本和分区是因为你的集群中只有一个节点。例如，如果你的集群中有三个节点，你可以使用三个分区和副本数为 2 的副本。
+你使用脚本创建一个名为 `category_topic` 的主题，它具有单分区和单副本。你之所以只指定副本和分区是因为你的集群中只有一个节点。例如，如果你的集群中有三个节点，你可以使用三个分区和副本数为 2 的副本。
 
 ### 11.3.2 Admin 微服务
 
 现在 Kafka 已经运行且你的主题已创建，是时候修改 Admin 微服务以向主题产生事件了！
 我们将使用一个将 Kafka 的拉取模式转换为推送模式的库。这个库实际上非常易于使用，因为它消除了直接使用 Kafka API 时所需的许多样板代码。它是作为 CDI 扩展编写的，并作为 Maven 制品供你消费。代码可以在 https://github.com/aerogear/kafka-cdi 找到。
 
-你需要做的第一件事是更新 Admin 微服务的 pom.xml 以使用新的依赖项：
-
-
+你需要做的第一件事是更新 Admin 微服务的 `pom.xml` 以使用新的依赖项：
 
 ```xml
 <dependency>
-<groupId>org.apache.kafka</groupId>
-<artifactId>kafka-cdi-extension</artifactId>
-<version>0.0.10</version>
+  <groupId>org.apache.kafka</groupId>
+  <artifactId>kafka-cdi-extension</artifactId>
+  <version>0.0.10</version>
 </dependency>
 ```
 
 接下来你可能需要修改 `CategoryResource` 以连接 Kafka 主题，并生成要追加到上面的记录。
 
-# 列表 11.2 CategoryResource
+**列表 11.2 CategoryResource**
 
 标识你正在连接的 Kafka 服务器。你可以使用环境变量来指定主机和端口，因为你正在与 Kafka 相同的 OpenShift 命名空间中部署微服务。
 
@@ -6416,7 +6172,7 @@ public class CategoryResource {
 /chapter11/admin> mvn clean fabric8:deploy -Openshift
 ```
 
-# 使用 Kafka 进行数据流部署
+## 使用 Kafka 进行数据流部署
 
 微服务启动运行后，你可以使用 Admin UI 或通过 Postman 发送 HTTP 请求来更新和删除类别。你如何知道 Admin 微服务已正确将记录放入 Kafka 主题呢？你没有任何消耗结果的消费者：
 
@@ -6436,41 +6192,38 @@ oc rsh kafka-console-consumer.sh --bootstrap-server 172.30.225.60:9092 --from-be
 
 我们已经涵盖了 Kafka 主题的生产端。现在让我们来看消费端。
 
-# 11.3.3 Kafka 消费者
+### 11.3.3 Kafka 消费者
 
-Kafka 消费者的所有代码都在书籍代码的 /chapter11/kafka-consumer/ 目录下。与生产者一样，你在 `pom.xml` 中添加了 `kafka-cdi-extension` 依赖。`pom.xml` 的其余部分包含常用的 Thorhaul 插件和依赖，以及用于部署到 OpenShift 的 gradle Maven 插件。你还指定了 MySQL JDBC 依赖，以便更新 Cayabase 数据库中的记录。
+Kafka 消费者的所有代码都在书籍代码的 `/chapter11/kafka-consumer/` 目录下。与生产者一样，你在 `pom.xml` 中添加了 `kafka-cdi-extension` 依赖。`pom.xml` 的其余部分包含常用的 Thorhaul 插件和依赖，以及用于部署到 OpenShift 的 gradle Maven 插件。你还指定了 MySQL JDBC 依赖，以便更新 Cayabase 数据库中的记录。
 
 要连接到 Cayabase，你需要定义一个 `DataSource`。
 
-| 列表 11.3 project-defaults.yml |
-| :--- |
+**列表 11.3 project-defaults.yml**
+
 | JNDI 中的 DataSource 名称。使用从 MySQL JDBC 驱动依赖创建的模块 |
-| datasources: |
-| CayabaseDS |
-| driver-name: mysql |
-| connection-url: jdbc:mysql://mysql:3306/cayamabe | OpenShift 上 MySQL 实例的 URL |
-| user-name: cayabase |
-| password: cayabase |
-| valid-connection-checker-class-name: |
-| org.jboss.jca.adapters.jdbc.extensions.mysql.SQLValidConnectionChecker |
+| :--- |
+| `datasources:` |
+| `CayabaseDS` |
+| `driver-name: mysql` |
+| `connection-url: jdbc:mysql://mysql:3306/cayamabe` | OpenShift 上 MySQL 实例的 URL |
+| `user-name: cayabase` |
+| `password: cayabase` |
+| `valid-connection-checker-class-name:` |
+| `org.jboss.jca.adapters.jdbc.extensions.mysql.SQLValidConnectionChecker` |
 
-# 第 11 章 使用 Apache Kafka 进行数据流
+## 第 11 章 使用 Apache Kafka 进行数据流
 
-validate-match: true
-background-validation: false
-exception-sorter-class-name: org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter
+`validate-match: true`
+`background-validation: false`
+`exception-sorter-class-name: org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter`
 
 最后，你创建一个类来处理从 Kafka 主题接收到的记录。
 
-# 列表 11.4 CategoryEventListener
+**列表 11.4 CategoryEventListener**
 
-| 正像你在生产者上做的那样，你为配置定义了 Kafka 主机和端口。 | 使用通过 project-definition 创建的 CameDB 的 JNDI 名称。使用 getDataSource。 |
+| 正像你在生产者上做的那样，你为配置定义了 Kafka 主机和端口。 | 使用通过 project-definition 创建的 CameDB 的 JNDI 名称。使用 `getDataSource`。 |
 
-
-
-
-
-# 第 11 章 使用 Apache Kafka 进行数据流
+## 第 11 章 使用 Apache Kafka 进行数据流
 
 你希望从头处理流中的所有记录。当你接收到 Kafka 记录时，你需要判断是需要删除某个类别、值是否为空，或者我们正在处理的是新记录还是更新后的记录。
 
@@ -6509,16 +6262,15 @@ exception-sorter-class-name: org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLE
 
 **注意** 关于使用 Spring Boot 开发微服务的更多细节，请参见附录。
 
-# 附录
-Spring Boot 微服务
+# 附录 Spring Boot 微服务
 
 在整本书中，我们一直关注使用 Thorntail 为企业级 Java 开发微服务。本附录提供了有关使用 Spring Boot 开发微服务的详细信息。其中包括来自 Craig Walls 编写的《Spring Boot in Action》（Manning, 2015）中的代码片段。如果你特别关注 Spring Boot 微服务，参考这本书以获取更多细节将是非常值得的（参见 www.manning.com/books/spring-boot-in-action）。
 
-# Spring Boot 项目剖析
+## Spring Boot 项目剖析
 
 本节包含了《Spring Boot in Action》第 2.1.1 节的片段，概述了 Spring Boot 应用的部分及其要求。
 
-# 检查新初始化的 Spring Boot 项目
+### 检查新初始化的 Spring Boot 项目
 
 图 1 展示了一个 Spring Boot 读读列表项目的结构。
 
@@ -6542,25 +6294,27 @@ readinglist
 
 图 1 读列表项目结构
 
-# 附录 Spring Boot 微服务
+## 附录 Spring Boot 微服务
 
 首先注意到，项目结构遵循典型的 Maven 或 Gradle 项目的布局。主应用程序代码放置在目录树的 `src/main/java` 分支，资源放置在 `src/main/resources` 分支，测试代码放置在 `src/test/java` 分支。在此时，你还没有任何测试资源，除非你将其放在 `src/test/resources` 中。
 
 深入研究，你会发现在项目周围散落着几个文件：
 
-- build.gradle——Gradle 构建规范
-- ReadingListApplication.java——应用程序的引导类和主要的 Spring 配置类
-- application.properties——配置 Spring 和 Spring Boot 属性的地方
-- ReadingListApplicationTests.java——一个基础集成测试类
+- `build.gradle`——Gradle 构建规范
+- `ReadingListApplication.java`——应用程序的引导类和主要的 Spring 配置类
+- `application.properties`——配置 Spring 和 Spring Boot 属性的地方
+- `ReadingListApplicationTests.java`——一个基础集成测试类
 
 构建规范包含了许多需要了解的 Spring 优秀特性，所以我将检查工作留到稍后。相反，我们将从 `ReadingListApplication.java` 开始。
 
-# 引导 Spring
+### 引导 Spring
 
 `ReadingListApplication` 类在 Spring Boot 应用中起到两个作用：配置和引导。尽管 Spring Boot 自动配置消除了对许多 Spring 配置的需求，但你仍然至少需要一些 Spring 配置。
 
-```
-Listing 1 ReadingListApplication
+
+
+Listing 1 `ReadingListApplication`
+
 ```
 package readinglist;
 import org.springframework.boot.SpringApplication;
@@ -6574,15 +6328,15 @@ public class ReadingListApplication {
 }
 ```
 
-@SpringBootApplication 开启了组件扫描和 Spring Boot 自动配置。事实上，你不需要编写配置。
+`@SpringBootApplication` 开启了组件扫描和 Spring Boot 自动配置。事实上，你不需要编写配置。
 
 # Spring Boot 项目剖析
 
-- @ComponentScan——启用组件扫描，以便编写的控制器类和其他组件被自动发现并注册为 Bean。
-- @Configuration——标记类为配置类。
-- @EnableAutoConfiguration——这个注解可能被称为魔术，因为它是启用 Spring 自动配置的关键行。
+- `@ComponentScan`——启用组件扫描，以便编写的控制器类和其他组件被自动发现并注册为 Bean。
+- `@Configuration`——标记类为配置类。
+- `@EnableAutoConfiguration`——这个注解可能被称为魔术，因为它是启用 Spring 自动配置的关键行。
 
-在 Spring Boot 的早期版本中，你需要在 `ReadingListApplication` 类上标注这三个注解。但从 Spring Boot 1.2.0 开始，@SpringBootApplication 就足够了。
+在 Spring Boot 的早期版本中，你需要在 `ReadingListApplication` 类上标注这三个注解。但从 Spring Boot 1.2.0 开始，`@SpringBootApplication` 就足够了。
 
 正如我所说，`ReadingListApplication` 也是引导类。有多种方法运行 Spring 应用，包括传统的 WAR 部署。现在，`main()` 方法允许你作为可执行 JAR 运行应用程序。它将 `ReadingListApplication` 类引用以及命令行参数传递给 `SpringApplication.run()`，从而启动应用程序。
 
@@ -6602,19 +6356,15 @@ $ gradle build
 $ java -jar build/libs/readinglist-0.0.1-SNAPSHOT.jar
 ```
 
-应用程序应该正常启动并启用监听 8080 端口的 Tomcat 服务器。如果你愿意，可以在浏览器访问 http://localhost:8080，但由于你还没有编写控制器类，你会遇到 HTTP 404 (Not Found) 和错误页面。不过在附录结束之前，URL 将为你的读列表应用服务。
+应用程序应该正常启动并启用监听 8080 端口的 Tomcat 服务器。如果你愿意，可以在浏览器访问 `http://localhost:8080`，但由于你还没有编写控制器类，你会遇到 HTTP 404 (Not Found) 和错误页面。不过在附录结束之前，URL 将为你的读列表应用服务。
 
-你几乎不需要更改 `ReadingListApplication.java`。如果你的应用程序需要 Spring Boot 自动配置之外的任何 Spring 配置，通常的做法是将其编写到单独的 @Configuration 类中（它们会被组件扫描捕获并使用）。在极少数情况下，你也可以在 `ReadingListApplication.java` 中添加自定义配置。
-
-
-
-
+你几乎不需要更改 `ReadingListApplication.java`。如果你的应用程序需要 Spring Boot 自动配置之外的任何 Spring 配置，通常的做法是将其编写到单独的 `@Configuration` 类中（它们会被组件扫描捕获并使用）。在极少数情况下，你也可以在 `ReadingListApplication.java` 中添加自定义配置。
 
 # 测试 Spring Boot 应用
 
-初始化器（Initializer）还会为你提供一个测试类骨架，帮助你开始为应用程序编写测试。如下所示的 `ReadingListApplicationTests` 不仅仅是一个测试占位符，它还作为如何为 Spring Boot 应用编写测试的示例。@SpringApplicationConfiguration 加载 Spring 应用程序上下文。
+初始化器（Initializer）还会为你提供一个测试类骨架，帮助你开始为应用程序编写测试。如下所示的 `ReadingListApplicationTests` 不仅仅是一个测试占位符，它还作为如何为 Spring Boot 应用编写测试的示例。`@SpringApplicationConfiguration` 加载 Spring 应用程序上下文。
 
-| 列表 2 ReadingListApplicationTests |
+列表 2 `ReadingListApplicationTests`
 
 ```java
 package readinglist;
@@ -6639,7 +6389,7 @@ public class ReadingListApplicationTests {
 }
 ```
 
-在典型的 Spring 集成测试中，你可能使用 @ContextConfiguration 注解类，以指定应用程序上下文如何加载。为了充分利用 Spring Boot 的魔力，应该使用 @SpringApplicationConfiguration 注解。如列表 2 所示，`ReadingListApplicationTests` 标记了 @SpringApplicationConfiguration，以便从 `ReadingListApplication` 配置类加载 Spring 应用程序上下文。
+在典型的 Spring 集成测试中，你可能使用 `@ContextConfiguration` 注解类，以指定应用程序上下文如何加载。为了充分利用 Spring Boot 的魔力，应该使用 `@SpringApplicationConfiguration` 注解。如列表 2 所示，`ReadingListApplicationTests` 标记了 `@SpringApplicationConfiguration`，以便从 `ReadingListApplication` 配置类加载 Spring 应用程序上下文。
 
 `ReadingListApplicationTests` 还包含一个测试方法 `contextLoads()`。它非常简单，事实上它是一个空方法。但它对于验证应用程序上下文在没有任何问题的情况下加载已经足够了。如果 `ReadingListApplication` 中定义的配置良好，测试将通过。如果存在任何问题，测试将失败。
 
@@ -6739,10 +6489,7 @@ $ mvn dependency:tree
 
 # 覆盖 starter 传递依赖
 
-根本上，starter 依赖就像你构建中的任何其他依赖一样。你可以使用构建工具的功能选择性地覆盖传递
-
-
-管理依赖版本、排除传递依赖，并且当然为 Spring Boot starters 未涵盖的库明确指定依赖。
+根本上，starter 依赖就像你构建中的任何其他依赖一样。你可以使用构建工具的功能选择性地覆盖传递依赖管理版本、排除传递依赖，并且当然为 Spring Boot starters 未涵盖的库明确指定依赖。
 
 例如，考虑 Spring Boot 的 web starter。除其他因素外，web starter 直接依赖于 Jackson 库。如果你正在构建一个消费或产生资源表示的 REST 服务，那么这个库将非常有帮助。但如果你使用 Spring Boot 构建一个更传统的面向人类的 Web 应用程序，你可能不需要 Jackson。虽然使用它不会产生任何副作用，但你仍然可以通过排除 Jackson 传递依赖来精简你的构建产物。
 
@@ -6802,6 +6549,8 @@ compile("com.fasterxml.jackson.core:jackson-databind:2.3.1")
 现在你已经有了空的项目结构和就绪的构建规范，是时候开始开发应用程序本身了。在此过程中，你将让 Spring Boot 处理配置细节，而你专注于编写提供阅读列表功能的代码。
 
 ## 开发 Spring Boot 应用程序
+
+
 
 在列表 3 中，你将进一步开发一个 Spring Boot 应用程序，内容自《Spring Boot in Action》第 2.3.1 节。
 
@@ -6886,7 +6635,7 @@ public class Book {
 }
 ```
 
-如你所见，`Book` 类是一个带有少量属性的简单 Java 对象`id` 字段带有 `@Id` 注解以指定其标识性。
+如你所见，`Book` 类是一个带有少量属性的简单 Java 对象，`id` 字段带有 `@Id` 注解以指定其标识性。
 
 ### 定义仓库
 
@@ -6958,24 +6707,22 @@ public class ReadingListController {
 }
 ```
 
+## 开发 Spring Boot
 
-
-
-## 开发 Spring Boot 
-
-ReadingController 标记了 @Controller 注解，以便被组件扫描到并自动注册为 Spring 应用上下文中的一个 bean。它还被标记了 @RequestMapping 注解，以将其所有的处理方法映射到基础 URL "/"。
+`ReadingController` 标记了 `@Controller` 注解，以便被组件扫描到并自动注册为 Spring 应用上下文中的一个 bean。它还被标记了 `@RequestMapping` 注解，以将其所有的处理方法映射到基础 URL `/`。
 
 该控制器有两个方法：
 
--   readersBooks() 处理针对 /<reader> 的 GET 请求，通过从存储库（已注入到控制器的构造函数中）为路径中指定的读者检索 Book 列表。它将 Book 列表以 `books` 为键存入模型中，并返回 `readingList` 作为要渲染视图的逻辑名称。
--   addToReadingList() 处理针对 /<reader> 的 POST 请求，将请求体中的数据绑定到 Book 对象中。该方法将对象的 `reader` 属性设置为读者的名称，然后通过存储库的 `save()` 方法保存修改后的 Book。最后，它返回到 /<reader> 的重定向（这由由另一个控制器方法处理）。
+- `readersBooks()` 处理针对 `/<reader>` 的 GET 请求，通过从存储库（已注入到控制器的构造函数中）为路径中指定的读者检索 `Book` 列表。它将 `Book` 列表以 `books` 为键存入模型中，并返回 `readingList` 作为要渲染视图的逻辑名称。
 
-readersBooks() 方法通过返回 `readingList` 作为逻辑名称包含了该功能。你还必须创建一个视图。在项目开始时，我决定使用 Thymeleaf 来定义应用视图，因此下一步是在 `src/main/resources/templates` 中创建一个名为 `readingList.html` 的文件，内容如下：
+- `addToReadingList()` 处理针对 `/<reader>` 的 POST 请求，将请求体中的数据绑定到 `Book` 对象中。该方法将对象的 `reader` 属性设置为读者的名称，然后通过存储库的 `save()` 方法保存修改后的 `Book`。最后，它返回到 `/<reader>` 的重定向（这由另一个控制器方法处理）。
 
-# 列表 5 readingList.html
+`readersBooks()` 方法通过返回 `readingList` 作为逻辑名称包含了该功能。你还必须创建一个视图。在项目开始时，我决定使用 Thymeleaf 来定义应用视图，因此下一步是在 `src/main/resources/templates` 中创建一个名为 `readingList.html` 的文件，内容如下：
 
-```
-<html
+### 列表 5 readingList.html
+
+```html
+<html>
 <head>
   <title>Reading List</title>
   <link rel="stylesheet" th:href="@{style.css}"></link>
@@ -7023,7 +6770,7 @@ readersBooks() 方法通过返回 `readingList` 作为逻辑名称包含了该�
 
 为了美观，Thymeleaf 模板引用了一个样式表 `class.css`。该文件应该创建在 `src/main/resources/static` 中，并且如下：
 
-```
+```css
 body {
   background-color: #cccccc;
   font-family: arial,helvetica, sans-serif;
@@ -7063,8 +6810,9 @@ label {
 
 要在测试中设置 Mock MVC，你可以使用 `MockMvcBuilders`。该类提供了两个方法：
 
--   `standaloneSetup()` 构建一个 Mock MVC 来服务一个或多个手动配置的控制器。
--   `webAppContext()` 使用 Spring 应用上下文构建 Mock MVC，该上下文推测包含一个或多个配置好的控制器。
+- `standaloneSetup()` 构建一个 Mock MVC 来服务一个或多个手动配置的控制器。
+
+- `webAppContext()` 使用 Spring 应用上下文构建 Mock MVC，该上下文推测包含一个或多个配置好的控制器。
 
 这两个选项的主要区别在于，`standaloneSetup()` 要求你手动实例化并注入所需的控制器，而 `webAppContext()` 则从 `WebApplicationContext` 实例工作，而该实例通常是由 Spring 加载的。前者更类似于单元测试，你仅用于针对单个控制器的集中测试。后者允许 Spring 加载你的控制器及其依赖项，以进行全面的集成测试。
 
@@ -7072,7 +6820,7 @@ label {
 
 `webAppContext()` 接收一个 `WebApplicationContext` 作为参数。因此，你需要用 `@SpringBootConfiguration` 标记测试类，并使用 `@Autowired` 将 `WebApplicationContext` 注入为测试的实例变量。此列表显示了你 Mock MVC 测试的起点。
 
-列表 6 MockMvcWebTests
+### 列表 6 MockMvcWebTests
 
 ```java
 @RunWith(JUnit4Runner.class)
@@ -7093,9 +6841,11 @@ public void setupMockMvc() {
 }
 ```
 
-`@WebApplicationConfiguration` 声明由 SpringJUnitRunner 创建的上下文应该是 `WebApplicationContext`（而非普通的 ApplicationContext）。
+`@WebApplicationConfiguration` 声明由 `SpringJUnitRunner` 创建的上下文应该是 `WebApplicationContext`（而非普通的 `ApplicationContext`）。
 
 `setupMockMvc()` 方法带有 JUnit 的 `@Before` 注解，表示它将在任何测试之前执行。它将注入的 `webContext` 传递给 `webContextSetup()` 方法，然后调用 `build()` 生成一个 `MockMvc` 实例，并赋值给实例变量供测试方法使用。
+
+
 
 现在你有了 Mock MVC，可以开始编写测试方法了。让我们从一个简单的测试方法开始，执行 HTTP GET 请求 `/readingList` 并断言模型值符合你的预期。下面的 `homePage` 测试实现了你需要的功能：
 
@@ -7119,10 +6869,6 @@ import static
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 ```
 
-
-
-
-
 ## Spring Boot 测试
 
 有了这些静态输入，测试可以可以重写如下：
@@ -7138,13 +6884,13 @@ public void get() throws Exception {
 }
 ```
 
-现在这个测试方法读起来几乎非常自然。它首先执行一个 GET 请求 `/readingList`。然后，它期望请求是成功的（isOK()），返回 HTTP 200 响应码，并且视图的逻辑名称为 `readingList`。它还断言模型中包含一个名为 `books` 的属性，但该属性是一个空集合。这一切都很直观。
+现在这个测试方法读起来几乎非常自然。它首先执行一个 GET 请求 `/readingList`。然后，它期望请求是成功的（`isOK()`），返回 HTTP 200 响应码，并且视图的逻辑名称为 `readingList`。它还断言模型中包含一个名为 `books` 的属性，但该属性是一个空集合。这一切都很直观。
 
 主要需要注意的是，此时应用程序并没有部署到 Web 服务器上。相反，它运行在一个模拟的 Spring MVC 之中，该环境足以处理你通过 `MockMvc` 实例发送的 HTTP 请求。
 
 很酷，对吧？让我们再试一种方法。这次你将通过发送一个 HTTP POST 请求来发布新书，让它变得稍微有趣一点。你应该期望在处理 POST 后，请求将重定向到 `/readingList`，并且模型中的 `books` 属性将包含新添加的书。下面的列表显示了如何使用 Spring MVC 进行此类测试。
 
-#  6 MockMvcWebTests
+# 6 MockMvcWebTests
 
 ```java
 @Test
@@ -7184,6 +6930,7 @@ mockMvc.perform(get("/readingList")
 ### 总结
 
 - 《Spring Boot 实战》中的 Spring 内容涵盖了使用 Spring Boot 开发微服务的更多细节。
+
 - 关于开发 Spring Boot 微服务的更多细节，可以在 [Spring Boot in Action](www.manning.com/books/spring-boot-action) 中找到。
 
 # 索引
@@ -7191,296 +6938,534 @@ mockMvc.perform(get("/readingList")
 # A
 
 - 添加 realm（领域）按钮, Keycloak 173
-- addOrUpdateItem() 方法 45, 48
-- ToAddReadingList() 方法 241
+
+- `addOrUpdateItem()` 方法 45, 48
+
+- `ToAddReadingList()` 方法 241
+
 - 管理微服务 202, 221–223
-- AdminApplication 类 31
-- AdminClient 类 35
+
+- `AdminApplication` 类 31
+
+- `AdminClient` 类 35
+
 - 管理站点 25–35
+
 - 应用程序架构 28–29
+
 - 创建 JAX-RS 端点 30–33
+
 - 添加分类 32–33
+
 - 删除分类 31
+
 - 启动微服务 34
+
 - 启动 UI 34
+
 - 查看所有分类 31
+
 - 运行 33–35
+
 - 用例 27
-- @Advertise 注解 129–130
+
+- `@Advertise` 注解 129–130
+
 - Apache HttpClient 108–110
+
 - Apache Kafka 数据流 227
+
 - 管理微服务 221–223
+
 - 练习 226–227
+
 - Kafka 消费者 223–226
-- OpenShift  Kafka 219–221
+
+- OpenShift Kafka 219–221
+
 - 概述 211–213
+
 - 记录 214–215
+
 - 简化单体架构 216–218
+
 - 主题 215–216
+
 - API 层 28
-- Application 类 58
+
+- `Application` 类 58
+
 - 应用程序，架构 28–29
-- @ApplicationScoped 注解 31
+
+- `@ApplicationScoped` 注解 31
+
 - 数据流架构，简化 216–218
+
 - 企业级 Java 4–6
+
 - Arquillian 66, 94
-- AsyncResponse.resume()
-- asyncResponse.resume() 方法 108, 112
+
+- `AsyncResponse.resume()`
+
+- `asyncResponse.resume()` 方法 108, 112
+
 - 在支付资源中进行身份验证 176–178
+
 - 在 UI 中 183–186
+
 - 自动检测 (AutoDetect) 56
-- @Autowired 注解 243
+
+- `@Autowired` 注解 243
 
 # B
 
--  own令牌 (bearer token) 171
+- 持有者令牌 (bearer token) 171
+
 - 大爆炸模式 (Big Bang pattern) 17
+
 - 引导 (bootstrapping) 230–231
+
 - 边界上下文模式 (Bounded Context pattern) 1, 15
+
 - 浏览目录，OpenShift 204
+
 - 隔离器 (bulkheads) 149–151
 
 # C
 
 - CaaS (容器即服务) 85
-- Controller 类 45, 47, 51
-- categoriesWithIdenticalParentId() 方法 64
-- Category.hashCode() 方法 66
-- CategoryEventListener 225
-- CategoryItemList 184
-- CategoryResource 类 30–31, 80
-- CategoryResourceIT 类 96
-- CategoryTest 类 68
-- CategoryTest 63, 68
-- categoryRef 字段 105
+
+- `Controller` 类 45, 47, 51
+
+- `categoriesWithIdenticalParentId()` 方法 64
+
+- `Category.hashCode()` 方法 66
+
+- `CategoryEventListener` 225
+
+- `CategoryItemList` 184
+
+- `CategoryResource` 类 30–31, 80
+
+- `CategoryResourceIT` 类 96
+
+- `CategoryTest` 类 68
+
+- `CategoryTest` 63, 68
+
+- `categoryRef` 字段 105
+
 - 微服务混合单体 194–202
+
 - 混合 OR 209
+
 - 数据库 204–206
-- ChangeTransformer 类 132
+
+- `ChangeTransformer` 类 132
+
 - 熔断器 (circuit breakers) 145–149
-- CircuitData 146, 154
+
+- `CircuitData` 146, 154
+
 - 客户端负载均衡 119
+
 - Jackson 类 110
+
 - 闭路 (closed circuit) 146
+
 - 云优势 84
+
 - 部署到 88
+
 - 练习 97
+
 - 微服务云 89–94
+
 - 原生开发 68
+
 - 服务模型 84–86
+
 - 启动 Min 88–89
+
 - 测试 94–97
-- @ComponentScan 注解 231
-- @Configuration 注解 230
+
+- `@ComponentScan` 注解 231
+
+- `@Configuration` 注解 230
+
 - Consul 126
+
 - 消费者组 216
+
 - 消费者驱动 74–82
-- ConsumerTest 类 76, 82
+
+- `ConsumerTest` 类 76, 82
+
 - Kafka 消费者 223–226
+
 - 消费微服务 116
+
 - Java 库 105–110
-- java.net 106
+
+- `java.net` 106
+
 - JAX-RS 客户端 110–113
+
 - JAX-RS 客户端 113–116
+
 - context 映射 17
-- contentLoads() 方法 22
+
+- `contentLoads()` 方法 22
+
 - 持续交付 14–15
+
 - 持续集成 14–15
+
 - CORS (跨源共享) 29
-- CORSFilter 类 29
-- create() 方法 72, 74
-- createCategory() 方法 64
+
+- `CORSFilter` 类 29
+
+- `create()` 方法 72, 74
+
+- `createCategory()` 方法 64
+
 - 严重漏洞 (CVEs) 28
+
 - 跨源共享 (CORS) 29
+
 - CRUD (创建、读取、更新、删除) 27
+
 - 严重漏洞 (CVEs) 42
 
 # D
 
 - DAOs (数据访问对象) 24, 189
+
 - 数据层 28
+
 - Apache Kafka 数据流 227
+
 - 管理微服务 221–223
+
 - 执行 226–227
+
 - Kafka 消费者 223–226
-- OpenShift  Kafka 219–221
+
+- OpenShift Kafka 219–221
+
 - 概述 211–213
+
 - 记录 214–215
+
 - 简化单体架构 216–218
+
 - 顶部 215–216
+
 - DDD (领域驱动设计) 15–17, 190
+
 - Debezium 27
-- @Default 注解 68
-- @DELETE 注解 32
+
+- `@Default` 注解 68
+
+- `@DELETE` 注解 32
+
 - 依赖检测 56
+
 - 基于 facet 的依赖 234–235
+
 - 启动器 233–234
+
 - 依赖注入 (DI) 59
+
 - 依赖 88
+
 - DI (依赖注入) 59
+
 - 分布式架构 10–15
+
 - 优势 12–13
+
 - 消费者集成与交付 14–15
+
 - 开发 14
+
 - 良好设计 11
+
 - 概述 11
+
 - 产品 14
+
 - 分布式单体 11
+
 - 分布式流平台 213
+
 - 领域驱动设计 (DDD) 15–17, 190
+
 - 领域定义 237–59
+
 - Dropwizard 46–49
 
 # E
 
 - EAR (企业归档) 194
+
 - Eclipse 38–39
+
 - Enterprise Application Archive (EAR) 194
+
 - Eclipse 43–44
+
 - 企业信息系统 (EIS) 37
+
 - Enterprise JavaBeans (EJBs)
-- @EnableConfiguration 注解 231
+
+- `@EnableConfiguration` 注解 231
+
 - 端点 JAX-RS 30–33
+
 - 添加分类 32–33
+
 - 删除分类 31
+
 - 启动微服务 34
+
 - 启动 UI 34–35
+
 - 查看所有分类 31
+
 - Enterprise Archive (EAR) 194
+
 - 企业信息系统 (EIS) 37
+
 - 企业级 Java
+
 - 应用服务器 49–53
+
 - 架构 4–6
+
 - 适用于微服务的 21–22
+
 - 单体 6–10
+
 - 概述 4
+
 - Enterprise JavaBeans (EJBs)
 
 # H
 
 - HATEOAS (超媒体作为应用引擎) 30
+
 - 同质网络 141
+
 - HR (人力资源) 37
-- @Http 注解 131
+
+- `@Http` 注解 131
+
 - Apache HttpClient 108–110
+
 - 人力资源 (HR) 37
+
 - 混合云模型 88
+
 - 混合单体, Cayenne 196
+
 - 混合模式 18–19
+
 - 超媒体作为应用引擎 (ATEOAS) 30
+
 - Hystrix Dashboard 155–157
+
 - 添加到支付微服务 158–163
+
 - Hystrix RESTEasy 客户端 158–161
+
 - Hystrix Ribbon 客户端 161–163
+
 - 概述 142–145
-- HystrixCommand 143, 150
-- HystrixObservableCommand 150
+
+- `HystrixCommand` 143, 150
+
+- `HystrixObservableCommand` 150
 
 # F
 
 - fabric8 Maven 插件 89
+
 - 基于 facet 的依赖，指定 234–235
+
 - 备回 (fallbacks) 151–152
+
 - fat jar 12
+
 - 容错与监控 163
+
 - 分布式架构中的微服务故障 138–141
+
 - 故障缓解 142–157
+
 - 舱舱/隔离器 (bulkhead) 149–151
+
 - 熔断器 (circuit breakers) 145–149
+
 - 备回 (fallbacks) 151–152
+
 - Hystrix Dashboard 155–157
+
 - Hystrix 库 142–145
+
 - 请求缓存 152–163
+
 - 网络功能 141–142
+
 - 支付微服务，添加 Hystrix 158–163
+
 - Hystrix RESTEasy 客户端 158–161
+
 - Hystrix Ribbon 客户端 161–163
+
 - 概述 142–145
-- findReader() 方法 239
+
+- `findReader()` 方法 239
 
 # I
 
 - IaaS (基础设施即服务) 85
+
 - 等等操作 48
+
 - 不可变性 64–66
+
 - 不变记录 214
+
 - 缺陷方法 113
+
 - 基础设施即服务 (IaaS) 85
-- @Inject 注解 20
+
+- `@Inject` 注解 20
+
 - 集成测试 66–74
+
 - 内部用户 165
 
 # J
 
 - JAR (Java 归档)
+
 - Java 应用服务器在 49–53
+
 - 概述 5
+
 - Java 库，消费微服务
+
 with 105–110
+
 - Apache HttpClient 108–110
-- java.net.http 106
+
+- `java.net.http` 106
+
 - 企业级 Java 配置 38–39
 
+- `java.net` 106–108
 
+- JavaServer Pages (JSP) 189
 
+- `JavaTimeModule` 70
 
+- JAX-RS 客户端库
 
-java.net 106–108
-JavaServer Pages (JSP) 189
-JavaTimeModule 70
-JAX-RS 客户端库
 - 消费微服务 110–113
+
 - JAX-RS 客户端库 113–116
- 使用 RESTeasy 创建的客户端节点 30–33
+
+- 使用 RESTeasy 创建的客户端节点 30–33
+
 - 添加类别 32–33
+
 - 删除类别 31
+
 - 启动微服务 34
+
 - 启动 UI 34–35
+
 - 查看所有 31
-JaxrsApplication 类 52
-JeAS (恰够的应用) 37–59
+
+- `JaxrsApplication` 类 52
+
+- JeAS (恰够的应用) 37–59
+
 - 益处 41–45
+
 - Dropwizard 46–49
+
 - Eclipse MicroProfile 43–44
+
 - 示例应用程序 44–46
+
 - Jaas 运行时，对比 58–59
+
 - 概述 37–41
+
 - Pava Micro 49–53
+
 - Spring Boot 53–56
+
 - Thorntail 56–58
-JGroups 26
-JpaRepository 接口 239
-JSP (Java Server Pages) 189
-单元 6 62
-恰够的应用服务 (JeAS) 36
+
+- JGroups 26
+
+- `JpaRepository` 接口 239
+
+- JSP (Java Server Pages) 189
+
+- 单元 6 62
+
+- 恰够的应用服务 (JeAS) 36
+
 - 使用 Java 客户端库 105–110
+
 - 使用 JAX-RS 客户端库 110–116
-持续集成与交付 14–15
+
+- 持续集成与交付 14–15
+
 - 设计 11
+
 - 使用企业级 Java 开发 19–22
-- 开发 14
-- 迁移模式 15–19
+
+
+
+# 开发 14
+
+# 迁移模式 15–19
+
 - 大爆炸模式 17
 - DDD 模式 15–17
 - 混合模式 18–19
 - 绞杀者模式 18
-- 产品优先 24
-- 在 Thorntail 中注册 125–130
-- 安全保护 187
+
+# 产品优先 24
+
+# 在 Thorntail 中注册 125–130
+
+# 安全保护 187
+
 - 方面 167–168
 - 捕获用户身份验证 180–187
 - 重要性 165–166
 - 概述 164–168
 - Stripe 微服务 172–179
 - 使用 Key 168–172
-服务发现 137
+
+# 服务发现 137
+
 - 益处 120
 - 重要性 118
-Netflix Ribbon 123–124
+- Netflix Ribbon 123–124
 - 概述 119–120
 - 无状态 vs. 有状态 123
 - 无状态 vs. 有状态 125
-测试 82
+
+# 测试 82
+
 - 消费者驱动的契约测试 74–82
 - 练习 82
 - 不变性 66–74
@@ -7488,18 +7473,24 @@ Netflix Ribbon 123–124
 - 资源 82
 - 类型 61
 - 单元测试 62–64
-- 良好的设计 11
-迁移到微服务的模式 15–19
+
+# 良好的设计 11
+
+# 迁移到微服务的模式 15–19
+
 - 大爆炸模式 17
 - DDD 模式 15–17
 - 混合模式 18–19
 - 绞杀者模式 18
-Minikube 87
+
+# Minikube 87
 
 # K
 
-kafka-cdi-extension 依赖 223
+`kafka-cdi-extension` 依赖 223
+
 Keycloak 168–172
+
 - 配置 173–175
 - 特性 168–169
 - 设置 169–172
@@ -7507,74 +7498,110 @@ Keycloak 168–172
 # M
 
 语言无关型服务 13
-LocalTime 实例 69
+
+`LocalTime` 实例 69
+
 位置无关型服务 12
-mainClass 49
+
+`mainClass` 49
+
 - 恶意外部用户 165
 - 恶意内部用户 166
-ManagedExecutorService 112
+
+`ManagedExecutorService` 112
+
 微服务 59
+
 - 云端部署 89–94
 - 消费 119
 - 在 Thorntail 中注册 131–137
+
 Minikube 87
+
 - 概述 87
 - 在云中启动 88–89
 - 模拟服务器 74
-- MockMvcRequestBuilders 244
-- MockMvcResultMatchers 244
+- `MockMvcRequestBuilders` 244
+- `MockMvcResultMatchers` 244
 - 模拟 62
 - 单体架构
 - 问题 9–10
 - 概述 6–8
 - 简化架构，数据
 - 流式 216–218
-- mvn test 71
+- `mvn test` 71
 
 # N
 
 原生开发，云端 86–88
+
 Netflix Ribbon 123–124, 131–135
+
 网络故障 141–142
 
 # O
 
 偏移 215
+
 开路 146
-openshift 配置文件 97
+
+`openshift` 配置文件 97
+
 OpenShift, 上的 Kafka 219–221
+
 等等性 48
+
 在 CRUD 中 27
+
 RESTful 服务 35
+
 新管理站点 25–35
+
 应用程序架构 28–29
+
 - 使用 JAX-RS 创建端点 30–33
 - 运行 33–55
 - 用例 27
 - Ribbon 客户端，带 Helix 的 161–163
+
 订单边界上下文 16
+
 轮询 120, 124
-@Run 注解 68
+
+`@Run` 注解 68
+
 运行时 11, 58–59
-@RunWith 注解 68
+
+`@RunWith` 注解 68
 
 # P
 
 PaaS (平台即服务) 88
+
 Pact 75
+
 分区 215
+
 支付微服务 49–53, 119, 196–202
-PaymentServiceResource 类 159
+
+`PaymentServiceResource` 类 159
+
 持久化记录 215
+
 平台即服务 (PaaS) 88
-pods 92–93, 221
-@POST 注解 32
+
+`pods` 92–93, 221
+
+`@POST` 注解 32
 
 # S
 
 SaaS (软件即服务) 84–85
+
 扩展 84
+
 安全服务 187
+
 - 方面 167–168
 - 捕获用户身份验证 180–187
 - 配置 Keycloak 180–181
@@ -7582,57 +7609,87 @@ SaaS (软件即服务) 84–85
 - 测试新 UI 和服务 186–187
 - 165–166
 - 概述 164–168
+
 Stripe 服务 172–179
+
 - 在支付资源中身份验证 176–178
 - 配置 Keycloak 173–175
 - 安全 Stripe 资源 175–176
 - 测试的服务 178–179
 - 特性 168–160
 - 设置 169–172
-- 安全 42
+
+安全 42
+
 Postman 133
+
 表现层 28
+
 私有云模型 88
+
 Java EE 38–39
+
 公有云模型 88
+
 拉取模式，Kafka 221
+
 推送模式，Kafka 221
 
 # Q
 
-@QueryParam 注解 48
+`@QueryParam` 注解 48
 
 # R
 
 响应式 148
+
 ReactJS 26
-readers() 方法 241
-ReadingListApplication.java 230
-ReadingListTests.java 230
-realms, Keycloak 171
+
+`readers()` 方法 241
+
+`ReadingListApplication.java` 230
+
+`ReadingListTests.java` 230
+
+`realms`, Keycloak 171
+
 记录 214–215
-repository 接口 239
+
+`repository` 接口 239
+
 MAP 150
+
 服务器发送事件 (SSEs) 127, 155
+
 服务目录 86
+
 服务发现 137
+
 - 益处 120
 - 重要性 118
-Netflix Ribbon 123–124
+- Netflix Ribbon 123–124
 - 概述 119–120
-无状态 vs. 有状态 123
+- 无状态 vs. 有状态 123
+
 服务模型，用于云端 84–86
+
 服务注册表 119
 
 # 索引
 
 服务
+
 - 语言无关 13
 - 位置无关 12
+
 部署 94
+
 Kubernetes 单节点集群 87
+
 软件即服务 (SaaS) 84–85
+
 Spring Boot 229–246
+
 - 开发应用程序 237–243
 - 应用程序功能 237
 - 创建 Web 接口 240–243
@@ -7640,85 +7697,153 @@ Spring Boot 229–246
 - 定义存储库入口 239
 - 概述 53–56
 - 项目部分 227–239
+
 引导 230–231
+
 配置应用程序属性 233
+
 检查初始化的项目 229–230
+
 Spring Boot 应用程序 232–237
-starter 依赖 235–237
-覆盖 starter 传递性依赖 235–237
+
+`starter` 依赖 235–237
+
+覆盖 `starter` 传递性依赖 235–237
+
 指定基于 facet 的地址 234–235
+
 使用 233–246
-spring-boot-starter-data 依赖 53
-SpringApplication.run() 方法 231
-@SpringApplicationConfiguration 注解 232
-@SpringBoot 注解 55, 230
+
+`spring-boot-starter-data` 依赖 53
+
+`SpringApplication.run()` 方法 231
+
+`@SpringApplicationConfiguration` 注解 232
+
+`@SpringBoot` 注解 55, 230
+
 SSEs (服务器发送事件) 127, 155
-standalone() 方法 243
-starter 依赖 235–237
-覆盖 starter 传递性依赖 235–237
+
+`standalone()` 方法 243
+
+`starter` 依赖 235–237
+
+覆盖 `starter` 传递性依赖 235–237
+
 指定基于 facet 的地址 234–235
+
 使用 233–246
+
 Spring Boot 启动器 53
+
 无状态微服务 123
+
 静态方法 102
-StockCommand 类 147, 150
-StockObservableCommand 类 148, 152
+
+`StockCommand` 类 147, 150
+
+`StockObservableCommand` 类 148, 152
+
 绞杀者模式 18
+
 Stripe 微服务，安全 172–179
+
 在支付中身份验证 176–178
+
 配置 Keycloak 173–175
+
 资源 175–176
+
 安全微服务 178–179
-StripeApplication 类 128
-StripeCommand 类 158
-StripeResource 175
-StripeFallbackHandler 162
+
+`StripeApplication` 类 128
+
+`StripeCommand` 类 158
+
+`StripeResource` 175
+
+`StripeFallbackHandler` 162
+
 存根 62
-SubmitAction 类 199
-swarm.port 属性 104
-@TemplateName 注解 131
-TestObject 类 64
+
+`SubmitAction` 类 199
+
+`swarm.port` 属性 104
+
+`@TemplateName` 注解 131
+
+`TestObject` 类 64
+
 在云端 94–97
+
 消费者驱动的契约测试 74–82
+
 不变性 64–74
+
 集成测试 66–74
+
 资源 42
+
 安全微服务 178–179
+
 Spring Boot 232, 243–246
+
 UI 和服务 186–187
+
 消费微服务 131–137
-使用 Netflix Ribbon查找查找 131–135
+
+使用 Netflix Ribbon 查找 131–135
+
 使用 JAXRS 类查找服务 135–137
+
 线程池 150
-thymeleaf, 235–235
+
+`thymeleaf`, 235–235
+
 Apache 中的主题 215–216
+
 Thorntail 拓扑 125–130
-topology.lookup() 方法 130
-topology-webapp 依赖 127, 134
-Topology.lookup() 方法 130
-uber jars 11
+
+`topology.lookup()` 方法 130
+
+`topology-webapp` 依赖 127, 134
+
+`Topology.lookup()` 方法 130
+
+`uber jars` 11
+
 升级 42
+
 用户身份验证 180–187
+
 在用户中身份验证 183–186
+
 配置 Keycloak 180–181
+
 安全类别 128–181
+
 测试新 UI 和服务 186–187
+
 VM (虚拟机) 203
 
 # W
 
-@WebAppConfiguration 注解 243
-webAppContext() 方法 243
-WebApplicationContext 244
+`@WebAppConfiguration` 注解 243
+
+`webAppContext()` 方法 243
+
+`WebApplicationContext` 244
+
 权重响应 124
+
 WildFly 设置 33, 191
 
 # X
 
-@XmlRoot 注解 54, 58
+`@XmlRoot` 注解 54, 58
 
 # Z
 
 零延迟 140
-ZooKeeper 220
 
+ZooKeeper 220

@@ -1,14 +1,15 @@
+
 # GraphQL SPQR 和 Spring Boot 入门
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-boot-graphql-spqr>
 
-## 1.介绍
+## 1. 介绍
 
 GraphQL 是一种用于 web APIs 的查询和操作语言。起源于让 GraphQL 工作更加无缝的库之一是 [SPQR](https://web.archive.org/web/20220707145328/https://github.com/leangen/graphql-spqr) 。
 
 在本教程中，我们将学习 GraphQL SPQR 的基础知识，并在一个简单的 Spring Boot 项目中看到它的实际应用。
 
-## 2.什么是 GraphQL SPQR？
+## 2. 什么是 GraphQL SPQR？
 
 GraphQL 是由脸书创建的著名查询语言。其核心是模式——我们在其中定义自定义类型和函数的文件。
 
@@ -16,11 +17,11 @@ GraphQL 是由脸书创建的著名查询语言。其核心是模式——我们
 
 GraphQL Schema Publisher & Query Resolver，简称为 **SPQR，是为了减少上述问题而产生的**——它只是从带注释的 Java 类中生成 graph QL 模式。
 
-## 3.Spring Boot 推出 GraphQL SPQR
+## 3. Spring Boot 推出 GraphQL SPQR
 
 为了查看 SPQR 的运行情况，我们将设置一个简单的服务。我们将使用 [Spring Boot GraphQL Starter](https://web.archive.org/web/20220707145328/https://mvnrepository.com/artifact/com.graphql-java/graphql-spring-boot-starter/5.0.2) 和 GraphQL SPQR。
 
-### 3.1.设置
+### 3.1. 设置
 
 让我们从将 SPQR 和 Spring Boot 的依赖项添加到 POM 开始:
 
@@ -41,7 +42,7 @@ GraphQL Schema Publisher & Query Resolver，简称为 **SPQR，是为了减少�
 </dependency>
 ```
 
-### 3.2.编写模型`Book`类
+### 3.2. 编写模型`Book`类
 
 现在我们已经添加了必要的依赖项，让我们创建一个简单的`Book`类:
 
@@ -55,7 +56,7 @@ public class Book {
 
 正如我们在上面看到的，它不包括任何 SPQR 注释。如果我们没有源代码，但想从这个库中受益，这将非常有用。
 
-### 3.3.编写图书服务
+### 3.3. 编写图书服务
 
 为了管理藏书，让我们创建一个`IBookService`界面:
 
@@ -111,7 +112,7 @@ public class BookService implements IBookService {
 }
 ```
 
-### 3.4.用 graphql-spqr 公开服务
+### 3.4. 用 graphql-spqr 公开服务
 
 唯一剩下的事情是创建一个解析器，它将暴露 GraphQL 的变化和查询。**为此，我们将使用两个重要的 SPQR 注释—`@GraphQLMutation`和`@GraphQLQuery` :**
 
@@ -151,7 +152,7 @@ public class BookResolver {
 
 如果我们不想在每个方法中都写`@GraphQLArgument`并且满足于 GraphQL 参数被命名为输入参数，我们可以用`-parameters`参数编译代码。
 
-### 3.5.休息控制器
+### 3.5. 休息控制器
 
 最后，我们将定义一个 Spring `@RestController.` **为了用 SPQR 公开服务，我们将配置`GraphQLSchema`和`GraphQL`对象:**
 
@@ -186,7 +187,7 @@ SPQR 旅程中的最后一项任务是创建一个`/graphql`端点。它将作�
 }
 ```
 
-### 3.6.结果
+### 3.6. 结果
 
 我们可以通过检查`/graphql`端点来检查结果。例如，让我们通过执行以下 cURL 命令来检索所有的`Book`记录:
 
@@ -198,7 +199,7 @@ curl -g \
   http://localhost:8080/graphql
 ```
 
-### 3.7.试验
+### 3.7. 试验
 
 一旦我们完成了配置，我们就可以测试我们的项目。我们将使用 [`MockMvc`](https://web.archive.org/web/20220707145328/https://spring.io/guides/gs/testing-web/) 来测试我们的新端点并验证响应。让我们定义 JUnit 测试并自动连接所需的服务:
 
@@ -250,11 +251,11 @@ public class GraphqlControllerIntegrationTest {
 }
 ```
 
-## 4.使用 GraphQL SPQR Spring Boot 启动器
+## 4. 使用 GraphQL SPQR Spring Boot 启动器
 
 致力于 SPQR 的团队已经创建了一个 Spring Boot 启动器，这使得使用它更加容易。我们去看看吧！
 
-### 4.1.设置
+### 4.1. 设置
 
 我们将从向 POM 添加`spqr-spring-boot-starter`开始:
 
@@ -266,9 +267,11 @@ public class GraphqlControllerIntegrationTest {
 </dependency>
 ```
 
-### 4.2.图书服务
+### 4.2. 图书服务
 
 然后，我们需要给我们的`BookService`添加两个修改。首先，它必须用`@GraphQLApi`标注。此外，我们希望在 API 中公开的每个方法都必须有各自的注释:
+
+
 
 ```java
 @Service
@@ -312,9 +315,9 @@ public class BookService implements IBookService {
 }
 ```
 
-正如我们所看到的，我们基本上将代码从`BookResolver`移到了`BookService`。另外，**我们不需要`GraphqlController`类——一个`/graphql`端点会被自动添加**。
+正如我们所看到的，我们基本上将代码从`BookResolver`移到了`BookService`。另外，我们不需要`GraphqlController`类——一个`/graphql`端点会被自动添加。
 
-## 5.摘要
+## 5. 摘要
 
 GraphQL 是一个令人兴奋的框架，是传统 RESTful 端点的替代方案。虽然提供了很大的灵活性，但是它也增加了一些繁琐的任务，比如维护模式文件。SPQR 致力于使 GraphQL 的使用更简单，更少出错。
 

@@ -1,3 +1,4 @@
+
 # 所有缩减的总和
 
 > 原文：<https://medium.com/javarevisited/the-sum-of-all-reductions-d46dfd334704?source=collection_archive---------0----------------------->
@@ -14,7 +15,7 @@
 
 ## 对整数数组求和
 
-让我们考虑几种在 Java 中对 int 数组中的值求和的方法。
+让我们考虑几种在 Java 中对 `int` 数组中的值求和的方法。
 
 这是我们将使用的数据。
 
@@ -39,7 +40,7 @@ for (int i = 0; i < ints.length; i++)
 Assertions.assertEquals(15, sumForLoop);
 ```
 
-**forEach**(`IntStream`)/**each**(`[IntList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/primitive/IntList.html)`
+**forEach**(`IntStream`)/**each**(`IntList`)
 
 ```
 // sumForEach will be effectively final
@@ -55,7 +56,7 @@ intList.each(e -> sumEach[0] += e);
 Assertions.assertEquals(15, sumEach[0]);
 ```
 
-**注射** ( `[IntList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/primitive/IntList.html)`)
+**注射** (`IntList`)
 
 ```
 // injectInto boxes on IntList as there is no primitive version
@@ -65,7 +66,7 @@ int sumInject =
 Assert.assertEquals(15, sumInject);
 ```
 
-**减少** ( `IntStream`)
+**减少** (`IntStream`)
 
 ```
 // reduce does not box on IntStream
@@ -75,7 +76,7 @@ int sumReduce =
 Assertions.assertEquals(15, sumReduce);
 ```
 
-**总和** ( `IntStream` / `[IntList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/primitive/IntList.html)`)
+**总和** (`IntStream` / `IntList`)
 
 ```
 int sum1 = intStream.sum();
@@ -87,11 +88,11 @@ long sum2 = intList.sum();
 Assertions.assertEquals(15, sum2);
 ```
 
-显然，`IntStream`和`IntList`上可用的`sum`方法是最简单的解决方案。与`IntList`的微小区别是结果被扩大为`long`，这意味着您可以添加非常大的`int`值而不会溢出。
+显然，`IntStream` 和 `IntList` 上可用的 `sum` 方法是最简单的解决方案。与 `IntList` 的微小区别是结果被扩大为 `long`，这意味着您可以添加非常大的 `int` 值而不会溢出。
 
 ## 汇总整数数组
 
-当我们使用 Java 8 中添加的`IntSummaryStatistics`类进行汇总时，我们得到的是同时计算的`count`、`sum`、`min`、`max`和`average`。这样可以避免多次迭代。我们将使用和以前一样的数据。
+当我们使用 Java 8 中添加的 `IntSummaryStatistics` 类进行汇总时，我们得到的是同时计算的 `count`、`sum`、`min`、`max` 和 `average`。这样可以避免多次迭代。我们将使用和以前一样的数据。
 
 **为循环**
 
@@ -107,7 +108,7 @@ Assertions.assertEquals(1, statsForLoop.getMin());
 Assertions.assertEquals(5, statsForLoop.getMax());
 ```
 
-**forEach**(`IntStream`)/**each**(`[IntList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/primitive/IntList.html)`)
+**forEach**(`IntStream`)/**each**(`IntList`)
 
 ```
 IntSummaryStatistics statsForEach = new IntSummaryStatistics();
@@ -125,7 +126,7 @@ Assertions.assertEquals(1, statsEach.getMin());
 Assertions.assertEquals(5, statsEach.getMax());
 ```
 
-**注射液** ( `[IntList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/primitive/IntList.html)`
+**注射液** (`IntList`)
 
 ```
 IntSummaryStatistics statsInject =
@@ -138,7 +139,7 @@ Assertions.assertEquals(1, statsInject.getMin());
 Assertions.assertEquals(5, statsInject.getMax());
 ```
 
-**收藏** ( `IntStream`)
+**收藏** (`IntStream`)
 
 ```
 IntSummaryStatistics statsCollect =
@@ -152,9 +153,9 @@ Assertions.assertEquals(1, statsCollect.getMin());
 Assertions.assertEquals(5, statsCollect.getMax());
 ```
 
-注意:我不能使用`reduce`，因为两个参数必须是同一类型。我不得不使用`collect`来代替，这是一个可变的归约。原语流上的`collect`方法不采用`Collector`，而是采用`Supplier`、`ObjectIntConsumer`(累加器)和`BiConsumer`(合并器)。
+注意：我不能使用 `reduce`，因为两个参数必须是同一类型。我不得不使用 `collect` 来代替，这是一个可变的归约。原语流上的 `collect` 方法不采用 `Collector`，而是采用 `Supplier`、`ObjectIntConsumer`（累加器）和 `BiConsumer`（合并器）。
 
-**汇总统计** ( `IntStream` / `[IntList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/primitive/IntList.html)`)
+**汇总统计** (`IntStream` / `IntList`)
 
 ```
 IntSummaryStatistics stats1 = intStream.summaryStatistics();
@@ -170,11 +171,11 @@ Assertions.assertEquals(1, stats2.getMin());
 Assertions.assertEquals(5, stats2.getMax());
 ```
 
-同样，`summaryStatistics`方法是最简单的解决方案。
+同样，`summaryStatistics` 方法是最简单的解决方案。
 
 ## 对字符串数组的长度求和
 
-假设我们想对一个数组中的字符串长度求和。这种方法可以用来对一个对象的任何 int 属性求和。
+假设我们想对一个数组中的字符串长度求和。这种方法可以用来对一个对象的任何 `int` 属性求和。
 
 这是我们将使用的数据。
 
@@ -199,7 +200,7 @@ for (int i = 0; i < words.length; i++)
 Assertions.assertEquals(35, sumForLoop);
 ```
 
-**为**每个**为** ( `Stream` ) / **每个** ( `[ImmutableList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/ImmutableList.html)`)
+**为**每个**为** (`Stream`) / **每个** (`ImmutableList`)
 
 ```
 int[] sumForEach = {0};
@@ -213,7 +214,7 @@ list.each(e -> sumEach[0] += e.length());
 Assertions.assertEquals(35, sumEach[0]);
 ```
 
-**采集剂** ( `[ImmutableList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/ImmutableList.html)` )+ **注射液** ( `[IntList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/primitive/IntList.html)`)
+**采集剂** (`ImmutableList`) + **注射液** (`IntList`)
 
 ```
 int sumInject = list
@@ -224,7 +225,7 @@ int sumInject = list
 Assertions.assertEquals(35, sumInject);
 ```
 
-**收** ( `Stream` ) + **减** ( `Collectors`)
+**收** (`Stream`) + **减** (`Collectors`)
 
 ```
 int sumReducing = 
@@ -235,7 +236,7 @@ int sumReducing =
 Assertions.assertEquals(35, sumReduce);
 ```
 
-**mapToInt**(`Stream`)+**Reduce**(`IntStream`
+**mapToInt**(`Stream`)+**Reduce**(`IntStream`)
 
 ```
 int sumReduce = stream
@@ -246,7 +247,7 @@ int sumReduce = stream
 Assertions.assertEquals(35, sumReduce);
 ```
 
-**映射输入** ( `Stream` ) + **总和** ( `IntStream`)
+**映射输入** (`Stream`) + **总和** (`IntStream`)
 
 ```
 int sum1 = stream
@@ -256,7 +257,7 @@ int sum1 = stream
 Assertions.assertEquals(35, sum1);
 ```
 
-**集合** ( `[ImmutableList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/ImmutableList.html)` ) + **总和** ( `[IntList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/primitive/IntList.html)`)
+**集合** (`ImmutableList`) + **总和** (`IntList`)
 
 ```
 long sum2 = list
@@ -266,7 +267,7 @@ long sum2 = list
 Assertions.assertEquals(35, sum2);
 ```
 
-**收集** ( `Stream` ) + **总和** ( `Collectors`)
+**收集** (`Stream`) + **总和** (`Collectors`)
 
 ```
 Integer summingInt = stream
@@ -275,7 +276,7 @@ Integer summingInt = stream
 Assertions.assertEquals(35, summingInt.intValue());
 ```
 
-**sumOfInt** ( `[ImmutableList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/ImmutableList.html)`)
+**sumOfInt** (`ImmutableList`)
 
 ```
 long sumOfInt = list.sumOfInt(String::length);
@@ -283,7 +284,7 @@ long sumOfInt = list.sumOfInt(String::length);
 Assertions.assertEquals(35, sumOfInt);
 ```
 
-我认为在这些例子中，`sumOfInt`是最简单的解决方案。
+我认为在这些例子中，`sumOfInt` 是最简单的解决方案。
 
 ## 对按第一个字符分组的字符串的长度求和
 
@@ -301,9 +302,11 @@ ImmutableList<String> list =
     Lists.immutable.with(words).collect(String::toLowerCase);
 ```
 
-分别使用`map`和`collect`将`Stream`和`ImmutableList`字符串转换成小写。在 for 循环示例中，我们将手动执行此操作。
+分别使用 `map` 和 `collect` 将 `Stream` 和 `ImmutableList` 字符串转换成小写。在 `for` 循环示例中，我们将手动执行此操作。
 
-**为**循环**为**
+
+
+# 为循环为
 
 ```
 MutableCharIntMap sumByForLoop = new CharIntHashMap();
@@ -317,7 +320,7 @@ Assertions.assertEquals(35, sumByForLoop.values().sum());
 Assertions.assertEquals(6, sumByForLoop.get('t'));
 ```
 
-**为**每个**为** ( `Stream` ) / **每个** ( `[ImmutableList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/ImmutableList.html)`)
+# 为每个为 ( `Stream` ) / 每个 ( `[ImmutableList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/ImmutableList.html)`)
 
 ```
 MutableCharIntMap sumByForEach = new CharIntHashMap();
@@ -333,7 +336,7 @@ Assertions.assertEquals(35, sumByEach.values().sum());
 Assertions.assertEquals(6, sumByEach.get('t'));
 ```
 
-**注入** ( `[ImmutableList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/primitive/ImmutableIntList.html)`)
+# 注入 ( `[ImmutableList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/primitive/ImmutableIntList.html)`)
 
 ```
 MutableCharIntMap sumByInject =
@@ -348,7 +351,7 @@ Assertions.assertEquals(35, sumByInject.values().sum());
 Assertions.assertEquals(6, sumByInject.get('t'));
 ```
 
-**减少** ( `Stream`)
+# 减少 ( `Stream`)
 
 ```
 MutableCharIntMap sumByReduce = stream
@@ -367,7 +370,7 @@ Assertions.assertEquals(35, sumByReduce.values().sum());
 Assertions.assertEquals(6, sumByReduce.get('t'));
 ```
 
-**聚合者** ( `[ImmutableList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/ImmutableList.html)`)
+# 聚合者 ( `[ImmutableList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/ImmutableList.html)`)
 
 ```
 ImmutableMap<Character, Long> aggregateBy = list.aggregateBy(
@@ -380,7 +383,7 @@ Assertions.assertEquals(35,
 Assertions.assertEquals(6, aggregateBy.get('t').longValue());
 ```
 
-**聚集地点由** ( `[ImmutableList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/ImmutableList.html)`)
+# 聚集地点由 ( `[ImmutableList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/ImmutableList.html)`)
 
 ```
 ImmutableMap<Character, LongAdder> aggregateInPlaceBy = 
@@ -394,7 +397,7 @@ Assertions.assertEquals(35,
 Assertions.assertEquals(6, aggregateInPlaceBy.get('t').longValue());
 ```
 
-**收藏** ( `Stream`)
+# 收藏 ( `Stream`)
 
 ```
 MutableCharIntMap sumByCollect = stream.collect(
@@ -406,7 +409,7 @@ Assertions.assertEquals(35, sumByCollect.values().sum());
 Assertions.assertEquals(6, sumByCollect.get('t'));
 ```
 
-**收集** ( `Stream` ) + **分组，按** ( `Collectors` ) + **求和** ( `Collectors`)
+# 收集 ( `Stream` ) + 分组，按 ( `Collectors` ) + 求和 ( `Collectors`)
 
 ```
 Map<Character, Integer> sumByCollectSummingInt =
@@ -419,7 +422,7 @@ Assertions.assertEquals(35,
 Assertions.assertEquals(Integer.valueO(6), sumByCollectSummingInt.get('t'));
 ```
 
-**收藏**(`Stream`)+**sumByInt**(`[Collectors2](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/impl/collector/Collectors2.html)`)
+# 收藏(`Stream`)+sumByInt(`[Collectors2](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/impl/collector/Collectors2.html)`)
 
 ```
 ObjectLongMap<Character> sumByCollectors2 =
@@ -431,7 +434,7 @@ Assertions.assertEquals(35, sumByCollectors2.values().sum());
 Assertions.assertEquals(6, sumByCollectors2.get('t'));
 ```
 
-**reduce in place**(`[ImmutableList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/ImmutableList.html)`)+**sumByInt**(`[Collectors2](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/impl/collector/Collectors2.html)`)
+# reduce in place(`[ImmutableList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/ImmutableList.html)`)+sumByInt(`[Collectors2](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/impl/collector/Collectors2.html)`)
 
 ```
 ObjectLongMap<Character> reduceInPlaceCollectors2 =
@@ -443,7 +446,7 @@ Assertions.assertEquals(35, reduceInPlaceCollectors2.values().sum());
 Assertions.assertEquals(6, reduceInPlaceCollectors2.get('t'));
 ```
 
-**sumByInt** ( `[ImmutableList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/ImmutableList.html)`)
+# sumByInt ( `[ImmutableList](https://www.eclipse.org/collections/javadoc/11.1.0/org/eclipse/collections/api/list/ImmutableList.html)`)
 
 ```
 ObjectLongMap<Character> sumByInt =

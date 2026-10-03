@@ -1,3 +1,4 @@
+
 # 揭秘 Google 容器工具 Jib: Java Image Builder
 
 > 原文：<https://medium.com/javarevisited/demystifying-google-container-tool-jib-java-image-builder-583badfe1ba?source=collection_archive---------0----------------------->
@@ -8,9 +9,9 @@
 
 由[凯文·杰瑞特](https://unsplash.com/@kjarrett?utm_source=medium&utm_medium=referral)在 [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral) 上拍摄的照片
 
-你想知道 Jib 是什么吗？。在继续之前，你也许应该读一读我以前的文章。
+你想知道 Jib 是什么吗？在继续之前，你也许应该读一读我以前的文章。
 
-<https://ashishtechmill.com/containerizing-spring-boot-application-with-jib>  
+<https://ashishtechmill.com/containerizing-spring-boot-application-with-jib>
 
 对于对 Java 应用程序的容器化感兴趣，但对创建和维护 Dockerfile 或安装 [Docker](/javarevisited/top-15-online-courses-to-learn-docker-kubernetes-and-aws-for-fullstack-developers-and-devops-d8cc4f16e773) 不感兴趣的 Java 开发人员来说，Jib 是一个优秀的工具。
 
@@ -20,12 +21,12 @@
 
 Jib 智能地将您的映像分为以下几层，以进行更精细的增量构建。
 
-1.  属国
-2.  资源
-3.  班级
-4.  快照依赖关系
-5.  所有其他依赖项
-6.  每个额外的目录(`jib.extraDirectories`在 Gradle 中，`<extraDirectories>`在 Maven 中)构建到它自己的层
+1. 属国
+2. 资源
+3. 班级
+4. 快照依赖关系
+5. 所有其他依赖项
+6. 每个额外的目录（`jib.extraDirectories`在 Gradle 中，`<extraDirectories>`在 Maven 中）构建到它自己的层
 
 [![](img/2b157770381869c31b53252e68e6a819.png)](https://javarevisited.blogspot.com/2020/11/why-devops-engineer-learn-docker-kubernetes.html#axzz6dXsEfLvJ)
 
@@ -47,7 +48,7 @@ Maven 调试日志
 
 您可以使用[潜水](https://github.com/wagoodman/dive)工具检查 Jib 创建的图像。正如您在 RHS 上看到的，我们在下面的路径中展开了类、资源和依赖项的目录结构，它们的大小非常小。
 
-`/apps/classes,/apps/libs,/apps/resources`
+`/apps/classes`，`/apps/libs`，`/apps/resources`
 
 其余的内容是你的基本形象。
 
@@ -57,7 +58,7 @@ Maven 调试日志
 
 Dive 还会告诉你是否在浪费空间，如果是的话，你可以想办法缩小你的[码头工人/OCI 形象](/javarevisited/top-10-free-courses-to-learn-maven-jenkins-and-docker-for-java-developers-51fa7a1e66f6?source=collection_home---4------3-----------------------)的尺寸。然而，在我们的例子中，没有浪费空间:)。！
 
-您也可以使用 **docker history** 命令查看图像内容。让我们看看它是什么样子的。
+您也可以使用 `docker history` 命令查看图像内容。让我们看看它是什么样子的。
 
 [![](img/49e5771a8788a159fd247487d39226dd.png)](https://javarevisited.blogspot.com/2019/05/top-5-courses-to-learn-docker-and-kubernetes-for-devops.html)
 
@@ -65,17 +66,17 @@ Dive 还会告诉你是否在浪费空间，如果是的话，你可以想办法
 
 ## 什么是发行版映像？
 
-谷歌对无发行版图片的定义如下:
+谷歌对无发行版图片的定义如下：
 
 > 发行版映像是轻量级的基础映像，因为它们只包含运行应用程序所需的依赖项。它们不包含包管理器、shells 或任何其他您期望在标准 Linux 发行版中找到的程序。
 
-此外，Jib 创建的层是在[发行版](https://github.com/GoogleCloudPlatform/distroless)基础映像的顶部创建的。Jib 默认使用 distrolles[Java 8](/hackernoon/top-5-java-8-courses-to-learn-online-2db57d9dfb8d)镜像，但是你可以选择你喜欢的镜像。
+此外，Jib 创建的层是在[发行版](https://github.com/GoogleCloudPlatform/distroless)基础映像的顶部创建的。Jib 默认使用 distrolles [Java 8](/hackernoon/top-5-java-8-courses-to-learn-online-2db57d9dfb8d) 镜像，但是你可以选择你喜欢的镜像。
 
 ## 为什么是 Distroless？
 
-1.  需要修补的漏洞更少
-2.  更好的安全性
-3.  以最少的依赖性构建
+1. 需要修补的漏洞更少
+2. 更好的安全性
+3. 以最少的依赖性构建
 
 ## 调试发行版映像
 
@@ -95,4 +96,6 @@ Dive 还会告诉你是否在浪费空间，如果是的话，你可以想办法
 
 你可以在我的博客上继续阅读我以前的一些文章。
 
-<https://ashishtechmill.com/>  <https://ashishtechmill.com/running-kubernetes-application-on-docker-desktop-for-mac> 
+<https://ashishtechmill.com/>
+
+<https://ashishtechmill.com/running-kubernetes-application-on-docker-desktop-for-mac>

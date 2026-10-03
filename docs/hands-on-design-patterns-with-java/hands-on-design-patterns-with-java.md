@@ -1,32 +1,17 @@
+
 # Java 设计模式实用指南
 
-
-
-
-
-
-学习能够构建大型软件架构的设计模式
-
-
-
-
-
-
-
-
-
-
-
+## 学习能够构建大型软件架构的设计模式
 
 > 献给 IBB，我的生死之交，以及我们永远的小狗们 Muzz 和 Java。
+>
+> — Ed
 
-— Ed
-
-mapt.io
+## mapt.io
 
 Mapt 是一个在线数字图书馆，让你充分访问超过 5,000 本书籍和视频，以及行业领先的工具，帮助你规划个人发展并提升职业生涯。更多信息，请访问我们的网站。
 
-# 为什么要订阅？
+## 为什么要订阅？
 
 - 通过来自 4000 多名行业人士的实用电子书和视频，减少花费时间，增加编码时间
 - 通过专为你定制的技能计划（Skill Plans）提高学习效率
@@ -34,49 +19,30 @@ Mapt 是一个在线数字图书馆，让你充分访问超过 5,000 本书籍�
 - Mapt 支持全文搜索
 - 复制粘贴、打印和书签内容
 
-# Packt.com
+## Packt.com
 
-你知道 Packt 为出版的每本书都提供电子书版本吗？提供 PDF 和 ePub 文件。可以在 www.packt.com 升级到电子书版本，作为纸质客户，你有权获得电子书版本的折扣。请通过 customercare@packtpub.com 与我们联系获取详情。
+你知道 Packt 为出版的每本书都提供电子书版本吗？提供 PDF 和 ePub 文件。可以在`www.packt.com`升级到电子书版本，作为纸质客户，你有权获得电子书版本的折扣。请通过`customercare@packtpub.com`与我们联系获取详情。
 
-在 www.packt.com，你还可以阅读免费技术文章集，订阅一系列免费新闻邮件，并接收 Packt 图书和电子书的专属折扣和优惠。
+在`www.packt.com`，你还可以阅读免费技术文章集，订阅一系列免费新闻邮件，并接收 Packt 图书和电子书的专属折扣和优惠。
 
-# 贡献者
+## 贡献者
 
-# 关于作者
+## 关于作者
 
-Edward Lavieri 博士是一位资深软件工程师和开发者，拥有深厚的学术背景。他在科罗拉多技术大学获得计算机科学博士学位，并在管理信息系统硕士学位（鲍伊州立大学）、教育硕士学位（卡佩拉大学）以及运营管理硕士学位（阿肯色大学）。自 2002 年以来，他一直在创建和教授计算机科学课程。Edward 在美国海军服役 25 年后以一级军士（Command Master Chief）身份退役。他是 three19 软件设计与开发工作室的创始人兼创意总监。Edward 编写了十多本技术书籍，其中几本关于 Java。
+Edward Lavieri 博士是一位资深软件工程师和开发者，拥有深厚的学术背景。他在科罗拉多技术大学获得计算机科学博士学位，并在管理信息系统硕士学位（鲍伊州立大学）、教育硕士学位（卡佩拉大学）以及运营管理硕士学位（阿肯色大学）。自 2002 年以来，他一直在创建和教授计算机科学课程。Edward 在美国海军服役 25 年后以一级军士（Command Master Chief）身份退役。他是`three19`软件设计与开发工作室的创始人兼创意总监。Edward 编写了十多本技术书籍，其中几本关于 Java。
 
-# 关于评审员
+## 关于评审员
 
-Aristides Villarreal Bravo 是 Java 开发者、NetBeans Dream团队成员以及 Java 用户小组领袖。他住在巴拿。他组织并参加了与 Java、JavaEE、NetBeans、NetBeans 平台、自由软件和移动设备相关的各种会议和研讨会。他是 jmoord 框架以及 Java、NetBeans 和 Web 开发教程和博客的作者。他参加了多个关于 NetBeans、NetBeans DZone 和 JavaHispano 等主题的采访。他是 NetBeans 插件的开发者。
+Aristides Villarreal Bravo 是 Java 开发者、NetBeans Dream 团队成员以及 Java 用户小组领袖。他住在巴拿。他组织并参加了与 Java、JavaEE、NetBeans、NetBeans 平台、自由软件和移动设备相关的各种会议和研讨会。他是`jmoord`框架以及 Java、NetBeans 和 Web 开发教程和博客的作者。他参加了多个关于 NetBeans、NetBeans DZone 和 JavaHispano 等主题的采访。他是 NetBeans 插件的开发者。
 
-# Packt 正在寻找像你这样的作者
+## Packt 正在寻找像你这样的作者
 
-如果你有兴趣成为 Packt 的作者，请访问 authors.packtpub.com 并在今天申请。我们与数千名像你这样的开发者和技术专业人员合作过，帮助他们向全球技术社区分享自己的见解。你可以提交通用申请、申请我们正在招募作者的特定热门话题，或提交自己的想法。
+如果你有兴趣成为 Packt 的作者，请访问`authors.packtpub.com`并在今天申请。我们与数千名像你这样的开发者和技术专业人员合作过，帮助他们向全球技术社区分享自己的见解。你可以提交通用申请、申请我们正在招募作者的特定热门话题，或提交自己的想法。
 
+## 目录
 
-前言 1
-
-
-
-
-
-
-
-
-
-
-
-
-
+- 前言 1
 - 探索工厂方法设计模式 121
-
-
-
-
-
-
-
 - 你可能喜欢的其他书籍 323
 - 索引 326
 
@@ -84,23 +50,19 @@ Aristides Villarreal Bravo 是 Java 开发者、NetBeans Dream团队成员以及
 
 编写这本书的目的是为软件工程师、系统架构师和软件开发者提供关于 60 多种设计模式的永恒参考和指南。虽然示例使用 Java 提供，但解释和示例是不依赖编程语言的。
 
-除了涵盖行为性、创建性、结构性、架构性、函数式和响应式设计模式外，本书还为读者介绍了统一建模语言 (UML) 和面向对象编程 (OOP)。对 UML 的介绍将重点关注行为图和结构图，因为这些图贯穿全书，用于对所介绍的设计模式实现有更深入的理解。OOP 的介绍将根据读者的经验提供概述或复习。理解 OOP 原理是学习 Java 编程的关键。
+除了涵盖行为性、创建性、结构性、架构性、函数式和响应式设计模式外，本书还为读者介绍了统一建模语言（UML）和面向对象编程（OOP）。对 UML 的介绍将重点关注行为图和结构图，因为这些图贯穿全书，用于对所介绍的设计模式实现有更深入的理解。OOP 的介绍将根据读者的经验提供概述或复习。理解 OOP 原理是学习 Java 编程的关键。
 
-# 本书适合读者
+## 本书适合读者
 
 本书适用于软件工程师、系统架构师和软件开发者，他们希望理解不同的设计模式以及如何使用它们创建更高效、更有韧性的系统。读者需要熟悉 Java 语言的基础知识。
 
-# 本书涵盖内容
+## 本书涵盖内容
 
-第1 章“统一建模语言入门”介绍了 UML，并解释了如何使用它来通信类结构、对象和交互。解释了四种行为图和六种结构图，并辅以示例帮助巩对这些设计中重要组件的理解，以及它们在书中设计模式中的适用性。
+第 1 章“统一建模语言入门”介绍了 UML，并解释了如何使用它来通信类结构、对象和交互。解释了四种行为图和六种结构图，并辅以示例帮助巩对这些设计中重要组件的理解，以及它们在书中设计模式中的适用性。
 
-第2 章“面向对象设计模式”探索了 OOP 的基础、中级和高级概念及方法及其设计模式的适用性。解释了 OOP 方法，并提供了一个完整的 OOP 类作为如何实现 OOP 概念的示例。探讨了设计模式的原理，这将为你深入研究书中后续的设计模式做好准备。
+第 2 章“面向对象设计模式”探索了 OOP 的基础、中级和高级概念及方法及其设计模式的适用性。解释了 OOP 方法，并提供了一个完整的 OOP 类作为如何实现 OOP 概念的示例。探讨了设计模式的原理，这将为你深入研究书中后续的设计模式做好准备。
 
-
-
-
-
-# 前言
+## 后续章节
 
 第 3 章“行为设计模式”探讨了行为设计模式，特别关注责任链、命令、解释器、中介、备备、空对象、观察者、状态、策略、模板方法和访问者设计模式。本章展示了行为设计模式如何关注系统组件之间的交互以形成系统。
 
@@ -116,40 +78,36 @@ Aristides Villarreal Bravo 是 Java 开发者、NetBeans Dream团队成员以及
 
 第 9 章“响应式设计模式”考察了响应式设计模式的响应性、弹性、弹性和消息驱动特性。本章涵盖的具体设计模式包括异步通信、自动扩展、边界队列、舱壁、缓存、断路器、事件驱动通信、快速失败、故障处理、扇出和快速回复、幂等性、监控、发布者-订阅者、自包含和无状态模式。
 
-前言
+## 如何利用本书
 
-# 如何利用本书
+读者应该熟悉 Java 并能够编写、编译和执行 Java。为了执行本书中的示例，读者应拥有 64 位版本的 Windows 7（SP1）、8 或 10；运行 macOS 10.11 或更高版本的 Mac；或者运行 Linux GNOME 或 KDE 桌面的电脑。
 
-读者应该熟悉 Java 并能够编写、编译和执行 Java 。为了执行本书中的示例，读者应拥有 64 位版本的 Windows 7 (SP1)、8 或 10；运行 macOS 10.11 或更高版本的 Mac；或者运行 Linux GNOME 或 KDE 桌面的电脑。
+## 下载示例代码文件
 
-# 下载示例代码文件
-
-你可以通过 www.packt.com 账户下载本书的示例代码文件。如果你是在其他地方购买的手本书，可以访问 www.packt.com/support 并注册，以便文件直接通过电子邮件发送给你。
+你可以通过`www.packt.com`账户下载本书的示例代码文件。如果你是在其他地方购买的手本书，可以访问`www.packt.com/support`并注册，以便文件直接通过电子邮件发送给你。
 
 你可以按照以下步骤下载代码文件：
 
-- 1. 在 www.packt.com 登录或注册。
+1. 在`www.packt.com`登录或注册。
 2. 选择 SUPPORT（支持）选项卡。
 3. 点击 Code Downloads & Erratum（代码下载与勘误）。
 4. 在搜索框中输入书名并按照屏幕上的说明操作。
 
 文件下载完成后，请确保使用以下最新版本的解压或提取文件夹：
 
-* Windows 版的 WinRAR/7-Zip
+- Windows 版的 WinRAR/7-Zip
 - Mac 版的 Zipeg/iZip/UnRaX
 - Linux 版的 7-Zip/Peazip
 
-本书的代码包也托管在 GitHub 上，地址为 https://github.com/PacktPublishing/Hands-On-Design-Patterns-with-Java。如果代码更新，将在现有的 GitHub 仓库中更新。
+本书的代码包也托管在 GitHub 上，地址为`https://github.com/PacktPublishing/Hands-On-Design-Patterns-with-Java`。如果代码更新，将在现有的 GitHub 仓库中更新。
 
-我们还在丰富的书籍和视频目录中提供了其他代码包，位于 https://github.com/PacktPublishing/。快去看看吧！
+我们还在丰富的书籍和视频目录中提供了其他代码包，位于`https://github.com/PacktPublishing/`。快去看看吧！
 
-# 下载彩色图片
+## 下载彩色图片
 
-我们还提供了一个包含书中使用的截图/图表彩色图像的 PDF 文件。你可以在此处下载：https://www.packtpub.com/sites/default/files/downloads/9781789097700_ColorImages.pdf。
+我们还提供了一个包含书中使用的截图/图表彩色图像的 PDF 文件。你可以在此处下载：`https://www.packtpub.com/sites/default/files/downloads/9781789097700_ColorImages.pdf`。
 
-前言
-
-# 使用的规范
+## 使用的规范
 
 本书中使用了多种文本规范。
 
@@ -157,15 +115,15 @@ Aristides Villarreal Bravo 是 Java 开发者、NetBeans Dream团队成员以及
 
 代码块显示如下：
 
-```
+```java
 Mother() {
     System.out.println("Mother constructor executed.");
 }
 ```
 
-当我们希望你注意代码块的特定部分时，相关的行或项目将以**粗体**设置：
+当我们希望你注意代码块的特定部分时，相关的行或项目将以粗体设置：
 
-```
+```java
 public abstract class MotorHomeAbstractFactory {
     public abstract Frame createFrame();
     public abstract Style createStyle();
@@ -180,23 +138,23 @@ public abstract class MotorHomeAbstractFactory {
 
 提示和技巧显示如下所示。
 
-# 联系我们
+## 联系我们
 
 我们随时欢迎读者的反馈。
 
-**一般反馈**：如果你对本书的任何方面有疑问，请在邮件主题中注明书名，并发送邮件至我们的邮箱 customercare@packpub.com。
+**一般反馈**：如果你对本书的任何方面有疑问，请在邮件主题中注明书名，并发送邮件至我们的邮箱`customercare@packpub.com`。
 
-**勘误**：尽管我们尽力确保内容的准确性，但错误是不可避免的。如果你在书中发现错误，向向我们报告我们将不胜感激。请访问 www.pack.com/submit-errata，选择你的书籍，点击 Errata Submission Form（勘误提交表）链接并输入详情。
+**勘误**：尽管我们尽力确保内容的准确性，但错误是不可避免的。如果你在书中发现错误，向向我们报告我们将不胜感激。请访问`www.pack.com/submit-errata`，选择你的书籍，点击 Errata Submission Form（勘误提交表）链接并输入详情。
 
 **盗版**：如果你发现我们作品的任何非法复制，如果你能提供位置或网站名称，我们将不胜感激。
 
-**如果你感兴趣成为作者**：如果你对某个领域有专业知识并兴趣编写书籍，请访问 authors.packpub.com。
+**如果你感兴趣成为作者**：如果你对某个领域有专业知识并兴趣编写书籍，请访问`authors.packpub.com`。
 
-## 请评价
+### 请评价
 
 在你阅读并使用本书后，为什么不在购买的网站上留评价呢？潜在读者可以看到你的真实想法，我们也可以了解你对产品的看法。谢谢！
 
-关于 Packt 的更多信息，请访问 pack.com。
+关于 Packt 的更多信息，请访问`pack.com`。
 
 # 第一节：设计模式简介
 
@@ -217,20 +175,20 @@ public abstract class MotorHomeAbstractFactory {
 - 行为图（注：原文为 Behavior diagrams，此处笔误）
 - 结构图（原文为 Structural diagrams）
 
-## 技术要求
+### 技术要求
 
 本章没有特殊的技术要求。为了创建 UML 图，推荐使用以下开源软件工具：
 
-- Modelio，地址为 https://www.modelio.org
+- Modelio，地址为`https://www.modelio.org`
 
-Modelio 可以在运行以下操作系统的上运行：
+Modelio 可以在运行以下操作系统的电脑上运行：
 
-* Debian/Ubuntu
-* macOS X
-* RedHat/CentOS
-* Windows 7
-* Windows 8
-* Windows 10
+- Debian/Ubuntu
+- macOS X
+- RedHat/CentOS
+- Windows 7
+- Windows 8
+- Windows 10
 
 ### 介绍 UML
 
@@ -242,90 +200,77 @@ UML 图分为两种：行为图和结构图。两者都将在随后的章节中�
 
 行为图展示了系统组件如何通过交互形成一个系统。这里列出的四种图都是行为图，将在接下来的小节中简要描述：
 
-- * 活动图
-* 交互图
-* 状态机图
-* 用例图
+- 活动图
+- 交互图
+- 状态机图
+- 用例图
 
-
-
-
-统一建模语言入门
-
-第 1 章
-
-## 活动图 (Activity diagrams)
+## 活动图（Activity diagrams）
 
 活动图说明了系统中流程的流向。这种图用于可视化地记录系统内部的活动，也称为系统的过程或动态组件。
 
 接下来的活动图展示了咖啡店顾客下单时涉及的活动。起点是顶部的黑色圆圈。从那里开始，接收到一个订单。在“接收订单”（Receive Order）节点下方是一个水平的黑条，称为分叉（fork）。分叉之后有三个并行活动：制作饮料（Make Drink）、取饮料（Get Drink）和收集费用（Collect Payment）。这些活动随后汇聚到第二个黑条，称为汇聚（join）。当所有活动完成后，订单在底部的黑色圆圈结束。
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_23.png) 咖啡订单的活动图
+![咖啡订单的活动图](img/bcdf8abab5e2de6d67770104d49e5070_23.png)
 
-## 交互图 (Interaction diagrams)
+## 交互图（Interaction diagrams）
 
 交互图可视化地展示了系统组件如何相互作用。在下面的交互图中，你可以看到一个菱形表示决策，用于判断是新的订单还是已有的订单。
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_24.png) 咖啡订单的交互图
+![咖啡订单的交互图](img/bcdf8abab5e2de6d67770104d49e5070_24.png)
 
-## 统一建模语言入门 (Unified Modeling Language Primer)
+## 交互图的类型
 
 交互图有多种类型。这里列出了几种主要的类型：
 
-- 时序图 (Sequence diagrams)
-- 通信图 (Communication diagrams)
-- 时间图 (Timing diagrams)
+- 时序图（Sequence diagrams）
+- 通信图（Communication diagrams）
+- 时间图（Timing diagrams）
 
-## 时序图 (Sequence diagrams)
+## 时序图（Sequence diagrams）
 
 时序图用于描述特定用例的行为。在接下来的时序图中，我们可以看到用例的执行过程。时序图展示了系统对象之间的消息传递。当所有消息完成后，用例执行结束。
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_25.png) 咖啡订单的时序图
+![咖啡订单的时序图](img/bcdf8abab5e2de6d67770104d49e5070_25.png)
 
-## 通信图 (Communication diagrams)
+## 通信图（Communication diagrams）
 
 通信图关注系统对象之间的组织关系。在接下来的示例图中，我们可以看到系统组件的组织方式。
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_26.png) 咖啡订单的通信图
+![咖啡订单的通信图](img/bcdf8abab5e2de6d67770104d49e5070_26.png)
 
-## 时间图 (Timing diagrams)
+## 时间图（Timing diagrams）
 
-时间图提供了系统随时间变化的约束描述。在接下来的示例图中，展示了系统在不同状态之间切换的时间限制。 
+时间图提供了系统随时间变化的约束描述。在接下来的示例图中，展示了系统在不同状态之间切换的时间限制。
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_27.png) 咖啡订单的时间图
+![咖啡订单的时间图](img/bcdf8abab5e2de6d67770104d49e5070_27.png)
 
-## 状态机图 (State machine)
+## 状态机图（State machine）
 
 状态机图用于描述对象的行为。在接下来的示例图中，展示了对象在不同状态之间的转换。实心圆圈表示初始状态，空心圆圈表示结束状态。状态转换由特定条件时触发。
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_28.png) 咖啡订单的状态机图
+![咖啡订单的状态机图](img/bcdf8abab5e2de6d67770104d49e5070_28.png)
 
-## 用例图 (Use case diagrams)
+## 用例图（Use case diagrams）
 
 用例图展示了用户与系统之间的交互。在接下来的示例图中，我们可以看到参与者（Actor）与用例（Use Case）之间的关系。用例通常用椭圆表示，而参与者用小人图标表示。
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_29.png) 咖啡订单的用例图
+![咖啡订单的用例图](img/bcdf8abab5e2de6d67770104d49e5070_29.png)
 
-## 结构图 (Structural diagrams)
+## 结构图（Structural diagrams）
 
 结构图说明了系统的组件。这里列出的六种结构图将在文中简要介绍：
 
-- 类图 (Class diagrams)
-- 组件图 (Component diagrams)
-- 复合结构图 (Composite structure diagrams)
-- 部署图 (Deployment diagrams)
-- 对象图 (Object diagrams)
-- 包图 (Package diagrams)
-
-
-
-统一建模语言入门
-
-第一章
+- 类图（Class diagrams）
+- 组件图（Component diagrams）
+- 复合结构图（Composite structure diagrams）
+- 部署图（Deployment diagrams）
+- 对象图（Object diagrams）
+- 包图（Package diagrams）
 
 我们也可以用矩形框来表示复合结构，如下例所示：
 
-```Microwave
+```text
 << provided interfaces >>
 Lighting API
 << required interfaces >>
@@ -333,6 +278,7 @@ Display API
 Power UI
 Timer UI
 ```
+
 一个文本形式的复合结构图
 
 ## 部署图
@@ -341,7 +287,7 @@ Timer UI
 
 节点被绘制成三维矩形，代表软件对象的硬件，例如数据库。如下例所示，关联关系用线标注，并标记了所使用的通信协议类型。我们的示例显示 TCP/IP 为通信类型：
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_32_0.png)
+![部署图](img/bcdf8abab5e2de6d67770104d49e5070_32_0.png)
 
 部署图可能比这里提供的示例更复杂。然而，我们的示例已经提供了足够的见解，让你能够继续后续的章节。
 
@@ -352,28 +298,32 @@ Timer UI
 下面的示例描绘了四个对象及其层次结构。因为每个对象都是类的实例，所以它们由冒号和类名加下划线表示：
 
 | College of Computer Science :OrgUnit | CS Research Unit :OrgUnit |
-| :--- | :--- |
+| --- | --- |
 | building = "Grace Hopper Hall" | building = "Bruce Lee Memorial Center" |
-| parent |
+| parent |  |
 | VR Lab :OrgUnit | building = "Innovation Center" |
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_33_0.png)
+![对象图](img/bcdf8abab5e2de6d67770104d49e5070_33_0.png)
 
 ## 包图
 
 包图用于为大型系统提供高层的可视化描述。这些图非常简单，仅显示了系统组件是如何分组的。接下来的示例说明了嵌套包，从 Java 开始深入到 ArrayList：
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_34_0.png)
+![包图](img/bcdf8abab5e2de6d67770104d49e5070_34_0.png)
 
 ## 总结
 
 统一建模语言（UML）用于创建系统的可视化文档。这既可以用于设计系统，也可以用于记录系统。UML 被软件工程师、软件开发人员和其他专业人士广泛使用。
 
-14 种 UML 图中的两种是行为图和结构图。行为图说明了系统组件如何相互作用形成一个系统，包括活动图、交互图、状态机图和用例图。交互 UML 图有多种类型，包括序列图、通信图和时序图。
+
+
+14 种 UML 图中的两种是行为图和结构图。
+
+行为图说明了系统组件如何相互作用形成一个系统，包括活动图、交互图、状态机图和用例图。交互 UML 图有多种类型，包括序列图、通信图和时序图。
 
 结构图说明了系统的组件，包括类图、组件图、复合结构图、部署图、对象图和包图。
 
-在下一章——*面向对象的设计模式*中，我们将探索面向对象编程的中、高级概念、方法，以及它们在设计模式中的适用性。回顾面向对象编程的基本概念有助于确保对面向对象编程有深入的概念理解。还将提供面向对象编程设计模式原则的概述。
+在下一章——面向对象的设计模式中，我们将探索面向对象编程的中、高级概念、方法，以及它们在设计模式中的适用性。回顾面向对象编程的基本概念有助于确保对面向对象编程有深入的概念理解。还将提供面向对象编程设计模式原则的概述。
 
 ## 问题
 
@@ -390,11 +340,11 @@ Timer UI
 
 ## 延伸阅读
 
-- [UML 2.0 in Action: A project-based-tutorial](https://www.packpub.com/hardware-and-creative/uml-20-action-project-based-tutorial)
+- [UML 2.0 in Action: A project-based-tutorial](https://www.packtpub.com/hardware-and-creative/uml-20-action-project-based-tutorial)
 
 # 面向对象的设计模式
 
-在本章中，我们将探索面向对象编程（OOP）的中高级概念方法以及它们对设计模式的适用性。我们将回顾 OOP的基本概念以促进深入的概念理解。本章还涵盖了 OOP 设计模式的原则。
+在本章中，我们将探索面向对象编程（OOP）的中高级概念方法以及它们对设计模式的适用性。我们将回顾 OOP 的基本概念以促进深入的概念理解。本章还涵盖了 OOP 设计模式的原则。
 
 具体而言，本章将涵盖以下主题：
 
@@ -405,22 +355,20 @@ Timer UI
 
 ## 技术要求
 
-本章的代码可以在 https://github.com/PacktPublishing/Hands-On-Design-Patterns-with-Java/tree/master/Chapter02 找到。
+本章的代码可以在 `https://github.com/PacktPublishing/Hands-On-Design-Patterns-with-Java/tree/master/Chapter02` 找到。
 
 ## 面向对象编程简介
 
-面向对象编程（OOP）已经存在了几十年，大多数软件开发人员至少熟悉一种 OOP 语言，如 C 或 Java。OOP 的引入代表了从主流过程化编程技术的重大编程范式转变。在 OOP 编程中，重点是对象，而过程化编程的重点是过程。例如，一种自行车管理系统的过程化编程方法将关注它可能执行的步骤。而 OOP 方法将关注自行车，并将其建模为一个对象。通过将物理自行车表示为对象，我们可以定义该对象的特征以及相对于它可以采取的行为。
+面向对象编程（OOP）已经存在了几十年，大多数软件开发人员至少熟悉一种 OOP 语言，如 C 或 Java。OOP 的引入代表了从主流过程化编程技术的重大编程范式转变。在 OOP 编程中，重点是对象，而过程化编程的重点是过程。
+
+例如，一种自行车管理系统的过程化编程方法将关注它可能执行的步骤。而 OOP 方法将关注自行车，并将其建模为一个对象。通过将物理自行车表示为对象，我们可以定义该对象的特征以及相对于它可以采取的行为。
 
 在本节中，我们将涵盖 OOP 的基础知识，并使用自行车对象作为共同参考。本节细分为：
 
 - OOP 的主要优点
 - 示例 OOP 类
 - 实例变量
-- 此参考
-
-
-
-
+- 此引用
 
 ## 封装
 
@@ -432,12 +380,14 @@ Timer UI
 
 ## 多态
 
-多态是一个 OOP 程序员可能熟悉的词汇。该术通常被定义为出现多种形式。在 OOP 中，多态意味着不同类型的对象可以通过公共接口进行访问。这可以通过编写重载构造函数和方法来实现，也可以通过子类重写父类方法来实现。让我们通过 `instanceof` 关键字简单查看：
+多态是一个 OOP 程序员可能熟悉的词汇。该术通常被定义为出现多种形式。在 OOP 中，多态意味着不同类型的对象可以通过公共接口进行访问。这可以通过编写重载构造函数和方法来实现，也可以通过子类重写父类方法来实现。
 
-- 1. 首先，我们创建一个 `Vehicle` 类，它继承 `Object` 类。
-- 2. 接下来，我们创建一个 `TwoWheled` 类，它继承 `Vehicle` 类。
-- 3. 然后，我们创建一个 `Bicycle` 类，它继承 `TwoWheled` 类。
-- 4. 最后，我们创建一个 `Driver` 类，它创建 `Bicycle` 类的实例。
+让我们通过 `instanceof` 关键字简单查看：
+
+1. 首先，我们创建一个 `Vehicle` 类，它继承 `Object` 类。
+2. 接下来，我们创建一个 `TwoWheled` 类，它继承 `Vehicle` 类。
+3. 然后，我们创建一个 `Bicycle` 类，它继承 `TwoWheled` 类。
+4. 最后，我们创建一个 `Driver` 类，它创建 `Bicycle` 类的实例。
 
 ```java
 public class Vehicle {
@@ -485,7 +435,7 @@ public class Driver {
 
 如前面所示，`Bicycle` 类的实例也是 `TwoWheled`、`Vehicle` 和 `Object` 的实例。这使得 `myBike` 对象具有多态性。
 
- OOP 类
+## OOP 类
 
 让我们通过添加属性和行为进一步开发 `Bicycle` 类。属性将是齿轮数量、价格、重量和颜色。以下是源码：
 
@@ -562,7 +512,7 @@ private double weight = 0.0;
 private String color = "";
 ```
 
-## this 引用
+## `this` 引用
 
 在 Java 中，我们使用 `this` 代表当前对象。以下代码接收一个参数并将其赋值给：
 
@@ -617,9 +567,9 @@ public void setColor(String theColor) {
 }
 ```
 
-### Driver 类
+### `Driver` 类
 
-虽然 Driver 类并非特定于 OOP 语言，但它们是一种最佳实践方法。
+虽然 `Driver` 类并非特定于 OOP 语言，但它们是一种最佳实践方法。
 
 ## 构造函数
 
@@ -645,15 +595,11 @@ public class Driver {
 }
 ```
 
-
-
-
-
 # 面向对象的设计模式
 
 # 第 2 章
 
-前面的代码展示了 Driver 类。以下是调用 `outputData()` 方法后的输出。
+前面的代码展示了 `Driver` 类。以下是调用 `outputData()` 方法后的输出。
 
 | 自行车详情： |
 | :--- |
@@ -698,7 +644,7 @@ Bicycle(int nbrOfGears, double theCost, double theWeight, String aColor) {
 Bicycle myBike1 = new Bicycle();
 ```
 
-在创建 Bicycle 对象时，我们只需根据重载方法预期的参数传递适当的参数，就可以使用重载方法之一。接下来的 Driver 类展示了四个 Bicycle 对象的创建，其中一个使用了不同的构造函数：
+在创建 `Bicycle` 对象时，我们只需根据重载方法预期的参数传递适当的参数，就可以使用重载方法之一。接下来的 `Driver` 类展示了四个 `Bicycle` 对象的创建，其中一个使用了不同的构造函数：
 
 ```java
 public class Driver {
@@ -718,7 +664,7 @@ public class Driver {
 }
 ```
 
-如从提供的提供的输出所示，每个 Bicycle 对象都是用不同的构造函数创建的。重载构造函数增加了对象创建的灵活性：
+如从提供的提供的输出所示，每个 `Bicycle` 对象都是用不同的构造函数创建的。重载构造函数增加了对象创建的灵活性：
 
 | 自行车详情： |
 | :--- |
@@ -728,24 +674,36 @@ public class Driver {
 | 颜色 : |
 
 自行车车详情：
+
 齿轮 : 0
+
 价格 : 0.0
+
 重量 : 0.0 lbs
+
 颜色 : Brown
 
 自行车车详情：
+
 齿轮 : 22
+
 价格 : 0.0
+
 重量 : 0.0 lbs
+
 颜色 : |
 
 自行车车详情：
+
 齿轮 : 22
+
 价格 : 319.99
+
 重量 : 13.5 lbs
+
 颜色 : White
 
-我们还可以重载方法。例如，我们已经在 Bicycle 类中多次使用了 `outputData()` 方法。让我们重载该方法，以便我们可以向输出传递额外的要打印的文本。以下是该方法的两个版本：
+我们还可以重载方法。例如，我们已经在 `Bicycle` 类中多次使用了 `outputData()` 方法。让我们重载该方法，以便我们可以向输出传递额外的要打印的文本。以下是该方法的两个版本：
 
 ```java
 // 输出 Bicycle 信息
@@ -758,6 +716,8 @@ public void outputData() {
 }
 ```
 
+
+
 ```java
 // 输出 Bicycle 信息 - 重载
 public void outputData(String text) {
@@ -769,7 +729,7 @@ public void outputData(String text) {
 }
 ```
 
-正如前面的代码所示，我们的重载方法接受一个 String 参数并将其整合在打印行中。我们可以如下代码所示修改 Driver 类：
+正如前面的代码所示，我们的重载方法接受一个 `String` 参数并将其整合在打印行中。我们可以如下代码所示修改 `Driver` 类：
 
 ```java
 myBike1.outputData("Nbr 1");
@@ -809,11 +769,11 @@ myBike4.outputData("Nbr 4");
 
 OOP 为我们提供了使用方法链的机会，即在单个语句中进行多次方法调用的过程。语法如下：
 
-```
+```java
 object.method1().method2().method3();
 ```
 
-使用提供的语法，我们可以演示方法链的过程。第一个对象调用 `method1()`，返回调用对象。接下来，该返回的对象调用 `method2()`，返回调用对象。在这里可以看到该过程。它是从左到右工作的。因此，我们可以像这里所示在 Driver 类中实现它：
+使用提供的语法，我们可以演示方法链的过程。第一个对象调用 `method1()`，返回调用对象。接下来，该返回的对象调用 `method2()`，返回调用对象。在这里可以看到该过程。它是从左到右工作的。因此，我们可以像这里所示在 `Driver` 类中实现它：
 
 ```java
 // 使用方法链的示例
@@ -823,8 +783,8 @@ myBike5.setColor("Peach").setGears(32).outputData("Number ");
 
 在此代码之前，我们需要对想要在方法链中使用的每个方法进行两个更改：
 
-- 为方法添加返回类型
-- 为每个方法添加 `return this;`
+- 为方法添加返回类型。
+- 为每个方法添加 `return this;`。
 
 以下是修改后的示例：
 
@@ -835,7 +795,7 @@ public Bicycle setGears(int nbr) {
 }
 ```
 
-一旦完成了这些更改，我们就可以运行 Driver 类：
+一旦完成了这些更改，我们就可以运行 `Driver` 类：
 
 | 自行车数字 5 详情： |
 | :--- |
@@ -850,17 +810,17 @@ public Bicycle setGears(int nbr) {
 
 到为止，我们讨论了采用多类方法来设计面向对象的程序。我们还使用示例演示了访问器（accessors）、修改（mutators）、构造函数和驱动类的使用。在学习本书介绍的设计模式时，有三个关键原则需要记住：
 
-- 创建简洁的对象
-- 封装以保护
-- 有目的地地使用继承
+- 创建简洁的对象。
+- 封装以保护。
+- 有目的地地使用继承。
 
 这些原则将在后续章节中探讨。
 
 ## 创建简洁的对象
 
-对象是 OOP 的核心。这一原则旨在提醒设计师和开发者将对象隔离到特定的模型。以我们的 Bicycle 类为例，我们将创建包含适当属性和行为的 Bicycle 对象。自行车属性使用了齿轮、价格和颜色。我们为这些属性的每一个一个创建了访问器和修改。我们还创建一个回属性到输出控制台的方法。Bicycle 对象没有添加行为，但我们可以包含如 `upgrade()` 等行为。
+对象是 OOP 的核心。这一原则旨在提醒设计师和开发者将对象隔离到特定的模型。以我们的 `Bicycle` 类为例，我们将创建包含适当属性和行为的 `Bicycle` 对象。自行车属性使用了齿轮、价格和颜色。我们为这些属性的每一个一个创建了访问器和修改。我们还创建一个回属性到输出控制台的方法。`Bicycle` 对象没有添加行为，但我们可以包含如 `upgrade()` 等行为。
 
-我们没有在 Bicycle 类中包含的是与 Bicycle 对象附属的属性和行为。这些示例包括所有者的地址、假期详情等。虽然这些数据可能与特定的自行车有关，但它们并不是我们需要建模的真实自行车的一部分。
+我们没有在 `Bicycle` 类中包含的是与 `Bicycle` 对象附属的属性和行为。这些示例包括所有者的地址、假期详情等。虽然这些数据可能与特定的自行车有关，但它们并不是我们需要建模的真实自行车的一部分。
 
 遵循这一原则有助于确保我们的代码简洁、易于维护且具有移植性。
 
@@ -872,20 +832,20 @@ public Bicycle setGears(int nbr) {
 
 继承是一种强大的 OOP 结构。我们可以有效地建模对象，正如自行车所示。我们知道存在以下关系：
 
-- 自行车是双轮的
-- 自行车是车辆
-- 自行车是一个对象
+- 自行车是双轮的。
+- 自行车是车辆。
+- 自行车是一个对象。
 
 当我们编写继承时，应该使用以下伪代码逻辑执行“IS A”检查：
 
-```
+```text
 如果 <子对象> 是 <父对象> 则关系 = True;
 否则关系 = False
 ```
 
 如果我们的“IS A”检查失败，则应该避免继承。这是一个重要的测试，通过专门使用，可以帮助确保对象之间的继承线是有效的。
 
-让我们为 Bicycle 类创建“IS A”检查。我们将使用 Java 的 `instanceof` 运算符来实现。这里代码分为三个部分。第一部分对 myBicycle6 进行检查，查看它是否是 Bicycle、TwoWheled、Vehicle 和 Object 的实例：
+让我们为 `Bicycle` 类创建“IS A”检查。我们将使用 Java 的 `instanceof` 运算符来实现。这里代码分为三个部分。第一部分对 `myBicycle6` 进行检查，查看它是否是 `Bicycle`、`TwoWheeled`、`Vehicle` 和 `Object` 的实例：
 
 ```java
 // IS A 检查
@@ -905,10 +865,6 @@ else
     System.out.println("myBicycle6 Instance of TwoWheled: False");
 ```
 
-
-
-
-
 ## 面对象设计模式
 
 ```java
@@ -923,7 +879,7 @@ else
     System.out.println("myBike6 Instance of Object: False");
 ```
 
-第二部分对 myTwoWheeled 执行检查，并检查它是否是 Bicycle、TwoWheeled、Vehicle 和 Object 的实例：
+第二部分对 `myTwoWheeled` 执行检查，并检查它是否是 `Bicycle`、`TwoWheeled`、`Vehicle` 和 `Object` 的实例：
 
 ```java
 // focus on TwoWheeled
@@ -950,7 +906,7 @@ else
     System.out.println("myTwoWheeled Instance of Object: False");
 ```
 
-第三部分也是最后一部分对 myVehicle 执行检查，并检查它是否是 Bicycle、TwoWheeled、Vehicle 和 Object 的实例：
+第三部分也是最后一部分对 `myVehicle` 执行检查，并检查它是否是 `Bicycle`、`TwoWheeled`、`Vehicle` 和 `Object` 的实例：
 
 ```java
 // focus on Vehicle
@@ -965,32 +921,34 @@ if (myVehicle instanceof TwoWheeled)
     System.out.println("myVehicle Instance of TwoWheeled: True");
 else
     System.out.println("myVehicle Instance of TwoWheeled: False");
+
 if (myVehicle instanceof Vehicle)
     System.out.println("myVehicle Instance of Vehicle: True");
 else
     System.out.println("myVehicle Instance of Vehicle: False");
+
 if (myVehicle instanceof Object)
     System.out.println("myVehicle Instance of Object: True");
 else
     System.out.println("myVehicle Instance of Object: False");
 ```
 
-这三个部分的输出是此处提供的代码。如你所示，myBike6 是 Bicycle、TwoWheeled、Vehicle 和 Object 的实例；myTwoWheeled 对象是 TwoWheeled、Vehicle 和 Object 的实例；而 myVehicle 对象是 Vehicle 和 Object 的实例。我们可以看到 myTwoWheeled 对象不是 Vehicle 或 Object 的实例；myVehicle 对象不是 Bicycle 或 TwoWheeled 的实例：
+这三个部分的输出是此处提供的代码。如你所示，`myBike6` 是 `Bicycle`、`TwoWheeled`、`Vehicle` 和 `Object` 的实例；`myTwoWheeled` 对象是 `TwoWheeled`、`Vehicle` 和 `Object` 的实例；而 `myVehicle` 对象是 `Vehicle` 和 `Object` 的实例。我们可以看到 `myTwoWheeled` 对象不是 `Vehicle` 或 `Object` 的实例；`myVehicle` 对象不是 `Bicycle` 或 `TwoWheeled` 的实例：
 
 | "IS A" 检查结果 |
 | :--- |
-| myBike6 Instance of Bicycle: True |
-| myBike6 Instance of TwoWheeled: True |
-| myBike6 Instance of Vehicle: True |
-| myBike6 Instance of Object: True |
-| myTwoWheeled Instance of Bicycle: False |
-| myTwoWheeled Instance of TwoWheeled: True |
-| myTwoWheeled Instance of Vehicle: True |
-| myTwoWheeled Instance of Object: True |
-| myVehicle Instance of Bicycle: False |
-| myVehicle Instance of TwoWheeled: False |
-| myVehicle Instance of Vehicle: True |
-| myVehicle Instance of Object: True |
+| `myBike6` Instance of `Bicycle`: True |
+| `myBike6` Instance of `TwoWheeled`: True |
+| `myBike6` Instance of `Vehicle`: True |
+| `myBike6` Instance of `Object`: True |
+| `myTwoWheeled` Instance of `Bicycle`: False |
+| `myTwoWheeled` Instance of `TwoWheeled`: True |
+| `myTwoWheeled` Instance of `Vehicle`: True |
+| `myTwoWheeled` Instance of `Object`: True |
+| `myVehicle` Instance of `Bicycle`: False |
+| `myVehicle` Instance of `TwoWheeled`: False |
+| `myVehicle` Instance of `Vehicle`: True |
+| `myVehicle` Instance of `Object`: True |
 
 "IS A" 检查结果
 
@@ -998,22 +956,23 @@ else
 
 ## 学习完整的 OOP 类
 
-在本章中，我们使用了一个 Bicycle 类。如下所示，我们创建了一个继承层次结构来演示 OOP 的一个核心特性。在 Java 中，所有对象都继承自 Object 类。我们的层次结构是 Bicycle 继承自 TwoWheeled，TwoWheeled 继承自 Vehicle，Vehicle 继承自 Object：
+在本章中，我们使用了一个 `Bicycle` 类。如下所示，我们创建了一个继承层次结构来演示 OOP 的一个核心特性。在 Java 中，所有对象都继承自 `Object` 类。我们的层次结构是 `Bicycle` 继承自 `TwoWheeled`，`TwoWheeled` 继承自 `Vehicle`，`Vehicle` 继承自 `Object`：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_55_0.png)
 
-为了让 Bicycle 类按照预期的层次结构工作，我们为 Vehicle 和 TwoWheeled 创建了类。以下是类：
+为了让 `Bicycle` 类按照预期的层次结构工作，我们为 `Vehicle` 和 `TwoWheeled` 创建了类。以下是类：
 
 ```java
 public class Vehicle {
 }
+
 public class TwoWheeled extends Vehicle {
 }
 ```
 
-Vehicle 和 TwoWheeled 类没有向 Bicycle 类提供任何内容。通常，每个类都会有与其相关的属性和行为。
+`Vehicle` 和 `TwoWheeled` 类没有向 `Bicycle` 类提供任何内容。通常，每个类都会有与其相关的属性和行为。
 
-在本章中不断完善的完整 Bicycle 类在后续章节中提供。第一部分包含类定义和四个实例变量：
+在本章中不断完善的完整 `Bicycle` 类在后续章节中提供。第一部分包含类定义和四个实例变量：
 
 ```java
 public class Bicycle extends TwoWheeled {
@@ -1027,7 +986,7 @@ public class Bicycle extends TwoWheeled {
 
 ## 面对象设计模式
 
-Bicycle 类的下一部分包含构造函数。第一个构造函数不接受任何参数，是默认构造函数。第二个构造函数接受一个 String 参数。第三个构造函数接受一个 int 参数。最后一个构造函数接受四个参数：
+`Bicycle` 类的下一部分包含构造函数。第一个构造函数不接受任何参数，是默认构造函数。第二个构造函数接受一个 `String` 参数。第三个构造函数接受一个 `int` 参数。最后一个构造函数接受四个参数：
 
 ```java
 // constructor - default
@@ -1074,7 +1033,7 @@ public void outputData(String bikeText) {
 
 ## 面对象设计模式 第二章
 
-Bicycle 类的下一部分包含每个实例变量的访问器方法（Accessor）：
+`Bicycle` 类的下一部分包含每个实例变量的访问器方法（Accessor）：
 
 ```java
 // Accessors (Getters)
@@ -1094,6 +1053,8 @@ public String getColor() {
     return color;
 }
 ```
+
+
 
 我们类的最后部分包含每个实例变量的变器方法（Mutator）：
 
@@ -1116,9 +1077,9 @@ public void setColor(String theColor) {
 }
 ```
 
-我们对 Driver 类进行了一些更改。该类在多个连续章节中提供。代码包含了用于组织和标识每个代码的注释：
+我们对 `Driver` 类进行了一些更改。该类在多个连续章节中提供。代码包含了用于组织和标识每个代码块的注释：
 
-- 1. 代码代码块定义了类，包含了 main 方法，创建了 Bicycle 实例并提供了变器的示例调用。然后提供了一个示例输出语句，调用了 `getColor()` 访问器方法：
+1. 代码块定义了类，包含了 `main` 方法，创建了 `Bicycle` 实例并提供了变器的示例调用。然后提供了一个示例输出语句，调用了 `getColor()` 访问器方法：
 
 ```java
 public class Driver {
@@ -1134,7 +1095,7 @@ public class Driver {
 }
 ```
 
-- 2. 代码代码块提供了重载构造函数的示例调用。创建了四个 Bicycle 对象实例，每个使用不同的重载构造函数：
+2. 代码块提供了重载构造函数的示例调用。创建了四个 `Bicycle` 对象实例，每个使用不同的重载构造函数：
 
 ```java
 // 重载构造函数的示例调用
@@ -1144,7 +1105,7 @@ Bicycle myBike3 = new Bicycle(22);
 Bicycle myBike4 = new Bicycle(22, 319.99, 13.5, "White");
 ```
 
-- 3. 我们的第三代码代码块对重载的 `outputData()` 方法进行了次调用：
+3. 第三个代码块对重载的 `outputData()` 方法进行了调用：
 
 ```java
 myBike1.outputData("Nbr 1");
@@ -1153,14 +1114,11 @@ myBike3.outputData("Nbr 3");
 myBike4.outputData("Nbr 4");
 ```
 
+# 面向对象设计模式
 
+## 第 2 章
 
-
-# 面对象设计模式
-
-# 第 2 章
-
-### 4. 第四个代码块提供了一个方法链调用的示例：
+4. 第四个代码块提供了一个方法链调用的示例：
 
 ```java
 // Example using method call chaining
@@ -1230,13 +1188,13 @@ else
 ```
 
 ```java
-if (myTwoWheeled instanceof Object)
+if (myTwoWheled instanceof Object)
     System.out.println("myTwoWheeled Instance of Object: True");
 else
     System.out.println("myTwoWheeled Instance of Object: False");
 ```
 
-- 7. 第七也是最后一个代码块提供了针对 `Vehicle` 类的“是关系”检查。我们首先创建一个 `Vehicle` 实例，然后对新创建的 `myVehicle` 对象进行检查：
+7. 第七也是最后一个代码块提供了针对 `Vehicle` 类的“是关系”检查。我们首先创建一个 `Vehicle` 实例，然后对新创建的 `myVehicle` 对象进行检查：
 
 ```java
 // focus on Vehicle
@@ -1282,23 +1240,27 @@ else
 
 本章从 OOP 的介绍开始。可移植性、继承、封装和多态被认为是 OOP 的主要优势，并对其进行了探讨。我们详细检查了一个示例 OOP 类。该类即 `Bicycle` 类被用于演示关键的 OOP 概念，包括实例变量、`this` 引用、访问器、修改器、驱动类、构造函数和方法链。本章以关键的 OOP 原则结束：创建简洁的对象、为了保护而进行封装，以及有目的的继承。
 
-在下一章“行为设计模式”中，我们将探索行为设计分类及其各个具体的模式模式，包括责任链、中介者、备忘录、空对象、观察者、状态、策略、模板方法和访问者。我们将研究解决这些挑战的编程问题和相应的设计模式。
+在下一章“行为设计模式”中，我们将探索行为设计分类及其各个具体的模式，包括责任链、中介者、备忘录、空对象、观察者、状态、策略、模板方法和访问者。我们将研究解决这些挑战的编程问题和相应的设计模式。
 
 ## 问题
 
-- 1. OOP 语言的主要优势是什么？
-- 2. 哪些可移植性、继承、封装和多态被认为是 OOP 的主要优势？
-- 3. 详细检查了一个示例 OOP 类？
-- 4. 该类（`Bicycle` 类）用于演示哪些关键的 OOP 概念，包括实例变量、`this` 引用、访问器、修改器、驱动类、构造函数和方法链？
-- 5. 本章以哪些关键 OOP 原则结束——创建简洁的对象、为了保护而进行封装以及有目的的继承？
-- 6. 在下一章“行为设计模式”中，我们将探索行为设计分类及其各个具体的模式，包括责任链、中介者、备忘录、空对象、观察者、状态、策略、模板方法和访问者？
-- 7. 我们将研究解决这些挑战的编程问题和相应的设计模式？
+1. OOP 语言的主要优势是什么？
 
+2. 哪些可移植性、继承、封装和多态被认为是 OOP 的主要优势？
 
+3. 详细检查了一个示例 OOP 类？
 
+4. 该类（`Bicycle` 类）用于演示哪些关键的 OOP 概念，包括实例变量、`this` 引用、访问器、修改器、驱动类、构造函数和方法链？
+
+5. 本章以哪些关键 OOP 原则结束——创建简洁的对象、为了保护而进行封装以及有目的的继承？
+
+6. 在下一章“行为设计模式”中，我们将探索行为设计分类及其各个具体的模式，包括责任链、中介者、备忘录、空对象、观察者、状态、策略、模板方法和访问者？
+
+7. 我们将研究解决这些挑战的编程问题和相应的设计模式？
 
 # 行为型模式
-# 第 3 章
+
+## 第 3 章
 
 - **命令模式 (Command pattern)**：允许在不知道接收者细节甚至不知道请求具体内容的情况下发送请求。
 - **解释器模式 (Interpreter pattern)**：用于建立语法表示以及一个解释该语言的解释器。
@@ -1314,11 +1276,11 @@ else
 
 ## 理解责任链模式
 
-责任链设计模式的目的涉及发送者和接收者。具体来说，责任链设计模式要求将发送者和接收者解耦。对象可以被发送给系列接收者，而发送者无需担心由哪个接收者处理该请求。请求沿着接收者链发送，只有其中一个会处理该请求。让我们来看一些相关的例子。
+责任链设计模式的目的涉及发送者和接收者。具体来说，责任链设计模式要求将发送者和接收者解耦。对象可以被发送给一系列接收者，而发送者无需担心由哪个接收者处理该请求。请求沿着接收者链发送，只有其中一个会处理该请求。让我们来看一些相关的例子。
 
 考虑一个每天处理数千封入站邮件的大型客户服务机构。我们不需要让某人逐一查看每封邮件以确定由哪个部门处理该邮件，而是可以使用责任链设计模式编写一个 Java 程序，将邮件沿着链发送，以便它们由相应的部门进行处理。
 
-另一个例子是呼叫中心。许多呼叫中心现在要求呼叫者简述来电目的，然后将呼叫者置于队列中。呼叫者的简描述会被记录并对关键词进行分析。电话将沿着链路由，然后由相应的代理处理。如果代理接到的电话不符合其职责（例如，是关于账单的，而该代理负责货运），则可以将呼叫者发送到链的更下游。
+另一个例子是呼叫中心。许多呼叫中心现在要求呼叫者简述来电目的，然后将呼叫者置于队列中。呼叫者的简短描述会被记录并对关键词进行分析。电话将沿着链路传递，然后由相应的代理处理。如果代理接到的电话不符合其职责（例如，是关于账单的，而该代理负责货运），则可以将呼叫者发送到链的更下游。
 
 我们将进一步探讨第三个示例，涉及大学的入站邮件。该大学有几个功能区域，并希望确保邮件被路由到相应的团队。我们将查看用于该场景的用例、UML 类图以及实现责任链设计模式所需的源码。
 
@@ -1328,25 +1290,21 @@ else
 
 | 关键词 | 大学团队 | Java 处理器 |
 | :--- | :--- | :--- |
-| academic | 学术团队 | AcademicEmailHandler() |
-| alumni, transcript | 校友事务 | AlumniEmailHandler() |
-| advising, schedule, course | 学业指导 | AdvisingEmailHandler() |
-| financial, student, tuition | 财务人员 | FinanceEmailHandler() |
-| career, job, faculty | 人力资源 | HREmailHandler() |
-| other | 管理团队 | AdminEmailHandler() |
+| academic | 学术团队 | `AcademicEmailHandler()` |
+| alumni, transcript | 校友事务 | `AlumniEmailHandler()` |
+| advising, schedule, course | 学业指导 | `AdvisingEmailHandler()` |
+| financial, student, tuition | 财务人员 | `FinanceEmailHandler()` |
+| career, job, faculty | 人力资源 | `HREmailHandler()` |
+| other | 管理团队 | `AdminEmailHandler()` |
 
 如表所示，我们识别了处理器类。从表中可以看出，我们识别了处理器类。
 
 在演示责任链设计模式之前，我们将查看该场景的用例、UML 类图以及实现该设计模式所需的源码。
 
-
-
-
-
+```java
 // 我们不需要在 admin 之后设置下一个邮件处理器
 // 因为它是责任链的末端
 
-```java
 // 这一行将启动责任链
 academic.processEmailHandler(String emailText);
 protected abstract String[] keywords();
@@ -1357,7 +1315,7 @@ protected abstract void processEmailFinal(String emailText);
 
 ### 学术邮件处理器
 
-`AcademicEmailHandler` 类继承自 `MainHandler` 类。它分配了学术邮件处理器的特定关键词，并包含了 `processEmailFinal()` 方法：
+`AcademicEmailHandler` 类继承自 `MainHandler` 类。它分配了学术邮件处理器的特定关键词，并包含 `processEmailFinal()` 方法：
 
 ```java
 public class AcademicEmailHandler extends MainHandler {
@@ -1382,7 +1340,7 @@ public class AcademicEmailHandler extends MainHandler {
 
 ### 校友邮件处理器
 
-`AlumniEmailHandler` 类继承自 `MainEmailHandler` 类。它分配了校友邮件处理器的特定关键词，并包含了 `processEmailFinal()` 方法：
+`AlumniEmailHandler` 类继承自 `MainEmailHandler` 类。它分配了校友邮件处理器的特定关键词，并包含 `processEmailFinal()` 方法：
 
 ```java
 public class AlumniEmailHandler extends MainEmailHandler {
@@ -1402,6 +1360,8 @@ public class AlumniEmailHandler extends MainEmailHandler {
     }
 }
 ```
+
+
 
 `processEmailFinal()` 方法仅通知用户校友处理器已处理了收到的邮件。
 
@@ -1512,10 +1472,6 @@ public class AdminEmailHandler extends MainErrorHandler {
 
 # 第3章
 
-
-
-
-
 # 行为设计模式
 
 ```java
@@ -1577,6 +1533,7 @@ public void sliderDecrease() {
 ```
 
 # 行为设计模式
+
 第 3 章
 
 滑块值可以根据控制盒集成的系统来管理温度、音量、数量或其他值。这演示了命令设计模式。
@@ -1594,6 +1551,7 @@ public void sliderDecrease() {
 我们将通过一个简单的数字转字符场景来演示解释器设计模式。我们的代码解释器（Code Interpreter）程序将接受数字输入并将其翻译为一系列字符。例如，输入 319 可能会返回值 YES。我们将使用一个表达式接口和三个类来演示这个相对简单的案例。
 
 行为设计模式
+
 第 3 章
 
 下面的截图显示了在用户输入的情况下示例程序的输出：
@@ -1624,8 +1582,11 @@ UML 类图——代码解释器示例
 代码解释器应用程序是解释器设计模式的一个示例实现。我们的应用程序由以下组件组成：
 
 - Expression 接口
+
 - MapIntToCharacters 类
+
 - Conversion 类
+
 - InterpreterDriver 类
 
 ## Expression 接口
@@ -1702,6 +1663,7 @@ public class Conversion {
 ```
 
 行为设计模式
+
 第 3 章
 
 前面的代码实现了整数的十位映射。
@@ -1713,7 +1675,9 @@ public class Conversion {
 除了构造方法外，还有一个 `interpret()` 方法执行以下操作：
 
 1. 使用 `Scanner` 类
+
 2. 实例化一个新的 `Expression` 实例
+
 3. 在新的 `Expression` 上调用 `interpret()` 方法
 
 ```java
@@ -1749,10 +1713,6 @@ public class InterpreterDriver {
 }
 ```
 
-
-
-
-
 行为设计模式
 
 第 3 章
@@ -1774,25 +1734,27 @@ Decrypted Message: YES
 
 迭代器设计模式的目的是在不共享封装的数据结构的情况下，允许对对象的成员进行访问。使用迭代器模式有两个主要动机。首先，并不是所有数据都以相同的方式存储。例如，一个聚合其他供应商内容的在线商店可能有一个供应商使用数组（array），另一个供应商使用列表（list），而第三个则使用 `ArrayList`。第二个原因是避免暴露数据结构。存储方式的可变性和数据安全都可以通过迭代器模式来解决。
 
-迭代器模式通过使用 `java.util` 包中的 `Iterator` 接口来实现的。
+
+
+迭代器模式通过使用`java.util`包中的`Iterator`接口来实现。
 
 我们将查看一个简单的用例、UML 类图以及实现该场景下迭代器模式所需的源码。
 
 ### 用例
 
-实现迭代器模式本质上是利用了 Java 的 `Iterator` 接口。我们将使用一个单类示例，创建一个字符串的 `ArrayList` 并使用迭代器遍历该列表，打印每个元素。
+实现迭代器模式本质上是利用了 Java 的`Iterator`接口。我们将使用一个单类示例，创建一个字符串的`ArrayList`并使用迭代器遍历该列表，打印每个元素。
 
 ## UML 类图
 
-Java 的 `Iterator` 接口是 `java.util` 包的一部分，也是 Java 集合框架的成员。如你在 UML 类图中所示，该接口包含了四个方法：
+Java 的`Iterator`接口是`java.util`包的一部分，也是 Java 集合框架的成员。如你在 UML 类图中所示，该接口包含了四个方法：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_86_0.png)
 
-`forEachRemaining()` 方法遍历对象的元素。`hasNext()` 方法根据是否还有更多迭代需要来返回一个布尔值。`next()` 方法简单地返回下一个顺序迭代元素。`remove()` 方法从对象中删除最后一个迭代的元素。
+`forEachRemaining()`方法遍历对象的元素。`hasNext()`方法根据是否还有更多迭代需要来返回一个布尔值。`next()`方法简单地返回下一个顺序迭代元素。`remove()`方法从对象中删除最后一个迭代的元素。
 
 ## 编写设计模式
 
-我们源码的第一部分包含了 `ArrayList` 和 `Iterator` 的导入语句。在 `main()` 方法中，我们创建了一个字符串的 `colonies ArrayList`。然后我们向 `ArrayList` 中填充了 12 个元素：
+我们源码的第一部分包含了`ArrayList`和`Iterator`的导入语句。在`main()`方法中，我们创建了一个字符串的`colonies ArrayList`。然后我们向`ArrayList`中填充了 12 个元素：
 
 ```java
 import java.util.ArrayList;
@@ -1813,36 +1775,39 @@ public class IteratorExample {
         colonies.add("Libran");
         colonies.add("Picon");
         colonies.add("Sagittaron");
-```
-
-```行为设计模式
-
-```java
-colonies.add("Scorpia");
-colonies.add("Tauron");
-colonies.add("Virgo");
-```
-
-源码的后半部分做了三件事。首先，实例化了一个迭代器 `myIterator`。接下来，向控制台打印了一个简单的文本头。最后，代码遍历 `ArrayList` 并打印每个元素：
-
-```java
-// 实例化迭代器
-Iterator myIterator = colonies.iterator();
-
-// 控制台输出
-System.out.println("\t\nOriginal Colonies of Kobol:");
-
-// 遍历列表
-while (myIterator.hasNext()) {
-    System.out.println("\t\t" + myIterator.next());
+        colonies.add("Scorpia");
+        colonies.add("Tauron");
+        colonies.add("Virgo");
+    }
 }
 ```
 
-迭代能够进行，无需知道 `colonies` 对象将其数据存储在 `ArrayList` 中。
+源码的后半部分做了三件事。首先，实例化了一个迭代器`myIterator`。接下来，向控制台打印了一个简单的文本头。最后，代码遍历`ArrayList`并打印每个元素：
+
+```java
+// 实例化迭代器
+
+Iterator myIterator = colonies.iterator();
+
+// 控制台输出
+
+System.out.println("\t\nOriginal Colonies of Kobol:");
+
+// 遍历列表
+
+while (myIterator.hasNext()) {
+
+    System.out.println("\t\t" + myIterator.next());
+
+}
+```
+
+迭代能够进行，无需知道`colonies`对象将其数据存储在`ArrayList`中。
 
 我们示例应用程序的输出所示：
 
 | Original Colonies of Kobol: |
+| --- |
 | Aerlion |
 | Aquaria |
 | Canceron |
@@ -1856,7 +1821,7 @@ while (myIterator.hasNext()) {
 | Tauron |
 | Virgo |
 
-迭代器应用输出
+迭代器应用输出。
 
 本节介绍了源码和输出，展示了迭代器设计模式。
 
@@ -1873,6 +1838,7 @@ while (myIterator.hasNext()) {
 各个组件之间存在相互关系，供中介者管理。这些相互关系详细列在此：
 
 | 左列的组件对第二列到第六列的组件有以下影响： |
+| --- |
 | Starter | Assembly System | Hopper | Accelerator | Decelerator |
 | Starter | N/A | 为此组件供电 | 为此组件供电 | 为此组件供电 | 为此组件供电 |
 | Assembly System | Starter 必须开启组配系统才能工作 | N/A | 接入料斗 | N/A | N/A |
@@ -1884,269 +1850,382 @@ while (myIterator.hasNext()) {
 第 3 章
 
 | Emergency Break | Starter 必须开启组配系统才能工作 | Hopper 必须开启组配系统才能工作 | N/A | N/A |
+| --- | --- | --- | --- |
 | Emergency Break | Starter 必须开启加速器才能工作 | N/A | N/A | N/A | 组件不可用 |
 
-系统相互关系
+系统相互关系。
 
 如表所示，有五个组件供中介者管理。接下来的 UML 图：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_89_0.png)
 
-中介设计模式实现
+中介设计模式实现。
 
 ## 编写设计模式
 
-WidgetProductionSystem 需要以下类：
+`WidgetProductionSystem`需要以下类：
 
-- Starter
-- AssemblySystem
-- Hopper
-- Accelerator
-- EmergencyBreak
+- `Starter`
+- `AssemblySystem`
+- `Hopper`
+- `Accelerator`
+- `EmergencyBreak`
 
 ## Starter
 
-Starter 类包含了两个类变量、一个构造方法、一个访问方法以及两个用于开启和关闭启动的方法。构造方法用于实例化类。访问方法简单地返回 `poweredOn` 变量的值：
+`Starter`类包含了两个类变量、一个构造方法、一个访问方法以及两个用于开启和关闭启动的方法。构造方法用于实例化类。访问方法简单地返回`poweredOn`变量的值：
 
 ```java
 public class Starter {
+
     private WidgetProductionSystem mediator;
+
     private boolean poweredOn;
 
     // 构造方法
+
     public Starter(WidgetProductionSystem mediator) {
+
         this.mediator = mediator;
+
         poweredOn = false;
 
         mediator.mediateStarter(this);
+
     }
 
     // 访问方法
+
     public boolean isOn() {
+
         return poweredOn;
+
     }
 
     public void turnOn() {
-```
 
-```java
-poweredOn = true;
-mediator.starterPoweredOn();
-System.out.println("Mediated Event: Started Powered On");
+        poweredOn = true;
 
-```
+        mediator.starterPoweredOn();
 
-```java
-public void turnOff() {
-    poweredOn = false;
-    mediator.starterPoweredOff();
-    System.out.println("Mediated Event: Starter Powered Off");
+        System.out.println("Mediated Event: Started Powered On");
 
-}
+    }
+
+    public void turnOff() {
+
+        poweredOn = false;
+
+        mediator.starterPoweredOff();
+
+        System.out.println("Mediated Event: Starter Powered Off");
+
+    }
+
 }
 ```
 
 ## AssemblySystem
 
-AssemblySystem 类在此分两个部分呈现，如下：
+`AssemblySystem`类在此分两个部分呈现，如下：
 
-1. 第一部分包含了 `SystemSpeed` 枚举的创建、类变量和构造方法。对于 `currentSpeed` 变量还包含了访问和修改方法：
+1. 第一部分包含了`SystemSpeed`枚举的创建、类变量和构造方法。对于`currentSpeed`变量还包含了访问和修改方法：
 
 ```java
 public class AssemblySystem {
-    public enum SystemSpeed {ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN};
+
+    public enum SystemSpeed {
+        ZERO, ONE, TWO, THREE, FOUR, FIVE,
+        SIX, SEVEN, EIGHT, NINE, TEN
+    };
 
     private WidgetProductionSystem mediator;
+
     private boolean enabled;
+
     private SystemSpeed currentSpeed;
 
     // 构造方法
+
     public AssemblySystem(WidgetProductionSystem mediator) {
+
         this.mediator = mediator;
+
         enabled = false;
+
         currentSpeed = SystemSpeed.ZERO;
+
         mediator.mediateAssemblySystem(this);
+
     }
 
     // 访问方法
+
     public SystemSpeed getSystemSpeed() {
+
         return currentSpeed;
+
     }
 
     // 修改方法
-```
 
+    public void setSystemSpeed(SystemSpeed speed) {
 
+        if ((isEnabled()) && (getSystemSpeed() != speed)) {
 
+            currentSpeed = speed;
 
+            mediator.assemblySystemSpeedChanged();
 
-# 行为设计模式
+            System.out.println("Mediated Event: System Speed\n Changed to " + currentSpeed + ".");
 
-# 第3章
+        }
 
-```java
-public void setSystemSpeed(SystemSpeed speed) {
-    if ((isEnabled()) && (getSystemSpeed() != speed)) {
-        currentSpeed = speed;
-        mediator.assemblySystemSpeedChanged();
-        System.out.println("Mediated Event: System Speed\n Changed to " + currentSpeed + ".");
     }
 }
 ```
 
-2. `AssemblySystem` 类类的部分包含了启用和禁用系统的方法，以及一个检查当前是否已启用的方法：
+2. `AssemblySystem`类的第二部分包含了启用和禁用系统的方法，以及一个检查当前是否已启用的方法：
 
 ```java
 // additional methods
+
 public void enable() {
+
     enabled = true;
+
     mediator.assemblySystemEnabled();
+
     System.out.println("Mediated Event: System Initialized.");
+
 }
 ```
 
 ```java
 public void disable() {
+
     enabled = false;
+
     mediator.assemblySystemDisabled();
+
     System.out.println("Mediated Event: System Deinitialized.");
+
 }
 ```
 
 ```java
 public boolean isEnabled() {
+
     return enabled;
+
 }
 ```
 
-最后显示的的方法返回 `Enabled` 的布尔值。
+最后显示的方法返回`Enabled`的布尔值。
 
 ## Hopper
 
-`Hopper` 类包含两个类变量、一个构造方法和一个访问器方法，用于判断 `Hopper` 当前是否处于启用状态。类代码如下：
+`Hopper`类包含两个类变量、一个构造方法和一个访问器方法，用于判断`Hopper`当前是否处于启用状态。类代码如下：
 
 ```java
 public class Hopper {
+
     private WidgetProductionSystem mediator;
+
     private boolean enabled;
 
     // constructor
+
     public Hopper(WidgetProductionSystem mediator) {
+
         this.mediator = mediator;
+
         enabled = false;
+
         mediator.mediateHopper(this);
+
     }
 
     // accessor
+
     public boolean getHopperEnabled() {
+
         return enabled;
+
     }
 
     public void enable() {
+
         enabled = true;
+
         mediator.HopperEnabled(); // 根据 mediator 的上下文已修复
+
         System.out.println("Mediated Event: Initialized.");
+
     }
 
     public void disable() {
+
         enabled = false;
+
         mediator.hopperDisabled();
+
         System.out.println("Mediated Event: Deinitialized.");
+
     }
+
 }
 ```
 
-最后显示的两个方法 `enable()` 和 `disable()` 切换了 `enabled` 变量的布尔值。
+最后显示的两个方法`enable()`和`disable()`切换了`enabled`变量的布尔值。
 
 ## SystemAccelerator 类
 
-`SystemAccelerator` 类在这里分为两个部分。第一部分建立了类变量、构造方法、一个返回速度的访问器方法，以及一个返回 `enabled` 变量值的 `isEnabled()` 方法：
+`SystemAccelerator`类在这里分为两个部分。第一部分建立了类变量、构造方法、一个返回速度的访问器方法，以及一个返回`enabled`变量值的`isEnabled()`方法：
 
 ```java
 public class SystemAccelerator {
+
     // class variables
+
     private WidgetProductionSystem mediator;
+
     private boolean enabled;
+
     private int speed;
 
     // constructor
+
     public SystemAccelerator(WidgetProductionSystem mediator) {
+
         this.mediator = mediator;
+
         enabled = false;
+
         speed = 0;
+
         mediator.mediateSystemAcceleration(this);
+
     }
 
     // accessor
+
     public int getAcceleratorSpeed() {
+
         return speed;
+
     }
+
     public boolean isEnabled() {
+
         return enabled;
+
     }
+
 }
 ```
 
-`SystemAccelerator` 类的第二部分包含了三个方法。`enable` 和 `disable()` 方法切换 `enabled` 变量的值：
+`SystemAccelerator`类的第二部分包含了三个方法。`enable()`和`disable()`方法切换`enabled`变量的值：
 
 ```java
 public void enable() {
+
     enabled = true;
+
     mediator.systemAcceleratorEnabled();
+
     System.out.println("Mediated Event: System Accelerator Enabled.");
+
 }
 ```
 
 ```java
 public void disable() {
+
     enabled = false;
+
     mediator.systemAcceleratorDisabled();
+
     System.out.println("Mediated Event: System Accelerator Disabled.");
+
 }
 ```
 
 ```java
 public void accelerateToSpeed(int speed) {
+
     if (isEnabled()) {
+
         this.speed = speed;
+
         mediator.systemAcceleratorUsed();
+
         System.out.println("Mediated Event: System Accelerator Set to " + speed + ".");
+
     }
+
 }
 ```
 
-`SystemAccelerator` 类中的第三个方法是 `accelerateToSpeed()` 方法，它处理速度的变化。
+`SystemAccelerator`类中的第三个方法是`accelerateToSpeed()`方法，它处理速度的变化。
 
 ## EmergencyBreak
 
-`EmergencyBreak` 类分为两个部分。第一部分定义了类变量：构造方法以及 `enable()` 和 `disable()` 方法：
+`EmergencyBreak`类分为两个部分。第一部分定义了类变量、构造方法以及`enable()`和`disable()`方法：
 
 ```java
 public class EmergencyBreak {
+
     // class variables
+
     private WidgetProductionSystem mediator;
+
     private boolean enabled;
+
     private boolean applied;
 
     // constructor
+
     public EmergencyBreak(WidgetProductionSystem mediator) {
+
         this.mediator = mediator;
+
         enabled = false;
+
         applied = false;
+
         mediator.mediateEmergencyBreak(this);
+
     }
 
     public void enable() {
+
         enabled = true;
-        mediator.setEmergencyEnabled();
-        System.out.println("Mediated Event: System Decelerator Enabled.");
+
     }
 
-    public void disable() {
-        enabled = false;
-        mediator.setEmergencyBreak();
-        System.out.println("Mediated Event: System Disabled.");
-    }
+}
+```
+
+
+
+```java
+mediator.setEmergencyEnabled();
+
+System.out.println("Mediated Event: System Decelerator Enabled.");
+
+}
+
+public void disable() {
+
+enabled = false;
+
+mediator.setEmergencyBreak();
+
+System.out.println("Mediated Event: System Disabled.");
+
+}
+
 }
 ```
 
@@ -2154,23 +2233,37 @@ public class EmergencyBreak {
 
 ```java
 public boolean isEnabled() {
-    return enabled;
+
+return enabled;
+
 }
 
 public void apply() {
-    if (isEnabled()) {
-        applied = true;
-        mediator.setEmergencyBreakEngaged();
-        System.out.println("Mediated Event: Break Engaged.");
-    }
+
+if (isEnabled()) {
+
+applied = true;
+
+mediator.setEmergencyBreakEngaged();
+
+System.out.println("Mediated Event: Break Engaged.");
+
+}
+
 }
 
 public void release() {
-    if (isEnabled()) {
-        applied = false;
-        mediator.setEmergencyBreakDisengaged();
-        System.out.println("Mediated Event: Break Disengaged.");
-    }
+
+if (isEnabled()) {
+
+applied = false;
+
+mediator.setEmergencyBreakDisengaged();
+
+System.out.println("Mediated Event: Break Disengaged.");
+
+}
+
 }
 ```
 
@@ -2184,17 +2277,27 @@ public void release() {
 public class WidgetProductionSystem {
 
     // class variables
+
     private Starter starter;
+
     private AssemblySystem assemblySystem;
+
     private SystemAccelerator accelerator;
+
     private EmergencyBreak emergencyBreak;
+
     private Hopper hopper;
+
     private int currentSpeed;
 
     // constructor
+
     public WidgetProductionSystem() {
+
         currentSpeed = 0;
+
     }
+
 }
 ```
 
@@ -2202,23 +2305,35 @@ public class WidgetProductionSystem {
 
 ```java
 public class Starter {
+
     private WidgetProductionSystem mediator;
+
     private boolean enabled;
 
     public Starter(WidgetProductionSystem mediator) {
+
         this.mediator = mediator;
+
         enabled = false;
+
     }
 
     public void enable() {
+
         enabled = true;
+
         mediator.assemblySystemEnabled();
+
     }
 
     public void disable() {
+
         enabled = false;
+
         mediator.assemblySystemDisabled();
+
     }
+
 }
 ```
 
@@ -2226,23 +2341,35 @@ public class Starter {
 
 ```java
 public class AssemblySystem {
+
     private WidgetProductionSystem mediator;
+
     private boolean enabled;
 
     public AssemblySystem(WidgetProductionSystem mediator) {
+
         this.mediator = mediator;
+
         enabled = false;
+
     }
 
     public void enable() {
+
         enabled = true;
+
         mediator.assemblySystemSpeedChanged();
+
     }
 
     public void disable() {
+
         enabled = false;
+
         mediator.assemblySystemSpeedChanged();
+
     }
+
 }
 ```
 
@@ -2250,23 +2377,35 @@ public class AssemblySystem {
 
 ```java
 public class Hopper {
+
     private WidgetProductionSystem mediator;
+
     private boolean enabled;
 
     public Hopper(WidgetProductionSystem mediator) {
+
         this.mediator = mediator;
+
         enabled = false;
+
     }
 
     public void enable() {
+
         enabled = true;
+
         mediator.HopperEnabled();
+
     }
 
     public void disable() {
+
         enabled = false;
+
         mediator.hopperDisabled();
+
     }
+
 }
 ```
 
@@ -2274,21 +2413,25 @@ public class Hopper {
 
 ```java
 public class SystemAccelerator {
+
     private WidgetProductionSystem mediator;
+
     private boolean enabled;
+
     private int speed;
 
     public SystemAccelerator(WidgetProductionSystem mediator) {
+
         this.mediator = mediator;
+
         enabled = false;
+
         speed = 0;
+
     }
+
 }
 ```
-
-
-
-
 
 # 行为设计模式
 
@@ -2296,27 +2439,37 @@ public class SystemAccelerator {
 
 ```java
 public void setEmergencyBreakEnabled() {
+
     System.out.println("调解决策: 系统加速器已禁用.");
+
 }
 ```
 
 ```java
 public void setEmergencyBreakDisabled() {
+
     System.out.println("调解决策: 系统加速器已启用.");
+
 }
 ```
 
 ```java
 public void setEmergencyBreakEngaged() {
+
     systemAccelerator.disable(0);
+
     currentSpeed = 0;
+
 }
 ```
 
 ```java
 public void setEmergencyBreakDisengaged() {
+
     assemblySystem.setSystemSpeed(AssemblySystem.SystemSpeed.ZERO);
+
     currentSpeed = 0;
+
 }
 ```
 
@@ -2324,7 +2477,7 @@ public void setEmergencyBreakDisengaged() {
 
 ## 检查备忘模式
 
-备忘设计模式将对象的内部状态保存为备忘（memento），以便能够引用和恢复。如果你曾经使用过 Ctrl + Z (Windows) 或 Cmd + Z (Mac) 来撤销操作，那么你正在使用备忘设计模式恢复到之前的状态。使用这种设计模式的处处是它尊重了封装性，提供了数据保护。
+备忘设计模式将对象的内部状态保存为备忘（memento），以便能够引用和恢复。如果你曾经使用过 `Ctrl + Z`（Windows）或 `Cmd + Z`（Mac）来撤销操作，那么你正在使用备忘设计模式恢复到之前的状态。使用这种设计模式的好处是它尊重了封装性，提供了数据保护。
 
 我们将查看一个用例、UML 类图，以及为该场景实现备忘设计模式所需的源代码。
 
@@ -2343,7 +2496,7 @@ public void setEmergencyBreakDisengaged() {
 | setPercentageCompleted() | copyOfPreviousCompletionProgress |
 | getPercentageCompleted() | resetMission(Status status) |
 
-|UML 类图——备忘设计模式实现
+*UML 类图——备忘设计模式实现*
 
 如 UML 类图所示，这两个类之间不共享继承关系。
 
@@ -2353,30 +2506,45 @@ public void setEmergencyBreakDisengaged() {
 
 ```java
 public class GameMission {
+
     // 类变量
+
     private int percentageCompleted;
+
     int previousPercentageCompleted;
 
     // 构造函数
+
     public GameMission() {
+
         percentageCompleted = 0;
+
         previousPercentageCompleted = 0;
+
     }
 
     // 修改器
+
     public void setPercentageCompeted(int percentage) {
+
         previousPercentageCompleted = percentageCompleted;
+
         percentageCompleted = percentage;
+
     }
 ```
 
 # 行为设计模式
+
 # 第 3 章
 
 ```java
 // 访问器
+
 public int getPercentageCompleted() {
+
     return percentageCompleted;
+
 }
 ```
 
@@ -2384,35 +2552,43 @@ public int getPercentageCompleted() {
 
 ```java
 public class GameMissionMemento {
+
     // 类变量
+
     private GameMission gameMission;
+
     private int copyOfCurrentCompletionProgress;
+
     private int copyOfPreviousCompletionProgress;
 
     // 构造函数
+
     public GameMissionMemento(GameMission gameMission) {
+
         this.gameMission = gameMission;
-        copyOfCurrentCompletionProgress = 
+
+        copyOfCurrentCompletionProgress =
+
             gameMission.getPercentageCompleted();
-        copyOfPreviousCompletionProgress = 
+
+        copyOfPreviousCompletionProgress =
+
             gameMission.previousPercentageCompleted;
+
     }
 
     public void resetStatus(Status status) {
+
         // 逻辑实现
+
     }
+
 }
 ```
 
-*(注：由于原文文本在后部分存在大量重复和逻辑断层，以上翻译遵循了“不要重复输出原文”的原则，并对提供的有效代码块进行了结构化翻译。)*
-
-
-
-
-
 ## 编写设计模式
 
-`StudentDashboard` 类继承自 `Observable` 类，并有一个类变量 `unreadMessages` int型。该类中有三个方法：构造函数、setter（修改器）方法和 getter（访问器）方法：
+`StudentDashboard` 类继承自 `Observable` 类，并有一个类变量 `unreadMessages`，类型为 `int`。该类中有三个方法：构造函数、`setter`（修改器）方法和 `getter`（访问器）方法：
 
 ```java
 public class StudentDashboard extends Observable {
@@ -2420,12 +2596,17 @@ public class StudentDashboard extends Observable {
     private int unreadMessages;
 
     // constructor
+
     public StudentDashboard() {
+
         unreadMessages = 0;
+
     }
 
     public void setUnreadMessages(int messages) {
+
         unreadMessages = messages;
+
     }
 
     /*
@@ -2433,12 +2614,15 @@ public class StudentDashboard extends Observable {
     */
 
     public int getUnreadMessages() {
+
         return unreadMessages;
+
     }
+
 }
 ```
 
-`ForumMonitor` 类实现了 `Observer` 接口。它包含一个最终变量 `UNREAD_ALERT_LEVEL`，用告警阈值。在我们的示例中，如果未读消息大于零，观察者将收到告警：
+`ForumMonitor` 类实现了 `Observer` 接口。它包含一个最终变量 `UNREAD_ALERT_LEVEL`，用作告警阈值。在我们的示例中，如果未读消息大于零，观察者将收到告警：
 
 ```java
 public class ForumMonitor implements Observer {
@@ -2446,13 +2630,21 @@ public class ForumMonitor implements Observer {
     public static final int UNREAD_ALERT_LEVEL = 0;
 
     public void update(Observable observable, Object object) {
+
         StudentDashboard messages = (StudentDashboard) observable;
+
         if (messages.getUnreadMessages() > UNREAD_ALERT_LEVEL) {
+
             System.out.println("You have " + messages.getUnreadMessages() + " unread messages.");
+
         } else {
+
             System.out.println("No unread messages found.");
+
         }
+
     }
+
 }
 ```
 
@@ -2486,15 +2678,19 @@ UML 类图中还指示 `Printer` 和 `Driver` 类。
 
 状态模式的实现示例由以下类组成：
 
-- PrinterOnLine
-- PrinterOff
-- Printer
-- PrinterController
-- Driver
+- `PrinterOnLine`
+- `PrinterOff`
+- `Printer`
+- `PrinterController`
+- `Driver`
 
 ## PrinterOnLine
 
 `PrinterOnLine` 扩展 `PrinterController` 类并重写了 `pushPrint()` 方法。调用时，该方法会清空打印机缓冲区并关闭。代码如下：
+
+```java
+
+
 
 ```java
 public class PrinterOnLine extends PrinterController {
@@ -2517,6 +2713,7 @@ public class PrinterOnLine extends PrinterController {
 
 ```java
 public class PrinterOffLine extends PrinterController {
+
     @Override
     public void pushPrint(Printer printerJob) {
         System.out.println("\nPowering printer on wait. . . .");
@@ -2533,6 +2730,7 @@ public class PrinterOffLine extends PrinterController {
 
 ```java
 public class Printer {
+
     // class variable
     private PrinterController printerState;
 
@@ -2571,6 +2769,7 @@ public void pushPrint() {
 
 ```java
 abstract class PrinterController {
+
     public abstract void pushPrint(Printer printJob);
 }
 ```
@@ -2583,13 +2782,17 @@ abstract class PrinterController {
 
 ```java
 public class Driver {
+
     public static void main(String[] args) {
         PrinterOffline initialState = new PrinterOffline();
         Printer printer = new Printer(initialState);
+
         System.out.println("\n");
+
         printer.pushPrint();
         printer.pushPrint();
         printer.pushPrint();
+
         System.out.println("\n");
     }
 }
@@ -2603,9 +2806,9 @@ public class Driver {
 
 完成的应用程序生成了以下输出。`Driver` 类包含了三次 `pushPrint()` 调用。如所示，控制台输出为：
 
-```
+```text
 Powering printer on wait. . . .
-Clearing buffer and shutting down. . . 
+Clearing buffer and shutting down. . .
 No messages found.
 ```
 
@@ -2647,10 +2850,6 @@ UML 类图——策略设计模式
 
 访问者设计模式允许我们在不改变结构的情况下对对象执行操作。本质上，我们可以在不改变原始对象结构的情况下为对象添加功能。一个例子是去理发店要求剪头发。坐在椅子上，所需的参数发生了变化。这并没有改变操作的结构；它只是增加了新的功能，如同时染发、剪发和造型。
 
-
-
-
-
 # 行为设计模式
 
 ## 第3章
@@ -2665,20 +2864,20 @@ UML 类图——策略设计模式
 
 ## 思考
 
-- 1. 哪种设计模式可能被用于根据之前的设置恢复系统？
-- 2. 空对象模式属于哪种设计模式类别？
-- 3. 观察者设计模式中对象依赖的目的是？
-- 4. 哪种设计模式允许对象根据内部状态的变化来改变其行为？
-- 5. 哪种设计模式允许你单独封装一组可交换的算法？
-- 6. 哪种设计模式涉及为被分配到子类的处理步骤创建一个算法模板？
-- 7. 哪种设计模式允许将对象发送给系列接收者，而发送者无需担心由哪个接收者处理请求？
-- 8. 命令设计模式还有什么其他名称？
-- 9. 解释器设计模式是做什么用的？
-- 10. 迭代器设计模式依赖于哪个 Java 接口？
+1. 哪种设计模式可能被用于根据之前的设置恢复系统？
+2. 空对象模式属于哪种设计模式类别？
+3. 观察者设计模式中对象依赖的目的是？
+4. 哪种设计模式允许对象根据内部状态的变化来改变其行为？
+5. 哪种设计模式允许你单独封装一组可交换的算法？
+6. 哪种设计模式涉及为被分配到子类的处理步骤创建一个算法模板？
+7. 哪种设计模式允许将对象发送给系列接收者，而发送者无需担心由哪个接收者处理请求？
+8. 命令设计模式还有什么其他名称？
+9. 解释器设计模式是做什么用的？
+10. 迭代器设计模式依赖于哪个 Java 接口？
 
 ## 扩展阅读
 
-- * Java EE 8 设计模式与最佳实践 (https://www.packtpub.com/application-development/java-ee-8-design-patterns-and-best-practices)
+- Java EE 8 设计模式与最佳实践 (https://www.packtpub.com/application-development/java-ee-8-design-patterns-and-best-practices)
 - 用 Java 学习设计模式 [视频] (https://www.packtpub.com/application-development/learn-design-patterns-java-video)
 - Java 设计模式与最佳实践 (https://www.packtpub.com/application-development/design-patterns-and-best-practices-java)
 
@@ -2698,7 +2897,7 @@ UML 类图——策略设计模式
 
 ## 技术要求
 
-本章的代码可以在本书的 GitHub 仓库中找到：https://github.com/PacktPublishing/Hands-On-Design-Patterns-with-Java/tree/master/Chapter04。
+本章的代码可以在本书的 GitHub 仓库中找到：<https://github.com/PacktPublishing/Hands-On-Design-Patterns-with-Java/tree/master/Chapter04>。
 
 ## 介绍创建型设计模式
 
@@ -2723,14 +2922,15 @@ UML 类图——策略设计模式
 
 ## 理解抽象工厂设计模式
 
-在查看抽象工厂设计模式之前，让我们先回顾 *abstract*（抽象）一词以及它如何应用于 Java 类和我们开发的程序。
+在查看抽象工厂设计模式之前，让我们先回顾 `abstract`（抽象）一词以及它如何应用于 Java 类和我们开发的程序。
 
-*abstract* 一词指的是某种没有确定的存在形式。在 Java 中，抽象类不能被实例化，但可以被继承。考虑一个抽象的 `Grandmother`（奶奶）类，它被 `Mother`（妈妈）类扩展。第三个类 `Daughter`（女儿）用于包含 `main()` 方法。以下是 `Grandmother` 类的代码：
+`abstract` 一词指的是某种没有确定的存在形式。在 Java 中，抽象类不能被实例化，但可以被继承。考虑一个抽象的 `Grandmother`（奶奶）类，它被 `Mother`（妈妈）类扩展。第三个类 `Daughter`（女儿）用于包含 `main()` 方法。以下是 `Grandmother` 类的代码：
 
 ```java
 abstract class Grandmother {
 
-  // 构造函数
+    // 构造函数
+}
 ```
 
 ## 创建型设计模式
@@ -2743,7 +2943,7 @@ Grandmother() {
 }
 ```
 
-接下来，我们有 Mother 类，它继承自 Grandmother 并有自己的构造器方法：
+接下来，我们有 `Mother` 类，它继承自 `Grandmother` 并有自己的构造器方法：
 
 ```java
 public class Mother extends Grandmother {
@@ -2768,8 +2968,10 @@ public class Daughter {
 
 当应用程序运行时，控制台将提供以下结果：
 
+```text
 Grandmother constructor executed.
 Mother constructor executed.
+```
 
 正如你在下面的截图所示，如果我们尝试实例化 `Grandmother` 类，将会收到该类是抽象的且无法实例化的错误：
 
@@ -2793,21 +2995,17 @@ Mother constructor executed.
 
 如 UML 类图所示，我们的实现方案将需要 5 个接口和 17 个类。
 
-
-
-
-
 ## 编程设计模式
 
-我们的解决方案实现包含了五个接口（Type、Style、Frame、Engine 和 Kitchen）、一个 MotorHomeAbstractFactory 类、一个 MotorHomeDriver 类以及 15 个额外的类（每种类型 5 个）。以下是接口和类的完整列表：
+我们的解决方案实现包含了五个接口（`Type`、`Style`、`Frame`、`Engine` 和 `Kitchen`）、一个 `MotorHomeAbstractFactory` 类、一个 `MotorHomeDriver` 类以及 15 个额外的类（每种类型 5 个）。以下是接口和类的完整列表：
 
 | 接口 | 通用类 | TypeA 类 | TypeB 类 | TypeC 类 |
 |---|---|---|---|---|
-| Type | MotorHomeAbstractFactory | TypeAFactory | TypeBFactory | TypeCFactory |
-| Style | MotorHomeDriver | TypeAStyle | TypeBStyle | TypeCStyle |
-| Frame | | TypeAFrame | TypeBFrame | TypeCFrame |
-| Engine | | TypeAEngine | TypeBEngine | TypeCEngine |
-| Kitchen | | TypeAKitchen | TypeBKitchen | TypeCKitchen |
+| `Type` | `MotorHomeAbstractFactory` | `TypeAFactory` | `TypeBFactory` | `TypeCFactory` |
+| `Style` | `MotorHomeDriver` | `TypeAStyle` | `TypeBStyle` | `TypeCStyle` |
+| `Frame` | | `TypeAFrame` | `TypeBFrame` | `TypeCFrame` |
+| `Engine` | | `TypeAEngine` | `TypeBEngine` | `TypeCEngine` |
+| `Kitchen` | | `TypeAKitchen` | `TypeBKitchen` | `TypeCKitchen` |
 
 上表整理了解决方案中使用的 Java 类型。针对每种类型的类彼此非常相似。
 
@@ -2815,7 +3013,7 @@ Mother constructor executed.
 
 在我们抽象工厂设计模式实现中，五个接口中的每一个都包含一个访问器方法。它们的源代码列在此：
 
-```
+```java
 public interface Type {
     public String getType();
 }
@@ -2837,18 +3035,22 @@ public interface Kitchen {
 }
 ```
 
-如你所见，每个接口都返回一个 String 值。
+如你所见，每个接口都返回一个 `String` 值。
 
 ## 抽象工厂类
 
-MotorHomeAbstractFactory 定义了四个抽象方法。代码如下：
+`MotorHomeAbstractFactory` 定义了四个抽象方法。代码如下：
 
-```
+```java
 public abstract class MotorHomeAbstractFactory {
-public abstract Frame createFrame();
-public abstract Style createStyle();
-public abstract Engine createEngine();
-public abstract Kitchen createKitchen();
+
+    public abstract Frame createFrame();
+
+    public abstract Style createStyle();
+
+    public abstract Engine createEngine();
+
+    public abstract Kitchen createKitchen();
 }
 ```
 
@@ -2856,209 +3058,307 @@ public abstract Kitchen createKitchen();
 
 ## TypeA 类
 
-我们的解决方案为三种类型的房车（A 型、B 型和 C 型）每种都包含一个 Factory 类。以下代码所示的 TypeAFactory 类继承了 MotorHomeAbstractFactory 类：
+我们的解决方案为三种类型的房车（A 型、B 型和 C 型）每种都包含一个 Factory 类。以下代码所示的 `TypeAFactory` 类继承了 `MotorHomeAbstractFactory` 类：
 
-```
+```java
 public class TypeAFactory extends MotorHomeAbstractFactory {
 
-public Frame createFrame() {
-return new TypeAFrame();
-}
+    public Frame createFrame() {
+        return new TypeAFrame();
+    }
 
-public Style createStyle() {
-return new TypeAStyle();
-}
+    public Style createStyle() {
+        return new TypeAStyle();
+    }
 
-public Engine createEngine() {
-return new TypeAEngine();
-}
+    public Engine createEngine() {
+        return new TypeAEngine();
+    }
 
-public Kitchen createKitchen() {
-return new TypeAKitchen();
-}
+    public Kitchen createKitchen() {
+        return new TypeAKitchen();
+    }
 }
 ```
 
 除了 Factory 类之外，我们还需要一个类来实现类层次结构。在这里，我们可以看到每个实现的接口：
 
-```
+```java
 public class TypeAStyle implements Style {
 
-public String getStyle() {
-return "[Type A] Style:\tOff the Grid";
+    public String getStyle() {
+        return "[Type A] Style:\tOff the Grid";
+    }
 }
+
 public class TypeAEngine implements Engine {
+```
+
+
+
+# TypeA 类
+
+以下代码定义了四个类，分别实现了相应的访问器方法并返回一个上下文 `String`：
+
+```java
+public class TypeAEngine implements Engine {
+
     public String getEngine() {
+
         return "[Type A] Engine:\tFord V10";
+
     }
-}
-public class TypeAFrame implements Frame {
-    public String getFrame() {
-        return "[Type A] Frame:\tBus";
-    }
-}
-public class TypeAKKitchen implements Kitchen {
-    public String getKitchen() {
-        return "[Type A] Kitchen:\tFull";
-    }
+
 }
 ```
 
-定义的四个类定义了相应的访问器方法并返回一个上下文 String。
+```java
+public class TypeAFrame implements Frame {
 
-## TypeB 类
+    public String getFrame() {
 
-我们的解决方案为三种类型的房车（A 型、B 型和 C 型）每种都包含一个 Factory 类。这里所示的 TypeBFactory 类继承了 MotorHomeAbstractFactory 类：
+        return "[Type A] Frame:\tBus";
+
+    }
+
+}
+```
+
+```java
+public class TypeAKKitchen implements Kitchen {
+
+    public String getKitchen() {
+
+        return "[Type A] Kitchen:\tFull";
+
+    }
+
+}
+```
+
+# TypeB 类
+
+我们的解决方案为三种类型的房车（A 型、B 型和 C 型）每种都包含一个 `Factory` 类。这里所示的 `TypeBFactory` 类继承了 `MotorHomeAbstractFactory` 类：
 
 ```java
 public class TypeBFactory extends MotorHomeAbstractFactory {
+
     public Frame createFrame() {
+
         return new TypeBFrame();
+
     }
+
     public Style createStyle() {
+
         return new TypeBStyle();
+
     }
+
     public Engine createEngine() {
+
         return new TypeBEngine();
+
     }
+
     public Kitchen createKitchen() {
+
         return new TypeBKitchen();
+
     }
+
 }
 ```
 
-除了 Factory 类之外，我们还需要一个类来实现类层次结构。在这里，我们可以看到每个：
+除了 `Factory` 类之外，我们还需要一个类来实现类层次结构。在这里，我们可以看到每个类：
 
 ```java
 public class TypeBStyle implements Style {
+
     public String getStyle() {
+
         return "[Type B] Style:\tWeekender";
+
     }
+
 }
 ```
 
 ```java
 public class TypeBEngine implements Engine {
+
     public String getEngine() {
+
         return "[Type B] Engine:\tFord Transit 350 HD";
+
     }
+
 }
 ```
 
 ```java
 public class TypeBFrame implements Frame {
+
     public String getFrame() {
+
         return "[Type B] Frame:\tCamper Van";
+
     }
+
 }
 ```
 
 ```java
 public class TypeBKitchen implements Kitchen {
+
     public String getKitchen() {
+
         return "[Type B] Kitchen:\tCompact";
+
     }
+
 }
 ```
 
-定义的四个类实现了相应的访问器方法并返回一个上下文 String。
+定义的四个类实现了相应的访问器方法并返回一个上下文 `String`。
 
-## Type-C 类
+# Type-C 类
 
-我们的解决方案为三种类型的房车（A 型、B 型和 C 型）每种都包含一个 Factory 类。以下代码所示的 TypeCFactory 继承了 MotorHomeAbstractFactory 类：
+我们的解决方案为三种类型的房车（A 型、B 型和 C 型）每种都包含一个 `Factory` 类。以下代码所示的 `TypeCFactory` 继承了 `MotorHomeAbstractFactory` 类：
 
 ```java
 public class TypeCFactory extends MotorHomeAbstractFactory {
 
     public Frame createFrame() {
+
         return new TypeCFrame();
+
     }
 
     public Style createStyle() {
+
         return new TypeCStyle();
+
     }
 
     public Engine createEngine() {
+
         return new TypeCEngine();
+
     }
 
     public Kitchen createKitchen() {
-        return new TypeCKitchen;
+
+        return new TypeCKitchen();
+
     }
+
 }
 ```
 
-除了 Factory 类之外，我们还需要一个类来实现类层次结构。在这里，我们可以看到每个实现的接口：
+除了 `Factory` 类之外，我们还需要一个类来实现类层次结构。在这里，我们可以看到每个实现的接口：
 
 ```java
 public class TypeCStyle implements Style {
+
     public String getStyle() {
+
         return "[Type C] Style:\tExtended Trip";
+
     }
+
 }
 ```
 
 ```java
 public class TypeCEngine implements Engine {
+
     public String getEngine() {
+
         return "[Type C] Engine:\tFord E-450";
+
     }
+
 }
 ```
 
 ```java
 public class TypeCFrame implements Frame {
+
     public String getFrame() {
+
         return "[Type C] Frame:\tTruck";
+
     }
+
 }
 ```
 
 ```java
 public class TypeCKitchen implements Kitchen {
+
     public String getKitchen() {
+
         return "[Type C] Kitchen:\tFull";
+
     }
+
 }
 ```
 
-### Driver 类
+## Driver 类
 
-抽象工厂设计模式实现的 Driver 类在后续章节给出：
+抽象工厂设计模式实现的 `Driver` 类在后续章节给出：
 
 ```java
 public class MotorHomeDriver {
+
     public static void main(String[] args) {
+
         MotorHomeAbstractFactory mFactory = null;
+
         String nextMotorHome = "TypeA"; // 模拟用户输入
 
         if (nextMotorHome.equals("TypeA")) {
+
             mFactory = new TypeAFactory();
+
             System.out.println("A motor home selected");
+
         } else if (nextMotorHome.equals("TypeB")) {
+
             mFactory = new TypeBFactory();
+
             System.out.println("B motor home selected");
+
         } else if (nextMotorHome.equals("TypeC")) {
+
             mFactory = new TypeCFactory();
+
             System.out.println("C motor home selected");
+
         } else {
+
             System.out.println("Invalid motor home type.");
+
         }
 
         System.out.println("\nComponent list for " + nextMotorHome + " motor home");
+
         System.out.println(mFactory.createStyle().getStyle());
+
         System.out.println(mFactory.createFrame().getFrame());
+
         System.out.println(mFactory.createEngine().getEngine());
+
         System.out.println(mFactory.createKitchen().getKitchen());
+
     }
+
 }
 ```
 
-
-
-
-
-## 使用构建器模式构建
+# 使用构建器模式构建
 
 构建者设计模式用于在对象的实例化和表示之间创建分离。其目的是允许在相同的实例化过程中产生不同的表示形式。
 
@@ -3070,7 +3370,7 @@ public class MotorHomeDriver {
 
 我们将查看一个用例场景、UML 类图，以及实现该场景下构建器设计模式所需的源代码。
 
-### 用例场景
+## 用例场景
 
 为了演示构建者设计模式，我们将实现一个咖啡烘豆机制造应用程序。该程序将辅助两种不同型号咖啡烘豆机的创建：个人型和商用型。总共有八个组件；某些组件用于两种烘豆机模型，而标记为特定的组件在每个烘豆机模型中是不同的。此外，平台组件仅商用烘豆机模型需要。下表提供了这些组件的概述：
 
@@ -3111,122 +3411,175 @@ public class MotorHomeDriver {
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_128_0.png)
 
-如 UML 类图所示，我们的解决方案包含一个 Builder 接口和五个类。
+如 UML 类图所示，我们的解决方案包含一个 `Builder` 接口和五个类。
 
 ## 设计模式的编程
 
-我们咖啡烘豆机制造构建器设计模式的编程解决方案由一个 Roaster 类、一个接口、一个 Driver 类和四个额外类组成。每个类在本节中详细介绍。
+我们咖啡烘豆机制造构建器设计模式的编程解决方案由一个 `Roaster` 类、一个接口、一个 `Driver` 类和四个额外类组成。每个类在本节中详细介绍。
 
 ### Roaster 类
 
-我们解决方案中的第一个类是 Roaster 类。该类允许实例化多个 Roaster 对象。该类包含一个构造方法、一个用于向烘豆机添加组件的 add() 方法，以及一个用于显示烘豆机组件的 display() 方法：
+我们解决方案中的第一个类是 `Roaster` 类。该类允许实例化多个 `Roaster` 对象。该类包含一个构造方法、一个用于向烘豆机添加组件的 `add()` 方法，以及一个用于显示烘豆机组件的 `display()` 方法：
 
 ```java
 import java.util.LinkedList;
 
 public class Roaster {
+
     private LinkedList<String> components;
 
     public Roaster() {
+
         components = new LinkedList<>();
+
     }
 
     public void add(String component) {
+
         components.addLast(component);
+
     }
 
     public void display() {
+
         System.out.println("\nROASTER BUILD:");
+
         for (int i=0; i<components.size(); i++) {
+
             System.out.println(components.get(i));
+
         }
+
     }
+
 }
 ```
 
-如前面的代码所示，导入了 java.util.LinkedList 包是因为 Roaster 类使用了 LinkedList 对象。
+如前面的代码所示，导入了 `java.util.LinkedList` 包是因为 `Roaster` 类使用了 `LinkedList` 对象。
 
 ### 接口
 
-Builder 接口在下面的代码提供，由八个方法组成，每个方法对应一个烘豆机组件：
+`Builder` 接口在下面的代码提供，由八个方法组成，每个方法对应一个烘豆机组件：
 
 ```java
 public interface Builder {
+
     void buildCoolingTray();
+
     void buildExhaustSystem();
+
     void buildGasBurner();
+
     void buildPlatform();
+
     void buildMotor();
+
     void buildThermocouples();
+
     void buildInnerDrum();
+
     void buildMainBody();
+
     Roaster getRoaster();
+
 }
 ```
 
-Builder 接口还包含一个返回 Roaster 对象的 getRoaster() 方法。
+`Builder` 接口还包含一个返回 `Roaster` 对象的 `getRoaster()` 方法。
 
 ### 构建器类
 
-我们的解决方案涉及两个构建器类——PersonalRoaster 和 CommercialRoaster。下面的代码是 PersonalRoaster 类的前半部分。它实现了 Builder 接口并实例化了一个 Roaster 对象。
+我们的解决方案涉及两个构建器类——`PersonalRoaster` 和 `CommercialRoaster`。下面的代码是 `PersonalRoaster` 类的前半部分。它实现了 `Builder` 接口并实例化了一个 `Roaster` 对象。
 
-在这段代码中，有四个用于构建特定组件的方法，每个方法都使用了 add() 方法：
+在这段代码中，有四个用于构建特定组件的方法，每个方法都使用了 `add()` 方法：
 
 ```java
 public class PersonalRoaster implements Builder {
+
     private Roaster roaster = new Roaster();
 
     @Override
+
     public void buildCoolingTray() {
+
         roaster.add("Personal Roaster Cooling Tray added");
+
     }
 
     @Override
+
     public void buildExhaustSystem() {
+
         roaster.add("Personal Roaster Exhaust System added");
+
     }
 
     @Override
+
     public void buildGasBurner() {
+
         roaster.add("Personal Roaster Gas Burner added");
+
     }
 
     @Override
+
     public void buildPlatform() {
+
         // not applicable for personal roaster
+
     }
 
     @Override
+
     public void buildMotor() {
+
         roaster.add("Personal Roaster Motor added");
+
     }
 
     @Override
+
     public void buildThermocouples() {
+
         roaster.add("Personal Roaster Thermocouples added");
+
     }
 
     @Override
+
     public void buildInnerDrum() {
+
         roaster.add("Personal Roaster Inner Drum added");
+
     }
 
     @Override
+
     public void buildMainBody() {
+
         roaster.add("Personal Roaster Main Body added");
+
     }
 
     @Override
+
     public Roaster getRoaster() {
+
         return roaster;
+
     }
+
 }
 ```
 
-对于 CommercialRoaster 类，下面的代码是其前半部分。它同样实现了 Builder 接口并实例化了一个 Roaster 对象。
+
+
+对于`CommercialRoaster`类，下面的代码是其前半部分。它同样实现了`Builder`接口并实例化了一个`Roaster`对象。
 
 ```java
 public class CommercialRoaster implements Builder {
+
     private Roaster roaster = new Roaster();
 
     @Override
@@ -3278,16 +3631,17 @@ public class CommercialRoaster implements Builder {
 
 ### Director 类
 
-RoasterDirector 类创建一个 Builder 实例，然后使用一系列步骤来构建烘豆机。RoasterDirector 类不知道正在创建的烘豆机是个人型还是商用型：
+`RoasterDirector`类创建一个`Builder`实例，然后使用一系列步骤来构建烘豆机。`RoasterDirector`类不知道正在创建的烘豆机是个人型还是商用型：
 
 ```java
 public class RoasterDirector {
+
     Builder currentBuilder;
 
     // 烘豆步骤
     public void buildRoaster(Builder builder) {
-
         currentBuilder = builder;
+
         currentBuilder.buildCoolingTray();
         currentBuilder.buildExhaustSystem();
         currentBuilder.buildGasBurner();
@@ -3302,10 +3656,11 @@ public class RoasterDirector {
 
 ### Driver 类
 
-RoasterDriver 类包含程序的 main() 方法并驱动应用程序。它通过创建 RoasterDirector 实例和两个 Builder 实例来实现功能。接下来，分别为个人烘豆机和商用烘豆机各调用一次构建序列：
+`RoasterDriver`类包含程序的`main()`方法并驱动应用程序。它通过创建`RoasterDirector`实例和两个`Builder`实例来实现功能。接下来，分别为个人烘豆机和商用烘豆机各调用一次构建序列：
 
 ```java
 public class RoasterDriver {
+
     public static void main(String[] args) {
         RoasterDirector director = new RoasterDirector();
 
@@ -3320,32 +3675,33 @@ public class RoasterDriver {
 }
 ```
 
-
-
-
-
 # 创建型模式
 
-# 第 4 章
+## 第 4 章
 
-```
+```java
 RoasterDirector roasterDirector = new RoasterDirector();
 
 Builder personalRoasterBuilder = new PersonalRoaster();
+
 Builder commercialRoasterBuilder = new CommercialRoaster();
 
 // 构建一台家用烘焙机
 roasterDirector.buildRoaster(personalRoasterBuilder);
+
 Roaster unit1 = personalRoasterBuilder.getRoaster();
+
 unit1.display();
 
 // 构建一台商用烘焙机
 roasterDirector.buildRoaster(commercialRoasterBuilder);
+
 Roaster unit2 = commercialRoasterBuilder.getRoaster();
+
 unit2.display();
 ```
 
-在每个构建序列完成后都会调用 display() 方法。如下所示所示，每个烘焙机模型的组件都是不同的：
+在每个构建序列完成后都会调用`display()`方法。如下所示，每个烘焙机模型的组件都是不同的：
 
 | 烘焙机构建： |
 | --- |
@@ -3368,7 +3724,7 @@ unit2.display();
 | 添加了标准平台 |
 | 添加了标准热电偶 |
 
-建造设计模式实现——控制台输出
+### 建造设计模式实现——控制台输出
 
 本节提供了我们咖啡烘焙机制造中建造设计模式的源码和控制台输出。
 
@@ -3376,52 +3732,55 @@ unit2.display();
 
 工厂方法设计模式允许子类决定创建哪种类。这是通过从框架中移除关于创建哪种类的细节来实现的。相反，它将对象创建的责任交给了子类。当框架不知道要实例化什么对象时，这种设计模式非常有用。
 
-我们将查看一个用用例、UML 类图以及实现该场景下工厂方法设计模式所需的源码。
+我们将查看一个用例、UML类图以及实现该场景下工厂方法设计模式所需的源码。
 
-# 用用例
+### 用例
 
 为了演示工厂方法设计模式，我们将创建一个割草机选择助手（Mower Selection Helper）实现。系统将提供有用信息，帮助用户选择割草机类型。支持的类型包括乘载式（riding）和推式（push）。我们将创建一个抽象工厂类，其中包含一个获取割草机类型的方法。我们还为具体类创建了一个工厂方法，用于实例化特定的割草机对象。
 
-## UML 类图
+### UML 类图
 
-工厂方法设计模式的割草机选择助手实现的 UML 类图由一个被两个类实现的接口组成。
+工厂方法设计模式的割草机选择助手实现的UML类图由一个被两个类实现的接口组成。
 
 创建型模式
 
-第 4 章
+第4章
 
-ConcreteMowerFactory 类是发生对象实例化的地方：
+`ConcreteMowerFactory`类是发生对象实例化的地方：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_136_0.png)
 
-UML 类图——工厂方法设计模式实现
+UML类图——工厂方法设计模式实现
 
-如 UML 类图所示，RidingMower 和 PushMower 类实现了 Mower 接口，而 MowerFactory 类已从对象创建过程中移除。
+如UML类图所示，`RidingMower`和`PushMower`类实现了`Mower`接口，而`MowerFactory`类已从对象创建过程中移除。
 
 ## 编写模式的编程
 
-我们的实现从一个 Mower 接口开始。它有一个 mow() 方法：
+我们的实现从一个`Mower`接口开始。它有一个`mow()`方法：
 
 ```java
 public interface Mower {
-  void mow();
+    void mow();
 }
 ```
 
-接下来的代码段是 MowerFactory 抽象类。在那里，我们将有一个 ConcreteMowerFactory 子类：
+接下来的代码段是`MowerFactory`抽象类。在那里，我们将有一个`ConcreteMowerFactory`子类：
 
 ```java
 abstract class MowerFactory {
-  public abstract Mower getMowerType(String mowerType);
+    public abstract Mower getMowerType(String mowerType);
 }
 ```
 
 # 创建型模式
 
-Riding 类代表这种类型割草机的类对象。它实现了 Mower 接口。它重写了 mow() 方法并输出特定此类型割草机的文本：
+## 第 4 章
+
+`Riding`类代表这种类型割草机的类对象。它实现了`Mower`接口。它重写了`mow()`方法并输出特定此类型割草机的文本：
 
 ```java
 public class Riding implements Mower {
+
     @Override
     public void mow() {
         System.out.println("Riding mowers provide safety and comfort.");
@@ -3429,10 +3788,11 @@ public class Riding implements Mower {
 }
 ```
 
-Push 类代表推式割草机类型的类对象。它实现了 Mower 接口。Push 类重写了 mow() 方法并输出特定此类型割草机的文本：
+`Push`类代表推式割草机类型的类对象。它实现了`Mower`接口。`Push`类重写了`mow()`方法并输出特定此类型割草机的文本：
 
 ```java
 public class Push implements Mower {
+
     @Override
     public void mow() {
         System.out.println("Push mowers are good for small yards.");
@@ -3440,10 +3800,11 @@ public class Push implements Mower {
 }
 ```
 
-后续代码所示 ConcreteMowerFactory 类继承自 MowerFactory 类。该类用于根据字符串参数确定实例化哪种类型的割草机：
+后续代码所示`ConcreteMowerFactory`类继承自`MowerFactory`类。该类用于根据字符串参数确定实例化哪种类型的割草机：
 
 ```java
 public class ConcreteMowerFactory extends MowerFactory {
+
     @Override
     public Mower getMowerType(String mowerType) {
         if (mowerType.equals("Riding")) {
@@ -3458,18 +3819,22 @@ public class ConcreteMowerFactory extends MowerFactory {
 }
 ```
 
-# 创建型模式 第 4 章
+# 创建型模式
 
-我们实现中的最后一个类是 MowerDriver 类。该类包含 main() 方法并驱动应用程序。main() 方法从打印一个简单的输出头开始。然后，为每个割草机类型创建两个割草机实例：
+## 第 4 章
+
+我们实现中的最后一个类是`MowerDriver`类。该类包含`main()`方法并驱动应用程序。`main()`方法从打印一个简单的输出头开始。然后，为每个割草机类型创建两个割草机实例：
 
 ```java
 public class MowerDriver {
+
     public static void main(String[] args) {
         // 输出头
         System.out.println("\nMOWER SELECTION HELPER");
 
         // 创建第一个割草机
         MowerFactory mowerFactory = new ConcreteMowerFactory();
+
         Mower rideIt = mowerFactory.getMowerType("Riding");
         rideIt.mov();
 
@@ -3480,13 +3845,15 @@ public class MowerDriver {
 }
 ```
 
-如下屏所示，割草机选择助手实现打印了 MowerDriver 类 main 方法的输出头，然后是每个实例化对象的 mov() 方法：
+如下所示，割草机选择助手实现打印了`MowerDriver`类`main`方法的输出头，然后是每个实例化对象的`mov()`方法：
 
+```text
 MOWER SELECTION HELPER
 Riding mowers provide safety and comfort.
 Push mowers are good for small yards.
+```
 
-工厂模式实现——控制台输出
+### 工厂模式实现——控制台输出
 
 本节提供了我们选择实现中建造模式的源码和控制台输出。
 
@@ -3496,44 +3863,42 @@ Push mowers are good for small yards.
 
 创建型模式
 
-第 4 章
+第4章
 
-我们将使用游戏关卡创建系统作为实现原型模式的示例应用程序。我们将有一个 BaseLevel 原型类和三个具体原型类，每个对应不同类型的关卡。这些具体原型类将实现 BaseLevel clone() 方法。不同的关卡属性将分别应用于这三个关卡。
+我们将使用游戏关卡创建系统作为实现原型模式的示例应用程序。我们将有一个`BaseLevel`原型类和三个具体原型类，每个对应不同类型的关卡。这些具体原型类将实现`BaseLevel`的`clone()`方法。不同的关卡属性将分别应用于这三个关卡。
 
 ## UML 类图
 
-如下所示的 UML 类图了我们游戏关卡创建系统的实现。我们的实现有一个 BaseLevel 类，包含 clone() 方法。该方法被三个子类（Dungeon、Forest 和 City）重写：
+如下所示的UML类图展示了我们游戏关卡创建系统的实现。我们的实现有一个`BaseLevel`类，包含`clone()`方法。该方法被三个子类（`Dungeon`、`Forest`和`City`）重写：
 
 | LevelDriver |
 | --- |
-| main() |
+| `main()` |
 | BaseLevel |
-| levelName |\| numberOfNPCs |\| numberOfTokens |
-| getLevelName() |\| getNumberOfs() |\| getNumberOf() |
-| setLevelName() |\| setNumberOfs() |\| setNumberOf() |\| clone() |
-| Dungeon (clone()) | | Forest (clone()) | | City (clone()) |
+| `levelName` \| `numberOfNPCs` \| `numberOfTokens` |
+| `getLevelName()` \| `getNumberOfs()` \| `getNumberOf()` |
+| `setLevelName()` \| `setNumberOfs()` \| `setNumberOf()` \| `clone()` |
+| Dungeon (`clone()`) \| Forest (`clone()`) \| City (`clone()`) |
 
 原型设计实现
 
-
-
-
-
 # 创建型模式
 
-# 第 4 章
+## 第 4 章
 
-如 UML 类图所示，`LevelDriver` 类包含了应用程序的 `main()` 方法，并用于驱动程序的功能。
+如UML类图所示，`LevelDriver`类包含应用程序的`main()`方法，并用于驱动程序的功能。
 
 ## 编写设计模式
 
-我们的游戏关卡创建系统从抽象类 `BaseLevel` 开始。该类实现了 Java 的 `Cloneable` 接口。每个创建的游戏关卡将包含三个类变量：`levelName`、`numberOfPCs` 和 `numberOfTokens`。紧随类之后的是访问器方法，每个变量对应一个方法：
+我们的游戏关卡创建系统从抽象类`BaseLevel`开始。该类实现了Java的`Cloneable`接口。每个创建的游戏关卡将包含三个类变量：`levelName`、`numberOfPCs`和`numberOfTokens`。紧随类之后的是访问器方法，每个变量对应一个方法：
 
 ```java
 public abstract BaseLevel implements Cloneable {
 
     public String levelName;
+
     public int numberOfPCs;
+
     public int numberOfTokens;
 
     // accessor methods
@@ -3551,7 +3916,7 @@ public abstract BaseLevel implements Cloneable {
 }
 ```
 
-`BaseLevel` 类的后半部分包含了类变量的修改器方法。类的底部是 `clone()` 方法，它用于创建 `BaseLevel` 类的副本：
+`BaseLevel`类的后半部分包含了类变量的修改器方法。类的底部是`clone()`方法，它用于创建`BaseLevel`类的副本：
 
 ```java
 // mutator methods
@@ -3569,11 +3934,11 @@ public void setNumberOfTokens(int tokens) {
 
 // level clone method
 public BaseLevel clone() throws CloneNotSupportedException {
-    return (BaseLevel)super.clone();
+    return (BaseLevel) super.clone();
 }
 ```
 
-我们的实现包含了三个扩展 `BaseLevel` 的类。以下是 `Dungeon` 类的代码。该类包含一个构造函数并重写了 `BaseLevel` 类的 `clone()` 方法：
+我们的实现包含了三个扩展`BaseLevel`的类。以下是`Dungeon`类的代码。该类包含一个构造函数并重写了`BaseLevel`类的`clone()`方法：
 
 ```java
 public class Dungeon extends BaseLevel {
@@ -3583,85 +3948,118 @@ public class Dungeon extends BaseLevel {
     }
 
     @Override
-    public BaseLevel clone() throws CloneNotSupportedException {
-        return (Dungeon)super.clone();
-    }
-}
 ```
 
-如下所示，`Forest` 类扩展了 `BaseLevel` 类。该类包含一个构造函数并重写了 `BaseLevel` 类的 `clone()` 方法：
+
+
+# 创建设计模式
+
+## 第4章
+
+如下所示，`Forest` 类扩展了`BaseLevel`类。该类包含一个构造函数并重写了`BaseLevel`类的`clone()`方法：
 
 ```java
 public class Forest extends BaseLevel {
 
     public Forest(String name) {
+
         levelName = name;
+
     }
 
     @Override
+
     public BaseLevel clone() throws CloneNotSupportedException {
+
         return (Forest)super.clone();
+
     }
+
 }
 ```
 
-与 `Dungeon` 和 `Forest` 类一样，如下所示的 `City` 类也扩展了 `BaseLevel` 类。该类包含一个构造函数并重写了 `BaseLevel` 类的 `clone()` 方法：
+与`Dungeon`和`Forest`类一样，如下所示的`City`类也扩展了`BaseLevel`类。该类包含一个构造函数并重写了`BaseLevel`类的`clone()`方法：
 
 ```java
 public class City extends BaseLevel {
 
     public City(String name) {
+
         levelName = name;
+
     }
 
     @Override
+
     public BaseLevel clone() throws CloneNotSupportedException {
+
         return (City)super.clone();
+
     }
+
 }
 ```
 
-实现游戏关卡创建系统的最后一个类是 `LevelDriver`。该类只包含一个 `main()` 方法。正如后续代码所示，该方法分为两个部分。第一部分以输出头开始，并创建一个 `Dungeon` 对象、一个 `Forest` 对象和一个 `City` 对象。在创建每个对象时，提供了游戏关卡名称、NPC 数量和 Token 数量：
+实现游戏关卡创建系统的最后一个类是`LevelDriver`。该类只包含一个`main()`方法。正如后续代码所示，该方法分为两个部分。第一部分以输出头开始，并创建一个`Dungeon`对象、一个`Forest`对象和一个`City`对象。在创建每个对象时，提供了游戏关卡名称、NPC 数量和 Token 数量：
 
 ```java
 public class LevelDriver {
+
     public static void main(String[] args) throws CloneNotSupportedException {
+
         System.out.println("\n\GAME LEVEL CREATION\n");
 
         // Create Dungeon Level
+
         BaseLevel dungeon = new Dungeon("Slasher's Dungeon Level 1");
+
         dungeon.numberOfPCs = 500;
+
         dungeon.numberOfTokens = 80;
 
         // Create Forest Game Level
+
         BaseLevel forest = new Forest("Acid Rain Forest Level");
+
         forest.numberOfPCs = 250;
+
         forest.numberOfTokens = 120;
 
         // Create City Game Level
+
         BaseLevel city = new City("Industrial City Level");
+
         city.numberOfPCs = 319;
+
         city.numberOfTokens = 600;
 ```
 
-`levelDriver` `main()` 方法的第二部分做了两件事。首先，它创建了已存在的 `Dungeon` 对象的副本，并命名为 `levelClone`。为关卡名称、NPC 数量和 Token 设置了新值。此代码执行的第二个任务是显示输出以验证应用程序的功能：
+`levelDriver` `main()`方法的第二部分做了两件事。首先，它创建了已存在的`Dungeon`对象的副本，并命名为`levelClone`。为关卡名称、NPC 数量和 Token 设置了新值。此代码执行的第二个任务是显示输出以验证应用程序的功能：
 
 ```java
 // Clone Dungeon Object
+
 BaseLevel levelClone1;
+
 levelClone1 = dungeon.clone();
+
 levelClone1.setLevelName("Slasher's Dungeon Level 2");
+
 levelClone1.setNumberOfPCs(1000);
+
 levelClone1.setNumberOfTokens(40);
 
 // Display output for functionality verification
+
 System.out.println("Dungeon Level information");
+
 System.out.println("Level Name : " + dungeon.getLevelName());
+
 System.out.println("Number of NPCs : " + dungeon.getNumberOfPCs());
+
 System.out.println("Number of Tokens : " + dungeon.getNumberOfTokens());
 
 System.out.println("\nCloned Level information\n");
-}
 ```
 
 该应用程序的输出如下：
@@ -3670,35 +4068,23 @@ System.out.println("\nCloned Level information\n");
 GAME LEVEL CREATION
 
 Dungeon Level information
+
 Level Name : Slasher's Dungeon Level 1
+
 Number of NPCs : 500
+
 Number of Tokens : 80
 
 Cloned Level information
+
 Level Name : Slasher's Dungeon Level 2
+
 Number of NPCs : 1000
+
 Number of Tokens : 40
 ```
 
-
-
-
-
-# 创建设计模式
-
-# 第4章
-
-```java
-return new ResidentialLawnMowerSeat();
-} else if (mowerType == LawnMowerType.COMMERCIAL) {
-    return new CommercialLawnMowerSeat();
-} else {
-    return null;
-}
-}
-```
-
-我们解决方案中的最后一个类是 `LawnMowerSeatDriver` 类。该类包含 `main` 方法并调用 `Factory` 类来创建对象：
+我们解决方案中的最后一个类是`LawnMowerSeatDriver`类。该类包含`main`方法并调用`Factory`类来创建对象：
 
 ```java
 public class LawnMowerSeatDriver {
@@ -3708,15 +4094,19 @@ public class LawnMowerSeatDriver {
         System.out.println("\n\n");
 
         // 创建一个家用割草机座椅
+
         LawnMowerSeat residential =
+
         LawnMowerSeatFactory.create(LawnMowerSeatFactory.LawnMowerType.RESIDENTIAL);
 
-
         // 创建一个商用割草机座椅
+
         LawnMowerSeat commercial =
+
         LawnMowerSeatFactory.create(LawnMowerSeatFactory.LawnMowerType.COMMERCIAL);
 
     }
+
 }
 ```
 
@@ -3734,7 +4124,7 @@ public class LawnMowerSeatDriver {
 
 单例模式可能是所有创建设计模式中最容易理解和实现的一种。该设计模式的目的是确保一个类只有一个实例，并且该实例可以从外部访问。基于安全的系统通常会实现单例模式。例如，创建一个新账户的银行系统。确保这些账户仅由单个系统生成是至关重要的。
 
-我们将通过通过将单例类的构造函数设置为私有来简单地实现单例模式。
+我们将通过将单例类的构造函数设置为私有来简单地实现单例模式。
 
 我们将查看一个用例案例、UML 类图以及实现该场景下单例设计模式所需的源代码。
 
@@ -3753,11 +4143,11 @@ public class LawnMowerSeatDriver {
 
 UML 类图——单例模式实现
 
-UML 类图恰恰指示了 `AccountDriver` 类包含 `main()` 方法，并将被用于驱动程序的执行。
+UML 类图恰恰指示了`AccountDriver`类包含`main()`方法，并将被用于驱动程序的执行。
 
 ## 编写设计模式
 
-`CreateBankAccount` 类包含一个私有构造函数，这将防止尝试实例化多个 `CreateBankAccount` 对象的实例。`getNewAccount()` 方法检查 `newAccount` 是否已经存在，并向用户提供上下文反馈：
+`CreateBankAccount`类包含一个私有构造函数，这将防止尝试实例化多个`CreateBankAccount`对象的实例。`getNewAccount()`方法检查`newAccount`是否已经存在，并向用户提供上下文反馈：
 
 ```java
 public class CreateBankAccount {
@@ -3765,22 +4155,33 @@ public class CreateBankAccount {
     private static CreateBankAccount newAccount;
 
     // 构造函数
+
     private CreateBankAccount() {
+
     }
 
     public static CreateBankAccount getNewAccount() {
+
         if (newAccount == null) {
+
             newAccount = new CreateBankAccount();
+
             System.out.println("New Account created.");
+
         } else {
+
             System.out.println("Account already opened.");
+
         }
+
         return newAccount;
+
     }
+
 }
 ```
 
-驱动类 `AccountDriver` 打印一个标题标签，然后尝试创建两个 `CreateBankAccount` 对象的实例，如下所示：
+驱动类`AccountDriver`打印一个标题标签，然后尝试创建两个`CreateBankAccount`对象的实例，如下所示：
 
 ```java
 public class AccountDriver {
@@ -3790,11 +4191,15 @@ public class AccountDriver {
         System.out.println("\n\nAccount Number Generation System");
 
         // 创建新账户
+
         BankAccount account1 = CreateBankAccount.getNewAccount();
 
         // 创建第二个账户
+
         BankAccount account2 = CreateBankAccount.getNewAccount();
+
     }
+
 }
 ```
 
@@ -3811,9 +4216,9 @@ public class AccountDriver {
 
 ## 总结
 
-在这一章“创建设计模式”中，我们探索了创建设计模式类别及其各个具体的模式模式：抽象工厂、构建器、工厂方法、原型、简单工厂和单例。我们学习到创建设计模式被用于管理对象的实例化。创建设计模式的目的是将对象创建与系统分离，支持通过继承依赖对象创建，封装有关系统使用的类信息，并保护对象创建细节。
+在这一章“创建设计模式”中，我们探索了创建设计模式类别及其各个具体的模式：抽象工厂、构建器、工厂方法、原型、简单工厂和单例。我们学习到创建设计模式被用于管理对象的实例化。创建设计模式的目的是将对象创建与系统分离，支持通过继承依赖对象创建，封装有关系统使用的类信息，并保护对象创建细节。
 
-在下一章“结构设计模式”中，我们将探索结构设计模式类别及其各个具体的模式：适配器、桥接、组合、 Fac面、享量和代理。
+在下一章“结构设计模式”中，我们将探索结构设计模式类别及其各个具体的模式：适配器、桥接、组合、Facade、享元和代理。
 
 ## 思考题
 
@@ -3834,7 +4239,7 @@ public class AccountDriver {
 - [使用 Java 设计模式](https://www.packpub.com/application-development/learn-design-patterns-java)
 - [Java 设计模式与最佳实践](https://www.packpub.com/application-development/design-patterns-and-best-practices)
 
-## 结构设计模式
+# 结构设计模式
 
 在上一章“创建设计模式”中，我们探索了创建设计模式类别及其各个具体的模式：抽象工厂、构建器、工厂方法、原型、简单工厂和单例。我们学习到创建设计模式被用于管理对象实例化与系统，支持通过继承依赖对象创建，封装有关系统使用的类信息，并保护对象创建细节。
 
@@ -3846,7 +4251,7 @@ public class AccountDriver {
 - 组合
 - 装饰器
 - Facade
-- 享量
+- 享元
 - 代理
 
 ## 技术要求
@@ -3871,7 +4276,7 @@ public class AccountDriver {
 | 组合模式 | |
 | 装饰器模式 | |
 | Facade 模式 | |
-| 享量模式 | |
+| 享元模式 | |
 | 代理模式 | |
 
 上表中的结构设计模式将在本章剩余章节中详细介绍。它们按字母顺序排列，以说明没有哪个比另一个更重要。
@@ -3880,19 +4285,15 @@ public class AccountDriver {
 
 适配器设计模式用于将一个类的接口转换为系统预期的接口。这种设计模式使类无论接口是否兼容都能能够协同工作。
 
-考虑一个露营车的真实世界案例。一根电线插在露营车上。电线的另一端插在电源插座上。如果电源插座与插头，就需要一个适配器。我们可以说 露营车和电源插座都是类，拥有它们自己的接口。
-
-
-
-
+考虑一个露营车的真实世界案例。一根电线插在露营车上。电线的另一端插在电源插座上。如果电源插座与插头不匹配，就需要一个适配器。我们可以说露营车和电源插座都是类，拥有它们自己的接口。
 
 ### 用例
 
-我们将使用一个房地产土地面积计算程序来演示如何实现适配器设计模式。有两个相似的类，它们没有继承自同一个基类，且在没有适配器的情况下无法直接相互通信。该类仅包含长度和宽度，以便以平方英尺计算面积。这假设地块面积较小。`Estate` 类的面积将以亩为单位计算，因为那些地块要大得多。
+我们将使用一个房地产土地面积计算程序来演示如何实现适配器设计模式。有两个相似的类，它们没有继承自同一个基类，且在没有适配器的情况下无法直接相互通信。`Lot`类仅包含长度和宽度，以便以平方英尺计算面积。这假设地块面积较小。`Estate`类的面积将以亩为单位计算，因为那些地块要大得多。
 
 ## UML 类图
 
-如下面的 UML 类图所示，`AcreageDeterminatorAdapter` 类促进了 `Lot` 和 `Estate` 类之间的通信：
+如下面的 UML 类图所示，`AcreageDeterminatorAdapter`类促进了`Lot`和`Estate`类之间的通信：
 
 | AcreageDeterminatorAdapter | Estate |
 | :--- | :--- |
@@ -3908,54 +4309,61 @@ public class AccountDriver {
 
 UML 类图——适配器设计模式实现
 
-如图所示，`AdapterDriver` 类用于驱动应用程序并包含 `main()` 方法。
+如图所示，`AdapterDriver`类用于驱动应用程序并包含`main()`方法。
 
 ## 编写设计模式
 
-这里显示的 `Lot` 类仅包含两个变量，可用于计算 `Lot` 类实例的平方英尺面积：
+这里显示的`Lot`类仅包含两个变量，可用于计算`Lot`类实例的平方英尺面积：
 
 ```java
 public class Lot {
 
     // 类变量
+
     public double length;
+
     public double width;
+
 }
 ```
 
-`Estate` 类包含与 `Lot` 类相同的两个变量，并且包含一个构造方法：
+`Estate`类包含与`Lot`类相同的两个变量，并且包含一个构造方法：
 
 ```java
 public class Estate {
 
     // 类变量
+
     public double length;
+
     public double width;
 
     // 构造方法
+
     public Estate(int length, int width) {
+
         this.length = length;
+
         this.width = width;
+
     }
+
 }
 ```
 
-`AcreageDeterminator` 类用于计算 `Lot` 实例的平方英尺：
+`AcreageDeterminator`类用于计算`Lot`实例的平方英尺：
 
 ```java
 public class AcreageDeterminator {
-    Lot lot;
 
-    public double determineAcreage(Lot tLot) {
-        lot = tLot;
-        return lot.length * lot.width;
-    }
-}
+    Lot lot;
 ```
 
-## 结构型设计模式
 
-# 第 5 章
+
+# 结构型设计模式
+
+## 第 5 章
 
 `AcreageDeterminator` 类是允许 `Lot` 和 `Estate` 类之间通信的适配器类。`AcreageDeterminator` 和 `Estate` 的实例决定面积。`determineAcreage()` 方法创建了 `Lot` 和 `Estate` 类的实例。`Estate` 实例的值赋值给 `Lot` 实例的值。然后，该方法执行针对 `Estate` 实例的计算并返回该值，如下所示：
 
@@ -3963,18 +4371,25 @@ public class AcreageDeterminator {
 public class AcreageDeterminatorAdapter {
 
     AcreageDeterminator determinator;
+
     Estate estate;
 
     public double determineAcreage(Estate tEstate) {
+
         determinator = new AcreageDeterminator();
+
         estate = tEstate;
+
         Lot tLot = new Lot();
 
         tLot.length = estate.length;
+
         tLot.width = estate.width;
 
         return (determinator.determineAcreage(tLot) / 43560);
+
     }
+
 }
 ```
 
@@ -3990,12 +4405,17 @@ public class AdapterDriver {
     public static void main(String[] args) {
 
         System.out.println("\n房地产土地面积计算");
+
         AcreageDeterminatorAdapter adAdapter = new AcreageDeterminatorAdapter();
+
         Estate estate = new Estate(2300, 6325);
 
         System.out.print("Estate Acreage: ");
+
         System.out.print(acreFormat.format(adAdapter.determineAcreage(estate)));
+
     }
+
 }
 ```
 
@@ -4011,7 +4431,7 @@ public class AdapterDriver {
 
 桥接设计模式简单地将抽象与实现分离。这种设计模式涉及在抽象和实现之间建立一座桥梁。在进一步探索这种设计模式之前，彻底理解 Java 中抽象如何工作是非常重要的。
 
-## 学习抽象
+### 学习抽象
 
 抽象是面向对象编程 (OOP) 的原则之一，用于隐藏实现细节。理解抽象对于支持正确的实现至关重要。
 
@@ -4019,17 +4439,9 @@ public class AdapterDriver {
 
 如下面的 UML 图所示，`Student`、`Teacher` 和 `Administrator` 类都继承自 `User` 类并重写了 `computeCredits()` 方法：
 
-## 结构型设计模式
-
-# 第 5 章
-
 ![](img/bcdf8abab5e2de6d67770104d49e5070_157_0.png)
 
 上述抽象说明了 `Student`、`Teacher` 和 `Administrator` 类都继承自 `User` 类并重写 `computeCredits()` 方法。
-
-## 结构型设计模式
-
-# 第 5 章
 
 `User` 类是抽象的，没有方法体。
 
@@ -4038,44 +4450,63 @@ public abstract class User {
 
     // 类变量
     protected String name;
+
     protected String userID;
+
     protected int downloadCredits;
 
     // 构造方法
     public User(String name, String userID, int downloadCredits) {
+
         this.name = name;
+
         this.userID = userID;
+
         this.downloadCredits = downloadCredits;
+
     }
 
     // 访问方法
     public String getName() {
+
         return name;
+
     }
 
     public String getUserID() {
+
         return userID;
+
     }
 
     public int getDownloadCredits() {
+
         return downloadCredits;
+
     }
 
     // 变器方法
     public void setName(String name) {
+
         this.name = name;
+
     }
 
     public void setID(String userID) {
+
         this.userID = userID;
+
     }
 
     public void setDownloadCredits(int downloadCredits) {
+
         this.downloadCredits = downloadCredits;
+
     }
 
     // 抽象方法
     public abstract int computeCredits();
+
 }
 ```
 
@@ -4087,14 +4518,20 @@ public class Student extends User {
     private int gradeLevel;
 
     public Student(String name, String userID, int downloadCredits, int gradeLevel) {
+
         super(name, userID, downloadCredits);
+
         this.gradeLevel = gradeLevel;
+
     }
 
     @Override
     public int computeCredits() {
+
         return getDownloadCredits() * gradeLevel;
+
     }
+
 }
 ```
 
@@ -4106,14 +4543,20 @@ public class Teacher extends User {
     private int teachingStatus;
 
     public Teacher(String name, String userID, int downloadCredits, int teachingStatus) {
+
         super(name, userID, downloadCredits);
+
         this.teachingStatus = teachingStatus;
+
     }
 
     @Override
     public int computeCredits() {
+
         return getDownloadCredits() * teachingStatus;
+
     }
+
 }
 ```
 
@@ -4121,26 +4564,28 @@ public class Teacher extends User {
 
 ```java
 public class Administrator extends User {
+
     public Administrator(String name, String userID, int downloadCredits) {
+
         super(name, userID, downloadCredits);
+
     }
 
     @Override
     public int computeCredits() {
+
         return 0;
+
     }
+
 }
 ```
 
-
-
-
-
-# 用用例
+### 用用例
 
 为了演示桥接设计模式以及如何高效解耦抽象与实现，我们将使用一个“药物给药系统”。该系统将支持为成年和儿童患者提供特定的药物。剂量是可变的。通过桥接设计模式，我们将在 `Medicine` 接口和 `Patient` 超类之间建立一个桥接。
 
-## UML 类图
+#### UML 类图
 
 此处提供的 UML 类图显示了药物给药系统中涉及的七类。`Antibiotic` 和 `PainRelief` 类实现了 `Medicine` 接口。`Adult` 和 `Child` 类扩展了 `Patient` 类。系统的桥接位于 `Medicine` 接口和 `Patient` 类之间：
 
@@ -4159,139 +4604,207 @@ public class Administrator extends User {
 
 ## 结构设计模式
 
-# 第 5 章
+### 第 5 章
 
-## 设计模式的实现
+#### 设计模式的实现
 
 药物给药系统从一个 `Medicine` 接口开始。让我们看看它是如何工作的：
 
-- 1. 如图所示，接口包含一个 `administerMedication()` 方法：
+1. 如图所示，接口包含一个 `administerMedication()` 方法：
 
 ```java
 public interface Medicine {
+
     void administerMedication(int amount);
+
 }
 ```
 
-- 2. `Antibiotic` 类是实现 `Medicine` 接口的两个类之一。该类重写了 `administerMedication()` 方法：
+2. `Antibiotic` 类是实现 `Medicine` 接口的两个类之一。该类重写了 `administerMedication()` 方法：
 
 ```java
 public class Antibiotic implements Medicine {
+
     @Override
+
     public void administerMedication(int amount) {
+
         System.out.print(amount + " antibiotic pills administered.");
+
     }
+
 }
 ```
 
-- 3. `PainRelief` 类是实现 `Medicine` 接口的两个类中的第二个。该类重写了 `administerMedication()` 方法并使用了定制的输出文本：
+3. `PainRelief` 类是实现 `Medicine` 接口的两个类中的第二个。该类重写了 `administerMedication()` 方法并使用了定制的输出文本：
 
 ```java
 public class PainRelief implements Medicine {
+
     @Override
+
     public void administerMedication(int amount) {
+
         System.out.print(amount + " pain relief pills administered.");
+
     }
+
 }
 ```
 
-- 4. `Patient` 类是 `Adult` 和 `Child` 类的超类。它包含了两个抽象方法：`selectPatient()` 和 `modifyMedication()`。这些抽象方法必须由 `Adult` 和 `Child` 类实现：
+4. `Patient` 类是 `Adult` 和 `Child` 类的超类。它包含了两个抽象方法：`selectPatient()` 和 `modifyMedication()`。这些抽象方法必须由 `Adult` 和 `Child` 类实现：
 
 ```java
 abstract class Patient {
+
     protected Medicine medicine;
+
     protected Patient(Medicine med) {
+
         this.medicine = med;
+
     }
+
     abstract void selectPatient(int dose);
+
     abstract void modifyMedication(int dose, int increment);
+
 }
 ```
 
-- 5. `Adult` 类扩展了 `Patient` 超类并写了 `selectPatient()` 和 `modifyMedication()` 抽象方法。`selectPatient()` 方法用于发布新的医生剂量订单。`modifyMedication()` 方法用于修改已处方药物的剂量：
+5. `Adult` 类扩展了 `Patient` 超类并写了 `selectPatient()` 和 `modifyMedication()` 抽象方法。`selectPatient()` 方法用于发布新的医生剂量订单。`modifyMedication()` 方法用于修改已处方药物的剂量：
 
 ```java
 public class Adult extends Patient {
 
     protected Adult(Medicine med) {
+
         super(med);
+
     }
 
     @Override
+
     void selectPatient(int dose) {
+
         System.out.print("\t's Order: ");
+
         medicine.administerMedication(dose);
+
     }
 
     @Override
+
     void modifyMedication(int dose, int increment) {
+
         String message = "";
 
         if (increment < 0) {
+
             dose = dose - Math.abs(increment);
+
             message = "minus ";
+
         } else {
+
             dose = dose + increment;
+
             message = "plus ";
+
         }
+
         System.out.println("\n\t-ordered dosage change: " + message + Math.abs(increment) + " pills.");
+
         selectPatient(dose);
+
     }
+
 }
 ```
 
-- 6. `Child` 类扩展了 `Patient` 超类并写了 `selectPatient()` 和 `modifyMedication()` 抽象方法。与 `Adult` 类一样，`selectPatient()` 方法用于发布新的剂量订单。`modifyMedication()` 方法用于修改已处方药物的剂量：
+6. `Child` 类扩展了 `Patient` 超类并写了 `selectPatient()` 和 `modifyMedication()` 抽象方法。与 `Adult` 类一样，`selectPatient()` 方法用于发布新的剂量订单。`modifyMedication()` 方法用于修改已处方药物的剂量：
 
 ```java
 public class Child extends Patient {
+
     public Child(Medicine med) {
+
         super(med);
+
     }
 
     @Override
+
     void selectPatient(int dose) {
+
         System.out.println("\t's Order: ");
+
         medicine.administerMedication(dose);
+
     }
 
     @Override
+
     void modifyMedication(int dose, int increment) {
+
         String message = "";
+
         if (increment < 0) {
+
             dose = dose - Math.abs(increment);
+
             message = "minus ";
+
         } else {
+
             dose = dose + increment;
-            message = "plus ";
-        }
-        System.out.println("\n\t-ordered dosage change: " + message + Math.abs(increment) + " pills.");
-        selectPatient(dose);
-    }
-}
 ```
 
-- 7. 我们系统的最后一个类是 `BridgeDriver` 类，它包含 `main()` 方法。`main()` 方法中有两个代码块：一个用于向成年患者给药抗生素片，另一个用于向儿童患者给药止痛片：
+
+
+`message = "plus ";`
+
+`System.out.println("\n\t-ordered dosage change: " + message + Math.abs(increment) + " pills.");`
+
+`selectPatient(dose);`
+
+7. 我们系统的最后一个类是`BridgeDriver`类，它包含`main()`方法。`main()`方法中有两个代码块：一个用于向成年患者给药抗生素片，另一个用于向儿童患者给药止痛片：
 
 ```java
 public class BridgeDriver {
+
     public static void main(String[] args) {
+
         System.out.println("\n\nMedication Administering
+
         // administer antibiotic pills to adult
+
         System.out.println("Adult Patient:");
+
         Medicine antibiotic = new Antibiotic();
+
         Patient adultPatient = new Adult(antibiotic);
+
         adultPatient.selectPatient(2);
+
         adultPatient.modifyMedication(2);
 
         // administer pain relief to child
+
         System.out.println("\nChild Patient:");
+
         Medicine painrelief = new PainRelief();
+
         Patient childPatient = new Child(painrelief);
+
         childPatient.selectPatient(4);
+
         childPatient.modifyMedication(4, 2);
 
         System.out.println("\n\n");
+
     }
+
 }
 ```
 
@@ -4306,38 +4819,37 @@ public class BridgeDriver {
 
 # 组合设计模式
 
-# 模式
+## 模式
 
-## 使用组合模式组合对象
+### 使用组合模式组合对象
 
 组合模式允许我们创建一个对象树。然后我们可以以处理单个对象的方式处理对象和树结构。如果没有这种设计模式，我们在从多个对象创建结构时会遇到问题。这些问题源于需要对原始对象和组合对象进行不同的处理。
 
 为了实现组合模式，我们首先创建一个抽象类来表示原始对象和树结构。
 
-### 用例
+#### 用例
 
-为了实现组合模式，我们将创建一个厨房员工管理系统，其中包含一个 `KitchenStaff` 接口和一个 `Chef` 类。我们将在实现中使用以下厨师层级——执行厨师、主厨、副厨、线厨师和助理厨师。通过组合模式，我们能够将厨师树结构视为单个对象。
+为了实现组合模式，我们将创建一个厨房员工管理系统，其中包含一个`KitchenStaff`接口和一个`Chef`类。我们将在实现中使用以下厨师层级——执行厨师、主厨、副厨、线厨师和助理厨师。通过组合模式，我们能够将厨师树结构视为单个对象。
 
 ## 设计模式的实现
 
-我们的程序从一个 `KitchenStaff` 接口开始，它包含一个空的 `getDetails()` 方法：
+我们的程序从一个`KitchenStaff`接口开始，它包含一个空的`getDetails()`方法：
 
 ```java
 public interface KitchenStaff {
+
     public String getDetails();
+
 }
 ```
 
-所示的 `Chef` 类实现了 `KitchenStaff` 类。它包含了三个类变量以及一个构造函数：
+所示的`Chef`类实现了`KitchenStaff`类。它包含了三个类变量以及一个构造函数：
 
 ```java
 import java.util.ArrayList;
+
 import java.util.List;
 ```
-
-
-
-
 
 ## 结构设计模式
 
@@ -4345,47 +4857,67 @@ import java.util.List;
 public class Chef implements KitchenStaff {
 
     private String name;
+
     private String role;
+
     private List<KitchenStaff> staffList;
 
     Chef(String name, String role) {
+
         this.name = name;
+
         this.role = role;
+
         staffList = new ArrayList<KitchenStaff>();
+
     }
+
 }
 ```
 
-Chef 类的下一部分包含了三个方法——add()、fire() 和 getStaffList()：
+`Chef`类的下一部分包含了三个方法——`add()`、`fire()`和`getStaffList()`：
 
 ```java
 public void add(Chef chef) {
+
     staffList.add(chef);
+
 }
 
 public void fire(Chef chef) {
+
     staffList.remove(chef);
+
 }
 
 public List<KitchenStaff> getStaffList() {
+
     return staffList;
+
 }
 ```
 
-Chef 类的最后一部分包含了三个访问器方法——从 KitchenStaff 接口重写的 getDetails()、getName() 和 getRole()：
+`Chef`类的最后一部分包含了三个访问器方法——从`KitchenStaff`接口重写的`getDetails()`、`getName()`和`getRole()`：
 
 ```java
 @Override
+
 public String getDetails() {
+
     return (name + " is assigned the role of " + role);
+
 }
 
 public String getName() {
+
     return name;
+
 }
 
 public String getRole() {
+
     return role;
+
 }
 ```
 
@@ -4393,7 +4925,7 @@ public String getRole() {
 
 # 第5章
 
-我们程序的 Driver 类是 KitchenStaffDriver 类。该类的第一部分（此处所示）实例化了几个 Chef 对象。这些对象的目的是为了说明：
+我们程序的 Driver 类是`KitchenStaffDriver`类。该类的第一部分（此处所示）实例化了几个`Chef`对象。这些对象的目的是为了说明：
 
 ```java
 import java.util.List;
@@ -4403,92 +4935,135 @@ public class KitchenStaffDriver {
     public static void main(String[] args) {
 
         // 创建示例数据
+
         Chef execChef = new Chef("Gamma Patron", "执行厨");
+
         Chef headChef = new Chef("Tiksha Century", "主厨");
+
         Chef sousChef1 = new Chef("Tilly Poe", "副厨");
+
         Chef sousChef2 = new Chef("Pat String", "副厨");
+
         Chef lineChef1 = new Chef("Seth Arpage", "档线厨");
+
         Chef lineChef2 = new Chef("Diego Salazar", "档线厨");
+
         Chef lineChef3 = new Chef("Cersei Butrix", "档线厨");
+
         Chef lineChef4 = new Chef("Marissa Parth", "档线厨");
+
         Chef commis1 = new Chef("Johnny Ferd", "帮厨");
+
         Chef commis2 = new Chef("Kay Fleming", "帮厨");
 ```
 
-KitchenStaffDriver 类的第二部分将主厨隶属于执行厨，副厨隶属于主厨，档线厨隶属于副厨，帮厨隶属于档线厨：
+`KitchenStaffDriver`类的第二部分将主厨隶属于执行厨，副厨隶属于主厨，档线厨隶属于副厨，帮厨隶属于档线厨：
 
 ```java
 // 在树形结构顶端建立执行厨
+
 execChef.add(headChef);
 
 // 使主厨隶属于执行厨
+
 headChef.add(sousChef1);
+
 headChef.add(sousChef2);
 
 // 使副厨隶属于主厨
+
 sousChef1.add(lineChef1);
+
 sousChef1.add(lineChef2);
+
 sousChef1.add(lineChef3);
+
 sousChef1.add(lineChef4);
 
 // 使帮厨隶于 1 号档线厨下
+
 lineChef1.add(commis1);
+
 lineChef1.add(commis2);
 ```
 
 # 结构设计模式 第5章
 
-在下一部分代码中，我们使用 null 来表示没有下属。这确立了树形结构的结束：
+在下一部分代码中，我们使用`null`来表示没有下属。这确立了树形结构的结束：
 
 ```java
 // 其他档线厨没有下属
+
 lineChef2.add(null);
+
 lineChef3.add(null);
+
 lineChef4.add(null);
 
 // 帮厨没有下属
+
 commis1.add(null);
+
 commis2.add(null);
 ```
 
-Driver 类还根据示例数据提供控制台输出。getDetails() 方法用于从执行厨获取详细信息。接下来，使用 getStaffList() 和 getDetails() 方法为副厨、档线厨和帮厨提供详细信息。输出格式格式化以指示树形结构：
+`Driver`类还根据示例数据提供控制台输出。`getDetails()`方法用于从执行厨获取详细信息。接下来，使用`getStaffList()`和`getDetails()`方法为副厨、档线厨和帮厨提供详细信息。输出格式格式化以指示树形结构：
 
 ```java
 // 提供控制台输出
+
 System.out.println("\n厨房工作人员管理系统\n");
+
 System.out.println(execChef.getDetails());
 
 List<KitchenStaff> head = execChef.getStaffList();
+
 for (int i=0; i < head.size(); i++) {
+
     System.out.println("\t" + head.get(i).getDetails());
+
 }
 
 List<KitchenStaff> sous = sousChef1.getStaffList();
+
 for (int i=0; i < sous.size(); i++) {
+
     System.out.println("\t\t" + sous.get(i).getDetails());
+
 }
 
 List<KitchenStaff> line = lineChef1.getStaffList();
+
 for (int i=0; i < line.size(); i++) {
+
     System.out.println("\t\t\t" + line.get(i).getDetails());
+
 }
 ```
 
-KitchenStaffDriver 的最后部分处理了一个档线厨的解雇事件。fire() 方法用于从员工列表中移除该厨。最后，提供了一个更新后的档线厨列表用于代码的可视化验证：
+`KitchenStaffDriver`的最后部分处理了一个档线厨的解雇事件。`fire()`方法用于从员工列表中移除该厨。最后，提供了一个更新后的档线厨列表用于代码的可视化验证：
 
 ```java
 // 解雇一名档线厨
+
 System.out.println("\n厨房工作人员更新\n");
 ```
 
 ```java
 System.out.println("\t" + lineChef1.getName() +
+
       ", " + lineChef1.getRole() + ", 已解雇.");
+
 sousChef1.fire(lineChef1);
+
 System.out.println("\n这里是更新后的档线厨列表:");
+
 List<KitchenStaff> newLine = sousChef1.getStaffList();
+
 for (int i=0; i < newLine.size(); i++) {
+
   System.out.println("\t" + newLine.get(i).getDetails());
+
 }
 ```
 
@@ -4527,84 +5102,110 @@ for (int i=0; i < newLine.size(); i++) {
 | 装饰器模式有时被称为包装器模式，因为装饰器包装了对象及其动态创建的职责。 |
 
 | 用例 |
-| 我们将创建一个 Buffer Flusher 应用程序来演示如何实现装饰器模式。我们有一个不会修改的 flushBuffer() 方法。功能将通过装饰器添加。如你所见，新功能不会影响原始的 flushBuffer()。 |
+| 我们将创建一个 Buffer Flusher 应用程序来演示如何实现装饰器模式。我们有一个不会修改的`flushBuffer()`方法。功能将通过装饰器添加。如你所见，新功能不会影响原始的`flushBuffer()`。 |
 
 | UML 类图 |
-| 以下 UML 类图显示我们的 Buffer Flusher 应用程序包含一个 Printer 类和一个继承自 Printer 类的 ConcretePrinter 类。还有具体的装饰器类（ConcreteDecorator1 和 ConcreteDecorator2）继承自 AbstractDecorator 类： |
+| 以下 UML 类图显示我们的 Buffer Flusher 应用程序包含一个`Printer`类和一个继承自`Printer`类的`ConcretePrinter`类。还有具体的装饰器类（`ConcreteDecorator1`和`ConcreteDecorator2`）继承自`AbstractDecorator`类： |
 
 # 结构设计模式 |
 
 # 第5章
 
-| 如图所示，DecoratorDriver 类用于驱动程序并包含 main() 方法。 |
+| 如图所示，`DecoratorDriver`类用于驱动程序并包含`main()`方法。 |
 
 # 编写设计模式 |
-|  Buffer Flusher 应用程序从一个抽象的 Printer 类开始，该类有一个空的 flushBuffer() 方法。由于它是抽象方法，不能有方法体。以下代码所示： |
+
+| Buffer Flusher 应用程序从一个抽象的`Printer`类开始，该类有一个空的`flushBuffer()`方法。由于它是抽象方法，不能有方法体。以下代码所示： |
 
 ```java
 abstract class Printer {
+
     public abstract void flushBuffer();
+
 }
 ```
 
-接下来，我们有一个继承 Printer 类的 ConcretePrinter。flushBuffer() 方法被重写，并包含了打印到控制台的上下文消息：
+接下来，我们有一个继承`Printer`类的`ConcretePrinter`。`flushBuffer()`方法被重写，并包含了打印到控制台的上下文消息：
 
 ```java
 public class ConcretePrinter extends Printer {
+
     @Override
+
     public void flushBuffer() {
+
         System.out.println("来自具体打印机的消息：打印缓冲区已刷新");
+
     }
+
 }
 ```
 
-AbstractDecorator 类是抽象的并继承自 Printer 类。该类实例化了一个 Printer 对象，有一个 selectPrinterToFlush() 方法和 flushBuffer() 方法：
+`AbstractDecorator`类是抽象的并继承自`Printer`类。该类实例化了一个`Printer`对象，有一个`selectPrinterToFlush()`方法和`flushBuffer()`方法：
 
 ```java
 abstract class AbstractDecorator extends Printer {
+
     protected Printer printer;
 
     public void selectPrinterToFlush(Printer ptr) {
+
         printer = ptr;
+
     }
 
     public void flushBuffer() {
+
         if (printer != null) {
+
             printer.flushBuffer();
+
         }
+
     }
+
 }
 ```
 
-
-
-
-
 ## 结构设计模式 第 5 章
 
-第一个具体的装饰器类 ConcreteDecorator1 继承了抽象类 AbstractDecorator。它实现了 `flushBuffer()` 方法，并包含了用于控制台输出的上下文文本：
+第一个具体的装饰器类`ConcreteDecorator1`继承了抽象类`AbstractDecorator`。它实现了`flushBuffer()`方法，并包含了用于控制台输出的上下文文本：
 
 ```java
 public class ConcreteDecorator1 extends AbstractDecorator {
 
     public void flushBuffer() {
+
         super.flushBuffer();
+
         System.out.println("Message from Concrete Decorator 1: " + 
+
         "Printer Buffer Flushed");
+
     }
+
 }
 ```
 
-第二个具体的装饰器类 ConcreteDecorator2 继承了抽象类 AbstractDecorator。它实现了 `flushBuffer()` 方法并包含了用于控制台输出的上下文文本。为了说明，此输出与第一个具体的装饰器类不同：
+第二个具体的装饰器类`ConcreteDecorator2`继承了抽象类`AbstractDecorator`。它实现了`flushBuffer()`方法并包含了用于控制台输出的上下文文本。为了说明，此输出与第一个具体的装饰器类不同：
 
 ```java
 public class ConcreteDecorator2 extends AbstractDecorator {
 
     public void flushBuffer() {
+
         System.out.println("\n START ] Concrete Decorator 2 Wrapper [ \nSTART ]\n");
+
     }
+
 }
 ```
+
+
+
+# 第 5 章 结构设计模式
+
+## 装饰器设计模式实现——控制台输出
 
 在装饰器设计模式的 Printer Flusher Demo 实现中，最后一个类是应用程序的 Driver 类，包含了 `main()` 方法。在打印完装饰性头部后，创建了一个 `ConcretePrinter` 实例，然后创建了两个装饰器：
 
@@ -4612,29 +5213,39 @@ public class ConcreteDecorator2 extends AbstractDecorator {
 public class DecoratorDriver {
 
     public static void main(String[] args) {
+
         System.out.println("\n====================================================================\n===");
+
         System.out.println("\t\tPrinter Buffer Flusher Demo");
+
         System.out.println("==================================================================");
 
         ConcretePrinter concreteFlush = new ConcretePrinter();
+
     }
+
 }
 ```
 
-## 结构设计模式
-# 第 5 章
-
 ```java
 // 创建具体的装饰器
+
 ConcreteDecorator1 cd1 = new ConcreteDecorator1();
+
 // 装饰 cd1
+
 cd1.selectPrinterToFlush(concreteFlush);
+
 cd1.flushBuffer();
 
 // 创建具体的装饰器
+
 ConcreteDecorator2 cd2 = new ConcreteDecorator2();
+
 // 装饰 cd2
+
 cd2.selectPrinterToFlush(cd1);
+
 cd2.flushBuffer();
 ```
 
@@ -4642,16 +5253,21 @@ cd2.flushBuffer();
 
 ```
 Printer Buffer Flusher Demo
+
 Message from Concrete Printer: Printer Buffer Flushed
+
 Message from Concrete Decorator 1: Printer Buffer Flushed
+
 [ START ] Concrete Decorator 2 Wrapper [ START ]
+
 Message from Concrete Printer: Printer Buffer Flushed
+
 Message from Concrete Decorator 1: Printer Buffer Flushed
+
 Message from Concrete Decorator 2: Printer Buffer Flushed
+
 [ END ] Concrete Decorator 2 Wrapper [ END ]
 ```
-
-## 装饰器设计模式实现——控制台输出
 
 本节提供了我们 Printer Buffer Flusher Demo 装饰器模式实现的源码和控制台输出。
 
@@ -4660,9 +5276,6 @@ Message from Concrete Decorator 2: Printer Buffer Flushed
 外观设计模式（Facade design pattern）创建了一个接口，作为系统或子系统中其他接口的接口。使用这种设计模式的处处是降低了子系统的复杂性、减少了组件的依赖，并减少了系统组件之间的通信。
 
 请考虑以下插图。左图显示了没有外观接口的系统和子系统的组织结构。右图显示了在主类和子系统之间分层的外观接口：
-
-## 结构设计模式
-# 第 5 章
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_175_0.png)
 
@@ -4707,7 +5320,7 @@ UML 类图——外观设计模式实现
 
 `MealProtein` 类是餐点的三个组件类之一。让我们看看它是如何工作的：
 
-- 1. 它包含一个蛋白质类变量和一个变变器方法，用于将提供的输入赋值给该类变量：
+1. 它包含一个蛋白质类变量和一个变变器方法，用于将提供的输入赋值给该类变量：
 
 ```java
 package CH5Facade.MealComponents;
@@ -4717,13 +5330,17 @@ public class MealProtein {
     private String protein;
 
     public void setProtein(String protein) {
+
         this.protein = protein;
+
         System.out.println("\tProtein (" + this.protein + ") added to meal");
+
     }
+
 }
 ```
 
-- 2. `MealVegetable` 类与 `MealProtein` 类相似，它是餐点的三个组件之一。它包含一个蔬菜变量和一个变变器方法，用于将提供的输入赋值给类变量：
+2. `MealVegetable` 类与 `MealProtein` 类相似，它是餐点的三个组件之一。它包含一个蔬菜变量和一个变变器方法，用于将提供的输入赋值给类变量：
 
 ```java
 package CH5Facade.MealComponents;
@@ -4733,13 +5350,17 @@ public class MealVegetable {
     private String vegetable;
 
     public void setVegetable(String vegetable) {
+
         this.vegetable = vegetable;
+
         System.out.println("\tVegetable (" + this.vegetable + ") added to meal");
+
     }
+
 }
 ```
 
-- 3. `MealStarch` 类是餐点的第三个组件类。它包含一个淀粉变量和一个变变器方法，将提供的输入赋值给类变量：
+3. `MealStarch` 类是餐点的第三个组件类。它包含一个淀粉变量和一个变变器方法，将提供的输入赋值给类变量：
 
 ```java
 package CH5Facade.MealComponents;
@@ -4749,48 +5370,67 @@ public class MealStarch {
     private String starch;
 
     public void setStarch(String starch) {
+
         this.starch = starch;
+
         System.out.println("\tStarch (" + this.starch + ") added to meal");
+
     }
+
 }
 ```
 
-- 4. `MealFacade` 类位于自己的包中导入了 `MealProtein`、`MealVegetable` 和 `MealStarch` 类。这里提供了 `MealFacade` 类的第一部分。这段代码定义了三个类变量并包含了构造函数：
+4. `MealFacade` 类位于自己的包中导入了 `MealProtein`、`MealVegetable` 和 `MealStarch` 类。这里提供了 `MealFacade` 类的第一部分。这段代码定义了三个类变量并包含了构造函数：
 
 ```java
 package CH5Facade.MealFacade;
 
 import CH5Facade.MealComponents.MealProtein;
+
 import CH5Facade.MealComponents.MealVegetable;
+
 import CH5Facade.MealComponents.MealStarch;
 
 public class MealFacade {
 
     MealProtein newProtein;
+
     MealVegetable newVegetable;
+
     MealStarch newStarch;
 
     public MealFacade() {
+
         newProtein = new MealProtein();
+
         newVegetable = new MealVegetable();
+
         newStarch = new MealStarch();
+
     }
+
 }
 ```
 
-- 5. `MealFacade` 类的最后部分（代码块所示）包含了 `assembleMeal()` 方法。该方法提供餐点组装过程开始和结束的控制台输出。它调用了 `setProtein()`、`setVegetable()` 和 `setStarch()` 方法：
+5. `MealFacade` 类的最后部分（代码块所示）包含了 `assembleMeal()` 方法。该方法提供餐点组装过程开始和结束的控制台输出。它调用了 `setProtein()`、`setVegetable()` 和 `setStarch()` 方法：
 
 ```java
 public void assembleMeal(String protein, String vegetable, String starch) {
+
     System.out.println("\n\tMeal assembly process initiated.\n");
+
     newProtein.setProtein(protein);
+
     newVegetable.setVegetable(vegetable);
+
     newStarch.setStarch(starch);
+
     System.out.println("\tMeal assembly process completed.\n\n");
+
 }
 ```
 
-- 6. 我们的应用程序类 `FacadeDriver` 包含了 `main()` 方法。该方法首先向控制台打印装饰性头部。接下来，通过实例化 `MealFacade` 对象并调用对象的 `assembleMeal()` 方法，创建了三份餐点：
+6. 我们的应用程序类 `FacadeDriver` 包含了 `main()` 方法。该方法首先向控制台打印装饰性头部。接下来，通过实例化 `MealFacade` 对象并调用对象的 `assembleMeal()` 方法，创建了三份餐点：
 
 ```java
 package CH5Facade;
@@ -4798,39 +5438,47 @@ package CH5Facade;
 import CH5Facade.MealFacade.MealFacade;
 
 public class FacadeDriver {
+
     public static void main(String[] args) {
+
         System.out.println("\n\n=================================================");
+
         MealFacade factory = new MealFacade();
+
         factory.assembleMeal("Beef", "Carrot", "Potato");
+
         factory.assembleMeal("Chicken", "Broccoli", "Rice");
+
         factory.assembleMeal("Tofu", "Asparagus", "Quinoa");
+
         System.out.println("=================================================");
+
     }
+
 }
 ```
 
-
-
-
-
-## 结构设计模式
-
-# 第 5 章
+# 第 5 章 结构设计模式
 
 ```java
 System.out.println("\t\tMeal Assembly Service Demo");
+
 System.out.println("====================================");
 ```
 
 ```java
 //组装三顿餐
+
 MealFacade meal1 = new MealFacade();
+
 meal1.assembleMeal("Steak", "Asparagus", "Wild Rice");
 
 MealFacade meal2 = new MealFacade();
+
 meal2.assembleMeal("Chicken", "Green Beans", "Potato Wedges");
 
 MealFacade meal3 = new MealFacade();
+
 meal3.assembleMeal("Meatloaf", "Brussel Sprouts", "Mashed Potatoes");
 ```
 
@@ -4851,7 +5499,7 @@ meal3.assembleMeal("Meatloaf", "Brussel Sprouts", "Mashed Potatoes");
 
 ### 用例
 
-我们将创建一个床垫制造工厂演示应用程序，来实现享量模式设计模式。我们将创建一个接口、一个 Mattress 类、一个 MattressFactory 类和一个 Driver 类。我们的应用程序将具备创建婴儿床、双人床和大号尺寸床垫的能力。如果 Mattress 已经存在，则不会创建新对象；相反，MattressFactory 将提供尺寸，然后确定床垫硬度。
+我们将创建一个床垫制造工厂演示应用程序，来实现享量模式设计模式。我们将创建一个接口、一个 `Mattress` 类、一个 `MattressFactory` 类和一个 `Driver` 类。我们的应用程序将具备创建婴儿床、双人床和大号尺寸床垫的能力。如果 `Mattress` 已经存在，则不会创建新对象；相反，`MattressFactory` 将提供尺寸，然后确定床垫硬度。
 
 ## UML 类图
 
@@ -4867,151 +5515,218 @@ meal3.assembleMeal("Meatloaf", "Brussel Sprouts", "Mashed Potatoes");
 | setMattressFirmness() | |
 | print() | | |
 
-如图所示，MattressDriver 类——享量模式设计模式实现被用于驱动应用程序，并包含 main() 方法。
+如图所示，`MattressDriver` 类——享量模式设计模式实现被用于驱动应用程序，并包含 `main()` 方法。
 
-## 结构设计模式
-
-# 第 5 章
+# 第 5 章 结构设计模式
 
 ## 编写设计模式
 
 我们将考虑以下案例来理解编程设计模式：
 
-1. 我们的床垫制造工厂演示从一个 MattressInterface 接口开始。该接口包含一个没有主体的 print() 方法：
+1. 我们的床垫制造工厂演示从一个 `MattressInterface` 接口开始。该接口包含一个没有主体的 `print()` 方法：
 
 ```java
 public interface MattressInterface {
+
     void print();
+
 }
 ```
 
-2. Mattress 类实现了 MattressInterface。它包含两个类变量（mattressSize 和 mattressFirmness）。该类还包含 setMattressFirmness() 修改器方法并重写了接口的 print() 方法：
+2. `Mattress` 类实现了 `MattressInterface`。它包含两个类变量（`mattressSize` 和 `mattressFirmness`）。该类还包含 `setMattressFirmness()` 修改器方法并重写了接口的 `print()` 方法：
 
 ```java
 public class Mattress implements MattressInterface {
+
     // 类变量
+
     String mattressSize;
+
     String mattressFirmness;
 
     // 构造函数
+
     public Mattress(String mattressSize) {
+
         this.mattressSize = mattressSize;
+
     }
 
     // 修改器方法
+
     public void setMattressFirmness(String mattressFirmness) {
+
         this.mattressFirmness = mattressFirmness;
+
     }
 
     @Override
+
     public void print() {
+
         System.out.println("\tThis is a " + mattressFirmness + " \t" + mattressSize + " mattress.");
+
     }
+
 }
 ```
 
-3. MattressFactory 类在此分为两个部分，依赖于 Java 的 HashMap 和 Map 包：
+3. `MattressFactory` 类在此分为两个部分，依赖于 Java 的 `HashMap` 和 `Map` 包：
 
 ```java
 import java.util.HashMap;
+
 import java.util.Map;
 ```
 
 ```java
 public class MattressFactory {
+
     Map<String, MattressInterface> sizes = new HashMap<String, MattressInterface>();
 
     public int numberOfMattresses() {
+
         return sizes.size();
+
     }
+
 }
 ```
 
-4. MattressFactory 类的第二部分包含异常处理和 getFactoryMattress() 方法。该方法包含一个根据床垫尺寸构建的 switch。这里是该方法的第一个部分：
+
+
+
+## 4. `MattressFactory` 类的第二部分
+
+`MattressFactory` 类的第二部分包含异常处理和 `getFactoryMattress()` 方法。该方法包含一个根据床垫尺寸构建的 `switch`。这里是该方法的第一个部分：
 
 ```java
 public MattressInterface getFactoryMattress(String mSize) throws Exception {
+
     MattressInterface mattressSize = null;
+
     if (sizes.containsKey(mSize)) {
+
         mattressSize = sizes.get(mSize);
+
     } else {
+
         switch (mSize) {
+
             // switch 语句在这里
+
         }
+
     }
+
     return mattressSize;
+
 }
 ```
 
-5. getFactoryMattress() 方法的 switch() 代码块在这里：
+## 5. `getFactoryMattress()` 方法的 `switch()` 代码块
 
 ```java
 switch (mSize) {
+
     case "Crib":
+
         System.out.println("A Crib Mattress did not exist, but now");
+
         mattressSize = new Mattress("Crib");
+
         sizes.put("Crib", mattressSize);
+
         break;
 
     case "Twin":
+
         System.out.println("A Twin Mattress did not exist, but now");
+
         mattressSize = new Mattress("Twin");
+
         sizes.put("Twin", mattressSize);
+
         break;
 
     case "Full":
+
         System.out.println("A Full Mattress did not exist, but now");
+
         mattressSize = new Mattress("Full");
+
         sizes.put("Full", mattressSize);
+
         break;
 
     default:
+
         throw new Exception("Mattress Creation Error: invalid size.");
+
 }
 ```
 
-6. 最后的类是 MattressDriver，它包含 main() 方法。在向控制台打印装饰性头部后，有几个 循环，每个循环对应一个不同的尺寸。我们的实现每个支持一个：
+## 6. `MattressDriver` 类
+
+最后的类是 `MattressDriver`，它包含 `main()` 方法。在向控制台打印装饰性头部后，有几个循环，每个循环对应一个不同的尺寸。我们的实现每个支持一个：
 
 ```java
 public class MattressDriver {
+
     public static void main(String[] args) throws Exception {
 
         MattressFactory theFactory = new MattressFactory();
+
         System.out.println("\n\n=================================="
+
         System.out.println("\t\tMattress Manufacturing Factory Demo");
+
         System.out.println("========================================\n");
 
         Mattress newMattress;
+
         for (int i = 0; i < 5; i++) {
+
             newMattress = (Mattress)theFactory.getFactoryMattress("Crib");
+
             newMattress.setMattressFirmness("Firm");
+
             newMattress.print();
+
         }
+
         for (int i = 0; i < 5; i++) {
+
             newMattress = (Mattress)theFactory.getFactoryMattress("Twin");
+
             newMattress.setMattressFirmness("Soft");
+
             newMattress.print();
+
         }
+
         for (int i = 0; i < 5; i++) {
+
             newMattress = (Mattress)theFactory.getFactoryMattress("Full");
+
             newMattress.setMattressFirmness("Extra Firm");
+
             newMattress.print();
+
         }
+
     }
+
 }
 ```
 
 ## 实现代理设计模式
 
-代理在 Java 语文中被定义为具有代表另一个对象的权限。代理设计模式名副其实，因为它建立了一个占位符，以便自己以外的对象可以控制访问。指针对象引用缺乏复杂性。代理引用相对于对象引用可以完成以下：
+代理在 Java 语言中被定义为具有代表另一个对象的权限。代理设计模式名副其实，因为它建立了一个占位符，以便自己以外的对象可以控制访问。指针对象引用缺乏复杂性。代理引用相对于对象引用可以完成以下操作：
 
-* 使用智能指针，可以计算给定对象的引用次数。这支持垃圾回收。
-* 对象锁定，使其无法被其他对象修改。
-* 内存加载增强。
-
-
-
-
+- 使用智能指针，可以计算给定对象的引用次数。这支持垃圾回收。
+- 对象锁定，使其无法被其他对象修改。
+- 内存加载增强。
 
 ## 结构设计模式
 
@@ -5025,7 +5740,7 @@ public class MattressDriver {
 
 ## UML 类图
 
-我们的天气预报应用由四个类组成——Weather、ConcreteWeather、Proxy 和 ProxyDriver：
+我们的天气预报应用由四个类组成——`Weather`、`ConcreteWeather`、`Proxy` 和 `ProxyDriver`：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_185_0.png)
 
@@ -5041,7 +5756,9 @@ public class MattressDriver {
 package Proxy.MasterClasses;
 
 public abstract class Weather {
+
     public abstract void whoAMI();
+
 }
 ```
 
@@ -5049,11 +5766,17 @@ public abstract class Weather {
 
 ```java
 public class ConcreteWeather extends Weather {
+
     @Override
+
     public void whoAMI() {
+
         System.out.println("\tMethod Call from " + this.getClass().getSimpleName() + " class");
+
         System.out.println("\tWeather forecast is sunny\n");
+
     }
+
 }
 ```
 
@@ -5063,23 +5786,33 @@ public class ConcreteWeather extends Weather {
 package Proxy.ProxyClasses;
 
 import Proxy.MasterClasses.ConcreteWeather;
+
 import Proxy.MasterClasses.Weather;
 
 public class Proxy extends Weather {
+
     ConcreteWeather concreteWeather;
 
     @Override
+
     public void whoAMI() {
+
         System.out.println("\tMethod Call from " + this.getClass().getSimpleName() + " class");
+
         System.out.println("\tWeather forecast is overcast and rain\n");
+
     }
+
 }
 ```
 
 ```java
 if (concreteWeather == null) {
+
     concreteWeather = new ConcreteWeather();
+
 }
+
 concreteWeather.whoAMI();
 ```
 
@@ -5089,23 +5822,35 @@ concreteWeather.whoAMI();
 package ProxyDriver {
 
 public class ProxyDriver {
+
     public static void main(String[] args) {
+
         System.out.println("\n\n");
+
         System.out.println("\t\t\tProxy Weather Forecast Demo");
+
         Proxy proxyCall = new Proxy();
+
         proxyCall.whoAMI();
+
     }
+
 }
 ```
 
+
+
+
 应用程序的控制台输出如下：
 
+```
 | Proxy Weather Forecast Demo |
 | :--- |
 | Method Call from Proxy class |
 | Weather forecast is overcast and rain |
 | Method Call from ConcreteWeather class |
 | Weather forecast is sunny |
+```
 
 **代理模式实现——控制台输出**
 
@@ -5136,10 +5881,6 @@ public class ProxyDriver {
 - [Learn Design Patterns with Java](https://www.packtpub.com/application-development/learn-design-patterns-java)
 - [Design Patterns and Best Practices in Java](https://www.packtpub.com/application-development/design-patterns-and-practices)
 
-
-
-
-
 # 架构模式 - 第 1 部分
 
 # 第 6 章
@@ -5153,21 +5894,15 @@ public class ProxyDriver {
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_193_0.png)
 
-正如黑板模式（blackboard pattern）图所示，机器人可以访问七个不同的知识源。这种访问用双箭头表示，意味着知识系统将从机器人与客户及环境的互动中学习。示例可能包括学习定制饮品、记住老客的订单、了解如何清洗马克杯等。
+正如黑板模式（`blackboard pattern`）图所示，机器人可以访问七个不同的知识源。这种访问用双箭头表示，意味着知识系统将从机器人与客户及环境的互动中学习。示例可能包括学习定制饮品、记住老客的订单、了解如何清洗马克杯等。
 
 在黑板架构模式的实现中，黑板存储在内存中，并对知识系统具有读写权限。
-
-[ 179 ]
-
-# 架构模式 - 第 1 部分
-
-# 第 6 章
 
 以下 UML 类图展示了知识源在黑板模式中的重要性：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_194_0.png)
 
-UML 类图中所示的 Android 组件在黑板架构模式中被称为控制组件（control component）。
+UML 类图中所示的 Android 组件在黑板架构模式中被称为控制组件（`control component`）。
 
 ## 仓库安全机器人示例
 
@@ -5177,37 +5912,33 @@ UML 类图中所示的 Android 组件在黑板架构模式中被称为控制组�
 - 在仓库内导航
 - 移动到电击枪的有效范围内
 
-这些职责中的每一个都可以被视为系统中的一个组件。这些组件将是**入侵者识别、导航和弹道学**。以下 UML 类图说明了机器人（Bot）、控制组件与系统其他部分之间的关系：
+这些职责中的每一个都可以被视为系统中的一个组件。这些组件将是**入侵者识别、导航和弹道学**。以下 UML 类图说明了机器人（`Bot`）、控制组件与系统其他部分之间的关系：
 
 | 入侵者识别 | 导航 | 弹道学 |
 | :--- | :--- | :--- |
-| updateBlackboard() executeAction() executeTriggeringCondition() | updateBlackboard() executeAction() executeTriggeringCondition() | updateBlackboard() executeAction() executeTriggeringCondition() |
+| `updateBlackboard()` `executeAction()` `executeTriggeringCondition()` | `updateBlackboard()` `executeAction()` `executeTriggeringCondition()` | `updateBlackboard()` `executeAction()` `executeTriggeringCondition()` |
 | Blackboard | | Bot |
-| access() update() | | knowledgeSourcesSelection() configureKnowledgeSource() executeKnowledgeSource() |
+| `access()` `update()` | | `knowledgeSourcesSelection()` `configureKnowledgeSource()` `executeKnowledgeSource()` |
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_195_0.png)
 
 UML 类图中的**入侵者识别、导航和弹道学**组件是仓库安全机器人实现中的知识源。
 
-本节节提供了黑板架构模式的两个实现示例。
+本节提供了黑板架构模式的两个实现示例。
 
-## 理解代理人模式（broker pattern）
+## 理解代理人模式（`broker pattern`）
 
-代理人模式（broker architectural pattern）用于构建分布式系统。这些系统利用中间人组件来协调组件之间的通信。这种组件的解耦消除了依赖，并可以提高整个系统的效率。
+代理人模式（`broker architectural pattern`）用于构建分布式系统。这些系统利用中间人组件来协调组件之间的通信。这种组件的解耦消除了依赖，并可以提高整个系统的效率。
 
-中间人组件的任务意味着它能够接收请求并代理适当的服务或请求至关重要。如下图所示，中间人代理了来自服务器（Server）和客户端（Client）的请求：
+中间人组件的任务意味着它能够接收请求并代理适当的服务或请求至关重要。如下图所示，中间人代理了来自服务器（`Server`）和客户端（`Client`）的请求：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_196_0.png)
 
-代理人模式与第 5 章介绍的结构设计模式中的外观模式（facade design pattern）类似。外观模式建立了一个接口，作为系统与其子系统之间的介质。
+代理人模式与第 5 章介绍的结构设计模式中的外观模式（`facade design pattern`）类似。外观模式建立了一个接口，作为系统与其子系统之间的介质。
 
 代理人模式中有一种选项，允许中间人许可客户端和服务器之间直接通信。如下图所示，中间人仍然管理通信，但两个组件（客户端和服务器）直接通信：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_196_1.png)
-
-# 架构模式 - 第 1 部分
-
-# 第 6 章
 
 我们将查看代理人架构模式的以下实现：
 
@@ -5216,25 +5947,23 @@ UML 类图中的**入侵者识别、导航和弹道学**组件是仓库安全机
 
 ## 大学企业信息系统示例
 
-让我们考虑一个使用代理人模式设计的大学企业信息系统示例。该大学运营两个校区，每个校区都有自己的服务器。所有服务器都可以发送和接收请求。桥接（Bridge）用于封装多个代理人（通常是本地和远程）之间的过程。这种设置如图所示：
+让我们考虑一个使用代理人模式设计的大学企业信息系统示例。该大学运营两个校区，每个校区都有自己的服务器。所有服务器都可以发送和接收请求。桥接（`Bridge`）用于封装多个代理人（通常是本地和远程）之间的过程。这种设置如图所示：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_197_0.png)
 
-正如你在前面的图中看到的，代理（proxies）被用于保护实现细节、内存地址和其他信息免受其他系统组件的影响。
-
-[ 183 ]
+正如你在前面的图中看到的，代理（`proxies`）被用于保护实现细节、内存地址和其他信息免受其他系统组件的影响。
 
 ## 豪华邮轮预订系统示例
 
-代理模式的另一个实现是豪华邮轮预订系统。在这个示例中，每条邮轮线都有自己的服务器，并有一个**邮轮线代理（Cruise Line Proxy）**。**中间人/代理人（Middleman / Broker）**组件根据客户端的请求和邮轮公司的响应来代理预订。下图提供了预订系统的概述，并突出了互连组件：
+代理模式的另一个实现是豪华邮轮预订系统。在这个示例中，每条邮轮线都有自己的服务器，并有一个**邮轮线代理（`Cruise Line Proxy`）**。**中间人/代理人（`Middleman / Broker`）**组件根据客户端的请求和邮轮公司的响应来代理预订。下图提供了预订系统的概述，并突出了互连组件：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_198_0.png)
 
 本节提供了代理模式的两个实现示例。
 
-## 理解客户端-服务器模式（client-server pattern）
+## 理解客户端-服务器模式（`client-server pattern`）
 
-客户端-服务器模式（client-server pattern）是广为人知的架构模式之一，它由两种类型的组件组成：客户端组件和服务器组件。简单来说，服务器监听请求并提供请求的服务。下图提供了客户端-服务器模式的顶层视图，特别是网络架构：
+客户端-服务器模式（`client-server pattern`）是广为人知的架构模式之一，它由两种类型的组件组成：客户端组件和服务器组件。简单来说，服务器监听请求并提供请求的服务。下图提供了客户端-服务器模式的顶层视图，特别是网络架构：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_199_0.png)
 
@@ -5249,7 +5978,7 @@ UML 类图中的**入侵者识别、导航和弹道学**组件是仓库安全机
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_200_0.png)
 
-在前面的图中，客户端和服务器可能会通过 TCP/IP通信。
+在前面的图中，客户端和服务器可能会通过 `TCP/IP` 通信。
 
 ## 三层示例
 
@@ -5259,9 +5988,9 @@ UML 类图中的**入侵者识别、导航和弹道学**组件是仓库安全机
 
 本节提供了客户端-服务器模式的两个实现示例。
 
-## 理解事件驱动模式（event-driven pattern）
+## 理解事件驱动模式（`event-driven pattern`）
 
-事件驱动架构模式（event-driven pattern）适用于高度灵活的分布式系统。它被用于实现在去中心系统中传输事件的应用。在这种模式下，事件有发布者和消费者。使用这种模式可以更高效地开发大型分布式系统。
+事件驱动架构模式（`event-driven pattern`）适用于高度灵活的分布式系统。它被用于实现在去中心系统中传输事件的应用。在这种模式下，事件有发布者和消费者。使用这种模式可以更高效地开发大型分布式系统。
 
 事件可以是按钮点击、流输入、自动分析结果、游戏内条件（如碰撞检测）等。
 
@@ -5271,11 +6000,7 @@ UML 类图中的**入侵者识别、导航和弹道学**组件是仓库安全机
 
 事件驱动模式的代理形式使用一系列调介的事件，而不是中央调介。这种形式涉及一个初始事件以及一系列处理步骤。
 
-
-
-
-
-如下图所示，没有中介者来控制“启动事件”（Initiating Event）。每个“事件处理器”（Event Processors）分别负责处理事件，并在处理完成后启动新事件：
+如下图所示，没有中介者来控制“启动事件”（`Initiating Event`）。每个“事件处理器”（`Event Processors`）分别负责处理事件，并在处理完成后启动新事件：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_202_0.png)
 
@@ -5285,7 +6010,7 @@ UML 类图中的**入侵者识别、导航和弹道学**组件是仓库安全机
 
 事件驱动架构模式的中介形式通常用于多步骤事件，其中每个步骤都需要协调。
 
-下图显示了事件驱动架构模式的中介形式。启动事件是流程开始的触发因素。在“事件中介者”（Event Mediator）部分列出的事件是完成给定过程必须采取的步骤。指向事件 2 和事件 3 左侧的实线表示这些步骤可以同时发生。事件中介者为每个初始事件步骤创建一个“处理事件”（Processing Event）：
+下图显示了事件驱动架构模式的中介形式。启动事件是流程开始的触发因素。在“事件中介者”（`Event Mediator`）部分列出的事件是完成给定过程必须采取的步骤。指向事件 2 和事件 3 左侧的实线表示这些步骤可以同时发生。事件中介者为每个初始事件步骤创建一个“处理事件”（`Processing Event`）：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_203_0.png)
 
@@ -5293,9 +6018,7 @@ UML 类图中的**入侵者识别、导航和弹道学**组件是仓库安全机
 
 本节提供了事件驱动架构模式的两种形式。
 
-# 第 6 章 - 第 6 章
-
-## 理解提取-转换-加载（ETL）模式
+## 理解提取-转换-加载（`ETL`）模式
 
 提取-转换-加载架构模式正如其名所示，它包含以下三个阶段：
 
@@ -5305,13 +6028,13 @@ UML 类图中的**入侵者识别、导航和弹道学**组件是仓库安全机
 
 提取-转换-加载模式最常见的用途是商业智能、数据仓库、知识管理系统和客户关系管理系统。
 
-我们将在接下来的章节中查看提取、转换和加载步骤，以及这些步骤如何应用于与之同名的架构模式中。我们将使用一个销售工具的示例，该工具挖掘各种来源的客户潜在线索（customer leads），将数据转换为通用格式，然后将数据加载到中央数据库中。
+我们将在接下来的章节中查看提取、转换和加载步骤，以及这些步骤如何应用于与之同名的架构模式中。我们将使用一个销售工具的示例，该工具挖掘各种来源的客户潜在线索（`customer leads`），将数据转换为通用格式，然后将数据加载到中央数据库中。
 
-## 提取（Extract）
+## 提取（`Extract`）
 
 对于我们的销售工具示例，让我们从两个格式不同的数据源获取数据。
 
-我们的第一个数据源来自关联保险公司销售部门提供的 XML 文件。该文件具有以下编码：
+我们的第一个数据源来自关联保险公司销售部门提供的 `XML` 文件。该文件具有以下编码：
 
 ```
 <CUSTID>35032</CUSTID>
@@ -5325,9 +6048,9 @@ UML 类图中的**入侵者识别、导航和弹道学**组件是仓库安全机
 <PHONE>000-000-0000</PHONE>
 ```
 
-如省略号所示，XML 文档中的每条记录将会有许多数据元素。
+如省略号所示，`XML` 文档中的每条记录将会有许多数据元素。
 
-次要数据源可能来自一份购买的销售线索列表。这可能以逗号分隔值（CSV）的格式出现，如下代码所示：
+次要数据源可能来自一份购买的销售线索列表。这可能以逗号分隔值（`CSV`）的格式出现，如下代码所示：
 
 ```
 35032,term, Neo Anderson, Zion, MZ,00000,neo.anderson@matrix.net,000-000-0000,. . .
@@ -5335,7 +6058,7 @@ UML 类图中的**入侵者识别、导航和弹道学**组件是仓库安全机
 
 对于我们的示例，我们可以假设已经从定义的每个数据源中捕获了数千个名称。我们的下一步是将这些数据转换为与我们的系统以及已实现的数据存储解决方案兼容的通用格式。
 
-## 转换（Transform）
+## 转换（`Transform`）
 
 现在我们已经获取了提取出的数据，可以实施第二步，将数据转换为我们所需的格式。现实世界中的实现将包含转换数据的源代码。转换过程将包括以下顺序步骤：
 
@@ -5350,11 +6073,11 @@ UML 类图中的**入侵者识别、导航和弹道学**组件是仓库安全机
 
 第一步确定如何分块数据非常重要，因为数据集非常大，服务器端脚本肯定会超时。例如，你可以一次处理 100 条记录。以此为例，步骤 2 将仅涉及读取前 100 条记录。
 
-第三步是单次处理一组记录。我们将根据需要转换数据字段。例如，假设提供的名称是 Neo Anderson，我们希望将其转换为 Anderson, Neo，或者将数据拆分为姓和名的两个独立字段。此外，在步骤三中，我们将为任何空白字段分配默认值。这将由我们的策略决定。步骤三中的另一个重要处理步骤是标记需要电话号码的线索，然后对没有电话号码的记录进行标记。在一种情况下，如果提供了电子邮箱地址，它们可能会被标记为“通过电子邮件咨询”。如果电话号码和电子邮件地址均未提供，该记录可能会被标记为删除。
+第三步是单次处理一组记录。我们将根据需要转换数据字段。例如，假设提供的名称是 `Neo Anderson`，我们希望将其转换为 `Anderson, Neo`，或者将数据拆分为姓和名的两个独立字段。此外，在步骤三中，我们将为任何空白字段分配默认值。这将由我们的策略决定。步骤三中的另一个重要处理步骤是标记需要电话号码的线索，然后对没有电话号码的记录进行标记。在一种情况下，如果提供了电子邮箱地址，它们可能会被标记为“通过电子邮件咨询”。如果电话号码和电子邮件地址均未提供，该记录可能会被标记为删除。
 
-例如，将 CSV 数据转换为 MySQL 数据库是相当复杂的。例如，需要编写一个方法来逐行处理 CSV 文件并处理每条记录，完成后，这将生成一个 SQL 查询。你将使用该查询作为“加载”（Load）步骤的运行时，该部分将在下一节中介绍。
+例如，将 `CSV` 数据转换为 `MySQL` 数据库是相当复杂的。例如，需要编写一个方法来逐行处理 `CSV` 文件并处理每条记录，完成后，这将生成一个 `SQL` 查询。你将使用该查询作为“加载”（`Load`）步骤的运行时，该部分将在下一节中介绍。
 
-## 加载（Load）
+## 加载（`Load`）
 
 加载过程通常是简单的。具体细节将取决于系统以及所选的核心数据库或其他数据仓库。通常，这会涉及以下步骤：
 
@@ -5386,6 +6109,8 @@ System.out.println("Database successfully closed.");
 }
 ```
 
+
+
 本节详细介绍了实施提取-转换-加载模式的步骤。
 
 ## 理解分层模式
@@ -5394,7 +6119,7 @@ System.out.println("Database successfully closed.");
 
 该模式是现代计算基础设施的核心。国际标准组织（ISO）开放系统连接（OSI）有一个七层模型。该 OSI 模型被广泛应用并在现代软件架构中仍然具有意义。
 
-你可以通过微软的在线文档了解更多关于 OSI 七 层模型的信息：https://docs.microsoft.com/en-us/windows-hardware/drivers/network/windows-network-architecture-and-the-osi-model。
+你可以通过微软的在线文档了解更多关于 OSI 七层模型的信息：`https://docs.microsoft.com/en-us/windows-hardware/drivers/network/windows-network-architecture-and-the-osi-model`。
 
 七层模型由两个并行栈组成，每个栈有七层。最底层是物理层，两个栈之间进行直接通信。列表中的栈从上到下的顺序代表了两台计算机之间的通信：
 
@@ -5419,13 +6144,6 @@ System.out.println("Database successfully closed.");
 - 移动操作系统层
 - 业务应用层
 
-
-
-
-架构模式 - 第1部分
-
-第 6 章
-
 ## 传统操作系统层示例
 
 分层架构模式的一个巨大优点是，某一个层不会对其他层产生负面影响。例如，如果你为电脑购买了一台新的彩色打印机，你只需要通过添加新驱动程序来更新“硬件设备驱动程序”层。操作系统的层级如图所示：
@@ -5444,7 +6162,7 @@ System.out.println("Database successfully closed.");
 
 ## 移动操作系统层示例
 
-现代移动操作系统具有不同的架构模式。我们将以 iOS 的层为例。如下所示所示，iOS 的五层包含一个用户与之交互的触控层：
+现代移动操作系统具有不同的架构模式。我们将以 iOS 的层为例。如下所示，iOS 的五层包含一个用户与之交互的触控层：
 
 | Cocoa Touch 层 |
 | 媒体层 |
@@ -5453,10 +6171,6 @@ System.out.println("Database successfully closed.");
 | 硬件 |
 
 移动操作系统层
-
-[ 194 ]
-
-# 架构模式 - 第1部分
 
 让我们详细查看：
 
@@ -5478,7 +6192,7 @@ System.out.println("Database successfully closed.");
 - 请求被处理后传递到下一层
 - 请求被处理后直接关闭，而不传递到下一层
 
-下面的截图了每一层如何拥有一个或多个组件，并具有关闭请求的能力，以免其不必要地传递给额外的层：
+下面的截图显示了每一层如何拥有一个或多个组件，并具有关闭请求的能力，以免其不必要地传递给额外的层：
 
 | 表现层 | 组件 | 已关闭 |
 |---|---|---|
@@ -5496,7 +6210,7 @@ System.out.println("Database successfully closed.");
 
 下图提供了主从模式工作原理的概述。存在一个或多个客户端（Clients），可以向主节点提交请求或启动事件：
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_211_0.png)
+`![](img/bcdf8abab5e2de6d67770104d49e5070_211_0.png)`
 
 主节点执行以下功能：
 
@@ -5507,7 +6221,7 @@ System.out.println("Database successfully closed.");
 - 汇总结果
 - 向客户端提供反馈
 
-在多个从节点之间分配工作负载本质会导致**更高的效率**。同时处理多个工作负载被称为**并行处理**。这种模式的另一个优点是，对从节点的更改不会影响主节点。当主节点需要更新时也是如此——从节点不受影响。
+在多个从节点之间分配工作负载本质上会导致更高的效率。同时处理多个工作负载被称为并行处理。这种模式的另一个优点是，对从节点的更改不会影响主节点。当主节点需要更新时也是如此——从节点不受影响。
 
 我们现在来看以下主从架构模式的实现方案：
 
@@ -5518,31 +6232,25 @@ System.out.println("Database successfully closed.");
 
 主节点与客户端之间有着特殊的关系。它们接收来自客户端的请求，并将工作分配给从节点。如下所示，从节点的结果被合并并提供给客户端：
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_212_0.png)
+`![](img/bcdf8abab5e2de6d67770104d49e5070_212_0.png)`
 
-主节点必须决定如何在从节点之间分配工作。有几种方法可以实现，以确保将组件数量和内存大小考虑内。在系统从节点之间分配工作时，处理时间通常是需要考虑的额外因素。
-
-架构模式 - 第1部分
-
-第 6 章
+主节点必须决定如何在从节点之间分配工作。有几种方法可以实现，以确保将组件数量和内存大小考虑在内。在系统从节点之间分配工作时，处理时间通常是需要考虑的额外因素。
 
 ## 云存储示例
 
 现代应用程序使用云存储作为数据库和其他数据源。复杂的系统通常包含数据复制，以便更快的访问速度并防止数据丢失或单点故障。下图描述了一个使用主从模式并包含冗余存储的系统架构：
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_213_0.png)
+`![](img/bcdf8abab5e2de6d67770104d49e5070_213_0.png)`
 
 前面的图显示了包含一个主节点三个从节点的主从模式。数据库被复制，因此有多个访问点。这种方案将产生更高的效率。
 
 本节提供了主从模式的两个实现示例。
 
-[ 199 ]
-
 ## 理解微内核模式
 
 微内核架构模式也称为插件模式（plug-in pattern）。当我们创建具有可交换组件的系统时，通常会使用这种模式，如下图中插件的形式所示：
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_214_0.png)
+`![](img/bcdf8abab5e2de6d67770104d49e5070_214_0.png)`
 
 微内核模式的通用框架在前图中所示。微内核包含系统的核心逻辑和功能。每个插件都有特定的功能，并包含供微内核引用的编程接口（APIs）。
 
@@ -5560,11 +6268,9 @@ System.out.println("Database successfully closed.");
 
 假设我们有一个自动化建筑报价系统，微内核接收所有必要的输入并调用各种插件，每个插件都有专门的报价功能。这种模式在图中所示，并指示了微内核的输入：
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_215_0.png)
+`![](img/bcdf8abab5e2de6d67770104d49e5070_215_0.png)`
 
 微内核模式 - 建筑报价系统
-
-
 
 上一个图显示了专门的插件，每个插件都执行一系列复杂的规则、逻辑和计算。微内核架构模式的优点之一是，如果电气模块（Electrical Module）因为新的状态和本地代码而发生更改，系统的其他部分就不需要更改。相关的 API 仍将用于访问电气模块，并且不会感知到更改的发生。
 
@@ -5572,7 +6278,7 @@ System.out.println("Database successfully closed.");
 
 现代光盘播放器由硬件和软件组成。软件嵌入在硬件组件中。这些播放器可以接受音频 CD、视频 CD、DVD 和蓝光光盘，如下图所示。由于在光盘上写入数据的技术不同，每种光盘介质的处理方式也不同：
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_216_0.png)
+`![](img/bcdf8abab5e2de6d67770104d49e5070_216_0.png)`
 
 如图所示，该图显示了音频 CD 模块、视频 CD 模块、DVD 模块和蓝光模块的外部插件。该系统还包括用于处理许多的内部插件，例如音量控制、音频视频输出、电源设置等。
 
@@ -5586,21 +6292,21 @@ System.out.println("Database successfully closed.");
 
 ## 问题
 
-- 1. 架构模式的适用范围是什么？
-- 2. 视觉化记录架构模式采用了什么方法？
-- 3. 哪种模式用于没有确定解决方案的大型系统？
-- 4. 哪种模式使用中间人组件来协调组件之间的通信？
-- 5. 哪种模式由两种组件类型组成——客户端组件和服务器组件？
-- 6. 哪种模式同时具有代理和中介者形式？
-- 7. 哪种模式涉及来自外部源的数据转换？
-- 8. 哪种模式基于 ISO 的 OSI 标准？
-- 9. 哪种模式通过分工工作来提高系统的可靠性和性能？
-- 10. 哪种模式也被称为插件架构模式？
+1. 架构模式的适用范围是什么？
+2. 视觉化记录架构模式采用了什么方法？
+3. 哪种模式用于没有确定解决方案的大型系统？
+4. 哪种模式使用中间人组件来协调组件之间的通信？
+5. 哪种模式由两种组件类型组成——客户端组件和服务器组件？
+6. 哪种模式同时具有代理和中介者形式？
+7. 哪种模式涉及来自外部源的数据转换？
+8. 哪种模式基于 ISO 的 OSI 标准？
+9. 哪种模式通过分工工作来提高系统的可靠性和性能？
+10. 哪种模式也被称为插件架构模式？
 
 ## 进阶阅读
 
 - [Java EE 8 设计模式与最佳实践](https://www.packtpub.com/application-development/java-ee-8-design-patterns-and-best-practices)
-- [使用 Java 学习设计模式 [视频]]https://www.packtpub.com/application-development/learn-design-patterns-java-video)
+- [使用 Java 学习设计模式 [视频]](https://www.packtpub.com/application-development/learn-design-patterns-java-video)
 - [Java 中的设计模式与最佳实践](https://www.packtpub.com/application-development/design-patterns-and-best-practices-java)
 
 # 架构模式 - 第二部分
@@ -5622,7 +6328,7 @@ System.out.println("Database successfully closed.");
 
 ## 技术要求
 
-本章的代码可以在 https://github.com/PacktPublishing/Hands-On-Design-Patterns-with-Java/tree/master/Chapter07 找到。
+本章的代码可以在 `https://github.com/PacktPublishing/Hands-On-Design-Patterns-with-Java/tree/master/Chapter07` 找到。
 
 ## 理解微服务模式
 
@@ -5634,7 +6340,7 @@ System.out.println("Database successfully closed.");
 
 如下所示，有一个与组成系统的微服务交互的中心点。在这个示例中，中心点是系统接口（System Interface）：
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_220_0.png)
+`![](img/bcdf8abab5e2de6d67770104d49e5070_220_0.png)`
 
 上一个图还指示了某些微服务如何与其他微服务通信。这种架构模式要求微服务是松耦合的，因此真正的相互依赖应该是通过通信。
 
@@ -5649,7 +6355,7 @@ System.out.println("Database successfully closed.");
 
 接下来的图说明了物流公司微服务模式的实现。有两个接口，移动接口和网络接口，作为系统的网关。这两个接口都可以访问微服务：
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_221_0.png)
+`![](img/bcdf8abab5e2de6d67770104d49e5070_221_0.png)`
 
 ## 电子商务示例
 
@@ -5657,7 +6363,7 @@ System.out.println("Database successfully closed.");
 
 电子商务的实现与物流示例不同；在此，有一个通用网关接收各种来源的请求，图中所示为移动操作系统和网络浏览器：
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_222_0.png)
+`![](img/bcdf8abab5e2de6d67770104d49e5070_222_0.png)`
 
 ### 微服务模式
 
@@ -5673,18 +6379,11 @@ System.out.println("Database successfully closed.");
 
 视图用于向用户展示数据。这使用户能够与控制器交互或使用控制器。控制器操作模型，模型更新视图：
 
-![](img/bcdf8abab5e2de6d67770104d49e5070_223_0.png)
+`![](img/bcdf8abab5e2de6d67770104d49e5070_223_0.png)`
 
 如图所示，用户被认为是该模式最重要的部分，尽管它并不是 MVC 模式的正式组成部分。
 
-
-
-
-# 架构模式 - 第二部分
-
-## 第7 章
-
-与其他划分分系统的模式一样，MVC 模式设计允许不同的团队同时处理不同的核心组件——模型（model）、视图（view）和控制器（controller）。这使得系统具有可维护性，因为每个组件的更新都不会影响到其他组件。
+与其他划分系统的模式一样，MVC 模式设计允许不同的团队同时处理不同的核心组件——模型（model）、视图（view）和控制器（controller）。这使得系统具有可维护性，因为每个组件的更新都不会影响到其他组件。
 
 在下一节中，我们将探索 MVC 架构模式的 Book MVC 示例实现。
 
@@ -5694,39 +6393,57 @@ System.out.println("Database successfully closed.");
 
 ## Book 类
 
-`Book` 类通过三个类变量建立了类结构：isbn、title 和 year。为每个类变量都提供了访问器（getters）和变异器（setters）方法：
+`Book` 类通过三个类变量建立了类结构：`isbn`、`title` 和 `year`。为每个类变量都提供了访问器（getters）和变异器（setters）方法：
 
 ```java
 public class Book {
+
     private String isbn;
+
     private String title;
+
     private int year;
 
     // accessor methods
+
     public String getISBN() {
+
         return isbn;
+
     }
 
     public String getTitle() {
+
         return title;
+
     }
 
     public int getYear() {
+
         return year;
+
     }
 
     // mutator methods
+
     public void setISBN(String isbn) {
+
         this.isbn = isbn;
+
     }
 
     public void setTitle(String title) {
+
         this.title = title;
+
     }
 
     public void setYear(int year) {
+
         this.year = year;
+
     }
+
 }
 ```
 
@@ -5740,10 +6457,15 @@ public class Book {
 public class BookView {
 
     public void printBookData(String bookTitle, String bookISBN, int bookYear) {
+
         System.out.println("\nBook Title : " + bookTitle);
+
         System.out.println("ISBN-13 : " + bookISBN);
+
         System.out.println("Pub. Year : " + bookYear + "\n");
+
     }
+
 }
 ```
 
@@ -5751,57 +6473,58 @@ public class BookView {
 
 ## BookController 类
 
-`BookController` 类将分为三个部分介绍。第一部分包含两个私有变量：model 和 view。还提供了构造方法：
+`BookController` 类将分为三个部分介绍。第一部分包含两个私有变量：`model` 和 `view`。还提供了构造方法：
 
 ```java
 public class BookController {
+
     private Book model;
+
     private Book view;
 
     // constructor
-    public BookController(Book model, BookView view) {
-        this.model = model;
-        this.view = view;
-    }
 ```
+
+
+
+`public BookController(Book model, BookView view) { this.model = model; this.view = view; }`
 
 `BookController` 类的第二部分由三个访问器方法和三个变异器方法组成：
 
 ```java
-    // accessor methods
-    public String getBookTitle() {
-        return model.getTitle();
-    }
+// accessor methods
+public String getBookTitle() {
+    return model.getTitle();
+}
 
-    public String getBookISBN() {
-        return model.getISBN();
-    }
+public String getBookISBN() {
+    return model.getISBN();
+}
 
-    public int getBookYear() {
-        return model.getYear();
-    }
+public int getBookYear() {
+    return model.getYear();
+}
 
-    // mutator methods
-    public void setBookTitle(String title) {
-        model.setTitle(title);
-    }
+// mutator methods
+public void setBookTitle(String title) {
+    model.setTitle(title);
+}
 
-    public void setBookISBN(String isbn) {
-        model.setISBN(isbn);
-    }
+public void setBookISBN(String isbn) {
+    model.setISBN(isbn);
+}
 
-    public void setBookYear(int year) {
-        model.setYear(year);
-    }
+public void setBookYear(int year) {
+    model.setYear(year);
+}
 ```
 
 `BookController` 类的最后一部分包含 `updateView()` 方法。你可以看到，该方法不接受参数，并调用视图对象的 `printBookData()` 方法，如下：
 
 ```java
-    // update view method
-    public void updateView() {
-        view.printBookData(model.getTitle(), model.getISBN(), model.getYear());
-    }
+// update view method
+public void updateView() {
+    view.printBookData(model.getTitle(), model.getISBN(), model.getYear());
 }
 ```
 
@@ -5844,10 +6567,6 @@ public class MVCArchitecturalPattern {
 | 书名 | Mastering Java 11 |
 | ISBN-13 | 978-1789137613 |
 | 出版年份 | 2018 |
-
-
-
-
 
 如下文所示，P2P 网络允许每个节点直接与所有其他节点进行通信：
 
@@ -5894,7 +6613,7 @@ public class MVCArchitecturalPattern {
 
 ## 复杂转换示例实现
 
-接下来的图说明了管道-过滤器模式的复杂转换示例。有三个数据源，其中两个可以被过滤器 1 处理。过滤器 1 和过滤器 2 之间有一条管道，作为数据的传输通道。数据通过过滤器 2 后，转换后的数据就可以由系统逻辑处理了。数据源 3 被过滤器 A 读取并管道到过滤器 B，后者会转换数据以供系统逻辑处理；
+接下来的图说明了管道-过滤器模式的复杂转换示例。有三个数据源，其中两个可以被过滤器 1 处理。过滤器 1 和过滤器 2 之间有一条管道，作为数据的传输通道。数据通过过滤器 2 后，转换后的数据就可以由系统逻辑处理了。数据源 3 被过滤器 A 读取并管道到过滤器 B，后者会转换数据以供系统逻辑处理：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_235_0.png)
 
@@ -5956,7 +6675,7 @@ public class MVCArchitecturalPattern {
 | 应用程序 | 中间件 |
 | 虚拟化 | 存储 |
 
-*无服务器模式——PaaS 实现示例*
+无服务器模式——PaaS 实现示例
 
 如图所示，PaaS 实现仅要求本地人员管理数据和应用程序。
 
@@ -5971,7 +6690,7 @@ public class MVCArchitecturalPattern {
 | 应用程序 | 中间件 |
 | 虚拟化 | 存储 |
 
-*无服务器模式——SaaS 实现示例*
+无服务器模式——SaaS 实现示例
 
 如图所示，SaaS 实现仅要求本地使用浏览器访问服务。
 
@@ -6014,23 +6733,19 @@ MBaaS 实现通常用于企业级移动应用程序。
 - 由于具有模块化，系统更容易维护
 - 单个服务可以在多个系统中使用
 
-
-
-
-
 # 架构模式 - 第二部分
 
-下图概述了如何实现面向 服务的架构模式（SOA）。所提供的示例从 Web 接口（Web Interface）开始，它是该模式中获取服务的入口点。使用 Web 接口是为了突出该架构模式在 Web 服务中的适用性：
+下图概述了如何实现面向服务的架构模式（SOA）。所提供的示例从 Web 接口（Web Interface）开始，它是该模式中获取服务的入口点。使用 Web 接口是为了突出该架构模式在 Web 服务中的适用性：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_240_0.png)
 
 所示，服务可以作为其他服务和数据库的网关，其他资源可以在多个服务之间共享。
 
-下一张图说明了在面向 服务的架构模式实现中，单个服务可能的复杂性。单个服务可能包含多个步骤和业务逻辑：
+下一张图说明了在面向服务的架构模式实现中，单个服务可能的复杂性。单个服务可能包含多个步骤和业务逻辑：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_241_0.png)
 
-本节详细介绍了面向 服务的架构模式，并提供了一个概述图和一个服务级别的详细插图。
+本节详细介绍了面向服务的架构模式，并提供了一个概述图和一个服务级别的详细插图。
 
 ## 理解空间基模式（Space-based pattern）
 
@@ -6131,9 +6846,11 @@ int calculateAge(int years) {
 }
 ```
 
+
+
 # 函数设计模式
 
-# 第 8 章
+## 第 8 章
 
 使用方法的优点包括更容易调试以及将函数作为参数传递的能力。你将在“理解 lambda 设计模式”部分探索后者的优点。额外的优点包括对数学、统计、并发和并行应用的高适用性。
 
@@ -6147,31 +6864,29 @@ int calculateAge(int years) {
 
 考虑一个具有数百个独立类的系统，这些类根据业务逻辑随机运行。与其让数百个过程中的每一个都包含预和后处理代码，不如将这些代码位于一个类中。预和后处理操作成对并包含在需要这些操作的对象中。这样做而不是在使用对象的类中包含这些操作。因此，我们是在使用对象的类中包含这些操作。
 
-# 实现演示
+### 实现演示
 
-在高级，我们可以考虑以下通用操作的常规流程。我们从 `preProcessing()` 方法开始，后面是 `commonTask()` 方法，最后是 `postProcessing()` 方法：
+在高级，我们可以考虑以下通用操作的常规流程。我们从`preProcessing()`方法开始，后面是`commonTask()`方法，最后是`postProcessing()`方法：
 
 ```java
 preProcessing();
+
 commonTask();
+
 postProcessing();
 ```
 
-
-
-
-
 ## 泛式设计模式（Functional）
 
-考虑一个处理电子文件的系统，可能是用于银行应用程序。这些文件每一个代表一笔交易。存在大量不同类型的交易，每种交易都由系统中一个独立的类管理。每小时处理数千个这样的文件。将 `preProcessing()` 和 `postProcessing()` 作为单个类的一部分是浪费资源的，应该尽量避免。为了实现这一点，我们可以使用此处显示的语法来实现我们的银行交易系统：
+考虑一个处理电子文件的系统，可能是用于银行应用程序。这些文件每一个代表一笔交易。存在大量不同类型的交易，每种交易都由系统中一个独立的类管理。每小时处理数千个这样的文件。将`preProcessing()`和`postProcessing()`作为单个类的一部分是浪费资源的，应该尽量避免。为了实现这一点，我们可以使用此处显示的语法来实现我们的银行交易系统：
 
 ```
 Transaction preProcessDuring: [this performBankingOperation: Transaction]
 ```
 
-我们可以使用 `execute`（执行）设计模式在需要执行动作的实际对象中封装这对动作，而不是在使用该对象的代码中封装这些动作。该设计模式的目标是避免类中的重复代码。
+我们可以使用`execute`（执行）设计模式在需要执行动作的实际对象中封装这对动作，而不是在使用该对象的代码中封装这些动作。该设计模式的目标是避免类中的重复代码。
 
-本节提供了 `execute` 泛式设计模式的概述，并附带了具有代表性的示例实现代码。
+本节提供了`execute`泛式设计模式的概述，并附带了具有代表性的示例实现代码。
 
 ## 理解 lambda 设计模式
 
@@ -6179,9 +6894,9 @@ Lambda 功能在 Java 8 中被引入，它从根本上改变了 Java 编程的�
 
 Lambda 函数包含三个部分：
 
-- 单个参数：(argument)
-- 箭头操作符： ->
-- 主体：(body)
+- 单个参数：`(argument)`
+- 箭头操作符：`->`
+- 主体：`(body)`
 
 与 Java 中的其他任何内容一样，即使是这个看似简单的特性，也有许多相关规则：
 
@@ -6192,7 +6907,7 @@ Lambda 函数包含三个部分：
 - 对于具有多个一个参数的主体，你需要大括号和分号
 - 你不能重新声明局部变量
 
-## 泛式设计模式（Functional）
+### 泛式设计模式（Functional）
 
 Lambda 函数的语法如下：
 
@@ -6217,10 +6932,9 @@ a->a.canHop();
 比较这两个示例时，我们看到了以下差异：
 
 - 只有一个没有显式声明类型的参数；此时可以省略括号
-
 - 当我们只有一个陈述时，可以省略大括号
 
-## 访问变量
+### 访问变量
 
 以下语法说明了如何通过 lambda 表达式访问变量：
 
@@ -6231,9 +6945,9 @@ doSomething(objectName, obj -> obj.methodName() == varName);
 
 需要注意的是，当通过 lambda 表达式访问局部变量时，你不能更改它们的值。
 
-## 使用单参数实现 lambda
+### 使用单参数实现 lambda
 
-为了演示 lambda 设计模式的使用，我们将创建一个泛式接口和一个主 `Driver` 类。该泛式接口将包含一个带有单个 `int` 参数的抽象方法。该接口如下：
+为了演示 lambda 设计模式的使用，我们将创建一个泛式接口和一个主`Driver`类。该泛式接口将包含一个带有单个`int`参数的抽象方法。该接口如下：
 
 ```
 public interface FunctionalGift {
@@ -6245,18 +6959,17 @@ public interface FunctionalGift {
 
 ## 第 8 章
 
-**FunctionalGift** 接口是一个泛式接口，因为它只有一个抽象方法。
+`FunctionalGift`接口是一个泛式接口，因为它只有一个抽象方法。
 
-> 注意的是，我们可以使用 `@FunctionalInterface` 注解来提高代码的可读性。
+> 注意的是，我们可以使用`@FunctionalInterface`注解来提高代码的可读性。
 
-接下来提供的 **Driver** 类包含了我们程序的 **main()** 方法。该方法包含一个实现 **FunctionalGift** 接口的 lambda 表达式。该接口默认实现了 `abstractMethod()` 方法。我们的 `myObject.abstractMethod()` 调用了 lambda 表达式：
+接下来提供的`Driver`类包含了我们程序的`main()`方法。该方法包含一个实现`FunctionalGift`接口的 lambda 表达式。该接口默认实现了`abstractMethod()`方法。我们的`myObject.abstractMethod()`调用了 lambda 表达式：
 
 ```
 public class Driver {
     public static void main(String[] args) {
         System.out.println();
         FunctionalGift myObject = (int number)->System.out.println(number + " squared is " + (number*number));
-
         myObject.abstractMethod(1);
         myObject.abstractMethod(2);
         myObject.abstractMethod(3);
@@ -6278,28 +6991,25 @@ public class Driver {
 
 单参数 lambda 设计模式--控制台输出
 
-在下一节中，我们将使用相同的 **FunctionalGift** 接口并创建一个新的 **Driver** 类，以演示带有多个参数的 lambda 表达式。
+在下一节中，我们将使用相同的`FunctionalGift`接口并创建一个新的`Driver`类，以演示带有多个参数的 lambda 表达式。
 
-## 使用多参数实现 lambda
+### 使用多参数实现 lambda
 
-我们关于多个参数 lambda 的示例实现将由接下来提供的 FunctionalGift 接口组成。我们还将会有一个 `Driver` 类，它接受两种类型令牌（蓝色和红色）的用户输入，实现基础数学运算，并为提交令牌的用户提供随机礼物。以下是 FunctionalGift 接口：
+我们关于多个参数 lambda 的示例实现将由接下来提供的`FunctionalGift`接口组成。我们还将会有一个`Driver`类，它接受两种类型令牌（蓝色和红色）的用户输入，实现基础数学运算，并为提交令牌的用户提供随机礼物。以下是`FunctionalGift`接口：
 
 ```
 public interface FunctionalGift {
-
     void abstractMethod(int number);
-
 }
 ```
 
-我们实现的 `Driver` 类分五个连续部分展示。第一部分（如下所示）包含了两个导入——`java.util.Random` 和 `java.util.Scanner`。我们将在代码的第二部分使用 `Scanner`，在第五部分使用 `Random` 类。第一部分还包含两个接口：一个接收 `int` 参数，另一个接收单个 `String` 参数：
+我们实现的`Driver`类分五个连续部分展示。第一部分（如下所示）包含了两个导入——`java.util.Random`和`java.util.Scanner`。我们将在代码的第二部分使用`Scanner`，在第五部分使用`Random`类。第一部分还包含两个接口：一个接收`int`参数，另一个接收单个`String`参数：
 
 ```
 import java.util.Random;
 import java.util.Scanner;
 
 public class Driver {
-
     interface FirstFunctionalInterface {
         int calculation(int a, int b);
     }
@@ -6314,11 +7024,10 @@ public class Driver {
 }
 ```
 
-`Driver` 类的第二部分是 `main()` 方法的开始。该方法从获取用户输入开始提示蓝色和红色令牌的数量。我们利用 `Scanner` 获取这些输入。在接收到输入后，我们显示装饰性头部：
+`Driver`类的第二部分是`main()`方法的开始。该方法从获取用户输入开始提示蓝色和红色令牌的数量。我们利用`Scanner`获取这些输入。在接收到输入后，我们显示装饰性头部：
 
 ```java
 public static void main(String[] args) {
-
     // 获取用户输入
     System.out.println();
     Scanner in = new Scanner(System.in);
@@ -6333,63 +7042,55 @@ public static void main(String[] args) {
     System.out.println("=================");
 ```
 
-`Driver` 类的第三部分是 `main` 方法的第二部分。这段代码从计算用户令牌的 lambda 表达式开始。接下来，使用第二个 lambda 表达式计算平方和。最后，我们实例化 `firstObject` 对象来测试我们的 lambda 表达式：
+`Driver`类的第三部分是`main`方法的第二部分。这段代码从计算用户令牌的 lambda 表达式开始。接下来，使用第二个 lambda 表达式计算平方和。最后，我们实例化`firstObject`对象来测试我们的 lambda 表达式：
 
 ```java
 // 添加蓝色和红色令牌
 FirstFunctionalInterface sum = (int nbr1, int nbr2) -> nbr1 + nbr2;
-
 FirstFunctionalInterface superSquare = (int nbr1, int nbr2) ->
-(nbr1 * nbr1) + (nbr2 * nbr2);
-
+    (nbr1 * nbr1) + (nbr2 * nbr2);
 Driver firstObject = new Driver();
 ```
 
-`Driver` 类的第四部分是 `main` 方法的第三也是最后一部分。在这一部分中，我们向用户生成了六行输出：
+`Driver`类的第四部分是`main`方法的第三也是最后一部分。在这一部分中，我们向用户生成了六行输出：
 
 - 前两行回显用户输入的蓝色和红色令牌数量。
 - 第三行使用 lambda 表达式提供令牌总和。
 - 第四行也使用了 lambda 表达式，并提供单个令牌值的平方和。
 - 最后行的输出仅是装饰性分隔符。
-- 最后的输出行提供了 `displayResults()` 方法的结果：
+- 最后的输出行提供了`displayResults()`方法的结果：
 
 ```java
 // 生成输出
 System.out.println(blueTokens + " + blue tokens submitted");
 System.out.println(redTokens + " + red tokens submitted");
 System.out.println(firstObject.calculate(blueTokens, redTokens, sum) +
-" + total tokens submitted");
+    " + total tokens submitted");
 System.out.println(firstObject.calculate(blueTokens, redTokens,
-superSquare) +
-" + total squared tokens submitted");
+    superSquare) +
+    " + total squared tokens submitted");
 ```
 
+## 功能性设计模式
 
-
-
-
-# 功能性设计模式
-
-## 第8 章
+## 第 8 章
 
 ```java
 "SuperSquare number result";
 System.out.println("===");
 FunctionalInterface secondObject = message ->
     System.out.println("Your gift is a pound of " + message);
-
 secondObject.displayResults(selectGift());
 ```
 
-我们的 Driver 类中的第五也是最后一个数字包含了 `selectGift()` 方法。该方法创建了一个包含五种贵金属类型的数组，并生成一个 0 到 4 之间的随机数。该随机数被用作 giftArray 的索引。返回数组该索引处的值：
+我们的`Driver`类中的第五也是最后一个数字包含了`selectGift()`方法。该方法创建了一个包含五种贵金属类型的数组，并生成一个 0 到 4 之间的随机数。该随机数被用作`giftArray`的索引。返回数组该索引处的值：
 
 ```java
 public static String selectGift() {
-  String[] giftArray = new String[]{"Gold", "Silver", "Platinum", "Titanium", "Copper"};
-  Random giftNumber = new Random();
-  int giftToGive = giftNumber.nextInt(4);
-
-  return giftArray[giftToGive];
+    String[] giftArray = new String[]{"Gold", "Silver", "Platinum", "Titanium", "Copper"};
+    Random giftNumber = new Random();
+    int giftToGive = giftNumber.nextInt(4);
+    return giftArray[giftToGive];
 }
 ```
 
@@ -6414,83 +7115,82 @@ public static String selectGift() {
 
 本节提供了 lambda 功能设计模式两种实现的源代码和控制台输出。
 
-# 理解贷款模式（Loan Design Pattern）
+## 理解贷款模式（Loan Design Pattern）
 
 贷款功能设计模式可用于创建资源感知应用程序。通过这种模式，我们并不是在创建必须管理内存等资源的代码；相反，我们想要控制资源如何使用。具有关键意义的是确保垃圾回收按照我们的约定进行，而不是等待 Java 的默认垃圾回收系统启动。在本节中，我们将查看有关文件处理的实现。我们的示例将包含在实现贷款模式之前的文件处理的处理，然后我们将修改代码。
 
-## 实现文件处理
+### 实现文件处理
 
-为了理解贷款设计模式的威力，我们将实现一个文件处理应用程序，展示贷款设计模式前后的源代码。我们的应用程序将模拟文件的打开和关闭，并带有额外的处理步骤。工作流如所示所示：(img/diagram.png)
+为了理解贷款设计模式的威力，我们将实现一个文件处理应用程序，展示贷款设计模式前后的源代码。我们的应用程序将模拟文件的打开和关闭，并带有额外的处理步骤。工作流如所示所示：`(img/diagram.png)`
 
-# 设计模式
+## 设计模式
 
-## 第8 章
+## 第 8 章
 
-我们的实现将由一个 FileToProcess 类和一个 Driver 类组成。接下来提供了 FileToProcess 类。该类包含一个默认构造函数和六个公共方法，提供控制台输出以指示方法的被调用。本节包含了类头、构造函数和 `openFile()` 方法。如你所见，`openFile()` 方法只是向控制台输出一条语句来模拟打开文件。此应用程序用于演示，并不会实际打开或处理任何文件：
+我们的实现将由一个`FileToProcess`类和一个`Driver`类组成。接下来提供了`FileToProcess`类。该类包含一个默认构造函数和六个公共方法，提供控制台输出以指示方法的被调用。本节包含了类头、构造函数和`openFile()`方法。如你所见，`openFile()`方法只是向控制台输出一条语句来模拟打开文件。此应用程序用于演示，并不会实际打开或处理任何文件：
 
 ```java
 public class FileToProcess {
-  // 构造函数
-  public FileToProcess() {
-  }
+    // 构造函数
+    public FileToProcess() {
+    }
 
-  public FileToProcess openFile() {
-    System.out.println("\nFile opened for processing");
-    return this;
-  }
+    public FileToProcess openFile() {
+        System.out.println("\nFile opened for processing");
+        return this;
+    }
 }
 ```
 
-FileToProcess 类的第二部分包含了 `processMetadata()`、`analyzeHeader()`、`checkSpelling()`、`checkGrammar()` 和 `closeFile()` 方法。这些方法都只是向控制台输出文本：
+`FileToProcess`类的第二部分包含了`processMetadata()`、`analyzeHeader()`、`checkSpelling()`、`checkGrammar()`和`closeFile()`方法。这些方法都只是向控制台输出文本：
 
 ```java
 public FileToProcess processMetadata() {
-  System.out.println("\t正在处理元数据. . . ");
-  return this;
+    System.out.println("\t正在处理元数据. . . ");
+    return this;
 }
 ```
 
 ```java
 public FileToProcess analyzeHeader() {
-  System.out.println("\t正在分析头部. . . ");
-  return this;
+    System.out.println("\t正在分析头部. . . ");
+    return this;
 }
 ```
 
 ```java
 public FileToProcess checkSpelling() {
-  System.out.println("\t正在检查拼写. . . ");
-  return this;
+    System.out.println("\t正在检查拼写. . . ");
+    return this;
 }
 ```
 
 ```java
 public FileToProcess checkGrammar() {
-  System.out.println("\t正在检查语法. . . ");
-  return this;
+    System.out.println("\t正在检查语法. . . ");
+    return this;
 }
 ```
 
 ```java
 public void closeFile() {
-  System.out.println("文件已关闭");
+    System.out.println("文件已关闭");
 }
 ```
 
-# 设计模式
+## 设计模式
 
-我们应用程序的 Driver 类包含了 `main()` 方法。该方法（接下来提供）开始创建一个名为 `myFile` 的 FileToProcess 类实例。然后我们使用方法链式来调用 FileToProcess 类中的每个方法。这六个链式方法调用按照之前提供的工作流中所指定的特定顺序被调用并执行：
+我们应用程序的`Driver`类包含了`main()`方法。该方法（接下来提供）开始创建一个名为`myFile`的`FileToProcess`类实例。然后我们使用方法链式来调用`FileToProcess`类中的每个方法。这六个链式方法调用按照之前提供的工作流中所指定的特定顺序被调用并执行：
 
 ```java
 public class Driver {
     public static void main(String[] args) {
         FileToProcess myFile = new FileToProcess();
-
-        myFile.openFile().processMetaData().analyzeHeader()
-            .checkSpelling().checkGrammar().closeFile();
-    }
-}
 ```
+
+
+
+`myFile.openFile().processMetaData().analyzeHeader().checkSpelling().checkGrammar().closeFile();`
 
 这是我们应用程序的输出：
 
@@ -6504,13 +7204,15 @@ public class Driver {
 
 贷款模式-文件处理实现控制台输出
 
-我们的应用程序运行良好，但没有实现贷款模式。目前编写的应用程序的问题在于，我们将责任交给了开发者，以确保这六个方法按照工作流预期的特定顺序被调用。如果应用程序的程序逻辑不当（例如在打开文件之前关闭文件），我们将遇到问题。这些潜在问题可以通过大量代码测试在在开始之前检查过程是否已完成来克服。这将是繁琐的，并且不会为应用程序带来整洁的代码库。
+我们的应用程序运行良好，但没有实现贷款模式。目前编写的应用程序的问题在于，我们将责任交给了开发者，以确保这六个方法按照工作流预期的特定顺序被调用。如果应用程序的程序逻辑不当（例如在打开文件之前关闭文件），我们将遇到问题。这些潜在问题可以通过大量代码测试在开始之前检查过程是否已完成来克服。这将是繁琐的，并且不会为应用程序带来整洁的代码库。
 
-让我们使用设计模式来强制此功能。首先，我们将更新之前示例中的 FileToProcess 类并将其重命名为 FileTo2。这是该类的第一部分：
+让我们使用设计模式来强制此功能。首先，我们将更新之前示例中的 `FileToProcess` 类并将其重命名为 `FileTo2`。这是该类的第一部分：
 
 ```java
 import java.util.function.Consumer;
+
 public class FileTo2 {
+
     // 构造函数
     protected FileTo2() {
         openFile();
@@ -6518,14 +7220,13 @@ public class FileTo2 {
 
     public static void processFile(final Consumer<FileTo2> block) {
         final FileTo2 theFile = new FileTo2();
-
         block.accept(theFile);
         theFile.closeFile();
     }
 }
 ```
 
-我们更改了构造函数，以便在实例化 FileTo2 对象时调用 `openFile()` 方法。FileTo2 类的剩余部分包含了单独的处理方法，每个方法为控制台提供输出。以下是这些代码：
+我们更改了构造函数，以便在实例化 `FileTo2` 对象时调用 `openFile()` 方法。`FileTo2` 类的剩余部分包含了单独的处理方法，每个方法为控制台提供输出。以下是这些代码：
 
 ```java
 public FileTo2 openFile() {
@@ -6568,7 +7269,7 @@ public void closeFile() {
 }
 ```
 
-接下来，我们可以修改之前示例中的 Driver 类并将其重命名为 Driver2。这是更新后的 Driver 类源代码：
+接下来，我们可以修改之前示例中的 `Driver` 类并将其重命名为 `Driver2`。这是更新后的 `Driver` 类源代码：
 
 ```java
 public class Driver2 {
@@ -6589,16 +7290,9 @@ public class Driver2 {
 | 正在检查语法. . . |
 | 文件已关闭 |
 
-[/content] 
-
-[content]
-
 # 理解 MapReduce 设计模式
 
 MapReduce 功能设计模式用于大规模并行编程。Google 开发这种功能设计模式是为了将大型任务分解成较小任务。这些较小任务随后并行运行并产生合并的结果。MapReduce 功能设计模式的目标是在处理大型数据集时获得性能提升，也称为大数据。
-
-
-
 
 ## 功能性设计模式
 
@@ -6613,7 +7307,7 @@ MapReduce 功能性设计模式的大规模数据处理和详细分析是复杂�
 
 ## 输入-映射-输出
 
-MapReduce 功能性设计模式的输入-映射-输出形式可以在没有 reduce 组件的情况下。当当更改数据格式且不进行聚合计算时，可以使用它。下图提供了该流程的概述：
+MapReduce 功能性设计模式的输入-映射-输出形式可以在没有 reduce 组件的情况下使用。当更改数据格式且不进行聚合计算时，可以使用它。下图提供了该流程的概述：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_258_0.png)
 
@@ -6621,12 +7315,13 @@ MapReduce 功能性设计模式的输入-映射-输出形式可以在没有 redu
 
 ### 输入
 
-对于我们的示例，假设我们有一个包含某非特定大学 4,000 多名全职和兼职教师的注册表。多年来，注册表中的名称已经损坏，主要是由于数据录入控制不当。例如，这里是当前教师条目的几种不同形式（此处显示单个成员以供比较）。接接列出的教师成员全名为 Thomas A. Anderson，昵号为 Neo：
+对于我们的示例，假设我们有一个包含某非特定大学 4,000 多名全职和兼职教师的注册表。多年来，注册表中的名称已经损坏，主要是由于数据录入控制不当。例如，这里是当前教师条目的几种不同形式（此处显示单个成员以供比较）。接接列出的教师成员全名为 Thomas A. Anderson，昵称为 Neo：
 
 ```
 Thomas Anderson\Thomas A. Anderson
 ```
 
+```
 Anderson, Thomas
 Anderson, T. A.
 Anderson, Thomas A.
@@ -6635,12 +7330,13 @@ Anderson, Neo
 N. Anderson
 T. Anderson
 T. A. Anderson
+```
 
 拥有这么多可能的变体使得教师的查找和问题搜索变得困难。除了不同的形式外，大小写也可能不一致。
 
 ### 映射
 
-map 组件可能包括根据姓氏创建键。根据我们的场景，我们可能需要引用额外的数据字段以确保我们正确识别姓氏。
+`map` 组件可能包括根据姓氏创建键。根据我们的场景，我们可能需要引用额外的数据字段以确保我们正确识别姓氏。
 
 我们对名字也进行同样的操作。对于中间名，我们可能允许中间字母缩写以及中间名，因为可能很难获取任何缺失的数据。
 
@@ -6694,7 +7390,7 @@ Last name, First Name <Middle initial OR Middle name>
 (Freshman, 3.4), (Junior, 2.8), (Sophomore, 3.0)
 ```
 
-下一步将是 reduce。
+下一步将是 `reduce`。
 
 ### 还原
 
@@ -6709,7 +7405,7 @@ Last name, First Name <Middle initial OR Middle name>
 }
 ```
 
-我们的最后一步是还原 过程的输出。
+我们的最后一步是还原过程的输出。
 
 ## 输出
 
@@ -6766,7 +7462,7 @@ MapReduce 功能性设计模式的输入-映射-还原-输出形式将使用按�
 (Freshman, 3.4), (Junior, 2.8), (Sophomore, 3.0)
 ```
 
-下一步将是 reduce。
+下一步将是 `reduce`。
 
 ### 还原
 
@@ -6781,7 +7477,7 @@ MapReduce 功能性设计模式的输入-映射-还原-输出形式将使用按�
 }
 ```
 
-我们的最后一步是还原 过程的输出。
+我们的最后一步是还原过程的输出。
 
 ## 输出
 
@@ -6800,77 +7496,7 @@ MapReduce 功能性设计模式的输入-映射-还原-输出形式将使用按�
 
 ## 输入-映射-还原-输出
 
-MapReduce 功能性设计模式的输入-映射-还原-输出形式将使用按年级划分的学生平均分场景。该提供了该流程的概述：
-
-![](img/bcdf8abab5e2de6d67770104d49e5070_260_0.png)
-
-我们将在后续章节中处理该模式的每一步。
-
-### 输入
-
-以下是用于输入-映射-输出场景的数据：
-
-| 学生 | 年级 | 平均学分 |
-|---|---|---|
-| Tom Zarek | Freshman | 3.8 |
-| William Adama | Senior | 4.0 |
-| Galen Tyrol | Senior | 2.7 |
-| Gaius Baltar | Sophomore | 3.1 |
-| D'Anna Biers | Junior | 3.9 |
-| Kara Thrace | Junior | 2.6 |
-| Sharon Valeri | Sophomore | 3.2 |
-| Laura Roslin | Senior | 3.9 |
-| Saul Tigh | Freshman | 3.3 |
-| Felix Gaeta | Freshman | 3.4 |
-| Tory Foster | Junior | 2.8 |
-| Anastasia Dualla | Sophomore | 3.0 |
-
-如你所见，每个年级类别中都有几个学生。
-
-### 映射
-
-查看上一节中的代表性数据，我们知道创建一个数据等级键和键值对。根据我们之前的数据集，它如下：
-
-```
-(Freshman, 3.8), (Senior, 4.0), (Senior, 2.7),
-(Sophomore, 3.1), (Junior, 3.9), (Junior, 2.6),
-(Sophomore, 3.2), (Senior, 3.9), (Freshman, 3.3),
-(Freshman, 3.4), (Junior, 2.8), (Sophomore, 3.0)
-```
-
-下一步将是 reduce。
-
-### 还原
-
-给出你的键值对映射；我们可以将这些数据还原为中间形式：
-
-```
-{
- Freshman [3.8, 3.3, 3.4],
- Sophomore [3.1, 3.2, 3.0],
- Junior [3.9, 2.6, 2.8],
- Senior [ 4.0, 2.7, 3.9]
-}
-```
-
-我们的最后一步是还原 过程的输出。
-
-## 输出
-
-输入-映射-还原实现的最终输出在此：
-
-```
-{
- Freshman, 3.5,
- Sophomore, 3.1,
- Junior, 3.1,
- Senior, 3.5
-}
-```
-
-## 输入-映射-还原-输出
-
-MapReduce 功能性设计模式的输入-映射-还原-输出形式将使用按年级划分的学生平均分场景。该图 提供了该流程的概述：
+MapReduce 功能性设计模式的输入-映射-还原-输出形式将使用按年级划分的学生平均分场景。该图提供了该流程的概述：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_260_0.png)
 
@@ -6906,7 +7532,7 @@ MapReduce 功能性设计模式的输入-映射-还原-输出形式将使用按�
 (Freshman, 3.4), (Junior, 2.8), (Sophomore, 3.0)
 ```
 
-下一步将是 reduce。
+下一步将是 `reduce`。
 
 ### 还原
 
@@ -6921,7 +7547,9 @@ MapReduce 功能性设计模式的输入-映射-还原-输出形式将使用按�
 }
 ```
 
-我们的最后一步是还原 过程的输出。
+
+
+我们的最后一步是还原过程的输出。
 
 ## 输出
 
@@ -6929,38 +7557,35 @@ MapReduce 功能性设计模式的输入-映射-还原-输出形式将使用按�
 
 ```
 {
- Freshman, 3.5,
- Sophomore, 3.1,
- Junior, 3.1,
- Senior, 3.5
+  Freshman, 3.5,
+  Sophomore, 3.1,
+  Junior, 3.1,
+  Senior, 3.5
 }
 ```
-
-
-
 
 # 函数式设计模式
 
-## 第8 章
+## 第8章
 
-如你所看到的，存在大量的处理浪费。如果我们从一个更大的数字开始，浪费的数量将急剧增加。例如，如果我们从 `computeFibonacciNumber(300)` 开始，总将会有 24, 72 行输出。如接下来的表格所示，computeFibonacciNumber(int 3) 会被处理 5,757 次，而 computeFibonacciNumber(int 2) 会被处理 9,315 次：
+如你所看到的，存在大量的处理浪费。如果我们从一个更大的数字开始，浪费的数量将急剧增加。例如，如果我们从`computeFibonacciNumber(300)`开始，总将会有24,72行输出。如接下来的表格所示，`computeFibonacciNumber(int 3)`会被处理5,757次，而`computeFibonacciNumber(int 2)`会被处理9,315次：
 
 | 方法 | 处理次数 |
 |---|---|
-| computeFibonacciNumber(int 7) | 839 |
-| computeFibonacciNumber(int 6) | 1,358 |
-| computeFibonacciNumber(int 5) | 2,198 |
-| computeFibonacciNumber(int 4) | 3,558 |
-| computeFibonacciNumber(int 3) | 5,757 |
-| computeFibonacciNumber(int 2) | 9,315 |
+| `computeFibonacciNumber(int 7)` | 839 |
+| `computeFibonacciNumber(int 6)` | 1,358 |
+| `computeFibonacciNumber(int 5)` | 2,198 |
+| `computeFibonacciNumber(int 4)` | 3,558 |
+| `computeFibonacciNumber(int 3)` | 5,757 |
+| `computeFibonacciNumber(int 2)` | 9,315 |
 
-上一个表格为了代表性简洁性进行了简化，仅显示了 8 及以下的 `int` 值。
+上一个表格为了代表性和简洁性进行了简化，仅显示了8及以下的`int`值。
 
 > 如果你在我们的计算机上运行此测试，请注意处理大大的斐波那契数可能需要很长时间。
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_266_0.png)
 
-现在让我们尝试使用备录设计模式（memoization design pattern）运行此应用程序。接下来显示我们 `FibonacciTest2` 类的第一部分。该类导入两个类（`java.util.Map` 和 `java.util.HashMap`）以实现 `HashMap` 实例。computeFibonacciNumber() 方法的开头也在此部分，并检查该数字是否等于斐波那契基数之一（0 或 1）：
+现在让我们尝试使用备录设计模式（memoization design pattern）运行此应用程序。接下来显示我们`FibonacciTest2`类的第一部分。该类导入两个类（`java.util.Map`和`java.util.HashMap`）以实现`HashMap`实例。`computeFibonacciNumber()`方法的开头也在此部分，并检查该数字是否等于斐波那契基数之一（0或1）：
 
 ```
 import java.util.Map;
@@ -6975,9 +7600,10 @@ class FibonacciTest2 {
             return number;
         }
     }
+}
 ```
 
-我们 FibonacciTest2 类的第二部分是 computeFibonacciNumber() 方法的最后部分，显示了三个步骤。第一步是检查是否已经进行了计算。如果已经计算，我们则从 HashMap 中检索结果，而不是执行计算。第二步是在尚未计算过时执行计算。第三步是在第一次执行计算时，将结果添加到 HashMap 中：
+我们`FibonacciTest2`类的第二部分是`computeFibonacciNumber()`方法的最后部分，显示了三个步骤。第一步是检查是否已经进行了计算。如果已经计算，我们则从`HashMap`中检索结果，而不是执行计算。第二步是在尚未计算过时执行计算。第三步是在第一次执行计算时，将结果添加到`HashMap`中：
 
 ```
 // 步骤 1: 检查是否已经进行过计算
@@ -6993,11 +7619,10 @@ int fibonacciResult = (computeFibonacciNumber(number - 1)) +
 
 // 步骤 3: 将结果加入 Map
 memoization.put(number, fibonacciResult);
-
 return fibonacciResult;
 ```
 
-我们 FibonacciTest2 类的最后部分是 main() 方法，它打印一个空行，然后调用 computeFibonacciNumber() 方法并传入 7 作为参数：
+我们`FibonacciTest2`类的最后部分是`main()`方法，它打印一个空行，然后调用`computeFibonacciNumber()`方法并传入7作为参数：
 
 ```java
 public static void main(String[] args) {
@@ -7010,11 +7635,11 @@ public static void main(String[] args) {
 
 | |
 |---|
-| computeFibonacciNumber(int 7)... |
-| computeFibonacciNumber(int 6)... |
-| computeFibonacciNumber(int 5)... |
-| computeFibonacciNumber(int 4)... |
-| computeFibonacciNumber(int 2)... |
+| `computeFibonacciNumber(int 7)`... |
+| `computeFibonacciNumber(int 6)`... |
+| `computeFibonacciNumber(int 5)`... |
+| `computeFibonacciNumber(int 4)`... |
+| `computeFibonacciNumber(int 2)`... |
 | First time computing memoization 2 |
 | First time computing memoization 3 |
 | First time computing memoization 4 |
@@ -7051,47 +7676,45 @@ public static void main(String[] args) {
 
 | Stream | IntStream | LongStream | DoubleStream |
 |---|---|---|---|
-| distinct() | flatMapToInt() | flatMapToLong() | flatMapToDouble() |
-| filter() | mapToInt() | mapToLong() | mapToDouble() |
-| flatMap() | | | |
-| limit() | | | |
-| map() | | | |
-| peek() | | | |
-| skip() | | | |
-| sorted() | | | | |
+| `distinct()` | `flatMapToInt()` | `flatMapToLong()` | `flatMapToDouble()` |
+| `filter()` | `mapToInt()` | `mapToLong()` | `mapToDouble()` |
+| `flatMap()` | | | |
+| `limit()` | | | |
+| `map()` | | | |
+| `peek()` | | | |
+| `skip()` | | | |
+| `sorted()` | | | |
 
 理解这些流操作的返回类型将有助于它们的实现。
 
 ## 流的终端操作
 
-流有 13 种终端操作。这些操作是方法，并按字母顺序在下方列出：
+流有13种终端操作。这些操作是方法，并按字母顺序在下方列出：
 
-- allMatch()
-- anyMatch()
-- collect()
-- count()
-- findAny()
-- findFirst()
-- forEach()
-- findOrdered()
-- max()
-- min()
-- noneMatch()
-- reduce()
-- toArray()
+- `allMatch()`
+- `anyMatch()`
+- `collect()`
+- `count()`
+- `findAny()`
+- `findFirst()`
+- `forEach()`
+- `findOrdered()`
+- `max()`
+- `min()`
+- `noneMatch()`
+- `reduce()`
+- `toArray()`
 
 ## 编写流式模式
 
-接下来提供的 StreamExample 类演示了流式设计模式。包含了对 java.util.stream 的调用。
+接下来提供的`StreamExample`类演示了流式设计模式。包含了对`java.util.stream`的调用。
 
 ```java
 import java.util.stream;
 
 public class StreamExample {
-
     public static void main(String[] args) {
         System.out.println();
-
         Stream.iterate(0, x -> x + 3)
             .peek(x -> System.out.println("Peeked at: " + x))
             .limit(7)
@@ -7100,7 +7723,7 @@ public class StreamExample {
 }
 ```
 
-StreamExample 类的输出如下：
+`StreamExample`类的输出如下：
 
 | |
 |---|
@@ -7114,14 +7737,11 @@ StreamExample 类的输出如下：
 
 流模式实现——控制台
 
-
-
-
-
 # 函数设计模式
-第8 章
 
-TailCallExample 类的下一个部分是 `executeThisMethod()` 方法。在下一个代码块中，你会看到该方法有一个本地 `funWithNumbers` 变量。该方法还按顺序调用以下方法：`operation1()`、`operation2()`、`operation3()`、`operation4()` 和 `operation5()`。最后执行 `return(funWithNumbers)` 语句。`operation5()` 方法是 `executeThisMethod()` 方法调用的最后一个方法，使其成为尾调用。你可能会认为返回语句是尾调用，但它并不是一个方法，因此它不能是该方法或任何方法的尾调用：
+## 第8章
+
+`TailCallExample`类的下一个部分是`executeThisMethod()`方法。在下一个代码块中，你会看到该方法有一个本地`funWithNumbers`变量。该方法还按顺序调用以下方法：`operation1()`、`operation2()`、`operation3()`、`operation4()`和`operation5()`。最后执行`return(funWithNumbers)`语句。`operation5()`方法是`executeThisMethod()`方法调用的最后一个方法，使其成为尾调用。你可能会认为返回语句是尾调用，但它并不是一个方法，因此它不能是该方法或任何方法的尾调用：
 
 ```java
 private static int executeThisMethod(int theNumber) {
@@ -7135,21 +7755,24 @@ private static int executeThisMethod(int theNumber) {
 }
 ```
 
-TailCallExample 类的最后一部分在下文中提供，包含了 `operation1()`、`operation2()`、`operation3()`、`operation4()` 和 `operation(5)` 方法。这些方法中的每一个都调用了 `println()` 方法，在每种情况下，该方法都是这些方法的尾调用：
+`TailCallExample`类的最后一部分在下文中提供，包含了`operation1()`、`operation2()`、`operation3()`、`operation4()`和`operation(5)`方法。这些方法中的每一个都调用了`println()`方法，在每种情况下，该方法都是这些方法的尾调用：
 
 ```java
 private static int operation1(int theNbr) {
     System.out.println("\t9 = " + (theNbr + 9)); // tail call
     return theNbr + 9;
 }
+
 private static int operation2(int theNbr) {
     System.out.println("\t2 = " + (theNbr * 2)); // tail call
     return theNbr * 2;
 }
+
 private static int operation3(int theNbr) {
     System.out.println("\t-4 = " + (theNbr - 4)); // tail call
     return theNbr - 4;
 }
+
 private static int operation4(int theNbr) {
     System.out.println("\t/2 = " + (theNbr / 2)); // tail call
     return theNbr / 2;
@@ -7157,11 +7780,14 @@ private static int operation4(int theNbr) {
 ```
 
 ```java
-  private static int operation5(int theNbr) {
+private static int operation5(int theNbr) {
     System.out.println("\t- initial number = " + (theNbr - theInitialNumber)); // tail call
     return (theNbr) - theInitialNumber;
-  }
+}
 ```
+
+
+
 
 我们的应用程序输出在此提供：
 
@@ -7174,7 +7800,7 @@ private static int operation4(int theNbr) {
 | - 初始数字 = 7 |
 | 尾调用发送此结果: 7 |
 
-尾设计模式实现--控制台输出
+## 尾设计模式实现——控制台输出
 
 本节提供了我们实现“幸运7”尾式函数设计模式的源代码和控制台输出。
 
@@ -7204,14 +7830,13 @@ private static int operation4(int theNbr) {
 - [Design Patterns and Best Practices in Java](https://www.packpub.com/application-development/design-patterns-and-best-practices-java)
 - [Learning Big Data with Amazon Elastic MapReduce](https://www.packpub.com/virtualization-and-cloud/learning-big-data-amazon-elastic-mapreduce)
 
-## 响应式设计模式
+# 响应式设计模式
 
 在上一章“函数设计模式”中，我们研究了函数设计模式类别和八种特定的设计模式。我们学习到函数设计模式不等同于函数式编程，而且它们都被视为编程范式。函数设计模式一术是指使用函数式编程来解决计算问题。函数设计模式涵盖的包括执行器模式、lambda 模式、贷款模式、MapReduce 模式、备忘录模式、流模式和尾调用模式。
 
 在接下来的章节“响应式设计模式”中，我们将探索响应式设计模式类别及其各个设计模式，包括异步通信、自动伸缩、边界队列、隔舱隔离、缓存、断路器、事件驱动通信、快速失败故障处理、扇出和最快响应、幂等性、监控、发布者-订阅者、自包含和无状态。
 
-## 响应式设计模式
-第9 章
+## 第 9 章
 
 - 发布者-订阅者
 - 自包含
@@ -7219,7 +7844,7 @@ private static int operation4(int theNbr) {
 
 ## 技术要求
 
-本章的代码可以在 https://github.com/PacktPublishing/Hands-On-Design-Patterns-with-Java/tree/master/Chapter9 找到
+本章的代码可以在`https://github.com/PacktPublishing/Hands-On-Design-Patterns-with-Java/tree/master/Chapter9`找到。
 
 ## 介绍响应式设计模式
 
@@ -7238,17 +7863,13 @@ private static int operation4(int theNbr) {
 
 ## 韧性
 
-韧性系统是具有极高运行时间且对错误免疫的系统。设计韧性系统涉及广泛的错误处理、数据冗余、分布式处理以及其他我们本章中进一步探讨的概念。韧性--韧性系统没有单点故障。例如，与其使用单个数据库，韧性系统可能会采用数据库复制。将系统标记为韧性不仅意味着整个系统具有韧性，而且其组件和子组件也是如此。
+韧性系统是具有极高运行时间且对错误免疫的系统。设计韧性系统涉及广泛的错误处理、数据冗余、分布式处理以及其他我们本章中进一步探讨的概念。韧性——韧性系统没有单点故障。例如，与其使用单个数据库，韧性系统可能会采用数据库复制。将系统标记为韧性不仅意味着整个系统具有韧性，而且其组件和子组件也是如此。
 
 ## 弹性
 
 弹性系统具有根据需要进行扩展和缩小规模的能力。一个例子可能是电子商务网站在假日期间由于访问量指数级增长时，需要额外的服务器、网关和其他系统组件。
 
 重要的是，系统的弹性包括扩展和缩小系统资源的能力。根据所用系统的不同，这种弹性可以通过预测性分析和特殊算法来控制，以检测特定的系统组件何时达到特定的高低水平。
-
-
-
-
 
 ## 消息驱动
 
@@ -7262,14 +7883,14 @@ private static int operation4(int theNbr) {
 
 下表提供了这种分类：
 
-| 响应式 (Responsive) | 弹性 (Resilient) | 弹性 (Elastic) | 消息驱动 (Message-driven) |
+| 响应式 (Responsive) | 韧性 (Resilient) | 弹性 (Elastic) | 消息驱动 (Message-driven) |
 | :--- | :--- | :--- | :--- |
 | 异步通信 | 有界队列 | 自动伸缩容 | 事件驱动通信 |
-| 缓存 | 隔板隔离 | 自包含 | 等幂性 |
-| 快速失败 | 熔路器 | 无状态 | 发布者-订阅者 |
-| 扇出与最快响应 | 故障处理 监控 | | |
+| 缓存 | 隔板隔离 | 自包含 | 幂等性 |
+| 快速失败 | 熔断器 | 无状态 | 发布者-订阅者 |
+| 扇出与最快响应 | 故障处理、监控 | | |
 
-响应式设计模式分组
+### 响应式设计模式分组
 
 本章剩余部分的响应式设计特性按字母顺序排列，以说明没有哪一个比其他一个重要。
 
@@ -7277,9 +7898,9 @@ private static int operation4(int theNbr) {
 
 在本章的前面部分，我们确定了响应式设计原则之一是异步消息驱动通信。该原则是异步通信设计模式的核心：
 
-- 1. 首先，客户端向服务器发送请求消息
-- 2. 接下来，服务器立即向客户端发送确认消息，然后花费所需的时间处理请求
-- 3. 一旦请求被完全处理，响应消息将从服务器发送到客户端
+1. 首先，客户端向服务器发送请求消息。
+2. 接下来，服务器立即向客户端发送确认消息，然后花费所需的时间处理请求。
+3. 一旦请求被完全处理，响应消息将从服务器发送到客户端。
 
 此图阐释了异步通信的三个组件：
 
@@ -7287,48 +7908,43 @@ private static int operation4(int theNbr) {
 
 这种通信方法是高效高效的，因为它允许客户端向服务器发送多条请求消息，而无需专门投入处理资源来等待服务器的响应消息。客户端理解服务器最终会发送响应消息，它可以在那个时候分配处理资源。
 
-响应式设计模式
-第 9 章
-
 ## 实现异步通信设计模式
 
 实现异步通信响应式设计模式最常用的方法是使用异步回调。接下来是实现异步回调的基本过程。该过程从客户端向服务器身份验证开始。客户端向服务器发送请求消息并订阅服务器。服务器发送立即确认消息，处理请求，然后发送响应消息。客户端接收响应并进行任何后续处理：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_281_0.png)
 
-下一个 UML 图描述了实现示例的类结构。该解决方案包含一个 `CallbackListener` 接口以及 `CallerOne` 和 `CallerTwo` 类。只有 `CallerOne` 类实现了 `CallbackListener` 接口：
-
-响应式设计模式
-第 9 章
+下一个 UML 图描述了实现示例的类结构。该解决方案包含一个`CallbackListener`接口以及`CallerOne`和`CallerTwo`类。只有`CallerOne`类实现了`CallbackListener`接口：
 
 | << interface >> |
 | :--- |
-| CallbackListener |
-| processCallback() |
+| `CallbackListener` |
+| `processCallback()` |
 
-| CallerOne | CallerTwo |
+| `CallerOne` | `CallerTwo` |
 | :--- | :--- |
-| processCallback() | callbackListener |
-| doSomething1(1) | registerCallbackListener() |
-| doSomething2(2) | processCallback() |
-| | main() |
+| `processCallback()` | `callbackListener` |
+| `doSomething1(1)` | `registerCallbackListener()` |
+| `doSomething2(2)` | `processCallback()` |
+| | `main()` |
 
 UML 类图——异步通信设计模式实现
 
-让我们来看看该设计模式的代码示例。第一段代码是监听器接口。它包含一个简单的 `processCallback()` 方法，`CallerOne` 类将重写该方法。`CallerTwo` 类不会重写该方法，但仍然包含它自己的 `processCallback()` 方法，因为它没有实现 `CallbackListener` 接口：
+让我们来看看该设计模式的代码示例。第一段代码是监听器接口。它包含一个简单的`processCallback()`方法，`CallerOne`类将重写该方法。`CallerTwo`类不会重写该方法，但仍然包含它自己的`processCallback()`方法，因为它没有实现`CallbackListener`接口：
 
-```
+```java
 package CH9AsynchronousCommunication;
 
 public interface CallbackListener {
 
     void processCallback();
+
 }
 ```
 
-接下来提供了 `CallerOne` 类的四个连续部分。提供的第一部分包含包声明以及四个导入语句。导入的类将支持 `doSomething2()` 方法：
+接下来提供了`CallerOne`类的四个连续部分。提供的第一部分包含包声明以及四个导入语句。导入的类将支持`doSomething2()`方法：
 
-```
+```java
 package CH9AsynchronousCommunication;
 
 import java.util.ArrayList;
@@ -7337,16 +7953,13 @@ import java.util.List;
 import java.util.ListIterator;
 ```
 
-```
+```java
 public class CallerOne implements CallbackListener {
 ```
 
-响应式设计模式
-第 9 章
+接下来提供了`CallerOne`类的第二部分。`CallerOne`类有三个方法；其中第一个方法`processCallback()`显示在此。当被调用时，该方法会将内容打印到控制台窗口以模拟处理消息。进行了两次方法调用，分别调用`doSomething1()`和`doSomething2()`，用于进一步模拟消息：
 
-接下来提供了 `CallerOne` 类的第二部分。`CallerOne` 类有三个方法；其中第一个方法 `processCallback()` 显示在此。当被调用时，该方法会将内容打印到控制台窗口以模拟处理消息。进行了两次方法调用，分别调用 `doSomething1()` 和 `doSomething2()`，用于进一步模拟消息：
-
-```
+```java
 @Override
 public void processCallback()
 {
@@ -7359,37 +7972,49 @@ public void processCallback()
 }
 ```
 
-`CallerOne` 类的第三部分包含 `doSomething1()` 方法并随后提供。该方法简单确定两个 `int` 参数中的较大值，并向控制台窗口输出。`doSomething1()` 方法包含在异步响应式设计模式的示例实现中：
+`CallerOne`类的第三部分包含`doSomething1()`方法并随后提供。该方法简单确定两个`int`参数中的较大值，并向控制台窗口输出。`doSomething1()`方法包含在异步响应式设计模式的示例实现中：
 
 ```java
 public void doSomething1(int x, int y) {
+
     // determine max value
+
     System.out.println("\ttlargest is " + Math.max(x, y));
+
 }
 ```
 
-`CallerOne` 类的第四部分也是最后一部分已提供，包含 `doSomething2()` 方法。该方法简单地接收 `String` 参数并反序输出到控制台窗口。这是使用 `ArrayList` 和 `ListIterator` 完成的。`doSomething2()` 方法包含在示例中以模拟异步模式的设计模式：
+`CallerOne`类的第四部分也是最后一部分已提供，包含`doSomething2()`方法。该方法简单地接收`String`参数并反序输出到控制台窗口。这是使用`ArrayList`和`ListIterator`完成的。`doSomething2()`方法包含在示例中以模拟异步模式的设计模式：
 
 ```java
 public void doSomething2(String backwardsPhrase) {
+
     // reverse a string
+
     char[] phrase = backwardsPhrase.toCharArray();
+
     List<Character> newPhrase = new ArrayList<>();
 
     for (char character: phrase) {
+
         newPhrase.add(character);
+
     }
 
     Collections.reverse(newPhrase);
+
     ListIterator myIterator = newPhrase.listIterator();
 
     System.out.print("\t\tResultant Phrase: ");
+
     while (myIterator.hasNext())
+
         System.out.print(myIterator.next());
+
 }
 ```
 
-`CallerTwo` 类分三个部分。提供的第一部分创建一个 `callbackListener` 对象。此类的下一个操作是注册 `callbackListener`。这是通过 `registerCallbackListener()` 方法实现的：
+`CallerTwo`类分三个部分。提供的第一部分创建一个`callbackListener`对象。此类的下一个操作是注册`callbackListener`。这是通过`registerCallbackListener()`方法实现的：
 
 ```java
 package CH9AsynchronousCommunication;
@@ -7397,37 +8022,43 @@ package CH9AsynchronousCommunication;
 public class CallerTwo {
 
     // create callbackListener object
+
     private CallbackListener callbackListener;
 
     // setting up the callbacklistener
+
     public void registerCallbackListener(CallbackListener callbackListener)
     {
         this.callbackListener = callbackListener;
     }
+
 }
 ```
 
-`CallerTwo` 类的第二部分包含了 `processCallback()` 方法。这是 `CallerTwo` 类的异步操作。我们通过为操作创建一个新线程并使用 lambda 表达式来实现它。
+`CallerTwo`类的第二部分包含了`processCallback()`方法。这是`CallerTwo`类的异步操作。我们通过为操作创建一个新线程并使用 lambda 表达式来实现它。
 
 > 关于 lambda 表达式的更多信息可以在第 8 章函数式设计模式中找到。
 
-如下代码所示，我们必须检查 `callbackListener` 是否已注册。如果不存在，我们调用 `CallerOne` 类的 `processCallback()` 方法：
+如下代码所示，我们必须检查`callbackListener`是否已注册。如果不存在，我们调用`CallerOne`类的`processCallback()`方法：
 
 ```java
 // asynchronous operation for CallerTwo
+
 public void processCallback()
 {
     // a new thread for the asynchronous operations using lambda
+
     new Thread(() -> {
+
         if (callbackListener != null) {
+
             callbackListener.processCallback();
+
         }
+
     });
 }
 ```
-```
-
-
 
 ```java
 // simulated processing
@@ -7447,7 +8078,7 @@ callbackListener.processCallback();
 ).start();
 ```
 
-CallerTwo 类的最后部分是 `main()` 方法。如如下代码所示，只有四行代码。第一行创建了一个名为 `asynchronousMessage` 的 `CallerTwo` 实例。第二行创建了一个 `CallbackListener` 实例并命名为 `callbacklistener`。第三行将第二行创建的 `callbackListener` 作为参数调用。第四行调用 `asynchronousMessage` 对象的 `processCallback()` 方法：
+`CallerTwo`类的最后部分是`main()`方法。如如下代码所示，只有四行代码。第一行创建了一个名为`asynchronousMessage`的`CallerTwo`实例。第二行创建了一个`CallbackListener`实例并命名为`callbacklistener`。第三行将第二行创建的`callbackListener`作为参数调用。第四行调用`asynchronousMessage`对象的`processCallback()`方法：
 
 ```java
 public static void main(String[] args) {
@@ -7460,17 +8091,22 @@ public static void main(String[] args) {
 
 ## 响应式设计模式
 
-## 第 9 章
+### 第 9 章
 
-使用 `CallerTwo` 类作为驱动类时，我们的程序输出如下：
+使用`CallerTwo`类作为驱动类时，我们的程序输出如下：
 
 | 正在进行异步操作 . . . |
 | :--- |
-| 来自 Caller Two 的模拟处理 . . . |
+
+
+
+
+| 来自 Caller Two 的模拟处理…… |
+|---|
 | 异步任务完成，随后触发回调。 |
-| 来自 Caller One 的模拟处理 . . . |
+| 来自 Caller One 的模拟处理…… |
 | 最大数字是 34 |
-| 来自 Caller Two 的模拟处理 . . . |
+| 来自 Caller Two 的模拟处理…… |
 | 结果语句：异步通信设计模式 |
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_286_0.png)
@@ -7485,7 +8121,7 @@ public static void main(String[] args) {
 
 ## 响应式设计模式
 
-## 第 9 章
+### 第 9 章
 
 理想的解决方案是设计一个可以自动伸缩且按需波动的系统。下图显示了给定系统在低使用率和高使用率之间的巨大差异。如你所见，如果我们的系统是为低使用率甚至略高使用率设计的（例如 2000 万或 3000 万并发用户），系统在一年中仍会有至少四个月处于不足状态。如果我们为高使用率（1 亿并发用户）设计系统，我们的系统将运行良好，但在 12 个月中的 11 个月都会有多余容量：
 
@@ -7493,16 +8129,12 @@ public static void main(String[] args) {
 
 让我们看看同一张图，但带有显示基于使用率的理想容量图表。在这里你可以看到容量略高于使用率。当我们采用自动伸缩时，我们总是希望容量比正在使用的多一点，以防止出现与访问器系统相关的问题：
 
-## 响应式设计模式
-
-## 第 9 章
-
 ![](img/bcdf8abab5e2de6d67770104d49e5070_288_0.png)
 
 现在我们有了一些关于自动伸缩的知识，让我们来看看两种自动伸缩：
 
-- 水平伸缩（Horizontal scaling）
-- 垂直伸缩（Vertical scaling）
+- 水平伸缩（`Horizontal scaling`）
+- 垂直伸缩（`Vertical scaling`）
 
 我们将在接两个节中回顾这两种自动伸缩类型。
 
@@ -7510,11 +8142,11 @@ public static void main(String[] args) {
 
 水平伸缩的一个示例是增加或减少处理负载，例如通过更多的服务器或数据库服务器。由于我们只在系统需要时才伸缩，因此我们只为使用的部分付费。这强调了永远不要过多或过少处理能力的重要性。
 
-当我们进行水平伸缩时，我们是在向外扩展（scaling out）。一个容易记忆的方法是，你需要缩小系统图表的视图，以便看到在同一水平面上的额外服务器。
+当我们进行水平伸缩时，我们是在向外扩展（`scaling out`）。一个容易记忆的方法是，你需要缩小系统图表的视图，以便看到在同一水平面上的额外服务器。
 
 ## 垂直伸缩
 
-垂直伸缩也称为向心扩展（scaling up），涉及通过增加额外的硬件来增加容量。示例包括更快或更多的处理器以及增加内存容量。垂直伸缩的另一个例子是增加具有更大 RAM 分配的数据库实例。
+垂直伸缩也称为向心扩展（`scaling up`），涉及通过增加额外的硬件来增加容量。示例包括更快或更多的处理器以及增加内存容量。垂直伸缩的另一个例子是增加具有更大 RAM 分配的数据库实例。
 
 ## 实现自动伸缩
 
@@ -7558,7 +8190,7 @@ public class Bounded extends Thread {
 }
 ```
 
-接下来的两个代码段构成了 Driver 类。第一部分导入了 `ArrayQueue` 和 `BlockingQueue`。`main()` 方法被定义，如所示，它抛出了 `InterruptedException` 异常。最后，`boundedSize` 变量被设置为 10：
+接下来的两个代码段构成了 `Driver` 类。第一部分导入了 `ArrayQueue` 和 `BlockingQueue`。`main()` 方法被定义，如所示，它抛出了 `InterruptedException` 异常。最后，`boundedSize` 变量被设置为 10：
 
 ```java
 package CH9BoundedQueue;
@@ -7594,6 +8226,8 @@ for (int i=1; i < 11; i++) {
 
 我们实现的输出如下所示：
 
+| 输出 |
+|---|
 | 1 squared is 1 |
 | 2 squared is 4 |
 | 3 squared is 9 |
@@ -7605,11 +8239,7 @@ for (int i=1; i < 11; i++) {
 | 9 squared is 81 |
 | 10 squared is 100 |
 
-
-
-
-
-# 理解隔舱设计模式（Bulkhead design pattern）
+# 理解隔舱设计模式（`Bulkhead design pattern`）
 
 船上的隔舱有助于隔离船的各个区域，使得进水、火灾或爆炸等损坏只会影响船的一个部分，而不会扩散到其他部分。隔舱还建立了整艘船的稳定性。隔舱设计模式是基于船只的示例。我们现在保护的不是船只，而是系统。
 
@@ -7617,15 +8247,15 @@ for (int i=1; i < 11; i++) {
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_292_0.png)
 
-# 响应式设计模式（Reactive Design Patterns）
+# 响应式设计模式（`Reactive Design Patterns`）
 
-# 第 9 章
+## 第 9 章
 
 现在让我们看看实现隔舱设计模式的系统应该是什么样。在这里，你可以看到负载均衡器之间有一个模拟隔舱。这些负载均衡器将决定哪些服务器请求被路由。这提供了与服务器错误的隔离；当其中一个服务器宕机时，另一个仍然可以使用。此外，在动态云计算环境中，你可能会有一个故障保护机制，在某一个服务器宕机后自动启动一个新的服务器实例。这将有助于确保一致的运行时间：
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_293_0.png)
 
-带有隔舱设计模式的系统
+带有隔舱设计模式的系统。
 
 前面的图还描绘了隔舱如何分离复制的处理模型。
 
@@ -7633,7 +8263,7 @@ for (int i=1; i < 11; i++) {
 
 本节提供了隔舱响应式设计模式的概述。
 
-# 理解缓存设计模式（Caching design pattern）
+# 理解缓存设计模式（`Caching design pattern`）
 
 缓存的概念是临时存储数据以加快访问速度。缓存被用于帮助节省资源的使用。当我们检索数据时，应该使其对未来对相同数据的请求可用。实现这种机制可以节省持续检索相同数据所需的处理时间。
 
@@ -7767,6 +8397,8 @@ public class CacheDriver {
 
 `main` 方法的第二部分给出。在这里，我们简单地为每个玩家打印内容。此输出包含了 `retrieve(id)` 调用的结果：
 
+
+
 ```java
 System.out.println("\t\t\t\tRETRIEV: jersey -> 8\tPoints-> 33643");
 System.out.println("\t\t\t\tRETRIEV: jersey -> 14\tPoints-> 25192");
@@ -7779,34 +8411,44 @@ System.out.println("\t\t\t\tRETRIEV: jersey -> 33\tPoints-> 24176");
 程序的输出最后给出。如你所见，对 `put()` 方法的调用显示了球衣号码是如何被配对到缓存的。接下来是由 `main` 方法中的 `retrieve(id)` 调用引起的行。如你所见，尽管我们有六组数据，但只有五组存储在缓存中。这是因为我们的缓存对于数据来说太小：
 
 Chapter 9 Caching System.
+
+```
 SETTING: 8 (jersey)
 33643 (points)
+
 SETTING: 14 (jersey)
 25192 (points)
+
 SETTING: 22 (jersey)
 23149 (points)
+
 SETTING: 24 (jersey)
 33643 (points)
+
 SETTING: 32 (jersey)
 17707 (points)
+
 SETTING: 33 (jersey)
 24176 (points)
 
 From Cache Driver: jersey -> 8 Points no value
 RETRIEV: jersey -> 8 Points-> 33643
+
 From Cache Driver: jersey -> 14 Points no value
 RETRIEV: jersey -> 14 Points-> 25192
+
 From Cache Driver: jersey -> 22 Points no value
 RETRIEV: jersey -> 22 Points-> 23149
+
 From Cache Driver: jersey -> 24 Points no value
 RETRIEV: jersey -> 24 Points-> 33643
+
 From Cache Driver: jersey -> 32 Points no value
 RETRIEV: jersey -> 32 Points-> 17707
+
 From Cache Driver: jersey -> 33 Points no value
 RETRIEV: jersey -> 33 Points-> 24176
-
-
-
+```
 
 本节提供了我们实现缓存响应设计模式的源代码和控制台输出。
 
@@ -7824,7 +8466,7 @@ RETRIEV: jersey -> 33 Points-> 24176
 
 如果测试成功，电路将关闭并恢复处理。如果测试失败，则电路将保持开启状态。
 
-### 用例
+## 用例
 
 对于具有大量且易失败方法调用的系统，可以从断路器设计模式中受益。这些失败可能由间歇访问、超时等引起。为了实现断路器模式，我们将一个方法或一组功能封装在断路器中。接下来的图说明了这种方法：
 
@@ -7846,7 +8488,7 @@ RETRIEV: jersey -> 33 Points-> 24176
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_301_0.png)
 
-### 事件驱动通信设计模式实现——概述
+## 事件驱动通信设计模式实现——概述
 
 前图所示的处理器代表一个代码模块，就其提供的功能而言，它通常很短。因此，你可以看到系统中有很多处理器。此外，可能会同时发生大量的启动事件。这强调了确保异常被处理的重要性，以防止进程失败。
 
@@ -7904,7 +8546,7 @@ Corsack
 Trepleton
 ```
 
-### 快速失败设计模式实现——概述
+## 快速失败设计模式实现——概述
 
 程序的输出如下所示。没有发现异常，程序没有失败：
 
@@ -7915,7 +8557,7 @@ Corsack
 Trepleton
 ```
 
-### 快速失败模式实现——概述
+## 快速失败模式实现——概述
 
 下一部分代码完成了 `main()` 方法和 `FailFastImplementation()` 类。在这里，我们创建了一个 `Iterator` 实例并使用 `while` 循环，使用 `hasNext()` 方法检查迭代器是否有下一个元素。在 `while` 循环内部，我们使用 `try-catch` 块来捕获 `ConcurrentModificationException` 错误：
 
@@ -7932,7 +8574,7 @@ Iterator iterator = firstLast.keySet().iterator();
   }
 ```
 
-### 快速失败模式实现——概述
+## 快速失败模式实现——概述
 
 程序的输出如下所示。没有发现异常，程序没有失败：
 
@@ -7943,7 +8585,7 @@ Corsack
 Trepleton
 ```
 
-### 快速失败模式实现——概述
+## 快速失败模式实现——概述
 
 程序的输出如下所示。没有发现异常，程序没有失败：
 
@@ -7954,12 +8596,9 @@ Corsack
 Trepleton
 ```
 
-### 快速失败模式实现——概述
+## 快速失败模式实现——概述
 
 程序的输出如下所示。没有发现异常，程序没有失败：
-（注：OCR 文本包含重复和杂乱的部分；我在这里重建了文档的逻辑流。）
-
-等等，我应该提供一个不带元注释的干净版本。让我提供最终输出。）
 
 本节提供了我们实现缓存响应设计模式的源代码和控制台输出。
 
@@ -7977,7 +8616,7 @@ Trepleton
 
 如果测试成功，电路将关闭并恢复处理。如果测试失败，则电路将保持开启状态。
 
-### 用例
+## 用例
 
 对于具有大量且易失败方法调用的系统，可以从断路器设计模式中受益。这些失败可能由间歇访问、超时等引起。为了实现断路器模式，我们将一个方法或一组功能封装在断路器中。接下来的图说明了这种方法：
 
@@ -7999,7 +8638,7 @@ Trepleton
 
 ![](img/bcdf8abab5e2de6d67770104d49e5070_301_0.png)
 
-### 事件驱动通信设计模式实现——概述
+## 事件驱动通信设计模式实现——概述
 
 前图所示的处理器代表一个代码模块，就其提供的功能而言，它通常很短。因此，你可以看到系统中有很多处理器。此外，可能会同时发生大量的启动事件。这强调了确保异常被处理的重要性，以防止进程失败。
 
@@ -8031,7 +8670,9 @@ public class FailFastImplementation {
   firstLast.put("Daisy", "Jinsen");
   firstLast.put("Frank", "Corsack");
   firstLast.put("Hugo", "Trepleton");
-}``````下一部分代码完成了 `main()` 方法和 `FailFastImplementation()` 类。在这里，我们创建了一个 `Iterator` 实例并使用 `while` 循环，使用 `hasNext()` 方法检查迭代器是否有下一个元素。在 `while` 循环内部，我们使用 `try-catch` 块来捕获 `ConcurrentModificationException` 错误：
+```
+
+下一部分代码完成了 `main()` 方法和 `FailFastImplementation()` 类。在这里，我们创建了一个 `Iterator` 实例并使用 `while` 循环，使用 `hasNext()` 方法检查迭代器是否有下一个元素。在 `while` 循环内部，我们使用 `try-catch` 块来捕获 `ConcurrentModificationException` 错误：
 
 ```java
 Iterator iterator = firstLast.keySet().iterator();
@@ -8045,9 +8686,6 @@ Iterator iterator = firstLast.keySet().iterator();
     }
   }
 ```
-
-
-
 
 在下一节中，我们将继续汽车经销商场景，并关注控制故障。
 
@@ -8076,13 +8714,15 @@ public class ControlledFailure {
 
 ## 响应式设计模式
 
-`ControlledFailure` 第二部分包含 `processServiceOrder()` 方法。该方法将作为服务订单处理的一部分。在将信息提交到支付网关之前，我们可以检查它是否离线。这将允许我们优雅地处理错误，而不是让用户直接从 JVM 接收到严重的运行时错误：
+`ControlledFailure` 第二部分包含 `processServiceOrder()` 方法。该方法将作为服务订单处理的一部分。在将信息提交到支付网关之前，我们可以检查它是否离线。这将允许我们优雅地处理错误，而不是让用户直接从 JVM 接收到严重的运行时错误。
+
+
 
 ```java
 static int processServiceOrder(String process, int serviceOrderNbr) {
     int gatewayStatus = 0;
 
-try {
+    try {
         gatewayStatus = checkStatus(process, serviceOrderNbr);
     } catch (NumberFormatException ex) {
         System.out.println("Error detected: " + ex.getMessage());
@@ -8098,7 +8738,7 @@ public static void main(String args[]) {
     String processToCheck = "Payment Gateway";
     int orderServiceNumber = 319;
 
-try {
+    try {
         System.out.println("\nService order processing . . . ");
         int orderService = processServiceOrder(processToCheck, orderServiceNumber);
     } catch (ArithmeticException ex) {
@@ -8236,14 +8876,11 @@ public class IdempotencyDriver {
 }
 ```
 
-
-
-
-
 ## 响应式设计模式
+
 ### 第 9 章
 
-接下来提供了 IdempotencyDriver 类的第二也是最后一部分。这段代码分为三个部分，每部分之间用内联注释分隔。第一部分“入院”（Admission），创建一个 `Patient` 实例并调用 `setLengthOfStay()` 方法。第二部分“实验室检查”（Lab Work），尝试修改 `lengthOfStay` 变量的值。第三部分“次日”（Next Day），首先将 `dayCounted` 值设为 `false`。然后调用了 `setLengthOfStay()`：
+接下来提供了 `IdempotencyDriver` 类的第二也是最后一部分。这段代码分为三个部分，每部分之间用内联注释分隔。第一部分“入院”（Admission），创建一个 `Patient` 实例并调用 `setLengthOfStay()` 方法。第二部分“实验室检查”（Lab Work），尝试修改 `lengthOfStay` 变量的值。第三部分“次日”（Next Day），首先将 `dayCounted` 值设为 `false`。然后调用了 `setLengthOfStay()`：
 
 ```java
 // Admission
@@ -8271,9 +8908,13 @@ System.out.println("\tlength of stay: " + patient.getLengthOfStay());
 接下来是程序的控制台输出。如你所见，对于在患者第一天更新其住院时间的第二次尝试，我们已经实现了等幂性处理：
 
 | 医院信息系统 |
+
 | :--- |
+
 | 患者 XP330019 入院。住院时长: 1 |
+
 | 患者 XP330019 接收了实验室检查。已实现等幂性：住院时长已计算。住院时长: 1 |
+
 | 患者 XP330019 接受了手术。住院时长: 2 |
 
 等幂性设计模式实现——控制台输出
@@ -8314,10 +8955,6 @@ System.out.println("\tlength of stay: " + patient.getLengthOfStay());
 
 当我们实现无状态设计模式时，我们创建不保留状态变化的类和对象。在这种方法中，例如每次使用对象时都使用其原始形式。在我们的上下文中，*状态*指的是对象变量的值。因此，没有确定的状态列表。
 
-
-
-
-
 # 响应式设计模式
 
 # 第 9 章
@@ -8330,7 +8967,7 @@ public void sit() {
 }
 ```
 
-- 4. 我们 Corgi 类的第四部分包含了 CorgiState 接口中剩余三个重写方法：
+- 4. 我们 `Corgi` 类的第四部分包含了 `CorgiState` 接口中剩余三个重写方法：
 
 ```java
 @Override
@@ -8355,7 +8992,7 @@ public void sleep() {
 }
 ```
 
-- 5. Corgi 类的第五部分包含了类变量的前三个访问器方法（accessor methods）：
+- 5. `Corgi` 类的第五部分包含了类变量的前三个访问器方法（accessor methods）：
 
 ```java
 // accessor methods
@@ -8376,7 +9013,7 @@ public CorgiState getCorgiPlay() {
 }
 ```
 
-- 6. Corgi 类的第六部分包含了类变量剩余的访问器方法：
+- 6. `Corgi` 类的第六部分包含了类变量剩余的访问器方法：
 
 ```java
 public CorgiState getCorgiSleep() {
@@ -8390,7 +9027,7 @@ public CorgiState getCorgiSit() {
 }
 ```
 
-- 7. Corgi 类的第七部分包含了类变量的前三个变器方法（mutator methods）：
+- 7. `Corgi` 类的第七部分包含了类变量的前三个变器方法（mutator methods）：
 
 ```java
 // mutator methods
@@ -8405,7 +9042,7 @@ public void setCorgiEat(CorgiState corgiEat) {
 }
 ```
 
-- 8. Corgi 类的第八也是最后一部分包含了类变量剩余的变器方法：
+- 8. `Corgi` 类的第八也是最后一部分包含了类变量剩余的变器方法：
 
 ```java
 public void setCorgiPlay(CorgiState corgiPlay) {
@@ -8424,9 +9061,11 @@ public void setCorgiSit(CorgiState corgiSit) {
 
 # 响应式设计模式
 
-现在我们的 CorgiState 接口和 Corgi 类已经完成，我们需要为四种状态（清醒、吃、玩、睡和坐下）中的每一个状态创建一个类。我们还需要一个 Driver 类。这六个类将在接下来提供。
+现在我们的 `CorgiState` 接口和 `Corgi` 类已经完成，我们需要为四种状态（清醒、吃、玩、睡和坐下）中的每一个状态创建一个类。我们还需要一个 `Driver` 类。这六个类将在接下来提供。
 
-我们的下一个类是 CorgAwake 类，在接下来的两个部分中提供。该类实现了 CorgiState 接口，并提供了 CorgAwake 的具体状态。接下来的部分包含了构造方法以及对 CorgiState 接口的前三个重写方法：
+
+
+我们的下一个类是`CorgAwake`类，在接下来的两个部分中提供。该类实现了`CorgiState`接口，并提供了`CorgAwake`的具体状态。接下来的部分包含了构造方法以及对`CorgiState`接口的前三个重写方法：
 
 ```java
 package CH9Stateless;
@@ -8455,7 +9094,7 @@ public class CorgAwake implements CorgiState{
 }
 ```
 
-CorgAwake 类的后半将在提供，包含了 CorgiState 接口剩余的重写方法：
+`CorgAwake`类的后半将在提供，包含了`CorgiState`接口剩余的重写方法：
 
 ```java
     @Override
@@ -8477,7 +9116,7 @@ CorgAwake 类的后半将在提供，包含了 CorgiState 接口剩余的重写�
     }
 ```
 
-我们的下一个类是 CorgiEat 类，将在接下来的两个部分提供。该类实现了 CorgiState 接口，并提供了 CorgiEat 的具体状态。下一部分包含了构造方法以及对 CorgiState 接口的前三个重写方法：
+我们的下一个类是`CorgiEat`类，将在接下来的两个部分提供。该类实现了`CorgiState`接口，并提供了`CorgiEat`的具体状态。下一部分包含了构造方法以及对`CorgiState`接口的前三个重写方法：
 
 ```java
 public class CorgiEat implements CorgiState {
@@ -8503,7 +9142,7 @@ public class CorgiEat implements CorgiState {
 }
 ```
 
-CorgiEat 类的后半将在提供，包含了 CorgiState 接口剩余的重写方法：
+`CorgiEat`类的后半将在提供，包含了`CorgiState`接口剩余的重写方法：
 
 ```java
     @Override
@@ -8523,7 +9162,7 @@ CorgiEat 类的后半将在提供，包含了 CorgiState 接口剩余的重写�
     }
 ```
 
-我们的下一个类是 CorgiPlay 类，将在两个部分提供。该类实现了 CorgiState 接口，并提供了 CorgiPlay 的具体状态。接下来的部分包含了构造方法以及对 CorgiState 接口的前三个重写方法：
+我们的下一个类是`CorgiPlay`类，将在两个部分提供。该类实现了`CorgiState`接口，并提供了`CorgiPlay`的具体状态。接下来的部分包含了构造方法以及对`CorgiState`接口的前三个重写方法：
 
 ```java
 package CH9Stateless;
@@ -8551,7 +9190,7 @@ public class CorgiPlay implements CorgiState {
 }
 ```
 
-CorgiPlay 类的后半将在提供，包含了 CorgiState 接口剩余的重写方法：
+`CorgiPlay`类的后半将在提供，包含了`CorgiState`接口剩余的重写方法：
 
 ```java
     @Override
@@ -8570,13 +9209,9 @@ CorgiPlay 类的后半将在提供，包含了 CorgiState 接口剩余的重写�
     }
 ```
 
-
-
-
-
 ## 响应式设计模式 - 第 9 章
 
-接下来提供了 CorgiSit 类的后半部分，包含了 `CorgiState` 接口中剩余的重写方法：
+接下来提供了`CorgiSit`类的后半部分，包含了`CorgiState`接口中剩余的重写方法：
 
 ```java
 @Override
@@ -8605,7 +9240,7 @@ public void sleep() {
 }
 ```
 
-我们的下一个类是 CorgiWalk 类，将在接下来两个部分提供。该类实现了 `CorgiState` 接口，并为 `CorgiWalk` 的具体状态提供了支持。下一部分包含了构造方法以及 `CorgiState` 接口的前三个重写方法：
+我们的下一个类是`CorgiWalk`类，将在接下来两个部分提供。该类实现了`CorgiState`接口，并为`CorgiWalk`的具体状态提供了支持。下一部分包含了构造方法以及`CorgiState`接口的前三个重写方法：
 
 ```java
 package CH9Stateless;
@@ -8640,7 +9275,7 @@ public void sit() {
 }
 ```
 
-CorgiWalk 类的后半部分接下来提供，包含了 `CorgiState` 接口中剩余的重写方法：
+`CorgiWalk`类的后半部分接下来提供，包含了`CorgiState`接口中剩余的重写方法：
 
 ```java
 @Override
@@ -8664,7 +9299,7 @@ public void sleep() {
 }
 ```
 
-我们用于无状态设计模式的 CORGI STATES SYSTEM 实现的最后一个类是 `StatelessDriver` 类。该类包含了 `main()` 方法并驱动应用程序：
+我们用于无状态设计模式的 CORGI STATES SYSTEM 实现的最后一个类是`StatelessDriver`类。该类包含了`main()`方法并驱动应用程序：
 
 ```java
 package CH9Stateless;
@@ -8702,22 +9337,39 @@ corgi.eat();
 我们应用程序的输出如下。如你所见，我们没有允许除了 AWAKE 之外的任何操作：
 
 ==== == == ==== == == ====
+
 CORGI STATELESS SYSTEM
+
 ==== == == ==== == == ====
+
 The Corgi is AWAKE.
+
 The Corgi is SITTING and waiting for action...
+
 The Corgi is now WALKING
+
 The Corgi is SITTING and waiting for action...
+
 The Corgi is now PLAYING.
+
 The Corgi is SITTING and waiting for action...
+
 The Corgi is now EATING.
+
 The Corgi is SITTING and waiting for action...
+
 The Corgi is now WALKING
+
 Shhh; The Corgi is sleeping.
+
 The Corgi is now SLEEPING.
+
 The Corgi cannot PLAY when it is SLEEPING.
+
 Shhh; the Corgi is sleeping.
+
 The Corgi is now SLEEPING.
+
 The Corgi cannot EAT when it is SLEEPING.
 
 静态设计模式实现——控制台输出
@@ -8733,44 +9385,77 @@ The Corgi cannot EAT when it is SLEEPING.
 ## 问题
 
 1. 什么是异步通信？
+
 2. 什么是自动伸缩？
+
 3. 什么是边界队列？
+
 4. 什么是舱板？
+
 5. 什么是缓存？
+
 6. 什么是断路器？
+
 7. 什么是事件驱动通信？
+
 8. 什么是快速失败？
+
 9. 什么是故障处理？
+
 10. 什么是扇出？
+
 11. 什么是最快响应？
+
 12. 什么是幂等性？
+
 13. 什么是监控？
+
 14. 什么是发布者-订阅者模式？
+
 15. 什么是自包含？
+
 16. 什么是无状态？
+
 17. 这些设计模式的用例是什么？
+
 18. 它们如何有助于构建对内部和外部变化有响应且设计良好的系统？
+
 19. 什么是通用建模语言 (UML)？
+
 20. 什么是面向对象编程 (OOP)？
+
 21. 各种响应式设计模式有哪些？
+
 22. 掌握这些知识如何帮助你构建设计良好的系统？
 
 1. 什么是设计模式的目的是什么？
+
 2. 响应式设计模式的特征是什么？
+
 3. 响应式设计模式的类型有哪些？
+
 4. 在响应式系统中，如何实现自动伸缩？
+
 5. 什么设计模式使用了边界队列？
+
 6. 什么设计模式采用了舱板策略？
+
 7. 什么设计模式包含了故障处理？
+
 8. 什么设计模式提供了最快响应？
+
 9. 什么设计模式使用了发布者-订阅者模式？
+
 10. 什么设计模式包含了自包含？
 
 ## 延伸阅读
 
 - [Java 8 Design Patterns and Best Practices](https://www.packt.com/application-development/java-8-design-patterns)
+
 - [Learning Design Patterns with Java](https://www.packt.com/application-development/learn-design-patterns)
+
 - [Design Patterns and Best Practices in Java](https://www.packt.com/application-development/design-patterns)
+
 - [What is the Reactive Manifesto?](https://reactivemanifest.org/whatis/)
 
 ## 测评
@@ -8778,105 +9463,154 @@ The Corgi cannot EAT when it is SLEEPING.
 ### 第 1 章
 
 1. 行为和结构？
+
 2. UML 最初是为了可视化化系统而创建的？
+
 3. 活动图、交互图、状态机图和用例图？
+
 4. 活动图说明了系统中的什么流程？
+
 5. 用例图记录了用户与系统之间的什么交互？
+
 6. Actor 是系统的什么？
+
 7. 结构图说明了系统的什么组件？
+
 8. 类图
+
 9. 组合结构图显示了系统的运行时结构？
+
 10. 部署图提供了硬件和软件的视觉表示？
 
 # 第 2 章
 
 1. 可移植性、继承、封装和多态？
+
 2. 类结构非常适合可移植性？
+
 3. 封装？
+
 4. 在 OOP 中，多态意味着可以通过公共接口访问不同类型的对象？
-5. 在 Java 中，我们可以使用 `this` 关键字作为当前对象的引用？
+
+5. 在 Java 中，我们可以使用`this`关键字作为当前对象的引用？
+
 6. 访问方法是允许访问对象的什么？
+
 7. 修改方法允许对象的实例变量被改变？
+
 8. 构造方法是一种特殊的方法，在对象初始化时运行？
+
 9. 它们的定义有一组独特的参数？
+
 10. 从左到右
-
-
-
-
 
 # 第 5 章
 
 + 1. 对象和类如何组合形成一个系统
+
 2. 适配器、桥接、组合、装饰器、外观、享约、代理
+
 3. 适配器设计模式
+
 4. 结构性类设计模式
+
 5. 适配器设计模式
+
 6. 组合设计模式
+
 7. 装饰器设计模式
+
 8. 外观设计模式
+
 9. 享约设计模式
+
 10. 代理设计模式
 
 # 第 6 章
 
 + 1. 架构模式从系统的整体视角对组件进行分组
+
 2. 采用非规范的方法来视觉化架构模式
+
 3. 黑板模式
-4. 代理人模式
-5. 客户端-服务器模式
-6. 事件驱动模式
-7. 提取-转换-加载 (ETL) 模式
-8. 分层模式
-9. 主-从模式
-10. 微内核模式
+
+
 
 # 第 7 章
 
 + 1. 模块化、处理效率和可维护的代码
+
 2. 通过在多个服务器之间拆分处理和存储
+
 3. 微服务模式
+
 4. 模型-视图-控制器模式 (MVC)
+
 5. 裸对象模式
+
 6. 点对点模式
+
 7. 管道-过滤器模式
+
 8. 无服务器模式
+
 9. 服务导向模式
+
 10. 基于空间的模式
 
 # 第 8 章
 
 + 1. 函数式规则：
+
     - 它们不修改任何数据
+
     - 在给定相同参数的情况下，它们提供一致的结果
+
     - 它们存在是为了返回一个返回值
 
-+ 2. 执行环、Lambda、贷款、MapReduce、记忆化、流 (Streams), 尾递归调用
++ 2. 执行环、Lambda、贷款、MapReduce、记忆化、流 (Streams)、尾递归调用
+
 3. 数学函数
+
 4. 执行环
+
 5. Lambda
+
 6. 贷款
+
 7. MapReduce
+
 8. 记忆化
+
 9. 流
+
 10. 尾递归调用
 
 # 第 9 章
 
 + 1. 响应式设计模式的目的是为系统架构师、工程师和开发者提供创建核心具有响应和可扩展性系统的能力
+
 2. 响应式、韧性、弹性和消息驱动
+
 3. 异步通信设计模式
+
 4. 垂直扩展和水平伸缩
+
 5. 边界队列
+
 6. 断路器设计模式
+
 7. 故障处理设计模式
+
 8. 等幂性设计模式
+
 9. 发布者-订阅者设计模式
+
 10. 自包含性设计模式
 
 # 你可能喜欢的其他书籍
 
-如果你喜欢这本书，你可能对 Packt 出出的其他书籍感兴趣：
+如果你喜欢这本书，你可能对 Packt 出版的其他书籍感兴趣：
 
 # Java 11 食谱指南 - 第二版
 
@@ -8885,12 +9619,19 @@ Nick Samoylov, Mohamed Sanaulla
 ISBN: 9781789132359
 
 - 安装 JDK 并了解 JDK 11 安装中的新特性
+
 - 使用类和接口实现面向对象的设计
+
 - 管理操作系统进程
+
 - 创建具有清晰依赖关系的模块化应用程序
+
 - 使用 JavaFX 构建图形用户界面
+
 - 使用新的 HTTP Client API
+
 - 探索 Java 11 中新的诊断功能
+
 - 发现如何使用新的 JShell REPL 工具
 
 # 你可能喜欢的其他书籍
@@ -8902,12 +9643,19 @@ Dr. Edward Lavieri
 ISBN: 9781789137613
 
 - 编写模块化的 Java 应用程序
+
 - 将现有 Java 应用程序迁移到模块化
+
 - 理解默认的 G1 垃圾收集器的工作原理
+
 - 利用新引入的 Java Shell 提供的可能性
+
 - 使用 JVM 框架有效对对应用程序进行性能测试
+
 - 学习 Java 如何支持 HTTP 2.0 标准
+
 - 了解如何使用新的 Process API
+
 - 探索 Java 9, 10 和 11 的额外增强和功能
 
 # 留下评论 - 让其他读者知道你的想法
@@ -8919,180 +9667,339 @@ ISBN: 9781789137613
 # A
 
 + 抽象工厂设计模式
+
 关于 102, 104
+
 抽象工厂类 107
+
 驱动类 111
+
 接口 106
+
 编程 106
+
 type-C 类 110
+
 typeA 类 107
+
 typeI 类 108
+
 UML 类图 104
+
 用例 104
+
 抽象
+
 关于 142
+
 示例，实现 123
+
 活动图 9
+
 适配器设计模式
+
 关于 138
+
 编程 140, 142
+
 UML 类图 139
+
 用例 139
+
 亚马逊云服务 (AWS) 275
+
 方法，OOP
+
 访问器 30
+
 构造函数 31
+
 构造函数，重载 32, 34
+
 驱动类 31
+
 方法调用链过程 35, 36
+
 方法，重载 32, 34
+
 变异器 30
+
 架构模式 278
+
 异步通信设计模式
+
 关于 266
+
 实现 267, 268, 269, 270, 272
+
 自动伸缩设计模式
+
 关于 272, 273
+
 水平伸缩 274
+
 实现 275
 
 # B
 
 + 后端即服务 (BaaS) 221, 224
+
 行为设计模式
+
 关于 51
+
 责任链模式 51, 52
+
 命令模式 52, 61
+
 解释器模式 52, 65
+
 迭代器模式 52, 71
+
 中介者模式 52, 74
+
 备忘模式 52
+
 备忘模式，检查 85, 88
+
 空对象模式 52
+
 空对象模式，使用 88
+
 观察者模式 52
+
 观察者模式，观察 91, 92
+
 状态模式 52
+
 策略模式 97
+
 模板方法模式 98
+
 访问者模式 98
+
 行为 UML 图
+
 活动图 9
+
 交互图 10, 11
+
 状态机图 13
+
 用例图 14, 15
+
 封装，OOP
+
 多态 25, 27
+
 可移植性 23
+
 黑板模式
+
 关于 178, 180
+
 咖啡店自动化 178
+
 仓库安全示例 181
+
 HR 邮件处理器 59
+
 模型-视图-控制器示例示例
+
 实现，MVC 模式 54
+
 UML 类图 54
+
 Book 类 210
+
 University 邮件处理器接口，使用 55
+
 Book 类 210
+
 断路器设计模式
+
 关于 285
+
 架构模式 213
+
 用例 286
+
 边界队列设计模式 275
+
 客户端-服务器模式 183
+
 桥接模式
+
 关于 185
+
 抽象 142
+
 抽象，实现 143, 145
+
 三层示例 186
+
 交叉 142
+
 云存储自动化 178, 179, 180
+
 编程 147, 149, 150
+
 咖啡店示例 185
+
 UML 类图 146
+
 命令模式
+
 用例 146
+
 访问器方法 63
+
 代理人模式
+
 类变量 63
+
 构造函数 63
+
 豪华预订系统 184
+
 探索 61
+
 大学信息系统
+
 电力相关方法 64, 183
+
 编程 62
+
 构建设计模式
+
 滑块相关方法 64
+
 构建类 116, 117, 119
+
 UML 类图 62
+
 Builder 接口 115
+
 用例 61
+
 Director 类 119
+
 交互图 12
+
 驱动类 119
+
 组件图 17
+
 组合模式
+
 roaster 类 115
+
 编程 152, 155, 156, 158, 160
+
 UML 类图 114
+
 UML 类图 151
+
 用例 113
+
 用例 151
+
 用于构建对象 113
+
 组合结构图 17, 18
+
 舱壁设计模式 278, 279
+
 构造示例 201
+
 业务应用层 195
+
 创建设计模式 102
 
 # C
 
 缓存设计模式
+
 关于 280
+
 实现，在 Java 中 281, 282, 284
 
 # D
 
 责任链模式
+
 学术邮件处理器，使用 57
+
 管理员邮件处理器 60
+
 装饰器设计模式
+
 AtomicEmailHandler 类 58
+
 关于 156
+
 邮件处理器，建议 58
+
 用例 157
+
 财务邮件处理器 59
+
 部署图 18
+
 设计模式原则
+
 关于 37
+
 简洁对象，创建 37
+
 封装 37
+
 实例 38, 39
 
 # E
 
 事件驱动架构模式
+
 关于 187
+
 代理人形式 187, 188
+
 中介者形式 188
+
 事件驱动通信设计模式 286, 287
+
 执行环设计模式
+
 关于 232
+
 实现 232
+
 提取-转换-加载模式
+
 关于 189
+
 数据，转换 290
+
 提取 190
+
 加载过程 191
+
 扇出设计模式 294
+
 享约设计模式
+
 编程 167, 170
+
 使用 166
+
 ML/ML 类图 166
+
 用例 166
+
 分叉 9
+
 函数式设计模式 231
+
 函数即服务 (FaaS) 222, 225
 
 # G
@@ -9102,278 +10009,511 @@ ML/ML 类图 166
 # H
 
 抬头显示器 (HUD) 157
+
 水平伸缩 274
 
 # I
 
 等幂性设计模式
+
 关于 295
+
 编程 296, 297
+
 基础设施即服务 (IaaS) 221, 222, 272
+
 交互图
+
 关于 10, 11
+
 通信图 12
+
 序列图 11
+
 时图 67
+
 国际标准组织 (ISO) 863
+
 解释器模式
+
 转换类 68
+
 Expression 接口 67
+
 InterpreterDriver 类 69, 71
+
 MapInToToClasses 类 67
+
 编程 66
+
 ML 类图 66
+
 用例 65
+
 使用 65
+
 ISO 七层模型
+
 参考 193
+
 迭代器模式
+
 编程 72
+
 ML 类图 72
+
 用例 71
+
 使用 71
 
 # F
 
 外观设计模式
+
 实现 160
+
 编程 162, 165
+
 ML 类图 162
+
 用例 161
+
 工厂设计模式
+
 检查 129
+
 编程 131, 132
+
 ML 类图 130
+
 用例 130
+
 工厂方法设计模式
+
 探索 121
+
 编程 122, 123, 124, 126, 127, 129
+
 ML 类图 121, 125
+
 用例 121, 125
+
 使用 124
+
 快速失败设计模式
+
 关于 287
+
 失败事件 290
+
 编程 288, 289
+
 故障处理设计模式
+
 关于 291
+
 控制故障 292, 294
+
 故障隔离 291
 
-
-
-
-
 # J
+
 - Java 缓存设计模式，实现于 281, 282, 284
 
 # L
+
 - lambda 设计模式
+
     - 关于 233
+
     - lambda，使用多种模式实现 236, 238
+
     - lambda，使用单一模式实现 234 233
+
 - 分层模式
+
     - 关于 192, 193
+
     - 业务应用层示例 195
+
     - 移动操作系统层 194
+
     - 传统操作系统层示例 194
+
 - 学习管理系统 (LMS) 142
+
 - 负载载设计模式
+
     - 关于 239
+
     - 文件处理实现 239, 241, 243
+
     - 豪华邮轮预订系统 184
 
 # M
+
 - MapReduce 设计模式
+
     - 关于 243
+
     - 输入-组合器-减少-输出形式 249
+
     - 输入-映射-减少-输出形式 244, 245
+
     - 输入-映射-减少-输出形式 245, 246, 247
+
     - 输入-多映射-减少-输出形式 248, 249
+
 - 主从架构模式
+
     - 关于 196
+
     - 云存储示例 199
+
     - 单一客户端示例 198
+
 - 中介者模式
+
     - 关于 74
+
     - AssemblySystem 类 78
+
     - EmergencyBreak 类 80
+
     - Hopper 类 77
+
     - 编程 76
+
     - starter 类 76
+
     - SystemAccelerator 类 79
+
     - UML 类图 75
 
 # N
+
 - 用用例 74
+
 - WidgetProductionSystem 类 82, 84, 85
+
 - 备忘模式
+
     - 编程 86
+
     - UML 类图 86
+
     - 用用例 85
+
 - 记忆设计模式 250, 252, 254
+
 - 微内核架构模式
+
     - 关于 200
+
     - 适配器 201
+
     - 构建示例 201
+
     - 外部插件 201
+
     - 内部插件 201
+
     - 微内核 200
+
     - 一个或多个客户端 200
+
     - 光盘播放器 202
+
 - 微服务模式
+
     - 关于 206
+
     - 电子商务示例实现 208
+
     - 物流示例 207
+
     - 移动接口 207
+
     - Web 接口 207
+
 - 微软中间译语言 (MSIL) 65
+
 - 移动后端即服务 (MaaS) 221, 224
+
 - 移动操作系统层 194
+
 - 视图-控制器模式 (MVC)
+
     - 关于 209, 210
+
     - 书-视图-控制器示例实现 210
+
     - Controller 209
+
 - 监控设计模式 299
+
 - 裸对象模式
+
     - 关于 214, 215
+
     - Apache Isis，参考 215
+
     - Naked Objects，参考 215
+
 - 空对象模式
+
     - 编程 89
+
     - UML 类图 89
+
     - 用用例 88
+
     - 使用 88
 
 # O
+
 - 对象图 19
+
 - 面对象编程 (OOP) 23
 
 # Q
+
 - 快速回复响应式设计模式 294
 
 # R
+
 - 方法 29
+
 - 响应式设计模式
+
     - 优势 23
+
     - 关于 263
+
     - 继承 24
+
     - 弹性 264
+
     - 实例变量 29
+
     - 消息驱动 265
+
     - 示例类 27, 28
+
     - 韧性 264
+
     - 此参考 29
+
 - 响应式模式
+
 - 观察者模式 91
 
 # S
+
 - 编程 92, 93
+
 - 自包含设计模式 301
+
 - UML 类图 91
+
 - 序序图 11
+
 - 用用例 91
+
 - 无服务器模式
+
     - 观察者 91
+
     - 关于 221
+
     - BaaS 实现 224
+
     - OOP 类
+
     - FaaS 实现 225
+
     - 探索 41, 42, 44, 46
+
     - IaaS 实现 222
+
     - 实现，优势 222
+
 - 开放系统互连 (OSI) 193
+
 - 光盘播放器模式 202
+
 - MaaS 实现 223
+
 - SaaS 实现 223
+
 - 服务面向架构 (SOA) 225
+
 - 点对点模式 (P2P)
+
 - 服务面向模式 225
+
     - 关于 215
+
     - 单一客户端示例 198
+
     - 优势 215
+
 - 单例设计模式
+
     - 缺点 215
+
     - 实现 133
+
     - 文件共享示例实现 216
+
     - 编程 134, 135
+
     - 网络示例实现 217
+
     - UML 类图 133
+
 - 管道-过滤器模式
+
     - 用用例 133
+
     - 关于 218
+
 - 软件即服务 (SaaS) 221, 223, 220
+
 - 基于空间的模式 227
+
 - 复杂转换实现
+
     - 关于 93
+
 - 状态机图 13
+
 - 网络示例实现 219
+
 - 简单转换实现
+
     - 应用输出 97
+
     - Driver 类 96
+
 - 平台即服务 (PaaS) 221, 223
+
 - Printer 类 95
+
 - 代理设计模式
+
     - PrinterOffline 类 95
+
     - 实现 170
+
     - PrinterOnline 类 94
+
     - 编程 172, 173
+
     - 编程 94
+
     - UML 类图 171
+
     - UML 类图 93
+
     - 用用例 171
+
     - 用用例 93
+
 - 发布者-订阅者设计模式 300
+
 - 无状态设计模式
+
     - 关于 302
+
     - 编程 304, 306, 307, 309, 311, 312, 313, 315
+
     - UML 类图 303
+
     - 用用例 303
+
 - 策略模式
+
     - UML 类图 97
+
     - 用于设计模式 97
+
 - 流设计模式
+
     - 关于 254
+
     - 编程 256
+
     - 流间接操作 255
+
     - 流终端操作 256
+
 - 结构性设计模式
+
     - 类设计模式 138
+
     - 对象设计模式 318
+
 - 结构性 UML 图 15
+
     - 类设计图 16
+
     - 组件图 17
+
     - 组合结构图 17, 18
+
     - 部署图 19
+
     - 对象图 19
+
     - 包类图 20
 
 # T
+
 - 尾递归设计模式
+
     - 关于 257
+
     - 编程 257, 260
+
 - 尾递归优化 (TCO) 257
+
 - 模板模式 98
+
 - 三层示例 12
+
 - 时序图
+
 - 传统操作系统层示例 194
 
 # U
+
 - 统一建模语言 (UML) 7, 8
+
 - 大学企业信息系统示例 183
+
 - 用用例图 14,15
 
 # V
+
 - 垂直扩展 275
+
 - 访问者模式 98
 
 # W
-- 仓库安全机器人示例，组件
-    - 弹道 181
-    - 入侵者识别 181
-    - 导航 181
-- 仓库安全机器人示例
-    - 关于 181
-    - 职责 181
-- Web 接口 226
 
+- 仓库安全机器人示例，组件
+
+    - 弹道 181
+
+    - 入侵者识别 181
+
+    - 导航 181
+
+- 仓库安全机器人示例
+
+    - 关于 181
+
+    - 职责 181
+
+- Web 接口 226

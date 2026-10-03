@@ -1,36 +1,37 @@
-# Java–更新文件的上次修改日期
+
+# Java——更新文件的上次修改日期
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/how-to-change-the-file-last-modified-date-in-java/>
 
-在 Java 中，我们可以使用 NIO `Files.setLastModifiedTime(path, FileTime)`来更新文件的最后修改日期或时间。
+在 Java 中，我们可以使用 NIO 的`Files.setLastModifiedTime(path, FileTime)`来更新文件的最后修改日期或时间。
 
 ```java
- Path path = Paths.get("/path/file");
+Path path = Paths.get("/path/file");
 
-  LocalDate newLocalDate = LocalDate.of(1997, 12, 31);
+LocalDate newLocalDate = LocalDate.of(1997, 12, 31);
 
-  // year, month, dayOfMonth, hour, minute, second
-  LocalDateTime newLocalDateTime = LocalDateTime.of(1999, 9, 30, 10, 30, 22);
+// year, month, dayOfMonth, hour, minute, second
+LocalDateTime newLocalDateTime = LocalDateTime.of(1999, 9, 30, 10, 30, 22);
 
-  // convert LocalDateTime to Instant
-  Instant instant = newLocalDateTime.toInstant(ZoneOffset.UTC);
+// convert LocalDateTime to Instant
+Instant instant = newLocalDateTime.toInstant(ZoneOffset.UTC);
 
-  // convert LocalDate to Instant, need a time zone
-  Instant instant = newLocalDate.atStartOfDay(ZoneId.systemDefault()).toInstant();
+// convert LocalDate to Instant, need a time zone
+Instant instant = newLocalDate.atStartOfDay(ZoneId.systemDefault()).toInstant();
 
-  // convert instant to filetime
-  // update last modified time of a file
-  Files.setLastModifiedTime(path, FileTime.from(instant)); 
+// convert instant to filetime
+// update last modified time of a file
+Files.setLastModifiedTime(path, FileTime.from(instant));
 ```
 
-## 1。Java NIO——更新文件的上次修改日期。
+## 1. Java NIO——更新文件的上次修改日期
 
-对于 Java NIO `java.nio.file.Files`，我们可以使用`Files.setLastModifiedTime()`来更新文件的最后修改日期。
+对于 Java NIO 的`java.nio.file.Files`，我们可以使用`Files.setLastModifiedTime()`来更新文件的最后修改日期。
 
-UpdateLastModifiedTime.java
+`UpdateLastModifiedTime.java`
 
 ```java
- package com.mkyong.io.howto;
+package com.mkyong.io.howto;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -70,56 +71,56 @@ public class UpdateLastModifiedTime {
 
     }
 
-} 
+}
 ```
 
-输出
+### 输出
 
-Terminal
+`Terminal`
 
-```java
- [original] lastModifiedTime:2020-12-01T07:23:48.405691Z
-[updated] lastModifiedTime:1998-09-29T16:00:00Z 
+```text
+[original] lastModifiedTime:2020-12-01T07:23:48.405691Z
+[updated] lastModifiedTime:1998-09-29T16:00:00Z
 ```
 
-查看`Files.setLastModifiedTime`方法签名，新的修改时间是一个 [FileTime](http://web.archive.org/web/20220619003340/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/attribute/FileTime.html) 。
+查看`Files.setLastModifiedTime`方法签名，新的修改时间是一个[FileTime](http://web.archive.org/web/20220619003340/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/attribute/FileTime.html)。
 
-Files.java
+`Files.java`
 
 ```java
- package java.nio.file;
+package java.nio.file;
 
-  //...
-  public static Path setLastModifiedTime(Path path, FileTime time)
-       throws IOException
-   {
-       getFileAttributeView(path, BasicFileAttributeView.class)
-           .setTimes(Objects.requireNonNull(time), null, null);
-       return path;
-   } 
+//...
+public static Path setLastModifiedTime(Path path, FileTime time)
+     throws IOException
+ {
+     getFileAttributeView(path, BasicFileAttributeView.class)
+         .setTimes(Objects.requireNonNull(time), null, null);
+     return path;
+ }
 ```
 
-我们可以使用`FileTime.from(Instant instant)`将一个 Java 8 `Instant`转换成一个`FileTime`。
+我们可以使用`FileTime.from(Instant instant)`将一个 Java 8 的`Instant`转换成一个`FileTime`。
 
 ```java
- Files.setLastModifiedTime(file, FileTime.from(instant)); 
+Files.setLastModifiedTime(file, FileTime.from(instant));
 ```
 
-或`FileTime.fromMillis(long value)`将从 epoch 开始的毫秒数转换为`FileTime`。
+或使用`FileTime.fromMillis(long value)`将从 epoch 开始的毫秒数转换为`FileTime`。
 
 ```java
- FileTime now = FileTime.fromMillis(System.currentTimeMillis());
-  Files.setLastModifiedTime(path, now); 
+FileTime now = FileTime.fromMillis(System.currentTimeMillis());
+Files.setLastModifiedTime(path, now);
 ```
 
-## 2。传统 IO—更新文件的上次修改时间。
+## 2. 传统 IO——更新文件的上次修改时间
 
-对于遗留 IO `java.io.File`，我们可以使用`File.setLastModified()`来更新最后修改日期。
+对于遗留 IO 的`java.io.File`，我们可以使用`File.setLastModified()`来更新最后修改日期。
 
-UpdateLastModifiedTime2.java
+`UpdateLastModifiedTime2.java`
 
 ```java
- package com.mkyong.io.howto;
+package com.mkyong.io.howto;
 
 import java.io.File;
 import java.io.IOException;
@@ -151,52 +152,53 @@ public class UpdateLastModifiedTime2 {
 
     }
 
-} 
+}
 ```
 
-输出
+### 输出
 
-Terminal
+`Terminal`
 
-```java
- [original] lastModifiedTime:30/09/1998
-[updated] lastModifiedTime:31/08/1998 
+```text
+[original] lastModifiedTime:30/09/1998
+[updated] lastModifiedTime:31/08/1998
 ```
 
-查看`File.setLastModified`方法签名；自纪元(1970 年 1 月 1 日 00:00:00 GMT)以来，参数`long time`以毫秒为单位进行测量。
+查看`File.setLastModified`方法签名；自纪元（1970 年 1 月 1 日 00:00:00 GMT）以来，参数`long time`以毫秒为单位进行测量。
 
-File.java
+`File.java`
 
 ```java
- package java.io;
+package java.io;
 
-  //...
-  public boolean setLastModified(long time) {
-      if (time < 0) throw new IllegalArgumentException("Negative time");
-      SecurityManager security = System.getSecurityManager();
-      if (security != null) {
-          security.checkWrite(path);
-      }
-      if (isInvalid()) {
-          return false;
-      }
-      return fs.setLastModifiedTime(this, time);
-  } 
+//...
+public boolean setLastModified(long time) {
+    if (time < 0) throw new IllegalArgumentException("Negative time");
+    SecurityManager security = System.getSecurityManager();
+    if (security != null) {
+        security.checkWrite(path);
+    }
+    if (isInvalid()) {
+        return false;
+    }
+    return fs.setLastModifiedTime(this, time);
+}
 ```
 
 ## 下载源代码
 
-$ git 克隆[https://github.com/mkyong/core-java](http://web.archive.org/web/20220619003340/https://github.com/mkyong/core-java)
-
-$ cd java-io
+```bash
+git clone https://github.com/mkyong/core-java
+cd java-io
+```
 
 ## 参考文献
 
-*   [FileTime JavaDoc](http://web.archive.org/web/20220619003340/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/attribute/FileTime.html)
-*   如何将 LocalDate 转换成 Instant？
-*   [获取文件在 Java 中的最后修改日期](/web/20220619003340/https://mkyong.com/java/how-to-get-the-file-last-modified-date-in-java/)
-*   [管理文件元数据](http://web.archive.org/web/20220619003340/https://docs.oracle.com/javase/tutorial/essential/io/fileAttr.html)
-*   [维基百科–纪元时间](http://web.archive.org/web/20220619003340/https://en.wikipedia.org/wiki/Epoch_(computing))
-*   [如何在 Java 中格式化 FileTime](/web/20220619003340/https://mkyong.com/java/how-to-format-filetime-in-java/)
+- [FileTime JavaDoc](http://web.archive.org/web/20220619003340/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/attribute/FileTime.html)
+- 如何将`LocalDate`转换成`Instant`？
+- [获取文件在 Java 中的最后修改日期](/web/20220619003340/https://mkyong.com/java/how-to-get-the-file-last-modified-date-in-java/)
+- [管理文件元数据](http://web.archive.org/web/20220619003340/https://docs.oracle.com/javase/tutorial/essential/io/fileAttr.html)
+- [维基百科——纪元时间](http://web.archive.org/web/20220619003340/https://en.wikipedia.org/wiki/Epoch_(computing))
+- [如何在 Java 中格式化`FileTime`](/web/20220619003340/https://mkyong.com/java/how-to-format-filetime-in-java/)
 
-<input type="hidden" id="mkyong-current-postId" value="3348">
+`<input type="hidden" id="mkyong-current-postId" value="3348">`

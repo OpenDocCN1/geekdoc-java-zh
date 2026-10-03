@@ -1,3 +1,4 @@
+
 # 时区和偏移类
 
 > [`docs.oracle.com/javase/tutorial/datetime/iso/timezones.html`](https://docs.oracle.com/javase/tutorial/datetime/iso/timezones.html)
@@ -9,10 +10,9 @@
 日期时间 API 提供了两个用于指定时区或偏移的类：
 
 +   `ZoneId`指定了一个时区标识符，并提供了在`Instant`和`LocalDateTime`之间转换的规则。
-
 +   `ZoneOffset`指定了与格林威治/协调世界时的时区偏移。
 
-从格林威治/协调世界时的偏移通常以整小时定义，但也有例外情况。以下代码来自``TimeZoneId``示例，打印了所有使用非整小时定义的格林威治/协调世界时偏移的时区列表。
+从格林威治/协调世界时的偏移通常以整小时定义，但也有例外情况。以下代码来自`TimeZoneId`示例，打印了所有使用非整小时定义的格林威治/协调世界时偏移的时区列表。
 
 ```java
 Set<String> allZones = ZoneId.getAvailableZoneIds();
@@ -38,7 +38,6 @@ for (String s : zoneList) {
     }
     ...
 }
-
 ```
 
 此示例将以下列表打印到标准输出：
@@ -70,19 +69,16 @@ Australia/Broken_Hill     +09:30
       Pacific/Chatham     +12:45
     Pacific/Marquesas     -09:30
       Pacific/Norfolk     +11:30
-
 ```
 
-`TimeZoneId`示例还会将所有时区 ID 打印到名为``timeZones``的文件中。
+`TimeZoneId`示例还会将所有时区 ID 打印到名为`timeZones`的文件中。
 
 ## 日期时间类
 
 日期时间 API 提供了三个基于时间的类，可以与时区一起使用：
 
 +   `ZonedDateTime`处理具有与格林威治/协调世界时的相应时区偏移的日期和时间。
-
 +   `OffsetDateTime`处理具有与格林威治/协调世界时的相应时区偏移的日期和时间，没有时区 ID。
-
 +   `OffsetTime`处理具有与格林威治/协调世界时的相应时区偏移的时间，没有时区 ID。
 
 何时使用`OffsetDateTime`而不是`ZonedDateTime`？如果您正在编写基于地理位置的自己的日期和时间计算规则的复杂软件，或者如果您正在存储仅跟踪与格林威治/协调世界时的绝对偏移的时间戳的数据库，那么您可能希望使用`OffsetDateTime`。此外，XML 和其他网络格式将日期时间传输定义为`OffsetDateTime`或`OffsetTime`。
@@ -91,9 +87,9 @@ Australia/Broken_Hill     +09:30
 
 ### ZonedDateTime
 
-[ZonedDateTime](https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html)类实际上将[`LocalDateTime`](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html)类与[`ZoneId`](https://docs.oracle.com/javase/8/docs/api/java/time/ZoneId.html)类结合在一起。它用于表示完整的日期（年、月、日）和时间（时、分、秒、纳秒）以及时区（地区/城市，如`Europe/Paris`）。
+[`ZonedDateTime`](https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html)类实际上将[`LocalDateTime`](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html)类与[`ZoneId`](https://docs.oracle.com/javase/8/docs/api/java/time/ZoneId.html)类结合在一起。它用于表示完整的日期（年、月、日）和时间（时、分、秒、纳秒）以及时区（地区/城市，如`Europe/Paris`）。
 
-以下代码来自``Flight``示例，定义了从旧金山飞往东京的航班的出发时间为美国/洛杉矶时区的`ZonedDateTime`。使用`withZoneSameInstant`和`plusMinutes`方法创建一个代表东京预计到达时间的`ZonedDateTime`实例，经过 650 分钟的飞行。`ZoneRules.isDaylightSavings`方法确定航班到达东京时是否为夏令时。
+以下代码来自`Flight`示例，定义了从旧金山飞往东京的航班的出发时间为美国/洛杉矶时区的`ZonedDateTime`。使用`withZoneSameInstant`和`plusMinutes`方法创建一个代表东京预计到达时间的`ZonedDateTime`实例，经过 650 分钟的飞行。`ZoneRules.isDaylightSavings`方法确定航班到达东京时是否为夏令时。
 
 `DateTimeFormatter`对象用于格式化`ZonedDateTime`实例以进行打印：
 
@@ -132,7 +128,6 @@ if (arrivingZone.getRules().isDaylightSavings(arrival.toInstant()))
 else
     System.out.printf("  (%s standard time will be in effect.)%n",
                       arrivingZone);
-
 ```
 
 这将产生以下输出：
@@ -141,12 +136,11 @@ else
 LEAVING:  Jul 20 2013  07:30 PM (America/Los_Angeles)
 ARRIVING: Jul 21 2013  10:20 PM (Asia/Tokyo)
   (Asia/Tokyo standard time will be in effect.)
-
 ```
 
 ### OffsetDateTime
 
-[OffsetDateTime](https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html)类实际上将[`LocalDateTime`](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html)类与[`ZoneOffset`](https://docs.oracle.com/javase/8/docs/api/java/time/ZoneOffset.html)类结合在一起。它用于表示完整的日期（年、月、日）和时间（时、分、秒、纳秒）以及与格林威治/UTC 时间的偏移（+/-小时:分钟，如`+06:00`或`-08:00`）。
+[`OffsetDateTime`](https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html)类实际上将[`LocalDateTime`](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html)类与[`ZoneOffset`](https://docs.oracle.com/javase/8/docs/api/java/time/ZoneOffset.html)类结合在一起。它用于表示完整的日期（年、月、日）和时间（时、分、秒、纳秒）以及与格林威治/UTC 时间的偏移（+/-小时:分钟，如`+06:00`或`-08:00`）。
 
 以下示例使用`OffsetDateTime`与`TemporalAdjuster.lastDay`方法找到 2013 年 7 月最后一个星期四。
 
@@ -160,18 +154,16 @@ OffsetDateTime lastThursday =
         offsetDate.with(TemporalAdjusters.lastInMonth(DayOfWeek.THURSDAY));
 System.out.printf("The last Thursday in July 2013 is the %sth.%n",
                    lastThursday.getDayOfMonth());
-
 ```
 
 运行此代码的输出为：
 
 ```java
 The last Thursday in July 2013 is the 25th.
-
 ```
 
 ### OffsetTime
 
-[OffsetTime](https://docs.oracle.com/javase/8/docs/api/java/time/OffsetTime.html)类实际上将[`LocalTime`](https://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html)类与[`ZoneOffset`](https://docs.oracle.com/javase/8/docs/api/java/time/ZoneOffset.html)类结合在一起。它用于表示时间（时、分、秒、纳秒）以及与格林威治/UTC 时间的偏移（+/-小时:分钟，如`+06:00`或`-08:00`）。
+[`OffsetTime`](https://docs.oracle.com/javase/8/docs/api/java/time/OffsetTime.html)类实际上将[`LocalTime`](https://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html)类与[`ZoneOffset`](https://docs.oracle.com/javase/8/docs/api/java/time/ZoneOffset.html)类结合在一起。它用于表示时间（时、分、秒、纳秒）以及与格林威治/UTC 时间的偏移（+/-小时:分钟，如`+06:00`或`-08:00`）。
 
 `OffsetTime`类在与`OffsetDateTime`类相同的情况下使用，但不需要跟踪日期时使用。

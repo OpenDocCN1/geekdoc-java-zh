@@ -1,3 +1,4 @@
+
 # 如何使用快速搜索模式破解编码面试
 
 > 原文：<https://medium.com/javarevisited/how-to-use-breath-fast-search-pattern-for-craking-coding-interviews-50ca7e827199?source=collection_archive---------5----------------------->

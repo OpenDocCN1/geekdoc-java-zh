@@ -1,3 +1,4 @@
+
 # 默认 CookieManager
 
 > 原文：[`docs.oracle.com/javase/tutorial/networking/cookies/cookiemanager.html`](https://docs.oracle.com/javase/tutorial/networking/cookies/cookiemanager.html)
@@ -9,7 +10,6 @@
 ```java
 java.net.CookieManager cm = new java.net.CookieManager();
 java.net.CookieHandler.setDefault(cm);
-
 ```
 
 第一行调用默认的`CookieManager`构造函数创建实例。第二行调用`CookieHandler`的静态`setDefault`方法来设置系统范围的处理程序。

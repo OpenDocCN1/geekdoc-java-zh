@@ -1,20 +1,21 @@
+
 # 用 Java 获取当前堆栈跟踪
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-get-current-stack-trace>
 
-## 1.概观
+## 1. 概观
 
 作为一名 Java 开发人员，在处理[异常](/web/20221026031411/https://www.baeldung.com/java-checked-unchecked-exceptions)时，经常会遇到堆栈跟踪的概念。
 
-在本教程中，**我们将了解什么是堆栈跟踪，以及如何在编程/调试时使用它。**此外，我们还将经历`StackTraceElement` 课。最后，我们将学习如何使用`Thread`和`Throwable` 类来获取它。
+在本教程中，**我们将了解什么是堆栈跟踪，以及如何在编程/调试时使用它。**此外，我们还将经历`StackTraceElement`类。最后，我们将学习如何使用`Thread`和`Throwable`类来获取它。
 
-## 2.什么是堆栈跟踪？
+## 2. 什么是堆栈跟踪？
 
 堆栈跟踪，也称为回溯，是堆栈帧的列表。简单来说，这些帧代表了程序执行过程中的某个时刻。
 
 堆栈帧**包含关于代码已经调用**的方法的信息。这是一个帧列表，从当前方法开始，一直延续到程序启动时。
 
-为了更好地理解这一点，让我们来看一个简单的例子，在这个例子中，我们在一个异常之后转储了当前的堆栈跟踪:
+为了更好地理解这一点，让我们来看一个简单的例子，在这个例子中，我们在一个异常之后转储了当前的堆栈跟踪：
 
 ```java
 public class DumpStackTraceDemo 
@@ -34,7 +35,7 @@ public class DumpStackTraceDemo
 }
 ```
 
-在上面的例子中，`methodA()`抛出`ArithmeticException,` ,后者转储当前堆栈跟踪到`catch` 块中:
+在上面的例子中，`methodA()`抛出`ArithmeticException`，后者转储当前堆栈跟踪到`catch`块中：
 
 ```java
 java.lang.ArithmeticException: / by zero
@@ -42,20 +43,20 @@ at main.java.com.baeldung.tutorials.DumpStackTraceDemo.methodA(DumpStackTraceDem
 at main.java.com.baeldung.tutorials.DumpStackTraceDemo.main(DumpStackTraceDemo.java:6)
 ```
 
-## 3。`StackTraceElement`班
+## 3. `StackTraceElement`类
 
-**堆栈跟踪由`StackTraceElement`类的元素组成。**我们可以用下面的方法分别得到类名和方法名:
+**堆栈跟踪由`StackTraceElement`类的元素组成。**我们可以用下面的方法分别得到类名和方法名：
 
-*   `getClassName`–返回包含当前执行点的类的完全限定名。
-*   `getMethodName`–返回包含由该堆栈跟踪元素表示的执行点的方法的名称。
+*   `getClassName()` – 返回包含当前执行点的类的完全限定名。
+*   `getMethodName()` – 返回包含由该堆栈跟踪元素表示的执行点的方法的名称。
 
-我们可以在 Java API 文档的[中的`StackTraceElement`类中看到方法及其细节的完整列表。](https://web.archive.org/web/20221026031411/https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/StackTraceElement.html)
+我们可以在 Java API 文档的[`StackTraceElement`类](https://web.archive.org/web/20221026031411/https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/StackTraceElement.html)中看到方法及其细节的完整列表。
 
-## 4.使用`Thread`类获取堆栈跟踪
+## 4. 使用`Thread`类获取堆栈跟踪
 
 我们可以通过调用`Thread`实例上的`getStackTrace()`方法从线程中获得堆栈跟踪。它返回一个`StackTraceElement`数组，从中可以找到线程堆栈帧的详细信息。
 
-让我们看一个例子:
+让我们看一个例子：
 
 ```java
 public class StackTraceUsingThreadDemo {
@@ -75,9 +76,9 @@ public class StackTraceUsingThreadDemo {
 }
 ```
 
-在上面的类中，方法调用以下面的方式发生—`main() -> methodA() -> methodB() -> getStackTrace().`
+在上面的类中，方法调用以下面的方式发生 — `main() -> methodA() -> methodB() -> getStackTrace()`。
 
-让我们用下面的测试用例来验证它，其中测试用例方法正在调用`methodA()`:
+让我们用下面的测试用例来验证它，其中测试用例方法正在调用`methodA()`：
 
 ```java
 @Test
@@ -102,13 +103,13 @@ public void whenElementIsFetchedUsingThread_thenCorrectMethodAndClassIsReturned(
 }
 ```
 
-在上面的测试案例中，我们使用 `methodB() of StackTraceUsingThreadDemo`类获取了一个`StackTraceElement` 数组。然后，使用`StackTraceElement`类的`getClassName()`和`getMethodName() `方法验证堆栈跟踪中的方法和类名。
+在上面的测试案例中，我们使用`StackTraceUsingThreadDemo`类的`methodB()`获取了一个`StackTraceElement`数组。然后，使用`StackTraceElement`类的`getClassName()`和`getMethodName()`方法验证堆栈跟踪中的方法和类名。
 
-## 5.使用`Throwable`类获取堆栈跟踪
+## 5. 使用`Throwable`类获取堆栈跟踪
 
 当任何 Java 程序抛出一个`Throwable`对象时，我们可以通过调用`getStackTrace()`方法获得一个`StackTraceElement`对象的数组，而不是简单地将它打印在控制台上或记录下来。
 
-让我们看一个例子:
+让我们看一个例子：
 
 ```java
 public class StackTraceUsingThrowableDemo {
@@ -132,9 +133,9 @@ public class StackTraceUsingThrowableDemo {
 }
 ```
 
-这里，方法调用以下面的方式发生—`main() -> methodA() -> methodB() -> getStackTrace().`
+这里，方法调用以下面的方式发生 — `main() -> methodA() -> methodB() -> getStackTrace()`。
 
-让我们用一个测试来验证它:
+让我们用一个测试来验证它：
 
 ```java
 @Test
@@ -155,10 +156,10 @@ public void whenElementIsFecthedUsingThrowable_thenCorrectMethodAndClassIsReturn
 }
 ```
 
-在上面的测试案例中，我们使用 `methodB() of StackTraceUsingThrowableDemo`类获取了一个`StackTraceElement` 数组。然后，验证方法和类名以理解`StackTraceElement`类数组中元素的顺序。
+在上面的测试案例中，我们使用`StackTraceUsingThrowableDemo`类的`methodB()`获取了一个`StackTraceElement`数组。然后，验证方法和类名以理解`StackTraceElement`类数组中元素的顺序。
 
-## 6.结论
+## 6. 结论
 
-在本文中，我们学习了 Java 堆栈跟踪以及如何使用`printStackTrace()` 方法打印它，在出现异常`.` 的情况下，我们还学习了如何使用`Thread`和`Throwable`类获取当前堆栈跟踪。
+在本文中，我们学习了 Java 堆栈跟踪以及如何使用`printStackTrace()`方法打印它，在出现异常的情况下，我们还学习了如何使用`Thread`和`Throwable`类获取当前堆栈跟踪。
 
-和往常一样，本文的完整代码示例可以在 GitHub 的[中找到。](https://web.archive.org/web/20221026031411/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-exceptions-4)
+和往常一样，本文的完整代码示例可以在 [GitHub](https://web.archive.org/web/20221026031411/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-exceptions-4) 中找到。

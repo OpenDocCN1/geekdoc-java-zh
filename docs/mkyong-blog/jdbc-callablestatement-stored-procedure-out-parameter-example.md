@@ -1,12 +1,13 @@
+
 # JDBC 可调用语句–存储过程输出参数示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/jdbc/jdbc-callablestatement-stored-procedure-out-parameter-example/>
 
-一个 JDBC `CallableStatement`例子来调用一个接受输入和输出参数的存储过程。
+一个 JDBC `CallableStatement` 例子来调用一个接受输入和输出参数的存储过程。
 
 *使用 Java 8 和 Oracle database 19c 进行测试*
 
-pom.xml
+`pom.xml`
 
 ```java
  <dependency>
@@ -18,7 +19,7 @@ pom.xml
 	</dependency> 
 ```
 
-## 1.JDBC 可赎回声明
+## 1. JDBC 可赎回声明
 
 1.1 接受 IN 和 OUT 参数的 PL/SQL 存储过程。
 
@@ -38,7 +39,7 @@ pom.xml
 
 1.2 JDBC 调用上述存储过程的例子。
 
-StoreProcedureOutParameter.java
+`StoreProcedureOutParameter.java`
 
 ```java
  package com.mkyong.jdbc.callablestatement;
@@ -105,19 +106,14 @@ public class StoreProcedureOutParameter {
 
 ## 下载源代码
 
-$ git clone [https://github.com/mkyong/java-jdbc.git](http://web.archive.org/web/20191208171826/https://github.com/mkyong/java-jdbc.git)
+```bash
+$ git clone https://github.com/mkyong/java-jdbc.git
+```
 
 ## 参考
 
-*   [Oracle 参考光标](http://web.archive.org/web/20191208171826/http://www.oradev.com/ref_cursor.jsp)
-*   [可调用声明 JavaDocs](http://web.archive.org/web/20191208171826/https://docs.oracle.com/javase/8/docs/api/java/sql/CallableStatement.html)
-*   [Java JDBC 教程](http://web.archive.org/web/20191208171826/https://www.mkyong.com/tutorials/jdbc-tutorials/)
+* [Oracle 参考光标](http://web.archive.org/web/20191208171826/http://www.oradev.com/ref_cursor.jsp)
+* [可调用声明 JavaDocs](http://web.archive.org/web/20191208171826/https://docs.oracle.com/javase/8/docs/api/java/sql/CallableStatement.html)
+* [Java JDBC 教程](http://web.archive.org/web/20191208171826/https://www.mkyong.com/tutorials/jdbc-tutorials/)
 
-[callablestatement](http://web.archive.org/web/20191208171826/https://www.mkyong.com/tag/callablestatement/) [jdbc](http://web.archive.org/web/20191208171826/https://www.mkyong.com/tag/jdbc/) [oracle](http://web.archive.org/web/20191208171826/https://www.mkyong.com/tag/oracle/) [stored procedure](http://web.archive.org/web/20191208171826/https://www.mkyong.com/tag/stored-procedure/)<input type="hidden" id="mkyong-current-postId" value="8328">
-
-
-
-
-
-
-
+[callablestatement](http://web.archive.org/web/20191208171826/https://www.mkyong.com/tag/callablestatement/) [jdbc](http://web.archive.org/web/20191208171826/https://www.mkyong.com/tag/jdbc/) [oracle](http://web.archive.org/web/20191208171826/https://www.mkyong.com/tag/oracle/) [stored procedure](http://web.archive.org/web/20191208171826/https://www.mkyong.com/tag/stored-procedure/)

@@ -1,3 +1,4 @@
+
 # 使用 Java 和 Spring Boot 的电子商务应用程序的愿望列表功能
 
 > 原文：<https://medium.com/javarevisited/lets-add-wishlist-feature-for-our-e-commerce-app-using-java-and-spring-boot-1402c0b6f1e8?source=collection_archive---------1----------------------->

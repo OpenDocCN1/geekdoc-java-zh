@@ -1,3 +1,4 @@
+
 # 如何使用颜色选择器
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/components/colorchooser.html`](https://docs.oracle.com/javase/tutorial/uiswing/components/colorchooser.html)
@@ -34,7 +35,6 @@ public class ColorChooserDemo extends JPanel ... {
         . . .
         add(tcc, BorderLayout.PAGE_END);
     }
-
 ```
 
 在上一个代码片段中，`JColorChooser`构造函数接受一个`Color`参数，该参数指定了选择器的初始选定颜色。如果您没有指定初始颜色，则颜色选择器将显示`Color.white`。请查看[`Color` API 文档](https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html)以获取可用的颜色常量列表。
@@ -48,7 +48,6 @@ public void stateChanged(ChangeEvent e) {
     Color newColor = tcc.getColor();
     banner.setForeground(newColor);
 }
-
 ```
 
 有关更改侦听器和更改事件的一般信息，请参阅如何编写更改侦听器。
@@ -71,7 +70,7 @@ public void stateChanged(ChangeEvent e) {
 
 ## 另一个示例：ColorChooserDemo2
 
-现在让我们转向 ColorChooserDemo2，这是前一个演示程序的修改版本，使用了更多的`JColorChooser`API。
+现在让我们转向 ColorChooserDemo2，这是前一个演示程序的修改版本，使用了更多的`JColorChooser` API。
 
 * * *
 
@@ -106,7 +105,6 @@ Color newColor = JColorChooser.showDialog(
                      ColorChooserDemo2.this,
                      "Choose Background Color",
                      banner.getBackground());
-
 ```
 
 第一个参数是对话框的父级，第二个是对话框标题，第三个是初始选择的颜色。
@@ -117,7 +115,6 @@ Color newColor = JColorChooser.showDialog(
 if (newColor != null) {
     banner.setBackground(newColor);
 }
-
 ```
 
 `showDialog` 创建的对话框是模态的。如果你想要一个非模态对话框，可以使用 `JColorChooser` 的 `createDialog` 方法来创建对话框。这个方法还允许你为对话框窗口中的**确定**和**取消**按钮指定动作监听器。使用 `JDialog` 的 `show` 方法来显示这个方法创建的对话框。有关使用此方法的示例，请参见指定其他编辑器中的如何使用表格部分。
@@ -128,7 +125,6 @@ if (newColor != null) {
 
 ```java
 tcc.setPreviewPanel(new JPanel());
-
 ```
 
 这将有效地移除预览面板，因为普通的 `JPanel` 没有大小和默认视图。要将预览面板恢复为默认设置，请使用 `setPreviewPanel` 的参数为 `null`。
@@ -139,15 +135,15 @@ tcc.setPreviewPanel(new JPanel());
 
 默认颜色选择器提供五个选择器面板：
 
-+   色板  用于从一组色板中选择颜色。
++   色板 — 用于从一组色板中选择颜色。
 
-+   [HSV](http://en.wikipedia.org/wiki/HSL_and_HSV)  用于使用色调-饱和度-亮度颜色表示选择颜色。在 JDK 7 之前，这被称为 HSB，代表色调-饱和度-亮度。
++   [HSV](http://en.wikipedia.org/wiki/HSL_and_HSV) — 用于使用色调-饱和度-亮度颜色表示选择颜色。在 JDK 7 之前，这被称为 HSB，代表色调-饱和度-亮度。
 
-+   [HSL](http://en.wikipedia.org/wiki/HSL_and_HSV)  用于使用色调-饱和度-亮度颜色表示选择颜色。这是 JDK 7 中的新功能。
++   [HSL](http://en.wikipedia.org/wiki/HSL_and_HSV) — 用于使用色调-饱和度-亮度颜色表示选择颜色。这是 JDK 7 中的新功能。
 
-+   [RGB](http://en.wikipedia.org/wiki/RGB_color_model)  用于使用红-绿-蓝颜色模型选择颜色。
++   [RGB](http://en.wikipedia.org/wiki/RGB_color_model) — 用于使用红-绿-蓝颜色模型选择颜色。
 
-+   [CMYK](http://en.wikipedia.org/wiki/Cmyk)  用于使用过程颜色或四色模型选择颜色。这是 JDK 7 中的新功能。
++   [CMYK](http://en.wikipedia.org/wiki/Cmyk) — 用于使用过程颜色或四色模型选择颜色。这是 JDK 7 中的新功能。
 
 你可以通过使用 `addChooserPanel` 添加自己设计的选择器面板来扩展默认颜色选择器，或者通过使用 `removeChooserPanel` 删除选择器面板来限制它。
 
@@ -157,7 +153,6 @@ tcc.setPreviewPanel(new JPanel());
 //Override the chooser panels with our own.
 AbstractColorChooserPanel panels[] = { new CrayonPanel() };
 tcc.setChooserPanels(panels);
-
 ```
 
 代码很简单：它创建一个包含`CrayonPanel`的数组。接下来，代码调用`setChooserPanels`将数组的内容设置为颜色选择器的选择器面板。
@@ -166,7 +161,7 @@ tcc.setChooserPanels(panels);
 
 **`void buildChooser()`**
 
-创建包含选择器面板的 GUI。示例创建四个切换按钮  每个代表一个蜡笔  并将它们添加到选择器面板中。
+创建包含选择器面板的 GUI。示例创建四个切换按钮 — 每个代表一个蜡笔 — 并将它们添加到选择器面板中。
 
 **`void updateChooser()`**
 
@@ -185,7 +180,6 @@ public void updateChooser() {
         blueCrayon.setSelected(true);
     }
 }
-
 ```
 
 **`String getDisplayName()`**
@@ -196,7 +190,6 @@ public void updateChooser() {
 public String getDisplayName() {
     return "Crayons";
 }
-
 ```
 
 **`Icon getSmallDisplayIcon()`**
@@ -217,9 +210,10 @@ public String getDisplayName() {
 
 +   设置或获取当前颜色
 
-创建和显示颜色选择器
+**创建和显示颜色选择器**
 
 | 方法或构造函数 | 目的 |
+
 | --- | --- |
 
 | [JColorChooser()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#JColorChooser--) [JColorChooser(Color)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#JColorChooser-java.awt.Color-)
@@ -227,34 +221,28 @@ public String getDisplayName() {
 [JColorChooser(ColorSelectionModel)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#JColorChooser-javax.swing.colorchooser.ColorSelectionModel-) | 创建一个颜色选择器。默认构造函数创建一个初始颜色为`Color.white`的颜色选择器。使用第二个构造函数指定不同的初始颜色。当存在`ColorSelectionModel`参数时，为颜色选择器提供颜色选择模型。 |
 
 | [Color showDialog(Component, String, Color)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#showDialog-java.awt.Component-java.lang.String-java.awt.Color-) | 创建并显示一个颜色选择器在模态对话框中。`Component`参数是对话框的父级，`String`参数指定对话框标题，`Color`参数指定选择器的初始颜色。 |
+
+| [JDialog createDialog(Component, String, boolean, JColorChooser, ActionListener, ActionListener)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#createDialog-java.awt.Component-java.lang.String-boolean-javax.swing.JColorChooser-java.awt.event.ActionListener-java.awt.event.ActionListener-) | 为指定的颜色选择器创建对话框。与`showDialog`一样，`Component`参数是对话框的父级，`String`参数指定对话框标题。其他参数如下：`boolean`指定对话框是否为模态，`JColorChooser`是要在对话框中显示的颜色选择器，第一个`ActionListener`是为**确定**按钮，第二个是为**取消**按钮。 |
+
+**自定义颜色选择器的 GUI**
+
+| 方法 | 目的 |
+
 | --- | --- |
 
-| [JDialog createDialog(Component, String, boolean, JColorChooser, ActionListener,
 
-ActionListener)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#createDialog-java.awt.Component-java.lang.String-boolean-javax.swing.JColorChooser-java.awt.event.ActionListener-java.awt.event.ActionListener-) | 为指定的颜色选择器创建对话框。与`showDialog`一样，`Component`参数是对话框的父级，`String`参数指定对话框标题。其他参数如下：`boolean`指定对话框是否为模态，`JColorChooser`是要在对话框中显示的颜色选择器，第一个`ActionListener`是为**确定**按钮，第二个是为**取消**按钮。 |
 
-自定义颜色选择器的 GUI
+## 设置或获取当前颜色
 
 | 方法 | 目的 |
 | --- | --- |
-| [void setPreviewPanel(JComponent)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#setPreviewPanel-javax.swing.JComponent-) [JComponent getPreviewPanel()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#getPreviewPanel--) | 设置或获取用于预览颜色选择的组件。要移除预览面板，请使用`new JPanel()`作为参数。要指定默认预览面板，请使用`null`。 |
-| [void setChooserPanels(AbstractColorChooserPanel[])](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#setChooserPanels-javax.swing.colorchooser.AbstractColorChooserPanel:A-) [AbstractColorChooserPanel[] getChooserPanels()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#getChooserPanels--) | 设置或获取颜色选择器中的选择面板。 |
-| [void addChooserPanel(AbstractColorChooserPanel)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#addChooserPanel-javax.swing.colorchooser.AbstractColorChooserPanel-) [AbstractColorChooserPanel removeChooserPanel(AbstractColorChooserPanel)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#removeChooserPanel-javax.swing.colorchooser.AbstractColorChooserPanel-) | 向颜色选择器添加选择器面板或从中移除选择器面板。 |
-| [void setDragEnabled(boolean)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#setDragEnabled-boolean-) [boolean getDragEnabled()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#getDragEnabled--) | 设置或获取`dragEnabled`属性，该属性必须为 true 才能在此组件上启用拖放处理。默认值为 false。有关更多详细信息，请参阅拖放和数据传输。 |
+| [`void setColor(Color)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#setColor-java.awt.Color-) [`void setColor(int, int, int)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#setColor-int-int-int-) [`void setColor(int)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#setColor-int-) [`Color getColor()`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#getColor--) | 设置或获取当前选择的颜色。`setColor`方法的三个整数版本将这三个整数一起解释为 RGB 颜色。`setColor`方法的单个整数版本将整数分成四个 8 位字节，并按以下方式解释整数为 RGB 颜色：![颜色选择器如何将整数解释为 RGB 值。](img/c14774ad771a624724b722c4dde29e12.png) |
+| [`void setSelectionModel(ColorSelectionModel)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#setSelectionModel-javax.swing.colorchooser.ColorSelectionModel-) [`ColorSelectionModel getSelectionModel()`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#getSelectionModel--) | 设置或获取颜色选择器的选择模型。该对象包含当前选择，并在选择更改时向注册的侦听器触发更改事件。 |
 
-设置或获取当前颜色
-
-| 方法 | 目的 |
-| --- | --- |
-
-| [void setColor(Color)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#setColor-java.awt.Color-) [void setColor(int, int, int)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#setColor-int-int-int-)
-
-[void setColor(int)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#setColor-int-)
-
-[Color getColor()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#getColor--) | 设置或获取当前选择的颜色。`setColor`方法的三个整数版本将这三个整数一起解释为 RGB 颜色。`setColor`方法的单个整数版本将整数分成四个 8 位字节，并按以下方式解释整数为 RGB 颜色：![颜色选择器如何将整数解释为 RGB 值。](img/c14774ad771a624724b722c4dde29e12.png) |
-
-| [void setSelectionModel(ColorSelectionModel)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#setSelectionModel-javax.swing.colorchooser.ColorSelectionModel-) [ColorSelectionModel getSelectionModel()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#getSelectionModel--) | 设置或获取颜色选择器的选择模型。该对象包含当前选择，并在选择更改时向注册的侦听器触发更改事件。 |
-| --- | --- |
+| [`void setPreviewPanel(JComponent)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#setPreviewPanel-javax.swing.JComponent-) [`JComponent getPreviewPanel()`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#getPreviewPanel--) | 设置或获取用于预览颜色选择的组件。要移除预览面板，请使用`new JPanel()`作为参数。要指定默认预览面板，请使用`null`。 |
+| [`void setChooserPanels(AbstractColorChooserPanel[])`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#setChooserPanels-javax.swing.colorchooser.AbstractColorChooserPanel:A-) [`AbstractColorChooserPanel[] getChooserPanels()`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#getChooserPanels--) | 设置或获取颜色选择器中的选择面板。 |
+| [`void addChooserPanel(AbstractColorChooserPanel)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#addChooserPanel-javax.swing.colorchooser.AbstractColorChooserPanel-) [`AbstractColorChooserPanel removeChooserPanel(AbstractColorChooserPanel)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#removeChooserPanel-javax.swing.colorchooser.AbstractColorChooserPanel-) | 向颜色选择器添加选择器面板或从中移除选择器面板。 |
+| [`void setDragEnabled(boolean)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#setDragEnabled-boolean-) [`boolean getDragEnabled()`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JColorChooser.html#getDragEnabled--) | 设置或获取`dragEnabled`属性，该属性必须为 true 才能在此组件上启用拖放处理。默认值为 false。有关更多详细信息，请参阅拖放和数据传输。 |
 
 ## 使用颜色选择器的示例
 

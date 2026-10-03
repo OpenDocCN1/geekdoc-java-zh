@@ -1,3 +1,4 @@
+
 # 在线销售应用模板的 10 个最佳在线市场
 
 > 原文：<https://medium.com/javarevisited/10-best-online-marketplaces-to-sell-your-app-templates-online-9f0b9dc003b3?source=collection_archive---------1----------------------->
@@ -6,7 +7,7 @@
 
 今天，我与你分享**十个最好的在线市场**，让你**在线销售你的应用程序模板**。加入世界各地有才华的网页设计师团队，他们通过在线模板市场增加收入**！**
 
-# #1:模板怪兽
+## #1:模板怪兽
 
 ![](img/a5859045483ae5d94fe1ccdc1b8899f2.png)
 
@@ -16,7 +17,7 @@ TemplateMonster 拥有来自全球的 600 多万客户，是一个巨大的在�
 
 [**成为厂商**](https://www.templatemonster.com/marketplace/?aff=javarevisited&utm_campaign=blog_site_javarevisited&utm_source=marketplace&utm_medium=referral)
 
-# 第二名:SellMyApp
+## 第二名:SellMyApp
 
 ![](img/76b0e8563d1ac0833fda4e86f6e9c523.png)
 
@@ -26,7 +27,7 @@ SellMyApp 根据你的销售额，给你提供不同级别的佣金。你从黄�
 
 [**成为小贩**](https://www.sellmyapp.com/)
 
-# #3:编码员
+## #3:编码员
 
 ![](img/77bf791a53e7d12f03d74185649ad827.png)
 
@@ -36,7 +37,7 @@ Codester 为您提供所有销售的 70%的全面和直接的佣金。你是否�
 
 [**成为小贩**](https://www.codester.com/)
 
-# #4: Mojo 市场
+## #4: Mojo 市场
 
 ![](img/ff0770f3234d983870622d8457a99c06.png)
 
@@ -46,7 +47,7 @@ Mojo Marketplace 欢迎您以有吸引力的条款出售您的应用程序模板
 
 [**成为小贩**](https://www.mojomarketplace.com/)
 
-# #5:创意市场
+## #5:创意市场
 
 ![](img/a4e0b1f0b3a983be26c6c54a487b944d.png)
 
@@ -56,7 +57,7 @@ Creative Market 多年来一直被列为顶级在线模板提供商之一。现�
 
 [**成为厂商**](https://creativemarket.com/)
 
-# #6: iBuildApp
+## #6: iBuildApp
 
 ![](img/2b422f991a5b3c02109b791df908072a.png)
 
@@ -66,7 +67,7 @@ iBuildApp 是一个新的源代码和应用程序市场，以年度订阅为基�
 
 [**成为小贩**](https://ibuildapp.com/)
 
-# #7: Flippa
+## #7: Flippa
 
 ![](img/fe5455d7ed2cb4b8202607af14c7bd0f.png)
 
@@ -76,7 +77,7 @@ Flippa 是一个大型市场，在这里你可以出售网站、源代码、域�
 
 [**成为小贩**](https://www.flippa.com/)
 
-# #8:出售我的源代码
+## #8:出售我的源代码
 
 ![](img/df8f332bbd75ca3ee49bfe6f984641b9.png)
 
@@ -88,7 +89,7 @@ Flippa 是一个大型市场，在这里你可以出售网站、源代码、域�
 
 [**成为小贩**](http://www.sellmysourcecode.com/)
 
-# #9: ApkaCode
+## #9: ApkaCode
 
 ![](img/ed8946648d4b9e50c74989ba60c6ff09.png)
 
@@ -98,7 +99,7 @@ ApkaCode 允许您保留高达 80%的销售收入。它有方便的工具来发�
 
 [**成为厂商**](http://www.apkacode.com/)
 
-# #10:主题星球
+## #10:主题星球
 
 ![](img/b04a89e616201783a0712606877f385d.png)
 
@@ -108,7 +109,7 @@ ThemePlanet 于 2018 年推出，是一个最近出售 HTML、WordPress、电子
 
 [**成为小贩**](https://themeplanet.com/)
 
-# 包扎
+## 包扎
 
 这是你可以出售你的应用模板、管理和 HTML 主题的十个最好的市场。这些知名的平台为你提供公平甚至很好的佣金率。几个主题市场可以让你非独家销售你的模板，通过在几个市场销售你的产品来赚取更多。
 

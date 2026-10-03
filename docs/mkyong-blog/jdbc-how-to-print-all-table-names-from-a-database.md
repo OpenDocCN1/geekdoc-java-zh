@@ -1,27 +1,28 @@
+
 # JDBC——如何打印数据库中的所有表名？
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/jdbc/jdbc-how-to-print-all-table-names-from-a-database/>
 
 一个 JDBC 的例子，连接到一个 PostgreSQL，并打印出默认数据库中的所有表格`postgres`
 
-pom.xml
+## `pom.xml`
 
 ```java
- <dependencies>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.2.5</version>
-        </dependency>
-    </dependencies> 
+<dependencies>
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>42.2.5</version>
+    </dependency>
+</dependencies>
 ```
 
 *P.S 用 Java 8 和 postgresql jdbc 驱动程序 42.2.5 测试*
 
-PrintAllTables.java
+## `PrintAllTables.java`
 
 ```java
- package com.mkyong.jdbc;
+package com.mkyong.jdbc;
 
 import java.sql.*;
 
@@ -76,13 +77,13 @@ public class PrintAllTables {
 
     }
 
-} 
+}
 ```
 
-输出
+## 输出
 
 ```java
- ----------
+----------
 pg_aggregate_fnoid_index
 ----------
 table_cat:null
@@ -165,11 +166,11 @@ table_name:pg_stat_ssl
 table_type:SYSTEM VIEW
 remarks:null
 
-//... 
+//...
 ```
 
 ## 参考
 
-*   [database metadata::getTables JavaDocs](http://web.archive.org/web/20220216043654/https://docs.oracle.com/javase/8/docs/api/java/sql/DatabaseMetaData.html#getTables-java.lang.String-java.lang.String-java.lang.String-java.lang.String:A-)
+* [database metadata::getTables JavaDocs](http://web.archive.org/web/20220216043654/https://docs.oracle.com/javase/8/docs/api/java/sql/DatabaseMetaData.html#getTables-java.lang.String-java.lang.String-java.lang.String-java.lang.String:A-)
 
 <input type="hidden" id="mkyong-current-postId" value="15105">

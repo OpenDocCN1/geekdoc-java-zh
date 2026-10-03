@@ -1,3 +1,4 @@
+
 # 小程序可以和不能做什么
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/applet/security.html`](https://docs.oracle.com/javase/tutorial/deployment/applet/security.html)
@@ -56,11 +57,7 @@
 
 特权小程序不受强制执行在沙盒小程序上的安全限制，可以在安全沙箱之外运行。
 
-* * *
-
 **注意：** JavaScript 代码被视为未签名代码。当特权小程序从 HTML 页面中的 JavaScript 代码访问时，该小程序在安全沙箱内执行。这意味着特权小程序基本上表现得像一个沙盒小程序。
-
-* * *
 
 参见富互联网应用程序中的安全性以了解如何处理小程序。
 

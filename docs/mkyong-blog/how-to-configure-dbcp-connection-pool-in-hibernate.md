@@ -1,19 +1,22 @@
+
+
 # 如何在 Hibernate 中配置 DBCP 连接池
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/hibernate/how-to-configure-dbcp-connection-pool-in-hibernate/>
 
 **Note**
+
 Due to bugs in the old DBCP code, Hibernate is no longer maintain DBCP-based connection provider, read this [Hibernate thread](http://web.archive.org/web/20221219204737/https://forum.hibernate.org/viewtopic.php?f=1&t=947528&view=next).
 
 现在，[阿帕奇 DBCP](http://web.archive.org/web/20221219204737/https://commons.apache.org/dbcp/) 回到了积极的开发中，许多 bug 被修复，现在更加稳定了。即使 Hibernate 没有像 [C3P0](http://web.archive.org/web/20221219204737/http://docs.jboss.org/hibernate/core/3.6/javadocs/org/hibernate/connection/C3P0ConnectionProvider.html) 和 [Proxool](http://web.archive.org/web/20221219204737/http://docs.jboss.org/hibernate/core/3.6/javadocs/org/hibernate/connection/ProxoolConnectionProvider.html) 这样的连接提供者，但是你仍然可以很容易地配置它。
 
 在本教程中，我们将向您展示如何集成 Apache DBCP 连接池和 Hibernate 框架。
 
-## 1.去拿 DBCP 罐
+## 1. 去拿 DBCP 罐
 
-要集成 DBCP 和 Hibernate，你需要 **commons-dbcp.jar** 和 **commons-pool-1.5.4.jar** 。
+要集成 DBCP 和 Hibernate，你需要 `commons-dbcp.jar` 和 `commons-pool-1.5.4.jar`。
 
-*文件:pom.xml*
+*文件：`pom.xml`*
 
 ```java
  <project ...>
@@ -43,11 +46,11 @@ Due to bugs in the old DBCP code, Hibernate is no longer maintain DBCP-based con
 </project> 
 ```
 
-## 2.DBCPConnectionProvider
+## 2. `DBCPConnectionProvider`
 
-要将 DBCP 与 Hibernate 集成，需要创建一个" **DBCPConnectionProvider** "类，参见这篇[文章](http://web.archive.org/web/20221219204737/https://wiki.apache.org/commons/DBCP/Hibernate)。
+要将 DBCP 与 Hibernate 集成，需要创建一个 `DBCPConnectionProvider` 类，参见这篇[文章](http://web.archive.org/web/20221219204737/https://wiki.apache.org/commons/DBCP/Hibernate)。
 
-*文件:DBCPConnectionProvider.java*
+*文件：`DBCPConnectionProvider.java`*
 
 ```java
  package com.mkyong.util;
@@ -247,48 +250,52 @@ public class DBCPConnectionProvider implements ConnectionProvider {
 } 
 ```
 
-## 3.在 hibernate.cfg.xml 中配置 DBCP
+## 3. 在 `hibernate.cfg.xml` 中配置 DBCP
 
-现在，链接您的“ **DBCPConnectionProvider** ”并在“ **hibernate.cfg.xml** ”中定义 DBCP 属性，例如:
+现在，链接您的 `DBCPConnectionProvider` 并在 `hibernate.cfg.xml` 中定义 DBCP 属性，例如：
 
-*文件:hibernate.cfg.xml*
+*文件：`hibernate.cfg.xml`*
+
+
+
 
 ```java
- <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC
 "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
- <session-factory>
-  <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
-  <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:MKYONG</property>
-  <property name="hibernate.connection.username">mkyong</property>
-  <property name="hibernate.connection.password">password</property>
-  <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
-  <property name="hibernate.default_schema">MKYONG</property>
-  <property name="show_sql">true</property>
+  <session-factory>
+    <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+    <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:MKYONG</property>
+    <property name="hibernate.connection.username">mkyong</property>
+    <property name="hibernate.connection.password">password</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+    <property name="hibernate.default_schema">MKYONG</property>
+    <property name="show_sql">true</property>
 
-  <property name="hibernate.connection.provider_class">
-	com.mkyong.util.DBCPConnectionProvider
-  </property>
-  <property name="hibernate.dbcp.initialSize">8</property>
-  <property name="hibernate.dbcp.maxActive">20</property>
-  <property name="hibernate.dbcp.maxIdle">20</property>
-  <property name="hibernate.dbcp.minIdle">0</property>
+    <property name="hibernate.connection.provider_class">
+      com.mkyong.util.DBCPConnectionProvider
+    </property>
+    <property name="hibernate.dbcp.initialSize">8</property>
+    <property name="hibernate.dbcp.maxActive">20</property>
+    <property name="hibernate.dbcp.maxIdle">20</property>
+    <property name="hibernate.dbcp.minIdle">0</property>
 
-  <mapping class="com.mkyong.user.DBUser"></mapping>
-</session-factory>
-</hibernate-configuration> 
+    <mapping class="com.mkyong.user.DBUser"></mapping>
+  </session-factory>
+</hibernate-configuration>
 ```
 
 **Note**
-The DBCP properties are supported in Hibernate via “**hibernate.dbcp.properties-name**“.
+
+The DBCP properties are supported in Hibernate via `hibernate.dbcp.properties-name`.
 
 对于所有 DBCP 属性，请参考此 [DBCP 配置](http://web.archive.org/web/20221219204737/https://commons.apache.org/dbcp/configuration.html)页面。
 
-## 4.运行它，输出
+## 4. 运行它，输出
 
-完成后，运行它并查看以下输出:
+完成后，运行它并查看以下输出：
 
 ![dbcp connection pool in hibernate](img/e046c6044ead55627aace032475dc723.png "hibernate-dbcp-connection-pool")
 
@@ -298,9 +305,9 @@ Download it – [Hibernate-DBCP-Connection-Pool-Example.zip](http://web.archive.
 
 ## 参考
 
-1.  [http://wiki.apache.org/commons/DBCP/Hibernate](http://web.archive.org/web/20221219204737/https://wiki.apache.org/commons/DBCP/Hibernate)
-2.  [https://forum.hibernate.org/viewtopic.php?f=1&t = 947528&查看=下一张](http://web.archive.org/web/20221219204737/https://forum.hibernate.org/viewtopic.php?f=1&t=947528&view=next)
-3.  [http://commons.apache.org/dbcp/configuration.html](http://web.archive.org/web/20221219204737/https://commons.apache.org/dbcp/configuration.html)
-4.  [http://wiki.apache.org/commons/DBCP](http://web.archive.org/web/20221219204737/https://wiki.apache.org/commons/DBCP)
+1. [http://wiki.apache.org/commons/DBCP/Hibernate](http://web.archive.org/web/20221219204737/https://wiki.apache.org/commons/DBCP/Hibernate)
+2. [https://forum.hibernate.org/viewtopic.php?f=1&t = 947528&查看=下一张](http://web.archive.org/web/20221219204737/https://forum.hibernate.org/viewtopic.php?f=1&t=947528&view=next)
+3. [http://commons.apache.org/dbcp/configuration.html](http://web.archive.org/web/20221219204737/https://commons.apache.org/dbcp/configuration.html)
+4. [http://wiki.apache.org/commons/DBCP](http://web.archive.org/web/20221219204737/https://wiki.apache.org/commons/DBCP)
 
 <input type="hidden" id="mkyong-current-postId" value="8655">

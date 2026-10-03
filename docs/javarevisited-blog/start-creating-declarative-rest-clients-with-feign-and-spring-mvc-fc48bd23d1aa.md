@@ -1,3 +1,4 @@
+
 # 开始用 Feign 和 Spring MVC 创建声明性 Rest 客户端
 
 > 原文：<https://medium.com/javarevisited/start-creating-declarative-rest-clients-with-feign-and-spring-mvc-fc48bd23d1aa?source=collection_archive---------0----------------------->

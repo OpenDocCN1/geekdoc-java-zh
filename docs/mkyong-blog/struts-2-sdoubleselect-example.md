@@ -1,24 +1,25 @@
-# Struts 2 <doubleselect>示例</doubleselect>
+
+# Struts 2 `<doubleselect>`示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts2/struts-2-sdoubleselect-example/>
 
-Download It – [Struts2-Double-Select-Example.zip](http://web.archive.org/web/20190304032357/http://www.mkyong.com/wp-content/uploads/2010/06/Struts2-Double-Select-Example.zip)
+下载：[Struts2-Double-Select-Example.zip](http://web.archive.org/web/20190304032357/http://www.mkyong.com/wp-content/uploads/2010/06/Struts2-Double-Select-Example.zip)
 
-在 Struts 2 中， **< s:doubleselect >** 标签用于创建两个 HTML 下拉框，一旦第一个下拉列表被选中，第二个下拉列表就会相应地改变。一个非常经典的例子是“**国家**”和“**州**”下拉选择，其中不同的“**州**”列表都取决于所选的“**国家**”。
+在 Struts 2 中，`<s:doubleselect>`标签用于创建两个 HTML 下拉框，一旦第一个下拉列表被选中，第二个下拉列表就会相应地改变。一个非常经典的例子是“国家”和“州”下拉选择，其中不同的“州”列表都取决于所选的“国家”。
 
-**A < s:doubleselect >标签**
+## `<s:doubleselect>`标签
 
 ```java
- <s:doubleselect label="Fruits (OGNL) " 
+<s:doubleselect label="Fruits (OGNL) " 
 name="fruit1" list="{'fruit','meat'}" 
 doubleName="fruit2" 
-doubleList="top == 'fruit' ? {'apple', 'orange','banana'} : {'chicken', 'pig'}" /> 
+doubleList="top == 'fruit' ? {'apple', 'orange','banana'} : {'chicken', 'pig'}" />
 ```
 
-产生以下 HTML 代码…
+产生以下 HTML 代码：
 
 ```java
- <tr> 
+<tr> 
 <td class="tdLabel">
   <label for="resultAction_fruit1" class="label">
      Fruits (OGNL) :
@@ -69,33 +70,35 @@ doubleList="top == 'fruit' ? {'apple', 'orange','banana'} : {'chicken', 'pig'}" 
     }
 </script>   
 </td> 
-</tr> 
+</tr>
 ```
 
-嗯， **< s:doubleselect >** 标签确实是生成了很多代码。它将创建两个下拉列表，许多 JavaScript 的代码来完成后面的魔术(第一次选择，第二次更改)，并且还为第一个下拉框附加了一个“ **onchange()** ”行为。
+嗯，`<s:doubleselect>`标签确实是生成了很多代码。它将创建两个下拉列表，许多 JavaScript 的代码来完成后面的魔术（第一次选择，第二次更改），并且还为第一个下拉框附加了一个“`onchange()`”行为。
 
-**Look complicated, but simple!**
-It’s just two **<s:select>** tags combine in a single tag, see clearly again.
+**看起来复杂，其实简单！**
+
+它只是两个`<s:select>`标签合并成一个标签，再看清楚一点：
 
 ```java
- <s:doubleselect
+<s:doubleselect
 name="" list="" 
-doubleName="" doubleList="" /> 
+doubleName="" doubleList="" />
 ```
 
-“**名称**”和“**列表**是指第一个下拉列表；“**双重名称**”和“**双重列表**是指第二个下拉列表。数据填充同“ **[< s:选择>](http://web.archive.org/web/20190304032357/http://www.mkyong.com/struts2/struts-2-sselect-drop-down-box-example/)** ”标签。
+“`name`”和“`list`”是指第一个下拉列表；“`doubleName`”和“`doubleList`”是指第二个下拉列表。数据填充同“[`<s:select>`](http://web.archive.org/web/20190304032357/http://www.mkyong.com/struts2/struts-2-sselect-drop-down-box-example/)”标签。
 
-## struts 2**<s:double select>**示例
+## Struts 2 `<s:doubleselect>`示例
 
-一个完整的 **< s:doubleselect >** 标签的例子，展示了使用 OGNL 或 Java 列表来填充下拉列表中的数据。
+一个完整的`<s:doubleselect>`标签的例子，展示了使用 OGNL 或 Java 列表来填充下拉列表中的数据。
 
- ## 1.行动
+### 1. 动作
 
 操作类来生成和保存两个下拉列表。
+
 **DoubleSelectAction.java**
 
 ```java
- package com.mkyong.common.action;
+package com.mkyong.common.action;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -191,17 +194,17 @@ public class DoubleSelectAction extends ActionSupport{
 		return NONE;
 	}
 
-} 
+}
 ```
 
- ## 2.结果页面
+### 2. 结果页面
 
-通过“ **< s:doubleselect >** ”标签呈现两个下拉框，通过 Java list 和 OGNL list 填充列表
+通过“`<s:doubleselect>`”标签呈现两个下拉框，通过 Java list 和 OGNL list 填充列表。
 
 **doubleselect.jsp**
 
 ```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
 </head>
@@ -234,13 +237,13 @@ doubleName="language2" doubleList="languageMap.get(top)" />
 </s:form>
 
 </body>
-</html> 
+</html>
 ```
 
 **result.jsp**
 
 ```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 
 <body>
@@ -259,15 +262,15 @@ doubleName="language2" doubleList="languageMap.get(top)" />
 </h2> 
 
 </body>
-</html> 
+</html>
 ```
 
-## 3.struts.xml
+### 3. `struts.xml`
 
-链接在一起~
+链接在一起：
 
 ```java
- <?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
@@ -288,30 +291,23 @@ doubleName="language2" doubleList="languageMap.get(top)" />
    </action>
   </package>
 
-</struts> 
+</struts>
 ```
 
-## 5.演示
+### 4. 演示
 
-*http://localhost:8080/struts 2 example/doubleselectaction . action*
+`http://localhost:8080/struts2example/doubleSelectAction.action`
 
 ![Struts 2 double select example](img/fa1b83088938363afba612e17f8aec9e.png "struts2-doubleselect-example-1")
 
-*http://localhost:8080/struts 2 example/result action . action*
+`http://localhost:8080/struts2example/resultAction.action`
 
 ![Struts 2 double select example](img/e8cf852db9b81da60872a9834c29ea1f.png "struts2-doubleselect-example-2")
 
 ## 参考
 
-1.  [Struts 2 双击文档](http://web.archive.org/web/20190304032357/http://struts.apache.org/2.1.8/docs/doubleselect.html)
-2.  [支柱 2 < s:选择>示例](http://web.archive.org/web/20190304032357/http://www.mkyong.com/struts2/struts-2-sselect-drop-down-box-example/)
-3.  [http://chuanliang2007.spaces.live.com/blog/cns!E5B7AB2851A4C9D2！393 .条目](http://web.archive.org/web/20190304032357/http://chuanliang2007.spaces.live.com/blog/cns!E5B7AB2851A4C9D2!393.entry)
+1. [Struts 2 双击文档](http://web.archive.org/web/20190304032357/http://struts.apache.org/2.1.8/docs/doubleselect.html)
+2. [Struts 2 `<s:select>`示例](http://web.archive.org/web/20190304032357/http://www.mkyong.com/struts2/struts-2-sselect-drop-down-box-example/)
+3. [http://chuanliang2007.spaces.live.com/blog/cns!E5B7AB2851A4C9D2！393 .条目](http://web.archive.org/web/20190304032357/http://chuanliang2007.spaces.live.com/blog/cns!E5B7AB2851A4C9D2!393.entry)
 
 [dropdown](http://web.archive.org/web/20190304032357/http://www.mkyong.com/tag/dropdown/) [struts2](http://web.archive.org/web/20190304032357/http://www.mkyong.com/tag/struts2/)
-
-
-
-
-
-
-

@@ -1,3 +1,4 @@
+
 # Spring Boot + JPA —清除测试
 
 > 原文：<https://medium.com/javarevisited/spring-boot-jpa-clear-tests-95804529863b?source=collection_archive---------2----------------------->
@@ -10,7 +11,7 @@
 
 您可以在[库](https://github.com/SimonHarmonicMinor/spring-boot-testing-data-patterns)中找到所有代码片段。
 
-# 领域模型
+## 领域模型
 
 假设我们正在开发[中型](/)服务。人们可以发表帖子和评论。下面是数据库模式。
 
@@ -20,13 +21,13 @@
 
 下面是相应的 Hibernate 实体。
 
-## 邮政
+### 邮政
 
-## 评论
+### 评论
 
-## 用户
+### 用户
 
-# 商业案例
+## 商业案例
 
 假设我们应该显示排名前 N 位的帖子，按带有评论的降序排列。
 
@@ -38,18 +39,18 @@
 
 这个测试通过了。它工作正常。反正有些问题是要提的。
 
-1.  这个阶段太复杂了
-2.  测试有太多的依赖项
-3.  断言含糊不清
+1. 这个阶段太复杂了
+2. 测试有太多的依赖项
+3. 断言含糊不清
 
 在执行查询之前，我们需要在数据库中插入一些记录。在这种情况下，实体通过构造函数被实例化。看起来是个不错的设计选择。所有必需的属性都可以作为参数传递。如果稍后出现另一个字段，它也可以包含在构造函数中。因此，我们可以保证所有的`non-null`字段都存在。
 
 细节决定成败。
 
-1.  测试代码变得与构造函数定义过于耦合。你看，可能有大量的测试需要创建帖子、评论和用户。如果这些实体的构造函数中的任何一个通过另一个属性得到增强，那么直接实例化对象的所有代码部分都不会编译。
-2.  并非所有的实体字段在每个测试用例中都是必要的。例如，在测试`findTopPosts`方法时，我们只对`Post`实体的`rating`值感兴趣。
-3.  这些论点不是不言自明的。`Post`实体构造函数有 5 个位置参数。每次查看测试套件时，您都必须停下来分析将要分配的目标值。
-4.  测试用例是*命令式的*而不是*声明式的*。为什么这是个问题？因为测试是 API 契约。写得好的测试就像完美的类文档。
+1. 测试代码变得与构造函数定义过于耦合。你看，可能有大量的测试需要创建帖子、评论和用户。如果这些实体的构造函数中的任何一个通过另一个属性得到增强，那么直接实例化对象的所有代码部分都不会编译。
+2. 并非所有的实体字段在每个测试用例中都是必要的。例如，在测试`findTopPosts`方法时，我们只对`Post`实体的`rating`值感兴趣。
+3. 这些论点不是不言自明的。`Post`实体构造函数有 5 个位置参数。每次查看测试套件时，您都必须停下来分析将要分配的目标值。
+4. 测试用例是*命令式的*而不是*声明式的*。为什么这是个问题？因为测试是 API 契约。写得好的测试就像完美的类文档。
 
 我们可以用[对象母模式](https://martinfowler.com/bliki/ObjectMother.html)来解决。具有多个创建策略的简单工厂。这就是我们如何实例化新的`Post`对象。
 
@@ -63,7 +64,7 @@
 
 对象母模式通过减少参数的数量部分解决了参数名的问题。无论如何，解决方案远非完美。
 
-# 测试数据生成器
+## 测试数据生成器
 
 [测试数据生成器](https://www.javacodegeeks.com/2014/06/test-data-builders-and-object-mother-another-look.html)是对象母模式的一个替代方案。是典型的 [GoF 模式](https://refactoring.guru/design-patterns/builder)。但是我们为我们的测试用例做了一些改进。
 
@@ -89,7 +90,7 @@ org.hibernate.TransientPropertyValueException: Not-null property references a tr
 
 `Post.author`保存不传播。它可以通过使用`CascadeType.PERSIST`选项来修复。但是也许我们不需要在应用程序中级联作者持久性。所以，仅仅为了让测试“绿色”而改变它是错误的。
 
-# 持久包装
+## 持久包装
 
 在调用`build`方法时，将创建`Post`实体及其所有关系(作者和评论)。因此，当相应的构建器处理实例化时，我们需要持久化子对象。还记得附加的`Builder`接口吗？它现在会帮助我们。
 
@@ -123,7 +124,7 @@ org.hibernate.TransientPropertyValueException: Not-null property references a tr
 
 另一个需要重构的是`PostRepository`的用法。我们不需要在特定的 Spring 数据仓库上添加额外的依赖。我们可以将`save`方法直接添加到`TestDBFacade`中。
 
-# 明确的主张
+## 明确的主张
 
 我想讨论的最后一件事是断言的用法。再看一下现在的测试。
 
@@ -143,14 +144,16 @@ Actual   : false
 
 没那么描述性。但是有一个更好的选择。
 
-# 哈姆克雷斯特
+### 哈姆克雷斯特
 
 [Hamcrest](http://hamcrest.org/) 是一个断言库，帮助构建*匹配器*的声明管道。例如，这就是如何验证帖子计数的方法。
 
 与最初的尝试没有太大的不同。另外两个呢？这些断言是面向领域的。Hamcrest 不为特定的商业案例提供实用程序。但让 Hamrest 强大的是定制匹配器。这是一个评论计数验证。
 
 `matchesSafely`方法执行断言本身。在这种情况下，我们检查排序的是否等于初始的。
+
 `describeTo`方法给断言分配一个标签。
+
 和`describeMismatchSafely`记录测试失败时的输出。
 
 断言的用法很简单。
@@ -179,17 +182,17 @@ Expected: is sorted posts by rating in desc order
 
 同样，用户的意图很明显。我们期望收到`[9, 8, 7]`，但收到的是`[7, 8, 9]`。
 
-# 摘要
+## 摘要
 
 我们做了一些重构。我们来对比一下最初的尝试和最终的版本。
 
-## 第一次尝试
+### 第一次尝试
 
-## 最终版本
+### 最终版本
 
 第一个选项是一组命令。很难理解我们到底在测试什么。而第二种方法告诉我们更多关于行为的信息。它更像是描述类的契约的文档。
 
-# 结论
+## 结论
 
 曾经听过一句至理名言。
 
@@ -199,12 +202,12 @@ Expected: is sorted posts by rating in desc order
 
 这就是我想告诉你的关于编写清晰测试的全部内容。如果你有任何问题，请在下面留下你的评论。感谢阅读！
 
-# 资源
+## 资源
 
-1.  [Spring Boot 测试—数据和服务](/javarevisited/spring-boot-testing-data-and-services-bc8b4c62ee8f?source=friends_link&sk=86148a772616274202776f4515c078e4)
-2.  [Spring Boot 测试——测试集装箱和飞行路线](/javarevisited/spring-boot-testing-testcontainers-and-flyway-df4a71376db4?source=friends_link&sk=1d0ffcd36bb4265c2d0120520bc8a567)
-3.  [带有代码示例的知识库](https://github.com/SimonHarmonicMinor/spring-boot-testing-data-patterns)
-4.  [对象母模式](https://martinfowler.com/bliki/ObjectMother.html)
-5.  [测试数据生成器](https://www.javacodegeeks.com/2014/06/test-data-builders-and-object-mother-another-look.html)
-6.  [构建器模式](https://refactoring.guru/design-patterns/builder)
-7.  [汉克莱斯特](http://hamcrest.org/)
+1. [Spring Boot 测试—数据和服务](/javarevisited/spring-boot-testing-data-and-services-bc8b4c62ee8f?source=friends_link&sk=86148a772616274202776f4515c078e4)
+2. [Spring Boot 测试——测试集装箱和飞行路线](/javarevisited/spring-boot-testing-testcontainers-and-flyway-df4a71376db4?source=friends_link&sk=1d0ffcd36bb4265c2d0120520bc8a567)
+3. [带有代码示例的知识库](https://github.com/SimonHarmonicMinor/spring-boot-testing-data-patterns)
+4. [对象母模式](https://martinfowler.com/bliki/ObjectMother.html)
+5. [测试数据生成器](https://www.javacodegeeks.com/2014/06/test-data-builders-and-object-mother-another-look.html)
+6. [构建器模式](https://refactoring.guru/design-patterns/builder)
+7. [汉克莱斯特](http://hamcrest.org/)

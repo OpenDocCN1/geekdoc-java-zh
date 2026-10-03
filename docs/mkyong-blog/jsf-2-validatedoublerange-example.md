@@ -1,29 +1,28 @@
+
 # JSF 2 有效双程示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jsf2/jsf-2-validatedoublerange-example/>
 
-" **f:validateDoubleRange** "是一个 JSF 范围验证器标签，用于验证浮点值的范围。举个例子，
+`f:validateDoubleRange`是一个 JSF 范围验证器标签，用于验证浮点值的范围。举个例子：
 
 ```java
- <h:inputText id="salary" value="#{user.salary}">
+<h:inputText id="salary" value="#{user.salary}">
 	<f:validateDoubleRange minimum="10.11" maximum="10000.11" />
-</h:inputText> 
+</h:inputText>
 ```
 
-提交该表单时，验证器将确保“薪金”值在“10.11”到“10000.11”的范围内。
+提交该表单时，验证器将确保“薪金”值在`10.11`到`10000.11`的范围内。
 
-## “f:validateDoubleRange”示例
+## `f:validateDoubleRange`示例
 
-一个 JSF 2.0 的例子展示了如何使用" **f:validateDoubleRange** "标签来验证" salary "输入字段的范围，当验证器失败时，通过" **h:message** "标签显示错误消息。
+一个 JSF 2.0 的例子展示了如何使用`f:validateDoubleRange`标签来验证`salary`输入字段的范围，当验证器失败时，通过`h:message`标签显示错误消息。
 
-freestar.config.enabled_slots.push({ placementName: "mkyong_incontent_1", slotId: "mkyong_incontent_1" });
-
-## 1.受管 Bean
+## 1. 受管 Bean
 
 用户管理的 bean，具有“薪金”属性。
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
@@ -43,15 +42,15 @@ public class UserBean implements Serializable{
 		this.salary = salary;
 	}
 
-} 
+}
 ```
 
-## 2.JSF·佩奇
+## 2. JSF 页面
 
-JSF XHTML 页面，展示了如何使用" **f:validateDoubleRange** "标记来确保" salary "输入值在" 10.11 "到" 10000.11 "的范围内。
+JSF XHTML 页面，展示了如何使用`f:validateDoubleRange`标记来确保`salary`输入值在`10.11`到`10000.11`的范围内。
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html    
@@ -85,14 +84,12 @@ JSF XHTML 页面，展示了如何使用" **f:validateDoubleRange** "标记来�
 	</h:form>
 
     </h:body>
-</html> 
+</html>
 ```
 
-## 3.演示
+## 3. 演示
 
 最小范围验证失败。
-
-
 
 ![jsf2-ValidateDoubleRange-Example-1](img/c025eb7d3a624ac83c68dac85ec516a5.png "jsf2-ValidateDoubleRange-Example-1")
 
@@ -102,7 +99,8 @@ Download It – [JSF-2-ValidateDoubleRange-Example.zip](http://web.archive.org/w
 
 ## 参考
 
-1.  [JSF 2 验证了 DoubleRange JavaDoc](http://web.archive.org/web/20210220021049/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/f/validateDoubleRange.html)
-2.  [维基浮点解释](http://web.archive.org/web/20210220021049/https://en.wikipedia.org/wiki/Floating_point)
+1. [JSF 2 验证了 DoubleRange JavaDoc](http://web.archive.org/web/20210220021049/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/f/validateDoubleRange.html)
 
-Tags : [jsf2](http://web.archive.org/web/20210220021049/https://mkyong.com/tag/jsf2/) [validation](http://web.archive.org/web/20210220021049/https://mkyong.com/tag/validation/)freestar.config.enabled_slots.push({ placementName: "mkyong_leaderboard_btf", slotId: "mkyong_leaderboard_btf" });<input type="hidden" id="mkyong-current-postId" value="7513">
+2. [维基浮点解释](http://web.archive.org/web/20210220021049/https://en.wikipedia.org/wiki/Floating_point)
+
+Tags : [jsf2](http://web.archive.org/web/20210220021049/https://mkyong.com/tag/jsf2/) [validation](http://web.archive.org/web/20210220021049/https://mkyong.com/tag/validation/)

@@ -1,3 +1,4 @@
+
 # 生成公钥和私钥
 
 > 原文：[`docs.oracle.com/javase/tutorial/security/apisign/step2.html`](https://docs.oracle.com/javase/tutorial/security/apisign/step2.html)
@@ -12,7 +13,7 @@
 
 生成密钥对需要几个步骤：
 
-创建密钥对生成器
+## 创建密钥对生成器
 
 第一步是获取用于生成 DSA 签名算法密钥的密钥对生成器对象。
 
@@ -34,7 +35,7 @@ KeyPairGenerator keyGen = KeyPairGenerator.getInstance("DSA", "SUN");
 
 ```
 
-初始化密钥对生成器
+## 初始化密钥对生成器
 
 下一步是初始化密钥对生成器。所有密钥对生成器都共享密钥大小和随机源的概念。`KeyPairGenerator`类有一个`initialize`方法，接受这两种类型的参数。
 
@@ -52,7 +53,7 @@ keyGen.initialize(1024, random);
 
 有些情况需要强随机值，比如创建高价值和长期存在的秘密，如 RSA 公钥和私钥。为了帮助应用程序选择合适的强`SecureRandom`实现，从 JDK 8 开始，Java 发行版在`java.security.Security`类的`securerandom.strongAlgorithms`属性中包含了已知的强`SecureRandom`实现列表。当您创建这样的数据时，应考虑使用`SecureRandom.getInstanceStrong()`，因为它获取已知强算法的实例。
 
-生成密钥对
+## 生成密钥对
 
 最后一步是生成密钥对，并将密钥存储在`PrivateKey`和`PublicKey`对象中。
 

@@ -1,18 +1,19 @@
+
 # 杰克逊 vs Gson
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/jackson-vs-gson>
 
-## 1。简介
+## 1. 简介
 
-在本文中，我们将比较用于将 JSON 数据序列化和反序列化为 Java 对象的 [Gson](https://web.archive.org/web/20221117184333/https://code.google.com/p/google-gson) 和[Jackson](https://web.archive.org/web/20221117184333/https://github.com/FasterXML/jackson)API，反之亦然。
+在本文中，我们将比较用于将 JSON 数据序列化和反序列化为 Java 对象的`Gson`和`Jackson`API，反之亦然。
 
-Gson 和 Jackson 是为 Java 提供 JSON 数据绑定支持的完整库。每个都是积极开发的开源项目，提供对复杂数据类型的处理和对 Java 泛型的支持。
+`Gson`和`Jackson`是为 Java 提供 JSON 数据绑定支持的完整库。每个都是积极开发的开源项目，提供对复杂数据类型的处理和对 Java 泛型的支持。
 
 在大多数情况下，两个库都可以反序列化为一个实体，而无需修改实体类，这在开发人员无法访问实体源代码的情况下非常重要。
 
-## 2。Gson Maven 依赖性
+## 2. Gson Maven 依赖性
 
-```java
+```xml
 <dependency>
     <groupId>com.google.code.gson</groupId>
     <artifactId>gson</artifactId>
@@ -20,9 +21,9 @@ Gson 和 Jackson 是为 Java 提供 JSON 数据绑定支持的完整库。每个
 </dependency>
 ```
 
-你可以在这里获得最新版本的 Gson [。](https://web.archive.org/web/20221117184333/https://search.maven.org/classic/#search|gav|1|g%3A%22com.google.code.gson%22%20AND%20a%3A%22gson%22)
+你可以在这里获得最新版本的`Gson`。
 
-## 3。Gson 序列化
+## 3. Gson 序列化
 
 序列化将 Java 对象转换为 JSON 输出。考虑以下实体:
 
@@ -44,7 +45,7 @@ public class Movie {
 }
 ```
 
-### 3.1。简单序列化
+### 3.1. 简单序列化
 
 让我们从一个 Java 到 JSON 序列化的例子开始:
 
@@ -67,7 +68,7 @@ String serializedMovie = new Gson().toJson(movie);
 
 这将导致:
 
-```java
+```json
 {
     "imdbId": "tt0472043",
     "director": "Mel Gibson",
@@ -85,11 +86,11 @@ String serializedMovie = new Gson().toJson(movie);
 *   `dateOfBirth`字段用默认的 Gson 日期模式翻译
 *   输出没有格式化，JSON 属性名对应于 Java 实体
 
-### 3.2。自定义序列化
+### 3.2. 自定义序列化
 
 使用自定义序列化程序允许我们修改标准行为。我们可以用 HTML 引入一个输出格式化程序，处理`null`值，从输出中排除属性，或者添加一个新的输出。
 
-`ActorGsonSerializer` 修改`ActorGson`元素的 JSON 代码的生成:
+`ActorGsonSerializer`修改`ActorGson`元素的 JSON 代码的生成:
 
 ```java
 public class ActorGsonSerializer implements JsonSerializer<ActorGson> {
@@ -124,7 +125,7 @@ public class ActorGsonSerializer implements JsonSerializer<ActorGson> {
 }
 ```
 
-为了排除`director` 属性，`@Expose`注释用于我们想要考虑的属性:
+为了排除`director`属性，`@Expose`注释用于我们想要考虑的属性:
 
 ```java
 public class MovieWithNullValue {
@@ -162,7 +163,7 @@ String serializedMovie = gson.toJson(movieWithNullValue);
 
 结果如下:
 
-```java
+```json
 {
   "imdbId": null,
   "actors": [
@@ -180,14 +181,14 @@ String serializedMovie = gson.toJson(movieWithNullValue);
 
 *   输出被格式化
 *   一些属性名称被更改并包含 HTML
-*   包含`null`值，省略`director` 字段
+*   包含`null`值，省略`director`字段
 *   `Date`现在是`dd-MM-yyyy`格式
 *   一个新的属性出现了—`N° Film`
 *   从影记录是一个格式化的属性，不是默认的 JSON 列表
 
-## 4。Gson 反序列化
+## 4. Gson 反序列化
 
-### 4.1。简单的反序列化
+### 4.1. 简单的反序列化
 
 反序列化将 JSON 输入转换成 Java 对象。为了说明输出，我们在两个实体类中都实现了`toString()`方法:
 
@@ -223,7 +224,7 @@ outputMovie.toString();
 
 输出是我们的实体，其中填充了来自 JSON 输入的数据:
 
-```java
+```text
 Movie [imdbId=tt0472043, director=null, actors=[ActorGson 
   [imdbId=nm2199632, dateOfBirth=Tue Sep 21 04:00:00 PDT 1982, 
   filmography=[Apocalypto, Beatdown, Wind Walkers]]]]
@@ -231,10 +232,10 @@ Movie [imdbId=tt0472043, director=null, actors=[ActorGson
 
 与简单序列化程序的情况一样:
 
-*   JSON 输入名必须与 Java 实体名一致，否则它们将被设置为 null。
+*   JSON 输入名必须与 Java 实体名一致，否则它们将被设置为`null`。
 *   `dateOfBirth`字段用默认的 Gson 日期模式翻译，忽略了时区。
 
-### 4.2。自定义反序列化
+### 4.2. 自定义反序列化
 
 使用定制的反序列化器允许我们修改标准的反序列化行为。在这种情况下，我们希望日期反映出`dateOfBirth`的正确时区。我们在`ActorGson`实体上使用一个定制的`ActorGsonDeserializer`来实现这一点:
 
@@ -260,8 +261,8 @@ public class ActorGsonDeserializer implements JsonDeserializer<ActorGson> {
             }
         }
 
-    ActorGson actorGson = new ActorGson(jsonImdbId.getAsString(),
-      sdf.parse(jsonDateOfBirth.getAsString()), filmList);
+        ActorGson actorGson = new ActorGson(jsonImdbId.getAsString(),
+          sdf.parse(jsonDateOfBirth.getAsString()), filmList);
         return actorGson;
     }
 }
@@ -271,7 +272,7 @@ public class ActorGsonDeserializer implements JsonDeserializer<ActorGson> {
 
 注意，我们可以决定只为日期编写一个定制的反序列化器，但是`ActorGsonDeserializer`提供了反序列化过程的更详细的视图。
 
-还要注意，Gson 方法不需要修改`ActorGson` 实体，这是理想的，因为我们可能不总是能够访问输入实体。我们在这里使用定制的反序列化器:
+还要注意，Gson 方法不需要修改`ActorGson`实体，这是理想的，因为我们可能不总是能够访问输入实体。我们在这里使用定制的反序列化器:
 
 ```java
 String jsonInput = "{\"imdbId\":\"tt0472043\",\"actors\":"
@@ -288,15 +289,15 @@ outputMovie.toString();
 
 输出类似于简单的反序列化器结果，只是日期使用了正确的时区:
 
-```java
+```text
 Movie [imdbId=tt0472043, director=null, actors=[ActorGson
   [imdbId=nm2199632, dateOfBirth=Tue Sep 21 12:00:00 PDT 1982, 
   filmography=[Apocalypto, Beatdown, Wind Walkers]]]]
 ```
 
-## 5。杰克逊 Maven 依赖
+## 5. 杰克逊 Maven 依赖
 
-```java
+```xml
 <dependency> 
     <groupId>com.fasterxml.jackson.core</groupId> 
     <artifactId>jackson-databind</artifactId>   
@@ -306,13 +307,15 @@ Movie [imdbId=tt0472043, director=null, actors=[ActorGson
 
 你可以在这里得到杰克逊的最新版本。
 
-## 6。杰克逊连载
+## 6. 杰克逊连载
 
-### 6.1。简单序列化
+### 6.1. 简单序列化
 
-在这里，我们将使用 Jackson 获得与 Gson 相同的序列化内容，使用以下实体。请注意，实体的 getter/setter 必须是公共的:
 
-```java
+
+在这里，我们将使用 `Jackson` 获得与 `Gson` 相同的序列化内容，使用以下实体。请注意，实体的 `getter/setter` 必须是公共的:
+
+```
 public class ActorJackson {
     private String imdbId;
     private Date dateOfBirth;
@@ -340,7 +343,7 @@ String jsonResult = mapper.writeValueAsString(movie);
 
 输出如下所示:
 
-```java
+```
 {"imdbId":"tt0472043","director":"Mel Gibson","actors":
 [{"imdbId":"nm2199632","dateOfBirth":401439600000,
 "filmography":["Apocalypto","Beatdown","Wind Walkers"]}]}
@@ -348,15 +351,15 @@ String jsonResult = mapper.writeValueAsString(movie);
 
 一些有趣的注意事项:
 
-*   是我们的 Jackson 串行器/解串器
-*   输出 JSON 未格式化
-*   默认情况下，Java 日期被转换为`long` 值
+- 是我们的 `Jackson` 串行器/解串器
+- 输出 JSON 未格式化
+- 默认情况下，`Java` 日期被转换为`long` 值
 
-### 6.2。自定义序列化
+## 6.2. 自定义序列化
 
-我们可以通过为我们的实体扩展 StdSerializer 来创建一个用于生成`ActorJackson`元素的 Jackson serializer。再次注意，实体 getter/setter 必须是公共的:
+我们可以通过为我们的实体扩展 `StdSerializer` 来创建一个用于生成`ActorJackson`元素的 `Jackson` serializer。再次注意，实体 `getter/setter` 必须是公共的:
 
-```java
+```
 public class ActorJacksonSerializer extends StdSerializer<ActorJackson> {
 
     private SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
@@ -387,7 +390,7 @@ public class ActorJacksonSerializer extends StdSerializer<ActorJackson> {
 
 我们创建一个电影实体来允许忽略`director`字段:
 
-```java
+```
 public class MovieWithNullValue {
 
     private String imdbId;
@@ -404,7 +407,7 @@ public class MovieWithNullValue {
 
 现在我们可以继续进行自定义`ObjectMapper` 创建和设置:
 
-```java
+```
 SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 
 ActorJackson rudyYoungblood = new ActorJackson(
@@ -424,7 +427,7 @@ String jsonResult = mapper.registerModule(module)
 
 输出是格式化的 JSON，它处理`null`值、格式化日期、排除`director`字段并显示`N°`的新输出:
 
-```java
+```
 {
   "actors" : [ {
     "imdbId" : "nm2199632",
@@ -436,13 +439,13 @@ String jsonResult = mapper.registerModule(module)
 }
 ```
 
-## 7 .**。杰克逊反序列化**
+## 7. 杰克逊反序列化
 
-### 7.1。简单的反序列化
+### 7.1. 简单的反序列化
 
-为了说明输出，我们在两个 Jackson 实体类中实现了`toString()`方法:
+为了说明输出，我们在两个 `Jackson` 实体类中实现了`toString()`方法:
 
-```java
+```
 public class Movie {
     @Override
     public String toString() {
@@ -462,9 +465,9 @@ public class ActorJackson {
 }
 ```
 
-然后我们利用序列化的 JSON 并通过 Jackson 反序列化运行它:
+然后我们利用序列化的 JSON 并通过 `Jackson` 反序列化运行它:
 
-```java
+```
 String jsonInput = "{\"imdbId\":\"tt0472043\",\"actors\":
   [{\"imdbId\":\"nm2199632\",\"dateOfBirth\":\"1982-09-21T12:00:00+01:00\",
   \"filmography\":[\"Apocalypto\",\"Beatdown\",\"Wind Walkers\"]}]}";
@@ -474,7 +477,7 @@ Movie movie = mapper.readValue(jsonInput, Movie.class);
 
 输出是我们的实体，其中填充了来自 JSON 输入的数据:
 
-```java
+```
 Movie [imdbId=tt0472043, director=null, actors=[ActorJackson 
   [imdbId=nm2199632, dateOfBirth=Tue Sep 21 04:00:00 PDT 1982, 
   filmography=[Apocalypto, Beatdown, Wind Walkers]]]]
@@ -482,16 +485,16 @@ Movie [imdbId=tt0472043, director=null, actors=[ActorJackson
 
 与简单序列化程序的情况一样:
 
-*   JSON 输入名必须与 Java 实体名一致，否则它们被设置为`null,`
-*   `dateOfBirth`字段用默认的杰克逊日期模式翻译，忽略了时区。
+- JSON 输入名必须与 Java 实体名一致，否则它们被设置为`null,`
+- `dateOfBirth`字段用默认的`Jackson`日期模式翻译，忽略了时区。
 
-### 7.2。自定义反序列化
+### 7.2. 自定义反序列化
 
 使用定制的反序列化器允许我们修改标准的反序列化行为。
 
-在这种情况下，我们希望日期能够反映出`dateOfBirth,` 的正确时区，因此我们为 Jackson `ObjectMapper`添加了一个 DateFormatter:
+在这种情况下，我们希望日期能够反映出`dateOfBirth,` 的正确时区，因此我们为 `Jackson` `ObjectMapper`添加了一个 `DateFormatter`:
 
-```java
+```
 String jsonInput = "{\"imdbId\":\"tt0472043\",\"director\":\"Mel Gibson\",
   \"actors\":[{\"imdbId\":\"nm2199632\",\"dateOfBirth\":\"1982-09-21T12:00:00+01:00\",
   \"filmography\":[\"Apocalypto\",\"Beatdown\",\"Wind Walkers\"]}]}";
@@ -506,7 +509,7 @@ movie.toString();
 
 输出反映了正确的时区和日期:
 
-```java
+```
 Movie [imdbId=tt0472043, director=Mel Gibson, actors=[ActorJackson 
   [imdbId=nm2199632, dateOfBirth=Tue Sep 21 12:00:00 PDT 1982, 
   filmography=[Apocalypto, Beatdown, Wind Walkers]]]]
@@ -518,18 +521,18 @@ Movie [imdbId=tt0472043, director=Mel Gibson, actors=[ActorJackson
 
 这种方法的缺点是需要修改实体，这对于我们无法访问输入实体类的情况可能不太理想。
 
-## 8。结论
+## 8. 结论
 
-Gson 和 Jackson 都是序列化/反序列化 JSON 数据的好选择，使用简单，并且有很好的文档记录。
+`Gson` 和 `Jackson` 都是序列化/反序列化 JSON 数据的好选择，使用简单，并且有很好的文档记录。
 
-Gson 的优势:
+`Gson` 的优势:
 
-*   简单情况下`toJson` / `fromJson`的简单性
-*   对于反序列化，不需要访问 Java 实体
+- 简单情况下`toJson` / `fromJson`的简单性
+- 对于反序列化，不需要访问 Java 实体
 
-杰克逊的优点:
+`杰克逊`的优点:
 
-*   内置于所有 JAX-RS (Jersey、Apache CXF、RESTEasy、Restlet)和 Spring 框架中
-*   广泛的注释支持
+- 内置于所有 `JAX-RS` (`Jersey`、`Apache CXF`、`RESTEasy`、`Restlet`)和 `Spring` 框架中
+- 广泛的注释支持
 
 你可以在 GitHub 上找到 [Gson](https://web.archive.org/web/20221117184333/https://github.com/eugenp/tutorials/tree/master/json-modules/gson) 和 [Jackson](https://web.archive.org/web/20221117184333/https://github.com/eugenp/tutorials/tree/master/jackson-modules/jackson-core) 的代码。

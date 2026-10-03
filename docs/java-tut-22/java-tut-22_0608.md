@@ -1,3 +1,4 @@
+
 # 比较字符串
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/text/collationintro.html`](https://docs.oracle.com/javase/tutorial/i18n/text/collationintro.html)

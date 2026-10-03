@@ -1,10 +1,9 @@
+
 # 如何编写插入符监听器
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/events/caretlistener.html`](https://docs.oracle.com/javase/tutorial/uiswing/events/caretlistener.html)
 
 插入符事件发生在文本组件中的插入符（指示插入点的光标）移动或文本组件中的选择更改时。例如，当文本组件插入或删除文本时，文本组件的文档可以启动插入符事件。您可以使用`addCaretListener`方法将插入符监听器附加到任何`JTextComponent`子类的实例上。
-
-* * *
 
 **注意：**检测插入符更改的另一种方法是直接将监听器附加到插入符对象本身，而不是附加到管理插入符的文本组件。插入符会触发更改事件（*而不是*插入符事件），因此您需要编写一个更改监听器而不是插入符监听器。
 
@@ -12,7 +11,7 @@
 
 ```java
 ...
-*//where initialization occurs*
+//where initialization occurs
 CaretListenerLabel caretListenerLabel =
     new CaretListenerLabel("Caret Status");
 ...
@@ -43,14 +42,9 @@ protected class CaretListenerLabel extends JLabel
         }
     }
 }
-
 ```
 
-* * *
-
 **注意：**`caretUpdate`方法不能保证在事件分派线程中调用。要在`caretUpdate`中使用更新 GUI 的任何方法，需要特殊处理以确保它们在事件分派线程上执行。您可以通过将代码包装在`Runnable`中并在该`Runnable`上调用`SwingUtilities.invokeLater`来实现这一点。
-
-* * *
 
 您可以在使用 Swing 组件示例索引中找到`TextComponentDemo`的源文件链接。有关程序的插入符监听器方面的讨论，请参阅监听插入符和选择更改中的文本组件功能。
 

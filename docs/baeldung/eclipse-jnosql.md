@@ -1,14 +1,15 @@
+
 # Eclipse JNoSQL 指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/eclipse-jnosql>
 
-## 1。概述
+## 1. 概述
 
 Eclipse [JNoSQL](https://web.archive.org/web/20221221013845/https://projects.eclipse.org/projects/technology.jnosql) 是一组 API 和实现，**简化了 Java 应用程序与 NoSQL 数据库的交互**。
 
 在本文中，我们将学习如何设置和配置 JNoSQL 来与 NoSQL 数据库交互。我们将与通信和映射层一起工作。
 
-## 2。Eclipse JNoSQL 通信层
+## 2. Eclipse JNoSQL 通信层
 
 从技术上来说，通信层由两个模块组成: **Diana API 和一个驱动程序。**
 
@@ -16,19 +17,19 @@ Eclipse [JNoSQL](https://web.archive.org/web/20221221013845/https://projects.ecl
 
 我们可以将它与关系数据库中的 JDBC API 和 JDBC 驱动程序进行比较。
 
-### 2.1。Eclipse JNoSQL Diana API
+### 2.1. Eclipse JNoSQL Diana API
 
 简单地说，NoSQL 数据库有四种基本类型:键值、列、文档和图形。
 
 Eclipse JNoSQL Diana API 定义了三个模块:
 
-1.  戴安娜-键值
-2.  戴安娜专栏
-3.  戴安娜-文件
+1. 戴安娜-键值
+2. 戴安娜专栏
+3. 戴安娜-文件
 
 API 没有覆盖 NoSQL 图形类型，因为它已经被 [Apache ThinkerPop](https://web.archive.org/web/20221221013845/https://tinkerpop.apache.org/) 覆盖了。
 
-该 API 基于核心模块 diana-core，并定义了常见概念的抽象，如配置、工厂、管理器、实体和值。
+该 API 基于核心模块 `diana-core`，并定义了常见概念的抽象，如配置、工厂、管理器、实体和值。
 
 为了使用 API，我们需要提供相应模块对我们的 NoSQL 数据库类型的依赖。
 
@@ -64,7 +65,7 @@ API 没有覆盖 NoSQL 图形类型，因为它已经被 [Apache ThinkerPop](htt
 
 最新版本可以在 [Maven Central](https://web.archive.org/web/20221221013845/https://search.maven.org/classic/#search%7Cga%7C1%7Corg.jnosql.diana) 上找到。
 
-### 2.2.Eclipse JNoSQL Diana 驱动程序
+### 2.2. Eclipse JNoSQL Diana 驱动程序
 
 **驱动程序是最常见的 NoSQL 数据库的一组 API 实现**。
 
@@ -99,7 +100,7 @@ API 没有覆盖 NoSQL 图形类型，因为它已经被 [Apache ThinkerPop](htt
 
 在接下来的小节中，我们将为每种 NoSQL 数据库类型解释这个过程。
 
-### 2.3。使用面向文档的数据库
+### 2.3. 使用面向文档的数据库
 
 在本例中，**我们将使用嵌入式 MongoDB** ,因为它很容易上手，不需要安装。它是面向文档的，下面的说明适用于任何其他面向文档的 NoSQL 数据库。
 
@@ -144,7 +145,7 @@ DocumentCollectionManagerFactory managerFactory
 DocumentCollectionManager manager = managerFactory.get("my-db");
 ```
 
-最后，我们准备好了。`Manager `提供了通过`DocumentEntity.`与底层 NoSQL 数据库交互的所有必要方法
+最后，我们准备好了。`Manager`提供了通过`DocumentEntity.`与底层 NoSQL 数据库交互的所有必要方法
 
 例如，我们可以插入一个文档:
 
@@ -187,7 +188,7 @@ DefaultDocumentEntity{documents={pages=620, author=baeldung, name=JNoSQL in Acti
 []
 ```
 
-### 2.4。使用面向列的数据库
+### 2.4. 使用面向列的数据库
 
 在本节中，**我们将使用 Cassandra 数据库**的嵌入式版本，因此不需要安装。
 
@@ -206,9 +207,9 @@ DefaultDocumentEntity{documents={pages=620, author=baeldung, name=JNoSQL in Acti
 </dependency>
 ```
 
-接下来，我们需要在类路径上的配置文件`diana-cassandra.properties, `中指定配置设置。或者，我们也可以使用硬编码的配置值。
+接下来，我们需要在类路径上的配置文件`diana-cassandra.properties`中指定配置设置。或者，我们也可以使用硬编码的配置值。
 
-然后，用类似的方法，我们将创建一个`ColumnFamilyManager`并开始操作`ColumnEntity:`
+然后，用类似的方法，我们将创建一个`ColumnFamilyManager`并开始操作`ColumnEntity`:
 
 ```java
 ColumnConfiguration configuration = new CassandraConfiguration();
@@ -229,7 +230,7 @@ ColumnEntity saved = entityManager.insert(columnEntity);
 
 要运行示例并在控制台中查看输出，请运行`ColumnFamilyApp`应用程序。
 
-### 2.5。使用面向键值的数据库
+### 2.5. 使用面向键值的数据库
 
 在本节中，我们将使用 Hazelcast。Hazelcast 是一个面向键值的 NoSQL 数据库。关于黑兹尔卡斯特数据库的更多信息，你可以查看这个[链接](/web/20221221013845/https://www.baeldung.com/java-hazelcast)。
 
@@ -248,7 +249,7 @@ ColumnEntity saved = entityManager.insert(columnEntity);
 </dependency>
 ```
 
-然后我们需要提供配置设置。接下来，我们可以获得一个`BucketManager`，然后操纵`KeyValueEntity:`
+然后我们需要提供配置设置。接下来，我们可以获得一个`BucketManager`，然后操纵`KeyValueEntity`:
 
 ```java
 KeyValueConfiguration configuration = new HazelcastKeyValueConfiguration();
@@ -271,7 +272,7 @@ public class Book implements Serializable {
 }
 ```
 
-所以我们创建一个`Book`实例，然后通过调用`put()`方法保存它；
+所以我们创建一个`Book`实例，然后通过调用`put()`方法保存它:
 
 ```java
 Book book = new Book(
@@ -292,7 +293,7 @@ Book savedBook = value.get(Book.class);
 
 要运行示例并在控制台中查看输出，请运行`KeyValueApp`应用程序。
 
-## 3。Eclipse JNoSQL 映射层
+## 3. Eclipse JNoSQL 映射层
 
 映射层，Artemis API，是一组帮助将 java 注释对象映射到 NoSQL 数据库的 API。它基于 Diana API 和 CDI(上下文和依赖注入)。
 
@@ -300,13 +301,15 @@ Book savedBook = value.get(Book.class);
 
 在本节中，我们将使用 MongoDB 面向文档的数据库。
 
-### 3.1。所需的依赖关系
+### 3.1. 所需的依赖关系
 
 为了在应用程序中启用 Artemis，我们需要添加`[artemis-configuration](https://web.archive.org/web/20221221013845/https://search.maven.org/classic/#search%7Cga%7C1%7Cartemis-configuration)`依赖项。因为 MongoDB 是面向文档的，所以还需要依赖关系 [artemis-document](https://web.archive.org/web/20221221013845/https://search.maven.org/classic/#search%7Cga%7C1%7Cartemis-document) 。
 
-对于其他类型的 NoSQL 数据库，我们将使用`artemis-column, artemis-key-value`和`artemis-graph`。
+对于其他类型的 NoSQL 数据库，我们将使用`artemis-column`, `artemis-key-value`和`artemis-graph`。
 
 MongoDB 还需要 Diana 驱动程序:
+
+
 
 ```java
 <dependency>
@@ -337,7 +340,7 @@ Artemis 基于 CDI，因此我们还需要提供这种 Maven 依赖性:
 </dependency>
 ```
 
-### 3.2。文档配置文件
+## 3.2. 文档配置文件
 
 配置是给定数据库的一组属性，让我们在代码之外提供设置。默认情况下，我们需要在 META-INF 资源下提供`jnosql.json`文件。
 
@@ -356,7 +359,7 @@ Artemis 基于 CDI，因此我们还需要提供这种 Maven 依赖性:
 ]
 ```
 
-我们需要通过在我们的`ConfigurationUnit` `.`中设置`name`属性来指定上面的配置名称。如果配置在不同的文件中，可以使用`fileName`属性来指定。
+我们需要通过在我们的`ConfigurationUnit`中设置`name`属性来指定上面的配置名称。如果配置在不同的文件中，可以使用`fileName`属性来指定。
 
 给定这个配置，我们创建一个工厂:
 
@@ -375,11 +378,11 @@ public MongoDBDocumentCollectionManager getEntityManager() {
 }
 ```
 
-`DocumentCollectionManager`是一个支持 CDI 的 bean，它在`Template`和`Repository.`中都有使用
+`DocumentCollectionManager`是一个支持 CDI 的 bean，它在`Template`和`Repository`中都有使用。
 
-### 3.3。映射
+## 3.3. 映射
 
-映射是一个注释驱动的过程，通过这个过程`Entity`模型被转换成 Diana `EntityValue.`
+映射是一个注释驱动的过程，通过这个过程`Entity`模型被转换成 Diana `EntityValue`。
 
 让我们从定义一个`Todo`模型开始:
 
@@ -401,13 +404,13 @@ public class Todo implements Serializable {
 }
 ```
 
-如上所示，我们有基本的映射注释:`@Entity, @Id,`和`@Column.`
+如上所示，我们有基本的映射注释:`@Entity`、`@Id`和`@Column`。
 
 现在要操作这个模型，我们需要一个`Template`类或者一个`Repository`接口。
 
-### 3.4。使用模板
+## 3.4. 使用模板
 
-**模板是实体模型和 Diana API** 之间的 **桥梁。对于面向文档的数据库，我们从注入`DocumentTemplate` bean 开始:**
+**模板是实体模型和 Diana API 之间的桥梁。对于面向文档的数据库，我们从注入`DocumentTemplate` bean 开始:**
 
 ```java
 @Inject
@@ -449,11 +452,11 @@ public void delete(String id) {
 }
 ```
 
-### 3.5。使用存储库
+## 3.5. 使用存储库
 
-除了`Template`类，我们还可以通过**`Repository`接口管理实体，该接口具有创建、更新、删除和检索**信息的方法。
+除了`Template`类，我们还可以通过`Repository`接口管理实体，该接口具有创建、更新、删除和检索信息的方法。
 
-为了使用`Repository`接口，我们只需提供一个`Repository:`的子接口
+为了使用`Repository`接口，我们只需提供一个`Repository`的子接口:
 
 ```java
 public interface TodoRepository extends Repository<Todo, String> {
@@ -499,9 +502,9 @@ mvn package liberty:run
 
 这个命令通过 [liberty-maven-plugin](https://web.archive.org/web/20221221013845/https://github.com/WASdev/ci.maven#liberty-maven-plugin) 构建、部署并启动 [Open Liberty](https://web.archive.org/web/20221221013845/https://www.openliberty.io/) 服务器。
 
-### 3.6。测试应用程序
+## 3.6. 测试应用程序
 
-由于应用程序公开了一个 REST 端点，我们可以使用任何 REST 客户端进行测试。这里我们使用了卷曲工具。
+由于应用程序公开了一个 REST 端点，我们可以使用任何 REST 客户端进行测试。这里我们使用了 `curl` 工具。
 
 所以要保存一个 Todo 类:
 
@@ -521,10 +524,10 @@ curl -H "Accept: application/json" -X GET http://localhost:9080/jnosql-artemis/t
 curl -H "Accept: application/json" -X GET http://localhost:9080/jnosql-artemis/todos/120
 ```
 
-## 4。结论
+## 4. 结论
 
 在本教程中，我们探讨了 JNoSQL 如何能够抽象出与 NoSQL 数据库的交互。
 
-**首先，我们已经使用 JNoSQL Diana API，用底层代码与数据库进行交互。然后，我们使用 JNoSQL Artemis API 来处理友好的 Java 注释模型**。
+首先，我们已经使用 JNoSQL Diana API，用底层代码与数据库进行交互。然后，我们使用 JNoSQL Artemis API 来处理友好的 Java 注释模型。
 
-像往常一样，我们可以在 Github 上找到本文中使用的代码[。](https://web.archive.org/web/20221221013845/https://github.com/eugenp/tutorials/tree/master/persistence-modules/jnosql)
+像往常一样，我们可以在 [Github](https://web.archive.org/web/20221221013845/https://github.com/eugenp/tutorials/tree/master/persistence-modules/jnosql) 上找到本文中使用的代码。

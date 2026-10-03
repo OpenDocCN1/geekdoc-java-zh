@@ -1,3 +1,4 @@
+
 # 编写数据报客户端和服务器
 
 > 原文：[`docs.oracle.com/javase/tutorial/networking/datagrams/clientServer.html`](https://docs.oracle.com/javase/tutorial/networking/datagrams/clientServer.html)
@@ -22,7 +23,6 @@ public class QuoteServer {
         new QuoteServerThread().start();
     }
 }
-
 ```
 
 `QuoteServerThread` 类实现了引用服务器的主要逻辑。
@@ -46,8 +46,7 @@ public QuoteServerThread(String name) throws IOException {
     catch (FileNotFoundException e){
         System.err.println("Couldn't open quote file.  Serving time instead.");
     }
-}  
-
+}
 ```
 
 请记住，某些端口专用于已知服务，您不能使用它们。如果指定一个正在使用的端口，`DatagramSocket`的创建将失败。
@@ -64,7 +63,6 @@ public QuoteServerThread(String name) throws IOException {
 byte[] buf = new byte[256];
 DatagramPacket packet = new DatagramPacket(buf, buf.length);
 socket.receive(packet);
-
 ```
 
 第一条语句创建了一个字节数组，然后用它创建了一个`DatagramPacket`。`DatagramPacket`将用于从套接字接收数据报，因为使用了创建它的构造函数。这个构造函数只需要两个参数：一个包含客户端特定数据的字节数组和字节数组的长度。在构造要通过`DatagramSocket`发送的`DatagramPacket`时，还必须提供数据包目的地的互联网地址和端口号。当我们讨论服务器如何响应客户端请求时，你会看到这一点。
@@ -80,7 +78,6 @@ if (in == null)
 else
     dString = getNextQuote();
 buf = dString.getBytes();
-
 ```
 
 如果由于某种原因未打开报价文件，则`in`等于 null。如果是这种情况，报价服务器将提供当天的时间。否则，报价服务器从已打开的文件中获取下一个报价。最后，代码将字符串转换为字节数组。
@@ -92,7 +89,6 @@ InetAddress address = packet.getAddress();
 int port = packet.getPort();
 packet = new DatagramPacket(buf, buf.length, address, port);
 socket.send(packet);
-
 ```
 
 这段代码中的前两条语句分别从客户端接收的数据报中获取了互联网地址和端口号。互联网地址和端口号指示了数据报包的来源。这是服务器必须发送响应的地方。在这个例子中，数据报包的字节数组不包含相关信息。根据报包的到达本身就表示了来自互联网地址和端口号所指示的客户端的请求。
@@ -103,10 +99,9 @@ socket.send(packet);
 
 ```java
 socket.close();
-
 ```
 
-## QuoteClient 类
+## `QuoteClient` 类
 
 `QuoteClient`类实现了`QuoteServer`的客户端应用程序。此应用程序向`QuoteServer`发送请求，等待响应，并在接收到响应时将其显示到标准输出。让我们详细看看代码。
 
@@ -118,7 +113,6 @@ InetAddress address;
 DatagramSocket socket = null;
 DatagramPacket packet;
 byte[] sendBuf = new byte[256];
-
 ```
 
 首先，`main`方法处理用于调用`QuoteClient`应用程序的命令行参数：
@@ -128,7 +122,6 @@ if (args.length != 1) {
     System.out.println("Usage: java QuoteClient <hostname>");
     return;
 }
-
 ```
 
 `QuoteClient`应用程序需要一个命令行参数：运行`QuoteServer`的机器的名称。
@@ -137,7 +130,6 @@ if (args.length != 1) {
 
 ```java
 DatagramSocket socket = new DatagramSocket();
-
 ```
 
 客户端使用一个不需要端口号的构造函数。此构造函数只是将`DatagramSocket`绑定到任何可用的本地端口。客户端绑定到的端口号并不重要，因为`DatagramPacket`包含寻址信息。服务器从`DatagramPacket`中获取端口号并将其响应发送到该端口。
@@ -150,7 +142,6 @@ InetAddress address = InetAddress.getByName(args[0]);
 DatagramPacket packet = new DatagramPacket(buf, buf.length, 
                                 address, 4445);
 socket.send(packet);
-
 ```
 
 代码段获取命令行上命名的主机的 Internet 地址（假设服务器运行的机器的名称）。然后使用此`InetAddress`和端口号 4445（服务器用于创建其`DatagramSocket`的端口号）创建一个发送到该 Internet 地址和端口号的`DatagramPacket`。因此，`DatagramPacket`将被传递到引用服务器。
@@ -164,7 +155,6 @@ packet = new DatagramPacket(buf, buf.length);
 socket.receive(packet);
 String received = new String(packet.getData(), 0, packet.getLength());
 System.out.println("Quote of the Moment: " + received);
-
 ```
 
 要从服务器获取响应，客户端创建一个“接收”数据包，并使用`DatagramSocket`的接收方法从服务器接收回复。接收方法会等待直到一个发送给客户端的数据包通过套接字传输过来。请注意，如果服务器的回复某种原因丢失，客户端将永远等待，因为数据报模型没有保证策略。通常，客户端会设置一个计时器，以便不会永远等待回复；如果没有收到回复，计时器会触发，客户端会重新发送。
@@ -182,5 +172,4 @@ System.out.println("Quote of the Moment: " + received);
 ```java
 Quote of the Moment:
 Good programming is 99% sweat and 1% coffee.
-
 ```

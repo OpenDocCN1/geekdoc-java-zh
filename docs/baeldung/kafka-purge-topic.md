@@ -1,16 +1,17 @@
+
 # 清除阿帕奇卡夫卡主题指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/kafka-purge-topic>
 
-## 1.概观
+## 1. 概观
 
 在本文中，我们将探索一些从 Apache Kafka 主题中清除数据的**策略。**
 
-## 2.清理场景
+## 2. 清理场景
 
 在我们学习清理数据的策略之前，让我们先了解一个需要清理活动的简单场景。
 
-### 2.1.方案
+### 2.1. 方案
 
 Apache Kafka **中的消息在配置的[保留时间](/web/20221102005738/https://www.baeldung.com/kafka-message-retention)** 后自动过期。尽管如此，在一些情况下，我们可能希望立即删除消息。
 
@@ -18,9 +19,9 @@ Apache Kafka **中的消息在配置的[保留时间](/web/20221102005738/https:
 
 这样的问题在开发环境中是最常见的，我们想要快速的结果。因此，批量删除邮件是合理的做法。
 
-### 2.2.模拟
+### 2.2. 模拟
 
-为了模拟这个场景，让我们从从 Kafka 安装目录创建一个`purge-scenario` 主题开始:
+为了模拟这个场景，让我们从从 Kafka 安装目录创建一个`purge-scenario`主题开始:
 
 ```java
 $ bin/kafka-topics.sh \
@@ -29,7 +30,7 @@ $ bin/kafka-topics.sh \
   --zookeeper localhost:2181
 ```
 
-接下来，让我们使用 [`shuf`](/web/20221102005738/https://www.baeldung.com/linux/read-random-line-from-file#using-shuf) 命令来让**生成随机数据并将其馈送给`kafka-console-producer.sh`** 脚本:
+接下来，让我们使用 [`shuf`](/web/20221102005738/https://www.baeldung.com/linux/read-random-line-from-file#using-shuf)命令来让**生成随机数据并将其馈送给`kafka-console-producer.sh`** 脚本:
 
 ```java
 $ /usr/bin/shuf -i 1-100000 -n 50000000 \
@@ -54,9 +55,9 @@ $ bin/kafka-console-consumer.sh \
 Processed a total of 3 messages
 ```
 
-## 3.消息过期
+## 3. 消息过期
 
-在`purge-scenario `主题中生成的消息将有一个七天的[默认保留期](/web/20221102005738/https://www.baeldung.com/kafka-message-retention#basics)。为了清除消息，我们可以**暂时将 [`retention.ms`](https://web.archive.org/web/20221102005738/http://log.retention.minutes/) 主题级属性**重置为 10 秒，然后等待消息过期:
+在`purge-scenario`主题中生成的消息将有一个七天的[默认保留期](/web/20221102005738/https://www.baeldung.com/kafka-message-retention#basics)。为了清除消息，我们可以**暂时将 [`retention.ms`](https://web.archive.org/web/20221102005738/http://log.retention.minutes/) 主题级属性**重置为 10 秒，然后等待消息过期:
 
 ```java
 $ bin/kafka-configs.sh --alter \
@@ -89,7 +90,7 @@ $ bin/kafka-configs.sh --alter \
 
 使用这种方法，Kafka 将为`purge-scenario`主题清除所有分区中的消息。
 
-## 4.选择性记录删除
+## 4. 选择性记录删除
 
 有时，我们可能希望从特定主题的一个或多个分区中有选择地删除记录。我们可以通过使用`kafka-delete-records.sh`脚本来满足这样的需求。
 
@@ -142,7 +143,7 @@ org.apache.kafka.common.errors.TimeoutException
 Processed a total of 0 messages 
 ```
 
-## 5.删除并重新创建主题
+## 5. 删除并重新创建主题
 
 清除 Kafka 主题的所有消息的另一个解决方法是删除并重新创建它。然而，只有当我们在启动 Kafka 服务器时将`delete.topic.enable`属性设置为 `**true**` **时，这才有可能**:****
 
@@ -169,6 +170,6 @@ $ bin/kafka-topics.sh --zookeeper localhost:2181 --list
 
 确认该主题不再列出后，我们现在可以继续创建它。
 
-## 6.结论
+## 6. 结论
 
 在本教程中，我们模拟了一个需要清除 Apache Kafka 主题的场景。此外，我们**探索了** **多种策略来完全或有选择地跨分区**清除它。

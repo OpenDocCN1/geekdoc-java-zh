@@ -1,3 +1,4 @@
+
 # 如何在 Java 12 中使用新的开关表达式
 
 > 原文：<https://medium.com/javarevisited/how-to-use-new-switch-expressions-in-java-12-8510ab9f83c3?source=collection_archive---------1----------------------->
@@ -117,4 +118,4 @@ shutterstock/斯蒂芬石膏
 
 而且，如果你想了解 JDK 8 和 JDK 13 之间增加的所有新功能，那么看看这个[课程列表](https://www.java67.com/2018/02/5-online-courses-to-learn-java-9-better.html):
 
-</javarevisited/top-5-courses-to-learn-new-features-of-java-8-to-java-13-107eb51d2a13> 
+</javarevisited/top-5-courses-to-learn-new-features-of-java-8-to-java-13-107eb51d2a13>

@@ -1,21 +1,22 @@
+
 # Struts 2 排序标签示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts2/struts-2-sort-tag-example/>
 
-Download It – [Struts2-Sort-Tag-Example.zip](http://web.archive.org/web/20190205032530/http://www.mkyong.com/wp-content/uploads/2010/07/Struts2-Sort-Tag-Example.zip)
+下载：[Struts2-Sort-Tag-Example.zip](http://web.archive.org/web/20190205032530/http://www.mkyong.com/wp-content/uploads/2010/07/Struts2-Sort-Tag-Example.zip)
 
-Struts 2 **sort** 标签用于使用 **java.util.Comparator** 对列表进行排序。在本教程中，您将创建 6 个 Person 对象并将所有对象添加到一个 ArrayList 中，并使用 **sort** 标签根据 Person 的属性对 ArrayList 进行排序。
+Struts 2 `sort`标签用于使用`java.util.Comparator`对列表进行排序。在本教程中，您将创建 6 个`Person`对象并将所有对象添加到一个`ArrayList`中，并使用`sort`标签根据`Person`的属性对`ArrayList`进行排序。
 
-To use this Struts 2 **sort** tag, you have to understand how **java.util.Comparator** work, please read this article – [Java object sorting with Comparator](http://web.archive.org/web/20190205032530/http://www.mkyong.com/java/java-object-sorting-example-comparable-and-comparator/).
+要使用 Struts 2 `sort`标签，您必须了解`java.util.Comparator`的工作原理，请阅读这篇文章：[Java object sorting with Comparator](http://web.archive.org/web/20190205032530/http://www.mkyong.com/java/java-object-sorting-example-comparable-and-comparator/)。
 
-## 1.人对象
+## 1. Person 对象
 
-创建一个具有“名字”、“姓氏”和“年龄”属性的 Person 对象。
+创建一个具有“名字”、“姓氏”和“年龄”属性的`Person`对象。
 
 **Person.java**
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 public class Person{
 
@@ -48,17 +49,17 @@ public class Person{
 	public void setAge(int age) {
 		this.age = age;
 	}
-} 
+}
 ```
 
- ## 2.比较仪
+## 2. 比较器
 
-创建 2 个**比较器**类，对人的“名字”和“年龄”属性进行排序。
+创建 2 个`Comparator`类，对人的“名字”和“年龄”属性进行排序。
 
 **FirstNameComparator.java**
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 import java.util.Comparator;
 import com.mkyong.common.Person;
@@ -72,13 +73,13 @@ public class FirstNameComparator implements Comparator<Person> {
 
 		return firstName1.compareTo(firstName2);
 	}
-} 
+}
 ```
 
 **AgeComparator.java**
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 import java.util.Comparator;
 import com.mkyong.common.Person;
@@ -90,15 +91,15 @@ public class AgeComparator implements Comparator<Person> {
 		return p1.getAge() - p2.getAge();
 
 	}	
-} 
+}
 ```
 
- ## 3.行动
+## 3. Action
 
-Action 类，初始化 6 个 Person 对象，并将其添加到一个 ArrayList 中。
+`Action`类，初始化 6 个`Person`对象，并将其添加到一个`ArrayList`中。
 
 ```java
- package com.mkyong.common.action;
+package com.mkyong.common.action;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -135,18 +136,18 @@ public class SortTagAction extends ActionSupport{
 	public void setPersons(List<Person> persons) {
 		this.persons = persons;
 	}
-} 
+}
 ```
 
-## 4.排序标签示例
+## 4. 排序标签示例
 
-一个 JSP 页面，展示了如何使用 **sort** 标签对带有 **FirstNameComparator** 和 **AgeComparator** 的列表进行排序。
+一个 JSP 页面，展示了如何使用`sort`标签对带有`FirstNameComparator`和`AgeComparator`的列表进行排序。
 
 **sort.jsp**
 
 ```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
- <html>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<html>
 <head>
 </head>
 
@@ -203,15 +204,15 @@ public class SortTagAction extends ActionSupport{
 </table>
 
 </body>
-</html> 
+</html>
 ```
 
-## 5.struts.xml
+## 5. struts.xml
 
 链接一下~
 
 ```java
- <?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
@@ -224,12 +225,12 @@ public class SortTagAction extends ActionSupport{
 			<result name="success">pages/sort.jsp</result>
 		</action>
 	</package>
-</struts> 
+</struts>
 ```
 
-## 4.演示
+## 6. 演示
 
-*http://localhost:8080/struts 2 example/sorttagaction . action*
+`http://localhost:8080/struts2example/sortTagAction.action`
 
 **输出**
 
@@ -237,15 +238,8 @@ public class SortTagAction extends ActionSupport{
 
 ## 参考
 
-1.  [Struts 2 排序标签文档](http://web.archive.org/web/20190205032530/http://struts.apache.org/2.1.8/docs/sort.html)
-2.  [Struts 2 Bean 标签文档](http://web.archive.org/web/20190205032530/http://struts.apache.org/2.1.8/docs/bean.html)
-3.  [Java 对象排序示例](http://web.archive.org/web/20190205032530/http://www.mkyong.com/java/java-object-sorting-example-comparable-and-comparator/)
+1. [Struts 2 排序标签文档](http://web.archive.org/web/20190205032530/http://struts.apache.org/2.1.8/docs/sort.html)
+2. [Struts 2 Bean 标签文档](http://web.archive.org/web/20190205032530/http://struts.apache.org/2.1.8/docs/bean.html)
+3. [Java 对象排序示例](http://web.archive.org/web/20190205032530/http://www.mkyong.com/java/java-object-sorting-example-comparable-and-comparator/)
 
 [struts2](http://web.archive.org/web/20190205032530/http://www.mkyong.com/tag/struts2/)
-
-
-
-
-
-
-

@@ -1,20 +1,21 @@
+
 # Java 8–周期和持续时间示例
 
-> 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java8/java-8-period-and-duration-examples/>
+> 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java8/java8-period-and-duration-examples/>
 
 几个例子向你展示如何使用 Java 8 `Duration`、`Period`和`ChronoUnit`对象找出日期之间的差异。
 
-1.  持续时间–以秒和纳秒为单位测量时间。
-2.  period–以年、月和日为单位测量时间。
+1. `Duration`–以秒和纳秒为单位测量时间。
+2. `Period`–以年、月和日为单位测量时间。
 
-## 1.持续时间示例
+## 1. `Duration`示例
 
 一个`java.time.Duration`示例，用于找出两个`LocalDateTime`之间的秒数差异
 
-DurationExample.java
+`DurationExample.java`
 
 ```java
- package com.mkyong.time;
+package com.mkyong.time;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -49,30 +50,30 @@ public class DurationExample {
         System.out.println(duration.getSeconds() + " seconds");
 
     }
-} 
+}
 ```
 
 输出
 
 ```java
- --- Examples --- 
+--- Examples --- 
 3600 seconds
 3600 seconds
 
 --- Duration.between --- 
 2016-08-31T10:20:55
 2016-11-09T10:21:56
-6048061 seconds 
+6048061 seconds
 ```
 
-## 2.期间示例
+## 2. `Period`示例
 
-一个`java.time.Period`示例，用于找出两个`LocalDates`之间的不同(年、月、日)
+一个`java.time.Period`示例，用于找出两个`LocalDate`之间的不同（年、月、日）
 
-PeriodExample.java
+`PeriodExample.java`
 
 ```java
- package com.mkyong.time;
+package com.mkyong.time;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -107,13 +108,13 @@ public class PeriodExample {
         System.out.print(period.getDays() + " days");
 
     }
-} 
+}
 ```
 
 输出
 
 ```java
- --- Examples --- 
+--- Examples --- 
 10
 1
 2
@@ -122,17 +123,17 @@ public class PeriodExample {
 --- Period.between --- 
 1982-08-31
 2016-11-09
-34 years,2 months,9 days 
+34 years,2 months,9 days
 ```
 
-## 3.计时单位示例
+## 3. `ChronoUnit`示例
 
-或者，您可以使用`ChronoUnit.{unit}.between`找出日期之间的差异，查看以下示例:
+或者，您可以使用`ChronoUnit.{unit}.between`找出日期之间的差异，查看以下示例：
 
-ChronoUnitExample.java
+`ChronoUnitExample.java`
 
 ```java
- package com.mkyong.time;
+package com.mkyong.time;
 
 import java.time.LocalDateTime;
 import java.time.Month;
@@ -171,13 +172,13 @@ public class ChronoUnitExample {
         System.out.println(nano + " nano");
 
     }
-} 
+}
 ```
 
 输出
 
 ```java
- 1982-08-31T10:20:55
+1982-08-31T10:20:55
 2016-11-09T10:21:56
 
 --- Total --- 
@@ -189,14 +190,12 @@ public class ChronoUnitExample {
 17984161 minutes
 1079049661 seconds
 1079049661000 milis
-1079049661000000000 nano 
+1079049661000000000 nano
 ```
 
 ## 参考
 
-1.  [甲骨文教程–周期和持续时间](http://web.archive.org/web/20221027024415/https://docs.oracle.com/javase/tutorial/datetime/iso/period.html)
-2.  [持续时间 JavaDoc](http://web.archive.org/web/20221027024415/https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html)
-3.  [句号 JavaDoc](http://web.archive.org/web/20221027024415/https://docs.oracle.com/javase/8/docs/api/java/time/Period.html)
-4.  [计时单位 JavaDoc](http://web.archive.org/web/20221027024415/https://docs.oracle.com/javase/8/docs/api/java/time/temporal/ChronoUnit.html)
-
-<input type="hidden" id="mkyong-current-postId" value="14072">
+1. [甲骨文教程–周期和持续时间](http://web.archive.org/web/20221027024415/https://docs.oracle.com/javase/tutorial/datetime/iso/period.html)
+2. [Duration JavaDoc](http://web.archive.org/web/20221027024415/https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html)
+3. [Period JavaDoc](http://web.archive.org/web/20221027024415/https://docs.oracle.com/javase/8/docs/api/java/time/Period.html)
+4. [ChronoUnit JavaDoc](http://web.archive.org/web/20221027024415/https://docs.oracle.com/javase/8/docs/api/java/time/temporal/ChronoUnit.html)

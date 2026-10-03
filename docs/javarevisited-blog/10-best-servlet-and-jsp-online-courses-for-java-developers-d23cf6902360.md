@@ -1,3 +1,4 @@
+
 # 2023 年 Java 开发人员在线学习的 10 门最佳 Servlet 和 JSP 课程
 
 > 原文：<https://medium.com/javarevisited/10-best-servlet-and-jsp-online-courses-for-java-developers-d23cf6902360?source=collection_archive---------1----------------------->
@@ -73,9 +74,13 @@ image_credit — udemy
 以下是您将在本课程中学到的重要内容:
 
 1.  如何使用 Servlet 构建 Web 应用程序
+
 2.  使用 JSP 从服务器返回 HTML 内容
+
 3.  在 web 应用中结合使用 Servlet 和 JSP
+
 4.  使用过滤器压缩数据
+
 5.  使用事件处理程序
 
 本课程还讨论了使用 Servlets 作为控制器，Java 服务器页面作为视图的模型-视图-控制器模式。您还将学习如何在标记库中隐藏复杂的 UI 交互。总的来说，这是一个学习 Servlet 和 JSP 的很好的在线课程。
@@ -108,17 +113,19 @@ image_credit — udemy
 
 **这里是加入本课程的链接**——[Java EE:编程 servlet](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fjava-ee-programming-servlets)
 
+
+
 [![](img/ef5bd5420f4dec607b486d00bdd09f04.png)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fjava-ee-programming-servlets)
 
-你需要一个 [Pluralsight 会员](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn)才能加入这个课程，费用大约是每月 29 美元或每年 299 美元(14%的折扣)。
+你需要一个 [Pluralsight 会员](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn)才能加入这个课程，费用大约是每月 29 美元或每年 299 美元（14% 的折扣）。
 
 我向所有程序员强烈推荐这个订阅，因为它提供了超过 7000 个在线课程的即时访问，以学习任何技术技能。或者，你也可以使用他们的 [**10 天免费通行证**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 免费观看这个课程。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>
 
 ## 7. [JSP 和 Servlets 完整课程](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjsp-and-servlets-the-complete-course%2F)
 
-这是 Udemy 为有经验的 Java 开发人员提供的另一个全面的 JSP 和 Servlet 编程培训课程。本培训课程涵盖了使用 JSP 和 Servlets 的动态 web 开发。它专注于基础层面的关键概念，这不仅对有经验的程序员有益，对初学者也有好处。您将通过动手练习和示例学习如何创建和部署[servlet](https://docs.oracle.com/javaee/6/api/javax/servlet/Servlet.html)和 [JSP](https://en.wikipedia.org/wiki/Jakarta_Server_Pages) 。
+这是 Udemy 为有经验的 Java 开发人员提供的另一个全面的 JSP 和 Servlet 编程培训课程。本培训课程涵盖了使用 JSP 和 Servlets 的动态 web 开发。它专注于基础层面的关键概念，这不仅对有经验的程序员有益，对初学者也有好处。您将通过动手练习和示例学习如何创建和部署 [servlet](https://docs.oracle.com/javaee/6/api/javax/servlet/Servlet.html) 和 [JSP](https://en.wikipedia.org/wiki/Jakarta_Server_Pages)。
 
 在此过程中，您还将了解 Servlet 生命周期以及如何从头开始构建功能完整的 JSP 和 Servlet web 应用程序。教程包括 5 个半小时的点播视频教程。
 
@@ -126,7 +133,7 @@ image_credit — udemy
 
 [![](img/8e707d3a306ed956dcb2e556183cd7f1.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjsp-and-servlets-the-complete-course%2F)
 
-## 8.[Java EE:servlet 和 Java server Pages(JSP)](http://linkedin-learning.pxf.io/c/1193463/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fjava-ee-servlets-and-javaserver-pages-jsp)【LinkedIn Learning】
+## 8. [Java EE:servlet 和 Java server Pages(JSP)](http://linkedin-learning.pxf.io/c/1193463/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fjava-ee-servlets-and-javaserver-pages-jsp)【LinkedIn Learning】
 
 这是为 Java EE 开发人员学习 Servlets 和 JSP 的另一个很棒的课程。该课程由 Ketkee Aryaman 创建，由 LinkedIn 旗下的教育机构 LinkedIn Learning 提供。
 
@@ -134,23 +141,21 @@ image_credit — udemy
 
 之后，您将学习 JSP 或 Java Server Pages，这是一种用于服务器端渲染的技术。您将首先回顾一些基本概念，比如 JSP 生命周期。
 
-本课程还包括会话管理、过滤器和监听器。最后，她介绍了 JSP 标准标签库(JSTL)核心模块和 **fmt 模块**，以及定制标签的开发。
+本课程还包括会话管理、过滤器和监听器。最后，她介绍了 JSP 标准标签库（JSTL）核心模块和 **fmt 模块**，以及定制标签的开发。
 
-**这里是加入本课程的链接**—[Java EE:servlet 和 JavaServer Pages (JSP)](http://linkedin-learning.pxf.io/c/1193463/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fjava-ee-servlets-and-javaserver-pages-jsp)
+**这里是加入本课程的链接** — [Java EE:servlet 和 JavaServer Pages (JSP)](http://linkedin-learning.pxf.io/c/1193463/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fjava-ee-servlets-and-javaserver-pages-jsp)
 
 ![](img/e32b9de444be90d85031c6560abfa2b8.png)
 
 顺便说一下，你需要一个 [LinkedIn Learning 会员](http://linkedin-learning.pxf.io/c/1193463/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fsubscription%2Fproducts)来观看这个课程，这个课程每月花费大约 29.99 美元，但是你也可以通过参加他们的 [**1 个月免费试用**](http://linkedin-learning.pxf.io/c/1193463/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fsubscription%2Fproducts) 来免费观看这个课程，这是一个探索他们 16000 多门最新技术在线课程的好方法。
 
-  
+## 9. [面向初学者的 JSP 和 servlet](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjsp-and-servlets-for-beginners%2F)【Udemy 最佳课程】
 
-## 9.[面向初学者的 JSP 和 servlet](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjsp-and-servlets-for-beginners%2F)【Udemy 最佳课程】
+这是 Udemy 为初学者提供的另一个学习 JSP 和 Servlets 的很棒的课程。由 Bushan Sigur 创建的这个长达 6 小时的课程将通过构建一个成熟的数据库应用程序来帮助您成为 JSP 和 Servlet 方面的专家。
 
-这是 Udemy 为初学者提供的另一个学习 JSP 和 Servlets 的很棒的课程。由 Bushan Sigur 创建的这个长达 6 小时的课程将通过构建一个成熟的数据库应用程序来帮助您成为 JSP 和 Servlet 方面的专家
+本课程从客户端和服务器架构的介绍开始，然后您将获得 JSP 和 Servlet 的高级概述。之后，您将建立一个开发环境，并使用 JSP 和 Servlets 构建一个 JDBC 数据库 Web 应用程序。
 
-本课程从客户端和服务器架构的介绍开始，然后您将获得 JSP 和 Servlet 的高级概述。之后，您将建立一个开发环境，并使用 JSP 和 Servlets 构建一个 JDBC 数据库 Web 应用程序
-
-以下是您将在本课程中学到的内容
+以下是您将在本课程中学到的内容：
 
 *   Servlet 和 Servlet 方法的生命周期
 *   [ServletConfig](https://www.java67.com/2012/09/difference-between-servletconfig-and-servletcontext-j2ee-jsp.html) 和 [ServletContext](https://javarevisited.blogspot.com/2012/03/how-to-get-servletcontext-in-servlet.html)
@@ -166,25 +171,25 @@ image_credit — udemy
 
 [![](img/70721031913c72032878c50ba614eed2.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjsp-and-servlets-for-beginners%2F)
 
-## 10.[Java servlet 和 JSP —用 25 个步骤构建 Java EE(JEE)应用程序【免费】](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-java-servlets-and-jsp-web-application-in-25-steps%2F)
+## 10. [Java servlet 和 JSP — 用 25 个步骤构建 Java EE(JEE)应用程序【免费】](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-java-servlets-and-jsp-web-application-in-25-steps%2F)
 
-这是学习 Java Servlet 和 JSP 的免费 Udemy 课程。由我最喜欢的 Udemy 导师 Ranga Karnam 创建，他是许多 Udemy 畅销 Java 课程的作者，如本 [**春季微服务课程**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmicroservices-with-spring-boot-and-spring-cloud%2F) ，它将一步一步地教你 Servlet 和 JSP。
+这是学习 Java Servlet 和 JSP 的免费 Udemy 课程。由我最喜欢的 Udemy 导师 Ranga Karnam 创建，他是许多 Udemy 畅销 Java 课程的作者，如本 [**春季微服务课程**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmicroservices-with-spring-boot-and-spring-cloud%2F)，它将一步一步地教你 Servlet 和 JSP。
 
 在这个免费的 Servlet JSP 课程中，您将学习使用 Java Servlets 和 JSP 以及登录和注销功能开发基本 Todo 管理应用程序的基础知识。
 
-您将使用 Java Web 编程的核心技术构建一个动态网站。您将了解 Java Web 应用程序开发的基本概念— HTTP 协议、请求-响应周期、Java Servlets、JSP。
+您将使用 Java Web 编程的核心技术构建一个动态网站。您将了解 Java Web 应用程序开发的基本概念 — HTTP 协议、请求-响应周期、Java Servlets、JSP。
 
 您还将一步一步地构建网站，步骤超过 25 步。作为 Java Web 应用程序开发的入门课程，本课程将是完美的第一步。
 
-总的来说，这是一门学习 Servlet 和 JSP 的好课程，非常适合初学者理解基础知识&继续对 web 应用程序开发感兴趣，最重要的是它是免费的。
+总的来说，这是一门学习 Servlet 和 JSP 的好课程，非常适合初学者理解基础知识 & 继续对 web 应用程序开发感兴趣，最重要的是它是免费的。
 
-**这里是免费参加本课程的链接**—[Java servlet 和 JSP —用 25 个步骤构建 Java EE(JEE)应用](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-java-servlets-and-jsp-web-application-in-25-steps%2F)
+**这里是免费参加本课程的链接** — [Java servlet 和 JSP — 用 25 个步骤构建 Java EE(JEE)应用](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-java-servlets-and-jsp-web-application-in-25-steps%2F)
 
 [![](img/b1bacddaef1e463069a3e37182a12cf3.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-java-servlets-and-jsp-web-application-in-25-steps%2F)
 
-以上是关于**学习 Servlet 和 JSP、【Java 开发人员的两种核心 web 技术的最佳在线课程。如果你想了解如何制作看起来既现代又酷的 Java 页面，JSP 和 Servlets 是一个很好的组合，可以大大提高网站的质量。这会让他们看起来很漂亮，很专业。在本文中，我们为您带来了一些最佳课程，您可以根据自己的具体需求选择这些课程。我希望它能帮助你把你的专业水平提高到一个新的水平，这样你就可以每天都保持进步。
+以上是关于**学习 Servlet 和 JSP**、Java 开发人员的两种核心 web 技术的最佳在线课程。如果你想了解如何制作看起来既现代又酷的 Java 页面，JSP 和 Servlets 是一个很好的组合，可以大大提高网站的质量。这会让他们看起来很漂亮，很专业。在本文中，我们为您带来了一些最佳课程，您可以根据自己的具体需求选择这些课程。我希望它能帮助你把你的专业水平提高到一个新的水平，这样你就可以每天都保持进步。
 
-其他**编程资源文章**您可能喜欢探索**
+**其他编程资源文章**您可能喜欢探索：
 
 *   [面向 Java 开发者的 5 门免费 Spring 框架课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
 *   [成为全栈 Java 开发人员的前 5 门课程](https://javarevisited.blogspot.com/2020/04/top-5-courses-to-become-full-stack-java-developer-with-Angular-and-Reactjs.html#axzz6Nq9yk7Sc)
@@ -205,6 +210,8 @@ image_credit — udemy
 
 感谢您阅读本文。如果您发现这些*最佳 Servlet 和 JSP 在线课程*对学习全栈 Java 开发有用，那么请与您的朋友和同事分享它们。如果您有任何问题或反馈，请留言。
 
-**p . s .**——如果你渴望学习 Servlet 和 JSP 并成为一名 Java web 开发人员，但又在寻找免费的在线培训课程，那么你也可以看看 Udemy 上 Ranga Karnam 的这个[**Java Servlet 和 JSP——用 25 个步骤**](http://bit.ly/2CTC6yD) 构建 Java EE(JEE)应用程序的课程。这是完全免费的，你只需要一个 Udemy 帐户就可以加入这个课程。
 
-<http://bit.ly/2CTC6yD> 
+
+**P.S.**——如果你渴望学习 Servlet 和 JSP 并成为一名 Java Web 开发人员，但又在寻找免费的在线培训课程，那么你也可以看看 Udemy 上 Ranga Karnam 的这个[**Java Servlet 和 JSP——用 25 个步骤**](http://bit.ly/2CTC6yD)构建 Java EE（JEE）应用程序的课程。这是完全免费的，你只需要一个 Udemy 帐户就可以加入这个课程。
+
+<http://bit.ly/2CTC6yD>

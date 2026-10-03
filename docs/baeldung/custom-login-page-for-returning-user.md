@@ -1,3 +1,4 @@
+
 # 返回用户的自定义登录页面
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/custom-login-page-for-returning-user>
@@ -18,7 +19,7 @@ Knowing these types of challenges, we built Lightrun - a real-time production de
 
 ## 1。简介
 
-本文是我们正在进行的春季安全系列 的 **[注册的延续。](/web/20220524030013/https://www.baeldung.com/spring-security-registration)**
+本文是我们正在进行的春季安全系列**注册**的延续。([注册](/web/20220524030013/https://www.baeldung.com/spring-security-registration))
 
 在本文中，我们将看看如何为返回到我们应用程序的用户开发一个定制的登录页面。用户将收到一条标准的“欢迎…”消息。
 
@@ -28,7 +29,7 @@ Knowing these types of challenges, we built Lightrun - a real-time production de
 
 让我们创建我们的自定义`MyCustomLoginAuthenticationSuccessHandler`并实现`onAuthenticationSuccess()`方法:
 
-```java
+```
 @Override
 public void onAuthenticationSuccess(final HttpServletRequest request,
   final HttpServletResponse response, final Authentication authentication)
@@ -43,7 +44,7 @@ public void onAuthenticationSuccess(final HttpServletRequest request,
 
 现在，让我们看看添加 cookie 的代码:
 
-```java
+```
 private String gerUserName(Authentication authentication) {
     return ((User) authentication.getPrincipal()).getFirstName();
 }
@@ -68,7 +69,7 @@ private Cookie getWelcomeCookie(String user) {
 
 首先，让我们添加占位符`“welcometext”`以在登录页面上显示我们的消息:
 
-```java
+```
 <form name='f' action="login" method='POST' onsubmit="return validate();">
     <span id="welcometext"> </span>
 
@@ -83,7 +84,7 @@ private Cookie getWelcomeCookie(String user) {
 
 现在，我们来看看相应的`Javascript`:
 
-```java
+```
 function getCookie(name) {
     return document.cookie.split('; ').reduce((r, v) => {
         const parts = v.split('=')
@@ -103,7 +104,7 @@ function display_username() {
 
 函数`display_username()`在`HTML <body>`标签的`onload`事件上被调用:
 
-```java
+```
 <body onload="display_username()">
 ```
 

@@ -1,29 +1,30 @@
+
 # jQuery——如何获得标记名
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jquery/jquery-how-to-get-the-tag-name/>
 
-要获得元素标记名，可以使用**标记名**函数。有两种方法可以使用它:
+要获得元素标记名，可以使用**标记名**函数。有两种方法可以使用它：
 
-## 1) .get(0).tagName
+## 1) `.get(0).tagName`
 
-选择一个类名为“classTag1”的元素，并使用**。获取(0)。标记名**函数显示其标记名。
+选择一个类名为`classTag1`的元素，并使用`.get(0).tagName`函数显示其标记名。
 
 ```java
- $('.classTag1').get(0).tagName; 
+$('.classTag1').get(0).tagName;
 ```
 
-## 页:1。[0].tagName
+## 2) `[0].tagName`
 
-2.选择一个类名为“classTag1”的元素，并使用**。[0].标记名**函数显示其标记名。
+选择一个类名为`classTag1`的元素，并使用`[0].tagName`函数显示其标记名。
 
 ```java
- $('.classTag1')[0].tagName; 
+$('.classTag1')[0].tagName;
 ```
 
 ## 例子
 
 ```java
- <html>
+<html>
 <head>
 <title>jQuery Get Tag Name</title>
 
@@ -73,7 +74,7 @@ $(document).ready(function(){
 	</div>
 
 </body>
-</html> 
+</html>
 ```
 
 [Try Demo](http://web.archive.org/web/20220618072948/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-get-tag-name.html)<input type="hidden" id="mkyong-current-postId" value="4872">

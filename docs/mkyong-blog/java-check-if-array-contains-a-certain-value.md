@@ -1,17 +1,18 @@
+
 # Java–检查数组是否包含某个值？
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/java-check-if-array-contains-a-certain-value/>
 
-Java 示例检查数组(字符串或原始类型)是否包含特定值，用 Java 8 流 API 更新。
+Java 示例检查数组（字符串或原始类型）是否包含特定值，用 Java 8 流 API 更新。
 
-## 1.字符串数组
+## 1. 字符串数组
 
 1.1 检查字符串数组是否包含某个值“A”。
 
-StringArrayExample1.java
+`StringArrayExample1.java`
 
 ```java
- package com.mkyong.core;
+package com.mkyong.core;
 
 import java.util.Arrays;
 import java.util.List;
@@ -31,31 +32,31 @@ public class StringArrayExample1 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- Hello A 
+Hello A
 ```
 
-在 Java 8 中，您可以这样做:
+在 Java 8 中，您可以这样做：
 
 ```java
- // Convert to stream and test it
-	boolean result = Arrays.stream(alphabet).anyMatch("A"::equals);
-	if (result) {
-		System.out.println("Hello A");
-	} 
+// Convert to stream and test it
+boolean result = Arrays.stream(alphabet).anyMatch("A"::equals);
+if (result) {
+    System.out.println("Hello A");
+}
 ```
 
-1.2 检查字符串数组是否包含多个值的示例:
+1.2 检查字符串数组是否包含多个值的示例：
 
-StringArrayExample2.java
+`StringArrayExample2.java`
 
 ```java
- package com.mkyong.core;
+package com.mkyong.core;
 
 import java.util.Arrays;
 import java.util.List;
@@ -86,24 +87,24 @@ public class StringArrayExample2 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- Hello A or B
-Hello A and C 
+Hello A or B
+Hello A and C
 ```
 
-## 2.原始数组
+## 2. 原始数组
 
-2.1 对于`int[]`这样的基元数组，需要手动循环测试条件:
+2.1 对于`int[]`这样的基元数组，需要手动循环测试条件：
 
-PrimitiveArrayExample1.java
+`PrimitiveArrayExample1.java`
 
 ```java
- package com.mkyong.core;
+package com.mkyong.core;
 
 import java.util.Arrays;
 import java.util.List;
@@ -134,21 +135,21 @@ public class PrimitiveArrayExample1 {
         return result;
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- Hello 2 
+Hello 2
 ```
 
 2.2 有了 Java 8，编码就简单多了~
 
-ArrayExample1.java
+`ArrayExample1.java`
 
 ```java
- package com.mkyong.core;
+package com.mkyong.core;
 
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
@@ -180,22 +181,23 @@ public class TestDate {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- Hello 4
-Hello 10 
+Hello 4
+Hello 10
 ```
 
-**Note**
-To check if a primitive array contains multiple values, convert [the array into a List](http://web.archive.org/web/20210814144453/http://www.mkyong.com/java/java-how-to-convert-a-primitive-array-to-list/) and compare it like example 1.2 above.
+**注意**
+
+要检查原始数组是否包含多个值，请将[数组转换为`List`](http://web.archive.org/web/20210814144453/http://www.mkyong.com/java/java-how-to-convert-a-primitive-array-to-list/)并像上面的示例 1.2 那样进行比较。
 
 #### 引用
 
-1.  [IntStream JavaDoc](http://web.archive.org/web/20210814144453/https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html)
-2.  [阵列。aslist JavaDoc](http://web.archive.org/web/20210814144453/https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#asList(T...))
+1. [IntStream JavaDoc](http://web.archive.org/web/20210814144453/https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html)
+2. [Arrays.asList JavaDoc](http://web.archive.org/web/20210814144453/https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#asList(T...))
 
-标签:[array](http://web.archive.org/web/20210814144453/https://mkyong.com/tag/array/)[IntStream](http://web.archive.org/web/20210814144453/https://mkyong.com/tag/intstream/)[java8](http://web.archive.org/web/20210814144453/https://mkyong.com/tag/java8/)[stream](http://web.archive.org/web/20210814144453/https://mkyong.com/tag/stream/)<input type="hidden" id="mkyong-current-postId" value="14089">
+标签：[array](http://web.archive.org/web/20210814144453/https://mkyong.com/tag/array/) [IntStream](http://web.archive.org/web/20210814144453/https://mkyong.com/tag/intstream/) [java8](http://web.archive.org/web/20210814144453/https://mkyong.com/tag/java8/) [stream](http://web.archive.org/web/20210814144453/https://mkyong.com/tag/stream/)

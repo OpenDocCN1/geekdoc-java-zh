@@ -1,3 +1,4 @@
+
 # PATH 和 CLASSPATH
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/environment/paths.html`](https://docs.oracle.com/javase/tutorial/essential/environment/paths.html)
@@ -18,7 +19,6 @@
 
 ```java
 C:\Java\jdk1.7.0\bin\javac MyClass.java
-
 ```
 
 `PATH`环境变量是一系列由分号（`;`）分隔的目录。Microsoft Windows 按照从左到右的顺序在`PATH`目录中查找程序。每次只能在路径中有一个 JDK 的`bin`目录（第一个之后的将被忽略），因此如果已经存在一个，可以更新该特定条目。
@@ -27,60 +27,43 @@ C:\Java\jdk1.7.0\bin\javac MyClass.java
 
 ```java
 C:\Java\jdk1.7.0\bin;C:\Windows\System32\;C:\Windows\;C:\Windows\System32\Wbem
-
 ```
 
 将`PATH`环境变量永久设置是有用的，这样在重新启动后它将保留。要对`PATH`变量进行永久更改，请使用控制面板中的**系统**图标。具体的操作步骤因 Windows 版本而异：
 
-**Windows XP**
+### Windows XP
 
-1.  选择**开始**，选择**控制面板**。双击**系统**，选择**高级**选项卡。
+1. 选择**开始**，选择**控制面板**。双击**系统**，选择**高级**选项卡。
+2. 点击**环境变量**。在**系统变量**部分，找到`PATH`环境变量并选择它。点击**编辑**。如果`PATH`环境变量不存在，点击`新建`。
+3. 在**编辑系统变量**（或**新建系统变量**）窗口中，指定`PATH`环境变量的值。点击**确定**。通过点击**确定**关闭所有剩余窗口。
 
-1.  点击**环境变量**。在**系统变量**部分，找到`PATH`环境变量并选择它。点击**编辑**。如果`PATH`环境变量不存在，点击`新建`。
+### Windows Vista
 
-1.  在**编辑系统变量**（或**新建系统变量**）窗口中，指定`PATH`环境变量的值。点击**确定**。通过点击**确定**关闭所有剩余窗口。
+1. 从桌面上右键单击**我的电脑**图标。
+2. 从上下文菜单中选择**属性**。
+3. 点击**高级**选项卡（在 Vista 中点击**高级系统设置**链接）。
+4. 点击**环境变量**。在**系统变量**部分，找到`PATH`环境变量并选择它。点击**编辑**。如果`PATH`环境变量不存在，点击`新建`。
+5. 在**编辑系统变量**（或**新建系统变量**）窗口中，指定`PATH`环境变量的值。点击**确定**。通过点击**确定**关闭所有剩余窗口。
 
-**Windows Vista:**
+### Windows 7
 
-1.  从桌面上右键单击**我的电脑**图标。
-
-1.  从上下文菜单中选择**属性**。
-
-1.  点击**高级**选项卡（在 Vista 中点击**高级系统设置**链接）。
-
-1.  点击**环境变量**。在**系统变量**部分，找到`PATH`环境变量并选择它。点击**编辑**。如果`PATH`环境变量不存在，点击`新建`。
-
-1.  在**编辑系统变量**（或**新建系统变量**）窗口中，指定`PATH`环境变量的值。点击**确定**。通过点击**确定**关闭所有剩余窗口。
-
-**Windows 7:**
-
-1.  从桌面上右键单击**计算机**图标。
-
-1.  从上下文菜单中选择**属性**。
-
-1.  点击**高级系统设置**链接。
-
-1.  点击**环境变量**。在**系统变量**部分，找到`PATH`环境变量并选择它。点击**编辑**。如果`PATH`环境变量不存在，点击`新建`。
-
-1.  在**编辑系统变量**（或**新建系统变量**）窗口中，指定`PATH`环境变量的值。点击**确定**。通过点击**确定**关闭所有剩余窗口。
-
-* * *
+1. 从桌面上右键单击**计算机**图标。
+2. 从上下文菜单中选择**属性**。
+3. 点击**高级系统设置**链接。
+4. 点击**环境变量**。在**系统变量**部分，找到`PATH`环境变量并选择它。点击**编辑**。如果`PATH`环境变量不存在，点击`新建`。
+5. 在**编辑系统变量**（或**新建系统变量**）窗口中，指定`PATH`环境变量的值。点击**确定**。通过点击**确定**关闭所有剩余窗口。
 
 **注意：**在从控制面板编辑`PATH`环境变量时，可能会看到类似以下内容的环境变量：
 
 ```java
 %JAVA_HOME%\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem
-
 ```
 
 用百分号（`%`）括起来的变量是现有的环境变量。如果这些变量中的一个在控制面板的**环境变量**窗口中列出（如`JAVA_HOME`），则可以编辑其值。如果未显示，则是操作系统定义的特殊环境变量。例如，`SystemRoot`是 Microsoft Windows 系统文件夹的位置。要获取环境变量的值，请在命令提示符下输入以下内容。（此示例获取`SystemRoot`环境变量的值）：
 
 ```java
 echo %SystemRoot%
-
 ```
-
-* * *
 
 ## 更新 PATH 变量（Solaris 和 Linux）
 
@@ -88,14 +71,12 @@ echo %SystemRoot%
 
 ```java
 % /usr/local/jdk1.7.0/bin/javac MyClass.java
-
 ```
 
 要查看路径是否正确设置，请执行：
 
 ```java
 % java -version
-
 ```
 
 如果可以找到，这将打印`java`工具的版本。如果版本过旧或者出现错误**java: Command not found**，则路径未正确设置。
@@ -106,7 +87,6 @@ echo %SystemRoot%
 
 ```java
 set path=(/usr/local/jdk1.7.0/bin $path)
-
 ```
 
 对于`bash`，编辑启动文件（`~/.bashrc`）：
@@ -114,7 +94,6 @@ set path=(/usr/local/jdk1.7.0/bin $path)
 ```java
 PATH=/usr/local/jdk1.7.0/bin:$PATH
 export PATH
-
 ```
 
 对于`ksh`，启动文件由环境变量`ENV`命名。要设置路径：
@@ -122,7 +101,6 @@ export PATH
 ```java
 PATH=/usr/local/jdk1.7.0/bin:$PATH
 export PATH
-
 ```
 
 对于`sh`，编辑配置文件（`~/.profile`）：
@@ -130,7 +108,6 @@ export PATH
 ```java
 PATH=/usr/local/jdk1.7.0/bin:$PATH
 export PATH
-
 ```
 
 然后加载启动文件，并通过重复`java`命令验证路径是否设置：
@@ -140,7 +117,6 @@ export PATH
 ```java
 % source ~/.cshrc
 % java -version
-
 ```
 
 对于`ksh`、`bash`或`sh`：
@@ -148,14 +124,13 @@ export PATH
 ```java
 % . /.profile
 % java -version
-
 ```
 
 ## 检查 CLASSPATH 变量（所有平台）
 
 `CLASSPATH`变量是告诉应用程序，包括 JDK 工具，在哪里查找用户类的一种方式。（作为 JRE、JDK 平台和扩展的一部分的类应该通过其他方式定义，比如引导类路径或扩展目录。）
 
-指定类路径的首选方式是使用`-cp`命令行开关。这允许为每个应用程序单独设置`CLASSPATH`，而不影响其他应用程序。*设置`CLASSPATH`可能有些棘手，应谨慎执行。*
+指定类路径的首选方式是使用`-cp`命令行开关。这允许为每个应用程序单独设置`CLASSPATH`，而不影响其他应用程序。设置`CLASSPATH`可能有些棘手，应谨慎执行。
 
 类路径的默认值为“.”，意味着只搜索当前目录。指定`CLASSPATH`变量或`-cp`命令行开关会覆盖此值。
 
@@ -163,14 +138,12 @@ export PATH
 
 ```java
 C:> echo %CLASSPATH%
-
 ```
 
 在 Solaris 或 Linux 上，执行以下操作：
 
 ```java
 % echo $CLASSPATH
-
 ```
 
 如果未设置`CLASSPATH`，将会出现**CLASSPATH: Undefined variable**错误（Solaris 或 Linux）或者简单显示**%CLASSPATH%**（Microsoft Windows NT/2000/XP）。

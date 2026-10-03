@@ -1,3 +1,4 @@
+
 # BCP 47 扩展
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/locale/extensions.html`](https://docs.oracle.com/javase/tutorial/i18n/locale/extensions.html)
@@ -10,7 +11,6 @@ Unicode 语言环境扩展由 Unicode[通用语言环境数据存储库（CLDR�
 
 ```java
 SUBTAG ('-' SUBTAG)*
-
 ```
 
 在这种格式中：
@@ -18,7 +18,6 @@ SUBTAG ('-' SUBTAG)*
 ```java
 SUBTAG = [0-9a-zA-Z]{2,8}    *For key='u'*
 SUBTAG = [0-9a-zA-Z]{1,8}    *For key='x'*
-
 ```
 
 请注意，私有使用扩展允许单个字符值。但是，Unicode 语言环境扩展中的值至少需要 2 个字符。
@@ -40,13 +39,9 @@ SUBTAG = [0-9a-zA-Z]{1,8}    *For key='x'*
 | nu | 数字类型 |
 | va | 通用变体类型 |
 
-* * *
-
 **注意：**
 
 指定 Unicode 语言环境扩展，例如数字格式，并不保证底层平台的语言环境服务会遵守该请求。
-
-* * *
 
 以下表格显示了 Unicode 语言环境扩展的一些键/类型对示例。
 
@@ -62,16 +57,13 @@ SUBTAG = [0-9a-zA-Z]{1,8}    *For key='x'*
 
 ```java
 de-DE-u-email-co-phonebk-x-linux
-
 ```
 
 可以使用以下`Locale`方法访问有关 Unicode 区域扩展的信息。这些方法使用前面的德语区域示例进行描述。
 
-+   [`getUnicodeLocaleKeys()`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getUnicodeLocaleKeys--)  返回 Unicode 区域键代码或空集（如果区域设置没有）。对德语示例，这将返回一个包含单个字符串`"co"`的集合。
-
-+   [`getUnicodeLocaleType(String)`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getUnicodeLocaleType-java.lang.String-)  返回与 Unicode 区域键代码关联的 Unicode 区域类型。对德语示例调用`getUnicodeLocaleType("co")`将返回字符串`"phonebk"`。
-
-+   [`getUnicodeLocaleAttributes()`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getUnicodeLocaleAttributes--)  返回与此区域设置关联的 Unicode 区域设置属性集（如果有的话）。在德语示例中，这将返回一个包含单个字符串`"email"`的集合。
++   [`getUnicodeLocaleKeys()`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getUnicodeLocaleKeys--) – 返回 Unicode 区域键代码或空集（如果区域设置没有）。对德语示例，这将返回一个包含单个字符串`"co"`的集合。
++   [`getUnicodeLocaleType(String)`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getUnicodeLocaleType-java.lang.String-) – 返回与 Unicode 区域键代码关联的 Unicode 区域类型。对德语示例调用`getUnicodeLocaleType("co")`将返回字符串`"phonebk"`。
++   [`getUnicodeLocaleAttributes()`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getUnicodeLocaleAttributes--) – 返回与此区域设置关联的 Unicode 区域设置属性集（如果有的话）。在德语示例中，这将返回一个包含单个字符串`"email"`的集合。
 
 ## 私有使用扩展
 
@@ -82,5 +74,4 @@ de-DE-u-email-co-phonebk-x-linux
 ```java
 x-jdk-1-7
 x-linux
-
 ```

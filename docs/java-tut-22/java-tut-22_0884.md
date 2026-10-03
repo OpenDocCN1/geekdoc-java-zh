@@ -1,3 +1,4 @@
+
 # 课程：使扩展安全
 
 > 原文：[`docs.oracle.com/javase/tutorial/ext/security/index.html`](https://docs.oracle.com/javase/tutorial/ext/security/index.html)
@@ -22,6 +23,5 @@
 
 要获取有关安全的完整信息，您可以参考以下内容：
 
-+   Java SE 中的安全功能教程（在本教程中）
-
-+   [安全指南](https://docs.oracle.com/javase/8/docs/technotes/guides/security/)
++ Java SE 中的安全功能教程（在本教程中）
++ [安全指南](https://docs.oracle.com/javase/8/docs/technotes/guides/security/)

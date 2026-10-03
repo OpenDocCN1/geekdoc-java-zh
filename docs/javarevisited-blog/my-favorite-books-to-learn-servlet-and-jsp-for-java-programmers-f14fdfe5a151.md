@@ -1,3 +1,4 @@
+
 # 2023 年 Java 程序员学习 Servlet 和 JSP 的 3 本书
 
 > 原文：<https://medium.com/javarevisited/my-favorite-books-to-learn-servlet-and-jsp-for-java-programmers-f14fdfe5a151?source=collection_archive---------0----------------------->
@@ -83,15 +84,25 @@
 其他**推荐给 Java Web 开发者的书籍和课程**:
 
 *   [学习 Java 微服务的 5 大课程](/javarevisited/top-5-courses-to-learn-microservices-in-java-and-spring-framework-e9fed1ba804d)
+
 *   [学习 Spring 框架的 5 本书](http://www.java67.com/2016/12/5-spring-framework-books-for-java-programmers.html)
+
 *   [2023 年学习 Hibernate 和 JPA 的前 5 门课程](https://javarevisited.blogspot.com/2018/01/top-5-hibernate-and-jpa-courses-for-java-programmers-learn-online.html)
+
 *   [面向 Java 开发者的 10 门高级 Spring Boot 课程](/javarevisited/10-advanced-spring-boot-courses-for-experienced-java-developers-5e57606816bd)
+
 *   【Java 程序员学习 Hibernate 的前 5 本书
+
 *   [深入学习 Spring 框架的前 5 门课程](https://javarevisited.blogspot.com/2018/06/top-6-spring-framework-online-courses-Java-programmers.html)
+
 *   [准备 Java JEE 面试的 5 本书](http://javarevisited.blogspot.sg/2015/12/5-good-books-for-java-jee-programming.html)
+
 *   [学习 Spring Boot 和春云的前 5 门课程](https://javarevisited.blogspot.com/2018/02/top-5-spring-microservices-courses-with-spring-boot-and-spring-cloud.html)
+
 *   [如何破解弹簧专业认证](https://javarevisited.blogspot.com/2018/08/how-to-crack-spring-core-professional-certification-exam-java-latest.html#axzz5j90KOik7)
+
 *   [面向有经验程序员的 5 大 Java 设计模式书籍](http://www.java67.com/2016/10/top-5-object-oriented-analysis-and-design-patterns-book-java.html)
+
 *   [我最喜欢的学习软件架构的课程](/javarevisited/top-5-courses-to-learn-software-architecture-in-2020-best-of-lot-5d34ebc52e9)
 
 感谢阅读这篇文章，如果你喜欢我的书籍推荐，那么请与你的朋友和同事分享，它会带来很大的不同。如果你有任何建议，反馈或者你认为有一本很棒的书需要列入这个列表，那么请随意发表评论。

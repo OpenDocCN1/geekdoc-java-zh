@@ -1,13 +1,14 @@
-# Struts 2 <select>下拉框示例</select>
+
+# Struts 2 `<s:select>` 下拉框示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts2/struts-2-sselect-drop-down-box-example/>
 
 Download It – [Struts2-Select-DropDown-Box-Example.zip](http://web.archive.org/web/20190304031851/http://www.mkyong.com/wp-content/uploads/2010/06/Struts2-Select-DropDown-Box-Example.zip)
 
-在 Struts 2 中，可以使用 **< s:select >** 标签创建一个 HTML 下拉框。
+在 Struts 2 中，可以使用 `<s:select>` 标签创建一个 HTML 下拉框。
 
 ```java
- <s:select label="What's your favor search engine" 
+<s:select label="What's your favor search engine" 
 		headerKey="-1" headerValue="Select Search Engines"
 		list="searchEngine" 
 		name="yourSearchEngine" /> 
@@ -16,7 +17,7 @@ Download It – [Struts2-Select-DropDown-Box-Example.zip](http://web.archive.org
 产生以下 HTML 代码…
 
 ```java
- <td class="tdLabel">
+<td class="tdLabel">
    <label for="resultAction_yourSearchEngine" class="label">
        What's your favor search engine:
    </label>
@@ -32,21 +33,22 @@ Download It – [Struts2-Select-DropDown-Box-Example.zip](http://web.archive.org
 </td> 
 ```
 
-语法是不言自明的，但是“ **headerKey** 和“ **headerValue** ”。“ **headerKey** 是下拉列表中第一项的键，“ **headerValue** 是下拉列表中第一项的值表达式。
+语法是不言自明的，但是 `headerKey` 和 `headerValue` 需要特别说明。`headerKey` 是下拉列表中第一项的键，`headerValue` 是下拉列表中第一项的值表达式。
 
-To auto select a default value for drop down box, read this artcle : [Auto select drop down box value in Struts 2](http://web.archive.org/web/20190304031851/http://www.mkyong.com/struts2/how-to-auto-select-drop-down-box-value-in-struts-2/)
+要自动选择下拉框的默认值，请阅读这篇文章：[Auto select drop down box value in Struts 2](http://web.archive.org/web/20190304031851/http://www.mkyong.com/struts2/how-to-auto-select-drop-down-box-value-in-struts-2/)
 
-## Struts 2 **< s:select >** 示例
+## Struts 2 `<s:select>` 示例
 
-一个完整的 Struts 2 例子，通过 **<创建下拉框:选择>** ，**通过 Java 列表和 OGNL 列表**填充选择的选项，存储选择的值并显示在另一个页面中。
+一个完整的 Struts 2 例子，通过 `<s:select>` 创建下拉框，**通过 Java 列表和 OGNL 列表**填充选择的选项，存储选择的值并显示在另一个页面中。
 
- ## 1.行动
+## 1. 行动
 
 操作类来生成和保存所选的下拉框选项。
+
 **SelectAction.java**
 
 ```java
- package com.mkyong.common.action;
+package com.mkyong.common.action;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -108,14 +110,14 @@ public class SelectAction extends ActionSupport{
 } 
 ```
 
- ## 2.结果页面
+## 2. 结果页面
 
-通过“ **< s:select >** ”标签呈现下拉框，通过 Java list 和 OGNL list 填充选择选项
+通过 `<s:select>` 标签呈现下拉框，通过 Java list 和 OGNL list 填充选择选项。
 
 **select.jsp**
 
 ```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
 </head>
@@ -152,7 +154,7 @@ public class SelectAction extends ActionSupport{
 **result.jsp**
 
 ```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 
 <body>
@@ -170,12 +172,12 @@ public class SelectAction extends ActionSupport{
 </html> 
 ```
 
-## 3.struts.xml
+## 3. struts.xml
 
 链接在一起~
 
 ```java
- <?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
@@ -199,25 +201,18 @@ public class SelectAction extends ActionSupport{
 </struts> 
 ```
 
-## 5.演示
+## 5. 演示
 
-*http://localhost:8080/struts 2 example/select action . action*
+*http://localhost:8080/struts2example/selectAction.action*
 
 ![Struts2 drop down box example](img/fbe2b46e236efe0e372b0ffbbcd812e9.png "struts2-select-dropdown-box-example-1")
 
-*http://localhost:8080/struts 2 example/result action . action*
+*http://localhost:8080/struts2example/resultAction.action*
 
 ![Struts2 drop down box example](img/f5fbcfeec9f3f80adf4b2d833f74c8f9.png "struts2-select-dropdown-box-example-2")
 
 ## 参考
 
-1.  [Struts 2 选择文档](http://web.archive.org/web/20190304031851/http://struts.apache.org/2.x/docs/select.html)
+1. [Struts 2 选择文档](http://web.archive.org/web/20190304031851/http://struts.apache.org/2.x/docs/select.html)
 
 [dropdown](http://web.archive.org/web/20190304031851/http://www.mkyong.com/tag/dropdown/) [struts2](http://web.archive.org/web/20190304031851/http://www.mkyong.com/tag/struts2/)
-
-
-
-
-
-
-

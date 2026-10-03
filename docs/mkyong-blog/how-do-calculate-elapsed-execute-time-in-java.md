@@ -1,17 +1,18 @@
+
 # 如何在 Java 中计算运行/执行时间
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/how-do-calculate-elapsed-execute-time-in-java/>
 
 在 Java 中，您可以使用以下方法来测量 Java 中的运行时间。
 
-## 1.System.nanoTime()
+## 1. `System.nanoTime()`
 
 这是测量 Java 运行时间的推荐解决方案。
 
-ExecutionTime1.java
+`ExecutionTime1.java`
 
 ```java
- package com.mkyong.time;
+package com.mkyong.time;
 
 import java.util.concurrent.TimeUnit;
 
@@ -19,16 +20,16 @@ public class ExecutionTime1 {
 
     public static void main(String[] args) throws InterruptedException {
 
-		//start
+        //start
         long lStartTime = System.nanoTime();
 
-		//task
+        //task
         calculation();
 
-		//end
+        //end
         long lEndTime = System.nanoTime();
 
-		//time elapsed
+        //time elapsed
         long output = lEndTime - lStartTime;
 
         System.out.println("Elapsed time in milliseconds: " + output / 1000000);
@@ -41,21 +42,21 @@ public class ExecutionTime1 {
         TimeUnit.SECONDS.sleep(2);
 
     }
-} 
+}
 ```
 
 输出可能会有所不同。
 
 ```java
- 2004 
+2004
 ```
 
-## 2.System.currentTimeMillis()
+## 2. `System.currentTimeMillis()`
 
-ExecutionTime2.java
+`ExecutionTime2.java`
 
 ```java
- package com.mkyong.time;
+package com.mkyong.time;
 
 import java.util.concurrent.TimeUnit;
 
@@ -81,23 +82,23 @@ public class ExecutionTime2 {
         TimeUnit.SECONDS.sleep(2);
 
     }
-} 
+}
 ```
 
 输出可能会有所不同。
 
 ```java
- 2006 
+2006
 ```
 
-## 3.Instant.now()。托普奇米利()
+## 3. `Instant.now().toEpochMilli()`
 
-在 Java 8 中，你可以尝试新的`java.time.Instant`
+在 Java 8 中，你可以尝试新的 `java.time.Instant`。
 
-ExecutionTime3.java
+`ExecutionTime3.java`
 
 ```java
- package com.mkyong.time;
+package com.mkyong.time;
 
 import java.time.Instant;
 import java.util.concurrent.TimeUnit;
@@ -124,21 +125,21 @@ public class ExecutionTime3 {
         TimeUnit.SECONDS.sleep(2);
 
     }
-} 
+}
 ```
 
 输出可能会有所不同。
 
 ```java
- 2006 
+2006
 ```
 
-## 4.日期()。getTime()
+## 4. `Date().getTime()`
 
-ExecutionTime4.java
+`ExecutionTime4.java`
 
 ```java
- package com.mkyong.time;
+package com.mkyong.time;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -165,20 +166,23 @@ public class ExecutionTime4 {
         TimeUnit.SECONDS.sleep(2);
 
     }
-} 
+}
 ```
 
 输出可能会有所不同。
 
 ```java
- 2007 
+2007
 ```
 
 ## 参考
 
-1.  [stack overflow–system . nano time()完全没用吗？](http://web.archive.org/web/20220627214126/https://stackoverflow.com/questions/510462/is-system-nanotime-completely-useless)
-2.  [stack overflow–system . current time millis vs system . nano time](http://web.archive.org/web/20220627214126/https://stackoverflow.com/questions/351565/system-currenttimemillis-vs-system-nanotime)
-3.  [系统#nanoTime JavaDoc](http://web.archive.org/web/20220627214126/https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#nanoTime--)
-4.  [Instant # toEpochMilli JavaDoc](http://web.archive.org/web/20220627214126/https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#toEpochMilli--)
+1. [Stack Overflow–`System.nanoTime()`完全没用吗？](http://web.archive.org/web/20220627214126/https://stackoverflow.com/questions/510462/is-system-nanotime-completely-useless)
+
+2. [Stack Overflow–`System.currentTimeMillis()` vs `System.nanoTime()`](http://web.archive.org/web/20220627214126/https://stackoverflow.com/questions/351565/system-currenttimemillis-vs-system-nanotime)
+
+3. [`System#nanoTime` JavaDoc](http://web.archive.org/web/20220627214126/https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#nanoTime--)
+
+4. [`Instant#toEpochMilli` JavaDoc](http://web.archive.org/web/20220627214126/https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#toEpochMilli--)
 
 <input type="hidden" id="mkyong-current-postId" value="889">

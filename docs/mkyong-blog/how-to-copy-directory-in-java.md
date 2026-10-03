@@ -1,26 +1,28 @@
+
+
 # 如何在 Java 中复制目录
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/how-to-copy-directory-in-java/>
 
-在 Java 中，我们可以使用 Java 1.7 `FileVisitor`或 Apache Commons IO `FileUtils.copyDirectory`来复制一个目录，其中包括它的子目录和文件。
+在 Java 中，我们可以使用 Java 1.7 `FileVisitor` 或 Apache Commons IO `FileUtils.copyDirectory` 来复制一个目录，其中包括它的子目录和文件。
 
-本文展示了用 Java 复制目录的几种常用方法。
+本文展示了用 Java 复制目录的几种常用方法：
 
-1.  `FileVisitor` (Java 7+)
-2.  `FileUtils.copyDirectory`(Apache common-io)
-3.  使用 Java 7 NIO 和 Java 8 Stream 进行自定义复制。
-4.  自定义副本，传统 IO。
+1. `FileVisitor`（Java 7+）。
+2. `FileUtils.copyDirectory`（Apache Commons IO）。
+3. 使用 Java 7 NIO 和 Java 8 Stream 进行自定义复制。
+4. 自定义副本，使用传统 IO。
 
-**注意**NIO`Files.copy`不支持复制目录内容，我们需要创建一个定制的方法来复制目录内容。
+**注意：** NIO `Files.copy` 不支持复制目录内容，我们需要创建一个定制的方法来复制目录内容。
 
-## 1.FileVisitor (Java 7)
+## 1. `FileVisitor`（Java 7）
 
-这个例子展示了如何使用 [FileVisitor](http://web.archive.org/web/20220619003336/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/FileVisitor.html) 将目录及其内容从`/home/mkyong/test/`复制到`/home/mkyong/test2/`。
+这个例子展示了如何使用 [FileVisitor](http://web.archive.org/web/20220619003336/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/FileVisitor.html) 将目录及其内容从 `/home/mkyong/test/` 复制到 `/home/mkyong/test2/`。
 
-Terminal
+### 目录结构
 
-```java
- $ tree /home/mkyong/test
+```text
+$ tree /home/mkyong/test
 test
 ├── test-a1.log
 ├── test-a2.log
@@ -32,15 +34,17 @@ test
     │   └── test-c2.log
     └── test-d
         ├── test-d1.log
-        └── test-d2.log 
+        └── test-d2.log
 ```
 
-1.1 这个类扩展了`SimpleFileVisitor`来提供默认值，并且只覆盖必要的方法。
+### 1.1 创建文件访问器
 
-TreeCopyFileVisitor.java
+这个类扩展了 `SimpleFileVisitor` 来提供默认值，并且只覆盖必要的方法。
+
+#### `TreeCopyFileVisitor.java`
 
 ```java
- package com.mkyong.io.utils;
+package com.mkyong.io.utils;
 
 import java.io.IOException;
 import java.nio.file.*;
@@ -89,15 +93,17 @@ public class TreeCopyFileVisitor extends SimpleFileVisitor<Path> {
         return FileVisitResult.CONTINUE;
     }
 
-} 
+}
 ```
 
-1.2 这个例子使用`Files.walkFileTree`遍历文件树。
+### 1.2 遍历文件树
 
-CopyDirectory1.java
+这个例子使用 `Files.walkFileTree` 遍历文件树。
+
+#### `CopyDirectory1.java`
 
 ```java
- package com.mkyong.io.howto;
+package com.mkyong.io.howto;
 
 import com.mkyong.io.utils.TreeCopyFileVisitor;
 
@@ -132,15 +138,13 @@ public class CopyDirectory1 {
 
     }
 
-} 
+}
 ```
 
-输出
+### 输出
 
-Terminal
-
-```java
- Create directories : /home/mkyong/test2
+```text
+Create directories : /home/mkyong/test2
 Copy File from 	'/home/mkyong/test/test-a2.log' to 	'/home/mkyong/test2/test-a2.log'
 Copy File from 	'/home/mkyong/test/test-a1.log' to 	'/home/mkyong/test2/test-a1.log'
 Create directories : /home/mkyong/test2/test-b
@@ -152,15 +156,13 @@ Copy File from 	'/home/mkyong/test/test-b/test-b2.txt' to 	'/home/mkyong/test2/t
 Create directories : /home/mkyong/test2/test-b/test-d
 Copy File from 	'/home/mkyong/test/test-b/test-d/test-d2.log' to 	'/home/mkyong/test2/test-b/test-d/test-d2.log'
 Copy File from 	'/home/mkyong/test/test-b/test-d/test-d1.log' to 	'/home/mkyong/test2/test-b/test-d/test-d1.log'
-Done 
+Done
 ```
 
-检查新目录。
+### 检查新目录
 
-Terminal
-
-```java
- $ tree /home/mkyong/test2
+```text
+$ tree /home/mkyong/test2
 test2
 ├── test-a1.log
 ├── test-a2.log
@@ -172,50 +174,51 @@ test2
     │   └── test-c2.log
     └── test-d
         ├── test-d1.log
-        └── test-d2.log 
+        └── test-d2.log
 ```
 
-**注意**
-官方 [Java 复制示例](http://web.archive.org/web/20220619003336/https://docs.oracle.com/javase/tutorial/essential/io/examples/Copy.java)复制一切，包括文件属性。然而，它更难阅读；此示例将方法简化为仅复制文件和目录，并排除属性。
+### 注意
 
-## 2.fileutils . copy directory(Apache commons-io)
+官方的 [Java 复制示例](http://web.archive.org/web/20220619003336/https://docs.oracle.com/javase/tutorial/essential/io/examples/Copy.java) 会复制一切，包括文件属性。然而，它更难阅读；此示例将方法简化为仅复制文件和目录，并排除属性。
 
-这个例子使用了`FileUtils.copyDirectory`来复制一个目录及其内容，这是一个友好而简单的 API。
+## 2. `FileUtils.copyDirectory`（Apache Commons IO）
 
-pom.xml
+这个例子使用 `FileUtils.copyDirectory` 来复制一个目录及其内容，这是一个友好而简单的 API。
 
-```java
- <dependency>
-      <groupId>commons-io</groupId>
-      <artifactId>commons-io</artifactId>
-      <version>2.7</version>
-  </dependency> 
+### `pom.xml`
+
+```xml
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.7</version>
+</dependency>
 ```
 
 ```java
- import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FileUtils;
 
-  //...
+//...
 
-  public static void copyFileCommonIO(String from, String to)
-      throws IOException {
+public static void copyFileCommonIO(String from, String to)
+    throws IOException {
 
-      File fromDir = new File(from);
-      File toDir = new File(to);
+    File fromDir = new File(from);
+    File toDir = new File(to);
 
-      FileUtils.copyDirectory(fromDir, toDir);
+    FileUtils.copyDirectory(fromDir, toDir);
 
-  } 
+}
 ```
 
-## 3.Java NIO 和 Stream。
+## 3. Java NIO 和 Stream
 
-这个例子使用 Java 8 `Files.list`来模拟文件遍历器，使用 Java 7 NIO `Files`来检查、创建和复制目录及其内容。
+这个例子使用 Java 8 `Files.list` 来模拟文件遍历器，使用 Java 7 NIO `Files` 来检查、创建和复制目录及其内容。
 
-CopyDirectory3.java
+### `CopyDirectory3.java`
 
 ```java
- package com.mkyong.io.howto;
+package com.mkyong.io.howto;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -289,17 +292,20 @@ public class CopyDirectory3 {
 
     }
 
-} 
+}
 ```
 
-## 4.传统 IO
+## 4. 传统 IO
 
 这个例子类似于方法 3。相反，它坚持使用传统的 IO `java.io.*`，仅供参考。
 
-CopyDirectory4.java
+### `CopyDirectory4.java`
+
+
+
 
 ```java
- package com.mkyong.io.howto;
+package com.mkyong.io.howto;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -396,27 +402,30 @@ public class CopyDirectory4 {
 
     }
 
-} 
+}
 ```
 
 **注**
+
 Java，在 [20+年](http://web.archive.org/web/20220619003336/https://en.wikipedia.org/wiki/Java_version_history)之后，仍然没有官方 API 来复制一个目录，创建一个`Files.copyDirectory()`有多难？
 
 ## 下载源代码
 
-$ git 克隆[https://github.com/mkyong/core-java](http://web.archive.org/web/20220619003336/https://github.com/mkyong/core-java)
+```
+$ git 克隆 https://github.com/mkyong/core-java
+```
 
+```
 $ cd java-io
+```
 
 ## 参考
 
-*   [Java 复制示例](http://web.archive.org/web/20220619003336/https://docs.oracle.com/javase/tutorial/essential/io/examples/Copy.java)
-*   [文件 JavaDoc](http://web.archive.org/web/20220619003336/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/Files.html)
-*   [InputStream JavaDoc](http://web.archive.org/web/20220619003336/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/InputStream.html)
-*   [OutputStream JavaDoc](http://web.archive.org/web/20220619003336/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/OutputStream.html)
-*   [FileVisitor JavaDoc](http://web.archive.org/web/20220619003336/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/FileVisitor.html)
-*   Apache common me
-*   [如何在 Java 中复制文件](/web/20220619003336/https://mkyong.com/java/how-to-copy-file-in-java/)
-*   Java——如何列出一个目录中的所有文件？
-
-<input type="hidden" id="mkyong-current-postId" value="5585">
+* [Java 复制示例](http://web.archive.org/web/20220619003336/https://docs.oracle.com/javase/tutorial/essential/io/examples/Copy.java)
+* [文件 JavaDoc](http://web.archive.org/web/20220619003336/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/Files.html)
+* [InputStream JavaDoc](http://web.archive.org/web/20220619003336/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/InputStream.html)
+* [OutputStream JavaDoc](http://web.archive.org/web/20220619003336/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/OutputStream.html)
+* [FileVisitor JavaDoc](http://web.archive.org/web/20220619003336/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/FileVisitor.html)
+* Apache common me
+* [如何在 Java 中复制文件](/web/20220619003336/https://mkyong.com/java/how-to-copy-file-in-java/)
+* Java——如何列出一个目录中的所有文件？

@@ -1,39 +1,41 @@
+
 # Cactoos 图书馆指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-cactoos>
 
-## 1.介绍
+## 1. 介绍
 
 [Cactoos](https://web.archive.org/web/20221206195206/https://github.com/yegor256/cactoos) **是一个面向对象的 Java 原语类型库**。
 
 在本教程中，我们将看看这个库中的一些类。
 
-## 2.卡图斯
+## 2. 卡图斯
 
 Cactoos 库的内容非常丰富，从字符串操作到数据结构。这个库提供的原语类型和它们对应的方法类似于其他库提供的，如 [Guava](/web/20221206195206/https://www.baeldung.com/category/guava/) 和 [Apache Commons](/web/20221206195206/https://www.baeldung.com/java-commons-lang-3) ，但是更侧重于面向对象的[设计原则](/web/20221206195206/https://www.baeldung.com/solid-principles)。
 
-### 2.1.与 Apache Commons 的比较
+### 2.1. 与 Apache Commons 的比较
 
 Cactoos 库配备了一些类，这些类提供了与 Apache Commons 库的静态方法相同的功能。
 
 让我们来看看这些静态方法，它们是`StringUtils`包的一部分，以及它们在 Cactoos 中的等价类:
 
 | **string utils 的静态方法** | **等价仙人掌类** |
-| isBlank() | IsBlank |
-| 小写() | 降低 |
-| 大写() | 上面的 |
-| 旋转() | 旋转 |
-| 交换情况() | 交换案例 |
-| stripStart() | trimmedalft |
-| 条纹末端() | 修剪右侧 |
+| --- | --- |
+| `isBlank()` | `IsBlank` |
+| `小写()` | `降低` |
+| `大写()` | `上面的` |
+| `旋转()` | `旋转` |
+| `交换情况()` | `交换案例` |
+| `stripStart()` | `trimmedalft` |
+| `条纹末端()` | `修剪右侧` |
 
 关于这方面的更多信息可以在[官方文档](https://web.archive.org/web/20221206195206/https://github.com/yegor256/cactoos#our-objects-vs-their-static-methods)中找到。我们将在下一节中研究其中一些的实现。
 
-## 3.**美芬依赖**
+## 3. Maven 依赖
 
 让我们从添加所需的 Maven 依赖项开始。该库的最新版本可以在 [Maven Central](https://web.archive.org/web/20221206195206/https://search.maven.org/classic/#search%7Cga%7C1%7Cg%3A%20%22org.cactoos%22%20AND%20a%3A%20%22cactoos%22) 上找到:
 
-```java
+```xml
 <dependency>
     <groupId>org.cactoos</groupId>
     <artifactId>cactoos</artifactId>
@@ -41,11 +43,11 @@ Cactoos 库配备了一些类，这些类提供了与 Apache Commons 库的静�
 </dependency>
 ```
 
-## 4.用线串
+## 4. 用线串
 
 Cactoos 有很多用于操作`String`对象的类。
 
-### 4.1.字符串对象创建
+### 4.1. 字符串对象创建
 
 让我们看看如何使用`TextOf`类创建一个`String`对象:
 
@@ -53,7 +55,7 @@ Cactoos 有很多用于操作`String`对象的类。
 String testString = new TextOf("Test String").asString();
 ```
 
-### 4.2.格式化字符串
+### 4.2. 格式化字符串
 
 如果需要创建格式化的`String`，我们可以使用`FormattedText`类:
 
@@ -70,7 +72,7 @@ String formattedString = obj.createdFormattedString("John");
 assertEquals("Hello John", formattedString);
 ```
 
-### 4.3.小写/大写字符串
+### 4.3. 小写/大写字符串
 
 *降低的*类使用其`TextOf`对象将`String`转换成小写:
 
@@ -96,7 +98,7 @@ assertEquals("test string", lowerCaseString);
 assertEquals("TEST STRING", upperCaseString);
 ```
 
-### 4.4.检查是否有空字符串
+### 4.4. 检查是否有空字符串
 
 如前所述，Cactoos 库提供了一个`IsBlank`类来检查`null`或空的`String`:
 
@@ -104,11 +106,11 @@ assertEquals("TEST STRING", upperCaseString);
 new IsBlank(new TextOf(testString)) != null;
 ```
 
-## 5.收集
+## 5. 收集
 
 这个库也提供了几个处理`Collections`的类。让我们来看看其中的一些。
 
-### 5.1.迭代集合
+### 5.1. 迭代集合
 
 我们可以使用实用程序类`And`迭代字符串列表:
 
@@ -118,7 +120,7 @@ new And((String input) -> LOGGER.info(new FormattedText("%s\n", input).asString(
 
 上面的方法是一种迭代`Strings`列表的函数方式，它将输出写入记录器。
 
-### 5.2.过滤收藏
+### 5.2. 过滤收藏
 
 `Filtered`类可用于根据特定标准过滤集合:
 
@@ -147,7 +149,7 @@ assertEquals(3, size);
 
 这个库提供的其他一些收藏类可以在官方文档中找到。
 
-## 6.结论
+## 6. 结论
 
 在本教程中，我们已经了解了 Cactoos 库和它提供的一些用于字符串和数据结构操作的类。
 

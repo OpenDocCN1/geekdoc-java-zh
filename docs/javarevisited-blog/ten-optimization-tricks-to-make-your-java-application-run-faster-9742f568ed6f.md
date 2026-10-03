@@ -1,3 +1,4 @@
+
 # 让 Java 应用程序运行更快的十个优化技巧
 
 > 原文：<https://medium.com/javarevisited/ten-optimization-tricks-to-make-your-java-application-run-faster-9742f568ed6f?source=collection_archive---------0----------------------->

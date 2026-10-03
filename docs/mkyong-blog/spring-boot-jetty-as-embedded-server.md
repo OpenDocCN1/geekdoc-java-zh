@@ -1,57 +1,58 @@
+
 # Spring Boot——Jetty 作为嵌入式服务器
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-boot-jetty-as-embedded-server/>
 
-默认情况下，Spring Boot 使用 Tomcat 作为默认的嵌入式服务器，要将其更改为 Jetty，只需排除 Tomcat 并包含 Jetty，如下所示:
+默认情况下，Spring Boot 使用 Tomcat 作为默认的嵌入式服务器，要将其更改为 Jetty，只需排除 Tomcat 并包含 Jetty，如下所示：
 
-## 1.弹簧靴起动器网
+## 1. 弹簧靴起动器网
 
-pom.xml
+`pom.xml`
 
-```java
- <dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-web</artifactId>
-		<exclusions>
-			<exclusion>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-tomcat</artifactId>
-			</exclusion>
-		</exclusions>
-	</dependency>
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+    <exclusions>
+        <exclusion>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
 
-	<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-jetty</artifactId>
-	</dependency> 
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-jetty</artifactId>
+</dependency>
 ```
 
-## 2.百里香叶
+## 2. 百里香叶
 
-pom.xml
+`pom.xml`
 
-```java
- <dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		<exclusions>
-			<exclusion>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-tomcat</artifactId>
-			</exclusion>
-		</exclusions>
-	</dependency>
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    <exclusions>
+        <exclusion>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
 
-	<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-jetty</artifactId>
-	</dependency> 
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-jetty</artifactId>
+</dependency>
 ```
 
 查看依赖关系
 
-```java
- $ mvn dependency:tree
+```bash
+$ mvn dependency:tree
 
 [INFO] org.springframework.boot:spring-boot-web-thymeleaf:jar:1.0
 [INFO] +- org.springframework.boot:spring-boot-starter-thymeleaf:jar:1.4.2.RELEASE:compile
@@ -115,17 +116,16 @@ pom.xml
 [INFO] +- org.springframework.boot:spring-boot-devtools:jar:1.4.2.RELEASE:compile
 [INFO] |  +- org.springframework.boot:spring-boot:jar:1.4.2.RELEASE:compile
 [INFO] |  |  \- org.springframework:spring-context:jar:4.3.4.RELEASE:compile
-[INFO] |  \- org.springframework.boot:spring-boot-autoconfigure:jar:1.4.2.RELEASE:compile 
+[INFO] |  \- org.springframework.boot:spring-boot-autoconfigure:jar:1.4.2.RELEASE:compile
 ```
 
 *PS 用 Spring Boot 1.4.2.RELEASE 测试*
 
-**Note**
-Spring Boot 1.4.2.RELEASE use Jetty 9.3.14.v20161028
+**注意**
+
+Spring Boot 1.4.2.RELEASE 使用 Jetty 9.3.14.v20161028
 
 ## 参考
 
-1.  [Spring Boot——嵌入式 servlet 容器](http://web.archive.org/web/20220815221144/https://docs.spring.io/spring-boot/docs/current/reference/html/howto-embedded-servlet-containers.html)
-2.  [码头服务器](http://web.archive.org/web/20220815221144/https://www.eclipse.org/jetty/)
-
-<input type="hidden" id="mkyong-current-postId" value="14224">
+1. [Spring Boot——嵌入式 servlet 容器](http://web.archive.org/web/20220815221144/https://docs.spring.io/spring-boot/docs/current/reference/html/howto-embedded-servlet-containers.html)
+2. [码头服务器](http://web.archive.org/web/20220815221144/https://www.eclipse.org/jetty/)

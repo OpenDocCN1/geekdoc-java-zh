@@ -1,30 +1,31 @@
+
 # 一行 Java 列表初始化
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-init-list-one-line>
 
-## 1.概观
+## 1. 概观
 
 在这个快速教程中，我们将研究如何使用一行程序初始化一个`List`。
 
-## 延伸阅读:
+## 延伸阅读
 
-## [Collections.emptyList()与新列表实例](/web/20220926193405/https://www.baeldung.com/java-collections-emptylist-new-list)
+### [Collections.emptyList()与新列表实例](/web/20220926193405/https://www.baeldung.com/java-collections-emptylist-new-list)
 
-Learn the differences between the Collections.emptyList() and a new list instance.[Read more](/web/20220926193405/https://www.baeldung.com/java-collections-emptylist-new-list) →
+Learn the differences between the `Collections.emptyList()` and a new list instance.[Read more](/web/20220926193405/https://www.baeldung.com/java-collections-emptylist-new-list) →
 
-## [Java 数组列表指南](/web/20220926193405/https://www.baeldung.com/java-arraylist)
+### [Java 数组列表指南](/web/20220926193405/https://www.baeldung.com/java-arraylist)
 
-Quick and practical guide to ArrayList in Java[Read more](/web/20220926193405/https://www.baeldung.com/java-arraylist) →
+Quick and practical guide to `ArrayList` in Java[Read more](/web/20220926193405/https://www.baeldung.com/java-arraylist) →
 
-## 2.从数组创建
+## 2. 从数组创建
 
-我们可以从数组中创建一个`List`。多亏了数组文字，我们可以在一行中初始化它们:
+我们可以从数组中创建一个`List`。多亏了数组文字，我们可以在一行中初始化它们：
 
 ```java
 List<String> list = Arrays.asList(new String[]{"foo", "bar"});
 ```
 
-我们可以信任 varargs 机制来处理数组创建。有了它，我们可以编写更简洁、可读性更好的代码:
+我们可以信任 varargs 机制来处理数组创建。有了它，我们可以编写更简洁、可读性更好的代码：
 
 ```java
 @Test
@@ -39,9 +40,9 @@ public void givenArraysAsList_thenInitialiseList() {
 
 虽然这个类的名字碰巧是`ArrayList`，但是它在`java.util.Arrays`包中。
 
-### 2.1.固定大小
+### 2.1. 固定大小
 
-来自`Arrays.asList`的结果实例将具有固定的大小:
+来自`Arrays.asList`的结果实例将具有固定的大小：
 
 ```java
 @Test(expected = UnsupportedOperationException.class)
@@ -52,9 +53,9 @@ public void givenArraysAsList_whenAdd_thenUnsupportedException() {
 }
 ```
 
-### 2.2.共享引用
+### 2.2. 共享引用
 
-原始数组和列表共享对对象的相同引用:
+原始数组和列表共享对对象的相同引用：
 
 ```java
 @Test
@@ -67,11 +68,11 @@ public void givenArraysAsList_whenCreated_thenShareReference(){
 }
 ```
 
-## 3.从流中创建(Java 8)
+## 3. 从流中创建（Java 8）
 
-我们可以很容易地将一个`Stream`转换成任何类型的`Collection.`
+我们可以很容易地将一个`Stream`转换成任何类型的`Collection`。
 
-因此，使用`Streams`的工厂方法，我们可以在一行中创建和初始化列表:
+因此，使用`Streams`的工厂方法，我们可以在一行中创建和初始化列表：
 
 ```java
 @Test
@@ -89,9 +90,9 @@ public void givenStream_thenInitializeList(){
 
 一些消息来源强调，`Stream.of(…).collect(…)`可能比`Arrays.asList()`拥有更大的内存和性能。但几乎在所有情况下，都是这样的微优化，差别不大。
 
-## 4.工厂方法(Java 9)
+## 4. 工厂方法（Java 9）
 
-JDK 9 为集合引入了几种方便的工厂方法:
+JDK 9 为集合引入了几种方便的工厂方法：
 
 ```java
 List<String> list = List.of("foo", "bar", "baz");
@@ -102,9 +103,9 @@ Set<String> set = Set.of("foo", "bar", "baz");
 
 这个话题在本文的[中有更多的探讨。](/web/20220926193405/https://www.baeldung.com/java-9-collections-factory-methods)
 
-## 5.双括号初始化
+## 5. 双括号初始化
 
-在几个地方，我们可以找到一个叫做双大括号初始化的方法，它看起来像这样:
+在几个地方，我们可以找到一个叫做双大括号初始化的方法，它看起来像这样：
 
 ```java
 @Test
@@ -131,10 +132,10 @@ Java 中实际上没有双括号语法元素；这是两个故意以这种方式
 
 要阅读更多关于双括号初始化的内容，请看我们的文章[这里](/web/20220926193405/https://www.baeldung.com/java-double-brace-initialization)。
 
-## 6.结论
+## 6. 结论
 
 **现代 Java 提供了几个选项来在一行中创建一个`Collection`。**我们选择的方法几乎完全取决于个人偏好，而不是技术推理。
 
-重要的一点是，尽管看起来很优雅，**匿名内部类初始化的反模式(又名双括号)有许多负面影响。**
+重要的一点是，尽管看起来很优雅，**匿名内部类初始化的反模式（又名双括号）有许多负面影响。**
 
 和往常一样，代码可以在 GitHub 的[上获得。](https://web.archive.org/web/20220926193405/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-collections-list-2)

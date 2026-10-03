@@ -1,3 +1,4 @@
+
 # 在文本组件中进行 CCP
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/dnd/textpaste.html`](https://docs.oracle.com/javase/tutorial/uiswing/dnd/textpaste.html)
@@ -8,53 +9,44 @@
 
 ![TextCutPaste 演示的快照。](img/8c14b93e64d323efbbae02318b15631c.png)
 
-* * *
-
 **试一试：**
 
-1.  点击启动按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行`TextCutPaste`（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 TextCutPaste 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TextCutPasteProject/TextCutPaste.jnlp)
-
-1.  在其中一个文本字段中选择文本。使用编辑菜单或键盘快捷键从源处剪切或复制文本。
-
-1.  将光标定位到要粘贴文本的位置。
-
-1.  使用菜单或键盘快捷键粘贴文本。
-
-1.  使用拖放执行相同的操作。
-
-* * *
+1. 点击启动按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行`TextCutPaste`（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 TextCutPaste 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TextCutPasteProject/TextCutPaste.jnlp)
+2. 在其中一个文本字段中选择文本。使用编辑菜单或键盘快捷键从源处剪切或复制文本。
+3. 将光标定位到要粘贴文本的位置。
+4. 使用菜单或键盘快捷键粘贴文本。
+5. 使用拖放执行相同的操作。
 
 这是创建编辑菜单的代码，通过将`DefaultEditorKit`中定义的内置剪切、复制和粘贴操作与菜单项连接起来。这适用于任何继承自`JComponent`的组件：
 
 ```java
-    /**
-     * Create an Edit menu to support cut/copy/paste.
-     */
-    public JMenuBar createMenuBar () {
-        JMenuItem menuItem = null;
-        JMenuBar menuBar = new JMenuBar();
-        JMenu mainMenu = new JMenu("Edit");
-        mainMenu.setMnemonic(KeyEvent.VK_E);
+/**
+ * Create an Edit menu to support cut/copy/paste.
+ */
+public JMenuBar createMenuBar () {
+    JMenuItem menuItem = null;
+    JMenuBar menuBar = new JMenuBar();
+    JMenu mainMenu = new JMenu("Edit");
+    mainMenu.setMnemonic(KeyEvent.VK_E);
 
-        menuItem = new JMenuItem(new DefaultEditorKit.CutAction());
-        menuItem.setText("Cut");
-        menuItem.setMnemonic(KeyEvent.VK_T);
-        mainMenu.add(menuItem);
+    menuItem = new JMenuItem(new DefaultEditorKit.CutAction());
+    menuItem.setText("Cut");
+    menuItem.setMnemonic(KeyEvent.VK_T);
+    mainMenu.add(menuItem);
 
-        menuItem = new JMenuItem(new DefaultEditorKit.CopyAction());
-        menuItem.setText("Copy");
-        menuItem.setMnemonic(KeyEvent.VK_C);
-        mainMenu.add(menuItem);
+    menuItem = new JMenuItem(new DefaultEditorKit.CopyAction());
+    menuItem.setText("Copy");
+    menuItem.setMnemonic(KeyEvent.VK_C);
+    mainMenu.add(menuItem);
 
-        menuItem = new JMenuItem(new DefaultEditorKit.PasteAction());
-        menuItem.setText("Paste");
-        menuItem.setMnemonic(KeyEvent.VK_P);
-        mainMenu.add(menuItem);
+    menuItem = new JMenuItem(new DefaultEditorKit.PasteAction());
+    menuItem.setText("Paste");
+    menuItem.setMnemonic(KeyEvent.VK_P);
+    mainMenu.add(menuItem);
 
-        menuBar.add(mainMenu);
-        return menuBar;
-    }
-
+    menuBar.add(mainMenu);
+    return menuBar;
+}
 ```
 
 接下来我们将看看如何使用不具有`DefaultEditorKit`内置支持的组件实现相同的功能。

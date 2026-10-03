@@ -1,22 +1,23 @@
+
 # 莫奇托附加答案介绍
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/mockito-additionalanswers>
 
-## 1.概观
+## 1. 概观
 
 在本教程中，我们将熟悉 Mockito 的`AdditionalAnswers`类及其方法。
 
-## 2.返回参数
+## 2. 返回参数
 
 `AdditionalAnswers`类的主要目的是返回传递给模拟方法的参数。
 
 例如，当更新一个对象时，被模仿的方法通常只返回更新后的对象。使用来自`AdditionalAnswers`的方法，我们可以改为**根据它在参数列表**中的位置，返回一个作为参数传递给方法的特定参数。
 
-此外，`AdditionalAnswers `拥有`Answer`类的不同实现。
+此外，`AdditionalAnswers`拥有`Answer`类的不同实现。
 
 为了开始我们的演示，让我们创建一个库项目。
 
-首先，我们将创建一个简单的模型:
+首先，我们将创建一个简单的模型：
 
 ```java
 public class Book {
@@ -31,7 +32,7 @@ public class Book {
 }
 ```
 
-此外，我们需要一个用于图书检索的存储库类:
+此外，我们需要一个用于图书检索的存储库类：
 
 ```java
 public class BookRepository {
@@ -54,7 +55,7 @@ public class BookRepository {
 }
 ```
 
-相应地，我们有一个调用我们的存储库方法的服务类:
+相应地，我们有一个调用我们的存储库方法的服务类：
 
 ```java
 public class BookService {
@@ -80,9 +81,9 @@ public class BookService {
 
 记住这一点，让我们创建一些测试。
 
-### 2.1.返回第一个参数
+### 2.1. 返回第一个参数
 
-对于我们的测试类，我们需要通过**用`MockitoJUnitRunner`** 注释 JUnit 测试类来启用对 Mockito 测试的注释。此外，我们需要**模仿我们的服务和存储库类**:
+对于我们的测试类，我们需要通过**用`MockitoJUnitRunner`**注释 JUnit 测试类来启用对 Mockito 测试的注释。此外，我们需要**模仿我们的服务和存储库类**：
 
 ```java
 @RunWith(MockitoJUnitRunner.class)
@@ -98,7 +99,7 @@ public class BookServiceUnitTest {
 }
 ```
 
-首先，让我们创建一个返回第一个参数的测试:
+首先，让我们创建一个返回第一个参数的测试：
 
 ```java
 @Test
@@ -116,9 +117,9 @@ public void givenSaveMethodMocked_whenSaveInvoked_ThenReturnFirstArgument_UnitTe
 
 **当我们运行这个测试时，它确实会返回第一个参数**，它等于我们保存的`Book`对象。
 
-### 2.2.返回第二个参数
+### 2.2. 返回第二个参数
 
-其次，我们使用`AdditionalAnswers.returnsSecondArg()`创建一个测试:
+其次，我们使用`AdditionalAnswers.returnsSecondArg()`创建一个测试：
 
 ```java
 @Test
@@ -136,11 +137,11 @@ public void givenCheckifEqualsMethodMocked_whenCheckifEqualsInvoked_ThenReturnSe
 }
 ```
 
-在这种情况下，当我们的 *selectRandomBook* 方法执行时，该方法将返回第二本书。
+在这种情况下，当我们的`selectRandomBook`方法执行时，该方法将返回第二本书。
 
-### 2.3.返回最后一个参数
+### 2.3. 返回最后一个参数
 
-类似地，我们可以使用`AdditionalAnswers.returnsLastArg()`来获取传递给我们的方法的最后一个参数:
+类似地，我们可以使用`AdditionalAnswers.returnsLastArg()`来获取传递给我们的方法的最后一个参数：
 
 ```java
 @Test
@@ -159,9 +160,9 @@ public void givenCheckifEqualsMethodMocked_whenCheckifEqualsInvoked_ThenReturnLa
 
 这里，调用的方法将返回第三本书，因为它是最后一个参数。
 
-### 2.4.返回索引处的参数
+### 2.4. 返回索引处的参数
 
-最后，让我们编写一个测试，使用方法**使我们能够返回给定索引**–`AdditionalAnswers.returnsArgAt(int index)`处的参数:
+最后，让我们编写一个测试，使用方法**使我们能够返回给定索引**–`AdditionalAnswers.returnsArgAt(int index)`处的参数：
 
 ```java
 @Test
@@ -181,21 +182,21 @@ public void givenCheckifEqualsMethodMocked_whenCheckifEqualsInvoked_ThenReturnAr
 
 最后，由于我们要求从索引 1 中得到参数，我们将得到第二个参数——具体地说，在本例中是`book2`。
 
-## 3.从功能界面创建答案
+## 3. 从功能界面创建答案
 
-`AdditionalAnswers`提供了一种**简洁而整洁的方式来从[功能接口](/web/20220706105622/https://www.baeldung.com/java-8-functional-interfaces)** 中创建答案。为此，它提供了两个方便的方法:`answer() and` `answerVoid().`
+`AdditionalAnswers`提供了一种**简洁而整洁的方式来从[功能接口](/web/20220706105622/https://www.baeldung.com/java-8-functional-interfaces)**中创建答案。为此，它提供了两个方便的方法：`answer()`和`answerVoid()`。
 
 所以，让我们下兔子洞，看看如何在实践中使用它们。
 
-请记住，**这两种方法都用`@Incubating`** 标注。这意味着它们可能会在以后根据社区反馈进行更改。
+请记住，**这两种方法都用`@Incubating`**标注。这意味着它们可能会在以后根据社区反馈进行更改。
 
-### 3.1.使用`AdditionalAnswers.answer()`
+### 3.1. 使用`AdditionalAnswers.answer()`
 
 引入这个方法主要是为了在 Java 8 中使用函数接口创建强类型答案。
 
 通常，Mockito 带有一组现成的通用接口，我们可以用它们来配置 mock 的答案。**例如，它为单个参数调用**提供了`Answer1<T,A0>`。
 
-现在，让我们演示如何使用`AdditionalAnswers.answer()` 来创建一个返回`Book`对象的答案:
+现在，让我们演示如何使用`AdditionalAnswers.answer()`来创建一个返回`Book`对象的答案：
 
 ```java
 @Test
@@ -212,13 +213,13 @@ private static Book buildBook(Long bookId) {
 }
 ```
 
-如上所示，我们使用了一个[方法引用](/web/20220706105622/https://www.baeldung.com/java-method-references)来表示`Answer1` 接口。
+如上所示，我们使用了一个[方法引用](/web/20220706105622/https://www.baeldung.com/java-method-references)来表示`Answer1`接口。
 
-### 3.2.使用`AdditionalAnswers.answerVoid()`
+### 3.2. 使用`AdditionalAnswers.answerVoid()`
 
 类似地，我们可以使用`answerVoid()`为不返回任何内容的参数调用配置 mock 的答案。
 
-接下来，让我们用一个测试用例来举例说明`AdditionalAnswers.answerVoid()` 方法的使用:
+接下来，让我们用一个测试用例来举例说明`AdditionalAnswers.answerVoid()`方法的使用：
 
 ```java
 @Test
@@ -235,11 +236,11 @@ private static void printBookId(Long bookId) {
 }
 ```
 
-如我们所见，**我们使用了`VoidAnswer1<A0>`** **接口** **到** **为不返回任何内容的单个参数调用创建答案**。
+如我们所见，**我们使用了`VoidAnswer1<A0>`**接口**到**为不返回任何内容的单个参数调用创建答案。
 
 `answer`方法指定了当我们与 mock 交互时执行的动作。在我们的例子中，我们只是打印传递的图书的 id。
 
-## 4.结论
+## 4. 结论
 
 总之，本教程涵盖了 Mockito 的`AdditionalAnswers`类的方法。
 

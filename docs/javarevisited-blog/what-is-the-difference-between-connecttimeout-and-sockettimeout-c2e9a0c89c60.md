@@ -1,3 +1,4 @@
+
 # ConnectTimeout 和 SocketTimeout 有什么区别
 
 > 原文：<https://medium.com/javarevisited/what-is-the-difference-between-connecttimeout-and-sockettimeout-c2e9a0c89c60?source=collection_archive---------0----------------------->

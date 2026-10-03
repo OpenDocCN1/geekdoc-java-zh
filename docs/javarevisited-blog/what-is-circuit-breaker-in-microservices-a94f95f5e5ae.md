@@ -1,3 +1,4 @@
+
 # 什么是微服务中的断路器？
 
 > 原文：<https://medium.com/javarevisited/what-is-circuit-breaker-in-microservices-a94f95f5e5ae?source=collection_archive---------0----------------------->

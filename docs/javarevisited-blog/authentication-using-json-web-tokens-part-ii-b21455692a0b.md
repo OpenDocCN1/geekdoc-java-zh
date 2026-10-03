@@ -1,4 +1,5 @@
-# 使用 JSON Web 令牌进行身份验证(第二部分)
+
+# 使用 JSON Web 令牌进行身份验证（第二部分）
 
 > 原文：<https://medium.com/javarevisited/authentication-using-json-web-tokens-part-ii-b21455692a0b?source=collection_archive---------0----------------------->
 
@@ -14,7 +15,7 @@
 
 在上一篇文章中，我介绍了 JSON web 令牌以及如何使用它进行身份验证。在您阅读本文之前，我更愿意先看一下。
 
-</@bhanuka.16/authentication-using-json-web-tokens-part-i-4f2eeaca22d7>  
+</@bhanuka.16/authentication-using-json-web-tokens-part-i-4f2eeaca22d7>
 
 在本文中，我将向您展示如何实现一个 [Spring Boot 应用程序](/javarevisited/10-free-spring-boot-tutorials-and-courses-for-java-developers-53dfe084587e?source=collection_home---4------7-----------------------)，它利用 JWT 认证来保护一个公开的 REST API。对于演示，将有一个硬编码的用户名和密码。
 
@@ -26,47 +27,47 @@
 
 您可以使用下面的链接获得该演示的源代码。
 
-<https://github.com/bhanukad610/JwtAuthentication>  
+<https://github.com/bhanukad610/JwtAuthentication>
 
-我将在演示中解释它是如何发生的。让我们从`WebsecurityConfig` 文件开始。
+我将在演示中解释它是如何发生的。让我们从`WebsecurityConfig`文件开始。
 
-# **WebsecurityConfig**
+## WebsecurityConfig
 
 它是定义所有安全配置的地方。这个类是由 [Spring Security 的](/javarevisited/top-10-courses-to-learn-spring-security-and-oauth2-with-spring-boot-for-java-developers-8f0222d6066d?source=---------5-----------------------)web Security configure 接口实现的。它提供默认的安全配置，并允许其他类通过重写它的方法来扩展它和自定义安全配置。
 
-**用户详细信息服务**
+### 用户详细信息服务
 
-`UserDetailsService` 是一个接口，它有一个基于用户名加载用户的方法。
+`UserDetailsService`是一个接口，它有一个基于用户名加载用户的方法。
 
-**JwtAuthenticationEntryPoint**
+### JwtAuthenticationEntryPoint
 
-`JwtAuthenticationEntryPoint` 用于将 401 未授权错误返回给试图在没有正确身份验证的情况下访问受保护资源的客户端。
+`JwtAuthenticationEntryPoint`用于将 401 未授权错误返回给试图在没有正确身份验证的情况下访问受保护资源的客户端。
 
-只定义令牌返回的允许请求，所有其他请求都经过身份验证。使用了不会用于存储用户状态的无状态会话。然后添加`JwtRequestFilter` 来验证请求头中的令牌。
+只定义令牌返回的允许请求，所有其他请求都经过身份验证。使用了不会用于存储用户状态的无状态会话。然后添加`JwtRequestFilter`来验证请求头中的令牌。
 
-# **JwtRequestFilter**
+## JwtRequestFilter
 
-JwtRequestFilter 是负责从所有请求的授权头中读取 JWT 身份验证令牌的类。它使用`JwtUserDetailsService`加载与令牌相关联的用户详细信息。令牌生成和验证是使用`JwtTokenService` 类完成的。
+`JwtRequestFilter`是负责从所有请求的授权头中读取 JWT 身份验证令牌的类。它使用`JwtUserDetailsService`加载与令牌相关联的用户详细信息。令牌生成和验证是使用`JwtTokenService`类完成的。
 
-**JwtTokenService**
+### JwtTokenService
 
-在这里定义令牌的声明，如颁发者、过期、主题和 ID，并使用 HS512 算法和 application.properties 文件中定义的密钥对 JWT 进行签名。令牌的验证也在这里完成。
+在这里定义令牌的声明，如颁发者、过期、主题和 ID，并使用 HS512 算法和`application.properties`文件中定义的密钥对 JWT 进行签名。令牌的验证也在这里完成。
 
-# **AuthController**
+## AuthController
 
-AuthController 是公开用于身份验证的 POST API 的控制器。POST API 获取主体中的用户名和密码，并通过 **AuthService** 验证用户名和密码。如果凭证有效，使用 **JWTTokenService** 创建一个 JWT 令牌并提供给客户端。
+`AuthController`是公开用于身份验证的 POST API 的控制器。POST API 获取主体中的用户名和密码，并通过`AuthService`验证用户名和密码。如果凭证有效，使用`JWTTokenService`创建一个 JWT 令牌并提供给客户端。
 
-**HelloController** 是用于公开 [GET REST API](https://www.java67.com/2018/02/3-books-and-courses-to-learn-restful-web-services-with-spring.html) 的控制器类，如果请求具有有效的令牌，客户端可以访问该 API。
+`HelloController`是用于公开 [GET REST API](https://www.java67.com/2018/02/3-books-and-courses-to-learn-restful-web-services-with-spring.html) 的控制器类，如果请求具有有效的令牌，客户端可以访问该 API。
 
 现在启动 [Spring Boot 应用](https://www.java67.com/2018/06/top-15-spring-boot-interview-questions-answers-java-jee-programmers.html)。
 
-1.  创建对“/security/token”的 POST 请求。
+1. 创建对`/security/token`的 POST 请求。
 
 [![](img/00b9f6843186f4ee4b856bf8908f48c7.png)](https://medium.com/javarevisited/why-spring-is-the-best-framework-for-developing-rest-apis-in-java-784590e484a4?source=collection_home---4------0-----------------------)
 
 作者图片
 
-2.使用上面在授权头中生成的令牌访问 localhost:8080/hello/call。
+2. 使用上面在授权头中生成的令牌访问`localhost:8080/hello/call`。
 
 ![](img/9667144cb1197bc117b2a201e5d068a1.png)
 

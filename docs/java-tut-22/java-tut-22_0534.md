@@ -1,3 +1,4 @@
+
 # 缩减
 
 > 原文：[`docs.oracle.com/javase/tutorial/collections/streams/reduction.html`](https://docs.oracle.com/javase/tutorial/collections/streams/reduction.html)
@@ -17,9 +18,8 @@ JDK 包含许多终端操作（如[`average`](https://docs.oracle.com/javase/8/d
 
 本节涵盖以下主题：
 
-+   Stream.reduce 方法
-
-+   Stream.collect 方法
++   `Stream.reduce` 方法
++   `Stream.collect` 方法
 
 你可以在示例`ReductionExamples`中找到本节中描述的代码片段。
 
@@ -48,8 +48,7 @@ Integer totalAgeReduce = roster
 在这个例子中，`reduce` 操作接受两个参数：
 
 +   `identity`：身份元素既是缩减的初始值，也是如果流中没有元素时的默认结果。在这个例子中，身份元素是`0`；这是年龄总和的初始值，也是如果`roster`集合中不存在成员时的默认值。
-
-+   `accumulator`: 累加器函数接受两个参数：减少的部分结果（在这个例子中，到目前为止所有处理过的整数的总和）和流的下一个元素（在这个例子中，一个整数）。它返回一个新的部分结果。在这个例子中，累加器函数是一个 lambda 表达式，它将两个`Integer`值相加并返回一个`Integer`值：
++   `accumulator`：累加器函数接受两个参数：减少的部分结果（在这个例子中，到目前为止所有处理过的整数的总和）和流的下一个元素（在这个例子中，一个整数）。它返回一个新的部分结果。在这个例子中，累加器函数是一个 lambda 表达式，它将两个`Integer`值相加并返回一个`Integer`值：
 
     ```java
     (a, b) -> a + b
@@ -95,18 +94,14 @@ System.out.println("Average age of male members: " +
 
 这个例子中的`collect`操作接受三个参数：
 
-+   `supplier`: 供应商是一个工厂函数；它构造新实例。对于`collect`操作，它创建结果容器的实例。在这个例子中，它是`Averager`类的一个新实例。
-
-+   `accumulator`: 累加器函数将流元素合并到结果容器中。在这个例子中，它通过将`count`变量加一并将流元素的值（代表男性成员年龄的整数）加到`total`成员变量中，修改了`Averager`结果容器。
-
++   `supplier`：供应商是一个工厂函数；它构造新实例。对于`collect`操作，它创建结果容器的实例。在这个例子中，它是`Averager`类的一个新实例。
++   `accumulator`：累加器函数将流元素合并到结果容器中。在这个例子中，它通过将`count`变量加一并将流元素的值（代表男性成员年龄的整数）加到`total`成员变量中，修改了`Averager`结果容器。
 +   `combiner`：合并器函数接受两个结果容器并合并它们的内容。在这个例子中，它通过增加另一个`Averager`实例的`count`成员变量的值到`Averager`结果容器的`count`变量，并将另一个`Averager`实例的`total`成员变量的值加到`total`成员变量中来修改`Averager`结果容器。
 
 请注意以下内容：
 
 +   供应商是一个 lambda 表达式（或方法引用），与`reduce`操作中的单位元素等值相对。
-
 +   累加器和合并器函数不返回值。
-
 +   您可以在并行流中使用`collect`操作；有关更多信息，请参阅并行性部分。（如果您在并行流中运行`collect`方法，那么当合并器函数创建一个新对象时，例如在这个例子中创建一个`Averager`对象时，JDK 会创建一个新线程。因此，您不必担心同步。）
 
 尽管 JDK 为您提供了`average`操作来计算流中元素的平均值，但如果您需要从流的元素计算多个值，可以使用`collect`操作和自定义类。
@@ -173,9 +168,7 @@ Map<Person.Sex, Integer> totalAgeByGender =
 [`reducing`](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html#reducing-U-java.util.function.Function-java.util.function.BinaryOperator-) 操作需要三个参数：
 
 +   `identity`：类似于 `Stream.reduce` 操作，身份元素既是减少的初始值，也是如果流中没有元素时的默认结果。在这个例子中，身份元素是 `0`；这是年龄总和的初始值，如果没有成员存在，则是默认值。
-
 +   `mapper`：`reducing` 操作将此映射函数应用于所有流元素。在这个例子中，映射器检索每个成员的年龄。
-
 +   `operation`：操作函数用于减少映射值。在这个例子中，操作函数添加 `Integer` 值。
 
 以下示例检索每个性别成员的平均年龄：

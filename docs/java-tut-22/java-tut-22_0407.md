@@ -1,3 +1,4 @@
+
 # 事件分发线程
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html`](https://docs.oracle.com/javase/tutorial/uiswing/concurrency/dispatch.html)

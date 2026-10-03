@@ -1,3 +1,4 @@
+
 # 关于 Java 模块你应该知道的 9 件事
 
 > 原文：<https://medium.com/javarevisited/9-things-you-should-know-about-java-modules-43dd5fdeea6?source=collection_archive---------3----------------------->
@@ -8,4 +9,4 @@
 
 由[凯利·西克玛](https://unsplash.com/@kellysikkema?utm_source=medium&utm_medium=referral)在 [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral) 上拍摄的照片
 
-Java 9 的一个重要特性是 Java 模块。 ***Java 模块实际上是包的包*** ，意思是它能够封装…
+Java 9 的一个重要特性是 Java 模块。`Java 模块`实际上是包的包，意思是它能够封装…

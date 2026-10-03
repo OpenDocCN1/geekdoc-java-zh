@@ -1,28 +1,29 @@
+
 # 用 Java 实现 A*寻路
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-a-star-pathfinding>
 
-## 1。简介
+## 1. 简介
 
 **寻路算法是导航地图的技术**，允许我们找到两个不同点之间的路线。不同的算法有不同的优点和缺点，通常是在算法的效率和它生成的路由的效率方面。
 
-## 2。什么是寻路算法？
+## 2. 什么是寻路算法？
 
-**寻路算法是一种将由节点和边组成的图转换成通过图的路线的技术**。这个图可以是任何需要遍历的东西。在这篇文章中，我们将尝试穿越伦敦地铁系统的一部分:
+**寻路算法是一种将由节点和边组成的图转换成通过图的路线的技术**。这个图可以是任何需要遍历的东西。在这篇文章中，我们将尝试穿越伦敦地铁系统的一部分：
 
 [![](img/b1ecc05f9dd5490ff4e03c325974a0ee.png)](/web/20221018063907/https://www.baeldung.com/wp-content/uploads/2019/11/Screenshot-2019-11-13-at-06.49.37.png)
 
 ( [sameboat](https://web.archive.org/web/20221018063907/https://commons.wikimedia.org/wiki/User:Sameboat) 的“[伦敦地铁地上 DLR 跨轨图](https://web.archive.org/web/20221018063907/https://commons.wikimedia.org/wiki/File:London_Underground_Overground_DLR_Crossrail_map.svg)”获得 [CC BY-SA 4.0](https://web.archive.org/web/20221018063907/https://creativecommons.org/licenses/by-sa/4.0/deed.en) 授权)
 
-这里面有很多有趣的成分:
+这里面有很多有趣的成分：
 
 *   我们在起点和终点之间可能有也可能没有直接的路线。比如我们可以直接从“伯爵宫”到“纪念碑”，但不能到“天使”。
 *   每一步都有特定的成本。在我们的例子中，这是站与站之间的距离。
 *   每个停靠点仅连接到其他停靠点的一个子集。比如“摄政公园”直接连接的只有“贝克街”和“牛津广场”。
 
-所有寻路算法都将所有节点(在我们的例子中是站点)和它们之间的连接以及所需的起点和终点的集合作为输入。**输出通常是一组节点，按照我们需要进行**的顺序，让我们从头到尾。
+所有寻路算法都将所有节点（在我们的例子中是站点）和它们之间的连接以及所需的起点和终点的集合作为输入。**输出通常是一组节点，按照我们需要进行的顺序，让我们从头到尾。**
 
-## 3。什么是 A*？
+## 3. 什么是 A*？
 
 **[A*](/web/20221018063907/https://www.baeldung.com/cs/a-star-algorithm) 是一种特定的寻路算法**，由 Peter Hart、Nils Nilsson 和 Bertram Raphael 于 1968 年首次发表。**当没有机会预先计算路线并且对内存使用没有限制时，通常认为这是最好的算法**。
 
@@ -30,7 +31,7 @@
 
 A*实际上是 Dijkstra 算法的变体，其中提供了额外的信息来帮助选择下一个要使用的节点。这些额外的信息不需要完美——如果我们已经有了完美的信息，那么寻路就毫无意义。但是越好，最后的结果也就越好。
 
-## 4。A*是如何工作的？
+## 4. A*是如何工作的？
 
 A*算法的工作原理是反复选择迄今为止的最佳路线，并尝试查看下一步的最佳路线。
 
@@ -42,7 +43,7 @@ A*算法的工作原理是反复选择迄今为止的最佳路线，并尝试查
 
 在最开始，我们的开集由我们的开始节点组成，我们没有任何关于其他节点的信息。
 
-在每次迭代中，我们将:
+在每次迭代中，我们将：
 
 *   从我们的开放集合中选择具有最低估计总分的节点
 *   从开放集中删除此节点
@@ -52,7 +53,7 @@ A*算法的工作原理是反复选择迄今为止的最佳路线，并尝试查
 
 然后重复这一过程，直到我们的开放集合中具有最低估计总分的节点是我们的目的地，在这一点上，我们得到了我们的路线。
 
-### 4.1。工作示例
+### 4.1. 工作示例
 
 例如，让我们从“玛丽莱波恩”出发，试图找到去“邦德街”的路。
 
@@ -66,17 +67,17 @@ A*算法的工作原理是反复选择迄今为止的最佳路线，并尝试查
 
 我们不会讨论所有这些，但让我们以“Marylebone”作为一个有趣的例子。到达那里的成本也是 0.4153 km，但这意味着总成本现在是 0.8306 km。此外，从这里到目的地的试探法给出 1.323 km 的分数。
 
-**这意味着估计总得分将为 2.1536 公里，比该节点的先前得分高`worse`。**这是有道理的，因为在这种情况下，我们不得不做额外的工作而毫无进展。这意味着我们不认为这是一条可行的路线。因此,“Marylebone”的详细信息不会更新，也不会添加回开放集。
+**这意味着估计总得分将为 2.1536 公里，比该节点的先前得分高`worse`。**这是有道理的，因为在这种情况下，我们不得不做额外的工作而毫无进展。这意味着我们不认为这是一条可行的路线。因此，“Marylebone”的详细信息不会更新，也不会添加回开放集。
 
-## 5。Java 实现
+## 5. Java 实现
 
 既然我们已经讨论了这是如何工作的，让我们实际实现它。我们将构建一个通用的解决方案，然后我们将实现它为伦敦地铁工作所必需的代码。然后，我们可以通过只实现那些特定的部分，将它用于其他场景。
 
-### 5.1。代表图形
+### 5.1. 代表图形
 
 首先，我们需要能够表示我们希望遍历的图形。这包括两个类——单个节点和整个图形。
 
-我们将用一个名为`GraphNode`的接口来表示我们的单个节点:
+我们将用一个名为`GraphNode`的接口来表示我们的单个节点：
 
 ```java
 public interface GraphNode {
@@ -86,7 +87,7 @@ public interface GraphNode {
 
 我们的每个节点都必须有一个 ID。其他任何东西都是特定于这个特定的图，对于一般的解决方案是不需要的。这些类是简单的 Java Beans，没有特殊的逻辑。
 
-然后，我们的整个图由一个简单的叫做`Graph`的类来表示:
+然后，我们的整个图由一个简单的叫做`Graph`的类来表示：
 
 ```java
 public class Graph<T extends GraphNode> {
@@ -112,11 +113,11 @@ public class Graph<T extends GraphNode> {
 
 在这一点上，我们能够表示我们希望的任何形式的图，在任何数量的节点之间有任何数量的边。
 
-### 5.2。我们路线上的步骤
+### 5.2. 我们路线上的步骤
 
 我们需要的下一件事是我们通过图寻找路线的机制。
 
-**第一部分是以某种方式在任意两个节点之间生成一个分数。**我们将为到下一个节点的分数和到目的地的估计值提供`Scorer`接口:
+**第一部分是以某种方式在任意两个节点之间生成一个分数。**我们将为到下一个节点的分数和到目的地的估计值提供`Scorer`接口：
 
 ```java
 public interface Scorer<T extends GraphNode> {
@@ -126,7 +127,7 @@ public interface Scorer<T extends GraphNode> {
 
 给定一个起点和一个终点，然后我们得到在它们之间旅行的分数。
 
-**我们还需要一个包装器来包装我们的节点，携带一些额外的信息。**这不是一个`GraphNode`，而是一个`RouteNode`，因为它是我们计算出的路线中的一个节点，而不是整个图中的一个节点:
+**我们还需要一个包装器来包装我们的节点，携带一些额外的信息。**这不是一个`GraphNode`，而是一个`RouteNode`，因为它是我们计算出的路线中的一个节点，而不是整个图中的一个节点：
 
 ```java
 class RouteNode<T extends GraphNode> implements Comparable<RouteNode> {
@@ -150,7 +151,7 @@ class RouteNode<T extends GraphNode> implements Comparable<RouteNode> {
 
 **与`GraphNode`一样，这些是简单的 Java Beans，用于存储当前路由计算的每个节点的当前状态。**当我们第一次访问一个节点并且还没有关于它的额外信息时，我们已经给了它一个简单的构造函数。
 
-**这些也需要被`Comparable`处理，这样我们就可以根据估计的分数对它们进行排序，作为算法的一部分。**这意味着添加一个`compareTo()`方法来满足`Comparable`接口的需求:
+**这些也需要被`Comparable`处理，这样我们就可以根据估计的分数对它们进行排序，作为算法的一部分。**这意味着添加一个`compareTo()`方法来满足`Comparable`接口的需求：
 
 ```java
 @Override
@@ -165,9 +166,9 @@ public int compareTo(RouteNode other) {
 }
 ```
 
-### 5.3。寻找我们的路线
+### 5.3. 寻找我们的路线
 
-现在，我们可以实际生成穿过图表的路线了。这将是一个名为`RouteFinder`的类:
+现在，我们可以实际生成穿过图表的路线了。这将是一个名为`RouteFinder`的类：
 
 ```java
 public class RouteFinder<T extends GraphNode> {
@@ -185,7 +186,7 @@ public class RouteFinder<T extends GraphNode> {
 
 这个方法就是我们的 A*算法。我们剩下的所有代码都放在这个方法中。
 
-我们从一些基本的设置开始——我们可以考虑作为下一步的节点“开放集”,以及到目前为止我们已经访问过的每个节点的地图和我们对它的了解:
+我们从一些基本的设置开始——我们可以考虑作为下一步的节点“开放集”，以及到目前为止我们已经访问过的每个节点的地图和我们对它的了解：
 
 ```java
 Queue<RouteNode> openSet = new PriorityQueue<>();
@@ -198,9 +199,9 @@ allNodes.put(from, start);
 
 我们的开集最初只有一个节点——我们的起点。这里没有前一个节点，到达那里的分数是 0，我们已经估计了离目的地有多远。
 
-对开集使用一个`PriorityQueue`意味着我们可以根据前面的`compareTo() `方法，自动从中获得最佳入口。
+对开集使用一个`PriorityQueue`意味着我们可以根据前面的`compareTo()`方法，自动从中获得最佳入口。
 
-现在我们迭代，直到我们用完了要查看的节点，或者最佳可用节点是我们的目的地:
+现在我们迭代，直到我们用完了要查看的节点，或者最佳可用节点是我们的目的地：
 
 ```java
 while (!openSet.isEmpty()) {
@@ -220,14 +221,14 @@ while (!openSet.isEmpty()) {
 
 当我们找到目的地时，我们可以通过反复查看前一个节点来建立我们的路线，直到我们到达起点。
 
-接下来，如果我们还没有到达目的地，我们可以想出下一步该做什么:
+接下来，如果我们还没有到达目的地，我们可以想出下一步该做什么：
 
 ```java
  graph.getConnections(next.getCurrent()).forEach(connection -> { 
         RouteNode<T> nextNode = allNodes.getOrDefault(connection, new RouteNode<>(connection));
         allNodes.put(connection, nextNode);
 
-        double newScore = next.getRouteScore() + nextNodeScorer.computeCost(next.getCurrent(), connection);
+        double newScore = next.getRouteScore() + nextNodeScorer.computeCost(next.getCurrent(), connection);
         if (newScore < nextNode.getRouteScore()) {
             nextNode.setPrevious(next.getCurrent());
             nextNode.setRouteScore(newScore);
@@ -246,11 +247,11 @@ while (!openSet.isEmpty()) {
 
 **这是整个算法。我们不断重复这个过程，直到我们达到目标或者失败。**
 
-### 5.4。伦敦地铁的具体细节
+### 5.4. 伦敦地铁的具体细节
 
 **到目前为止，我们拥有的是一个通用的 A*探路者，**，但它缺乏我们确切用例所需的细节。这意味着我们需要`GraphNode`和`Scorer`的具体实现。
 
-我们的节点是地铁上的车站，我们将用`Station`类对它们建模:
+我们的节点是地铁上的车站，我们将用`Station`类对它们建模：
 
 ```java
 public class Station implements GraphNode {
@@ -263,7 +264,9 @@ public class Station implements GraphNode {
 
 名称对于查看输出很有用，而纬度和经度则用于我们的评分。
 
-在这个场景中，我们只需要一个`Scorer`的实现。我们将使用[哈弗辛公式](/web/20221018063907/https://www.baeldung.com/cs/haversine-formula)来计算两对纬度/经度之间的直线距离:
+在这个场景中，我们只需要一个`Scorer`的实现。我们将使用[哈弗辛公式](/web/20221018063907/https://www.baeldung.com/cs/haversine-formula)来计算两对纬度/经度之间的直线距离：
+
+
 
 ```java
 public class HaversineScorer implements Scorer<Station> {
@@ -286,7 +289,7 @@ public class HaversineScorer implements Scorer<Station> {
 
 我们现在几乎拥有了计算任意两对站点间路径所需的一切。唯一缺少的就是它们之间的连接图。
 
-让我们用它来绘制路线。我们会从伯爵的宫廷到天使产生一个。这有许多不同的旅行选择，至少有两条线路:
+让我们用它来绘制路线。我们会从伯爵的宫廷到天使产生一个。这有许多不同的旅行选择，至少有两条线路：
 
 ```java
 public void findRoute() {
@@ -296,11 +299,11 @@ public void findRoute() {
 }
 ```
 
-**由此生成一条伯爵宫- >南肯辛顿- >格林公园- >尤斯顿- >天使的路线。**
+由此生成一条伯爵宫->南肯辛顿->格林公园->尤斯顿->天使的路线。
 
 很多人会选择的明显路线可能是伯爵->纪念碑->天使，因为那变化较少。相反，这采取了一条明显更直接的路线，尽管这意味着更多的变化。
 
-## 6。结论
+## 6. 结论
 
 在本文中，我们已经了解了什么是 A*算法，它是如何工作的，以及如何在我们自己的项目中实现它。为什么不把这个拿来扩展一下自己用呢？
 

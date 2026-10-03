@@ -1,12 +1,13 @@
+
 # 迭代器和 Iterable 的区别以及如何使用？
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-iterator-vs-iterable>
 
-## 1.概观
+## 1. 概观
 
 在本教程中，我们将看看 Java 中的`Iterable`和`Iterator`接口的用法以及它们之间的区别。
 
-## 2.`Iterable`界面
+## 2. `Iterable`界面
 
 [`Iterable`](https://web.archive.org/web/20220606083223/https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html "Iterable") 界面属于`java.lang`包。**它代表了一种可以迭代的数据结构。**
 
@@ -14,11 +15,11 @@
 
 **Java 中所有的集合都实现了`Iterable`接口。**
 
-### 2.1.迭代一个`Iterable`
+### 2.1. 迭代一个`Iterable`
 
-我们可以使用增强的`for`循环迭代集合中的元素，也称为 [`for` -each](/web/20220606083223/https://www.baeldung.com/foreach-java "for-each") 循环。然而，只有实现了`Iterable`接口的对象才能在这样的语句中使用。还可以结合使用`while`语句和`Iterator`来迭代元素。
+我们可以使用增强的`for`循环迭代集合中的元素，也称为 [`for`-each](/web/20220606083223/https://www.baeldung.com/foreach-java "for-each") 循环。然而，只有实现了`Iterable`接口的对象才能在这样的语句中使用。还可以结合使用`while`语句和`Iterator`来迭代元素。
 
-让我们看一个使用`for` -each 语句迭代`List`中元素的例子:
+让我们看一个使用`for`-each语句迭代`List`中元素的例子:
 
 ```java
 List<Integer> numbers = getNumbers();
@@ -34,11 +35,11 @@ List<Integer> numbers = getNumbers();
 numbers.forEach(System.out::println);
 ```
 
-### 2.2.实现`Iterable`接口
+### 2.2. 实现`Iterable`接口
 
 当我们有想要迭代的定制数据结构时，`Iterable`接口的定制实现会很方便。
 
-让我们首先创建一个表示购物车的类，它将在一个数组中保存元素。我们不会直接在数组上调用`for` -each 循环。相反，我们将实现`Iterable`接口。**我们不希望我们的客户依赖于选择的数据结构。如果我们为客户提供迭代的能力，我们可以很容易地使用不同的数据结构，而客户不必改变代码。**
+让我们首先创建一个表示购物车的类，它将在一个数组中保存元素。我们不会直接在数组上调用`for`-each循环。相反，我们将实现`Iterable`接口。**我们不希望我们的客户依赖于选择的数据结构。如果我们为客户提供迭代的能力，我们可以很容易地使用不同的数据结构，而客户不必改变代码。**
 
 `ShoppingCart`类实现了`Iterable`接口并覆盖了它的`iterate()`方法:
 
@@ -110,7 +111,7 @@ for (Product product : shoppingCart) {
 }
 ```
 
-## 3.`Iterator`界面
+## 3. `Iterator`界面
 
 [`Iterator`](/web/20220606083223/https://www.baeldung.com/java-iterator "Iterator") 是 Java 集合框架的成员。属于`java.util`套餐。**这个接口允许我们在迭代过程中从集合中检索或移除元素。**
 
@@ -120,7 +121,7 @@ for (Product product : shoppingCart) {
 
 最后，`forEachRemaining(Consumer<? super E> action)`方法为数据结构中的每个剩余元素执行给定的动作。
 
-### 3.1.迭代`Collection`
+### 3.1. 迭代`Collection`
 
 让我们看看如何迭代一个包含`Integer`个元素的`List`。在这个例子中，我们将结合`while`循环和`hasNext()`和`next()`方法。
 
@@ -146,7 +147,7 @@ while (iterator.hasNext()) {
 
 `next()`方法返回迭代中的下一个元素。另一方面，如果没有这样的元素，它抛出`NoSuchElementException`。
 
-### 3.2.实现`Iterator`接口
+### 3.2. 实现`Iterator`接口
 
 现在，我们将实现`Iterator`接口。当我们需要使用条件元素检索来迭代集合时，自定义实现会很有用。例如，我们可以使用自定义迭代器来迭代奇数或偶数。
 
@@ -215,17 +216,18 @@ while (iterator.hasNext()) {
 }
 ```
 
-## 4.`Iterable`和`Iterator`的区别
+## 4. `Iterable`和`Iterator`的区别
 
 综上所述，下表显示了`Iterable`和`Iterator`接口的主要区别:
 
 | 可迭代的 | 迭代程序 |
-| 表示一个集合，可以使用一个`for` -each 循环进行迭代 | 表示可用于循环访问集合的接口 |
+| --- | --- |
+| 表示一个集合，可以使用一个`for`-each循环进行迭代 | 表示可用于循环访问集合的接口 |
 | 当实现一个`Iterable`时，我们需要覆盖`iterator()`方法 | 当实现一个`Iterator`时，我们需要覆盖`hasNext()`和`next()`方法 |
 | 不存储迭代状态 | 存储迭代状态 |
 | 不允许在迭代过程中移除元素 | 允许在迭代过程中删除元素 |
 
-## 5.结论
+## 5. 结论
 
 在本文中，我们研究了 Java 中的`Iterable`和`Iterator`接口之间的区别以及它们的用法。
 

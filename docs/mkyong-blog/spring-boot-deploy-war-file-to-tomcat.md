@@ -1,34 +1,36 @@
-# Spring Boot-将 WAR 文件部署到 Tomcat
+
+# Spring Boot - 将 WAR 文件部署到 Tomcat
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-boot-deploy-war-file-to-tomcat/>
 
 在本文中，我们将向您展示如何将 Spring Boot 战争文件部署到 Tomcat servlet 容器中。
 
-对于 Spring Boot 战争的部署，你需要做三个步骤:
+对于 Spring Boot 战争的部署，你需要做三个步骤：
 
-1.  扩展 SpringBootServletInitializer
-2.  将嵌入式 servlet 容器标记为已提供。
-3.  将包装更新到 war
+1. 扩展 `SpringBootServletInitializer`
+2. 将嵌入式 servlet 容器标记为已提供
+3. 将包装更新到 `war`
 
-*已测试*
+**已测试**
 
-1.  Spring Boot 1.4.2 版本
-2.  Tomcat 8.5.9
-3.  maven3
+1. Spring Boot 1.4.2 版本
+2. Tomcat 8.5.9
+3. Maven 3
 
-**Note**
-In Spring Boot, the final executable JAR file with embedded server solution may not suitable in all production environments, especially the deployment team (a team with good knowledge of server optimization and monitoring skills, but lack of, the development experience), they want full control of the server, and they don’t touch code.
+**注意**
 
-## 1.扩展 SpringBootServletInitializer
+在 Spring Boot 中，带有嵌入式服务器的最终可执行 JAR 文件解决方案可能并不适合所有生产环境，尤其是部署团队（一个对服务器优化和监控技能有深入了解，但缺乏开发经验的团队），他们希望完全控制服务器，并且不接触代码。
 
-使现有的`@SpringBootApplication`类扩展`SpringBootServletInitializer`
+## 1. 扩展 `SpringBootServletInitializer`
 
-1.1 经典的 Spring Boot JAR 部署。(更新此文件以支持 WAR 部署)
+使现有的 `@SpringBootApplication` 类扩展 `SpringBootServletInitializer`。
 
-SpringBootWebApplication.java
+### 1.1 经典的 Spring Boot JAR 部署（更新此文件以支持 WAR 部署）
+
+`SpringBootWebApplication.java`
 
 ```java
- import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class SpringBootWebApplication {
@@ -37,15 +39,15 @@ public class SpringBootWebApplication {
         SpringApplication.run(SpringBootWebApplication.class, args);
     }
 
-} 
+}
 ```
 
-1.2 Spring Boot 战争部署。
+### 1.2 Spring Boot 战争部署
 
-SpringBootWebApplication.java
+`SpringBootWebApplication.java`
 
 ```java
- import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
@@ -71,63 +73,63 @@ public class SpringBootWebApplication {
         SpringApplication.run(SpringBootWebApplication.class, args);
     }
 
-}*/ 
+}*/
 ```
 
-如果您为部署创建一个额外的`SpringBootWebApplication`类，一定要告诉 Spring Boot 要启动哪个主类:
+如果您为部署创建一个额外的 `SpringBootWebApplication` 类，一定要告诉 Spring Boot 要启动哪个主类：
 
-pom.xml
+`pom.xml`
 
-```java
- <properties>
-        <start-class>com.mkyong.NewSpringBootWebApplicationForWAR</start-class>
-  </properties> 
+```xml
+<properties>
+    <start-class>com.mkyong.NewSpringBootWebApplicationForWAR</start-class>
+</properties>
 ```
 
-读读这个——[Spring Boot——从哪个主班开始](http://web.archive.org/web/20190306164208/http://www.mkyong.com/spring-boot/spring-boot-which-main-class-to-start/)
+读读这个——[Spring Boot——从哪个主类开始](http://web.archive.org/web/20190306164208/http://www.mkyong.com/spring-boot/spring-boot-which-main-class-to-start/)
 
- ## 2.将嵌入式 servlet 容器标记为已提供
+## 2. 将嵌入式 servlet 容器标记为已提供
 
-pom.xml
+`pom.xml`
 
-```java
- <dependencies>
+```xml
+<dependencies>
 
-	<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-thymeleaf</artifactId>
-	</dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
 
-	<!-- marked the embedded servlet container as provided -->
-	<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-tomcat</artifactId>
-		<scope>provided</scope>
-	</dependency>
+    <!-- marked the embedded servlet container as provided -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-tomcat</artifactId>
+        <scope>provided</scope>
+    </dependency>
 
-</dependencies> 
+</dependencies>
 ```
 
- ## 3.将包装更新到 war
+## 3. 将包装更新到 `war`
 
-pom.xml
+`pom.xml`
 
-```java
- <packaging>war</packaging> 
+```xml
+<packaging>war</packaging>
 ```
 
-完成后，`mvn package`并将`$project/target/xxx.war`复制到 Tomcat 进行部署。
+完成后，执行 `mvn package` 并将 `$project/target/xxx.war` 复制到 Tomcat 进行部署。
 
-## 4.完整示例——Spring Boot 战争+ Tomcat 部署
+## 4. 完整示例——Spring Boot 战争 + Tomcat 部署
 
-4.1 以这个 [Spring Boot 百里香为例](http://web.archive.org/web/20190306164208/http://www.mkyong.com/spring-boot/spring-boot-hello-world-example-thymeleaf/)，手动更新并部署到 Tomcat。
+### 4.1 以这个 [Spring Boot 百里香为例](http://web.archive.org/web/20190306164208/http://www.mkyong.com/spring-boot/spring-boot-hello-world-example-thymeleaf/)，手动更新并部署到 Tomcat。
 
-4.2 更新现有的`SpringBootWebApplication`并使其扩展`SpringBootServletInitializer`
+### 4.2 更新现有的 `SpringBootWebApplication` 并使其扩展 `SpringBootServletInitializer`
 
-pom.xml
+`pom.xml`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -146,19 +148,19 @@ public class SpringBootWebApplication extends SpringBootServletInitializer {
         SpringApplication.run(SpringBootWebApplication.class, args);
     }
 
-} 
+}
 ```
 
-4.3 将包装更新为`war`，并按规定标记`spring-boot-starter-tomcat`。
+### 4.3 将包装更新为 `war`，并按规定标记 `spring-boot-starter-tomcat`
 
-pom.xml
+`pom.xml`
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <project  
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-	http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -217,25 +219,25 @@ pom.xml
             </plugin>
         </plugins>
     </build>
-</project> 
+</project>
 ```
 
-4.4 这是可选的，稍后更新`contextPath`到`/mkyong`进行演示。完成了。准备战争部署。
+### 4.4 这是可选的，稍后更新 `contextPath` 到 `/mkyong` 进行演示。完成了。准备战争部署。
 
-application.properties
+`application.properties`
 
-```java
- welcome.message: Hello Mkyong
+```properties
+welcome.message: Hello Mkyong
 
-server.contextPath=/mkyong 
+server.contextPath=/mkyong
 ```
 
-4.5 获取 Tomcat 并部署 WAR 文件。
+### 4.5 获取 Tomcat 并部署 WAR 文件
 
-Mac OS X : Terminal
+Mac OS X：终端
 
-```java
- # Get Tomcat 8.5.9
+```bash
+# Get Tomcat 8.5.9
 spring-boot-project$ curl -O  http://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.9/bin/apache-tomcat-8.5.9.tar.gz
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
@@ -262,33 +264,28 @@ Using CLASSPATH:       /Users/mkyong/projects/spring-boot-web-thymeleaf/apache-t
 Tomcat started. 
 ```
 
-4.6 访问*http://localhost:8080/mkyong/*
+### 4.6 访问 *http://localhost:8080/mkyong/*
 
 ![spring-boot-tomcat-deployment](img/0a90d20add2ef0be3f216850f0a9d421.png)
 
-4.7 搞定。关闭 Tomcat。
+### 4.7 搞定。关闭 Tomcat。
 
-Mac OS X : Terminal
+Mac OS X：终端
 
-```java
- $ ./apache-tomcat-8.5.9/bin/shutdown.sh 
+```bash
+$ ./apache-tomcat-8.5.9/bin/shutdown.sh 
 ```
 
 ## 下载源代码
 
-Download – [spring-boot-war-tomcat.zip](http://web.archive.org/web/20190306164208/http://www.mkyong.com/wp-content/uploads/2017/01/spring-boot-war-tomcat.zip) (13 KB)
+
+
+下载 – [spring-boot-war-tomcat.zip](http://web.archive.org/web/20190306164208/http://www.mkyong.com/wp-content/uploads/2017/01/spring-boot-war-tomcat.zip) (13 KB)
 
 ## 参考
 
-1.  [Spring Boot–传统部署](http://web.archive.org/web/20190306164208/http://docs.spring.io/spring-boot/docs/current/reference/html/howto-traditional-deployment.html)
-2.  [Spring Boot Hello World 示例–百里香叶](http://web.archive.org/web/20190306164208/http://www.mkyong.com/spring-boot/spring-boot-hello-world-example-thymeleaf/)
-3.  [如何在 Debian 上安装 Apache Tomcat 8](http://web.archive.org/web/20190306164208/https://www.mkyong.com/tomcat/how-to-install-apache-tomcat-8-on-debian/)
+1. [Spring Boot–传统部署](http://web.archive.org/web/20190306164208/http://docs.spring.io/spring-boot/docs/current/reference/html/howto-traditional-deployment.html)
+2. [Spring Boot Hello World 示例–百里香叶](http://web.archive.org/web/20190306164208/http://www.mkyong.com/spring-boot/spring-boot-hello-world-example-thymeleaf/)
+3. [如何在 Debian 上安装 Apache Tomcat 8](http://web.archive.org/web/20190306164208/https://www.mkyong.com/tomcat/how-to-install-apache-tomcat-8-on-debian/)
 
 [deployment](http://web.archive.org/web/20190306164208/http://www.mkyong.com/tag/deployment/) [spring boot](http://web.archive.org/web/20190306164208/http://www.mkyong.com/tag/spring-boot/) [tomcat](http://web.archive.org/web/20190306164208/http://www.mkyong.com/tag/tomcat/) [war](http://web.archive.org/web/20190306164208/http://www.mkyong.com/tag/war/)
-
-
-
-
-
-
-

@@ -1,3 +1,4 @@
+
 # 2022 年学习前端和后端开发的 10 大课程
 
 > 原文：<https://medium.com/javarevisited/top-10-courses-to-learn-frontend-and-backend-development-in-2020-710d2d57e008?source=collection_archive---------0----------------------->
@@ -16,7 +17,7 @@
 
 我热爱学习。在我一生中的大部分时间里，我都是通过读书来学习，但是自从我在 [Udemy](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&offerid=323058.9409&type=3&subid=0) 和 [Pluralsight](http://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 上看到在线课程后，我大部分时间都是通过在线课程来学习。它们是开始使用新技术的最佳方式，可以让您立即投入使用。
 
-我最近一直在分享一些很好的在线课程，学习新的技术、框架和库。在我的上一篇文章中，我介绍了我在 2022 年 学习 DevOps 的 [**前 10 门课程。今天，我将为初学者列出六个顶级的 web 开发课程。**](https://dev.to/javinpaul/top-10-devops-training-courses-for-programmers-and-software-developers-195n)
+我最近一直在分享一些很好的在线课程，学习新的技术、框架和库。在我的上一篇文章中，我介绍了我在 2022 年学习 DevOps 的 [**前 10 门课程。今天，我将为初学者列出六个顶级的 web 开发课程。**](https://dev.to/javinpaul/top-10-devops-training-courses-for-programmers-and-software-developers-195n)
 
 顺便说一下，谈到 web 开发，在过去的五到十年里，事情发生了很大的变化。仅仅知道 [HTML](http://www.java67.com/2018/02/5-free-html-and-css-courses-to-learn-web-development.html) 、 [CSS](https://www.java67.com/2019/01/5-free-bootstrap-course-to-learn-online.html) 和 [JavaScript](https://javarevisited.blogspot.com/2018/06/top-10-courses-to-learn-javascript-in.html) 就够了的日子已经一去不复返了。它们仍然是必要的，但还不够，你还需要学习现代 web 开发框架，如 [React](/@javinpaul/top-5-courses-to-learn-react-js-in-2019-best-of-lot-fa02cd96cdf0) 、 [Angular](https://dzone.com/articles/top-5-angular-2-courses-for-web-developers) 和 [Bootstrap](https://www.java67.com/2019/01/5-free-bootstrap-course-to-learn-online.html) 来开发现代 web 应用程序。
 
@@ -71,6 +72,8 @@ JavaScript 最初是一个纯粹的客户端解决方案，现在允许您在不
 这又是一门优秀的[动手 web 开发课程]，你将通过使用 HTML、CSS、Javascript、 [PHP](http://www.java67.com/2018/02/5-free-php-and-mysql-courses-for-web-developers.html) 、 [Python](http://www.java67.com/2018/02/5-free-python-online-courses-for-beginners.html) 、 [MySQL](http://www.java67.com/2018/02/5-free-database-and-sql-query-courses-programmers.html) 等构建网站和移动应用来学习关键的 web 开发技术。
 
 您不仅会学到 HTML、CSS 和 JavaScript 等基础技术，还会学到更高级的技术，如 jQuery 和 Bootstrap。
+
+
 
 这个[课程](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-web-developer-course-2%2F)教你结束开发，比如编写客户端和服务器端代码。您还将学习如何使用更高级的技术来构建自己的响应网站，如 [jQuery](https://hackernoon.com/top-5-free-jquery-courses-for-web-developers-best-of-lot-9f65a1ff25b6) 、 [PHP](https://hackernoon.com/5-free-php-and-mysql-courses-to-learn-web-development-63836cd3e587) 7、 [MySQL 5](https://javarevisited.blogspot.sg/2018/05/top-5-mysql-courses-to-learn-online.html) 和 Twitter [Bootstrap](http://www.java67.com/2019/01/5-free-bootstrap-course-to-learn-online.html) 。
 
@@ -156,9 +159,11 @@ React 是前端开发人员最重要的技能之一，如果你想学习 React�
 
 ## 10.[用 HTML5 和 CSS3 建立反应灵敏的真实世界网站](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdesign-and-develop-a-killer-website-with-html5-and-css3%2F)作者[乔纳斯·施梅德曼](https://medium.com/u/1144650514a7?source=post_page-----710d2d57e008--------------------------------)
 
+
+
 这是 Udemy 中学习 HTML 5 和 CSS3 的最佳课程之一，从它的社交证明中也可以明显看出。数千名学生平均给这门课程打了 4.6 分，这是一个不小的成绩，清楚地表明了这门课程的质量。从理论和动手实践的角度来看，这门课程都非常出色，因为你将参与一个大型项目，这个项目将教会你入门 HTML 5 和 CSS 3 所需的一切。
 
-导师 Jonas Schmemann 还免费提供了他的电子书*《html 5 和 CSS3 网页设计与开发最佳资源》*，你可以把它作为学习的补充资源。
+导师 Jonas Schmemann 还免费提供了他的电子书《html 5 和 CSS3 网页设计与开发最佳资源》，你可以把它作为学习的补充资源。
 
 [Jonas Schmedtmann](https://medium.com/u/1144650514a7?source=post_page-----710d2d57e008--------------------------------) 也是 Udemy 最好的导师之一，他的课程质量一流。我第一次接触 Jonas 是通过他的综合 [**完整的 JavaScript 课程 2022**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-javascript-course%2F) ，这是另一门侧重于构建真实项目而不仅仅是教授概念的实践课程。如果你想在学习 HTML 5 和 CSS 的同时学习 JavaScript，我也强烈推荐那个课程。
 
@@ -171,11 +176,17 @@ React 是前端开发人员最重要的技能之一，如果你想学习 React�
 您可能想探索的其他**编程资源文章**
 
 *   [完整的网络开发者路线图](https://dev.to/javinpaul/the-2019-web-development-frontend-backend-roadmap-4le2)
+
 *   [2022 年学习 React Native 的 5 门课程](http://javarevisited.blogspot.sg/2018/02/5-react-native-courses-to-learn-mobile-development-using-JavaScript.html)
+
 *   [学习大数据和 Apache Spark 的 5 门课程](http://javarevisited.blogspot.com/2017/12/top-5-courses-to-learn-big-data-and.html)
+
 *   [免费学习 JavaScript 的 10 个地方](https://hackernoon.com/10-websites-to-learn-javascript-for-beginners-31e13bbdbb5c)
+
 *   [Java 开发者应该学习的 10 个 Web 开发框架](https://dev.to/javinpaul/10-frameworks-java-and-web-developers-can-learn-in-2019-17ke)
+
 *   [完整的 React 开发者路线图](https://hackernoon.com/the-2018-react-js-roadmap-4d0a43814c02)
+
 *   [初学者学习 GraphQL 的 5 大课程](https://hackernoon.com/top-5-graphql-courses-for-beginners-26cad52bcd3e)
 
 感谢您阅读本文。如果你喜欢这些网络开发课程，请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。

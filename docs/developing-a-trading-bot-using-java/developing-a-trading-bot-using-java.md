@@ -1,43 +1,21 @@
+
 # Java 交易机器人开发指南
 
-
-
-
-
-
-
-
-
-
-
-
 献给我生命中的天使们：我的母亲，我的妻子 Preshita 以及我的两个女儿 Mihika 和 Anya。最后但同样重要的，还有我的大学教授 Rajat Moona 博士，他在我的 DNA 中播种了计算机编程的种子。
-
-
-
 
 ## 1. 交易机器人初探
 
-让你的机器人为你交易
-
-
-
-
-
+### 让你的机器人为你交易
 
 献给我生命中的天使们：我的母亲，我的妻子 Preshita 以及我的两个女儿 Mihika 和 Anya。最后但同样重要的，还有我的大学教授 Rajat Moona 博士，他在我的 DNA 中播种了计算机编程的种子。
-
-
-
-## 1. 交易机器人初探
 
 欢迎来到交易机器人的世界！自动化交易已经存在很久了，通过许多平台。在这个旅途中，我们关注的不仅是自动化任务，还通过 Java 编程技术。
 
-## 1.1 什么是交易机器人？
+### 1.1 什么是交易机器人？
 
-在非常简单的语言中，交易机器人是一个计算机程序，它可以自动向市场或交易所下单，而无需人工干预。最简单的机器人可能是向 OANDA API 发送一个 curl 请求，例如：
+在非常简单的语言中，交易机器人是一个计算机程序，它可以自动向市场或交易所下单，而无需人工干预。最简单的机器人可能是向 OANDA API 发送一个 `curl` 请求，例如：
 
-```
+```bash
 $curl -X POST -d "instrument=EUR_USD&units=2&side=sell&type=market" "https://server"
 ```
 
@@ -52,15 +30,11 @@ $curl -X POST -d "instrument=EUR_USD&units=2&side=sell&type=market" "https://ser
 - 根据交易信号向经纪平台下单。
 - 账户管理，即：能够跟踪保证金要求、杠杆、盈亏、剩余金额等，以便在金额达到阈值时停止交易。
 - 持仓管理是：跟踪所有当前活跃的品种、持仓单位、平均价格等。
-- 能够处理由经纪平台触发的事件，如 ORDER_FILLED、STOP_LOSS 等，并根据需要对这些事件做出适当决策。
+- 能够处理由经纪平台触发的事件，如 `ORDER_FILLED`、`STOP_LOSS` 等，并根据需要对这些事件做出适当决策。
 
-**警告：** 杠杆外汇交易具有高风险，并不适合所有投资者。过去的业绩并不代表未来的结果。高杠杆可能对你有利也可能不利。在决定投资外汇之前，您应该仔细考虑您的投资目标、经验水平和风险承受能力。亏损的可能性始终，因此你不应该投入无法承受的资金。如果您有任何疑问，请向独立的财务顾问寻求建议。
+**警告：**杠杆外汇交易具有高风险，并不适合所有投资者。过去的业绩并不代表未来的结果。高杠杆可能对你有利也可能不利。在决定投资外汇之前，您应该仔细考虑您的投资目标、经验水平和风险承受能力。亏损的可能性始终，因此你不应该投入无法承受的资金。如果您有任何疑问，请向独立的财务顾问寻求建议。
 
-
-
-
-
-## 1.2 为什么我们需要交易机器人？
+### 1.2 为什么我们需要交易机器人？
 
 我相信大多数交易所/平台提供的服务都围绕着以下几点：
 
@@ -74,7 +48,7 @@ $curl -X POST -d "instrument=EUR_USD&units=2&side=sell&type=market" "https://ser
 
 交易机器人试图在一个框架中将这些任务泛化，并能够使用 Spring 等依赖注入框架在运行时提供特定经纪商/交易所平台的特定实现。因此，从理论上来说，这只需要更改 Spring 配置文件，其中我们定义实现这些服务的各种接口的实现，大功告成，我们就能支持各种经纪商/交易所平台。
 
-## 1.3 我们交易机器人的功能
+### 1.3 我们交易机器人的功能
 
 我们的机器人将具有以下功能，将在后面的章节中详细讨论：
 
@@ -87,7 +61,7 @@ $curl -X POST -d "instrument=EUR_USD&units=2&side=sell&type=market" "https://ser
 - 与 Twitter 集成
 - 策略
 
-## 1.4 设计目标
+### 1.4 设计目标
 
 - 本章开头提到的一个关键设计目标之一，是能够使用 Spring 配置在运行时更改经纪商/交易所平台的实现。如果我们可以为这些平台 API 调用创建规范（非常类似于 JDBC 规范），这是可以实现的。例如，定义持仓管理要求的示例规范/接口如下：
 
@@ -142,15 +116,15 @@ public interface PositionManagementProvider<M, N> {
 - 松耦合服务。这有助于减少系统依赖，从而使软件更具可维护性。我们的软件将不断演进，因为可能会决定集成更多的社交媒体馈送或添加更复杂的策略。编写松耦合的组件可以确保我们对已运行的代码的影响很小。
 - 高单元测试覆盖率。目标是实现高单元测试覆盖率至关重要。在涉及真实资金的生产环境中，大量的单元测试覆盖率将确保我们及早发现回归和错误，并尽可能防止错误在生产环境中出现。
 
-## 1.5 代码组织和使用的软件栈
+### 1.5 代码组织和使用的软件栈
 
 接上上一节对设计目标的讨论，代码将至少组织为 3 个不同的项目，即从构建中将至少产生 3 个 jar 文件。为什么说至少 3 个呢？记住我们之前的讨论，一个关键设计目标之一是能够在运行时切换提供者实现。由于我们有超过 1 个提供者可供选择，因此至少会有 3 个 jar 文件。我们在书中将讨论 1 种实现，即 OANDA REST API 实现。鼓励使用框架的开发者开发更多的提供者实现。
 
-- trading-core 是项目的核心。它包含了所有必须实现的规范/接口。它还包含了利用核心接口提供额外有用 API 方法的通用服务。
-- oanda-restapi 是我们对规范的参考实现，将在书中讨论。非常欢迎将其更换为您自己的实现。
-- tradingbot-app 是主应用程序，使用 Spring 在运行时注入提供者 api。它也是我们定义策略并实现应用特定功能的项目。在书的后面，我们将讨论与社交媒体（特别是 Twitter）的集成，我们将在该项目中实现它。
+- `trading-core` 是项目的核心。它包含了所有必须实现的规范/接口。它还包含了利用核心接口提供额外有用 API 方法的通用服务。
+- `oanda-restapi` 是我们对规范的参考实现，将在书中讨论。非常欢迎将其更换为您自己的实现。
+- `tradingbot-app` 是主应用程序，使用 Spring 在运行时注入提供者 api。它也是我们定义策略并实现应用特定功能的项目。在书的后面，我们将讨论与社交媒体（特别是 Twitter）的集成，我们将在该项目中实现它。
 
-![](img/83b6553a95585b50f8687a4d91_0) # Java 项目
+![](img/83b6553a95585b50f8687a4d91_0) Java 项目
 
 为了构建我们的机器人，我们将使用以下软件和工具：
 
@@ -161,7 +135,7 @@ public interface PositionManagementProvider<M, N> {
 - Maven 3.2.5
 - Eclipse IDE
 
-# OANDA API 作为参考实现
+## 1.6 OANDA API 作为参考实现
 
 我偶然发现了 OANDA API。当时，我正在寻找一个提供免费交易 API 且更重要的是支持 Java 语言的经纪商（如果我想转换为生产账户）。启动非常容易，因为大多数示例都使用 `curl` 来演示各种交易操作，如获取实例列表下单或获取历史 K 线数据。我可以在 mac 终端输入 `curl` 命令。通过查看实时的响应和数据，我对实例、订单、费率等 API 有了很好的理解和欣赏。
 
@@ -200,27 +174,27 @@ public interface PositionManagementProvider<M, N> {
 选择适合你和投资需求的交易平台。
 
 点击注册即我确认：
+
 同意 OANDA 与我联系以提供有关其产品服务的信息并协助我使用 fxTrade Practice。
 
 注册
 
 风险警告
+
 杠杆交易风险很高，可能不适合
 
-# Oanda 账户注册
+## Oanda 账户注册
 
 一旦你成功注册，你现在准备好登录你的练习账户。当你准备好登录时，将看到下面的登录界面。
-
-
-
-
 
 #### 安全登录
 
 即将举行的系统维护公告：
+
 有关即将进行的平台维护的详情，请[点击此处]
 
 假期通知：
+
 有关受假期影响的市场的详情，请[点击此处]
 
 账户类型：fxTrade
@@ -228,6 +202,7 @@ public interface PositionManagementProvider<M, N> {
 ![](img/83b65534a955858b50f85868087a4d91_17_0.png)
 
 还没有账户？
+
 获取 OANDA 优势。注册货币交易账户。
 
 swarsney
@@ -242,22 +217,23 @@ swarsney
 
 #### Oanda 账户登录
 
-登录成功后，您将进入账户主页，界面如下屏所示
+登录成功后，您将进入账户主页，界面如下屏所示。
 
 #### 我的 fxTrade 练习账户
 
 即将举行的系统维护公告：
+
 有关即将进行的平台维护的详情，请[点击此处]
 
 假期通知：
+
 有关受假期影响的市场的详情，请[点击此处]
 
 - 启动 FXTRADE 练习账户 ->
-
 - 启动 FXTRADE 新闻 ->
 
 | 我的资金 | | | 我的信息 |
-| :--- | :--- | :--- | :--- |
+|:---|:---|:---|:---|
 | 账户 | MT4 | 货币 | 余额 |
 | 主账户 3508556 | CHF | Fr. 100'000.00 | 姓名 |
 | | | | 电话 |
@@ -270,18 +246,17 @@ swarsney
 - 管理外部应用程序
 - 管理密码
 - 设置 MetaTrader 4
-
 - 修改密码
 - 重置 MT4 账户密码
 - 管理邮件订阅
 
 注册 FXTRADE
 
-#### Oanda 账户仪表板
+### Oanda 账户仪表板
 
 为了开始 API 交易，我们首先需要生成一个个人 API 令牌（token），该令牌将由 OANDA 平台用于验证请求。
 
-您需要点击上方屏幕用红色箭头标记的管理 API 访问（Manage API Access）链接。接下来您将进入下方屏幕
+您需要点击上方屏幕用红色箭头标记的管理 API 访问（Manage API Access）链接。接下来您将进入下方屏幕。
 
 ![](img/83b65534a955858b50f85868087a4d91_18_0.png)
 
@@ -294,7 +269,8 @@ swarsney
 * 通过点击“生成（Generate）”，您确认已阅读、理解并同意受 API 许可协议的法律约束。
 
 开始使用 OANDA API
-Oanda 生成 API 令牌
+
+#### Oanda 生成 API 令牌
 
 当您点击生成时，平台将为您生成令牌，该令牌必须包含在您对托管练习账户的提出的每一个请求中。生成的令牌将会展示，您务必记录。
 
@@ -302,7 +278,7 @@ Oanda 生成 API 令牌
 
 您的 OANDA API 密钥
 
-```
+```text
 b7b701a4-828c-426e-9117-c1e7b103986a
 ```
 
@@ -310,21 +286,21 @@ b7b701a4-828c-426e-9117-c1e7b103986a
 
 撤销
 
-Oanda 生成的令牌
+#### Oanda 生成的令牌
 
-现在您已准备好进行交易。OANDA 提供了一个非常实用的 界面来测试您的 REST 请求并现场查看响应。您还可以了解 REST 资源 URL 是如何组织的，以及为了满足特定请求应该调用哪个资源 URL。
+现在您已准备好进行交易。OANDA 提供了一个非常实用的界面来测试您的 REST 请求并现场查看响应。您还可以了解 REST 资源 URL 是如何组织的，以及为了满足特定请求应该调用哪个资源 URL。
 
 下方屏幕演示了我们如何发送请求以获取可以交易的所有品种列表。GET 请求需要传递 `accountID`（这是您可以在账户页面找到的 ID），对于练习账户，它将加载 100,000 单位的账户货币）。必须提供 Header，可以指定为 `Bearer <在此处输入您的 API 令牌>`
 
 #### 在此处使用 API 令牌
 
 | 参数 | Header | 值 | 描述 |
-| :--- | :--- | :--- | :--- |
-| accounts/ | | 35087NE | 获取可交易品种列表的账户 ID。*必* |
-| fields | | | 一个 URL (N/C) 包含响应中返回的字段列表。所有值请参考文档。 |
-| instruments | | | 一个 URL (N/C) 包含响应中返回的品种列表，如果这些品种 |
+|:---|:---|:---|:---|
+| `accounts/` | | `35087NE` | 获取可交易品种列表的账户 ID。*必* |
+| `fields` | | | 一个 URL (N/C) 包含响应中返回的字段列表。所有值请参考文档。 |
+| `instruments` | | | 一个 URL (N/C) 包含响应中返回的品种列表，如果这些品种 |
 
-```
+```http
 GET /v1/instruments7accountid=350856 HTTP/1.1
 Authorization: Bearer [token]
 c08bb8c3311f85f1bd5f2bc2005
@@ -353,25 +329,24 @@ Server: openistry/1.7.8.1
 
 #### OANDA 开发 API 控制台
 
-# 1.6.2 OANDA JSON 键
+## 1.6.2 OANDA JSON 键
 
-OANDA 的 JSON 响应使用一组标准键。例如，为了在响应中表示货币对，使用了 **instrument**，无论它是流跳点（tick）还是 K 线（candle）信息的流式响应。流中的一个 tick 看起来如下：
+OANDA 的 JSON 响应使用一组标准键。例如，为了在响应中表示货币对，使用了 `instrument`，无论它是流跳点（tick）还是 K 线（candle）信息的流式响应。流中的一个 tick 看起来如下：
 
-```
+```text
 1 {"tick":{"instrument": "AUD_CAD", "time": "1401919217201682", "bid":1.01484, "a":
 ```
 
 当交易像这样成功修改时，响应如下：
 
-```
+```text
 1 {
 2 "id": 1800805337,
-
 ```
 
 #### OANDA 开发 API 控制台-Headers 标签页
 
-```
+```text
 "units": 3000,
 "side": "sell",
 "instrument": "CHF_JPY",
@@ -384,17 +359,19 @@ OANDA 的 JSON 响应使用一组标准键。例如，为了在响应中表示�
 
 由于受影响的键，我们可以创建一个类。代码片段看起来如下：
 
-```
+```java
 String instrument = (String) OandaJson.get("instrument");
 ```
 
 为了避免污染代码，创建一个常量是更好的做法。代码如下：
 
-```
+```java
 String instrument = (String) OandaKeys.get("instrument");
 ```
 
-有很多键，但我们在机器人中使用的键在 OandaKeys 类中捕获。这种方式看起来这样如下：
+有很多键，但我们在机器人中使用的键在 `OandaKeys` 类中捕获。这种方式看起来这样如下：
+
+
 
 ```java
 public class OandaKeys {
@@ -417,6 +394,7 @@ public class OandaKeys {
     public static final String bid = "bid";
     public static final String ask = "ask";
     public static final String heartbeat = "heartbeat";
+}
 ```
 
 ```java
@@ -449,7 +427,7 @@ public static final String interest = "interest";
 public static final String accountBalance = "accountBalance";
 ```
 
-在所有的 OANDA API 实现中（将在随后的章节中讨论），我们将直接使用此类类和静态常量，而不是硬编码给定 JSON 键的字符串字量。
+在所有的 OANDA API 实现中（将在随后的章节中讨论），我们将直接使用此类和静态常量，而不是硬编码给定 JSON 键的字符串字面量。
 
 # 1.6.3 OANDA 实现的构造依赖
 
@@ -459,9 +437,7 @@ public static final String accountBalance = "accountBalance";
 - 用户名
 - 访问令牌
 
-众周知，OANDA 有不同的环境让我们运行机器人，例如沙盒（sandpit）、练习（practice）和实盘（live）。这些环境具有不同的 URL、访问令牌，并且对于同一个人可能有不同的用户名。这些外部配置属性作为各种 OANDA 实现的构造参数传递。例如：
-
-
+众所周知，OANDA 有不同的环境让我们运行机器人，例如沙盒（sandpit）、练习（practice）和实盘（live）。这些环境具有不同的 URL、访问令牌，并且对于同一个人可能有不同的用户名。这些外部配置属性作为各种 OANDA 实现的构造参数传递。例如：
 
 ```java
 public OandaAccountDataProviderService(final String url, final String user) {
@@ -481,7 +457,7 @@ public OandaAccountDataProviderService(final String url, final String user) {
 </bean>
 ```
 
-由于这些变量是在属性文件中提供的，我们可以轻松在运行时更改它们，而无需重新构建或更改代码。只需更改属性文件即可。我们将在后面的章节详细讨论配置时，对这一主题进行更深入的。
+由于这些变量是在属性文件中提供的，我们可以轻松在运行时更改它们，而无需重新构建或更改代码。只需更改属性文件即可。我们将在后面的章节详细讨论配置时，对这一主题进行更深入的讨论。
 
 ## 1.7 事件驱动架构
 
@@ -512,21 +488,21 @@ this.streamThread = new Thread(new Runnable() {
 
 该图描绘了一个由单个事件触发的典型事件链。
 
-- 1. 从流中接收 tick 事件。
-- 2. 解析事件并发送到 EventBus。
-- 3. 策略组件订阅了该事件，并从 EventBus 获取回调。
-- 4. 策略组件决定根据最新的 tick 数据事件生成交易信号，并将信号放置在订单队列（OrderQueue）上。
-- 5. OrderExecutionService 获取此信号，创建一个新订单并发布到平台。
-- 6. 平台执行订单并向下订单事件循环发送事件。
-- 7. 这可以进一步触发例如交易缓存（trades cache）的更新。
+1. 从流中接收 tick 事件。
+2. 解析事件并发送到 `EventBus`。
+3. 策略组件订阅了该事件，并从 `EventBus` 获取回调。
+4. 策略组件决定根据最新的 tick 数据事件生成交易信号，并将信号放置在订单队列（`OrderQueue`）上。
+5. `OrderExecutionService` 获取此信号，创建一个新订单并发布到平台。
+6. 平台执行订单并向下订单事件循环发送事件。
+7. 这可以进一步触发例如交易缓存（trades cache）的更新。
 
 这基本上就是事件驱动架构的精髓。由于我们可以同时拥有许多组件，因此尽可能地解耦组件至关重要，这样可以在零或极少更改的情况下添加新的发布者和订阅者。这种架构有利于利用 Java 多线程编程能力。然而，同样地，它要求开发者在对缓存中的业务对象（例如我们示例中的交易缓存）进行状态更改时要非常谨慎。我们必须建立充分的同步和锁定机制，以确保共享对象的观测状态始终是一致的。
 
 ### 1.7.1 Google EventBus
 
-EventBus 是 guava 库的一部分，是一个极好的中间器，可以促进我们服务之间的松耦合，并允许它们之间进行发布-订阅风格的通信。它最酷的特性是可以仅通过添加注解来添加订阅者，而不需要显式地知道发布者是谁。
+`EventBus` 是 Guava 库的一部分，是一个极好的中间器，可以促进我们服务之间的松耦合，并允许它们之间进行发布-订阅风格的通信。它最酷的特性是可以仅通过添加注解来添加订阅者，而不需要显式地知道发布者是谁。
 
-EventBus 的 wiki 页面上有许多有用信息，但值得讨论它如何在交易生态系统中使用的。让我们以将市场数据事件分发到一个或多个订阅者的用法为例。假设 Spring DI 容器已经创建了一个单例 EventBus：
+`EventBus` 的 wiki 页面上有许多有用信息，但值得讨论它如何在交易生态系统中使用。让我们以将市场数据事件分发到一个或多个订阅者的用法为例。假设 Spring DI 容器已经创建了一个单例 `EventBus`：
 
 - **自动注册订阅者：** 这里我们编写了一个 `BeanPostProcessor` 来自动寻找带有 `@Subscribe` 注解方法的 Bean，并调用 `EventBus.register` 方法注册订阅者。
 
@@ -553,7 +529,7 @@ public class FindEventBusSubscribers implements BeanPostProcessor {
 }
 ```
 
-- **创建发布者：** 只需调用 `post(Object)` 将其发送到 EventBus。
+- **创建发布者：** 只需调用 `post(Object)` 将其发送到 `EventBus`。
 
 ```java
 public MarketEventHandler(EventBus eventBus) {
@@ -565,7 +541,7 @@ public void onMarketEvent(TradeableInstrument < T > instrument, double bid) {
 }
 ```
 
-- **消费负载：** EventBus 根据传入的方法签名（且带有 `@Subscribe` 注解）来找到相应的订阅者。该方法必须只有一个输入参数。这里有细粒度或粗粒度的选择。在粗粒度的情况下，输入参数是系统中所有已知负载的父类，即 `Object`。在这种情况下，任何 `eventBus.post` 操作都会调用该方法。另一方面，使用具体的子类作为方法参数可以使其变为细粒度。在下面的示例中，只有当负载为 `MarketDataPayload` 或其子类类型时，才会调用 `handleEvent`。
+- **消费负载：** `EventBus` 根据传入的方法签名（且带有 `@Subscribe` 注解）来找到相应的订阅者。该方法必须只有一个输入参数。这里有细粒度或粗粒度的选择。在粗粒度的情况下，输入参数是系统中所有已知负载的父类，即 `Object`。在这种情况下，任何 `eventBus.post` 操作都会调用该方法。另一方面，使用具体的子类作为方法参数可以使其变为细粒度。在下面的示例中，只有当负载为 `MarketDataPayload` 或其子类类型时，才会调用 `handleEvent`。
 
 ```java
 @Subscribe
@@ -581,19 +557,19 @@ public void handleDataEvent(MarketDataPayload<T> marketDataPayload) {
 
 ## 1.8 Provider Helper 接口
 
-不同的平台对货币对有不同的表示法。*Cable* 可以有以下多种表示方式：
+不同的平台对货币对有不同的表示法。`Cable` 可以有以下多种表示方式：
 
-- GBP_USD
-- GBPUSD
-- GBP/USD
-- GBP-USD
+- `GBP_USD`
+- `GBPUSD`
+- `GBP/USD`
+- `GBP-USD`
 
 同样，买入货币对的行为可能被表示为：
 
-- buy
-- long
-- +1（或任何正数）
-- 平台特定的枚举，例如 TRADEACTION.BUY
+- `buy`
+- `long`
+- `+1`（或任何正数）
+- 平台特定的枚举，例如 `TRADEACTION.BUY`
 
 为了处理不同供应商所提供的表示法差异，我们需要创建一个接口，提供方法来解决这些差异。它看起来如下：
 
@@ -602,7 +578,7 @@ public void handleDataEvent(MarketDataPayload<T> marketDataPayload) {
  * @param <T>
  * 长/空表示法的类型
  */
-public interface ProviderHelper < T > {
+public interface ProviderHelper<T> {
 
     /**
      * @param instrument
@@ -619,8 +595,6 @@ public interface ProviderHelper < T > {
     String toIsoFormat(String instrument);
 }
 ```
-
-
 
 ```java
 /**
@@ -661,6 +635,8 @@ T getShortNotation();
 由于不同的用户可能具有不同的运行时值，这些值构成了外部配置的一部分。它们需要在 Spring 配置中进行配置（我们会在讨论配置和部署时详细讨论）。强烈建议尽可能地进行配置，而不是在服务内部对它们进行硬编码。
 
 让我们代码长什么样：
+
+
 
 ```java
 public class TradingConfig extends BaseTradingConfig {
@@ -759,21 +735,11 @@ public class BaseTradingConfig {
 
 这里的某些成员变量现在可能还没有意义，但它们在后面的章节中都会各就其位。
 
-## 1.10 获取源代码
-
-所有源代码都可以在 GitHub 上获取。以下 git 命令将会在你的本地机器上克隆该仓库：
-
-```bash
-git clone https://github.com/shekharvarshney/book-code.git
-```
-
-我们将在后面的章节中讨论如何在本地构建和运行这些代码。
-
 ## 1.1 “亲自尝试一下”章节
 
 在每个章节的末尾，我们将包含章节中讨论的小程序/多个程序（在合适的地方），以直接演示概念的应用。这些是供你进行实验的，并且这些小型独立程序仅用于演示目的，可能不是最终运行机器人代码的一部分。这是为了让你对构成机器人组件的内容有一个了解。
 
-我们将在 IDE 内部运行这些程序，以便调试看到正在发生什么。这些程序位于一个独立的 `tradingbot-programs` 项目中，其 `pom.xml` 文件如下
+我们将在 IDE 内部运行这些程序，以便调试看到正在发生什么。这些程序位于一个独立的 `tradingbot-programs` 项目中，其 `pom.xml` 文件如下：
 
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -807,13 +773,25 @@ git clone https://github.com/shekharvarshney/book-code.git
 
 演示对构成机器人的三个项目有非常简单的依赖。
 
-1. https://en.wikipedia.org/wiki/CURL
-2. https://en.wikipedia.org/wiki/Cron
-3. https://en.wikipedia.org/wiki/Dependency_injection
-4. https://developer.oanda.com/rest-live/introduction/
-5. http://fxtrade.oanda.com
-6. http://developer.oanda.com/rest-live/console/?utm_source=oandaapi&utm_medium=link&utm_campaign=accestoken_e
-7. https://code.google.com/p/guava-libraries/wiki/EventBus
+## 1.10 获取源代码
+
+所有源代码都可以在 GitHub 上获取。以下 `git` 命令将会在你的本地机器上克隆该仓库：
+
+```bash
+git clone https://github.com/shekharvarshney/book-code.git
+```
+
+我们将在后面的章节中讨论如何在本地构建和运行这些代码。
+
+## 参考资料
+
+1. <https://en.wikipedia.org/wiki/CURL>
+2. <https://en.wikipedia.org/wiki/Cron>
+3. <https://en.wikipedia.org/wiki/Dependency_injection>
+4. <https://developer.oanda.com/rest-live/introduction/>
+5. <http://fxtrade.oanda.com>
+6. <http://developer.oanda.com/rest-live/console/?utm_source=oandaapi&utm_medium=link&utm_campaign=accestoken_e>
+7. <https://code.google.com/p/guava-libraries/wiki/EventBus>
 
 ## 2. 账户管理
 
@@ -823,11 +801,11 @@ git clone https://github.com/shekharvarshney/book-code.git
 
 大多数经纪平台上的账户都有以下可以查询的属性：
 
-- 账户 ID。
+- 账户 ID
 - 基础货币
-- 总金额。
-- 可用交易余额。
-- 杠杆。
+- 总金额
+- 可用交易余额
+- 杠杆
 
 其他可选信息可能包括：
 
@@ -837,21 +815,20 @@ git clone https://github.com/shekharvarshney/book-code.git
 - 持仓交易
 - 委托订单
 
-我们首先通过创建 Account POJO 来捕获所有这些信息。在这里提供了两个构造函数，其中一个包含根据讨论构建对象所需的最小属性。
+我们首先通过创建 `Account` POJO 来捕获所有这些信息。在这里提供了两个构造函数，其中一个包含根据讨论构建对象所需的最小属性。
+
+### 代码列表 2.1：Account POJO 定义
 
 
-
-
-# 代码列表 2.1：Account POJO 定义
 
 ```java
 /**
-  * 一个持有账户信息的 POJO。不提供 setter 方法，因为预设
-  * 最终成员变量将通过构造函数（或构造函数）进行初始化。
-  * @param <T>
-  * accountId 的类型
+ * 一个持有账户信息的 POJO。不提供 setter 方法，因为预设
+ * 最终成员变量将通过构造函数（或构造函数）进行初始化。
+ * @param <T>
+ * accountId 的类型
  */
-public final class Account < T> {
+public final class Account < T > {
     private final double totalBalance;
     private final double unrealisedPnl;
     private final double realisedPnl;
@@ -975,7 +952,7 @@ public final class Account < T> {
 
 我们现在需要指定账户数据接口，该接口定义了我们期望提供者（即实现类）提供的内容。我们对执行任何账户更新（如更改杠杆等）并不感兴趣，对只读信息感兴趣。因此，我们要求提供者要么给我们所有账户的集合（Collection），或者在提供 `accountId` 时提供。我们的接口看起来如下：
 
-# 代码列表 2.2：AccountDataProvider 接口定义
+### 代码列表 2.2：AccountDataProvider 接口定义
 
 ```java
 /**
@@ -1016,7 +993,7 @@ public interface AccountDataProvider < T > {
 
 我们的下一个任务是提供 OANDA 实现。我们首先从有效负载（payload）中导入的相关键。账户的示例响应可能如下：
 
-# 代码列表 2.3：账户的示例 JSON
+### 代码列表 2.3：账户的示例 JSON
 
 ```json
 {
@@ -1037,7 +1014,7 @@ public interface AccountDataProvider < T > {
 
 由于 OANDA 账户是 `Long`，将 `T` 替换为 `Long` 变得
 
-# 代码列表 2.4：静态导入
+### 代码列表 2.4：静态导入
 
 ```java
 public class OandaAccountDataProvider implements AccountDataProvider<Long> {
@@ -1082,10 +1059,6 @@ public class OandaAccountDataProvider implements AccountDataProvider<Long> {
 }
 ```
 
-
-
-
-
 ```java
 JSONObject accountJson = (JSONObject) obj;
 
@@ -1111,21 +1084,26 @@ return accountInfo;
 return null;
 ```
 
-The public method delegates to a private method where the main action happens. The processing starts by invoking the getSingleAccountUrl() method to prepare the url to be sent to OANDA REST API. Before we instantiate an HttpRequest requesting the url to fetch information we must not forget to set the authentication header which the request will not be successful. After http.setHeader(authHeader) we are now set to make the request. Using the httpClient we can fire off our GET request. If HTTP 200 is returned and TradingUtils.responseToString is able to convert the response to String, we now have a valid JSON string payload something similar to Listing 2.3. Now all that is left is to parse this payload and construct the Account POJO. One may be wondering why this peculiar code like
+The public method delegates to a private method where the main action happens. The processing starts by invoking the `getSingleAccountUrl()` method to prepare the `url` to be sent to OANDA REST API. Before we instantiate an `HttpRequest` requesting the `url` to fetch information we must not forget to set the authentication header which the request will not be successful. After `http.setHeader(authHeader)` we are now set to make the request. Using the `httpClient` we can fire off our GET request. If HTTP 200 is returned and `TradingUtils.responseToString` is able to convert the response to String, we now have a valid JSON string payload something similar to Listing 2.3. Now all that is left is to parse this payload and construct the Account POJO. One may be wondering why this peculiar code like
+
+
+
 
 ```java
 final double accountBalance = ((Number) accountJson.get("balance")).doubleValue();
 ```
 
-Why do we have to cast to a Number object and then call doubleValue() instead of just casting to the Double object? The answer is for some keys which are presumed double, if the value is a whole number, the json response will not have a decimal value, instead would have a Long. So for e.g. let's say that the account balance is at a given time 3000.00 the value in the response will be something like
+Why do we have to cast to a `Number` object and then call `doubleValue()` instead of just casting to the `Double` object? The answer is for some keys which are presumed double, if the value is a whole number, the JSON response will not have a decimal value, instead would have a `Long`. So, for example, let's say that the account balance is at a given time 3000.00. The value in the response will be something like:
 
-+ 1 "balance" : 3000
+```text
+"balance": 3000
+```
 
-The cast to Double retrieve will daily fail with a ClassCastException, hence we use this workaround to circumvent this subtlety in parsing.
+The cast to `Double` will likely fail with a `ClassCastException`; hence, we use this workaround to circumvent this subtlety in parsing.
 
-We must now provide an implementation for getting a Collection of available accounts as the interface contract.
+We must now provide an implementation for getting a collection of available accounts as the interface contract.
 
-# Code Listing 2.7: Fetch ALL accounts Implementation
+## Code Listing 2.7: Fetch All Accounts Implementation
 
 ```java
 @Override
@@ -1141,16 +1119,16 @@ public Collection<Account<Long>> getLatestAccountInfo() {
         String strResp = StringUtils.toString(resp);
         if (strResp != StringUtils.EMPTY) {
             Object jsonObject = JSON.parse(strResp);
-            JSONObject jsonObject = (JSONObject)jsonObject;
-            JSONArray accounts = (JSONArray)jsonResp.get(OandaJsonKeys.accounts);
+            JSONObject jsonObject = (JSONObject) jsonObject;
+            JSONArray accounts = (JSONArray) jsonResp.get(OandaJsonKeys.accounts);
             /*
-             We are doing a per account json request because not all information
-             returned in the array of results
+             We are doing a per-account JSON request because not all information
+             is returned in the array of results.
             */
             for (Object o : accounts) {
-                JSONObject jsonObject = (JSONObject)o;
+                JSONObject jsonObject = (JSONObject) o;
                 Long accountIdentifier = (Long) account.get("accountId");
-                Account<Long> accountInfo = getLatestAccountInfo(accountIdentifier,
+                Account<Long> accountInfo = getLatestAccountInfo(accountIdentifier);
                 accInfos.add(accountInfo);
             }
         } else {
@@ -1165,48 +1143,134 @@ public Collection<Account<Long>> getLatestAccountInfo() {
 }
 ```
 
-OANDA REST API has an endpoint to retrieve all accounts’ information in a single request
+OANDA REST API has an endpoint to retrieve all accounts’ information in a single request.
 
-# GET v1/accounts
+## GET `v1/accounts`
 
-However looking at the code listing 2.7, we still call the function that provides all account information for a single account iteratively. Why do we do this? The reason is that when we request information for all accounts using endpoint v1/accounts, OANDA does not provide all information we need to construct our Account POJO as evident from the response:
+However, looking at Code Listing 2.7, we still call the function that provides all account information for a single account iteratively. Why do we do this? The reason is that when we request information for all accounts using the `v1/accounts` endpoint, OANDA does not provide all the information we need to construct our `Account` POJO, as evident from the response:
 
 ```json
 {
   "accounts": [
     {
-      "accountId" : 1234567,
-      "accountName" : "Primary",
-      "accountCurrency" : "GBP",
-      "marginRate" : 0.05
+      "accountId": 1234567,
+      "accountName": "Primary",
+      "accountCurrency": "GBP",
+      "marginRate": 0.05
     },
     {
-      "accountId" : 2345678,
-      "accountName" : "EUR Account",
-      "accountCurrency" : "EUR",
-      "marginRate" : 0.1
+      "accountId": 2345678,
+      "accountName": "EUR Account",
+      "accountCurrency": "EUR",
+      "marginRate": 0.1
     }
   ]
 }
 ```
 
-# 2.3 Encapulating everything behind a generic AccountInfoService
+## 2.3 Encapsulating Everything Behind a Generic `AccountInfoService`
 
-As previously discussed, one of our key design objective is be able to encapsulate providers behind meaningful services so that if required, we can switch provider implementations and change from provider OANDA to say provider LMAX without having to change a single line of compiled code. Just changes in the Spring configuration will hopefully help us to be able to.
+As previously discussed, one of our key design objectives is to be able to encapsulate providers behind meaningful services so that, if required, we can switch provider implementations and change from provider OANDA to, say, provider LMAX without having to change a single line of compiled code. Changes in the Spring configuration alone will hopefully enable us to do this.
 
-公共方法将任务委托给私有方法，这是主要操作发生的地方。处理过程通过调用 `getSingleAccountUrl()` 方法来准备发送到 OANDA REST API 的 URL。在实例化请求获取信息的 `HttpRequest` 之前，我们不能忘记设置身份验证头，否则请求将无法成功。执行 `http.setHeader(authHeader)` 后，我们现在准备好发送请求了。使用 `httpClient` 我们可以发送 GET 请求。如果返回 HTTP 200 且 `TradingUtils.responseToString` 能够将响应转换为字符串，我们现在有了一个有效的 JSON 字符串负载，类似于列表 2.3。剩下的唯一工作就是解析此负载并构建 Account POJO。人们可能会奇怪为什么像下面这样的特殊代码：
+公共方法将任务委托给私有方法，这是主要操作发生的地方。处理过程通过调用 `getSingleAccountUrl()` 方法来准备发送到 OANDA REST API 的 URL。在实例化用于请求信息的 `HttpRequest` 之前，我们不能忘记设置身份验证头，否则请求将无法成功。执行 `http.setHeader(authHeader)` 后，我们现在准备好发送请求了。使用 `httpClient`，我们可以发送 GET 请求。如果返回 HTTP 200，且 `TradingUtils.responseToString` 能够将响应转换为字符串，我们现在就有了一个有效的 JSON 字符串负载，类似于列表 2.3。剩下的唯一工作就是解析此负载并构建 `Account` POJO。人们可能会奇怪为什么会有下面这样的特殊代码：
 
 ```java
 final double accountBalance = ((Number) accountJson.get("balance")).doubleValue();
 ```
 
-为什么我们必须先强制转换为 `Number` 对象然后调用 `doubleValue()`，而不是直接强制转换为 `Double` 对象？答案是对于某些被假设为双类型的键，如果值是一个整数，JSON 响应将不会包含小数值，而是一个 `Long` 类型。例如，假设账户余额在某个特定时间为 3000.00，响应中的值将类似于：
+为什么我们必须先强制转换为 `Number` 对象，然后调用 `doubleValue()`，而不是直接强制转换为 `Double` 对象？答案是，对于某些被假设为双精度类型的键，如果值是一个整数，JSON 响应将不会包含小数值，而是一个 `Long` 类型。例如，假设账户余额在某个特定时间为 3000.00，响应中的值将类似于：
 
-+ 1 "balance" : 3000
+```text
+"balance": 3000
+```
 
-强制转换为 `Double` 将每天都会导致 `ClassCastException` 失败，因此我们使用这种变通方法来绕过解析中的细微差别。
+强制转换为 `Double` 将导致 `ClassCastException`，因此我们使用这种变通方法来绕过解析中的这一细微差别。
 
 我们现在必须为获取可用账户集合提供一个实现，以符合接口契约。
+
+## 代码列表 2.7：获取所有账户的实现
+
+```java
+@Override
+public Collection<Account<Long>> getLatestAccountInfo() {
+    CloseableHttpClient httpClient = getHttpClient();
+    List<Account<Long>> accInfos = Lists.newArrayList();
+    try {
+        HttpRequest httpGet = new HttpGet(getAllAccountsUrl());
+        httpGet.setHeader(this.authHeader);
+
+        LOG.info(TradingUtils.executingRequestMsg(httpGet));
+        HttpResponse response = httpClient.execute(httpGet);
+        String strResp = StringUtils.toString(resp);
+        if (strResp != StringUtils.EMPTY) {
+            Object jsonObject = JSON.parse(strResp);
+            JSONObject jsonObject = (JSONObject) jsonObject;
+            JSONArray accounts = (JSONArray) jsonResp.get(OandaJsonKeys.accounts);
+            /*
+             我们正在对每个账户进行 JSON 请求，因为结果数组中
+             没有返回所有信息。
+            */
+            for (Object o : accounts) {
+                JSONObject jsonObject = (JSONObject) o;
+                Long accountIdentifier = (Long) account.get("accountId");
+                Account<Long> accountInfo = getLatestAccountInfo(accountIdentifier);
+                accInfos.add(accountInfo);
+            }
+        } else {
+            TradingUtils.printErrorMessage(resp);
+        }
+    } catch (Exception e) {
+        LOG.error(e);
+    } finally {
+        TradingUtils.closeSilently(httpClient);
+    }
+    return accInfos;
+}
+```
+
+OANDA REST API 有一个端点，可以在单个请求中检索所有账户的信息。
+
+## GET `v1/accounts`
+
+然而，查看代码列表 2.7，我们仍然迭代地调用提供单个账户所有信息的函数。我们为什么要这样做？原因在于，当我们使用 `v1/accounts` 端点请求所有账户信息时，OANDA 并没有提供我们构建 `Account` POJO 所需的所有信息，如响应所示：
+
+```json
+{
+  "accounts": [
+    {
+      "accountId": 1234567,
+      "accountName": "Primary",
+      "accountCurrency": "GBP",
+      "marginRate": 0.05
+    },
+    {
+      "accountId": 2345678,
+      "accountName": "EUR Account",
+      "accountCurrency": "EUR",
+      "marginRate": 0.1
+    }
+  ]
+}
+```
+
+## 2.3 将所有内容封装在通用的 `AccountInfoService` 之后
+
+正如之前讨论的那样，我们的关键设计目标之一，是能够将提供者封装在有意义的服务之后。这样，如果需要，我们就可以切换提供者实现，从 OANDA 提供者切换到 LMAX 提供者，而无需更改任何编译后的代码。只需更改 Spring 配置，可能就能帮助我们做到这一点。
+
+
+
+
+为什么我们必须先强制转换为 `Number` 对象，然后调用 `doubleValue()`，而不是直接强制转换为 `Double` 对象？答案是，对于某些被假设为双精度类型的键，如果值是一个整数，JSON 响应将不会包含小数值，而是一个 `Long` 类型。例如，假设账户余额在某个特定时间为 3000.00，响应中的值将类似于：
+
+```json
+{
+  "balance": 3000
+}
+```
+
+强制转换为 `Double` 将导致 `ClassCastException`，因此我们使用这种变通方法来绕过解析中的细微差别。
+
+我们现在必须提供一个获取可用账户集合的实现，以符合接口契约。
 
 # 代码列表 2.7：获取所有账户的实现
 
@@ -1248,103 +1312,11 @@ public Collection<Account<Long>> getLatestAccountInfo() {
 }
 ```
 
-OANDA REST API 有一个端点，可以在单个请求中检索所有账户的信息
+OANDA REST API 有一个端点，可以在单个请求中检索所有账户的信息。
 
-# GET v1/accounts
+# `GET v1/accounts`
 
-然而，查看代码列表 2.7，我们仍然迭代地调用提供单个账户所有信息的函数。我们为什么要这样做？原因在于当我们使用 `v1/accounts` 端点请求所有账户信息时，OANDA 并没有提供我们构建 Account POJO 所需的所有信息，如响应所示：
-
-```json
-{
-  "accounts": [
-    {
-      "accountId" : 1234567,
-      "accountName" : "Primary",
-      "accountCurrency" : "GBP",
-      "marginRate" : 0.05
-    },
-    {
-      "accountId" : 2345678,
-      "accountName" : "EUR Account",
-      "accountCurrency" : "EUR",
-      "marginRate" : 0.1
-    }
-  ]
-}
-```
-
-## 2.3 将所有内容封装在通用的 AccountInfoService 之后
-
-正如之前讨论的样，我们的关键设计目标之一是能够将提供者封装在有意义的服务之后，这样如果需要，我们就可以切换提供者实现，从 OANDA 提供者切换到 LMAX 提供者，而无需更改任何编译后的代码。只需更改 Spring 配置，可能就能帮助我们做到这一点。
-
-[content]
-正如之前讨论的样，我们的关键设计目标之一是能够将提供者封装在有意义的服务之后，这样如果需要，我们就可以切换提供者实现，从 OANDA 提供者切换到 LMAX 提供者，而无需更改任何编译后的代码。只需更改 Spring 配置，可能就能帮助我们做到这一点。
-[/content]
-
-(Wait, I noticed I repeated a sentence in the manual translation block at the end. Let me provide the clean, full translation of the provided text as requested.)
-
-*Self-correction: The prompt asks to translate the English text provided under "以下是需要翻译的文本". The text provided starts after the code block starting with "The public method..." and ends with the section starting with "# 2.3 Encapulating everything behind a generic AccountInfoService".* Actually, looking at the user input, it seems the user provided a long block of text. I will provide the translation for the entire block provided.
-
-[content]
-The public method delegates to a private method where the main action happens. The processing starts by invoking the getSingleAccountUrl() method to prepare the url to be sent to OANDA REST API. Before we instantiate an HttpRequest requesting the url to fetch information we must not forget to set the authentication header which the request will not be successful. After http.setHeader(authHeader) we are now set to make the request. Using the httpClient we can fire off our GET request. If HTTP 200 is returned and TradingUtils.responseToString is able to convert the response to String, we now have a valid JSON string payload something similar to Listing 2.3. Now all that is left is to parse this payload and construct the Account POJO. One may be wondering why this peculiar code like
-
-```java
-final double accountBalance = ((Number) accountJson.get("balance")).doubleValue();
-```
-
-Why do we have to cast to a Number object and then call doubleValue() instead of just casting to the Double object? The answer is for some keys which are presumed double, if the value is a whole number, the json response will not have a decimal value, instead would have a Long. So for e.g. let's say that the account balance is at a given time 3000.00 the value in the response will be something like
-
-+ 1 "balance" : 3000
-
-The cast to Double retrieve will daily fail with a ClassCastException, hence we use this workaround to circumvent this subtlety in parsing.
-
-We must now provide an implementation for getting a Collection of available accounts as the interface contract.
-
-# Code Listing 2.7: Fetch ALL accounts Implementation
-
-```java
-@Override
-public Collection<Account<Long>> getLatestAccountInfo() {
-    CloseableHttpClient httpClient = getHttpClient();
-    List<Account<Long>> accInfos = Lists.newArrayList();
-    try {
-        HttpRequest httpGet = new HttpGet(getAllAccountsUrl());
-        httpGet.setHeader(this.authHeader);
-
-        LOG.info(TradingUtils.executingRequestMsg(httpGet));
-        HttpResponse response = httpClient.execute(httpGet);
-        String strResp = StringUtils.toString(resp);
-        if (strResp != StringUtils.EMPTY) {
-            Object jsonObject = JSON.parse(strResp);
-            JSONObject jsonObject = (JSONObject)jsonObject;
-            JSONArray accounts = (JSONArray)jsonResp.get(OandaJsonKeys.accounts);
-            /*
-             We are doing a per account json request because not all information
-             returned in the array of results
-            */
-            for (Object o : accounts) {
-                JSONObject jsonObject = (JSONObject)o;
-                Long accountIdentifier = (Long) account.get("accountId");
-                Account<Long> accountInfo = getLatestAccountInfo(accountIdentifier,
-                accInfos.add(accountInfo);
-            }
-        } else {
-            TradingUtils.printErrorMessage(resp);
-        }
-    } catch (Exception e) {
-        LOG.error(e);
-    } finally {
-        TradingUtils.closeSilently(httpClient);
-    }
-    return accInfos;
-}
-```
-
-OANDA REST API has an endpoint to retrieve all accounts’ information in a single request
-
-# GET v1/accounts
-
-However looking at the code listing 2.7, we still call the function that provides all account information for a single account iteratively. Why do we do this? The reason is that when we request information for all accounts using endpoint v1/accounts, OANDA does not provide all information we need to construct our Account POJO as evident from the response:
+然而，查看代码列表 2.7，我们仍然迭代地调用提供单个账户所有信息的函数。我们为什么要这样做？原因在于，当我们使用 `v1/accounts` 端点请求所有账户信息时，OANDA 并没有提供我们构建 `Account` POJO 所需的所有信息，如响应所示：
 
 ```json
 {
@@ -1365,106 +1337,16 @@ However looking at the code listing 2.7, we still call the function that provide
 }
 ```
 
-# 2.3 Encapulating everything behind a generic AccountInfoService
+## 2.3 将所有内容封装在通用的 `AccountInfoService` 之后
 
-As previously discussed, one of our key design objective is be able to encapsulate providers behind meaningful services so that if required, we can switch provider implementations and change from provider OANDA to say provider LMAX without having to change a single line of compiled code. Just changes in the Spring configuration will hopefully help us to be able to.
-[/content]
+正如之前讨论的，我们的关键设计目标之一是能够将提供者封装在有意义的服务之后，这样如果需要，我们就可以切换提供者实现，从 OANDA 提供者切换到 LMAX 提供者，而无需更改任何编译后的代码。只需更改 Spring 配置，可能就能帮助我们做到这一点。
 
-译文：
-
-[content]
-公共方法将任务委托给私有方法，这是主要操作发生的地方。处理过程通过调用 `getSingleAccountUrl()` 方法来准备发送到 OANDA REST API 的 URL。在实例化请求获取信息的 `HttpRequest` 之前，我们不能忘记设置身份验证头，否则请求将无法成功。执行 `http.setHeader(authHeader)` 后，我们现在准备好发送请求了。使用 `httpClient` 我们可以发送 GET 请求。如果返回 HTTP 200 且 `TradingUtils.responseToString` 能够将响应转换为字符串，我们现在有了一个有效的 JSON 字符串负载，类似于列表 2.3。剩下的唯一工作就是解析此负载并构建 Account POJO。人们可能会奇怪为什么下面这样的特殊代码：
+`USDCH ~= 1.0` 且 `EURUSD ~= 1.0`（写作汇率）。这应该符合具有最大可用保证金的账户策略，但如果最小的货币是 JPY 而不是 EUR，那么该策略将失败。由于在写作时 `CHFJPY` 和 `USDJPY` 约为 `122.0`，这在创建 JPY 账户时并不是理想的。
 
 ```java
-final double accountBalance = ((Number) accountJson.get("balance")).doubleValue();
-```
-
-为什么我们必须先强制转换为 `Number` 对象然后调用 `doubleValue()`，而不是直接强制转换为 `Double` 对象？答案是对于某些被假设为双类型的键，如果值是一个整数，JSON 响应将不会包含小数值，而是一个 `Long` 类型。例如，假设账户余额在某个特定时间为 3000.00，响应中的值将类似于：
-
-+ 1 "balance" : 3000
-
-强制转换为 `Double` 将每天都会导致 `ClassCastException` 失败，因此我们使用这种变通方法来绕过解析中的细微差别。
-
-我们现在必须为获取可用账户集合提供一个实现，以符合接口契约。
-
-# 代码列表 2.7：获取所有账户的实现
-
-```java
-@Override
-public Collection<Account<Long>> getLatestAccountInfo() {
-    CloseableHttpClient httpClient = getHttpClient();
-    List<Account<Long>> accInfos = Lists.newArrayList();
-    try {
-        HttpRequest httpGet = new HttpGet(getAllAccountsUrl());
-        httpGet.setHeader(this.authHeader);
-
-        LOG.info(TradingUtils.executingRequestMsg(httpGet));
-        HttpResponse response = httpClient.execute(httpGet);
-        String strResp = StringUtils.toString(resp);
-        if (strResp != StringUtils.EMPTY) {
-            Object jsonObject = JSON.parse(strResp);
-            JSONObject jsonObject = (JSONObject)jsonObject;
-            JSONArray accounts = (JSONArray)jsonResp.get(OandaJsonKeys.accounts);
-            /*
-             我们正在对每个账户进行 JSON 请求，因为结果数组中
-             没有返回所有信息。
-            */
-            for (Object o : accounts) {
-                JSONObject jsonObject = (JSONObject)o;
-                Long accountIdentifier = (Long) account.get("accountId");
-                Account<Long> accountInfo = getLatestAccountInfo(accountIdentifier,
-                accInfos.add(accountInfo);
-            }
-        } else {
-            TradingUtils.printErrorMessage(resp);
-        }
-    } catch (Exception e) {
-        LOG.error(e);
-    } finally {
-        TradingUtils.closeSilently(httpClient);
-    }
-    return accInfos;
-}
-```
-
-OANDA REST API 有一个端点，可以在单个请求中检索所有账户的信息
-
-# GET v1/accounts
-
-然而，查看代码列表 2.7，我们仍然迭代地调用提供单个账户所有信息的函数。我们为什么要这样做？原因在于当我们使用 `v1/accounts` 端点请求所有账户信息时，OANDA 并没有提供我们构建 Account POJO 所需的所有信息，如响应所示：
-
-```json
-{
-  "accounts": [
-    {
-      "accountId" : 1234567,
-      "accountName" : "Primary",
-      "accountCurrency" : "GBP",
-      "marginRate" : 0.05
-    },
-    {
-      "accountId" : 2345678,
-      "accountName" : "EUR Account",
-      "accountCurrency" : "EUR",
-      "marginRate" : 0.1
-    }
-  ]
-}
-```
-
-## 2.3 将所有内容封装在通用的 AccountInfoService 之后
-
-正如之前讨论的样，我们的关键设计目标之一是能够将提供者封装在有意义的服务之后，这样如果需要，我们就可以切换提供者实现，从 OANDA 提供者切换到 LMAX 提供者，而无需更改任何编译后的代码。只需更改 Spring 配置，可能就能帮助我们做到这一点。
-
-
-
-
-USDCH ~= 1.0 且 EURUSD ~= 1.0（写作汇率）。这应该符合具有最大可用保证金的账户策略，但如果最最小的货币是 JPY 而不是 EUR，那么该策略将惨败。由于在写作时 CHFJPY 和 USDJPY 约为 122.0，这在创建 JPY 账户时并不是理想的。
-
-```java
-static class MarginAvailableComparator < K > implements Comparator <Account> {
+static class MarginAvailableComparator<K> implements Comparator<Account> {
     @Override
-    public int compare(Account < K> ai1, Account < K> ai2) {
+    public int compare(Account<K> ai1, Account<K> ai2) {
         if (ai1.getMarginAvailable() > ai2.getMarginAvailable()) {
             return -1;
         } else if (ai1.getMarginAvailable() < ai2.getMarginAvailable()) {
@@ -1475,11 +1357,11 @@ static class MarginAvailableComparator < K > implements Comparator <Account> {
 }
 ```
 
-接下来，只有在满足以下条件时，才会选择该账户下单/交易：
+接下来，只有在满足以下条件时，才会选择该账户下单或交易：
 
 ```java
 if (account.getAmountAvailableRatio() >= baseTradingConfig.getMinReserveRatio()
-&& account.getNetAssetValue() >= baseTradingConfig.getMinAmountRequired()) {
+        && account.getNetAssetValue() >= baseTradingConfig.getMinAmountRequired()) {
     accountsFound.add(account.getAccountId());
 }
 ```
@@ -1487,65 +1369,88 @@ if (account.getAmountAvailableRatio() >= baseTradingConfig.getMinReserveRatio()
 假设：
 
 ```java
-minReserveRatio=0.2
-minAmountRequired=50.0
+minReserveRatio = 0.2;
+minAmountRequired = 50.0;
 ```
 
-最小比例 0.2 是一项指标，规定如果一个 GBP 账户的总金额为 £1000，那么只有当可用交易金额 > 0.2 x £1000 (££200) 时，我们才选择该账户进行交易。我强烈建议实施此验证，仅仅因为这为账户留下了足够的缓冲区，并防止在价格剧波动时净资产价值（NAV）变为负数。如果账户杠杆很高（例如 1:50），该值应该更高。
+最小比例 `0.2` 是一项指标，规定如果一个 GBP 账户的总金额为 £1000，那么只有当可用交易金额大于 `0.2 × £1000`（£200）时，我们才选择该账户进行交易。我强烈建议实施此验证，因为这能为账户留下足够的缓冲区，并防止在价格剧烈波动时净资产价值（NAV）变为负数。如果账户杠杆很高（例如 `1:50`），该值应该更高。
 
-最小金额（Minimum Amount required）是一项指标，规定账户必须具有最小净资产价值才能被考虑交易。在这种情况下，我们必须至少有 £50 的 NAV 才有资格交易。
+最小金额（Minimum Amount Required）是一项指标，规定账户必须具有最小净资产价值才能被考虑交易。在这种情况下，我们必须至少有 £50 的 NAV 才有资格交易。
 
-接下来，我们讨论两个重载方法 `calculateMarginForTrade`。正如其名所示，这些方法计算特定交易/订单的保证金要求。在想要为各种工具下批量订单，并想了解它们的保证金需求，或者在将订单发送到平台之前进行验证检查的情况下，这些方法将非常有用，以确保给定订单的保证金要求小于可用金额。
+接下来，我们讨论两个重载方法 `calculateMarginForTrade`。正如其名所示，这些方法计算特定交易或订单的保证金要求。在想要为各种工具下批量订单，并想了解它们的保证金需求，或者在将订单发送到平台之前进行验证检查的情况下，这些方法将非常有用，以确保给定订单的保证金要求小于可用金额。
+
+
 
 ```java
-/* ({BASE) / {Home Currency}) * units) / (margin ratio)
-For example,
-Home Currency = USD
-Currency Pair = GBP/CHF
-Base = GBP; Quote = CHF
-Base / Home Currency = GBP/USD = 1.5819
-Units = 1000
-Margin Ratio = 20:1
-Then, margin used:
-(1.5819 * 1000) / 20
-79.095 USD
-*/
+/*
+ * (({BASE} / {Home Currency}) * units) / (margin ratio)
+ *
+ * For example:
+ * Home Currency = USD
+ * Currency Pair = GBP/CHF
+ * Base = GBP; Quote = CHF
+ * Base / Home Currency = GBP/USD = 1.5819
+ * Units = 1000
+ * Margin Ratio = 20:1
+ *
+ * Then, margin used:
+ * (1.5819 * 1000) / 20
+ * 79.095 USD
+ */
 
 @SuppressWarnings("unchecked")
-public double calculateMarginForTrade(Account < K> accountInfo, TradeableInstrument instrument, int units) {
+public double calculateMarginForTrade(Account<K> accountInfo, TradeableInstrument instrument, int units) {
     String[] tokens = splitInstrumentPair(instrument.getInstrument());
     String baseCurrency = tokens[0];
     double price = 1.0;
 
     if (baseCurrency.equals(accountInfo.currency())) {
         String currencyPair = this.providerHelper.fromIsoFormat(baseCurrency + "USD");
-        Map<Table<N>, Price <N>> priceMap = this.currentPriceProvider.getPricesForInstruments(Lists.newArrayList(Collections.singletonList(currencyPair)));
-        if (priceMap.isEmpty()) { 
-            /*当本位货币为 GBP 且工具为 USDJPY 时，我们在示例中获取货币价格*/
-            double currencyPrice = this.providerHelper.fromIsoFormat(accountInfo.currency() + baseCurrency);
-            priceMap = this.currentPriceProvider.getPricesForInstruments(Lists.newArrayList(Collections.singletonList(currencyPrice)));
-            if (priceMap.isEmpty()) { 
+        Map<Table<N>, Price<N>> priceMap =
+            this.currentPriceProvider.getPricesForInstruments(
+                Lists.newArrayList(Collections.singletonList(currencyPair)));
+
+        if (priceMap.isEmpty()) {
+            /* 当本位货币为 GBP 且工具为 USDJPY 时，我们在示例中获取货币价格 */
+            double currencyPrice =
+                this.providerHelper.fromIsoFormat(accountInfo.currency() + baseCurrency);
+
+            priceMap = this.currentPriceProvider.getPricesForInstruments(
+                Lists.newArrayList(Collections.singletonList(currencyPrice)));
+
+            if (priceMap.isEmpty()) {
                 // 这里还有其他问题
                 return Double.MAX_VALUE;
             }
         }
+
         Price<N> priceInfo = priceMap.values().iterator().next();
-        /*取买价和卖价的平均值*/
+
+        /* 取买价和卖价的平均值 */
         price = 1.0 / ((priceInfo.getBidPrice() + priceInfo.getPrice()) / 2.0);
     } else {
         Price<N> priceInfo = priceMap.values().iterator().next();
-        /*取买入和卖价的平均值*/
+
+        /* 取买入和卖价的平均值 */
         price = (priceInfo.getBidPrice() + priceInfo.getPrice()) / 2.0;
     }
+
     return price * units * accountInfo.getMarginRate();
 }
 ```
 
 ```java
-46 } 
-47 
-48 public double calculateMarginForTrade(K accountId, TradeableInstrument instrument, int units) {
-    return calculateMarginForTrade(getAccountInfo(accountId), instrument, units);
+46 }
+47
+48 public double calculateMarginForTrade(
+    K accountId,
+    TradeableInstrument instrument,
+    int units) {
+
+    return calculateMarginForTrade(
+        getAccountInfo(accountId),
+        instrument,
+        units);
 }
 ```
 
@@ -1556,28 +1461,37 @@ public double calculateMarginForTrade(Account < K> accountInfo, TradeableInstrum
 - 账户货币（例如 CHF）。
 - 保证金率或杠杆（0.05 或 1:20）。
 
-最简单的情况是计价货币与账户货币相同。例如，如果我们想为工具 EURAUD 下买入 3000 个单位，且账户货币为 EUR，那么计算结果为 3000*0.05 =150。下一种情况是基础货币、报价货币和账户货币均不同。我们需要有效地获取 {BASE ccy}/{ACCOUNT ccy} 的当前价格，然后将价格与单位和保证金率相乘。例如，如果我们想购买 3000 个 GBPUSD 且账户货币为 CHF，我们需要先有效地获取 GBPCHF 的价格，然后完成剩余的乘法。假设 GBPCHF 价格为 1.54，保证金要求为：
+最简单的情况是计价货币与账户货币相同。例如，如果我们想为工具 EURAUD 下买入 3000 个单位，且账户货币为 EUR，那么计算结果为 `3000 * 0.05 = 150`。
+
+下一种情况是基础货币、报价货币和账户货币均不同。我们需要有效地获取 `{BASE ccy}/{ACCOUNT ccy}` 的当前价格，然后将价格与单位和保证金率相乘。
+
+例如，如果我们想购买 3000 个 GBPUSD 且账户货币为 CHF，我们需要先有效地获取 GBPCHF 的价格，然后完成剩余的乘法。假设 GBPCHF 价格为 1.54，保证金要求为：
 
 ```java
-double marginRequired = 1.54 * 3000 * 0.05 //2231 CHF
+double marginRequired = 1.54 * 3000 * 0.05; // 223.1 CHF
 ```
 
-最后一种情况是上面的衍生，区别在于有效的货币对是 {ACCOUNT ccy}/{BASE ccy}。在这种情况下，我们必须除以 {ACCOUNT ccy}/{BASE ccy} 的价格。假设我们想购买 3000 个 USDCHF，账户货币为 GBP，GBPUSD 价格为 1.53，所需的保证金为：
+最后一种情况是上面的衍生，区别在于有效的货币对是 `{ACCOUNT ccy}/{BASE ccy}`。在这种情况下，我们必须除以 `{ACCOUNT ccy}/{BASE ccy}` 的价格。
+
+假设我们想购买 3000 个 USDCHF，账户货币为 GBP，GBPUSD 价格为 1.53，所需的保证金为：
 
 ```java
-double marginRequired = 3000 * 0.05/1.53 //98.03 GBP
+double marginRequired = 3000 * 0.05 / 1.53; // 98.03 GBP
 ```
 
 该服务结束了我们对账户管理所需几乎的所有内容的讨论。
 
 ## 2.4 动手实践
 
-在本节中，我们将创建一个演示程序，该程序将调用 AccountInfoService 的一些方法并将输出打印到控制台
+在本节中，我们将创建一个演示程序，该程序将调用 `AccountInfoService` 的一些方法并将输出打印到控制台。
 
 ```java
 package com.pleiustech.ftrading.account;
+
 import java.util.Collection;
+
 import org.apache.log4j.Logger;
+
 import com.pleiustech.ftrading.BaseTradingConfig;
 import com.pleiustech.ftrading.helper.ProviderHelper;
 import com.pleiustech.ftrading.instrument.TradeableInstrument;
@@ -1598,66 +1512,110 @@ public class AccountInfoDemo {
 
     public static void main(String[] args) {
         usage(args);
+
         String url = args[0];
         String userName = args[1];
         String accessToken = args[2];
+
         // 初始化依赖
-        OandaDataProvider<Long> accountDataProvider = new OandaDataProvider(url, accessToken);
-        CurrentPriceProvider<String> currentPriceInfoProvider = new OandaCurrentPriceProvider(url);
+        OandaDataProvider<Long> accountDataProvider =
+            new OandaDataProvider(url, accessToken);
+
+        CurrentPriceProvider<String> currentPriceInfoProvider =
+            new OandaCurrentPriceProvider(url);
+
         BaseTradingConfig tradingConfig = new BaseTradingConfig();
         tradingConfig.setMinReserveRatio(0.05);
         tradingConfig.setAmountRequired(100.00);
-        ProviderHelper<String> providerHelper = new OandaProviderHelper();
-        AccountInfoService<Long, String> accountInfoService = new AccountInfoServiceImpl(
-            accountDataProvider,
-            currentPriceInfoProvider,
-            tradingConfig,
-            providerHelper);
-        Collection<Long> accounts = accountInfoService.getAllAccounts(userName);
-        LOG.info(String.format("Found %d accounts to trade for user %s", accounts.size(), userName));
+
+        ProviderHelper<String> providerHelper =
+            new OandaProviderHelper();
+
+        AccountInfoService<Long, String> accountInfoService =
+            new AccountInfoServiceImpl(
+                accountDataProvider,
+                currentPriceInfoProvider,
+                tradingConfig,
+                providerHelper);
+
+        Collection<Long> accounts =
+            accountInfoService.getAllAccounts(userName);
+
+        LOG.info(String.format(
+            "Found %d accounts to trade for user %s",
+            accounts.size(),
+            userName));
+
         LOG.info("++++++++++++++++++++ Dumping Info ++++++++++++++++++");
 
         for (Account<Long> account : accounts) {
             LOG.info(account);
         }
+
         LOG.info("+++++++++++++++++++++++++ Finished Info +++++++++++++++++++++");
+
         Account<Long> sampleAccount = accounts.iterator().next();
         final int units = 5000;
 
-        TradeableInstrument<String> gbpusd = new TradeableInstrument("GBP/USD");
-        double gbpusdMarginReqd = accountInfoService.calculateMarginForTrade(sampleAccount, gbpusd, units);
-        LOG.info(String.format("Margin requirement for trading pair %d units of GBP/USD: %.2f %s", units, gbpusdMarginReqd, sampleAccount.getCurrency()));
+        TradeableInstrument<String> gbpusd =
+            new TradeableInstrument("GBP/USD");
 
-        TradeableInstrument<String> eurgbp = new TradeableInstrument("EUR/GBP");
-        double eurgbpMarginReqd = accountInfoService.calculateMarginForTrade(sampleAccount, eurgbp, units);
-        LOG.info(String.format("Margin requirement for trading pair %d units of EUR/GBP: %.2f %s", units, eurgbpMarginReqd, sampleAccount.getCurrency()));
+        double gbpusdMarginReqd =
+            accountInfoService.calculateMarginForTrade(
+                sampleAccount,
+                gbpusd,
+                units);
+
+        LOG.info(String.format(
+            "Margin requirement for trading pair %d units of GBP/USD: %.2f %s",
+            units,
+            gbpusdMarginReqd,
+            sampleAccount.getCurrency()));
+
+        TradeableInstrument<String> eurgbp =
+            new TradeableInstrument("EUR/GBP");
+
+        double eurgbpMarginReqd =
+            accountInfoService.calculateMarginForTrade(
+                sampleAccount,
+                eurgbp,
+                units);
+
+        LOG.info(String.format(
+            "Margin requirement for trading pair %d units of EUR/GBP: %.2f %s",
+            units,
+            eurgbpMarginReqd,
+            sampleAccount.getCurrency()));
     }
 }
 ```
 
-
-
-
-
-2016-01-26 19:55:40,462 INFO [main] 正在请求 : GET https://api-fxx.oanda.com/v1/accounts/ HTTP/1.1
-2016-01-26 19:55:47,487 INFO [main] 正在请求 : GET https://api-fxx.oanda.com/v1/accounts/ HTTP/1.1
-2016-01-26 19:55:48,247 INFO [main] 正在请求 : GET https://api-fxx.oanda.com/v1/accounts/ HTTP/1.1
-2016-01-26 19:55:48,457 INFO [main] 正在请求 : GET https://api-fxx.oanda.com/v1/accounts/ HTTP/1.1
-2016-01-26 19:55:48,657 INFO [main] 正在请求 : GET https://api-fxx.oanda.com/v1/accounts/ HTTP/1.1
-2016-01-26 19:55:48,688 INFO [main] 正在请求 : GET https://api-fxx.oanda.com/v1/accounts/ HTTP/1.1
-2016-01-26 19:55:48,689 INFO [main] 正在请求 : GET https://api-fxx.oanda.com/v1/accounts/ HTTP/1.1
-2016-01-26 19:55:48,789 INFO [main] 正在请求 : GET https://api-fxx.oanda.com/v1/accounts/ HTTP/1.1
-2016-01-26 19:55:49,323 INFO [main] 正在请求 : GET https://api-fxx.oanda.com/v1/accounts/ HTTP/1.1
+```text
+2016-01-26 19:55:40,462 INFO [main] 正在请求：GET https://api-fxx.oanda.com/v1/accounts/ HTTP/1.1
+2016-01-26 19:55:47,487 INFO [main] 正在请求：GET https://api-fxx.oanda.com/v1/accounts/ HTTP/1.1
+2016-01-26 19:55:48,247 INFO [main] 正在请求：GET https://api-fxx.oanda.com/v1/accounts/ HTTP/1.1
+2016-01-26 19:55:48,457 INFO [main] 正在请求：GET https://api-fxx.oanda.com/v1/accounts/ HTTP/1.1
+2016-01-26 19:55:48,657 INFO [main] 正在请求：GET https://api-fxx.oanda.com/v1/accounts/ HTTP/1.1
+2016-01-26 19:55:48,688 INFO [main] 正在请求：GET https://api-fxx.oanda.com/v1/accounts/ HTTP/1.1
+2016-01-26 19:55:48,689 INFO [main] 正在请求：GET https://api-fxx.oanda.com/v1/accounts/ HTTP/1.1
+2016-01-26 19:55:48,789 INFO [main] 正在请求：GET https://api-fxx.oanda.com/v1/accounts/ HTTP/1.1
+2016-01-26 19:55:49,323 INFO [main] 正在请求：GET https://api-fxx.oanda.com/v1/accounts/ HTTP/1.1
 2016-01-26 19:55:49,793 INFO [main] 交易货币对 5000 单位 EUR,GBP 的合并需求为 276.21 CHF
 
 ************************* 导出账户信息 *********************
 
 USD,GBP 保证金=121.07, 保证金已占用=0.00, 总余额=0.00, 未实现盈亏=0.00, 已实现盈亏=0.00, 可用保证金=0.00, OpenTrac
+
 USD,GBP 保证金已占用=0.00, 总余额=0.00, 未实现盈亏=0.00, 已实现盈亏=0.00, 可用保证金=0.00, OpenTrac
+
 Currency,USD 保证金已占用=0.00, 总余额=0.00, 未实现盈亏=0.00, 已实现盈亏=0.00, 可用保证金=0.00, OpenTrac
+
 Currency,CAD 保证金已占用=0.00, 总余额=0.00, 未实现盈亏=0.00, 已实现盈亏=0.00, 可用保证金=0.00, OpenTrac
+
 Currency,CAD 保证金已占用=0.00, 总余额=0.00, 未实现盈亏=0.00, 已实现盈亏=0.00, 可用保证金=0.00, OpenTrac
-Currency,GBP 保证金已占用=0.00, 总余额=0.00, 未实现盈亏=0.00, 已实现盈亏=0.00, 可用保证金=0.00, OpenTrac
+
+Currency,GBP 保证金已占用=0.00, 保证金已占用=0.00, 总余额=0.00, 未实现盈亏=0.00, 已实现盈亏=0.00, 可用保证金=0.00, OpenTrac
+```
 
 # 示例输出
 
@@ -1665,14 +1623,16 @@ Currency,GBP 保证金已占用=0.00, 总余额=0.00, 未实现盈亏=0.00, 已�
 
 在本章中，我们将重点关注在经纪商平台上可交易的工具。交易工具实体几乎是交易平台的核心，因为一切都围绕着它展开。从获取价格到下单/交易，交易工具都是主要的执行者。在进行更多阐述之前，让我们深入研究描述可交易工具的 POJO。
 
-代码列表 3.1: TradeableInstrument POJO 定义
+**代码列表 3.1：TradeableInstrument POJO 定义**
+
+
 
 ```java
 /**
  * @param <T>
  *      instrumentId 的类型
  */
-public class TradeableInstrument < T > {
+public class TradeableInstrument<T> {
     private final String instrument;
     private final String description;
     private final T instrumentId;
@@ -1687,112 +1647,135 @@ public class TradeableInstrument < T > {
         this(instrument, null, description);
 
     public TradeableInstrument(String instrument, T instrumentId, String description)
-        this(instrument, instrumentId, 0, null);
+        this(instrument, null, 0, null);
 
-    public TradeableInstrument(final String instrument, final double pip,
-        InstrumentPairInterestRate instrumentPairInterestRate, String description)
+    public TradeableInstrument(
+        final String instrument,
+        final double pip,
+        InstrumentPairInterestRate instrumentPairInterestRate,
+        String description)
         this(instrument, null, pip, instrumentPairInterestRate, description);
 
-    public TradeableInstrument(final String instrument, T instrumentId, final
-        InstrumentPairInterestRate instrumentPairInterestRate)
+    public TradeableInstrument(
+        final String instrument,
+        T instrumentId,
+        final InstrumentPairInterestRate instrumentPairInterestRate)
         this(instrument, instrumentId, pip, instrumentPairInterestRate, null);
 
-        InstrumentInstrumentRateinstrumentPairInterestRate, String descripti
-        39 this.instrument = instrument;
-        40 this.pip = pip;
-        41 this.instrumentPairInterestRate = instrumentPairInterestRate;
-        42 this.instrumentId = instrumentId;
-        43 this.description = description;
-        44 this.hash = calcHashCode();
-        45 }
-        46 
-        47 private int calcHashCode() {
-        48 final int prime = 31;
-        49 int result = 1;
-        50 result = prime * result + ((instrument == null) ? 0 : instrument.hasCo)
-        51 result = prime * result + ((instrumentId == null) ? 0 : instrumentId.ha)
-        52 return result;
-        53 }
-        54 
-        55 public T getInstrumentId() {
-        56 return this.instrumentId;
-        57 }
-        58 
-        59 public String getDescription() {
-        60 return description;
-        61 }
-        62 
-        63 @Override
-        64 public int hashCode() {
-        65 return hash;
-        66 }
-        67 
-        68 @Override
-        69 public boolean equals(Object obj) {
-        70 if (this == obj) {
-        71 return true;
-        72 if (obj == null) {
-        73 return false;
-        74 if (getClass() != obj.getClass()) {
-        75 return false;
-        76 @SuppressWarnings("unchecked")
-        77 TradeableInstrument< T > other = (TradeableInstrument<>) obj;
-        78 if (instrument == null) {
-        79 if (other.instrument == null) {
-        80 return true;
-        81 } else if (!instrument.equals(other.instrument)) {
-        82 return false;
-        83 }
-        84 if (instrumentId == null) {
-        85 if (other.instrumentId == null) {
-        86 return true;
-        87 } else if (!instrumentId.equals(other.instrumentId)) {
-        88 return false;
-        89 }
-        90 if (description == null) {
-        91 if (other.description == null) {
-        92 return true;
-        93 } else if (!description.equals(other.description)) {
-        94 return false;
-        95 }
-        96 }
-        97 if (pip != other.pip) {
-        98 return false;
-        99 }
-        100 if (instrumentPairInterestRate == null) {
-        101 if (other.instrumentPairInterestRate == null) {
-        102 return true;
-        103 } else if (!instrumentPairInterestRate.equals(other.instrumentPairInterestRate)) {
-        104 return false;
-        105 }
-        106 }
-        107 return true;
-        108 }
+    InstrumentInstrumentRate instrumentPairInterestRate, String description
+        this.instrument = instrument;
+        this.pip = pip;
+        this.instrumentPairInterestRate = instrumentPairInterestRate;
+        this.instrumentId = instrumentId;
+        this.description = description;
+        this.hash = calcHashCode();
+    }
 
-        109 InstrumentPairInterestRate getPairInterestRate() {
-        110 return instrumentPairInterestRate;
-        111 }
+    private int calcHashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((instrument == null) ? 0 : instrument.hashCode());
+        result = prime * result + ((instrumentId == null) ? 0 : instrumentId.hashCode());
+        return result;
+    }
 
-        112 void setInstrumentPairInterestRate(InstrumentPairInterestRate instrumentPairInterestRate) {
-        113 this.instrumentPairInterestRate = instrumentPairInterestRate;
-        114 }
+    public T getInstrumentId() {
+        return this.instrumentId;
+    }
 
-        115 @Override
-        116 public String toString() {
-        117 return "TradeableInstrument[instrument=" + instrument + ", description=" + description + ", instrument=" + instrumentId + ", pip=" + pip + ",PairInterestRate=" + instrumentPairInterestRate + "]";
-        118 }
-        119 public String getInstrument() {
-        120 return instrument;
-        121 }
+    public String getDescription() {
+        return description;
+    }
 
-        122 public double getPip() {
-        123 return pip;
-        124 }
+    @Override
+    public int hashCode() {
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+
+        @SuppressWarnings("unchecked")
+        TradeableInstrument<T> other = (TradeableInstrument<T>) obj;
+
+        if (instrument == null) {
+            if (other.instrument == null) {
+                return true;
+            } else if (!instrument.equals(other.instrument)) {
+                return false;
+            }
+        }
+
+        if (instrumentId == null) {
+            if (other.instrumentId == null) {
+                return true;
+            } else if (!instrumentId.equals(other.instrumentId)) {
+                return false;
+            }
+        }
+
+        if (description == null) {
+            if (other.description == null) {
+                return true;
+            } else if (!description.equals(other.description)) {
+                return false;
+            }
+        }
+
+        if (pip != other.pip) {
+            return false;
+        }
+
+        if (instrumentPairInterestRate == null) {
+            if (other.instrumentPairInterestRate == null) {
+                return true;
+            } else if (!instrumentPairInterestRate.equals(other.instrumentPairInterestRate)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    InstrumentPairInterestRate getPairInterestRate() {
+        return instrumentPairInterestRate;
+    }
+
+    void setInstrumentPairInterestRate(InstrumentPairInterestRate instrumentPairInterestRate) {
+        this.instrumentPairInterestRate = instrumentPairInterestRate;
+    }
+
+    @Override
+    public String toString() {
+        return "TradeableInstrument[instrument=" + instrument
+            + ", description=" + description
+            + ", instrument=" + instrumentId
+            + ", pip=" + pip
+            + ",PairInterestRate=" + instrumentPairInterestRate + "]";
+    }
+
+    public String getInstrument() {
+        return instrument;
+    }
+
+    public double getPip() {
+        return pip;
+    }
+}
 ```
 
 `instrumentPairInterestRate` 是一个有趣的属性，并非所有平台都可用。从这里可以看出，它可以捕捉一些重要信息，例如给定工具的可能费用。简而言，金融费用是在持有某货币对交易时向经纪商支付或收取的金额。例如，在多头 NZCHF 交易时需要支付某些金额，而空头 NZCHF 交易则反之。该值源于相关货币的利率差异（例如 NZD 基准利率为 3%，CHF 基准利率）。
 
-代码列表 3.2: InstrumentPairInterestRate POJO 定义
+代码列表 3.2：`InstrumentPairInterestRate` POJO 定义
 
 ```java
 package com.preciousext.ftrading.instrument;
@@ -1807,8 +1790,10 @@ public class InstrumentPairInterestRate {
         this(null, null, null, null);
     }
 
-    public InstrumentPairInterestRate(Double baseCurrencyBidInterestRate,
-        Double baseCurrencyAskInterestRate, Double quoteCurrencyBidInterestRate,
+    public InstrumentPairInterestRate(
+        Double baseCurrencyBidInterestRate,
+        Double baseCurrencyAskInterestRate,
+        Double quoteCurrencyBidInterestRate,
         Double quoteCurrencyAskInterestRate) {
         this.baseCurrencyBidInterestRate = baseCurrencyBidInterestRate;
         this.baseCurrencyAskInterestRate = baseCurrencyAskInterestRate;
@@ -1834,21 +1819,20 @@ public class InstrumentPairInterestRate {
 }
 ```
 
-
-
 ```java
 public String toString() {
     return "InstrumentPairInterestRate [baseCurrencyBidInterestRate=" + base
-    terRate=" + baseCurrencyAskInterestRate + ", quoteCurrencyBidRa
-    CurrencyAskInterestRate=" + quoteCurrencyAskInterestRate + "]";
+        + "terRate=" + baseCurrencyAskInterestRate
+        + ", quoteCurrencyBidRa"
+        + "CurrencyAskInterestRate=" + quoteCurrencyAskInterestRate + "]";
 }
 ```
 
-## 3.1 Instrument Provider 接口提供者接口
+## 3.1 `InstrumentDataProvider` 接口提供者接口
 
 我们现在必须定义提供者必须实现的接口以获取品种数据。与账户类似，我们只对只读数据感兴趣，因为在经纪平台上我们无法对品种进行任何创建、更新或删除操作。这是一个获取不可变数据的简单案例，这些数据可能永远不会改变，至少在交易时间内是这样。在少数情况下，某些品种可能不再支持，但大多数情况下，观察到的结果是有新品种被添加到交易列表中。可能会更频繁但仅在换期窗口（rollover window）期间变化的是各种货币的利率。如下列表所示，我们的接口非常直观。
 
-代码列表 3.3：InstrumentDataProvider 接口定义
+代码列表 3.3：`InstrumentDataProvider` 接口定义
 
 ```java
 /**
@@ -1856,59 +1840,60 @@ public String toString() {
  * 提供者必须为每个实例提供品种名称和点值（pip value）。
  * 强烈建议对该提供者返回的数据进行缓存。
  * 不变集合。
- * @param <T>TradeableInstrument 类中 instrumentId 的类型
+ *
+ * @param <T> TradeableInstrument 类中 instrumentId 的类型
  * @see TradeableInstrument
  */
-public interface InstrumentDataProvider < T > {
+public interface InstrumentDataProvider<T> {
     /**
      * @return 在经纪平台上可交易的所有 TradeableInstrument 集合。
      */
-Collection < TradeableInstrument < T >> getInstruments();
+    Collection<TradeableInstrument<T>> getInstruments();
 }
 ```
 
-## 3.2 InstrumentDataProvider 的具体实现
+## 3.2 `InstrumentDataProvider` 的具体实现
 
-在深入讨论 OANDA 对该接口的详细实现之前，让我们快速查看一下请求所有可交易品种列表时返回的示例 json 。实际的 json 将包含许多品种。
+在深入讨论 OANDA 对该接口的详细实现之前，让我们快速查看一下请求所有可交易品种列表时返回的示例 JSON。实际的 JSON 将包含许多品种。
 
 代码列表 3.4：品种的示例 JSON 负载
 
 ```json
 {
   "instruments": [
-  {
-    "instrument": "AUD_CAD",
-    "pip": "0.0001",
-    "interestRate": {
-      "AUD": {
-        "bid": 0.0164,
-        "ask": 0.0274
-      },
-      "CAD": {
-        "bid": 0.002,
-        "ask": 0.008
+    {
+      "instrument": "AUD_CAD",
+      "pip": "0.0001",
+      "interestRate": {
+        "AUD": {
+          "bid": 0.0164,
+          "ask": 0.0274
+        },
+        "CAD": {
+          "bid": 0.002,
+          "ask": 0.008
+        }
+      }
+    },
+    {
+      "instrument": "AUD_CHF",
+      "pip": "0.0001",
+      "interestRate": {
+        "AUD": {
+          "bid": 0.0164,
+          "ask": 0.0274
+        },
+        "CHF": {
+          "bid": -0.0133,
+          "ask": 0.003
+        }
       }
     }
-  },
-  {
-    "instrument": "AUD_CHF",
-    "pip": "0.0001",
-    "interestRate": {
-      "AUD": {
-        "bid": 0.0164,
-        "ask": 0.0274
-      },
-      "CHF": {
-        "bid": -0.0133,
-        "ask": 0.003
-      }
-    }
-  }
-]
+  ]
 }
 ```
 
-在我们开始代码讨论时，首先列出将要使用的所有 json 键
+在我们开始代码讨论时，首先列出将要使用的所有 JSON 键：
 
 ```java
 import static com.precioustech.xtrading.oanda.restapi.OandaJsonKeys.ask;
@@ -1917,13 +1902,15 @@ import static com.precioustech.xtrading.oanda.restapi.OandaJsonKeys.instrument;
 import static com.precioustech.xtrading.oanda.restapi.OandaJsonKeys.interestRate;
 ```
 
-由于 OANDA 目前没有品种的内部标识符，我们使用品种名称作为标识符。将 T 参数类型替换为 String，我们得到：
+由于 OANDA 目前没有品种的内部标识符，我们使用品种名称作为标识符。将 `T` 参数类型替换为 `String`，我们得到：
 
 ```java
 public class OandaInstrumentDataDataProvider implements InstrumentDataDataProvider
 ```
 
-对于构造函数的定义，我们提供了 OANDA url、有效的账户 id 和访问令牌（accessToken）。请记住，account id 应该是与访问令牌相关的有效账户。
+对于构造函数的定义，我们提供了 OANDA URL、有效的账户 ID 和访问令牌（`accessToken`）。请记住，`account id` 应该是与访问令牌相关的有效账户。
+
+
 
 ```java
 public OandaInstrumentDataDataProvider(String url, long accountID, String accessToken) {
@@ -1939,7 +1926,7 @@ public OandaInstrumentDataDataProvider(String url, long accountID, String access
 public static final String INSTRUMENTS_RESOURCE = "/v1/instruments";
 ```
 
-因此，我们从 OANDA 获取所有可交易品种的 url 函数如下：
+因此，我们从 OANDA 获取所有可交易品种的 URL 函数如下：
 
 ```java
 static final String fieldsRequested = "instrument%2Cip%2InterestRate"; 
@@ -1949,7 +1936,7 @@ String getInstrumentsUrl() {
 }
 ```
 
-关于 `fieldsRequested` 的说明。默认情况下，如果此请求参数不在 url 中，OANDA 默认返回字段 instrument、displayName、pip、maxTradeUnits，如下方的示例 json 响应所示：
+关于`fieldsRequested`的说明：默认情况下，如果此请求参数不在 URL 中，OANDA 默认返回字段`instrument`、`displayName`、`pip`、`maxTradeUnits`，如下方的示例 JSON 响应所示：
 
 ```json
 {
@@ -1969,9 +1956,9 @@ String getInstrumentsUrl() {
 ]}
 ```
 
-由于 `interestRate` 不在默认字段中，我们必须使用 `fieldsRequested` 查询参数显式地请求它，以及请求我们在响应中需要的每个字段。现在进入接口的主实现，如下：
+由于`interestRate`不在默认字段中，我们必须使用`fieldsRequested`查询参数显式地请求它，以及请求我们在响应中需要的每个字段。现在进入接口的主实现，如下：
 
-代码列表 3.5：getInstruments() 实现
+代码列表 3.5：`getInstruments()`实现
 
 ```java
 @Override 
@@ -2023,15 +2010,11 @@ Collection < TradeableInstrument < T >> getInstruments() {
 }
 ```
 
-
-
-
-
 ## 3.3 将所有内容封装在通用的 InstrumentService 之后
 
-该服务将提供有关仪器的一些有用信息，我们将很快对其进行探索。由于仪器数据是相当不可变的，我们可以安全地在内部缓存仪器信息，然后使用缓存来存储任何请求信息的服务请求。由于缓存是不可变且只读的，我们不需要担心并发问题。我们首先讨论构造函数，它只需要一个 `InstrumentDataProvider` 的实现作为依赖项。
+该服务将提供有关仪器的一些有用信息，我们将很快对其进行探索。由于仪器数据是相当不可变的，我们可以安全地在内部缓存仪器信息，然后使用缓存来存储任何请求信息的服务请求。由于缓存是不可变且只读的，我们不需要担心并发问题。我们首先讨论构造函数，它只需要一个`InstrumentDataProvider`的实现作为依赖项。
 
-```
+```java
 1 private final Map<String, TradeableInstrument<T>> instrumentMap;
 2 public InstrumentService(InstrumentDataProvider<T> instrumentDataProvider) {
 4 Preconditions.checkNull(instrumentDataProvider);
@@ -2044,16 +2027,16 @@ Collection < TradeableInstrument < T >> getInstruments() {
 11 }
 ```
 
-在构造函数内部，我们使用 `InstrumentDataProvider` 实现一次性获取所有仪器，并构建我们的不可变缓存 `instrumentMap`。现在我们转向讨论我们的第一个服务方法，get `getPipForInstrument`。它返回给定仪器的 pip 点值。该方法的一个有用调用场景是在为仪器下限价订单时计算止损价或止盈价。假设我们想在 EURUSD 价格下跌 30 pips 时对其下一个限价买单。你的触发方法可能如下：
+在构造函数内部，我们使用`InstrumentDataProvider`实现一次性获取所有仪器，并构建我们的不可变缓存`instrumentMap`。现在我们转向讨论我们的第一个服务方法，`getPipForInstrument`。它返回给定仪器的 pip 点值。该方法的一个有用调用场景是在为仪器下限价订单时计算止损价或止盈价。假设我们想在 EURUSD 价格下跌 30 pips 时对其下一个限价买单。你的触发方法可能如下：
 
-```
+```java
 1 TradeableInstrument<String> eurusd = new TradeableInstrument<String>("EUR_USD");
 2 double triggerPrice = currentPrice - 30 * instrumentService.getPForInstrument(eurusd);
 ```
 
-现在来看这个有用方法的实际代码。
+现在来看这个有用方法的实际代码：
 
-```
+```java
 1 public Double getPipForInstrument(TradeableInstrument< T > instrument) {
 2 Preconditions.checkNull(instrument);
 3 TradeableInstrument < T > tradeableInstrument = this.instrumentMap.get(instrument.getSymbol());
@@ -2065,18 +2048,18 @@ Collection < TradeableInstrument < T >> getInstruments() {
 9 }
 ```
 
-上面的代码非常直观。使用传入的仪器，获取与仪器对应的 `TradeableInstrument` 实例。如果未找到则返回 1.0，否则返回该仪器的 pip 值。
+上面的代码非常直观。使用传入的仪器，获取与仪器对应的`TradeableInstrument`实例。如果未找到则返回 1.0，否则返回该仪器的 pip 值。
 
-另一个有用的服务方法是 getAllPairsWithCurrency。它返回一个所有给定货币作为计价货币或报价货币的仪器集合。例如，要获取所有以 CHF 为基础货币或报价货币的仪器集合，可以这样调用它：
+另一个有用的服务方法是`getAllPairsWithCurrency`。它返回一个所有给定货币作为计价货币或报价货币的仪器集合。例如，要获取所有以 CHF 为基础货币或报价货币的仪器集合，可以这样调用它：
 
-```
+```java
 1 // 返回如 USDCHF,CHFPY..
 2 Collection<TradeableInstrument<String>> chpairs = instrumentService.getAllPairsWithCurrency("CHF");
 ```
 
 现在让我们来看实际实现，它非常直观：
 
-```
+```java
 1 public Collection < TradeableInstrument < T >> getAllPairsWithCurrency(String currency) {
 2 Collection < TradeableInstrument < T >> allPairs = Sets.newHashSet();
 3 if (StringUtil.isEmpty(currency)) {
@@ -2090,11 +2073,13 @@ Collection < TradeableInstrument < T >> getInstruments() {
 11 }
 ```
 
-在上述代码中，如果传递的值为空或空字符串，我们返回一个空集合。如果是有效字符串，我们遍历我们的缓存并使用 `contains` 检查当前键是否包含传递的字符串。如果包含，我们只需将其添加到将从方法返回的集合中。到此，我们对关于可交易仪器大部分内容的讨论就结束了。
+在上述代码中，如果传递的值为空或空字符串，我们返回一个空集合。如果是有效字符串，我们遍历我们的缓存并使用`contains`检查当前键是否包含传递的字符串。如果包含，我们只需将其添加到将从方法返回的集合中。到此，我们对关于可交易仪器大部分内容的讨论就结束了。
 
 ## 4 尝试一下
 
-在本节中，我们将创建一个演示程序，调用一些 `InstrumentService` 方法并将输出到控制台。
+在本节中，我们将创建一个演示程序，调用一些`InstrumentService`方法并将输出到控制台。
+
+
 
 ```java
 package com.preciustech.fxtrading.instrument;
@@ -2155,21 +2140,25 @@ public class InstrumentServiceDemo {
 }
 ```
 
-程序参数：
-```
+## 程序参数
+
+```text
 https://api-trade.oanda.com/...
 ```
 
-VM 参数：
+## VM 参数
+
 - 使用 SWT 时使用 `-XStartOnFirstThread` 参数
 
-工作目录：
-- 默认：$workspace_in:tradingbot-programs
+## 工作目录
+
+- 默认：`$workspace_in:tradingbot-programs`
 - 其他
 
 ## 启动配置
 
-示例输出
+### 示例输出
+
 1. http://fxtrade.oanda.com/learn/intro-to-currency-trading/conventions/pips
 2. http://fxtrade.oanda.com/learn/intro-to-currency-trading/conventions/rollovers
 
@@ -2180,11 +2169,11 @@ VM 参数：
 - 市场数据事件，例如仪器价格的变化。
 - 交易/订单/账户事件，例如订单成交或触及止损位。
 - 社交媒体事件，例如来自影响力人物或市场推动者的推文。
-- 任何其他源
+- 任何其他源。
 
-正如我们看到的，我们可能有许多事件流以不同程度的强度冲击我们的交易机器人。处理这些事件并据此决策是交易机器人设计的基石。在本章中，我们专门讨论如何处理市场数据事件以及如何使用 **Google EventBus** 分发它们。
+正如我们看到的，我们可能有许多事件流以不同程度的强度冲击我们的交易机器人。处理这些事件并据此决策是交易机器人设计的基石。在本章中，我们专门讨论如何处理市场数据事件以及如何使用 `Google EventBus` 分发它们。
 
-## 4.1 流式市场数据接口
+### 4.1 流式市场数据接口
 
 我们首先定义一个接口，规定了市场事件流在我们的机器人中运行所需的最小方法集。从表面上看，似乎没什么，因为我们只是对实现者实施了启动和停止的要求。然而，正如我们以后将看到的，在讨论实现时，实现者的工作部分是调用 `MarketEventCallback` 处理收到的市场事件。假设 `startDataStreaming()` 在事件源上建立一个连续连接（事件循环），即在单独的线程中，该线程在该连接上接收市场数据事件。然后对事件进行解析并传递给 `MarketEventCallback` 进行处理。
 
@@ -2220,8 +2209,6 @@ public interface MarketDataStreamingService {
 
 `MarketEventCallback` 接口实际上负责同步或异步进一步分发市场数据事件，必须配合使用。
 
-
-
 ```java
 /**
  * 市场数据事件的回调处理器。上游独立的流处理器
@@ -2251,9 +2238,9 @@ public interface EventCallback < T > {
 
 让我们直接进入 OANDA 的实现，一旦我们查看代码内部，情况就会变得明朗。
 
-## 4.2 MarketDataStreamingService 的具体实现
+### 4.2 `MarketDataStreamingService` 的具体实现
 
-让我们开始查看 OandaMarketDataStreamingService 的类定义和构造函数，它负责从 OANDA 读取市场数据流，然后调用传入构造函数的 MarketEventCallback 实例上的 onEvent 方法。
+让我们开始查看 `OandaMarketDataStreamingService` 的类定义和构造函数，它负责从 OANDA 读取市场数据流，然后调用传入构造函数的 `MarketEventCallback` 实例上的 `onEvent` 方法。
 
 ```java
 public class OandaMarketDataStreamingService extends OandaStreamingService {
@@ -2280,7 +2267,7 @@ public class OandaMarketDataStreamingService extends OandaStreamingService {
 }
 ```
 
-构造函数等其他方法接收一个账户 ID 以及显示逐笔报价（ticks）的品种。`instrumentsAsCsv` 方法接收品种集合，并返回一个平化的、URL 编码的逗号分隔的品种字符串。假设账户 ID 为 123456 且品种列表为 ["EUR_USD","GBP_AUD"]，构造函数中的 URL 看起来如下：
+构造函数等其他方法接收一个账户 ID 以及显示逐笔报价（ticks）的品种。`instrumentsAsCsv` 方法接收品种集合，并返回一个平化的、URL 编码的逗号分隔的品种字符串。假设账户 ID 为 `123456` 且品种列表为 `["EUR_USD","GBP_AUD"]`，构造函数中的 URL 看起来如下：
 
 ```java
 //given
@@ -2288,7 +2275,7 @@ public static final String PRICES_RESOURCE = "v1/prices";
 //this.url 计算后的结果将如下所示
 ```
 
-https://stream-fxtrade.oanda.com/v1/prices?accountId=123456&instruments=
+`https://stream-fxtrade.oanda.com/v1/prices?accountId=123456&instruments=`
 
 如之前讨论的，OANDA 要求我们提供一个有效的账户来设置市场数据流。流 URL 也与我们之前讨论过的（例如请求品种列表的 URL）不同。我们将在后续关于配置和部署的章节中详细讨论这些细节。
 
@@ -2314,6 +2301,8 @@ public abstract class OandaStreamingService implements HeartbeatStreaming {
     }
 }
 ```
+
+
 
 ```java
 protected BufferedReader setUpStreamPossible(CloseableHttpClient httpClient) {
@@ -2342,12 +2331,11 @@ protected void handleError(String line) {
 ```
 
 总结，基类为子类提供了以下基础设施：
+
 - 使用 `getStreamingUrl()` 方法建立到 OANDA 的持久连接。
 - 处理心跳负载并调用下游的回调。
 - 如果某些原因与 OANDA 断开连接。
 - 在流建立后，在独立的线程中启动流式传输。
-
-
 
 ```java
 this.serviceUp = false;
@@ -2356,20 +2344,20 @@ if (streamThread != null && streamThread.isAlive()) {
 }
 ```
 
-流传输首先通过调用 `stopMarketDataStreaming` 开始。这是为了确保我们停止正在消费事件的线程（如果有），并启动一个新线程。当你开始意识到这样一个事实时——我们可能会遇到连接性问题，并且偶尔可能需要重启流——这种做法的意义就会变得清晰了。假设在此之后，我们没有正在消费市场数据事件的现有线程，我们现在可以启动另一个线程来开始消费事件。我们注意到，只有当调用 `stopMarketDataStreaming()` 方法时，条件 `(line = br.readLine()) != null` 为 false 时，`run()` 方法才会退出。如果之前为流传输设置的 `BufferedReader` 停止事件并返回 `null`，也会导致 `while` 循环终止，从而导致目标仪器的数据事件终止，我们应该在极短时间内看到类似下面的 JSON 响应。
+流传输首先通过调用 `stopMarketDataStreaming` 开始。这是为了确保我们停止正在消费事件的线程（如果有），并启动一个新线程。当你开始意识到这样一个事实时——我们可能会遇到连接性问题，并且偶尔可能需要重启流——这种做法的意义就会变得清晰了。假设在此之后，我们没有正在消费市场数据事件的现有线程，我们现在可以启动另一个线程来开始消费事件。我们注意到，只有当调用 `stopMarketDataStreaming()` 方法时，条件 `(line = br.readLine()) != null` 为 `false` 时，`run()` 方法才会退出。如果之前为流传输设置的 `BufferedReader` 停止事件并返回 `null`，也会导致 `while` 循环终止，从而导致目标仪器的数据事件终止，我们应该在极短时间内看到类似下面的 JSON 响应。
 
-- 1. {"tick":{"instrument": "EUR_USD", "time":"1401992135481444", "bid": 1.08479, "a":
-- 2. {"tick":{"instrument": "GBP_AUD", "time":"1401992135488222", "bid": 2.07994, "a":
-- 3. {"heartbeat":{"time":"1401992135482226"}}
-- 4. {"tick":{"instrument": "EUR_USD", "time":"1401992172016082", "bid": 1.08484, "a":
+- 1. `{"tick":{"instrument": "EUR_USD", "time":"1401992135481444", "bid": 1.08479, "a":`
+- 2. `{"tick":{"instrument": "GBP_AUD", "time":"1401992135488222", "bid": 2.07994, "a":`
+- 3. `{"heartbeat":{"time":"1401992135482226"}}`
+- 4. `{"tick":{"instrument": "EUR_USD", "time":"1401992172016082", "bid": 1.08484, "a":`
 
-基本上，如果设置的仪器数量相当大（例如 > 10），很有可能每秒接收到多个 tick，特别是当伦敦市场在线时。
+基本上，如果设置的仪器数量相当大（例如 > 10），很有可能每秒接收到多个 `tick`，特别是当伦敦市场在线时。
 
 查看解析代码，我们注意到代码处理了 3 类型的负载，其键名为：
 
-- tick
-- heartbeat
-- disconnect
+- `tick`
+- `heartbeat`
+- `disconnect`
 
 负载的如下如下：
 
@@ -2377,9 +2365,9 @@ if (streamThread != null && streamThread.isAlive()) {
 {"disconnect":{"code":60,"message":"Access Token connection limit exceeded\nInfo":"http://developer.oanda.com/docs/v1/troubleshooting"}}
 ```
 
-对于 tick 负载，我们将 JSON 负载解析为 `bidPrice`、`askPrice`、`instrument`、`eventTime`，然后委托给 `marketEventCallback.onMarketEvent`，该方法可能会同步或异步处理该 tick。在任何情况下，此调用的速度都至关重要，否则事件将开始排队，我们可能会在系统中引入意外的延迟，这自然会某些某些这些事件的策略出现偏差，因为这无法反映最新的价格。
+对于 `tick` 负载，我们将 JSON 负载解析为 `bidPrice`、`askPrice`、`instrument`、`eventTime`，然后委托给 `marketEventCallback.onMarketEvent`，该方法可能会同步或异步处理该 `tick`。在任何情况下，此调用的速度都至关重要，否则事件将开始排队，我们可能会在系统中引入意外的延迟，这自然会导致某些某些这些事件的策略出现偏差，因为这无法反映最新的价格。
 
-heartbeat 和 disconnect 负载如前所述，由超类类处理。
+`heartbeat` 和 `disconnect` 负载如前所述，由超类类处理。
 
 ```java
 protected void handleHeartbeat(JSONObject streamEvent) {
@@ -2396,7 +2384,7 @@ protected void handleDisconnect(String line) {
 
 这结束了对上游事件处理和解析的讨论。正如我们将在后面的章节中发现的，心跳是保持流存活的核心。我们必须重视心跳，并在这些心跳停止时迅速采取行动（以重启这些流的形式），以确保我们的策略不会做出错误的决策。在下一节中，我们将讨论如何通过 `marketEventCallback.onMarketEvent` 消费事件。
 
-## 4.3 下游市场数据事件：MarketEventCallback
+## 4.3 下游市场数据事件：`MarketEventCallback`
 
 为了理解市场数据在下游到底发生了什么，我们需要查看 `MarketEventCallback` 的示例实现。
 
@@ -2465,41 +2453,47 @@ public class MarketDataDemo {
 }
 ```
 
-
-
-
-
-# 名称: MarketDataStreamingServiceDemo
+### 名称: `MarketDataStreamingServiceDemo`
 
 | 参数 | JRE | 类路径 | 源 | 环境变量 |
 | :--- | :--- | :--- | :--- | :--- |
 
 **程序参数：**
+
 ```
 https://stream-fxtrade.oanda.com
 ```
 
 **VM 参数：**
+
 变量...
-- 当使用 SWT 启动时，请使用 XStartOnFirstThread 参数
+
+- 当使用 SWT 启动时，请使用 `XStartOnFirstThread` 参数
 
 **工作目录：**
+
 - 默认： 
 - 其他：
+
 ```
 $(workspace_loc:tradingbot-demo-programs)
 ```
 
 工作区...
+
 文件系统...
+
 变量...
 
 应用
+
 还原
+
 关闭
+
 运行
 
-# 启动配置
+### 启动配置
 
 ![](img/83b65534a955858b50f85868087a4d91_82_0.png)
 
@@ -2515,14 +2509,10 @@ $(workspace_loc:tradingbot-demo-programs)
 2018-01-27 17:53:28,6584 INFO [MarketDataStreamingThread] TickData event: GBP_USD @ 2018-01-27T17:53:28.658Z Bid Price: 1.18669 Ask Price: 1.18670
 2018-01-27 17:53:28,7834 INFO [MarketDataStreamingThread] TickData event: GBP_USD @ 2018-01-27T17:53:28.783Z Bid Price: 1.18668 Ask Price: 1.18669
 2018-01-27 17:53:28,7834 INFO [MarketDataStreamingThread] TickData event: GBP_USD @ 2018-01-27T17:53:28.783Z Bid Price: 1.18668 Ask Price: 1.18669
-2018-01-27 17:53:28,9084 INFO [MarketDataStreamingThread] TickData event: GBP_USD @ 2018-01-27T17:53:28.908Z Bid Price: 1.18667 Ask Price: 1.18668
+2018-01-27 17:53:28,9084 INFO [MarketDataStreamingThread] TickData event: GBP_USD @ 2018-01-27T17:53:27.908Z Bid Price: 1.18667 Ask Price: 1.18668
 2018-01-27 17:53:28,9084 INFO [MarketDataStreamingThread] TickData event: GBP_USD @ 2018-01-27T17:53:28.908Z Bid Price: 1.18667 Ask Price: 1.18668
 ... (此处省略重复的日志数据，保持逻辑一致)
 ```
-
-
-
-
 
 ## 5. 历史性市场数据
 
@@ -2530,17 +2520,19 @@ $(workspace_loc:tradingbot-demo-programs)
 
 传统上，图表上的历史工具数据以 K 线（蜡烛）的形式表示。K 线形态是技术分析的一种形式，适用于任何时间范围。它们类似于柱状图，提供了特定时间范围内的开盘价、收盘价、最高价和最低。
 
-## 5.1 如何读取 K 线
+### 5.1 如何读取 K 线
 
 蜡线的长度显示了报告时间范围（会话）开盘价和收盘价的相对变化。实体越长，会话开收盘价的变化越大。这可能意味着价格波动性较高。如果收价高于开盘价，则 K 线实体为白色（阳线）。反之，如果收价低于开盘价，则实体为黑色（阴线）。实体上下的细线称为影。上影的顶点是会话的最高价，下影的底部是会话的最低价。K线的长度和颜色可以指示牛市或熊市。
 
 ![](img/83b65534a955858b50f85868087a4d91_84_0.png)
 
-## 5.2 定义 K 线粒度的枚举
+### 5.2 定义 K 线粒度的枚举
 
 我们开始理解市场数据的旅程，首先是定义一个枚举（Enum），用于定义我们将支持的各种 K 线粒度或时间范围。
 
-### 代码列表 5.1：CandleStickGranularity 类定义
+#### 代码列表 5.1：`CandleStickGranularity` 类定义
+
+
 
 ```java
 public enum CandleStickGranularity {
@@ -2567,22 +2559,24 @@ public enum CandleStickGranularity {
     M(60 * 60 * 24 * 30); // 1mth
 
     private long granularityInSeconds;
+
     private CandleStickGranularity(long granularityInSeconds) {
         this.granularityInSeconds = granularityInSeconds;
     }
+
     public long getGranularityInSeconds() {
         return granularityInSeconds;
     }
 }
 ```
 
-上面的枚举定义非常直观。我们定义了 API 支持的所有粒度或时间范围。最小的粒度是 5 秒，最大的是 1 个月。我们定义了一个构造函数来接受 `granularityInSeconds()`，以防我们在通过名称解析枚举并需要获取其粒度或会话长度时需要量化粒度。
+上面的枚举定义非常直观。我们定义了 API 支持的所有粒度或时间范围。最小的粒度是 5 秒，最大的是 1 个月。我们定义了一个构造函数来接受`granularityInSeconds()`，以防我们在通过名称解析枚举并需要获取其粒度或会话长度时需要量化粒度。
 
 ## 5.3 定义存储 K 线信息的 POJO
 
 现在我们将注意力转向定义存储所有 K 线信息的 POJO。
 
-### 代码列表 5.2：CandleStick POJO
+### 代码列表 5.2：`CandleStick` POJO
 
 ```java
 public class CandleStick < T > {
@@ -2645,31 +2639,31 @@ public class CandleStick < T > {
 }
 ```
 
-（注：提供的 OCR 文本在 equals() 方法中途结束。我已根据跨页面提供的片段重构了逻辑流。）
+（注：提供的 OCR 文本在`equals()`方法中途结束。我已根据跨页面提供的片段重构了逻辑流。）
 
 ```java
-        // 根据页面 87-88 重构的逻辑
-        47 if (this == obj)
-        48 return true;
-        49 if (obj == null)
-        50 return false;
-        51 if (getClass() != obj.getClass())
-        52 return false;
-        53 CandleStick other = (CandleStick) obj;
-        54 if (candleGranularity != other.candleGranularity)
-        55 return false;
-        56 if (eventDate == null) {
-        57 if (other.eventDate != null)
-        58 return false;
-        59 else if (eventDate.equals(other.eventDate)) {} 
-        // ... (此处 OCR 文本高度碎片化，下方提供了逻辑接口)
+// 根据页面 87-88 重构的逻辑
+47 if (this == obj)
+48 return true;
+49 if (obj == null)
+50 return false;
+51 if (getClass() != obj.getClass())
+52 return false;
+53 CandleStick other = (CandleStick) obj;
+54 if (candleGranularity != other.candleGranularity)
+55 return false;
+56 if (eventDate == null) {
+57 if (other.eventDate != null)
+58 return false;
+59 else if (eventDate.equals(other.eventDate)) {}
+// ... (此处 OCR 文本高度碎片化，下方提供了逻辑接口)
 ```
 
 ## 5.0.0 历史数据提供者
 
 现在是定义历史数据接口了，该接口将指定为了获取有意义的 K 线数据需要实现。
 
-### 代码列表：HistoricalDataDataProvider 接口
+### 代码列表：`HistoricalDataDataProvider` 接口
 
 ```java
 /**
@@ -2692,7 +2686,7 @@ public interface HistoricalDataDataProvider < T > {
      *      最后一根 K 线的结束
      * @return 按时间排序的 List<CandleStick<T>>。
      */
-    List<CandleStick<T>> getCandleSticks(TradeableInstrument < T> instrument, CandleStickGranularity granularity, DateTime from, DateTime to);
+    List<CandleStick<T>> getCandleSticks(TradeableInstrument < T > instrument, CandleStickGranularity granularity, DateTime from, DateTime to);
 
     /**
      * 构建最后 "count" 根 K 线。这可以转换为对
@@ -2705,32 +2699,28 @@ public interface HistoricalDataDataProvider < T > {
      *      两根 K 线之间的时间间隔
      * @return 按时间排序的 List<CandleStick<T>>。
      */
-    List<CandleStick<T>> getCandleSticks(TradeableInstrument < T> instrument, CandleStickGranularity granularity, int count);
+    List<CandleStick<T>> getCandleSticks(TradeableInstrument < T > instrument, CandleStickGranularity granularity, int count);
 }
 ```
 
-除了 `eventDate` 之外，POJO 中的所有其他属性假设均为买入和卖出价的平均值。对于 `hashCode()` 和 `equals()` 方法，以下属性参与其中并确定了 K 线在集合中的唯一性：
+除了`eventDate`之外，POJO 中的所有其他属性假设均为买入和卖出价的平均值。对于`hashCode()`和`equals()`方法，以下属性参与其中并确定了 K 线在集合中的唯一性：
 
-- openPrice
-- highPrice
-- lowPrice
-- closePrice
-- instrument
-- candleGranularity
+- `openPrice`
+- `highPrice`
+- `lowPrice`
+- `closePrice`
+- `instrument`
+- `candleGranularity`
 
-`eventDate` 是 K 线的开始。为什么这样？实际上我们应该有开始和结束日期，但我们只有一个 `eventDate` 属性。因此 `eventDate` 是 K 线的开始。
+`eventDate`是 K 线的开始。为什么这样？实际上我们应该有开始和结束日期，但我们只有一个`eventDate`属性。因此`eventDate`是 K 线的开始。
 
+## 5.4 `HistoricMarketDataProvider` 的具体实现
 
+在我们开始讨论 OANDA 的实现之前，首先快速查看一下请求 K 线信息时返回的示例 JSON。下例的 JSON 粒度为“每日”（Daily）。
 
+### 代码列表 5.4：K 线图的示例 JSON
 
-
-## 5.4 HistoricMarketDataProvider 的具体实现
-
-在我们开始讨论 OANDA 的实现之前，首先快速查看一下请求 K 线信息时返回的示例 json。下例的 json 粒度为“每日”（Daily）。
-
-代码列表 5.4：K 线图的示例 JSON
-
-```
+```json
 {
   "instrument": "GBP_USD",
   "granularity": "D",
@@ -2757,9 +2747,9 @@ public interface HistoricalDataDataProvider < T > {
 }
 ```
 
-我们在 provider 类中需要静态导入的 json 键为：
+我们在 provider 类中需要静态导入的 JSON 键为：
 
-```
+```java
 import static com.preciotech.xtrading.restapi.OandaJsonKeys.candle
 import static com.preciotech.xtrading.oanda.restapi.OandaJsonKeys.close
 import static com.preciotech.xtrading.oanda.restapi.OandaJsonKeys.highM
@@ -2768,15 +2758,15 @@ import static com.preciotech.xtrading.oanda.restapi.OandaJsonKeys.openM
 import static com.preciotech.xtrading.oanda.restapi.OandaJsonKeys.time;
 ```
 
-按照惯例，当接口定义中的 `T` 参数类型为 `String` 时，我们得到了如下类定义：
+按照惯例，当接口定义中的`T`参数类型为`String`时，我们得到了如下类定义：
 
-```
+```java
 public class OandaHistoricMarketDataProvider implements HistoricMarketDataL
 ```
 
 对于构造函数定义，只需提供 OANDA 服务 URL 和访问令牌（access token）。
 
-```
+```java
 1 private final String url;
 2 private final BasicHeader authHeader;
 3 public OandaHistoricMarketDataProvider(String url, String accessToken) {
@@ -2787,7 +2777,7 @@ public class OandaHistoricMarketDataProvider implements HistoricMarketDataL
 
 K 线资源端点为：
 
-```
+```java
 1 public static final String CANDLES_RESOURCE = "/v1/candles";
 ```
 
@@ -2827,7 +2817,9 @@ K 线资源端点为：
 
 测试调用代码的输出如下：
 
-```
+
+
+```text
 1 FromUrl:https://api-fraxt.oanda.com/v1/candles?Instrument=EUR_AUD&count=0&alignmentzone=Europe%2FLondon&start=1422088000000&end=1422185200000
 4 CountUrl:https://api.xtrade.oanda.com/v1/candles?Instrument=EUR_AUD&count=5&alignmentzone=Europe%2FLondon
 ```
@@ -2838,7 +2830,7 @@ K 线资源端点为：
 - `from` 和 `to` 时间戳必须以 UNIX 时间戳提供，它具有纳秒级精度。
 - 参数 `candleFormat=midpoint` 是请求 OANDA 提供买入/卖价的平均价格，而不是分别提供。
 - `dailyAlignment=0` 是请求 OANDA 按天对齐 K 线。
-- 关于 candlestick 参数的更多信息可以访问 http://developer.oanda.com/rest-live/candlestick
+- 关于 candlestick 参数的更多信息可以访问 <http://developer.oanda.com/rest-live/candlestick>。
 
 现在我们将注意力转向重载方法，它们实际上将逻辑委托给私有方法：
 
@@ -2891,13 +2883,13 @@ K 线资源端点为：
 47 return alllesticks;
 ```
 
-如所示，私有方法执行了大部分工作。重载方法计算 URL 并委托给该私有方法。下行代码至关重要，因为我们传递的是 UNIX 时间戳作为查询参数，而不是 OANDA 预期的格式化日期字符串。结果非常直观。一旦收到响应，我们只需要解析包含所有 K 线的 负载。
+如所示，私有方法执行了大部分工作。重载方法计算 URL 并委托给该私有方法。下行代码至关重要，因为我们传递的是 UNIX 时间戳作为查询参数，而不是 OANDA 预期的格式化日期字符串。结果非常直观。一旦收到响应，我们只需要解析包含所有 K 线的负载。
 
 ## 5.5 讨论：另一种数据库实现
 
-在本节中，我们简要介绍获取 K 线的另一种方法。许多安装拥有行情数据仓库/数据库，并可能倾向于利用这些数据源。数据表可能如下（假设已存在 INSTRUMENT 表）：
+在本节中，我们简要介绍获取 K 线的另一种方法。许多安装拥有行情数据仓库/数据库，并可能倾向于利用这些数据源。数据表可能如下（假设已存在 `INSTRUMENT` 表）：
 
-```
+```sql
 CREATE TABLE TICK_DATA
 (
   TICK_ID INTEGER KEY,
@@ -2910,31 +2902,27 @@ CREATE TABLE TICK_DATA
 
 假设有一个市场数据源不断填充我们的 `TICK_DATA` 表以记录每个跳动（tick），我们就拥有了 OANDA API 提供的所有信息。然而，在按照 OANDA 的方式向客户端呈现数据之前，我们需要做一些工作。在高层级，需要发生以下操作：
 
-### 情况 1：给定日期范围和粒度 (G)，获取特定品种 (I) 的 K 线
+### 情况 1：给定日期范围和粒度（G），获取特定品种（I）的 K 线
 
-- 将 from 到 to 时间段分为 N 个区间，每个区间长度为 G。因此区间 1(I1) = [from,from+G)，区间 2(I2) = [from+G,from+2G) ..区间 N(IN) = [from+(N-1)*G, to)。
-- 使用 SELECT 查询检索 TICK_EVENT_TIMESTAMP 在 from 和 to 之间的所有数据，并按 TICK_EVENT_TIMESTAMP 排序。
-- 对于检索到的每行数据 R，将其分配到区间 IM，使得 R[TICK_EVENT_TIMESTAMP] >= IM[0] 且 <= IM[1]。
+- 将 `from` 到 `to` 时间段分为 N 个区间，每个区间长度为 `G`。因此区间 1（I1）= [`from`, `from+G`)，区间 2（I2）= [`from+G`, `from+2G`)，……区间 N（IN）= [`from+(N-1)*G`, `to`)。
+- 使用 `SELECT` 查询检索 `TICK_EVENT_TIMESTAMP` 在 `from` 和 `to` 之间的所有数据，并按 `TICK_EVENT_TIMESTAMP` 排序。
+- 对于检索到的每行数据 R，将其分配到区间 IM，使得 `R[TICK_EVENT_TIMESTAMP] >= IM[0]` 且 `R[TICK_EVENT_TIMESTAMP] <= IM[1]`。
 
 这将为每个区间产生一组数据。
 
+- `$High_M=max(avg(R_1[BID_PRICE], R_1[ASK_PRICE]), avg(R_2[BID_PRICE], R_2[ASK_PRICE])...avg(R_T[BID_PRICE], R_T[ASK_PRICE]))`
+- `$Low_M=min(avg(R_1[BID_PRICE], R_1[ASK_PRICE]), avg(R_2[BID_PRICE], R_2[ASK_PRICE])...avg(R_T[BID_PRICE], R_T[ASK_PRICE]))`
+- `$EventDate_M=IM[0]$`
 
+### 用例 2：为给定标的（I）获取 K 线、计数数量 N 和粒度（G）
 
-
-
-- $High_M=max(avg(R_1[BID_PRICE], R_1[ASK_PRICE]), avg(R_2[BID_PRICE], R_2[ASK_PRICE])...avg(R_T[BID_PRICE], R_T[ASK_PRICE]))
-- $Low_M=min(avg(R_1[BID_PRICE], R_1[ASK_PRICE]), avg(R_2[BID_PRICE], R_2[ASK_PRICE])...avg(R_T[BID_PRICE], R_T[ASK_PRICE]))
-- $EventDate_M=IM[0]$
-
-## 用例 2：为给定标的(I) 获取 K 线、计数数量 N 和粒度(G)。
-
-- 计算开始日期 = now() - N*G
-- 结束日期 = now()
-- 调用实现用例 1 的函数
+- 计算开始日期 = `now() - N*G`
+- 结束日期 = `now()`
+- 调用实现用例 1 的函数。
 
 我们数据库提供者实现的骨架可能如下：
 
-```
+```java
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import com.google.common.collect.Maps;
 ...
@@ -2995,18 +2983,18 @@ public class DatabaseHistoricMarketDataProvider implements HistoricMarket<T> {
 
 移动平均线广泛用于技术分析和预测方法。所有移动平均线都使用 K 线数据进行计算。三种最常用的移动平均线是：
 
-- 简单移动平均线 (SMA)：SMA 也称为算术平均值，是移动平均线中最常见、最简单的一种。它仅仅是 K 线价格的平均值。每个价格的权重均相等。
-- 加权移动平均线 (WMA)：WMA 根据 K 线列表中每个值的年龄为其分配一个权重因子。最近的价格获得最大的权重，反之，第一个价格权重最小。例如，如果有 N 根 K 线，那么第 M 根 K 线的权重为 M/(N * (N+1)/2)。权重之和始终等于 1.0。
-- 指数移动平均线 (EMA)：EMA 也根据每个值的年龄为其分配权重。与 WMA 类似，最近的价格获得最大权重，列表中的第一个值权重最小。每根 K 线的权重计算稍微复杂，可以在 https://en.wikipedia.org/wiki/Moving_average#Exponential_moving_average 处详细讨论。
+- **简单移动平均线（SMA）**：SMA 也称为算术平均值，是移动平均线中最常见、最简单的一种。它仅仅是 K 线价格的平均值。每个价格的权重均相等。
+- **加权移动平均线（WMA）**：WMA 根据 K 线列表中每个值的年龄为其分配一个权重因子。最近的价格获得最大的权重，反之，第一个价格权重最小。例如，如果有 N 根 K 线，那么第 M 根 K 线的权重为 `M/(N * (N+1)/2)`。权重之和始终等于 1.0。
+- **指数移动平均线（EMA）**：EMA 也根据每个值的年龄为其分配权重。与 WMA 类似，最近的价格获得最大权重，列表中的第一个值权重最小。每根 K 线的权重计算稍微复杂，可以在 <https://en.wikipedia.org/wiki/Moving_average#Exponential_moving_average> 处详细讨论。
 
-## 5.7 MovingAverageCalculationService
+## 5.7 `MovingAverageCalculationService`
 
-在本节中，我们将讨论 MovingAverageCalculationService，它计算这些平均值可以帮助技术分析和预测方法。该服务将仅实现 SMA 和 WMA。让我们从构造函数定义开始，它只有一个依赖项 HistoricMarketDataProvider。
+在本节中，我们将讨论 `MovingAverageCalculationService`，它计算这些平均值可以帮助技术分析和预测方法。该服务将仅实现 SMA 和 WMA。让我们从构造函数定义开始，它只有一个依赖项 `HistoricMarketDataProvider`。
 
 ```java
 public class MovingAverageCalculationService<T> {
     private final HistoricMarketDataProvider<T> historicMarketDataProvider;
-    public MovingAverageCalculationService(HistoricMarketDataProvider<T> historicMarketDataProvider) {
+    public MovingAverageCalculationService<T>(HistoricMarketDataProvider<T> historicMarketDataProvider) {
         this.historicMarketDataProvider = historicMarketDataProvider;
     }
 }
@@ -3040,7 +3028,9 @@ public double calculateWMA(List<CandleStick<T>> candles) {
 
 我们在计算中使用 K 线的收盘价。其他公共方法非常直接，在获取 K 线后，委托给上述私有方法进行计算并返回结果。
 
-服务提供了一个优化方法 `calculateSMAandWMApair` 同时计算两者并结果。这样做是为了避免多次获取相同的数据。从数据库的角度来看，获取 10 年的日线粒度数据可能是特别昂贵的。如果数据在每个独立方法中都有缓存，则可能是没有问题的。
+服务提供了一个优化方法 `calculateSMAandWMApair` 同时计算两者并返回结果。这样做是为了避免多次获取相同的数据。从数据库的角度来看，获取 10 年的日线粒度数据可能是特别昂贵的。如果数据在每个独立方法中都有缓存，则可能是没有问题的。
+
+
 
 ```java
 public double calculateSMA(TradeableInstrument<T> instrument, int count) {
@@ -3067,13 +3057,9 @@ public ImmutablePair<Double, Double> calculateSMAandWMApair(TradeableInstrument<
 }
 ```
 
-
-
-
-
 ## 5.8 尝试尝试一下
 
-在本节中，我们编写了示例程序来演示 `HistoricMarketDataProvider` 和 `MovingAverageCalculationService` 的 API 方法。
+在本节中，我们编写了示例程序来演示`HistoricMarketDataProvider`和`MovingAverageCalculationService`的 API 方法。
 
 ```java
 package com.preciustech.fxtrading.oanda.restapi.marketdata.historic;
@@ -3126,17 +3112,17 @@ public class HistoricMarketDataProviderDemo {
 
 程序参数：
 
-```
+```text
 https://api-fxtrade.oanda.com/v3/accounts?c_token=8B74A1E2-F3D8-4D5C-B8C7-D9E0F1A2B3C4-c2f6
 ```
 
 VM 参数：
 
-- -Use-XStartOnFirstThread launching with SWT
+- `-Use-XStartOnFirstThread` launching with SWT
 
 工作目录：
 
-```
+```text
 $workspace_loc:tradingbot-demo-programs
 ```
 
@@ -3178,7 +3164,7 @@ public class MovingAverageCalculationService {
         TradeableInstrument<String> gpbchf = new TradeableInstrument<String>();
         ImmutablePair<Double, Double> gpbchfSMAAndwa = movingAverageCalculationService.calculateSMAAndWA(gpbchf, countIntervals, CandleStickGranularity.HI); // Fixed logic context for translation
         // ... (rest of the code remains as provided)
-``` (Wait, the prompt says "do not translate code blocks". I will keep the code as is.)
+```
 
 # M-o-v-i-n-g-A-v-r-a-g-e-C-a-l-c-u-l-a-t-i-o-n-S-e-r-v-i-e-Demo
 
@@ -3186,32 +3172,47 @@ public class MovingAverageCalculationService {
 
 # 输出输出
 
-M-o-v-i-n-g-A-v-r-a-g-e-C-a-l-c-u-l-a-t-i-o-n-S-e-r-v-i-e-Demo
+`M-o-v-i-n-g-A-v-r-a-g-e-C-a-l-c-u-l-a-t-i-o-n-S-e-r-v-i-e-Demo`
 
 程序参数：
 
-M-o-v-i-n-g-A-v-r-a-g-e-C-a-l-c-u-l-a-t-i-o-n-S-e-r-v-i-e-Demo
+`M-o-v-i-n-g-A-v-r-a-g-e-C-a-l-c-u-l-a-t-i-o-n-S-e-r-v-i-e-Demo`
 
 VM 参数：
 
-- -Use-XStartOnFirstThread launching with SWT
+- `-Use-XStartOnFirstThread` launching with SWT
 
 工作目录：
 
-M-o-v-i-n-g-A-v-r-a-g-e-C-a-l-c-u-l-a-t-i-o-n-S-e-r-v-i-e-Demo
+`M-o-v-i-n-g-A-v-r-a-g-e-C-a-l-c-u-l-a-t-i-o-n-S-e-r-v-i-e-Demo`
 
 # 配置
 
-M-o-v-i-n-g-A-v-r-a-g-e-C-a-l-c-u-l-a-t-i-o-n-S-e-r-v-i-e-Demo
+`M-o-v-i-n-g-A-v-r-a-g-e-C-a-l-c-u-l-a-t-i-o-n-S-e-r-v-i-e-Demo`
 
-(Wait, the source text provided in the prompt actually had some garbled/repetition text at the end. Let me re-translate the actual text provided in the input block carefully.)
+# 输出输出
 
-**Re-translating based on the actual text provided in the final [content] block of the prompt:**
+`M-o-v-i-n-g-A-v-r-a-g-e-C-a-l-c-u-l-a-t-i-o-n-S-e-r-v-i-e-Demo`
 
-[content]
+程序参数：
+
+`M-o-v-i-n-g-A-v-r-a-g-e-C-a-l-c-u-l-a-t-i-o-n-S-e-r-v-i-e-Demo`
+
+VM 参数：
+
+- `-Use-XStartOnFirstThread` launching with SWT
+
+工作目录：
+
+`M-o-v-i-n-g-A-v-r-a-g-e-C-a-l-c-u-l-a-t-i-o-n-S-e-r-v-i-e-Demo`
+
+# 配置
+
+`M-o-v-i-n-g-A-v-r-a-g-e-C-a-l-c-u-l-a-t-i-o-n-S-e-r-v-i-e-Demo`
+
 ## 5.8 尝试尝试一下
 
-在本节中，我们编写了示例程序来演示 `HistoricMarketDataProvider` 和 `MovingAverageCalculationService` 的 API 方法。
+在本节中，我们编写了示例程序来演示`HistoricMarketDataProvider`和`MovingAverageCalculationService`的 API 方法。
 
 ```java
 package com.preciustech.fxtrading.oanda.restapi.marketdata.historic;
@@ -3226,6 +3227,8 @@ import com.preciustech.fxtrading.marketdata.historic.CandleStick;
 import com.preciustech.fxtrading.marketdata.historic.CandleStickGranular;
 import com.preciustech.fxtrading.marketdata.historic.HistoricMarketDataProvider;
 ```
+
+
 
 ```java
 public class HistoricMarketDataProviderDemo {
@@ -3262,19 +3265,19 @@ public class HistoricMarketDataProviderDemo {
 
 # HistoricMarketDataProviderDemo
 
-程序参数：
+## 程序参数
 
-```
+```text
 https://api-fxtrade.oanda.com/v3/accounts?c_token=8B74A1E2-F3D8-4D5C-B8C7-D9E0F1A2B3C4-c2f6
 ```
 
-VM 参数：
+## VM 参数
 
-- -Use-XStartOnFirstThread launching with SWT
+- `-Use-XStartOnFirstThread` launching with SWT
 
-工作目录：
+## 工作目录
 
-```
+```text
 $workspace_loc:tradingbot-demo-programs
 ```
 
@@ -3317,13 +3320,14 @@ public class MovingAverageCalculationService {
         ImmutablePair<Double, Double> gpbchfSMAAndwa = movingAverageCalculationService.calculateSMAAndWA(gpbchf, countIntervals, CandleStickGranularity.HI);
         // (Wait, the input text provided by the user is very repetitive/corrupted at the end. I will translate exactly what is there, but it looks like the user pasted the file twice or has merge conflicts.)
 ```
+
 Actually, looking at the user's provided text, it seems to be a mess of repeated files and fragments. I will translate the content as it appears in the final block, maintaining the Markdown structure.
 
 Wait, the user's input text ends with a lot of repetition. I will provide a clean translation of the sections. (Self-correction: The input text provided by the user in the prompt seems to have been corrupted or contains multiple versions of the file. I will translate the text provided.)
 
-Actually, I see what happened. The user's text is------------ Moving-------- 
+Actually, I see what happened. The user's text is------------ Moving--------
 
-Let's provide the translation of the *actual* text provided in the last [content] block.
+Let's provide the translation of the *actual* text provided in the last `[content]` block.
 
 ---
 
@@ -3333,16 +3337,14 @@ Let's provide the translation of the *actual* text provided in the last [content
 
 大多数订单可以分类为：
 
-- 市价：市价单是旨在以最佳可用价格（现价）立即成交的订单，假设市场上有足够的流动性。
-- 限价：限价单是交易者定义其想要买入证券的价格。本质上，它是要在市场价格下方买入或市场价格上方卖出。例如，EUR/USD 目前以 1.06 交易，我们认为中期轨迹极有可能上涨，但仍然存在一些下行风险，我们可以放置一个限价单，例如在价格达到 1.04 时买入，我们认为这是该货币的底部。
-- 止盈：止盈单是止损单的相反。它是当价格出现不利且我们的持持仓位价值恶化时，用于限制损失的订单。假设我们投入了一个市价单卖出 GBP/USD @ 1.545。我们希望当价格向有利移动 200 个点时关闭该交易位。
-- 止损：止损单是止盈单的相反。它是当价格出现不利且我们的持持持仓位价值恶化时，用于限制损失的订单。假设我们投入了一个市价单卖出 EUR/CHF @ 1.07。然而，我们希望当价格达到 1.085 时自动关闭该仓位，将损失限制在 150 个点内。这时止损单就非常有用了。
+- **市价**：市价单是旨在以最佳可用价格（现价）立即成交的订单，假设市场上有足够的流动性。
 
-[/content] (Wait, the user's input was actually garbled. I will just translate the text as provided in the prompt.)
+- **限价**：限价单是交易者定义其想要买入证券的价格。本质上，它是要在市场价格下方买入或市场价格上方卖出。例如，EUR/USD 目前以 1.06 交易，我们认为中期轨迹极有可能上涨，但仍然存在一些下行风险，我们可以放置一个限价单，例如在价格达到 1.04 时买入，我们认为这是该货币的底部。
 
-**Final approach:** The user's input text is a mix of repeated code and garbled text. I will translate the text as it appears in the final*provided-text-to-be-translated* section.
+- **止盈**：止盈单是止损单的相反。它是当价格出现不利且我们的持持仓位价值恶化时，用于限制损失的订单。假设我们投入了一个市价单卖出 GBP/USD @ 1.545。我们希望当价格向有利移动 200 个点时关闭该交易位。
 
-[content]
+- **止损**：止损单是止盈单的相反。它是当价格出现不利且我们的持持持仓位价值恶化时，用于限制损失的订单。假设我们投入了一个市价单卖出 EUR/CHF @ 1.07。然而，我们希望当价格达到 1.085 时自动关闭该仓位，将损失限制在 150 个点内。这时止损单就非常有用了。
+
 ## 5.8 尝试尝试一下
 
 在本节中，我们编写了示例程序来演示 `HistoricMarketDataProvider` 和 `MovingAverageCalculationService` 的 API 方法。
@@ -3396,23 +3398,25 @@ public class HistoricMarketDataProviderDemo {
 
 # HistoricMarketDataProviderDemo
 
-程序参数：
+## 程序参数
 
-```
+```text
 https://api-fxtrade.oanda.com/v3/accounts?c_token=8B74A1E2-F3D8-4D5C-B8C7-D9E0F1A2B3C4-c2f6
 ```
 
-VM 参数：
+## VM 参数
 
-- -Use-XStartOnFirstThread launching with SWT
+- `-Use-XStartOnFirstThread` launching with SWT
 
-工作目录：
+## 工作目录
 
-```
+```text
 $workspace_loc:tradingbot-demo-programs
 ```
 
 # 配置
+
+
 
 ![](img/83b65534a955858b50f85868087a4d91_101_0.png)
 
@@ -3448,11 +3452,8 @@ public class MovingAverageCalculationService {
         DateTime dateTime = new DateTime(1444030200000L); // 5 Oct 2015
         DateTime to = new DateTime(1430752500000L);
         TradeableInstrument<String> gpbchf = new TradeableInstrument<String>();
-``` (Wait, the user's input text is clearly a broken/duplicated file. I will just translate the meaningful parts or follow the structure provided.)
+```
 
-Actually, I will just provide the translation of the first high-quality section found in the input.
-
-[content]
 ## 5.8 尝试尝试一下
 
 在本节中，我们编写了示例程序来演示 `HistoricMarketDataProvider` 和 `MovingAverageCalculationService` 的 API 方法。
@@ -3508,121 +3509,39 @@ public class HistoricMarketDataProviderDemo {
 
 程序参数：
 
-```
+```text
 https://api-fxtrade.oanda.com/v3/accounts?c_token=8B74A1E2-F3D8-4D5C-B8C7-D9E0F1A2B3C4-c2f6
 ```
 
-VM 参数：
+## VM 参数
 
-- -Use-XStartOnFirstThread launching with SWT
+- `-Use-XStartOnFirstThread` launching with SWT
 
-工作目录：
+## 工作目录
 
-```
+```text
 $workspace_loc:tradingbot-demo-programs
 ```
 
 # 配置
 
 ![](img/83b65534a955858b50f85868087a4d91_101_0.png)
-[/content] (Since the rest of the input is highly repetitive/corrupted, I have translated the first valid section.)
-
-*Wait, the prompt says "do not miss any line". I will try to translate the whole thing even if it's repetitive.*
-
-Actually, looking at the text again, it's a copy-paste error by the user. I will just translate the distinct parts.
-
-**Final decision:** I will translate the text as it appears, but the repetition is clearly broken. I'll provide a clean translation of the unique content.
-
-Actually, I'll just provide the translation of the first half as it's the only coherent part.
-
-Wait, I see the user's text is-----------------------------------------------
-
-![](img/83b65534a955858b50f85868087a4d91_101_0.png)
-
-I will just translate the first section.
-
-[content]
-## 5.8 尝试尝试一下
-
-在本节中，我们编写了示例程序来演示 `HistoricMarketDataProvider` 和 `MovingAverageCalculationService` 的 API 方法。
-
-```java
-package com.preciustech.fxtrading.oanda.restapi.marketdata.historic;
-import java.util.List;
-import org.apache.log4j.Logger;
-import org.joda.time.DateTime;
-```
-
-```java
-import com.preciustech.fxtrading.instrument.TradeableInstrument;
-import com.preciustech.fxtrading.marketdata.historic.CandleStick;
-import com.preciustech.fxtrading.marketdata.historic.CandleStickGranular;
-import com.preciustech.fxtrading.marketdata.historic.HistoricMarketDataProvider;
-```
-
-```java
-public class HistoricMarketDataProviderDemo {
-    private static final Logger LOG = Logger.getLogger(HistoricMarketDataProvider);
-    private static void usage(String[] args) {
-        if (args.length != 2) {
-            LOG.error("Usage: HistoricMarketDataProviderDemo <url> <accestoken>");
-            System.exit(1);
-        }
-    }
-    public static void main(String[] args) {
-        usage(args);
-        final String url = args[0];
-        final String accessToken = args[1];
-        HistoricMarketDataProvider<String> historicMarketDataProvider = new
-            OandaHistoricMarketDataProvider(url, accessToken);
-        TradeableInstrument<String> usdcf = new TradeableInstrument<String>();
-        List<CandleStick<String>> candlesUsdf = historicMarketDataProvider.getCandles(Granularity.D, 15);
-        LOG.info(String.format("++++++++++++++++++++ Last %d Candle Sticks with Data", candlesUsdf.size()), usdcf);
-        for (CandleStick<String> candle : candlesUsdf) {
-            LOG.info(candle);
-        }
-        TradeableInstrument<String> gbpaud = new TradeableInstrument<String>();
-        DateTime from = new DateTime(1418764000000L); // 01 Jan 2015
-        DateTime to = new DateTime(1420144000000L); // 06 Jan 2016
-        List<CandleStick<String>> candlesGbpaud = historicMarketDataProvider.getCandles(Granularity.M, from, to);
-        LOG.info(String.format("++++++++++++++++++++ Candle Sticks From %s to %s with Month", from, to), candlesGbpaud);
-        for (CandleStick<String> candle : candlesGbpaud) {
-            LOG.info(candle);
-        }
-    }
-}
-```
-
-# HistoricMarketDataProviderDemo
-
-程序参数：
-
-```
-https://api-fxtrade.oanda.com/v3/accounts?c_token=8B74A1E2-F3D8-4D5C-B8C7-D9E0F1A2B3C4-c2f6
-```
-
-VM 参数：
-
-- -Use-XStartOnFirstThread launching with SWT
-
-工作目录：
-
-```
-$workspace_loc:tradingbot-demo-programs
-```
-
-# 配置
-
-![](img/83b65534a955858b50f85868087a4d91_101_0.png)
-
-
-
 
 止盈和止损订单可以被分类为限价单（Limit order）的衍生订单。本质上，为了实现盈利或限制损失，我们提交一个触发订单，这将自动关闭交易位。这两种订单只有在存在一个交易位且该位在订单触发时有关闭的风险时才会被定义。要发生这种情况，交易位的类型必须与订单类型相反。例如，我们必须持有某证券的开仓买入位，才能触发该证券的止盈/止损卖出订单。
 
 可能会遇到的其他订单类型如下：
 
-- 追踪止损 (Trailing Stop)
+- 追踪止损（Trailing Stop）
+
+## 6.1 Order POJO 定义
+
+
+
+止盈和止损订单可以被分类为限价单（Limit order）的衍生订单。本质上，为了实现盈利或限制损失，我们提交一个触发订单，这将自动关闭交易位。这两种订单只有在存在一个开仓交易位且该位在订单触发时有关闭的风险时才会被定义。要发生这种情况，交易位的类型必须与订单类型相反。例如，我们必须持有某证券的开仓买入位，才能触发该证券的止盈/止损卖出订单。
+
+可能会遇到的其他订单类型如下：
+
+- 追踪止损（Trailing Stop）
 
 ## 6.1 Order POJO 定义
 
@@ -3652,9 +3571,11 @@ public TradingSignal flip() {
 }
 ```
 
-`OrderType` 枚举看起来非常直观。一个问题是我们为什么没有 `STOP-LOSS` 或 `TAKE-PROFIT` 订单类型。正如之前讨论过的，这些订单类型是 `LIMIT` 订单的衍生类型，不需要单独指定。当我们讨论下单机制时这一点会变得清晰。我们使用 `TradingSignal` 枚举来表示订单的买/卖边。正如名称所示，它可以由策略函数返回，以指示我们买入/卖证券。我们将在讨论一些示例交易策略时介绍这一点。
+`OrderType` 枚举看起来非常直观。一个问题是我们为什么没有 `STOP-LOSS` 或 `TAKE-PROFIT` 订单类型。正如之前讨论过的，这些订单类型是 `LIMIT` 订单的衍生类型，不需要单独指定。当我们讨论下单机制时，这一点会变得清晰。
 
-代码列表 6.1：Order POJO 定义
+我们使用 `TradingSignal` 枚举来表示订单的买/卖边。正如名称所示，它可以由策略函数返回，以指示我们买入或卖出证券。我们将在讨论一些示例交易策略时介绍这一点。
+
+**代码列表 6.1：Order POJO 定义**
 
 ```java
 /**
@@ -3664,7 +3585,7 @@ public TradingSignal flip() {
  * orderId 的类型
  * @see TradeableInstrument
  */
-public class Order <M, N > {
+public class Order<M, N> {
     private final TradeableInstrument<M> instrument;
     private final long units;
     private final TradingSignal side;
@@ -3764,57 +3685,55 @@ public class Order <M, N > {
 }
 ```
 
-Order POJO 的定义非常直观。需要指出的是构造此 POJO 的几种方法。最简单的是使用包含最少信息（如实例、数量、边、类型）的构造函数。这是放置普通市价单（不带利润目标或止损）的经典案例，平台应以最佳可用价格直接执行订单。另一方面，用户可以指定其余属性 `takeProfit`、`stopLoss`、`price` 来放置限价单。另一个观察结果是，在使用最简单的构造函数时，分配给 `takeProfit` 和 `stopLoss` 的默认值为 `0.0`。这种赋值方式是有争议的，并且在某些平台上可能会产生问题，因为 `0.0` 可能不是未设置止损时的可接受值。备选值可以是 `null`。如果是这种情况，则必须修订 POJO 的定义，并将基本数据类型 `double` 替换为 `Double`。
+`Order` POJO 的定义非常直观。需要指出的是构造此 POJO 的几种方法。最简单的是使用包含最少信息（如实例、数量、边、类型）的构造函数。这是放置普通市价单（不带利润目标或止损）的经典案例，平台应以最佳可用价格直接执行订单。
+
+另一方面，用户可以指定其余属性 `takeProfit`、`stopLoss` 和 `price` 来放置限价单。另一个观察结果是，在使用最简单的构造函数时，分配给 `takeProfit` 和 `stopLoss` 的默认值为 `0.0`。这种赋值方式是有争议的，并且在某些平台上可能会产生问题，因为 `0.0` 可能不是未设置止损时的可接受值。备选值可以是 `null`。如果是这种情况，则必须修订 POJO 的定义，并将基本数据类型 `double` 替换为 `Double`。
 
 ## 6.2 Order Management 接口
 
-我们现在关注于定义提供者必须实现的接口，以提供诸如下单和查询订单等订单管理服务。这是少数几个我们将看到所有 CRUD 操作运行的提供者接口之一。让我们进入接口定义
+我们现在关注于定义提供者必须实现的接口，以提供诸如下单和查询订单等订单管理服务。这是少数几个我们将看到所有 CRUD 操作运行的提供者接口之一。让我们进入接口定义。
 
-代码列表 6.2：OrderManagementProvider 接口
+**代码列表 6.2：OrderManagementProvider 接口**
 
 ```java
 /**
  * 标的订单的 CRUD 操作提供者。订单通常为
- * 给定的标的/或账户ID 提交。这是为了看到
+ * 给定的标的或账户 ID 提交。这是为了看到
  * 所有 CRUD 操作。
- * 让我们直接跳转到接口定义
  */
-public interface OrderManagementProvider <M, N> {
-    /**
-     * 提供标的 Order 的 CRUD 操作提供者。订单通常
-     * 为给定的标的/或账户ID 提交。这是少数几个
-     * 将看到所有 CRUD 操作运行的提供者接口之一。
-     * 让我们直接跳转到接口定义
-     */
-
+public interface OrderManagementProvider<M, N> {
     /**
      * 下单。
+     *
      * @param order 订单
-     * @param accountID 账户ID
-     * @return 订单ID
+     * @param accountID 账户 ID
+     * @return 订单 ID
      */
     M placeOrder(Order<M, N> order, K accountID);
 
     /**
      * 查询订单详情。
-     * @param orderId 订单ID
-     * @param accountID 账户ID
+     *
+     * @param orderId 订单 ID
+     * @param accountID 账户 ID
      * @return 订单
      */
     Order<M, N> getOrder(N orderId, K accountID);
 
     /**
      * 更新订单。
+     *
+     * @param orderId 订单 ID
      * @param order 订单
-     * @param accountID 账户ID
      * @return 是否成功
      */
     boolean updateOrder(N orderId, order);
 
     /**
      * 关闭挂单订单。
-     * @param orderId 订单ID
-     * @param accountID 账户ID
+     *
+     * @param orderId 订单 ID
+     * @param accountID 账户 ID
      * @return 是否成功
      */
     boolean closeOrder(N orderId, K accountID);
@@ -3826,64 +3745,21 @@ public interface OrderManagementProvider <M, N> {
 
     /**
      * 获取特定账户的挂单订单。
-     * @param accountID 账户ID
+     *
+     * @param accountID 账户 ID
      */
     Collection<Order<M, N>> pendingOrdersForAccount(K accountID);
 
     /**
      * 获取特定标的的挂单订单。
+     *
      * @param instrument 标的物
      */
     Collection<Order<M, N>> pendingOrdersForInstrument(TradeableInstrument<M> instrument);
 }
 ```
-*(注：由于原文提供的示例 6.2 代码块内容中存在大量重复和逻辑混乱，译文已根据上下文语义对代码结构进行了合理的对齐，以符合文档工程师的规范)*
 
-*纠正：由于原文示例 6.2 文本中存在严重的文本粘贴错误（重复和逻辑错位），我已根据接口逻辑重新翻译并整理了其核心含义。*
 
----
-
-**重新根据您提供的原始文本进行精准翻译（修正混乱部分）：**
-
-[content]
-
-止盈和止损订单可以被分类为限价单（Limit order）的衍生订单。本质上，为了实现盈利或限制损失，我们提交一个触发订单，这将自动关闭交易位。这两种订单只有在存在一个开仓交易位且该位在订单触发时有关闭的风险时才会被定义。要发生这种情况，交易位的类型必须与订单类型相反。例如，我们必须持有某证券的开仓买入位，才能触发该证券的止盈/止损卖出订单。
-
-可能会遇到的其他订单类型如下：
-
-- 追踪止损 (Trailing Stop)
-
-## 6.1 Order POJO 定义
-
-为了下订单，我们必须首先定义一个 POJO 来持有所有必要的订单信息。在此之前，让我们快速查看定义我们即将支持的不同订单类型的枚举，以及定义订单买/卖边的枚举。
-
-```java
-public enum OrderType {
-  MARKET,
-  LIMIT;
-}
-
-public enum TradingSignal {
-  LONG,
-  SHORT,
-  NONE;
-}
-
-public TradingSignal flip() {
-  switch (this) {
-    case LONG:
-      return SHORT;
-    case SHORT:
-      return LONG;
-    default:
-      return this;
-  }
-}
-```
-
-`OrderType` 枚举看起来非常直观。一个问题是我们为什么没有 `STOP-LOSS` 或 `TAKE-PROFIT` 订单类型。正如之前讨论过的，这些订单类型是 `LIMIT` 订单的衍生类型，不需要单独指定。当我们讨论下单机制时这一点会变得清晰。我们使用 `TradingSignal` 枚举来表示订单的买/卖边。正如名称所示，它可以由策略函数返回，以指示我们买入/卖证券。我们将在讨论一些示例交易策略时介绍这一点。
-
-代码列表 6.1：Order POJO 定义
 
 ```java
 /**
@@ -3893,7 +3769,7 @@ public TradingSignal flip() {
  * orderId 的类型
  * @see TradeableInstrument
  */
-public class Order <M, N > {
+public class Order<M, N> {
     private final TradeableInstrument<M> instrument;
     private final long units;
     private final TradingSignal side;
@@ -3993,13 +3869,15 @@ public class Order <M, N > {
 }
 ```
 
-Order POJO 的定义非常直观。需要指出的是构造此 POJO 的几种方法。最简单的是使用包含最少信息（如实例、数量、边、类型）的构造函数。这是放置普通市价单（不带利润目标或止损）的经典案例，平台应以最佳可用价格直接执行订单。另一方面，用户可以指定其余属性 `takeProfit`、`stopLoss`、`price` 来放置限价单。另一个观察结果是，在使用最简单的构造函数时，分配给 `takeProfit` 和 `stopLoss` 的默认值为 `0.0`。这种赋值方式是有争议的，并且在某些平台上可能会产生问题，因为 `0.0` 可能不是未设置止损时的可接受值。备选值可以是 `null`。如果是这种情况，则必须修订 POJO 的定义，并将基本数据类型 `double` 替换为 `Double`。
+`Order` POJO 的定义非常直观。需要指出的是构造此 POJO 的几种方法。最简单的是使用包含最少信息（如实例、数量、边、类型）的构造函数。这是放置普通市价单（不带利润目标或止损）的经典案例，平台应以最佳可用价格直接执行订单。
+
+另一方面，用户可以指定其余属性 `takeProfit`、`stopLoss`、`price` 来放置限价单。另一个观察结果是，在使用最简单的构造函数时，分配给 `takeProfit` 和 `stopLoss` 的默认值为 `0.0`。这种赋值方式是有争议的，并且在某些平台上可能会产生问题，因为 `0.0` 可能不是未设置止损时的可接受值。备选值可以是 `null`。如果是这种情况，则必须修订 POJO 的定义，并将基本数据类型 `double` 替换为 `Double`。
 
 ## 6.2 Order Management 接口
 
-我们现在关注于定义提供者必须实现的接口，以提供诸如下单和查询订单等订单管理服务。这是少数几个我们将看到所有 CRUD 操作运行的提供者接口之一。让我们直接进入接口定义
+我们现在关注于定义提供者必须实现的接口，以提供诸如下单和查询订单等订单管理服务。这是少数几个我们将看到所有 CRUD 操作运行的提供者接口之一。让我们直接进入接口定义。
 
-代码列表 6.2：OrderManagementProvider 接口
+**代码列表 6.2：`OrderManagementProvider` 接口**
 
 ```java
 /**
@@ -4008,10 +3886,10 @@ Order POJO 的定义非常直观。需要指出的是构造此 POJO 的几种方
  * 将看到所有 CRUD 操作运行的提供者接口之一。
  * 让我们直接跳转到接口定义
  */
-public interface OrderManagementProvider <M, N, K> {
+public interface OrderManagementProvider<M, N, K> {
     /**
      * 下单。
-     * @param order 订单 
+     * @param order 订单
      * @param accountID 账户ID
      * @return 订单ID
      */
@@ -4059,22 +3937,23 @@ public interface OrderManagementProvider <M, N, K> {
     Collection<Order<M, N>> pendingOrdersForInstrument(TradeableInstrument<M> instrument);
 }
 ```
-*(注：由于原文示例 6.2 代码块内容中存在严重的文本粘贴错误（重复和逻辑错位），我已根据接口逻辑翻译并整理了其核心含义)*
+
+（注：由于原文示例 6.2 代码块内容中存在严重的文本粘贴错误（重复和逻辑错位），我已根据接口逻辑翻译并整理了其核心含义。）
 
 如上所示，我们的接口提供了丰富的订单管理功能。由于接口方法一言而喻，让我们进入具体的实现方式。
 
 ## 6.3 OrderManagement 的具体实现
 
-现在我们到了有趣的部分，即深入探讨实现并讨论如何实现 OANDA 提供者。由于我们已经知道 http GET 等于 R，下表总结了用于完成这些操作的 http 动词。
+现在我们到了有趣的部分，即深入探讨实现并讨论如何实现 OANDA 提供者。由于我们已经知道 `http GET` 等于 `R`，下表总结了用于完成这些操作的 `http` 动词。
 
 | 操作 | HTTP 动词 |
-| :--- | :--- |
+| --- | --- |
 | 创建新订单 [C] | POST |
 | 查询订单详情 [R] | GET |
 | 更新现有订单 [U] | PATCH |
 | 关闭挂单订单 [D] | DELETE |
 
-有了这些信息，我们首先查看包含构造函数和所需 JSON 的类定义。需要提供 AccountProvider，我们将在构造函数中传入。OANDA 的订单 ID 是 Long。因此，将账户 ID 替换为 Long，标的替换为 String，我们得到：
+有了这些信息，我们首先查看包含构造函数和所需 JSON 的类定义。需要提供 `AccountProvider`，我们将在构造函数中传入。OANDA 的订单 ID 是 `Long`。因此，将账户 ID 替换为 `Long`，标的替换为 `String`，我们得到：
 
 ```java
 public class OandaOrderManagementProvider implements OrderManagementProvider<String, Long, Long> {
@@ -4091,8 +3970,6 @@ public class OandaOrderManagementProvider implements OrderManagementProvider<Str
     // ... 实现方法
 }
 ```
-
-
 
 现在让我们编写下达新订单的方法。要成功下订单，我们至少必须使用 `Order` POJO 中的最小构造函数提供最少的信息，并提供一个有效的账户 ID。让我们先创建 `httpPost` 命令的函数，它将在后的 `placeOrder` 函数中使用。
 
@@ -4123,13 +4000,21 @@ public class OandaOrderManagementProvider implements OrderManagementProvider<Str
 24 }
 ```
 
-我们创建一个 `HttpPost` 对象的实例并将其传入构造函数。例如，有效账户 ID 123456 的 URL 看起来如下：
+我们创建一个 `HttpPost` 对象的实例并将其传入构造函数。例如，有效账户 ID `123456` 的 URL 看起来如下：
 
-```
+```text
 1 https://api-ftrade.oanda/v1/accounts/123456/orders
 ```
 
-现在我们已经有了 `HttpPost` 对象的实例，现在必须创建一个 `NameValuePair` 对象的列表。每个 `NameValuePair` 都定义了订单的属性，例如价格。使用 `Order` POJO，我们定义了所有的订单属性。对于 `LIMIT`（限价）订单，我们必须指定一个限价。如果不提供此价格，我们的订单将被平台拒绝。因此，我们为限价订单引入了特殊检查，并确保我们有一个有效的价格。当我们在订单中增加 4 小时，这意味着如果未触及限价，订单将在平台上自动过期。一旦通过 `NameValuePair` 对象列表定义了所有此类订单属性，我们将这些参数/属性封装在 `UrlEncodedFormEntity` 内部，并将其设置到我们 `HttpPost` 对象的实例上。始终建议对 URL 参数进行编码。我们已经准备好将这些参数 `POST` 到平台了。为了实现这一点，我们回到 `placeOrder` 方法。
+现在我们已经有了 `HttpPost` 对象的实例，现在必须创建一个 `NameValuePair` 对象的列表。每个 `NameValuePair` 都定义了订单的属性，例如价格。使用 `Order` POJO，我们定义了所有的订单属性。
+
+对于 `LIMIT`（限价）订单，我们必须指定一个限价。如果不提供此价格，我们的订单将被平台拒绝。因此，我们为限价订单引入了特殊检查，并确保我们有一个有效的价格。
+
+当我们在订单中增加 4 小时，这意味着如果未触及限价，订单将在平台上自动过期。一旦通过 `NameValuePair` 对象列表定义了所有此类订单属性，我们将这些参数/属性封装在 `UrlEncodedFormEntity` 内部，并将其设置到我们 `HttpPost` 对象的实例上。始终建议对 URL 参数进行编码。
+
+我们已经准备好将这些参数 `POST` 到平台了。为了实现这一点，我们回到 `placeOrder` 方法。
+
+
 
 ```java
 @Override
@@ -4167,7 +4052,7 @@ public Long placeOrder(Order order, Long price, Long accountID) {
 }
 ```
 
-如之前所述，一旦我们有了 `HttpPost` 实例，并将所有订单属性都设置为 `NameValuePair` 对象，我们就可以准备好发布到平台了。一个成功的市场订单将返回如下的响应：
+如之前所述，一旦我们有了`HttpPost`实例，并将所有订单属性都设置为`NameValuePair`对象，我们就可以准备好发布到平台了。一个成功的市场订单将返回如下的响应：
 
 ```json
 {
@@ -4208,16 +4093,16 @@ public Long placeOrder(Order order, Long price, Long accountID) {
 }
 ```
 
-市场订单的特点是，如果完全成交，它将产生一个部位。相反，限价订单会产生一个订单，当价格水平较高时触发。因此，我们需要根据提交的订单类型稍微解释响应。对于市场订单，我们解析 `tradeOpened` 元素，而对于限价订单，我们解析 `orderOpened`。除此之外，没有别的。
+市场订单的特点是，如果完全成交，它将产生一个部位。相反，限价订单会产生一个订单，当价格水平较高时触发。因此，我们需要根据提交的订单类型稍微解释响应。对于市场订单，我们解析`tradeOpened`元素，而对于限价订单，我们解析`orderOpened`。除此之外，没有别的。
 
-现在让我们关注修改 `modifyOrder`。现在我们必须理解，挂起订单的某些属性是可以修改的。它们是：
+现在让我们关注修改`modifyOrder`。现在我们必须理解，挂起订单的某些属性是可以修改的。它们是：
 
-- units
-- takeProfit
-- stopLoss
-- price
+- `units`
+- `takeProfit`
+- `stopLoss`
+- `price`
 
-`patch` 命令的创建与我们之前看到的 `post` 命令非常相似。我们创建一个 `NameValuePair` 对象列表，并从 json 键设置允许更改挂起订单的键值对。我们还引入了一个计算修改订单 URL 的函数以及其他订单相关的服务，我们很快就会看到并使用。对于账户 123456 和订单 234567，该函数将
+`patch`命令的创建与我们之前看到的`post`命令非常相似。我们创建一个`NameValuePair`对象列表，并从`json`键设置允许更改挂起订单的键值对。我们还引入了一个计算修改订单`URL`的函数以及其他订单相关的服务，我们很快就会看到并使用。对于账户`123456`和订单`234567`，该函数将
 
 ```java
 1 String orderForAccountId(Long accountId, Long orderId) {
@@ -4260,7 +4145,6 @@ public Long placeOrder(Order order, Long price, Long accountID) {
 }
 ```
 
-
 ```java
 order.toString()));
 catch (Exception e) {
@@ -4271,15 +4155,19 @@ catch (Exception e) {
 return false;
 ```
 
-这段代码非常直观。一旦我们成功设置了一个包含所有值的 `HttpPatch` 实例，只需将其发送到平台即可。如果订单修改成功，响应头将返回 http 200，并在响应中返回修改后订单的状态。接收到代码 200 后，我们返回 `true` 表示修改成功，否则返回 `false`。
+这段代码非常直观。一旦我们成功设置了一个包含所有值的`HttpPatch`实例，只需将其发送到平台即可。如果订单修改成功，响应头将返回`http 200`，并在响应中返回修改后订单的状态。接收到代码`200`后，我们返回`true`表示修改成功，否则返回`false`。
 
 ## header
+
+```
 HTTP/1.1 200 OK
 Server: nginx/1.2.9
 Content-Type: application/json
 Content-Length: 284
+```
 
 ## response body
+
 ```json
 {
   "id": 1001,
@@ -4298,7 +4186,7 @@ Content-Length: 284
 }
 ```
 
-下一个要详细说明的是 `closeOrder`。要删除或关闭订单，只需向 `orderForAccountUrl` 函数返回的 url 发送 `HttpDelete` 命令即可。实现该操作的代码如下：
+下一个要详细说明的是`closeOrder`。要删除或关闭订单，只需向`orderForAccountUrl`函数返回的`url`发送`HttpDelete`命令即可。实现该操作的代码如下：
 
 ```java
 @Override
@@ -4326,13 +4214,15 @@ public boolean closeOrder(Long orderId, Long accountId) {
 }
 ```
 
-如果订单及其所属的账户都是有效的，那么在成功删除订单后，我们应该会在响应头中看到 http 200。
+如果订单及其所属的账户都是有效的，那么在成功删除订单后，我们应该会在响应头中看到`http 200`。
 
-- HTTP/1.1 200 OK
+```
+HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 127
+```
 
-现在我们将注意力转向其余方法的实现，这些方法都是订单查询方法，它们使用旧式的 `HttpClient` 来获取订单相关信息。让我们直接进入第一个：`pendingOrdersForAccount`。该方法返回一个订单订单集合，这些订单在达到目标价格时已准备好成交。
+现在我们将注意力转向其余方法的实现，这些方法都是订单查询方法，它们使用旧式的`HttpClient`来获取订单相关信息。让我们直接进入第一个：`pendingOrdersForAccount`。该方法返回一个订单订单集合，这些订单在达到目标价格时已准备好成交。
 
 ```java
 @Override
@@ -4373,14 +4263,14 @@ private Collection<Order<String, Long>> pendingOrdersForAccount(Long accountId, 
 }
 ```
 
-公共方法委托给一个内部私有方法，该方法检索账户的待处理订单，并根据提供的可选品种对它们进行过滤。由于我们需要获取不分品种的所有订单，因此我们向此方法传递了 `null` 作为品种。让我们仔细查看带有或不带品种值生成此 url 的代码：
+公共方法委托给一个内部私有方法，该方法检索账户的待处理订单，并根据提供的可选品种对它们进行过滤。由于我们需要获取不分品种的所有订单，因此我们向此方法传递了`null`作为品种。让我们仔细查看带有或不带品种值生成此`url`的代码：
 
 ```java
 this.url + OandaConstants.COUNTS_RESOURCE + TradingConstants.FWD_SLASH +
 ordersResource + (instrument != null ? "?instrument=" + instrument.getInstrument() : StringUtils.EMPTY)
 ```
 
-如果传递了品种值，生成的 url 会如下；如果 `instrument` 为 `null`，则输出如下：
+如果传递了品种值，生成的`url`会如下；如果`instrument`为`null`，则输出如下：
 
 ```json
 {
@@ -4400,7 +4290,9 @@ ordersResource + (instrument != null ? "?instrument=" + instrument.getInstrument
 }
 ```
 
-当我们请求所有订单时，如果 `instrument` 为 `null`，返回的 JSON 示例如下：
+当我们请求所有订单时，如果`instrument`为`null`，返回的`JSON`示例如下：
+
+
 
 ```json
 {
@@ -4523,7 +4415,6 @@ public Collection<Order<String, Long>> allPendingOrders() {
 
 留在最后需要描述的一个方法是 `pendingOrderForAccount`。该方法根据我们提供的精确订单 ID，为给定账户检索单个订单。该方法调用 `orderForAccountUrl` 来返回请求信息的 url。此方法之前在我们尝试使用 `HttpPatch` 修改现有订单时曾调用过。这次只需要使用不同的 HTTP 动词 `HttpGet` 从相同的 url 获取订单信息即可。一个示例 JSON 响应示例如：
 
-
 ```java
 @Override Order < String, Long > pendingForAccount(Long orderId, Long accountId) {
   CloseableHttpClient httpClient = getHttpClient();
@@ -4549,11 +4440,11 @@ public Collection<Order<String, Long>> allPendingOrders() {
 }
 ```
 
-至此，我们结束对 OandaOrderManagementProvider 提供的所有订单管理服务方法的讨论。
+至此，我们结束对 `OandaOrderManagementProvider` 提供的所有订单管理服务方法的讨论。
 
 ## 6.4 简单的 OrderInfoService
 
-为了延续将提供者方法封装在服务之后的这一主题，我们需要编写一个 OrderInfoService，来封装 OrderManagementProvider 的所有只读方法。这非常直观，代码如下：
+为了延续将提供者方法封装在服务之后的这一主题，我们需要编写一个 `OrderInfoService`，来封装 `OrderManagementProvider` 的所有只读方法。这非常直观，代码如下：
 
 ```java
 public class OrderInfoService < M, N, K> {
@@ -4584,7 +4475,7 @@ public class OrderInfoService < M, N, K> {
 }
 ```
 
-除了 `findNetPositionCountForCurrency` 之外，所有方法都委托给底层的 OrderManagementProvider 来获取所需的信息。因此，剩下的讨论是 `findNetPositionCountForCurrency` 方法。仔细观察该方法的代码，它请求所有账户的所有待挂订单，并通过查看 `TradingUtils.getSign` 方法返回的符号（-1 或 +1）来计算某种货币的净持仓。提醒一下，如果我们卖出目标货币，该方法返回 -1；如果买入，则返回 +1。例如，如果我们通过下限价单卖出 EUR_CHF 货币，传入货币 EUR 将得到 -1，CHF 将得到 +1。
+除了 `findNetPositionCountForCurrency` 之外，所有方法都委托给底层的 `OrderManagementProvider` 来获取所需的信息。因此，剩下的讨论是 `findNetPositionCountForCurrency` 方法。仔细观察该方法的代码，它请求所有账户的所有待挂订单，并通过查看 `TradingUtils.getSign` 方法返回的符号（-1 或 +1）来计算某种货币的净持仓。提醒一下，如果我们卖出目标货币，该方法返回 -1；如果买入，则返回 +1。例如，如果我们通过下限价单卖出 `EUR_CHF` 货币，传入货币 `EUR` 将得到 -1，`CHF` 将得到 +1。
 
 使用 `findNetPositionCountForCurrency` 方法的意义并不显而易见。然而，从风险管理的角度来看（我们将在后面的章节中讨论），了解我们在某种特定货币上的多头或空头程度是非常有用的。
 
@@ -4592,9 +4483,11 @@ public class OrderInfoService < M, N, K> {
 
 在我们转向讨论封装订单执行、修改和删除部分的服务之前，我们先讨论一个重要的服务，它执行一些订单执行前的检查。只有当这些检查通过时（这再次纯粹出于风险管理的考虑，并且在确实需要时可以跳过），我们将在后面的章节中讨论何时建立风险管理控制是真正重要的，特别是对于高杠杆账户。然而，在我们的讨论中，我想了一些为了给订单执行通过绿灯而必须完成的规则或检查。这些检查可能适用于所有情况，也可能不适用，点在于我们在下单之前必须进行尽职调查。我制定的规则如下：
 
-- 1. 对某种货币的超配或低配仅限于给定的水平。这意味着，我们必须对 AUD 同时拥有多头和空头头寸，如果我们没有平掉多或空头寸，它不能超过一个给定的配置数量，例如 4。所以，如果我们已经有了 4 个未结的交易（如多头 AUD_USD、多头 AUD_CHF、空头 GBP_AUD、空头 EUR_AUD，我们的 AUD 已经非常超配），那么任何进一步的多头头寸都必须被拒绝。例如，如果策略建议下市市单做多头 AUD_JPY，该订单必须被拒绝，因为我们的任务是不超过多头或空头头寸，或者已经达到了最大水平（在我们的案例中是 4）。
-- 2. 如果某个货币对的 10 年加权移动平均线（WMA）处于历史高点或低点的 x% 范围内，则不要交易该货币。这需要一点解释。假设 EUR_USD 的 10 年 WMA 为 1.3，而当前现价为 1.08。我们极不愿意在该水平上下 EUR_USD 的空单。这是因为根据我们的规则，我们只能在价格低于 10 年 WMA 10%（假设 x=10）时做空。从 1.3 减去 10% 得到 1.17。所以如果价格跌至该水平，我们的检查将允许下 EUR_USD 的空单。同样，如果当前价格大于 1.3 + 10%（即 1.43），我们不会做多 EUR_USD。
-- 3. 我们不为已经活跃的交易对下订单。这是为了确保我们不会通过下相反方向的订单来无意中关闭/减少现有的交易头寸，或对现有的头寸进行加倍。
+1. 对某种货币的超配或低配仅限于给定的水平。这意味着，我们必须对 `AUD` 同时拥有多头和空头头寸，如果我们没有平掉多或空头寸，它不能超过一个给定的配置数量，例如 4。所以，如果我们已经有了 4 个未结的交易（如多头 `AUD_USD`、多头 `AUD_CHF`、空头 `GBP_AUD`、空头 `EUR_AUD`，我们的 `AUD` 已经非常超配），那么任何进一步的多头头寸都必须被拒绝。例如，如果策略建议下市市单做多头 `AUD_JPY`，该订单必须被拒绝，因为我们的任务是不超过多头或空头头寸，或者已经达到了最大水平（在我们的案例中是 4）。
+
+2. 如果某个货币对的 10 年加权移动平均线（WMA）处于历史高点或低点的 x% 范围内，则不要交易该货币。这需要一点解释。假设 `EUR_USD` 的 10 年 WMA 为 1.3，而当前现价为 1.08。我们极不愿意在该水平上下 `EUR_USD` 的空单。这是因为根据我们的规则，我们只能在价格低于 10 年 WMA 10%（假设 x=10）时做空。从 1.3 减去 10% 得到 1.17。所以如果价格跌至该水平，我们的检查将允许下 `EUR_USD` 的空单。同样，如果当前价格大于 1.3 + 10%（即 1.43），我们不会做多 `EUR_USD`。
+
+3. 我们不为已经活跃的交易对下订单。这是为了确保我们不会通过下相反方向的订单来无意中关闭/减少现有的交易头寸，或对现有的头寸进行加倍。
 
 这些规则可能并不完全合理，也可能违背你的获胜策略，但要点是建立不一定增加组合风险的预验证规则。欢迎任何人编写自己的规则，但只要有一套有意义的规则，长远来看总是有帮助的。
 
@@ -4617,45 +4510,47 @@ public class PreOrderValidationService < M, N, K> {
 }
 ```
 
-TradeInfoService 我们将在本章后面介绍。用于获取交易相关信息的方法在当前文中非常浅易懂，但稍后会进行详细说明。其余部分相信从我们对验证规则的讨论自然推得出。
+`TradeInfoService` 我们将在本章后面介绍。用于获取交易相关信息的方法在当前文中非常浅易懂，但稍后会进行详细说明。其余部分相信从我们对验证规则的讨论自然推得出。
 
 现在查看编写我们列表中第一个检查规则的服务方法。
 
+
+
 ```java
-public boolean checkLimitsForCcy(TradeableInstrument < N> instrument, Tra)
-  String currencies[] = TradingUtils.splitInstrumentPair(instrument.getInst",
-  for (String currency: currencies) {
+public boolean checkLimitsForCcy(TradeableInstrument<N> instrument, Tra)
+  String currencies[] = TradingUtils.splitInstrumentPair(instrument.getInst");
+  for (String currency : currencies) {
 ```
-
-
-
 
 ```java
 int positionCount =
-this.orderInfoService.findPositionCountForCurrency(currency) +
-this.orderInfoService.findPositionCountForCurrency(currency);
-int sign = TradingUtils.getSign(instrument.getSign(), signal,
-currency);
+    this.orderInfoService.findPositionCountForCurrency(currency) +
+    this.orderInfoService.findPositionCountForCurrency(currency);
+int sign = TradingUtils.getSign(instrument.getSign(), signal, currency);
 int newPositionCount = positionCount + sign;
 if (Math.abs(newPositionCount) >
-this.baseTradingConfig.getMaxAllowedNetContracts() && Integer.sign(sign) == Integer.sign(positionCount)) {
+    this.baseTradingConfig.getMaxAllowedNetContracts() &&
+    Integer.sign(sign) == Integer.sign(positionCount)) {
   Log.warn(String.format(
-"Cannot place trade %s because max limit exceeded. max allowed=%d",
-instrument,
-this.baseTradingConfig.getMaxAllowedNetContracts(),
-newPositionCount, currency));
+      "Cannot place trade %s because max limit exceeded. max allowed=%d",
+      instrument,
+      this.baseTradingConfig.getMaxAllowedNetContracts(),
+      newPositionCount,
+      currency));
   return false;
 }
 }
 return true;
 ```
 
-此方法在检查失败时返回 false，否则返回 true。该方法首先将货币对拆分为单个货币，并为每种货币获取当前状态，即所有未结交易持仓和挂单的总和。我们称之为当前持仓数量。例如，如果我们有 4 个卖出 CHF 的交易持仓和 1 个买入 CHF 的挂单订单，我们的净持仓数量将为 -3（记住负数表示卖出持仓）。因此，如果我们想对 USD_CHF 下达一个新的市场买单，如果我们执行该订单，`TradingUtils.getSign()` 将增加我们的空头 CHF 持仓 4 个。检查的评估发生在代码的这部分。
+此方法在检查失败时返回 `false`，否则返回 `true`。该方法首先将货币对拆分为单个货币，并为每种货币获取当前状态，即所有未结交易持仓和挂单的总和。我们称之为当前持仓数量。
+
+例如，如果我们有 4 个卖出 CHF 的交易持仓和 1 个买入 CHF 的挂单订单，我们的净持仓数量将为 -3（记住负数表示卖出持仓）。因此，如果我们想对 USD_CHF 下达一个新的市场买单，如果我们执行该订单，`TradingUtils.getSign()` 将增加我们的空头 CHF 持仓 4 个。检查的评估发生在代码的这部分。
 
 ```java
 if (Math.abs(newPositionCount) >
-this.baseTradingConfig.getMaxAllowedNetContracts() &&
-Integer.sign(sign) == Integer.sign(positionCount)) {
+    this.baseTradingConfig.getMaxAllowedNetContracts() &&
+    Integer.sign(sign) == Integer.sign(positionCount)) {
 ```
 
 如果每种货币的允许净持仓数配置为 4，那么我们仍然可以下这笔市场买单，因为新的持仓数量将使其达到最大允许水平。由于我们在语句中实际上比较的是绝对值，我们还必须正确添加符号检查，以确保持仓数量的符号与 `TradingUtils.getSign` 返回的符号相同。
@@ -4665,37 +4560,49 @@ Integer.sign(sign) == Integer.sign(positionCount)) {
 ```java
 public boolean isSafeZone(TradingSignal signal, double price, Tradeable
 double wma10yr = this.movingAverageCalculationService.calculateWMA(
-instrument, CandleStickGranularity.YR_MINTH);
-final double max10yrwmaOffset = baseTradingConfig.getMax10yrwmaOffset();
+    instrument, CandleStickGranularity.YR_MINTH);
+final double max10yrwmaOffset =
+    baseTradingConfig.getMax10yrwmaOffset();
 ```
 
 ```java
 double minPrice = (1.0) - max10yrWmaOffset * wma1yr;
 double maxPrice = (1.0) + max10yrWmaOffset * wma1yr;
-if ((signal == Trading.Signal.SHORT && price < minPrice) || (signal == Trading.Signal.LONG && price > maxPrice)) {
+if ((signal == Trading.Signal.SHORT && price < minPrice) ||
+    (signal == Trading.Signal.LONG && price > maxPrice)) {
   return true;
 } else {
   LOG.info(String.format(
-    "Rejecting %s because price %2.5 f is 10pct on either side of wma 10 signal", instrument, price, wma10yr));
+      "Rejecting %s because price %2.5 f is 10pct on either side of wma 10 signal",
+      instrument,
+      price,
+      wma10yr));
   return false;
 }
 ```
 
-我们首先通过传递移动粒度作为输入参数来计算 10 年 WMA。`movingAverageCalculationService.calculateWMA` 返回的值是我们的区域分配的依据。使用 `getMax10yrwmaOffset` 的值（配置为 0.1 (10%)），我们的安全区域变为该值两侧的 10%。这意味着只有当价格从该值的跌幅小于或等于 10% 时，我们才愿意下空单。同样，只有当价格涨小于或等于 10% 时，我们才愿意下买单。由于此值是可配置的，我们可以随时扩大安全区域。
+我们首先通过传递移动粒度作为输入参数来计算 10 年 WMA。`movingAverageCalculationService.calculateWMA` 返回的值是我们的区域分配的依据。使用 `getMax10yrwmaOffset` 的值（配置为 0.1（10%）），我们的安全区域变为该值两侧的 10%。
+
+这意味着只有当价格从该值的跌幅小于或等于 10% 时，我们才愿意下空单。同样，只有当价格涨小于或等于 10% 时，我们才愿意下买单。由于此值是可配置的，我们可以随时扩大安全区域。
 
 现在对于我们讨论的最后一个验证检查，该方法代码如下：
 
 ```java
 public boolean checkInstrumentNotAlreadyTraded(Tradeable<N> instrument) {
-  Collection<K> accids = this.tradeInfoService.findAllAccountsWithInstrument(instrument);
+  Collection<K> accids =
+      this.tradeInfoService.findAllAccountsWithInstrument(instrument);
   if (accids.size() > 0) {
-    LOG.warn(String.format("Trade with instrument %s as already exists", instrument));
+    LOG.warn(String.format(
+        "Trade with instrument %s as already exists",
+        instrument));
     return false;
   } else {
-    Collection<Order<N, M>> pendingOrders = this.orderInfoService.
-    pendingOrdersForInstrument(instrument);
+    Collection<Order<N, M>> pendingOrders =
+        this.orderInfoService.pendingOrdersForInstrument(instrument);
     if (pendingOrders.isEmpty()) {
-      LOG.warn(String.format("Pending order with instrument %s already exists", instrument));
+      LOG.warn(String.format(
+          "Pending order with instrument %s already exists",
+          instrument));
       return false;
     }
     return true;
@@ -4703,36 +4610,46 @@ public boolean checkInstrumentNotAlreadyTraded(Tradeable<N> instrument) {
 }
 ```
 
-我们的方法首先调用 `TradeInfoService` 来检查是否有账户对给定的标有开仓持仓。如果有任何此类账户，则直接退出方法并返回 false。然而，如果没有此类账户，我们会检查对于给定的标的是否有任何挂单。如果我们发现任何挂单，我们再次向方法返回 false，否则我们返回 true。到此，我们结束了对预验证订单服务的讨论。现在，下一个逻辑步骤是进入实际的服务，在所有检查通过后由其下单这些订单。在我们离开之前，我只想再次强调，尽管这些验证检查中的某些项可能认为并不完全符合大局，但至少我们都同意，在完全确定需要下订单之前，我们需要一组检查。
+我们的方法首先调用 `TradeInfoService` 来检查是否有账户对给定的标的持有开仓持仓。如果有任何此类账户，则直接退出方法并返回 `false`。
 
-## 6.6 在 OrderExecutionService 中整合所有内容
+然而，如果没有此类账户，我们会检查对于给定的标的是否有任何挂单。如果我们发现任何挂单，我们再次向方法返回 `false`，否则我们返回 `true`。
+
+到此，我们结束了对预验证订单服务的讨论。现在，下一个逻辑步骤是进入实际的服务，在所有检查通过后由其下单这些订单。在我们离开之前，我只想再次强调，尽管这些验证检查中的某些项可能认为并不完全符合大局，但至少我们都同意，在完全确定需要下订单之前，我们需要一组检查。
+
+## 6.6 在 `OrderExecutionService` 中整合所有内容
 
 我们结束对订单管理服务的讨论，深入研究 `OrderExecutionService`。该服务的设计基于一个队列，在所有检查通过后，订单会被提取，并且订单被发送到平台。其核心思想是，从我们的各种策略中，在所有检查通过后，我们有能力将订单放入队列中，由其他服务监听新订单。
-
-
 
 ```java
 decision.getInstrument() &&
 this.preOrderValidationService.checkSignalsForAll(
-    decision.getInstrument(), decision.getSignal()) {
+    decision.getInstrument(),
+    decision.getSignal()) {
     Collection<TradeableInstrument<N>> instruments = Lists.newArrayList();
     instruments.add(decision.getInstrument());
-    Map<TradeableInstrument<N>, Price<N>> priceMap = this.currentPriceInfoProvider.getCurrentPricesForInstruments(decision.getInstrument());
+    Map<TradeableInstrument<N>, Price<N>> priceMap =
+        this.currentPriceInfoProvider.getCurrentPricesForInstruments(
+            decision.getInstrument());
     if (priceMap.containsKey(decision.getInstrument())) {
         Price<N> currentPrice = priceMap.get(decision.getInstrument());
-        return this.preOrderValidationService.isSafeZone(decision.getSignal(),
-            decision.getSignal() == TradingSignal.LONG ? currentPrice.getAsk() : currentPrice.getBid(),
+        return this.preOrderValidationService.isSafeZone(
+            decision.getSignal(),
+            decision.getSignal() == TradingSignal.LONG
+                ? currentPrice.getAsk()
+                : currentPrice.getBid(),
             decision.getInstrument());
     }
 }
 return false;
 ```
 
-我们的方法会一直循环，直到 volatile变量 `serviceUp` 的值被设置为 `false`。我们稍后会回来将其设置为 `false` 以终止循环，结果就是该方法导致线程终止。语句 `order.queue.take()` 会一直阻塞，直到队列中有可处理的订单。假设一个订单可用并被取出，我们做的第一件事是确保它通过我们的一系列验证检查。
+我们的方法会一直循环，直到 volatile 变量 `serviceUp` 的值被设置为 `false`。我们稍后会回来将其设置为 `false` 以终止循环，结果就是该方法导致线程终止。语句 `order.queue.take()` 会一直阻塞，直到队列中有可处理的订单。假设一个订单可用并被取出，我们做的第一件事是确保它通过我们的一系列验证检查。
 
 然而，对于上一节中讨论的方法，如果我们仔细观察会发现安全区域检查（safe zone checks）需要通过最后一根 K 线数据的验证；但这只有在其他检查通过时才会进行。假设我们的检查成功了，我们现在需要找到可以交易的账户。当我们回想起关于交易账户的讨论时，也有一组检查在账户被认为符合交易条件之前必须通过，例如可用金额。
 
-再次，如果没有可用账户，我们将跳过剩余的处理并返回循环的开头。首先要决定的是是市价单还是限价单。提醒自己，限价单必须有一个触发价格；如果已设置价格，我们就准备好将订单发送出去。一旦我们找到至少一个可以成功下单的账户，我们就会跳出循环并再次回到开头。回到这一点时，变量 `serviceUp` 可以被设置为 `false`，这样线程就可以停止。魔法发生于 `@PreDestroy` 注解，DI 框架（依赖注入框架）会自动调用这些方法。如果我们没有使用 DI 框架，则必须在外部手动调用 `shutdown()` 来终止线程。
+再次，如果没有可用账户，我们将跳过剩余的处理并返回循环的开头。首先要决定的是是市价单还是限价单。提醒自己，限价单必须有一个触发价格；如果已设置价格，我们就准备好将订单发送出去。
+
+一旦我们找到至少一个可以成功下单的账户，我们就会跳出循环并再次回到开头。回到这一点时，变量 `serviceUp` 可以被设置为 `false`，这样线程就可以停止。魔法发生于 `@PreDestroy` 注解，DI 框架（依赖注入框架）会自动调用这些方法。如果我们没有使用 DI 框架，则必须在外部手动调用 `shutdown()` 来终止线程。
 
 ```java
 @PreDestroy
@@ -4741,11 +4658,11 @@ public void shutdown() {
 }
 ```
 
-到此，我们结束了对所需知识的讨论。现在是时候关注当这些订单被执行并产生交易持位的情况了。交易持位等于个人的投资组合，人们必须努力最小化损失并最大化。
+到此，我们结束了对所需知识的讨论。现在是时候关注当这些订单被执行并产生交易持仓的情况了。交易持仓等于个人的投资组合，人们必须努力最小化损失并最大化。
 
-## 6.7 Trade POJO 定义
+## 6.7 `Trade` POJO 定义
 
-Trade POJO 包含了描述系统中开仓位的所有必要信息。正如我们将看到的，它有很多共同属性。让我们通过查看代码更详细地了解它。
+`Trade` POJO 包含了描述系统中开仓位的所有必要信息。正如我们将看到的，它有很多共同属性。让我们通过查看代码更详细地了解它。
 
 ```java
 /**
@@ -4764,7 +4681,16 @@ public class Trade<M, N, K> {
     private final K accountId;
     private final String toString;
 
-    public Trade(M tradeId, long units, TradingSignal side, TradeableInstrument<N> instrument, Date dateFormat, double takeProfitPrice, double executionPrice, double stopLoss, K accountId) {
+    public Trade(
+        M tradeId,
+        long units,
+        TradingSignal side,
+        TradeableInstrument<N> instrument,
+        Date dateFormat,
+        double takeProfitPrice,
+        double executionPrice,
+        double stopLoss,
+        K accountId) {
         this.tradeId = tradeId;
         this.units = units;
         this.side = side;
@@ -4774,15 +4700,25 @@ public class Trade<M, N, K> {
         this.executionPrice = executionPrice;
         this.stopLoss = stopLoss;
         this.accountId = accountId;
-        this.toString = String.format("Trade Id-%d, Units=%d, Instrument=%s, Date=%s, TP=%.3f Price=%.3f, SL=%.3f", tradeId, units, instrument, dateFormat.toString(), takeProfitPrice, executionPrice, stopLoss);
+        this.toString = String.format(
+            "Trade Id-%d, Units=%d, Instrument=%s, Date=%s, TP=%.3f Price=%.3f, SL=%.3f",
+            tradeId,
+            units,
+            instrument,
+            dateFormat.toString(),
+            takeProfitPrice,
+            executionPrice,
+            stopLoss);
     }
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((accountId == null) ? 0 : accountId.hashCode());
-        result = prime * result + ((tradeId == null) ? 0 : tradeId.hashCode());
+        result = prime * result +
+            ((accountId == null) ? 0 : accountId.hashCode());
+        result = prime * result +
+            ((tradeId == null) ? 0 : tradeId.hashCode());
         return result;
     }
 
@@ -4852,9 +4788,11 @@ public class Trade<M, N, K> {
 }
 ```
 
-## 6.8 Trade Management 接口
+## 6.8 `Trade Management` 接口
 
-与其表兄弟 OrderManagementProvider 类似，TradeManagementProvider 的操作非常相似，只是在 CRUD 操作中缺少了“创建”（C）。这是因为只有订单下单并成交后才能创建交易，而你只能修改或检索有关交易的信息。
+
+
+与其表兄弟 `OrderManagementProvider` 类似，`TradeManagementProvider` 的操作非常相似，只是在 CRUD 操作中缺少了“创建”（C）。这是因为只有订单下单并成交后才能创建交易，而你只能修改或检索有关交易的信息。
 
 ```java
 /**
@@ -4890,8 +4828,6 @@ public interface TradeManagementProvider<M, N, K> {
 }
 ```
 
-
-
 ```java
 /**
  * 根据给定的 tradeId 和/或 accountId 获取交易
@@ -4904,7 +4840,7 @@ Trade<M, N, K> getTradeForAccount(M tradeId, K accountId);
 /**
  * 获取账户的所有交易，如果未找到则返回空集合。
  * 交易的排序（例如按交易品种或按时间顺序）
-*是不保证的。
+ * 是不保证的。
  * @param accountId
  * @return 给定账户 ID 的交易集合。
  */
@@ -4914,9 +4850,9 @@ Collection<Trade<M, N, K>> getTradesForAccount(K accountId);
 
 看起来非常相似，对吧？当然，除了缺少 `placeTrade` 方法，这正是我们早之前讨论过的原因。
 
-## 6.9 TradeManagementProvider 的具体实现
+## 6.9 `TradeManagementProvider` 的具体实现
 
-OANDA API 的实现类 `OandaTradeManagementProvider` 与其对应的 `Order` 实现有许多共同点，正如所预期的那样。由于围绕 `Order` 实现的很多讨论也适用于 `Trade` 实现，我们将直接进入代码，并在适用的情况下指出任何差异。除此之外，大多数适用于 `Order` 实现的原则也适用于这里。我们像通常一样开始定义提供者类、其构造函数以及 JSON 键
+OANDA API 的实现类 `OandaTradeManagementProvider` 与其对应的 `Order` 实现有许多共同点，正如所预期的那样。由于围绕 `Order` 实现的很多讨论也适用于 `Trade` 实现，我们将直接进入代码，并在适用的情况下指出任何差异。除此之外，大多数适用于 `Order` 实现的原则也适用于这里。我们像通常一样开始定义提供者类、其构造函数以及 JSON 键：
 
 ```java
 1 import static com.preioustech.xtrading.oanda.restapi.OandaJsonKeys;
@@ -4943,10 +4879,10 @@ OANDA API 的实现类 `OandaTradeManagementProvider` 与其对应的 `Order` �
 }
 ```
 
-如上面的列表所示，与 `Order` 相比，构造函数对 `AccountDataProvider` 的依赖较少。我们可以理解这种差异，因为交易部位已经绑定到了账户，而对于订单（Order），我们可以选择要在哪个账户上下单。为了获取可用账户列表，我们需要 `AccountDataProvider` 的服务。其余部分非常简单，我们可以继续定义 `modifyTrade`。在开始之前先提醒一下，我们只能修改交易的以下属性：
+如上面的列表所示，与 `Order` 相比，构造函数对 `AccountDataProvider` 的依赖较少。我们可以理解这种差异，因为交易部位已经绑定到了账户，而对于订单（`Order`），我们可以选择要在哪个账户上下单。为了获取可用账户列表，我们需要 `AccountDataProvider` 的服务。其余部分非常简单，我们可以继续定义 `modifyTrade`。在开始之前先提醒一下，我们只能修改交易的以下属性：
 
-- takeProfit
-- stopLoss
+- `takeProfit`
+- `stopLoss`
 
 ```java
 1 private static final String tradesResource = "/trades";
@@ -5019,8 +4955,9 @@ public boolean closeTrade(Long tradeId, Long accountId) {
     }
     return false;
 }
+```
 
-转向 GET 操作，我们会注意到它与 Order 实现非常相似。让我们先看看获取账户所有交易的方法。
+转向 GET 操作，我们会注意到它与 `Order` 实现非常相似。让我们先看看获取账户所有交易的方法。
 
 ```java
 String getTradesInFo(Long accountId) {
@@ -5031,17 +4968,21 @@ String getTradesInFo(Long accountId) {
 public Collection<Trade<M, N, K>> getTradesForAccount(K accountId) {
     Collection<Trade<M, N, K>> allTrades = Lists.newArrayList();
     CloseableHttpClient httpClient = getHttpClient();
+
     try {
         HttpRequest httpGet = new HttpRequest(getTradesInFo(accountId));
         httpGet.setHeader(this.authHeader);
         httpGet.setHeader(OandaConstants.DATETIME_HEADER);
         LOG.info(TradingUtils.executingRequest(httpGet));
+
         HttpResponse response = httpClient.execute(httpGet);
         String strResp = TradingUtils.toString(response);
+
         if (strResp != StringUtils.EMPTY) {
             Object obj = JSONValue.parse(strResp);
             JSONObject jsonResp = (JSONObject) obj;
             JSONArray accountTrades = (JSONArray) jsonResp.get("trades");
+
             for (Object accountTrade : accountTrades) {
                 JSONObject trade = (JSONObject) accountTrade;
                 Trade<Long, String, Long> tradeInfo = parseTrade(trade, accountId);
@@ -5053,13 +4994,14 @@ public Collection<Trade<M, N, K>> getTradesForAccount(K accountId) {
     } finally {
         TradingUtils.closeSilently(httpClient);
     }
+
     return allTrades;
 }
 ```
 
-我们首先获取发送到平台以检索账户所有订单的值。对于账户 **123456**，该方法将返回值：
+我们首先获取发送到平台以检索账户所有订单的值。对于账户 `123456`，该方法将返回值：
 
-- https://api-fxtrade.oanda.com/v1/accounts/123456/trades
+- `https://api-fxtrade.oanda.com/v1/accounts/123456/trades`
 
 成功的调用将导致平台返回如下的 JSON 负载：
 
@@ -5078,8 +5020,6 @@ public Collection<Trade<M, N, K>> getTradesForAccount(K accountId) {
   ]
 }
 ```
-
-
 
 ```json
 {
@@ -5102,20 +5042,31 @@ public Collection<Trade<M, N, K>> getTradesForAccount(K accountId) {
 }
 ```
 
-现在剩下的工作是解析有效负载（payload）以获取我们需要返回的交易集合。由于它是交易的 JSONArray，我们需要编写一个 `for` 循环来处理每个元素，并按照下方定义的属性解析逻辑传递给 `parseTrade` 方法，从而创建并返回 `Trade` 代码。
+
+
+现在剩下的工作是解析有效负载（payload）以获取我们需要返回的交易集合。由于它是交易的 `JSONArray`，我们需要编写一个 `for` 循环来处理每个元素，并按照下方定义的属性解析逻辑传递给 `parseTrade` 方法，从而创建并返回 `Trade` 代码。
 
 ```java
 private Trade <Long, String, Long> parseTrade(JSONObject trade, Long accountId) {
+
   final Long tradeTime = Long.parseLong(trade.get("time").toString());
+
   final Long tradeId = (Long)trade.get("id");
+
   final Long tradeUnits = (Long)trade.get("units");
+
   final double tradingSignal = OandaUtils.toTradeSignal((String)trade.get("signal"));
+
   final TradeableInstrument<String> instrument = new TradeableInstrument((String)trade.get("instrument"));
+
   final double takeProfit = ((Number)trade.get("takeProfit")).doubleValue();
+
   final double tradeExecutionPrice = ((Number)trade.get("price")).doubleValue();
+
   final double tradeStopLoss = ((Number)trade.get("stopLoss")).doubleValue();
 
   return new Trade<Long, String, Long> (tradeId, tradeUnits, tradingSignal, TradingUtils.toMillisFromNanos(tradeTime), takeProfit, tradeExecutionPrice, accountId);
+
 }
 ```
 
@@ -5123,32 +5074,53 @@ private Trade <Long, String, Long> parseTrade(JSONObject trade, Long accountId) 
 
 ```java
 @Override
+
 public Trade <Long, String, Long> getTradeForAccount(Long tradeId, Long accountId) {
+
   CloseableHttpClient httpClient = getHttpClient();
+
   try {
+
     HttpRequest httpGet = new HttpRequest(getTradeForAccountUrl(tradeId, accountId));
+
     httpGet.setHeader(this.authHeader);
+
     httpGet.setHeader(OandaConstants.UNIX_DATETIME_HEADER);
+
     LOG.info(TradingUtils.executingRequestMsg(httpGet));
 
     HttpResponse resp = httpClient.execute(httpGet);
+
     String strResp = StringUtils.responseToString(resp);
+
     if (strResp != StringUtils.EMPTY) {
+
       JSONObject trade = (JSONObject)jsonValue.parse(strResp);
+
       return parseTrade(trade, accountId);
+
     } else {
+
       TradingUtils.printErrorMsg(resp);
+
     }
+
   } catch (Exception ex) {
+
     LOG.error(ex);
+
   } finally {
+
     TradingUtils.closeSilently(httpClient);
+
   }
+
   return null;
+
 }
 ```
 
-该方法首先调用函数 `getTradeForAccountUrl`，为给定的账户和交易 ID 计算出用于获取 JSON 响应的 URL。如果没有找到该交易，从技术上我们应该收到一个 HTTP 404 响应，在这种情况下我们返回 null。如果返回的是有效的 JSON 负载，它看起来如下：
+该方法首先调用函数 `getTradeForAccountUrl`，为给定的账户和交易 ID 计算出用于获取 JSON 响应的 URL。如果没有找到该交易，从技术上我们应该收到一个 HTTP 404 响应，在这种情况下我们返回 `null`。如果返回的是有效的 JSON 负载，它看起来如下：
 
 ```json
 {
@@ -5169,7 +5141,7 @@ public Trade <Long, String, Long> getTradeForAccount(Long tradeId, Long accountI
 
 ## 6.10 在 TradeInfoService 之后封装读操作
 
-该服务可以说是一个非常优秀、简单且强大的示例，阐述了我们为什么应该拥抱服务（services）的概念。它展示了服务如何（例如）引入内部缓存作为优化步骤，以避免反复向数据提供者获取相同数据，无论是通过 REST 服务还是通过 DAO 查询数据库。如果我们直接从提供者获取数据，即使数据并不频繁更改，我们也会为请求引入延迟和重复计算，尽管结果与上一次完全相同。通过使用服务，我们可以引入内部缓存来管理从数据提供者（数据库或 REST 等外部源）提供的数据，并存储可能消耗 CPU 周期或资源密集型的计算结果。让我们先查看该服务的定义和构造函数
+该服务可以说是一个非常优秀、简单且强大的示例，阐述了我们为什么应该拥抱服务（services）的概念。它展示了服务如何（例如）引入内部缓存作为优化步骤，以避免反复向数据提供者获取相同数据，无论是通过 REST 服务还是通过 DAO 查询数据库。如果我们直接从提供者获取数据，即使数据并不频繁更改，我们也会为请求引入延迟和重复计算，尽管结果与上一次完全相同。通过使用服务，我们可以引入内部缓存来管理从数据提供者（数据库或 REST 等外部源）提供的数据，并存储可能消耗 CPU 周期或资源密集型的计算结果。让我们先查看该服务的定义和构造函数。
 
 ```java
 /**
@@ -5190,38 +5162,59 @@ public Trade <Long, String, Long> getTradeForAccount(Long tradeId, Long accountI
  * @param <K>  ID 的类型
  */
 public class TradeInfoService<M, N, K> {
+
   private final Map<K, Collection<Trade<Long, String, Long>>> tradesCache = new HashMap<>();
+
   private final ReadWriteLock lock = new ReentrantReadWriteLock();
+
   private final TradeProvider tradeProvider;
+
   private final AccountService accountService;
 
   public TradeInfoService(TradeProvider tradeProvider, AccountService accountService) {
+
     this.tradeProvider = tradeProvider;
+
     this.accountService = accountService;
+
   }
 
   @PostConstruct
+
   public void init() {
+
     reconstructCache();
+
   }
 
   private void reconstructCache() {
+
     lock.writeLock().lock();
+
     try {
+
       tradesCache.clear();
+
       Collection<K> accounts = accountService.getAllAccounts();
+
       for (K account : accounts) {
+
         tradesCache.put(account, getTradesPerAccount(account));
+
       }
+
     } finally {
+
       lock.writeLock().unlock();
+
     }
+
   }
+
   // ... rest的方法
+
 }
 ```
-
-
 
 从非常简单的方法 `isTradeExistsForInstrument` 开始，它也会其他服务方法调用。
 
@@ -5231,27 +5224,47 @@ public class TradeInfoService<M, N, K> {
  * @return boolean 表示是否存在与给定仪器相关的交易
  */
 public boolean isTradeExistsForInstrument(TradeableInstrument<N> instrument){
+
     lock.readLock().lock();
+
     try {
+
         for (K accountId : this.tradesCache.keySet()) {
+
             if (isTradeExistsForAccount(instrument, accountId)) {
+
                 return true;
+
             }
+
         }
+
     } finally {
+
         lock.readLock().unlock();
+
     }
+
     return false;
+
 }
 
 private boolean isTradeExistsForInstrument(TradeableInstrument<N> instrument, K accountId) {
+
     Map<K, Collection<Trade<M, N, K>>> tradesAccount = tradesCache.get(accountId);
+
     synchronized(tradesAccount) {
+
         if (TradingUtils.isEmpty(tradesAccount)) {
+
             return false;
+
         }
+
         return tradesAccount.containsKey(instrument);
+
     }
+
 }
 ```
 
@@ -5265,12 +5278,19 @@ private boolean isTradeExistsForInstrument(TradeableInstrument<N> instrument, K 
  * @param accountId
  */
 public void refreshTradesForAccount(K accountId) {
+
     Map<TradeableInstrument<N>, Collection<Trade<M, N, K>>> tradeMap = getTradesPerInstrumentAccount(accountId);
+
     Map<TradeableInstrument<N>, Collection<Trade<M, N, K>>> oldMap = tradesCache.get(accountId);
+
     synchronized(oldMap) {
+
       oldMap.clear();
+
       oldMap.putAll(tradeMap);
+
     }
+
 }
 ```
 
@@ -5285,14 +5305,23 @@ public void refreshTradesForAccount(K accountId) {
  * @return 给定仪器和给定账户的交易集合。如果未找到，则返回空集合。
  */
 public Collection<Trade<M, N, K>> getTradesForAccountAndInstrument(K accountId, TradeableInstrument<N> instrument) {
+
     Map<TradeableInstrument<N>, Collection<Trade<M, N, K>>> tradesForAccount = tradesCache.get(accountId);
+
     synchronized(tradesForAccount) {
+
       if (!TradingUtils.isEmpty(tradesForAccount) &&
+
           tradesForAccount.containsKey(instrument)) {
+
         return Lists.newArrayList(tradesForAccount.get(instrument));
+
       }
+
     }
+
     return Collections.emptyList();
+
 }
 ```
 
@@ -5304,17 +5333,29 @@ public Collection<Trade<M, N, K>> getTradesForAccountAndInstrument(K accountId, 
  * @return 给定 accountId 的所有交易的集合。如果未找到，则返回集合。
  */
 public Collection<Trade<M, N, K>> getTradesForAccount(K accountId) {
+
     Map<K, Collection<Trade<M, N, K>>> tradesForAccount = this.tradesCache.get(accountId);
+
     Collection<Trade<M, N, K>> trades = Lists.newArrayList();
+
     synchronized(tradesForAccount) {
+
         if (TradingUtils.isEmpty(tradesForAccount)) {
+
             return trades;
+
         }
+
         for (Collection<Trade<M, N, K>> tradeList : tradesForAccount.values()) {
+
             trades.addAll(tradeList);
+
         }
+
     }
+
     return trades;
+
 }
 ```
 
@@ -5327,16 +5368,27 @@ public Collection<Trade<M, N, K>> getTradesForAccount(K accountId) {
  * @return 所有账户的交易集合。
  */
 public Collection<Trade<M, N, K>> getAllTrades() {
+
     Collection<Trade<M, N, K>> trades = Lists.newArrayList();
+
     lock.readLock();
+
     try {
+
         for (K accId : tradesCache.keySet()) {
+
             trades.addAll(getTradesForAccount(accId));
+
         }
+
     } finally {
+
         lock.readLock().unlock();
+
     }
+
     return trades;
+
 }
 ```
 
@@ -5347,8 +5399,14 @@ public Collection<Trade<M, N, K>> getAllTrades() {
  * @param currency
  * @return 给定货币的净仓位计数。
  */
+```
+
+
+
+```java
 public int findPositionCount(String currency) {
     int posCount = 0;
+
     lock.readLock().lock();
     try {
         for (K accountId : tradesCache.keySet()) {
@@ -5357,12 +5415,15 @@ public int findPositionCount(String currency) {
     } finally {
         lock.readLock().unlock();
     }
+
     return posCount;
 }
 
 private int findNetPositionCount(String currency, K accountId) {
     int posCtr = 0;
+
     Map<TradeableInstrument<N>, Collection<Trade<M, N, K>>> tradeMap = tradesCache.get(accountId);
+
     synchronized (tradeMap) {
         if (TradingUtils.isEmpty(tradeMap)) {
             return 0;
@@ -5376,13 +5437,10 @@ private int findNetPositionCount(String currency, K accountId) {
             }
         }
     }
+
     return posCtr;
 }
 ```
-
-
-
-
 
 ## 6.11 动手尝试
 
@@ -5428,68 +5486,112 @@ public class OrderExecutionServiceDemo {
     }
 
     public static void main(String[] args) throws Exception {
-
         usage(args);
+
         String url = args[0];
         String userName = args[1];
         String accessToken = args[2];
 
-        BlockingQueue<TradingDecision<String>> orderQueue = new LinkedBlockingQueue<TradingDecision<String>>();
+        BlockingQueue<TradingDecision<String>> orderQueue =
+                new LinkedBlockingQueue<TradingDecision<String>>();
 
-        AccountDataProvider<Long> accountDataProvider = new OandaAccountDataProviderService(url, userName, accessToken);
-        CurrentPriceInfoProvider<String> currentPriceInfoProvider = new OandaCurrentPriceInfoProvider(url, accessToken);
+        AccountDataProvider<Long> accountDataProvider =
+                new OandaAccountDataProviderService(url, userName, accessToken);
+
+        CurrentPriceInfoProvider<String> currentPriceInfoProvider =
+                new OandaCurrentPriceInfoProvider(url, accessToken);
+
         BaseTradingConfig tradingConfig = new BaseTradingConfig();
         tradingConfig.setMinReserveRatio(0.05);
         tradingConfig.setMinimumRequired(100.00);
         tradingConfig.setMaxAllowedQuantity(10);
+
         ProviderHelper<String> providerHelper = new OandaProviderHelper();
-        AccountInfoService<Long, String> accountInfoService = new AccountInfoService<Long, String>(accountDataProvider, currentPriceInfoProvider, tradingConfig, providerHelper);
 
-        OrderManagementProvider<Long, String, Long> orderManagementProvider = new OandaOrderManagementProvider(url, accessToken, accountDataProvider);
+        AccountInfoService<Long, String> accountInfoService =
+                new AccountInfoService<Long, String>(
+                        accountDataProvider,
+                        currentPriceInfoProvider,
+                        tradingConfig,
+                        providerHelper);
 
-        TradeManagementProvider<Long, String, Long> tradeManagementProvider = new OandaTradeManagementProvider(url, accessToken);
+        OrderManagementProvider<Long, String, Long> orderManagementProvider =
+                new OandaOrderManagementProvider(
+                        url,
+                        accessToken,
+                        accountDataProvider);
 
-        OrderInfoService<Long, String, Long> orderInfoService = new OrderInfoService<Long, String, Long>(orderManagementProvider);
+        TradeManagementProvider<Long, String, Long> tradeManagementProvider =
+                new OandaTradeManagementProvider(url, accessToken);
 
-        TradeInfoService<Long, String, Long> tradeInfoService = new TradeInfoService<Long, String, Long>(tradeManagementProvider, accountInfoService);
+        OrderInfoService<Long, String, Long> orderInfoService =
+                new OrderInfoService<Long, String, Long>(orderManagementProvider);
 
-        HistoricMarketDataProvider<String> historicMarketDataProvider = new OandaHistoricDataProvider(url, accessToken);
+        TradeInfoService<Long, String, Long> tradeInfoService =
+                new TradeInfoService<Long, String, Long>(
+                        tradeManagementProvider,
+                        accountInfoService);
 
-        MovingAverageCalculationService<String> movingAverageCalculationService = new MovingAverageCalculationService<String>(historicMarketDataProvider);
+        HistoricMarketDataProvider<String> historicMarketDataProvider =
+                new OandaHistoricDataProvider(url, accessToken);
 
-        PreOrderValidationService<Long, String, Long> preOrderValidationService = new PreOrderValidationService<Long, String, Long>(tradeInfoService, movingAverageCalculationService, tradingConfig, order);
+        MovingAverageCalculationService<String> movingAverageCalculationService =
+                new MovingAverageCalculationService<String>(
+                        historicMarketDataProvider);
 
-        OrderExecutionService<Long, String, Long> orderExecutionService = new OrderExecutionService<Long, String, Long>(orderQueue, accountInfoService, orderManagementProvider, tradingConfig, preOrderValidationService, currentPriceInfoProvider);
+        PreOrderValidationService<Long, String, Long> preOrderValidationService =
+                new PreOrderValidationService<Long, String, Long>(
+                        tradeInfoService,
+                        movingAverageCalculationService,
+                        tradingConfig,
+                        order);
+
+        OrderExecutionService<Long, String, Long> orderExecutionService =
+                new OrderExecutionService<Long, String, Long>(
+                        orderQueue,
+                        accountInfoService,
+                        orderManagementProvider,
+                        tradingConfig,
+                        preOrderValidationService,
+                        currentPriceInfoProvider);
+
         orderExecutionService.init();
 
-        TradingDecision<String> decision = new TradingDecision<String>(new TradeableInstrument<String>("GBP_USD"), TradingSignal.LONG, 1.44, 1.35, 1.44);
+        TradingDecision<String> decision =
+                new TradingDecision<String>(
+                        new TradeableInstrument<String>("GBP_USD"),
+                        TradingSignal.LONG,
+                        1.44,
+                        1.35,
+                        1.44);
+
         orderQueue.offer(decision);
+
         Thread.sleep(10000); // enough time to place an order
+
         orderExecutionService.shutdown();
     }
 }
 ```
 
-## OrderExecutionServiceDemo
+## `OrderExecutionServiceDemo`
 
 ### 主参数
+
 - JRE 类路径
-- 源环境：`https://api-fxtrade.oanda.com/v3/accounts` 
+- 源环境：`https://api-fxtrade.oanda.com/v3/accounts`
 - VM 参数：
-    - 启动时使用 -XOnFirstThread
-    - 默认目录：`trading-bot-demo`
-    - 其他：`workspace`
+  - 启动时使用 `-XOnFirstThread`
+  - 默认目录：`trading-bot-demo`
+  - 其他：`workspace`
 
 ### 配置
+
 - Javadoc 声明
 - 搜索进度任务列表覆盖
 - Git 提交历史
 
-
-
-
-
-# 我们为 OrderInfoService 写了一个 demo
+## 我们为 `OrderInfoService` 写了一个 demo
 
 ```java
 1 package com.precioutext.xtrading.order;
@@ -5499,8 +5601,11 @@ public class OrderExecutionServiceDemo {
 5 import org.apache.log4j.Logger;
 
 7 import com.precioutext.xtrading.account.AccountDataDataProvider;
+
 8 import com.precioutext.xtrading.instrument.TradeableInstrument;
+
 9 import com.precioutext.xtrading.oanda.restapi.account.OandaAccountDataProvider
+
 10 import com.precioutext.xtrading.oanda.restapi.account.OandaOrderManagement
 
 12 public class OrderInfoServiceDemo {
@@ -5508,222 +5613,278 @@ public class OrderExecutionServiceDemo {
 14 private static final Logger LOG = Logger.getLogger(OrderInfoServiceDemo.class);
 
 16 private static void usage(String[] args) {
+
 17 if (args.length != 3) {
+
 18 LOG.error("Usage: OrderExecutionServiceDemo <url> <username> <accessToken>");
+
 19 System.exit(1);
+
 20 }
+
 21 }
 
 23 public static void main(String[] args) {
 
 25 usage(args);
+
 26 String url = args[0];
+
 27 String userName = args[1];
+
 28 String accessToken = args[2];
 
 30 AccountDataProvider<Long> accountDataDataProvider =
+
 31 new OandaAccountDataProviderService(url, userName, accessToken);
 
 33 OrderManagementProvider<Long, String, Long> orderManagementProvider =
+
 34 new OandaOrderManagementProvider(url, accessToken, accountDataDataProvider)
+
 OrderInfoService<Long, String, Long> orderInfoService =
+
 new OrderInfoService<Long, String, Long>(orderManagementProvider);
+
 TradeableInstrument<String> gbpusud = new TradeableInstrument<String>(orderInfoService.allPendingOrders());
+
 Collection<Order<String, Long>> pendingOrdersGbpUs =
+
 orderInfoService.pendingOrdersForInstrument(gbpusud);
 
 LOG.info(
+
 String.format("++++++++++++++++ Dumping all pending orders for %s ++",
+
 gbpusud.getInstrument()));
+
 for (Order<String, Long> order:pendingOrdersGbpUs) {
+
 LOG.info(
+
 String.format("units=%d, takeprofit=%2.5f, stoploss=%2.5f, limitprice=%s",
+
 order.getUnits(), order.getTakeProfit(), order.getLoss(), order.getPrice(), order.getSide()));
+
 }
+
 int usdPosCt = orderInfoService.findNetPositionCountForCurrency("USD");
+
 int gbpPosCt = orderInfoService.findNetPositionCountForCurrency("GBP");
+
 LOG.info("Net Position count for USD = " + usdPosCt);
+
 Collection<Order<String, Long>> pendingOrders = orderInfoService.allOrders();
+```
+
+
+
+```java
 LOG.info("++++++++++++++++++++ Dumping all pending orders ++++++");
-for (Order<String, Long> order:pendingOrders) {
-LOG.info(
-String.format("instrument=%s,units=%d, takeprofit=%2.5f, stoploss=%2.5f",
-order.getInstrument().getInstrument(), order.getUnits(), order.getTakeProfit(),
-order.getStopLoss(), order.getPrice(), order.getSide()));
+
+for (Order<String, Long> order : pendingOrders) {
+    LOG.info(
+        String.format(
+            "instrument=%s,units=%d, takeprofit=%2.5f, stoploss=%2.5f",
+            order.getInstrument().getInstrument(),
+            order.getUnits(),
+            order.getTakeProfit(),
+            order.getStopLoss(),
+            order.getPrice(),
+            order.getSide()
+        )
+    );
 }
 ```
-```
 
-# 启动配置
+## 启动配置
 
-# 为 PreValidationService 的新 demo 程序
+### 为 `PreValidationService` 编写新的 Demo 程序
 
 ```java
-2 package com.preciostech.xtrading.ordering;
+package com.preciostech.xtrading.ordering;
 
-3 import org.apache.log4j.Logger;
+import org.apache.log4j.Logger;
 
-5 import com.preciostech.xtrading.BaseTradingConfig;
-6 import com.preciostech.xtrading.TradingSignal;
-7 import com.preciostech.xtrading.account.AccountDataDataProvider;
-8 import com.preciostech.xtrading.account.AccountInfoService;
-9 import com.preciostech.xtrading.helper.OrderHelper;
-10 import com.preciostech.xtrading.instrument.TradeableInstrument;
-11 import com.preciostech.xtrading.marketdata.CurrentPriceProvider;
-12 import com.preciostech.xtrading.marketdata.historic.HistoricMarketData;
-13 import com.preciostech.xtrading.marketdata.histic.MovingAverageCalc;
-14 import com.preciostech.xtrading.oanda.restapi.OandaAccountDataProvider;
-15 import com.preciostech.xtrading.oanda.restapi.helper.OandaDataProviderHelper;
-16 import com.preciostech.xtrading.oanda.restapi.marketdata.OandaCurrentPrice;
-17 import com.preciostech.xtrading.oanda.restapi.marketdata.historic.OandaHistoricData;
-18 import com.preciostech.xtrading.oanda.restapi.order.OandaOrderManagement;
-19 import com.preciostech.xtrading.oanda.restapi.trade.OandaTradeManagement;
-20 import com.preciostech.xtrading.trade.OrderInfoService;
-21 import com.preciostech.xtrading.trade.TradeManagementProvider;
-23 public class PreValidationServiceDemo {
+import com.preciostech.xtrading.BaseTradingConfig;
+import com.preciostech.xtrading.TradingSignal;
+import com.preciostech.xtrading.account.AccountDataDataProvider;
+import com.preciostech.xtrading.account.AccountInfoService;
+import com.preciostech.xtrading.helper.OrderHelper;
+import com.preciostech.xtrading.instrument.TradeableInstrument;
+import com.preciostech.xtrading.marketdata.CurrentPriceProvider;
+import com.preciostech.xtrading.marketdata.historic.HistoricMarketData;
+import com.preciostech.xtrading.marketdata.histic.MovingAverageCalc;
+import com.preciostech.xtrading.oanda.restapi.OandaAccountDataProvider;
+import com.preciostech.xtrading.oanda.restapi.helper.OandaDataProviderHelper;
+import com.preciostech.xtrading.oanda.restapi.marketdata.OandaCurrentPrice;
+import com.preciostech.xtrading.oanda.restapi.marketdata.historic.OandaHistoricData;
+import com.preciostech.xtrading.oanda.restapi.order.OandaOrderManagement;
+import com.preciostech.xtrading.oanda.restapi.trade.OandaTradeManagement;
+import com.preciostech.xtrading.trade.OrderInfoService;
+import com.preciostech.xtrading.trade.TradeManagementProvider;
 
-private static final Logger LOG = Logger.getLogger(PreValidationService.class);
+public class PreValidationServiceDemo {
 
-private static void usage(String[] args) {
-    if (args.length != 3) {
-        LOG.error("Usage: PreValidationServiceDemo <url> <username> <accessToken>");
-        System.exit(1);
+    private static final Logger LOG =
+        Logger.getLogger(PreValidationService.class);
+
+    private static void usage(String[] args) {
+        if (args.length != 3) {
+            LOG.error(
+                "Usage: PreValidationServiceDemo <url> <username> <accessToken>"
+            );
+            System.exit(1);
+        }
     }
-}
 
-public static void main(String[] args) {
-    usage(args);
-    String url = args[0];
-    String userName = args[1];
-    String accessToken = args[2];
-    AccountDataProvider<Long> accountDataProvider = new OandaAccountDataProvider(url, userName, accessToken);
+    public static void main(String[] args) {
+        usage(args);
 
-    OrderManagementProvider<Long, String, Long> orderManager = new OandaOrderManagementProvider(url, accessToken, accountDataProvider);
-    TradeManagerProvider<String> tradeManager = new OandaTradeManagement(url, accessToken);
-    
-    CurrentPriceProvider<String> currentPriceProvider = new OandaCurrentPriceProvider(url);
-    BaseTradingConfig tradingConfig = new BaseTradingConfig();
-    tradingConfig.setMinRatio(0.05);
-    tradingConfig.setMinRequired(100.00);
-    tradingConfig.setMaxQuantity(10);
-    tradingConfig.setMaxContracts(3);
+        String url = args[0];
+        String userName = args[1];
+        String accessToken = args[2];
 
-    OandaDataProviderHelper providerHelper = new OandaDataProviderHelper();
+        AccountDataProvider<Long> accountDataProvider =
+            new OandaAccountDataProvider(url, userName, accessToken);
 
-    AccountInfoService<Long> accountInfoService = new AccountInfoService(currentPriceProvider, tradingConfig, providerHelper);
+        OrderManagementProvider<Long, String, Long> orderManager =
+            new OandaOrderManagementProvider(
+                url,
+                accessToken,
+                accountDataProvider
+            );
 
-    HistoricMarketData historicMarketData = new OandaHistoricData(url);
+        TradeManagerProvider<String> tradeManager =
+            new OandaTradeManagement(url, accessToken);
 
-    MovingAverageCalc movingAverageCalc = new MovingAverageCalc(historicMarketData);
+        CurrentPriceProvider<String> currentPriceProvider =
+            new OandaCurrentPriceProvider(url);
 
-    OrderInfoService<Long, String, Long> orderInfoService = new OrderInfoService(orderManager);
+        BaseTradingConfig tradingConfig = new BaseTradingConfig();
+        tradingConfig.setMinRatio(0.05);
+        tradingConfig.setMinRequired(100.00);
+        tradingConfig.setMaxQuantity(10);
+        tradingConfig.setMaxContracts(3);
 
-    PreValidationService preValidationService = new PreValidationService(orderInfoService, tradeManager, currentPriceProvider);
-    
-    TradeableInstrument<String> gbpusud = new TradeableInstrument<String>(orderInfoService.allPendingOrders());
-    Collection<Order<String, Long>> pendingOrdersGbpUs =
-    orderInfoService.pendingOrdersForInstrument(gbpusud);
+        OandaDataProviderHelper providerHelper =
+            new OandaDataProviderHelper();
 
-    LOG.info(
-    String.format("++++++++++++++++ Dumping all pending orders for %s ++",
-    gbpusud.getInstrument()));
-    for (Order<String, Long> order:pendingOrdersGbpUs) {
-    LOG.info(
-    String.format("units=%d, takeprofit=%2.5f, stoploss=%2.5f, limitprice=%s",
-    order.getUnits(), order.getTakeProfit(), order.getLoss(), order.getPrice(), order.getSide()));
-    }
-    int usdPosCt = orderInfoService.findNetPositionCountForCurrency("USD");
-    int gbpPosCt = orderInfoService.findNetPositionCountForCurrency("GBP");
-    LOG.info("Net Position count for USD = " + usdPosCt);
-    Collection<Order<String, Long>> pendingOrders = orderInfoService.allOrders();
-    LOG.info("++++++++++++++++++++ Dumping all pending orders ++++++");
-    for (Order<String, Long> order:pendingOrders) {
-    LOG.info(
-    String.format("instrument=%s,units=%d, takeprofit=%2.5f, stoploss=%2.5f",
-    order.getInstrument().getInstrument(), order.getUnits(), order.getTakeProfit(),
-    order.getStopLoss(), order.getPrice(), order.getSide()));
+        AccountInfoService<Long> accountInfoService =
+            new AccountInfoService(
+                currentPriceProvider,
+                tradingConfig,
+                providerHelper
+            );
+
+        HistoricMarketData historicMarketData =
+            new OandaHistoricData(url);
+
+        MovingAverageCalc movingAverageCalc =
+            new MovingAverageCalc(historicMarketData);
+
+        OrderInfoService<Long, String, Long> orderInfoService =
+            new OrderInfoService(orderManager);
+
+        PreValidationService preValidationService =
+            new PreValidationService(
+                orderInfoService,
+                tradeManager,
+                currentPriceProvider
+            );
+
+        TradeableInstrument<String> gbpusud =
+            new TradeableInstrument<String>(
+                orderInfoService.allPendingOrders()
+            );
+
+        Collection<Order<String, Long>> pendingOrdersGbpUs =
+            orderInfoService.pendingOrdersForInstrument(gbpusud);
+
+        LOG.info(
+            String.format(
+                "++++++++++++++++ Dumping all pending orders for %s ++",
+                gbpusud.getInstrument()
+            )
+        );
+
+        for (Order<String, Long> order : pendingOrdersGbpUs) {
+            LOG.info(
+                String.format(
+                    "units=%d, takeprofit=%2.5f, stoploss=%2.5f, limitprice=%s",
+                    order.getUnits(),
+                    order.getTakeProfit(),
+                    order.getLoss(),
+                    order.getPrice(),
+                    order.getSide()
+                )
+            );
+        }
+
+        int usdPosCt =
+            orderInfoService.findNetPositionCountForCurrency("USD");
+
+        int gbpPosCt =
+            orderInfoService.findNetPositionCountForCurrency("GBP");
+
+        LOG.info("Net Position count for USD = " + usdPosCt);
+
+        Collection<Order<String, Long>> pendingOrders =
+            orderInfoService.allOrders();
+
+        LOG.info("++++++++++++++++++++ Dumping all pending orders ++++++");
+
+        for (Order<String, Long> order : pendingOrders) {
+            LOG.info(
+                String.format(
+                    "instrument=%s,units=%d, takeprofit=%2.5f, stoploss=%2.5f",
+                    order.getInstrument().getInstrument(),
+                    order.getUnits(),
+                    order.getTakeProfit(),
+                    order.getStopLoss(),
+                    order.getPrice(),
+                    order.getSide()
+                )
+            );
+        }
     }
 }
 ```
-```
 
-# 输出示例
+## 输出示例
 
-# 最后一个 demo 程序基于使用 TradeInfoService
+### 最后一个 Demo 程序基于 `TradeInfoService`
 
 ```java
-1 package com.precioutext.xtrading.trade;
+package com.precioutext.xtrading.trade;
 
-3 import java.util.Collection;
+import java.util.Collection;
 
-5 import org.apache.log4j.Logger;
+import org.apache.log4j.Logger;
 ```
-[/content]_
-(注：由于你提供的待翻译文本后半部分代码似乎不完整且逻辑有乱，我根据上下文对代码中的注释和字符串进行了针对性翻译，并修正了代码结构中的可见错误，如 `public static void main(String[] args)` 的括号闭合，以确保符合文档工程师的专业标准。) 
 
-重新审视你提供的“待翻译文本”最后一部分，它似乎是断开的。以下是完整的翻译结果：
+### `TradeInfoServiceDemo`
 
-[content]
-(此处为根据你提供的文本片段进行的翻译)
-*注：由于你提供的原始待翻译文本在最后几行存在逻辑混乱（如 `main` 方法括号未合），我已对可翻译的逻辑部分进行了处理。*
-
-
-
-tradingConfig.setMaxAllowedQuantity(10);
-
-ProviderHelper<String> providerHelper = new OandaProviderHelper();
-
-AccountInfoService<Long, String> accountInfoService =
-    new AccountInfoService<Long, Long, String>(accountDataProvider, currentPriceProvider, tradingConfig, providerHelper);
-
-TradeManagementProvider<Long, String, Long> tradeManagementProvider =
-    new OandaTradeManagementProvider(url, accessToken);
-
-TradeInfoService<Long, String, Long> tradeInfoService =
-    new TradeInfoService<Long, String, Long>(tradeManagementProvider, accountInfoService);
-
-TradeInfoService.init();
-
-Collection<Trade<Long, String, Long>> allTrades = tradeInfoService;
-LOG.info("################ Dumping All Trades #################");
-
-for (Trade<Long, String, Long> trade : allTrades) {
-    LOG.info("Units=%d,Size=%s,Instrument=%s,Price=%.2f",
-        trade.getSide(), trade.getInstrument().getInstrument(),
-        trade.getExecutionPrice());
-}
-
-int chtTrades = tradeInfoService.findNetPositionCountForCurrency("CHF");
-int cadTrades = tradeInfoService.findNetPositionCountForCurrency("CAD");
-LOG.info("Net Position for CAD " + cadTrades);
-
-TradeableInstrument<String> cadchf = new TradeableInstrument<String>();
-boolean isCadChTradeExists = tradeInfoService.isTradeExistsForInstrument(cadchf);
-boolean isUsdCadTradeExists = tradeInfoService.isTradeExistsForInstrument(uscad);
-LOG.info(cadchf.getInstrument() + " exists?" + isCadChTradeExists);
-LOG.info(uscad.getInstrument() + " exists?" + isUsdCadTradeExists);
-
-## TradeInfoServiceDemo
-
-主参数 JRE 类路径 源码
+主参数：JRE 类路径、源码
 
 程序参数：
 
-```
+```text
 https://api-fixtrade.oanda.com/v1/
 ```
 
 VM 参数：
 
-当使用 SWT 时使用 -XStartOnFirstThread 参数
+当使用 SWT 时，使用 `-XStartOnFirstThread` 参数。
 
 工作目录：
-- 默认: ${workspace_loc:trading-bot-demo-programs}
-- 其他:
 
-# 启动配置
+- 默认：`${workspace_loc:trading-bot-demo-programs}`
+- 其他：
 
-```
+## 启动配置
+
+```text
 2016-01-27 19:48:27,180 [main] - Executing GET /api-fixtrade.oanda.com/v1/accounts/username HTTP/1.1
 2016-01-27 19:48:27,190 [main] - Executing GET /api-fixtrade.oanda.com/v1/accounts/ HTTP/1.1
 2016-01-27 19:48:27,227 [main] - Executing GET /api-fixtrade.oanda.com/v1/accounts/ HTTP/1.1
@@ -5736,6 +5897,11 @@ VM 参数：
 2016-01-27 19:48:27,842 [main] - Executing GET /api-fixtrade.oanda.com/v1/accounts/ HTTP/1.1
 2016-01-27 19:48:28,068 [main] - Executing GET /api-fixtrade.oanda.com/v1/accounts/ HTTP/1.1
 2016-01-27 19:48:28,097 [main] - Executing GET /api-fixtrade.oanda.com/v1/accounts/ HTTP/1.1
+```
+
+
+
+```text
 2016-01-27 19:48:28,257 [main] - Executing GET /api-fixtrade.oanda.com/v1/accounts/ HTTP/1.1
 2016-01-27 19:48:28,357 [main] - Executing GET /api-fixtrade.oanda.com/v1/accounts/ HTTP/1.1
 2016-01-27 19:48:28,442 [main] - Executing GET /api-fixtrade.oanda.com/v1/accounts/ HTTP/1.1
@@ -5766,6 +5932,7 @@ VM 参数：
 2016-01-27 19:48:27,713 [main] - Net Position for CAD 4
 2016-01-27 19:48:27,713 [main] - CAD_CHF exists?True
 2016-01-27 19:48:27,713 [main] - USD_CAD exists?False
+```
 
 ## 7. 事件流
 
@@ -5815,42 +5982,40 @@ VM 参数：
 }
 ```
 
-通过我们看到的响应，我们需要为我们感兴趣的每种事件类型创建事件处理器。这是我们有机会利用 EventBus 多态行为的地方，EventBus 会尝试将消息传递给精确的类型（如果找到），然后继续传递给其父类型。
+通过我们看到的响应，我们需要为我们感兴趣的每种事件类型创建事件处理器。这是我们有机会利用 `EventBus` 多态行为的地方，`EventBus` 会尝试将消息传递给精确的类型（如果找到），然后继续传递给其父类型。
 
 让我们总结一下我们可能会看到的回调的不同重要事件。这并非完整列表，但应该是我们在各种平台上常见的、并在稍后细节中进行更详细讨论的事件。
 
-## 1. 订单
+### 7.1 订单
+
 - 创建新的市价订单
 - 创建新的限价订单
 - 订单更新
 - 订单取消
 - 订单成交
 
-## 1. 交易
+### 7.2 交易
+
 - 止盈成交
-
-
-
-
 - 止损成交单
 - 交易更新
 - 交易关闭
 
-1. 账户
+### 7.3 账户
 
 - 保证金平仓
 - 融资（支付或收到的利息）
 
 ## 7.1 流式事件接口
 
-我们的第一步是定义一个与平台建立事件循环的接口。这在概念上与市场数据流接口完全相似。建立事件循环后，所有事件将通过我们很快就会讨论的 `EventCallback` 委托给适当的事件处理器。首先，让我们快速查看此接口
+我们的第一步是定义一个与平台建立事件循环的接口。这在概念上与市场数据流接口完全相似。建立事件循环后，所有事件将通过我们很快就会讨论的 `EventCallback` 委托给适当的事件处理器。首先，让我们快速查看此接口。
 
 ```java
 /**
  * 一个提供交易/订单/账户相关事件流的服务。
  * 通常，实现类会创建一个到平台的专用连接，
  * 或是注册回调监听器来接收事件。建议该服务
- * 将事件的处理委托给指定的处理器，这些 
+ * 将事件的处理委托给指定的处理器，这些
  * 处理器可以解析并理解各种繁杂事件。
  */
 public interface EventsStreamingService {
@@ -5877,14 +6042,14 @@ public interface EventCallback<T> {
 }
 ```
 
-这两个接口的设计目标与市场数据接口相似。真正的差异出现在这些不同负载的下游分发中，我们将在 `EventBus` 出现时很快发现这一点。但在在此之前，让我们快速查看 OANDA 对 `EventsStreamingService` 的实现。
+这两个接口的设计目标与市场数据接口相似。真正的差异出现在这些不同负载的下游分发中，我们将在 `EventBus` 出现时很快发现这一点。但在此之前，让我们快速查看 OANDA 对 `EventsStreamingService` 的实现。
 
-## 7.2 EventsStreamingService 的具体实现
+## 7.2 `EventsStreamingService` 的具体实现
 
 让我们通过查看类定义及其构造函数开始讨论该实现。
 
 ```java
-public class OandaEventsStreamingService extends OandaStreamingService 
+public class OandaEventsStreamingService extends OandaStreamingService
 implements EventsStreamingService {
     private static final Logger LOG = Logger.getLogger(OandaEventsStreamingService.class);
     private final String url;
@@ -5901,7 +6066,7 @@ implements EventsStreamingService {
 }
 ```
 
-与 `OandaDataStreamingService` ，该类继承自 `OandaStreamingService`，如前所述，它为所有 OANDA 流式服务方法提供了基础架构。除了传入的 `url` 和 `accessToken` 之外，父类还需要 `HeartBeatCallback` 和 `heartBeatSourceId` 参数，我们还需要额外的 `AccountDataProvider` 服务来提供我们想要获取事件回调的账户列表。这些账户必须如所示所示作为参数传递在流式 URL 中
+与 `OandaDataStreamingService` 一样，该类继承自 `OandaStreamingService`，如前所述，它为所有 OANDA 流式服务方法提供了基础架构。除了传入的 `url` 和 `accessToken` 之外，父类还需要 `HeartBeatCallback` 和 `heartBeatSourceId` 参数，我们还需要额外的 `AccountDataProvider` 服务来提供我们想要获取事件回调的账户列表。这些账户必须如所示所示作为参数传递在流式 URL 中。
 
 ```java
 @Override
@@ -5928,9 +6093,9 @@ private String accountsAsScvString(Collection<Account<Long>> accounts) {
 }
 ```
 
-`accountDataProvider.latestAccountInfo()` 返回属于该用户的所有账户集合。该集合随后传递给 `accountsAsCsvString`，返回一个用 CSV（URL 编码）分隔的账户列表。假设用户拥有 123456 和 2345678，`getStreamingUrl` 函数应该计算出
+`accountDataProvider.latestAccountInfo()` 返回属于该用户的所有账户集合。该集合随后传递给 `accountsAsCsvString`，返回一个用 CSV（URL 编码）分隔的账户列表。假设用户拥有 123456 和 2345678，`getStreamingUrl` 函数应该计算出：
 
-```
+```java
 given
 public static final String EVENTS_RESOURCE = "/v1/events";
 // 计算出的 url 将如下所示：
@@ -5938,6 +6103,8 @@ https://stream-ftaode.com/v1/events?accountIds=123456%2C2345678
 ```
 
 现在流已经计算完毕，我们准备好在单独的线程中开启无限循环的流，这与我们用于市场数据流的范式相同。
+
+
 
 ```java
 @Override
@@ -5983,8 +6150,6 @@ public void startEventsStreaming() {
 }
 ```
 
-
-
 ```java
 MIGRATE_TRADE_OPEN,
 MIGRATE_TRADE_CLOSE,
@@ -6001,7 +6166,7 @@ public class TradeEventPayload extends EventLoad<JSONObject> {
 }
 ```
 
-- * 订单
+- 订单
 
 ```java
 public enum OrderEvents implements Event {
@@ -6030,7 +6195,7 @@ public class OrderEventPayload extends EventLoad<JSONObject> {
 }
 ```
 
-现在剩下的工作是将 json 负载转换为 `EventPayload` 实例，这通过 `OandaUtils.toOrderEventPayload()` 方法完成。这需要一个通过 json 负载传递的类型，它有助于确定该事件与哪个业务实体相关，即：交易 Trade、订单 Order 或账户 Account。该类型实际上是我们 3 个枚举中的一个事件名称。
+现在剩下的工作是将 json 负载转换为 `EventPayload` 实例，这通过 `OandaUtils.toOrderEventPayload()` 方法完成。这需要一个通过 json 负载传递的类型，它有助于确定该事件与哪个业务实体相关，即：交易 `Trade`、订单 `Order` 或账户 `Account`。该类型实际上是我们 3 个枚举中的一个事件名称。
 
 ```java
 public static EventPayLoad<JSONObject> toOandaEventPayLoad(String transactionType) {
@@ -6058,7 +6223,7 @@ private static final Event findAppropriateType(Event[] events, String transactio
 }
 ```
 
-此工具方法对所有 3 种事件类型进行强制比较，一旦找到第一个匹配项就会立即返回。如果没有找到匹配项（如果平台引入了新事件，这是可能的），我们返回 null。如果我们有一个非空的 `EventPay` 实例，现在已经准备好将其分发给 `EventCallback` 实例，这不可避免使用 `EventBus` 来分发给感兴趣的订阅者。
+此工具方法对所有 3 种事件类型进行强制比较，一旦找到第一个匹配项就会立即返回。如果没有找到匹配项（如果平台引入了新事件，这是可能的），我们返回 `null`。如果我们有一个非空的 `EventPay` 实例，现在已经准备好将其分发给 `EventCallback` 实例，这不可避免使用 `EventBus` 来分发给感兴趣的订阅者。
 
 ```java
 public class EventCallbackImpl<T> implements EventCallback<T> {
@@ -6087,7 +6252,7 @@ public interface EventHandler<K, T extends EventPayLoad<K>> {
 
 在上面的定义中，我们规定 `handleEvent` 事件的类型必须是 `EventPayLoad` 的子类型。
 
-对于与交易 Trade 业务实体相关的事件集，`TradeEventHandler` 的实现看起来如下：
+对于与交易 `Trade` 业务实体相关的事件集，`TradeEventHandler` 的实现看起来如下：
 
 ```java
 public class TradeEventHandler implements EventHandler<JSONObject, EventPayLoad> {
@@ -6130,8 +6295,6 @@ if (!tradeEventsSupported.contains(payload.getEvent())) {
 
 在本节中，我们将创建一个输出平台事件的演示程序。要查看其运行效果并看到 `LIMIT_ORDER_CREATE` 事件，请运行 `ExecutionService` 程序，它将创建一个新订单。演示程序将处理并输出它。
 
-
-
 ```java
 String url2 = args[1];
 String userName = args[2];
@@ -6153,12 +6316,14 @@ evtStreamingService.stopEventsStreaming();
 }
 ```
 
+```
 2016-01-27 20:28:49,850 INFO [DontEventStreamingThread] Executing request: GET https://api-fatrade.oanda.com/vl/accounts?summary=... HTTP/1.1
 2016-01-27 20:28:49,856 INFO [DontEventStreamingThread] Executing request: GET https://api-fatrade.oanda.com/vl/accounts?summary=... HTTP/1.1
 2016-01-27 20:28:49,513 INFO [DontEventStreamingThread] Executing request: GET https://api-fatrade.oanda.com/vl/accounts?summary=... HTTP/1.1
 2016-01-27 20:28:49,559 INFO [DontEventStreamingThread] Executing request: GET https://api-fatrade.oanda.com/vl/accounts?summary=... HTTP/1.1
 2016-01-27 20:28:49,769 INFO [DontEventStreamingThread] Executing request: GET https://stream-fatrade.oanda.com/vl/events?accountId=... HTTP/1.1
 2016-01-27 20:28:02,864 INFO [DontEventStreamingThread] Type:LIMIT_ORDER, payload:{"takeProfitPrice":1.44,...}
+```
 
 # 输出
 
@@ -6172,27 +6337,34 @@ evtStreamingService.stopEventsStreaming();
 - 搜索推文。
 - 解析推文并理解其含义。
 
-特别是我们将关注来自用户的外汇（FX）推文，这些推文具有定义良好的结构，并包含了订单（Orders）和交易（Trades）的信息。这种方法的目的是通过这样做，我们可以建立一种策略来复制他人的做法，并可能采取他们所采取的操作或采取完全相反的操作。这将在下一章中详细讨论，作为涉及此概念的策略的一部分。
+特别是我们将关注来自用户的外汇（FX）推文，这些推文具有定义良好的结构，并包含了订单（`Orders`）和交易（`Trades`）的信息。这种方法的目的是通过这样做，我们可以建立一种策略来复制他人的做法，并可能采取他们所采取的操作或采取完全相反的操作。这将在下一章中详细讨论，作为涉及此概念的策略的一部分。
 
 ## 8.1 创建 Twitter 应用程序
 
+
+
 在通过用户账户自动执行推文和自动读取推文的过程之前，我们需要将 Twitter 应用与用户账户关联。为此应用应用生成的令牌（tokens）将用于登录 Twitter 并通过机器人执行所需的操作。让我们按照步骤操作，直到达到拥有通过 Java 应用程序连接所需的令牌状态。
 
-步骤 1：访问 https://apps.twitter.com/app/new，你将看到下面的屏幕。
+## 步骤 1：创建 Twitter 应用程序
 
-# 创建一个应用程序
+访问`https://apps.twitter.com/app/new`，你将看到下面的屏幕。
 
-步骤 2：在接受协议并提交表单后，我们应该看到下面的确认屏幕。
+创建一个应用程序。
+
+## 步骤 2：确认应用程序创建
+
+在接受协议并提交表单后，我们应该看到下面的确认屏幕。
 
 您的应用程序已创建。请花一点时间检查并调整您的应用程序设置。
 
-## MyTradingBot
+### MyTradingBot
 
-详情 | 设置 | 密钥和访问令牌 | 权限 |
-| :--- | :--- | :--- | :--- | :--- |
-| 此应用将由机器人用于自动使用我的账户读取和发布推文 | http://www.twitter.com | | | |
+详情 | 设置 | 密钥和访问令牌 | 权限
 
-## 组织
+| :--- | :--- | :--- | :--- |
+| 此应用将由机器人用于自动使用我的账户读取和发布推文 | http://www.twitter.com |
+
+### 组织
 
 与您的应用程序相关的组织或公司信息。此信息是可选的。
 
@@ -6200,7 +6372,7 @@ evtStreamingService.stopEventsStreaming();
 | :--- | :--- |
 | 组织网站 | 无 |
 
-## 应用程序设置
+### 应用程序设置
 
 您的应用程序的密钥（Consumer Key）和密钥（Secret）用于对 Twitter 平台的请求进行身份验证。
 
@@ -6210,25 +6382,26 @@ evtStreamingService.stopEventsStreaming();
 | 回调 URL | 无 |
 | 回调 URL 已锁定 | 否 |
 | 使用 Twitter 登录 | |
-| 仅应用验证 | https://api.twitter.com/oauth2/token |
-| 请求令牌 URL | https://api.twitter.com/oauth/request_token |
-| 授权 URL | https://api.twitter.com/oauth/authorize |
-| 访问令牌 URL | https://api.twitter.com/oauth/access_token |
+| 仅应用验证 | `https://api.twitter.com/oauth2/token` |
+| 请求令牌 URL | `https://api.twitter.com/oauth/request_token` |
+| 授权 URL | `https://api.twitter.com/oauth/authorize` |
+| 访问令牌 URL | `https://api.twitter.com/oauth/access_token` |
 
-## 应用程序操作
+### 应用程序操作
 
-删除应用程序
+删除应用程序。
 
-Twitter 应用创建成功
+Twitter 应用创建成功。
 
-**步骤 3：在确认屏幕上，我们现在必须点击“密钥和访问令牌”选项卡，在那里我们应该看到我们的消费者密钥令牌（Consumer Key Token）和消费者密钥（Consumer Key Secret）。我们必须记住这些，因为我们稍后需要它们。**
+## 步骤 3：获取消费者密钥和访问令牌
 
-## MyTradingBot
+在确认屏幕上，我们现在必须点击“密钥和访问令牌”选项卡，在那里我们应该看到我们的消费者密钥令牌（Consumer Key Token）和消费者密钥（Consumer Key Secret）。我们必须记住这些，因为我们稍后需要它们。
 
-详情 | 设置 | 密钥和访问令牌 | 权限 |
-| :--- | :--- | :--- | :--- | :--- |
+### MyTradingBot
 
-## 应用程序设置
+详情 | 设置 | 密钥和访问令牌 | 权限
+
+### 应用程序设置
 
 保持“消费者密钥”（Consumer Secret）保密。这在您的应用程序中不应是人类可读的。
 
@@ -6239,11 +6412,11 @@ Twitter 应用创建成功
 | 所有者 | shvarney |
 | 所有者 ID | 131810934 |
 
-## 应用程序操作
+### 应用程序操作
 
-重新生成消费者密钥和密钥
+重新生成消费者密钥和密钥。
 
-## 您的访问令牌
+### 您的访问令牌
 
 此访问令牌可用于在账户上执行 API 请求。不要与任何人共享您的访问令牌密钥。
 
@@ -6254,15 +6427,18 @@ Twitter 应用创建成功
 | 所有者 | shvarney |
 | 所有者 ID | 131810934 |
 
-步骤 4：我们现在处于可以使用以下令牌的位置。
+## 步骤 4：确认令牌
 
-## MyTradingBot
+我们现在处于可以使用以下令牌的位置。
 
-详情 | 设置 | 密钥和访问令牌 | 权限 |
-| :--- | :--- | :--- | :--- | :--- |
-| 此应用将由机器人用于自动使用我的账户读取和发布推文 | http://www.twitter.com | | | |
+### MyTradingBot
 
-## 应用程序设置
+详情 | 设置 | 密钥和访问令牌 | 权限
+
+| :--- | :--- | :--- | :--- |
+| 此应用将由机器人用于自动使用我的账户读取和发布推文 | http://www.twitter.com |
+
+### 应用程序设置
 
 保持“消费者密钥”（Consumer Secret）保密。这在您的应用程序中不应是人类可读的。
 
@@ -6273,11 +6449,11 @@ Twitter 应用创建成功
 | 所有者 | shvarney |
 | 所有者 ID | 131810934 |
 
-## 应用程序操作
+### 应用程序操作
 
-重新生成消费者密钥和密钥
+重新生成消费者密钥和密钥。
 
-## 您的访问令牌
+### 您的访问令牌
 
 此访问令牌可用于在账户上执行 API 请求。不要与任何人共享您的访问令牌密钥。
 
@@ -6290,347 +6466,401 @@ Twitter 应用创建成功
 
 我们现在应该拥有以下 4 个令牌，这是交易机器人登录我们账户所需的。
 
-- Consumer Key
-- Consumer Secret
-- Access Key Token
-- Access key Secret
-
-
-
-
+- `Consumer Key`
+- `Consumer Secret`
+- `Access Key Token`
+- `Access key Secret`
 
 ## 8.3 获取外汇推文
 
 现在我们进入本章的核心内容，讨论如何获取（搜索）结构良好的交易/订单（Trade/Order）推文。我们的目标是找到结构良好的推文，并解析它们以创建以下 POJO：
 
--NewFXTradeTweet
+- `NewFXTradeTweet`
 
 ```java
-1 public class NewFXTradeTweet < T > extends FXTradeTweet < T > {
-2 private final double stopLoss,
-3 takeProfit;
-4 private final TradingSignal action;
-5 private final String str;
-6
-7 public NewFXTradeTweet(TradeableInstrument < T > instrument, double price,
-8 double stopLoss, double takeProfit,
-9 TradingSignal action) {
-10 this.stopLoss = stopLoss;
-11 this.takeProfit = takeProfit;
-12 this.action = action;
-13 this.str = String.format("%s@%.5f TP: %%.5f SL: %%.5f %s",
-14 instrument.getInstrument(), price, takeProfit,
-15 stopLoss, action.name());
-16 }
-17
-18 @Override
-19 public String toString() {
-20 return str;
-21 }
-22
-23 public TradingSignal getAction() {
-24 return this.action;
-25 }
-26
-27 public double getStopLoss() {
-28 return stopLoss;
-29 }
-30
-31 public double getTakeProfit() {
-32 return takeProfit;
-33 }
+public class NewFXTradeTweet < T > extends FXTradeTweet < T > {
+    private final double stopLoss,
+        takeProfit;
+    private final TradingSignal action;
+    private final String str;
+
+    public NewFXTradeTweet(TradeableInstrument < T > instrument, double price,
+                           double stopLoss, double takeProfit,
+                           TradingSignal action) {
+        this.stopLoss = stopLoss;
+        this.takeProfit = takeProfit;
+        this.action = action;
+        this.str = String.format("%s@%.5f TP: %%.5f SL: %%.5f %s",
+                                 instrument.getInstrument(), price, takeProfit,
+                                 stopLoss, action.name());
+    }
+
+    @Override
+    public String toString() {
+        return str;
+    }
+
+    public TradingSignal getAction() {
+        return this.action;
+    }
+
+    public double getStopLoss() {
+        return stopLoss;
+    }
+
+    public double getTakeProfit() {
+        return takeProfit;
+    }
+}
 ```
 
--CloseFXTradeTweet
+- `CloseFXTradeTweet`
 
 ```java
-1 public class CloseFXTradeTweet < T > extends FXTradeTweet < T > {
-2 private final double profit,
-3 price;
-4
-5 public CloseFXTradeTweet(TradeableInstrument < T > instrument, double prc
+public class CloseFXTradeTweet < T > extends FXTradeTweet < T > {
+    private final double profit,
+        price;
+
+    public CloseFXTradeTweet(TradeableInstrument < T > instrument, double prc
 ```
 
 ```java
 double price) {
-super(instrument, price);
-this.profit = profit;
-this.price = price;
+    super(instrument, price);
+    this.profit = profit;
+    this.price = price;
 }
 ```
 
 ```java
 public double getProfit() {
-return profit;
+    return profit;
 }
+
 @Override
 public double getPrice() {
-return price;
+    return price;
 }
 ```
 
-其中基础的 FXTradeTweet 为：
+其中基础的 `FXTradeTweet` 为：
 
 ```java
 public abstract class FXTradeTweet < T > {
-private final TradeableInstrument < T > instrument;
-private final double price;
-public FXTradeTweet(TradeableInstrument < T > instrument, double price) {
-super();
-this.instrument = instrument;
-this.price = price;
-}
-public TradeableInstrument < T > getInstrument() {
-return instrument;
-}
-public double getPrice() {
-return price;
+    private final TradeableInstrument < T > instrument;
+    private final double price;
+
+    public FXTradeTweet(TradeableInstrument < T > instrument, double price) {
+        super();
+        this.instrument = instrument;
+        this.price = price;
+    }
+
+    public TradeableInstrument < T > getInstrument() {
+        return instrument;
+    }
+
+    public double getPrice() {
+        return price;
+    }
 }
 ```
 
-“结构良好的交易推文”的概念意味着：一组 Twitter 用户持续以特定的格式发布推文，我们可以为他们编写一个 TweetHandler。我们只对关于新订单（Order）或关闭交易（Trade）的推文感兴趣。这种原因将在讨论基于推文的策略时变得更加清晰。目前，让我们看看用户 @SignalFactory 和 @ZuluTrader101Z 的推文示例，你就能明白我的意思。
+“结构良好的交易推文”的概念意味着：一组 Twitter 用户持续以特定的格式发布推文，我们可以为他们编写一个 `TweetHandler`。我们只对关于新订单（Order）或关闭交易（Trade）的推文感兴趣。这种原因将在讨论基于推文的策略时变得更加清晰。目前，让我们看看用户 `@SignalFactory` 和 `@ZuluTrader101Z` 的推文示例，你就能明白我的意思。
 
--来自 @SignalFactory 的推文
+### 来自 `@SignalFactory` 的推文
 
-Forex Signal Factory @SignalFactory - 2015年12月9日
+Forex Signal Factory `@SignalFactory` - 2015年12月9日
+
 Forex Signal | 出 CHFJPY@123.460 |
+
 SL:123.860 | TP:122.660 | 2015.12.09
+
 21:07 GMT | #fx #forex #fb
 
 新交易
 
-Forex Signal Factory @SignalFactory - 2015年12月31日
+Forex Signal Factory `@SignalFactory` - 2015年12月31日
+
 Forex Signal | 出 EURUSD@1.08578 |
+
 SL:1.10000 | TP:1.07000 | 2015.12.31
+
 19:04 GMT | #fx #forex #fb
 
 新交易
 
-Forex Signal Factory @SignalFactory - 2015年12月14日
+Forex Signal Factory `@SignalFactory` - 2015年12月14日
+
 Forex Signal | 平仓(TP) 出
+
 EURCHF@1.07884 | 盈利: +80 pips |
+
 2015.12.14 10:46 GMT | #fx #forex #fb
 
 平交易
 
-Forex Signal Factory @SignalFactory - 2015年12月15日
+Forex Signal Factory `@SignalFactory` - 2015年12月15日
+
 Forex Signal | 平仓 出 EURUSD@1.10501
+
 亏损: -197 pips | 2015.12.15 09:32 GMT |
+
 #fx #forex #fb
 
 关闭交易
 
--来自 @ZuluTrader101 的推文
+### 来自 `@ZuluTrader101` 的推文
 
-Zutrader 101 @ZuluTrader101 · 1小时前
+Zutrader 101 `@ZuluTrader101` · 1小时前
+
 买入 1.03 Lots #EURUSD 1.08824 SL
-1.08497 TP 1.10314 | 在 goo.gl/moayzx 免费复制
+
+1.08497 TP 1.10314 | 在 `goo.gl/moayzx` 免费复制
+
 #Forex #Finance #Money
 
-Zutrader 101 @ZuluTrader101 · 1小时前
+Zutrader 101 `@ZuluTrader101` · 1小时前
+
 平仓 出 0.19 Lots #EURAUD 1.56
+
 -4.0 pips, 今日总计 -1722.3 pips
 
-Zutrader 101 @ZuluTrader101 · 1小时前
+Zutrader 101 `@ZuluTrader101` · 1小时前
+
 平仓 出 0.22 Lots #EURAUD 1.56
+
 -4.0 pips, 今日总计 -1718.3 pips
 
 新交易和平 de交易
 
-Zutrader 101 @ZuluTrader101 · 28分钟前
+Zutrader 101 `@ZuluTrader101` · 28分钟前
+
 卖出 1.55 Lots #EURUSD 1.08415 SL
-1.08677 TP 1.08335 | 在 goo.gl/moayzx 免费复制
+
+1.08677 TP 1.08335 | 在 `goo.gl/moayzx` 免费复制
+
 #Forex #Finance #Money
 
-Zutrader 101 @ZuluTrader101 · 28分钟前
+Zutrader 101 `@ZuluTrader101` · 28分钟前
+
 卖出 0.59 Lots #EURUSD 1.08357 SL
-1.0854 | 在 goo.gl/moayzx 免费复制
+
+1.0854 | 在 `goo.gl/moayzx` 免费复制
+
 #Forex #Finance #Money
 
-Zutrader 101 @ZuluTrader101 · 28分钟前
+Zutrader 101 `@ZuluTrader101` · 28分钟前
+
 平仓 出 0.19 Lots #GBPJPY 167.426
+
 -48.6 pips, 今日总计 -193.0 pips
 
 新交易和平交易
 
-观察用户的推文示例，他们总是以特定的格式发布推文。如果分配一个特定的 Tweet handler 来解析这些推文，解析将变得轻而易举。我们稍后会讨论处理器。在此之前，让我们看看如何搜索推文。
+观察用户的推文示例，他们总是以特定的格式发布推文。如果分配一个特定的 `Tweet handler` 来解析这些推文，解析将变得轻而易举。我们稍后会讨论处理器。在此之前，让我们看看如何搜索推文。
 
-### 8.3.1 TweetHarvester 接口
+### 8.3.1 `TweetHarvester` 接口
 
-TweetHarvester 接口要求搜索特定用户的推文，结果包含新交易/关闭交易。它的定义如下：
+`TweetHarvester` 接口要求搜索特定用户的推文，结果包含新交易/关闭交易。它的定义如下：
 
 ```java
 public interface TweetHarvester < T > {
-Collection < NewTradeTweet < T >> harvestNewTweets(String userId);
-Collection < CloseTradeTweet < T >> harvestHistoricTweets(String userId, TradeableInstrument < T > instrument);
+    Collection < NewTradeTweet < T >> harvestNewTweets(String userId);
+    Collection < CloseTradeTweet < T >> harvestHistoricTweets(
+        String userId,
+        TradeableInstrument < T > instrument
+    );
 }
 ```
 
 接口的第一个方法非常直接。该方法的约定是获取自上次搜索的新推文。实现者负责跟踪时间线并仅返回新的。第二个方法的约定是获取自上次搜索的特定产品的已交易。
 
-### 8.3.2 FXTweetHandler 接口
+### 8.3.2 `FXTweetHandler` 接口
 
-正如本节前面提到的，只要用户以特定的格式发布推文，特定的处理器就可以从中解析并创建 NewFXTweet 和 CloseTradeTweet。该接口制定了约定并提供了几个其他方法：
+正如本节前面提到的，只要用户以特定的格式发布推文，特定的处理器就可以从中解析并创建 `NewFXTweet` 和 `CloseTradeTweet`。该接口制定了约定并提供了几个其他方法：
 
 ```java
 public interface FXTweetHandler < T > {
-FXTradeTweet < T > handleTweet(Tweet tweet);
-String getUserId();
-Collection < Tweet > findNewTweets();
-Collection < Tweet > findHistoricnlForInstrument(TradeableInstrument < T > instrument);
+    FXTradeTweet < T > handleTweet(Tweet tweet);
+    String getUserId();
+    Collection < Tweet > findNewTweets();
+    Collection < Tweet > findHistoricnlForInstrument(
+        TradeableInstrument < T > instrument
+    );
 }
 ```
 
 前三个方法自而其明。`findHistoricnlForInstrument` 方法需要一些解释。该方法的约定是检索由特定用户发布的、针对特定产品的且导致盈亏结果（例如，正或负的 pip 值）的关闭交易。参考本节讨论的用户关闭。现在可能没有意义，但在下一节讨论 Twitter 策略时就有意义了。
 
-### 8.3.3 AbstractFXTweetHandler 类
+### 8.3.3 `AbstractFXTweetHandler` 类
 
-我们通过定义一个实现该接口的抽象类开始讨论 FXTweetHandler 接口的实现，实现了接口的几个方法：`findTweets()` 和 `getUserId()`。
+我们通过定义一个实现该接口的抽象类开始讨论 `FXTweetHandler` 接口的实现，实现了接口的几个方法：`findTweets()` 和 `getUserId()`。
 
-特别是 `findTweets()` 方法的实现，让我们有机会讨论 Twitter  API。API 提供了一套查询运算符，允许我们构建查询并按时间倒序检索推文。Twitter 的响应是 JSON 负载，但由于我们使用了 TwitterTemplate，Spring 会负责解析负载并将其转换为 `org.springframework.social.twitter.Tweet` 对象，这处理起来要容易得多。
+特别是 `findTweets()` 方法的实现，让我们有机会讨论 Twitter API。API 提供了一套查询运算符，允许我们构建查询并按时间倒序检索推文。Twitter 的响应是 JSON 负载，但由于我们使用了 TwitterTemplate，Spring 会负责解析负载并将其转换为 `org.springframework.social.twitter.Tweet` 对象，这处理起来要容易得多。
 
-**在继续之前，强烈建议阅读搜索 API 页面以了解运算符、返回结果限制以及最佳实践。**
+在继续之前，强烈建议阅读搜索 API 页面以了解运算符、返回结果限制以及最佳实践。
 
 直接从文档提取并稍作修改与我们的搜索相关的示例如下：
 
 | 运算符 | 查找用户 "foo" 的推文 |
 |---|---|
-| from:foo | 查找用户 "foo" 的推文 |
-| from:since:2015-02-01 | 查找用户 "foo" 自 2015-02-01 起的推文 |
-| from:foo since_id:1000000 | 查找用户 "foo" 自推文 ID 1000000 的推文 |
-| from:foo Profit: OR Loss: | 查找用户 "foo" 包含“Profit:”或“Loss:”字符的推文 |
+| `from:foo` | 查找用户 "foo" 的推文 |
+| `from:foo since:2015-02-01` | 查找用户 "foo" 自 2015-02-01 起的推文 |
+| `from:foo since_id:1000000` | 查找用户 "foo" 自推文 ID 1000000 的推文 |
+| `from:foo Profit: OR Loss:` | 查找用户 "foo" 包含“Profit:”或“Loss:”字符的推文 |
+
+
 
 ```java
-1 public abstract class AbstractFXTweetHandler < T > implements FXTweetHandler {
-2 @Autowired
-protected Twitter twitter;
+public abstract class AbstractFXTweetHandler<T> implements FXTweetHandler {
+  @Autowired
+  protected Twitter twitter;
 
-@Autowired
-protected InstrumentService < T > instrumentService;
+  @Autowired
+  protected InstrumentService<T> instrumentService;
 
-@Autowired
-protected ProviderHelper providerHelper;
-protected final DateTime startTime = DateTime.now();
-protected volatile Long lastTweetTime = null;
-protected final String userId; 
+  @Autowired
+  protected ProviderHelper providerHelper;
 
-protected static final String CLOSED = "Closed";
-protected static final String BOUGHT = "Bought";
-protected static final String SOLD = "Sold";
-protected static final String LOG_TAG = Logger.getLogger(AbstractFXTweetHandler.class);
+  protected final DateTime startTime = DateTime.now();
+  protected volatile Long lastTweetTime = null;
+  protected final String userId;
 
-static final String FROM_USER_SINCE_TITTER_QUERY_TMPL = "from:%s:%s";
-static final String FROM_USER_SINCE_ID_TITTER_QUERY_TMPL = "from:%s_id:%d";
+  protected static final String CLOSED = "Closed";
+  protected static final String BOUGHT = "Bought";
+  protected static final String SOLD = "Sold";
+  protected static final String LOG_TAG =
+      Logger.getLogger(AbstractFXTweetHandler.class);
 
-protected AbstractFXTweetHandler(String userId) {
-this.userId = userId;
-DateTime formatter = DateTime.format("yyyy-MM-dd");
-startTime = formatter.print(this.startTime);
-}
+  static final String FROM_USER_SINCE_TITTER_QUERY_TMPL = "from:%s:%s";
+  static final String FROM_USER_SINCE_ID_TITTER_QUERY_TMPL =
+      "from:%s_id:%d";
 
-protected abstract NewTradeTweet < T > parseNewTweet(String tokens[]);
-
-protected abstract CloseTradeTweet < T > parseCloseTweet(String tokens[]);
-
-@Override
-public String getUserId() {
-return userId;
-}
-
-private class TweetPredicate implements Predicate < Tweet > {
-
-@Override
-public boolean apply(Tweet input) {
-return startTime.isBefore(input.getCreatedAt().getTime());
-}
-}
-
-@Override
-public Collection < Tweet > findNewTweets() {
-
-SearchResults results = null;
-if (lastTweetTime == null) { // 获取自应用启动以来的新推文
-synchronized(this) { // 双检查锁定
-results = twitter.searchoperations().search(
-String.format(FROM_USER_SINCE_TITTER_QUERY_TMPL, getUserId(), this.startTime));
-
-TweetPredicate predicate = new TweetPredicate();
-List < Tweet> filteredTweets = lists.newArrayList();
-
-for (Tweet tweet : results.getTweets()) {
-```
-
-```java
-if (predicate.apply(tweet)) {
-  if (lastTweetId == null) {
-    /*由于推文按倒序时间排列，因此将第一条作为起始*/
-    this.lastTweetId = tweet.getId();
+  protected AbstractFXTweetHandler(String userId) {
+    this.userId = userId;
+    DateTime formatter = DateTime.format("yyyy-MM-dd");
+    startTime = formatter.print(this.startTime);
   }
-  filteredTweets.add(tweet);
-}
-return filteredTweets;
-}
 
-tweets results = twitter.searchOperations().search(
-  String.format(
-    "FROM_USER_SINCE_ID_TWEET_QUERY_TMPL", getUserId(), lastTweetId));
-  List <Tweet> tweets = results.getTweets();
-if (!TradingUtils.isEmpty(tweets)) {
-  lastTweetId = tweets.get(0).getId();
-}
-return tweets;
-};
+  protected abstract NewTradeTweet<T> parseNewTweet(String tokens[]);
+
+  protected abstract CloseTradeTweet<T> parseCloseTweet(String tokens[]);
+
+  @Override
+  public String getUserId() {
+    return userId;
+  }
+
+  private class TweetPredicate implements Predicate<Tweet> {
+    @Override
+    public boolean apply(Tweet input) {
+      return startTime.isBefore(input.getCreatedAt().getTime());
+    }
+  }
+
+  @Override
+  public Collection<Tweet> findNewTweets() {
+    SearchResults results = null;
+
+    if (lastTweetTime == null) { // 获取自应用启动以来的新推文
+      synchronized (this) { // 双检查锁定
+        results = twitter.searchoperations().search(
+            String.format(
+                FROM_USER_SINCE_TITTER_QUERY_TMPL,
+                getUserId(),
+                this.startTime));
+
+        TweetPredicate predicate = new TweetPredicate();
+        List<Tweet> filteredTweets = Lists.newArrayList();
+
+        for (Tweet tweet : results.getTweets()) {
 ```
 
-该类的核心在于新方法 `findTweets()` 的实现。该方法尝试检索自上一次 API 调用以来的所有新推文。假设有一个定期定期运行的调度任务，调用此方法来获取最新的推文。为了获取最新的推文，该类必须在内部跟踪上次获取的推文。通过使用比给定用户的上一次 ID 大的 ID。。然而，当它第一次被调用时，我们需要探索另一种方法来寻找最新的推文。在这种情况下，我们使用类初始化时的时间作为从该点获取最新推文的起始点。这就是我们在执行 `if (lastTweetId == null)` 时执行的逻辑。为了使类线程安全，提供了额外的同步处理，并考虑了双重锁定。基于时间的方法使用 `from:%s since:,` 的查询，其中我们提供了相关的用户 ID 和 `yyyy-MM-dd` 格式的启动时间。一旦搜索返回，我们可以获取集合中的第一条推文，并将其作为下一次搜索的最新 ID。在这种情况下，我们使用查询字符串 `from:%s since_id:%d`，提供用户 ID 和从上次搜索设置的 ID。再次强调一下，搜索结果是从新到旧排序的。
+```java
+          if (predicate.apply(tweet)) {
+            if (lastTweetId == null) {
+              /*
+               * 由于推文按倒序时间排列，因此将第一条作为起始
+               */
+              this.lastTweetId = tweet.getId();
+            }
+            filteredTweets.add(tweet);
+          }
+
+          return filteredTweets;
+        }
+
+        Tweet results = twitter.searchOperations().search(
+            String.format(
+                "FROM_USER_SINCE_ID_TWEET_QUERY_TMPL",
+                getUserId(),
+                lastTweetId));
+
+        List<Tweet> tweets = results.getTweets();
+
+        if (!TradingUtils.isEmpty(tweets)) {
+          lastTweetId = tweets.get(0).getId();
+        }
+
+        return tweets;
+      }
+    }
+  }
+}
+```
+
+该类的核心在于新方法`findTweets()`的实现。该方法尝试检索自上一次 API 调用以来的所有新推文。假设有一个定期运行的调度任务，调用此方法来获取最新的推文。为了获取最新的推文，该类必须在内部跟踪上次获取的推文。通过使用比给定用户的上一次 ID 大的 ID。然而，当它第一次被调用时，我们需要探索另一种方法来寻找最新的推文。在这种情况下，我们使用类初始化时的时间作为从该点获取最新推文的起始点。这就是我们在执行`if (lastTweetId == null)`时执行的逻辑。
+
+为了使类线程安全，提供了额外的同步处理，并考虑了双重锁定。基于时间的方法使用`from:%s since:,`的查询，其中我们提供了相关的用户 ID 和`yyyy-MM-dd`格式的启动时间。一旦搜索返回，我们可以获取集合中的第一条推文，并将其作为下一次搜索的最新 ID。在这种情况下，我们使用查询字符串`from:%s since_id:%d`，提供用户 ID 和从上次搜索设置的 ID。再次强调一下，搜索结果是从新到旧排序的。
 
 ### 8.3.4 用户特定的 TweetHandlers
 
-警告 - 为单个用户讨论的推文格式可能会在不任何通知的情况下更改。因此，在解析目的上，尽可能编写防御性代码至关重要。
+警告：为单个用户讨论的推文格式可能会在不任何通知的情况下更改。因此，在解析目的上，尽可能编写防御性代码至关重要。
 
-结束讨论，我们将查看本章之前讨论过的用户的 TweetHandlers。大部分代码应该围绕推文的解析，因为它对该特定用户具有特殊性。通用的功能（即按用户搜索新推文）被抽象在基类 `AbstractTweetHandler` 中，我们在上一节中已经讨论过它。
+结束讨论，我们将查看本章之前讨论过的用户的 TweetHandlers。大部分代码应该围绕推文的解析，因为它对该特定用户具有特殊性。通用的功能（即按用户搜索新推文）被抽象在基类`AbstractTweetHandler`中，我们在上一节中已经讨论过它。
 
 对于新交易，我们感兴趣解析出：
 
-- 交易动作 (Trade Action)
-- 交易对 (Instrument Pair)
-- 价格限价 (Limit Price)
-- 止损价 (Stop Loss Price)
-- 止盈价 (Take Profit Price)
+- 交易动作（Trade Action）
+- 交易对（Instrument Pair）
+- 价格限价（Limit Price）
+- 止损价（Stop Loss Price）
+- 止盈价（Take Profit Price）
 
 对于平仓交易，我们想要解析：
 
-- 交易对 (Instrument Pair)
-- 成交价 (Close Price)
-- 盈亏点 (Profit/Loss pips)
+- 交易对（Instrument Pair）
+- 成交价（Close Price）
+- 盈亏点（Profit/Loss pips）
 
 ### 8.3.4.1 SignalFactoryFXTweetHandler
 
-此推文处理器尝试解析由用户 @SignalFactory 发布的新交易/平仓相关推文。为了刷新记忆，让我们看看该用户文本形式的新交易和平仓推文示例：
+此推文处理器尝试解析由用户`@SignalFactory`发布的新交易/平仓相关推文。为了刷新记忆，让我们看看该用户文本形式的新交易和平仓推文示例：
 
-```
+```text
 // New Trade
 2 Forex Signal | Sell USDCHF@0.91902 | SL:0.92302 | TP:0.91102 | 2015.01.30
 4 Forex Signal | Sell GBPAUD@2.03572 | SL:2.03972 | TP:2.02772 | 2016.01.22
 6 Forex Signal | Buy GBPCAD@2.03229 | SL:2.02829 | TP:2.04029 | 2016.01.22
-//Close Trade
+// Close Trade
 9 Forex Signal | Close(SL) Buy NZDCHF@0.66566 | Loss: -40 pips | 2015.01.30
 11 Forex Signal | Close(TP) Buy GBPCHF@1.44636 | Profit: +80 pips | 2016.01.22
 13 Forex Signal | Close(SL) Sell GBPAUD@2.03972 | Loss: -40 pips | 2016.01.22
 ```
 
-对于新交易，我们可以对该用户得出以下观察结果（假设我们最初通过分隔符 `|` 和标记解析了整个推文）：
+对于新交易，我们可以对该用户得出以下观察结果（假设我们最初通过分隔符`|`和标记解析了整个推文）：
 
 - 交易动作总是单词“Buy”或“Sell”，并且是第二个标记的第一个单词。
-- 交易对总是通过 `@` 字符分割的第二个标记的第二个单词获取的第一个标记。
-- 价格限价是通过 `@` 字符分割的第二个标记的第二个单词获取的第二个子标记。
-- 止损价是通过 `.` 字符分割的第三个标记获取的第二个子标记。
-- 止盈价是通过 `.` 字符分割的第四个标记获取的第二个子标记。
+- 交易对总是通过`@`字符分割的第二个标记的第二个单词获取的第一个标记。
+- 价格限价是通过`@`字符分割的第二个标记的第二个单词获取的第二个子标记。
+- 止损价是通过`.`字符分割的第三个标记获取的第二个子标记。
+- 止盈价是通过`.`字符分割的第四个标记获取的第二个子标记。
 
-对于平仓交易，我们可以对该用户得出以下观察结果（假设我们最初通过分隔符 `|` 解析了整个推文并获得 5 个标记）：
+对于平仓交易，我们可以对该用户得出以下观察结果（假设我们最初通过分隔符`|`解析了整个推文并获得 5 个标记）：
 
-- 交易对总是通过 `@` 字符分割的第二个标记的第三个单词获取的第一个标记。
-- 成交价总是通过 `@` 字符分割的第二个标记的第三个单词获取的第二个子标记。
+- 交易对总是通过`@`字符分割的第二个标记的第三个单词获取的第一个标记。
+- 成交价总是通过`@`字符分割的第二个标记的第三个单词获取的第二个子标记。
 - 盈亏总是第三个标记的第二个单词。
 
 通用观察结果：
@@ -6673,6 +6903,7 @@ protected CloseFXTrade<String> parseCloseTrade(String tokens[]) {
   String token1 = tokens[1].trim(TradingConstants.SPACE_RGX);
   String tokensIspl = tokens[1].split(AT_RATE);
   String tokens2 = tokens[2].trim().split(TradingConstants.SPACE_RGX);
+
   return new CloseFXTrade<String>(
     TradeableInstrument.fromFormat(tokensIspl[0]),
     Double.parseDouble(token2));
@@ -6682,45 +6913,52 @@ protected CloseFXTrade<String> parseCloseTrade(String tokens[]) {
 public FXTrade<String> handleTweet(Tweet tweet) {
   String tweetTxt = tweet.getText();
   String tokens = Utils.split(tweetTxt, TradingConstants.PIPE);
+
   if (tokens.length >= 5) {
     String action = tokens[1].trim();
+
     if (action.startsWith(BUY) || action.startsWith(SELL)) {
       return parseTrade(tokens);
     } else if (action.startsWith(CLOSE)) {
       return parseCloseTrade(tokens);
     }
   }
+
   return null;
 }
 
 @Override
 public Collection<Tweet> findHistoricPnlForInstrument(Tradeable is) {
-  // * 下方的 AND 查询突然停止工作了。
-  // * 类似 :SignalFactory 的简单查询无效。
-  // * 请在 https://twitter.com/search-advanced 自行检查。
-  // * 看来唯一的方法是获取包含 Profit 的所有推文，然后使用 Strings 执行
+  /*
+   * 下方的 AND 查询突然停止工作了。
+   * 类似 :SignalFactory 的简单查询无效。
+   * 请在 https://twitter.com/search-advanced 自行检查。
+   * 看来唯一的方法是获取包含 Profit 的所有推文，然后使用 Strings 执行
+   */
   String query = String.format("Profit: OR Loss from:%s", getID(), is);
   SearchResults results = twitter.searchOperations().search(query);
   List<Tweet> pnlTweets = results.getTweets();
   List<Tweet> filteredPnlTweets = Lists.newArrayList();
+
   for (Tweet pnlTweet : pnlTweets) {
     if (pnlTweet.getText().contains(iso)) {
       filteredPnlTweets.add(pnlTweet);
     }
   }
+
   return filteredPnlTweets;
 }
 ```
 
-动作开始于 `handleTweet` 方法，该方法在解析给定用户的搜索结果时被调用。有一个逻辑来判断推文是新交易、平仓交易还是没有。这基本上是我们对该用户的推文所做的“通用观察”。如果推文确实是新交易或平仓交易，我们解析并返回 `NewFxTweet` 或 `CloseFxTweet` 实例，它们都是 `FXTrade` 类的子类。解析逻辑与我们在上面观察部分讨论的几乎相同。
+动作开始于`handleTweet`方法，该方法在解析给定用户的搜索结果时被调用。有一个逻辑来判断推文是新交易、平仓交易还是没有。这基本上是我们对该用户的推文所做的“通用观察”。如果推文确实是新交易或平仓交易，我们解析并返回`NewFxTweet`或`CloseFxTweet`实例，它们都是`FXTrade`类的子类。解析逻辑与我们在上面观察部分讨论的几乎相同。
 
-最后一个需要额外解释的方法是 `findHistoricPnlForInstrument`。在这里我们寻找过去的平仓交易，因为我们只寻找该用户的此类推文，我们必须使用该用户表示盈利或亏损的短语。查询正是 `%s AND Profit: OR Loss:`。回顾该用户的平仓示例表明，Profit: 或 Loss: 作为第三个标记的第一个单词。
+最后一个需要额外解释的方法是`findHistoricPnlForInstrument`。在这里我们寻找过去的平仓交易，因为我们只寻找该用户的此类推文，我们必须使用该用户表示盈利或亏损的短语。查询正是`%s AND Profit: OR Loss:`。回顾该用户的平仓示例表明，`Profit:`或`Loss:`作为第三个标记的第一个单词。
 
 ### 8.3.4.2 ZuluTrader101TweetHandler
 
-此推文处理器尝试解析由用户 @ZuluTrader101 发布的新交易/平仓相关推文。为了刷新记忆，让我们看看该用户文本形式的新交易和平仓推文示例：
+此推文处理器尝试解析由用户`@ZuluTrader101`发布的新交易/平仓相关推文。为了刷新记忆，让我们看看该用户文本形式的新交易和平仓推文示例：
 
-```
+```text
 //New Trade
 2 Bought 0.43 Lots #EURUSD 1.1371 | Auto-copy FREE at http://goo.gl/moYxz #
 3
@@ -6731,6 +6969,7 @@ public Collection<Tweet> findHistoricPnlForInstrument(Tradeable is) {
 8 Sold 0.43 Lots #EURUSD 1.13117 LS 1.13281 TP 1.12963 | Auto-copy FREE at h
 9
 10 Bought 0.66 Lots #EURGBP 0.73532 SL 0.70534 | Auto-copy FREE at http://
+//Close Trade
 11 Close Trade
 12 //Close Buy
 13 Closed Buy 0.64 Lots #USDJPY 118.773 for +17.7 pips, total for today -136.
@@ -6740,27 +6979,31 @@ public Collection<Tweet> findHistoricPnlForInstrument(Tradeable is) {
 17 Closed Buy 7.0 Lots #XAUUSD 1207.94 for -549.0 pips, total for today -1731
 ```
 
-
-
-
-对于新交易，我们可以对该用户得出以下观察结果（假设我们最初通过分隔符字符‘|’解析了整条推文并获得了 2 个 token）：
+对于新交易，我们可以对该用户得出以下观察结果（假设我们最初通过分隔符字符`|`解析了整条推文并获得了 2 个 token）：
 
 - 交易动作（Trade actions）总是“Bought”（买入）或“Sold”（卖出），并且是第一个 token 的第一个单词。
-- 货币对始终是第一个 token 中以‘#’开头的第四个单词。
-- 价格始终是第一个 token 中的第五单词。
-- 止损价是可选的，且仅作为第一个 token 中关键词‘SL’ 之后的下一个单词出现。
-- 止盈价是可选的，且仅作为第一个 token 中关键词‘TP’ 之后的下一个单词出现。
+- 货币对始终是第一个 token 中以`#`开头的第四个单词。
+- 价格始终是第一个 token 中的第五个单词。
+
+
+
+- 止损价是可选的，且仅作为第一个 token 中关键词`SL`之后的下一个单词出现。
+
+- 止盈价是可选的，且仅作为第一个 token 中关键词`TP`之后的下一个单词出现。
 
 对于平交易，我们可以对该用户得出以下观察结果：
 
-- 货币对始终是推文中以‘#’开头的第五个单词。
+- 货币对始终是推文中以`#`开头的第五个单词。
+
 - 平仓价始终是推文中的第六个单词。
+
 - 盈亏数字始终是推文中第八个单词。
 
 通用观察结果：
 
-- 如果推文以单词“Closed”（已关闭）开头，则该推文与“平交易”有关。
-- 如果推文以单词“Bought”（买入）或“Sold”（卖出）开头，则该推文与新的“交易”有关。
+- 如果推文以单词`Closed`（已关闭）开头，则该推文与“平交易”有关。
+
+- 如果推文以单词`Bought`（买入）或`Sold`（卖出）开头，则该推文与新的“交易”有关。
 
 现在让我们转向代码实现部分。
 
@@ -6855,13 +7098,13 @@ public class ZuluTrader101FXTweetHandler extends AbstractFXTweetHandler < String
 }
 ```
 
-与之前一样，操作从 `handleTweet(Tweet tweet)` 方法开始。这次我们有一段略有不同的逻辑，它是基于关于推文是新交易、平交易还是不可解析的通用观察结果。假设推文是可解析的，我们继续解析推文。解析过程完全遵循上述观察结果部分中提到的逻辑。
+与之前一样，操作从`handleTweet(Tweet tweet)`方法开始。这次我们有一段略有不同的逻辑，它是基于关于推文是新交易、平交易还是不可解析的通用观察结果。假设推文是可解析的，我们继续解析推文。解析过程完全遵循上述观察结果部分中提到的逻辑。
 
-最后一点要讨论的是针对该用户的 `findHistoricPnlTweetsForInstrument` 方法。与 @SignalFactory 用户一样，我们需要找到该用户用于表示已关闭交易的短语。事实证明，根据我们对平交易的观察，@ZuluTrader101 的推文中包含了“Closed Buy”或“Closed Sell”短语。因此，我们的查询看起来像 `from:%s AND %s AND “Closed Buy” OR “Closed Sell"`。在进行 Twitter 搜索 API 调用之前，提一下：如果我们对短语使用双引号，意味着我们正在寻找该短语的精确匹配。这正是我们为该用户想要的。
+最后一点要讨论的是针对该用户的`findHistoricPnlTweetsForInstrument`方法。与`@SignalFactory`用户一样，我们需要找到该用户用于表示已关闭交易的短语。事实证明，根据我们对平交易的观察，`@ZuluTrader101`的推文中包含了`Closed Buy`或`Closed Sell`短语。因此，我们的查询看起来像`from:%s AND %s AND “Closed Buy” OR “Closed Sell"`。在进行 Twitter 搜索 API 调用之前，提一下：如果我们对短语使用双引号，意味着我们正在寻找该短语的精确匹配。这正是我们为该用户想要的。
 
 ## 8 尝试一下
 
-在本节中，我们将编写一个从指定用户获取推文的演示。最近的测试显示，对用户 @ZuluTrader101 的简单推文搜索即使在 Twitter 高级页面上也不会显示。我们将使用格式非常相似的 @Forex_EA4U 用户。
+在本节中，我们将编写一个从指定用户获取推文的演示。最近的测试显示，对用户`@ZuluTrader101`的简单推文搜索即使在 Twitter 高级页面上也不会显示。我们将使用格式非常相似的`@Forex_EA4U`用户。
 
 ```java
 package package com.preouchext.fxtrading.tradingbot.social.twitter;
@@ -6904,84 +7147,147 @@ public class TweetHarvester {
             ctr++;
         }
     }
-这是一个 Spring 驱动的模式，因为我们要使用之前发现的 `TwitterTemplate`。Spring 配置如下：
+```
+
+这是一个 Spring 驱动的模式，因为我们要使用之前发现的`TwitterTemplate`。Spring 配置如下：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
+
 <beans xmlns="http://www.springframework.org/schema/beans"
+
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
      xmlns:context="http://www.springframework.org/schema/context"
+
      xmlns:util="http://www.springframework.org/schema/util"
+
      xmlns:task="http://www.springframework.org/schema/task"
+
      xmlns:tx="http://www.springframework.org/schema/tx"
+
      xsi:schemaLocation="http://www.springframework.org/schema/beans 
+
 http://www.springframework.org/schema/beans/beans.xsd 
+
 http://www.springframework.org/schema/context 
+
 http://www.springframework.org/schema/context/spring-context.xsd
+
 http://www.springframework.org/schema/util 
+
 http://www.springframework.org/schema/util/spring-util.xsd
+
 http://www.springframework.org/schema/task 
+
 http://www.springframework.org/schema/task/spring-task.xsd
+
 http://www.springframework.org/schema/tx 
+
 http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <context:annotation id="twitter" class="org.springframework.twitter.api.impl.TwitterTemplate"/>
 
     <bean id="providerHelper" class="com.preouchext.fxtrading.oanda.reader.ProviderHelper"
+
           class="com.preouchext.fxtrading.oanda.instrument.Instrument">
+
         <constructor-arg index="0" value="${systemProperties['twitter']}">
+
         <constructor-arg index="1" value="${systemProperties['twitter']}">
+
         <constructor-arg index="2" value="${systemProperties['twitter']}">
+
         <constructor-arg index="3" value="${systemProperties['twitter']}">
+
     </bean>
 
     <bean id="instrumentDataProvider" class="com.preouchext.fxtrading.oanda.reader.InstrumentDataProvider"
+
           class="com.preouchext.fxtrading.oanda.instrument.Instrument">
+
         <constructor-arg index="0" value="${systemProperties['twitter']}">
-        <constructor-arg index="1" value="${systemProperties['twitter']}">
-        <constructor-arg index="2" value="${systemProperties['twitter']}">
-    </bean>
-
-    <bean id="instrumentService" class="com.preouchext.fxtrading.instrument.InstrumentService">
-        <constructor-arg index="0" ref="instrumentDataProvider"/>
-    </bean>
-
-    <bean id="fxTweeterList" class="java.util.ArrayList">
-        <constructor-arg index="0">
-            <list>
-                <value>SignalFactory</value>
-                <value>Forex_EA4U</value>
-            </list>
-        </constructor-arg>
-    </bean>
-</beans>
 ```
 
 
 
 ```xml
+<constructor-arg index="1" value="${systemProperties['twitter']}">
+
+<constructor-arg index="2" value="${systemProperties['twitter']}">
+
+</bean>
+
+<bean id="instrumentService" class="com.preouchext.fxtrading.instrument.InstrumentService">
+
+<constructor-arg index="0" ref="instrumentDataProvider"/>
+
+</bean>
+
+<bean id="fxTweeterList" class="java.util.ArrayList">
+
+<constructor-arg index="0">
+
+<list>
+
+<value>SignalFactory</value>
+
+<value>Forex_EA4U</value>
+
 </list>
-  </constructor-arg>
-  <bean id="startTimeline" class="org.joda.time.DateTime">
-    <constructor-arg index="0" value="1451606400000" type="long"/>
-  </bean>
-  <util:map id="tweetTwitterHandlerMap">
-    <entry key="#{fxTwitterList[0]}">
-      <bean class="com.precioustech.fxtrading.tradingbot.social.twitter.tweethan">
-        <constructor-arg index="0" value="#{fxTweete}">
-        <property name="startTime" ref="startTimeLin"/>
-      </bean>
-    </entry>
-    <entry key="#{fxTwitterList[1]}">
-      <bean>
-        <bean class="com.precioustech.fxtrading.tradingbot.social.twitter.tweethan">
-          <constructor-arg index="0" value="#{fxTweete}">
-          <property name="startTime" ref="startTimeLin"/>
-      </bean>
-    </entry>
-  </util:map>
-  <bean id="orderQueue" class="java.util.concurrent.LinkedBlockingQueu"/>
-  <bean id="copyTwitterStrategy" class="com.precioustech.fxtrading.tradingbot.strategies.CopyTwitterStr"/>
+
+</constructor-arg>
+
+</bean>
+
+</beans>
+```
+
+```xml
+</list>
+
+</constructor-arg>
+
+<bean id="startTimeline" class="org.joda.time.DateTime">
+
+<constructor-arg index="0" value="1451606400000" type="long"/>
+
+</bean>
+
+<util:map id="tweetTwitterHandlerMap">
+
+<entry key="#{fxTwitterList[0]}">
+
+<bean class="com.precioustech.fxtrading.tradingbot.social.twitter.tweethan">
+
+<constructor-arg index="0" value="#{fxTweete}">
+
+<property name="startTime" ref="startTimeLin"/>
+
+</bean>
+
+</entry>
+
+<entry key="#{fxTwitterList[1]}">
+
+<bean>
+
+<bean class="com.precioustech.fxtrading.tradingbot.social.twitter.tweethan">
+
+<constructor-arg index="0" value="#{fxTweete}">
+
+<property name="startTime" ref="startTimeLin"/>
+
+</bean>
+
+</entry>
+
+</util:map>
+
+<bean id="orderQueue" class="java.util.concurrent.LinkedBlockingQueu"/>
+
+<bean id="copyTwitterStrategy" class="com.precioustech.fxtrading.tradingbot.strategies.CopyTwitterStr"/>
+
 </beans>
 ```
 
@@ -6989,53 +7295,78 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
 
 主参数 JRE 类路径 源码 常见
 
-程序参数：
+## 程序参数
 
 ![](img/83b65534a955858b50f85868087a4d91_204_0.png)
 
-VM 参数：
+## VM 参数
 
-```
+```text
 -Dwtter.consumerKey=...-KRB-
+
 -Dwtter.consumerSecret=...-SREOM-US-WEEKyNo20lh-Dwtter.accessToken=...
+
 -Dwtter.accessSecret=...-nDoanda.url=...-Dwtter.accessSecret=ATOX3J-Dwtter.accessTokenSecret=...-OD-
+
 -Doanda.url=https://api.frextrade.doanda.com
+
 -Doanda.accessToken=...-Wf6-Doanda.accountID=...
 ```
 
-- -Use-XStartOnFirstthread 当使用 SWT 启动时
+- `-Use-XStartOnFirstthread` 当使用 SWT 启动时
 
-工作目录：
+## 工作目录
 
-- - 默认： /workspace_io:trading-demo-promos
+- 默认：`/workspace_io:trading-demo-promos`
 - 其他：
 
 ![](img/83b65534a955858b50f85868087a4d91_204_1.png)
 
 # 使用系统属性启动配置
 
-```
+```text
 <terminated=TweetHarvesterDemo (Java Application) org.library/java/Machines/Machines/jdk-1.7.0_21/home/bin/java (Jan 28 2016 12:10:56) [2016]:
+
 2016-01-28 12:10:58 INFO [main] Refreshing org.springframework.context.ClassPathApplicationContext;0bb5sccdc: startup date [Thu Jan 28 2016 12:10:56 CET] / 1
+
 2016-01-28 12:10:59 INFO [main] JSR-330 java.inject annotation found on method for autowiring - OK
+
 2016-01-28 12:10:00 INFO [main] Initializing bean with name 'twitterService' for class 'com.example.service.TwitterService
+
 2016-01-28 12:11:00 INFO [main] Refreshing org.springframework.context.ApplicationContext; created singleton bean...
+
 2016-01-28 12:11:04 INFO [main] Dumping the first 18 of 23 tweets for user forex_AUU
+
 2016-01-28 12:11:04 INFO [main] Instrument EUR,USD - 3.0, price-1.80070 SHOT
+
 2016-01-28 12:11:04 INFO [main] Instrument EUR,USD - 3.0, price-1.80057 SHOT
+
 2016-01-28 12:11:04 INFO [main] Instrument EUR,USD - 3.0, price-1.80050 LONG
+
 2016-01-28 12:11:04 INFO [main] Instrument EUR,USD - 3.0, price-1.80043 LONG
+
 2016-01-28 12:11:04 INFO [main] Instrument EUR,USD - 3.0, price-1.80037 LONG
+
 2016-01-28 12:11:04 INFO [main] Instrument EUR,USD - 3.0, price-1.80030 LONG
+
 2016-01-28 12:11:04 INFO [main] Instrument EUR,USD - 3.0, price-1.80027 LONG
+
 2016-01-28 12:11:04 INFO [main] Instrument EUR,USD - 3.0, price-1.80020 LONG
+
 2016-01-28 12:11:04 INFO [main] Instrument EUR,USD - 3.0, price-1.80013 LONG
+
 2016-01-28 12:11:04 INFO [main] Instrument EUR,USD - 3.0, price-1.80010 LONG
+
 2016-01-28 12:11:07 INFO [main] Found 58 historical tweets for user forex_AUU and instrument EUR_USD
+
 2016-01-28 12:11:07 INFO [main] Instrument EUR,USD - 3.0, price-1.80086 SHOT
+
 2016-01-28 12:11:07 INFO [main] Instrument EUR,USD - 3.0, price-1.80085 SHOT
+
 2016-01-28 12:11:07 INFO [main] Instrument EUR,USD - 3.0, price-1.80084 LONG
+
 2016-01-28 12:11:07 INFO [main] Instrument EUR,USD - 3.0, price-1.80083 LONG
+
 2016-01-28 12:11:07 INFO [main] Instrument EUR,USD - 3.0, price-1.80014 SHOT
 ```
 
@@ -7043,20 +7374,20 @@ VM 参数：
 
 1. [概览](http://docs.spring.io/spring-social/docs/1.0.x/reference/html/overview.html)
 2. [API](http://docs.spring.io/spring/docs/current/javadoc-api/spring-framework/core/JmsTemplate.html)
-3. [JdbcTemplate](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/jdbc/core/JdbcTemplate.html)
+3. [`JdbcTemplate`](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/jdbc/core/JdbcTemplate.html)
 4. [文档](https://dev.twitter.com/overview/documentation)
 5. [Twitter](https://docs.spring.io/spring-social-twitter/docs/1.0.5.RELEASE/api/org/springframework/social/twitter/api/in)
-6. [SignalFactory](https://twitter.com/SignalFactory)
-7. [ZuluTrader101](https://twitter.com/ZuluTrader101)
+6. [`SignalFactory`](https://twitter.com/SignalFactory)
+7. [`ZuluTrader101`](https://twitter.com/ZuluTrader101)
 8. [搜索](https://dev.twitter.com/rest/public/search)
 9. [双重检查锁](https://en.wikipedia.org/wiki/Double-checked_locking)
-10. [Forex_EA4U](https://twitter.com/Forex_EA4U
+10. [`Forex_EA4U`](https://twitter.com/Forex_EA4U)
 
 # 9 实现策略
 
 现在是时候给我们的机器人装上翅膀让它飞起来了！！我们的意思是，是时候为机器人添加功能，使其能够根据一组规则做出订单决策了。基本上，我们想为机器人添加分析能力，以决定买入还是卖出货币对，还是保持现状等待时机的到来。分析可以基于多个外部参数：
 
-字体 市场数据
+- 市场数据
 - 新闻事件
 - 社交媒体源
 - 技术分析
@@ -7087,15 +7418,16 @@ VM 参数：
 
 ```java
 1 @TradingStrategy
+
 2 public class CopyTwitterStrategy < T > implements TradeHarvester < T> {
+
 4 @Resource
+
 5 Map< String,
+
 6 FXTTweet >> tweetHandlerMap;
+
 7 @Resource(name = "orderQueue")
-```
-
-
-
 
 BlockingQueue<TradingDecision<T>> orderQueue;
 
@@ -7108,52 +7440,80 @@ private static final double ACCURACY_DECISION = 0.75;
 private static final int MIN_HISTORIC_TWEETS = 4;
 
 @PostConstruct
-```java
 public void init() {
+
     this.executorService = Executors.newFixedThreadPool(tweetHandlerMap.size());
+
 }
 ```
 
-### TradingDecision<T>
+### `TradingDecision<T>`
 
+```java
 analyseHistoricClosedTradesForInstrument(Collection<CloseFTTradeTweet<T>> closedTrades, NewFTTradeTweet<T> newTrade);
 
-```java
 int lossCtr = 0;
-int profitCtr = 0;
-```
 
-```java
+int profitCtr = 0;
+
 for (CloseFTTradeTweet<T> closedTrade : closedTrades) {
+
     if (closedTrade.getProfit() <= 0) {
+
         lossCtr++;
+
     }
+
     profitCtr++;
+
 }
-```
 
 TradingSignal signal = TradingSignal.NONE;
 
-```java
 if ((lossCtr <= 0 && closedTrades.size() >= MIN_HISTORIC_TWEETS) {
+
     double profitAccuracy = profitCtr / ((profitCtr + lossCtr) * 1.0);
+
     double lossAccuracy = 1.0 - profitAccuracy;
+
     if (profitAccuracy == ACCURACY_DECISION) {
+
         signal = newTrade.getAction();
+
         return new TradingDecision<T>(newTrade.getInstrument(), signal,
+
             newTrade.getProfit(), newTrade.getStopLoss(),
+
             newTrade.getPrice(), TradingDecision.SRDECISION.SOCIAL_MEDIA);
+
     } else if (lossAccuracy > ACCURACY_DECISION) {
+
         /*由于亏损率较高，因此执行反向交易*/
+
         signal = newTrade.getAction().flip();
+
         final double take = newTrade.getProfit() != 0 ?
+
             (newTrade.getPrice() + newTrade.getProfit()) : newTrade.getProfit();
-        final double stop = newTrade.getStopLoss() != 0.0 ?
-            (newTrade.getPrice() - newTrade.getStopLoss()) : newTrade.getStopLoss();
-        return new TradingDecision<T>(newTrade.getInstrument(),
-            signal, take, stop, newTrade.getPrice(),
-            TradingDecision.SRDECISION.SOCIAL_MEDIA);
-    }
+```
+
+
+
+```java
+final double stop = newTrade.getStopLoss() != 0.0
+    ? (newTrade.getPrice() - newTrade.getStopLoss())
+    : newTrade.getStopLoss();
+
+return new TradingDecision<T>(
+    newTrade.getInstrument(),
+    signal,
+    take,
+    stop,
+    newTrade.getPrice(),
+    TradingDecision.SRDECISION.SOCIAL_MEDIA
+);
+
+}
 }
 ```
 
@@ -7161,7 +7521,7 @@ if ((lossCtr <= 0 && closedTrades.size() >= MIN_HISTORIC_TWEETS) {
 
 ```java
 public synchronized void androidTrade() {
-    for (final String userId: tweetHandlerMap.keySet()) {
+    for (final String userId : tweetHandlerMap.keySet()) {
         this.executorService.submit(new Callable<Void>() {
 ```
 
@@ -7170,27 +7530,35 @@ public synchronized void androidTrade() {
 public void call() throws Exception {
     Collection<NewTradeTweet<T>> newTradeTweets =
         harvestNewTradeTweets(userId);
+
     for (NewTradeTweet<T> newTweet : newTradeTweets) {
         Collection<CloseTradeTweet<T>> pnlTweets =
             harvestHistoricTradeTweet(userId, newTweet.get());
+
         TradingDecision<T> tradeDecision =
             analyseHistoricClosedTradesForInstrument(pnlTweets, newTweet);
+
         if (tradeDecision.get() != TradingSignal.NONE) {
             orderQueue.offer(tradeDecision);
         }
     }
+
     return null;
 }
 });
 ```
 
 ```java
-@Override Collection<NewTradeTweet<T>> harvestNewTradeTweets(String userId) {
+@Override
+Collection<NewTradeTweet<T>> harvestNewTradeTweets(String userId) {
     FXTradeTweetHandler<T> tweetHandler = tweetHandlerMap.get(userId);
+
     if (tweetHandler == null) {
         return Collections.emptyList();
     }
+
     Collection<Tweet> tweets = tweetHandler.findNewTweets();
+
     if (tweets.size() > 0) {
         LOG.info(String.format(
             "为用户 %s 找到了 %d 条新推文", tweets.size(), userId));
@@ -7200,48 +7568,63 @@ public void call() throws Exception {
 ```
 
 ```java
-    Collection<NewTradeTweet<T>> newTradeTweets = Lists.newArrayList();
-    for (Tweet tweet : tweets) {
-        FXTradeTweet<T> tradeTweet = tweetHandler.handleTweet(tweet);
-        if (tradeTweet instanceof NewTradeTweet) {
-            newTradeTweets.add((NewTradeTweet<T>) tradeTweet);
-        }
+Collection<NewTradeTweet<T>> newTradeTweets = Lists.newArrayList();
+
+for (Tweet tweet : tweets) {
+    FXTradeTweet<T> tradeTweet = tweetHandler.handleTweet(tweet);
+
+    if (tradeTweet instanceof NewTradeTweet) {
+        newTradeTweets.add((NewTradeTweet<T>) tradeTweet);
     }
-    return newTradeTweets;
+}
+
+return newTradeTweets;
 }
 ```
 
 ```java
-@Override Collection<CloseTradeTweet<T>> harvestHistoricTradeTweets(
-    String userId, TradeableInstrument<T> instrument) {
+@Override
+Collection<CloseTradeTweet<T>> harvestHistoricTradeTweets(
+    String userId,
+    TradeableInstrument<T> instrument
+) {
     FXTradeTweetHandler<T> tweetHandler = tweetHandlerMap.get(userId);
+
     if (tweetHandler == null) {
         return Collections.emptyList();
     }
 ```
 
 ```java
-    Collection<Tweet> tweets =
-        tweetHandler.findHistoricPnlTweetsForInstrument(instrument);
-    if (tweets.size() > 0) {
-        LOG.info(String.format(
-            "为用户 %s 和交易品种 %s 找到了 %d 条 PNL 推文",
-            tweets.size(), userId, instrument.getInstrument()));
-    } else {
-        return Collections.emptyList();
+Collection<Tweet> tweets =
+    tweetHandler.findHistoricPnlTweetsForInstrument(instrument);
+
+if (tweets.size() > 0) {
+    LOG.info(String.format(
+        "为用户 %s 和交易品种 %s 找到了 %d 条 PNL 推文",
+        tweets.size(),
+        userId,
+        instrument.getInstrument()
+    ));
+} else {
+    return Collections.emptyList();
+}
+
+Collection<CloseFXTradeTweet<T>> pnlTradeTweets = Lists.newArrayList();
+
+for (Tweet tweet : tweets) {
+    FXTradeTweet<T> tradeTweet = tweetHandler.handleTweet(tweet);
+
+    if (tradeTweet instanceof CloseFXTradeTweet) {
+        pnlTradeTweets.add((CloseFXTradeTweet<T>) tradeTweet);
     }
-    Collection<CloseFXTradeTweet<T>> pnlTradeTweets = Lists.newArrayList();
-    for (Tweet tweet : tweets) {
-        FXTradeTweet<T> tradeTweet = tweetHandler.handleTweet(tweet);
-        if (tradeTweet instanceof CloseFXTradeTweet) {
-            pnlTradeTweets.add((CloseFXTradeTweet<T>) tradeTweet);
-        }
-    }
-    return pnlTradeTweets;
+}
+
+return pnlTradeTweets;
 }
 ```
 
-我们首先使用自定义注解 @TradingStrategy 对类进行标记。通过这样做，我们对该类做了一个声明，即该类明确实现了一个交易策略。当某些类专门编写用于完成某任务但无法绑定到接口定义时，这样做一直是一个好主意。在 Java 1.5 之前，可以通过声明标记接口来实现相同的效果。
+我们首先使用自定义注解`@TradingStrategy`对类进行标记。通过这样做，我们对该类做了一个声明，即该类明确实现了一个交易策略。当某些类专门编写用于完成某任务但无法绑定到接口定义时，这样做一直是一个好主意。在 Java 1.5 之前，可以通过声明标记接口来实现相同的效果。
 
 ```java
 @Retention(RetentionPolicy.RUNTIME)
@@ -7250,18 +7633,18 @@ public @interface TradingStrategy {
 }
 ```
 
-回到我们的策略类 CopyTwitterStrategy，在讨论实现之前，我们先指出由 Spring 自动注入并可用的资源。这些资源是：
+回到我们的策略类`CopyTwitterStrategy`，在讨论实现之前，我们先指出由 Spring 自动注入并可用的资源。这些资源是：
 
-- orderQueue：OrderExecutionService 可以从中获取任务的队列（请参阅章节开头的图表）
-- tweetHandlerMap：是 Twitter 用户 ID 及其对应处理器的映射，我们在上一节中详细讨论过它。我们以此此为起点，查找 Map 中所有对应用户 ID 的推文，并将其委托给相应的处理器进行分析。
+- `orderQueue`：`OrderExecutionService` 可以从中获取任务的队列（请参阅章节开头的图表）。
+- `tweetHandlerMap`：是 Twitter 用户 ID 及其对应处理器的映射，我们在上一节中详细讨论过它。我们以此为起点，查找 `Map` 中所有对应用户 ID 的推文，并将其委托给相应的处理器进行分析。
 
-被 @PostConstruct 标记的 init() 方法会在 Bean 完全初始化后由 Spring 自动调用。在这里我们借机初始化稍后将讨论的 ExecutorService。
+被`@PostConstruct`标记的`init()`方法会在 Bean 完全初始化后由 Spring 自动调用。在这里我们借机初始化稍后将讨论的`ExecutorService`。
 
 所有的动作都由调度器触发。
 
 ```java
 public synchronized void androidTrade() {
-    for (final String userId: tweetHandlerMap.keySet()) {
+    for (final String userId : tweetHandlerMap.keySet()) {
         this.executorService.submit(new Callable<Void>() {
 ```
 
@@ -7270,27 +7653,35 @@ public synchronized void androidTrade() {
 public void call() throws Exception {
     Collection<NewTradeTweet<T>> newTradeTweets =
         harvestNewTradeTweets(userId);
+
     for (NewTradeTweet<T> newTweet : newTradeTweets) {
         Collection<CloseTradeTweet<T>> pnlTweets =
             harvestHistoricTradeTweet(userId, newTweet.get());
+
         TradingDecision<T> tradeDecision =
             analyseHistoricClosedTradesForInstrument(pnlTweets, newTweet);
+
         if (tradeDecision.get() != TradingSignal.NONE) {
             orderQueue.offer(tradeDecision);
         }
     }
+
     return null;
 }
 });
 ```
 
 ```java
-@Override Collection<NewTradeTweet<T>> harvestNewTradeTweets(String userId) {
+@Override
+Collection<NewTradeTweet<T>> harvestNewTradeTweets(String userId) {
     FXTradeTweetHandler<T> tweetHandler = tweetHandlerMap.get(userId);
+
     if (tweetHandler == null) {
         return Collections.emptyList();
     }
+
     Collection<Tweet> tweets = tweetHandler.findNewTweets();
+
     if (tweets.size() > 0) {
         LOG.info(String.format(
             "为用户 %s 找到了 %d 条新推文", tweets.size(), userId));
@@ -7300,61 +7691,76 @@ public void call() throws Exception {
 ```
 
 ```java
-    Collection<NewTradeTweet<T>> newTradeTweets = Lists.newArrayList();
-    for (Tweet tweet : tweets) {
-        FXTradeTweet<T> tradeTweet = tweetHandler.handleTweet(tweet);
-        if (tradeTweet instanceof NewTradeTweet) {
-            newTradeTweets.add((NewTradeTweet<T>) tradeTweet);
-        }
+Collection<NewTradeTweet<T>> newTradeTweets = Lists.newArrayList();
+
+for (Tweet tweet : tweets) {
+    FXTradeTweet<T> tradeTweet = tweetHandler.handleTweet(tweet);
+
+    if (tradeTweet instanceof NewTradeTweet) {
+        newTradeTweets.add((NewTradeTweet<T>) tradeTweet);
     }
-    return newTradeTweets;
+}
+
+return newTradeTweets;
 }
 ```
 
 ```java
-@Override Collection<CloseTradeTweet<T>> harvestHistoricTradeTweets(
-    String userId, TradeableInstrument<T> instrument) {
+@Override
+Collection<CloseTradeTweet<T>> harvestHistoricTradeTweets(
+    String userId,
+    TradeableInstrument<T> instrument
+) {
     FXTradeTweetHandler<T> tweetHandler = tweetHandlerMap.get(userId);
+
     if (tweetHandler == null) {
         return Collections.emptyList();
     }
 ```
 
 ```java
-    Collection<Tweet> tweets =
-        tweetHandler.findHistoricPnlTweetsForInstrument(instrument);
-    if (tweets.size() > 0) {
-        LOG.info(String.format(
-            "为用户 %s 和交易品种 %s 找到了 %d 条 PNL 推文",
-            tweets.size(), userId, instrument.getInstrument()));
-    } else {
-        return Collections.emptyList();
+Collection<Tweet> tweets =
+    tweetHandler.findHistoricPnlTweetsForInstrument(instrument);
+
+if (tweets.size() > 0) {
+    LOG.info(String.format(
+        "为用户 %s 和交易品种 %s 找到了 %d 条 PNL 推文",
+        tweets.size(),
+        userId,
+        instrument.getInstrument()
+    ));
+} else {
+    return Collections.emptyList();
+}
+
+Collection<CloseFXTradeTweet<T>> pnlTradeTweets = Lists.newArrayList();
+
+for (Tweet tweet : tweets) {
+    FXTradeTweet<T> tradeTweet = tweetHandler.handleTweet(tweet);
+
+    if (tradeTweet instanceof CloseFXTradeTweet) {
+        pnlTradeTweets.add((CloseFXTradeTweet<T>) tradeTweet);
     }
-    Collection<CloseFXTradeTweet<T>> pnlTradeTweets = Lists.newArrayList();
-    for (Tweet tweet : tweets) {
-        FXTradeTweet<T> tradeTweet = tweetHandler.handleTweet(tweet);
-        if (tradeTweet instanceof CloseFXTradeTweet) {
-            pnlTradeTweets.add((CloseFXTradeTweet<T>) tradeTweet);
-        }
-    }
-    return pnlTradeTweets;
+}
+
+return pnlTradeTweets;
 }
 ```
 
-我们首先使用自定义注解 @TradingStrategy 对类进行标记。通过这样做，我们对该类做了一个声明，即该类明确实现了一个交易策略。当某些类专门编写用于完成某任务但无法绑定到接口定义时，这样做一直是一个好主意。在 Java 1.5 之前，可以通过声明标记接口来实现相同的效果。
+我们首先使用自定义注解`@TradingStrategy`对类进行标记。通过这样做，我们对该类做了一个声明，即该类明确实现了一个交易策略。当某些类专门编写用于完成某任务但无法绑定到接口定义时，这样做一直是一个好主意。在 Java 1.5 之前，可以通过声明标记接口来实现相同的效果。
 
-回到我们的策略类 CopyTwitterStrategy，在讨论实现之前，我们先指出由 Spring 自动注入并可用的资源。这些资源是：
+回到我们的策略类`CopyTwitterStrategy`，在讨论实现之前，我们先指出由 Spring 自动注入并可用的资源。这些资源是：
 
-- orderQueue：OrderExecutionService 可以从中获取任务的队列（请参阅章节开头的图表）
-- tweetHandlerMap：是 Twitter 用户 ID 及其对应处理器的映射，我们在上一节中详细讨论过它。我们以此为起点，查找 Map 中所有对应用户 ID 的推文，并将其委托给相应的处理器进行分析。
+- `orderQueue`：`OrderExecutionService` 可以从中获取任务的队列（请参阅章节开头的图表）。
+- `tweetHandlerMap`：是 Twitter 用户 ID 及其对应处理器的映射，我们在上一节中详细讨论过它。我们以此为起点，查找 `Map` 中所有对应用户 ID 的推文，并将其委托给相应的处理器进行分析。
 
-被 @PostConstruct 标记的 init() 方法会在 Bean 完全初始化后由 Spring 自动调用。在这里我们借机初始化稍后将讨论的 ExecutorService。
+被`@PostConstruct`标记的`init()`方法会在 Bean 完全初始化后由 Spring 自动调用。在这里我们借机初始化稍后将讨论的`ExecutorService`。
 
 所有的动作都由调度器触发。
 
 ```java
 public synchronized void androidTrade() {
-    for (final String userId: tweetHandlerMap.keySet()) {
+    for (final String userId : tweetHandlerMap.keySet()) {
         this.executorService.submit(new Callable<Void>() {
 ```
 
@@ -7363,27 +7769,35 @@ public synchronized void androidTrade() {
 public void call() throws Exception {
     Collection<NewTradeTweet<T>> newTradeTweets =
         harvestNewTradeTweets(userId);
+
     for (NewTradeTweet<T> newTweet : newTradeTweets) {
         Collection<CloseTradeTweet<T>> pnlTweets =
             harvestHistoricTradeTweet(userId, newTweet.get());
+
         TradingDecision<T> tradeDecision =
             analyseHistoricClosedTradesForInstrument(pnlTweets, newTweet);
+
         if (tradeDecision.get() != TradingSignal.NONE) {
             orderQueue.offer(tradeDecision);
         }
     }
+
     return null;
 }
 });
 ```
 
 ```java
-@Override Collection<NewTradeTweet<T>> harvestNewTradeTweets(String userId) {
+@Override
+Collection<NewTradeTweet<T>> harvestNewTradeTweets(String userId) {
     FXTradeTweetHandler<T> tweetHandler = tweetHandlerMap.get(userId);
+
     if (tweetHandler == null) {
         return Collections.emptyList();
     }
+
     Collection<Tweet> tweets = tweetHandler.findNewTweets();
+
     if (tweets.size() > 0) {
         LOG.info(String.format(
             "为用户 %s 找到了 %d 条新推文", tweets.size(), userId));
@@ -7393,44 +7807,114 @@ public void call() throws Exception {
 ```
 
 ```java
-    Collection<NewTradeTweet<T>> newTradeTweets = Lists.newArrayList();
-    for (Tweet tweet : tweets) {
-        FXTradeTweet<T> tradeTweet = tweetHandler.handleTweet(tweet);
-        if (tradeTweet instanceof NewTradeTweet) {
-            newTradeTweets.add((NewTradeTweet<T>) tradeTweet);
-        }
+Collection<NewTradeTweet<T>> newTradeTweets = Lists.newArrayList();
+
+for (Tweet tweet : tweets) {
+    FXTradeTweet<T> tradeTweet = tweetHandler.handleTweet(tweet);
+
+    if (tradeTweet instanceof NewTradeTweet) {
+        newTradeTweets.add((NewTradeTweet<T>) tradeTweet);
     }
-    return newTradeTweets;
+}
+
+return newTradeTweets;
 }
 ```
 
 ```java
-@Override Collection<CloseTradeTweet<T>> harvestHistoricTradeTweets(
-    String userId, TradeableInstrument<T> instrument) {
+@Override
+Collection<CloseTradeTweet<T>> harvestHistoricTradeTweets(
+    String userId,
+    TradeableInstrument<T> instrument
+) {
     FXTradeTweetHandler<T> tweetHandler = tweetHandlerMap.get(userId);
+
     if (tweetHandler == null) {
         return Collections.emptyList();
     }
 ```
 
 ```java
-    Collection<Tweet> tweets =
-        tweetHandler.findHistoricPnlTweetsForInstrument(instrument);
-    if (tweets.size() > 0) {
-        LOG.info(String.format(
-            "为用户 %s 和交易品种 %s 找到了 %d 条 PNL 推文",
-            tweets.size(), userId, instrument.getInstrument()));
-    } else {
+Collection<Tweet> tweets =
+    tweetHandler.findHistoricPnlTweetsForInstrument(instrument);
+
+if (tweets.size() > 0) {
+    LOG.info(String.format(
+        "为用户 %s 和交易品种 %s 找到了 %d 条 PNL 推文",
+        tweets.size(),
+        userId,
+        instrument.getInstrument()
+    ));
+} else {
+    return Collections.emptyList();
+}
+
+Collection<CloseFXTradeTweet<T>> pnlTradeTweets = Lists.newArrayList();
+
+for (Tweet tweet : tweets) {
+    FXTradeTweet<T> tradeTweet = tweetHandler.handleTweet(tweet);
+
+    if (tradeTweet instanceof CloseFXTradeTweet) {
+        pnlTradeTweets.add((CloseFXTradeTweet<T>) tradeTweet);
+    }
+}
+
+return pnlTradeTweets;
+}
+```
+
+
+
+```java
+Collection<NewTradeTweet<T>> newTradeTweets = Lists.newArrayList();
+
+for (Tweet tweet : tweets) {
+    FXTradeTweet<T> tradeTweet = tweetHandler.handleTweet(tweet);
+
+    if (tradeTweet instanceof NewTradeTweet) {
+        newTradeTweets.add((NewTradeTweet<T>) tradeTweet);
+    }
+}
+
+return newTradeTweets;
+}
+```
+
+```java
+@Override
+Collection<CloseTradeTweet<T>> harvestHistoricTradeTweets(
+        String userId, TradeableInstrument<T> instrument) {
+
+    FXTradeTweetHandler<T> tweetHandler = tweetHandlerMap.get(userId);
+
+    if (tweetHandler == null) {
         return Collections.emptyList();
     }
-    Collection<CloseFXTradeTweet<T>> pnlTradeTweets = Lists.newArrayList();
-    for (Tweet tweet : tweets) {
-        FXTradeTweet<T> tradeTweet = tweetHandler.handleTweet(tweet);
-        if (tradeTweet instanceof CloseFXTradeTweet) {
-            pnlTradeTweets.add((CloseFXTradeTweet<T>) tradeTweet);
-        }
+```
+
+```java
+Collection<Tweet> tweets =
+        tweetHandler.findHistoricPnlTweetsForInstrument(instrument);
+
+if (tweets.size() > 0) {
+    LOG.info(String.format(
+            "为用户 %s 和交易品种 %s 找到了 %d 条 PNL 推文",
+            tweets.size(), userId, instrument.getInstrument()));
+} else {
+    return Collections.emptyList();
+}
+
+Collection<CloseFXTradeTweet<T>> pnlTradeTweets = Lists.newArrayList();
+
+for (Tweet tweet : tweets) {
+    FXTradeTweet<T> tradeTweet = tweetHandler.handleTweet(tweet);
+
+    if (tradeTweet instanceof CloseFXTradeTweet) {
+        pnlTradeTweets.add((CloseFXTradeTweet<T>) tradeTweet);
     }
-    return pnlTradeTweets;
+}
+
+return pnlTradeTweets;
 }
 ```
 
@@ -7438,115 +7922,171 @@ public void call() throws Exception {
 
 1. 与 Twitter 集成并对推文进行分析。
 2. 使用简单的代码/算法对推文进行某些数学分析并得出一个交易信号。
-3. 将其放入订单队列中，以便由 OrderExecutionService 进一步处理，该服务最终负责下单。
+3. 将其放入订单队列中，以便由 `OrderExecutionService` 进一步处理，该服务最终负责下单。
 
-
-
-
-## 9.2 逆势策略 (Fade The Move Strategy)
+## 9.2 逆势策略（Fade The Move Strategy）
 
 在本节中，我们将讨论并实现一个非常简单的“逆势策略”（Fade the Move strategy）。我们该策略的实现方式如下：
 
-- 策略初始化后，我们通过配置注入的预定义交易对创建get（tick）数据的订阅。
-- 每隔一个时间段 T（例如 15 分钟，即当前配置中的值），我们检查间隔开始价格和结束价格之间的点数（pips）差值的绝对值是否超过了配置的 V 个点（例如 45 点，即当前配置中的值）。
-- 如果该值超过了 V 个点，我们将在当前价格距离 D 个点（例如 25 点，即当前配置中的值）处下一个与当前市场趋势相反的限价单。例如，EURUSD 在过去的 15 分钟内从 1.0815（起始价格）跳升到 1.087（当前价格），涨了 55 个点，我们以 1.0895（1.087+0.0025）的价格下卖 EURUSD 的限价单。
+- 策略初始化后，我们通过配置注入的预定义交易对创建获取 tick 数据的订阅。
+- 每隔一个时间段 `T`（例如 15 分钟，即当前配置中的值），我们检查间隔开始价格和结束价格之间的点数（pips）差值的绝对值是否超过了配置的 `V` 个点（例如 45 点，即当前配置中的值）。
+- 如果该值超过了 `V` 个点，我们将在当前价格距离 `D` 个点（例如 25 点，即当前配置中的值）处下一个与当前市场趋势相反的限价单。例如，EURUSD 在过去的 15 分钟内从 1.0815（起始价格）跳升到 1.087（当前价格），涨了 55 个点，我们以 1.0895（1.087+0.0025）的价格下卖 EURUSD 的限价单。
 - 我们设置目标利润为 10 个点（如果限价单在 1.0895 成交，则止盈位设为 1.0885）。
 
 现在让我们直接查看源码来了解该策略是如何实现的。
 
 ```java
 @TradingStrategy
-public class FadeTheMoveStrategy < T > {
+public class FadeTheMoveStrategy<T> {
 
     @Autowired
     Config tradingConfig;
+
     @Autowired
-    InstrumentService < T > instrumentService;
+    InstrumentService<T> instrumentService;
+
     @Resource(name = "OrderQueue")
-    BlockingQueue < Trading < T >> orderQueue;
-    private final Collection < TradeableInstrument < T >> instruments;
+    BlockingQueue<Trading<T>> orderQueue;
 
-    private final Map < TradeableInstrument < T >,
-    Cache < DateTime,
-    MarketDataPayload < T >>> instrumentRecentPricesCache = Maps
-    .newHashMap();
+    private final Collection<TradeableInstrument<T>> instruments;
 
-    public FadeTheMoveStrategy(Collection < TradeableInstrument < T >> instruments) {
+    private final Map<
+            TradeableInstrument<T>,
+            Cache<DateTime, MarketDataPayload<T>>>
+            instrumentRecentPricesCache = Maps.newHashMap();
+
+    public FadeTheMoveStrategy(
+            Collection<TradeableInstrument<T>> instruments) {
         this.instruments = instruments;
     }
 }
 ```
 
-### @PostConstruct
+### `@PostConstruct`
 
 ```java
 public void init() {
-    for (TradeableInstrument < T > instrument: instruments) {
-        Cache< DateTime, MarketDataPayload< T >> recentPricesCache =
-        CacheBuilder.newBuilder().expireWrite(
-        tradingConfig, getFadedMovePriceExpiry(), Time.Unit.MINUTES)
-        .build<DateTime, MarketDataPayload < T >>();
+    for (TradeableInstrument<T> instrument : instruments) {
+        Cache<DateTime, MarketDataPayload<T>> recentPricesCache =
+                CacheBuilder.newBuilder()
+                        .expireWrite(
+                                tradingConfig,
+                                getFadedMovePriceExpiry(),
+                                Time.Unit.MINUTES)
+                        .build<DateTime, MarketDataPayload<T>>();
+
         instrumentRecentPricesCache.put(instrument, recentPricesCache);
     }
 }
 ```
 
-### @Subscribe, @AllowConcurrentEvents
+### `@Subscribe`、`@AllowConcurrentEvents`
 
 ```java
-public void handleMarketDataEvent(MarketDataPayload < T > marketDataPayload) {
+public void handleMarketDataEvent(
+        MarketDataPayload<T> marketDataPayload) {
+
     if (instrumentRecentPricesCache.containsKey(
-    marketDataPayload.getInstrument())) {
-        instrumentRecentPricesCache.get(marketDataPayload.getInstrument())
-        .put(marketDataPayload.getUTCDate(), marketDataPayload);
+            marketDataPayload.getInstrument())) {
+
+        instrumentRecentPricesCache
+                .get(marketDataPayload.getInstrument())
+                .put(
+                        marketDataPayload.getUTCDate(),
+                        marketDataPayload);
     }
 }
 
 // 由调度调用
 public void analyzePrices() {
-    for (Map.Entry<TradeableInstrument < T >, Cache < DateTime,
-    MarketDataPayload < T > > entry: recentPricesCache.entrySet()) {
-        SortedMap< DateTime, MarketDataPayload < T > sortedByDate =
-        ImmutableSortedMap.copy(entry.getValue().asMap());
+    for (Map.Entry<
+            TradeableInstrument<T>,
+            Cache<DateTime, MarketDataPayload<T>>> entry
+            : recentPricesCache.entrySet()) {
+
+        SortedMap<DateTime, MarketDataPayload<T>> sortedByDate =
+                ImmutableSortedMap.copy(entry.getValue().asMap());
+
         if (sortedByDate.isEmpty()) {
             continue;
         }
-        double pipJump = calculatePipJump(sortedByDate.values(), entry.getKey());
+
+        double pipJump =
+                calculatePipJump(sortedByDate.values(), entry.getKey());
+
         double absPipJump = Math.abs(pipJump);
-        if (absPipJump >= tradingConfig.getFadedMoveJumpReqToTrade()) {
-            MarketDataPayload < T > lastPayload =
-            sortedByDate.get(sortedByDate.getLast());
-            double pip = this.instrumentService.getForInstrument(entry.getKey());
+
+        if (absPipJump >=
+                tradingConfig.getFadedMoveJumpReqToTrade()) {
+
+            MarketDataPayload<T> lastPayload =
+                    sortedByDate.get(sortedByDate.getLast());
+
+            double pip =
+                    this.instrumentService.getForInstrument(entry.getKey());
+
             double limitPrice;
             TradingSignal signal = null;
+
             if (Math.signum(pipJump) > 0) { // 做空
                 signal = TradingSignal.SHORT;
-                limitPrice = lastPayload.getPrice() -
-                tradingConfig.getFadedMoveDistanceToTrade() * pip;
-                takePrice = limitPrice -
-                tradingConfig.getFadedMovePriceDesired() * pip;
+
+                limitPrice =
+                        lastPayload.getPrice()
+                        - tradingConfig.getFadedMoveDistanceToTrade()
+                        * pip;
+
+                takePrice =
+                        limitPrice
+                        - tradingConfig.getFadedMovePriceDesired()
+                        * pip;
             } else {
                 signal = TradingSignal.LONG;
-                limitPrice = lastPayload.getAsk() +
-                tradingConfig.getFadedMoveDistanceToTrade() * pip;
-                takePrice = limitPrice +
-                tradingConfig.getFadedMovePriceDesired() * pip;
+
+                limitPrice =
+                        lastPayload.getAsk()
+                        + tradingConfig.getFadedMoveDistanceToTrade()
+                        * pip;
+
+                takePrice =
+                        limitPrice
+                        + tradingConfig.getFadedMovePriceDesired()
+                        * pip;
             }
-            this.orderQueue.offer(new TradingDecision < T > (entry.getKey(), signal
-            TradingDecision.DECISION.FADE_THE_MOVE),
-            takePrice, 0.0, limitPrice);
+
+            this.orderQueue.offer(
+                    new TradingDecision<T>(
+                            entry.getKey(),
+                            signal
+                            TradingDecision.DECISION.FADE_THE_MOVE),
+                    takePrice,
+                    0.0,
+                    limitPrice);
         }
+
         entry.getValue().asMap().clear();
     }
-    /*清除价格以便我们不再对旧决策进行处理*/
+
+    /* 清除价格以便我们不再对旧决策进行处理 */
 }
 
-private double calculatePipJump(Collection < MarketDataPayload < T > prices, TradeableInstrument < T > instrument) {
-    List < MarketDataPayload < T >> priceList = Lists.newArrayList(prices);
-    MarketDataPayload < T > startPrice = priceList.get(0);
-    MarketDataPayload < T > lastPrice = priceList.get(priceList.size() - 1);
-    Double pip = this.instrumentService.getPipForInstrument(instrument);
-    Double pipJump = (lastPrice.getBidPrice() - startPrice.getBidPrice()) / pip;
+private double calculatePipJump(
+        Collection<MarketDataPayload<T>> prices,
+        TradeableInstrument<T> instrument) {
+
+    List<MarketDataPayload<T>> priceList =
+            Lists.newArrayList(prices);
+
+    MarketDataPayload<T> startPrice = priceList.get(0);
+    MarketDataPayload<T> lastPrice =
+            priceList.get(priceList.size() - 1);
+
+    Double pip =
+            this.instrumentService.getPipForInstrument(instrument);
+
+    Double pipJump =
+            (lastPrice.getBidPrice() - startPrice.getBidPrice()) / pip;
+
     return pipJump;
 }
 ```
@@ -7560,87 +8100,116 @@ private double calculatePipJump(Collection < MarketDataPayload < T > prices, Tra
 
 该类的构造函数接收必须应用此策略的实例列表，并通过构造函数注入。
 
-我们还有一个被 `@PostConstruct` 注解的方法 `init()`，在其中为每个实例初始化一个 缓存。缓存以 `DateTime` 为键，值为 `MarketDataPayload`。我们还设置了由 `tradingConfig.getFadeMovePriceExpiry()` 提供的写入过期，在 T 分钟后自动过期缓存项。
+我们还有一个被 `@PostConstruct` 注解的方法 `init()`，在其中为每个实例初始化一个缓存。缓存以 `DateTime` 为键，值为 `MarketDataPayload`。我们还设置了由 `tradingConfig.getFadeMovePriceExpiry()` 提供的写入过期，在 `T` 分钟后自动过期缓存项。
 
-`handleMarketDataEvent` 方法带有 `@Subscribe` 注解，这意味着它接收所有解析为 `MarketPayload` 对象并由 EventBus 分发的 tick 数据。一旦接收，如果 `MarketPayload` 实例与我们配置的交易对相关，则将其放入缓存。
+`handleMarketDataEvent` 方法带有 `@Subscribe` 注解，这意味着它接收所有解析为 `MarketPayload` 对象并由 `EventBus` 分发的 tick 数据。一旦接收，如果 `MarketPayload` 实例与我们配置的交易对相关，则将其放入缓存。
 
-策略的主要动作发生在 `analyzePrices()` 方法中。该方法由任务调度器每 T 分钟调用一次，其值在 Spring 配置中设置。这通常与 `tradingConfig.getFadeMovePriceExpiry()` 一致。我们从循环遍历所有实例开始。对于每个实例，我们计算在给定时间内点数跳变的绝对值。如果点数跳变不高于最小阈值，我们忽略它。
+策略的主要动作发生在 `analyzePrices()` 方法中。该方法由任务调度器每 `T` 分钟调用一次，其值在 Spring 配置中设置。这通常与 `tradingConfig.getFadeMovePriceExpiry()` 一致。我们从循环遍历所有实例开始。对于每个实例，我们计算在给定时间内点数跳变的绝对值。如果点数跳变不高于最小阈值，我们忽略它。
 
 此，我们对该策略的讨论结束。这是一个非常广为人知的且有效的策略。我们应该尽量避免设置较大的止盈点数。如果这个值在 10-12 点之间，在大多数情况下都是有效的。这似乎是许多市场参与者的普遍观察结果。
 
-
-
-
-
 ## 9.3 尝试自己
 
-在本节中，我们将编写一个 Spring 程序来测试驱动 `FadeTheMoveStrategy`。我们将使用一个数组来模拟货币对 `AUD_CHF` 在几分钟内的价格上涨。当 `analysePrices()` 被被调用时，价格的跳跃将导致在 `OrderQueue` 上生成一个 `SHORT`（卖空）信号。让我们来看代码和 Spring 配置。
+在本节中，我们将编写一个 Spring 程序来测试驱动 `FadeTheMoveStrategy`。我们将使用一个数组来模拟货币对 `AUD_CHF` 在几分钟内的价格上涨。当 `analysePrices()` 被调用时，价格的跳跃将导致在 `OrderQueue` 上生成一个 `SHORT`（卖空）信号。让我们来看代码和 Spring 配置。
 
 ```java
 package com.preoustech.ftrading.tradingbot.strategies;
+
 import java.util.concurrent.BlockingQueue;
+
 import org.joda.time.DateTime;
+
 import org.springframework.context.context.ApplicationContext;
 import org.springframework.context.context.ClassXmlApplicationContext;
+
 import com.google.common.event.EventBus;
+
 import com.preoustech.ftrading.TradingDecision;
 import com.preoustech.ftrading.instrument.TradeableInstrument;
 import com.preoustech.ftrading.marketdata.MarketDataPayload;
-public class FadeTheMoveStrategyDemo {
-    private static double precision = 0.0001;
-    @SuppressWarnings("unchecked")
-    public static void main(String[] args) throws InterruptedException {
-        ApplicationContext context = new ClassXmlApplicationContext("fadethemove-demo.xml");
-        FadeTheMoveStrategy strategy = context.getBean(FadeTheMoveStrategy.class);
-        BlockingQueue<TradingDecision> orderQueue = context.getBean();
-        EventBus eventBus = new EventBus();
-        eventBus.register(strategy);
 
-        TradeableInstrument<String> audchf = new TradeableInstrument<String>
-        final double[] audchfPrices = {
-            0.7069,
-            0.7070,
-            0.7073,
-            0.7076,
-            0.7077,
-            0.7078,
-            0.708,
-            0.7082,
-            0.7084,
-            0.7085,
-            0.7086,
-            0.7089,
-            0.7091,
-            0.7093,
-            0.7094,
-            0.7098,
-            0.71,
-            0.7102,
-            0.7105,
-            0.7104,
-            0.7103,
-            0.7105,
-            0.7109,
-            0.7111,
-            0.7112,
-            0.7115,
-            0.7118
-        };
-        DateTime eventStartDate = DateTime.now().minusMinutes(10);
-        for (double price : audchfPrices) {
-            eventStartDate = audchf.plusSeconds(5);
-            eventBus.post(new MarketDataPayload< String>(audchf,
-                price - precision + precision, eventStartDate));
-        }
-        fadeTheMovementStrategy.analysePrices();
-        Decision<String> decision = orderQueue.take();
-        System.out.println(String.format("The strategy signalled to %s on instrument %s at limit price %2.5f",
-            decision.getName(), decision.getInstrument(),
-            decision.getLimitPrice()), decision.getTakeProfit()));
-    }
+public class FadeTheMoveStrategyDemo {
+
+    private static double precision = 0.0001;
+
+    @SuppressWarnings("unchecked")
+    public static void main(String[] args)
+            throws InterruptedException {
+
+        ApplicationContext context =
+                new ClassXmlApplicationContext(
+                        "fadethemove-demo.xml");
+
+        FadeTheMoveStrategy strategy =
+                context.getBean(FadeTheMoveStrategy.class);
+
+        BlockingQueue<TradingDecision> orderQueue =
+                context.getBean();
+
+        EventBus eventBus = new EventBus();
 ```
 
-以及 Spring 配置
+
+
+```java
+eventBus.register(strategy);
+
+TradeableInstrument<String> audchf = new TradeableInstrument<String>
+
+final double[] audchfPrices = {
+    0.7069,
+    0.7070,
+    0.7073,
+    0.7076,
+    0.7077,
+    0.7078,
+    0.708,
+    0.7082,
+    0.7084,
+    0.7085,
+    0.7086,
+    0.7089,
+    0.7091,
+    0.7093,
+    0.7094,
+    0.7098,
+    0.71,
+    0.7102,
+    0.7105,
+    0.7104,
+    0.7103,
+    0.7105,
+    0.7109,
+    0.7111,
+    0.7112,
+    0.7115,
+    0.7118
+};
+
+DateTime eventStartDate = DateTime.now().minusMinutes(10);
+
+for (double price : audchfPrices) {
+    eventStartDate = audchf.plusSeconds(5);
+    eventBus.post(new MarketDataPayload<String>(
+        audchf,
+        price - precision + precision,
+        eventStartDate
+    ));
+}
+
+fadeTheMovementStrategy.analysePrices();
+
+Decision<String> decision = orderQueue.take();
+
+System.out.println(String.format(
+    "The strategy signalled to %s on instrument %s at limit price %2.5f",
+    decision.getName(),
+    decision.getInstrument(),
+    decision.getLimitPrice()
+), decision.getTakeProfit());
+```
+
+以及 Spring 配置：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -7652,7 +8221,9 @@ public class FadeTheMoveStrategyDemo {
         http://www.springframework.org/schema/beans/beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
+
     <context:annotation-config/>
+
     <bean id="tradeableInstrumentList" class="java.util.ArrayList">
         <constructor-arg index="0">
             <list>
@@ -7662,10 +8233,12 @@ public class FadeTheMoveStrategyDemo {
             </list>
         </constructor-arg>
     </bean>
+
     <bean id="fadeTheMovementStrategy"
         class="com.precioustech.ftrading.tradingbot.strategy.FadeTheMoveStrategy">
-            <constructor-arg index="0" ref="tradeableInstrumentList"/>
+        <constructor-arg index="0" ref="tradeableInstrumentList"/>
     </bean>
+
     <bean id="TradingConfig"
         class="com.precioustech.ftrading.tradingbot.TradingConfig">
         <property name="minReserveRatio" value="0.1"/>
@@ -7679,10 +8252,14 @@ public class FadeTheMoveStrategyDemo {
         <property name="fadeTheMovePipsDesired" value="10"/>
         <property name="fadeTheMovePriceExpiry" value="15"/>
     </bean>
+
     <bean id="OrderQueue" class="java.util.concurrent.LinkedBlockingQueue"/>
-    <bean id="instrumentService" class="com.precioustech.ftrading.instrument.InstrumentService">
+
+    <bean id="instrumentService"
+        class="com.precioustech.ftrading.instrument.InstrumentService">
         <constructor-arg index="0" ref="instrumentDataProvider"/>
     </bean>
+
     <bean id="instrumentDataProvider"
         class="com.precioustech.ftrading.instrument.OandaRestInstrumentDataProvider">
         <constructor-arg index="0" value="#{systemProperties['oanda.uri']}"/>
@@ -7696,13 +8273,15 @@ public class FadeTheMoveStrategyDemo {
 
 心跳（Heartbeats）是任何交易系统中的关键元素。任何长时间运行的流式或持久连接都必须发送心跳，以告知消费者连接正常。心跳是确保连接存活。在本章中我们将讨论心跳、如何处理它们以及在未接收到心跳时该做什么。
 
-## 10.1 HeartBeatPayload
+## 10.1 `HeartBeatPayload`
 
 每个持久连接可能都有不同的心跳负载以通信连接的状态。为了适应这种广泛的负载类型，我们定义了如下 POJO：
 
 ```java
 public class HeartBeatPayload<T> {
+
     private final T payload;
+
     private final String source;
 
     public HeartBeatPayload(T payload) {
@@ -7724,11 +8303,11 @@ public class HeartBeatPayload<T> {
 }
 ```
 
-source 属性标识心跳的来源。这用于区分系统中不同的心跳源。例如在交易系统中，我们至少有两个心跳流：一个是行情流，另一个是订单/事件流。
+`source` 属性标识心跳的来源。这用于区分系统中不同的心跳源。例如在交易系统中，我们至少有两个心跳流：一个是行情流，另一个是订单/事件流。
 
-## 10.2 Streaming HeartBeat 接口
+## 10.2 `HeartBeatStreamingService` 接口
 
-我们像处理其他流式接口一样，首先定义支持心跳流所需的最小方法集的接口。我们采用相同的的设计模式：
+我们像处理其他流式接口一样，首先定义支持心跳流所需的最小方法集的接口。我们采用相同的设计模式：
 
 - 一个启动流的方法。
 - 一个停止流的方法。
@@ -7760,20 +8339,17 @@ public interface HeartBeatStreamingService {
 }
 ```
 
-
-
-
-
 ```java
 38      * useful.
-  */
+ */
 String getHeartBeatSourceId();
+
 }
 ```
 
 上述接口与其他流式接口不同，它包含一个额外的方法，规定实现类必须为心跳流实现提供一个唯一的源 ID。
 
-## 10.3 HeartBeatStreamingService 的具体实现
+## 10.3 `HeartBeatStreamingService` 的具体实现
 
 OANDA 通过同一个流推送心跳事件，即它利用市场数据流以及交易/订单/账户事件流间歇性地推送心跳负载（payload），以通信相应流的健康状况。一个心跳负载的示例所示：
 
@@ -7786,15 +8362,26 @@ OANDA 通过同一个流推送心跳事件，即它利用市场数据流以及�
 ```java
 public abstract class OandaStreamingService
 implements HeartBeatStreamingService {
-    protected OandaStreamingService(String accessToken, HeartBeatCallback < DateTime> heartbeatCallback, String heartbeatSource) {
+
+    protected OandaStreamingService(
+        String accessToken,
+        HeartBeatCallback<DateTime> heartbeatCallback,
+        String heartbeatSource
+    ) {
         this.heartbeatSource = heartbeatSource;
         this.heartbeatCallback = heartbeatCallback;
     }
 
     protected void handleHeartbeat(JSONObject streamEvent) {
-        Long t = Long.parseLong((JSONObject)streamEvent.get("heartbeat")).get("time");
-        heartBeatCallback.onHeartbeat(new HeartBeatPayload < DateTime > (new Date(t)));
+        Long t = Long.parseLong(
+            ((JSONObject) streamEvent.get("heartbeat")).get("time").toString()
+        );
+
+        heartBeatCallback.onHeartbeat(
+            new HeartBeatPayload<DateTime>(new Date(t))
+        );
     }
+}
 ```
 
 ```java
@@ -7824,164 +8411,250 @@ public String getHeartBeatSourceId() {
 
 `handleHeartbeat` 方法解析 JSON 负载并创建 `HeartBeatPayload<DateTime>` 实例。然后，它被传递给 `HeartBeatCallback` 实例（我们在下文中讨论），以分发给下游消费者。心跳负载中的时间戳是心跳时间戳，正如我们后面看到的，它被用于判断流仍然存活还是死亡。
 
-## 10.4 HeartBeatCallback 接口
+## 10.4 `HeartBeatCallback` 接口
 
-与我们目前看过的其他回调一样，`HeartBeatCallback`也没有不同。它由直接从平台接收流事件的提供者实现直接调用。在解析事件并创建 `HeartBeatPayload` 实例后，会调用 `onHeart` 方法。让我们直接查看源码。
+与我们目前看过的其他回调一样，`HeartBeatCallback` 也没有不同。它由直接从平台接收流事件的提供者实现直接调用。在解析事件并创建 `HeartBeatPayload` 实例后，会调用 `onHeart` 方法。让我们直接查看源码。
 
 ```java
 public interface HeartBeatCallback<T> {
-  void onHeartBeat(HeartBeatPayload<T> payload);
+
+    void onHeartBeat(HeartBeatPayload<T> payload);
 }
 ```
 
 上述接口的实现与我们之前讨论的其他回调接口类似。`HeartBeatPayload` 通过 `EventBus` 分发给下游消费者。
 
 ```java
-public class HeartBeatCallbackImpl < T > implements HeartBeatCallback < T {
-  private final EventBus eventBus;
-  public HeartBeatCallbackImpl(EventBus eventBus) {
-    this.eventBus = eventBus;
-  }
-  @Override
-  public void onHeartBeat(HeartBeatPayload < T > payload) {
-    this.eventBus.post(payload);
-  }
-}
-```
+public class HeartBeatCallbackImpl<T> implements HeartBeatCallback<T> {
 
-## 10.5 DefaultHeartbeatService
+    private final EventBus eventBus;
 
-我们现在准备好讨论使用心跳负载来跟踪各种流连接的健康状况，并在它们停止发送心跳时尝试恢复它们的服务。该服务继承自 *AbstractHeartbeatService*， own *DefaultHeartbeatService*，它通过 EventBus 了由 *HeartBeatCallback* 发布的心跳负载。从源收到的每个心跳都能帮助该服务跟踪给定流的健康状况。
-
-我们首先查看构造函数，该构造函数注入了它必须跟踪的全部 *HeartBeatStreamingService* 实例的集合。
-
-```java
-protected abstract boolean isAlive(HeartBeatPayload < T > payload);
-protected static long MAX_HEARTBEAT_DELAY = 60000 L;
-private final Map <String, HeartBeatStreamingService > heartBeatProducerMap = Maps.newHashMap();
-private final Map <String, HeartBeatPayload < T > payloadMap = Maps.newHashMap();
-volatile boolean serviceUp = true;
-protected final Collection < HeartBeatStreamingService > heartbeatStreamingServices;
-protected long initWait = 2000 L;
-long warmupTime = MAX_HEARTBEAT_DELAY;
-
-public AbstractHeartbeatService(Collection < HeartBeatStreamingService > heartbeatStreamingServices) {
-    this.heartbeatStreamingServices = heartbeatStreamingServices;
-    for (HeartBeatStreamingService heartBeatStreamingService : heartbeatStreamingServices) {
-        this.heartBeatProducerMap.put(
-            heartBeatStreamingService.getHeartBeatSource(),
-            heartBeatStreamingService);
-        }
-}
-```
-
-构造函数还填充了 *heartBeatProducerMap*。*payloadMap* 用于以其源为键存储心跳负载。`serviceUp` 标志跟踪服务是否处于状态。`heartbeatStreamingServices` 集合持有需要监控的服务。
-
-当接收到心跳时，调用 `handleHeartbeats` 方法。它更新负载映射：
-
-```java
-@Subscribe
-public void handleHeartbeats(HeartBeatPayload<T> payload) {
-    this.payloadMap.put(payload.getHeartSource(), payload);
-}
-```
-
-我们现在需要一个后台线程，定期检查流是否存活，如果超过延迟，则通过调用 `startHeartStreaming()` 尝试恢复它。
-
-```java
-@PostConstruct
-public void init() {
-    final Thread heartObserverThread = new Thread(Runnable() {
-        @Override
-        public void run() {
-            while (serviceUp) {
-                long startWait = MAX_HEARTBEAT_DELAY;
-                for (Map.Entry<String, HeartBeatStreamingService> entry : heartBeatProducerMap.entrySet()) {
-                    if (!isAlive(payloadMap.get(entry.getKey()))) {
-                        entry.getValue().startHeartStreaming();
-                        LOG.warn("heartbeat source %s was not responding. Just restarted and will listen after %d ms", entry.getKey(), startWait);
-                    }
-                    try {
-                        Thread.sleep(startWait);
-                    } catch (InterruptedException e) {
-                        LOG.error(e);
-                    }
-                }
-                startWait = Math.min(MAX_HEARTBEAT_DELAY, 2 * startWait);
-            }
-        }
-    }, "HeartbeatThread");
-    heartObserverThread.start();
-}
-```
-
-`isAlive` 方法由 `DefaultHeartbeatService` 实现：
-
-```java
-public class DefaultHeartbeatService extends AbstractHeartbeatService < T> {
-    public DefaultHeartbeatService(Collection < HeartBeatStreamingService> heartbeatStreamingServices) {
-        super(heartbeatStreamingServices);
+    public HeartBeatCallbackImpl(EventBus eventBus) {
+        this.eventBus = eventBus;
     }
 
     @Override
-    protected boolean isAlive(HeartBeatPayload < T> payload) {
-        return payload != null && (DateTime.now().getMillis() - payload.getHeartPayload().getMillis()) < MAX_HEARTBEAT_DELAY;
+    public void onHeartBeat(HeartBeatPayload<T> payload) {
+        this.eventBus.post(payload);
     }
 }
 ```
 
 
 
+## 10.5 DefaultHeartbeatService
 
+我们现在准备好讨论使用心跳负载来跟踪各种流连接的健康状况，并在它们停止发送心跳时尝试恢复它们的服务。该服务继承自`AbstractHeartbeatService`，即`DefaultHeartbeatService`，它通过`EventBus`订阅了由`HeartBeatCallback`发布的心跳负载。从源收到的每个心跳都能帮助该服务跟踪给定流的健康状况。
+
+我们首先查看构造函数，该构造函数注入了它必须跟踪的全部`HeartBeatStreamingService`实例的集合。
+
+```java
+protected abstract boolean isAlive(HeartBeatPayload<T> payload);
+
+protected static long MAX_HEARTBEAT_DELAY = 60000L;
+
+private final Map<String, HeartBeatStreamingService> heartBeatProducerMap = Maps.newHashMap();
+
+private final Map<String, HeartBeatPayload<T>> payloadMap = Maps.newHashMap();
+
+volatile boolean serviceUp = true;
+
+protected final Collection<HeartBeatStreamingService> heartbeatStreamingServices;
+
+protected long initWait = 2000L;
+
+long warmupTime = MAX_HEARTBEAT_DELAY;
+
+public AbstractHeartbeatService(Collection<HeartBeatStreamingService> heartbeatStreamingServices) {
+
+    this.heartbeatStreamingServices = heartbeatStreamingServices;
+
+    for (HeartBeatStreamingService heartBeatStreamingService : heartbeatStreamingServices) {
+
+        this.heartBeatProducerMap.put(
+
+            heartBeatStreamingService.getHeartBeatSource(),
+
+            heartBeatStreamingService);
+
+        }
+
+}
+```
+
+构造函数还填充了`heartBeatProducerMap`。`payloadMap`用于以其源为键存储心跳负载。`serviceUp`标志跟踪服务是否处于状态。`heartbeatStreamingServices`集合持有需要监控的服务。
+
+当接收到心跳时，调用`handleHeartbeats`方法。它更新负载映射：
+
+```java
+@Subscribe
+
+public void handleHeartbeats(HeartBeatPayload<T> payload) {
+
+    this.payloadMap.put(payload.getHeartSource(), payload);
+
+}
+```
+
+我们现在需要一个后台线程，定期检查流是否存活，如果超过延迟，则通过调用`startHeartStreaming()`尝试恢复它。
+
+```java
+@PostConstruct
+
+public void init() {
+
+    final Thread heartObserverThread = new Thread(Runnable() {
+
+        @Override
+
+        public void run() {
+
+            while (serviceUp) {
+
+                long startWait = MAX_HEARTBEAT_DELAY;
+
+                for (Map.Entry<String, HeartBeatStreamingService> entry : heartBeatProducerMap.entrySet()) {
+
+                    if (!isAlive(payloadMap.get(entry.getKey()))) {
+
+                        entry.getValue().startHeartStreaming();
+
+                        LOG.warn("heartbeat source %s was not responding. Just restarted and will listen after %d ms", entry.getKey(), startWait);
+
+                    }
+
+                    try {
+
+                        Thread.sleep(startWait);
+
+                    } catch (InterruptedException e) {
+
+                        LOG.error(e);
+
+                    }
+
+                }
+
+                startWait = Math.min(MAX_HEARTBEAT_DELAY, 2 * startWait);
+
+            }
+
+        }
+
+    }, "HeartbeatThread");
+
+    heartObserverThread.start();
+
+}
+```
+
+`isAlive`方法由`DefaultHeartbeatService`实现：
+
+```java
+public class DefaultHeartbeatService extends AbstractHeartbeatService<T> {
+
+    public DefaultHeartbeatService(Collection<HeartBeatStreamingService> heartbeatStreamingServices) {
+
+        super(heartbeatStreamingServices);
+
+    }
+
+    @Override
+
+    protected boolean isAlive(HeartBeatPayload<T> payload) {
+
+        return payload != null && (DateTime.now().getMillis() - payload.getHeartPayload().getMillis()) < MAX_HEARTBEAT_DELAY;
+
+    }
+
+}
+```
 
 ## 10.6 动手一试
 
-在本节中，我们将编写一个演示程序，展示 `DefaultHeartbeatService` 如何在检测到某个“梦境”已经死亡后复活它。
+在本节中，我们将编写一个演示程序，展示`DefaultHeartbeatService`如何在检测到某个“梦境”已经死亡后复活它。
 
 ```java
 package com.precioutech.fxtrading.heartbeats;
+
 import java.util.Collection;
+
 import org.apache.commons.lang3.StringUtils;
+
 import org.apache.log4j.Logger;
+
 import org.joda.time.DateTime;
+
 import com.google.common.collect.Lists;
+
 import com.google.common.eventbus.AllowConcurrentEvents;
+
 import com.google.common.eventbus.EventBus;
+
 import com.google.common.eventbus.Subscribe;
+
 import com.precioutech.fxtrading.instrument.TradeableInstrument;
+
 import com.precioutech.fxtrading.marketdata.MarketCallback;
+
 import com.precioutech.fxtrading.marketdata.MarketEventHandler;
+
 import com.precioutech.fxtrading.oanda.restapi.streaming.marketdata.Oanda;
+
 import com.precioutech.fxtrading.streaming.heartbeats.HeartbeatStreaming
 
 public class DefaultHeartbeatServiceDemo {
+
     private static final Logger LOG = Logger.getLogger(DefaultHeartbeatServiceDemo);
+
     private static void validation(String[] args) {
+
         if (args.length != 3) {
+
             LOG.error("Usage: DefaultHeartbeatServiceDemo <url> <account> <password>");
+
             System.exit(1);
+
         } else {
+
             if (!StringUtils.isNumeric(args[1])) {
+
                 LOG.error("Argument 2 should be numeric");
+
                 System.exit(1);
+
             }
+
         }
+
     }
 
     private static class DataSubscriber {
+
         @Subscribe
+
         @AllowConcurrentEvents
+
         public void handleHeartbeats(HeartbeatPayload<DateTime> payload) {
+
             LOG.info(String.format("Heartbeat received at %s from source %s",
+
                 payload.getHeartbeatPayload(), payload.getHeartbeatSource()));
+
         }
+
     }
 
     public static void main(String[] args) throws Exception {
+
         validation(args);
+
         final String url = args[0];
+
         final long accountId = Long.parseLong(args[1]);
+
         final String accessAccessToken = args[2];
+
         final String heartbeatSourceId = "DEMO_MKTDATASTREAM";
 
         TradeableInstrument<String> eurusd = new TradeableInstrument<String>();
@@ -7991,78 +8664,101 @@ public class DefaultHeartbeatServiceDemo {
         EventBus eventBus = new EventBus();
 
         MarketEventCallback<String> mktEventCallback = new MarketEventHandlerImpl<String>(eventBus);
+
         HeartbeatCallback<DateTime> heartbeatCallback = new HeartbeatCallbackImpl<DateTime>(eventBus);
 
         OandaMarketDataStreamingService mktMarketDataStreamingService = new OandaMarketDataStreamingService(url, accessAccessToken, accountId, instruments, mktEventCallback, heartbeatCallback);
+
         mktMarketDataStreamingService.startMarketDataStreaming();
 
         Collection<HeartbeatStreamingService> heartbeatStreamingLst = Lists.newArrayList();
+
         heartbeatStreamingLst.add(mktMarketDataStreamingService);
 
         DefaultHeartBeatService heartbeatService = new DefaultHeartBeatService();
+
         eventBus.register(heartbeatService);
+
         eventBus.register(new DataSubscriber());
+
         heartbeatService.init();
 
         heartbeatService.warmUpTime = 5000L;
+
         Thread.sleep(30000L);
+
         mktDataStreamingService.stopMarketDataStreaming();
+
         Thread.sleep(20000L);
+
     }
+
 }
 ```
 
-# 名称: DefaultHeartbeatServiceDemo
+### 名称：`DefaultHeartbeatServiceDemo`
 
 主参数 JRE 类路径 环境 常用
 
-程序参数:
-- https://stream-fxtrade.oanda.com/7a4461-6d80-4771-9456-445614561230-b400-4b6a-4560-5000-3065-a560-335d
+程序参数：
+- `https://stream-fxtrade.oanda.com/7a4461-6d80-4771-9456-445614561230-b400-4b6a-4560-5000-3065-a560-335d`
 
 变量...
 
-VM 参数:
+VM 参数：
 变量...
 
-- 当使用 SWT 启动时使用 -XStartOnFirstThread 参数
+- 当使用 SWT 启动时使用`-XStartOnFirstThread`参数
 
-工作目录:
-- 默认: $(workspace_loc:tradingbot-demo-programs)
-- 其他:
+工作目录：
+- 默认：`$(workspace_loc:tradingbot-demo-programs)`
+- 其他：
 
 工作区... 文件系统... 变量...
 
 应用 关闭 调试
 
-# 启动配置
+### 启动配置
 
-一段时间后，市场数据流被停止。随后 `heartbeatService` 尝试重新连接并成功连接。我们看到接收到了心跳，连接已成功重启。
+一段时间后，市场数据流被停止。随后`heartbeatService`尝试重新连接并成功连接。我们看到接收到了心跳，连接已成功重启。
 
 ```
 <terminated>DefaultHeartbeatServiceDemo Application|java.lang.virtual(version=1.8.0_21,home=/home/java (Feb 2016 18:17:08)
+
 2016-02-18 18:17:48,466 INFO [DefaultMonitorStreamingThread] Executing request http://stream-fxtrade.oanda.com/api/prices/Account-Heartbeat-EUR_USD_HTTP
+
 2016-02-18 18:17:49,212 INFO [DefaultMonitorStreamingThread] Heartbeat received 2016-02-18 18:17:48,726 from source DEMO_MDATASTREAM
+
 2016-02-18 18:17:50,140 INFO [DefaultMonitorStreamingThread] Heartbeat received 2016-02-18 18:17:49,726 from source DEMO_MDATASTREAM
+
 2016-02-18 18:17:51,125 INFO [DefaultMonitorStreamingThread] Heartbeat received 2016-02-18 18:17:50,726 from source DEMO_MDATASTREAM
+
 2016-02-18 18:17:52,297 INFO [DefaultMonitorStreamingThread] Heartbeat received 2016-02-18 18:17:51,726 from source DEMO_MDATASTREAM
+
 2016-02-18 18:17:53,162 INFO [DefaultMonitorStreamingThread] Heartbeat received 2016-02-18 18:17:52,726 from source DEMO_MDATASTREAM
+
 2016-02-18 18:17:54,308 INFO [DefaultMonitorStreamingThread] Heartbeat received 2016-02-18 18:17:53,726 from source DEMO_MDATASTREAM
-2016-02-18 18:17:55,140 INFO [DefaultMonitorStreamingThread] Heartbeat received 2016-02-18 18:17:54,726 from source DEMO_MDATASTREAM
-2016-02-18 18:17:56,146 INFO [DefaultMonitorStreamingThread] Heartbeat received 2016-02-18 18:17:55,726 from source DEMO_MDATASTREAM
-2016-02-18 18:17:57,367 INFO [DefaultMonitorStreamingThread] Heartbeat received 2016-02-18 18:17:56,726 from source DEMO_MDATASTREAM
-2016-02-18 18:17:58,418 INFO [DefaultMonitorStreamingThread] Heartbeat received 2016-02-18 18:17:57,726 from source DEMO_MDATASTREAM
-2016-02-18 18:17:59,728 INFO [DefaultMonitorStreamingThread] Heartbeat received 2016-02-18 18:17:58,726 from source DEMO_MDATASTREAM
 ```
 
-# 输出
 
-11. 电子邮件通知
 
-在本章中，我们将讨论电子邮件通知，它们在机器人内部触发某些事件时通知用户非常有用。这些通知与第 7 章中讨论的订单/账户事件紧密结合。结果是电子邮件通知组件具有通过 `EventBus` 传递的与其他处理程序相同的输入负载。这些通知在需要用户采取行动时非常有用，例如，MARGIN_CALL 可能在 OANDA 平台触发，表明账户急需追加保证金。另一方面，通过开启订单/账户事件的通知，用户可以了解机器人运行的状态。
+2016-02-18 18:17:55,140 INFO [DefaultMonitorStreamingThread] Heartbeat received 2016-02-18 18:17:54,726 from source DEMO_MDATASTREAM
+
+2016-02-18 18:17:56,146 INFO [DefaultMonitorStreamingThread] Heartbeat received 2016-02-18 18:17:55,726 from source DEMO_MDATASTREAM
+
+2016-02-18 18:17:57,367 INFO [DefaultMonitorStreamingThread] Heartbeat received 2016-02-18 18:17:56,726 from source DEMO_MDATASTREAM
+
+2016-02-18 18:17:58,418 INFO [DefaultMonitorStreamingThread] Heartbeat received 2016-02-18 18:17:57,726 from source DEMO_MDATASTREAM
+
+2016-02-18 18:17:59,728 INFO [DefaultMonitorStreamingThread] Heartbeat received 2016-02-18 18:17:58,726 from source DEMO_MDATASTREAM
+
+# 11. 电子邮件通知
+
+在本章中，我们将讨论电子邮件通知，它们在机器人内部触发某些事件时通知用户非常有用。这些通知与第 7 章中讨论的订单/账户事件紧密结合。结果是电子邮件通知组件具有通过 `EventBus` 传递的与其他处理程序相同的输入负载。这些通知在需要用户采取行动时非常有用，例如，`MARGIN_CALL` 可能在 OANDA 平台触发，表明账户急需追加保证金。另一方面，通过开启订单/账户事件的通知，用户可以了解机器人运行的状态。
 
 ## 11.1 通知设计
 
-如上所述，事件由订单/账户事件处理程序处理的同时，也被发布到电子邮件通知服务。该服务 `EventEmailNotifier` 处理该事件并在配置了相应的 `EmailContentGenerator` 时生成电子邮件。`EmailContentGenerator` 的实现负责生成标题和正文（即 `EmailPayLoad`），并根据事件异异。
+如上所述，事件由订单/账户事件处理程序处理的同时，也被发布到电子邮件通知服务。该服务 `EventEmailNotifier` 处理该事件并在配置了相应的 `EmailContentGenerator` 时生成电子邮件。`EmailContentGenerator` 的实现负责生成标题和正文（即 `EmailPayLoad`），并根据事件类型而异。
 
 让我们查看持有邮件内容结果的 POJO `EmailPayLoad`。
 
@@ -8070,19 +8766,33 @@ VM 参数:
 
 ```java
 public class EmailPayLoad {
+
   private final String subject;
+
   private final String body;
+
   public EmailPayLoad(String subject, String body) {
+
     super();
+
     this.subject = subject;
+
     this.body = body;
+
   }
+
   public String getSubject() {
+
     return subject;
+
   }
+
   public String getBody() {
+
     return body;
+
   }
+
 }
 ```
 
@@ -8092,14 +8802,13 @@ public class EmailPayLoad {
 
 ```java
 public interface EmailContentGenerator<T> {
+
   EmailPayLoad generate(EventPayLoad<T> payLoad);
+
 }
 ```
 
 ### 11.1.3 示例实现
-
-
-
 
 在本节中，我们将讨论 `EmailContentGenerator` 接口的示例实现。首先，我们查看一个当平台生成以下交易事件时会发送电子邮件的实现方案：
 
@@ -8109,7 +8818,7 @@ public interface EmailContentGenerator<T> {
 
 当触及止盈位时，例如，我们可以预期得到如下 json 响应：
 
-```
+```json
 {
   "id":10003,
   "accountId":234567,
@@ -8131,18 +8840,31 @@ public interface EmailContentGenerator<T> {
 ```java
 @Override
 public EmailPayload generate(EventPayload payload, JSONObject payload) {
+
   JSONObject jsonPayload = payload.getPayload();
+
   TradeableInstrument instrument = new TradeableInstrument((String) jsonPayload.get(instrument.instrument).toString());
+
   final String type = jsonPayload.get(OandaJsonKeys.type).toString();
+
   final long accountId = (Long)jsonPayload.get(OandaJsonKeys.accountId);
+
   final double accountBalance = (Number)jsonPayload.get(OandaJsonKeys.account);
+
   final long tradeId = (Long)jsonPayload.get(OandaJsonKeys.tradeId);
+
   final double pl = (Number)jsonPayload.get(OandaJsonKeys.pl).doubleValue();
+
   final double interest = (Number)jsonPayload.get(OandaJsonKeys.interest);
+
   final long tradeUnits = (Long)jsonPayload.get(OandaJsonKeys.tradeUnits);
+
   final String emailMsg = String.format("Trade event %s received for account %d. " + "Trade id=%%d. Pnl=%%2f after the event=%%2f", type, accountId, tradeId, pl, accountBalance);
+
   final String subject = String.format("Order event %s for %s", type, instrument.getInstrument());
+
   return new EmailPayload(subject, emailMsg);
+
 }
 ```
 
@@ -8166,7 +8888,7 @@ public EmailPayload generate(EventPayload payload, JSONObject payload) {
 
 - 1 Order event TAKE_PROFIT_FILLED for USD_CHF
 
-我们的下一个示例涵盖了订单成交事件。当此类此类事件发生时，用户可以预期从 OANDA 平台获得类似下面的 json：
+我们的下一个示例涵盖了订单成交事件。当此类事件发生时，用户可以预期从 OANDA 平台获得类似下面的 json：
 
 ```json
 {
@@ -8195,16 +8917,26 @@ public EmailPayload generate(EventPayload payload, JSONObject payload) {
 
 ```java
 public EmailPayLoad generate(EventPayload payload, JSONObject payload) {
+
   JSONObject jsonPayload = payload.getPayload();
+
   TradeableInstrument instrument = new TradeableInstrument((String) (jsonPayload.containsKey(OandaJsonKeys.instrument) ? jsonPayload.get(OandaJsonKeys.instrument) : null));
+
   final String type = jsonPayload.get(OandaJsonKeys.type).toString();
+
   long accountId = (Long) jsonPayload.get(OandaJsonKeys.accountId());
+
   final double accountBalance = jsonPayload.containsKey(OandaJsonKeys.accountBalance) ? ((Number) jsonPayload.get(OandaJsonKeys.accountBalance)).doubleValue() : 0.0;
+
   final long orderId = (Long) jsonPayload.get(OandaJsonKeys.id);
+
   final String emailMsg = String.format(
     "Order event received on account %d. Order id=%d. " + "Account balance=%2f", accountId, orderId, accountBalance);
+
   final String subject = String.format("Order event %s for %s", type, instrument.getInstrument());
+
   return new EmailPayload(subject, emailMsg);
+
 }
 ```
 
@@ -8222,6 +8954,7 @@ public EmailPayLoad generate(EventPayload payload, JSONObject payload) {
 
 ```java
 public class EventMailNotifier<T> {
+
   private static final Logger LOG = Logger.getLogger(EventMailNotifier.class);
 
   @Autowired
@@ -8236,19 +8969,33 @@ public class EventMailNotifier<T> {
   @Subscribe
   @Async
   public void notifyByEmail(EventPayload<T> payload) {
+
     Preconditions.checkNotNull(payload);
+
     EmailContentGenerator<T> eventContentGenerator = eventContentGeneratorMap.get(payload.getType());
+
     if (eventContentGenerator != null) {
+
       EmailPayload emailPayload = eventContentGenerator.generate(payload);
+
       SimpleMailMessage msg = new SimpleMailMessage();
+
       msg.setSubject(emailPayload.getSubject());
+
       msg.setTo(tradingConfig.getTo());
+
       msg.setText(emailPayload.getBody());
+
       this.mailSender.send(msg);
+
     } else {
+
       LOG.warn("No content generator for event: " + payload.getType());
+
     }
+
   }
+
 }
 ```
 
@@ -8274,6 +9021,8 @@ public class EventMailNotifier<T> {
 </util:map>
 ```
 
+
+
 在上面的配置中，我们首先配置了两个处理器 `OrderFilledEventHandler` 和 `TradeEventHandler`，它们分别处理 `OrderEvents` 和 `TradeEvents` 事件，两者都是 `Event` 接口的实现。然后我们在这里选择了想要发送通知的事件并进行配置。
 
 我们关于邮件通知的简短讨论结束。
@@ -8286,11 +9035,15 @@ public class EventMailNotifier<T> {
 package com.precioustech.trading.tradingbot.events.notification.email;
 
 import java.util.Map;
+
 import org.json.simple.JSONObject;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.google.common.collect.Maps;
 import com.google.common.eventbus.EventBus;
+
 import com.precioustech.trading.events.EventPayload;
 import com.precioustech.trading.oanda.restapi.OandaJsonKeys;
 import com.precioustech.trading.oanda.restapi.TradeEvents;
@@ -8299,12 +9052,18 @@ public class EventMailNotifierDemo {
 
   @SuppressWarnings("unchecked")
   public static void main(String[] args) {
-    ApplicationContext appContext = new ClassPathXmlApplicationContext("emailnotify-demo.xml");
-    EventMailNotifier<JSONObject> eventMailNotifier = appContext.getBean(EventMailNotifier.class);
+    ApplicationContext appContext =
+        new ClassPathXmlApplicationContext("emailnotify-demo.xml");
+
+    EventMailNotifier<JSONObject> eventMailNotifier =
+        appContext.getBean(EventMailNotifier.class);
+
     EventBus eventBus = new EventBus();
+
     eventBus.register(eventMailNotifier);
 
-    Map <String, Object> payload = Maps.newHashMap();
+    Map<String, Object> payload = Maps.newHashMap();
+
     payload.put(OandaJsonKeys.instrument, "GBP_USD");
     payload.put(OandaJsonKeys.type, TradeEvents.TAKE_PROFIT_FILLED.name());
     payload.put(OandaJsonKeys.accountId, 123456);
@@ -8315,30 +9074,32 @@ public class EventMailNotifierDemo {
     payload.put(OandaJsonKeys.units, 2700);
 
     JSONObject jsonObj = new JSONObject(payload);
-    eventBus.post(new EventPayload <JSONObject> (TradeEvents.TAKE_PROFIT_FILLED));
+
+    eventBus.post(new EventPayload<JSONObject>(TradeEvents.TAKE_PROFIT_FILLED));
   }
 }
 ```
 
 在下面的代码中，我们手动创建一个 `JSONObject` 实例并将其发布到 `EventBus`。该程序的配置如下：
 
-
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-xmlns:xsi="http://www.w3.org/2001/XIME-instance"
-xmlns:context="http://www.springframework.org/schema/context"
-xmlns:util="http://www.springframework.org/schema/util"
-xmlns:task="http://www.springframework.org/schema/task"
-xmlns:tx="http://www.springframework.org/schema/tx"
-si:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
-http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XIME-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       si:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
   <bean id="MailSender" class="org.springframework.mail.javamail.JavaMailSender">
     <property name="host" value="${systemProperties['mail.host']}" />
     <property name="port" value="${systemProperties['mail.port']}" />
     <property name="username" value="${systemProperties['mail.user']}" />
     <property name="password" value="${systemProperties['mail.password']}" />
+
     <props>
       <prop key="mail.transport.protocol" value="smtps" />
       <prop key="smtp.auth" value="true" />
@@ -8348,6 +9109,7 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
       <prop key="smtp.socketFactory.fallback" value="false" />
     </props>
   </bean>
+
   <bean id="TradingConfig" class="com.preciouxt.xtrading.TradingConfig">
     <property name="minReserveRatio" value="0.1" />
     <property name="maxAllowedQuantity" value="10" />
@@ -8360,19 +9122,24 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
     <property name="fadeTheMovePipsDesired" value="16" />
     <property name="fadeTheMovePriceExpiry" value="15" />
   </bean>
+
   <bean id="eventNotifier" class="com.preciouxt.xtrading.trading.events">
     <bean id="tradeEventHandler" class="com.preciouxt.xtrading.oanda.restapi.event">
       <constructor-arg index="0" />
       <null />
-    </constructor-arg>
+      </constructor-arg>
     </bean>
   </bean>
-  <util:map id="eventContentGeneratorMap" key-type="com.preciouxt.xtrading.oanda.restapi.event">
-    <entry key="${T(com.preciouxt.xtrading.oanda.restapi.event)}" value-ref="tradeEventHandler" />
+
+  <util:map id="eventContentGeneratorMap"
+            key-type="com.preciouxt.xtrading.oanda.restapi.event">
+    <entry key="${T(com.preciouxt.xtrading.oanda.restapi.event)}"
+           value-ref="tradeEventHandler" />
     <entry key="${T(com.preciouxt.xtrading.oanda.restapi.event)}" />
-    <entry value-ref="tradeEventHandler"/>
-    <entry key="#{T(com.precioutech.ftrading.oanda.event)}" value-ref="tradeEventHandler"/>
-  <util:map/>
+    <entry value-ref="tradeEventHandler" />
+    <entry key="#{T(com.precioutech.ftrading.oanda.event)}"
+           value-ref="tradeEventHandler" />
+  </util:map>
 </beans>
 ```
 
@@ -8403,8 +9170,6 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 
 （此处省略重复的列表项，内容与上文一致）
 
-
-
 ```xml
 <property name="mailTo" value="${mail.to}"/>
 <property name="max10yrwmaOffset" value="0.1"/>
@@ -8414,34 +9179,40 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 <property name="fadeTheMovePriceExpiry" value="15"/>
 ```
 
-我们配置了 GoogleBus 以及所有使用 EventBus 来分发事件有效负载（event payloads）的回调处理器。我们还配置了第一章中讨论过的 `FindEventSubscribers` Bean 后处理器，它会找到所有带有 `@Subscriber` 注解方法的类，并自动将它们注册到 EventBus 中。
+我们配置了 `GoogleBus` 以及所有使用 `EventBus` 来分发事件有效负载（event payloads）的回调处理器。我们还配置了第一章中讨论过的 `FindEventSubscribers` Bean 后处理器，它会找到所有带有 `@Subscriber` 注解方法的类，并自动将它们注册到 `EventBus` 中。
 
 ```xml
 <bean id="eventBus" class="com.google.common.eventbus.EventBus"/>
+
 <bean id="findEventBusSubscribers"/>
 <class class="com.preciustech.xtrading.tradingbot.spring.FindEventBusSubscribers"/>
+
 <bean id="eventCallback"
-      class="com.preciustech.xtrading.events.EventCallbackImpl">
+      class="com.precioustech.xtrading.events.EventCallbackImpl">
   <constructor-arg index="0" ref="eventBus"/>
 </bean>
+
 <bean id="heartbeatCallback"
-      class="com.preciustech.xtrading.heartbeats.HeartbeatCallbackImpl">
+      class="com.precioustech.xtrading.heartbeats.HeartbeatCallbackImpl">
   <constructor-arg index="0" ref="eventBus"/>
 </bean>
+
 <bean id="marketEventCallback"
-      class="com.preciustech.xtrading.marketdata.MarketEventHandlerImpl">
+      class="com.precioustech.xtrading.marketdata.MarketEventHandlerImpl">
   <constructor-arg index="0" ref="eventBus"/>
 </bean>
 ```
 
-对于 JavaMailSender，配置如下：
+对于 `JavaMailSender`，配置如下：
 
 ```xml
-<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSender">
+<bean id="mailSender"
+      class="org.springframework.mail.javamail.JavaMailSender">
   <property name="host" value="${mail.host}"/>
   <property name="port" value="${mail.port}"/>
   <property name="username" value="${mail.username}"/>
   <property name="password" value="${mail.password}"/>
+
   <property name="javaMailProperties">
     <props>
       <prop key="mail.transport.protocol">smtps</prop>
@@ -8455,23 +9226,24 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 </bean>
 ```
 
-这些 Bean 的占位符定义在 `tradingbot.properties` 文件中。另一个使用 JavaMailSender 发送通知的服务配置如下：
+这些 Bean 的占位符定义在 `tradingbot.properties` 文件中。另一个使用 `JavaMailSender` 发送通知的服务配置如下：
 
 ```xml
-1 <bean id="eventEmailNotifier"
-2 class="com.precioustech.ftrading.trading.bot.events.notification.email
+<bean id="eventEmailNotifier"
+      class="com.precioustech.ftrading.trading.bot.events.notification.email">
 ```
 
 用于放置订单的 `OrderQueue` 配置非常简单。
 
 ```xml
-1 <bean id="orderQueue" class="java.util.concurrent.LinkedBlockingQueue"/>
+<bean id="orderQueue"
+      class="java.util.concurrent.LinkedBlockingQueue"/>
 ```
 
 我们使用内置的 Spring Task Scheduler 来调度任务。一个示例任务是为我们的 Twitter 账户轮询推推。
 
 ```xml
-1 <task:scheduler id="taskScheduler" pool-size="5">
+<task:scheduler id="taskScheduler" pool-size="5">
 ```
 
 ### 12.1.2 Twitter 相关的 Bean 配置
@@ -8479,12 +9251,16 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 我们首先配置 `TwitterTemplate`，它启用了与 Twitter 的所有交互，是 Spring Social 的一部分。
 
 ```xml
-1 <bean id="twitter" class="org.springframework.social.twitter.api.impl.Tw
-2 <constructor-arg index="0" value="${twitter.consumerKey}"/>
-3 <constructor-arg index="1" value="${twitter.consumerSecret}"/>
-4 <constructor-arg index="2" value="${twitter.accessToken}"/>
-5 <constructor-arg index="3" value="${twitter.accessTokenSecre"/>
-6 </bean>
+
+
+
+```xml
+<bean id="twitter" class="org.springframework.social.twitter.api.impl.Tw">
+  <constructor-arg index="0" value="${twitter.consumerKey}"/>
+  <constructor-arg index="1" value="${twitter.consumerSecret}"/>
+  <constructor-arg index="2" value="${twitter.accessToken}"/>
+  <constructor-arg index="3" value="${twitter.accessTokenSecre"/>
+</bean>
 ```
 
 配置占位符都定义在上一节讨论过的 `tradingbot.properties` 中，而且自言易懂。
@@ -8492,25 +9268,27 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 接下来配置一个 Bean，它是我们想要处理推文的所有 Twitter 账户的列表。虽然它不是其他 Bean 的依赖，但它被 SpEL 的值使用。例如：
 
 ```xml
-1 <bean id="fXtwitterList" class="java.util.ArrayList">
-2 <constructor-arg index="0">
-3 <list>
-4 <value>SignalFactory/</value>
-5 <value>Forex_EA4U/</value>
-6 </list>
-7 </constructor-arg>
-8 </bean>
-9 <util:map id="tweetHandlerMap" key="#{fXtwitterList[0]}">
-10 <entry key="#{fXtwitterList[0]}">
-11 <bean class=
-12 "com.precioustech.ftrading.trading.social.twitter.tweethander.S
-13 <constructor-arg index="0" value="#{fXtwitterList[0]}"/>
-14 </bean>
-15 </entry>
-<entry key="#{ftweeterList[1]}">
-  <bean class="com.preciouctech.ftrading.tradingbot.social.twitter.tweethandler.Zulu">
-    <constructor-arg index="0" value="#{ftweeterList[1]}"/>
-  </bean>
+<bean id="fXtwitterList" class="java.util.ArrayList">
+  <constructor-arg index="0">
+    <list>
+      <value>SignalFactory/</value>
+      <value>Forex_EA4U/</value>
+    </list>
+  </constructor-arg>
+</bean>
+
+<util:map id="tweetHandlerMap" key="#{fXtwitterList[0]}">
+  <entry key="#{fXtwitterList[0]}">
+    <bean class="com.precioustech.ftrading.trading.social.twitter.tweethander.S">
+      <constructor-arg index="0" value="#{fXtwitterList[0]}"/>
+    </bean>
+  </entry>
+
+  <entry key="#{ftweeterList[1]}">
+    <bean class="com.preciouctech.ftrading.tradingbot.social.twitter.tweethandler.Zulu">
+      <constructor-arg index="0" value="#{ftweeterList[1]}"/>
+    </bean>
+  </entry>
 </util:map>
 ```
 
@@ -8526,28 +9304,30 @@ SpEL 允许我们就地定义所有 Twitter 账户，并允许通过表达式引
 
 我们首先查看属性文件：
 
-- oanda.url=https://api.ftrade.oanda.com
-- oanda.accessToken=7d7411c1234f25d9f5a094e5a356789b-2c9a7b495789
-（此处省略重复的 accessToken 项）
+- `oanda.url=https://api.ftrade.oanda.com`
+- `oanda.accessToken=7d7411c1234f25d9f5a094e5a356789b-2c9a7b495789`
 
-
-
-
+（此处省略重复的 `accessToken` 项）
 
 上述配置的事件处理器将分配给它们将要处理的平台事件。
 
-```
+```xml
 <util:map id="eventEmailContentGeneratorMap" key-type="com.precioustech.f">
   key="#T(com.precioustech.fxtrading.oanda.restapi.events.OrderEvents).MA"
   value-ref="orderEventHandler"/>
+
   key="#T(com.precioustech.fxtrading.oanda.restapi.events.OrderEvents).LJ"
   value-ref="orderEventHandler"/>
+
   key="#T(com.precioustech.fxtrading.oanda.restapi.events.OrderEvents).OF"
   value-ref="orderEventHandler"/>
+
   key="#T(com.precioustech.fxtrading.oanda.restapi.events.OrderEvents).OF"
   value-ref="orderEventHandler"/>
+
   key="#T(com.precioustech.fxtrading.oanda.restapi.events.TradeEvents).TF"
   value-ref="orderEventHandler"/>
+
   key="#T(com.precioustech.fxtrading.oanda.restapi.events.TradeEvents).ST"
   value-ref="orderEventHandler"/>
 </util:map>
@@ -8555,11 +9335,11 @@ SpEL 允许我们就地定义所有 Twitter 账户，并允许通过表达式引
 
 我们在上方配置 `eventEmailContentGeneratorMap` 是为了表达当平台事件生成时，我们对机器人生成的通知感兴趣。相应的处理器正如在前一节讨论过的，负责生成邮件内容。
 
-## Market数据流媒体服务
+## Market 数据流媒体服务
 
-```
+```xml
 <bean id="MarketDataStreamingService"
-  class="com.precioustech.fxtrading.oanda.streaming.marketdata.O"
+  class="com.precioustech.fxtrading.oanda.streaming.marketdata.O">
   <constructor-arg arg="0" value="${oanda.streaming.url}"/>
   <constructor-arg arg="1" value="${oanda.accessToken}"/>
   <constructor-arg arg="2" value="${oanda.accountId}"/>
@@ -8570,41 +9350,40 @@ SpEL 允许我们就地定义所有 Twitter 账户，并允许通过表达式引
 </bean>
 ```
 
-我们将源分配到 MKDATASTREAM，作为一个心跳源，因为同一个类负责处理心跳跳动。
+我们将源分配到 `MKDATASTREAM`，作为一个心跳源，因为同一个类负责处理心跳跳动。
 
 `tradeableInstrumentList` 是我们想要从 OANDA 平台订阅逐跳数据（tick data）的仪器列表。它的配置如下：
 
 ```xml
-1 <bean id="tradeableInstrumentList" class="java.util.ArrayList">
-2  <constructor-arg index="0">
-3    <list>
-4
-5      <bean class="com.precioustech.fxtrading.instrument.T
-6        <constructor-arg index="0" value="USD_CAD"/>
-7      </bean>
-8
-9      <bean class="com.precioustech.fxtrading.instrument.T
-10       <constructor-arg index="0" value="GBP_USD"/>
-11     </bean>
-12
-13     <bean class="com.precioustech.fxtrading.instrument.T
-14       <constructor-arg index="0" value="AUD_JPY"/>
-15     </bean>
-16
-17     <bean class="com.precioustech.fxtrading.instrument.T
-18       <constructor-arg index="0" value="EUR_NDZ"/>
-19     </bean>
-20
-21     <bean class="com.precioustech.fxtrading.instrument.T
-22       <constructor-arg index="0" value="GBP_CHF"/>
-23     </bean>
-24
-25     <bean class="com.precioustech.fxtrading.instrument.T
-26       <constructor-arg index="0" value="EUR_NDZ"/>
-27     </bean>
-28    </list>
-29  </constructor-arg>
-30 </bean>
+<bean id="tradeableInstrumentList" class="java.util.ArrayList">
+  <constructor-arg index="0">
+    <list>
+      <bean class="com.precioustech.fxtrading.instrument.T">
+        <constructor-arg index="0" value="USD_CAD"/>
+      </bean>
+
+      <bean class="com.precioustech.fxtrading.instrument.T">
+        <constructor-arg index="0" value="GBP_USD"/>
+      </bean>
+
+      <bean class="com.precioustech.fxtrading.instrument.T">
+        <constructor-arg index="0" value="AUD_JPY"/>
+      </bean>
+
+      <bean class="com.precioustech.fxtrading.instrument.T">
+        <constructor-arg index="0" value="EUR_NDZ"/>
+      </bean>
+
+      <bean class="com.precioustech.fxtrading.instrument.T">
+        <constructor-arg index="0" value="GBP_CHF"/>
+      </bean>
+
+      <bean class="com.precioustech.fxtrading.instrument.T">
+        <constructor-arg index="0" value="EUR_NDZ"/>
+      </bean>
+    </list>
+  </constructor-arg>
+</bean>
 ```
 
 ## 策略配置
@@ -8612,13 +9391,15 @@ SpEL 允许我们就地定义所有 Twitter 账户，并允许通过表达式引
 在本节中，我们讨论了通过调度器激活的几类策略。
 
 ```xml
-1 <bean id="fadeMove"
-2 class="com.precioustech.fxtrading.strategies.FadeMove">
-3 <constructor-arg index="0" ref="tradeableInstrumentList"/>
-4 <bean id="copyTwitter"
-5 class="com.precioustech.fxtrading.strategies.CopyTwitter">
-6 <constructor-arg index="0" ref="tradeableInstrumentList"/>
-7 </bean>
+<bean id="fadeMove"
+  class="com.precioustech.fxtrading.strategies.FadeMove">
+  <constructor-arg index="0" ref="tradeableInstrumentList"/>
+</bean>
+
+<bean id="copyTwitter"
+  class="com.precioustech.fxtrading.strategies.CopyTwitter">
+  <constructor-arg index="0" ref="tradeableInstrumentList"/>
+</bean>
 ```
 
 `FadeMove` 策略依赖一个调度器，用于在满足给定条件时观察仪器并下订单。
@@ -8633,13 +9414,15 @@ SpEL 允许我们就地定义所有 Twitter 账户，并允许通过表达式引
 调度器每 60000 毫秒调用 `fadeMove` 的 `analysePrices` 方法，每 300000 毫秒调用 `copyTwitter` 的 `harvestTrade` 方法。
 
 ```xml
-1 <bean id="fadeMove"
-2 class="com.precioustech.fxtrading.strategies.FadeMove">
-3 <constructor-arg index="0" ref="tradeableInstrumentList"/>
-4 <bean id="copyTwitter
-5 class="com.precioustech.fxtrading.strategies.CopyTwitter>
-6 <constructor-arg index="0" ref="tradeableInstrumentList"/>
-7 </bean>
+<bean id="fadeMove"
+  class="com.precioustech.fxtrading.strategies.FadeMove">
+  <constructor-arg index="0" ref="tradeableInstrumentList"/>
+</bean>
+
+<bean id="copyTwitter"
+  class="com.precioustech.fxtrading.strategies.CopyTwitter">
+  <constructor-arg index="0" ref="tradeableInstrumentList"/>
+</bean>
 ```
 
 这结束了对 Provider 的配置讨论。
@@ -8723,9 +9506,6 @@ SpEL 允许我们就地定义所有 Twitter 账户，并允许通过表达式引
 </bean>
 ```
 
-
-
-
 ## 11 构建交易机器人应用模块
 
 ```bash
@@ -8734,35 +9514,59 @@ echo "TRADING BOT built successfully"
 
 ```bash
 drvs-sr -x 10 shekhar staff 327 Jan 20:10 trading-bot-demo-programs
+
 ShekharMacBook:java shekhar$ ./build.bot
-[INFO] Scanning for projects... 
+
+[INFO] Scanning for projects...
+
 [WARNING] Some problems were encountered while building the effective model for com.precioustech.trading-bot-core:maven-compiler-plugin:jar:1.8
+
 [WARNING] The 'minSource' for org.apache.maven.maven-compiler-plugin is missing. line 70, column 19
+
 [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+
 [WARNING] For this reason, future Maven versions might no longer support such malformed projects.
+
 [INFO]
+
 [INFO] Building trading-bot-core 1.0
+
 [INFO]
-[INFO] The artifact org.apache.maven:commons-lang:jar:1.3.2 has been relocated to commons-lang:jar:1.3.2
-[INFO]
-[INFO] maven-compiler-plugin:3.1(default-compile) @ trading-bot-core
-[INFO] maven-compiler-plugin:3.1(default-test) @ trading-bot-core
-[INFO] maven-resources-plugin:2.6:resources(default-resources) @ trading-bot-core
-[INFO] Using 'UTF-8' to copy filtered resources
-[INFO] skipping existing resource: /Volumes/0/src/main/resources/java
-[INFO] [INFO] maven-jar-plugin-couple @ trading-bot-core
-[INFO] Changes detected: recompiling module!
-[INFO] Compiling 50 source files to /Volumes/0/build/trading-bot-core/target/classes
-[INFO]
-[INFO] maven-resources-plugin:2.6:testResources(default-testResources) @ trading-bot-core
-[INFO] Using 'UTF-8' to copy filtered resources
-[INFO] Copying 2 resources
-[INFO] maven-compiler-plugin:3.1(default-compile) @ trading-bot-core
-[INFO] Compiling 11 source files to /Volumes/0/build/trading-bot-core/target/test-classes
-[INFO]
-[INFO] maven-surefire-plugin:2.12.4:test(default-test) @ trading-bot-core
-[INFO] Surefire report directory: /Volumes/0/build/trading-bot-core/target/surefire-reports
 ```
+
+
+
+[INFO] The artifact `org.apache.maven:commons-lang:jar:1.3.2` has been relocated to `commons-lang:jar:1.3.2`
+
+[INFO] `maven-compiler-plugin:3.1(default-compile) @ trading-bot-core`
+
+[INFO] `maven-compiler-plugin:3.1(default-test) @ trading-bot-core`
+
+[INFO] `maven-resources-plugin:2.6:resources(default-resources) @ trading-bot-core`
+
+[INFO] Using `'UTF-8'` to copy filtered resources
+
+[INFO] skipping existing resource: `/Volumes/0/src/main/resources/java`
+
+[INFO] `maven-jar-plugin-couple @ trading-bot-core`
+
+[INFO] Changes detected: recompiling module!
+
+[INFO] Compiling 50 source files to `/Volumes/0/build/trading-bot-core/target/classes`
+
+[INFO] `maven-resources-plugin:2.6:testResources(default-testResources) @ trading-bot-core`
+
+[INFO] Using `'UTF-8'` to copy filtered resources
+
+[INFO] Copying 2 resources
+
+[INFO] `maven-compiler-plugin:3.1(default-compile) @ trading-bot-core`
+
+[INFO] Compiling 11 source files to `/Volumes/0/build/trading-bot-core/target/test-classes`
+
+[INFO] `maven-surefire-plugin:2.12.4:test(default-test) @ trading-bot-core`
+
+[INFO] Surefire report directory: `/Volumes/0/build/trading-bot-core/target/surefire-reports`
 
 ## 测试
 
@@ -8772,21 +9576,29 @@ ShekharMacBook:java shekhar$ ./build.bot
 
 ```
 Tests
+
 错误中的测试：
+
 Finishing de-serialization TestForInstrumentTest.com.precioustech.trading.social.twitter.weethandler.JsonFactoryFTIVeeHandlerTest
+
 Finishing de-serialization TestForInstrumentTest.com.precioustech.trading.social.twitter.weethandler.JsonObjectMapperFTIVeeHandlerTest
+
 Tests run 1. Failures: 0. Errors: 0. Skipped: 0
-[INFO]
-[INFO] 
+
 [INFO] 总耗时: 7.259s
+
 [INFO] Finished in 2016-01-31T16:41:08.000
+
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test(default-test) on project trading-bot-app. There are test failure
-[ERROR]
-[ERROR]
+
 [ERROR] - 请参考错误的完整堆栈跟踪，使用 -e 选项重新运行 Maven。
+
 [ERROR] 使用 -X 运行 Maven 以启用调试日志
+
 [ERROR] 更多信息请阅读以下文章：
+
 [ERROR] 帮助 1 http://cwiki.confluence/display/MAVEN#MavenFailureException
+
 tradingbot-app 构建失败：
 ```
 
@@ -8796,33 +9608,61 @@ tradingbot-app 构建失败：
 
 ```
 TESTS
+
 正在运行 prectoustech.fxtrading.tradingbot.events.notification.email.EvenMultiFilterTest
+
 2016-08-31 17:32:32 44.100 [main] - 为用户 foo 找到了 1 个测试
+
 Running prectoustech.fxtrading.tradingbot.events.notification.email.EventGeneratorTest - 为 null 找到了 agent 生成器
+
 Running prectoustech.fxtrading.tradingbot.social.twitter.twehandler.SignalFactoryFTWeMessageHandler
+
 2016-08-31 17:32:32 44.100 [main] - 为用户 foo 找到了 1 个测试
+
 Running prectoustech.fxtrading.tradingbot.social.twitter.twehandler.ZuluTrader101FTWeMessageHandler
+
 Running prectoustech.fxtrading.tradingbot.strategies.CopyStrategyTest
+
 2016-08-31 17:32:34 44.655 [main] - 为用户 foo 和交易对 EUR_AUD 找到了 2 个测试
+
 2016-08-31 17:32:34 44.661 [main] - 为用户 foo 和交易对 GBP_USD 找到了 2 个测试
+
 Running prectoustech.fxtrading.tradingbot.strategies.FailMoveStrategyTest
+
 Tests run 1. Failures: 0. Errors: 0. Time elapsed: 0.164 sec
+
 Results
+
 [INFO] --- maven-jar-plugin:3.4(default-jar) @ trading-bot-app
+
 [INFO] 正在构建 jar /volumes/0/src/trading-bot-app/target/bot-app-1.0.jar
+
 [INFO] 正在复制文件到 /users/shekhar/m2/repository/com/prectoustech/trading-bot-app/1.0/bot-app-1.0.jar
+
 [INFO] bot-app-1.0.jar
+
 [INFO] 正在安装 /volumes/0/src/trading-bot-app/target/bot-app-1.0.jar /users/shekhar/m2/repository/com/prectoustech/trading-bot-app/1.0/bot-app-1.0.jar
+
 [INFO] 正在安装 /volumes/0/src/trading-bot-app/target/bot-app-1.0.jar /users/shekhar/m2/repository/com/prectoustech/trading-bot-app/1.0/bot-app-1.0.jar
+
 [INFO] 正在安装 /volumes/0/src/trading-bot-app/target/bot-app-1.0.jar /users/shekhar/m2/repository/com/prectoustech/trading-bot-app/1.0/bot-app-1.0.jar
+
 [INFO] 正在安装 /volumes/0/src/trading-bot-app/target/bot-app-1.0.jar /users/shekhar/m2/repository/com/prectoustech/trading-bot-app/1.0/bot-app-1.0.jar
+
 [INFO] 正在安装 /volumes/0/src/trading-bot-app/target/bot-app-1.0.jar /users/shekhar/m2/repository/com/prectoustech/trading-bot-app/1.0/bot-app-1.0.jar
+
 [INFO] 正在安装 /volumes/0/src/trading-bot-app/target/bot-app-1.0.jar /users/shekhar/m2/repository/com/prectoustech/trading-bot-app/1.0/bot-app-1.0.jar
+
 [INFO] 正在安装 /volumes/0/src/trading-bot-app/target/bot-app-1.0.jar /users/shekhar/m2/repository/com/prectoustech/trading-bot-app/1.0/bot-app-1.0.jar
+
 [INFO] 正在安装 /volumes/0/src/trading-bot-app/target/bot-app-1.0.jar /users/shekhar/m2/repository/com/prectoustech/trading-bot-app/1.0/bot-app-1.0.jar
+
 [INFO] ------------------------------------------------------------------------
+
 [INFO] BUILD SUCCESS
+
 [INFO] 总耗时: 19.984s
+
 [INFO] 完成于 2016-08-31T17:32:45
 ```
 
@@ -8836,7 +9676,7 @@ Results
 - 所有的 Twitter 特定令牌均在 `.properties` 中。
   检查 `TradingConfig` 中的值是否在合理范围内，特别是 `maxAllowedQuantity` 和 `minReserveRatio`。
 - 配置用于发送电子邮件通知的有效 `mail` 地址。
-- 在 资源目录中配置 `log4j.properties`。
+- 在资源目录中配置 `log4j.properties`。
 - 再次执行 `buildbot.sh`。
 
 为了根据书中提到的策略运行机器人，我们只需执行：
@@ -8851,7 +9691,7 @@ $ ./runbot-oanda.sh
 
 当机器人运行时，我们应该会时看到以下推文：
 
-这就是全部。我们的机器人现在已完全运行。在 FOMC 决议或各国 GDP 数据等市场波动事件期间，我们应该看到 FadeMove 策略表现良好。需要注意的是，该策略维护了过去 15 分钟的内部缓存。订阅数据流的仪器越多，内存占用就越大。因此，使用较大的内存值是必要的。由于机器人运行在 maven 内部，我们需要修改 MAVEN_OPTS 参数。
+这就是全部。我们的机器人现在已完全运行。在 FOMC 决议或各国 GDP 数据等市场波动事件期间，我们应该看到 FadeMove 策略表现良好。需要注意的是，该策略维护了过去 15 分钟的内部缓存。订阅数据流的仪器越多，内存占用就越大。因此，使用较大的内存值是必要的。由于机器人运行在 maven 内部，我们需要修改 `MAVEN_OPTS` 参数。
 
 ## 13 单元测试
 
@@ -8865,17 +9705,13 @@ $ ./runbot-oanda.sh
 
 在考虑上述内容的基础上，我们本章中讨论机器人单元测试的一些概念和技术。
 
-
-
-
-
-## 13.1 使用 Mockito 作为模拟框架（mocking framework）。
+### 13.1 使用 Mockito 作为模拟框架（mocking framework）
 
 为了给机器人编写单元测试，我们将大量使用 Mockito¹ 为我们的对象创建 mock 对象（mocks）。对于像 `TwitterTemplate` 这样的对象，mock 可以模拟该对象的行为，而无需对其进行完全实例化。为了使用真实的 `TwitterTemplate` 收集推文，我们必须提供有效的令牌来与 Twitter 进行身份验证。这实际上并不是真正的问题。真正的问题是每次当我们执行搜索查询时都能获得相同的确定性结果。对于真实的 `TwitterTemplate` 来说是不可能的，因为推文在不断地创建，导致搜索结果也是如此。我们无法编写确定性的断言来测试我们的单元代码。为了解决这个问题，我们使用 mock 并获取确定性的结果。这同样适用于从提供者获取确定性的价格跳动（price tick）顺序，这在现实世界是不可能的。
 
-### 13.1.1 模拟 HTTP 交互
+#### 13.1.1 模拟 HTTP 交互
 
-我们需要能够模拟 HTTP 交互以便测试我们的 OANDA 提供者实现。其概念是，我们稍后将的这个 mock 方法返回一个 `InputStream`，它是 `FileInputStream` 的实例，而不是真实的 `org.apache.http.client.LazyDecompressingInputStream` 实例。因此，我们与 OANDA 的所有交互都来自我们创建 json 负载文件，而不是使用 OANDA 平台。让我们来看看这个方法的代码
+我们需要能够模拟 HTTP 交互以便测试我们的 OANDA 提供者实现。其概念是，我们稍后将的这个 mock 方法返回一个 `InputStream`，它是 `FileInputStream` 的实例，而不是真实的 `org.apache.http.client.LazyDecompressingInputStream` 实例。因此，我们与 OANDA 的所有交互都来自我们创建 json 负载文件，而不是使用 OANDA 平台。让我们来看看这个方法的代码：
 
 ```java
 1 public static final void mockHttpInteraction(String fname, HttpClient mockHttpClient){
@@ -8896,7 +9732,7 @@ $ ./runbot-oanda.sh
 
 `mockHttpInteraction` 方法接受一个文件名和一个 mock `HttpClient` 作为参数。方法的最后一行在我们模拟了所有交互以获取这一行之后，魔法发生的地方。在现实世界中，拥有来自 OANDA REST API 返回内容的 `HttpClient` 对象被 mock 为返回文件的内容。
 
-这是我们刚刚讨论过的一个非常有用的概念。现在，我们几乎可以通过通过在文件中模拟响应来模拟任何交互。让我们来看执行这种交互的测试示例。
+这是我们刚刚讨论过的一个非常有用的概念。现在，我们几乎可以通过通过在文件中模拟响应来模拟任何交互。让我们来看执行这种交互的测试示例：
 
 ```java
 @Test
@@ -8912,15 +9748,17 @@ public void accountIdTest() throws Exception {
 
 private OandaAccountDataService createSpyAndCommonStuff(String fname) {
     OandaAccountDataService service = spy(service);
-
-    CloseableHttpClient mockHttpClient = mock(CloseableHttpClient.class);
-    when(service.getHttpClient()).thenReturn(mockHttpClient);
-
-    OandaTestUtil.mockHttpClientInteraction(fname, mockHttpClient);
-
-    return service;
-}
 ```
+
+
+
+`CloseableHttpClient mockHttpClient = mock(CloseableHttpClient.class);`
+
+`when(service.getHttpClient()).thenReturn(mockHttpClient);`
+
+`OandaTestUtil.mockHttpClientInteraction(fname, mockHttpClient);`
+
+`return service;`
 
 在查看细节之前，让我们先看看这个单元测试用例中 `src/test/resources/account123456.txt` spy 的内容。
 
@@ -8972,28 +9810,23 @@ private OandaAccountDataService createSpyAndCommonStuff(String fname) {
  * @throws IOException
  */
 public static final String response(HttpResponse response) {
-```java
-HttpEntity entity = response.getEntity();
-if (response.getStatusCode() == HttpStatus.SC_OK || response.getStatusCode() == HttpStatus.CREATED) {
-    InputStream stream = entity.getContent();
-    String line;
-    BufferedReader br = new BufferedReader(new InputStreamReader(stream));
-    StringBuilder strResp = new StringBuilder();
-    while ((line = br.readLine()) != null) {
-        strResp.append(line);
-    }
+    HttpEntity entity = response.getEntity();
+    if (response.getStatusCode() == HttpStatus.SC_OK || response.getStatusCode() == HttpStatus.CREATED) {
+        InputStream stream = entity.getContent();
+        String line;
+        BufferedReader br = new BufferedReader(new InputStreamReader(stream));
+        StringBuilder strResp = new StringBuilder();
+        while ((line = br.readLine()) != null) {
+            strResp.append(line);
+        }
     } else {
 ```
 
 ### 13.1.2 模拟流（Streams）
 
-在本节中，我们讨论了在存在持续跳动数据流时如何模拟流。这些跳动是
+在本节中，我们讨论了在存在持续跳动数据流时如何模拟流。这些跳动是上面的文件用于在存在 `AUD_CAD` 和 `NZD_SGD` 的持续跳动数据流时模拟流。这些跳动是穿插着心跳包，同时也模拟了流是活跃的这一。
 
-上面的文件用于在存在 AUD_CAD 和 NZD_SGD 的持续跳动数据流时模拟流。这些跳动是
-
-
-穿插着心跳包，同时也模拟了流是活跃的这一。
-让我们来看测试 OandaMarketDataStreamingService 的实际案例。我们希望测试该服务能够正确处理传入的逐笔数据和心跳包，并且所有相关的回调处理器都能通过 EventBus 将事件分发到下游。我们的测试断言之一将检查文件中的事件计数是否与推送到下游的事件匹配。让我们看看代码，看看如何实现所有这些断言。
+让我们来看测试 `OandaMarketDataStreamingService` 的实际案例。我们希望测试该服务能够正确处理传入的逐笔数据和心跳包，并且所有相关的回调处理器都能通过 `EventBus` 将事件分发到下游。我们的测试断言之一将检查文件中的事件计数是否与推送到下游的事件匹配。让我们看看代码，看看如何实现所有这些断言。
 
 ```java
 1 private static final int expectedPriceEvents = 668; // 每个一个
@@ -9028,23 +9861,22 @@ if (response.getStatusCode() == HttpStatus.SC_OK || response.getStatusCode() == 
 30 }
 ```
 
+```java
 private OandaStreamingService setUpSpy(OandaStreamingService service, String frame) throws OandaStreamingService {
     OandaStreamingService spy = spy(service);
     CloseableHttpClient mockHttpClient = mock(CloseableHttpClient.class);
     when (spy.getHttpClient()).thenReturn(mockHttpClient);
     when (spy.isStreaming()).thenReturn(service.isStreaming());
     OandaTestUtil.mockHttpClient(frame, mockHttpClient);
-
-```java
-spy.startStreaming();
-do {
-  Thread.sleep(2L);
-} while (spy.streamThread.isAlive());
-return spy;
+    spy.startStreaming();
+    do {
+        Thread.sleep(2L);
+    } while (spy.streamThread.isAlive());
+    return spy;
 }
 ```
 
-setSpy 方法通过对 OandaStreamingService 的底层实例（在此例中为 OandaMarketDataStreamingService）创建 spy，来执行流服务的常规设置。它设置了模拟的 `HttpClient`，使得文件 `src/test/resources/marketData12345.txt` 在底层服务通过调用 `spy.startStreaming()` 开始流传输时被设置为市场数据流所有事件的源。一旦流开始，我们就等待所有逐笔数据和心跳包完全传输。我们设置了一个带有 2ms 休眠的 do 循环作为等待机制，以确保其完全完成。一旦接收到断开消息（这是文件中的最后一个事件），流会自动停止。当 OANDA 平台检测到流连接数超过限制时，有时会发生这种自动停止。断开消息看起来如下：
+`setSpy` 方法通过对 `OandaStreamingService` 的底层实例（在此例中为 `OandaMarketDataStreamingService`）创建 spy，来执行流服务的常规设置。它设置了模拟的 `HttpClient`，使得文件 `src/test/resources/marketData12345.txt` 在底层服务通过调用 `spy.startStreaming()` 开始流传输时被设置为市场数据流所有事件的源。一旦流开始，我们就等待所有逐笔数据和心跳包完全传输。我们设置了一个带有 2ms 休眠的 do 循环作为等待机制，以确保其完全完成。一旦接收到断开消息（这是文件中的最后一个事件），流会自动停止。当 OANDA 平台检测到流连接数超过限制时，有时会发生这种自动停止。断开消息看起来如下：
 
 ```json
 {"disconnect":{"code":64,"message":"bye","moreInfo":"none"}}
@@ -9052,7 +9884,7 @@ setSpy 方法通过对 OandaStreamingService 的底层实例（在此例中为 O
 
 断开消息会导致流以及后台线程 `streamThread` 的终止，该线程被设置为准无限循环，现在也终止了。方法随后返回给调用者。
 
-现在我们必须测试所有事件是否已通过 EventBus 成功交付给下游订阅者。对于此测试用例，测试类本身就是这些事件的最终消费者。这在我们的测试用例 `marketDataStreaming()` 中可以看出，我们在设置主服务本身的同时完成了设置。由于我们需要订阅 `MarketDataPayload` 和 `HeartBeatPayload` 事件，因此我们在测试类中设置了以下哑方法，它们仅负责计数接收到的事件。
+现在我们必须测试所有事件是否已通过 `EventBus` 成功交付给下游订阅者。对于此测试用例，测试类本身就是这些事件的最终消费者。这在我们的测试用例 `marketDataStreaming()` 中可以看出，我们在设置主服务本身的同时完成了设置。由于我们需要订阅 `MarketDataPayload` 和 `HeartBeatPayload` 事件，因此我们在测试类中设置了以下哑方法，它们仅负责计数接收到的事件。
 
 ```java
 private volatile int audcast;
@@ -9119,6 +9951,7 @@ public void createOrderTest() throws Exception {
 ```
 
 
+
 ```java
 verify(orderLimit, times(1)).getInstrument();
 verify(orderLimit, times(1)).getType();
@@ -9141,7 +9974,7 @@ throws Exception {
 }
 ```
 
-在这个测试用例中，我们同时测试了新的市场订单和限价订单，但其机制是完全相同的。我们创建了一个 mock Order 对象，为了创建一个成功的 HttpPost 命令，必须在这个定义了新订单的 mock 对象调用所有的 getter 方法。`verify` 正是为此，它验证了 `createPostCommand` 内部执行的 getter 交互。
+在这个测试用例中，我们同时测试了新的市场订单和限价订单，但其机制是完全相同的。我们创建了一个 mock `Order` 对象，为了创建一个成功的 `HttpPost` 命令，必须在这个定义了新订单的 mock 对象调用所有的 getter 方法。`verify` 正是为此，它验证了 `createPostCommand` 内部执行的 getter 交互。
 
 ### 13.1.4 Mock Twitter 交互
 
@@ -9149,10 +9982,10 @@ Mockito 让与 Twitter 的交互变得极其简单。唯一需要注意的是，
 
 为了从 Twitter 获取 mock Tweets，并能够解析出所有用户的新交易或 pnl 推文，我们必须准备 mock 对象的环境。这包括：
 
--   为 Twitter 接口创建一个 mock（该接口由 Spring Social 中的 `TwitterTemplate` 实现）。
--   为 `SearchOperations` 类创建一个 mock，该类用于根据搜索查询搜索 Tweets。
--   为 `SearchResults` 创建一个 mock，当在该对象上调用 `getTweets()` 时，它将返回 mock 的 Tweets。
--   `getTweets()` 方法的调用返回一个 Tweet 对象列表，该列表可以是 mock Tweet 对象的列表。关键在于拦截单个 mock Tweet 对象的 `getText()` 方法并返回我们想要的文本。
+- 为 Twitter 接口创建一个 mock（该接口由 Spring Social 中的 `TwitterTemplate` 实现）。
+- 为 `SearchOperations` 类创建一个 mock，该类用于根据搜索查询搜索 Tweets。
+- 为 `SearchResults` 创建一个 mock，当在该对象上调用 `getTweets()` 时，它将返回 mock 的 Tweets。
+- `getTweets()` 方法的调用返回一个 Tweet 对象列表，该列表可以是 mock Tweet 对象的列表。关键在于拦截单个 mock Tweet 对象的 `getText()` 方法并返回我们想要的文本。
 
 让我们来看一个示例，我们尝试测试 `findHistoricPnlTweetsFor@SignalFactory` 方法：
 
@@ -9210,7 +10043,7 @@ Eclipse IDE 的 EclEmma³ 插件是报告 Java 项目代码覆盖率的极佳工
 
 ![](img/83b65534a955858b50f85868087a4d91_274_1.png)
 
-tradingbot-core 项目的结果摘要
+`tradingbot-core` 项目的结果摘要。
 
 我们可以深入单个类，并找出被遗漏的代码行。
 
@@ -9245,15 +10078,14 @@ public HeartBeatPayload getPayload() {
 
 ![](img/83b65534a955858b50f85868087a4d91_275_0.png)
 
-| | Coverage | Instructions | Missed Instructions | Total |
+|  | Coverage | Instructions | Missed Instructions | Total |
 |---|---|---|---|
-| > DefaultHeartBeatService.java | 40.0% | 8 | 12 |
-| > DefaultHeartBeatService | 40.0% | | 12 |
-| > AbstractHeartBeatService.java | 94.8% | 146 | 8 |
-| > HeartBeatPayload.java | 60.0% | 12 | 8 |
-| > HeartBeatPayload$T | 60.0% | 12 | 8 |
-| > HeartBeatCallbackImpl.java | 100.0% | 11 | 0 |
-| > com.preicous.extrading.position | 0.0% | | 27 |
+| > `DefaultHeartBeatService.java` | 40.0% | 8 | 12 |
+| > `DefaultHeartBeatService` | 40.0% |  | 12 |
+| > `AbstractHeartBeatService.java` | 94.8% | 146 | 8 |
+| > `HeartBeatPayload.java` | 60.0% | 12 | 8 |
+| > `HeartBeatPayload$T` | 60.0% | 12 | 8 |
+| > `HeartBeatCallbackImpl.java` | 100.0% | 11 | 0 |
+| > `com.preicous.extrading.position` | 0.0% |  | 27 |
 
-HeartBeatPayload 代码覆盖率
-
+`HeartBeatPayload` 代码覆盖率

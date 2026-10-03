@@ -1,22 +1,23 @@
+
 # GWT 简介
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/gwt>
 
-## 1。简介
+## 1. 简介
 
 GWT 或 **Google Web Toolkit 是一个用 Java** 构建高性能 Web 应用程序的框架。
 
 在本教程中，我们将重点介绍它的一些关键功能。
 
-## 2。GWT SDK
+## 2. GWT SDK
 
 SDK 包含 Java API 库、编译器和开发服务器。
 
-### 2.1。Java API
+### 2.1. Java API
 
 GWT API 有用于构建用户界面、进行服务器调用、国际化、执行单元测试的类。要了解更多信息，请查看 java 文档[这里](https://web.archive.org/web/20220626085848/http://www.gwtproject.org/javadoc/latest/index.html)。
 
-### 2.2。编译器
+### 2.2. 编译器
 
 简单地说，GWT 编译器是一个从 Java 代码到 Javascript 的源代码翻译器。编译的结果是一个 Javascript 应用程序。
 
@@ -26,19 +27,19 @@ GWT API 有用于构建用户界面、进行服务器调用、国际化、执行
 
 以下是一些有用的`GWTCompiler`参数:
 
-*   `-logLevel`–设置`ERROR, WARN, INFO, TRACE, DEBUG, SPAM, ALL`记录级别之一
-*   `-workdir`–编译器的工作目录
-*   `-gen`–写入生成文件的目录
-*   `-out`–输出文件目录
-*   `-optimize`–从 0 到 9 设置编译器优化级别
-*   `-style`–脚本输出样式`OBF, PRETTY`或`DETAILED`
-*   `-module[s]`–要编译的模块的名称
+*   `-logLevel` – 设置`ERROR, WARN, INFO, TRACE, DEBUG, SPAM, ALL`记录级别之一
+*   `-workdir` – 编译器的工作目录
+*   `-gen` – 写入生成文件的目录
+*   `-out` – 输出文件目录
+*   `-optimize` – 从 0 到 9 设置编译器优化级别
+*   `-style` – 脚本输出样式`OBF, PRETTY`或`DETAILED`
+*   `-module[s]` – 要编译的模块的名称
 
-## 3。设置
+## 3. 设置
 
 最新的 SDK 可从[下载](https://web.archive.org/web/20220626085848/http://www.gwtproject.org/download.html)页面获得。其余的设置可在[入门](https://web.archive.org/web/20220626085848/http://www.gwtproject.org/gettingstarted.html)页面获得。
 
-### 3.1。肚子
+### 3.1. Maven
 
 为了用 Maven 设置项目，我们需要向`pom.xml`添加以下依赖项:
 
@@ -60,7 +61,7 @@ GWT API 有用于构建用户界面、进行服务器调用、国际化、执行
 </dependency>
 ```
 
-**`The gwt-servlet library supports the server-side components for invoking a GWT-RPC endpoint. gwt-user`包含 Java API，我们将使用它来构建我们的 web 应用程序**。`gwt-dev`拥有编译、部署或托管应用程序的代码。
+**`gwt-servlet`库支持用于调用 GWT-RPC 端点的服务器端组件。`gwt-user`包含 Java API，我们将使用它来构建我们的 web 应用程序**。`gwt-dev`拥有编译、部署或托管应用程序的代码。
 
 为了确保所有的依赖项使用相同的版本，我们需要包括父 GWT 依赖项:
 
@@ -76,13 +77,13 @@ GWT API 有用于构建用户界面、进行服务器调用、国际化、执行
 
 所有的工件都可以在 [Maven Central](https://web.archive.org/web/20220626085848/https://mvnrepository.com/artifact/com.google.gwt) 上下载。
 
-## 4。应用程序
+## 4. 应用程序
 
 让我们构建一个简单的 web 应用程序。它将向服务器发送一条消息并显示响应。
 
 一般来说，GWT 应用程序由服务器和客户端组成。客户端发出一个 HTTP 请求来连接服务器。为了使之成为可能，GWT 使用了远程过程调用或简单的 RPC 机制。
 
-## 5。GWT 和 RPC
+## 5. GWT 和 RPC
 
 回到我们的应用程序，让我们看看 RPC 通信是如何进行的。为此，我们创建了一个从服务器接收消息的服务。
 
@@ -115,7 +116,7 @@ public class MessageServiceImpl extends RemoteServiceServlet
 }
 ```
 
-我们的服务器类从基础 servlet 类`.` **扩展而来，它将自动反序列化来自客户端的传入请求，并序列化来自服务器的传出响应**。
+我们的服务器类从基础 servlet 类`RemoteServiceServlet`**扩展而来，它将自动反序列化来自客户端的传入请求，并序列化来自服务器的传出响应**。
 
 现在让我们看看如何从客户端使用它。**`MessageService`只是我们服务**的最终版本。
 
@@ -130,23 +131,23 @@ public interface MessageServiceAsync {
 
 这里我们可以看到`getMessage()`方法中的一个额外的参数。**我们需要`async`在异步调用完成时通知 UI**。这样我们可以防止阻塞正在工作的 UI 线程。
 
-## 6。组件及其生命周期
+## 6. 组件及其生命周期
 
 SDK 为设计图形界面提供了一些 UI 元素和布局。
 
 一般来说，所有的 UI 组件都是从`Widget`类扩展而来的。视觉上，我们有可以在屏幕上看到、点击或移动的元素部件:
 
-*   **组件控件**–`TextBox`、`TextArea`、`Button`、`RadioButton`、`CheckBox`等…
+*   **组件控件** – `TextBox`、`TextArea`、`Button`、`RadioButton`、`CheckBox`等…
 
 还有组成和组织屏幕的布局或面板小部件:
 
-*   **面板控件**–`HorizontalPanel`、`VerticalPanel`、`PopupPanel`、`TabPanel`等
+*   **面板控件** – `HorizontalPanel`、`VerticalPanel`、`PopupPanel`、`TabPanel`等
 
 每次我们在代码中添加一个小部件或任何其他组件，GWT 都会努力将视图元素与浏览器的 DOM 链接起来。
 
 构造函数总是初始化根 DOM 元素。当我们将一个子部件附加到一个父组件上时，也会导致 DOM 级别的绑定。入口点类包含将首先被调用的加载函数。这是我们定义小部件的地方。
 
-## 7。入口点
+## 7. 入口点
 
 让我们仔细看看应用程序的主要入口点:
 
@@ -184,9 +185,9 @@ public class Google_web_toolkit implements EntryPoint {
 RootPanel.get("sendButtonContainer").add(sendButton);
 ```
 
-首先，它获取用`sendButtonContainer` id 标记的根容器。在我们将`sendButton `连接到容器上之后。
+首先，它获取用`sendButtonContainer` id 标记的根容器。在我们将`sendButton`连接到容器上之后。
 
-## 8。HTML
+## 8. HTML
 
 在`/webapp`文件夹中，我们有`Google_web_toolkit.html`文件。
 
@@ -209,7 +210,7 @@ RootPanel.get("sendButtonContainer").add(sendButton);
 
 带有`nameFieldContainer` 和`sendButtonContainer`id 的`<td>`标签将被映射到`Button`和`TextBox`组件。
 
-## 9。主模块描述符
+## 9. 主模块描述符
 
 让我们看看`Google_web_toolkit.gwt.xml`主模块描述符文件的典型配置:
 
@@ -223,9 +224,9 @@ RootPanel.get("sendButtonContainer").add(sendButton);
 
 **我们通过包含`com.google.gwt.user.User`接口**使核心的 GWT 内容可访问。此外，我们可以为我们的应用程序选择一个默认的样式表。这种情况下就是`*.clean.Clean`。
 
-其他可用的样式选项有`*.dark.Dark`、`*.standard.Standard`、`*.chrome.Chrome`。这里的`com.baeldung.client.Google_web_toolkit `也标有`<entry-point />`标签。
+其他可用的样式选项有`*.dark.Dark`、`*.standard.Standard`、`*.chrome.Chrome`。这里的`com.baeldung.client.Google_web_toolkit`也标有`<entry-point />`标签。
 
-## 10.添加事件处理程序
+## 10. 添加事件处理程序
 
 为了管理鼠标或键盘输入事件，GWT 将使用一些处理程序。**它们都是从`EventHandler`接口扩展而来，都有一个带事件类型参数**的方法。
 
@@ -272,7 +273,7 @@ sendButton.addClickHandler(handler);
 nameField.addKeyUpHandler(handler);
 ```
 
-## 11.调用服务器
+## 11. 调用服务器
 
 现在，我们准备将消息发送到服务器。我们将使用异步`sendMessage()`方法执行远程过程调用。
 
@@ -297,7 +298,7 @@ messageServiceAsync.sendMessage(textToServer, new AsyncCallback<String>() {
 
 根据响应结果，我们或者设置错误消息“发生服务器错误”,或者在容器中显示结果值。
 
-## 12。CSS 样式
+## 12. CSS 样式
 
 当使用 eclipse 插件创建项目时，它会自动在`/webapp`目录下生成`Google_web_toolkit.css`文件，并将其链接到主 HTML 文件。
 
@@ -307,11 +308,13 @@ messageServiceAsync.sendMessage(textToServer, new AsyncCallback<String>() {
 
 当然，我们可以通过编程为特定的 UI 组件定义自定义样式:
 
+
+
 ```java
 sendButton.addStyleName("sendButton");
 ```
 
-这里我们用类名`sendButton`给我们的`sendButton`组件分配一个 CSS 样式:
+这里我们用类名`sendButton`给我们的`sendButton`组件分配一个 CSS 样式：
 
 ```java
 .sendButton {
@@ -320,15 +323,15 @@ sendButton.addStyleName("sendButton");
 }
 ```
 
-## 13.结果
+## 13. 结果
 
-结果，我们有了这个简单的 web 应用程序:
+结果，我们有了这个简单的 web 应用程序：
 
 [![simpleApplication](img/95d08f873d99cf199eed42ebcd3a5225.png)](/web/20220626085848/https://www.baeldung.com/wp-content/uploads/2018/07/simpleApplication-300x259.png)
 
 在这里，我们向服务器提交一个“Hi there”消息，并打印“Hello，Hi there！”屏幕上的回应。
 
-## 14。结论
+## 14. 结论
 
 在这篇简短的文章中，我们了解了 GWT 框架的基础知识。之后，我们讨论了其 SDK 的架构、生命周期、功能和不同组件。
 

@@ -1,3 +1,4 @@
+
 # 课程：打印
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/printing/index.html`](https://docs.oracle.com/javase/tutorial/2d/printing/index.html)
@@ -14,7 +15,7 @@ Java 2D 打印 API 不仅限于打印图形。它还使您能够打印应用程�
 
 +   一个基本的打印程序 – 本节描述了`Printable`接口并呈现了一个基本的打印程序。
 
-+   使用打印设置对话框– 本节解释了如何显示打印设置对话框。
++   使用打印设置对话框 – 本节解释了如何显示打印设置对话框。
 
 +   打印多页文档 – 本节解释了如何使用分页打印多页文档。
 

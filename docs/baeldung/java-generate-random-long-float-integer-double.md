@@ -1,14 +1,15 @@
+
 # Java–随机长整型、浮点型、整数型和双精度型
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-generate-random-long-float-integer-double>
 
-这个快速教程将演示如何使用普通 Java 和 Apache Commons 数学库生成一个 long first。
+这个快速教程将演示如何使用普通 Java 和 Apache Commons 数学库生成一个`long`。
 
 本文是 Baeldung 网站上的“Java 回归基础”系列文章的一部分。
 
-## 1。生成一个无界 Long
+## 1. 生成一个无界 Long
 
-让我们从生成一个长:
+让我们从生成一个`long`开始:
 
 ```java
 @Test
@@ -17,11 +18,11 @@ public void givenUsingPlainJava_whenGeneratingRandomLongUnbounded_thenCorrect() 
 }
 ```
 
-## 2。生成一个范围内的 Long】
+## 2. 生成一个范围内的 Long
 
-### 2.1。带普通 Java 的随机 Long】
+### 2.1. 带普通 Java 的随机 Long
 
-接下来，让我们看看如何创建一个随机有界长整型值，即在给定范围或区间内的长整型值:
+接下来，让我们看看如何创建一个随机有界`long`整型值，即在给定范围或区间内的`long`整型值:
 
 ```java
 @Test
@@ -32,9 +33,9 @@ public void givenUsingPlainJava_whenGeneratingRandomLongBounded_thenCorrect() {
 }
 ```
 
-### 2.2。带 Apache Commons Math 的 Random Long】
+### 2.2. 带 Apache Commons Math 的 Random Long
 
-让我们来看看用一个更简洁的 API 和 Commons Math 来生成 random Long:
+让我们来看看用一个更简洁的 API 和 Commons Math 来生成随机`long`:
 
 ```java
 @Test
@@ -45,7 +46,7 @@ public void givenUsingApacheCommons_whenGeneratingRandomLongBounded_thenCorrect(
 }
 ```
 
-## 3。生成一个无界整数
+## 3. 生成一个无界整数
 
 让我们继续生成一个没有边界的随机整数:
 
@@ -56,11 +57,11 @@ public void givenUsingPlainJava_whenGeneratingRandomIntegerUnbounded_thenCorrect
 }
 ```
 
-如你所见，它非常接近于产生一个长的。
+如你所见，它非常接近于产生一个`long`。
 
-## 4。生成一个范围内的整数
+## 4. 生成一个范围内的整数
 
-### 4.1。带普通 Java 的随机整数
+### 4.1. 带普通 Java 的随机整数
 
 下一个–给定范围内的随机整数:
 
@@ -73,7 +74,7 @@ public void givenUsingPlainJava_whenGeneratingRandomIntegerBounded_thenCorrect()
 }
 ```
 
-### 4.2。具有通用数学的随机整数
+### 4.2. 具有通用数学的随机整数
 
 普通数学也是如此:
 
@@ -86,7 +87,7 @@ public void givenUsingApache_whenGeneratingRandomIntegerBounded_thenCorrect() {
 }
 ```
 
-## 5。生成一个无界浮点数
+## 5. 生成一个无界浮点数
 
 现在，让我们回顾一下生成随机浮点数——首先是无界的:
 
@@ -97,9 +98,9 @@ public void givenUsingPlainJava_whenGeneratingRandomFloatUnbouned_thenCorrect() 
 }
 ```
 
-## 6。在范围内生成浮点
+## 6. 在范围内生成浮点
 
-### 6.1。用普通 Java 实现随机浮点运算
+### 6.1. 用普通 Java 实现随机浮点运算
 
 和一个有界随机浮点数:
 
@@ -112,9 +113,9 @@ public void givenUsingPlainJava_whenGeneratingRandomFloatBouned_thenCorrect() {
 }
 ```
 
-### 6.2。使用 Commons Math 的随机浮点运算
+### 6.2. 使用 Commons Math 的随机浮点运算
 
-现在——一个有限的随机浮动，带有公共数学:
+现在——一个有限的随机浮点，带有公共数学:
 
 ```java
 @Test
@@ -126,9 +127,9 @@ public void givenUsingApache_whenGeneratingRandomFloatBounded_thenCorrect() {
 }
 ```
 
-## 7。生成一个无界的 Double
+## 7. 生成一个无界的 Double
 
-### 7.1。带普通 Java 的随机无界 Double
+### 7.1. 带普通 Java 的随机无界 Double
 
 最后，我们将生成随机双精度值，首先使用 Java Math API:
 
@@ -139,7 +140,7 @@ public void givenUsingPlainJava_whenGeneratingRandomDoubleUnbounded_thenCorrect(
 }
 ```
 
-### 7.2。随机无界双精度公地数学
+### 7.2. 随机无界双精度公地数学
 
 以及 Apache Commons 数学库的随机双精度值:
 
@@ -150,9 +151,9 @@ public void givenUsingApache_whenGeneratingRandomDoubleUnbounded_thenCorrect() {
 }
 ```
 
-## 8。生成一个范围内的 Double 值
+## 8. 生成一个范围内的 Double 值
 
-### 8.1。带普通 Java 的随机有界 Double
+### 8.1. 带普通 Java 的随机有界 Double
 
 在这个例子中，让我们看看在一个时间间隔内用 Java 生成的随机双精度数:
 
@@ -165,7 +166,7 @@ public void givenUsingPlainJava_whenGeneratingRandomDoubleBounded_thenCorrect() 
 }
 ```
 
-### 8.2。随机有界双带公地数学
+### 8.2. 随机有界 Double 带公地数学
 
 最后——使用 Apache Commons 数学库，在一个区间内随机双精度:
 
@@ -180,7 +181,7 @@ public void givenUsingApache_whenGeneratingRandomDoubleBounded_thenCorrect() {
 
 现在你已经知道了——如何为 Java 中最常见的数字原语生成无界值和有界值的简明例子。
 
-## 9.结论
+## 9. 结论
 
 本教程演示了如何使用不同的技术和库来生成绑定或未绑定的随机数。
 

@@ -1,16 +1,17 @@
+
 # 带有 React 的 Spring 安全登录页面
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-security-login-react>
 
-## 1.概观
+## 1. 概观
 
 [React](https://web.archive.org/web/20220707143845/https://reactjs.org/ "https://reactjs.org/") 是由脸书构建的基于组件的 JavaScript 库。使用 React，我们可以轻松地构建复杂的 web 应用程序。在本文中，我们将让 Spring Security 与 React 登录页面协同工作。
 
 我们将利用前面例子中已有的 Spring 安全配置。所以我们将在之前的一篇文章的基础上，用 Spring Security 创建一个[表单登录。](/web/20220707143845/https://www.baeldung.com/spring-security-login)
 
-## 2.设置 React
+## 2. 设置 React
 
-首先，**使用命令行工具 [create-react-app](https://web.archive.org/web/20220707143845/https://github.com/facebook/create-react-app "https://github.com/facebook/create-react-app") 通过执行命令"`create-react-app react”`创建一个应用程序**。
+首先，**使用命令行工具 [create-react-app](https://web.archive.org/web/20220707143845/https://github.com/facebook/create-react-app "https://github.com/facebook/create-react-app") 通过执行命令 `create-react-app react` 创建一个应用程序**。
 
 在`react/package.json`中，我们将有如下配置:
 
@@ -33,7 +34,7 @@
 }
 ```
 
-然后，我们将**使用[前端-Maven-插件](https://web.archive.org/web/20220707143845/https://github.com/eirslett/frontend-maven-plugin "https://github.com/eirslett/frontend-maven-plugin")来帮助用 Maven:** 构建我们的 React 项目
+然后，我们将**使用[前端-Maven-插件](https://web.archive.org/web/20220707143845/https://github.com/eirslett/frontend-maven-plugin "https://github.com/eirslett/frontend-maven-plugin")来帮助用 Maven 构建我们的 React 项目**:
 
 ```java
 <plugin>
@@ -77,9 +78,9 @@
 
 这里我们需要解释几个配置属性。我们指定了`node`和`npm`的版本，这样插件就知道下载哪个版本了。
 
-我们的 React 登录页面在 Spring 中将作为静态页面，所以我们使用“`src/main/` webapp `/WEB-INF/view/react`”作为`npm`的工作目录。
+我们的 React 登录页面在 Spring 中将作为静态页面，所以我们使用`src/main/webapp/WEB-INF/view/react`作为`npm`的工作目录。
 
-## 3.Spring 安全配置
+## 3. Spring 安全配置
 
 在我们深入 React 组件之前，我们更新 Spring 配置以服务 React 应用程序的静态资源:
 
@@ -106,11 +107,11 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 }
 ```
 
-**注意，我们添加登录页面`“index.html”`作为静态资源**，而不是动态服务的 JSP。
+**注意，我们添加登录页面`index.html`作为静态资源**，而不是动态服务的 JSP。
 
 接下来，我们更新 Spring 安全配置以允许访问这些静态资源。
 
-与我们在[之前的表单登录](https://web.archive.org/web/20220707143845/http://wwwbaeldung.com/spring-security-login "http://wwwbaeldung.com/spring-security-login")文章中使用的`“login.jsp”`不同，这里我们使用`“index.html”`作为我们的`Login`页面:
+与我们在[之前的表单登录](https://web.archive.org/web/20220707143845/http://wwwbaeldung.com/spring-security-login "http://wwwbaeldung.com/spring-security-login")文章中使用的`login.jsp`不同，这里我们使用`index.html`作为我们的登录页面:
 
 ```java
 @Configuration
@@ -141,15 +142,15 @@ public class SecSecurityConfig
 }
 ```
 
-从上面的片段中我们可以看到，当我们将表单数据发送到“`/perform_login`”时，如果凭证匹配成功，Spring 会将我们重定向到“`/homepage.html`”，否则重定向到“`/index.html?error=true`”。
+从上面的片段中我们可以看到，当我们将表单数据发送到`/perform_login`时，如果凭证匹配成功，Spring 会将我们重定向到`/homepage.html`，否则重定向到`/index.html?error=true`。
 
-## 4.反应组分
+## 4. React 组件
 
 现在让我们在 React 上动手吧。我们将使用组件构建和管理表单登录。
 
 **注意，我们将使用 ES6 (ECMAScript 2015)语法来构建我们的应用程序。**
 
-### 4.1.投入
+### 4.1. 输入
 
 让我们从支持`react/src/Input.js`中登录表单的`<input />`元素的`Input`组件开始:
 
@@ -199,13 +200,13 @@ React 提供了一种使用 [`PropTypes`](https://web.archive.org/web/2022070714
 
 拥有它总比被生产中的随机故障吓到要好。
 
-### 4.2.形式
+### 4.2. 表单
 
 接下来，我们将在文件`Form.js`中构建一个通用表单组件，该组件组合了我们的`Input`组件的多个实例，我们可以基于这些实例来创建登录表单。
 
 在`Form`组件中，我们获取 HTML `<input/>`元素的属性，并从中创建`Input`组件。
 
-然后将`Input`组件和验证错误信息插入`Form:`
+然后将`Input`组件和验证错误信息插入`Form`:
 
 ```java
 import React, { Component } from 'react'
@@ -245,6 +246,8 @@ export default Form
 ```
 
 现在，让我们看看如何管理字段验证错误和登录错误:
+
+
 
 ```java
 class Form extends Component {
@@ -292,7 +295,7 @@ class Form extends Component {
 }
 ```
 
-在这个代码片段中，我们定义了`handleError`函数来管理表单的错误状态。回想一下，我们还用它进行了`Input`字段验证。**实际上，`handleError()`是在`render()`函数**中作为回调传递给`Input Components`的。
+在这个代码片段中，我们定义了`handleError`函数来管理表单的错误状态。回想一下，我们还用它进行了`Input`字段验证。实际上，`handleError()`是在`render()`函数中作为回调传递给`Input Components`的。
 
 我们使用`renderError()`来构造错误消息元素。注意，`Form's`构造函数消耗了一个`error`属性。此属性指示登录操作是否失败。
 
@@ -326,7 +329,7 @@ class Form extends Component {
 
 这就是为什么我们需要在响应回调中处理重定向。
 
-### 4.3.表单渲染
+## 4.3.表单渲染
 
 既然我们已经设置了所有需要的组件，我们可以继续把它们放在 DOM 中。基本 HTML 结构如下(在`react/public/index.html`下找到):
 
@@ -346,7 +349,7 @@ class Form extends Component {
 </html>
 ```
 
-最后，我们将表单呈现到`react/src/index.js`中 id 为`container”` 的`<div/>`中:
+最后，我们将表单呈现到`react/src/index.js`中 id 为`container`的`<div/>`中:
 
 ```java
 import React from 'react'
@@ -396,4 +399,4 @@ ReactDOM.render(
 
 在本文中，我们介绍了如何构建一个 React 登录应用程序，并让它与 Spring 安全后端进行交互。一个更复杂的应用程序会涉及到使用 [React Router](https://web.archive.org/web/20220707143845/https://reacttraining.com/react-router/) 或 [Redux](https://web.archive.org/web/20220707143845/https://redux.js.org/) 的状态转换和路由，但这超出了本文的范围。
 
-和往常一样，完整的实现可以在 GitHub 上找到[。要在本地运行它，在项目根文件夹中执行`mvn jetty:run`，然后我们可以在`http://localhost:8080`访问 React 登录页面。](https://web.archive.org/web/20220707143845/https://github.com/eugenp/tutorials/tree/master/spring-security-modules/spring-security-web-react)
+和往常一样，完整的实现可以在 GitHub 上找到。要在本地运行它，在项目根文件夹中执行`mvn jetty:run`，然后我们可以在`http://localhost:8080`访问 React 登录页面。(https://web.archive.org/web/20220707143845/https://github.com/eugenp/tutorials/tree/master/spring-security-modules/spring-security-web-react)

@@ -1,3 +1,4 @@
+
 # 弹簧座集成测试示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-rest-integration-test-example/>
@@ -6,47 +7,47 @@
 
 在本文中，我们将向您展示如何测试 Spring Boot REST 应用程序。通常，我们使用`MockMvc`或`TestRestTemplate`进行集成测试。
 
-使用的技术:
+使用的技术：
 
-*   Spring Boot 2.1.2 .版本
-*   弹簧 5.1.4 释放
-*   maven3
-*   Java 8
+- Spring Boot 2.1.2 .版本
+- 弹簧 5.1.4 释放
+- maven3
+- Java 8
 
-pom.xml
+`pom.xml`
 
 ```java
- <!-- spring integration test -->
-	<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-test</artifactId>
-		<scope>test</scope>
-	</dependency>
+<!-- spring integration test -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-test</artifactId>
+    <scope>test</scope>
+</dependency>
 
-	<!-- spring integration test for security-->
-	<dependency>
-		<groupId>org.springframework.security</groupId>
-		<artifactId>spring-security-test</artifactId>
-		<scope>test</scope>
-	</dependency> 
+<!-- spring integration test for security-->
+<dependency>
+    <groupId>org.springframework.security</groupId>
+    <artifactId>spring-security-test</artifactId>
+    <scope>test</scope>
+</dependency>
 ```
 
-## 1\. MockMvc
+## 1. MockMvc
 
 ```java
- @RunWith(SpringRunner.class)
+@RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
 public class BookControllerTest {
 
     @Autowired
-    private MockMvc mockMvc; 
+    private MockMvc mockMvc;
 ```
 
 1.1 本 [Spring REST Hello World 示例的 CRUD 测试](/web/20190311102322/http://www.mkyong.com/spring-boot/spring-rest-hello-world-example/)
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -233,13 +234,15 @@ public class BookControllerTest {
         }
     }
 
-} 
+}
 ```
 
-1.2 此[弹簧座验证的测试](/web/20190311102322/http://www.mkyong.com/spring-boot/spring-rest-validation-example/)
+
+
+## 1.2 此[弹簧座验证的测试](/web/20190311102322/http://www.mkyong.com/spring-boot/spring-rest-validation-example/)
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
@@ -333,13 +336,13 @@ public class BookControllerTest {
 
     }
 
-} 
+}
 ```
 
-1.3 用`@WithMockUser`对该[弹簧座安全](/web/20190311102322/http://www.mkyong.com/spring-boot/spring-rest-spring-security-example/)进行测试
+## 1.3 用`@WithMockUser`对该[弹簧座安全](/web/20190311102322/http://www.mkyong.com/spring-boot/spring-rest-spring-security-example/)进行测试
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -402,25 +405,27 @@ public class BookControllerTest {
                 .andExpect(status().isUnauthorized());
     }
 
-} 
+}
 ```
 
- ## 2.TestRestTemplate
+## 2. TestRestTemplate
 
 ```java
- @RunWith(SpringRunner.class)
+@RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT) // for restTemplate
 @ActiveProfiles("test")
 public class BookControllerRestTemplateTest {
 
     @Autowired
-    private TestRestTemplate restTemplate; 
+    private TestRestTemplate restTemplate;
 ```
 
-2.1 本 [Spring REST Hello World 示例的 CRUD 测试](/web/20190311102322/http://www.mkyong.com/spring-boot/spring-rest-hello-world-example/)
+### 2.1 本 [Spring REST Hello World 示例的 CRUD 测试](/web/20190311102322/http://www.mkyong.com/spring-boot/spring-rest-hello-world-example/)
+
+
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -611,13 +616,15 @@ public class BookControllerRestTemplateTest {
         }
     }
 
-} 
+}
 ```
 
 2.2 此[弹簧座验证的测试](/web/20190311102322/http://www.mkyong.com/spring-boot/spring-rest-validation-example/)
 
+
+
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -716,13 +723,13 @@ public class BookControllerRestTemplateTest {
         }
     }
 
-} 
+}
 ```
 
-2.3 本[弹簧座安全性测试](/web/20190311102322/http://www.mkyong.com/spring-boot/spring-rest-spring-security-example/)
+## 2.3 本[弹簧座安全性测试](/web/20190311102322/http://www.mkyong.com/spring-boot/spring-rest-spring-security-example/)
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -811,37 +818,31 @@ public class BookControllerRestTemplateTest {
         }
     }
 
-} 
+}
 ```
 
- ## 下载源代码
+## 下载源代码
 
-$ git clone [https://github.com/mkyong/spring-boot.git](http://web.archive.org/web/20190311102322/https://github.com/mkyong/spring-boot.git)
-
-$ CD spring-rest-hello-world
-$ mvn 测试
-
-$ cd 弹簧支架-验证
-$ mvn 测试
-
-$ cd 弹簧-支架-安全
-$ mvn 测试
+```bash
+git clone https://github.com/mkyong/spring-boot.git
+cd spring-rest-hello-world
+mvn 测试
+cd 弹簧支架-验证
+mvn 测试
+cd 弹簧-支架-安全
+mvn 测试
+```
 
 ## 参考
 
-*   [TestRestTemplate docs](http://web.archive.org/web/20190311102322/https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/web/client/TestRestTemplate.html)
-*   [MockMvc 文档](http://web.archive.org/web/20190311102322/https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/MockMvc.html)
-*   [Spring Boot 测试功能](http://web.archive.org/web/20190311102322/https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-testing.html)
-*   [弹簧座验证](/web/20190311102322/http://www.mkyong.com/spring-boot/spring-rest-validation-example/)
-*   [春歇你好天下例](/web/20190311102322/http://www.mkyong.com/spring-boot/spring-rest-hello-world-example/)
-*   [春假安全](/web/20190311102322/http://www.mkyong.com/spring-boot/spring-rest-spring-security-example/)
-*   [维基百科–休息](http://web.archive.org/web/20190311102322/https://en.wikipedia.org/wiki/Representational_state_transfer)
+- [TestRestTemplate docs](http://web.archive.org/web/20190311102322/https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/web/client/TestRestTemplate.html)
+- [MockMvc 文档](http://web.archive.org/web/20190311102322/https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/MockMvc.html)
+- [Spring Boot 测试功能](http://web.archive.org/web/20190311102322/https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-testing.html)
+- [弹簧座验证](/web/20190311102322/http://www.mkyong.com/spring-boot/spring-rest-validation-example/)
+- [春歇你好天下例](/web/20190311102322/http://www.mkyong.com/spring-boot/spring-rest-hello-world-example/)
+- [春假安全](/web/20190311102322/http://www.mkyong.com/spring-boot/spring-rest-spring-security-example/)
+- [维基百科–休息](http://web.archive.org/web/20190311102322/https://en.wikipedia.org/wiki/Representational_state_transfer)
+
+
 
 [spring boot](http://web.archive.org/web/20190311102322/http://www.mkyong.com/tag/spring-boot/) [spring test](http://web.archive.org/web/20190311102322/http://www.mkyong.com/tag/spring-test/) [unit test](http://web.archive.org/web/20190311102322/http://www.mkyong.com/tag/unit-test/)
-
-
-
-
-
-
-

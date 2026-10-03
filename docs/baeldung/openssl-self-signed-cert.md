@@ -1,14 +1,15 @@
+
 # 使用 OpenSSL 创建自签名证书
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/openssl-self-signed-cert>
 
-## 1.概观
+## 1. 概观
 
-OpenSSL 是一个开源命令行工具，允许用户执行各种与 SSL 相关的任务。
+`OpenSSL` 是一个开源命令行工具，允许用户执行各种与 SSL 相关的任务。
 
-在本教程中，我们将学习**如何使用 OpenSSL** 创建自签名证书。
+在本教程中，我们将学习**如何使用 `OpenSSL`** 创建自签名证书。
 
-## 延伸阅读:
+## 延伸阅读
 
 ## [信任 OkHttp 中的自签名证书](/web/20220928195219/https://www.baeldung.com/okhttp-self-signed-cert)
 
@@ -22,17 +23,17 @@ Learn how to convert certificates from a PEM (Privacy Enhanced Email) file to JK
 
 Explore how to generate a self-signed certificate to enable HTTPS in a Spring Boot application.[Read more](/web/20220928195219/https://www.baeldung.com/spring-boot-https-self-signed-certificate) →
 
-## 2.创建私钥
+## 2. 创建私钥
 
 首先，我们将创建一个私钥。私钥有助于实现加密，是我们证书中最重要的组成部分。
 
-让我们用`openssl`命令创建一个受密码保护的 2048 位 RSA 私钥(`domain.key`):
+让我们用 `openssl` 命令创建一个受密码保护的 2048 位 RSA 私钥（`domain.key`）：
 
 ```java
 openssl genrsa -des3 -out domain.key 2048 
 ```
 
-出现提示时，我们将输入密码。输出将类似于:
+出现提示时，我们将输入密码。输出将类似于：
 
 ```java
 Generating RSA private key, 2048 bit long modulus (2 primes)
@@ -43,19 +44,19 @@ Enter pass phrase for domain.key:
 Verifying - Enter pass phrase for domain.key:
 ```
 
-如果我们希望我们的私有密钥不加密，我们可以简单地从命令中删除`-des3`选项。
+如果我们希望我们的私有密钥不加密，我们可以简单地从命令中删除 `-des3` 选项。
 
-## 3.创建证书签名请求
+## 3. 创建证书签名请求
 
-**如果我们想要我们的证书被签署，我们需要一个证书签署请求(CSR)** 。CSR 包括公钥和一些附加信息(如组织和国家)。
+**如果我们想要我们的证书被签署，我们需要一个证书签署请求（CSR）**。CSR 包括公钥和一些附加信息（如组织和国家）。
 
-让我们从现有的私钥创建一个 CSR ( `domain.csr`):
+让我们从现有的私钥创建一个 CSR（`domain.csr`）：
 
 ```java
 openssl req -key domain.key -new -out domain.csr
 ```
 
-我们将输入我们的私钥密码和一些 CSR 信息来完成该过程。输出将类似于:
+我们将输入我们的私钥密码和一些 CSR 信息来完成该过程。输出将类似于：
 
 ```java
 Enter pass phrase for domain.key:
@@ -80,63 +81,63 @@ A challenge password []:
 An optional company name []: 
 ```
 
-一个重要的字段是“`Common Name,”`，它应该是我们的域的完全合格的域名(FQDN)。
+一个重要的字段是“`Common Name`”，它应该是我们的域的完全合格的域名（FQDN）。
 
 “`A challenge password`”和“`An optional company name`”可以留空。
 
-**我们还可以用一个命令**创建私钥和 CSR:
+**我们还可以用一个命令**创建私钥和 CSR：
 
 ```java
 openssl req -newkey rsa:2048 -keyout domain.key -out domain.csr
 ```
 
-如果我们希望我们的私钥不加密，我们可以添加`-nodes`选项:
+如果我们希望我们的私钥不加密，我们可以添加 `-nodes` 选项：
 
 ```java
 openssl req -newkey rsa:2048 -nodes -keyout domain.key -out domain.csr
 ```
 
-## 4.创建自签名证书
+## 4. 创建自签名证书
 
 自签名证书是用自己的私钥签名的证书。它可以像 CA 签名的证书一样用来加密数据，但是我们的用户会看到一个警告，说这个证书不可信。
 
-让我们用现有的私钥和 CSR 创建一个自签名证书(`domain.crt`):
+让我们用现有的私钥和 CSR 创建一个自签名证书（`domain.crt`）：
 
 ```java
 openssl x509 -signkey domain.key -in domain.csr -req -days 365 -out domain.crt
 ```
 
-`-days`选项指定证书有效的天数。
+`-days` 选项指定证书有效的天数。
 
-我们可以只用一个私钥创建一个自签名证书:
+我们可以只用一个私钥创建一个自签名证书：
 
 ```java
 openssl req -key domain.key -new -x509 -days 365 -out domain.crt
 ```
 
-该命令将创建一个临时 CSR 。当然，我们还有 CSR 信息提示。
+该命令将创建一个临时 CSR。当然，我们还有 CSR 信息提示。
 
-我们甚至可以只使用一条命令来创建私钥和自签名证书:
+我们甚至可以只使用一条命令来创建私钥和自签名证书：
 
 ```java
 openssl req -newkey rsa:2048 -keyout domain.key -x509 -days 365 -out domain.crt
 ```
 
-## 5.使用我们自己的 CA 创建 CA 签名的证书
+## 5. 使用我们自己的 CA 创建 CA 签名的证书
 
-我们可以通过创建自签名的根 CA 证书，然后将其作为可信证书安装在本地浏览器中，成为我们自己的证书颁发机构(CA)。
+我们可以通过创建自签名的根 CA 证书，然后将其作为可信证书安装在本地浏览器中，成为我们自己的证书颁发机构（CA）。
 
-### 5.1.创建自签名根 CA
+### 5.1. 创建自签名根 CA
 
-让我们从命令行创建一个私钥(`rootCA.key`)和一个自签名的根 CA 证书(`rootCA.crt`):
+让我们从命令行创建一个私钥（`rootCA.key`）和一个自签名的根 CA 证书（`rootCA.crt`）：
 
 ```java
 openssl req -x509 -sha256 -days 1825 -newkey rsa:2048 -keyout rootCA.key -out rootCA.crt
 ```
 
-### 5.2.用根 CA 签署我们的 CSR
+### 5.2. 用根 CA 签署我们的 CSR
 
-首先，我们将创建一个包含以下内容的配置文本文件(`domain.ext`):
+首先，我们将创建一个包含以下内容的配置文本文件（`domain.ext`）：
 
 ```java
 authorityKeyIdentifier=keyid,issuer
@@ -148,23 +149,23 @@ DNS.1 = domain
 
 “`DNS.1`”字段应该是我们网站的域名。
 
-然后，我们可以用根 CA 证书及其私钥签署我们的 CSR ( `domain.csr`):
+然后，我们可以用根 CA 证书及其私钥签署我们的 CSR（`domain.csr`）：
 
 ```java
 openssl x509 -req -CA rootCA.crt -CAkey rootCA.key -in domain.csr -out domain.crt -days 365 -CAcreateserial -extfile domain.ext
 ```
 
-因此，CA 签名的证书将在`domain.crt`文件中。
+因此，CA 签名的证书将在 `domain.crt` 文件中。
 
-## 6.查看证书
+## 6. 查看证书
 
-我们可以使用`openssl`命令以纯文本方式查看我们的证书内容:
+我们可以使用 `openssl` 命令以纯文本方式查看我们的证书内容：
 
 ```java
 openssl x509 -text -noout -in domain.crt
 ```
 
-输出将类似于:
+输出将类似于：
 
 ```java
 Certificate:
@@ -219,28 +220,28 @@ Certificate:
          68:f2:dd:bd
 ```
 
-## 7.转换证书格式
+## 7. 转换证书格式
 
-我们的证书(`domain.crt`)是**，一个 ASCII PEM 编码的 X.509 证书**。我们可以使用 OpenSSL 将其转换为其他格式，以便多用途使用。
+我们的证书（`domain.crt`）是**一个 ASCII PEM 编码的 X.509 证书**。我们可以使用 `OpenSSL` 将其转换为其他格式，以便多用途使用。
 
-### 7.1.将 PEM 转换为 DER
+### 7.1. 将 PEM 转换为 DER
 
-DER 格式通常用于 Java。让我们将 PEM 编码的证书转换为 DER 编码的证书:
+DER 格式通常用于 Java。让我们将 PEM 编码的证书转换为 DER 编码的证书：
 
 ```java
 openssl x509 -in domain.crt -outform der -out domain.der
 ```
 
-### 7.2.将 PEM 转换为 PKCS12
+### 7.2. 将 PEM 转换为 PKCS12
 
 PKCS12 文件也称为 PFX 文件，通常用于在 Microsoft IIS 中导入和导出证书链。
 
-我们将使用以下命令获取我们的私钥和证书，然后将它们合并到一个 PKCS12 文件中:
+我们将使用以下命令获取我们的私钥和证书，然后将它们合并到一个 PKCS12 文件中：
 
 ```java
 openssl pkcs12 -inkey domain.key -in domain.crt -export -out domain.pfx
 ```
 
-## 8.结论
+## 8. 结论
 
-在本文中，我们学习了如何**用 OpenSSL** 从头开始创建自签名证书，**查看该证书，并将其转换为其他格式**。我们希望这些东西对你的工作有所帮助。
+在本文中，我们学习了如何**用 `OpenSSL`** 从头开始创建自签名证书，**查看该证书，并将其转换为其他格式**。我们希望这些东西对你的工作有所帮助。

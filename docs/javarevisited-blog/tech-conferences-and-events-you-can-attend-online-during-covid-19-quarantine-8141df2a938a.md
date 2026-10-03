@@ -1,3 +1,4 @@
+
 # 在新冠肺炎隔离期间，您可以在线参加技术会议和活动
 
 > 原文：<https://medium.com/javarevisited/tech-conferences-and-events-you-can-attend-online-during-covid-19-quarantine-8141df2a938a?source=collection_archive---------0----------------------->

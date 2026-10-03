@@ -1,11 +1,10 @@
+
 # JAVA 与 C# 编码练习
-
-
 
 ![](img/cover00118.jpeg)
 
+## JAVA 编程练习
 
-# JAVA 编程练习
 - 打印 hello
 - 打印和
 - 两个数相除
@@ -30,6 +29,7 @@
 - 显示数字菱形结构
 
 ## C# 编程练习
+
 - 打印 hello 和你的名字
 - 打印指定操作的结果
 - 交换两个数字的程序
@@ -59,6 +59,7 @@
 # JAVA 编程练习
 
 ## 分行打印 hello 和你的名字
+
 ```java
 import java.util.Scanner;
 
@@ -73,7 +74,9 @@ public class Main {
     }
 }
 ```
+
 **OUTPUT:**
+
 ```
 Input first name: JJ
 Input last name: TAM
@@ -81,6 +84,7 @@ Hello JJ TAM
 ```
 
 ## 打印两个数的和
+
 ```java
 import java.util.Scanner;
 
@@ -96,7 +100,9 @@ public class Main {
     }
 }
 ```
+
 **OUTPUT:**
+
 ```
 Input first number: 55
 Input second number: 45
@@ -104,6 +110,7 @@ Sum: 100
 ```
 
 ## 两个数相除并打印到屏幕上
+
 ```java
 import java.util.Scanner;
 
@@ -119,7 +126,9 @@ public class Main {
     }
 }
 ```
+
 **OUTPUT:**
+
 ```
 Input first number: 100
 Input second number: 25
@@ -127,6 +136,7 @@ The division of a and b is:4
 ```
 
 ## 打印指定操作的结果
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -140,6 +150,7 @@ public class Main {
 ```
 
 ## 打印乘法表
+
 ```java
 import java.util.Scanner;
 
@@ -154,7 +165,9 @@ public class Main {
     }
 }
 ```
+
 **OUTPUT:**
+
 ```
 Input the Number: 15
 15*1 = 15
@@ -170,6 +183,7 @@ Input the Number: 15
 ```
 
 ## 寻找圆的面积和周长
+
 ```java
 import java.util.Scanner;
 
@@ -183,7 +197,9 @@ public class Main {
     }
 }
 ```
+
 **OUTPUT:**
+
 ```
 Input the radius of the circle: 10
 Perimeter is = 62.83185307179586
@@ -191,6 +207,7 @@ Area is = 314.1592653589793
 ```
 
 ## 交换两个变量
+
 ```java
 import java.util.Scanner;
 
@@ -209,7 +226,9 @@ public class Main {
     }
 }
 ```
+
 **OUTPUT:**
+
 ```
 Input first number: 25
 Input second number: 50
@@ -217,13 +236,14 @@ Swapped values are:50 and 25
 ```
 
 ## 打印一个脸
+
 ```java
 public class Main {
     public static void main(String[] args) {
         String[] arra = new String[5];
         arra[0] = " +\"\"\"+ ";
         arra[1] = "[| o o |]";
-        arra[2] = " |� ^  |";
+        arra[2] = " |� ^  |";
         arra[3] = " | '-' |";
         arra[4] = " +-----+";
         for (int i = 0; i < 5; i++) {
@@ -232,7 +252,9 @@ public class Main {
     }
 }
 ```
+
 **OUTPUT:**
+
 ```
 +"""""+
 [| o o |]
@@ -241,9 +263,7 @@ public class Main {
 +-----+
 ```
 
-
-
-
+## 华氏度转摄氏度
 
 ```java
 double fahrenheit = input.nextDouble();
@@ -254,14 +274,17 @@ System.out.println(fahrenheit + " degree Fahrenheit is equal to " + celsius + " 
 ```
 
 ### 输出
+
 输入华氏度：96
+
 96.0 度华氏度等于 35.55555555555556 摄氏度
 
-### 英寸到米
+## 英寸到米
 
 ![](img/image00109.jpeg)
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -276,14 +299,17 @@ public class Main {
 ```
 
 ### 输出
+
 输入英寸的值：5
+
 5.0 英寸等于 0.127 米
 
-### 求所有数字之和
+## 求所有数字之和
 
 ![](img/image00110.jpeg)
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -305,16 +331,19 @@ public class Main {
 ```
 
 ### 输出
+
 输入一个 0 到 1000 之间的整数：750
+
 750 的所有数字之和为 12
 
-### 打印年份和天数
+## 打印年份和天数
 
 ### 从分钟转换
 
 ![](img/image00111.jpeg)
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -331,14 +360,17 @@ public class Main {
 ```
 
 ### 输出
+
 输入分钟数：123456
+
 123456 分钟大约等于 0 年 85 天
 
-### 计算 (BMI)
+## 计算 (BMI)
 
 ### 身体质量指数
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -353,16 +385,23 @@ public class Main {
     }
 }
 ```
+
 ### 输出
+
 输入体重（磅）：450
+
 输入身高（英寸）：72
+
 身体质量指数为 61.030345478814
 
-### 计算每秒米、每千公里和每英里的速度
+## 计算每秒米、每千公里和每英里的速度
 
 ![](img/image00112.jpeg)
 
 ### JAVA 代码
+
+
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -387,17 +426,25 @@ public class Main {
         System.out.println("Your speed in miles/h is "+mph);
     }
 ```
+
 ### 输出
+
 输入距离（米）：3000
+
 输入小时：5
+
 输入分钟：29
+
 你的每秒米速度为 15
+
 你的每小时公里速度为 54
+
 你的每英里速度为 32
 
 ### 使用减法运算符除两个整数
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -427,30 +474,37 @@ public class Main {
     }
 }
 ```
+
 *(注：原文提供的代码逻辑似乎存在多处错误（如变量未定义、循环逻辑混乱等），在翻译时保持了其结构，仅对描述性文本进行了翻译。)*
-
-
-
-
 
 ### 找出三个数中的最大值
 
 ### Java 条件语句
 
 ### 输出
+
 输入第一个整数: 50
+
 输入第二个整数: 30
+
 两个整数之和: 80
+
 两个整数之差: 20
+
 两个整数的乘积: 1500
+
 两个整数的平均值: 40.00
+
 两个整数的距离: 20
+
 最大整数: 50
+
 最小整数: 30
 
 ![](img/image00114.jpeg)
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -476,14 +530,19 @@ public class Main {
 ```
 
 ### 输出
+
 输入第一个数字: 25
+
 输入第二个数字: 58
+
 输入第三个数字: 98
+
 最大值: 98
 
 ### 显示给定整数的乘法表
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -502,14 +561,23 @@ public class Main {
 ```
 
 ### 输出
+
 输入数字（要计算的表）: 输入项数 : 7
+
 7 X 0 = 0
+
 7 X 1 = 7
+
 7 X 2 = 14
+
 7 X 3 = 21
+
 7 X 4 = 28
+
 7 X 5 = 35
+
 7 X 6 = 42
+
 7 X 7 = 49
 
 ### 显示类似数字的直角三角形模式
@@ -517,6 +585,7 @@ public class Main {
 ![](img/image00115.jpeg)
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -537,15 +606,25 @@ public class Main {
 ```
 
 ### 输出
+
 输入行数 : 9
+
 1
+
 12
+
 123
+
 1234
+
 12345
+
 123456
+
 1234567
+
 12345678
+
 123456789
 
 ### 打印类似金字塔的模式
@@ -553,6 +632,7 @@ public class Main {
 ![](img/image00116.jpeg)
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -581,13 +661,21 @@ public class Main {
 ```
 
 ### 输出
+
 输入行数 : 7
+
       1
+
       2 2
+
       3 3 3
+
       4 4 4 4
+
       5 5 5 5 5
+
       6 6 6 6 6 6
+
       7 7 7 7 7 7
 
 ### 显示数字结构
@@ -595,6 +683,7 @@ public class Main {
 ![](img/image0017.jpeg)
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -649,24 +738,34 @@ public class Main {
 ```
 
 ### 输出
+
 输入数字: 7
+
       1
+
     22
+
     333
+
     4444
+
     55555
+
     66666
+
     7777777
+
     6666666
+
     555555
+
     4444
+
     333
+
     22
+
       1
-
-
-
-
 
 ```csharp
 Console.Write("Input the second number to multiply: ");
@@ -678,14 +777,19 @@ Console.WriteLine("Output: {0} x {1} x {2} = {3}", num1, num2, num3, result);
 ```
 
 ### 输出:
+
 输入第一个乘法数字: 2
+
 输入第二个乘法数字: 8
+
 输入第三个乘法数字: 5
+
 Output: 2 x 8 x 5 = 80
 
 ### 对用户输入的两个数字进行加、减、乘、除
 
 ### C# 代码
+
 ```csharp
 using System;
 public class Exercise7
@@ -706,17 +810,25 @@ public class Exercise7
 ```
 
 ### 输出:
+
 输入一个数字: 10
+
 输入另一个数字: 2
+
 10 + 2 = 12
+
 10 - 2 = 8
+
 10 x 2 = 20
+
 10 / 2 = 5
+
 10 mod 2 = 0
 
 ### 打印四个数字的平均值
 
 ### C# 代码
+
 ```csharp
 using System;
 using System.IO;
@@ -740,18 +852,27 @@ public class Exercise9
 ```
 
 ### 输出:
+
 输入第一个数字: 7
+
 输入第二个数字: 17
+
 输入第三个数字: 17
+
 输入第四个数字: 51
+
 17, 17, 517, 51 的平均值是: 150.5
 
 ### 将温度从摄氏度转换为开文度和华氏度的程序
 
-### kelvin = celsius + 273
-### fahrenheit = celsius x 18 / 10 + 32
+`kelvin = celsius + 273`
+
+`fahrenheit = celsius x 18 / 10 + 32`
 
 ### C# 代码
+
+
+
 ```csharp
 using System;
 public class Exercise14
@@ -767,13 +888,17 @@ public class Exercise14
 ```
 
 ### 输出:
+
 输入摄氏度: 40
+
 Kelvin = 313
+
 Fahrenheit = 104
 
 # 计算两个整数之和，如果两个值相等，则返回它们和的倍倍
 
 ### C# 代码
+
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -792,13 +917,17 @@ public class Exercise19 {
 ```
 
 ### 输出:
+
 12
+
 2
+
 -3
 
 ### 计算整数数组所有元素之和
 
 ### C# 代码
+
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -822,12 +951,15 @@ public class Exercise47
 ```
 
 ### 输出:
+
 Array1: [1, 2, 2, 3, 3, 4, 5, 6, 5, 7, 7, 7, 8, 8, 1]
+
 Sum: 69
 
 ### 检查数组是否包含奇数的程序
 
 ### C# 代码
+
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -852,12 +984,15 @@ public class Exercise53
 ```
 
 ### 输出:
+
 Array: [2, 4, 7, 6]
+
 检查数组是否包含奇数? True
 
 ### 检查两个给定的整数，如果其中一个为 30 或它们的和为 30，则返回真
 
 ### C# 代码
+
 ```csharp
 using System;
 namespace exercises
@@ -881,16 +1016,16 @@ namespace exercises
 ```
 
 ### 输出:
+
 True
+
 True
+
 True
+
 False
 
 ### C# Sharp 程序，检查给定的正数是否为 3 的倍数或 7 的倍数
-
-
-
-
 
 ### C# 代码
 
@@ -915,7 +1050,9 @@ namespace exercises
     }
 }
 ```
+
 输出:
+
 ```
 True
 True
@@ -947,7 +1084,9 @@ namespace exercises
     }
 }
 ```
+
 输出:
+
 ```
 True
 True
@@ -980,7 +1119,9 @@ namespace exercises
     }
 }
 ```
+
 输出:
+
 ```
 3
 3
@@ -1017,7 +1158,9 @@ namespace exercises
     }
 }
 ```
+
 输出:
+
 ```
 95
 0
@@ -1051,7 +1194,9 @@ namespace exercises
     }
 }
 ```
+
 输出:
+
 ```
 PytHON
 JavascrIPT
@@ -1092,7 +1237,9 @@ namespace exercises
     }
 }
 ```
+
 输出:
+
 ```
 Pyon
 Japt
@@ -1130,7 +1277,9 @@ public class Exercise
     }
 }
 ```
+
 输出:
+
 ```
 Input number: 4
 Input operation: *
@@ -1157,21 +1306,22 @@ public class Exercise5
     }
 }
 ```
+
 输出:
+
 ```
 Input the radius of the circle : 25
 Perimeter of Circle : 155
 ```
-
-
-
-
 
 ##### 10 是一个偶数。
 
 ### 数字是正数还是负数
 
 ### C# 代码
+
+
+
 ```csharp
 using System;
 
@@ -1194,7 +1344,8 @@ public class Exercise3
 }
 ```
 
-输出:
+输出：
+
 ```
 Check whether a number is positive or negative:
 ----------------------------------------------
@@ -1202,9 +1353,10 @@ Input an integer : -10
 -10 is a negative number.
 ```
 
-### C# 程序：接收人体身高（厘米）并根据身高进行分类
+## C# 程序：接收人体身高（厘米）并根据身高进行分类
 
 ### C# 代码
+
 ```csharp
 using System;
 
@@ -1232,6 +1384,7 @@ public class Exercise7
 ```
 
 ### 输出
+
 ```
 Accept the height of a person in centimeter and categorize them:
 ----------------------------------------------------------------
@@ -1239,8 +1392,10 @@ Input the height of the person (in centimetres):190
 The person is taller.
 ```
 
-### 找出三个数中的值
+## 找出三个数中的最大值
+
 ### C# 代码
+
 ```csharp
 using System;
 
@@ -1277,7 +1432,9 @@ public class Exercise8
     }
 }
 ```
-输出:
+
+输出：
+
 ```
 Find the largest of numbers:
 --------------------
@@ -1287,8 +1444,10 @@ Input the 3rd  number :15
 The 2nd Number is greatest among three.
 ```
 
-# 计算盈损
+## 计算盈损
+
 ### C# 代码
+
 ```csharp
 using System;
 
@@ -1322,7 +1481,9 @@ public class Exercise17
     }
 }
 ```
-输出:
+
+输出：
+
 ```
 Calculate profit and loss:
 ------------
@@ -1330,4 +1491,3 @@ Input Cost Price: 1000
 Input Selling Price: 1200
 You can booked your profit amount : 200
 ```
-

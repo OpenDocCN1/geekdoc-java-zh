@@ -1,26 +1,27 @@
+
 # 幕后的 Java 散列表
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-hashmap-advanced>
 
-## 1。概述
+## 1. 概述
 
 在本文中，我们将更详细地探索 Java Collections 框架中最流行的接口`Map`的实现，继续我们的 [intro](/web/20221225231549/https://www.baeldung.com/java-hashmap) 文章的未完部分。
 
 在我们开始实现之前，重要的是要指出主`List`和`Set`集合接口扩展了`Collection`，但是`Map`没有。
 
-简单地说，`HashMap`通过键存储值，并提供 API 以各种方式添加、检索和操作存储的数据。实现是基于散列表原理的**，这听起来有点复杂，但实际上非常容易理解。**
+简单地说，`HashMap`通过键存储值，并提供 API 以各种方式添加、检索和操作存储的数据。实现是基于散列表原理的，这听起来有点复杂，但实际上非常容易理解。
 
 键值对存储在所谓的桶中，桶一起构成了所谓的表，表实际上是一个内部数组。
 
-一旦我们知道了一个对象被存储或将要被存储的关键字，在一个良好维度的散列映射中，**存储和检索操作以常数时间**，`O(1)` 发生。
+一旦我们知道了一个对象被存储或将要被存储的关键字，在一个良好维度的散列映射中，存储和检索操作以常数时间，`O(1)` 发生。
 
-为了理解散列映射是如何工作的，我们需要理解`HashMap.` 所使用的存储和检索机制，我们将重点讨论这些。
+为了理解散列映射是如何工作的，我们需要理解`HashMap`所使用的存储和检索机制，我们将重点讨论这些。
 
-最后， **`HashMap`相关问题在**面试中很常见，所以这是一个准备面试或为面试做准备的可靠方法。
+最后，`HashMap`相关问题在面试中很常见，所以这是一个准备面试或为面试做准备的可靠方法。
 
-## 2。`put()` API
+## 2. `put()` API
 
-为了在散列图中存储一个值，我们调用带两个参数的`put`API；一个键和相应的值:
+为了在散列图中存储一个值，我们调用带两个参数的`put` API；一个键和相应的值：
 
 ```java
 V put(K key, V value);
@@ -28,7 +29,7 @@ V put(K key, V value);
 
 当一个值被添加到键下的映射中时，键对象的`hashCode()` API 被调用来检索所谓的初始哈希值。
 
-为了看到这一点，让我们创建一个充当键的对象。我们将只创建一个属性作为哈希代码来模拟哈希的第一阶段:
+为了看到这一点，让我们创建一个充当键的对象。我们将只创建一个属性作为哈希代码来模拟哈希的第一阶段：
 
 ```java
 public class MyKey {
@@ -44,7 +45,7 @@ public class MyKey {
 }
 ```
 
-我们现在可以使用这个对象来映射哈希表中的一个值:
+我们现在可以使用这个对象来映射哈希表中的一个值：
 
 ```java
 @Test
@@ -55,7 +56,7 @@ public void whenHashCodeIsCalledOnPut_thenCorrect() {
 }
 ```
 
-上面的代码没有什么变化，但是请注意控制台的输出。实际上，调用了`hashCode`方法:
+上面的代码没有什么变化，但是请注意控制台的输出。实际上，调用了`hashCode`方法：
 
 ```java
 Calling hashCode()
@@ -65,7 +66,7 @@ Calling hashCode()
 
 这个最终的哈希值最终归结为内部数组中的一个索引，或者我们称之为桶位置。
 
-`HashMap`的`hash`函数是这样的:
+`HashMap`的`hash`函数是这样的：
 
 ```java
 static final int hash(Object key) {
@@ -76,7 +77,7 @@ static final int hash(Object key) {
 
 这里我们应该注意的是，只使用来自 key 对象的散列码来计算最终的散列值。
 
-在`put`函数内部，最终的哈希值是这样使用的:
+在`put`函数内部，最终的哈希值是这样使用的：
 
 ```java
 public V put(K key, V value) {
@@ -88,21 +89,21 @@ public V put(K key, V value) {
 
 有人可能会问，既然我们已经用它来计算哈希值，为什么还要在这个函数中使用这个键。
 
-原因是**哈希映射将关键字和值作为`Map.Entry`对象**存储在桶位置。
+原因是哈希映射将关键字和值作为`Map.Entry`对象存储在桶位置。
 
-如前所述，所有 Java 集合框架接口都扩展了`Collection`接口，但`Map`没有。对比一下我们之前看到的地图接口的声明和`Set`接口的声明:
+如前所述，所有 Java 集合框架接口都扩展了`Collection`接口，但`Map`没有。对比一下我们之前看到的地图接口的声明和`Set`接口的声明：
 
 ```java
 public interface Set<E> extends Collection<E>
 ```
 
-原因是**map 不像其他集合那样精确地存储单个元素，而是存储键值对的集合。**
+原因是 map 不像其他集合那样精确地存储单个元素，而是存储键值对的集合。
 
 所以`Collection`接口的通用方法如`add`、`toArray`对`Map`没有意义。
 
 我们在前三段中介绍的概念是最受欢迎的 Java 集合框架面试问题之一。所以，值得理解。
 
-散列映射的一个特殊属性是它接受`null`值和空键:
+散列映射的一个特殊属性是它接受`null`值和空键：
 
 ```java
 @Test
@@ -112,11 +113,11 @@ public void givenNullKeyAndVal_whenAccepts_thenCorrect(){
 }
 ```
 
-**当在`put`操作中遇到一个空键时，它会被自动分配一个最终哈希值`0`** ，这意味着它成为底层数组的第一个元素。
+当在`put`操作中遇到一个空键时，它会被自动分配一个最终哈希值`0`，这意味着它成为底层数组的第一个元素。
 
 这也意味着当键为空时，没有散列操作，因此键的`hashCode` API 不会被调用，最终避免了空指针异常。
 
-在一个`put`操作中，当我们使用一个先前已经使用过的键来存储一个值时，它返回与该键相关的先前值:
+在一个`put`操作中，当我们使用一个先前已经使用过的键来存储一个值时，它返回与该键相关的先前值：
 
 ```java
 @Test
@@ -130,7 +131,7 @@ public void givenExistingKey_whenPutReturnsPrevValue_thenCorrect() {
 }
 ```
 
-否则，它返回`null:`
+否则，它返回`null`：
 
 ```java
 @Test
@@ -143,7 +144,7 @@ public void givenNewKey_whenPutReturnsNull_thenCorrect() {
 }
 ```
 
-当`put`返回 null 时，也可能意味着与键相关联的前一个值为 null，而不一定是新的键-值映射:
+当`put`返回 null 时，也可能意味着与键相关联的前一个值为 null，而不一定是新的键-值映射：
 
 ```java
 @Test
@@ -158,9 +159,9 @@ public void givenNullVal_whenPutReturnsNull_thenCorrect() {
 
 正如我们将在下一小节中看到的，API 可以用来区分这些场景。
 
-## 3。`get` API
+## 3. `get` API
 
-要检索已经存储在哈希表中的对象，我们必须知道它存储在哪个键下。我们调用`get` API 并传递给它一个关键对象:
+要检索已经存储在哈希表中的对象，我们必须知道它存储在哪个键下。我们调用`get` API 并传递给它一个关键对象：
 
 ```java
 @Test
@@ -174,7 +175,7 @@ public void whenGetWorks_thenCorrect() {
 }
 ```
 
-在内部，使用相同的散列原理。`The hashCode()`调用 key 对象的 API 获取初始哈希值:
+在内部，使用相同的散列原理。`hashCode()`调用 key 对象的 API 获取初始哈希值：
 
 ```java
 @Test
@@ -186,7 +187,7 @@ public void whenHashCodeIsCalledOnGet_thenCorrect() {
 }
 ```
 
-这次调用了两次`MyKey`的`hashCode`API；一次用于`put`，一次用于`get`:
+这次调用了两次`MyKey`的`hashCode` API；一次用于`put`，一次用于`get`：
 
 ```java
 Calling hashCode()
@@ -199,7 +200,7 @@ Calling hashCode()
 
 然后，存储在该位置的值对象被检索并返回给调用函数。
 
-当返回值为 null 时，可能意味着键对象与哈希映射中的任何值都没有关联:
+当返回值为 null 时，可能意味着键对象与哈希映射中的任何值都没有关联：
 
 ```java
 @Test
@@ -212,7 +213,7 @@ public void givenUnmappedKey_whenGetReturnsNull_thenCorrect() {
 }
 ```
 
-或者它可能仅仅意味着该键被显式映射到一个空实例:
+或者它可能仅仅意味着该键被显式映射到一个空实例：
 
 ```java
 @Test
@@ -226,7 +227,7 @@ public void givenNullVal_whenRetrieves_thenCorrect() {
 }
 ```
 
-为了区分这两种情况，我们可以使用`containsKey` API，我们将键传递给它，当且仅当在哈希映射中为指定的键创建了映射时，它才返回 true:
+为了区分这两种情况，我们可以使用`containsKey` API，我们将键传递给它，当且仅当在哈希映射中为指定的键创建了映射时，它才返回 true：
 
 ```java
 @Test
@@ -250,9 +251,9 @@ public void whenContainsDistinguishesNullValues_thenCorrect() {
 
 对于上面测试中的两种情况，`get` API 调用的返回值都是 null，但是我们能够区分哪一个是哪一个。
 
-## 4。`HashMap`收藏观点
+## 4. `HashMap` 收藏观点
 
-`HashMap`提供了三个视图，使我们能够将其键和值视为另一个集合。我们可以得到地图的所有**键的集合:**
+`HashMap`提供了三个视图，使我们能够将其键和值视为另一个集合。我们可以得到地图的所有键的集合：
 
 ```java
 @Test
@@ -269,7 +270,7 @@ public void givenHashMap_whenRetrievesKeyset_thenCorrect() {
 }
 ```
 
-布景由地图本身支撑。因此**对集合所做的任何更改都会反映在映射图**中:
+布景由地图本身支撑。因此对集合所做的任何更改都会反映在映射图中：
 
 ```java
 @Test
@@ -287,7 +288,7 @@ public void givenKeySet_whenChangeReflectsInMap_thenCorrect() {
 }
 ```
 
-我们还可以获得值的**集合视图:**
+我们还可以获得值的集合视图：
 
 ```java
 @Test
@@ -304,9 +305,9 @@ public void givenHashMap_whenRetrievesValues_thenCorrect() {
 }
 ```
 
-就像键集一样，在这个集合中所做的任何**更改都将反映在底层映射**中。
+就像键集一样，在这个集合中所做的任何更改都将反映在底层映射中。
 
-最后，我们可以获得地图中所有条目的**集合视图:**
+最后，我们可以获得地图中所有条目的集合视图：
 
 ```java
 @Test
@@ -331,9 +332,9 @@ public void givenHashMap_whenRetrievesEntries_thenCorrect() {
 
 很多时候，您会像上一个例子一样在一个循环中使用集合视图，更具体地说是使用它们的迭代器。
 
-请记住，以上所有视图的**迭代器都是`fail-fast`** 。
+请记住，以上所有视图的迭代器都是`fail-fast`。
 
-如果在迭代器创建后对映射进行了任何结构修改，将会抛出并发修改异常:
+如果在迭代器创建后对映射进行了任何结构修改，将会抛出并发修改异常：
 
 ```java
 @Test(expected = ConcurrentModificationException.class)
@@ -351,7 +352,7 @@ public void givenIterator_whenFailsFastOnModification_thenCorrect() {
 }
 ```
 
-唯一**允许的结构修改是通过迭代器本身执行的`remove`** 操作:
+唯一允许的结构修改是通过迭代器本身执行的`remove`操作：
 
 ```java
 public void givenIterator_whenRemoveWorks_thenCorrect() {
@@ -375,13 +376,15 @@ public void givenIterator_whenRemoveWorks_thenCorrect() {
 
 在最坏的情况`O(n)`下，散列映射上的迭代发生，其中 n 是其容量和条目数量的总和。
 
-## `**5\. HashMap Performance**`
+## 5. `HashMap` 性能
 
-哈希映射的性能受两个参数的影响:`Initial Capacity`和`Load Factor`。容量是存储桶的数量或底层数组的长度，初始容量就是创建时的容量。
+哈希映射的性能受两个参数的影响：`Initial Capacity`和`Load Factor`。容量是存储桶的数量或底层数组的长度，初始容量就是创建时的容量。
 
 简而言之，加载因子或 LF 是在调整大小之前添加一些值之后哈希映射应该有多满的度量。
 
-默认初始容量为`16`，默认负载系数为`0.75`。我们可以使用初始容量和 LF 的自定义值创建一个哈希映射:
+
+
+默认初始容量为`16`，默认负载系数为`0.75`。我们可以使用初始容量和 LF 的自定义值创建一个哈希映射：
 
 ```java
 Map<String,String> hashMapWithCapacity=new HashMap<>(32);
@@ -392,7 +395,7 @@ Java 团队设置的默认值在大多数情况下都得到了很好的优化。
 
 当散列映射条目的数量超过 LF 和容量的乘积时，则发生**重新散列**，即**创建另一个内部数组，其大小是初始数组的两倍，并且所有条目被移动到新数组中的新桶位置**。
 
-低初始容量降低了空间成本，但是 T2 增加了重新散列的频率。显然，重新散列是一个非常昂贵的过程。因此，作为一个规则，如果您预期有许多条目，您应该设置一个相当高的初始容量。
+低初始容量降低了空间成本，但是增加了重新散列的频率。显然，重新散列是一个非常昂贵的过程。因此，作为一个规则，如果您预期有许多条目，您应该设置一个相当高的初始容量。
 
 另一方面，如果您将初始容量设置得太高，您将在迭代时间中付出代价。正如我们在上一节中看到的。
 
@@ -400,7 +403,7 @@ Java 团队设置的默认值在大多数情况下都得到了很好的优化。
 
 低初始容量对于具有大量迭代的少数条目是有益的。
 
-## 6。`HashMap`碰撞中的
+## 6. `HashMap`碰撞中的冲突
 
 冲突，或者更具体地说，`HashMap`中的散列码冲突，是这样一种情况，其中**两个或更多的关键字对象产生相同的最终散列值**，并因此指向相同的桶位置或数组索引。
 
@@ -416,7 +419,7 @@ Java 团队设置的默认值在大多数情况下都得到了很好的优化。
 
 在发生碰撞的情况下，最初恒定的时间`O(1)` `put`和`get`操作将在线性时间`O(n)`内发生。这是因为在找到具有最终哈希值的桶位置后，该位置的每个键将使用`equals` API 与提供的键对象进行比较。
 
-为了模拟这种冲突解决技术，让我们稍微修改一下前面的关键对象:
+为了模拟这种冲突解决技术，让我们稍微修改一下前面的关键对象：
 
 ```java
 public class MyKey {
@@ -449,9 +452,9 @@ public class MyKey {
 
 注意我们是如何简单地将`id`属性作为散列码返回的——从而强制发生冲突。
 
-另外，请注意，我们已经在我们的`equals`和`hashCode` 实现中添加了日志语句——这样我们就可以准确地知道何时调用逻辑。
+另外，请注意，我们已经在我们的`equals`和`hashCode`实现中添加了日志语句——这样我们就可以准确地知道何时调用逻辑。
 
-现在让我们继续存储和检索一些在某个点碰撞的对象:
+现在让我们继续存储和检索一些在某个点碰撞的对象：
 
 ```java
 @Test
@@ -481,11 +484,11 @@ public void whenCallsEqualsOnCollision_thenCorrect() {
 }
 ```
 
-在上面的测试中，我们创建了三个不同的键——一个有唯一的`id`,另外两个有相同的`id`。由于我们使用`id`作为初始哈希值，**在使用这些键存储和检索数据的过程中，肯定会出现**冲突。
+在上面的测试中，我们创建了三个不同的键——一个有唯一的`id`，另外两个有相同的`id`。由于我们使用`id`作为初始哈希值，**在使用这些键存储和检索数据的过程中，肯定会出现**冲突。
 
 除此之外，由于我们前面看到的冲突解决技术，我们期望我们存储的每个值都被正确地检索，因此最后三行中的断言。
 
-当我们运行测试时，它应该通过，表明冲突已经解决，我们将使用生成的日志来确认冲突确实发生了:
+当我们运行测试时，它应该通过，表明冲突已经解决，我们将使用生成的日志来确认冲突确实发生了：
 
 ```java
 storing value for k1
@@ -514,11 +517,11 @@ Calling equals() for key: MyKey [name=secondKey, id=2]
 
 最后一点，从 Java 8 开始，在给定桶位置的冲突数量超过某个阈值后，在冲突解决中，链表被动态地替换为平衡二分搜索法树。
 
-这一改变提供了性能提升，因为在冲突的情况下，存储和检索发生在`O(log n).`
+这一改变提供了性能提升，因为在冲突的情况下，存储和检索发生在`O(log n)`。
 
 这一部分在技术面试中很常见，尤其是在基本的存储和检索问题之后。
 
-## 7。结论
+## 7. 结论
 
 在本文中，我们探索了 Java `Map`接口的`HashMap`实现。
 

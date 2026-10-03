@@ -1,8 +1,9 @@
+
 # Spring REST API 的 OAuth2 处理 Angular 中的刷新令牌
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-security-oauth2-refresh-token-angular>
 
- ![](img/9a85e7b00890e39c43fce777070ff81b.png)
+![](img/9a85e7b00890e39c43fce777070ff81b.png)
 
 It’s just plain hard to get true, **real-time visibility into a running auth flow.**
 
@@ -18,24 +19,24 @@ Knowing these types of challenges, we built Lightrun - a real-time production de
 
 ## 1。概述
 
-在本教程中，我们将继续探索我们在[上一篇文章](/web/20220521221350/https://www.baeldung.com/rest-api-spring-oauth2-angular)和**中开始整理的 OAuth2 授权代码流，我们将重点关注如何在 Angular 应用程序中处理刷新令牌。我们也会利用祖尔的代理人。**
+在本教程中，我们将继续探索我们在[上一篇文章](/web/20220521221350/https://www.baeldung.com/rest-api-spring-oauth2-angular)中开始整理的 OAuth2 授权代码流，我们将重点关注如何在 Angular 应用程序中处理刷新令牌。我们也会利用祖尔的代理人。
 
-我们将在 Spring Security 5 中使用 OAuth 堆栈。如果你想使用 Spring Security OAuth 遗留堆栈，看看之前的文章:[OAuth 2 for a Spring REST API——处理 AngularJS(遗留 OAuth 堆栈)中的刷新令牌](/web/20220521221350/https://www.baeldung.com/spring-security-oauth2-refresh-token-angular-js-legacy)
+我们将在 Spring Security 5 中使用 OAuth 堆栈。如果你想使用 Spring Security OAuth 遗留堆栈，看看之前的文章：[OAuth 2 for a Spring REST API——处理 AngularJS（遗留 OAuth 堆栈）中的刷新令牌](/web/20220521221350/https://www.baeldung.com/spring-security-oauth2-refresh-token-angular-js-legacy)
 
 ## 2。访问令牌到期
 
 首先，请记住，客户端分两步使用授权码授权类型来获取访问令牌。在第一步中，[我们获得授权码](/web/20220521221350/https://www.baeldung.com/rest-api-spring-oauth2-angular#app-service)。在第二步，我们实际上[获得了访问令牌](/web/20220521221350/https://www.baeldung.com/rest-api-spring-oauth2-angular#app-service-1)。
 
-我们的访问令牌存储在一个 cookie 中，该 cookie 将根据令牌本身的过期时间而过期:
+我们的访问令牌存储在一个 cookie 中，该 cookie 将根据令牌本身的过期时间而过期：
 
 ```java
 var expireDate = new Date().getTime() + (1000 * token.expires_in);
 Cookie.set("access_token", token.access_token, expireDate);
 ```
 
-需要理解的重要一点是**cookie 本身仅用于存储**,它不驱动 OAuth2 流中的任何其他内容。例如，浏览器永远不会自动向服务器发送带有请求的 cookie，所以我们在这里是安全的。
+需要理解的重要一点是，cookie 本身仅用于存储，它不驱动 OAuth2 流中的任何其他内容。例如，浏览器永远不会自动向服务器发送带有请求的 cookie，所以我们在这里是安全的。
 
-但是请注意我们实际上是如何定义这个`retrieveToken()`函数来获取访问令牌的:
+但是请注意我们实际上是如何定义这个 `retrieveToken()` 函数来获取访问令牌的：
 
 ```java
 retrieveToken(code) {
@@ -57,19 +58,19 @@ retrieveToken(code) {
 }
 ```
 
-我们在`params`中发送客户端秘密，这并不是一种安全的处理方式。让我们看看如何避免这样做。
+我们在 `params` 中发送客户端秘密，这并不是一种安全的处理方式。让我们看看如何避免这样做。
 
 ## 3。代理人
 
 因此，**我们现在将有一个 Zuul 代理运行在前端应用程序中，基本上位于前端客户端和授权服务器之间**。所有敏感信息都将在这一层处理。
 
-前端客户端现在将作为引导应用程序托管，以便我们可以使用 Spring Cloud Zuul starter 无缝连接到我们的嵌入式 Zuul 代理。 ****
+前端客户端现在将作为引导应用程序托管，以便我们可以使用 Spring Cloud Zuul starter 无缝连接到我们的嵌入式 Zuul 代理。
 
 如果你想复习 Zuul 的基础知识，可以快速阅读 Zuul 的主要文章。
 
-现在**让我们配置代理**的路由:
+现在让我们配置代理的路由：
 
-```java
+```yaml
 zuul:
   routes:
     auth/code:
@@ -94,13 +95,13 @@ zuul:
       url: http://localhost:8083/auth/resources/
 ```
 
-我们已经设置了处理以下事项的路线:
+我们已经设置了处理以下事项的路线：
 
-*   `auth/code`–获取授权码并保存在 cookie 中
-*   `auth/redirect`–处理到授权服务器登录页面的重定向
-*   `auth/resources`–映射到授权服务器登录页面资源的对应路径(`css`和`js`)
-*   `auth/token`–获取访问令牌，从有效负载中移除`refresh_token`并将其保存在 cookie 中
-*   `auth/refresh`–获取刷新令牌，将其从有效负载中移除并保存在 cookie 中
+- `auth/code`——获取授权码并保存在 cookie 中
+- `auth/redirect`——处理到授权服务器登录页面的重定向
+- `auth/resources`——映射到授权服务器登录页面资源的对应路径（`css` 和 `js`）
+- `auth/token`——获取访问令牌，从有效负载中移除 `refresh_token` 并将其保存在 cookie 中
+- `auth/refresh`——获取刷新令牌，将其从有效负载中移除并保存在 cookie 中
 
 有趣的是，我们只是将流量代理到授权服务器，而不是其他任何东西。我们只在客户端获得新令牌时才真正需要代理。
 
@@ -108,7 +109,7 @@ zuul:
 
 ## 4。使用 Zuul 预过滤器获取代码
 
-**代理的第一次使用很简单——我们建立一个获取授权码的请求:**
+**代理的第一次使用很简单——我们建立一个获取授权码的请求：**
 
 ```java
 @Component
@@ -121,8 +122,8 @@ public class CustomPreZuulFilter extends ZuulFilter {
         if (requestURI.contains("auth/code")) {
             Map<String, List> params = ctx.getRequestQueryParams();
             if (params == null) {
-	        params = Maps.newHashMap();
-	    }
+                params = Maps.newHashMap();
+            }
             params.put("response_type", Lists.newArrayList(new String[] { "code" }));
             params.put("scope", Lists.newArrayList(new String[] { "read" }));
             params.put("client_id", Lists.newArrayList(new String[] { CLIENT_ID }));
@@ -138,10 +139,10 @@ public class CustomPreZuulFilter extends ZuulFilter {
         RequestContext ctx = RequestContext.getCurrentContext();
         String URI = ctx.getRequest().getRequestURI();
 
-        if (URI.contains("auth/code") || URI.contains("auth/token") || 
-          URI.contains("auth/refresh")) {		
+        if (URI.contains("auth/code") || URI.contains("auth/token") ||
+          URI.contains("auth/refresh")) {
             shouldfilter = true;
-	}
+        }
         return shouldfilter;
     }
 
@@ -157,17 +158,17 @@ public class CustomPreZuulFilter extends ZuulFilter {
 }
 ```
 
-我们使用一个过滤器类型`pre`在传递请求之前处理它。
+我们使用一个过滤器类型 `pre` 在传递请求之前处理它。
 
-**在过滤器的`run()`方法中，我们为`response_type`、`scope`、`client_id`和`redirect_uri`、**添加了查询参数——我们的授权服务器将我们带到其登录页面并发回代码所需的一切。
+**在过滤器的 `run()` 方法中，我们为 `response_type`、`scope`、`client_id` 和 `redirect_uri` 添加了查询参数——我们的授权服务器将我们带到其登录页面并发回代码所需的一切。**
 
-还要注意`shouldFilter()`方法。我们只使用提到的 3 个 URIs 过滤请求，其他的不使用`run` 方法。
+还要注意 `shouldFilter()` 方法。我们只使用提到的 3 个 URI 过滤请求，其他的不使用 `run` 方法。
 
-## 5。使用 **Zuul Post 过滤器**将代码放入 Cookie
+## 5。使用 Zuul Post 过滤器将代码放入 Cookie
 
- **我们在这里计划做的是将代码保存为 cookie，这样我们就可以将它发送到授权服务器以获取访问令牌。该代码作为查询参数出现在请求 URL 中，授权服务器在登录后将我们重定向到该 URL。
+我们在这里计划做的是将代码保存为 cookie，这样我们就可以将它发送到授权服务器以获取访问令牌。该代码作为查询参数出现在请求 URL 中，授权服务器在登录后将我们重定向到该 URL。
 
-**我们将设置一个 Zuul 后置过滤器来提取这段代码，并将其设置在 cookie 中。**这不仅仅是一个普通的 cookie，而是一个**安全的、只有 HTTP 的 cookie，具有非常有限的路径(`/auth/token` )** :
+**我们将设置一个 Zuul 后置过滤器来提取这段代码，并将其设置在 cookie 中。** 这不仅仅是一个普通的 cookie，而是一个**安全的、只有 HTTP 的 cookie，具有非常有限的路径（`/auth/token`）：**
 
 ```java
 @Component
@@ -216,9 +217,15 @@ public class CustomPostZuulFilter extends ZuulFilter {
 }
 ```
 
-为了增加一层额外的保护来抵御 CSRF 攻击，**我们将为我们所有的 cookie**添加一个[同站点 cookie](https://web.archive.org/web/20220521221350/https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00) 头。
+为了增加一层额外的保护来抵御 CSRF 攻击，我们将为我们所有的 cookie 添加一个[同站点 cookie](https://web.archive.org/web/20220521221350/https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00) 头。
 
-为此，我们将创建一个配置类:
+为此，我们将创建一个配置类：
+
+
+
+## 使用 SameSite 属性配置 Cookie
+
+以下是一个 Java 配置类，用于设置 `SameSite` 属性：
 
 ```java
 @Configuration
@@ -236,7 +243,7 @@ public class SameSiteConfig implements WebMvcConfigurer {
 
 这里我们将属性设置为`strict`，这样 cookies 的任何跨站点传输都会被严格禁止。
 
-## 6。从 Cookie 中获取并使用代码
+## 从 Cookie 中获取并使用代码
 
 现在我们已经在 cookie 中有了代码，当前端 Angular 应用程序试图触发令牌请求时，它将在`/auth/token`发送请求，因此浏览器当然会发送该 cookie。
 
@@ -275,7 +282,7 @@ private String extractCookie(HttpServletRequest req, String name) {
 }
 ```
 
-这里是我们的**`CustomHttpServletRequest` ——用于发送我们的请求体，将所需的表单参数转换为字节**:
+这里是我们的 **`CustomHttpServletRequest`**，用于发送我们的请求体，将所需的表单参数转换为字节:
 
 ```java
 public class CustomHttpServletRequest extends HttpServletRequestWrapper {
@@ -311,7 +318,7 @@ public class CustomHttpServletRequest extends HttpServletRequestWrapper {
 
 这将在响应中从授权服务器获得一个访问令牌。接下来，我们将了解如何转变应对方式。
 
-## 7.将刷新令牌放在 Cookie 中
+## 将刷新令牌放在 Cookie 中
 
 开始有趣的事情。
 
@@ -350,7 +357,7 @@ public Object run() {
 
 这里需要注意的另一点是，我们将 cookie 的最长期限设置为 30 天，因为这与令牌的到期时间相匹配。
 
-## 8.从 Cookie 中获取并使用刷新令牌
+## 从 Cookie 中获取并使用刷新令牌
 
 既然 cookie 中已经有了刷新令牌，**当前端 Angular 应用试图触发令牌刷新**时，它将在`/auth/refresh`发送请求，因此浏览器当然会发送该 cookie。
 
@@ -381,7 +388,7 @@ public Object run() {
 
 获得响应后，它再次在`pre`过滤器中进行相同的转换，正如我们在第 7 节中看到的。
 
-## 9。从 Angular 刷新访问令牌
+## 从 Angular 刷新访问令牌
 
 最后，让我们修改简单的前端应用程序，并实际利用刷新令牌:
 
@@ -403,7 +410,7 @@ refreshAccessToken() {
 
 还要注意的是，**我们没有自己给`refresh_token`添加任何表单参数——因为这将由 Zuul 过滤器**来处理。
 
-## 10.跑前端
+## 运行前端
 
 由于我们的前端 Angular 客户端现在作为引导应用程序托管，运行它将与以前略有不同。
 
@@ -415,9 +422,9 @@ mvn clean install
 
 这将触发我们的`pom.xml`中定义的`frontend-maven-plugin`来构建角度代码，并将 UI 工件复制到`target/classes/static`文件夹中。这个过程覆盖了我们在`src/main/resources`目录中的所有内容。因此，我们需要确保在复制过程中包含该文件夹中的任何所需资源，例如`application.yml`。
 
-**第二步，我们需要运行我们的`SpringBootApplication`类`UiApplication`** 。我们的客户端应用程序将在`application.yml`中指定的端口 8089 上启动并运行。
+**第二步，我们需要运行我们的`SpringBootApplication`类`UiApplication`**。我们的客户端应用程序将在`application.yml`中指定的端口 8089 上启动并运行。
 
-## 11。结论
+## 结论
 
 在这篇 OAuth2 教程中，我们学习了如何在 Angular 客户端应用程序中存储刷新令牌，如何刷新过期的访问令牌，以及如何利用 Zuul 代理来完成所有这些工作。
 

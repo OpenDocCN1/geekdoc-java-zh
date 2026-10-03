@@ -1,17 +1,18 @@
+
 # spring——如何在 bean 中访问 message source(message source aware)
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring/spring-how-to-access-messagesource-in-bean-messagesourceaware/>
 
-在上一个教程中，您可以通过 ApplicationContext 获得[消息源。但是对于获取 MessageSource 的 bean，您必须实现 **MessageSourceAware** 接口。](http://web.archive.org/web/20190213133419/http://www.mkyong.com/spring/spring-resource-bundle-with-resourcebundlemessagesource-example/)
+在上一个教程中，您可以通过 `ApplicationContext` 获得消息源。但是对于获取 `MessageSource` 的 bean，您必须实现 `MessageSourceAware` 接口。
 
 ## 例子
 
-一个 **CustomerService** 类，实现了 **MessageSourceAware** 接口，有一个 setter 方法来设置 **MessageSource** 属性。
+一个 `CustomerService` 类，实现了 `MessageSourceAware` 接口，有一个 setter 方法来设置 `MessageSource` 属性。
 
-During Spring container initialization, if any class which implements the **MessageSourceAware** interface, Spring will automatically inject the MessageSource into the class via **setMessageSource(MessageSource messageSource)** setter method.
+在 Spring 容器初始化期间，如果任何类实现了 `MessageSourceAware` 接口，Spring 将自动通过 `setMessageSource(MessageSource messageSource)` setter 方法将 `MessageSource` 注入到该类中。
 
 ```java
- package com.mkyong.customer.services;
+package com.mkyong.customer.services;
 
 import java.util.Locale;
 
@@ -39,13 +40,13 @@ public class CustomerService implements MessageSourceAware
     	System.out.println("Customer name (Chinese) : " + namechinese);
 	}
 
-} 
+}
 ```
 
 运行它
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -61,14 +62,7 @@ public class App
     	CustomerService cust = (CustomerService)context.getBean("customerService");
     	cust.printMessage();
     }
-} 
+}
 ```
 
-All the properties files and XML files are reuse from the last [ResourceBundleMessageSource tutorial](http://web.archive.org/web/20190213133419/http://www.mkyong.com/spring/spring-resource-bundle-with-resourcebundlemessagesource-example/).Download it – [Spring-MessageSource-Example.zip](http://web.archive.org/web/20190213133419/http://www.mkyong.com/wp-content/uploads/2010/03/Spring-MessageSource-Example.zip)[spring](http://web.archive.org/web/20190213133419/http://www.mkyong.com/tag/spring/)![](img/6fcde1f7f378cc4af4be1a89998a0d0e.png) (function (i,d,s,o,m,r,c,l,w,q,y,h,g) { var e=d.getElementById(r);if(e===null){ var t = d.createElement(o); t.src = g; t.id = r; t.setAttribute(m, s);t.async = 1;var n=d.getElementsByTagName(o)[0];n.parentNode.insertBefore(t, n); var dt=new Date().getTime(); try{i[l][w+y](h,i[l][q+y](h)+'&amp;'+dt);}catch(er){i[h]=dt;} } else if(typeof i[c]!=='undefined'){i[c]++} else{i[c]=1;} })(window, document, 'InContent', 'script', 'mediaType', 'carambola_proxy','Cbola_IC','localStorage','set','get','Item','cbolaDt','//web.archive.org/web/20190213133419/http://route.carambo.la/inimage/getlayer?pid=myky82&amp;did=112239&amp;wid=0')<input type="hidden" id="mkyong-postId" value="3940">
-
-
-
-
-
-
-
+所有 properties 文件和 XML 文件都复用自上一个 [ResourceBundleMessageSource 教程](http://web.archive.org/web/20190213133419/http://www.mkyong.com/spring/spring-resource-bundle-with-resourcebundlemessagesource-example/)。下载它 – [Spring-MessageSource-Example.zip](http://web.archive.org/web/20190213133419/http://www.mkyong.com/wp-content/uploads/2010/03/Spring-MessageSource-Example.zip)

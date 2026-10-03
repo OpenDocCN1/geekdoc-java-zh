@@ -1,19 +1,16 @@
+
 # 属性
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/environment/properties.html`](https://docs.oracle.com/javase/tutorial/essential/environment/properties.html)
 
-*属性*是作为*键/值对*管理的配置值。在每对中，键和值都是[`String`](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)值。键标识并用于检索值，就像使用变量名检索变量的值一样。例如，一个能够下载文件的应用程序可能使用名为“download.lastDirectory”的属性来跟踪用于最后下载的目录。
+*属性*是作为*键/值对*管理的配置值。在每对中，键和值都是[`String`](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)值。键标识并用于检索值，就像使用变量名检索变量的值一样。例如，一个能够下载文件的应用程序可能使用名为`download.lastDirectory`的属性来跟踪用于最后下载的目录。
 
 要管理属性，请创建[`java.util.Properties`](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html)的实例。此类提供以下方法：
 
 +   从流中加载键/值对到`Properties`对象中，
-
 +   通过其键检索值，
-
 +   列出键及其值，
-
 +   枚举键，
-
 +   将属性保存到流中。
 
 有关流的介绍，请参阅输入/输出流中的基本 I/O 课程。
@@ -21,24 +18,18 @@
 `Properties`扩展了[`java.util.Hashtable`](https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html)。从`Hashtable`继承的一些方法支持以下操作：
 
 +   测试特定键或值是否在`Properties`对象中，
-
 +   获取当前键/值对的数量，
-
 +   删除键及其值，
-
 +   向`Properties`列表添加键/值对，
-
 +   枚举值或键，
-
 +   通过键检索值，
-
 +   查看`Properties`对象是否为空。
 
-* * *
+---
 
 **安全注意事项：** 访问属性需经当前安全管理器批准。本节中的示例代码段假定为独立应用程序，这些应用程序默认没有安全管理器。同样的代码在 applet 中可能无法正常工作，具体取决于运行的浏览器。请参阅 Applet 的功能和限制中的 Java Applets 课程，了解 applet 的安全限制信息。
 
-* * *
+---
 
 `System`类维护一个定义当前工作环境配置的`Properties`对象。有关这些属性的更多信息，请参阅系统属性。本节的其余部分将解释如何使用属性来管理应用程序配置。
 
@@ -48,7 +39,7 @@
 
 ![Properties 对象的可能生命周期](img/22f18b5607448e44a6e1933d08c2268e.png)
 
-+   `启动中`
++   **启动中**
 
     第一个三个框中给出的操作发生在应用程序启动时。首先，应用程序将默认属性从一个众所周知的位置加载到`Properties`对象中。通常，默认属性存储在磁盘上的文件中，与应用程序的`.class`和其他资源文件一起。
 
@@ -56,11 +47,11 @@
 
     关键在于一致性。应用程序必须始终将属性加载和保存到相同位置，以便下次执行时能够找到它们。
 
-+   `运行中`
++   **运行中**
 
     在应用程序执行期间，用户可能会更改一些设置，也许在首选项窗口中，并且`Properties`对象将更新以反映这些更改。如果要记住用户更改以供将来的会话使用，则必须保存这些更改。
 
-+   `退出`
++   **退出**
 
     退出时，应用程序将属性保存到其众所周知的位置，以便在下次启动应用程序时再次加载。
 
@@ -85,10 +76,9 @@ in = new FileInputStream("appProperties");
 applicationProps.load(in);
 in.close();
 . . .
-
 ```
 
-首先，应用程序设置一个默认的`Properties`对象。该对象包含一组属性，如果在其他地方没有明确设置值，则使用这些属性。然后，load 方法从名为`defaultProperties`的磁盘上的文件中读取默认值。
+首先，应用程序设置一个默认的`Properties`对象。该对象包含一组属性，如果在其他地方没有明确设置值，则使用这些属性。然后，`load`方法从名为`defaultProperties`的磁盘上的文件中读取默认值。
 
 接下来，应用程序使用不同的构造函数创建第二个`Properties`对象`applicationProps`，其默认值包含在`defaultProps`中。当检索属性时，默认值起作用。如果在`applicationProps`中找不到属性，则会搜索其默认列表。
 
@@ -102,7 +92,6 @@ in.close();
 FileOutputStream out = new FileOutputStream("appProperties");
 applicationProps.store(out, "---No Comment---");
 out.close();
-
 ```
 
 `store`方法需要一个要写入的流，以及一个字符串，该字符串用作输出顶部的注释。
@@ -147,8 +136,6 @@ out.close();
 
     删除与键关联的键/值对。
 
-* * *
+---
 
 **注意：** 上述描述的一些方法在`Hashtable`中定义，因此接受除`String`之外的键和值参数类型。始终使用`String`作为键和值，即使该方法允许其他类型。同时不要在`Properties`对象上调用`Hashtable.set`或`Hastable.setAll`；始终使用`Properties.setProperty`。
-
-* * *

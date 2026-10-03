@@ -1,20 +1,21 @@
-# Spring MVC +百里香 3.0:新特性
+
+# Spring MVC + Thymeleaf 3.0：新特性
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-thymeleaf-3>
 
-## 1。简介
+## 1. 简介
 
-[百里叶](https://web.archive.org/web/20220810180959/http://www.thymeleaf.org/)是一个 Java 模板引擎，用于处理和创建 HTML、XML、JavaScript、CSS 和纯文本。关于百里香和春天的介绍，请看[这篇文章](/web/20220810180959/https://www.baeldung.com/thymeleaf-in-spring-mvc)。
+[Thymeleaf](https://web.archive.org/web/20220810180959/http://www.thymeleaf.org/) 是一个 Java 模板引擎，用于处理和创建 HTML、XML、JavaScript、CSS 和纯文本。关于 Thymeleaf 和 Spring 的介绍，请看[这篇文章](/web/20220810180959/https://www.baeldung.com/thymeleaf-in-spring-mvc)。
 
-在本文中，我们将讨论百里叶应用程序 Spring MVC 中百里叶 3.0 的新特性。版本 3 提供了新的特性和许多改进。更具体地说，我们将讨论自然处理和 Javascript 内联的主题。
+在本文中，我们将讨论 Thymeleaf 应用程序 Spring MVC 中 Thymeleaf 3.0 的新特性。版本 3 提供了新的特性和许多改进。更具体地说，我们将讨论自然处理和 JavaScript 内联的主题。
 
-百里叶 3.0 包括三种新的文本模板模式:`TEXT`、`JAVASCRIPT`和`CSS` ——分别用于处理普通、JavaScript 和 CSS 模板。
+Thymeleaf 3.0 包括三种新的文本模板模式：`TEXT`、`JAVASCRIPT`和`CSS` ——分别用于处理普通文本、JavaScript 和 CSS 模板。
 
-## 2。Maven 依赖关系
+## 2. Maven 依赖
 
-首先，让我们看看将百里香叶与 Spring 集成所需的配置；`thymeleaf-spring`我们的依赖项中需要库:
+首先，让我们看看将 Thymeleaf 与 Spring 集成所需的配置；`thymeleaf-spring`是我们的依赖项中需要的库：
 
-```java
+```xml
 <dependency>
     <groupId>org.thymeleaf</groupId>
     <artifactId>thymeleaf</artifactId>
@@ -29,11 +30,9 @@
 
 注意，对于 Spring 4 项目，必须使用`thymeleaf-spring4`库来代替`thymeleaf-spring5`。最新版本的依赖可以在[这里](https://web.archive.org/web/20220810180959/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22org.thymeleaf%22%20AND%20a%3A%22thymeleaf-spring5%22)找到。
 
-## 3。Java 百里香配置
+## 3. Java Thymeleaf 配置
 
-首先，我们需要配置新的模板引擎、视图和模板解析器。为了做到这一点，我们需要更新 Java 配置类
-
-为了做到这一点，我们需要更新 Java config 类，这里创建了[和](/web/20220810180959/https://www.baeldung.com/thymeleaf-in-spring-mvc)。除了新类型的解析器，我们的模板还实现了 Spring 接口`ApplicationContextAware`:
+首先，我们需要配置新的模板引擎、视图和模板解析器。为了做到这一点，我们需要更新 Java 配置类，这里创建了[和](/web/20220810180959/https://www.baeldung.com/thymeleaf-in-spring-mvc)。除了新类型的解析器，我们的模板还实现了 Spring 接口`ApplicationContextAware`：
 
 ```java
 @Configuration
@@ -74,24 +73,24 @@ public class WebMVCConfig implements WebMvcConfigurer, ApplicationContextAware {
         resolver.setViewNames(ArrayUtil.array("*.txt"));
         return resolver;
     }
-} 
+}
 ```
 
-正如我们在上面看到的，我们创建了三个不同的视图解析器——一个用于 HTML 视图，一个用于 Javascript 文件，一个用于纯文本文件。百里香将通过检查文件扩展名来区分它们——分别是`.html`、`.js`和`.txt`。
+正如我们在上面看到的，我们创建了三个不同的视图解析器——一个用于 HTML 视图，一个用于 JavaScript 文件，一个用于纯文本文件。Thymeleaf 将通过检查文件扩展名来区分它们——分别是`.html`、`.js`和`.txt`。
 
 我们还创建了静态的`ArrayUtil`类，以便使用方法`array()`创建所需的带有视图名称的`String[]`数组。
 
-在本课程的下一部分，我们需要配置模板引擎:
+在本课程的下一部分，我们需要配置模板引擎：
 
 ```java
 private ISpringTemplateEngine templateEngine(ITemplateResolver templateResolver) {
     SpringTemplateEngine engine = new SpringTemplateEngine();
     engine.setTemplateResolver(templateResolver);
     return engine;
-} 
+}
 ```
 
-最后，我们需要创建三个独立的模板解析器:
+最后，我们需要创建三个独立的模板解析器：
 
 ```java
 private ITemplateResolver htmlTemplateResolver() {
@@ -124,11 +123,11 @@ private ITemplateResolver plainTemplateResolver() {
 
 请注意，测试最好使用非缓存模板，这就是为什么建议使用`setCacheable(false)`方法。
 
-Javascript 模板会存放在`/WEB-INF/js/`文件夹，纯文本文件存放在`/WEB-INF/txt/`文件夹，最后 HTML 文件的路径是`/WEB-INF/html`。
+JavaScript 模板会存放在`/WEB-INF/js/`文件夹，纯文本文件存放在`/WEB-INF/txt/`文件夹，最后 HTML 文件的路径是`/WEB-INF/html`。
 
-## 4。弹簧控制器配置
+## 4. Spring 控制器配置
 
-为了测试我们的新配置，我们创建了以下 Spring 控制器:
+为了测试我们的新配置，我们创建了以下 Spring 控制器：
 
 ```java
 @Controller
@@ -165,11 +164,11 @@ public class InliningController {
 
 作为附加功能，我们将使用`SecurityContextHolder`来获取登录的用户名。
 
-## 5。Html/Js/Text 示例文件
+## 5. HTML/JS/Text 示例文件
 
-本教程的最后一部分是创建三种不同类型的文件，并测试新的百里香叶功能的用法。让我们从 HTML 文件开始:
+本教程的最后一部分是创建三种不同类型的文件，并测试新的 Thymeleaf 功能的用法。让我们从 HTML 文件开始：
 
-```java
+```html
 <!DOCTYPE html>
 <html  xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -183,37 +182,37 @@ public class InliningController {
 </html>
 ```
 
-在这个文件中，我们使用了两种不同的方法。为了显示标题，我们使用转义语法，这将删除所有 HTML 标签，导致只显示文本。在描述的情况下，我们使用非转义语法来保存 HTML 标签。最终结果将如下所示:
+在这个文件中，我们使用了两种不同的方法。为了显示标题，我们使用转义语法，这将删除所有 HTML 标签，导致只显示文本。在描述的情况下，我们使用非转义语法来保存 HTML 标签。最终结果将如下所示：
 
-```java
+```html
 <p>Title of tutorial: Baeldung</p>
 <p>Description: <strong>Thymeleaf</strong> tutorial</p>
 ```
 
-这当然会被我们的浏览器解析，用粗体显示单词百里香。
+这当然会被我们的浏览器解析，用粗体显示单词 Thymeleaf。
 
-接下来，我们继续测试 js 模板的特性:
+接下来，我们继续测试 js 模板的特性：
 
-```java
+```javascript
 var count = [[${students.size()}]];
-alert("Number of students in group: " + count); 
+alert("Number of students in group: " + count);
 ```
 
-模板模式下的属性将被 JavaScript 取消转义。这将导致创建 js 警报。我们通过使用 jQuery AJAX 在 listStudents.html 文件中加载此警报:
+模板模式下的属性将被 JavaScript 取消转义。这将导致创建 js 警报。我们通过使用 jQuery AJAX 在`listStudents.html`文件中加载此警报：
 
-```java
+```javascript
 <script>
     $(document).ready(function() {
         $.ajax({
             url : "/spring-thymeleaf/js",
-            });
         });
+    });
 </script>
 ```
 
-最后，但不是最不重要的功能，我们想测试的是纯文本文件生成。我们创建了包含以下内容的 studentsList.txt 文件:
+最后，但同样重要的功能，我们想测试的是纯文本文件生成。我们创建了包含以下内容的`studentsList.txt`文件：
 
-```java
+```text
 Dear [(${username})],
 
 This is the list of our students:
@@ -224,28 +223,28 @@ Thanks,
 The Baeldung University
 ```
 
-注意，与标记模板模式一样，标准方言只包括一个可处理的元素(`[# …])`和一组可处理的属性(`th:text, th:utext, th:if, th:unless, th:each`等)。).结果将是一个文本文件，我们可以在电子邮件中使用，就像在第 3 节末尾提到的那样。
+注意，与标记模板模式一样，标准方言只包括一个可处理的元素（`[# ...]`）和一组可处理的属性（`th:text`、`th:utext`、`th:if`、`th:unless`、`th:each`等）。结果将是一个文本文件，我们可以在电子邮件中使用，就像在第 3 节末尾提到的那样。
 
-**怎么考？**我们的建议是先使用浏览器，然后检查现有的 JUnit 测试。
+**怎么测试？**我们的建议是先使用浏览器，然后检查现有的 JUnit 测试。
 
-## 6.**Spring Boot 百里香叶**
+## 6. Spring Boot Thymeleaf
 
-`Spring Boot`通过添加 [`spring-boot-starter-thymeleaf`](https://web.archive.org/web/20220810180959/https://search.maven.org/classic/#search%7Cga%7C1%7Ca%3A%22spring-boot-starter-thymeleaf%22) 依赖关系为`Thymeleaf`提供自动配置:
+`Spring Boot`通过添加`spring-boot-starter-thymeleaf`依赖关系为`Thymeleaf`提供自动配置：
 
-```java
+```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-thymeleaf</artifactId>
     <version>2.3.3.RELEASE</version>
-</dependency> 
+</dependency>
 ```
 
-不需要显式配置。默认情况下，HTML 文件应该放在`resources/templates `位置。
+不需要显式配置。默认情况下，HTML 文件应该放在`resources/templates`位置。
 
-## 7。结论
+## 7. 结论
 
-在本文中，我们讨论了在百里香框架中实现的新特性，重点是 3.0 版。
+在本文中，我们讨论了在 Thymeleaf 框架中实现的新特性，重点是 3.0 版本。
 
 本教程的完整实现可以在 GitHub 项目中找到——这是一个基于 Eclipse 的项目，很容易在每个现代互联网浏览器中测试。
 
-最后，如果您计划将一个项目从版本 2 迁移到这个最新版本，请看迁移指南中的[。请注意，您现有的百里香模板与百里香 3.0 几乎 100%兼容，因此您只需在配置中做一些修改。](https://web.archive.org/web/20220810180959/http://www.thymeleaf.org/doc/articles/thymeleaf3migration.html)
+最后，如果您计划将一个项目从版本 2 迁移到这个最新版本，请看[迁移指南](https://web.archive.org/web/20220810180959/http://www.thymeleaf.org/doc/articles/thymeleaf3migration.html)。请注意，您现有的 Thymeleaf 模板与 Thymeleaf 3.0 几乎 100% 兼容，因此您只需在配置中做一些修改。

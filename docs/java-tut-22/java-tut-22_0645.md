@@ -1,3 +1,4 @@
+
 # 绘制几何图元
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/geometry/primitives.html`](https://docs.oracle.com/javase/tutorial/2d/geometry/primitives.html)
@@ -15,7 +16,6 @@ public void paint (Graphics g) {
     Graphics2D g2 = (Graphics2D) g;
     ...
 }
-
 ```
 
 ## 点
@@ -25,7 +25,6 @@ public void paint (Graphics g) {
 ```java
 //Create Point2D.Double
 Point2D.Double point = new Point2D.Double(x, y);
-
 ```
 
 要创建坐标为 0,0 的点，您可以使用默认构造函数`Point2D.Double()`。
@@ -33,7 +32,6 @@ Point2D.Double point = new Point2D.Double(x, y);
 您可以使用`setLocation`方法设置点的位置如下：
 
 +   `setLocation(double x, double y)` – 以双精度值设置点的位置-定义坐标。
-
 +   `setLocation(Point2D p)` – 使用另一个点的坐标设置点的位置。
 
 此外，`Point2D`类有方法来计算当前点与给定坐标点之间的距离，或者两点之间的距离。
@@ -45,7 +43,6 @@ Point2D.Double point = new Point2D.Double(x, y);
 ```java
 // draw Line2D.Double
 g2.draw(new Line2D.Double(x1, y1, x2, y2));
-
 ```
 
 ![Line](img/1f60b6d533dfc9223a734c4f4352c33b.png)
@@ -55,10 +52,9 @@ g2.draw(new Line2D.Double(x1, y1, x2, y2));
 或者，可以使用`Line2D.Float`类的构造函数指定线的端点如下：
 
 +   `Line2D.Float(float X1, float Y1, float X2, float Y2)`
-
 +   `Line2D.Float(Point2D p1, Point2D p2)`
 
-在`Graphics2D`类中使用 Stroke 对象定义线路径的笔画。
+在`Graphics2D`类中使用`Stroke`对象定义线路径的笔画。
 
 ## 曲线
 
@@ -78,7 +74,6 @@ QuadCurve2D q = new QuadCurve2D.Float();
 // draw QuadCurve2D.Float with set coordinates
 q.setCurve(x1, y1, ctrlx, ctrly, x2, y2);
 g2.draw(q);
-
 ```
 
 ![二次参数曲线段](img/55e2a7b696f6c9ee1438de7990a6e646.png)
@@ -96,7 +91,6 @@ CubicCurve2D c = new CubicCurve2D.Double();
 c.setCurve(x1, y1, ctrlx1,
            ctrly1, ctrlx2, ctrly2, x2, y2);
 g2.draw(c);
-
 ```
 
 ![三次曲线段](img/9ca28611a01364693ba33ae31ff70d0e.png)
@@ -114,7 +108,6 @@ g2.draw(c);
 g2.draw(new Rectangle2D.Double(x, y,
                                rectwidth,
                                rectheight));
-
 ```
 
 ![矩形](img/ffaf1fa113f080b669f969839ba83ad5.png)
@@ -124,13 +117,9 @@ g2.draw(new Rectangle2D.Double(x, y,
 圆角矩形由以下参数指定：
 
 +   位置
-
 +   宽度
-
 +   高度
-
 +   圆角弧的宽度
-
 +   圆角弧的高度
 
 要设置`RoundRectangle2D`对象的位置、大小和弧度，请使用方法`setRoundRect(double a, double y, double w, double h, double arcWidth, double arcHeight)`。例如：
@@ -141,7 +130,6 @@ g2.draw(new RoundRectangle2D.Double(x, y,
                                    rectwidth,
                                    rectheight,
                                    10, 10));
-
 ```
 
 ![圆角矩形](img/4ad6995d4cd9a952f1607f9eead72907.png)
@@ -157,7 +145,6 @@ g2.draw(new RoundRectangle2D.Double(x, y,
 g2.draw(new Ellipse2D.Double(x, y,
                              rectwidth,
                              rectheight));
-
 ```
 
 ![椭圆](img/fac4f5cba4ec9f5bb16fdc470b870567.png)
@@ -166,16 +153,14 @@ g2.draw(new Ellipse2D.Double(x, y,
 
 要绘制椭圆的一部分，您可以使用[`Arc2D`](https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Arc2D.html)类。这个类表示由边界矩形、起始角度、角度范围和闭合类型定义的弧。`Arc2D.Float`和`Arc2D.Double`子类指定了以浮点和双精度表示的弧。
 
-`Arc2D`类定义了这个类中对应常量表示的三种弧形：OPEN、PIE 和 CHORD。
+`Arc2D`类定义了这个类中对应常量表示的三种弧形：`OPEN`、`PIE`和`CHORD`。
 
 ![弧](img/2def387f9d2e4027360b3e57db505ea7.png)
 
 有几种方法可以设置弧的大小和参数：
 
 +   直接，通过坐标
-
 +   通过提供的`Point2D`和`Dimension2D`
-
 +   通过复制现有的`Arc2D`
 
 此外，您可以使用`setArcByCenter`方法来指定从中心点开始的弧，给定其坐标和半径。
@@ -187,7 +172,6 @@ g2.draw(new Arc2D.Double(x, y,
                          rectheight,
                          90, 135,
                          Arc2D.OPEN));
-
 ```
 
 ![弧](img/2def387f9d2e4027360b3e57db505ea7.png)

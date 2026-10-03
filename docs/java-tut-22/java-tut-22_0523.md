@@ -1,3 +1,4 @@
+
 # 集合接口
 
 > 原文：[`docs.oracle.com/javase/tutorial/collections/interfaces/set.html`](https://docs.oracle.com/javase/tutorial/collections/interfaces/set.html)
@@ -10,7 +11,6 @@ Java 平台包含三种通用的`Set`实现：`HashSet`、`TreeSet`和`LinkedHas
 
 ```java
 Collection<Type> noDups = new HashSet<Type>(c);
-
 ```
 
 它通过创建一个`Set`（根据定义，不能包含重复项），最初包含`c`中的所有元素。它使用在集合接口部分描述的标准转换构造函数。
@@ -20,7 +20,6 @@ Collection<Type> noDups = new HashSet<Type>(c);
 ```java
 c.stream()
 .collect(Collectors.toSet()); // no duplicates
-
 ```
 
 这是一个稍微更长的示例，将一个`Collection`中的名称累积到一个`TreeSet`中：
@@ -29,14 +28,12 @@ c.stream()
 Set<String> set = people.stream()
 .map(Person::getName)
 .collect(Collectors.toCollection(TreeSet::new));
-
 ```
 
 以下是第一个习语的一个次要变体，保留原始集合的顺序，同时删除重复元素：
 
 ```java
 Collection<Type> noDups = new LinkedHashSet<Type>(c);
-
 ```
 
 以下是一个通用方法，封装了前面的习语，返回一个与传入的相同泛型类型的`Set`。
@@ -45,7 +42,6 @@ Collection<Type> noDups = new LinkedHashSet<Type>(c);
 public static <E> Set<E> removeDups(Collection<E> c) {
     return new LinkedHashSet<E>(c);
 }
-
 ```
 
 ## 集合接口基本操作
@@ -69,7 +65,6 @@ public class FindDups {
                            distinctWords);
     }
 }
-
 ```
 
 使用`for-each`结构：
@@ -85,21 +80,18 @@ public class FindDups {
         System.out.println(s.size() + " distinct words: " + s);
     }
 }
-
 ```
 
 现在运行程序的任一版本。
 
 ```java
 java FindDups i came i saw i left
-
 ```
 
 生成以下输出：
 
 ```java
 4 distinct words: [left, came, saw, i]
-
 ```
 
 请注意，代码总是通过其接口类型（`Set`）而不是其实现类型来引用`Collection`。这是一种*强烈*推荐的编程实践，因为它使您可以通过仅更改构造函数来灵活地更改实现。如果用于存储集合的任何变量或用于传递集合的参数声明为`Collection`的实现类型而不是其接口类型，那么为了更改其实现类型，*所有*这些变量和参数都必须更改。
@@ -112,20 +104,16 @@ java FindDups i came i saw i left
 java FindDups i came i saw i left
 
 4 distinct words: [came, i, left, saw]
-
 ```
 
 ## 设置接口批量操作
 
 批量操作特别适用于`Set`；应用时，它们执行标准的集合代数操作。假设`s1`和`s2`是集合。以下是批量操作的作用：
 
-+   `s1.containsAll(s2)`  如果`s2`是`S1`的**子集**，则返回`true`。（如果集合`s1`包含`S2`中的所有元素，则`s2`是`s1`的子集。）
-
-+   `s1.addAll(s2)`  将`s1`转换为`s1`和`s2`的**并集**。（两个集合的并集是包含在任一集合中的所有元素的集合。）
-
-+   `s1.retainAll(s2)`  将`s1`转换为`s1`和`s2`的交集。（两个集合的交集是仅包含两个集合共有元素的集合。）
-
-+   `s1.removeAll(s2)`  将`s1`转换为`s1`和`s2`的（非对称的）差集。（例如，`s1`减去`s2`的差集是包含`s1`中所有元素但不在`s2`中的元素的集合。）
++   `s1.containsAll(s2)` — 如果`s2`是`S1`的**子集**，则返回`true`。（如果集合`s1`包含`S2`中的所有元素，则`s2`是`s1`的子集。）
++   `s1.addAll(s2)` — 将`s1`转换为`s1`和`s2`的**并集**。（两个集合的并集是包含在任一集合中的所有元素的集合。）
++   `s1.retainAll(s2)` — 将`s1`转换为`s1`和`s2`的交集。（两个集合的交集是仅包含两个集合共有元素的集合。）
++   `s1.removeAll(s2)` — 将`s1`转换为`s1`和`s2`的（非对称的）差集。（例如，`s1`减去`s2`的差集是包含`s1`中所有元素但不在`s2`中的元素的集合。）
 
 要以*非破坏性*（不修改任何集合）计算两个集合的并集、交集或差集，调用者必须在调用适当的批量操作之前复制一个集合。以下是生成的习语。
 
@@ -138,15 +126,13 @@ intersection.retainAll(s2);
 
 Set<Type> difference = new HashSet<Type>(s1);
 difference.removeAll(s2);
-
 ```
 
 在前述习语中，结果`Set`的实现类型是`HashSet`，正如前面提到的，这是 Java 平台上最好的通用`Set`实现。然而，任何通用的`Set`实现都可以替代。
 
-让我们重新审视`FindDups`程序。假设你想知道参数列表中哪些单词只出现一次，哪些出现多次，但你不想重复打印任何重复的单词。这个效果可以通过生成两个集合来实现  一个包含参数列表中的每个单词，另一个只包含重复的单词。只出现一次的单词是这两个集合的差集，我们知道如何计算。`生成的程序`如下所示。
+让我们重新审视`FindDups`程序。假设你想知道参数列表中哪些单词只出现一次，哪些出现多次，但你不想重复打印任何重复的单词。这个效果可以通过生成两个集合来实现 — 一个包含参数列表中的每个单词，另一个只包含重复的单词。只出现一次的单词是这两个集合的差集，我们知道如何计算。`生成的程序`如下所示。
 
 ```java
-
 import java.util.*;
 
 public class FindDups2 {
@@ -165,7 +151,6 @@ public class FindDups2 {
         System.out.println("Duplicate words: " + dups);
     }
 }
-
 ```
 
 当使用先前使用的相同参数列表运行时（`i came i saw i left`），程序产生以下输出。
@@ -173,10 +158,9 @@ public class FindDups2 {
 ```java
 Unique words:    [left, saw, came]
 Duplicate words: [i]
-
 ```
 
-一个不太常见的集合代数操作是*对称差集*  包含在两个指定集合中的元素，但不在两者中都包含的元素的集合。以下代码以非破坏性方式计算两个集合的对称差集。
+一个不太常见的集合代数操作是*对称差集* — 包含在两个指定集合中的元素，但不在两者中都包含的元素的集合。以下代码以非破坏性方式计算两个集合的对称差集。
 
 ```java
 Set<Type> symmetricDiff = new HashSet<Type>(s1);
@@ -184,7 +168,6 @@ symmetricDiff.addAll(s2);
 Set<Type> tmp = new HashSet<Type>(s1);
 tmp.retainAll(s2);
 symmetricDiff.removeAll(tmp);
-
 ```
 
 ## 集合接口数组操作

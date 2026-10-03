@@ -1,3 +1,4 @@
+
 # 2022 年免费在线学习谷歌云平台(GCP)的 6 个地方
 
 > 原文：<https://medium.com/javarevisited/6-best-places-to-learn-google-cloud-platform-gcp-online-for-free-e2559732e96?source=collection_archive---------3----------------------->
@@ -32,7 +33,7 @@ GCP 或谷歌云平台是一种服务，你可以托管你的应用程序或网�
 
 而且，如果你需要免费资源，你也可以在 Udemy 上加入免费课程[**谷歌云平台概念**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgcp-google-cloud-platform-concepts%2F) 在线学习基本的谷歌云服务。
 
-<https://www.java67.com/2020/07/5-free-courses-to-learn-google-cloud-platform-and-concepts.html>  
+<https://www.java67.com/2020/07/5-free-courses-to-learn-google-cloud-platform-and-concepts.html>
 
 ## 2. [Coursera](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2F)
 
@@ -48,23 +49,23 @@ Coursera 最好的一点是，他们所有的谷歌云课程都是由谷歌云�
 
 Coursera 的另一个优点是，大多数课程都是免费审核的，这意味着你可以免费加入，但你不能访问实验室和评估，因为你需要购买 Coursera Plus，一个会员计划，或者你需要加入专业化，每月花费约 59 美元。如果你想在 Coursera 上获得认证，我推荐你加入 [**Coursera Plus**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus) ，每月只需 59 美元就可以无限制地获得证书和项目。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
-## 3.[cloud.google.com](https://cloud.google.com/gcp/getting-started)
+## 3. [cloud.google.com](https://cloud.google.com/gcp/getting-started)
 
 这是谷歌云的官方网站，它有大量最新的资源来学习谷歌云的概念。你可以浏览这个网站，了解基本的谷歌云服务和平台本身。
 
 它有大大小小的教程、案例研究以及详细的文档，可以了解你想要的特定谷歌云服务或平台的一切。我特别喜欢他们的入门部分和最佳实践部分，其中强调了获得大部分谷歌云平台的最佳实践。
 
-他们既有基于文本的教程，也有视频教程，还有示例项目，您可以从中获得一些实践经验。例如，书架应用程序是一个示例 web 应用程序，它向您展示了如何使用各种 Google 云产品和服务，如应用程序引擎、云 SQL、数据存储、云存储、计算引擎等等
+他们既有基于文本的教程，也有视频教程，还有示例项目，您可以从中获得一些实践经验。例如，书架应用程序是一个示例 web 应用程序，它向您展示了如何使用各种 Google 云产品和服务，如应用程序引擎、云 SQL、数据存储、云存储、计算引擎等等。
 
 ![](img/13dc77767d6e4babc09c6fa38ce4b7c9.png)
 
-你也可以在你选择的任何编程语言上启动这些资源，比如 [Java](https://www.youtube.com/watch?v=g4rPdPxNb5w) 、 [Python](https://www.java67.com/2020/05/top-5-courses-to-learn-python-in-depth.html) 、 [JavaScript](https://www.java67.com/2020/08/top-10-pluralsight-courses-to-learn-JavaScript.html) 。NET、 [Golang](/javarevisited/7-online-courses-to-learn-golang-or-go-programming-languages-in-2020-f599a25cf14a) 、 [Ruby](/javarevisited/10-best-ruby-on-rails-courses-for-beginners-dca4d66e9f7b) 和 [PHP](/javarevisited/10-best-php-courses-for-beginners-and-experienced-developers-db18057a814f)
+你也可以在你选择的任何编程语言上启动这些资源，比如 [Java](https://www.youtube.com/watch?v=g4rPdPxNb5w) 、 [Python](https://www.java67.com/2020/05/top-5-courses-to-learn-python-in-depth.html) 、 [JavaScript](https://www.java67.com/2020/08/top-10-pluralsight-courses-to-learn-JavaScript.html) 、.NET、 [Golang](/javarevisited/7-online-courses-to-learn-golang-or-go-programming-languages-in-2020-f599a25cf14a) 、 [Ruby](/javarevisited/10-best-ruby-on-rails-courses-for-beginners-dca4d66e9f7b) 和 [PHP](/javarevisited/10-best-php-courses-for-beginners-and-experienced-developers-db18057a814f)。
 
 也有准备各种谷歌云认证的资源，如云工程师、数据工程师、安全工程师、DevOps 工程师等等。如果你想深入学习谷歌云，你应该把这个网站加入书签。
 
-## 4.[云学院](https://cloudacademy.com/library/google/)
+## 4. [云学院](https://cloudacademy.com/library/google/)
 
 本文中的最后一个建议是一个很棒的网站，可能是在不同技术主题和编程语言中制作新课程的增长最快的网站。
 
@@ -72,7 +73,7 @@ Coursera 的另一个优点是，大多数课程都是免费审核的，这意�
 
 ![](img/e3581dda07c54b4fa2d8c3eb27df4dfe.png)
 
-## 5.[爱德华卡](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=42536&murl=https%3A%2F%2Fwww.edureka.co%2F&LSNSUBSITE=LSNSUBSITE)
+## 5. [爱德华卡](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=42536&murl=https%3A%2F%2Fwww.edureka.co%2F&LSNSUBSITE=LSNSUBSITE)
 
 Edureka 是一个小型在线电子学习平台，它教授您不同的技术主题，如机器学习、数据科学、web 开发和许多编程语言，如 python 和 PHP 等。
 
@@ -80,7 +81,7 @@ Edureka 是一个小型在线电子学习平台，它教授您不同的技术主
 
 [![](img/15f33db6eb24e234e539f746cbd91d47.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=42536&murl=https%3A%2F%2Fwww.edureka.co%2Fgoogle-cloud-architect-certification-training&LSNSUBSITE=LSNSUBSITE)
 
-## 6.多重视野[免费试用]
+## 6. 多重视野[免费试用]
 
 学习 GCP 的另一个很好的平台是 Pluralsight，其中有数十门课程可以掌握这些技能，并学习如何在云上部署您的项目，在本文中，我将推荐该平台上的一些最佳课程。
 
@@ -92,9 +93,9 @@ Edureka 是一个小型在线电子学习平台，它教授您不同的技术主
 
 顺便说一下，Pluralsight 也与 Google Cloud 有合作关系，但他们的课程并不完全免费，你需要获得 Pluralsight 会员资格才能访问这些课程，这些课程每年花费约 299 美元，但他们也提供 10 天的免费试用<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial>**，你可以使用它免费访问他们的课程。**
 
-**<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial>
 
-以上就是 2022 年免费学习谷歌云平台的**最佳地点。现在每个企业都应该有一个网站，这样他们就可以通过分享文章和技巧或订阅模式与人们联系来赚钱，对于这种网站，他们应该有一个特殊的托管提供商，而不是我们所知道的常规提供商，因此谷歌推出了一项名为谷歌云平台或 GCP 的服务。**
+以上就是 2022 年免费学习谷歌云平台的**最佳地点**。现在每个企业都应该有一个网站，这样他们就可以通过分享文章和技巧或订阅模式与人们联系来赚钱，对于这种网站，他们应该有一个特殊的托管提供商，而不是我们所知道的常规提供商，因此谷歌推出了一项名为谷歌云平台或 GCP 的服务。
 
 您可能喜欢的其他**编程文章和教程**
 
@@ -103,11 +104,16 @@ Edureka 是一个小型在线电子学习平台，它教授您不同的技术主
 *   [5 个免费学习 Python 的网站](https://javarevisited.blogspot.com/2019/09/5-websites-to-learn-python-for-free.html)
 *   [2022 年你能学会的 10 种编程语言](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html)
 *   [每个 Java 开发者都应该知道的 10 个工具](http://www.java67.com/2018/04/10-tools-java-developers-should-learn.html)
-*   【Java 和 Web 开发者应该学习的 10 个框架
+*   [Java 和 Web 开发者应该学习的 10 个框架](https://www.java67.com/2018/08/top-10-frameworks-java-web-developers.html)
 *   [5 个免费在线学习 SQL 的网站](https://javarevisited.blogspot.com/2015/06/5-websites-to-learn-sql-online-for-free.html)
 *   [完整的 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
 *   [2022 年 Java 程序员应该学会的 10 件事](https://javarevisited.blogspot.com/2017/12/10-things-java-programmers-should-learn.html#axzz5atl0BngO)
 *   [21 个免费在线学习编码的网站](https://www.java67.com/2018/06/21-websites-to-learn-how-to-code-for.html)
+
+
+
+# 10 个免费学习 Git 和 Github 的网站
+
 *   [10 个免费学习 Git 和 Github 的网站](https://javarevisited.blogspot.com/2019/05/10-free-websites-to-learn-git-online.html)
 *   [完整的 DevOps 工程师路线图](/hackernoon/the-2018-devops-roadmap-31588d8670cb)
 *   [程序员 50+数据结构面试问题](/hackernoon/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0)
@@ -115,6 +121,6 @@ Edureka 是一个小型在线电子学习平台，它教授您不同的技术主
 
 感谢您阅读本文。如果你喜欢这个在线学习谷歌云平台和服务的最佳网站和平台列表，那么请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
-如果你不介意花几块钱学习像谷歌云平台这样有价值且受欢迎的技能，它将长期为你服务，那么我强烈推荐你去看看 Janakiram 的 Udemy 上的 [**谷歌云平台(GCP)初学者基础**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgoogle-cloud-platform-gcp-fundamentals-for-beginners%2F) 课程，这是最好的初学者谷歌云课程之一。
+如果你不介意花几块钱学习像谷歌云平台这样有价值且受欢迎的技能，它将长期为你服务，那么我强烈推荐你去看看 Janakiram 的 Udemy 上的 [谷歌云平台(GCP)初学者基础](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgoogle-cloud-platform-gcp-fundamentals-for-beginners%2F) 课程，这是最好的初学者谷歌云课程之一。
 
-<https://javarevisited.blogspot.com/2020/08/top-10-coursera-certifications-to-learn-cloud-computing-aws.html> **
+<https://javarevisited.blogspot.com/2020/08/top-10-coursera-certifications-to-learn-cloud-computing-aws.html>

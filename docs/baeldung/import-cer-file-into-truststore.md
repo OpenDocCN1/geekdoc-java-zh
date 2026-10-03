@@ -1,22 +1,24 @@
-# 数字证书:如何导入？cer 文件到信任库文件
+
+
+# 数字证书：如何导入`cer`文件到信任库
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/import-cer-file-into-truststore>
 
-## 1.概观
+## 1. 概述
 
-每当应用程序需要通过网络与客户端通信时， [SSL 协议](/web/20220628090540/https://www.baeldung.com/java-ssl)通常是首选。除了数据加密，SSL 还强制浏览器等应用程序在握手期间交换非对称密钥，以建立安全连接。
+每当应用程序需要通过网络与客户端通信时，[SSL协议](https://www.baeldung.com/java-ssl)通常是首选。除了数据加密，SSL还强制浏览器等应用程序在握手期间交换非对称密钥，以建立安全连接。
 
-通常，应用程序共享 [X.509 证书](/web/20220628090540/https://www.baeldung.com/java-digital-signature)格式的非对称密钥。**因此，在 SSL 握手之前，客户端必须将这样的证书导入到它们的信任库文件中。**
+通常，应用程序共享[X.509证书](https://www.baeldung.com/java-digital-signature)格式的非对称密钥。**因此，在SSL握手之前，客户端必须将这样的证书导入到它们的信任库文件中。**
 
-在本文中，我们将讨论一些可以用来在中导入证书的工具。cer 格式加载到客户端的信任库中。
+在本文中，我们将讨论一些可以用来导入`.cer`格式证书的工具，将其加载到客户端的信任库中。
 
-## 2.`keytool `命令
+## 2. `keytool`命令
 
-JDK 发行版提供了一个 [`keytool `实用程序](/web/20220628090540/https://www.baeldung.com/keytool-intro)，我们可以用它来管理 [Java 密钥库(JKS)](/web/20220628090540/https://www.baeldung.com/java-keystore) 。该命令最重要的目的是生成自签名的 X.509 证书，用于测试客户端和服务器之间的 SSL 通信。
+JDK发行版提供了一个[`keytool`实用程序](https://www.baeldung.com/keytool-intro)，我们可以用它来管理[Java密钥库（JKS）](https://www.baeldung.com/java-keystore)。该命令最重要的目的是生成自签名的X.509证书，用于测试客户端和服务器之间的SSL通信。
 
-**我们还可以将自签名或 CA 签名的证书导入到 JKS 文件中，并将其用作信任库**:
+**我们还可以将自签名或CA签名的证书导入到JKS文件中，并将其用作信任库**：
 
-```java
+```
 keytool -importcert -alias trustme -file baeldung.cer -keystore cacerts
 
 Enter keystore password:
@@ -25,32 +27,32 @@ Trust this certificate? [no]:  yes
 Certificate was added to keystore
 ```
 
-这里，我们使用`keytool `命令导入了一个自签名的`baeldung.cer `证书。我们可以将这个证书导入到任何 Java 密钥库中。例如，**这里显示的是将证书添加到 JDK** 的`cacerts `密钥库中。
+这里，我们使用`keytool`命令导入了一个自签名的`baeldung.cer`证书。我们可以将这个证书导入到任何Java密钥库中。例如，**这里显示的是将证书添加到JDK**的`cacerts`密钥库中。
 
-如果我们现在列出密钥库中的证书，我们将看到一个别名`trustme`:
+如果我们现在列出密钥库中的证书，我们将看到一个别名`trustme`：
 
-```java
+```
 keytool -list -keystore cacerts
 
 trustme, Oct 31, 2020, trustedCertEntry,
 Certificate fingerprint (SHA1): 04:40:6C:B0:06:65:EE:80:9A:90:A5:E9:DA:19:05:4A:AA:F2:CF:A4
 ```
 
-## 3.`openssl` 命令
+## 3. `openssl`命令
 
-到目前为止，我们只讨论了将证书导入到 JKS 文件中。这样的密钥库只能用于 [Java 应用程序](/web/20220628090540/https://www.baeldung.com/java-ssl)。**如果我们必须用其他语言实现一个 SSL 库或者在多种语言平台上使用同一个证书，我们更有可能使用 PKCS12 密钥库**。
+到目前为止，我们只讨论了将证书导入到JKS文件中。这样的密钥库只能用于[Java应用程序](https://www.baeldung.com/java-ssl)。**如果我们必须用其他语言实现一个SSL库或者在多种语言平台上使用同一个证书，我们更有可能使用PKCS12密钥库。**
 
-要将证书导入到 PKCS12 密钥库中，我们也可以使用`[openssl](https://web.archive.org/web/20220628090540/https://www.openssl.org/)` :
+要将证书导入到PKCS12密钥库中，我们也可以使用[`openssl`](https://www.openssl.org/)：
 
-```java
+```
 openssl pkcs12 -export -in baeldung.cer -inkey baeldung.key -out baeldung.keystore -name trustme
 ```
 
-这个命令将名为`baeldung.cer `的证书导入到一个密钥库`baeldung.keystore `中，别名为`trustme. `
+这个命令将名为`baeldung.cer`的证书导入到一个密钥库`baeldung.keystore`中，别名为`trustme`。
 
-我们可以在密钥库中看到导入的证书:
+我们可以在密钥库中看到导入的证书：
 
-```java
+```
 openssl pkcs12 -info -in baeldung.keystore
 Enter Import Password:
 MAC: sha1, Iteration 2048
@@ -104,8 +106,9 @@ Bag Attributes
 Key Attributes: <No Attributes>
 ```
 
-因此，我们已经成功地将我们的证书导入到 PKCS12 密钥库中。因此，**这个密钥库现在可以在 SSL 客户端应用程序(如 HTTP 客户端库**)中用作信任库文件。同样，这个文件也可以用作 SSL 服务器应用程序(如 [Tomcat](/web/20220628090540/https://www.baeldung.com/tomcat) )中的密钥库。
+因此，我们已经成功地将我们的证书导入到PKCS12密钥库中。**这个密钥库现在可以在SSL客户端应用程序（如HTTP客户端库）中用作信任库文件。** 同样，这个文件也可以用作SSL服务器应用程序（如[Tomcat](https://www.baeldung.com/tomcat)）中的密钥库。
 
-## 4.结论
+## 4. 结论
 
-在本文中，我们讨论了两种流行的管理数字证书的 SSL 工具——OpenSSL 和 Java Keytool。**我们进一步使用了`keytool `和`openssl `命令来导入一个证书。cer 格式分别转换成 JKS 和 PKCS12 文件**。
+在本文中，我们讨论了两种流行的管理数字证书的SSL工具——OpenSSL和Java Keytool。**我们进一步使用了`keytool`和`openssl`命令来导入`.cer`格式证书，分别转换成JKS和PKCS12文件。**
+

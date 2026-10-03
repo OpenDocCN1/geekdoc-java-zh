@@ -1,3 +1,4 @@
+
 # 数组
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html`](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)
@@ -13,7 +14,6 @@
 下面的程序，`ArrayDemo`，创建了一个整数数组，向数组中放入一些值，并将每个值打印到标准输出。
 
 ```java
-
 class ArrayDemo {
     public static void main(String[] args) {
         // declares an array of integers
@@ -57,8 +57,7 @@ class ArrayDemo {
         System.out.println("Element at index 9: "
                            + anArray[9]);
     }
-} 
-
+}
 ```
 
 该程序的输出是：
@@ -74,10 +73,9 @@ Element at index 6: 700
 Element at index 7: 800
 Element at index 8: 900
 Element at index 9: 1000
-
 ```
 
-在实际的编程情况中，你可能会使用支持的*循环结构*之一来遍历数组的每个元素，而不是像前面的示例中那样逐行编写。然而，该示例清楚地说明了数组的语法。你将在 Control Flow 部分学习各种循环结构（`for`、`while`和`do-while）。
+在实际的编程情况中，你可能会使用支持的*循环结构*之一来遍历数组的每个元素，而不是像前面的示例中那样逐行编写。然而，该示例清楚地说明了数组的语法。你将在 Control Flow 部分学习各种循环结构（`for`、`while`和`do-while`）。
 
 ## 声明一个变量来引用一个数组
 
@@ -86,7 +84,6 @@ Element at index 9: 1000
 ```java
 // declares an array of integers
 int[] anArray;
-
 ```
 
 与其他类型的变量声明类似，数组声明有两个组成部分：数组的类型和数组的名称。数组的类型写作`*type*[]`，其中`*type*`是包含元素的数据类型；方括号是特殊符号，表示该变量保存一个数组。数组的大小不是其类型的一部分（这就是为什么方括号是空的）。数组的名称可以是任何你想要的，只要遵循之前在 naming 部分讨论的规则和约定。与其他类型的变量一样，声明并不会实际创建一个数组；它只是告诉编译器这个变量将保存指定类型的数组。
@@ -102,7 +99,6 @@ double[] anArrayOfDoubles;
 boolean[] anArrayOfBooleans;
 char[] anArrayOfChars;
 String[] anArrayOfStrings;
-
 ```
 
 你也可以将方括号放在数组名称后面：
@@ -110,7 +106,6 @@ String[] anArrayOfStrings;
 ```java
 // this form is discouraged
 float anArrayOfFloats[];
-
 ```
 
 然而，约定不鼓励这种形式；方括号标识数组类型，应该与类型标识一起出现。
@@ -122,14 +117,12 @@ float anArrayOfFloats[];
 ```java
 // create an array of integers
 anArray = new int[10];
-
 ```
 
 如果缺少这个语句，那么编译器会打印如下错误，并且编译失败：
 
 ```java
 ArrayDemo.java:4: Variable anArray may not have been initialized.
-
 ```
 
 接下来的几行为数组的每个元素赋值：
@@ -138,7 +131,6 @@ ArrayDemo.java:4: Variable anArray may not have been initialized.
 anArray[0] = 100; // initialize first element
 anArray[1] = 200; // initialize second element
 anArray[2] = 300; // and so forth
-
 ```
 
 每个数组元素都通过其数字索引访问：
@@ -147,7 +139,6 @@ anArray[2] = 300; // and so forth
 System.out.println("Element 1 at index 0: " + anArray[0]);
 System.out.println("Element 2 at index 1: " + anArray[1]);
 System.out.println("Element 3 at index 2: " + anArray[2]);
-
 ```
 
 或者，您可以使用快捷语法来创建和初始化一个数组：
@@ -158,7 +149,6 @@ int[] anArray = {
     400, 500, 600, 
     700, 800, 900, 1000
 };
-
 ```
 
 这里数组的长度由大括号中提供的数值数量和逗号分隔确定。
@@ -180,7 +170,6 @@ class MultiDimArrayDemo {
         System.out.println(names[0][2] + names[1][1]);
     }
 }
-
 ```
 
 此程序的输出为：
@@ -188,14 +177,12 @@ class MultiDimArrayDemo {
 ```java
 Mr. Smith
 Ms. Jones
-
 ```
 
 最后，您可以使用内置的`length`属性来确定任何数组的大小。以下代码将数组的大小打印到标准输出：
 
 ```java
- System.out.println(anArray.length);
-
+System.out.println(anArray.length);
 ```
 
 ## 复制数组
@@ -205,7 +192,6 @@ Ms. Jones
 ```java
 public static void arraycopy(Object src, int srcPos,
                              Object dest, int destPos, int length)
-
 ```
 
 两个`Object`参数指定要从中复制的数组*源*和要复制到的数组*目标*。三个`int`参数指定源数组中的起始位置，目标数组中的起始位置，以及要复制的数组元素数量。
@@ -213,7 +199,6 @@ public static void arraycopy(Object src, int srcPos,
 以下程序，`ArrayCopyDemo`，声明了一个`String`元素数组。它使用`System.arraycopy`方法将数组组件的子序列复制到第二个数组中：
 
 ```java
-
 class ArrayCopyDemo {
     public static void main(String[] args) {
         String[] copyFrom = {
@@ -234,7 +219,6 @@ class ArrayCopyDemo {
 
 ```java
 Cappuccino Corretto Cortado Doppio Espresso Frappucino Freddo 
-
 ```
 
 ## 数组操作
@@ -244,7 +228,6 @@ Cappuccino Corretto Cortado Doppio Espresso Frappucino Freddo
 为了方便起见，Java SE 在[`java.util.Arrays`](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)类中提供了几种执行数组操作（如复制、排序和搜索数组等常见任务）的方法。例如，前面的示例可以修改为使用`java.util.Arrays`类的`copyOfRange`方法，如您可以在`ArrayCopyOfDemo`示例中看到的那样。不同之处在于，使用`copyOfRange`方法不需要在调用方法之前创建目标数组，因为目标数组是由该方法返回的：
 
 ```java
-
 class ArrayCopyOfDemo {
     public static void main(String[] args) {
         String[] copyFrom = {
@@ -265,18 +248,13 @@ class ArrayCopyOfDemo {
 `java.util.Arrays` 类中的一些其他有用操作包括：
 
 +   搜索数组以找到特定值的索引位置（`binarySearch` 方法）。
-
 +   比较两个数组以确定它们是否相等（`equals` 方法）。
-
 +   填充数组以在每个索引处放置特定值（`fill` 方法）。
-
 +   将数组按升序排序。可以顺序执行，使用`sort` 方法，也可以并行执行，使用 Java SE 8 中引入的`parallelSort` 方法。在多处理器系统上，并行排序大型数组比顺序数组排序更快。
-
 +   创建使用数组作为其源的流（`stream` 方法）。例如，以下语句以与前面示例相同的方式打印`copyTo`数组的内容：
 
     ```java
     java.util.Arrays.stream(copyTo).map(coffee -> coffee + " ").forEach(System.out::print);  
-
     ```
 
     有关流的更多信息，请参见聚合操作。
@@ -285,12 +263,10 @@ class ArrayCopyOfDemo {
 
     ```java
     System.out.println(java.util.Arrays.toString(copyTo)); 
-
     ```
 
     此语句打印如下内容：
 
     ```java
     [Cappuccino, Corretto, Cortado, Doppio, Espresso, Frappucino, Freddo] 
-
     ```

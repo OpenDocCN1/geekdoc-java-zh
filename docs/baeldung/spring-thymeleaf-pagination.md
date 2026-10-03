@@ -1,18 +1,19 @@
+
 # 用百里香叶为列表分页
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-thymeleaf-pagination>
 
-## 1。概述
+## 1. 概述
 
 在这个快速教程中，我们将构建一个简单的应用程序来使用 Spring 和 Thymeleaf 显示带有分页的条目列表。
 
 关于如何将百里香与春天结合的介绍，请看我们的文章[这里](/web/20220728105348/https://www.baeldung.com/thymeleaf-in-spring-mvc)。
 
-## 2。Maven 依赖关系
+## 2. Maven 依赖关系
 
-除了常见的 Spring 依赖项，我们还将添加百里香叶和 Spring 数据共享的依赖项:
+除了常见的 Spring 依赖项，我们还将添加百里香叶和 Spring 数据共享的依赖项：
 
-```java
+```xml
 <dependency>
     <groupId>org.thymeleaf</groupId>
     <artifactId>thymeleaf-spring5</artifactId>
@@ -27,11 +28,11 @@
 
 我们可以在 Maven 中央存储库中找到最新的[百里香叶-春天 5](https://web.archive.org/web/20220728105348/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22org.thymeleaf%22%20AND%20a%3A%22thymeleaf-spring5%22) 和[春天-数据-公共资源](https://web.archive.org/web/20220728105348/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22org.springframework.data%22%20AND%20a%3A%22spring-data-commons%22)依赖项。
 
-## 3.模型
+## 3. 模型
 
 我们的示例应用程序将演示图书列表的分页。
 
-首先，让我们定义一个具有两个字段和一个全参数构造函数的`Book`类:
+首先，让我们定义一个具有两个字段和一个全参数构造函数的`Book`类：
 
 ```java
 public class Book {
@@ -42,9 +43,9 @@ public class Book {
 }
 ```
 
-## 4.服务
+## 4. 服务
 
-然后，我们将创建一个服务来使用 Spring Data Commons 库为所请求的页面生成分页的图书列表:
+然后，我们将创建一个服务来使用 Spring Data Commons 库为所请求的页面生成分页的图书列表：
 
 ```java
 @Service
@@ -73,9 +74,9 @@ public class BookService {
 }
 ```
 
-在上面的服务中，我们创建了一个方法来根据请求的页面返回选择的 `Page` ，它由` Pageable`接口表示。`PageImpl`类帮助过滤出图书的分页列表。
+在上面的服务中，我们创建了一个方法来根据请求的页面返回选择的`Page`，它由`Pageable`接口表示。`PageImpl`类帮助过滤出图书的分页列表。
 
-## 5.弹簧控制器
+## 5. 弹簧控制器
 
 我们需要一个 Spring 控制器来在给定页面大小和当前页码的情况下检索所选页面的图书列表。
 
@@ -83,7 +84,7 @@ public class BookService {
 
 如果需要任何页面大小或特定页面，我们可以添加参数`page`和`size`。
 
-例如，`/listBooks?page=2&size;=6`将检索第二页，每页有六个项目:
+例如，`/listBooks?page=2&size;=6`将检索第二页，每页有六个项目：
 
 ```java
 @Controller
@@ -119,13 +120,13 @@ public class BookController {
 
 **为了准备视图的分页，我们在 Spring 控制器**中添加了模型属性，包括选中的`Page`和页码列表。
 
-## 6.百里香叶模板
+## 6. 百里香叶模板
 
-现在是时候创建一个百里香模板`“listBooks.html”`，它**根据来自我们的 Spring 控制器**的模型属性显示带有分页的图书列表。
+现在是时候创建一个百里香模板`listBooks.html`，它**根据来自我们的 Spring 控制器**的模型属性显示带有分页的图书列表。
 
 首先，我们迭代图书列表，并将它们显示在一个表中。然后我们**在总页数大于零**时显示分页。
 
-每次我们单击并选择一个页面，就会显示相应的图书列表，并突出显示当前页面链接:
+每次我们单击并选择一个页面，就会显示相应的图书列表，并突出显示当前页面链接：
 
 ```java
 <table border="1">
@@ -152,7 +153,7 @@ public class BookController {
 </div>
 ```
 
-## 7.结论
+## 7. 结论
 
 在本文中，我们演示了如何使用 Spring 框架和百里香叶对列表进行分页。
 

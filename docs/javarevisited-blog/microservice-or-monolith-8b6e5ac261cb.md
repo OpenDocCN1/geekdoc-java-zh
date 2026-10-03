@@ -1,3 +1,4 @@
+
 # 微服务还是整体？
 
 > 原文：<https://medium.com/javarevisited/microservice-or-monolith-8b6e5ac261cb?source=collection_archive---------1----------------------->

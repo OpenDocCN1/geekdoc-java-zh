@@ -1,3 +1,4 @@
+
 # 5 个有用的 IntelliJ IDEA 插件来提高你的编码效率
 
 > 原文：<https://medium.com/javarevisited/5-useful-intellij-idea-plugins-to-improve-your-coding-efficiency-36bc75440477?source=collection_archive---------0----------------------->

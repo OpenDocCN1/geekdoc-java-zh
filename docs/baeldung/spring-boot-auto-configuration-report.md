@@ -1,16 +1,17 @@
-# 在 Spring Boot 显示自动配置报告
+
+# 在 Spring Boot 中显示自动配置报告
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-boot-auto-configuration-report>
 
-## 1。概述
+## 1. 概述
 
 Spring Boot 中的自动配置机制试图根据应用程序的依赖关系自动配置应用程序。
 
-在这个快速教程中，**我们将看到 Spring Boot 如何在启动时记录它的自动配置报告。**
+在这个快速教程中，我们将看到 Spring Boot 如何在启动时记录它的自动配置报告。
 
-## 2。示例应用程序
+## 2. 示例应用程序
 
-让我们编写一个简单的 Spring Boot 应用程序，我们将在我们的例子中使用:
+让我们编写一个简单的 Spring Boot 应用程序，我们将在我们的例子中使用：
 
 ```java
 @SpringBootApplication
@@ -21,37 +22,37 @@ public class App {
 }
 ```
 
-## 3。应用属性方法
+## 3. 应用属性方法
 
 在启动这个应用程序时，我们没有得到很多关于 Spring Boot 如何或为什么决定组成我们的应用程序的配置的信息。
 
-但是，**我们可以让 Spring Boot 简单地通过在我们的`application.properties`文件中启用调试模式**来创建一个报告:
+但是，我们可以让 Spring Boot 简单地通过在我们的 `application.properties` 文件中启用调试模式来创建一个报告：
 
-```java
-debug=true 
+```properties
+debug=true
 ```
 
-或者我们的`application.yml`文件:
+或者使用我们的 `application.yml` 文件：
 
-```java
+```yaml
 debug: true
 ```
 
-## 4。命令行方式
+## 4. 命令行方式
 
-或者，如果我们不想使用属性文件方法，我们可以通过**用`–debug`开关**启动应用程序来触发自动配置报告:
+或者，如果我们不想使用属性文件方法，我们可以通过用 `--debug` 开关启动应用程序来触发自动配置报告：
 
-```java
-$ java -jar myproject-0.0.1-SNAPSHOT.jar --debug 
+```bash
+$ java -jar myproject-0.0.1-SNAPSHOT.jar --debug
 ```
 
-## 5。报告输出
+## 5. 报告输出
 
 自动配置报告包含有关 Spring Boot 在类路径上找到并自动配置的类的信息。它还显示了 Spring Boot 已知但在类路径中找不到的类的信息。
 
-而且，因为我们已经设置了`debug=true`，所以我们可以在输出中看到它:
+而且，因为我们已经设置了 `debug=true`，所以我们可以在输出中看到它：
 
-```java
+```text
 ============================
 CONDITIONS EVALUATION REPORT
 ============================
@@ -110,10 +111,10 @@ Negative matches:
    AtomikosJtaConfiguration:
       Did not match:
          - @ConditionalOnClass did not find required class 'com.atomikos.icatch.jta.UserTransactionManager' 
-           (OnClassCondition) 
+           (OnClassCondition)
 ```
 
-## 6。结论
+## 6. 结论
 
 在这个快速教程中，我们看到了如何显示和阅读 Spring Boot 自动配置报告。
 

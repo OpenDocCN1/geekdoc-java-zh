@@ -1,18 +1,15 @@
+
 # 包概述
 
 > 原文：[`docs.oracle.com/javase/tutorial/jaxp/intro/package.html`](https://docs.oracle.com/javase/tutorial/jaxp/intro/package.html)
 
 SAX 和 DOM API 分别由 XML-DEV 组和 W3C 定义。定义这些 API 的库如下：
 
-+   `javax.xml.parsers`：JAXP API 提供了不同供应商的 SAX 和 DOM 解析器的通用接口。
-
-+   `org.w3c.dom`：定义了`Document`类（DOM）以及 DOM 的所有组件的类。
-
-+   `org.xml.sax`：定义了基本的 SAX API。
-
-+   `javax.xml.transform`：定义了 XSLT API，让您可以将 XML 转换为其他形式。
-
-+   `javax.xml.stream`：提供了特定于 StAX 的转换 API。
++ `javax.xml.parsers`：JAXP API 提供了不同供应商的 SAX 和 DOM 解析器的通用接口。
++ `org.w3c.dom`：定义了`Document`类（DOM）以及 DOM 的所有组件的类。
++ `org.xml.sax`：定义了基本的 SAX API。
++ `javax.xml.transform`：定义了 XSLT API，让您可以将 XML 转换为其他形式。
++ `javax.xml.stream`：提供了特定于 StAX 的转换 API。
 
 简单 XML API（SAX）是一种事件驱动、串行访问机制，逐个元素进行处理。该级别的 API 读取和写入 XML 到数据存储库或网络。对于服务器端和高性能应用程序，您需要充分了解这个级别。但对于许多应用程序，了解最基本的内容就足够了。
 

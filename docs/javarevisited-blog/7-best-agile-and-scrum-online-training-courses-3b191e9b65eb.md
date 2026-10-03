@@ -1,3 +1,4 @@
+
 # 2023 年学习敏捷和 Scrum 的 7 门最佳课程
 
 > 原文：<https://medium.com/javarevisited/7-best-agile-and-scrum-online-training-courses-3b191e9b65eb?source=collection_archive---------0----------------------->
@@ -25,6 +26,7 @@
 这是 Udemy 最畅销的敏捷课程之一。这个速成课程由 AgileKB 的创始人 Mauricio Rubio 创建，涵盖了与敏捷开发、敏捷项目交付和敏捷项目管理相关的所有基本概念。
 
 要求
+
 不需要敏捷或其他任何知识。
 
 课程为初级课程，总视频内容近三个小时。讲师遵循一个流畅的流程，解释敏捷中需要的每一个重要工具，以及如何使用各种有用的提示和技巧。
@@ -38,6 +40,7 @@
 Coursera 最好的敏捷课程基本上是分为四门课程的专业化。这个专业的四门课程是——敏捷符合设计思维、假设驱动的开发、敏捷分析和管理敏捷团队。
 
 要求
+
 不需要敏捷或其他任何知识。
 
 这些都是弗吉尼亚大学精心设计的课程。所有主要的敏捷概念都包含在这个专业中。这是一门初级课程，也提供经济资助。
@@ -48,7 +51,7 @@ Coursera 最好的敏捷课程基本上是分为四门课程的专业化。这�
 
 顺便说一句，如果你计划参加多个 Coursera 课程或专业，那么考虑参加 [**Coursera Plus**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus) 订阅，它为你提供无限制的访问他们最受欢迎的课程、专业、专业证书和指导项目的机会。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
 ## 3.[敏捷基础:包括 Scrum 和看板——2023 年](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fagile-fundamentals-scrum-kanban-scrumban%2F)
 
@@ -67,6 +70,7 @@ Udemy 的另一个畅销书，这个课程是学习敏捷基础的另一个很�
 这个课程是 Pluralsight 最好的敏捷课程。在本课程中，讲师以简洁的方式解释了敏捷方法的基础，涵盖了所有内容，如软件开发方法的历史、敏捷的需求、敏捷的基础以及与之相关的术语，如 scrum。
 
 需求
+
 对敏捷的基本理解。本课程不适合初学者。是中级课程，总视频内容近三个小时。
 
 **这是加入本课程的链接** — [敏捷基础](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fagile-fundamentals)
@@ -75,13 +79,14 @@ Udemy 的另一个畅销书，这个课程是学习敏捷基础的另一个很�
 
 你还需要一个 Pluralsight 会员才能参加这个课程，费用大约是每月 29 美元或每年 299 美元(14%的折扣)。我向所有程序员强烈推荐这个订阅，因为它提供了超过 7000 个在线课程的即时访问，以学习任何技术技能。或者，你也可以使用他们的 [**10 天免费通行证**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 免费观看这门课程。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>
 
 ## 5. [Scrum 认证准备+ Scrum 大师+敏捷 Scrum 培训](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fscrum-certification%2F)
 
 这个课程是为那些想学习敏捷和 scrum 的人准备的，尤其是那些准备 scrum 认证的人。在本课程中，讲师重点介绍了 scrum，他还解释了如何破解认证。本课程还提供了常见问题和提示。
 
 需求
+
 不需要敏捷或 scrum 的先验知识。
 
 这是一个相对较小的课程，总视频内容为两个小时。这是一门初级课程。
@@ -131,6 +136,11 @@ PMI-ACP 是项目管理领域中发展最快的认证之一，组织正在采用
 *   [学习 Jenkins 自动化和开发运维的五大课程](https://javarevisited.blogspot.com/2018/09/top-5-jenkins-courses-for-java-and-DevOps-Programmers.html)
 *   [2023 年学习 Kubernetes 的 7 门免费在线课程](/javarevisited/7-free-online-courses-to-learn-kubernetes-in-2020-3b8a68ec7abc)
 *   [2023 年 DevOps 开发者路线图](/hackernoon/the-2018-devops-roadmap-31588d8670cb)
+
+
+
+## 推荐课程列表
+
 *   [学习亚马逊网络服务我最喜欢的课程](https://javarevisited.blogspot.com/2020/05/top-5-amazon-web-services-aws-courses-for-beginners-and-experienced-programmers.html)
 *   [学习 Docker、Kubernetes 和 Jenkins 的 10 门免费课程](/javarevisited/top-10-free-courses-to-learn-jenkins-docker-and-kubernetes-for-devops-in-2020-best-of-lot-62a0541ffeb3)
 *   [我最喜欢的为有经验的人学习 DevOps 的课程](https://javarevisited.blogspot.com/2018/09/10-devops-courses-for-experienced-java-developers.html)
@@ -145,6 +155,6 @@ PMI-ACP 是项目管理领域中发展最快的认证之一，组织正在采用
 
 感谢阅读到目前为止。如果你喜欢这些学习敏捷和 Scrum 方法论的最佳在线课程，那么请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
-**【p . s .】**——如果你热衷于学习敏捷和 Scrum 方法论，但正在寻找免费的在线课程，那么你也可以看看这个 [**敏捷 PM 101——从 Udemy 了解敏捷与瀑布的真相**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-the-truth-about-agile-versus-waterfall%2F) 。在这个 2 小时的免费课程中，你将学习敏捷和 Scrum 基础知识。它是完全免费的，你只需要一个 Udemy 帐户就可以注册这个课程。
+**【p . s .】**——如果你热衷于学习敏捷和 Scrum 方法论，但正在寻找免费的在线课程，那么你也可以看看这个 [敏捷 PM 101——从 Udemy 了解敏捷与瀑布的真相](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-the-truth-about-agile-versus-waterfall%2F) 。在这个 2 小时的免费课程中，你将学习敏捷和 Scrum 基础知识。它是完全免费的，你只需要一个 Udemy 帐户就可以注册这个课程。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-the-truth-about-agile-versus-waterfall%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-the-truth-about-agile-versus-waterfall%2F>

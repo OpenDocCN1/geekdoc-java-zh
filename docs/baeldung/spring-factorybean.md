@@ -1,18 +1,19 @@
+
 # 如何使用 Spring FactoryBean？
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-factorybean>
 
-## 1。概述
+## 1. 概述
 
-春豆容器中有两种豆:普通豆和工厂豆。Spring 直接使用前者，而后者可以自己产生对象，由框架管理。
+Spring 容器中有两种 Bean：普通 Bean 和工厂 Bean。Spring 直接使用前者，而后者可以自己产生对象，由框架管理。
 
-简单地说，我们可以通过实现`org.springframework.beans.factory.FactoryBean`接口来构建工厂 bean。
+简单地说，我们可以通过实现`org.springframework.beans.factory.FactoryBean`接口来构建工厂 Bean。
 
-## 2。工厂豆的基本知识
+## 2. 工厂 Bean 的基本知识
 
-### 2.1。实施一个`FactoryBean`
+### 2.1. 实现一个`FactoryBean`
 
-我们先来看一下`FactoryBean`界面:
+我们先来看一下`FactoryBean`接口：
 
 ```java
 public interface FactoryBean {
@@ -22,13 +23,13 @@ public interface FactoryBean {
 }
 ```
 
-让我们讨论三种方法:
+让我们讨论三种方法：
 
-*   `getObject()`–返回工厂生产的对象，这是 Spring 容器将要使用的对象
-*   `getObjectType()`–返回这个`FactoryBean`产生的对象的类型
-*   `isSingleton()`–表示此`FactoryBean`产生的对象是否为单例对象
+- `getObject()` – 返回工厂生产的对象，这是 Spring 容器将要使用的对象
+- `getObjectType()` – 返回这个`FactoryBean`产生的对象的类型
+- `isSingleton()` – 表示此`FactoryBean`产生的对象是否为单例对象
 
-现在，让我们实现一个例子`FactoryBean`。我们将实现一个产生`Tool`类型对象的`ToolFactory` :
+现在，让我们实现一个例子`FactoryBean`。我们将实现一个产生`Tool`类型对象的`ToolFactory`：
 
 ```java
 public class Tool {
@@ -39,7 +40,7 @@ public class Tool {
 }
 ```
 
-`ToolFactory`本身:
+`ToolFactory`本身：
 
 ```java
 public class ToolFactory implements FactoryBean<Tool> {
@@ -68,11 +69,11 @@ public class ToolFactory implements FactoryBean<Tool> {
 
 我们可以看到，`ToolFactory`是一个`FactoryBean`，它可以产生`Tool`对象。
 
-### 2.2。使用`FactoryBean`和基于 XML 的配置
+### 2.2. 使用`FactoryBean`和基于 XML 的配置
 
 现在让我们来看看如何使用我们的`ToolFactory`。
 
-我们将开始构建一个基于 XML 配置的工具—`factorybean-spring-ctx.xml`:
+我们将开始构建一个基于 XML 配置的工具 — `factorybean-spring-ctx.xml`：
 
 ```java
 <beans ...>
@@ -84,7 +85,7 @@ public class ToolFactory implements FactoryBean<Tool> {
 </beans>
 ```
 
-接下来，我们可以测试`Tool`对象是否被正确注入:
+接下来，我们可以测试`Tool`对象是否被正确注入：
 
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -104,11 +105,11 @@ public class FactoryBeanXmlConfigTest {
 
 测试结果还显示，Spring 容器使用由`FactoryBean`产生的对象而不是它自己来进行依赖注入。
 
-尽管 Spring 容器使用`FactoryBean`的`getObject()`方法的返回值作为 bean，但是您也可以使用`FactoryBean`本身。
+尽管 Spring 容器使用`FactoryBean`的`getObject()`方法的返回值作为 Bean，但是您也可以使用`FactoryBean`本身。
 
-**要访问`FactoryBean`，只需在 bean 名称前添加一个“&”。**
+**要访问`FactoryBean`，只需在 Bean 名称前添加一个“&”。**
 
-让我们尝试获取工厂 bean 及其`factoryId`属性:
+让我们尝试获取工厂 Bean 及其`factoryId`属性：
 
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -125,11 +126,11 @@ public class FactoryBeanXmlConfigTest {
 }
 ```
 
-### 2.3。使用`FactoryBean`和基于 Java 的配置
+### 2.3. 使用`FactoryBean`和基于 Java 的配置
 
 将`FactoryBean`用于基于 Java 的配置与基于 XML 的配置略有不同，您必须显式调用`FactoryBean`的`getObject()`方法。
 
-让我们将前一小节中的示例转换成一个基于 Java 的配置示例:
+让我们将前一小节中的示例转换成一个基于 Java 的配置示例：
 
 ```java
 @Configuration
@@ -150,7 +151,7 @@ public class FactoryBeanAppConfig {
 }
 ```
 
-然后，我们测试`Tool`对象是否被正确注入:
+然后，我们测试`Tool`对象是否被正确注入：
 
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -173,19 +174,19 @@ public class FactoryBeanJavaConfigTest {
 
 测试结果显示了与前面基于 XML 的配置测试相似的效果。
 
-## 3。初始化的方法
+## 3. 初始化的方法
 
 有时你需要在设置了`FactoryBean`之后，调用`getObject()`方法之前执行一些操作，比如属性检查。
 
 您可以通过实现`InitializingBean`接口或使用`@PostConstruct`注释来实现这一点。
 
-关于使用这两种解决方案的更多细节已经在另一篇文章中介绍过:[Spring](/web/20220122144103/https://www.baeldung.com/running-setup-logic-on-startup-in-spring)启动时运行逻辑指南。
+关于使用这两种解决方案的更多细节已经在另一篇文章中介绍过：[Spring](/web/20220122144103/https://www.baeldung.com/running-setup-logic-on-startup-in-spring)启动时运行逻辑指南。
 
-## 4。`AbstractFactoryBean`
+## 4. `AbstractFactoryBean`
 
-Spring 提供了`AbstractFactoryBean`作为`FactoryBean`实现的简单模板超类。有了这个基类，我们现在可以更方便地实现一个工厂 bean 来创建一个单例或原型对象。
+Spring 提供了`AbstractFactoryBean`作为`FactoryBean`实现的简单模板超类。有了这个基类，我们现在可以更方便地实现一个工厂 Bean 来创建一个单例或原型对象。
 
-让我们实现一个`SingleToolFactory`和一个`NonSingleToolFactory`来展示如何为单例类型和原型类型使用`AbstractFactoryBean`:
+让我们实现一个`SingleToolFactory`和一个`NonSingleToolFactory`来展示如何为单例类型和原型类型使用`AbstractFactoryBean`：
 
 ```java
 public class SingleToolFactory extends AbstractFactoryBean<Tool> {
@@ -207,7 +208,7 @@ public class SingleToolFactory extends AbstractFactoryBean<Tool> {
 }
 ```
 
-现在是非单一实现:
+现在是非单一实现：
 
 ```java
 public class NonSingleToolFactory extends AbstractFactoryBean<Tool> {
@@ -233,7 +234,7 @@ public class NonSingleToolFactory extends AbstractFactoryBean<Tool> {
 }
 ```
 
-此外，这些工厂 beans 的 XML 配置:
+此外，这些工厂 Bean 的 XML 配置：
 
 ```java
 <beans ...>
@@ -250,7 +251,7 @@ public class NonSingleToolFactory extends AbstractFactoryBean<Tool> {
 </beans>
 ```
 
-现在我们可以测试`Worker`对象的属性是否如我们预期的那样被注入:
+现在我们可以测试`Worker`对象的属性是否如我们预期的那样被注入：
 
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -288,7 +289,7 @@ public class AbstractFactoryBeanTest {
 
 注意，不需要在`SingleToolFactory`中设置 singleton 属性，因为在`AbstractFactory`中，singleton 属性的默认值是`true`。
 
-## 5。结论
+## 5. 结论
 
 使用`FactoryBean`可以很好地封装复杂的构造逻辑，或者使在 Spring 中配置高度可配置的对象变得更容易。
 

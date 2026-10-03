@@ -1,3 +1,4 @@
+
 # 导出方法
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/dnd/export.html`](https://docs.oracle.com/javase/tutorial/uiswing/dnd/export.html)
@@ -28,7 +29,6 @@ void exportDone(JComponent c, Transferable t, int action) {
         c.removeSelection();
     }
 }
-
 ```
 
 接下来我们将看一下用于数据导入的`TransferHandler`方法。

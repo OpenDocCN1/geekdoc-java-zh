@@ -1,8 +1,9 @@
+
 # 用 Java 从 URL 下载文件
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-download-file>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将看到几种下载文件的方法。
 
@@ -10,9 +11,9 @@
 
 最后，我们将讨论如果我们的连接在整个文件被读取之前失败，我们如何恢复下载。
 
-## 2。使用 Java IO
+## 2. 使用 Java IO
 
-我们可以用来下载文件的最基本的 API 是 [Java IO](https://web.archive.org/web/20220717111859/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/package-summary.html) 。我们可以使用`URL `类打开一个到我们想要下载的文件的连接。
+我们可以用来下载文件的最基本的 API 是 [Java IO](https://web.archive.org/web/20220717111859/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/package-summary.html) 。我们可以使用`URL`类打开一个到我们想要下载的文件的连接。
 
 为了有效地读取文件，我们将使用`openStream()`方法获得一个`InputStream`:
 
@@ -26,7 +27,7 @@ BufferedInputStream in = new BufferedInputStream(new URL(FILE_URL).openStream())
 
 从性能角度来看，这种上下文切换代价很高。当我们读取大量字节时，应用程序的性能会很差，这是由于涉及到大量的上下文切换。
 
-为了将从 URL 读取的字节写入我们的本地文件，我们将使用来自`FileOutputStream `类的`write()`方法:
+为了将从 URL 读取的字节写入我们的本地文件，我们将使用来自`FileOutputStream`类的`write()`方法:
 
 ```java
 try (BufferedInputStream in = new BufferedInputStream(new URL(FILE_URL).openStream());
@@ -58,11 +59,11 @@ Files.copy(in, Paths.get(FILE_NAME), StandardCopyOption.REPLACE_EXISTING);
 
 我们将在下一节详细介绍。
 
-## 3。使用 NIO
+## 3. 使用 NIO
 
 Java NIO 包提供了在两个`Channels`之间传输字节的可能性，而无需将它们缓冲到应用程序内存中。
 
-为了从我们的 URL 中读取文件，我们将从`URL `流中创建一个新的`ReadableByteChannel`:
+为了从我们的 URL 中读取文件，我们将从`URL`流中创建一个新的`ReadableByteChannel`:
 
 ```java
 ReadableByteChannel readableByteChannel = Channels.newChannel(url.openStream());
@@ -86,7 +87,7 @@ fileOutputStream.getChannel()
 
 **在 Linux 和 UNIX 系统上，这些方法使用了`zero-copy`技术，减少了内核模式和用户模式之间的上下文切换次数。**
 
-## 4。使用库
+## 4. 使用库
 
 在上面的例子中，我们已经看到了如何通过使用 Java 核心功能从 URL 下载内容。
 
@@ -96,7 +97,7 @@ fileOutputStream.getChannel()
 
 我们可以将所有的逻辑打包到一个`Callable`中，或者我们可以使用一个现有的库来完成这个任务。
 
-### 4.1。异步客户端
+### 4.1. 异步客户端
 
 [AsyncHttpClient](/web/20220717111859/https://www.baeldung.com/async-http-client) 是一个使用 Netty 框架执行异步 HTTP 请求的流行库。我们可以使用它来执行对文件 URL 的 GET 请求，并获取文件内容。
 
@@ -138,7 +139,7 @@ client.prepareGet(FILE_URL).execute(new AsyncCompletionHandler<FileOutputStream>
 
 **`ByteBuffer` s 的优点是内存分配在 JVM 堆之外，所以不会影响我们的应用内存。**
 
-### 4.2 .Apache common me〔t1〕
+### 4.2. Apache Commons IO
 
 另一个经常使用的 IO 操作库是 [Apache Commons IO](https://web.archive.org/web/20220717111859/https://commons.apache.org/proper/commons-io/) 。我们可以从 Javadoc 中看到，有一个名为 [`FileUtils`](https://web.archive.org/web/20220717111859/https://commons.apache.org/proper/commons-io/apidocs/index.html?org/apache/commons/io/FileUtils.html) 的实用程序类，我们用它来完成一般的文件操作任务。
 
@@ -164,7 +165,7 @@ connection.setConnectTimeout(connectionTimeout);
 connection.setReadTimeout(readTimeout);
 ```
 
-## 5。可恢复下载
+## 5. 可恢复下载
 
 考虑到互联网连接有时会失败，能够恢复下载是有用的，而不是从零字节重新下载文件。
 
@@ -205,7 +206,7 @@ OutputStream os = new FileOutputStream(FILE_NAME, true);
 
 在我们做了这个更改之后，剩下的代码与第 2 节中的代码完全相同。
 
-## 6。结论
+## 6. 结论
 
 在本文中，我们已经看到了用 Java 从 URL 下载文件的几种方法。
 

@@ -1,37 +1,11 @@
+
 # Java：学习 Java 和 Python 编程终极指南
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 我认为接几本书对你也会感兴趣：
-
-
-
-
-
-
-
-
-
 
 Stephen Hoffman
 
 Amazon Prime 和 Kindle 借阅库
-
-
 
 # 引言
 
@@ -41,16 +15,16 @@ Java 编程语言后的公司是 Sun Microsystems。该语言最初于 1991 年�
 
 Java 编程语言中有四个主要平台。它们分别是：
 
-- Java 标准版 (Java SE)
-- Java 企业版 (Java EE)
-- Java 微型版 (Java ME)
+- Java 标准版 (`Java SE`)
+- Java 企业版 (`Java EE`)
+- Java 微型版 (`Java ME`)
 - JavaFX
 
 用于计算机软件的 Java 应用是在 Java 的标准版上开发的。用于 Web 服务器的 Java 应用是在企业版上开发的，而用于多媒体平台的 Java 应用是在 JavaFX 上开发的。大多数基于 JavaFX 的应用就是我们通常所说的 Flash 播放器。最后，用于移动设备的 Java 应用是在微型版 Java 平台上开发的。你可以使用以下 IDE：
 
 # 初学者工具
 
-为了开启你的 Java 编程之旅，你需要选择使用哪种 IDE。IDE，也称为集成开发环境，是你是在编写 Java 应用时的工作空间。把它想象成你编写 HTML 代码时的记事本即可。然而，IDE 是专为 Java 语言设计的，这意味着它具备了你在 Java 开发中可能需要的所有工具。
+为了开启你的 Java 编程之旅，你需要选择使用哪种 IDE。IDE，也称为集成开发环境，是你在编写 Java 应用时的工作空间。把它想象成你编写 HTML 代码时的记事本即可。然而，IDE 是专为 Java 语言设计的，这意味着它具备了你在 Java 开发中可能需要的所有工具。
 
 以下是你可以使用的 IDE：
 
@@ -59,50 +33,44 @@ Java 编程语言中有四个主要平台。它们分别是：
 - Eclipse – 当今流行的 IDE 之一，Eclipse 是一个具有响应式导航和设计的开源平台。显然，与列表中的其他 IDE 相比，它具有整洁的用户界面。
 - NetBeans – 这是另一个目前在 Java 开发中常用的流行 IDE。它非常推荐初学者使用，因为它拥有快速且强大的工具，并兼容 Java 语言的所有平台。
 
-每个 IDE 都有独特的用户界面和易于导航的特点。请随心使用任何你觉得最舒适的 IDE。请记住，所有的 IDE 都兼容 Java 语言的所有平台。IDE，也称为集成开发环境，是你是在编写 Java 应用时的工作空间。把它想象成你编写 HTML 代码时的记事本即可。然而，IDE 是专为 Java 语言设计的，这意味着它具备了你在 Java 开发中可能需要的所有工具。
+每个 IDE 都有独特的用户界面和易于导航的特点。请随心使用任何你觉得最舒适的 IDE。请记住，所有的 IDE 都兼容 Java 语言的所有平台。
 
-（此处省略后续大量重复内容，已按要求去重处理）
-
-
-
-
-
-### 项目创建
+## 项目创建
 
 编写 Java 程序的第一步是在你选择的 IDE 中启动一个新的空项目。你可以通过以下方式导航最顶部工具栏来操作：
 
-File -> New Project
+`File -> New Project`
 
-选择 New Project（新建项目）后，将出现一个新窗口，你可以在列表中选择类别。在 Categories（类别）列表中选择 Java，然后在相邻的窗口面板中选择 Java Application（Java ）。之后，点击 Next（下一步）按钮，系统会提示项目名称以及你想保存项目的位置。
+选择 `New Project`（新建项目）后，将出现一个新窗口，你可以在列表中选择类别。在 `Categories`（类别）列表中选择 Java，然后在相邻的窗口面板中选择 `Java Application`（Java 应用）。之后，点击 `Next`（下一步）按钮，系统会提示项目名称以及你想保存项目的位置。
 
 始终记住项目名称，因为在过程中你会被要求返回同一个项目。
 
-### 主类创建
+## 主类创建
 
-创建新项目后，IDE 会自动创建包（package）和主类（main class）。包也被称为源包，作为文件夹可以在可以在其中高效地组织 Java 项目的所有资产，例如类和实例。但请注意，包仅仅是资产组织的标识符。你可以将它们考虑为计算机中的文件夹，并据此组织你的文件。
+创建新项目后，IDE 会自动创建包（`package`）和主类（`main class`）。包也被称为源包，作为文件夹可以在其中高效地组织 Java 项目的所有资产，例如类和实例。但请注意，包仅仅是资产组织的标识符。你可以将它们考虑为计算机中的文件夹，并据此组织你的文件。
 
 包下应该有一个主类。如果 IDE 没有自动创建主类，你可以通过以下方式导航主菜单来创建它：
 
-File -> New File -> Java Class
+`File -> New File -> Java Class`
 
-主类在 Java 程序中起着至关重要的作用。主方法（main method）是打开 Java 程序时最初执行的内容，包含在主类中。在其他编程语言中，主方法被称为入口点。
+主类在 Java 程序中起着至关重要的作用。主方法（`main method`）是打开 Java 程序时最初执行的内容，包含在主类中。在其他编程语言中，主方法被称为入口点。
 
-### 编写包语句
+## 编写包语句
 
-现在我们已经在 Java 项目中有了主类，现在准备好编写我们的第一行 Java 编程语言代码——包语句（package statement）。该语句是程序的可选部分，仅为了学习目的而向你介绍。它使用以下语法编写：
+现在我们已经在 Java 项目中有了主类，现在准备好编写我们的第一行 Java 编程语言代码——包语句（`package statement`）。该语句是程序的可选部分，仅为了学习目的而向你介绍。它使用以下语法编写：
 
-```
+```java
 package [package name];
 ```
 
 如果没有写这一行，IDE 将自动查找默认包。换句话说，如果你正在处理一个包含多个包的 Java 项目，包语句可能会很有用。请记住，包名必须与类所属的包名匹配。例如，假设你的包名为“javatestproject”。在你的 IDE 中，语法看起来应该是这样的：
 
-```
+```java
 1
 2 package javatestproject;
 ```
 
-### 编写类声明
+## 编写类声明
 
 紧接包语句之后的是类声明。我们需要遵循的语法如下：
 
@@ -110,11 +78,11 @@ package [package name];
 [access modifier] class [class name]
 ```
 
-你可以使用两种访问修饰符（access modifiers）：public（公共）和 private（私有）。private 修饰符防止其他类访问声明的类，而 public 修饰符允许其他类访问声明的类。目前，让我们专注于并将 public 作为我们第一个 Java 程序的访问修饰符。
+你可以使用两种访问修饰符（`access modifiers`）：`public`（公共）和 `private`（私有）。`private` 修饰符防止其他类访问声明的类，而 `public` 修饰符允许其他类访问声明的类。目前，让我们专注于并将 `public` 作为我们第一个 Java 程序的访问修饰符。
 
-类名（Class name）正如其名称所示，是你为主类指定的名称。注意，Java 编程语言是区分大小写的，因此请确保你的主类名使用正确的大小写字母。假设我们的主类名为“TestProject”，那么我们现在应该拥有这样的：
+类名（`Class name`）正如其名称所示，是你为主类指定的名称。注意，Java 编程语言是区分大小写的，因此请确保你的主类名使用正确的大小写字母。假设我们的主类名为“TestProject”，那么我们现在应该拥有这样的：
 
-```
+```java
 1
 2 package javatestproject;
 3
@@ -124,27 +92,25 @@ package [package name];
 7
 ```
 
-左括号 ( { ) 和右括号 ( } ) 代表 Java 代码块的开始和结束。这有助于程序确定特定代码块何时开始以及何时结束。
+左括号 ( `{` ) 和右括号 ( `}` ) 代表 Java 代码块的开始和结束。这有助于程序确定特定代码块何时开始以及何时结束。
 
-### 编写主方法
+## 编写主方法
 
-现在我们已经完成了类的声明，是时候为我们的第一个程序声明主方法了。在主方法中，我们将使用两个关键字：void 和 static。
+现在我们已经完成了类的声明，是时候为我们的第一个程序声明主方法了。在主方法中，我们将使用两个关键字：`void` 和 `static`。
 
-void 关键字向 Java虚拟机（也称为 JVM）信号程序已成功运行并结束。static 关键字告诉程序字段指的是类，而不是类中的对象或实例。换句话说，程序可以在不在该类中创建实例的情况下自由地访问该类。由于主方法作为程序入口点的性质，将其声明为 static 是至关重要的。因此，我们主方法的声明语法应该遵循此格式：
+`void` 关键字向 Java 虚拟机（也称为 `JVM`）信号程序已成功运行并结束。`static` 关键字告诉程序字段指的是类，而不是类中的对象或实例。换句话说，程序可以在不在该类中创建实例的情况下自由地访问该类。由于主方法作为程序入口点的性质，将其声明为 `static` 是至关重要的。因此，我们主方法的声明语法应该遵循此格式：
 
 ```
 [access modifier] static void
 ```
 
-然而，这还不是主方法的完整声明。我们还应该添加参数“main(String[] args)”以允许程序执行命令行参数。因此，我们主方法的最终代码应该是这样的：
+然而，这还不是主方法的完整声明。我们还应该添加参数 `main(String[] args)` 以允许程序执行命令行参数。因此，我们主方法的最终代码应该是这样的：
 
-```
-public static void main(String[] args)
-```
+`public static void main(String[] args)`
 
 如果将其添加到上面的代码行中，我们的 IDE 看起来应该是这样的：
 
-```
+```java
 1
 2 package javatestproject;
 3
@@ -158,31 +124,25 @@ public class JavaTestProject {
 11
 ```
 
-### 编写程序输出
+## 编写程序输出
 
 到目前，你已经涵盖了 Java 程序的基本部分。遗憾的是，我们还没有告诉程序具体需要做什么。
 
-我们希望程序执行的是传递一条消息。这就是我们所说的程序输出（Program Output）或输出流（Output Stream）。为了让程序传递消息，我们应该使用以下语法：
+我们希望程序执行的是传递一条消息。这就是我们所说的程序输出（`Program Output`）或输出流（`Output Stream`）。为了让程序传递消息，我们应该使用以下语法：
 
-```
-System.out.print("message");
-```
+`System.out.print("message");`
 
-你可以将参数 "print" 替换为 "println"。会将输出打印到新行。因此，另一种格式看起来应该是这样的：
+你可以将参数 `print` 替换为 `println`。会将输出打印到新行。因此，另一种格式看起来应该是这样的：
 
-```
-System.out.println("message");
-```
+`System.out.println("message");`
 
 让我们现在使用上面的命令让程序打印“Java is Awesome!”。我们的语法应该是：
 
-```
-System.out.println("Java is Awesome!");
-```
+`System.out.println("Java is Awesome!");`
 
 一旦我们插入输出，我们的 IDE 看起来应该是这样的：
 
-```
+```java
 1
 2 package javatestproject;
 3
@@ -196,40 +156,30 @@ System.out.println("Java is Awesome!");
 11 }
 ```
 
-### 允许用户输入
+## 允许用户输入
 
-Java 语言允许用户通过发送输入与程序通信。我们可以通过使用内置的 Scanner 类来实现。
+Java 语言允许用户通过发送输入与程序通信。我们可以通过使用内置的 `Scanner` 类来实现。
 
-Scanner 类从计算机键盘收集用户输入。它将收集的数据存储在变量中，这些变量可以在程序的输出流中执行。为了做到，我们需要在包语句之后添加以下行：
+`Scanner` 类从计算机键盘收集用户输入。它将收集的数据存储在变量中，这些变量可以在程序的输出流中执行。为了做到，我们需要在包语句之后添加以下行：
 
-```
-import java.util.Scanner;
-```
+`import java.util.Scanner;`
 
-这是一个导入语句的示例，它信号程序从名为 java.util 的内置 Java 包导入 Scanner 类。这是我们在 IDE 中添加它们的地方：
+这是一个导入语句的示例，它信号程序从名为 `java.util` 的内置 Java 包导入 `Scanner` 类。这是我们在 IDE 中添加它们的地方：
 
-```
+```java
 package javatestproject;
 import java.util.Scanner;
 ```
 
-##
-
 然而，这还没有产生任何作用。我们需要先为 scanner 类分配一个变量名，以便将 scanner 收集的数据调用到我们的输出流。我们可以通过以下语句为 scanner 类分配变量名：
 
-```
-Scanner [variable name] = new Scanner(System.in);
-```
+`Scanner [variable name] = new Scanner(System.in);`
 
 你可以为变量分配任何名称。一种常见的做法是以大写字母开头，后跟小写字母。使用大写字母分隔单词也是一种好习惯。假设我们想将 scanner 变量命名为“userinput”。与其用小写写整个变量名，不如将“user”和“input”的首字母替换为大写。因此，语句看起来像这样：
 
-```
-Scanner UserInput = new Scanner(System.in);
-```
+`Scanner UserInput = new Scanner(System.in);`
 
 我们应该将该语句插入主方法声明后的代码块中。因此，IDE 应该如下：
-
-
 
 ```java
 package javatestproject;
@@ -248,9 +198,7 @@ class JavaTestProject {
 
 为了创建第一个输出，我们将使用之前从编写输出中学到的知识。让我们在扫描器分配变量名的语句上方，通过断言下述语句来询问用户的姓名：
 
-```
-System.out.print("What should we call you?");
-```
+`System.out.print("What should we call you?");`
 
 接下来，让我们通过将收集到的数据调用第二个输出来返回用户的回答。我们可以通过在扫描器变量名语句下方编写第二个输出来实现。我们的第二个输出应该是：
 
@@ -335,17 +283,19 @@ int MyAge;
 
 | 语法 | 示例 |
 |---|---|
-| boolean | boolean TestVar = true; |
-| byte | byte TestVar = 0; |
-| char | char TestVar = ' '; |
-| double | double TestVar = 31.1d; |
-| float | float TestVar = 1.3f; |
-| int | int TestVar = 5; |
-| long | long TestVar = 0L; |
-| short | short TestVar = 32000; |
-| String | String TestVar = null; |
+| boolean | `boolean TestVar = true;` |
+| byte | `byte TestVar = 0;` |
+| char | `char TestVar = ' ';` |
+| double | `double TestVar = 31.1d;` |
+| float | `float TestVar = 1.3f;` |
+| int | `int TestVar = 5;` |
+| long | `long TestVar = 0L;` |
+| short | `short TestVar = 32000;` |
+| String | `String TestVar = null;` |
 
 ### 数据类型与用户输入
+
+
 
 ```java
 public class CreateObjectDemo {
@@ -369,30 +319,26 @@ public class CreateObjectDemo {
 }
 ```
 
-
-
-
-
 ```java
 package javatestproject;
 import java.util.Scanner;
 ```
 
-# 4
+## 4
 
 ```java
 class JavaTestProject {
     public static void main(String[] args) {
         System.out.print("What year were you born?");
         Scanner BirthYear = new Scanner(System.in);
-        System.out.println("You were born in "+BirthYear.nextInt());
+        System.out.println("You were born in " + BirthYear.nextInt());
     }
 }
 ```
 
 ### 将用户输入存储到另一个变量中
 
-当调用 `Scanner` 类从用户输入收集数据时，我们也创建了一个变量。例如，在我们关于出生年份的 Java 程序中，我们创建了一个名为“BirthYear”的新变量，并将收集到的数据存储其中。这里的问题是，当我们在程序输出中执行 `Scanner` 类时，直接在变量名后面写了参数。因此，我们可以将整个语法存储到另一个变量中以简化代码。当你需要在多个语句中调用收集的数据时，这样做会非常方便。你可以通过在声明变量的同时将 `Scanner` 语法赋值为变量的值来实现这一点。
+当调用 `Scanner` 类从用户输入收集数据时，我们也创建了一个变量。例如，在我们关于出生年份的 Java 程序中，我们创建了一个名为 `BirthYear` 的新变量，并将收集到的数据存储其中。这里的问题是，当我们在程序输出中执行 `Scanner` 类时，直接在变量名后面写了参数。因此，我们可以将整个语法存储到另一个变量中以简化代码。当你需要在多个语句中调用收集的数据时，这样做会非常方便。你可以通过在声明变量的同时将 `Scanner` 语法赋值为变量的值来实现这一点。
 
 让我们创建另一个程序，计算用户五年后的年龄。这一次，我们也将 `Scanner` 调用语句存储到另一个变量中。它应该是这样的：
 
@@ -405,32 +351,32 @@ class JavaTestProject {
         System.out.print("How old are you?");
         Scanner UserAge = new Scanner(System.in);
         int Age = UserAge.nextInt();
-        System.out.println("You will be "+(Age+5)+" five years from now");
+        System.out.println("You will be " + (Age + 5) + " five years from now");
     }
 }
 ```
 
-从我们的示例程序中，我们将 `Scanner` 调用语句存储在一个名为“Age”的新变量中。在下一行中，我们调用了用户收集的整数，并编写了一个简单的算术运算，以提供用户在五年后几大。请注意，数学表达式被包含在括号中。如果没有括号，程序将把 `Age` 变量中存储的值与数值 `5` 连接，而不是将这两个值相加。
+从我们的示例程序中，我们将 `Scanner` 调用语句存储在一个名为 `Age` 的新变量中。在下一行中，我们调用了用户收集的整数，并编写了一个简单的算术运算，以提供用户在五年后几大。请注意，数学表达式被包含在括号中。如果没有括号，程序将把 `Age` 变量中存储的值与数值 `5` 连接，而不是将这两个值相加。
 
 除了整数外，你还可以使用以下参数通过 `Scanner` 类调用语句查找其他类型的数据：
 
--   *nextByte()* 用于 `Byte` 类型值
--   *nextShort()* 用于 `Short` 类型值
--   *nextLong()* 用于 `Long` 类型值
--   *nextFloat()* 用于 `Float` 类型值
--   *nextDouble()* 用于 `Double` 类型值
+- `nextByte()` 用于 `Byte` 类型值
+- `nextShort()` 用于 `Short` 类型值
+- `nextLong()` 用于 `Long` 类型值
+- `nextFloat()` 用于 `Float` 类型值
+- `nextDouble()` 用于 `Double` 类型值
 
 # 第3章 – 运算符
 
-从第一章以来，我们一直在使用不同的运算符，我们使用的最常用的运算符是赋值运算符。它由等号 (=) 定义，指示程序为变量指定特定的值。
+从第一章以来，我们一直在使用不同的运算符，我们使用的最常用的运算符是赋值运算符。它由等号 (`=`) 定义，指示程序为变量指定特定的值。
 
 除了赋值运算符外，还有五个运算符用于在 Java 编程语言中处理数据。它们及其作为数学运算符的角色如下：
 
--   加法运算符，用加号 (+) 表示。它命令程序给出多个值之和。
--   减法运算符，用连字符号 (-) 表示。它命令程序给出多个值之差。
--   乘法运算符，用星号 (*) 表示。它命令程序给出多个值之积。
--   除法运算符，用斜杠 (/) 表示。它命令程序给出多个值之商。
--   取模运算符，用百分号 (%) 表示。它命令程序除以两个数值，并给您提供这些数值的余数。
+- 加法运算符，用加号 (`+`) 表示。它命令程序给出多个值之和。
+- 减法运算符，用连字符号 (`-`) 表示。它命令程序给出多个值之差。
+- 乘法运算符，用星号 (`*`) 表示。它命令程序给出多个值之积。
+- 除法运算符，用斜杠 (`/`) 表示。它命令程序给出多个值之商。
+- 取模运算符，用百分号 (`%`) 表示。它命令程序除以两个数值，并给您提供这些数值的余数。
 
 ## 单个程序中的总结
 
@@ -452,25 +398,18 @@ class JavaTestProject {
         Scanner SecondValue = new Scanner(System.in);
         Value2 = SecondValue.nextInt();
         Total = Value1 + Value2;
-        System.out.println("The total is "+Total);
+        System.out.println("The total is " + Total);
     }
 }
 ```
 
-
-
-
-
-
-
+---
 
 Stephen Hoffman
-
 
 快速学习 Python - 快速掌握 Python 编程语言基础的终极速成课程
 
 STEPHEN HOFFMAN
-
 
 - 如何运行程序
 - 开始编写
@@ -496,7 +435,7 @@ Python 是一种通用编程语言，创建于 20 世纪 80 年代后期，以�
 
 程序员在许多不同的编程语言中选择 Python 主要有两个原因。
 
-第一个原是可读性。因为它非常接近英语，使用 `not`（不）和 `in`（在……之中）等单词使得你能够大声读出脚本，而不会觉得像在读某种被遗忘已久的语言。Python 极其严格的标点符号规则也有助于此，你不需要在代码中到处写大括号。
+第一个原因是可读性。因为它非常接近英语，使用 `not`（不）和 `in`（在……之中）等单词使得你能够大声读出脚本，而不会觉得像在读某种被遗忘已久的语言。Python 极其严格的标点符号规则也有助于此，你不需要在代码中到处写大括号。
 
 此外，Python 有一些被称为 PEP 8 的设定规则，告诉 Python 开发者如何格式化代码。这意味着你将始终知道在哪里换行，而且你从别人那里获取的每段代码看起来都很相似，并且和你的代码一样易读。这使得开发者之间的协作变得非常容易！
 
@@ -508,7 +447,6 @@ Python 是一种通用编程语言，创建于 20 世纪 80 年代后期，以�
 
 在涉及 Python 编程时，你应该知道的第一点是，许多操作系统已经安装了 Python。除了 Windows 之外，大多数操作系统都默认安装了 Python。如果你想确认你的电脑是否安装了它，请运行终端程序打开命令行，并输入 `python -V`。
 
-
 如果你看到版本信息，说明你的电脑已经安装了 Python。然而，如果你得到 `bash: python: command not found`，说明尚未安装。
 
 ## 安装
@@ -518,7 +456,6 @@ Python 是一种通用编程语言，创建于 20 世纪 80 年代后期，以�
 ### 解释器
 
 Python 解释器是一个执行 Python 代码的程序。你可以通过在终端中输入 `python` 来交互式使用它。这将打开一个提示符 `>>>`，你可以在其中逐行输入 Python 代码并立即看到结果。
-
 
 ### 如何运行程序
 
@@ -536,19 +473,20 @@ Python 解释器是一个执行 Python 代码的程序。你可以通过在终�
 
 变量是在 Python 中可以使用的字符。
 
-
-
-
 你还可以通过多次赋值同时给多个变量分配一个单值。
-变量 a、b 和 c 被分配到相同的内存位置，并赋值为 1；a = b = c = 1。
+
+变量 a、b 和 c 被分配到相同的内存位置，并赋值为 1；`a = b = c = 1`。
+
 例如：
 
 这将打印出：面积是：200
+
 现在你已经知道如何使用变量，让我们更详细地查看解释器。
 
 # 第三章 – 解释器
 
 在可用该解释器的机器上，解释器通常安装在 `/usr/local/bin/python` 位置。
+
 将 `/usr/local/bin` 放入 Unix shell 的搜索路径中，将能够通过在 shell 中输入 `python` 命令来启动它。
 
 当你开始交互模式时，它将使用三个大于符号 `>>>` 提示输入以下命令。它在打印第一个提示符之前，会打印一条显示其版本号和版权声明的欢迎消息。
@@ -557,7 +495,7 @@ Python 解释器是一个执行 Python 代码的程序。你可以通过在终�
 
 当交互式使用时，每次启动解释器时执行一些标准注释是一个好主意。你可以在设置名为 `PYTHONSTARTUP` 的环境变量时，将其设置为包含启动命令的文件名来实现这一点。这类似于 Unix shell 的 `.profile` 功能。要将此行添加到你的 `.bashrc` 中：
 
-``````
+```bash
 export PYTHONSTARTUP=$HOME/.pythonstartup
 ```
 
@@ -600,7 +538,7 @@ Docstrings（或 Python 文档字符串）提供了一种将文档与 Python 函
 
 在用于记录特定代码的源代码中指定了它。与普通的源代码注释不同，docstring 应该是对函数“做什么”的描述，而不是“如何做”。所有函数都需要有一个 docstring。
 
-这使得程序可以在运行时检查内容，例如，作为交互式帮助系统或元数据。你可以使用对象上的 `doc` 属性来访问 docstring。
+这使得程序可以在运行时检查内容，例如，作为交互式帮助系统或元数据。你可以使用对象上的 `__doc__` 属性来访问 docstring。
 
 ## 它应该看起来像
 
@@ -620,9 +558,6 @@ def my_function():
     pass
 ```
 
-
-
-
 ## 布尔字符串
 
 可以对字符串的真值进行测试。返回类型应为布尔值或 True 或 False。让我们来看一个例子。首先，创建一个新变量并给它赋值值。
@@ -641,9 +576,9 @@ numberone_string.startswith('H')
 ```
 
 ```python
-#检查是否所有字符都是数字
-#检查是否所有字符都是字母
-#测试字符串是否包含数字
+# 检查是否所有字符都是数字
+# 检查是否所有字符都是字母
+# 测试字符串是否包含数字
 # 测试字符串是否为标题
 # 测试字符串是否包含大写字母
 # 测试字符串是否包含小写字母
@@ -653,23 +588,24 @@ numberone_string.startswith('H')
 ```
 
 要查看返回值是什么，将其打印出来。
-numberone_string="Hello World"
 
 ```python
-print numberone_string.isalnum()      #false
-print numberone_string.isalalpha()    #false
-print numberone_string.isdigit()       #false
-print numberone_string.istitle()      #true
-print numberone_string.isupper()       #false
-print numberone_string.islower()       #false
-print numberone_string.isspace()       #false
-print numberone_string.endswith('d')   #true
-print numberone_string.startswith('H')  #true
+numberone_string = "Hello World"
+
+print(numberone_string.isalnum())      # False
+print(numberone_string.isalpha())      # False
+print(numberone_string.isdigit())      # False
+print(numberone_string.istitle())      # True
+print(numberone_string.isupper())      # False
+print(numberone_string.islower())      # False
+print(numberone_string.isspace())      # False
+print(numberone_string.endswith('d'))  # True
+print(numberone_string.startswith('H')) # True
 ```
 
 ## 逻辑运算符布尔
 
-这些值倾向于响应逻辑运算符和或
+这些值倾向于响应逻辑运算符 `and` 和 `or`。
 
 ```python
 >>> True and False
@@ -692,47 +628,47 @@ False
 
 ## 算术运算符
 
-Python 有模运算 `-`、`+`、`/`、`%` 和 `**` 运算符。假设变量 'a' 的值为十，变量 'b' 的值为二十。因此：
 
-+ * +
-  a+b=30
--
-  a-b=-10
-*
-  a*b=200
-/
-  b/a=2
-%
-  b%a=0
-**
-  a**b=10^20
-//
-  9//2=4
+
+# Python 运算符与基础语法
+
+## 算术运算符
+
+Python 有模运算 `-`、`+`、`/`、`%` 和 `**` 运算符。假设变量 `a` 的值为十，变量 `b` 的值为二十。因此：
+
+| 运算符 | 表达式 | 结果 | 说明 |
+| :--- | :--- | :--- | :--- |
+| `+` | `a + b` | `30` | 加法 |
+| `-` | `a - b` | `-10` | 减法 |
+| `*` | `a * b` | `200` | 乘法 |
+| `/` | `b / a` | `2` | 除法 |
+| `%` | `b % a` | `0` | 取模（求余） |
+| `**` | `a ** b` | `10^20` | 幂运算 |
+| `//` | `9 // 2` | `4` | 整除（向下取整） |
 
 ## 比较运算符
 
-普通的比较运算符如 `==`、`<`、`>=` 以及其他用于各种类型的值。字符串、数字、映射和序列都可以进行比较。下面的项目符号将为您展示比较运算符列表。
+普通的比较运算符如 `==`、`<`、`>=` 以及其他用于各种类型的值。字符串、数字、映射和序列都可以进行比较。下面列出比较运算符列表：
 
-- < 小于
-- == 等于
-- <= 小于或
-
-- >= 大于等于
-- > 大于
-- <> 不等于
-- != 不等于
+- `<` : 小于
+- `==` : 等于
+- `<=` : 小于或等于
+- `>=` : 大于等于
+- `>` : 大于
+- `<>` : 不等于（Python 2 风格，Python 3 建议使用 `!=`）
+- `!=` : 不等于
 
 ## 逻辑运算符
 
-逻辑运算符在用于决策结构时也会返回布尔值。有三个逻辑运算符：`or`（或）、`and`（与）和 `not`（非）。例如，`x=0 and x<10` 仅当 `x` 大于 0 且小于 10 时才为真。
+逻辑运算符在用于决策结构时也会返回布尔值。有三个逻辑运算符：`or`（或）、`and`（与）和 `not`（非）。例如，`x > 0 and x < 10` 仅当 `x` 大于 0 且小于 10 时才为真。
 
 运算符描述：
 
-- and: 逻辑与
-- or: 逻辑或
-- not: 逻辑非
+- `and` : 逻辑与
+- `or` : 逻辑或
+- `not` : 逻辑非
 
-现在你已经了解运算符，让我们更多地聊聊在 Python 中使用数学。
+---
 
 # 第九章 - 在 Python 中使用数学
 
@@ -743,11 +679,11 @@ Python 语言拥有 Python 解释器，这是一个被称为 IDLE 的简单开�
 要对面积进行测试，将其打印出来：
 
 ```python
->>> 2
+>>> 2 * 2
 4
->>> 4
+>>> 4 * 2
 8
->>> 10
+>>> 10 / 2
 5
 ```
 
@@ -759,6 +695,7 @@ Python 语言拥有 Python 解释器，这是一个被称为 IDLE 的简单开�
 >>> length = 2
 >>> width = 4
 >>> area = length * width
+>>> area
 8
 ```
 
@@ -768,7 +705,9 @@ Python 语言拥有 Python 解释器，这是一个被称为 IDLE 的简单开�
 
 ```python
 >>> i = 0
->>> i = i+1
+>>> i = i + 1
+>>> i
+1
 ```
 
 ### 使用 while 循环计数
@@ -777,9 +716,15 @@ Python 语言拥有 Python 解释器，这是一个被称为 IDLE 的简单开�
 
 ```python
 >>> i = 0
->>> i < 5:
-    print i
-    i = i+1
+>>> while i < 5:
+...     print(i)
+...     i = i + 1
+...
+0
+1
+2
+3
+4
 ```
 
 ### 乘法表
@@ -788,10 +733,21 @@ Python 语言拥有 Python 解释器，这是一个被称为 IDLE 的简单开�
 
 ```python
 >>> start = 1
->>> max = 10
-while start <= max:
-    print(start * start)
-    start += 1
+>>> max_val = 10
+>>> while start <= max_val:
+...     print(start * start)
+...     start += 1
+...
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
 ```
 
 输出将是：
@@ -807,6 +763,8 @@ while start <= max:
 - 81
 - 100
 
+---
+
 # 第十章 - 异常处理
 
 在了解做什么之前，首先必须知道什么是异常。异常是在运行时发生的错误。
@@ -821,7 +779,7 @@ while start <= max:
 
 ### 代码示例
 
-此程序将要求用户输入一个到十之间的数字，然后打印该数字。
+此程序将要求用户输入一个 1 到 10 之间的数字，然后打印该数字。
 
 ```python
 number = int(raw_input("Enter number between 1-10"))
@@ -829,55 +787,57 @@ print "you entered number", number
 ```
 
 只要用户输入数字，此程序就可以正常工作，但如果他们输入其他内容，比如字符串会怎样？
+
+```text
 Enter a number between 1-10
 helo
-
-你可以看到当输入字符串时程序会抛出错误。Traceback (most recent call last):
-
-```
-File "enter_number.py", line 1, in
-number = int(raw_input("Enter number between 1-10"))
-
-valueerror: invalid literal for int() with base 10: 'hello'
 ```
 
-ValueError 是异常的一种类型。现在让我们看看如何利用异常处理来修复上述程序。
+你可以看到当输入字符串时程序会抛出错误。
+
+```text
+Traceback (most recent call last):
+  File "enter_number.py", line 1, in <module>
+    number = int(raw_input("Enter number between 1-10"))
+ValueError: invalid literal for int() with base 10: 'hello'
+```
+
+`ValueError` 是异常的一种类型。现在让我们看看如何利用异常处理来修复上述程序。
 
 ```python
 import sys
 
 try:
     number = int(raw_input("Enter a number between 1-10 \n"))
-except valueerror:
+except ValueError:
     print "Only numbers are accepted."
-sys.exit()
-
-```
+    sys.exit()
 
 print "you entered number \n", number
+```
 
-如果你现在启动程序并输入字符串而不是数字，你可以看到你会得到不同的
+如果你现在启动程序并输入字符串而不是数字，你可以看到你会得到不同的响应。现在，让我们运行程序以确保它正常工作。响应应当是：
 
-
-响应。现在，让我们运行程序以确保它正常工作。响应应当是：
-
+```text
 输入 1-10 之间的数字
 hello
 只接受数字。
+```
 
 ### Try ... Except ... Else 子句
 
 在 `try...except` 语句中的 `else` 子句必须跟在所有 `except` 子句之后，用于在 `try` 子句没有引发异常时必须执行的代码。例如：
 
 ```python
-data = something_that_might_go_wrong
+try:
+    data = something_that_might_go_wrong()
 except IOError:
-    handling_the_exception_handling
+    handling_the_exception_handling()
 else:
-    trying_a_different_exception_handling
+    trying_a_different_exception_handling()
 ```
 
-`else` 子句中的异常不会被前面的异常子句处理。请确保 `else` 子句在最终代码块之前运行。
+`else` 子句中的异常不会被前面的 `except` 子句处理。请确保 `else` 子句在 `finally` 代码块之前运行。
 
 ### Try ... Finally 子句
 
@@ -887,21 +847,26 @@ else:
 try:
     raise KeyboardInterrupt
 finally:
-    print 'Goodbye!'
-    ...
-    Goodbye!
-    KeyboardInterrupt
+    print('Goodbye!')
+```
+
+输出：
+```text
+Goodbye!
+KeyboardInterrupt
 ```
 
 无论是否发生异常，在离开 `try` 语句之前都会执行 `finally` 子句。
 
-记住，如果你没有在异常行上指定异常类型，它将捕获所有异常。这不是好事，因为这意味着程序将忽略任何意外错误，以及异常块能够处理的错误。
+记住，如果你没有在 `except` 语句上指定异常类型，它将捕获所有异常。这不是好事，因为这意味着程序将忽略任何意外错误，以及 `except` 块能够处理的错误。
 
 现在你已经了解了 Python 中的异常，让我们在下一章查看字符串的内置方法。
 
+---
+
 # 第十一章 - 字符串内置方法
 
-本章将包含一个列表，列你可以对每个字符串使用的内置方法。让我们先创建一个值为‘Hello’的字符串。
+本章将包含一个列表，列出你可以对每个字符串使用的内置方法。让我们先创建一个值为 `'Hello'` 的字符串。
 
 它看起来很像这样：
 
@@ -909,113 +874,133 @@ finally:
 string = 'Hello'
 ```
 
-为了操作此字符串，请查看以下某些内置方法及其解释。 
+为了操作此字符串，请查看以下某些内置方法及其解释。
 
-- string.upper()
-  - 这将字符串中的所有字母转换为大写，所以如果字符串是‘hello jane’，它的输出将是‘Hello Jane’。
-- string.lower()
-  - 这将你字符串中的所有字母转换为小写，所以如果字符串是‘Hello Jane’，在程序中它将是‘hello jane’。
-- string.capitalize()
-  - 这将仅大写第一个字母。因此，如果字符串是‘hello jane’，在程序中它将是‘Hello jane’。
-- string.title()
-  - 这将大写每个单词的第一个字母。所以如果程序中的字符串是‘hello jane’，它将是‘Hello Jane’。
-- string.swapcase()
-  - 此方法将所有大写字母转换为小写，反之亦然，所以以下字符串‘hello jane’在程序中将是‘HELLO JANE’。
-- string.strip()
-  - 此方法将移除字符串中的所有空格。所以如果字符串是‘Hello Jane’，在程序中它将是‘HelloJane’。
-- string.lstrip()
-  - 此方法移除左侧所有的空格。因此，如果字符串是‘ Hello Jane ’（hello 前有空格，Jane 后有一个），代码将提取出‘HelloJane’。
-- string.rstrip()
-  - 此方法移除右侧所有的空格。因此，如果同一行代码读取‘Hello Jane ’（Jane 后面有一个空格），Jane 后面的空格将被先移除，变为‘HelloJane’。
-- string.split()
-  - 此命令将分割单词。所以如果代码读取‘Hello Jane’，它将被分成‘Hello Jane’。
-- string.split(',')
-  - 这意味着代码将通过逗号分割单词，所以以下字符串‘Hello Jane’的输出为‘Hello, Jane’。
-- string.count('1')
-  - 此方法将统计 1 或你选择放入字符串的任何其他字母在字符串中出现的次数。如果输入是‘Hello Jane’，程序会告诉你 2。
-- string.find(Ja)
-  - 此方法将在字符串中查找单词‘Ja’。
-- string.index("Ja”)
-  - 这将在字符串中找到字母 Ja。
-- ":".join(string)
-  - 这将在每个字符之间添加一个冒号 `:`。所以‘Hello Jane’的输出结果为‘H:e:l:l:o:J:a:n:e’。
-- len(string)
-  - 这将找到字符串的字符长度，所以如果字符串是‘Hello Jane’，程序会说十。
+- `string.upper()`
+  - 这将字符串中的所有字母转换为大写，所以如果字符串是 `'hello jane'`，它的输出将是 `'HELLO JANE'`。
 
-现在你已经了解了 Python 代码中内置的一些基础字符串，让我们在下一章查看列表示例。
+- `string.lower()`
+  - 这将你字符串中的所有字母转换为小写，所以如果字符串是 `'Hello Jane'`，在程序中它将是 `'hello jane'`。
 
-# 第十二章 – 列表
+- `string.capitalize()`
+  - 这将仅大写第一个字母。因此，如果字符串是 `'hello jane'`，在程序中它将是 `'Hello jane'`。
+
+- `string.title()`
+  - 这将大写每个单词的第一个字母。所以如果程序中的字符串是 `'hello jane'`，它将是 `'Hello Jane'`。
+
+- `string.swapcase()`
+  - 此方法将所有大写字母转换为小写，反之亦然，所以以下字符串 `'hello jane'` 在程序中将是 `'HELLO JANE'`。
+
+- `string.strip()`
+  - 此方法将移除字符串首尾的空白字符。所以如果字符串是 `' Hello Jane '`，在程序中它将是 `'Hello Jane'`。
+
+- `string.lstrip()`
+  - 此方法移除左侧所有的空白字符。因此，如果字符串是 `' Hello Jane '`（hello 前有空格，Jane 后有一个），代码将提取出 `'Hello Jane '`。
+
+- `string.rstrip()`
+  - 此方法移除右侧所有的空白字符。因此，如果同一行代码读取 `'Hello Jane '`（Jane 后面有一个空格），Jane 后面的空格将被先移除，变为 `'Hello Jane'`。
+
+- `string.split()`
+  - 此命令将按空白字符分割字符串。所以如果代码读取 `'Hello Jane'`，它将被分成 `['Hello', 'Jane']`。
+
+- `string.split(',')`
+  - 这意味着代码将通过逗号分割字符串，所以以下字符串 `'Hello, Jane'` 的输出为 `['Hello', ' Jane']`。
+
+- `string.count('l')`
+  - 此方法将统计 `'l'` 或你选择放入字符串的任何其他字符在字符串中出现的次数。如果输入是 `'Hello Jane'`，程序会告诉你 `2`。
+
+- `string.find('Ja')`
+  - 此方法将在字符串中查找子串 `'Ja'` 并返回其索引。
+
+- `string.index('Ja')`
+  - 这将在字符串中找到子串 `'Ja'` 的索引，若不存在则抛出异常。
+
+- `":".join(string)`
+  - 这将在每个字符之间添加一个冒号 `:`。所以 `'Hello'` 的输出结果为 `'H:e:l:l:o'`。
+
+- `len(string)`
+  - 这将找到字符串的字符长度，所以如果字符串是 `'Hello Jane'`，程序会返回 `10`（含空格）。
+
+---
+
+# 第十二章 – 列表与字典
 
 列表用方括号 `[]` 创建，括号之间的元素就是程序将使用的内容。列表中的元素不需要是相同类型，因此，你可以在一组括号中包含字母、数字和字符串。
 
 让我们来看一个示例。
 
 ```python
-myList = [1,2,3,5,8,2]
-i=0
+myList = [1, 2, 3, 5, 8, 2]
+i = 0
 while i < len(myList):
-    print myList[i]
-    i+=1
+    print(myList[i])
+    i += 1
 ```
 
-或者如果你有一个循环，可以这样写：
+字典用花括号 `{}` 创建，包含键值对。以下示例演示了字典的常用操作：
+
+### 遍历字典
 
 ```python
+released = {"iphone 3G": 2008, "iphone 4": 2010, "iphone 5": 2012}
+
 for item in released:
     if "iphone 5" in released:
-        print "Key found"
+        print("Key found")
         break
     else:
-        print "No keys found"
+        print("No keys found")
 ```
 
-或者如果你需要某个特定键的值，可以这样写：
+### 获取特定键的值
 
 ```python
-print released.get("iphone 3G", "name")
+print(released.get("iphone 3G", "name"))
 ```
 
-或者如果你需要用 `for` 循环打印所有的键，可以这样写：
+### 使用 for 循环打印所有的键
 
 ```python
-print "* * 10"
-print "iphone releases so far: *"
-print "* * 10"
+print("*" * 10)
+print("iphone releases so far:")
+print("*" * 10)
 for release in released:
-    print release
+    print(release)
 ```
 
-或者如果你想打印所有的键和值，可以这样写：
+### 打印所有的键和值
 
 ```python
-for key,val in released.items():
-    print key, ":", val
+for key, val in released.items():
+    print(key, ":", val)
 ```
 
-或者如果你只需要从字典中获取键，可以这样写：
+### 仅获取字典中的键
 
 ```python
-phones=released.keys()
-print phones
+phones = released.keys()
+print(phones)
 ```
 
-既然你已经知道如何进行这些操作了，为什么不来看看如何打印值呢：
+### 打印所有值
 
 ```python
-print "Values:%s"
-for your in released:
-    release=released[your]
-    print release
+print("Values:")
+for key in released:
+    release = released[key]
+    print(release)
 ```
 
-这里是如何排序你的字典：
+### 对字典进行排序
 
 ```python
-for key,value in sorted(released.items()):
-    print key,value
+for key, value in sorted(released.items()):
+    print(key, value)
 ```
 
-这就是在 Python 中使用字典的方法
+这就是在 Python 中使用列表和字典的基本方法。
+
+---
 
 # 结论
 

@@ -1,17 +1,18 @@
-# spring——在 bean 配置文件中定义电子邮件模板
+
+# Spring——在 Bean 配置文件中定义电子邮件模板
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring/spring-define-an-e-mail-template-in-bean-configuration-file/>
 
-在上一个 [Spring 的电子邮件教程](http://web.archive.org/web/20190210101654/http://www.mkyong.com/spring/spring-sending-e-mail-via-gmail-smtp-server-with-mailsender/)中，你在方法体中硬编码了所有的电子邮件属性和消息内容，这是不实际的，应该避免。您应该考虑在 Spring 的 bean 配置文件中定义电子邮件消息模板。
+在上一个 [Spring 的电子邮件教程](http://web.archive.org/web/20190210101654/http://www.mkyong.com/spring/spring-sending-e-mail-via-gmail-smtp-server-with-mailsender/)中，你在方法体中硬编码了所有的电子邮件属性和消息内容，这是不实际的，应该避免。您应该考虑在 Spring 的 Bean 配置文件中定义电子邮件消息模板。
 
-## 1.项目依赖性
+## 1. 项目依赖性
 
 添加 JavaMail 和 Spring 的依赖项。
 
-*文件:pom.xml*
+*文件：`pom.xml`*
 
-```java
- <project  
+```xml
+<project  
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
   http://maven.apache.org/maven-v4_0_0.xsd">
@@ -54,17 +55,17 @@
     </dependency>
 
   </dependencies>
-</project> 
+</project>
 ```
 
- ## 2.春天的邮件发送者
+## 2. Spring 的邮件发送者
 
-一个 Java 类，通过 Spring 的 MailSender 接口发送电子邮件，并使用 **String.format** 用 bean 配置文件中的传递变量替换电子邮件消息“ **%s** ”。
+一个 Java 类，通过 Spring 的 `MailSender` 接口发送电子邮件，并使用 `String.format` 用 Bean 配置文件中的传递变量替换电子邮件消息中的 `%s`。
 
-*文件:MailMail.java*
+*文件：`MailMail.java`*
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
@@ -92,17 +93,17 @@ public class MailMail
 	   mailSender.send(message);
 
 	}	
-} 
+}
 ```
 
- ## 3.Bean 配置文件
+## 3. Bean 配置文件
 
-在 bean 配置文件中定义电子邮件模板' **customeMailMessage** '和邮件发送者详细信息。
+在 Bean 配置文件中定义电子邮件模板 `customeMailMessage` 和邮件发送者详细信息。
 
-*文件:Spring-Mail.xml*
+*文件：`Spring-Mail.xml`*
 
-```java
- <beans 
+```xml
+<beans 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
@@ -142,13 +143,13 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
         </property>
 </bean>
 
-</beans> 
+</beans>
 ```
 
-## 4.运行它
+## 4. 运行它
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -164,23 +165,18 @@ public class App
         mm.sendMail("Yong Mook Kim", "This is text content");
 
     }
-} 
+}
 ```
 
-输出
+输出：
 
-```java
- Dear Yong Mook Kim,
- Mail Content : This is text content 
+```text
+Dear Yong Mook Kim,
+Mail Content : This is text content
 ```
 
 ## 下载源代码
 
-Download it – [Spring-Email-Gmail-Smtp-Template-Example.zip](http://web.archive.org/web/20190210101654/http://www.mkyong.com/wp-content/uploads/2010/03/Spring-Email-Gmail-Smtp-Template-Example.zip)[email](http://web.archive.org/web/20190210101654/http://www.mkyong.com/tag/email/) [spring](http://web.archive.org/web/20190210101654/http://www.mkyong.com/tag/spring/)
+下载链接：[Spring-Email-Gmail-Smtp-Template-Example.zip](http://web.archive.org/web/20190210101654/http://www.mkyong.com/wp-content/uploads/2010/03/Spring-Email-Gmail-Smtp-Template-Example.zip)
 
-
-
-
-
-
-
+标签：[email](http://web.archive.org/web/20190210101654/http://www.mkyong.com/tag/email/) [spring](http://web.archive.org/web/20190210101654/http://www.mkyong.com/tag/spring/)

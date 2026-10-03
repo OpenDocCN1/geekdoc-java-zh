@@ -1,3 +1,4 @@
+
 # 2020 年数据科学的范围以及如何获得数据科学的第一份工作？
 
 > 原文：<https://medium.com/javarevisited/scope-of-data-science-in-2020-and-how-to-get-your-first-job-in-data-science-2893169ddf6b?source=collection_archive---------1----------------------->
@@ -18,15 +19,15 @@
 
 [![](img/bcadcacb4ed392156696846b6b26f407.png)](https://medium.com/javarevisited/top-10-resources-to-learn-data-science-and-machine-learning-best-of-lot-f153e1f44e89)
 
-## **数据科学家对 2020 年的需求调查— IBM 的预测出炉了！**
+## 数据科学家对 2020 年的需求调查— IBM 的预测出炉了！
 
 [![](img/fca7f0d6245442626ce5de10e402f4b3.png)](https://hackernoon.com/10-machine-learning-data-science-and-deep-learning-courses-for-programmers-7edc56078cde)
 
-要了解 IBM 对 2020 年数据科学家需求的一些有趣预测，您可以参考 IBM 的 [**数据科学家需求洞察**](https://data-flair.training/blogs/data-scientists-demand-predictions/)
+要了解 IBM 对 2020 年数据科学家需求的一些有趣预测，您可以参考 IBM 的[数据科学家需求洞察](https://data-flair.training/blogs/data-scientists-demand-predictions/)
 
-<https://dev.to/javinpaul/10-data-science-and-machine-learning-courses-for-programmers-looking-to-switch-career-57kd>  
+<https://dev.to/javinpaul/10-data-science-and-machine-learning-courses-for-programmers-looking-to-switch-career-57kd>
 
-# 数据科学的范围-
+# 数据科学的范围
 
 ***“未来 10 年，数据科学和软件对医药的贡献将超过所有生物科学的总和”***
 
@@ -34,30 +35,30 @@
 
 [![](img/4fabdc49235383ecaf7807358c6ba083.png)](https://javarevisited.blogspot.com/2019/09/top-5-statistics-and-mathematics-course-for-data-science.html)
 
-# 数据科学未来的驱动力-
+# 数据科学未来的驱动力
 
-数据科学是多个数据操作的巨大集合。这些数据操作还涉及到机器学习和统计。**机器学习算法** 非常依赖数据。由于机器学习的巨大贡献，数据科学正在扩展。它在以下方面改进了数据科学场景——
+数据科学是多个数据操作的巨大集合。这些数据操作还涉及到机器学习和统计。机器学习算法非常依赖数据。由于机器学习的巨大贡献，数据科学正在扩展。它在以下方面改进了数据科学场景：
 
 *   向用户提供高级搜索引擎结果
 *   量子计算
 *   高级个性化
 *   无代码环境
 
-# 如何在 2020 年成为一名数据科学家-
+# 如何在 2020 年成为一名数据科学家
 
 [![](img/4c031ba87f7b9253f307068dc82633f9.png)](https://javarevisited.blogspot.com/2018/10/data-science-and-machine-learning-courses-using-python-and-R-programming.html)
 
-*   **编程技能大师** — R、Python、SAS 是数据科学家最常用的工具。探索**[**R vs Python vs SAS for Data Science**](https://data-flair.training/blogs/r-python-or-sas-for-data-science/)选择最合适的工具开始你的数据科学学习。**
-*   ****用数据弄脏你的手** —这个领域使用科学的方法和算法。并将这种方法应用于处理、清理和验证数据。**
-*   ****良好的动手机器学习技能** —正如我们上面讨论的那样，它是数据科学背后的驱动力。数据科学家使用机器学习技术产生见解。**
-*   ****最重要的是项目** —数据科学项目在推动你的数据科学职业生涯中发挥着至关重要的作用。以下是为所有数据科学有志者准备的 [**前五大数据科学项目**](https://data-flair.training/blogs/data-science-projects-code/) 。**
-*   ****加入一个好的课程** —有许多关于数据科学的好的在线课程，你可以加入它们向像[吴恩达](https://medium.com/u/592ce2a67248?source=post_page-----2893169ddf6b--------------------------------)这样的专家学习，如果你需要推荐，你可以在这里找到一些 [**最佳数据科学课程**](https://dev.to/javinpaul/top-online-courses-to-learn-data-science-and-machine-learning-for-beginners-best-of-lot-37k8) 。**
+*   **编程技能大师** — `R`、`Python`、`SAS`是数据科学家最常用的工具。探索[R vs Python vs SAS for Data Science](https://data-flair.training/blogs/r-python-or-sas-for-data-science/)选择最合适的工具开始你的数据科学学习。
+*   **用数据弄脏你的手** — 这个领域使用科学的方法和算法。并将这种方法应用于处理、清理和验证数据。
+*   **良好的动手机器学习技能** — 正如我们上面讨论的那样，它是数据科学背后的驱动力。数据科学家使用机器学习技术产生见解。
+*   **最重要的是项目** — 数据科学项目在推动你的数据科学职业生涯中发挥着至关重要的作用。以下是为所有数据科学有志者准备的[前五大数据科学项目](https://data-flair.training/blogs/data-science-projects-code/)。
+*   **加入一个好的课程** — 有许多关于数据科学的好的在线课程，你可以加入它们向像[吴恩达](https://medium.com/u/592ce2a67248?source=post_page-----2893169ddf6b--------------------------------)这样的专家学习，如果你需要推荐，你可以在这里找到一些[最佳数据科学课程](https://dev.to/javinpaul/top-online-courses-to-learn-data-science-and-machine-learning-for-beginners-best-of-lot-37k8)。
 
-**<https://dev.to/javinpaul/top-online-courses-to-learn-data-science-and-machine-learning-for-beginners-best-of-lot-37k8>  
+<https://dev.to/javinpaul/top-online-courses-to-learn-data-science-and-machine-learning-for-beginners-best-of-lot-37k8>
 
-**数据科学家的薪资范围:**初级数据科学专业人员的起薪为 **$165，000** 。而有经验的专业人士的平均工资要高得多，为 25 万美元。
+**数据科学家的薪资范围：** 初级数据科学专业人员的起薪为 **$165,000**。而有经验的专业人士的平均工资要高得多，为 25 万美元。
 
-# 摘要-
+# 摘要
 
 2020 年对技术熟练的数据科学家有巨大的需求，如果你期待成为一名数据科学家，这是一个完美的时机，每个数据驱动的组织都希望最大化他们的利益，为此需要具备相关技能的专门领导。我们可以说，数据科学家的未来是安全的、光明的、吉祥的！
 
@@ -75,4 +76,4 @@
 *   [学习高级数据科学的前 5 门课程](https://hackernoon.com/top-5-data-science-and-machine-learning-course-for-programmers-e724cfb9940a)
 *   [初学者学习 Python 的 10 门免费课程](https://hackernoon.com/10-free-python-programming-courses-for-beginners-to-learn-online-38312f3b9912)
 
-感谢您阅读本文。如果你喜欢这些用 Python 进行数据分析的熊猫在线课程，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言**
+感谢您阅读本文。如果你喜欢这些用 Python 进行数据分析的熊猫在线课程，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言

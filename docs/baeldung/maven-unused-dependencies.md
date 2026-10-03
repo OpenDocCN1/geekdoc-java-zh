@@ -1,16 +1,17 @@
+
 # 查找未使用的 Maven 依赖项
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/maven-unused-dependencies>
 
-## 1.概观
+## 1. 概观
 
 当使用 Maven 管理我们的项目依赖关系时，我们可能会忘记在我们的应用程序中使用了哪些依赖关系。
 
 在这个简短的教程中，我们将介绍如何使用 [Maven 依赖插件](https://web.archive.org/web/20221205215412/https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin) ，这个插件可以帮助我们找到项目中未使用的依赖项。
 
-## 2.项目设置
+## 2. 项目设置
 
-让我们从添加几个依赖项开始， `[slf4j-api](https://web.archive.org/web/20221205215412/https://mvnrepository.com/artifact/org.slf4j/slf4j-api)` (我们将使用的)和 `[common-collections](https://web.archive.org/web/20221205215412/https://mvnrepository.com/artifact/commons-collections/commons-collections)`(我们将不使用的):
+让我们从添加几个依赖项开始，`slf4j-api`(我们将使用的)和`common-collections`(我们将不使用的):
 
 ```java
 <dependencies>
@@ -27,7 +28,7 @@
 </dependencies> 
 ```
 
-我们可以访问[Maven 依赖插件](https://web.archive.org/web/20221205215412/https://search.maven.org/artifact/org.apache.maven.plugins/maven-dependency-plugin)，而无需在 pom 中指定它。在任何情况下，我们都可以使用`pom.xml`定义来指定版本，如果需要的话还可以指定一些属性:
+我们可以访问[Maven 依赖插件](https://web.archive.org/web/20221205215412/https://search.maven.org/artifact/org.apache.maven.plugins/maven-dependency-plugin)，而无需在`pom`中指定它。在任何情况下，我们都可以使用`pom.xml`定义来指定版本，如果需要的话还可以指定一些属性:
 
 ```java
 <build>
@@ -40,7 +41,7 @@
 </build>
 ```
 
-## 3.代码示例
+## 3. 代码示例
 
 现在我们已经设置好了项目，**让我们写一行代码，其中使用了我们之前定义的依赖项之一:**
 
@@ -50,11 +51,11 @@ public Logger getLogger() {
 }
 ```
 
-Slf4J 库中的`LoggerFactory`在方法**中返回，但是没有使用 common-collections 库，这使得它成为移除的候选对象。**
+`Slf4J`库中的`LoggerFactory`在方法**中返回，但是没有使用`common-collections`库，这使得它成为移除的候选对象。**
 
-## 4.查找未使用的依赖项
+## 4. 查找未使用的依赖项
 
-使用 Maven 依赖插件，我们可以找到项目中没有使用的依赖项。为此，我们调用插件的分析目标:
+使用 Maven 依赖插件，我们可以找到项目中没有使用的依赖项。为此，我们调用插件的`analyze`目标:
 
 ```java
 $ mvn dependency:analyze
@@ -72,7 +73,7 @@ $ mvn dependency:analyze
 
 对于我们项目中没有使用的每个依赖项，Maven 都会在分析报告中发出警告。
 
-## 5.指定所使用的依赖关系
+## 5. 指定所使用的依赖关系
 
 根据项目的性质，有时我们可能需要在运行时加载类，例如在面向插件的项目中。
 
@@ -94,7 +95,7 @@ $ mvn dependency:analyze
 
 再次运行`analyze`目标，我们看到报告中不再考虑未使用的依赖项。
 
-## 6.结论
+## 6. 结论
 
 在这个简短的教程中，我们学习了如何找到未使用的 maven 依赖项。定期检查未使用的依赖项是一个很好的实践，因为它提高了可维护性并减少了我们项目的库大小。
 

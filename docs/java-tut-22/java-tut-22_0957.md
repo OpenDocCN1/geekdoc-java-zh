@@ -1,3 +1,4 @@
+
 # 细则
 
 > 译文：[`docs.oracle.com/javase/tutorial/extra/generics/fineprint.html`](https://docs.oracle.com/javase/tutorial/extra/generics/fineprint.html)
@@ -10,7 +11,6 @@
 List <String> l1 = new ArrayList<String>();
 List<Integer> l2 = new ArrayList<Integer>();
 System.out.println(l1.getClass() == l2.getClass());
-
 ```
 
 你可能会倾向于说`false`，但你会错。它打印`true`，因为泛型类的所有实例具有相同的运行时类，而不考虑它们的实际类型参数。
@@ -27,7 +27,6 @@ System.out.println(l1.getClass() == l2.getClass());
 Collection cs = new ArrayList<String>();
 // *Illegal.*
 if (cs instanceof Collection<String>) { ... }
-
 ```
 
 同样，像这样的强制转换
@@ -35,7 +34,6 @@ if (cs instanceof Collection<String>) { ... }
 ```java
 // *Unchecked warning,*
 Collection<String> cstr = (Collection<String>) cs;
-
 ```
 
 给出一个未经检查的警告，因为这不是运行时系统会为你检查的内容。
@@ -47,7 +45,6 @@ Collection<String> cstr = (Collection<String>) cs;
 <T> T badCast(T t, Object o) {
     return (T) o;
 }
-
 ```
 
 类型变量在运行时不存在。这意味着它们在时间和空间上都没有性能开销，这很好。不幸的是，这也意味着你不能可靠地在强制转换中使用它们。
@@ -70,7 +67,6 @@ oa[1] = li;
 
 // *Run-time error: ClassCastException.*
 String s = lsa[1].get(0);
-
 ```
 
 如果允许参数化类型的数组，前面的例子将在没有任何未经检查警告的情况下编译，并在运行时失败。我们将类型安全作为泛型的主要设计目标。特别是，该语言被设计为保证**如果整个应用程序使用`javac -source 1.5`编译时没有未经检查的警告，那么它是类型安全的**。
@@ -88,7 +84,6 @@ li.add(new Integer(3));
 oa[1] = li;
 // *Run time error, but cast is explicit.*
 String s = (String) lsa[1].get(0);
-
 ```
 
 在下一个变体中，会导致编译时错误，我们避免创建元素类型为参数化的数组对象，但仍然使用具有参数化元素类型的数组类型。
@@ -96,7 +91,6 @@ String s = (String) lsa[1].get(0);
 ```java
 // *Error.*
 List<String>[] lsa = new List<?>[10];
-
 ```
 
 同样，尝试创建元素类型为类型变量的数组对象会导致编译时错误：
@@ -105,7 +99,6 @@ List<String>[] lsa = new List<?>[10];
 <T> T[] makeArray(T t) {
     return new T[100]; // *Error.*
 }
-
 ```
 
 由于类型变量在运行时不存在，无法确定实际的数组类型。

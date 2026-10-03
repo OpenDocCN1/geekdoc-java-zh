@@ -1,3 +1,4 @@
+
 # 元宇宙及其与区块链的联系
 
 > 原文：<https://medium.com/javarevisited/metaverse-and-how-it-links-to-the-blockchain-3441d9a4165c?source=collection_archive---------0----------------------->
@@ -38,11 +39,11 @@
 
 # 元宇宙的主要组成部分是什么？
 
-现代区块链的元宇宙项目是分散的。这些项目包括游戏平台、NFT 市场和像《我的世界》这样的虚拟产品开发平台。此外，一些独特的项目将所有这些平台结合成一个创新的元宇宙项目。然而，元宇宙的基本组成部分包括下列各项
+现代区块链的元宇宙项目是分散的。这些项目包括游戏平台、NFT 市场和像《我的世界》这样的虚拟产品开发平台。此外，一些独特的项目将所有这些平台结合成一个创新的元宇宙项目。然而，元宇宙的基本组成部分包括下列各项：
 
 *   需要一个高带宽的计算机网络来托管元宇宙，因为它的运作不受任何中央机构的控制，能够进行分散的数据传输，以实现稳定和实时的连接。
-*   针对图像、视频、文本、音频、3D 项目、3D 场景等媒体的开放和互操作标准
-*   开放编程语言标准，如 HTML、JavaScript、WebXR、WebAssembly、WebGPU 着色器语言等。
+*   针对图像、视频、文本、音频、3D 项目、3D 场景等媒体的开放和互操作标准。
+*   开放编程语言标准，如 `HTML`、`JavaScript`、`WebXR`、`WebAssembly`、`WebGPU` 着色器语言等。
 *   扩展现实(XR)硬件，如 VR 耳机、智能眼镜、Omni 跑步机、工业摄像机、扫描传感器和其他 VR、AR 和 MR 设备，需要将用户带到元宇宙的虚拟空间。
 *   区块链技术和智能合同的透明度，审查抵抗的好处，和无许可交易。
 *   计算能力执行速度和准确性数据处理、人工智能和投影任务。
@@ -55,13 +56,13 @@
 
 [![](img/a2d96025f6bfef578894c9ce2f981785.png)](https://javarevisited.blogspot.com/2021/12/top-5-courses-to-learn-about-nfts-non.html)
 
-为了成功执行您的项目，选择一个了解最新区块链技术的开发人员团队，如 [NFTs](https://javarevisited.blogspot.com/2021/12/top-5-courses-to-learn-about-nfts-non.html) 、加密、3D 开发工具和开发虚拟空间的技能。此外，以下是设计、开发和执行您的理想元宇宙项目所需的一些基本开发服务。
+为了成功执行您的项目，选择一个了解最新区块链技术的开发人员团队，如 [NFTs](https://javarevisited.blogspot.com/2021/12/top-5-courses-to-learn-about-nfts-non.html) 、加密、3D 开发工具和开发虚拟空间的技能。此外，以下是设计、开发和执行您的理想元宇宙项目所需的一些基本开发服务：
 
 *   分散的元宇宙平台。
-*   元宇宙移动和网络响应应用
-*   三维空间开发
-*   [不可替代的令牌-](https://javarevisited.blogspot.com/2021/12/top-5-courses-to-learn-about-nfts-non.html) 元宇宙上的创造与整合
-*   [元宇宙市场发展](https://www.leewayhertz.com/metaverse-development-company/)
+*   元宇宙移动和网络响应应用。
+*   三维空间开发。
+*   [不可替代的令牌](https://javarevisited.blogspot.com/2021/12/top-5-courses-to-learn-about-nfts-non.html) — 元宇宙上的创造与整合。
+*   [元宇宙市场发展](https://www.leewayhertz.com/metaverse-development-company/)。
 *   Metaspace 营销平台。
 
 # 最后的话

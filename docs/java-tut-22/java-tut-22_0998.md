@@ -1,3 +1,4 @@
+
 # 课程：LDAP 用户的高级主题
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/ldap/index.html`](https://docs.oracle.com/javase/tutorial/jndi/ldap/index.html)

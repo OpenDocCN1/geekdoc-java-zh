@@ -1,3 +1,4 @@
+
 # Spring Boot SLF4j 回溯示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-boot-slf4j-logging-example/>
@@ -6,26 +7,26 @@
 
 在本教程中，我们将向您展示如何在 Spring Boot 框架中使用 [Logback](http://web.archive.org/web/20220815221140/https://logback.qos.ch/) 。
 
-使用的技术:
+使用的技术：
 
-*   Spring Boot 2.1.2 .版本
-*   弹簧 5.1.4 释放
-*   回溯 1.2.3
-*   maven3
-*   Java 8
+- Spring Boot 2.1.2 .版本
+- 弹簧 5.1.4 释放
+- 回溯 1.2.3
+- maven3
+- Java 8
 
-## 1.项目目录
+## 1. 项目目录
 
 ![project directory](img/1d1fe8f0f83282ad5295092e7d861927.png)
 
-## 2.专家
+## 2. 专家
 
 在 Spring Boot，Logback 是默认的日志框架，只需添加`spring-boot-starter-web`，它将引入`logback`依赖项。
 
-pom.xml
+`pom.xml`
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project  
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
@@ -80,23 +81,23 @@ pom.xml
             </plugin>
         </plugins>
     </build>
-</project> 
+</project>
 ```
 
 显示项目依赖关系。
 
 ```java
- $ mvn dependency:tree
+$ mvn dependency:tree
 
 +- org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE:compile
 [INFO] |  +- org.springframework.boot:spring-boot-starter:jar:2.1.2.RELEASE:compile
 [INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:2.1.2.RELEASE:compile
 [INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.2.3:compile
-[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.2.3:compile 
+[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.2.3:compile
 ```
 
 ```java
- $ mvn dependency:tree
+$ mvn dependency:tree
 
 org.springframework.boot:spring-boot-slf4j:jar:1.0
 [INFO] +- org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE:compile
@@ -141,17 +142,17 @@ org.springframework.boot:spring-boot-slf4j:jar:1.0
 [INFO] |  \- org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.2.RELEASE:compile
 [INFO] \- org.springframework.boot:spring-boot-devtools:jar:2.1.2.RELEASE:compile (optional)
 [INFO]    +- org.springframework.boot:spring-boot:jar:2.1.2.RELEASE:compile
-[INFO]    \- org.springframework.boot:spring-boot-autoconfigure:jar:2.1.2.RELEASE:compile 
+[INFO]    \- org.springframework.boot:spring-boot-autoconfigure:jar:2.1.2.RELEASE:compile
 ```
 
-## 3.应用程序.属性
+## 3. 应用程序.属性
 
 3.1 在`application.properties`中配置记录
 
-application.properties
+`application.properties`
 
 ```java
- # logging level
+# logging level
 logging.level.org.springframework=ERROR
 logging.level.com.mkyong=DEBUG
 
@@ -169,84 +170,51 @@ logging.pattern.console=%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n
 ##spring.profiles.active=prod
 
 # root level
-#logging.level.=INFO 
+#logging.level.=INFO
 ```
 
 3.2 这相当于 YAML 格式。
 
-application.yml
+`application.yml`
 
 ```java
- logging:
+logging:
   level:
     org.springframework: ERROR
     com.mkyong: DEBUG
   pattern:
     console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
     file: "%d %p %c{1.} [%t] %m%n"
-  file: app.log 
+  file: app.log
 ```
 
-## 4.logback.xml
+## 4. logback.xml
 
 上面的日志配置对于开发来说已经足够了。对于生产，我们需要更多的日志功能，如文件滚动或 SMTP。在 Spring Boot，我们仍然允许通过标准`logback.xml`配置回退
 
-![project directory](img/891a4ee50424ba819aa5ebcf9de4b0cc.png)logback.xml
+![project directory](img/891a4ee50424ba819aa5ebcf9de4b0cc.png)`logback.xml`
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
-<configuration>
 
-    <property name="HOME_LOG" value="logs/app.log"/>
 
-    <appender name="FILE-ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${HOME_LOG}</file>
-
-        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>logs/archived/app.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
-            <!-- each archived file, size max 10MB -->
-            <maxFileSize>10MB</maxFileSize>
-            <!-- total size of all archive files, if total size > 20GB, 
-				it will delete old archived file -->
-            <totalSizeCap>20GB</totalSizeCap>
-            <!-- 60 days to keep -->
-            <maxHistory>60</maxHistory>
-        </rollingPolicy>
-
-        <encoder>
-            <pattern>%d %p %c{1.} [%t] %m%n</pattern>
-        </encoder>
-    </appender>
-
-    <logger name="com.mkyong" level="debug" additivity="false">
-        <appender-ref ref="FILE-ROLLING"/>
-    </logger>
-
-    <root level="error">
-        <appender-ref ref="FILE-ROLLING"/>
-    </root>
-
-</configuration> 
-```
-
-## 5.按剖面进行 Spring Boot 测井
+## 5. 按剖面进行 Spring Boot 测井
 
 **Note**
+
 Read this – [Profile-specific configuration](http://web.archive.org/web/20220815221140/https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-logging.html#_profile_specific_configuration)
 
 为了利用 Spring Boot 提供的模板特性，我们可以在类路径的根目录下创建一个`logback-spring.xml`。
 
 ![project directory](img/e08e1a42defd3c9b2000737c19275303.png)
 
-在下面的配置中:
+在下面的配置中：
 
-*   如果没有活动的配置文件(默认)，则记录到控制台。
-*   如果配置文件是`prod`，记录到一个滚动文件。
+- 如果没有活动的配置文件（默认），则记录到控制台。
+- 如果配置文件是`prod`，记录到一个滚动文件。
 
-logback-spring.xml
+`logback-spring.xml`
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <include resource="org/springframework/boot/logging/logback/defaults.xml" />
 
@@ -285,26 +253,26 @@ logback-spring.xml
         </root>
     </springProfile>
 
-</configuration> 
+</configuration>
 ```
 
 定义一个`spring.profiles.active`属性来设置当前活动的配置文件。
 
-application.properties
+`application.properties`
 
-```java
- ## if no active profile, default is 'default'
-spring.profiles.active=prod 
+```properties
+## if no active profile, default is 'default'
+spring.profiles.active=prod
 ```
 
-## 6.你好 Logback
+## 6. 你好 Logback
 
 6.1 一个简单的 Spring MVC web 应用程序，记录一些东西。
 
-HelloController.java
+`HelloController.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -332,15 +300,15 @@ public class HelloController {
         return "index"; // index.html
     }
 
-} 
+}
 ```
 
 6.2 模板
 
-src/resources/templates/index.html
+`src/resources/templates/index.html`
 
-```java
- <!DOCTYPE HTML>
+```html
+<!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Spring Boot SLF4j Logback</title>
@@ -354,27 +322,27 @@ src/resources/templates/index.html
 </ul>
 
 </body>
-</html> 
+</html>
 ```
 
 6.3 CSS
 
-src/resources/static/css/main.css
+`src/resources/static/css/main.css`
 
-```java
- h1{
+```css
+h1{
 	color:#0000FF;
-} 
+}
 ```
 
-## 7.演示
+## 7. 演示
 
 7.1 启动 Spring Boot
 
-StartWebApplication.java
+`StartWebApplication.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -386,32 +354,35 @@ public class StartWebApplication {
 		SpringApplication.run(StartWebApplication.class, args);
 	}
 
-} 
+}
 ```
 
 *http://localhost:8080*
 
-![demo](img/83cb01083efe69ec100c0a5c10dfe9a5.png)Terminal
+![demo](img/83cb01083efe69ec100c0a5c10dfe9a5.png)
 
-```java
- 15:15:11.588 [http-nio-8080-exec-1] DEBUG com.mkyong.HelloController - Hello from Logback [1, 2, 3, 4, 5] 
+Terminal
+
+```text
+15:15:11.588 [http-nio-8080-exec-1] DEBUG com.mkyong.HelloController - Hello from Logback [1, 2, 3, 4, 5]
 ```
 
 ## 下载源代码
 
-$ git clone [https://github.com/mkyong/spring-boot.git](http://web.archive.org/web/20220815221140/https://github.com/mkyong/spring-boot.git)
+```bash
+$ git clone https://github.com/mkyong/spring-boot.git
 $ cd logging-slf4j-logback
 $ mvn spring-boot:run
+```
 
 访问 *localhost:8080*
+
 查看控制台记录信息。
 
 ## 参考
 
-*   [Spring Boot 测井](http://web.archive.org/web/20220815221140/https://docs.spring.io/spring-boot/docs/current/reference/html/howto-logging.html)
-*   [回溯项目](http://web.archive.org/web/20220815221140/https://logback.qos.ch/)
-*   stack overflow–Spring Boot:我如何用 application.properties 设置日志级别？
-*   [SLF4J 后勤指南](http://web.archive.org/web/20220815221140/https://www.mkyong.com/logging/slf4j-logback-tutorial/)
-*   [logback.xml 示例](/web/20220815221140/https://mkyong.com/logging/logback-xml-example/)
-
-<input type="hidden" id="mkyong-current-postId" value="14263">
+- [Spring Boot 测井](http://web.archive.org/web/20220815221140/https://docs.spring.io/spring-boot/docs/current/reference/html/howto-logging.html)
+- [回溯项目](http://web.archive.org/web/20220815221140/https://logback.qos.ch/)
+- stack overflow–Spring Boot:我如何用 application.properties 设置日志级别？
+- [SLF4J 后勤指南](http://web.archive.org/web/20220815221140/https://www.mkyong.com/logging/slf4j-logback-tutorial/)
+- [logback.xml 示例](/web/20220815221140/https://mkyong.com/logging/logback-xml-example/)

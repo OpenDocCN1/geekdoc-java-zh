@@ -1,13 +1,14 @@
+
 # Java——如何打印金字塔
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/java-how-to-print-a-pyramid/>
 
 一个 Java 例子，打印半金字塔和全金字塔，好玩。
 
-CreatePyramid.java
+`CreatePyramid.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.Collections;
 
@@ -61,13 +62,13 @@ public class CreatePyramid {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- 1\. Half Pyramid
+1\. Half Pyramid
 
 *
 **
@@ -102,7 +103,6 @@ public class CreatePyramid {
 
 ## 参考
 
-1.  [collections . n copies JavaDoc](http://web.archive.org/web/20221225035539/https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#nCopies-int-T-)
-2.  [Python–打印金字塔](http://web.archive.org/web/20221225035539/http://www.mkyong.com/python/python-how-to-print-a-pyramid/)
+1. [`Collections.nCopies()` JavaDoc](http://web.archive.org/web/20221225035539/https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#nCopies-int-T-)
 
-<input type="hidden" id="mkyong-current-postId" value="14631">
+2. [Python–打印金字塔](http://web.archive.org/web/20221225035539/http://www.mkyong.com/python/python-how-to-print-a-pyramid/)

@@ -1,3 +1,4 @@
+
 # 2023 年初学游戏开发我最喜欢的免费课程
 
 > 原文：<https://medium.com/javarevisited/my-favorite-free-courses-to-learn-game-development-for-beginners-f7615e26f675?source=collection_archive---------0----------------------->
@@ -6,9 +7,9 @@
 
 [![](img/b31dbd2e59e22f04a7e628766fdf24a9.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fintroduction-to-game-development-with-unity%2F)
 
-如果你是一名对游戏开发充满热情的程序员或计算机科学毕业生，想要成为一名游戏机、 [Android](https://javarevisited.blogspot.com/2017/12/top-5-android-online-training-courses-for-Java-developers.html) 或 [iOS](https://javarevisited.blogspot.com/2019/01/top-5-ios-developer-course-to-learn-ios.html) 设备的游戏开发人员，并正在寻找一些优秀的课程开始，那么你来对地方了。
+如果你是一名对游戏开发充满热情的程序员或计算机科学毕业生，想要成为一名游戏机、[Android](https://javarevisited.blogspot.com/2017/12/top-5-android-online-training-courses-for-Java-developers.html) 或 [iOS](https://javarevisited.blogspot.com/2019/01/top-5-ios-developer-course-to-learn-ios.html) 设备的游戏开发人员，并正在寻找一些优秀的课程开始，那么你来对地方了。
 
-在这篇文章中，我将分享一些最好的游戏开发课程，这些课程完全免费使用 [Unity](/javarevisited/7-best-courses-to-learn-unity-for-game-development-in-2020-99f870d88e5e) 、Corona 和 LibGDX 这三个最受程序员和游戏开发者欢迎的游戏引擎。
+在这篇文章中，我将分享一些最好的游戏开发课程，这些课程完全免费使用 [Unity](/javarevisited/7-best-courses-to-learn-unity-for-game-development-in-2020-99f870d88e5e)、Corona 和 LibGDX 这三个最受程序员和游戏开发者欢迎的游戏引擎。
 
 而 LibGDX 是基于 Java 的，Unity 是基于 T2 的，但可能是目前最流行的游戏引擎。Unity 游戏引擎既强大又免费，非常适合用于游戏开发。如果你不知道，Unity 是用来创建 Pokemon Go 和许多其他畅销手机游戏的同一款软件！
 
@@ -16,9 +17,9 @@
 
 如果你针对的是 [Android](/hackernoon/top-5-courses-to-learn-android-for-java-programmers-667e03d995b4) 和 [iOS](/javarevisited/top-5-online-courses-to-learn-ios-12-swift-in-2019-a35ae1be7b2b?source=---------22------------------) 设备，也可以使用 Corona 游戏引擎。我还在这个列表中加入了一门免费的课程，学习使用 Corona 进行游戏开发。将热门游戏发布到 iOS 应用商店或 Google Play 商店时，游戏开发既有趣又有回报。尽管如此，最重要的是，它还教会你如何编程，这就是为什么我建议任何学习编码或编程的人开始开发游戏。它在过去对我构建编码和算法技能帮助很大，也将对你有所帮助。
 
-顺便说一句，如果你是游戏开发领域的新手，想要学习游戏开发人员应该了解的关于 C#和 Unity 的一切，没有比 [**本·特里斯特姆**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Funitycourse%2F)**[和里克·戴维森](https://medium.com/u/3f039b8ef61f?source=post_page-----f7615e26f675--------------------------------)[撰写的《C# Unity 开发人员指南》](https://medium.com/u/faedc4a0f5d7?source=post_page-----f7615e26f675--------------------------------)** 更好的课程了。它不是免费的，但是完全值得你花时间和金钱，已经有超过 35 万人加入了这个课程
+顺便说一句，如果你是游戏开发领域的新手，想要学习游戏开发人员应该了解的关于 C# 和 Unity 的一切，没有比 [**本·特里斯特姆**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Funitycourse%2F)**[和里克·戴维森](https://medium.com/u/3f039b8ef61f?source=post_page-----f7615e26f675--------------------------------)[撰写的《C# Unity 开发人员指南》](https://medium.com/u/faedc4a0f5d7?source=post_page-----f7615e26f675--------------------------------)** 更好的课程了。它不是免费的，但是完全值得你花时间和金钱，已经有超过 35 万人加入了这个课程
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Funitycourse%2F>  
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Funitycourse%2F>
 
 # 2023 年学习游戏开发的 10 门 Udemy 免费课程
 
@@ -110,20 +111,22 @@
 
 ## 8.[用画布上的 JavaScript 编写你的第一个游戏:街机经典](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fcode-your-first-game%2F)
 
+
+
 这是 Udemy 上的一门免费在线课程，将教你如何使用 JavaScript 创建街机游戏。这个课程是完全免费的，你只需要一个免费的 Udemy 帐户就可以参加这个课程。
 
-以下是您将在本课程中学到的重要内容:
+以下是您将在本课程中学到的重要内容：
 
-1.  如何显示、定位和移动复古和原型游戏的填充形状
-2.  如何在游戏空间中移动球，使其从边界反弹
-3.  如何处理实时鼠标输入
-4.  如何检测和响应简单的碰撞
-5.  如何编写非常基础的人工智能程序
-6.  如何在比赛中保持和显示分数
+1. 如何显示、定位和移动复古和原型游戏的填充形状
+2. 如何在游戏空间中移动球，使其从边界反弹
+3. 如何处理实时鼠标输入
+4. 如何检测和响应简单的碰撞
+5. 如何编写非常基础的人工智能程序
+6. 如何在比赛中保持和显示分数
 
-这个课程还会教你一些东西，比如这种风格的经典游戏和不好玩的游戏之间的区别
+这个课程还会教你一些东西，比如这种风格的经典游戏和不好玩的游戏之间的区别。
 
-**这是加入本课程的链接**——[用画布上的 JavaScript 编写你的第一个游戏:街机经典](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fcode-your-first-game%2F)
+**这是加入本课程的链接**——[用画布上的 JavaScript 编写你的第一个游戏：街机经典](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fcode-your-first-game%2F)
 
 [![](img/6578eefbd621b5b0870eabb886bc4c39.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fcode-your-first-game%2F)
 
@@ -131,29 +134,29 @@
 
 这个免费的 HTML5 游戏开发课程从 HTML 5 中的 web 开发的快速概述开始，并向您展示所有现代页面中使用的基本 web 框架。
 
-以下是你将在这门免费课程中学到的关键技能:
+以下是你将在这门免费课程中学到的关键技能：
 
-1.  如何用 HTML 建立一个基本的网页
-2.  如何使用 CSS 为你的页面添加必要的样式
-3.  理解使用 JavaScript 编程的主要概念(变量、条件、循环、分支、函数和数组)
-4.  如何使用 JavaScript 和文档对象模型构建一个基本的交互式网页
+1. 如何用 HTML 建立一个基本的网页
+2. 如何使用 CSS 为你的页面添加必要的样式
+3. 理解使用 JavaScript 编程的主要概念（变量、条件、循环、分支、函数和数组）
+4. 如何使用 JavaScript 和文档对象模型构建一个基本的交互式网页
 
-该课程还将教你如何使用免费的 simpleGame.js 游戏库，并使用在线练习工具开始在线构建自己的游戏！
+该课程还将教你如何使用免费的 `simpleGame.js` 游戏库，并使用在线练习工具开始在线构建自己的游戏！
 
 **这里是加入本课程的链接** — [HTML5 简单游戏编程准备](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ffree-prep-for-html5-game-development%2F)
 
 [![](img/be3b21f2a8aeefadba8fdaaab65255bd.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ffree-prep-for-html5-game-development%2F)
 
-## 10.[用 Phaser 2 制作游戏。X](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmaking-games-with-phaser%2F)
+## 10. [用 Phaser 2 制作游戏。X](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmaking-games-with-phaser%2F)
 
 这是另一个免费的 Udemy 课程，涵盖了 JavaScript 和 Phaser 的基础知识。**你不需要有任何编码经验！你需要的只是一台电脑、决心和求知欲。**
 
-以下是您将在这个免费游戏开发课程中学到的主要内容:
+以下是您将在这个免费游戏开发课程中学到的主要内容：
 
-1.  学习 JavaScript 和 Phaser 的基础知识！
-2.  理解 JavaScript 的基础知识
-3.  了解使用 Github 的基础知识
-4.  如何用 Phaser 创建游戏
+1. 学习 JavaScript 和 Phaser 的基础知识！
+2. 理解 JavaScript 的基础知识
+3. 了解使用 Github 的基础知识
+4. 如何用 Phaser 创建游戏
 
 课程结束时，你将能够创建自己的视频游戏！
 
@@ -161,17 +164,17 @@
 
 [![](img/6dc18c2ac664a56c57f312b3f1ab1b61.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmaking-games-with-phaser%2F)
 
-## 11.[html 5 游戏开发简介](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fintro-to-html5-game-development%2F)
+## 11. [html 5 游戏开发简介](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fintro-to-html5-game-development%2F)
 
-这是另一个免费学习 HTML 5 进行游戏开发的课程。你不需要任何编程经验，因为本课程将教你如何用 HTML5 编写手机游戏，并将其发布到亚马逊应用商店
+这是另一个免费学习 HTML 5 进行游戏开发的课程。你不需要任何编程经验，因为本课程将教你如何用 HTML5 编写手机游戏，并将其发布到亚马逊应用商店。
 
-在这个免费的在线培训课程中，您将通过创建您的第一个超级马里奥风格的平台游戏来学习 **HTML5 游戏开发**的基础知识。所有这些都使用 100%免费的工具和框架！
+在这个免费的在线培训课程中，您将通过创建您的第一个超级马里奥风格的平台游戏来学习 **HTML5 游戏开发**的基础知识。所有这些都使用 100% 免费的工具和框架！
 
-以下是您将在本课程中学到的重要内容:
+以下是您将在本课程中学到的重要内容：
 
-1.  了解如何使用 Quinus HTML5 框架创建简单的 2D 游戏
-2.  了解如何使用平铺创建级别
-3.  了解如何将 HTML5 游戏发布到亚马逊应用商店
+1. 了解如何使用 Quinus HTML5 框架创建简单的 2D 游戏
+2. 了解如何使用平铺创建级别
+3. 了解如何将 HTML5 游戏发布到亚马逊应用商店
 
 该课程使用沈煜伦 HTML5 游戏框架，这是一个轻量级但功能强大的 JavaScript 库，用于创建专业的 2D 游戏。这个课程是由 HTML5 开发者和 ZENVA 创始人 Pablo Farias Navarro 创建的。
 
@@ -179,13 +182,13 @@
 
 [![](img/b4eb9da780fe36f899ad0ff116054843.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fintro-to-html5-game-development%2F)
 
-## 12.[面向年轻人的刮刮乐游戏编程](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fscratch-game-programming%2F)
+## 12. [面向年轻人的刮刮乐游戏编程](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fscratch-game-programming%2F)
 
 如果你不知道，麻省理工学院创造了一种特殊的编程语言来教授编码，它被称为 Scratch，它在创建游戏方面非常受欢迎。
 
-这个课程为想要帮助孩子学习编程的孩子&青少年或成年人提供了一个有趣的编程指南。Scratch 是当今最好的儿童教育编程软件。使用 Scratch，您可以创建游戏和交互式艺术项目，同时获得许多乐趣！
+这个课程为想要帮助孩子学习编程的孩子 & 青少年或成年人提供了一个有趣的编程指南。Scratch 是当今最好的儿童教育编程软件。使用 Scratch，您可以创建游戏和交互式艺术项目，同时获得许多乐趣！
 
-这个免费课程(和补充书籍)涵盖了几个经典游戏的创作，如碎砖，蛇，水果忍者。你不再需要记忆一系列编程概念，而是在制作这些游戏的过程中学会编程概念。
+这个免费课程（和补充书籍）涵盖了几个经典游戏的创作，如碎砖、蛇、水果忍者。你不再需要记忆一系列编程概念，而是在制作这些游戏的过程中学会编程概念。
 
 讲座跟随 6 个游戏和计算机艺术项目，以及关于调试和实验 Scratch 的附加内容。
 
@@ -197,20 +200,21 @@
 
 虽然，如果你想用 Java 为桌面和 Android 平台创建游戏，你也可以加入 Android LibGDX 游戏开发大师班，用 LibGDX 游戏开发框架用 Java 创建游戏。当你的游戏在 iOS 商店、Google Play 商店或像脸书这样的网络上大受欢迎时，游戏开发既有趣又有回报。
 
-其他**编程课程**你可能喜欢的
-[10 门免费数据结构和算法课程](http://www.java67.com/2019/02/top-10-free-algorithms-and-data.html)
-[2023 年 Web 开发者路线图](https://javarevisited.blogspot.com/2019/02/the-2019-web-developer-roadmap.html#axzz5gY01iIcw)
-[2023 年 DevOps 程序员路线图](https://javarevisited.blogspot.com/2018/09/the-2018-devops-roadmap-your-guide-to-become-DevOps-Engineer.html)
-[10 门框架 Java 和 Web 开发者应该学习的](https://javarevisited.blogspot.com/2018/01/10-frameworks-java-and-web-developers-should-learn.html)
-[10 门免费 Java 课程](http://www.java67.com/2018/08/top-10-free-java-courses-for-beginners-experienced-developers.html)
-[5 门免费课程 2023 年](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
-[2023 年学习 Scala 的 5 门免费课程](https://javarevisited.blogspot.com/2019/01/5-free-scala-programming-courses-for-java-programmers-learn-online.html)
-[2023 年 React JS 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
-[devo PS 工程师前 5 名免费 Kubernetes 课程](https://javarevisited.blogspot.com/2019/01/top-5-free-kubernetes-courses-for-DevOps-Engineer.html#axzz5d2bEyYmv)
-[2023 年学习 Maven 和 Jenkins 的 5 门免费课程](http://www.java67.com/2018/02/6-free-maven-and-jenkins-online-courses-for-java-developers.html)
+其他**编程课程**你可能喜欢的：
 
-感谢阅读本文至今。 如果你喜欢这些免费的游戏开发课程，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
+- [10 门免费数据结构和算法课程](http://www.java67.com/2019/02/top-10-free-algorithms-and-data.html)
+- [2023 年 Web 开发者路线图](https://javarevisited.blogspot.com/2019/02/the-2019-web-developer-roadmap.html#axzz5gY01iIcw)
+- [2023 年 DevOps 程序员路线图](https://javarevisited.blogspot.com/2018/09/the-2018-devops-roadmap-your-guide-to-become-DevOps-Engineer.html)
+- [10 门框架 Java 和 Web 开发者应该学习的](https://javarevisited.blogspot.com/2018/01/10-frameworks-java-and-web-developers-should-learn.html)
+- [10 门免费 Java 课程](http://www.java67.com/2018/08/top-10-free-java-courses-for-beginners-experienced-developers.html)
+- [5 门免费课程 2023 年](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
+- [2023 年学习 Scala 的 5 门免费课程](https://javarevisited.blogspot.com/2019/01/5-free-scala-programming-courses-for-java-programmers-learn-online.html)
+- [2023 年 React JS 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
+- [devo PS 工程师前 5 名免费 Kubernetes 课程](https://javarevisited.blogspot.com/2019/01/top-5-free-kubernetes-courses-for-DevOps-Engineer.html#axzz5d2bEyYmv)
+- [2023 年学习 Maven 和 Jenkins 的 5 门免费课程](http://www.java67.com/2018/02/6-free-maven-and-jenkins-online-courses-for-java-developers.html)
 
-**p . s .**——如果你是游戏开发领域的新手，并且想学习游戏开发人员应该了解的关于 C#和 Unity 的所有知识，没有比 Ben Tristem 和 Rick Davidson 的《C# Unity 开发人员指南》 更好的课程了。你也应该检查一下。
+感谢阅读本文至今。如果你喜欢这些免费的游戏开发课程，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Funitycourse%2F> 
+**p . s .**——如果你是游戏开发领域的新手，并且想学习游戏开发人员应该了解的关于 C# 和 Unity 的所有知识，没有比 Ben Tristem 和 Rick Davidson 的《C# Unity 开发人员指南》更好的课程了。你也应该检查一下。
+
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Funitycourse%2F>

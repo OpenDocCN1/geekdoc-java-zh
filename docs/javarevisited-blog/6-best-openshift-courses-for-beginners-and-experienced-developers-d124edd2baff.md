@@ -1,3 +1,4 @@
+
 # 2023 年初学者学习 OpenShift 和容器的 6 门最佳课程
 
 > 原文：<https://medium.com/javarevisited/6-best-openshift-courses-for-beginners-and-experienced-developers-d124edd2baff?source=collection_archive---------0----------------------->
@@ -6,13 +7,13 @@
 
 [![](img/32a2e41e2a03eed4045eee310dcda23f.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fultimate-openshift-bootcamp-by-school-of-devops%2F)
 
-大家好，如果你想在 2023 年学习 RedHat Openshift 平台并寻找最好的 Openshift 课程，那么你来对地方了。在过去，我已经分享了 [**最佳 Docker 和 Kubernetes 课程**](/javarevisited/top-15-online-courses-to-learn-docker-kubernetes-and-aws-for-fullstack-developers-and-devops-d8cc4f16e773?source=collection_home---4------1-----------------------) ，在这篇文章中，我将分享 2023 年加入的最佳 Openshift 课程。
+大家好，如果你想在 2023 年学习 RedHat Openshift 平台并寻找最好的 Openshift 课程，那么你来对地方了。在过去，我已经分享了[最佳 Docker 和 Kubernetes 课程](/javarevisited/top-15-online-courses-to-learn-docker-kubernetes-and-aws-for-fullstack-developers-and-devops-d8cc4f16e773?source=collection_home---4------1-----------------------)，在这篇文章中，我将分享 2023 年加入的最佳 Openshift 课程。
 
 如果您在 DevOps 领域，那么您可能听说过 Openshift。我不知道 Openshift，但当我不得不在一个 Spring boot 项目上工作时，我不得不学习，这个项目部署在 OpenShift 平台上。
 
 不要担心，这并不是一件非常复杂的事情，如果你过去使用过 Docker 和 Kubernetes，那么你就会明白 Openshift 带来了什么。
 
-简而言之，OpenShift 是另一个完整的平台，类似于 [Docker](https://javarevisited.blogspot.com/2018/02/10-free-docker-container-courses-for-Java-Developers.html) 和 [Kubernetes](https://javarevisited.blogspot.com/2020/06/top-5-courses-to-learn-kubernetes-for-devops-and-certification.html#axzz6rQaZvLlb) ，有助于在 Java 世界中开发和部署[微服务](https://javarevisited.blogspot.com/2018/02/top-5-spring-microservices-courses-with-spring-boot-and-spring-cloud.html)。您只需指向您的应用程序代码，Openshift 就会构建并部署它，并考虑高可用性、容错、可伸缩性、自我修复和可靠性。
+简而言之，OpenShift 是另一个完整的平台，类似于 [Docker](https://javarevisited.blogspot.com/2018/02/10-free-docker-container-courses-for-Java-Developers.html) 和 [Kubernetes](https://javarevisited.blogspot.com/2020/06/top-5-courses-to-learn-kubernetes-for-devops-and-certification.html#axzz6rQaZvLlb)，有助于在 Java 世界中开发和部署[微服务](https://javarevisited.blogspot.com/2018/02/top-5-spring-microservices-courses-with-spring-boot-and-spring-cloud.html)。您只需指向您的应用程序代码，Openshift 就会构建并部署它，并考虑高可用性、容错、可伸缩性、自我修复和可靠性。
 
 它为您带来所有的魔力，除此之外，Red Hat OpenShift 是领先的混合云、企业 Kubernetes 应用程序平台，受到 1000 多家组织的信任。
 
@@ -48,15 +49,13 @@ OpenShift 的目标是为开发人员和系统管理员开发、部署和运行�
 
 我不确定是谁整理了大部分的讲座(我怀疑是红帽)，但是从他的 [**Kubernetes/Docker 课程**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-docker%2F) 中学习 Mumshad 自己的材料是一种可爱的接触。如果你是 OpenShift 的新手，但有一些其他技术的背景，这对你来说是一个极好的入门课程。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-docker%2F>  
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-docker%2F>
 
 ## 2.[开发者实用 OpenShift 新课程 2023](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fopenshift-for-developers%2F)【Udemy】
 
-这是一个新的 Udemy 课程，为开发者学习 OpenShift。在本课程中，您将通过学习如何使用 15 种 OpenShift 资源
+这是一个新的 Udemy 课程，为开发者学习 OpenShift。在本课程中，您将通过学习如何使用 15 种 OpenShift 资源来学习和掌握 OpenShift 应用程序的开发和部署。本课程长达 6 个小时，为开发人员提供了一个清晰明了的 OpenShift 介绍。我非常喜欢这门课。讲课可以理解，动手练习也可以理解。
 
-来学习和掌握 OpenShift 应用程序的开发和部署。本课程长达 6 个小时，为开发人员提供了一个清晰明了的 OpenShift 介绍。我非常喜欢这门课。讲课可以理解，动手练习也可以理解。
-
-大部分概念都是基于 Docker 容器和 Kubernetes，这里不做解释，所以我发现先学习 [Docker](https://www.java67.com/2019/03/5-free-devops-courses-to-learn-jenkins.html) 和[Kubernetes](/javarevisited/7-free-online-courses-to-learn-kubernetes-in-2020-3b8a68ec7abc)s 非常有帮助。
+大部分概念都是基于 Docker 容器和 Kubernetes，这里不做解释，所以我发现先学习 [Docker](https://www.java67.com/2019/03/5-free-devops-courses-to-learn-jenkins.html) 和 [Kubernetes](/javarevisited/7-free-online-courses-to-learn-kubernetes-in-2020-3b8a68ec7abc) 非常有帮助。
 
 以下是您将在本课程中学到的重要内容:
 
@@ -114,50 +113,52 @@ OpenShift 的目标是为开发人员和系统管理员开发、部署和运行�
 
 在 [edX](https://javarevisited.blogspot.com/2021/05/top-10-edx-courses-and-certificates-for.html#axzz6v6xLSPvq) 上是免费课程，但如果需要证书，需要支付 99 美元，由同样对 OpenShift 容器平台开放的 Redhat 提供。
 
+
+
 **这是加入本课程的链接** — [集装箱、Kubernetes 和 Red Hat OpenShift 的基础知识](https://www.awin1.com/cread.php?awinmid=6798&awinaffid=631878&clickref=&p=%5B%5Bhttps%3A%2F%2Fwww.edx.org%2Fcourse%2Ffundamentals-of-containers-kubernetes-and-red-hat)
 
 [![](img/db786fc58786b4491288dd4c59d2fc6a.png)](https://www.awin1.com/cread.php?awinmid=6798&awinaffid=631878&clickref=&p=%5B%5Bhttps%3A%2F%2Fwww.edx.org%2Fcourse%2Ffundamentals-of-containers-kubernetes-and-red-hat)
 
-## 6.[介绍带有 Docker、Kubernetes & OpenShift](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fibm-containers-docker-kubernetes-openshift) 的集装箱
+## 6. [介绍带有 Docker、Kubernetes & OpenShift](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fibm-containers-docker-kubernetes-openshift) 的集装箱
 
-如果你正在寻找学习容器基础知识、Docker、Kubernetes 和 Openshift 的入门课程，那么这个 Coursera 课程是最适合你的。该课程由 IBM 提供，是 [IBM 全栈云开发人员专业证书](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=40328&murl=https%3A%2F%2Fwww.coursera.org%2Fprofessional-certificates%2Fibm-full-stack-cloud-developer)的一部分。
+如果你正在寻找学习容器基础知识、`Docker`、`Kubernetes` 和 `Openshift` 的入门课程，那么这个 Coursera 课程是最适合你的。该课程由 IBM 提供，是 [IBM 全栈云开发人员专业证书](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=40328&murl=https%3A%2F%2Fwww.coursera.org%2Fprofessional-certificates%2Fibm-full-stack-cloud-developer)的一部分。
 
-在本课程中，您将了解容器与虚拟机的不同之处。它还涵盖了容器在云计算中的重要性，以及相关技术的新兴生态系统，如 Docker、Kubernetes、Red Hat OpenShift 和 Istio。
+在本课程中，您将了解容器与虚拟机的不同之处。它还涵盖了容器在云计算中的重要性，以及相关技术的新兴生态系统，如 `Docker`、`Kubernetes`、`Red Hat OpenShift` 和 `Istio`。
 
-在整个课程中，您将通过动手实验应用您所学的知识。从使用 [Docker](/javarevisited/5-best-docker-courses-for-java-and-spring-boot-developers-bbf01c5e6542) 开始，到使用 [Kubernetes](/javarevisited/10-best-kubernetes-courses-for-developers-and-devops-engineers-94c35cd3a2fd) 进行编排和扩展，以及使用 OpenShift 简化部署。
+在整个课程中，您将通过动手实验应用您所学的知识。从使用 [Docker](/javarevisited/5-best-docker-courses-for-java-and-spring-boot-developers-bbf01c5e6542) 开始，到使用 [Kubernetes](/javarevisited/10-best-kubernetes-courses-for-developers-and-devops-engineers-94c35cd3a2fd) 进行编排和扩展，以及使用 `OpenShift` 简化部署。
 
-这些实验是在 IBM Cloud 和 Skills Network 实验室环境中使用您的 web 浏览器执行的，这些环境免费提供给您。在项目中，在课程结束时，您将使用 OpenShift 构建一个容器映像，并在云上部署和扩展它。
+这些实验是在 IBM Cloud 和 Skills Network 实验室环境中使用您的 web 浏览器执行的，这些环境免费提供给您。在项目中，在课程结束时，您将使用 `OpenShift` 构建一个容器映像，并在云上部署和扩展它。
 
-总的来说，这是一门非常实用的初级课程，可以从头开始学习 Openshift。
+总的来说，这是一门非常实用的初级课程，可以从头开始学习 `Openshift`。
 
-**这是加入本课程的链接**——I[带码头工人的集装箱介绍，Kubernetes & OpenShift](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fibm-containers-docker-kubernetes-openshift)
+**这是加入本课程的链接** — [带码头工人的集装箱介绍，Kubernetes & OpenShift](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fibm-containers-docker-kubernetes-openshift)
 
 [![](img/de53ce4d295b276f95e3546e1b8e8ca3.png)](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fibm-containers-docker-kubernetes-openshift)
 
 顺便说一句，如果你觉得 Coursera 的课程和认证有用，那么我建议你加入 [**Coursera Plus**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus) ，它可以让你无限制地访问他们最受欢迎的课程、专业、专业证书和指导项目。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
-以上就是 2023 年学习 Openshift 容器的**最佳课程。在当今以云为中心的世界中，它是一个必不可少的工具，Java 开发人员应该学习它。OpenShift 是 Kubernetes 的封闭版本，帮助您扩展基于云的服务。**
+以上就是 2023 年学习 `Openshift` 容器的**最佳课程**。在当今以云为中心的世界中，它是一个必不可少的工具，Java 开发人员应该学习它。`OpenShift` 是 `Kubernetes` 的封闭版本，帮助您扩展基于云的服务。
 
-如果你想在 2023 年学习 OpenShift，那么这些在线课程可以很好地帮助你。它们既适合 DevOps 工程师，也适合 DevOps。我还为想要从头开始学习 Openshift 的初学者和有经验的开发人员提供了一些课程。
+如果你想在 2023 年学习 `OpenShift`，那么这些在线课程可以很好地帮助你。它们既适合 DevOps 工程师，也适合 DevOps。我还为想要从头开始学习 `Openshift` 的初学者和有经验的开发人员提供了一些课程。
 
 你可能喜欢的其他**开发运维、云计算和编程课程**
 
-*   [2023 年 DevOps 开发者路线图](/hackernoon/the-2018-devops-roadmap-31588d8670cb)
-*   [面向 DevOps 工程师的 5 门最佳 Kubernetes 课程](https://javarevisited.blogspot.com/2020/06/top-5-courses-to-learn-kubernetes-for-devops-and-certification.html)
-*   [面向 Java 和 DevOps 专业人员的 10 门免费 Docker 课程](https://javarevisited.blogspot.sg/2018/02/10-free-docker-container-courses-for-Java-Developers.html)
-*   [2023 年将加入的 13 个最佳 DevOps 课程](/javarevisited/13-best-courses-to-learn-devops-for-senior-developers-in-2020-a2997ff7c33c)
-*   [学习 Jenkins 自动化和开发运维的五大课程](https://javarevisited.blogspot.com/2018/09/top-5-jenkins-courses-for-java-and-DevOps-Programmers.html)
-*   [2023 年学习 Kubernetes 的 7 门免费在线课程](/javarevisited/7-free-online-courses-to-learn-kubernetes-in-2020-3b8a68ec7abc)
-*   [学习亚马逊网络服务我最喜欢的课程](https://javarevisited.blogspot.com/2020/05/top-5-amazon-web-services-aws-courses-for-beginners-and-experienced-programmers.html)
-*   [2023 年 Java 开发人员应该学习的 10 种工具](http://www.java67.com/2018/04/10-tools-java-developers-should-learn.html)
-*   [5 免费 Spring 框架和 Spring Boot 课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
-*   [面向 Java JEE 开发人员的 5 大 Hibernate 和 JPA 课程](http://javarevisited.blogspot.sg/2018/01/top-5-hibernate-and-jpa-courses-for-java-programmers-learn-online.html)
-*   [程序员学习 AWS 和云的 10 门免费课程](/javarevisited/top-10-courses-to-learn-amazon-web-services-aws-cloud-in-2020-best-and-free-317f10d7c21d)
+* [2023 年 DevOps 开发者路线图](/hackernoon/the-2018-devops-roadmap-31588d8670cb)
+* [面向 DevOps 工程师的 5 门最佳 Kubernetes 课程](https://javarevisited.blogspot.com/2020/06/top-5-courses-to-learn-kubernetes-for-devops-and-certification.html)
+* [面向 Java 和 DevOps 专业人员的 10 门免费 Docker 课程](https://javarevisited.blogspot.sg/2018/02/10-free-docker-container-courses-for-Java-Developers.html)
+* [2023 年将加入的 13 个最佳 DevOps 课程](/javarevisited/13-best-courses-to-learn-devops-for-senior-developers-in-2020-a2997ff7c33c)
+* [学习 Jenkins 自动化和开发运维的五大课程](https://javarevisited.blogspot.com/2018/09/top-5-jenkins-courses-for-java-and-DevOps-Programmers.html)
+* [2023 年学习 Kubernetes 的 7 门免费在线课程](/javarevisited/7-free-online-courses-to-learn-kubernetes-in-2020-3b8a68ec7abc)
+* [学习亚马逊网络服务我最喜欢的课程](https://javarevisited.blogspot.com/2020/05/top-5-amazon-web-services-aws-courses-for-beginners-and-experienced-programmers.html)
+* [2023 年 Java 开发人员应该学习的 10 种工具](http://www.java67.com/2018/04/10-tools-java-developers-should-learn.html)
+* [5 免费 Spring 框架和 Spring Boot 课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
+* [面向 Java JEE 开发人员的 5 大 Hibernate 和 JPA 课程](http://javarevisited.blogspot.sg/2018/01/top-5-hibernate-and-jpa-courses-for-java-programmers-learn-online.html)
+* [程序员学习 AWS 和云的 10 门免费课程](/javarevisited/top-10-courses-to-learn-amazon-web-services-aws-cloud-in-2020-best-and-free-317f10d7c21d)
 
 感谢您阅读本文。如果你喜欢这些*最好的 OpenShift 课程*，那么请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
-**附言——**如果你正在寻找学习 Openshift 的免费在线课程，那么你也可以在 Udemy 上查看 [**主 open shift——容器编排课程**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-openshift-quickly%2F) 。它是完全免费的，已经有超过 790 名学生加入了这门课程。
+**附言** — 如果你正在寻找学习 `Openshift` 的免费在线课程，那么你也可以在 Udemy 上查看 [**主 open shift——容器编排课程**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-openshift-quickly%2F) 。它是完全免费的，已经有超过 790 名学生加入了这门课程。
 
-<https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-openshift-quickly%2F> 
+<https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-openshift-quickly%2F>

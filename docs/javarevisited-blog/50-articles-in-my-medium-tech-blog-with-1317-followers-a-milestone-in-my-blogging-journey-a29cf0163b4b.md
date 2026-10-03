@@ -1,3 +1,4 @@
+
 # 我的媒体技术博客中有 50 篇文章，有 1373 名粉丝——这是我博客旅程中的一个里程碑
 
 > 原文：<https://medium.com/javarevisited/50-articles-in-my-medium-tech-blog-with-1317-followers-a-milestone-in-my-blogging-journey-a29cf0163b4b?source=collection_archive---------0----------------------->
@@ -20,7 +21,7 @@
 
 我的风格总是从基础开始阅读，然后深入，我在写作中也遵循同样的方式。我总是从基本的外行术语开始，然后在一篇文章中解释关于一个主题的一切。如果太大，我会做第二部分或第三部分。
 
-有些文章需要几个小时，有些需要几天，有些甚至需要几周。 我会查阅多方资料，收集知识，并确保在向观众展示之前，我彻底理解了这些知识。有时这个过程需要时间，但当我花时间提供一篇高质量的文章时，它会给我一种成就感。
+有些文章需要几个小时，有些需要几天，有些甚至需要几周。我会查阅多方资料，收集知识，并确保在向观众展示之前，我彻底理解了这些知识。有时这个过程需要时间，但当我花时间提供一篇高质量的文章时，它会给我一种成就感。
 
 作为一名作家，我总是乐于接受你诚实的反馈和批评。这将有助于我提高写作技巧，使我成为一名优秀的作家。赞赏让我有动力继续前进，但批评让我不断进步。所以我想在我的文章中同时拥有这两者。
 
@@ -40,67 +41,125 @@
 
 # 路线图文章
 
-  </javarevisited/how-to-become-a-senior-backend-developer-and-beyond-846e8a8ae4a0>  
+</javarevisited/how-to-become-a-senior-backend-developer-and-beyond-846e8a8ae4a0>
 
 # 与安全相关的文章
 
-</javarevisited/single-sign-on-sso-saml-oauth2-oidc-simplified-cf54b749ef39>  </javarevisited/what-are-jwt-tokens-and-their-different-forms-jws-and-jwe-bea92e61a6c2>  </javarevisited/what-is-http-http-s-ssl-passthrough-and-ssl-termination-fc729fe87fed>  
+</javarevisited/single-sign-on-sso-saml-oauth2-oidc-simplified-cf54b749ef39>
+
+</javarevisited/what-are-jwt-tokens-and-their-different-forms-jws-and-jwe-bea92e61a6c2>
+
+</javarevisited/what-is-http-http-s-ssl-passthrough-and-ssl-termination-fc729fe87fed>
 
 # 分布式系统
 
-</javarevisited/distributed-transaction-management-in-microservices-part-1-bb7dc1fbee9f>  </javarevisited/distributed-transaction-management-in-microservices-part-2-saga-pattern-53808a55e641>  <https://dineshchandgr.medium.com/what-are-message-queues-and-why-they-are-widely-used-in-distributed-systems-cf9735e9afd7>  
+</javarevisited/distributed-transaction-management-in-microservices-part-1-bb7dc1fbee9f>
+
+</javarevisited/distributed-transaction-management-in-microservices-part-2-saga-pattern-53808a55e641>
+
+<https://dineshchandgr.medium.com/what-are-message-queues-and-why-they-are-widely-used-in-distributed-systems-cf9735e9afd7>
 
 # 微服务
 
-</javarevisited/distributed-tracing-in-microservices-spring-boot-125272b58ad8>  </javarevisited/what-is-service-discovery-in-microservices-15a2333bc1db>  </javarevisited/do-you-know-about-the-12-factor-app-in-microservices-architecture-50bd34551bd8>  
+</javarevisited/distributed-tracing-in-microservices-spring-boot-125272b58ad8>
+
+</javarevisited/what-is-service-discovery-in-microservices-15a2333bc1db>
+
+</javarevisited/do-you-know-about-the-12-factor-app-in-microservices-architecture-50bd34551bd8>
 
 # gRPC 协议相关
 
-</javarevisited/everything-you-need-to-know-about-http-2-protocol-e64bfffafe47>  </javarevisited/what-are-protocol-buffers-and-why-they-are-widely-used-cbcb04d378b6>  </javarevisited/microservices-communication-using-grpc-protocol-dc3a2f8b648d>  
+</javarevisited/everything-you-need-to-know-about-http-2-protocol-e64bfffafe47>
+
+</javarevisited/what-are-protocol-buffers-and-why-they-are-widely-used-cbcb04d378b6>
+
+</javarevisited/microservices-communication-using-grpc-protocol-dc3a2f8b648d>
 
 ## GraphQL
 
-<https://dineshchandgr.medium.com/do-you-know-about-graphql-the-query-language-for-api-s-4038660865be>  <https://dineshchandgr.medium.com/how-to-use-graphql-with-spring-boot-7a4d66ed84d7>  
+<https://dineshchandgr.medium.com/do-you-know-about-graphql-the-query-language-for-api-s-4038660865be>
+
+<https://dineshchandgr.medium.com/how-to-use-graphql-with-spring-boot-7a4d66ed84d7>
 
 ## 贮藏
 
-</javarevisited/caching-things-every-programmer-must-know-28d4a7e8b9b1>  </javarevisited/what-is-redis-cache-and-how-to-use-it-in-spring-boot-using-spring-data-redis-d5ef9967f9e>  
+</javarevisited/caching-things-every-programmer-must-know-28d4a7e8b9b1>
+
+</javarevisited/what-is-redis-cache-and-how-to-use-it-in-spring-boot-using-spring-data-redis-d5ef9967f9e>
 
 # 反应式编程
 
-</javarevisited/what-is-reactive-programming-9cb913eea519>  </javarevisited/reactive-programming-in-java-rxjava-part-2-c1f37ac3282>  </javarevisited/reactive-programming-in-spring-boot-using-spring-webflux-framework-276bafd384f6>  
+</javarevisited/what-is-reactive-programming-9cb913eea519>
+
+</javarevisited/reactive-programming-in-java-rxjava-part-2-c1f37ac3282>
+
+</javarevisited/reactive-programming-in-spring-boot-using-spring-webflux-framework-276bafd384f6>
 
 # 基于 Java 的
 
-</javarevisited/servlet-things-every-java-developer-must-know-servlet-container-filter-and-listener-374a460169bd>  </javarevisited/logging-in-java-log4j-vs-logback-vs-slf4j-88c533088d2a>  
+</javarevisited/servlet-things-every-java-developer-must-know-servlet-container-filter-and-listener-374a460169bd>
+
+</javarevisited/logging-in-java-log4j-vs-logback-vs-slf4j-88c533088d2a>
 
 # Spring Boot
 
-</javarevisited/hibernate-vs-jpa-vs-spring-data-jpa-ff4485aaa780>  </javarevisited/transaction-management-in-spring-boot-eb01e20b21fe>  <https://dineshchandgr.medium.com/how-to-learn-spring-boot-and-microservices-road-map-series-32c2e246f1a4>  </javarevisited/spring-framework-filter-vs-dispatcher-servlet-vs-interceptor-vs-controller-745aa34b08d8>  </javarevisited/what-is-spring-cloud-gateway-34dfdc9548bc>  </javarevisited/what-is-spring-cloud-and-how-it-is-different-from-spring-and-spring-boot-128d276a1432>  </javarevisited/what-is-project-lombok-and-how-to-use-it-with-spring-boot-d6034f865541>  <https://dineshchandgr.medium.com/database-migration-in-spring-boot-using-flyway-ee791db8aea0>  </javarevisited/what-is-database-migration-in-spring-boot-and-how-it-is-done-using-liquibase-bd5cad981862>  </javarevisited/hibernate-methods-save-persist-update-merge-and-saveorupdate-19d21511dea2>  
+</javarevisited/hibernate-vs-jpa-vs-spring-data-jpa-ff4485aaa780>
+
+</javarevisited/transaction-management-in-spring-boot-eb01e20b21fe>
+
+<https://dineshchandgr.medium.com/how-to-learn-spring-boot-and-microservices-road-map-series-32c2e246f1a4>
+
+</javarevisited/spring-framework-filter-vs-dispatcher-servlet-vs-interceptor-vs-controller-745aa34b08d8>
+
+</javarevisited/what-is-spring-cloud-gateway-34dfdc9548bc>
+
+</javarevisited/what-is-spring-cloud-and-how-it-is-different-from-spring-and-spring-boot-128d276a1432>
+
+</javarevisited/what-is-project-lombok-and-how-to-use-it-with-spring-boot-d6034f865541>
+
+<https://dineshchandgr.medium.com/database-migration-in-spring-boot-using-flyway-ee791db8aea0>
+
+</javarevisited/what-is-database-migration-in-spring-boot-and-how-it-is-done-using-liquibase-bd5cad981862>
+
+</javarevisited/hibernate-methods-save-persist-update-merge-and-saveorupdate-19d21511dea2>
 
 # 基于绩效的文章
 
-</javarevisited/top-performance-issues-every-developer-architect-must-know-part-1-fc1ad6e1644b>  </javarevisited/top-performance-issues-every-developer-architect-must-know-part-2-concurrency-a15bd0b2b3b6>  </javarevisited/top-performance-issues-every-java-developer-architect-must-know-part-3-memory-351144590489>  
+</javarevisited/top-performance-issues-every-developer-architect-must-know-part-1-fc1ad6e1644b>
+
+</javarevisited/top-performance-issues-every-developer-architect-must-know-part-2-concurrency-a15bd0b2b3b6>
+
+</javarevisited/top-performance-issues-every-java-developer-architect-must-know-part-3-memory-351144590489>
 
 # 数据结构和算法
 
-</javarevisited/time-and-space-complexity-of-an-algorithm-simplified-with-examples-9e0809c4b3be>  <https://dineshchandgr.medium.com/linear-data-structures-with-time-complexity-every-programmer-must-know-c58a446e06ac>  <https://dineshchandgr.medium.com/linear-data-structures-continued-stack-queue-and-hash-table-81366ff51d52>  
+</javarevisited/time-and-space-complexity-of-an-algorithm-simplified-with-examples-9e0809c4b3be>
+
+<https://dineshchandgr.medium.com/linear-data-structures-with-time-complexity-every-programmer-must-know-c58a446e06ac>
+
+<https://dineshchandgr.medium.com/linear-data-structures-continued-stack-queue-and-hash-table-81366ff51d52>
 
 # 基于云的
 
-</javarevisited/do-you-know-everything-about-serverless-architecture-f0cd06c81329>    </javarevisited/scalability-in-the-cloud-vertical-vs-horizontal-scaling-ba38ca29d1b7>  
+</javarevisited/do-you-know-everything-about-serverless-architecture-f0cd06c81329>
+
+</javarevisited/scalability-in-the-cloud-vertical-vs-horizontal-scaling-ba38ca29d1b7>
 
 # 集装箱化——Docker 和 Kubernetes
 
-<https://dineshchandgr.medium.com/what-are-docker-containers-virtual-machines-and-containerization-e68bf076edf4>  </javarevisited/container-orchestration-and-kubernetes-part-2-8bf0ff2637e0>  <https://dineshchandgr.medium.com/kubernetes-certification-paths-and-how-to-prepare-for-kubernetes-developer-exam-ckad-6d2d5c5aab19>  
+<https://dineshchandgr.medium.com/what-are-docker-containers-virtual-machines-and-containerization-e68bf076edf4>
+
+</javarevisited/container-orchestration-and-kubernetes-part-2-8bf0ff2637e0>
+
+<https://dineshchandgr.medium.com/kubernetes-certification-paths-and-how-to-prepare-for-kubernetes-developer-exam-ckad-6d2d5c5aab19>
 
 # 物联网
 
-<https://dineshchandgr.medium.com/everything-you-need-to-know-about-iot-internet-of-things-1b481e917edc>  
+<https://dineshchandgr.medium.com/everything-you-need-to-know-about-iot-internet-of-things-1b481e917edc>
 
 # 数据库ˌ资料库
 
-<https://dineshchandgr.medium.com/sql-vs-no-sql-databases-everything-you-need-to-know-b723457446a5>  
+<https://dineshchandgr.medium.com/sql-vs-no-sql-databases-everything-you-need-to-know-b723457446a5>
 
 再次感谢你们阅读这篇文章，感谢你们给我的支持。在我的下一篇文章中再见
 
@@ -113,4 +172,4 @@ If you are considering to buy a medium membership,
 please buy through my referral link
 ```
 
-<https://dineshchandgr.medium.com/membership> 
+<https://dineshchandgr.medium.com/membership>

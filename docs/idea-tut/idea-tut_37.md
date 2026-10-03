@@ -1,3 +1,4 @@
+
 # 三十七、本系列教程结束
 
 ## 赠语
@@ -12,4 +13,4 @@
 
 **图片 37.1** 微信
 
-![](img/jk_book.png)![](img/jk_weixin.png)更多信息请访问 ![](http://wiki.jikexueyuan.com/project/intellij-idea-tutorial/)[`wiki.jikexueyuan.com/project/intellij-idea-tutorial/`](http://wiki.jikexueyuan.com/project/intellij-idea-tutorial/)
+![img](img/jk_book.png) ![img](img/jk_weixin.png) 更多信息请访问 [`wiki.jikexueyuan.com/project/intellij-idea-tutorial/`](http://wiki.jikexueyuan.com/project/intellij-idea-tutorial/)

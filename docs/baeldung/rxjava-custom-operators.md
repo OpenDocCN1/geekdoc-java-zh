@@ -1,16 +1,17 @@
+
 # 在 RxJava 中实现自定义运算符
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/rxjava-custom-operators>
 
-## 1。概述
+## 1. 概述
 
 在这个快速教程中，我们将展示如何使用 [RxJava](https://web.archive.org/web/20220625222813/https://github.com/ReactiveX/RxJava) 编写自定义操作符。
 
 我们将讨论如何构建这个简单的操作符，以及一个转换器——作为一个类或者作为一个简单的函数。
 
-## 2。Maven 配置
+## 2. Maven 配置
 
-首先，我们需要确保在`pom.xml`中有`rxjava`依赖关系:
+首先，我们需要确保在`pom.xml`中有`rxjava`依赖关系：
 
 ```java
 <dependency>
@@ -22,9 +23,9 @@
 
 我们可以在 [Maven Central](https://web.archive.org/web/20220625222813/https://search.maven.org/classic/#search%7Cga%7C1%7Cg%3A%22io.reactivex%22%20a%3A%22rxjava%22) 上查看`rxjava`的最新版本。
 
-## 3。自定义操作员
+## 3. 自定义操作员
 
-**我们可以通过实现`[Operator](https://web.archive.org/web/20220625222813/http://reactivex.io/RxJava/1.x/javadoc/rx/Observable.Operator.html)`接口**来创建我们的自定义操作符，在下面的例子中，我们实现了一个简单的操作符，用于从`String`中删除非字母数字字符:
+**我们可以通过实现`[Operator](https://web.archive.org/web/20220625222813/http://reactivex.io/RxJava/1.x/javadoc/rx/Observable.Operator.html)`接口**来创建我们的自定义操作符，在下面的例子中，我们实现了一个简单的操作符，用于从`String`中删除非字母数字字符：
 
 ```java
 public class ToCleanString implements Operator<String, String> {
@@ -70,13 +71,13 @@ public class ToCleanString implements Operator<String, String> {
 
 **我们还将实例创建限制为静态工厂方法，以在链接方法和使用静态导入时实现更加用户友好的可读性**。
 
-现在，我们可以使用 [`lift`](https://web.archive.org/web/20220625222813/http://reactivex.io/RxJava/1.x/javadoc/rx/Observable.html#lift(rx.Observable.Operator)) 运算符轻松地将我们的自定义运算符与其他运算符链接起来:
+现在，我们可以使用 [`lift`](https://web.archive.org/web/20220625222813/http://reactivex.io/RxJava/1.x/javadoc/rx/Observable.html#lift(rx.Observable.Operator)) 运算符轻松地将我们的自定义运算符与其他运算符链接起来：
 
 ```java
 observable.lift(toCleanString())....
 ```
 
-下面是对我们的自定义操作符的一个简单测试:
+下面是对我们的自定义操作符的一个简单测试：
 
 ```java
 @Test
@@ -94,9 +95,9 @@ public void whenUseCleanStringOperator_thenSuccess() {
 }
 ```
 
-## 4。变压器
+## 4. 变压器
 
-我们也可以通过实现 [`Transformer`](https://web.archive.org/web/20220625222813/http://reactivex.io/RxJava/1.x/javadoc/rx/Observable.Transformer.html) 接口来创建我们的操作员:
+我们也可以通过实现 [`Transformer`](https://web.archive.org/web/20220625222813/http://reactivex.io/RxJava/1.x/javadoc/rx/Observable.Transformer.html) 接口来创建我们的操作员：
 
 ```java
 public class ToLength implements Transformer<String, Integer> {
@@ -118,13 +119,13 @@ public class ToLength implements Transformer<String, Integer> {
 
 注意，我们使用转换器`toLength`将我们的可观测值从`String`转换成它在`Integer`中的长度。
 
-我们将需要一个 [`compose`](https://web.archive.org/web/20220625222813/http://reactivex.io/RxJava/1.x/javadoc/rx/Observable.html#compose(rx.Observable.Transformer)) 操作员来使用我们的变压器:
+我们将需要一个 [`compose`](https://web.archive.org/web/20220625222813/http://reactivex.io/RxJava/1.x/javadoc/rx/Observable.html#compose(rx.Observable.Transformer)) 操作员来使用我们的变压器：
 
 ```java
 observable.compose(toLength())...
 ```
 
-这里有一个简单的测试:
+这里有一个简单的测试：
 
 ```java
 @Test
@@ -144,11 +145,11 @@ public void whenUseToLengthOperator_thenSuccess() {
 
 `lift(Operator)`对可观察对象的订户进行操作，但`compose(Transformer)`对可观察对象本身进行操作。
 
-当我们创建自定义操作符时，如果我们想对整个可观察对象进行操作，我们应该选择`Transformer`,如果我们想对可观察对象发出的项目进行操作，我们应该选择`Operator`
+当我们创建自定义操作符时，如果我们想对整个可观察对象进行操作，我们应该选择`Transformer`，如果我们想对可观察对象发出的项目进行操作，我们应该选择`Operator`。
 
-## 5。自定义运算符作为函数
+## 5. 自定义运算符作为函数
 
-我们可以将自定义操作符实现为一个函数，而不是`public class`:
+我们可以将自定义操作符实现为一个函数，而不是`public class`：
 
 ```java
 Operator<String, String> cleanStringFn = subscriber -> {
@@ -178,7 +179,7 @@ Operator<String, String> cleanStringFn = subscriber -> {
 };
 ```
 
-这里有一个简单的测试:
+这里有一个简单的测试：
 
 ```java
 List<String> results = new ArrayList<>();
@@ -191,7 +192,7 @@ assertThat(results, hasSize(2));
 assertThat(results, hasItems("apple", "orange"));
 ```
 
-类似地，以`Transformer`为例:
+类似地，以`Transformer`为例：
 
 ```java
 @Test
@@ -209,7 +210,7 @@ public void whenUseFunctionTransformer_thenSuccess() {
 }
 ```
 
-## 6。结论
+## 6. 结论
 
 在本文中，我们展示了如何编写 RxJava 操作符。
 

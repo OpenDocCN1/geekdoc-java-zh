@@ -1,3 +1,4 @@
+
 # 使用多个入口点
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/selfContainedApps/multiplelaunchers.html`](https://docs.oracle.com/javase/tutorial/deployment/selfContainedApps/multiplelaunchers.html)
@@ -26,7 +27,6 @@
      shortcut="false"
      >
 </fx:secondaryLauncher>
-
 ```
 
 请查看`build.xml`以获取完整的构建代码。

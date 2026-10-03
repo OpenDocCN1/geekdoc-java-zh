@@ -1,3 +1,4 @@
+
 # 初学者和有经验的程序员的 7 本最佳 Java 设计模式书
 
 > 原文：<https://medium.com/javarevisited/7-best-books-to-learn-design-patterns-for-java-programmers-5627b93eefdb?source=collection_archive---------0----------------------->
@@ -18,7 +19,7 @@ image_credit —软件设计模式:软件开发人员的最佳实践
 
 另一个好处是，它不是关注所有的模式，而是关注一组好的核心模式，比如[装饰者](http://java67.blogspot.sg/2013/07/decorator-design-pattern-in-java-real-life-example-tutorial.html)、[观察者](http://javarevisited.blogspot.sg/2011/12/observer-design-pattern-java-example.html)、[工厂](http://javarevisited.blogspot.com/2015/06/difference-between-dependency-injection.html)、[命令](http://javarevisited.blogspot.sg/2016/05/command-design-pattern-in-java-example-code.html)、[策略](http://www.java67.com/2014/12/strategy-pattern-in-java-with-example.html)和门面模式。
 
-我还发现 **Head First 的书比 GoF boo** k 的书可读性强得多，这是一本很棒的书，信息量也很大，但不是最好的读物。
+我还发现 **Head First 的书比 GoF book** 的书可读性强得多，这是一本很棒的书，信息量也很大，但不是最好的读物。
 
 因为现在我已经读了几本关于设计模式的书，我有点知道哪些是最好的书，为什么，这个列表是一个经验的集合。你可以选择一本或几本书来更新你对 [*设计模式*](https://dzone.com/articles/5-courses-to-learn-java-design-patterns-in-2019) 的知识，或者从头开始学习。
 
@@ -120,33 +121,35 @@ UML 对于任何严肃的面向对象程序员来说都是一项基本技能，�
 
 如果你想成为一名软件架构师，我强烈推荐这本书。我甚至把它列入了我的 [**最佳软件架构书籍**](/javarevisited/5-best-software-architecture-books-for-experienced-java-developers-1267d05a6b1d) 的名单。
 
-<https://javarevisited.blogspot.com/2018/02/5-must-read-books-to-become-software-architect-solution.html#axzz6LCJoCRf9>  
+
+
+<https://javarevisited.blogspot.com/2018/02/5-must-read-books-to-become-software-architect-solution.html#axzz6LCJoCRf9>
 
 这就是学习 Java 设计模式的几本好书的全部内容。如果你想学习它们，没有什么比 Head First 设计模式更好的了——尽管它不是一个很好的参考文本。我不会太在意设计模式。和大多数好的一样，如果你是一个优秀的软件开发人员，无论如何你都会写。
 
-不好的开发者可能会照本宣科，把简单的问题变成灾区。在网络课程时代，你也可以将这些书与 Dmitri Nestruk 的 Jav a course 中的 [**设计模式相结合，这是我最喜欢的学习模式的课程之一。他真的很好地解释了模式，也建议了经典模式的现代实现。**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdesign-patterns-java%2F)
+不好的开发者可能会照本宣科，把简单的问题变成灾区。在网络课程时代，你也可以将这些书与 Dmitri Nestruk 的 Java course 中的[设计模式相结合，这是我最喜欢的学习模式的课程之一。他真的很好地解释了模式，也建议了经典模式的现代实现。](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdesign-patterns-java%2F)
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdesign-patterns-java%2F>  
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdesign-patterns-java%2F>
 
 还想吃吗？这里有更多的编程书籍和资源供您探索
 
-*   [程序员 10 本算法书](http://www.java67.com/2015/09/top-10-algorithm-books-every-programmer-read-learn.html)
-*   [面向有经验程序员的 5 大设计模式课程](https://javarevisited.blogspot.com/2018/02/top-5-java-design-pattern-courses-for-developers.html)
-*   干净的代码——程序员必读的代码书
-*   [搜索算法——算法初学者指南](/hackernoon/grokking-algorithms-book-review-aa4459da93f5)
-*   [每个程序员都应该读的 5 本书](http://www.java67.com/2016/02/5-books-to-improve-coding-skills-of.html)
-*   [10 本免费 Java 编程书籍](http://www.java67.com/2013/11/10-free-java-programing-books-download-PDF-HTML.html)
-*   [学习 Java 8 和函数式编程的 5 本书](http://www.java67.com/2015/07/5-books-learn-java-8-functional-programming.html)
-*   [每个程序员都应该读的 10 本书](http://www.java67.com/2015/07/5-books-learn-java-8-functional-programming.html)
-*   [初学者学习 Java 编程的最佳书籍](http://www.java67.com/2015/05/best-book-to-learn-java-for-beginners.html)
-*   [每个程序员都应该阅读的 5 本 SQL 书籍](http://www.java67.com/2016/09/sql-5-best-books-to-learn-and-master.html)
-*   [12 中级程序员必读高级 Java 书籍](http://www.java67.com/2016/06/12-must-read-advance-java-books-for-intermediate-programmers.html)
-*   [面向 Java JEE 程序员的 3 本免费 Struts 书籍](http://www.java67.com/2015/12/4-FREE-struts-books-for-java-ee-developers.html)
-*   [程序员 20+系统设计面试问题](https://www.java67.com/2018/05/top-20-system-design-interview-questions-answers-programming.html)
-*   [学习 Java 微服务的 5 大课程](/javarevisited/top-5-courses-to-learn-microservices-in-java-and-spring-framework-e9fed1ba804d)
+* [程序员 10 本算法书](http://www.java67.com/2015/09/top-10-algorithm-books-every-programmer-read-learn.html)
+* [面向有经验程序员的 5 大设计模式课程](https://javarevisited.blogspot.com/2018/02/top-5-java-design-pattern-courses-for-developers.html)
+* 干净的代码——程序员必读的代码书
+* [搜索算法——算法初学者指南](/hackernoon/grokking-algorithms-book-review-aa4459da93f5)
+* [每个程序员都应该读的 5 本书](http://www.java67.com/2016/02/5-books-to-improve-coding-skills-of.html)
+* [10 本免费 Java 编程书籍](http://www.java67.com/2013/11/10-free-java-programing-books-download-PDF-HTML.html)
+* [学习 Java 8 和函数式编程的 5 本书](http://www.java67.com/2015/07/5-books-learn-java-8-functional-programming.html)
+* [每个程序员都应该读的 10 本书](http://www.java67.com/2015/07/5-books-learn-java-8-functional-programming.html)
+* [初学者学习 Java 编程的最佳书籍](http://www.java67.com/2015/05/best-book-to-learn-java-for-beginners.html)
+* [每个程序员都应该阅读的 5 本 SQL 书籍](http://www.java67.com/2016/09/sql-5-best-books-to-learn-and-master.html)
+* [12 中级程序员必读高级 Java 书籍](http://www.java67.com/2016/06/12-must-read-advance-java-books-for-intermediate-programmers.html)
+* [面向 Java JEE 程序员的 3 本免费 Struts 书籍](http://www.java67.com/2015/12/4-FREE-struts-books-for-java-ee-developers.html)
+* [程序员 20+系统设计面试问题](https://www.java67.com/2018/05/top-20-system-design-interview-questions-answers-programming.html)
+* [学习 Java 微服务的 5 大课程](/javarevisited/top-5-courses-to-learn-microservices-in-java-and-spring-framework-e9fed1ba804d)
 
 感谢您阅读到目前为止，如果您有任何书籍要添加到这个面向对象分析和设计模式书籍列表中，请通过评论告诉我，我会添加它们以方便大家。
 
-**P. S. —** 如果你喜欢免费资源，正在寻找一门优秀的免费在线课程来深入学习设计模式，你也可以在 Udemy 上看到 [**Java 设计模式与架构**](http://bit.ly/java-design-patterns-tutorial) ，一门免费课程。这是完全免费的，你不需要支付任何费用。你只需要创建一个 Udemy 帐户就可以学习这门课程。
+**P. S. —** 如果你喜欢免费资源，正在寻找一门优秀的免费在线课程来深入学习设计模式，你也可以在 Udemy 上看到 [Java 设计模式与架构](http://bit.ly/java-design-patterns-tutorial)，一门免费课程。这是完全免费的，你不需要支付任何费用。你只需要创建一个 Udemy 帐户就可以学习这门课程。
 
-<http://bit.ly/java-design-patterns-tutorial> 
+<http://bit.ly/java-design-patterns-tutorial>

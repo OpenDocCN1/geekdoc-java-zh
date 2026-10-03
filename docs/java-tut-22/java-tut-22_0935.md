@@ -1,3 +1,4 @@
+
 # 教训：关于数据报的一切
 
 > 原文：[`docs.oracle.com/javase/tutorial/networking/datagrams/index.html`](https://docs.oracle.com/javase/tutorial/networking/datagrams/index.html)
@@ -18,10 +19,6 @@ UDP 协议提供了一种网络通信模式，应用程序可以向彼此发送�
 
 本节修改引用服务器，使其不再在请求时向单个客户端发送引用，而是每分钟向所有正在侦听的客户端广播一条引用。客户端程序必须相应地进行修改。
 
-* * *
-
 **注意：**
 
 许多防火墙和路由器被配置为不允许 UDP 数据包。如果您在防火墙外部连接到服务时遇到问题，或者客户端无法连接到您的服务，请向系统管理员询问是否允许 UDP。
-
-* * *

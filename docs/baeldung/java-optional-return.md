@@ -1,8 +1,9 @@
+
 # Java 可选为返回类型
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-optional-return>
 
-## 1.介绍
+## 1. 介绍
 
 Java 8 中引入了`[Optional](/web/20221205153638/https://www.baeldung.com/java-optional)`类型。它提供了一种清晰明确的方式来传达可能没有值的消息，而不使用`null`。
 
@@ -10,7 +11,7 @@ Java 8 中引入了`[Optional](/web/20221205153638/https://www.baeldung.com/java
 
 尽管我们可以在任何我们认为合适的地方使用它，但在本教程中，我们将关注使用`Optional`作为返回类型的一些最佳实践。
 
-## 2.`Optional`作为退货类型
+## 2. `Optional`作为退货类型
 
 一个`Optional`类型可以是大多数方法的返回类型，除了在本教程后面讨论的一些场景。
 
@@ -34,7 +35,7 @@ public static void changeUserName(String oldFirstName, String newFirstName) {
 
 静态方法或实用方法返回一个`Optional`值也是合适的。但是，有很多情况我们不应该返回`an Optional`类型。
 
-## 3.何时不返回`Optional`
+## 3. 何时不返回`Optional`
 
 因为`Optional`是一个包装器和[基于值的](https://web.archive.org/web/20221205153638/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/doc-files/ValueBased.html)类，所以有些操作不能针对`Optional`对象进行。很多时候，返回实际类型比返回`Optional`类型更好。
 
@@ -42,7 +43,7 @@ public static void changeUserName(String oldFirstName, String newFirstName) {
 
 我们将在下面研究一些重要的用例。
 
-### 3.1.序列化
+### 3.1. 序列化
 
 假设我们有一个简单的实体:
 
@@ -65,7 +66,7 @@ new ObjectOutputStream(new ByteArrayOutputStream()).writeObject(new Sock());
 
 让我们看看另一个同样的序列化不匹配的应用程序，这次是 JSON。
 
-### 3.2.JSON
+### 3.2. JSON
 
 现代应用程序一直在将 Java 对象转换成 JSON。如果 getter 返回一个`Optional`类型，我们很可能会在最终的 JSON 中看到一些意外的数据结构。
 
@@ -95,11 +96,11 @@ public void setFirstName(String firstName) {
 {"firstName":"Baeldung"}
 ```
 
-因此，`Optional `对于序列化用例来说是一个难题。接下来，我们来看看序列化的表亲:**将数据写入数据库。**
+因此，`Optional`对于序列化用例来说是一个难题。接下来，我们来看看序列化的表亲：**将数据写入数据库。**
 
-### 3.3.作业的装配区（JobPackArea）
+### 3.3. 作业的装配区（JobPackArea）
 
-在 JPA 中，getter、setter 和 field 应该具有一致的名称和类型。例如，`String `类型的`firstName `字段应该与一个名为`getFirstName`的 getter 成对出现，该 getter 也返回一个`String.`
+在 JPA 中，getter、setter 和 field 应该具有一致的名称和类型。例如，`String`类型的`firstName`字段应该与一个名为`getFirstName`的 getter 成对出现，该 getter 也返回一个`String`。
 
 遵循这个约定会使一些事情变得更简单，包括 Hibernate 等库对反射的使用，为我们提供了很好的对象关系映射支持。
 
@@ -152,7 +153,7 @@ public Optional<String> getFirstName() {
 }
 ```
 
-似乎我们可以有两种方式:getter 有一个`Optional`返回类型，持久字段有一个`firstName`。
+似乎我们可以有两种方式：getter 有一个`Optional`返回类型，持久字段有一个`firstName`。
 
 然而，现在我们与 getter、setter 和 field 不一致了，利用 JPA 默认值和 IDE 源代码工具将变得更加困难。
 
@@ -166,7 +167,7 @@ private String firstName;
 
 最后，让我们看看这对前端有什么影响——看看我们遇到的问题听起来是否熟悉。
 
-### 3.4.表达式语言
+### 3.4. 表达式语言
 
 为前端准备 DTO 存在类似的困难。
 
@@ -184,7 +185,7 @@ Optional[Baeldung]
 
 这不仅仅是 JSP 的问题。任何模板语言，无论是 Velocity、Freemarker 还是其他什么，都需要增加对它的支持。在那之前，让我们继续保持我们的 dto 简单。
 
-## 4.结论
+## 4. 结论
 
 在本教程中，我们学习了如何返回一个`Optional`对象，以及如何处理这种返回值。
 

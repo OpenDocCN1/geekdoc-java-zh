@@ -1,3 +1,4 @@
+
 # 春季休息你好世界示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-rest-hello-world-example/>
@@ -6,7 +7,7 @@
 
 在本文中，我们将向您展示如何开发一个 Spring Boot REST 风格的 web 服务来处理来自 H2 内存数据库的 CRUD 操作。
 
-使用的技术:
+使用的技术：
 
 *   Spring Boot 2.1.2 .版本
 *   弹簧 5.1.4 释放
@@ -25,10 +26,10 @@
 
 包括用于 Spring MVC 和 REST 结构的`spring-boot-starter-web`，用于 CRUD 库的`spring-boot-starter-data-jpa`。
 
-pom.xml
+`pom.xml`
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
@@ -117,13 +118,15 @@ pom.xml
         </plugins>
 
     </build>
-</project> 
+</project>
 ```
 
 项目依赖关系。
 
+
+
 ```java
- $ mvn dependency:tree
+$ mvn dependency:tree
 
 [INFO] org.springframework.boot:spring-rest-hello-world:jar:1.0
 [INFO] +- org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE:compile
@@ -209,23 +212,27 @@ pom.xml
 [INFO]    \- org.springframework.boot:spring-boot-autoconfigure:jar:2.1.2.RELEASE:compile 
 ```
 
-## 3.弹簧支架
+## 3. 弹簧支架
 
-3.1 一个 REST 控制器创建以下 REST API 端点:
+### 3.1 一个 REST 控制器创建以下 REST API 端点：
 
-| HTTP 方法 | 上呼吸道感染 | 描述 |
+| HTTP 方法 | URI | 描述 |
 | --- | --- | --- |
-| 得到 | /书籍 | 列出所有书籍。 |
-| 邮政 | /书籍 | 存一本书。 |
-| 得到 | /books/{id} | 找到一本 id = {:id}的书。 |
-| 放 | /books/{id} | 在 id = {:id}处更新或保存图书。 |
-| 修补 | /books/{id} | 更新单个字段，其中 id = {:id}。 |
-| 删除 | /books/{id} | 删除 id = {:id}的图书。 |
+| GET | `/books` | 列出所有书籍。 |
+| POST | `/books` | 存一本书。 |
+| GET | `/books/{id}` | 找到一本 `id = {id}` 的书。 |
+| PUT | `/books/{id}` | 在 `id = {id}` 处更新或保存图书。 |
+| PATCH | `/books/{id}` | 更新单个字段，其中 `id = {id}`。 |
+| DELETE | `/books/{id}` | 删除 `id = {id}` 的图书。 |
 
-BookController.java
+`BookController.java`
+
+
+
+# BookController 示例
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.mkyong.error.BookNotFoundException;
 import com.mkyong.error.BookUnSupportedFieldPatchException;
@@ -309,17 +316,17 @@ public class BookController {
         repository.deleteById(id);
     }
 
-} 
+}
 ```
 
-## 4.春季数据 JPA
+## 4. 春季数据 JPA
 
 4.1 用 JPA 注释标注的模型。
 
-Book.java
+`Book.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -337,31 +344,31 @@ public class Book {
     private BigDecimal price;
 
     //setters, getters, constructors...
-} 
+}
 ```
 
 4.2 创建一个类并扩展`JpaRepository`，它包含所有的 CRUD 操作。
 
-BookRepository.java
+`BookRepository.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
 // Spring Data magic :)
 public interface BookRepository extends JpaRepository<Book, Long> {
-} 
+}
 ```
 
-## 5.基本错误处理
+## 5. 基本错误处理
 
 创建一个`@ControllerAdvice`来处理控制器抛出的定制异常。
 
-CustomGlobalExceptionHandler
+`CustomGlobalExceptionHandler`
 
 ```java
- package com.mkyong.error;
+package com.mkyong.error;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -385,13 +392,13 @@ public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler
         response.sendError(HttpStatus.METHOD_NOT_ALLOWED.value());
     }
 
-} 
+}
 ```
 
-BookNotFoundException.java
+`BookNotFoundException.java`
 
 ```java
- package com.mkyong.error;
+package com.mkyong.error;
 
 public class BookNotFoundException extends RuntimeException {
 
@@ -399,13 +406,13 @@ public class BookNotFoundException extends RuntimeException {
         super("Book id not found : " + id);
     }
 
-} 
+}
 ```
 
-BookUnSupportedFieldPatchException.java
+`BookUnSupportedFieldPatchException.java`
 
 ```java
- package com.mkyong.error;
+package com.mkyong.error;
 
 import java.util.Set;
 
@@ -415,17 +422,17 @@ public class BookUnSupportedFieldPatchException extends RuntimeException {
         super("Field " + keys.toString() + " update is not allow.");
     }
 
-} 
+}
 ```
 
-## 6.Spring Boot
+## 6. Spring Boot
 
 6.1 创建一个`@SpringBootApplication`类来启动 REST web 应用程序，并将 3 个预定义的 book 对象插入到 H2 内存数据库中进行演示。
 
-StartBookApplication.java
+`StartBookApplication.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -441,7 +448,7 @@ public class StartBookApplication {
         SpringApplication.run(StartBookApplication.class, args);
     }
 
-	// init bean to insert 3 books into h2 database.
+    // init bean to insert 3 books into h2 database.
     @Bean
     CommandLineRunner initDatabase(BookRepository repository) {
         return args -> {
@@ -450,21 +457,21 @@ public class StartBookApplication {
             repository.save(new Book("Refactoring: Improving the Design of Existing Code", "Martin Fowler", new BigDecimal("47.99")));
         };
     }
-} 
+}
 ```
 
-## 7.演示
+## 7. 演示
 
 启动 Spring Boot 应用程序，用`curl`命令测试 REST API 端点。
 
-```java
- $ mvn spring-boot:run 
+```bash
+$ mvn spring-boot:run
 ```
 
 7.1 查找全部—`GET /books`
 
-```java
- > curl -v localhost:8080/books
+```bash
+> curl -v localhost:8080/books
 
 *   Trying ::1...
 * TCP_NODELAY set
@@ -472,7 +479,7 @@ public class StartBookApplication {
 > GET /books HTTP/1.1
 > Host: localhost:8080
 > User-Agent: curl/7.55.1
-> Accept: <strong>/</strong>
+> Accept: */*
 >
 < HTTP/1.1 200
 < Content-Type: application/json;charset=UTF-8
@@ -484,13 +491,13 @@ public class StartBookApplication {
 	{"id":1,"name":"A Guide to the Bodhisattva Way of Life","author":"Santideva","price":15.41},
 	{"id":2,"name":"The Life-Changing Magic of Tidying Up","author":"Marie Kondo","price":9.69},
 	{"id":3,"name":"Refactoring: Improving the Design of Existing Code","author":"Martin Fowler","price":47.99}
-] 
+]
 ```
 
 7.2 找到一个—`GET /books/1`
 
-```java
- > curl -v localhost:8080/books/1
+```bash
+> curl -v localhost:8080/books/1
 
 *   Trying ::1...
 * TCP_NODELAY set
@@ -498,7 +505,7 @@ public class StartBookApplication {
 > GET /books/1 HTTP/1.1
 > Host: localhost:8080
 > User-Agent: curl/7.55.1
-> Accept: <strong>/</strong>
+> Accept: */*
 >
 < HTTP/1.1 200
 < Content-Type: application/json;charset=UTF-8
@@ -511,13 +518,13 @@ public class StartBookApplication {
 	"name":"A Guide to the Bodhisattva Way of Life",
 	"author":"Santideva",
 	"price":15.41
-} 
+}
 ```
 
-7.3 试验 404-`GET /books/5`
+7.3 试验 404—`GET /books/5`
 
-```java
- > curl -v localhost:8080/books/5
+```bash
+> curl -v localhost:8080/books/5
 
 *   Trying ::1...
 * TCP_NODELAY set
@@ -525,7 +532,7 @@ public class StartBookApplication {
 > GET /books/5 HTTP/1.1
 > Host: localhost:8080
 > User-Agent: curl/7.55.1
-> Accept: <strong>/</strong>
+> Accept: */*
 >
 < HTTP/1.1 404
 < Content-Type: application/json;charset=UTF-8
@@ -539,17 +546,22 @@ public class StartBookApplication {
 	"error":"Not Found",
 	"message":"Book id not found : 5",
 	"path":"/books/5"
-} 
+}
 ```
 
 7.4 测试保存—`POST /books -d {json}`
 
+
+
 ```java
- #Run this on Windows, need \"
+#Run this on Windows, need \"
 
 > curl -v -X POST localhost:8080/books -H "Content-type:application/json" -d "{\"name\":\"Spring REST tutorials\",\"author\":\"mkyong\",\"price\":\"9.99\"}"
+```
 
-Note: Unnecessary use of -X or --request, POST is already inferred.
+注意：`-X` 或 `--request` 的使用是不必要的，`POST` 已被自动推断。
+
+```java
 *   Trying ::1...
 * TCP_NODELAY set
 * Connected to localhost (::1) port 8080 (#0)
@@ -575,10 +587,10 @@ Note: Unnecessary use of -X or --request, POST is already inferred.
 } 
 ```
 
-7.5 测试更新—`PUT /books/4 -d {json}`
+## 7.5 测试更新—`PUT /books/4 -d {json}`
 
 ```java
- > curl -v -X PUT localhost:8080/books/4 -H "Content-type:application/json" -d "{\"name\":\"Spring Forever\",\"author\":\"pivotal\",\"price\":\"9.99\"}"
+> curl -v -X PUT localhost:8080/books/4 -H "Content-type:application/json" -d "{\"name\":\"Spring Forever\",\"author\":\"pivotal\",\"price\":\"9.99\"}"
 
 *   Trying ::1...
 * TCP_NODELAY set
@@ -607,10 +619,10 @@ Note: Unnecessary use of -X or --request, POST is already inferred.
 {"id":4,"name":"Spring Forever","author":"pivotal","price":9.99} 
 ```
 
-7.6 测试更新“作者”字段—`PATCH /books/4 -d {json}`
+## 7.6 测试更新“作者”字段—`PATCH /books/4 -d {json}`
 
 ```java
- > curl -v -X PATCH localhost:8080/books/4 -H "Content-type:application/json" -d "{\"author\":\"oracle\"}"
+> curl -v -X PATCH localhost:8080/books/4 -H "Content-type:application/json" -d "{\"author\":\"oracle\"}"
 *   Trying ::1...
 * TCP_NODELAY set
 * Connected to localhost (::1) port 8080 (#0)
@@ -635,10 +647,10 @@ Note: Unnecessary use of -X or --request, POST is already inferred.
 } 
 ```
 
-7.6.1 测试更新“名称”字段—`PATCH /books/4 -d {json}`
+### 7.6.1 测试更新“名称”字段—`PATCH /books/4 -d {json}`
 
 ```java
- > curl -v -X PATCH localhost:8080/books/4 -H "Content-type:application/json" -d "{\"name\":\"New Spring REST\"}"
+> curl -v -X PATCH localhost:8080/books/4 -H "Content-type:application/json" -d "{\"name\":\"New Spring REST\"}"
 *   Trying ::1...
 * TCP_NODELAY set
 * Connected to localhost (::1) port 8080 (#0)
@@ -664,10 +676,10 @@ Note: Unnecessary use of -X or --request, POST is already inferred.
 } 
 ```
 
-7.7 测试删除-`DELETE /books/4`
+## 7.7 测试删除—`DELETE /books/4`
 
 ```java
- > curl -v -X DELETE localhost:8080/books/4
+> curl -v -X DELETE localhost:8080/books/4
 
 *   Trying ::1...
 * TCP_NODELAY set
@@ -701,16 +713,18 @@ Note: Unnecessary use of -X or --request, POST is already inferred.
 
 ## 下载源代码
 
-$ git clone [https://github.com/mkyong/spring-boot.git](http://web.archive.org/web/20220930231922/https://github.com/mkyong/spring-boot.git)
+```bash
+$ git clone https://github.com/mkyong/spring-boot.git
 $ cd spring-rest-hello-world
 $ mvn spring-boot:run
+```
 
 ## 参考
 
-*   [用 Spring 构建 REST 服务](http://web.archive.org/web/20220930231922/https://spring.io/guides/tutorials/rest/)
-*   [Spring Boot +朱尼特 5 +莫奇托](http://web.archive.org/web/20220930231922/https://www.mkyong.com/spring-boot/spring-boot-junit-5-mockito/)
-*   [cURL–发布请求示例](http://web.archive.org/web/20220930231922/https://www.mkyong.com/spring/curl-post-request-examples/)
-*   [REST API–PUT vs PATCH 与现实生活中的例子](http://web.archive.org/web/20220930231922/https://stackoverflow.com/questions/28459418/rest-api-put-vs-patch-with-real-life-examples)
-*   [维基百科–休息](http://web.archive.org/web/20220930231922/https://en.wikipedia.org/wiki/Representational_state_transfer)
+- [用 Spring 构建 REST 服务](http://web.archive.org/web/20220930231922/https://spring.io/guides/tutorials/rest/)
+- [Spring Boot +朱尼特 5 +莫奇托](http://web.archive.org/web/20220930231922/https://www.mkyong.com/spring-boot/spring-boot-junit-5-mockito/)
+- [cURL–发布请求示例](http://web.archive.org/web/20220930231922/https://www.mkyong.com/spring/curl-post-request-examples/)
+- [REST API–PUT vs PATCH 与现实生活中的例子](http://web.archive.org/web/20220930231922/https://stackoverflow.com/questions/28459418/rest-api-put-vs-patch-with-real-life-examples)
+- [维基百科–休息](http://web.archive.org/web/20220930231922/https://en.wikipedia.org/wiki/Representational_state_transfer)
 
 <input type="hidden" id="mkyong-current-postId" value="14924">

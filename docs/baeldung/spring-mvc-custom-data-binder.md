@@ -1,8 +1,9 @@
+
 # Spring MVC 中的自定义数据绑定器
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-mvc-custom-data-binder>
 
-## 1。概述
+## 1. 概述
 
 本文将展示如何使用 Spring 的数据绑定机制，通过将自动原语应用于对象转换来使我们的代码更加清晰易读。
 
@@ -10,7 +11,7 @@
 
 但是在现实世界的项目中，这还不够，因为**我们可能需要绑定更复杂类型的对象**。
 
-## 2。将单个对象绑定到请求参数
+## 2. 将单个对象绑定到请求参数
 
 先从简单开始，先绑定一个简单类型；我们必须提供一个自定义的 [`Converter<S, T>`](https://web.archive.org/web/20220629014624/https://docs.spring.io/spring/docs/3.0.x/spring-framework-reference/htmlsingle/spring-framework-reference.html#core-convert-Converter-API) 接口实现，其中`S`是我们要转换的类型，`T`是我们要转换的类型:
 
@@ -36,9 +37,9 @@ public GenericEntity findByDate(@PathVariable("date") LocalDateTime date) {
 }
 ```
 
-### 2.1。使用枚举作为请求参数
+### 2.1. 使用枚举作为请求参数
 
-接下来，我们将看到**如何使用 e `num`作为`RequestParameter`** 。
+接下来，我们将看到**如何使用`enum`作为`RequestParameter`**。
 
 在这里，我们有一个简单的`enum` `Modes`:
 
@@ -91,7 +92,7 @@ public GenericEntity findByEnum(@PathVariable("mode") Modes mode) {
 }
 ```
 
-## 3。绑定对象层次结构
+## 3. 绑定对象层次结构
 
 有时我们需要转换对象层次结构的整个树，使用更集中的绑定比一组单独的转换器更有意义。
 
@@ -124,7 +125,7 @@ public class Bar extends AbstractEntity {
 }
 ```
 
-在这种情况下，**我们可以实现`ConverterFactory<S, R>`，其中 S 是我们要转换的类型，R 是基本类型**，它定义了我们可以转换的类的范围:
+在这种情况下，**我们可以实现`ConverterFactory<S, R>`，其中`S`是我们要转换的类型，`R`是基本类型**，它定义了我们可以转换的类的范围:
 
 ```java
 public class StringToAbstractEntityConverterFactory 
@@ -194,11 +195,11 @@ public class AbstractEntityController {
 }
 ```
 
-## 4。绑定域对象
+## 4. 绑定域对象
 
-有些情况下，我们希望将数据绑定到对象，但它要么以非直接的方式出现(例如，来自`Session`、`Header`或`Cookie`变量)，要么甚至存储在数据源中。在这些情况下，我们需要使用不同的解决方案。
+有些情况下，我们希望将数据绑定到对象，但它要么以非直接的方式出现（例如，来自`Session`、`Header`或`Cookie`变量），要么甚至存储在数据源中。在这些情况下，我们需要使用不同的解决方案。
 
-### 4.1。自定义参数解析器
+### 4.1. 自定义参数解析器
 
 首先，我们将为这些参数定义一个注释:
 
@@ -209,7 +210,7 @@ public @interface Version {
 }
 ```
 
-然后，我们将实现一个自定义`[HandlerMethodArgumentResolver](https://web.archive.org/web/20220629014624/https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/method/support/HandlerMethodArgumentResolver.html):`
+然后，我们将实现一个自定义`[HandlerMethodArgumentResolver](https://web.archive.org/web/20220629014624/https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/method/support/HandlerMethodArgumentResolver.html)`:
 
 ```java
 public class HeaderVersionArgumentResolver
@@ -261,14 +262,16 @@ public ResponseEntity findByVersion(
 }
 ```
 
-正如我们所见，`HandlerMethodArgumentResolver`的`resolveArgument()`方法返回一个`Object.` ，换句话说，我们可以返回任何对象，而不仅仅是`String`。
+正如我们所见，`HandlerMethodArgumentResolver`的`resolveArgument()`方法返回一个`Object`。换句话说，我们可以返回任何对象，而不仅仅是`String`。
 
-## 5。结论
+## 5. 结论
 
 结果，我们摆脱了许多常规转换，让 Spring 为我们做了大部分事情。最后，让我们总结一下:
 
 *   对于单个简单的类型到对象的转换，我们应该使用`Converter`实现
+
 *   对于封装一系列对象的转换逻辑，我们可以尝试`ConverterFactory` 实现
+
 *   对于任何间接数据或需要应用额外逻辑来检索相关数据的数据，最好使用`HandlerMethodArgumentResolver`
 
 像往常一样，所有的例子都可以在我们的 [GitHub 库](https://web.archive.org/web/20220629014624/https://github.com/eugenp/tutorials/tree/master/spring-web-modules/spring-mvc-basics-3)中找到。

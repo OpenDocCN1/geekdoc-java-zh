@@ -1,3 +1,4 @@
+
 # 2023 年有经验的 Java 开发者学习 Spring Boot 和微服务的前 5 本书
 
 > 原文：<https://medium.com/javarevisited/top-5-books-to-learn-spring-boot-and-microservices-for-experienced-java-developers-499a9d921d18?source=collection_archive---------0----------------------->
@@ -100,29 +101,42 @@
 
 ****[![](img/5315e27bc98d075371bd10fb74e2a628.png)](https://www.amazon.com/Mastering-Spring-Boot-2-0-cloud-native/dp/1787127567/?tag=javamysqlanta-20)****
 
-****一旦您熟悉了基础知识，您将探索高级的东西，如定制自动配置以满足您的期望。之后，该书通过介绍关键的 Spring Boot 工具和服务，探索了[微服务](http://javarevisited.blogspot.sg/2017/12/10-things-java-programmers-should-learn.html#axzz53ENLS1RB)和[云](http://www.java67.com/2018/02/10-books-java-developers-should-read-in.html)的前景。****
 
-****简而言之，这本书涵盖了开发基于 Spring 的 Java 微服务应用程序所需要知道的一切，从开发到测试和部署。****
 
-****关于**学习 Spring Boot 和春云的最佳书籍**到此为止。这是开发基于云的 Java 应用程序的两个领先的 Java 框架。这些书不仅会帮助你学习基础知识，还会给你提供在云上创建和部署自己的 Java 应用程序所需的实践经验。****
+一旦您熟悉了基础知识，您将探索高级的东西，如定制自动配置以满足您的期望。之后，该书通过介绍关键的 Spring Boot 工具和服务，探索了[微服务](http://javarevisited.blogspot.sg/2017/12/10-things-java-programmers-should-learn.html#axzz53ENLS1RB)和[云](http://www.java67.com/2018/02/10-books-java-developers-should-read-in.html)的前景。
 
-****这几本书学习基于云的 Java 开发应该足够了，但是如果需要更多的辅助，也可以参考 [*大师微服务开发搭配 Spring Boot*](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fmicroservices-with-spring-boot-and-spring-cloud%2F) 进行更多的导师指导学习。****
+简而言之，这本书涵盖了开发基于 Spring 的 Java 微服务应用程序所需要知道的一切，从开发到测试和部署。
 
-****其他 **Java 和 Spring 文章**你可能喜欢:
+关于**学习 Spring Boot 和春云的最佳书籍**到此为止。这是开发基于云的 Java 应用程序的两个领先的 Java 框架。这些书不仅会帮助你学习基础知识，还会给你提供在云上创建和部署自己的 Java 应用程序所需的实践经验。
+
+这几本书学习基于云的 Java 开发应该足够了，但是如果需要更多的辅助，也可以参考 [*大师微服务开发搭配 Spring Boot*](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fmicroservices-with-spring-boot-and-spring-cloud%2F) 进行更多的导师指导学习。
+
+其他 **Java 和 Spring 文章**你可能喜欢:
+
 [Java 开发人员的 10 门高级 Spring Boot 课程](/javarevisited/10-advanced-spring-boot-courses-for-experienced-java-developers-5e57606816bd)
+
 [完整的 Java 开发人员路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html#123)
+
 [用 Spring 学习 Java 中微服务的 5 门课程](/javarevisited/top-5-courses-to-learn-microservices-in-java-and-spring-framework-e9fed1ba804d)
+
 [我最喜欢的学习软件架构的课程](/javarevisited/top-5-courses-to-learn-software-architecture-in-2020-best-of-lot-5d34ebc52e9)
+
 [3 种 Java 开发人员可以向 Spring 学习的最佳实践](https://javarevisited.blogspot.com/2018/06/3-best-practices-java-programmers-can-learn-from-spring-framework.html)
+
 [Spring MVC 在 Java 内部是如何工作的？](https://javarevisited.blogspot.com/2017/06/how-spring-mvc-framework-works-web-flow.html)
+
 [2023 年 Java 开发者应该学会的 10 件事](https://javarevisited.blogspot.sg/2017/12/10-things-java-programmers-should-learn.html#axzz53ENLS1RB)
+
 [Java 和 Web 开发者应该学会的 10 个框架](https://javarevisited.blogspot.com/2018/01/10-frameworks-java-and-web-developers-should-learn.html)
+
 [Java 开发者春季微服务课程前 5 名](https://javarevisited.blogspot.com/2018/02/top-5-spring-microservices-courses-with-spring-boot-and-spring-cloud.html#axzz5Cz1R4cHw)
+
 [15 Java 开发者 Spring Boot 面试问题](http://www.java67.com/2018/06/top-15-spring-boot-interview-questions-answers-java-jee-programmers.html)
-[2023 年成为更优秀 Java 程序员的 10 个小技巧](http://javarevisited.blogspot.sg/2018/05/10-tips-to-become-better-java-developer.html)****
 
-****感谢阅读这篇文章！如果你喜欢这些最好的 Spring Boot 和春云书籍，请与你的朋友和同事分享。如果您有任何问题或反馈，请在下面的评论中留言。****
+[2023 年成为更优秀 Java 程序员的 10 个小技巧](http://javarevisited.blogspot.sg/2018/05/10-tips-to-become-better-java-developer.html)
 
-******P. S. —** 如果你更喜欢在线课程而不是书本，那么我也建议你去看看由 28 分钟官方推出的 [**大师微服务与 Spring Boot 和春云**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fmicroservices-with-spring-boot-and-spring-cloud%2F) 课程，更好地了解 Spring Boot 和春云。****
+感谢阅读这篇文章！如果你喜欢这些最好的 Spring Boot 和春云书籍，请与你的朋友和同事分享。如果您有任何问题或反馈，请在下面的评论中留言。
 
-****</javarevisited/10-advanced-spring-boot-courses-for-experienced-java-developers-5e57606816bd> ****
+**P. S. —** 如果你更喜欢在线课程而不是书本，那么我也建议你去看看由 28 分钟官方推出的 [**大师微服务与 Spring Boot 和春云**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fmicroservices-with-spring-boot-and-spring-cloud%2F) 课程，更好地了解 Spring Boot 和春云。
+
+</javarevisited/10-advanced-spring-boot-courses-for-experienced-java-developers-5e57606816bd>

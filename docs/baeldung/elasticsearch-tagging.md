@@ -1,12 +1,11 @@
+
 # 一个简单的带有弹性搜索的标签实现
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/elasticsearch-tagging>
 
-[This article is part of a series:](javascript:void(0);)• A Simple Tagging Implementation with Elasticsearch (current article)[• A Simple Tagging Implementation with JPA](/web/20220630140827/https://www.baeldung.com/jpa-tagging)
-[• An Advanced Tagging Implementation with JPA](/web/20220630140827/https://www.baeldung.com/jpa-tagging-advanced)
-[• A Simple Tagging Implementation with MongoDB](/web/20220630140827/https://www.baeldung.com/mongodb-tagging)
+[This article is part of a series:](javascript:void(0);) • A Simple Tagging Implementation with Elasticsearch (current article) • [A Simple Tagging Implementation with JPA](/web/20220630140827/https://www.baeldung.com/jpa-tagging) • [An Advanced Tagging Implementation with JPA](/web/20220630140827/https://www.baeldung.com/jpa-tagging-advanced) • [A Simple Tagging Implementation with MongoDB](/web/20220630140827/https://www.baeldung.com/mongodb-tagging)
 
-## 1。概述
+## 1. 概述
 
 标记是一种常见的设计模式，它允许我们对数据模型中的项目进行分类和过滤。
 
@@ -14,9 +13,9 @@
 
 首先，我们不打算涵盖获取 Elasticsearch 和 Spring 数据的基础知识——您可以在这里探索这些内容。
 
-## 2。添加标签
+## 2. 添加标签
 
-最简单的标记实现是一个字符串数组。我们可以通过向我们的数据模型添加一个新字段来实现这一点，如下所示:
+最简单的标记实现是一个字符串数组。我们可以通过向我们的数据模型添加一个新字段来实现这一点，如下所示：
 
 ```java
 @Document(indexName = "blog", type = "article")
@@ -31,32 +30,32 @@ public class Article {
 }
 ```
 
-注意`Keyword `字段类型的使用。我们只想精确匹配我们的标签来过滤结果。这允许我们使用类似但独立的标签，如`elasticsearchIsAwesome`和`elasticsearchIsTerrible`。
+注意`Keyword`字段类型的使用。我们只想精确匹配我们的标签来过滤结果。这允许我们使用类似但独立的标签，如`elasticsearchIsAwesome`和`elasticsearchIsTerrible`。
 
 在这种情况下，分析的字段将返回部分命中，这是错误的行为。
 
-## 3。建筑查询
+## 3. 构建查询
 
 标签允许我们以有趣的方式操作我们的查询。我们可以像搜索任何其他字段一样搜索它们，或者我们可以使用它们来过滤我们对`match_all`查询的结果。我们还可以将它们与其他查询一起使用，以强化我们的结果。
 
-### 3.1。搜索标签
+### 3.1. 搜索标签
 
-我们在模型上创建的新的`tag`字段就像我们索引中的其他字段一样。我们可以搜索具有如下特定标签的任何实体:
+我们在模型上创建的新的`tag`字段就像我们索引中的其他字段一样。我们可以搜索具有如下特定标签的任何实体：
 
 ```java
 @Query("{\"bool\": {\"must\": [{\"match\": {\"tags\": \"?0\"}}]}}")
 Page<Article> findByTagUsingDeclaredQuery(String tag, Pageable pageable);
 ```
 
-这个例子使用 Spring 数据存储库来构建我们的查询，但是我们可以同样快速地使用一个 [Rest 模板](https://web.archive.org/web/20220630140827/https://docs.spring.io/spring/docs/3.0.x/javadoc-api/org/springframework/web/client/RestTemplate.html)来手动查询 Elasticsearch 集群。
+这个例子使用 Spring 数据存储库来构建我们的查询，但是我们可以同样快速地使用一个 Rest 模板来手动查询 Elasticsearch 集群。
 
-同样，我们可以使用 Elasticsearch API:
+同样，我们可以使用 Elasticsearch API：
 
 ```java
 boolQuery().must(termQuery("tags", "elasticsearch"));
 ```
 
-假设我们在索引中使用了以下文档:
+假设我们在索引中使用了以下文档：
 
 ```java
 [
@@ -87,7 +86,7 @@ boolQuery().must(termQuery("tags", "elasticsearch"));
 ]
 ```
 
-现在我们可以使用这个查询:
+现在我们可以使用这个查询：
 
 ```java
 Page<Article> articleByTags 
@@ -101,11 +100,11 @@ assertThat(articleByTags, containsInAnyOrder(
 );
 ```
 
-### 3.2。过滤所有文件
+### 3.2. 过滤所有文档
 
 一个常见的设计模式是在 UI 中创建一个`Filtered List View`来显示所有的实体，但也允许用户根据不同的标准进行过滤。
 
-假设我们想返回所有根据用户选择的标签过滤的文章:
+假设我们想返回所有根据用户选择的标签过滤的文章：
 
 ```java
 @Query("{\"bool\": {\"must\": " +
@@ -117,7 +116,7 @@ Page<Article> findByFilteredTagQuery(String tag, Pageable pageable);
 
 因此，我们使用的查询被分成两部分。评分查询是第一个术语，在本例中是`match_all`。接下来是过滤器查询，它告诉 Elasticsearch 要丢弃哪些结果。
 
-下面是我们如何使用这个查询:
+下面是我们如何使用这个查询：
 
 ```java
 Page<Article> articleByTags =
@@ -133,11 +132,11 @@ assertThat(articleByTags, containsInAnyOrder(
 
 重要的是要认识到，虽然这与我们上面的例子返回相同的结果，但是这个查询会执行得更好。
 
-### 3.3。过滤查询
+### 3.3. 过滤查询
 
 有时搜索会返回太多不可用的结果。在这种情况下，最好公开一种过滤机制，可以重新运行相同的搜索，只是结果范围缩小了。
 
-这里有一个例子，我们将作者写的文章缩小到只有带有特定标签的文章:
+这里有一个例子，我们将作者写的文章缩小到只有带有特定标签的文章：
 
 ```java
 @Query("{\"bool\": {\"must\": " + 
@@ -149,7 +148,7 @@ Page<Article> findByAuthorsNameAndFilteredTagQuery(
 
 同样，Spring Data 为我们做了所有的工作。
 
-让我们看看如何自己构造这个查询:
+让我们看看如何自己构造这个查询：
 
 ```java
 QueryBuilder builder = boolQuery().must(
@@ -159,7 +158,7 @@ QueryBuilder builder = boolQuery().must(
 
 当然，我们可以使用同样的技术来过滤文档中的任何其他字段。但是标签特别适合这个用例。
 
-下面是如何使用上面的查询:
+下面是如何使用上面的查询：
 
 ```java
 SearchQuery searchQuery = new NativeSearchQueryBuilder().withQuery(builder)
@@ -174,23 +173,23 @@ assertThat(articleByTags, containsInAnyOrder(
 );
 ```
 
-## 4。过滤上下文
+## 4. 过滤上下文
 
 当我们构建查询时，我们需要区分查询上下文和过滤器上下文。Elasticsearch 中的每个查询都有一个查询上下文，所以我们应该习惯于看到它们。
 
 并非每种查询类型都支持过滤器上下文。因此，如果我们想过滤标签，我们需要知道我们可以使用哪些查询类型。
 
-**`bool`查询有两种方式访问过滤上下文**。第一个参数， **`filter`** ，就是我们上面用的那个。我们也可以使用一个 **`must_not`** 参数来激活上下文。
+**`bool`查询有两种方式访问过滤上下文**。第一个参数，**`filter`**，就是我们上面用的那个。我们也可以使用一个**`must_not`**参数来激活上下文。
 
-**我们可以过滤的下一个查询类型是`constant_score`** 。当 uu 想要用过滤器的结果替换查询上下文并给每个结果分配相同的分数时，这很有用。
+**我们可以过滤的下一个查询类型是`constant_score`**。当你想用过滤器的结果替换查询上下文并给每个结果分配相同的分数时，这很有用。
 
-**我们可以根据标签过滤的最终查询类型是`filter aggregation`** 。这允许我们基于我们的过滤器的结果创建聚合组。换句话说，我们可以在聚合结果中按标签对所有文章进行分组。
+**我们可以根据标签过滤的最终查询类型是`filter aggregation`**。这允许我们基于我们的过滤器的结果创建聚合组。换句话说，我们可以在聚合结果中按标签对所有文章进行分组。
 
-## 5。高级标记
+## 5. 高级标记
 
 到目前为止，我们只讨论了使用最基本的实现进行标记。下一个逻辑步骤是创建本身是`key-value pairs`的标签。这将允许我们用我们的查询和过滤器变得更好。
 
-例如，我们可以将标记字段更改为:
+例如，我们可以将标记字段更改为：
 
 ```java
 @Field(type = Nested)
@@ -199,12 +198,12 @@ private List<Tag> tags;
 
 然后我们只需改变我们的过滤器来使用`nestedQuery`类型。
 
-一旦我们理解了如何使用`key-value pairs`,就向使用复杂的对象作为我们的标签迈出了一小步。没有多少实现需要一个完整的对象作为标签，但是如果需要的话，知道我们有这个选项是很好的。
+一旦我们理解了如何使用`key-value pairs`，就向使用复杂的对象作为我们的标签迈出了一小步。没有多少实现需要一个完整的对象作为标签，但是如果需要的话，知道我们有这个选项是很好的。
 
-## 6。结论
+## 6. 结论
 
 在本文中，我们已经介绍了使用 Elasticsearch 实现标记的基础知识。
 
-像往常一样，可以在 GitHub 上找到例子[。](https://web.archive.org/web/20220630140827/https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-elasticsearch)
+像往常一样，可以在 GitHub 上找到例子。
 
-Next **»**[A Simple Tagging Implementation with JPA](/web/20220630140827/https://www.baeldung.com/jpa-tagging)
+Next **»** [A Simple Tagging Implementation with JPA](/web/20220630140827/https://www.baeldung.com/jpa-tagging)

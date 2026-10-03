@@ -1,10 +1,11 @@
+
 # 将 CQRS 应用于 Spring REST API
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/cqrs-for-a-spring-rest-api>
 
-## 1。概述
+## 1. 概述
 
-在这篇简短的文章中，我们将做一些新的事情。我们将对现有的 REST Spring API 进行改进，让它使用命令查询责任分离—[CQRS](https://web.archive.org/web/20220125070600/http://squirrel.pl/blog/2015/08/31/introduction-to-event-sourcing-and-command-query-responsibility-segregation/)。
+在这篇简短的文章中，我们将做一些新的事情。我们将对现有的 REST Spring API 进行改进，让它使用命令查询责任分离——[CQRS](https://web.archive.org/web/20220125070600/http://squirrel.pl/blog/2015/08/31/introduction-to-event-sourcing-and-command-query-responsibility-segregation/)。
 
 目标是**明确区分服务层和控制器层**来分别处理进入系统的读取-查询和写入-命令。
 
@@ -12,9 +13,9 @@
 
 最后——我们将要使用的示例 API 是发布`User`资源，是我们正在进行的 [Reddit 应用案例研究](/web/20220125070600/https://www.baeldung.com/case-study-a-reddit-app-with-spring)的一部分，以举例说明这是如何工作的——当然，任何 API 都可以。
 
-## 2。服务层
+## 2. 服务层
 
-我们从简单的开始——通过识别我们之前的用户服务中的读和写操作——我们将把它分成两个独立的服务—`UserQueryService`和`UserCommandService`:
+我们从简单的开始——通过识别我们之前的用户服务中的读和写操作——我们将把它分成两个独立的服务——`UserQueryService`和`UserCommandService`：
 
 ```java
 public interface IUserQueryService {
@@ -48,15 +49,15 @@ public interface IUserCommandService {
 }
 ```
 
-通过阅读这个 API，您可以清楚地看到查询服务是如何进行所有读取的，而**命令服务没有读取任何数据——所有 void 返回**。
+通过阅读这个 API，您可以清楚地看到查询服务是如何进行所有读取的，而**命令服务没有读取任何数据——所有 `void` 返回**。
 
-## 3。控制器层
+## 3. 控制器层
 
 接下来是控制器层。
 
-### 3.1。查询控制器
+### 3.1. 查询控制器
 
-这是我们的`UserQueryRestController`:
+这是我们的`UserQueryRestController`：
 
 ```java
 @Controller
@@ -96,9 +97,9 @@ public class UserQueryRestController {
 
 更有趣的是**切断这个控制器对命令服务**的访问——通过将它们放在一个单独的模块中。
 
-### 3.2。命令控制器
+### 3.2. 命令控制器
 
-现在，这是我们的命令控制器实现:
+现在，这是我们的命令控制器实现：
 
 ```java
 @Controller
@@ -162,9 +163,9 @@ public class UserCommandRestController {
 
 另一个原因是，当我们采取下一步，走向事件源时，我们有一个干净的命令集。
 
-### 3.3。单独的资源表示
+### 3.3. 单独的资源表示
 
-在分成命令和查询之后，现在让我们快速回顾一下用户资源的不同表示:
+在分成命令和查询之后，现在让我们快速回顾一下用户资源的不同表示：
 
 ```java
 public class UserQueryDto {
@@ -180,9 +181,9 @@ public class UserQueryDto {
 }
 ```
 
-以下是我们的命令 dto:
+以下是我们的命令 DTO：
 
-*   `UserRegisterCommandDto` 用于表示用户注册数据`:`
+*   `UserRegisterCommandDto` 用于表示用户注册数据：
 
 ```java
 public class UserRegisterCommandDto {
@@ -192,7 +193,7 @@ public class UserRegisterCommandDto {
 }
 ```
 
-*   `UserUpdatePasswordCommandDto` 用于表示更新当前用户密码的数据:
+*   `UserUpdatePasswordCommandDto` 用于表示更新当前用户密码的数据：
 
 ```java
 public class UserUpdatePasswordCommandDto {
@@ -201,7 +202,7 @@ public class UserUpdatePasswordCommandDto {
 }
 ```
 
-*   `UserTriggerResetPasswordCommandDto` 用于表示用户通过发送带有重置密码令牌的电子邮件来触发重置密码的电子邮件:
+*   `UserTriggerResetPasswordCommandDto` 用于表示用户通过发送带有重置密码令牌的电子邮件来触发重置密码的电子邮件：
 
 ```java
 public class UserTriggerResetPasswordCommandDto {
@@ -209,7 +210,7 @@ public class UserTriggerResetPasswordCommandDto {
 }
 ```
 
-*   `UserChangePasswordCommandDto`用于表示新用户密码–该命令在用户使用密码重置令牌后调用。
+*   `UserChangePasswordCommandDto` 用于表示新用户密码——该命令在用户使用密码重置令牌后调用。
 
 ```java
 public class UserChangePasswordCommandDto {
@@ -217,7 +218,7 @@ public class UserChangePasswordCommandDto {
 }
 ```
 
-*   `UserUpdateCommandDto`用于表示修改后新用户的数据:
+*   `UserUpdateCommandDto` 用于表示修改后新用户的数据：
 
 ```java
 public class UserUpdateCommandDto {
@@ -229,8 +230,8 @@ public class UserUpdateCommandDto {
 }
 ```
 
-## 4。结论
+## 4. 结论
 
 在本教程中，我们为 Spring REST API 的干净 CQRS 实现打下了基础。
 
-下一步将是继续改进 API，将一些单独的职责(和资源)标识到它们自己的服务中，以便我们更紧密地与以资源为中心的架构保持一致。
+下一步将是继续改进 API，将一些单独的职责（和资源）标识到它们自己的服务中，以便我们更紧密地与以资源为中心的架构保持一致。

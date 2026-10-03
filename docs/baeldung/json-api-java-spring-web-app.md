@@ -1,14 +1,15 @@
+
 # Spring 应用程序中的 JSON API
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/json-api-java-spring-web-app>
 
-## 1。概述
+## 1. 概述
 
 在本文中，我们将开始探索**JSON-API[T2 规范](https://web.archive.org/web/20221208143841/http://jsonapi.org/)**以及如何将其集成到 Spring backed REST API 中。
 
 我们将使用 Java 中 JSON-API 的 [Katharsis](https://web.archive.org/web/20221208143841/https://github.com/katharsis-project/katharsis-framework) 实现——我们将建立一个 Katharsis 支持的 Spring 应用程序——所以我们所需要的就是一个 Spring 应用程序。
 
-## 2。肚子
+## 2. 肚子
 
 首先，让我们看看我们的 maven 配置——我们需要将以下依赖项添加到我们的`pom.xml`中:
 
@@ -20,7 +21,7 @@
 </dependency>
 ```
 
-## 3。用户资源
+## 3. 用户资源
 
 接下来，让我们看看我们的用户资源:
 
@@ -48,7 +49,7 @@ public class User {
 public interface UserRepository extends JpaRepository<User, Long> {}
 ```
 
-## 4。资源库
+## 4. 资源库
 
 接下来，让我们讨论我们的资源库——每个资源都应该有一个`ResourceRepositoryV2`来发布其上可用的 API 操作:
 
@@ -99,7 +100,7 @@ public class UserResourceRepository implements ResourceRepositoryV2<User, Long> 
 
 这里有一个简短的说明——这当然**与弹簧控制器**非常相似。
 
-## 5。Katharsis 配置
+## 5. Katharsis 配置
 
 因为我们正在使用`katharsis-spring`，所以我们需要做的就是在我们的 Spring Boot 应用程序中导入`KatharsisConfigV3`:
 
@@ -116,14 +117,14 @@ katharsis.pathPrefix=/
 
 这样，我们现在可以开始使用 API 了；例如:
 
-*   GET " `http://localhost:8080/users`":获取所有用户。
-*   POST " `http://localhost:8080/users`":添加新用户，等等。
+*   GET "`http://localhost:8080/users`"：获取所有用户。
+*   POST "`http://localhost:8080/users`"：添加新用户，等等。
 
-## 6。关系
+## 6. 关系
 
 接下来，让我们讨论如何在 JSON API 中处理实体关系。
 
-### 6.1。角色资源
+### 6.1. 角色资源
 
 首先，让我们介绍一种新资源—`Role`:
 
@@ -148,7 +149,7 @@ public class Role {
 private Set<Role> roles;
 ```
 
-### 6.2。角色资源库
+### 6.2. 角色资源库
 
 很快——这是我们的`Role`资源库:
 
@@ -199,7 +200,7 @@ public class RoleResourceRepository implements ResourceRepositoryV2<Role, Long> 
 
 这里需要理解的重要一点是，这种单一资源回购不处理关系方面——这需要一个单独的存储库。
 
-### 6.3。关系库
+### 6.3. 关系库
 
 为了处理`User`–`Role`之间的多对多关系，我们需要创建一种新型的存储库:
 
@@ -266,7 +267,7 @@ public class UserToRoleRelationshipRepository implements RelationshipRepositoryV
 
 我们在这里忽略了关系库中的单个方法。
 
-## 7。测试
+## 7. 测试
 
 最后，让我们分析几个请求，真正理解 JSON-API 输出是什么样子的。
 
@@ -320,13 +321,15 @@ public class UserToRoleRelationshipRepository implements RelationshipRepositoryV
 
 外卖:
 
-*   资源的主要属性见`**data.attributes**`
-*   资源的主要关系见`**data.relationships**`
+*   资源的主要属性见`data.attributes`
+*   资源的主要关系见`data.relationships`
 *   当我们使用`@JsonApiRelation(serialize=SerializeType.EAGER)`作为`roles`关系时，它包含在 JSON 中，并在节点**中找到包含的**
 
 接下来，让我们获取包含角色的集合资源:
 
 **获取 http://localhost:8080/roles**
+
+
 
 ```java
 {
@@ -374,12 +377,12 @@ public class UserToRoleRelationshipRepository implements RelationshipRepositoryV
 }
 ```
 
-这里的快速收获是，我们获得系统中的所有角色——作为**数据**节点中的数组
+这里的快速收获是，我们获得系统中的所有角色——作为`data`节点中的数组。
 
-## 8。结论
+## 8. 结论
 
-JSON-API 是一个很棒的规范——最终我们在 API 中使用 JSON 的方式增加了一些结构，并真正为一个真正的超媒体 API 提供了动力。
+`JSON-API` 是一个很棒的规范——最终我们在 API 中使用`JSON`的方式增加了一些结构，并真正为一个真正的超媒体 API 提供了动力。
 
 这篇文章探索了在 Spring 应用程序中设置它的一种方法。但是不管实现如何，规范本身——在我看来——是非常非常有前途的工作。
 
-该示例的完整源代码可以在 GitHub 上的[处获得。这是一个 Maven 项目，可以导入并按原样运行。](https://web.archive.org/web/20221208143841/https://github.com/eugenp/tutorials/tree/master/spring-katharsis)
+该示例的完整源代码可以在 GitHub 上的[此处](https://web.archive.org/web/20221208143841/https://github.com/eugenp/tutorials/tree/master/spring-katharsis)获得。这是一个 Maven 项目，可以导入并按原样运行。

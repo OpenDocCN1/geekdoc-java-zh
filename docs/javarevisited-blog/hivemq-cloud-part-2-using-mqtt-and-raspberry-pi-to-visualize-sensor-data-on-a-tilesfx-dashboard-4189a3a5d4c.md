@@ -1,3 +1,4 @@
+
 # HiveMQ 云，第 2 部分—使用 MQTT 和 Raspberry Pi 在 TilesFX 仪表板上可视化传感器数据
 
 > 原文：<https://medium.com/javarevisited/hivemq-cloud-part-2-using-mqtt-and-raspberry-pi-to-visualize-sensor-data-on-a-tilesfx-dashboard-4189a3a5d4c?source=collection_archive---------3----------------------->
@@ -6,7 +7,7 @@
 
 现在，我们将进行下一步，订阅这些主题，以在使用 JavaFX 创建的仪表板中接收数据。
 
-# 关于 JavaFX
+## 关于 JavaFX
 
 JavaFX 是一组图形和媒体包，使开发人员能够设计、创建、测试、调试和部署在不同平台上一致运行的富客户端应用程序。
 
@@ -18,30 +19,30 @@ JavaFX 版本历史
 
 [JavaFX](/javarevisited/6-free-courses-to-learn-servlet-jsp-and-java-fx-in-2020-best-of-lot-720201c84f63) 允许快速构建用户界面，同时使用您作为 Java 开发人员已经知道的语言和工具。这可以用 CSS 语法进行样式化，并且非常灵活和可扩展，甚至允许您绘制自己的布局元素，正如您在上面的历史图表中所看到的，可以在 [GitHub 上获得，作为我的书](https://github.com/FDelporte/JavaOnRaspberryPi/tree/master/Chapter_04_Java/javafx-timeline)[“在 Raspberry Pi 上开始使用 Java”](https://webtechie.be/books/)的来源的一部分。
 
-# 树莓 Pi 上的 JavaFX
+## 树莓 Pi 上的 JavaFX
 
-JavaFX 可以通过两种方式安装在 Raspberry Pi 上:
+JavaFX 可以通过两种方式安装在 Raspberry Pi 上：
 
-*   通过安装捆绑了 JavaFX 的 JDK。Azul 和 BellSoft 提供了这样的版本。
-*   通过使用可从 GluonHQ 网站下载的最新版本单独安装它。
+- 通过安装捆绑了 JavaFX 的 JDK。Azul 和 BellSoft 提供了这样的版本。
+- 通过使用可从 GluonHQ 网站下载的最新版本单独安装它。
 
-我个人更喜欢第二种方法，因为您肯定会使用最新的 JavaFX 运行时，包括嵌入式设备的所有改进。由于这是一个快速发展的市场，有很多正在发生的变化，如改进的渲染和直接渲染模式(DRM，也称为 Kiosk 模式)。关于这个主题的更多信息可以在[“在 Raspberry Pi 上以 Kiosk 模式运行的 JavaFX】中找到。](https://foojay.io/today/javafx-running-in-kiosk-mode-on-the-raspberry-pi/)
+我个人更喜欢第二种方法，因为您肯定会使用最新的 JavaFX 运行时，包括嵌入式设备的所有改进。由于这是一个快速发展的市场，有很多正在发生的变化，如改进的渲染和直接渲染模式(DRM，也称为 Kiosk 模式)。关于这个主题的更多信息可以在[“在 Raspberry Pi 上以 Kiosk 模式运行的 JavaFX”](https://foojay.io/today/javafx-running-in-kiosk-mode-on-the-raspberry-pi/)中找到。
 
-# TilesFX 库
+## TilesFX 库
 
 这个伟大的库是由[杰瑞特·格伦瓦德](https://twitter.com/hansolo_)开发的，它提供了构建仪表板的瓦片。查看[的博客](https://harmoniccode.blogspot.com/)以获得更多 JavaFX 示例！
 
-你可以在 GitHub 上找到[tiles FX 的源代码，它可以作为](https://github.com/HanSolo/tilesfx) [Maven 依赖项](https://mvnrepository.com/artifact/eu.hansolo/tilesfx)获得。作为 TilesFX 源代码的一部分，提供了一个演示应用程序来展示如何使用所有可用的图块。
+你可以在 GitHub 上找到[TilesFX 的源代码](https://github.com/HanSolo/tilesfx)，它可以作为 [Maven 依赖项](https://mvnrepository.com/artifact/eu.hansolo/tilesfx)获得。作为 TilesFX 源代码的一部分，提供了一个演示应用程序来展示如何使用所有可用的图块。
 
 ![](img/71e0f8a547efee0911a52f6403b88a3a.png)
 
 TilesFX 演示应用程序
 
-# Java 项目
+## Java 项目
 
 让我们创建一个 JavaFX 应用程序，用我们在上一部分中创建的应用程序来可视化我们推送到 HiveMQ Cloud 的所有传感器值。
 
-# 属国
+### 属国
 
 与消息发送者相比，该项目需要一些不同的依赖项。当然，我们再次使用 HiveMQ MQTT 客户端。但是对于图形用户界面部分，我们需要一些 JavaFX 库(在应用程序中只使用了 controls，其他的由 TilesFX 引用)和 TilesFX 库本身。
 
@@ -73,13 +74,13 @@ TilesFX 演示应用程序
 </dependency>
 ```
 
-# GitHub 上的完整代码
+### GitHub 上的完整代码
 
 这个应用程序的源代码[可以在 GitHub 上找到，与前一篇文章](https://github.com/FDelporte/HiveMQ-examples)在同一个存储库中。
 
-## 启动 JavaFX 应用程序
+#### 启动 JavaFX 应用程序
 
-我们需要从 JavaFX 应用程序扩展，在这种情况下，我们在 start-method 中配置 HiveMQ 客户端。这也可以在一个单独的类中完成，但是对于这个概念验证来说，很容易使用 client-reference 将它提供给子对象。
+我们需要从 JavaFX 应用程序扩展，在这种情况下，我们在 `start` 方法中配置 HiveMQ 客户端。这也可以在一个单独的类中完成，但是对于这个概念验证来说，很容易使用 `client` 引用将它提供给子对象。
 
 为了便于主题的维护，这里也定义了这些主题。
 
@@ -125,9 +126,9 @@ public class HiveMqClient extends Application {
 }
 ```
 
-## 可视化仪表板中的数据
+#### 可视化仪表板中的数据
 
-在 DashboardView 中，我们定义了要添加到屏幕中的所有图块。请看看所有瓷砖的完整来源。在这里你可以找到其中两个的代码:
+在 `DashboardView` 中，我们定义了要添加到屏幕中的所有图块。请看看所有瓷砖的完整来源。在这里你可以找到其中两个的代码：
 
 ```
 public class DashboardView extends FlowGridPane {
@@ -168,11 +169,11 @@ public class DashboardView extends FlowGridPane {
 }
 ```
 
-戈谢温
+**戈谢温**
 
 温度是由 CrowPi 间隔发送的传感器值之一。订阅传感器主题后，我们将收到这些数据。通过使用与发送者应用程序中相同的传感器类，我们可以很容易地将接收到的字符串映射到 Java 对象。
 
-GaucheTemperature-tile 和我们在构造函数中初始化的其他 tile 现在可以用接收到的数据进行更新。
+`GaucheTemperature` 瓦片和我们在构造函数中初始化的其他瓦片现在可以用接收到的数据进行更新。
 
 ```
 ...client.toAsync().subscribeWith()
@@ -193,60 +194,21 @@ GaucheTemperature-tile 和我们在构造函数中初始化的其他 tile 现在
 }
 ```
 
-传感器开关
+**传感器开关**
 
-当传感器的状态改变时，其他数据由发布者发送。例如，当触摸或释放触摸传感器时，我们将接收到特定主题的真或假。为了能够容易地处理这一点，创建了从 Tile 类扩展的附加组件。
+当传感器的状态改变时，其他数据由发布者发送。例如，当触摸或释放触摸传感器时，我们将接收到特定主题的真或假。为了能够容易地处理这一点，创建了从 `Tile` 类扩展的附加组件。
 
-SensorSwitchTile 包含一个 SWITCH-tile，其活动状态根据每个接收到的消息中的值而改变。
+`SensorSwitchTile` 包含一个 `SWITCH` 瓦片，其活动状态根据每个接收到的消息中的值而改变。
 
-```
-public class SensorSwitchTile extends BaseTile {
-   private final Tile statusTile; public SensorSwitchTile(Mqtt5AsyncClient client, String topic, 
-      String title, String description) {
-      super(client, topic); statusTile = TileBuilder.create()
-         .skinType(SkinType.SWITCH)
-         .prefSize(TILE_WIDTH, TILE_HEIGHT)
-         .title(title)
-         .description(description)
-         .build(); getChildren().add(statusTile);
-   } @Override
-   public void handleMessage(Mqtt5Publish message) {
-      var sensorData = new String(message.getPayloadAsBytes());
-      logger.info("Boolean sensor data: {}", sensorData);
-      try {
-         var sensor = mapper.readValue(sensorData, 
-            BooleanValue.class); Platform.runLater(() -> {
-            statusTile.setActive(sensor.getValue());
-         });
-      } catch (JsonProcessingException ex) {
-         logger.error("Could not parse the data to JSON: {}",
-            ex.getMessage());
-      }
-   }
-}
-```
 
-主题的订阅在 BaseTile 类中处理，以避免重复代码。
 
-```
-public class BaseTile extends Pane {
-   protected static final Logger logger = 
-      LogManager.getLogger(BaseTile.class.getName()); protected final ObjectMapper mapper = new ObjectMapper(); public static final int TILE_WIDTH = 200;
-   public static final int TILE_HEIGHT = 300; public BaseTile(Mqtt5AsyncClient client, String topic) {
-      client.toAsync().subscribeWith()
-         .topicFilter(topic)
-         .qos(MqttQos.AT_LEAST_ONCE)
-         .callback(this::handleMessage)
-         .send();
-   } /**
-   * Method to be overridden in each tile
-   */
-   protected void handleMessage(Mqtt5Publish message) {
-      logger.warn("Message not handled: {}", 
-         message.getPayloadAsBytes());
-   }
-}
-```
+`public class SensorSwitchTile extends BaseTile` 是一个传感器开关瓦片类，它继承自 `BaseTile`。该类包含一个私有的 `Tile` 类型字段 `statusTile`，并通过构造函数接收 `Mqtt5AsyncClient`、`topic`、`title` 和 `description` 参数。构造函数中调用 `super(client, topic)` 初始化父类，然后使用 `TileBuilder.create()` 构建一个开关类型的瓦片，设置其尺寸、标题和描述，最后将瓦片添加到子节点列表中。
+
+`handleMessage(Mqtt5Publish message)` 方法重写了父类的方法，用于处理接收到的 MQTT 消息。它将消息负载转换为字符串并记录日志，然后尝试将字符串解析为 `BooleanValue` 对象，并通过 `Platform.runLater()` 在 JavaFX 应用线程中更新瓦片的激活状态。如果解析失败，则记录错误日志。
+
+主题的订阅在 `BaseTile` 类中处理，以避免重复代码。
+
+`public class BaseTile extends Pane` 是基础瓦片类，它继承自 `Pane`。该类包含一个受保护的静态日志记录器 `logger`、一个受保护的 `ObjectMapper` 实例 `mapper`，以及两个公共静态常量 `TILE_WIDTH` 和 `TILE_HEIGHT`，分别表示瓦片的宽度和高度。构造函数接收 `Mqtt5AsyncClient` 和 `topic` 参数，并通过 `client.toAsync().subscribeWith()` 订阅指定主题，设置 QoS 为 `MqttQos.AT_LEAST_ONCE`，并将 `handleMessage` 方法作为消息回调。`handleMessage` 方法是一个受保护的方法，默认实现会记录一条警告日志，子类可以重写该方法来处理具体的消息。
 
 如您所见，订阅 HiveMQ 云消息只需要很少的代码。
 

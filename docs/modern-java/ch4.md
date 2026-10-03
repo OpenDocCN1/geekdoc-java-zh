@@ -1,9 +1,8 @@
+
 # Java 8 并发教程：线程和执行器
 
 > 原文：[Java 8 Concurrency Tutorial: Threads and Executors](http://winterbe.com/posts/2015/04/07/java8-concurrency-tutorial-thread-executor-examples/)
-
 > 译者：[BlankKelly](https://github.com/BlankKelly)
-
 > 来源：[Java8并发教程：Threads和Executors](https://github.com/BlankKelly/ConcurrencyNote/blob/master/Java8%E5%B9%B6%E5%8F%91%E6%95%99%E7%A8%8B%EF%BC%9AThreads%E5%92%8CExecutors.md)
 
 欢迎阅读我的Java8并发教程的第一部分。这份指南将会以简单易懂的代码示例来教给你如何在Java8中进行并发编程。这是一系列教程中的第一部分。在接下来的15分钟，你将会学会如何通过线程，任务（tasks）和 exector services来并行执行代码。
@@ -155,7 +154,7 @@ System.out.println("future done? " + future.isDone());
 System.out.print("result: " + result);
 ```
 
-在将callable提交给exector之后，我们先通过调用`isDone()`来检查这个future是否已经完成执行。我十分确定这会发生什么，因为在返回那个整数之前callable会休眠一分钟、
+在将callable提交给exector之后，我们先通过调用`isDone()`来检查这个future是否已经完成执行。我十分确定这会发生什么，因为在返回那个整数之前callable会休眠一分钟。
 
 在调用`get()`方法时，当前线程会阻塞等待，直到callable在返回实际的结果123之前执行完成。现在future执行完毕，我们可以在控制台看到如下的结果：
 
@@ -173,6 +172,7 @@ future.get();
 ```
 
 你可能注意到我们这次创建executor的方式与上一个例子稍有不同。我们使用`newFixedThreadPool(1)`来创建一个单线程线程池的 execuot service。
+
 这等同于使用`newSingleThreadExecutor`不过使用第二种方式我们可以稍后通过简单的传入一个比1大的值来增加线程池的大小。
 
 ### 超时
@@ -180,9 +180,9 @@ future.get();
 任何`future.get()`调用都会阻塞，然后等待直到callable中止。在最糟糕的情况下，一个callable持续运行——因此使你的程序将没有响应。我们可以简单的传入一个时长来避免这种情况。
 
 ```java
-    ExecutorService executor = Executors.newFixedThreadPool(1);
+ExecutorService executor = Executors.newFixedThreadPool(1);
 
-    Future<Integer> future = executor.submit(() -> {
+Future<Integer> future = executor.submit(() -> {
     try {
         TimeUnit.SECONDS.sleep(2);
         return 123;
@@ -192,7 +192,7 @@ future.get();
     }
 });
 
-    future.get(1, TimeUnit.SECONDS);
+future.get(1, TimeUnit.SECONDS);
 ```
 
 运行上面的代码将会产生一个`TimeoutException`：
@@ -274,8 +274,10 @@ ForkJoinPools 在Java7时引入，将会在这个系列后面的教程中详细�
 
 下面的实例，调度一个任务在延迟3分钟后执行：
 
+
+
 ```java
-ScheduledExecutorService executor = 				Executors.newScheduledThreadPool(1);
+ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
 
 Runnable task = () -> System.out.println("Scheduling: " + System.nanoTime());
 ScheduledFuture<?> future = executor.schedule(task, 3, TimeUnit.SECONDS);
@@ -286,12 +288,12 @@ long remainingDelay = future.getDelay(TimeUnit.MILLISECONDS);
 System.out.printf("Remaining Delay: %sms", remainingDelay);
 ```
 
-调度一个任务将会产生一个专门的future类型——`ScheduleFuture`，它除了提供了Future的所有方法之外，他还提供了`getDelay()`方法来获得剩余的延迟。在延迟消逝后，任务将会并发执行。
+调度一个任务将会产生一个专门的 future 类型——`ScheduleFuture`，它除了提供了 `Future` 的所有方法之外，它还提供了 `getDelay()` 方法来获得剩余的延迟。在延迟消逝后，任务将会并发执行。
 
-为了调度任务持续的执行，executors 提供了两个方法`scheduleAtFixedRate()`和`scheduleWithFixedDelay()`。第一个方法用来以固定频率来执行一个任务，比如，下面这个示例中，每分钟一次：
+为了调度任务持续的执行，executors 提供了两个方法 `scheduleAtFixedRate()` 和 `scheduleWithFixedDelay()`。第一个方法用来以固定频率来执行一个任务，比如，下面这个示例中，每分钟一次：
 
 ```java
-ScheduledExecutorService executor = 	Executors.newScheduledThreadPool(1);
+ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
 
 Runnable task = () -> System.out.println("Scheduling: " + System.nanoTime());
 
@@ -302,12 +304,12 @@ executor.scheduleAtFixedRate(task, initialDelay, period, TimeUnit.SECONDS);
 
 另外，这个方法还接收一个初始化延迟，用来指定这个任务首次被执行等待的时长。
 
-请记住：`scheduleAtFixedRate()`并不考虑任务的实际用时。所以，如果你指定了一个period为1分钟而任务需要执行2分钟，那么线程池为了性能会更快的执行。
+请记住：`scheduleAtFixedRate()` 并不考虑任务的实际用时。所以，如果你指定了一个 period 为 1 分钟而任务需要执行 2 分钟，那么线程池为了性能会更快的执行。
 
-在这种情况下，你应该考虑使用`scheduleWithFixedDelay()`。这个方法的工作方式与上我们上面描述的类似。不同之处在于等待时间 period 的应用是在一次任务的结束和下一个任务的开始之间。例如：
+在这种情况下，你应该考虑使用 `scheduleWithFixedDelay()`。这个方法的工作方式与上面我们描述的类似。不同之处在于等待时间 period 的应用是在一次任务的结束和下一个任务的开始之间。例如：
 
 ```java
-ScheduledExecutorService executor = 		Executors.newScheduledThreadPool(1);
+ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
 
 Runnable task = () -> {
     try {
@@ -322,13 +324,14 @@ Runnable task = () -> {
 executor.scheduleWithFixedDelay(task, 0, 1, TimeUnit.SECONDS);
 ```
 
-这个例子调度了一个任务，并在一次执行的结束和下一次执行的开始之间设置了一个1分钟的固定延迟。初始化延迟为0，任务执行时间为0。所以我们分别在0s,3s,6s,9s等间隔处结束一次执行。如你所见，`scheduleWithFixedDelay()`在你不能预测调度任务的执行时长时是很有用的。
+这个例子调度了一个任务，并在一次执行的结束和下一次执行的开始之间设置了一个 1 分钟的固定延迟。初始化延迟为 0，任务执行时间为 0。所以我们分别在 0s, 3s, 6s, 9s 等间隔处结束一次执行。如你所见，`scheduleWithFixedDelay()` 在你不能预测调度任务的执行时长时是很有用的。
 
-这是并发系列教程的第一部分。我推荐你亲手实践一下上面的代码示例。你可以从 [Github](https://github.com/winterbe/java8-tutorial) 上找到这篇文章中所有的代码示例，所以欢迎你fork这个仓库，并[收藏它](https://github.com/winterbe/java8-tutorial/stargazers)。
+这是并发系列教程的第一部分。我推荐你亲手实践一下上面的代码示例。你可以从 [Github](https://github.com/winterbe/java8-tutorial) 上找到这篇文章中所有的代码示例，所以欢迎你 fork 这个仓库，并[收藏它](https://github.com/winterbe/java8-tutorial/stargazers)。
 
 我希望你会喜欢这篇文章。如果你有任何的问题都可以在下面评论或者通过 [Twitter](https://twitter.com/winterbe_) 向我反馈。
 
 + 第一部分：[线程和执行器](ch4.md)
-+ 第二部分：[同步和锁](ch5.md)
-+ 第三部分：[原子变量和 ConcurrentMap](ch6.md)
 
++ 第二部分：[同步和锁](ch5.md)
+
++ 第三部分：[原子变量和 ConcurrentMap](ch6.md)

@@ -1,3 +1,4 @@
+
 # JUnit 5 显示名称
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/junit5/junit-5-display-names/>
@@ -6,14 +7,14 @@
 
 *用 JUnit 5.5.2 测试的 PS*
 
-## 1.@DisplayName
+## 1. `@DisplayName`
 
 1.1 测试类和方法的默认名称。
 
-DisplayNameTest.java
+`DisplayNameTest.java`
 
 ```java
- package com.mkyong.display;
+package com.mkyong.display;
 
 import org.junit.jupiter.api.Test;
 
@@ -27,7 +28,7 @@ public class DisplayNameTest {
     void test_spaces_fail() {
     }
 
-} 
+}
 ```
 
 输出
@@ -35,18 +36,18 @@ public class DisplayNameTest {
 ![output](img/c780b12242ed5507c4397bb888068b36.png)
 
 ```java
- +-- JUnit Jupiter [OK]
++-- JUnit Jupiter [OK]
 | '-- DisplayNameTest [OK]
 |   +-- test_spaces_ok() [OK]
-|   '-- test_spaces_fail() [OK] 
+|   '-- test_spaces_fail() [OK]
 ```
 
 1.2 `@DisplayName`
 
-DisplayNameCustomTest.java
+`DisplayNameCustomTest.java`
 
 ```java
- package com.mkyong.display;
+package com.mkyong.display;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -64,7 +65,7 @@ public class DisplayNameCustomTest {
     void test_spaces_fail() {
     }
 
-} 
+}
 ```
 
 输出
@@ -72,22 +73,22 @@ public class DisplayNameCustomTest {
 ![output](img/f5d6960b5109cede5f68ff8db1fe1e26.png)
 
 ```java
- +-- JUnit Jupiter [OK]
++-- JUnit Jupiter [OK]
 | '-- I'm a Test Class [OK]
 |   +-- Test with spaces, expected ok [OK]
-|   '-- Test with spaces, expected failed [OK] 
+|   '-- Test with spaces, expected failed [OK]
 ```
 
-## 2.显示名称生成器
+## 2. 显示名称生成器
 
 2.1 我们还可以创建一个自定义显示名称生成器，并通过`@DisplayNameGeneration`进行配置。
 
 2.2 这个例子使用 JUnit `ReplaceUnderscores`生成器将下划线替换为空格。
 
-DisplayNameGenerator1Test.java
+`DisplayNameGenerator1Test.java`
 
 ```java
- package com.mkyong.display;
+package com.mkyong.display;
 
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
@@ -106,7 +107,7 @@ public class DisplayNameGenerator1Test {
     void test_spaces_fail() {
     }
 
-} 
+}
 ```
 
 输出
@@ -115,10 +116,10 @@ public class DisplayNameGenerator1Test {
 
 2.3 我们可以扩展 JUnit `DisplayNameGenerator`来创建我们的自定义显示名称生成器。
 
-DisplayNameGenerator2Test.java
+`DisplayNameGenerator2Test.java`
 
 ```java
- package com.mkyong.display;
+package com.mkyong.display;
 
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
@@ -158,21 +159,21 @@ public class DisplayNameGenerator2Test {
         }
     }
 
-} 
+}
 ```
 
 输出
 
 ![output](img/0aba5db6f7b28377c1b54d744d97a598.png)
 
-## 3.参数化测试
+## 3. 参数化测试
 
-3.1 对于参数化测试，我们可以通过`@ParameterizedTest`的 name 属性来声明自定义显示名称，参见下面的例子:
+3.1 对于参数化测试，我们可以通过`@ParameterizedTest`的`name`属性来声明自定义显示名称，参见下面的例子：
 
-DisplayNameParamTest.java
+`DisplayNameParamTest.java`
 
 ```java
- package com.mkyong.display;
+package com.mkyong.display;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -203,7 +204,7 @@ public class DisplayNameParamTest {
         );
     }
 
-} 
+}
 ```
 
 输出
@@ -212,13 +213,15 @@ public class DisplayNameParamTest {
 
 ## 下载源代码
 
-$ git clone [https://github.com/mkyong/junit-examples](http://web.archive.org/web/20221225035521/https://github.com/mkyong/junit-examples)
+```
+$ git clone https://github.com/mkyong/junit-examples
 $ cd junit5-examples
 $ check src/test/java/com/mkyong/display/*.java
+```
 
 # 参考
 
-*   [JUnit 5 显示名称](http://web.archive.org/web/20221225035521/https://junit.org/junit5/docs/current/user-guide/#writing-tests-display-names)
-*   [JUnit 5 参数化测试](/web/20221225035521/https://mkyong.com/junit5/junit-5-parameterized-tests/)
+* [JUnit 5 显示名称](http://web.archive.org/web/20221225035521/https://junit.org/junit5/docs/current/user-guide/#writing-tests-display-names)
+* [JUnit 5 参数化测试](/web/20221225035521/https://mkyong.com/junit5/junit-5-parameterized-tests/)
 
 <input type="hidden" id="mkyong-current-postId" value="15266">

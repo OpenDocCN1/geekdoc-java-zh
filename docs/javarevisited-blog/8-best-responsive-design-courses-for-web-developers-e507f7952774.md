@@ -1,3 +1,4 @@
+
 # 2023 年初学者学习响应式网页设计的 8 门最佳在线课程
 
 > 原文：<https://medium.com/javarevisited/8-best-responsive-design-courses-for-web-developers-e507f7952774?source=collection_archive---------1----------------------->
@@ -99,20 +100,26 @@ image_credit — udemy
 在本课程中，您将学到以下内容:
 
 1.  灵活的内容
+
 2.  媒体查询
+
 3.  响应式 Web 设计模式
+
 4.  导航在响应式网页设计中的应用
+
 5.  有条件加载等等。
 
 总体来说，这是一门中高级课程，学习响应式网页设计和创建响应式网站。
 
 **这是加入本课程** — [响应式网页设计](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fresponsive-web-design)的链接
 
+
+
 [![](img/003cb0793f0d128afb2c3b0d62a75ead.png)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fresponsive-web-design)
 
 顺便说一下，你需要一个 [Pluralsight 会员](http://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn)才能加入这个课程，费用大约是每月 29 美元或每年 299 美元(14%的折扣)。我向所有程序员强烈推荐这个订阅，因为它提供了超过 7000 个在线课程的即时访问，以学习任何技术技能。或者，你也可以使用他们的 [**10 天免费通行证**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial) 免费观看这门课程。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial>
 
 ## 7.[学习响应式设计](https://www.pntrac.com/t/TUJGR0lLR0JHRklJSkhCR0ZISk1N?url=https%3A%2F%2Fwww.codecademy.com%2Flearn%2Flearn-responsive-design)【代码学院】
 
@@ -126,10 +133,9 @@ image_credit — udemy
 
 [![](img/290263c6e72f0d458e7630e0cd1ad9fc.png)](https://www.pntrac.com/t/TUJGR0lLR0JHRklJSkhCR0ZISk1N?url=https%3A%2F%2Fwww.codecademy.com%2Flearn%2Flearn-responsive-design)
 
-顺便说一句，你需要一个 [**CodeCademy PRO**](https://bit.ly/codecademypro) 才能加入这个课程。它的年费大约是每月 15.99 美元，提供所有 Codecademy 的内容、课程、测验和项目。你可以用这个来赚取、练习&
-应用工作技能。
+顺便说一句，你需要一个 [**CodeCademy PRO**](https://bit.ly/codecademypro) 才能加入这个课程。它的年费大约是每月 15.99 美元，提供所有 Codecademy 的内容、课程、测验和项目。你可以用这个来赚取、练习&应用工作技能。
 
-<https://bit.ly/codecademypro>  
+<https://bit.ly/codecademypro>
 
 ## 8.[响应式网页设计——建立 RWD 网站](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fresponsive-web-design-2-0-complete-guide%2F) (4 个实时项目)
 
@@ -167,4 +173,4 @@ image_credit — udemy
 
 **p . s .**——如果你热衷于学习网页设计，但正在寻找免费的在线培训课程来启动你的学习，那么你必须看看这个 [**为网页开发者设计的网页:创建漂亮的网站！**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fweb-design-secrets%2F)Udemy 上的课程**。**这个课程完全免费，完全没有资源和电子书。你只需要一个免费的 Udemy 帐户就可以参加这个课程。
 
-<https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fweb-design-secrets%2F> 
+<https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fweb-design-secrets%2F>

@@ -1,3 +1,4 @@
+
 # 在扩展中封存包
 
 > 原文：[`docs.oracle.com/javase/tutorial/ext/security/sealing.html`](https://docs.oracle.com/javase/tutorial/ext/security/sealing.html)
@@ -17,7 +18,6 @@ com/myCompany/package_1/
 com/myCompany/package_2/
 com/myCompany/package_3/
 com/myCompany/package_4/
-
 ```
 
 假设您想要封存所有包。您可以通过简单地向清单中添加一个存档级别的`Sealed`头部来实现：
@@ -25,7 +25,6 @@ com/myCompany/package_4/
 ```java
 Manifest-Version: 1.0
 Sealed: true
-
 ```
 
 任何具有这个清单的 JAR 文件中的所有包都将被封存。
@@ -37,7 +36,6 @@ Manifest-Version: 1.0
 
 Name: com/myCompany/package_3/
 Sealed: true
-
 ```
 
 在这个例子中，唯一的`Sealed`头部是与包`com.myCompany.package_3`的`Name`头部相关联的，因此只有该包被封存。（`Sealed`头部与`Name`头部相关联，因为它们之间没有空行。）
@@ -50,7 +48,6 @@ Sealed: true
 
 Name: com/myCompany/package_2/
 Sealed: false
-
 ```
 
-在这个例子中，存档级别的`Sealed: true`头部表示 JAR 文件中的所有包都将被封存。然而，清单中还有一个与包`com.myCompany.package_2`相关联的`Sealed: false`头部，该头部覆盖了该包的存档级别封存。因此，这个清单将导致所有包都被封存，除了`com.myCompany.package_2`。
+在这个例子中，存档级别的`Sealed: true`头部表示 JAR 文件中的所有包都将被封存。然而，清单中还有一个与包`com.myCompany.package_2`相关联的`Sealed: false`头部，该头部覆盖了该包的存档级别封存。因此，这个清单将导致所有包都被封存，除了`com.myCompany.package_2`。

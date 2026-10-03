@@ -1,3 +1,4 @@
+
 # 查看策略文件效果
 
 > 原文：[`docs.oracle.com/javase/tutorial/security/toolsign/rstep4.html`](https://docs.oracle.com/javase/tutorial/security/toolsign/rstep4.html)
@@ -16,7 +17,6 @@
 java -Djava.security.manager
     -Djava.security.policy=exampleraypolicy
     -cp sCount.jar Count C:\TestData\data
-
 ```
 
 注意：在一行上键入命令，`-D`和`-cp`之前加上一个空格。
@@ -31,31 +31,24 @@ java -Djava.security.manager
 
 因此，让解释器考虑你的`exampleraypolicy`文件的策略条目的一种方法是在安全属性文件中添加指示该文件的条目。
 
-* * *
-
 **重要提示：**如果你正在运行自己的 JDK 副本，你可以轻松编辑你的安全属性文件。如果你正在运行与他人共享的版本，只有在你有写入权限或在适当时向系统管理员请求修改文件时，你才能修改系统范围的安全属性文件。然而，在本教程测试中，对于你来说可能不适合修改系统范围的策略文件；我们建议你只是阅读以下内容以了解如何操作，或者安装你自己的私人版本的 JDK 以供教程课程使用。
-
-* * *
 
 安全属性文件位于
 
-+   **Windows**：`*java.home*\lib\security\java.security`
-
-+   **UNIX**：`*java.home*/lib/security/java.security`
++ **Windows**：`*java.home*\lib\security\java.security`
++ **UNIX**：`*java.home*/lib/security/java.security`
 
 *`java.home`*部分表示 JRE 安装的目录。
 
 要修改安全属性文件，请在适合编辑 ASCII 文本文件的编辑器中打开它。然后在以`policy.url.2`开头的行后添加以下行：
 
-+   **Windows**：`**policy.url.3=file:/C:/Test/exampleraypolicy**`
-
-+   **UNIX**：`**policy.url.3=file:${user.home}/test/exampleraypolicy**`
++ **Windows**：`policy.url.3=file:/C:/Test/exampleraypolicy`
++ **UNIX**：`policy.url.3=file:${user.home}/test/exampleraypolicy`
 
 在 UNIX 系统上，您还可以显式指定您的主目录，如
 
 ```java
 policy.url.3=file:/home/susanj/test/exampleraypolicy
-
 ```
 
 接下来，在您的命令窗口中，转到包含`sCount.jar`文件的目录，即`C:\Test`或`~/test`目录。在一行上键入以下命令：
@@ -63,13 +56,8 @@ policy.url.3=file:/home/susanj/test/exampleraypolicy
 ```java
 java -Djava.security.manager
         -cp sCount.jar Count C:\TestData\data
-
 ```
 
 与第一种方法一样，如果程序仍然报告错误，则可能是策略文件出现问题。使用策略工具检查您在上一步中创建的权限，并更正任何拼写错误或其他错误。
 
-* * *
-
 **重要提示：**在继续之前，您可能希望删除您刚刚在安全属性文件中添加的行（或将其注释掉），因为您可能不希望在不运行教程课程时包含`exampleraypolicy`文件。
-
-* * *

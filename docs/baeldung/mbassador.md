@@ -1,14 +1,15 @@
+
 # 大使介绍
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/mbassador>
 
-## 1。概述
+## 1. 概述
 
-简单地说， [MBassador](https://web.archive.org/web/20220629002728/https://github.com/bennidi/mbassador) 是**一个利用[发布-订阅](https://web.archive.org/web/20220629002728/https://en.wikipedia.org/wiki/Publish–subscribe_pattern)语义的高性能事件总线。**
+简单地说，[MBassador](https://web.archive.org/web/20220629002728/https://github.com/bennidi/mbassador) 是**一个利用[发布-订阅](https://web.archive.org/web/20220629002728/https://en.wikipedia.org/wiki/Publish–subscribe_pattern)语义的高性能事件总线。**
 
 消息被广播给一个或多个对等体，而事先不知道有多少订户，或者他们如何使用该消息。
 
-## 2。Maven 依赖关系
+## 2. Maven 依赖关系
 
 在我们可以使用这个库之前，我们需要添加 [mbassador](https://web.archive.org/web/20220629002728/https://search.maven.org/classic/#search%7Cga%7C1%7Ca%3A%22mbassador%22) 依赖项:
 
@@ -20,9 +21,9 @@
 </dependency>
 ```
 
-## 3。基本事件处理
+## 3. 基本事件处理
 
-### 3.1。简单的例子
+### 3.1. 简单的例子
 
 我们将从发布消息的简单示例开始:
 
@@ -51,7 +52,7 @@ public void handleString(String message) {
 
 在这个测试类的顶部，我们看到用默认构造函数创建了一个`MBassador`。接下来，在 `@Before`方法中，我们调用`subscribe()`并传入对类本身的引用。
 
-在`subscribe(),`中，调度程序检查订户的`@Handler`注释。
+在`subscribe()`中，调度程序检查订户的`@Handler`注释。
 
 并且，在第一个测试中，我们调用了`dispatcher.post(…).now()`来发送消息——这导致了`handleString()`被调用。
 
@@ -87,7 +88,7 @@ public void handleInteger(Integer message) {
 
 不出所料，当我们调度一个`Integer`，`handleInteger()`被调用，`handleString()`不被调用。一个调度程序可以用于发送多种消息类型。
 
-### 3.2。无效消息
+### 3.2. 无效消息
 
 那么，如果没有消息的处理程序，消息会去哪里呢？让我们添加一个新的事件处理程序，然后发送第三种消息类型:
 
@@ -111,13 +112,13 @@ public void handleDeadEvent(DeadMessage message) {
 } 
 ```
 
-在这个测试中，我们分派了一个`Long`而不是一个`Integer.``handleInteger()`和`handleString()`都没有被调用，但是`handleDeadEvent()`被调用了。
+在这个测试中，我们分派了一个`Long`而不是一个`Integer`.`handleInteger()`和`handleString()`都没有被调用，但是`handleDeadEvent()`被调用了。
 
 **当消息没有处理程序时，它被包装在一个`DeadMessage`对象中。**因为我们为`Deadmessage`添加了一个处理程序，所以我们捕获了它。
 
 `DeadMessage`可以放心忽略；如果应用程序不需要跟踪失效消息，可以允许它们无处可去。
 
-## 4。使用事件层级
+## 4. 使用事件层级
 
 发送`String`和`Integer`事件受到限制。让我们创建几个消息类:
 
@@ -135,7 +136,7 @@ public class RejectMessage extends Message {
 
 我们有一个简单的基类和两个扩展它的类。
 
-### 4.1。发送基类`Message`
+### 4.1. 发送基类`Message`
 
 我们从`Message`事件开始:
 
@@ -175,11 +176,11 @@ public void handleAckMessage(AckMessage message) {
 }
 ```
 
-探索 MBassador——一辆高性能的公共活动巴士。这限制了我们使用`Messages` ，但是增加了一层额外的类型安全。
+探索 MBassador——一辆高性能的公共活动巴士。这限制了我们使用`Messages`，但是增加了一层额外的类型安全。
 
 当我们发送一个`Message`，`handleMessage()`接收它。其他两个处理程序没有。
 
-### 4.2。发送子类消息
+### 4.2. 发送子类消息
 
 先发个`RejectMessage`:
 
@@ -196,7 +197,7 @@ public void whenRejectDispatched_thenMessageAndRejectHandled() {
 
 当我们发送一个`RejectMessage`时，`handleRejectMessage()`和`handleMessage()`都会收到。
 
-由于`RejectMessage` 扩展了`Message,`，`Message`处理程序收到了它，此外还有`R`，`ejectMessage` 处理程序。
+由于`RejectMessage` 扩展了`Message`，`Message`处理程序收到了它，此外还有`RejectMessage` 处理程序。
 
 让我们用一个`AckMessage`来验证这个行为:
 
@@ -213,11 +214,11 @@ public void whenAckDispatched_thenMessageAndAckHandled() {
 
 正如我们所料，当我们发送一个`AckMessage`时，`handleAckMessage()`和`handleMessage()`都会收到。
 
-## 5。过滤信息
+## 5. 过滤信息
 
 按类型组织消息已经是一个强大的功能，但是我们可以对它们进行更多的过滤。
 
-### 5.1。类别和子类的过滤器
+### 5.1. 类别和子类的过滤器
 
 当我们发布一个`RejectMessage`或`AckMessage`时，我们在特定类型的事件处理程序和基类中都收到了事件。
 
@@ -258,19 +259,19 @@ public void handleSubMessage(Message message) {
 
 **注释`@Handler`的`filters`参数接受一个实现`IMessageFilter`** 的`Class`。本库提供了两个例子:
 
-`Filters.RejectSubtypes`顾名思义:它会过滤掉任何子类型。在这种情况下，我们看到`RejectMessage`不是由`handleBaseMessage().`处理的
+`Filters.RejectSubtypes`顾名思义:它会过滤掉任何子类型。在这种情况下，我们看到`RejectMessage`不是由`handleBaseMessage()`处理的。
 
-`Filters.SubtypesOnly`也顾名思义:它会过滤掉任何基本类型。在这种情况下，我们看到`Message`不是由`handleSubMessage().`处理的
+`Filters.SubtypesOnly`也顾名思义:它会过滤掉任何基本类型。在这种情况下，我们看到`Message`不是由`handleSubMessage()`处理的。
 
-### 5.2。`IMessageFilter`
+### 5.2. `IMessageFilter`
 
 `Filters.RejectSubtypes`和`Filters.SubtypesOnly`都实现了`IMessageFilter`。
 
 `RejectSubTypes` 将消息的类别与其定义的消息类型进行比较，只允许等于其类型之一的消息通过，而不是任何子类。
 
-### 5.3。条件过滤
+### 5.3. 条件过滤
 
-幸运的是，有一种更简单的过滤信息的方法。 **MBassador 支持 [Java EL 表达式](https://web.archive.org/web/20220629002728/https://en.wikipedia.org/wiki/Unified_Expression_Language)的子集作为过滤消息的条件。**
+幸运的是，有一种更简单的过滤信息的方法。**MBassador 支持 [Java EL 表达式](https://web.archive.org/web/20220629002728/https://en.wikipedia.org/wiki/Unified_Expression_Language)的子集作为过滤消息的条件。**
 
 让我们根据消息的长度来过滤一条`String`消息:
 
@@ -293,7 +294,7 @@ public void handleStringMessage(String message) {
 “foobar！”消息长度为七个字符，并被过滤。让我们发一个更短的`String`:
 
 ```java
- @Test
+@Test
 public void whenShortStringDispatched_thenStringHandled() {
     dispatcher.post("foobar").now();
 
@@ -329,11 +330,13 @@ public void handleRejectMessage(RejectMessage rejectMessage) {
 
 同样，我们可以在对象上查询一个方法，并决定是否过滤消息。
 
-### 5.4。捕获过滤的消息
+### 5.4. 捕获过滤的消息
 
-与`DeadEvents,`类似，我们可能希望捕获和处理过滤后的消息。还有一个专门的机制来捕获过滤的事件。**过滤事件与“死亡”事件的处理方式不同。**
+与`DeadEvents`类似，我们可能希望捕获和处理过滤后的消息。还有一个专门的机制来捕获过滤的事件。**过滤事件与“死亡”事件的处理方式不同。**
 
 让我们编写一个测试来说明这一点:
+
+
 
 ```java
 private String testString;
@@ -366,13 +369,13 @@ public void handleDeadMessage(DeadMessage deadMessage) {
 } 
 ```
 
-通过添加一个`FilteredMessage`处理程序，我们可以跟踪因为长度而被过滤的`Strings`。`filterMessage` 包含了我们太长的`String` ，而`deadMessage` 仍然是`null.`
+通过添加一个`FilteredMessage`处理程序，我们可以跟踪因为长度而被过滤的`Strings`。`filterMessage` 包含了我们太长的`String`，而`deadMessage` 仍然是`null.`
 
-## 6。异步消息调度和处理
+## 6. 异步消息调度和处理
 
 到目前为止，我们所有的例子都使用了同步消息调度；当我们调用`post.now()`时，消息被传递到我们调用`post()`的同一个线程中的每个处理程序。
 
-### 6.1。异步调度
+### 6.1. 异步调度
 
 `MBassador.post()`返回一个 [SyncAsyncPostCommand](https://web.archive.org/web/20220629002728/https://bennidi.github.io/mbassador/net/engio/mbassy/bus/publication/SyncAsyncPostCommand.html) 。该类提供了几种方法，包括:
 
@@ -403,9 +406,9 @@ public void handleStringMessage(String message) {
 
 我们在这个测试中调用了`asynchronously()`，并使用一个`AtomicBoolean`作为带有`await()`的标志来等待交付线程交付消息。
 
-如果我们注释掉对`await()`的调用，我们就冒着测试失败的风险，因为我们在交付线程完成之前检查了`testString` 。
+如果我们注释掉对`await()`的调用，我们就冒着测试失败的风险，因为我们在交付线程完成之前检查了`testString`。
 
-### 6.2。异步处理程序调用
+### 6.2. 异步处理程序调用
 
 异步调度允许消息提供者在消息被传递到每个处理程序之前返回到消息处理，但是它仍然按顺序调用每个处理程序，并且每个处理程序必须等待上一个处理程序完成。
 
@@ -429,7 +432,6 @@ public void whenHandlerAsync_thenHandled() {
 
 @Handler(delivery = Invoke.Asynchronously)
 public void handleIntegerMessage(Integer message) {
-
     this.invocationThreadName = Thread.currentThread().getName();
     this.testInteger = message;
     ready.set(true);
@@ -438,11 +440,11 @@ public void handleIntegerMessage(Integer message) {
 
 处理程序可以使用`Handler`注释上的`delivery = Invoke.Asynchronously`属性请求异步调用。我们在测试中通过比较分派方法和处理程序中的`Thread`名称来验证这一点。
 
-## 7。定制 MBassador
+## 7. 定制 MBassador
 
 到目前为止，我们一直使用默认配置的 MBassador 实例。调度员的行为可以用注释来修改，类似于我们目前看到的那些；我们将讨论更多的内容来结束本教程。
 
-### 7.1。异常处理
+### 7.1. 异常处理
 
 处理程序不能定义已检查的异常。相反，可以向调度程序提供一个`IPublicationErrorHandler`作为其构造函数的参数:
 
@@ -491,11 +493,11 @@ public class MBassadorConfigurationTest
 }
 ```
 
-当 `handleString()` 抛出一个`Error,`时，它被保存到`errorCause.`
+当`handleString()`抛出一个`Error`时，它被保存到`errorCause`。
 
-### 7.2。处理器优先级
+### 7.2. 处理器优先级
 
-**`Handlers`的调用顺序与它们被添加的顺序相反，但这不是我们想要依赖的行为。**即使能够在线程中调用处理程序，我们可能仍然需要知道它们将被调用的顺序。
+`Handlers`的调用顺序与它们被添加的顺序相反，但这不是我们想要依赖的行为。即使能够在线程中调用处理程序，我们可能仍然需要知道它们将被调用的顺序。
 
 我们可以显式设置处理程序优先级:
 
@@ -536,7 +538,7 @@ public void handleRejectMessage0(RejectMessage rejectMessage) {
 
 从最高优先级到最低优先级调用处理程序。最后调用默认优先级为零的处理程序。我们看到处理程序以相反的顺序编号`pop()`。
 
-### 7.3。拒绝子类型，最简单的方法
+### 7.3. 拒绝子类型，最简单的方法
 
 上面测试中的`handleMessage()`怎么了？我们不必使用`RejectSubTypes.class`来过滤我们的子类型。
 
@@ -544,7 +546,7 @@ public void handleRejectMessage0(RejectMessage rejectMessage) {
 
 但是，我们仍然需要使用基于过滤器的实现来只接受子类型。
 
-## 8。结论
+## 8. 结论
 
 MBassador 是一个简单明了的库，用于在对象之间传递消息。消息可以用多种方式组织，可以同步或异步发送。
 

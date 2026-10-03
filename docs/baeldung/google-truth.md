@@ -1,14 +1,15 @@
+
 # 用谷歌真相测试
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/google-truth>
 
-## 1。概述
+## 1. 概述
 
-`[Truth](https://web.archive.org/web/20221128115819/https://google.github.io/truth/)`是一个**流畅灵活的开源测试框架，旨在使测试断言和失败消息更具可读性。**
+`Truth`是一个**流畅灵活的开源测试框架，旨在使测试断言和失败消息更具可读性。**
 
 在本文中，我们将探索`Truth`框架的关键特性，并实现示例来展示它的能力。
 
-## 2。Maven 依赖关系
+## 2. Maven 依赖关系
 
 首先，我们需要将`truth`和`truth-java8-extension`添加到我们的`pom.xml:`中
 
@@ -28,13 +29,16 @@
 
 你可以在 Maven Central 上找到最新版本的 [truth](https://web.archive.org/web/20221128115819/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22com.google.truth%22%20AND%20a%3A%22truth%22) 和 [truth-java8-extension](https://web.archive.org/web/20221128115819/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22com.google.truth.extensions%22%20AND%20a%3A%22truth-java8-extension%22) 。
 
-## 3。简介
+## 3. 简介
 
 允许我们为各种类编写可读的断言和失败消息:
 
 *   **标准 Java**——原语、数组、字符串、对象、集合、可抛出对象、类等。
+
 *   **Java 8**–`Optional`和`Stream`实例
+
 *   **番石榴**—`Optional`、`Multimap`、`Multiset`、`Table`物件
+
 *   **自定义类型**——通过扩展`Subject` 类，我们将在后面看到
 
 通过`Truth`和`Truth8`类，该库提供了用于编写断言的实用方法，这些断言在`subject`上工作，即测试中的值或对象。
@@ -43,7 +47,7 @@
 
 例如，当断言一个列表时，`Truth`返回一个定义了像`contains()` 和`containsAnyOf()`等方法的`IterableSubject`实例。当断言一个`Map`时，它返回一个`MapSubject`，声明像`containsEntry()`和`containsKey()`这样的方法。
 
-## 4。入门
+## 4. 入门
 
 为了开始编写断言，让我们首先导入`Truth`的入口点:
 
@@ -75,11 +79,11 @@ public class User {
 
 注意自定义的`equals()`方法，其中我们声明两个`User`对象相等，如果它们的名称是。
 
-## 5。标准 Java 断言
+## 5. 标准 Java 断言
 
 在这一节中，我们将看到如何为标准 Java 类型编写测试断言的详细例子。
 
-### 5.1。`Object`断言
+### 5.1. `Object`断言
 
 `Truth`提供了用于在对象上执行断言的`Subject`包装器。`Subject`也是库中所有其他包装器的父类，它声明了确定`Object`(在我们的例子中是`User`)是否等于另一个对象的方法:
 
@@ -148,7 +152,7 @@ public void whenComparingUser_thenInstanceOf() {
 
 在接下来的章节中，**我们将关注每种特定类型** `Truth`支架的最相关方法。但是，请记住，也可以应用`Subject`类中的所有方法。
 
-### 5.2。`Integer`、`Float,`和`Double`断言
+### 5.2. `Integer`、`Float,`和`Double`断言
 
 可以比较`Integer`、`Float,`和`Double`实例的相等性:
 
@@ -201,7 +205,7 @@ public void whenComparingFloat_thenNotWithinPrecision() {
 }
 ```
 
-### 5.3。`BigDecimal`断言
+### 5.3. `BigDecimal`断言
 
 除了常见的断言，这种类型可以忽略其规模进行比较:
 
@@ -214,7 +218,7 @@ public void whenComparingBigDecimal_thenEqualIgnoringScale() {
 }
 ```
 
-### 5.4。`Boolean`断言
+### 5.4. `Boolean`断言
 
 只提供了两种相关的方法，`isTrue()`和`isFalse()`:
 
@@ -227,7 +231,7 @@ public void whenCheckingBoolean_thenTrue() {
 }
 ```
 
-### 5.5。`String`断言
+### 5.5. `String`断言
 
 我们可以测试`String`是否以特定的文本开始:
 
@@ -242,7 +246,7 @@ public void whenCheckingString_thenStartsWith() {
 
 此外，我们可以检查字符串是否包含给定的字符串，它是否以期望值结尾，或者它是否为空。源代码中提供了这些和其他方法的测试用例。
 
-### 5.6。数组断言
+### 5.6. 数组断言
 
 我们可以检查`Array` s，看看它们是否等于其他数组:
 
@@ -267,7 +271,7 @@ public void whenCheckingArray_thenEmpty() {
 }
 ```
 
-### 5.7。`Comparable`断言
+### 5.7. `Comparable`断言
 
 除了测试一个 `Comparable`是否大于或小于另一个实例，我们还可以检查它们是否至少是一个给定值:
 
@@ -331,7 +335,7 @@ public void whenComparingUsers_thenEquivalent() {
 }
 ```
 
-### 5.8。`Iterable`断言
+### 5.8. `Iterable`断言
 
 除了断言一个`Iterable`实例的大小，不管它是空的还是没有重复的，大多数关于`Iterable`的典型断言是它包含一些元素:
 
@@ -383,7 +387,9 @@ public void givenComparator_whenCheckingIterable_thenOrdered() {
 }
 ```
 
-### 5.9。`Map`断言
+### 5.9. `Map`断言
+
+
 
 除了断言一个`Map`实例是否为空，或者具有特定的大小；我们可以检查它是否有特定的条目:
 
@@ -631,7 +637,7 @@ public void whenFailingAssertion_thenCustomMessage() {
 
 ```java
 TEST-985: Secret user subject was NOT null!:
-  Not true that <[[email protected]](/web/20221128115819/https://www.baeldung.com/cdn-cgi/l/email-protection)> is null
+  Not true that <[[email protected]](/web/20221128115819/https://www.baeldung.com/cdn-cgi/l/email-protection)> is null
 ```
 
 此外，我们可以添加一个自定义标签，在错误消息中显示在我们的主题之前。当对象没有有用的字符串表示时，这可能会很方便:
@@ -651,7 +657,7 @@ public void whenFailingAssertion_thenMessagePrefix() {
 
 ```java
 Not true that User [John Doe]
-  (<[[email protected]](/web/20221128115819/https://www.baeldung.com/cdn-cgi/l/email-protection)>) is null
+  (<[[email protected]](/web/20221128115819/https://www.baeldung.com/cdn-cgi/l/email-protection)>) is null
 ```
 
 ## 9。分机
@@ -659,9 +665,13 @@ Not true that User [John Doe]
 扩展`Truth`意味着我们可以添加对定制类型的支持。为此，我们需要创建一个类:
 
 *   扩展`Subject`类或它的一个子类
+
 *   定义一个接受两个参数的构造函数——一个`FailureStrategy`和一个自定义类型的实例
+
 *   声明一个`SubjectFactory`类型的字段，`Truth`将使用它来创建我们的自定义主题的实例
+
 *   实现一个静态的`assertThat()`方法，该方法接受我们的自定义类型
+
 *   公开我们的测试断言 API
 
 现在我们知道了如何扩展`Truth`，让我们创建一个添加对类型`User`对象支持的类:

@@ -1,3 +1,4 @@
+
 # Java 网络周刊，第 178 期
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-web-weekly-178>
@@ -6,7 +7,7 @@
 
 **开始了……**
 
-## 1。Spring 和 Java
+## 1. Spring 和 Java
 
 #### [**> >引擎盖下带有 JVM 的自动资源管理**](https://web.archive.org/web/20220625170918/https://www.infoq.com/articles/Finalize-Exiting-Java)【infoq.com】
 
@@ -14,7 +15,7 @@
 
 #### [> >用 PostgreSQL 冬眠——你需要知道的 6 件事](https://web.archive.org/web/20220625170918/http://www.thoughts-on-java.org/hibernate-postgresql-5-things-need-know/)【thoughts-on-java.org】
 
-如果你正在使用 Hibernate 和 PostgreSQL——肯定有一些值得考虑的优点。
+如果你正在使用`Hibernate`和`PostgreSQL`——肯定有一些值得考虑的优点。
 
 #### [> >最受欢迎的 Java 应用服务器:2017 版](https://web.archive.org/web/20220625170918/https://plumbr.eu/blog/java/most-popular-java-application-servers-2017-edition)plumbr . eu
 
@@ -48,11 +49,11 @@
 
 *   #### [**>>IntelliJ IDEA 2017.2 EAP、具有更智能的控制流分析**](https://web.archive.org/web/20220625170918/https://blog.jetbrains.com/idea/2017/05/intellij-idea-2017-2-eap-with-smarter-control-flow-analysis/)【jetbrains . com】T5
 
-## 2。技术
+## 2. 技术
 
 #### [**> >关于支持连续测试与 FITR 测试自动化**](https://web.archive.org/web/20220625170918/http://www.ontestautomation.com/on-supporting-continuous-testing-with-fitr-test-automation/)【ontestautomation.com】
 
-FITR 就像测试用的酸一样，绝对值得一看。
+`FITR`就像测试用的酸一样，绝对值得一看。
 
 **同样值得一读:**
 
@@ -61,6 +62,7 @@ FITR 就像测试用的酸一样，绝对值得一看。
 *   #### [> > Data center operator: run container](https://web.archive.org/web/20220625170918/https://www.infoq.com/news/2017/05/diamanti-named-cool-vendor)
 
     on the infrastructure built for virtual machine [infoq.com]
+
 *   #### [> >科特林现在是一种支持的机器人语言](https://web.archive.org/web/20220625170918/https://www.infoq.com/news/2017/05/android-kotlin)【infoq . com】T5
 
 *   #### [> >用 jooq](https://web.archive.org/web/20220625170918/https://blog.jooq.org/2017/05/18/10-nice-examples-of-writing-sql-in-kotlin-with-jooq/)【jooq . org】用科特林？科特林写 SQL(SQL)的 10 个好例子
@@ -69,7 +71,7 @@ FITR 就像测试用的酸一样，绝对值得一看。
 
 *   #### [>从 Java 语言(一种计算机语言，尤用于创建网站)到科特林——你的 Java 语言(一种计算机语言，尤用于创建网站)到郭林的备忘单](https://web.archive.org/web/20220625170918/https://github.com/MindorksOpenSource/from-java-to-kotlin)【【github.com/MindorksOpenSource】T4
 
-## 3。沉思
+## 3. 沉思
 
 #### [**> >团队规模与代码质量的关系**](https://web.archive.org/web/20220625170918/http://www.daedtech.com/relationship-team-size-code-quality/)【daedtech.com】
 
@@ -79,7 +81,7 @@ FITR 就像测试用的酸一样，绝对值得一看。
 
 *   #### [**> > How to write a code will operate like**](https://web.archive.org/web/20220625170918/http://www.daedtech.com/write-code-operations-will-like/) [daedtech.com]
 
-## 4。漫画
+## 4. 漫画
 
 本周我最喜欢的迪尔伯特。
 
@@ -89,10 +91,10 @@ FITR 就像测试用的酸一样，绝对值得一看。
 
 #### [> >计划停电](https://web.archive.org/web/20220625170918/http://dilbert.com/strip/2013-07-06)【dilbert.com】
 
-## 5。本周精选
+## 5. 本周精选
 
 `Certification Class`发布的最后一天(星期五):
 
-#### [> >新的“认证班”在休息](/web/20220625170918/https://www.baeldung.com/rest-with-spring-course#certification-class)
+#### [> >新的"认证班"在休息](/web/20220625170918/https://www.baeldung.com/rest-with-spring-course#certification-class)
 
 #### [> >新的【认证班】在学春安](/web/20220625170918/https://www.baeldung.com/learn-spring-security-course#certification-class)

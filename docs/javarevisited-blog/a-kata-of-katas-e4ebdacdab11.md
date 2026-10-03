@@ -1,3 +1,5 @@
+
+
 # 形中的形
 
 > 原文：<https://medium.com/javarevisited/a-kata-of-katas-e4ebdacdab11?source=collection_archive---------4----------------------->
@@ -8,7 +10,7 @@
 
 照片由[陶黎黄](https://unsplash.com/@h4x0r3?utm_source=medium&utm_medium=referral)在 [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)
 
-# 什么是代码形？
+## 什么是代码形？
 
 > 一个动手编程练习，有助于通过实践磨练你的技能。
 
@@ -22,7 +24,7 @@
 
 [Nikhil Nanivadekar](https://twitter.com/NikhilNanivade) 、莱奥·利马和我还用四种 JVM 语言(Java、Kotlin、Groovy、Scala)实现了扑克牌形，用于我们在 Oracle CodeOne 2018 和 Devnexus 2019 上的一次演讲，名为 [JVM。语言。比较](https://github.com/nikhilnanivadekar/JvmLanguageCompare)。
 
-# 学习形和形来学习
+## 学习形和形来学习
 
 2020 年，我投稿的一篇文章发表在[《每个 Java 程序员都应该知道的 97 件事》](https://www.oreilly.com/library/view/97-things-every/9781491952689/)这本书里。
 
@@ -32,11 +34,9 @@
 
 我写的文章可以在下面的链接中找到。
 
-  
-
 我继续使用本文中描述的方法来创建新的代码表。任何开发人员都可以使用这种方法来开发和共享他们自己的代码表。我遵循这种方法创造了我将在本博客其余部分描述的形中的形。
 
-# 卡塔斯的卡塔斯
+## 卡塔斯的卡塔斯
 
 [“katas 的 Kata”](https://github.com/donraab/CodeKatas/tree/master/kata-of-katas)是我写的一个代码 Kata，用来记录这些年来我在各种语言和库中实现的代码 Kata。kata 基本上是本报告中自述文件[的 Java 代码实现，我将其描述为代码 kata 的“Katalogue”。](https://github.com/BNYMellon/CodeKatas/blob/master/README.md)
 
@@ -44,25 +44,27 @@
 
 在 Astah 中创建的 Kata 类图
 
-我首先想出了我想要实现来表示代码 katas 的域模型。我为`[Kata](https://github.com/BNYMellon/CodeKatas/blob/master/kata-of-katas-solutions/src/main/java/bnymellon/codekatas/kataofkatas/Kata.java)`、`[Language](https://github.com/BNYMellon/CodeKatas/blob/master/kata-of-katas-solutions/src/main/java/bnymellon/codekatas/kataofkatas/Language.java)`和`[Library](https://github.com/BNYMellon/CodeKatas/blob/master/kata-of-katas-solutions/src/main/java/bnymellon/codekatas/kataofkatas/Library.java)`创建了类。我将类实现为 Java 枚举，并让`Language`和`Library`实现一个名为`[Technology](https://github.com/BNYMellon/CodeKatas/blob/master/kata-of-katas-solutions/src/main/java/bnymellon/codekatas/kataofkatas/Technology.java)`的接口。我将`Kata`与`Technology`的`ImmutableSet`相关联。每个`Kata`都是在 Java Enum 中用一个变量 arg 数组`Technology`构造的。这为开发人员创造了在形中要解决的第一个挑战——如何从`Technology`的`ImmutableSet`中获得`Language`的`ImmutableSet`和`Kata`的`Library`。
+我首先想出了我想要实现来表示代码 katas 的域模型。我为`Kata`、`Language`和`Library`创建了类。我将类实现为 Java 枚举，并让`Language`和`Library`实现一个名为`Technology`的接口。我将`Kata`与`Technology`的`ImmutableSet`相关联。每个`Kata`都是在 Java Enum 中用一个变量 arg 数组`Technology`构造的。这为开发人员创造了在形中要解决的第一个挑战——如何从`Technology`的`ImmutableSet`中获得`Language`的`ImmutableSet`和`Kata`的`Library`。
 
-# 从测试开始
+## 从测试开始
 
 我写了一些测试来回答上面给出的领域模型中的一些问题。我希望能够回答:
 
 *   哪些技术在哪些招式中使用过？
+
 *   某些语言和库之间有哪些共同的形？
+
 *   卡塔斯中使用的顶级语言和顶级库是什么
 
 我将使用 Eclipse Collections API 中的三种方法(`groupByEach`、`intersect`、`countByEach`)来回答上述问题，并使用另一种方法(`selectInstancesOf`)来确定 kata 的语言和库。
 
 以下是带有解决方案的[测试](https://github.com/BNYMellon/CodeKatas/blob/master/kata-of-katas-solutions/src/test/java/bnymellon/codekatas/kataofkatas/KataOfKatasTest.java)。
 
-# 删除解决方案并共享代码
+## 删除解决方案并共享代码
 
 我删除了我的解决方案，并在[代码 Katas Repo](https://github.com/BNYMellon/CodeKatas) 中为 Katas 的 [Kata 创建了一个模块，同时为解决方案](https://github.com/BNYMellon/CodeKatas/tree/master/kata-of-katas)创建了一个单独的[模块，这样开发者可以将他们的解决方案与我的进行比较。像 repo 中的其他 Kata 一样，Kata 的 Kata 在 Apache 2.0 许可下是开源的。现在，任何使用 Java 和 Eclipse 集合的开发人员都可以完成 Katas 中的 Kata，或者开发人员有兴趣学习和练习的任何其他编程语言或库。](https://github.com/BNYMellon/CodeKatas/tree/master/kata-of-katas-solutions)
 
-# 社会法典卡塔斯
+## 社会法典卡塔斯
 
 分享我在开源中构建的代码已经成为我职业生涯中的一个常规做法。还有一个可选步骤我没有在 97 件事的文章中提到。
 
@@ -88,4 +90,5 @@
 
 ## 您可能喜欢的其他 Java 文章
 
-</javarevisited/20-essential-java-libraries-and-apis-every-programmer-should-learn-5ccd41812fc7>  </javarevisited/9-things-java-programmers-should-learn-in-2018-3f0b2207dfc4> 
+</javarevisited/20-essential-java-libraries-and-apis-every-programmer-should-learn-5ccd41812fc7>  </javarevisited/9-things-java-programmers-should-learn-in-2018-3f0b2207dfc4>
+

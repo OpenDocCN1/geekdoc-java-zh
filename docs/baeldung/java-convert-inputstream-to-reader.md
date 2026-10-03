@@ -1,16 +1,17 @@
+
 # Java–阅读器的输入流
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-convert-inputstream-to-reader>
 
-在这个快速教程中，我们将看看**如何使用 Java，然后是 Guava，最后是 Apache Commons IO 将`InputStream`转换为`Reader`** 。
+在这个快速教程中，我们将看看**如何使用 Java，然后是 Guava，最后是 Apache Commons IO 将`InputStream`转换为`Reader`**。
 
 这篇文章是 Baeldung 网站上的“**Java——回到基础的**”系列文章的一部分。
 
-## 1。用 Java
+## 1. 用 Java
 
-首先，让我们看看简单的 Java 解决方案——使用现成的`InputStreamReader`:
+首先，让我们看看简单的 Java 解决方案——使用现成的`InputStreamReader`：
 
-```java
+```
 @Test
 public void givenUsingPlainJava_whenConvertingInputStreamIntoReader_thenCorrect() 
   throws IOException {
@@ -22,11 +23,11 @@ public void givenUsingPlainJava_whenConvertingInputStreamIntoReader_thenCorrect(
 }
 ```
 
-## 2。有番石榴
+## 2. 有番石榴
 
-接下来——让我们看看**番石榴解**—使用中间字节数组和字符串:
+接下来——让我们看看**番石榴解**——使用中间字节数组和字符串：
 
-```java
+```
 @Test
 public void givenUsingGuava_whenConvertingInputStreamIntoReader_thenCorrect() 
   throws IOException {
@@ -41,11 +42,11 @@ public void givenUsingGuava_whenConvertingInputStreamIntoReader_thenCorrect()
 
 注意，Java 解决方案比这种方法简单。
 
-## 3。带公共 IO
+## 3. 带公共 IO
 
-最后，使用 Apache Commons IO 的解决方案也使用了中间字符串:
+最后，使用 Apache Commons IO 的解决方案也使用了中间字符串：
 
-```java
+```
 @Test
 public void givenUsingCommonsIO_whenConvertingInputStreamIntoReader_thenCorrect() 
   throws IOException {

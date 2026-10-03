@@ -1,18 +1,19 @@
+
 # 番石榴收藏食谱
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/guava-collections>
 
-## 1。简介
+## 1. 简介
 
-这篇烹饪书文章被组织成**小而集中的食谱和代码片段**用于使用番石榴风格的集合。
+这篇烹饪书文章被组织成**小而集中的食谱和代码片段**，用于使用番石榴风格的集合。
 
-这种格式是**的一个不断增长的代码示例列表**，不需要额外的解释——这意味着在开发过程中保持 API 的常见用法易于访问。
+这种格式是一个**不断增长的代码示例列表**，不需要额外的解释——这意味着在开发过程中保持 API 的常见用法易于访问。
 
-## 2。菜谱
+## 2. 菜谱
 
-**向下列表<父>向列表<子>**
+**向下列表`List<父>`向列表`List<子>`**
 
-–**注意**:这是 Java中非协变泛型集合的变通方法
+–**注意**：这是 Java 中非协变泛型集合的变通方法
 
 ```java
 class CastFunction<F, T extends F> implements Function<F, T> {
@@ -41,7 +42,7 @@ Collection<String> collector = Lists.newArrayList();
 Iterables.addAll(collector, iter);
 ```
 
-**根据自定义匹配规则检查集合是否包含元素** 
+**根据自定义匹配规则检查集合是否包含元素**
 
 ```java
 Iterable<String> theCollection = Lists.newArrayList("a", "bc", "def");
@@ -80,7 +81,7 @@ boolean contains = !Sets.filter(theCollection, new Predicate<String>() {
 assertTrue(contains);
 ```
 
-**`NoSuchElementException`上`Iterables.find`下**
+**`NoSuchElementException` 上 `Iterables.find` 下**
 
 ```java
 Iterable<String> theCollection = Sets.newHashSet("abcd", "efgh", "ijkl");
@@ -93,7 +94,7 @@ Predicate<String> inputOfLengthOne = new Predicate<String>() {
 String found = Iterables.find(theCollection, inputOfLengthOne);
 ```
 
-–这将抛出**异常`NoSuchElementException`**:
+–这将抛出**异常 `NoSuchElementException`**：
 
 ```java
 java.util.NoSuchElementException
@@ -102,7 +103,7 @@ java.util.NoSuchElementException
 	at com.google.common.collect.Iterables.find(Iterables.java:643)
 ```
 
-–**解决方案**:有一个**重载的`find` 方法**，它将默认返回值作为一个参数，可以用`null`调用它以获得想要的行为:
+–**解决方案**：有一个**重载的 `find` 方法**，它将默认返回值作为一个参数，可以用 `null` 调用它以获得想要的行为：
 
 ```java
 String found = Iterables.find(theCollection, inputOfLengthOne, null);
@@ -153,20 +154,19 @@ ImmutableMap<String, String> imuttableMap =
     ImmutableMap.<String, String> builder().putAll(muttableMap).build();
 ```
 
-## 3。更多番石榴食谱
+## 3. 更多番石榴食谱
 
-番石榴是一个全面且非常有用的库——以下是烹饪书形式的更多 API:
+番石榴是一个全面且非常有用的库——以下是烹饪书形式的更多 API：
 
 *   #### [Guava ordering recipe](/web/20221126225347/https://www.baeldung.com/guava-order "The Ordering Cookbook")
-
 *   #### [Guava functional recipe](/web/20221126225347/https://www.baeldung.com/guava-functions-predicates "Guava Functional Cookbook")
 
 享受吧。
 
-## 4。向前发展
+## 4. 向前发展
 
-正如我在开始时提到的，我正在尝试这种**不同的格式——烹饪书**——试图在一个地方收集使用番石榴的简单的共同任务。这种格式的重点是简单和快速，所以大多数菜谱除了代码示例本身之外没有其他解释**。**
+正如我在开始时提到的，我正在尝试这种**不同的格式——烹饪书**——试图在一个地方收集使用番石榴的简单的共同任务。这种格式的重点是简单和快速，所以大多数菜谱除了代码示例本身之外没有其他解释。
 
 最后——我把这看作是一个活的文档——我会不断添加食谱和例子。欢迎在评论中提供更多信息，我会把它们整合到食谱中。
 
-所有这些例子和代码片段的实现**可以在 GitHub** 上找到[——这是一个基于 Maven 的项目，所以它应该很容易导入和运行。](https://web.archive.org/web/20221126225347/https://github.com/eugenp/tutorials/tree/master/guava-modules/guava-collections)
+所有这些例子和代码片段的实现**可以在 GitHub 上找到**——这是一个基于 Maven 的项目，所以它应该很容易导入和运行。

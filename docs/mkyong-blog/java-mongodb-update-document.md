@@ -1,4 +1,5 @@
-# Java MongoDB:更新文档
+
+# Java MongoDB：更新文档
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/mongodb/java-mongodb-update-document/>
 
@@ -9,7 +10,7 @@
 假设插入了以下数据/文件。
 
 ```java
- {
+{
 	"hosting" : "hostA",
 	"type" : "vps",
 	"clients" : 1000
@@ -23,135 +24,140 @@
 	"hosting" : "hostC",
 	"type" : "vps",
 	"clients" : 900
-} 
+}
 ```
 
 ```java
- { "_id" : { "$oid" : "id"} , "hosting" : "hostA" , "type" : "vps" , "clients" : 1000}
+{ "_id" : { "$oid" : "id"} , "hosting" : "hostA" , "type" : "vps" , "clients" : 1000}
 { "_id" : { "$oid" : "id"} , "hosting" : "hostB" , "type" : "dedicated server" , "clients" : 100}
-{ "_id" : { "$oid" : "id"} , "hosting" : "hostC" , "type" : "vps" , "clients" : 900} 
+{ "_id" : { "$oid" : "id"} , "hosting" : "hostC" , "type" : "vps" , "clients" : 900}
 ```
 
- ## 1.带有 set 的 DBCollection.update()
+## 1. 带有 `set` 的 `DBCollection.update()`
 
-查找 hosting = 'hostB '的文档，并将其客户端值从 100 更新为 110。
+查找 `hosting = 'hostB'` 的文档，并将其客户端值从 100 更新为 110。
 
 ```java
- BasicDBObject newDocument = new BasicDBObject();
-	newDocument.put("clients", 110);
+BasicDBObject newDocument = new BasicDBObject();
+newDocument.put("clients", 110);
 
-	BasicDBObject searchQuery = new BasicDBObject().append("hosting", "hostB");
+BasicDBObject searchQuery = new BasicDBObject().append("hosting", "hostB");
 
-	collection.update(searchQuery, newDocument); 
+collection.update(searchQuery, newDocument);
 ```
 
 *输出*
 
 ```java
- { "_id" : { "$oid" : "id"} , "hosting" : "hostA" , "type" : "vps" , "clients" : 1000}
+{ "_id" : { "$oid" : "id"} , "hosting" : "hostA" , "type" : "vps" , "clients" : 1000}
 { "_id" : { "$oid" : "id"} , "clients" : 110}
-{ "_id" : { "$oid" : "id"} , "hosting" : "hostC" , "type" : "vps" , "clients" : 900} 
+{ "_id" : { "$oid" : "id"} , "hosting" : "hostC" , "type" : "vps" , "clients" : 900}
 ```
 
-**The document is replaced!?**
-Wait, the entire “hostB” document is replaced with another new document, this is not what we want.
+**文档被替换了！？**
 
-要仅更新特定值，使用`$set`更新修改器。
+等等，整个 `hostB` 文档被另一个新文档替换了，这不是我们想要的。
+
+要仅更新特定值，使用 `$set` 更新修改器。
 
 ```java
- BasicDBObject newDocument = new BasicDBObject();
-	newDocument.append("$set", new BasicDBObject().append("clients", 110));
+BasicDBObject newDocument = new BasicDBObject();
+newDocument.append("$set", new BasicDBObject().append("clients", 110));
 
-	BasicDBObject searchQuery = new BasicDBObject().append("hosting", "hostB");
+BasicDBObject searchQuery = new BasicDBObject().append("hosting", "hostB");
 
-	collection.update(searchQuery, newDocument); 
+collection.update(searchQuery, newDocument);
 ```
 
 *输出*
 
 ```java
- { "_id" : { "$oid" : "id"} , "hosting" : "hostA" , "type" : "vps" , "clients" : 1000}
+{ "_id" : { "$oid" : "id"} , "hosting" : "hostA" , "type" : "vps" , "clients" : 1000}
 { "_id" : { "$oid" : "id"} , "hosting" : "hostB" , "type" : "dedicated server" , "clients" : 110}
-{ "_id" : { "$oid" : "id"} , "hosting" : "hostC" , "type" : "vps" , "clients" : 900} 
+{ "_id" : { "$oid" : "id"} , "hosting" : "hostC" , "type" : "vps" , "clients" : 900}
 ```
 
-**Note**
-The MongoDB team should create another new API named `DBCollection.replace()`, many beginners are trapped in this `DBCollection.update()` API and replace the entire document accidentally. Again, to update a particular value, use `$set`. ## 2.带有$inc .的 DBCollection.update()
+**注意**
 
-这个例子显示了使用`$inc`修饰符来增加一个特定的值。查找 hosting = 'hostB '的文档，通过将值从 100 增加到 199，(100 + 99) = 199 来更新它的' clients '值。
+MongoDB 团队应该创建另一个名为 `DBCollection.replace()` 的新 API，许多初学者被困在这个 `DBCollection.update()` API 中，意外地替换了整个文档。再次强调，要更新特定值，请使用 `$set`。
+
+## 2. 带有 `$inc` 的 `DBCollection.update()`
+
+这个例子显示了使用 `$inc` 修饰符来增加一个特定的值。查找 `hosting = 'hostB'` 的文档，通过将值从 100 增加到 199（100 + 99 = 199）来更新它的 `clients` 值。
 
 ```java
- BasicDBObject newDocument = 
-		new BasicDBObject().append("$inc", 
-		new BasicDBObject().append("total clients", 99));
+BasicDBObject newDocument = 
+	new BasicDBObject().append("$inc", 
+	new BasicDBObject().append("total clients", 99));
 
-	collection.update(new BasicDBObject().append("hosting", "hostB"), newDocument); 
+collection.update(new BasicDBObject().append("hosting", "hostB"), newDocument);
 ```
 
 *输出*
 
 ```java
- { "_id" : { "$oid" : "id"} , "hosting" : "hostA" , "type" : "vps" , "clients" : 1000}
+{ "_id" : { "$oid" : "id"} , "hosting" : "hostA" , "type" : "vps" , "clients" : 1000}
 { "_id" : { "$oid" : "id"} , "hosting" : "hostB" , "type" : "dedicated server" , "clients" : 199}
-{ "_id" : { "$oid" : "id"} , "hosting" : "hostC" , "type" : "vps" , "clients" : 900} 
+{ "_id" : { "$oid" : "id"} , "hosting" : "hostC" , "type" : "vps" , "clients" : 900}
 ```
 
-## 3.带有多个的 DBCollection.update()
+## 3. 带有 `multi` 的 `DBCollection.update()`
 
-这个例子展示了使用`multi`参数来更新一组匹配的文档。查找 type = 'vps '的文档，将所有匹配文档的' clients '值更新为 888。
+这个例子展示了使用 `multi` 参数来更新一组匹配的文档。查找 `type = 'vps'` 的文档，将所有匹配文档的 `clients` 值更新为 888。
 
 ```java
- BasicDBObject updateQuery = new BasicDBObject();
-	updateQuery.append("$set", 
-		new BasicDBObject().append("clients", "888"));
+BasicDBObject updateQuery = new BasicDBObject();
+updateQuery.append("$set", 
+	new BasicDBObject().append("clients", "888"));
 
-	BasicDBObject searchQuery = new BasicDBObject();
-	searchQuery.append("type", "vps");
+BasicDBObject searchQuery = new BasicDBObject();
+searchQuery.append("type", "vps");
 
-	collection.updateMulti(searchQuery, updateQuery);			
+collection.updateMulti(searchQuery, updateQuery);			
 
-	//below statement set multi to true.
-	//collection.update(searchQuery, updateQuery, false, true); 
+//below statement set multi to true.
+//collection.update(searchQuery, updateQuery, false, true);
 ```
 
 *输出*
 
 ```java
- { "_id" : { "$oid" : "id"} , "hosting" : "hostA" , "clients" : "888" , "type" : "vps"}
+{ "_id" : { "$oid" : "id"} , "hosting" : "hostA" , "clients" : "888" , "type" : "vps"}
 { "_id" : { "$oid" : "id"} , "hosting" : "hostB" , "type" : "dedicated server" , "clients" : 100}
-{ "_id" : { "$oid" : "id"} , "hosting" : "hostC" , "clients" : "888" , "type" : "vps"} 
+{ "_id" : { "$oid" : "id"} , "hosting" : "hostC" , "clients" : "888" , "type" : "vps"}
 ```
 
-**Note**
-If update without the `multi` set to true.
+**注意**
+
+如果更新时没有将 `multi` 设置为 true。
 
 ```java
- BasicDBObject updateQuery = new BasicDBObject();
-	updateQuery.append("$set", 
-		new BasicDBObject().append("clients", "888"));
+BasicDBObject updateQuery = new BasicDBObject();
+updateQuery.append("$set", 
+	new BasicDBObject().append("clients", "888"));
 
-	BasicDBObject searchQuery = new BasicDBObject();
-	searchQuery.append("type", "vps");
+BasicDBObject searchQuery = new BasicDBObject();
+searchQuery.append("type", "vps");
 
-	collection.update(searchQuery, updateQuery); 
+collection.update(searchQuery, updateQuery);
 ```
 
 您会注意到只有第一个匹配的文档被更新。
 
 ```java
- {"_id":{ "$oid" : "x"} , "hosting" : "hostA" , "clients" : "888" , "type" : "vps"}
+{"_id":{ "$oid" : "x"} , "hosting" : "hostA" , "clients" : "888" , "type" : "vps"}
 {"_id":{ "$oid" : "x"} , "hosting" : "hostB" , "type" : "dedicated server" , "clients" : 100}
-{"_id":{ "$oid" : "x"} , "hosting" : "hostC" , "type" : "vps" , "clients" : 900} 
+{"_id":{ "$oid" : "x"} , "hosting" : "hostC" , "type" : "vps" , "clients" : 900}
 ```
 
-要更新一组匹配的文档，需要将“`multi`”设置为 true。
+要更新一组匹配的文档，需要将 `multi` 设置为 true。
 
-## 4.完整示例
+## 4. 完整示例
 
 完整的例子结合上述代码片段。
 
 ```java
- package com.mkyong.core;
+package com.mkyong.core;
 
 import java.net.UnknownHostException;
 import com.mongodb.BasicDBObject;
@@ -277,13 +283,15 @@ public class UpdateApp {
 	}
 
     }
-} 
+}
 ```
 
 输出
 
+
+
 ```java
- Testing 1...no $set
+Testing 1...no $set
 { "_id" : { "$oid" : "id"} , "hosting" : "hostA" , "type" : "vps" , "clients" : 1000}
 { "_id" : { "$oid" : "id"} , "clients" : 110}
 { "_id" : { "$oid" : "id"} , "hosting" : "hostC" , "type" : "vps" , "clients" : 900}
@@ -307,16 +315,12 @@ Done
 
 ## 参考
 
-1.  [如何在 MongoDB 中进行更新](http://web.archive.org/web/20190219073346/http://docs.mongodb.org/manual/applications/update/)
-2.  [$设置更新修改量](http://web.archive.org/web/20190219073346/http://docs.mongodb.org/manual/reference/operator/set/#op._S_set)
-3.  [$inc 更新修改量](http://web.archive.org/web/20190219073346/http://docs.mongodb.org/manual/reference/operator/inc/#op._S_inc)
-4.  [Java MongoDB API，DBCollection JavaDoc](http://web.archive.org/web/20190219073346/http://api.mongodb.org/java/current/com/mongodb/DBCollection.html)
+1. [如何在 MongoDB 中进行更新](http://web.archive.org/web/20190219073346/http://docs.mongodb.org/manual/applications/update/)
+
+2. [$设置更新修改量](http://web.archive.org/web/20190219073346/http://docs.mongodb.org/manual/reference/operator/set/#op._S_set)
+
+3. [$inc 更新修改量](http://web.archive.org/web/20190219073346/http://docs.mongodb.org/manual/reference/operator/inc/#op._S_inc)
+
+4. [Java MongoDB API，DBCollection JavaDoc](http://web.archive.org/web/20190219073346/http://api.mongodb.org/java/current/com/mongodb/DBCollection.html)
 
 [mongodb](http://web.archive.org/web/20190219073346/http://www.mkyong.com/tag/mongodb/) [update](http://web.archive.org/web/20190219073346/http://www.mkyong.com/tag/update/)
-
-
-
-
-
-
-

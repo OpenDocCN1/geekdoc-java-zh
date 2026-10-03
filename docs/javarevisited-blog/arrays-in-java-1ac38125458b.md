@@ -1,3 +1,4 @@
+
 # Java 中的数组
 
 > 原文：<https://medium.com/javarevisited/arrays-in-java-1ac38125458b?source=collection_archive---------4----------------------->
@@ -6,7 +7,7 @@
 
 ![](img/49511d9e26c318b3051b043acc40447f.png)
 
-## 1.简介
+## 1. 简介
 
 让我们来定义什么是数组。
 

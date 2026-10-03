@@ -1,3 +1,4 @@
+
 # 从几何原语构建复杂形状
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/advanced/complexshapes.html`](https://docs.oracle.com/javase/tutorial/2d/advanced/complexshapes.html)
@@ -14,13 +15,9 @@
 
 <applet code="Pear" archive="examples/lib/PearApplet.jar" width="150" height="200" alt="小程序构建梨形"><param name="permissions" value="sandbox"></applet>
 
-* * *
-
 **注意：** 如果你看不到小程序运行，你需要至少安装 [Java SE Development Kit (JDK) 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html) 版本。
 
-* * *
-
-``Pear.java`` 包含了这个小程序的完整代码。
+`Pear.java` 包含了这个小程序的完整代码。
 
 每片叶子是通过在两个重叠圆上执行交集操作创建的。
 
@@ -41,7 +38,6 @@ leaf.setFrame(ew+1, eh-29, 15.0, 15.0);
 leaf1 = new Area(leaf);
 leaf2.intersect(leaf1);
 g2.fill(leaf2);
-
 ```
 
 重叠的圆也被用来通过减法操作构建茎。
@@ -55,7 +51,6 @@ stem.setFrame(ew+3, eh-47, 50.0, 50.0);
 st2 = new Area(stem);
 st1.subtract(st2);
 g2.fill(st1);
-
 ```
 
 梨的主体是通过在一个圆和一个椭圆上执行并集操作构建的。
@@ -72,5 +67,4 @@ circ = new Area(circle);
 ov = new Area(oval);
 circ.add(ov);
 g2.fill(circ);
-
 ```

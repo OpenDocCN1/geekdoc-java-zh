@@ -1,40 +1,31 @@
-# C++：快速精通 C 编程的终极指南，第 1 卷
 
-
-
-
-
+# C++：快速精通 C 编程的终极指南，第我是由深度求索（DeepSeek）研发的 deepseek-v4-flash-0731 智能大模型。1 卷
 
 ![](img/35438157c964cd6add78d50335bfad5f_0_0.png)
 
-
-
-
-
-
-
 我认为你可能对以下书籍也感兴趣：
 
-C++
+## C++
+
 ![](img/35438157c964cd6add78d50335bfad5f_3_0.png)
 
-Python
+## Python
 
 ![](img/35438157c964cd6add78d50335bfad5f_4_0.png)
 
-Javascript
+## Javascript
 
 ![](img/35438157c964cd6add78d50335bfad5f_5_0.png)
 
-计算机黑客
+## 计算机黑客
 
 ![](img/35438157c964cd6add78d50335bfad5f_6_0.png)
 
-SQL
+## SQL
 
 ![](img/35438157c964cd6add78d50335bfad5f_7_0.png)
 
-SQL
+## SQL
 
 ![](img/35438157c964cd6add78d50335bfad5f_8_0.png)
 
@@ -54,7 +45,7 @@ SQL
 
 [点击此链接获取 Cygwin。]
 
-一旦安装完成，还有其他你可以做的事情。Linux 操作系统使用 bash 脚本语言而 Windows 使用 batch。bash 和 batch 之间的差异有很多，但它们共享一些通用功能。提到这一点，Cygwin 实际上添加了 bash 的一些命令，但 Windows 让其变得稍微复杂了一些。**pwd** 命令稍后很有用，因为它将打印命令提示符或终端正在作为执行场所的工作目录。
+一旦安装完成，还有其他你可以做的事情。Linux 操作系统使用 bash 脚本语言而 Windows 使用 batch。bash 和 batch 之间的差异有很多，但它们共享一些通用功能。提到这一点，Cygwin 实际上添加了 bash 的一些命令，但 Windows 让其变得稍微复杂了一些。`pwd` 命令稍后很有用，因为它将打印命令提示符或终端正在作为执行场所的工作目录。
 
 # 第二章：安装 Notepad++：从文本到代码
 
@@ -78,18 +69,14 @@ SQL
 
 现在。这个简单的例子似乎违背了需要严格目录结构的目的，但在最后一章中，你将向程序添加一些代码片段，以验证这种结构的必要性。
 
+- [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于**理查德·费曼**，诺贝尔物理奖得主。
+- 凭借费曼的技巧，你只需要 `20 min` 就能深入理解知识点，而且记忆深刻且难以忘记。
 
-
-
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于**理查德·费曼**，诺贝尔物理奖得主。
-
-1.  凭借费曼的技巧，你只需要 `20 min` 就能深入理解知识点，而且记忆深刻且*难以忘记*。
-
+```javascript
+if (condVar > someVal) {
+    console.log("xxx");
+}
 ```
-if (condVar > someVal) {console.log("xxx")}
-```
-
-
 
 编译成功后立即运行程序。被绿色圈出的部分是实际输出。
 
@@ -107,7 +94,7 @@ if (condVar > someVal) {console.log("xxx")}
 
 现在我们已经过了关于命名的部分，可以把变量应用到我们当前的代码中了。下面的图片在某种程度上总结了这些，但如果你需要文字说明，我稍后也会进行解释。
 
-```
+```cpp
 #include <stdio.h>
 #include <iostream>
 #include <string>
@@ -129,7 +116,7 @@ int main() {
 
 首先容易注意到的是顶部的 `include` 语句。这把字符串数据类型引入到我们的程序中，以便在函数中使用。接下来是函数定义之外的 `using namespace` 部分。这类似于使用变量名来编写更短的代码，因为现在我声明正在使用 `std` 命名空间，所有与它相关的变量都自动引入到了我们的程序中。
 
-函数中接下来的两行是新的，是实际的变量声明。string 是一个特殊情况，它们本质上只是理解 `char*` 数据类型的一种更简单的方法，它本质上表示该变量指向一个字符。
+函数中接下来的两行是新的，是实际的变量声明。`string` 是一个特殊情况，它们本质上只是理解 `char*` 数据类型的一种更简单的方法，它本质上表示该变量指向一个字符。
 
 指针是 C/C++ 中一个非常关键的概念，实际上在我们当前的代码中已经出现了。出现在函数调用中的变量前的 `&` 符号基本上告诉函数不要使用变量本身，而是使用该变量所引的值。接下来的图片应该消除大多数初学者在最初难以理解的某些困惑。
 
@@ -145,9 +132,9 @@ int main() {
 
 下面的图片显示了如何添加它。其核心思想是，当我们添加新功能时，想要尽可能保留旧程序的内容。我们只需说程序员喜欢节省时间。不同之处在于该函数是否负责将其输出打印到屏幕上。这也会影响它的返回值，是 `void` 还是 `int`。截图之后提供了代码的简要说明。
 
-![](img/35438157c964cd6add78d50335bfad5f_23_0.png)
+![](img/35438157c964cd6add78d5035bfad5f_23_0.png)
 
-```
+```cpp
 #include <stdio.h>
 #include <iostream>
 #include <string>
@@ -170,7 +157,6 @@ int calc_sum(int number_1, int number_2) {
     return result;
 }
 ```
-
 
 ```cpp
 #include <stdio.h>
@@ -214,4 +200,3 @@ int calc_sum(int number_1, int number_2) {
 答案就在代码中……
 
 感谢阅读。希望你喜欢。请留下你诚恳的反馈。
-

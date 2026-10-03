@@ -1,56 +1,17 @@
+
 # JavaServer Faces 面试题：你最可能被问到的问题
 
+## JSF 简介
 
+### 1: 什么是 JSF？它有什么作用？
 
-
-
-
-
-
-
-你极可能被问到的
-
-![](img/25a2d17a91c9c7450b8cfb317e525ee5_0_0.png)
-
-200 道 JavaServer Faces 面题，51 道人力资源面试题
-
-免费赠 2 份能力测试，可在网站下载
-
-
-
-
-你极可能被问到的
-
-
-
-
-你极可能被问到的
-
-
-
-
-
-
-
-
-
-
-# JavaServer Faces
-问题
-
-回顾这些典型的面试题，并思考你会如何回答它们。阅读列出的答案；你将找到最佳答案以及策略和建议。
-
-# JSF 简介
-
-## 1: 什么是 JSF？它有什么作用？
-
-答案：
+**答案：**
 
 JSF 代表 JavaServer Faces，是一个基于组件的框架，用于开发 Web 应用程序的用户界面。
 
-## 2: 我们在 JSF 中可以找到哪些组件？
+### 2: 我们在 JSF 中可以找到哪些组件？
 
-答案：
+**答案：**
 
 JSF 由三部分组成，它们是：
 
@@ -58,45 +19,45 @@ JSF 由三部分组成，它们是：
 - b) 事件驱动编程模型
 - c) 组件模型，确保第三方开发者能够提供额外的组件。
 
-## 3: 目前市场上上有几个版本的 JSF？这些是哪些版本？
+### 3: 目前市场上上有几个版本的 JSF？这些是哪些版本？
 
-答案：
+**答案：**
 
 目前 JSF 有三个版本：第一个是 1.0，第二个是升级后的 1.2 版本，较新的、改进的版本是 2.0。这个版本更容易使用，并提供了诸如 AJAX 集成等新功能。
 
-## 4: 使用 JSF 的优势是什么？
+### 4: 使用 JSF 的优势是什么？
 
-答案：
+**答案：**
 
 JSF 主要被使用是因为它是一个包含多种实现的标准。它由标准委员会从底层开始设计，确保了产品不断不断改进和更新。
 
-## 5: 如何使用 JSF 设计 Web 应用程序？
+### 5: 如何使用 JSF 设计 Web 应用程序？
 
-答案：
+**答案：**
 
 设计师和程序员都使用 JSF，通过将应用代码封装在 Beans 中，将设计封装在网页中来实现分离。
 
-## 6: JSF 中的 Beans 是什么？
+### 6: JSF 中的 Beans 是什么？
 
-答案：
+**答案：**
 
 Bean 是一个类，向框架暴露属性和事件，其中属性是给定类型的命名值，可以被读取或写入。
 
-## 7: JSF 中的 Managed Bean（托管 Bean） 是什么？
+### 7: JSF 中的 Managed Bean（托管 Bean） 是什么？
 
-答案：
+**答案：**
 
 Managed Bean 也是一种 Java Bean，但它可以从 JSF 页面访问。它还必须有一个名称和作用范围（scope），使 Bean 在多个页面对一个用户可用。更直接地说，Managed Beans 是用户界面与应用程序后端之间的桥梁。
 
-## 8: 什么是 JSF 页面？
+### 8: 什么是 JSF 页面？
 
-答案：
+**答案：**
 
-JSF 页面类似于 HTML 表单；每个浏览器界面都需要一个。尽管存在一些差异：页面必须是格式良好的 XHTML，并且不使用 head、body 和 Form 标签，而是使用 h:head、h:body 和 h:form 标签。
+JSF 页面类似于 HTML 表单；每个浏览器界面都需要一个。尽管存在一些差异：页面必须是格式良好的 XHTML，并且不使用 head、body 和 Form 标签，而是使用 `h:head`、`h:body` 和 `h:form` 标签。
 
-## 9: JSF 提供哪些服务？
+### 9: JSF 提供哪些服务？
 
-答案：
+**答案：**
 
 JSF 总共提供七种服务，它们是：
 
@@ -108,9 +69,9 @@ JSF 总共提供七种服务，它们是：
 - f) 可选渲染器以及
 - g) AJAX 支持。
 
-## 10: JSF 规范定义的六个阶段阶段？
+### 10: JSF 规范定义的六个阶段阶段？
 
-答案：
+**答案：**
 
 - a) 恢复视图 (Restore view)
 - b) 应用请求 (Apply request)
@@ -119,39 +80,39 @@ JSF 总共提供七种服务，它们是：
 - e) 调用应用 (Invoke application)
 - f) 渲染响应 (Render response)
 
-## 11: JSF 的目的是什么？
+### 11: JSF 的目的是什么？
 
-答案：
+**答案：**
 
 Beans 类似于对象但用途不同。JSF 实现负责创建和销毁。
 
-## 12: Beans 在 JSF 中起什么用途？
+### 12: Beans 在 JSF 中起什么用途？
 
-答案：
-
-在 JSF 上下文中，Java Bean 用于存储数据。
-
-## 13: Beans 在 JSF 中起什么用途？
-
-答案：
+**答案：**
 
 在 JSF 上下文中，Java Bean 用于存储数据。
 
-## 14: JSF 实现负责什么？
+### 13: Beans 在 JSF 中起什么用途？
 
-答案：
+**答案：**
+
+在 JSF 上下文中，Java Bean 用于存储数据。
+
+### 14: JSF 实现负责什么？
+
+**答案：**
 
 JSF 实现负责创建和销毁。
 
-## 15: Bean 的属性有哪些？
+### 15: Bean 的属性有哪些？
 
-答案：
+**答案：**
 
 Bean 是一个类，向框架暴露属性和事件，其中属性是给定类型的命名值，可以被读取或写入。
 
-## 16: 哪些属性定义了一个 Bean？
+### 16: 哪些属性定义了一个 Bean？
 
-答案：
+**答案：**
 
 定义 Bean 的属性有：
 
@@ -159,45 +120,45 @@ Bean 是一个类，向框架暴露属性和事件，其中属性是给定类型
 - b) 类型 (type)
 - c) 方法 (methods)
 
-## 17: JSF 中的 Backing Bean（后备 Bean） 是什么？
+### 17: JSF 中的 Backing Bean（后备 Bean） 是什么？
 
-答案：
+**答案：**
 
 Backing Bean 是一个包含表单组件的 Bean。
 
-## 18: JSF 中的 Managed Bean 是什么？
+### 18: JSF 中的 Managed Bean 是什么？
 
-答案：
+**答案：**
 
 Managed Bean 是 Java Bean 的一种类型。
 
-## 19: 什么是 CDI Beans？
+### 19: 什么是 CDI Beans？
 
-答案：
+**答案：**
 
 CDI（上下文与依赖注入）Beans 是绑定到上下文的 Bean，该上下文指定了注入、拦截和装饰方法调用的机制。
 
-## 20: CDI Beans 如何在 JSF 中使用？
+### 20: CDI Beans 如何在 JSF 中使用？
 
-答案：
+**答案：**
 
-CDI Beans 的用法与 Managed Beans 类似，但它们使用 @Named 注解进行声明。
+CDI Beans 的用法与 Managed Beans 类似，但它们使用 `@Named` 注解进行声明。
 
-## 21: JSF 中的 Message Bundles（消息包）是什么？
+### 21: JSF 中的 Message Bundles（消息包）是什么？
 
-答案：
+**答案：**
 
 Message Bundles 是收集在中心位置的消息字符串，由 JSF 进行简单的本地化和组织。
 
-## 22: JSF 中的 Bean Scopes（Bean 作用范围）是什么？
+### 22: JSF 中的 Bean Scopes（Bean 作用范围）是什么？
 
-答案：
+**答案：**
 
 Bean Scopes 是供不同组件可用的 Bean 和其他对象的容器。
 
-## 23: 在 JSF 中可以找到多少种 Scope？
+### 23: 在 JSF 中可以找到多少种 Scope？
 
-答案：
+**答案：**
 
 在 JSF 中三种类型的 Scope，它们是：
 
@@ -206,158 +167,155 @@ Bean Scopes 是供不同组件可用的 Bean 和其他对象的容器。
 - 应用范围 (Application Scope)
 
 JSF 2.0 增加了两个范围：
+
 - 视图范围 (View Scope)
 - 自定义范围 (Custom Scope)
 
-## 24: Session Scope 在 JSF 中起什么作用？
+### 24: Session Scope 在 JSF 中起什么作用？
 
-答案：
+**答案：**
 
 Session Scope 跟踪 HTTP 协议，该协议实际上是客户端发起的重复连接。这主要通过 Cookie 实现。
 
-## 25: Request Scope 在 JSF 中起什么作用？
+### 25: Request Scope 在 JSF 中起什么作用？
 
-答案：
+**答案：**
 
 Request Scope 是一种短寿命会话，在提交 HTTP 请求时开始，在发回客户端的响应后结束。它通常在存储范围出现问题时使用。
 
-## 26: Application Scope 在 JSF 中起什么作用？
+### 26: Application Scope 在 JSF 中起什么作用？
 
-答案：
+**答案：**
 
 Application Scope 是在 Web 应用程序期间维持自身的会话。它在所有请求和会话之间共享。
 
-## 27: Conversation Scope 在 JSF 中起什么作用？
+### 27: Conversation Scope 在 JSF 中起什么作用？
 
-答案：
+**答案：**
 
 Conversation Scope 跨越一组预定义的相关页面，通过提供数据持久化直到达到关键目标，从而消除了在整个会话中存储数据的需要。
 
+### 28: JSF 中 View Scope（视图范围）目的是目的是？
 
-
-
-
-# 28: JSF 中 View Scope（视图范围）目的是目的是？
-
-答案：
+**答案：**
 
 View Scope（视图范围）是在 JSF 2.0 中引入的。它代表位于视图范围内的 Bean，只要 JSF 页面重新显示，它就会存在。它对 AJAX 应用特别有用，因为它减小了 Session Scope（会话范围）的大小。
 
-## 29: JSF 中的 Custom Scope（自定义作用域）的作用是什么？
+### 29: JSF 中的 Custom Scope（自定义作用域）的作用是什么？
 
-答案：
+**答案：**
 
 Custom Scope 是一个映射，用于将名称绑定到对象，该映射的生命周期是作用域不同于其他作用域的原因。
 
 ## 属性、参数和标签
 
-## 30: JSF 中的 f:attribute, f:param 和 f:facet 有什么作用？
+### 30: JSF 中的 f:attribute, f:param 和 f:facet 有什么作用？
 
-答案：
+**答案：**
 
 这些标签是通用型标签，用于向组件添加信息。
 
-## 31: JSF 中 f:attribute 标签的唯一作用是什么？
+### 31: JSF 中 f:attribute 标签的唯一作用是什么？
 
-答案：
+**答案：**
 
 它的作用是允许任何组件在其属性映射中存储任意的名称或值对，通过允许将属性发送到页面并在后通过程序化检索它。
 
-## 32: JSF 中 f:param 标签的唯一作用是什么？
+### 32: JSF 中 f:param 标签的唯一作用是什么？
 
-答案：
+**答案：**
 
-f:param 标签允许定义名称或值对，其中值被放在单独的子组件中，使其成为比 f:attribute 对应项更臃肿的存储机制。
+`f:param` 标签允许定义名称或值对，其中值被放在单独的子组件中，使其成为比 `f:attribute` 对应项更臃肿的存储机制。
 
-## 33: JSF 中的 f:facet 标签的作用什么？
+### 33: JSF 中的 f:facet 标签的作用什么？
 
-答案：
+**答案：**
 
 该标签向组件的 facet 映射添加一个命名的组件，其中 facet 组件通常渲染在特殊位置。
 
-## 34: JSF 中的 id 属性允许什么？
+### 34: JSF 中的 id 属性允许什么？
 
-答案：
+**答案：**
 
-id 属性允许从其他 JSF 标签访问 JSF 组件，在 Java 代码中获取组件引用并使用脚本访问 HTML 元素。
+`id` 属性允许从其他 JSF 标签访问 JSF 组件，在 Java 代码中获取组件引用并使用脚本访问 HTML 元素。
 
-## 35: JSF 中的 Converter（转换器）属性的作用是什么？
+### 35: JSF 中的 Converter（转换器）属性的作用是什么？
 
-答案：
+**答案：**
 
 Converter 属性允许向组件附加转换器属性，在某些情况下还允许输入标签具有 Validator（验证器）属性，可用于将验证器附加到组件上。
 
-## 36: JSF 中的 Render 属性用于什么？
+### 36: JSF 中的 Render 属性用于什么？
 
-答案：
+**答案：**
 
 Render 属性用于根据情况包含或排除组件，例如在用户已登录时渲染注销按钮。
 
-## 37: JSF 中的 DHTML 事件是什么？
+### 37: JSF 中的 DHTML 事件是什么？
 
-答案：
+**答案：**
 
 DHTML 代表动态 HTML 事件属性，它代表用于许多类型任务的客户端脚本，如语法验证或悬停图像。
 
-## 38: JSF 中的 h:panelGrid 标签的作用什么？
+### 38: JSF 中的 h:panelGrid 标签的作用什么？
 
-答案：
+**答案：**
 
-h:panelGrid 标签使用 HTML 表格进行布局，用于在行和/或列中排列组件。
+`h:panelGrid` 标签使用 HTML 表格进行布局，用于在行和/或列中排列组件。
 
-## 39: JSF 中的 Immediate（立即）属性的作用什么？
+### 39: JSF 中的 Immediate（立即）属性的作用什么？
 
-答案：
+**答案：**
 
 Immediate 属性主要用于可能影响用户界面的值更改，其应用由 Menus 和 Listboxes 等输入组件进行渲染。
 
-## 40: JSF 中的 h:inputHidden 标签的作用什么？
+### 40: JSF 中的 h:inputHidden 标签的作用什么？
 
-答案：
+**答案：**
 
-h:inputHidden 标签是 JSF 中存在的隐藏字段的一部分，用于配合 JavaScript 操作将数据发送回服务器，但它不支持 HTML 和 DHTML 标准标签。
+`h:inputHidden` 标签是 JSF 中存在的隐藏字段的一部分，用于配合 JavaScript 操作将数据发送回服务器，但它不支持 HTML 和 DHTML 标准标签。
 
-## 41: JSF 中的 h:outputText 标签的作用什么？
+### 41: JSF 中的 h:outputText 标签的作用什么？
 
-答案：
+**答案：**
 
-h:outputText 标签是 JSF 标签中最简单的，它用于生成简单文本，例外是：如果使用了 style 或 style Class 属性，它会生成一个 HTML span 元素。
+`h:outputText` 标签是 JSF 标签中最简单的，它用于生成简单文本，例外是：如果使用了 style 或 style Class 属性，它会生成一个 HTML span 元素。
 
-# 42: JSF 中 h:outputText 标签用于什么？
+### 42: JSF 中 h:outputText 标签用于什么？
 
-答案：
+**答案：**
 
-h:outputText 标签主要用于产生样式化的输出、生成 HTML 标记并确保文本被视为面板网格中的一个单元格。
+`h:outputText` 标签主要用于产生样式化的输出、生成 HTML 标记并确保文本被视为面板网格中的一个单元格。
 
-## 43: JSF 中的 h:graphicImage 标签的作用什么？
+### 43: JSF 中的 h:graphicImage 标签的作用什么？
 
-答案：
+**答案：**
 
-h:graphicImage 标签用于通过 URL 指定位置的图像。
+`h:graphicImage` 标签用于通过 URL 指定位置的图像。
 
 ## 按钮、链接
 
-## 44: JSF 中的 h:commandButton 和 h:commandLink 标签是什么？
+### 44: JSF 中的 h:commandButton 和 h:commandLink 标签是什么？
 
-答案：
+**答案：**
 
 这些标签用于导航，在 JSF 中允许用户构建页面，而无需编写 Java 代码。
 
-## 45: JSF 中的 h:outputLink 标签的作用什么？
+### 45: JSF 中的 h:outputLink 标签的作用什么？
 
-答案：
+**答案：**
 
-h:outputLink 标签用于生成 HTML 锚点元素，指向某个资源，作为 JSP 的替代。
+`h:outputLink` 标签用于生成 HTML 锚点元素，指向某个资源，作为 JSP 的替代。
 
-## 46: JSF 中的 h:selectCheckbox 和 h:ManyCheckbox 标签的作用什么？
+### 46: JSF 中的 h:selectCheckbox 和 h:ManyCheckbox 标签的作用什么？
 
-答案：
+**答案：**
 
 这两个标签用于选择模板，第一个标签代表一个组中的多个复选框。
 
-## 47: JSF 中 h:selectCheckbox 和 h:ManyCheckbox 标签有哪些属性？
+### 47: JSF 中 h:selectCheckbox 和 h:ManyCheckbox 标签有哪些属性？
 
-答案：
+**答案：**
 
 这些标签具有以下属性：
 
@@ -365,69 +323,69 @@ h:outputLink 标签用于生成 HTML 锚点元素，指向某个资源，作为 
 - enabledClass
 - disabledClass
 
-## 48: JSF 中的 Border 属性的作用什么？
+### 48: JSF 中的 Border 属性的作用什么？
 
-答案：
+**答案：**
 
 Border 属性用于指定宽度。
 
-## 49: JSF 中的 enabledClass 和 disabledClass 作用什么？
+### 49: JSF 中的 enabledClass 和 disabledClass 作用什么？
 
-答案：
+**答案：**
 
 这两个属性用于指定 CSS 类。
 
-## 50: JSF 中的 Facelets 是什么？
+### 50: JSF 中的 Facelets 是什么？
 
-答案：
+**答案：**
 
 Facelets 被设计为 JSP 的替代方案，用于通过 XHTML 页面构建内容。
 
-## 51: JSF 中的 Facelets 标签用于什么？
+### 51: JSF 中的 Facelets 标签用于什么？
 
-答案：
+**答案：**
 
 Facelets 标签用于包含其他页面的内容。
 
-## 52: JSF 中的 ui:composition 标签的作用什么？
+### 52: JSF 中的 ui:composition 标签的作用什么？
 
-答案：
+**答案：**
 
 该标签指定可以插入部分的页面。当与模板配合使用时，它的内容决定模板。
 
-## 53: JSF 中的 ui:decoration 标签的作用什么？
+### 53: JSF 中的 ui:decoration 标签的作用什么？
 
-答案：
+**答案：**
 
 该标签指定一组元素的序列。当与模板配合使用时，它允许包装模板。
 
-## 54: JSF 中的 ui:debug 标签的作用什么？
+### 54: JSF 中的 ui:debug 标签的作用什么？
 
-答案：
+**答案：**
 
 该标签允许用户显示调试窗口，带有快捷键，显示当前页面的组件层次结构和作用域变量。
 
-## 55: JSF 中的 h:dataTable 标签的作用什么？
+### 55: JSF 中的 h:dataTable 标签的作用什么？
 
-答案：
+**答案：**
 
-h:dataTable  用于迭代数据以创建 HTML 表格，值可以是 Java 对象、数组或 java.List 实例。
+`h:dataTable` 用于迭代数据以创建 HTML 表格，值可以是 Java 对象、数组或 `java.List` 实例。
 
-## 56: h:dataTable 标签内部有哪些标签？
+### 56: h:dataTable 标签内部有哪些标签？
 
-答案：
+**答案：**
 
-该标签的主体只能包含 h:column 标签，其他标签会被 h:dataTable 忽略，每个列可以包含无限数量的组件。
+该标签的主体只能包含 `h:column` 标签，其他标签会被 `h:dataTable` 忽略，每个列可以包含无限数量的组件。
 
-## 57: JSF 中 h:dataTable 的 dir 属性的作用什么？
+### 57: JSF 中 h:dataTable 的 dir 属性的作用什么？
 
-答案：
+**答案：**
 
 该属性显示不继承方向性的文本方向，并提供了 LTR 和 RTL 等有效值。
 
-## 58: JSF 中 h:dataTable 的 frame 属性的作用什么？
+### 58: JSF 中 h:dataTable 的 frame 属性的作用什么？
 
-答案：
+**答案：**
 
 该属性提供了围绕表格的框规格，例如：
 
@@ -441,126 +399,122 @@ h:dataTable  用于迭代数据以创建 HTML 表格，值可以是 Java 对象�
 - h) box
 - i) border
 
-## 59: JSF 中 h:dataTable 的 row 属性的作用什么？
+### 59: JSF 中 h:dataTable 的 row 属性的作用什么？
 
-答案：
+**答案：**
 
 该属性提供表格中显示的行数。从第一个属性指定的行开始；当设置为0时，表格的所有行都将显示。
 
-## 60: h:dataTable 有哪些样式？
+### 60: h:dataTable 有哪些样式？
 
-答案：
+**答案：**
 
-h:dataTable 标签有四个属性，用于指定整个表格、单个列或行以及表头表脚的 CSS 类。
-
-
-
-
+`h:dataTable` 标签有四个属性，用于指定整个表格、单个列或行以及表头表脚的 CSS 类。
 
 它通过使用属性对特定集合的子集进行迭代，将其主体重复插入页面中。
 
-本页故意留白
-
 ## 转换与验证
 
-## 62: JSF 中的请求值（Request Value）是指什么？
+### 62: JSF 中的请求值（Request Value）是指什么？
 
-答案：
+**答案：**
 
 请求值（Request Values）代表用户点击提交按钮且浏览器通过 HTTP 请求将值发送到服务器时，将请求的值存储在组件对象中的过程。
 
-## 63: JSF 中的 f:convertNumber 标签起什么作用？
+### 63: JSF 中的 f:convertNumber 标签起什么作用？
 
-答案：
+**答案：**
 
 该标签是 JSF 实现提供的标准转换器之一，通过实现其所可用的十个属性中的一个来使用。
 
-## 64: 当 JSF 中发生转换错误（Conversion Error）时会发生什么？
+### 64: 当 JSF 中发生转换错误（Conversion Error）时会发生什么？
 
-答案：
+**答案：**
 
 发生转换错误时，JSF 会采取两个特定操作：
 
 - a) 转换失败的组件会发布消息并继续声明自身为无效，
 - b) JSF 会重新显示当前页面，并带有用户提供的值。
 
-## 65: 如何在 JSF 中显示错误消息？
+### 65: 如何在 JSF 中显示错误消息？
 
-答案：
+**答案：**
 
-可以通过在使用转换器和验证器时添加 h:message 标签来实现，这样错误消息就会显示在报告它们的组件旁边。
+可以通过在使用转换器和验证器时添加 `h:message` 标签来实现，这样错误消息就会显示在报告它们的组件旁边。
 
-# 66: 如何使用 JSF 转换器（DateTimeConverter 和 NumberConverter 之外）？
+### 66: 如何使用 JSF 转换器（DateTimeConverter 和 NumberConverter 之外）？
 
-答案：
+**答案：**
 
 可以通过确保使用转换器的组件将其值绑定到后端 Bean 来使用其他转换器；通过组件标签的 converter 属性通过类引用转换器，或者通过 converterID 属性通过其 ID 引用转换器。
 
-## 67: JSF 中的 ConvertDateTime 标签起什么作用？
+### 67: JSF 中的 ConvertDateTime 标签起什么作用？
 
-答案：
+**答案：**
 
-该标签通过将转换器标签放置在组件标签内部，将组件的数据转换为 java.util.Date。它具有六个属性，允许指定数据的类型和格式。
+该标签通过将转换器标签放置在组件标签内部，将组件的数据转换为 `java.util.Date`。它具有六个属性，允许指定数据的类型和格式。
 
-# 68: JSF 中的 dateStyle 属性起什么作用？|
+### 68: JSF 中的 dateStyle 属性起什么作用？
 
-答案：
+**答案：**
 
-该属性定义了由 java.text.DateFormat 指定的日期格式，且仅在 type 为 date 且未定义 pattern 时才会生效。
+该属性定义了由 `java.text.DateFormat` 指定的日期格式，且仅在 type 为 date 且未定义 pattern 时才会生效。
 
-# 69: JSF 中的 Locale 属性起什么作用？
+### 69: JSF 中的 Locale 属性起什么作用？
 
-答案：
+**答案：**
 
 该属性指定了区域设置（locale），在格式化和/或解析过程中使用其预定义的日期和时间样式。
 
-# 70: JSF 中的 Pattern 属性起什么作用？
+### 70: JSF 中的 Pattern 属性起什么作用？
 
-答案：
+**答案：**
 
 该属性用于自定义格式模式，决定日期和时间字符串如何格式化和解析。如果指定了此属性，则 dateStyle 和 timeStyle 属性将被忽略。
 
-# 71: JSF 中的 timeStyle 属性起什么作用？
+### 71: JSF 中的 timeStyle 属性起什么作用？
 
-答案：
+**答案：**
 
-timeStyle 属性用于定义由 java.text.DateFormat 指定的时间或字符串的时间部分格式。它仅在 type 为 time 且未定义 pattern 时才会生效。
+timeStyle 属性用于定义由 `java.text.DateFormat` 指定的时间或字符串的时间部分格式。它仅在 type 为 time 且未定义 pattern 时才会生效。
 
-# 72: JSF 中的 Type 属性起什么作用？
+### 72: JSF 中的 Type 属性起什么作用？
 
-答案：
+**答案：**
 
 该属性指定字符串值是否包含日期、时间或两者都有。有效值为 date、time 或 both，如果未指定值，则默认使用 date。
 
-## 73: JSF 中的 NumberConverter 标签起什么作用？
+### 73: JSF 中的 NumberConverter 标签起什么作用？
 
-答案：
+**答案：**
 
-该标签通过将 convertNumber 标签放置在组件标签内部，将组件的数据转换为 java.lang.Number。它有多个属性用于指定数据的格式和类型。
+该标签通过将 `convertNumber` 标签放置在组件标签内部，将组件的数据转换为 `java.lang.Number`。它有多个属性用于指定数据的格式和类型。
 
-# 74: 如何在 JSF 的组件上注册监听器（Listener）？
+### 74: 如何在 JSF 的组件上注册监听器（Listener）？
 
-答案：
+**答案：**
 
-可以通过在组件的页面中放置 ValueChangeListener 标签或 ActionListener 标签，在组件上实现监听器类（Listener Class）。
+可以通过在组件的页面中放置 `ValueChangeListener` 标签或 `ActionListener` 标签，在组件上实现监听器类（Listener Class）。
 
-# 75: 作者如何在 JSF 中引用后端 Bean（backing Bean）方法？
+### 75: 作者如何在 JSF 中引用后端 Bean（backing Bean）方法？
 
-答案：
+**答案：**
 
 作者可以使用组件标签的 valuechangerListener 和 actionListener 属性来调用这些方法。
 
-# 76: 如何在 JSF 的组件上注册值变更监听器（value-changer listener）？
+### 76: 如何在 JSF 的组件上注册值变更监听器（value-changer listener）？
 
-答案：
+**答案：**
 
 可以通过让作者在 UIInput 组件或由 UIInput 的类之一表示的组件上注册 ValueChangeListener 来。
+
+
 
 # 77: 如何在 JSF 的组件上注册动作监听器（Action Listener）？
 
 答案：
 
-作者可以通过在该特定页面的组件标签中嵌套 ActionListener 标签，在 UICommand 组件上注册 ActionListener。
+作者可以通过在该特定页面的组件标签中嵌套 `ActionListener` 标签，在 `UICommand` 组件上注册 `ActionListener`。
 
 # 78: JSF 中 DoubleRangeValidator 类的构造目的是什么？
 
@@ -572,25 +526,25 @@ timeStyle 属性用于定义由 java.text.DateFormat 指定的时间或字符串
 
 答案：
 
-该类检查组件本地值的长度是否在范围之内，并检查/确认该值是否为 java.lang.String 类型。
+该类检查组件本地值的长度是否在范围之内，并检查/确认该值是否为 `java.lang.String` 类型。
 
 # 80: JSF 中的 LongRangeValidator 类起什么作用？
 
 答案：
 
-该类确保组件的本地值在特定范围内，并且该值是任何数值类型（Numeric）或可以转换为 Long 的 String。
+该类确保组件的本地值在特定范围内，并且该值是任何数值类型（Numeric）或可以转换为 `Long` 的 `String`。
 
 # 81: 如何在 JSF 中将组件值（Component Value）绑定到属性？
 
 答案：
 
-可以通过指定 Bean 的名称以及使用 value 属性的属性名称来实现，其中值绑定表达式中的 Bean 名称必须与受托管 Bean（managed Bean）名称元素匹配。
+可以通过指定 Bean 的名称以及使用 `value` 属性的属性名称来实现，其中值绑定表达式中的 Bean 名称必须与受托管 Bean（managed Bean）名称元素匹配。
 
 # 82: 如何在 JSF 中将组件实例（Component Instance）绑定到 Bean 属性？
 
 答案：
 
-可以使用组件标签的 binding 属性通过绑定表达式将组件实例绑定到 Bean 属性。大多数情况下，是将组件实例绑定到 Bean 属性而非其值。
+可以使用组件标签的 `binding` 属性通过绑定表达式将组件实例绑定到 Bean 属性。大多数情况下，是将组件实例绑定到 Bean 属性而非其值。
 
 # 83: 如何在 JSF 中引用后端 Bean 方法？
 
@@ -604,10 +558,10 @@ timeStyle 属性用于定义由 java.text.DateFormat 指定的时间或字符串
 
 有四种方法：
 
-- a) action
-- b) actionListener,
-- c) validator
-- d) valueChangeChangeListener。
+- a) `action`
+- b) `actionListener`
+- c) `validator`
+- d) `valueChangeListener`
 
 # 85: 在 JSF 中如何引用执行导航（navigation）的方法？
 
@@ -619,7 +573,7 @@ timeStyle 属性用于定义由 java.text.DateFormat 指定的时间或字符串
 
 答案：
 
-如果某个页面上的组件生成了动作事件，且该事件由后端 Bean 方法处理，则通过组件的 actionListener 属性进行引用。
+如果某个页面上的组件生成了动作事件，且该事件由后端 Bean 方法处理，则通过组件的 `actionListener` 属性进行引用。
 
 # 87: 在 JSF 中如何引用执行验证（validation）的方法？
 
@@ -631,7 +585,7 @@ timeStyle 属性用于定义由 java.text.DateFormat 指定的时间或字符串
 
 答案：
 
-如果希望页面上的组件生成值变更事件，并希望该事件由后端 Bean 方法处理，则通过使用 valueChangeListener 属性进行引用。
+如果希望页面上的组件生成值变更事件，并希望该事件由后端 Bean 方法处理，则通过使用 `valueChangeListener` 属性进行引用。
 
 # 89: 如何在 JSF 中应用自定义转换器（Custom Converter）？
 
@@ -659,10 +613,10 @@ timeStyle 属性用于定义由 java.text.DateFormat 指定的时间或字符串
 
 JSF 支持四种事件，它们是：
 
-- a) 值变更事件（Value Change Events），
-- b) 动作事件（Action Events），
-- c) 阶段事件（Phase Events）以及
-- d) 系统事件（System Events，自 JSF 2.0 起）。
+- a) 值变更事件（Value Change Events）
+- b) 动作事件（Action Events）
+- c) 阶段事件（Phase Events）
+- d) 系统事件（System Events，自 JSF 2.0 起）
 
 ## 93: 事件监听器（Event Listeners）如何影响 JSF 生命周期？
 
@@ -670,9 +624,9 @@ JSF 支持四种事件，它们是：
 
 事件监听器可以通过三种方式之一影响 JSF 周期：
 
-- a) 让周期正常进行，
+- a) 让周期正常进行
 - b) 通过调用渲染 Response 方法跳过生命周期的剩余部分
-- c) 通过调用 FacesContext 类的 responseComplete 方法完全跳过生命周期的剩余部分。
+- c) 通过调用 `FacesContext` 类的 `responseComplete` 方法完全跳过生命周期的剩余部分
 
 # 94: JSF 中的值变更事件（Value Change events）起什么作用？
 
@@ -682,29 +636,25 @@ JSF 支持四种事件，它们是：
 
 # 95: JSF 中的动作事件（Action Events）是如何激活的？
 
-
-
-
-
-# 回答：
+回答：
 
 动作事件（Action Events）是在生命周期接近结束时的调用应用程序阶段（Invoke Application phase）由按钮和链接触发的。
 
 # 96: 在事件处理期间，f:param 标签的作用是什么？
 
-# 回答：
+回答：
 
-f:param 标签用于向组件挂载参数，该参数将根据其所挂载的组件类型进行解释。
+`f:param` 标签用于向组件挂载参数，该参数将根据其所挂载的组件类型进行解释。
 
 # 97: 在事件处理期间，f:attribute 标签的作用是什么？
 
-# 回答：
+回答：
 
-f:attribute 标签被用作从 UI 向服务器传递信息的另一种方法，通过将标签设置为属性或链接，或从动作切换到动作监听器（action listener）。
+`f:attribute` 标签被用作从 UI 向服务器传递信息的另一种方法，通过将标签设置为属性或链接，或从动作切换到动作监听器（action listener）。
 
 ## 98: JSF 中的阶段事件（Phase Events）是什么？
 
-# 回答：
+回答：
 
 阶段事件是在每个生命周期阶段之前和之后触发的事件，由阶段监听器（phase listeners）处理并附加到视图根（view root）。
 
@@ -714,15 +664,15 @@ f:attribute 标签被用作从 UI 向服务器传递信息的另一种方法，�
 
 阶段监听器通过使用 `javax.faces.event` 包中的 `PhaseListener` 接口并定义三个方法来实现：
 
-- a) `PhaseID getPhaseID ();`
-- b) `void afterPhase (PhaseEvent)` 和
-- c) `void beforePhase (PhaseEvent).`
+- a) `PhaseID getPhaseID();`
+- b) `void afterPhase(PhaseEvent)` 和
+- c) `void beforePhase(PhaseEvent).`
 
 # 100: 监听器类如何处理动作事件？
 
 回答：
 
-监听器类必须实现 `javax.faces.event.ActionListener` 接口。它还包含名为 `processAction (ActionEvent ActionEvent)` 的方法，该方法在动作事件发生时被调用。
+监听器类必须实现 `javax.faces.event.ActionListener` 接口。它还包含名为 `processAction(ActionEvent)` 的方法，该方法在动作事件发生时被调用。
 
 ## 复合组件（Composite Components）
 
@@ -754,7 +704,7 @@ f:attribute 标签被用作从 UI 向服务器传递信息的另一种方法，�
 
 回答：
 
-editableValueHolder 标签用于向页面作者暴露一个持有可编辑值的值的组件。它可以在 JSF 接口中被访问。
+`editableValueHolder` 标签用于向页面作者暴露一个持有可编辑值的值的组件。它可以在 JSF 接口中被访问。
 
 ## 106: JSF 中的动作源组件标签（actionSource Component tag）的作用是什么？
 
@@ -786,9 +736,9 @@ editableValueHolder 标签用于向页面作者暴露一个持有可编辑值的
 
 后备组件有三个要求：
 
-- a) 必须是 `UIComponent` 的子类，
+- a) 必须是 `UIComponent` 的子类
 - b) 实现 `NamingContainer` 标记接口，以及
-- c) 具有一个值为 `javax.faces.NamingContainer` 的 `family` 属性。
+- c) 具有一个值为 `javax.faces.NamingContainer` 的 `family` 属性
 
 ## 111: 复合组件是如何打包在 JAR 中的？为什么要这样做？
 
@@ -798,25 +748,25 @@ editableValueHolder 标签用于向页面作者暴露一个持有可编辑值的
 
 ## 112: 在 JSF 中使用复合组件的主要目的是什么？
 
-# 回答：
+回答：
 
 复合组件主要用于让 JSF 开发者能够以更易用的方式实现封装 AJAX 的自定义组件。
 
 # 113: 在 JSF 中如何访问 AJAX？
 
-# 回答：
+回答：
 
 从 JSF 2.0 开始，AJAX 被表示为带有 JavaScript 库的内置支持功能，可以在视图和 Java 代码中访问。
 
 ## 114: 如何在 JSF 内部处理 AJAX 用例？
 
-# 回答：
+回答：
 
 AJAX 用例可以使用 `f:ajax` 标签处理，该标签从 JSF 核心库中为任何组件挂载行为。示例包括字段验证或进度指示。
 
 # 115: AJAX 请求与其他 HTTP 请求有何不同？
 
-# 回答：
+回答：
 
 AJAX 请求有两个不同之处：
 
@@ -833,7 +783,7 @@ AJAX 请求有两个不同之处：
 
 回答：
 
-从 JSF 2.0 开始，AJAX 被表示为带有 JavaScript 库的内置支持功能，可以在视图和 Java 代码中访问，生命周期被分为两个部分：
+生命周期被分为两个部分：
 
 - a) 执行（Execute）（当 AJAX 执行时）
 - b) 渲染（Render）（当渲染时）
@@ -842,11 +792,11 @@ AJAX 请求有两个不同之处：
 
 回答：
 
-当 JSF 2.0 AJAX 这种表示为带有 JavaScript 库的内置支持功能且可以在视图和 Java 代码中访问时，会发生以下步骤：
+当 JSF 执行时，会发生以下步骤：
 
 - a) JSF 转换并验证值
 - b) 将值推送到模型
-- c) 执行动作和监听器。
+- c) 执行动作和监听器
 
 ## 119: 如何在 JSF 2.0 中 AJAX？
 
@@ -858,13 +808,13 @@ AJAX 请求有两个不同之处：
 
 回答：
 
-该属性用于触发 AJAX 请求。事件名称通常不带 on 前缀。
+该属性用于触发 AJAX 请求。事件名称通常不带 `on` 前缀。
 
 ## 121: f:ajax 标签的 Execute 属性在 JSF 中的作用是什么？
 
 回答：
 
-该属性启用 JSF 在服务器上执行的组件列表。如果未指定 execute 属性，默认使用 `@this`。
+该属性启用 JSF 在服务器上执行的组件列表。如果未指定 `execute` 属性，默认使用 `@this`。
 
 ## 122: f:ajax 标签的 Onevent 属性在 JSF 中的作用是什么？
 
@@ -882,7 +832,7 @@ JSF 在生命周期的调用应用程序阶段调用每次 AJAX 调用，该阶�
 
 回答：
 
-该属性用于生成 JSF 在客户端渲染的组件空格分隔列表。如果未指定 render 属性，则设置为 `@none`，JSF 在 AJAX 请求完成后将不会渲染任何组件。
+该属性用于生成 JSF 在客户端渲染的组件空格分隔列表。如果未指定 `render` 属性，则设置为 `@none`，JSF 在 AJAX 请求完成后将不会渲染任何组件。
 
 ## 125: JSF 中的事件是如何命名的？
 
@@ -910,39 +860,35 @@ JSF 去掉事件开头的 `on`，例如 JavaScript 的 `onblur` 事件变为 `bl
 
 ## 129: reponseCode 属性在 JSF 中的作用是什么？
 
-
-
-
-
-# 回答：
+回答：
 
 此属性允许显示 AJAX 请求的数值响应代码。在 AJAX 请求的开始阶段，此对象为未定义（undefined）。
 
 ## 130: JSF 如何处理 AJAX 错误？
 
-# 回答：
+回答：
 
 AJAX 错误使用 `f:ajax onerror` 属性进行处理，其编写方式如下：`<f:ajax onerror="handleAjaxError"/>`。
 
 ## 131: 错误的数据对象的属性有哪些？
 
-# 回答：
+回答：
 
 数据对象（Data Object）有三个事件不存在的属性。它们是：
 
-- a) description（描述），
-- b) errorName（错误名称）和
-- c) errorMessage（错误消息）。
+- a) description（描述）
+- b) errorName（错误名称）
+- c) errorMessage（错误消息）
 
 ## 132: JSF 中的 AJAX 响应是什么？
 
-# 回答：
+回答：
 
 这些响应与 XML 文档中的 JSF AJAX 请求有关，用于指示 JSF 如何更新启动响应的 XHTML 页面。
 
 ## 133: JSF AJAX 中的 Insert Response（插入响应）元素的作用是什么？
 
-# 回答：
+回答：
 
 该元素在现有元素之前插入具有指定 ID 的 DOM 元素。可以通过以下方式实现：
 
@@ -954,13 +900,13 @@ AJAX 错误使用 `f:ajax onerror` 属性进行处理，其编写方式如下：
 
 ## 134: JSF AJAX 中的 Update Response（更新响应）元素的作用是什么？
 
-# 回答：
+回答：
 
 该元素用于更新 DOM 元素，除了指定要更新的 DOM 元素的客户端 ID 外，它还能确保更新整个 DOM、更新提交表单的所有状态或更新页面的主体。
 
 ## 135: JSF AJAX 中的 delete response（删除响应）元素的作用是什么？
 
-# 回答：
+回答：
 
 该元素用于删除具有指定 ID 的 DOM 元素，其引入方式如下：
 
@@ -972,7 +918,7 @@ AJAX 错误使用 `f:ajax onerror` 属性进行处理，其编写方式如下：
 
 ## 136: JS AJAX 中的 attributes response（属性响应）元素的作用是什么？
 
-# 回答：
+回答：
 
 attributes 元素用于更新 DOM 元素的一个或多个属性：
 
@@ -985,31 +931,31 @@ attributes 元素用于更新 DOM 元素的一个或多个属性：
 
 ## 137: JS AJAX 中的 error response（错误响应）元素的作用是什么？
 
-# 回答：
+回答：
 
 该元素仅生成包含所包名称和消息服务器错误。
 
 ## 138: JSF 中的 addOnError (回调) 函数的作用是什么？
 
-# 回答：
+回答：
 
 该函数是一个 JavaScript 函数，当 AJAX 调用导致错误时，JSF 会调用它。
 
 ## 139: JSF 中的 addOnEvent (回调) 函数的作用是什么？
 
-# 回答：
+回答：
 
 该函数是 JSF 为 AJAX 事件调用的 JavaScript 函数。它在成功的 AJAX 用的生命周期内会被调用三次：begin、complete 和 success。
 
 ## 140: JSF 中的 request() 方法的作用是什么？
 
-# 回答：
+回答：
 
 该方法用于向服务器发送 AJAX 请求。请求始终是异步的，与其他 AJAX 请求一起队列，并且是向外层表单的 action 发出的 POST 请求。
 
 ## 141: JSF 如何处理队列事件？
 
-# 回答：
+回答：
 
 JSF 自动对 AJAX 请求进行队列并按顺序执行它们，以确保上一个 AJAX 请求在下一个请求开始之前始终完成。
 
@@ -1017,190 +963,184 @@ JSF 自动对 AJAX 请求进行队列并按顺序执行它们，以确保上一�
 
 ## 142: 组件类（Component Class）需要哪些职责？
 
-# 回答：
+回答：
 
 组件类需要具备三个职责：
 
-- a) 维护组件状态，
-- b) 通过编写标记来编码用户界面，
-- c) 解码 HTTP 请求。
+- a) 维护组件状态
+- b) 通过编写标记来编码用户界面
+- c) 解码 HTTP 请求
 
 ## 143: JSF 中的 UIComponent 类管理什么？
 
-# 回答：
+回答：
 
 该类管理子组件、切面（facet）组件映射、属性、值表达式以及事件监听器集合。
 
+
+
 ## 144: 组件在 JSF 中如何编码标记？
 
-# 回答：
+**回答：**
 
 组件使用三种方法编码标记，这些方法是：
 
-- a) encodeBegin(),
-- b) encodeChildren()
-- c) encodeEnd().
+- `encodeBegin()`
+- `encodeChildren()`
+- `encodeEnd()`
 
 ## 145: JSF 中的 Response 类的作用是什么？
 
-# 回答：
+**回答：**
 
 该类用于响应。它还包含了开始和结束的方法。
 
-## 146: startElement 和 endElement 方法的作用是什么？
+## 146: `startElement` 和 `endElement` 方法的作用是什么？
 
-# 回答：
+**回答：**
 
 这些方法产生组件的元素。
 
-## 147: writeAttribute 方法的作用是什么？
+## 147: `writeAttribute` 方法的作用是什么？
 
-# 回答：
+**回答：**
 
 该方法用于写入属性。
 
-## 148: JSF 中的 getClientID 方法的作用是什么？
+## 148: JSF 中的 `getClientID` 方法的作用是什么？
 
-# 回答：
+**回答：**
 
 该方法用于获取组件的 ID。
 
-## 149: getAttributes() 方法的作用是什么？
+## 149: `getAttributes()` 方法的作用是什么？
 
-# 回答：
+**回答：**
 
 该方法返回属性映射。
 
-## 150: getResponseWriter 方法的作用是什么？
+## 150: `getResponseWriter` 方法的作用是什么？
 
-# 回答：
+**回答：**
 
 该方法返回响应写入器（writer）。
 
-## 151: startElement(String elementName, component) 方法的作用是什么？
+## 151: `startElement(String elementName, component)` 方法的作用是什么？
 
-# 回答：
+**回答：**
 
 该方法用于开启元素的标签。
 
-## 152: writeAttribute(String attributeName, Object attributeValue) 方法的作用是什么？
+## 152: `writeAttribute(String attributeName, Object attributeValue)` 方法的作用是什么？
 
-# 回答：
+**回答：**
 
 该方法用于写入值。
 
-## 153: decode(FacesContext context) 方法的作用是什么？
+## 153: `decode(FacesContext context)` 方法的作用是什么？
 
-# 回答：
+**回答：**
 
 该方法在生命周期开始时调用。
 
-## 154: getExternalContext() 方法的作用是什么？
+## 154: `getExternalContext()` 方法的作用是什么？
 
-# 回答：
+**回答：**
 
 该方法返回外部上下文。
 
-## 155: setSubmittedValue(Object submittedValue) 方法的作用是什么？
+## 155: `setSubmittedValue(Object submittedValue)` 方法的作用是什么？
 
-# 回答：
+**回答：**
 
 该方法用于设置组件的提交值。
 
-## 156: getSubmittedValue() 方法的作用是什么？
+## 156: `getSubmittedValue()` 方法的作用是什么？
 
-# 回答：
+**回答：**
 
 该方法返回组件的提交值。
 
-## 157: getRendersChildren() 方法的作用是什么？
+## 157: `getRendersChildren()` 方法的作用是什么？
 
-# 回答：
+**回答：**
 
 该方法指定渲染器是否负责渲染其子元素。
 
-## 158: convertClientId 方法的作用是什么？
+## 158: `convertClientId` 方法的作用是什么？
 
-# 回答：
+**回答：**
 
 该方法用于转换 ID 字符串。
 
-## 159: getConvertedValue() 方法的作用是什么？
+## 159: `getConvertedValue()` 方法的作用是什么？
 
-# 回答：
+**回答：**
 
 该方法将组件的提交值从字符串转换为简单对象。
 
-## 160: createConverter() 方法的作用是什么？
+## 160: `createConverter()` 方法的作用是什么？
 
-## 161: UI getFacet(String facetName) 方法的作用是什么？
+## 161: `UI getFacet(String facetName)` 方法的作用是什么？
 
-# 回答：
+**回答：**
 
 该方法用于返回切面（facets）的引用。
 
-## 162: getRendersChildren() 方法的作用是什么？
+## 162: `getRendersChildren()` 方法的作用是什么？
 
-# 回答：
+**回答：**
 
-如果组件渲染子元素，则返回 TRUE，否则返回 FALSE。
+如果组件渲染子元素，则返回 `TRUE`，否则返回 `FALSE`。
 
-## 163: JSF 中的 isRendered() 方法的作用是什么？
+## 163: JSF 中的 `isRendered()` 方法的作用是什么？
 
-# 回答：
+**回答：**
 
-该方法简单返回渲染（rendered）属性。
+该方法简单返回渲染（rendered）属性。作者指定，仅当属性为 `true` 时才会渲染组件。
 
+## 164: JSF 中的 `void restoreState(FacesContext context, Object state)` 方法的作用是什么？
 
-
-
-
-68 个你最可能被到的 JavaServer Faces 面试题
-
-作者指定，仅当属性为 true 时才会渲染组件。
-
-## 164: JSF 中的 `the void restoreState(FacesContext context, Object state)` 方法的作用是什么？
-
-答案：
+**答案：**
 
 该方法从给定的状态对象恢复此对象的状态，该状态对象是之前通过调用 `saveState` 获取的对象的副本。
 
 ## 165: 如何在自定义组件中添加 AJAX 功能？
 
-答案：
+**答案：**
 
 这一过程可以通过两种方式实现：
 
-- a) 将 AJAX 嵌入到自定义组件中，或
-- b) 通过启用 AJAX 的自定义组件，使其支持 `f:ajax` 标签。
+- 将 AJAX 嵌入到自定义组件中，或
+- 通过启用 AJAX 的自定义组件，使其支持 `f:ajax` 标签。
 
 ## 166: 什么是标签处理器（Tag Handler）？它在 JSF 中起什么作用？
 
-答案：
+**答案：**
 
 标签处理器用于处理标签属性及其值。如果属性是特殊值，或者存在一个用于该属性的属性设置器（property setter）来调用它，则它将使用特殊规则。
 
 ## 167: JSF 中的 `String getRemoteUser()` 方法的作用是什么？
 
-答案：
+**答案：**
 
-该方法用于获取查询时当前登录用户的名称，如果不存在此类用户，则返回 NULL。
+该方法用于获取查询时当前登录用户的名称，如果不存在此类用户，则返回 `NULL`。
 
 ## 168: JSF 中的 `Boolean isUserInRole(String role)` 方法的作用是什么？
 
-答案：
+**答案：**
 
 该方法主要用于测试当前用户是否属于给定的角色之一，它是 `javax.servlet.HttpServletRequest` 字符串的一部分。
 
 ## 169: 文件在 JSF 中是如何上传的？
 
-答案：
+**答案：**
 
 由于 JSF 不直接支持文件编码，作者需要安装一个服务器过滤器，拦截上传的文件并将其转换为请求属性（request attributes），并将所有其他表单数据转换为请求参数。
 
 ## 170: JSF 中的上传组件（Upload Component）支持多少属性？
 
-答案：
+**答案：**
 
 上传组件在 JSF 中支持两个属性，它们是 `value` 和 `target`。
 
@@ -1210,172 +1150,168 @@ JSF 自动对 AJAX 请求进行队列并按顺序执行它们，以确保上一�
 
 ## 171: JSF 中上传组件的 `Decode` 方法的作用是什么？
 
-答案：
+**答案：**
 
 该方法检索 servlet 过滤器放入请求属性中的文件项，并根据标签属性的指示对其进行处理。
 
 ## 172: 图像映射（Image Map）在 JSF 中如何显示？
 
-答案：
+**答案：**
 
 作者需要实现由 `usemap` 属性提供的客户端图像映射，作者在 JSF 页面的 HTML 中指定该映射。
 
 ## 173: 二进制数据在 JSF 中是如何产出的？
 
-答案：
+**答案：**
 
 由于很难让 JSF 动态生成如图像或 PDF 文件之类的二进制数据，作者需要提供一个 JSF 标签来收集自定义数据，然后将这些数据发送到 servlet。
 
 ## 174: 在不使用 servlet 的情况下如何在 JSF 中生成二进制数据？
 
-答案：
+**答案：**
 
 这可以通过让作者注意在 JSF 实现开始写入响应之前，servlet 输出流（output stream）的抓取时机来实现。
 
 ## 175: JSF 中的过滤器动作（Filter Action）何时发生？
 
-答案：
+**答案：**
 
 过滤器动作只有在存在以 `/binary` 开头的视图 ID 时才会发生，并且与 servlet 解决方案一样，过滤器动作需要包含一个作为 GET 参数的数据传输对象（DTO）。
 
 ## 176: JSF 中的分页器（Pager）是什么？
 
-答案：
+**答案：**
 
 分页器是一种标准用户界面，用于导航大型表格、跳转到表格的其他页面、进入下一页和上一页等功能。
 
 ## 177: JSF 中的 `Encode` 方法的作用是什么？
 
-答案：
+**答案：**
 
 `Encode` 方法用于生成一组链接；类似于 `commandLink` 方法。点击链接将激活 JavaScript 代码，然后会在隐藏字段中设置一个值，最后提交表单（Form）。
 
 ## 178: JSF 中是如何生成弹出窗口的？
 
-答案：
+**答案：**
 
 为了生成弹出窗口，作者需要使用 JavaScript 调用，以确保在用户点击按钮或链接时显示窗口。作者还必须在按钮或链接的 `onclick` 处理程序上附加一个函数，并设置该函数返回 `FALSE`，这样浏览器就不会提交表单或跟随链接跳转。
 
-## ## 179: JSF 中的 `doPopup` 函数的作用是什么？
+## 179: JSF 中的 `doPopup` 函数的作用是什么？
 
-答案：
+**答案：**
 
 `doPopup` 函数包含了用于弹出窗口的 JavaScript 指令，它包含在页头内部的 `script` 标签中。
 
 ## 180: 如何在 JSF 中显示或隐藏页面的部分？
 
-答案：
+**答案：**
 
 这一过程可以使用 JSTL 的 `c:if` 和 `c:choose` 构造方法来实现；如果作者不希望混合使用 JSF 和 JSTL 标签，可以使用 JSF 的 `render` 属性来实现相同的效果。
 
 ## 181: JSF 中的 `getErrorMessage` 方法有什么用途？
 
-答案：
+**答案：**
 
 该方法用于格式化错误消息，该消息将包含在客户端 JavaScript 代码中，错误代码由消息和 `arg` 属性构建而成。
 
 ## 182: JSF 中的 `findValidators` 方法的作用是什么？
 
-答案：
+**答案：**
 
 该方法是 `validatorScript` 组件的一部分，用于扫描组件树、定位所有验证器并将它们列在一个对象中。
 
 ## 183: 在 JSF 中是如何配置应用程序的？
 
-答案：
+**答案：**
 
 部署描述符（deployment descriptor）必须包含关于用于处理 JSF 请求的 servlet 的某些配置，即 servlet 映射（servlet mapping）。
 
 ## 184: 如何扩展 JSF 表达式语言？
 
-答案：
+**答案：**
 
 这可以通过处理表达式的解析器（resolver）来实现。其中 `base` 是一个字符串，`property` 可能是 ID。
 
 ## 185: 如何向 JSF 表达式语言添加函数？
 
-答案：
+**答案：**
 
 这一过程可以通过作者通过以下方式添加自己的函数来实现：
 
-- a) 将函数实现为静态方法
-- b) 将函数名映射到实现。
+- 将函数实现为静态方法
+- 将函数名映射到实现。
 
 ## 186: 如何监控浏览器和服务器之间的流量？
 
-答案：
+**答案：**
 
 这通常对于调试应用程序很有用，可以使用 Eclipse、NetBeans 或 WireShark 监控整个流量。
 
 ## 187: 如何调试 JSF 页面？
 
-答案：
+**答案：**
 
 要做到这一点，作者必须确保提交按钮包含在 `h:form` 中，双检导航规则和/或阶段跟踪器（phase tracker）。
 
 ## 188: 开发 JSF 应用时如何使用测试工具？
 
-答案：
+**答案：**
 
 可以通过孤立测试 Bean 并调用 JSF 实现将调用的方法来实现。
 
 ## 189: 如何在 JSF 中使用 Scala？
 
-答案：
+**答案：**
 
 可以通过实现托管 Bean，像 Java 一样对其注解，但使用 Scala 的注解语法。
 
 ## 190: 如何在 JSF 中使用 Groovy？
 
-（注：原文此处为 190: 如何在 JSF 中使用 Groovy? 修正为：）
-
-答案：
+**答案：**
 
 由于几乎所有的 Java 代码都符合 Groovy 标准，只需要将代码后缀从 `.java` 改为 `.groovy`，然后使用 Groovy 编译器将代码编译为 `.class` 文件。
 
 ## 191: 常见的输出字符串（Outcome Strings）有哪些？它们代表什么？
 
-答案：
+**答案：**
 
 Outcome 可以开发者选择的任何内容，但最常见的 Outcome 有：
 
-- success 表示执行成功，进入下一页。
-- failure 表示出现错误，进入错误页面。
-- logon 表示用户需要先登录，进入登录页面。
-- no results 表示搜索没有找到任何结果，返回搜索页面。
+- `success` 表示执行成功，进入下一页。
+- `failure` 表示出现错误，进入错误页面。
+- `logon` 表示用户需要先登录，进入登录页面。
+- `no results` 表示搜索没有找到任何结果，返回搜索页面。
 
 ## 192: JavaServer Faces 应用的部署描述符应该包含什么？
 
-答案：
+**答案：**
 
-部署描述符必须包含用于处理 JSF 请求的 servlet 的某些配置、处理 servlet 的 servlet 映射，如果配置资源未位于默认位置，则包含其路径。它还可以指定可选配置，包括：验证自定义对象、开启 XML 验证或指定
-
-这是组件状态保存的地方。
+部署描述符必须包含用于处理 JSF 请求的 servlet 的某些配置、处理 servlet 的 servlet 映射，如果配置资源未位于默认位置，则包含其路径。它还可以指定可选配置，包括：验证自定义对象、开启 XML 验证或指定组件状态保存的地方。
 
 ## 193: 如何开启 XML 文件的验证？
 
-答案：
+**答案：**
 
-如果 JSF 应用包含一个或多个 xml 配置资源文件，可以通过将 `validateXML` 标志设置为 TRUE 来开启对这些 xml 文件的 JSF 验证。该标志的默认值为 FALSE。
+如果 JSF 应用包含一个或多个 xml 配置资源文件，可以通过将 `validateXML` 标志设置为 `TRUE` 来开启对这些 xml 文件的 JSF 验证。该标志的默认值为 `FALSE`。
 
 ## 194: JSF 应用为了正常运行需要哪些 JAR 文件？
 
-答案：
+**答案：**
 
 JSF 应用需要几个 JAR 文件才能正常运行。以下是所需的 jar 包：
 
-- a) jsf-api.jar,
-- b) jsf-impl.jar,
-- c) jstl.jar,
-- d) standard.jar,
-- e) commons-BeanUtils.jar,
-- f) commons-digester.jar,
-- g) commons-collections.jar,
-- h) commons-logging.jar.
+- `jsf-api.jar`
+- `jsf-impl.jar`
+- `jstl.jar`
+- `standard.jar`
+- `commons-BeanUtils.jar`
+- `commons-digester.jar`
+- `commons-collections.jar`
+- `commons-logging.jar`
 
 ## 195: 字符集代表了什么？
 
-答案：
+**答案：**
 
 字符集是文本和图形符号的集合，每个符号都映射到一组非负整数。
 
@@ -1383,26 +1319,26 @@ JSF 应用需要几个 JAR 文件才能正常运行。以下是所需的 jar 包
 
 ## 196: 哪些接入 JSF 的尖端开源软件？
 
-答案：
+**答案：**
 
 JSF 具有高度的可扩展性，对框架开发者非常有吸引力。他们构建了如 Facelets、Ajax4jsf、Seam、RichFaces、ICEFaces 等开源软件。
 
 ## 197: 如何为你的 JSF 应用寻找额外的组件？
 
-答案：
+**答案：**
 
 标准 JSF 定义了一组极少数的组件。如果你需要更复杂的组件，有几个组件库值得研究：ICEFaces、RichFaces、PrimeFaces、Apache Trinidad 库、Apache Tomahawk 库等。
 
 ## 198: 如何自定义错误页面？
 
-答案：
+**答案：**
 
-你可以使用 web.xml 文件中的 `error-page` 标签来替换错误页面，并指定 Java 异常类或 HTML 错误代码。例如
+你可以使用 `web.xml` 文件中的 `error-page` 标签来替换错误页面，并指定 Java 异常类或 HTML 错误代码。例如：
 
 ```xml
 <error-page>
-<error-code>500</error-code>
-<location>/faces/error.xhtml</location>
+  <error-code>500</error-code>
+  <location>/faces/error.xhtml</location>
 </error-page>
 ```
 
@@ -1410,13 +1346,13 @@ JSF 具有高度的可扩展性，对框架开发者非常有吸引力。他们�
 
 ## 199: 如何对 JSF 应用进行测试？
 
-答案：
+**答案：**
 
 可以通过调用 JSF 实现在不同场景下会调用的方法，对托管豆（Managed Beans）进行孤立测试。对于这类测试，单元测试和黑盒测试是很好的选择。可以使用 HTMLUnit 或 Selenium 等测试自动化框架来编写模拟浏览器会话的脚本。
 
 ## 200: JSF 中的请求编码（Request Encoding）起什么作用？
 
-答案：
+**答案：**
 
 请求编码是处理传入请求中参数的字符编码，然后使用默认的 ISO-8859-1 解析器对请求数据进行解释。
 
@@ -1426,83 +1362,83 @@ JSF 具有高度的可扩展性，对框架开发者非常有吸引力。他们�
 
 ## 1: 你如何处理一个负能量的同事？
 
-答案：
+**答案：**
 
 每个人都必须面对负能量的同事——而做到这一点最好的方法就是保持积极。你可以尝试与该同事建立关系或在某种程度上与他们交流，但即使你的努力遭到了冷遇，你也必须保持积极的态度。最重要的是，要强调你绝不允许同事的负能量影响你自己的工作或生产力。
 
 ## 2: 如果你目睹同事在上网、看书等浪费公司时间，你会怎么办？
 
-答案：
+**答案：**
 
 面试官会希望看到你意识到员工浪费公司时间对公司是多大的危害，并且这不是你会掉以轻心的事情。解释你将如何遵守公司政策，无论这包括亲自去与该同事交谈、直接向主管汇报该行为，还是告诉人力资源部门的人员。
 
 ## 3: 你如何处理自己与其他员工之间的竞争？
 
-答案：
+**答案：**
 
 健康的竞争可以是一件很好的事，最好的办法是关注其中的积极方面。不要提到你与同事同事之间的冲突，而要关注为了跟上他人优秀工作的动力，以及同事如何成为一个强大的支持网络，帮助你推向新的成功。
 
 ## 4: 什么时候与同事社交是恰当的？
 
-答案：
+**答案：**
 
 这个问题有两个极端的答案（一直社交，或从不社交），在大多数情况下，你的面试官会希望看到你处于两者之间。与同事建立稳固的关系是重要的，但绝不能以牺牲工作完成情况为代价。理想情况下，关系的建立可以在团队合作活动、特殊项目以及休息室中进行。
 
 ## 5: 告诉我一次你上一份工作发生重大变化的情况，你是如何处理的。
 
-答案：
+**答案：**
 
 提供这种情况的背景，包括旧系统、变化是什么、如何实施的以及变化的结果，并包括你对每一步的感受。确保你对旧系统的最初想法是中立的，并且你的兴奋程度随着新变化的每一步而增加，因为面试官在看到你的适应能力时会很高兴的。
 
 ## 6: 在委派任务时，你如何选择哪些任务分配给哪些团队成员？
 
-答案：
+**答案：**
 
 面试官希望通过这个问题了解你的思维过程，请确保提供你选择背后的逻辑。解释你如何根据个人的长处来委派任务，或者根据每个人正在进行的项目。
 
 ## 7: 告诉我一次你为自己的信念而坚持立场的情况。
 
-答案：
+**答案：**
 
 虽然向面试官解释冲突的情况可能困难，但这是一个展示你的激情和信念的绝佳机会。不仅要解释为什么对你如此重要，还要详细说明你的同事或主管之后是如何的——他们是变得更加尊重？不接受？还是抱歉？
 
 ## 8: 告诉我一次你帮助他人完成工作的情况，即使那并不是“你的工作”。
 
-答案：
+**答案：**
 
 当你被要求为他人的工作买单时，尽管你可能会感到沮丧，但重要的是要保持积极。面试官将希望看到你是否具有团队合作精神，通过帮助他人完成他们无法独立完成的任务，展示了帮助团队成功的意愿，以及你自己的能力。
 
 ## 9: 团队协作有哪些挑战？你是如何处理的？
 
-答案：
+**答案：**
 
 团队协作有很多显性的挑战，例如处理不同的观点、协调个人时间或适应难以相处的同事。最好专注于一个挑战，例如团队成员错过截止日期或未能履行承诺，然后提供一个解决该问题的方案。例如，你可以组织团队每周会议来讨论进度，或者缩短截止日期以确保按时完成。
 
 ## 10: 你重视职场中的多样性吗？
 
-答案：
+**答案：**
 
 多样性在职场中非常重要，它可以营造一个包容、平等且充满不同观点背景的环境。确保展示你对这些问题的认知，并强调从他人经验中学习的重要性。
 
 ## 11: 如果某个同事不接受他人的多样性你会如何处理？
 
-答案：
+**答案：**
 
 解释遵守公司关于多样性的政策是重要的，你会与相关的主管或管理团队沟通。在适当的情况下，最好也可以与该同事谈谈不同观点的益处——如果你可以自己解决这种情况，最好不要将问题提交给管理层。
 
 ## 12: 你更倾向于从团队工作中获得回报，还是从独立完成任务？
 
-答案：
+**答案：**
 
-最好的办法是在这两个方面表现出平衡——你的雇主希望看到你能够适应
+最好的办法是在这两个方面表现出平衡——你的雇主希望看到你能够适应独立工作，并且能够高效且在没有帮助的情况下完成任务。然而，让你的雇主看到你具备团队合作精神，并且你理解多角度视角和努力能为项目带来的价值也是同样重要的。
 
-独立工作，并且能够高效且在没有帮助的情况下完成任务。然而，让你的雇主看到你具备团队合作精神，并且你理解多角度视角和努力能为项目带来的价值也是同样重要的。
+## 13: 请告诉我一次你为了完成某个项目而额外加班的经历。
 
-## 13：请告诉我一次你为了完成某个项目而额外加班的经历。
+**回答：**
 
-回答：
 
-让你的雇主看到你对工作充满投入，并且在需要或工作有要求时愿意投入额外的时间，这是非常重要的。然而，在解释为什么被要求加班时要小心——例如，你是否是因为在过程早阶段目标设定得不当而不得不留到晚？或者从更积极的方面来说，你是否是因为客户在短时间内要求提前截止日期而额外加班的？强调你的能力以及以及每次都付出 110% 努力的意愿。
+
+让你的雇主看到你对工作充满投入，并且在需要或工作有要求时愿意投入额外的时间，这是非常重要的。然而，在解释为什么被要求加班时要小心——例如，你是否是因为在过程早阶段目标设定得不当而不得不留到晚？或者从更积极的方面来说，你是否是因为客户在短时间内要求提前截止日期而额外加班的？强调你的能力以及每次都付出 110% 努力的意愿。
 
 ## 14：请告诉我一次你的表现超过了工作职责和要求的经历。
 
@@ -1514,7 +1450,7 @@ JSF 具有高度的可扩展性，对框架开发者非常有吸引力。他们�
 
 回答：
 
-这个问题有很多种可能的不错答案，面试官主要想看到你对这份工作充满巨大的热情，并且如果你被录用，在职业生涯中将保持保持动力。你成功背后的某些特定驱动力可能包括努力、机会、增长潜力或成功。
+这个问题有很多种可能的不错答案，面试官主要想看到你对这份工作充满巨大的热情，并且如果你被录用，在职业生涯中将保持动力。你成功背后的某些特定驱动力可能包括努力、机会、增长潜力或成功。
 
 ## 16：你会把工作带回家吗？
 
@@ -1528,11 +1464,11 @@ JSF 具有高度的可扩展性，对框架开发者非常有吸引力。他们�
 
 你典型的工作日中有几个重要的组成部分，面试官可能会从其中任何或所有部分中得出意义，也可以从你系统地引导他/她度过这一天的能力得出结论。从一天的开始按照时间顺序进行，确保强调生产力、回顾时间、目标设定和优先级排序，以及留出一些额外时间应对可能出现的意外情况。
 
-## 18：请告诉我一次你在上一份工作中额外心付出的经历。
+## 18：请告诉我一次你在上一份工作中额外付出的经历。
 
 回答：
 
-在这里最好是使用一个具体的例子，说明那个需要你额外付出的情况，你的具体职位本要求你做的事情你做了，以及你是如何超越这些要求的。使用具体的细节，并务必包括结果，以及对你在过程中学到的东西进行反思。
+在这里最好是使用一个具体的例子，说明那个需要你额外付出的情况，你的具体职位要求你做的事情你做了，以及你是如何超越这些要求的。使用具体的细节，并务必包括结果，以及对你在过程中学到的东西进行反思。
 
 ## 19：你是否愿意接受对工作表现的反馈和批评，并根据需要进行调整？
 
@@ -1552,7 +1488,7 @@ JSF 具有高度的可扩展性，对框架开发者非常有吸引力。他们�
 
 可能是一个困难的问题，因为通常很难察觉对他人激励的效果。与其提供一个你激励过某人的具体例子，不如专注于你激励他人的方式。
 
-（注：由于原文在此处中断，以下翻译也随提供的文本文本结束）
+（注：由于原文在此处中断，以下翻译也随提供的文本结束）
 
 困难、订单出现问题或某项请求。
 
@@ -1576,13 +1512,13 @@ JSF 具有高度的可扩展性，对框架开发者非常有吸引力。他们�
 
 回答：
 
-如果你申请的是营销以外的任何职业职位，这个问题可能可能是为了展示你的批判性思维能力以及为你的答案提供反思性的支持。因此，你选择的具体方法并不那么重要，你选择它的原因才重要。例如，口碑广告很重要，因为客户会天生信任这种信息源；而社交媒体广告也很重要，因为它可以快速且廉价地触达新客户。
+如果你申请的是营销以外的任何职业职位，这个问题可能是为了展示你的批判性思维能力以及为你的答案提供反思性的支持。因此，你选择的具体方法并不那么重要，你选择它的原因才重要。例如，口碑广告很重要，因为客户会天生信任这种信息源；而社交媒体广告也很重要，因为它可以快速且廉价地触达新客户。
 
 ## 36: 获得新客户还是留住老客户更好？
 
 回答：
 
-在几乎每情况下，留住老客户更好，而且你能够清晰地说明原因这一点很重要。首先，获取新客户对公司来说成本通常比留住老客户更高，而且新客户更容易转向其他公司。此外，留住老客户是为公司提供稳定支柱的绝佳方法，同时也能通过他们的向推荐来获得新客户。
+在几乎每种情况下，留住老客户更好，而且你能够清晰地说明原因这一点很重要。首先，获取新客户对公司来说成本通常比留住老客户更高，而且新客户更容易转向其他公司。此外，留住老客户是为公司提供稳定支柱的绝佳方法，同时也能通过他们的推荐来获得新客户。
 
 ## 37: 从竞争对手手中赢得客户的最佳方法是什么？
 
@@ -1606,13 +1542,13 @@ JSF 具有高度的可扩展性，对框架开发者非常有吸引力。他们�
 
 回答：
 
-你的个人商业哲学应该是深思熟虑的，并与公司的使命和目标保持一致。专注于积极方面，例如它能提供的服务以及人们在商业中学到的教训，并对你的哲学源于何提供见解。
+你的个人商业哲学应该是深思熟虑的，并与公司的使命和目标保持一致。专注于积极方面，例如它能提供的服务以及人们在商业中学到的教训，并对你的哲学源于何处提供见解。
 
 ## 41: 商业模式中最重要的是：销售、客户服务、营销、管理等？
 
 回答：
 
-对于许多职位，根据你工作的领域类型来定制答案可能是一个很好的策略，并解释为什么业务的那个方面是关键的。然而，通过解释每个方面对于整体功能都是不可缺的，你可以向面试官展示更强的商业敏锐度，并可能在他脑海中脱颖而出，成为非常有见的候选人。
+对于许多职位，根据你工作的领域类型来定制答案可能是一个很好的策略，并解释为什么业务的那个方面是关键的。然而，通过解释每个方面对于整体功能都是不可缺的，你可以向面试官展示更强的商业敏锐度，并可能在他脑海中脱颖而出，成为非常有见地的候选人。
 
 ## 42: 你如何跟进领域的新闻和新兴趋势？
 
@@ -1668,14 +1604,11 @@ JSF 具有高度的可扩展性，对框架开发者非常有吸引力。他们�
 
 如果你处于主管职位，这可能要求员工提交特定数量的想法，或者完成定期的创意生成练习，以锻炼他们的创造力。然而，你也可以通过创造更多自己的想法来推动周围的人。此外，要与面试官讨论提问作为一种激发想法和改变方式的重要性。
 
-
-
-
 ## 51: 描述你的创造力。
 
 回答：
 
-尝试将此答案保持在专业领域，但如果你在工作经历之外的某些创意领域拥有令人深刻的背景，不要害怕在答案中也包含它。关于创造力的最佳答案将与解决问题的能力、目标设定以及在工作中寻找创新方法来处理项目或完成销售有关。然而，办公室之外的热爱好也是棒的（只要它们不会占用你的工作时间或心理空间）。
+尝试将此答案保持在专业领域，但如果你在工作经历之外的某些创意领域拥有令人深刻的背景，不要害怕在答案中也包含它。关于创造力的最佳答案将与解决问题的能力、目标设定以及在工作中寻找创新方法来处理项目或完成销售有关。然而，办公室之外的爱好也是棒的（只要它们不会占用你的工作时间或心理空间）。
 
 最后，祝你好运！
 
@@ -1689,7 +1622,7 @@ JSF 具有高度的可扩展性，对框架开发者非常有吸引力。他们�
 - 4: 使用 JSF 的优势是什么？
 - 5: 如何使用 JSF 设计 Web 应用程序？
 - 6: JSF 中的 Beans 是什么？
-- 7: JSF 中的 Managed Bean（托管 Bean） 是什么？
+- 7: JSF 中的 `Managed Bean`（托管 Bean）是什么？
 - 8: JSF 页面是什么？
 - 9: JSF 提供哪些服务？
 - 10: JSF 规范定义了哪六个不同的阶段？
@@ -1703,83 +1636,83 @@ JSF 具有高度的可扩展性，对框架开发者非常有吸引力。他们�
 - 15: Bean 类的属性有哪些？
 - 16: Bean 最重要的特征有哪些？
 - 17: 定义 Bean 的主要属性有哪些？
-- 18: JSF 中的 Backing Bean（后端 Bean） 是什么？
-- 19: CDI Beans 是什么？
-- 20: CDI Beans 如何在 JSF 中使用？
-- 21: JSF 中的 Message Bundles（消息包） 是什么？
-- 22: JSF 中的 Bean Scopes（作用作用域）是什么？
+- 18: JSF 中的 `Backing Bean`（后端 Bean）是什么？
+- 19: `CDI Beans` 是什么？
+- 20: `CDI Beans` 如何在 JSF 中使用？
+- 21: JSF 中的 `Message Bundles`（消息包）是什么？
+- 22: JSF 中的 `Bean Scopes`（作用域）是什么？
 - 23: 我们在 JSF 中可以找到多少种作用域？
-- 24: JSF 中的 Session Scope（会话作用域）的作用是什么？
-- 25: JSF 中的 Request Scope（请求作用域）的作用是什么？
-- 26: JSF 中的 Application Scope（应用作用域）的作用是什么？
+- 24: JSF 中的 `Session Scope`（会话作用域）的作用是什么？
+- 25: JSF 中的 `Request Scope`（请求作用域）的作用是什么？
+- 26: JSF 中的 `Application Scope`（应用作用域）的作用是什么？
 
 ## 你可能会被问到的 JavaServer Faces 面试题
 
-- 27: JSF 中的 Conversation Scope（对话作用域）的作用是什么？
-- 28: JSF 中 View Scope（视图作用域）的目的是什么？
-- 29: JSF 中的 Custom Scope（自定义作用域）的作用是什么？
+- 27: JSF 中的 `Conversation Scope`（对话作用域）的作用是什么？
+- 28: JSF 中 `View Scope`（视图作用域）的目的是什么？
+- 29: JSF 中的 `Custom Scope`（自定义作用域）的作用是什么？
 
 ## 属性、参数和标签
 
-- 30: JSF 中的 f:attribute, f:param 和 f:facet 是做什么的？
-- 31: JSF 中 f:attribute 标签的唯一作用是什么？
-- 32: JSF 中 f:param 标签的唯一作用是什么？
-- 33: JSF 中的 f:facet 标签是做什么的？
-- 34: id 属性允许 JSF 什么？
-- 35: JSF 中的 Converter Attribute（转换器属性）的作用是什么？
-- 36: 用于 JSF 的 Render Attribute（渲染属性）是做什么的？
+- 30: JSF 中的 `f:attribute`、`f:param` 和 `f:facet` 是做什么的？
+- 31: JSF 中 `f:attribute` 标签的唯一作用是什么？
+- 32: JSF 中 `f:param` 标签的唯一作用是什么？
+- 33: JSF 中的 `f:facet` 标签是做什么的？
+- 34: `id` 属性允许 JSF 什么？
+- 35: JSF 中的 `Converter Attribute`（转换器属性）的作用是什么？
+- 36: 用于 JSF 的 `Render Attribute`（渲染属性）是做什么的？
 - 37: JSF 中的 HTML 事件是什么？
-- 38: JSF 中的 h:panelGrid 标签是做什么的？
-- 39: JSF 中的 Immediate Attribute（立即属性）是做什么的？
-- 40: JSF 中的 h:inputHidden 标签是做什么的？
-- 41: JSF 中的 h:outputText 标签是做什么的？
-- 42: h:outputText 标签用于 JSF 的什么？
-- 43: JSF 中的 h:graphicImage 标签是做什么的？
+- 38: JSF 中的 `h:panelGrid` 标签是做什么的？
+- 39: JSF 中的 `Immediate Attribute`（立即属性）是做什么的？
+- 40: JSF 中的 `h:inputHidden` 标签是做什么的？
+- 41: JSF 中的 `h:outputText` 标签是做什么的？
+- 42: `h:outputText` 标签用于 JSF 的什么？
+- 43: JSF 中的 `h:graphicImage` 标签是做什么的？
 
 ## 按钮、链接和切面 (Facets)
 
-- 44: h:commandButton 和 h:commandLink 标签用于 JSF 什么？
-- 45: JSF 中的 h:outputLink 标签是做什么的？
-- 46: JSF 中的 h:selectCheckbox 和 h:selectManyCheckbox 标签是做什么的？
-- 47: JSF 中代表 h:selectCheckbox 和 h:selectManyCheckbox 标签的属性有哪些？
-- 48: JSF 中的 Border Attribute（边框属性）的作用是什么？
-- 49: JSF 中的 enableClass 和 disableClass 属性是做什么的？
-- 50: JSF 中的 Facets（切面）是什么？
-- 51: JSF 中的 Facets Tags（切面标签）用于什么？
-- 52: JSF 中的 ui:composition 标签是做什么的？
-- 53: JSF 中的 ui:decoration 标签是做什么的？
-- 54: JSF 中的 ui:debug 标签是做什么的？
+- 44: `h:commandButton` 和 `h:commandLink` 标签用于 JSF 什么？
+- 45: JSF 中的 `h:outputLink` 标签是做什么的？
+- 46: JSF 中的 `h:selectCheckbox` 和 `h:selectManyCheckbox` 标签是做什么的？
+- 47: JSF 中代表 `h:selectCheckbox` 和 `h:selectManyCheckbox` 标签的属性有哪些？
+- 48: JSF 中的 `Border Attribute`（边框属性）的作用是什么？
+- 49: JSF 中的 `enableClass` 和 `disableClass` 属性是做什么的？
+- 50: JSF 中的 `Facets`（切面）是什么？
+- 51: JSF 中的 `Facets Tags`（切面标签）用于什么？
+- 52: JSF 中的 `ui:composition` 标签是做什么的？
+- 53: JSF 中的 `ui:decoration` 标签是做什么的？
+- 54: JSF 中的 `ui:debug` 标签是做什么的？
 
-108 道你最可能被问到的 JavaServer Faces 面试题
+## 108 道你最可能被问到的 JavaServer Faces 面试题
 
-- 55: JSF 中的 h:dataTable 标签是做什么的？
-- 56: JSF 中 h:dataTable 标签的主体包含哪些标签？
-- 57: JSF 中 h:dataTable 的 dir 属性是做什么的？
-- 58: JSF 中 h:dataTable 的 frame 属性是做什么的？
-- 59: JSF 中 h:dataTable 的 row 属性是做什么的？
-- 60: JSF 中的 h:dataTable 有什么 styles 属性？
-- 61: JSF 中的 ui:repeat 标签是做什么的？
+- 55: JSF 中的 `h:dataTable` 标签是做什么的？
+- 56: JSF 中 `h:dataTable` 标签的主体包含哪些标签？
+- 57: JSF 中 `h:dataTable` 的 `dir` 属性是做什么的？
+- 58: JSF 中 `h:dataTable` 的 `frame` 属性是做什么的？
+- 59: JSF 中 `h:dataTable` 的 `row` 属性是做什么的？
+- 60: JSF 中的 `h:dataTable` 有什么 `styles` 属性？
+- 61: JSF 中的 `ui:repeat` 标签是做什么的？
 
 ## 转换与验证
 
-- 62: JSF 中的 Request Value（请求值）是什么？
-- 63: JSF 中的 f:convertNumber 标签是做什么的？
-- 64: 当 JSF 发生 Conversion Error（转换错误）时会发生什么？
+- 62: JSF 中的 `Request Value`（请求值）是什么？
+- 63: JSF 中的 `f:convertNumber` 标签是做什么的？
+- 64: 当 JSF 发生 `Conversion Error`（转换错误）时会发生什么？
 - 65: 如何在 JSF 中显示错误消息？
-- 66: JSF 转换器（除 DateTimeConverter 和 NumberConverter 之外）是如何工作的？
-- 67: JSF 中的 ConvertDate 标签是做什么的？
-- 68: JSF 中的 dateStyle 属性的作用是什么？
-- 69: JSF 中的 Locale Attribute（区域语言属性）的作用是什么？
-- 70: JSF 中的 Pattern Attribute（模式属性）的作用是什么？
-- 71: JSF 中的 timeStyle Attribute 作用是什么？
-- 72: JSF 中的 Type Attribute（类型属性）的作用是什么？
-- 73: JSF 中的 NumberConverter 标签是做什么的？
-- 74: 如何在 JSF 的组件上注册 Listener（监听器）？
-- 75: 如何在 JSF 中调用 backing Bean 方法？
-- 76: 如何在 JSF 组件上注册 value-change listener（值改变监听器）？
-- 78: JSF 中 DoubleRange 类的目的是什么？
-- 79: JSF 中的 JSRange 类是做什么的？
-- 80: JSF 中的 LongRange 类是做什么的？
+- 66: JSF 转换器（除 `DateTimeConverter` 和 `NumberConverter` 之外）是如何工作的？
+- 67: JSF 中的 `ConvertDate` 标签是做什么的？
+- 68: JSF 中的 `dateStyle` 属性的作用是什么？
+- 69: JSF 中的 `Locale Attribute`（区域语言属性）的作用是什么？
+- 70: JSF 中的 `Pattern Attribute`（模式属性）的作用是什么？
+- 71: JSF 中的 `timeStyle Attribute` 作用是什么？
+- 72: JSF 中的 `Type Attribute`（类型属性）的作用是什么？
+- 73: JSF 中的 `NumberConverter` 标签是做什么的？
+- 74: 如何在 JSF 的组件上注册 `Listener`（监听器）？
+- 75: 如何在 JSF 中调用 `backing Bean` 方法？
+- 76: 如何在 JSF 组件上注册 `value-change listener`（值改变监听器）？
+- 78: JSF 中 `DoubleRange` 类的目的是什么？
+- 79: JSF 中的 `JSRange` 类是做什么的？
+- 80: JSF 中的 `LongRange` 类是做什么的？
 - 81: 如何在 JSF 中绑定组件？
 - 82: 如何在 JSF 中绑定 Bean？
 - 83: JSF 中的绑定 Bean 是做什么的？
@@ -1799,10 +1732,10 @@ JSF 具有高度的可扩展性，对框架开发者非常有吸引力。他们�
 
 - 92: JSF 支持哪些类型的事件？
 - 93: JSF 监听器是如何工作的？
-- 94: JSF 中的 Value Change 事件是做什么的？
+- 94: JSF 中的 `Value Change` 事件是做什么的？
 - 95: 如何在 JSF 中处理 action？
-- 96: 在 JSF 中使用 f:param？
-- 97: 在 JSF 中使用 f:attribute？
+- 96: 在 JSF 中使用 `f:param`？
+- 97: 在 JSF 中使用 `f:attribute`？
 - 98: JSF 中的阶段是做什么的？
 - 99: JSF 如何注册监听器？
 
@@ -1828,214 +1761,210 @@ JSF 具有高度的可扩展性，对框架开发者非常有吸引力。他们�
 - 114: 如何在 JSF 中处理 AJAX？
 - 115: AJAX 请求与 HTTP 请求有何区别？
 
-
-
-
-
 # 你可能会被问到的 JavaServer Faces 面试题
 
 - 148: JSF 中的 `String getClientID(FacesContext context)` 方法的作用是什么什么？
 - 149: JSF 中的 `Map<String, Object> Attributes` 方法是什么什么？
-- 150: JSF 中的 `ResponseWriter getResponseWriter()` 方法的作用是什么什么？
-- 151: JSF 中的 `void startElement(String elementName, UIComponent component)` 方法的作用是什么什么？
-- 152: JSF 中的 `void writeAttribute(String attributeName, attributeValue, String componentProperty)` 方法的作用是什么什么？
-- 153: JSF 中的 `void decode(FacesContext context)` 方法的作用是什么什么？
-- 154: JSF 中的 `ExternalContext getOperationContext()` 方法的作用是什么什么？
-- 155: JSF 中的 `Map getRequestParameterMap()` 方法的作用是什么什么？
-- 156: JSF 中的 `void setSubmittedValue(Object submittedValue)` 方法的作用是什么什么？
-- 157: JSF 中的 `getRendersChildren` 方法的作用是什么什么？
-- 158: JSF 中的 `convertClientId` 方法的作用是什么什么？
-- 159: JSF 中的 `getConvertedValue` 方法的作用是什么什么？
-- 160: JSF 中的 `Converter createConverter(Class target)` 方法的作用是什么什么？
-- 161: JSF 中的 `UIComponent getFacet(String facetName)` 方法的作用是什么什么？
-- 162: JSF 中的 `boolean getRendersChildren()` 方法的作用是什么什么？
-- 163: JSF 中的 `boolean isRendered()` 方法的作用是什么什么？
-- 164: JSF 中的 `void restoreState(FacesContext context, Object state)` 方法的作用是什么什么？
-- 165: AJAX 功能是如何适配到自定义组件的？
-- 166: 什么是标签处理器（Tag Handler），它在 JSF 中起什么作用？
-- 167: JSF 中的 `String remoteUser(String role)` 方法的作用是什么什么？
-- 168: JSF 中的 `Boolean isLoggedInInRole(String role)` 方法的作用是什么什么？
+
+
+
+# JSF 面试题
+
+## 核心 API 方法
+
+- **150**: JSF 中的 `ResponseWriter getResponseWriter()` 方法的作用是什么？
+- **151**: JSF 中的 `void startElement(String elementName, UIComponent component)` 方法的作用是什么？
+- **152**: JSF 中的 `void writeAttribute(String attributeName, attributeValue, String componentProperty)` 方法的作用是什么？
+- **153**: JSF 中的 `void decode(FacesContext context)` 方法的作用是什么？
+- **154**: JSF 中的 `ExternalContext getOperationContext()` 方法的作用是什么？
+- **155**: JSF 中的 `Map getRequestParameterMap()` 方法的作用是什么？
+- **156**: JSF 中的 `void setSubmittedValue(Object submittedValue)` 方法的作用是什么？
+- **157**: JSF 中的 `getRendersChildren` 方法的作用是什么？
+- **158**: JSF 中的 `convertClientId` 方法的作用是什么？
+- **159**: JSF 中的 `getConvertedValue` 方法的作用是什么？
+- **160**: JSF 中的 `Converter createConverter(Class target)` 方法的作用是什么？
+- **161**: JSF 中的 `UIComponent getFacet(String facetName)` 方法的作用是什么？
+- **162**: JSF 中的 `boolean getRendersChildren()` 方法的作用是什么？
+- **163**: JSF 中的 `boolean isRendered()` 方法的作用是什么？
+- **164**: JSF 中的 `void restoreState(FacesContext context, Object state)` 方法的作用是什么？
+- **165**: AJAX 功能是如何适配到自定义组件的？
+- **166**: 什么是标签处理器（Tag Handler），它在 JSF 中起什么作用？
+- **167**: JSF 中的 `String remoteUser(String role)` 方法的作用是什么？
+- **168**: JSF 中的 `Boolean isLoggedInInRole(String role)` 方法的作用是什么？
 
 ## 如何做？
 
-- 169: 在 JSF 中如何上传文件？
-- 170: JSF 中的上传组件（Upload Component）支持多少个属性？
-- 171: JSF 中上传组件的解码方法（Decode Method）的作用是什么什么？
-- 172: 在 JSF 中如何显示图像映射（Image Map）？
-- 173: 在 JSF 中如何产生二进制数据？
-- 174: 如何不使用 servlet 在 JSF 中生成二进制数据？
+- **169**: 在 JSF 中如何上传文件？
+- **170**: JSF 中的上传组件（Upload Component）支持多少个属性？
+- **171**: JSF 中上传组件的解码方法（Decode Method）的作用是什么？
+- **172**: 在 JSF 中如何显示图像映射（Image Map）？
+- **173**: 在 JSF 中如何产生二进制数据？
+- **174**: 如何不使用 servlet 在 JSF 中生成二进制数据？
 
 ## 你最可能被问到的 JavaServer Faces 面试题
 
-- 175: JSF 中的过滤器动作（Filter Action）是在什么时候发生的？
-- 176: JSF 中的什么是分页器（Pager）？
-- 177: JSF 中的编码方法（Encode Method）的作用是什么什么？
-- 178: 在 JSF 中如何生成弹出窗口？
-- 179: JSF 中的 `doPopup` 函数的作用是什么什么？
-- 180: 在 JSF 中如何显示或隐藏页面的部分？
-- 181: JSF 中的 `getErrorMessage` 方法是用于什么的？
-- 182: JSF 中的 `findValidators` 方法的作用是什么什么？
-- 183: 在 JSF 中如何配置应用程序？
-- 184: 如何扩展 JSF 表达式语言？
-- 185: 如何向 JSF 表达式语言中添加函数？
-- 186: 如何监控浏览器和服务器之间的流量？
-- 187: 在 JSF 中如何对页面调试？
-- 188: 在开发 JSF 时何时何时测试工具？
-- 189: 如何在 JSF 中使用 Scala？
-- 190: 如何在 JSF 中使用 Groovy？
-- 191: 最常见的 Outcome字符串（Outcome Strings）是哪些，它们代表什么？
-- 192: JavaFaces 应用程序的部署描述应该包含什么？
-- 193: 如何开启 XML 文件的验证？
-- 194: JSF 应用程序正常运行需要哪些必要的 JAR 文件？
-- 195: 字符集（character set）代表什么？
-- 196: 哪些可以接入 JSF 的尖端开源软件？
-- 197: 如何为你的 JSF 应用寻找更多组件？
-- 198: 如何自定义错误页面？
-- 199: 如何测试 JSF 应用？
-- 200: JSF 中的请求编码（Request Encoding）的作用是什么什么？
+- **175**: JSF 中的过滤器动作（Filter Action）是在什么时候发生的？
+- **176**: JSF 中的什么是分页器（Pager）？
+- **177**: JSF 中的编码方法（Encode Method）的作用是什么？
+- **178**: 在 JSF 中如何生成弹出窗口？
+- **179**: JSF 中的 `doPopup` 函数的作用是什么？
+- **180**: 在 JSF 中如何显示或隐藏页面的部分？
+- **181**: JSF 中的 `getErrorMessage` 方法是用于什么的？
+- **182**: JSF 中的 `findValidators` 方法的作用是什么？
+- **183**: 在 JSF 中如何配置应用程序？
+- **184**: 如何扩展 JSF 表达式语言？
+- **185**: 如何向 JSF 表达式语言中添加函数？
+- **186**: 如何监控浏览器和服务器之间的流量？
+- **187**: 在 JSF 中如何对页面调试？
+- **188**: 在开发 JSF 时何时何时测试工具？
+- **189**: 如何在 JSF 中使用 Scala？
+- **190**: 如何在 JSF 中使用 Groovy？
+- **191**: 最常见的 Outcome字符串（Outcome Strings）是哪些，它们代表什么？
+- **192**: JavaFaces 应用程序的部署描述应该包含什么？
+- **193**: 如何开启 XML 文件的验证？
+- **194**: JSF 应用程序正常运行需要哪些必要的 JAR 文件？
+- **195**: 字符集（character set）代表什么？
+- **196**: 哪些可以接入 JSF 的尖端开源软件？
+- **197**: 如何为你的 JSF 应用寻找更多组件？
+- **198**: 如何自定义错误页面？
+- **199**: 如何测试 JSF 应用？
+- **200**: JSF 中的请求编码（Request Encoding）的作用是什么？
 
-## 人力问题
+# 人力问题
 
-- 1: 你会如何处理一个负面的同事？
-- 2: 如果你目睹同事在上网、看书、浪费时间，你会做什么？
-- 3: 你如何处理与自己之间的竞争？
-- 4: 在什么情况下和同事社交是合适的？
-- 5: 请告诉关于你上一份工作中发生重大改变的经历，以及你是如何处理的。
-- 6: 在委派任务时，你如何选择哪些任务分配给哪些成员？
-- 7: 请讲述一次你必须向上司维护你坚信认为的事情的经历。
-- 8: 请讲述一次你帮助他人完成工作的经历，即使那不是你的工作。
-- 9: 团队工作的挑战是什么？你如何处理这些？
-- 10: 你看重职场的多样性吗？
-- 11: 你如何处理同事不接受某人的决定的情况？
-- 12: 团队工作还是独立完成任务能让你获得奖励？
-- 13: 请讲述一次你为了完成项目而额外加班的经历。
-- 14: 请讲述一次你的表现超出职责范围的经历。
-- 15: 你的工作态度是什么？
-- 16: 你在家里工作吗？
-- 17: 描述一个典型的工作日。
-- 18: 请讲述一次你为了上一份工作额外付出的努力。
-- 19: 你愿意接受对你表现的反馈和批评并调整吗？
-- 20: 是什么激励了你？
-- 21: 你如何激励他人？
-- 22: 对你来说最难的决策是什么？
-- 23: 在做决策时，你如何收集信息？
-- 24: 请讲述一次你做得不好的决策。
-- 25: 你能快速决策吗？
-- 26: 什么是客户服务？
-- 27: 请讲述一次你为客户额外付出的努力。
-- 28: 你如何从客户那里获得信任？
-- 29: 请讲述一次客户不高兴的情况——你是如何处理的？
-- 31: 你能为客户破例吗？
-- 32: 当客户和你的老板都需要你时，你会做什么？
-- 33: 客户服务最重要的方面是什么什么？
-- 34: 为客户建立低预期还是高预期更好？
-- 35: 公司做广告最好的方式是什么？
-- 36: 留住老客户还是获取新客户更好？
-- 37: 从竞争对手手中赢赢得客户的最佳方式是什么？
-- 39: 你对我们公司的印象是什么？
-- 40: 谈谈你的业务哲学。
-- 41: 销售、客户服务、营销等业务模式中最重要的是什么？
-- 42: 你如何关注行业新闻和新兴趋势？
-- 43: 你会遵守公司政策吗？
-- 44: 请讲述今天行业面临的最大问题之一。
-- 45: 你在工作中最喜欢的部分是什么？
-- 47: 你认为未来 10 年你的职业会发生什么变化？
-- 48: 你从哪里寻找灵感？
-- 49: 你如何在职场中实现创意？
-- 50: 你如何推动他人创造创意？
-- 51: 描述你的创造力。
+- **1**: 你会如何处理一个负面的同事？
+- **2**: 如果你目睹同事在上网、看书、浪费时间，你会做什么？
+- **3**: 你如何处理与自己之间的竞争？
+- **4**: 在什么情况下和同事社交是合适的？
+- **5**: 请告诉关于你上一份工作中发生重大改变的经历，以及你是如何处理的。
+- **6**: 在委派任务时，你如何选择哪些任务分配给哪些成员？
+- **7**: 请讲述一次你必须向上司维护你坚信认为的事情的经历。
+- **8**: 请讲述一次你帮助他人完成工作的经历，即使那不是你的工作。
+- **9**: 团队工作的挑战是什么？你如何处理这些？
+- **10**: 你看重职场的多样性吗？
+- **11**: 你如何处理同事不接受某人的决定的情况？
+- **12**: 团队工作还是独立完成任务能让你获得奖励？
+- **13**: 请讲述一次你为了完成项目而额外加班的经历。
+- **14**: 请讲述一次你的表现超出职责范围的经历。
+- **15**: 你的工作态度是什么？
+- **16**: 你在家里工作吗？
+- **17**: 描述一个典型的工作日。
+- **18**: 请讲述一次你为了上一份工作额外付出的努力。
+- **19**: 你愿意接受对你表现的反馈和批评并调整吗？
+- **20**: 是什么激励了你？
+- **21**: 你如何激励他人？
+- **22**: 对你来说最难的决策是什么？
+- **23**: 在做决策时，你如何收集信息？
+- **24**: 请讲述一次你做得不好的决策。
+- **25**: 你能快速决策吗？
+- **26**: 什么是客户服务？
+- **27**: 请讲述一次你为客户额外付出的努力。
+- **28**: 你如何从客户那里获得信任？
+- **29**: 请讲述一次客户不高兴的情况——你是如何处理的？
+- **31**: 你能为客户破例吗？
+- **32**: 当客户和你的老板都需要你时，你会做什么？
+- **33**: 客户服务最重要的方面是什么？
+- **34**: 为客户建立低预期还是高预期更好？
+- **35**: 公司做广告最好的方式是什么？
+- **36**: 留住老客户还是获取新客户更好？
+- **37**: 从竞争对手手中赢赢得客户的最佳方式是什么？
+- **39**: 你对我们公司的印象是什么？
+- **40**: 谈谈你的业务哲学。
+- **41**: 销售、客户服务、营销等业务模式中最重要的是什么？
+- **42**: 你如何关注行业新闻和新兴趋势？
+- **43**: 你会遵守公司政策吗？
+- **44**: 请讲述今天行业面临的最大问题之一。
+- **45**: 你在工作中最喜欢的部分是什么？
+- **47**: 你认为未来 10 年你的职业会发生什么变化？
+- **48**: 你从哪里寻找灵感？
+- **49**: 你如何在职场中实现创意？
+- **50**: 你如何推动他人创造创意？
+- **51**: 描述你的创造力。
 
-## 以下标题可能也有用：
+# 以下标题可能也有用
 
-- 1. 你可能会被问到的 .NET 面试题
-- 2. 200 道你可能会被问到的面试
-- 3. Access VBA 编程面试题
-- 4. Adobe ColdFusion 面试题
-- 5. 高级 Excel 面试题
-- 6. 高级 JAVA 面试题
-- 7. 高级 SAS 面试题
-- 8. AJAX 面试题
-- 9. 算法面试题
-- 10. Android 开发面试题
-- 11. Ant & Maven 面试题
-- 12. Apache Web Server 面试题
-- 13. 人工智能面试题
-- 14. ASP.NET 面试题
-- 15. 自动化软件测试面试题
-- 16. Base SAS 面试题
-- 17. BEA WebLogic 服务面试题
-- 18. C & C++ 面试题
-- 19. C# (C Sharp) 面试题
-- 20. C++ 内部面试题
-- 21. CCNA 面试题
-- 22. 云计算面试题
-- 23. 计算机架构面试题
-- 24. 计算机网络面试题
-- 25. 核心 JAVA 面试题
-- 26. 数据结构与算法面试题
-- 27. 数据仓库面试题
-- 28. EJB 3.0 面试题
-- 29. Entity Framework 面试题
-- 30. Fedora & RHEL 面试题
-- 31. GNU 开发面试题
-- 32. Hibernate, Spring & Spring 面试题
-- 33. HTML, XML 和 JavaScript 面试题
-- 34. HTML5 面试题
-- 35. IBM WebSphere 服务器面试题
-- 36. iOS SDK 面试题
-- 37. Java / JEE 设计模式面试题
-- 38. Java / JEE 面试题
-- 39. Java消息服务面试题
-- 40. JavaScript 面试题
-- 41. JavaServer Faces 面试题
-- 42. PHP 面试题
-- 43. JQuery 面试题
-- 44. JSP-Servlet 面试题
-- 45. 单元测试面试题
-- 46. Linux 命令面试题
-- 47. Linux 面试题
-- 48. Linux 系统管理员面试题
-- 49. Mac OS X Lion 面试题
-- 50. Mac OS X Snow Leopard 面试题
+1. 你可能会被问到的 .NET 面试题
+2. 200 道你可能会被问到的面试
+3. Access VBA 编程面试题
+4. Adobe ColdFusion 面试题
+5. 高级 Excel 面试题
+6. 高级 JAVA 面试题
+7. 高级 SAS 面试题
+8. AJAX 面试题
+9. 算法面试题
+10. Android 开发面试题
+11. Ant & Maven 面试题
+12. Apache Web Server 面试题
+13. 人工智能面试题
+14. ASP.NET 面试题
+15. 自动化软件测试面试题
+16. Base SAS 面试题
+17. BEA WebLogic 服务面试题
+18. C & C++ 面试题
+19. C# (C Sharp) 面试题
+20. C++ 内部面试题
+21. CCNA 面试题
+22. 云计算面试题
+23. 计算机架构面试题
+24. 计算机网络面试题
+25. 核心 JAVA 面试题
+26. 数据结构与算法面试题
+27. 数据仓库面试题
+28. EJB 3.0 面试题
+29. Entity Framework 面试题
+30. Fedora & RHEL 面试题
+31. GNU 开发面试题
+32. Hibernate, Spring & Spring 面试题
+33. HTML, XML 和 JavaScript 面试题
+34. HTML5 面试题
+35. IBM WebSphere 服务器面试题
+36. iOS SDK 面试题
+37. Java / JEE 设计模式面试题
+38. Java / JEE 面试题
+39. Java消息服务面试题
+40. JavaScript 面试题
+41. JavaServer Faces 面试题
+42. PHP 面试题
+43. JQuery 面试题
+44. JSP-Servlet 面试题
+45. 单元测试面试题
+46. Linux 命令面试题
+47. Linux 面试题
+48. Linux 系统管理员面试题
+49. Mac OS X Lion 面试题
+50. Mac OS X Snow Leopard 面试题
 
+# 你最可能被问到的面试题系列
 
+- **56**: 你最可能被问到的 NetSuite 面试题
+- **57**: 你最可能被问到的网络面试题
+- **58**: 你最可能被问到的 OOPS（面向对象编程）面试题
+- **59**: 你最可能被问到的操作系统面试题
+- **60**: 你最可能被问到的 Oracle DBA 面试题
+- **61**: 你最可能被问到的 Oracle E-Business 面试题
+- **62**: 你最可能被问到的 ORACLE PL/SQL 面试题
+- **63**: 你最可能被问到的 Perl 编程面试题
+- **64**: 你最可能被问到的 PHP 面试题
+- **65**: 你最可能被问到的 MMP 面试题
+- **66**: 你最可能被问到的 Python 面试题
+- **67**: 你最可能被问到的 RESTFUL Java Web Services 面试题
+- **68**: 你最可能被问到的 Ruby 面试题
+- **69**: 你最可能被问到的 Rails 面试题
+- **70**: 你最可能被问到的 SAP ABAP 面试题
+- **71**: 你最可能被问到的 SAP HANA 编程指南面试题
+- **72**: 你最可能被问到的 SAS 统计面试题
+- **73**: 你最可能被问到的 Selenium 测试工具面试题
+- **74**: 你最可能被问到的 Silverlight 面试题
+- **75**: 你最可能被问到的软件存储库面试题
+- **76**: 你最可能被问到的软件测试面试题
+- **77**: 你最可能被问到的 SQL Server 面试题
+- **78**: 你最可能被问到的 Tomcat 面试题
+- **79**: 你最可能被问到的 Unity 面试题
+- **80**: 你最可能被问到的 Unix 面试题
+- **81**: 你最可能被问到的 UNIX Shell 编程面试题
+- **82**: 你最可能被问到的 VB.NET 面试题
+- **83**: 你最可能被问到的 Windows Server 2008 R2 面试题
+- **84**: 你最可能被问到的 XLXP, XSLT, XPath, XFORMS & XQuery 面试题
+- **85**: 你最可能被问到的 XML 面试题
 
-
-
-# 你最可能被到的 JavaServer Faces 面题
-
-- 56. 你最可能被到的 NetSuite 面题
-- 57. 你最可能被到的网络面试题
-- 58. 你最可能被到的 OOPS（面向对象编程）面试题
-- 59. 你最可能被到的操作系统面试题
-- 60. 你最可能被到的 Oracle DBA 面题
-- 61. 你最可能被到的 Oracle E-Business 面题
-- 62. 你最可能被到的 ORACLE PL/SQL 面题
-- 63. 你最可能被到的 Perl 编程面试题
-- 64. 你最可能被到的 PHP 面题
-- 65. 你最可能被到的 MMP 面题
-- 66. 你最可能被到的 Python 面题
-- 67. 你最可能被到的 RESTFUL Java Web Services面试题
-- 68. 你最可能被到的 Ruby 面题
-- 69. 你最可能被到的 Rails 面题
-- 70. 你最可能被到的 SAP ABAP 面题
-- 71. 你最可能被到的 SAP HANA 编程指南面试题
-- 72. 你最可能被到的 SAS 统计面试题
-- 73. 你最可能被到的 Selenium 测试工具面试题
-- 74. 你最可能被到的 Silverlight 面题
-- 75. 你最可能被到的软件存储库面试题
-- 76. 你最可能被到的软件测试面试题
-- 77. 你最可能被到的 SQL Server 面题
-- 78. 你最可能被到的 Tomcat 面题
-- 79. 你最可能被到的 Unity 面题
-- 80. 你最可能被到的 Unix 面题
-- 81. 你最可能被到的 UNIX Shell 编程面试题
-- 82. 你最可能被到的 VB.NET 面题
-- 83. 你最可能被到的 Windows Server 2008 R2 面题
-- 84. 你最可能被到的 XLXP, XSLT, XPath, XFORMS & XQuery 面题
-- 85. 你最可能被到的 XML 面题
-
-访问以下网址查看完整列表
-
-www.vibrantpublishers.com
-
+访问以下网址查看完整列表：`www.vibrantpublishers.com`

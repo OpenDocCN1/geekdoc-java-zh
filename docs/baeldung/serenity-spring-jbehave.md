@@ -1,18 +1,20 @@
+
+
 # Serenity BDD 与 Spring 和 JBehave
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/serenity-spring-jbehave>
 
-## 1。简介
+## 1. 简介
 
 之前，我们已经[介绍了 Serenity BDD 框架](/web/20220626204235/https://www.baeldung.com/serenity-bdd)。
 
 在本文中，我们将介绍如何将 Serenity BDD 与 Spring 集成。
 
-## 2。Maven 依赖关系
+## 2. Maven 依赖关系
 
-为了在我们的 Spring 项目中启用 Serenity，我们需要将`[serenity-core](https://web.archive.org/web/20220626204235/https://search.maven.org/classic/#artifactdetails%7Cnet.serenity-bdd%7Cserenity-core%7C1.4.0%7Cjar)`和`[serenity-spring](https://web.archive.org/web/20220626204235/https://search.maven.org/classic/#artifactdetails%7Cnet.serenity-bdd%7Cserenity-spring%7C1.4.0%7Cjar)`添加到`pom.xml`中:
+为了在我们的 Spring 项目中启用 Serenity，我们需要将`serenity-core`和`serenity-spring`添加到`pom.xml`中：
 
-```java
+```xml
 <dependency>
     <groupId>net.serenity-bdd</groupId>
     <artifactId>serenity-core</artifactId>
@@ -27,9 +29,9 @@
 </dependency>
 ```
 
-我们还需要配置 [`serenity-maven-plugin`](https://web.archive.org/web/20220626204235/https://search.maven.org/classic/#artifactdetails%7Cnet.serenity-bdd.maven.plugins%7Cserenity-maven-plugin%7C1.4.0%7Cjar) ，这对生成 Serenity 测试报告很重要:
+我们还需要配置`serenity-maven-plugin`，这对生成 Serenity 测试报告很重要：
 
-```java
+```xml
 <plugin>
     <groupId>net.serenity-bdd.maven.plugins</groupId>
     <artifactId>serenity-maven-plugin</artifactId>
@@ -46,27 +48,27 @@
 </plugin>
 ```
 
-## 3。弹簧集成
+## 3. Spring 集成
 
-春季综合测试需要`@RunWith` [`SpringJUnit4ClassRunner`](https://web.archive.org/web/20220626204235/https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/test/context/junit4/SpringJUnit4ClassRunner.html) 。但是我们不能直接用 Serenity 运行测试程序，因为 Serenity 测试需要由`SerenityRunner`运行。
+Spring 集成测试需要`@RunWith`和`SpringJUnit4ClassRunner`。但是我们不能直接用 Serenity 运行测试程序，因为 Serenity 测试需要由`SerenityRunner`运行。
 
 对于 Serenity 测试，我们可以使用`SpringIntegrationMethodRule`和`SpringIntegrationClassRule`来启用注入。
 
-我们将基于一个简单的场景进行测试:给定一个数字，当添加另一个数字时，返回总和。
+我们将基于一个简单的场景进行测试：给定一个数字，当添加另一个数字时，返回总和。
 
-### 3.1。`SpringIntegrationMethodRule`
+### 3.1. `SpringIntegrationMethodRule`
 
-`SpringIntegrationMethodRule`是一种 [`MethodRule`](https://web.archive.org/web/20220626204235/http://junit.org/junit4/javadoc/4.12/org/junit/rules/MethodRule.html) 应用于测试的方法。Spring 上下文将在`@Before`之前和`@BeforeClass`之后构建。
+`SpringIntegrationMethodRule`是一种`MethodRule`，应用于测试的方法。Spring 上下文将在`@Before`之前和`@BeforeClass`之后构建。
 
-假设我们有一个属性要注入到 beans 中:
+假设我们有一个属性要注入到 beans 中：
 
-```java
+```xml
 <util:properties id="props">
     <prop key="adder">4</prop>
 </util:properties>
 ```
 
-现在让我们添加`SpringIntegrationMethodRule`来在我们的测试中启用值注入:
+现在让我们添加`SpringIntegrationMethodRule`来在我们的测试中启用值注入：
 
 ```java
 @RunWith(SerenityRunner.class)
@@ -92,7 +94,7 @@ public class AdderMethodRuleIntegrationTest {
 }
 ```
 
-它还支持`spring test`的方法级注释。如果某些测试方法弄脏了测试上下文，我们可以在上面标记 [`@DirtiesContext`](https://web.archive.org/web/20220626204235/https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/test/annotation/DirtiesContext.html) :
+它还支持`spring test`的方法级注释。如果某些测试方法弄脏了测试上下文，我们可以在上面标记`@DirtiesContext`：
 
 ```java
 @RunWith(SerenityRunner.class)
@@ -124,7 +126,7 @@ public class AdderMethodDirtiesContextIntegrationTest {
 }
 ```
 
-在上面的例子中，当我们调用`adderServiceSteps.whenAccumulate()`时，`adderServiceSteps`中注入的`@Service`的基数字段将会改变:
+在上面的例子中，当我们调用`adderServiceSteps.whenAccumulate()`时，`adderServiceSteps`中注入的`@Service`的基数字段将会改变：
 
 ```java
 @ContextConfiguration(classes = AdderService.class)
@@ -162,7 +164,7 @@ public class AdderServiceSteps {
 }
 ```
 
-具体来说，我们将总和分配给基数:
+具体来说，我们将总和分配给基数：
 
 ```java
 @Service
@@ -190,11 +192,11 @@ public class AdderService {
 
 在第一个测试`_0_givenNumber_whenAddAndAccumulate_thenSummedUp`中，基数被改变，使得上下文变脏。当我们试图加另一个数时，我们得不到预期的和。
 
-注意，即使我们用`@DirtiesContext`标记了第一个测试，第二个测试仍然受到影响:相加后，总和仍然是错误的。为什么？
+注意，即使我们用`@DirtiesContext`标记了第一个测试，第二个测试仍然受到影响：相加后，总和仍然是错误的。为什么？
 
 现在，在处理方法级别`@DirtiesContext`时，Serenity 的 Spring 集成只为当前测试实例重建测试上下文。将不会重建`@Steps`中的底层依赖上下文。
 
-为了解决这个问题，我们可以在当前的测试实例中注入`@Service`，并使服务成为`@Steps`的显式依赖:
+为了解决这个问题，我们可以在当前的测试实例中注入`@Service`，并使服务成为`@Steps`的显式依赖：
 
 ```java
 @RunWith(SerenityRunner.class)
@@ -247,9 +249,9 @@ public class AdderMethodDirtiesContextInitWorkaroundIntegrationTest {
 }
 ```
 
-### 3.2。`SpringIntegrationClassRule`
+### 3.2. `SpringIntegrationClassRule`
 
-要启用类级注释，我们应该使用`SpringIntegrationClassRule`。假设我们有以下测试类:每一个都污染了环境:
+要启用类级注释，我们应该使用`SpringIntegrationClassRule`。假设我们有以下测试类：每一个都污染了环境：
 
 ```java
 @RunWith(SerenityRunner.class)
@@ -291,6 +293,9 @@ public static class DirtiesContextIntegrationTest extends Base {
 }
 ```
 
+
+
+
 ```java
 @DirtiesContext(classMode = AFTER_CLASS)
 public static class AnotherDirtiesContextIntegrationTest extends Base {
@@ -307,7 +312,7 @@ public static class AnotherDirtiesContextIntegrationTest extends Base {
 
 在这个例子中，将为类级别`@DirtiesContext`重建所有隐式注入。
 
-### 3.3。`SpringIntegrationSerenityRunner`
+### 3.3 `SpringIntegrationSerenityRunner`
 
 有一个方便的类`SpringIntegrationSerenityRunner`可以自动添加上面的两个集成规则。我们可以用这个运行器运行上面的测试，以避免在我们的测试中指定方法或类测试规则:
 
@@ -329,15 +334,15 @@ public class AdderSpringSerenityRunnerIntegrationTest {
 }
 ```
 
-## 4。SpringMVC 集成
+## 4 Spring MVC 集成
 
 如果我们只需要用 Serenity 测试 SpringMVC 组件，我们可以简单地使用[放心](/web/20220626204235/https://www.baeldung.com/rest-assured-tutorial)中的`RestAssuredMockMvc`来代替`serenity-spring`集成。
 
-### 4.1。Maven 依赖关系
+### 4.1 Maven 依赖
 
 我们需要将[放心的 spring-mock-mvc](https://web.archive.org/web/20220626204235/https://search.maven.org/classic/#artifactdetails%7Cio.rest-assured%7Cspring-mock-mvc%7C3.0.3%7Cjar) 依赖添加到`pom.xml`中:
 
-```java
+```xml
 <dependency>
     <groupId>io.rest-assured</groupId>
     <artifactId>spring-mock-mvc</artifactId>
@@ -346,7 +351,7 @@ public class AdderSpringSerenityRunnerIntegrationTest {
 </dependency>
 ```
 
-### 4.2。`RestAssuredMockMvc`在行动中
+### 4.2 `RestAssuredMockMvc` 在行动中
 
 现在让我们测试以下控制器:
 
@@ -428,11 +433,11 @@ public class AdderRestSteps {
 }
 ```
 
-## 5。Serenity、JBehave 和 Spring
+## 5 Serenity、JBehave 和 Spring
 
 Serenity 的 Spring 集成支持与 [JBehave](/web/20220626204235/https://www.baeldung.com/jbehave-rest-testing) 无缝协作。让我们将测试场景写成一个 JBehave 故事:
 
-```java
+```text
 Scenario: A user can submit a number to adder and get the sum
 Given a number
 When I submit another number 5 to adder
@@ -504,7 +509,7 @@ public class AdderStory {
 
 我们只能用`@ContextConfiguration`标记`SerenityStory`，然后自动启用弹簧注射。这与`@Steps`上的`@ContextConfiguration`工作原理完全相同。
 
-## 6。总结
+## 6 总结
 
 在本文中，我们介绍了如何将 Serenity BDD 与 Spring 集成。集成并不完美，但肯定会实现的。
 

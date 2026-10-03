@@ -1,14 +1,15 @@
+
 # 查找未使用的梯度相关性
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/gradle-finding-unused-dependencies>
 
-## 1.概观
+## 1. 概观
 
 有时在开发过程中，我们可能最终添加了比我们使用的更多的依赖项。
 
 在这个快速教程中，我们将看到如何使用 Gradle [Nebula Lint](https://web.archive.org/web/20221126233016/https://github.com/nebula-plugins/gradle-lint-plugin) 插件来识别和修复这样的问题。
 
-## 2.设置和配置
+## 2. 设置和配置
 
 在我们的示例中，我们使用多模块 Gradle 5 设置。
 
@@ -66,7 +67,7 @@ public class UnusedDependencies {
 
 稍后我们将在此基础上构建，看看插件是如何工作的。
 
-## 3.检测场景和报告
+## 3. 检测场景和报告
 
 该插件搜索输出 jar 来检测是否使用了依赖关系。
 
@@ -74,7 +75,7 @@ public class UnusedDependencies {
 
 我们将在接下来的部分探索更有趣的案例。
 
-### 3.1.未使用的依赖项
+### 3.1. 未使用的依赖项
 
 现在我们有了自己的设置，让我们看看基本的用例。我们对未使用的依赖感兴趣。
 
@@ -96,9 +97,9 @@ To apply fixes automatically, run fixGradleLint, review, and commit the changes.
 # some more failure output 
 ```
 
-让我们看看发生了什么。在我们的`compileClasspath`配置中有一个未使用的依赖项(`guava`)。
+让我们看看发生了什么。在我们的`compileClasspath`配置中有一个未使用的依赖项（`guava`）。
 
-如果我们**像插件建议的那样运行`fixGradleLint`任务**,**的依赖性会自动从我们的`build.gradle`** 中移除。
+如果我们**像插件建议的那样运行`fixGradleLint`任务**，**的依赖性会自动从我们的`build.gradle`** 中移除。
 
 然而，让我们对我们的依赖关系使用一些虚拟逻辑:
 
@@ -123,7 +124,7 @@ BUILD SUCCESSFUL in 559ms
 3 actionable tasks: 1 executed, 2 up-to-date
 ```
 
-### 3.2.使用传递依赖关系
+### 3.2. 使用传递依赖关系
 
 现在让我们加入另一个依赖项:
 
@@ -172,7 +173,7 @@ implementation('org.apache.httpcomponents:httpclient:4.5.12')
 
 我们示例中的`SSLContextBuilder` 实际上是它的一部分。
 
-第二个错误说我们没有使用来自`httpclient.`的任何东西
+第二个错误说我们没有使用来自`httpclient`的任何东西。
 
 如果我们使用一个可传递的依赖关系，插件告诉我们把它变成一个直接的依赖关系。
 
@@ -203,7 +204,7 @@ compileClasspath - Compile classpath for source set 'main'.
 
 在这种情况下，我们可以看到`httpcore` 是由`httpclient`带入的。
 
-### 3.3.在反射中使用依赖关系
+### 3.3. 在反射中使用依赖关系
 
 当我们使用反射时呢？
 
@@ -248,7 +249,7 @@ implementation('org.apache.httpcomponents:httpclient:4.5.12')
 ✖ 2 problems (0 errors, 2 warnings) 
 ```
 
-发生了什么事？我们使用了依赖关系`(httpclient)`中的`HttpClientBuilder`,但仍然出错。
+发生了什么事？我们使用了依赖关系（`httpclient`）中的`HttpClientBuilder`，但仍然出错。
 
 如果我们使用一个带反射的库，插件不会检测它的用法。
 
@@ -256,7 +257,7 @@ implementation('org.apache.httpcomponents:httpclient:4.5.12')
 
 一般来说，我们应该配置像`runtimeOnly`这样的依赖关系。
 
-### 3.4.生成报告
+### 3.4. 生成报告
 
 对于大型项目，终端返回的错误数量变得难以处理。
 
@@ -301,7 +302,7 @@ File: /home/user/tutorials/gradle-5/unused-dependencies/build.gradle
 
 不幸的是，这是插件的不一致行为。结果，我们现在得到三个错误。
 
-## 4.结论
+## 4. 结论
 
 在本教程中，我们看到了如何找到 Gradle 构建中未使用的依赖项。
 

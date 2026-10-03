@@ -1,249 +1,259 @@
+
 # Spring 4 MVC Ajax Hello World 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring-mvc/spring-4-mvc-ajax-hello-world-example/>
 
 在本教程中，我们将向您展示如何创建一个 Spring MVC web 项目并通过 Ajax 提交表单。
 
-使用的技术:
+使用的技术：
 
-1.  弹簧 4.2.2 释放
-2.  杰克逊 2.6.3
-3.  回溯 1.1.3
-4.  jQuery 1.10
-5.  maven3
-6.  JDK 1.8
-7.  Tomcat 8 或 Jetty 9
-8.  Eclipse 4.5
-9.  3 号艇
+1. 弹簧 4.2.2 释放
+2. 杰克逊 2.6.3
+3. 回溯 1.1.3
+4. jQuery 1.10
+5. maven3
+6. JDK 1.8
+7. Tomcat 8 或 Jetty 9
+8. Eclipse 4.5
+9. 3 号艇
 
 如果在项目类路径中找到了 Jackson 库，Spring 将使用 Jackson 自动处理 json 数据与对象之间的转换。
 
 **Note**
+
 Try this – [Spring Boot Ajax example](http://web.archive.org/web/20190215000820/http://www.mkyong.com/spring-boot/spring-boot-ajax-example/)
 
-## 1.快速参考
+## 1. 快速参考
 
-1.1 在 HTML 中，使用 jQuery `[$.ajax()](http://web.archive.org/web/20190215000820/http://api.jquery.com/jquery.ajax/)`发送表单请求。
+1.1 在 HTML 中，使用 jQuery `$.ajax()`发送表单请求。
 
 ```java
- jQuery(document).ready(function($) {
-		$("#search-form").submit(function(event) {
+jQuery(document).ready(function($) {
+    $("#search-form").submit(function(event) {
 
-			// Prevent the form from submitting via the browser.
-			event.preventDefault();
-			searchViaAjax();
+        // Prevent the form from submitting via the browser.
+        event.preventDefault();
+        searchViaAjax();
 
-		});
-	});
+    });
+});
 
-	function searchAjax() {
-		var data = {}
-		data["query"] = $("#query").val();
+function searchAjax() {
+    var data = {}
+    data["query"] = $("#query").val();
 
-		$.ajax({
-			type : "POST",
-			contentType : "application/json",
-			url : "${home}search/api/getSearchResult",
-			data : JSON.stringify(data),
-			dataType : 'json',
-			timeout : 100000,
-			success : function(data) {
-				console.log("SUCCESS: ", data);
-				display(data);
-			},
-			error : function(e) {
-				console.log("ERROR: ", e);
-				display(e);
-			},
-			done : function(e) {
-				console.log("DONE");
-			}
-		});
-	} 
+    $.ajax({
+        type : "POST",
+        contentType : "application/json",
+        url : "${home}search/api/getSearchResult",
+        data : JSON.stringify(data),
+        dataType : 'json',
+        timeout : 100000,
+        success : function(data) {
+            console.log("SUCCESS: ", data);
+            display(data);
+        },
+        error : function(e) {
+            console.log("ERROR: ", e);
+            display(e);
+        },
+        done : function(e) {
+            console.log("DONE");
+        }
+    });
+}
 ```
 
 1.2 Spring 控制器处理 Ajax 请求。
 
 ```java
- @Controller
+@Controller
 public class AjaxController {
 
-	@ResponseBody
-	@RequestMapping(value = "/search/api/getSearchResult")
-	public AjaxResponseBody getSearchResultViaAjax(@RequestBody SearchCriteria search) {
+    @ResponseBody
+    @RequestMapping(value = "/search/api/getSearchResult")
+    public AjaxResponseBody getSearchResultViaAjax(@RequestBody SearchCriteria search) {
 
-		AjaxResponseBody result = new AjaxResponseBody();
-		//logic
-		return result;
+        AjaxResponseBody result = new AjaxResponseBody();
+        //logic
+        return result;
 
-	}
+    }
 
-} 
+}
 ```
 
- ## 2.项目目录
+## 2. 项目目录
 
 查看项目目录，这是一个标准的 Maven 项目目录结构。
 
-[![spring-mvc-ajax-example-1](img/fa138636105fd764c5e9a44910eadfda.png)](http://web.archive.org/web/20190215000820/http://www.mkyong.com/wp-content/uploads/2015/10/spring-mvc-ajax-example-1.png) ## 3.项目相关性
+[![spring-mvc-ajax-example-1](img/fa138636105fd764c5e9a44910eadfda.png)](http://web.archive.org/web/20190215000820/http://www.mkyong.com/wp-content/uploads/2015/10/spring-mvc-ajax-example-1.png)
 
-pom.xml
+## 3. 项目相关性
+
+`pom.xml`
 
 ```java
- <project  
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-	http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.mkyong</groupId>
-	<artifactId>spring4-mvc-maven-ajax-example</artifactId>
-	<packaging>war</packaging>
-	<version>1.0-SNAPSHOT</version>
-	<name>spring4 mvc maven ajax example</name>
+<project  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+    http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.mkyong</groupId>
+    <artifactId>spring4-mvc-maven-ajax-example</artifactId>
+    <packaging>war</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>spring4 mvc maven ajax example</name>
 
-	<properties>
-		<jdk.version>1.8</jdk.version>
-		<spring.version>4.2.2.RELEASE</spring.version>
-		<jackson.version>2.6.3</jackson.version>
-		<logback.version>1.1.3</logback.version>
-		<jcl.slf4j.version>1.7.12</jcl.slf4j.version>
-		<jstl.version>1.2</jstl.version>
-		<servletapi.version>3.1.0</servletapi.version>
-	</properties>
+    <properties>
+        <jdk.version>1.8</jdk.version>
+        <spring.version>4.2.2.RELEASE</spring.version>
+        <jackson.version>2.6.3</jackson.version>
+        <logback.version>1.1.3</logback.version>
+        <jcl.slf4j.version>1.7.12</jcl.slf4j.version>
+        <jstl.version>1.2</jstl.version>
+        <servletapi.version>3.1.0</servletapi.version>
+    </properties>
 
-	<dependencies>
+    <dependencies>
 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${spring.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>commons-logging</groupId>
-					<artifactId>commons-logging</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 
-		<!-- Need this for json to/from object -->
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-core</artifactId>
-			<version>${jackson.version}</version>
-		</dependency>
+        <!-- Need this for json to/from object -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
 
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>${jackson.version}</version>
-		</dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
 
-		<!-- JSTL for views -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-			<version>${jstl.version}</version>
-		</dependency>
+        <!-- JSTL for views -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl.version}</version>
+        </dependency>
 
-		<!-- Logging -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jcl-over-slf4j</artifactId>
-			<version>${jcl.slf4j.version}</version>
-		</dependency>
+        <!-- Logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${jcl.slf4j.version}</version>
+        </dependency>
 
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>${logback.version}</version>
-		</dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
 
-		<!-- compile only, runtime container will provide this -->
-		<!-- Need this for config annotation -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>${servletapi.version}</version>
-			<scope>provided</scope>
-		</dependency>
+        <!-- compile only, runtime container will provide this -->
+        <!-- Need this for config annotation -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servletapi.version}</version>
+            <scope>provided</scope>
+        </dependency>
 
-	</dependencies>
+    </dependencies>
 
-	<build>
+    <build>
 
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
-				<configuration>
-					<source>${jdk.version}</source>
-					<target>${jdk.version}</target>
-				</configuration>
-			</plugin>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                </configuration>
+            </plugin>
 
-			<plugin>
-				<groupId>org.eclipse.jetty</groupId>
-				<artifactId>jetty-maven-plugin</artifactId>
-				<version>9.2.11.v20150529</version>
-				<configuration>
-					<scanIntervalSeconds>10</scanIntervalSeconds>
-					<webApp>
-						<contextPath>/spring4ajax</contextPath>
-					</webApp>
-				</configuration>
-			</plugin>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.2.11.v20150529</version>
+                <configuration>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <webApp>
+                        <contextPath>/spring4ajax</contextPath>
+                    </webApp>
+                </configuration>
+            </plugin>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.10</version>
-				<configuration>
-					<downloadSources>true</downloadSources>
-					<downloadJavadocs>true</downloadJavadocs>
-					<wtpversion>2.0</wtpversion>
-					<wtpContextName>spring4ajax</wtpContextName>
-				</configuration>
-			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <version>2.10</version>
+                <configuration>
+                    <downloadSources>true</downloadSources>
+                    <downloadJavadocs>true</downloadJavadocs>
+                    <wtpversion>2.0</wtpversion>
+                    <wtpContextName>spring4ajax</wtpContextName>
+                </configuration>
+            </plugin>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.6</version>
-				<configuration>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
-				</configuration>
-			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
 
-			<!-- Deploy to WildFly -->
-			<plugin>
-				<groupId>org.wildfly.plugins</groupId>
-				<artifactId>wildfly-maven-plugin</artifactId>
-				<version>1.1.0.Alpha5</version>
-				<configuration>
-					<hostname>127.0.0.1</hostname>
-					<port>9990</port>
-					<username>admin</username>
-					<password>admin</password>
-					<name>spring4ajax.war</name>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+            <!-- Deploy to WildFly -->
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>1.1.0.Alpha5</version>
+                <configuration>
+                    <hostname>127.0.0.1</hostname>
+                    <port>9990</port>
+                    <username>admin</username>
+                    <password>admin</password>
+                    <name>spring4ajax.war</name>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-</project> 
+</project>
 ```
 
-## 4.弹簧组件
+## 4. 弹簧组件
 
 只会显示重要的类。
 
-4.1 `@RestController`处理 Ajax 请求。阅读评论，不言自明。
+4.1 `@RestController`处理 Ajax 请求。阅读注释，不言自明。
 
-AjaxController.java
+`AjaxController.java`
+
+
+
+# 4.1 控制器
+
+以下代码展示了`AjaxController`控制器的实现，它通过`@RestController`注解处理 Ajax 请求。
 
 ```java
- package com.mkyong.web.controller;
+package com.mkyong.web.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -362,15 +372,17 @@ public class AjaxController {
 		return result;
 
 	}
-} 
+}
 ```
 
-4.2“JSON 数据”将通过`@RequestBody`转换成该对象。
+# 4.2 数据模型
 
-SearchCriteria.java
+“JSON 数据”将通过`@RequestBody`转换成该对象。
+
+`SearchCriteria.java`：
 
 ```java
- package com.mkyong.web.model;
+package com.mkyong.web.model;
 
 public class SearchCriteria {
 
@@ -378,27 +390,29 @@ public class SearchCriteria {
 	String email;
 
 	//getters and setters
-} 
+}
 ```
 
-4.2 为`@JsonView`创建一个虚拟类，以控制应该返回给请求的内容。
+为`@JsonView`创建一个虚拟类，以控制应该返回给请求的内容。
 
-Views.java
+`Views.java`：
 
 ```java
- package com.mkyong.web.jsonview;
+package com.mkyong.web.jsonview;
 
 public class Views {
     public static class Public {}
-} 
+}
 ```
 
-4.3 搜索功能的用户对象。将显示标注有`@JsonView`的字段。
+# 4.3 用户对象
 
-User.java
+搜索功能的用户对象。将显示标注有`@JsonView`的字段。
+
+`User.java`：
 
 ```java
- package com.mkyong.web.model;
+package com.mkyong.web.model;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import com.mkyong.web.jsonview.Views;
@@ -419,15 +433,17 @@ public class User {
 	String address;
 
 	//getters, setters and contructors
-} 
+}
 ```
 
-4.4 这个对象将被转换成 json 格式并返回给请求。
+# 4.4 响应对象
 
-AjaxResponseBody.java
+这个对象将被转换成 json 格式并返回给请求。
+
+`AjaxResponseBody.java`：
 
 ```java
- package com.mkyong.web.model;
+package com.mkyong.web.model;
 
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonView;
@@ -445,20 +461,19 @@ public class AjaxResponseBody {
 	List<User> result;
 
 	//getters and setters
-} 
+}
 ```
 
-**Note**
-The `@JsonView` belongs to Jackson library, not Spring framework.
+**注意**：`@JsonView`属于 Jackson 库，而非 Spring 框架。
 
-## 5.jQuery Ajax
+# 5. jQuery Ajax
 
 在 JSP 中，创建一个简单的搜索表单，并用 jQuery `$.ajax`发送表单请求。
 
-welcome.jsp
+`welcome.jsp`：
 
 ```java
- <%@page session="false"%>
+<%@page session="false"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
@@ -585,12 +600,12 @@ welcome.jsp
 </script>
 
 </body>
-</html> 
+</html>
 ```
 
-## 6.演示
+# 6. 演示
 
-6.1*http://localhost:8080/spring 4 Ajax/*
+6.1 访问`http://localhost:8080/spring4Ajax/`。
 
 [![spring-mvc-ajax-example-demo-1](img/bae397f525fa08775dc68c9ac6f445a7.png)](http://web.archive.org/web/20190215000820/http://www.mkyong.com/wp-content/uploads/2015/10/spring-mvc-ajax-example-demo-1.png)
 
@@ -600,50 +615,45 @@ welcome.jsp
 
 6.3 按用户名搜索。
 
-[![spring-mvc-ajax-example-demo-3](img/aab3fa6af02527fa36a490ceb60a43fc.png)](http://web.archive.org/web/20190215000820/http://www.mkyong.com/wp-content/uploads/2015/10/spring-mvc-ajax-example-demo-3.png)
 
-6.4.通过电子邮件搜索。
+
+## 6.4 通过电子邮件搜索
+
+[![spring-mvc-ajax-example-demo-3](img/aab3fa6af02527fa36a490ceb60a43fc.png)](http://web.archive.org/web/20190215000820/http://www.mkyong.com/wp-content/uploads/2015/10/spring-mvc-ajax-example-demo-3.png)
 
 [![spring-mvc-ajax-example-demo-4](img/1a1117134b66272a5b9279423e2ff5b9.png)](http://web.archive.org/web/20190215000820/http://www.mkyong.com/wp-content/uploads/2015/10/spring-mvc-ajax-example-demo-4.png)
 
-5.Chrome 浏览器，inspect 元素，网络标签。
+## 5. Chrome 浏览器，inspect 元素，网络标签
 
 [![spring-mvc-ajax-example-demo-5](img/22160d6e9aafe704ee56efc4e9937ff3.png)](http://web.archive.org/web/20190215000820/http://www.mkyong.com/wp-content/uploads/2015/10/spring-mvc-ajax-example-demo-5.png)
 
-## 7.这个项目怎么跑？
+## 7. 这个项目怎么跑？
 
-7.1 从 Github 克隆源代码
-
-```java
- $ git clone https://github.com/mkyong/spring4-mvc-ajax-example 
-```
-
-7.2 运行嵌入式码头容器。
+### 7.1 从 Github 克隆源代码
 
 ```java
- $ mvn jetty:run 
+$ git clone https://github.com/mkyong/spring4-mvc-ajax-example
 ```
 
-7.3 访问此 URL-*http://localhost:8080/spring 4 Ajax/*
+### 7.2 运行嵌入式码头容器
+
+```java
+$ mvn jetty:run
+```
+
+### 7.3 访问此 URL：`http://localhost:8080/spring4Ajax/`
 
 ## 下载源代码
 
 Github link – [spring4-mvc-maven-ajax-example.git](http://web.archive.org/web/20190215000820/https://github.com/mkyong/spring4-mvc-ajax-example)
 
-#### 参考文献
+### 参考文献
 
-1.  [jQuery.ajax()](http://web.archive.org/web/20190215000820/http://api.jquery.com/jquery.ajax/)
-2.  [杰克逊专题:JSON 浏览量](http://web.archive.org/web/20190215000820/http://wiki.fasterxml.com/JacksonJsonViews)
-3.  [通过 Spring MVC 使用@ JSON 视图](http://web.archive.org/web/20190215000820/http://stackoverflow.com/questions/5772304/using-jsonview-with-spring-mvc)
-4.  [春天](http://web.archive.org/web/20190215000820/https://spring.io/blog/2014/12/02/latest-jackson-integration-improvements-in-spring)
-5.  [ HTTP: status code definition
-6.  [Spring—@请求体](http://web.archive.org/web/20190215000820/https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/bind/annotation/RequestBody.html)
-7.  [Spring—@ response body](http://web.archive.org/web/20190215000820/https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/bind/annotation/ResponseBody.html)
-8.  [春天———](http://web.archive.org/web/20190215000820/https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/bind/annotation/RestController.html)
-
-
-
-
-
-
-
+1. [jQuery.ajax()](http://web.archive.org/web/20190215000820/http://api.jquery.com/jquery.ajax/)
+2. [杰克逊专题：JSON 视图](http://web.archive.org/web/20190215000820/http://wiki.fasterxml.com/JacksonJsonViews)
+3. [通过 Spring MVC 使用 @JsonView](http://web.archive.org/web/20190215000820/http://stackoverflow.com/questions/5772304/using-jsonview-with-spring-mvc)
+4. [Spring 与 Jackson 集成改进](http://web.archive.org/web/20190215000820/https://spring.io/blog/2014/12/02/latest-jackson-integration-improvements-in-spring)
+5. [HTTP 状态码定义](http://web.archive.org/web/20190215000820/http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+6. [Spring—@RequestBody](http://web.archive.org/web/20190215000820/https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/bind/annotation/RequestBody.html)
+7. [Spring—@ResponseBody](http://web.archive.org/web/20190215000820/https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/bind/annotation/ResponseBody.html)
+8. [Spring—@RestController](http://web.archive.org/web/20190215000820/https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/bind/annotation/RestController.html)

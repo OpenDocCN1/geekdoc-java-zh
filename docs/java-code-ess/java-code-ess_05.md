@@ -1,10 +1,11 @@
+
 # 类和对象
 
 ## 枚举类型（Enum Type）
 
-枚举类型是一种特殊的数据类型，使一个变量是一组预定义的常量。变量必须等于已预先定义的值之一。常见的例子包括罗盘方向（ NORTH, SOUTH, EAST 和 WEST）和星期几。
+枚举类型是一种特殊的数据类型，使一个变量是一组预定义的常量。变量必须等于已预先定义的值之一。常见的例子包括罗盘方向（`NORTH`, `SOUTH`, `EAST` 和 `WEST`）和星期几。
 
-使用关键字 enum ，下面是一个星期几的枚举列子:
+使用关键字 `enum`，下面是一个星期几的枚举例子：
 
 ```java
 public enum Day {
@@ -15,7 +16,7 @@ public enum Day {
 
 使用枚举类型，需要一组固定的常数。这包括自然枚举类型，如在我们的太阳系的行星，菜单上的选项，命令行标志，等等。
 
-下面是一些代码，展示如何使用上面定义的 Day 枚举：
+下面是一些代码，展示如何使用上面定义的 `Day` 枚举：
 
 ```java
 class EnumTest {
@@ -71,7 +72,7 @@ Weekends are best.
 Weekends are best. 
 ```
 
-下面是一个 Planet 示例，展示了 枚举值的 for-each 遍历：
+下面是一个 `Planet` 示例，展示了枚举值的 `for-each` 遍历：
 
 ```java
 public enum Planet {
@@ -116,7 +117,7 @@ public enum Planet {
 } 
 ```
 
-在命令行，输入参数为 175 时， 输出如下：
+在命令行，输入参数为 `175` 时，输出如下：
 
 ```java
 $ java Planet 175

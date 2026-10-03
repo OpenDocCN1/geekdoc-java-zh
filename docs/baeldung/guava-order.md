@@ -1,12 +1,13 @@
+
 # 番石榴订购食谱
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/guava-order>
 
-## 1。简介
+## 1. 简介
 
 这本烹饪书展示了如何使用番石榴排序和比较器。它延续了我在[开始的关于番石榴收集的前一篇文章](/web/20220628125433/https://www.baeldung.com/guava-collections "Guava Collections Cookbook")中的食谱和范例焦点格式。
 
-## 2。烹饪书
+## 2. 烹饪书
 
 **处理集合中的空值**
 
@@ -98,7 +99,7 @@ Ordering<String> expectedOrder = Ordering.explicit(Lists.newArrayList("b", "aa",
 assertTrue(expectedOrder.isOrdered(toSort));
 ```
 
-**复杂定制订购示例——带链接** 
+**复杂定制订购示例——带链接**
 
 ```java
 List<String> toSort = Arrays.asList("zz", "aa", null, "b", "ccc");
@@ -107,7 +108,7 @@ Collections.sort(toSort,
 System.out.println(toSort);
 ```
 
-**使用`toString`表示法** 排序
+**使用`toString`表示法排序**
 
 ```java
 List<Integer> toSort = Arrays.asList(1, 2, 11);
@@ -165,22 +166,21 @@ List<Integer> expected = Lists.newArrayList(1, 100, 11, 14, 2, 8);
 assertThat(expected, equalTo(sortedCopy));
 ```
 
-–**注意**:排序逻辑将首先通过函数运行数字，将它们转换成字符串，然后按照字符串的自然顺序进行排序
+**注意**：排序逻辑将首先通过函数运行数字，将它们转换成字符串，然后按照字符串的自然顺序进行排序
 
-## 3。更多番石榴食谱
+## 3. 更多番石榴食谱
 
-番石榴是一个全面且非常有用的库——以下是烹饪书形式的更多 API:
+番石榴是一个全面且非常有用的库——以下是烹饪书形式的更多 API：
 
 *   #### [Guava functional recipe](/web/20220628125433/https://www.baeldung.com/guava-functions-predicates "Guava Functional Cookbook")
-
 *   #### [Guava series recipes](/web/20220628125433/https://www.baeldung.com/guava-collections "Guava Collections Cookbook")
 
 享受吧。
 
-## 4。结论
+## 4. 结论
 
 这种实验性的格式——食谱——有一个明确的重点——简单和快速，所以大多数食谱除了代码示例本身之外没有其他解释。
 
 正如我之前提到的，这是一份活的文档，欢迎在评论中加入新的例子和用例，我会继续添加我自己的例子和用例。
 
-所有这些例子和代码片段的实现**可以在 GitHub** 上找到[——这是一个基于 Maven 的项目，所以它应该很容易导入和运行。](https://web.archive.org/web/20220628125433/https://github.com/eugenp/tutorials/tree/master/guava-modules/guava-collections)
+所有这些例子和代码片段的实现**可以在 GitHub 上找到**——这是一个基于 Maven 的项目，所以它应该很容易导入和运行。

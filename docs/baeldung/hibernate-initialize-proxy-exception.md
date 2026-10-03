@@ -1,10 +1,11 @@
+
 # Hibernate 无法初始化代理-没有会话
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/hibernate-initialize-proxy-exception>
 
 ## 1.概观
 
-使用 Hibernate 时，我们可能会遇到这样的错误:`org.hibernate.LazyInitializationException : could not initialize proxy – no Session` `.`
+使用 Hibernate 时，我们可能会遇到这样的错误：`org.hibernate.LazyInitializationException : could not initialize proxy – no Session`。
 
 在这个快速教程中，我们将仔细看看错误的根本原因，并学习如何避免它。
 
@@ -12,11 +13,11 @@
 
 在打开的 Hibernate 会话的上下文之外访问延迟加载的对象将导致这个异常。
 
-理解**什么是会话**、**惰性初始化、**、**和**、**代理对象**以及它们如何在`Hibernate`框架中结合在一起很重要:
+理解**什么是会话**、**惰性初始化**、**和**、**代理对象**以及它们如何在`Hibernate`框架中结合在一起很重要：
 
-*   `Session` 是一个持久上下文，表示应用程序和数据库之间的对话。
-*   `Lazy Loading`意味着对象不会被加载到`Session` 上下文中，直到它在代码中被访问。
-*   Hibernate 创建了一个动态的`Proxy Object`子类，只有当我们第一次使用这个对象时，它才会访问数据库。
+- `Session` 是一个持久上下文，表示应用程序和数据库之间的对话。
+- `Lazy Loading`意味着对象不会被加载到`Session` 上下文中，直到它在代码中被访问。
+- Hibernate 创建了一个动态的`Proxy Object`子类，只有当我们第一次使用这个对象时，它才会访问数据库。
 
 当我们试图使用代理对象从数据库中获取一个延迟加载的对象，但是 Hibernate 会话已经关闭时，就会出现这个错误。
 
@@ -28,13 +29,13 @@
 
 ### 3.1.Hibernate 实用程序类
 
-首先，让我们定义一个 *HibernateUtil* 类来创建一个带有配置的`SessionFactory`。
+首先，让我们定义一个`HibernateUtil` 类来创建一个带有配置的`SessionFactory`。
 
 我们将使用内存中的`HSQLDB`数据库。
 
 ### 3.2.实体
 
-这是我们的`User`实体:
+这是我们的`User`实体：
 
 ```java
 @Entity
@@ -55,10 +56,10 @@ public class User {
     @OneToMany
     private Set<Role> roles;
 
-} 
+}
 ```
 
-以及相关联的`Role`实体:
+以及相关联的`Role`实体：
 
 ```java
 @Entity
@@ -78,14 +79,14 @@ public class Role {
 
 ### 3.3.创建具有角色的用户
 
-然后我们将创建两个`Role`对象:
+然后我们将创建两个`Role`对象：
 
 ```java
 Role admin = new Role("Admin");
 Role dba = new Role("DBA");
 ```
 
-我们还将创建一个包含角色的`User`:
+我们还将创建一个包含角色的`User`：
 
 ```java
 User user = new User("Bob", "Smith");
@@ -93,7 +94,7 @@ user.addRole(admin);
 user.addRole(dba);
 ```
 
-最后，我们可以打开一个会话并持久保存对象:
+最后，我们可以打开一个会话并持久保存对象：
 
 ```java
 Session session = sessionFactory.openSession();
@@ -106,7 +107,7 @@ session.close();
 
 ### 3.4.获取角色
 
-在第一个场景中，我们将看到如何以适当的方式获取用户角色:
+在第一个场景中，我们将看到如何以适当的方式获取用户角色：
 
 ```java
 @Test
@@ -130,7 +131,7 @@ public void whenAccessUserRolesInsideSession_thenSuccess() {
 
 ### 3.5.提取角色失败
 
-在第二个场景中，我们将在会话外调用一个`getRoles`方法:
+在第二个场景中，我们将在会话外调用一个`getRoles()`方法：
 
 ```java
 @Test
@@ -151,7 +152,7 @@ public void whenAccessUserRolesOutsideSession_thenThrownException() {
 }
 ```
 
-在这种情况下，我们试图在会话关闭后访问角色，结果代码抛出一个`LazyInitializationException` `.`
+在这种情况下，我们试图在会话关闭后访问角色，结果代码抛出一个`LazyInitializationException`。
 
 ## 4.如何避免错误
 
@@ -167,11 +168,11 @@ public void whenAccessUserRolesOutsideSession_thenThrownException() {
 
 根据关注点分离原则，这个解决方案是一个反模式。此外，它还会导致数据完整性违规和长时间运行的事务。
 
-### 4.2.开启 **`enable_lazy_load_no_trans`** 属性
+### 4.2.开启`enable_lazy_load_no_trans` 属性
 
 这个 Hibernate 属性用于声明惰性加载对象获取的全局策略。
 
-默认情况下，该属性为`false`。打开它意味着对关联的惰性加载实体的每次访问都将被包装在新事务中运行的新会话中:
+默认情况下，该属性为`false`。打开它意味着对关联的惰性加载实体的每次访问都将被包装在新事务中运行的新会话中：
 
 ```java
 <property name="hibernate.enable_lazy_load_no_trans" value="true"/>
@@ -181,9 +182,9 @@ public void whenAccessUserRolesOutsideSession_thenThrownException() {
 
 这种方法效率不高，也被认为是一种反模式。
 
-### 4.3.使用  `FetchType.EAGER`策略
+### 4.3.使用`FetchType.EAGER`策略
 
-我们可以将这个策略与`@OneToMany`注释一起使用:
+我们可以将这个策略与`@OneToMany`注解一起使用：
 
 ```java
 @OneToMany(fetch = FetchType.EAGER)
@@ -197,26 +198,26 @@ private Set<Role> roles;
 
 ### 4.4.使用联接抓取
 
-我们还可以使用`JPQL`中的`JOIN FETCH`指令按需获取相关的集合:
+我们还可以使用`JPQL`中的`JOIN FETCH`指令按需获取相关的集合：
 
-```java
+```sql
 SELECT u FROM User u JOIN FETCH u.roles
 ```
 
-或者我们可以使用 Hibernate Criteria API:
+或者我们可以使用 Hibernate Criteria API：
 
 ```java
 Criteria criteria = session.createCriteria(User.class);
 criteria.setFetchMode("roles", FetchMode.EAGER);
 ```
 
-这里，我们指定应该从数据库中获取的相关集合，以及同一个往返行程中的*用户*对象。使用这个查询提高了迭代的效率，因为它消除了单独检索相关对象的需要。
+这里，我们指定应该从数据库中获取的相关集合，以及同一个往返行程中的`User`对象。使用这个查询提高了迭代的效率，因为它消除了单独检索相关对象的需要。
 
 **这是避免`LazyInitializationException` 错误的最有效和细粒度的解决方案。**
 
 ## 5.结论
 
-在本文中，我们学习了如何处理`org.hibernate.LazyInitializationException : could not initialize proxy – no Session` 错误`.`
+在本文中，我们学习了如何处理`org.hibernate.LazyInitializationException : could not initialize proxy – no Session` 错误。
 
 我们探索了不同的方法，以及性能问题。我们还讨论了使用简单高效的解决方案以避免影响性能的重要性。
 

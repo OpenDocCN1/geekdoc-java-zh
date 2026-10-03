@@ -1,3 +1,4 @@
+
 # 对象流
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/io/objectstreams.html`](https://docs.oracle.com/javase/tutorial/essential/io/objectstreams.html)
@@ -12,7 +13,7 @@
 
 `writeObject`和`readObject`方法使用起来很简单，但它们包含一些非常复杂的对象管理逻辑。对于像日历这样只封装原始值的类来说，这并不重要。但是许多对象包含对其他对象的引用。如果`readObject`要从流中重建一个对象，它必须能够重建原始对象引用的所有对象。这些额外的对象可能有它们自己的引用，依此类推。在这种情况下，`writeObject`遍历整个对象引用网络，并将该网络中的所有对象写入流中。因此，一次`writeObject`调用可能导致大量对象被写入流中。
 
-这在下图中有所展示，其中调用`writeObject`来写入一个名为**a**的单一对象。这个对象包含对对象**b**和**c**的引用，而**b**包含对**d**和**e**的引用。调用`writeobject(a)`不仅写入**a**，还写入了重建**a**所需的所有对象，因此这个网络中的其他四个对象也被写入了。当**a**被`readObject`读回时，其他四个对象也被读回，并且所有原始对象引用都被保留。
+这在下图中有所展示，其中调用`writeObject`来写入一个名为`a`的单一对象。这个对象包含对对象`b`和`c`的引用，而`b`包含对`d`和`e`的引用。调用`writeobject(a)`不仅写入`a`，还写入了重建`a`所需的所有对象，因此这个网络中的其他四个对象也被写入了。当`a`被`readObject`读回时，其他四个对象也被读回，并且所有原始对象引用都被保留。
 
 ![多个被引用对象的 I/O](img/3d73d2c801b8fa96fe4d2878f407bd8b.png)
 
@@ -24,7 +25,6 @@
 Object ob = new Object();
 out.writeObject(ob);
 out.writeObject(ob);
-
 ```
 
 每个`writeObject`都必须与一个`readObject`匹配，因此读取流的代码看起来会像这样：
@@ -32,9 +32,8 @@ out.writeObject(ob);
 ```java
 Object ob1 = in.readObject();
 Object ob2 = in.readObject();
-
 ```
 
 这导致了两个变量，`ob1`和`ob2`，它们都是指向同一个对象的引用。
 
-然而，如果一个单一对象被写入两个不同的流，它实际上会被复制  一个程序读取这两个流将看到两个不同的对象。
+然而，如果一个单一对象被写入两个不同的流，它实际上会被复制 — 一个程序读取这两个流将看到两个不同的对象。

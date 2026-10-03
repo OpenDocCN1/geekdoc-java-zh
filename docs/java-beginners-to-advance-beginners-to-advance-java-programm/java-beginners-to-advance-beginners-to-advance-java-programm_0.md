@@ -1,205 +1,445 @@
-# Java 入门到进阶：简单遵循步骤的 Java 编程课程，其设计旨在让用户轻松学习。
 
-
+# Java 入门到进阶：简单遵循步骤的 Java 编程课程，其设计旨在让用户轻松学习
 
 ![](img/image_rsrc7AF.jpg)
-
 
 ## 安装
 
 在本书中，你将学习带有图表的解释以及实操实验，并成功运行实验且显示输出。提供分步说明的现成解决方案。AMIT K
 
 ## 目录
+
 分步学习软件安装的入门指南
 
 # 第 1 章：软件安装
 
-## 介绍 自己的 `Eclipse` 安装
-- `Jdk1.6` 安装及 `Eclipse` 中的配置
-- `Tomcat1.6` 安装及 `Eclipse` 中的配置
-- `MySql5.0` 安装
-- `Eclipse` 字体大小调整
+## 介绍自己的`Eclipse`安装
+
+- `Jdk1.6`安装及`Eclipse`中的配置
+- `Tomcat1.6`安装及`Eclipse`中的配置
+- `MySql5.0`安装
+- `Eclipse`字体大小调整
 
 逐步学习软件安装。
 
-### 第 1 章：软件安装 自己的 1. 介绍
-2. `Eclipse` 安装
-3. `Jdk1.6` 安装及 `Eclipse` 中的配置
-4. `Tomcat1.6` 安装及 `Eclipse` 中的配置
-5. `MySql5.0` 安装
-6. `Eclipse` 字体大小调整#### 1 介绍
+### 第 1 章：软件安装自己的
+
+1. 介绍
+2. `Eclipse`安装
+3. `Jdk1.6`安装及`Eclipse`中的配置
+4. `Tomcat1.6`安装及`Eclipse`中的配置
+5. `MySql5.0`安装
+6. `Eclipse`字体大小调整
+
+#### 1 介绍
+
 首先 → 我们将看到 → 软件的安装与配置
+
 其次 → 我们将看到 → 不同主题的带图完整解释
 
 ## 2 Eclipse 安装
+
 | ![](img/image_rsrc7AG.jpg) |
+| :--- |
+
 步骤 1 :
+
 | ![](img/image_rsrc7AH.jpg) |
+| :--- |
+
 步骤 2 :
+
 | ![](img/image_rsrc7AJ.jpg) |
+| :--- |
+
 步骤 3 :
+
 | ![](img/image_rsrc7AK.jpg) |
+| :--- |
+
 步骤 4 :
+
 | ![](img/image_rsrc7AM.jpg) |
+| :--- |
+
 步骤 5 :
+
 | ![](img/image_rsrc7AN.jpg) |
+| :--- |
+
 步骤 6 :
+
 | ![](img/image_rsrc7AP.jpg) |
+| :--- |
+
 步骤 7 :
+
 | ![](img/image_rsrc7AR.jpg) |
+| :--- |
+
 步骤 8 :
+
 | ![](img/image_rsrc7AS.jpg) |
+| :--- |
+
 步骤 9 :
+
 | ![](img/image_rsrc7AT.jpg) |
+| :--- |
+
 步骤 10 :
+
 | ![](img/image_rsrc7AU.jpg) |
+| :--- |
 
 ## 3 Jdk1.6 安装及在 Eclipse 中配置
+
 | ![](img/image_rsrc7AV.jpg) |
+| :--- |
+
 步骤 1 :
+
 | ![](img/image_rsrc7AW.jpg) |
+| :--- |
+
 步骤 2 :
+
 | ![](img/image_rsrc7AX.jpg) |
+| :--- |
+
 步骤 3 :
+
 | ![](img/image_rsrc7AY.jpg) |
+| :--- |
+
 步骤 4 :
+
 | ![](img/image_rsrc7AZ.jpg) |
+| :--- |
+
 步骤 5 :
+
 | ![](img/image_rsrc7B0.jpg) |
+| :--- |
+
 步骤 6 :
+
 | ![](img/image_rsrc7B1.jpg) |
+| :--- |
+
 步骤 7 :
+
 | ![](img/image_rsrc7B2.jpg) |
+| :--- |
+
 步骤 8 :
+
 | ![](img/image_rsrc7B3.jpg) |
+| :--- |
+
 步骤 9 :
+
 | ![](img/image_rsrc7B4.jpg) |
+| :--- |
+
 步骤 10 :
+
 | ![](img/image_rsrc7B5.jpg) |
+| :--- |
+
 步骤 11 :
+
 | ![](img/image_rsrc7B6.jpg) |
+| :--- |
+
 步骤 12 :
+
 | ![](img/image_rsrc7B7.jpg) |
+| :--- |
+
 步骤 13 :
+
 | ![](img/image_rsrc7B8.jpg) |
+| :--- |
+
 步骤 14 :
+
 | ![](img/image_rsrc7B9.jpg) |
+| :--- |
+
 步骤 15 :
+
 | ![](img/image_rsrc7BA.jpg) |
+| :--- |
 
 ## 4 Tomcat1.6 安装及在 Eclipse 中配置
+
 步骤 1 :
+
 | ![](img/image_rsrc7BB.jpg) |
+| :--- |
+
 步骤 2 :
+
 | ![](img/image_rsrc7BC.jpg) |
+| :--- |
+
 步骤 3 :
+
 | ![](img/image_rsrc7BD.jpg) |
+| :--- |
+
 步骤 4 :
+
 | ![](img/image_rsrc7BE.jpg) |
+| :--- |
+
 步骤 5 :
+
 | ![](img/image_rsrc7BF.jpg) |
+| :--- |
+
 步骤 6 :
+
 | ![](img/image_rsrc7BG.jpg) |
+| :--- |
+
 步骤 7 :
+
 | ![](img/image_rsrc7BH.jpg) |
+| :--- |
+
 步骤 8 :
+
 | ![](img/image_rsrc7BJ.jpg) |
+| :--- |
+
 步骤 9 :
+
 | ![](img/image_rsrc7BK.jpg) |
+| :--- |
+
 步骤 10 :
+
 | ![](img/image_rsrc7BM.jpg) |
+| :--- |
+
 步骤 11 :
+
 | ![](img/image_rsrc7BN.jpg) |
+| :--- |
+
 步骤 12 :
+
 | ![](img/image_rsrc7BP.jpg) |
+| :--- |
+
 步骤 13 :
+
 | ![](img/image_rsrc7BR.jpg) |
+| :--- |
+
 步骤 14 :
+
 | ![](img/image_rsrc7BS.jpg) |
+| :--- |
+
 步骤 15 :
+
 | ![](img/image_rsrc7BT.jpg) |
+| :--- |
+
 步骤 16 :
+
 | ![](img/image_rsrc7BU.jpg) |
+| :--- |
+
 步骤 17 :
+
 | ![](img/image_rsrc7BV.jpg) |
+| :--- |
+
 步骤 18 :
+
 | ![](img/image_rsrc7BW.jpg) |
+| :--- |
+
 步骤 19 :
+
 | ![](img/image_rsrc7BX.jpg) |
+| :--- |
+
 步骤 20 :
+
 | ![](img/image_rsrc7BY.jpg) |
+| :--- |
 
 ## 5 MySql5.0 安装
+
 在这里我们将学习分步安装过程。只需按照这些步骤操作即可。
+
 | ![](img/image_rsrc7BZ.jpg) |
+| :--- |
+
 步骤 1 :
+
 | ![](img/image_rsrc7C0.jpg) |
+| :--- |
+
 步骤 2 :
+
 | ![](img/image_rsrc7C1.jpg) |
+| :--- |
+
 步骤 3 :
+
 | ![](img/image_rsrc7C2.jpg) |
+| :--- |
+
 步骤 4 :
+
 | ![](img/image_rsrc7C3.jpg) |
+| :--- |
+
 步骤 5 :
+
 | ![](img/image_rsrc7C4.jpg) |
+| :--- |
+
 步骤 6 :
+
 | ![](img/image_rsrc7C5.jpg) |
+| :--- |
+
 步骤 7 :
+
 | ![](img/image_rsrc7C6.jpg) |
+| :--- |
+
 步骤 8 :
+
 | ![](img/image_rsrc7C7.jpg) |
+| :--- |
+
 步骤 9 :
+
 | ![](img/image_rsrc7C8.jpg) |
+| :--- |
+
 步骤 10 :
+
 | ![](img/image_rsrc7C9.jpg) |
+| :--- |
+
 步骤 11 :
+
 | ![](img/image_rsrc7CA.jpg) |
+| :--- |
+
 步骤 12 :
+
 | ![](img/image_rsrc7CB.jpg) |
+| :--- |
+
 步骤 13 :
+
 | ![](img/image_rsrc7CC.jpg) |
+| :--- |
+
 步骤 14 :
+
 | ![](img/image_rsrc7CD.jpg) |
+| :--- |
+
 步骤 15 :
+
 | ![](img/image_rsrc7CE.jpg) |
+| :--- |
+
 步骤 16 :
+
 | ![](img/image_rsrc7CF.jpg) |
+| :--- |
+
 步骤 17 :
+
 | ![](img/image_rsrc7CG.jpg) |
+| :--- |
+
 步骤 18 :
+
 | ![](img/image_rsrc7CH.jpg) |
+| :--- |
+
 步骤 19 :
+
 | ![](img/image_rsrc7CI.jpg) |
+| :--- |
+
 步骤 20 :
+
 | ![](img/image_rsrc7CK.jpg) |
+| :--- |
+
 步骤 21 :
+
 | ![](img/image_rsrc7CM.jpg) |
+| :--- |
+
 步骤 22 :
+
 | ![](img/image_rsrc7CN.jpg) |
+| :--- |
+
 步骤 23 :
+
 | ![](img/image_rsrc7CP.jpg) |
+| :--- |
+
 步骤 24 :
+
 | ![](img/image_rsrc7CR.jpg) |
+| :--- |
+
 步骤 25 :
+
 | ![](img/image_rsrc7CS.jpg) |
+| :--- |
+
 步骤 26 :
+
 | ![](img/image_rsrc7CT.jpg) |
+| :--- |
+
 步骤 27 :
+
 | ![](img/image_rsrc7CU.jpg) |
+| :--- |
+
 步骤 28 :
+
 | ![](img/image_rsrc7CV.jpg) |
+| :--- |
+
 步骤 29 :
+
 | ![](img/image_rsrc7CW.jpg) |
+| :--- |
+
 步骤 30 :
+
 | ![](img/image_rsrc7CX.jpg) |
+| :--- |
+
 步骤 31 :
+
 | ![](img/image_rsrc7CY.jpg) |
+| :--- |
+
 步骤 32 :
+
 | ![](img/image_rsrc7CZ.jpg) |
-
-
-
-
+| :--- |
 
 在最后，在最后一个客户端程序中，如果你开发了相同的 WEB 应用程序（人力资源管理应用），那么在浏览器中将以 JPG 页面显示何种类型的输出。
 
@@ -209,7 +449,7 @@
 
 所有细小的概念都分部分进行了解释。
 
-在完成（人力资源管理应用）后，最后提供了一个 `SHR.sql` 文件，其中包含了完整的 SQL 插入语句。
+在完成（人力资源管理应用）后，最后提供了一个`SHR.sql`文件，其中包含了完整的 SQL 插入语句。
 
 学习完本课程后，你可以在公司里轻松地工作。
 
@@ -223,176 +463,229 @@
 | 首页 |
 | :--- |
 | ![](img/image_rsrc7D3.jpg) |
+
 | 登录 |
 | :--- |
 | ![](img/image_rsrc7D4.jpg) |
+
 | 登录 |
 | :--- |
 | ![](img/image_rsrc7D5.jpg) |
+
 | 登录 |
 | :--- |
 | ![](img/image_rsrc7D6.jpg) |
+
 | 部门列表 | 部门 |
 | :--- | :--- |
-| ![](img/image_rsrc7D7.jpg) |
+| ![](img/image_rsrc7D7.jpg) | |
+
 | 添加部门 | 部门 |
 | :--- | :--- |
-| ![](img/image_rsrc7D8.jpg) |
+| ![](img/image_rsrc7D8.jpg) | |
+
 | 添加部门 | 部门 |
 | :--- | :--- |
-| ![](img/image_rsrc7D9.jpg) |
+| ![](img/image_rsrc7D9.jpg) | |
+
 | 添加部门 | 部门 |
 | :--- | :--- |
-| ![](img/image_rsrc7DA.jpg) |
+| ![](img/image_rsrc7DA.jpg) | |
+
 | 部门列表 | 部门 |
 | :--- | :--- |
-| ![](img/image_rsrc7DB.jpg) |
-| 部门列表删除 (`Dep Id = 1`) | 部门 |
+| ![](img/image_rsrc7DB.jpg) | |
+
+| 部门列表删除（`Dep Id = 1`） | 部门 |
 | :--- | :--- |
-| ![](img/image_rsrc7DC.jpg) |
+| ![](img/image_rsrc7DC.jpg) | |
+
 | 首页 |
 | :--- |
 | ![](img/image_rsrc7D6.jpg) |
+
 | 员工列表 | 员工 |
 | :--- | :--- |
-| ![](img/image_rsrc7DD.jpg) |
+| ![](img/image_rsrc7DD.jpg) | |
+
 | 添加员工 | 员工 |
 | :--- | :--- |
-| ![](img/image_rsrc7DE.jpg) |
+| ![](img/image_rsrc7DE.jpg) | |
+
 | 添加员工 | 员工 |
 | :--- | :--- |
-| ![](img/image_rsrc7DF.jpg) |
+| ![](img/image_rsrc7DF.jpg) | |
+
 | 添加员工 | 员工 |
 | :--- | :--- |
-| ![](img/image_rsrc7DG.jpg) |
+| ![](img/image_rsrc7DG.jpg) | |
+
 | 添加员工 | 员工 |
 | :--- | :--- |
-| ![](img/image_rsrc7DH.jpg) |
+| ![](img/image_rsrc7DH.jpg) | |
+
 | 添加员工 | 员工 |
 | :--- | :--- |
-| ![](img/image_rsrc7DJ.jpg) |
+| ![](img/image_rsrc7DJ.jpg) | |
+
 | 添加员工 | 员工 |
 | :--- | :--- |
-| ![](img/image_rsrc7DK.jpg) |
+| ![](img/image_rsrc7DK.jpg) | |
+
 | 员工列表 | 员工 |
 | :--- | :--- |
-| ![](img/image_rsrc7DM.jpg) |
+| ![](img/image_rsrc7DM.jpg) | |
+
 | 员工详情 | 员工 |
 | :--- | :--- |
-| ![](img/image_rsrc7DN.jpg) |
+| ![](img/image_rsrc7DN.jpg) | |
+
 | 员工更新 | 员工 |
 | :--- | :--- |
-| ![](img/image_rsrc7DP.jpg) |
+| ![](img/image_rsrc7DP.jpg) | |
+
 | 员工列表 | 员工 |
 | :--- | :--- |
-| ![](img/image_rsrc7DR.jpg) |
+| ![](img/image_rsrc7DR.jpg) | |
+
 | 员工详情 | 员工 |
 | :--- | :--- |
-| ![](img/image_rsrc7DT.jpg) |
-| 员工列表 (`Employee Id = 101`) | 员工 |
+| ![](img/image_rsrc7DT.jpg) | |
+
+| 员工列表（`Employee Id = 101`） | 员工 |
 | :--- | :--- |
-| ![](img/image_rsrc7DU.jpg) |
-| 员工列表 (`Employee Id = 101`) | 员工 |
+| ![](img/image_rsrc7DU.jpg) | |
+
+| 员工列表（`Employee Id = 101`） | 员工 |
 | :--- | :--- |
-| ![](img/image_rsrc7DV.jpg) |
-| 员工搜索 (`Asp`) | 员工 |
+| ![](img/image_rsrc7DV.jpg) | |
+
+| 员工搜索（`Asp`） | 员工 |
 | :--- | :--- |
-| ![](img/image_rsrc7DW.jpg) |
-| 员工搜索 (`Asp`) | 员工 |
+| ![](img/image_rsrc7DW.jpg) | |
+
+| 员工搜索（`Asp`） | 员工 |
 | :--- | :--- |
-| ![](img/image_rsrc7DX.jpg) |
+| ![](img/image_rsrc7DX.jpg) | |
+
 | 首页 |
 | :--- |
 | ![](img/image_rsrc7D3.jpg) |
+
 | 招聘列表 | 职位 |
 | :--- | :--- |
-| ![](img/image_rsrc7DY.jpg) |
+| ![](img/image_rsrc7DY.jpg) | |
+
 | 添加候选招聘详情 | 职位 |
 | :--- | :--- |
-| ![](img/image_rsrc7DZ.jpg) |
+| ![](img/image_rsrc7DZ.jpg) | |
+
 | 添加候选招聘详情 | 职位 |
 | :--- | :--- |
-| ![](img/image_rsrc7E0.jpg) |
+| ![](img/image_rsrc7E0.jpg) | |
+
 | 添加候选招聘详情 | 职位 |
 | :--- | :--- |
-| ![](img/image_rsrc7E1.jpg) |
+| ![](img/image_rsrc7E1.jpg) | |
+
 | 添加候选招聘详情 | 职位 |
 | :--- | :--- |
-| ![](img/image_rsrc7E2.jpg) |
+| ![](img/image_rsrc7E2.jpg) | |
+
 | 招聘列表 | 职位 |
 | :--- | :--- |
-| ![](img/image_rsrc7E3.jpg) |
+| ![](img/image_rsrc7E3.jpg) | |
+
 | 候选详情 | 职位 |
 | :--- | :--- |
-| ![](img/image_rsrc7E4.jpg) |
-| 招聘列表 (`Job Id = 1`) | 职位 |
+| ![](img/image_rsrc7E4.jpg) | |
+
+| 招聘列表（`Job Id = 1`） | 职位 |
 | :--- | :--- |
-| ![](img/image_rsrc7E5.jpg) |
-| 招聘列表 (`Job Id = 1`) | 职位 |
+| ![](img/image_rsrc7E5.jpg) | |
+
+| 招聘列表（`Job Id = 1`） | 职位 |
 | :--- | :--- |
-| ![](img/image_rsrc7E6.jpg) |
+| ![](img/image_rsrc7E6.jpg) | |
+
 | 首页 |
 | :--- |
 | ![](img/image_rsrc7D6.jpg) |
+
 | 添加培训 | 培训 |
 | :--- | :--- |
-| ![](img/image_rsrc7E7.jpg) |
+| ![](img/image_rsrc7E7.jpg) | |
+
 | 添加培训 | 培训 |
 | :--- | :--- |
-| ![](img/image_rsrc7E8.jpg) |
+| ![](img/image_rsrc7E8.jpg) | |
+
 | 培训列表 | 培训 |
 | :--- | :--- |
-| ![](img/image_rsrc7E9.jpg) |
-| 培训列表 (`Training Id = 1`) | 培训 |
+| ![](img/image_rsrc7E9.jpg) | |
+
+| 培训列表（`Training Id = 1`） | 培训 |
 | :--- | :--- |
-| ![](img/image_rsrc7EA.jpg) |
-| 培训列表 (`Training Id = 1`) | 培训 |
+| ![](img/image_rsrc7EA.jpg) | |
+
+| 培训列表（`Training Id = 1`） | 培训 |
 | :--- | :--- |
-| ![](img/image_rsrc7EB.jpg) |
+| ![](img/image_rsrc7EB.jpg) | |
+
 | 首页 |
 | :--- |
 | ![](img/image_rsrc7D6.jpg) |
+
 | 激励列表 | 激励 |
 | :--- | :--- |
-| ![](img/image_rsrc7EC.jpg) |
+| ![](img/image_rsrc7EC.jpg) | |
+
 | 添加激励 | 激励 |
 | :--- | :--- |
-| ![](img/image_rsrc7ED.jpg) |
+| ![](img/image_rsrc7ED.jpg) | |
+
 | 添加激励 | 激励 |
 | :--- | :--- |
-| ![](img/image_rsrc7EE.jpg) |
+| ![](img/image_rsrc7EE.jpg) | |
+
 | 激励列表 | 激励 |
 | :--- | :--- |
-| ![](img/image_rsrc7EF.jpg) |
+| ![](img/image_rsrc7EF.jpg) | |
+
 | 激励详情 | 激励 |
 | :--- | :--- |
-| ![](img/image_rsrc7EG.jpg) |
-| 激励列表 (`Incentive Id = 1`) | 激励 |
+| ![](img/image_rsrc7EG.jpg) | |
+
+| 激励列表（`Incentive Id = 1`） | 激励 |
 | :--- | :--- |
-| ![](img/image_rsrc7EH.jpg) |
-| 激励列表 (`Incentive Id = 1`) | 激励 |
+| ![](img/image_rsrc7EH.jpg) | |
+
+| 激励列表（`Incentive Id = 1`） | 激励 |
 | :--- | :--- |
-| ![](img/image_rsrc7EJ.jpg) |
+| ![](img/image_rsrc7EJ.jpg) | |
+
 | 首页 |
 | :--- |
 | ![](img/image_rsrc7D6.jpg) |
+
 | 薪资列表 | 薪资 |
 | :--- | :--- |
-| ![](img/image_rsrc7EK.jpg) |
+| ![](img/image_rsrc7EK.jpg) | |
+
 | 添加薪资 | 薪资 |
 | :--- | :--- |
-| ![](img/image_rsrc7EM.jpg) |
+| ![](img/image_rsrc7EM.jpg) | |
+
 | 薪资列表 | 薪资 |
 | :--- | :--- |
-| ![](img/image_rsrc7EN.jpg) |
+| ![](img/image_rsrc7EN.jpg) | |
+
 | 首页 |
 | :--- |
 | ![](img/image_rsrc7D6.jpg) |
+
 | 登出 |
-
-
-
-
+| :--- |
 
 ## 管理模块 Service 或业务逻辑需求
 
@@ -402,6 +695,9 @@
 | 管理员可以添加账户 | | |
 | 管理员可以添加部门 | | |
 | 管理员可以删除部门 | | |
+
+
+
 | 管理员可以添加员工 | | |
 | 管理员可以更新员工 | | |
 | 管理员可以查看员工详情 | | |
@@ -418,7 +714,6 @@
 | 管理员可以添加培训 | | |
 | 管理员可以查看培训详情 | | |
 | 管理员可以删除培训 | | |
-
 | 管理员可以添加激励 | | |
 | 管理员可以查看激励详情 | | |
 | 管理员可以删除激励 | | |
@@ -529,39 +824,43 @@ CREATE TABLE tb_train(
 );
 ```
 
-
-
-
-
 ## 数据库信息
+
 - **数据库名称**: `smarthrm`
 - **表总数**: `7`
 
 ## 凭据
+
 | 账号名称 | 密码 |
 | :--- | :--- |
 | Admin | 101 |
 | admin | smarthrm |
 
 ## smarthrm 插入 .sql
+
 ### 表中的首次插入 SQL 语句
 
 #### 表：`tb_manager`
+
 | `tb_managerid` | `account` | `password` | `managerLevel` |
 | :--- | :--- | :--- | :--- |
 
 **插入语句：**
+
 ```sql
 INSERT INTO `tb_manager` VALUES (1 , '101', 'admin', 'senior');
 INSERT INTO `tb_manager` VALUES (2 , 'admin', 'admin', 'senior');
 ```
 
 #### 表：`tb_employee`
+
 **列说明：**
+
 | `tb_employeeid` | `em_serialNumber` | `em_name` | `em_sex` | `em_age` | `em_IDCard` | `em_born` | `em_nation` | `em_marriage` | `em_visage` | `em_ancestralHome` | `em_tel` | `em_address` | `em_afterschool` | `em_speciality` | `em_culture` | `em_startime` | `em_departmentId` | `em_typework` | `em_creatime` | `em_createName` | `em_bz` |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 
 **插入语句：**
+
 ```sql
 INSERT INTO `tb_employee` VALUES (1 , '1001', 'Amar', 'M', '30', '1001a', '1985-02-22', 'Indian', 'Married', 'No', 'Agra', '1234567890', 'Agra', 'Working', 'Software', 'Graduate', '2014-1-20', '1', 'Programmer', '2014-1-2', 'Amar', 'Software');
 INSERT INTO `tb_employee` VALUES (2 , '102', 'Bharat', 'M', '30', '102b', '1984-02-2', 'Indian', 'Married', 'No', 'Badayon', '1234567890', 'Badayon', 'Working', 'Software', 'Graduate', '2014-1-20', '2', 'Programmer', '2014-1-22', 'Bharat', 'Software');
@@ -576,14 +875,12 @@ INSERT INTO `tb_employee` VALUES (10 , '10010', 'Jagan', 'M', '30', '10010j', '2
 ```
 
 ### 更新
+
 更新（工作类型 = 文档员工）：
+
 ```sql
 UPDATE `tb_employee` SET `em_typework` = 'Document staff' WHERE `tb_employeeid` = 10;
 ```
-
-
-
-
 
 ## 数据库表结构
 
@@ -607,6 +904,8 @@ INSERT INTO `tb_department` VALUES (10, 'Asp', '2014-11-20', 'Software');
 
 | `tb_inviteJobid` | `name` | `sex` | `age` | `born` | `job` | `specialty` | `experience` | `teachSchool` | `afterSchool` | `tel` | `createtime` | `content` | `isstock` | `address` |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+
 
 ```sql
 INSERT INTO `tb_inviteJob` VALUES (1, 'Amar', 'M', '30', '1985-02-22', 'Permanent', 'POSITIVE', 'Experience', 'BE', 'Working', '1234567890', '2014-11-22', 'Advance', 'Yes', '1Agra');
@@ -641,10 +940,6 @@ INSERT INTO `tb_cj` VALUES (10, 'Software Engineer', 'Reward', 'Good', 20000, '2
 
 | `SHR.sql` | `WebContent` | `Database` |
 | :--- | :--- | :--- |
-
-
-
-
 
 ## tb_pay 表
 
@@ -701,10 +996,6 @@ INSERT INTO `tb_cj` VALUES (9 , 'Project Lead', 'Reward', 'Good', '80000', '2014
 INSERT INTO `tb_cj` VALUES (10 , 'Software Engineer', 'Reward', 'Good', '20000', '2014-11-20');
 ```
 
-
-
-
-
 ## 数据库数据
 
 | `tb_payid` | `pay_emNumber` | `pay_emName` | `pay_month` | `pay_baseMoney` | `pay_overtime` | `pay_age` | `pay_check` | `pay_absent` | `pay_safety` |
@@ -725,6 +1016,7 @@ INSERT INTO `tb_pay` VALUES (10 , '10010', 'Jagan', 'November', '20000', '2000',
 # 第 4 章：所有 Java 文件
 
 ## applicationResources.properties
+
 ```properties
 com.emptyContent=请输入消息
 com.emptyOther=请输入回复
@@ -732,6 +1024,9 @@ com.emptyLand=请填写信息
 ```
 
 ## CAction
+
+
+
 ```java
 package com.abd.action;
 
@@ -795,6 +1090,7 @@ public class CjAction extends DispatchAction {
 ```
 
 ## DepartmentAction
+
 ```java
 package com.abd.action;
 
@@ -852,11 +1148,10 @@ public class DepartmentAction extends DispatchAction {
 ```
 
 ## EmployeeAction
+
 ```java
 package com.abd.action;
 ```
-
-
 
 
 
@@ -1037,8 +1332,6 @@ public class EmployeeAction extends DispatchAction {
 
 
 
-
-
 ## InviteJobAction 类
 
 ```java
@@ -1203,10 +1496,6 @@ public class ManagerAction extends DispatchAction {
 
 
 
-
-
-## PayAction 类
-
 ```java
 package com.abd.action;
 import java.util.List;
@@ -1294,7 +1583,7 @@ public class PayAction extends DispatchAction {
 }
 ```
 
-## TrainAction 类
+## `TrainAction`类
 
 ```java
 package com.abd.action;
@@ -1347,7 +1636,7 @@ public class TrainAction extends DispatchAction {
 }
 ```
 
-## ObjectDao 类
+## `ObjectDao`类
 
 ```java
 package com.abd.dao;
@@ -1416,18 +1705,17 @@ public class ObjectDao extends HibernateDaoSupport {
 }
 ```
 
-## Form 包
+## `Form`包
 
 ```java
 package com.abd.form;
 ```
+
 ![](img/image_rsrc7EW.jpg)
 
+### `CjForm`
 
 
-
-
-### CjForm
 
 ```java
 package com.abd.form;
@@ -1682,11 +1970,9 @@ public class EmployeeForm extends ActionForm {
 
 `package com.abd.form;`
 
-
-
-
-
 ### InviteJobForm
+
+
 
 ```java
 package com.abd.form;
@@ -1830,7 +2116,7 @@ public class InviteJobForm extends ActionForm {
 }
 ```
 
-## ManagerForm
+## `ManagerForm`
 
 ```java
 package com.abd.form;
@@ -1879,7 +2165,7 @@ public class ManagerForm extends ActionForm {
 }
 ```
 
-## PayForm
+## `PayForm`
 
 ```java
 package com.abd.form;
@@ -1978,7 +2264,7 @@ public class PayForm extends ActionForm {
 }
 ```
 
-## TrainForm
+## `TrainForm`
 
 ```java
 package com.abd.form;
@@ -2041,7 +2327,9 @@ public class TrainForm extends ActionForm {
 }
 ```
 
-## CjForm.hbm.xml
+## `CjForm.hbm.xml`
+
+
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -2071,11 +2359,8 @@ public class TrainForm extends ActionForm {
 </hibernate-mapping>
 ```
 
+### `TrainForm.hbm.xml`
 
-
-
-
-### TrainForm.hbm.xml
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
@@ -2110,8 +2395,10 @@ public class TrainForm extends ActionForm {
 </hibernate-mapping>
 ```
 
-### EmployeeForm.hbm.xml
+### `EmployeeForm.hbm.xml`
+
 `package com.abd.form;`
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
@@ -2188,8 +2475,12 @@ public class TrainForm extends ActionForm {
 </hibernate-mapping>
 ```
 
-### InviteForm.hbm.xml
+### `InviteForm.hbm.xml`
+
 `package com.abd.form;`
+
+
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
@@ -2245,8 +2536,10 @@ public class TrainForm extends ActionForm {
 </hibernate-mapping>
 ```
 
-### ManagerForm.hbm.xml
+### `ManagerForm.hbm.xml`
+
 `package com.abd.form;`
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
@@ -2269,12 +2562,9 @@ public class TrainForm extends ActionForm {
 </hibernate-mapping>
 ```
 
-### PayForm.hbm.xml
+### `PayForm.hbm.xml`
+
 `package com.abd.form;`
-
-
-
-
 
 ## Hibernate 配置
 
@@ -2318,7 +2608,7 @@ public class TrainForm extends ActionForm {
 </hibernate-mapping>
 ```
 
-### TrainForm.hbm (包 `com.abd.form`)
+### `TrainForm.hbm`（包`com.abd.form`）
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -2342,9 +2632,10 @@ public class TrainForm extends ActionForm {
 </hibernate-mapping>
 ```
 
-## 工具类 (包 `com.abd.tool`)
+## 工具类（包`com.abd.tool`）
 
-### GetAutoNumber
+### `GetAutoNumber`
+
 ```java
 package com.abd.tool;
 public class GetAutoNumber {
@@ -2358,7 +2649,8 @@ public class GetAutoNumber {
 }
 ```
 
-### GetSystemTime
+### `GetSystemTime`
+
 ```java
 package com.abd.tool;
 import java.util.Calendar;
@@ -2378,7 +2670,10 @@ public class GetSystemTime {
 }
 ```
 
-### MyPagination
+### `MyPagination`
+
+
+
 ```java
 package com.abd.tool;
 import java.util.ArrayList;
@@ -2429,11 +2724,8 @@ public class MyPagination {
     }
 }
 ```
-*(注：由于原文中 getMaxPage 逻辑存在混乱或未完成，翻译时仅翻译了注释并保持了原始代码结构，但根据上下文意图微调了逻辑描述以确保可读性)*
 
-
-
-
+*(注：由于原文中`getMaxPage`逻辑存在混乱或未完成，翻译时仅翻译了注释并保持了原始代码结构，但根据上下文意图微调了逻辑描述以确保可读性)*
 
 # 项目配置
 
@@ -2488,6 +2780,7 @@ hr{border-style:dashed; color:#CCCCCC;}
 ## 数据库结构
 
 ### 基础信息
+
 | 项目 | 配置 |
 | :--- | :--- |
 | 项目 | `smarthrm` |
@@ -2496,6 +2789,7 @@ hr{border-style:dashed; color:#CCCCCC;}
 | 端口 | `3306` |
 
 ### 表定义
+
 ```sql
 CREATE TABLE tb_department (
     id VARCHAR(16) PRIMARY KEY,
@@ -2560,21 +2854,22 @@ CREATE TABLE tb_train (
 );
 ```
 
-
-
 ## 数据库信息
 
 - **数据库名称**: `smarthrm`
 - **表总数**: `7`
 
 ## 凭据
+
 - **账号名称**: `admin`
 - **密码**: `101`
 
 ## smarthrm 插入 .sql
+
 ### 表中的首次插入 SQL
 
-#### 表格：tb_manager
+#### 表格：`tb_manager`
+
 列：`tb_managerid`, `account`, `password`, `managerLevel`
 
 ```sql
@@ -2584,8 +2879,11 @@ INSERT INTO `tb_manager` VALUES (2 , 'admin', 'admin', 'senior');
 
 =========================================================================================
 
-#### 表格：tb_employee
+#### 表格：`tb_employee`
+
 列：`tb_employeeid`, `em_serialNumber`, `em_name`, `em_sex`, `em_age`, `em_IDCard`, `em_born`, `em_nation`, `em_marriage`, `em_visage`, `em_ancestralHome`, `em_tel`, `em_address`, `em_afterschool`, `em_speciality`, `em_culture`, `em_startime`, `em_departmentId`, `em_typework`, `em_creatime`, `em_createName`, `em_bz`
+
+
 
 ```sql
 INSERT INTO `tb_employee` VALUES (1 , '1001', 'Amar', 'M', '30', '1001a', '1985-02-22', 'Indian', 'Married', 'No', 'Agra', '1234567890', 'Agra', 'Working', 'Software', 'Graduate', '2014-1-20', '1', 'Programmer', '2014-1-22', 'Amar', 'Software');
@@ -2607,14 +2905,11 @@ INSERT INTO `tb_employee` VALUES (10 , '10010', 'Jagan', 'M', '30', '10010j', '1
 ```
 
 | `SHR.sql` | `网页内容` | `数据库` |
+| --------- | ---------- | -------- |
 
+## 部门表（`tb_department`）
 
-
-
-
-## 部门表 (tb_department)
-
-字段结构：`tb_departmentid`, `dt_name`, `dt_createTime`, `dt_bz`
+字段结构：`tb_departmentid`、`dt_name`、`dt_createTime`、`dt_bz`
 
 ```sql
 INSERT INTO `tb_department` VALUES (1, 'Spring', '2014-11-20', 'Software');
@@ -2629,9 +2924,9 @@ INSERT INTO `tb_department` VALUES (9, 'C Sharp', '2014-11-20', 'Software');
 INSERT INTO `tb_department` VALUES (10, 'Asp', '2014-11-20', 'Software');
 ```
 
-## 招聘职位表 (tb_inviteJob)
+## 招聘职位表（`tb_inviteJob`）
 
-字段结构：`tb_inviteJobid`, `name`, `sex`, `age`, `born`, `job`, `specialty`, `experience`, `teachSchool`, `afterSchool`, `tel`, `createtime`, `content`, `isstock`, `address`
+字段结构：`tb_inviteJobid`、`name`、`sex`、`age`、`born`、`job`、`specialty`、`experience`、`teachSchool`、`afterSchool`、`tel`、`createtime`、`content`、`isstock`、`address`
 
 ```sql
 INSERT INTO `tb_inviteJob` VALUES (1, 'Amar', 'M', 30, '1985-02-22', 'Permanent', 'POSITIVE', 'Experience', 'BE', 'Working', '1234567890', '2014-1-2', 'Advance', 'Yes', '1ra');
@@ -2646,9 +2941,9 @@ INSERT INTO `tb_inviteJob` VALUES (9, 'Indra', 'M', 30, '1985-02-22', 'Permanent
 INSERT INTO `tb_inviteJob` VALUES (10, 'Jagan', 'M', 30, '1985-02-22', 'Permanent', 'POSITIVE', 'Experience', 'BE', 'Working', '1234567890', '2014-11-22', 'Advance', 'Yes', '10Jabalpur');
 ```
 
-## 招聘详情表 (tb_cj)
+## 招聘详情表（`tb_cj`）
 
-字段结构：`tb_cjid`, `cj_title`, `cj_type`, `cj_content`, `cj_money`, `cj_time`
+字段结构：`tb_cjid`、`cj_title`、`cj_type`、`cj_content`、`cj_money`、`cj_time`
 
 ```sql
 INSERT INTO `tb_cj` VALUES (1, 'Software Engineer', 'Reward', 'Good', 2000, '2014-1-20');
@@ -2663,13 +2958,9 @@ INSERT INTO `tb_cj` VALUES (9, 'Project Lead', 'Reward', 'Good', 80000, '2014-11
 INSERT INTO `tb_cj` VALUES (10, 'Software Engineer', 'Reward', 'Good', 20000, '2014-11-20');
 ```
 
+## `tb_pay`表
 
-
-
-
-## tb_pay 表
-
-字段结构：`tb_payid`, `pay_emNumber`, `pay_emName`, `pay_month`, `pay_baseMoney`, `pay_overtime`, `pay_age`, `pay_check`, `pay_absent`, `pay_safety`
+字段结构：`tb_payid`、`pay_emNumber`、`pay_emName`、`pay_month`、`pay_baseMoney`、`pay_overtime`、`pay_age`、`pay_check`、`pay_absent`、`pay_safety`
 
 ```sql
 INSERT INTO `tb_pay` VALUES (1 , '1001', 'Amar', 'November', '10000', '2000', '1', '100', '0', '128');
@@ -2684,9 +2975,11 @@ INSERT INTO `tb_pay` VALUES (9 , '009', 'Indra', 'November', '80000', '2000', '1
 INSERT INTO `tb_pay` VALUES (10 , '1010', 'Jagan', 'November', '20000', '2000', '1', '100', '0', '128');
 ```
 
-## tb_train 表
+## `tb_train`表
 
-字段结构：`tb_trainid`, `tn_man`, `tn_title`, `tn_content`, `tn_time`, `tn_address`, `tn_join`, `tn_bz`
+字段结构：`tb_trainid`、`tn_man`、`tn_title`、`tn_content`、`tn_time`、`tn_address`、`tn_join`、`tn_bz`
+
+
 
 ```sql
 INSERT INTO `tb_train` VALUES (1 , 'Amar', 'Java', 'Advance', '8 AM', 'Bangalore', 'AM', 'Good');
@@ -2703,7 +2996,8 @@ INSERT INTO `tb_train` VALUES (10 , 'Amar', 'Java', 'Advance', '10 AM', 'Bangalo
 
 ## 脚本与样式
 
-### validate.js
+### `validate.js`
+
 ```javascript
 function checkEmpty(form) {
     for(i=0;i<form.length;i++) {
@@ -2771,17 +3065,15 @@ function updatePassword() {
 }
 ```
 
-### validate.css
+### `validate.css`
+
 (样式内容略)
 
 ## 配置文件
+
 路径：`WebContent\WEB-INF/applicationContext.xml`
 
-
-
-
-
-### Spring 配置 (beans.xml)
+### Spring 配置 (`beans.xml`)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -2868,7 +3160,7 @@ function updatePassword() {
 </beans>
 ```
 
-### Struts 配置 (struts-config.xml)
+### Struts 配置 (`struts-config.xml`)
 
 路径：`WebContent/WEB-INF/struts-config.xml`
 
@@ -2913,9 +3205,11 @@ function updatePassword() {
 </struts-config>
 ```
 
-### 部署 (web.xml)
+### 部署 (`web.xml`)
 
 路径：`WebContent/WEB-INF/web.xml`
+
+
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -2949,9 +3243,10 @@ function updatePassword() {
 </web-app>
 ```
 
-### JSP 页面
+## JSP 页面
 
-**cj_deith.jsp**
+### `cj_deith.jsp`
+
 路径：`WebContent/cj_deith.jsp`
 
 ```jsp
@@ -2959,12 +3254,9 @@ function updatePassword() {
 <%out.print("<script language=javascript>window.location.href='cj.do?method=queryCj';</script>");%>
 ```
 
-**cj_insert.jsp**
+### `cj_insert.jsp`
+
 路径：`WebContent/cj_insert.jsp`
-
-
-
-
 
 ## 激励管理 - 添加激励
 
@@ -3061,6 +3353,8 @@ function updatePassword() {
 ## 激励管理 - 激励列表
 
 ### `cj_query.jsp`
+
+
 
 ```html
 <%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %>
@@ -3185,14 +3479,13 @@ function updatePassword() {
 </html:html>
 ```
 
-
-
-
-
 # 项目结构概述
 
-## dealwith.jsp
+## `dealwith.jsp`
+
 path: `WebContent/dealwith.jsp`
+
+
 
 ```html
 <%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage=""
@@ -3260,7 +3553,8 @@ path: `WebContent/dealwith.jsp`
 </html:html>
 ```
 
-## department_deawith.jsp
+## `department_deawith.jsp`
+
 path: `WebContent/department_deawith.jsp`
 
 ```html
@@ -3281,7 +3575,8 @@ path: `WebContent/department_deawith.jsp`
 </html>
 ```
 
-## department_insert.jsp
+## `department_insert.jsp`
+
 path: `WebContent/department_insert.jsp`
 
 ```html
@@ -3293,8 +3588,11 @@ path: `WebContent/department_insert.jsp`
 }%>
 ```
 
-## department_query.jsp
+## `department_query.jsp`
+
 path: `WebContent/department_query.jsp`
+
+
 
 ```html
 <%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %>
@@ -3366,22 +3664,19 @@ path: `WebContent/department_query.jsp`
     </table>
 </body>
 </html:html>
-
 ```
 
-
-
-
-
 ## 智能人力资源管理 - 部门管理
+
+
 
 ```jsp
 <%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %>
 <jsp:directive.page import="java.util.List"/>
 <jsp:directive.page import="com.abd.form.EmployeeForm"/>
-<%@ taglib prefix="html" uri="/WEB-INF/struts-html.tld"/>
-<%@ taglib prefix="logic" uri="/WEB-INF/struts-logic.tld"/>
-<%@ taglib prefix="bean" uri="/WEB-INF/struts-bean.tld"/>
+<%@ taglib prefix="html" uri="/WEB-INF/struts-html.tld"%>
+<%@ taglib prefix="logic" uri="/WEB-INF/struts-logic.tld"%>
+<%@ taglib prefix="bean" uri="/WEB-INF/struts-bean.tld"%>
 <html:html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
@@ -3485,11 +3780,9 @@ path: `WebContent/department_query.jsp`
 </html>
 ```
 
-
-
-
-
 由于您提供的文本是一个 JSP 代码文件，根据您的要求，我将对代码中的 HTML 文本内容、属性值（如 title）进行中文翻译，同时严格保留了所有的代码结构、标签、逻辑 以及 Markdown 格式。
+
+
 
 ```jsp
 <%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %>
@@ -3650,8 +3943,6 @@ path: `WebContent/department_query.jsp`
 
 
 
-
-
 # 智能人力资源管理 - 员工管理
 
 ## 添加员工表
@@ -3663,9 +3954,9 @@ path: `WebContent/department_query.jsp`
 <%@ taglib prefix="html" uri="/WEB-INF/struts-html.tld"%>
 <%@ taglib prefix="logic" uri="/WEB-INF/struts-logic.tld"%>
 <%@ taglib prefix="bean" uri="/WEB-INF/struts-bean.tld"%>
-```
 
 <html:html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
     <title>智能人力资源管理 - 员工管理</title>
@@ -3690,6 +3981,7 @@ path: `WebContent/department_query.jsp`
         }
     </script>
 </head>
+
 <<body>
     <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
         <tr>
@@ -3774,221 +4066,362 @@ path: `WebContent/department_query.jsp`
                                             %>
                                             <html:option value="<%=departmentForm.getId()%>"><%=departmentForm.getDt_name()%></html:option>
                                             <%}%%>
+```
+
+
+
+```jsp
                                         </html:select></td>
+
                                         <th>岗位：</th>
+
                                         <td bgcolor="#FFFFFF"><html:select property="em_typework">
+
                                             <html:option value="Programmer">程序员</html:option>
+
                                             <html:option value="Document staff">文档专员</html:option>
+
                                             <html:option value="Department Manager">部门经理</html:option>
+
                                         </html:select></td>
+
                                     </tr>
+
                                     <tr>
+
                                         <th height="25">注册姓名：</th>
+
                                         <td bgcolor="#FFFFFF"><html:text property="em_createName" value="${sessionScope.managerform.account}" readonly="readonly" onclick="alert('此文本框设置为只读，您无法修改')"/></td>
+
                                         <th>注册时间：</th>
+
                                         <td bgcolor="#FFFFFF"><html:text property="em_creatime" value="<%=getTime.getToday()%>" readonly="readonly" onclick="alert('此文本框设置为只读，您无法修改')"/></td>
+
                                     </tr>
+
                                     <tr>
+
                                         <th height="107">备注信息：</th>
+
                                         <td colspan="3" bgcolor="#FFFFFF"><html:textarea property="em_bz" title="请输入备注信息" styleClass="textarea" rows="7" cols="75"/></td>
+
                                     </tr>
+
                                 </table>
+
                                 <br>
+
                                 <html:submit>提交</html:submit>
+
                                 &nbsp;
+
                                 <html:reset>重置</html:reset>
+
                                 &nbsp;
+
                                 <html:button property="back" value="返回" onclick="javascript:history.go(-1);"></html:button>
+
                             </html:form>
+
                         </</td>
+
                     </tr>
+
                 </table>
+
                 <jsp:include page="down.jsp" flush="true" />
+
             </td>
+
         </tr>
+
     </table>
+
 </body>
+
 </html:html>
 ```
 
 | `employee_query.jsp` | `WebContent` |
 
+```jsp
+<%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %>
 
+<jsp:directive.page import="java.util.List"/>
+
+<jsp:directive.page import="com.abd.form.DepartmentForm"/>
+
+<%@ taglib prefix="html" uri="/WEB-INF/struts-html.tld"/>
+
+<%@ taglib prefix="logic" uri="/WEB-INF/struts-logic.tld"/>
+
+<%@ taglib prefix="bean" uri="/WEB-INF/struts-bean.tld"/>
+
+<html:html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+    <title>智能人力资源管理 - 招聘管理</title>
+
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script language="JavaScript">
+
+    function deleteForm(date){
+
+        if(confirm("你确定要删除这条员工信息吗？")){
+
+            window.location.href="employee.do?method=deleteEmployee&em_serialNumber="+date;
+
+        }
+
+    }
+
+</script>
+
+<jsp:useBean id="pagination" class="com.abd.tool.MyPagination" scope="session"></jsp:useBean>
+
+<%
+
+    // 以下方法用于设置提交方法
+
+    String condition="method=queryEmployee";
+
+    Integer departmentId=null;
+
+    if(request.getAttribute("departmentId")!=null){
+
+        departmentId=Integer.valueOf((String)request.getAttribute("departmentId"));
+
+        condition="method=queryEmploye&departmentId="+departmentId+"";
+
+    }
+
+    // 以下方法用于获取部门名称
+
+    typeList departmentList=(List)request.getAttribute("departmentList");
+
+    // 以下是分页操作
+
+    String str=request.getParameter("Page");
+
+    int Page=1;
+
+    List list=null;
+
+    if(str==null){
+
+        list=(List)request.getAttribute("list");
+
+        int pagesize=11;
+
+        // 指定每页显示的记录数
+
+        list=pagination.getInitPage(list,Page,pagesize);
+
+        // 初始化分页信息
+
+    }else{
+
+        Page=pagination.getPage(str);
+
+        list=pagination.getAppointPage(Page);
+
+        // 获取指定页的数据
+
+    }
+
+%>
+
+<<body>
+
+    <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+
+        <tr>
+
+            <td align="center">
+
+                <jsp:include page="top.jsp" flush="true" />
+
+                <table width="801" height="48" border="0" cellpadding="0" cellspacing="0" background="images/center1.jpg">
+
+                    <tr>
+
+                        <td valign="top">
+
+                            <table width="494">
+
+                                <tr>
+
+                                    <td width="45" height="25">&nbsp;</td>
+
+                                    <td width="437" valign="bottom"> <font color="#FF0000"> 员工列表</font></</td>>
+
+                                </tr>
+
+                            </table>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+                <table width="801" height="436" border="0" cellpadding="0" cellspacing="0" background="images/center2.jpg">
+
+                    <tr>
+
+                        <td height="436" valign="top" align="center">
+
+                            <table height="19">
+
+                                <tr align="center">
+
+                                    <td><b>部门</b>&nbsp;&nbsp; 
+
+                                        <logic:iterate id="departmentForm" collection="<%=departmentList%>" indexId="number">
+
+                                            <bean:define id="id" name="departmentForm" property="id"/>
+
+                                            <a href="employee.do?method=queryEmployee&departmentId=<%=id%>"><bean:write name="departmentForm" property="dt_name"/></a>&nbsp;&nbsp;
+
+                                        </logic:iterate>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr align="center">
+
+                                    <td> <a href="employee.do?method=queryEmployee"><b>所有员工</b></a> </</td>>
+
+                                </tr>
+
+                            </table>
+
+                            <br>
+
+                            <%if(pagination.getRecordSize()>0){%>
+
+                                <table width="739" border="1" cellpadding="1" cellspacing="1" bordercolor="#FFFFFF" bgcolor="66583D">
+
+                                    <tr align="center">
+
+                                        <th width="66" height="19" class="word_white">员工 ID</th>
+
+                                        <th width="66" class="word_white">姓名</th>
+
+                                        <th width="57" class="word_white">性别</th>
+
+                                        <th width="93" class="word_white">部门</th>
+
+                                        <th width="60" class="word_white">员工类型</th>
+
+                                        <th width="90" class="word_white">学历</th>
+
+                                        <th width="113" class="word_white">入职时间</th>
+
+                                        <th width="150" class="word_white">操作</th>
+
+                                    </tr>
+
+                                    <logic:iterate id="employeeForm" collection="<%=list%>" indexId="number">
+
+                                        <bean:define id="em_serialNumber" name="employeeForm" property="id"/>
+
+                                        <bean:define id="em_name" name="employeeForm" property="name"/>
+
+                                        <bean:define id="em_sex" name="employeeForm" property="sex"/>
+
+                                        <bean:define id="em_department" name="employeeForm" property="department"/>
+
+                                        <bean:define id="em_type" name="employeeForm" property="type"/>
+
+                                        <bean:define id="em_education" name="employeeForm" property="education"/>
+```
 
 
 
 ```jsp
-<%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %>
-<jsp:directive.page import="java.util.List"/>
-<jsp:directive.page import="com.abd.form.DepartmentForm"/>
-<%@ taglib prefix="html" uri="/WEB-INF/struts-html.tld"/>
-<%@ taglib prefix="logic" uri="/WEB-INF/struts-logic.tld"/>
-<%@ taglib prefix="bean" uri="/WEB-INF/struts-bean.tld"/>
-<html:html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-    <title>智能人力资源管理 - 招聘管理</title>
-    <link type="text/css" rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script language="JavaScript">
-    function deleteForm(date){
-        if(confirm("你确定要删除这条员工信息吗？")){
-            window.location.href="employee.do?method=deleteEmployee&em_serialNumber="+date;
-        }
-    }
-</script>
-<jsp:useBean id="pagination" class="com.abd.tool.MyPagination" scope="session"></jsp:useBean>
-<%
-    // 以下方法用于设置提交方法
-    String condition="method=queryEmployee";
-    Integer departmentId=null;
-    if(request.getAttribute("departmentId")!=null){
-        departmentId=Integer.valueOf((String)request.getAttribute("departmentId"));
-        condition="method=queryEmploye&departmentId="+departmentId+"";
-    }
-    // 以下方法用于获取部门名称
-    typeList departmentList=(List)request.getAttribute("departmentList");
-    // 以下是分页操作
-    String str=request.getParameter("Page");
-    int Page=1;
-    List list=null;
-    if(str==null){
-        list=(List)request.getAttribute("list");
-        int pagesize=11;
-        // 指定每页显示的记录数
-        list=pagination.getInitPage(list,Page,pagesize);
-        // 初始化分页信息
-    }else{
-        Page=pagination.getPage(str);
-        list=pagination.getAppointPage(Page);
-        // 获取指定页的数据
-    }
-%>
-<<body>
-    <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<bean:define id="em_startime" name="employeeForm" property="startime"/>
+<bean:define id="em_work" name="employeeForm" property="work"/>
+<bean:define id="em_culture" name="employeeForm" property="culture"/>
+<bean:define id="em_departmentId" name="employeeForm" property="departmentId"/>
+
+<tr align="center">
+    <td><a href="#"><number></a></td>
+    <td><a href="employee.do?method=queryEmployee&departmentId=<%=em_departmentId%>"><bean:write name="employeeForm" property="em_name"/></a></td>
+    <td><bean:write name="employeeForm" property="em_sex"/></td>
+    <td><bean:write name="employeeForm" property="em_department"/></td>
+    <td><bean:write name="employeeForm" property="em_type"/></td>
+    <td><bean:write name="employeeForm" property="em_education"/></td>
+    <td><bean:write name="employeeForm" property="em_startime"/></td>
+    <td>
+        <%if(em_departmentId==null){%>
+            <a href="employee.do?method=queryOneEmployee&em_serialNumber=<%=em_serialNumber%>"><i class="fa file-o"></i> 详情</a>
+            &nbsp;&nbsp;
+            <a href="employee.do?method=forwardEmployee&em_serialNumber=<%=em_serialNumber%>"><i class="fa fa-edit"></i> 更新</a>
+            &nbsp;&nbsp;
+            <a href="javascript:deleteForm('<<%=em_serialNumber%>')"><i class="fa fa-close"></i> 删除</a>
+        <%}%%>
+    </td>
+</tr>
+</logic:iterate>
+</table>
+
+<table width="650">
+    <tr>
+        <td>
+            <div align="right"><%=pagination.printCtrl(Page,condition)%></div>
+        </td>
+    </tr>
+</table>
+
+<%else{out.print("没有其他操作");}%%>
+</td>
+</tr>
+</</table>
+
+<%if(departmentId==null){%>
+    <table width="650">
         <tr>
-            <td align="center">
-                <jsp:include page="top.jsp" flush="true" />
-                <table width="801" height="48" border="0" cellpadding="0" cellspacing="0" background="images/center1.jpg">
-                    <tr>
-                        <td valign="top">
-                            <table width="494">
-                                <tr>
-                                    <td width="45" height="25">&nbsp;</td>
-                                    <td width="437" valign="bottom"> <font color="#FF0000"> 员工列表</font></</td>>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-                <table width="801" height="436" border="0" cellpadding="0" cellspacing="0" background="images/center2.jpg">
-                    <tr>
-                        <td height="436" valign="top" align="center">
-                            <table height="19">
-                                <tr align="center">
-                                    <td><b>部门</b>&nbsp;&nbsp; 
-                                        <logic:iterate id="departmentForm" collection="<%=departmentList%>" indexId="number">
-                                            <bean:define id="id" name="departmentForm" property="id"/>
-                                            <a href="employee.do?method=queryEmployee&departmentId=<%=id%>"><bean:write name="departmentForm" property="dt_name"/></a>&nbsp;&nbsp;
-                                        </logic:iterate>
-                                    </td>
-                                </tr>
-                                <tr align="center">
-                                    <td> <a href="employee.do?method=queryEmployee"><b>所有员工</b></a> </</td>>
-                                </tr>
-                            </table>
-                            <br>
-                            <%if(pagination.getRecordSize()>0){%>
-                                <table width="739" border="1" cellpadding="1" cellspacing="1" bordercolor="#FFFFFF" bgcolor="66583D">
-                                    <tr align="center">
-                                        <th width="66" height="19" class="word_white">员工 ID</th>
-                                        <th width="66" class="word_white">姓名</th>
-                                        <th width="57" class="word_white">性别</th>
-                                        <th width="93" class="word_white">部门</th>
-                                        <th width="60" class="word_white">员工类型</th>
-                                        <th width="90" class="word_white">学历</th>
-                                        <th width="113" class="word_white">入职时间</th>
-                                        <th width="150" class="word_white">操作</th>
-                                    </tr>
-                                    <logic:iterate id="employeeForm" collection="<%=list%>" indexId="number">
-                                        <bean:define id="em_serialNumber" name="employeeForm" property="id"/>
-                                        <bean:define id="em_name" name="employeeForm" property="name"/>
-                                        <bean:define id="em_sex" name="employeeForm" property="sex"/>
-                                        <bean:define id="em_department" name="employeeForm" property="department"/>
-                                        <bean:define id="em_type" name="employeeForm" property="type"/>
-                                        <bean:define id="em_education" name="employeeForm" property="education"/>
-                                        <bean:define id="em_startime" name="employeeForm" property="startime"/>
-                                        <bean:define id="em_work" name="employeeForm" property="work"/>
-                                        <bean:define id="em_culture" name="employeeForm" property="culture"/>
-                                        <bean:define id="em_departmentId" name="employeeForm" property="departmentId"/>
-                                        <tr align="center">
-                                            <td><a href="#"><number></a></td>
-                                            <td><a href="employee.do?method=queryEmployee&departmentId=<%=em_departmentId%>"><bean:write name="employeeForm" property="em_name"/></a></td>
-                                            <td><bean:write name="employeeForm" property="em_sex"/></td>
-                                            <td><bean:write name="employeeForm" property="em_department"/></td>
-                                            <td><bean:write name="employeeForm" property="em_type"/></td>
-                                            <td><bean:write name="employeeForm" property="em_education"/></td>
-                                            <td><bean:write name="employeeForm" property="em_startime"/></td>
-                                            <td>
-                                                <%if(em_departmentId==null){%>
-                                                    <a href="employee.do?method=queryOneEmployee&em_serialNumber=<%=em_serialNumber%>"><i class="fa file-o"></i> 详情</a>
-                                                    &nbsp;&nbsp;
-                                                    <a href="employee.do?method=forwardEmployee&em_serialNumber=<%=em_serialNumber%>"><i class="fa fa-edit"></i> 更新</a>
-                                                    &nbsp;&nbsp;
-                                                    <a href="javascript:deleteForm('<<%=em_serialNumber%>')"><i class="fa fa-close"></i> 删除</a>
-                                                <%}%%>
-                                            </td>
-                                        </tr>
-                                    </logic:iterate>
-                                </table>
-                                <table width="650">
-                                    <tr>
-                                        <td>
-                                            <div align="right"><%=pagination.printCtrl(Page,condition)%></div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            <%else{out.print("没有其他操作");}%%>
-                        </td>
-                    </tr>
-                </</table>
-                <%if(departmentId==null){%>
-                    <table width="650">
-                        <tr>
-                            <td align="right">
-                                <a href="employee.do?method=forwardInsertEmployee"><font color="red" size="5"> 添加员工</font></a>
-                            </td>
-                        </tr>
-                    </table>
-                <%}%%>
+            <td align="right">
+                <a href="employee.do?method=forwardInsertEmployee"><font color="red" size="5"> 添加员工</font></a>
             </td>
         </tr>
     </table>
-    <jsp:include page="down.jsp" flush="true" />
+<%}%%>
+</td>
+</tr>
+</table>
+
+<jsp:include page="down.jsp" flush="true" />
 </body>
 </html:html>
 ```
 
 | `employee_queryOne.jsp` | `WebContent` |
 
-
-
-
-
 ```jsp
-<%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %}
+<%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %>
 <jsp:directive.page import="java.util.List"/>
 <jsp:directive.page import="com.abd.form.DepartmentForm"/>
 <jsp:directive.page import="com.abd.form.EmployeeForm"/>
-<%@ taglib prefix="html" uri="/WEB-INF/struts-html.tld"%(
-<%@ taglib prefix="logic" uri="/WEB-INF/struts-logic.tld"%(
+<%@ taglib prefix="html" uri="/WEB-INF/struts-html.tld"%>
+<%@ taglib prefix="logic" uri="/WEB-INF/struts-logic.tld"%>
 <%@ taglib prefix="bean" uri="/WEB-INF/struts-bean.tld"%>
+
 <html:html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
     <title>智能人力资源管理 - 员工管理</title>
     <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
+
 <%
     EmployeeForm employeeForm=(EmployeeForm)request.getAttribute("employeeForm");
     String departmentName=null;
@@ -3999,7 +4432,8 @@ path: `WebContent/department_query.jsp`
             departmentName=departmentForm.getDt_name();
     }
 %>
-<body
+
+<body>
     <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
         <tr>
             <td align="center">
@@ -4054,61 +4488,63 @@ path: `WebContent/department_query.jsp`
                                     <th height="25">电话：</th>
                                     <td bgcolor="#FFFFFF">${requestScope.employeeForm.em_tel}</td>
                                     <th>家庭地址：</th>
-                                    <td bgcolor="#FFFFFF">${requestScope.employeeForm.em_address}</td>
-                                </tr>
-                                <tr>
-                                    <th height="25">毕业学校：</th>
-                                    <td bgcolor="#FFFFFF">${requestScope.employeeForm.em_afterschool}</td>
-                                    <th>专长：</th>
-                                    <td bgcolor="#FFFFFF">${requestScope.employeeForm.em_speciality}</td>
-                                </tr>
-                                <tr>
-                                    <th height="25">学历程度：</th>
-                                    <td bgcolor="#FFFFFF">${requestScope.employeeForm.em_culture}</td>
-                                    <th>入职时间：</th>
-                                    <td bgcolor="#FFFFFF">${requestScope.employeeForm.em_startime}</td>
-                                </tr>
-                                <tr>
-                                    <th height="25">部门名称：</th>
-                                    <td bgcolor="#FFFFFF"><%=departmentName %></td>
-                                    <th>岗位性质：</th>
-                                    <td bgcolor="#FFFFFF">${requestScope.employeeForm.em_typework}</td>
-                                </tr>
-                                <tr>
-                                    <th height="25">登记姓名：</th>
-                                    <td bgcolor="#FFFFFF">${requestScope.employeeForm.em_creatime}</td>
-                                    <th>登记时间：</th>
-                                    <td bgcolor="#FFFFFF">${requestScope.employeeForm.em_creatime}</td>
-                                </tr>
-                                <tr>
-                                    <th height="107">备注信息：</th>
-                                    <td colspan="3" bgcolor="#FFFFFF">${requestScope.employeeForm.em_bz}</td>
-                                </tr>
-                            </table>
-                            <br>
-                            <html:button property="back" value="返回" onclick="javascript:history.go(-1);"></html:button>
-                        </td>
-                    </tr>
-                </table>
-                <jsp:include page="down.jsp" flush="true" />
-            </td>
-        </tr>
-    </table>
-</body>
-</html:html>
 ```
 
 
 
-
+```jsp
+<td bgcolor="#FFFFFF">${requestScope.employeeForm.em_address}</td>
+</tr>
+<tr>
+    <th height="25">毕业学校：</th>
+    <td bgcolor="#FFFFFF">${requestScope.employeeForm.em_afterschool}</td>
+    <th>专长：</th>
+    <td bgcolor="#FFFFFF">${requestScope.employeeForm.em_speciality}</td>
+</tr>
+<tr>
+    <th height="25">学历程度：</th>
+    <td bgcolor="#FFFFFF">${requestScope.employeeForm.em_culture}</td>
+    <th>入职时间：</th>
+    <td bgcolor="#FFFFFF">${requestScope.employeeForm.em_startime}</td>
+</tr>
+<tr>
+    <th height="25">部门名称：</th>
+    <td bgcolor="#FFFFFF"><%=departmentName %></td>
+    <th>岗位性质：</th>
+    <td bgcolor="#FFFFFF">${requestScope.employeeForm.em_typework}</td>
+</tr>
+<tr>
+    <th height="25">登记姓名：</th>
+    <td bgcolor="#FFFFFF">${requestScope.employeeForm.em_creatime}</td>
+    <th>登记时间：</th>
+    <td bgcolor="#FFFFFF">${requestScope.employeeForm.em_creatime}</td>
+</tr>
+<tr>
+    <th height="107">备注信息：</th>
+    <td colspan="3" bgcolor="#FFFFFF">${requestScope.employeeForm.em_bz}</td>
+</tr>
+</table>
+<br>
+<html:button property="back" value="返回" onclick="javascript:history.go(-1);"></html:button>
+</td>
+</tr>
+</table>
+<jsp:include page="down.jsp" flush="true" />
+</td>
+</tr>
+</table>
+</body>
+</html:html>
+```
 
 # 智能人力资源管理 - 员工管理
 
 ## 更新员工
 
-该页面用于更新员工信息，通过 `employee.do?method=updateEmployee` 提交表单。
+该页面用于更新员工信息，通过`employee.do?method=updateEmployee`提交表单。
 
 ### 页面核心结构
+
 ```jsp
 <%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %>
 <jsp:directive.page import="java.util.List"/>
@@ -4201,244 +4637,468 @@ path: `WebContent/department_query.jsp`
                                         <th height="25">政治面：：</th>
                                         <td bgcolor="#FFFFFF">
                                             <html:radio property="em_visage" value="Party member" styleClass="input1"/>&nbsp;党员&nbsp; &nbsp; 
-                                            <html:radio property="em_visage" value="Member" styleClass="input1"/>&nbsp;团员&nbsp;  &nbsp; &nbsp; 
-                                            <html:radio property="em_visage" value="No" styleClass="input1"/>&nbsp;无
-                                        </td>
-                                        <th>籍乡：</th>
-                                        <td bgcolor="#FFFFFF"><html:text property="em_ancestralHome" title="请输入出生地"/></td>
-                                    </tr>
-                                    <tr>
-                                        <th height="25">电话：</th>
-                                        <td bgcolor="#FFFFFF"><html:text property="em_tel" title="请输入联系电话"/></td>
-                                        <th>家庭地址：</th>
-                                        <td bgcolor="#FFFFFF"><html:text property="em_address" title="请输入家庭地址"/></td>
-                                    </td>
-                                    </tr>
-                                    <tr>
-                                        <th height="25">毕业学校：</th>
-                                        <td bgcolor="#FFFFFF"><html:text property="em_afterschool" title="请输入研究生学校"/></td>
-                                        <th>专业：</th>
-                                        <td bgcolor="#FFFFFF"><html:text property="em_speciality" title="请输入专业名称"/></td>
-                                    </tr>
-                                    <tr>
-                                        <th height="25">学历：</th>
-                                        <td bgcolor="#FFFFFF">
-                                            <html:select property="em_culture">
-                                                <html:option value="Graduate">研究生</html:option>
-                                                <html:option value="Undergraduate">本科生</html:option>
-                                                <html:option value="College student">大专生</html:option>
-                                            </html:select>
-                                        </td>
-                                        <th>入职时间：</th>
-                                        <td bgcolor="#FFFFFF"><html:text property="em_startime" title="请输入入职时间"/></td>
-                                    </tr>
-                                    <tr>
-                                        <th height="25">部门名称：</th>
-                                        <td bgcolor="#FFFFFF">
-                                            <html:select property="em_departmentId">
-                                                <%List list=(List)request.getAttribute("departmentList");
-                                                for(int i=0;i<list.size();i++){
-                                                    DepartmentForm departmentForm=(DepartmentForm)list.get(i);%>
-                                                    <html:option value="<%=departmentForm.getId()%>"><%=departmentForm.name()%></html:option>
-                                                }}
-                                            </html:select>
-                                        </td>
-                                        <th>职级：</th>
-                                        <td bgcolor="#FFFFFF">
-                                            <html:select property="work">
-                                                <html:option value="Programmer">程序员</html:option>
-                                                <html:option value="Staff">员工</html:option>
-                                                <html:option value="Manager">经理</html:option>
-                                            </html:select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th height="25">学历：</th>
-                                        <td bgcolor="#FFFFFF">
-                                            <html:select property="em_culture">
-                                                <html:option value="Graduate">研究生</html:option>
-                                                <html:option value="Undergraduate">本科生</html:option>
-                                                <html:option value="College student">大专生</html:option>
-                                            </html:select>
-                                        </</td>>
-                                        <th>入职时间：</th>
-                                        <td bgcolor="#FFFFFF"><html:text property="em_startime" title="请输入入职时间"/></td>
-                                    </tr>
-                                    <tr>
-                                        <th height="25">部门名称：</th>
-                                        <td bgcolor="#FFFFFF">
-                                            <html:select property="em_departmentId">
-                                                <%List list=(List)request.getAttribute("departmentList");
-                                                for(int i=0;i<list.size();i++){
-                                                    DepartmentForm departmentForm=(DepartmentForm)list.get(i);%>
-                                                    <html:option value="<%=departmentForm.getId()%>"><%=departmentForm.name()%></html:option>
-                                                }}
-                                            </html:select>
-                                        </td>
-                                        <th>职级：</th>
-                                        <td bgcolor="#FFFFFF">
-                                            <html:select property="work">
-                                                <html:option value="Programmer">程序员</html:option>
-                                                <html:option value="Staff">员工</html:option>
-                                                <html:option value="Manager">经理</html:option>
-                                            </html:select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th height="25">学历：</th>
-                                        <td bgcolor="#FFFFFF">
-                                            <html:select property="em_culture">
-                                                <html:option value="Graduate">研究生</html:option>
-                                                <html:option value="Undergraduate">本科生</html:option>
-                                                <html:option value="College student">大专生</html:option>
-                                            </html:select>
-                                        </</td>>
-                                        <th>入职时间：</th>
-                                        <td bgcolor="#FFFFFF"><html:text property="em_startime" title="请输入入职时间"/></td>
-                                    </tr>
-                                    <tr>
-                                        <th height="25">部门名称：</th>
-                                        <td bgcolor="#FFFFFF">
-                                            <html:select property="em_departmentId">
-                                                <%List list=(List)request.getAttribute("departmentList");
-                                                for(int i=0;i<list.size();i++){
-                                                    DepartmentForm departmentForm=(DepartmentForm)list.get(i);%>
-                                                    <html:option value="<%=departmentForm.getId()%>"><%=departmentForm.name()%></html:option>
-                                                }}
-                                            </html:select>
-                                        </td>
-                                        <th>职级：</th>
-                                        <td bgcolor="#FFFFFF">
-                                            <html:select property="work">
-                                                <html:option value="Programmer">程序员</html:option>
-                                                <html:option value="Staff">员工</html:option>
-                                                <html:option value="Manager">经理</html:option>
-                                            </html:select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th height="25">学历：</th>
-                                        <td bgcolor="#FFFFFF">
-                                            <html:select property="em_culture">
-                                                <html:option value="Graduate">研究生</html:option>
-                                                <html:option value="Undergraduate">本科生</html:option>
-                                                <html:option value="College student">大专生</html:option>
-                                            </html:select>
-                                        </</td>>
-                                        <th>入职时间：</th>
-                                        <td bgcolor="#FFFFFF"><html:text property="em_startime" title="请输入入职时间"/></td>
-                                    </tr>
-                                    <tr>
-                                        <th height="25">部门名称：</th>
-                                        <td bgcolor="#FFFFFF">
-                                            <html:select property="em_departmentId">
-                                                <%List list=(List)request.getAttribute("departmentList");
-                                                for(int i=0;i<list.size();i++){
-                                                    DepartmentForm departmentForm=(DepartmentForm)list.get(i);%>
-                                                    <html:option value="<%=departmentForm.getId()%>"><%=departmentForm.name()%></html:option>
-                                                }}
-                                            </html:select>
-                                        </td>
-                                        <th>职级：</th>
-                                        <td bgcolor="#FFFFFF">
-                                            <html:select property="work">
-                                                <html:option value="Programmer">程序员</html:option>
-                                                <html:option value="Staff">员工</html:option>
-                                                <html:option value="Manager">经理</html:option>
-                                            </html:select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th height="25">学历：</th>
-                                        <td bgcolor="#FFFFFF">
-                                            <html:select property="em_culture">
-                                                <html:option value="Graduate">研究生</html:option>
-                                                <html:option value="Undergraduate">本科生</html:option>
-                                                <html:option value="College student">大专生</html:option>
-                                            </html:select>
-                                        </</td>>
-                                        <th>入职时间：</th>
-                                        <td bgcolor="#FFFFFF"><html:text property="em_startime" title="请输入入职时间"/></td>
-                                    </tr>
-                                    <tr>
-                                        <th height="25">部门名称：</th>
-                                        <td bgcolor="#FFFFFF">
-                                            <html:select property="em_departmentId">
-                                                <%List list=(List)request.getAttribute("departmentList");
-                                                for(int i=0;i<list.size();i++){
-                                                    DepartmentForm departmentForm=(DepartmentForm)list.get(i);%>
-                                                    <html:option value="<%=departmentForm.getId()%>"><%=departmentForm.name()%></html:option>
-                                                }}
-                                            </html:select>
-                                        </td>
-                                        <th>职级：</th>
-                                        <td bgcolor="#FFFFFF">
-                                            <html:select property="work">
-                                                <html:option value="Programmer">程序员</html:option>
-                                                <html:option value="Staff">员工</html:option>
-                                                <html:option value="Manager">经理</html:option>
-                                            </html:select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th height="25">学历：</th>
-                                        <td bgcolor="#FFFFFF">
-                                            <html:select property="em_culture">
-                                                <html:option value="Graduate">研究生</html:option>
-                                                <html:option value="Undergraduate">本科生</html:option>
-                                                <html:option value="College student">大专生</html:option>
-                                            </html:select>
-                                        </</td>>
-                                        <th>入职时间：</th>
-                                        <td bgcolor="#FFFFFF"><html:text property="em_startime" title="请输入入职时间"/></td>
-                                    </tr>
-                                    <tr>
-                                        <th height="25">部门名称：</th>
-                                        <td bgcolor="#FFFFFF">
-                                            <html:select property="em_departmentId">
-                                                <%List list=(List)request.getAttribute("departmentList");
-                                                for(int i=0;i<list.size();i++){
-                                                    DepartmentForm departmentForm=(DepartmentForm)list.get(i);%>
-                                                    <html:option value="<%=departmentForm.getId()%>"><%=departmentForm.name()%></html:option>
-                                                }}
-                                            </html:select>
-                                        </td>
-                                        <th>职级：</th>
-                                        <td bgcolor="#FFFFFF">
-                                            <html:select property="work">
-                                                <html:option value="Programmer">程序员</html:option>
-                                                <html:option value="Staff">员工</html:option>
-                                                <html:option value="Manager">经理</html:option>
-                                            </html:select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th height="25">备注：</th>
-                                        <td colspan="3" bgcolor="#FFFFFF"><html:textarea property="bz" title="请输入备注" rows="7" cols="75"/></td>
-                                    </tr>
-                                    <tr>
-                                        <html:hidden property="id"/>
-                                        <html:submit>提交</html:submit> &nbsp; <html:reset>重置</html:reset> &nbsp; <html:button value="返回" onclick="javascript:go(-1);"></html:button>
-                                    </tr>
-                                </table>
-                            </form>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+```
+
+
+
+```
+<html:radio property="em_visage" value="Member" styleClass="input1"/>&nbsp;团员&nbsp;  &nbsp; &nbsp; 
+
+<html:radio property="em_visage" value="No" styleClass="input1"/>&nbsp;无
+
+</td>
+
+<th>籍乡：</th>
+
+<td bgcolor="#FFFFFF"><html:text property="em_ancestralHome" title="请输入出生地"/></td>
+
+</tr>
+
+<tr>
+
+<th height="25">电话：</th>
+
+<td bgcolor="#FFFFFF"><html:text property="em_tel" title="请输入联系电话"/></td>
+
+<th>家庭地址：</th>
+
+<td bgcolor="#FFFFFF"><html:text property="em_address" title="请输入家庭地址"/></td>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th height="25">毕业学校：</th>
+
+<td bgcolor="#FFFFFF"><html:text property="em_afterschool" title="请输入研究生学校"/></td>
+
+<th>专业：</th>
+
+<td bgcolor="#FFFFFF"><html:text property="em_speciality" title="请输入专业名称"/></td>
+
+</tr>
+
+<tr>
+
+<th height="25">学历：</th>
+
+<td bgcolor="#FFFFFF">
+
+<html:select property="em_culture">
+
+<html:option value="Graduate">研究生</html:option>
+
+<html:option value="Undergraduate">本科生</html:option>
+
+<html:option value="College student">大专生</html:option>
+
+</html:select>
+
+</td>
+
+<th>入职时间：</th>
+
+<td bgcolor="#FFFFFF"><html:text property="em_startime" title="请输入入职时间"/></td>
+
+</tr>
+
+<tr>
+
+<th height="25">部门名称：</th>
+
+<td bgcolor="#FFFFFF">
+
+<html:select property="em_departmentId">
+
+<%List list=(List)request.getAttribute("departmentList");
+
+for(int i=0;i<list.size();i++){
+
+DepartmentForm departmentForm=(DepartmentForm)list.get(i);%>
+
+<html:option value="<%=departmentForm.getId()%>"><%=departmentForm.name()%></html:option>
+
+}}
+
+</html:select>
+
+</td>
+
+<th>职级：</th>
+
+<td bgcolor="#FFFFFF">
+
+<html:select property="work">
+
+<html:option value="Programmer">程序员</html:option>
+
+<html:option value="Staff">员工</html:option>
+
+<html:option value="Manager">经理</html:option>
+
+</html:select>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th height="25">学历：</th>
+
+<td bgcolor="#FFFFFF">
+
+<html:select property="em_culture">
+
+<html:option value="Graduate">研究生</html:option>
+
+<html:option value="Undergraduate">本科生</html:option>
+
+<html:option value="College student">大专生</html:option>
+
+</html:select>
+
+</</td>>
+
+<th>入职时间：</th>
+
+<td bgcolor="#FFFFFF"><html:text property="em_startime" title="请输入入职时间"/></td>
+
+</tr>
+
+<tr>
+
+<th height="25">部门名称：</th>
+
+<td bgcolor="#FFFFFF">
+
+<html:select property="em_departmentId">
+
+<%List list=(List)request.getAttribute("departmentList");
+
+for(int i=0;i<list.size();i++){
+
+DepartmentForm departmentForm=(DepartmentForm)list.get(i);%>
+
+<html:option value="<%=departmentForm.getId()%>"><%=departmentForm.name()%></html:option>
+
+}}
+
+</html:select>
+
+</td>
+
+<th>职级：</th>
+
+<td bgcolor="#FFFFFF">
+
+<html:select property="work">
+
+<html:option value="Programmer">程序员</html:option>
+
+<html:option value="Staff">员工</html:option>
+
+<html:option value="Manager">经理</html:option>
+
+</html:select>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th height="25">学历：</th>
+
+<td bgcolor="#FFFFFF">
+
+<html:select property="em_culture">
+
+<html:option value="Graduate">研究生</html:option>
+
+<html:option value="Undergraduate">本科生</html:option>
+
+<html:option value="College student">大专生</html:option>
+
+</html:select>
+
+</</td>>
+
+<th>入职时间：</th>
+
+<td bgcolor="#FFFFFF"><html:text property="em_startime" title="请输入入职时间"/></td>
+
+</tr>
+
+<tr>
+
+<th height="25">部门名称：</th>
+
+<td bgcolor="#FFFFFF">
+
+<html:select property="em_departmentId">
+
+<%List list=(List)request.getAttribute("departmentList");
+
+for(int i=0;i<list.size();i++){
+
+DepartmentForm departmentForm=(DepartmentForm)list.get(i);%>
+
+<html:option value="<%=departmentForm.getId()%>"><%=departmentForm.name()%></html:option>
+
+}}
+
+</html:select>
+
+</td>
+```
+
+
+
+```
+<th>职级：</th>
+
+<td bgcolor="#FFFFFF">
+
+    <html:select property="work">
+
+        <html:option value="Programmer">程序员</html:option>
+
+        <html:option value="Staff">员工</html:option>
+
+        <html:option value="Manager">经理</html:option>
+
+    </html:select>
+
+</td>
+
+</tr>
+
+<tr>
+
+    <th height="25">学历：</th>
+
+    <td bgcolor="#FFFFFF">
+
+        <html:select property="em_culture">
+
+            <html:option value="Graduate">研究生</html:option>
+
+            <html:option value="Undergraduate">本科生</html:option>
+
+            <html:option value="College student">大专生</html:option>
+
+        </html:select>
+
+    </</td>>
+
+    <th>入职时间：</th>
+
+    <td bgcolor="#FFFFFF"><html:text property="em_startime" title="请输入入职时间"/></td>
+
+</tr>
+
+<tr>
+
+    <th height="25">部门名称：</th>
+
+    <td bgcolor="#FFFFFF">
+
+        <html:select property="em_departmentId">
+
+            <%List list=(List)request.getAttribute("departmentList");
+
+            for(int i=0;i<list.size();i++){
+
+                DepartmentForm departmentForm=(DepartmentForm)list.get(i);%>
+
+                <html:option value="<%=departmentForm.getId()%>"><%=departmentForm.name()%></html:option>
+
+            }}
+
+        </html:select>
+
+    </td>
+
+    <th>职级：</th>
+
+    <td bgcolor="#FFFFFF">
+
+        <html:select property="work">
+
+            <html:option value="Programmer">程序员</html:option>
+
+            <html:option value="Staff">员工</html:option>
+
+            <html:option value="Manager">经理</html:option>
+
+        </html:select>
+
+    </td>
+
+</tr>
+
+<tr>
+
+    <th height="25">学历：</th>
+
+    <td bgcolor="#FFFFFF">
+
+        <html:select property="em_culture">
+
+            <html:option value="Graduate">研究生</html:option>
+
+            <html:option value="Undergraduate">本科生</html:option>
+
+            <html:option value="College student">大专生</html:option>
+
+        </html:select>
+
+    </</td>>
+
+    <th>入职时间：</th>
+
+    <td bgcolor="#FFFFFF"><html:text property="em_startime" title="请输入入职时间"/></td>
+
+</tr>
+
+<tr>
+
+    <th height="25">部门名称：</th>
+
+    <td bgcolor="#FFFFFF">
+
+        <html:select property="em_departmentId">
+
+            <%List list=(List)request.getAttribute("departmentList");
+
+            for(int i=0;i<list.size();i++){
+
+                DepartmentForm departmentForm=(DepartmentForm)list.get(i);%>
+
+                <html:option value="<%=departmentForm.getId()%>"><%=departmentForm.name()%></html:option>
+
+            }}
+
+        </html:select>
+
+    </td>
+
+    <th>职级：</th>
+
+    <td bgcolor="#FFFFFF">
+
+        <html:select property="work">
+
+            <html:option value="Programmer">程序员</html:option>
+
+            <html:option value="Staff">员工</html:option>
+
+            <html:option value="Manager">经理</html:option>
+
+        </html:select>
+
+    </td>
+
+</tr>
+
+<tr>
+
+    <th height="25">学历：</th>
+
+    <td bgcolor="#FFFFFF">
+
+        <html:select property="em_culture">
+
+            <html:option value="Graduate">研究生</html:option>
+
+            <html:option value="Undergraduate">本科生</html:option>
+
+            <html:option value="College student">大专生</html:option>
+
+        </html:select>
+
+    </</td>>
+
+    <th>入职时间：</th>
+
+    <td bgcolor="#FFFFFF"><html:text property="em_startime" title="请输入入职时间"/></td>
+
+</tr>
+
+<tr>
+
+    <th height="25">部门名称：</th>
+
+    <td bgcolor="#FFFFFF">
+
+        <html:select property="em_departmentId">
+
+            <%List list=(List)request.getAttribute("departmentList");
+
+            for(int i=0;i<list.size();i++){
+
+                DepartmentForm departmentForm=(DepartmentForm)list.get(i);%>
+
+                <html:option value="<%=departmentForm.getId()%>"><%=departmentForm.name()%></html:option>
+
+            }}
+
+        </html:select>
+
+    </td>
+
+    <th>职级：</th>
+
+    <td bgcolor="#FFFFFF">
+
+        <html:select property="work">
+
+            <html:option value="Programmer">程序员</html:option>
+
+            <html:option value="Staff">员工</html:option>
+
+            <html:option value="Manager">经理</html:option>
+
+        </html:select>
+
+    </td>
+
+</tr>
+
+<tr>
+
+    <th height="25">备注：</th>
+```
+
+
+
+```html
+<td colspan="3" bgcolor="#FFFFFF"><html:textarea property="bz" title="请输入备注" rows="7" cols="75"/></td>
+</tr>
+<tr>
+    <html:hidden property="id"/>
+    <html:submit>提交</html:submit> &nbsp; <html:reset>重置</html:reset> &nbsp; <html:button value="返回" onclick="javascript:go(-1);"></html:button>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
 </body>
 </html>
-``` (注：由于原文中存在大量重复的 HTML 结构，翻译时已按逻辑要求保留并翻译了可见文本内容)
+```
 
-
-
-
+（注：由于原文中存在大量重复的 HTML 结构，翻译时已按逻辑要求保留并翻译了可见文本内容）
 
 # 智能人力资源管理 - 招聘新增
 
-## 页面结构 (index.jsp)
+## 页面结构（`index.jsp`）
 
 ```html
 <%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %>
@@ -4471,7 +5131,7 @@ path: `WebContent/department_query.jsp`
         }
     }
 </script>
-<body
+<body>
     <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
         <tr>
             <td align="center">
@@ -4552,7 +5212,12 @@ path: `WebContent/department_query.jsp`
                         </td>
                     </tr>
                 </table>
-                <jsp:include page="down.jsp" flush="true" />
+```
+
+
+
+```html
+<jsp:include page="down.jsp" flush="true" />
             </td>
         </tr>
     </table>
@@ -4563,17 +5228,15 @@ path: `WebContent/department_query.jsp`
 ## 逻辑处理 (Operations)
 
 ### inviteJob_operation.jsp
+
 ```jsp
 <%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %>
 <%out.print("<script language=javascript>alert('"+request.getAttribute("result")+"');window.location.href='inviteJob.do?method=queryInviteJob';</script>");%>
 ```
 
 ### inviteJob_query.jsp
+
 (位于 `WebContent` 目录下)
-
-
-
-
 
 # 招聘管理
 
@@ -4586,9 +5249,9 @@ path: `WebContent/department_query.jsp`
 ```jsp
 <%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %>
 <jsp:directive.page import="java.util.List"/>
-<%@ taglib prefix="html" uri="/WEB-INF/struts-html.tld"/>
-<%@ taglib prefix="logic" uri="/WEB-INF/struts-logic.tld"/>
-<%@ taglib prefix="bean" uri="/WEB-INF/struts-bean.tld"/>
+<%@ taglib prefix="html" uri="/WEB-INF/struts-html.tld"%>
+<%@ taglib prefix="logic" uri="/WEB-INF/struts-logic.tld"%>
+<%@ taglib prefix="bean" uri="/WEB-INF/struts-bean.tld"%>
 ```
 
 ```html
@@ -4661,16 +5324,12 @@ path: `WebContent/department_query.jsp`
 </logic:iterate>
 ```
 
-
-
-
-
 # 智能人力资源管理 - 系统管理
 
 ## 1. 首页 (index.jsp)
 
 ```html
-<%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %
+<%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
@@ -4735,7 +5394,7 @@ path: `WebContent/department_query.jsp`
 **路径：** `WebContent/manager_insert.jsp`
 
 ```html
-<%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %
+<%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %>
 <%@ taglib prefix="html" uri="/WEB-INF/struts-html.tld"%>
 <html:html>
 <head>
@@ -4788,36 +5447,41 @@ path: `WebContent/department_query.jsp`
         <table width="801" height="436" border="0" cellpadding="0" cellspacing="0" background="images/center2.jpg">
           <tr>
             <td height="243" valign="top" align="center">
-              <html:form action="manager.do?method=insert" onsubmit="return insertManager()">
-                <table width="265" border="1" align="center" cellpadding="1" cellspacing="1" bordercolor="#FFFFFF" bgcolor="6658D">
-                  <tr>
-                    <th width="70" height="30"><div class="word_white">账号：</div></td>
-                    <td width="183" bgcolor="#FFFFFF"><html:text property="account"/></td>
-                  </tr>
-                  <tr>
-                    <th height="30"><div class="word_white">密码：</div></th>
-                    <td bgcolor="#FFFFFF"><html:password property="password"/></td>
-                  </tr>
-                  <tr>
-                    <th height="30"><div class="word_white">确认密码：</div></th>
-                    <td bgcolor="#FFFFFF"><input type="password" name="newPassword"></td>
-                  </tr>
-                  <tr>
-                    <th height="30"><div class="word_white">级别：</div></td>
-                    <td bgcolor="#FFFFFF"><html:hidden property="managerLevel" value="0"/>普通</td>
-                  </tr>
-                </table>
-                <br>
-                <input type="submit" name="Submit2" value="保存">&nbsp;<input type="reset" name="Submit" value="重置">
-                ${requestScope.result}
-              </html:form>
-            </td>
-          </tr>
-        </table>
-        <jsp:include page="down.jsp" flush="true" />
-      </td>
+```
+
+
+
+```html
+<html:form action="manager.do?method=insert" onsubmit="return insertManager()">
+  <table width="265" border="1" align="center" cellpadding="1" cellspacing="1" bordercolor="#FFFFFF" bgcolor="6658D">
+    <tr>
+      <th width="70" height="30"><div class="word_white">账号：</div></td>
+      <td width="183" bgcolor="#FFFFFF"><html:text property="account"/></td>
+    </tr>
+    <tr>
+      <th height="30"><div class="word_white">密码：</div></th>
+      <td bgcolor="#FFFFFF"><html:password property="password"/></td>
+    </tr>
+    <tr>
+      <th height="30"><div class="word_white">确认密码：</div></th>
+      <td bgcolor="#FFFFFF"><input type="password" name="newPassword"></td>
+    </tr>
+    <tr>
+      <th height="30"><div class="word_white">级别：</div></td>
+      <td bgcolor="#FFFFFF"><html:hidden property="managerLevel" value="0"/>普通</td>
     </tr>
   </table>
+  <br>
+  <input type="submit" name="Submit2" value="保存">&nbsp;<input type="reset" name="Submit" value="重置">
+  ${requestScope.result}
+</html:form>
+</td>
+</tr>
+</table>
+<jsp:include page="down.jsp" flush="true" />
+</td>
+</tr>
+</table>
 </body>
 </html:html>
 ```
@@ -4899,7 +5563,7 @@ path: `WebContent/department_query.jsp`
                   </logic:iterate>
                 </table>
                 <%=pagination.printCtrl(Page,"method=queryManager")%>
-              <%}%
+              <%}%>
               <table width="381">
                 <tr align="right">
                   <td><a href="manager_insert.jsp">添加管理员</a></td>
@@ -4915,10 +5579,6 @@ path: `WebContent/department_query.jsp`
 </body>
 </html:html>
 ```
-
-
-
-
 
 # 智能人力资源管理 - 系统管理
 
@@ -4953,6 +5613,7 @@ function updatePasswordManager(){
 ```
 
 ### 表单结构说明
+
 - **Action**: `manager.do?method=updateManager`
 - **On-submit**: `return updatePasswordManager()`
 - **字段映射**:
@@ -4983,16 +5644,12 @@ if(request.getAttribute("result")!=null){
 
 ## pay_insert.jsp (WebContent)
 
-
-
-
-
 ```jsp
 <%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*"%>
 <jsp:directive.page import="java.util.List"/>
 <jsp:directive.page import="com.abd.form.EmployeeForm"/>
-<%@ taglib prefix="html" uri="/WEB-INF/struts-html.tld"%(
-<%@ taglib prefix="logic" uri="/WEB-INF/struts-logic.tld"%(
+<%@ taglib prefix="html" uri="/WEB-INF/struts-html.tld"%>
+<%@ taglib prefix="logic" uri="/WEB-INF/struts-logic.tld"%>
 <%@ taglib prefix="bean" uri="/WEB-INF/struts-bean.tld"%>
 <html:html>
 <head>
@@ -5007,112 +5664,223 @@ if(request.getAttribute("result")!=null){
                     if(isNaN(form.pay_baseMoney.value)) {
                         window.alert("基本工资仅限数字");
                         return false;
+```
+
+
+
+```
                     }
+
                     if(isNaN(form.pay_overtime.value)) {
+
                         window.alert("加班次数仅限数字");
+
                         return false;
+
                     }
+
                     if(isNaN(form.pay_age.value)) {
+
                         window.alert("工龄仅限数字");
+
                         return false;
+
                     }
+
                     if(isNaN(form.pay_check.value)) {
+
                         window.alert("全勤奖仅限数字");
+
                         return false;
+
                     }
+
                     if(isNaN(form.pay_absent.value)) {
+
                         window.alert("旷勤扣仅限数字");
+
                         return false;
+
                     }
+
                     if(isNaN(form.pay_safety.value)) {
+
                         window.alert("保险仅限数字");
+
                         return false;
+
                     }
+
                     alert(form.elements[i].title);
+
                     return false;
+
                 }
+
             }
+
         }
+
     </script>
+
 </head>
+
 <body>
+
     <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+
         <tr>
+
             <td align="center">
+
                 <jsp:include page="top.jsp" flush="true" />
+
                 <table width="801" height="48" border="0" cellpadding="0" cellspacing="0" background="images/center1.jpg">
+
                     <tr>
+
                         <td valign="top">
+
                             <table width="494">
+
                                 <tr>
+
                                     <td width="45" height="25">&nbsp;</td>
+
                                     <td width="437" valign="bottom"><font color="#FF0000"> 添加薪资</font></td>
+
                                 </tr>
+
                             </table>
+
                         </td>
+
                     </tr>
+
                 </table>
+
                 <table width="801" height="436" border="0" cellpadding="0" cellspacing="0" background="images/center2.jpg">
+
                     <tr>
+
                         <td height="436" valign="top" align="center">
+
                             <html:form action="pay.do?method=savePay">
+
                                 <table width="355" border="1" cellpadding="1" cellspacing="1" bordercolor="#FFFFFF" bgcolor="66583D">
+
                                     <tr>
+
                                         <th width="87" height="30"><span class="word_white">员工编号与员工姓名：</span></th>th>
+
                                         <td width="255" bgcolor="#FFFFFF">
+
                                             <html:select property="pay_emNumber">
+
                                                 <%List employeeList=(List)request.getAttribute("employeeList");
+
                                                     for(int i=0;i<employeeList.size();i++){
+
                                                         EmployeeForm employeeForm=(EmployeeForm)employeeList.get(i);%>
+
                                                 <html:option value="<%=employeeForm.getEm_serialNumber()%>"><%=employeeForm.getEm_serialNumber()>&nbsp;&nbsp;<%=employeeForm.getEm_name()%></html:option>
+
                                                 <%}%
+
                                             </html:select>
+
                                         </td>
+
                                     </tr>
+
                                     <tr>
+
                                         <th height="30"><span class="word_white">工资月份：</span></th>>
+
                                         <td bgcolor="#FFFFFF">
+
                                             <html:text property="pay_month" value="<%=getSystemTime.getYearMonth()%>" readonly="readonly" onclick="alert('此文本框设置为只读，您无法修改')"/>
+
                                         </td>
+
                                     </tr>
+
                                     <tr>
+
                                         <th height="30"><span class="word_white">基本工资：</span></th>>
+
                                         <td bgcolor="#FFFFFF"><html:text property="pay_baseMoney" title="请输入基本工资"/></td>
+
                                     </tr>
+
                                     <tr>
+
                                         <th height="30"><span class="word_white">加班：</span></th>>
+
                                         <td bgcolor="#FFFFFF"><html:text property="pay_overtime" title="请输入加班次数"/></td>
+
                                     </tr>
+
                                     <tr>
+
                                         <th height="30"><span class="word_white">服务费：</span></th>>
+
                                         <td bgcolor="#FFFFFF"><html:text property="pay_age" title="请输入工龄"/></td>
+
                                     </tr>
+
                                     <tr>
+
                                         <th height="30"><span class="word_white">全勤奖：</span></th>>
+
                                         <td bgcolor="#FFFFFF"><html:text property="pay_check" title="请输入全勤奖"/></td>
+
                                     </tr>
+
                                     <tr>
+
                                         <th height="30"><span class="word_white">旷勤扣款：</span></th>>
+
                                         <td bgcolor="#FFFFFF"><html:text property="pay_absent" title="请输入旷勤扣款"/></td>
+
                                     </tr>
+
                                     <tr>
+
                                         <th height="30"><span class="word_white">保险：</span></th>>
+
                                         <td bgcolor="#FFFFFF"><html:text property="pay_safety" title="请输入保险金"/></td>
+
                                     </tr>
+
                                 </table>
+
                                 <br>
+
                                 <html:submit>提交</html:submit>
+
                                 &nbsp;&nbsp; <html:reset>重置</html:reset>
+
                                 &nbsp;&nbsp; <html:button property="button" value="返回" onclick="javascript:history.go(-1);"></html:button>
+
                             </html:form>
+
                         </td>
+
                     </tr>
+
                 </table>
+
                 <jsp:include page="down.jsp" flush="true" />
+
             </td>
+
         </tr>
+
     </table>
+
 </body>
+
 </html:html>
 ```
 
@@ -5120,181 +5888,346 @@ if(request.getAttribute("result")!=null){
 | :--- | :--- |
 | `pay_query.jsp` | `WebContent` |
 
-
-
-
-
 ```jsp
 <%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %>
+
 <%@ page import="com.abd.form.PayForm" %>
+
 <jsp:directive.page import="com.abd.form.EmployeeForm"/>
+
 <jsp:directive.page import="java.util.List"/>
+
 <%@ taglib prefix="html" uri="/WEB-INF/struts-html.tld"/>
+
 <%@ taglib prefix="logic" uri="/WEB-INF/struts-logic.tld"/>
+
 <%@ taglib prefix="bean" uri="/WEB-INF/struts-bean.tld"/>
+
 <html:html>
+
 <head>
+
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
     <title>智能人力资源管理 - 工资管理</title>
+
     <link type="text/css" rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script language="JavaScript">
+
         function deleteForm(date) {
+
             if(confirm("您确定要删除这条员工工资信息吗？")) {
+
                 window.location.href="pay.do?method=deletePay&id="+date;
+
             }
+
         }
+
         function checkform1() {
+
             if(document.form1.pay_month.value="") {
+
                 window.alert("请输入您想要查询的日期，例如：2007-12");
+
                 return false;
+
             }
+
             if(form1.pay_month.value.length >11) {
+
                 window.alert("您输入的格式错误，应为：2007-12");
+
                 return false;
+
             }
+
             return true;
+
         }
+
     </script>
+
 <jsp:useBean id="pagination" class="com.abd.tool.MyPagination" scope="session"></jsp:useBean>
+
 <%
+
     String result1="";
+
     if(request.getAttribute("result1")!=null){
+
         result1=(String)request.getAttribute("result1");
+
     }
+
     String result2="";
+
     if(request.getAttribute("result2")!=null){
-        result2=(String)request.getAttribute("result2");
-    }
-    String str=request.getParameter("Page");
-    int Page=1;
-    List list=null;
-    if(str==null){
-        list=(List)request.getAttribute("list");
-        int pagesize=15;
-        // 指定每页显示的记录数
-        list=pagination.getInitPage(list,Page,pagesize);
-        // 初始化分页信息
-    }else{
-        Page=pagination.getPage(str);
-        list=pagination.getAppointPage(Page);
-        // 获取指定页的数据
-    }
-%>
-<<body>
-    <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
-        <tr>
-            <td align="center">
-                <jsp:include page="top.jsp" flush="true" />
-                <table width="801" height="48" border="0" cellpadding="0" cellspacing="0" background="images/center1.jpg">
-                    <tr>
-                        <td valign="top">
-                            <table width="494">
-                                <tr>
-                                    <td width="45" height="25">&nbsp;</td>
-                                    <td width="437" valign="bottom"> <font color="#FF0000"> 工资列表</font></td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </</table>
-                <table width="801" height="436" border="0" cellpadding="0" cellspacing="0" background="images/center2.jpg">
-                    <tr>
-                        <td height="436" valign="top" align="center">
-                            <table width="481">
-                                <tr>
-                                    <td width="224">
-                                        <form name="form1" method="post" action="" onsubmit="return checkform1()">
-                                            <table width="233">
-                                                <tr>
-                                                    <td><input name="sumbit1" type="submit" value="按年份查询"></td>
-                                                    <td><input type="text" name="pay_month" value="<%=result2%>"></td>
-                                                </tr>
-                                            </table>
-                                        </form>
-                                    </td>
-                                    <td width="283">
-                                        <form name="form2" method="post" action="pay.do?method=queryPay">
-                                            <table width="233">
-                                                <tr>
-                                                    <td><input name="sumbit2" type="submit" value="员工查询"></td>
-                                                    <td>
-                                                        <select name="emNumber">
-                                                            <%
-                                                                List employeeList=(List)request.getAttribute("employeeList");
-                                                                for(int i=0;i<employeeList.size();i++){
-                                                                    EmployeeForm employeeForm=(EmployeeForm)employeeList.get(i);
-                                                            %>
-                                                            <option value="<%=employeeForm.getEm_serialNumber()%>" <%if(result1.equals(employeeForm.getEm_serialNumber())){out.print("selected");} %> >%=employeeForm.getEm_serialNumber()>&nbsp;&nbsp;<%=employeeForm.getEm_name()%></option>
-                                                            <%}%%>
-                                                        </select>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </form>
-                                    </td>
-                                </tr>
-                            </table>
-                            <%if(pagination.getRecordSize()>0){%>
-                                <table border="1" cellpadding="1" cellspacing="1" bordercolor="#FFFFFF" bgcolor="66583D">
-                                    <tr align="center">
-                                        <th width="57" height="20"><span class="word_white">员工 ID</span></th>
-                                        <th width="57"><span class="word_white">员工姓名</span></th>
-                                        <th width="57"><span class="word_white">工资月份</span></th>
-                                        <th width="57"><span class="word_white">基本工资</span></th>
-                                        <th width="57"><span class="word_white">加班费</span></th>
-                                        <th width="57"><span class="word_white">服务费</span></th>
-                                        <th width="57"><span class="word_white">勤勤奖</span></th>
-                                        <th width="57"><span class="word_white">缺勤</span></th>
-                                        <th width="57"><span class="word_white">保险</span></th>
-                                        <th width="57"><span class="word_white">实发工资</span></th>
-                                        <th width="100"><span class="word_white">操作</span></th>
-                                    </tr>
-                                    <logic:iterate id="payForm" collection="<%=list%>" index="number" scope="request">
-                                        <tr align="center" bgcolor="#ffffff">
-                                            <td><bean:write name="payForm" property="id"/></td>
-                                            <td><bean:write name="payForm" property="emNumber"/></td>
-                                            <td><bean:write name="payForm" property="payMonth"/></td>
-                                            <td><bean:write name="payForm" property="baseMoney"/></td>
-                                            <td>${bean:write name="payForm" property="overtime"/>*20</td>
-                                            <td>${bean:write name="payForm" property="age"/>*50</td>
-                                            <td>${bean:write name="payForm" property="check"/></td>
-                                            <td>${bean:write name="payForm" property="absent"/></td>
-                                            <td>${bean:write name="payForm" property="safety"/></td>
-                                            <td>${bean:write name="payForm" property="realPay"/></td>
-                                            <td><a href="javascript:deleteForm('${bean:write name="payForm" property="id"}')"><i class="fa fa-close"></i></a></td>
-                                        </tr>
-                                    </logic:iterate>
-                                </table>
-                                <table width="650">
-                                    <tr>
-                                        <td>
-                                            <div align="right"><%=pagination.printCtrl(Page,"method=queryPay")%</div></div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            <%} %>
-                            <table width="650">
-                                <tr>
-                                    <td align="right">
-                                        <a href="pay.do?method=forwardInsertPay"><font color="red" size="5"> 添加工资记录</font></a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-                <jsp:include page="down.jsp" flush="true" />
-            </td>
-        </tr>
-    </table>
-</body>
-</html:html>
 ```
 
 
 
+```
+        result2=(String)request.getAttribute("result2");
 
+    }
+
+    String str=request.getParameter("Page");
+
+    int Page=1;
+
+    List list=null;
+
+    if(str==null){
+
+        list=(List)request.getAttribute("list");
+
+        int pagesize=15;
+
+        // 指定每页显示的记录数
+
+        list=pagination.getInitPage(list,Page,pagesize);
+
+        // 初始化分页信息
+
+    }else{
+
+        Page=pagination.getPage(str);
+
+        list=pagination.getAppointPage(Page);
+
+        // 获取指定页的数据
+
+    }
+
+%>
+
+<<body>
+
+    <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+
+        <tr>
+
+            <td align="center">
+
+                <jsp:include page="top.jsp" flush="true" />
+
+                <table width="801" height="48" border="0" cellpadding="0" cellspacing="0" background="images/center1.jpg">
+
+                    <tr>
+
+                        <td valign="top">
+
+                            <table width="494">
+
+                                <tr>
+
+                                    <td width="45" height="25">&nbsp;</td>
+
+                                    <td width="437" valign="bottom"> <font color="#FF0000"> 工资列表</font></td>
+
+                                </tr>
+
+                            </table>
+
+                        </td>
+
+                    </tr>
+
+                </</table>
+
+                <table width="801" height="436" border="0" cellpadding="0" cellspacing="0" background="images/center2.jpg">
+
+                    <tr>
+
+                        <td height="436" valign="top" align="center">
+
+                            <table width="481">
+
+                                <tr>
+
+                                    <td width="224">
+
+                                        <form name="form1" method="post" action="" onsubmit="return checkform1()">
+
+                                            <table width="233">
+
+                                                <tr>
+
+                                                    <td><input name="sumbit1" type="submit" value="按年份查询"></td>
+
+                                                    <td><input type="text" name="pay_month" value="<%=result2%>"></td>
+
+                                                </tr>
+
+                                            </table>
+
+                                        </form>
+
+                                    </td>
+
+                                    <td width="283">
+
+                                        <form name="form2" method="post" action="pay.do?method=queryPay">
+
+                                            <table width="233">
+
+                                                <tr>
+
+                                                    <td><input name="sumbit2" type="submit" value="员工查询"></td>
+
+                                                    <td>
+
+                                                        <select name="emNumber">
+
+                                                            <%
+
+                                                                List employeeList=(List)request.getAttribute("employeeList");
+
+                                                                for(int i=0;i<employeeList.size();i++){
+
+                                                                    EmployeeForm employeeForm=(EmployeeForm)employeeList.get(i);
+
+                                                            %>
+
+                                                            <option value="<%=employeeForm.getEm_serialNumber()%>" <%if(result1.equals(employeeForm.getEm_serialNumber())){out.print("selected");} %> >%=employeeForm.getEm_serialNumber()>&nbsp;&nbsp;<%=employeeForm.getEm_name()%></option>
+
+                                                            <%}%%>
+
+                                                        </select>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </table>
+
+                                        </form>
+
+                                    </td>
+
+                                </tr>
+
+                            </table>
+
+                            <%if(pagination.getRecordSize()>0){%>
+
+                                <table border="1" cellpadding="1" cellspacing="1" bordercolor="#FFFFFF" bgcolor="66583D">
+
+                                    <tr align="center">
+
+                                        <th width="57" height="20"><span class="word_white">员工 ID</span></th>
+
+                                        <th width="57"><span class="word_white">员工姓名</span></th>
+
+                                        <th width="57"><span class="word_white">工资月份</span></th>
+
+                                        <th width="57"><span class="word_white">基本工资</span></th>
+
+                                        <th width="57"><span class="word_white">加班费</span></th>
+
+                                        <th width="57"><span class="word_white">服务费</span></th>
+
+                                        <th width="57"><span class="word_white">勤勤奖</span></th>
+
+                                        <th width="57"><span class="word_white">缺勤</span></th>
+
+                                        <th width="57"><span class="word_white">保险</span></th>
+
+                                        <th width="57"><span class="word_white">实发工资</span></th>
+
+                                        <th width="100"><span class="word_white">操作</span></th>
+
+                                    </tr>
+
+                                    <logic:iterate id="payForm" collection="<%=list%>" index="number" scope="request">
+
+                                        <tr align="center" bgcolor="#ffffff">
+
+                                            <td><bean:write name="payForm" property="id"/></td>
+
+                                            <td><bean:write name="payForm" property="emNumber"/></td>
+
+                                            <td><bean:write name="payForm" property="payMonth"/></td>
+
+                                            <td><bean:write name="payForm" property="baseMoney"/></td>
+
+                                            <td>${bean:write name="payForm" property="overtime"/>*20</td>
+
+                                            <td>${bean:write name="payForm" property="age"/>*50</td>
+
+                                            <td>${bean:write name="payForm" property="check"/></td>
+
+                                            <td>${bean:write name="payForm" property="absent"/></td>
+
+                                            <td>${bean:write name="payForm" property="safety"/></td>
+
+                                            <td>${bean:write name="payForm" property="realPay"/></td>
+
+                                            <td><a href="javascript:deleteForm('${bean:write name="payForm" property="id"}')"><i class="fa fa-close"></i></a></td>
+
+                                        </tr>
+
+                                    </logic:iterate>
+
+                                </table>
+
+                                <table width="650">
+
+                                    <tr>
+
+                                        <td>
+
+                                            <div align="right"><%=pagination.printCtrl(Page,"method=queryPay")%</div></div>
+
+                                        </td>
+
+                                    </tr>
+
+                                </table>
+
+                            <%} %>
+
+                            <table width="650">
+
+                                <tr>
+
+                                    <td align="right">
+
+                                        <a href="pay.do?method=forwardInsertPay"><font color="red" size="5"> 添加工资记录</font></a>
+
+                                    </td>
+
+                                </tr>
+
+                            </table>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+                <jsp:include page="down.jsp" flush="true" />
+```
+
+
+
+```
+            </td>
+
+        </tr>
+
+    </table>
+
+</body>
+
+</html:html>
+
+```
 
 ## 1. 页面头部结构 (Header Structure)
 
@@ -5327,7 +6260,7 @@ if(request.getAttribute("result")!=null){
     <area shape="rect" coords="642,28,704,103" href="pay.do?method=queryPay">
     <%if(sign.equals("1")){ %>
     <area shape="rect" coords="708,20,793,134" href="manager.do?method=queryManager">
-    <% %}>
+    <% }%>
 </map>
 <body
     <table width="100" border="0" cellpadding="0" cellspacing="0">
@@ -5444,15 +6377,11 @@ if(request.getAttribute("result")!=null){
 
 **路径：** `train_query.jsp`
 
-
-
-
-
 # 培训管理
 
 ## 1. 培训列表 (train_queryOne.jsp)
 
-位于 `WebContent` 下的 `train_queryOne.jsp`。
+位于`WebContent`下的`train_queryOne.jsp`。
 
 ```jsp
 <%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %>
@@ -5479,17 +6408,24 @@ if(request.getAttribute("result")!=null){
         String str=request.getParameter("Page");
         int Page=1;
         List list=null;
-        if(str==null){
-            list=(List)request.getAttribute("list");
-            int pagesize=15; //每页显示的记录数
-            list=pagination.getInitPage(list,Page,pagesize); // 初始化分页信息
-        }else{
-            Page=pagination.getPage(str);
-            list=pagination.getAppointPage(Page); // 获取指定页的数据
-        }
-    %>
+
+
+
+```jsp
+if(str==null){
+    list=(List)request.getAttribute("list");
+    int pagesize=15; //每页显示的记录数
+    list=pagination.getInitPage(list,Page,pagesize); // 初始化分页信息
+}else{
+    Page=pagination.getPage(str);
+    list=pagination.getAppointPage(Page); // 获取指定页的数据
+}
+%>
+
 </head>
+
 <body>
+
     <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
         <tr>
             <td align="center">
@@ -5559,29 +6495,28 @@ if(request.getAttribute("result")!=null){
             </td>
         </tr>
     </table>
+
 </body>
+
 </html:html>
 ```
 
 ## 2. 培训详情
 
-[/content]
-
-[content]
-
-## 2. 培训详情
-
 ```jsp
 <%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %>
-<%@ taglib prefix="html" uri="/WEB-INF/struts-html.tld"/>
-<%@ taglib prefix="logic" uri="/WEB-INF/struts-logic.tld"/>
-<%@ taglib prefix="bean" uri="/WEB-INF/struts-bean.tld"/>
+<%@ taglib prefix="html" uri="/WEB-INF/struts-html.tld"%>
+<%@ taglib prefix="logic" uri="/WEB-INF/struts-logic.tld"%>
+<%@ taglib prefix="bean" uri="/WEB-INF/struts-bean.tld"%>
+
 <html:html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
     <title>智能人力资源管理 - 培训管理</title>
     <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
         <tr>
@@ -5624,24 +6559,46 @@ if(request.getAttribute("result")!=null){
                                     <td bgcolor="#FFFFFF">${requestScope.trainForm.tn_address}</td>
                                 </tr>
                                 <tr>
-                                    <th height="30"><span class="word_white">参与人员</span></th>
-                                    <td bgcolor="#FFFFFF">${requestScope.trainForm.tn_join}</td>
-                                </tr>
-                                <tr>
-                                    <th height="30"><span class="word_white">描述</span></th>
-                                    <td bgcolor="#FFFFFF">${requestScope.trainForm.tn_bz}</td>
-                                </tr>
-                            </table>
-                            <br>
-                            <html:button property="button" value="返回" onclick="javascript:history.go(-1);"></html:button>
-                        </td>
-                    </tr>
-                </table>
-                <jsp:include page="down.jsp" flush="true" />
-            </td>
-        </tr>
-    </table>
-</body>
-</html:html>
 ```
 
+
+
+```
+                                    <th height="30"><span class="word_white">参与人员</span></th>
+
+                                    <td bgcolor="#FFFFFF">${requestScope.trainForm.tn_join}</td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <th height="30"><span class="word_white">描述</span></th>
+
+                                    <td bgcolor="#FFFFFF">${requestScope.trainForm.tn_bz}</td>
+
+                                </tr>
+
+                            </table>
+
+                            <br>
+
+                            <html:button property="button" value="返回" onclick="javascript:history.go(-1);"></html:button>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+                <jsp:include page="down.jsp" flush="true" />
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</body>
+
+</html:html>
+```

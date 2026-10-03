@@ -1,50 +1,53 @@
+
+
 # Wicket + Kaptcha 集成示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/wicket/how-do-integrate-kaptcha-in-wicket-solution/>
 
 Kaptcha 是一个简单易用的 Java 库，用于生成验证码图片验证。在本教程中，我们将向您展示如何通过 Spring 将 Kaptcha 与 Wicket 框架集成。
 
-使用的库:
+## 使用的库
 
-1.  2.3.2 节
-2.  Wicket v1.4.17
-3.  小门弹簧 v1.4.17
-4.  Spring v3.0.5.RELEASE
+1. Kaptcha 2.3.2
+2. Wicket v1.4.17
+3. Wicket Spring v1.4.17
+4. Spring v3.0.5.RELEASE
 
-**Note**
-This article is mainly describes how to integrate Kaptcha with Wicket framework, for Wicket + Spring, please refer to this “[Wicket + Spring integration example](http://web.archive.org/web/20201109020338/http://www.mkyong.com/wicket/wicket-spring-integration-example/)“.
+> **Note**
+>
+> This article is mainly describes how to integrate Kaptcha with Wicket framework, for Wicket + Spring, please refer to this “[Wicket + Spring integration example](http://web.archive.org/web/20201109020338/http://www.mkyong.com/wicket/wicket-spring-integration-example/)“.
 
-## 1.去吧
+## 1. 安装
 
-根据这个[线程](http://web.archive.org/web/20201109020338/http://code.google.com/p/kaptcha/issues/detail?id=12)，主人不喜欢 Maven，所以你必须手动安装这个库到你的本地 Maven 库。
+根据这个[线程](http://web.archive.org/web/20201109020338/http://code.google.com/p/kaptcha/issues/detail?id=12)，作者不喜欢 Maven，所以你必须手动安装这个库到你的本地 Maven 库。
 
-1.在这里得到卡普查图书馆[http://code.google.com/p/kaptcha/](http://web.archive.org/web/20201109020338/http://code.google.com/p/kaptcha/)T2【2】。发出以下 Maven 命令来手动安装它。
+1. 在这里获取 Kaptcha 库：[http://code.google.com/p/kaptcha/](http://web.archive.org/web/20201109020338/http://code.google.com/p/kaptcha/)。执行以下 Maven 命令来手动安装它。
 
 ```java
- mvn install:install-file -Dfile=c:\kaptcha-2.3.2.jar -DgroupId=com.google.code 
-	-DartifactId=kaptcha -Dversion=2.3.2 -Dpackaging=jar 
+mvn install:install-file -Dfile=c:\kaptcha-2.3.2.jar -DgroupId=com.google.code 
+	-DartifactId=kaptcha -Dversion=2.3.2 -Dpackaging=jar
 ```
 
-3.稍后，您可以在 pom.xml 文件中包含 kaptcha。
+2. 之后，您可以在 `pom.xml` 文件中包含 Kaptcha。
 
-*文件:pom.xml*
+*文件：`pom.xml`*
 
 ```java
- <dependency>
-		<groupId>com.google.code</groupId>
-		<artifactId>kaptcha</artifactId>
-		<version>2.3.2</version>
-	</dependency> 
+<dependency>
+	<groupId>com.google.code</groupId>
+	<artifactId>kaptcha</artifactId>
+	<version>2.3.2</version>
+</dependency>
 ```
 
-## 2.DefaultKaptcha via Spring
+## 2. 通过 Spring 配置 `DefaultKaptcha`
 
-为 **DefaultKaptcha** 创建一个春豆，命名为 **captchaProducer** 。
+为 `DefaultKaptcha` 创建一个 Spring Bean，命名为 `captchaProducer`。
 
-*文件:applicationContext.xml*
+*文件：`applicationContext.xml`*
 
 ```java
- <beans 
+<beans 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
@@ -58,17 +61,17 @@ This article is mainly describes how to integrate Kaptcha with Wicket framework,
 		</property>
 	</bean>
 
-</beans> 
+</beans>
 ```
 
-## 3.CaptchaImage
+## 3. `CaptchaImage`
 
-创建一个扩展 Wicket 的`NonCachingImage`的 CaptchaImage 类，并使用`DynamicImageResource`类动态生成 captcha 图像。
+创建一个继承 Wicket `NonCachingImage` 的 `CaptchaImage` 类，并使用 `DynamicImageResource` 类动态生成验证码图像。
 
-*文件:CaptchaImage.java*
+*文件：`CaptchaImage.java`*
 
 ```java
- package com.mkyong.user;
+package com.mkyong.user;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
@@ -134,17 +137,17 @@ public class CaptchaImage extends NonCachingImage {
 		});
 
 	}
-} 
+}
 ```
 
-## 4.验证码验证器
+## 4. 验证码验证器
 
-创建一个自定义验证器，命名为" **CaptchaValidator** "，用于验证用户输入并与 Kaptcha 生成的代码进行比较。
+创建一个自定义验证器，命名为 `CaptchaValidator`，用于验证用户输入并与 Kaptcha 生成的代码进行比较。
 
-*文件:CaptchaValidator.java*
+*文件：`CaptchaValidator.java`*
 
 ```java
- package com.mkyong.user;
+package com.mkyong.user;
 
 import javax.servlet.http.HttpServletRequest;
 import org.apache.wicket.Request;
@@ -187,21 +190,21 @@ public class CaptchaValidator extends AbstractValidator<String> {
 	protected String resourceKey() {
 		return INVALID_CODE;
 	}
-} 
+}
 ```
 
-*文件:package.properties*
+*文件：`package.properties`*
 
 ```java
- captcha.invalid = Incorrect answer, type words in image again! 
+captcha.invalid = Incorrect answer, type words in image again!
 ```
 
-## 5.Wicket 组件
+## 5. Wicket 组件
 
 将 Kaptcha 与 Wicket 组件集成。
 
 ```java
- package com.mkyong.user;
+package com.mkyong.user;
 
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.ajax.AjaxRequestTarget;
@@ -252,14 +255,15 @@ public class KaptchaPage extends WebPage {
 		add(new FeedbackPanel("feedback"));
 	}
 
-} 
+}
 ```
 
-**Note**
-`captchaImage.detach();` is enables generate a new captcha image dynamically while user click on the captcha image.
+> **Note**
+>
+> `captchaImage.detach();` 用于在用户点击验证码图片时动态生成新的验证码图像。
 
 ```java
- <html>
+<html>
 <head>
 <style>
 .feedbackPanelINFO {
@@ -285,43 +289,44 @@ public class KaptchaPage extends WebPage {
 	</form>
 
 </body>
-</html> 
+</html>
 ```
 
-## 6.演示
+## 6. 演示
 
-开始并访问—*http://localhost:8080/wicket examples/*
+启动并访问 `http://localhost:8080/wicket examples/`。
 
-如果输入不正确:
-
-
+如果输入不正确：
 
 ![wicket kaptcha](img/aff77b44c4693d44bf552e6db15c3ab5.png "wicket-kaptcha-example-error")
 
-如果输入正确:
+如果输入正确：
 
+![wicket kaptcha](img/eda7f8210836198d1fce0b30effd14c8.png "wicket-kaptcha-example-correct")
 
-
-![wicket kaptcha](img/eda7f8210836198d1fce0b30effd14c8.png "wicket-kaptcha-example-correct")Download it – [Wicket-Kaptcha-Integration-Example.zip](http://web.archive.org/web/20201109020338/http://www.mkyong.com/wp-content/uploads/2009/05/Wicket-Kaptcha-Integration-Example.zip) (10 KB)
+下载：[Wicket-Kaptcha-Integration-Example.zip](http://web.archive.org/web/20201109020338/http://www.mkyong.com/wp-content/uploads/2009/05/Wicket-Kaptcha-Integration-Example.zip)（10 KB）
 
 ## 参考
 
-1.  [Kaptcha 官网](http://web.archive.org/web/20201109020338/http://code.google.com/p/kaptcha/)
-2.  [Wicket + Spring 集成示例](http://web.archive.org/web/20201109020338/http://www.mkyong.com/wicket/wicket-spring-integration-example/)
-3.  [将库包含到本地 Maven 库中](http://web.archive.org/web/20201109020338/http://www.mkyong.com/maven/how-to-include-library-manully-into-maven-local-repository/)
+1. [Kaptcha 官网](http://web.archive.org/web/20201109020338/http://code.google.com/p/kaptcha/)
+2. [Wicket + Spring 集成示例](http://web.archive.org/web/20201109020338/http://www.mkyong.com/wicket/wicket-spring-integration-example/)
 
-Tags : [captcha](http://web.archive.org/web/20201109020338/https://mkyong.com/tag/captcha/) [wicket](http://web.archive.org/web/20201109020338/https://mkyong.com/tag/wicket/)<input type="hidden" id="mkyong-current-postId" value="1425">
+
+
+
+### 3. [将库包含到本地 Maven 库中](http://web.archive.org/web/20201109020338/http://www.mkyong.com/maven/how-to-include-library-manully-into-maven-local-repository/)
+
+标签： [captcha](http://web.archive.org/web/20201109020338/https://mkyong.com/tag/captcha/) [wicket](http://web.archive.org/web/20201109020338/https://mkyong.com/tag/wicket/)
 
 ### 相关文章
 
-*   [如何将自定义库包含到 maven 本地代表中](/web/20201109020338/https://www.mkyong.com/maven/how-to-include-library-manully-into-maven-local-repository/)
-*   [如何在 Eclipse 中设置 Wicket 示例](/web/20201109020338/https://www.mkyong.com/wicket/how-do-setup-wicket-examples-in-eclipse/)
-*   [Java . lang . classnotfoundexception:org . slf4j . impl .](/web/20201109020338/https://www.mkyong.com/wicket/java-lang-classnotfoundexception-org-slf4j-impl-staticloggerbinder/)
-*   [Wicket 文本框示例](/web/20201109020338/https://www.mkyong.com/wicket/wicket-textbox-example/)
-*   [Wicket 属性模型示例](/web/20201109020338/https://www.mkyong.com/wicket/wicket-propertymodel-example/)
-
-*   [Wicket Hello World 示例](/web/20201109020338/https://www.mkyong.com/wicket/wicket-hello-world-example-with-maven-tutorial/)
-*   [Wicket + Log4j 集成示例](/web/20201109020338/https://www.mkyong.com/wicket/wicket-log4j-integration-example/)
-*   [启用 org.apache.wicket.util.r 的调试消息](/web/20201109020338/https://www.mkyong.com/wicket/enable-debug-messages-for-org-apache-wicket-util-resource/)
-*   [如何改变 Wicket 中 html 文件的位置](/web/20201109020338/https://www.mkyong.com/wicket/how-do-change-the-html-file-location-wicket/)
-*   [如何在 Wicket 中获取 servlet context](/web/20201109020338/https://www.mkyong.com/wicket/how-do-get-servletcontext-in-wicket/)
+- [如何将自定义库包含到 Maven 本地代表中](/web/20201109020338/https://www.mkyong.com/maven/how-to-include-library-manully-into-maven-local-repository/)
+- [如何在 Eclipse 中设置 Wicket 示例](/web/20201109020338/https://www.mkyong.com/wicket/how-do-setup-wicket-examples-in-eclipse/)
+- [Java.lang.ClassNotFoundException: org.slf4j.impl](/web/20201109020338/https://www.mkyong.com/wicket/java-lang-classnotfoundexception-org-slf4j-impl-staticloggerbinder/)
+- [Wicket 文本框示例](/web/20201109020338/https://www.mkyong.com/wicket/wicket-textbox-example/)
+- [Wicket 属性模型示例](/web/20201109020338/https://www.mkyong.com/wicket/wicket-propertymodel-example/)
+- [Wicket Hello World 示例](/web/20201109020338/https://www.mkyong.com/wicket/wicket-hello-world-example-with-maven-tutorial/)
+- [Wicket + Log4j 集成示例](/web/20201109020338/https://www.mkyong.com/wicket/wicket-log4j-integration-example/)
+- [启用 `org.apache.wicket.util.r` 的调试消息](/web/20201109020338/https://www.mkyong.com/wicket/enable-debug-messages-for-org-apache-wicket-util-resource/)
+- [如何改变 Wicket 中 html 文件的位置](/web/20201109020338/https://www.mkyong.com/wicket/how-do-change-the-html-file-location-wicket/)
+- [如何在 Wicket 中获取 servlet context](/web/20201109020338/https://www.mkyong.com/wicket/how-do-get-servletcontext-in-wicket/)

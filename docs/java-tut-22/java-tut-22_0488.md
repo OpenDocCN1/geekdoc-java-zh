@@ -1,3 +1,4 @@
+
 # 如何编写容器侦听器
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/events/containerlistener.html`](https://docs.oracle.com/javase/tutorial/uiswing/events/containerlistener.html)
@@ -12,15 +13,15 @@
 
 **试一试：**
 
-1.  点击启动按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 ContainerEventDemo（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 ContainerEventDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/ContainerEventDemoProject/ContainerEventDemo.jnlp)
+1. 点击启动按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行`ContainerEventDemo`（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 ContainerEventDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/ContainerEventDemoProject/ContainerEventDemo.jnlp)
 
-1.  点击标有**添加按钮**的按钮。
+2. 点击标有**添加按钮**的按钮。
 
-    您将看到一个按钮出现在窗口底部附近。容器侦听器对产生的组件添加事件做出反应，通过在窗口顶部显示"JButton #1 was added to javax.swing.JPanel"。
+   您将看到一个按钮出现在窗口底部附近。容器侦听器对产生的组件添加事件做出反应，通过在窗口顶部显示"JButton #1 was added to javax.swing.JPanel"。
 
-1.  点击标有**移除按钮**的按钮。
+3. 点击标有**移除按钮**的按钮。
 
-    这将从面板中最近添加的按钮中移除一个，导致容器侦听器接收到组件移除事件。
+   这将从面板中最近添加的按钮中移除一个，导致容器侦听器接收到组件移除事件。
 
 * * *
 
@@ -49,7 +50,6 @@ public class ContainerEventDemo ... implements ContainerListener ... {
     }
     ...
 }
-
 ```
 
 ## 容器侦听器 API
@@ -63,7 +63,7 @@ public class ContainerEventDemo ... implements ContainerListener ... {
 | [componentAdded(ContainerEvent)](https://docs.oracle.com/javase/8/docs/api/java/awt/event/ContainerListener.html#componentAdded-java.awt.event.ContainerEvent-) | 在被监听容器中的组件被添加后调用。 |
 | [componentRemoved(ContainerEvent)](https://docs.oracle.com/javase/8/docs/api/java/awt/event/ContainerListener.html#componentRemoved-java.awt.event.ContainerEvent-) | 在被监听容器中的组件被移除后调用。 |
 
-ContainerEvent 类
+`ContainerEvent`类
 
 | 方法 | 目的 |
 | --- | --- |

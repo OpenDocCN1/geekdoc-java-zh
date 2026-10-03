@@ -1,3 +1,4 @@
+
 # Baeldung 每周评论 23
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/2015-week-review-23>
@@ -10,7 +11,7 @@
 
 **开始了……**
 
-## 1。Spring 和 Java
+## 1. Spring 和 Java
 
 #### [> >春季数据 JPA 教程:查询方法介绍](https://web.archive.org/web/20220121030505/http://www.petrikainulainen.net/programming/spring-framework/spring-data-jpa-tutorial-introduction-to-query-methods/)
 
@@ -30,39 +31,27 @@ Petri 的 Spring Data JPA 系列的坚实部分——引入**查询方法**。
 
 也值得一读:
 
-*   #### [> > How does the Hibernate transaction cache concurrency strategy work](https://web.archive.org/web/20220121030505/http://vladmihalcea.com/2015/06/01/how-does-hibernate-transactional-cacheconcurrencystrategy-work/)
-
-*   #### [> > Spring configuration is modularized for integration test](https://web.archive.org/web/20220121030505/http://blog.frankel.ch/spring-configuration-modularization-for-integration-testing)
-
-*   #### [> > Reactive Streams released the first stable version](https://web.archive.org/web/20220121030505/http://www.infoq.com/news/2015/06/Reactive-Streams-JVM-Version)
-
-    for JVM.
-*   #### [> > The first milestone of the listing of the spring data release train Gosling](https://web.archive.org/web/20220121030505/https://spring.io/blog/2015/06/02/first-milestone-of-spring-data-release-train-gosling-available)
-
-*   #### [> > Open JDK's modified Java memory model](https://web.archive.org/web/20220121030505/http://www.infoq.com/articles/The-OpenJDK9-Revised-Java-Memory-Model)
-
-*   #### [> >长累加器和双累加器类如何工作？](https://web.archive.org/web/20220121030505/http://www.nurkiewicz.com/2015/06/how-longaccumulator-and.html)T3
+*   [> > How does the Hibernate transaction cache concurrency strategy work](https://web.archive.org/web/20220121030505/http://vladmihalcea.com/2015/06/01/how-does-hibernate-transactional-cacheconcurrencystrategy-work/)
+*   [> > Spring configuration is modularized for integration test](https://web.archive.org/web/20220121030505/http://blog.frankel.ch/spring-configuration-modularization-for-integration-testing)
+*   [> > Reactive Streams released the first stable version](https://web.archive.org/web/20220121030505/http://www.infoq.com/news/2015/06/Reactive-Streams-JVM-Version) for JVM.
+*   [> > The first milestone of the listing of the spring data release train Gosling](https://web.archive.org/web/20220121030505/https://spring.io/blog/2015/06/02/first-milestone-of-spring-data-release-train-gosling-available)
+*   [> > Open JDK's modified Java memory model](https://web.archive.org/web/20220121030505/http://www.infoq.com/articles/The-OpenJDK9-Revised-Java-Memory-Model)
+*   [> >长累加器和双累加器类如何工作？](https://web.archive.org/web/20220121030505/http://www.nurkiewicz.com/2015/06/how-longaccumulator-and.html)
 
 网络研讨会和演示:
 
-*   #### [>](https://web.archive.org/web/20220121030505/https://spring.io/blog/2015/05/28/webinar-replay-improving-your-legacy-application-with-spring)
+*   [>](https://web.archive.org/web/20220121030505/https://spring.io/blog/2015/05/28/webinar-replay-improving-your-legacy-application-with-spring)
 
 升级时间:
 
-*   #### [>](https://web.archive.org/web/20220121030505/https://spring.io/blog/2015/06/04/spring-boot-1-2-4-released)
+*   [>](https://web.archive.org/web/20220121030505/https://spring.io/blog/2015/06/04/spring-boot-1-2-4-released) Spring Boot 1.2.4 发布
+*   [>>http client 4.5 出了](https://web.archive.org/web/20220121030505/https://www.apache.org/dist/httpcomponents/httpclient/RELEASE_NOTES-4.5.x.txt)
+*   [>春季 XD 1.2 RC1 发布](https://web.archive.org/web/20220121030505/https://spring.io/blog/2015/06/02/apache-ambari-meets-spring-xd)
+*   [> > Chunyun Archon 1.0.0.M1 has been launched](https://web.archive.org/web/20220121030505/https://spring.io/blog/2015/05/27/spring-cloud-consul-1-0-0-m1-available-now)
+*   [> > Milestone 1 of Spring Integration 4.2 can be used](https://web.archive.org/web/20220121030505/https://spring.io/blog/2015/05/28/spring-integration-4-2-milestone-1-is-available)
+*   [> >弹簧状态机 1.0.0.M2 发布](https://web.archive.org/web/20220121030505/https://spring.io/blog/2015/06/02/spring-statemachine-1-0-0-m2-released)
 
-    Spring Boot 1。2 .四发布 T3
-*   #### [>>http client 4.5 出了](https://web.archive.org/web/20220121030505/https://www.apache.org/dist/httpcomponents/httpclient/RELEASE_NOTES-4.5.x.txt)
-
-*   #### [>春季 XD 1.2 RC1 发布](https://web.archive.org/web/20220121030505/https://spring.io/blog/2015/06/02/apache-ambari-meets-spring-xd)
-
-*   #### [> > Chunyun Archon 1.0.0.M1 has been launched](https://web.archive.org/web/20220121030505/https://spring.io/blog/2015/05/27/spring-cloud-consul-1-0-0-m1-available-now)
-
-*   #### [> > Milestone 1 of Spring Integration 4.2 can be used](https://web.archive.org/web/20220121030505/https://spring.io/blog/2015/05/28/spring-integration-4-2-milestone-1-is-available)
-
-*   #### [> >弹簧状态机 1。0 .0 .货币供应量之二发布](https://web.archive.org/web/20220121030505/https://spring.io/blog/2015/06/02/spring-statemachine-1-0-0-m2-released)T3
-
-## 2。技术
+## 2. 技术
 
 #### [> >高级开发人员的角色](https://web.archive.org/web/20220121030505/http://mattbriggs.net/blog/2015/06/01/the-role-of-a-senior-developer/)
 
@@ -80,24 +69,18 @@ Petri 的 Spring Data JPA 系列的坚实部分——引入**查询方法**。
 
 #### [>>](https://web.archive.org/web/20220121030505/http://martinfowler.com/bliki/MonolithFirst.html)
 
-如果你正在考虑在绿地项目中使用**微服务架构，或者甚至在你的视野中的任何地方使用微服务，这是一个很好的选择。**
+如果你正在考虑在绿地项目中使用**微服务架构**，或者甚至在你的视野中的任何地方使用微服务，这是一个很好的选择。
 
 #### 也值得一读:
 
-*   #### [>>](https://web.archive.org/web/20220121030505/https://medium.com/fabric8-io/kubernetes-for-developers-2a9c7202fcd3)
+*   [>>](https://web.archive.org/web/20220121030505/https://medium.com/fabric8-io/kubernetes-for-developers-2a9c7202fcd3)
+*   [> > AWS best practices: five key entry methods](https://web.archive.org/web/20220121030505/http://cloudacademy.com/blog/aws-best-practices/)
+*   [> > Amazon EBS volumes: how to reduce them to size](https://web.archive.org/web/20220121030505/http://cloudacademy.com/blog/amazon-ebs-shink-volume/)
+*   [> > [email protection] –extract](https://web.archive.org/web/20220121030505/https://www.symphonious.net/2015/06/05/testinglmax-abstraction-by-dsl/) through DSL
+*   [> > How to organize your code shape](https://web.archive.org/web/20220121030505/http://blog.code-cop.org/2015/05/how-to-organise-your-code-katas.html)
+*   [> > Five development skills of Heizi API](https://web.archive.org/web/20220121030505/http://nordicapis.com/top-5-development-tips-for-a-killer-api/)
 
-*   #### [> > AWS best practices: five key entry methods](https://web.archive.org/web/20220121030505/http://cloudacademy.com/blog/aws-best-practices/)
-
-*   #### [> > Amazon EBS volumes: how to reduce them to size](https://web.archive.org/web/20220121030505/http://cloudacademy.com/blog/amazon-ebs-shink-volume/)
-
-*   #### [> > [email protection] –extract](https://web.archive.org/web/20220121030505/https://www.symphonious.net/2015/06/05/testinglmax-abstraction-by-dsl/)
-
-    through DSL
-*   #### [> > How to organize your code shape](https://web.archive.org/web/20220121030505/http://blog.code-cop.org/2015/05/how-to-organise-your-code-katas.html)
-
-*   #### [> > Five development skills of Heizi API](https://web.archive.org/web/20220121030505/http://nordicapis.com/top-5-development-tips-for-a-killer-api/)
-
-## 3。沉思
+## 3. 沉思
 
 #### [> >职业晋升换取灵魂的低价](https://web.archive.org/web/20220121030505/http://www.daedtech.com/career-advancement-for-the-low-price-of-your-soul)
 
@@ -107,7 +90,7 @@ Petri 的 Spring Data JPA 系列的坚实部分——引入**查询方法**。
 
 关于结对编程的一篇非常有趣的阅读—**比通常的主题**更加微妙。
 
-## 4。漫画
+## 4. 漫画
 
 本周我最喜欢的迪尔伯特。
 
@@ -117,16 +100,14 @@ Petri 的 Spring Data JPA 系列的坚实部分——引入**查询方法**。
 
 #### [> >我们自己付钱给自己](https://web.archive.org/web/20220121030505/http://dilbert.com/strip/2003-08-03)
 
-## 5。本周精选
+## 5. 本周精选
 
 今年早些时候，我在“每周评论”中介绍了“本周精选”部分。**如果你已经在我的电子邮件列表中，你已经得到了选择**，希望你喜欢它。
 
 如果没有，您可以**分享评论**并在此解锁:
 
-[社会标签 id = ' 6211 ']
+[社会标签 id='6211']
 
 绝对是一本关于克服小众化恐惧的好书:
 
 #### [> >该不该小众自己？](https://web.archive.org/web/20220121030505/http://doubleyourfreelancing.com/niche/)
-
-[/sociallocker]

@@ -1,17 +1,17 @@
+
 # 250+ Java 程序输出示例
-
-
 
 ![](img/image_rsrc68Z.jpg)
 
-
 ## 前言
 
+作者：Aniket Pataskar
 
-**作者：** Aniket Pataskar
-**邮箱：** pataskaraniket@gmail.com
-**联系：** +91 9423448273
-**封面设计：** Aniket Pataskar
+邮箱：pataskaraniket@gmail.com
+
+联系：+91 9423448273
+
+封面设计：Aniket Pataskar
 
 ## 关于作者
 
@@ -19,14 +19,14 @@ Aniket O. Pataskar 出自印度。他是一位 IT 软件工程师，拥有多种
 
 《250+ 带输出的 Java 程序》是一本用于学习的程序集。Aniket 对 Apple 的新兴技术一直感兴趣。
 
-Aniket 在软件开发、iOS (iPhone & iPad) 应用开发以及 Android 应用开发和多媒体（如动画、图像编辑、音频编辑、视频编辑和视觉特效）方面拥有技能。
+Aniket 在软件开发、iOS（iPhone & iPad）应用开发以及 Android 应用开发和多媒体（如动画、图像编辑、音频编辑、视频编辑和视觉特效）方面拥有技能。
 
 本书献给：
 
 我的家人，感谢他们一如既的爱与支持以及对我的信任。我也将其献给一直激励我完成这项工作的神。没有你们的爱与理解，本书是不可能实现的。从心底感谢你们。
 
-
 ## 1. Hello World
+
 ```java
 public class HelloWorld {
     public static void main(String[] args) {
@@ -34,12 +34,15 @@ public class HelloWorld {
     }
 }
 ```
-输出:
-```
+
+输出：
+
+```text
 Hello, World!
 ```
 
 ## 2. 两个数字之和
+
 ```java
 public class SumOfTwoNumbers {
     public static void main(String[] args) {
@@ -50,12 +53,15 @@ public class SumOfTwoNumbers {
     }
 }
 ```
-输出:
-```
+
+输出：
+
+```text
 Sum: 30
 ```
 
 ## 3. 检查奇偶数
+
 ```java
 public class EvenOdd {
     public static void main(String[] args) {
@@ -68,12 +74,15 @@ public class EvenOdd {
     }
 }
 ```
-输出:
-```
+
+输出：
+
+```text
 7 is odd.
 ```
 
 ## 4. 使用循环打印从 1 到 5 的数字
+
 ```java
 public class PrintNumbers {
     public static void main(String[] args) {
@@ -83,8 +92,10 @@ public class PrintNumbers {
     }
 }
 ```
-输出:
-```
+
+输出：
+
+```text
 1
 2
 3
@@ -93,6 +104,7 @@ public class PrintNumbers {
 ```
 
 ## 5. 数字的阶乘
+
 ```java
 public class Factorial {
     public static void main(String[] args) {
@@ -105,12 +117,15 @@ public class Factorial {
     }
 }
 ```
-输出:
-```
+
+输出：
+
+```text
 Factorial of 5 is 120
 ```
 
 ## 6. 反转字符串
+
 ```java
 public class ReverseString {
     public static void main(String[] args) {
@@ -120,12 +135,15 @@ public class ReverseString {
     }
 }
 ```
-输出:
-```
+
+输出：
+
+```text
 Reversed String: avaJ
 ```
 
 ## 7. 检查数字是否为质数
+
 ```java
 public class PrimeNumber {
     public static void main(String[] args) {
@@ -145,12 +163,15 @@ public class PrimeNumber {
     }
 }
 ```
-输出:
-```
+
+输出：
+
+```text
 29 is a prime number.
 ```
 
 ## 8. 查找三个数中的最大值
+
 ```java
 public class LargestNumber {
     public static void main(String[] args) {
@@ -169,6 +190,7 @@ public class LargestNumber {
 ```
 
 ## 9. 简单计算器
+
 ```java
 public class SimpleCalculator {
     public static void main(String[] args) {
@@ -182,6 +204,7 @@ public class SimpleCalculator {
 ```
 
 ## 10. 前 10 项斐波那契数列
+
 ```java
 public class FibonacciSeries {
     public static void main(String[] args) {
@@ -197,9 +220,7 @@ public class FibonacciSeries {
 }
 ```
 
-
-
-
+## 11. 计算数字的位数
 
 ```java
 public static void main(String[] args) {
@@ -212,8 +233,12 @@ public static void main(String[] args) {
     System.out.println("Number of digits: " + count);
 }
 ```
-Output:
+
+输出：
+
+```text
 Number of digits: 5
+```
 
 ## 20. 将摄氏度转换为华度
 
@@ -226,8 +251,12 @@ public class CelsiusToFahrenheit {
     }
 }
 ```
-Output:
+
+输出：
+
+```text
 25.0 °C = 77.0 °F
+```
 
 ## 21. 将华度转换为摄氏度
 
@@ -240,8 +269,12 @@ public class FahrenheitToCelsius {
     }
 }
 ```
-Output:
+
+输出：
+
+```text
 77.0 °F = 25.0 °C
+```
 
 ## 22. 计算圆的面积
 
@@ -254,8 +287,12 @@ public class AreaOfCircle {
     }
 }
 ```
-Output:
+
+输出：
+
+```text
 Area of the circle: 176.71458676442586
+```
 
 ## 23. 计算圆的周长
 
@@ -268,8 +305,12 @@ public class PerimeterOfCircle {
     }
 }
 ```
-Output:
+
+输出：
+
+```text
 Perimeter of the circle: 47.12388980384689
+```
 
 ## 24. 计算单利
 
@@ -282,8 +323,12 @@ public class SimpleInterest {
     }
 }
 ```
-Output:
+
+输出：
+
+```text
 Simple Interest: 100.0
+```
 
 ## 25. 计算复利
 
@@ -296,8 +341,12 @@ public class CompoundInterest {
     }
 }
 ```
-Output:
+
+输出：
+
+```text
 Compound Interest: 102.5
+```
 
 ## 26. 将十进制转换为二进制
 
@@ -310,8 +359,12 @@ public class DecimalToBinary {
     }
 }
 ```
-Output:
+
+输出：
+
+```text
 Binary of 10 is: 1010
+```
 
 ## 27. 将二进制转换为十进制
 
@@ -324,8 +377,12 @@ public class BinaryToDecimal {
     }
 }
 ```
-Output:
+
+输出：
+
+```text
 Decimal of 1010 is: 10
+```
 
 ## 28. 将十进制转换为十六进制
 
@@ -338,8 +395,12 @@ public class DecimalToHexadecimal {
     }
 }
 ```
-Output:
+
+输出：
+
+```text
 Hexadecimal of 255 is: ff
+```
 
 ## 29. 将十六进制转换为十进制
 
@@ -352,8 +413,12 @@ public class HexadecimalToDecimal {
     }
 }
 ```
-Output:
+
+输出：
+
+```text
 Decimal of ff is: 255
+```
 
 ## 30. 获取字符的 ASCII 值
 
@@ -366,8 +431,12 @@ public class ASCIIValue {
     }
 }
 ```
-Output:
+
+输出：
+
+```text
 ASCII value of A is: 65
+```
 
 ## 31. 计算自然数之和
 
@@ -382,10 +451,16 @@ public class SumOfNaturalNumbers {
     }
 }
 ```
-Output:
+
+输出：
+
+```text
 Sum of natural numbers up to 10 is: 55
+```
 
 ## 32. 计算数字的平均值
+
+
 
 ```java
 public class AverageOfNumbers {
@@ -400,7 +475,9 @@ public class AverageOfNumbers {
     }
 }
 ```
+
 Output:
+
 Average: 4.25
 
 ## 33. 查找数组中的最小数字
@@ -419,7 +496,9 @@ public class SmallestNumber {
     }
 }
 ```
+
 Output:
+
 Smallest number: 2
 
 ## 34. 查找数组中的最大数字
@@ -438,7 +517,9 @@ public class LargestNumberArray {
     }
 }
 ```
+
 Output:
+
 Largest: 8
 
 ## 35. 查找数组中的第二大数字
@@ -460,7 +541,9 @@ public class SecondLargest {
     }
 }
 ```
+
 Output:
+
 Second largest: 5
 
 ## 36. 打印二维数组
@@ -482,10 +565,14 @@ public class Print2DArray {
     }
 }
 ```
+
 Output:
-1 2 3 
-4 5 6 
-7 8 9 
+
+1 2 3
+
+4 5 6
+
+7 8 9
 
 ## 37. 矩阵转置
 
@@ -512,10 +599,14 @@ public class TransposeMatrix {
     }
 }
 ```
+
 Output:
-1 4 7 
-2 5 8 
-3 6 9 
+
+1 4 7
+
+2 5 8
+
+3 6 9
 
 ## 38. 计算两个矩阵的和
 
@@ -547,10 +638,14 @@ public class MatrixAddition {
     }
 }
 ```
+
 Output:
-10 10 10 
-10 10 10 
-10 10 10 
+
+10 10 10
+
+10 10 10
+
+10 10 10
 
 ## 39. 两个矩阵的乘积
 
@@ -584,10 +679,14 @@ public class MatrixMultiplication {
     }
 }
 ```
+
 Output:
-30 24 18 
-84 69 54 
-138 114 90 
+
+30 24 18
+
+84 69 54
+
+138 114 90
 
 ## 40. 统计字符串中元音的数量
 
@@ -607,7 +706,9 @@ public class CountVowels {
     }
 }
 ```
+
 Output:
+
 Number of vowels: 3
 
 ## 41. 查找字符串中字符的频率
@@ -617,27 +718,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FrequencyOfCharacters {
-```
-
-
-
-
-
-```java
-public static void main(String[] args) {
-    String str = "Hello World";
-    Map<Character, Integer> frequencyMap = new HashMap<>();
-    for (int i = 0; i < str.length(); i++) {
-        char ch = str.charAt(i);
-        frequencyMap.put(ch, frequencyMap.getOrDefault(ch, 0) + 1);
-    }
-    for (Map.Entry<Character, Integer> entry : frequencyMap.entrySet()) {
-        System.out.println(entry.getKey() + ": " + entry.getValue());
+    public static void main(String[] args) {
+        String str = "Hello World";
+        Map<Character, Integer> frequencyMap = new HashMap<>();
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            frequencyMap.put(ch, frequencyMap.getOrDefault(ch, 0) + 1);
+        }
+        for (Map.Entry<Character, Integer> entry : frequencyMap.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
     }
 }
 ```
+
 Output:
-```
+
+```text
 H: 1
 e: 1
 l: 3
@@ -659,8 +756,10 @@ public class RemoveVowels {
     }
 }
 ```
+
 Output:
-```
+
+```text
 String without vowels: Hll Wrld
 ```
 
@@ -675,8 +774,10 @@ public class StringLength {
     }
 }
 ```
+
 Output:
-```
+
+```text
 Length of the string: 11
 ```
 
@@ -692,8 +793,10 @@ public class ContainsSubstring {
     }
 }
 ```
+
 Output:
-```
+
+```text
 Contains 'World': true
 ```
 
@@ -708,8 +811,10 @@ public class ConvertToUppercase {
     }
 }
 ```
+
 Output:
-```
+
+```text
 Uppercase: HELLO WORLD
 ```
 
@@ -724,8 +829,10 @@ public class ConvertToLowercase {
     }
 }
 ```
+
 Output:
-```
+
+```text
 Lowercase: hello world
 ```
 
@@ -740,12 +847,16 @@ public class ReverseString {
     }
 }
 ```
+
 Output:
-```
+
+```text
 Reversed string: dlroW olleH
 ```
 
 ## 48. 求数组元素之和
+
+
 
 ```java
 public class SumOfArray {
@@ -759,8 +870,10 @@ public class SumOfArray {
     }
 }
 ```
+
 Output:
-```
+
+```text
 Sum of array elements: 15
 ```
 
@@ -779,8 +892,10 @@ public class AverageOfArray {
     }
 }
 ```
+
 Output:
-```
+
+```text
 Average of array elements: 3.0
 ```
 
@@ -800,8 +915,10 @@ public class MinimumElementArray {
     }
 }
 ```
+
 Output:
-```
+
+```text
 Minimum element in array: 1
 ```
 
@@ -821,8 +938,10 @@ public class MaximumElementArray {
     }
 }
 ```
+
 Output:
-```
+
+```text
 Maximum element in array: 5
 ```
 
@@ -843,8 +962,10 @@ public class CountOccurrences {
     }
 }
 ```
+
 Output:
-```
+
+```text
 Occurrences of 2: 3
 ```
 
@@ -865,8 +986,10 @@ public class ContainsElementArray {
     }
 }
 ```
+
 Output:
-```
+
+```text
 Array contains 3: true
 ```
 
@@ -888,8 +1011,10 @@ public class ReverseArray {
     }
 }
 ```
+
 Output:
-```
+
+```text
 Reversed array: 5 4 3 2 1
 ```
 
@@ -913,8 +1038,10 @@ public class SecondLargestArray {
     }
 }
 ```
+
 Output:
-```
+
+```text
 Second largest element: 4
 ```
 
@@ -927,6 +1054,7 @@ public class FactorialRecursion {
         int factorial = factorial(num);
         System.out.println("Factorial of " + num + " is: " + factorial);
     }
+
     public static int factorial(int num) {
         if (num == 0) {
             return 1;
@@ -935,8 +1063,10 @@ public class FactorialRecursion {
     }
 }
 ```
+
 Output:
-```
+
+```text
 Factorial of 5 is: 120
 ```
 
@@ -950,6 +1080,7 @@ public class FibonacciRecursion {
             System.out.print(fibonacci(i) + " ");
         }
     }
+
     public static int fibonacci(int num) {
         if (num <= 1) {
             return num;
@@ -958,8 +1089,10 @@ public class FibonacciRecursion {
     }
 }
 ```
+
 Output:
-```
+
+```text
 0 1 1 2 3 5 8 13 21 34 
 ```
 
@@ -972,6 +1105,7 @@ public class GCDRecursion {
         int gcd = gcd(num1, num2);
         System.out.println("GCD is: " + gcd);
     }
+
     public static int gcd(int num1, int num2) {
         if (num2 == 0) {
             return num1;
@@ -980,8 +1114,10 @@ public class GCDRecursion {
     }
 }
 ```
+
 Output:
-```
+
+```text
 GCD is: 6
 ```
 
@@ -994,6 +1130,7 @@ public class SumOfDigitsRecursion {
         int sum = sumOfDigits(num);
         System.out.println("Sum of digits: " + sum);
     }
+
     public static int sumOfDigits(int num) {
         if (num == 0) {
             return 0;
@@ -1002,8 +1139,10 @@ public class SumOfDigitsRecursion {
     }
 }
 ```
+
 Output:
-```
+
+```text
 Sum of digits: 10
 ```
 
@@ -1016,6 +1155,7 @@ public class PalindromeRecursion {
         boolean isPalindrome = isPalindrome(str, 0, str.length() - 1);
         System.out.println("Is palindrome: " + isPalindrome);
     }
+
     public static boolean isPalindrome(String str, int start, int end) {
         if (start >= end) {
             return true;
@@ -1027,8 +1167,10 @@ public class PalindromeRecursion {
     }
 }
 ```
+
 Output:
-```
+
+```text
 Is palindrome: true
 ```
 
@@ -1041,6 +1183,7 @@ public class PowerRecursion {
         int result = power(base, exponent);
         System.out.println(base + "^" + exponent + " = " + result);
     }
+
     public static int power(int base, int exponent) {
         if (exponent == 0) {
             return 1;
@@ -1049,8 +1192,10 @@ public class PowerRecursion {
     }
 }
 ```
+
 Output:
-```
+
+```text
 2³ = 8
 ```
 
@@ -1065,8 +1210,10 @@ public class BinaryToDecimal {
     }
 }
 ```
+
 Output:
-```
+
+```text
 Decimal: 10
 ```
 
@@ -1075,21 +1222,21 @@ Decimal: 10
 ```java
 public class DecimalToBinary {
     public static void main(String[] args) {
+        int decimal = 10;
+        String binary = Integer.toBinaryString(decimal);
+        System.out.println("Binary: " + binary);
+    }
+}
 ```
 
-
-
-
-
-```java
-int decimal = 10;
-String binary = Integer.toBinaryString(decimal);
-System.out.println("Binary: " + binary);
-```
 Output:
+
+```text
 Binary: 1010
+```
 
 ## 64. 十进制转十六进制
+
 ```java
 public class DecimalToHexadecimal {
     public static void main(String[] args) {
@@ -1099,10 +1246,15 @@ public class DecimalToHexadecimal {
     }
 }
 ```
+
 Output:
+
+```text
 Hexadecimal: ff
+```
 
 ## 65. 十六进制转进制
+
 ```java
 public class HexadecimalToDecimal {
     public static void main(String[] args) {
@@ -1112,10 +1264,15 @@ public class HexadecimalToDecimal {
     }
 }
 ```
+
 Output:
+
+```text
 Decimal: 255
+```
 
 ## 66. 使用临时变量交换两个数字
+
 ```java
 public class SwapNumbers {
     public static void main(String[] args) {
@@ -1127,10 +1284,17 @@ public class SwapNumbers {
     }
 }
 ```
+
 Output:
+
+```text
 After swapping: a = 10, b = 5
+```
 
 ## 67. 不使用临时变量交换两个数字
+
+
+
 ```java
 public class SwapNumbersWithoutTemp {
     public static void main(String[] args) {
@@ -1142,10 +1306,13 @@ public class SwapNumbersWithoutTemp {
     }
 }
 ```
+
 Output:
+
 After swapping: a = 10, b = 5
 
 ## 68. 反转数字
+
 ```java
 public class ReverseNumber {
     public static void main(String[] args) {
@@ -1159,10 +1326,13 @@ public class ReverseNumber {
     }
 }
 ```
+
 Output:
+
 Reversed number: 4321
 
 ## 69. 检查一个数字是否为阿姆斯特斯特数
+
 ```java
 public class ArmstrongNumber {
     public static void main(String[] args) {
@@ -1181,10 +1351,13 @@ public class ArmstrongNumber {
     }
 }
 ```
+
 Output:
+
 153 is an Armstrong number.
 
 ## 70. 检查一个数字是否为质数
+
 ```java
 public class PrimeNumber {
     public static void main(String[] args) {
@@ -1204,10 +1377,13 @@ public class PrimeNumber {
     }
 }
 ```
+
 Output:
+
 29 is a prime number.
 
-## 71. 寻找两个数字的最小公倍数 (LCM)
+## 71. 寻找两个数字的最小公倍数（LCM）
+
 ```java
 public class LCM {
     public static void main(String[] args) {
@@ -1223,10 +1399,13 @@ public class LCM {
     }
 }
 ```
+
 Output:
+
 LCM of 72 and 120 is: 360
 
-## 72. 寻找两个数字的最大公约数 (HCF)
+## 72. 寻找两个数字的最大公约数（HCF）
+
 ```java
 public class HCF {
     public static void main(String[] args) {
@@ -1240,10 +1419,13 @@ public class HCF {
     }
 }
 ```
+
 Output:
+
 HCF of 72 and 120 is: 24
 
 ## 73. 检查一个数字是偶数还是奇数
+
 ```java
 public class EvenOrOdd {
     public static void main(String[] args) {
@@ -1256,12 +1438,16 @@ public class EvenOrOdd {
     }
 }
 ```
+
 Output:
+
 29 is odd.
 
 ## 74. 生成随机数
+
 ```java
 import java.util.Random;
+
 public class RandomNumber {
     public static void main(String[] args) {
         Random rand = new Random();
@@ -1270,10 +1456,13 @@ public class RandomNumber {
     }
 }
 ```
+
 Output:
+
 Random number between 0 and 99
 
-## 75. 使用欧几里得算法寻找两个数字的最大公约数 (GCD)
+## 75. 使用欧几里得算法寻找两个数字的最大公约数（GCD）
+
 ```java
 public class EuclideanGCD {
     public static void main(String[] args) {
@@ -1289,10 +1478,13 @@ public class EuclideanGCD {
     }
 }
 ```
+
 Output:
+
 GCD: 14
 
 ## 76. 求一个数字的平方根
+
 ```java
 public class SquareRoot {
     public static void main(String[] args) {
@@ -1302,10 +1494,13 @@ public class SquareRoot {
     }
 }
 ```
+
 Output:
+
 Square root of 25 is: 5.0
 
 ## 77. 检查一个数字是否为完全平方
+
 ```java
 public class PerfectSquare {
     public static void main(String[] args) {
@@ -1319,10 +1514,13 @@ public class PerfectSquare {
     }
 }
 ```
+
 Output:
+
 16 is a perfect square.
 
 ## 78. 检查一个数字是否为回文
+
 ```java
 public class PalindromeNumber {
     public static void main(String[] args) {
@@ -1340,10 +1538,13 @@ public class PalindromeNumber {
     }
 }
 ```
+
 Output:
+
 121 is a palindrome.
 
 ## 79. 寻找到 N 的质数之和
+
 ```java
 public class SumOfPrimes {
     public static void main(String[] args) {
@@ -1356,6 +1557,7 @@ public class SumOfPrimes {
         }
         System.out.println("Sum of prime numbers up to " + n + " is: " + sum);
     }
+
     public static boolean isPrime(int num) {
         for (int i = 2; i <= num / 2; i++) {
             if (num % i == 0) {
@@ -1366,10 +1568,13 @@ public class SumOfPrimes {
     }
 }
 ```
+
 Output:
+
 Sum of prime numbers up to 10 is: 17
 
 ## 80. 寻找到 N 的自然数之和
+
 ```java
 public class SumOfNaturalNumbers {
     public static void main(String[] args) {
@@ -1379,10 +1584,13 @@ public class SumOfNaturalNumbers {
     }
 }
 ```
+
 Output:
+
 Sum of first 10 natural numbers is: 55
 
 ## 81. 将字符转换为其 ASCII 值
+
 ```java
 public class CharToASCII {
     public static void main(String[] args) {
@@ -1392,10 +1600,13 @@ public class CharToASCII {
     }
 }
 ```
+
 Output:
+
 ASCII value of A is: 65
 
 ## 82. 寻找数组中偶数和奇数的之和
+
 ```java
 public class SumEvenOddArray {
     public static void main(String[] args) {
@@ -1413,11 +1624,15 @@ public class SumEvenOddArray {
     }
 }
 ```
+
 Output:
+
 Sum of even numbers: 6
+
 Sum of odd numbers: 9
 
 ## 83. 寻找数组元素的乘积
+
 ```java
 public class ProductOfArray {
     public static void main(String[] args) {
@@ -1430,10 +1645,13 @@ public class ProductOfArray {
     }
 }
 ```
+
 Output:
+
 Product of array elements: 120
 
 ## 84. 寻找数组中的最大和最小元素
+
 ```java
 public class LargestSmallestArray {
     public static void main(String[] args) {
@@ -1452,11 +1670,15 @@ public class LargestSmallestArray {
     }
 }
 ```
+
 Output:
+
 Largest element: 5
+
 Smallest element: 1
 
 ## 85. 统计数字的位数
+
 ```java
 public class CountDigits {
     public static void main(String[] args) {
@@ -1470,10 +1692,15 @@ public class CountDigits {
     }
 }
 ```
+
 Output:
+
 Number of digits: 5
 
 ## 86. 打印数字的乘法表
+
+
+
 ```java
 public class MultiplicationTable {
     public static void main(String[] args) {
@@ -1484,21 +1711,18 @@ public class MultiplicationTable {
     }
 }
 ```
+
 Output:
-5 x 1 = 5
-5 x 2 = 10
-5 x 3 = 15
-5 x 4 = 20
 
-
-
-
-
-5 x 5 = 25
-5 x 6 = 30
-5 x 7 = 35
-5 x 8 = 40
-5 x 9 = 45
+5 x 1 = 5  
+5 x 2 = 10  
+5 x 3 = 15  
+5 x 4 = 20  
+5 x 5 = 25  
+5 x 6 = 30  
+5 x 7 = 35  
+5 x 8 = 40  
+5 x 9 = 45  
 5 x 10 = 50
 
 ## 87. 寻找矩阵对角线之和
@@ -1523,7 +1747,8 @@ public class SumOfDiagonals {
 ```
 
 输出:
-```
+
+```text
 主对角线之和: 15
 副对角线之和: 15
 ```
@@ -1556,7 +1781,8 @@ public class TransposeMatrix {
 ```
 
 输出:
-```
+
+```text
 矩阵的转置:
 1 4 7
 2 5 8
@@ -1581,7 +1807,8 @@ public class FibonacciWithoutRecursion {
 ```
 
 输出:
-```
+
+```text
 斐波那契序列: 0 1 1 2 3 5 8 13 21 34
 ```
 
@@ -1627,7 +1854,8 @@ public class BasicCalculator {
 ```
 
 输出:
-```
+
+```text
 输入第一个数字: 10
 输入第二个数字: 5
 输入运算符 (+, -, /): /
@@ -1662,7 +1890,8 @@ public class AnagramCheck {
 ```
 
 输出:
-```
+
+```text
 listen 和 silent 是异位词.
 ```
 
@@ -1685,7 +1914,8 @@ public class FactorialRecursion {
 ```
 
 输出:
-```
+
+```text
 5 的阶乘: 120
 ```
 
@@ -1705,7 +1935,8 @@ public class PowerLoop {
 ```
 
 输出:
-```
+
+```text
 2⁴ = 16
 ```
 
@@ -1728,7 +1959,8 @@ public class SumNaturalRecursion {
 ```
 
 输出:
-```
+
+```text
 前 10 个自然数之和: 55
 ```
 
@@ -1753,7 +1985,8 @@ public class FibonacciRecursion {
 ```
 
 输出:
-```
+
+```text
 斐波那契序列: 0 1 1 2 3 5 8 13 21 34 
 ```
 
@@ -1776,7 +2009,8 @@ public class SumOfDigitsRecursion {
 ```
 
 输出:
-```
+
+```text
 各位数字之和: 10
 ```
 
@@ -1799,7 +2033,8 @@ public class ReverseRecursion {
 ```
 
 输出:
-```
+
+```text
 反转字符串: olH
 ```
 
@@ -1822,7 +2057,8 @@ public class GCDRecursion {
 ```
 
 输出:
-```
+
+```text
 最大公约数: 14
 ```
 
@@ -1851,7 +2087,8 @@ public class PrimeNumbers {
 ```
 
 输出:
-```
+
+```text
 到 50 的质数: 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 
 ```
 
@@ -1871,15 +2108,19 @@ public class StringLength {
 ```
 
 输出:
-```
+
+```text
 字符串长度: 13
 ```
 
 ## 101. 查找字符串中第一个非重复字符
 
+
+
 ```java
 import java.util.LinkedHashMap;
 import java.util.Map;
+
 public class FirstNonRepeatedCharacter {
     public static void main(String[] args) {
         String str = "swiss";
@@ -1890,6 +2131,7 @@ public class FirstNonRepeatedCharacter {
             System.out.println("所有字符都重复了.");
         }
     }
+
     public static char firstNonRepeatedChar(String str) {
         Map<Character, Integer> charCount = new LinkedHashMap<>();
         for (char c : str.toCharArray()) {
@@ -1905,10 +2147,9 @@ public class FirstNonRepeatedCharacter {
 }
 ```
 
-输出:
-```
-第一个非重复字符: w
-```
+输出：
+
+第一个非重复字符：w
 
 ## 102. 使用递归检查数字是否为回文
 
@@ -1919,6 +2160,7 @@ public class PalindromeCheckRecursion {
         boolean isPalindrome = isPalindrome(num, 0, String.valueOf(num).length() - 1);
         System.out.println(num + " 是回文: " + isPalindrome);
     }
+
     public static boolean isPalindrome(int num, int start, int end) {
         String str = String.valueOf(num);
         if (start >= end) {
@@ -1928,9 +2170,6 @@ public class PalindromeCheckRecursion {
 }
 ```
 
-
-
-
 ```java
 if (str.charAt(start) != str.charAt(end)) {
     return false;
@@ -1938,10 +2177,12 @@ if (str.charAt(start) != str.charAt(end)) {
 return isPalindrome(num, start + 1, end - 1);
 }
 ```
-输出:
-121 是回文: true
 
-### 103. 统计字符串中的单词数
+输出：
+
+121 是回文：true
+
+## 103. 统计字符串中的单词数
 
 ```java
 public class WordCount {
@@ -1952,10 +2193,12 @@ public class WordCount {
     }
 }
 ```
-输出:
-单词数: 4
 
-### 104. 寻找数组中的第二大数字
+输出：
+
+单词数：4
+
+## 104. 寻找数组中的第二大数字
 
 ```java
 public class SecondLargest {
@@ -1974,10 +2217,12 @@ public class SecondLargest {
     }
 }
 ```
-输出:
-第二大数字: 4
 
-### 105. 计算数组中所有质数的之和
+输出：
+
+第二大数字：4
+
+## 105. 计算数组中所有质数的之和
 
 ```java
 public class SumOfPrimesInArray {
@@ -1991,6 +2236,7 @@ public class SumOfPrimesInArray {
         }
         System.out.println("Sum of prime numbers: " + sum);
     }
+
     public static boolean isPrime(int num) {
         if (num <= 1) {
             return false;
@@ -2004,10 +2250,12 @@ public class SumOfPrimesInArray {
     }
 }
 ```
-输出:
-质数之和: 17
 
-### 106. 用特定字符替换字符串中的所有元音
+输出：
+
+质数之和：17
+
+## 106. 用特定字符替换字符串中的所有元音
 
 ```java
 public class ReplaceVowels {
@@ -2019,10 +2267,12 @@ public class ReplaceVowels {
     }
 }
 ```
-输出:
-修改后的字符串: H*ll* W*rld
 
-### 107. 寻找数组中最大的回文数
+输出：
+
+修改后的字符串：H*ll* W*rld
+
+## 107. 寻找数组中最大的回文数
 
 ```java
 public class LargestPalindromeInArray {
@@ -2036,6 +2286,7 @@ public class LargestPalindromeInArray {
         }
         System.out.println("Largest palindrome: " + largestPalindrome);
     }
+
     public static boolean isPalindrome(int num) {
         int original = num, reverse = 0;
         while (num != 0) {
@@ -2047,10 +2298,12 @@ public class LargestPalindromeInArray {
     }
 }
 ```
-输出:
-最大的回文数: 12321
 
-### 108. 统计字符串中的元音和辅音数
+输出：
+
+最大的回文数：12321
+
+## 108. 统计字符串中的元音和辅音数
 
 ```java
 public class CountVowelsConsonants {
@@ -2072,11 +2325,14 @@ public class CountVowelsConsonants {
     }
 }
 ```
-输出:
-元音数: 3
-辅音数: 7
 
-### 109. 检查一个数字是否为阿姆斯特数（Armstrong Number）
+输出：
+
+元音数：3
+
+辅音数：7
+
+## 109. 检查一个数字是否为阿姆斯特数（Armstrong Number）
 
 ```java
 public class ArmstrongNumber {
@@ -2088,6 +2344,7 @@ public class ArmstrongNumber {
             System.out.println(num + " is not an Armstrong number.");
         }
     }
+
     public static boolean isArmstrong(int num) {
         int original = num, result = 0;
         int n = String.valueOf(num).length();
@@ -2100,7 +2357,9 @@ public class ArmstrongNumber {
     }
 }
 ```
-输出:
+
+输出：
+
 153 是阿姆斯特数。
 
 ## 110. 将十进制数转换为二进制
@@ -2114,7 +2373,9 @@ public class DecimalToBinary {
     }
 }
 ```
-输出:
+
+输出：
+
 10 的二进制是 1010
 
 ## 111. 将二进制数转换为十进制
@@ -2128,10 +2389,12 @@ public class BinaryToDecimal {
     }
 }
 ```
-输出:
+
+输出：
+
 1010 的十进制是 10
 
-### 112. 将十进制数转换为十六进制
+## 112. 将十进制数转换为十六进制
 
 ```java
 public class DecimalToHexadecimal {
@@ -2142,10 +2405,12 @@ public class DecimalToHexadecimal {
     }
 }
 ```
-输出:
+
+输出：
+
 255 的十六进制是 FF
 
-### 113. 将十六进制数转换为十进制
+## 113. 将十六进制数转换为十进制
 
 ```java
 public class HexadecimalToDecimal {
@@ -2156,10 +2421,12 @@ public class HexadecimalToDecimal {
     }
 }
 ```
-输出:
+
+输出：
+
 FF 的十进制是 255
 
-### 114. 寻找两个数的最大公约数（HCF）和最小公倍数（LCM）
+## 114. 寻找两个数的最大公约数（HCF）和最小公倍数（LCM）
 
 ```java
 public class HCFAndLCM {
@@ -2170,6 +2437,7 @@ public class HCFAndLCM {
         System.out.println("HCF: " + hcf);
         System.out.println("LCM: " + lcm);
     }
+
     public static int gcd(int a, int b) {
         if (b == 0) {
             return a;
@@ -2178,9 +2446,12 @@ public class HCFAndLCM {
     }
 }
 ```
-输出:
-HCF: 6
-LCM: 36
+
+输出：
+
+HCF：6
+
+LCM：36
 
 ## 115. 使用递归反转数字
 
@@ -2191,19 +2462,25 @@ public class ReverseNumberRecursion {
         int reversed = reverse(num);
         System.out.println("Reversed number: " + reversed);
     }
+
     public static int reverse(int num) {
         String str = Integer.toString(num);
         if (str.length() == 1) {
             return num;
         }
-        return Integer.parseInt(str.charAt(str.length() - 1) + "" + reverse(Integer.parseInt(str.substring(0, str.length() - 1))));
+        return Integer.parseInt(
+            str.charAt(str.length() - 1) + ""
+                + reverse(Integer.parseInt(str.substring(0, str.length() - 1)))
+        );
     }
 }
 ```
-输出:
-反转数字: 4321
 
-### 116. 寻找数组中偶数的之和
+输出：
+
+反转数字：4321
+
+## 116. 寻找数组中偶数的之和
 
 ```java
 public class SumOfEvenNumbers {
@@ -2219,7 +2496,11 @@ public class SumOfEvenNumbers {
     }
 }
 ```
-输出:
+
+
+
+输出：
+
 偶数之和: 12
 
 ### 117. 使用循环检查字符串是否为回文
@@ -2240,10 +2521,12 @@ public class PalindromeCheckLoop {
     }
 }
 ```
-输出:
+
+输出：
+
 madam 是回文: true
 
-## 118. 查找整数的位数
+### 118. 查找整数的位数
 
 ```java
 public class NumberOfDigits {
@@ -2258,10 +2541,12 @@ public class NumberOfDigits {
     }
 }
 ```
-输出:
+
+输出：
+
 位数: 6
 
-## 119. 为给定数字生成乘法表
+### 119. 为给定数字生成乘法表
 
 ```java
 public class MultiplicationTable {
@@ -2273,16 +2558,18 @@ public class MultiplicationTable {
     }
 }
 ```
-输出:
-5 * 1 = 5
-5 * 2 = 10
-5 * 3 = 15
-5 * 4 = 20
-5 * 5 = 25
-5 * 6 = 30
-5 * 7 = 35
-5 * 8 = 40
-5 * 9 = 45
+
+输出：
+
+5 * 1 = 5  
+5 * 2 = 10  
+5 * 3 = 15  
+5 * 4 = 20  
+5 * 5 = 25  
+5 * 6 = 30  
+5 * 7 = 35  
+5 * 8 = 40  
+5 * 9 = 45  
 5 * 10 = 50
 
 ### 120. 计算矩形的面积
@@ -2297,7 +2584,9 @@ public class AreaOfRectangle {
     }
 }
 ```
-输出:
+
+输出：
+
 矩形面积: 50
 
 ### 121. 检查一个数字是偶数还是奇数
@@ -2314,7 +2603,9 @@ public class EvenOddCheck {
     }
 }
 ```
-输出:
+
+输出：
+
 7 是奇数。
 
 ### 122. 寻找数组中的最小数字
@@ -2333,14 +2624,12 @@ public class SmallestNumber {
     }
 }
 ```
-输出:
+
+输出：
+
 最小数字: 1
 
 ### 123. 将摄氏度转换为华氏度
-
-
-
-
 
 ```java
 public class CelsiusToFahrenheit {
@@ -2351,10 +2640,12 @@ public class CelsiusToFahrenheit {
     }
 }
 ```
+
 Output:
+
 `25.0°C = 77.0°F`
 
-## 124. 找出数组中奇数的和
+### 124. 找出数组中奇数的和
 
 ```java
 public class SumOfOddNumbers {
@@ -2370,7 +2661,9 @@ public class SumOfOddNumbers {
     }
 }
 ```
+
 Output:
+
 `Sum of odd numbers: 9`
 
 ### 125. 检查年份是否为闰年
@@ -2387,7 +2680,9 @@ public class LeapYearCheck {
     }
 }
 ```
+
 Output:
+
 `2020 is a leap year.`
 
 ### 126. 计算圆面积
@@ -2401,10 +2696,12 @@ public class AreaOfCircle {
     }
 }
 ```
+
 Output:
+
 `Area of circle: 153.93804002589985`
 
-## 127. 计算三角形的面积
+### 127. 计算三角形的面积
 
 ```java
 public class AreaOfTriangle {
@@ -2416,7 +2713,9 @@ public class AreaOfTriangle {
     }
 }
 ```
+
 Output:
+
 `Area of triangle: 25.0`
 
 ### 128. 使用循环寻找两个数的最大公约数 (GCD)
@@ -2436,7 +2735,9 @@ public class GCDLoop {
     }
 }
 ```
+
 Output:
+
 `GCD: 14`
 
 ### 129. 使用循环计算两个数的最小公倍数 (LCM)
@@ -2457,7 +2758,9 @@ public class LCMLoop {
     }
 }
 ```
+
 Output:
+
 `LCM: 60`
 
 ### 130. 找出数组中的最大值和最小值
@@ -2481,11 +2784,14 @@ public class MaxMinInArray {
     }
 }
 ```
+
 Output:
+
 `Maximum value: 9`
+
 `Minimum value: 1`
 
-## 131. 计算矩形的周长
+### 131. 计算矩形的周长
 
 ```java
 public class PerimeterOfRectangle {
@@ -2497,10 +2803,12 @@ public class PerimeterOfRectangle {
     }
 }
 ```
+
 Output:
+
 `Perimeter of rectangle: 30`
 
-## 132. 不使用临时变量交换两个数
+### 132. 不使用临时变量交换两个数
 
 ```java
 public class SwapNumbers {
@@ -2514,8 +2822,11 @@ public class SwapNumbers {
     }
 }
 ```
+
 Output:
+
 `Before swap: a = 5, b = 3`
+
 `After swap: a = 3, b = 5`
 
 ### 133. 找出数组中的第二小的数
@@ -2530,10 +2841,12 @@ public class SecondSmallestNumber {
     }
 }
 ```
+
 Output:
+
 `Second smallest number: 2`
 
-## 134. 获取字符串的长度
+### 134. 获取字符串的长度
 
 ```java
 public class LengthOfString {
@@ -2543,7 +2856,9 @@ public class LengthOfString {
     }
 }
 ```
+
 Output:
+
 `Length: 13`
 
 ### 135. 统计字符串中的单词数
@@ -2557,10 +2872,12 @@ public class WordCount {
     }
 }
 ```
+
 Output:
+
 `Number of words: 5`
 
-## 136. 计算数字的平方根
+### 136. 计算数字的平方根
 
 ```java
 public class SquareRoot {
@@ -2571,10 +2888,12 @@ public class SquareRoot {
     }
 }
 ```
+
 Output:
+
 `Square root of 16 is: 4.0`
 
-## 137. 将字符串转换为大写
+### 137. 将字符串转换为大写
 
 ```java
 public class StringToUppercase {
@@ -2585,10 +2904,12 @@ public class StringToUppercase {
     }
 }
 ```
+
 Output:
+
 `Uppercase string: HELLO WORLD`
 
-## 138. 将字符串转换为小写
+### 138. 将字符串转换为小写
 
 ```java
 public class StringToLowercase {
@@ -2599,10 +2920,14 @@ public class StringToLowercase {
     }
 }
 ```
+
 Output:
+
 `Lowercase string: hello world`
 
-## 139. 使用循环反转字符串
+### 139. 使用循环反转字符串
+
+
 
 ```java
 public class ReverseStringLoop {
@@ -2616,7 +2941,9 @@ public class ReverseStringLoop {
     }
 }
 ```
+
 Output:
+
 `Reversed string: avaJ`
 
 ### 140. 使用递归计算数字的阶乘
@@ -2628,6 +2955,7 @@ public class FactorialRecursion {
         int result = factorial(num);
         System.out.println("Factorial of " + num + " is: " + result);
     }
+
     public static int factorial(int num) {
         if (num == 0) {
             return 1;
@@ -2636,13 +2964,16 @@ public class FactorialRecursion {
     }
 }
 ```
+
 Output:
+
 `Factorial of 5 is: 120`
 
 ### 141. 统计字符串中每个字符出现的频率
 
 ```java
 import java.util.HashMap;
+
 public class CharacterFrequency {
     public static void main(String[] args) {
         String str = "hello world";
@@ -2656,14 +2987,23 @@ public class CharacterFrequency {
     }
 }
 ```
+
 Output:
+
 `h: 1`
+
 `e: 1`
+
 `l: 3`
+
 `o: 2`
+
 ` : 1`
+
 `w: 1`
+
 `r: 1`
+
 `d: 1`
 
 ### 142. 找出字符串中第一个未出现的字符
@@ -2671,6 +3011,7 @@ Output:
 ```java
 import java.util.LinkedHashMap;
 import java.util.Map;
+
 public class FirstNonRepeatedCharacter {
     public static void main(String[] args) {
         String str = "swiss";
@@ -2687,7 +3028,9 @@ public class FirstNonRepeatedCharacter {
     }
 }
 ```
+
 Output:
+
 `First non-repeated character: w`
 
 ### 143. 生成前 N 项斐波那契数列
@@ -2707,7 +3050,9 @@ public class FibonacciSeries {
     }
 }
 ```
+
 Output:
+
 `Fibonacci series: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34`
 
 ### 144. 使用递归查找第 N 个斐波那契数
@@ -2718,6 +3063,7 @@ public class NthFibonacci {
         int n = 7;
         System.out.println("Nth Fibonacci number: " + fibonacci(n));
     }
+
     public static int fibonacci(int n) {
         if (n <= 1) {
             return n;
@@ -2726,13 +3072,16 @@ public class NthFibonacci {
     }
 }
 ```
+
 Output:
+
 `Nth Fibonacci number: 13`
 
-## 145. 去除数组中的重复
+### 145. 去除数组中的重复
 
 ```java
 import java.util.HashSet;
+
 public class RemoveDuplicates {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 1, 2, 4, 5};
@@ -2744,13 +3093,16 @@ public class RemoveDuplicates {
     }
 }
 ```
+
 Output:
+
 `Array after removing duplicates: [1, 2, 3, 4, 5]`
 
 ### 146. 检查两个字符串是否为字母异构词
 
 ```java
 import java.util.Arrays;
+
 public class AnagramCheck {
     public static void main(String[] args) {
         String str1 = "listen";
@@ -2768,10 +3120,6 @@ public class AnagramCheck {
 }
 ```
 
-
-
-
-
 ```java
 if (isAnagram(str1, str2)) {
     System.out.println(str1 + " and " + str2 + " are anagrams.");
@@ -2788,10 +3136,12 @@ public static boolean isAnagram(String str1, String str2) {
     return Arrays.equals(arr1, arr2);
 }
 ```
+
 输出:
+
 `listen and silent are anagrams.`
 
-## 147. 反转句子中的单词
+### 147. 反转句子中的单词
 
 ```java
 public class ReverseWords {
@@ -2806,10 +3156,12 @@ public class ReverseWords {
     }
 }
 ```
+
 输出:
+
 `Reversed sentence: fun is Java`
 
-## 148. 检查字符串是否是另一个字符串的子字符串
+### 148. 检查字符串是否是另一个字符串的子字符串
 
 ```java
 public class SubstringCheck {
@@ -2824,10 +3176,12 @@ public class SubstringCheck {
     }
 }
 ```
+
 输出:
+
 `ell is a substring of hello`
 
-## 149.  Find 矩阵对角线元素之和
+### 149. Find 矩阵对角线元素之和
 
 ```java
 public class DiagonalSum {
@@ -2845,10 +3199,12 @@ public class DiagonalSum {
     }
 }
 ```
+
 输出:
+
 `Sum of diagonal elements: 15`
 
-## 150. 矩阵矩阵每行之和
+### 150. 矩阵矩阵每行之和
 
 ```java
 public class RowSum {
@@ -2868,12 +3224,16 @@ public class RowSum {
     }
 }
 ```
+
 输出:
+
 `Sum of row 1: 6`
+
 `Sum of row 2: 15`
+
 `Sum of row 3: 24`
 
-## 151. 矩阵矩阵每列之和
+### 151. 矩阵矩阵每列之和
 
 ```java
 public class ColumnSum {
@@ -2893,12 +3253,16 @@ public class ColumnSum {
     }
 }
 ```
+
 输出:
+
 `Sum of column 1: 12`
+
 `Sum of column 2: 15`
+
 `Sum of column 3: 18`
 
-## 152. 检查矩阵是否为对称矩阵
+### 152. 检查矩阵是否为对称矩阵
 
 ```java
 public class SymmetricMatrix {
@@ -2925,10 +3289,12 @@ public class SymmetricMatrix {
     }
 }
 ```
+
 输出:
+
 `The matrix is symmetric.`
 
-## 153.  Find 矩阵的迹（Trace）
+### 153. Find 矩阵的迹（Trace）
 
 ```java
 public class MatrixTrace {
@@ -2946,10 +3312,14 @@ public class MatrixTrace {
     }
 }
 ```
+
 输出:
+
 `Trace of the matrix: 15`
 
-## 154. 矩阵顺时针旋转 90 度
+### 154. 矩阵顺时针旋转 90 度
+
+
 
 ```java
 public class RotateMatrix {
@@ -2976,10 +3346,15 @@ public class RotateMatrix {
     }
 }
 ```
-输出:
+
+输出：
+
 `Rotated matrix:`
+
 `7 4 1`
+
 `8 5 2`
+
 `9 6 3`
 
 ## 155. 打印杨辉三角
@@ -3003,11 +3378,17 @@ public class PascalTriangle {
     }
 }
 ```
-输出:
+
+输出：
+
 `1 `
+
 `1 1 `
+
 `1 2 1 `
+
 `1 3 3 1 `
+
 `1 4 6 4 1 `
 
 ## 156. 使用欧几里得算法 Find 两个数的最大公约数 (GCD)
@@ -3019,6 +3400,7 @@ public class EuclideanGCD {
         int num2 = 98;
         System.out.println("GCD of " + num1 + " and " + num2 + " is: " + gcd(num1, num2));
     }
+
     public static int gcd(int a, int b) {
         if (b == 0) {
             return a;
@@ -3027,13 +3409,16 @@ public class EuclideanGCD {
     }
 }
 ```
-输出:
+
+输出：
+
 `GCD of 56 and 98 is: 14`
 
 ## 157. 实现冒泡排序算法
 
 ```java
 import java.util.Arrays;
+
 public class BubbleSort {
     public static void main(String[] args) {
         int[] array = {64, 34, 25, 12, 22, 11, 90};
@@ -3050,13 +3435,16 @@ public class BubbleSort {
     }
 }
 ```
-输出:
+
+输出：
+
 `Sorted array: [11, 12, 22, 25, 34, 64, 90]`
 
 ## 158. 实现选择排序算法
 
 ```java
 import java.util.Arrays;
+
 public class SelectionSort {
     public static void main(String[] args) {
         int[] array = {64, 25, 12, 22, 11};
@@ -3075,13 +3463,16 @@ public class SelectionSort {
     }
 }
 ```
-输出:
+
+输出：
+
 `Sorted array: [11, 12, 22, 25, 64]`
 
 ## 159. 实现插入排序算法
 
 ```java
 import java.util.Arrays;
+
 public class InsertionSort {
     public static void main(String[] args) {
         int[] array = {12, 11, 13, 5, 6};
@@ -3098,19 +3489,23 @@ public class InsertionSort {
     }
 }
 ```
-输出:
+
+输出：
+
 `Sorted array: [5, 6, 11, 12, 13]`
 
 ## 160. 实现归并排序
 
 ```java
 import java.util.Arrays;
+
 public class MergeSort {
     public static void main(String[] args) {
         int[] array = {12, 11, 13, 5, 6, 7};
         mergeSort(array, 0, array.length - 1);
         System.out.println("Sorted array: " + Arrays.toString(array));
     }
+
     public static void mergeSort(int[] array, int left, int right) {
         if (left < right) {
             int mid = (left + right) / 2;
@@ -3119,18 +3514,25 @@ public class MergeSort {
             merge(array, left, mid, right);
         }
     }
+
     public static void merge(int[] array, int left, int mid, int right) {
         int n1 = mid - left + 1;
         int n2 = right - mid;
         int[] leftArray = new int[n1];
         int[] rightArray = new int[n2];
+
         for (int i = 0; i < n1; i++) {
             leftArray[i] = array[left + i];
         }
+
         for (int j = 0; j < n2; j++) {
             rightArray[j] = array[mid + 1 + j];
         }
-        int i = 0, j = 0, k = left;
+
+        int i = 0;
+        int j = 0;
+        int k = left;
+
         while (i < n1 && j < n2) {
             if (leftArray[i] <= rightArray[j]) {
                 array[k] = leftArray[i];
@@ -3141,11 +3543,13 @@ public class MergeSort {
             }
             k++;
         }
+
         while (i < n1) {
             array[k] = leftArray[i];
             i++;
             k++;
         }
+
         while (j < n2) {
             array[k] = rightArray[j];
             j++;
@@ -3154,19 +3558,23 @@ public class MergeSort {
     }
 }
 ```
-输出:
+
+输出：
+
 `Sorted array: [5, 6, 7, 11, 12, 13]`
 
 ## 161. 实现快速排序算法
 
 ```java
 import java.util.Arrays;
+
 public class QuickSort {
     public static void main(String[] args) {
         int[] array = {10, 7, 8, 9, 1, 5};
         quickSort(array, 0, array.length - 1);
         System.out.println("Sorted array: " + Arrays.toString(array));
     }
+
     public static void quickSort(int[] array, int low, int high) {
         if (low < high) {
             int pi = partition(array, low, high);
@@ -3174,9 +3582,11 @@ public class QuickSort {
             quickSort(array, pi + 1, high);
         }
     }
+
     private static int partition(int[] array, int low, int high) {
         int pivot = array[high];
         int i = (low - 1);
+
         for (int j = low; j < high; j++) {
             if (array[j] < pivot) {
                 i++;
@@ -3185,6 +3595,7 @@ public class QuickSort {
                 array[j] = temp;
             }
         }
+
         int temp = array[i + 1];
         array[i + 1] = array[high];
         array[high] = temp;
@@ -3192,17 +3603,16 @@ public class QuickSort {
     }
 }
 ```
-输出:
+
+输出：
+
 `Sorted array: [1, 5, 7, 8, 9, 10]`
-
-
-
-
 
 ```java
 public static int partition(int[] array, int low, int high) {
     int pivot = array[high];
     int i = (low - 1);
+
     for (int j = low; j < high; j++) {
         if (array[j] < pivot) {
             i++;
@@ -3211,13 +3621,16 @@ public static int partition(int[] array, int low, int high) {
             array[j] = temp;
         }
     }
+
     int temp = array[i + 1];
     array[i + 1] = array[high];
     array[high] = temp;
     return i + 1;
 }
 ```
-输出:
+
+输出：
+
 排序后的数组: [1, 5, 7, 8, 9, 10]
 
 ## 162. 实现二分查找算法
@@ -3228,31 +3641,41 @@ public class BinarySearch {
         int[] array = {2, 3, 4, 10, 40};
         int target = 10;
         int result = binarySearch(array, 0, array.length - 1, target);
+
         if (result == -1) {
             System.out.println("元素不存在");
         } else {
             System.out.println("找到元素，索引为: " + result);
         }
     }
+
     public static int binarySearch(int[] array, int left, int right, int target) {
         if (right >= left) {
             int mid = left + (right - left) / 2;
+
             if (array[mid] == target) {
                 return mid;
             }
+
             if (array[mid] > target) {
                 return binarySearch(array, left, mid - 1, target);
             }
+
             return binarySearch(array, mid + 1, right, target);
         }
+
         return -1;
     }
 }
 ```
-输出:
+
+输出：
+
 找到元素，索引为: 3
 
 ## 163. 检查数组是否按升序排序
+
+
 
 ```java
 public class CheckSortedArray {
@@ -3273,13 +3696,16 @@ public class CheckSortedArray {
     }
 }
 ```
-输出:
+
+输出：
+
 数组是升序排列的。
 
 ## 164. 寻找数组的中位数
 
 ```java
 import java.util.Arrays;
+
 public class FindMedian {
     public static void main(String[] args) {
         int[] array = {1, 3, 4, 2, 5};
@@ -3295,7 +3721,9 @@ public class FindMedian {
     }
 }
 ```
-输出:
+
+输出：
+
 中位数: 3.0
 
 ## 165. 统计字符串中元音和辅音的数量
@@ -3320,8 +3748,11 @@ public class CountVowelsConsonants {
     }
 }
 ```
-输出:
+
+输出：
+
 元音: 3
+
 辅音: 7
 
 ## 166. 十进制数转换为二进制
@@ -3339,7 +3770,9 @@ public class DecimalToBinary {
     }
 }
 ```
-输出:
+
+输出：
+
 二进制: 1010
 
 ## 167. 二进制数转换为十进制
@@ -3353,7 +3786,9 @@ public class BinaryToDecimal {
     }
 }
 ```
-输出:
+
+输出：
+
 十进制: 10
 
 ## 168. 检查数字是否为回文
@@ -3377,7 +3812,9 @@ public class PalindromeNumber {
     }
 }
 ```
-输出:
+
+输出：
+
 121 是回文。
 
 ## 169. 检查字符串是否为回文
@@ -3395,7 +3832,9 @@ public class PalindromeString {
     }
 }
 ```
-输出:
+
+输出：
+
 madam 是回文。
 
 ## 170. 寻找数组中的最大元素
@@ -3414,7 +3853,9 @@ public class LargestElement {
     }
 }
 ```
-输出:
+
+输出：
+
 最大元素: 30
 
 ## 171. 寻找数组中的最小元素
@@ -3433,13 +3874,16 @@ public class SmallestElement {
     }
 }
 ```
-输出:
+
+输出：
+
 最小元素: 5
 
 ## 172. 反转数组
 
 ```java
 import java.util.Arrays;
+
 public class ReverseArray {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5};
@@ -3453,7 +3897,9 @@ public class ReverseArray {
     }
 }
 ```
-输出:
+
+输出：
+
 反转后的数组: [5, 4, 3, 2, 1]
 
 ## 173. 矩阵对角线之和
@@ -3477,8 +3923,11 @@ public class SumOfDiagonals {
     }
 }
 ```
-输出:
+
+输出：
+
 主对角线和: 15
+
 副对角线和: 15
 
 ## 174. 寻找数组中的第二大元素
@@ -3501,7 +3950,9 @@ public class SecondLargestElement {
     }
 }
 ```
-输出:
+
+输出：
+
 第二大元素: 20
 
 ## 175. 查找数组中每个元素的频率
@@ -3509,6 +3960,7 @@ public class SecondLargestElement {
 ```java
 import java.util.HashMap;
 import java.util.Map;
+
 public class FrequencyOfElements {
     public static void main(String[] args) {
         int[] array = {1, 2, 2, 3, 3, 3, 4};
@@ -3520,14 +3972,10 @@ public class FrequencyOfElements {
     }
 }
 ```
-输出:
+
+输出：
+
 元素频率: {1=1, 2=2, 3=3, 4=1}
-
-
-
-
-
-} 
 
 ## 179. 检查两个字符串是否为字母异位词
 
@@ -3551,7 +3999,8 @@ public class AnagramCheck {
 }
 ```
 
-Output:
+输出：
+
 `listen and silent are anagrams.`
 
 ## 180. 计算数字的幂
@@ -3570,10 +4019,13 @@ public class PowerCalculation {
 }
 ```
 
-Output:
+输出：
+
 `2 to the power of 3 is: 8`
 
 ## 181. 实现一个简单的计算器
+
+
 
 ```java
 import java.util.Scanner;
@@ -3610,7 +4062,8 @@ public class SimpleCalculator {
 }
 ```
 
-Output:
+**Output:**
+
 `Enter first number: 10 Enter second number: 5 Choose an operation (+, -, *, /): + Result: 15.0`
 
 ## 182. 打印前 N 项斐波那契数列
@@ -3631,7 +4084,8 @@ public class FibonacciSeries {
 }
 ```
 
-Output:
+**Output:**
+
 `Fibonacci Series up to 10 terms: 0 1 1 2 3 5 8 13 21 34`
 
 ## 183. 统计字符串中的单词数
@@ -3646,7 +4100,8 @@ public class CountWords {
 }
 ```
 
-Output:
+**Output:**
+
 `Number of words: 5`
 
 ## 184. 计算 1 到 N 所有奇数的之和
@@ -3664,7 +4119,8 @@ public class SumOfOdds {
 }
 ```
 
-Output:
+**Output:**
+
 `Sum of odd numbers from 1 to 10 is: 25`
 
 ## 185. 计算 1 到 N 所有偶数的之和
@@ -3682,7 +4138,8 @@ public class SumOfEvens {
 }
 ```
 
-Output:
+**Output:**
+
 `Sum of even numbers from 1 to 10 is: 30`
 
 ## 186. 统计字符串中的元音个数
@@ -3702,7 +4159,8 @@ public class CountVowelsInString {
 }
 ```
 
-Output:
+**Output:**
+
 `Number of vowels: 3`
 
 ## 187. 生成 1 到 100 之间的随机数
@@ -3719,7 +4177,8 @@ public class RandomNumber {
 }
 ```
 
-Output (example):
+**Output (example):**
+
 `Random number between 1 and 100: 42`
 
 ## 188. 整数的位数
@@ -3738,7 +4197,8 @@ public class CountDigits {
 }
 ```
 
-Output:
+**Output:**
+
 `Number of digits: 6`
 
 ## 189. 打印直角三角形
@@ -3757,7 +4217,8 @@ public class RightAngleTriangle {
 }
 ```
 
-Output:
+**Output:**
+
 ```
 * 
 * * 
@@ -3785,7 +4246,8 @@ public class PyramidPattern {
 }
 ```
 
-Output:
+**Output:**
+
 ```
      *
     ***
@@ -3824,7 +4286,8 @@ public class DiamondPattern {
 }
 ```
 
-Output:
+**Output:**
+
 ```
      *
     ***
@@ -3837,7 +4300,7 @@ Output:
      *
 ```
 
-### 192. 打印给定数字的九九乘表乘法表
+## 192. 打印给定数字的九九乘表乘法表
 
 ```java
 public class MultiplicationTable {
@@ -3850,19 +4313,29 @@ public class MultiplicationTable {
 }
 ```
 
-Output:
+**Output:**
+
 `5 x 1 = 5`
+
 `5 x 2 = 10`
+
 `5 x 3 = 15`
+
 `5 x 4 = 20`
+
 `5 x 5 = 25`
+
 `5 x 6 = 30`
+
 `5 x 7 = 35`
+
 `5 x 8 = 40`
+
 `5 x 9 = 45`
+
 `5 x 10 = 50`
 
-### 193. 检查一个数字是否为质数
+## 193. 检查一个数字是否为质数
 
 ```java
 public class PrimeCheck {
@@ -3888,10 +4361,11 @@ public class PrimeCheck {
 }
 ```
 
-Output:
+**Output:**
+
 `29 is a prime number.`
 
-### 194. 计算一个数字的阶乘
+## 194. 计算一个数字的阶乘
 
 ```java
 public class Factorial {
@@ -3906,10 +4380,11 @@ public class Factorial {
 }
 ```
 
-Output:
+**Output:**
+
 `Factorial of 5 is: 120`
 
-### 195. 计算 1 到 N 的自然数之和
+## 195. 计算 1 到 N 的自然数之和
 
 ```java
 public class SumOfNaturalNumbers {
@@ -3921,10 +4396,11 @@ public class SumOfNaturalNumbers {
 }
 ```
 
-Output:
+**Output:**
+
 `Sum of natural numbers up to 10 is: 55`
 
-### 196. 使用递归打印斐波那契数列
+## 196. 使用递归打印斐波那契数列
 
 ```java
 public class FibonacciRecursion {
@@ -3934,6 +4410,7 @@ public class FibonacciRecursion {
             System.out.print(fibonacci(i) + " ");
         }
     }
+
     public static int fibonacci(int n) {
         if (n <= 1) {
             return n;
@@ -3943,10 +4420,11 @@ public class FibonacciRecursion {
 }
 ```
 
-Output:
+**Output:**
+
 `0 1 1 2 3 5 8 13 21 34 `
 
-### 197. 求一个数字各位位之和
+## 197. 求一个数字各位位之和
 
 ```java
 public class SumOfDigits {
@@ -3962,7 +4440,10 @@ public class SumOfDigits {
 }
 ```
 
-Output:
+**Output:**
+
+
+
 `Sum of digits: 15`
 
 ### 198. 检查一个数字是偶数还是奇数
@@ -3981,6 +4462,7 @@ public class EvenOddCheck {
 ```
 
 Output:
+
 `7 is odd.`
 
 ### 199. 统计字符串中的空格个数
@@ -3994,10 +4476,6 @@ public class CountSpaces {
 }
 ```
 
-
-
-
-
 ```java
 for (char c : str.toCharArray()) {
     if (c == ' ') {
@@ -4007,10 +4485,12 @@ for (char c : str.toCharArray()) {
 System.out.println("Number of spaces: " + spaceCount);
 }
 ```
+
 Output:
+
 空格数量: 4
 
-## 200. 寻找两个数组之间的公共元素
+### 200. 寻找两个数组之间的公共元素
 
 ```java
 import java.util.HashSet;
@@ -4033,10 +4513,12 @@ public class CommonElements {
     }
 }
 ```
+
 Output:
+
 公共元素: 4 5
 
-## 201. 二进制转换为十进制
+### 201. 二进制转换为十进制
 
 ```java
 public class BinaryToDecimal {
@@ -4047,10 +4529,12 @@ public class BinaryToDecimal {
     }
 }
 ```
+
 Output:
+
 二进制 1101 转换为十进制为: 13
 
-## 202. 十进制转换为二进制
+### 202. 十进制转换为二进制
 
 ```java
 public class DecimalToBinary {
@@ -4061,10 +4545,12 @@ public class DecimalToBinary {
     }
 }
 ```
+
 Output:
+
 十进制 13 转换为二进制为: 1101
 
-## 203. 不使用临时变量交换两个数字
+### 203. 不使用临时变量交换两个数字
 
 ```java
 public class SwapWithoutTemp {
@@ -4078,10 +4564,12 @@ public class SwapWithoutTemp {
     }
 }
 ```
+
 Output:
+
 交换后: a = 10, b = 5
 
-## 204. 检查一个数字是否为阿姆斯特数
+### 204. 检查一个数字是否为阿姆斯特数
 
 ```java
 public class ArmstrongNumber {
@@ -4102,10 +4590,12 @@ public class ArmstrongNumber {
     }
 }
 ```
+
 Output:
+
 153 是阿姆斯特数。
 
-## 205. 检查一个数字是否为完美数
+### 205. 检查一个数字是否为完美数
 
 ```java
 public class PerfectNumber {
@@ -4125,12 +4615,14 @@ public class PerfectNumber {
     }
 }
 ```
+
 Output:
+
 28 是完美数。
 
-## 206. 检查字符串是否为回文（忽略大小写）
+### 206. 检查字符串是否为回文（忽略大小写）
 
-``````java
+```java
 public class PalindromeIgnoreCase {
     public static void main(String[] args) {
         String str = "Madam";
@@ -4144,10 +4636,12 @@ public class PalindromeIgnoreCase {
     }
 }
 ```
+
 Output:
+
 Madam 是回文。
 
-## 207. 找到到 N 的所有质数的之和
+### 207. 找到到 N 的所有质数的之和
 
 ```java
 public class SumOfPrimes {
@@ -4161,6 +4655,7 @@ public class SumOfPrimes {
         }
         System.out.println("Sum of prime numbers up to " + n + " is: " + sum);
     }
+
     public static boolean isPrime(int num) {
         if (num <= 1) {
             return false;
@@ -4174,10 +4669,12 @@ public class SumOfPrimes {
     }
 }
 ```
+
 Output:
+
 到 10 的质数之和为: 17
 
-## 208. 寻找两个数字的最大公约数
+### 208. 寻找两个数字的最大公约数
 
 ```java
 public class GCD {
@@ -4194,10 +4691,12 @@ public class GCD {
     }
 }
 ```
+
 Output:
+
 56 和 98 的最大公约数是: 14
 
-## 209. 寻找两个数字的最小公倍数
+### 209. 寻找两个数字的最小公倍数
 
 ```java
 public class LCM {
@@ -4215,10 +4714,12 @@ public class LCM {
     }
 }
 ```
+
 Output:
+
 72 和 120 的最小公倍数是: 360
 
-## 210. 摄氏度转换为华华度
+### 210. 摄氏度转换为华华度
 
 ```java
 public class CelsiusToFahrenheit {
@@ -4229,10 +4730,12 @@ public class CelsiusToFahrenheit {
     }
 }
 ```
+
 Output:
+
 25.0°C 等于 77.0°F
 
-## 211. 华华度转换为摄氏度
+### 211. 华华度转换为摄氏度
 
 ```java
 public class FahrenheitToCelsius {
@@ -4243,10 +4746,12 @@ public class FahrenheitToCelsius {
     }
 }
 ```
+
 Output:
+
 77.0°F 等于 25.0°C
 
-## 212. 统计字符串中的元音数量
+### 212. 统计字符串中的元音数量
 
 ```java
 public class CountConsants {
@@ -4262,10 +4767,12 @@ public class CountConsants {
     }
 }
 ```
+
 Output:
+
 元音数量: 7
 
-## 213. 使用递归寻找数字的阶乘
+### 213. 使用递归寻找数字的阶乘
 
 ```java
 public class FactorialRecursion {
@@ -4273,6 +4780,7 @@ public class FactorialRecursion {
         int num = 5;
         System.out.println("Factorial of " + num + " is: " + factorial(num));
     }
+
     public static int factorial(int n) {
         if (n == 0) {
             return 1;
@@ -4282,10 +4790,12 @@ public class FactorialRecursion {
     }
 }
 ```
+
 Output:
+
 5 的阶乘为: 120
 
-## 214. 反转数字
+### 214. 反转数字
 
 ```java
 public class ReverseNumber {
@@ -4301,10 +4811,12 @@ public class ReverseNumber {
     }
 }
 ```
+
 Output:
+
 反转后的数字: 54321
 
-## 215. 寻找字符串中第一个未重复的字符
+### 215. 寻找字符串中第一个未重复的字符
 
 ```java
 import java.util.LinkedHashMap;
@@ -4326,10 +4838,14 @@ public class FirstNonRepeatedCharacter {
     }
 }
 ```
+
 Output:
+
 第一个未重复的字符: w
 
-## 216. 使用 while 循环打印斐波那契序列
+### 216. 使用 while 循环打印斐波那契序列
+
+
 
 ```java
 public class FibonacciLoop {
@@ -4348,8 +4864,10 @@ public class FibonacciLoop {
     }
 }
 ```
+
 Output:
-斐波那契序列前 10 项: 0 1 1 2 3 5 8 13 21 34 
+
+斐波那契序列前 10 项: 0 1 1 2 3 5 8 13 21 34
 
 ## 217. 生成前 N 个质数
 
@@ -4367,6 +4885,7 @@ public class FirstNPrimes {
             num++;
         }
     }
+
     public static boolean isPrime(int num) {
         if (num <= 1) {
             return false;
@@ -4380,8 +4899,10 @@ public class FirstNPrimes {
     }
 }
 ```
+
 Output:
-2 3 5 7 11 
+
+2 3 5 7 11
 
 ## 218. 寻找数组中的最大元素
 
@@ -4399,7 +4920,9 @@ public class LargestElementInArray {
     }
 }
 ```
+
 Output:
+
 数组中的最大元素: 50
 
 ## 219. 寻找数组中的最小元素
@@ -4414,21 +4937,13 @@ public class SmallestElementInArray {
                 smallest = num;
             }
         }
+        System.out.println("Smallest element in the array: " + smallest);
     }
 }
 ```
 
-
-
-
-
-```java
-System.out.println("Smallest element in the array: " + smallest);
-}
-
-}
-```
 输出:
+
 数组中的最小元素为: 5
 
 ## 220. 检查两个字符串是否为异位词
@@ -4454,6 +4969,7 @@ public class AnagramCheck {
 ```
 
 输出:
+
 listen and silent are anagrams.
 
 ## 221. 使用循环计算数字的幂
@@ -4473,6 +4989,7 @@ public class PowerOfNumber {
 ```
 
 输出:
+
 2 raised to the power of 5 is: 32
 
 ## 222. 找到数组中的第二大元素
@@ -4497,6 +5014,7 @@ public class SecondLargestInArray {
 ```
 
 输出:
+
 数组中的第二大元素: 40
 
 ## 223. 找到数组中的第二小元素
@@ -4521,6 +5039,7 @@ public class SecondSmallestInArray {
 ```
 
 输出:
+
 数组中的第二最小元素: 10
 
 ## 224. 计算数组中元素的平均值
@@ -4540,6 +5059,7 @@ public class AverageOfArray {
 ```
 
 输出:
+
 数组中元素的平均值: 26.0
 
 ## 225. 找到数组中的最大值和最小值
@@ -4565,7 +5085,9 @@ public class MaxMinArray {
 ```
 
 输出:
+
 最大值: 50
+
 最小值: 5
 
 ## 226. 找到二维数组每行的行和
@@ -4583,15 +5105,18 @@ public class SumOfRows2DArray {
             for (int j = 0; j < array[i].length; j++) {
                 sum += array[i][j];
             }
-            System.out.println("Sum of row " + (i+1) + ": " + sum);
+            System.out.println("Sum of row " + (i + 1) + ": " + sum);
         }
     }
 }
 ```
 
 输出:
+
 第 1 行之和: 6
+
 第 2 行之和: 15
+
 第 3 行之和: 24
 
 ## 227. 找到二维数组每列的和
@@ -4609,15 +5134,18 @@ public class SumOf2DArray {
             for (int i = 0; i < array.length; i++) {
                 sum += array[i][j];
             }
-            System.out.println("Sum of column " + (j+1) + ": " + sum);
+            System.out.println("Sum of column " + (j + 1) + ": " + sum);
         }
     }
 }
 ```
 
 输出:
+
 第 1 列之和: 12
+
 第 2 列之和: 15
+
 第 3 列之和: 18
 
 ## 228. 反转数组的元素
@@ -4640,6 +5168,7 @@ public class ReverseArray {
 ```
 
 输出:
+
 反转后的数组: [40, 50, 5, 25, 10]
 
 ## 229. 将两个数组合并为一个数组
@@ -4660,6 +5189,7 @@ public class MergeArrays {
 ```
 
 输出:
+
 合并后的数组: [1, 2, 3, 4, 5, 6]
 
 ## 230. 数组向左移动一位
@@ -4681,9 +5211,12 @@ public class RotateLeft {
 ```
 
 输出:
+
 左左移后的数组: [2, 3, 4, 5, 1]
 
 ## 231. 数组向右移动一位
+
+
 
 ```java
 import java.util.Arrays;
@@ -4701,7 +5234,8 @@ public class RotateRight {
 }
 ```
 
-输出:
+输出：
+
 右右移后的数组: [5, 1, 2, 3, 4]
 
 ## 232. 统计字符串中的单词数
@@ -4716,7 +5250,8 @@ public class CountWords {
 }
 ```
 
-输出:
+输出：
+
 单词数: 5
 
 ## 233. 将字符转换为其 ASCII 值
@@ -4731,7 +5266,8 @@ public class CharToASCII {
 }
 ```
 
-输出:
+输出：
+
 A 的 ASCII 值: 65
 
 ## 234. 不使用 `length()` 方法查找字符串长度
@@ -4749,7 +5285,8 @@ public class StringLength {
 }
 ```
 
-输出:
+输出：
+
 字符串的长度: 13
 
 ## 235. 找到二维数组中元素的和
@@ -4772,7 +5309,8 @@ public class Sum2DArray {
 }
 ```
 
-输出:
+输出：
+
 二维数组中元素的和: 160
 
 ## 236. 转置二维矩阵
@@ -4805,14 +5343,22 @@ public class TransposeMatrix {
 }
 ```
 
-输出:
-原始矩阵:
+输出：
+
+原始矩阵：
+
 [1, 2, 3]
+
 [4, 5, 6]
+
 [7, 8, 9]
-转置后的矩阵:
+
+转置后的矩阵：
+
 [1, 4, 7]
+
 [2, 5, 8]
+
 [3, 6, 9]
 
 ## 237. 两个矩阵相法
@@ -4847,14 +5393,13 @@ public class MultiplyMatrices {
 }
 ```
 
-输出:
-结果矩阵:
+输出：
+
+结果矩阵：
+
 [58, 64]
+
 [139, 154]
-
-
-
-
 
 ```java
 for (int j = 0; j < matrix2[0].length; j++) {
@@ -4867,9 +5412,13 @@ for (int[] row : result) {
     System.out.println(Arrays.toString(row));
 }
 ```
-**输出:**
+
+**输出：**
+
 结果性矩阵：
+
 [58, 64]
+
 [139, 154]
 
 ## 238. 统计字符串中的元音数量
@@ -4888,7 +5437,9 @@ public class VowelCount {
     }
 }
 ```
-**输出:**
+
+**输出：**
+
 元音数量: 6
 
 ## 239. 统计字符串中的辅音数量
@@ -4907,7 +5458,9 @@ public class ConsonantCount {
     }
 }
 ```
-**输出:**
+
+**输出：**
+
 辅音数量: 12
 
 ## 240. 分别求数组中偶数和奇数的和
@@ -4930,8 +5483,11 @@ public class SumEvenOddArray {
     }
 }
 ```
-**输出:**
+
+**输出：**
+
 偶数之和: 12
+
 奇数之和: 9
 
 ## 241. 使用递归计算数字阶阶
@@ -4943,6 +5499,7 @@ public class FactorialRecursion {
         int result = factorial(n);
         System.out.println("Factorial of " + n + " is: " + result);
     }
+
     public static int factorial(int n) {
         if (n == 0) {
             return 1;
@@ -4951,7 +5508,9 @@ public class FactorialRecursion {
     }
 }
 ```
-**输出:**
+
+**输出：**
+
 5 的阶乘: 120
 
 ## 242. 使用递归求最大公约数 (GCD)
@@ -4964,6 +5523,7 @@ public class GCDRecursion {
         int gcd = gcd(a, b);
         System.out.println("GCD of " + a + " and " + b + " is: " + gcd);
     }
+
     public static int gcd(int a, int b) {
         if (b == 0) {
             return a;
@@ -4972,7 +5532,9 @@ public class GCDRecursion {
     }
 }
 ```
-**输出:**
+
+**输出：**
+
 54 和 24 的最大公约数: 6
 
 ## 243. 使用 GCD 求最小公倍数 (LCM)
@@ -4985,6 +5547,7 @@ public class LCMUsingGCD {
         int lcm = (a * b) / gcd(a, b);
         System.out.println("LCM of " + a + " and " + b + " is: " + lcm);
     }
+
     public static int gcd(int a, int b) {
         if (b == 0) {
             return a;
@@ -4993,7 +5556,9 @@ public class LCMUsingGCD {
     }
 }
 ```
-**输出:**
+
+**输出：**
+
 54 和 24 的最小公倍数: 216
 
 ## 244. 使用递归计算数字的幂
@@ -5006,6 +5571,7 @@ public class PowerRecursion {
         int result = power(base, exponent);
         System.out.println(base + " raised to the power of " + exponent + " is: " + result);
     }
+
     public static int power(int base, int exponent) {
         if (exponent == 0) {
             return 1;
@@ -5014,7 +5580,9 @@ public class PowerRecursion {
     }
 }
 ```
-**输出:**
+
+**输出：**
+
 2 的 5 次幂为: 32
 
 ## 245. 使用递归打印波那契数列
@@ -5028,6 +5596,7 @@ public class FibonacciRecursion {
             System.out.print(fibonacci(i) + " ");
         }
     }
+
     public static int fibonacci(int n) {
         if (n <= 1) {
             return n;
@@ -5036,10 +5605,14 @@ public class FibonacciRecursion {
     }
 }
 ```
-**输出:**
+
+**输出：**
+
 波那契数列前 10 项: 0 1 1 2 3 5 8 13 21 34
 
 ## 246. 使用递归反转字符串
+
+
 
 ```java
 public class ReverseRecursion {
@@ -5048,6 +5621,7 @@ public class ReverseRecursion {
         String reversedStr = reverse(str);
         System.out.println("Reversed string: " + reversedStr);
     }
+
     public static String reverse(String str) {
         if (str.isEmpty()) {
             return str;
@@ -5056,7 +5630,9 @@ public class ReverseRecursion {
     }
 }
 ```
-**输出:**
+
+**输出：**
+
 反转后的字符串: olleH
 
 ## 247. 使用递归检查字符串是否为回文
@@ -5068,6 +5644,7 @@ public class PalindromeRecursion {
         boolean isPalindrome = isPalindrome(str);
         System.out.println(str + " is palindrome: " + isPalindrome);
     }
+
     public static boolean isPalindrome(String str) {
         if (str.length() == 0 || str.length() == 1) {
             return true;
@@ -5079,7 +5656,9 @@ public class PalindromeRecursion {
     }
 }
 ```
-**输出:**
+
+**输出：**
+
 madam 是回文的: true
 
 ## 248. 检查数字是否为质数
@@ -5103,7 +5682,9 @@ public class PrimeCheck {
     }
 }
 ```
-**输出:**
+
+**输出：**
+
 29 是质数。
 
 ## 249. 求前 N 个质数
@@ -5131,8 +5712,10 @@ public class FirstNPrimes {
     }
 }
 ```
-**输出:**
-2 3 5 7 11 13 17 19 23 29 
+
+**输出：**
+
+2 3 5 7 11 13 17 19 23 29
 
 ## 250. 查找第 N 个波那契数
 
@@ -5150,7 +5733,9 @@ public class NthFibonacci {
     }
 }
 ```
-**输出:**
+
+**输出：**
+
 第 10 个波那契数是: 34
 
 ## 251. 十进制转二进制
@@ -5168,7 +5753,9 @@ public class DecimalToBinary {
     }
 }
 ```
-**输出:**
+
+**输出：**
+
 二进制表示: 1010
 
 ## 252. 二进制转十进制
@@ -5187,7 +5774,9 @@ public class BinaryToDecimal {
     }
 }
 ```
-**输出:**
+
+**输出：**
+
 十进制表示: 10
 
 ## 253. 查找二维数组中的最大元素
@@ -5212,7 +5801,9 @@ public class LargestElement2D {
     }
 }
 ```
-**输出:**
+
+**输出：**
+
 二维数组中的最大元素: 9
 
 ## 254. 检查数字是否为阿姆斯特数
@@ -5236,7 +5827,9 @@ public class ArmstrongCheck {
     }
 }
 ```
-**输出:**
+
+**输出：**
+
 153 是阿姆斯特数。
 
 ## 255. 计算数字各位数字之和
@@ -5254,7 +5847,9 @@ public class SumOfDigits {
     }
 }
 ```
-**输出:**
+
+**输出：**
+
 各位数字之和: 15
 
 ## 256. 反转数字
@@ -5273,16 +5868,16 @@ public class ReverseNumber {
     }
 }
 ```
-**输出:**
+
+**输出：**
+
 反转后的数字: 54321
 
-
-
-
 输出：
+
 反转后的数字：54321
 
-### 257. 检查数字是否为回文
+## 257. 检查数字是否为回文
 
 ```java
 public class PalindromeNumber {
@@ -5305,9 +5900,10 @@ public class PalindromeNumber {
 ```
 
 输出：
+
 121 是一个回文数字。
 
-### 258. 查找字符串中每个字符的频率
+## 258. 查找字符串中每个字符的频率
 
 ```java
 import java.util.HashMap;
@@ -5328,7 +5924,8 @@ public class FrequencyOfCharacters {
 ```
 
 输出：
-```
+
+```text
 h: 1
 e: 1
 l: 3

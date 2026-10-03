@@ -1,3 +1,4 @@
+
 # 2023 年 6 门最佳 C# (C-Sharp)初学者在线课程
 
 > 原文：<https://medium.com/javarevisited/5-best-c-c-sharp-programming-courses-for-beginners-in-2020-494f7afc7a5c?source=collection_archive---------0----------------------->
@@ -24,7 +25,7 @@ image _ credit—LinkedIn Learning 上的 C#
 
 在这篇文章中，我准备分享一些 2023 年学习 C# **或 C-Sharp**的 [**最佳课程。这些课程既适合初学者，也适合希望填补 C#知识空白的有经验的程序员。**](https://javarevisited.blogspot.com/2019/11/top-5-courses-to-learn-c-sharp-in.html)
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fprogramming-unity-game-development>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fprogramming-unity-game-development>
 
 # 排名前六的 C#在线课程。2023 年的 NET 程序员和初学者
 
@@ -100,72 +101,74 @@ Mosh 以完美简洁的方式解释了每一行代码以及它们背后的 C#概
 
 而且，如果你觉得 Coursera 专业化和认证有用，特别是来自 Google、AWS 和 IBM 的认证，那么我建议你加入 [**Coursera Plus**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus) ，这是 Coursera 的一个伟大的订阅计划，让你可以无限制地访问他们最受欢迎的课程、专业化、专业证书和指导项目。它每年花费大约 399 美元，但是它完全值得你的钱，因为你得到了无限的证书。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
-## 5.斯科特·艾伦(Pluralsight)的 C#基础知识(T1)
 
-本课程为你提供了在任何平台上成为高效 C#开发人员所需的一切。学习在自己的应用程序中读写 C#代码的基础知识。
 
-你可能已经知道，在学习方面，斯科特·艾伦是我最喜欢的导师之一。NET 和 C#，而这门课又是一颗宝石。您将从基础开始，但很快获得运行和调试 C#应用程序的实践经验。
+## 5. 斯科特·艾伦（Pluralsight）的 C# 基础知识（T1）
 
-首先，您将学习 C#语言的语法。接下来，您将发现. NET 的内置特性。一旦您理解了这些概念，您将学习如何使用面向对象的编程技术来解决问题。
+本课程为你提供了在任何平台上成为高效 C# 开发人员所需的一切。学习在自己的应用程序中读写 C# 代码的基础知识。
 
-**这里是在 Coursera** — [C#基础](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fcsharp-fundamentals-dev)上加入这个 C#课程的链接
+你可能已经知道，在学习方面，斯科特·艾伦是我最喜欢的导师之一。NET 和 C#，而这门课又是一颗宝石。您将从基础开始，但很快获得运行和调试 C# 应用程序的实践经验。
+
+首先，您将学习 C# 语言的语法。接下来，您将发现 .NET 的内置特性。一旦您理解了这些概念，您将学习如何使用面向对象的编程技术来解决问题。
+
+**这里是在 Coursera** — [C# 基础](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fcsharp-fundamentals-dev) 上加入这个 C# 课程的链接
 
 [![](img/0a83a98191c2e702813e5cd51de8e725.png)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fcsharp-fundamentals-dev)
 
-学完本课程后，您将具备现实世界解决方案所需的技能和知识。您甚至可以了解到哪里去学习高级 C#概念，如泛型、Linq 和 Async，以及编写有效 C#代码的技巧。
+学完本课程后，您将具备现实世界解决方案所需的技能和知识。您甚至可以了解到哪里去学习高级 C# 概念，如泛型、Linq 和 Async，以及编写有效 C# 代码的技巧。
 
-顺便说一下，你需要一个 [Pluralsight 会员资格](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing) p 才能加入这个课程，费用大约是每月 29 美元或每年 299 美元(14%的折扣)。我向所有程序员强烈推荐这个订阅，因为它提供了超过 7000 个在线课程的即时访问，以学习任何技术技能。或者，你也可以使用他们的 [**10 天免费通行证**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 免费观看本课程。
+顺便说一下，你需要一个 [Pluralsight 会员资格](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing) 才能加入这个课程，费用大约是每月 29 美元或每年 299 美元（14% 的折扣）。我向所有程序员强烈推荐这个订阅，因为它提供了超过 7000 个在线课程的即时访问，以学习任何技术技能。或者，你也可以使用他们的 [**10 天免费通行证**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 免费观看本课程。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>
 
-## 6.[c#中编码面试的数据结构](https://www.educative.io/courses/data-structures-interviews-cs?affiliate_id=5073518643380224)【教育课程】
+## 6. [C# 中编码面试的数据结构](https://www.educative.io/courses/data-structures-interviews-cs?affiliate_id=5073518643380224)【教育课程】
 
 我们都知道了解你的数据结构有多重要，尤其是当你即将有一次面试的时候。事实上，我通常建议那些已经有一段时间没有被面试过的人花大约六周时间学习数据结构和算法。
 
-在面试中有很多标准来评估你，但是正如老话所说，“数据结构+算法=程序。”数据结构可以有效地检验你的整体编程能力。
+在面试中有很多标准来评估你，但是正如老话所说，“数据结构 + 算法 = 程序。”数据结构可以有效地检验你的整体编程能力。
 
-一门 C#语言的数据结构课程是最好的 C#课程列表中的必备课程，这是一门非常棒的课程。
+一门 C# 语言的数据结构课程是最好的 C# 课程列表中的必备课程，这是一门非常棒的课程。
 
-本课程是 Educative 最畅销的数据结构系列的一部分，该系列还包括:Python、JavaScript、Java 和 C++。
+本课程是 Educative 最畅销的数据结构系列的一部分，该系列还包括：Python、JavaScript、Java 和 C++。
 
-在本课程中，您将获得大量使用最广泛的数据结构的实践，包括数组、链表、图、树、大 o 符号等等。
+在本课程中，您将获得大量使用最广泛的数据结构的实践，包括数组、链表、图、树、大 O 符号等等。
 
 本课程的伟大之处在于，您实际上获得了一步一步的实施细节，帮助您了解解决每个问题的最佳方式，而不仅仅是解决实践问题。
 
-**这里是加入本课程的链接—** [用 C#编写面试的数据结构](https://www.educative.io/courses/data-structures-interviews-cs?affiliate_id=5073518643380224)
+**这里是加入本课程的链接—** [用 C# 编写面试的数据结构](https://www.educative.io/courses/data-structures-interviews-cs?affiliate_id=5073518643380224)
 
 [![](img/b7bf84095c194ae065a866dae3bd7fc4.png)](https://www.educative.io/courses/data-structures-interviews-cs?affiliate_id=5073518643380224)
 
-而且，如果你发现教育平台和他们的搜索课程，像[搜索系统设计面试](https://www.educative.io/collection/5668639101419520/5649050225344512?affiliate_id=5073518643380224)，搜索面向对象编程面试，然后考虑获得 [**教育订阅**](https://www.educative.io/subscription?affiliate_id=5073518643380224) ，每月只需 14.9 美元就可以访问他们的 100 多门课程。非常划算，非常适合准备编码面试。
+而且，如果你发现教育平台和他们的搜索课程，像[搜索系统设计面试](https://www.educative.io/collection/5668639101419520/5649050225344512?affiliate_id=5073518643380224)，搜索面向对象编程面试，然后考虑获得 [**教育订阅**](https://www.educative.io/subscription?affiliate_id=5073518643380224)，每月只需 14.9 美元就可以访问他们的 100 多门课程。非常划算，非常适合准备编码面试。
 
-<https://www.educative.io/subscription?affiliate_id=5073518643380224>  
+<https://www.educative.io/subscription?affiliate_id=5073518643380224>
 
-以上就是关于**深入学习 C# (C-Sharp)的最佳课程**。如果你想在 2023 年学习 C#，你可以从这些课程开始，不需要购买所有的课程，只需选择一个你可以与讲师联系的课程。
+以上就是关于**深入学习 C#（C-Sharp）的最佳课程**。如果你想在 2023 年学习 C#，你可以从这些课程开始，不需要购买所有的课程，只需选择一个你可以与讲师联系的课程。
 
 找出答案的一个好方法是观看预习课。如果你能不跳不跳地看完预习课，这是一个很好的迹象，表明你正在和老师交流并学习。
 
-这些课程会给你在项目中使用 C#打下坚实的基础和信心。它们既适合初学者，也适合中级开发者。
+这些课程会给你在项目中使用 C# 打下坚实的基础和信心。它们既适合初学者，也适合中级开发者。
 
-如果您想使用 C#构建控制台、GUI 或 web 应用程序，这些课程将帮助您实现这一目标。而且，既然可以用 [C#](https://www.java67.com/2019/03/5-free-c-net-courses-to-learn-online.html) 和[。为了创建一个跨平台的应用程序，许多公司会将目光投向 C#来构建 GUI 应用程序和游戏。
+如果您想使用 C# 构建控制台、GUI 或 web 应用程序，这些课程将帮助您实现这一目标。而且，既然可以用 [C#](https://www.java67.com/2019/03/5-free-c-net-courses-to-learn-online.html) 和 [.NET](https://www.java67.com/2019/03/5-free-c-net-courses-to-learn-online.html) 创建一个跨平台的应用程序，许多公司会将目光投向 C# 来构建 GUI 应用程序和游戏。
 
-其他**编程资源(免费和付费)**您可以查看一下](/javarevisited/7-best-online-courses-to-learn-asp-net-core-and-mvc-in-depth-a68c1b728090)
+其他**编程资源（免费和付费）**您可以查看一下](/javarevisited/7-best-online-courses-to-learn-asp-net-core-and-mvc-in-depth-a68c1b728090)
 
-*   [Web 开发人员的 5 个最佳角度课程](/javarevisited/10-courses-to-learn-angular-for-web-development-6da1bd2856dc)
-*   [学习 Ruby 编程的前 5 门课程](https://www.java67.com/2018/02/5-free-ruby-and-rails-courses-to-learn-online.html)
-*   [学习 Java 编程的 5 门免费课程](https://javarevisited.blogspot.com/2018/05/top-5-java-courses-for-beginners-to-learn-online.html)
-*   [2023 年学习 JavaScript 的十大课程](https://javarevisited.blogspot.com/2018/06/top-10-courses-to-learn-javascript-in.html)
-*   [2023 年学习 Swift 编程的前 5 门课程](https://javarevisited.blogspot.com/2019/01/top-5-ios-developer-course-to-learn-ios.html)
-*   [2023 年学习 Spring Boot 的 10 门课程](/javarevisited/top-10-courses-to-learn-spring-boot-in-2020-best-of-lot-6ffce88a1b6e)
-*   [学习 PHP 和 MySQL 的前 5 门课程？](https://hackernoon.com/5-free-php-and-mysql-courses-to-learn-web-development-63836cd3e587)
-*   [为网络开发人员提供的 5 门免费 JavaScript 课程](http://www.java67.com/2018/04/top-5-free-javascript-courses-to-learn.html)
-*   [2023 年学习 C 编程的前 5 门课程](https://javarevisited.blogspot.com/2019/11/top-5-courses-to-learn-c-programming-in.html)
-*   Web 开发人员的 7 门最佳打字课程
-*   [2023 年最适合初学者的 15 门 JavaScript 课程](/javarevisited/10-best-online-courses-to-learn-javascript-in-2020-af5ed0801645)
+* [Web 开发人员的 5 个最佳角度课程](/javarevisited/10-courses-to-learn-angular-for-web-development-6da1bd2856dc)
+* [学习 Ruby 编程的前 5 门课程](https://www.java67.com/2018/02/5-free-ruby-and-rails-courses-to-learn-online.html)
+* [学习 Java 编程的 5 门免费课程](https://javarevisited.blogspot.com/2018/05/top-5-java-courses-for-beginners-to-learn-online.html)
+* [2023 年学习 JavaScript 的十大课程](https://javarevisited.blogspot.com/2018/06/top-10-courses-to-learn-javascript-in.html)
+* [2023 年学习 Swift 编程的前 5 门课程](https://javarevisited.blogspot.com/2019/01/top-5-ios-developer-course-to-learn-ios.html)
+* [2023 年学习 Spring Boot 的 10 门课程](/javarevisited/top-10-courses-to-learn-spring-boot-in-2020-best-of-lot-6ffce88a1b6e)
+* [学习 PHP 和 MySQL 的前 5 门课程？](https://hackernoon.com/5-free-php-and-mysql-courses-to-learn-web-development-63836cd3e587)
+* [为网络开发人员提供的 5 门免费 JavaScript 课程](http://www.java67.com/2018/04/top-5-free-javascript-courses-to-learn.html)
+* [2023 年学习 C 编程的前 5 门课程](https://javarevisited.blogspot.com/2019/11/top-5-courses-to-learn-c-programming-in.html)
+* Web 开发人员的 7 门最佳打字课程
+* [2023 年最适合初学者的 15 门 JavaScript 课程](/javarevisited/10-best-online-courses-to-learn-javascript-in-2020-af5ed0801645)
 
-感谢您到目前为止阅读本文。如果你觉得这些最好的 C#课程有用，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
+感谢您到目前为止阅读本文。如果你觉得这些最好的 C# 课程有用，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
 
-**P. S.** —如果你想学习 C#或 C-Sharp 并寻找一些免费课程，那么你也可以在 Udemy 上查看 [**编程基础:理解 C#**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Funderstandingc%2F) 免费课程。这是完全免费的，你只需要一个 Udemy 帐户就可以加入这个课程。
+**P. S.** — 如果你想学习 C# 或 C-Sharp 并寻找一些免费课程，那么你也可以在 Udemy 上查看 [**编程基础：理解 C#**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Funderstandingc%2F) 免费课程。这是完全免费的，你只需要一个 Udemy 帐户就可以加入这个课程。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Funderstandingc%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Funderstandingc%2F>

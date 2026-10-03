@@ -1,9 +1,7 @@
+
 # Oracle Hospitality OPERA 酒店管理系统 (PMS) 参考手册 - 酒店软件培训支持与 Java JEE AWS Amazon云开发精通：参考手册手册
 
-
-
 ![](img/cover00493.jpeg)
-
 
 # 从 Opera PMS 中开具凭证、发票和票据
 
@@ -13,59 +11,55 @@
 
 ![](img/image00344.jpeg)
 
-在`In House Guest`界面上，选择想要验证其个人资料 `Tax Type` 的客户，并选择单选按钮 `Profile`（资料）。
+在 `In House Guest` 界面上，选择想要验证其个人资料 `Tax Type` 的客户，并选择单选按钮 `Profile`（资料）。
 
 ![](img/image00345.jpeg)
 
-`Individual Profile`（个人资料）界面显示最重要的客户数据。在此界面上，选择`More Fields`（更多字段）按钮。
+`Individual Profile`（个人资料）界面显示最重要的客户数据。在此界面上，选择 `More Fields`（更多字段）按钮。
 
 ![](img/image00346.jpeg)
 
-在`More Fields`界面上，确保 `Tax Type` 字段已标记为 `TICKET` 选项，并选择 `OK` 按钮。
+在 `More Fields` 界面上，确保 `Tax Type` 字段已标记为 `TICKET` 选项，并选择 `OK` 按钮。
 
 ![](img/image00347.jpeg)
 
-返回`Individual Profile`界面后，选择`Save`（保存）按钮以保存所做的更改，然后点击 `Ok` 和 `Close` 按钮。
+返回 `Individual Profile` 界面后，选择 `Save`（保存）按钮以保存所做的更改，然后点击 `Ok` 和 `Close` 按钮。
 
 通过这种方式我们确保客户的 `Tax Type` 为 `TICKET`，这将允许我们生成付款类型为 `Ticket` 的收据。
 
 进入菜单 `Cashiering`（收银）选项 `Billing`（账单），显示可以为任何住宿、消费或服务概念生成付款证明的住客客户。
 
-在此之前，将显示`Login`（登录）界面以请求 `ATM` 访问凭据。
+在此之前，将显示 `Login`（登录）界面以请求 `ATM` 访问凭据。
 
 ![](img/image00348.jpeg)
 
-在`In House Guest Search`（住客搜索）界面上，筛选`Due Outs`（待结账）记录，这些记录是尚未离开的客户、正在入住并消费酒店提供的服务的客户，必须为他们生成付款收据（在这种情况下为票据）。
+在 `In House Guest Search`（住客搜索）界面上，筛选 `Due Outs`（待结账）记录，这些记录是尚未离开的客户、正在入住并消费酒店提供的服务的客户，必须为他们生成付款收据（在这种情况下为票据）。
 
-选择`Due Outs`选项并点击`Search`按钮。
+选择 `Due Outs` 选项并点击 `Search` 按钮。
 
 ![](img/image00349.jpeg)
 
-在`House Guest Search`（住客搜索）界面上，选择您想要生成付款单的客户记录，然后点击`Select`按钮。将显示`Billing`界面。
+在 `House Guest Search`（住客搜索）界面上，选择您想要生成付款单的客户记录，然后点击 `Select` 按钮。将显示 `Billing` 界面。
 
 ![](img/image00350.jpeg)
 
-在`Billing`界面上显示客户的账户详情。需要指出，在此界面上最多可以有 8 个窗口（Windows），这些窗口允许我们对客户账户分类并为每个窗口生成收据。
+在 `Billing` 界面上显示客户的账户详情。需要指出，在此界面上最多可以有 8 个窗口（Windows），这些窗口允许我们对客户账户分类并为每个窗口生成收据。
 
-让我们观察窗口 `(02)`有一个尚未支付的`140.80 USD`账户，窗口 `(03)`有一个通过`VISA`付款方式支付的`32.00 USD`账户。
+让我们观察窗口 `(02)` 有一个尚未支付的 `140.80 USD` 账户，窗口 `(03)` 有一个通过 `VISA` 付款方式支付的 `32.00 USD` 账户。
 
-选择窗口 `(02)`并点击`Check Out`（结）按钮，将显示`Payment`界面。
+选择窗口 `(02)` 并点击 `Check Out`（结）按钮，将显示 `Payment` 界面。
 
 ![](img/image00351.jpeg)
 
-在`Payment`界面上，选择`Payment Code`（付款代码）为`Cash Dollars`，`Currency`（货币）选项为`USD`，在`Amount`字段中输入金额`140.80`，在`Reference`字段输入账户描述，然后点击`Post`（过账）按钮，付款将加载到系统中并关闭账户。
+在 `Payment` 界面上，选择 `Payment Code`（付款代码）为 `Cash Dollars`，`Currency`（货币）选项为 `USD`，在 `Amount` 字段中输入金额 `140.80`，在 `Reference` 字段输入账户描述，然后点击 `Post`（过账）按钮，付款将加载到系统中并关闭账户。
 
 ![](img/image00352.jpeg)
 
-在下一个弹窗界面中指示`No`，以便将收据发送到您所在国家的数字税务文件开具程序（或中央税务管理局的电子发票）。
+在下一个弹窗界面中指示 `No`，以便将收据发送到您所在国家的数字税务文件开具程序（或中央税务管理局的电子发票）。
 
 ![](img/image00353.jpeg) ![](img/image00354.jpeg)
 
 这种将收据发送到您所在国家的数字税务文件开具程序（或中央税务管理局的电子发票）的过程允许我们生成付款类型为 `Ticket` 的收据。
-
-
-
-
 
 例如，如果某类别的客房在入住率超过 10% 之前以折扣出售，一旦超过此入住百分比，折扣将取消，剩余的 90% 将按无折扣价格出售。
 
@@ -168,20 +162,27 @@
 考虑以下前台和预订资料的权限：
 
 ### 前台资料
+
 对于用户必须遵守房价策略限制的资料。这适用于收银员或前台接待人员。
 
 您不能拥有以下权限：
+
 - `RESERVATIONS \ OVERRIDE RATECODE`
+
 - `BLOCKS \ OVERRIDE BLOCK RATE RESTRICTIONS`
 
 您必须拥有以下权限：
+
 - `RESERVATION \ RATE CODE CHANGE`
 
 ### 预订资料
+
 对于用户可以授权打破价格策略限制的资料。这适用于主管人员。
 
 您必须拥有以下权限：
+
 - `RESERVATION \ OVERRIDE RATECODE`
+
 - `BLOCKS \ OVERRIDE BLOCK RATE RESTRICTIONS`
 
 ## 2. 系统参数 (SYSTEM PARAMETERS)
@@ -189,8 +190,11 @@
 必须在 `System Settings` 屏幕中指定以下参数：
 
 | 参数 | 值 |
+
 | :--- | :--- |
+
 | `RATES \ SET CATEGORY` | `Y` |
+
 | `RATES \ SET RATE CODE` | `Y` |
 
 ## 3. 房价策略定义
@@ -199,11 +203,11 @@
 
 ![](img/image00391.jpeg)
 
-点击 `New`（新建）按钮。定义入住率小于 10%的直接房价策略为 `OPEN`。
+点击 `New`（新建）按钮。定义入住率小于 10% 的直接房价策略为 `OPEN`。
 
 ![](img/image00392.jpeg)
 
-同时也定义入住率大于 10%的反向房价策略为 `CLOSED`。
+同时也定义入住率大于 10% 的反向房价策略为 `CLOSED`。
 
 ![](img/image00393.jpeg)
 
@@ -237,33 +241,29 @@
 
 在 `Rate Detail` 表单中，选择与房价策略考虑的 `Room Types` `ST` 对应的记录，确保 `Start Date` 和 `End Date` 日期范围与定义的执行日期和控制日期一致。
 
-
-
-
-
 ## 6. 预订类型的配置
 
-我们必须验证`Reservation Types`预订类型，并考虑那些会从房间物理房存中扣除的预订类型，也就是说这些预订一旦确认将无法取消。
+我们必须验证 `Reservation Types` 预订类型，并考虑那些会从房间物理房存中扣除的预订类型，也就是说这些预订一旦确认将无法取消。
 
-这非常重要，因为`Rate Strategy`价格策略）只计算预订并从房间库存中扣除的房间，以验证入住率。
+这非常重要，因为 `Rate Strategy` 价格策略只计算预订并从房间库存中扣除的房间，以验证入住率。
 
 ![](img/image00403.jpeg)
 
-在`Reservation Type”（预订类型）屏幕中，我们必须至少有一个记录作为`Deduct`扣减）预订类型。
+在 `Reservation Type`（预订类型）屏幕中，我们必须至少有一个记录作为 `Deduct` 扣减预订类型。
 
 ![](img/image00404.jpeg) ![](img/image00405.jpeg)
 
 ## 7. 进行预订
 
-在对初步参数配置进行充分验证后，进入`Reservations”（预订）选项菜单，选择`New Reservation”（新建预订）选项按钮。
+在对初步参数配置进行充分验证后，进入 `Reservations`（预订）选项菜单，选择 `New Reservation`（新建预订）选项按钮。
 
-在`Profile Search”（资料搜索）屏幕中，我们搜索特定的客户。
+在 `Profile Search`（资料搜索）屏幕中，我们搜索特定的客户。
 
 ![](img/image00406.jpeg)
 
-在`Reservation”（预订）屏幕上，`Arrival”（到达）字段中的日期必须在价格策略的执行范围内，选择价格策略中定义的`Room Type`房型）和`Rate Code`房价代码）。
+在 `Reservation`（预订）屏幕上，`Arrival`（到达）字段中的日期必须在价格策略的执行范围内，选择价格策略中定义的 `Room Type` 房型和 `Rate Code` 房价代码。
 
-**重要**你必须在`Res Type`字段中选择带有`Deduct`扣减）的预订类型。
+**重要**你必须在 `Res Type` 字段中选择带有 `Deduct` 扣减的预订类型。
 
 ![](img/image00407.jpeg)
 
@@ -275,15 +275,15 @@
 
 ![](img/image00409.jpeg)
 
-我们使用收银员资料进行预订，房间数量恰以覆盖 10%的入住率（定价策略的限制）。
+我们使用收银员资料进行预订，房间数量恰以覆盖 10% 的入住率（定价策略的限制）。
 
 ![](img/image00410.jpeg) ![](img/image00411.jpeg)
 
-在下一次预订意向中，将显示`Rate Query Details`房价查询详情）屏幕，价格处于`Close`关闭）状态，这确认了定价策略限制了价格分配。
+在下一次预订意向中，将显示 `Rate Query Details` 房价查询详情屏幕，价格处于 `Close` 关闭状态，这确认了定价策略限制了价格分配。
 
 ![](img/image00412.jpeg) ![](img/image00413.jpeg)
 
-如果你想继续分配，将显示价格分配权限请求屏幕。此授权由`Supervisor`（主管）用户提供。
+如果你想继续分配，将显示价格分配权限请求屏幕。此授权由 `Supervisor`（主管）用户提供。
 
 ![](img/image00414.jpeg)
 
@@ -292,20 +292,27 @@
 如果你想查看定价策略的行为，请使用以下报告：
 
 | 报告名称 | .rep 文件 |
+
 | :--- | :--- |
+
 | 限制详情 (Restrictions Detail) | `raterest.rep` |
+
 | 预订房价检查 (Reservation Rate Check) | `res_rate_check.rep` |
+
 | 按房价代码生成的预订 (Reservations made On by Ratecode) | `paris_reservationsmadeonbyratecode.rep` |
 
 # 使用 Opera PMS 和 Oracle Reports Developer 创建报告
 
-在 Opera 中创建自定义报告，你必须首先创建一个 SQL 语句以从 Opera 的 Oracle 数据库中获取报告数据，然后在`Oracle Reports Developer`工具中设计报告，最后在 Opera 可用的报告列表中分配一个选项。
+在 Opera 中创建自定义报告，你必须首先创建一个 SQL 语句以从 Opera 的 Oracle 数据库中获取报告数据，然后在 `Oracle Reports Developer` 工具中设计报告，最后在 Opera 可用的报告列表中分配一个选项。
 
-使用正确版本的`Oracle Reports Developer` 非常重要，通常该工具由 Opera PMS 商安装。
+使用正确版本的 `Oracle Reports Developer` 非常重要，通常该工具由 Opera PMS 商安装。
 
 | Opera | Oracle Reports Developer |
+
 | :--- | :--- |
+
 | v 5.0 | v 10.1.2.0 |
+
 | v 5.5 | v 11.1.2.2.0 |
 
 在本博客中，我们将创建一个列出常住客户列表的报告。
@@ -321,19 +328,27 @@ WHERE (a.resv_status =' CHECKED IN 'OR a.resv_status =' DUE OUT ')
 ORDER BY a.room
 ```
 
-我们将使用视图`reservation_general_view`，该视图包含必要的查询来提取所有客户在不同状态下的预订数据：
+我们将使用视图 `reservation_general_view`，该视图包含必要的查询来提取所有客户在不同状态下的预订数据：
+
 - CHECKED IN（已入住）
+
 - PROSPECT（意向）
+
 - CANCELLED（已取消）
+
 - NO SHOW（未到）
+
 - CHECKED OUT（已退房）
+
 - RESERVED（已预订）
 
-我们在开发环境`Oracle SQL Developer`中执行此查询，以验证查询正常工作。
+我们在开发环境 `Oracle SQL Developer` 中执行此查询，以验证查询正常工作。
 
 ![](img/image00415.jpeg)
 
-我们执行设计程序`Oracle Reports Developer`。
+我们执行设计程序 `Oracle Reports Developer`。
+
+
 
 ![](img/image00416.jpeg)
 
@@ -356,10 +371,6 @@ ORDER BY a.room
 将显示向导`Report Wizard!`，点击`OK`按钮。
 
 ![](img/image00421.jpeg)
-
-
-
-
 
 为了访问 Opera 数据字典，你必须能够通过 Oracle SQL Developer 或另一个 Oracle 开发环境访问 Oracle 数据库。
 
@@ -392,6 +403,7 @@ order by cc. table_name ASC, tc.column_name ASC
 我们将创建一个报告，显示每天的付款列表，以及来自各种支付形式（现金、卡片等）的付款情况。此类报告允许我们查看并验证每个交易日内 ATM 收取的费用。
 
 报表将显示以下列：
+
 - 交易日期
 - 交易代码
 - 交易代码描述
@@ -435,6 +447,7 @@ TRX_FECHA, NR_DOCUMENTO, TRX_CODE, TRX_FECHA;
 ```
 
 为了制作此报表，将使用与财务交易、客户账单或其他相关的表：
+
 - `FINANCIAL_TRANSACTIONS`：此表存储所有与收银服务相关的交易、每个预订的交易（宾客账、定金账、应收账账和套餐账）。
 - `FOLIO_TAX`：此表存储按发票汇总的收入信息。
 - `NAME`：此表存储宾客、公司、旅行社、来源和小组的配置信息。
@@ -452,9 +465,6 @@ TRX_FECHA, NR_DOCUMENTO, TRX_CODE, TRX_FECHA;
 ![](img/image00448.jpeg)
 
 在报表向导的“Data Source Definition”（数据源定义）屏幕上，将显示创建 `P_BUSDATE` 报表参数的确认。该参数将允许我们从中进行选择。
-
-
-
 
 预测是指使用如历史数据等不同的变量，对产品或服务的未来需求进行估计和分析。
 
@@ -485,6 +495,8 @@ TRX_FECHA, NR_DOCUMENTO, TRX_CODE, TRX_FECHA;
 ![](img/image00463.jpeg)
 
 该 `Query` 将成为构建手机在线预测工具的基础。
+
+
 
 ```sql
 SELECT rec_type rec_type,
@@ -554,10 +566,6 @@ CASE WHEN (TO_DATE (('01'||to_char (sysdate,'MMRRRR')),'DDMMRRRR') + ns.N - 1) <
 )
 ```
 
-
-
-
-
 ```sql
  0 count_revenue_01,
  0 owner_rooms,
@@ -586,20 +594,20 @@ CASE WHEN (TO_DATE (('01'||to_char (sysdate,'MMRRRR')),'DDMMRRRR') + ns.N - 1) <
 
 | 报告标题 | .REP 文件名 | 附加信息 |
 | :--- | :--- | :--- |
-| 按类型账龄摘要 | araging | 可以针对特定日期运行。 |
-| 详细账龄报告 | aragingdet | 可以针对特定日期运行。 |
-| 应收账 (AR Ledger) | arledger | 持续更新 |
-| 定金活动报告 | deposit_activity | 可以针对特定日期运行，但如果用于对账，应按活动日期运行。 |
-| NA 定金账 (NA Deposit Ledger) | deposit_ledger | 持续更新。 |
-| 财务支付与收入过账 | findeptcodes | 可以针对特定日期运行，但如果用于对账，应始终按净收入运行。 |
-| 按收银员和交易代码分类日志 | finjrnlbytrans | 可以针对特定日期运行，但如果用于对账，应始终按净收入运行。 |
-| 生成的财务交易日志 | finjrnlbytrans2 | 可以针对特定日期运行，但如果用于对账，应始终按净收入运行。 |
-| 套票过账 | finpkgposting | 捕获当前业务日期的数据，如果用于对账，必须附在夜审报告组中。 |
-| 客人资产平衡表 (Guest Trial Balance) | gl_trial_balance | 可以针对特定日期运行。 |
-| 经理报告 | manager_report | 可以针对特定日期运行。 |
-| 入/离店转转定金 | nadeptransci | 捕获当前业务日期的数据，如果用于对账到资产平衡表，必须与夜审一同运行。 |
-| 套票账明细 | napkgledger | 捕获当前业务日期的数据，如果用于对账到资产平衡表，必须与夜审一同运行。 |
-| 资产平衡表 (Trial Balance) | trial_balance | 可以针对特定日期运行。 |
+| 按类型账龄摘要 | `araging` | 可以针对特定日期运行。 |
+| 详细账龄报告 | `aragingdet` | 可以针对特定日期运行。 |
+| 应收账 (AR Ledger) | `arledger` | 持续更新 |
+| 定金活动报告 | `deposit_activity` | 可以针对特定日期运行，但如果用于对账，应按活动日期运行。 |
+| NA 定金账 (NA Deposit Ledger) | `deposit_ledger` | 持续更新。 |
+| 财务支付与收入过账 | `findeptcodes` | 可以针对特定日期运行，但如果用于对账，应始终按净收入运行。 |
+| 按收银员和交易代码分类日志 | `finjrnlbytrans` | 可以针对特定日期运行，但如果用于对账，应始终按净收入运行。 |
+| 生成的财务交易日志 | `finjrnlbytrans2` | 可以针对特定日期运行，但如果用于对账，应始终按净收入运行。 |
+| 套票过账 | `finpkgposting` | 捕获当前业务日期的数据，如果用于对账，必须附在夜审报告组中。 |
+| 客人资产平衡表 (Guest Trial Balance) | `gl_trial_balance` | 可以针对特定日期运行。 |
+| 经理报告 | `manager_report` | 可以针对特定日期运行。 |
+| 入/离店转转定金 | `nadeptransci` | 捕获当前业务日期的数据，如果用于对账到资产平衡表，必须与夜审一同运行。 |
+| 套票账明细 | `napkgledger` | 捕获当前业务日期的数据，如果用于对账到资产平衡表，必须与夜审一同运行。 |
+| 资产平衡表 (Trial Balance) | `trial_balance` | 可以针对特定日期运行。 |
 
 资产平衡表明细具有以下结构：
 
@@ -620,87 +628,7 @@ CASE WHEN (TO_DATE (('01'||to_char (sysdate,'MMRRRR')),'DDMMRRRR') + ns.N - 1) <
 
 ## Oracle 的 SQL 查询：
 
-```sql
-SELECT t.room, t.guest_name, t.arrangement_desc,
-t.trx_code, t.trx_no,
-t.description,
-t.old_balance, t.credit, t.debit, t.transfer_credit, t.transfer_debit, t.new_balance
-FROM(
- SELECT
-        fs.trx_no,
-        ar.arrangement_desc,
-        fs.resv_name_id,
-        fs.name_id,
-        fs.resort,
-        rv.room,
-        rv.guest_name,
-        co.trx_code,
-        co.description,
-        - 在 from_date 之前的 GL 过账
-        DECODE (abs (trunc (to_date (to_char (to_char (pms_p.business_date)))) - trunc (fs.trx_date)), 0, -1,
-        NVL (fs.Guest_account_debit,0)) - (NVL (fs.Guest_account_credit,0))) old_balance,
-        - 在 from_date 过账的 GL 贷方
-        DECODE (fs.from_res_id,NULL, decode (pms_p.business_date - trunc (fs.trx_date)), 0, n1 (fs.Guest_account_credit,0), 0) credit,
-        - from__date 账账 GL  方
-                DE (fs.____,,,, ( (_______ - (._.trx_0, ,,fs.fs.__credit,bit), 0) debit,
-        - 在 from_date 过账的其他订单贷方
-        DECODE (fs.from_res_id,NULL,0 (pms_p.business_date - trunc (fs.trx_date)), 0, n, (fs.Guest_account_credit,0), 0)) transfer_credit,
-        - 在 from_date 过账的其他订单借方
-        DECODE (fs.from_res_id,NULL, decode (pms_p.business_date - trunc (fs.trx_date)), 0, nvl (fs.Guest_account_debit,0), 0)) transfer_debit,
-         在 from_date 之前的 GL 过账
-        DECODE (pms_p.business_date - trunc (fs.trx_date)), -1,0,
-        NVL (fs.Guest_account_debit,0) - NVL (fs.Guest_account_credit,0)) new_balance
-FROM financial_transactions_view fs
-inner join rep_reservation_all_view rv on (fs.resv_name_id = rv.resv_name_id)
-inner join trx$_codes co on (co.trx_code=fs.trx_code)
-inner join trx$_code_arrangementar on (ar.arrangement_id=co.arrange)
-where fs.resv_name_id IN
-    - 今日过账的客人订单
-SELECT resv_name_id
-FROM financial_transactions ftx
-WHERE ftx.resort = : RESORT
-AND ftx.trx_date = pms_p.business_date
-AND ftx.resv_name_id IS NOT Null
-UNION ALL
-- 今日（应该）入住的订单
-SELECT resv_name_id
-FROM reservation_daily_elements rde,
-reservation_element_name rdn
-WHERE rde.resort = : RESORT
-AND rde.reservation_date = pms_p.business_date
-AND rdn.resort = rde.resort
-AND rdn.reservation_date = rde.reservation_date
-AND rdn.resv_daily_el_seq = rde.resv_daily_el_seq
-)
-AND fs.trx_date <= pms_p.business_date
-AND (fs.Guest_account_credit IS NOT Null OR fs.guest_account_debit IS NOT NULL)
-and fs.resv_name_id=3142559 and rv.room='0206'
-) t
-ORDER BY t.room, t.arrangement_desc, t.trx_code, t.trx_no
-```
 
-[/content] (注：由于原文提供的 SQL 代码中存在多处乱码/重复错误（如 `DECODE` 部分），翻译时已严格遵循“代码块不需要翻译”的原则，保留了原始代码结构，仅对逻辑占位符修复了部分明显的逻辑循环/乱码以保持可读性。)*更正：由于原文中的 SQL 块存在大量的文本乱码和错误（如 `DECODE` 内部的重复字符），根据指令“代码块不需要翻译”的原则，我已完整保留了原始 SQL 文本，未进行任何修改或翻译。*
-
-**抱歉，上述回复中 SQL 块的部分包含了原文自带的乱码，我已严格遵守“代码块不需要翻译”的规则。**
-
----
-**重新提供纯净版本：**
-
-[content]
-
-```sql
- 0 count_revenue_01,
- 0 owner_rooms,
- 0 ff_rooms,
- 'N' deduct_yn,
- 'N' group_yn
- FROM number_scale ns
- WHERE ns.n <= TO_DATE (TO_CHAR (LAST_DAY (to_date (to_char (ADD_MONTHS (SYSDATE, 11),'YYYYMM'),'YYYYMM')),'DDMMRRRR'),'DDMMRRRR') - TO_DATE (('01'||to_char (sysdate,'MMRRRR')),'DDMMRRRR') +  1
-)
- group by rec_type,
- considered_date ORDER BY rec_type,
- TO_DATE (considered_date,'DD / MM / RRRR')
-```
 
 # Opera PMS 中交易明细表报告的创建
 
@@ -716,20 +644,20 @@ ORDER BY t.room, t.arrangement_desc, t.trx_code, t.trx_no
 
 | 报告标题 | .REP 文件名 | 附加信息 |
 | :--- | :--- | :--- |
-| 按类型账龄摘要 | araging | 可以针对特定日期运行。 |
-| 详细账龄报告 | aragingdet | 可以针对特定日期运行。 |
-| 应收账 (AR Ledger) | arledger | 持续更新 |
-| 定金活动报告 | deposit_activity | 可以针对特定日期运行，但如果用于对账，应按活动日期运行。 |
-| NA 定金账 (NA Deposit Ledger) | deposit_ledger | 持续更新。 |
-| 财务支付与收入过账 | findeptcodes | 可以针对特定日期运行，但如果用于对账，应始终按净收入运行。 |
-| 按收银员和交易代码分类日志 | finjrnlbytrans | 可以针对特定日期运行，但如果用于对账，应始终按净收入运行。 |
-| 生成的财务交易日志 | finjrnlbytrans2 | 可以针对特定日期运行，但如果用于对账，应始终按净收入运行。 |
-| 套票过账 | finpkgposting | 捕获当前业务日期的数据，如果用于对账，必须附在夜审报告组中。 |
-| 客人资产平衡表 (Guest Trial Balance) | gl_trial_balance | 可以针对特定日期运行。 |
-| 经理报告 | manager_report | 可以针对特定日期运行。 |
-| 入/离店转转定金 | nadeptransci | 捕获当前业务日期的数据，如果用于对账到资产平衡表，必须与夜审一同运行。 |
-| 套票账明细 | napkgledger | 捕获当前业务日期的数据，如果用于对账到资产平衡表，必须与夜审一同运行。 |
-| 资产平衡表 (Trial Balance) | trial_balance | 可以针对特定日期运行。 |
+| 按类型账龄摘要 | `araging` | 可以针对特定日期运行。 |
+| 详细账龄报告 | `aragingdet` | 可以针对特定日期运行。 |
+| 应收账 (AR Ledger) | `arledger` | 持续更新 |
+| 定金活动报告 | `deposit_activity` | 可以针对特定日期运行，但如果用于对账，应按活动日期运行。 |
+| NA 定金账 (NA Deposit Ledger) | `deposit_ledger` | 持续更新。 |
+| 财务支付与收入过账 | `findeptcodes` | 可以针对特定日期运行，但如果用于对账，应始终按净收入运行。 |
+| 按收银员和交易代码分类日志 | `finjrnlbytrans` | 可以针对特定日期运行，但如果用于对账，应始终按净收入运行。 |
+| 生成的财务交易日志 | `finjrnlbytrans2` | 可以针对特定日期运行，但如果用于对账，应始终按净收入运行。 |
+| 套票过账 | `finpkgposting` | 捕获当前业务日期的数据，如果用于对账，必须附在夜审报告组中。 |
+| 客人资产平衡表 (Guest Trial Balance) | `gl_trial_balance` | 可以针对特定日期运行。 |
+| 经理报告 | `manager_report` | 可以针对特定日期运行。 |
+| 入/离店转转定金 | `nadeptransci` | 捕获当前业务日期的数据，如果用于对账到资产平衡表，必须与夜审一同运行。 |
+| 套票账明细 | `napkgledger` | 捕获当前业务日期的数据，如果用于对账到资产平衡表，必须与夜审一同运行。 |
+| 资产平衡表 (Trial Balance) | `trial_balance` | 可以针对特定日期运行。 |
 
 资产平衡表明细具有以下结构：
 
@@ -748,7 +676,7 @@ ORDER BY t.room, t.arrangement_desc, t.trx_code, t.trx_no
 - **Transferred Debits**: 结果转账而记入客人账户的任何金额。
 - **New Balance (Closing Balance)**: 账户的结余额。此列通过以下公式计算：`Opening Balance + Debits + Transfer Debit - Credits - Transfer Credits`。
 
-## Oracle 的 SQL 查询：
+## Oracle 的 SQL 查询
 
 ```sql
 SELECT t.room, t.guest_name, t.arrangement_desc,
@@ -809,10 +737,6 @@ and fs.resv_name_id=3142559 and rv.room='0206'
 ORDER BY t.room, t.arrangement_desc, t.trx_code, t.trx_no
 ```
 
-
-
-
-
 ```sql
 SELECT ROOM_STATUS_ID, ROOM_STATUS_CODE, ROOM_STATUS_DESC FROM OPERA.ROOM_STATUS_CODES_ALL
 ```
@@ -830,16 +754,12 @@ SELECT DISTINCT HK_STATUS FROM OPERA.ROOM
 ```
 
 OCC: 已入住
-VAC: 空闲
 
-```sql
-SELECT DISTINCT HK_STATUS FROM OPERA.ROOM
-```
-
-OCC: 已入住
 VAC: 空闲
 
 使用以下查询显示特定楼房间的当前状态：
+
+
 
 ```sql
 SELECT r.room, r.room_status, r.hk_status, c.label, c.short_description,
@@ -869,6 +789,7 @@ ORDER BY to_number (r.Floor) ASC, to_number (r.Room) ASC
 ## 差异 (Discrepancies)
 
 在 Opera 的“房间差异”（Room Discrepancy）报告中可以观察到差异：
+
 在 PMS 模块中，进入“其他”（Miscellaneous）菜单，“报告”（Reports）子菜单，寻找“房间差异”报告并点击“确定”。
 
 ![](img/image00468.jpeg)
@@ -882,21 +803,27 @@ ORDER BY to_number (r.Floor) ASC, to_number (r.Room) ASC
 ![](img/image00470.jpeg)
 
 - **跳过/睡眠睡差异 (Skip / Sleep Discrepant)**：基于房间状态的差异。
+
 - **人数差异 (Persons Discrepant)**：基于每个房间客人数量的差异。
 
 在此示例中，我们选择了“所有房间”（ALL Rooms），它将向我们显示物业的所有差异。
 
 ![](img/image00471.jpeg)
 
-请注意，如果 FO Status 字段与 HK Status 字段不同，就会出现跳过或睡眠差异。
+请注意，如果 `FO Status` 字段与 `HK Status` 字段不同，就会出现跳过或睡眠差异。
 
 房间状态出现差异的原因如下：
 
 - **睡眠 (Sleep)**：
+
   - `FO_STATUS` 指明 `VAC`（前台登记客人办理退房）
+
   - `HK_STATUS` 指明 `OCC`（客房表示房间内有人）
+
 - **跳过 (Skip)**：
+
   - `FO_STATUS` 指明 `OCC`（客人在未正式退房的情况下离开房间）
+
   - `HK_STATUS` 指明 `VAC`（客房表示房间已空闲）
 
 要解决差异，进入房间管理（Rooms Management）菜单，选择“客务”（Housekeeping）项，将显示带有可用选项的客务屏幕。我们选择“房间差异”（Rm. Discrepancies）选项。
@@ -940,6 +867,7 @@ ORDER BY to_number (r.Floor) ASC, to_number (r.Room) ASC
 ## Opera PMS 中更改房间类型
 
 这将显示更改房间类型的操作。
+
 为了更改物业的房间类型，我们过滤出未预订且空空的房间。
 
 ```sql
@@ -977,8 +905,9 @@ ORDER BY to_number (r.Floor) ASC, to_number (r.Room) ASC
 
 屏幕将出现。在此屏幕上选择要更改房间类型的房间号，重要的是房间只有在处于以下状态时才能更改：
 
-- FO_STATUS: 空
-- ROOM_STATUS: 已检查
+- `FO_STATUS`: 空
+
+- `ROOM_STATUS`: 已检查
 
 指定房间号并选择新的房间类型。
 
@@ -993,6 +922,7 @@ ORDER BY to_number (r.Floor) ASC, to_number (r.Room) ASC
 ![](img/image00489.jpeg)
 
 等待房间释放。
+
 为了继续示例，我们通过房图找到未预订且空空的房间，在我们的案例中是房间 1018。
 
 ![](img/image00490.jpeg)
@@ -1004,6 +934,7 @@ ORDER BY to_number (r.Floor) ASC, to_number (r.Room) ASC
 ## Opera 管理中有用的 Oracle 查询
 
 ### 按活动产量 (Production byevent)
+
 ```sql
 SELECT a.room, a.resv_name_id, a.passerby_name, a.trx_code, a.trx_date, a.guest_account_debit
 FROM financial_transactions_view to
@@ -1013,6 +944,7 @@ and a.trx_code IN (2580,2503)
 ```
 
 ### 锁定房间 (Habitaciones blocked)
+
 ```sql
 SELECT distinct a.room, a.description, b.begin_date, b.end_date,
 b.repair_remarks, b.reason_code, a.room_status, b.completed_date
@@ -1023,10 +955,6 @@ and b.end_date> =TO_CHAR (pms_p.business_date)
 and b.begin_date<=TO_CHAR (pms_p.business_date)
 and b.completed_date is NULL
 ```
-
-
-
-
 
 ```sql
 ORDER BY room, BEGIN_DATE
@@ -1045,6 +973,7 @@ and a.share_amount<>0.00
 ```
 
 ### 按公司和市场收入
+
 ```sql
 SELECT distinct a.share_id, a.room, a.room_category_label, a.company_name, a.sguest_name, a.guest_country_desc,
       a.trunc_arrival, a.trunc_departure, a.currency_code, a.share_amount,
@@ -1062,6 +991,7 @@ and substr (a.market_code,1,2)='80' and a.financially_responsible_yn is null
 ```
 
 ### 每日房间数
+
 ```sql
 SELECT a.considered_date, sum (a.no_rooms), sum (a.arrival_rooms), sum (a.departure_rooms), sum (a.complimentary_rooms),
       sum (a.net_room_revenue)
@@ -1072,6 +1002,9 @@ GROUP BY a.CONSIDERED_DATE
 ```
 
 ### 按市场代码每月预测
+
+
+
 ```sql
 SELECT
     CONSIDERED_MONTH,
@@ -1130,6 +1063,7 @@ FROM(
 ```
 
 ### 每日订量
+
 ```sql
 SELECT a.business_date_created as F_Reserva, a.trunc_arrival as Arrival, a.trunc_departure as Output, a.nights,
       a.room_category_label as Room, a.share_amount as rate, a.rate_code, a.guarantee_code,
@@ -1145,6 +1079,7 @@ ORDER BY a.trunc_arrival
 ```
 
 ### 按销售主管产出
+
 ```sql
 SELECT a.room_revenue, a.share_amount, b.srep_code, a.rate_code,
       a.sfirst_guest_name || '' || a.guest_name,
@@ -1156,13 +1091,12 @@ and a.share_amount > 0.00
 ```
 
 ### 每房间产出
+
 ```sql
 SELECT a.room_revenue, a.share_amount, b.srep_code, a.rate_code,
       a.sfirst_guest_name || '' || a.guest_name,
       a.trunc_arrival, a.trunc_departure, a.company_name, a.rate_code
 ```
-
-
 
 
 
@@ -1408,7 +1342,6 @@ SELECT a.considered_date,sum(a.no_rooms), sum(a.arrival_rooms),sum(a.departure_r
 
 
 
-
 ```sql
 sum(a.net_room_revenue)
 FROM rep_res_statistics_forecast a
@@ -1645,249 +1578,246 @@ ELSE '01'
 
 
 
-
-
 ```sql
-WHEN  'F' THEN  '01'  --FACTURA
- WHEN  'B' THEN  '03'  --BOLETA DE VENTA
- WHEN  'LC' THEN  '04'  --LIQUIDACIÓN DE COMPRA
- WHEN  'NCP'  THEN  '07'  --NOTA DE CREDITO
- WHEN  'NDP'  THEN  '08'  --NOTA DE DEBITO
- WHEN  'GRE'  THEN  '09'  --GUÍA DE REMISIÓN Remitente
- WHEN  'TK' THEN  '12'  --TICKET
- WHEN  'RET'  THEN  '20'  --Retencion
- WHEN  'GT' THEN  '31'  --GUÍA DE REMISIÓN Transportista
- WHEN  'OT' THEN  '99'  --Otros
- WHEN  'I' THEN  '16'  --INVEMTARIO
- ELSE  '01'
- END))AS TIPO_DOC,
-      DECODE(L.LFS_STATUS,42,SUBSTR(MCDATA.F_FACT_NAME(L.LFS_ID),2,3),SUBSTR(L.LFS_NAME,2,3)) AS SERIE_DOC,
-      DECODE(L.LFS_STATUS,42,SUBSTR(MCDATA.F_FACT_NAME(L.LFS_ID),6,LENGTH(MCDATA.F_FACT_NAME(L.LFS_ID))),SUBSTR(L.LFS_NAME,6,LENGTH(L.LFS_NAME))) AS NRO_DOC,
-      ROUND(I.WES_MENGE,4) AS CANT_COMPRA,
-      ROUND(I.WES_ESP,4) AS COST_UNI_COMPRA,
-      ROUND(I.WES_MENGE * I.WES_ESP,4) AS COST_TOT_COMPRA,
- 0.00  AS CANT_VENTA,
- 0.00  AS COST_UNI_VENTA,
- 0.00  AS COST_TOT_VENTA,
-      I.WES_VKP,
-      L.LFS_STATUS,
-      (SELECT NVL(COUNT(1),0)
+WHEN 'F' THEN '01' --FACTURA
+WHEN 'B' THEN '03' --BOLETA DE VENTA
+WHEN 'LC' THEN '04' --LIQUIDACIÓN DE COMPRA
+WHEN 'NCP' THEN '07' --NOTA DE CREDITO
+WHEN 'NDP' THEN '08' --NOTA DE DEBITO
+WHEN 'GRE' THEN '09' --GUÍA DE REMISIÓN Remitente
+WHEN 'TK' THEN '12' --TICKET
+WHEN 'RET' THEN '20' --Retencion
+WHEN 'GT' THEN '31' --GUÍA DE REMISIÓN Transportista
+WHEN 'OT' THEN '99' --Otros
+WHEN 'I' THEN '16' --INVEMTARIO
+ELSE '01'
+END)) AS TIPO_DOC,
+DECODE(L.LFS_STATUS, 42, SUBSTR(MCDATA.F_FACT_NAME(L.LFS_ID), 2, 3), SUBSTR(L.LFS_NAME, 2, 3)) AS SERIE_DOC,
+DECODE(L.LFS_STATUS, 42, SUBSTR(MCDATA.F_FACT_NAME(L.LFS_ID), 6, LENGTH(MCDATA.F_FACT_NAME(L.LFS_ID))), SUBSTR(L.LFS_NAME, 6, LENGTH(L.LFS_NAME))) AS NRO_DOC,
+ROUND(I.WES_MENGE, 4) AS CANT_COMPRA,
+ROUND(I.WES_ESP, 4) AS COST_UNI_COMPRA,
+ROUND(I.WES_MENGE * I.WES_ESP, 4) AS COST_TOT_COMPRA,
+0.00 AS CANT_VENTA,
+0.00 AS COST_UNI_VENTA,
+0.00 AS COST_TOT_VENTA,
+I.WES_VKP,
+L.LFS_STATUS,
+(SELECT NVL(COUNT(1), 0)
 FROM MCDATA.LIEFERPOS T
- WHERE T.LFP_MENGE <  0  AND T.LFP_STATUS <>  64
- AND T.LFS_ID = L.LFS_ID) AS LFP_STATUS
- FROM MCDATA.INVWES I,
-      MCDATA.ARTIKEL A,
-      MCDATA.VPCKEINH VP,
-      MCDATA.KOSTST K,
-      MCDATA.LIEFERSCHEIN L
-WHERE ( I.ART_ID = A.ART_ID )
- AND ( I.KST_ID = K.KST_ID )
- AND ( A.VPK_NR = VP.VPK_ID )
- AND ( I.WES_ID1 = L.LFS_ID )
- AND ( I.WES_TYP =  10 )
- AND ( I.ART_ID = vn_art_id OR vn_art_id=0 )
- AND ( K.KST_ID = vn_kst_id )
- AND ((L.lfs_datum >= TO_DATE(vs_fec_ini||'00:00:00', 'DD/MM/YYYY HH24:MI:SS'))
- AND (L.lfs_datum <= TO_DATE(vs_fec_fin||'23:59:59', 'DD/MM/YYYY HH24:MI:SS')))
-UNION  ALL
+WHERE T.LFP_MENGE < 0 AND T.LFP_STATUS <> 64
+AND T.LFS_ID = L.LFS_ID) AS LFP_STATUS
+FROM MCDATA.INVWES I,
+MCDATA.ARTIKEL A,
+MCDATA.VPCKEINH VP,
+MCDATA.KOSTST K,
+MCDATA.LIEFERSCHEIN L
+WHERE (I.ART_ID = A.ART_ID)
+AND (I.KST_ID = K.KST_ID)
+AND (A.VPK_NR = VP.VPK_ID)
+AND (I.WES_ID1 = L.LFS_ID)
+AND (I.WES_TYP = 10)
+AND (I.ART_ID = vn_art_id OR vn_art_id = 0)
+AND (K.KST_ID = vn_kst_id)
+AND ((L.lfs_datum >= TO_DATE(vs_fec_ini || '00:00:00', 'DD/MM/YYYY HH24:MI:SS'))
+AND (L.lfs_datum <= TO_DATE(vs_fec_fin || '23:59:59', 'DD/MM/YYYY HH24:MI:SS')))
+UNION ALL
 -- COMPRAS EN CONTABILIDAD
 SELECT K.KST_ID,
-      K.KST_ADRESSE,
-      K.KST_NAME,
-      I.ART_ID,
-      A.ART_NUMMER AS ART_COD,
-      A.ART_NAME,
-      unidad_code_sunat(A.VPK_NR) VPK_NR,
-      VP.VPK_NAME,
-      A.ART_INFO,
-      I.WES_TYP,
- '02'AS TIPO_OPE,
-      I.WES_ID1,
-      I.WES_ID2,
-      RE.RNG_DATUM WES_DATE,
-      RE(TRIM(SUBSTR(RE.RNG_NAME) ,1,3))
- WHEN 'F' THEN '01'
- WHEN 'B' THEN '03'
- WHEN 'LC' THEN '04'
- WHEN 'NCP' THEN '07'
- WHEN 'NDP' THEN '08'
- WHEN 'GRE' THEN '09'
- WHEN 'TK' THEN '12'
- WHEN 'RET' THEN '20'
- WHEN 'GT' THEN '31'
- WHEN 'OT' THEN '99'
- WHEN 'I' THEN '16'
- ELSE '01'
- ENDAS TIPO_DOC,
-      SUBSTR(RE.RNG_NAME,INSTR(RE.RNG_NAME,'-'),INSTR(RE.RNG_NAME,' ')) AS SERIE_DOC,
-      SUBSTR(RE.RNG_NAME,INSTR(RE.RNG_NAME,'-')+1,LENGTH(RE.RNG_NAME)) AS NRO_DOC,
-      ROUND(I.WES_MENGE,4) AS CANT_COMPRA,
-      ROUND(I.WES_ESP,4) AS COST_UNI_COMPRA,
-      ROUND(I.WES_MENGE * I.WES_ESP,4) AS COST_TOT_COMPRA,
- 0.00  AS CANT_VENTA,
- 0.00  AS COST_UNI_VENTA,
- 0.00  AS COST_TOT_VENTA,
-      I.WES_VKP,
-      RE.RNG_STATUS,
-      (SELECT NVL(COUNT(1),0)
-FROM MCDATA.LIEFERPOS T WHERE T.LFP_MENGE <  0  AND T.LFP_STATUS <>  64
- AND T.LFS_ID = I.WES_ID1) AS L__
- FROM MCDATA.INVWES I,
-      MCDATA.ARTIKEL A,
-      MCDATA.VPCKEINH,
-
-      M.KOSTST K,
-      MCDATA.RE_UNG
-WHERE ( I.ART_ID = A.ART_ID )
- AND ( I.KST_ID = K.KST_ID )
- AND ( A.VPK_NR = VP.VPK_ID )
- AND ( I.WES_TYP =  10 )
- AND ( I.ART_ID = vn_art_id OR vn_art_id=0 )
- AND ( K.KST_ID = vn_kst_id )
- AND (RE.RNG_DATUM >= TO_DATE(vs_fec_ini||'00:00:00', 'DD/MM/YYYY HH24:MI:SS'))
- AND (RE.RNG_DATUM <= TO_DATE(vs_fec_fin||'23:59:59', 'DD/MM/YYYY HH24:MI:SS)))
-UNION  ALL
+K.KST_ADRESSE,
+K.KST_NAME,
+I.ART_ID,
+A.ART_NUMMER AS ART_COD,
+A.ART_NAME,
+unidad_code_sunat(A.VPK_NR) VPK_NR,
+VP.VPK_NAME,
+A.ART_INFO,
+I.WES_TYP,
+'02' AS TIPO_OPE,
+I.WES_ID1,
+I.WES_ID2,
+RE.RNG_DATUM WES_DATE,
+RE(TRIM(SUBSTR(RE.RNG_NAME), 1, 3))
+WHEN 'F' THEN '01'
+WHEN 'B' THEN '03'
+WHEN 'LC' THEN '04'
+WHEN 'NCP' THEN '07'
+WHEN 'NDP' THEN '08'
+WHEN 'GRE' THEN '09'
+WHEN 'TK' THEN '12'
+WHEN 'RET' THEN '20'
+WHEN 'GT' THEN '31'
+WHEN 'OT' THEN '99'
+WHEN 'I' THEN '16'
+ELSE '01'
+END AS TIPO_DOC,
+SUBSTR(RE.RNG_NAME, INSTR(RE.RNG_NAME, '-'), INSTR(RE.RNG_NAME, ' ')) AS SERIE_DOC,
+SUBSTR(RE.RNG_NAME, INSTR(RE.RNG_NAME, '-') + 1, LENGTH(RE.RNG_NAME)) AS NRO_DOC,
+ROUND(I.WES_MENGE, 4) AS CANT_COMPRA,
+ROUND(I.WES_ESP, 4) AS COST_UNI_COMPRA,
+ROUND(I.WES_MENGE * I.WES_ESP, 4) AS COST_TOT_COMPRA,
+0.00 AS CANT_VENTA,
+0.00 AS COST_UNI_VENTA,
+0.00 AS COST_TOT_VENTA,
+I.WES_VKP,
+RE.RNG_STATUS,
+(SELECT NVL(COUNT(1), 0)
+FROM MCDATA.LIEFERPOS T WHERE T.LFP_MENGE < 0 AND T.LFP_STATUS <> 64
+AND T.LFS_ID = I.WES_ID1) AS L__
+FROM MCDATA.INVWES I,
+MCDATA.ARTIKEL A,
+MCDATA.VPCKEINH,
+M.KOSTST K,
+MCDATA.RE_UNG
+WHERE (I.ART_ID = A.ART_ID)
+AND (I.KST_ID = K.KST_ID)
+AND (A.VPK_NR = VP.VPK_ID)
+AND (I.WES_TYP = 10)
+AND (I.ART_ID = vn_art_id OR vn_art_id = 0)
+AND (K.KST_ID = vn_kst_id)
+AND (RE.RNG_DATUM >= TO_DATE(vs_fec_ini || '00:00:00', 'DD/MM/YYYY HH24:MI:SS'))
+AND (RE.RNG_DATUM <= TO_DATE(vs_fec_fin || '23:59:59', 'DD/MM/YYYY HH24:MI:SS'))
+UNION ALL
 --TRASFERENCIAS DEMACEN (2)
 SELECT K.KST_ID,
-      K.KST_ADRESSE,
-      K.KST_NAME,
-      I.ART_ID,
-      A.ART_NUMMER AS ART_COD,
-      A.ART_NAME,
-      unidad_code_sunat(A.VPK_NR) VPK_NR,
-      VP.VPK_NAME,
-      A.ART_INFO,
-      I.WES_TYP,
- '11'  AS TIPO_OPE,
-      I.WES_ID1,
-      I.WES_ID2,
-      HL.LBW_DATUM WES_DATE,
- '00'  AS TIPO_DOC,
-      SUBSTR(HL.LBW_NAME,1,6)) AS SERIE_DOC,
-      HL.LBW_NAME AS NRO_DOC,
-      ROUND(I.WES_MENGE,4) AS CANT_COMPRA,
-      ROUND(I.WES_ESP,4) AS COST_UNI_COMPRA,
-      ROUND(I.WES_MENGE * I.WES_ESP,4) AS COST_TOT_COMPRA,
- 0.00  AS CANT_VENTA,
- 0.00  AS COST_UNI_VENTA,
- 0.00  AS COST_TOT_VENTA,
-      I.WES_VKP,
-      HL.LBW_STATUS AS LFS_STATUS,
- 0  AS LFP_STATUS
- FROM MCDATA.INVWES I,
-      MCDATA.ARTIKEL A,
-      MCDATA.VPCKEINH VP,
-      MCDATA.KOSTST K,
-      MCDATA.HIS_LAGER HL
-WHERE ( I.ART_ID = A.ART_ID )
- AND ( I.KST_ID = K.KST_ID )
- AND ( A.VPK_NR = VP.VPK_ID )
- AND ( I.WES_ID1 = HL.LBW_ID )
- AND ( I.WES_TYP=2 )
- AND ( I.ART_ID = vn_art_id OR vn_art_id=0 )
- AND ( K.KST_ID = vn_kst_id )
- AND ((HL.LBW_DATUM >= TO_DATE(vs_fec_ini||'00:00:00', 'DD/MM/YYYY HH24:MI:SS'))
- AND (HL.LBW_DATUM <= TO_DATE(vs_fec_fin||'23:59:59', 'DD/MM/YYYY HH24:MI:SS)))
-UNION  ALL
+K.KST_ADRESSE,
+K.KST_NAME,
+I.ART_ID,
+A.ART_NUMMER AS ART_COD,
+A.ART_NAME,
+unidad_code_sunat(A.VPK_NR) VPK_NR,
+VP.VPK_NAME,
+A.ART_INFO,
+I.WES_TYP,
+'11' AS TIPO_OPE,
+I.WES_ID1,
+I.WES_ID2,
+HL.LBW_DATUM WES_DATE,
+'00' AS TIPO_DOC,
+SUBSTR(HL.LBW_NAME, 1, 6) AS SERIE_DOC,
+HL.LBW_NAME AS NRO_DOC,
+ROUND(I.WES_MENGE, 4) AS CANT_COMPRA,
+ROUND(I.WES_ESP, 4) AS COST_UNI_COMPRA,
+ROUND(I.WES_MENGE * I.WES_ESP, 4) AS COST_TOT_COMPRA,
+0.00 AS CANT_VENTA,
+0.00 AS COST_UNI_VENTA,
+0.00 AS COST_TOT_VENTA,
+I.WES_VKP,
+HL.LBW_STATUS AS LFS_STATUS,
+0 AS LFP_STATUS
+FROM MCDATA.INVWES I,
+MCDATA.ARTIKEL A,
+MCDATA.VPCKEINH VP,
+MCDATA.KOSTST K,
+MCDATA.HIS_LAGER HL
+WHERE (I.ART_ID = A.ART_ID)
+AND (I.KST_ID = K.KST_ID)
+AND (A.VPK_NR = VP.VPK_ID)
+AND (I.WES_ID1 = HL.LBW_ID)
+AND (I.WES_TYP = 2)
+AND (I.ART_ID = vn_art_id OR vn_art_id = 0)
+AND (K.KST_ID = vn_kst_id)
+AND ((HL.LBW_DATUM >= TO_DATE(vs_fec_ini || '00:00:00', 'DD/MM/YYYY HH24:MI:SS'))
+AND (HL.LBW_DATUM <= TO_DATE(vs_fec_fin || '23:59:59', 'DD/MM/YYYY HH24:MI:SS')))
+UNION ALL
 --SALID (1)
 SELECT K.KST_ID,
-      K.KST_ADRESSE,
-      K.KST_NAME,
-      I.ART_ID,
-      A.ART_NUMMER AS ART_COD,
-      A.ART_NAME,
-      unidad_code_sunat(A.VPK_NR) VPK_NR,
-      VP.VPK_NAME,
-      A.ART_INFO,
-      I.WES_TYP,
- '11'  AS TIPO_OPE,
-      I.WES_ID1,
-      I.WES_ID2,
-      HL.LBW_DATUM WES_DATE,
- '00'  AS TIPO_DOC,
-      SUBSTR(HL.LBW_NAME,1,6)) AS SERIE_DOC,
-      HL.LBW_NAME AS NRO_DOC,
- 0.00  AS CANT_COMPRA,
- 0.00  AS COST_UNI_COMPRA,
- 0.00  AS COST_TOT_COMPRA,
-      ROUND(I.WES_MENGE,4) AS CANT_VENTA,
-      ROUND(I.WES_ESP,4) AS COST_UNI_VENTA,
-      ROUND(I.WES_MENGE * I.WES_ESP,4) AS COST_TOT_VENTA,
-      I.WES_vkP,
-      HL.LBW_STATUS AS LFS_STATUS,
- 0  AS LFP_STATUS
- FROM MCDATA.INVWES I,
-      MCDATA.ARTIKEL A,
-      MCDATA.VPCKEINH VP,
-      MCDATA.KOSTST K,
-      MCDATA.HIS_LAGW
-WHERE ( I.ART_ID = A.ART_ID )
- AND ( I.KST_ID = K.KST_ID )
- AND ( A.VPK_NR = VP.VPK_ID )
- AND ( I.WES_ID1 = HL.LBW_ID )
- AND ( I.WES_TYP = 1 )
- AND ( I.ART_ID = vn_art_id OR vn_art_id=0 )
- AND ( K.KST_ID = vn_kst_id )
- AND ((HL.LBW_DATUM >= TO_DATE(vs_fec_ini||'00:00:00', 'DD/MM/YYYY HH24:MI:SS'))
- AND (HL.LBW_DATUM <= TO_DATE(vs_fec_fin||'23:59:59', 'DD/MM/YYYY HH24:MI:SS)))
-UNION  ALL
+K.KST_ADRESSE,
+K.KST_NAME,
+I.ART_ID,
+A.ART_NUMMER AS ART_COD,
+A.ART_NAME,
+unidad_code_sunat(A.VPK_NR) VPK_NR,
+VP.VPK_NAME,
+A.ART_INFO,
+I.WES_TYP,
+'11' AS TIPO_OPE,
+I.WES_ID1,
+I.WES_ID2,
+HL.LBW_DATUM WES_DATE,
+'00' AS TIPO_DOC,
+SUBSTR(HL.LBW_NAME, 1, 6) AS SERIE_DOC,
+HL.LBW_NAME AS NRO_DOC,
+0.00 AS CANT_COMPRA,
+0.00 AS COST_UNI_COMPRA,
+0.00 AS COST_TOT_COMPRA,
+ROUND(I.WES_MENGE, 4) AS CANT_VENTA,
+ROUND(I.WES_ESP, 4) AS COST_UNI_VENTA,
+ROUND(I.WES_MENGE * I.WES_ESP, 4) AS COST_TOT_VENTA,
+I.WES_vkP,
+HL.LBW_STATUS AS LFS_STATUS,
+0 AS LFP_STATUS
+FROM MCDATA.INVWES I,
+MCDATA.ARTIKEL A,
+MCDATA.VPCKEINH VP,
+MCDATA.KOSTST K,
+MCDATA.HIS_LAGW
+WHERE (I.ART_ID = A.ART_ID)
+AND (I.KST_ID = K.KST_ID)
+AND (A.VPK_NR = VP.VPK_ID)
+AND (I.WES_ID1 = HL.LBW_ID)
+AND (I.WES_TYP = 1)
+AND (I.ART_ID = vn_art_id OR vn_art_id = 0)
+AND (K.KST_ID = vn_kst_id)
+AND ((HL.LBW_DATUM >= TO_DATE(vs_fec_ini || '00:00:00', 'DD/MM/YYYY HH24:MI:SS'))
+AND (HL.LBW_DATUM <= TO_DATE(vs_fec_fin || '23:59:59', 'DD/MM/YYYY HH24:MI:SS')))
+UNION ALL
 --MERMAS
 SELECT K.KST_ID,
-      K.KST_ADRESSE,
-      K.KST_NAME,
-      I.ART_ID,
-      A.ART_NUMMER AS ART_COD,
-      A.ART_NAME,
-      unidad_code_sunat(A.VPK_NR) VPK_NR,
-      VP.VPK_NAME,
-      A.ART_INFO,
-      I.WES_TYP,
- '05'  AS TIPO_OPE,
-      I.WES_ID1,
-      I.WES_ID2,
-      HL.VBR_DATUM WES_DATE,
- '00'  AS TIPO_DOC,
-      SUBSTR(HL.VBR_NAME,1,7)) AS SERIE_DOC,
-      HL.VBR_NAME AS NRO_DOC,
- 0.00  AS CANT_COMPRA,
- 0.00  AS COST_UNI_COMPRA,
- 0.00  AS COST_TOT_COMPRA,
-      ROUND(I.WES_MENGE,4) AS CANT_VENTA,
-      ROUND(I.WES_ESP,4) AS COST_UNI_VENTA,
-      ROUND(I.WES_MENGE * I.WES_ESP,4) AS COST_TOT_VENTA,
-      I.WES_vkP,
-      HL.VBR_STATUS AS LFS_STATUS,
- 0  AS LFP_STATUS
- FROM MCDATA.INVWES I,
-      MCDATA.ARTIKEL A,
-      MCDATA.VPCKEINH VP,
-      MCDATA.KOSTST K,
-      MCDATA.HIS_VERUCH HV
-WHERE ( I.ART_ID = A.ART_ID )
- AND ( I.KST_ID = K.KST_ID )
- AND ( A.VPK_NR = VP.VPK_ID )
- AND ( I.WES_TYP IN (30,31) )
- AND ( I.WES_ID1 = HV.VBR_ID )
- AND ( I.KST_ID = HV.KST_ID )
- AND ( I.ART_ID = vn_art_id OR vn_art_id=0 )
- AND ( K.KST_ID = vn_kst_id )
- AND ( (HV.VBR_DATUM >= TO_DATE(vs_fec_ini||'00:00:00', 'DD/MM/YYYY HH24:MI:SS'))
- AND (HV.VBR_DATUM <= TO_DATE(vs_fec_fin||'23:59:59', 'DD/MM/YYYY HH24:MI:SS)))
-UNION  ALL
+K.KST_ADRESSE,
+K.KST_NAME,
+I.ART_ID,
+A.ART_NUMMER AS ART_COD,
+A.ART_NAME,
+unidad_code_sunat(A.VPK_NR) VPK_NR,
+VP.VPK_NAME,
+A.ART_INFO,
+I.WES_TYP,
+'05' AS TIPO_OPE,
+I.WES_ID1,
+I.WES_ID2,
+HL.VBR_DATUM WES_DATE,
+'00' AS TIPO_DOC,
+SUBSTR(HL.VBR_NAME, 1, 7) AS SERIE_DOC,
+HL.VBR_NAME AS NRO_DOC,
+0.00 AS CANT_COMPRA,
+0.00 AS COST_UNI_COMPRA,
+0.00 AS COST_TOT_COMPRA,
+ROUND(I.WES_MENGE, 4) AS CANT_VENTA,
+ROUND(I.WES_ESP, 4) AS COST_UNI_VENTA,
+ROUND(I.WES_MENGE * I.WES_ESP, 4) AS COST_TOT_VENTA,
+I.WES_vkP,
+HL.VBR_STATUS AS LFS_STATUS,
+0 AS LFP_STATUS
+FROM MCDATA.INVWES I,
+MCDATA.ARTIKEL A,
+MCDATA.VPCKEINH VP,
+MCDATA.KOSTST K,
+MCDATA.HIS_VERUCH HV
+WHERE (I.ART_ID = A.ART_ID)
+AND (I.KST_ID = K.KST_ID)
+AND (A.VPK_NR = VP.VPK_ID)
+AND (I.WES_TYP IN (30, 31))
+AND (I.WES_ID1 = HV.VBR_ID)
+AND (I.KST_ID = HV.KST_ID)
+AND (I.ART_ID = vn_art_id OR vn_art_id = 0)
+AND (K.KST_ID = vn_kst_id)
+AND ((HV.VBR_DATUM >= TO_DATE(vs_fec_ini || '00:00:00', 'DD/MM/YYYY HH24:MI:SS'))
+AND (HV.VBR_DATUM <= TO_DATE(vs_fec_fin || '23:59:59', 'DD/MM/YYYY HH24:MI:SS')))
+UNION ALL
 --VENTAS
 SELECT K.KST_ID,
-      K.KST_ADRESSE,
-      K.KST_NAME,
-      I.ART_ID,
-      A.ART_NUMMER AS ART_COD,
-      A.ART_NAME,
-      unidad_code_sunat(A.VPK_NR) VPK_NR,
-      VP.VPK_NAME,
-      A.ART_INFO,
-      I.WES_TYP,
- '10'  AS TIPO_OPE,
-      I.WES_ID1,
-      I.WES_ID2,
+K.KST_ADRESSE,
+K.KST_NAME,
+I.ART_ID,
+A.ART_NUMMER AS ART_COD,
+A.ART_NAME,
+unidad_code_sunat(A.VPK_NR) VPK_NR,
+VP.VPK_NAME,
+A.ART_INFO,
+I.WES_TYP,
+'10' AS TIPO_OPE,
+I.WES_ID1,
+I.WES_ID2,
 ```
 
 
@@ -1967,9 +1897,6 @@ UNION  ALL
  AND (IV.INV_DATUM <= TO_DATE(vs_fec_fin||'23:59:59', 'DD/MM/YYYY HH24:MI:SS')))
 ... (此处省略重复逻辑以保持简洁)
 ```
-
-
-
 
 ```sql
 ln_cost_tota := 0.00;
@@ -2164,3 +2091,4 @@ IF ln_inv_id > 0 THEN
      V_ID_GTT_KARDEX,
      ID_GTT_KARDEX_VALORIZADO_SEQ.next);
     COMMIT;
+```

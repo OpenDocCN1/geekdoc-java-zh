@@ -1,18 +1,19 @@
+
 # 春天安全还记得我吗
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-security-remember-me>
 
-## 1。概述
+## 1. 概述
 
-本教程将向**展示如何使用 Spring Security 在 web 应用**中启用和配置 Remember Me 功能。设置[带有安全性和简单表单登录的 MVC 应用程序](/web/20221127083815/https://www.baeldung.com/spring-security-login "Spring Security Form Login")已经讨论过了。
+本教程将展示如何使用 Spring Security 在 web 应用中启用和配置 Remember Me 功能。设置[带有安全性和简单表单登录的 MVC 应用程序](/web/20221127083815/https://www.baeldung.com/spring-security-login "Spring Security Form Login")已经讨论过了。
 
-该机制将能够**跨多个会话识别用户**——所以首先要理解的是，记住我只有在会话超时后才生效。默认情况下，这发生在 30 分钟不活动之后，但是可以在`web.xml`中配置的[超时。](/web/20221127083815/https://www.baeldung.com/servlet-session-timeout "Java Session Timeout")
+该机制将能够**跨多个会话识别用户**——所以首先要理解的是，记住我只有在会话超时后才生效。默认情况下，这发生在 30 分钟不活动之后，但是可以在`web.xml`中配置[超时](/web/20221127083815/https://www.baeldung.com/servlet-session-timeout "Java Session Timeout")。
 
-注意:本教程重点介绍标准的基于 cookie 的方法。对于持续的方法，看看[春季安全-持续记住我](/web/20221127083815/https://www.baeldung.com/spring-security-persistent-remember-me)指南。
+注意：本教程重点介绍标准的基于 cookie 的方法。对于持续的方法，可以参考[Spring Security – 持久化记住我](/web/20221127083815/https://www.baeldung.com/spring-security-persistent-remember-me)指南。
 
-## 2。安全配置
+## 2. 安全配置
 
-让我们看看如何使用 Java 设置安全配置:
+让我们看看如何使用 Java 设置安全配置：
 
 ```java
 @Configuration
@@ -63,15 +64,15 @@ public class SecSecurityConfig {
 }
 ```
 
-正如你所看到的，**使用`rememberMe()`方法**的基本配置非常简单，同时通过附加选项保持非常灵活。这里的`**key**`很重要——它是整个应用程序的私有值秘密，在生成令牌内容时会用到。
+正如你所看到的，**使用`rememberMe()`方法**的基本配置非常简单，同时通过附加选项保持非常灵活。这里的`key`很重要——它是整个应用程序的私有值秘密，在生成令牌内容时会用到。
 
-此外，令牌有效的**时间可以使用`tokenValiditySeconds()`配置**，从默认的 2 周至例如 1 天:
+此外，令牌有效的**时间可以使用`tokenValiditySeconds()`配置**，从默认的 2 周至例如 1 天：
 
 ```java
 rememberMe().key("uniqueAndSecret").tokenValiditySeconds(86400)
 ```
 
-我们还可以看看等效的 XML 配置:
+我们还可以看看等效的 XML 配置：
 
 ```java
 <http use-expressions="true">
@@ -96,9 +97,9 @@ rememberMe().key("uniqueAndSecret").tokenValiditySeconds(86400)
 </authentication-manager>
 ```
 
-## 3。登录表单
+## 3. 登录表单
 
-登录表单类似于[我们用于表单登录](/web/20221127083815/https://www.baeldung.com/spring-security-login#login-form "A basic Login Form")的表单:
+登录表单类似于[我们用于表单登录](/web/20221127083815/https://www.baeldung.com/spring-security-login#login-form "A basic Login Form")的表单：
 
 ```java
 <html>
@@ -133,37 +134,37 @@ rememberMe().key("uniqueAndSecret").tokenValiditySeconds(86400)
 
 注意新添加的`checkbox`输入——映射到`remember-me`。这个添加的输入足以在激活“记住我”的情况下登录。
 
-此默认路径也可以更改如下:
+此默认路径也可以更改如下：
 
 ```java
 .rememberMe().rememberMeParameter("remember-me-new")
 ```
 
-## 4。曲奇饼
+## 4. Cookie
 
 当用户登录时，该机制将创建一个额外的 cookie——“记住我”cookie。
 
-**记住我 cookie** 包含以下数据:
+**记住我 cookie** 包含以下数据：
 
-*   **`username`**–识别登录的主体
-*   **`expirationTime`**–将 cookie 过期；默认值为 2 周
-*   **MD5 哈希**–前两个值——`username`和`expirationTime`，加上`password`和预定义的`key`
+*   **`username`** – 识别登录的主体
+*   **`expirationTime`** – 将 cookie 过期；默认值为 2 周
+*   **MD5 哈希** – 前两个值——`username`和`expirationTime`，加上`password`和预定义的`key`
 
 这里要注意的第一件事是，`username`和`password`都是 cookie 的一部分——这意味着，如果其中任何一个被更改，cookie 就不再有效。另外，`username`可以从 cookie 中读取。
 
 此外，重要的是要理解，如果捕获了“记住我”cookie，这种机制可能会受到攻击。**cookie 将保持有效和可用**，直到过期或凭证被更改。
 
-## 5。在实践中
+## 5. 在实践中
 
-要轻松查看“记住我”机制的工作情况，您可以:
+要轻松查看“记住我”机制的工作情况，您可以：
 
-*   以“记住我”活动状态登录
-*   等待会话到期(或删除浏览器中的`JSESSIONID` cookie)
-*   刷新页面
+- 以“记住我”活动状态登录
+- 等待会话到期（或删除浏览器中的`JSESSIONID` cookie）
+- 刷新页面
 
-如果没有激活“记住我”，在 cookie 过期后，用户应该被**重定向回登录页面**。使用“记住我”,现在的用户**在新令牌/cookie 的帮助下保持登录状态**。
+如果没有激活“记住我”，在 cookie 过期后，用户应该被**重定向回登录页面**。使用“记住我”，现在的用户**在新令牌/cookie 的帮助下保持登录状态**。
 
-## 6。结论
+## 6. 结论
 
 本教程展示了如何在安全配置中设置和配置“记住我”功能，并简要描述了 cookie 中包含的数据类型。
 

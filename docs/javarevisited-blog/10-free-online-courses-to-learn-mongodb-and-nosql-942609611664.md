@@ -1,3 +1,4 @@
+
 # 2023 年学习 MongoDB 和 NoSQL 的 10 门免费课程
 
 > 原文：<https://medium.com/javarevisited/10-free-online-courses-to-learn-mongodb-and-nosql-942609611664?source=collection_archive---------0----------------------->
@@ -93,8 +94,11 @@ Mongo DB 也是 [MERN 栈](https://www.java67.com/2020/06/top-5-courses-to-learn
 以下是您将在本课程中学到的内容:
 
 1.  MongoDB 简介和安装
+
 2.  MongoDB CRUD 操作
+
 3.  MongoDB 运算符
+
 4.  如何使用数组
 
 简而言之，对于愿意学习 MongoDB 数据库的 web 开发人员和全栈开发人员来说是一门完美的课程。
@@ -103,7 +107,9 @@ Mongo DB 也是 [MERN 栈](https://www.java67.com/2020/06/top-5-courses-to-learn
 
 [![](img/53d877405d5d36f418945ac93213fc5b.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgetting-started-with-mongodb%2F)
 
-## 6.[用 Node JS 和 Mongo DB 创建一个 REST API](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fcreate-a-rest-api-with-node-js-and-mongo-db%2F)【免费】
+
+
+## 6. [用 Node JS 和 Mongo DB 创建一个 REST API](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fcreate-a-rest-api-with-node-js-and-mongo-db%2F)【免费】
 
 这是另一个从 Udemy 学习 Mongo DB 的非常棒的免费在线课程，Udemy 是我最喜欢的在线学习平台。本课程非常适合学习 MongoDB，并通过学习如何创建和部署 REST API 开始成为全栈开发人员的旅程。
 
@@ -127,7 +133,7 @@ Mongo DB 也是 [MERN 栈](https://www.java67.com/2020/06/top-5-courses-to-learn
 
 [![](img/a912a6d6c49673e9f01b882b85a45582.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmongo-db-with-node-express%2F)
 
-## 8.[MongoDB—plural sight 简介](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmongodb-introduction)
+## 8. [MongoDB—plural sight 简介](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fmongodb-introduction)
 
 这门课程在 Pluralsight 上提供。虽然它是一个付费平台，但它提供了有限的试用期，在试用期内，您可以很快完成“MongoDB 简介”课程。在这个 2 小时 30 分钟的视频课程中，你将学到 MongoDB 的所有基础知识。到目前为止，已经有 2000 多名学生注册了这门课程。课程讲师 Nuri Halperin 是一名开发人员、技术演讲者和 MongoDB 专家。到目前为止，他已经创造了包括这门课在内的五门课程。
 
@@ -139,21 +145,21 @@ Mongo DB 也是 [MERN 栈](https://www.java67.com/2020/06/top-5-courses-to-learn
 
 顺便说一下，你需要一个 Pluralsight 会员才能参加这个课程，费用大约是每月 29 美元或每年 299 美元(14%的折扣)。我向所有程序员强烈推荐这个订阅，因为它提供了超过 7000 个在线课程的即时访问，以学习任何技术技能。或者，你也可以使用他们的 [**10 天免费试用**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 免费观看本课程。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>
 
-## 9.[2 小时内完成初学者的 ExpressJS 和 MongoDB】【免费】](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fexpressjs-with-valeed%2F)
+## 9. [2 小时内完成初学者的 ExpressJS 和 MongoDB】【免费】](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fexpressjs-with-valeed%2F)
 
 完成本课程后，您将能够轻松地使用 ExpressJS 和 MongoDB 创建 REST APIs。在本课程中，您将学习 NodeJS、ExpressJS 以及 MongoDB 的所有基本概念。
 
 以下是您将在这个免费的 Mongo DB 课程中学到的关键技能—
 
-1.  ExpressJS 的基本概念
-2.  MongoDB 的基本概念
-3.  如何在 ExpressJS 中创建 API
-4.  如何创建私有路由(受 JWT 保护)
-5.  如何处理一个错误处理
-6.  如何在 ExpressJS 中处理 JSON web token
-7.  如何使用 JSON web 令牌执行身份验证
+1. ExpressJS 的基本概念
+2. MongoDB 的基本概念
+3. 如何在 ExpressJS 中创建 API
+4. 如何创建私有路由(受 JWT 保护)
+5. 如何处理一个错误处理
+6. 如何在 ExpressJS 中处理 JSON web token
+7. 如何使用 JSON web 令牌执行身份验证
 
 本课程不仅涵盖基本主题，您还将学习 ExpressJS 的一些高级主题。完成这个课程后，你可以很容易地在 ExpressJS 和 MongoDB 上工作，这是我的承诺。
 
@@ -181,27 +187,27 @@ Mongo DB 也是 [MERN 栈](https://www.java67.com/2020/06/top-5-courses-to-learn
 
 其他**针对 Fullstack 开发人员的免费在线课程**您可能想了解一下
 
-*   [面向开发者的 5 门最佳 Mongo DB 课程](/javarevisited/5-best-mongodb-courses-to-learn-nosql-for-beginners-in-2020-42df5af5496c)
-*   [官方 Mongo DB How to guides](https://docs.mongodb.com/guides/)
-*   [与 Spring Boot 一起学习微服务的 5 大课程](https://javarevisited.blogspot.com/2018/02/top-5-spring-microservices-courses-with-spring-boot-and-spring-cloud.html#axzz6JJFPbsyP)
-*   [2023 年学习 Web 开发的 5 门课程](http://javarevisited.blogspot.sg/2018/02/top-5-online-courses-to-learn-web-development.html#axzz57wed1PWd)
-*   [深入学习 Spring 的五大课程](https://javarevisited.blogspot.com/2018/06/top-6-spring-framework-online-courses-Java-programmers.html)
-*   [面向开发者的 5 个最佳 MERN 堆栈课程](/javarevisited/top-5-online-courses-to-learn-mern-stack-in-depth-9947230f194)
-*   [面向 Java 开发者的 5 门免费 Spring 框架课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
-*   [面向有经验的 Java 开发人员的 5 大 Java 设计模式课程](http://javarevisited.blogspot.sg/2018/02/top-5-java-design-pattern-courses-for-developers.html)
-*   [学习 Java 微服务的 7 大课程](/javarevisited/top-5-courses-to-learn-microservices-in-java-and-spring-framework-e9fed1ba804d)
-*   [编程/编码工作面试 10 门课程](http://javarevisited.blogspot.sg/2018/02/10-courses-to-prepare-for-programming-job-interviews.html)
-*   [面向 Java 开发人员的 10 门高级 Spring Boot 课程](/javarevisited/10-advanced-spring-boot-courses-for-experienced-java-developers-5e57606816bd)
-*   [初学者学习 Spring Cloud 的 5 大课程](https://javarevisited.blogspot.com/2018/04/top-5-spring-cloud-courses-for-java.html)
-*   [学习 learn Shell 脚本的 5 门课程](http://javarevisited.blogspot.sg/2018/02/5-courses-to-learn-shell-scripting-in-linux.html)
-*   [成为全栈 Python 开发者的 10 门课程](/javarevisited/top-10-courses-to-learn-python-for-web-development-in-2020-best-of-lot-efe11fb6d212)
-*   [成为全栈 JavaScript 开发者的 10 门课程](/javarevisited/top-10-online-courses-to-become-a-fullstack-web-developer-in-2020-d608a6b63232)
-*   [学习面试动态编程的 6 门最佳课程](/javarevisited/6-best-dynamic-programming-courses-for-coding-interviews-14744060923c)
-*   【Udemy 的 15 门 Java 和 Spring 课程
-*   程序员和开发人员的 10 门最佳 Udemy 课程
+* [面向开发者的 5 门最佳 Mongo DB 课程](/javarevisited/5-best-mongodb-courses-to-learn-nosql-for-beginners-in-2020-42df5af5496c)
+* [官方 Mongo DB How to guides](https://docs.mongodb.com/guides/)
+* [与 Spring Boot 一起学习微服务的 5 大课程](https://javarevisited.blogspot.com/2018/02/top-5-spring-microservices-courses-with-spring-boot-and-spring-cloud.html#axzz6JJFPbsyP)
+* [2023 年学习 Web 开发的 5 门课程](http://javarevisited.blogspot.sg/2018/02/top-5-online-courses-to-learn-web-development.html#axzz57wed1PWd)
+* [深入学习 Spring 的五大课程](https://javarevisited.blogspot.com/2018/06/top-6-spring-framework-online-courses-Java-programmers.html)
+* [面向开发者的 5 个最佳 MERN 堆栈课程](/javarevisited/top-5-online-courses-to-learn-mern-stack-in-depth-9947230f194)
+* [面向 Java 开发者的 5 门免费 Spring 框架课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
+* [面向有经验的 Java 开发人员的 5 大 Java 设计模式课程](http://javarevisited.blogspot.sg/2018/02/top-5-java-design-pattern-courses-for-developers.html)
+* [学习 Java 微服务的 7 大课程](/javarevisited/top-5-courses-to-learn-microservices-in-java-and-spring-framework-e9fed1ba804d)
+* [编程/编码工作面试 10 门课程](http://javarevisited.blogspot.sg/2018/02/10-courses-to-prepare-for-programming-job-interviews.html)
+* [面向 Java 开发人员的 10 门高级 Spring Boot 课程](/javarevisited/10-advanced-spring-boot-courses-for-experienced-java-developers-5e57606816bd)
+* [初学者学习 Spring Cloud 的 5 大课程](https://javarevisited.blogspot.com/2018/04/top-5-spring-cloud-courses-for-java.html)
+* [学习 learn Shell 脚本的 5 门课程](http://javarevisited.blogspot.sg/2018/02/5-courses-to-learn-shell-scripting-in-linux.html)
+* [成为全栈 Python 开发者的 10 门课程](/javarevisited/top-10-courses-to-learn-python-for-web-development-in-2020-best-of-lot-efe11fb6d212)
+* [成为全栈 JavaScript 开发者的 10 门课程](/javarevisited/top-10-online-courses-to-become-a-fullstack-web-developer-in-2020-d608a6b63232)
+* [学习面试动态编程的 6 门最佳课程](/javarevisited/6-best-dynamic-programming-courses-for-coding-interviews-14744060923c)
+* 【Udemy 的 15 门 Java 和 Spring 课程
+* 程序员和开发人员的 10 门最佳 Udemy 课程
 
 感谢您阅读本文。如果您发现这些*最好的* *免费 Mongo DB 在线课程*对学习全栈开发有用，那么请与您的朋友和同事分享它们。如果您有任何问题或反馈，请留言。
 
 **p . s .**——如果你热衷于学习 MongoDB 并寻找最好的 MongoDB 课程，那么我强烈推荐你在 Udemy 上查看**这个**[**MongoDB——Maximillian Schwarz muller 的 2023**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmongodb-the-complete-developers-guide%2F) 完全开发者指南课程。这是一门很棒的课程，你只需花 10 美元就可以在 Udemy 上深入学习 Mongo DB。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmongodb-the-complete-developers-guide%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmongodb-the-complete-developers-guide%2F>

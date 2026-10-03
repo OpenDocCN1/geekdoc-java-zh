@@ -1,3 +1,4 @@
+
 # 2023 年要学习的 8 个最佳数据可视化工具和库
 
 > 原文：<https://medium.com/javarevisited/8-best-data-visualization-tools-and-libraries-data-analysts-and-scientists-can-learn-d2734371df16?source=collection_archive---------1----------------------->
@@ -86,7 +87,7 @@ Tableau 提供了许多产品来满足您的需求，例如 tableau desktop，�
 
 *Matplotlib* 是数据分析师或数据科学家可以学习的最流行的数据可视化库之一。这是一个为 *Python* 及其数值扩展 NumPy 开发的跨平台、数据可视化和图形绘图库。
 
-你可以使用 c 语言的 Matplotlib 在 Python 中创建静态的、动画的和交互式的可视化效果。正如他们所说，Matplotlib 让简单的事情变得更容易，让困难的事情变得可能。
+你可以使用 c 语言的 Matplotlib 在 Python 中创建静态的、动画的和交互式的可视化效果。正如他们所说，Matplotlib 让简单的事情变得更简单，让困难的事情变得可能。
 
 Matplotlib 还附带了几个附加工具包，包括 3D 绘图工具、`axes_grid1`中的轴助手和`axisartist`中的轴助手。如果你想学习 Matplotlib，需要资源，我强烈推荐你加入 Coursera 上的 Python 课程中的 [**应用绘图、图表&数据表示。学习 MatpltoLib 库的不同功能和特性以及如何使用它们是一门很棒的课程。**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fpython-plotting)
 
@@ -98,84 +99,86 @@ Matplotlib 还附带了几个附加工具包，包括 3D 绘图工具、`axes_gr
 
 如果你需要认证，你可以直接以每月 39 美元的价格加入这个课程，或者以每月 399 美元的价格获得 [**Coursera plus 订阅**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus) ，它提供无限的认证和专业化访问。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
 
-## 7. [ggplot2](https://ggplot2.tidyverse.org/)
 
-ggplot2 是一个用于统计编程语言 R 的开源数据可视化包。这是 R 程序员和选择 R 的数据科学家最流行的数据可视化库。
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
-它是 Tidyverse 工具集的一部分，使可视化数据变得非常容易。
+## 7. ggplot2
 
-简单来说，只要提供数据，告诉 ggplot2 如何将变量映射到美学，使用什么图形原语，它就会照顾到细节。
+`ggplot2` 是一个用于统计编程语言 `R` 的开源数据可视化包。这是 `R` 程序员和选择 `R` 的数据科学家最流行的数据可视化库。
 
-ggplot2 也是一个成熟的库。它现在已经有 10 多年的历史了，被几十万人用来制作几百万个情节。
+它是 `Tidyverse` 工具集的一部分，使可视化数据变得非常容易。
 
-如果你想学习 ggplot2，需要资源，我强烈推荐用 Coursera 上的 ggplot2 课程 查一下 R 中的 [**数据可视化。本课程将教你如何使用 ggplot2 制作各种可视化效果。**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fjhu-data-visualization-r)
+简单来说，只要提供数据，告诉 `ggplot2` 如何将变量映射到美学，使用什么图形原语，它就会照顾到细节。
+
+`ggplot2` 也是一个成熟的库。它现在已经有 10 多年的历史了，被几十万人用来制作几百万个情节。
+
+如果你想学习 `ggplot2`，需要资源，我强烈推荐用 `Coursera` 上的 `ggplot2` 课程查一下 `R` 中的[数据可视化](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fjhu-data-visualization-r)。本课程将教你如何使用 `ggplot2` 制作各种可视化效果。
 
 [![](img/41556fd6d47e5dbf12c820394d55c1d1.png)](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fjhu-data-visualization-r)
 
-该课程由美国约翰·霍普金斯大学提供，也是 R 专业 [**数据可视化&仪表板**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fjhu-data-visualization-dashboarding-with-r) 的一部分。如果你想要一个数据科学和 R 方面的认证，你可以加入这个认证计划。
+该课程由美国约翰·霍普金斯大学提供，也是 `R` 专业[数据可视化与仪表板](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fjhu-data-visualization-dashboarding-with-r)的一部分。如果你想要一个数据科学和 `R` 方面的认证，你可以加入这个认证计划。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fjhu-data-visualization-dashboarding-with-r>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fjhu-data-visualization-dashboarding-with-r>
 
-## 8. [D3.js](https://d3js.org/)
+## 8. D3.js
 
-如果你是一名 JavaScript 开发者，那么对于数据可视化来说，没有比 D3.js 更好的工具和库了。
+如果你是一名 `JavaScript` 开发者，那么对于数据可视化来说，没有比 `D3.js` 更好的工具和库了。
 
-D3.js 代表数据驱动文档。这是一个基于数据操作文档的 JavaScript 库。D3 帮助您使用 HTML、SVG 和 CSS 将数据变得生动。
+`D3.js` 代表数据驱动文档。这是一个基于数据操作文档的 `JavaScript` 库。`D3` 帮助您使用 `HTML`、`SVG` 和 `CSS` 将数据变得生动。
 
-**D3** 允许您将任意数据绑定到文档对象模型(DOM)，然后将数据驱动的转换应用到文档。
+`D3` 允许您将任意数据绑定到文档对象模型（`DOM`），然后将数据驱动的转换应用到文档。
 
-例如，您可以使用 D3 从一个数字数组生成一个 HTML 表格。或者，使用相同的数据创建一个具有平滑过渡和交互的交互式 SVG 条形图。
+例如，您可以使用 `D3` 从一个数字数组生成一个 `HTML` 表格。或者，使用相同的数据创建一个具有平滑过渡和交互的交互式 `SVG` 条形图。
 
-如果你想深入学习 D3.js，我强烈推荐你参加关于 Educative 的 [**可视化使用 D3.js 介绍**](https://www.educative.io/courses/introduction-to-visualization-using-d3-js?affiliate_id=5073518643380224) 课程。这是一门基于文本的交互式课程，学习并练习在浏览器上实现数据可视化。
+如果你想深入学习 `D3.js`，我强烈推荐你参加关于 `Educative` 的[可视化使用 D3.js 介绍](https://www.educative.io/courses/introduction-to-visualization-using-d3-js?affiliate_id=5073518643380224)课程。这是一门基于文本的交互式课程，学习并练习在浏览器上实现数据可视化。
 
 [![](img/c90994a5cf929d873ebbf1373afecce4.png)](https://www.educative.io/courses/introduction-to-visualization-using-d3-js?affiliate_id=5073518643380224)
 
-在本课程中，您将学习到 [D3.js](/javarevisited/7-best-online-courses-to-learn-d3-js-for-data-visualization-in-2020-1a8c79add4e4) 的基础知识，如 DOM(文档对象模型)操作、方法链接、数据绑定和数据加载。
+在本课程中，您将学习到 `D3.js` 的基础知识，如 `DOM`（文档对象模型）操作、方法链接、数据绑定和数据加载。
 
-它还涵盖了关键的数据可视化概念，并深入研究了用于绘制不同几何形状的 SVG。之后，您将使用各种地图和图表来显示您的数据。
+它还涵盖了关键的数据可视化概念，并深入研究了用于绘制不同几何形状的 `SVG`。之后，您将使用各种地图和图表来显示您的数据。
 
-你可以单独参加这门课程，或者如果你喜欢教育平台和互动学习，那么你可以加入 [**教育订阅**](https://www.educative.io/subscription?affiliate_id=5073518643380224) ，每月只需 14.9 美元，就可以访问他们的 250 多门课程。
+你可以单独参加这门课程，或者如果你喜欢教育平台和互动学习，那么你可以加入[教育订阅](https://www.educative.io/subscription?affiliate_id=5073518643380224)，每月只需 14.9 美元，就可以访问他们的 250 多门课程。
 
-<https://www.educative.io/subscription?affiliate_id=5073518643380224>  
+<https://www.educative.io/subscription?affiliate_id=5073518643380224>
 
 # 学习数据可视化最好的方法是什么？
 
-在探索了一些数据可视化工具之后，你现在可能想学习其中的一些工具，我将为你推荐 Udemy 上的这个[**数据讲述和数据可视化 2023**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmastering-the-art-of-data-visualization-2020%2F) 课程，因为它将教你如何使用许多工具，如 Tableau Microsoft Power BI 和 Microsoft Excel。
+在探索了一些数据可视化工具之后，你现在可能想学习其中的一些工具，我将为你推荐 `Udemy` 上的这个[数据讲述和数据可视化 2023](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmastering-the-art-of-data-visualization-2020%2F)课程，因为它将教你如何使用许多工具，如 `Tableau`、`Microsoft Power BI` 和 `Microsoft Excel`。
 
-在本课程中，您将学到:
+在本课程中，您将学到：
 
-*   如何使用不同的可视化工具？
-*   如何使用不同的编程语言进行可视化？
-*   了解数据在当今世界的重要性。
+- 如何使用不同的可视化工具？
+- 如何使用不同的编程语言进行可视化？
+- 了解数据在当今世界的重要性。
 
 [![](img/4dc2ade418c0717cc8927aed1beb9fcb.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmastering-the-art-of-data-visualization-2020%2F)
 
-这就是 2023 年每个数据分析师都应该学习的**最佳数据可视化工具。**数据可视化不仅仅是一种将数据转化为图形和形状以使其在仪表板上看起来更漂亮的方法，它还是一种从数据中获得洞察力的交流方式，开发人员已经开发了工具来促进这一过程。
+这就是 2023 年每个数据分析师都应该学习的**最佳数据可视化工具**。数据可视化不仅仅是一种将数据转化为图形和形状以使其在仪表板上看起来更漂亮的方法，它还是一种从数据中获得洞察力的交流方式，开发人员已经开发了工具来促进这一过程。
 
-其他**编程文章和资源**你可能喜欢:
+其他**编程文章和资源**你可能喜欢：
 
-*   [面向数据科学和机器学习的 8 大 Python 库](https://javarevisited.blogspot.com/2018/10/top-8-python-libraries-for-data-science-machine-learning.html)
-*   [你可以在线获得 5 个数据科学学位](https://www.java67.com/2020/06/top-5-data-science-degree-you-can-earn-online-coursera-edx.html)
-*   [面向数据科学家的 10 大 TensorFlow 课程](https://dev.to/javinpaul/10-of-the-best-tensorflow-courses-to-learn-machine-learning-from-coursera-and-udemy-37bf)
-*   [学习机器学习的 5 大免费课程](https://www.java67.com/2019/01/5-free-courses-to-learn-machine-and-deep-learning-in-2019.html)
-*   [面向程序员的 10 门机器学习和深度学习课程](https://hackernoon.com/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
-*   [2023 年深度学习 Python 的 10 个理由](https://hackernoon.com/10-reasons-to-learn-python-in-2018-f473dc35e2ee)
-*   [2023 年学习电力 BI 的前 5 门课程](https://www.java67.com/2020/06/top-5-courses-to-learn-microsoft-power-BI.html)
-*   [初学者学习数据科学的 10 门课程](https://hackernoon.com/10-machine-learning-data-science-and-deep-learning-courses-for-programmers-7edc56078cde)
-*   [7 门最适合初学者的人工智能课程](/javarevisited/7-best-courses-to-learn-artificial-intelligence-in-2020-26d59d62f6fe)
-*   [学习 QlikView 和 Qlik Sense 的五大课程](https://javarevisited.blogspot.com/2020/07/top-5-courses-to-learn-qlikview-and-qlik-sense.html)
-*   [2023 年学习 Python 3 的 5 大课程](https://hackernoon.com/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
-*   [五大基本机器学习算法](https://www.java67.com/2020/07/top-5-machine-learning-algorithms-for-beginners.html)
-*   [学习数据科学表格的前 5 门课程](https://javarevisited.blogspot.com/2019/07/top-5-tableau-online-courses-and-certifications-for-data-science-engineers.html)
-*   [初学者学习 Python 的 10 门免费课程](https://hackernoon.com/10-free-python-programming-courses-for-beginners-to-learn-online-38312f3b9912)
-*   [学习数据科学 Python 的 5 本书](https://javarevisited.blogspot.com/2019/08/top-5-python-books-for-data-science-and-machine-learning.html)
-*   [学习高级数据科学的前 5 门课程](https://hackernoon.com/top-5-data-science-and-machine-learning-course-for-programmers-e724cfb9940a)
-*   [初学者学习 TensorFlow 的 5 大课程](https://hackernoon.com/top-5-tensorflow-and-ml-courses-for-programmers-8b30111cad2c)
+- [面向数据科学和机器学习的 8 大 Python 库](https://javarevisited.blogspot.com/2018/10/top-8-python-libraries-for-data-science-machine-learning.html)
+- [你可以在线获得 5 个数据科学学位](https://www.java67.com/2020/06/top-5-data-science-degree-you-can-earn-online-coursera-edx.html)
+- [面向数据科学家的 10 大 TensorFlow 课程](https://dev.to/javinpaul/10-of-the-best-tensorflow-courses-to-learn-machine-learning-from-coursera-and-udemy-37bf)
+- [学习机器学习的 5 大免费课程](https://www.java67.com/2019/01/5-free-courses-to-learn-machine-and-deep-learning-in-2019.html)
+- [面向程序员的 10 门机器学习和深度学习课程](https://hackernoon.com/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
+- [2023 年深度学习 Python 的 10 个理由](https://hackernoon.com/10-reasons-to-learn-python-in-2018-f473dc35e2ee)
+- [2023 年学习电力 BI 的前 5 门课程](https://www.java67.com/2020/06/top-5-courses-to-learn-microsoft-power-BI.html)
+- [初学者学习数据科学的 10 门课程](https://hackernoon.com/10-machine-learning-data-science-and-deep-learning-courses-for-programmers-7edc56078cde)
+- [7 门最适合初学者的人工智能课程](/javarevisited/7-best-courses-to-learn-artificial-intelligence-in-2020-26d59d62f6fe)
+- [学习 QlikView 和 Qlik Sense 的五大课程](https://javarevisited.blogspot.com/2020/07/top-5-courses-to-learn-qlikview-and-qlik-sense.html)
+- [2023 年学习 Python 3 的 5 大课程](https://hackernoon.com/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
+- [五大基本机器学习算法](https://www.java67.com/2020/07/top-5-machine-learning-algorithms-for-beginners.html)
+- [学习数据科学表格的前 5 门课程](https://javarevisited.blogspot.com/2019/07/top-5-tableau-online-courses-and-certifications-for-data-science-engineers.html)
+- [初学者学习 Python 的 10 门免费课程](https://hackernoon.com/10-free-python-programming-courses-for-beginners-to-learn-online-38312f3b9912)
+- [学习数据科学 Python 的 5 本书](https://javarevisited.blogspot.com/2019/08/top-5-python-books-for-data-science-and-machine-learning.html)
+- [学习高级数据科学的前 5 门课程](https://hackernoon.com/top-5-data-science-and-machine-learning-course-for-programmers-e724cfb9940a)
+- [初学者学习 TensorFlow 的 5 大课程](https://hackernoon.com/top-5-tensorflow-and-ml-courses-for-programmers-8b30111cad2c)
 
 感谢您阅读本文。如果你喜欢这些数据可视化工具和课程，请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
-**P. S. —** 如果您有兴趣了解有关数据可视化的更多信息，并寻找免费的在线课程来开始您的数据可视化之旅，那么您也可以查看 Udemy 上的 [**使用 Oracle 分析云的现代数据可视化**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faugmented-analytics%2F) 课程。这是完全免费的，你只需要一个免费的 Udemy 帐户就可以参加这个课程。
+**P. S. —** 如果您有兴趣了解有关数据可视化的更多信息，并寻找免费的在线课程来开始您的数据可视化之旅，那么您也可以查看 `Udemy` 上的[使用 Oracle 分析云的现代数据可视化](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faugmented-analytics%2F)课程。这是完全免费的，你只需要一个免费的 `Udemy` 帐户就可以参加这个课程。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faugmented-analytics%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faugmented-analytics%2F>

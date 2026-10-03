@@ -1,16 +1,5 @@
+
 # Java OOP 高级指南
-
-
-
-
-
-
-
-
-
-* * * * * *
-
-
 
 致敬 Mike Cavanagh 师：
 
@@ -19,9 +8,6 @@
 你曾说我会成为一名优秀的顾问，“但那时我还没有故事”。
 
 我花了一些时间，但故事就在这里了。
-
-
-
 
 # 前言
 
@@ -60,7 +46,7 @@ Rock Cottage
 例如，如果我写下：
 
 ```
-1 clearScreen();
+clearScreen();
 ```
 
 你可以理解我想要计算机清空屏幕上的所有内容，留出空白。
@@ -72,11 +58,11 @@ Rock Cottage
 我的一台旧电脑需要像这样的东西：
 
 ```
-1   LD HL, 4000H  00100001 00000000 01000000
-2   LD DE, 4001H  00010001 00000001 01000000
-3   LD BC, 6143   00000001 11111111 00010111 
-4   LD (HL), 0    00110110 00000000
-5   LDIR          11101101 10110000
+LD HL, 4000H  00100001 00000000 01000000
+LD DE, 4001H  00010001 00000001 01000000
+LD BC, 6143   00000001 11111111 00010111 
+LD (HL), 0    00110110 00000000
+LDIR          11101101 10110000
 ```
 
 其中左侧的汇编语言*仍然*是一种人类可读的形式。右侧的二进制是该计算机在其 Z80A 微处理器上运行的代码。
@@ -104,10 +90,6 @@ Rock Cottage
 ## 这 Java 有什么关系？
 
 作为一种面向对象的语言，Java 的设计是为了反映现实世界，就像我们的示例中一样。它允许我们编写关于邮员、信件以及 `deliver()` 等代码。它允许我们编写计算机代码，读起来就像对我们问题的英语描述。而不是代码。
-
-
-
-
 
 我认为，理解这一切最简单的方法就是下一节中的“用户（User）”示例。但在那之前，让我们先介绍一些术语和 Java 语法。
 
@@ -142,31 +124,31 @@ Rock Cottage
 第一个设计决策是将每个用户表示为一个对象。为了做到这一点，我们需要为所有用户对象的共同点编写一个“蓝图”。一个 Java `User` 类：
 
 ```
- 1 public class User {
- 2   private String name ;  // 3\. 私有数据
- 3 
-4   public User( String name ){. // 2\. 构造函数
- 5     this.name = name ;
- 6   }
- 7 
- 8   public void greet() { // 1\. greet 方法
- 9     System.out.println( "Hello, " + name );
-10   } 
-11 }
+public class User {
+  private String name;  // 3. 私有数据
+
+  public User(String name) { // 2. 构造函数
+    this.name = name;
+  }
+
+  public void greet() { // 1. greet 方法
+    System.out.println("Hello, " + name);
+  } 
+}
 ```
 
 在对其操作之前，我们需要创建一个简单的测试应用程序。我们将使用标准的 Java 模板代码创建一个带有 `static main()` 的 `Application` 类——这是一个“魔法方法”，告诉操作系统从哪里开始我们的 Java 程序。
 
 ```
-1 public class GreetingsApplication {
-2   public static void main( String[] commandLineArgs ) {
-3     User u1 = new User( "Jake" );
-4     User u2 = new User( "Katy" );
-5 
-6     u1.greet();
-7     u2.greet();
-8   }
-9 }
+public class GreetingsApplication {
+  public static void main(String[] commandLineArgs) {
+    User u1 = new User("Jake");
+    User u2 = new User("Katy");
+
+    u1.greet();
+    u2.greet();
+  }
+}
 ```
 
 运行这个程序会向我们显示“Hello, Jake”和“Hello, Katy”。它是通过创建两个独立的用户对象，并要求它们问候它们所代表的用户来实现。
@@ -221,14 +203,11 @@ Rock Cottage
 它非常简单。
 
 ```
-1 User u = new User("Alan");
-2 u.greet();
+User u = new User("Alan");
+u.greet();
 ```
 
 编写一个知道如何问候用户的程序，我们只需要并调用这两个公共部分。我们调用构造函数创建对象并使其准备就绪。然后调用 `greet()`。这真的没有比这更简单的了。
-
-
-
 
 现在，想象一下当程序变得越来越大时，这是如何帮助我们的。我们可能会有成百上千个类，也许有数千万行代码。但通过面向对象编程（OOP），我们只需要理解对象的公共接口可以做什么。它使我们免受细节的困扰。
 
@@ -257,17 +236,17 @@ Rock Cottage
 名称在软件中至关重要。让我给你举个例子。下面这个类是做什么的：
 
 ```
- 1 class Z2 {
- 2     private String aa;
- 3 
- 4     Z2(String aaa) {
- 5         aa = aaa;
- 6     }
- 7 
- 8     void q() {
- 9         System.out.println("Hello, " + aa)
-10     }
-11 }
+class Z2 {
+    private String aa;
+
+    Z2(String aaa) {
+        aa = aaa;
+    }
+
+    void q() {
+        System.out.println("Hello, " + aa)
+    }
+}
 ```
 
 没错——它是我们的 `User` 类，但命名糟糕。
@@ -284,9 +263,9 @@ Rock Cottage
 
 有效的方法名解释了为什么我应该调用它们——在方法执行完成后会发生什么。它们不应该解释方法内部的内容，而应该说明该方法能为调用者做什么。
 
-好的：`Users.findNewUsersSince( Date date )`
+好的：`Users.findNewUsersSince(Date date)`
 
-坏的：`Users.runDatabaseQueryToSortUsersByJoiningDateThenMap( Date date )`
+坏的：`Users.runDatabaseQueryToSortUsersByJoiningDateThenMap(Date date)`
 
 方法名`应该是代码块的注释`。代码本身解释了方法是如何工作的。方法名的作用是注释，解释如果我调用它，方法会做什么。
 
@@ -341,26 +320,26 @@ Java 提供了许多实现此点的方法。大多数方法会导致代码难以
 继续我们的示例，让我们添加更多用户：
 
 ```
- 1 public class Users {
- 2   private final List<User> users = new ArrayList<>();
- 3 
- 4   public void add(User u) {
- 5     users.add(u);
- 6   }
- 7 
- 8   public void greet() {
- 9     users.forEach( User::greet );
-10   }
-11 }
+public class Users {
+  private final List<User> users = new ArrayList<>();
+
+  public void add(User u) {
+    users.add(u);
+  }
+
+  public void greet() {
+    users.forEach(User::greet);
+  }
+}
 ```
 
 这是一个 `Aggregate` 类。它之所以被称为这样，因为它将多个 `User` 聚合到了单个 `Users` 对象中。
 
 这种方法的用处在于它遵循了之前的原则：
 
-*   行为优先：添加用户，问候所有用户
-*   隐藏数据 - 无 getter，无 setter
-*   意图清晰的命名 `add()` 和 `greet()`
+* 行为优先：添加用户，问候所有用户
+* 隐藏数据 - 无 getter，无 setter
+* 意图清晰的命名 `add()` 和 `greet()`
 
 内部，它使用了 Java 8 及更高版本的功能，你现在已经在在使用了。
 
@@ -381,14 +360,15 @@ Java 具有强静态类型，可以在运行程序`之前`发现这种错误。�
 Java 还提供了原始数组来存储“多个东西”。它们看起来有点像这样：
 
 ```
-1 // Java 中的原始数组。拒绝。
-2 User[] users = new User[10];
+// Java 中的原始数组。拒绝。
+User[] users = new User[10];
 ```
 
+
+
+# 低级数组的问题
+
 我一直认为这对我来说太底层了。我以前用 C 语言和汇编语言编程，在那里这是你唯一的选择。有集合类要好得多。
-
-
-
 
 低级数组使用的问题在于：你必须预先知道想要存储多少内容；在上面的例子中是十个。
 
@@ -429,15 +409,15 @@ Java 还提供了原始数组来存储“多个东西”。它们看起来有点
 我真正喜欢的是它与在原始数组上使用基于索引的循环的对比。让我们比较一下：
 
 ```
- 1 // 遍历原始数组。再次说不。
- 2 User[] users = new User[10];
- 3 users[0] = new User("Alan");
- 4 users[1] = new User("Katy");
- 5 users[2] = new User("Stephanie");
- 6 
- 7 // 请不要这样写代码。拜求了。
- 8 for (int i=0; i < 3; i++){
- 9   users[i].greet();
+1 // 遍历原始数组。再次说不。
+2 User[] users = new User[10];
+3 users[0] = new User("Alan");
+4 users[1] = new User("Katy");
+5 users[2] = new User("Stephanie");
+6 
+7 // 请不要这样写代码。拜求了。
+8 for (int i=0; i < 3; i++){
+9   users[i].greet();
 10 }
 ```
 
@@ -474,7 +454,7 @@ Java 还提供了原始数组来存储“多个东西”。它们看起来有点
 
 对象像人一样，共同工作时效果最好。
 
-设计一组对象来解决问题是一门艺术，而不是科学。有很多原则和准则，但没有循序渐班的计划。你必须在边做边构思每个解决方案，解决各种权权衡。
+设计一组对象来解决问题是一门艺术，而不是科学。有很多原则和准则，但没有循序渐进的计划。你必须在边做边构思每个解决方案，解决各种权衡。
 
 后面的章节将详细探讨其中的一些原则。现在，让我们从基础开始。
 
@@ -497,15 +477,15 @@ Java 给了我们两种基本方式让对象协同工作。我们可以将对象
 让 `Dog` 类访问猫对象的第一种方法将其存储在私有字段中：
 
 ```
- 1 class Dog {
- 2     private final Cat cat ;
- 3 
- 4     Dog( Cat c ) {
- 5         this.cat = c;
- 6     }
- 7 
- 8     public void chase() {
- 9         cat.chase();
+1 class Dog {
+2     private final Cat cat ;
+3 
+4     Dog( Cat c ) {
+5         this.cat = c;
+6     }
+7 
+8     public void chase() {
+9         cat.chase();
 10     }
 11 }
 ```
@@ -519,9 +499,6 @@ Java 给了我们两种基本方式让对象协同工作。我们可以将对象
 4     }
 5 }
 ```
-
-
-
 
 这意味着我们需要另一个对象，它知道如何更详细地打印内容。让我们在这个对象上设计行为：
 
@@ -578,15 +555,15 @@ Java 给了我们两种基本方式让对象协同工作。我们可以将对象
 让我们假设同一个 `Printer` 对象被用于打印整个收据。基于此，一个合理的设计决策是在 `receipt` 的构造函数中传入一个 `Printer` 对象，并将其存储在字段中备用：
 
 ```
- 1 class Receipt {
- 2     private final Printer printer ;
- 3 
- 4     public Receipt( Printer p ) {
- 5         this.printer = p;
- 6     }
- 7 
- 8     public void print () {
- 9         // todo - using field 'printer'
+1 class Receipt {
+2     private final Printer printer ;
+3 
+4     public Receipt( Printer p ) {
+5         this.printer = p;
+6     }
+7 
+8     public void print () {
+9         // todo - using field 'printer'
 10     }
 11 }
 ```
@@ -596,15 +573,15 @@ Java 给了我们两种基本方式让对象协同工作。我们可以将对象
 但它需要东西来打印！我们将给它一个在收收据上添加项目的方法：
 
 ```
- 1 class Receipt {
- 2     private final Printer printer ;
- 3 
- 4     public Receipt( Printer p ) {
- 5         this.printer = p;
- 6     }
- 7 
- 8     public void add(String description, Money price) {
- 9         // todo
+1 class Receipt {
+2     private final Printer printer ;
+3 
+4     public Receipt( Printer p ) {
+5         this.printer = p;
+6     }
+7 
+8     public void add(String description, Money price) {
+9         // todo
 10     }
 11 
 12     public void print () {
@@ -630,15 +607,15 @@ Java 给了我们两种基本方式让对象协同工作。我们可以将对象
 我们会在收据内部创建一个 `Item` 对象的列表，并使用 `add()` 向其添加：
 
 ```
- 1 class Receipt {
- 2     private final Printer printer ;
- 3     private final List<Item> items = new ArrayList<>();
- 4 
- 5     public Receipt( Printer p ) {
- 6         this.printer = p;
- 7     }
- 8 
- 9     public void add(String description, Money price) {
+1 class Receipt {
+2     private final Printer printer ;
+3     private final List<Item> items = new ArrayList<>();
+4 
+5     public Receipt( Printer p ) {
+6         this.printer = p;
+7     }
+8 
+9     public void add(String description, Money price) {
 10         items.add( new Item(description, price) );
 11     }
 12 
@@ -691,14 +668,14 @@ Java 给了我们两种基本方式让对象协同工作。我们可以将对象
 我们到那里了。下一步工作是填充一些打印的细节。让我们从外部向内部开始，先坚持大图的想法：
 
 ```
- 1 class Receipt {
+1 class Receipt {
 2     private final Printer printer ;
 3     private final List<Item> items = new ArrayList<>();
- 4 
+4 
 5     public Receipt( Printer p ) {
 6         this.printer = p;
 7     }
- 8 
+8 
 9     public void add(String description, Money price) {
 10         items.add( new Item(description, price) );
 11     }
@@ -717,20 +694,18 @@ Java 给了我们两种基本方式让对象协同工作。我们可以将对象
 
 这仍然是一个大图的想法。`Receipt` 并不知道 `Item` 对象看起来什么样，也不知道如何处理打印。它只知道零或多个 `Item` 对象，并且它们可以被要求打印。这真的是创建代码的一种非常简单且具有描述性的方式。
 
-
-
 让我们为 `Item.print()` 方法添加“如何做”的细节。“终于了！”，你可能会这样想。但别急着庆祝太——它将为我们带来另一个设计挑战。让我们先做最简单的事情：
 
 ```
- 1 class Item {
- 2     private final String description;
- 3     private final Money price ;
- 4 
- 5     public Item( String description, Money price ) {
- 6         this.description = description;
- 7         this.price = price;
- 8     }
- 9 
+1 class Item {
+2     private final String description;
+3     private final Money price ;
+4 
+5     public Item( String description, Money price ) {
+6         this.description = description;
+7         this.price = price;
+8     }
+9 
 10     public void print( Printer p ) {
 11         p.print(description);
 12         p.print(" ");
@@ -757,6 +732,8 @@ Java 给了我们两种基本方式让对象协同工作。我们可以将对象
 
 我不确定。
 
+
+
 对于一个简单的系统、一个概念验证，或者关于面向对象编程（OOP）书籍早期章节中的示例（咳咳），这足够了。它行得通。
 
 然而，对我来说，它有许多代码异味：
@@ -774,7 +751,7 @@ OOP 协作设计的真正核心就在此。到目前为止，一切一风风顺�
 
 但现在，让我们利用这个机会修复它——通过另一次协作。像往常一样，行为优先，细节在后：
 
-```
+```java
  1 class Item {
  2     private final String description;
  3     private final Money price ;
@@ -790,11 +767,11 @@ OOP 协作设计的真正核心就在此。到目前为止，一切一风风顺�
 13 }
 ```
 
-我们引入了一个负责为打印格式化 `Item` 对象的对象。我们为它提供了执行该工作所需的所有信息。一如既往，我们将细节留到稍后。该对象的第一个版本将是简单的重构。我们将之前的 `Item print` 方法的内部内容放入 `ItemFormat print` 方法中。然后我们稍后会对关于 `description`、`Printer` 和 `Money` 之间谁做什么做什么做出详细决策。
+我们引入了一个负责为打印格式化 `Item` 对象的对象。我们为它提供了执行该工作所需的所有信息。一如既往，我们将细节留到稍后。该对象的第一个版本将是简单的重构。我们将之前的 `Item.print()` 方法的内部内容放入 `ItemFormat.print()` 方法中。然后我们稍后会对关于 `description`、`Printer` 和 `Money` 之间谁做什么做出详细决策。
 
-是时候为此构建一个小型测试应用了。首先，我们需要让我们的 `Printer` 类做点什么。我们将添加那个 `newline` 方法。我们还将决定使用控制台输出：
+是时候为此构建一个小型测试应用了。首先，我们需要让我们的 `Printer` 类做点什么。我们将添加那个 `newline()` 方法。我们还将决定使用控制台输出：
 
-```
+```java
 1 class Printer {
 2     public void print(String text) {
 3         System.out.print(text);
@@ -808,7 +785,7 @@ OOP 协作设计的真正核心就在此。到目前为止，一切一风风顺�
 
 填充 `Money` 类以包含 `print()` 行为以及支持的“秘密知识”：
 
-```
+```java
  1 class Money {
  2     private final String amount ;
  3     private final String currency ;
@@ -829,7 +806,7 @@ Java 中真实的 `Money` 类将 `amount` 存储为 `BigDecimal`。这是一种�
 
 我们对 `ItemFormat` 的第一次尝试来自于我们简单的重构：
 
-```
+```java
  1 class ItemFormat {
  2     private final Money price ;
  3     private final String description ;
@@ -849,7 +826,7 @@ Java 中真实的 `Money` 类将 `amount` 存储为 `BigDecimal`。这是一种�
 
 添加一个演示应用：
 
-```
+```java
 1 class ReceiptDemo {
 2     public static void main(String[] commandArgs) {
 3         new ReceiptDemo().run();
@@ -877,11 +854,11 @@ Java 中真实的 `Money` 类将 `amount` 存储为 `BigDecimal`。这是一种�
 
 ## 设计回顾
 
-让我们回顾一下设计。我们从对象的行为开始。设计由行为驱动。这些行为通过内部隐藏知识（`price`、`description`）和隐藏算法（`items.forEach()` 和 `ItemFormat print()`）得到支持。
+让我们回顾一下设计。我们从对象的行为开始。设计由行为驱动。这些行为通过内部隐藏知识（`price`、`description`）和隐藏算法（`items.forEach()` 和 `ItemFormat.print()`）得到支持。
 
 等等，我需要包含 `Receipt` 类：
 
-```
+```java
 1 class Receipt {
 2     private final Printer printer;
 3     private final List<Item> items = new ArrayList<>();
@@ -915,12 +892,9 @@ Java 中真实的 `Money` 类将 `amount` 存储为 `BigDecimal`。这是一种�
 
 *提示：* 将 `Money.amount` 字段改为 `BigDecimal`。避免在 `Money` 中添加 `getAmount()` 方法的诱惑。思考 `Money` 对象如何与另一个对象协作，该对象负责跟踪总额并在我们的 `Printer` 对象上打印它。
 
-
-
-
 我们已经看到面向对象编程（OOP）的核心在于让调用代码变得简单，并将细节隐藏在方法内部。我们构建一组相互协作的对象，并仅通过这些公共方法进行交互。我们已经学会了先设计行为方法，再添加任何必要的私有数据，最后才添加构造函数。我们从对象的外部向内部进行设计。
 
-如果我们能找到一种方法，帮助我们记住按照这个顺序执行任务——并且在软件完全完成之前就将其`run`起来会呢？
+如果我们能找到一种方法，帮助我们记住按照这个顺序执行任务——并且在软件完全完成之前就将其 `run()` 起来会呢？
 
 测试驱动开发（TDD）正是实现这一目标的方法。
 
@@ -938,7 +912,7 @@ TDD 还提供了一种方法，让我们在编写出协作对象之前，就能�
 
 TDD 帮助我们设计对象的公共接口使其易于使用。
 
-关键在于，使用我们认为良好的公共接口来编写调用我们对象的代码。我们是在编写对象内部代码`before` 这么做的。这迫使我们思考如何让调用代码简单。这再次体现了 OOP 的“逆向思维”。
+关键在于，使用我们认为良好的公共接口来编写调用我们对象的代码。我们是在编写对象内部代码 `before` 这么做的。这迫使我们思考如何让调用代码简单。这再次体现了 OOP 的“逆向思维”。
 
 这段代码被称为测试代码。它将设置我们的对象，调用它的行为方法，然后检查该方法是否生效。
 
@@ -949,9 +923,9 @@ TDD 帮助我们设计对象的公共接口使其易于使用。
 
 如果我们的设计难以设置或难以使用，我们将在难读的测试代码中看到。
 
-Java 项目使用很棒 `JUnit` 测试框架来提供帮助。我喜欢添加 `AssertJ` 来帮助完成检查。
+Java 项目使用很棒的 `JUnit` 测试框架来提供帮助。我喜欢添加 `AssertJ` 来帮助完成检查。
 
-让我们用 TDD 构建一个小型计算器，用来累加餐厅账单。在跟随操作时，请注意 TDD 的`rhythm`：写一点测试，看到失败，用一点代码修复它，不断循环。
+让我们用 TDD 构建一个小型计算器，用来累加餐厅账单。在跟随操作时，请注意 TDD 的 `rhythm`：写一点测试，看到失败，用一点代码修复它，不断循环。
 
 我们的计算器类应该做两件事：
 
@@ -1031,7 +1005,7 @@ class BillCalculator {
 
 我喜欢这样倒着工作。IDE 拥有足够的信息来完成大部分的体力活，而且不会像我那样犯那么多输入错误。一旦进入了节奏，这是一种非常快的工作方式。你甚至（对外行人来说）像个 `10x 级忍者摇星程序员`。
 
-总之。编译器会开心的，允许我们添加对一切都完好的检查。我们将使用很棒的 `AssertJ` 库来提供 `assertThat` 方法。
+总之。编译器会开心的，允许我们添加对一切都完好的检查。我们将使用很棒的 `AssertJ` 库来提供 `assertThat()` 方法。
 
 ```java
 class BillCalculatorTest {
@@ -1067,9 +1041,6 @@ class BillCalculatorTest {
 
 **Red, Green, Refactor** 帮助我们发现*涌现设计*。它发生在测试之间。
 
-
-
-
 在 TDD 重构（refactor）阶段，我们将此书中的原则应用到代码中。我们会查看生产代码*以及*测试代码。我们进行一次微型代码审查（Code Review）并寻找改进点：
 
 * 所有的命名都体现了意图吗？
@@ -1079,7 +1050,7 @@ class BillCalculatorTest {
 
 如果我们发现了任何改进点——或者我们的结对伙伴或小组同事发现了——我们现在就进行修改。
 
-在每个“红-绿-重构”（Red - Green - Refactor）循环结束时，我们拥拥有良好的 OOP 设计、被证明可以运行且质量正确的代码。
+在每个“红-绿-重构”（Red - Green - Refactor）循环结束时，我们拥有良好的 OOP 设计、被证明可以运行且质量正确的代码。
 
 在我们案例中，我们才刚刚开始。在白纸上很难搞坏代码，所以我们没什么需要做什么的。
 
@@ -1095,7 +1066,7 @@ class BillCalculatorTest {
 
 总之。新的测试：
 
-```
+```java
  1 class BillCalculatorTest {
  2     @Test
  3     public void correctTotalForOneItem() {
@@ -1116,9 +1087,11 @@ class BillCalculatorTest {
 
 我们继续按照之前的 安排（Arrange）、执行（Act）、断言（Assert）节奏进行。
 
-我们现在正在做更多的设计决策。我们开始影响代码的形状了。我做了两个决策，其中至少有一个是成疑的：将增加总额的行为命名为 `add`，以及使用 `float` 来表示价格。公平地说，那是在上一步完成的。
+我们现在正在做更多的设计决策。我们开始影响代码的形状了。我做了两个决策，其中至少有一个是成疑的：将增加总额的行为命名为 `add()`，以及使用 `float` 来表示价格。公平地说，那是在上一步完成的。
 
 使用 `float` 是那个成疑的。在学生练习和书中微小的练习之外（咳），`Floats` 和钱并不合拍。它们对货币来说有两个问题：舍入误差和货币类型。
+
+
 
 `Floats` 缺乏精度。它们通常使用 `IEEE-754` 标准来存储具有特定二进制位的尾数和指数。结果是某些分数值——比如三分之一——无法被精确表示。这导致在相加时产生舍入误差。对于计算账单来说并不好。
 
@@ -1129,17 +1102,17 @@ class BillCalculatorTest {
 让我们用那个测试驱动出一个合理的实现：
 
 ```
- 1 class BillCalculator {
- 2     private float total ;
- 3 
- 4     public void add(float itemPrice) {
- 5         total = itemPrice;  // 1. 我们需要谈谈这个...
- 6     }
- 7 
- 8     public float getTotal() {
- 9         return total;
-10     }
-11 }
+class BillCalculator {
+    private float total;
+
+    public void add(float itemPrice) {
+        total = itemPrice;  // 1. 我们需要谈谈这个...
+    }
+
+    public float getTotal() {
+        return total;
+    }
+}
 ```
 
 测试通过了。砰！大家击掌。
@@ -1164,17 +1137,15 @@ class BillCalculatorTest {
 
 严格的 TDD *始终*在每一步都只做最少的工作。这被称为 `YAGNI` 原则。
 
-
-
 我的建议是从短语的开头去掉噪音词。这是一个测试用例，所以我们不需要说诸如 `shouldCalculateTotalAsZero`、`returnsTotalAsZero` 或 `checkThatTotalIsZero` 这样的话。
 
 我们绝对*不需要*编写像下面这样笨重的测试名称：
 
 ```
-1   @Test
-2   public void BillTest_calculateTotal_isZero() {
-3      // JUST SAY NO!!!!!
-4   }
+@Test
+public void BillTest_calculateTotal_isZero() {
+   // JUST SAY NO!!!!!
+}
 ```
 
 ### 为什么？
@@ -1279,9 +1250,9 @@ TDD 在错误的人手中会创造出真正巨大的混乱。想象一下蹒跚�
 它是对所有调用代码的承诺：任何实现 Shape 的对象都有我们可以调用的 `draw()` 方法。
 
 ```
-1 interface Shape { 
-2   void draw(); 
-3 } 
+interface Shape { 
+  void draw(); 
+} 
 ```
 
 我非常喜欢这一点表达了*设计意图*。
@@ -1293,9 +1264,6 @@ TDD 在错误的人手中会创造出真正巨大的混乱。想象一下蹒跚�
 为了简化这个示例，`draw()` 将形状的文本描述写入到控制台。一个更完整的示例向 `draw()` 传递一个 `Display` 对象，这让我们能够访问图形操作。我们将在书后面看到它。
 
 现在，让我们专注于探索多态的基础，并让 `draw()` 在不同的对象中执行不同的操作。
-
-
-
 
 ```
 class Circle implements Shape { 
@@ -1339,7 +1307,7 @@ shapes.forEach( shape -> shape.draw() );
 输出看起来如下：
 
 > Look how round I am
-
+>
 > Four sides all the same for me
 
 让我们聊谈我提到的那种魔法。你会发现这里有几个非常精妙的地方：
@@ -1424,9 +1392,6 @@ shapes.forEach( shape -> shape.draw() ); // 这里没有变化
 
 注意的是，这些原则的顺序是“听起来最好”的——而不是“最有用”。
 
-
-
-
 乍看之下，这没什么特别的。我们看到了三个部分：获取输入、转换、显示。
 
 但注意 `new` 关键字。这是一个问题。
@@ -1466,25 +1431,27 @@ shapes.forEach( shape -> shape.draw() ); // 这里没有变化
 我们将引入一个名为 `Input` 的接口，我们可以要求它提供一些文本：
 
 ```
-1 interface Input {
-2     String fetch();
-3 }
+interface Input {
+    String fetch();
+}
 ```
 
 这是一个抽象。它说：“你可以向我索要输入字符串，但它从哪里来由我来决定”。
 
 它替换了示例代码中与 scanner 相关的两行代码。
 
-```
-1 public void showInputInUpperCase() {
-2     String inputText = input.fetch();
-3 
-4     // Convert
-5     String upperCaseText = inputText.toUpperCase();
-6 
-7     // Display
-8     System.out.println(upperCaseText);
-9 }
+
+
+```java
+public void showInputInUpperCase() {
+    String inputText = input.fetch();
+
+    // Convert
+    String upperCaseText = inputText.toUpperCase();
+
+    // Display
+    System.out.println(upperCaseText);
+}
 ```
 
 我还删除了注释。没有注释，接口本身也已经足够清楚了。
@@ -1496,20 +1463,20 @@ shapes.forEach( shape -> shape.draw() ); // 这里没有变化
 * 创建该接口的实现类
 * 添加一个参数或字段 `input` - 这样我们的方法就可以使用接口
 
-### 创建一个具体的 KeyboardInput 类
+## 创建一个具体的 `KeyboardInput` 类
 
 我们可以轻松地创建该接口的第一个实现：
 
-```
-1 class KeyboardInput implements Input {
-2     @Override
-3     public String fetch() {
-4           Scanner scanner = new Scanner(System.in);
-5           String inputText = scanner.nextLine();
-6           
-7           return inputText;
-8     }
-9 }
+```java
+class KeyboardInput implements Input {
+    @Override
+    public String fetch() {
+        Scanner scanner = new Scanner(System.in);
+        String inputText = scanner.nextLine();
+        
+        return inputText;
+    }
+}
 ```
 
 我们将 `Scanner` 代码复制粘贴到一个实现该接口的新类中。它被称为 `KeyboardInput`，因为这个类被允许确切知道输入来自哪里。
@@ -1520,56 +1487,56 @@ shapes.forEach( shape -> shape.draw() ); // 这里没有变化
 
 新方法的代码只依赖于接口。新的 `KeyboardInput` 类封装了 `Scanner` 并且依赖于接口。这就是反转的部分。
 
-我们将依赖关系从“方法依赖 Scanner” 为了“包含 Scanner 的类依赖接口”。
+我们将依赖关系从“方法依赖 `Scanner`” 为了“包含 `Scanner` 的类依赖接口”。
 
 这种依赖关系与之前恰好相反。它被反转了。
 
 这种思维过程被称为 `DIP` 依赖倒置原则。
 
-### 依赖注入 - 使用我们的反转依赖
+## 依赖注入 - 使用我们的反转依赖
 
 我们原始的方法需要一种方法来使用这个反转依赖。
 
 最常见的方法将其注入到构造函数中：
 
-```
- 1 class TextConversion {
- 2     private Input input ;
- 3     
- 4     // 这是我们注入依赖的地方
- 5     public TextConversion(final Input input) {
- 6         this.input = input;
- 7     }
- 8     
- 9     public void showInputInUpperCase() {
-10         String inputText = input.fetch();
-11     
-12         // Convert
-13         String upperCaseText = inputText.toUpperCase();
-14     
-15         // Display
-16         System.out.println(upperCaseText);
-17     }
-18 }
+```java
+class TextConversion {
+    private Input input ;
+    
+    // 这是我们注入依赖的地方
+    public TextConversion(final Input input) {
+        this.input = input;
+    }
+    
+    public void showInputInUpperCase() {
+        String inputText = input.fetch();
+    
+        // Convert
+        String upperCaseText = inputText.toUpperCase();
+    
+        // Display
+        System.out.println(upperCaseText);
+    }
+}
 ```
 
 并且我们会构建一个小型应用程序来连接并运行它：
 
-```
-1 public class TextUtility {
-2     public static void main(String[] commandLineArgs) {
-3         Input input = new KeyboardInput();
-4         
-5         new TextConversion(input).showInputInUpperCase();
-6     }
-7 }
+```java
+public class TextUtility {
+    public static void main(String[] commandLineArgs) {
+        Input input = new KeyboardInput();
+        
+        new TextConversion(input).showInputInUpperCase();
+    }
+}
 ```
 
 运行这个程序，我们得到了原始的行为。这是一个重构练习，而不是功能变更。
 
 你能看到我们是如何将键盘输入的细节从实际的文本转换中*外部化*的吗？
 
-### 可切换的输入源
+## 可切换的输入源
 
 这是此设计最神奇的地方。这种设计隔离了输入源的变化。
 
@@ -1577,70 +1544,70 @@ shapes.forEach( shape -> shape.draw() ); // 这里没有变化
 
 我们会编写一个实现 `Input` 接口的新具体类 `DatabaseInput`。我们在应用程序中使用它代替键盘输入：
 
-```
-1 public class TextUtility {
-2     public static void main(String[] commandLineArgs) {
-3         Input input = new KeyboardInput();
-4         
-5         new TextConversion(input).showInputInUpperCase();
-6     }
-7 }
+```java
+public class TextUtility {
+    public static void main(String[] commandLineArgs) {
+        Input input = new KeyboardInput();
+        
+        new TextConversion(input).showInputInUpperCase();
+    }
+}
 ```
 
-### 反转输出到显示
+## 反转输出到显示
 
 与抽象输入一样，我们也可以对输出做同样的事情：
 
 创建接口：
 
-```
-1 interface Output {
-2   display( String toDisplay );
-3 }
+```java
+interface Output {
+    void display( String toDisplay );
+}
 ```
 
 创建一个输出到 System 的具体类：
 
-```
-1 class ConsoleOutput implements Output {
-2   @Override
-3   public void display( String message ) {
-4     System.out.println( message );
-5   }
-6 }
+```java
+class ConsoleOutput implements Output {
+    @Override
+    public void display( String message ) {
+        System.out.println( message );
+    }
+}
 ```
 
 在构造函数中注入注入 `Input` 和 `Output` 依赖：
 
-```
-1 class TextConversion {
-2     private Input input ;
-3     private Output output ;
-4     
-5     public TextConversion(final Input input, final Output output){
-6         this.input = input;
-7         this.output = output;
-8     }
-9     
-10     public void showInputInUpperCase() {
-11         String inputText = input.fetch();
-12         String upperCaseText = inputText.toUpperCase();
-13         output.display(upperCaseText);
-14     }
-15 }
+```java
+class TextConversion {
+    private Input input ;
+    private Output output ;
+    
+    public TextConversion(final Input input, final Output output){
+        this.input = input;
+        this.output = output;
+    }
+    
+    public void showInputInUpperCase() {
+        String inputText = input.fetch();
+        String upperCaseText = inputText.toUpperCase();
+        output.display(upperCaseText);
+    }
+}
 ```
 
 并在应用程序中创建这些具体类：
 
-```
-1 public class TextUtility {
-2     public static void main(String[] commandLineArgs) {
-3         Input input = new KeyboardInput();
-4         Output output = new ConsoleOutput();
-5 
-6         new TextConversion(input, output).showInputInUpperCase();
-7     }
-8 }
+```java
+public class TextUtility {
+    public static void main(String[] commandLineArgs) {
+        Input input = new KeyboardInput();
+        Output output = new ConsoleOutput();
+
+        new TextConversion(input, output).showInputInUpperCase();
+    }
+}
 ```
 
 这允许我们切换到任何输入或显示源。我们只更改用 `new` 创建的对象。其他地方都不用动。
@@ -1649,13 +1616,11 @@ shapes.forEach( shape -> shape.draw() ); // 这里没有变化
 
 我们将在‘TDD 和测试替身’章节看到它是如何工作的。
 
-### 反转 - 注入：硬币的两两面
+## 反转 - 注入：硬币的两面
 
 人们经常听过 DIP、SOLID 和像 Spring 这样的 DI 框架，但从未将它们联系起来。
 
 依赖反置是一种*设计*技术。是从软件中移除硬编码耦合的思维过程。
-
-
 
 依赖注入是一种 `implementation` 技术。我们反转了依赖关系。现在，我们需要某种方法来选择合适的具体实现并将其接入。
 
@@ -1671,16 +1636,16 @@ Barbara Liskov（芭·里科夫）是计算领域的传奇。LSP 是她发现的
 
 ### 当 Shapes 变得糟糕时
 
-```
-1 interface Shape {
-2     void draw();
-3 } 
-4 
-5 class Circle implements Shape {
-6     public void draw(){
-7         System.out.println("I'm round");
-8     }
-9 }
+```java
+interface Shape {
+    void draw();
+} 
+
+class Circle implements Shape {
+    public void draw(){
+        System.out.println("I'm round");
+    }
+}
 ```
 
 这是“良好”的情况。
@@ -1691,19 +1656,19 @@ Barbara Liskov（芭·里科夫）是计算领域的传奇。LSP 是她发现的
 
 但每个实现接口方法的类都能被替换吗？这个类的呢：
 
-```
- 1 class CardDealer implements Shape {
- 2     private final Deck cards ;
- 3     
- 4     CardDealer( final Deck cards) {
- 5         this.cards = cards;
- 6     }
- 7  
- 8     public void draw(){
- 9         Card next = cards.next();
-10         System.out.println(next.asText());
-11     }
-12 }
+```java
+class CardDealer implements Shape {
+    private final Deck cards ;
+    
+    CardDealer( final Deck cards) {
+        this.cards = cards;
+    }
+  
+    public void draw(){
+        Card next = cards.next();
+        System.out.println(next.asText());
+    }
+}
 ```
 
 这可能是一个牌游戏的类；桥牌甚至是 Snap。
@@ -1712,9 +1677,9 @@ Barbara Liskov（芭·里科夫）是计算领域的传奇。LSP 是她发现的
 
 我们可以很容易地将其加入形状列表中：
 
-```
-1   List<Shape> shapes = List.of( new Circle(), new CardDealer());
-2   shapes.forEach( Shape::draw ); 
+```java
+List<Shape> shapes = List.of( new Circle(), new CardDealer());
+shapes.forEach( Shape::draw ); 
 ```
 
 这将会编译并运行。
@@ -1754,18 +1719,18 @@ LSP 也适用于通用的继承——类和子类、抽象类等。它不仅限�
 
 我们之前在 Shapes 示例中见过这个。绘制形状的代码可以绘制任何形状，而无需自身进行任何更改。
 
-```
- 1 class Shapes {
- 2     private final List<Shape> shapes = new ArrayList<>();
- 3 
- 4     public void add (Shape s) {
- 5         shapes.add(s);
- 6     }
- 7 
- 8     public void draw() {
- 9         shapes.forEach(Shape::draw);
-10     }
-11 }
+```java
+class Shapes {
+    private final List<Shape> shapes = new ArrayList<>();
+
+    public void add (Shape s) {
+        shapes.add(s);
+    }
+
+    public void draw() {
+        shapes.forEach(Shape::draw);
+    }
+}
 ```
 
 这个聚合类允许你向内部列表添加形状然后绘制它们。
@@ -1786,27 +1751,27 @@ OCP 本质上是伪装的依赖倒置。
 
 实现此点的方法可能是向 `Shapes` 添加一个 `blur()` 方法：
 
-```
- 1 interface Shape {
- 2     void draw();
- 3     void apply(Filter f);
- 4
- 5 
- 6 class Shapes {
- 7     private final List<Shape> shapes = new ArrayList<>();
- 8 
- 9     public void add (Shape s) {
-10         shapes.add(s);
-11     }
-12 
-13     public void draw() {
-14         shapes.forEach(Shape::draw);
-15     }
-16 
-17     public void blur() {
-18         shapes.forEach(s -> s.apply(new BlurFilter()));
-19     }
-20 }
+```java
+interface Shape {
+    void draw();
+    void apply(Filter f);
+
+
+class Shapes {
+    private final List<Shape> shapes = new ArrayList<>();
+
+    public void add (Shape s) {
+        shapes.add(s);
+    }
+
+    public void draw() {
+        shapes.forEach(Shape::draw);
+    }
+
+    public void blur() {
+        shapes.forEach(s -> s.apply(new BlurFilter()));
+    }
+}
 ```
 
 为了支持这一点，我们为 `Shape` 添加了 `apply(Filter f)` 方法，以便在 `Shape` 上运行处理。`Filter` 是一个接口。每种不同的图形处理都必须实现它。我们根据需要传入具体的类。在例子中，它是 `BlurFilter`。
@@ -1815,7 +1780,7 @@ OCP 本质上是伪装的依赖倒置。
 
 通常情况下，我们希望避免修改已经编写的类。或者至少在有理由的情况下这样做。我们不希望在良好的代码中引入 Bug。我们绝不想创建包含大量方法的类。这就是开闭原则的动机。
 
-向 `Shapes` 添加像图形处理这样的功能通常需要这样的代码更改。任何其他处理方式都是牵强。的。
+向 `Shapes` 添加像图形处理这样的功能通常需要这样的代码更改。任何其他处理方式都是牵强的。
 
 如果我们只需要一个 `blur()` 方法，这并不是一个糟糕的方法。
 
@@ -1823,22 +1788,22 @@ OCP 本质上是伪装的依赖倒置。
 
 这就是策略模式所擅长的：
 
-```
- 1 class Shapes {
- 2     private final List<Shape> shapes = new ArrayList<>();
- 3 
- 4     public void add (Shape s) {
- 5         shapes.add(s);
- 6     }
- 7 
- 8     public void draw() {
- 9         shapes.forEach(Shape::draw);
-10     }
- 11 
-12     public void filter(Filter filter) {
-13         shapes.forEach( s -> filter.applyTo(s) );
-14     }
-15 }
+```java
+class Shapes {
+    private final List<Shape> shapes = new ArrayList<>();
+
+    public void add (Shape s) {
+        shapes.add(s);
+    }
+
+    public void draw() {
+        shapes.forEach(Shape::draw);
+    }
+
+    public void filter(Filter filter) {
+        shapes.forEach( s -> filter.applyTo(s) );
+    }
+}
 ```
 
 在这里，`filter()` 方法将实现 `Filter` 接口的类注入到方法中。然后在每个形状上运行它。
@@ -1848,10 +1813,6 @@ OCP 本质上是伪装的依赖倒置。
 我们的 `Shapes.filter()` 方法不知道我们具体如何处理每个 `Shape`。它接收从类外部提供的内容并应用到每个 `Shape`。
 
 正如 `Shapes.draw()` 不知道如何绘制任何形状一样，`Shapes.filter()` 知道如何过滤任何 `Shape`。由我们的 `Filter` 形成的策略模式将这种可变行为推到了类之外，使其对扩展开放，但对进一步修改关闭。
-
-
-
-
 
 ## 接口隔离原则 - 诚实的接口
 
@@ -1866,12 +1827,12 @@ OCP 本质上是伪装的依赖倒置。
 我们保持简单，写了一个暴露了所有可控制项的接口：
 
 ```java
-1 interface Control {
-2     void on();
-3     void off();
-4     void channelUp();
-5     void channelDown();
-6 }
+interface Control {
+    void on();
+    void off();
+    void channelUp();
+    void channelDown();
+}
 ```
 
 我们可以为测试遥控器适配器编写一个存根代码（stub），并创建一个驱动电视硬件的生产环境类。
@@ -1879,6 +1840,8 @@ OCP 本质上是伪装的依赖倒置。
 一切顺利。
 
 几周后，团队告诉我们他们获得了一些改进后的智能电视硬件。我们将推出两个产品：一个是低成本的入门级，另一个是我们的高端智能电视。
+
+
 
 它具有数字节目录制功能，以及 YouTube 和 Netflix 网络电视功能。
 
@@ -1974,10 +1937,6 @@ Java（以及 C# 和 C++）接口是静态绑定的。我们不能仅仅根据�
  9     }
 10 }
 ```
-
-
-
-
 
 ```java
 class TextConversion {
@@ -2103,50 +2062,6 @@ class TextConversionTest {
 }
 ```
 
-每当我们调用 `fetch()` 时，它都会为我们提供已知数据。
-
-我做了一个设计决策，传递我想返回的桩值，而不是选择返回常量的简单选项。理由是为了让测试更具读性；我们稍后会看到。
-
-现在来看 `MockOutput`。它的职责是记录与 `display()` 方法的任何交互：
-
-```java
-class MockOutput implements Output {
-    private String actual ;
-    
-    public void display( String toDisplay ) {
-        this.actual = toDisplay ;
-    }
-    
-    public String getActual() {
-        return actual ;
-    }
-}
-```
-
-简单的 getter 方法似乎很好地暴露了捕获的数据。你可以将字段设为公共；如果你喜欢，也可以提供一个 `boolean hasExpectedValue( String expectedValue )` 方法。尽管我通常不喜欢 OOP 中的 getter，但在这里似乎是处理此任务的正确工具。
-
-我们现在可以使用这些测试替身来编写一个完全自动化的单元测试：
-
-```java
-class TextConversionTest {
-    
-    @Test
-    public void displaysUpperCasedInput() {
-        // Arrange
-        var in = new StubInput("abcde123");
-        var out = new MockOutput();
-        
-        var tc = new TextConversion( in, out );
-        
-        // Act
-        tc.showInputInUpperCase();
-        
-        // Assert
-        assertThat(out.getActual()).isEqualTo("ABCDE123");
-    }
-}
-```
-
 ## Mock 库
 
 既然我们理解依赖反转允许我们生成测试替身，我们可以简化生活。
@@ -2199,12 +2114,9 @@ Mockito 是一个广泛使用的第三方库。它提供了许多生成模拟和
 
 最后一种技术值得提：自分。
 
-
-
-
 在这里，我们让测试类自己实现接口。这意味着不需要手动编写测试双端类（test double），也不需要 mock 库。测试运行得更快。当我们的接口变得过大时，我们甚至获得一些设计上的反馈：编写测试变得变得很厌烦。
 
-```
+```java
  1 class TextConversionTest implements Input, Output {
  2     private final Input input = this ;
  3     private final Output output = this;
@@ -2215,24 +2127,24 @@ Mockito 是一个广泛使用的第三方库。它提供了许多生成模拟和
  8     public String fetch() {
  9         return "abcde123";
 10     }
-11 
-12     // Output interface mock
-13     public void display( String output ) {
-14         this.actualOutput = output;
+ 11 
+ 12     // Output interface mock
+ 13     public void display( String output ) {
+ 14         this.actualOutput = output;
 15     }
-16 
-17     @Test
-18     public void displayUpperCasedInput() {
-19         // Arrange
-20         var tc = new TextConversion(input, output);
-21 
-22         // Act
-23         tc.showInputInUpperCase();
-24 
-25         // Assert
-26         assertThat(actualOutput).isEqualTo( "ABCDE123" );
-27     }
-28 }
+ 16 
+ 17     @Test
+ 18     public void displayUpperCasedInput() {
+ 19         // Arrange
+ 20         var tc = new TextConversion(input, output);
+ 21 
+ 22         // Act
+ 23         tc.showInputInUpperCase();
+ 24 
+ 25         // Assert
+ 26         assertThat(actualOutput).isEqualTo( "ABCDE123" );
+ 27     }
+ 28 }
 ```
 
 测试类充当了它自己的测试双端。`input` 和 `output` 字段让意图更易理解。
@@ -2244,6 +2156,10 @@ Mockito 是一个广泛使用的第三方库。它提供了许多生成模拟和
 # 重构
 
 到目前为止，每种技术都是关于第一次对代码进行结构化。
+
+
+
+# 重构
 
 我们一直努力让代码变得易读且简单。为了帮助实现这一点，我们从外向内进行设计和测试，选择让“我们要解决的问题”比“我们如何解决它”更突出。
 
@@ -2270,17 +2186,17 @@ Martin Fowler 的书籍《重构》是该主题的参考书。第一版完全基
 ## 重命名方法，重命名变量
 
 ```
- 1 class User {
- 2     private final String text ;
- 3 
- 4     public User( String name ) {
- 5         this.text = name ;
- 6     }
- 7     
- 8     public void printout() {
- 9         System.out.println("Welcome back, " + text);
-10     }
-11 }
+class User {
+    private final String text;
+
+    public User(String name) {
+        this.text = name;
+    }
+
+    public void printout() {
+        System.out.println("Welcome back, " + text);
+    }
+}
 ```
 
 这个 `User` 类在传入名称 Alan 并创建对象后，会打印出“Welcome back, Alan”。
@@ -2294,17 +2210,17 @@ Martin Fowler 的书籍《重构》是该主题的参考书。第一版完全基
 我们可以对方法名使用 `Refactor > Rename` 给它起一个具有描述性的名字。让我们选择 `welcome()`。这能更好地解释正在做什么。
 
 ```
- 1 class User {
- 2     private final String name ;
- 3 
- 4     public User( String name ) {
- 5         this.name = name ;
- 6     }
- 7     
- 8     public void welcome() {
- 9         System.out.println("Welcome back, " + name);
-10     }
-11 }
+class User {
+    private final String name;
+
+    public User(String name) {
+        this.name = name;
+    }
+
+    public void welcome() {
+        System.out.println("Welcome back, " + name);
+    }
+}
 ```
 
 这两种重构——更改字段或方法的名称——是我一直以来使用的。字面意思就是如此。以至于我不再为构思“最佳”名称而感到压力。我只写代码，想出一个初步的名字，然后当我有了更好的主意时再回来重构它。
@@ -2326,34 +2242,34 @@ Martin Fowler 的书籍《重构》是该主题的参考书。第一版完全基
 这里有一个 SpaceInvaders 的例子，说明了这一点：
 
 ```
-  class TextConversionTest implements Input, Output {
- 2     private final Input input = this ;
- 3     private final Output output = this;
- 4 
- 5     private String actualOutput ;
- 6 
- 7     // Input interface stub
- 8     public String fetch() {
- 9         return "abcde123";
-10     }
-11 
-12     // Output interface mock
-13     public void display( String output ) {
-14         this.actualOutput = output;
-15     }
-16 
-17     @Test
-18     public void displayUpperCasedInput() {
-19         // Arrange
-20         var tc = new TextConversion(input, output);
-21 
-22         // Act
-23         tc.showInputInUpperCase();
-24 
-25         // Assert
-26         assertThat(actualOutput).isEqualTo( "ABCDE123" );
-27     }
-28 }
+class TextConversionTest implements Input, Output {
+    private final Input input = this;
+    private final Output output = this;
+
+    private String actualOutput;
+
+    // Input interface stub
+    public String fetch() {
+        return "abcde123";
+    }
+
+    // Output interface mock
+    public void display(String output) {
+        this.actualOutput = output;
+    }
+
+    @Test
+    public void displayUpperCasedInput() {
+        // Arrange
+        var tc = new TextConversion(input, output);
+
+        // Act
+        tc.showInputInUpperCase();
+
+        // Assert
+        assertThat(actualOutput).isEqualTo("ABCDE123");
+    }
+}
 ```
 
 这个测试类充当了它自己的测试双端。`input` 和 `output` 字段让意图更易理解。
@@ -2362,145 +2278,6 @@ Martin Fowler 的书籍《重构》是该主题的参考书。第一版完全基
 
 但它是工具箱中一个很不错的工具。
 
-# 重构
-
-到目前为止，每种技术都是关于第一次对代码进行结构化。
-
-我们努力让代码变得易读且简单。为了帮助实现这一点，我们从外向内进行设计和测试，选择让“我们要解决的问题”比“我们如何解决它”更突出。
-
-但当我们没做对时呢？当我们对问题有了新的见解时会发生什么？当我们为了通过测试而丢下“最简单的代码”，但现在想要整洁的代码时又该如何？
-
-## 什么是重构？
-
-重构是在保持代码行为不变的同时改变其代码结构的名称。重新组织我们的代码，但不破坏任何东西。
-
-这个名字源于因子分解（factoring），它源于代数。因子分解是将事物拆分成更小部分的基本思想。重构简单就是“再做一遍”。我一直在重构。
-
-我会作为 TDD 过程的一部分进行重构，这是标准做法。我会写一个失败的测试，添加最简单的生产环境代码让它通过，然后进行重构。
-
-面对难以理解的新代码时，我会先对其进行重构。这样，我就能捕捉到获得的任何见解，并将这种来之不易的理解留在代码中。
-
-这就是为什么重构很有用。但我们该如何做呢？
-
-Martin Fowler 的书籍《重构》是该主题的参考书。第一版完全基于 Java，是我推荐给 Java 开发者的版本。第二版在示例中使用了带有类支持的 JavaScript ES6。它还行，但对我们 Java 开发者来说没有那么直观。
-
-以下是我经常使用的重构步骤——以及原因。
-
-## 重命名方法，重命名变量
-
-```
- 1 class User {
- 2     private final String text ;
- 3 
- 4     public User( String name ) {
- 5         this.text = name ;
- 6     }
- 7     
- 8     public void printout() {
- 9         System.out.println("Welcome back, " + text);
-10     }
-11 }
-```
-
-这个 `User` 类在传入名称 Alan 并创建对象后，会打印出“Welcome back, Alan”。
-
-名称存储在一个名为 `text` 的字段中。嗯。它是 `text` —— 但并没有真正告诉我这个字段是做什么用的。它被用来存储我们想要放入欢迎消息中的用户名称。
-
-修复方法是使用该字段的 `Refactor > Rename`。将其重命名为 `name`。
-
-同样，方法 `printout()` 对于理解代码也没有什么帮助。是的，该方法会打印一些内容。我们可以读到这一点。但那不是它在*做什么*，那是它是*怎么做*的。我们希望方法能解释它们为什么存在那里以及它们的执行结果是什么。
-
-我们可以对方法名使用 `Refactor > Rename` 给它起一个具有描述性的名字。让我们选择 `welcome()`。这能更好地解释正在做什么。
-
-```
- 1 class User {
- 2     private final String name ;
- 3 
- 4     public User( String name ) {
- 5         this.name = name ;
- 6     }
- 7     
- 8     public void welcome() {
- 9         System.out.println("Welcome back, " + name);
-10     }
-11 }
-```
-
-这两种重构——更改字段或方法的名称——是我一直以来使用的。字面意思就是如此。以至于我不再为构思“最佳”名称而感到压力。我只写代码，想出一个初步的名字，然后当我有了更好的主意时再回来重构它。
-
-我发现我的大脑就是这样运作的。当我工作时，背景中会发生一些事情。稍后一点我会获得更好的见解。
-
-### 优先使用 IDE 工具而非手动更改
-
-如果你的 IDE 是 `IntelliJ`、`Eclipse`、`NetBeans`，它可以实现这一点。
-
-## 提取方法
-
-另一个我非常喜欢的技巧，实际上用于：
-
-*   将方法拆分成逻辑块
-*   通过将注释转换为方法
-*   通过添加描述性名称来明确方法的工作原理
-
-这里有一个 SpaceInvaders 的例子，说明了这一点：
-
-```
- 1 class SpaceInvaders {
- 2     private final List<Invader> invaders;
- 3     private final Display display ;
- 4 
- 5     // constructor and methods omitted
- 6 
- 7     public void update() {
- 8         // Move invaders
- 9         for ( Invader i : invaders ) {
-10             i.updatePosition();
-11         }
-12 
-13         // Draw invaders
-14         for ( Invader i : invaders ) {
-15             i.draw( display );
-16         }
-17     }
-18 }
-```
-
-我的第一个重构步骤将拆分方法。不是因为在这个情况下它太长了，而是为了可以将这些注释转换为方法。
-
-```
- 1 class SpaceInvaders {
- 2     private final List<Invader> invaders = new ArrayList<>();
- 3     private final Display display ;
- 4 
- 5     // constructor and methods omitted
- 6 
- 7     public void update() {
- 8         moveInvaders();
- 9         drawInvaders();
-10     }
-11 
-12     private void moveInvaders() {
-13         for ( Invader i : invaders ) {
-14             i.updatePosition();
-15         }
-16     }
-17 
-18     private void drawInvaders() {
-19         for ( Invader i : invaders ) {
-20             i.draw( display );
-21         }
-22     }
-23 }
-```
-
-这将两个 for 循环块提取到了私有方法。注释名称随后被转换为方法名。
-
-这样做非常有帮助。它让代码更具自文档性。最好的是它防止了注释过期。
-
-注释实际上是代码中的重复。它用英语说明一段代码在做什么。通过将此块转换为方法，我们有机会添加一个方法名来解释该代码在做什么。如果代码发生了变化，你更有可能更改方法名，而不是同时更改方法名和注释。
-
-作为风格的一种，由于类名是 `SpaceInvaders`，我可能会将名称缩短为 `move()` 和 `draw()`。我们已经知道这个类是关于 Invaders 的。较短的名字是清晰的，因为我们有类上下文。
-
 ## 更改方法签名
 
 这是一个强调问题领域的极重构。
@@ -2508,14 +2285,12 @@ Martin Fowler 的书籍《重构》是该主题的参考书。第一版完全基
 我工作的一家网络会议初创公司的真实示例是这样的：
 
 ```
-1 public void Chat {
-2   public void sendMessage( String toUsername ) {
-3     // code ...
-4   }
-5 }
+class Chat {
+    public void sendMessage(String toUsername) {
+        // code ...
+    }
+}
 ```
-
-
 
 我们之前使用一个简单的字符串来表示用户名。这个字符串像上面那样被传递到方法中。我们在到处都使用了它。这是你在早期为了能尽快开始工作而做出的设计决策之一。使用 `String` 可能不是长期的最佳决策，但在当时，任何其他方案似乎都过度设计了。
 
@@ -2529,7 +2304,7 @@ Martin Fowler 的书籍《重构》是该主题的参考书。第一版完全基
 
 ```
 class Chat {
-    public void sendMessage( User recipient ) {
+    public void sendMessage(User recipient) {
         // code ...
     }
 }
@@ -2539,7 +2314,7 @@ class Chat {
 
 正如你所看到的，整个“抽象级别”再次提升了。我们现在可以清楚地看到 `Chat` 可以向 `User` 发送消息 (`sendMessage`)。它用简单的英语直接写在代码中。我们看到“做什么”比“怎么做”更显著。我们看到的是‘User’而不是‘String’。
 
-# 提取参数对象 (Extract Parameter Object)
+## 提取参数对象
 
 我喜欢这一个。这种重构产生了一些非常出色的设计见解。当你看到一个方法的参数列表看起来太长时，就可以使用它。
 
@@ -2547,10 +2322,10 @@ class Chat {
 
 ```
 class InvadersGame {
-  public void draw( int x, int y, Image currentFrame, 
-                    int deltaX, int deltaY) {
-    // code
-  }
+    public void draw(int x, int y, Image currentFrame,
+                     int deltaX, int deltaY) {
+        // code
+    }
 }
 ```
 
@@ -2564,7 +2339,7 @@ class InvadersGame {
 
 ```
 class InvadersGame {
-    void draw( Invader i ) {
+    void draw(Invader i) {
         // code
     }
 }
@@ -2572,7 +2347,7 @@ class InvadersGame {
 class Invader {
     private int x;
     private int y;
-    private Image currentFrame ;
+    private Image currentFrame;
     private int deltaX;
     private int deltaY;
 
@@ -2586,15 +2361,17 @@ class Invader {
 
 我省略了 `Invader` 对象这些 getter 方法、字段和构造函数内部的代码。在这里结构很重要，而不是细节。
 
-我们了原始 `draw()` 方法中的所有参数，并将它们放入一个新类中——被称为“参数对象”。现有的 `draw()` 方法将把对原始参数的使用替换为 `i.getX()`、`i.getY()` 等。
+我们把原始 `draw()` 方法中的所有参数，并将它们放入一个新类中——被称为“参数对象”。现有的 `draw()` 方法将把对原始参数的使用替换为 `i.getX()`、`i.getY()` 等。
 
 `Invader` 还不算一个具有行为的 OOP 对象。它是一个纯数据结构。
 
 有趣的地方在这里。如果我们将代码从原始 `draw()` 方法移动到 `Invader` 类的 `draw()` 方法中，我们就可以去掉所有那些 getter 方法：
 
-```
+
+
+```java
 class InvadersGame {
-    void draw( Invader i ) {
+    void draw(Invader i) {
         i.draw();
     }
 }
@@ -2602,7 +2379,7 @@ class InvadersGame {
 class Invader {
     private int x;
     private int y;
-    private Image currentFrame ;
+    private Image currentFrame;
     private int deltaX;
     private int deltaY;
 
@@ -2632,25 +2409,23 @@ class Invader {
 
 第二个很棘手。你可能会发现在重构时破坏了某些测试，但却不知道为什么。当你调试时，你会发现两处代码区域需要同步更改。例如，可能有一个字符串常量。你在一个类中重构了它，但忘记在另一个类中重构它。
 
-
-
 集成测试将几部分代码组合在一起，并将它们作为一个整体进行测试。通常，这些代码片段中的某些是外部系统。因此，你可能会针对运行中的数据库对某些业务逻辑进行测试。
 
 端到端测试扩展了这一概念。你连接整个系统，并像用户一样对其测试。你驱动用户界面，并在实际数据库和真实的网络服务上运行。整个过程尽可能地“真实化”。
 
-契约测试（Contract tests）非常有意思。它们将测试分为两个方向。它们被用于拆解针对外部服务的测试。
+契约测试非常有意思。它们将测试分为两个方向。它们被用于拆解针对外部服务的测试。
 
-通过这些测试，你将进行两次测试。首先，你测试你的应用程序逻辑是否可以正确地调用服务的存根（stub）。这就是“测试契约”的含义——你的应用程序与与其通信的任何对象之间的契约。
+通过这些测试，你将进行两次测试。首先，你测试你的应用程序逻辑是否可以正确地调用服务的存根。这就是“测试契约”的含义——你的应用程序与与其通信的任何对象之间的契约。
 
 其次，你测试与外部服务通信的代码之间的契约，并确保它确实进行了正确的通信。
 
-还有浏览器测试，它是端到端测试的一种形式，使用特殊的网络浏览器。你可以编写脚本来模拟鼠标移动、点击和击键，就像你是一个真实的用户一样。它能够捕发送到浏览器的 HTML 和数据以便检查。
+还有浏览器测试，它是端到端测试的一种形式，使用特殊的网络浏览器。你可以编写脚本来模拟鼠标移动、点击和击键，就像你是一个真实的用户一样。它能够捕获发送到浏览器的 HTML 和数据以便检查。
 
 每一层测试都会变得越来越棘手。集成测试比单元测试慢，因为它必须设置并控制外部系统。端到端测试更慢。它们编写起来也更困难。
 
-最糟糕的问题关于测试的**重复性**（repeatability）。我们希望测试在代码正确时始终通过，在代码不正确时失败。
+最糟糕的问题关于测试的**重复性**。我们希望测试在代码正确时始终通过，在代码不正确时失败。
 
-遗憾的是，高层测试往往是“**不稳定的**”（flaky）。代码可能是正确的，但外部系统中的某些问题可能仍会导致测试失败。这通常是一些简单的问题，例如数据库中存在错误的数据，或者响应缓慢。
+遗憾的是，高层测试往往是“**不稳定的**”。代码可能是正确的，但外部系统中的某些问题可能仍会导致测试失败。这通常是一些简单的问题，例如数据库中存在错误的数据，或者响应缓慢。
 
 不稳定的测试也由间歇性问题引起。诸如网络故障和数据库连接限制等都是这些问题。
 
@@ -2698,10 +2473,10 @@ class Invader {
 
 我们可以将其代码化：
 
-```
-1 interface UserRepository {
-2     User findUserById( String userId );
-3 }
+```java
+interface UserRepository {
+    User findUserById(String userId);
+}
 ```
 
 `UserRepository` 是一个接口，允许我们的代码访问 `User` 及其配置信息，而无需了解数据库的任何知识。
@@ -2710,35 +2485,35 @@ class Invader {
 
 我们在这里使用 `Repository` 一词是用最通用的方式来描述“以某种方式存储、生成和获取 `User` 对象的任何东西”。我们使用它是为了表明精确的存储细节并不重要。
 
-也许它甚至没有被存储。例如，在某些游戏中，`userID` 值可能被用来动态`生成`（generate）该配置信息而不是存储它。这仍然是一个“仓库”。
+也许它甚至没有被存储。例如，在某些游戏中，`userID` 值可能被用来动态`生成`该配置信息而不是存储它。这仍然是一个“仓库”。
 
 我们可以像这样在调用代码中使用它：
 
-```
- 1 class NotFaceBook {
- 2     private final UserRepository users ;
- 3     private final Display display ;
- 4 
- 5     public NotFaceBook( UserRepository users, Display display ) {
- 6         this.users = users ;
- 7         this.display = display;
- 8     }
- 9 
-10     public void showProfile() {
- 11         String userId = "almellor_1901";
- 12         
- 13         User u = users.findUserById( userId );
- 14         
- 15         u.displayProfile(display);
- 16     }
-17 }
+```java
+class NotFaceBook {
+    private final UserRepository users;
+    private final Display display;
+
+    public NotFaceBook(UserRepository users, Display display) {
+        this.users = users;
+        this.display = display;
+    }
+
+    public void showProfile() {
+        String userId = "almellor_1901";
+
+        User u = users.findUserById(userId);
+
+        u.displayProfile(display);
+    }
+}
 ```
 
 我们通过构造函数注入其中一个具体的实现。
 
 你可以看到 `UserRepository` 是一个抽象。它是在数据库中查找用户的本质。输入 `UserId`，输出 `User` 对象。这是一个经典的依赖倒置。
 
-我们的应用程序代码——`NotFaceBook` 类不再依赖数据库细节。它只于抽象。
+我们的应用程序代码——`NotFaceBook` 类不再依赖数据库细节。它只依赖抽象。
 
 这使得单元测试变得简单。我们可以简单地创建一个 `StubUserRepository` 类，它总是返回一个代表性的 `User` 对象。存根根本不会接触数据库。
 
@@ -2747,19 +2522,14 @@ class Invader {
 真实的数据库测试很慢而且容易出错。你往往会遇到几个问题：
 
 *   你的测试代码意外连接到了真实的数据库。噢。在测试 `deleteAllUsers()` 时是灾难性的。
-
 *   测试数据库中没有你提供的 `UserId`。测试将作为假阴性失败。代码是正确的，但数据是错误的。
-
 *   添加数据的测试第二次会失败。第一次，“User1”不存在并被插入。第二次，数据库拒绝插入：“User1 已存在。主键冲突：UserId”。
 
 通过使用简单的内存存根，所有这些问题都消失了。相反，我们得到了：
 
 *   大部分系统处于快速单元测试之下
-
 *   清晰的领域模型——系统的“本质”
-
 *   可能的“由内而外”、实验方法
-
 *   简化了数据库和 Web 服务器技术的更改
 
 ## 六边形模型
@@ -2769,10 +2539,7 @@ class Invader {
 我们给这些部分命名：
 
 *   领域层 - 应用程序逻辑，没有外部系统
-
 *   适配器层 - 外部系统，没有应用程序逻辑
-
-
 
 从图形上看，我们可以将其绘制为两个同心六边形。
 
@@ -2788,8 +2555,8 @@ class Invader {
 
 我们有两个简单的规则来确保设计正确：
 
-* 适配器层（Adapter Layer）实现接口并使用来自领域层（Domain Layer）的类。它可以依赖领域层。
-* 领域层（Domain Layer）**严禁**使用来自适配器层的类。
+*   适配器层实现接口并使用来自领域层的类。它可以依赖领域层。
+*   领域层**严禁**使用来自适配器层的类。
 
 领域层对适配器层一律一无所知。它对外部系统没有任何依赖。它们在我们的领域层中根本不存在。这里没有任何对数据库、Web 服务器或任何其他内容的引用。它只知道业务逻辑 - 即我们问题的核心。
 
@@ -2805,13 +2572,13 @@ class Invader {
 
 ## 反转 / 注入：硬硬币的两面
 
-在非正式对话中，开发者谈论依赖注入（Dependency Injection）和依赖反转（Dependency Inversion）时，就好像它们是同一回事一样。
+在非正式对话中，开发者谈论依赖注入和依赖反转时，就好像它们是同一回事一样。
 
 它们并不是。但两者密切相关。
 
-依赖**反转**（Dependency Inversion）发生在设计阶段。那是我们创建如 `UserRepository` 这样的抽象接口的时候。
+依赖**反转**发生在设计阶段。那是我们创建如 `UserRepository` 这样的抽象接口的时候。
 
-依赖**注入**（Dependency Injection）发生在运行阶段。那是我们将如 `PostgresUserRepository` 这样的实现传递给消费 `UserRepository` 接口的调用代码的时候。
+依赖**注入**发生在运行阶段。那是我们将如 `PostgresUserRepository` 这样的实现传递给消费 `UserRepository` 接口的调用代码的时候。
 
 它们在六边形架构中结合在一起，构建出一个可扩展、可测试的系统。
 
@@ -2831,9 +2598,9 @@ class Invader {
 
 虽然可以写一整本书来讨论“计算机系统中发生的故障”，但所有错误都可以归结为三种类型之一：
 
-* 我们能修复的错误
-* 我们无法修复的错误
-* 我们不在乎的错误
+*   我们能修复的错误
+*   我们无法修复的错误
+*   我们不在乎的错误
 
 每种错误的示例包括：“用户输入了错误的数字”（重新询问）、“磁盘驱动器崩溃并丢失所有数据”（噢，运气不好）、“当温度功能关闭时温度传感器未工作”（忽略）。
 
@@ -2843,7 +2610,7 @@ Java 和面向对象编程（OOP）有几种可用方法。每种方法都有自
 
 让我们使用 `UserRepository` 的一个运行示例。`User findUserById(id)` 方法应该始终返回且仅返回一个 `User` 对象。`User` 对象有一个方法 `showProfile()`，它显示个人资料信息 - 在状态良好的情况下。
 
-为了保持代码示例简洁，我们将孤立地显示该方法，它只返回错误情况。不要去寻找“快乐路径”（happy path）代码，因为根本没有。
+为了保持代码示例简洁，我们将孤立地显示该方法，它只返回错误情况。不要去寻找“快乐路径”代码，因为根本没有。
 
 我们如何告诉调用代码出问题了？
 
@@ -2851,15 +2618,15 @@ Java 和面向对象编程（OOP）有几种可用方法。每种方法都有自
 
 起初，有 `null`。`null` 是没有形状的。是危险的。`null` 遍布 Java 的世界……
 
-```
-1 User findUserById( String userId ) {
-2     return null ;
-3 }
+```java
+User findUserById(String userId) {
+    return null;
+}
 ```
 
 我们都见过这个。自 `Java 1.0` 以来它就深植于 Java 之中。
 
-`null` 的概念是由计算机科学巨匠托尼·霍尔（Tony Hoare）发明的他还发明了快速排序（Quicksort），这是一个好主意。与 `null` 不同。
+`null` 的概念是由计算机科学巨匠托尼·霍尔发明的他还发明了快速排序，这是一个好主意。与 `null` 不同。
 
 托尼将 `null` 描述为他的“十亿美元错误”。
 
@@ -2871,35 +2638,35 @@ Java 和面向对象编程（OOP）有几种可用方法。每种方法都有自
 
 如果 `findUserById(id)` 返回 `null`，任何进一步的访问将惨惨失败：
 
-```
-1   User u = users.findUserById( "alan0127" );
-2   u.showProfile(); // 如果 u 为 null，则会因 NullPointerException 崩溃
+```java
+User u = users.findUserById("alan0127");
+u.showProfile(); // 如果 u 为 null，则会因 NullPointerException 崩溃
 ```
 
 返回 `null` 让调用代码因为两条路径而变得复杂。这是一场等待发生的事故。你会在某个时刻忘记检查 `null`。你会的。你知道你会。我知道你会。我知道我也会！
 
-接下来的所有内容都是一种相当绝的尝试，旨在通过设计消除由未处理的 `null` 引用引起的 bug。
+接下来的所有内容都是一种相当绝望的尝试，旨在通过设计消除由未处理的 `null` 引用引起的 bug。
 
 ## 空对象模式
 
-Bobby Woolf 在 1998 年提出了一个合理的尝试。被称为“空对象模式”（Null Object Pattern），它利用多态性返回两个对象之一。要么返回有效的 `User`，要么返回 `NullUser` 对象：
+Bobby Woolf 在 1998 年提出了一个合理的尝试。被称为“空对象模式”，它利用多态性返回两个对象之一。要么返回有效的 `User`，要么返回 `NullUser` 对象：
 
-```
-1 User findUserById(String id) {
-2     return NullUser();
-3 }
+```java
+User findUserById(String id) {
+    return NullUser();
+}
 ```
 
 `NullUser` 完全（符合 LSP）可以替换 `User`。我们可以通过通过让 `User` 成为接口并创建 `RealUser` 和 `NullUser` 来实现。或者，我们可以简单一点，创建一个带有 `NullUser` 子类的 `User` 类。
 
 无论哪种方式，`NullUser` 的 `showProfile` 方法都是“无操作”：
 
-```
-1 class NullUser extends User {
-2     public void showProfile() {
-3         // 无操作
-4     }
-5 }
+```java
+class NullUser extends User {
+    public void showProfile() {
+        // 无操作
+    }
+}
 ```
 
 通过消除条件分支简化了代码 - 这是我们的大目标。这简化了 TDD 测试。这一切都加速了阅读和理解这些内容。
@@ -2916,34 +2683,33 @@ Bobby Woolf 在 1998 年提出了一个合理的尝试。被称为“空对象�
 
 我们还能做什么？
 
-“僵尸对象”（Zombie object）之所以得名，是因为它表示 `null` 的方式就像是“行尸”：对象的外部看起来正常，但内部是坏的。
+“僵尸对象”之所以得名，是因为它表示 `null` 的方式就像是“行尸”：对象的外部看起来正常，但内部是坏的。
 
 我们必须修改 `User` 类来添加一个“僵尸检测”方法：
 
-```
-1 class User {
-2     boolean isValid() {...}
-3 
-4     void showProfile() {...}
-5 }
+```java
+class User {
+    boolean isValid() {...}
+
+    void showProfile() {...}
+}
 ```
 
 `isValid()` 方法告诉我们对象是否有有效数据。如果 `isValid()` 返回 false，你就不能使用该对象。你每次使用该对象时都必须先检查这一点。
 
-
-
-
-```
+```java
 User u = findUserById("alan0127");
 
-if ( u.isValid() ) {
+if (u.isValid()) {
     u.showProfile();
 }
 ```
 
-这是一个判断性决策。这比空检查（null checks）更好吗？
+这是一个判断性决策。这比空检查更好吗？
 
 我的观点是“有时是肯定的”。可读性的微小提升是值得的。以“以清晰性优先”作为我们的指导原则，有时这会让调用处的代码更具描述性。
+
+
 
 你必须自己决定。但如果你看到别人写了这样的代码，这就是原因所在。这种独特的 `if (object.isValid()) { /* use object */ }` 模式是“**僵尸对象**（Zombie object）”的特征。
 
@@ -2966,7 +2732,7 @@ if ( u.isValid() ) {
  8         System.out.println("This code will never be run 2");
  9     }
 10     catch( RuntimeException e ) {
- 11       System.out.println("You will see this - exception caught");
+11       System.out.println("You will see this - exception caught");
  12 
  13       System.out.println("Exception message was: " + e.getMessage());
  14     }
@@ -3065,9 +2831,6 @@ Java 完全支持这一点。它甚至提供了一个额外的工具。如果异
 这段代码调用了方法 `callUnreliableService()`。它可能会通过抛出 `ServiceTemporUnavailableException` 失败。这可能是临时故障。所以我们等待一下，给予恢复的机会，然后重试。
 
 如果连续三次都不，我们就承认失败并抛出 `ServiceUnavailableException`。此异常告诉调用代码遇到了问题，并应该规避它，或者终止程序。
-
-
-
 
 我们之前已经提到过这一点。如果你返回了一个 null，然后尝试对该 null 调用方法，Java 就会崩溃（boom）。
 
@@ -3274,8 +3037,6 @@ Java 8 通过使用流引入了一些纯函数思想。大想法是将遍历集�
 6 }
 ```
 
-
-
 在上面的代码段中，如果没有`no` 名称以 Al 开头的用户，会发生什么呢？
 
 该方法按照目前的写法是无法运行的。我们需要某种方式向该函数链信号“未找到数据”。
@@ -3296,28 +3057,31 @@ Java 8 借鉴了其他函数式语言的概念，为我们引入了 `optional va
 
 if 语句类似于空值检查：
 
-```
-1 Optional<User> result = findUserById( "alan0127" );
-2 
+
+
+## 代码示例
+
+```java
+1 Optional<User> result = findUserById("alan0127");
+2
 3 if (result.isPresent()) {
 4     result.get().showProfile();
-5 }
-6 else {
-7     System.out.println( "Sorry, we could not find that user" );
-8 }
+5 } else {
+6     System.out.println("Sorry, we could not find that user");
+7 }
 ```
 
 从技术上讲，这并没有比空值检查改进。但我认为它的可读性好得多。它是`刻意`的。我们可以清晰地读出这段代码完全关于一个可选值，以及在值存在时处理该值的代码。
 
-但 Java 8 提供了自己消除 if 语句的方法：
+但 Java 8 提供了自己消除 `if` 语句的方法：
 
-```
+```java
 1 findUserById("alan0127")
-2     .ifPresent( user -> user.showProfile() )
-3     .orElse( System.out.println("Sorry, we could not find that user"));
+2     .ifPresent(user -> user.showProfile())
+3     .orElse(System.out.println("Sorry, we could not find that user"));
 ```
 
-这是对上面 if 语句的简单重构，但使用了 `Optional` 的 `ifPresent()` 方法。它接受一个 `lambda function reference`（lambda 函数引用）作为参数——我们传入一些代码，在值存在时执行它。链式方法 `orElse()` 同样接收一个 lambda 函数引用，在值不存在时运行。
+这是对上面 `if` 语句的简单重构，但使用了 `Optional` 的 `ifPresent()` 方法。它接受一个 `lambda function reference`（lambda 函数引用）作为参数——我们传入一些代码，在值存在时执行它。链式方法 `orElse()` 同样接收一个 lambda 函数引用，在值不存在时运行。
 
 这种风格具有可读性优势——一旦我们熟悉了方法引用的语法。它也具有避免空值检查的所有通常优点。
 
@@ -3335,7 +3099,7 @@ if 语句类似于空值检查：
 
 遗憾的是，`Optional` 没有被制制成自己的原生类型。如果是那样，`Optional` 的返回将保证永远不会为 null。由于它只是一个普通的对象，你可以返回 null 而不是 `Optional`，这违背了整个初衷。我理解为什么没有引入这种对 Java 的根本性改变。但我允许对这个错失的机会抱怨一下。
 
-错误对象需要大量的管道工作（plumbing）。但调用代码是纯粹的 OOP，非常干净。一旦你习惯了它们，它们有很多优势。它们在更高级的方式中很容易使用，除了 `valid()` 和 `invalid()` 方法外，还可以添加 `error( ErrorInfo reason )` 之类的方法。
+错误对象需要大量的管道工作（plumbing）。但调用代码是纯粹的 OOP，非常干净。一旦你习惯了它们，它们有很多优势。它们在更高级的方式中很容易使用，除了 `valid()` 和 `invalid()` 方法外，还可以添加 `error(ErrorInfo reason)` 之类的方法。
 
 异常（Exceptions）是一种相当干净的方法。批评者说它们是“美化版的 goto”。这很有道理。他们指出，在他们看来，异常应该只用于真正无法恢复的事情，即没有人料到的错误。我希望我已经向你展示了 Bertrand Meyer 的“契约设计”（Design by Contract）展示了另一种观点。
 
@@ -3345,7 +3109,7 @@ if 语句类似于空值检查：
 
 你经常会发现，“感受”部分往往是决定性因素。
 
-# 设计模式 (Design Patterns)
+# 设计模式
 
 将行为映射到不同的对象可能是一项辛苦的工作。就像为街道上的每栋房子都从头开始重新发明一样困难。
 
@@ -3366,13 +3130,11 @@ if 语句类似于空值检查：
 *   会员证：“Alan 的极客俱乐部，1 年，2020 年 1 月 1 日，£2,150”
 *   折扣码：“Xbox Live，有效期至 2020 年 10 月 20 日，$79.99”
 
-还有很多例子。许多不同类型的对象具有相似的“形状”。在 20 世纪 90 年代中期，这一点已经被发现，但是从反方向发现的。`Customer` 对象的行为被认为与 `Member` 对象基本相同。这被称为`设计模式`（Design Pattern）。
+还有很多例子。许多不同类型的对象具有相似的“形状”。在 20 世纪 90 年代中期，这一点已经被发现，但是从反方向发现的。`Customer` 对象的行为被认为与 `Member` 对象基本相同。这被称为`设计模式`。
 
 对象在设计层面形成`模式`。模式为我们的设计提供了快速启动。我们可以从现成品开始并进行剪裁，而不是自己剪布料。并且搞乱了我们的比喻。我深表歉意。
 
 20 世纪 90 年代热烈地投入了这一想法。它产生了许多书籍、论文和会议。有些是好的，有些是开创性的，有些则相当令人遗忘。
-
-
 
 *   **PoEAA** 企业级应用架构模式 ISBN 978-0321127426
 *   **Own** 我从工作中获得或自己设计的模式 ISBN 978-1527284449
@@ -3383,7 +3145,7 @@ if 语句类似于空值检查：
 
 下面的代码示例并不是为了逐行复制。其目的是让你理解这些代码是如何工作的，然后将这些原则应用于你自己的情况。每个模式都使用多态来实现其效果——请留意它们在哪里被使用的。这将是你开启其工作原理的关键。
 
-## 策略 (Strategy)
+## 策略
 
 `[GoF]` 为你提供可插的 `behaviour`（行为）
 
@@ -3395,7 +3157,7 @@ if 语句类似于空值检查：
 
 这是我们的策略模式接口。它允许我们做出各种实现：
 
-```
+```java
 1 interface BonusScheme {
 2     void applyTo(Money pay);
 3 }
@@ -3403,40 +3165,40 @@ if 语句类似于空值检查：
 
 现在我们可以将其注入到我们的 `Employee` 对象中：
 
-```
+```java
  1 class Employee {
  2   private BonusScheme bonus ;
- 3 
+ 3
  4   public Employee(BonusScheme bonus) {
  5       this.bonus = bonus;
  6   }
- 7 
+ 7
  8   Money totalPay() {
  9       Money pay = calculateBasePay();
-10 
+10
 11       // Use the strategy
 12       bonus.applyTo(pay);
-13 
+13
 14       return pay;
 15   }
-16 
-17   private Money calculateBasePay() {
-18       // ... code
-19   }
-20 }
+16
+ 17   private Money calculateBasePay() {
+ 18       // ... code
+ 19   }
+ 20 }
 ```
 
 这个 `Employee` 对象现在对其奖金方案的行为是开放的，但对修改是关闭的。我们不需要为了更改奖金方案而更改其内部。
 
-让我们用两个简单的方案来演示这一点——`NoBonus` 和 `BonusTwenty`
+让我们用两个简单的方案来演示这一点——`NoBonus` 和 `BonusTwenty`：
 
-```
+```java
  1 class NoBonus implements BonusScheme {
  2     void apply(Money pay) {
  3         // No Action
  4     }
  5 }
- 6 
+ 6
  7 class BonusTwenty {
  8     void apply(Money pay) {
  9         pay.add(new Money("20.00"));
@@ -3452,15 +3214,11 @@ if 语句类似于空值检查：
 
 策略可以是一种低级机制技术。在更高层次上，它可以表达在现实世界中具有变化行为的领域想法。经典的例子是现实世界中具有变化变化的 `Employee` 对象。
 
-## 观察者 (Observer)
+## 观察者
 
 `[GoF]` 触发行为
 
 观察者是一种将“需要的内容”与其行为分离的技术。根据配置或响应外部事件，它需要以不同的方式进行某些处理。你可以使用 `switch` 语句等条件判断来实现这一点。但你想遵守 `OCP` 并保持该对象不变。
-
-
-
-
 
 我们编写了代码，将我们的领域模型想要的内容 `adapts` 为我们现有库可以提供的内容。在此过程中，我们遵循了 SRP（单一职责原则）和 OCP（开闭原则）。
 
@@ -3474,13 +3232,13 @@ GoF 书列出了一个相关的模式称为 `Bridge`（桥接）。它在与 `Ad
 
 ## Command（命令模式）
 
-[GoF] 为我们提供了一个自包含的动作
+`[GoF]` 为我们提供了一个自包含的动作
 
 很多时候，我们在程序中响应事件。事情发生了；用户提交了表单。计时器倒数为零。一张忠诚卡被扫描了。这些事件中的每一个都需要我们系统执行某些动作。
 
 一个 `command` 对象包含了该动作的代码。它为调用代码提供了一个统一的接口，以便所有动作都可以以相同的方式被调用。这允许我们构建库和框架，我们的调用代码可以将 `Command` 对象传递给框架，以便在适当的时间运行。
 
-```
+```java
 1 interface Command {
 2     void execute();
 3 }
@@ -3490,46 +3248,46 @@ GoF 书列出了一个相关的模式称为 `Bridge`（桥接）。它在与 `Ad
 
 由于 `Commands` 擅长处理事件，一个合理的例子是看看我们的 GUI `Button` 类如果使用命令模式会变成什么样：
 
-```
+```java
  1 class Button {
  2     private final Command action ;
- 3 
- 4     public Button( Command action ) {
+ 3
+ 4     public Button(Command action) {
  5         this.action = action;
  6     }
- 7 
+ 7
  8     public void onClick() {
  9         action.execute();
 10     }
-11 }
+ 11 }
 ```
 
 变体包括：
 
-- 将 `Button` 传入 `execute` 方法以识别原因
-- 维护动作列表，每个动作按顺序触发
-- 在 `Command` 接口中添加 `undo()` 方法以反转动作
+*   将 `Button` 传入 `execute` 方法以识别原因
+*   维护动作列表，每个动作按顺序触发
+*   在 `Command` 接口中添加 `undo()` 方法以反转动作
 
 ## Composite（组合模式）
 
-[GoF] 让许多事物看起来像一个事物
+`[GoF]` 让许多事物看起来像一个事物
 
 `Composite` 是一种适配器类。它将多个事物的集合适配为与单个事物相同的接口。这使得它成为一个很好的模式，你可以在其他模式之外使用它。
 
 回到我们的 `Shape.draw()` 示例，`Composite` 模式给了我们一个非常有用的额外 `Shape`：`ShapeGroup`：
 
-```
+```java
  1 class ShapeGroup implements Shape {
  2     private final List<Shape> shapes = new ArrayList<>();
- 3 
+ 3
  4     public void add(Shape s) {
  5         shapes.add(s);
  6     }
- 7 
+ 7
  8     public void draw() {
- 9         shapes.forEach( Shape::draw );
+ 9         shapes.forEach(Shape::draw);
 10     }
-11 }
+ 11 }
 ```
 
 该类可以用于任何预期 `Shape` 接口的地方。它可以完全替换单个 `Shape`。它允许使用 `add()` 添加任意数量的 `Shape` 对象，然后在调用其 `draw()` 方法时绘制所有对象。
@@ -3540,7 +3298,7 @@ GoF 书列出了一个相关的模式称为 `Bridge`（桥接）。它在与 `Ad
 
 ## Facade（门面模式）
 
-[GoF] 简化我们调用复杂对象组的方式
+`[GoF]` 简化我们调用复杂对象组的方式
 
 `Facade`（门面）一词源于建筑学。它描述了如何用与建筑其他部分不同的材料构建一个“假正面”，以改善其外观。
 
@@ -3552,12 +3310,12 @@ GoF 书列出了一个相关的模式称为 `Bridge`（桥接）。它在与 `Ad
 
 通过编写一个简单的 `Facade` 来为我们完成所有工作，我们可以简化调用代码：
 
-```
+```java
 1 class TaxEngine {
-2     public TaxEngine( Configuration c ) {
+2     public TaxEngine(Configuration c) {
 3         // ... 创建对象、配置、连接的代码
 4     }
-5 
+5
 6     public Money calculateTaxLiability(DateRange taxPeriod) {
 7         // ... 代码
 8     }
@@ -3568,25 +3326,25 @@ GoF 书列出了一个相关的模式称为 `Bridge`（桥接）。它在与 `Ad
 
 ## Builder（构建器模式）
 
-[GoF] 让复杂对象的构建变得更容易
+`[GoF]` 让复杂对象的构建变得更容易
 
 当对象包含大量数据并作为其隐藏的秘密的一部分时，它们的构造函数会变得很大。当这些数据的部分是可选的时，调用代码往往会提供 null 和空参数。太糟了。
 
 改进此问题的方法是创建多个不同的构造函数。每个构造函数只列出非空参数，然后使用 `this()` 调用其他构造函数。在这种方法中，我们将默认值推入构造函数中。
 
-这种方法虽然可行，但所需的构造函数数量会迅速失控。如果没有 IDE 的帮助，很难知道哪个参数对应哪个。`new User ("alan", 3, 198736543)` 到底是什么意思？
+这种方法虽然可行，但所需的构造函数数量会迅速失控。如果没有 IDE 的帮助，很难知道哪个参数对应哪个。`new User("alan", 3, 198736543)` 到底是什么意思？
 
 `Builder` 是为了解决此问题的模式。它提供了一系列命名方法来描述每个数据项的用途。它包含了要使用的默认值和空值。而且对于被构建的对象只需要一个完整的构造函数。
 
 我们可能在 `User` 类中有三个可选字段：
 
-```
+```java
 1 class User {
 2     private final String userId;
 3     private final Date dateOfBirth;
 4     private final User linkedAccount;
-5 
-6     public User( String userId, Date dateOfBirth, User linkedAccount) {
+5
+6     public User(String userId, Date dateOfBirth, User linkedAccount) {
 7         this.userId = userId;
 8         this.dateOfBirth = dateOfBirth;
 9         this.linkedAccount = linkedAccount;
@@ -3602,7 +3360,11 @@ GoF 书列出了一个相关的模式称为 `Bridge`（桥接）。它在与 `Ad
 
 `UserBuilder` 看起来像这样：
 
-```
+
+
+## Builder（构建器模式）
+
+```java
 1 class UserBuilder {
 2     private String userId = "";
 3     private Date dateOfBirth = new Date();
@@ -3632,7 +3394,7 @@ GoF 书列出了一个相关的模式称为 `Bridge`（桥接）。它在与 `Ad
 
 有一个 Java 库可以自动编写这样的构建器，非常有用：
 
-Project Lombok 访问 https://projectlombok.org/features/Builder
+Project Lombok 访问 <https://projectlombok.org/features/Builder>
 
 ## Repository（仓库模式）
 
@@ -3640,15 +3402,11 @@ Project Lombok 访问 https://projectlombok.org/features/Builder
 
 另一个基础模式。我们在某种存储中拥有数据并想要处理它。但我们不希望我们的应用程序了解关于该存储技术的任何信息。我们确实希望将这些数据取出来并使用它们创建对象。
 
-
-
-
-
 `Repository`（仓库）允许我们根据我们的领域术语对存储的数据创建抽象。我们之前已经见过了。我们曾用它来存储 `User` 对象，作为适配器模式的示例。`Repository` 关注的是被调用的接口，而不是适配器类的实现。
 
 为了展示 `Repository` 有多用，让我们来添加几个常用方法：
 
-```
+```java
 1 interface UserRepository {
 2     User  findUserById( String userId );
 3     Users findUsersWhoseNameStartWith( String startOfName );
@@ -3674,7 +3432,7 @@ Project Lombok 访问 https://projectlombok.org/features/Builder
 
 `Query` 本身就是一个抽象。它不是一个 SQL ‘SELECT’ 查询。它不是 Mongo 查询。它是一个表示查询的纯 Java 对象组。你会看到类似的内容：
 
-```
+```java
 1 Query q = 
 2   new QueryBuilder()
 3   .attributeMatches( "name", "Al*")
@@ -3725,7 +3483,7 @@ Project Lombok 访问 https://projectlombok.org/features/Builder
 
 拥有一种非常简单的 `Query` 对象通常是有用的。它在可以表示的查询上是有刻意限制的，这使得编写翻译器对象变得更简单。技巧在于让它足够好以完成工作。
 
-```
+```java
  1 class Query {
 2     private String name ;
 3     private Object value ;
@@ -3749,7 +3507,7 @@ Project Lombok 访问 https://projectlombok.org/features/Builder
 
 这里是一个简单的 `SqlTranslator` 对象，它会为我们创建一个 SELECT 语句，然后显示它——仅用于示例。它通常会连接到 `Database` 对象。
 
-```
+```java
 1 class SqlTranslator implements Translator {
 2     private final String table ;
 3     private String sql ;
@@ -3771,7 +3529,7 @@ Project Lombok 访问 https://projectlombok.org/features/Builder
 
 我们使用这些类来实现 `findUserById()` 方法：
 
-```
+```java
 1 User findUserById( String userId ) {
 2     Query q = new Query();
 3     q.attributeEquals( "id", userId );
@@ -3806,10 +3564,6 @@ Project Lombok 访问 https://projectlombok.org/features/Builder
 当我们想要聚合对象产生某种摘要或总计结果时，如何使用“只说不问”（tell-don’t-ask）风格的编码？
 
 收集参数是一个我们可以传递给方法的对象。同一个收集参数会被传递给多个不同的对象，以便每个对象都能贡献自己的力量：
-
-
-
-
 
 ```java
 class UserMetrics {
@@ -3939,7 +3693,9 @@ class Subscription {
 
 ## 时钟 (Clock)
 
-[Own] 提供一种可以被桩（stub）的表示当前时间的方法
+
+
+# [Own] 提供一种可以被桩（stub）的表示当前时间的方法
 
 时间是一个依赖项，增加了测试的复杂度，因为它不断变化。如果你直接使用系统时，很难编写依赖于特定时间的测试。
 
@@ -3987,9 +3743,9 @@ class StubClock implements Clock {
 
 通过将 `Clock` 注入到需要它的类中，我们可以使测试具有确定性并且更容易理解。
 
-## 规则（或策略） (Rules or Policy)
+# 规则（或策略） (Rules or Policy)
 
-[Own] 在单处应用一组规则
+## [Own] 在单处应用一组规则
 
 规则是你想要自动化的许多业务流程的一部分。诸如申请抵押、验证用户账户或检查消息是否为垃圾邮件，都有一套规则需要应用。
 
@@ -4002,10 +3758,6 @@ class StubClock implements Clock {
 假设 10,000 以下支付零税。在 10,000 到 30,000 之间支付 20%。超过部分支付 40%。不要太看这些数字；我希望我作为一个开发人员比财政大臣更出色。
 
 这里是使用规则书模式（Rulebook pattern）实现此功能的一种方法：
-
-
-
-
 
 ```java
 class TaxBand {
@@ -4046,17 +3798,17 @@ class TaxBand {
 
 示例：访问控制、留存策略、业务流程规则。
 
-## Aggregate（聚合根）
+# Aggregate（聚合根）
 
-[DDD] 代表一组对象以及适用于所有这些对象的行为
+## [DDD] 代表一组对象以及适用于所有这些对象的行为
 
 `Aggregate` 对象在之前的章节中介绍过。`User` 类代表一个用户。`Users` 类代表一组用户。
 
 它们封装了单对象集合。行为是组操作中共有的部分。方法对集合中的所有对象进行操作。
 
-## Cache（缓存）
+# Cache（缓存）
 
-加速对缓慢或获取昂贵的对象的访问
+## 加速对缓慢或获取昂贵的对象的访问
 
 许多系统最终都会从其他地方获取数据，通常是数据库或 Web 服务。这些内容位于网络连接的另一端。这使得获取数据的速度比在本地对象内部慢五六个数量级。
 
@@ -4107,8 +3859,8 @@ class UserCache implements UserRepository {
 
 我们的简单示例有两个严重的问题：
 
--   **无更新**：我们从不获取缓存 `User` 的更新。
--   **无驱逐**：用户被永久缓存。内存将耗尽。
+- **无更新**：我们从不获取缓存 `User` 的更新。
+- **无驱逐**：用户被永久缓存。内存将耗尽。
 
 这两个问题都是 `cache invalidation`（缓存失效）的一部分，即标记缓存项为不再有效的的行为。
 
@@ -4120,15 +3872,15 @@ class UserCache implements UserRepository {
 
 我们还在使用 `Decorator` 模式，该模式在 [GoF] 《设计模式的 GoF》书中首次提到。这是一个非常有用的模式，值得我们单独分出一个章节。我们接下来就做这一点。
 
-## Decorator（装饰器）
+# Decorator（装饰器）
 
-[GoF] 以可替换的方式向对象添加功能
+## [GoF] 以可替换的方式向对象添加功能
 
 `Decorator` 为我们提供了一种在不改变该类的情况下向类添加功能的方法。它是该类的包装器，类似于 `Adapter`。它与 `Adapter` 的区别在于新类可以替换原始类。它是完全符合 LSP 的。
 
 这意味着调用代码可以接收原始类，也可以接收被装饰的类，而无需更改。
 
-在对 Cache 模式的解释中，正因为这个原因，我们在 Repository 对象周围使用了一个装饰器（Decorator）：:
+在对 Cache 模式的解释中，正因为这个原因，我们在 Repository 对象周围使用了一个装饰器（Decorator）：
 
 ```java
 interface UserRepository {
@@ -4163,16 +3915,13 @@ class UserCache implements UserRepository {
 
 装饰器的其他常见用途是实现对被装饰对象的访问控制或日志记录。日志记录在生产系统中至关重要。它是你监控系统正常运行的唯一方式——并在系统在凌晨两点崩溃时诊断发生了什么。
 
-
-
-
 另一个用是框架交给了你它自己的一个对象，而你需要额外的特定应用程序功能。你无法更改框架代码，因此使用 `Decorator` 对其进行封装通常会有帮助。
 
 示例：`缓存`、`访问控制`、`生产环境日志`、`扩展框架`
 
-## 外部系统（代理）
+# 外部系统（代理）
 
-[GoF] 代表我们在本地对外部系统的视图
+## [GoF] 代表我们在本地对外部系统的视图
 
 外部系统对我们的应用程序来说是一个挑战。它们之间总是需要某种原始数据传输，并某种方式映射到我们的对象。由于这些系统存在于我们的内存空间之外，通信将要慢得多。它通常比本地调用方法慢 100,000 倍。
 
@@ -4189,10 +3938,10 @@ class UserCache implements UserRepository {
 
 具体来说，外部系统对象代表了该系统中`我们需要的全部`。以 `Google Maps` 为例，它有很多实用的功能。但如果我们只需要获取某个点最近的城镇名称的能力，那么我们的接口将会是：
 
-```
-1 interface Geography {
-2     String getNameOfTownNearestTo( float lat, float long );
-3 }
+```java
+interface Geography {
+    String getNameOfTownNearestTo( float lat, float long );
+}
 ```
 
 当然，我们会创建一个实现此接口的 `GoogleMapsGeography` 对象，并通过 HTTP 实际上连接 `Google Maps API`。
@@ -4203,9 +3952,9 @@ class UserCache implements UserRepository {
 
 我看到的原始模式是 `[GoF]` 中的 `Proxy`。那是一种更通用的对象。它与某些其他对象具有相同的接口并取代其位置。在我的工作中，`Proxy` 的大量使用是为了表示外部系统，因此我更倾向于像上面那样思考它。
 
-## 配置
+# 配置
 
-[Own] 提供了一种更改系统设置方式的方法
+## [Own] 提供了一种更改系统设置方式的方法
 
 一旦面向对象的程序开始执行有用工作，它在启动时和整个运行期间都需要各种项进行设置。
 
@@ -4219,36 +3968,36 @@ class UserCache implements UserRepository {
 
 放置所有这些内容的最佳位置是一个 `Configuration` 类：
 
-```
- 1 class Configuration {
- 2     private boolean useOracle;
- 3     private String jdbcConnectionString;
- 4     private boolean useDarkMode;
- 5     private Date offerExpiryDate ;
- 6 
- 7     public void load() {
- 8         // 读取配置文件或服务器的代码
- 9     }
-10 
-11     public UserRepository userRepository() {
- 12         if ( useOracle ) {
- 13             return new OracleUserRepository(jdbcConnectionString);
- 14         }
- 15 
- 16         log(WARN, "Using STUB User Repository - TEST/QA ONLY");
- 17         return new StubUserRepository();
- 18     }
- 19 
- 20     public UiStyleScheme styleScheme() {
- 21         return useDarkMode? 
- 22             new UiStyleDark() :
- 23             new UiStyleLight() ; 
- 24     }
- 25 
- 26     public Date getOfferExpiryDate() {
- 27         return offerEXpiryDate ;
- 28     }
- 29 }
+```java
+class Configuration {
+    private boolean useOracle;
+    private String jdbcConnectionString;
+    private boolean useDarkMode;
+    private Date offerExpiryDate ;
+
+    public void load() {
+        // 读取配置文件或服务器的代码
+    }
+
+    public UserRepository userRepository() {
+        if ( useOracle ) {
+            return new OracleUserRepository(jdbcConnectionString);
+        }
+
+        log(WARN, "Using STUB User Repository - TEST/QA ONLY");
+        return new StubUserRepository();
+    }
+
+    public UiStyleScheme styleScheme() {
+        return useDarkMode? 
+            new UiStyleDark() :
+            new UiStyleLight() ; 
+    }
+
+    public Date getOfferExpiryDate() {
+        return offerEXpiryDate ;
+    }
+}
 ```
 
 这给出了基本概念。`Configuration` 存在`某处`然后被读取。根据这些数据，为其他地方的使用创建正确类型的对象。代码的其他部分引用此 `Configuration` 对象来获取其依赖和值。
@@ -4256,6 +4005,8 @@ class UserCache implements UserRepository {
 实际的配置数据通常存储在类似 `config.json` 的文件中，或者可能是固定位置的数据库，或者网络服务。像 `Spring Cloud` 这样的提供者使用网络广播在运行时发现配置服务器。
 
 一旦读取，`Configuration` 对象上的方法就可以用于创建所需的特定对象。它们可以使用 `URLs`、超时和连接字符串等项的所需值进行初始化。
+
+
 
 通常，可以在这里创建整个对象。这导致了整洁的代码。但我添加了一个 getter 来返回纯数据值。`Configuration` 类是一个通常这样做是个好主意的地方，从而产生最清晰的代码。
 
@@ -4290,9 +4041,6 @@ class UserCache implements UserRepository {
 这在`六边形架构`设计中经常出现。它是 Web 请求的“内部六边形”领域模型——没有任何 Web 技术的引用。因此，你可以将其用于任何类型的输入和输出适配器。它代表了对系统的通用请求。
 
 为了延续我们的主题，让我们展示如何将其通过 `id` 查找用户。
-
-
-
 
 一个 Web 请求已经到达，假设它是 RESTful 格式，例如 `GET /users/alan0127`。我们将编写一个 `Adapter` 从路径参数中提取 `alan0127` 的 `userId`，然后将其存储在请求对象中：
 
@@ -4331,7 +4079,7 @@ class UserCache implements UserRepository {
 
 在过去遥远的年代，这将是一个 HTML 响应。但在过去的几年里，服务器端 HTML 生成被浏览器中的 JavaScript 取代。我们可能会返回一段 JSON 格式的数据给 `React`（或 `Angular`、或 `Vue`、或原生 JS……）应用程序，由它们来格式化以进行显示。
 
-这是一个非常直接的模式，名其实其实。它的价值在于将各种技术与业务逻辑分离开来。使用符合 Liskov 原则（LSP）的替换对象作为我们的接口，这使其变成了一个可以自由组合的系统。驱动网站的同一个领域模型可以同样轻松地驱动用 `JavaFX` 编写的桌面 GUI，也可以驱动控制台程序。
+这是一个非常直接的模式，名实其实。它的价值在于将各种技术与业务逻辑分离开来。使用符合 Liskov 原则（LSP）的替换对象作为我们的接口，这使其变成了一个可以自由组合的系统。驱动网站的同一个领域模型可以同样轻松地驱动用 `JavaFX` 编写的桌面 GUI，也可以驱动控制台程序。
 
 ## 反面模式
 
@@ -4437,8 +4185,6 @@ class UserCache implements UserRepository {
 
 继承有几个缺陷。它们就是如今在“OOP 已死”博客文章中出现的那些。
 
-
-
 让我们从该特定类型的经典案例中学习。
 
 ## 鸟类扩展动物
@@ -4472,31 +4218,31 @@ class UserCache implements UserRepository {
 20 class Sparrow extends Bird {
 21     void eat() {
 22         System.out.println("Seeds");
-23     }
-24 
-25     void makeNoise() {
-26         System.out.println("Cheep cheep");
-27     }
-28 
-29     void fly() {
-30         System.out.println("Flap flap");
-31     }
-32 }
-33 
-34 
-35 class Dodo extends Bird {
-36     void eat() {
-37         System.out.println("Nothing, extinct");
-38     }
-39 
-40     void makeNoise() {
-41         System.out.println("No sound, extinct");
-42     }
-43 
-44     void fly() {
-45         throw new UnsupportedOperationException("error: cannot fly");
-46     }
-47 }
+ 23     }
+ 
+ 24     void makeNoise() {
+ 25         System.out.println("Cheep cheep");
+ 26     }
+ 
+ 27     void fly() {
+ 28         System.out.println("Flap flap");
+ 29     }
+ 30 }
+ 31 
+ 32 
+ 33 class Dodo extends Bird {
+ 34     void eat() {
+ 35         System.out.println("Nothing, extinct");
+ 36     }
+ 
+ 37     void makeNoise() {
+ 38         System.out.println("No sound, extinct");
+ 39     }
+ 
+ 40     void fly() {
+ 41         throw new UnsupportedOperationException("error: cannot fly");
+ 42     }
+ 43 }
 ```
 
 这里有几个地方是错误的，调用代码很快就会暴露。奇怪的是，那些“面向对象已死”的示例从未包含过单元测试或调用代码，不是吗？真搞笑，这……
@@ -4538,13 +4284,13 @@ OOP 中多态的整个优势都被忽视了。
  2     void fly();
  3 }
  4 
-5 interface Feedable {
+ 5 interface Feedable {
  6     void eat();
  7 }
  8 
-9 interface Audible {
-10     void makeNoise();
-11 }
+ 9 interface Audible {
+ 10     void makeNoise();
+ 11 }
 ```
 
 作为第一次尝试，我们可以纠正一些 LSP 失败：
@@ -4573,15 +4319,15 @@ OOP 中多态的整个优势都被忽视了。
 2     void eat() {
 3         System.out.println("Seeds");
 4     }
-5 
-6     void makeNoise() {
-7         System.out.println("Cheep cheep");
-8     }
-9 
-10     void fly() {
-11         System.out.println("Flap flap");
-12     }
-13 }
+ 
+ 5     void makeNoise() {
+ 6         System.out.println("Cheep cheep");
+ 7     }
+ 
+ 8     void fly() {
+ 9         System.out.println("Flap flap");
+ 10     }
+ 11 }
 ```
 
 这种方法修复了 `Sparrow` 的某些问题：
@@ -4591,39 +4337,16 @@ OOP 中多态的整个优势都被忽视了。
 2     void eat() {
 3         System.out.println("Meat");
 4     }
-5 
-6     void makeNoise() {
-7         System.out.println("Woof");
-8     }
-9 }
+ 
+ 5     void makeNoise() {
+ 6         System.out.println("Woof");
+ 7     }
+ 8 }
 ```
 
 这种方法修复了 `Dog` 的某些问题：
 
-```
- 1 abstract class Animal {
- 2     abstract void eat();
- 3     abstract void makeNoise();
- 4 }
-```
 
-这种方法修复了 `Animal` 的某些问题：
-
-```
- 1 abstract class Bird extends Animal {
- 2     abstract void fly();
- 3 }
-```
-
-这种方法修复了 `Bird` 的某些问题：
-
-
-
-我们最初的问题在于，使用了继承和静态类型来建模动态行为。这是行不通的。我们找到了建模这种行为的正确方法，并不是常见示例中的做法。
-
-我觉得，是时候宣布那些“OO 已死”的文章也随之亡了。
-
-就像我们的渡鸟一样灭绝了。
 
 ## 正方形继承矩形
 
@@ -4639,51 +4362,51 @@ OOP 中多态的整个优势都被忽视了。
 
 结果我们陷入了这种境地：
 
-```
- 1 class Graphics {
- 2     // Coordinates (0,0) top left of screen
- 3     void line( int x1, int y1, int x2, int y2 );
- 4 }
- 5 
- 6 interface Shape {
- 7     void draw(Graphics g);
- 8 }
- 9 
-10 class Rectangle implements Shape {
- 11     private int xLeft;
- 12     private int yTop;
- 13     private int width;
- 14     private int height;
- 15 
- 16     public Rectangle( int xLeft, int yTop, int width, int height ) {
- 17         this.xLeft = xLeft;
- 18         this.yTop = yTop;
- 19         this.width = width;
- 20         this.height = height;
- 21     }
- 22 
- 23     void setWidth(int width) {
- 24         this.width = width;
- 25     }
- 26 
- 27     void setHeight(int height) {
- 28         this.height = height;
- 29     }
- 30 
- 31     void draw(Graphics g){
- 32         g.line(xLeft, yTop, xLeft+width, yTop);
- 33         g.line(xLeft+width, yTop, xLeft+width, yTop+height);
- 34         g.line(xLeft+width, yTop+height, xLeft, yTop+height);
- 35         g.line(xLeft, yTop+height, xLeft, yTop);
- 36     }
- 37 }
- 38 
- 39 class Square extends Rectangle {
- 40     void setSize( int sideLength ) {
- 41         setWidth( sideLength );
- 42         setHeight( sideLength );
- 43     }
- 44 }
+```java
+class Graphics {
+    // Coordinates (0,0) top left of screen
+    void line(int x1, int y1, int x2, int y2);
+}
+
+interface Shape {
+    void draw(Graphics g);
+}
+
+class Rectangle implements Shape {
+    private int xLeft;
+    private int yTop;
+    private int width;
+    private int height;
+
+    public Rectangle(int xLeft, int yTop, int width, int height) {
+        this.xLeft = xLeft;
+        this.yTop = yTop;
+        this.width = width;
+        this.height = height;
+    }
+
+    void setWidth(int width) {
+        this.width = width;
+    }
+
+    void setHeight(int height) {
+        this.height = height;
+    }
+
+    void draw(Graphics g) {
+        g.line(xLeft, yTop, xLeft + width, yTop);
+        g.line(xLeft + width, yTop, xLeft + width, yTop + height);
+        g.line(xLeft + width, yTop + height, xLeft, yTop + height);
+        g.line(xLeft, yTop + height, xLeft, yTop);
+    }
+}
+
+class Square extends Rectangle {
+    void setSize(int sideLength) {
+        setWidth(sideLength);
+        setHeight(sideLength);
+    }
+}
 ```
 
 万岁！我们完成了。画一个正方形只需要这个 `Square` 类，只要调用 `setSize()` 并传入你想要的边长即可。
@@ -4692,27 +4415,27 @@ OOP 中多态的整个优势都被忽视了。
 
 假设我们需要一个额外的方法，对于 `Square` 和 `Rectangle` 具有不同的行为。假设它是为了驱动一个仪表盘，该仪表盘统计我们有多少个正方形和矩形：
 
-```
- 1 interface Shape {
- 2     void draw( Graphics g );
- 3     void report( Dashboard d );
- 4 }
- 5 
- 6 class Rectangle implements Shape {
- 7     // ... other code as above ...
- 8 
- 9     void report( Dashboard d ) {
-10         d.reportRectangle();
- 11     }
- 12 }
- 13 
-14 class Square extends Rectangle {
- 15     // ... other code as above ...
- 16 
- 17     void report( Dashboard d ) {
- 18         d.reportSquare();
- 19     }
- 20 }
+```java
+interface Shape {
+    void draw(Graphics g);
+    void report(Dashboard d);
+}
+
+class Rectangle implements Shape {
+    // ... other code as above ...
+
+    void report(Dashboard d) {
+        d.reportRectangle();
+    }
+}
+
+class Square extends Rectangle {
+    // ... other code as above ...
+
+    void report(Dashboard d) {
+        d.reportSquare();
+    }
+}
 ```
 
 这运行良好——直到你有一个 `Rectangle` 对象并对其调用了 `setWidth(5)` 和 `setHeight(5)`。
@@ -4731,21 +4454,21 @@ OOP 中多态的整个优势都被忽视了。
 
 我们的三个丑鸭子最后一个是仅仅为了继承来引入一些额外的代码，而不考虑 IS-A 关系、Liskov 替换（LSP）或领域中的任何内容：
 
-```
- 1 class MySqlDatabase {
- 2     void insertSql(...) {...}
- 3 
- 4     // ... other database methods ...
- 5 }
- 6 class User extends MySqlDatabase { 
- 7     private String name ;
- 8 
- 9     void setName( String name ) {
-10         this.name = name;
- 11 
-12         insertSql("USER_TABLE", "NAME", name);
- 13     }
- 14 }
+```java
+class MySqlDatabase {
+    void insertSql(...) {...}
+
+    // ... other database methods ...
+}
+class User extends MySqlDatabase {
+    private String name;
+
+    void setName(String name) {
+        this.name = name;
+
+        insertSql("USER_TABLE", "NAME", name);
+    }
+}
 ```
 
 虽然很牵强，但仍然是一个真实的警告。
@@ -4762,18 +4485,19 @@ OOP 中多态的整个优势都被忽视了。
 
 对象隐藏了秘密。一个显而见的秘密是可变的值。我们称之为“状态”：
 
-```
-1 class Counter {
- 2     private int total;
- 3
- 4     void oneMore() {
- 5         total++;
- 6     }
- 7
- 8     void display(Display d) {
- 9         d.print( "Total so far is ");10         d.println( total );
-11     }
-12 }
+```java
+class Counter {
+    private int total;
+
+    void oneMore() {
+        total++;
+    }
+
+    void display(Display d) {
+        d.print("Total so far is ");
+        d.println(total);
+    }
+}
 ```
 
 我们可以创建一个新的 `Counter`，随心所欲地调用 `oneMore()`，并使用 `Display` 对象显示总量。
@@ -4790,7 +4514,7 @@ OOP 批评者认为这意味着 OOP 不能用于并发系统。或者很难使�
 
 对于那些*需要*共享状态的情况，在大多数代码中，状态存储在数据库中。`Repository` 模式对象将访问数据库。数据库将为你管理并发访问。任务完成。
 
-在没有数据库的情况下，Java 提供了原生类型（`Thread`, `synchronized`）以及一些高级对象（`java.util.concurrent` 包）来简化这一点。像 Akka 这样的框架提供了 `Actor` 对象，将每个对象视为独立的并发实体。
+在没有数据库的情况下，Java 提供了原生类型（`Thread`、`synchronized`）以及一些高级对象（`java.util.concurrent` 包）来简化这一点。像 Akka 这样的框架提供了 `Actor` 对象，将每个对象视为独立的并发实体。
 
 这与 OOP 没关系。FP 通过将状态推向系统的边缘来避免问题。但如果我们选择，我们也可以通过不可变对象这样做。或者添加同步。或者使用内置并发的对象。
 
@@ -4800,34 +4524,27 @@ OOP 批评者认为这意味着 OOP 不能用于并发系统。或者很难使�
 
 在一个项目中，我遇到过外包商提供的这类代码：
 
-```
- 1 public boolean ok (Object o) {
- 2     boolean result = false ;
- 3 
- 4     if ( o == null ) {
- 5         result = false
- 6     }
- 7     else if ( !(o instanceof Boolean) ) {
- 8         result = false ;
- 9     }
-10     else if ( ((Boolean)o).equals(Boolean.FALSE) ) {
-11         result = false ;
- 12     }
-13     else if ( ((Boolean)o).equals(Boolean.TRUE) ) {
-14         result = true ;
- 15     }
-16     else {
-17         result = false ;
-18     }
-19 
-20     return result;
-21 } 
+```java
+public boolean ok(Object o) {
+    boolean result = false;
+
+    if (o == null) {
+        result = false;
+    } else if (!(o instanceof Boolean)) {
+        result = false;
+    } else if (((Boolean) o).equals(Boolean.FALSE)) {
+        result = false;
+    } else if (((Boolean) o).equals(Boolean.TRUE)) {
+        result = true;
+    } else {
+        result = false;
+    }
+
+    return result;
+}
 ```
 
-
-
-
-如果你打算写那样的方法，那么你的面向对象（OO）设计有多好完全不重要。这真是一个让人感叹“他们到底在想什么什么？”的时刻。
+如果你打算写那样的方法，那么你的面向对象（OO）设计有多好完全不重要。这真是一个让人感叹“他们到底在想什么？”的时刻。
 
 现实是，你可以拿钱去写非常低质量的代码。这些代码将由同样拿钱写非常低质量代码的同事进行评审。而这些决定将由非技术管理层盖章通过，因为他们既不知道什么是代码质量，也不在乎，只要按时交付即可。
 
@@ -4863,13 +4580,13 @@ OOP 批评者认为这意味着 OOP 不能用于并发系统。或者很难使�
 
 在系统边界使用纯数据结构完全合理。
 
-在使用六形架构（Hexagonal Architecture）设计时，我们只需在每个端点编写一个 `Adapter` 类。
+在使用六边形架构（Hexagonal Architecture）设计时，我们只需在每个端点编写一个 `Adapter` 类。
 
 这些看起来都很相似。它们接收领域对象，将其转换为纯数据结构，然后将其交给我们正在使用的任何网络库。接收端也会有一个类似的 `Adapter`，将纯数据结构映射回领域对象。
 
 某些框架会为你处理这种映射，让你只需要编写领域对象。这有时很有帮助。但通常情况下，会有“注解汤”，将你的领域层直接与外部系统层耦合。
 
-这种耦合通常是值得避免的。在适配器层中编写自己的纯数据类是答案。这些通常被称为数据数据传输对象（`DTOs`）或“模型”对象。
+这种耦合通常是值得避免的。在适配器层中编写自己的纯数据类是答案。这些通常被称为数据传输对象（`DTOs`）或“模型”对象。
 
 ## 固定数据，变化函数
 
@@ -4895,7 +4612,7 @@ OOP 批评者认为这意味着 OOP 不能用于并发系统。或者很难使�
 
 我们真的只关心报告的数据。数据是固定的。它包含支付详情、产品数据和类别。所有这一切保持不变。变化的是行为——即报告本身。
 
-明智的方法是创建一组纯数据类，配有丰富的 getter 和 setter。我甚至可以更激进一点，让它们拥有公共数据*字段*，且完全没有 getter、setter 或方法。我认为这样是诚实的的。但为了不搞坏 SonarQube（并让我们的团队抓狂），我们可以坚持传统的 JavaBean，带有 get/set 对。这在当前语境下是可以接受的。
+明智的方法是创建一组纯数据类，配有丰富的 getter 和 setter。我甚至可以更激进一点，让它们拥有公共数据*字段*，且完全没有 getter、setter 或方法。我认为这样是诚实的。但为了不搞坏 SonarQube（并让我们的团队抓狂），我们可以坚持传统的 JavaBean，带有 get/set 对。这在当前语境下是可以接受的。
 
 报告可以是简单的、独立的类，处理这些数据对象，并在最后吐出一个报告。
 
@@ -4915,7 +4632,7 @@ OOP 批评者认为这意味着 OOP 不能用于并发系统。或者很难使�
 
 好了，就是这些这就是这就是每天构建面向对象应用程序的全部方法。
 
-## 没有步骤步骤的计划
+## 没有步骤的计划
 
 首先注意到，这里没有分步渐进的计划。我经常希望有。
 
@@ -4923,7 +4640,7 @@ OOP 批评者认为这意味着 OOP 不能用于并发系统。或者很难使�
 
 我们拥有的是技术工具箱。
 
-这就像当建筑师。你有锤子、锯子和专业工具。你有木头、金属和其他材料。你了解测量、连接、承重等原理。只有当你着建造一个特定的房子时，你才决定使用哪些工具，按什么顺序。
+这就像当建筑师。你有锤子、锯子和专业工具。你有木头、金属和其他材料。你了解测量、连接、承重等原理。只有当你着手建造一个特定的房子时，你才决定使用哪些工具，按什么顺序。
 
 房子是由成千上万的小任务构建而成的。我们开孔、安装门框、拧合链。我们从不用“盖房子工具”来“盖房子”。
 
@@ -4941,14 +4658,13 @@ OOP 批评者认为这意味着 OOP 不能用于并发系统。或者很难使�
 
 我们可以开始编写测试，让这段代码的小部分运行起来。重构它成型。作为贯穿整个系统的“条带”添加组件。考虑我们的领域/外部系统划分。思考如何让领域想法清晰，隐藏机制。
 
-
-
-
 我内心是一个理想主义者。我发自地喜欢构建“优雅的解决方案”。恰到好处的模式。精妙的命名。合理的职责划分。
 
 尽管，在实践中，我并不追求那么高的标准。至少并不完全如此。
 
 有两个因素阻碍了完美：截止日期和有限的预见性。
+
+
 
 现实世界的代码必须交付。它必须发布出去被使用才能产生价值。这意味着妥协。我的建议是明智地选择战场。从整洁的代码和良好的方法开始，维护它们。但允许自己引入 `Technical Debt`（技术债）。这是刻意使用一种“较差”的技巧——走捷径——为了让代码现在就能交付。你应该始终在工作跟踪系统中记录下 `Technical Debt`，并安排时间将其移除。
 
@@ -5010,9 +4726,6 @@ https://www.amazon.co.uk/gp/product/B00IZ0G6YG
 
 我最喜欢的 `TDD` 书籍。通常被称为“伦敦学派”。
 
-
-
-
 # LeanPub 页面
 
 这本书最初写作的地方。这是一个非常优秀的平台，我可以向你推荐。你绝对应该尝试写一本短书——LeanPub 会处理好所有的实际细节。
@@ -5066,7 +4779,7 @@ https://leanpub.com/javaoopdoneright
 * 我们对核心领域代码的单元测试覆盖率足够吗？
 * 我们可以用单元测试替换集成测试（或高级测试）吗？
 * 我们应该重构吗？
-* 代码是否**为了清晰而进行了优化**？
+* 代码是否`为了清晰而进行了优化`？
 
 # 关于作者
 
@@ -5096,11 +4809,9 @@ Stephanie, Katy, Jake。谁能想到一个 80 年代的电脑极客，最终会�
 
 ## 测试驱动开发
 
-1https://assertj.github.io/doc/↩︎
-
-2 在此处查看我的视频 https://www.viewfromthecodeface.com/how-to-write-a-tdd-unit-test-with-java/ ↩︎
+1. https://assertj.github.io/doc/↩︎
+2. 在此处查看我的视频 https://www.viewfromthecodeface.com/how-to-write-a-tdd-unit-test-with-java/ ↩︎
 
 ## 数据结构与纯函数
 
-1 咳。我说“显而易见”。你应该知道，当我第一次使用传真机时，在发送文档之前先复印了它。我想留一份自己留底……↩︎
-
+1. 咳。我说“显而易见”。你应该知道，当我第一次使用传真机时，在发送文档之前先复印了它。我想留一份自己留底……↩︎

@@ -1,3 +1,4 @@
+
 # 复制文件或目录
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/io/copy.html`](https://docs.oracle.com/javase/tutorial/essential/io/copy.html)
@@ -24,9 +25,8 @@
 import static java.nio.file.StandardCopyOption.*;
 ...
 Files.copy(source, target, REPLACE_EXISTING);
-
 ```
 
 除了文件复制外，`Files`类还定义了可用于文件和流之间复制的方法。[`copy(InputStream, Path, CopyOptions...)`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#copy-java.io.InputStream-java.nio.file.Path-java.nio.file.CopyOption...-)方法可用于将输入流的所有字节复制到文件。[`copy(Path, OutputStream)`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#copy-java.nio.file.Path-java.io.OutputStream-)方法可用于将文件的所有字节复制到输出流。
 
-``Copy``示例使用`copy`和`Files.walkFileTree`方法支持递归复制。有关更多信息，请参见遍历文件树。
+`Copy`示例使用`copy`和`Files.walkFileTree`方法支持递归复制。有关更多信息，请参见遍历文件树。

@@ -1,8 +1,9 @@
+
 # 忍者框架简介
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/ninja-framework-intro>
 
-## 1.概观
+## 1. 概观
 
 如今，有许多基于 JEE 的框架，如 [Spring](/web/20221128054812/https://www.baeldung.com/spring-tutorial) 、 [Play](/web/20221128054812/https://www.baeldung.com/java-intro-to-the-play-framework) 和 [Grails](/web/20221128054812/https://www.baeldung.com/grails-gorm-tutorial) 可用于 web 应用程序开发。
 
@@ -10,19 +11,19 @@
 
 在这个入门教程中，我们将探索 Ninja web 框架并创建一个简单的 web 应用程序。同时，我们将研究它提供的一些基本特性。
 
-## 2.忍者
+## 2. 忍者
 
 Ninja 是一个全栈的轻量级 web 框架，它利用现有的 Java 库来完成工作。
 
 从 HTML 到 JSON 渲染，从持久性到测试，它是构建可伸缩 web 应用程序的一站式解决方案。
 
-它遵循**约定-过度配置**范例，并将代码分类到类似`models`、`controllers,`和`services`的包中。
+它遵循**约定-过度配置**范例，并将代码分类到类似`models`、`controllers`和`services`的包中。
 
 Ninja 将流行的 Java 库用于关键特性，如用于 JSON/XML 呈现的 **[Jackson](/web/20221128054812/https://www.baeldung.com/jackson) 、用于依赖管理的 [Guice](/web/20221128054812/https://www.baeldung.com/guice) 、用于持久性的 [Hibernate](/web/20221128054812/https://www.baeldung.com/hibernate-5-bootstrapping-api) 以及用于数据库迁移的[Flyway](/web/20221128054812/https://www.baeldung.com/database-migrations-with-flyway)**。
 
 为了快速开发，它提供了 [SuperDevMode](https://web.archive.org/web/20221128054812/https://www.ninjaframework.org/documentation/basic_concepts/super_dev_mode.html) 用于代码的热重载。因此，它允许我们立即看到开发环境中的变化。
 
-## 3.设置
+## 3. 设置
 
 Ninja 需要一套标准的工具来创建 web 应用程序:
 
@@ -60,21 +61,22 @@ mvn ninja:run
 ```
 
 瞧啊。我们的应用程序已经启动，将在`localhost:8080` :
+
 [![home scaled 1](img/fa79d6a6acce7a905178eea70696e5a2.png)](/web/20221128054812/https://www.baeldung.com/wp-content/uploads/2019/12/home-scaled-1.png) 访问
 
-## 4.项目结构
+## 4. 项目结构
 
 我们来看看 Ninja 创建的类似 Maven 的项目结构:
 
 [![eclipse projectStructure-1](img/dd35c3d15ad50d6219f4bb951a3367d6.png)](/web/20221128054812/https://www.baeldung.com/wp-content/uploads/2019/12/eclipse_projectStructure-1.png) 框架基于约定创建几个包。
 
-**Java 类被分类在`src/main/java.`** 中的`conf`、`controllers`、`models`和`services`目录下
+**Java 类被分类在`src/main/java`中的`conf`、`controllers`、`models`和`services`目录下**
 
 同样，`src/test/java`保存了相应的单元测试类。
 
 `src/main/java`下的`views`目录包含 HTML 文件。此外，`src/main/java/assets` 目录包含图像、样式表和 JavaScript 文件等资源。
 
-## 5.控制器
+## 5. 控制器
 
 我们将讨论这个框架的一些基本特性。控制器是接收请求并返回带有特定结果的响应的类。
 
@@ -96,15 +98,15 @@ public class ApplicationController {
 
 这里，`index`方法将通过调用`[Results](https://web.archive.org/web/20221128054812/http://www.ninjaframework.org/apidocs/ninja/Results.html)`类的`html`方法来呈现一个 HTML。`Result`对象包含呈现内容所需的一切，如响应代码、头和 cookies。
 
-注意: **Guice 的`[@Singleton](https://web.archive.org/web/20221128054812/https://google.github.io/guice/api-docs/latest/javadoc/index.html?com/google/inject/Singleton.html)`注释在整个**应用中只允许控制器的一个实例。
+注意: **Guice 的`[@Singleton](https://web.archive.org/web/20221128054812/https://google.github.io/guice/api-docs/latest/javadoc/index.html?com/google/inject/Singleton.html)`注释在整个应用中只允许控制器的一个实例。**
 
-## 6.视角
+## 6. 视角
 
-对于`index`方法，Ninja 会在`views/ApplicationController`目录下寻找 HTML 文件——`index``.ftl.html` 。
+对于`index`方法，Ninja 会在`views/ApplicationController`目录下寻找 HTML 文件——`index.ftl.html` 。
 
 **忍者使用 [Freemarker](/web/20221128054812/https://www.baeldung.com/freemarker-operations) 模板引擎进行 HTML 渲染**。所以，`views`下的所有文件都应该有`.ftl.html`扩展名。
 
-让我们为`index`方法创建`i` `ndex` `.ftl.html`文件:
+让我们为`index`方法创建`index.ftl.html`文件:
 
 ```java
 <html>  
@@ -120,7 +122,7 @@ public class ApplicationController {
 
 这里，我们使用了 Ninja 提供的`i18n`标签从`message.properties`文件中获取`helloMsg`属性。我们将在后面的国际化部分进一步讨论这一点。
 
-## 7.途径
+## 7. 途径
 
 接下来，我们将定义请求到达`index`方法的路径。
 
@@ -138,9 +140,10 @@ public class Routes implements ApplicationRoutes {
 ```
 
 就是这样！我们已经准备好在`localhost:8080/index` :
+
 [![index scaled 1](img/e3c889e6786404efb6e269e0237b4136.png)](/web/20221128054812/https://www.baeldung.com/wp-content/uploads/2019/12/index-scaled-1.png) 进入`index`页面
 
-## 8.JSON 渲染
+## 8. JSON 渲染
 
 正如已经讨论过的，Ninja 使用 Jackson 进行 JSON 渲染。为了呈现 JSON 内容，我们可以使用`Results`类的`json`方法。
 
@@ -150,7 +153,7 @@ public class Routes implements ApplicationRoutes {
 public Result userJson() {
     HashMap<String, String> userMap = new HashMap<>();
     userMap.put("name", "Norman Lewis");
-    userMap.put("email", "[[email protected]](/web/20221128054812/https://www.baeldung.com/cdn-cgi/l/email-protection)");    
+    userMap.put("email", "[[email protected]](/web/20221128054812/https://www.baeldung.com/cdn-cgi/l/email-protection)");    
     return Results.json().render(user);
 }
 ```
@@ -162,9 +165,10 @@ router.GET().route("/userJson").with(ApplicationController::userJson);
 ```
 
 现在，我们可以使用 `localhost:8080/userJson` :
+
 [![userJson scaled 1](img/5870d3a5c5d098c6c86cd61c92d2f2a7.png)](/web/20221128054812/https://www.baeldung.com/wp-content/uploads/2019/12/userJson-scaled-1.png) 来渲染 JSON
 
-## 9.服务
+## 9. 服务
 
 我们可以创建一个服务，将业务逻辑从控制器中分离出来，并在需要的地方注入我们的服务。
 
@@ -184,7 +188,7 @@ public class UserServiceImpl implements UserService {
     public HashMap<String, String> getUserMap() {
         HashMap<String, String> userMap = new HashMap<>(); 
         userMap.put("name", "Norman Lewis"); 
-        userMap.put("email", "[[email protected]](/web/20221128054812/https://www.baeldung.com/cdn-cgi/l/email-protection)"); 
+        userMap.put("email", "[[email protected]](/web/20221128054812/https://www.baeldung.com/cdn-cgi/l/email-protection)"); 
         return userMap;
     }
 }
@@ -223,7 +227,7 @@ public Result userJson() {
 }
 ```
 
-## 10.闪光灯范围
+## 10. 闪光灯范围
 
 Ninja 通过其名为 Flash Scope 的特性提供了一种简单而有效的方法来处理来自请求的成功和错误消息。
 
@@ -258,7 +262,7 @@ public Result showFlashMsg(FlashScope flashScope) {
 
 [![flash 1 scaled 2](img/9a035e237291275abd39d46c958c7085.png)](/web/20221128054812/https://www.baeldung.com/wp-content/uploads/2019/12/flash-1-scaled-2.png)
 
-## 11.国际化
+## 11. 国际化
 
 Ninja 提供了易于配置的内置国际化特性。
 
@@ -268,7 +272,7 @@ Ninja 提供了易于配置的内置国际化特性。
 application.languages=fr,en
 ```
 
-然后，我们将为英语创建默认属性文件—`messages.properties`——为消息创建键值对:
+然后，我们将为英语创建默认属性文件—`messages.properties`—为消息创建键值对:
 
 ```java
 header.home=Home!
@@ -277,6 +281,8 @@ helloMsg=Hello, welcome to Ninja Framework!
 
 类似地，我们可以在特定于语言的属性文件的文件名中添加语言代码—例如，`message_fr.properties` 文件表示法语:
 
+
+
 ```java
 header.home=Accueil!
 helloMsg=Bonjour, bienvenue dans Ninja Framework!
@@ -284,7 +290,7 @@ helloMsg=Bonjour, bienvenue dans Ninja Framework!
 
 一旦配置就绪，我们就可以轻松地在`ApplicationController`类中启用国际化。
 
-我们有两种方法，要么使用`[Lang](https://web.archive.org/web/20221128054812/https://www.ninjaframework.org/apidocs/ninja/i18n/Lang.html)`类，要么使用 [`Messages`](https://web.archive.org/web/20221128054812/https://www.ninjaframework.org/apidocs/ninja/i18n/Messages.html) 类:
+我们有两种方法，要么使用`Lang`类，要么使用`Messages`类:
 
 ```java
 @Singleton
@@ -313,11 +319,11 @@ Optional<String> language = Optional.of("fr");
 String helloMsg = msg.get("helloMsg", language).get();
 ```
 
-## 12.坚持
+## 12. 坚持
 
 Ninja 支持 JPA 2.0，并利用 Hibernate 来支持 web 应用程序中的持久性。此外，它还为快速开发提供了内置的 H2 数据库支持。
 
-### 12.1.模型
+### 12.1. 模型
 
 我们需要一个`Entity`类来连接数据库中的一个表。为此，Ninja 遵循在`models`包中寻找实体类的惯例。所以，我们将在那里创建`User`实体类:
 
@@ -334,7 +340,7 @@ public class User {
 
 然后，我们将配置 Hibernate 并设置数据库连接的细节。
 
-### 12.2.配置
+### 12.2. 配置
 
 对于 Hibernate 配置，Ninja 希望`persistence.xml`文件在`src/main/java/META-INF`目录中:
 
@@ -370,9 +376,9 @@ db.connection.username=sa
 db.connection.password=
 ```
 
-### 12.3.`EntityManager`
+### 12.3. `EntityManager`
 
-最后，我们将使用 Guice 的 [`Provider`](https://web.archive.org/web/20221128054812/https://google.github.io/guice/api-docs/latest/javadoc/index.html?com/google/inject/Provider.html) 类在`ApplicationController`中注入 [`EntityManager`](/web/20221128054812/https://www.baeldung.com/hibernate-entitymanager) 的实例:
+最后，我们将使用 Guice 的`Provider`类在`ApplicationController`中注入`EntityManager`的实例:
 
 ```java
 public class ApplicationController {
@@ -407,13 +413,13 @@ public Result fetchUsers() {
 }
 ```
 
-在这里，Ninja 的 [`@UnitOfWork`](https://web.archive.org/web/20221128054812/https://www.ninjaframework.org/apidocs/ninja/jpa/UnitOfWork.html) 注释将处理所有关于数据库连接的事情，而不处理事务。因此，它对于只读查询来说非常方便，因为我们通常不需要事务。
+在这里，Ninja 的`@UnitOfWork`注释将处理所有关于数据库连接的事情，而不处理事务。因此，它对于只读查询来说非常方便，因为我们通常不需要事务。
 
-## 13.确认
+## 13. 确认
 
 **Ninja 通过遵循 JSR303 规范**为 bean 验证提供内置支持。
 
-让我们通过用 [`@NotNull`](https://web.archive.org/web/20221128054812/https://docs.oracle.com/javaee/7/api/javax/validation/constraints/NotNull.html) 注释来注释`User`实体中的一个属性来检查这个特性:
+让我们通过用`@NotNull`注释来注释`User`实体中的一个属性来检查这个特性:
 
 ```java
 public class User {
@@ -424,7 +430,7 @@ public class User {
 }
 ```
 
-然后，我们将修改已经讨论过的`ApplicationController`中的`insertUser` 方法来启用验证:
+然后，我们将修改已经讨论过的`ApplicationController`中的`insertUser`方法来启用验证:
 
 ```java
 @Transactional
@@ -441,20 +447,20 @@ public Result insertUser(FlashScope flashScope, @JSR303Validation User user, Val
 }
 ```
 
-我们已经使用 Ninja 的`[@JSR303Validation](https://web.archive.org/web/20221128054812/https://www.ninjaframework.org/apidocs/ninja/validation/JSR303Validation.html) `注释来启用对`User`对象的验证。然后，我们添加了 [`Validation`](https://web.archive.org/web/20221128054812/https://www.ninjaframework.org/apidocs/ninja/validation/Validation.html) 参数，通过`hasViolations`、`getViolations`和`addViolation.`等方法进行验证
+我们已经使用 Ninja 的`@JSR303Validation`注释来启用对`User`对象的验证。然后，我们添加了`Validation`参数，通过`hasViolations`、`getViolations`和`addViolation.`等方法进行验证
 
 最后，`FlashScope`对象用于在屏幕上显示验证错误。
 
-注意:Ninja 遵循 JSR303 规范进行 bean 验证。然而，JSR380 规范( [Bean Validation 2.0](/web/20221128054812/https://www.baeldung.com/javax-validation) )是新的标准。
+注意：Ninja 遵循 JSR303 规范进行 bean 验证。然而，JSR380 规范（Bean Validation 2.0）是新的标准。
 
-## 14.结论
+## 14. 结论
 
 在本文中，我们探索了 Ninja web 框架——这是一个全栈框架，使用流行的 Java 库提供了方便的特性。
 
-首先，我们使用`controllers`、`models,`和`services`创建了一个简单的 web 应用程序。然后，我们在应用程序中启用 JPA 支持来实现持久性。
+首先，我们使用`controllers`、`models`和`services`创建了一个简单的 web 应用程序。然后，我们在应用程序中启用 JPA 支持来实现持久性。
 
 与此同时，我们看到了一些基本特性，如路由、JSON 渲染、国际化和 Flash 范围。
 
 最后，我们探讨了框架提供的验证支持。
 
-像往常一样，所有的代码实现都可以在 GitHub 上获得[。](https://web.archive.org/web/20221128054812/https://github.com/eugenp/tutorials/tree/master/web-modules/ninja)
+像往常一样，所有的代码实现都可以在 GitHub 上获得。

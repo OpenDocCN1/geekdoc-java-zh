@@ -1,3 +1,4 @@
+
 # Java 8 并行流示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java8/java-8-parallel-streams-examples/>
@@ -6,14 +7,14 @@
 
 几个并行执行流的 Java 8 例子。
 
-## 1.BaseStream.parallel()
+## 1. `BaseStream.parallel()`
 
 打印 1 到 10 的简单并行示例。
 
-ParallelExample1.java
+`ParallelExample1.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.stream.IntStream;
 
@@ -23,7 +24,7 @@ public class ParallelExample1 {
 
         System.out.println("Normal...");
 
-		IntStream range = IntStream.rangeClosed(1, 10);
+        IntStream range = IntStream.rangeClosed(1, 10);
         range.forEach(System.out::println);
 
         System.out.println("Parallel...");
@@ -33,13 +34,13 @@ public class ParallelExample1 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- Normal...
+Normal...
 1
 2
 3
@@ -61,17 +62,17 @@ Parallel...
 4
 5
 3
-2 
+2
 ```
 
-## 2.Collection.parallelStream()
+## 2. `Collection.parallelStream()`
 
 另一个简单的并行例子是打印`a`到`z`。对于收藏，我们可以用`parallelStream()`。
 
-ParallelExample2.java
+`ParallelExample2.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -107,13 +108,13 @@ public class ParallelExample2 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- Normal...
+Normal...
 a
 b
 c
@@ -166,17 +167,17 @@ c
 a
 e
 b
-y 
+y
 ```
 
-## 3.Stream 是否以并行模式运行？
+## 3. Stream 是否以并行模式运行？
 
 3.1 我们可以用`isParallel()`来测试
 
-ParallelExample3a.java
+`ParallelExample3a.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.stream.IntStream;
 
@@ -199,15 +200,15 @@ public class ParallelExample3a {
 
     }
 
-} 
+}
 ```
 
 3.2 或者像这样打印当前线程名:
 
-ParallelExample3b.java
+`ParallelExample3b.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.stream.IntStream;
 
@@ -231,13 +232,13 @@ public class ParallelExample3b {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- Normal...
+Normal...
 Thread : main, value: 1
 Thread : main, value: 2
 Thread : main, value: 3
@@ -259,19 +260,19 @@ Thread : ForkJoinPool.commonPool-worker-5, value: 4
 Thread : ForkJoinPool.commonPool-worker-3, value: 9
 Thread : ForkJoinPool.commonPool-worker-5, value: 1
 Thread : ForkJoinPool.commonPool-worker-7, value: 2
-Thread : ForkJoinPool.commonPool-worker-9, value: 10 
+Thread : ForkJoinPool.commonPool-worker-9, value: 10
 ```
 
-默认情况下，并行流使用“forkjoinpool”
+默认情况下，并行流使用`ForkJoinPool`。
 
-## 4.计算
+## 4. 计算
 
 4.1 Java 8 流打印所有 100 万以内的质数:
 
-ParallelExample4.java
+`ParallelExample4.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -298,7 +299,7 @@ public class ParallelExample4 {
         return !IntStream.rangeClosed(2, number / 2).anyMatch(i -> number % i == 0);
     }
 
-} 
+}
 ```
 
 结果:
@@ -311,18 +312,18 @@ public class ParallelExample4 {
 4.2 另一个并行流示例，用于找出雇员列表的平均年龄。
 
 ```java
- List<Employee> employees = obj.generateEmployee(10000);
+List<Employee> employees = obj.generateEmployee(10000);
 
-	double age = employees
-			.parallelStream()
-			.mapToInt(Employee::getAge)
-			.average()
-			.getAsDouble();
+double age = employees
+        .parallelStream()
+        .mapToInt(Employee::getAge)
+        .average()
+        .getAsDouble();
 
-    System.out.println("Average age: " + age); 
+System.out.println("Average age: " + age);
 ```
 
-## 5.个案研究
+## 5. 个案研究
 
 5.1 并行流提高了耗时的保存文件任务的性能。
 
@@ -333,10 +334,10 @@ public class ParallelExample4 {
 
 *PS 测试使用 i7-7700，16G 内存，WIndows 10*
 
-ParallelExample5.java
+`ParallelExample5.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -363,10 +364,10 @@ public class ParallelExample5 {
 
         List<Employee> employees = obj.generateEmployee(10000);
 
-		// normal, sequential
-        //employees.stream().forEach(ParallelExample5::save); 		// 27s-29s
+        // normal, sequential
+        //employees.stream().forEach(ParallelExample5::save);         // 27s-29s
 
-		// parallel
+        // parallel
         employees.parallelStream().forEach(ParallelExample5::save); // 7s-8s
 
     }
@@ -420,13 +421,15 @@ public class ParallelExample5 {
                 .getAsDouble()).setScale(2, RoundingMode.HALF_UP);
     }
 
-} 
+}
 ```
 
-Employee.java
+`Employee.java`
+
+
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -441,14 +444,14 @@ public class Employee implements Serializable {
 
     //getters, setters n etc...
 
-} 
+}
 ```
 
-# 参考
+## 参考
 
-*   [Java 教程–并行性](http://web.archive.org/web/20220204092017/https://docs.oracle.com/javase/tutorial/collections/streams/parallelism.html)
-*   [Java 8 Stream.iterate 示例](http://web.archive.org/web/20220204092017/https://www.mkyong.com/java8/java-8-stream-iterate-examples/)
-*   [Java 质数示例](http://web.archive.org/web/20220204092017/https://www.mkyong.com/java/java-prime-numbers-examples/)
-*   [Java 8 中的错误，第三部分:流和并行流](http://web.archive.org/web/20220204092017/https://dzone.com/articles/whats-wrong-java-8-part-iii)
+- [Java 教程–并行性](http://web.archive.org/web/20220204092017/https://docs.oracle.com/javase/tutorial/collections/streams/parallelism.html)
+- [Java 8 Stream.iterate 示例](http://web.archive.org/web/20220204092017/https://www.mkyong.com/java8/java-8-stream-iterate-examples/)
+- [Java 质数示例](http://web.archive.org/web/20220204092017/https://www.mkyong.com/java/java-prime-numbers-examples/)
+- [Java 8 中的错误，第三部分:流和并行流](http://web.archive.org/web/20220204092017/https://dzone.com/articles/whats-wrong-java-8-part-iii)
 
 <input type="hidden" id="mkyong-current-postId" value="15136">

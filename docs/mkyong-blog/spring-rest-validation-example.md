@@ -1,24 +1,25 @@
+
 # 弹簧座验证示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-rest-validation-example/>
 
 在本文中，我们将通过添加 bean 验证和自定义验证器来增强前面的 [Spring REST Hello World 示例](/web/20220904221328/https://mkyong.com/spring-boot/spring-rest-hello-world-example/)。
 
-使用的技术:
+使用的技术：
 
 *   Spring Boot 2.1.2 .版本
 *   弹簧 5.1.4 释放
 *   maven3
 *   Java 8
 
-## 1.控制器
+## 1. 控制器
 
-再次查看之前的 REST 控制器:
+再次查看之前的 REST 控制器：
 
-BookController.java
+`BookController.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.mkyong.error.BookNotFoundException;
 import com.mkyong.error.BookUnSupportedFieldPatchException;
@@ -43,45 +44,45 @@ public class BookController {
 
     // Save
     @PostMapping("/books")
-	@ResponseStatus(HttpStatus.CREATED)
+    @ResponseStatus(HttpStatus.CREATED)
     Book newBook(@RequestBody Book newBook) {
         return repository.save(newBook);
     }
 
-	 // Find
+    // Find
     @GetMapping("/books/{id}")
     Book findOne(@PathVariable Long id) {
         return repository.findById(id)
                 .orElseThrow(() -> new BookNotFoundException(id));
     }
 
-	//...
-} 
+    //...
+}
 ```
 
-## 2.Bean 验证(Hibernate 验证器)
+## 2. Bean 验证（Hibernate 验证器）
 
-2.1 如果任何 JSR-303 实现(如 Hibernate Validator)在类路径上可用，bean 验证将被自动启用。默认情况下，Spring Boot 会自动获取并下载 Hibernate 验证程序。
+2.1 如果任何 JSR-303 实现（如 Hibernate Validator）在类路径上可用，bean 验证将被自动启用。默认情况下，Spring Boot 会自动获取并下载 Hibernate 验证程序。
 
-2.2 下面的 POST 请求将被通过，我们需要在`book`对象上实现 bean 验证，以确保像`name`、`author`和`price`这样的字段不为空。
+2.2 下面的 POST 请求将被通过，我们需要在 `book` 对象上实现 bean 验证，以确保像 `name`、`author` 和 `price` 这样的字段不为空。
 
 ```java
- @PostMapping("/books")
-    Book newBook(@RequestBody Book newBook) {
-        return repository.save(newBook);
-    } 
+@PostMapping("/books")
+Book newBook(@RequestBody Book newBook) {
+    return repository.save(newBook);
+}
 ```
 
 ```java
- curl -v -X POST localhost:8080/books -H "Content-type:application/json" -d "{\"name\":\"ABC\"}" 
+curl -v -X POST localhost:8080/books -H "Content-type:application/json" -d "{\"name\":\"ABC\"}"
 ```
 
-2.3 用`[javax.validation.constraints.*](http://web.archive.org/web/20220904221328/https://docs.jboss.org/hibernate/beanvalidation/spec/2.0/api/javax/validation/constraints/package-summary.html)`注释对 bean 进行注释。
+2.3 用 `javax.validation.constraints.*` 注释对 bean 进行注释。
 
-Book.java
+`Book.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -109,15 +110,15 @@ public class Book {
     private BigDecimal price;
 
     //...
-} 
+}
 ```
 
-2.4 在`@RequestBody`中增加`@Valid`。完成，现在启用 bean 验证。
+2.4 在 `@RequestBody` 中增加 `@Valid`。完成，现在启用 bean 验证。
 
-BookController.java
+`BookController.java`
 
 ```java
- import javax.validation.Valid;
+import javax.validation.Valid;
 
 @RestController
 public class BookController {
@@ -126,14 +127,14 @@ public class BookController {
     Book newBook(@Valid @RequestBody Book newBook) {
         return repository.save(newBook);
     }
-	//...
-} 
+    //...
+}
 ```
 
-2.5 尝试再次向 REST 端点发送 POST 请求。如果 bean 验证失败，将触发一个`MethodArgumentNotValidException`。默认情况下，Spring 会发回一个 HTTP 状态 **400 错误请求**，但是没有错误细节。
+2.5 尝试再次向 REST 端点发送 POST 请求。如果 bean 验证失败，将触发一个 `MethodArgumentNotValidException`。默认情况下，Spring 会发回一个 HTTP 状态 **400 错误请求**，但是没有错误细节。
 
 ```java
- curl -v -X POST localhost:8080/books -H "Content-type:application/json" -d "{\"name\":\"ABC\"}"
+curl -v -X POST localhost:8080/books -H "Content-type:application/json" -d "{\"name\":\"ABC\"}"
 
 Note: Unnecessary use of -X or --request, POST is already inferred.
 *   Trying ::1...
@@ -151,15 +152,15 @@ Note: Unnecessary use of -X or --request, POST is already inferred.
 < Content-Length: 0
 < Date: Wed, 20 Feb 2019 13:02:30 GMT
 < Connection: close
-< 
+<
 ```
 
-2.6 上面的错误响应不友好，我们可以捕捉`MethodArgumentNotValidException`并像这样覆盖响应:
+2.6 上面的错误响应不友好，我们可以捕捉 `MethodArgumentNotValidException` 并像这样覆盖响应：
 
-CustomGlobalExceptionHandler.java
+`CustomGlobalExceptionHandler.java`
 
 ```java
- package com.mkyong.error;
+package com.mkyong.error;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -201,34 +202,34 @@ public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler
 
     }
 
-} 
+}
 ```
 
 2.7 再试一次。完成了。
 
 ```java
- curl -v -X POST localhost:8080/books -H "Content-type:application/json" -d "{\"name\":\"ABC\"}"
+curl -v -X POST localhost:8080/books -H "Content-type:application/json" -d "{\"name\":\"ABC\"}"
 
 {
-	"timestamp":"2019-02-20T13:21:27.653+0000",
-	"status":400,
-	"errors":[
-		"Please provide a author",
-		"Please provide a price"
-	]
-} 
+    "timestamp":"2019-02-20T13:21:27.653+0000",
+    "status":400,
+    "errors":[
+        "Please provide a author",
+        "Please provide a price"
+    ]
+}
 ```
 
-## 3.路径变量验证
+## 3. 路径变量验证
 
-3.1 我们也可以直接在路径变量甚至请求参数上应用`javax.validation.constraints.*`注释。
+3.1 我们也可以直接在路径变量甚至请求参数上应用 `javax.validation.constraints.*` 注释。
 
-3.2 在类级别应用`@Validated`，并在路径变量上添加`javax.validation.constraints.*`注释，如下所示:
+3.2 在类级别应用 `@Validated`，并在路径变量上添加 `javax.validation.constraints.*` 注释，如下所示：
 
-BookController.java
+`BookController.java`
 
 ```java
- import org.springframework.validation.annotation.Validated;
+import org.springframework.validation.annotation.Validated;
 import javax.validation.constraints.Min;
 
 @RestController
@@ -241,30 +242,30 @@ public class BookController {
                 .orElseThrow(() -> new BookNotFoundException(id));
     }
 
-	//...
-} 
+    //...
+}
 ```
 
 3.3 默认的错误信息是好的，只是错误代码 500 不合适。
 
 ```java
- curl -v localhost:8080/books/0
+curl -v localhost:8080/books/0
 
 {
-	"timestamp":"2019-02-20T13:27:43.638+0000",
-	"status":500,
-	"error":"Internal Server Error",
-	"message":"findOne.id: must be greater than or equal to 1",
-	"path":"/books/0"
-} 
+    "timestamp":"2019-02-20T13:27:43.638+0000",
+    "status":500,
+    "error":"Internal Server Error",
+    "message":"findOne.id: must be greater than or equal to 1",
+    "path":"/books/0"
+}
 ```
 
-3.4 如果`@Validated`失败，将触发一个`ConstraintViolationException`，我们可以这样覆盖错误代码:
+3.4 如果 `@Validated` 失败，将触发一个 `ConstraintViolationException`，我们可以这样覆盖错误代码：
 
-CustomGlobalExceptionHandler.java
+`CustomGlobalExceptionHandler.java`
 
 ```java
- package com.mkyong.error;
+package com.mkyong.error;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -283,30 +284,38 @@ public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler
         response.sendError(HttpStatus.BAD_REQUEST.value());
     }
 
-	//..
-} 
+    //..
+}
 ```
 
 ```java
- curl -v localhost:8080/books/0
+curl -v localhost:8080/books/0
 
 {
-	"timestamp":"2019-02-20T13:35:59.808+0000",
-	"status":400,
-	"error":"Bad Request",
-	"message":"findOne.id: must be greater than or equal to 1",
-	"path":"/books/0"
-} 
+    "timestamp":"2019-02-20T13:35:59.808+0000",
+    "status":400,
+    "error":"Bad Request",
+    "message":"findOne.id: must be greater than or equal to 1",
+    "path":"/books/0"
+}
 ```
 
-## 4.自定义验证程序
+## 4. 自定义验证程序
 
-4.1 我们将为`author`字段创建一个自定义验证器，只允许 4 个作者保存到数据库中。
+4.1 我们将为 `author` 字段创建一个自定义验证器，只允许 4 个作者保存到数据库中。
 
-Author.java
+`Author.java`
+
+
+
+## 1. 自定义验证器示例
+
+以下代码展示了如何创建一个自定义的 Bean Validation 注解 `@Author`，用于验证作者名称是否在允许的列表中。
+
+### 1.1 定义注解 `Author`
 
 ```java
- package com.mkyong.error.validator;
+package com.mkyong.error.validator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -329,13 +338,15 @@ public @interface Author {
 
     Class<? extends Payload>[] payload() default {};
 
-} 
+}
 ```
 
-AuthorValidator.java
+### 1.2 实现验证器 `AuthorValidator`
+
+`AuthorValidator.java` 实现了 `ConstraintValidator` 接口，并定义了允许的作者列表。
 
 ```java
- package com.mkyong.error.validator;
+package com.mkyong.error.validator;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
@@ -352,13 +363,15 @@ public class AuthorValidator implements ConstraintValidator<Author, String> {
         return authors.contains(value);
 
     }
-} 
+}
 ```
 
-Book.java
+### 1.3 在实体类 `Book` 中使用注解
+
+`Book.java` 中的 `author` 字段使用了自定义的 `@Author` 注解，并同时使用了标准的 `@NotEmpty` 注解。
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.mkyong.error.validator.Author;
 
@@ -373,31 +386,40 @@ public class Book {
     @NotEmpty(message = "Please provide a author")
     private String author;
 
-	//... 
+    //...
+}
 ```
 
-4.2 测试一下。如果自定义验证器失败，它将触发一个`MethodArgumentNotValidException`
+## 2. 测试自定义验证器
 
-```java
- curl -v -X POST localhost:8080/books 
-	-H "Content-type:application/json" 
+### 2.1 使用 `curl` 命令测试
+
+如果自定义验证器失败，它将触发一个 `MethodArgumentNotValidException`。以下命令模拟了一个包含无效作者的 POST 请求：
+
+```bash
+curl -v -X POST localhost:8080/books \
+	-H "Content-type:application/json" \
 	-d "{\"name\":\"Spring REST tutorials\", \"author\":\"abc\",\"price\":\"9.99\"}"
+```
 
+服务器将返回一个 `400 Bad Request` 响应，其中包含错误信息：
+
+```json
 {
 	"timestamp":"2019-02-20T13:49:59.971+0000",
 	"status":400,
 	"errors":["Author is not allowed."]
-} 
+}
 ```
 
-## 5.弹簧综合测试
+## 3. Spring 集成测试
 
-5.1 用`MockMvc`进行测试
+### 3.1 使用 `MockMvc` 进行测试
 
-BookControllerTest.java
+`BookControllerTest.java` 使用 `MockMvc` 对控制器进行单元测试，验证不同场景下的响应。
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
@@ -491,15 +513,17 @@ public class BookControllerTest {
 
     }
 
-} 
+}
 ```
 
-5.2 用`TestRestTemplate`进行测试
+### 3.2 使用 `TestRestTemplate` 进行测试
 
-BookControllerRestTemplateTest.java
+`BookControllerRestTemplateTest.java` 使用 `TestRestTemplate` 进行集成测试，此处省略具体实现。
+
+
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -598,22 +622,22 @@ public class BookControllerRestTemplateTest {
         }
     }
 
-} 
+}
 ```
 
 ## 下载源代码
 
-$ git clone [https://github.com/mkyong/spring-boot.git](http://web.archive.org/web/20220904221328/https://github.com/mkyong/spring-boot.git)
+```bash
+$ git clone https://github.com/mkyong/spring-boot.git
 $ cd spring-rest-validation
 $ mvn spring-boot:run
+```
 
 ## 参考
 
-*   [javax . validation . constraints](http://web.archive.org/web/20220904221328/https://docs.jboss.org/hibernate/beanvalidation/spec/2.0/api/javax/validation/constraints/package-summary.html)
-*   [Spring Boot 验证功能](http://web.archive.org/web/20220904221328/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-validation)
-*   [Spring Boot +朱尼特 5 +莫奇托](http://web.archive.org/web/20220904221328/https://www.mkyong.com/spring-boot/spring-boot-junit-5-mockito/)
-*   [春歇你好天下例](http://web.archive.org/web/20220904221328/https://www.mkyong.com/spring-boot/spring-rest-hello-world-example/)
-*   [cURL–发布请求示例](http://web.archive.org/web/20220904221328/https://www.mkyong.com/spring/curl-post-request-examples/)
-*   [维基百科–休息](http://web.archive.org/web/20220904221328/https://en.wikipedia.org/wiki/Representational_state_transfer)
-
-<input type="hidden" id="mkyong-current-postId" value="14928">
+* [javax.validation.constraints](http://web.archive.org/web/20220904221328/https://docs.jboss.org/hibernate/beanvalidation/spec/2.0/api/javax/validation/constraints/package-summary.html)
+* [Spring Boot 验证功能](http://web.archive.org/web/20220904221328/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-validation)
+* [Spring Boot + JUnit 5 + Mockito](http://web.archive.org/web/20220904221328/https://www.mkyong.com/spring-boot/spring-boot-junit-5-mockito/)
+* [Spring REST Hello World 示例](http://web.archive.org/web/20220904221328/https://www.mkyong.com/spring-boot/spring-rest-hello-world-example/)
+* [cURL – POST 请求示例](http://web.archive.org/web/20220904221328/https://www.mkyong.com/spring/curl-post-request-examples/)
+* [维基百科 – REST](http://web.archive.org/web/20220904221328/https://en.wikipedia.org/wiki/Representational_state_transfer)

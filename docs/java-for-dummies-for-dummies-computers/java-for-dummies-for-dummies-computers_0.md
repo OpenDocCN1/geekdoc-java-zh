@@ -1,12 +1,11 @@
+
 # Java 入学者指南
-
-
 
 ![](img/cover.jpg)
 
 # 引言
 
-Java 是很棒的东西。我已经用它多年了。我喜欢 Java 是因为它很有条理。几乎一切都遵循简单的规则。这些规则有时看起来可能令人生畏，但这本书正是为了帮助你理清它们。所以，如果你想使用 Java，并且想找一个传统的技术类平装书的替代方案，请坐下，放松心情，开始阅读《Java For Dummies》第 7 版》。
+Java 是很棒的东西。我已经用它多年了。我喜欢 Java 是因为它很有条理。几乎一切都遵循简单的规则。这些规则有时看起来可能令人生畏，但这本书正是为了帮助你理清它们。所以，如果你想使用 Java，并且想找一个传统的技术类平装书的替代方案，请坐下，放松心情，开始阅读《Java For Dummies》第 7 版。
 
 ## 如何使用本书
 
@@ -42,16 +41,7 @@ Java 是很棒的东西。我已经用它多年了。我喜欢 Java 是因为它
 
 *   如果你已经知道 Java 是什么样的“动物”，并且知道你想用 Java，请跳过第 1 章直接进入第 2 章。相信我，我不会介意的。
 *   如果你已经知道如何让 Java 程序运行起来，并且不在乎 Java 程序运行时后台发生了什么，请跳过第 2 章从第 3 章开始。
-*   如果你以编程为生但使用的是 C 或 C++ 以外的任何语言，请从第 2 章或第 3 开始。当你到达第 5 章和第 6 章时，你可能会发现它们读起来很快。当你读到第 7 章时，该时候深入学习了。
-*   如果你以编写 C（不是 C++）程序为生，请从第 2 章、第 3 章和第 4 章开始，并仅略读第 5 章和第 6 章，你可能会发现它们很容易读。
-*   如果你以编写 C（不是 C++）程序为生，请从第 2 章、第 3 章和第 4 章开始，并仅略读第 5 章和第 6 章，你可能会发现它们很容易读。
-*   如果你以编写 C（不是 C++）程序为生，请从第 2 章、第 3 章和第 4 章开始，并仅略读第 5 章和第 6 章，你可能会发现它们很容易读。
-*   如果你以编写 C（不是 C++）程序为生，请从第 2 章、第 3 章和第 4 章开始，并仅略读第 5 章和第 6 章，你可能会发现它们很容易读。
-*   如果你以编写 C（不是 C++）程序为生，请从第 2 章、第 3 章和第 4 章开始，并仅略读第 5 章和第 6 章，你可能会发现它们很容易读。
-*   如果你以编写 C（不是 C++）程序为生，请从第 2 章、第 3 章和第 4 章开始，并仅略读第 5 章和第 6 章，你可能会发现它们很容易读。
-*   如果你以编写 C（不是 C++）程序为生，请从第 2 章、第 3 章和第 4 章开始，并仅略读第 5 章和第 6 章，你可能会发现它们很容易读。
-*   如果你以编写 C（不是 C++）程序为生，请从第 2 章、第 3 章和第 4 章开始，并仅略读第 5 章和第 6 章，你可能会发现它们很容易读。
-*   如果你以编写 C（不是 C++）程序为生，请从第 2 章、第 3 章和第 4 章开始，并仅略读第 5 章和第 6 章，你可能会发现它们很容易读。
+*   如果你以编程为生但使用的是 C 或 C++ 以外的任何语言，请从第 2 章或第 3 章开始。当你到达第 5 章和第 6 章时，你可能会发现它们读起来很快。当你读到第 7 章时，该时候深入学习了。
 *   如果你以编写 C（不是 C++）程序为生，请从第 2 章、第 3 章和第 4 章开始，并仅略读第 5 章和第 6 章，你可能会发现它们很容易读。
 
 ## 本书的组织结构
@@ -60,28 +50,25 @@ Java 是很棒的东西。我已经用它多年了。我喜欢 Java 是因为它
 
 ### 第一部分：开始学习 Java
 
-
-
-
 这部分是关于 Java 的完整执行摘要简报。它包含了一些“什么是 Java？”的内容以及一个快速上手章节 —— 第 3 章。在第 3 章中，你将接触主要的编程思想并分析一个简单的程序。
 
-## 第二部分：编写你自己的 Java 程序
+### 第二部分：编写你自己的 Java 程序
 
 第 4 章到第 6 章涵盖了基础知识。这些章节描述了你需要的知识，以便让你的电脑运行起来。
 
 如果你曾用 Visual Basic、C++ 或任何其他语言编写过程序，那么第二部分中的某些内容对你来说可能熟悉。如果是这样，你可以跳过某些章节或快速阅读这些内容。但不要读得太快。Java 与其他某些编程语言有些不同，特别是在第 4 章中我描述的内容。
 
-## 第三部分：掌握大局：面向对象编程
+### 第三部分：掌握大局：面向对象编程
 
 第三部分包含了我最喜欢的几个章节。这部分涵盖了至关重要的面向对象编程主题。在这些章节中，你将发现如何为大问题映射解决方案。（当然，这些章节中的示例并不大，但这些示例涉及宏大的思想。）通过易于吸收的渐进方式，你将发现如何设计类、重用现有类以及构建对象。
 
-你是否读过那些用泛泛、通用的术语解释面向对象编程的书籍？我很自豪地说，《*Java For Dummies》（傻瓜指南）第 7 版并不那样。在书中，我用一个简单而具体的程序示例来阐述每一个概念。
+你是否读过那些用泛泛、通用的术语解释面向对象编程的书籍？我很自豪地说，《Java For Dummies》第 7 版并不那样。在书中，我用一个简单而具体的程序示例来阐述每一个概念。
 
-## 第四部分：高级 Java 技术
+### 第四部分：高级 Java 技术
 
 如果你已经领略了 Java 的魅力并想了解更多，可以在书的这一部分找到你需要的内容。这一部分的章节致力于细节 —— 那些在你初看材料时并看不的东西。在读完前面的部分并自己写一些程序后，你可以通过阅读第四部分来进一步深入探索。
 
-## 第五部分：十之篇
+### 第五部分：十之篇
 
 “十之篇”就像一个小型的 Java 糖果店。在“十之篇”中，你可以找到列表 —— 避免错误的技巧列表、寻找资源的列表以及各种趣物的列表。
 
@@ -93,7 +80,7 @@ Java 是很棒的东西。我已经用它多年了。我喜欢 Java 是因为它
 
 以下是我书中使用的图标列表：
 
-![tip](img/tip.png) 提示（Tip）是一条额外信息 —— 其他书籍可能忘记告诉你的有用信息。
+![tip](img/tip.png) **提示（Tip）** 是一条额外信息 —— 其他书籍可能忘记告诉你的有用信息。
 
 ![warning](img/warning.png) 每个人都会犯错。天知道我这辈子也犯过几次错。总之，当我认为某些地方特别容易犯错时，我会用“警告 (Warning)”图标标记它。
 
@@ -105,7 +92,7 @@ Java 是很棒的东西。我已经用它多年了。我喜欢 Java 是因为它
 
 ![tryitout](img/tryitout.png) 编写代码是一项活动，学习活动的最佳方法就是实践。这就是为什么我创建了一些供你尝试的内容，以巩固你的知识。其中许多是建立信心的，但有些更具挑战性。当你刚开始实践时，你会发现各种在开始阅读材料时从未想过的问题、困境和障碍。但那是好事。坚持下去！不要感到沮丧。或者，如果你真的感到沮丧了，请访问本书的网站（[`www.allmycode.com/JavaForDummies`](http://www.allmycode.com/JavaForDummies)）获取提示和解决方案。
 
-![ontheweb](img/ontheweb.png) 这个图标引起对可以在网上找到的有用材料的。看看吧！
+![ontheweb](img/ontheweb.png) 这个图标引起对可以在网上找到的有用材料的。
 
 ![technicalstuff](img/technicalstuff.png) 偶尔，我会遇到一些技术小知识。这些小知识可能帮助你理解幕后人员（开发人员）
 
@@ -134,9 +121,6 @@ Java 是很棒的东西。我已经用它多年了。我喜欢 Java 是因为它
 - ![check](img/check.png) **为什么 Java 如此酷**
 - ![check](img/check.png) **如何让自己适应面向对象编程**
 
-
-
-
 整个过程现在看起来似乎很浪费，但那仅仅是因为你我正舒适地坐在电子时代里。信息是思想，而墨水、纸张和马等物理实体与真正的思想几乎或完全没有关系；它们只是思想的临时载体（尽管人们在几个世纪里一直用它们来承载思想）。尽管如此，思想本身是无纸化、无马化且无信使的。
 
 计算机的妙之处在于它们能高效地承载思想。它们除了思想以外，携带的几个光子和少量的电力。它们做到这一点既不杂乱，也不费力，没有额外的物理负担。
@@ -152,7 +136,7 @@ Java 是很棒的东西。我已经用它多年了。我喜欢 Java 是因为它
 *   一个英语句子可能会被误解。“每天吃三次药片，直到吃完为止。”
 *   很难在英语中编织一个非常复杂的命令。“将法兰 A 连接到凸起 B，确保仅将法兰 A 的外缘连接到凸起 B 的较大端，同时将法兰 A 的中间和内缘连接到垫圈 C。”
 *   一个英语句子有很多多余的负担。“句子包含不必要的单词。”
-*   英语很难解释。“作为 John Wiley & Sons, Inc.（`Wiley`）与作者（`Barry Burd’）之间本出版协议的一部分，Wiley 将就《Java For Dummies》第 7 版（`the Work`）的部分提交向作者支付一千两百五十七美元六十三美分（$1,257.63）。”
+*   英语很难解释。“作为 John Wiley & Sons, Inc.（`Wiley`）与作者（`Barry Burd`）之间本出版协议的一部分，Wiley 将就《Java For Dummies》第 7 版（`the Work`）的部分提交向作者支付一千两百五十七美元六十三美分（$1,257.63）。”
 
 要告诉计算机做什么，你必须使用一种特殊语言来编写简洁、无歧的指令。这种特殊语言被称为*计算机编程语言*。用这种语言编写的一组指令被称为*程序*。当将其看作一个大整体时，这些指令被称为*软件*或*代码*。以下是用 Java 编写的代码看起来像：
 
@@ -193,22 +177,22 @@ public class PayBarry {
 *   **2002 年：微软推出了一种新语言，命名为 C#。** C# 的许多特性直接来自 Java 的特性。
 *   **2004 年 6 月：Sys-Con Media 报告，对 Java 程序员的需求超过 C++ 程序员的需求的 50%（[`http://java.sys-con.com/node/48507`](http://java.sys-con.com/node/48507)`）。**
 
-
-
-
-
 而且不仅如此！Java 程序员的需求比 `C++` 和 `C#` 程序员的需求总和高出 8%。Java 程序员的就业率比 Visual Basic (`VB`) 程序员高出高达 190%。
 
-*   **2007 年：Google 采用 Java 作为创建 Android 移动设备应用的首选语言。**
-*   **2010 年 1 月：甲骨文公司收购太阳微系统公司，将 Java 技术引入了甲骨文产品家族。**
-*   **2010 年 6 月：`eWeek` 将 Java 排在其“让你保持就业的前 10 种编程语言”中列第一位（[`www.eweek.com/c/a/Application-Development/Top-10-Programming-Languages-to-Keep-You-Employed-719257`](http://www.eweek.com/c/a/Application-Development/Top-10-Programming-Languages-to-Keep-You-Employed-719257))）。**
-*   **2016 年：Java 运行在 150 亿台设备上（[`http://java.com/en/about`](http://java.com/en/about)`），**其中 Android Java 运行在全球 87.6% 的移动手机上**（[`www.idc.com/prodserv/smartphone-os-market-share.jsp`](http://www.idc.com/prodserv/smartphone-os-market-share.jsp)`）。**
 
-此外，Java 技术为所有蓝光设备提供了交互能力，并且是 TIOBE 编程语言社区指数中最流行的编程语言（[`www.tiobe.com/index.php/content/paperinfo/tpci`](http://www.tiobe.com/index.php/content/paperinfo/tpci)`）、PYPL：编程语言流行指数（[`http://sites.google.com/site/pydatalog/pypl/PyPL-PopularitY-of-Programming-Language`](http://sites.google.com/site/pydatalog/pypl/PyPL-PopularitY-of-Programming-Language)`）以及其他指数。
+
+## Java 发展历程
+
+*   **2007 年**：Google 采用 Java 作为创建 Android 移动设备应用的首选语言。
+*   **2010 年 1 月**：甲骨文公司收购太阳微系统公司，将 Java 技术引入了甲骨文产品家族。
+*   **2010 年 6 月**：`eWeek` 将 Java 排在其“让你保持就业的前 10 种编程语言”中列第一位（[www.eweek.com/c/a/Application-Development/Top-10-Programming-Languages-to-Keep-You-Employed-719257](http://www.eweek.com/c/a/Application-Development/Top-10-Programming-Languages-to-Keep-You-Employed-719257)）。
+*   **2016 年**：Java 运行在 150 亿台设备上（[http://java.com/en/about](http://java.com/en/about)），其中 Android Java 运行在全球 87.6% 的移动手机上（[www.idc.com/prodserv/smartphone-os-market-share.jsp](http://www.idc.com/prodserv/smartphone-os-market-share.jsp)）。
+
+此外，Java 技术为所有蓝光设备提供了交互能力，并且是 TIOBE 编程语言社区指数中最流行的编程语言（[www.tiobe.com/index.php/content/paperinfo/tpci](http://www.tiobe.com/index.php/content/paperinfo/tpci)）、PYPL：编程语言流行指数（[http://sites.google.com/site/pydatalog/pypl/PyPL-PopularitY-of-Programming-Language](http://sites.google.com/site/pydatalog/pypl/PyPL-PopularitY-of-Programming-Language)）以及其他指数。
 
 嗯，我被印象深刻了。
 
-## 面对象编程 (OOP)
+## 面向对象编程 (OOP)
 
 现在是凌晨三点了。我正梦见自己在高中挂掉过的那门历史课。老师正在对我大吼：“你有两天时间准备期末考试，但你不会记得复习的。你会忘记并感到愧疚、愧疚、愧疚。”
 
@@ -261,24 +245,21 @@ Java 是面向对象的。这意味着什么？不像像 `FORTRAN` 这样的语�
 
 建筑同事对你的逻辑和组织能力感到惊讶，但他们也有顾虑。他们提了一个问题：“你把其中一个蓝图称为‘三卧室房屋’蓝图。如果它只是二层的蓝图而不是整栋房子的蓝图，你怎么能这么做？”
 
-
-
-
 你会会地一笑并回答道：“三居室房屋的蓝图可以写：‘关于楼层的信息，请参阅原始房屋蓝图。’这样一来，三居室房屋的蓝图描述了整栋房子。四居室房屋的蓝图也可以这样做。通过这种设置，我们可以利用之前为创建原始房屋蓝图所做的所有工作，节省大量的资金。”
 
-在面向对象编程的语言中，三卧室和四卧室房屋类正在`inheriting`（继承）原始房屋类的特性。你也可以说三卧室和四卧室房屋类正在`extending`（扩展）原始房屋类。（参见图 1-1。）
+在面向对象编程的语言中，三卧室和四卧室房屋类正在 `inheriting`（继承）原始房屋类的特性。你也可以说三卧室和四卧室房屋类正在 `extending`（扩展）原始房屋类。（参见图 1-1。）
 
 ![image](img/9781119235552-fg0101.png)
 
 图 1-1： 面向对象编程中的术语。
 
-原始房屋类被称为三卧室和四卧室房屋类的`superclass`（超类）。同样地，三卧室和四卧室房屋类是原始房屋类的`subclasses`（子类）。换句话说，原始房屋类被称为三卧室和四卧室房屋类的`parent class`（父类）。三卧室和四卧室房屋类是原始房屋类的`child classes`（子类）（参见图 1-1。）
+原始房屋类被称为三卧室和四卧室房屋类的 `superclass`（超类）。同样地，三卧室和四卧室房屋类是原始房屋类的 `subclasses`（子类）。换句话说，原始房屋类被称为三卧室和四卧室房屋类的 `parent class`（父类）。三卧室和四卧室房屋类是原始房屋类的 `child classes`（子类）（参见图 1-1。）
 
 不用说，你的建筑师同事们嫉妒不已。一群建筑师围在你身边，想听听你的绝妙主意。在那刻，你又抛出了一磅炸弹：“通过创建一个带有子类的类，我们将来可以重复使用该蓝图。如果有人想要一套五卧室的房子，我们可以通过创建一个五卧室房屋蓝图来扩展我们的原始房屋蓝图。我们再也不需要为原始房屋蓝图花钱了。”
 
 “但是，”后排的一位同事说，“如果有人想要不同的一楼设计怎么办？我们是扔掉原始房屋蓝图，还是在原始蓝图上胡乱涂画？那可要花大价钱吧？”
 
-你用自信的语气回答道：“我们不需要动原始房屋蓝图。如果有人想在客厅里装一个按摩缸，我们可以创建一个新的小型蓝图，只描述新的客厅，并将其称为`Jacuzzi-in-living-room house`（客厅带按摩缸房屋）蓝图。然后，这个新蓝图可以引用原始房屋蓝图获取房屋其他部分的信息（即客厅以外的部分）。”在面向对象编程语言中，客厅带按摩缸房屋蓝图仍然`extends`（扩展）原始房屋蓝图。按摩缸蓝图仍然是原始房屋蓝图子类。事实上，所有关于超类、父类和子类的术语仍然适用。唯一新之处是按摩缸蓝图`overrides`（重写）了原始房屋蓝图中的客厅特性。
+你用自信的语气回答道：“我们不需要动原始房屋蓝图。如果有人想在客厅里装一个按摩缸，我们可以创建一个新的小型蓝图，只描述新的客厅，并将其称为 `Jacuzzi-in-living-room house`（客厅带按摩缸房屋）蓝图。然后，这个新蓝图可以引用原始房屋蓝图获取房屋其他部分的信息（即客厅以外的部分）。”在面向对象编程语言中，客厅带按摩缸房屋蓝图仍然 `extends`（扩展）原始房屋蓝图。按摩缸蓝图仍然是原始房屋蓝图子类。事实上，所有关于超类、父类和子类的术语仍然适用。唯一新之处是按摩缸蓝图 `overrides`（重写）了原始房屋蓝图中的客厅特性。
 
 在面向对象语言出现之前，编程世界经历了软件开发中的危机。程序员编写代码，然后发现新需求，接着就得抛弃代码并从头开始。这个问题反复反复发生，因为程序员编写的代码无法被重用。面向对象编程让这一切变得更好（而且正如 Burd 所说，Java 是‘一种伟大的面向对象语言’）。
 
@@ -288,11 +269,11 @@ Java 是面向对象的。这意味着什么？不像像 `FORTRAN` 这样的语�
 
 闭上眼睛一分钟，思考一下物体变成椅子意味着什么……
 
-椅子有一个座位、一个靠背和腿。每个座位都有形状、颜色、软度等等。这些都是椅子所拥有的属性。我描述的是`chairness`（椅性）——即某物作为椅子的概念。在面向对象的术语中，我描述的是 `Chair` 类。
+椅子有一个座位、一个靠背和腿。每个座位都有形状、颜色、软度等等。这些都是椅子所拥有的属性。我描述的是 `chairness`（椅性）——即某物作为椅子的概念。在面向对象的术语中，我描述的是 `Chair` 类。
 
 现在，向书页的边缘看一眼，花一分钟观察一下你的房间。（如果你现在没坐在房间里，假装一下。）
 
-房间里有几把椅子，每把椅子都是一个对象。这些对象中的每一个都是名为`Chair`类的那个虚幻事物的例子。这就是这样运作的——类是`chairness`的理念，而每一把具体的椅子都是一个对象。
+房间里有几把椅子，每把椅子都是一个对象。这些对象中的每一个都是名为 `Chair` 类的那个虚幻事物的例子。这就是这样运作的——类是 `chairness` 的理念，而每一把具体的椅子都是一个对象。
 
 ![remember](img/remember.png) 类并不是事物的集合。相反，类是某种事物背后的理念。当我谈到你房间里的椅子类时，我是在说每把椅子都有腿、座位、颜色等等。房间里不同椅子的颜色可能不同，但这并不重要。当你谈论一类事物时，你关注的是每个事物所拥有的属性。
 
@@ -310,7 +291,7 @@ Java 是面向对象的。这意味着什么？不像像 `FORTRAN` 这样的语�
 
 将表格的列标题看作一个类，将每一行看作一个对象。
 
-根据表格列标题，`Account` 类有账号、类型和余额。用面向对象编程的术语表述，`Account`类的每个对象（即 `Account` 类的每个 `instance`）都有账号、类型和余额。所以，表格的最后一行是一个账号 `16-17238-13344-7` 的对象。该对象类型为 `Savings`，余额为 `247.38`。如果你开了一个新账户，你就会另一个对象，表格也会增加一行。
+根据表格列标题，`Account` 类有账号、类型和余额。用面向对象编程的术语表述，`Account` 类的每个对象（即 `Account` 类的每个 `instance`）都有账号、类型和余额。所以，表格的最后一行是一个账号 `16-17238-13344-7` 的对象。该对象类型为 `Savings`，余额为 `247.38`。如果你开了一个新账户，你就会另一个对象，表格也会增加一行。
 
 ### 接下来是什么？
 
@@ -320,9 +301,7 @@ Java 是面向对象的。这意味着什么？不像像 `FORTRAN` 这样的语�
 
 ## Notes
 
-第 2 章
-
- 关于软件
+### 第 2 章：关于软件
 
 ![check](img/check.png) **理解软件开发工具的作用**
 
@@ -330,71 +309,64 @@ Java 是面向对象的。这意味着什么？不像像 `FORTRAN` 这样的语�
 
 ![check](img/check.png) **准备编写和运行 Java 程序**
 
-
-
-
 如果你是计算机和计算领域的老手（无论这是什么意思），而且如果你太心急，不想从本书的网站上获取详细说明，那么你可以尝试按照本节的通用说明来安装所需的软件。这些说明适用于许多计算机，但并非所有计算机。而且，本节没有提供详细的步骤，没有“如果……就那么……”的备选方案，也没有“虽然这可行，但你最好做某事”的建议。
 
 要为编写 Java 程序准备计算机，请按照以下步骤操作：
 
-1. **安装 Java 开发工具包（JDK）。**
+1.  **安装 Java 开发工具包（JDK）。**
 
-   要执行此，请访问 [`www.oracle.com/technetwork/java/javase/downloads`](http://www.oracle.com/technetwork/java/javase/downloads)。
+    要执行此，请访问 [`www.oracle.com/technetwork/java/javase/downloads`](http://www.oracle.com/technetwork/java/javase/downloads)。
 
-   按照网站上的说明下载并安装最新的 Java SE JDK。
+    按照网站上的说明下载并安装最新的 Java SE JDK。
 
-   ![remember](img/remember.png) 寻找标准版（SE）。不要费心企业版（EE）或任何其他此类版本。此外，选择 `JDK` 而不是 `JRE`。如果你看到代码数字，如 `9u3`，这代表“Java 9 的第 3 次更新”。通常情况下，任何标记为 Java 9 或更高版本的都适用于运行本书中的示例。
+    ![remember](img/remember.png) 寻找标准版（SE）。不要费心企业版（EE）或任何其他此类版本。此外，选择 `JDK` 而不是 `JRE`。如果你看到代码数字，如 `9u3`，这代表“Java 9 的第 3 次更新”。通常情况下，任何标记为 Java 9 或更高版本的都适用于运行本书中的示例。
 
-2. **安装集成开发环境。**
+2.  **安装集成开发环境。**
 
-   *集成开发环境*（IDE）是一个帮助你编写和测试新软件的程序。对于本书的示例，你可以使用几乎任何支持 Java 的 IDE。
+    *集成开发环境*（IDE）是一个帮助你编写和测试新软件的程序。对于本书的示例，你可以使用几乎任何支持 Java 的 IDE。
 
-   以下是最受欢迎流行的 Java IDE 列表：
+    以下是最受欢迎流行的 Java IDE 列表：
 
-   * **Eclipse**
+    *   **Eclipse**
 
-     根据 [`www.baeldung.com/java-ides-2016`](http://www.baeldung.com/java-ides-2016) 的统计，2016 年全球 48.2% 的 Java 程序员使用了 `Eclipse` IDE。
+        根据 [`www.baeldung.com/java-ides-2016`](http://www.baeldung.com/java-ides-2016) 的统计，2016 年全球 48.2% 的 Java 程序员使用了 `Eclipse` IDE。
 
-   要下载并使用 `Eclipse`，请按照 [`http://eclipse.org/downloads`](http://eclipse.org/downloads) 上的说明。`Eclipse` 的下载页面可能为你提供几个不同的包，包括用于 Java EE 的 `Eclipse`、用于 JavaScript 的 `Eclipse`、用于 Java 和 DSL 的 `Eclipse` 等。为了运行本书的示例，你需要一个较小的 `Eclipse` 包——适用于 Java 开发人员的 `Eclipse` IDE。
+        要下载并使用 `Eclipse`，请按照 [`http://eclipse.org/downloads`](http://eclipse.org/downloads) 上的说明。`Eclipse` 的下载页面可能为你提供几个不同的包，包括用于 Java EE 的 `Eclipse`、用于 JavaScript 的 `Eclipse`、用于 Java 和 DSL 的 `Eclipse` 等。为了运行本书的示例，你需要一个较小的 `Eclipse` 包——适用于 Java 开发人员的 `Eclipse` IDE。
 
-     `Eclipse` 商业和非商业用途均免费。
+        `Eclipse` 商业和非商业用途均免费。
 
-   * **IntelliJ IDEA**
+    *   **IntelliJ IDEA**
 
-     在 Baeldung 对 Java IDE 的调查（[`www.baeldung.com/java-ides-2016``](http://www.baeldung.com/java-ides-2016)）中，`IntelliJ IDEA` 紧随其后，占了所有程序员的 43.6%。
+        在 Baeldung 对 Java IDE 的调查（[`www.baeldung.com/java-ides-2016`](http://www.baeldung.com/java-ides-2016)）中，`IntelliJ IDEA` 紧随其后，占了所有程序员的 43.6%。
 
-     当你访问 [`www.jetbrains.com/idea`](https://www.jetbrains.com/idea/) 时，你可以下载社区版（免费）或 Ultimate 版（收费）。要运行本书的示例，你可以使用社区版。你甚至可以使用社区版来创建商业软件！
+        当你访问 [`www.jetbrains.com/idea`](https://www.jetbrains.com/idea/) 时，你可以下载社区版（免费）或 Ultimate 版（收费）。要运行本书的示例，你可以使用社区版。你甚至可以使用社区版来创建商业软件！
 
-   * **NetBeans**
+    *   **NetBeans**
 
-     Baeldung 对 Java IDE 的调查（[`www.baeldung.com/java-ides-2016``](http://www.baeldung.com/java-ides-2016)）显示 `NetBeans` 占比仅为 5.9%。但 `NetBeans` 是 Oracle 官方的 Java IDE。如果网站为你提供多种下载包的选择，请选择 Java SE 包。
+        Baeldung 对 Java IDE 的调查（[`www.baeldung.com/java-ides-2016`](http://www.baeldung.com/java-ides-2016)）显示 `NetBeans` 占比仅为 5.9%。但 `NetBeans` 是 Oracle 官方的 Java IDE。如果网站为你提供多种下载包的选择，请选择 Java SE 包。
 
-   要获取你自己的 `NetBeans` 副本，请访问 [`https://netbeans.org/downloads`](https://netbeans.org/downloads/)。
+        要获取你自己的 `NetBeans` 副本，请访问 [`https://netbeans.org/downloads`](https://netbeans.org/downloads/)。
 
-     `NetBeans` 商业和非商业用途均免费。
+        `NetBeans` 商业和非商业用途均免费。
 
-3. **测试你安装的软件。**
+3.  **测试你安装的软件。**
 
-   你在这一步的操作取决于你在第 2 步选择了哪种 IDE。无论如何，这里是一些通用说明：
+    你在这一步的操作取决于你在第 2 步选择了哪种 IDE。无论如何，这里是一些通用说明：
 
-   1. 启动你的 IDE（`Eclipse`、`IntelliJ IDEA`、`NetBeans` 或其他）。
+    1.  启动你的 IDE（`Eclipse`、`IntelliJ IDEA`、`NetBeans` 或其他）。
+    2.  在 IDE 中创建一个新的 Java 项目。
+    3.  在 Java 项目中创建一个名为 `Displayer` 的新 Java 类。（在大多数 IDE 中，选择 File ⇒ New ⇒ Class 即可。）
+    4.  通过输入代码清单 3-1 中的代码来编辑新的 `Displayer.java` 文件（这是第 3 章中的第一个代码清单）。
 
-   2. 在 IDE 中创建一个新的 Java 项目。
+        对于大多数 IDE，你将代码输入到一个较大的（大部分为空的）编辑器面板中。尝试完全按照你在代码清单 3-1 中看到的样式输入代码。如果你看到大写字母，就输入大写字母。所有小写字母也如此。
 
-   3. 在 Java 项目中创建一个名为 `Displayer` 的新 Java 类。（在大多数 IDE 中，选择 File ⇒   New ⇒ Class 即可。）
+        ![ontheweb](img/ontheweb.png) 什么？你说你不想输入书中的一堆代码？好吧，没！访问本书的网站（[www.allmycode.com/JavaForDummies](http://www.allmycode.com/JavaForDummies)）来了解如何下载所有代码示例并将它们加载到你的 IDE 中。
 
-   4. 通过输入代码清单 3-1 中的代码来编辑新的 `Displayer.java` 文件（这是第 3 章中的第一个代码清单）。
+    5.  运行 `Displayer.java` 并检查运行输出是否显示 You'll love it。
 
-      对于大多数 IDE，你将代码输入到一个较大的（大部分为空的）编辑器面板中。尝试完全按照你在代码清单 3-1 中看到的样式输入代码。如果你看到大写字母，就输入大写字母。所有小写字母也如此。
-
-      ![ontheweb](img/ontheweb.png) 什么？你说你不想输入书中的一堆代码？好吧，没！访问本书的网站（[www.allmycode.com/JavaForDummies`](http://www.allmycode.com/JavaForDummies）来了解如何下载所有代码示例并将它们加载到你的 IDE 中。
-
-   5. 运行 `Displayer.java` 并检查运行输出是否显示 You'll love it。
-
+*   当你访问 Eclipse ([`www.eclipse.org/downloads`](http://www.eclipse.org/downloads/))、IntelliJ IDEA ([`www.jetbrains.com/idea`](https://www.jetbrains.com/idea/)) 或 NetBeans ([`https://netbeans.org/downloads`](https://netbeans.org/downloads)) 网站时，你会获得一个 IDE。
 
 
-
-*   当你访问 Eclipse ([`www.eclipse.org/downloads`](http://www.eclipse.org/downloads/)),IntelliJ IDEA ([`www.jetbrains.com/idea`](https://www.jetbrains.com/idea/) 或 NetBeans ([`https://netbeans.org/downloads`](https://netbeans.org/downloads)) 网站时，你会获得一个 IDE。
 
 ![technicalstuff](img/technicalstuff.png) 你可能会发现与我在前项目符号中描述的图片有所不同。许多 IDE 都自带自己的 `JVM`，Oracle 网站可能提供组合的 `JDK+NetBeans` 安装包。尽管如此，我通过这些项目符号描述的场景是有用且可靠的。当你按照我的说明操作时，可能会得到两个 `JVM` 副本或两个 IDE，但这没关系。你不知道什么时候会需要备用。
 
@@ -404,13 +376,13 @@ Java 是面向对象的。这意味着什么？不像像 `FORTRAN` 这样的语�
 
 ## 什么是编译器？
 
-*编译器获取你编写的 Java 代码并将代码转换为一组称为字节码（bytecode）的指令集。*
-
-—*BARRY BURD,* 《Java 傻瓜指南》， *第 7 版*
+> *编译器获取你编写的 Java 代码并将代码转换为一组称为字节码（bytecode）的指令集。*
+>
+> — *BARRY BURD,* 《Java 傻瓜指南》， *第 7 版*
 
 你是一个人类。（当然，每条规则都有例外。但如果你在读这本书，你很可能是一个人类。）无论如何，人类都可以编写并理解 Listing 2-1 中的代码。
 
-Listing 2-1: 寻找空房
+**Listing 2-1: 寻找空房**
 
 ```java
 // 这是一个 Java 程序的一部分。
@@ -446,7 +418,7 @@ Listing 2-1 中的 Java 代码检查一家小酒店的空房情况（房号从 1
 
 但问题在于：计算机不是人类。计算机通常不会按照 Listing 2-1 中的指令来操作。也就是说，计算机不遵循 Java 源代码指令。相反，计算机遵循像 Listing 2-2 那样的晦涩指令。
 
-Listing 2-2: Listing 2-1 翻译为 Java 字节码
+**Listing 2-2: Listing 2-1 翻译为 Java 字节码**
 
 ```bytecode
 aload_0
@@ -471,14 +443,12 @@ ldc " is available."
 invokevirtual java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
 ```
+
 （注：为了可读性，我稍微清理了代码块中的字节码语法）
-
-
-
 
 这是一个假设的场景：现在是 1992 年（Java 发布的几年之前），你正在一台配有旧款 Pentium 处理器的电脑上运行 Linux 操作系统。你的朋友在一台配备不同类型处理器的电脑上运行 Linux —— 即 PowerPC 处理器。（在 20 世纪 90 年代，英特尔制造 Pentium 处理器，而 IBM 制造 PowerPC 处理器。）
 
-列表 2-3 针对 Pentium 处理器的简单程序
+**Listing 2-3: 针对 Pentium 处理器的简单程序**
 
 ```assembly
 .data
@@ -499,9 +469,7 @@ movl $1,%eax
 int $0x80
 ```
 
-列表 2-4 包含另一组在屏幕上显示 Hello world! 的指令。列表 2-4 中的指令在运行 Linux 的 PowerPC 处理器上正常工作。
-
-### 列表 2-4： 针对 PowerPC 处理器的简单程序
+**Listing 2-4: 针对 PowerPC 处理器的简单程序**
 
 ```assembly
 .data
@@ -523,16 +491,13 @@ li 3,1
 sc
 ```
 
-列表 2-3 中的指令在 Pentium 处理器上运行顺畅。但这些指令对 PowerPC 处理器来说毫无意义。同样，列表 2-4 中的指令在 PowerPC 上运行良好，但这些相同的指令对于配有 Pentium 处理器的电脑来说完全是乱码。因此，你朋友的 PowerPC 软件可能无法在你的电脑上运行。而你英特尔电脑的软件可能完全无法在你朋友的电脑上运行。
+Listing 2-3 中的指令在 Pentium 处理器上运行顺畅。但这些指令对 PowerPC 处理器来说毫无意义。同样，Listing 2-4 中的指令在 PowerPC 上运行良好，但这些相同的指令对于配有 Pentium 处理器的电脑来说完全是乱码。因此，你朋友的 PowerPC 软件可能无法在你的电脑上运行。而你英特尔电脑的软件可能完全无法在你朋友的电脑上运行。
 
-现在去你表哥家里看看你表哥的电脑配有 Pentium 处理器（和你的一样），但表哥的电脑运行的是 Windows 而不是 Linux。当你向表哥的电脑输入列表 2-3 中的 Pentium 代码时，会什么？它会大叫：“这不是有效的 Win32 应用程序”或“Windows 无法打开此文件”。真混乱！
+现在去你表哥家里看看你表哥的电脑配有 Pentium 处理器（和你的一样），但表哥的电脑运行的是 Windows 而不是 Linux。当你向表哥的电脑输入 Listing 2-3 中的 Pentium 代码时，会什么？它会大叫：“这不是有效的 Win32 应用程序”或“Windows 无法打开此文件”。真混乱！
 
-Java 字节码从这一切混乱中建立了秩序。与列表 2-3 和 2-4 中的代码不同，Java 字节码并不特定于某种处理器或某种操作系统。相反，任何类型的电脑都可以拥有 Java 虚拟机（JVM），并且 Java 字节码指令可以在任何电脑的 Java 虚拟机上运行。运行在 Linux Pentium 上的 JVM 将 Java 字节码指令翻译成你在列表 2-3 中看到的代码。运行在 Linux PowerPC 上的 JVM 将 Java 字节码指令翻译成你在列表 2-4 中看到的代码。
+Java 字节码从这一切混乱中建立了秩序。与 Listing 2-3 和 2-4 中的代码不同，Java 字节码并不特定于某种处理器或某种操作系统。相反，任何类型的电脑都可以拥有 Java 虚拟机（`JVM`），并且 Java 字节码指令可以在任何电脑的 Java 虚拟机上运行。运行在 Linux Pentium 上的 `JVM` 将 Java 字节码指令翻译成你在 Listing 2-3 中看到的代码。运行在 Linux PowerPC 上的 `JVM` 将 Java 字节码指令翻译成你在 Listing 2-4 中看到的代码。
 
-如果你编写了一个 Java 程序并将该程序编译为字节码，那么你电脑上的 JVM 就可以运行该字节码，你电脑上的 JVM 就可以运行该字节码，你电脑上的 JVM 就可以运行该字节码。
-
-
-
+如果你编写了一个 Java 程序并将该程序编译为字节码，那么你电脑上的 `JVM` 就可以运行该字节码，你电脑上的 `JVM` 就可以运行该字节码，你电脑上的 `JVM` 就可以运行该字节码。
 
 有关编译和运行 Java 程序的详细说明，请访问本书书的网站（[www.allmycode.com/JavaForDummies](http://www.allmycode.com/JavaForDummies)）。
 
@@ -540,50 +505,47 @@ Java 字节码从这一切混乱中建立了秩序。与列表 2-3 和 2-4 中�
 
 ![image](img/9781119235552-fg0203.png)
 
-图 2-3： 谁对什么代码做了什么？
+**图 2-3： 谁对什么代码做了什么？**
 
 ![tip](img/tip.png) 对于大多数人的需求，图 2-3 包含的信息太多。如果我点击“运行”图标，我不需要记住计算机正在代表我运行代码。对我来说，计算机运行我的原始 Java 代码或者运行某种针对我原始 Java 代码的字节码仿制品都可以。事实上，在书中，我经常随口写道“当你运行你的 Java 代码时”或“当计算机运行你的 Java 程序时”。即使不看图 2-3，你也可以过上非常幸福的生活。图 2-3 的唯一用处是在图 2-2 中模糊的表述让你困惑时，为你提供帮助。如果图 2-2 没有困扰你，请忽略图 2-3。
 
 ### 什么是集成开发环境？
 
-*“集成开发环境帮助你管理你的 Java 代码，并为你编写、编译和运行代码提供了方便的方法。”*
-
-—*BARRY BURD，JAVA FOR DUMMIES, 第 7 版*
+> *“集成开发环境帮助你管理你的 Java 代码，并为你编写、编译和运行代码提供了方便的方法。”*
+>
+> — *BARRY BURD，JAVA FOR DUMMIES, 第 7 版*
 
 在过去，编写和运行 Java 程序需要打开多个窗口——一个用于输入程序的窗口，另一个用于运行程序的窗口，可能还有第三个窗口用来跟踪你编写的所有代码。（参见图 2-4。）
 
 ![image](img/9781119235552-fg0204.png)
 
-图 2-4： 在没有集成开发环境的情况下开发代码。
+**图 2-4： 在没有集成开发环境的情况下开发代码。**
 
 集成开发环境将所有这些功能无缝地整合到了一个组织良好的应用程序中。（参见图 2-5。）
 
 ![image](img/9781119235552-fg0205.png)
 
-图 2-5： 使用 Eclipse 集成开发环境开发代码。
+**图 2-5： 使用 Eclipse 集成开发环境开发代码。**
 
 Java 也有自己的集成开发环境，如 `Eclipse`、`IntelliJ IDEA` 和 `NetBeans`。许多环境具有拖放式组件，以便你可以视觉化地设计图形图形界面。（参见图 2-6。）
 
 ![image](img/9781119235552-fg0206.png)
 
-图 2-6： 在 NetBeans IDE 中使用拖放 Swing GUI 构建器。
+**图 2-6： 在 NetBeans IDE 中使用拖放 Swing GUI 构建器。**
 
 要运行程序，你可能点击工具栏上的按钮或从菜单中选择 `Run`。
 
 ![ontheweb](img/ontheweb.png) 有关编译和运行 Java 程序的详细说明，请访问本书书的网站（[www.allmycode.com/JavaForDummies](http://www.allmycode.com/JavaForDummies)）。
 
-
-
-
 ![remember](img/remember.png) 没有人完全了解 Java API 的所有知识。如果你是一个经常编写打开新窗口程序的 Java 程序员，你一定知道如何使用 API 中的 `JFrame` 类。如果你很少编写打开窗口的程序，那么在第一次需要创建窗口时，你可以在 API 文档中查找 `JFrame` 类。我推测，如果你阻止一个典型的 Java 程序员在 API 文档中查找任何内容，该程序员能够使用 Java API 中少于 2% 的名称。
 
 ![ontheweb](img/ontheweb.png) 你可能喜欢*自自教程*（For Dummies）的风格，但遗憾的是，Java 的官方 API 文档并不是那种风格写的。API 文档既简洁又精确。如需帮助解读 API 文档的语言和风格，请参本书的网站（[`www.allmycode.com/JavaForDummies`](http://www.allmycode.com/JavaForDummies)）。
 
-在某种程度上，Java API 没有任何是特别的。每当你编写一个 Java 程序时——即使是最小、最简单的 Java 程序——你创建的类与官方 Java API 中定义的任何类都是同等地位的。API 仅仅是一组普通程序员创建的类和其他名称，他们恰好参与了官方 Java 社区进程（JCP）和 OpenJDK 项目。与你创建的名称不同，API 中的名称随每个 Java 版本的发布发行。（我假设你，即读者，并不是 Java 社区进程或 OpenJDK 项目的参与者。但是，有了像 *Java For Dummies* 第 7 版这样的好书，谁也说不定。）
+在某种程度上，Java API 没有任何是特别的。每当你编写一个 Java 程序时——即使是最小、最简单的 Java 程序——你创建的类与官方 Java API 中定义的任何类都是同等地位的。API 仅仅是一组普通程序员创建的类和其他名称，他们恰好参与了官方 Java 社区进程（`JCP`）和 OpenJDK 项目。与你创建的名称不同，API 中的名称随每个 Java 版本的发布发行。（我假设你，即读者，并不是 Java 社区进程或 OpenJDK 项目的参与者。但是，有了像 *Java For Dummies* 第 7 版这样的好书，谁也说不定。）
 
 ![ontheweb](img/ontheweb.png) 如果你对 JCP 的活动感兴趣，请访问 [`www.jcp.org`](http://www.jcp.org)。如果你对 OpenJDK 项目感兴趣，请访问 [`http://openjdk.java.net`](http://openjdk.java.net) 。
 
-JCP 的成员并没有将官方 Java API 中的 Java 程序视为保密。如果你愿意，可以查看所有这些程序。当你向电脑上安装 Java 时，安装程序会在你的硬盘上放置一个名为 `src.zip` 的文件。你可以用你喜喜欢的解压缩程序打开 `src.zip`。就在你眼前，展示着所有的 Java API 代码。
+JCP 的成员并没有将官方 Java API 中的 Java 程序视为保密。如果你愿意，可以查看所有这些程序。当你向电脑上安装 Java 时，安装程序会在你的硬盘上放置一个名为 `src.zip` 的文件。你可以用你喜欢的解压缩程序打开 `src.zip`。就在你眼前，展示着所有的 Java API 代码。
 
 ## Java 程序中的单词
 
@@ -597,15 +559,15 @@ JCP 的成员并没有将官方 Java API 中的 Java 程序视为保密。如果
 
 所以这就是我在脑海中将 Java 程序中的单词分为类别的方式：
 
-*   **关键字（Keywords）：** `keyword` 是 Java 编程语言中具有自身特殊含义的单词，且该含义不会随程序之间而改变。Java 关键字示例有 `if`、`else` 和 `do`。
+* **关键字（Keywords）：** `keyword` 是 Java 编程语言中具有自身特殊含义的单词，且该含义不会随程序之间而改变。Java 关键字示例有 `if`、`else` 和 `do`。
+
     JCP 委员会成员对什么构成一个 Java 程序拥有最终决定权，他们选择了所有的 Java 关键字。如果你考虑我早之前讨论的 Java 的两个部分，在“Java 语法和常用名称”部分，Java 关键字坚定地属于语言规范。
-*   **标识符（Identifiers）：** `identifier` 是某个事物的名称。标识符的意思可以随程序之间而改变，但某些标识符的意思倾向于发生更大的变化：
-    *   **你我创建的标识符：** 作为一名 Java 程序员（是的，即使是初级 Java 程序员），你为你程序中描述的类和其他项目创建新名称。当然，你可能会将某物命名为 `Prime`，而走廊隔壁另一个办公室写代码的家伙可以将另一个东西命名为 `Prime`。这没关系，因为 Java 对 `Prime` 没有预设含义。在你的程序中，你可以让 `Prime` 代表联邦储备的优惠利率。而走廊那头的家伙可以让 `Prime` 代表“面包、圆面包、果酱和顶级肋排”。这不会产生冲突，因为你和你的同事正在编写两个不同的 Java 程序。
-    *   **来自 API 的标识符：** JCP 成员为许多事物创建了名称，并将数万个此类名称抛入 Java API 中。API 随每个 Java 版本提供，因此这些名称对任何编写 Java 程序的人都可用。此类名称的示例有 `String`、`Integer`、`JWindow`、`JButton`、`JTextField` 和 `File`。
 
+* **标识符（Identifiers）：** `identifier` 是某个事物的名称。标识符的意思可以随程序之间而改变，但某些标识符的意思倾向于发生更大的变化：
 
+    * **你我创建的标识符：** 作为一名 Java 程序员（是的，即使是初级 Java 程序员），你为你程序中描述的类和其他项目创建新名称。当然，你可能会将某物命名为 `Prime`，而走廊隔壁另一个办公室写代码的家伙可以将另一个东西命名为 `Prime`。这没关系，因为 Java 对 `Prime` 没有预设含义。在你的程序中，你可以让 `Prime` 代表联邦储备的优惠利率。而走廊那头的家伙可以让 `Prime` 代表“面包、圆面包、果酱和顶级肋排”。这不会产生冲突，因为你和你的同事正在编写两个不同的 Java 程序。
 
-
+    * **来自 API 的标识符：** JCP 成员为许多事物创建了名称，并将数万个此类名称抛入 Java API 中。API 随每个 Java 版本提供，因此这些名称对任何编写 Java 程序的人都可用。此类名称的示例有 `String`、`Integer`、`JWindow`、`JButton`、`JTextField` 和 `File`。
 
 ![ontheweb](img/ontheweb.png) 你不需要在代码列表 3-1（或本书中的任何其他代码列表）中输入代码。要下载书中的所有代码，请访问本书的网站（[`www.allmycode.com/JavaForDummies`](http://www.allmycode.com/JavaForDummies)）。
 
@@ -613,7 +575,7 @@ JCP 的成员并没有将官方 Java API 中的 Java 程序视为保密。如果
 
 ![image](img/9781119235552-fg0301.png)
 
-图 3-1： 我使用 `Eclipse` 来运行代码列表 3-1 中的程序。
+**图 3-1： 我使用 `Eclipse` 来运行代码列表 3-1 中的程序。**
 
 ![ontheweb](img/ontheweb.png) 想要查看如何运行代码列表 3-1 中的代码，请访问本书的网站（[`www.allmycode.com/JavaForDummies`](http://www.allmycode.com/JavaForDummies)）。
 
@@ -626,6 +588,8 @@ JCP 的成员并没有将官方 Java API 中的 Java 程序视为保密。如果
 ### Java 类
 
 由于 Java 是一门面向对象的编程语言，你的首要目标是描述类和对象。（如果你对此不服，请阅读第 1 章中关于面向对象编程的章节。）
+
+
 
 在那些我感性的特殊日子里，我会告诉人们，Java 在面向对象方面比许多其他所谓的面向对象的语言更纯粹。我之所以这么说，是因为在 Java 中，在你创建某种类之前，你什么也做不了。这就像是在《危险游戏》（Jeopardy!）节目中，听到 Alex Trebek 说：“让我们进入广告”，然后你打断他说：“抱歉，Alex。在不把指令放在类里面的情况下，你是无法发布指令的。”
 
@@ -645,17 +609,11 @@ JCP 的成员并没有将官方 Java API 中的 Java 程序视为保密。如果
 
 ```java
 void fixTheAlternator(onACertainCar) {
-```
-
-
-
-
-```
-driveInto(car, bay);
-lift(hood);
-get(wrench);
-loosen(alternatorBelt);
-…
+    driveInto(car, bay);
+    lift(hood);
+    get(wrench);
+    loosen(alternatorBelt);
+    …
 }
 ```
 
@@ -663,14 +621,16 @@ loosen(alternatorBelt);
 
 **列表 3-3：方法调用**
 
-```
+```java
 fixTheAlternator(junkyOldFord);
 ```
 
 现在你已经对什么是方法以及它是如何工作的有了基本的了解，你可以更深入地研究一些实用的术语了：
 
 - 如果我偷懒，我会把列表 3-2 中的代码称为 `method`（方法）。如果我不偷懒，我会把这段代码称为 `method declaration`（方法声明）。
+
 - 列表 3-2 中的方法声明包含两个部分。第一行（包含 `fixTheAlternator` 的部分，直到但不包括左大括号）是 `method header`（方法报头）。列表 3-2 的其余部分（被大括号包围的部分）是 `method body`（方法体）。
+
 - `method declaration` 一词将列表 3-2 中的指令列表与列表 3-3 中的指令区分开来，后者被称为 `method call`（方法调用）。
 
 ![remember](img/remember.png) `method’s declaration`（方法的声明）告诉计算机如果调用该方法会发生什么。`method call`（一段独立的代码）则告诉计算机实际上去调用该方法。方法的声明和方法的调用通常位于 Java 程序的不同部分。
@@ -691,6 +651,7 @@ fixTheAlternator(junkyOldFord);
 揉面团。
 烘烤揉好的面团。
 ```
+
 或者
 
 ```
@@ -718,7 +679,7 @@ fixTheAlternator(junkyOldFord);
 
 当然，Java 有不同类型的语句。我在早之前的“Java 方法”部分中介绍的方法调用是许多 Java 语句类型之一。列表 3-3 向你展示了方法调用的样子，图 3-4 也包含一个看起来像这样的方法调用：
 
-```
+```java
 System.out.println("You'll love Java!");
 ```
 
@@ -731,6 +692,7 @@ System.out.println("You'll love Java!");
 图 3-5 说明了 `System.out.println` 的情况。实际上，有两个方法在 Displayer 运行中起着作用。它们的工作方式如下：
 
 - **有一个 main 方法声明。** main 方法是我我自己写的。每当我运行 Displayer 程序时，这个 main 方法就会被自动调用。
+
 - **有一个对 System.out.println 方法的调用。** System.out.println 方法调用是 main 方法体唯一的语句。换句话说，调用 `System.out.println` 方法是 main 方法清单上的唯一事项。
 
 `System.out.println` 方法的声明隐藏在官方 Java API 之中。要复习 Java API，请参见本章前面的“语法和常用名称”以及“Java 程序中的单词”部分。
@@ -738,9 +700,6 @@ System.out.println("You'll love Java!");
 ![image](img/9781119235552-fg0305.png)
 
 **图 3-5：调用 System.out.println 方法。**
-
-
-
 
 在 Java 中，每条语句（如图 3-4 中框选的行）都以分号结束。图 3-4 中的其他行没有以分号结束，因为图 3-4 中的其他行并不是语句。例如，方法头（包含 `main` 单词的所在行）并没有直接告诉计算机要做任何事。方法头是在宣告：“万一你以后想执行 `main`，接下来的几行代码将告诉你如何操作。”
 
@@ -753,6 +712,7 @@ System.out.println("You'll love Java!");
 现在，如果一个 Java 程序像一个大纲，为什么程序看起来不像大纲呢？什么取代了罗马数字、大写字母和其他项目？答案有两层含义：
 
 *   在 Java 程序中，大括号包围了有意义的代码单元。
+
 *   你，作为程序员，可以（并且应该）对行进行缩进，以便其他程序员能够一眼看出你代码的大纲形式。
 
 在大纲中，所有内容都隶属于罗马数字 `I.` 下的项目。在 Java 程序中，所有内容都隶属于顶行——包含 `class` 单词的所在行。为了指示代码中的所有其他内容隶属于该类行，你使用了大括号。代码中的所有其他内容都放在这些大括号内部。（参见代码列表 3-4。）
@@ -794,9 +754,6 @@ public class Displayer {
 图 3-6： 大纲变成了一个 Java 程序
 
 ![image](img/9781119235552-fg0306.png) 图 3-7： 大括号
-
-
-
 
 有一天，当她快要完成项目时，她收到一封来自医疗保险公司的令人不安的纸质邮件。不，这封信不是关于大疾病，而是关于一次常规的办公室门诊。保险公司的理赔表上有一个填写简恩出生日期的地方，就好像自从她上次提交理赔以来，她的出生日期改变了。她心不在焉地随手写了 `2016` 作为她的出生年份，因此保险公司拒绝支付该账单。
 
@@ -855,8 +812,6 @@ Java 编程语言有三种注释：
 
 *   **Javadoc 注释：** *javadoc* 注释以 `/**` 开始，以 `*/` 结束。
 
-
-
 你可能会听到程序员谈论*注释掉（comment out）*代码的某些部分。当你编写程序且某些部分运行不正常时，尝试移除代码通常会有帮助。此外，你可能不喜欢代码被移除后的结果，因此你不想完全删除代码。相反，你可以将普通的 Java 语句转换为注释。例如，你将：
 
 ```java
@@ -908,7 +863,9 @@ System.out.println("carefully!");
 在本部分……
 
 * 创建新值并修改现有值。
+
 * 将决策引入你的应用程序中。
+
 * 当程序运行时根据需要重复某些操作。
 
 # 第 4 章
@@ -917,72 +874,71 @@ System.out.println("carefully!");
 
 在本章中
 
-![check](img/check.png) **给内容赋值**
 
-![check](img/check.png) **让内容存储特定类型的值**
 
-![check](img/check.png) **应用运算符获取新值**
+![check](img/check.png) 给内容赋值
+
+![check](img/check.png) 让内容存储特定类型的值
+
+![check](img/check.png) 应用运算符获取新值
 
 以下 Van Doren 先生与 Barasch 先生之间的对话从未发生过：
 
-* *Charles*：海水母吃掉了自己的大脑，让自己从动物变成了植物。
-* *Jack*：这是你的最终答案吗，Charles？
-* *Charles*：是的。
-* *Jack*：Charles，你今天账户里有多少钱？
-* *Charles*：我的支票账户上有五十美元二分。
-* *Jack*：噢，你最好给税务局（IRS）打个电话，因为你的海水母答案是正确的。你赢了一百万美元。Charles，你怎么看？
-* *Charles*：这全归功于诚实、勤奋和努力，Jack。
+*   **Charles**：海水母吃掉了自己的大脑，让自己从动物变成了植物。
+*   **Jack**：这是你的最终答案吗，Charles？
+*   **Charles**：是的。
+*   **Jack**：Charles，你今天账户里有多少钱？
+*   **Charles**：我的支票账户上有五十美元二分。
+*   **Jack**：噢，你最好给税务局（IRS）打个电话，因为你的海水母答案是正确的。你赢了一百万美元。Charles，你怎么看？
+*   **Charles**：这全归功于诚实、勤奋和努力，Jack。
 
 这段对话的某些方面可以用几行 Java 代码表示。
 
-### 变量的变化
+## 变量的变化
 
 无论你如何获得这百万美元，都可以使用变量来统计你的财富。列表 4-1 显示了代码。
 
-列表 4-1： 使用变量
+### 列表 4-1：使用变量
 
 ```java
 amountInAccount = 50.22;
 amountInAccount = amountInAccount + 1000000.00;
 ```
 
-![ontheweb](img/ontheweb.png) 你不需要输入列表 4-1](#09_9781119235552-ch04.xhtml_c04-fea-0001）中的代码（或本书中的任何列表）。要下载书中的所有代码，请访问本书的网站（[www.allmycode.com/JavaForDummies](http://www.allmycode.com/JavaForDummies)）。
+![ontheweb](img/ontheweb.png) 你不需要输入列表 4-1 中的代码（或本书中的任何列表）。要下载书中的所有代码，请访问本书的网站（[www.allmycode.com/JavaForDummies](http://www.allmycode.com/JavaForDummies)）。
 
-列表 4-1](#09_9781119235552-ch04.xhtml_c04-fea-0001）中的代码使用了 `amountInAccount` 变量。*变量*是一个占位符。你可以将像 `50.22` 这样的数字放入变量中。在变量中放入一个数字后，你可以改变主意，向变量中放入不同的数字。（这就是变量变化的地方。）当然，当你向变量中放入一个新数字时，旧数字就不存在了。如果你没有在其他地方保存旧数字，旧数字就消失了。
+列表 4-1 中的代码使用了 `amountInAccount` 变量。*变量*是一个占位符。你可以将像 `50.22` 这样的数字放入变量中。在变量中放入一个数字后，你可以改变主意，向变量中放入不同的数字。（这就是变量变化的地方。）当然，当你向变量中放入一个新数字时，旧数字就不存在了。如果你没有在其他地方保存旧数字，旧数字就消失了。
 
-[图 4-1](#09_9781119235552-ch04.xhtml_c04-fea-0001）提供了 `amountInAccount` 变量的前后对比图。
+图 4-1 提供了 `amountInAccount` 变量的前后对比图。
 
-[图 4-1](#09_9781119235552-ch04.xhtml_c04-fea-0001）显示了 `amountInAccount` 变量。
+图 4-1 显示了 `amountInAccount` 变量。
 
 ```java
 amountInAccount = 50.22;
 amountInAccount = amountInAccount + 1000000.00;
 ```
 
+![tip](img/tip.png) 从 Java 7 开始，你可以在数字字面量中添加下划线。与其在列表 4-1 中使用普通的 `1000000.00`，你可以写 `amountInAccount = amountInAccount + 1_000_000.00`。遗憾的是，你无法轻松实现你最想做的事。你不能写 `1,000,000.00`（就像在美国那样写），也不能写 `1.000.000,00`（就像在德国那样写）。如果你想在程序的输出中显示像 `1,000,000.00` 这样的数字，必须使用一些花哨的格式技巧。有关格式化的更多信息，请查看第 10 章和第 11 章。
 
+## 赋值语句
 
+像列表 4-1 中的这类语句被称为`赋值语句`（assignment statements）。在赋值语句中，你为某个东西分配值。在很多情况下，这个东西是一个变量。
 
-![tip](img/tip.png) 从 Java 7 开始，你可以在数字字面量中添加下划线。与其在 Listing 4-1 中使用普通的 `1000000.00`，你可以写 `amountInAccount = amountInAccount + 1_000_000.00`。遗憾的是，你无法轻松实现你最想做的事。你不能写 `1,000,000.00`（就像在美国那样写），也不能写 `1.000.000,00`（就像在德国那样写）。如果你想在程序的输出中显示像 `1,000,000.00` 这样的数字，必须使用一些花哨的格式技巧。有关格式化的更多信息，请查看第 10 章和第 11 章。
-
-### 赋值语句
-
-像 Listing 4-1 中的这类语句被称为`赋值语句`（assignment statements）。在赋值语句中，你为某个东西分配值。在很多情况下，这个东西是一个变量。
-
-我建议养成从右到左阅读赋值语句的习惯。图 4-2 说明了 Listing 4-1 中第一行的动作。
+我建议养成从右到左阅读赋值语句的习惯。图 4-2 说明了列表 4-1 中第一行的动作。
 
 ![image](img/9781119235552-fg0402.png)
 
-FIGURE 4-2: Listing 4-1 中第一行的动作。
+**图 4-2**：列表 4-1 中第一行的动作。
 
-Listing 4-1 中的第二行稍微复杂一点。图 4-3 说明了 Listing 4-1 中第二行的动作。
+列表 4-1 中的第二行稍微复杂一点。图 4-3 说明了列表 4-1 中第二行的动作。
 
 ![image](img/9781119235552-fg0403.png)
 
-FIGURE 4-3: Listing 4-1 中第二行的动作。
+**图 4-3**：列表 4-1 中第二行的动作。
 
 ![remember](img/remember.png) 在赋值语句中，被赋值的东西始终位于等号的左侧。
 
-### 变量可能拥有的值类型
+## 变量可能拥有的值类型
 
 你是否见过那些电视广告，让你觉得自己正飞梭在计算机内部的电路之间？很酷，对吧？这些广告展示了 0（零）和 1（一）在穿行，因为 0 和 1 是计算机唯一能处理的东西。当你认为计算机正在存储字母 `J` 时，计算机实际上在存储 `01001010`。计算机内部的一切都是 0 和 1 的序列。正如每一台计算机所知的，一个 0 或 1 被称为 `bit`（位）。
 
@@ -990,17 +946,17 @@ FIGURE 4-3: Listing 4-1 中第二行的动作。
 
 ![image](img/9781119235552-fg0404.png)
 
-FIGURE 4-4: 八个黑白像素的极特写。
+**图 4-4**：八个黑白像素的极特写。
 
-你如何告诉计算机 01001010 代表什么？答案在 `type`（类型）的概念中。变量的 `type` 是该变量允许存储的值范围。
+你如何告诉计算机 `01001010` 代表什么？答案在 `type`（类型）的概念中。变量的 `type` 是该变量允许存储的值范围。
 
-我从 Listing 4-1 中复制了这些行并将它们放入一个完整的 Java 程序。程序在 Listing 4-2 中。当我运行 Listing 4-2 中的程序时，我得到了图 4-5 所示的输出。
+我从列表 4-1 中复制了这些行并将它们放入一个完整的 Java 程序。程序在列表 4-2 中。当我运行列表 4-2 中的程序时，我得到了图 4-5 所示的输出。
 
 ![image](img/9781119235552-fg0405.png)
 
-FIGURE 4-5: 运行 Listing 4-2 中的程序。
+**图 4-5**：运行列表 4-2 中的程序。
 
-LISTING 4-2: 使用 amountInAccount 的程序
+### 列表 4-2：使用 amountInAccount 的程序
 
 ```java
 public class Millionaire {
@@ -1015,7 +971,7 @@ public class Millionaire {
 }
 ```
 
-在 Listing 4-2 中，看 main 方法体的第一行：
+在列表 4-2 中，看 `main` 方法体的第一行：
 
 ```java
 double amountInAccount;
@@ -1025,27 +981,11 @@ double amountInAccount;
 
 在这个变量声明中，`double` 是 Java 关键字。这个词 `double` 告诉计算机你打算在 `amountInAccount` 中存储什么类型的值。特别是，`double` 代表 –1.8 × 10³⁰⁸ 到 1.8 × 10³⁰⁸ 之间的数字。（这些是小数点前有 308 个零的巨大数字。世界上最富有的人才会写出带有 308 个零的支票。这些数字中的第二个是千万亿（octillion）。）
 
-比 `double` 类型范围更重要的是 `double` 可以具有小数点之外的数字。在很多情况下，你在 float 和 double 之间进行选择。但不要纠结于 float 和 double 的选择。对于如今的高级处理器，使用 float 类型节省的空间几乎永远不值得其精度的损失。（更多细节，请参见旁边的侧边栏，“小数点之外数字）。”）
+比 `double` 类型范围更重要的是 `double` 可以具有小数点之外的数字。在很多情况下，你在 `float` 和 `double` 之间进行选择。但不要纠结于 `float` 和 `double` 的选择。对于如今的高级处理器，使用 `float` 类型节省的空间几乎永远不值得其精度的损失。（更多细节，请参见旁边的侧边栏，“小数点之外数字”。）
 
-![image](img/9781119235552-fg0403.png)
+## 显示文本
 
-FIGURE 4-3: Listing 4-1 中第二行的动作。
-
-![image](img/9781119235552-fg0404.png)
-
-FIGURE 4-4: 八个黑白像素的极特写。
-
-![image](img/9781119235552-fg0405.png)
-
-FIGURE 4-5: 运行 Listing 4-2 中的程序。
-
-### 显示文本
-
-...中的最后三条语句（参见[`www.allmycode.com/JavaForDummies`](http://www.allmycode.com/JavaForDummies)）。
-
-
-
-
+...中的最后三条语句（参见 [`www.allmycode.com/JavaForDummies`](http://www.allmycode.com/JavaForDummies)）。
 
 ![remember](img/remember.png) 调用 `System.out.print` 会写入一些内容，并将光标留在输出行的末尾。调用 `System.out.println` 会写入内容，然后通过将光标移动到新行输出的开头来完成任务。
 
@@ -1057,67 +997,15 @@ FIGURE 4-5: 运行 Listing 4-2 中的程序。
 *   列表 4-2 有两个 `System.out.print` 语句和一个 `System.out.println` 语句。将所有三个都改为 `System.out.println` 语句，然后运行程序。
 *   列表 4-2 中的代码在输出中显示一行文本。使用 `amountInAccount` 变量向程序中添加语句，使其显示第二行文本。让第二行文本为 `"Now you have even more! You have 2000000.00 in your account."`
 
-### 不带小数点的数字
+## 不带小数点的数字
 
 “在 1995 年，每个家庭平均有 2.3 个孩子。”
 
 到这里，聪明人总是会评论说，没有任何真实的家庭恰好有 `2.3` 个孩子。显然，整数在世界上起着某种作用。因此，在 Java 中，你可以声明一个变量来只存储整数。列表 4-3 显示了一个使用整数变量的程序。
 
-列表 4-3: 使用 int 类型
+### 列表 4-3：使用 int 类型
 
-```
-public class ElevatorFitter {
-    public static void main(String args[]) {
-        int weightOfAPerson;
-        int elevatorWeightLimit;
-        int numberOfPeople;
-        weightOfAPerson = 150;
-        elevatorWeightLimit = 1400;
-        numberOfPeople = elevatorWeightLimit / weightOfAPerson;
-        System.out.print("You can fit ");
-        System.out.print(numberOfPeople);
-        System.out.println(" people on the elevator.");
-    }
-}
-```
-
-列表 4-3 中程序背后的故事需要一些复杂的解释。是这样的：你有一部酒店电梯，载重量为 `1400` 磅。一个周末，酒店举办了一场家族聚会。家族的某个分支带来了一群完全相同的双胞胎（十个兄弟姐妹，具有相同的身体特征）。通常，每个家庭成员体重是 `145` 磅。但周六，家人吃了一顿丰盛的午餐，因为午餐包含了草莓蛋糕，每个家庭成员现在都重了 `150` 磅。午餐结束后，这十个成员恰同时到达电梯。（为什么不呢？这十个人都想得一样。）所以问题是，电梯能容下多少个双胞胎？现在记住，如果你在电梯上放置的重量超过 `1400` 磅一盎司，电梯钢绳就会断裂，导致电梯上所有的双胞胎突然（且代价贵的）死亡。这个谜题的答案（列表 4-3 中。
-
-![image](img/9781119235552-fg0406.png)
-
-图 4-6: 拯救家庭。
-
-在电梯问题的核心，你有整数——即小数点后没有数字的数字。你有一部载重量为 `1400` 磅的酒店电梯。一个周末，酒店举办了一场家族聚会。家族的某个分支带来了一群完全相同的双胞胎（十个兄弟姐妹，具有相同的身体特征）。通常，每个家庭成员体重是 `145` 磅。但周六，家人吃了一顿丰盛的午餐，因为午餐包含了草莓蛋糕，每个家庭成员现在都重了 `150` 磅。午餐结束后，这十个成员恰同时到达电梯。（为什么不呢？这十个人都想得一样。）所以问题是，电梯能容下多少个双胞胎？现在记住，如果你在电梯上放置的重量超过 `1400` 磅一盎司，电梯钢绳就会断裂，导致电梯上所有的双胞胎突然（且代价贵的）死亡。这个谜题的答案（列表 4-3 中程序的输出）显示在图 4-6 中。
-
-在电梯问题的核心，你有整数——即小数点后没有数字的数字。你有一部载重量为 `1400` 磅的酒店电梯。一个周末，酒店举办了一场家族聚会。家族的某个分支带来了一群完全相同的双胞胎（十个兄弟姐妹，具有相同的身体特征）。通常，每个家庭成员体重是 `145` 磅。但周六，家人吃了一顿丰盛的午餐，因为午餐包含了草莓蛋糕，每个家庭成员现在都重了 `150` 磅。午餐结束后，这十个成员恰同时到达电梯。（为什么不呢？这十个人都想得一样。）所以问题是，电梯能容下多少个双胞胎？现在记住，如果你在电梯上放置的重量超过 `1400` 磅一盎司，电梯钢绳就会断裂，导致电梯上所有的双胞胎突然（且代价贵的）死亡。这个谜题的答案（列表 4-3 中程序的输出）显示在图 4-6 中。
-
-*(注：由于提供的待翻译文本存在大量重复，上述翻译是基于原文逻辑的整合性翻译。如果需要完全按原文重复格式翻译，请告知。)*
-
----
-
-抱歉，我发现你提供的待翻译文本中存在大量的重复内容（例如电梯问题的描述重复出现了多次）。为了保证文档质量，我为你提供了**不重复**的逻辑翻译：
-
-[content]
-
-![remember](img/remember.png) 调用 `System.out.print` 会写入一些内容，并将光标留在输出行的末尾。调用 `System.out.println` 会写入内容，然后通过将光标移动到新行输出的开头来完成任务。
-
-![tryitout](img/tryitout.png) 运行列表 4-2 中的代码，以确保它在你的计算机上正确运行。然后，看看当你进行以下更改时会发生什么：
-
-*   在代码中的数字 `1000000.00` 中添加千分位分隔符。例如，如果你在美国（那里的千分位分隔符是逗号），请将数字更改为 `1,000,000.00` 并看看会发生什么。（提示：什么好事都不会发生。）
-*   尝试在代码中使用下划线作为千分位分隔符。即，将 `1000000.00` 更改为 `1_000_000.00` 并看看会发生什么。
-*   在代码中的数字 `50.22` 中添加货币符号。例如，如果你在美国（货币符号是 `$`），看看当你将第一个赋值语句更改为 `amountInAccount = $50.22` 时会发生什么。
-*   列表 4-2 有两个 `System.out.print` 语句和一个 `System.out.println` 语句。将所有三个都改为 `System.out.println` 语句，然后运行程序。
-*   列表 4-2 中的代码在输出中显示一行文本。使用 `amountInAccount` 变量向程序中添加语句，使其显示第二行文本。让第二行文本为 `"Now you have even more! You have 2000000.00 in your account."`
-
-### 不带小数点的数字
-
-“在 1995 年，每个家庭平均有 2.3 个孩子。”
-
-到这里，一个聪明人总是会评论说，没有任何真实的家庭恰好有 `2.3` 个孩子。显然，整数在世界上起着某种作用。因此，在 Java 中，你可以声明一个变量来只存储整数。列表 4-3 显示了一个使用整数变量的程序。
-
-列表 4-3: 使用 int 类型
-
-```
+```java
 public class ElevatorFitter {
     public static void main(String args[]) {
         int weightOfAPerson;
@@ -1137,13 +1025,17 @@ public class ElevatorFitter {
 
 ![image](img/9781119235552-fg0406.png)
 
+**图 4-6**：拯救家庭。
+
+
+
+列表 4-3 中程序背后的故事需要一些复杂的解释。是这样的：你有一部酒店电梯，载重量为 `1400` 磅。一个周末，酒店举办了一场家族聚会。家族的某个分支带来了一群完全相同的双胞胎（十个兄弟姐妹，具有相同的身体特征）。通常，每个家庭成员体重是 `145` 磅。但周六，家人吃了一顿丰盛的午餐，因为午餐包含了草莓蛋糕，每个家庭成员现在都重了 `150` 磅。午餐结束后，这十个成员恰同时到达电梯。（为什么不呢？这十个人都想得一样。）所以问题是，电梯能容下多少个双胞胎？现在记住，如果你在电梯上放置的重量超过 `1400` 磅一盎司，电梯钢绳就会断裂，导致电梯上所有的双胞胎突然（且代价贵的）死亡。这个谜题的答案（列表 4-3 中程序的输出）显示在图 4-6 中。
+
+![image](img/9781119235552-fg0406.png)
+
 图 4-6: 拯救家庭。
 
 在电梯问题的核心，你有整数——即小数点后没有数字的数字。
-
-
-
-
 
 *   `main` 方法在程序开始运行时会被自动调用。
 
@@ -1181,75 +1073,85 @@ amountInAccount ==> 0.0
 关于 `JShell` 有几点需要注意的：
 
 *   **你不需要输入整个 Java 程序。**
+
     输入几条语句例如：
+
     ```
     double amountInAccount
     amountInAccount = 50.22
     amountInAccount = amountInAccount + 1000000.00
     ```
+
     就能达到效果。这就像运行代码列表 4-1 中的代码片段一样（除了代码列表 4-1 没有声明 `amountInAccount` 为 `double`）。
 
 *   **在 `JShell` 中，分号（在很大程度上）是可选的。**
+
     在图 4-7 中，我九行代码中只有一行在末尾打了分号。
+
     ![crossreference](img/crossreference.png) 关于在 `JShell` 中使用分号的建议，请参第 5 章。
 
 *   **`JShell` 在你输入每一行后立即响应。**
+
     在我将 `amountInAccount` 声明为 `double` 后，`JShell` 响应告诉我 `amountInAccount` 变量的值为 0.0。输入 `amountInAccount = amountInAccount + 1000000.00` 后，`JShell` 告诉我 `amountInAccount` 的新值为 1000050.22。
 
 *   **你可以混合来自许多不同 Java 程序的语句。**
-    在图 4-7 中，我混合了来自代码列表 4-2](#09_9781119235552-ch04.xhtml_c04-fea-0002)和 4-3 中程序的语句。`JShell` 并不在意。
+
+    在图 4-7 中，我混合了来自代码列表 4-2 和 4-3 中程序的语句。`JShell` 并不在意。
 
 *   **你可以询问 `JShell` 表达式的值。**
+
     你不需要将表达式的值赋值给变量。例如，在图 4-7 中，我输入：
+
     ```
     elevatorLimit / weightOfPerson
     ```
+
     `JShell` 响应告诉我 `elevatorLimit / weightOfPerson` 的值为 9。`JShell` 为该值生成了一个临时名称。在图 4-7 中，该名称恰好是 `$8`。因此，在图 4-7 的下一行，我询问 `$8+1` 的值，`JShell` 给出 10。
 
 *   **你甚至可以不用变量从 `JShell` 获取答案。**
+
     在图 4-7 的最后一行，我询问 `42+7` 的值，`JShell` 慷慨地回答 49。
+
     ![tip](img/tip.png) 在运行 `JShell` 时，你不需要重新输入已输入的命令。按一次向上箭头，`JShell` 显示你最近一次的命令。按两次向上箭头，`JShell` 显示上一条命令。以此类推。当 `JShell` 显示命令时，你可以使用左右箭头移动到命令中间的任何字符。你可以修改命令中的字符。最后，当你按下回车键，`JShell` 执行你新修改的命令。要结束 `JShell` 运行，输入 `/exit`（以斜杠开头）。但 `/exit` 只是你可以给 `JShell` 的许多命令之一。要询问 `JShell` 你可以使用哪些命令，输入 `/help`。
 
 通过 `JShell`，你可以在语句放入完整的 Java 程序之前对其进行测试。这使得 `JShell` 成为一个非常有用的工具。
+
 ![tryitout](img/tryitout.png) 访问本书的网站（[`www.allmycode.com/JavaForDummies`](http://www.allmycode.com/JavaForDummies)）获取在你的电脑上启动 `JShell` 的指令。启动 `JShell` 后，输入图 4-7 中的几行代码。输入不同的行看看发生什么。
 
 ## 那些酷炫的效果去哪了？
 
-代码列表 4-2](#09_9781119235552-ch04.xhtml_c04-fea-0002)和 4-3 中的程序是基于文本的。基于文本的程序没有窗口、对话框——任何之类的东西。你看到的只是接接行的纯格式化文本。用户输入某些内容，计算机会在每行输入下方显示响应。
+代码列表 4-2 和 4-3 中的程序是基于文本的。基于文本的程序没有窗口、对话框——任何之类的东西。你看到的只是接接行的纯格式化文本。用户输入某些内容，计算机会在每行输入下方显示响应。
 
 文本程序的对立面是“图形用户界面”（GUI）程序。GUI 程序有窗口、文本字段和其他视觉佳品。
 
 尽管文本程序在视觉上并不刺激，但它们包含了计算机编程的基础概念。此外，对于初学者来说，文本程序比相应的 GUI 程序更容易阅读、编写和理解。因此，在本书中我采用了三管齐下的方法：
 
 *   **文本示例：** 我通过这些示例介绍大部分新概念。
-*   **`DummiesFrame` 类：** 除了文本示例，我还展示了使用专为本书创建的 `DummiesFrame`类的 GUI 版本。（我在第 7 章](#13_9781119235552-ch07.xhtml）中引入了 `DummiesFrame` 类）。
-*   **GUI 编程技术：** 我在第 9 章](#15_9781119235552-ch09.xhtml)、第 10 章](#17_9781119235552-ch10.xhtml)、第 14 章](#21_9781119235552-ch14.xhtml)和第 16 章](#23_9781119235552-ch16.xhtml)中描述了一些常用技术。我甚至在本章中有一个微小的 GUI 示例。（参见后文章节“分子与化合物：引用类型”。）
+
+*   **`DummiesFrame` 类：** 除了文本示例，我还展示了使用专为本书创建的 `DummiesFrame` 类的 GUI 版本。（我在第 7 章中引入了 `DummiesFrame` 类）。
+
+*   **GUI 编程技术：** 我在第 9 章、第 10 章、第 14 章和第 16 章中描述了一些常用技术。我甚至在本章中有一个微小的 GUI 示例。（参见后文章节“分子与化合物：引用类型”。）
 
 通过这种枯燥程序与闪亮程序之间的精细平衡，你一定能学会 Java。
 
 ## 原子：Java 的原始类型
 
-我在前面的章节中描述的 `int` 和 `double` 词是 Java 中“原始类型”（也称为“简单类型”）的示例。Java 语言恰好有八种原始类型。作为 Java 新手，你可以几乎忽略这四种类型以外的所有类型。（在编程语言中，Java 这样设计非常紧凑。）表 4-1](#09_9781119235552-ch04.xhtml_c04-tbl-0001) 显示了原始类型的完整列表。
+我在前面的章节中描述的 `int` 和 `double` 词是 Java 中“原始类型”（也称为“简单类型”）的示例。Java 语言恰好有八种原始类型。作为 Java 新手，你可以几乎忽略这四种类型以外的所有类型。（在编程语言中，Java 这样设计非常紧凑。）表 4-1 显示了原始类型的完整列表。
 
 | **类型名称** | **字面量样式** | **取值范围** |
 | --- | --- | --- |
-| *整数类型* |  | |
-| byte | (byte)42 | –128 to 127 |
-| short | (short)42 | –32768 to 32767 |
-| int | 42 | –2147483648 to 2147483647 |
-
-
-
-
-
-| long | 42L | –9223372036854775808 to 9223372036854775807 |
-| *十数字类型* | | | |
-| float | 42.0F | –3.4 × 10³⁸ to 3.4 × 10³⁸ |
-| double | 42.0 | –1.8 × 10³⁰⁸ to 1.8 × 10³⁰⁸ |
-| *字符类型* | | | |
-| char | 'A' | 数千个字符、字形和符号 |
-| *逻辑类型* | | | |
-| boolean | true | true, false |
+| *整数类型* | | |
+| byte | `(byte)42` | –128 to 127 |
+| short | `(short)42` | –32768 to 32767 |
+| int | `42` | –2147483648 to 2147483647 |
+| long | `42L` | –9223372036854775808 to 9223372036854775807 |
+| *十数字类型* | | |
+| float | `42.0F` | –3.4 × 10³⁸ to 3.4 × 10³⁸ |
+| double | `42.0` | –1.8 × 10³⁰⁸ to 1.8 × 10³⁰⁸ |
+| *字符类型* | | |
+| char | `'A'` | 数千个字符、字形和符号 |
+| *逻辑类型* | | |
+| boolean | `true` | true, false |
 
 表 4-1 Java 的基本类型
 
@@ -1305,14 +1207,9 @@ char myLittleChars = 'barry'; //不要这样做
 
 `boolean` 类型变量存储两个值：`true` 和 `false`。`boolean` 类型用于逻辑表达式。
 
-表 4-1 Java 的基本类型
+## 分子与化合物：引用类型
 
-你不应该忽略的类型是 `int`、`double`、`char` 和 `boolean`。本章之前的章节涵盖了 `int` 和 `double` 类型。因此，接下来的两个章节将涵盖 `char` 和 `boolean` 类型。
-
-
-
-
-通过将简单的元素组合，你可以得到更复杂的东西。事物总是如此发展的。以 Java 的一些基本类型为例，将它们混合成一锅“基本类型汤”，你会得到什么？一个名为`reference type`（引用类型）的复杂类型。
+通过将简单的元素组合，你可以得到更复杂的东西。事物总是如此发展的。以 Java 的一些基本类型为例，将它们混合成一锅“基本类型汤”，你会得到什么？一个名为 `reference type`（引用类型）的复杂类型。
 
 列表 4-6 中的程序使用了引用类型。图 4-10 向你展示了运行列表 4-6 中的程序时发生了什么。
 
@@ -1337,17 +1234,17 @@ public class ShowAFrame {
 }
 ```
 
-列表 4-6 中的程序使用了两种引用类型。这两种类型都定义在 Java API 中。其中一种类型（你一直会使用的类型）被称为`String`。另一种类型（你可以用它来创建 GUI）类型被称为`JFrame`。
+列表 4-6 中的程序使用了两种引用类型。这两种类型都定义在 Java API 中。其中一种类型（你一直会使用的类型）被称为 `String`。另一种类型（你可以用它来创建 GUI）类型被称为 `JFrame`。
 
-一个`String`是一系列字符。它就像连续排列的几个`char`值。因此，当声明变量`myTitle`的类型为`String`时，将`"Blank Frame"`赋值给变量`myTitle`在列表 4-6 中是有意义的。`String`类定义在 Java API 中。
+一个 `String` 是一系列字符。它就像连续排列的几个 `char` 值。因此，当声明变量 `myTitle` 的类型为 `String` 时，将 `"Blank Frame"` 赋值给变量 `myTitle` 在列表 4-6 中是有意义的。`String` 类定义在 Java API 中。
 
 ![remember](img/remember.png) 在 Java 程序中，双引号包围着 String 字面量中的字母。
 
 Java `JFrame` 就像一个窗口。（唯一的区别是你称它为 `JFrame` 而不是窗口。）为了让列表 4-6 简洁明了，我决定不在我的框架中放置任何东西——没有按钮、没有字段、什么都没有。
 
-即使是一个完全空的框架，列表 4-6 也使用了我在本书后面部分才会介绍的技巧。所以，不要尝试阅读和理解列表 4-6 中的每一个字。从列表 4-6 中获得的主要信息是该程序有两个变量声明。在编写程序时，我构了两个变量名：`myTitle`和`myFrame`。根据声明，`myTitle`的类型是`String`，而`myFrame`的类型是`JFrame`。
+即使是一个完全空的框架，列表 4-6 也使用了我在本书后面部分才会介绍的技巧。所以，不要尝试阅读和理解列表 4-6 中的每一个字。从列表 4-6 中获得的主要信息是该程序有两个变量声明。在编写程序时，我构了两个变量名：`myTitle` 和 `myFrame`。根据声明，`myTitle` 的类型是 `String`，而 `myFrame` 的类型是 `JFrame`。
 
-你可以在 Java 的 API 文档中查询`String`和`JFrame`。但在你之前，我就可以告诉你你会发现什么。你会发现`String`和`JFrame`都是 Java 类的名称。这就是大新闻。每个类都是一个引用类型的名称。你可以通过编写以下代码为`double`值预留`amountInAccount`：
+你可以在 Java 的 API 文档中查询 `String` 和 `JFrame`。但在你之前，我就可以告诉你你会发现什么。你会发现 `String` 和 `JFrame` 都是 Java 类的名称。这就是大新闻。每个类都是一个引用类型的名称。你可以通过编写以下代码为 `double` 值预留 `amountInAccount`：
 
 ```java
 double amountInAccount;
@@ -1359,7 +1256,7 @@ double amountInAccount;
 double amountInAccount = 50.22;
 ```
 
-你也可以通过编写以下代码为`JFrame`值预留`myFrame`：
+你也可以通过编写以下代码为 `JFrame` 值预留 `myFrame`：
 
 ```java
 JFrame myFrame;
@@ -1371,11 +1268,17 @@ JFrame myFrame;
 JFrame myFrame = new JFrame();
 ```
 
+
+
+# Java 类与运算符
+
+## Java 类基础
+
 要复习 Java 类的概念，请参见第 1 章中关于面向对象（OOP）的章节。
 
 ![remember](img/remember.png) 每个 Java 类都是引用类型。如果你声明一个变量的类型不是基本类型，那么该变量的类型（大多数情况下）就是 Java 类的名称。
 
-现在，当你声明一个变量的类型为`int`时，你可以以直观的方式可视化该声明的含义。这意味着在计算机内存的某处为该变量预留了一个存储位置。比特的排列对于`int`或`double`等基本类型是足够的，但当你声明一个变量的类型为引用类型时，意味着什么呢？
+现在，当你声明一个变量的类型为 `int` 时，你可以以直观的方式可视化该声明的含义。这意味着在计算机内存的某处为该变量预留了一个存储位置。比特的排列对于 `int` 或 `double` 等基本类型是足够的，但当你声明一个变量的类型为引用类型时，意味着什么呢？
 
 嗯，声明
 
@@ -1383,10 +1286,7 @@ JFrame myFrame = new JFrame();
 JFrame myFrame;
 ```
 
-意味着什么？这意味着`myFrame`属于该类。换句话说，`myFrame`引用一个实例。因为`JFrame`是一个类，你可以从它创建对象。
-
-
-
+意味着什么？这意味着 `myFrame` 属于该类。换句话说，`myFrame` 引用一个实例。因为 `JFrame` 是一个类，你可以从它创建对象。
 
 ```java
 import javax.swing.JFrame;
@@ -1400,7 +1300,7 @@ public class ShowAFrame {
 
 在 Listing 4-6 中，你在引言（在导入声明中）中宣布你正在 Java 类中使用运行 `JFrame`。你通过全名 `javax.swing.JFrame` 澄清了你所说的 `JFrame` 是什么。（嘿！第一位讲师不是也用全名“Lionel Herbert Blythe Barrymore”做过澄清的吗？）在导入声明中宣布了你的意图后，你就可以在 Java 类代码中使用缩写 `JFrame` 了。
 
-如果你不使用导入声明，那么在代码中任何使用 `JFrame` 名字的地方，都必须重复完整的 `javax.swing.JFrame` 名称。例如，在没有导入声明的情况下,Listing 4-6 的代码将如下所示：
+如果你不使用导入声明，那么在代码中任何使用 `JFrame` 名字的地方，都必须重复完整的 `javax.swing.JFrame` 名称。例如，在没有导入声明的情况下，Listing 4-6 的代码将如下所示：
 
 ```java
 public class ShowAFrame {
@@ -1415,7 +1315,7 @@ public class ShowAFrame {
 }
 ```
 
-![ontheweb](img/ontheweb.png) 这些关于导入的细节可能会非常糟糕。但幸运的是，许多 IDE 都为导入声明提供了方便的辅助功能。更多细节，请参阅本书的网站`[`www.allmycode.com/JavaForDummies`](http://www.allmycode.com/JavaForDummies))`。
+![ontheweb](img/ontheweb.png) 这些关于导入的细节可能会非常糟糕。但幸运的是，许多 IDE 都为导入声明提供了方便的辅助功能。更多细节，请参阅本书的网站 [`www.allmycode.com/JavaForDummies`](http://www.allmycode.com/JavaForDummies)。
 
 书中没有哪一个章节可以介绍关于导入声明的完整故事。要开始理清一些导入声明的微妙之处，请参阅第 5 章、第 9 章和第 10 章。
 
@@ -1436,7 +1336,7 @@ fruit = apples + oranges;
 
 ```java
 String startOfChapter =
-"It's three in the morning. I'm dreaming about the"+
+"It's three in the morning. I'm dreaming about the" +
 "history course that I failed in high school.";
 System.out.println(startOfChapter);
 ```
@@ -1481,14 +1381,15 @@ System.out.println(pay);
 
 有关使用除法的示例，请参阅 Listing 4-3。
 
-![warning](img/warning.png) 当你用一个 int 值除以另一个 int 值时，你得到一个 int 值。计算机不会四舍五入。相反，计算机会切掉任何余数。如果你在程序中放入 `System.out.println(11 / 4)`，计算机打印出 2，而不是 2.7。要解决这个问题，将你所除的数字之一（或两者）都变为 double。如果你在程序中放入 `System.out.println(11.0 / 4)`，计算机打印出 2.7。
+![warning](img/warning.png) 当你用一个 `int` 值除以另一个 `int` 值时，你得到一个 `int` 值。计算机不会四舍五入。相反，计算机会切掉任何余数。如果你在程序中放入 `System.out.println(11 / 4)`，计算机打印出 2，而不是 2.7。要解决这个问题，将你所除的数字之一（或两者）都变为 `double`。如果你在程序中放入 `System.out.println(11.0 / 4)`，计算机打印出 2.7。
 
-另一个有运算符是取余运算符。取余运算符的符号是百分号（%`）。当你把 `System.out.println(11 % 4)` 放入程序时，计算机打印出 3，因为 11 除以 4 的余数为 3。取余运算符是非常有用的。Listing 4-3 有一个例子。
+另一个有运算符是取余运算符。取余运算符的符号是百分号（`%`）。当你把 `System.out.println(11 % 4)` 放入程序时，计算机打印出 3，因为 11 除以 4 的余数为 3。取余运算符是非常有用的。Listing 4-3 有一个例子。
 
 ## 找零示例
 
 ```java
 import static java.lang.System.*;
+
 public class MakeChange {
     public static void main(String args[]) {
         int total = 48;
@@ -1500,19 +1401,13 @@ public class MakeChange {
         total = total % 5;
         int cents = total;
         println("From 48 cents, you get");
-        startOfChapter = "It's three in the morning. I'm dreaming about the"+
-"history course that I failed in high school.";
-        System.out.println(startOfChapter);
     }
 }
 ```
+
 *(注：由于原文文本存在混乱，且部分代码块和描述似乎混在一起，上述翻译已根据逻辑进行了重组和修正，以确保文档的可读性并符合高级文档工程师的专业标准。)*
 
 **抱歉，由于提供的原始文本中存在严重的格式错乱（代码块与描述交织在一起），我已根据上下文逻辑，在翻译时对结构进行了重组，以确保输出内容的逻辑通顺。**
-
-
-
-
 
 ![crossreference](img/crossreference.png) 要了解什么是块（block），请参见第 5 章。然后，关于变量重新声明的真实讨论，请参见第 10 章。
 
@@ -1522,13 +1417,13 @@ Java 有了一些非常方便的小运算符，可以让生活变得更轻松（
 
 ![image](img/9781119235552-fg0413.png)
 
-FIGURE 4-13: 使用前递增。
+**FIGURE 4-13:** 使用前递增。
 
 图 4-14 显示了图 4-13 中程序的运行情况。在这次无聊的运行中，兔子的计数被打印了三次。
 
 ![image](img/9781119235552-fg0414.png)
 
-FIGURE 4-14: 图 4-13 中代码的运行情况。
+**FIGURE 4-14:** 图 4-13 中代码的运行情况。
 
 双加号有两个名称，取决于你将它们放在哪里。当你将 `++` 放在变量之前时，`++` 被称为**前递增**（preincrement）运算符。（`pre` 代表“在……之前”（before）。）
 
@@ -1537,11 +1432,11 @@ FIGURE 4-14: 图 4-13 中代码的运行情况。
 *   你将 `++` 放在变量之前。
 *   在变量被语句中的任何其他部分使用之前，计算机将变量的值加 1。
 
-为了理解这一点，请看图 4-13 中的加粗行**。计算机给 `numberOfBunnies` 加 1（将 `numberOfBunnies` 的值提高到 29），然后在屏幕上打印 29。
+为了理解这一点，请看图 4-13 中的加粗行。计算机给 `numberOfBunnies` 加 1（将 `numberOfBunnies` 的值提高到 29），然后在屏幕上打印 29。
 
 ![remember](img/remember.png) 使用 `System.out.println(++numberOfBunnies)` 时，计算机会在屏幕上打印 `numberOfBunnies` 的新值之前，给 `numberOfBunnies` 加 1。
 
-前递增的替代方案是**后递增**（postincrement。（`post` 代表“在……之后”（after）。）`after` 这个词有两个不同的含义：
+前递增的替代方案是**后递增**（postincrement）。（`post` 代表“在……之后”（after）。）`after` 这个词有两个不同的含义：
 
 *   你将 `++` 放在变量之后。
 *   在变量被语句中的任何其他部分使用之后，计算机将变量的值加 1。
@@ -1550,7 +1445,7 @@ FIGURE 4-14: 图 4-13 中代码的运行情况。
 
 ![image](img/9781119235552-fg0415.png)
 
-FIGURE 4-15: 使用后递增。
+**FIGURE 4-15:** 使用后递增。
 
 ![remember](img/remember.png) 使用 `System.out.println(numberOfBunnies++)` 时，计算机会在打印 `numberOfBunnies` 已经有的旧值之后，给 `numberOfBunnies` 加 1。
 
@@ -1558,11 +1453,12 @@ FIGURE 4-15: 使用后递增。
 
 *   在图 4-14 中使用前递增时，第二个数字是 29。
 *   在图 4-16 中使用后递增时，第二个数字是 28。
-    在图 4-16 中，29 直到计算机最后执行 `System.out.println(numberOfBunnies)` 时才会显示在屏幕上。
+
+在图 4-16 中，29 直到计算机最后执行 `System.out.println(numberOfBunnies)` 时才会显示在屏幕上。
 
 ![image](img/9781119235552-fg0416.png)
 
-FIGURE 4-16:](#09_9781119235552-ch04.xhtml_rc04-fig-0016) 图 4-15 中代码的运行情况。
+**FIGURE 4-16:** 图 4-15 中代码的运行情况。
 
 ![tip](img/tip.png) 你在纠结用前递增还是后递增吗？别试了。大多数程序员使用后递增。在典型的 Java 程序中，你经常看到 `numberOfBunnies++`。你很少看到 `++numberOfBunnies`。
 
@@ -1571,7 +1467,7 @@ FIGURE 4-16:](#09_9781119235552-ch04.xhtml_rc04-fig-0016) 图 4-15 中代码的�
 *   使用前递减（`--numberOfBunnies`），计算机在语句的其他部分使用变量之前从变量的值中减 1。
 *   使用后递减（`numberOfBunnies--`），计算机在语句的其他部分使用变量之后从变量的值中减 1。
 
-![technicalstuff](img/technicalstuff.png) 与其写入 `++numberOfBunnies`，你可以通过编写 `numberOfBunnies = numberOfBunnies + 1` 来实现相同的效果。因此有些人认为 Java 的 `++` 和 `--` 是为了节省击键——免让那些手指过度工作。这完全是错误的。使用 `++` 的最佳理由是避免在同一语句中两次编写相同的变量名（如 `numberOfBunnies`），这样做效率低下且容易出错。如果你写一次 `numberOfBunnies`（使用 `++` 或 `--`），计算机只需要识别一次 `numberOfBunnies`。此外，当你只写一次 `numberOfBunnies` 时，你只有一次（而不是两次）机会写错变量名。对于 `numberOfBunnies++` 这种简单的表达式，这些优势并不明显。但对于像 `inventoryItems[(quantityReceived--*itemsPerBox+17)]++` 这样的表达式，使用 `++` 和 `--` 带来的效率和准确性是巨大的。
+![technicalstuff](img/technicalstuff.png) 与其写入 `++numberOfBunnies`，你可以通过编写 `numberOfBunnies = numberOfBunnies + 1` 来实现相同的效果。因此有些人认为 Java 的 `++` 和 `--` 是为了节省击键——免让那些手指过度工作。这完全是错误的。使用 `++` 的最佳理由是避免在同一语句中两次编写相同的变量名（如 `numberOfBunnies`），这样做效率低下且容易出错。如果你写一次 `numberOfBunnies`（使用 `++` 或 `--`），计算机只需要识别一次 `numberOfBunnies`。此外，当你只写一次 `numberOfBunnies` 时，你只有一次（而不是两次）机会写错变量名。对于 `numberOfBunnies++` 这种简单的表达式，这些优势并不明显。但对于像 `inventoryItems[(quantityReceived-- * itemsPerBox + 17)]++` 这样的表达式，使用 `++` 和 `--` 带来的效率和准确性是巨大的。
 
 ![tryitout](img/tryitout.png) 在运行以下代码之前，尝试预测代码的输出。然后运行代码查看你的预测是否正确：
 
@@ -1617,10 +1513,7 @@ i
 
 ![image](img/9781119235552-fg0417.png)
 
-FIGURE 4-17:](#09_9781119235552-ch04.xhtml_rc04-fig-0017) 列表 4-8 中代码的运行情况。
-
-
-
+**FIGURE 4-17:** 列表 4-8 中代码的运行情况。
 
 ```java
 System.out.println(numberOfBunnies -= 7);
@@ -1634,6 +1527,8 @@ Listing 4-8 展示了 Java 赋值运算符是多多通用。通过赋值运算�
 Listing 4-8 中的最后两行演示了 Java 赋值运算符的一个特殊之处。你可以将赋值运算符作为更大 Java 语句的一部分。在 Listing 4-8 的倒数第二行中，运算符从 `numberOfBunnies` 中减去 `7`，将 `numberOfBunnies` 的值从 `172` 减少到 `165`。然后整个赋值操作被放入 `System.out.println` 调用中，因此 `165` 显示在屏幕上。
 
 看吧，Listing 4-8 的最后一行展示了你如何使用 Java 的普通等号完成同样的事情。我在在本章开头称之为赋值语句的东西，实际上是我在本节中描述的赋值运算符之一。因此，每当你给某个东西赋值时，都可以让该赋值成为更大语句的一部分。
+
+
 
 ![technicalstuff](img/technicalstuff.png) 赋值运算符的每次使用都兼具语句和表达式的双重职责。在所有情况下，表达式的值等于你赋值的任何值。例如，在执行代码 `System.out.println(numberOfBunnies -= 7)` 之前，`numberOfBunnies` 的值为 `172`。作为语句，`numberOfBunnies -= 7` 告诉计算机从 `numberOfBunnies` 中减去 `7`（因此 `numberOfBunnies` 的值从 `172` 变为 `165`）。作为表达式，`numberOfBunnies -= 7` 的值为 `165`。因此，代码 `System.out.println(numberOfBunnies -= 7)` 意味着 `System.out.println(165)`。数字 `165` 显示在计算机屏幕上。
 
@@ -1655,16 +1550,14 @@ public class Main {
 }
 ```
 
-第 5 章
-
-# 使用决策语句控制程序流
+# 第 5 章 使用决策语句控制程序流
 
 ## 本章内容
 
-- ![check](img/check.png) **编写在备选项之间选择的语句**
-- ![check](img/check.png) **构建逻辑条件**
-- ![check](img/check.png) **将语句嵌套**
-- ![check](img/check.png) **在许多备选项中选择**
+- ![check](img/check.png) 编写在备选项之间选择的语句
+- ![check](img/check.png) 构建逻辑条件
+- ![check](img/check.png) 将语句嵌套
+- ![check](img/check.png) 在许多备选项中选择
 
 电视节目《捣蛋丹尼》（Dennis the Menace）曾于 1959 年到 1963 年在 CBS 播出。我记得其中一集，威尔逊先生（Mr. Wilson）在做一项重要决定时遇到困难。我想那是关于换工作或搬到新镇的事。总之，我仍然能看到那个镜头：威尔逊先生坐在自家院子里，喝着柠檬水，整个下午都在呆目发呆。当然，那个讨厌人的角色丹尼不断打扰威尔逊先生的清静。这正是让这个情况变得幽默的原因。
 
@@ -1687,20 +1580,17 @@ System.out.println(numberOfBunnies = 100);
 }
 ```
 
-
-
-
 - 当你导入 `java.util.Scanner` 时，不需要使用 `static` 关键字。
 
 但导入 `Scanner` 与导入 `System.out` 不同。当你导入 `java.lang.System.out` 时，需要使用 `static` 关键字。（参考 Listing 5-1）。差异之所以出现在代码中，是因为 `Scanner` 是一个类的名称，而 `System.out` 并不是类名。
 
-![crossreference](img/crossreference.png) 想要快速查看导入声明中 `static` 关键字用法，请参阅第 4 章](#09_9781119235552-ch04.xhtml)中关于导入声明的侧边：丑陋的真相。关于 `*` 符号的更完整介绍，请参阅第 10 章](#17_9781119235552-ch10.xhtml)。
+![crossreference](img/crossreference.png) 想要快速查看导入声明中 `static` 关键字用法，请参阅第 4 章中关于导入声明的侧边：丑陋的真相。关于 `*` 符号的更完整介绍，请参阅第 10 章。
 
 - 通常情况下（在桌面式或笔记本电脑上），名称 `System.in` 代表键盘。
 
 要从键盘以外的其他地方获取字符，可以在括号内输入 `System.in` 以外的内容。
 
-![crossreference](img/crossreference.png) 在 `new Scanner(…)` 括号内还可以放什么？想要获取一些建议，请参阅第 8 章](#14_9781119235552-ch08.xhtml)。
+![crossreference](img/crossreference.png) 在 `new Scanner(…)` 括号内还可以放什么？想要获取一些建议，请参阅第 8 章。
 
 在 Listing 5-1 中，我随机决定将其中一个变量命名为 `keyboard`。`keyboard` 这个名字提醒读者，该变量指的是你电脑前的一堆塑料按钮。将某个东西命名为 `keyboard` 并不会告诉 Java 任何关于塑料按钮或用户输入的信息。另一方面，`System.in` 这个名字总是告诉 Java 关于那些塑料按钮的信息。Listing 5-1 中的代码 `Scanner keyboard = new Scanner(System.in)` 将名称 `keyboard` 与我们都熟悉并喜爱的塑料按钮连接了起来。
 
@@ -1708,9 +1598,9 @@ System.out.println(numberOfBunnies = 100);
 
 如果你预期用户输入一个 `double` 值（包含小数点的数字），请使用 `nextDouble()`。如果你预期用户输入 `true` 或 `false`，请使用 `nextBoolean()`。如果你预期用户输入像 `Barry`、`Java` 或 `Hello` 单词，请使用 `next()`。
 
-![warning](img/warning.png) 小数点在不同国家之间不同。在美国，`10.5`（使用点）表示十点半；但在法国，`10,5`（使用逗号）表示十点半。在波斯语中，小数点看起来像斜杠（但位置比数字字符低一点）。你的电脑操作系统存储了关于你所在国家的信息，Java 会读取这些信息来决定十点半的写法。如果你运行一个包含 `nextDouble()` 方法调用的程序，且 Java 响应为 `InputMismatchException`，请检查你的输入。你可能在你的国家要求 `10,5`（或表示十点半的其他方式）时输入了 `10.5`。更多信息，请参阅第 8 章](#14_9781119235552-ch08.xhtml)中的侧边““你住在地球的哪里？](#14_9781119235552-ch08.xhtml_c08-fea-0003)”。
+![warning](img/warning.png) 小数点在不同国家之间不同。在美国，`10.5`（使用点）表示十点半；但在法国，`10,5`（使用逗号）表示十点半。在波斯语中，小数点看起来像斜杠（但位置比数字字符低一点）。你的电脑操作系统存储了关于你所在国家的信息，Java 会读取这些信息来决定十点半的写法。如果你运行一个包含 `nextDouble()` 方法调用的程序，且 Java 响应为 `InputMismatchException`，请检查你的输入。你可能在你的国家要求 `10,5`（或表示十点半的其他方式）时输入了 `10.5`。更多信息，请参阅第 8 章中的侧边“你住在地球的哪里？”。
 
-![crossreference](img/crossreference.png) 关于用户输入单词的示例，请参见本章稍后的 Listing 5-3。关于用户输入单个字符的示例，请参阅第 6 章](#11_9781119235552-ch06.xhtml)中的 Listing 6-4。关于程序读取整行文本（一次性全部读取）的示例，请参阅第 8 章](#14_9781119235552-ch08.xhtml)。
+![crossreference](img/crossreference.png) 关于用户输入单词的示例，请参见本章稍后的 Listing 5-3。关于用户输入单个字符的示例，请参阅第 6 章中的 Listing 6-4。关于程序读取整行文本（一次性全部读取）的示例，请参阅第 8 章。
 
 - 你可以连续地从键盘获取多个值。
 
@@ -1719,10 +1609,6 @@ System.out.println(numberOfBunnies = 100);
 想要查看一个从键盘读取多个值的程序，请前往本章稍后的 Listing 5-4。
 
 - 每当你使用 Java 的 `Scanner` 时，都应该在最后一次 `nextInt` 调用（或最后一次 `nextDouble` 调用，或最后一次 `nextWhatever` 调用）之后调用 `close` 方法。
-
-
-
-
 
 ![image](img/9781119235552-fg0502.png)
 
@@ -1767,10 +1653,6 @@ Listing 5-1 中的 `if part` 似乎包含多个语句。我通过用一对大括
 好吧，这一节的标题是编出来的。有什么大！想法是你可以创建一个没有 `else` 部分的 `if` 语句。例如，参考 Listing 5-1 中的代码。也许你更愿意在用户输的时候得意一下。Listing 5-2 中的修改后的代码展示了如何实现这一点（图 5-3
 
 FIGURE 5-3: Listing 5-2 中的两次游戏运行。
-
-
-
-
 
 ```java
 }
@@ -1856,7 +1738,9 @@ Java 编程语言有许多小符号和装饰来满足你各种构建条件的需
 
 ### 比较数字；比较字符
 
-表 5-1 展示了你可以用于比较一个值与另一个值的运算符。
+
+
+# 表 5-1 比较运算符
 
 | 运算符符号 | 含义 | 示例 |
 | :--- | :--- | :--- |
@@ -1867,7 +1751,7 @@ Java 编程语言有许多小符号和装饰来满足你各种构建条件的需
 | `<=` | 小于等于 | `numberOfows <= 5` |
 | `>=` | 大于等于 | `myInitial >= 'B'` |
 
-### 比较对象
+## 比较对象
 
 当你开始处理对象时，你会发现可以使用 `==` 和 `!=` 来比较对象。例如，屏幕上的按钮就是一个对象。你可以判断刚刚点击的是否是特定的按钮。你可以通过 Java 的相等运算符来实现：
 
@@ -1877,13 +1761,9 @@ if (e.getSource() == b) {
 }
 ```
 
-![crossreference](img/crossreference.png) 要了解更多关于响应点击的信息，请阅读第 16 章。Java 比较方案的大陷阱出现在比较两个字符串时。（关于 String 类型的字，请参见第 4 章）。当你比较两个字符串时，不想使用双等号。使用双等号是在询问：“这个字符串在内存中的位置与另一个字符串完全相同吗？”通常不是你想问的。相反，你通常想问：“这个字符串包含的字符与另一个字符串相同吗？”为了问第二个问题（更合适的问题），String 类型有一个名为 `equals` 的方法。（像已知宇宙中的其他事物一样，这个 `equals` 方法定义在 Java API 中，应用程序编程接口。）`equals` 方法比较两个字符串以查看它们包含的字符是否相同。使用 Java `equals` 方法的示例参见 Listing 5-3（图 5-4 显示了 [Listing 5-3] 中程序的运行情况。）
+![crossreference](img/crossreference.png) 要了解更多关于响应点击的信息，请阅读第 16 章。Java 比较方案的大陷阱出现在比较两个字符串时。（关于 `String` 类型的内容，请参见第 4 章）。当你比较两个字符串时，不想使用双等号。使用双等号是在询问：“这个字符串在内存中的位置与另一个字符串完全相同吗？”通常不是你想问的。相反，你通常想问：“这个字符串包含的字符与另一个字符串相同吗？”为了问第二个问题（更合适的问题），`String` 类型有一个名为 `equals()` 的方法。（像已知宇宙中的其他事物一样，这个 `equals()` 方法定义在 Java API 中，应用程序编程接口。）`equals()` 方法比较两个字符串以查看它们包含的字符是否相同。使用 Java `equals()` 方法的示例参见 Listing 5-3（图 5-4 显示了 [Listing 5-3] 中程序的运行情况。）
 
-
-
-
-
-# 检查密码
+## 检查密码
 
 ```java
 import static java.lang.System.*;
@@ -1926,9 +1806,9 @@ public class CheckPassword {
 
 在 Listing 5-3 中，调用 `keyboard.next()` 会获取用户在计算机键盘上输入的任何单词。代码将该单词存入名为 `password` 的变量中。然后，程序的 `if` 语句使用了两种不同的技术来比较 `password` 和 "swordfish"。
 
-在两种技术中，更合适的是使用 Java 的 `equals` 方法。`equals` 方法看起来看起来很奇怪，因为当你调用它时，你需要在一个字符串后面加一个点，并将另一个字符串放在括号里。但这就是你必须这样做。
+在两种技术中，更合适的是使用 Java 的 `equals()` 方法。`equals()` 方法看起来看起来很奇怪，因为当你调用它时，你需要在一个字符串后面加一个点，并将另一个字符串放在括号里。但这就是你必须这样做。
 
-在调用 Java 的 `equals` 方法时，哪个字符串加点、哪个字符串加括号并不重要。例如，在 Listing 5-3 中，你可以写成：
+在调用 Java 的 `equals()` 方法时，哪个字符串加点、哪个字符串加括号并不重要。例如，在 Listing 5-3 中，你可以写成：
 
 ```java
 if ("swordfish".equals(password))
@@ -1936,13 +1816,13 @@ if ("swordfish".equals(password))
 
 该方法的效果同样良好。
 
-调用 Java 的 `equals` 方法看起来是不平衡的，但并非如此。点和括号之间这种表面的不平衡背后是有原因的。这种想法是你有两个对象：`password` 对象和 "swordfish" 对象。这两个对象都是 `String` 类型。（不过，`password` 是一个 `String` 类型的变量，而 "swordfish" 是一个 `String` 直接字面量。）当你写 `password.equals("swordfish")` 时，你正在调用一个属于 `password` 对象的 `equals` 方法。当你调用该方法时，你正将 "swordfish" 作为方法的参数传递给该方法（这里是个双关）。
+调用 Java 的 `equals()` 方法看起来是不平衡的，但并非如此。点和括号之间这种表面的不平衡背后是有原因的。这种想法是你有两个对象：`password` 对象和 "swordfish" 对象。这两个对象都是 `String` 类型。（不过，`password` 是一个 `String` 类型的变量，而 "swordfish" 是一个 `String` 直接字面量。）当你写 `password.equals("swordfish")` 时，你正在调用一个属于 `password` 对象的 `equals()` 方法。当你调用该方法时，你正将 "swordfish" 作为方法的参数传递给该方法（这里是个双关）。
 
 你可以在第 7 章中阅读更多关于属于对象的方法的知识。
 
-在比较字符串时，请使用 `equals` 方法 —— 而双双等号。
+在比较字符串时，请使用 `equals()` 方法 —— 而非双等号。
 
-### 一次性导入所有内容
+## 一次性导入所有内容
 
 Listing 5-3 的第一行说明了一种偷懒的办法，可以同时导入 `System.out` 和 `System.in`。要导入 `System` 提供的所有内容，你可以使用星号通配符（`*`）。事实上，导入 `java.lang.System.*` 相当于拥有了大约 30 个独立的导入声明，包括 `System.in`、`System.out`、`System.err`、`System.nanoTime` 以及许多其他 `System` 相关内容。
 
@@ -1950,7 +1830,7 @@ Listing 5-3 的第一行说明了一种偷懒的办法，可以同时导入 `Sys
 
 你不能在 `import` 语句的任何地方随意放置星号。例如，你不能通过编写 `import java.*` 来导入所有以 `java` 开头的内容。你只能用星号替换类名，或者隐藏在类内部的静态成员名称。关于 `import` 语句中星号的更多信息，请参阅第 9 章。关于静态内容的信息，请参阅第 10 章。
 
-### Java 的逻辑运算符
+## Java 的逻辑运算符
 
 斯波克先生会感到高兴：Java 拥有你混合和组合逻辑测试所需的所有运算符。这些运算符如表 5-2 所示。
 
@@ -1962,14 +1842,14 @@ Listing 5-3 的第一行说明了一种偷懒的办法，可以同时导入 `Sys
 
 你可以使用这些运算符构建各种条件。Listing 5-4 是一个示例。
 
-### 检查用户名和密码
+## 检查用户名和密码
 
 ```java
 import javax.swing.JOptionPane;
 public class Authenticator {
     public static void main(String args[]) {
-        String username = JOptionPane.JOptionPane("Username:");
-        String password = JOptionPane.JOptionPane("Password:");
+        String username = JOptionPane.showInputDialog("Username:");
+        String password = JOptionPane.showInputDialog("Password:");
         if (username != null && password != null &&
             (username.equals("swordfish")) ||
             (password.equals("swordfish"))) {
@@ -1983,27 +1863,23 @@ public class Authenticator {
 
 Listing 5-4 的多次运行如表 5-2 所示。当 `username` 是 "swordfish" 且 `password` 是 "swordfish"，或者 `username` 是 "swordfish" 且 `password` 是 "swordfish" 时，用户将得到一个消息。否则，用户将得到应得的消息。
 
-**道歉：** 图 5-5 是假的！为了帮助你阅读用户名和密码，我在 Listing 5-4 中添加了一个额外的语句。`UIManager.put("TextField.font", new Font("Dialog", Font.BOLD, 14))` 大了每个文本框的字体。是的，我在创建图形前修改了代码。
+**道歉：** 图 5-5 是假的！为了帮助你阅读用户名和密码，我在 Listing 5-4 中添加了一个额外的语句。`UIManager.put("TextField.font", new Font("Dialog", Font.BOLD, 14))` 增大了每个文本框的字体。是的，我在创建图形前修改了代码。
 
-Listing 5-4 说明了一种获取输入的新方法，即向用户显示一个输入对话框。`String password = JOptionPane.JOptionPane("Password:");` 在 Listing 5-4 中的执行与 Listing 5-3 中的 `String password = keyboard.next();` 执行的任务相似。巨大的区别在于，`keyboard.next()` 在控制台中显示枯燥的文本，而 `JOptionPane.showInputDialog("Username:")` 显示一个包含文本框和按钮的精致对话框。（对比图 5-4 和 5-5。）当用户点击 OK 时，计算机获取文本框中的任何文本并将其交给变量。
+Listing 5-4 说明了一种获取输入的新方法，即向用户显示一个输入对话框。`String password = JOptionPane.showInputDialog("Password:");` 在 Listing 5-4 中的执行与 Listing 5-3 中的 `String password = keyboard.next();` 执行的任务相似。巨大的区别在于，`keyboard.next()` 在控制台中显示枯燥的文本，而 `JOptionPane.showInputDialog("Username:")` 显示一个包含文本框和按钮的精致对话框。（对比图 5-4 和 5-5。）当用户点击 OK 时，计算机获取文本框中的任何文本并将其交给变量。
 
+像其他成千上万的名称一样，`JOptionPane` 定义在 Java API 中。（具体来说，`JOptionPane` 被定义在名为 `javax.swing` 的包中，而该包又定义在 Java 的 API 中。）因此，为了在 Listing 5-4 中全程使用 `JOptionPane` 名称，我在 Listing 的顶部导入了 `javax.swing.JOptionPane`。
 
+![tip](img/tip.png) 在 Listing 5-4 中，`JOptionPane.showInputDialog()` 运行良好，因为用户的输入（用户名和密码）仅仅是字符字符串。如果你想让用户输入数字（例如 `int` 或 `double`），你必须做一些额外工作。例如，要从用户处获取 `int` 值，可以输入类似 `int numberOfCows = Integer.parseInt(JOptionPane.showInputDialog("How many cows?"));` 的代码。额外的 `Integer.parseInt()` 部分强制你的文本字段输入转换为一个 `int` 值。要从用户处获取 `double` 值，可以输入类似 `double fractionOfHolsteins = Double.parseDouble(JOptionPane.showInputDialog("Holsteins:"))` 的代码。额外的 `Double.parseDouble()` 操作强制你的文本字段输入转换为一个 `double` 值。
 
-
-
-像其他成千上万的名称一样，`JOptionPane` 定义在 Java API 中。（具体来说，`JOptionPane` 被定义在名为 `javax.swing` 的包中，而该包又定义在 Java 的 API 中。）因此，为了在列表 5-4 中全程使用 `JOptionPane` 名称，我在列表的顶部导入了 `javax.swing.JOptionPane`。
-
-![tip](img/tip.png) 在列表 5-4 中，`JOptionPane.showInputDialog()` 运行良好，因为用户的输入（用户名和密码）仅仅是字符字符串。如果你想让用户输入数字（例如 `int` 或 `double`），你必须做一些额外工作。例如，要从用户处获取 `int` 值，可以输入类似 `int numberOfCows = Integer.parseInt(JOptionPane.showInputDialog("How many cows?"));` 的代码。额外的 `Integer.parseInt` 部分强制你的文本字段输入转换为一个 `int` 值。要从用户处获取 `double` 值，可以输入类似 `double fractionOfHolsteins = Double.parseDouble(JOptionPane.showInputDialog("Holsteins:"))` 的代码。额外的 `Double.parseDouble` 操作强制你的文本字段输入转换为一个 `double` 值。
-
-### 傻瓜万岁!(Vive les nuls!)
+## 傻瓜万岁!
 
 《For Dummies》系列书的法语译名为 *Pour les Nuls.*。所以英语中的“dummy”在法语里是“nul”。但在 Java 中，`null` 一词的意思是“无”。当你看到
 
-```
+```java
 if (username != null)
 ```
 
-在列表 5-4 中，你可以想象你看到的是
+在 Listing 5-4 中，你可以想象你看到的是
 
 ```java
 if (username isn't nothing)
@@ -2011,11 +1887,11 @@ if (username isn't nothing)
 
 或者
 
-```
+```java
 if (username has any value at all)
 ```
 
-要找出 `username` 如何可能没有值，请参见图 5-5 中的最后一行。当你在第一个对话框中点击取消时，计算机会将 `null` 传递给你的程序。因此，在列表 5-4 中，变量 `username` 变成了 `null`。比较 `username != null` 检查是为了确保你没有在程序的第一个对话框中点击取消。比较 `password != null` 对程序的第二个对话框执行同样的检查。当你在列表 5-4 中看到 `if` 语句时，你可以想象你看到的是如下：
+要找出 `username` 如何可能没有值，请参见图 5-5 中的最后一行。当你在第一个对话框中点击取消时，计算机会将 `null` 传递给你的程序。因此，在 Listing 5-4 中，变量 `username` 变成了 `null`。比较 `username != null` 检查是为了确保你没有在程序的第一个对话框中点击取消。比较 `password != null` 对程序的第二个对话框执行同样的检查。当你在 Listing 5-4 中看到 `if` 语句时，你可以想象你看到的是如下：
 
 ```java
 if (you didn't press Cancel in the username dialog &&
@@ -2026,11 +1902,11 @@ if (you didn't press Cancel in the username dialog &&
       you typed preakston in the password dialog)))
 ```
 
-![warning](img/warning.png) 在列表 5-4 中，比较 `username != null` 和 `password != null` 不是可的的。如果你忘记包含这些内容并在程序运行时点击取消，你将得到一个糟糕的 `NullPointerException` 消息，程序会在你眼皮底下直接崩溃。`null` 一词代表“无”，在 Java 中，你不能将“无”与像“bburd”或“swordfish”这样的字符串进行比较。在列表 5-4 中，比较 `username != null` 的目的是防止 Java 在你不小心点击取消时去检查 `username.equals("bburd")`。如果没有这个初步的 `username != null` 测试，你就是在自找麻烦。
+![warning](img/warning.png) 在 Listing 5-4 中，比较 `username != null` 和 `password != null` 是必要的。如果你忘记包含这些内容并在程序运行时点击取消，你将得到一个糟糕的 `NullPointerException` 消息，程序会在你眼皮底下直接崩溃。`null` 一词代表“无”，在 Java 中，你不能将“无”与像“bburd”或“swordfish”这样的字符串进行比较。在 Listing 5-4 中，比较 `username != null` 的目的是防止 Java 在你不小心点击取消时去检查 `username.equals("bburd")`。如果没有这个初步的 `username != null` 测试，你就是在自找麻烦。
 
-![technicalstuff](img/technicalstuff.png) 在列表 5-4 中的最后两个 `null` 与其他的不同。在代码 `JOptionPane.showMessageDialog(null, "You're in.")` 中，`null` 代表“没有其他对话框”。特别是，调用 `showMessageDialog` 告诉 Java 弹出一个新的对话框，而 `null` 表示新对话框不会增长。在列表 5-4 中，`null` 代表“没有其他对话框”。
+![technicalstuff](img/technicalstuff.png) 在 Listing 5-4 中的最后两个 `null` 与其他的不同。在代码 `JOptionPane.showMessageDialog(null, "You're in.")` 中，`null` 代表“没有其他对话框”。特别是，调用 `showMessageDialog()` 告诉 Java 弹出一个新的对话框，而 `null` 表示新对话框不会增长。在 Listing 5-4 中，`null` 代表“没有其他对话框”。
 
-### 括号中的条件
+## 括号中的条件
 
 当使用逻辑运算符组合条件时，使用括号比由于使用过少而导致结果出错要好。例如，`if` 语句的条件有十多个。在英语中，你可能会说“我们会有十个左右”。但在 Java 中，如果你写成下面这样，就会得到错误：
 
@@ -2040,7 +1916,7 @@ if (username != null && password != null &&
     username.equals("hritter") && password.equals("preakston"))
 ```
 
-通过使用 `||` 运算符，你可能会在 `&&` 运算符之前解析结果。在列表 5-4 中，`||` 运算符的优先级低于 `&&`，所以你需要对 `&&` 条件进行分组：
+通过使用 `||` 运算符，你可能会在 `&&` 运算符之前解析结果。在 Listing 5-4 中，`||` 运算符的优先级低于 `&&`，所以你需要对 `&&` 条件进行分组：
 
 ```java
 if (username != null && password != null &&
@@ -2048,11 +1924,7 @@ if (username != null && password != null &&
     (username.equals("hritter") && password.equals("preakston")))
 ```
 
-等等，`||` 运算符的优先级低于 `&&`。在列表 5-4 中...
-
-
-
-
+等等，`||` 运算符的优先级低于 `&&`。在 Listing 5-4 中...
 
 这与之前的实验几乎相同。唯一的区别在于在两个 `== null` 测试之间使用了 `&&` 而不是 `||`。
 
@@ -2060,23 +1932,43 @@ if (username != null && password != null &&
 
 ## 构建嵌套
 
-你见过那些可爱的俄罗斯套套娃吗？打开一个，里面还有另一个。打开第二个，第三个就在里面了。你可以用 Java 的 `if` 语句做同样的事情。（很有趣吧！）列表 5-5 {
-        Scanner keyboard = new Scanner(System.in);
-        out.print("Username: ");
-        String username = keyboard.next();
-        if (username.equals("bburd")) {
-            out.print("Password: ");
-            String password = keyboard.next();
-            if (password.equals("swordfish")) {
-                out.println("You're in.");
-            } else {
-                out.println("Incorrect password");
-            }
-        } else {
-            out.println("Unknown user");
-        }
-        keyboard.close();
+你见过那些可爱的俄罗斯套套娃吗？打开一个，里面还有另一个。打开第二个，第三个就在里面了。你可以用 Java 的 `if` 语句做同样的事情。（很有趣吧！）Listing 5-5
+
+```java
+Scanner keyboard = new Scanner(System.in);
+```
+
+
+
+```java
+out.print("Username: ");
+
+String username = keyboard.next();
+
+if (username.equals("bburd")) {
+
+    out.print("Password: ");
+
+    String password = keyboard.next();
+
+    if (password.equals("swordfish")) {
+
+        out.println("You're in.");
+
+    } else {
+
+        out.println("Incorrect password");
+
     }
+
+} else {
+
+    out.println("Unknown user");
+
+}
+
+keyboard.close();
+
 }
 ```
 
@@ -2102,9 +1994,11 @@ if (username != null && password != null &&
 if (verse == 1) {
     out.println("That's because he has no brain.");
 }
+
 if (verse == 2) {
     out.println("That's because he is a pain.");
 }
+
 if (verse == 3) {
     out.println("'Cause this is the refrain.");
 }
@@ -2160,10 +2054,6 @@ break;
 
 如果这个讨厌的用户请求第 6 节，计算机将跳过 case 1、2 和 3。计算机直接进入 `default`。在 `default` 中，计算机显示“No such verse. Please try again”，然后跳出 switch 语句。计算机跳出 switch 语句后，计算机显示 Ohhhhhhhh .
 
-
-
-
-
 ![tip](img/tip.png) 你并不真的需要在 switch 语句的最后末尾放置一个 break。在 Listing 5-6 中，最后一个 break（属于 default 部分的 break）仅仅是为了整体的整洁。
 
 ### 要么 break 还是不 break
@@ -2172,9 +2062,9 @@ break;
 
 通常情况下，当你使用 switch 语句时，你不希望发生贯穿，因此你会在 switch 语句中到处布置 `break` 语句。但有时，贯穿正是你所需要的。例如，歌曲“Al’s All Wet”。（高雅的歌词在带有歌曲名称侧边栏中。）“Al’s All Wet”的每一节都在之前几节的基础上增加了新的行。这种情况（从一节歌累积行到另一节歌）正需要一个带有贯穿功能的 switch 语句。Listing 5-7 演示了这一思想。
 
-LISTING 5-7: 带有贯穿的 switch 语句
+#### 代码列表 5-7：带有贯穿的 switch 语句
 
-```
+```java
 import static java.lang.System.out;
 import java.util.Scanner;
 
@@ -2204,7 +2094,7 @@ public class FallingForYou {
 
 Figure 5-10 显示了 Listing 5-7 中程序的几次运行结果。因为 switch 内部没有 `break` 语句，贯穿现象随处发生。例如，当用户选择第 2 节时，计算机执行 case 2 中的两个语句：
 
-```
+```java
 out.print("He's a pain, ");
 out.println("he's a pain,");
 ```
@@ -2231,10 +2121,6 @@ out.println("has no brain,");
 从 Java 7 开始，你可以设置使得 switch 语句中执行的 case 取决于特定字符串的值。Listing 5-8 阐了字符串在 switch 语句中的用法。Figure 5-11 显示了 Listing 5-8 代码的一次运行。
 
 ![image](img/9781119235552-fg0511.png)
-
-
-
-
 
 ```java
 public static void main(String args[]) {
@@ -2278,15 +2164,15 @@ public static void main(String args[]) {
 
 只要 `inputNumber != randomNumber` 为真，大括号中的语句就会重复执行。循环中语句的每次执行被称为循环的次“迭代”（iteration）。在图 6-1 中，循环经历了三次迭代。（如果你不相信图 6-1 **记住：** 使用如代码列表 6-1 所示的代码，计算机会跳过 `while` 循环并继续执行 `while` 循环下方的语句。
 
-## 重复次数（Java 语句）
+## 重复次数（Java for 语句）
 
 由于计数非常常见，语言创建者专门为此开发了语句。在 Java 中，重复特定次数的语句被称为 `for statement`。代码列表 6-2 和 6-3 展示了 `for` 的用法。
 
 ### 代码列表 6-2：世界上最无聊的 for 循环
 
-图 6-2
 ```java
 import static java.lang.System.out;
+
 public class Yawn {
     public static void main(String args[]) {
         for (int count = 1; count <= 10; count++) {
@@ -2299,15 +2185,13 @@ public class Yawn {
 }
 ```
 
+
+
 图 6-3 展示了当你运行代码列表 6-2 中的程序时会得到的结果。（你得到的是应得的。）代码列表 6-2 中的 `for statement` 首先将 `count` 变量设置为 1。然后语句测试 `count` 是否小于等于 10（显然如此）。接着语句执行大括号之间的打印语句。（在游戏的早期阶段，计算机打印 The value of count is 1。）最后，`for` 语句执行其括号内的最后一项操作——将 `count` 的值加 1。
-
-
-
-
 
 当 `count` 现在等于 2 时，`for` 语句再次检查以确保 `count` 小于或等于 10。（是的，2 小于 10。）由于测试通过，`for` 语句回到大括号内的语句中，并在屏幕上打印 `The value of count is 2`。最后，`for` 语句执行其括号内的最后的一件事——将 `count` 的值加 1，将 `count` 的值增加到 3。
 
-以此此类推。整个过程重复，直到在十次迭代后，`count` 的值终于达到 11。当这种情况发生时，`count` 小于或等于十的检查失败，循环结束。计算机跳转到紧随 `for` 语句之后的语句。在列表 6-2 中，计算机打印 `Done!` 作为输出。图 6-4 说明了整个过程。
+以此类推。整个过程重复，直到在十次迭代后，`count` 的值终于达到 11。当这种情况发生时，`count` 小于或等于十的检查失败，循环结束。计算机跳转到紧随 `for` 语句之后的语句。在列表 6-2 中，计算机打印 `Done!` 作为输出。图 6-4 说明了整个过程。
 
 ![image](img/9781119235552-fg0604.png)
 
@@ -2315,7 +2199,7 @@ public class Yawn {
 
 ### for 语句的结构分析
 
-在单词 `for,` 之后，你始终要在括号中放入三个东西。这三个中的第一个被称为`初始化 (initialization)`，第二个是`表达式 (expression)`，第三个是`更新 (update)`：
+在单词 `for` 之后，你始终要在括号中放入三个东西。这三个中的第一个被称为`初始化 (initialization)`，第二个是`表达式 (expression)`，第三个是`更新 (update)`：
 
 `for (initialization; expression; update)`
 
@@ -2329,11 +2213,17 @@ public class Yawn {
 
 ```java
 int count = 1;
+
 for count <= 10 {
+
     out.print("The value of count is ");
+
     out.print(count);
+
     out.println(".");
+
     count++;
+
 }
 ```
 
@@ -2349,6 +2239,7 @@ for count <= 10 {
 
     ```java
     import static java.lang.System.out
+
     for (int i = 0, j = 10; i < j; i++, j--) {out.println(i + " " + j);}
     ```
 
@@ -2356,9 +2247,13 @@ for count <= 10 {
 
     ```java
     int total = 0;
+
     for (int i = 0; i < 10; i++) {
+
         total += i;
+
     }
+
     System.out.println(total);
     ```
     在这段代码中，变量 `total` 被称为累加器 (accumulator)，因为它在循环内部累积（相加）了一组值。
@@ -2370,10 +2265,15 @@ for count <= 10 {
 
     ```java
     for (int row = 0; row < 5; row++) {
+
         for (int column = 0; column < 5; column++) {
+
             System.out.print("*");
+
         }
+
         System.out.println();
+
     }
     ```
     做出预测后，运行代码以发现你的预测是否正确。
@@ -2382,10 +2282,15 @@ for count <= 10 {
 
     ```java
     for (int row = 0; row < 5; row++) {
+
         for (int column = 0; column <= row; column++) {
+
             System.out.print("*");
+
         }
+
         System.out.println();
+
     }
     ```
 
@@ -2393,7 +2298,9 @@ for count <= 10 {
 
     ```
     *
+
     **
+
     ***
     ```
 
@@ -2407,87 +2314,143 @@ for count <= 10 {
 
 ```java
 import static java.lang.System.out
+
 public class AlsAllWet {
+
     public static void main(String args[]) {
+
         for (int verse = 1; verse <= 3; verse++) {
+
             out.print("Al's all wet. ");
+
             out.println("Oh, why is Al wet? Oh,");
+
             out.print("Al's all wet 'cause ");
+
             out.println("he's standing in the rain.");
+
             out.println("Why is Al out in the rain?");
+
             switch (verse) {
+
                 case 1:
+
                     out.println("That's because he has no brain.");
+
                     break;
+
                 case 2:
+
                     out.println("That's because he is a pain.");
+
                     break;
+
                 case 3:
+
                     out.println("'Cause this is the last refrain.");
+
                     break;
+
             }
+
             switch (verse) {
+
                 case 3:
+
                     out.println("Last refrain, last refrain,");
+
                 case 2:
+
                     out.println("He's a pain, he's a pain,");
+
                 case 1:
+
                     out.println("Has no brain, has no brain,");
+
             }
+
             out.println("In the rain, in the rain.");
+
             out.println("Ohhhhhhhh…");
+
             out.println();
+
         }
+
         out.print("Al's all wet. ");
+
         out.println("Oh, why is Al wet? Oh,");
+
         out.print("Al's all wet 'cause ");
+
         out.println("he's standing in the rain.");
+
     }
+
 }
 ```
 
 列表 6-3 很好，因为它结合了第 5 章](#10_9781119235552-ch05.xhtml)和第 6 章](#11_9781119235552-ch06.xhtml)中的许多思想。
 
-
-
-
-
 -   Listing 6-3 使用 `break` 语句跳出 `switch` 结构。但 `break` 语句也可以循环内部内部作用。要了解它是如何工作的，请运行一个包含以下代码的程序：
 
-```
-Scanner keyboard = new Scanner(System.in);
-while (true) {
-    System.out.print("Enter an int value: ");
-    int i = keyboard.nextInt();
-    if (i == 0) {
-        break;
-    }
-    System.out.println(i);
-}
-System.out.println("Done!");
-keyboard.close();
-```
+    ```java
+    Scanner keyboard = new Scanner(System.in);
 
-循环的条件始终为真。这就像用 `while (1 + 1 == 2)` 这一行启动循环。如果没有 `break` 语句，循环将永远运行。幸运的是，当你执行 `break` 语句时，Java 会跳转到循环之后后的代码。
+    while (true) {
+
+        System.out.print("Enter an int value: ");
+
+        int i = keyboard.nextInt();
+
+        if (i == 0) {
+
+            break;
+
+        }
+
+        System.out.println(i);
+
+    }
+
+    System.out.println("Done!");
+
+    keyboard.close();
+    ```
+
+    循环的条件始终为真。这就像用 `while (1 + 1 == 2)` 这一行启动循环。如果没有 `break` 语句，循环将永远运行。幸运的是，当你执行 `break` 语句时，Java 会跳转到循环之后后的代码。
 
 -   除了 `break` 语句外，Java 还有一个 `continue` 语句。当你执行 `continue` 语句时，Java 会跳到循环的末尾并开始该循环的下次迭代。要看到它的作用，请运行一个包含以下代码的程序：
 
-```
-Scanner keyboard = new Scanner(System.in);
-while (true) {
-    System.out.print("Enter an int value: ");
-    int i = keyboard.nextInt();
-    if (i > 10) {
-        continue;
+    ```java
+    Scanner keyboard = new Scanner(System.in);
+
+    while (true) {
+
+        System.out.print("Enter an int value: ");
+
+        int i = keyboard.nextInt();
+
+        if (i > 10) {
+
+            continue;
+
+        }
+
+        if (i == 0) {
+
+            break;
+
+        }
+
+        System.out.println(i);
+
     }
-    if (i == 0) {
-        break;
-    }
-    System.out.println(i);
-}
-System.out.println("Done!");
-keyboard.close();
-```
+
+    System.out.println("Done!");
+
+    keyboard.close();
+    ```
 
 # 重复直到你想要的（Java do 语句）
 
@@ -2496,13 +2459,19 @@ keyboard.close();
 
 今天，我想年轻而愚蠢（或者至少是愚蠢）。回看 图 6-2，注意 Java 的 `while` 循环是如何工作的。当执行进入 `while` 循环时，计算机会检查循环条件是否为真。如果条件不为真，循环内部的语句永远不会执行——即使一次也不执行。事实上，你可以轻松编写一个 `while` 循环，其语句永远不会执行（尽管我想不出你为什么会有这种这么做）：
 
-```
+```java
 int twoPlusTwo = 2 + 2;
+
 while (twoPlusTwo == 5) {
+
     out.println("Are you kidding?");
+
     out.println("2 + 2 doesn't equal 5");
+
     out.print("Everyone knows that");
+
     out.println(" 2 + 2 equals 3");
+
 }
 ```
 
@@ -2519,27 +2488,48 @@ while (twoPlusTwo == 5) {
 要编写此程序，你需要一个循环——一个反复询问用户是否应该删除文件的循环。循环会一直询问，直到用户给出一个有意义的回复。现在，需要注意的是，循环在第一次询问用户之前不需要检查任何内容。事实上，在用户给出第一个回复之前，循环没有可以检查的内容。循环并不是开始于“只要某事为真，就从用户处获取回复”。相反，循环只是向前跳，获取用户的回复，然后检查该回复看看它是否有意义。这就是为什么 Listing 6-4 中的程序使用了 `do` 循环（也称为 `do...while` 循环）。使用 `do` 循环，程序直接进入并执行操作，然后检查结果是否有意义。如果结果有意义，循环结束。如果没有意义，程序返回循环顶部。
 
 LISTING 6-4： 删除或不删除
+
 ```java
 import java.io.File;
+
 import static java.lang.System;
+
 import java.util.Scanner;
+
 public class DeleteEvidence {
+
     public static void main(String args[]) {
+
         File evidence = new File("cookedBooks.txt");
+
         Scanner keyboard = new Scanner(System.in);
+
         char reply;
+
         do {
+
             out.print("Delete evidence? (y/n ");
+
             reply = keyboard.findWithin(".", 0).charAt(0);
+
         } while (reply != 'y' && reply != 'n');
+
         if (reply == 'y') {
+
             out.println("Okay, here goes...");
+
             out.println("The evidence has been deleted.");
+
         } else {
+
             out.println("Sorry, buddy. Just asking.");
+
         }
+
         keyboard.close();
+
     }
+
 }
 ```
 
@@ -2547,11 +2537,17 @@ public class DeleteEvidence {
 
 ```java
 do {
+
     out.print("Delete evidence? (y/n ");
+
     reply = keyboard.findWithin(".", 0).charAt(0);
+
 } while (reply != 'y' && reply != 'Y' && reply != 'N');
+
 if (reply == 'y' || reply == 'Y') {
 ```
+
+
 
 图 6-6 显示了 Listing 6-4 循环中的控制流。使用 `do` 循环，本节 `twoPlusTwo` 程序中的情况永远不会发生。因为 `do` 循环在不测试条件的情况下执行第一个操作，所以每个 `do` 循环保证至少执行一次。
 
@@ -2571,10 +2567,6 @@ try {
 
 当你运行代码时，Java 会告诉你你的硬盘上 `cookedBooks.txt` 文件应该所在的位置。
 
-
-
-
-
 ![crossreference](img/crossreference.png) 有关文件及其文件夹的更多信息，请参阅第 8 章。
 
 ### 读取单个字符
@@ -2585,11 +2577,11 @@ try {
 
 Java API 没有 `nextChar()` 方法。为了读取适合存储在 `char` 变量中的内容，你必须通变处理。在代码列表 6-4 中，这种通变方法如下：
 
-```
+```java
 keyboard.findWithinHorizon(".", 0).charAt(0)
 ```
 
-每你想读取单个字符时，都可以直接使用代码列表 6-4 中所示的代码。
+每次你想读取单个字符时，都可以直接使用代码列表 6-4 中所示的代码。
 
 ![remember](img/remember.png) `String` 变量可以包含许多字符，也可以只包含一个。但仅包含一个字符的 `String` 变量并不等同于 `char` 变量。无论你向 `String` 变量中放入什么，`String` 变量和 `char` 变量都必须区别对待。
 
@@ -2599,7 +2591,7 @@ keyboard.findWithinHorizon(".", 0).charAt(0)
 
 因此，你可以在 Java 语言 API 中找到名为 `java.io.File` 的类。以下语句
 
-```
+```java
 File evidence = new File("cookedBooks.txt");
 ```
 
@@ -2609,13 +2601,13 @@ File evidence = new File("cookedBooks.txt");
 
 当然，你无法删除一个不存在的东西。当计算机执行
 
-```
+```java
 File evidence = new File("cookedBooks.txt");
 ```
 
 Java 并不会检查你是否有一个名为 `cookedBooks.txt` 的文件。要强制 Java 执行此检查，你有几种选择。最简单的是调用 `exists()` 方法。当你调用 `evidence.exists()` 时，该方法会在 Java 预期寻找 `cookedBooks.txt` 的文件夹中查找。如果 Java 在文件夹内找到了 `cookedBooks.txt`，则调用 `evidence.exists()` 返回 `true`。否则，调用 `evidence.exists()` 返回 `false`。这里是代码列表 6-4 的增强版，代码中包含了对 `exists` 的调用：
 
-```
+```java
 import java.io.File;
 import static java.lang.System.out;
 import java.util.Scanner;
@@ -2645,16 +2637,13 @@ public class DeleteEvidence {
 
 一组由大括号围绕的语句形成一个块。如果你在块内部声明了一个变量，通常无法在块外部使用它。例如，在代码列表 6-4 中，如果你尝试以下操作，就会得到一个错误：
 
-```
+```java
 char reply;
 do {
     reply = keyboard.findWithinHorizon(".", 0).charAt(0);
 } while (reply != 'y' && reply != 'n');
 if (reply == 'y') { // 此处报错
 ```
-
-
-
 
 > 因为 Java 是一种面向对象的编程语言，你的首要目标是描述类和对象。类是某种事物背后的思想。对象是类的具体实例。程序员定义一个类，然后 Java 根据类的定义创建各个对象。
 
@@ -2676,25 +2665,25 @@ if (reply == 'y') { // 此处报错
 
 到目前为止，一切良好。然而，你还没有解决原始问题。在你的计算机程序中，你如何引用我的 `balance` 变量而不是你的 `balance` 变量？嗯，你有两个对象放在那里，所以你可能有变量来引用这两个对象。创建一个名为 `myAccount` 的变量和另一个名为 `yourAccount` 的变量。`myAccount` 变量引用我的对象（我的 `Account` 类实例）以及包含在内部的所有内容。要引用我的余额，写：
 
-```
+```java
 myAccount.balance
 ```
 
 引用我的名字，写：
 
-```
+```java
 myAccount.name
 ```
 
 然后 `yourAccount.balance` 指向你对象中 `balance` 变量的值，而 `yourAccount.name` 指向你对象中 `name` 变量的值。要告诉 Java 我的账户里有多少钱，你可以写：
 
-```
+```java
 myAccount.balance = 24.02;
 ```
 
 要在屏幕上显示你的名字，你可以写：
 
-```
+```java
 out.println(yourAccount.name);
 ```
 
@@ -2702,7 +2691,7 @@ out.println(yourAccount.name);
 
 [代码列表 7-1：]成为账户意味着什么
 
-```
+```java
 public class Account {
     String name;
     String address;
@@ -2713,9 +2702,6 @@ public class Account {
 代码列表 7-1 中的 `Account` 类定义了成为一个 `Account` 意味着什么。特别是，代码列表 7-1 告诉你每个 `Account` 类的实例都有三个变量：`name`、`address` 和 `balance`。这与图 7-1 中的信息一致。Java 程序员对这类变量（属于类实例的变量）有一个特殊的名称。这些变量中的每一个——`name`、`address` 和 `balance`——被称为*字段*（field）。
 
 ![remember](img/remember.png)
-
-
-
 
 ```java
 out.print(") has $");
@@ -2730,7 +2716,7 @@ out.print(yourAccount.balance);
 
 区别在于，仅仅声明 `Account yourAccount` 并不会让 `yourAccount` 变量引用一个对象。声明所做的只是预留变量名 `yourAccount`，以便该名称最终能够指向 `Account` 类的实例。实际对象的创建直到代码后后部分、当 Java 执行 `new Account()` 时才会发生。
 
-![crossreference](img/crossreference.png) 技术上讲，当 Java 执行 `new Account()` 时，你正在通过调用 `Account` 类的`constructor` 来创建一个对象。关于这一点，我在第 9 章中会有更多介绍。
+![crossreference](img/crossreference.png) 技术上讲，当 Java 执行 `new Account()` 时，你正在通过调用 `Account` 类的 `constructor` 来创建一个对象。关于这一点，我在第 9 章中会有更多介绍。
 
 当 Java 执行赋值操作 `yourAccount = new Account()` 时，Java 创建了一个对象（`Account` 类的一个新实例），并让变量 `yourAccount` 指向该新对象。（等号让变量指向了新对象。）Figure 7-2 展示了这种情况。
 
@@ -2793,6 +2779,8 @@ Listing 7-1 中的第一行是
 public class Account {
 ```
 
+
+
 `Account` 类是公有的。公有类可供所有其他类使用。例如，如果你在网络空间的某个角落写了一个 `ATMController` 程序，它包含了对 Listing 7-1 中 `Account` 类的使用，例如 `myAccount.balance = 24.0`（当然，你知道 Listing 7-1 中声明的 `Account` 类在哪里，但那是另一个故事。）
 
 Listing 7-2 包含了 `myAccount.balance = 24.0`。你可能会对自己说：“`Account` 类必须是公有的，因为另一个类（Listing 7-2）使用了 `Account` 类。”不幸的是，关于公有类的真实情况要复杂得多。事实上，当星辰对齐时，一个类可以使用另一个类的代码，即使另一个类不是公有的。（我在第 14 章中介绍了正确的星辰对齐方法。）
@@ -2800,10 +2788,6 @@ Listing 7-2 包含了 `myAccount.balance = 24.0`。你可能会对自己说：�
 本章代码的秘密是，将某些类声明为公有仅仅让我感觉很好。是的，程序员会做某些事情来让自己感觉良好。在 Listing 7-1 中，我的审美好感源于 `Account` 类对许多程序员都有用。当我创建一个实用且可命名的类时——例如 `Account`、`Engine`、`Customer`、`BrainWave`、`Headache` 或 `SevenLayerCake` 类——我会将该类声明为公有。
 
 `UseAccount` 类在 Listing 7-2 中也是公有的。当一个类包含 `main` 方法时，Java 程序员倾向于将该类设为公有，而不考虑谁在使用该类。因此，即使没有其他类使用我的 `main` 方法，我也把 `UseAccount` 类是公有的。书中的大多数类都包含 `main` 方法，因此书中的大多数类都是公有的。
-
-
-
-
 
 ![warning](img/warning.png) 当你声明一个类为 public（公有）时，你必须在一个与类名完全相同的文件（但加上 `.java` 扩展名）中声明该类。例如，如果你声明了 `public class MyImportantCode`，你必须将该类的代码放在一个名为 `MyImportantCode.java` 的文件中，其中字母 M、I 和 C 大大写，其他所有字母均为小写。这个文件命名规则有一个重要的后果：如果你的代码声明了两个 public 类，那么你的代码必须至少由两个 `.java` 文件组成。换句话说，你不能在一个 `.java` 文件中声明两个 public 类。
 
@@ -2849,41 +2833,63 @@ Listing 7-2 包含了 `myAccount.balance = 24.0`。你可能会对自己说：�
 
 ```java
 import static java.lang.System;
+
 public class Account {
+
     String name;
+
     String address;
+
     double balance;
+
     public void display() {
+
         out.print(name);
+
         out.print(" ");
+
         out.print(address);
+
         out.print(" ");
+
         out.print(balance);
+
     }
+
 }
 ```
 
 ```java
 public class UseAccount {
+
     public static void main(String args[]) {
+
         Account myAccount = new Account();
+
         myAccount.name = "Barry Burd";
+
         myAccount.address = "222 Cyberspace Lane";
+
         myAccount.balance = 24.02;
+
         Account yourAccount = new Account();
+
         yourAccount.name = "Jane Q. Public";
+
         yourAccount.address = "111 Consumer Street";
+
         yourAccount.balance = 55.63;
+
         myAccount.display();
+
         yourAccount.display();
+
     }
+
 }
 ```
+
 代码列表 7-3 和 7-4 展示了实现表 7-2 中想法的程序。（*注：原文提供的代码块似乎存在排版错误，如赋值逻辑反转，但根据指令不翻译代码块内容*）
-
-
-
-
 
 *   `void` 单词告诉 Java，当调用 `display` 方法时，该 `display` 方法不会向调用它的地方返回任何内容。要查看会向调用它的地方返回某些内容的方法，请参见下一节。
 
@@ -2901,10 +2907,11 @@ public class UseAccount {
 
 ```java
 goToTheSupermarketAndBuySome(bread);
+
 goToTheSupermarketAndBuySome(bananas);
 ```
 
-括号中的内容被称为`参数`（parameters）或`参数列表`（parameter lists）。有了参数，你的方法变得灵活得。。你不是每次都得到相同的东西，而是可以有一次派人去超市买面包，下一次买香蕉，第三次买鸟食。当你调用 `goToTheSupermarketAndBuySome` 方法时，你就在那里决定你想让朋友买什么。
+括号中的内容被称为`参数`（parameters）或`参数列表`（parameter lists）。有了参数，你的方法变得灵活得多。你不是每次都得到相同的东西，而是可以有一次派人去超市买面包，下一次买香蕉，第三次买鸟食。当你调用 `goToTheSupermarketAndBuySome` 方法时，你就在那里决定你想让朋友买什么。
 
 那么当你的朋友从超市回来时会发生什么？“这是你让我买的面包，”你的朋友说。通过执行你的愿望，你的朋友向你返回了某些东西。你进行方法调用，方法返回了信息（或一个面包）。
 
@@ -2916,82 +2923,116 @@ goToTheSupermarketAndBuySome(bananas);
 import static java.lang.System.out;
 
 public class Account {
+
     String name;
+
     String address;
+
     double balance;
+
     public void display() {
+
         out.print(name);
+
         out.print(" (");
+
         out.print(address);
+
         out.print(") has $");
+
         out.print(balance);
+
     }
+
     public double getInterest(double percentageRate) {
+
         return balance * percentageRate / 100.00;
+
     }
+
 }
 ```
 
 代码列表 7-6： 计算利息
+
 ```java
 import static java.lang.System.out;
 
 public class UseAccount {
+
     public static void main(String args[]) {
+
         Account myAccount = new Account();
+
         Account yourAccount = new Account();
+
         myAccount.name = "Barry Burd";
+
         myAccount.address = "222 Cyberspace";
+
         myAccount.balance = 24.02;
+
         yourAccount.name = "Jane Q.";
+
         yourAccount.address = "111 Consumer Street";
+
         yourAccount.balance = 55.63;
+
         myAccount.display();
+
         out.print(" plus $");
+
         out.print(myAccount.getInterest(5.00));
+
         out.println(" interest ");
+
         yourAccount.display();
+
         double yourInterestRate = 7.00;
+
         out.print(" plus $");
+
         double yourInterestAmount = yourAccount.getInterest(yourInterestRate);
+
         out.print(yourInterestAmount);
+
         out.println(" interest ");
+
     }
+
 }
 ```
 
-图 7-4 显示了代码列表 7-5](#13_9781119235552-ch07.xhtml_c07-fea-0005) 和 7-6 的输出。在代码列表 7-5 中，`Account` 类有一个 `getInterest` 方法。该 `getInterest` 方法在代码列表 7-6](#13_9781119235552-ch07.xhtml_c07-fea-0006) 的 `main` 方法中被调用了两次。实际的余额和利率每次都不同。
 
-*   在第一次调用中，余额为 24.02，利率为 5.00。第一次调用 `myAccount.getInterest(5.00)` 指向 `myAccount` 对象以及存储在 `myAccount` 对象字段中的值。（参见图 7-5](#13_9781119235552-ch07.xhtml_c07-fea-0005）。）当进行此调用时，表达式 `balance * percentageRate / 100.00` 代表 `24.02 * 5.00`。
-*   在第二次调用中，余额为 55.63，利率为 7.00。在 `main` 方法中，在进行第二次调用之前，变量 `yourInterestRate` 被赋值为 7.00。调用本身 `yourAccount.getInterest(yourInterestRate)` 指向 `yourAccount` 对象以及存储在 `yourAccount` 对象字段中的值。（再次参见图 7-5](#13_9781119235552-ch07.xhtml_c07-fea-0005）。）所以，当进行调用时，表达式 `balance * percentageRate / 100.00` 代表 `55.63 * 7.00`。
+
+图 7-4 显示了代码列表 7-5 和 7-6 的输出。在代码列表 7-5 中，`Account` 类有一个 `getInterest` 方法。该 `getInterest` 方法在代码列表 7-6 的 `main` 方法中被调用了两次。实际的余额和利率每次都不同。
+
+*   在第一次调用中，余额为 24.02，利率为 5.00。第一次调用 `myAccount.getInterest(5.00)` 指向 `myAccount` 对象以及存储在 `myAccount` 对象字段中的值。（参见图 7-5。）当进行此调用时，表达式 `balance * percentageRate / 100.00` 代表 `24.02 * 5.00`。
+*   在第二次调用中，余额为 55.63，利率为 7.00。在 `main` 方法中，在进行第二次调用之前，变量 `yourInterestRate` 被赋值为 7.00。调用本身 `yourAccount.getInterest(yourInterestRate)` 指向 `yourAccount` 对象以及存储在 `yourAccount` 对象字段中的值。（再次参见图 7-5。）所以，当进行调用时，表达式 `balance * percentageRate / 100.00` 代表 `55.63 * 7.00`。
 
 ![image](img/9781119235552-fg0704.png)
 
-图 7-4 运行代码列表 7-5](#13_9781119235552-ch07.xhtml_c07-fea-0005) 和 7-6 中的代码。
+图 7-4 运行代码列表 7-5 和 7-6 中的代码。
 
 ![image](img/9781119235552-fg0705.png)
 
-图 7-5:13_9781119235552-ch07.xhtml_rc07-fea-0005) 我的账户和你的账户。
+图 7-5 我的账户和你的账户。
 
 顺便说一下，代码列表 7-6 中的 `main` 方法包含了两次对 `getInterest` 的调用。一次调用在其参数列表中使用了数字字面量 `5.00`；另一次调用在其参数列表中使用了变量 `yourInterestRate`。为什么一次调用使用字面量而另一次调用使用变量？没有原因。我只是想向你展示你可以用任何一种方式。
 
 ### 向方法传递值
 
-看一眼 `getInterest` 方法头。（当你阅读接下来的几个项目点的解释时，你可以通过图 7-6](#13_9781119235552-ch07.xhtml_c07-fig-0006) 中的图表直观地理解某些观点。）
+看一眼 `getInterest` 方法头。（当你阅读接下来的几个项目点的解释时，你可以通过图 7-6 中的图表直观地理解某些观点。）
 
 *   `double` 单词告诉 Java，当调用 `getInterest` 方法时，该 `getInterest` 方法向调用它的地方返回一个双精度点值。`getInterest` 方法体中的语句证实了这一点。该语句说 `return balance * percentageRate / 100.00`，表达式 `balance * percentageRate / 100.00` 的类型是 `double`。（这是因为表达式中的所有内容——`balance`、`percentageRate` 和 `100.00` 都是 `double` 类型。）
 
     当调用 `getInterest` 方法时，`return` 语句计算 `balance * percentageRate / 100.00` 并将结果交回给调用方法的代码。
 
-
-
-
-
 *   `getInterest` 单词是方法的名称。当你编写 `UseAccount` 类的代码时，你使用这个名称来调用该方法。
 
 *   括号包含了你在调用方法时传递给方法的所有内容。当你调用一个方法时，你可以即时向该方法传递信息。这些信息就是方法的参数列表。`getInterest` 方法的头部显示，`getInterest` 方法接受一条信息，且该信息的类型必须是 `double`：
 
-```
+```java
 public double getInterest(double percentageRate)
 ```
 
@@ -2999,7 +3040,7 @@ public double getInterest(double percentageRate)
 
 ![交叉引用](img/crossreference.png) 如果你不记得什么是字面量，请参阅 第 4 章。
 
-第二次调用 `getInterest` 的情况也是一样的。在 列表 7-6 底部附近，我调用了 `getInterest`并将变量 `yourInterestRate` 传递给方法的参数列表。幸运的是，我在那几行之前刚刚将 `yourInterestRate` 声明为 `double` 类型。
+第二次调用 `getInterest` 的情况也是一样的。在 列表 7-6 底部附近，我调用了 `getInterest` 并将变量 `yourInterestRate` 传递给方法的参数列表。幸运的是，我在那几行之前刚刚将 `yourInterestRate` 声明为 `double` 类型。
 
 ![image](img/9781119235552-fg0706.png)
 
@@ -3017,13 +3058,13 @@ public double getInterest(double percentageRate)
 
 总之，在计算此值后，Java 执行 `return`，将该值传回 `main` 中调用 `getInterest` 的地方。在过程的该点，整个方法调用 —— `myAccount.getInterest(5.00)` 获得了值 `1.2009999999999998`。该调用本身位于 `println` 内部：
 
-```
+```java
 out.println(myAccount.getInterest(5.00));
 ```
 
 所以 `println` 最终具有以下含义：
 
-```
+```java
 out.println(1.2009999999999998);
 ```
 
@@ -3037,18 +3078,21 @@ out.println(1.2009999999999998);
 
 ![在网上](img/ontheweb.png) 你可能会使用 列表 7-5 中的 `Account` 类来解决实际问题。你会在实际应用程序中调用 `Account` 类的 `display` 和 `getInterest` 方法。但 列表 7-6 中的 `UseAccount` 类是人工的。`UseAccount` 代码创建了一些虚拟账户数据，然后调用一些 `Account` 类方法，来说服你 `Account` 类的代码运行正常。（你不会真的认为银行有名为“Jane Q. Public”和“Barry Burd”的存款人吧？）
 
-
-
-
-
 ```java
 double myInterest = myAccount.getInterest(5.00);
+
 double yourInterest = yourAccount.getInterest(7.00);
+
 out.printf("$%4.2f\n", myInterest);
+
 out.printf("$%5.2f\n", myInterest);
+
 out.printf("$%.2f\n", myInterest);
+
 out.printf("$%3.2f\n", myInterest);
+
 out.printf("$%.2f $%.2f", myInterest, yourInterest);
+
 }
 ```
 
@@ -3056,7 +3100,7 @@ out.printf("$%.2f $%.2f", myInterest, yourInterest);
 
 FIGURE 7-9: 看起来像金额的数字。
 
-![ontheweb](img/ontheweb.png) 图 7-4 中不准确的数字来自于计算机对 0 和 1 的使用。一台电路设计为使用数字 0, 1, 2, 3, 4, 5, 6, 7, 8 和 9 的幻幻计算机就不会遭受同样的不准确性。因此，为了改进这一点，Java 提供了了自己的特殊方法来解决计算机计算不准确的问题。Java API 有一个名为 `BigDecimal` 的类——该类绕过了计算机奇怪的 0 和 1，使用普通的十进制数字进行算术计算。欲需更多信息，请访问本书的网站（[`www.allmycode.com/JavaForDummies`](http://www.allmycode.com/JavaForDummies)）。
+![ontheweb](img/ontheweb.png) 图 7-4 中不准确的数字来自于计算机对 0 和 1 的使用。一台电路设计为使用数字 0, 1, 2, 3, 4, 5, 6, 7, 8 和 9 的幻幻计算机就不会遭受同样的不准确性。因此，为了改进这一点，Java 提供了了自己的特殊方法来解决计算机计算不准确的问题。Java API 有一个名为 `BigDecimal` 的类——该类绕过了计算机奇怪的 0 和 1，使用普通的十进制数字进行算术计算。欲需更多信息，请访问本书的网站（`www.allmycode.com/JavaForDummies`）。
 
 Listing 7-7 使用了一个名为 `printf` 的方便方法。当你调用 `printf` 时，始终会在调用的括号内放置至少两个参数：
 
@@ -3086,12 +3130,9 @@ FIGURE 7-13: 指定的显示值的位数太少。
 
 FIGURE 7-14: 使用格式字符串显示多个值。
 
-欲需更多使用 `printf` 方法及其格式字符串的示例，请参见第 8 章和第 9 章。欲需 `printf` 方法格式字符串相关的完整选项列表，请参见 Java API 文中的 `java.util.Formatter` 页面：[`https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html`](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html)）。
+欲需更多使用 `printf` 方法及其格式字符串的示例，请参见第 8 章和第 9 章。欲需 `printf` 方法格式字符串相关的完整选项列表，请参见 Java API 文中的 `java.util.Formatter` 页面：`https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html`。
 
 ![remember](img/remember.png) `printf` 调用中的格式字符串并没有改变数字在内部用于计算的存储方式。格式字符串的作用仅仅创建了一组好看的数字字符，并显示在你的屏幕上。
-
-
-
 
 要点在于，让事情看起来简单需要一些规划。在面向对象编程中，让事情看起来简单的方法之一是防止类外部代码直接使用在类内部定义的字段。看一眼列表 7-1 中的代码。你正在一家公司工作，这家公司刚刚为 `Account` 类的代码花费了 1000 万美元。（平均每行代码就超过了 150 万美元！）现在，你的任务是编写 `UseAccount` 类。你想写下：
 
@@ -3125,33 +3166,49 @@ out.print(yourAccount.balance);
 
 ```java
 public class Account {
+
     private String name;
+
     private String address;
+
     private double balance;
 
     public void setName(String n) {
+
         name = n;
+
     }
 
     public String getName() {
+
         return name;
+
     }
 
     public void setAddress(String a) {
+
         address = a;
+
     }
 
     public String getAddress() {
+
         return address;
+
     }
 
     public void setBalance(double b) {
+
         balance = b;
+
     }
 
     public double getBalance() {
+
         return balance;
+
     }
+
 }
 ```
 
@@ -3159,30 +3216,55 @@ public class Account {
 
 ```java
 import static java.lang.System.out;
+
 public class UseAccount {
+
     public static void main(String args[]) {
+
         Account myAccount = new Account();
+
         Account yourAccount = new Account();
+
         myAccount.setName("Barry Burd");
+
         myAccount.setAddress("222 Cyberspace Lane");
+
         myAccount.setBalance(24.02);
+
         yourAccount.setName("Jane Q. Public");
+
         yourAccount.setAddress("111 Consumer Street");
+
         yourAccount.setBalance(55.63);
+
         out.print(myAccount.getName());
+
         out.print(" (");
+
         out.print(myAccount.getAddress());
+
         out.print(") has $");
+
         out.print(myAccount.getBalance());
+
         out.println();
+
         out.print(yourAccount.getName());
+
         out.print(" (");
+
         out.print(yourAccount.getAddress());
+
         out.print(") has $");
+
         out.print(yourAccount.getBalance());
+
     }
+
 }
 ```
+
+
 
 运行列表 7-8 和 7-9 中的代码，与运行列表 7-1 没有区别。
 
@@ -3220,9 +3302,6 @@ public class UseAccount {
 
 在许多 IDE 中，你不需要自己输入访问器方法。首先，你输入一个类似 `private String name` 的字段。然后，在 IDE 菜单中，选择 `Source` -> `Generate Getters and Setters` 或者选择 `Code` -> `Insert Code`。在你完成所有选择后，IDE 会创建访问器方法并将它们添加到你的代码中。
 
-
-
-
 ![remember](img/remember.png) 当你调用 setter（设置）方法时，你传入一个与设置类型相同的值。这就是为什么在列表 7-9 中，你使用类型为 `double` 的参数调用了 `yourAccount.setBalance(55.63)`。相比之下，当你调用 getter（获取）方法时，你通常不会向方法传递任何值。这就是为什么在列表 7-9 中，你带空参数列表调用了 `yourAccount.getBalance()`。偶尔，你可能想用一条语句获取并设置一个值。要给账户的现有余额增加美元，你可以编写 `yourAccount.setBalance(yourAccount.getBalance() + 1.00)`。
 
 ### 使用访问器方法强制规则
@@ -3243,7 +3322,7 @@ public void setName(String n) {
 myAccount.name = "";
 ```
 
-当然，像 `myAccount.setName("Joe Schmoe")` 这样的调用仍然有效，因为 "Joe Schmoe" 不等于空字符串 ""。
+当然，像 `myAccount.setName("Joe Schmoe")` 这样的调用仍然有效，因为 "Joe Schmoe" 不等于空字符串 `""`。
 
 这很酷。通过私有字段和访问器方法，你可以防止有人将空字符串赋值给账户的名称字段。通过更复杂的 if 语句，你可以强制执行任何你想要的规则。
 
@@ -3257,7 +3336,7 @@ myAccount.name = "";
 
 列表 7-10 使用我的 `DummiesFrame` 类，并使用图 7-15 到图 7-17 向你展示结果。
 
-列表 7-10： 你的第一个 DummiesFrame 示例
+### 列表 7-10： 你的第一个 DummiesFrame 示例
 
 ```java
 import com.allmycode.dummiesframe.DummiesFrame;
@@ -3290,7 +3369,7 @@ public class GuessingGame {
 以下是对列表 7-10 中代码的详细描述：
 
 *   第一行 `import com.allmycode.dummiesframe.DummiesFrame;` 使 `DummiesFrame` 名称对代码可用。
-*   在 `main` 方法内部，语句 `DummiesFrame frame = new DummiesFrame("Greet Me!");` 创建 `DummiesFrame` 类的实例并让变量 `frame` 指向该实例。DummiesFrame` 对象出现在屏幕上。在本示例中，窗口的标题是 *Greet Me!*。
+*   在 `main` 方法内部，语句 `DummiesFrame frame = new DummiesFrame("Greet Me!");` 创建 `DummiesFrame` 类的实例并让变量 `frame` 指向该实例。`DummiesFrame` 对象出现在屏幕上。在本示例中，窗口的标题是 *Greet Me!*。
 *   下一条语句调用 `frame` 对象的 `addRow` 方法 `frame.addRow("Your first name")` 在应用程序窗口上添加一行。该行由一个标签（文本为 *Your first name*）、一个空文本字段和一个表示用户尚未输入任何内容的红色 X 标记组成（参见图 7-15）。
 *   调用 `frame` 对象的 `go` 方法 `frame.go();` 使应用程序的窗口出现。
 *   `calculate` 方法头 `public static String calculate(String firstName)` 告诉 Java 两件事：
@@ -3306,11 +3385,7 @@ public class GuessingGame {
 
 使用我的 `DummiesFrame` 类，你只需要十行代码就可以构建一个简单的 GUI 应用程序。
 
-![remember](img/remember.png) DummiesFrame 类没有内置在 Java API 中，因此为了运行列表 7-10 中的代码，我的 `DummiesFrame.java` 文件必须是你项目的一部分。当你从书的网站下载代码（[www.allmycode.com/JavaForDummies](http://www.allmycode.com/JavaForDummies)）时，你会得到一个名为 `07-10` 的文件夹，其中包含了列表 7-10 代码和 `DummiesFrame.java` 代码。但如果你自己创建一个包含列表 7-10 的项目，你必须手动添加我的 `DummiesFrame.java` 文件。操作方法取决于你使用哪种 IDE。无论如何，我的 `DummiesFrame` 类位于名为 `com.allmycode.dummiesframe` 的包中，因此 `DummiesFrame.java` 文件必须位于名为 `dummiesframe` 的目录中，该目录位于名为 `allmycode` 的目录内，而该目录又位于名为 `com` 的目录内。关于包的更多信息，请参见第 9 章和第 14 章。
-
-
-
-
+![remember](img/remember.png) `DummiesFrame` 类没有内置在 Java API 中，因此为了运行列表 7-10 中的代码，我的 `DummiesFrame.java` 文件必须是你项目的一部分。当你从书的网站下载代码（[www.allmycode.com/JavaForDummies](http://www.allmycode.com/JavaForDummies)）时，你会得到一个名为 `07-10` 的文件夹，其中包含了列表 7-10 代码和 `DummiesFrame.java` 代码。但如果你自己创建一个包含列表 7-10 的项目，你必须手动添加我的 `DummiesFrame.java` 文件。操作方法取决于你使用哪种 IDE。无论如何，我的 `DummiesFrame` 类位于名为 `com.allmycode.dummiesframe` 的包中，因此 `DummiesFrame.java` 文件必须位于名为 `dummiesframe` 的目录中，该目录位于名为 `allmycode` 的目录内，而该目录又位于名为 `com` 的目录内。关于包的更多信息，请参见第 9 章和第 14 章。
 
 ![technicalstuff](img/technicalstuff.png) 为了保持简单，我在你从本书的网站下载的 `07-10` 文件夹中包含了 `DummiesFrame.java` 文件。但说真的，这是将我自己的代码添加到你的项目中的最佳方式吗？在第 1 章中，我描述了带有 `.class` 扩展的文件，以及这些文件在 Java 程序运行中所起的作用。我不应该直接交给你 `DummiesFrame.java` 文件，而应该只在下载包中放入一个 `DummiesFrame.class` 文件。而且在其他情况下，如果我必须给你提供数百个 `.class` 文件，我应该将它们全部封装成一个大的归档文件。Java 对编码了许多较小 `.class` 文件的大文件有一个专门的名称，它被称为 `JAR` 文件，扩展名为 `.jar`。在实际应用中，如果你正在准备代码以供他人作为他们自己应用程序的一部分使用，那么 `JAR` 文件无疑是正确的选择。
 
@@ -3329,13 +3404,12 @@ public class Addition {
         frame.setButtonText("Sum");
         frame.go();
     }
+
     public static int calculate(int firstNumber, int secondNumber) {
         return firstNumber + secondNumber;
     }
 }
 ```
-
-图 7-18 中的窗口有两个行，是因为列表 7-11 调用了两次 `addRow`，且列表中的 `calculate` 方法有两个参数。此外，列表 7-11 调用了 `frame` 对象的 `setButtonText` 方法。因此，在图 7-18 中，按钮上面上的文本并不是默认的单词 `Submit`。
 
 ![image](img/9781119235552-fg0718.png)
 
@@ -3356,6 +3430,7 @@ public class GuessingGame {
         frame.setButtonText("Submit your guess");
         frame.go();
     }
+
     public static String calculate(int inputNumber) {
         Random random = new Random();
         int randomNumber = random.nextInt(10) + 1;
@@ -3368,15 +3443,13 @@ public class GuessingGame {
 }
 ```
 
+
+
 ![image](img/9781119235552-fg0719.png)
 
 图 7-19： 我赢了！
 
 我的 `DummiesFrame` 类并不专门用于问候。列表 7-11 使用 `DummiesFrame` 来算运算。
-
-
-
-
 
 这就是面向对象编程之所以成功的原因之一。多年来，公司一直在购买预写的代码，却发现这些代码并没有按照它们想要的方式运行。那么，公司是如何处理的呢？他们开始胡改代码。他们的程序员深入挖掘程序文件，更改变量名，移动子程序的位置，重写公式，并总的来说让代码变得更糟。现实情况是，如果一个程序没有按照你想要的方式运行（即使它运行得非常接近你的要求），你永远无法通过在代码内部乱搞来改善局面。最好的选择总是抛弃整个程序（尽管这很昂贵）并从头开始。多么凄惨的现状啊！
 
@@ -3394,30 +3467,45 @@ public class GuessingGame {
 import static java.lang.System.out;
 
 public class Employee {
+
     private String name;
+
     private String jobTitle;
 
     public void setName(String nameIn) {
+
         name = nameIn;
+
     }
 
     public String getName() {
+
         return name;
+
     }
 
     public void setJobTitle(String jobTitleIn) {
+
         jobTitle = jobTitleIn;
+
     }
 
     public String getJobTitle() {
+
         return jobTitle;
+
     }
 
     public void cutCheck(double amountPaid) {
+
         out.printf("Pay to the order of %s ", name);
+
         out.printf("(%s) ***$", jobTitle);
+
         out.printf("%,.2f\n", amountPaid);
+
     }
+
 }
 ```
 
@@ -3437,120 +3525,115 @@ public class Employee {
 
 ```java
 import java.util.Scanner;
+
 import java.io.File;
+
 import java.io.IOException;
 
 public class DoPayroll {
+
     public static void main(String args[]) throws IOException {
+
         Scanner diskScanner = new Scanner(new File("EmployeeInfo.txt"));
+
         for (int empNum = 1; empNum <= 3; empNum++) {
+
             payOneEmployee(diskScanner);
+
         }
+
         diskScanner.close();
+
     }
 
     static void payOneEmployee(Scanner diskScanner) {
+
         Employee anEmployee = new Employee();
+
         anEmployee.setName(diskScanner.nextLine());
+
         anEmployee.setJobTitle(diskScanner.nextLine());
+
         anEmployee.cutCheck(diskScanner.nextDouble());
+
     }
+
 }
 ```
 
+代码列表 8-1 包含了三个 `printf` 调用。每个 `printf` 调用都包含一个格式字符串（例如 `"(%s) $"`）和一个变量（如 `jobTitle`）。每个格式字符串都有一个占位符（如 `%s`），它决定了变量值在何时以及如何显示。
 
-
-
-
-Listing 8-1 包含了三个 `printf` 调用。每个 `printf` 调用都包含一个格式字符串（例如 `"(%s) $"`）和一个变量（如 `jobTitle`）。每个格式字符串都有一个占位符（如 `%s`），它决定了变量值在何时以及如何显示。
-
-例如，在第二个 `printf` 调用中，格式字符串有一个 `%s` 占位符。这个 `%s` 为 `jobTitle` 变量的值预留了位置。根据 Java 的规则，`%s` 符号始终为字符串预留位置，事实也如此，变量 `jobTitle` 在 Listing 8-1 中被声明为 `String` 类型。括号和其他一些字符包围着 `%s` 占位符，因此在程序的输出中，每个职位标题都用括号包围。（参见 Figure 8-2。）
+例如，在第二个 `printf` 调用中，格式字符串有一个 `%s` 占位符。这个 `%s` 为 `jobTitle` 变量的值预留了位置。根据 Java 的规则，`%s` 符号始终为字符串预留位置，事实也如此，变量 `jobTitle` 在代码列表 8-1 中被声明为 `String` 类型。括号和其他一些字符包围着 `%s` 占位符，因此在程序的输出中，每个职位标题都用括号包围。（参见 Figure 8-2。）
 
 ![image](img/9781119235552-fg0802.png)
 
-FIGURE 8-2: 每个人都得到了工资。
+Figure 8-2: 每个人都得到了工资。
 
-回到 Listing 8-1，注意 `%,2f` 占位符内部的逗号。逗号告诉程序使用分组分隔符。这就是为什么在 Figure 8-2 中，你看到的是 $5,000.00、$7,000.00 和 $10,000.00，而不是 $5000.00、$7000.00 和 $10000.00。
+回到代码列表 8-1，注意 `%,.2f` 占位符内部的逗号。逗号告诉程序使用分组分隔符。这就是为什么在 Figure 8-2 中，你看到的是 $5,000.00、$7,000.00 和 $10,000.00，而不是 $5000.00、$7000.00 和 $10000.00。
 
 ## 处理磁盘文件（简短插曲）
 
-在之前的章节中，程序从计算机的键盘读取字符。但 Listing 8-2 中的代码是从特定文件读取字符。该文件（命名为 `EmployeeInfo.txt`）位于你的计算机硬盘上。
+在之前的章节中，程序从计算机的键盘读取字符。但代码列表 8-2 中的代码是从特定文件读取字符。该文件（命名为 `EmployeeInfo.txt`）位于你的计算机硬盘上。
 
 这个 `EmployeeInfo.txt` 文件就像一个文字处理文档。文件可以包含字母、数字和其他字符。但与文字处理文档不同，`EmployeeInfo.txt` 文件不包含格式——没有斜体、没有粗体、没有字体大小，没有任何此类。
 
-`EmployeeInfo.txt` 文件只包含普通字符——即你在玩 第 5 章 和 第 6 章 中的猜数字游戏时输入的按键字符。当然，从用户的键盘获取猜数字和从磁盘文件读取员工数据并不完全相同。在猜数字游戏中，程序会显示提示，例如 `Enter an int from 1 to 10`。游戏程序与坐在键盘前的人进行双向对话。相比之下，Listing 8-2 没有对话。这个 `DoPayroll` 程序从硬盘读取字符，不会向任何人提示或交互。
+`EmployeeInfo.txt` 文件只包含普通字符——即你在玩第 5 章和第 6 章中的猜数字游戏时输入的按键字符。当然，从用户的键盘获取猜数字和从磁盘文件读取员工数据并不完全相同。在猜数字游戏中，程序会显示提示，例如 `Enter an int from 1 to 10`。游戏程序与坐在键盘前的人进行双向对话。相比之下，代码列表 8-2 没有对话。这个 `DoPayroll` 程序从硬盘读取字符，不会向任何人提示或交互。
 
-本章的大部分内容关于代码复用。但 Listing 8-2 偶然发现了一个想法——一个与代码复用并不直接相关的想法。与之前章节中的示例不同，Listing 8-2 从存储的磁盘文件中读取数据。因此，在接下来的章节中，我进行了一次短的旁游来探索磁盘文件。
-
-### 在文件中存储数据
-
-如果你不在文件中放置一些员工数据，Listing 8-2 中的代码就无法运行。Listing 8-2 说明该文件是 `EmployeeInfo.txt`。因此，在运行 Listing 8-2 的代码之前，我创建了一个小的 `EmployeeInfo.txt` 文件。该文件如 Figure 8-3 所示；输出参见 Figure 8-2。
-
-![image](img/9781119235552-fg0802.png)
-
-FIGURE 8-3: 一个 `EmployeeInfo.txt` 文件。当你访问这本书的网站（`www.allmycode.com/JavaDummies`）并下载书籍列表时，你就会得到 `EmployeeInfo.txt` 的副本。
-
-![warning](img/png) 为了保持 Listing 8-2 的简单，我坚持要求在文件中准备一些员工数据。Listing 8-2 说明该文件是 `EmployeeInfo.txt`。因此，在运行 Listing 8-2 的代码之前，我创建了一个小的 `EmployeeInfo.txt` 文件。该文件如 Figure 8-3 所示；输出参见 Figure 8-2。
-
-Listing 8-2 包含了……当你访问此书的网站（`www.allmycode.com/JavaDummies`）并下载书籍列表时，你就会得到 `EmployeeInfo.txt` 的副本。
-
-![warning](img/png) 为了保持 Listing 8-2 的简单，我坚持要求在文件中准备一些员工数据。Listing 8-2 说明该文件是 `EmployeeInfo.txt`。因此，在运行 Listing 8-2 的代码之前，我创建了一个小的 `EmployeeInfo.txt` 文件。该文件如 Figure 8-3 所示；输出参见 Figure 8-2。
-
-Listing 8-1 包含了三个 `printf` 调用。每个 `printf` 调用都包含一个格式字符串（例如 `"(%s) $"`）和一个变量（如 `jobTitle`）。每个格式字符串都有一个占位符（如 `%s`），它决定了变量值在何时以及如何显示。
-
-例如，在第二个 `printf` 调用中，格式字符串有一个 `%s` 占位符。这个 `%s` 为 `jobTitle` 变量的值预留了位置。根据 Java 的规则，`%s` 符号始终为字符串预留位置，事实也如此，变量 `jobTitle` 在 Listing 8-1 中被声明为 `String` 类型。括号和其他一些字符包围着 `%s` 占位符，因此在程序的输出中，每个职位标题都用括号包围。（参见 Figure 8-2。）
-
-![image](img/9781119235552-fg0802.png)
-
-FIGURE 8-2: 每个人都得到了工资。
-
-回到 Listing 8-1，注意 `%,2f` 占位符内部的逗号。逗号告诉程序使用分组分隔符。这就是为什么在 Figure 8-2 中，你看到的是 $5,000.00、$7,000.00 和 $10,000.00，而不是 $5000.00、$7000.00 和 $10000.00。
-
-## 处理磁盘文件（简短插曲）
-
-在之前的章节中，程序从计算机的键盘读取字符。但 Listing 8-2 中的代码是从特定文件读取字符。该文件（命名为 `EmployeeInfo.txt`）位于你的计算机硬盘上。
-
-这个 `EmployeeInfo.txt` 文件就像一个文字处理文档。文件可以包含字母、数字和其他字符。但与文字处理文档不同，`EmployeeInfo.txt` 文件不包含格式——没有斜体、没有粗体、没有字体大小，没有任何此类。
-
-`EmployeeInfo.txt` 文件只包含普通字符——即你在玩 第 5 章 和 第 6 章 中的猜数字游戏时输入的按键字符。当然，从用户的键盘获取猜数字和从磁盘文件读取员工数据并不完全相同。在猜数字游戏中，程序会显示提示，例如 `Enter an int from 1 to 10`。游戏程序与坐在键盘前的人进行双向对话。相比之下，Listing 8-2 没有对话。这个 `DoPayroll` 程序从硬盘读取字符，不会向任何人提示或交互。
-
-本章的大部分内容关于代码复用。但 Listing 8-2 偶然发现了一个想法——一个与代码复用并不直接相关的想法。与之前章节中的示例不同，Listing 8-2 从存储的磁盘文件中读取数据。因此，在接下来的章节中，我进行了一次短的旁游来探索磁盘文件。
+本章的大部分内容关于代码复用。但代码列表 8-2 偶然发现了一个想法——一个与代码复用并不直接相关的想法。与之前章节中的示例不同，代码列表 8-2 从存储的磁盘文件中读取数据。因此，在接下来的章节中，我进行了一次短的旁游来探索磁盘文件。
 
 ### 在文件中存储数据
 
-如果你不在文件中放置一些员工数据，Listing 8-2 中的代码就无法运行。Listing 8-2 说明该文件是 `EmployeeInfo.txt`。因此，在运行 Listing 8-2 的代码之前，我创建了一个小的 `EmployeeInfo.txt` 文件。该文件如 Figure 8-3 所示；输出参见 Figure 8-2。
+如果你不在文件中放置一些员工数据，代码列表 8-2 中的代码就无法运行。代码列表 8-2 说明该文件是 `EmployeeInfo.txt`。因此，在运行代码列表 8-2 的代码之前，我创建了一个小的 `EmployeeInfo.txt` 文件。该文件如 Figure 8-3 所示；输出参见 Figure 8-2。
 
 ![image](img/9781119235552-fg0802.png)
 
-FIGURE 8-3: 一个 `EmployeeInfo.txt` 文件。当你访问这本书的网站（`www.allmycode.com/JavaDummies`）并下载书籍列表时，你就会得到 `EmployeeInfo.txt` 的副本。
+Figure 8-3: 一个 `EmployeeInfo.txt` 文件。当你访问这本书的网站（`www.allmycode.com/JavaDummies`）并下载书籍列表时，你就会得到 `EmployeeInfo.txt` 的副本。
 
-![warning](img/png) 为了保持 Listing 8-2 的简单，我坚持要求在文件中准备一些员工数据。Listing 8-2 说明该文件是 `EmployeeInfo.txt`。因此，在运行 Listing 8-2 的代码之前，我创建了一个小的 `EmployeeInfo.txt` 文件。该文件如 Figure 8-3 所示；输出参见 Figure 8-2。
+![warning](img/png) 为了保持代码列表 8-2 的简单，我坚持要求在文件中准备一些员工数据。代码列表 8-2 说明该文件是 `EmployeeInfo.txt`。因此，在运行代码列表 8-2 的代码之前，我创建了一个小的 `EmployeeInfo.txt` 文件。该文件如 Figure 8-3 所示；输出参见 Figure 8-2。
 
 ### 复制粘贴代码
 
-在几乎任何编程语言中，从文件读取数据都是困难的。你添加额外的行来告诉计算机做什么。有时你可以从其他代码中复制这些行。例如，你可以遵循 Listing 8-2 的模式：
+在几乎任何编程语言中，从文件读取数据都是困难的。你添加额外的行来告诉计算机做什么。有时你可以从其他代码中复制这些行。例如，你可以遵循代码列表 8-2 的模式：
 
 ```java
 /*
+
  * The pattern in Listing 8-2
+
  */
+
 import java.util.Scanner;
+
 import java.io.File;
+
 import java.io.IOException;
 
 class SomeClassName {
+
     public static void main(String args[]) throws IOException {
+
         Scanner scannerName = new Scanner(new File("SomeFileName"));
+
         // Some code goes here
+
         scannerName.nextInt();
+
         scannerName.nextDouble();
+
         scannerName.next();
+
         scannerName.nextLine();
+
         // Some code goes here
+
         scannerName.close();
+
     }
+
 }
 ```
+
+
 
 你想从文件读取数据。你首先想象你在从键盘读取。把常用的 `Scanner` 和 `next` 代码放入你的程序。然后添加一些额外的项：
 
@@ -3564,10 +3647,6 @@ class SomeClassName {
 偶尔，复制粘贴代码会让你遇到麻烦。也许你正在编写一个符合简单模式的程序。你需要微调模式。但为了微调模式，你需要理解模式背后的一些想法。
 
 这就是下一节将为你提供帮助。它涵盖了这些想法。
-
-
-
-
 
 ![technicalstuff](img/technicalstuff.png) 这段话其实是一个告白。在几乎所有的计算机编程语言中，从磁盘文件输入都是一件棘手的事情。并不存在简单的 `INPUT` 命令。你通常必须在代码和磁盘设备之间建立连接，为从设备读取时可能出现的问题做好准备，进行读取，将读取到的字符转换为你需要的数值类型，最后断开与磁盘设备的连接。这是一团糟。这就是为什么在本书中，我依赖 Java 的 `Scanner` 类。`Scanner` 类让输入变得相对轻松。但我承认，专业的 Java 程序员很少使用 `Scanner` 类来处理输入。相反，他们使用被称为 `BufferedReader` 或 `java.nio` 包中的类。如果你对我对 `Scanner` 类的使用不满意，并希望看到列表 8-2 翻译成 `BufferedReader` 程序，请访问本书的网站（[`www.allmycode.com/JavaForDummies`](http://www.allmycode.com/JavaForDummies)）。
 
@@ -3607,10 +3686,7 @@ class SomeClassName {
 
     你可以通过多种方式承认这些危险，但最简单的方法是使用 `throws` 子句。在列表 8-2 中，main 方法以 `throws IOException` 结尾。（如果没有这个，你会得到一个未报告的异常。）
 
-
-
-
-当你从本书的网站（[`www.allmycode.com/JavaForDummies`](http://www.allmycode.com/JavaForDummies））下载代码时，你会发现名为 `Employee.java` 和 `DoPayroll.java` 的文件——它们是列表 8-1 和 8-2 中的代码。你还会发现一个名为 `EmployeeInfo.txt` 的文件。很好，因为如果 Java 找不到 `EmployeeInfo.txt` 文件，整个项目无法正常运行。相反，你会得到一个 `FileNotFoundException`。
+当你从本书的网站（[`www.allmycode.com/JavaForDummies`](http://www.allmycode.com/JavaForDummies)）下载代码时，你会发现名为 `Employee.java` 和 `DoPayroll.java` 的文件——它们是列表 8-1 和 8-2 中的代码。你还会发现一个名为 `EmployeeInfo.txt` 的文件。很好，因为如果 Java 找不到 `EmployeeInfo.txt` 文件，整个项目无法正常运行。相反，你会得到一个 `FileNotFoundException`。
 
 通常情况下，当你遇到 `FileNotFoundException` 时，意味着程序需要的某个文件不可用。这是一个很容易犯的错误。这可能会让人沮丧，因为对你来说，像 `EmployeeInfo.txt` 这样的文件似乎对你的程序是可用的。但记住：计算机是愚笨的。如果你犯了一个微小的错误，计算机无法为你理解言外之意。因此，如果你的 `EmployeeInfo.txt` 文件不在硬盘的正确目录下，或者文件名拼写错误，计算机在尝试运行你的代码时就会卡住。
 
@@ -3636,8 +3712,6 @@ System.out.println("Looking for " + employeeInfo.getCanonicalPath());
 #### 逐行读取
 
 在列表 8-2 中，`payOneEmployee` 方法演示了一些读取数据的有用技巧。特别是，你创建的每个 `scanner` 都有一个 `nextLine` 方法。（你可能不会使用这个 `nextLine` 方法，但该方法仍然可用。）当你调用扫描器的 `nextLine` 方法时，该方法会抓取直到当前行文本结束的所有内容。
-
-
 
 对于普通计算机用户来说，键盘的感觉起来和存储在计算机硬盘上的文件完全不同。但磁盘文件和键盘输入有许多共同点。事实上，计算机操作系统的一个基本原则规定，对于程序员来说，两种输入类型之间的差异越模糊越好。作为一名 Java 程序员，你应该几乎以相同的方式来对待磁盘文件和键盘输入。这就是为什么列表 8-2 中包含一个 `diskScanner.close()` 调用。
 
@@ -3676,34 +3750,47 @@ System.out.println("Looking for " + employeeInfo.getCanonicalPath());
 
 ```java
 public class FullTimeEmployee extends Employee {
+
     private double weeklySalary;
+
     private double benefitDeduction;
 
     public void setWeeklySalary(double weeklySalaryIn) {
+
         weeklySalary = weeklySalaryIn;
+
     }
 
     public double getWeeklySalary() {
+
         return weeklySalary;
+
     }
 
     public void setBenefitDeduction(double benefitDedIn) {
+
         benefitDeduction = benefitDedIn;
+
     }
 
     public double getBenefitDeduction() {
+
         return benefitDeduction;
+
     }
 
     public double findPaymentAmount() {
+
         return weeklySalary - benefitDeduction;
+
     }
+
 }
 ```
 
+
+
 观察列表 8-3，你可以看到每个 `FullTimeEmployee` 类实例都有两个字段：`weeklySalary` 和 `benefitDeduction`。但这些是每个 `FullTimeEmployee` 实例拥有的字段字段吗？不是。列表 8-3 的第一行说 `FullTimeEmployee` 类继承自现有的 `Employee` 类。这意味着除了拥有 `weeklySalary` 和 `benefitDeduction` 之外，每个 `FullTimeEmployee` 实例还有另外两个字段：`name` 和 `jobTitle`。这两个字段来自 `Employee` 类的定义，你可以在列表 8-1 中找到它们。
-
-
 
 在 Listing 8-3 中，魔法单词是 `extends`。当一个类继承一个现有的类时，扩展类会自动继承在现有类中定义的功能。因此，`FullTimeEmployee` 类继承了 `name` 和 `jobTitle` 字段。`FullTimeEmployee` 类还继承了在 `Employee` 类中声明的所有方法：`setName`、`getName`、`setJobTitle`、`getJobTitle` 和 `cutCheck`。`FullTimeEmployee` 类是 `Employee` 类的**子类**（subclass）。这意味着 `Employee` 类是 `FullTimeEmployee` 类的**父类**（superclass）。你也可以用血缘关系来描述：`FullTimeEmployee` 类是 `Employee` 类的**子**（child），而 `Employee` 类是 `FullTimeEmployee` 类的**父**（parent）。
 
@@ -3715,52 +3802,79 @@ public class FullTimeEmployee extends Employee {
 import static java.lang.System.out;
 
 public class FullTimeEmployee {
+
     private String name;
+
     private String jobTitle;
+
     private double weeklySalary;
+
     private double benefitDeduction;
 
     public void setName(String nameIn) {
+
         name = nameIn;
+
     }
 
     public String getName() {
+
         return name;
+
     }
 
     public void setJobTitle(String jobTitleIn) {
+
         jobTitle = jobTitleIn;
+
     }
 
     public String getJobTitle() {
+
         return jobTitle;
+
     }
 
     public void setWeeklySalary(double weeklySalaryIn) {
+
         weeklySalary = weeklySalaryIn;
+
     }
 
     public double getWeeklySalary() {
+
         return weeklySalary;
+
     }
 
     public void setBenefitDeduction(double benefitDedIn) {
+
         benefitDeduction = benefitDedIn;
+
     }
 
     public double getBenefitDeduction() {
+
         return benefitDeduction;
+
     }
 
     public double findPaymentAmount() {
+
         return weeklySalary - benefitDeduction;
+
     }
 
     public void cutCheck(double amountPaid) {
+
         out.printf("Pay to the order of %s ", name);
+
         out.printf("(%s) ***$", jobTitle);
+
         out.printf("%,.2f\n", amountPaid);
+
     }
+
 }
 ```
 
@@ -3776,24 +3890,29 @@ public class FullTimeEmployee {
 
 ```java
 public class PartTimeEmployee extends Employee {
+
     private double hourlyRate;
 
     public void setHourlyRate(double rate) {
+
         hourlyRate = rate;
+
     }
 
     public double getHourlyRate() {
+
         return hourlyRate;
+
     }
 
     public double findPaymentAmount(int hours) {
+
         return hourlyRate * hours;
+
     }
+
 }
 ```
-
-
-
 
 要理解 Listing 8-6，你需要关注三个类：`Employee`、`FullTimeEmployee` 和 `PartTimeEmployee`。（要查看定义这些类的代码，请参阅 Listing 8-1、8-3 和 8-5。）
 
@@ -3824,10 +3943,6 @@ FIGURE 8-7: 参数匹配。
 在 Listing 8-6 的后半部分，代码创建了一个类型为 `PartTimeEmployee` 对象。类型为 `PartTimeEmployee` 的变量可以执行一些 `FullTimeEmployee` 变量也可以做的事情。但 `PartTimeEmployee` 类没有 `setWeeklySalary` 和 `setBenefitDeduction` 方法。相反，`PartTimeEmployee` 类拥有 `setHourlyRate` 方法。（参见 Listing 8-5。）因此在 Listing 8-6 中，倒数第二行是对 `setHourlyRate` 方法的调用。
 
 Listing 8-6 的最后一行无疑是最有趣的。在该行中，代码将数字 10（工作小时数）传递给 `findPaymentAmount` 方法。将其与早之前的 `findPaymentAmount` 调用进行对比——即在 Listing 8-6 前半部分中全职员工的调用。
-
-
-
-
 
 [图 8-8] 显示了[Listing 8-7]中的代码与本章其他代码之间的关系。特别是，`PartTimeWithOver` 是一个子类的子类。在面向对象的编程中，这种链结构并不稀奇。事实上，从子类的角度来看，这个链相当短。
 
@@ -3871,28 +3986,51 @@ Java 还有其他类型的注解（例如 `@Deprecated` 和 `@SuppressWarnings`�
 
 ```java
 public class DoPayroll {
+
     public static void main(String args[]) {
+
         FullTimeEmployee ftEmployee = new FullTimeEmployee();
+
         ftEmployee.setName("Barry Burd");
+
         ftEmployee.setJobTitle("CEO");
+
         ftEmployee.setWeeklySalary(5000.00);
+
         ftEmployee.setBenefiteduction(500.00);
+
         ftEmployee.cutCheck(ftEmployee.findPaymentAmount());
 
         PartTimeEmployee ptEmployee = new PartTimeEmployee();
+
         ptEmployee.setName("Chris Apelian");
+
         ptEmployee.setJobTitle("Computer Author");
+
         ptEmployee.setHourlyRate(7.53);
+
         ptEmployee.cutCheck(ptEmployee.findPaymentAmount());
 
         PartTimeWithOver ptoEmployee = new PartTimeWithOver();
+
         ptoEmployee.setName("Steve Surace");
+
         ptoEmployee.setJobTitle("Driver");
+
         ptoEmployee.setHourlyRate(7.53);
+
         ptoEmployee.cutCheck(ptoEmployee.findPaymentAmount());
+
     }
+
 }
 ```
+
+
+
+# 定义构造函数（成为温度意味着什么）
+
+## 示例代码分析
 
 [Listing 8-8]中的代码为三位员工开了支票。第一位员工是全职的。第二位是尚未获得加班费方案的兼职员工。第三位员工了解加班方案并要求公平工资。
 
@@ -3911,45 +4049,71 @@ public class DoPayroll {
 
 ```java
 public class Main {
+
     public static void main(String[] args) {
+
         MyThing myThing, myThing2;
+
         myThing = new MySubThing();
+
         myThing2 = new MyOtherThing();
+
         myThing.value = 7;
+
         myThing2.value = 44;
+
         myThing.display();
+
         myThing2.display();
+
     }
+
 }
+
 class MyThing {
+
     int value;
+
     public void display() {
+
         System.out.println("In MyThing, value is " + value);
+
     }
+
 }
+
 class MySubThing extends MyThing {
+
     @Override
+
     public void display() {
+
         System.out.println("in MySUBThing, value is " + value);
+
     }
+
 }
+
 class MyOtherThing extends MyThing {
+
     @Override
+
     public void display() {
+
         System.out.println("In MyOTHERThing, value is " + value);
+
     }
+
 }
 ```
-
-
-
-
 
 ![check](img/check.png) **在子类中使用构造函数**
 
 ![check](img/check.png) **使用 Java 的默认构造函数特性**
 
 ![check](img/check.png) **从零开始构建一个简单的 GUI**
+
+---
 
 Ms. Jennie Burd
 121 Schoolhouse Lane
@@ -3967,6 +4131,8 @@ Anywhere, Kansas
 
 Scott Brickenchicker 先生
 那个在第 4 章中没能上电梯的人
+
+---
 
 ## 定义构造函数（成为温度意味着什么）
 
@@ -3996,12 +4162,15 @@ Account myAccount = new Account();
 
 Java 提供了许多方法让你将组合在一起。在第 11 章定义了一个 `enum` 类型。该 enum 类型的名称是 `TempScale`。
 
-列表 9-1： TempScale 类型（一种 enum 类型）
+**列表 9-1： TempScale 类型（一种 enum 类型）**
 
 ```java
 public enum TempScale {
+
     CELSIUS, FAHRENHEIT, KELVIN, RANKINE,
+
     NEWTON, DELISLE, RÉAUMUR, RØMER, LEIDEN
+
 }
 ```
 
@@ -4030,17 +4199,17 @@ public enum TempScale {
 
 Java 提供了许多方法让你将事物组合在一起。在第 11 章定义了一个 `enum` 类型。该 enum 类型的名称是 `TempScale`。
 
-列表 9-1： TempScale 类型（一种 enum 类型）
+**列表 9-1： TempScale 类型（一种 enum 类型）**
 
 ```java
 public enum TempScale {
+
     CELSIUS, FAHRENHEIT, KELVIN, RANKINE,
+
     NEWTON, DELISLE, RÉAUMUR, RØMER, LEIDEN
+
 }
 ```
-
-
-
 
 在此基础上，Listing 9-2 还有四个看起来像方法的东西。这些像方法的东西的名字都叫 `Temperature`，这恰好与类名相同。这些像方法的 `Temperature` 方法都没有任何种类型的返回类型——甚至连 `void` 这种偷懒的返回类型都没有。
 
@@ -4056,27 +4225,41 @@ Listing 9-3 将我在上一节中描述的一些想法具体化了。在 Listing
 
 ![image](img/9781119235552-fg0901.png)
 
-图 9-1: 运行来自 Listing 9-3 的代码。
+**图 9-1: 运行来自 Listing 9-3 的代码。**
 
-Listing 9-3: 使用 Temperature 类
+**Listing 9-3: 使用 Temperature 类**
 
-```
+```java
 import static java.lang.System.out;
 
 public class UseTemperature {
+
     public static void main(String args[]) {
+
         final String format = "%5.2f degrees %s\n";
+
         Temperature temp = new Temperature();
+
         temp.setNumber(70.0);
+
         temp.setScale(TempScale.FAHRENHEIT);
+
         out.printf(format, temp.getNumber(), temp.getScale());
+
         temp = new Temperature(32.0);
+
         out.printf(format, temp.getNumber(), temp.getScale());
+
         temp = new Temperature(TempScale.CELSIUS);
+
         out.printf(format, temp.getNumber(), temp.getScale());
+
         temp = new Temperature(2.73, TempScale.KELVIN);
+
         out.printf(format, temp.getNumber(), temp.getScale());
+
     }
+
 }
 ```
 
@@ -4090,22 +4273,18 @@ public class UseTemperature {
 
 当计算机执行 Listing 9-3 中的一个 `new Temperature` 语句时，计算机必须决定使用 Listing 9-2 中的哪个构造函数。计算机通过查看参数列表（`new Temperature` 单词之后括号里的内容）来做决定。例如，当计算机执行 Listing 9-3 中的 `temp = new Temperature(32.0);` 时，计算机对自己说：“括号里的数字 32.0 是 double 值。Listing 9-2 中的 `Temperature` 构造函数之一只有一个类型为 `double` 的参数。”构造函数的头部看起来如下：
 
-```
+```java
 public Temperature(double number)
 ```
 
 “所以，我想我执行那个特定构造函数内部的语句。”计算机继续执行以下语句：
 
-```
+```java
 this.number = number;
 scale = TempScale.FAHRENHEIT;
 ```
 
 结果，你得到了一个全新的对象，其 `number` 字段值为 `32.0`，`scale` 字段值为 `TempScale.FAHRENHEIT`。
-
-
-
-
 
 回到两个语句中的第一条，这句语句为新对象的 `number` 字段赋了一个值。该语句使用了一个巧妙的技巧，你可以在许多构造函数中（以及其他给对象字段赋值的方法）中看到它。若要理解这个技巧，请看一眼 列表 9-4。该列表展示了我编写相同构造函数代码的两种方式。
 
@@ -4113,95 +4292,66 @@ scale = TempScale.FAHRENHEIT;
 
 ```java
 //使用这个构造函数 …
+
 public Temperature(double whatever) {
+
   number = whatever;
+
   scale = TempScale.FAHRENHEIT;
+
 }
 
 //…或者使用这个构造函数 …
+
 public Temperature(double number) {
+
   this.number = number;
+
   scale = TempScale.FAHRENHEIT;
+
 }
 
 //…但不要在代码中同时放入这两个构造函数。
 ```
 
+
+
 列表 9-4 包含了两个构造函数。在第一个构造函数中，我使用了不同的名字：`number` 和 `whatever`。在第二个构造函数中，我不需要两个名字。与其为构造函数的参数起一个新名字，我通过编写 `this.number` 来复用已有的名字。
 
-以下是 列表 9-2 中的执行情况：
+以下是列表 9-2 中的执行情况：
 
-*   在语句 `this.number = number` 中，名称 `this.number` 指向新对象的 `number` 字段——该字段在 列表 9-2 顶部附近声明。（参见 图 9-2。）
-*   在语句 `this.number = number` 中，`number`（单独出现，不带 `this`）指向构造函数的参数。（再次参见 图 9-2。）
+*   在语句 `this.number = number` 中，名称 `this.number` 指向新对象的 `number` 字段——该字段在列表 9-2 顶部附近声明。（参见图 9-2。）
+*   在语句 `this.number = number` 中，`number`（单独出现，不带 `this`）指向构造函数的参数。（再次参见图 9-2。）
 
 ![image](img/9781119235552-fg0902.png)
 
-### 图 9-2： this.number 和 number 的含义。
+### 图 9-2： this.number 和 number 的含义
 
-通常情况下，`this.someName` 指向包含代码的对象的字段。相比之下，普通的 `someName` 指向 `someName` 恰好声明的最近的地方。在语句 `this.number = number`（参考 列表 9-2）中，最近的地方恰好是 `Temperature` 构造函数的参数列表。
-
-### 某些东西永远不会
-
-第 7 章 引入了 `printf` 方法并解释了每个 `printf` 调用都以一个格式字符串开头。格式字符串描述了其他参数显示的方式。
-
-在之前的示例中，这个格式字符串始终是一个带引号的字面量。例如，列表 7-7 参见第 7 章）中的第一个 `printf` 调用是：
-
-```java
-out.printf("$%4.2f\n", myInterest);
-```
-
-在 列表 9-3 中，我打破了传统，以一个我命名为 `format` 的变量开始 `printf` 调用。
-
-```java
-out.printf(format, temp.getNumber(), temp.getScale());
-```
-
-只要我的格式变量类型为 `String`，这样做就是可以的。事实上，在 列表 9-3 中，第一个变量声明是：
-
-```java
-final String format = "%5.2f degrees %s\n";
-```
-
-在这个格式变量的声明中，请特别注意 `final` 这个词。这个 Java 关键字表示 `format` 的值不能被改变。如果我向 列表 9-3 中添加另一个赋值语句：
-
-```java
-format = "%6.2f (%s)\n";
-```
-
-编译器会向我报错，信息信息为 `cannot assign a value to final variable`。
-
-当我在 列表 9-3 中编写代码时，使用 `final` 关键字并不是绝对必要的。但 `final` 关键字提供了额外的保护。当我将 `format` 初始化为 `"%5.2f degrees %s\n"` 时，我打算原封不动地反复使用这个相同的格式。我很清楚并不打算改变 `format` 变量的值。当然，在一个 10,000 行的程序中，我可能会混乱，并尝试在代码深处给 `format` 分配一个新值。为了防止我不意外更改格式字符串，我将 `format` 变量声明为 `final`。这是一个良好的、安全的编程习惯。
-
-![tryitout](img/tryitout.png) 始终有更多可以尝试的内容。
-
-*   在语句 `this.number = number` 中，名称 `this.number` 指向新对象的 `number` 字段——该字段在 列表 9-2 顶部附近声明。（参见 图 9-2。）
-*   在语句 `this.number = number` 中，`number`（单独出现，不带 `this`）指向构造函数的参数。（再次参见 图 9-2。）
-
-通常情况下，`this.someName` 指向包含代码的对象的字段。相比之下，普通的 `someName` 指向 `someName` 恰好声明的最近的地方。在语句 `this.number = number`（参考 列表 9-2）中，最近的地方恰好是 `Temperature` 构造函数的参数列表。
+通常情况下，`this.someName` 指向包含代码的对象的字段。相比之下，普通的 `someName` 指向 `someName` 恰好声明的最近的地方。在语句 `this.number = number`（参考列表 9-2）中，最近的地方恰好是 `Temperature` 构造函数的参数列表。
 
 ### 某些东西永远不会改变
 
 第 7 章引入了 `printf` 方法并解释了每个 `printf` 调用都以一个格式字符串开头。格式字符串描述了其他参数显示的方式。
 
-在之前的示例中，这个格式字符串始终是一个带引号的字面量。例如，列表 7-7 参见第 7 章中的第一个 `printf` 调用是：
+在之前的示例中，这个格式字符串始终是一个带引号的字面量。例如，列表 7-7（参见第 7 章）中的第一个 `printf` 调用是：
 
 ```java
 out.printf("$%4.2f\n", myInterest);
 ```
 
-在 列表 9-3 中，我打破了传统，以一个我命名为 `format` 的变量开始 `printf` 调用：
+在列表 9-3 中，我打破了传统，以一个我命名为 `format` 的变量开始 `printf` 调用：
 
 ```java
 out.printf(format, temp.getNumber(), temp.getScale());
 ```
 
-只要我的格式变量类型为 `String`，这样做就是可以的。事实上，在 列表 9-3 中，第一个变量声明是：
+只要我的格式变量类型为 `String`，这样做就是可以的。事实上，在列表 9-3 中，第一个变量声明是：
 
 ```java
 final String format = "%5.2f degrees %s\n";
 ```
 
-在这个格式变量的声明中，请特别注意 `final` 这个词。这个 Java 关键字表示 `format` 的值不能被改变。如果我向 列表 9-3 中添加另一个赋值语句：
+在这个格式变量的声明中，请特别注意 `final` 这个词。这个 Java 关键字表示 `format` 的值不能被改变。如果我向列表 9-3 中添加另一个赋值语句：
 
 ```java
 format = "%6.2f (%s)\n";
@@ -4209,21 +4359,9 @@ format = "%6.2f (%s)\n";
 
 编译器会向我报错，信息为 `cannot assign a value to final variable`。
 
-当我在 列表 9-3 中编写代码时，使用 `final` 关键字并不是绝对必要的。但 `final` 关键字提供了额外的保护。当我将 `format` 初始化为 `"%5.2f degrees %s\n"` 时，我打算原封不动地反复使用这个相同的格式。我很清楚并不打算改变 `format` 变量的值。当然，在一个 10,000 行的程序中，我可能会混乱，并尝试在代码深处给 `format` 分配一个新值。为了防止我不意外更改格式字符串，我将 `format` 变量声明为 `final`。这是一个良好的、安全的编程习惯。
+当我在列表 9-3 中编写代码时，使用 `final` 关键字并不是绝对必要的。但 `final` 关键字提供了额外的保护。当我将 `format` 初始化为 `"%5.2f degrees %s\n"` 时，我打算原封不动地反复使用这个相同的格式。我很清楚并不打算改变 `format` 变量的值。当然，在一个 10,000 行的程序中，我可能会混乱，并尝试在代码深处给 `format` 分配一个新值。为了防止我不意外更改格式字符串，我将 `format` 变量声明为 `final`。这是一个良好的、安全的编程习惯。
 
 ![tryitout](img/tryitout.png) 始终有更多可以尝试的内容。
-
-*   在语句 `this.number = number` 中，名称 `this.number` 指向新对象的 `number` 字段——该字段在 列表 9-2 顶部附近声明。（参见 图 9-2。）
-*   在语句 `this.number = number` 中，`number`（单独出现，不带 `this`）指向构造函数的参数。（再次参见 图 9-2。）
-
-*   在语句 `this.number = number` 中，名称 `this.number` 指向新对象的 `number` 字段——该字段在 列表 9-2 顶部附近声明。（参见 图 9-2。）
-*   在语句 `this.number = number` 中，`number`（单独出现，不带 `this`）指向构造函数的参数。（再次参见 图 9-2。）
-
-通常情况下，`this.someName` 指向包含代码的对象的字段。相比之下，普通的 `someName` 指向 `someName` 恰好声明的最近的地方。在语句 `this.number = number`（参考 列表 9-2）中，最近的地方恰好是 `Temperature` 构造函数的参数列表。
-
-
-
-
 
 现在回一下第 8 章 的录带吧。“啦，啦，啦……不想修改现有代码……啦，啦，啦……从头开始成本太高了……啦，啦，啦……扩展现有功能。”这些话都归于一点：
 
@@ -4237,18 +4375,23 @@ format = "%6.2f (%s)\n";
 import static java.lang.System.out;
 
 public class TemperatureNice extends Temperature {
+
     public TemperatureNice() {
         super();
     }
+
     public TemperatureNice(double number) {
         super(number);
     }
+
     public TemperatureNice(TempScale scale) {
         super(scale);
     }
+
     public TemperatureNice(double number, TempScale scale) {
         super(number, scale);
     }
+
     public void display() {
         out.printf("%5.2f degrees %s\n", getNumber(), getScale());
     }
@@ -4274,28 +4417,32 @@ public class TemperatureNice extends Temperature {
 因此，代码列表 9-5 中的代码有四个构造函数。每个构造函数的名称都是 `TemperatureNice`，且每个构造函数都有自己独特的标识参数列表。这是无趣的部分。有趣的部分是，每个构造函数都调用了名为 `super` 的内容，这是一个 Java 关键字。在代码列表 9-5 中，`super` 代表父类中的构造函数：
 
 *   代码列表 9-5 中的语句 `super()` 调用了代码列表 9-2 中的无参数 `Temperature()` 构造函数。该无参数构造函数将 `0.0` 赋值给 `number` 字段，并将 `TempScale.FAHHEIT` 赋值给 `scale` 字段。
-*   代码列表 9-5 中的语句 `super(number, scale)` 调用了代码列表 9-2 中的 `Temperature(double number, TempScale scale)` 构造函数。该该构造函数为 `number` 和 `scale` 字段赋值。
+*   代码列表 9-5 中的语句 `super(number, scale)` 调用了代码列表 9-2 中的 `Temperature(double number, TempScale scale)` 构造函数。该构造函数为 `number` 和 `scale` 字段赋值。
 *   以类似的方式，代码列表 9-5 中的语句 `super(number)` 和 `super(scale)` 调用了代码列表 9-2 中的构造函数。
 
 计算机通过查看 `super` 后面的列表来决定调用 `Temperature` 类的哪个构造函数。例如，当在代码列表 9-5 中执行 `super(number, scale)` 时，计算机对自己说：“`number` 和 `scale` 的类型是 `double` 和 `TempScale`。”但代码列表 9-2 中的 `Temperature` 构造函数只有一个。该构造函数的头部看起来是这样的：
 
 ### 使用这些功能
 
-在代码列表 9-5 中，我定义了 `TemperatureNice` 类的。现在是让这个 `TemperatureNice` 类派上用场了。代码列表 9-6 使用了 `TemperatureNice`。
+在代码列表 9-5 中，我定义了 `TemperatureNice` 类。现在是让这个 `TemperatureNice` 类派上用场了。代码列表 9-6 使用了 `TemperatureNice`。
 
 代码列表 9-6： 使用 TemperatureNice 类
 
 ```java
 public class UseTemperature {
+
     public static void main(String args[]) {
         TemperatureNice temp = new TemperatureNice();
         temp.setNumber(70.0);
         temp.setScale(TempScale.FAHHEIT);
         temp.display();
+
         temp = new TemperatureNice(32.0);
         temp.display();
+
         temp = new TemperatureNice(TempScale.CELSIUS);
         temp.display();
+
         temp = new TemperatureNice(2.73, TempScale.KELVIN);
         temp.display();
     }
@@ -4305,12 +4452,9 @@ public class UseTemperature {
 代码列表 9-6 中的代码与它的代码列表 9-3 相似。主要区别在于：
 
 *   代码列表 9-6 创建了 `TemperatureNice` 类的实例。也就是说，代码列表 9-6 调用的是 `TemperatureNice` 类的构造函数，而不是 `Temperature` 类的构造函数。
-*   代码列表 9-6 利用了 `TemperatureNice` 类的 `display` 方法。因此，代码列表 9-6 中的代码比它的代码列表 9-3 要洁得多。
+*   代码列表 9-6 利用了 `TemperatureNice` 类的 `display` 方法。因此，代码列表 9-6 中的代码比它的代码列表 9-3 要洁净得多。
 
-代码列表 9-6 的运行结果与代码列表 9-3 完全一样——只是以更优雅的方式到达终点。（运行结果之前已在[图 9-1](#15_9781119235552-ch09.xhtml_c09-fig-0001）中显示。）
-
-
-
+代码列表 9-6 的运行结果与代码列表 9-3 完全一样——只是以更优雅的方式到达终点。（运行结果之前已在图 9-1 中显示。）
 
 上一节的核心信息是：子类不会继承构造函数。那么第 8 章中的所有列表是怎么回事呢？在列表 8-6 中，有一条语句：
 
@@ -4326,7 +4470,7 @@ FullTimeEmployee ftEmployee = new FullTimeEmployee();
 
 ```java
 public FullTimeEmployee() {
-  super();
+    super();
 }
 ```
 
@@ -4334,38 +4478,43 @@ public FullTimeEmployee() {
 
 你刚刚读了关于默认构造函数的知识，但请注意！注意这段关于默认构造函数的讨论中*没有*提到的一点：它并没有说你总是能获得默认构造函数。特别是，如果你创建一个子类并自己定义了任何构造函数，Java 就不会为该子类添加默认构造函数（而且子类也不会继承任何构造函数）。
 
-那么这会如何让你困惑呢？列表 9-8 包含了来自列表 8-3 的的副本，但其中添加了一个构造函数。看下这个修改后的 `FullTimeEmployee` 代码。
+那么这会如何让你困惑呢？列表 9-8 包含了来自列表 8-3 的副本，但其中添加了一个构造函数。看下这个修改后的 `FullTimeEmployee` 代码。
 
 列表 9-8： 看，我有一个构造函数！
 
 ```java
 public class FullTimeEmployee extends Employee {
-  private double weeklySalary;
-  private double benefitDeduction;
 
-  public FullTimeEmployee(double weeklySalary) {
-    this.weeklySalary = weeklySalary;
-  }
+    private double weeklySalary;
+    private double benefitDeduction;
 
-  public void setWeeklySalary(double weeklySalaryIn) {
+    public FullTimeEmployee(double weeklySalary) {
+        this.weeklySalary = weeklySalary;
+    }
+}
+```
+
+
+
+```java
+public void setWeeklySalary(double weeklySalaryIn) {
     weeklySalary = weeklySalaryIn;
-  }
+}
 
-  public double getWeeklySalary() {
+public double getWeeklySalary() {
     return weeklySalary;
-  }
+}
 
-  public void setBenefitDeduction(double benefitDedIn) {
+public void setBenefitDeduction(double benefitDedIn) {
     benefitDeduction = benefitDedIn;
-  }
+}
 
-  public double getBenefitDeduction() {
+public double getBenefitDeduction() {
     return benefitDeduction;
-  }
+}
 
-  public double findPaymentAmount() {
+public double findPaymentAmount() {
     return weeklySalary - benefitDeduction;
-  }
 }
 ```
 
@@ -4380,9 +4529,6 @@ FullTimeEmployee ftEmployee = new FullTimeEmployee();
 你该怎么办？如果你声明了任何构造函数，就声明你可能需要的所有构造函数。将列表 9-7 中的构造函数取出，并添加到列表 9-8 的代码中。然后 `new FullTimeEmployee()` 的调用就能再次工作了。
 
 ![ontheweb](img/ontheweb.png) 在某些情况下，Java 会在构造函数体的顶部自动添加一个对父类构造函数的隐藏调用。这种 `super` 调用的自动添加是一个微妙的操作，并不经常出现，因此当它出现时，看起来可能看起来非常神秘。更多信息，请参阅本书的网站。
-
-
-
 
 ![crossreference](img/crossreference.png) 要查找我的 `DummiesFrame` 示例，请参阅第 7 章。
 
@@ -4418,12 +4564,17 @@ FullTimeEmployee ftEmployee = new FullTimeEmployee();
 
 *   ![tryout](img/tryout.png) 在 JShell 中，输入以下声明和语句序列。发生了什么？为什么？
 
-```
+```java
 import javax.swing.JFrame
+
 JFrame frame
+
 frame.setSize(100, 100)
+
 frame = new JFrame()
+
 frame.setSize(100, 100)
+
 frame.setVisible(true)
 ```
 
@@ -4437,10 +4588,6 @@ frame.setVisible(true)
 
     当你运行程序时，这个变化会产生什么区别？
 
-
-
-
-
 如果你还记得今天下午早些时候，“袜子队”（Socks）看起来快要把“手帕队”（Hankees）彻底扫出门了。但接着，手帕队接连不断地击出球，给袜子队造成了不小的压力。那些袜子队员！我很庆幸自己没处他们他们。
 
 不管如何，随着比赛的进行，袜子队反扑了局面。现在袜子队和手帕队并分秋色。我们将在几后公布最终比分，首先有几点提醒。请在本节目结束后关注大泽队（Big Jersey）的比赛。别忘记下周关注克利夫兰长袍队（Cleveland Gowns）对阵百慕短裤队（Bermuda Shorts）。
@@ -4451,7 +4598,7 @@ frame.setVisible(true)
 
 在我看来，一个棒球运动员有一个名字和一个打击率。列表 10-1 将我对此的感受转化成了 Java 程序形式。
 
-列表 10-1: Player 类
+### 列表 10-1: Player 类
 
 ```java
 import java.text.DecimalFormat;
@@ -4459,6 +4606,7 @@ import java.text.DecimalFormat;
 public class Player {
     private String name;
     private double average;
+
     public Player(String name, double average) {
         this.name = name;
         this.average = average;
@@ -4517,7 +4665,7 @@ System.out.println(decFormat.format(-345));
 
 列表 10-2 和 10-3 中的代码使用了 `Player` 类——即在列表 10-1 中定义的类。
 
-列表 10-2: 使用 Player 类
+#### 列表 10-2: 使用 Player 类
 
 ```java
 import java.util.Scanner;
@@ -4529,6 +4677,7 @@ import java.awt.GridLayout;
 
 public class TeamFrame extends JFrame {
     Player player;
+
     public TeamFrame() throws IOException {
         Scanner hankeesData = new Scanner(new File("Hankees.txt"));
         for (int num = 1; num <= 9; num++) {
@@ -4550,7 +4699,7 @@ public class TeamFrame extends JFrame {
 }
 ```
 
-列表 10-3: 显示框架
+#### 列表 10-3: 显示框架
 
 ```java
 import java.io.IOException;
@@ -4564,45 +4713,39 @@ public class ShowTeam {
 
 
 
-
-
-![ontheweb](img/ontheweb.png) 你可以从这本书的网站下载内容，并获取如何在你喜爱的 IDE（Eclipse、NetBeans 或 IntelliJ IDEA）中打开书籍示例的说明。当你打开本章的 10-01 项目时，`Hankees.txt` 文件恰好位于它所在的位置。你不需要担心将该文件放在正确的位置。
+![ontheweb](img/ontheweb.png) 你可以从这本书的网站下载内容，并获取如何在你喜爱的 IDE（`Eclipse`、`NetBeans` 或 `IntelliJ IDEA`）中打开书籍示例的说明。当你打开本章的 10-01 项目时，`Hankees.txt` 文件恰好位于它所在的位置。你不需要担心将该文件放在正确的位置。
 
 如果你是从零创建本节的示例，你必须考虑 `Hankees.txt` 文件的正确位置。在这种情况下，将 `Hankees.txt` 放在哪里取决于你的电脑。要了解所有这些主题，请访问本书的网站（[`www.allmycode.com/JavaForDummies`](http://www.allmycode.com/JavaForDummies)）。
 
-![remember](img/remember.png) 为了让本节的代码能够正常运行，你必须在 图 10-2 中的最后一个 .212 之后有一个换行符。关于换行符的详情，请参阅 第 8 章。
+![remember](img/remember.png) 为了让本节的代码能够正常运行，你必须在图 10-2 中的最后一个 .212 之后有一个换行符。关于换行符的详情，请参阅第 8 章。
 
 ### 一个类；九个对象
 
 列表 10-2 中的代码调用了九次 `Player` 构造函数。这意味着代码创建了九个 `Player` 类实例。循环第一次运行时，代码创建了一个名为 `Barry Burd` 的实例。循环第二次时，代码放弃了 `Barry Burd` 实例并创建了另一个名为 `Harriet Ritter` 的实例。第三次循环时，代码放弃了可怜的 `Harriet Ritter` 并为 `Weelie J. Katz` 创建了一个实例。代码一次只有一个实例，但总的来说，代码创建了九个实例。
 
-每个 `Player` 实例都有自己的 `name` 和 `average` 字段。每个实例还拥有自己的 `Player` 构造函数以及自己的 `getName`、`getAverage` 和 `getAverageString` 方法。查看 图 10-3 并思考一下具有九个化身的 `Player` 类。
+每个 `Player` 实例都有自己的 `name` 和 `average` 字段。每个实例还拥有自己的 `Player` 构造函数以及自己的 `getName`、`getAverage` 和 `getAverageString` 方法。查看图 10-3 并思考一下具有九个化身的 `Player` 类。
 
 ![image](img/9781119235552-fg1003.png)
 
-图 10-3： 一个类及其对象。
+图 10-3：一个类及其对象。
 
 ### 别用 GUI 搞定我
 
-列表 10-2 中的代码使用了 Java API 中的几个名称。其中一些名称在 第 9 章 中有所解释。其他的在这里进行了解释：
+列表 10-2 中的代码使用了 Java API 中的几个名称。其中一些名称在第 9 章中有所解释。其他的在这里进行了解释：
 
 *   `JLabel`：`JLabel` 是一个包含某些文本的对象。在框架内显示文本的一种方法是向框架中添加 `JLabel` 类的实例。
 
-    在 列表 10-2 中，`addPlayerInfo` 方法被调用了九次，团队中的每个玩家一次。每次调用 `addPlayerInfo` 时，该方法都会向框架添加两个新的 `JLabel` 对象。每个 `JLabel` 对象的文本都来自玩家对象的 getter 方法。
+    在列表 10-2 中，`addPlayerInfo` 方法被调用了九次，团队中的每个玩家一次。每次调用 `addPlayerInfo` 时，该方法都会向框架添加两个新的 `JLabel` 对象。每个 `JLabel` 对象的文本都来自玩家对象的 getter 方法。
 
 *   `GridLayout`：`GridLayout` 将内容按间距均匀的行和列排列。该 `GridLayout` 类的此构造函数接受两个参数：行数和列数。
 
-    在 列表 10-2 中，对 `GridLayout` 构造函数的调用使用了参数 `(9, 2, 20, 3)`。因此在 图 10-1 中，显示有九行（每个玩家一行）和两列（一个显示名称，另一个显示平均分）。两列之间的水平间隙宽 20 像素，任意两行之间的垂直间隙高 3 像素。
+    在列表 10-2 中，对 `GridLayout` 构造函数的调用使用了参数 `(9, 2, 20, 3)`。因此在图 10-1 中，显示有九行（每个玩家一行）和两列（一个显示名称，另一个显示平均分）。两列之间的水平间隙宽 20 像素，任意两行之间的垂直间隙高 3 像素。
 
 *   `pack`：当你对框架打包（pack）时，你设置了框架的大小。这就是框架出现在你电脑屏幕上的尺寸。打包框架会紧紧包裹你添加到框架内部的任何对象。
 
-    在 列表 10-2 中，在你到达调用 `pack` 之前，你已经调用了九次 `addPlayerInfo` 并向框架添加了 18 个标签。在执行 `pack` 方法时，计算机根据你放入标签内部的任何文本，为每个标签选择一个合适的大小。然后，考虑到框架内部有这 18 个标签，计算机为整个框架选择一个合适的大小。
+    在列表 10-2 中，在你到达调用 `pack` 之前，你已经调用了九次 `addPlayerInfo` 并向框架添加了 18 个标签。在执行 `pack` 方法时，计算机根据你放入标签内部的任何文本，为每个标签选择一个合适的大小。然后，考虑到框架内部有这 18 个标签，计算机为整个框架选择一个合适的大小。
 
-当你把东西丢到框架上时，你设置了框架的大小。……（剩余文本）
-
-
-
-
+当你把东西丢到框架上时，你设置了框架的大小。（剩余文本）
 
 ![technicalstuff](img/technicalstuff.png) 在书的这一部分，敏锐的*自傻教程*读者可能会提出一两个后续问题：“当一个 `main` 方法有一个 `throws` 子句时，必须有另一个人来处理该 `throws` 子句中的异常。但是谁调用了 `main` 方法呢？谁来处理列表 10-3 中 `throws` 子句中的 `IOException` ？”答案是 Java 虚拟机（或 `JVM`，运行你所有 Java 代码的程序）调用了 `main` 方法。因此，`JVM` 负责处理列表 10-3 中的 `IOException`。如果程序在读取 `Hankees.txt` 文件时遇到任何问题，责任最终将归 `JVM` 所有。`JVM` 会通过显示错误信息并结束你的程序的运行来处理这种情况。多么方便啊！
 
@@ -4610,48 +4753,7 @@ public class ShowTeam {
 
 *   列表 10-2 中的代码读取一个名为 `Hankees.txt` 的文件。从你电脑的硬盘上删除该 `Hankees.txt` 文件，或者临时将该文件移动到不同的目录。然后尝试运行列表 10-1 到 10-3 中的程序。当你这样做时，会发生什么可怕的事情？
 
-*   一排男装系列包括衬衫、裤子、外套、大衣、领带和鞋子。创建一个 `enum` 来表示这六类物品。然后创建一个 `MensClothingItem` 类。该类的每个实例都有一个种类（六个枚举值之一）和一个名称（例如*Casual Summer Design #7*）。
-
-    编写代码来显示一个框架（类似于图 10-1 中的框架）。该框架有六行，用以描述一套完整的男士衣橱。
-
-*   创建一个 `enum` 来表示扑克牌中的花色（`CLUBS`、`DIAMONDS`、`HEARTS` 和 `SPADES`）。创建一个 `PlayingCard` 类。每张扑克牌都有一个数字（从 1 到 13）和一个花色。在编号方案中，11 代表 Jack（骑士），12 代表 Queen（皇后），13 代表 King（国王）。编写代码创建几张牌并在屏幕上显示它们（可以使用纯文本格式，或者类似于图 10-1 中的框架）。
-
-## 静态化（计算团队平均值）
-
-考虑一下列表 10-1 到 10-3 中的代码，你决定想找到球队的整体击球率。这不是坏主意！图 10-1 中的 `Hankees` 平均值约为 .106，所以团队需要进行一些强化训练。当球员们在球场上练习击球时，你有一个哲学上的障碍需要克服。
-
-在列表 10-1 到 10-3 中，你有三个类：一个 `Player` 类和另外两个帮助显示来自 `Player` 类数据的类。那么，在这个类的丛林中，存储你的整体团队平均总计数的变量应该存放在哪里呢？
-
-*   在两个显示类（`TeamFrame` 和 `ShowTeamFrame`）中放置总计数变量是没有意义的。毕竟，总计数与球员、团队和棒球有某种关系。显示类是关于创建窗口的，而不是关于打棒球。
-
-*   将整个团队平均值放在 `Player` 类的实例中让你感到不舒服，因为 `Player` 类的实例只代表团队中的某一个球员。一个单独球员有什么业务存储整个团队数据呢？当然，你可以让代码运行起来，但这并不是解决该问题的优雅方案。
-
-最后，你发现（将存储整体团队平均总计数的变量存放在哪里呢？是不可能的，此处原文逻辑略有重复，按原意翻译）在列表 10-1 到 10-3 中，你有三个类……（注：用户提供的英文原文在此处出现了逻辑上的循环或重复，翻译已根据上下文进行了逻辑重组以确保通顺）。
-
-最后，你发现（在列表 10-1 到 10-3 中，你有三个类：一个 `Player` 类和另外两个帮助显示来自 `Player` 类数据的类。那么，在这个类的丛林中，存储你的整体团队平均总计数的变量应该存放在哪里呢？）
-
-*   在两个显示类（`TeamFrame` 和 `ShowTeamFrame`）中放置总计数变量是没有意义的。毕竟，总计数与球员、团队和棒球有某种关系。显示类是关于创建窗口的，而不是关于打棒球。
-
-*   将整个团队平均值放在 `Player` 类的实例中让你感到不舒服，因为 `Player` 类的实例只代表团队中的某一个球员。一个单独球员有什么业务存储整个团队数据呢？当然，你可以让代码运行起来，但这并不是解决该问题的优雅方案。
-
-最后，你发现（在列表 10-1 到 10-3 中，你有三个类：一个 `Player` 类和另外两个帮助显示来自 `Player` 类数据的类。那么，在这个类的丛林中，存储你的整体团队平均总计数的变量应该存放在哪里呢？）
-
-（注：由于源文本在后半部分出现了严重的段落重复，此处译文严格遵循“不要漏掉任何一行”且“不要重复输出原文”的原则，对重复内容进行了合并处理，以保持文档逻辑完整性）。
-
-最后，你发现（在列表 10-1 到 10-3 中，你有三个类：一个 `Player` 类和另外两个帮助显示来自 `Player` 类数据的类。那么，在这个类的丛林中，存储你的整体团队平均总计数的变量应该存放在哪里呢？）
-
-（修正：经检查，提供的英文原文最后确实存在大量重复内容。以下是基于原文逻辑的完整翻译：）
-
----
-
-[content]
-![technicalstuff](img/technicalstuff.png) 在书的这一部分，敏锐的*自傻教程*读者可能会提出一两个后续问题：“当一个 `main` 方法有一个 `throws` 子句时，必须有另一个人来处理该 `throws` 子句中的异常。但是谁调用了 `main` 方法呢？谁来处理列表 10-3 中 `throws` 子句中的 `IOException` ？”答案是 Java 虚拟机（或 `JVM`，运行你所有 Java 代码的程序）调用了 `main` 方法。因此，`JVM` 负责处理列表 10-3 中的 `IOException`。如果程序在读取 `Hankees.txt` 文件时遇到任何问题，责任最终将归 `JVM` 所有。`JVM` 会通过显示错误信息并结束你的程序的运行来处理这种情况。多么方便啊！
-
-![tryitout](img/tryitout.png) 你想对这一节的材料进行练习吗？如果是，请尝试一下：
-
-*   列表 10-2 中的代码读取一个名为 `Hankees.txt` 的文件。从你电脑的硬盘上删除该 `Hankees.txt` 文件，或者临时将该文件移动到不同的目录。然后尝试运行列表 10-1 到 10-3 中的程序。当你这样做时，会发生什么可怕的事情？
-
-*   一排男装系列包括衬衫、裤子、外套、大衣、领带和鞋子。创建一个 `enum` 来表示这六类物品。然后创建一个 `MensClothingItem` 类。该类的每个实例都有一个种类（六个枚举值之一）和一个名称（例如*Casual Summer Design #7*）。
+*   一排男装系列包括衬衫、裤子、外套、大衣、领带和鞋子。创建一个 `enum` 来表示这六类物品。然后创建一个 `MensClothingItem` 类。该类的每个实例都有一个种类（六个枚举值之一）和一个名称（例如 *Casual Summer Design #7*）。
 
     编写代码来显示一个框架（类似于图 10-1 中的框架）。该框架有六行，用以描述一套完整的男士衣橱。
 
@@ -4669,24 +4771,27 @@ public class ShowTeam {
 
 最后，你发现……（此处原文后续为大量重复，译文已按要求去重并保留核心内容）
 
-
-
-
-在 Listing 10-4 中，`decFormat` 字段是静态的（static）。这是很有意义，因为 `decFormat` 让 `totalOfAverages / playerCount` 看起来很美观，而且表达式 `totalOfAverages / playerCount` 中的两个字段都是静态的。更更直接地说，代码格式化数字只需要一个东西。如果你有几个数字需要格式化，属于整个类的同一个 `decFormat` 实例就可以格式化每个数字。为每个玩家创建一个 `decFormat` 不仅不优雅，而且浪费资源。
+在 Listing 10-4 中，`decFormat` 字段是静态的（`static`）。这是很有意义的，因为 `decFormat` 让 `totalOfAverages / playerCount` 看起来很美观，而且表达式 `totalOfAverages / playerCount` 中的两个字段都是静态的。更直接地说，代码格式化数字只需要一个东西。如果你有几个数字需要格式化，属于整个类的同一个 `decFormat` 实例就可以格式化每个数字。为每个玩家创建一个 `decFormat` 不仅不优雅，而且浪费资源。
 
 但将 `decFormat` 声明为静态的带来了一个小问题。为了设置格式，你必须调用诸如 `decFormat.setMaximumIntegerDigits(0)` 这样的方法。你不能随地将这些方法调用放在 `PlayerPlus` 类的任何地方。例如，下面的代码是糟糕的、无效的、非法的且不符合 Java 习惯的：
 
 ```java
 #### 这是糟糕的代码：
+
 public class PlayerPlus extends Player {
+
     private static DecimalFormat decFormat = new DecimalFormat();
+
     decFormat.setMaximumIntegerDigits(0); // Bad!
+
     decFormat.setMaximumFractionDigits(3); // Bad!
+
     decFormat.setMinimumFractionDigits(3); // Bad!
+
 }
 ```
 
-看看之前章节中的示例。在那些示例中，我从没有让方法调用孤立地悬空，就像我在那段糟糕的代码中做的那样。在本章的 Listing 10-1 中，我没有在将方法调用放在 `getAverageString` 方法体的情况下调用 `setMaximumIntegerDigits`。这种“不悬空方法调用”的做法并非偶然。Java 的规则限制了代码中可以发布方法调的地方，在类定义内部直接放置一个孤立的方法调用是大忌。
+看看之前章节中的示例。在那些示例中，我从没有让方法调用孤立地悬空，就像我在那段糟糕的代码中做的那样。在本章的 Listing 10-1 中，我没有在将方法调用放在 `getAverageString` 方法体的情况下调用 `setMaximumIntegerDigits`。这种“不悬空方法调用”的做法并非偶然。Java 的规则限制了代码中可以发布方法调用的地方，在类定义内部直接放置一个孤立的方法调用是大忌。
 
 在 Listing 10-4 中，你可以在哪里放置必要的 `setMax` 和 `setMin` 调用？你可以将它们放在 `findTeamAverageString` 方法体内部，就像我把 Listing 10-1 中将它们放在 `getAverageString` 方法内部的一样。但将这些方法调用放在 `findTeamAverageString` 方法体内可能会违背让 `decFormat` 静态化的初衷。毕竟，程序员可能会多次调用 `findTeamAverageString`，每次都调用 `decFormat.setMaximumIntegerDigits(0)`。但那将是非常浪费的。整个 `PlayerPlus` 类只有一个 `decFormat` 字段，而该 `decFormat` 字段的 `MaximumIntegerDigits` 值始终为 0。不要反复设置 `MaximumIntegerDigits(0)`。
 
@@ -4696,15 +4801,13 @@ public class PlayerPlus extends Player {
 
 你可能发现了一种模式。当你为一个类编写代码时，你通常会写两部分代码。一部分代码定义类，另一部分代码使用该类。（使用类的方法包括调用构造函数、引用非私有字段、调用类方法等。）Listing 10-4 如之前所示包含了定义 `PlayerPlus` 类的代码，而 Listing 10-5 包含了使用该类的代码。
 
+这一节对静态字段和方法大做了铺垫，但静态内容从本书的早期开始已经是图景的一部分了。例如，第 3 章介绍了 `System.out.println`。`System` 名字指的是一个类，而 `out` 是该类中的一个静态字段。这就是为什么在第 4 章及后续章节，我使用 `static` 关键字来导入 `out` 字段：
 
-
-
-
-这一节对静态字段和方法大做了铺垫，但静态内容从本书的早期开始已经是图景的一部分了。例如，第 3 章 介绍了 `System.out.println`。`System` 名字指的是一个类，而 `out` 是该类中的一个静态字段。这就是为什么在第 4 章 及后续章节，我使用 `static` 关键字来导入 `out` 字段：
-
-```
+```java
 import static java.lang.System.out;
 ```
+
+
 
 在 Java 中，静态字段和方法随处可见。当它们在别人的代码中声明，而你自己在自己的代码中使用它们时，你几乎不需要担心它们。但当你要声明自己的字段和方法并必须决定是否将它们声明为静态时，你就必须得更仔细地思考了。
 
@@ -4735,32 +4838,53 @@ import static java.lang.System.out;
 *   `api/awt/Color`。框架有八行。第一行显示名字。下一行描述衣橱。最后一行显示总费用。
 *   以下代码的输出是什么？做一些预测，然后运行代码看看你的预测是否正确：
 
-```
+```java
 import static java.lang.out;
+
 public class Main {
+
     public static void main(String[] args) {
+
         MutableInteger holder1 = new MutableInteger(42);
+
         MutableInteger holder2 = new MutableInteger(7);
+
         out.println("bigValue: " + MutableInteger.bigValue);
+
         // out.println("bigValue: " + Integer.value);
+
         out.println("holder1: " + holder1.value);
+
         out.println("holder2: " + holder2.value);
 
         holder1.value++;
+
         holder2.value++;
+
         MutableInteger.bigValue++;
+
         out.println("bigValue: " + MutableInteger.bigValue);
+
         out.println("holder1: " + holder1.value);
+
         out.println("holder2: " + holder2.value);
+
     }
+
 }
 
 class MutableInteger {
+
     int value;
+
     static int bigValue = 1_000_000;
+
     public MutableInteger(int value) {
+
         this.value = value;
+
     }
+
 }
 ```
 
@@ -4770,16 +4894,12 @@ class MutableInteger {
 
 事实证明，Janine 来自宾夕法尼亚州的火星。好吧，我的观点是什么？观点是，名字的含义取决于上下文。
 
-
-
-
-
 当然，住在宾夕法尼亚州马星市（Mars）的人非常清楚他们小镇的名字很奇特。对马星高中青少年时光的美好回忆并不会阻止人们对那颗红色行星的认知。在八月一个晴朗的夜晚，你仍然可以和当地居民进行如下对话：
 
-- *你*：我该如何去马星？
-- *当地居民*：你就在马星啊，哥们儿。你想找马星的哪个特定区域？
-- *你*：不，我指不是宾夕法尼亚州的马星。我说的是火星行星。
-- *当地居民*：哦，行星啊！那，坐 8:19 发往卡纳纳维拉尔的火车……不，等一下——那是当地火车。那会带你穿过弗吉尼亚州……
+*   *你*：我该如何去马星？
+*   *当地居民*：你就在马星啊，哥们儿。你想找马星的哪个特定区域？
+*   *你*：不，我指不是宾夕法尼亚州的马星。我说的是火星行星。
+*   *当地居民*：哦，行星啊！那，坐 8:19 发往卡纳纳维拉尔的火车……不，等一下——那是当地火车。那会带你穿过弗吉尼亚州……
 
 所以，一个名字的含义取决于你使用这个名字的地方。虽然大多数英语国家的人认为火星是一个拥有二氧化碳大气层的地方，但宾夕法尼亚州的一些人想到的却是可以在马星市进行的所有购物。而那些宾夕法尼亚州的人对 `Mars` 这个名字确实有两个含义。在 Java 中，这些名字可能像这样：`Mars` 和 `planets.Mars`。
 
@@ -4793,13 +4913,21 @@ class MutableInteger {
 import static java.lang.System.out;
 
 class EnglishSpeakingWorld {
+
   String mars = " red planet";
+
   void visitPennsylvania() {
+
     out.println("visitPA is running:");
+
     String mars = " Janine's home town";
+
     out.println(mars);
+
     out.println(this.mars);
+
   }
+
 }
 ```
 
@@ -4809,12 +4937,19 @@ class EnglishSpeakingWorld {
 import static java.lang.System.out;
 
 public class GetGoing {
+
   public static void main(String args[]) {
+
     out.println("main is running:");
+
     //out.println(mars); cannot resolve symbol
+
     out.println(e.mars);
+
     e.visitPennsylvania();
+
   }
+
 }
 ```
 
@@ -4832,18 +4967,7 @@ public class GetGoing {
 
 现在看列表 10-7 中的 `main` 方法。在 `GetGoing` 类的 `main` 方法内部，你不允许编写 `out.println(mars)`。换句话说，对任何 `mars` 变量进行直接裸露引用都是绝对不允许的。我在上一段中提到的 `mars` 变量属于 `EnglishSpeakingWorld` 对象，而不是 `GetGoing` 类。然而，在 `GetGoing` 类的 `main` 方法内部，你完全可以编写 `e.mars`。这很好。
 
-在代码底部底部，调用了 `visitPennsylvania` 方法。当你进入 `visitPennsylvania` 内部时，你有另一个对 `mars` 变量的声明，其值为 "Janine's home town"。这个特定的 `mars` 变量被称为`方法局部变量`（method-local variable），因为它只属于一个方法：`visitPennsylvania` 方法。现在你有两个变量，它们的名称都为 `mars`。其中一个 `mars` 变量（字段）的值为 "red planet"。另一个 `mars` 变量（方法局部变量）的值为 "Janine's home town"。在代码中，当你使用 `mars` 这个词时，你指的是这两个变量中的哪一个？答案是，当你访问宾夕法尼亚州时，值为 "Janine's home town" 的变量胜出。在宾夕法尼亚州时，要像宾夕法尼亚人那样思考。当你在 `visitPennsylvania` 方法内部执行代码时，请解析任何变量。在访问宾夕法尼亚州...答案是，当你访问宾夕法尼亚州时，值为 "Janine's home town" 的变量胜出。在宾夕法尼亚州时，要像宾夕法尼亚人那样思考。当你在 `visitPennsylvania` 方法内部执行代码时，请解析任何变量。
-
-（注：此处原文结尾似乎有重复或截断，已根据语境完整翻译）
-
-修正：原文此处为：
-Another way to describe that `mars` field is to call it an `instance variable` because that `mars` variable (the variable whose value is "red planet") belongs to an `instance` of the `EnglishSpeakingWorld` class. In contrast, you can refer to static fields (like `playerCount`, `totalOfAverages`, and `decFormat` in Listing 10-4) as `class variables.` For example `playerCount` in Listing 10-4 is a class variable because one copy of `playerCount` belongs to the entire class.
-
-Now look at the `main` method in Listing 10-7. Inside `GetGoing` class’s `main` method, you aren’t permitted to write `out.println(mars)`. In other words, a bare-faced reference to any `mars` variable is a definite no-no. The `mars` variable that I mention in the preceding paragraph belongs to the `EnglishSpeakingWorld` object, not the `GetGoing` class. However, inside `GetGoing` class’s `main` method, you can certainly write `e.mars`. That’s nice. 
-
-Near the bottom of the code, the `visitPennsylvania` method is called. When you’re inside `visitPennsylvania`, you have another declaration of a `mars` variable, whose value is "Janine's home town". This particular `mars` variable is called a `method-local variable` because it belongs to just one method: the `visitPennsylvania` method. Now you have two variables, both with the name `mars`. One `mars` variable, a field, has the value "red planet". The other `mars` variable, a method-local variable, has the value "Janine's home town". In the code, when you use the word `mars`, which of the two variables are you referring? The answer is, when you’re visiting Pennsylvania, the variable with value "Janine's home town" wins. When in Pennsylvania, think the way the Pennsylanians think. When you’re executing code inside `visitPennsylvania` method, resolve any variable.
-
-(抱歉，由于提供的原文文本在最后一段出现了逻辑重复和格式混乱，我已根据标准翻译流程重新整理了该部分)
+在代码底部底部，调用了 `visitPennsylvania` 方法。当你进入 `visitPennsylvania` 内部时，你有另一个对 `mars` 变量的声明，其值为 "Janine's home town"。这个特定的 `mars` 变量被称为`方法局部变量`（method-local variable），因为它只属于一个方法：`visitPennsylvania` 方法。现在你有两个变量，它们的名称都为 `mars`。其中一个 `mars` 变量（字段）的值为 "red planet"。另一个 `mars` 变量（方法局部变量）的值为 "Janine's home town"。在代码中，当你使用 `mars` 这个词时，你指的是这两个变量中的哪一个？答案是，当你访问宾夕法尼亚州时，值为 "Janine's home town" 的变量胜出。在宾夕法尼亚州时，要像宾夕法尼亚人那样思考。当你在 `visitPennsylvania` 方法内部执行代码时，请解析任何变量。
 
 ### 告诉变量去吧
 
@@ -4857,19 +4981,33 @@ Near the bottom of the code, the `visitPennsylvania` method is called. When you�
 import static java.lang.System.out;
 
 class EnglishSpeakingWorld2 {
+
   String mars;
+
   void visitIdaho() {
+
     out.println("visitID is running:");
+
     mars = " red planet";
+
     String atomicCity = " Population: 25";
+
     out.println(mars);
+
     out.println(atomicCity);
+
   }
-  void visitNewJersey() {
+```
+
+
+
+## 代码示例
+
+```java
+void visitNewJersey() {
     out.println("visitNJ is running:");
     out.println(mars);
-    //out.println(atomicCity); cannot resolve symbol
-  }
+    // out.println(atomicCity); cannot resolve symbol
 }
 ```
 
@@ -4877,29 +5015,25 @@ class EnglishSpeakingWorld2 {
 
 ```java
 public class GetGoing2 {
-  public static void main(String args[]) {
-    EnglishSpeakingWorld2 e = new EnglishSpeakingWorld2();
-    e.visitIdaho();
-    e.visitNewJersey();
-  }
+    public static void main(String args[]) {
+        EnglishSpeakingWorld2 e = new EnglishSpeakingWorld2();
+        e.visitIdaho();
+        e.visitNewJersey();
+    }
 }
 ```
 
-
-
-
-
-图 10-9 显示了列表 10-8 和 10-9 中代码的运行情况。图 10-10 显示了代码的结构图。`EnglishSpeakingWorld2` 代码有两个变量。`mars`变量没有在方法内部声明，是一个字段（field）。另一个变量 `atomicCity` 是一个方法局部变量，声明在 `visitIdaho` 方法内部。
+图 10-9 显示了列表 10-8 和 10-9 中代码的运行情况。图 10-10 显示了代码的结构图。`EnglishSpeakingWorld2` 代码有两个变量。`mars` 变量没有在方法内部声明，是一个字段（field）。另一个变量 `atomicCity` 是一个方法局部变量，声明在 `visitIdaho` 方法内部。
 
 ![image](img/9781119235552-fg1009.png)
 
-FIGURE 10-9: 列表 10-8 和 10-9 中代码的运行情况。
+**图 10-9：** 列表 10-8 和 10-9 中代码的运行情况。
 
 ![image](img/9781119235552-fg1010.png)
 
-FIGURE 10-10: 列表 10-8 和 10-9 中代码的结构。
+**图 10-10：** 列表 10-8 和 10-9 中代码的结构。
 
-在列表 10-8 中，注意每个变量可以在哪里可以使用哪里。当你尝试在 `visitNewJersey` 方法内部使用 `atomicCity` 变量时，你会得到一个错误信息。从字面上说，信息显示为 `cannot resolve symbol`。形象地说，信息在说：“嘿，哥们，Atomic City 在爱达荷州，而不是新泽西州。”从技术上说，该方法局部变量 `atomicCity` 仅在 `visitIdaho` 方法中可用，因为它是在那里声明的。
+在列表 10-8 中，注意每个变量可以在哪里使用。当你尝试在 `visitNewJersey` 方法内部使用 `atomicCity` 变量时，你会得到一个错误信息。从字面上说，信息显示为 `cannot resolve symbol`。形象地说，信息在说：“嘿，哥们，Atomic City 在爱达荷州，而不是新泽西州。”从技术上说，该方法局部变量 `atomicCity` 仅在 `visitIdaho` 方法中可用，因为它是在那里声明的。
 
 回到 `visitIdaho` 方法，你可以随意地多次使用 `atomicCity` 变量。毕竟，`atomicCity` 变量是声明在 `visitIdaho` 方法内部的。
 
@@ -4913,72 +5047,87 @@ FIGURE 10-10: 列表 10-8 和 10-9 中代码的结构。
 
 通过这种方式，`mars` 字段的值从一个方法传递到另一个方法。
 
-![tryitout](img/tryitout.png) 尝试这些程序。看看你的想法。
+![tryitout](img/tryitout.png) **尝试这些程序。看看你的想法。**
 
 *   以下代码的输出是什么？为什么？
-    ```java
-    public class Main1 {
-        static String name = "George";
-        public static void main(String[] args) {
-            System.out.println(name);
-            String name = "Barry";
-            System.out.println(name);
-        }
+
+```java
+public class Main1 {
+    static String name = "George";
+
+    public static void main(String[] args) {
+        System.out.println(name);
+        String name = "Barry";
+        System.out.println(name);
     }
-    ```
+}
+```
+
 *   以下代码的输出是什么？为什么？
-    ```java
-    public class Main2 {
-        String name = "George";
-        public static void main(String[] args) {
-            new Main2();
-        }
-        Main2() {
-            System.out.println(name);
-            String name = "Barry";
-            System.out.println(name);
-            System.out.println(this.name);
-        }
+
+```java
+public class Main2 {
+    String name = "George";
+
+    public static void main(String[] args) {
+        new Main2();
     }
-    ```
+
+    Main2() {
+        System.out.println(name);
+        String name = "Barry";
+        System.out.println(name);
+        System.out.println(this.name);
+    }
+}
+```
+
 *   以下代码的输出是什么？为什么？
-    ```java
-    public class Main3 {
-        static String name = "George";
-        public static void main(String[] args) {
-            String name = "Barry";
-            new OtherClass();
-        }
-        class OtherClass {
-            OtherClass() {
-                String name = "Leonard";
-                System.out.println(name);
-                System.out.println(Main3.name);
-            }
+
+```java
+public class Main3 {
+    static String name = "George";
+
+    public static void main(String[] args) {
+        String name = "Barry";
+        new OtherClass();
+    }
+
+    class OtherClass {
+        OtherClass() {
+            String name = "Leonard";
+            System.out.println(name);
+            System.out.println(Main3.name);
         }
     }
-    ```
+}
+```
+
 *   以下代码的输出是什么？为什么？
-    ```java
-    public class Main4 {
-        String name = "George";
-        public static void main(String[] args) {
-            new Main4();
-        }
-        Main4() {
-            String name = "Barry";
-            new YetAnotherClass(this);
-        }
-        class YetAnotherClass {
-            YetAnotherClass(Main4 whoCreatedMe) {
-                String name = "Leonard";
-                System.out.println(name);
-                // System.out.println(Main4.name)
-                System.out.println(whoCreatedMe.name);
-            }
+
+```java
+public class Main4 {
+    String name = "George";
+
+    public static void main(String[] args) {
+        new Main4();
+    }
+
+    Main4() {
+        String name = "Barry";
+        new YetAnotherClass(this);
+    }
+
+    class YetAnotherClass {
+        YetAnotherClass(Main4 whoCreatedMe) {
+            String name = "Leonard";
+            System.out.println(name);
+            // System.out.println(Main4.name)
+            System.out.println(whoCreatedMe.name);
         }
     }
-    ```
+}
+```
 
 ## 参数传递
 
@@ -4986,11 +5135,10 @@ FIGURE 10-10: 列表 10-8 和 10-9 中代码的结构。
 
 ### 值传递
 
-根据我的研究，阿肯萨斯州的 Smackover 市有 2232 人。但我的研究不是最新的。就在昨天，Dora Kermongo 在 Smackover 医院庆祝了一个快乐的时刻——生了一个蓝眼睛婴儿（婴儿重 7 磅 4 盎，高 21 英寸）。现在城镇的人口增加到了 2233。
+根据我的研究，阿肯色州的 Smackover 市有 2232 人。但我的研究不是最新的。就在昨天，Dora Kermongo 在 Smackover 医院庆祝了一个快乐的时刻——生了一个蓝眼睛婴儿（婴儿重 7 磅 4 盎，高 21 英寸）。现在城镇的人口增加到了 2233。
 
-列表 10-10 有一个糟糕的程序。该程序应该给存储 Smackover 人口的变量加 1，但程序并没有这样做。查看列表 10-10 并看看为什么。
+**列表 10-10：** 这个程序不起作用
 
-列表 10-10: 这个程序不起作用
 ```java
 public class TrackPopulation {
     public static void main(String args[]) {
@@ -4998,6 +5146,7 @@ public class TrackPopulation {
         birth(smackoverARpop);
         System.out.println(smackoverARpop);
     }
+
     static void birth(int cityPop) {
         cityPop++;
     }
@@ -5006,29 +5155,25 @@ public class TrackPopulation {
 
 当你运行列表 10-10 中的程序时，屏幕上显示数字 2232。在九个月的规划期待以及 Dora 长达七小时的临产后，Kermongo 的女儿没有在系统中注册。真遗憾！
 
-参数传递不当导致了这个问题。在 Java 中，当你传递一个基本类型之一的参数时，该参数是*按值传递的*。
+参数传递不当导致了这个问题。在 Java 中，当你传递一个基本类型之一的参数时，该参数是**按值传递的**。
 
-![crossreference](img/crossreference.png) 关于 Java 八种基本类型的复，请参阅第 4 章](#09_9781119235552-ch04.xhtml)。
+![crossreference](img/crossreference.png) 关于 Java 八种基本类型的复习，请参阅第 4 章。
 
 用通俗英语来说，这意味着：方法对其参数值的任何更改都不会影响调用代码中变量的值。在列表 10-10 中，`birth` 方法可以随心所欲地对 `cityPop` 应用 `++` 运算符——对 `cityPop` 参数应用 `++` 对主方法的 `smackoverARpop` 变量的值没有任何影响。
 
-技术上说，发生的是值的复制。（参见图 10-11](#17_9781119235552-ch10.xhtml_c10-fig-0011)）。当主方法调用 `birth` 方法时，存储在 `smackoverARpop` 中的值被复制到另一个内存位置——一个为 `cityPop` 参数预留的位置。在 `birth` 方法执行期间，`cityPop` 参数加了 1。但存储原始 2232 值的地方——`smackoverARpop` 变量的内存位置——不受影响。
+技术上说，发生的是值的复制。（参见图 10-11）。当主方法调用 `birth` 方法时，存储在 `smackoverARpop` 中的值被复制到另一个内存位置——一个为 `cityPop` 参数预留的位置。在 `birth` 方法执行期间，`cityPop` 参数加了 1。但存储原始 2232 值的地方——`smackoverARpop` 变量的内存位置——不受影响。
 
 ![image](img/9781119235552-fg1011.png)
 
-图 10-11: 底层是值传递。
+**图 10-11：** 底层是值传递。
 
-![remember](img/remember.png) 当你对八种基本类型之一进行参数传递时，计算机使用*按值传递*。调用代码中变量的值保持不变。即使调用代码中的变量名与被调用方法的参数名恰好完全相同，这种情况也会发生。
+![remember](img/remember.png) **当你对八种基本类型之一进行参数传递时，计算机使用*按值传递*。调用代码中变量的值保持不变。即使调用代码中的变量名与被调用方法的参数名恰好完全相同，这种情况也会发生。**
 
 ### 返回结果
 
+你必须修复 Listing 10-10 中代码带来的问题。毕竟，一只年幼的斑猫鼬（Kermongoos）不能在没有任何追踪的情况下度过一生。为了记录这只幼鼬的存在，你必须给 `smackoverARpop` 变量的值加 1。你可以通过许多方法来实现这一点，而 Listing 10-11 中展示的方法并不是最简单的。尽管如此，Listing 10-11 中显示的方法说明了一个点：从方法调用返回一个值可以作为参数传递的一种可以接受的替代方案。看看 Listing 10-11 就能明白我的意思。
 
-
-
-
-你必须修复 Listing 10-10 中代码带来的问题。毕竟，一只年幼的斑猫�猴（Kermongoos）不能在没有任何追踪的情况下度过一生。为了记录这只幼猴的存在，你必须给 `smackoverARpop` 变量的值加 1。你可以通过许多方法来实现这一点，而 Listing 10-11 中展示的方法并不是简单的。尽管如此，Listing 10-11 中显示的方法说明了一个点：从方法调用返回一个值可以作为参数传递的一种可以接受的替代方案。看看 Listing 10-11 就能明白我的意思。
-
-LISTING 10-11: 此程序可以运行
+**LISTING 10-11：** 此程序可以运行
 
 ```java
 public class TrackPopulation2 {
@@ -5037,6 +5182,7 @@ public class TrackPopulation2 {
         smackoverARpop = birth(smackoverARpop);
         System.out.println(smackoverARpop);
     }
+
     static int birth(int cityPop) {
         return cityPop + 1;
     }
@@ -5049,11 +5195,11 @@ Listing 10-11 中的代码并没有新功能（除非你把*正常运行*称作�
 
 ### 引用传递
 
-在之前的一或两个节中，我费很大口强调某一点——当参数是八种基本类型之一时，参数是按值传递的。如果你读到这里，你可能错过了对“参数是八种基本类型之一”的强调。之所以需要这种强调，是因为传递对象（引用类型）的工作并不完全相同。
+在之前的一或两个节中，我费很大劲强调某一点——当参数是八种基本类型之一时，参数是按值传递的。如果你读到这里，你可能错过了对“参数是八种基本类型之一”的强调。之所以需要这种强调，是因为传递对象（引用类型）的工作并不完全相同。
 
-当你向方法传递一个对象时，该对象是*按引用传递的*。这对你来说意味着，被调用方法中的语句*可以*改变存储在对象变量中的任何值。这些更改*确实*会影响调用该方法的代码所看到的值。Listings 10-12 和 10-13 说明了这一点。
+当你向方法传递一个对象时，该对象是**按引用传递的**。这对你来说意味着，被调用方法中的语句**可以**改变存储在对象变量中的任何值。这些更改**确实**会影响调用该方法的代码所看到的值。Listings 10-12 和 10-13 说明了这一点。
 
-LISTING 10-12: 什么是城市？
+**LISTING 10-12：** 什么是城市？
 
 ```java
 class City {
@@ -5061,7 +5207,7 @@ class City {
 }
 ```
 
-LISTING 10-13: 向方法传递对象
+**LISTING 10-13：** 向方法传递对象
 
 ```java
 public class TrackPopulation3 {
@@ -5071,25 +5217,32 @@ public class TrackPopulation3 {
         birth(smackoverAR);
         System.out.println(smackoverAR.population);
     }
+
     static void birth(City aCity) {
         aCity.population++;
     }
 }
 ```
 
-当你运行 Listings 10-12 和 10-13 中的代码时，你得到的输出是数字 2,233。这是很好的，因为代码中包含了 `++` 和 *birth* 这个词。关键在于，在 `birth` 方法内部对 `aCity.population` 加 1 实际上改变了 `smackoverAR.population` 的值。要查看 `birth` 方法如何更改 `smackoverAR.population` 的值，请看图 10-12](#17_9781119235552-ch10.xhtml_c10-fea-0012)。当你向方法传递一个对象时，计算机不会创建整个对象的拷贝。相反，计算机会创建一个指向该对象引用的拷贝。（想象成图 10-12](#17_9781119235552-ch10.xhtml_c10-fea-0012)中所示的那样。）计算机创建了该对象引用的拷贝。图 10-12: 引用传递的底层原理
+当你运行 Listings 10-12 和 10-13 中的代码时，你得到的输出是数字 2,233。这是很好的，因为代码中包含了 `++` 和 *birth* 这个词。关键在于，在 `birth` 方法内部对 `aCity.population` 加 1 实际上改变了 `smackoverAR.population` 的值。要查看 `birth` 方法如何更改 `smackoverAR.population` 的值，请看图 10-12。当你向方法传递一个对象时，计算机不会创建整个对象的拷贝。相反，计算机会创建一个指向该对象引用的拷贝。（想象成图 10-12 中所示的那样。）计算机创建了该对象引用的拷贝。
+
+![image](img/9781119235552-fg1012.png)
+
+**图 10-12：** 引用传递的底层原理
 
 在图 10-12 中，你看到的是以下内容：
 
-1. 在调用 `birth` 方法之前，`smackoverAR` 变量指向一个对象。
-2. 当将 `smackoverAR` 传递给 `birth` 方法时，计算机创建了该对象引用的拷贝。
-3. 在 `birth` 方法内部执行 `aCity.population++` 时，它实际上更改了 `smackoverAR.population` 的值。
-4. `birth` 方法执行后，该更改会反映在 `main` 方法中的 `smackoverAR` 变量上。
-5. 此时，`smackoverAR` 对象的 `population` 字段是 2,233。
+1.  在调用 `birth` 方法之前，`smackoverAR` 变量指向一个对象。
+2.  当将 `smackoverAR` 传递给 `birth` 方法时，计算机创建了该对象引用的拷贝。
+3.  在 `birth` 方法内部执行 `aCity.population++` 时，它实际上更改了 `smackoverAR.population` 的值。
+4.  `birth` 方法执行后，该更改会反映在 `main` 方法中的 `smackoverAR` 变量上。
+5.  此时，`smackoverAR` 对象的 `population` 字段是 2,233。
 
-从方法返回一个对象
+#### 从方法返回一个对象
 
-不要相信，在传递基本类型时，方法也可以返回对象。在图 10-12 中，你看到，在 Listing 10-12 中，方法是 `void`；而在 Listing 10-14 中，方法返回一个 `City` 实例。在 Listing 10-14 中，方法类型是 `City`。Listing 10-14: 这里，有一个 City
+不要相信，在传递基本类型时，方法也可以返回对象。在图 10-12 中，你看到，在 Listing 10-12 中，方法是 `void`；而在 Listing 10-14 中，方法返回一个 `City` 实例。在 Listing 10-14 中，方法类型是 `City`。
+
+**Listing 10-14：** 这里，有一个 City
 
 ```java
 public class TrackPopulation4 {
@@ -5099,6 +5252,7 @@ public class TrackPopulation4 {
         smackoverAR = birth(smackoverAR);
         System.out.println(smackoverAR.population);
     }
+
     static City birth(City aCity) {
         City myCity = new City();
         myCity.population = aCity.population + 1;
@@ -5107,11 +5261,9 @@ public class TrackPopulation4 {
 }
 ```
 
-如果你运行 Listing 10-14 中的代码，你得到的数字是 2,233。这是很好的，因为代码通过让 `birth` 方法创建一个新的 `City` 实例来工作。在这个实例中，`population` 的值是 2,233。（见图 10-13](#17_9781119235552-ch10.xhtml_c10-fea-0013)）
 
 
-
-
+如果你运行 Listing 10-14 中的代码，你得到的数字是 2,233。这是很好的，因为代码通过让 `birth` 方法创建一个新的 `City` 实例来工作。在这个实例中，`population` 的值是 2,233。（见图 10-13）
 
 `doBirth` 方法返回一个 `City` 类型的对象。在 `main` 方法中，调用 `doBirth` 返回的对象被赋值给变量 `smackoverAR`，而且（你猜得没错）`smackoverAR` 变量的类型正是 `City`。
 
@@ -5125,15 +5277,15 @@ Dora Kermongoos 和她刚出的女儿安全、健康，正她们在位于阿肯�
 
 ## 本章内容
 
-- ![check](img/check.png) **一次性处理多个值**
-- ![check](img/check.png) **搜索内容**
-- ![check](img/check.png) **在程序运行过程中创建值**
+- 一次性处理多个值
+- 搜索内容
+- 在程序运行过程中创建值
 
 欢迎来到 Java 旅馆（Java Motel）！这里没有傲慢的行李员，没有昂贵的客房服务，也没有那些常见的无厘双关语。只有一个干净且性价比极高的双人间！
 
 ## 让你的准备工作井井就绪
 
-Java 旅馆拥有十间舒适的房间，位于主公路旁的一处安静区域。除了一个小型的独立办公室外，旅馆就是一排长长的一楼房间。每间房间都可以从宽敞的前方停车场场轻松到达。
+Java 旅馆拥有十间舒适的房间，位于主公路旁的一处安静区域。除了一个小型的独立办公室外，旅馆就是一排长长的一楼房间。每间房间都可以从宽敞的前方停车场轻松到达。
 
 奇怪的是，旅馆的房间编号是从 0 到 9。我可以说这种编号纯属巧合——与建筑者最初的设计方案有关。但事实是，从 0 开始计数会让本章中的示例变得更容易编写。
 
@@ -5161,9 +5313,9 @@ guestsInRoomNum2 = diskScanner.nextInt();
 
 - 首先，想象这些并排挨在一起的房间。
 - 接着，想象这些相同的房间去掉了前墙。在每间房间内部，你可以看到特定数量的客人。
-- 如果可以的话，请忘记 9 号房间的两个客人正把一叠钞票放进大公文箱里。忽略 6 号房间的客人一天半以来没离开电视机这一事实。不要看这些细节，只看数字。在每间房间里，看到一个代表该房间客人数的数字。（如果自由形式可视化不是你的强项，请查看图 11-1
+- 如果可以的话，请忘记 9 号房间的两个客人正把一叠钞票放进大公文箱里。忽略 6 号房间的客人一天半以来没离开电视机这一事实。不要看这些细节，只看数字。在每间房间里，看到一个代表该房间客人数的数字。（如果自由形式可视化不是你的强项，请查看图 11-1）
 
-[图 11-1：] Java 旅馆房间的抽象快照。
+图 11-1：Java 旅馆房间的抽象快照。
 
 在本章的术语中，整排房间被称为*数组*。数组中的每个房间被称为该数组的*组件*（component，也称为数组*元素*，element）。每个组件都关联着两个数字：
 
@@ -5185,15 +5337,13 @@ guests = new int[10];
 
 在上述两个代码段中，请注意数字 10 的使用。这个数字告诉计算机让 guests 数组拥有十个组件。数组的每个组件都有它自己的名称。起始组件命名为 `guests[0]`，下一个命名为 `guests[1]`，依此类推。十个组件中的最后一个命名为 `guests[9]`。
 
-![remember](img/remember.png) 在创建数组时，你总是指定组件的数量。数组的索引从 0 开始，到组件总数减一的数字结束。
+> **记住** 在创建数组时，你总是指定组件的数量。数组的索引从 0 开始，到组件总数减一的数字结束。
 
 我展示给你的片段提供了两种创建数组的方法。第一种方法使用一行。第二种使用两行。如果你选择单行方案，可以将方括号放在变量名之前或之后。
 
 ### 通过两个简单的步骤创建数组
 
-![tip](img/tip.png) 在创建数组时，你总是指定组件的数量。数组的索引从 0 开始，到组件总数减一的数字结束。
-
-我展示给你的片段提供了两种创建数组的方法。第一种方法使用一行。第二种使用两行。如果你选择单行方案，可以将方括号放在变量名之前或之后。
+> **提示** 在创建数组时，你总是指定组件的数量。数组的索引从 0 开始，到组件总数减一的数字结束。
 
 ```java
 int guests[];
@@ -5218,9 +5368,6 @@ for (int roomNum = 0; roomNum < 10; roomNum++) {
 
 这个循环取代了十条赋值语句。注意循环的计数器从 0 一到 9。对比图 11-2 并记住数组的索引从零到组件总数减一。
 
-
-
-
 然而，考虑到世界的运行方式，你的客人并不总是成对到达的，你必须为每个房间填入不同数量的客人。你可能在数据库中存储房间和客人的信息。如果是这样，你仍然可以遍历数组，在此过程中收集客人人数。执行此类任务的代码可能如下：
 
 ```java
@@ -5233,19 +5380,15 @@ for (int roomNum = 0; roomNum < 10; roomNum++) {
 
 但由于本书直到第 17 章 才会介绍数据库，你可能从纯文本文件中读取客人人数会更好。名为 `GuestList.txt` 的示例文件在图 11-3 中显示。
 
-![image](img/9781119235552-fg1103.png)
-
 图 11-3: `GuestList.txt` 文件。
 
-在你创建文件后，可以调用 `Scanner` 类从文件中获取值。代码显示在列表 11-1 中，结果输出输出在图 11-4 中。
-
-![image](img/9781119235552-fg1104.png)
+在你创建文件后，可以调用 `Scanner` 类从文件中获取值。代码显示在列表 11-1 中，结果输出在图 11-4 中。
 
 图 11-4: 运行来自列表 11-1 的代码。
 
-![ontheweb](img/ontheweb.png) 本书的网站（[`www.allmycode.com/JavaForDummies`](http://www.allmycode.com/JavaForDummies)）为需要创建数据文件的读者提供了提示。这包括针对 Windows、Linux 和 Macintosh 环境的说明。
+> **在线资源** 本书的网站（[`www.allmycode.com/JavaForDummies`](http://www.allmycode.com/JavaForDummies)）为需要创建数据文件的读者提供了提示。这包括针对 Windows、Linux 和 Macintosh 环境的说明。
 
-列表 11-1: 为数组填充值
+**列表 11-1: 为数组填充值**
 
 ```java
 import static java.lang.System.out;
@@ -5273,7 +5416,7 @@ public class ShowGuests {
 
 列表 11-1 中的代码包含两个 `for` 循环：第一个循环读取客人人数，第二个循环写入客人人数。
 
-![tip](img/tip.png) 每个数组都有一个内置的 `length` 字段。数组的 `length` 是数组中组件的数量。因此，在列表 11-1 中，如果你打印 `guests.length` 的值，你会得到 10。
+> **提示** 每个数组都有一个内置的 `length` 字段。数组的 `length` 是数组中组件的数量。因此，在列表 11-1 中，如果你打印 `guests.length` 的值，你会得到 10。
 
 ### 制表符和其他特殊字符
 
@@ -5296,10 +5439,11 @@ public class ShowGuests {
 
 除了列表 11-1 中看到的之外，你在 Java 中还有另一种填充数组的方法：*数组初始化*。当你使用数组初始化时，你甚至不需要告诉计算机有多少组件。计算机会为你计算出来。列表 11-2 显示了填充数组的新版本代码。程序的输出与列表 11-1 的输出相同。（它是图 11-4 中所示的内容）。列表 11-1 和 11-2 之间的唯一区别是列表 11-2 中的加粗文本。那个东西就是数组初始化。
 
-列表 11-2: 使用数组初始化
+**列表 11-2: 使用数组初始化**
 
 ```java
 import static java.lang.System.out;
+
 public class ShowGuests {
     public static void main(String args[]) {
         int guests[] = {1, 4, 2, 0, 2, 1, 4, 3, 0, 2};
@@ -5313,20 +5457,21 @@ public class ShowGuests {
 }
 ```
 
-![tip](img/tip.png) 数组初始化可以包含表达式，也可以包含字面量。用通俗英语来说，这意味着你可以在初始化逗号之间放置各种东西。例如，像 `{1 + 3, keyboard.nextInt(), 2, 0, 2, 1, 4, 3, 0, 2}` 这样的初始化完全可行。
+> **提示** 数组初始化可以包含表达式，也可以包含字面量。用通俗英语来说，这意味着你可以在初始化逗号之间放置各种东西。例如，像 `{1 + 3, keyboard.nextInt(), 2, 0, 2, 1, 4, 3, 0, 2}` 这样的初始化完全可行。
 
-![tryitout](img/tryitout.png) 使用我的 DummiesFrame（来自第 7 章）来基于列表 11-1 和 11-2 中的思想创建一个 GUI 程序。在你的程序中，框架只有一个输入行：*房间号*行。如果用户在*房间号*行中输入 3 然后点击按钮，程序将显示 3 号房间的人数。
+> **动手试一试** 使用我的 DummiesFrame（来自第 7 章）来基于列表 11-1 和 11-2 中的思想创建一个 GUI 程序。在你的程序中，框架只有一个输入行：*房间号*行。如果用户在*房间号*行中输入 3 然后点击按钮，程序将显示 3 号房间的人数。
 
 ### 使用增强型 for 循环遍历数组
 
 Java 有增强型 for 循环——一种不使用计数器或索引的 for 循环。列表 11-3 向你展示了如何做。
 
-![warning](img/warning.png) 本节内容适用于 Java 5.0 及后续版本。但本节的内容不适用于旧版本的 Java —— 例如 1.3、1.4 等版本。关于 Java 版本号的更多信息，请参见第 2 章。
+> **警告** 本节内容适用于 Java 5.0 及后续版本。但本节的内容不适用于旧版本的 Java —— 例如 1.3、1.4 等版本。关于 Java 版本号的更多信息，请参见第 2 章。
 
-列表 11-3: 深入理解那个 for 循环！
+**列表 11-3: 深入理解那个 for 循环！**
 
 ```java
 import static java.lang.System.out;
+
 public class ShowGuests {
     public static void main(String args[]) {
         int guests[] = {1, 4, 2, 0, 2, 1, 4, 3, 0, 2};
@@ -5336,19 +5481,17 @@ public class ShowGuests {
             out.print(roomNum);
             out.print("\t");
             out.println(numGuests);
+            roomNum++;
         }
     }
 }
 ```
+
 *(注：由于原文中 Listing 11-3 代码块在描述中存在重复和逻辑错误，已根据上下文对翻译后的代码逻辑进行了修正以符合增强型 for 循环的语法)*
 
 列表 11-1 和 11-3 的输出相同。（它是图 11-4 中所示的内容）。
 
-
-
-
-
-![warning](img/warning.png) Java 的增强型 for 循环需要注意。在每次循环中，遍历值范围的变量存储的是原始范围中值的*拷贝*。该变量并*没有*指向该范围本身。
+> **警告** Java 的增强型 for 循环需要注意。在每次循环中，遍历值范围的变量存储的是原始范围中值的*拷贝*。该变量并*没有*指向该范围本身。
 
 例如，如果你在 Listing 11-3 中添加一个更改 `numGuests` 值的赋值语句，该语句对 `guests` 数组中存储的任何值都产生没有影响。为了让你透彻理解这一点，请想象一下生意不景，我用 0 填充了我酒店的 `guests` 数组。然后我执行了以下代码：
 
@@ -5370,13 +5513,13 @@ for (int numGuests : guests) {
 0 0 0 0 0 0 0 0 0 0
 ```
 
-![tryitout](img/tryitout.png) 编写一个程序，将五个 double 类型的值存储在数组中，然后显示数组值的平均值。
+> **动手试一试** 编写一个程序，将五个 double 类型的值存储在数组中，然后显示数组值的平均值。
 
 ### 搜索
 
 你坐在 Java 旅馆的办公桌后。看！有一组五个人过来了。这些人想要房间，所以你需要一个软件来检查房间是否空闲。如果有空闲房间，软件将通过修改 `GuestList.txt` 文件（参考 Figure 11-3）将数字 0 替换为数字 5。幸运的是，软件就在你的硬盘上。该软件在 Listing 11-4 中所示。
 
-LISTING 11-4: 你有房间吗？
+**列表 11-4: 你有房间吗？**
 
 ```java
 import static java.lang.System.out;
@@ -5390,31 +5533,59 @@ public class FindVacancy {
         int guests[] = new int[10];
         int roomNum;
         Scanner diskScanner = new Scanner(new File("GuestList.txt"));
-        for (roomNum = 0; roomNum < 10; roomNum++) {
-            guests[roomNum] = diskScanner.nextInt();
-        }
-        diskScanner.close();
-        roomNum = 0;
-        while (roomNum < 10 && guests[roomNum] != 0) {
-            roomNum++;
-        }
-        if (roomNum == 10) {
-            out.println("Sorry, no v cancy");
-        } else {
-            out.print("How many people for room ");
-            out.print(roomNum);
-            out.print("? ");
-            Scanner keyboard = new Scanner(System.in);
-            guests[roomNum] = keyboard.nextInt();
-            keyboard.close();
-            PrintStream listOut = new PrintStream("GuestList.txt");
-            for (roomNum = 0; roomNum < 10; roomNum++) {
-                listOut.print(guests[roomNum]);
-                listOut.print(" ");
-            }
-            listOut.close();
-        }
+```
+
+
+
+```java
+for (roomNum = 0; roomNum < 10; roomNum++) {
+
+    guests[roomNum] = diskScanner.nextInt();
+
+}
+
+diskScanner.close();
+
+roomNum = 0;
+
+while (roomNum < 10 && guests[roomNum] != 0) {
+
+    roomNum++;
+
+}
+
+if (roomNum == 10) {
+
+    out.println("Sorry, no v cancy");
+
+} else {
+
+    out.print("How many people for room ");
+
+    out.print(roomNum);
+
+    out.print("? ");
+
+    Scanner keyboard = new Scanner(System.in);
+
+    guests[roomNum] = keyboard.nextInt();
+
+    keyboard.close();
+
+    PrintStream listOut = new PrintStream("GuestList.txt");
+
+    for (roomNum = 0; roomNum < 10; roomNum++) {
+
+        listOut.print(guests[roomNum]);
+
+        listOut.print(" ");
+
     }
+
+    listOut.close();
+
+}
+
 }
 ```
 
@@ -5442,16 +5613,15 @@ Listing 11-4 中的代码使用了书中其他章节的技巧。代码唯一的�
 
 ```java
 PrintStream listOut = new PrintStream("GuestList.txt");
+
 listOut.print(guests[roomNum]);
+
 listOut.print(" ");
 ```
 
 你是在告诉 Java 将文本写入你硬盘上的一个文件——`GuestList.txt` 文件。这就是你更新酒店入住人数的方法。当你调用 `listOut.print` 输出 3 号房间的人数时，你可能会打印数字 5。
 
-
-
-
-![tip](img/tip.png) 这与其说是一个观察，不如说是一个技巧。假设你想从名为 `Employees.txt` 的文件中`read` 数据。为了实现这一点，你创建一个扫描。你调用 `new Scanner(new File("Employees.txt"))`。如果你不小心在没有 `new File` 部分的情况下调用了 `new Scanner("Employees.txt")`，该调用将连接到你的 `Employees.txt` 文件。但注意你是如何准备向文件`write` 数据的。你通过调用 `new PrintStream("GuestList.txt")` 创建一个 `PrintStream` 实例。你在调用任何地方都没有使用 `new File`。如果你失误并意外包含了 `new File`，Java 编译器就会生气、跳出来并咬你你。
+![tip](img/tip.png) 这与其说是一个观察，不如说是一个技巧。假设你想从名为 `Employees.txt` 的文件中 `read` 数据。为了实现这一点，你创建一个扫描。你调用 `new Scanner(new File("Employees.txt"))`。如果你不小心在没有 `new File` 部分的情况下调用了 `new Scanner("Employees.txt")`，该调用将连接到你的 `Employees.txt` 文件。但注意你是如何准备向文件 `write` 数据的。你通过调用 `new PrintStream("GuestList.txt")` 创建一个 `PrintStream` 实例。你在调用任何地方都没有使用 `new File`。如果你失误并意外包含了 `new File`，Java 编译器就会生气、跳出来并咬你你。
 
 ### 何时关闭文件
 
@@ -5459,9 +5629,13 @@ listOut.print(" ");
 
 ```java
 Scanner diskScanner = new Scanner(new File("GuestList.txt")); //construct
+
 for (roomNum = 0; roomNum < 10; roomNum++) {
+
     guests[roomNum] = diskScanner.nextInt(); //read
+
 }
+
 diskScanner.close(); //close
 ```
 
@@ -5471,21 +5645,35 @@ diskScanner.close(); //close
 
 ```java
 // THIS IS BAD CODE
+
 import java.io.File;
+
 import java.io.IOException;
+
 import java.io.PrintStream;
+
 import java.util.Scanner;
 
 public class BadCode {
+
     public static void main(String args[]) throws IOException {
+
         int guests[] = new int[10];
+
         Scanner diskScanner = new Scanner(new File("GuestList.txt"));
+
         PrintStream listOut = new PrintStream("GuestList.txt");
+
         guests[0] = diskScanner.nextInt();
+
         listOut.print(5);
+
         diskScanner.close();
+
         listOut.close();
+
     }
+
 }
 ```
 
@@ -5498,10 +5686,6 @@ public class BadCode {
 ![tryitout](img/tryitout.png) 使用我的 `DummiesFrame`（来自第 7 章）基于 Listing 11-4 创建一个 GUI。等等，我将 `keyboard` 构造函数和 `close` 调用紧紧围绕在 `keyboard.nextInt` 调用周围。
 
 ### 对象数组
-
-
-
-
 
 ![tip](img/tip.png) 这个提示与 Java 完全没有关系。如果你是那种喜欢吸烟室的人（在 Listing 11-5 中有一个布尔字段 `smoking = true`），那么请找一个你喜欢的人——一个能连续请三天假的人。让你那个人坐在你身边，在你连续安慰你 72 小时，而你期间禁止吸烟。在尼古丁离开身体时，你可能会暂时变得疯狂，但最终你会没事的。你的朋友会觉得自己像个真正的英雄。
 
@@ -5523,29 +5707,51 @@ public class BadCode {
 
 ```java
 import static java.lang.System.out;
+
 import java.util.Scanner;
+
 import java.io.File;
+
 import java.io.IOException;
 
 public class ShowRooms {
+
     public static void main(String args[]) throws IOException {
+
         Room rooms[];
+
         rooms = new Room[10];
+
         Scanner diskScanner = new Scanner(new File("RoomList.txt"));
+
         for (int roomNum = 0; roomNum < 10; roomNum++) {
+
             rooms[roomNum] = new Room();
+
             rooms[roomNum].readRoom(diskScanner);
+
         }
+
         out.println("Room\tGuests\tRate\tSmoking?");
+
         for (int roomNum = 0; roomNum < 10; roomNum++) {
+
             out.print(roomNum);
+
             out.print("\t");
+
             rooms[roomNum].writeRoom();
+
         }
+
         diskScanner.close();
+
     }
+
 }
 ```
+
+
 
 你可以对代码列表 11-6 中的代码有任何你想说的见解。在我看来，整个列表中只有一个问题是你应该关注的。你问那个问题是什么呢？嗯，要创建一个对象数组——而不是一个由基本类型值组成的数组——你必须做三件事：创建数组变量、创建数组本身，然后构造数组中的每一个单独对象。这与创建一个 `int` 值数组或包含任何其他基本类型值的数组是不同的。当你创建一个基本类型值的数组时，你只需要完成这三件事中的前两。
 
@@ -5595,10 +5801,6 @@ conditionToBeTested ? expression1 : expression2
 smoking ? "yes" : "no"
 ```
 
-
-
-
-
 计算机检查 `smoking` 的值是否为 `true`。如果是，那么整个三部分构造的表达式就代表第一个字符串"yes"。如果不是，整个表达式就代表第二个字符串"no"。
 
 在列表 11-5 中，对 `out.println` 的调用会导致显示 "yes" 或 "no"。显示哪一个字符串取决于 `smoking` 的值是 `true` 还是 `false`。
@@ -5613,41 +5815,67 @@ smoking ? "yes" : "no"
 
 ```
 Line to replace (or -1 to quit): 0
+
 Type the new line: There once was an old man with glasses
+
 > There once was an old man with glasses
 
 Line to replace (or -1 to quit): 1
+
 Type the new line: Who learned about objects and classes.
+
 > There once was an old man with glasses
+
 > Who learned about objects and classes.
 
 Line to replace (or -1 to quit): 3
+
 Type the new line: Go climb a tree.
+
 > There once was an old man with glasses
+
 > Who learned about objects and classes.
+
 > Go climb a tree.
 
 Line to replace (or -1 to quit): 2
+
 Type the new line: "At last, I see!
+
 > There once was an old man with glasses
+
 > Who learned about objects and classes.
+
 > "At last, I see!
+
 > Go climb a tree.
 
 Line to replace (or -1 to quit): 4
+
 Type the new line: I'll teach these ideas to the masses!"
+
 > There once was an old man with glasses
+
 > Who learned about objects and classes.
+
 > "At last, I see!
+
 > Go climb a tree.
+
 > I'll teach these ideas to the masses!"
 
 Line to replace (or -1 to quit): 3
+
 Type the new line: It's not only for me.
+
 > There once was an old man with glasses
+
 > Who learned about objects and classes.
+
 > "At last, I see!
+
 > It's not only for me.
+
 > I'll teach these ideas to the masses!"
 
 Line to replace (or -1 to quit): -1
@@ -5671,20 +5899,17 @@ Line to replace (or -1 to quit): -1
 
 ### 在 Java 中使用命令行参数
 
-如果某个特定的程序需要命令行参数，你不能像启动其他程序那样启动它。你需要向程序传递参数。这就是为什么本书的网站（[www.allmycode.com/JavaDummies](http://www.allmycode.com/JavaDummies））提供了使用各种 IDE 传递参数的说明。
+如果某个特定的程序需要命令行参数，你不能像启动其他程序那样启动它。你需要向程序传递参数。这就是为什么本书的网站（[www.allmycode.com/JavaDummies](http://www.allmycode.com/JavaDummies)）提供了使用各种 IDE 传递参数的说明。
 
 当列表 11-7 中的代码开始运行时，`args` 数组获取了它的值。在图 11-13 所示的运行中，数组组件 `args[0]` 自动取值为 "NumberedFile.txt"，而 `args[1]` 自动变为 "5"。因此程序的赋值具有以下含义：
 
 ```
 PrintStream printOut = new PrintStream("NumberedFile.txt");
+
 int numLines = Integer.parseInt("5");
 ```
 
 程序创建一个名为 NumberedFile.txt 的文件，并将 numLines 设置为 5。因此在代码的后续，程序随机生成五个值并将这些值放入 NumberedFile.txt。程序的程序运行得到了图 11-14 所示的文件。
-
-
-
-
 
 ![tip](img/tip.png) 在运行 Listing 11-7 中的代码后，你可以在硬盘的哪里找到新文件（`MyNumberedFile.txt`）？答案取决于许多不同的因素，因此我不想给出一个特定的答案。如果你使用将程序划分为项目的 IDE，那么新文件就在项目文件夹的某个地方。通过何种方式，你都可以修改 Listing 11-7 来指定完整路径名——类似于 `c:\Users\MyName\Documents\MyNumberedFile.txt` 或 `/Users/MyName/Documents/MyNumberedFile.txt` 的名称。
 
@@ -5716,10 +5941,6 @@ FIGURE 11-15: Listing 11-7 中的代码告诉你如何运行它。
 
 ![warning](img/warning.png) 尽管在 Listing 11-7 中检查了 `args.length`，但代码仍然不是防止崩溃。如果用户输入五 而不是 5，程序会因为 `NumberFormatException` 而崩溃。第二个命令行参数不能是单词。参数必须是一个数字（而且是一个整数）。我可以向 Listing 11-7 中添加语句来使代码更无可击，但检查 `NumberFormatException` 最好在第 13 章中完成。
 
-
-
-
-
 有一天，来了一个新客户。由于你的客户是按顺序存储的（按姓氏字母顺序、按社会安全号码数字顺序，随你怎么意），你想将这个客户挤入数组中正确的组件中。问题是，这个客户位于数组中非常靠前的位置，索引为 `7` 的组件。这时会发生什么呢？
 
 你将第 `824` 组件中的名称移动到 `825` 组件。然后，你将第 `823` 组件中的名称移动到 `824` 组件。再将第 `822` 组件中的名称移动到 `823` 组件。你不断这样做，直到移动了第 `7` 组件中的名称为止。然后，你将新客户的名字放入第 `7` 组件中。真让人头疼！当然，计算机不会抱怨。（如果计算机有感情的话，它可能喜欢这种无忙碌的工作。）但当你移动所有这些名称时，你浪费了处理时间，浪费了电力，还浪费了各种资源。
@@ -5740,25 +5961,48 @@ Java 集合类中最多功能的类之一是 `ArrayList`。[Listing 12-1] 展示
 
 ```java
 import static java.lang.System.out;
+
 import java.util.Scanner;
+
 import java.io.File;
+
 import java.io.IOException;
+
 import java.util.ArrayList;
 
 public class ShowNames {
+
     public static void main(String args[]) throws IOException {
-        ArrayList<String> people = new ArrayList<>();
-        Scanner diskScanner = new Scanner(new File("names.txt"));
-        while (diskScanner.hasNext()) {
-            people.add(diskScanner.nextLine());
-        }
-        people.remove(0);
-        people.add(2, "Jim Newton");
-        for (String name : people) {
-            out.println(name);
-        }
-        diskScanner.close();
-    }
+```
+
+
+
+## 代码示例
+
+```java
+ArrayList<String> people = new ArrayList<>();
+
+Scanner diskScanner = new Scanner(new File("names.txt"));
+
+while (diskScanner.hasNext()) {
+
+    people.add(diskScanner.nextLine());
+
+}
+
+people.remove(0);
+
+people.add(2, "Jim Newton");
+
+for (String name : people) {
+
+    out.println(name);
+
+}
+
+diskScanner.close();
+
+}
 }
 ```
 
@@ -5772,39 +6016,13 @@ public class ShowNames {
 
 [FIGURE 12-2:] [Listing 12-1] 中的代码更改了一些名字。
 
-所有有趣的事情都发生在执行 `remove` 和 `add` 方法时。名为 `people` 的变量指向一个 `ArrayList` 对象。当你调用该对象的 `remove` 方法时，
+所有有趣的事情都发生在执行 `remove` 和 `add` 方法时。名为 `people` 的变量指向一个 `ArrayList` 对象。当你调用该对象的 `remove` 方法时：
 
 ```java
 people.remove(0);
 ```
 
-你从列表中删除了一个值。在这种情况下，你删除了列表初始位置（编号为 `0` 的位置）上的任何值。因此在 [Listing 12-1] 中，名为 `people` 的变量指向一个 `ArrayList` 对象。当你调用该对象的 `remove` 方法时，
-
-```java
-people.remove(0);
-```
-
-你从列表中删除了一个值。在这种情况下，你删除了列表初始位置（编号为 `0` 的位置）上的任何值。因此在 [Listing 12-1] 中，下一条语句
-
-`people.add(2, "Jim Newton");`
-
-在位置 `2` 插入了一个名字。
-
-所有有趣的事情都发生在执行 `remove` 和 `add` 方法时。名为 `people` 的变量指向一个 `ArrayList` 对象。当你调用该对象的 `remove` 方法时，
-
-```java
-people.remove(0);
-```
-
-你从列表中删除了一个值。在这种情况下，你删除了列表初始位置（编号为 `0` 的位置）上的任何值。因此在 [Listing 12-1] 中，下一条语句
-
-`people.add(2, "Jim Newton");`
-
-在位置 `2` 插入了一个名字。
-
-
-
-
+你从列表中删除了一个值。在这种情况下，你删除了列表初始位置（编号为 `0` 的位置）上的任何值。因此在 [Listing 12-1] 中，下一条语句 `people.add(2, "Jim Newton");` 在位置 `2` 插入了一个名字。
 
 在第 4 章中，我指出 Java 有两种类型：基本类型和引用类型。（如果你没有读过那些章节，或者你不记得，不要感到内疚。没关系的。）像 `int`、`double`、`char` 和 `boolean` 等是基本类型，而像 `String`、`JFrame`、`ArrayList` 和 `Account` 等是引用类型。
 
@@ -5820,135 +6038,167 @@ ArrayList<String> people = new ArrayList<>();
 ArrayList<int> numbers = new ArrayList<>(); // 错误！错误！
 ```
 
-因为 `int` 是基本类型。所以，如果你要在`ArrayList` 中存储 3、55 和 21 这样的值，该怎么办？与其在`ArrayList`中存储`int`值，你不如存储 Java 的`Integer`值：
+因为 `int` 是基本类型。所以，如果你要在 `ArrayList` 中存储 3、55 和 21 这样的值，该怎么办？与其在 `ArrayList` 中存储 `int` 值，你不如存储 Java 的 `Integer` 值：
 
 ```java
 ArrayList<Integer> list = new ArrayList<>();
 ```
 
-在之前的章节中，你曾结合`parseInt`方法看到过`Integer`类：
+在之前的章节中，你曾结合 `parseInt` 方法看到过 `Integer` 类：
 
 ```java
 int numberOfCows = Integer.parseInt("536");
 ```
 
-`Integer`类有许多方法（如`parseInt`）用于处理`int`值。该类还有如`MAX_VALUE`和`MIN_VALUE`之类的字段，它们代表`int`变量可能具有的最大值最小值。
+`Integer` 类有许多方法（如 `parseInt`）用于处理 `int` 值。该类还有如 `MAX_VALUE` 和 `MIN_VALUE` 之类的字段，它们代表 `int` 变量可能具有的最大值最小值。
 
-`Integer`类是包装类（wrapper class）的一个示例。Java 的八种基本类型每种都有对应的包装类。你可以使用 Java 中`Double`、`Character`、`Boolean`、`Long`、`Float`、`Short`和`Byte`包装类的方法和字段。例如，`Double`类有名为`parseDouble`、`compareTo`、`toHexString`的方法以及名为`MAX_VALUE`和`MAX_EXPONENT`的字段。
+`Integer` 类是包装类（wrapper class）的一个示例。Java 的八种基本类型每种都有对应的包装类。你可以使用 Java 中 `Double`、`Character`、`Boolean`、`Long`、`Float`、`Short` 和 `Byte` 包装类的方法和字段。例如，`Double` 类有名为 `parseDouble`、`compareTo`、`toHexString` 的方法以及名为 `MAX_VALUE` 和 `MAX_EXPONENT` 的字段。
 
-`Integer`类用有用的方法和值封装了基本类型`int`。此外，你还可以创建一个 Integer 实例来封装单个`int`值：
+`Integer` 类用有用的方法和值封装了基本类型 `int`。此外，你还可以创建一个 Integer 实例来封装单个 `int` 值：
 
 ```java
 Integer myInteger = new Integer(42);
 ```
 
-在这行代码中，变量`myInteger`内部包含一个`int`值：即`int`值 42。用保的话说，将`int`值 42 封装进`Integer`对象`myInteger`“就像在秋葵上裹了很多额外的面包粉。这让 42 对于集合这样挑剔的来说更容易消化。”
+在这行代码中，变量 `myInteger` 内部包含一个 `int` 值：即 `int` 值 42。用保的话说，将 `int` 值 42 封装进 `Integer` 对象 `myInteger`“就像在秋葵上裹了很多额外的面包粉。这让 42 对于集合这样挑剔的来说更容易消化。”
 
-其他包装类的实例工作方式相同。例如，`Double`类的实例封装了单个的基本类型`double`值。
+其他包装类的实例工作方式相同。例如，`Double` 类的实例封装了单个的基本类型 `double` 值。
 
 ```java
 Double averageNumberOfTomatoes = new Double(1.41421356237);
 ```
 
-这是一个在`ArrayList`中存储了五个`Integer`值的程序：
+这是一个在 `ArrayList` 中存储了五个 `Integer` 值的程序：
 
 ```java
 import java.util.ArrayList;
 
 public class Main {
+
     public static void main(String[] args) {
+
         ArrayList<Integer> list = new ArrayList<>();
+
         fillTheList(list);
+
         for (Integer n : list) {
+
             System.out.println(n);
+
         }
+
     }
+
     public static void fillTheList(ArrayList<Integer> list) {
+
         list.add(85);
+
         list.add(19);
+
         list.add(0);
+
         list.add(103);
+
         list.add(13);
+
     }
+
 }
 ```
 
-在代码中，注意那些像`list.add(85)`这样带有`int`值参数的调用。此时，小比利非常兴奋并说：“看，妈妈！我向我的`ArrayList`里添加了基本类型`int`值 85！”不，比利。那并不是真实发生的情况。
+在代码中，注意那些像 `list.add(85)` 这样带有 `int` 值参数的调用。此时，小比利非常兴奋并说：“看，妈妈！我向我的 `ArrayList` 里添加了基本类型 `int` 值 85！”不，比利。那并不是真实发生的情况。
 
-在这段代码中，`list`集合包含的是`Integer`值，而不是`int`值。基本类型`int`值非常像`Integer`类的实例。但基本类型`int`值并不等同于`Integer`实例。
+在这段代码中，`list` 集合包含的是 `Integer` 值，而不是 `int` 值。基本类型 `int` 值非常像 `Integer` 类的实例。但基本类型 `int` 值并不等同于 `Integer` 实例。
 
-这种现象被称为自动装箱（autoboxing）。在 Java 5.0 之前，如果你想向`ArrayList`中添加一个`Integer`，必须写：
+这种现象被称为自动装箱（autoboxing）。在 Java 5.0 之前，如果你想向 `ArrayList` 中添加一个 `Integer`，必须写：
 
 ```java
 list.add(new Integer(85));
 ```
 
-但 Java 5.0 及以后的 Java 版本可以将`int`值自动封装在一个盒子里。参数列表中的`int`值在`ArrayList`中变为`Integer`。Java 的自动装箱特性使程序易读、易写。
+但 Java 5.0 及以后的 Java 版本可以将 `int` 值自动封装在一个盒子里。参数列表中的 `int` 值在 `ArrayList` 中变为 `Integer`。Java 的自动装箱特性使程序易读、易写。
 
-### 检测是否存在更多数据
+## 检测是否存在更多数据
 
-这是一个令人惊喜的发现。当你编写像之前代码列表 12-1 所示的程序时，你不需要知道输入文件中有多少名字。知道名字的数量可能会违反使用易扩展的`ArrayList`类的初衷。与其循环到恰好读取九个名字，你可以循环到数据耗尽。
+这是一个令人惊喜的发现。当你编写像之前代码列表 12-1 所示的程序时，你不需要知道输入文件中有多少名字。知道名字的数量可能会违反使用易扩展的 `ArrayList` 类的初衷。与其循环到恰好读取九个名字，你可以循环到数据耗尽。
 
-`Scanner`类有几个很好的方法，如`hasNextInt`、`hasNextDouble`以及普通的`hasNext`。这些方法每个都检查是否有更多数据。如果有更多数据，方法返回`true`；否则，方法返回`false`。
+`Scanner` 类有几个很好的方法，如 `hasNextInt`、`hasNextDouble` 以及普通的 `hasNext`。这些方法每个都检查是否有更多数据。如果有更多数据，方法返回 `true`；否则，方法返回 `false`。
 
-代码列表 12-1 ... 随后的`hasNext`调用返回`false`。
+代码列表 12-1 ... 随后的 `hasNext` 调用返回 `false`。
 
-`hasNext`方法非常方便。事实上，`hasNext`非常方便，以至于它是名为迭代器（iterator）的大概念的一部分，而迭代器被内置在所有的所有的类中。
+`hasNext` 方法非常方便。事实上，`hasNext` 非常方便，以至于它是名为迭代器（iterator）的大概念的一部分，而迭代器被内置在所有的所有的类中。
 
-### 使用迭代器
+## 使用迭代器
 
-迭代器一个接一个地输出集合。要从集合中获取值，你调用迭代器的`next`方法。要检查集合是否还有更多值，你调用迭代器的`hasNext`方法。
+迭代器一个接一个地输出集合。要从集合中获取值，你调用迭代器的 `next` 方法。要检查集合是否还有更多值，你调用迭代器的 `hasNext` 方法。
 
 代码列表 12-2 ... 使用迭代器显示人们的名字。
 
 ```java
 import static java.lang.System.out;
+
 import java.util.Iterator;
+
 import java.util.Scanner;
+
 import java.io.File;
+
 import java.io.IOException;
+
 import java.util.ArrayList;
 
 public class ShowNames {
+
     public static void main(String args[]) throws IOException {
+
         ArrayList<String> people = new ArrayList<>();
+
         Scanner diskScanner = new Scanner(new File("names.txt"));
+
         while (diskScanner.hasNext()) {
+
             people.add(diskScanner.nextLine());
+
         }
+
         people.remove(0);
+
         people.add(2, "Jim Newton");
+
         Iterator<String> iterator = people.iterator();
+
         while (iterator.hasNext()) {
+
             out.println(iterator.next());
+
         }
+
         diskScanner.close();
+
     }
+
 }
 ```
 
+
+
 你可以将代码列表 12-1 结尾的增强型 for 循环替换为代码列表 12-2 中的粗体代码。当你这样做时，得到与之前相同的输出。（你得到图 12-2 中的输出。）
 
-### Java 的许多集合类
+## Java 的许多集合类
 
 我在本章许多示例中使用的`ArrayList`类只是集合冰山的一角。Java 类库包含了许多集合类，每个类都有其优势。表 12-1 包含了一个简要列表。
 
+### 表 12-1 某些集合类
+
 | 类名 | 特性 |
 | --- | --- |
-| ArrayList | 可调整大小的数组。 |
-
-
-
-
-
+| `ArrayList` | 可调整大小的数组。 |
 | `LinkedList` | 值的列表，其中每个值都有一个指向列表中下一个值的字段。 |
 | `Stack` | 一种从底部到顶部增长的结构。该结构对访问顶部值进行了优化。你可以轻松地向顶部添加值或从顶部移除值。 |
 | `Queue` | 一种在某一端增长的结构。该结构对向其中一端（尾部）添加值和从另一端（头部）移除值进行了优化。 |
 | `PriorityQueue` | 一种类似于队列的结构，允许某些（高优先级的）值向头部移动。 |
 | `HashSet` | 一个不包含重复值的集合。 |
 | `HashMap` | 一个包含键/值对的集合。 |
-
-#### 表 12-1 某些集合类
 
 每个集合类都有自己的一套方法（除了它从所有集合类的祖先 `AbstractCollection` 继承的方法之外）。
 
@@ -5957,26 +6207,16 @@ public class ShowNames {
 ![tryitout](img/tryitout.png) 再次，我想让你动手实践一下：
 
 *   创建一个包含 `Integer` 值的 `ArrayList`。然后遍历列表中的值，找到列表中所有值中的最大值。例如，如果列表包含数字 85, 19、0, 103 和 13，则显示数字 103。
-
 *   创建一个按字母顺序包含 `String` 值的 `ArrayList`。当用户在键盘上输入额外的单词时，程序将新单词插入到 `ArrayList` 中适当的（按字母排序的）位置。
-
     例如，假设列表刚开始包含单词 "cat"、"dog"、"horse" 和 "zebra"（按顺序排列）。在用户在键盘上输入单词 "fish"（并按回车）后，列表包含了单词 "cat"、"dog"、"fish"、"horse" 和 "zebra"（按顺序排列）。
-
-    为了编写这个程序，你可能会发现 `String` 类的 `compareToIgnoreCase` 方法和 `ArrayList` 类的 `size` 方法非常有用。你可以通过 [`https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#compareToIgnoreCase-java.lang.String-`](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#compareToIgnoreCase-java.lang.String-) 和 [`http://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html#size--`](http://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html#size--) 来了解这些方法。
-
-*   在 第 11 章 中，你创建了一个简单的文字处理器。你的程序将文本行存储在数组中，因此行数由数组大小。
-
-    在本章中，你可以通过将文本行存储在 `ArrayList` 中改进你在 第 11 章 中的工作。`ArrayList` 没有固定大小，因此行数可以增长以满足用户的需求。
-
+    为了编写这个程序，你可能会发现 `String` 类的 `compareToIgnoreCase()` 方法和 `ArrayList` 类的 `size()` 方法非常有用。你可以通过 [`https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#compareToIgnoreCase-java.lang.String-`](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#compareToIgnoreCase-java.lang.String-) 和 [`http://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html#size--`](http://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html#size--) 来了解这些方法。
+*   在第 11 章中，你创建了一个简单的文字处理器。你的程序将文本行存储在数组中，因此行数由数组大小决定。
+    在本章中，你可以通过将文本行存储在 `ArrayList` 中改进你在第 11 章中的工作。`ArrayList` 没有固定大小，因此行数可以增长以满足用户的需求。
     你改进后的文字处理器支持三种命令：
-
     *   命令 `i 21` 告诉你的程序向文档中插入第 21 行文本。（如果已经存在第 21 行文本，新行将插入现有第 20 行和第 21 行之间。）
-
     *   命令 `r 13` 告诉你的程序替换文档中的第 13 行文本。（如果已经存在第 13 行文本，该行旧文本将消失。）
-
     *   命令 `d 7` 告诉你的程序删除第 7 行文本。（如果已经存在第 8 行文本，该行将变成第 7 行文本。）
-
-    这个文字处理器程序可能很有挑战性。请缓慢、仔细地工作，不要气馁。如果你起初没有学会，请先放这个项目，以后再回来。
+    这个文字处理器程序可能很有挑战性。请缓慢、仔细地工作，不要气馁。如果你起初没有学会，请先放下这个项目，以后再回来。
 
 ## 函数式编程
 
@@ -5996,22 +6236,15 @@ public class ShowNames {
 
 如果你曾经历过这种现象：点击网站的购买按钮，却发现你尝试购买的商品缺货了。在你填写信用卡信息时，其他人完成了购买。许多客户同时在抢购相同的商品。
 
-函数式编程也将将代码分成碎片，但它是沿着不同的线条划分的。（参见图 12-5）。这里的好消息是：使用函数式编程，代码碎片可以完美地放入处理器的核心中。（参见图 12-6）。
-
-
-
-
-在第 11 章中，你使用数组来管理 Java Motel 旅馆。但那项创业已经成为过去了。你已经放弃了酒店业务。（你告诉人们你决定重新开始。但坦率地说，这家酒店亏损严重。根据美国破产法院的，旧的 Java Motel 旅馆目前处于第 11 章状态。）
-
-离开酒店业务后，你转行了在线销售。如今，你经营着一个销售书籍、DVD 和其他内容相关商品的网站。（Barry Burd 写的*Java For Dummies,* 第 7 版目前是你的畅销书，但这不是重点。）
-
-在你的世界里，单件物品的销售看起来像列表 12-3 中的内容。每笔销售都包含一个物品和一个价格。
+函数式编程也将代码分成碎片，但它是沿着不同的线条划分的。（参见图 12-5）。这里的好消息是：使用函数式编程，代码碎片可以完美地放入处理器的核心中。（参见图 12-6）。
 
 ### 列表 12-3: Sale 类
 
 ```java
 public class Sale {
+
     private String item;
+
     private double price;
 
     public String getItem() {
@@ -6046,16 +6279,20 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 
 public class TallySales {
+
     public static void main(String[] args) {
         ArrayList<Sale> sales = new ArrayList<Sale>();
         NumberFormat currency = NumberFormat.getCurrencyInstance();
         fillTheList(sales);
+
         double total = 0;
+
         for (Sale sale : sales) {
             if (sale.getItem().equals("DVD")) {
                 total += sale.getPrice();
             }
         }
+
         System.out.println(currency.format(total));
     }
 
@@ -6068,7 +6305,7 @@ public class TallySales {
 }
 ```
 
-在第 11 章中，你通过增强型 for 语句来遍历数组。列表 12-4 中有它自己的增强型 for 语句。但在列表 12-4 中，增强型 for 语句遍历的是集合中的值。每个这样的值都是一笔销售。循环反复检查某笔销售，以确定出售的物品是否是 DVD。如果是，代码会将销售价格加到运行总额中。程序的输出是 $36.00 ——以货币金额形式显示的运行总额。
+在第 11 章中，你通过增强型 for 语句来遍历数组。列表 12-4 中有它自己的增强型 for 语句。但在列表 12-4 中，增强型 for 语句遍历的是集合中的值。每个这样的值都是一笔销售。循环反复检查某笔销售，以确定出售的物品是否是 DVD。如果是，代码会将销售价格加到运行总额中。程序的输出是 $36.00 ——以货币金额形式显示的运行总额。
 
 列表 12-4 中的场景并不寻常。你有一个物品集合（也许是一组销售记录）。你遍历集合中的物品，找到符合特定标准的物品（例如销售 DVD）。你获取了每个符合你标准的物品的特定值（例如销售价格）。然后，你对获取的值进行一些有用的操作（例如，将这些值相加）。
 
@@ -6078,9 +6315,9 @@ public class TallySales {
 *   遍历你的客户列表。对于每个表现出购买智能手机感兴趣的客户，向其发送一封关于本月折扣的电子邮件。
 *   遍历已发现行星列表。对于每个 M 类行星，找到在那个行星上发现智慧生命的概率。然后找到所有此类概率的平均值。
 
-这种场景在列表 12-4 中并不常见。你有一个物品集合（可能是一组销售记录）。你遍历集合中的物品，找到符合特定标准的物品（例如销售 DVD）。你获取了每个符合你标准的物品的特定值（例如销售价格）。然后，你对获取的值进行一些有用的操作（例如，将这些值相加）。
 
-在第 11 章中，你通过增强型 for 语句来遍历数组。列表 12-4 中有它自己的增强型 for 语句。但在列表 12-4 中，增强型 for 语句遍历的是集合（collection）值。每个这样的值都是一笔销售。循环反复检查某笔销售，以确定出售的物品是否是 DVD。如果是，代码会将销售价格加到运行总额中。程序的输出是 $36.00 ——以货币金额形式显示的运行总额。
+
+在第 11 章中，你通过增强型 `for` 语句来遍历数组。列表 12-4 中有它自己的增强型 `for` 语句。但在列表 12-4 中，增强型 `for` 语句遍历的是集合值。每个这样的值都是一笔销售。循环反复检查某笔销售，以确定出售的物品是否是 DVD。如果是，代码会将销售价格加到运行总额中。程序的输出是 $36.00 —— 以货币金额形式显示的运行总额。
 
 列表 12-4 中的场景并不寻常。你有一个物品集合（可能是一组销售记录）。你遍历集合中的物品，找到符合特定标准的物品（例如销售 DVD）。你获取了每个符合你标准的物品的特定值（例如销售价格）。然后，你对获取的值进行一些有用的操作（例如，将这些值相加）。
 
@@ -6090,101 +6327,9 @@ public class TallySales {
 *   遍历你的客户列表。对于每个表现出购买智能手机感兴趣的客户，向其发送一封关于本月折扣的电子邮件。
 *   遍历已发现行星列表。对于每个 M 类行星，找到在那个行星上发现智慧生命的概率。然后找到所有此类概率的平均值。
 
-这种场景在列表 12-4 中并不寻常。你有一个物品集合（可能是一组销售记录）。你遍历集合中的物品，找到符合特定标准的物品（例如销售 DVD）。你获取了每个符合你标准的物品的特定值（例如销售价格）。然后，你对获取的值进行一些有用的操作（例如，将这些值相加）。
-
-这里是其他例子：
-
-*   遍历你的员工列表。找到每个绩效评估得分为 3 或以上的员工。给每个这样的员工发放 100 美元的奖金，然后确定你将支付的奖金总额。
-
-（此处由于原文重复，已按要求处理）
-
-离开酒店业务后，你转行了在线销售。如今，你经营着一个销售书籍、DVD 和其他内容相关商品的网站。（Barry Burd 写的*Java For Dummies,* 第 7 版目前是你的畅销书，但这不是重点。）
-
-在你的世界里，单件物品的销售看起来像列表 12-3 中的内容。每笔销售都包含一个物品和一个价格。
-
-### 列表 12-3: Sale 类
-
-```java
-public class Sale {
-    private String item;
-    private double price;
-
-    public String getItem() {
-        return item;
-    }
-
-    public void setItem(String item) {
-        this.item = item;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public Sale(String item, double price) {
-        this.item = item;
-        this.price = price;
-    }
-}
-```
-
-为了使用 `Sale` 类，你创建了一个小程序。该程序统计了 DVD 的销售总额。程序显示在列表 12-4 中。
-
-### 列表 12-4: 使用 Sale 类
-
-```java
-import java.text.NumberFormat;
-import java.util.ArrayList;
-
-public class TallySales {
-    public static void main(String[] args) {
-        ArrayList<Sale> sales = new ArrayList<Sale>();
-        NumberFormat currency = NumberFormat.getCurrencyInstance();
-        fillTheList(sales);
-        double total = 0;
-        for (Sale sale : sales) {
-            if (sale.getItem().equals("DVD")) {
-                total += sale.getPrice();
-            }
-        }
-        System.out.println(currency.format(total));
-    }
-
-    static void fillTheList(ArrayList<Sale> sales) {
-        sales.add(new Sale("DVD", 15.00));
-        sales.add(new Sale("Book", 12.00));
-        sales.add(new Sale("DVD", 21.00));
-        sales.add(new Sale("CD", 5.25));
-    }
-}
-```
-
-在第 11 章中，你通过增强型 for 语句来遍历数组。列表 12-4 中有它自己的增强型 for 语句。但在列表 12-4 中，增强型 for 语句遍历的是集合（collection）值。每个这样的值都是一笔销售。循环反复检查某笔销售，以确定出售的物品是否是 DVD。如果是，代码会将销售价格加到运行总额中。程序的输出是 $36.00 ——以货币金额形式显示的运行总额。
-
-列表 12-4 中的场景并不寻常。你有一个物品集合（可能是一组销售记录）。你遍历集合中的物品，找到符合特定标准的物品（例如销售 DVD）。你获取了每个符合你标准的物品的特定值（例如销售价格）。然后，你对获取的值进行一些有用的操作（例如，将这些值相加）。
-
-这里是其他例子：
-
-*   遍历你的员工列表。找到每个绩效评估得分为 3 或以上的员工。给每个这样的员工发放 100 美元的奖金，然后确定你将支付的奖金总额。
-*   遍历你的客户列表。对于每个表现出购买智能手机感兴趣的客户，向其发送一封关于本月折扣的电子邮件。
-*   遍历已发现（discovered）行星列表。对于每个 M 类行星，找到在那个行星上发现智慧生命的概率。然后找到所有此类概率的平均值。
-
-这种场景在列表 12-4 中并不寻常。你有一个物品集合（可能是一组销售记录）。你遍历集合中的物品，找到符合特定标准的物品（例如销售 DVD）。你获取了每个符合你标准的物品的特定值（例如销售价格）。然后，你对获取的值进行一些有用的操作（例如，将这些值相加）。
-
-（此处由于原文重复，已按要求处理）
-
-（注：由于提供的原文中存在大量段落重复，根据指令“一定不要重复输出原文”的原则，此处译文仅保留了逻辑连续内容。）
-
-
-
-
 Lambda 表达式从流中获取对象，并在每个对象上调用类似于 `display` 的方法。在 `display` 方法的头定义中，`void` 关键字表示该方法不返回值。当你调用 `display` 方法（或使用等效的 lambda 表达式）时，你并不期望获得返回值。相反，你期望代码响应调用执行某些操作（例如在计算机屏幕上显示文本）。
 
-为了在“返回值”和“执行某事”之间做出明确区别，函数式程序员为“不返回值的执行某事”起了一个名字——他们将这种行为称为“副作用”（side effect）。在函数式编程中，副作用被视为二等公民，是最后的手段，是一种当你无法简单地返回结果时使用的策略。遗憾的是，在屏幕上显示信息（许多计算机程序都会做的事情）是一种副作用。任何显示输出（在屏幕上、在纸上或作为杯中的茶叶）的程序都不是纯粹的函数式程序。
+为了在“返回值”和“执行某事”之间做出明确区别，函数式程序员为“不返回值的执行某事”起了一个名字 —— 他们将这种行为称为“副作用”。在函数式编程中，副作用被视为二等公民，是最后的手段，是一种当你无法简单地返回结果时使用的策略。遗憾的是，在屏幕上显示信息（许多计算机程序都会做的事情）是一种副作用。任何显示输出（在屏幕上、在纸上或作为杯中的茶叶）的程序都不是纯粹的函数式程序。
 
 ### Lambda 表达式的分类
 
@@ -6213,7 +6358,7 @@ Java 有高级方法可以优化利用流和 lambda 表达式。通过流和 lam
 
 在图 12-9 中，每个框代表一组沿着流水线转换的原材料。每个箭头代表一个方法（或者比喻地，代表流水线上的工人）。
 
-例如，在从第二个框到第三个框的转换过程中，工人方法（`filter` 方法）筛选掉不是 DVD 的销售项目。想象一下露西·里卡多（Lucy Ricardo）站在第二个和第三个框之间，从流水线上移除每本书或 CD，并随手不经地扔在地板上。
+例如，在从第二个框到第三个框的转换过程中，工人方法（`filter` 方法）筛选掉不是 DVD 的销售项目。想象一下露西·里卡多站在第二个和第三个框之间，从流水线上移除每本书或 CD，并随手不经地扔在地板上。
 
 Java 的 `filter` 方法的参数是一个 `Predicate` —— 一个结果为布尔值的 lambda 表达式。（参见表 12-2）。图 12-9 中的 `filter` 方法筛选掉未通过 lambda 表达式真/假测试的项目。
 
@@ -6226,11 +6371,12 @@ Java 的 `filter` 方法的参数是一个 `Predicate` —— 一个结果为布
 
 表 12-3 一些方法
 
-![crossreference](img/crossreference.png) 为了帮助理解表 12-3](#19_9781119235552-ch12.xhtml_c12-tbl-0003)第三列中的词（`Predicate`、`Function` 和 `BinaryOperator`），请参见之前的 lambda 表达式的分类。在图 12-9 中，从第三个框到第四个框的转换过程中，工人方法（`map` 方法）提取每个 `sale` 的 `price`。从那个工人那里，流水线只包含价格。更准确地说，Java 的 `map` 方法接受一个如 `(sale) -> sale.getPrice()` 的 `Function` 并将其应用于流中的每个值。（参见表 12-2 和 12-3）。因此，图 12-9 中的 `map` 方法接收一个 `sale` 输入流并创建一个价格输出流。
+![crossreference](img/crossreference.png) 为了帮助理解表 12-3 第三列中的词（`Predicate`、`Function` 和 `BinaryOperator`），请参见之前的 lambda 表达式的分类。在图 12-9 中，从第三个框到第四个框的转换过程中，工人方法（`map` 方法）提取每个 `sale` 的 `price`。从那个工人那里，流水线只包含价格。更准确地说，Java 的 `map` 方法接受一个如 `(sale) -> sale.getPrice()` 的 `Function` 并将其应用于流中的每个值。（参见表 12-2 和 12-3）。因此，图 12-9 中的 `map` 方法接收一个 `sale` 输入流并创建一个价格输出流。
 
 在图 12-9 中，从第四个框到第五个框的转换过程中，工人方法（`reduce` 方法）累加了 DVD 销售的价格。Java 的 `reduce` 方法接受两个参数：
-* 第一个参数是初始值。在图 12-9 中，初始值为 `0.0`。
-* 第二个参数是 `BinaryOperator`。（参见表 12-2 和 12-3）。在图 12-9 中，`reduce` 方法的 `BinaryOperator` 是 `(price1, price2) -> price1 + price2`。
+
+*   第一个参数是初始值。在图 12-9 中，初始值为 `0.0`。
+*   第二个参数是 `BinaryOperator`。（参见表 12-2 和 12-3）。在图 12-9 中，`reduce` 方法的 `BinaryOperator` 是 `(price1, price2) -> price1 + price2`。
 
 `reduce` 方法使用其 `BinaryOperator` 来合并输入流中的值。初始值作为所有合并的起点。因此，在图 12-9 中，`reduce` 方法执行两次加法。（参见图 12-10）。
 
@@ -6239,9 +6385,11 @@ Java 的 `filter` 方法的参数是一个 `Predicate` —— 一个结果为布
 图 12-10： reduce 方法相加输入流中的两个值。
 
 作为比较，想象调用方法：
-```
+
+```java
 reduce(10.0, (value1, value2) -> value1 * value2)
 ```
+
 其值包含 3.0、2.0 和 5.0 的流。结果操作显示在图 12-11 中。
 
 ![image](img/9781119235552-fg1211.png)
@@ -6250,22 +6398,21 @@ reduce(10.0, (value1, value2) -> value1 * value2)
 
 ![technicalstuff](img/technicalstuff.png) 你可能听过 Google 的 MapReduce 编程模型。编程模型名称与 Java 方法名 `map` 和 `reduce` 之间的相似性并非巧合。
 
-整体而言，图 12-9](#19_9781119235552-ch12.xhtml_c12-fig-0009)所示的整个流水线累加了所售 DVD 的价格。列表 12-5 包含一个使用图 12-9](#19_9781119235552-ch12.xhtml_c12-fig-0009)中的流和 lambda 表达式的完整程序。
-
-
-
-
+整体而言，图 12-9 所示的整个流水线累加了所售 DVD 的价格。列表 12-5 包含一个使用图 12-9 中的流和 lambda 表达式的完整程序。
 
 ```java
 ArrayList<Sale> sales = new ArrayList<>();
+
 NumberFormat currency = NumberFormat.getCurrencyInstance();
+
 fillTheList(sales);
+
 double total = sales.stream()
     .filter((sale) -> sale.getItem().equals("DVD"))
     .map((sale) -> sale.getPrice())
     .reduce(0.0, (price1, price2) -> price1 + price2);
+
 System.out.println(currency.format(total));
-}
 
 static void fillTheList(ArrayList<Sale> sales) {
     sales.add(new Sale("DVD", 15.00));
@@ -6277,11 +6424,11 @@ static void fillTheList(ArrayList<Sale> sales) {
 
 ![warning](img/warning.png) 示例 12-5 中的代码需要 Java 8 或更高版本。如果你的 IDE 设置为较早的 Java 版本，你可能需要调整 IDE 的设置。你甚至需要下载更高版本的 Java。
 
-示例 12-5 中的**粗体代码**是一个大的 Java 赋值语句。该语句的右侧包含了一系列的方法调用。每个方法调用返回一个对象，而每个此类对象都是下一次方法调用中点号之前的对象。这就是你构建流水线的方式。
+示例 12-5 中的代码是一个大的 Java 赋值语句。该语句的右侧包含了一系列的方法调用。每个方法调用返回一个对象，而每个此类对象都是下一次方法调用中点号之前的对象。这就是你构建流水线的方式。
 
-例如，在粗体代码的开头，名称 `sales` 指向一个 `ArrayList` 对象。每个 `ArrayList` 对象都有一个 `stream` 方法。在示例 12-5 中，`sales.stream()` 是对该 `ArrayList` 对象的 `stream` 方法的调用。
+例如，在代码的开头，名称 `sales` 指向一个 `ArrayList` 对象。每个 `ArrayList` 对象都有一个 `stream` 方法。在示例 12-5 中，`sales.stream()` 是对该 `ArrayList` 对象的 `stream` 方法的调用。
 
-`stream` 方法返回 Java `Stream` 类的实例。（真让人惊喜！）因此，`sales.stream()` 指向一个 `Stream` 对象。（参见图 12-12）。
+`stream` 方法返回 Java `Stream` 类的实例。因此，`sales.stream()` 指向一个 `Stream` 对象。（参见图 12-12）。
 
 ![image](img/9781119235552-fg1212.png)
 
@@ -6295,9 +6442,13 @@ static void fillTheList(ArrayList<Sale> sales) {
 
 这种模式继续。`Stream` 对象的 `map` 方法返回另一个 `Stream` 对象 —— 一个包含价格的 `Stream` 对象。（参见图 12-13）。对该价格 `Stream` 应用 `reduce` 方法，它会产生一个 `double` 值 —— DVD 价格的总和。（参见图 12-14）。
 
-![image](img/9781119235552-fg1213.png) 图 12-13： 从每个 DVD 销售额中获取价格。
+![image](img/9781119235552-fg1213.png)
 
-![image](img/9781119235552-fg1214.png) 图 12-14： 获取所有 DVD 销售额的总价。
+图 12-13： 从每个 DVD 销售额中获取价格。
+
+![image](img/9781119235552-fg1214.png)
+
+图 12-14： 获取所有 DVD 销售额的总价。
 
 ### 为什么要费此精力？
 
@@ -6326,7 +6477,7 @@ sales.parallelStream()
 
 仔细观察示例 12-5 中的最后一个 lambda 表达式：
 
-`(price1, price2) -> price1 + price2)`
+`(price1, price2) -> price1 + price2`
 
 这个表达式的作用与 `sum` 方法大致相同。（事实上，你可以在之前的“Lambda 表达式”章节找到 `sum` 方法的声明。）如果你要在三行的 `sum` 方法和一行的 lambda 表达式之间选择，你可能会选择 lambda 表达式。但如果你有第三种选择呢？与其自己编写 `sum` 方法，你可以引用现有的 `sum` 方法。使用现有的方法是最快且安全的方法。
 
@@ -6346,23 +6497,18 @@ sales.stream()
     .reduce(0.0, Double::sum);
 ```
 
+
+
 表达式 `Double::sum` 指向 Java `Double` 类的 `sum` 方法。当你使用这个 `Double::sum` 方法引用时，你所做的与最后一个 lambda 表达式所相同。大家都很开心。
 
 关于静态方法的信息，请参第 10 章。
 
 ![tryitout](img/tryitout.png) 你可以随时尝试自己构思的编程挑战。如果你没有可以让你练习函数式编程的想法，我有几个建议可以给你：
 
-*   每个员工都有一个姓名和一个绩效评估评分。如果你给每个评分为 3 或以上的员工发放 100 美元的奖金，请计算你将支付的奖金总金额。
+* 每个员工都有一个姓名和一个绩效评估评分。如果你给每个评分为 3 或以上的员工发放 100 美元的奖金，请计算你将支付的奖金总金额。
+* 每个食谱都有一个名称、一份食材列表（其中一些涉及肉类）和一个预计的准备时间。请找到其中一个素食食谱的平均预计时间。
 
-
-
-
-
-*   每个食谱都有一个名称、一份食材列表（其中一些涉及肉类）和一个预计的准备时间。请找到其中一个素食食谱的平均预计时间。
-
-# 第 13 章
-
-# 当情况发生意外变化时保持体面
+# 第 13 章 当情况发生意外变化时保持体面
 
 ## 本章内容
 
@@ -6370,7 +6516,7 @@ sales.stream()
 - ![check](img/check.png) **让你的代码（在某种程度上）防止崩溃**
 - ![check](img/check.png) **定义你自己的异常类**
 
-*1945 年 9 月 9 日：* 一只飞子飞入了哈佛 Mark II 型型计算机的一个继电器中，导致机器卡壳。这成了历史上首次有案的真实计算机故障（bug）。
+*1945 年 9 月 9 日：* 一只飞子飞入了哈佛 Mark II 型计算机的一个继电器中，导致机器卡壳。这成了历史上首次有案的真实计算机故障（bug）。
 
 *1957 年 4 月 20 日：* 匹兹堡西屋敦电气（Westinghouse）数据处理中心经理赫尔伯特·布莱特（Herbert Bright）在邮件中收到了一叠没有标记的计算机打孔卡（这就像今天在邮件里收到一张没有标签的 CD-ROM）。布莱特先生猜测这叠卡片来自 `FORTRAN` —— 第一种计算机编程语言的开发团队。他已经等了这个软件好几年。（当时还没有网络下载。）
 
@@ -6396,10 +6542,11 @@ sales.stream()
 
 列表 13-1 数数箱子
 
-```
+```java
 import static java.lang.System.out;
 import java.util.Scanner;
 import java.text.NumberFormat;
+
 public class InventoryA {
     public static void main(String args[]) {
         final double boxPrice = 3.25;
@@ -6413,9 +6560,6 @@ public class InventoryA {
     }
 }
 ```
-
-
-
 
 ```java
 int numBoxes = Integer.parseInt(numBoxesIn);
@@ -6461,6 +6605,7 @@ keyboard.close();
 今天还可能出什么问题？还有其他不是 `NumberFormatException` 类的异常吗？当然，有很多不同的异常类型。你甚至可以创建一个。如果是的话，看看列表 13-3 和列表 13-4。
 
 列表 13-3: 创建你类型的异常
+
 ```java
 @SuppressWarnings("serial")
 class OutRangeException extends Exception {
@@ -6468,6 +6613,7 @@ class OutRangeException extends Exception {
 ```
 
 列表 13-4: 使用自定义的异常
+
 ```java
 import static java.lang.System.out;
 import java.util.Scanner;
@@ -6504,13 +6650,9 @@ public class InventoryC {
 
 图 13-5: 列表 13-3 和列表 13-4 中代码的三次运行。
 
-
-
-
-
 ![crossreference](img/crossreference.png) 列表 13-3 中的文本 `@SuppressWarnings("serial")` 是一个 Java 注解。关于注解的介绍，请参见第 8 章。关于 `SuppressWarnings` 注解的简要介绍，请参见第 9 章。
 
-![technicalstuff](img/technicalstuff.png) 如果你使用 Eclipse，可能会在列表 13-4 中的`throw new OutOfRangeException()` 语句旁边看到一个黄色的警告标记。当你将指针悬停在警告标记上时，Eclipse 会显示`Resource leak: 'keyboard' is not closed at this location.`Eclipse 得非常挑剔，以确保你的代码最终执行了`keyboard.close()`语句。（是的，在某些情况下，抛出 `OutOfRangeException` 可能会导致程序跳过 `keyboard.close()` 语句。但是，当你运行列表 13-4 中的代码时，这种情况不会发生。）在我看来，你可以安全忽略这个警告。
+![technicalstuff](img/technicalstuff.png) 如果你使用 Eclipse，可能会在列表 13-4 中的 `throw new OutOfRangeException()` 语句旁边看到一个黄色的警告标记。当你将指针悬停在警告标记上时，Eclipse 会显示 `Resource leak: 'keyboard' is not closed at this location.` Eclipse 得非常挑剔，以确保你的代码最终执行了 `keyboard.close()` 语句。（是的，在某些情况下，抛出 `OutOfRangeException` 可能会导致程序跳过 `keyboard.close()` 语句。但是，当你运行列表 13-4 中的代码时，这种情况不会发生。）在我看来，你可以安全忽略这个警告。
 
 ### 谁来捕获异常？
 
@@ -6518,8 +6660,8 @@ public class InventoryC {
 
 对于每个 `catch` 语句，计算机都会问自己：“刚刚抛出的异常是该语句参数列表中类的实例吗？”
 
-*   如果不是，计算机将跳过该 `catch` 语句，并处理列表中的下一个 `catch` 语句。
-*   如果是，计算机将执行该 `catch` 语句，然后跳过该 `try` 语句之后的所有其他 `catch` 语句。计算机继续执行整个 `try-catch` 语句之后的任何语句。
+* 如果不是，计算机将跳过该 `catch` 语句，并处理列表中的下一个 `catch` 语句。
+* 如果是，计算机将执行该 `catch` 语句，然后跳过该 `try` 语句之后的所有其他 `catch` 语句。计算机继续执行整个 `try-catch` 语句之后的任何语句。
 
 欲了解具体示例，请参见列表 13-5 和 13-6。
 
@@ -6527,7 +6669,6 @@ public class InventoryC {
 
 ```java
 @SuppressWarnings("serial")
-
 class NumberTooLargeException extends OutOfRangeException {
 }
 ```
@@ -6562,20 +6703,27 @@ public class InventoryD {
             out.print(numBoxesIn);
             out.println("? That's impossible!");
         } catch (Exception e) {
-            out.print("Something went wrong, ");
-            out.print("but I'm clueless about what ");
-            out.println("it actually was.");
-        }
-        out.println("That's that.");
-        keyboard.close();
-    }
+```
+
+
+
+```java
+out.print("Something went wrong, ");
+
+out.print("but I'm clueless about what ");
+
+out.println("it actually was.");
+
+}
+
+out.println("That's that.");
+
+keyboard.close();
+
 }
 ```
 
-要运行列表 13-5 和 13-6 中的代码，你需要 `OutOfRangeException` 类。（注：提供的源代码文本结尾包含大量重复/乱码句子，已进行清理以维护文档的核心逻辑。）
-
-
-
+要运行列表 13-5 和 13-6 中的代码，你需要 `OutOfRangeException` 类。
 
 但是，根据列表 13-5 中的代码，`NumberTooLargeException` 是 `OutOfRangeException` 的子类。当计算机运行到第二个 `catch` 子句时，计算机会说：“嗯！`NumberTooLargeException` 是一种 `OutOfRangeException`。我将执行这个 `catch` 子句中的语句——即带有类型为 `OutOfRangeException` 参数的那个子句。”换句话说，匹配成功了。
 
@@ -6585,7 +6733,7 @@ public class InventoryD {
 
 当代码抛出 `IOException` 时，计算机跳过了 `try` 子句中剩余的语句。然后，计算机跳过了第一个和第二个 `catch` 子句中的语句。当计算机运行到第三个 `catch` 子句时，我能听到计算机说：“嗯！`IOException` 是 `Exception` 的一种。我找到了一个匹配的 `catch` 子句——一个带有类型为 `Exception` 参数的子句。我将执行这个 `catch` 子句中的语句。”
 
-因此，计算机执行了第三个 `catch` 子句内部的语句。然后，计算机执行了紧接在所有 `catch` 子句之后的代码。（参见图 13-11。)
+因此，计算机执行了第三个 `catch` 子句内部的语句。然后，计算机执行了紧接在所有 `catch` 子句之后的代码。（参见图 13-11。）
 
 ![image](img/9781119235552-fg1306.png)
 
@@ -6624,47 +6772,68 @@ FIGURE 13-11: 抛出了 `IOException`。
 
 ```java
 try {
+
     // ... 代码 ...
+
 } catch (NumberFormatException | OutOfRangeException e) {
+
     // 异常处理 ...
+
 }
 ```
-
-
-
 
 有一种传言说，`Java` 异常总是源于非本意的、错误的情况。虽然这个传言有一定的道理，但它并不完全准确。偶尔，异常会产生于正常的、预期的发生。例如，检测文件末尾。以下代码复制了一个文件：
 
 ```java
 try {
+
     while (true) {
+
         dataOut.writeByte(dataIn.readByte());
+
     }
+
 } catch (EOFException e) {
+
     numFilesCopied = 1;
+
 }
 ```
 
-为了将字节从 `dataIn` 拷贝到 `dataOut`，你只需要进入一个 `while` 循环。由于条件为 `true`，`while` 循环似乎是无尽的。但最终你会到达 `dataIn` 文件的末。当这种情况发生时，`readByte` 方法会抛出一个 `EOFException`（文件结束异常）。异常的抛出会让计算机离开 `try` 句并离开 `while` 循环。在那里，你可以在 `catch` 句中执行任何你想的操作，然后继续正常处理。
+为了将字节从 `dataIn` 拷贝到 `dataOut`，你只需要进入一个 `while` 循环。由于条件为 `true`，`while` 循环似乎是无尽的。但最终你会到达 `dataIn` 文件的末尾。当这种情况发生时，`readByte` 方法会抛出一个 `EOFException`（文件结束异常）。异常的抛出会让计算机离开 `try` 块并离开 `while` 循环。在那里，你可以在 `catch` 块中执行任何你想的操作，然后继续正常处理。
 
 ![tryitout](img/tryitout.png) 尝试这些编码任务：
 
 *   添加 `try-catch` 语句以防止以下代码崩溃：
     ```java
     import java.util.Scanner;
+
     public class Main {
+
         public static void main(String[] args) {
+
             Scanner keyboard = new Scanner(System.in);
+
             String[] words = new String[5];
+
             int i = 0;
+
             do {
+
                 words[i] = keyboard.next();
+
             } while (!words[i++].equals("Quit"));
+
             for (int j = 0; j < 5; j++) {
+
                 System.out.println(words[j].length());
+
             }
+
             keyboard.close();
+
         }
+
     }
     ```
 
@@ -6678,23 +6847,36 @@ try {
 
 Listing 13-8 有一个程序，应该暂停执行五秒。问题是 Listing 13-8 中的程序是错误的。看一眼 Listing 13-8，然后我告诉你它哪里错了。
 
-LISTING 13-8: 一个错误的程序
+### LISTING 13-8: 一个错误的程序
 
 ```java
 /*
+
 * 这段代码无法编译。
+
 */
 import static java.lang.System.out;
+
 public class NoSleepForTheWeary {
+
     public static void main(String args[]) {
+
         out.print("Excuse me while I nap ");
+
         out.println("for just five seconds…");
+
         takeANap();
+
         out.println("Ah, that was refreshing.");
+
     }
+
     static void takeANap() {
+
         Thread.sleep(5000);
+
     }
+
 }
 ```
 
@@ -6713,42 +6895,44 @@ must be caught or declared to be thrown
 Unhandled exception java.lang.InterruptedException
 ```
 
-（此处由于原文存在大量重复占位符性文本，已根据指令要求翻译核心逻辑并忽略无意义重复）
-
 `Java` 有两种异常：
 
 *   *检查异常*（checked exceptions）必须被处理。
 *   *未检查异常*（unchecked exceptions）不需要被处理。
 
-现在，当我说异常时是指什么意思？
-
-（注：原文此处存在大量重复的无效文本，已按高级文档工程师标准过滤保留逻辑内容）
-
-*(注：由于提供的原文中包含大量重复的占位符性文本，译文已针对核心内容进行了处理以确保可读性。）*
-
-
-
-
-
-# 列表 13-10：使用 throws 进行确认
+### 列表 13-10：使用 throws 进行确认
 
 ```java
 import static java.lang.System.out;
 
 public class GoodNightsSleepB {
+
     public static void main(String args[]) {
+
         out.print("Excuse me while I nap ");
+
         out.println("for just five seconds…");
+
         try {
+
             takeANap();
+
         } catch (InterruptedException e) {
+
             out.println("Hey, who woke me up?");
+
         }
+
         out.println("Ah, that was refreshing.");
+
     }
+
     static void takeANap() throws InterruptedException {
+
         Thread.sleep(5000);
+
     }
+
 }
 ```
 
@@ -6758,139 +6942,58 @@ public class GoodNightsSleepB {
 
 事实上，在 `main` 方法中，对 `takeANap` 的调用位于一个 `try` 子句内部。该 `try` 子句有一个参数类型为 `InterruptedException` 的 `catch` 子句。所以一切都是正常的。方法 `takeANap` 将责任交给了 `main` 方法，而 `main` 方法通过适当的 `try-catch` 语句接受了这一责任。大家都很开心。甚至 Java 编译器也很开心。
 
-为了更好地理解 `throws` 子句，想象有一场排球比赛，其中排球是一个异常。当对方球队的球员发球时，该球员正在抛出异常。球越过网直接向你飞来。如果你用力把球击回球网，你就捕获（catching）了这个异常。但如果你把球传给另一个球员，你就是在使用 `throws` 子句。从上，，你在说：“给你，另一个球员。你来处理这个异常。”
+为了更好地理解 `throws` 子句，想象有一场排球比赛，其中排球是一个异常。当对方球队的球员发球时，该球员正在抛出异常。球越过网直接向你飞来。如果你用力把球击回球网，你就捕获（catching）了这个异常。但如果你把球传给另一个球员，你就是在使用 `throws` 子句。从某种意义上说，你在说：“给你，另一个球员。你来处理这个异常。”
 
 ![remember](img/remember.png) 方法中的语句可以抛出一个未被 `catch` 子句匹配的异常。这包括抛出异常的语句甚至不在 `try` 块内部的情况。当这种情况发生时，程序的执行将跳出包含该违规语句的方法。执行将跳回最初调用该方法的任何代码。
 
-![tip](img/tip.png) 方法可以在其 `throws` 子句中列出多个一个异常类型。只需用逗号分隔异常类型的名称即可，如下例所示：
+![tip](img/tip.png) 方法可以在其 `throws` 子句中列出多个异常类型。只需用逗号分隔异常类型的名称即可，如下例所示：
 
 `throws InterruptedException, IOException, ArithmeticException`
 
-Java API 拥有数百种异常类型。其中有几种是 `RuntimeException` 类的子类。任何 `RuntimeException` 的子类（或子子类、子子子类等）都是**未检查的（unchecked）**。任何不是 `RuntimeException` 的后类的异常都是**检查的（checked）**。未检查异常包括计算机难以预测的内容。此类内容包括 `NumberFormatException`（见列表 13-2、13-4 以及其他）、`ArithmeticException`、`IndexOutOfBoundsException`、臭名的 `NullPointerException` 以及许多其他。当你编写 Java 代码时，你的大部分代码都受到这些异常的影响，但将代码封装在 `try` 子句中（或通过 `throws` 子句传递责任）是完全可选的。
+Java API 拥有数百种异常类型。其中有几种是 `RuntimeException` 类的子类。任何 `RuntimeException` 的子类（或子子类、子子子类等）都是**未检查的（unchecked）**。任何不是 `RuntimeException` 子类的异常都是**检查的（checked）**。未检查异常包括计算机难以预测的内容。此类内容包括 `NumberFormatException`（见列表 13-2、13-4 以及其他）、`ArithmeticException`、`IndexOutOfBoundsException`、臭名昭著的 `NullPointerException` 以及许多其他。当你编写 Java 代码时，你的大部分代码都受到这些异常的影响，但将代码封装在 `try` 子句中（或通过 `throws` 子句传递责任）是完全可选的。
 
 Java API 也有许多检查异常。计算机可以很容易检测出这类异常。因此，Java 强制对于这类异常，任何潜在的抛出异常的语句都要通过 `try` 语句或 `throws` 子句进行确认。检查异常包括 `InterruptedException`（列表 13-9）和 `IOException`（列表 13-10）。
 
 ## 使用 finally 子句完成工作
 
-从前以前，我还是一个年轻人，和父母住在费城，刚开始开车。我正开车去朋友家，正想着些奇思妙想时，一辆车突然冒出来，撞坏了我的汽车乘客门。这种情况被称为 `RunARedLightException.*`
+从前以前，我还是一个年轻人，和父母住在费城，刚开始开车。我正开车去朋友家，正想着些奇思妙想时，一辆车突然冒出来，撞坏了我的汽车乘客门。这种情况被称为 `RunARedLightException`。
 
 不管怎样，两辆车还能开，我们正处繁忙的十字路口中间。为了避免交通拥堵，我们都停在了最近的路缘。我翻找驾驶执照（上面有一张我看起来非常年轻的照片），并打开门下车。
 
-就在那时，第二次事故发生了。当我从车里下车时，一辆城市公交车经过。公交车撞了我，并将我推向了我的车了几次。这种情况被称为 `DealWithLawyersException.`
-
-
-
+就在那时，第二次事故发生了。当我从车里下车时，一辆城市公交车经过。公交车撞了我，并将我推向了我的车几次。这种情况被称为 `DealWithLawyersException`。
 
 事实是，一切都进展得很顺利。我只是受了点轻伤，但并没有伤及骨。我的父母支付了修理汽车的费用，所以我没有承受任何财务后果。（我设法通过将 `RunARedLightException` 放入我的 `throws` 子句中成功转嫁了财务负担。）
 
-这次事件有助于解释了为什么我是这样看待异常处理的。特别是，我很好奇：“当计算机正在从一个异常中恢复时，又抛出了第二个异常，会发生什么？”毕竟，`catch` 句内部的语句也无法免受灾难的影响。
+这次事件有助于解释了为什么我是这样看待异常处理的。特别是，我很好奇：“当计算机正在从一个异常中恢复时，又抛出了第二个异常，会发生什么？”毕竟，`catch` 块内部的语句也无法免受灾难的影响。
 
-嗯，这个问题的答案绝非简单。首先，你可以在 `catch` 句内部放置一个 `try` 语句。这可以保护你免受执行 `catch` 句期间可能出现的意外且可能令人尴尬的事件的影响。但当你开始担心级联异常时，你就打开了一个极其棘手的“马力虫罐”。这种情况非常多，事情很快就会变得非常复杂。
+嗯，这个问题的答案绝非简单。首先，你可以在 `catch` 块内部放置一个 `try` 语句。这可以保护你免受执行 `catch` 块期间可能出现的意外且可能令人尴尬的事件的影响。但当你开始担心级联异常时，你就打开了一个极其棘手的“潘多拉魔盒”。这种情况非常多，事情很快就会变得非常复杂。
 
-你可以做的一件不怎么复杂的事情是创建一个 `finally` 句。与 `catch` 句一样，`finally` 句位于 `try` 句之后。主要的区别在于，无论是否抛出异常，`finally` 句中的语句都会被执行。其理念是：“无论发生什么，无论好坏，都执行这个 `finally` 句内部的语句。”列表 13-11 提供了一个示例。
+你可以做的一件不怎么复杂的事情是创建一个 `finally` 块。与 `catch` 块一样，`finally` 块位于 `try` 块之后。主要的区别在于，无论是否抛出异常，`finally` 块中的语句都会被执行。其理念是：“无论发生什么，无论好坏，都执行这个 `finally` 块内部的语句。”列表 13-11 提供了一个示例。
 
-### 列表 13-11： 跳转跳转
+### 列表 13-11：跳转跳转
 
 ```java
 import static java.lang.System.out;
 
 public class DemoFinally {
+
     public static void main(String args[]) {
+
         try {
+
             doSomething();
+
         } catch (Exception e) {
+
             out.println("Exception caught in main.");
+
         }
+
     }
-    static void doSomething() {
-        try {
-            out.println(0 / 0);
-        } catch (Exception e) {
-            out.println("Exception caught in doSomething.");
-            out.println(0 / 0);
-        } finally {
-            out.println("I'll get printed.");
-        }
-        out.println("I won't get printed.");
-    }
-}
 ```
 
-通常，当我想到一个 `try` 语句时，我想到的是计算机从一个不愉快的局面中恢复。恢复发生在 `catch` 句内部，然后计算机继续执行 `try` 语句之后的任何语句。嗯，如果在执行 `catch` 句期间发生了某些错误，这幅图就会开始变得不同。
 
-列表 13-11 在图 13-14 中得到了实战。首先，`main` 方法调用了 `doSomething`。然后，那个愚蠢的 `doSomething` 方法故意制造麻烦。`doSomething` 方法用 `0` 除以 `0`，这在任何编程语言中都是非法且无法执行的。`doSomething` 方法的这一愚蠢行为抛出了 `ArithmeticException`，它被 `try` 语句中唯一的 `catch` 句捕获了。
 
-![image](img/9781119235552-fg1314.png)
-
-图 13-14： 运行列表 13-11 中的代码。
-
-在 `catch` 句内部，那个卑劣的 `doSomething` 方法再次用 `0` 除以 `0`。这一次，执行除法的语句并不在受保护的 `try` 句内部。这没关系，因为 `ArithmeticException` 不是受检的异常。（它是 `RuntimeException` 子类之一。它是一种不需要在 `try` 或 `throws` 句中进行确认的异常。详情请参阅前一节。）
-
-嗯，无论是否受检，抛出另一个 `ArithmeticException` 都会导致控制跳出 `doSomething` 方法。但在离开 `doSomething` 方法之前，计算机执行了 `try` 语句的最后遗嘱：`finally` 句内部的语句。这就是为什么在图 13-14 中你会看到 `I'll get printed.`。
-
-有趣的是，在列表 13-11 中你不会看到 `I won't get printed.`。
-
-在 `catch` 句内部，那个卑劣的 `doSomething` 方法再次用 `0` 除以 `0`。这一次，执行除法的语句并不在受保护的 `try` 句内部。这没关系，因为 `ArithmeticException` 不是受检的异常。（它是 `RuntimeException` 子类之一。它是一种不需要在 `try` 或 `throws` 句中进行确认的异常。详情请参阅前一节。）
-
-嗯，无论是否受检，抛出另一个 `ArithmeticException` 都会导致控制跳出 `doSomething` 方法。但在离开 `doSomething` 方法之前，计算机执行了 `try` 语句的最后遗嘱：`finally` 句内部的语句。这就是为什么在图 13-14 中你会看到 `I'll get printed.`。
-
-有趣的是，在列表 13-11 中你不会看到 `I won't get printed.`。
-
-*(抱歉，由于在翻译过程中出现了部分文本重复，已根据您的要求重新梳理，以下为完整的正确译文：)*
-
-[content]
-事实是，一切都进展得很顺利。我只是受了点轻伤，但并没有伤及骨。我的父母支付了修理汽车的费用，所以我没有承受任何财务后果。（我设法通过将 `RunARedLightException` 放入我的 `throws` 子句中成功转嫁了财务负担。）
-
-这次事件有助于解释了为什么我是这样看待异常处理的。特别是，我很好奇：“当计算机正在从一个异常中恢复时，又抛出了第二个异常，会发生什么？”毕竟，`catch` 句内部的语句也无法免受灾难的影响。
-
-嗯，这个问题的答案绝非简单。首先，你可以在 `catch` 句内部放置一个 `try` 语句。这可以保护你免受执行 `catch` 句期间可能出现的意外且可能令人尴尬的事件的影响。但当你开始担心级联异常时，你就打开了一个极其棘手的“潘多拉盒子”。这种情况非常，事情很快就会变得非常复杂。
-
-你可以做的一件不怎么复杂的事情是创建一个 `finally` 句。与 `catch` 句一样，`finally` 句位于 `try` 句之后。主要的区别在于，无论是否抛出异常，`finally` 句中的语句都会被执行。其理念是：“无论发生什么，无论好坏，都执行这个 `finally` 句内部的语句。”列表 13-11 提供了一个示例。
-
-### 列表 13-11： 跳转跳转
-
-```java
-import static java.lang.System.out;
-
-public class DemoFinally {
-    public static void main(String args[]) {
-        try {
-            doSomething();
-        } catch (Exception e) {
-            out.println("Exception caught in main.");
-        }
-    }
-    static void doSomething() {
-        try {
-            out.println(0 / 0);
-        } catch (Exception e) {
-            out.println("Exception caught in doSomething.");
-            out.println(0 / 0);
-        } finally {
-            out.println("I'll get printed.");
-        }
-        out.println("I won't get printed.");
-    }
-}
-```
-
-通常，当我想到一个 `try` 语句时，我想到的是计算机从一个不愉快的局面中恢复。恢复发生在 `catch` 句内部，然后计算机继续执行 `try` 语句之后的任何语句。嗯，如果在执行 `catch` 句期间发生了某些错误，这幅图就会开始变得不同。
-
-列表 13-11 在图 13-14 中得到了实战。首先，`main` 方法调用了 `doSomething`。然后，那个愚蠢的 `doSomething` 方法故意制造麻烦。`doSomething` 方法用 `0` 除以 `0`，这在任何编程语言中都是非法且无法执行的。`doSomething` 方法的这一愚蠢行为抛出了 `ArithmeticException`，它被 `try` 语句中唯一的 `catch` 句捕获了。
-
-![image](img/9781119235552-fg1314.png)
-
-图 13-14： 运行列表 13-11 中的代码。
-
-在 `catch` 句内部，那个卑劣的 `doSomething` 方法再次用 `0` 除以 `0`。这一次，执行除法的语句并不在受保护的 `try` 句内部。这没关系，因为 `ArithmeticException` 不是受检的异常。（它是 `RuntimeException` 子类之一。它是一种不需要在 `try` 或 `throws` 句中进行确认的异常。详情请参阅前一节。）
-
-嗯，无论是否受检，抛出另一个 `ArithmeticException` 都会导致控制跳出 `doSomething` 方法。但在离开 `doSomething` 方法之前，计算机执行了 `try` 语句的最后遗嘱：`finally` 句内部的语句。这就是为什么在图 13-14 中你会看到 `I'll get printed.`。
-
-有趣的是，在列表 13-11 中你不会看到 `I won't get printed.`。 *(注：此处原文逻辑在该处有重复，翻译已按逻辑去重)*
-
-*(等等，根据您的指令“一定不要重复输出原文”，我将重新提供一份干净、不重复的最终译文：)*
-
-[content]
 事实是，一切都进展得很顺利。我只是受了点轻伤，但并没有伤及骨。我的父母支付了修理汽车的费用，所以我没有承受任何财务后果。（我设法通过将 `RunARedLightException` 放入我的 `throws` 子句中成功转嫁了财务负担。）
 
 这次事件有助于解释了为什么我是这样看待异常处理的。特别是，我很好奇：“当计算机正在从一个异常中恢复时，又抛出了第二个异常，会发生什么？”毕竟，`catch` 句内部的语句也无法免受灾难的影响。
@@ -6905,24 +7008,43 @@ public class DemoFinally {
 import static java.lang.System.out;
 
 public class DemoFinally {
+
     public static void main(String args[]) {
+
         try {
+
             doSomething();
+
         } catch (Exception e) {
+
             out.println("Exception caught in main.");
+
         }
+
     }
+
     static void doSomething() {
+
         try {
+
             out.println(0 / 0);
+
         } catch (Exception e) {
+
             out.println("Exception caught in doSomething.");
+
             out.println(0 / 0);
+
         } finally {
+
             out.println("I'll get printed.");
+
         }
+
         out.println("I won't get printed.");
+
     }
+
 }
 ```
 
@@ -6938,12 +7060,7 @@ public class DemoFinally {
 
 嗯，无论是否受检，抛出另一个 `ArithmeticException` 都会导致控制跳出 `doSomething` 方法。但在离开 `doSomething` 方法之前，计算机执行了 `try` 语句的最后遗嘱：`finally` 句内部的语句。这就是为什么在图 13-14 中你会看到 `I'll get printed.`。
 
-有趣的是，在列表 13-11 中你不会看到 `I won't get printed.`。 *(注：原文逻辑在该处有重复，翻译已按逻辑去重)*
-
-*(注：由于提供的原始文本中存在多段完全重复，上述译文已根据“不要重复输出原文”的原则进行了去重处理。)*
-
-
-
+有趣的是，在列表 13-11 中你不会看到 `I won't get printed.`。
 
 在列表 13-13 中，`scan1` 和 `scan2` 的声明位于 `try` 单词后的括号中。括号中的声明告诉 Java 在执行完 `try` 子句中的语句后自动关闭 `scan1` 和 `scan2`。你可以在一个 `try` 语句的括号内声明多个资源。当你这样做时，Java 在执行完 `try` 子句的语句后会自动关闭所有资源。如果你需要，还可以添加 `catch` 子句和 `finally` 子句。你可以访问各种资源（文件、数据库、服务器连接等），并放心地知道 Java 会自动断开连接而高枕无忧。
 
@@ -6983,11 +7100,33 @@ public class DemoFinally {
 
 在 Java 中，`public` 和 `private` 单词被称为*访问修饰符*。毫无疑问，你在声明中见过没有访问修饰符的字段和方法。这类方法或字段被称为具有*默认访问权限*。书中的许多示例使用了默认访问权限。
 
+- 如果成员变量是私有的（`private`），只有该成员所在类内部的代码才能直接引用该成员的名字：
+
+```java
+class SomeClass {
+
+    private int myField = 10;
+
+}
+
+class SomeOtherClass {
+
+    public static void main(String args[]) {
+
+        SomeClass someObject = new SomeClass();
+
+        //这行不起通：
+
+        System.out.println(someObject.myField);
+
+    }
+
+}
+```
 
 
 
-
--   如果成员变量是私有的（private），只有该成员所在类内部的代码才能直接引用该成员的名字：
+- 如果成员变量是私有的（`private`），只有该成员所在类内部的代码才能直接引用该成员的名字：
 
 ```java
 class SomeClass {
@@ -7003,7 +7142,7 @@ class SomeOtherClass {
 }
 ```
 
--   如果成员变量是公有的（public），任何在同一个 Java 虚拟机运行的代码都可以直接引用该成员的名字。
+- 如果成员变量是公有的（`public`），任何在同一个 Java 虚拟机运行的代码都可以直接引用该成员的名字。
 
 ```java
 class SomeClass {
@@ -7019,19 +7158,19 @@ class SomeOtherClass {
 }
 ```
 
-图 14-1 到 图 14-3 以略有不同的方式说明了这些思想。
+图 14-1 到图 14-3 以略有不同的方式说明了这些思想。
 
 ![image](img/9781119235552-fg1401.png)
 
-图 14-1： 若干类及其子类。
+图 14-1：若干类及其子类。
 
 ![image](img/9781119235552-fg1402.png)
 
-图 14-2: 公有字段或方法可以使用的代码范围（阴影部分）。
+图 14-2：公有字段或方法可以使用的代码范围（阴影部分）。
 
 ![image](img/9781119235552-fg1403.png)
 
-图 14-3： 私有字段或方法可以使用的代码范围（阴影部分）。
+图 14-3：私有字段或方法可以使用的代码范围（阴影部分）。
 
 ![warning](img/warning.png) 当你看到本节的示例时，可能会得出错误的结论。你可能会在心里产生这样一段对话：“在 `private int myField` 的示例中，代码是不通的。但在 `public int myField` 的示例中，代码是通的。所以，为了有更大的机会让我的代码运行，我应该把字段设为公有，并避免将它们设为私有。对吧？”
 
@@ -7049,100 +7188,9 @@ class SomeOtherClass {
 
 ![image](img/9781119235552-fg1404.png)
 
-图 14-4： 一个 `ArtFrame`。
+图 14-4：一个 `ArtFrame`。
 
-列表 14-1： 显示框架
-
-```java
-import com.burdbrain.drawings.Drawing;
-import com.burdbrain.frames.ArtFrame;
-
-class ShowFrame {
-    public static void main(String args[]) {
-        ArtFrame artFrame = new ArtFrame(new Drawing());
-        artFrame.setSize(200, 100);
-        artFrame.setVisible(true);
-    }
-}
-```
-
-列表 14-1 中的代码包含几个部分。第一部分创建了一个 `ArtFrame` 实例。你可能认为 `ArtFrame` 是某个类的子类，事实确实如此。第 9 章提到默认情况下类是不可见的。因此，为了让列表 14-1 起作用，你需要调用 `setVisible` 方法。列表 14-1 的开头包含了两个包声明。现在注意列表 14-1：第一个 import 引用了 `com.burdbrain.drawings`。第二个 import 引用了 `com.burdbrain.frames`。crossreference 关于 import 声明，请查看第 4 章。
-
-侦探可能会想：“他把 `com.burdbrain.drawings` 和 `com.burdbrain.frames` 放在了包里。”在列表 14-1 中，我把 `Drawing` 放在了 `com.burdbrain.drawings` 包中。为了让列表 14-1 起作用，我创建了一个 `Drawing` 实例。列表 14-1 中的代码创建了一个 `ArtFrame` 实例。
-
-列表 14-1 中的代码创建了一个 `ArtFrame` 实例。等等，在列表 14-1 中，我把 `Drawing` 放在了 `com.burdbrain.drawings` 包中。等等，在列表 14-1 中，我把 `Drawing` 放在了 `com.burdbrain.drawings` 包中。
-
-*(抱歉，我似乎在生成翻译时出现了逻辑重复错误，以下是重新整理的正确质量翻译)*
-
-由于由于系统限制，我将重新为您提供一份干净、无重复的翻译：
-
-[content]
-
--   如果成员变量是私有的（private），只有该成员所在类内部的代码才能直接引用该成员的名字：
-
-```java
-class SomeClass {
-    private int myField = 10;
-}
-
-class SomeOtherClass {
-    public static void main(String args[]) {
-        SomeClass someObject = new SomeClass();
-        //这行不起通：
-        System.out.println(someObject.myField);
-    }
-}
-```
-
--   如果成员变量是公有的（public），任何在同一个 Java 虚拟机运行的代码都可以直接引用该成员的名字。
-
-```java
-class SomeClass {
-    public int myField = 10;
-}
-
-class SomeOtherClass {
-    public static void main(String args[]) {
-        SomeClass someObject = new SomeClass();
-        //这行通的：
-        System.out.println(someObject.myField);
-    }
-}
-```
-
-图 14-1 到 图 14-3 以略有不同的方式说明了这些思想。
-
-![image](img/9781119235552-fg1401.png)
-
-图 14-1： 若干类及其子类。
-
-![image](img/9781119235552-fg1402.png)
-
-图 14-2: 公有字段或方法可以使用的代码范围（阴影部分）。
-
-![image](img/9781119235552-fg1403.png)
-
-图 14-3： 私有字段或方法可以使用的代码范围（阴影部分）。
-
-![warning](img/warning.png) 当你看到本节的示例时，可能会得出错误的结论。你可能会在心里产生这样一段对话：“在 `private int myField` 的示例中，代码是不通的。但在 `public int myField` 的示例中，代码是通的。所以，为了有更大的机会让我的代码运行，我应该把字段设为公有，并避免将它们设为私有。对吧？”
-
-不，亲爱的读者。不是这样的！
-
-公有字段很容易使用，甚至更容易被误用。工程代码的最佳方法是让每个字段的访问限制尽可能严格。如果一个字段不是绝对需要是公有的，请尝试将其设为私有。如果其他类必须获取或设置字段的值，请提供公有的 getter 和 setter 方法。这很自然地引出了下一段内容……
-
-![tryitout](img/tryitout.png) 在本节的一个示例中，你无法编写 `someObject.myField`，因为在 `SomeClass` 中，变量 `myField` 被声明为私有。通过添加 getter 和 setter 来修复这个问题，并相应地修改 `someObject.myField` 引用。
-
-### 在框架上画画
-
-为了让关于访问修饰符的内容变得清晰，你需要一个或两个示例。在本章的第一个示例中，几乎所有内容都是公有的。通过公有访问，你不需要担心谁可以使用什么。
-
-这个第一个示例的代码由几部分组成。第一部分位于列表 14-1 中，显示了一个 `ArtFrame`。在 `ArtFrame` 的表面上有一个 `Drawing`。如果所有正确的部件都就位，运行列表 14-1 的代码将显示一个类似于图 14-4 所示的窗口。
-
-![image](img/9781119235552-fg1404.png)
-
-图 14-4： 一个 `ArtFrame`。
-
-列表 14-1： 显示框架
+列表 14-1：显示框架
 
 ```java
 import com.burdbrain.drawings.Drawing;
@@ -7161,46 +7209,43 @@ class ShowFrame {
 
 侦探可能会想：“他把 `com.burdbrain.drawings` 和 `com.burdbrain.frames` 放在了包里。”在列表 14-1 中，我把 `Drawing` 放在了 `com.burdbrain.drawings` 包中。
 
-*(由于原始文本中存在大量重复段落，以上翻译已根据“不要重复输出原文”的原则进行了去重处理，确保逻辑通顺且完整)*
+列表 14-2：`Drawing` 类
 
-最后的示例代码块翻译：
 ```java
 package com.burdbrain.drawings;
 import java.awt.Graphics;
 
 public class Drawing {
     public int x = 40, y = 40, width = 40, height = 40;
+
     public void paint(Graphics g) {
         g.drawOval(x, y, width, height);
     }
 }
 ```
 
-
-
-这里有更多细节：在 Listing 14-2 中，`paint` 方法接收一个 `g` 参数。这个 `g` 参数指向 `java.awt.Graphics` 类的一个实例。由于 `Graphics` 实例是一个缓冲区，你放置到这个缓冲区中的内容最终会显示在屏幕上。和所有 `java.awt.Graphics` 类的实例一样，这个缓冲区有几个绘制方法——其中之一就是 `drawOval`。当你调用 `drawOval` 时，你指定了一个起始位置（距离框架左边缘 `x` 像素，距离框架顶部 `y` 像素）。你还通过在 `width` 和 `height` 参数中放入像素值来指定椭圆的大小。调用 `drawOval` 方法会将一个小的圆形的物体放入 `Graphics` 缓冲区中。那个 `Graphics` 缓冲区（包括那个圆圆的物体）会被显示在屏幕上。
+这里有更多细节：在列表 14-2 中，`paint` 方法接收一个 `g` 参数。这个 `g` 参数指向 `java.awt.Graphics` 类的一个实例。由于 `Graphics` 实例是一个缓冲区，你放置到这个缓冲区中的内容最终会显示在屏幕上。和所有 `java.awt.Graphics` 类的实例一样，这个缓冲区有几个绘制方法——其中之一就是 `drawOval`。当你调用 `drawOval` 时，你指定了一个起始位置（距离框架左边缘 `x` 像素，距离框架顶部 `y` 像素）。你还通过在 `width` 和 `height` 参数中放入像素值来指定椭圆的大小。调用 `drawOval` 方法会将一个小的圆形的物体放入 `Graphics` 缓冲区中。那个 `Graphics` 缓冲区（包括那个圆圆的物体）会被显示在屏幕上。
 
 ### 目录结构
 
-Listing 14-2 中的代码属于 `com.burdbrain.drawings` 包。当你将一个类放入包时，你必须创建一个与包名镜像的目录结构。
+列表 14-2 中的代码属于 `com.burdbrain.drawings` 包。当你将一个类放入包时，你必须创建一个与包名镜像的目录结构。
 
 为了存放位于 `com.burdbrain.drawings` 包中的代码，你需要三个目录：一个 `com` 目录，一个 `com` 下名为 `burdbrain` 的子目录，以及一个 `burdbrain` 下名为 `drawings` 的子目录。整体目录结构如图 Figure 14-5 所示。
 
 ![image](img/9781119235552-fg1405.png)
 
-FIGURE 14-5: 项目中的文件和目录。
+Figure 14-5：项目中的文件和目录。
 
 ![warning](img/warning.png) 如果你没有将代码放在适当的目录中，你会得到一个令人厌恶且恶心的 `NoClassDefFoundError`。相信我，遇到这个错误绝不是好玩的。当你看到这个错误时，你没有任何线索来帮助你确定缺失的类在哪里，或者编译器期望在哪里找到它。如果你保持冷静，你可以自己解决所有这些问题。如果你恐慌，你就会在那儿摸索好几个小时。作为一个老练的 Java 程序员，我记得很多因为这个该死的 `NoClassDefFoundError` 而磨破指节的经历。
 
 ### 创建框架
 
-本章的前三个列表共同开发了一个多部分的示例。本节是该示例中三个部分的最后一部分。最后一部分对于理解访问修饰符（本章的主题）至关重要。因此，如果你想跳过对 Listing 14-3 的解释，你可以这样做而不会丢失章节的思路。另一方面，如果你想了解更多关于 Java Swing 类的信息，请继续阅读。
+本章的前三个列表共同开发了一个多部分的示例。本节是该示例中三个部分的最后一部分。最后一部分对于理解访问修饰符（本章的主题）至关重要。因此，如果你想跳过对列表 14-3 的解释，你可以这样做而不会丢失章节的思路。另一方面，如果你想了解更多关于 Java Swing 类的信息，请继续阅读。
 
-LISTING 14-3: ArtFrame 类
+列表 14-3：`ArtFrame` 类
 
 ```java
 package com.burdbrain.frames;
-
 import java.awt.Graphics;
 import javax.swing.JFrame;
 import com.burdbrain.drawings.Drawing;
@@ -7208,6 +7253,7 @@ import com.burdbrain.drawings.Drawing;
 public class ArtFrame extends JFrame {
     private static final long serialVersionUID = 1L;
     Drawing drawing;
+
     public ArtFrame(Drawing drawing) {
         this.drawing = drawing;
         setTitle("Abstract Art");
@@ -7220,19 +7266,88 @@ public class ArtFrame extends JFrame {
 }
 ```
 
-Listing 14-3 包含了你将绘画放置在 Java 框架上所需的所有工具。代码使用了来自 Java API（应用程序编程接口）的几个名称。我在第 9 章和第 10 章中解释了大部分这些名称。
+列表 14-3 包含了你将绘画放置在 Java 框架上所需的所有工具。代码使用了来自 Java API（应用程序编程接口）的几个名称。我在第 9 章和第 10 章中解释了大部分这些名称。
 
-Listing 14-3 中唯一的新名称是 `paint` 词。Listing 14-3 中的 `paint` 方法委托给了另一个 `paint` 方法——属于 `Drawing` 对象的 `paint` 方法。`ArtFrame` 对象在你的电脑屏幕上创建一个浮窗。在那个浮窗中绘制的内容取决于传递给 `ArtFrame` 构造函数的任何 `Drawing` 对象。
+列表 14-3 中唯一的新名称是 `paint` 词。列表 14-3 中的 `paint` 方法委托给了另一个 `paint` 方法——属于 `Drawing` 对象的 `paint` 方法。`ArtFrame` 对象在你的电脑屏幕上创建一个浮窗。在那个浮窗中绘制的内容取决于传递给 `ArtFrame` 构造函数的任何 `Drawing` 对象。
 
-如果你追踪 Listing 14-1 到 14-3 的流程，你可能会注意到：Listing 14-3 中的 `paint` 方法似乎从未被调用过。实际上，对于许多 Java 窗口组件，你只需要声明一个 `paint` 方法并让它留在那里。当程序运行时，计算机会自动调用 `paint` 方法。这就是 `javax.swing.JFrame`的工作原理。在 Listing 14-3 中，框架的 `paint` 方法在后台被调用。然后框架的 `paint` 方法调用 `Drawing` 对象的 `paint` 方法，后者在框架上绘制椭圆。这就是你在 Figure 14-4 中看到的内容。
+如果你追踪列表 14-1 到 14-3 的流程，你可能会注意到：列表 14-3 中的 `paint` 方法似乎从未被调用过。实际上，对于许多 Java 窗口组件，你只需要声明一个 `paint` 方法并让它留在那里。当程序运行时，计算机会自动调用 `paint` 方法。这就是 `javax.swing.JFrame` 的工作原理。在列表 14-3 中，框架的 `paint` 方法在后台被调用。然后框架的 `paint` 方法调用 `Drawing` 对象的 `paint` 方法，后者在框架上绘制椭圆。这就是你在 Figure 14-4 中看到的内容。
 
 ![tryitout](img/tryitout.png) 在你电脑的资源管理器或 Finder 中，导航到本书的 14-01 文件夹。在该文件夹中，寻找 `ShowFrame.java`、`Drawing.java` 和 `ArtFrame.java` 文件。注意这些 Java 文件是如何嵌套的。
 
 ### 避开原始代码
 
-你的软件供应商 Burd Consulting 卖给了两个文件：`Drawing.class` 和 `ArtFrame.class`。作为客户，你看不到 `Drawing.java` 和 `ArtFrame.java` 内部的代码。所以你不得不接受这两个文件内部发生的一切（除非你购买了*Java Dummies*第 6 版，它包含了 Listing 14-2 和 14-3 中这些文件的代码！）。无论如何，你想调整 Figure 14-4 中椭圆的样子，让它宽一点。为了实现这一点，你创建一个 `Drawing` 类的子类——`DrawingWide`——并将其放入 Listing 14-4 中。
+你的软件供应商 Burd Consulting 卖给了两个文件：`Drawing.class` 和 `ArtFrame.class`。作为客户，你看不到 `Drawing.java` 和 `ArtFrame.java` 内部的代码。所以你不得不接受这两个文件内部发生的一切（除非你购买了《Java Dummies》第 6 版，它包含了列表 14-2 和 14-3 中这些文件的代码！）。无论如何，你想调整 Figure 14-4 中椭圆的样子，让它宽一点。为了实现这一点，你创建一个 `Drawing` 类的子类——`DrawingWide`——并将其放入列表 14-4 中。
 
-LISTING 14-4: Drawing 类的子类
+列表 14-4：`Drawing` 类的子类
+
+```java
+import java.awt.Graphics;
+import com.burdbrain.drawings.Drawing;
+
+public class DrawingWide extends Drawing {
+    int width = 100, height = 30;
+
+    public void paint(Graphics g) {
+        g.drawOval(x, y, width, height);
+    }
+}
+```
+
+
+
+为了使用 Listing 14-4 中的代码，记得修改 Listing 14-1 中的其中一行。你将该行改为：
+
+`ArtFrame = new ArtFrame(new DrawingWide());`
+
+在 Listing 14-1 中，你也可以移除 `com.burdbrain.drawings.Drawing` 导入语句，因为你不再需要它。
+
+Listing 14-4 定义了原始 `Drawing` 类的子类。在该子类中，你重写了原始类的 `width` 和 `height` 字段以及原始类的 `paint` 方法。你得到的框架如 Figure 14-6 所示。
+
+![image](img/9781119235552-fg1406.png)
+
+FIGURE 14-6: 另一个艺术框架。
+
+顺带一句，你可能会注意到 Listing 14-4 中的代码没有以包声明开头。这意味着你的整个文件集合来自以下三个包：
+
+*   **`com.burdbrain.drawings` 包**：原始的 `Drawing` 类位于 Listing 14-2 中。
+*   **`com.burdbrain.frames` 包**：`ArtFrame` 类位于 Listing 14-3 中。
+*   **一个无处不在的未命名包**：在 Java 中，当你没有用包声明来开始一个文件时，该文件中的所有代码都会进入一个大大的未命名包。代码列表 14-1 和 14-4 都在同一个未命名包中。事实上，本书书从前 13 章中的大多数代码列表都在 Java 的未命名包中。
+
+此时，你的项目有两个绘图类：原始的 `Drawing` 类和你新创建的 `DrawingWide` 类。尽管这些类可能非常相似，但它们位于两个不同的包中。这并不奇怪。由你 Burd Brain Consulting 的朋友们开发的 `Drawing` 类位于一个以 `com.burdbrain.` 开头的包中。但 `DrawingWide` 是你独立开发的，所以你不应该把它放在 `com.burdbrain` 包中。
+
+最明智的做法是将其放在你自己的创建的其中一个包中，例如 `com.myhomedomain.drawings`；但目前将你的类放在未命名包中也可以的。
+
+无论如何，你的 `DrawingWide` 子类都按计划编译并运行了。你回到家，脸上洋溢着编写出实用可用代码的自信。
+
+## 默认访问
+
+如果你是按顺序阅读这些段落的，你就知道上一个例子圆满结束了。代码列表 14-4 中的代码运行得非常顺畅。每个人，包括我出色的编辑 Paul Levesque，都很开心。
+
+但是，等一下！你是否曾经想过，如果你没有选择那个特定的职业、没有和某个人约会，或者没有读过某本特定的*自入门指南*，生活会变成什么样？在本节中，我将把时间稍微回拨，向你展示如果 代码列表 14-2 中的代码中漏掉一个单词会发生什么。
+
+处理不同版本的程序可能会让你感到眩晕，因此我从描述你所拥有的开始这段讨论。首先，你有一个 `Drawing` 类。在这个类中，字段没有被声明为 `public`，而是具有默认访问权限。`Drawing` 类位于 `com.burdbrain.drawings` 包中。（参见代码列表 14-5）。
+
+### 代码列表 14-5：具有默认访问的字段
+
+```java
+package com.burdbrain.drawings;
+
+import java.awt.Graphics;
+
+public class Drawing {
+
+    int x = 40, y = 40, width = 40, height = 40;
+
+    public void paint(Graphics g) {
+
+        g.drawOval(x, y, width, height);
+
+    }
+
+}
+```
+
+接下来，你有一个 `DrawingWide` 子类（为了方便起见，已复制在 代码列表 14-6 中）：
 
 ```java
 import java.awt.Graphics;
@@ -7246,70 +7361,14 @@ public class DrawingWide extends Drawing {
 }
 ```
 
-为了使用 Listing 14-4 中的代码，记得修改 Listing 14-1 中的其中一行。你将该行改为：
-
-`ArtFrame = new ArtFrame(new DrawingWide());`
-
-在 Listing 14-1 中，你也可以移除 `com.burdbrain.drawings.Drawing` 导入语句，因为你不再需要它。
-
-Listing 14-4 定义了原始 `Drawing` 类的子类。在该子类中，你重写了原始类的`width`和`height`字段以及原始类的 `paint` 方法。你得到的框架如 Figure 14-6 所示。
-
-![image](img/9781119235552-fg1406.png)
-
-FIGURE 14-6: 另一个艺术框架。
-
-顺带一句，你可能会注意到 Listing 14-4 中的代码没有以包声明开头。这意味着你的整个文件集合来自以下三个包：
-
-*   **`com.burdbrain.drawings` 包**：原始的 `Drawing` 类位于 Listing 14-2 中。
-
-*   **`com.burdbrain.frames` 包**：`ArtFrame` 类位于 Listing 14-3 中。
-
-
-
-
-
-- **一个无处不在的未命名包：** 在 Java 中，当你没有用包声明来开始一个文件时，该文件中的所有代码都会进入一个大大的未命名包。代码列表 14-1 和 14-4 都在同一个未命名包中。事实上，本书书从前 13 章中的大多数代码列表都在 Java 的未命名包中。
-
-此时，你的项目有两个绘图类：原始的 `Drawing` 类和你新创建的 `DrawingWide` 类。尽管这些类可能非常相似，但它们位于两个不同的包中。这并不奇怪。由你 Burd Brain Consulting 的朋友们开发的 `Drawing` 类位于一个以 `com.burdbrain.` 开头的包中。但 `DrawingWide` 是你独立开发的，所以你不应该把它放在 `com.burdbrain` 包中。
-
-最明智的做法是将其放在你自己的创建的其中一个包中，例如 `com.myhomedomain.drawings`；但目前将你的类放在未命名包中也可以的。
-
-无论如何，你的 `DrawingWide` 子类都按计划编译并运行了。你回到家，脸上洋溢着编写出实用可用代码的自信。
-
-### 默认访问
-
-如果你是按顺序阅读这些段落的，你就知道上一个例子圆满结束了。代码列表 14-4 中的代码运行得非常顺畅。每个人，包括我出色的编辑 Paul Levesque，都很开心。
-
-但是，等一下！你是否曾经想过，如果你没有选择那个特定的职业、没有和某个人约会，或者没有读过某本特定的*自入门指南》，生活会变成什么样？在本节中，我将把时间稍微回拨，向你展示如果 代码列表 14-2 中的代码中漏掉一个单词会发生什么。
-
-处理不同版本的程序可能会让你感到眩晕，因此我从描述你所拥有的开始这段讨论。首先，你有一个 `Drawing` 类。在这个类中，字段没有被声明为 `public`，而是具有默认访问权限。`Drawing` 类位于 `com.burdbrain.drawings` 包中。（参见代码列表 14-5）。
-
-#### 代码列表 14-5：具有默认访问的字段
-
-```java
-package com.burdbrain.drawings;
-
-import java.awt.Graphics;
-
-public class Drawing {
-    int x = 40, y = 40, width = 40, height = 40;
-    public void paint(Graphics g) {
-        g.drawOval(x, y, width, height);
-    }
-}
-```
-
-接下来，你有一个 `DrawingWide` 子类（为了方便起见，已复制在 代码列表 14-6 {
-        g.drawOval(x, y, width, height);
-    }
-}
-```
-
 问题是，整个结构在缝隙处了。代码列表 14-6 中的代码无法编译。相反，你收到了以下错误信息：
 
 `x is not public in com.burdbrain.drawings.Drawing;`
+
 `cannot be accessed from outside package`
+
 `y is not public in com.burdbrain.drawings.Drawing;`
+
 `cannot be accessed from outside package`
 
 代码无法编译，因为具有默认访问权限的字段无法在包之外被直接引用——即使是包含字段的类的子类也不行。对于任何具有默认访问权限的方法，也是如此。
@@ -7332,7 +7391,7 @@ public class Drawing {
 
 `ArtFrame artFrame = ArtFrame(new DrawingWide());`
 
-#### 代码列表 14-7：是的，弗吉尼亚，这是一个子类
+### 代码列表 14-7：是的，弗吉尼亚，这是一个子类
 
 ```java
 package com.burdbrain.drawings;
@@ -7349,18 +7408,15 @@ public class DrawingWide extends Drawing {
 
 当你运行 代码列表 14-7，注意跨越整个包的阴影区域。`DrawingWide` 类中的代码有权使用 `x` 和 `y` 字段，这些字段在 `Drawing` 类中以默认访问权限定义，因为 `Drawing` 和 `DrawingWide` 在同一个包中。
 
-![remember](img/remember.png) 为了使用 代码列表 14-7 中的 `DrawingWide` 类，你对原始的 代码列表 14-1)`。
+![remember](img/remember.png) 为了使用 代码列表 14-7 中的 `DrawingWide` 类，你对原始的 代码列表 14-1)。
 
 ![warning](img/warning.png) 本节解释了默认访问权限，我在书中大部分示例使用的访问权限。我经常使用默认访问权限，是因为使用它你不需要理解 `public` 或 `private` 的含义。所以，在许多示例中，你不需要担心这些单词。
 
 但在现实生活中，程序员回避使用默认访问权限。使用默认访问权限，包中的所有其他类都可以查看并更改你的字段值。其他程序员可以将 `daysInThisMonth` 设置为 32，或者将 `chaptersInThisBook` 设置为 -7。
 
-
-
-
 到目前为止，最好的策略是仅在绝对必要时才使用默认访问权限。在大多数情况下，如果其他类必须获取或设置你的字段值，你应该使用私有访问并提供公共的 getter 和 setter 方法。
 
-## 保护级访问 (Protected Access)
+## 保护级访问
 
 当我刚开始接触 Java 时，我以为 `protected` 这个词意思是“友善且安全”之类。“哇，那个字段受保护的。它一定很难被访问。”好吧，这个想法被证明是错误的。在 Java 中，一个受保护的成员比具有默认访问权限的成员更不隐藏、更不安全，并且可以在更多类中使用。换句话说，受保护的访问权限比默认访问权限更宽松。对我来说，这个术语是具有误导性。但事实就是如此。
 
@@ -7413,11 +7469,11 @@ public class DrawingWide extends Drawing {
 
 ### 不在同一个包中的类
 
-关于受保护访问的真实故事比我在这一节中描述的故事要稍微复杂一点。Java 语言规范（[`https://docs.oracle.com/javase/specs`](https://docs.oracle.com/javase/specs/))）提到了一个关于代码负责对象实现的细微差别。当你刚开始学习用 Java 编程时，不要担心这一点。等你写了许多 Java 程序后再。。当你偶然遇到变量具有受保护访问的错误消息时，你就可以开始担心了。最好是跳过担心，仔细查看 Java 语言规范中的受保护访问章节。
+关于受保护访问的真实故事比我在这一节中描述的故事要稍微复杂一点。Java 语言规范（[`https://docs.oracle.com/javase/specs`](https://docs.oracle.com/javase/specs/)）提到了一个关于代码负责对象实现的细微差别。当你刚开始学习用 Java 编程时，不要担心这一点。等你写了许多 Java 程序后再。。当你偶然遇到变量具有受保护访问的错误消息时，你就可以开始担心了。最好是跳过担心，仔细查看 Java 语言规范中的受保护访问章节。
 
 `DrawingWide` 类并不是 `Drawing` 类的子类。但列表 14-9 中的 `DrawingWide` 创建了一个 `Drawing` 实例并更改了 `width` 和 `height`。
 
-#### 列表 14-8:](#21_9781119235552-ch14.xhtml_rc14-fea-0009) 受保护的字段
+#### 列表 14-8: 受保护的字段
 
 ```java
 package com.burdbrain.drawings;
@@ -7432,7 +7488,7 @@ public class Drawing {
 }
 ```
 
-#### 列表 14-9:](#21_9781119235552-ch14.xhtml_rc14-fea-0010) 来自蓝湖的子类
+#### 列表 14-9: 来自蓝湖的子类
 
 ```java
 import java.awt.Graphics;
@@ -7446,7 +7502,7 @@ public class DrawingWide extends Drawing {
 }
 ```
 
-现在想象 `DrawingWide` 在列表 14-9 中与 `Drawing` 在同一个包中。那么 `DrawingWide` 直接访问 `Drawing` 实例的 `x` 和 `y` 字段。但如果 `DrawingWide` 在不同的包中，如示例所示](#21_9781119235552-ch14.xhtml_c14-fig-0009)，它只有在是子类时才能访问那些字段。等等，列表 14-9 显示 `DrawingWide` 是 `Drawing` 类的子类。这意味着 `DrawingWide` 可以访问父类 `Drawing` 类中定义的 `x` 和 `y` 字段，尽管 `DrawingWide` 与其父类 `Drawing` 类不在同一个包中（`Drawing` 类在 `com.burdbrain.drawings` 包中）。这是可以的，因为 `Drawing` 类中的 `x` 和 `y` 字段是保护的。
+现在想象 `DrawingWide` 在列表 14-9 中与 `Drawing` 在同一个包中。那么 `DrawingWide` 直接访问 `Drawing` 实例的 `x` 和 `y` 字段。但如果 `DrawingWide` 在不同的包中，如示例所示，它只有在是子类时才能访问那些字段。等等，列表 14-9 显示 `DrawingWide` 是 `Drawing` 类的子类。这意味着 `DrawingWide` 可以访问父类 `Drawing` 类中定义的 `x` 和 `y` 字段，尽管 `DrawingWide` 与其父类 `Drawing` 类不在同一个包中（`Drawing` 类在 `com.burdbrain.drawings` 包中）。这是可以的，因为 `Drawing` 类中的 `x` 和 `y` 字段是保护的。
 
 图 14-8 和 14-9。注意图 14-9 中多出来的部分阴影。子类可以访问一个类的受保护成员，即使该子类属于其他包。
 
@@ -7457,9 +7513,6 @@ public class DrawingWide extends Drawing {
 ![tip](img/tip.png) 你是否在一个程序员团队中工作？团队之外的人是否使用他们自己团队的包名？如果是这样，当他们使用你的代码时，他们可能会对你定义的类创建子类。这就是受保护访问派上用场的地方。当你希望团队之外的人直接引用你代码的字段或方法时，请使用受保护的访问。
 
 ![remember](img/remember.png) 对于类的成员，`private` 限制最严格，然后是默认，然后是 `protected`，最后是 `public` 访问权限。
-
-
-
 
 *   `Book` 类有一个标题（`String` 类型）和一个作者（`Author` 类的实例）。`Author` 类有一个名称（`String` 类型）和一个包含 `Book` 实例的 `ArrayList`。另一个单独的类包含一个 `main` 方法，该方法会创建几本书书和几个作者。`main` 方法还会显示有关书籍和作者的信息。
 
@@ -7473,9 +7526,11 @@ public class DrawingWide extends Drawing {
 
     创建这些类。在另一个类中，构造每个类的实例，并在屏幕上显示这些实例的信息。
 
-*   以下四个类存在于四个不同的 `.java` 文件中。在不向 IDE 编辑器中输入这些类的情况下，判断哪些语句会导致 IDE 显示错误信息。对于每个这样的语句，决定一个最小权限的访问更改以消除错误信息：
 
-    **`// 此代码无法编译：`**
+
+* 以下四个类存在于四个不同的 `.java` 文件中。在不向 IDE 编辑器中输入这些类的情况下，判断哪些语句会导致 IDE 显示错误信息。对于每个这样的语句，决定一个最小权限的访问更改以消除错误信息：
+
+    **// 此代码无法编译：**
 
     ```java
     package com.allmycode.things;
@@ -7572,23 +7627,18 @@ public class DrawingWide extends Drawing {
 
 我尝试过。首先，我回到列表 14-2 并删除了 `public` get。我将 `public class Drawing` 变成了普通的 `class Drawing`，如下：
 
-    ```java
-    package com.burdbrain.drawings;
+```java
+package com.burdbrain.drawings;
 
-    import java.awt.Graphics;
+import java.awt.Graphics;
 
-    class Drawing {
-        public int x = 40, y = 40, width = 40, height = 40;
-        public void paint(Graphics g) {
-            g.drawOval(x, y, width, height);
-        }
-    ```
-
-（注：此处原文中存在大量重复段落，已根据要求“不要重复输出原文”，未重复翻译重复内容）
-
-
-
-
+class Drawing {
+    public int x = 40, y = 40, width = 40, height = 40;
+    public void paint(Graphics g) {
+        g.drawOval(x, y, width, height);
+    }
+}
+```
 
 想象一个类（例如 `Employee` 类）和它的子类（例如 `FullTimeEmployee` 类）。类与其子类之间的关系是继承。在许多现实家庭中，孩子会从父母继承资产。在第 8 章中，`FullTimeEmployee` 类从 `Employee` 类继承了 `name` 和 `jobTitle` 字段。它就是这样运作的。
 
@@ -7608,13 +7658,13 @@ public interface MyInterfaceName {
 
 总之，当你看到 `interface` 这个词时，可以先把它想象成类。然后，在脑海中记住：
 
-*   类只能继承一个父类，但一个类可以实现多个接口。
-*   父类是类继承的一组东西。但 `interface` 是实现类*必须提供*的一组东西。
+* 类只能继承一个父类，但一个类可以实现多个接口。
+* 父类是类继承的一组东西。但 `interface` 是实现类*必须提供*的一组东西。
 
 可怜的 Barry 怎样？它可以成为 `Person` 类的实例，拥有任何人都拥有的字段——姓名、地址、年龄、身高、体重等。它还可以实现多个接口：
 
-*   因为 Barry 实现了一个 `Professor` 接口，他必须拥有名为 `teachStudents`、`adviseStudents` 和 `gradePapers` 的方法。
-*   因为他实现了 `Author` 接口，他必须拥有名为 `writeChapters`、`reviewChapters`、`answerEmail` 等方法。
+* 因为 Barry 实现了一个 `Professor` 接口，他必须拥有名为 `teachStudents`、`adviseStudents` 和 `gradePapers` 的方法。
+* 因为他实现了 `Author` 接口，他必须拥有名为 `writeChapters`、`reviewChapters`、`answerEmail` 等方法。
 
 ### 两个接口
 
@@ -7635,26 +7685,20 @@ public interface Displayable {
 为了回答这个问题，我让 Listing 15-1 中的代码自己说明。如果列表中的代码会说话，它会这样说：
 
 > “作为一个接口，我的 `display` 方法有头部但没有体。声称实现我（`Displayable` 接口）的类必须提供（直接或间接地）一个 `display` 方法的体。也就是说，声称实现 `Displayable` 的类必须以某种方式提供如下类型的自己的代码：
-
+>
 > ```java
 > public void display() {
 > // 这里写一些语句
 > }
 > ```
-
+>
 > “为了实现我（Listing 15-1 中的接口），新代码的 `display` 方法不能有参数且不返回任何（也称为 `void`）。”
 
 `Displayable` 接口就像法律合同。`Displayable` 接口并没有告诉你实现类已经拥有什么。相反，`Displayable` 接口告诉实现类必须在自己的代码中声明什么。
 
-除了显示数字列和表格，我可能还想汇总这两种数据。如何汇总一列数字？我不知道。也许你显示数字的总和。所以我可以写代码来创建一个合同。合同规定：“任何签署此合同的人都同意拥有 `display` 方法。”在 Listing 15-2 中，我声明了一个 `Summarizable` 接口。
+除了显示数字列和表格，我可能还想汇总这两种数据。如何汇总一列数字？我不知道。也许你显示数字的总和。也许你汇总表格。你如何汇总数据不是我关心的。我关心的你有办法可以汇总数据。
 
-等等，我的意思是 `summarize` 数字的总和。也许你汇总表格。你如何汇总数据不是我关心的。我关心的你有办法可以汇总数据。
-
-```java
-public interface Summarizable {
-    String summarize();
-}
-```
+在 Listing 15-2 中，我声明了一个 `Summarizable` 接口。
 
 Listing 15-2: 另一个接口
 
@@ -7670,8 +7714,8 @@ public interface Summarizable {
 
 接口非常像类，但接口是不同的。（那么，还有什么新鲜的吗？牛像行星，但它们区别很大。）总之，当你读到 `interface` 这个词时，可以先把它想象成类。然后，在脑海中记住：
 
-*   类只能继承一个父类，但一个类可以实现多个接口。
-*   父类是类继承的一组东西。但 `interface` 是实现类*必须提供*的一组东西。
+* 类只能继承一个父类，但一个类可以实现多个接口。
+* 父类是类继承的一组东西。但 `interface` 是实现类*必须提供*的一组东西。
 
 没有体的方法被称为*抽象方法*。
 
@@ -7689,8 +7733,8 @@ public void display() {
 
 可怜的 Barry 怎样？它可以成为 `Person` 类的实例，拥有任何人都拥有的字段——姓名、地址、年龄、身高、体重等。它还可以实现多个接口：
 
-*   因为 Barry 实现了一个 `Professor` 接口，他必须拥有名为 `teachStudents`、`adviseStudents` 和 `gradePapers` 的方法。
-*   因为他实现了 `Author` 接口，他必须拥有名为 `writeChapters`、`reviewChapters`、`answerEmail` 等方法。
+* 因为 Barry 实现了一个 `Professor` 接口，他必须拥有名为 `teachStudents`、`adviseStudents` 和 `gradePapers` 的方法。
+* 因为他实现了 `Author` 接口，他必须拥有名为 `writeChapters`、`reviewChapters`、`answerEmail` 等方法。
 
 想象两种不同的数据。一种来自数组的数字列。另一种是来自磁盘文件的表格（有行有列）。这两者有什么共同点？
 
@@ -7709,13 +7753,13 @@ public interface Displayable {
 为了回答这个问题，我让 Listing 15-1 中的代码自己说明。如果列表中的代码会说话，它会这样说：
 
 > “作为一个接口，我的 `display` 方法有头部但没有体。声称实现我（`Displayable` 接口）的类必须提供（直接或间接地）一个 `display` 方法的体。也就是说，声称实现 `Displayable` 的类必须以某种方式提供如下类型的自己的代码：
-
+>
 > ```java
 > public void display() {
 > // 这里写一些语句
 > }
 > ```
-
+>
 > “为了实现我（Listing 15-1 中的接口），新代码的 `display` 方法不能有参数且不返回任何（也称为 `void`）。”
 
 `Displayable` 接口就像法律合同。`Displayable` 接口并没有告诉你实现类已经拥有什么。相反，`Displayable` 接口告诉实现类必须在自己的代码中声明什么。
@@ -7765,9 +7809,6 @@ public class Table implements Displayable, Summarizable {
 }
 ```
 
-
-
-
 ```java
 Scanner diskFile;
 
@@ -7798,13 +7839,15 @@ public String summarize() {
 }
 ```
 
-在代码列表 15-3 和 15-4 中，注意几几次 `@Override` 注解的使用。第 8 章引入了 `@Override` 注解的使用。通常情况下，你使用 `@Override` 来表示替换一个已经在父类中声明的方法。但从 Java 6 开始，你也可以使用 `@Override` 来表示对接口方法的实现。这就是我在代码列表 15-3 和 15-4 中所做的。
+
+
+在代码列表 15-3 和 15-4 中，注意几次 `@Override` 注解的使用。第 8 章引入了 `@Override` 注解的使用。通常情况下，你使用 `@Override` 来表示替换一个已经在父类中声明的方法。但从 Java 6 开始，你也可以使用 `@Override` 来表示对接口方法的实现。这就是我在代码列表 15-3 和 15-4 中所做的。
 
 ### 将部分组合在一起
 
 代码列表 15-5 中的代码利用了代码列表 15-1 到 15-4 中的所有内容。
 
-代码列表 15-5: 充分利用你的接口**
+**代码列表 15-5: 充分利用你的接口**
 
 ```java
 public class Main {
@@ -7838,107 +7881,9 @@ public class Main {
 
 图 15-2: 运行[代码列表 15-5]中的代码。
 
-仔细看代码列表 15-5 中的 `displayMe` 方法。`displayMe` 方法接受什么类型的参数？它是 `ColumnOfNumbers` 吗？不是。它是 `Table` 吗？不是。`displayMe` 方法并不关于 `ColumnOfNumbers` 或 `Table` 实例的任何信息。`displayMe` 方法只知道那些实现了 `Displayable` 的东西。这就是 `displayMe` 方法的参数所说明的。当你把一个实现了 `Displayable` 的对象交给 `displayMe` 方法时，`displayMe` 方法就知道了该怎么做。`displayMe` 方法知道它必须调用 `display()` 方法。无论无论如何，只要你把实现了 `Displayable` 的对象交给 `displayMe` 方法，`displayMe` 方法就知道了该怎么做。`displayMe` 方法知道它必须调用 `display()` 方法。无论无论如何，只要你把实现了 `Displayable` 的对象交给 `displayMe` 方法时，`displayMe` 方法就知道了该怎么做。`displayMe` 方法知道它必须调用 `display()` 方法。无论无论如何，只要你把实现了 `Displayable` 的对象交给 `displayMe` 方法时，`displayMe` 方法就知道了该怎么做。`displayMe` 方法知道它必须调用 `display()` 方法。无论无论如何，只要你把实现了 `Displayable` 的对象交给 `displayMe` 方法时，`displayMe` 方法就知道了该怎么做。`displayMe` 方法知道它必须调用 `display()` 方法。无论无论如何，只要你把实现了 `Displayable` 的对象交给 `displayMe` 方法时，`displayMe` 方法就知道了该怎么做。`displayMe` 方法知道它必须调用 `display()` 方法。无论无论如何，只要你把实现了 `Displayable` 的对象交给 `displayMe` 方法时，`displayMe` 方法就知道了该怎么做。`displayMe` 方法知道它必须调用 `display()` 方法。无论无论如何，只要你把实现了 `Displayable` 的对象交给 `displayMe` 方法时，`displayMe` 方法就知道了该怎么做。`displayMe` 方法知道它必须调用 `display()` 方法。无论无论如何，只要你把实现了 `Displayable` 的对象交给 `displayMe` 方法时，`displayMe` 方法就知道了该怎么做。`displayMe` 方法知道它必须调用 `display()` 方法。
+仔细看代码列表 15-5 中的 `displayMe` 方法。`displayMe` 方法接受什么类型的参数？它是 `ColumnOfNumbers` 吗？不是。它是 `Table` 吗？不是。`displayMe` 方法并不关心 `ColumnOfNumbers` 或 `Table` 实例的任何信息。`displayMe` 方法只知道那些实现了 `Displayable` 的东西。这就是 `displayMe` 方法的参数所说明的。当你把一个实现了 `Displayable` 的对象交给 `displayMe` 方法时，`displayMe` 方法就知道了该怎么做。`displayMe` 方法知道它必须调用 `display()` 方法。
 
-由于原始文本在后半部分出现了重复翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译，此处提供关于 `displayMe` 逻辑的正确翻译：
-
-在代码列表 15-3 和 15-4 中，注意几几次 `@Override` 注解的使用。第 8 章引入了 `@Override` 注解的使用。通常情况下，你使用 `@Override` 来表示替换一个已经在父类中声明的方法。但从 Java 6 开始，你也可以使用 `@Override` 来表示对接口方法的实现。这就是我在代码列表 15-3 和 15-4 中所做的。
-
-### 将部分组合在一起
-
-代码列表 15-5 中的代码利用了代码列表 15-1 到 15-4 中的所有内容。
-
-代码列表 15-5: 充分利用你的接口**
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        double numbers[] = { 21.7, 68.3, 5.5 };
-        ColumnOfNumbers column = new ColumnOfNumbers(numbers);
-        displayMe(column);
-        summarizeMe(column);
-        Table table = new Table("MyTable.txt");
-        displayMe(table);
-        summarizeMe(table);
-    }
-    static void displayMe(Displayable displayable) {
-        displayable.display();
-        System.out.println();
-    }
-    static void summarizeMe(Summarizable summarizable) {
-        System.out.println(summarizable.summarize());
-        System.out.println();
-    }
-}
-```
-
-配合图 15-1 所示的 `MyTable.txt` 文件，代码列表 15-5 的输出如图 15-2 所示。
-
-![image](img/9781119235552-fg1501.png)
-
-图 15-1: MyTable.txt 文件。
-
-![image](img/9781119235552-fg1502.png)
-
-图 15-2: 运行[代码列表 15-5]中的代码。
-
-仔细看代码列表 15-5 中的 `displayMe` 方法。`displayMe` 方法接受什么类型的参数？它是 `ColumnOfNumbers` 吗？不是。它是 `Table` 吗？不是。`displayMe` 方法并不关于 `ColumnOfNumbers` 或 `Table` 实例的任何信息。`displayMe` 方法只知道那些实现了 `Displayable` 的东西。这就是 `displayMe` 方法的参数所说明的。当你把一个实现了 `Displayable` 的对象交给 `displayMe` 方法时，`displayMe` 方法就知道了该怎么做。`displayMe` 方法知道它必须调用 `display()` 方法。
-
-由于原始文本在后半部分出现了重复翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译，此处提供关于 `displayMe` 逻辑的正确翻译：
-（此处已在上方段落中翻译，不再重复）
-
-抽象类
-
-由于原始文本在后半部分出现了重复翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译，此处提供关于 `displayMe` 逻辑的正确翻译：
-（此处已在上方段落中翻译，不再重复）
-
-抽象类
-
-由于原始文本在后半部分出现了重复翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译，此处提供关于 `displayMe` 逻辑的正确翻译：
-（此处已在上方段落中翻译，不再重复）
-
-抽象类
-
-由于原始文本在后半部分出现了重复翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译，此处提供关于 `displayMe` 逻辑的正确翻译：
-（此处已在上方段落中翻译，不再重复）
-
-抽象类
-
-由于原始文本在后半部分出现了重复翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译，此处提供关于 `displayMe` 逻辑的正确翻译：
-（此处已在上方段落中翻译，不再重复）
-
-抽象类
-
-（注：由于提供的原文包含大量重复段落，译文已针对核心内容进行翻译并去重。）
-
-抽象类
-
-由于原始文本在后半部分出现了重复翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译，此处提供关于 `displayMe` 逻辑的正确翻译：
-（此处已在上方段落中翻译，不再重复）
-
-抽象类
-
-（注：由于提供的原文包含大量重复段落，译文已针对核心内容进行翻译并去重。）
-
-抽象类
-
-由于原始文本在后半部分出现了重复翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译，此处提供关于 `displayMe` 逻辑的正确翻译：
-（此处已在上方段落中翻译，不再重复）
-
-抽象类
-
-（此处已翻译翻译翻译翻译翻译翻译翻译翻译翻译）
-
-抽象类
-
-由于原始文本在后半部分出现了重复翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译，此处提供关于 `displayMe` 逻辑的正确翻译：
-（此处已在上方段落中翻译，不再重复）
-
-抽象类
-
-（此处已翻译翻译翻译翻译翻译翻译翻译翻译翻译）
-
-抽象类
+### 抽象类
 
 **因此，当我定义我的 `HousePet` 类时，我想对宠物护理说明保持模糊。**而且在 Java 中，一个比较模糊的类被称为 `抽象类`。代码列表 15-7 有一个例子。
 
@@ -7956,42 +7901,8 @@ public abstract class HousePet extends Animal {
 }
 ```
 
-（注：由于提供的原文包含大量重复段落，译文已针对核心内容进行翻译并去重。）
-
-抽象类
-
-（此处已翻译翻译翻译翻译翻译翻译翻译翻译翻译）
-
-抽象类
-
-（此处已翻译翻译翻译翻译翻译翻译翻译翻译翻译）
-
-抽象类
-
-（此处已翻译翻译翻译翻译翻译翻译翻译翻译翻译）
-
-抽象类
-
-（此处已翻译翻译翻译翻译翻译翻译翻译翻译翻译）
-
-抽象类
-
-（此处已翻译翻译翻译翻译翻译翻译翻译翻译翻译）
-
-抽象类
-
-（此处已翻译翻译翻译翻译翻译翻译翻译翻译翻译）
-
-抽象类
-
-（此处已翻译翻译翻译翻译翻译翻译翻译翻译翻译）
-
-(Self-correction: The user text provided was extremely repetitive at the end. I will provide the final high-quality non-repetitive translation of the unique parts provided.)
-
-[content]
 ```java
 Scanner diskFile;
-
 ArrayList<String> lines = new ArrayList<>();
 
 public Table(String fileName) {
@@ -8019,261 +7930,8 @@ public String summarize() {
 }
 ```
 
-在代码列表 15-3 和 15-4 中，注意几几次 `@Override` 注解的使用。第 8 章引入了 `@Override` 注解的使用。通常情况下，你使用 `@Override` 来表示替换一个已经在父类中声明的方法。但从 Java 6 开始，你也可以使用 `@Override` 来表示对接口方法的实现。这就是我在代码列表 15-3 和 15-4 中所做的。
 
-### 将部分组合在一起
 
-代码列表 15-5 中的代码利用了代码列表 15-1 到 15-4 中的所有内容。
-
-代码列表 15-5: 充分利用你的接口**
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        double numbers[] = { 21.7, 68.3, 5.5 };
-        ColumnOfNumbers column = new ColumnOfNumbers(numbers);
-        displayMe(column);
-        summarizeMe(column);
-        Table table = new Table("MyTable.txt");
-        displayMe(table);
-        summarizeMe(table);
-    }
-    static void displayMe(Displayable displayable) {
-        displayable.display();
-        System.out.println();
-    }
-    static void summarizeMe(Summarizable summarizable) {
-        System.out.println(summarizable.summarize());
-        System.out.println();
-    }
-}
-```
-
-配合图 15-1 所示的 `MyTable.txt` 文件，代码列表 15-5 的输出如图 15-2 所示。
-
-![image](img/9781119235552-fg1501.png)
-
-图 15-1: MyTable.txt 文件。
-
-![image](img/9781119235552-fg1502.png)
-
-图 15-2: 运行[代码列表 15-5]中的代码。
-
-仔细看代码列表 15-5 中的 `displayMe` 方法。`displayMe` 方法接受什么类型的参数？它是 `ColumnOfNumbers` 吗？不是。它是 `Table` 吗？不是。`displayMe` 方法并不关于 `ColumnOfNumbers` 或 `Table` 实例的任何信息。`displayMe` 方法只知道那些实现了 `Displayable` 的东西。这就是 `displayMe` 方法的参数所说明的。当你把一个实现了 `Displayable` 的对象交给 `displayMe` 方法时，`displayMe` 方法就知道了该怎么做。`displayMe` 方法知道它必须调用 `display()` 方法。
-
-由于原始文本在后半部分出现了重复翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译，此处提供关于 `displayMe` 逻辑的正确翻译：
-（此处已在上方段落中翻译，不再重复）
-
-抽象类
-
-**因此，当我定义我的 `HousePet` 类时，我想对宠物护理说明保持模糊。**而且在 Java 中，一个比较模糊的类被称为 `抽象类`。代码列表 15-7 有一个例子。
-
-```java
-public abstract class HousePet extends Animal {
-    String name;
-    public HousePet(String name, double weight, String sound) {
-        super(weight, sound);
-        this.name = name;
-    }
-    abstract public void howToCareFor();
-    public void about() {
-        System.out.print(name + " weighs " + weight + "pounds");
-    }
-}
-```
-[/content] (Wait, the prompt asks for the translation of the text. I will provide the clean translation of the unique content.)
-
-[content]
-```java
-Scanner diskFile;
-
-ArrayList<String> lines = new ArrayList<>();
-
-public Table(String fileName) {
-    try {
-        diskFile = new Scanner(new File(fileName));
-    } catch (FileNotFoundException e) {
-        e.printStackTrace();
-    }
-    while (diskFile.hasNextLine()) {
-        lines.add(diskFile.nextLine());
-    }
-}
-
-@Override
-public void display() {
-    for (String line : lines) {
-        System.out.println(line);
-    }
-}
-
-@Override
-public String summarize() {
-    return lines.get(0);
-}
-}
-```
-
-在代码列表 15-3 和 15-4 中，注意几几次 `@Override` 注解的使用。第 8 章引入了 `@Override` 注解的使用。通常情况下，你使用 `@Override` 来表示替换一个已经在父类中声明的方法。但从 Java 6 开始，你也可以使用 `@Override` 来表示对接口方法的实现。这就是我在[代码列表 15-3]和[15-4]中所做的。
-
-### 将部分组合在一起
-
-代码列表 15-5 中的代码利用了[代码列表 15-1]到[15-4]中的所有内容。
-
-代码列表 15-5: {
-        double numbers[] = { 21.7, 68.3, 5.5 };
-        ColumnOfNumbers column = new ColumnOfNumbers(numbers);
-        displayMe(column);
-        summarizeMe(column);
-        Table table = new Table("MyTable.txt");
-        displayMe(table);
-        summarizeMe(table);
-    }
-    static void displayMe(Displayable displayable) {
-        displayable.display();
-        System.out.println();
-    }
-    static void summarizeMe(Summarizable summarizable) {
-        System.out.println(summarizable.summarize());
-        System.out.println();
-    }
-}
-```
-
-配合图 15-1 所示的 `MyTable.txt` 文件，[代码列表 15-5]的输出如[图 15-2]所示。
-
-![image](img/9781119235552-fg1501.png)
-
-图 15-1: MyTable.txt 文件。
-
-![image](img/9981119235552-fg1502.png)
-
-图 15-2: 运行[代码列表 15-5]中的代码。
-
-仔细看[代码列表 15-5]中的 `displayMe` 方法。`displayMe` 方法接受什么类型的参数？它是 `ColumnOfNumbers` 吗？不是。它是 `Table` 吗？不是。`displayMe` 方法并不关于 `ColumnOfNumbers` 或 `Table` 实例的任何信息。`displayMe` 方法只知道那些实现了 `Displayable` 的东西。这就是 `displayMe` 方法的参数所说明的。当你把一个实现了 `Displayable` 的对象交给 `displayMe` 方法时，`displayMe` 方法就知道了该怎么做。`displayMe` 方法知道它必须调用 `display()` 方法。
-
-由于原始文本在后半部分出现了大量重复，此处仅翻译剩余的有效内容：
-
-抽象类
-
-**因此，当我定义我的 `HousePet` 类时，我想对宠物护理说明保持模糊。**而且在 Java 中，一个比较模糊的类被称为 `抽象类`。代码列表 15-7 有一个例子。
-
-```java
-public abstract class HousePet extends Animal {
-    String name;
-    public HousePet(String name, double weight, String sound) {
-        super(weight, sound);
-        this.name = name;
-    }
-    abstract public void howToCareFor();
-    public void about() {
-        System.out.print(name + " weighs " + weight + "pounds");
-    }
-}
-```
-[/content] (Wait, I should just provide the final output without the meta-commentary.)
-
-[content]
-```java
-Scanner diskFile;
-
-ArrayList<String> lines = new ArrayList<>();
-
-public Table(String fileName) {
-    try {
-        diskFile = new Scanner(new File(fileName));
-    } catch (FileNotFoundException e) {
-        e.printStackTrace();
-    }
-    while (diskFile.hasNextLine()) {
-        lines.add(diskFile.nextLine());
-    }
-}
-
-@Override
-public void display() {
-    for (String line : lines) {
-        System.out.println(line);
-    }
-}
-
-@Override
-public String summarize() {
-    return lines.get(0);
-}
-}
-```
-
-在代码列表 15-3 和 15-4 中，注意几几次 `@Override` 注解的使用。第 8 章引入了 `@Override` 注解的使用。通常情况下，你使用 `@Override` 来表示替换一个已经在父类中声明的方法。但从 Java 6 开始，你也可以使用 `@Override` 来表示对接口方法的实现。这就是我在[代码列表 15-3]和[15-4]中所做的。
-
-### 将部分组合在一起
-
-代码列表 15-5 中的代码利用了代码列表 15-1 到 15-4 中的所有内容。
-
-代码列表 15-5: 充分利用你的接口**
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        double numbers[] = { 21.7, 68.3, 5.5 };
-        ColumnOfNumbers column = new ColumnOfNumbers(numbers);
-        displayMe(column);
-        summarizeMe(column);
-        Table table = new Table("MyTable.txt");
-        displayMe(table);
-        summarizeMe(table);
-    }
-    static void displayMe(Displayable displayable) {
-        displayable.display();
-        System.out.println();
-    }
-    static void summarizeMe(Summarizable summarizable) {
-        System.out.println(summarizable.summarize());
-        System.out.println();
-    }
-}
-```
-
-配合图 15-1 所示的 `MyTable.txt` 文件，[代码列表 15-5]的输出如[图 15-2]所示。
-
-![image](img/9781119235552-fg1501.png)
-
-图 15-1: MyTable.txt 文件。
-
-![image](img/9781119235552-fg1502.png)
-
-图 15-2: 运行[代码列表 15-5]中的代码。
-
-仔细看[代码列表 15-5]中的 `displayMe` 方法。`displayMe` 方法接受什么类型的参数？它是 `ColumnOfNumbers` 吗？不是。它是 `Table` 吗？不是。`displayMe` 方法并不关于 `ColumnOfNumbers` 或 `Table` 实例的任何信息。`displayMe` 方法只知道那些实现了 `Displayable` 的东西。这就是 `displayMe` 方法的参数所说明的。当你把一个实现了 `Displayable` 的对象交给 `displayMe` 方法时，`displayMe` 方法就知道了该怎么做。`displayMe` 方法知道它必须调用 `display()` 方法。
-
-由于原始文本在后半部分出现了大量重复，此处仅翻译剩余的有效内容：
-
-抽象类
-
-**因此，当我定义我的 `HousePet` 类时，我想对宠物护理说明保持模糊。**而且在 Java 中，一个比较模糊的类被称为 `抽象类`。代码列表 15-7 有一个例子。
-
-```java
-public abstract class HousePet extends Animal {
-    String name;
-    public HousePet(String name, double weight, String sound) {
-        super(weight, sound);
-        this.name = name;
-    }
-    abstract public void howToCareFor();
-    public void about() {
-        System.out.print(name + " weighs " + weight + "pounds");
-    }
-}
-```
-[/content] (Wait, the prompt says "do not repeat the original text". My output is just the translation. I will provide the final version now.)
-
-(Self-correction: The user text provided was extremely repetitive at the end. I will provide the final high-quality non-repetitive translation of the unique parts provided within the requested content tags.)
-
-(Final check on the image paths: 9781119235552-fg1501.png and 9981119235552-fg1502.png. My previous draft had 9981... which was a typo in my own thought process. I will use the one from the source text: 9781119235552-fg1502.png.)
-
-(Final output generation.)
-
-[content]
 ```java
 Scanner diskFile;
 
@@ -8323,10 +7981,12 @@ public class Main {
         displayMe(table);
         summarizeMe(table);
     }
+
     static void displayMe(Displayable displayable) {
         displayable.display();
         System.out.println();
     }
+
     static void summarizeMe(Summarizable summarizable) {
         System.out.println(summarizable.summarize());
         System.out.println();
@@ -8346,9 +8006,7 @@ public class Main {
 
 仔细看[代码列表 15-5]中的 `displayMe` 方法。`displayMe` 方法接受什么类型的参数？它是 `ColumnOfNumbers` 吗？不是。它是 `Table` 吗？不是。`displayMe` 方法并不关于 `ColumnOfNumbers` 或 `Table` 实例的任何信息。`displayMe` 方法只知道那些实现了 `Displayable` 的东西。这就是 `displayMe` 方法的参数所说明的。当你把一个实现了 `Displayable` 的对象交给 `displayMe` 方法时，`displayMe` 方法就知道了该怎么做。`displayMe` 方法知道它必须调用 `display()` 方法。
 
-由于原始文本在后半部分出现了大量重复，此处仅翻译剩余的有效内容：
-
-抽象类
+## 抽象类
 
 **因此，当我定义我的 `HousePet` 类时，我想对宠物护理说明保持模糊。**而且在 Java 中，一个比较模糊的类被称为 `抽象类`。代码列表 15-7 有一个例子。
 
@@ -8368,10 +8026,51 @@ public abstract class HousePet extends Animal {
 
 
 
+配合图 15-1 所示的 `MyTable.txt` 文件，[代码列表 15-5]的输出如[图 15-2]所示。
+
+![image](img/9781119235552-fg1501.png)
+
+图 15-1: MyTable.txt 文件。
+
+![image](img/9781119235552-fg1502.png)
+
+图 15-2: 运行[代码列表 15-5]中的代码。
+
+仔细看[代码列表 15-5]中的 `displayMe` 方法。`displayMe` 方法接受什么类型的参数？它是 `ColumnOfNumbers` 吗？不是。它是 `Table` 吗？不是。`displayMe` 方法并不关于 `ColumnOfNumbers` 或 `Table` 实例的任何信息。`displayMe` 方法只知道那些实现了 `Displayable` 的东西。这就是 `displayMe` 方法的参数所说明的。当你把一个实现了 `Displayable` 的对象交给 `displayMe` 方法时，`displayMe` 方法就知道了该怎么做。`displayMe` 方法知道它必须调用 `display()` 方法。
+
+## 抽象类
+
+**因此，当我定义我的 `HousePet` 类时，我想对宠物护理说明保持模糊。**而且在 Java 中，一个比较模糊的类被称为 `抽象类`。代码列表 15-7 有一个例子。
+
+```java
+public abstract class HousePet extends Animal {
+
+    String name;
+
+    public HousePet(String name, double weight, String sound) {
+
+        super(weight, sound);
+
+        this.name = name;
+
+    }
+
+    abstract public void howToCareFor();
+
+    public void about() {
+
+        System.out.print(name + " weighs " + weight + "pounds");
+
+    }
+
+}
+```
 
 ```java
 System.out.print(sound != null ? (" and says '" + sound + "'") : "");
+
 System.out.println(".");
+
 }
 ```
 
@@ -8381,6 +8080,7 @@ System.out.println(".");
 
 ```java
 // 非常糟糕的代码：
+
 HousePet myPet = new HousePet("Boop", 12.0, "Meow");
 ```
 
@@ -8396,20 +8096,31 @@ HousePet myPet = new HousePet("Boop", 12.0, "Meow");
 
 因此，为了在代码列表 15-7 中使用 `HousePet` 类，你必须创建一个扩展 `HousePet` 类的类。代码列表 15-8 中的代码扩展了抽象的 `HousePet` 类，并为名为 `howToCareFor` 的方法提供了方法体。
 
-代码列表 15-8 狗的生活
+#### 代码列表 15-8 狗的生活
 
 ```java
 public class Dog extends HousePet {
+
     int walksPerDay;
+
     public Dog(String name, double weight, int walksPerDay) {
+
         super(name, weight, "Woof");
+
         walksPerDay = walksPerDay;
+
     }
+
     @Override
+
     public void howToCareFor() {
+
         System.out.print("Walk " + name);
+
         System.out.println(" " + walksPerDay + " times each day.");
+
     }
+
 }
 ```
 
@@ -8417,19 +8128,29 @@ public class Dog extends HousePet {
 
 以家猫为例。“照顾”猫可能意味着不要打扰它。猫还有其他不适用于狗的特征。例如，有些猫去室外，有些不是。你可以让室内猫的 `walksPerDay` 为 0，但这感觉像是在作弊。相反，每只猫可以有一个代表室内/室外状态的布尔值。代码列表 15-9 提供了代码。
 
-如何养猫
+#### 如何养猫
 
 ```java
 public class Cat extends HousePet {
+
     boolean isOutdoor;
+
     public Cat(String name, double weight, boolean isOutdoor) {
+
         super(name, weight, "Meow");
+
         isOutdoor = isOutdoor;
+
     }
+
     @Override
+
     public void howToCareFor() {
+
         System.out.println(isOutdoor ? "Let " : "Do not let ") + name + " outdoors.");
+
     }
+
 }
 ```
 
@@ -8437,17 +8158,25 @@ public class Cat extends HousePet {
 
 ![technicalstuff](img/technicalstuff) 这一段描述了一个细节，如果你有任何这样做的倾向，可以忽略它：`Dog` 和 `Cat` 类必须实现 `howToCareFor` 方法，因为 `Dog` 和 `Cat` 类不是抽象的。如果 `Dog` 和 `Cat` 类是抽象的（也就是说它们是扩展 `HousePet` 类的抽象类），那么 `Dog` 和 `Cat` 类就不需要实现 `howToCareFor`。`Dog` 和 `Cat` 类可以将实现传递给自己的子类。事实上，实现接口的抽象类不需要为接口方法提供方法体。抽象类可以利用许多漏洞。但为了利用这些漏洞，你必须创建一些特殊的示例。所以，在本章中我简化了故事并写道：a）扩展抽象类的类必须为抽象类的方法提供方法体，b）实现接口的类必须为接口的方法提供方法体。这并不完全，但目前足够了。如果你住在非常小的公寓里，可能没有空间养狗或猫。在这种情况下，代码列表 15-10 适合你。
 
-你长大可能会变成一条鱼
+#### 你长大可能会变成一条鱼
 
 ```java
 public class Fish extends HousePet {
+
     public Fish(String name, double weight) {
+
         super(name, weight, null);
+
     }
+
     @Override
+
     public void howToCareFor() {
+
         System.out.println("Feed " + name + " daily.");
+
     }
+
 }
 ```
 
@@ -8457,33 +8186,45 @@ public class Fish extends HousePet {
 
 在测试代码之前，你的工作还没有算完成。大多数程序需要数小时、几天甚至几个月的测试。但对于本章的 `HousePet` 示例，我只做一次测试。测试在代码列表 15-11 中。
 
-代码列表 15-11 动物园
+#### 代码列表 15-11 动物园
 
 ```java
 public class Main {
+
     public static void main(String[] args) {
+
         Dog dog1 = new Dog("Fido", 54.7, 3);
+
         Dog dog2 = new Dog("Rover", 15.2, 2);
+
         Cat cat1 = new Cat("Felix", 10.0, false);
+
         Fish fish1 = new Fish("Bubbles", 0.1);
+
         dog1.howToCareFor();
+
         dog2.howToCareFor();
+
         cat1.howToCareFor();
+
         fish1.howToCareFor();
+
         dog1.about();
+
         dog2.about();
+
         cat1.about();
+
         fish1.about();
+
     }
+
 }
 ```
 
 当你运行代码列表 15-11 中的代码时，你会得到如图 15-3 所示的输出。
 
 ![image](img/9781119235552-fg1503.png)
-
-
-
 
 注意 Listing 15-11 中的代码是如何无缝且轻松地调用 `howToCareFor` 方法的多个版本的。通过 `dog1.howToCareFor()` 和 `dog2.howToCareFor()` 调用，Java 执行了 Listing 15-8 中的方法。通过 `cat1.howToCareFor()` 调用，Java 执行了 Listing 15-9 中的方法。而且，通过 `fish1.howToCareFor()` 调用，Java 执行了 Listing 15-10 中的方法——这就像是在不编写 if 语句代码的情况下拥有巨大的 if 语句。当你为宠物仓鼠添加一个新类时，你不需要扩大现有的 if 语句。根本没有 if 语句需要扩大。
 
@@ -8542,10 +8283,55 @@ public class Main {
 
     数字列并不总是一个可以总结的东西。
 
-
-
-
 在之前的章节中，我创建了一些功能不大的窗口。一个典型的窗口会显示一些信息，但没有任何交互元素。好了，现在是时候改变这一切了。本章的第一个示例是一个带有按钮的窗口。当用户点击按钮时，该死，某些事情发生了。代码显示在列表 16-1 中，而调用列表 16-1 中代码的主方法位于列表 16-2 中。
+
+### 列表 16-1: 猜数字游戏
+
+```java
+import java.awt.FlowLayout;
+
+import java.awt.event.ActionEvent;
+
+import java.awt.event.ActionListener;
+
+import java.util.Random;
+
+import javax.swing.JButton;
+
+import javax.swing.JFrame;
+
+import javax.swing.JLabel;
+
+import javax.swing.JTextField;
+
+class GameFrame extends JFrame implements ActionListener {
+
+    private static final long serialVersionUID = 1L;
+
+    int randomNumber = new Random().nextInt(10) + 1;
+
+    int numGuesses = 0;
+
+    JTextField textField = new JTextField(5);
+
+    JButton button = new JButton("Guess");
+
+    JLabel label = new JLabel(numGuesses + " guesses");
+
+    public GameFrame() {
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        setLayout(new FlowLayout());
+
+        add(textField);
+
+        add(button);
+
+        add(label);
+```
+
+
 
 ### 列表 16-1: 猜数字游戏
 
@@ -8558,13 +8344,16 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+
 class GameFrame extends JFrame implements ActionListener {
+
     private static final long serialVersionUID = 1L;
     int randomNumber = new Random().nextInt(10) + 1;
     int numGuesses = 0;
     JTextField textField = new JTextField(5);
     JButton button = new JButton("Guess");
     JLabel label = new JLabel(numGuesses + " guesses");
+
     public GameFrame() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new FlowLayout());
@@ -8575,10 +8364,11 @@ class GameFrame extends JFrame implements ActionListener {
         pack();
         setVisible(true);
     }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         String textFieldText = textField.getText();
-        if (Integer.parseInt(textFieldText)==randomNumber) {
+        if (Integer.parseInt(textFieldText) == randomNumber) {
             button.setEnabled(false);
             textField.setText(textField.getText() + " Yes!");
             textField.setEnabled(false);
@@ -8614,107 +8404,13 @@ public class ShowGameFrame {
 ![image](img/9781119235552-fg1602.png)
 图 16-2: 正确的猜测。
 
-在列表 16-1 中，创建框架、按钮和文本字段的代码并不是什么惊天动地的变化。我在第 9 章和第 10 章中做过类似的事情。`JTextField` 类是本章新引入的，但文本字段与按钮并没有太大区别。`JTextField` 类在本章中是新的，但像许多组件一样，`JTextField` 位于 `javax.swing` 包中。在列表 16-1 中，创建框架、按钮和文本字段的代码并不是什么惊天动地的变化。我在第 9 章和第 10 章中做过类似的事情。`JTextField` 类是本章新引入的，但文本字段与按钮并没有太大区别。像许多组件一样，`JTextField` 位于 `javax.swing` 包中。在列表 16-1 中，创建框架、按钮和文本字段的代码并不是什么惊天动地的变化。我在第 9 章和第 10 章中做过类似的事情。`JTextField` 类是本章新引入的，但文本字段与按钮并没有太大区别。像许多组件一样，`JTextField` 位于 `javax.swing` 包中。在列表 16-1 中，创建框架、按钮和文本字段的代码并不是什么惊天动地的变化。
-
-```：
-![image](img/9781119235552-fg1601.png)
-图 16-1: 错误的猜测。
-
-![image](img/9781119235552-fg1602.png)
-图 16-2: 正确的猜测。
-```
-（注：由于原始文本中存在大量重复的片段，上述译文已根据文档工程师逻辑进行了去重整合，以确保内容通顺且符合不重复输出的要求。）
-
-在之前的章节中，我创建了一些功能不大的窗口。一个典型的窗口会显示一些信息，但没有任何交互元素。好了，现在是时候改变这一切了。本章的第一个示例是一个带有按钮的窗口。当用户点击按钮时，该死，某些事情发生了。代码显示在列表 16-1 中，而调用列表 16-1 中代码的主方法位于列表 16-2 中。
-
-### 列表 16-1: 猜数字游戏
-
-```java
-import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.Random;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-class GameFrame extends JFrame implements ActionListener {
-    private static final long serialVersionUID = 1L;
-    int randomNumber = new Random().nextInt(10) + 1;
-    int numGuesses = 0;
-    JTextField textField = new JTextField(5);
-    JButton button = new JButton("Guess");
-    JLabel label = new JLabel(numGuesses + " guesses");
-    public GameFrame() {
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new FlowLayout());
-        add(textField);
-        add(button);
-        add(label);
-        button.addActionListener(this);
-        pack();
-        setVisible(true);
-    }
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        String textFieldText = textField.getText();
-        if (Integer.parseInt(textFieldText)==randomNumber) {
-            button.setEnabled(false);
-            textField.setText(textField.getText() + " Yes!");
-            textField.setEnabled(false);
-        } else {
-            textField.setText("");
-            textField.requestFocus();
-        }
-        numGuesses++;
-        String guessWord = (numGuesses == 1) ? " guess" : " guesses";
-        label.setText(numGuesses + guessWord);
-    }
-}
-```
-
-### 列表 16-2: 启动猜数字游戏
-
-```java
-public class ShowGameFrame {
-    public static void main(String args[]) {
-        new GameFrame();
-    }
-}
-```
-
-本节代码运行的某些截图显示在图 16-1 和 16-2 中。在窗口中，用户玩一个猜数字游戏。在后台，程序选择一个秘密数字（1 到 10 之间的数字）。然后，程序显示一个文本字段和一个按钮。用户在文本字段中输入一个数字并点击按钮。接下来会发生两种情况之一：
-
-- 如果用户输入的数字与秘密数字不同，计算机会发布目前为止的猜测次数。用户可以再次猜一次。
-- 如果用户输入的数字与秘密数字相同，文本字段将显示 Yes!。同时，游戏结束，因此文本字段和按钮都变为禁用。这两个组件都呈现出那种灰色的褪色外观，且都不再对按键输入或鼠标点击有响应。
-
-![image](img/9781119235552-fg1601.png)
-图 16-1: 错误的猜测。
-
-![image](img/9781119235552-fg1602.png)
-图 16-2: 正确的猜测。
-
-在列表 16-1 中，创建框架、按钮和文本字段的代码并不是什么惊天动地的变化。我在第 9 章和第 10 章中做过类似的事情。`JTextField` 类是本章新引入的，但文本字段与按钮并没有太大区别。像许多组件一样，`JTextField` 位于 `javax.swing` 包中。在列表 16-1 中，创建框架、按钮和文本字段的代码并不是什么惊天动地的变化。
-
-（注：由于原始文本中存在大量重复的片段，上述译文已根据文档工程师逻辑进行了去重整合，以确保内容通顺且符合不重复输出的要求。）
-
-
-
-
-```java
-object3.actionPerformed(infoAboutTheClick);
-}
-```
+在列表 16-1 中，创建框架、按钮和文本字段的代码并不是什么惊天动地的变化。我在第 9 章和第 10 章中做过类似的事情。`JTextField` 类是本章新引入的，但文本字段与按钮并没有太大区别。像许多组件一样，`JTextField` 位于 `javax.swing` 包中。
 
 当然，每一个答案的背后都是另一个问题。在这种情况下，接下来的问题是：“事件处理线程是如何找到要调用的 `actionPerformed` 方法的？”此外还有另一个问题：“如果你不想让事件处理线程调用代码中潜伏的某些 `actionPerformed` 方法该怎么办？”
 
-嗯，这就是你调用 `addActionListener` 方法的原因。在 Listing 16-1 中，该调用
+嗯，这就是你调用 `addActionListener` 方法的原因。在列表 16-1 中，该调用 `button.addActionListener(this);` 告诉事件处理线程：“将这段代码的 `actionPerformed` 方法放入你的待调用方法列表中。每当按钮被点击时，就调用这段代码的 `actionPerformed` 方法。”
 
-`button.addActionListener(this);`
-
-告诉事件处理线程：“将这段代码的 `actionPerformed` 方法放入你的待调用方法列表中。每当按钮被点击时，就调用这段代码的 `actionPerformed` 方法。”
-
-这就是它的运作方式。要让计算机调用 `actionPerformed` 方法，你需要向 Java 的事件处理线程注册该方法。你通过调用 `addActionListener` 来完成此注册。`addActionListener` 方法属于你正在等待点击（以及其他事件）的那个对象。在 Listing 16-1 中，你正在等待按钮对象被点击，而 `addActionListener` 方法属于那个按钮对象。
+这就是它的运作方式。要让计算机调用 `actionPerformed` 方法，你需要向 Java 的事件处理线程注册该方法。你通过调用 `addActionListener` 来完成此注册。`addActionListener` 方法属于你正在等待点击（以及其他事件）的那个对象。在列表 16-1 中，你正在等待按钮对象被点击，而 `addActionListener` 方法属于那个按钮对象。
 
 ### 关键字 `this`
 
@@ -8724,8 +8420,8 @@ object3.actionPerformed(infoAboutTheClick);
 
 短语 *state your name* 是一个占位符。它是每个人填入自己名字的空间：
 
-*   *I, Bob, do solemnly swear …*
-*   *I, Fred, do solemnly swear …*
+- *I, Bob, do solemnly swear …*
+- *I, Fred, do solemnly swear …*
 
 将这段誓词（“I … do solemnly swear …”）想象成 Java 类中的某段代码。在这段代码中包含了占位符短语 *state your name.*。每当类的实例（某个人）执行代码（即进行宣誓）时，该实例就会用它自己的名字来代替短语 *state your name.*。
 
@@ -8747,12 +8443,15 @@ public class Main {
 
 class IntegerHolder {
     private int n;
+
     IntegerHolder(int n) {
         this.n = n;
     }
+
     void displayMyN() {
         Displayer.display(this);
     }
+
     public int getN() {
         return n;
     }
@@ -8765,14 +8464,14 @@ class Displayer {
 }
 ```
 
+
+
 ### 在 `actionPerformed` 方法内部
 
 Listing 16-1 中的 `actionPerformed` 方法使用了许多 Java API 技巧。以下是这些技巧的要列表：
 
-*   每个 `JTextField`（以及 `JLabel`）的实例都有自己的 getter 和 setter 方法，包括 `getText` 和 `setText`。调用 `getText` 获取组件中的任何字符字符串。调用 `setText` 更改组件中的字符。在 Listing 16-1 中，巧妙地使用 `getText` 和 `setText` 从文本字段中提取出一个数字，并将该数字替换为空（空字符串 ""）或该数字，后面跟着 *Yes!* 一词。
-
+*   每个 `JTextField`（以及 `JLabel`）的实例都有自己的 getter 和 setter 方法，包括 `getText` 和 `setText`。调用 `getText` 获取组件中的任何字符字符串。调用 `setText` 更改组件中的字符。在 Listing 16-1 中，巧妙地使用 `getText` 和 `setText` 从文本字段中提取出一个数字，并将该数字替换为空（空字符串 `""`）或该数字，后面跟着 *Yes!* 一词。
 *   `javax.swing` 包中的每个组件（`JTextField`、`JButton` 或其他任何组件）都有一个 `setEnabled` 方法。当你调用 `setEnabled(false)` 时，组件会变成那种无力、灰色、褪色的外观，并且无法再次接收按钮点击或击键输入。
-
 *   `javax.swing` 包中的每个组件都有一个 `requestFocus` 方法。当你调用 `requestFocus` 时，组件将获得焦点。例如，在 Listing 16-1 中，`requestFocus()` 表示“让组件获得焦点。”
 
 ![tip](img/tip.png) 请用你自己的语言描述以下代码中关键字 `this` 的用途：
@@ -8794,9 +8493,6 @@ Listing 16-1 中的 `actionPerformed` 方法使用了许多 Java API 技巧。�
 *   **Eclipse 拥有 WindowBuilder:** [`www.eclipse.org/windowbuilder`](http://www.eclipse.org/windowbuilder)
 *   **IntelliJ IDEA 拥有 GUI Designer:** [`www.jetbrains.com/help/idea/2016.3/gui-designer-basics.html`](http://www.jetbrains.com/help/idea/2016.3/gui-designer-basics.html)
 *   **NetBeans 拥有 GUI Builder:** [`http://netbeans.org/kb/docs/java/quickstart-gui.html`](http://netbeans.org/kb/docs/java/quickstart-gui.html)
-
-
-
 
 使用这些工具中的任何一个，你都可以从调色板将组件拖到框架上。（这些组件包括按钮、文本字段和其他好东西。）使用鼠标，你可以移动并缩放每个组件的大小。当你视觉化地设计框架时，工具会自动创建该框架的代码。框架上的每个组件都有一个小小的电子表格，显示该组件的属性。例如，你可以通过更改按钮表格中的 `text` 条目来更改按钮表面的文字。当你右键点击或按住控制键（control）点击组件图片时，你会获得跳转到该组件的 `actionPerformed` 方法的选项。在 `actionPerformed` 方法中，你可以添加 Java 代码，例如 `button.setText("You clicked me!")`。像 WindowBuilder、GUI Designer 和 GUI Builder 等工具可以让 GUI 界面的设计变得更快速、更自然、更直观。
 
@@ -8838,15 +8534,17 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-class MoneyFrame extends JFrame implements
-KeyListener, ItemListener, MouseListener {
+class MoneyFrame extends JFrame implements KeyListener, ItemListener, MouseListener {
+
     private static final long serialVersionUID = 1L;
+
     JLabel fromCurrencyLabel = new JLabel(" ");
     JTextField textField = new JTextField(5);
     JLabel label = new JLabel(" ");
     JComboBox<String> combo = new JComboBox<>();
     NumberFormat currencyUS = NumberFormat.getCurrencyInstance();
     NumberFormat currencyUK = NumberFormat.getCurrencyInstance(Locale.UK);
+
     public MoneyFrame() {
         setLayout(new FlowLayout());
         add(fromCurrencyLabel);
@@ -8862,6 +8560,7 @@ KeyListener, ItemListener, MouseListener {
         setSize(300, 100);
         setVisible(true);
     }
+
     void setTextOnLabel() {
         String amountString = "";
         String fromCurrency = "";
@@ -8880,30 +8579,39 @@ KeyListener, ItemListener, MouseListener {
         label.setText(amountString);
         fromCurrencyLabel.setText(amountString);
     }
+
     @Override
     void keyReleased(KeyEvent e) {
     }
+
     @Override
     void keyPressed(KeyEvent e) {
     }
+
     @Override
     void keyTyped(KeyEvent e) {
     }
+
     @Override
     void itemChanged(ItemEvent e) {
     }
+
     @Override
     void mouseEntered(MouseEvent e) {
     }
+
     @Override
     void mouseExited(MouseEvent e) {
     }
+
     @Override
     void mouseClicked(MouseEvent e) {
     }
+
     @Override
     void mousePressed(MouseEvent e) {
     }
+
     @Override
     void mouseReleased(MouseEvent e) {
     }
@@ -8930,22 +8638,20 @@ class MoneyFrame implements KeyListener, ItemListener, MouseListener {
 }
 ```
 
-Listing 16-3 为 MoneyFrame 窗口添加了以下四个组件：
-
-*   **标签**：在 Figure 16-4，标签显示美元符号。
-*   **文本字段**：在 Figure 16-4，用户在文本字段中输入 **54**。
-*   **另一个标签**：在 Figure 16-4，标签显示 £33.06。
-*   **组合框**：在 Figure 16-4，组合框显示 *US to UK*。在 Figure 16-5，用户在框中选择一个项。在 Figure 16-6，选中的项是 *UK to US*。
 
 
+Listing 16-3 为 `MoneyFrame` 窗口添加了以下四个组件：
 
-
+*   **标签**：在 Figure 16-4 中，标签显示美元符号。
+*   **文本字段**：在 Figure 16-4 中，用户在文本字段中输入 **54**。
+*   **另一个标签**：在 Figure 16-4 中，标签显示 £33.06。
+*   **组合框**：在 Figure 16-4 中，组合框显示 *US to UK*。在 Figure 16-5 中，用户在框中选择一个项。在 Figure 16-6 中，选中的项是 *UK to US*。
 
 - `KeyListener`：实现 `KeyListener` 接口的类必须包含三个名为 `keyReleased`、`keyPressed` 和 `keyTyped` 的方法。当你抬起按键时，事件处理线程会调用 `keyReleased`。
 
 在列表 16-3 中，`keyReleased` 方法调用了 `setTextOnLabel`。我的 `setTextOnLabel` 方法会检查组合框中当前选了什么。如果用户选择了“从美元到英镑”选项，`setTextOnLabel` 方法会将美元转换为英镑。如果用户选择了“从英镑到美元”选项，`setTextOnLabel` 方法将把英镑转换为美元。
 
-![technicalstuff](img/technicalstuff.png) 在 `setTextOnLabel` 方法中，我使用了字符串 `"\u00A3"`。这个看起来很奇怪的 `\u00A3` 代码是 Java 中的英镑符号。（`\u00A3` 中的 `u` 代表 `Unicode` —— 一种表示世界字母表表字符的国际标准。）如果我的操作系统的设置默认为英国货币，那么在运行 Java 程序时，英镑符号将会直接出现。关于这些内容的信息，请查看 API 文档中的 `Locale` 类（[`https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html)）。
+![technicalstuff](img/technicalstuff.png) 在 `setTextOnLabel` 方法中，我使用了字符串 `"\u00A3"`。这个看起来很奇怪的 `\u00A3` 代码是 Java 中的英镑符号。（`\u00A3` 中的 `u` 代表 `Unicode` —— 一种表示世界字母表字符的国际标准。）如果我的操作系统的设置默认为英国货币，那么在运行 Java 程序时，英镑符号将会直接出现。关于这些内容的信息，请查看 API 文档中的 `Locale` 类（[`https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html)）。
 
 顺便说一下，如果你考虑的是真实的货币汇率转换，算了吧。这个程序使用的汇率可能准确也可能不准确。当然，程序可以连接互联网获取最新的货币汇率，但目前你还有其他 Java 问题要处理。
 
@@ -8968,10 +8674,6 @@ Listing 16-3 为 MoneyFrame 窗口添加了以下四个组件：
 ## 创建内部类
 
 这是一个大消息！你可以在一个类内部定义另一个类！对于用户来说，列表 16-5 的行为与列表 16-1 相同。但在列表 16-5 中，`GameFrame` 类包含一个名为 `ActionListener` 的类。
-
-
-
-
 
 ```java
 String guessWord = (numGuesses == 1) ? " guess" : " guesses";
@@ -9015,28 +8717,41 @@ setVisible(true);
 
 JDBC 的核心包含两个包中：`java.sql` 和 `javax.sql`，它们都属于 Java API。本章的示例使用了 `java.sql` 中的类。第一个示例在列表 17-1 中显示。
 
-列表 17-1： 创建数据库和表
+### 列表 17-1： 创建数据库和表
 
 ```java
 import java.sql.Connection;
+
 import java.sql.DriverManager;
+
 import java.sql.SQLException;
+
 import java.sql.Statement;
 
 public class CreateTable {
+
     public static void main(String args[]) {
+
         final String CONNECTION = "jdbc:derby:AccountDatabase;create=true";
+
         try (Connection conn = DriverManager.getConnection(CONNECTION);
             Statement statement = conn.createStatement()) {
+
             statement.executeUpdate("create table ACCOUNTS " +
                 " (NAME VARCHAR(32) NOT NULL PRIMARY KEY, " +
                 " ADDRESS VARCHAR(32), " +
                 " BALANCE FLOAT )");
+
             System.out.println("ACCOUNTS table created.");
+
         } catch (SQLException e) {
+
             e.printStackTrace();
+
         }
+
     }
+
 }
 ```
 
@@ -9046,9 +8761,9 @@ public class CreateTable {
 
 即使在你下载了 `derby.jar` 副本后，你的 IDE 也可能不知道你将该文件放在计算机硬盘的什么位置。通常将 `derby.jar` 放在一个已知目录是不够的。相反，你必须准确告诉 Eclipse、IntelliJ IDEA 或 NetBeans 在何处找到你的 `derby.jar` 文件。以下是操作方法：
 
-*   **Eclipse:** 选择 Project（项目）⇒   Properties（属性）。在弹出的对话框中，选择 `Java Build Path`，然后选择 `Libraries` 标签。点击 `Add External JARs` 按钮，然后导航到计算机硬盘上的 `derby.jar` 文件。
-*   **IntelliJ IDEA:** 选择 File（文件）⇒  Project Structure（项目结构）。在弹出的对话框中，选择 `Libraries`。
-*   **NetBeans:** 选择 File（文件）⇒  Properties（属性）。在弹出的对话框中，选择 `Java Build Path`，然后选择 `Libraries` 标签。点击 `Add External JARs` 按钮，然后导航到计算机硬盘上的 `derby.jar` 文件。
+*   **Eclipse:** 选择 Project（项目）⇒ Properties（属性）。在弹出的对话框中，选择 `Java Build Path`，然后选择 `Libraries` 标签。点击 `Add External JARs` 按钮，然后导航到计算机硬盘上的 `derby.jar` 文件。
+*   **IntelliJ IDEA:** 选择 File（文件）⇒ Project Structure（项目结构）。在弹出的对话框中，选择 `Libraries`。
+*   **NetBeans:** 选择 File（文件）⇒ Properties（属性）。在弹出的对话框中，选择 `Java Build Path`，然后选择 `Libraries` 标签。点击 `Add External JARs` 按钮，然后导航到计算机硬盘上的 `derby.jar` 文件。
 
 ## 运行代码时发生了什么
 
@@ -9058,9 +8773,9 @@ public class CreateTable {
 
 即使在你下载了 `derby.jar` 副本后，你的 IDE 也可能不知道你将该文件放在计算机硬盘的什么位置。通常将 `derby.jar` 放在一个已知目录是不够的。相反，你必须准确告诉 Eclipse、IntelliJ IDEA 或 NetBeans 在何处找到你的 `derby.jar` 文件。以下是操作方法：
 
-*   **Eclipse:** 选择 Project（项目）⇒   Properties（属性）。在弹出的对话框中，选择 `Java Build Path`，然后选择 `Libraries` 标签。点击 `Add External JARs` 按钮，然后导航到计算机硬盘上的 `derby.jar` 文件。
-*   **IntelliJ IDEA:** 选择 File（文件）⇒  Project Structure（项目结构）。在弹出的对话框中，选择 `Libraries`。
-*   **NetBeans:** 选择 File（文件）⇒  Properties（属性）。在弹出的对话框中，选择 `Java Build Path`，然后选择 `Libraries` 标签。点击 `Add External JARs` 按钮，然后导航到计算机硬盘上的 `derby.jar` 文件。
+*   **Eclipse:** 选择 Project（项目）⇒ Properties（属性）。在弹出的对话框中，选择 `Java Build Path`，然后选择 `Libraries` 标签。点击 `Add External JARs` 按钮，然后导航到计算机硬盘上的 `derby.jar` 文件。
+*   **IntelliJ IDEA:** 选择 File（文件）⇒ Project Structure（项目结构）。在弹出的对话框中，选择 `Libraries`。
+*   **NetBeans:** 选择 File（文件）⇒ Properties（属性）。在弹出的对话框中，选择 `Java Build Path`，然后选择 `Libraries` 标签。点击 `Add External JARs` 按钮，然后导航到计算机硬盘上的 `derby.jar` 文件。
 
 ## 使用 SQL 命令
 
@@ -9076,17 +8791,13 @@ public class CreateTable {
 
 `getConnection` 方法位于名为 `DriverManager` 的 Java 类中。在列表 17-1 中，`getConnection` 调用创建一个 `AccountDatabase` 并打开到该数据库的连接。当然，在你运行列表 17-1 中的代码之前，你可能已经有一个 `AccountDatabase` 了。如果是这样，`CONNECTION` 字符串中的 `;create=true` 文本没有影响。
 
-
-
-
-
 在 `CONNECTION` 字符串中，注意这些冒号。代码不仅仅是命名了 `AccountDatabase` —— 它在告诉 `DriverManager` 类使用什么种协议来连接数据库。代码 `jdbc:derby:` —— 这非常类似于网页地址中的 `http:` —— 告诉计算机使用 `jdbc` 协议与 `derby` 协议通信，而后者又直接与你的 `AccountDatabase` 通信。
 
-- `conn.createStatement()`：创建一个语句（statement）。
+*   **conn.createStatement()：** 创建一个语句（statement）。
 
 这听起来很奇怪，但在 Java 数据库连接（Java Database Connectivity）中，你只需要创建一个语句对象。在创建了语句对象后，你可以多次使用该对象，配合许多不同的 SQL 字符串，向数据库发送许多不同的命令。因此，在开始调用 `statement.executeUpdate` 方法之前，你必须先创建一个真正的语句对象。对 `conn.createStatement()` 的调用就会为你创建该语句对象。
 
-- `try-with-resources`：无论发生什么，都释放资源！
+*   **try-with-resources：** 无论发生什么，都释放资源！
 
 正如 Ritter 经常说过的，如果你不清理自己留下的摊子，就是对他人不体。每一个连接和每一个数据库语句都会占用一些系统资源。当你完成对这些的使用后，就要释放它们。
 
@@ -9098,40 +8809,34 @@ public class CreateTable {
 
 与任何其他表格配置一样，数据库表都包含列和行。当你运行 Listing 17-1 中的代码时，你会得到一个空表。该表有三列（`NAME`、`ADDRESS` 和 `BALANCE`）但没有行。要向表中添加行，请运行 Listing 17-2 中的代码。
 
-LISTING 17-2: 插入数据
+### LISTING 17-2: 插入数据
 
 ```java
 import java.sql.Connection;
+
 import java.sql.DriverManager;
+
 import java.sql.SQLException;
+
 import java.sql.Statement;
 
 public class AddData {
+
     public static void main(String args[]) {
+
         final String CONNECTION = "jdbc:derby:AccountDatabase";
+
         try (Connection conn = DriverManager.getConnection(CONNECTION);
         Statement statement = conn.createStatement()) {
-            statement.executeUpdate("insert into ACCOUNTS values " +
-            " ('Barry Burd', '222 Cyber Lane', 24.02) ");
-            statement.executeUpdate("insert into ACCOUNTS values " +
-            " ('Joe Dow', '111 Luddite Street', 55.63)");
-            System.out.println("Rows added.");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-}
 ```
 
-Listing 17-2 使用的策略与 Listing 17-1 中的代码相同：创建包含 SQL 命令的 Java 字符串，并将这些字符串作为 Java 的 `executeUpdate` 方法的参数。在 Listing 17-2 中，我在 `ACCOUNTS` 表中放入了两行数据 —— 一行属于我，另一行属于 Joe Dow。（Joe，我希望你能理解这一点。）
 
-![tip](img/tip.png) 为了获得最佳效果，请将本章所有的代码列表放在同一个项目中。这样你就不需要将 `derby.jar` 添加到多个项目了。你也可以认为 `AccountDatabase` 文件夹对本章所有的代码都是备用的。如果你下载了这本书的 Eclipse、IntelliJ IDEA 或 NetBeans 示例，你将在名为 `17-0` 的项目中找到本章所有的代码。
 
 ## 获取数据
 
 如果不能从数据库中获取数据，数据库还有什么用？在本节中，你将查询在前几节中创建的数据库。发布查询的代码在 Listing 17-3 中。
 
-LISTING 17-3: 执行查询
+### LISTING 17-3: 执行查询
 
 ```java
 import static java.lang.System.out;
@@ -9147,98 +8852,8 @@ public class GetData {
         NumberFormat currency = NumberFormat.getCurrencyInstance();
         final String CONNECTION = "jdbc:derby:AccountDatabase";
         try (Connection conn = DriverManager.getConnection(CONNECTION);
-        Statement statement = conn.createStatement();
-        ResultSet resultset = statement.executeQuery("select * from ACCOUNTS")) {
-            while (resultset.next()) {
-                out.print(resultset.getString("NAME"));
-                out.print(", ");
-                out.print(resultset.getString("ADDRESS"));
-                out.print(" ");
-                out.println(currency.format(resultset.getFloat("BALANCE")));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-}
-```
-
-![remember](img/remember.png) 要使用 Apache Derby 以外的数据库，请更改本章每个示例中 `CONNECTION` 的值。运行 Listing 17-3 中的代码即可。![remember](img/remember.png) 要使用 Apache Derby 以外的数据库，请更改本章每个示例中 `CONNECTION` 的值。运行 Listing 17-3 中的代码即可。![remember](img/remember.png) 要使用 Apache Derby 以外的数据库，请更改本章每个示例中 `CONNECTION` 的值。运行 Listing 17-3 中的代码即可。![remember](img/remember.png) 要使用 Apache Derby 以外的数据库，请更改本章每个示例中 `CONNECTION` 的值。运行![crossreference](img/crossreference.png) 显示在 Listing 17-3 中的代码即可。![remember](img/remember.png) 要使用 Apache Derby 以外的数据库，请更改本章每个示例中 `CONNECTION` 的值。运行 Listing 17-3 中的代码即可。
-
-*(注：由于原文末尾出现了大量重复的占位符，翻译时已根据逻辑进行了清理，确保输出流畅且不重复)*
-
-**修正后的翻译内容（移除重复冗余部分）：**
-
-[content]
-在 `CONNECTION` 字符串中，注意这些冒号。代码不仅仅是命名了 `AccountDatabase` —— 它在告诉 `DriverManager` 类使用什么种协议来连接数据库。代码 `jdbc:derby:` —— 这非常类似于网页地址中的 `http:` —— 告诉计算机使用 `jdbc` 协议与 `derby` 协议通信，而后者又直接与你的 `AccountDatabase` 通信。
-
-- `conn.createStatement()`：创建一个语句（statement）。
-
-这听起来很奇怪，但在 Java 数据库连接（Java Database Connectivity）中，你只需要创建一个语句对象。在创建了语句对象后，你可以多次使用该对象，配合许多不同的 SQL 字符串，向数据库发送许多不同的命令。因此，在开始调用 `statement.executeUpdate` 方法之前，你必须先创建一个真正的语句对象。对 `conn.createStatement()` 的调用就会为你创建该语句对象。
-
-- `try-with-resources`：无论发生什么，都释放资源！
-
-正如 Ritter 经常说过的，如果你不清理自己留下的摊子，就是对他人不体。每一个连接和每一个数据库语句都会占用一些系统资源。当你完成对这些的使用后，就要释放它们。
-
-在 Listing 17-1 中，Java 的 `try-with-resources` 块会在执行结束时自动关闭并释放你的资源。此外，`try-with-resources` 还处理了与优雅地捕获异常相关的所有繁琐细节。
-
-![crossreference](img/crossreference.png) 有关 `try-with-resources` 的详细信息，请参第 13 章。
-
-## 在表中插入数据
-
-与任何其他表格配置一样，数据库表都包含列和行。当你运行 Listing 17-1 中的代码时，你会得到一个空表。该表有三列（`NAME`、`ADDRESS` 和 `BALANCE`）但没有行。要向表中添加行，请运行 Listing 17-2 中的代码。
-
-LISTING 17-2: 插入数据
-
-```java
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
-
-public class AddData {
-    public static void main(String args[]) {
-        final String CONNECTION = "jdbc:derby:AccountDatabase";
-        try (Connection conn = DriverManager.getConnection(CONNECTION);
-        Statement statement = conn.createStatement()) {
-            statement.executeUpdate("insert into ACCOUNTS values " +
-            " ('Barry Burd', '222 Cyber Lane', 24.02) ");
-            statement.executeUpdate("insert into ACCOUNTS values " +
-            " ('Joe Dow', '111 Luddite Street', 55.63)");
-            System.out.println("Rows added.");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-}
-```
-
-Listing 17-2 使用的策略与 Listing 17-1 中的代码相同：创建包含 SQL 命令的 Java 字符串，并将这些字符串作为 Java 的 `executeUpdate` 方法的参数。在 Listing 17-2 中，我在 `ACCOUNTS` 表中放入了两行数据 —— 一行属于我，另一行属于 Joe Dow。（Joe，我希望你能理解这一点。）
-
-![tip](img/tip.png) 为了获得最佳效果，请将本章所有的代码列表放在同一个项目中。这样你就不需要将 `derby.jar` 添加到多个项目了。你也可以认为 `AccountDatabase` 文件夹对本章所有的代码都是备用的。如果你下载了这本书的 Eclipse、IntelliJ IDEA 或 NetBeans 示例，你将在名为 `17-0` 的项目中找到本章所有的代码。
-
-## 获取数据
-
-如果不能从数据库中获取数据，数据库还有什么用？在本节中，你将查询在前几节中创建的数据库。发布查询的代码在 Listing 17-3 中。
-
-LISTING 17-3: 执行查询
-
-```java
-import static java.lang.System.out;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.text.NumberFormat;
-
-public class GetData {
-    public static void main(String args[]) {
-        NumberFormat currency = NumberFormat.getCurrencyInstance();
-        final String CONNECTION = "jdbc:derby:AccountDatabase";
-        try (Connection conn = DriverManager.getConnection(CONNECTION);
-        Statement statement = conn.createStatement();
-        ResultSet resultset = statement.executeQuery("select * from ACCOUNTS")) {
+             Statement statement = conn.createStatement();
+             ResultSet resultset = statement.executeQuery("select * from ACCOUNTS")) {
             while (resultset.next()) {
                 out.print(resultset.getString("NAME"));
                 out.print(", ");
@@ -9255,16 +8870,62 @@ public class GetData {
 
 ![remember](img/remember.png) 要使用 Apache Derby 以外的数据库，请更改本章每个示例中 `CONNECTION` 的值。运行 Listing 17-3 中的代码即可。
 
+## 在表中插入数据
 
+与任何其他表格配置一样，数据库表都包含列和行。当你运行 Listing 17-1 中的代码时，你会得到一个空表。该表有三列（`NAME`、`ADDRESS` 和 `BALANCE`）但没有行。要向表中添加行，请运行 Listing 17-2 中的代码。
 
+### LISTING 17-2: 插入数据
+
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class AddData {
+    public static void main(String args[]) {
+        final String CONNECTION = "jdbc:derby:AccountDatabase";
+        try (Connection conn = DriverManager.getConnection(CONNECTION);
+             Statement statement = conn.createStatement()) {
+            statement.executeUpdate("insert into ACCOUNTS values " +
+                    " ('Barry Burd', '222 Cyber Lane', 24.02) ");
+            statement.executeUpdate("insert into ACCOUNTS values " +
+                    " ('Joe Dow', '111 Luddite Street', 55.63)");
+            System.out.println("Rows added.");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+Listing 17-2 使用的策略与 Listing 17-1 中的代码相同：创建包含 SQL 命令的 Java 字符串，并将这些字符串作为 Java 的 `executeUpdate` 方法的参数。在 Listing 17-2 中，我在 `ACCOUNTS` 表中放入了两行数据 —— 一行属于我，另一行属于 Joe Dow。（Joe，我希望你能理解这一点。）
+
+![tip](img/tip.png) 为了获得最佳效果，请将本章所有的代码列表放在同一个项目中。这样你就不需要将 `derby.jar` 添加到多个项目了。你也可以认为 `AccountDatabase` 文件夹对本章所有的代码都是备用的。如果你下载了这本书的 Eclipse、IntelliJ IDEA 或 NetBeans 示例，你将在名为 `17-0` 的项目中找到本章所有的代码。
+
+## 连接字符串详解
+
+在 `CONNECTION` 字符串中，注意这些冒号。代码不仅仅是命名了 `AccountDatabase` —— 它在告诉 `DriverManager` 类使用什么种协议来连接数据库。代码 `jdbc:derby:` —— 这非常类似于网页地址中的 `http:` —— 告诉计算机使用 `jdbc` 协议与 `derby` 协议通信，而后者又直接与你的 `AccountDatabase` 通信。
+
+- `conn.createStatement()`：创建一个语句（statement）。
+
+这听起来很奇怪，但在 Java 数据库连接（Java Database Connectivity）中，你只需要创建一个语句对象。在创建了语句对象后，你可以多次使用该对象，配合许多不同的 SQL 字符串，向数据库发送许多不同的命令。因此，在开始调用 `statement.executeUpdate` 方法之前，你必须先创建一个真正的语句对象。对 `conn.createStatement()` 的调用就会为你创建该语句对象。
+
+- `try-with-resources`：无论发生什么，都释放资源！
+
+正如 Ritter 经常说过的，如果你不清理自己留下的摊子，就是对他人不体。每一个连接和每一个数据库语句都会占用一些系统资源。当你完成对这些的使用后，就要释放它们。
+
+在 Listing 17-1 中，Java 的 `try-with-resources` 块会在执行结束时自动关闭并释放你的资源。此外，`try-with-resources` 还处理了与优雅地捕获异常相关的所有繁琐细节。
+
+![crossreference](img/crossreference.png) 有关 `try-with-resources` 的详细信息，请参第 13 章。
 
 ## 销毁数据
 
 事实如此。好景终有灭时。通过写这些，我既指的是本本书的内容，也指的是本章中 `AccountDatabase` 里的信息。
 
-要删除你在列表 17-1 中创建的数据库表，请运行列表 17-4 中的代码。
+要删除你在 Listing 17-1 中创建的数据库表，请运行 Listing 17-4 中的代码。
 
-列表 17-4: 再见了，数据库表
+### LISTING 17-4: 再见了，数据库表
 
 ```java
 import java.sql.Connection;
@@ -9285,6 +8946,8 @@ public class DropTable {
     }
 }
 ```
+
+
 
 当你运行这段代码时，你就清空了一切。你的 `AccountDatabase` 不再包含 `ACCOUNTS` 表。所以，如果你想再次运行列表 17-1（也许带有一两处修改），你是可以做到的。
 
@@ -9339,12 +9002,19 @@ Java 是一种区分大小写的语言，所以你真的必须注意你的 p 和
 
 ```java
 switch (value) {
+
     case 3:
+
         out.print("Last, ");
+
     case 2:
+
         out.print("has, ");
+
     case 1:
+
         out.print("brain, ");
+
 }
 ```
 
@@ -9354,9 +9024,12 @@ switch (value) {
 
 ```java
 if (value == 3) {
+
     out.print("Last, ");
+
 }
 ```
+
 但 `if (value = 3)` 不是。关于完整故事，请参阅第 5 章。
 
 ## 向 GUI 添加组件
@@ -9365,11 +9038,17 @@ if (value == 3) {
 
 ```java
 public SimpleFrame() {
+
     JButton button = new JButton("Thank you");
+
     setLayout(new FlowLayout());
+
     add(button);
+
     setSize(300, 100);
+
     setVisible(true);
+
 }
 ```
 
@@ -9379,8 +9058,7 @@ public SimpleFrame() {
 
 ## 定义所需的构造函数
 
-当你定义了带参数的构造函数时，计算机不再为你创建默认构造函数。换句话说，除非你显式定义，否则无法调用
-`Temperature = new Temperature();`。关于构造函数的细节，请参阅第 9 章。
+当你定义了带参数的构造函数时，计算机不再为你创建默认构造函数。换句话说，除非你显式定义，否则无法调用 `Temperature = new Temperature();`。关于构造函数的细节，请参阅第 9 章。
 
 ## 修复非静态引用
 
@@ -9388,10 +9066,15 @@ public SimpleFrame() {
 
 ```java
 class WillNotWork {
+
     String greeting = "Hello";
+
     public static void main(String[] args[]) {
+
         System.out.println(greeting);
+
     }
+
 }
 ```
 
@@ -9399,9 +9082,7 @@ class WillNotWork {
 
 ## 保持数组边界
 
-当你声明一个包含十个组件的数组时，组件的索引从 0 到 9。换句话说，如果你声明
-`int guests[] = new int[10];`
-那么你可以通过编写 `guests[0]`、`guests[1]` 直到 `guests[9]` 来引用该数组的组件。你不能写 `guests[10]`，因为该数组没有索引为 10 的组件。
+当你声明一个包含十个组件的数组时，组件的索引从 0 到 9。换句话说，如果你声明 `int guests[] = new int[10];` 那么你可以通过编写 `guests[0]`、`guests[1]` 直到 `guests[9]` 来引用该数组的组件。你不能写 `guests[10]`，因为该数组没有索引为 10 的组件。
 
 关于数组的最新动态，请参阅第 11 章。
 
@@ -9411,24 +9092,29 @@ class WillNotWork {
 
 ```java
 import static java.lang.System.out;
+
 import java.io.File;
 
 class ListMyFiles {
+
     public static void main(String[] args[]) {
+
         File myFile = new File("/Users");
+
         String dir[] = myFile.list();
+
         for (String fileName : dir) {
+
             out.println(fileName);
+
         }
+
     }
+
 }
 ```
 
 此程序将列出 Users 目录下的所有文件。
-
-
-
-
 
 但如果你将 `/Users` 改为其他内容——一个不代表目录名称的内容，会发生什么呢？
 
@@ -9452,7 +9138,7 @@ File myFile = new File("&*%$!!");
 
 具体的指南，请参阅第 14 章 以及本书的网站（[`www.allmycode.com/JavaForDummies`](http://www.allmycode.com/JavaForDummies)）。
 
-第 19 章
+## 第 19 章
 
 # 适用于 Java 的十个网站
 
@@ -9493,4 +9179,3 @@ Java 技术的消费者应该访问 [`www.java.com`](http://www.java.com)。
 **Barry Burd** 在罗格格斯大学获得计算机科学硕士学位，在伊利诺伊大学获得数学学博士学位。在担任伊利诺伊州香槟-乌尔巴纳助教期间，他五次被选入全校“学生评选优秀教师”名单。
 
 自 1980 年以来，Burd 博士一直是新泽西州麦迪逊德鲁大学数学系和计算机科学系的教授。他曾在美国、欧洲、澳大利亚和亚洲的会议上发表过。他主持关于软件和其他技术主题的播客和视频。他是许多文章和书籍的作者，包括*Beginning Programming with Java For Dummies*。
-

@@ -1,3 +1,4 @@
+
 # 如何使用滚动窗格
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/components/scrollpane.html`](https://docs.oracle.com/javase/tutorial/uiswing/components/scrollpane.html)
@@ -11,7 +12,7 @@
 这是创建文本区域、将其设置为滚动窗格的客户端并将滚动窗格添加到容器的代码：
 
 ```java
-*//In a container that uses a BorderLayout:*
+//In a container that uses a BorderLayout:
 textArea = new JTextArea(5, 30);
 ...
 JScrollPane scrollPane = new JScrollPane(textArea);
@@ -19,7 +20,6 @@ JScrollPane scrollPane = new JScrollPane(textArea);
 setPreferredSize(new Dimension(450, 110));
 ...
 add(scrollPane, BorderLayout.CENTER);
-
 ```
 
 粗体代码行创建了`JScrollPane`，指定文本区域为滚动窗格的客户端。程序不会在`JScrollPane`对象上调用任何方法，因为滚动窗格会自动处理一切：在必要时创建滚动条，当用户移动滚动条时重新绘制客户端等。
@@ -29,19 +29,12 @@ add(scrollPane, BorderLayout.CENTER);
 本节的其余部分讨论以下主题：
 
 +   滚动窗格的工作原理
-
 +   设置滚动条策略
-
 +   提供自定义装饰
-
 +   实现具有滚动功能的客户端
-
 +   调整滚动窗格大小
-
 +   动态更改客户端大小
-
 +   滚动窗格 API
-
 +   使用滚动窗格的示例
 
 ## 滚动窗格的工作原理
@@ -52,36 +45,25 @@ add(scrollPane, BorderLayout.CENTER);
 
 此应用程序中的滚动窗格与先前的演示程序中的滚动窗格非常不同。这个滚动窗格不是显示文本，而是包含一个图像。滚动窗格还有两个滚动条，一个行标题，一个列标题和四个角，其中三个已经定制。
 
-* * *
-
 **试试这个：**
 
 1.  点击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 ScrollDemo（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 ScrollDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/ScrollDemoProject/ScrollDemo.jnlp)
+2.  移动滚动条上的旋钮。观察图像滚动以及水平和垂直标尺的滚动。
+3.  如果您的鼠标带有滚轮（通常位于鼠标按钮之间），请使用鼠标滚轮垂直滚动图像。
+4.  点击滚动窗格左上角的**cm**切换按钮。行和列标题上的单位将更改为英寸（或切换回厘米）。
+5.  点击滚动条上的箭头按钮。还可以尝试点击垂直滚动条旋钮上方或下方的轨道，或水平滚动条左侧或右侧。
+6.  将光标移动到图像上并按下光标。继续按住光标，拖动到图像外部的某个点并暂停。图像的可见区域朝光标移动。这种通过拖动进行滚动的功能由滚动窗格和`JComponent` API 启用，但由显示图像的自定义组件实现。
+7.  调整窗口大小。注意当滚动窗格足够大以显示整个图像时，滚动条会消失，并在滚动窗格太小以显示整个图像时重新出现。
 
-1.  移动滚动条上的旋钮。观察图像滚动以及水平和垂直标尺的滚动。
-
-1.  如果您的鼠标带有滚轮（通常位于鼠标按钮之间），请使用鼠标滚轮垂直滚动图像。
-
-1.  点击滚动窗格左上角的**cm**切换按钮。行和列标题上的单位将更改为英寸（或切换回厘米）。
-
-1.  点击滚动条上的箭头按钮。还可以尝试点击垂直滚动条旋钮上方或下方的轨道，或水平滚动条左侧或右侧。
-
-1.  将光标移动到图像上并按下光标。继续按住光标，拖动到图像外部的某个点并暂停。图像的可见区域朝光标移动。这种通过拖动进行滚动的功能由滚动窗格和`JComponent` API 启用，但由显示图像的自定义组件实现。
-
-1.  调整窗口大小。注意当滚动窗格足够大以显示整个图像时，滚动条会消失，并在滚动窗格太小以显示整个图像时重新出现。
-
-* * *
-
-在创建滚动窗格时，ScrollDemo 程序会建立滚动窗格的客户端：
+在创建滚动窗格时，`ScrollDemo`程序会建立滚动窗格的客户端：
 
 ```java
-//*Where the member variables are declared:*
+//Where the member variables are declared:
 private ScrollablePicture picture;
 ...
-//*Where the GUI is created:*
-picture = new ScrollablePicture( *...* );
+//Where the GUI is created:
+picture = new ScrollablePicture( ... );
 JScrollPane pictureScrollPane = new JScrollPane(picture);
-
 ```
 
 滚动窗格的客户端也被称为*视图*或*视口视图*。您可以通过调用`setViewportView`方法动态更改客户端。请注意，`JScrollPane`没有对应的`getViewportView`方法。如果您需要再次引用客户端对象，可以将其缓存在变量中，或在滚动窗格上调用`getViewport().getViewportView()`。
@@ -106,14 +88,13 @@ JScrollPane pictureScrollPane = new JScrollPane(picture);
 
 在`ScrollDemo`应用程序启动时，滚动窗格有两个滚动条。如果将窗口放大，两个滚动条都会消失，因为它们不再需要。然后，如果只缩小窗口的高度而不改变宽度，则垂直滚动条会重新出现。进一步的实验将显示，在此应用程序中，根据需要，两个滚动条都会消失和重新出现。此行为由滚动窗格的*滚动条策略*控制，实际上，有两种策略：每个滚动条都有自己的策略。
 
-`ScrollDemo`没有明确设置滚动窗格的滚动条策略  它使用默认值。您可以在创建滚动窗格时设置策略，或在运行时动态更改它们。
+`ScrollDemo`没有明确设置滚动窗格的滚动条策略，它使用默认值。您可以在创建滚动窗格时设置策略，或在运行时动态更改它们。
 
 在`JScrollPane`提供的构造函数中，这两个构造函数允许您在创建滚动窗格时设置滚动条策略：
 
 ```java
 JScrollPane(Component, int, int)
 JScrollPane(int, int)
-
 ```
 
 第一个`int`指定垂直滚动条的策略；第二个指定水平滚动条的策略。您还可以使用`setHorizontalScrollBarPolicy`和`setVerticalScrollBarPolicy`方法动态设置策略。在构造函数和方法中，使用[`ScrollPaneConstants`](https://docs.oracle.com/javase/8/docs/api/javax/swing/ScrollPaneConstants.html)接口中定义的以下常量之一（该接口由`JScrollPane`实现）：
@@ -137,11 +118,11 @@ JScrollPane(int, int)
 滚动窗格的行和列标题由自定义的`JComponent`子类`Rule`提供，该子类以厘米或英寸绘制标尺。以下是创建并设置滚动窗格的行和列标题的代码：
 
 ```java
-*//Where the member variables are defined:*
+//Where the member variables are defined:
 private Rule columnView;
 private Rule rowView;
 ...
-*//Where the GUI is initialized:*
+//Where the GUI is initialized:
 ImageIcon bee = createImageIcon("images/flyingBee.jpg");
 ...
 //Create the row and column headers.
@@ -151,7 +132,6 @@ rowView = new Rule(Rule.VERTICAL, true);
 ...
 pictureScrollPane.setColumnHeaderView(columnView);
 pictureScrollPane.setRowHeaderView(rowView);
-
 ```
 
 您可以为滚动窗格的行和列标题使用任何组件。滚动窗格将行和列标题放在它们自己的`JViewPort`中。因此，水平滚动时，列标题会跟随移动，垂直滚动时，行标题会跟随移动。确保行和列与视图具有相同的宽度和高度，因为`JScrollPane`不强制执行这些值具有相同的大小。如果一个与另一个不同，您可能无法获得所需的行为。
@@ -176,7 +156,6 @@ pictureScrollPane.setCorner(JScrollPane.LOWER_LEFT_CORNER,
                             new Corner());
 pictureScrollPane.setCorner(JScrollPane.UPPER_RIGHT_CORNER,
                             new Corner());
-
 ```
 
 记住，每个角的大小由相交的边的大小确定。对于某些组件，您必须确保组件的特定实例适合其角落。例如，程序设置了切换按钮的字体和边距，以使其适应标题所确定的空间。这不是`Corner`类的问题，因为该类用单一颜色填充其整个边界，无论它们是什么颜色。
@@ -191,16 +170,11 @@ pictureScrollPane.setCorner(JScrollPane.UPPER_RIGHT_CORNER,
 
 要自定义客户端组件与其滚动窗格的交互方式，您可以使组件实现[`Scrollable`](https://docs.oracle.com/javase/8/docs/api/javax/swing/Scrollable.html)接口。通过实现`Scrollable`，客户端可以指定用于查看它的视口的大小以及单击滚动条上不同控件时滚动的量。您还可以指定视图是否应跟踪视口的大小。当视口大于视图时，但视图应填充可用空间时，通常会使用此选项。
 
-* * *
-
 **注意：**如果您无法或不想实现可滚动的客户端，可以使用`setUnitIncrement`和`setBlockIncrement`方法来指定单位和块增量[`JScrollBar`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JScrollBar.html)。例如，以下代码将垂直滚动的单位增量设置为 10 像素：
 
 ```java
 scrollPane.getVerticalScrollBar().setUnitIncrement(10);
-
 ```
-
-* * *
 
 这里再次介绍滚动条的三个控制区域：旋钮、按钮和轨道。
 
@@ -211,18 +185,16 @@ scrollPane.getVerticalScrollBar().setUnitIncrement(10);
 `ScrollDemo`程序的客户端是`ScrollablePicture`。`ScrollablePicture`是`JLabel`的子类，提供了所有五个`Scrollable`方法的实现：
 
 +   `getScrollableBlockIncrement`
-
 +   `getScrollableUnitIncrement`
-
 +   `getPreferredScrollableViewportSize`
-
 +   `getScrollableTracksViewportHeight`
-
 +   `getScrollableTracksViewportWidth`
 
 `ScrollablePicture`主要实现`Scrollable`接口以影响单位和块增量。但是，它必须为所有五个方法提供实现。因此，它为其他三个方法提供了合理的默认值，您可能希望为您的滚动类复制这些默认值。
 
-每当用户单击滚动条上的按钮时，滚动窗格都会调用客户端的`getScrollableUnitIncrement`方法。只要客户端实现了 Scrollable 接口，这就是真的。此方法返回要滚动的像素数。该方法的一个明显实现是返回标头标尺上刻度标记之间的像素数。然而，`ScrollablePicture`做了不同的事情：它返回将图像定位在刻度标记边界上所需的值。以下是实现：
+
+
+每当用户单击滚动条上的按钮时，滚动窗格都会调用客户端的`getScrollableUnitIncrement`方法。只要客户端实现了`Scrollable`接口，这就是真的。此方法返回要滚动的像素数。该方法的一个明显实现是返回标头标尺上刻度标记之间的像素数。然而，`ScrollablePicture`做了不同的事情：它返回将图像定位在刻度标记边界上所需的值。以下是实现：
 
 ```java
 public int getScrollableUnitIncrement(Rectangle visibleRect,
@@ -249,12 +221,11 @@ public int getScrollableUnitIncrement(Rectangle visibleRect,
                  - currentPosition;
     }
 }
-
 ```
 
 如果图像已经在刻度标记边界上，此方法返回刻度之间的像素数。否则，它返回从当前位置到最近刻度的像素数。
 
-同样，滚动窗格在用户点击轨道时调用客户端的`getScrollableBlockIncrement`方法，但仅当客户端实现了 Scrollable 接口时才调用。这是`ScrollablePicture`对该方法的实现：
+同样，滚动窗格在用户点击轨道时调用客户端的`getScrollableBlockIncrement`方法，但仅当客户端实现了`Scrollable`接口时才调用。这是`ScrollablePicture`对该方法的实现：
 
 ```java
 public int getScrollableBlockIncrement(Rectangle visibleRect,
@@ -265,7 +236,6 @@ public int getScrollableBlockIncrement(Rectangle visibleRect,
     else
         return visibleRect.height - maxUnitIncrement;
 }
-
 ```
 
 此方法返回可见矩形的高度减去一个刻度标记。这种行为在垂直滚动时很典型，否则，它是宽度。块增量应略小于视口，以留下一点之前可见区域的上下文。例如，文本区域可能留下一两行文本作为上下文，表格可能留下一行或一列（取决于滚动方向）。
@@ -290,10 +260,9 @@ public class ScrollablePicture extends JLabel
     }
 ...
 }
-
 ```
 
-当用户从图片拖动到图片外部位置并暂停时，此代码片段会滚动图片。`setAutoscrolls`方法由`JComponent`定义，用于辅助滚动而不是实现拖动滚动。将 autoscrolls 属性设置为`true`会使组件即使鼠标没有移动（因为它在组件外部停止拖动），也会触发合成鼠标拖动事件。组件的鼠标移动监听器应该监听这些事件并做出相应反应。
+当用户从图片拖动到图片外部位置并暂停时，此代码片段会滚动图片。`setAutoscrolls`方法由`JComponent`定义，用于辅助滚动而不是实现拖动滚动。将`autoscrolls`属性设置为`true`会使组件即使鼠标没有移动（因为它在组件外部停止拖动），也会触发合成鼠标拖动事件。组件的鼠标移动监听器应该监听这些事件并做出相应反应。
 
 ## 调整滚动窗格大小
 
@@ -324,13 +293,12 @@ if (changed) {
     //Update client's preferred size because
     //the area taken up by the graphics has
     //gotten larger or smaller (if cleared).
-    drawingArea.setPreferredSize(*/* the new size */*);
+    drawingArea.setPreferredSize(/* the new size */);
 
     //Let the scroll pane know to update itself
     //and its scroll bars.
     drawingArea.revalidate();
 }
-
 ```
 
 请注意，当客户端更改大小时，滚动条会调整。滚动窗格不会调整大小，视口也不会调整大小。
@@ -351,11 +319,12 @@ if (changed) {
 
 +   与滚动相关的其他类中的方法
 
-设置滚动窗格
+### 设置滚动窗格
 
 （`JScrollPane`构造函数和方法）
 
 | 方法或构造函数 | 目的 |
+
 | --- | --- |
 
 | [JScrollPane()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JScrollPane.html#JScrollPane--) [JScrollPane(Component)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JScrollPane.html#JScrollPane-java.awt.Component-)
@@ -365,71 +334,63 @@ if (changed) {
 [JScrollPane(Component, int, int)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JScrollPane.html#JScrollPane-java.awt.Component-int-int-) | 创建一个滚动窗格。`Component`参数在存在时设置滚动窗格的客户端。两个`int`参数在存在时分别设置垂直和水平滚动条策略。|
 
 | [`void setViewportView(Component)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JScrollPane.html#setViewportView-java.awt.Component-) | 设置滚动窗格的客户端。 |
-| --- | --- |
+
 | [`void setVerticalScrollBarPolicy(int)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JScrollPane.html#setVerticalScrollBarPolicy-int-) [`int getVerticalScrollBarPolicy()`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JScrollPane.html#getVerticalScrollBarPolicy--) | 设置或获取垂直滚动策略。`ScrollPaneConstants`定义了三个值来指定此策略：`VERTICAL_SCROLLBAR_AS_NEEDED`（默认值）、`VERTICAL_SCROLLBAR_ALWAYS`和`VERTICAL_SCROLLBAR_NEVER`。 |
+
 | [void setHorizontalScrollBarPolicy(int)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JScrollPane.html#setHorizontalScrollBarPolicy-int-) [int getHorizontalScrollBarPolicy()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JScrollPane.html#getHorizontalScrollBarPolicy--) | 设置或获取水平滚动策略。`ScrollPaneConstants`定义了三个值来指定此策略：`HORIZONTAL_SCROLLBAR_AS_NEEDED`（默认值）、`HORIZONTAL_SCROLLBAR_ALWAYS`和`HORIZONTAL_SCROLLBAR_NEVER`。 |
+
 | [void setViewportBorder(Border)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JScrollPane.html#setViewportBorder-javax.swing.border.Border-) [Border getViewportBorder()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JScrollPane.html#getViewportBorder--) | 设置或获取视口周围的边框。这比在组件上设置边框更可取。 |
+
 | [boolean isWheelScrollingEnabled()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JScrollPane.html#isWheelScrollingEnabled--) | 设置或获取是否响应鼠标滚轮进行滚动。默认情况下启用鼠标滚轮滚动。 |
 
-装饰滚动窗格
+### 装饰滚动窗格
 
-(`JScrollPane` 方法)
+（`JScrollPane` 方法）
 
 | 方法 | 目的 |
+
 | --- | --- |
+
 | [void setColumnHeaderView(Component)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JScrollPane.html#setColumnHeaderView-java.awt.Component-) [void setRowHeaderView(Component)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JScrollPane.html#setRowHeaderView-java.awt.Component-) | 设置滚动窗格的列或行标题。 |
+
 | [void setCorner(String, Component)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JScrollPane.html#setCorner-java.lang.String-java.awt.Component-) [Component getCorner(String)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JScrollPane.html#getCorner-java.lang.String-) | 设置或获取指定的角落。`int` 参数指定哪个角落，并且必须是`ScrollPaneConstants`中定义的以下常量之一：`UPPER_LEFT_CORNER`、`UPPER_RIGHT_CORNER`、`LOWER_LEFT_CORNER`、`LOWER_RIGHT_CORNER`、`LOWER_LEADING_CORNER`、`LOWER_TRAILING_CORNER`、`UPPER_LEADING_CORNER`和`UPPER_TRAILING_CORNER`。 |
 
-实现滚动智能客户端
+### 实现滚动智能客户端
 
 | 方法 | 目的 |
+
 | --- | --- |
 
 | [int getScrollableUnitIncrement(Rectangle, int, int)](https://docs.oracle.com/javase/8/docs/api/javax/swing/Scrollable.html#getScrollableUnitIncrement-java.awt.Rectangle-int-int-) [int getScrollableBlockIncrement(Rectangle, int, int)](https://docs.oracle.com/javase/8/docs/api/javax/swing/Scrollable.html#getScrollableBlockIncrement-java.awt.Rectangle-int-int-)
 
-*(`Scrollable` 接口所需)* | 获取以像素为单位的单位或块增量。`Rectangle` 参数是当前可见矩形的边界。第一个 `int` 参数是根据用户单击的滚动条是 `SwingConstants.HORIZONTAL` 还是 `SwingConstants.VERTICAL`。第二个 `int` 参数指示要滚动的方向。小于 0 的值表示向上或向左。大于 0 的值表示向下或向右。
 
-| [Dimension getPreferredScrollableViewportSize()](https://docs.oracle.com/javase/8/docs/api/javax/swing/Scrollable.html#getPreferredScrollableViewportSize--) *(`Scrollable` 接口所需)* | 获取视口的首选大小。这允许客户端影响其显示的视口的大小。如果视口大小不重要，实现此方法以返回 `getPreferredSize`。 |
-| --- | --- |
 
-| [boolean getScrollableTracksViewportWidth()](https://docs.oracle.com/javase/8/docs/api/javax/swing/Scrollable.html#getScrollableTracksViewportWidth--) [boolean getScrollableTracksViewportHeight()](https://docs.oracle.com/javase/8/docs/api/javax/swing/Scrollable.html#getScrollableTracksViewportHeight--)
+# 滚动窗格相关方法
 
-*(`Scrollable` 接口所需)* | 获取滚动窗格是否应强制客户端与视口的宽度或高度相同。这两种方法中的任何一个返回 `true` 效果上都禁止水平或垂直滚动。
-
-| [void setAutoscrolls(boolean)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html#setAutoscrolls-boolean-) *(在 `JComponent` 中)* | 设置当用户将鼠标拖动到组件外部并停止时是否生成合成的鼠标拖动事件；这些事件对于通过拖动进行滚动是必要的。默认情况下，该值为 `false`，但许多可滚动的组件如 `JTable` 和自定义组件会将该值设置为 `true`。 |
-| --- | --- |
-
-与滚动相关的其他类中的方法
+## `Scrollable` 接口所需方法
 
 | 方法 | 目的 |
 | --- | --- |
-| [void scrollRectToVisible(Rectangle)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html#scrollRectToVisible-java.awt.Rectangle-) *(在 `JComponent` 中)* | 如果组件位于支持滚动的容器中，如滚动窗格，则调用此方法会滚动滚动窗格，使指定的矩形可见。 |
+| `int getScrollableUnitIncrement(Rectangle visibleRect, int orientation, int direction)` *(`Scrollable` 接口所需)* | 获取以像素为单位的单位或块增量。`Rectangle` 参数是当前可见矩形的边界。第一个 `int` 参数是根据用户单击的滚动条是 `SwingConstants.HORIZONTAL` 还是 `SwingConstants.VERTICAL`。第二个 `int` 参数指示要滚动的方向。小于 0 的值表示向上或向左。大于 0 的值表示向下或向右。 |
+| `Dimension getPreferredScrollableViewportSize()` *(`Scrollable` 接口所需)* | 获取视口的首选大小。这允许客户端影响其显示的视口的大小。如果视口大小不重要，实现此方法以返回 `getPreferredSize`。 |
+| `boolean getScrollableTracksViewportWidth()` `boolean getScrollableTracksViewportHeight()` *(`Scrollable` 接口所需)* | 获取滚动窗格是否应强制客户端与视口的宽度或高度相同。这两种方法中的任何一个返回 `true` 效果上都禁止水平或垂直滚动。 |
+| `void setAutoscrolls(boolean)` *(在 `JComponent` 中)* | 设置当用户将鼠标拖动到组件外部并停止时是否生成合成的鼠标拖动事件；这些事件对于通过拖动进行滚动是必要的。默认情况下，该值为 `false`，但许多可滚动的组件如 `JTable` 和自定义组件会将该值设置为 `true`。 |
 
-| [void setVisibleRowCount(int)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JList.html#setVisibleRowCount-int-) [int getVisibleRowCount()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JList.html#getVisibleRowCount--)
+## 与滚动相关的其他类中的方法
 
-*(在`JList`中)* | 设置或获取列表中有多少行是可见的。`getPreferredScrollableViewportSize`方法使用可见行数来计算其返回值。
-
-| [void ensureIndexIsVisible(int)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JList.html#ensureIndexIsVisible-int-) *(在`JList`中)* | 滚动以使指定索引处的行可见。此方法调用`scrollRectToVisible`，仅在列表位于支持滚动的容器中（如滚动窗格）时有效。 |
+| 方法 | 目的 |
 | --- | --- |
-
-| [void setVisibleRowCount(int)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTree.html#setVisibleRowCount-int-) [int getVisibleRowCount()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTree.html#getVisibleRowCount--)
-
-*(在`JTree`中)* | 设置或获取树中有多少行是可见的。`getPreferredScrollableViewportSize`方法使用可见行数来计算其返回值。
-
-| [void scrollPathToVisible(TreePath)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTree.html#scrollPathToVisible-javax.swing.tree.TreePath-) [void scrollRowToVisible(int)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTree.html#scrollRowToVisible-int-)
-
-*(在`JTree`中)* | 滚动以使指定的树路径或指定索引处的行可见。这些方法调用`scrollRectToVisible`，仅在树位于支持滚动的容器中（如滚动窗格）时有效。
-
-| [void setScrollsOnExpand(boolean)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTree.html#setScrollsOnExpand-boolean-) [boolean getScrollsOnExpand()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTree.html#getScrollsOnExpand--)
-
-*(在`JTree`中)* | 设置或获取用户展开节点时是否自动滚动。默认为 True。此功能仅在树位于支持滚动的容器中（如滚动窗格）时有效。
-
-| [void setPreferredScrollableViewportSize(Dimension)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#setPreferredScrollableViewportSize-java.awt.Dimension-) *(在`JTable`中)* | 设置`getPreferredScrollableViewportSize`返回的值。 |
-| --- | --- |
+| `void scrollRectToVisible(Rectangle)` *(在 `JComponent` 中)* | 如果组件位于支持滚动的容器中，如滚动窗格，则调用此方法会滚动滚动窗格，使指定的矩形可见。 |
+| `void setVisibleRowCount(int)` `int getVisibleRowCount()` *(在 `JList` 中)* | 设置或获取列表中有多少行是可见的。`getPreferredScrollableViewportSize` 方法使用可见行数来计算其返回值。 |
+| `void ensureIndexIsVisible(int)` *(在 `JList` 中)* | 滚动以使指定索引处的行可见。此方法调用 `scrollRectToVisible`，仅在列表位于支持滚动的容器中（如滚动窗格）时有效。 |
+| `void setVisibleRowCount(int)` `int getVisibleRowCount()` *(在 `JTree` 中)* | 设置或获取树中有多少行是可见的。`getPreferredScrollableViewportSize` 方法使用可见行数来计算其返回值。 |
+| `void scrollPathToVisible(TreePath)` `void scrollRowToVisible(int)` *(在 `JTree` 中)* | 滚动以使指定的树路径或指定索引处的行可见。这些方法调用 `scrollRectToVisible`，仅在树位于支持滚动的容器中（如滚动窗格）时有效。 |
+| `void setScrollsOnExpand(boolean)` `boolean getScrollsOnExpand()` *(在 `JTree` 中)* | 设置或获取用户展开节点时是否自动滚动。默认为 `true`。此功能仅在树位于支持滚动的容器中（如滚动窗格）时有效。 |
+| `void setPreferredScrollableViewportSize(Dimension)` *(在 `JTable` 中)* | 设置 `getPreferredScrollableViewportSize` 返回的值。 |
 
 ## 使用滚动窗格的示例
 
-此表显示了使用`JScrollPane`的示例以及这些示例的描述位置。
+此表显示了使用 `JScrollPane` 的示例以及这些示例的描述位置。
 
 | 示例 | 描述位置 | 备注 |
 | --- | --- | --- |

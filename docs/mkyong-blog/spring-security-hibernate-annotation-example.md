@@ -1,3 +1,4 @@
+
 # Spring Security + Hibernate 注释示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring-security/spring-security-hibernate-annotation-example/>
@@ -6,32 +7,34 @@
 
 在本教程中，先前的[Spring Security+hibernate 4 XML](http://web.archive.org/web/20190220134456/http://www.mkyong.com/spring-security/spring-security-hibernate-xml-example/)示例将被重用，并将其转换为基于注释的示例。
 
-使用的技术:
+使用的技术：
 
-1.  弹簧 3.2.8 释放
-2.  Spring Security 3.2.3 .发布
-3.  Hibernate 4.2.11 .最终版
-4.  MySQL 服务器 5.6
-5.  Tomcat 7 (Servlet 3.x 容器)
+1. 弹簧 3.2.8 释放
+2. Spring Security 3.2.3 .发布
+3. Hibernate 4.2.11 .最终版
+4. MySQL 服务器 5.6
+5. Tomcat 7 (Servlet 3.x 容器)
 
-快速笔记:
+快速笔记：
 
-1.  用`LocalSessionFactoryBuilder`创建一个会话工厂
-2.  将会话工厂注入用户道
-3.  将 UserDao 集成到一个自定义的`UserDetailsService`中，从数据库中加载用户。
+1. 用`LocalSessionFactoryBuilder`创建一个会话工厂
+2. 将会话工厂注入用户道
+3. 将`UserDao`集成到一个自定义的`UserDetailsService`中，从数据库中加载用户。
 
-## 1.项目目录
+## 1. 项目目录
 
 最终项目目录结构。
 
-![spring-security-hibernate-annotation-directory](img/ce0b86d3ddddac703eb7e09cde1cf33b.png) ## 2.用户模型+映射文件
+![spring-security-hibernate-annotation-directory](img/ce0b86d3ddddac703eb7e09cde1cf33b.png)
+
+## 2. 用户模型+映射文件
 
 模型类及其基于注释的映射文件。
 
-User.java
+`User.java`
 
 ```java
- package com.mkyong.users.model;
+package com.mkyong.users.model;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -107,13 +110,13 @@ public class User {
 		this.userRole = userRole;
 	}
 
-} 
+}
 ```
 
-UserRole.java
+`UserRole.java`
 
 ```java
- package com.mkyong.users.model;
+package com.mkyong.users.model;
 
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Column;
@@ -175,17 +178,17 @@ public class UserRole{
 		this.role = role;
 	}
 
-} 
+}
 ```
 
- ## 3.道类
+## 3. 道类
 
 DAO 类，通过 Hibernate 从数据库加载数据。
 
-UserDao.java
+`UserDao.java`
 
 ```java
- package com.mkyong.users.dao;
+package com.mkyong.users.dao;
 
 import com.mkyong.users.model.User;
 
@@ -193,13 +196,13 @@ public interface UserDao {
 
 	User findByUserName(String username);
 
-} 
+}
 ```
 
-UserDaoImpl.java
+`UserDaoImpl.java`
 
 ```java
- package com.mkyong.users.dao;
+package com.mkyong.users.dao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -234,17 +237,17 @@ public class UserDaoImpl implements UserDao {
 
 	}
 
-} 
+}
 ```
 
-## 4.用户详细信息服务
+## 4. 用户详细信息服务
 
 使用`@Transactional`来声明一个事务方法。
 
-MyUserDetailsService.java
+`MyUserDetailsService.java`
 
 ```java
- package com.mkyong.users.service;
+package com.mkyong.users.service;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -305,17 +308,19 @@ public class MyUserDetailsService implements UserDetailsService {
 		return Result;
 	}
 
-} 
+}
 ```
 
-## 5.Spring 安全注释
+## 5. Spring 安全注释
 
 用注释声明和绑定一切，阅读注释，它应该是不言自明的。
 
-SecurityConfig.java
+`SecurityConfig.java`
+
+
 
 ```java
- package com.mkyong.config;
+package com.mkyong.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -361,15 +366,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		return encoder;
 	}
 
-} 
+}
 ```
 
 使用`LocalSessionFactoryBuilder`创建一个会话工厂。
 
-AppConfig.java
+`AppConfig.java`
 
 ```java
- package com.mkyong.config;
+package com.mkyong.config;
 
 import java.util.Properties;
 import org.apache.commons.dbcp.BasicDataSource;
@@ -437,26 +442,26 @@ public class AppConfig {
 		return viewResolver;
 	}
 
-} 
+}
 ```
 
 完成了。
 
-## 6.项目演示
+## 6. 项目演示
 
 以下视频演示为 [Spring 安全数据库登录](http://web.archive.org/web/20190220134456/http://www.mkyong.com/spring-security/spring-security-form-login-using-database/)教程。由于本教程生成相同的输出，所以视频演示被重用。
 
 [//web.archive.org/web/20190220134456if_/http://www.youtube.com/embed/2ms57c2EdUg](//web.archive.org/web/20190220134456if_/http://www.youtube.com/embed/2ms57c2EdUg)
 
-6.1 进入密码保护页面:*http://localhost:8080/spring-security-hibernate-annotation/admin*，显示登录页面。
+6.1 进入密码保护页面：`http://localhost:8080/spring-security-hibernate-annotation/admin`，显示登录页面。
 
 ![spring-security-hibernate-annotation1](img/5aec01079926dd8bcbab48cd723d55f2.png)
 
-6.2 输入用户“mkyong”和密码“123456”。
+6.2 输入用户`mkyong`和密码`123456`。
 
 ![spring-security-hibernate-annotation2](img/3b134d8569704f44fccefb778cf523cf.png)
 
-6.3 使用用户“alex”和密码“123456”尝试访问`/admin`页面，将显示 403 页面。
+6.3 使用用户`alex`和密码`123456`尝试访问`/admin`页面，将显示 403 页面。
 
 ![spring-security-hibernate-annotation3](img/83415941306cacb1a15f5ad563f1413c.png)
 
@@ -466,21 +471,14 @@ Download it – [spring-security-hibernate-annotation.zip](http://web.archive.or
 
 ## 参考
 
-1.  [Spring Security + Hibernate XML 示例](http://web.archive.org/web/20190220134456/http://www.mkyong.com/spring-security/spring-security-hibernate-xml-example/)
-2.  [春安你好世界注释示例](http://web.archive.org/web/20190220134456/http://www.mkyong.com/spring-security/spring-security-hello-world-annotation-example/)
-3.  [LocalSessionFactoryBuilder JavaDoc](http://web.archive.org/web/20190220134456/http://docs.spring.io/spring/docs/3.2.x/javadoc-api/org/springframework/orm/hibernate4/LocalSessionFactoryBuilder.html)
-4.  [春季 ORM–冬眠](http://web.archive.org/web/20190220134456/http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/htmlsingle/#orm-hibernate)
-5.  [春季冬眠 4 LocalSessionFactoryBean JavaDoc](http://web.archive.org/web/20190220134456/http://docs.spring.io/spring/docs/3.2.x/javadoc-api/org/springframework/orm/hibernate4/LocalSessionFactoryBean.html)
-6.  [春季交易管理](http://web.archive.org/web/20190220134456/http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/htmlsingle/#transaction)
-7.  [Hibernate ORM 文档](http://web.archive.org/web/20190220134456/http://hibernate.org/orm/documentation/)
-8.  [用 JDBC 的 Spring 安全表单登录数据库](http://web.archive.org/web/20190220134456/http://www.mkyong.com/spring-security/spring-security-form-login-using-database/)
-9.  [休眠:没有为当前线程](http://web.archive.org/web/20190220134456/http://www.mkyong.com/spring/spring-hibernate-no-session-found-for-current-thread/)找到会话
+1. [Spring Security + Hibernate XML 示例](http://web.archive.org/web/20190220134456/http://www.mkyong.com/spring-security/spring-security-hibernate-xml-example/)
+2. [春安你好世界注释示例](http://web.archive.org/web/20190220134456/http://www.mkyong.com/spring-security/spring-security-hello-world-annotation-example/)
+3. [LocalSessionFactoryBuilder JavaDoc](http://web.archive.org/web/20190220134456/http://docs.spring.io/spring/docs/3.2.x/javadoc-api/org/springframework/orm/hibernate4/LocalSessionFactoryBuilder.html)
+4. [春季 ORM–冬眠](http://web.archive.org/web/20190220134456/http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/htmlsingle/#orm-hibernate)
+5. [春季冬眠 4 LocalSessionFactoryBean JavaDoc](http://web.archive.org/web/20190220134456/http://docs.spring.io/spring/docs/3.2.x/javadoc-api/org/springframework/orm/hibernate4/LocalSessionFactoryBean.html)
+6. [春季交易管理](http://web.archive.org/web/20190220134456/http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/htmlsingle/#transaction)
+7. [Hibernate ORM 文档](http://web.archive.org/web/20190220134456/http://hibernate.org/orm/documentation/)
+8. [用 JDBC 的 Spring 安全表单登录数据库](http://web.archive.org/web/20190220134456/http://www.mkyong.com/spring-security/spring-security-form-login-using-database/)
+9. [休眠:没有为当前线程](http://web.archive.org/web/20190220134456/http://www.mkyong.com/spring/spring-hibernate-no-session-found-for-current-thread/)找到会话
 
 [annotation](http://web.archive.org/web/20190220134456/http://www.mkyong.com/tag/annotation/) [spring hibernate](http://web.archive.org/web/20190220134456/http://www.mkyong.com/tag/spring-hibernate/) [spring security](http://web.archive.org/web/20190220134456/http://www.mkyong.com/tag/spring-security/)
-
-
-
-
-
-
-

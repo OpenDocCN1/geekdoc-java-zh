@@ -1,3 +1,4 @@
+
 # Coursera 上 2022 年初学者学习数据科学和机器学习的 5 门最佳免费课程
 
 > 原文：<https://medium.com/javarevisited/5-best-free-coursera-courses-for-data-scientists-and-machine-learning-engineers-74017e148d22?source=collection_archive---------2----------------------->
@@ -8,7 +9,7 @@
 
 大家好，如果你想在 2022 年成为一名数据科学家或机器学习工程师，并想在 Coursera 上学习数据科学，但正在寻找免费的 Coursera 数据科学课程，那么你来对地方了。
 
-早些时候，我分享了数据科学的 [**最佳 Coursera 课程**](/javarevisited/11-best-coursera-certifications-and-courses-for-data-science-and-analysis-in-2021-65ce1ac810a5) 以及 [**15 个免费 Coursera 课程**](/javarevisited/top-15-free-coursera-courses-and-certifications-for-it-professionals-384207d56f45) 我分享了几个免费的数据科学课程，但你们中的许多人问得更多，
+早些时候，我分享了数据科学的[**最佳 Coursera 课程**](/javarevisited/11-best-coursera-certifications-and-courses-for-data-science-and-analysis-in-2021-65ce1ac810a5)以及[**15 个免费 Coursera 课程**](/javarevisited/top-15-free-coursera-courses-and-certifications-for-it-professionals-384207d56f45)，我分享了几个免费的数据科学课程，但你们中的许多人问得更多。
 
 因此，我写了这篇文章，分享了 *5 个最好的数据科学免费课程*。这些课程是从顶尖大学如约翰霍普金斯大学、密歇根大学以及著名的科技公司如 IBM 中挑选出来的。
 
@@ -20,9 +21,9 @@
 
 不过，如果你有大学的数据科学学位，在实践中学习这个领域会更好。
 
-许多[在线课程](/javarevisited/my-favorite-data-science-and-machine-learning-courses-from-coursera-udemy-and-pluralsight-eafc73acc73f)将帮助你实现这一目标，其中一个最好的平台被称为 [**Coursera**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2F) ，课程几乎无所不包，不仅仅是数据科学，而且是免费的。但是要有证书就必须交钱。
+许多[在线课程](/javarevisited/my-favorite-data-science-and-machine-learning-courses-from-coursera-udemy-and-pluralsight-eafc73acc73f)将帮助你实现这一目标，其中一个最好的平台被称为[**Coursera**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2F)，课程几乎无所不包，不仅仅是数据科学，而且是免费的。但是要有证书就必须交钱。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2F>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2F>
 
 在这篇文章中，我整理了一份学习数据科学的最佳课程列表，即使你已经在这个领域工作，也可以提高你的技能。
 
@@ -30,7 +31,7 @@
 
 # 2022 年 Coursera 上的 5 个最佳数据科学和机器学习课程及认证
 
-这里是我的免费 Coursera 课程列表，你可以加入学习数据科学。这个列表包括学习数据科学基础知识的免费课程，像 [Python](/javarevisited/10-best-python-certification-courses-from-coursera-4576890eb6b3) 和 [R Programming](/javarevisited/10-best-r-programming-courses-for-data-science-and-statistics-8f84ebec4974) 、 [SQL](/javarevisited/8-free-oracle-database-and-sql-courses-for-beginners-f4e9b25b33c4) 、[数据科学工具](/javarevisited/10-essential-tools-data-scientists-should-learn-in-2022-acbae6558643)，以及像 [NumPy](/javarevisited/6-best-online-courses-to-learn-numpy-for-beginners-60120f611e06) 、 [Sci-kit Learn](/javarevisited/5-best-scikit-learn-online-courses-for-machine-learning-and-data-science-6beb02e9cca0) 、matplotlib 等库。
+这里是我的免费 Coursera 课程列表，你可以加入学习数据科学。这个列表包括学习数据科学基础知识的免费课程，像 [Python](/javarevisited/10-best-python-certification-courses-from-coursera-4576890eb6b3) 和 [R Programming](/javarevisited/10-best-r-programming-courses-for-data-science-and-statistics-8f84ebec4974)、[SQL](/javarevisited/8-free-oracle-database-and-sql-courses-for-beginners-f4e9b25b33c4)、[数据科学工具](/javarevisited/10-essential-tools-data-scientists-should-learn-in-2022-acbae6558643)，以及像 [NumPy](/javarevisited/6-best-online-courses-to-learn-numpy-for-beginners-60120f611e06)、[Sci-kit Learn](/javarevisited/5-best-scikit-learn-online-courses-for-machine-learning-and-data-science-6beb02e9cca0)、matplotlib 等库。
 
 ## 1.[Python 中的数据科学介绍](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fpython-data-analysis)【免费】
 
@@ -46,15 +47,15 @@
 
 [![](img/599f295bdf7e3059d4163060f308ced9.png)](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fpython-data-analysis)
 
-该课程由美国密歇根大学提供，也是 Python 专业 [**应用数据科学**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdata-science-python) 的一部分，如果你想获得 Coursera 的数据科学认证，可以加入该课程。
+该课程由美国密歇根大学提供，也是 Python 专业[**应用数据科学**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdata-science-python)的一部分，如果你想获得 Coursera 的数据科学认证，可以加入该课程。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdata-science-python>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdata-science-python>
 
 ## 2.[约翰·霍普金斯大学 R 编程](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fr-programming)
 
 数据科学家使用的一种流行编程语言是 R 编程语言。这是另一个面向数据科学家的流行的免费 Coursera 课程，它将教你如何使用 R 编程进行数据科学。
 
-在本课程中，您将在不同的环境(如 macOS 和 Windows)上安装和配置 R studio IDE，然后开始学习 R 数据类型，如向量&列表、矩阵、因子、数据帧。
+在本课程中，您将在不同的环境(如 macOS 和 Windows)上安装和配置 R studio IDE，然后开始学习 R 数据类型，如向量和列表、矩阵、因子、数据帧。
 
 接下来，您将看到像 if 语句、for 循环、while 循环和 scooping 规则这样的控制结构。稍后，您将讨论循环函数，比如对列表应用循环、应用、分割，以及调试工具，比如诊断问题等等。
 
@@ -66,15 +67,15 @@
 
 [![](img/97ee939e335e67ba7d19e347517e76b3.png)](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fr-programming)
 
-本课程也是 Coursera 和约翰霍普金大学广受欢迎的 [**数据科学专业**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fjhu-data-science) 的一部分，这是一个开启你数据科学职业生涯的伟大计划。由顶尖教授开发和教授的数据科学十门课程简介。
+本课程也是 Coursera 和约翰霍普金大学广受欢迎的[**数据科学专业**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fjhu-data-science)的一部分，这是一个开启你数据科学职业生涯的伟大计划。由顶尖教授开发和教授的数据科学十门课程简介。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fjhu-data-science>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fjhu-data-science>
 
 ## 3.[使用 Python 开发用于数据科学的数据库和 SQL](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fsql-data-science)
 
-这是另一个面向数据科学家的受欢迎的免费 Coursera 课程。这个由 IBM 提供的免费课程由 Ravi Ahuja 教授，将教你 SQL，一个数据科学的基本工具。 [SQL 语言](https://javarevisited.blogspot.com/2018/05/top-5-sql-and-database-courses-to-learn-online.html)也在数据科学家中广泛使用，用于从数据库中提取数据进行分析。
+这是另一个面向数据科学家的受欢迎的免费 Coursera 课程。这个由 IBM 提供的免费课程由 Ravi Ahuja 教授，将教你 SQL，一个数据科学的基本工具。[SQL 语言](https://javarevisited.blogspot.com/2018/05/top-5-sql-and-database-courses-to-learn-online.html)也在数据科学家中广泛使用，用于从数据库中提取数据进行分析。
 
-在这门免费课程中，您将学习基本的 SQL 语句，并在实时数据库上练习它们，如 [SELECT](https://javarevisited.blogspot.com/2011/10/selct-command-sql-query-example.html#axzz6pRY6p3if) & INSERT 语句。然后，您将理解数据库关系及其背后的概念，以及如何创建表。
+在这门免费课程中，您将学习基本的 SQL 语句，并在实时数据库上练习它们，如 [SELECT](https://javarevisited.blogspot.com/2011/10/selct-command-sql-query-example.html#axzz6pRY6p3if) 和 INSERT 语句。然后，您将理解数据库关系及其背后的概念，以及如何创建表。
 
 接下来，您将学习如何使用字符串模式和游侠，以及对结果集进行排序和分组。您还将发现内置的数据库功能。稍后，您将学习如何使用 [python 语言](/swlh/5-free-python-courses-for-beginners-to-learn-online-e1ca90687caf)访问数据库，比如创建表格和加载数据。
 
@@ -84,23 +85,23 @@
 
 [![](img/71593c58f7253644068407972087219d.png)](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fsql-data-science)
 
-本课程也是 IBM 著名的 [**数据科学基础与 Python 和 SQL 专业**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdata-science-fundamentals-python-sql) 的一部分，这是一个为您的数据科学职业生涯奠定基础并开发 Jupyter、Python 和 SQL 实践经验的伟大计划。对真实数据集进行统计分析。
+本课程也是 IBM 著名的[**数据科学基础与 Python 和 SQL 专业**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdata-science-fundamentals-python-sql)的一部分，这是一个为您的数据科学职业生涯奠定基础并开发 Jupyter、Python 和 SQL 实践经验的伟大计划。对真实数据集进行统计分析。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdata-science-fundamentals-python-sql>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdata-science-fundamentals-python-sql>
 
-## 4.[应用 Python 进行绘图、制图&数据表示](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fpython-plotting)
+## 4.[应用 Python 进行绘图、制图和数据表示](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fpython-plotting)
 
 数据可视化和从数据中提取有意义的见解是数据科学家的主要目的和工作。你会明白信息可视化的原理。
 
 然后，您将使用真实数据深入图表，并使用 matplotlib 创建散点图、折线图、条形图等图形。
 
-本课程也是 Python 专业 应用数据科学 [**的一部分，是 Coursera 上数据科学的热门认证之一。**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdata-science-python)
+本课程也是 Python 专业[**应用数据科学**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdata-science-python)的一部分，是 Coursera 上数据科学的热门认证之一。
 
 您还将探索图表的基本原理，并实现新的可视化图表，如支线图、直方图、箱线图和热图。
 
 最后，您还将了解如何使用 [pandas](https://becominghuman.ai/5-best-courses-to-learn-pythons-pandas-libary-for-data-analysis-and-data-science-34b62abb0e96) 库和 matplotlib 等数据可视化库以及其他数据可视化工具 seaborn 来实现统计可视化。
 
-**这里是加入本课程** — [应用绘图，用 Python 制作&数据表示](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fpython-plotting)的链接
+**这里是加入本课程** — [应用绘图，用 Python 制作和数据表示](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fpython-plotting)的链接
 
 [![](img/1d026e7613fab54cbd1a24c85b3ce26b.png)](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fpython-plotting)
 
@@ -112,15 +113,17 @@
 
 然后你将评估和优化模型的性能。最后，你将深入高级监督学习，如随机森林和神经网络。
 
-该课程也是由美国顶级大学之一密歇根大学提供的 Python 专业 应用数据科学 [***的一部分。***](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdata-science-python)
+该课程也是由美国顶级大学之一密歇根大学提供的 Python 专业[**应用数据科学**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdata-science-python)的一部分。
 
 总之，用 Python 学习机器学习最好的免费 Coursera 课程之一。超过 237，000 名学生已经加入了这个课程，你也可以加入。
 
 **这里是加入本课程**—[Python 中的应用机器学习](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fpython-machine-learning)的链接
 
+
+
 [![](img/09eb3782bce036e084ebc61d994b53ee.png)](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fpython-machine-learning)
 
-以上是 Coursera 为初学者提供的**最佳免费数据科学课程**。对了，数据科学不仅仅是上一些课，自称数据科学家。
+以上是 Coursera 为初学者提供的最佳免费数据科学课程。对了，数据科学不仅仅是上一些课，自称数据科学家。
 
 不过，你必须[学习统计学](/javarevisited/5-best-mathematics-and-statistics-courses-for-data-science-and-machine-learning-programmers-bf4c4f34e288?source=---------23----------------------------)并在真实世界的数据集上进行越来越多的练习，才能有资格在一家公司获得一个通过数据为他们做出决策的职位。
 
@@ -128,7 +131,7 @@
 
 顺便说一句，如果你喜欢 Coursera 课程和认证，那么我也建议你加入 [**Coursera Plus**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus) ，这是 Coursera 的一个订阅项目，让你可以访问 7000 多门顶级 Coursera 课程和无限制的认证，每月仅需 59 美元。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
 你可能喜欢的其他 **Coursera 和编程文章**
 
@@ -154,4 +157,4 @@
 
 **附言——**如果你喜欢学习 Udemy 课程，并且正在寻找 Udemy 上最好的数据科学课程，那么我强烈推荐你参加 Udemy 上的这个 [**数据科学训练营 2022**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-data-science-course-complete-data-science-bootcamp%2F) 课程。这是最全面的课程之一，学习时间为 28.5 小时，已经有超过 40 万名学生参加了该课程。
 
-<https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-data-science-course-complete-data-science-bootcamp%2F> 
+<https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-data-science-course-complete-data-science-bootcamp%2F>

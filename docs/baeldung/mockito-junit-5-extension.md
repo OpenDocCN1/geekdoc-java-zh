@@ -1,8 +1,9 @@
-# Mockito 和 JUnit 5–使用 ExtendWith
+
+# Mockito 和 JUnit 5：使用 `ExtendWith`
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/mockito-junit-5-extension>
 
-## 1。概述
+## 1. 概述
 
 在这个快速教程中，我们将展示如何将 Mockito 与 JUnit 5 扩展模型集成。要了解更多关于 JUnit 5 扩展模型的信息，请看这篇[文章](/web/20221206183317/http://www.baeldung.com/junit-5-extensions)。
 
@@ -10,11 +11,11 @@
 
 然后，我们将在 JUnit 5 测试类中使用我们的 Mockito 扩展。
 
-## 2。Maven 依赖关系
+## 2. Maven 依赖关系
 
-### 2.1。所需的依赖关系
+### 2.1. 所需的依赖关系
 
-让我们将 JUnit 5 (jupiter)和`mockito`依赖项添加到我们的`pom.xml`中:
+让我们将 JUnit 5（jupiter）和`mockito`依赖项添加到我们的`pom.xml`中：
 
 ```java
 <dependency>
@@ -31,9 +32,9 @@
 </dependency>
 ```
 
-### 2.2。Surefire 插件
+### 2.2. Surefire 插件
 
-让我们配置 Maven Surefire 插件，使用新的 JUnit 平台启动器运行我们的测试类:
+让我们配置 Maven Surefire 插件，使用新的 JUnit 平台启动器运行我们的测试类：
 
 ```java
 <plugin>
@@ -49,13 +50,17 @@
 </plugin> 
 ```
 
-最新版本的`[junit-jupiter-engine](https://web.archive.org/web/20221206183317/https://search.maven.org/search?q=junit-jupiter-engine)`、[、`mockito-core`、](https://web.archive.org/web/20221206183317/https://search.maven.org/classic/#search%7Cga%7C1%7Cmockito-core)、`[junit-platform-surefire-provider](https://web.archive.org/web/20221206183317/https://search.maven.org/search?q=a:junit-platform-surefire-provider)`可以从 Maven Central 下载。
+最新版本的`junit-jupiter-engine`、`mockito-core`、`junit-platform-surefire-provider`可以从 Maven Central 下载：
 
-## 3。摩奇托扩展
+- [junit-jupiter-engine](https://web.archive.org/web/20221206183317/https://search.maven.org/search?q=junit-jupiter-engine)
+- [mockito-core](https://web.archive.org/web/20221206183317/https://search.maven.org/classic/#search%7Cga%7C1%7Cmockito-core)
+- [junit-platform-surefire-provider](https://web.archive.org/web/20221206183317/https://search.maven.org/search?q=a:junit-platform-surefire-provider)
 
-`Mockito`提供了库中 JUnit5 扩展的实现—`[mockito-junit-jupiter](https://web.archive.org/web/20221206183317/https://search.maven.org/search?q=a:mockito-junit-jupiter)`。
+## 3. Mockito 扩展
 
-我们将把这种依赖性包含在我们的`pom.xml`中:
+`Mockito`提供了库中 JUnit 5 扩展的实现，即`mockito-junit-jupiter`。
+
+我们将把这种依赖性包含在我们的`pom.xml`中：
 
 ```java
 <dependency>
@@ -66,9 +71,9 @@
 </dependency>
 ```
 
-## 4。构建测试类
+## 4. 构建测试类
 
-让我们构建我们的测试类，并将 Mockito 扩展附加到它:
+让我们构建我们的测试类，并将 Mockito 扩展附加到它：
 
 ```java
 @ExtendWith(MockitoExtension.class)
@@ -80,13 +85,13 @@ class UserServiceUnitTest {
 }
 ```
 
-我们可以使用`@Mock`注释为一个实例变量注入一个 mock，我们可以在测试类的任何地方使用它:
+我们可以使用`@Mock`注释为一个实例变量注入一个 mock，我们可以在测试类的任何地方使用它：
 
 ```java
 @Mock UserRepository userRepository;
 ```
 
-同样，我们可以将模拟对象注入到方法参数中:
+同样，我们可以将模拟对象注入到方法参数中：
 
 ```java
 @BeforeEach
@@ -103,9 +108,9 @@ void init(@Mock SettingRepository settingRepository) {
 }
 ```
 
-请注意这里`Mockito.lenient()`的用法。当一个初始化的 mock 在执行过程中没有被一个测试方法调用时,`Mockito`抛出一个`UnsupportedStubbingException` 。通过在初始化模拟时使用这种方法，我们可以避免这种严格的存根检查。
+请注意这里`Mockito.lenient()`的用法。当一个初始化的 mock 在执行过程中没有被一个测试方法调用时，`Mockito`抛出一个`UnsupportedStubbingException`。通过在初始化模拟时使用这种方法，我们可以避免这种严格的存根检查。
 
-我们甚至可以将模拟对象注入到测试方法参数中:
+我们甚至可以将模拟对象注入到测试方法参数中：
 
 ```java
 @Test
@@ -137,8 +142,8 @@ void givenValidUser_whenSaveUser_thenSucceed(@Mock MailClient mailClient) {
 
 注意，我们作为测试参数注入的`MailClient` mock 将不会是我们在`init`方法中注入的同一个实例。
 
-## 5。结论
+## 5. 结论
 
-Junit 5 为扩展提供了一个很好的模型。我们演示了一个简单的 Mockito 扩展，它简化了我们的模拟创建逻辑。
+JUnit 5 为扩展提供了一个很好的模型。我们演示了一个简单的 Mockito 扩展，它简化了我们的模拟创建逻辑。
 
 本文中使用的所有代码都可以在我们的 [GitHub 项目](https://web.archive.org/web/20221206183317/https://github.com/eugenp/tutorials/tree/master/testing-modules/mockito-simple)中找到。

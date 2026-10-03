@@ -1,3 +1,4 @@
+
 # 2023 年 Java 开发人员可以学习的 5 大数据框架
 
 > 原文：<https://medium.com/javarevisited/top-5-big-data-frameworks-java-developers-can-learn-in-2021-9a3e20437c8c?source=collection_archive---------0----------------------->
@@ -18,7 +19,7 @@
 
 这是 2023 年你可以学习的前 5 大数据框架列表。这些框架中的每一个都提供了不同的功能，了解它们的作用对于任何大数据程序员来说都是非常重要的。
 
-## 1.Apache Hadoop
+## 1. Apache Hadoop
 
 如果您听说过大数据，那么您可能也听说过 Hadoop 集群。对于许多人来说， [Apache Hadoop](/javarevisited/10-best-big-data-and-hadoop-tutorials-books-and-courses-to-learn-in-2020-aaca8cfccb80) 意味着大数据，为什么不呢，Apache Hadoop 可能是最受欢迎的大数据框架。
 
@@ -30,7 +31,7 @@ Apache Hadoop 是一个框架，它允许使用简单的编程模型跨计算机
 
 [![](img/09f7e5491c38fbd405408d2deceb732b.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fthe-ultimate-hands-on-hadoop-tame-your-big-data%2F)
 
-## 2.阿帕奇火花
+## 2. Apache Spark
 
 这是另一个相当流行且需求与日俱增的大数据框架。如果你想在大数据领域取得突破，在 2023 年学习 [Apache Spark](/javarevisited/5-free-courses-to-learn-apache-spark-in-2020-bdff2d60c800) 可以是一个很好的开始。
 
@@ -44,7 +45,7 @@ Apache Spark 是一个快速的内存数据处理引擎，具有优雅和丰富�
 
 <https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ftaming-big-data-with-apache-spark-hands-on%2F>  <https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fapache-spark-with-scala-hands-on-with-big-data%2F>  
 
-## 3.[阿帕奇蜂巢](https://hive.apache.org/)
+## 3. [Apache Hive](https://hive.apache.org/)
 
 Apache Hive 是一个大数据分析框架，由脸书创建，结合了最流行的大数据框架之一的可扩展性。
 
@@ -56,7 +57,7 @@ Hive 是一个开源软件，让程序员在 Hadoop 上分析大型数据集。�
 
 [![](img/8ae57d50e5ac4bb77db5dd7a455aeca2.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fhadoop-querying-tool-hive-to-advance-hivereal-time-usage%2F)
 
-## 4.[阿帕奇风暴](https://storm.apache.org/)
+## 4. [Apache Storm](https://storm.apache.org/)
 
 **Apache Storm** 是 2023 年另一个值得学习的大数据框架。该框架专注于处理大型实时数据流。Storm 的主要特点是可扩展性和停机后的快速恢复。
 
@@ -68,7 +69,7 @@ Apache Storm 对于**实时流处理**就像 Hadoop 对于**批处理**一样。
 
 [![](img/d1ba927043c42a0e912564c5ad0fc222.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-by-example-apache-storm%2F)
 
-## 5.阿帕奇·弗林克
+## 5. Apache Flink
 
 **Apache Flink** 是 2023 年另一个值得学习的健壮的流和批处理大数据处理框架。它是 Hadoop 和 Spark 的继任者。它是用于流处理的下一代大数据引擎。
 
@@ -87,22 +88,37 @@ Apache Storm 对于**实时流处理**就像 Hadoop 对于**批处理**一样。
 如果您仍然渴望获得另一个值得关注的大数据框架，那么 Apache Heron 是另一个新的闪亮的大数据处理引擎。Twitter 将其开发为 Storm 的新一代替代品。
 
 其他 **Java 和编程文章**你可能喜欢的
+
 [Java 程序员可以学习的 10 个技能加速自己的职业生涯](https://dev.to/javinpaul/10-skills-java-programmer-can-learn-to-accelerate-their-career-3nlh?fbclid=IwAR19fdBhg3zriyqcZyo9CfvMSHW_xKmNggTndkN-fFFfMaWH6VHG5T_Z6Rc)
+
 [Java 开发人员应该知道的 10 个测试工具和库](http://javarevisited.blogspot.sg/2018/01/10-unit-testing-and-integration-tools-for-java-programmers.html)
+
 [5 本面向有经验开发人员的 Spring 框架书](http://javarevisited.blogspot.sg/2018/04/5-spring-framework-books-experienced-Java-developers-2018.html)
+
 [成为软件架构师的 5 门课程](/javarevisited/top-5-courses-to-learn-software-architecture-in-2020-best-of-lot-5d34ebc52e9)
+
 [20 个春季 MVC 面试问题及答案](/javarevisited/21-spring-mvc-rest-interview-questions-answers-for-beginners-and-experienced-developers-21ad3d4c9b82)
+
 [2023 年 Java 开发人员应该阅读的 10 本书](http://www.java67.com/2018/02/10-books-java-developers-should-read-in.html)
+
 开发者路线图
+
 [2023 年你可以看的 21 本 Java 书](/javarevisited/10-books-java-developers-should-read-in-2020-e6222f25cc72)
+
 [用 Spring Cloud](http://javarevisited.blogspot.sg/2018/02/top-5-spring-microservices-courses-with-spring-boot-and-spring-cloud.html)
+
 [学习微服务的前 5 门课程 Java 开发者应该知道的前 20 个库](https://javarevisited.blogspot.com/2018/01/top-20-libraries-and-apis-for-java-programmers.html)
+
 [用 Spring Boot](/javarevisited/10-best-java-microservices-courses-with-spring-boot-and-spring-cloud-6d04556bdfed)
+
 [学习 Java 微服务的 10 门课程 2023 年 DevOps 路线图——如何更好地学习 devo PS](https://javarevisited.blogspot.com/2018/09/the-2018-devops-roadmap-your-guide-to-become-DevOps-Engineer.html)
+
+
+
 [每个 Java 程序员必备的 5 个框架](/javarevisited/5-essential-frameworks-every-java-developer-should-learn-6ed83315f1fb?source=---------12----------------------------)
 
 感谢您阅读本文。如果你喜欢这些大数据框架，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
 
 **P.S. —** 如果你想在 2023 年成为一名全栈开发人员，并且正在寻找全栈开发人员应该学习的最佳 Java 框架，那么我建议你参加 Udemy 网站上 Ranga Karnam 的 [**Go Java 全栈和 React**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ffull-stack-application-with-spring-boot-and-react%2F) 课程。2023 年成为全栈 Java 开发者是很棒的课程。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ffull-stack-application-with-spring-boot-and-react%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ffull-stack-application-with-spring-boot-and-react%2F>

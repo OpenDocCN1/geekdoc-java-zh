@@ -1,3 +1,4 @@
+
 # 操作小程序网页的 DOM
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/applet/manipulatingDOMFromApplet.html`](https://docs.oracle.com/javase/tutorial/deployment/applet/manipulatingDOMFromApplet.html)
@@ -6,7 +7,7 @@
 
 考虑一个 Java 小程序的示例，它会转储其父网页的内容。
 
-为了遍历和操作 DOM 树，您必须首先获取网页的`Document`对象的引用。您可以使用`com.sun.java.browser.plugin2.DOM`类中的`getDocument`方法来实现。以下是在``DOMDump``小程序的`start`方法中检索`Document`对象引用的代码片段。请查看代码中的内联注释。
+为了遍历和操作 DOM 树，您必须首先获取网页的`Document`对象的引用。您可以使用`com.sun.java.browser.plugin2.DOM`类中的`getDocument`方法来实现。以下是在`DOMDump`小程序的`start`方法中检索`Document`对象引用的代码片段。请查看代码中的内联注释。
 
 ```java
 public void start() {
@@ -31,7 +32,6 @@ public void start() {
         // com.sun.java.browser.plugin.dom package
     }
 }
-
 ```
 
 现在您已经获得了`Document`对象的引用，您可以使用 Common DOM API 遍历和修改 DOM 树。`DOMDump`小程序遍历 DOM 树并将其内容写入 Java 控制台日志。
@@ -80,21 +80,12 @@ private void dump(Node root, String prefix) {
         }
     }
 }
-
 ```
 
-在浏览器中打开``AppletPage.html``以查看`DOMDump`小程序的运行情况。检查 Java 控制台日志以获取网页 DOM 树的转储。
-
-* * *
+在浏览器中打开`AppletPage.html`以查看`DOMDump`小程序的运行情况。检查 Java 控制台日志以获取网页 DOM 树的转储。
 
 **注意：** 如果您看不到小程序运行，请至少安装[Java SE Development Kit (JDK) 6 update 10](http://www.oracle.com/technetwork/java/javase/downloads/index.html)版本。
 
-* * *
-
-* * *
-
 **注意：** 如果您看不到示例运行，您可能需要在浏览器中启用 JavaScript 解释器，以便 Deployment Toolkit 脚本能够正常运行。
-
-* * *
 
 下载源代码以进一步进行实验的*DOM Dump*示例。

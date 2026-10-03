@@ -1,21 +1,23 @@
-# Spring Data MongoDB:删除文档
+
+# Spring Data MongoDB：删除文档
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/mongodb/spring-data-mongodb-delete-document/>
 
-在 MongoDB 的 Spring data 中，可以使用`remove()`和`findAndRemove()`从 MongoDB 中删除文档。
+在 MongoDB 的 Spring Data 中，可以使用`remove()`和`findAndRemove()`从 MongoDB 中删除文档。
 
-1.  remove()–删除单个或多个文档。
-2.  删除单个文档，并返回被删除的文档。
+1. `remove()`——删除单个或多个文档。
+2. `findAndRemove()`——删除单个文档，并返回被删除的文档。
 
-**Common Mistake**
-Don’t use `findAndRemove()` to perform a batch delete (remove multiple documents), only the first document that matches the query will be removed. Refer query4 below:
+**常见错误**
 
-## 1.删除文档示例
+不要使用`findAndRemove()`执行批量删除（删除多个文档），它只会删除与查询匹配的第一个文档。请参考下面的`query4`：
 
-查看完整的示例，了解 remove()和 findAndRemove()的用法。
+## 1. 删除文档示例
+
+查看完整的示例，了解`remove()`和`findAndRemove()`的用法。
 
 ```java
- package com.mkyong.core;
+package com.mkyong.core;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -106,31 +108,26 @@ public class DeleteApp {
 
 	}
 
-} 
+}
 ```
 
-*输出*
+**输出**
 
 ```java
- Deleted document : User [id=5162e0153004c3cb0a907370, ic=1001, name=ant, age=10]
+Deleted document : User [id=5162e0153004c3cb0a907370, ic=1001, name=ant, age=10]
 
 All users : 
 User [id=5162e0153004c3cb0a907372, ic=1003, name=cat, age=30]
-User [id=5162e0153004c3cb0a907374, ic=1005, name=elephant, age=50] 
+User [id=5162e0153004c3cb0a907374, ic=1005, name=elephant, age=50]
 ```
 
- ## 下载源代码
+## 下载源代码
 
-Download it – [SpringMongoDB-Delete-Example.zip](http://web.archive.org/web/20190214015648/http://www.mkyong.com/wp-content/uploads/2011/05/SpringMongoDB-Delete-Example.zip) (24 KB) ## 参考
+下载：[SpringMongoDB-Delete-Example.zip](http://web.archive.org/web/20190214015648/http://www.mkyong.com/wp-content/uploads/2011/05/SpringMongoDB-Delete-Example.zip)（24 KB）
 
-1.  [从 MongoDB 中保存、更新和删除文档](http://web.archive.org/web/20190214015648/http://static.springsource.org/spring-data/mongodb/docs/current/reference/html/mongo.core.html#mongo-template.save-update-remove)
-2.  [Java MongoDB 删除示例/](http://web.archive.org/web/20190214015648/http://www.mkyong.com/mongodb/java-mongodb-delete-document/)
+## 参考
+
+1. [从 MongoDB 中保存、更新和删除文档](http://web.archive.org/web/20190214015648/http://static.springsource.org/spring-data/mongodb/docs/current/reference/html/mongo.core.html#mongo-template.save-update-remove)
+2. [Java MongoDB 删除示例](http://web.archive.org/web/20190214015648/http://www.mkyong.com/mongodb/java-mongodb-delete-document/)
 
 [delete](http://web.archive.org/web/20190214015648/http://www.mkyong.com/tag/delete/) [mongodb](http://web.archive.org/web/20190214015648/http://www.mkyong.com/tag/mongodb/) [spring-data](http://web.archive.org/web/20190214015648/http://www.mkyong.com/tag/spring-data/)
-
-
-
-
-
-
-

@@ -1,3 +1,4 @@
+
 # 创建
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/ldap/create.html`](https://docs.oracle.com/javase/tutorial/jndi/ldap/create.html)
@@ -8,15 +9,15 @@
 
 还有三种直接创建连接的方式。
 
-1.  通过将 URL 作为初始上下文的名称参数传递。当将 LDAP 或 LDAPS URL 作为名称参数传递给初始上下文时，URL 中的信息将用于创建到 LDAP 服务器的新连接，而不管初始上下文实例本身是否连接到 LDAP 服务器。实际上，初始上下文可能未连接到任何服务器。有关如何将 URL 用作名称的更多信息，请参见[JNDI 教程](https://docs.oracle.com/javase/jndi/tutorial/beyond/url/initctx.html)。
+1. 通过将 URL 作为初始上下文的名称参数传递。当将 LDAP 或 LDAPS URL 作为名称参数传递给初始上下文时，URL 中的信息将用于创建到 LDAP 服务器的新连接，而不管初始上下文实例本身是否连接到 LDAP 服务器。实际上，初始上下文可能未连接到任何服务器。有关如何将 URL 用作名称的更多信息，请参见[JNDI 教程](https://docs.oracle.com/javase/jndi/tutorial/beyond/url/initctx.html)。
 
-1.  另一种创建连接的方式是使用`Reference`。当传递包含 LDAP 或 LDAPS URL 的[`Reference`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Reference.html)给[`NamingManager.getObjectInstance()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/spi/NamingManager.html#getObjectInstance-java.lang.Object-javax.naming.Name-javax.naming.Context-java.util.Hashtable-)或[`DirectoryManager.getObjectInstance()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/spi/DirectoryManager.html#getObjectInstance-java.lang.Object-javax.naming.Name-javax.naming.Context-java.util.Hashtable-javax.naming.directory.Attributes-)时，将使用 URL 中指定的信息创建一个新连接。
+2. 另一种创建连接的方式是使用`Reference`。当传递包含 LDAP 或 LDAPS URL 的[`Reference`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Reference.html)给[`NamingManager.getObjectInstance()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/spi/NamingManager.html#getObjectInstance-java.lang.Object-javax.naming.Name-javax.naming.Context-java.util.Hashtable-)或[`DirectoryManager.getObjectInstance()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/spi/DirectoryManager.html#getObjectInstance-java.lang.Object-javax.naming.Name-javax.naming.Context-java.util.Hashtable-javax.naming.directory.Attributes-)时，将使用 URL 中指定的信息创建一个新连接。
 
-1.  最后，当手动或自动跟随引荐时，引荐中的信息将用于创建新连接。有关引荐的信息，请参见[JNDI 教程](https://docs.oracle.com/javase/jndi/tutorial/ldap/referral/index.html)。
+3. 最后，当手动或自动跟随引荐时，引荐中的信息将用于创建新连接。有关引荐的信息，请参见[JNDI 教程](https://docs.oracle.com/javase/jndi/tutorial/ldap/referral/index.html)。
 
 ## 共享连接
 
-从一个`Context`实例派生的`Context`实例和[`NamingEnumeration`s](https://docs.oracle.com/javase/8/docs/api/javax/naming/NamingEnumeration.html)将共享相同的连接，直到对其中一个`Context`实例进行更改使共享不再可能。 例如，如果您从初始上下文调用[`Context.lookup()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html#lookup-javax.naming.Name-)，[`Context.listBindings()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html#listBindings-javax.naming.Name-)或[`DirContext.search()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/directory/DirContext.html#search-javax.naming.Name-java.lang.String-javax.naming.directory.SearchControls-)并获得其他`Context`实例，则所有这些`Context`实例将共享相同的连接。
+从一个`Context`实例派生的`Context`实例和[`NamingEnumeration`s](https://docs.oracle.com/javase/8/docs/api/javax/naming/NamingEnumeration.html)将共享相同的连接，直到对其中一个`Context`实例进行更改使共享不再可能。例如，如果您从初始上下文调用[`Context.lookup()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html#lookup-javax.naming.Name-)、[`Context.listBindings()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html#listBindings-javax.naming.Name-)或[`DirContext.search()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/directory/DirContext.html#search-javax.naming.Name-java.lang.String-javax.naming.directory.SearchControls-)并获得其他`Context`实例，则所有这些`Context`实例将共享相同的连接。
 
 这里是一个`示例`。
 
@@ -29,14 +30,13 @@ Context ctx2 = (Context)ctx.lookup("");
 
 // Get a child context
 Context ctx3 = (Context) ctx.lookup("ou=NewHires");
-
 ```
 
-在这个示例中，`ctx`，`ctx2`和`ctx3`将共享相同的连接。
+在这个示例中，`ctx`、`ctx2`和`ctx3`将共享相同的连接。
 
-共享是无论`Context`实例如何产生都会进行的。 例如，通过遵循引荐获得的`Context`实例将与引荐共享相同的连接。
+共享是无论`Context`实例如何产生都会进行的。例如，通过遵循引荐获得的`Context`实例将与引荐共享相同的连接。
 
-当您更改与连接相关的`Context`实例的环境属性，例如用户的主体名称或凭据时，您进行这些更改的`Context`实例将获得自己的连接（如果连接是共享的）。 未来从此`Context`实例派生的`Context`实例将共享这个新连接。 先前共享旧连接的`Context`实例不受影响（即它们继续使用旧连接）。
+当您更改与连接相关的`Context`实例的环境属性，例如用户的主体名称或凭据时，您进行这些更改的`Context`实例将获得自己的连接（如果连接是共享的）。未来从此`Context`实例派生的`Context`实例将共享这个新连接。先前共享旧连接的`Context`实例不受影响（即它们继续使用旧连接）。
 
 这里是一个使用两个连接的`示例`。
 
@@ -54,14 +54,13 @@ ctx2.addToEnvironment(Context.SECURITY_CREDENTIALS, "mysecret");
 
 // Method on ctx2 will use new connection
 System.out.println(ctx2.getAttributes("ou=NewHires"));
-
 ```
 
-`ctx2`最初与`ctx`共享相同的连接。 但是当其主体和密码属性更改时，它将无法再使用`ctx`的连接。 LDAP 提供程序将自动为`ctx2`创建一个新连接。
+`ctx2`最初与`ctx`共享相同的连接。但是当其主体和密码属性更改时，它将无法再使用`ctx`的连接。LDAP 提供程序将自动为`ctx2`创建一个新连接。
 
 同样，如果您使用[`LdapContext.reconnect()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/ldap/LdapContext.html#reconnect-javax.naming.ldap.Control:A-)来更改`Context`实例的连接控制，如果连接正在共享，则`Context`实例将获得自己的连接。
 
-如果`Context`实例的连接未被共享（即没有`Context`派生自它），则对其环境或连接控制的更改不会导致创建新连接。 相反，与连接相关的任何更改将应用于现有连接。
+如果`Context`实例的连接未被共享（即没有`Context`派生自它），则对其环境或连接控制的更改不会导致创建新连接。相反，与连接相关的任何更改将应用于现有连接。
 
 ## 创建超时
 
@@ -83,7 +82,6 @@ env.put("com.sun.jndi.ldap.connect.timeout", "5000");
 DirContext ctx = new InitialDirContext(env);
 
 // do something useful with ctx
-
 ```
 
 在这个示例中，如果在 5 秒内无法创建连接，将抛出异常。

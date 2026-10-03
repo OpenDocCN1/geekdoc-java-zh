@@ -1,3 +1,4 @@
+
 # 课程：设置区域设置
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/locale/index.html`](https://docs.oracle.com/javase/tutorial/i18n/locale/index.html)

@@ -1,10 +1,11 @@
+
 # Java 中的三元运算符
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-ternary-operator>
 
 ## 1.概观
 
-三元条件运算符 `?:`允许我们在 Java 中定义表达式。**它是也返回值的`if-else`语句的浓缩形式。**
+三元条件运算符`?:`允许我们在 Java 中定义表达式。**它是也返回值的`if-else`语句的浓缩形式。**
 
 在本教程中，我们将学习何时以及如何使用三元结构。我们将从查看它的语法开始，然后探究它的用法。
 
@@ -12,19 +13,19 @@
 
 ## [Java 中的控制结构](/web/20221030195354/https://www.baeldung.com/java-control-structures)
 
-Learn about the control structures you can use in Java.[Read more](/web/20221030195354/https://www.baeldung.com/java-control-structures) →
+了解可以在 Java 中使用的控制结构。[阅读更多](/web/20221030195354/https://www.baeldung.com/java-control-structures) →
 
 ## [Java 中的 If-Else 语句](/web/20221030195354/https://www.baeldung.com/java-if-else)
 
-Learn how to use the if-else statement in Java.[Read more](/web/20221030195354/https://www.baeldung.com/java-if-else) →
+了解如何在 Java 中使用`if-else`语句。[阅读更多](/web/20221030195354/https://www.baeldung.com/java-if-else) →
 
 ## [如何在 Java 8 流中使用 if/else 逻辑](/web/20221030195354/https://www.baeldung.com/java-8-streams-if-else-logic)
 
-Learn how to apply if/else logic to Java 8 Streams.[Read more](/web/20221030195354/https://www.baeldung.com/java-8-streams-if-else-logic) →
+了解如何将`if/else`逻辑应用到 Java 8 流中。[阅读更多](/web/20221030195354/https://www.baeldung.com/java-8-streams-if-else-logic) →
 
 ## 2.句法
 
-Java 中的三元运算符`?:`是唯一接受三个操作数的运算符**:**
+Java 中的三元运算符`?:`是唯一接受三个操作数的运算符**：**
 
 ```java
 booleanExpression ? expression1 : expression2
@@ -34,7 +35,7 @@ booleanExpression ? expression1 : expression2
 
 ## 3.三元运算符示例
 
-让我们考虑这个`if-else`结构:
+让我们考虑这个`if-else`结构：
 
 ```java
 int num = 8;
@@ -49,7 +50,7 @@ else {
 
 这里，我们根据对`num`的条件评估，为`msg`赋值。
 
-我们可以通过简单地用一个三元结构替换`if-else`语句来使这段代码更加可读和安全:
+我们可以通过简单地用一个三元结构替换`if-else`语句来使这段代码更加可读和安全：
 
 ```java
 final String msg = num > 10 
@@ -61,7 +62,7 @@ final String msg = num > 10
 
 **使用 Java 三元结构时，在运行时只计算右边表达式中的一个，即`expression1`或`expression2`。**
 
-我们可以通过编写一个简单的`JUnit`测试用例来验证这一点:
+我们可以通过编写一个简单的`JUnit`测试用例来验证这一点：
 
 ```java
 @Test
@@ -75,9 +76,9 @@ public void whenConditionIsTrue_thenOnlyFirstExpressionIsEvaluated() {
 }
 ```
 
-我们的`boolean`表达式 `12 > 10`总是计算为`true`，所以`exp2`的值保持不变。
+我们的`boolean`表达式`12 > 10`总是计算为`true`，所以`exp2`的值保持不变。
 
-同样，让我们考虑一下在`false`条件下会发生什么:
+同样，让我们考虑一下在`false`条件下会发生什么：
 
 ```java
 @Test
@@ -97,21 +98,21 @@ public void whenConditionIsFalse_thenOnlySecondExpressionIsEvaluated() {
 
 我们可以将三元运算符嵌套到我们选择的任何级别。
 
-所以，这个结构在 Java 中是有效的:
+所以，这个结构在 Java 中是有效的：
 
 ```java
 String msg = num > 10 ? "Number is greater than 10" : 
   num > 5 ? "Number is greater than 5" : "Number is less than equal to 5";
 ```
 
-为了提高上面代码的可读性，我们可以在任何需要的地方使用大括号`()` :
+为了提高上面代码的可读性，我们可以在任何需要的地方使用大括号`()`：
 
 ```java
 String msg = num > 10 ? "Number is greater than 10" 
   : (num > 5 ? "Number is greater than 5" : "Number is less than equal to 5");
 ```
 
-然而**，**请注意，不建议在现实世界中使用这种深度嵌套的三元结构。这是因为它降低了代码的可读性和维护难度。
+然而，请注意，不建议在现实世界中使用这种深度嵌套的三元结构。这是因为它降低了代码的可读性和维护难度。
 
 ## 6.结论
 

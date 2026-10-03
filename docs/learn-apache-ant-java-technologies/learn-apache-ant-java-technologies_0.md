@@ -1,12 +1,7 @@
+
 # Learn Apache ANT [Java 技术]
 
-
-
-
-
-
 我想将这本书献给将使用这本书的学生们。祝你们未来职业成功，并希望你们永停止学习。
-
 
 # 引言
 
@@ -95,6 +90,7 @@ Ant(TM) version 1.10.9 compiled on September 27 2020
 ```
 
 注意声明之前不应该有空行。如果你允许，执行 ant 时会出现以下错误：
+
 `The processing instruction target matching is not allowed.`
 
 所有构建文件都需要 `project` 元素和至少一个 `target` 元素。
@@ -135,10 +131,6 @@ XML `project` 元素有三个属性：
 | 5 | `unless`: 将目标添加到指定扩展点的依赖列表中。扩展点与目标类似，但它包含任何任务（可选）。 |
 
 上述示例中的 `echo` 任务是一个打印消息的简单任务。在我们的示例中，它打印了消息 **Hello World**。
-
-
-
-
 
 要运行 ant 构建文件，请打开命令提示符并导航到 `build.xml` 所在的文件夹，然后输入 `ant info`。你也可以直接输入 `ant`。两种方法都可以生效，因为 `info` 是构建文件中的默认目标（target）。
 
@@ -212,8 +204,8 @@ C:\>
 
 将属性存储在单独文件中具有以下优点：
 
-*   它允许你重用同一个构建文件，针对不同的执行环境使用不同的属性设置。例如，可以为 DEV、TEST 和 PROD 环境单独维护构建属性文件。
-*   当你事先不知道某个属性（在特定环境中）的值时，它是很有用的。这允许你在已知属性值的其他环境中执行构建。
+* 它允许你重用同一个构建文件，针对不同的执行环境使用不同的属性设置。例如，可以为 DEV、TEST 和 PROD 环境单独维护构建属性文件。
+* 当你事先不知道某个属性（在特定环境中）的值时，它是很有用的。这允许你在已知属性值的其他环境中执行构建。
 
 这虽然没有硬性规定，但通常属性文件被命名为 `build.properties` 并放置在 `build.xml` 文件旁边。你可以根据部署环境创建多个构建属性文件 - 例如 `build.properties.dev` 和 `build.properties.test`。
 
@@ -295,9 +287,9 @@ Ant 提供以下数据类型：
 
 `pattern set` 允许根据某些模式轻松过滤文件或文件夹。可以使用以下元字符创建模式：
 
-*   `?` - 匹配一个字符。
-*   `*` - 匹配零或多个字符。
-*   `**` - 递归匹配零或多个目录。
+* `?` - 匹配一个字符。
+* `*` - 匹配零或多个字符。
+* `**` - 递归匹配零或多个目录。
 
 下面的示例描述了模式集的用法：
 
@@ -320,11 +312,8 @@ Ant 提供以下数据类型：
 
 `filelist` 数据类型与 `fileset` 相似，但有以下不同：
 
-*   它包含显式命的文件列表，不支持通配符。
-*   该数据类型可以应用于存在或不存在的文件。
-
-
-
+* 它包含显式命的文件列表，不支持通配符。
+* 该数据类型可以应用于存在或不存在的文件。
 
 让我们来看 `filelist` 数据类型的后续示例。在这里，属性 `webapp.src.folder` 指向项目的 Web 应用源码文件夹。
 
@@ -354,14 +343,18 @@ Ant 提供以下数据类型：
 
 在上述代码中 −
 
-*   属性 `output.dir` 指向项目的输出文件夹。
-*   属性 `releasenotes.dir` 指向项目的发布日志文件夹。
-*   属性 `current.version` 指向项目的当前版本文件夹。
-*   `copy` 任务正如其名，用于将文件从一个位置复制到另一个位置。
+* 属性 `output.dir` 指向项目的输出文件夹。
+* 属性 `releasenotes.dir` 指向项目的发布日志文件夹。
 
-### 路径 (Path)
 
-`path` 数据类型通常用于表示类路径（class-path）。path 中的条目使用分号或冒号分隔。然而，这些字符在运行时会被执行系统的路径分隔符所替换。
+
+属性 `current.version` 指向项目的当前版本文件夹。
+
+`copy` 任务正如其名，用于将文件从一个位置复制到另一个位置。
+
+## 路径 (Path)
+
+`path` 数据类型通常用于表示类路径（class-path）。`path` 中的条目使用分号或冒号分隔。然而，这些字符在运行时会被执行系统的路径分隔符所替换。
 
 类路径被设置为项目中 jar 文件和类的列表，如下例所示。
 
@@ -462,121 +455,6 @@ C:.
 *   `src.dir` 指向源码文件夹。
 *   `web.dir` 指向 web 文件夹。
 *   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-*   `web.dir` 指向 web 文件夹。
-*   `build.dir` 指向输出文件夹。
-*   `src.dir` 指向源码文件夹。
-
-
-
 
 你可以过滤 javadoc 过程，仅显示公共（public）、私有（private）、包（package）或保护（protected）类和成员。这通过使用 `private`、`public`、`package` 和 `protected` 属性来实现。
 
@@ -642,16 +520,16 @@ Java 文档文件现在存在于 `doc` 文件夹中。
 
 | 序号 | 属性与描述 |
 | :--- | :--- |
-| 1 | basedir: 输出 JAR 文件的基础目录。默认情况下，它设置为项目的根目录。 |
-| 2 | compress: 建议 Ant 在创建 JAR 文件时压缩文件。 |
-| 3 | keepcompression: 虽然 `compress` 属性适用于单个文件，但 `keepcompression` 属性执行相同的操作，只不过它适用于整个归档。 |
-| 4 | destfile: 输出 JAR 文件的名称。 |
-| 5 | duplicate: 建议 Ant 在发现重复文件时采取的操作。你可以添加、保留或在遇到重复文件时失败。 |
-| 6 | excludes: 建议 Ant 不要将此逗号分隔的文件列表包含在包中。 |
-| 7 | excludesfile: 与上述相同，但排除的文件使用模式指定。 |
-| 8 | inlcudes: `excludes` 的反反。 |
-| 9 | includesfile: `excludesfile` 的反反。 |
-| 10 | update: 建议 Ant 覆盖已构建的 JAR 文件中的文件。 |
+| 1 | `basedir`: 输出 JAR 文件的基础目录。默认情况下，它设置为项目的根目录。 |
+| 2 | `compress`: 建议 Ant 在创建 JAR 文件时压缩文件。 |
+| 3 | `keepcompression`: 虽然 `compress` 属性适用于单个文件，但 `keepcompression` 属性执行相同的操作，只不过它适用于整个归档。 |
+| 4 | `destfile`: 输出 JAR 文件的名称。 |
+| 5 | `duplicate`: 建议 Ant 在发现重复文件时采取的操作。你可以添加、保留或在遇到重复文件时失败。 |
+| 6 | `excludes`: 建议 Ant 不要将此逗号分隔的文件列表包含在包中。 |
+| 7 | `excludesfile`: 与上述相同，但排除的文件使用模式指定。 |
+| 8 | `inlcudes`: `excludes` 的反反。 |
+| 9 | `includesfile`: `excludesfile` 的反反。 |
+| 10 | `update`: 建议 Ant 覆盖已构建的 JAR 文件中的文件。 |
 
 继续我们的 `Hello World` Fax 应用程序项目，让我们添加一个新目标来生成 jar 文件。
 
@@ -671,11 +549,13 @@ excludes = "**/Test.class"
 
 在这个示例中，我们使用来自 `faxapp.util.*` 包的类创建一个名为 `util.jar` 的 jar 文件。然而，我们排除了以 `Test` 命名的类。输出的 jar 文件将放在 web 应用程序的 lib 文件夹中。
 
-如果我们想让 `util.jar` 可可执行 jar 文件，我们需要添加带有 `Main-Class` 元属性的 `manifest`。
+如果我们想让 `util.jar` 可执行 jar 文件，我们需要添加带有 `Main-Class` 元属性的 `manifest`。
 
 因此，上面的示例将更新如下：
 
-```
+
+
+```xml
 <jar destfile="${web.dir}/lib/util.jar"
 basedir="${build.dir}/classes"
 includes="faxapp/util/**"
@@ -683,9 +563,9 @@ excludes="**/Test.class" class="ts"
 <manifest class="ts">
 <attribute name="Main-Class" value="com.example.Main"/>
 </manifest>
-``` （等待，原文中的 XML 不完整，此处保持了提供的结构）
+```
 
-让我们执行 javadoc Ant 任务。它生成并把 Java 文档文件放在 `doc` 文件夹中。
+让我们执行 `javadoc` Ant 任务。它生成并把 Java 文档文件放在 `doc` 文件夹中。
 
 当执行 `javadoc target` 时，它会产生以下结果：
 
@@ -698,10 +578,6 @@ Total time : 10.63 second
 ```
 
 Java 文档文件现在存在于 `doc` 文件夹中。
-
-
-
-
 
 完全可以嵌套类、`lib`、`metainf` 和 `webinf` 目录，使它们存在于项目结构中任何位置的分散文件夹中。但是，最佳实践建议你的 Web 项目的 Web 内容结构应该类似于 WAR 文件的结构。Fax Application 项目根据这一基本原则概述了其结构。
 
@@ -737,13 +613,21 @@ Total time : 12.3 seconds
 `fax.war`:
 
 +---jsp 此文件夹包含 jsp 文件
+
 +---css 此文件夹包含样式表文件
+
 +---js 此文件夹包含 javascript 文件
+
 +---images 此文件夹包含图像文件
+
 +---META-INF 此文件夹包含 Manifest.Mf
+
 +---WEB-INF
+
 +---classes 此文件夹包含编译后的类
+
 +---lib 第三方库和工具用 jar 文件
+
 `WEB.xml` 定义 WAR 包的配置文件
 
 # 应用程序打包
@@ -824,10 +708,6 @@ Total time : 12.3 seconds
 </project>
 ```
 
-
-
-
-
 ```xml
 <group title = "util packages" packages = "faxapp.util.*" />
 <group title = "web packages" packages = "faxapp.web.*" />
@@ -887,8 +767,11 @@ deprecation = "false" optimize = "false" failonerror = "true" >
 ```
 
 <!-- ============================================================ -->
+
 <!-- Tomcat tasks -->
+
 <!-- ============================================================ -->
+
 ```xml
 <path id = "catalina-ant-classpath" >
 <!-- We need the Catalina jars for Tomcat -->
@@ -926,7 +809,9 @@ password = "${tomcat.manager.password}" path = "/${name}" />
 首先，在构建属性文件（build properties file）中，我们定义了一些额外的属性，说明如下：
 
 - `appserver.home` 指向 Tomcat 应用服务器的安装路径。
+
 - `appserver.lib` 指向 Tomcat 安装文件夹中的库文件。
+
 - `deploy.path` 变量现在指向 Tomcat 中的 webapp 文件夹。
 
 Tomcat 中的应用程序可以使用 Tomcat manager 应用进行停止和启动。manager 应用的 URL、用户名和密码在 `build.properties` 文件中指定。
@@ -938,22 +823,28 @@ Tomcat 中的应用程序可以使用 Tomcat manager 应用进行停止和启动
 `catalina-ant.jar` 提供了以下任务：
 
 | 序号 | 属性与描述 |
+
 | :--- | :--- |
-| 1 | InstallTask 安装一个 web 应用。类名：org.apache.catalina.ant.InstallTask |
-| 2 | ReloadTask 重载 web 应用。类名：org.apache.catalina.ant.ReloadTask |
-| 3 | ListTask 列出所有 web 应用。类名：org.apache.catalina.ant.ListTask |
-| 4 | StartTask 启动一个 web 应用。类名：org.apache.catalina.ant.StartTask |
-| 5 | StopTask 停止一个 web 应用。类名：org.apache.catalina.ant.StopTask |
-| 6 | ReloadTask 在 Tomcat 中重载应用。类名：org.apache.catalina.ant.ReloadTask |
+
+| 1 | InstallTask 安装一个 web 应用。类名：`org.apache.catalina.ant.InstallTask` |
+
+| 2 | ReloadTask 重载 web 应用。类名：`org.apache.catalina.ant.ReloadTask` |
+
+| 3 | ListTask 列出所有 web 应用。类名：`org.apache.catalina.ant.ListTask` |
+
+| 4 | StartTask 启动一个 web 应用。类名：`org.apache.catalina.ant.StartTask` |
+
+| 5 | StopTask 停止一个 web 应用。类名：`org.apache.catalina.ant.StopTask` |
 
 
 
+## 使用 Ant 执行 JUnit 测试
 
 JUnit 是基于 Java 开发中常用的单元测试框架。它易于使用且易于扩展。有许多 JUnit 扩展可用。如果你不熟悉 JUnit，应该从 [www.junit.org](https://junit.org/junit5/) 下载并阅读其手册。
 
 本章将展示如何使用 Ant 执行 JUnit 测试。使用 Ant 使得通过 `junit` 任务执行测试变得直观简单。
 
-`junit` 任务的属性如下所示 −
+`junit` 任务的属性如下所示：
 
 | 序号 | 属性与描述 |
 | :--- | :--- |
@@ -971,7 +862,7 @@ JUnit 是基于 Java 开发中常用的单元测试框架。它易于使用且�
 
 让我们继续 Hello World Fax 应用程序，并添加一个 JUnit 目标（target）。
 
-以下示例展示了一个简单的 JUnit 测试执行 −
+以下示例展示了一个简单的 JUnit 测试执行：
 
 ```xml
 <target name = "unittest" >
@@ -983,7 +874,7 @@ JUnit 是基于 Java 开发中常用的单元测试框架。它易于使用且�
 
 此示例展示了在 `com.tutorialspoint.UtilsTest` junit 类上执行 JUnit。
 
-运行上述代码会产生以下输出 −
+运行上述代码会产生以下输出：
 
 ```
 test:
@@ -993,13 +884,13 @@ test:
 BUILD PASSED
 ```
 
-# 扩展 Ant
+## 扩展 Ant
 
 Ant 自带了一组预定义的任务，但你可以像下面的示例所示创建你自己的任务。
 
 自定义 Ant 任务应该继承 `org.apache.tools.ant.Task` 类并扩展 `execute()` 方法。
 
-下面是一个简单的示例 −
+下面是一个简单的示例：
 
 ```java
 package com.tutorialspoint.ant;
@@ -1019,7 +910,7 @@ public class MyTask extends Task {
 }
 ```
 
-要执行自定义任务，你需要在 Hello World Fax 应用程序中添加以下内容 −
+要执行自定义任务，你需要在 Hello World Fax 应用程序中添加以下内容：
 
 ```xml
 <target name = "custom" >
@@ -1039,4 +930,3 @@ BUILD PASSED
 ```
 
 这只是一个简单的示例。你可以利用 Ant 的功能来做任何你想改进构建和部署过程的事情。
-

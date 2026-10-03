@@ -1,20 +1,22 @@
+
+
 # 虚拟现实未来简介
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/vavr-future>
 
-## 1。简介
+## 1. 简介
 
-核心 Java 为异步计算提供了一个基本的 API—`Future.``CompletableFuture`是它的最新实现之一。
+核心 Java 为异步计算提供了一个基本的 API——`Future`。`CompletableFuture` 是它的最新实现之一。
 
 Vavr 为`Future` API 提供了新的功能替代品。在本文中，我们将讨论新的 API，并展示如何利用它的一些新特性。
 
 更多关于 Vavr 的文章可以在这里找到[。](/web/20220625231501/https://www.baeldung.com/vavr-tutorial)
 
-## 2。Maven 依赖关系
+## 2. Maven 依赖关系
 
 `Future` API 包含在 Vavr Maven 依赖项中。
 
-所以，让我们把它添加到我们的`pom.xml`:
+所以，让我们把它添加到我们的`pom.xml`：
 
 ```java
 <dependency>
@@ -26,29 +28,29 @@ Vavr 为`Future` API 提供了新的功能替代品。在本文中，我们将�
 
 我们可以在 [Maven Central](https://web.archive.org/web/20220625231501/https://search.maven.org/classic/#search%7Cga%7C1%7Ca%3A%22vavr%22%20AND%20g%3A%22io.vavr%22) 上找到依赖的最新版本。
 
-## 3。Vavr 的`Future`
+## 3. Vavr 的`Future`
 
-**`Future`可以处于两种状态之一:**
+**`Future`可以处于两种状态之一：**
 
-*   待定–计算正在进行
-*   completed—计算成功完成并产生结果，因异常而失败或被取消
+- 待定——计算正在进行。
+- completed——计算成功完成并产生结果，因异常而失败或被取消。
 
-**相对于核心 Java `Future`的主要优势是我们可以很容易地注册回调，并以非阻塞的方式组合操作。**
+**相对于核心 Java `Future` 的主要优势是我们可以很容易地注册回调，并以非阻塞的方式组合操作。**
 
-## 4。基本`Future`操作
+## 4. 基本`Future`操作
 
-### 4.1。开始异步计算
+### 4.1. 开始异步计算
 
-现在，让我们看看如何使用 Vavr 开始异步计算:
+现在，让我们看看如何使用 Vavr 开始异步计算：
 
 ```java
 String initialValue = "Welcome to ";
 Future<String> resultFuture = Future.of(() -> someComputation());
 ```
 
-### 4.2。从`Future` 中检索值
+### 4.2. 从`Future`中检索值
 
-我们可以通过简单地调用`get()`或`getOrElse()`方法之一从`Future`中提取值:
+我们可以通过简单地调用`get()`或`getOrElse()`方法之一从`Future`中提取值：
 
 ```java
 String result = resultFuture.getOrElse("Failed to get underlying value.");
@@ -60,9 +62,9 @@ String result = resultFuture.getOrElse("Failed to get underlying value.");
 
 注意，如果需要等待结果的话，`get()`方法会阻塞当前线程。
 
-一种不同的方法是调用非阻塞的`getValue()` 方法，该方法返回一个`Option<Try<T>>` ，只要计算挂起，这个`Option<Try<T>>` **就为空。**
+一种不同的方法是调用非阻塞的`getValue()`方法，该方法返回一个`Option<Try<T>>`，只要计算挂起，这个`Option<Try<T>>`**就为空。**
 
-然后，我们可以提取位于`Try`对象内部的计算结果:
+然后，我们可以提取位于`Try`对象内部的计算结果：
 
 ```java
 Option<Try<String>> futureOption = resultFuture.getValue();
@@ -72,7 +74,7 @@ String result = futureTry.get();
 
 有时，我们需要在检索值之前检查`Future`是否包含值。
 
-我们可以简单地通过使用:
+我们可以简单地通过使用：
 
 ```java
 resultFuture.isEmpty();
@@ -80,11 +82,11 @@ resultFuture.isEmpty();
 
 重要的是要注意方法`isEmpty()`是阻塞的——它将阻塞线程直到它的操作完成。
 
-### 4.3。`ExecutorService`改变默认
+### 4.3. `ExecutorService`改变默认
 
 使用一个`ExecutorService`来异步运行他们的计算。默认的`ExecutorService`是`Executors.newCachedThreadPool()`。
 
-我们可以通过传递我们选择的实现来使用另一个`ExecutorService`:
+我们可以通过传递我们选择的实现来使用另一个`ExecutorService`：
 
 ```java
 @Test
@@ -97,13 +99,13 @@ public void whenChangeExecutorService_thenCorrect() {
 }
 ```
 
-## 5。完成后执行动作
+## 5. 完成后执行动作
 
 API 提供了`onSuccess()`方法，一旦`Future`成功完成，该方法就执行一个动作。
 
 类似地，方法`onFailure()`在`Future`失败时执行。
 
-让我们看一个简单的例子:
+让我们看一个简单的例子：
 
 ```java
 Future<String> resultFuture = Future.of(() -> appendData(initialValue))
@@ -111,7 +113,7 @@ Future<String> resultFuture = Future.of(() -> appendData(initialValue))
   .onFailure(v -> System.out.println("Failed - Result: " + v));
 ```
 
-方法`onComplete()`接受一个动作，只要`Future`完成了它的执行，不管`Future`是否成功。方法`andThen()`类似于`onComplete()`——它只是保证回调以特定的顺序执行:
+方法`onComplete()`接受一个动作，只要`Future`完成了它的执行，不管`Future`是否成功。方法`andThen()`类似于`onComplete()`——它只是保证回调以特定的顺序执行：
 
 ```java
 Future<String> resultFuture = Future.of(() -> appendData(initialValue))
@@ -119,42 +121,42 @@ Future<String> resultFuture = Future.of(() -> appendData(initialValue))
   .andThen(finalResult -> System.out.println("Completed - 2: " + finalResult));
 ```
 
-## 6。`Futures`上有用的操作
+## 6. `Future`上有用的操作
 
-### 6.1。阻塞当前线程
+### 6.1. 阻塞当前线程
 
-方法`await()`有两种情况:
+方法`await()`有两种情况：
 
-*   如果`Future`是未决的，它阻塞当前线程，直到未来线程完成
-*   如果`Future`完成，它会立即结束
+- 如果`Future`是未决的，它阻塞当前线程，直到未来线程完成。
+- 如果`Future`完成，它会立即结束。
 
-使用这种方法很简单:
+使用这种方法很简单：
 
 ```java
 resultFuture.await();
 ```
 
-### 6.2。取消计算
+### 6.2. 取消计算
 
-我们总是可以取消计算:
+我们总是可以取消计算：
 
 ```java
 resultFuture.cancel();
 ```
 
-### 6.3。`ExecutorService`检索底层
+### 6.3. `ExecutorService`检索底层
 
-为了获得被一个`Future`使用的`ExecutorService`，我们可以简单地调用`executorService()`:
+为了获得被一个`Future`使用的`ExecutorService`，我们可以简单地调用`executorService()`：
 
 ```java
 resultFuture.executorService();
 ```
 
-### 6.4。从失败的`Future` 中获得一个`Throwable`
+### 6.4. 从失败的`Future`中获得一个`Throwable`
 
 我们可以使用`getCause()`方法来实现，该方法返回包装在`io.vavr.control.Option`对象中的`Throwable`。
 
-我们可以稍后从`Option`对象中提取`Throwable`:
+我们可以稍后从`Option`对象中提取`Throwable`：
 
 ```java
 @Test
@@ -167,7 +169,7 @@ public void whenDivideByZero_thenGetThrowable2() {
 }
 ```
 
-此外，我们可以使用`failed()`方法将我们的实例转换为持有`Throwable`实例的`Future`:
+此外，我们可以使用`failed()`方法将我们的实例转换为持有`Throwable`实例的`Future`：
 
 ```java
 @Test
@@ -179,11 +181,11 @@ public void whenDivideByZero_thenGetThrowable1() {
 }
 ```
 
-### 6.5。`isCompleted(), isSuccess(),`和`isFailure()`
+### 6.5. `isCompleted()`、`isSuccess()`和`isFailure()`
 
 这些方法几乎是不言自明的。他们检查`Future`是否完成，它是成功完成还是失败。当然，它们都返回`boolean`值。
 
-我们将在前一个示例中使用这些方法:
+我们将在前一个示例中使用这些方法：
 
 ```java
 @Test
@@ -197,9 +199,9 @@ public void whenDivideByZero_thenCorrect() {
 }
 ```
 
-### 6.6。在未来之上应用计算
+### 6.6. 在`Future`之上应用计算
 
-`map()`方法允许我们在未决的`Future:`之上应用计算
+`map()`方法允许我们在未决的`Future`之上应用计算：
 
 ```java
 @Test
@@ -213,7 +215,7 @@ public void whenCallMap_thenCorrect() {
 }
 ```
 
-如果我们向`map()`方法传递一个返回`Future`的函数，我们可以得到一个嵌套的`Future`结构。为了避免这种情况，我们可以利用`flatMap()`方法:
+如果我们向`map()`方法传递一个返回`Future`的函数，我们可以得到一个嵌套的`Future`结构。为了避免这种情况，我们可以利用`flatMap()`方法：
 
 ```java
 @Test
@@ -225,9 +227,9 @@ public void whenCallFlatMap_thenCorrect() {
 }
 ```
 
-### 6.7。`Futures`变身
+### 6.7. `Future`变换
 
-方法`transformValue()`可用于在`Future`之上应用计算，并将其中的值更改为相同类型或不同类型的另一个值:
+方法`transformValue()`可用于在`Future`之上应用计算，并将其中的值更改为相同类型或不同类型的另一个值：
 
 ```java
 @Test
@@ -239,9 +241,9 @@ public void whenTransform_thenCorrect() {
 }
 ```
 
-### 6.8。拉拉链`Futures`
+### 6.8. 拉链连接`Future`
 
-API 提供了将`Futures`压缩成元组的`zip()`方法——元组是几个元素的集合，这些元素可能彼此相关，也可能不相关。它们也可以是不同的类型。让我们看一个简单的例子:
+API 提供了将`Future`压缩成元组的`zip()`方法——元组是几个元素的集合，这些元素可能彼此相关，也可能不相关。它们也可以是不同的类型。让我们看一个简单的例子：
 
 ```java
 @Test
@@ -254,13 +256,13 @@ public void whenCallZip_thenCorrect() {
 }
 ```
 
-这里要注意的一点是，只要至少有一个基址`Futures`仍然是待定的，那么结果`Future`将是待定的。
+这里要注意的一点是，只要至少有一个基础`Future`仍然是待定的，那么结果`Future`将是待定的。
 
-### 6.9。`Futures`与`CompletableFutures`和之间的转换
+### 6.9. `Future`与`CompletableFuture`之间的转换
 
 API 支持与`java.util.CompletableFuture`的集成。因此，如果我们想执行只有核心 Java API 支持的操作，我们可以很容易地将一个`Future`转换成一个`CompletableFuture`。
 
-让我们看看如何做到这一点:
+让我们看看如何做到这一点：
 
 ```java
 @Test
@@ -277,11 +279,11 @@ public void whenConvertToCompletableFuture_thenCorrect()
 
 我们也可以使用`fromCompletableFuture()`方法将一个`CompletableFuture`转换成一个`Future`。
 
-### 6.10。异常处理
+### 6.10. 异常处理
 
 当一个`Future`失败时，我们可以用几种方法来处理这个错误。
 
-例如，我们可以利用方法`recover()`返回另一个结果，比如一个错误消息:
+例如，我们可以利用方法`recover()`返回另一个结果，比如一个错误消息：
 
 ```java
 @Test
@@ -294,7 +296,7 @@ public void whenFutureFails_thenGetErrorMessage() {
 }
 ```
 
-或者，我们可以使用`recoverWith()`返回另一个`Future`计算的结果:
+或者，我们可以使用`recoverWith()`返回另一个`Future`计算的结果：
 
 ```java
 @Test
@@ -309,7 +311,7 @@ public void whenFutureFails_thenGetAnotherFuture() {
 
 方法`fallbackTo()`是处理错误的另一种方式。它在一个`Future`上被调用，并接受另一个`Future`作为参数。
 
-如果第一个`Future`成功，那么它返回它的结果。否则，如果第二个`Future`成功，那么它返回它的结果。如果两个`Futures`都失败，那么`failed()`方法返回一个`Throwable`的`Future`，它保存第一个`Future`的错误:
+如果第一个`Future`成功，那么它返回它的结果。否则，如果第二个`Future`成功，那么它返回它的结果。如果两个`Future`都失败，那么`failed()`方法返回一个`Throwable`的`Future`，它保存第一个`Future`的错误：
 
 ```java
 @Test
@@ -326,8 +328,9 @@ public void whenBothFuturesFail_thenGetErrorMessage() {
 }
 ```
 
-## 7。结论
+## 7. 结论
 
-在本文中，我们已经了解了什么是`Future`,并学习了它的一些重要概念。我们还通过几个实际例子介绍了 API 的一些特性。
+在本文中，我们已经了解了什么是`Future`，并学习了它的一些重要概念。我们还通过几个实际例子介绍了 API 的一些特性。
 
 GitHub 上有完整版本的代码[。](https://web.archive.org/web/20220625231501/https://github.com/eugenp/tutorials/tree/master/vavr)
+

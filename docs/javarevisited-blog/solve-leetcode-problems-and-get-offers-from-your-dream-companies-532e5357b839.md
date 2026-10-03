@@ -1,8 +1,9 @@
+
 # 解决 Leetcode 问题，获得你梦想中的公司的报价
 
 > 原文：<https://medium.com/javarevisited/solve-leetcode-problems-and-get-offers-from-your-dream-companies-532e5357b839?source=collection_archive---------2----------------------->
 
-## **LeetCode 14 |最长常用前缀(易)**
+## LeetCode 14 | 最长常用前缀（易）
 
 ![](img/3801ae0327255eec6c0e28e259bd5e3e.png)
 

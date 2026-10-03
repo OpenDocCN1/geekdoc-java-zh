@@ -1,3 +1,4 @@
+
 # 时钟
 
 > 原文：[`docs.oracle.com/javase/tutorial/datetime/iso/clock.html`](https://docs.oracle.com/javase/tutorial/datetime/iso/clock.html)
@@ -8,8 +9,6 @@
 
 `Clock`类是抽象的，因此您不能创建它的实例。以下工厂方法对于测试很有用。
 
-+   [`Clock.offset(Clock, Duration)`](https://docs.oracle.com/javase/8/docs/api/java/time/Clock.html#offset-java.time.Clock-java.time.Duration-) 返回一个按指定`Duration`偏移的时钟。
-
-+   [`Clock.systemUTC()`](https://docs.oracle.com/javase/8/docs/api/java/time/Clock.html#systemUTC--) 返回代表格林威治/UTC 时区的时钟。
-
-+   [`Clock.fixed(Instant, ZoneId)`](https://docs.oracle.com/javase/8/docs/api/java/time/Clock.html#fixed-java.time.Instant-java.time.ZoneId-) 总是返回相同的`Instant`。对于这个时钟，时间停滞不前。
++ [`Clock.offset(Clock, Duration)`](https://docs.oracle.com/javase/8/docs/api/java/time/Clock.html#offset-java.time.Clock-java.time.Duration-) 返回一个按指定`Duration`偏移的时钟。
++ [`Clock.systemUTC()`](https://docs.oracle.com/javase/8/docs/api/java/time/Clock.html#systemUTC--) 返回代表格林威治/UTC 时区的时钟。
++ [`Clock.fixed(Instant, ZoneId)`](https://docs.oracle.com/javase/8/docs/api/java/time/Clock.html#fixed-java.time.Instant-java.time.ZoneId-) 总是返回相同的`Instant`。对于这个时钟，时间停滞不前。

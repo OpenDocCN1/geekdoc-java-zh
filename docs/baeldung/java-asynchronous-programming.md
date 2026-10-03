@@ -1,16 +1,18 @@
+
+
 # Java 中的异步编程
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-asynchronous-programming>
 
-## 1.概观
+## 1. 概观
 
 随着编写非阻塞代码需求的增长，我们需要异步执行代码的方法。
 
 在本教程中，我们将看看用 Java 实现[异步编程](/web/20221007090003/https://www.baeldung.com/cs/async-vs-multi-threading)的几种方法。我们还将探索一些提供开箱即用解决方案的 Java 库。
 
-## 2.Java 中的异步编程
+## 2. Java 中的异步编程
 
-### 2.1.`Thread`
+### 2.1. `Thread`
 
 我们可以创建一个新线程来异步执行任何操作。随着 Java 8 中 [lambda 表达式](/web/20221007090003/https://www.baeldung.com/java-8-lambda-expressions-tips)的发布，它变得更干净，可读性更强。
 
@@ -24,11 +26,11 @@ Thread newThread = new Thread(() -> {
 newThread.start();
 ```
 
-### 2.2.`FutureTask`
+### 2.2. `FutureTask`
 
-从 Java 5 开始，`Future`接口提供了一种使用`[FutureTask](/web/20221007090003/https://www.baeldung.com/java-future#1-implementing-futures-with-futuretask)`执行异步操作的方法。
+从 Java 5 开始，`Future`接口提供了一种使用`FutureTask`执行异步操作的方法。
 
-我们可以使用`[ExecutorService](https://web.archive.org/web/20221007090003/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/ExecutorService.html)`的`submit`方法异步执行任务，并返回`FutureTask`的实例。
+我们可以使用`ExecutorService`的`submit`方法异步执行任务，并返回`FutureTask`的实例。
 
 所以让我们找出一个数的阶乘:
 
@@ -46,9 +48,9 @@ threadpool.shutdown();
 
 这里我们使用了由`Future`接口提供的`isDone`方法来检查任务是否完成。一旦完成，我们可以使用`get`方法检索结果。
 
-### 2.3.`CompletableFuture`
+### 2.3. `CompletableFuture`
 
-**Java 8 引入了 [`CompletableFuture`](/web/20221007090003/https://www.baeldung.com/java-completablefuture) 与`Future`[`CompletionStage`](https://web.archive.org/web/20221007090003/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html)的组合。**为异步编程提供了`supplyAsync`、`runAsync`、`thenApplyAsync`等多种方法。
+**Java 8 引入了 `CompletableFuture` 与`Future`、`CompletionStage`的组合。**为异步编程提供了`supplyAsync`、`runAsync`、`thenApplyAsync`等多种方法。
 
 现在让我们用`CompletableFuture`代替`FutureTask`来求一个数的阶乘:
 
@@ -60,15 +62,15 @@ while (!completableFuture.isDone()) {
 long result = completableFuture.get();
 ```
 
-我们不需要显式地使用`ExecutorService`。 **`CompletableFuture` 内部使用 [`ForkJoinPool`](/web/20221007090003/https://www.baeldung.com/java-fork-join) 异步处理任务**。因此，它使我们的代码更加干净。
+我们不需要显式地使用`ExecutorService`。 **`CompletableFuture` 内部使用 `ForkJoinPool` 异步处理任务**。因此，它使我们的代码更加干净。
 
-## 3.番石榴
+## 3. 番石榴
 
-[**番石榴**](/web/20221007090003/https://www.baeldung.com/guava-21-new)提供了`[ListenableFuture](https://web.archive.org/web/20221007090003/https://guava.dev/releases/28.2-jre/api/docs/index.html?com/google/common/util/concurrent/ListenableFuture.html)`类来执行异步操作。
+[**番石榴**](/web/20221007090003/https://www.baeldung.com/guava-21-new)提供了`ListenableFuture`类来执行异步操作。
 
-首先，我们来添加最新的 [`guava`](https://web.archive.org/web/20221007090003/https://search.maven.org/search?q=g:com.google.guava%20a:guava) 美文依赖:
+首先，我们来添加最新的 `guava` Maven 依赖:
 
-```java
+```xml
 <dependency>
     <groupId>com.google.guava</groupId>
     <artifactId>guava</artifactId>
@@ -81,13 +83,13 @@ long result = completableFuture.get();
 ```java
 ExecutorService threadpool = Executors.newCachedThreadPool();
 ListeningExecutorService service = MoreExecutors.listeningDecorator(threadpool);
-ListenableFuture<Long> guavaFuture = (ListenableFuture<Long>) service.submit(()-> factorial(number));
+ListenableFuture<Long> guavaFuture = (ListenableFuture<Long>) service.submit(() -> factorial(number));
 long result = guavaFuture.get();
 ```
 
-这里的`[MoreExecutors](https://web.archive.org/web/20221007090003/https://guava.dev/releases/28.2-jre/api/docs/index.html?com/google/common/util/concurrent/MoreExecutors.html)`类提供了`[ListeningExecutorService](https://web.archive.org/web/20221007090003/https://guava.dev/releases/28.2-jre/api/docs/index.html?com/google/common/util/concurrent/ListeningExecutorService.html)`类的实例。然后`ListeningExecutorService.submit`方法异步执行任务并返回`ListenableFuture`的实例。
+这里的`MoreExecutors`类提供了`ListeningExecutorService`类的实例。然后`ListeningExecutorService.submit`方法异步执行任务并返回`ListenableFuture`的实例。
 
-**Guava 还有一个 [`Futures`](https://web.archive.org/web/20221007090003/https://guava.dev/releases/28.2-jre/api/docs/com/google/common/util/concurrent/Futures.html) 类，它提供了像`submitAsync`、`scheduleAsync`和`transformAsync`这样的方法来链接类似于`CompletableFuture.`** 的`ListenableFutures,`
+**Guava 还有一个 `Futures` 类，它提供了像`submitAsync`、`scheduleAsync`和`transformAsync`这样的方法来链接类似于`CompletableFuture`的`ListenableFutures`。**
 
 例如，让我们看看如何使用`Futures.submitAsync`来代替`ListeningExecutorService.submit`方法:
 
@@ -101,7 +103,7 @@ AsyncCallable<Long> asyncCallable = Callables.asAsyncCallable(new Callable<Long>
 ListenableFuture<Long> guavaFuture = Futures.submitAsync(asyncCallable, service);
 ```
 
-这里的`submitAsync`方法需要一个 [`AsyncCallable`](https://web.archive.org/web/20221007090003/https://guava.dev/releases/28.2-jre/api/docs/com/google/common/util/concurrent/AsyncCallable.html) 参数，它是使用 [`Callables`](https://web.archive.org/web/20221007090003/https://guava.dev/releases/28.2-jre/api/docs/com/google/common/util/concurrent/Callables.html) 类创建的。
+这里的`submitAsync`方法需要一个 `AsyncCallable` 参数，它是使用 `Callables` 类创建的。
 
 此外，`Futures`类提供了`addCallback`方法来注册成功和失败的回调:
 
@@ -119,15 +121,15 @@ Futures.addCallback(
   service);
 ```
 
-## 4.EA 异步
+## 4. EA 异步
 
-**电子艺界带来了异步等待功能。NET 通过 [`ea-async`库](https://web.archive.org/web/20221007090003/https://github.com/electronicarts/ea-async)到 Java 生态系统。**
+**电子艺界带来了异步等待功能。NET 通过 `ea-async`库到 Java 生态系统。**
 
 这个库允许顺序编写异步(非阻塞)代码。因此，它使得异步编程更加容易，并且可以自然地伸缩。
 
-首先，我们将最新的 [`ea-async`](https://web.archive.org/web/20221007090003/https://search.maven.org/search?q=g:com.ea.async%20a:ea-async) Maven 依赖项添加到`pom.xml`:
+首先，我们将最新的 `ea-async` Maven 依赖项添加到`pom.xml`:
 
-```java
+```xml
 <dependency>
     <groupId>com.ea.async</groupId>
     <artifactId>ea-async</artifactId>
@@ -135,7 +137,7 @@ Futures.addCallback(
 </dependency>
 ```
 
-然后我们将通过使用 EA 的`[Async](https://web.archive.org/web/20221007090003/https://javadoc.io/doc/com.ea.async/ea-async/latest/com/ea/async/Async.html)`类提供的`await`方法来转换前面讨论的`CompletableFuture`代码:
+然后我们将通过使用 EA 的`Async`类提供的`await`方法来转换前面讨论的`CompletableFuture`代码:
 
 ```java
 static { 
@@ -152,11 +154,11 @@ public long factorialUsingEAAsync(int number) {
 
 `Async`检测在运行时转换代码，并重写对`await`方法的调用，使其行为类似于使用`CompletableFuture`链。
 
-因此，**对`await` 方法的调用类似于调用`Future.join.`**
+因此，**对`await` 方法的调用类似于调用`Future.join`。**
 
-我们可以使用–`javaagent`JVM 参数进行编译时检测。这是`Async.init` 方法的替代方法:
+我们可以使用`-javaagent`JVM 参数进行编译时检测。这是`Async.init` 方法的替代方法:
 
-```java
+```bash
 java -javaagent:ea-async-1.2.3.jar -cp <claspath> <MainClass>
 ```
 
@@ -193,15 +195,15 @@ try {
 
 所以一旦`hello`方法的异步执行完成，`Future`结果就被传递给`mergeWorld`方法。然后使用`CompletableFuture.runAsync`方法将结果传递给最后一次执行。
 
-## 5.卡图斯
+## 5. Cactoos
 
 Cactoos 是一个基于面向对象原则的 Java 库。
 
 它是 Google Guava 和 Apache Commons 的替代品，为执行各种操作提供了公共对象。
 
-首先，让我们添加最新的`[cactoos](https://web.archive.org/web/20221007090003/https://search.maven.org/search?q=g:org.cactoos%20a:cactoos)` Maven 依赖项:
+首先，让我们添加最新的`cactoos` Maven 依赖项:
 
-```java
+```xml
 <dependency>
     <groupId>org.cactoos</groupId>
     <artifactId>cactoos</artifactId>
@@ -209,7 +211,7 @@ Cactoos 是一个基于面向对象原则的 Java 库。
 </dependency>
 ```
 
-这个库为异步操作提供了一个`[Async](https://web.archive.org/web/20221007090003/https://javadoc.io/doc/org.cactoos/cactoos/latest/org/cactoos/func/Async.html)`类。
+这个库为异步操作提供了一个`Async`类。
 
 因此，我们可以使用 Cactoos 的`Async`类的实例找到一个数字的阶乘:
 
@@ -225,11 +227,14 @@ long result = asyncFuture.get();
 
 注意:Cactoos 库处于开发的初级阶段，可能还不适合生产使用。
 
-## 6.JCA bi-方面
+## 6. JCA bi-方面
+
+
+
 
 Jcabi-Aspects 通过 [AspectJ](/web/20221007090003/https://www.baeldung.com/aspectj) AOP 方面为异步编程提供了`[@Async](https://web.archive.org/web/20221007090003/https://aspects.jcabi.com/apidocs-0.22.6/com/jcabi/aspects/Async.html)`注解。
 
-首先，让我们添加最新的 [`jcabi-aspects`](https://web.archive.org/web/20221007090003/https://search.maven.org/search?q=g:com.jcabi%20a:jcabi-aspects) 美文依赖:
+首先，让我们添加最新的 [`jcabi-aspects`](https://web.archive.org/web/20221007090003/https://search.maven.org/search?q=g:com.jcabi%20a:jcabi-aspects) Maven 依赖:
 
 ```java
 <dependency>
@@ -289,7 +294,7 @@ public Future<Long> factorialUsingAspect(int number) {
 }
 ```
 
-当我们编译代码时，**库将通过 AspectJ 编织注入 AOP 通知代替`@Async`注释，**用于异步执行`factorialUsingAspect`方法。
+当我们编译代码时，库将通过 AspectJ 编织注入 AOP 通知代替`@Async`注释，用于异步执行`factorialUsingAspect`方法。
 
 让我们使用 Maven 命令编译这个类:
 
@@ -325,19 +330,19 @@ jcabi-aspects 0.22.6/3f0a1f7 started new daemon thread jcabi-loggable for watchi
 17:46:58.355 [main] INFO com.jcabi.aspects.aj.NamedThreads - 
 jcabi-aspects 0.22.6/3f0a1f7 started new daemon thread jcabi-async for Asynchronous method execution
 17:46:58.358 [jcabi-async] INFO com.baeldung.async.JavaAsync - 
-#factorialUsingJcabiAspect(20): '[[email protected]](/web/20221007090003/https://www.baeldung.com/cdn-cgi/l/email-protection)[Completed normally]' in 44.64µs
+#factorialUsingJcabiAspect(20): '[[email protected]](/web/20221007090003/https://www.baeldung.com/cdn-cgi/l/email-protection)[Completed normally]' in 44.64µs
 ```
 
-正如我们所见，一个新的守护线程`jcabi-async,` 由异步执行任务的库创建。
+正如我们所见，一个新的守护线程`jcabi-async`，由异步执行任务的库创建。
 
 类似地，日志记录由库提供的 [`@Loggable`](https://web.archive.org/web/20221007090003/https://aspects.jcabi.com/apidocs-0.22.6/com/jcabi/aspects/Loggable.html) 注释启用。
 
-## 7.结论
+## 结论
 
 在本文中，我们学习了几种 Java 异步编程的方法。
 
-首先，我们探索了 Java 的内置特性，比如用于异步编程的`FutureTask`和`CompletableFuture` 。然后我们研究了一些库，比如 EA Async 和 Cactoos，它们都有现成的解决方案。
+首先，我们探索了 Java 的内置特性，比如用于异步编程的`FutureTask`和`CompletableFuture`。然后我们研究了一些库，比如 EA Async 和 Cactoos，它们都有现成的解决方案。
 
-我们还讨论了使用 Guava 的`ListenableFuture`和`Futures`类异步执行任务的支持。最后，我们提到了 jcabi-AspectJ 库，它通过异步方法调用的`@Async`注释提供了 AOP 特性。
+我们还讨论了使用 Guava 的`ListenableFuture`和`Futures`类异步执行任务的支持。最后，我们提到了 `jcabi-AspectJ` 库，它通过异步方法调用的`@Async`注释提供了 AOP 特性。
 
 像往常一样，所有的代码实现都可以在 GitHub 上获得[。](https://web.archive.org/web/20221007090003/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-concurrency-advanced-3)

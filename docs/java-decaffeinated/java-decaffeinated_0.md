@@ -1,18 +1,16 @@
+
 # Java 高级指南
 
-
-
 ![](img/cover00457.jpeg)
-
-
 
 # 目录
 
 # 第 1 章 入门
+
 * 1.1 安装我们的 IDE
 * 1.2 编写你的第一段代码
 * 1.3 注释
-* 1.4 留关键字
+* 1.4 保留关键字
 * 1.5 本书使用的规范
     * 1.5.1 图片
     * 1.5.2 表格
@@ -22,6 +20,7 @@
 * 1.6 复习
 
 # 第 2 章 类型
+
 * 2.1 数字
     * 2.1.1 Java 整数类型
     * 2.1.2 整数算术运算
@@ -30,26 +29,27 @@
     * 2.1.5 `Math` 类
 * 2.2 文本
     * 2.2.1 字符
-        * 2.2.2 创建字符串
-        * 2.2.3 字符串拼接
-        * 2.2.4 查找字符串长度
-        * 2.2.5 特殊字符和转义序列
+    * 2.2.2 创建字符串
+    * 2.2.3 字符串拼接
+    * 2.2.4 查找字符串长度
+    * 2.2.5 特殊字符和转义序列
 * 2.3 逻辑
     * 2.3.1 打印 `true` 和 `false`
-        * 2.3.2 关系运算符
-        * 2.3.3 逻辑运算符
-        * 2.3.4 使用 `not`
-        * 2.3.5 使用 `and`
-        * 2.3.6 使用 `or`
+    * 2.3.2 关系运算符
+    * 2.3.3 逻辑运算符
+    * 2.3.4 使用 `not`
+    * 2.3.5 使用 `and`
+    * 2.3.6 使用 `or`
 * 2.4 复习
 * 2.5 问题
 
 # 第 3 章 变量
+
 * 3.1 处理变量
     * 3.1.1 创建和使用变量
-        * 3.1.2 修改变量
-        * 3.1.3 简写运算符
-        * 3.1.4 不变与可变
+    * 3.1.2 修改变量
+    * 3.1.3 简写运算符
+    * 3.1.4 不变与可变
 * 3.2 变量作用域
 * 3.3 类型转换
     * 3.3.1 宽转换
@@ -57,6 +57,7 @@
 * 3.4 复习
 
 # 第 4 章 过程化分解
+
 * 4.1 实现静态方法
 * 4.2 控制流
 * 4.3 创建带参数的方法
@@ -67,6 +68,7 @@
 * 4.6 复习
 
 # 第 5 章 条件语句
+
 * 5.1 `if` 语句
 * 5.2 `else` 子句
 * 5.3 `else if` 子句
@@ -74,6 +76,7 @@
 * 5.5 复习
 
 # 第 6 章 循环
+
 * 6.1 `for` 循环
 * 6.2 `while` 循环
 * 6.3 `do while` 循环
@@ -84,6 +87,7 @@
 * 6.6 复习
 
 # 第 7 章 字符串
+
 * 7.1 字符
 * 7.2 字符串索引
 * 7.3 子字符串
@@ -101,6 +105,7 @@
 * 7.8 复习
 
 # 第 8 章 对象与类
+
 * 8.1 类
 * 8.2 创建类
 * 8.3 创建对象
@@ -110,6 +115,7 @@
 * 8.7 复习
 
 # 第 9 章 数组与 ArrayList
+
 * 9.1 包装类
 * 9.2 数组
     * 9.2.1 创建数组
@@ -124,75 +130,84 @@
 * 9.4 复习
 
 # 第 10 章 结语
-* 10.1 接下来该哪里
+
+* 10.1 接下来该去哪里
 
 # 第 11 章 附录
+
 * 11.1 附录 1：Unicode 表
 
 # Java 零基础
+
 # Java 快速入门
+
 ## Pranav Ramesh
 
 ![](img/cover00457.jpeg)
 
 # 第 1 章 入门
-本章将侧重于带你从安装我们的 IDE 到编写你的第一个 Java 程序。我们将使用 JetBrains 出出的 IntelliJ IDEA Java IDE。
+
+本章将侧重于带你从安装我们的 IDE 到编写你的第一个 Java 程序。我们将使用 JetBrains 出品的 IntelliJ IDEA Java IDE。
 
 ## 1.1 安装我们的 IDE
-开始，我们可以访问 `[`www.jetbrains.com/idea/download/`](https://www.jetbrains.com/idea/download/)`。
 
-你将被重定向到对应操作系统（Windows、macOS 或 Linux）的下载页面。在 **Community** 下，点击 **Download**。
+开始，我们可以访问 [`www.jetbrains.com/idea/download/`](https://www.jetbrains.com/idea/download/)。你将被重定向到对应操作系统（Windows、macOS 或 Linux）的下载页面。在 **Community** 下，点击 **Download**。
 
-![images/figures/GETTINGSTARTED_1](img/image0386.jpeg)图 1.1：点击 **Community** 下载此 IDE 的免费版本。
+![images/figures/GETTINGSTARTED_1](img/image0386.jpeg)
+图 1.1：点击 **Community** 下载此 IDE 的免费版本。
 
 JetBrains 将重定向到一个下载确认页面，IntelliJ IDEA 安装程序开始下载。下载完成后，打开安装程序。
 
-![images/figures/GETTINGSTARTED_2](img/image0387.jpeg)图 1.2：IDE 安装程序的启动页。
+![images/figures/GETTINGSTARTED_2](img/image0387.jpeg)
+图 1.2：IDE 安装程序的启动页。
 
 当你到达安装程序的后续页面时，请务必勾选所有选项框。
 
-![images/figures/GETTINGSTARTED_3](img/image0388.jpeg)图 1.3：在此页面上勾选所有选项框。
-
-
-
-
+![images/figures/GETTINGSTARTED_3](img/image0388.jpeg)
+图 1.3：在此页面上勾选所有选项框。
 
 持续点击“Next”直到应用程序开始安装。安装完成后，它会提示你需要重启电脑。请现在执行此操作。
 
-![images/figures/GETTINGSTARTED_4](img/image00389.jpeg)图 1.4：点击“Reboot now”并重启你的电脑。
+![images/figures/GETTINGSTARTED_4](img/image00389.jpeg)
+图 1.4：点击“Reboot now”并重启你的电脑。
 
 电脑重启后，打开 IntelliJ IDEA。同意用户协议后，你将被重定向到以下页面：
 
-![images/figures/GETTINGSTARTED_5](img/image00390.jpeg)图 1.5：IntelliJ IDEA 启动页。
+![images/figures/GETTINGSTARTED_5](img/image00390.jpeg)
+图 1.5：IntelliJ IDEA 启动页。
 
 点击“New Project”。在 Project SDK `<No SDK>` 下拉菜单下，选择 `Download JDK`。
 
-![images/figures/GETTINGSTARTED_6](img/image00391.jpeg)图 1.6：在“Project SDK”下拉菜单下选择 `Download JDK`。
+![images/figures/GETTINGSTARTED_6](img/image00391.jpeg)
+图 1.6：在“Project SDK”下拉菜单下选择 `Download JDK`。
 
 会询问你想要哪个版本和供应商。选择版本 17 和 Oracle OpenJDK 作为你的供应商。然后点击 `Download`。
 
-![images/figures/GETTINGSTARTED_7](img/image00392.jpeg)图 1.7：版本 17，Oracle OpenJDK
+![images/figures/GETTINGSTARTED_7](img/image00392.jpeg)
+图 1.7：版本 17，Oracle OpenJDK
 
 JDK 需要几分钟时间下载。完成后，Project SDK 将读取 `openjdk-17` 为你正在使用的 JDK。
 
-![images/figures/GETTINGSTARTED_8](img/image00393.jpeg)图 1.8：下载完 JDK 后点击 `Next`。
+![images/figures/GETTINGSTARTED_8](img/image00393.jpeg)
+图 1.8：下载完 JDK 后点击 `Next`。
 
 当你被要求从模板创建项目时，点击 `Next` 跳过此步骤。当 IntelliJ IDEA 要求你给项目起名称时，你可以输入 `HelloWorldProject`。完成后点击 `Finish`。你将被重定向到一个空白编辑器屏幕。在项目浏览器中右键点击 `src`，悬停在 `New` 上，并选择 `Java class`。
 
-![images/figures/GETTINGSTARTED_9](img/image00394.jpeg)图 1.9：IntelliJ IDEA IDE。
+![images/figures/GETTINGSTARTED_9](img/image00394.jpeg)
+图 1.9：IntelliJ IDEA IDE。
 
-## 1.2 编写你的第一个代码](#part0001.xhtml_aid-UGL2)
+## 1.2 编写你的第一个代码
 
 将类命名为 `Main`。现在，弹出一个代码编辑器并显示以下代码：
 
-```
+```java
 public class Main {
 }
 ```
 
 我们需要在类内部包含一个 `main()` 方法。这告诉 Java 要执行哪些代码。在大花括号之间添加以下内容：
 
-```
+```java
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -202,11 +217,13 @@ public class Main {
 
 这应该输出“Hello world!”。现在，我们必须编译并执行代码。为了做到这一点，点击 *Run* 菜单栏按钮，然后点击出现的“Run…”选项。之后，点击“Main”表示你想运行来自 `Main` 类的 `main()` 方法。
 
-![images/figures/GETTINGSTARTED_10](img/image00395.jpeg)图 1.10：运行你的代码。
+![images/figures/GETTINGSTARTED_10](img/image00395.jpeg)
+图 1.10：运行你的代码。
 
 几秒钟，窗口底部会弹出一个控制台，显示 `Hello world!`。
 
-![images/figures/GETTINGSTARTED_11](img/image00396.jpeg)图 1.11：控制台中的“Hello world!”。
+![images/figures/GETTINGSTARTED_11](img/image00396.jpeg)
+图 1.11：控制台中的“Hello world!”。
 
 恭喜！你刚刚编写了你的第一个 Java 程序！
 
@@ -214,12 +231,12 @@ public class Main {
 
 列表 1.1：分析我们的代码。
 
-```
-1public class Runner {
-2    public static void main(String[] args) {
-3        System.out.println("Hello world!");
-4    }
-5}
+```java
+1 public class Runner {
+2     public static void main(String[] args) {
+3         System.out.println("Hello world!");
+4     }
+5 }
 ```
 
 在第一行，我们写了类头，这是一个用于声明我们正在创建一个新类的类头。类本质上是对象的蓝图，我们可以通过 Java 创建并操作这些对象。
@@ -238,14 +255,13 @@ public class Main {
 
 列表 1.2：打印我们的名字和年龄。
 
-```
-1public class Runner {
-2    public static void main(String[] args) {
-3        System.out.println("Hello world!");
-4        System.out.println("Your Name");
-5        System.out.println(25);
-6}
-7
+```java
+1 public class Runner {
+2     public static void main(String[] args) {
+3         System.out.println("Hello world!");
+4         System.out.println("Your Name");
+5         System.out.println(25);
+6 }
 ```
 
 在运行程序之前，不要忘记保存文件。
@@ -264,17 +280,17 @@ Your Name
 
 列表 1.4：加减数字。
 
-```
-1public class Runner {
-2    public static void main(String[] args) {
-3        System.out.println("Hello world!");
-4        System.out.println("Johnny Appleseed");
-5        System.out.println(30);
-6        System.out.println("Let's do math!");
-7        System.out.println(45 + 15);
-8        System.out.println(98 - 26);
-9        System.out.println(1002 + 9384 - 56);
-10   }
+```java
+1 public class Runner {
+2     public static void main(String[] args) {
+3         System.out.println("Hello world!");
+4         System.out.println("Johnny Appleseed");
+5         System.out.println(30);
+6         System.out.println("Let's do math!");
+7         System.out.println(45 + 15);
+8         System.out.println(98 - 26);
+9         System.out.println(1002 + 9384 - 56);
+10    }
 11}
 ```
 
@@ -300,27 +316,24 @@ Let's do math!
 
 列表 1.6：使用 `System.out.print()`
 
-```
- 1public class Runner {
-2    public static void main(String[] args) {
-3        System.out.println("Hello world!");
-4        System.out.println("Johnny Appleseed");
-5        System.out.println(30);
-6        System.out.println("Let's do math!");
-7        System.out.println(45 + 15);
-8        System.out.println(98 - 26);
-9        System.out.println(1002 + 9384 - 56);
-10        System.out.print("A");
-11        System.out.print("B");
-12        System.out.print("C");
-13        System.out.println("soup");
-14        System.out.println("Done");
-15   }
+```java
+ 1 public class Runner {
+2     public static void main(String[] args) {
+3         System.out.println("Hello world!");
+4         System.out.println("Johnny Appleseed");
+5         System.out.println(30);
+6         System.out.println("Let's do math!");
+7         System.out.println(45 + 15);
+8         System.out.println(98 - 26);
+9         System.out.println(1002 + 9384 - 56);
+10         System.out.print("A");
+11         System.out.print("B");
+12         System.out.print("C");
+13         System.out.println("soup");
+14         System.out.println("Done");
+15    }
 16}
 ```
-
-
-
 
 在第 10 到 12 行中，我们使用 `print()` 函数将 `"A"`、`"B"` 和 `"C"` 打印到控制台，它们紧紧挨在一起。然后，我们调用 `println()` 函数来打印 `"soup"`。这会将 `"soup"` 打印在 `"ABC"` 旁边，然后将文本光标移动到下一行。这样，当打印 `"Done"` 时，它就不会与 `"ABCsoup"` 在同一行。
 
@@ -348,7 +361,7 @@ Done
 
 列表 1.8：编写单行注释
 
-```
+```java
 // I am a comment
 ```
 
@@ -356,7 +369,7 @@ Done
 
 列表 1.9：编写多行注释
 
-```
+```java
 /*
 I am a comment
 that can stretch
@@ -383,6 +396,8 @@ public class Runner {
 我们完全不知道这个程序是要做什么的。然而，如果开发者包含了注释，我们就能对代码将做什么有一个大致的概念。
 
 列表 1.11：在陌生代码中添加注释
+
+
 
 ```java
 public class Runner {
@@ -434,6 +449,7 @@ The sum of 10 numbers is 55
 图片将被称为“Figures”（图）。例如，Figure 1.12 指的是之前的示例图像。如下面的图片所示，标题可能会定期出现在图片下方。
 
 ![images/figures/sample](img/image00397.jpeg)
+
 图 1.12：这是上方图片的示例标题。
 
 ### 1.5.2 表格
@@ -474,8 +490,10 @@ public static void main(String[] args) {
 列表 1.15：不带行号的示例代码。
 
 ```java
-public static void main(String[] args) {
-    System.out.println("Without line numbers");
+public class Arithmetic {
+    public static void main(String[] args) {
+        System.out.println("Without line numbers");
+    }
 }
 ```
 
@@ -492,7 +510,7 @@ public static void main(String[] args) {
 示例将以粗体字体指示，后面跟着示例。
 
 > **Example**
-
+>
 > 这是一个示例。
 
 练习也可能出现在特定章节之后，测试你对所学内容的掌握情况。与示例不同，书籍在你完成练习后不会立即向你显示答案。建议你在每个相应章节的 Java 项目中使用独立的 Java 类进行练习。
@@ -510,13 +528,10 @@ public static void main(String[] args) {
 最后，每章末尾会有编程问题。除非另有说明，否则将你从 `main()` 方法或 `main()` 调用的另一个静态方法中编写并运行代码。
 
 > **Problem 1**
-
+>
 > 编写一个程序使用 `for` 循环打印从 1 到 100 的所有数字。
 
 练习和问题的解答都位于书末。
-
-
-
 
 ## 1.6 复习
 
@@ -542,7 +557,7 @@ Java 允许我们在很大程度上处理数字。例如，2、5.6 和 -93 都�
 
 在进入整数之前，我们需要复习一个重要的计算机科学概念。我们必须面对现实：一切都是由`binary numbers`（二进制数）组成的，这意味着我们使用 0 和 1 来表示所有类型的数据。特别是整数，表示为 0 和 1 的组合。
 
-区块 2.1. 二进制与十进制
+块 2.1。二进制与十进制
 
 如果我们从 2 基（二进制格式）开始计数，我们将从这里
 
@@ -567,7 +582,7 @@ Java 允许我们在很大程度上处理数字。例如，2、5.6 和 -93 都�
 
 表 2.1：Java 整数的类型。
 
-我们将主要关注列表中的 `int` 数据。查看上面的数值范围，我们 `int` 落在 ![epub/OEBPS/images/texmath/e7cbe94730e4ef21fff63b66adfa0c3645](img/image00411.jpeg) 之间。这意味着 `int` 类型数字只能在 -2147483648 和 2147483647 之间。所以，如果你尝试写一个大于 ![epub/OEBPS/images/texmath/bd9afe4d5a8dfa2ed3fad9218f5628739](img/image00413.jpeg) 或小于 ![epub/OEBPS/images/texmath/30ae2b7f9ac9f1c6b96fc3ef802531) 的整数，你将收到错误。此外，如果你的代码在任何一点 `int` 尝试超过 ![epub/OEBPS/images/texmath/bd9afe4d5a8dfa2ed3fad9218f5628739](img/image00413.jpeg) 或小于 ![epub/OEBPS/images/texmath/30ae2b7f9ac9f1c6b96fc3ef802531)，就会发生所谓的 `overflow`（溢出）。这意味着如果你的整数不断增加，它最终将循环并从最小的负 `int` 开始。同样，如果你的整数不断减小，它最终将循环并从最大的正 `int` 开始。
+我们将主要关注列表中的 `int` 数据。查看上面的数值范围，我们 `int` 落在 ![epub/OEBPS/images/texmath/e7cbe94730e4ef21fff63b66adfa0c3645](img/image00411.jpeg) 之间。这意味着 `int` 类型数字只能在 -2147483648 和 2147483647 之间。所以，如果你尝试写一个大于 ![epub/OEBPS/images/texmath/bd9afe4d5a8dfa2ed3fad9218f5628739](img/image00413.jpeg) 或小于 ![epub/OEBPS/images/texmath/30ae2b7f9ac9f1c6b96fc3ef802531](img/image00413.jpeg) 的整数，你将收到错误。此外，如果你的代码在任何一点 `int` 尝试超过 ![epub/OEBPS/images/texmath/bd9afe4d5a8dfa2ed3fad9218f5628739](img/image00413.jpeg) 或小于 ![epub/OEBPS/images/texmath/30ae2b7f9ac9f1c6b96fc3ef802531](img/image00413.jpeg)，就会发生所谓的 `overflow`（溢出）。这意味着如果你的整数不断增加，它最终将循环并从最小的负 `int` 开始。同样，如果你的整数不断减小，它最终将循环并从最大的正 `int` 开始。
 
 ### 2.1.2 整数数学运算
 
@@ -576,7 +591,7 @@ Java 允许我们在很大程度上处理数字。例如，2、5.6 和 -93 都�
 | 运算符 | 定义 | 示例 |
 | :--- | :--- | :--- |
 | `+` | 加 两个数字相加 | `1+2=3` |
-| `-` | 减 - 两个数字相减 | `10-4=6` |
+| `-` | 减 两个数字相减 | `10-4=6` |
 | `*` | 乘 两个数字相乘 | `5*6=30` |
 | `/` | 除 两个数字相除 | `6/3=2` |
 | `%` | 取模 - 两个数字相除并返回余数 | `7%3=1` |
@@ -590,17 +605,6 @@ Java 允许我们在很大程度上处理数字。例如，2、5.6 和 -93 都�
 目前，我们将简单地使用 `System.out.println()` 打印想要执行的算术运算。创建一个名为 `Types` 的新 Java 项目。然后，创建一个名为 `Arithmetic.java` 的新类，并在类编写一个空的 `main()` 函数。
 
 列表 2.1：在 `Arithmetic.java` 中添加 `main()` 方法
-```java
-public class Arithmetic {
-    public static void main(String[] args) {
-
-    }
-}
-```
-
-
-
-
 
 ```java
 public class Arithmetic {
@@ -643,6 +647,8 @@ public class Arithmetic {
 接下来，编写一些包含乘法和除法的表达式，如列表 2.4 所示。
 
 列表 2.4：执行乘法和除法。
+
+
 
 ```java
 public class Arithmetic {
@@ -706,8 +712,6 @@ public class Arithmetic {
 
 小数可以分为 `float` 和 `double`。`float` 和 `double` 的区别在于 `float` 提供 6 到 7 位小数的精度，而 `double` 提供 15 到 16 位小数的精度。因此，如果我们计算诸如 `1.0 / 7.0` 且两者都是 `double` 类型，我们将得到 0.1428571428571。
 
-Java 中任何带有小数点的数字，即使是技术上是整数的（如 4.0），都是小数。小数可以分为 `float` 和 `double`。`float` 和 `double` 的区别在于 `float` 提供 6 到 7 位小数的精度，而 `double` 提供 15 到 16 位小数的精度。因此，如果我们计算诸如 `1.0 / 7.0` 且两者都是 `double` 类型，我们将得到 0.1428571428571。
-
 ### 2.1.4 小数运算
 
 我们经常使用整数，但在某些情况下我们需要使用小数。这些小数可以是像 3.44、128.94、-75.1 甚至 4.0 这样的数字。Java 中任何带有小数点的数字，即使是技术上是整数的（如 4.0），都是小数。小数可以分为 `float` 和 `double`。`float` 和 `double` 的区别在于 `float` 提供 6 到 7 位小数的精度，而 `double` 提供 15 到 16 位小数的精度。因此，如果我们计算诸如 `1.0 / 7.0` 且两者都是 `double` 类型，我们将得到 0.1428571428571。
@@ -718,10 +722,6 @@ Java 中任何带有小数点的数字，即使是技术上是整数的（如 4.
 
 （此处省略重复的文本段，根据要求不重复输出原文）
 
-
-
-
-
 列表 2.11: 列表 2.10 的输出
 
 ```
@@ -731,7 +731,7 @@ Java 中任何带有小数点的数字，即使是技术上是整数的（如 4.
 -11.0
 ```
 
-区块 2.3. *练习*
+## 区块 2.3. 练习
 
 **练习 1.** 农夫约翰想为牛购买口罩以防止牛类疾病 COWWID-19 的传播。如果每个口罩的价格是 $5.03，他为他的牛购买 198 个口罩需要支付多少钱？
 
@@ -862,10 +862,6 @@ I like make Android Apps using Java.
 
 列表 2.15: 拼接字符串。
 
-
-
-
-
 ```java
 public class Strings {
     public static void main(String[] args) {
@@ -984,6 +980,8 @@ liberty, or death!
 
 列表 2.21：在 Listing 2.19 的引号中添加反斜杠。
 
+
+
 ```java
 public class Strings {
     public static void main(String[] args) {
@@ -1038,14 +1036,11 @@ Patch it around,
 127 lines of bugs in the code
 ```
 
-
-
-
 我们还可以选择在字符串的开头或结尾的其他地方插入 `\n` 序列。当在字符串中找到 `\n` 时，Java 会简单地插入新行，并在那里打印剩余字符。
 
 列表 2.25：在字符之间使用 `\n`。
 
-```
+```java
 public class Strings {
     public static void main(String[] args) {
         System.out.println("99 lines of\nbugs in the code");
@@ -1066,7 +1061,7 @@ bugs in the code,
 
 列表 2.27：使用 `\t`。
 
-```
+```java
 public class Strings {
     public static void main(String[] args) {
         System.out.println("1...\t2...\t3...\nAnd we have liftoff!");
@@ -1111,7 +1106,7 @@ And we have liftoff!
 
 列表 2.29：在 `Booleans` 类中添加 `main()` 方法。
 
-```
+```java
 public class Booleans {
     public static void main(String[] args) {
 
@@ -1123,7 +1118,7 @@ public class Booleans {
 
 列表 2.30：打印 `true` 和 `false`。
 
-```
+```java
 public class Booleans {
     public static void main(String[] args) {
         System.out.println(true);
@@ -1150,7 +1145,7 @@ false
 | 运算符 | 定义 | 示例 |
 | :--- | :--- | :--- |
 | `>` | 大于 | 5 > 3 |
-| `<` | 小于 | | 67 < 91.8 |
+| `<` | 小于 | 67 < 91.8 |
 | `>=` | 大于等于 | 43 >= 42 |
 | `<=` | 小于等于 | 67.8 <= 85.2 |
 | `==` | 等于 | 19 == 19 |
@@ -1164,7 +1159,7 @@ false
 
 列表 2.32：使用关系运算符。
 
-```
+```java
 public class Booleans {
     public static void main(String[] args) {
         System.out.println(4 > 2);
@@ -1212,12 +1207,7 @@ true
 | :--- | :--- | :--- |
 | `!` | *not* - 返回布尔值的反值 | `!true` |
 | `&&` | *and* - 如果两个操作数都为真则返回真 | `true && false` |
-
-
-
-
-
-| `||` | *or* - 如果一个或两个操作数为真，则返回真 | True || False ![Images/image00400.jpeg](img/605575864c00abe7d78d98ad65404e3e9c121d1f) True, False || False ![Images/image00400.jpeg](img/image0040.jpeg) False |
+| `||` | *or* - 如果一个或两个操作数为真，则返回真 | `true || false` |
 
 表 2.5：逻辑运算符。
 
@@ -1330,6 +1320,8 @@ public class Booleans {
 }
 ```
 
+
+
 在第一个打印语句中，我们简单地评估 `true` 或 `false` 是否真。在第二个打印语句中，我们可以看到我们同时使用了 `&&` 和 `||`。因为 `&&` 的优先级更高，它的操作数首先被比较。然后，`and` 操作的结果被用作 `or` 操作中的操作数，我们得到了结果。最后，在第三个打印语句中，我们确定字符串的长度是否超过 3 或另一个字符串的长度是否等于 3。
 
 Listing 2.39：[Listing 2.38] 的输出
@@ -1340,17 +1332,13 @@ true
 true
 ```
 
-Block 2.9. *练习*
+### Block 2.9. 练习
 
 **Ex 1.** 打印你的名字长度是否大于姓氏长度，且你的名字不等于你的姓氏。
 
 **Ex 2.** 打印你的兄弟姐妹数量是否少于你的年龄除以 3，或者你的出生月份数字大于 6。
 
 **Ex 3.** 打印 5 是否大于 6 的反值。
-
-
-
-
 
 ### 问题 1
 
@@ -1364,7 +1352,7 @@ Block 2.9. *练习*
 
 ### 问题 2
 
-约翰农夫将他的牛隔离起来以防止牛类疾病 COWWID-19，而他的牛正策划逃出被锁的谷仓。它们必须爬过一扇高为 293.75 英字的谷门，它们有一堆高为 `14.6875` 英利的梯子。它们必须连接多少把梯子才能成功爬过谷门？
+约翰农夫将他的牛隔离起来以防止牛类疾病 COWWID-19，而他的牛正策划逃出被锁的谷仓。它们必须爬过一扇高为 293.75 英尺的谷门，它们有一堆高为 `14.6875` 英尺的梯子。它们必须连接多少把梯子才能成功爬过谷门？
 
 ### 问题 3
 
@@ -1384,9 +1372,9 @@ Block 2.9. *练习*
 
 例如，假设我们想要存储一个人的名字和年龄。我们并不确定名字和年龄是什么，但我们知道它们将分别是 `String` 和 `int`，并且无论名字和年龄是什么，我们都想对这些名字和年龄执行操作和命令。
 
-幸运的是，Java 允许我们使用`variables` 来存储数据。变量是赋值给各种数据的标识符。它们就像物品上的标签贴。标签是变量标识符，数据是标签所指的内容。这个比喻可以进一步扩展，因为它还表明变量并不是数据本身，而是一个指向存储数据的内存位置的标识符。
+幸运的是，Java 允许我们使用 `variables` 来存储数据。变量是赋值给各种数据的标识符。它们就像物品上的标签贴。标签是变量标识符，数据是标签所指的内容。这个比喻可以进一步扩展，因为它还表明变量并不是数据本身，而是一个指向存储数据的内存位置的标识符。
 
-你可能在数学中见过并使用过变量。例如，你可以变量 `x` 和 `y`使得：
+你可能在数学中见过并使用过变量。例如，你可以变量 `x` 和 `y` 使得：
 
 `x + y = z`
 
@@ -1526,10 +1514,6 @@ public class Variables {
 
 在上面的示例中，我们将变量 `age` 声明为 `final` 常量。如果我们尝试重新给其赋值，编译器将抛出错误。
 
-
-
-
-
 ```java
 public static void main(String[] args) {
     int x = 2;
@@ -1554,7 +1538,7 @@ public static void main(String[] args) {
 }
 ```
 
-我们甚至可以修改上面的代码，如果我们立即知道 `y` 的值，只需在开始时为 `y` 赋值即可即可。
+我们甚至可以修改上面的代码，如果我们立即知道 `y` 的值，只需在开始时为 `y` 赋值即可。
 
 Listing 3.12：在单行中为变量 `x`、`y` 和 `z` 赋值。
 
@@ -1578,7 +1562,7 @@ public static void main(String[] args) {
 }
 ```
 
-#### 章节 3.1 将 `int` 值赋值给 `double` 变量
+#### 3.1 将 `int` 值赋值给 `double` 变量
 
 你可能会注意到，当我们初始化 `double` 变量时，正在为它们赋值 `int` 值。Java 会执行一种被称为“隐式转换”的操作。当两个数据类型（例如 `int` 和 `double`）兼容时，就会发生这种情况，这意味着它们在上下文中是相似的（例如都是数字），并且你可以将较小的值转换为较大的值（例如 `int` 转换为 `double`）。虽然我们可以隐式地从 `int` 强制转换为 `double`，但反之则不行，因为这会导致数据丢失。我们将在第 3.3 节 中探索这一概念。
 
@@ -1634,14 +1618,11 @@ Listing 3.17：Listing 3.16 的输出。
 
 再次运行代码后，我们发现这次打印的所有内容都变了。修改 `a` 和 `b` 导致了完全不同的输出。
 
-然而，我们也可以承认，当我们更改变量的值时，我们不需要手动修改任何算术操作，仅仅因为 `a` 和 `b` 不同，这些操作在运行时自动发生了变化。这表明变量代表了一种高`抽象`，在执行简单操作时，你并不一定知道存储了什么值。
+然而，我们也可以承认，当我们更改变量的值时，我们不需要手动修改任何算术操作，仅仅因为 `a` 和 `b` 不同，这些操作在运行时自动发生了变化。这表明变量代表了一种高 `抽象`，在执行简单操作时，你并不一定知道存储了什么值。
 
 ## 示例 2
 
 假设我们想分别将姓和名作为输入，并打印一个包含我们名字的字符串。
-
-
-
 
 ```java
 public static void main(String[] args) {
@@ -1675,7 +1656,7 @@ public static void main(String[] args) {
 }
 ```
 
-假设我们想让 Listing 3.26 中 `number` 存储的值翻倍。当我们执行打印语句后重新赋值 `number` 时，我们赋值的值也可以包含 `number` 本身。因为变量被赋值给表达式，所以表达式首先需要完全简化。因此，如果我们将 `number` 赋值为 `number * 2`，我们将首先计算 `number * 2`，其结果为 ![epub/OEBPS/images/texmath/166535829ffd8a2ab09dbbe810d1a9e9c28c50d](img/image0042.jpeg)。因此，`number` 的新值将被赋值为 `14`。
+假设我们想让 Listing 3.26 中 `number` 存储的值翻倍。当我们执行打印语句后重新赋值 `number` 时，我们赋值的值也可以包含 `number` 本身。因为变量被赋值给表达式，所以表达式首先需要完全简化。因此，如果我们将 `number` 赋值为 `number * 2`，我们将首先计算 `number * 2`，其结果为 `14`。因此，`number` 的新值将被赋值为 `14`。
 
 Listing 3.27：使用其之前的值修改 `number`。
 
@@ -1741,6 +1722,8 @@ Listing 3.32：Listing 3.31 的输出
 
 Listing 3.33：创建并修改变量 `num`。
 
+
+
 ```java
 public static void main(String[] args) {
     int num = 2;
@@ -1796,10 +1779,7 @@ public static void main(String[] args) {
 }
 ```
 
-
-
-
-```
+```java
 final String greeting;
 // 分配初始值
 greeting = "Hello world!";
@@ -1820,7 +1800,7 @@ Java 维持了一种特定的`控制流`。在类中，像 `main()` 方法这样
 
 列表 3.39：在 `main()` 中创建并打印 `number`。
 
-```
+```java
 public static void main(String[] args) {
     int number = 5;
     System.out.println(number);
@@ -1837,7 +1817,7 @@ public static void main(String[] args) {
 
 列表 3.41：在声明之前打印 `number`。
 
-```
+```java
 public static void main(String[] args) {
     System.out.println(number);
     int number = 5;
@@ -1857,13 +1837,13 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problem:
 
 这一概念同样适用于实际声明变量时。假设我们有以下代码：
 
-```
+```java
 int number;
 ```
 
 `number` 仅被声明了，尚未赋值。所以，如果我们尝试在不实际赋值任何内容的情况下使用 `number`，我们将尝试从一个实际上没有指向任何内容的 `number` 获取值。
 
-```
+```java
 int number;
 System.out.println(number);
 ```
@@ -1891,7 +1871,7 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problem:
 
 列表 3.43：宽转换的示例。
 
-```
+```java
 public static void main(String[] args) {
     byte b = 64;
     System.out.println(b);
@@ -1925,7 +1905,7 @@ public static void main(String[] args) {
 
 列表 3.45：`char` 的宽转换。
 
-```
+```java
 public static void main(String[] args) {
     char a = 'a';
     char b = 98;
@@ -1953,7 +1933,7 @@ b
 
 列表 3.47：窄转换的示例。
 
-```
+```java
 public static void main(String[] args) {
     System.out.println(34.5);
     System.out.println((int)34.5);
@@ -1979,15 +1959,11 @@ public static void main(String[] args) {
 
 列表 3.49：字符转换。
 
-```
+```java
 System.out.println((char)121);
 System.out.println((char)97);
 System.out.println((char)('B' + 5));
 ```
-
-
-
-
 
 在第一行中，我们将 ASCII 数字 121 转换为其对应的字符。我们在第二行执行了相同的操作。在第三行中，我们首先将一个 `char` 加到一个 `int` 上，然后将结果强制转换为 `char`。这会将 `'B'` 的 ASCII 数值加到 5，然后将该数字在 ASCII 表中映射回另一个字符。
 
@@ -2011,7 +1987,7 @@ G
 
 Listing 4.1：在 `LetterBlocks.java` 中写入 "DEE"。
 
-```
+```java
  1public class LetterBlocks {
  2    public static void main(String[] args) {
  3        // D
@@ -2078,7 +2054,7 @@ Listing 4.2：Listing 4.1 的输出
 
 Listing 4.3：`main()` 方法概览。
 
-```
+```java
 public static void main(String[] args) {
     // statement;
     // statement;
@@ -2101,169 +2077,47 @@ public static void main(String[] args) {
 
 Listing 4.4：创建 `writeD()` 方法。
 
-```
- 1public class LetterBlocks {
- 2    public static void main(String[] args) {
- 3        // D
- 4        System.out.println("-----");
- 5        System.out.println(" |   \\");
- 6        System.out.println(" |    |");
- 7        System.out.println(" |   /");
- 8        System.out.println("-----");
- 9
-10        System.out.println();
-11
-12        // E
- 13        System.out.println("+-----");
- 14        System.out.println("|");
- 15        System.out.println("+----");
- 16        System.out.println("|");
- 17        System.out.println("+-----");
- 18
-19        System.out.println();
-20
-21        // E
- 22        System.out.println("+-----");
- 23        System.out.println("|");
- 24        System.out.println("+----");
- 25        System.out.println("|");
- 26        System.out.println("+-----");
- 27    }
- 28}
-29
-30    public static void writeD() {
- 31        // D
- 32        System.out.println("-----");
- 33        System.out.println(" |   \\");
- 34        System.out.println(" |    |");
- 35        System.out.println(" |   /");
- 36        System.out.println("-----");
- 37    }
- 38}
-```
-
-然而，当我们运行程序时，发现“D”不再打印了。
-
-Listing 4.5：Listing 4.4 的输出
-
-```
-+-----
-|
-+----
-|
-+-----
-
-+-----
-|
-+----
-|
-+-----
-```
-
-这是因为尽管我们写了一个方法，但必须调用它才能使用它。我们只需要在第 3 行包含 `writeD();` 即可。
-
-Listing 4.6：使用 `writeD()` 方法。
-
-```
- 1public class LetterBlocks {
- 2    public static void main(String[] args) {
- 3        writeD();
- 4
- 5        System.out.println();
- 6
- 7        // E
- 8        System.out.println("+-----");
- 9        System.out.println("|");
- 10        System.out.println("+----");
- 11        System.out.println("|");
- 12        System.out.println("+-----");
- 13
- 14        System.out.println();
- 15
- 16        // E
- 17        System.out.println("+-----");
- 18        System.out.println("|");
- 19        System.out.println("+----");
- 20        System.out.println("|");
- 21        System.out.println("+-----");
- 22    }
- 23
- 24    public static void writeD() {
- 25        // D
- 26        System.out.println("-----");
- 27        System.out.println(" |   \\");
- 28        System.out.println(" |    |");
- 29        System.out.println(" |   /");
- 30        System.out.println("-----");
- 31    }
- 32}
-```
-
-Listing 4.7：Listing 4.6 的输出
 
 
-
-
-
-```
------
- |   \
- |    |
- |   /
------
-
-+-----
-|
-+----
-|
-+-----
-
-+-----
-|
-+----
-|
-+-----
-```
-
-### 4.1 实现 `writeE()` 方法
+# 4.1 实现 `writeE()` 方法
 
 我们还可以编写另一个静态方法 `writeE()`，它用于用块状字母打印“E”。然后，我们可以替换所有旨在打印“E”的 `print` 语句。注意，我们可以按照任何顺序向类中添加方法。例如，在列表 4.8 中，`writeE()` 可以放在 `writeD()` 之前或 `main()` 之前，但我们选择将其放在末尾。
 
-列表 4.8：实现 `writeE()` 方法。
+## 列表 4.8：实现 `writeE()` 方法
 
-```
- 1public class LetterBlocks {
- 2    public static void main(String[] args) {
- 3        writeD();
- 4        System.out.println();
- 5        writeE();
- 6        System.out.println();
- 7        writeE();
- 8    }
- 9
-10    public static void writeD() {
- 11        // D
- 12        System.out.println("-----");
- 13        System.out.println(" |   \\");
- 14        System.out.println(" |    |");
- 15        System.out.println(" |   /");
- 16        System.out.println("-----");
- 17    }
- 18
-19    public static void writeE() {
- 20        // E
- 21        System.out.println("+-----");
- 22        System.out.println("|");
- 23        System.out.println("+----");
- 24        System.out.println("|");
- 25        System.out.println("+-----");
- 26    }
- 27}
+```java
+public class LetterBlocks {
+    public static void main(String[] args) {
+        writeD();
+        System.out.println();
+        writeE();
+        System.out.println();
+        writeE();
+    }
+
+    public static void writeD() {
+        // D
+        System.out.println("-----");
+        System.out.println(" |   \\");
+        System.out.println(" |    |");
+        System.out.println(" |   /");
+        System.out.println("-----");
+    }
+
+    public static void writeE() {
+        // E
+        System.out.println("+-----");
+        System.out.println("|");
+        System.out.println("+----");
+        System.out.println("|");
+        System.out.println("+-----");
+    }
+}
 ```
 
 注意第 5 和 7 行，我们调用了两次 `writeE()`。这将执行两次 `writeE()` 内部的代码，展示了方法的直观性。
 
-列表 4.9：列表 4.8 的输出
+## 列表 4.9：列表 4.8 的输出
 
 ```
 -----
@@ -2285,13 +2139,13 @@ Listing 4.7：Listing 4.6 的输出
 +-----
 ```
 
-## 4.2 控制流
+# 4.2 控制流
 
 让我们回到 `LetterBlocks.java` 中最近的代码。
 
-列表 4.10：`LetterBlocks.java` 中的代码。
+## 列表 4.10：`LetterBlocks.java` 中的代码
 
-```
+```java
 public class LetterBlocks {
     public static void main(String[] args) {
         writeD();
@@ -2311,47 +2165,48 @@ public class LetterBlocks {
 }
 ```
 
-当我们执行 `main()` 方法时，我们建立了一个*控制流*（flow of control），即语句执行的顺序。默认情况下，语句按从到下的顺序顺序执行，并从 `main()` 方法中的第一条语句开始。
+当我们执行 `main()` 方法时，我们建立了一个**控制流**（flow of control），即语句执行的顺序。默认情况下，语句按从上到下的顺序执行，并从 `main()` 方法中的第一条语句开始。
 
-然而，当我们继续调用函数时，我们*改变*了控制流。例如，当我们在 `main()` 方法中调用 `writeD()` 时，程序从方法调用跳转到方法内部的代码。因此，通过调用 `writeD()`，我们开始执行 `writeD()` 内部所有打印块状字母“D”的 `print` 语句。在 `writeD()` 方法中的所有代码执行完毕后，我们跳转回 `main()` 方法中调用 `writeD()` 的地方，并继续执行剩余的语句（即空 `print` 语句、`writeE()` 等），直到到达 `main()` 方法的末尾。图 4.1 是一个描绘语句执行顺序的流程图。
+然而，当我们继续调用函数时，我们**改变**了控制流。例如，当我们在 `main()` 方法中调用 `writeD()` 时，程序从方法调用跳转到方法内部的代码。因此，通过调用 `writeD()`，我们开始执行 `writeD()` 内部所有打印块状字母“D”的 `print` 语句。在 `writeD()` 方法中的所有代码执行完毕后，我们跳转回 `main()` 方法中调用 `writeD()` 的地方，并继续执行剩余的语句（即空 `print` 语句、`writeE()` 等），直到到达 `main()` 方法的末尾。图 4.1 是一个描绘语句执行顺序的流程图。
 
-![images/figures/flowcontrol](img/image0042.jpeg)图 4.1：指示 `LetterBlocks.java` 中控制流的流程图。
+![images/figures/flowcontrol](img/image0042.jpeg)
+图 4.1：指示 `LetterBlocks.java` 中控制流的流程图。
 
-## 4.3 创建带参数的方法
+# 4.3 创建带参数的方法
 
 *在本节中，创建一个新类 `UseParameters.java`。*
 
 假设我们要找到三个数的平均值。如果我们在代码中多次执行此操作，那么创建一个方法 `average()` 来这样做是有意义的。但我们如何向 `average()` 传递值呢？我们需要为方法提供某种输入，以便它不不仅仅是找到严格的三个数的平均值。
 
-为了为方法传递可使用的数据，我们必须在方法签名中包含*参数*（parameters）。参数就像占位符变量，我们*仅在方法内部*可以使用它们，这样当我们以后调用该方法时，就可以用自己的*实参*（arguments）来填充这些参数。
+为了为方法传递可使用的数据，我们必须在方法签名中包含**参数**（parameters）。参数就像占位符变量，我们**仅在方法内部**可以使用它们，这样当我们以后调用该方法时，就可以用自己的**实参**（arguments）来填充这些参数。
 
 假设我们回头看 `main()` 方法的签名。
 
-```
+```java
 public static void main(String[] args)
 ```
 
-我们可以看到 `main` 旁边的括号内有一个*参数* `args`。参数的写法与变量声明完全相同，除了没有分号。因此，`args` 是 `main()` 方法的一个参数，它的类型为 `String[]`。
+我们可以看到 `main` 旁边的括号内有一个**参数** `args`。参数的写法与变量声明完全相同，除了没有分号。因此，`args` 是 `main()` 方法的一个参数，它的类型为 `String[]`。
 
 要创建一个带单个参数的方法，我们可以在括号内声明一个变量。
 
-```
+```java
 public static void myMethod(int number)
 ```
 
 要创建一个带多个参数的方法，我们可以用逗号分隔多个变量声明。
 
-```
+```java
 public static void myMethod(int number, boolean isPositive)
 ```
 
-### 示例 1
+## 示例 1
 
 在 `UseParameters` 类中开始创建一个新方法 `average()`，并包含三个参数 `a`、`b` 和 `c`。
 
-列表 4.11：定义 `average()`。
+### 列表 4.11：定义 `average()`
 
-```
+```java
 public class UseParameters {
     public static void main(String[] args) {
 
@@ -2365,7 +2220,7 @@ public class UseParameters {
 
 现在我们在列表 4.11 中为方法提供了一些参数，我们可以在方法体中假设 `a`、`b` 和 `c` 存储了平均值。
 
-列表 4.12：打印平均值。
+### 列表 4.12：打印平均值
 
 ```java
 public static void average(double a, double b, double c) {
@@ -2376,7 +2231,7 @@ public static void average(double a, double b, double c) {
 
 当我们写完方法后，可以在 `main()` 方法中通过不同的参数来调用它。
 
-列表 4.13：测试 `average()` 方法。
+### 列表 4.13：测试 `average()` 方法
 
 ```java
 public static void main(String[] args) {
@@ -2386,7 +2241,7 @@ public static void main(String[] args) {
 }
 ```
 
-列表 4.14：列表 4.13 的输出
+### 列表 4.14：列表 4.13 的输出
 
 ```
 The average is 2.0
@@ -2404,9 +2259,9 @@ Hello, {name}, who is {age} years old and likes {hobby}!
 
 我们可以创建一个新方法 `greet()`。我们需要三个参数 `name`、`age` 和 `hobby`。
 
-列表 4.15：`greet()` 的方法签名。
+### 列表 4.15：`greet()` 的方法签名
 
-```
+```java
 public static void greet(String name, int age, String hobby) {
 
 }
@@ -2414,7 +2269,7 @@ public static void greet(String name, int age, String hobby) {
 
 接下来，我们可以在列表 4.15 的 `greet()` 方法体中使用一个 `print` 语句来输出我们的问候语。在需要的地方拼接字符串。
 
-列表 4.16：为 `greet()` 添加代码。
+### 列表 4.16：为 `greet()` 添加代码
 
 ```java
 public static void greet(String name, int age, String hobby) {
@@ -2425,7 +2280,7 @@ public static void greet(String name, int age, String hobby) {
 
 现在我们已经写好了方法，可以在 `main()` 方法中使用各种参数来调用此方法。
 
-列表 4.17：测试 `greet()`。
+### 列表 4.17：测试 `greet()`
 
 ```java
 public static void main(String[] args) {
@@ -2434,13 +2289,9 @@ public static void main(String[] args) {
 }
 ```
 
-
-
-
-
 在调用方法时，确保你提供的参数类型与其方法签名中相应参数的类型相同。否则，我们将接收到错误。因此，尝试用 `int` 而不是 `String` 作为名称来调用 `greet()` 将导致编译错误。
 
-```
+```java
 public static void main(String[] args) {
     greet(49, 23, "playing tennis");
 }
@@ -2452,7 +2303,7 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problem:
     applicable for the arguments (int, int, String)
 ```
 
-## 4.4 返回值
+# 4.4 返回值
 
 *对于本节，请创建一个新类*，`ReturnMethods.java`
 
@@ -2460,7 +2311,7 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problem:
 
 让我们重新回顾 `UseParameters.java` 中的 `average()` 方法作为示例。将该方法复制到 `ReturnMethods.java` 中。
 
-```
+```java
 public static void average(double a, double b, double c) {
     double avg = (a + b + c) / 3;
     System.out.println("The average is: " + avg);
@@ -2469,13 +2320,13 @@ public static void average(double a, double b, double c) {
 
 这个方法非常直接；我们只需要提供三个数字，`average()` 计算平均值。
 
-然而，识别这里的问题很重要：我们的方法只是*打印*了平均值。打印与向用户返回值是完全不同的！当我们打印某些内容时，它只会被写入标准输出。打印语句仅用作视觉输出；它们实际上对你代码的整体功能没有贡献。
+然而，识别这里的问题很重要：我们的方法只是**打印**了平均值。打印与向用户返回值是完全不同的！当我们打印某些内容时，它只会被写入标准输出。打印语句仅用作视觉输出；它们实际上对你代码的整体功能没有贡献。
 
 假设我们想将 `average(1, 2, 3)` 加到 `average(4, 5, 6)`。目前，我们知道可以在 `main()` 方法中分别调用这两个方法。
 
-列表 4.19：在 `main()` 方法中调用 `average()`。
+### 列表 4.19：在 `main()` 方法中调用 `average()`
 
-```
+```java
 public static void main(String[] args) {
     average(1, 2, 3);
     average(4, 5, 6);
@@ -2484,7 +2335,7 @@ public static void main(String[] args) {
 
 运行这段代码时，我们将看到两个平均值被打印出来，但我们从未真正地将两个平均值相加。
 
-列表 4.20：列表 4.19 的输出
+### 列表 4.20：列表 4.19 的输出
 
 ```
 The average is: 2.0
@@ -2493,9 +2344,11 @@ The average is: 5.0
 
 如果我们尝试打印 `average(1, 2, 3) + average(4, 5, 6)`，我们将收到一个错误。
 
-```
+```java
 System.out.println(average(1, 2, 3) + average(4, 5, 6));
 ```
+
+
 
 ```
 Exception in thread "main" java.lang.Error: Unresolved compilation problem:
@@ -2512,7 +2365,7 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problem:
 
 为了让方法向用户*返回*数据，我们必须做的第一件事是替换 `void` 关键字。目前，我们观察了类似于以下的方法：
 
-```
+```java
 public static void myMethod() {}
 ```
 
@@ -2526,13 +2379,13 @@ public static double myMethod() {}
 
 同样，如果我们想向用户返回一个 `int` 值，我们必须将 `void` 替换为 `int`。
 
-```
+```java
 public static int myMethod() {}
 ```
 
 我们还可以返回对象而不是基本数据类型，例如字符串。
 
-```
+```java
 public static String myMethod() {}
 ```
 
@@ -2542,7 +2395,7 @@ public static String myMethod() {}
 
 列表 4.21：将 `void` 替换为 `double`。
 
-```
+```java
 public static double average(double a, double b, double c) {
     double avg = (a + b + c) / 3;
     System.out.println("The average is: " + avg);
@@ -2564,7 +2417,7 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problem:
 
 创建返回方法的第二部分实际上是*返回值*。在方法中，我们可以使用 `return` 语句后跟一个值或表达式来向用户返回或给出一个值。
 
-```
+```java
 public static int myMethod() {
     return 0;
 }
@@ -2572,7 +2425,7 @@ public static int myMethod() {
 
 我们返回的表达式*必须*与方法签名中指定的类型相同。所以，如果我们写 `int`，我们就会返回一个整数。如果我们写 `boolean`，我们就会返回一个布尔值。
 
-```
+```java
 public static boolean myMethod() {
     return true;
 }
@@ -2580,7 +2433,7 @@ public static boolean myMethod() {
 
 在 `void` 方法中调用 `return` 语句也是可能的，但我们只能写 `return` 后不跟任何表达式。在 `void` 方法中调用 `return` 语句将直接停止方法。
 
-```
+```java
 public static void myMethod() {
     return;
 }
@@ -2590,7 +2443,7 @@ public static void myMethod() {
 
 列表 4.23：将打印语句替换为返回语句。
 
-```
+```java
 public static double average(double a, double b, double c) {
     double avg = (a + b + c) / 3;
     return avg;
@@ -2601,7 +2454,7 @@ public static double average(double a, double b, double c) {
 
 列表 4.24：重写我们的 `main()` 方法。
 
-```
+```java
 public static void main(String[] args) {
     System.out.println(average(1, 2, 3));
     System.out.println(average(4, 5, 6));
@@ -2621,14 +2474,11 @@ public static void main(String[] args) {
 
 **示例 2**
 
-
-
-
 让我们练习编写一个方法来计算两个整数点之间的距离（以 `double` 类型表示）。我们将该方法命名为 `distance()`，并包含四个整数参数：`x1`、`y1`、`x2` 和 `y2`。因为我们需要返回一个距离，所以我们的返回类型将是 `double`。
 
 列表 4.26：为 `distance()` 编写方法头。
 
-```
+```java
 public static double distance(int x1, int y1, int x2, int y2) {}
 ```
 
@@ -2640,7 +2490,7 @@ public static double distance(int x1, int y1, int x2, int y2) {}
 
 列表 4.27：解决我们的子表达式。
 
-```
+```java
 public static double distance(int x1, int y1, int x2, int y2) {
     double x = Math.pow(x2 - x1, 2);
     double y = Math.pow(y2 - y1, 2);
@@ -2651,7 +2501,7 @@ public static double distance(int x1, int y1, int x2, int y2) {
 
 列表 4.28：返回 `x` 和 `y` 之和的平方根。
 
-```
+```java
 public static double distance(int x1, int y1, int x2, int y2) {
     double x = Math.pow(x2 - x1, 2);
     double y = Math.pow(y2 - y1, 2);
@@ -2663,7 +2513,7 @@ public static double distance(int x1, int y1, int x2, int y2) {
 
 列表 4.29：测试我们的 `distance()` 方法。
 
-```
+```java
 public static void main(String[] args) {
     System.out.println(distance(0, 0, 3, 4));
     System.out.println(distance(1, 2, 7, 8));
@@ -2701,7 +2551,7 @@ randint(1, 5)
 
 Java 允许我们编写具有相同标识符但参数排列不同的方法。例如，我们可以拥有以下两个方法：
 
-```
+```java
 public static double getTax(double price) {
     return 0.06 * price;
 }
@@ -2712,7 +2562,7 @@ public static double getTax(double price, double discount) {
 
 在这种情况下，我们有两个具有相同标识符 `getTax` 的方法，且它们都返回 `double` 结果。然而，虽然第一个 `getTax()` 方法有一个单个 `double` 参数，但第二个 `getTax()` 方法有两个 `double` 参数，这意味着这两个方法是不同的。因此，当我们调用这两个不同的方法时，第一次调用将导致执行第一个方法，第二次调用亦然如此。
 
-```
+```java
 public static void main(String[] args) {
     int tax;
 
@@ -2776,20 +2626,17 @@ public static double getTax(double price, double discount) {
 
 如果答案是肯定的（`true`），则执行条件语句内部的代码。在该代码执行完毕后，将执行剩余代码。
 
-
-
-
 如果答案为否（`false`），则条件语句内部的代码将被跳过，并执行条件语句之后但在条件语句之外的其余代码。
 
 在本章中，我们将学习如何使用布尔表达式（或 `conditions`）来编写`conditional statements`。条件语句允许我们修改`flow of control`，即 Java 程序中语句执行的顺序。
 
 对于本章，请创建一个名为 `Conditionals` 的新 Java 项目，并创建一个包含 `main` 方法的类 `Conditional.java`。
 
-## ## 5.1 `if` 语句
+## 5.1 `if` 语句
 
 要编写一个 `if` 语句，我们可以写关键字 `if`，后面用括号跟上我们想要评估的布尔表达式。然后，我们可以包含一对大括号。
 
-```
+```java
 if (conditionIsTrue) {
     // Do code here
 }
@@ -2800,15 +2647,15 @@ if (conditionIsTrue) {
 *   如果 `conditionIsTrue` 简化后为 `true`，则条件体内部的代码（即 `// Do code here`）将执行。
 *   注意，条件体是缩进的。这并不是强制要求的，但为了可读性强烈建议这样做。
 
-### ### 示例 1
+### 示例 1
 
 在这个练习中，我们将根据年龄判断一个人是否可以开车。我们可以假设任何 18 岁或以上的人都可以开车。
 
 在 `main()` 方法中，让我们创建一个 `int` 变量 `age`，并将其赋值为一个任意整数。
 
-Listing 5.1：创建 `age` 变量。
+列表 5.1：创建 `age` 变量。
 
-```
+```java
 public static void main(String[] args) {
     int age = 20;
 }
@@ -2816,7 +2663,7 @@ public static void main(String[] args) {
 
 接下来，我们将编写一个条件语句。我们将判断 `age` 是否大于或等于 18。
 
-Listing 5.2：添加条件语句。
+列表 5.2：添加条件语句。
 
 ```java
 public static void main(String[] args) {
@@ -2829,7 +2676,7 @@ public static void main(String[] args) {
 
 最后，在 `if` 语句的体内部，如果满足条件，我们将向用户打印“You can drive!”。
 
-Listing 5.3：填充 `if` 语句的体。
+列表 5.3：填充 `if` 语句的体。
 
 ```java
 public static void main(String[] args) {
@@ -2842,13 +2689,15 @@ public static void main(String[] args) {
 
 让我们运行代码。
 
-Listing 5.4：Listing 5.3 的输出
+列表 5.4：Listing 5.3 的输出
 
 ```
 You can drive!
 ```
 
-我们的代码打印了“You can drive!”是因为当评估 `age >= 18` 时，`age` 的值为 20，所以这个条件为 `true`。因为条件为 `true`，`if` 语句体中的代码执行了。
+
+
+我们的代码打印了“You can drive!”，是因为当评估 `age >= 18` 时，`age` 的值为 20，所以这个条件为 `true`。因为条件为 `true`，`if` 语句体中的代码执行了。
 
 现在，让我们将年龄更改为 18 岁以下的正整数。
 
@@ -2873,7 +2722,7 @@ Listing 5.6：Listing 5.5 的输出
 
 当我们这次执行代码时，我们看到没有任何内容被打印。这是因为我们的条件语句失败了，因为 14 并不大于等于 18。因此，条件体不执行，并且由于 `if` 语句之后没有代码，程序结束了。
 
-### ### 示例 2
+## 示例 2
 
 假设我们写了一个方法 `getTotalCost`，它接受一个 `double` 参数 `initialPrice` 并返回最终价格。这个最终价格受到潜在折扣和销售税的影响。无论如何，销售税都应用于初始价格，但只有当商品价格超过 100 美元时，才会计入 20% 的潜在折扣。
 
@@ -2901,7 +2750,7 @@ public static double getTotalCost(double initialPrice) {
 }
 ```
 
-之后，无论价格如何，我们必须考虑销售税。我们假设无论如何，销售税都应用于初始价格，但只有当商品价格超过 100 美元时，才会计入 20% 的潜在折扣。（等待，此处此处重复了逻辑，但遵循提供的源文件）。
+之后，无论价格如何，我们必须考虑销售税。我们假设无论如何，销售税都应用于初始价格，但只有当商品价格超过 100 美元时，才会计入 20% 的潜在折扣。
 
 Listing 5.9：添加销售税。
 
@@ -2915,9 +2764,8 @@ public static double getTotalCost(double initialPrice) {
     return finalPrice;
 }
 ```
-*(注：提供的源文本在后半部分不完整或重复，此处根据逻辑上下文进行了结构性处理)*
 
-## ## 5.2 `else` 子句
+## 5.2 `else` 子句
 
 目前，我们只观察了条件为真时执行的条件语句。但如果我们的条件失败了该怎么办？
 
@@ -2942,11 +2790,11 @@ if (conditionIsTrue) {
 *   如果 `conditionIsTrue` 简化后为 `true`，则条件体内部的代码（即 `// Do code here`）将执行。
 *   `else` 是我们使用的关键字，用于表示当 `conditionIsTrue` 为 `false` 时应该发生什么。如果为 `false`，则 `else` 子句体内部的代码（即 `// Do other code`）将执行。
 
-注意，如果我们选择包含它，`else` 子句必须位于条件语句的末。
+注意，如果我们选择包含它，`else` 子句必须位于条件语句的末尾。
 
-### ### 示例 1
+### 示例 1
 
-假设我们回到之前创建的判断一个人是否可以车的代码。
+假设我们回到之前创建的判断一个人是否可以开车的代码。
 
 ```java
 int age = 14;
@@ -2954,8 +2802,6 @@ if (age >= 18) {
     System.out.println("You can drive!");
 }
 ```
-
-
 
 我们可以通过向此 `if` 语句添加一个 `else` 子句开始。
 
@@ -2972,7 +2818,7 @@ public static void main(String[] args) {
 }
 ```
 
-之后，我们可以在 `else` 子句的体体中添加另一个打印语句，告诉用户他们不能开车。
+之后，我们可以在 `else` 子句的体中添加另一个打印语句，告诉用户他们不能开车。
 
 Listing 5.14：在 `else` 子句中添加代码。
 
@@ -3011,111 +2857,11 @@ Listing 5.17：Listing 5.16 的输出
 You can drive!
 ```
 
-注意，只有当先的 `if` 子句失败时，`else` 子句内部的代码才会执行。因此，如果 `age >= 18` 为 `True`（真），则 `else` 子句将不会执行。
+注意，只有当先前的 `if` 子句失败时，`else` 子句内部的代码才会执行。因此，如果 `age >= 18` 为 `true`，则 `else` 子句将不会执行。
 
-## 示例 2
+### 示例 2
 
-假设我们写了一个名为 `getMin()` 的方法，它接收两个实数数作为参数，并返回这两个数中较小的一个。
-
-我们可以从编写方法头开始。
-
-Listing 5.18：`getMin()` 的方法头。
-
-```java
-public static double getMin(double x, double y) {
-
-}
-```
-
-接下来，我们想比较 `x` 和 `y`。如果 `x` 小于 `y`，那么 `x` 就是两个数中最小的，因此我们将返回 `x`。
-
-Listing 5.19：检查 `x < y` 是否为真。
-
-```java
-public static double getMin(double x, double y) {
-    if (x < y) {
-        return x;
-    }
-}
-```
-
-否则，我们可以返回 `y`，因为此时 `y` 是最小的。
-
-Listing 5.20：改为返回 `y`。
-
-```java
-public static double getMin(double x, double y) {
-    if (x < y) {
-        return x;
-    } else {
-        return y;
-    }
-}
-```
-
-现在，当我们对不同的输入测试代码时，我们得到了正确的最小值。
-
-Listing 5.21：测试 `getMin()`。
-
-```java
-public static void main(String[] args) {
-    System.out.println(getMin(1, 5));
-    System.out.println(getMin(4.3, 2.9));
-}
-```
-
-Listing 5.22：Listing 5.21 的输出
-
-```
-1.0
-2.9
-```
-
-## 5.3 `else if` 子句
-
-条件语句的用处在于，如果第一个条件失败，那么我们可以在尝试评估 `else` 子句（如果存在的话）之前，先评估后续的条件。
-
-例如，假设我们想构建一个评分标准，其中应用以下规则将数字成绩转换为字母等级：
-
-*   >= 90: A
-*   80 - 99: B
-*   70 - 79: C
-*   60 - 69: D
-*   < 60: F
-
-我们首先想检查给定的成绩是否大于或等于 90。
-
-```java
-// num 在此之前已经声明并初始化
-String grade;
-if (num >= 90) {
-    grade = "A";
-}
-```
-
-然而，如果我们的成绩大于或等于 90，那么在此时，它大于或等于 80。为了做到这一点，我们可以使用 `else if` 子句。它看起来和工作原理与 `if` 子句完全一样，但如果你想评估多个情况，只需将其包含在初步的 `if` 子句之后。
-
-```java
-if (condition_is_true) {
-    // 在处执行代码块 1
-} else if (another_is_true) {
-    // 在处执行代码块 2
-} else if (possibly_another_is_true) {
-    // 在处执行代码块 3
-} else {
-    // 在处执行备用代码
-}
-```
-
-*   在上方，我们用 `if` 子句开始条件语句。我们在那里评估该条件，如果它为真，我们只执行代码块 1 中的代码。
-*   如果第一个 `if` 子句为假，我们就移动到下一个子句，即 `else if`。Java 随后会评估该子句中的条件。如果它为真，我们只执行代码块 2 中的代码。
-*   同样，如果这个子句也为假，我们将继续此类推。
-
-（由于提供的原文文本似乎存在部分重复或逻辑混乱，上述翻译已根据逻辑对齐，但严格遵循了格式要求。注：原文在后半部分出现了大量重复的句子片段，翻译已根据“不要重复输出原文”的原则进行了去重和逻辑顺顺，修正后的译文如下）：
-
-## 示例 2
-
-假设我们写了一个名为 `getMin()` 的方法，它接收两个实数作为参数，并返回这两个数中最小的一个。
+假设我们写了一个名为 `getMin()` 的方法，它接收两个实数作为参数，并返回这两个数中较小的一个。
 
 我们可以从编写方法头开始。
 
@@ -3177,11 +2923,11 @@ Listing 5.22：Listing 5.21 的输出
 
 例如，假设我们想构建一个评分标准，其中应用以下规则将数字成绩转换为字母等级：
 
-*   >= 90: A
-*   80 - 99: B
-*   70 - 79: C
-*   60 - 69: D
-*   < 60: F
+*   `>= 90`: A
+*   `80 - 89`: B
+*   `70 - 79`: C
+*   `60 - 69`: D
+*   `< 60`: F
 
 我们首先想检查给定的成绩是否大于或等于 90。
 
@@ -3195,15 +2941,15 @@ if (num >= 90) {
 
 然而，如果我们的成绩不是大于或等于 90，那么此时我们可以检查是否大于等于 80。为了做到这一点，我们可以使用 `else if` 子句。它看起来和工作原理与 `if` 子句完全一样，但如果你想评估多个情况，只需将其包含在初步的 `if` 子句之后。
 
-```java
+```
 if (condition_is_true) {
-    // 在处执行代码块 1
+    // 在此处执行代码块 1
 } else if (another_is_true) {
-    // 在处执行代码块 2
+    // 在此处执行代码块 2
 } else if (possibly_another_is_true) {
-    // 在处执行代码块 3
+    // 在此处执行代码块 3
 } else {
-    // 在处执行备用代码
+    // 在此处执行备用代码
 }
 ```
 
@@ -3211,12 +2957,13 @@ if (condition_is_true) {
 *   如果第一个 `if` 子句为假，我们就移动到下一个子句，即 `else if`。Java 随后会评估该子句中的条件。如果它为真，我们只执行代码块 2 中的代码。
 *   同样，如果这个子句也为假，我们将继续此类推。
 
-（注：由于提供的原文从“Notice that...”之后开始出现大量重复的段落，根据“一定不要重复输出原文”的指令，译文仅保留核心逻辑部分。）
+### 示例
 
+假设我们想编写一个方法 `numToDay`，它接受一个 `int` 参数 `num` 并返回对应的星期几名称（1 代表 Sunday，以此类推），如果输入无效则返回 `"None"`。
 
+我们可以从编写方法头开始。
 
-
-```
+```java
 public static String numToDay(int num) {
     if (num == 1) {
 
@@ -3240,7 +2987,7 @@ public static String numToDay(int num) {
 
 最后，在每个条件语句的体中，我们可以返回相应的星期几。对于 `else` 子句，我们将直接返回 `"None"`。
 
-列表 5.31：返回正确的星期几。
+Listing 5.31：返回正确的星期几。
 
 ```java
 public static String numToDay(int num) {
@@ -3266,7 +3013,9 @@ public static String numToDay(int num) {
 
 我们可以通过以下方式在 `main()` 方法中测试我们的方法。
 
-列表 5.32：测试列表 5.31 中的 `numToDay()` 方法。
+Listing 5.32：测试 Listing 5.31 中的 `numToDay()` 方法。
+
+
 
 ```java
 public static void main(String[] args) {
@@ -3325,6 +3074,7 @@ public static int ticketPrice(boolean isChild, boolean isBetterTicket) {
 在许多情况下，你可以将一个条件嵌套在另一个条件中，也可以在同一个条件子句中使用 `and` 运算符将两个条件放在一起比较。当你遇到以下场景，且必须遵循以下两种选项之一时，你会希望使用嵌套条件（一个在另一个里面），而不是两个成对（使用 `and` 运算符连接两个条件的单个条件语句）：
 
 *   你的外层条件除了嵌套内部条件外，还包含只有在在外层条件为真时才运行的代码，无论内部条件是否为真；或者
+
 *   你的内部条件在两个外层子句中执行相同的条件检查（例如，在外层 `if` 和外层 `else` 子句中使用相同的内部条件），但内部条件的体在每个外层子句之间有所不同。
 
 在列表 5.34 的 `ticketPrice()` 实现中，我们发现费用范围为 27、22、40 和 30。`isChild` 条件将我们的选择缩小到 $27 和 $22 或 $40 和 $30，而两个地方的 `isBetterTicket` 条件会进一步缩小我们的选择。当我们需要使用嵌套条件时，这是非常直观的。
@@ -3365,19 +3115,20 @@ for (start; stop; step) {
 
 *   `start` 是一个代码语句，我们在其中创建一个变量来表示循环的起点。该变量的赋值通常是给 `int` 或 `double`。此外，该代码语句会在循环开始之前执行一次。
 
-
-
-
-
 *   `stop` 是一个指示循环何时应该结束的条件。它可以是任何条件，但通常是涉及 `start` 中变量的条件。`stop` 在循环的每次迭代之前都会被求值。如果条件为真，则执行循环中的代码。否则，则不执行。因此，如果循环重复 `n` 次，那么条件就会被检查 `n+1` 次。
+
 *   `step` 是一个修改 `start` 中变量的语句，例如将其递增 1。需要这个语句是为了确保 `for` 循环不会进入`infinite loop`（这些将在稍后讨论）。它在循环块中所有代码执行完毕后执行。因此，如果循环重复 `n` 次，那么条件就会被检查 `n` 次。
 
 Java 将此过程分解为以下步骤：
 
 1.  在 `start` 中创建变量。
+
 2.  检查 `stop` 中的条件（通常包含该变量）是否为真。
+
 3.  如果为，则执行代码块中的代码。否则，退出循环并继续执行循环后的代码。
+
 4.  在 `step` 中更改变量。
+
 5.  重复步骤 2-4，直到执行步骤 2 且条件为假。然后，在步骤 3 中退出循环。
 
 我们将通过许多示例来完善对 `for` 循环的理解。
@@ -3388,7 +3139,7 @@ Java 将此过程分解为以下步骤：
 
 Listing 6.1：打印 `"Hello world!"` 的 `for` 循环。
 
-```
+```java
 for (int i = 0; i < 10; i++) {
     System.out.println("Hello world!");
 }
@@ -3413,7 +3164,7 @@ Hello world!
 
 如果我们想打印二十次 `"Hello world!"`，我们将写如下：
 
-```
+```java
 for (int i = 0; i < 20; i++) {
     System.out.println("Hello world!");
 }
@@ -3427,7 +3178,7 @@ for (int i = 0; i < 20; i++) {
 
 Listing 6.3：打印数字的 `for` 循环。
 
-```
+```java
 for (int k = 3; k <= 12; k++) {
     System.out.println(k);
 }
@@ -3456,12 +3207,13 @@ Listing 6.4：Listing 6.3 的输出。
 
 Listing 6.5：前 4096 个整数的和。
 
-```
+```java
 int sum = 0;
 for (int n = 1; n <= 4096; n++) {
     sum += n;
 }
 ```
+
 让我们分析这段代码。我们的变量 `sum` 初始化为 0。在 `for` 循环中，`n` 从 1 开始，直到小于或等于 4096。每次迭代我们将 `n` 累加到 `sum`。最后，我们打印 `sum`。
 
 Listing 6.6：Listing 6.5 的输出。
@@ -3476,7 +3228,7 @@ Listing 6.6：Listing 6.5 的输出。
 
 Listing 6.7：2 到 10 的偶数。
 
-```
+```java
 for (int i = 2; i <= 10; i += 2) {
     System.out.println(i);
 }
@@ -3498,7 +3250,7 @@ Listing 6.8：Listing 6.7 的输出。
 
 `while` 循环是一种在条件为假之前执行代码块的循环。`while` 循环的通用形式如下：
 
-```
+```java
 while (condition) {
     // 代码在这里循环
 }
@@ -3507,12 +3259,15 @@ while (condition) {
 让我们将其分解：
 
 *   `while` 是我们用来指示正在使用 `while` 循环的关键字。
+
 *   `condition` 是一个布尔表达式。
 
 Java 将此过程分解为以下步骤：
 
 1.  检查 `condition` 是否为真。如果为假，停止循环。
+
 2.  如果是，则执行 `while` 循环体。
+
 3.  一旦循环体执行完毕，重复步骤 1。
 
 注意，就像 `for` 循环的停止条件一样，`while` 循环的条件最终需要变为假以避免无限循环。
@@ -3523,7 +3278,7 @@ Java 将此过程分解为以下步骤：
 
 Listing 6.9：打印 10 到 15 的数字。
 
-```
+```java
 int num = 10;
 while (num <= 15) {
     System.out.println(num);
@@ -3544,13 +3299,11 @@ Listing 6.10：Listing 6.9 的输出。
 15
 ```
 
-
-
 除非你在循环中遇到 `continue` 或 `break` 语句（我们将在本章稍后部分介绍这些内容），请注意 `while` 循环的循环体在再次评估 `while` 条件之前，必须*完全*执行完毕。这意味着，如果在某个时间点条件为真且循环体开始执行，但在循环体的某处某些变量发生了变化，导致条件在该瞬间变为假，那么 `while` 循环将*继续执行*循环体的剩余部分，直到执行完其中包含的所有行为止；在此时，Java 将循环回条件判断处，现在如果不再满足条件，循环将不再运行。
 
 例如，假设我们有以下代码：
 
-```
+```java
 int i = 0;
 while (i < 3) {
     System.out.println("Previous: " + i);
@@ -3574,7 +3327,7 @@ Next: 3
 
 在上一个示例中，我们打印了从 10 到 15 的数字。然而，这可以使用 `for` 循环很容易编写。
 
-```
+```java
 for (int num = 10; num <= 15; num++) {
     System.out.println(num);
 }
@@ -3588,7 +3341,7 @@ for (int num = 10; num <= 15; num++) {
 
 列表 6.11：掷骰子的起始代码。
 
-```
+```java
 public static void main(String[] args) {
     int desired_number = 6;
     int current_roll = -1;
@@ -3597,14 +3350,16 @@ public static void main(String[] args) {
 ```
 
 *   `desired_number` 是我们希望骰子顶朝上的数字。在这个示例中，我们希望一直掷骰子，直到出现 6 为止，因此我们将 `desired_number` 赋值为 6。
+
 *   `current_roll` 代表骰子当前的顶朝面。我们最初将其赋值为 -1，这样我们的循环至少会有一次迭代来掷骰子。
+
 *   `tries` 代表我们得到 6 作为顶朝面值之前掷骰子的次数。我们将在最后将其作为结果打印。
 
 接下来，我们可以编写 `while` 循环。
 
 列表 6.12：用于掷骰子的 `while` 循环。
 
-```
+```java
 public static void main(String[] args) {
     int desired_number = 6;
     int current_roll = -1;
@@ -3621,7 +3376,7 @@ public static void main(String[] args) {
 
 在循环体内部，我们编写以下内容来获取随机整数：
 
-```
+```java
 current_roll = (int)(Math.random() * 6) + 1;
 ```
 
@@ -3646,7 +3401,11 @@ Number of tries: 8
 
 在循环中，我们并不总是以相同方式改变变量。让我们这个例子例子
 
-**拉拉兹猜**latlat Conjecture）是一个著名的未解决数学猜想，它以以下方式定义整数序列：从任何正整数开始。对于序列中的任何项，如果是偶数，则下一项为它的一半；如果是奇数，则下一项为三倍加一。换句话说，具有如下伪代码：
+
+
+# 科拉兹猜想
+
+**科拉兹猜想**（Collatz Conjecture）是一个著名的未解决数学猜想，它以以下方式定义整数序列：从任何正整数开始。对于序列中的任何项，如果是偶数，则下一项为它的一半；如果是奇数，则下一项为三倍加一。换句话说，具有如下伪代码：
 
 ```
 n = 整数
@@ -3657,9 +3416,9 @@ n = 整数
 
 该猜想认为任何整数最终都会到达 1。在 `main()` 方法中，我们将首先初始化一个变量。
 
-列表 6.14：科拉兹猜想。
+## 列表 6.14：科拉兹猜想
 
-```
+```java
 public static void main(String[] args) {
     int n = 7;
     while (n > 1) {
@@ -3675,7 +3434,7 @@ public static void main(String[] args) {
 
 当我们运行这段代码时，我们将看到以下输出：
 
-列表 6.15：对于 6.14 的输出。
+## 列表 6.15：对于 6.14 的输出
 
 ```
 7
@@ -3697,13 +3456,13 @@ public static void main(String[] args) {
 1
 ```
 
-## 6.3 `do while` 循环
+# 6.3 `do while` 循环
 
 `do while` 循环是另一种 `while` 循环，允许用户在条件为真时迭代代码块。`do while` 循环与普通 `while` 循环的区别在于，前者先执行代码块然后检查条件，而后者先检查条件。这意味着任何 `do while` 循环即使条件永远为假，也至少会有一次迭代。
 
 `do while` 循环的通用形式如下：
 
-```
+```java
 do {
     // 这里的代码将循环
 } while (condition);
@@ -3715,14 +3474,11 @@ Java 将此过程分解为步骤：
 2. 检查 `condition` 是否为真。
 3. 如果是，重复步骤 1。
 
-**示例 1**
+## 示例 1
 
 假设我们想打印前五个正整数。我们可以编写以下代码来实现：
 
-列表 6.17：打印从 1 到 5 的数字。
-
-
-
+### 列表 6.17：打印从 1 到 5 的数字
 
 ```java
 int num = 1;
@@ -3734,7 +3490,7 @@ do {
 
 在这段代码中，我们首先将 `num` 赋值为 1。接下来，我们进入 `do while` 循环，打印 `num`（值为 1）并将其加 1。最后，我们开始“实际”的循环过程，在其中评估条件并相应地进行循环。
 
-列表 6.18：列表 6.17 的输出。
+### 列表 6.18：列表 6.17 的输出
 
 ```
 1
@@ -3746,7 +3502,7 @@ do {
 
 假设我们更改了第一行 `int num = 1;`，使其变为 `int num = 6;`。这显然会使条件失败。然而，使用 `do while` 循环，我们必须记住它至少迭代一次。因此，我们打印 6 并停止循环。
 
-列表 6.19：将 `num` 赋值为 6。
+### 列表 6.19：将 `num` 赋值为 6
 
 ```java
 int num = 6;
@@ -3756,7 +3512,7 @@ do {
 } while (num <= 5);
 ```
 
-列表 6.20：列表 6.19 的输出。
+### 列表 6.20：列表 6.19 的输出
 
 ```
 6
@@ -3778,7 +3534,7 @@ STOP REPEATING when num equals 0
 
 我们可以从初始化以下变量开始：
 
-```
+```java
 int num = 4230;
 ```
 
@@ -3793,7 +3549,7 @@ do {
 
 最后，我们可以添加两行代码来打印整数的最后一位，然后通过将整数除以 10 将将其。
 
-列表 6.21：倒序打印整数所有数字的最终代码。
+### 列表 6.21：倒序打印整数所有数字的最终代码
 
 ```java
 int num = 4230;
@@ -3803,7 +3559,7 @@ do {
 } while (num != 0);
 ```
 
-列表 6.22：列表 6.21 的输出。
+### 列表 6.22：列表 6.21 的输出
 
 ```
 0
@@ -3812,9 +3568,9 @@ do {
 4
 ```
 
-## 6.4 嵌套循环
+# 6.4 嵌套循环
 
-我们目前看过的循环运行在所谓的所谓的“单维度”上。这意味着在循环的任何特定迭代中，语句最多只会发生一次。在本节中，我们将探索**嵌套循环**，即在**多个维度**上进行迭代的循环。换句话说，它们是包含循环的循环。
+我们目前看过的循环运行在所谓的“单维度”上。这意味着在循环的任何特定迭代中，语句最多只会发生一次。在本节中，我们将探索**嵌套循环**，即在**多个维度**上进行迭代的循环。换句话说，它们是包含循环的循环。
 
 通用结构可能如下（假设我们选择使用 `for` 循环；记住我们也可以使用 `while` 循环）：
 
@@ -3832,7 +3588,7 @@ for (start; stop; step) {
 
 在这里我们看到**外层循环**和一个**内层循环**。我们将使用接下来的示例来演示它们是如何工作的。
 
-### 示例 1
+## 示例 1
 
 假设我们想要打印如下：
 
@@ -3866,7 +3622,9 @@ for (int i = 1; i <= 3; i++) { // 外层循环
 }
 ```
 
+## 示例 2
 
+假设我们想要打印如下图案：
 
 ```
 **********
@@ -3950,7 +3708,7 @@ for (int spaces = 0; spaces <= 8; spaces += 2) {
 
 最后，我们需要分隔行，因此可以在外层循环的底部添加空的 `System.out.println()` 语句。
 
-列表 6.32：第 1-5 行的完成代码。
+### 列表 6.32：第 1-5 行的完成代码
 
 ```java
 for (int spaces = 0; spaces <= 8; spaces += 2) {
@@ -3978,7 +3736,7 @@ for (int spaces = 6; spaces >= 0; spaces -= 2) {
 
 该循环的体与我们目前编写的内容相同，所以只需将其复制粘贴到这个新循环中。因此，我们的最终代码如下：
 
-列表 6.33：第 1-9 行的完成代码。
+### 列表 6.33：第 1-9 行的完成代码
 
 ```java
 for (int spaces = 0; spaces <= 8; spaces += 2) {
@@ -4009,7 +3767,7 @@ for (int spaces = 6; spaces >= 0; spaces -= 2) {
 }
 ```
 
-列表 6.34：列表 6.33 的输出。
+### 列表 6.34：列表 6.33 的输出
 
 ```
 **********
@@ -4023,7 +3781,9 @@ for (int spaces = 6; spaces >= 0; spaces -= 2) {
 **********
 ```
 
-诚然地说，有更好的方法编写这段代码。以下是实现相同功能的替代方案。列表 6.35：打印菱形的替代代码。
+诚然地说，有更好的方法编写这段代码。以下是实现相同功能的替代方案。
+
+### 列表 6.35：打印菱形的替代代码
 
 ```java
 for (int spaces = 0; spaces <= 8; spaces += 2) {
@@ -4039,11 +3799,11 @@ for (int spaces = 0; spaces <= 8; spaces += 2) {
 }
 ```
 
-## 6.5 中断循环
+# 6.5 中断循环
 
 目前，我们已经探索了用于“中断”循环的语句：`break` 和 `continue`。
 
-### 6.5.1 `break` 语句
+## 6.5.1 `break` 语句
 
 `break` 语句是一种循环中断器，它可以完全停止循环的执行。当循环中发生某些情况时，我们使用它。
 
@@ -4107,7 +3867,7 @@ Finished
 
 尝试尝试对此代码进行一些修改（例如更改包含 `break` 的条件或 `for` 循环头），以理解使用 `break` 会发生什么。
 
-**示例 2**
+## 示例 2
 
 让我们探索 `break` 语句更实用的用法。假设我们想编写代码来判断一个数字是否为质数。我们将按照以下步骤进行判断：
 
@@ -4128,11 +3888,7 @@ else:
 
 我们可以从初始化以下变量开始：
 
-
-
-
-
-### 列表 6.36: 为质数检查器初始化变量。
+### 列表 6.36：为质数检查器初始化变量
 
 ```java
 int number = 79;
@@ -4141,7 +3897,7 @@ boolean isPrime = true;
 
 接下来，我们需要检查数字是否小于 2，或者它是否大于 2 且为偶数。这排除了一大量的整数。
 
-### 列表 6.37: 排除偶数和小于 2 的整数。
+### 列表 6.37：排除偶数和小于 2 的整数
 
 ```java
 int number = 79;
@@ -4151,9 +3907,11 @@ if (number < 2 || number > 2 && number % 2 == 0) {
 }
 ```
 
+
+
 最后，在 `else` 子句中，我们可以使用 `for` 循环来遍历直到 `number` 平方根的所有可能的奇数因子。我们可以通过在循环变量（在本例中为 `odd`）乘以它自身小于或等于 `number` 时继续迭代，来模拟获取 `number` 的平方根。在循环内部，我们使用 `%` 运算符检查 `odd` 是否是 `number` 的因数，如果是，我们就将 `isPrime` 设置为 `false` 并执行 `break`。
 
-### 列表 6.38: 遍历直到 `number` 平方根的所有可能的奇数因子。
+### 列表 6.38: 遍历直到 `number` 平方根的所有可能的奇数因子
 
 ```java
 int number = 79;
@@ -4223,11 +3981,7 @@ System.out.println(i + " " + j);
 
 那么，当我们想要跳出 `outerloop` 而不是嵌套循环时，我们可以写 `break outerloop`。
 
-### 列表 6.39: 跳出 `outerloop`。
-
-
-
-
+### 列表 6.39: 跳出 `outerloop`
 
 ```java
 int i = 0, j = 0;
@@ -4243,7 +3997,7 @@ System.out.println(i + " " + j);
 
 当调用此 `break` 语句时，并不是嵌套循环终止并让 `outerloop` 正常继续，而是 `outerloop` 将终止（连同其内部的所有内容），我们将直接跳转到第 9 行，不再进行任何后续迭代。
 
-列表 6.40：列表 6.39 的输出。
+### 列表 6.40：列表 6.39 的输出
 
 ```
 1 2
@@ -4253,7 +4007,7 @@ System.out.println(i + " " + j);
 
 `continue` 语句是一种循环中断器，它会停止循环当前迭代的执行并进入下一次迭代（如果还有剩余迭代的话）。
 
-**示例 1**
+#### 示例 1
 
 假设我们有以下代码：
 
@@ -4303,13 +4057,13 @@ while (i < 10) {
 
 在本章中，我们学习了如何使用循环来重复执行代码语句，直到满足某个条件。
 
-# 第 7 章字符串
+# 第 7 章 字符串
 
 在第 2.2 节 中，我们简单回顾了字符串，包括如何打印或拼接字符串，或查找长度。本章将在回顾这些概念的同时，深入探讨字符串的真实本质，即*字符的集合*。
 
 要创建一个字符串变量，你可以编写以下任意一种：
 
-列表 7.1：创建字符串变量的不同方法。
+### 列表 7.1：创建字符串变量的不同方法
 
 ```java
 String one = ""; // 空字符串
@@ -4326,7 +4080,7 @@ String four = new String("Hello");
 
 以下代码展示了将字母 `'a'` 赋值变量的不同方法。
 
-列表 7.2：将 `char` 变量赋值为 `'a'` 的不同方法。
+### 列表 7.2：将 `char` 变量赋值为 `'a'` 的不同方法
 
 ```java
 char one = 'a';
@@ -4344,13 +4098,9 @@ System.out.println(five);
 其中一些看起来很奇怪，让我们来逐一分析。
 
 *   `one`：这是表示字符 `'a'` 的正常方式。
-
 *   `two`：正如我们所，`char` 只是另一种整数类型，因此当我们将 `char` 变量赋值给整数时，Java 会在 Unicode 表上查找与该整数（十进制）关联的字符，并将其赋值给该变量。根据附录 11.1，97 与字符 `'a'` 关联，这意味着 `two` 将被赋值为 `'a'`。
-
 *   `three`：`100 - 3` 结果为 97，它与字符 `'a'` 关联。
-
 *   `four`：`'c'` 是 99，所以 `99 - 2` 是 97，即 `'a'`。
-
 *   `five`：`'0'` 是 48，`'1'` 是 49，所以 `48 + 49` 是 97，即 `'a'`。
 
 所有这些示例的结果都是字符 `'a'`。
@@ -4375,7 +4125,7 @@ string.charAt(index);
 *   `charAt()` 是返回 `index` 处字符作为 `char` 值的方法。
 *   `index` 是介于 0 和字符串长度减一之间的 `int` 值。
 
-**示例 1**
+#### 示例 1
 
 假设我们要打印 `"Hello world"` 第四个索引处的字符。我们可以编写以下代码来实现这一目标。
 
@@ -4388,17 +4138,13 @@ System.out.println(greeting.charAt(4));
 o
 ```
 
-
-
-
-
 如果我们不给 `"Hello world"` 赋值变量，而是直接访问它的第四索引，也可以在一行内完成相同的操作。记住，我们可以这样做是因为变量仅仅是对象的引用，这让我们使用它们更加方便。
 
 ```
 System.out.println("Hello world".charAt(4));
 ```
 
-## 示例 2
+#### 示例 2
 
 假设我们想写一个返回任何字符串最后一个字符的函数。我们可以从下面的函数框架开始：
 
@@ -4421,7 +4167,7 @@ public static char lastChar(String str) {
 
 最后，在 `main()` 方法中，我们可以测试我们的函数。
 
-代码列表 7.4：测试 `lastChar()` 函数。
+### 代码列表 7.4：测试 `lastChar()` 函数
 
 ```java
 public static void main(String[] args) {
@@ -4431,7 +4177,7 @@ public static void main(String[] args) {
 }
 ```
 
-代码列表 7.5：代码列表 7.4 的输出。
+### 代码列表 7.5：代码列表 7.4 的输出
 
 ```
 d
@@ -4465,7 +4211,7 @@ Process finished with exit code 1
 
 "String index out of range: -1" 意味着我们尝试访问无效的索引 -1。为了修复这个问题，在 `lastChar()` 中，我们必须写一个条件语句来检查字符串长度是否为 0。如果是，我们应该返回一个空字符（可以表示为整数 0）。
 
-代码列表 7.6：修改 `lastChar()`。
+### 代码列表 7.6：修改 `lastChar()`
 
 ```java
 public static char lastChar(String str) {
@@ -4495,11 +4241,13 @@ g
 a 
 ```
 
+
+
 注意，在 IntelliJ 中，你可能会看到一个带有叉号的 0 而不是空格；这仍然表示这是一个空字符。
 
 ## 7.3 子字符串
 
-除了从字符串获取单个字符外，我们还可以检索字符串的连续部分，即子字符串。例如，“Hello" 和 "world" 都是 "Hello world" 的子字符串。要从字符串中获取子字符串，我们将使用 `substring()` 字符串方法。通过方法重载，该方法有两种可能的版本（参见第 4.5 节）。
+除了从字符串获取单个字符外，我们还可以检索字符串的连续部分，即子字符串。例如，“Hello” 和 "world" 都是 "Hello world" 的子字符串。要从字符串中获取子字符串，我们将使用 `substring()` 字符串方法。通过方法重载，该方法有两种可能的版本（参见第 4.5 节）。
 
 ```
 str.substring(startIndex)
@@ -4509,10 +4257,6 @@ str.substring(startIndex, endIndex)
 *   `str` 是一个字符串对象。
 *   `substring()` 是字符串方法。
 *   我们可以提供一个或两个参数。如果我们提供一个参数，将使用第 1 行的 `substring()` 函数，其中 `startIndex` 是子字符串的起始整数索引。这将返回从该索引到末尾的子字符串。
-
-
-
-
 
 列表 7.9: 最后的 `rightLeft()` 函数。
 
@@ -4548,7 +4292,7 @@ ligentintel
 
 在计算机科学领域，数据通常以字符串的形式提供给开发者。在这些字符串中，开发者必须搜索特定的特征，包括字符的第一次或第 n 次出现、重复字符、回文特性等。寻找许多此类特征需要遍历整个字符串。幸运的是，我们可以结合字符串索引和循环来高效地完成这一任务。
 
-**示例 1**
+### 示例 1
 
 假设我们想在每个行上单独地打印字符串中的所有字符。使用 `for` 循环，我们可以遍历从 0 到字符串长度的索引。在每次迭代中，我们可以使用 `charAt()` 函数来打印该字符。
 
@@ -4570,7 +4314,7 @@ l
 o
 ```
 
-**示例 2**
+### 示例 2
 
 假设我们想在每个行上单独地打印字符串中的所有字符，但这次，我们想反向执行操作。在这种情况下，我们可以使用 `for` 循环，但不是从 0 遍历到字符串的长度，而是从最后一个索引开始向后遍历。
 
@@ -4592,7 +4336,7 @@ e
 H
 ```
 
-**示例 3**
+### 示例 3
 
 在这个示例中，让我们从第一个字符开始，每隔一个字符打印在*同一行*上。为了做到这一点，我们可以从索引 0 开始迭代，一直持续到达到最后一个索引，并每次递增 2。作为练习，我们将使用 `while` 循环。
 
@@ -4618,7 +4362,7 @@ while (i < phrase.length()) {
 Agrtm
 ```
 
-**示例 4**
+### 示例 4
 
 我们将写一个函数 `isPalindrome()` 来确定一个字符串是否为回文。回文的定义是一个正向和反向读取都相同的字符串。我们将实现一个区分大小写的回文检查器（即大写字母与小写字母不同）。
 
@@ -4671,14 +4415,14 @@ public static boolean isPalindrome(String str) {
     for (int i = 0; i < str.length()/2; i++) {
 ```
 
-**示例 5**
+### 示例 5
 
 让我们写一个函数 `firstIndex()` 来查找某个字符的出现位置。因为我们只需要第一次出现，如果我们从头到尾循环，就可以立即停止并返回找到索引。我们可以从编写 `firstIndex()` 的方法头开始。
 
 列表 7.20: `firstIndex()` 的方法头。
 
 ```java
-public static int isPalindrome(String str) {
+public static int firstIndex(String str, char ch) {
 ```
 
 我们返回一个 `int` 类型的索引值，并且接收两个参数：字符串 `str` 和字符 `ch`，分别是我们要搜索的字符串和我们要查找的字符。接下来，我们可以使用 `for` 循环遍历所有索引。
@@ -4744,10 +4488,7 @@ public static void main(String[] args) {
 4
 ```
 
-**示例 6**
-
-
-
+### 示例 6
 
 假设我们想写一个函数 `containsDuplicates()` 来判断一个字符串是否包含重复字符。由于我们需要同时比较两个未知位置的字符（与回文示例不同，在回文中，我们将一个未知字符与索引依赖于该未知字符的字符进行比较），因此我们需要使用嵌套循环。
 
@@ -4755,7 +4496,7 @@ public static void main(String[] args) {
 
 列表 7.26：`containsDuplicates()` 的方法头。
 
-```
+```java
 public static boolean containsDuplicates(String str) {
 }
 ```
@@ -4848,16 +4589,16 @@ true == true
 
 考虑以下代码：
 
-```
-1String one = new String("abc");
-2String two = new String("abc");
-3String three = one;
-4System.out.println(one == two);
-5System.out.println(one.equals(two));
-6System.out.println(one == three);
-7System.out.println(one.equals(three));
-8System.out.println(two == three);
-9System.out.println(two.equals(three));
+```java
+String one = new String("abc");
+String two = new String("abc");
+String three = one;
+System.out.println(one == two);
+System.out.println(one.equals(two));
+System.out.println(one == three);
+System.out.println(one.equals(three));
+System.out.println(two == three);
+System.out.println(two.equals(three));
 ```
 
 我们期望这些结果都是 `true`，对吧？然而我们得到了下面的结果：
@@ -4889,7 +4630,7 @@ true
 
 考虑以下代码：
 
-```
+```java
 String name = "John Appleseed";
 int age = 20;
 String product = "coffee";
@@ -4898,6 +4639,8 @@ double finalPrice = initialPrice * 1.06;
 System.out.println("Product: " + name + ", Age: " + age
     + ", purchased: " + product + ", Final price: $" + finalPrice);
 ```
+
+
 
 注意这一行有多长；我们不得不将其分成两行！显然，当我们在 `initialPrice` 上增加 6% 的税费时，得到了一串 0（精度问题）。此外，价格通常保留两位小数。最好的解决方案是使用 `String.format()` 静态方法，其如下：
 
@@ -4917,11 +4660,11 @@ String.format(str, args)
 
 这看起来可能很复杂，但不用担心；大多数情况下，括号内的内容是不必要的，对于浮点数，我们有时只使用精度参数。
 
-### 7.6.1 将字符串格式化
+## 7.6.1 将字符串格式化
 
 常用的格式化符是 `%s`，它指示该位置将由字符串或任何数据类型填充。
 
-**示例 1**
+### 示例 1
 
 假设我们有以下代码，并想用 `String.format()` 格式化字符串替换第 4 行。
 
@@ -4933,9 +4676,6 @@ String formattedString = "My name is " + name + ", I am " + age
     + " years old, and I live in " + residence + ".";
 System.out.println(formattedString);
 ```
-
-
-
 
 ```
 My name is John Appleseed, I am 20 years old, and I live in Geneva, Switzerland.
@@ -4961,7 +4701,7 @@ My name is John Appleseed, I am 20 years old, and I live in Geneva, Switzerland.
 
 在大多数情况下，我们将使用 `%s` 来将任何数据输入到格式化字符串中，因为它只向字符串提供强制转换为字符串类型的数据；它不会像我们将要探索的其他格式占位符那样强制执行特定类型，也不会进行任何额外的格式化。
 
-### 7.6.2 将整数格式化为字符串
+## 7.6.2 将整数格式化为字符串
 
 如果我们想专门强制将整数格式化为字符串，我们将使用 `%d` 格式占位符代替。假设我们采用之前的例子：
 
@@ -4989,7 +4729,7 @@ System.out.println(formattedString);
 
 在这些情况下，可能偏好 `%d` 的原因是可以使用我们之前看到的额外参数进行格式化。然而，我们不会探索这些内容，因此对于整数，你可以使用 `%s` 或 `%d`。
 
-### 7.6.3 将浮点数格式化为字符串
+## 7.6.3 将浮点数格式化为字符串
 
 即使对于浮点数，我们也可以简单地使用 `%s`，但在某些情况下，更精细的 `%f` 可能更符合我们需要。
 
@@ -5057,15 +4797,15 @@ System.out.println(
         name, age, product, finalPrice));
 ```
 
-### 7.6.4 格式化字符串
+## 7.6.4 格式化字符串
 
 在大多数情况下，我们将使用 `%s` 来将任何数据输入到格式化字符串中，因为它只向字符串提供强制转换为字符串类型的数据；它不会像我们将要探索的其他格式占位符那样强制执行特定类型，也不会进行任何额外的格式化。
 
-### 7.7 其他字符串方法
+## 7.7 其他字符串方法
 
 除了 `charAt()`、`length()` 和 `substring()`，字符串对象还有其他有用的方法。
 
-#### 7.7.1 `indexOf()`
+### 7.7.1 `indexOf()`
 
 `indexOf()` 方法实现与我们之前的代码非常相似：它返回子字符串首次出现的索引。有四种版本的 `indexOf()`：
 
@@ -5082,7 +4822,7 @@ str.indexOf(substring, fromIndex)
 *   **行 3**: `indexOf()` 接收 `substring`（子字符串）作为参数，返回 `str` 中 `substring` 首次出现索引的整数值。
 *   **行 4**: `indexOf()` 接收 `substring` 和 `int` `fromIndex` 作为参数，返回 `str` 中从 `fromIndex` 之后（包含该索引）`substring` 首次出现索引的整数值。
 
-**示例 1**
+#### 示例 1
 
 假设我们想在字符串 `"Hello world"` 中搜索字母 `o` 的首次出现。我们可以写如下代码：
 
@@ -5096,11 +4836,11 @@ System.out.println("Hello world".indexOf('o'));
 4
 ```
 
-**示例 2**
+#### 示例 2
 
 假设我们想写一个函数 `nfind()`，它返回字符串第 n 次出现的索引，如果第 n 次不存在则返回 -1。我们可以写下下面的方法头。
 
-列表 7.32：`nfind()` 的方法头。
+**列表 7.32：`nfind()` 的方法头。**
 
 ```java
 public static int nfind(String str, char ch, int n) {
@@ -5110,14 +4850,11 @@ public static int nfind(String str, char ch, int n) {
 
 在此例中，`str` 是我们正在搜索的字符串，`ch` 是我们正在搜索的字符，而 `n` 告诉我们我们想要 `ch` 的第 n 次出现。
 
-
-
-
 接下来，我们将添加一个变量 `lo_bound`，它代表 `indexOf` 开始搜索 `ch` 的索引。添加该变量后，我们将使用一个 `for` 循环迭代 `n` 次，在每次迭代中，如果从上一次找到 `ch` 的索引开始的 `indexOf()` 未返回 -1，则我们将继续搜索。由于我们想从开头开始搜索，但始终使用比上次找到的 `ch` 索引大 1 的 `indexOf()`，我们将让 `lo_bound` 等于 -1。
 
-Listing 7.33：添加 `lobound` 变量。
+**列表 7.33：添加 `lo_bound` 变量。**
 
-```
+```java
 public static int nfind(String str, char ch, int n) {
     int lo_bound = -1;
 }
@@ -5125,9 +4862,9 @@ public static int nfind(String str, char ch, int n) {
 
 我们现在可以添加 `for` 循环了。
 
-Listing 7.34：添加一个 `for` 循环。
+**列表 7.34：添加一个 `for` 循环。**
 
-```
+```java
 public static int nfind(String str, char ch, int n) {
     int lo_bound = -1;
     for (int i = 0; i < n; i++) {
@@ -5138,13 +4875,13 @@ public static int nfind(String str, char ch, int n) {
 
 在 `for` 循环内部，我们将 `lo_bound` 赋值为在 `str` 上调用 `indexOf()` 的结果，其中 `ch` 是字符，`lo_bound+1` 是搜索的起始点（而不是 `lo_bound`，因为如果我们写成那样，如果在索引 `lo_bound` 处有一个有效的 `ch`，那么 `lo_bound` 可能永远不会改变，因为 `indexOf` 将从该参数（包含该位置）开始搜索）。然后，我们检查 `lo_bound` 是否等于 -1。如果是，则不存在第 n 次出现的 `ch`，我们返回 -1。
 
-Listing 7.35：更新 `lobound` 并确保它不等于 -1。
+**列表 7.35：更新 `lo_bound` 并确保它不等于 -1。**
 
-```
+```java
 public static int nfind(String str, char ch, int n) {
     int lo_bound = -1;
     for (int i = 0; i < n; i++) {
-        lo_bound = str.indexOf(ch, lo_bound+1);
+        lo_bound = str.indexOf(ch, lo_bound + 1);
         if (lo_bound == -1) {
             return -1;
         }
@@ -5154,13 +4891,13 @@ public static int nfind(String str, char ch, int n) {
 
 最后，如果我们在完成循环而没有返回，说明我们成功在 `str` 中找到了第 n 次出现的 `ch`，因此可以在循环外返回 `lo_bound`。
 
-Listing 7.36：更新 `lobound` 并确保它不等于 -1。
+**列表 7.36：更新 `lo_bound` 并确保它不等于 -1。**
 
-```
+```java
 public static int nfind(String str, char ch, int n) {
     int lo_bound = -1;
     for (int i = 0; i < n; i++) {
-        lo_bound = str.indexOf(ch, lo_bound+1);
+        lo_bound = str.indexOf(ch, lo_bound + 1);
         if (lo_bound == -1) {
             return -1;
         }
@@ -5171,7 +4908,7 @@ public static int nfind(String str, char ch, int n) {
 
 我们现在可以通过在 `main()` 中调用它来对其进行测试。
 
-Listing 7.37：在 `main()` 中测试 `nfind()`。
+**列表 7.37：在 `main()` 中测试 `nfind()`。**
 
 ```java
 public static void main(String[] args) {
@@ -5184,7 +4921,7 @@ public static void main(String[] args) {
 
 由于 `phrase` 中只有四个 `'i'`，只有前四次方法调用应该产生正整数。第五次将产生 -1。
 
-Listing 7.38：Listing 7.37 的输出。
+**列表 7.38：Listing 7.37 的输出。**
 
 ```
 1
@@ -5218,7 +4955,7 @@ str1.compareTo(str2);
 
 假设我们有以下代码：
 
-```
+```java
 String str1 = "aabb";
 String str2 = "bb";
 String str3 = "aabb";
@@ -5239,13 +4976,16 @@ System.out.println(str1.compareTo(str4));
 ```
 
 * 在第 1 行，`str1` 在字典顺序上在 `str2` 前，因此返回一个负整数。
+
+
+
 * 在第 2 行，`str1` 与 `str3` 的值相同，因此返回 0。
 * 在第 3 行，`str2` 在字典顺序上在 `str3` 后，因此返回一个正整数。
 * 在第 4 行，`str1` 在字典顺序上在 `str4` 后，因此返回一个正整数。（等待，文本中的逻辑说 "aabb" 在 "aaaa" 之后，这是正确的）。
 
 ### 7.7.3 `toLowerCase()` 和 `toUpperCase()`
 
-`toLowerCase()` 和 `toUpperCase()` 两个字符串方法正如它们的名字一样工作：它们返回字符串的小写和大大写版本。
+`toLowerCase()` 和 `toUpperCase()` 两个字符串方法正如它们的名字一样工作：它们返回字符串的小写和大写版本。
 
 ```
 System.out.println("Hello world!".toLowerCase());
@@ -5263,12 +5003,9 @@ false
 true
 ```
 
-* 在第 1 和第 2 行，我们分别将 "Hello world!" 转换为小大写。
+* 在第 1 和第 2 行，我们分别将 "Hello world!" 转换为小写和大写。
 * 在第 3 行，`equals()` 方法返回 `false`。
 * 在第 4 行，通过忽略大小写，方法返回 `true`。
-
-
-
 
 我们已经看到类与对象之间存在一种相似的关系，就像我们使用的原始类型（包括 `int`、`char`、`double` 和 `boolean`）与属于这些类型的值之间的关系。正如类型之于它们可能的值（例如 `int` 之于 `5` 或 `8`），类之于它们的对象。那么，类与原始类型之间的区别在于，类是使用原始类型构建的。将其想象成一个人类细胞；细胞内部有许多特征如细胞核、线粒体和细胞器。
 
@@ -5319,11 +5056,11 @@ public class Car {
 ClassName objectVariable = new ClassName();
 ```
 
-*   `ClassName` 是类的名称（例如 `Car`）。
-*   `objectVariable` 是类型为 `ClassName` 的变量名。
-*   `new` 是我们用于从类中**实例化**新对象的关键字。
-*   对于 `=` 符号后的 `ClassName`，我们添加 `()` 就像是在调用一个没有参数的方法一样；正如我们稍后看到的，我们可以为类添加功能，以便在初次实例化新对象时提供参数。
-*   `=` 符号之前的部分是声明新 `ClassName` 变量的地方， `=` 符号之后的部分是实例化 `ClassName` 对象实例并将其赋值给 `objectVariable` 的地方。
+* `ClassName` 是类的名称（例如 `Car`）。
+* `objectVariable` 是类型为 `ClassName` 的变量名。
+* `new` 是我们用于从类中**实例化**新对象的关键字。
+* 对于 `=` 符号后的 `ClassName`，我们添加 `()` 就像是在调用一个没有参数的方法一样；正如我们稍后看到的，我们可以为类添加功能，以便在初次实例化新对象时提供参数。
+* `=` 符号之前的部分是声明新 `ClassName` 变量的地方，`=` 符号之后的部分是实例化 `ClassName` 对象实例并将其赋值给 `objectVariable` 的地方。
 
 我们已经在 `String` 上见过这种用法，例如在 Listing 7.1 中，那里我们演示了如何创建新的 `String` 变量。
 
@@ -5368,10 +5105,6 @@ true
 
 Listing 8.5：为 `Car` 类添加属性。
 
-
-
-
-
 ```java
 public class Car {
     // Attributes
@@ -5398,7 +5131,7 @@ object.that_attribute
 
 当我们访问属性时，本质上我们是将其视为变量来处理。因此，我们可以像对待变量一样为属性赋值，或者在表达式中使用属性。让我们看看下面将如何应用这一点。
 
-列表 8.6：实例化 `Car` 对象。
+Listing 8.6：实例化 `Car` 对象。
 
 ```java
 public class Car {
@@ -5436,7 +5169,7 @@ public class Car {
 
 因此，Java 将输出以下内容：
 
-列表 8.7：列表 8.6 的输出
+Listing 8.7：Listing 8.6 的输出
 
 ```
 blue
@@ -5448,7 +5181,7 @@ sedan
 
 ## 8.5 构造函数与 `this` 关键字
 
-在转向行为（behaviors）之前，我们应该考虑一种特殊的行为/方法。`构造`（constructor）是在对象实例化时立即被调用的方法。它类似于：
+在转向行为（behaviors）之前，我们应该考虑一种特殊的行为/方法。`构造函数`（constructor）是在对象实例化时立即被调用的方法。它类似于：
 
 ```java
 // Example of a constructor with parameters
@@ -5484,7 +5217,7 @@ public ClassName(params) {
 
 让我们为我们的类添加一个构造函数。
 
-列表 8.8：为 `Car` 添加构造函数。
+Listing 8.8：为 `Car` 添加构造函数。
 
 ```java
 public class Car {
@@ -5511,7 +5244,7 @@ public class Car {
 在这里，我们这样命名了参数，然后将我们的属性赋值为这些值。我们注意几点：
 
 * 我们没有为 `gasAmount` 属性赋值任何值。我们不需要这样做，因为 `gasAmount` 已经赋值为 10。但是，如果我们想要也可以这样做。
-* `color`、`mpg` 和 `carType` 属性被赋值了构造函数中的对应值。无论怎么强调都不为过分`this.color` 不同于 `color`！因为两者同名，当我们引用 `color` 时，Java 会自动查找局部变量，所以构造函数没有局部变量，它指的是类属性。当我们赋值 `numberSeats = numSeats` 时，我们不需要写 `this.numberSeats`。
+* `color`、`mpg` 和 `carType` 属性被赋值了构造函数中的对应值。无论怎么强调都不为过分 `this.color` 不同于 `color`！因为两者同名，当我们引用 `color` 时，Java 会自动查找局部变量，所以构造函数没有局部变量，它指的是类属性。当我们赋值 `numberSeats = numSeats` 时，我们不需要写 `this.numberSeats`。
 
 要使用构造函数实例化新对象，我们写：
 
@@ -5521,7 +5254,9 @@ ClassName object = new ClassName(params);
 
 让我们使用这种方法创建一个新的 `Car` 对象。
 
-列表 8.9：使用自定义构造函数实例化 `Car` 对象。
+Listing 8.9：使用自定义构造函数实例化 `Car` 对象。
+
+
 
 ```java
 public class Car {
@@ -5557,7 +5292,7 @@ public class Car {
 }
 ```
 
-列表 8.10：列表 8.9 的输出
+列表 8.10：列表 8.9 的输出
 
 ```
 blue
@@ -5571,9 +5306,6 @@ Changed car1's color to red
 仅仅为了练习，我们可以添加另一个构造函数。注意在这个新的构造函数头部，类型的顺序必须是不同的。也就是说，我们不能使用以下顺序：`String`、`int`、`double`、`String`。
 
 列表 8.11：为 `Car` 添加另一个构造函数。
-
-
-
 
 ```java
 public class Car {
@@ -5665,13 +5397,13 @@ minivan, sedan
 
 我们之前提到构造函数是一种特殊的行为。但什么是行为呢？
 
-我们将 `behavior`（行为）定义为对象方法。（我们将交替“行为”和“对象方法”）。行为定义了对象能够做的事情。例如，我们可能会为 `Car` 添加行为，允许它通过行驶消耗燃料、切换指示灯、鸣笛等。
+我们将 `behavior`（行为）定义为对象方法。（我们将交替使用“行为”和“对象方法”）。行为定义了对象能够做的事情。例如，我们可能会为 `Car` 添加行为，允许它通过行驶消耗燃料、切换指示灯、鸣笛等。
 
 行为与我们目前为止看到的方法不同之处在于，它们在方法头中没有写 `static`。`static` 方法是 `class methods`（类方法），这些方法直接与类关联，而不是与对象关联。
 
 以下展示了我们如何引用对象方法（行为）与类方法的区别：
 
-```
+```java
 // 对象方法 - behavior() 是方法
 ClassName object = new ClassName(); // 先实例化对象
 object.behavior() // 使用对象上的点符号语法调用方法
@@ -5681,7 +5413,7 @@ behavior() // 如果你在同一个类中调用（直接调用）则使用这种
 ClassName.behavior() // 如果你从不同的类调用则使用这种
 ```
 
-目前，我们将关注对象方法。请注意，对象方法只能通过 `object` 上的点符号语法来访问。Java 初学者程序员经常会直接从静态方法访问对象的行为，而没有使用对应对象的点符号语法。`你不能直接从静态方法调用对象方法。你必须使用对象上的点符号语法来调用对象方法。`
+目前，我们将关注对象方法。请注意，对象方法只能通过 `object` 上的点符号语法来访问。Java 初学者程序员经常会直接从静态方法访问对象的行为，而没有使用对应对象的点符号语法。**你不能直接从静态方法调用对象方法。你必须使用对象上的点符号语法来调用对象方法。**
 
 然而，你*可以*从另一个对象方法或构造函数调用对象方法。这是因为当你处于对象方法内部时，你已经在对象内部了，因此通过在当前对象方法中调用另一个对象方法来进一步深入对象的属性是完全没有问题的。
 
@@ -5789,9 +5521,6 @@ public void drive(double miles) {
 
 列表 8.19：当前的 `Car` 类。
 
-
-
-
 ```java
 public class Car {
     // Attributes
@@ -5871,6 +5600,8 @@ Not enough gas.
 ```
 
 ### `toggleIndicator()` 方法
+
+
 
 我们将实现 `toggleIndicator()`，这是一个用于切换开启或关闭转向指示灯的方法。首先，我们添加一个布尔属性 `indicatorOn`，用来表示指示灯是否开启。我们将将其设置为 `false`，表示指示灯未开启。
 
@@ -6025,33 +5756,28 @@ Indicator was turned OFF.
 
 你可能在数学和物理课上学习过向量，以及它们如何表示带有方向的量值；这是向量的几何定义。线性代数对向量有更抽象的定义，它将向量解释为遵循一组法则或“公理”的对象。这在计算机科学中某种程度上也适用，但为了我们的目标，我们将向量定义为一组相似元素的有序列表。这些在数据结构和算法中极其重要，我们可能会处理多变量数据以产生特定的输出。
 
-## 9.1 包装类](#part0009.xhtml_aid-8IL2J)
+## 9.1 包装类
 
 在探索数组和 ArrayList 之前，我们必须快速转到包装类。我们知道有八种基本类型：`int`、`byte`、`short`、`long`、`char`、`float`、`double` 和 `boolean`。但在泛型类时，我们无法使用这些类型。例如，当我们以后学习如何制作 ArrayList 时，我们会发现无法创建 `int` 或 `float` 类型的 ArrayList；相反，我们需要使用相应的包装类（在这种情况下它们将是 `Integer` 或 `Float`）。
 
 因此，包装类允许我们将基本数据类型作为对象使用。以下是每种基本类型对应的包装类。
 
 | 基本类型 | 包装类 |
-
+| :--- | :--- |
 | `int` | `Integer` |
 | `byte` | `Byte` |
 | `short` | `Short` |
 | `long` | `Long` |
-| `char` | `Char` |
+| `char` | `Character` |
 | `float` | `Float` |
 | `double` | `Double` |
-
-
-
-
-
 | `boolean` | `Boolean` |
 
 它们彼此之间完全可以互换。例如，我们可以通过以下两种方式之一来实现后续操作：
 
 列表 9.1：基本数据类型和包装类。
 
-```
+```java
 public static void main(String[] args) {
     // Using primitive types
     int a = 3;
@@ -6080,7 +5806,7 @@ public static void main(String[] args) {
 | `Byte` | `.byteValue()` |
 | `Short` | `.shortValue()` |
 | `Long` | `.longValue()` |
-| `Char` | `.charValue()` |
+| `Character` | `.charValue()` |
 | `Float` | `.floatValue()` |
 | `Double` | `.doubleValue()` |
 | `Boolean` | `.booleanValue()` |
@@ -6089,7 +5815,7 @@ public static void main(String[] args) {
 
 列表 9.3：使用正确的包装类行为访问基本类型值。
 
-```
+```java
 public static void main(String[] args) {
     Integer a = 102;
     Character b = 'b';
@@ -6121,7 +5847,7 @@ Type[] variableName;
 
 列表 9.5：声明一个 `int[]` 数组 `numbers`。
 
-```
+```java
 public static void main(String[] args) {
     // Declaring numbers
     int[] numbers;
@@ -6142,7 +5868,7 @@ variableName = new Type[int_size];
 
 列表 9.6：将 `numbers` 初始化为特定大小的数组。
 
-```
+```java
 public static void main(String[] args) {
     // Declaring numbers
     int[] numbers;
@@ -6155,7 +5881,7 @@ public static void main(String[] args) {
 
 列表 9.7：将 `numbers` 的声明和初始化合并为一行。
 
-```
+```java
 public static void main(String[] args) {
     // Declaring and initializing numbers to an array with 10 slots
     int[] numbers = new int[10];
@@ -6166,7 +5892,7 @@ public static void main(String[] args) {
 
 列表 9.8：创建带有值的数组。
 
-```
+```java
 public static void main(String[] args) {
     // Creating an array with values
     int[] numbers = {9, 2, 1, 5, 3, 12, 49, 1, 2, 4};
@@ -6179,7 +5905,7 @@ public static void main(String[] args) {
 
 列表 9.9：打印数组。
 
-```
+```java
 import java.util.*; // Add this line at the top of the code file
 
 public class ArrayArraylists {
@@ -6198,11 +5924,7 @@ public class ArrayArraylists {
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ```
 
-
-
-
-
-## 列表 9.17: 列表 9.16 的输出。
+列表 9.17：列表 9.16 的输出。
 
 ```
 [0, 0, 9, 1, 0, 0, 0, 44, 0, 0]
@@ -6238,7 +5960,7 @@ public static void main(String[] args) {
 
 正如我们看到的，循环是填充数组的有效方法。
 
-## 示例 2
+### 示例 2
 
 在这个练习中，我们将找到 `Integer[]` 数组中所有元素的和。假设我们有以下数组：
 
@@ -6264,6 +5986,8 @@ public static void main(String[] args) {
     System.out.println(sum);
 }
 ```
+
+
 
 列表 9.22：列表 9.21 的输出。
 
@@ -6365,9 +6089,8 @@ public static void main(String[] args) {
 ```java
 public static boolean find(int[] arr, int val) {
 
+}
 ```
-
-
 
 我们可以遍历 `arr` 中的每一个索引。如果特定索引处的元素等于 `val`，我们就返回 `true`，因为我们找到了寻找的值。
 
@@ -6445,10 +6168,6 @@ for (type var: collection) {
 假设我们有以下数组（假设 `import java.util.*` 在代码文件的顶部）：
 
 列表 9.35：`decimals` 数组。
-
-
-
-
 
 ```java
 public static void main(String[] args) {
@@ -6559,7 +6278,7 @@ type[] variableName;
 type[][] variableName;
 ```
 
-当我们开始添加更多像这样的括号时，我们就进入了**多维数组**的领域。在本书中，我们只关注一种多维数组：**二维数组**（也称为 2D 数组或矩阵）。二维数组是数组的数组，而不是标量类型的数组（例如，`int`、`double` 或 `String` 等）。当我们在处理网格状数据时，这些数组特别有用用。
+当我们开始添加更多像这样的括号时，我们就进入了**多维数组**的领域。在本书中，我们只关注一种多维数组：**二维数组**（也称为 2D 数组或矩阵）。二维数组是数组的数组，而不是标量类型的数组（例如，`int`、`double` 或 `String` 等）。当我们在处理网格状数据时，这些数组特别有用。
 
 在实例化一个新的二维数组时，我们需要包含两个括号（就像我们声明变量为二维数组时一样），在其中包含两个整数值，分别表示行数和列数。
 
@@ -6601,7 +6320,7 @@ public static void main(String[] args) {
 }
 ```
 
-接下来，我们必须填充 `grid` 的元素。我们可以创建一个变量 `counter` 来跟踪下一个访问索引要填充数字。然后，我们可以创建一个嵌套循环来遍历每一行的每一列。对于外层和内部循环，习惯上使用变量 `i` 和 `j` 分别引用行和列。此外，外层循环迭代到 `grid.length`，而内部循环迭代到 `grid[i].length`；这是因为 `grid.length` 是行数，而 `grid[i].length` 是列数。（`i` 实际上可以是 0 到 6 之间的任何数字，但在这种情况下我们使用 `i` 是因为我们已经创建了这个变量，所以为什么不利用它的用呢？）
+接下来，我们必须填充 `grid` 的元素。我们可以创建一个变量 `counter` 来跟踪下一个访问索引要填充数字。然后，我们可以创建一个嵌套循环来遍历每一行的每一列。对于外层和内部循环，习惯上使用变量 `i` 和 `j` 分别引用行和列。此外，外层循环迭代到 `grid.length`，而内部循环迭代到 `grid[i].length`；这是因为 `grid.length` 是行数，而 `grid[i].length` 是列数。（`i` 实际上可以是 0 到 6 之间的任何数字，但在这种情况下我们使用 `i` 是因为我们已经创建了这个变量，所以为什么不利用它呢？）
 
 列表 9.45：创建 `counter` 并添加嵌套循环。
 
@@ -6640,6 +6359,8 @@ public static void main(String[] args) {
 
 列表 9.47：打印 `grid` 的内容。
 
+
+
 ```java
 public static void main(String[] args) {
     int[][] grid = new int[6][4]; // 6 行，4 列
@@ -6669,9 +6390,6 @@ public static void main(String[] args) {
 [21, 22, 23, 24]
 ```
 
-
-
-
 ## 9.3 ArrayLists
 
 `ArrayList` 是一种基于数组的集合，它与数组唯一的区别在于其大小是可以改变的。这使得数组的功能扩展到了以下几点：
@@ -6687,21 +6405,19 @@ public static void main(String[] args) {
 我们使用以下语法来创建一个 `ArrayList`：
 
 ```java
-// 1\. 为每个元素创建一个指定对象类型的 ArrayList
+// 1. 为每个元素创建一个指定对象类型的 ArrayList
 ArrayList<ObjectType> listName = new ArrayList<ObjectType>();
 
-// 2\. 在实例化时不指定对象类型
-//    type
+// 2. 在实例化时不指定对象类型
 ArrayList<ObjectType> listName = new ArrayList<>();
 
-// 3\. 在声明或实例化时不指定对象类型
-//    type
+// 3. 在声明或实例化时不指定对象类型
 ArrayList listName = new ArrayList();
 ```
 
-让我们分析这些这些声明和实例化新 `ArrayList` 的方法。
+让我们分析这些声明和实例化新 `ArrayList` 的方法。
 
-1.  我们创建了一个类型为 `ObjectType` 的 `ArrayList`。注意两点：首先，我们在尖括号之间提供了一个类型参数，表示 `ArrayList` 中的每个元素都将是特定类型。其次，我们指定的类型不能是基本类型（primitive type）！因此，如果我们想创建一个包含 `int` 对象的 `ArrayList`，我们必须提供 `Integer` 对象类型。记住这一点不仅对于 `ArrayLists` 非常重要，对于任何要求类型参数的对象（即任何在声明和或实例化时要求在尖括号内提供对象类型的对象）也是同样重要。
+1.  我们创建了一个类型为 `ObjectType` 的 `ArrayList`。注意两点：首先，我们在尖括号之间提供了一个类型参数，表示 `ArrayList` 中的每个元素都将是特定类型。其次，我们指定的类型不能是基本类型（`primitive type`）！因此，如果我们想创建一个包含 `int` 对象的 `ArrayList`，我们必须提供 `Integer` 对象类型。记住这一点不仅对于 `ArrayLists` 非常重要，对于任何要求类型参数的对象（即任何在声明和或实例化时要求在尖括号内提供对象类型的对象）也是同样重要。
 
 2.  我们创建了一个类型为 `ObjectType` 的 `ArrayList`，但在实例化时使用了空类型参数。只要声明时在尖括号之间有对象类型，这种做法是可以的。
 
@@ -6768,19 +6484,17 @@ public static void main(String[] args) {
 }
 ```
 
-
-
-恭喜你！你已经完成了 Java 编程基础的学习！在本本书中，我们学习了 Java 的基本语法，从类型和变量到对象和数组。本书的更新版本将会出版，其中每章都将包含超出我们目前所学的内容（例如与 OOP 相关的概念，如封装、多态、抽象和继承，错误处理、文件管理等），并包含章节示例、练习题以及章节复习题。
+恭喜你！你已经完成了 Java 编程基础的学习！在本书中，我们学习了 Java 的基本语法，从类型和变量到对象和数组。本书的更新版本将会出版，其中每章都将包含超出我们目前所学的内容（例如与 OOP 相关的概念，如封装、多态、抽象和继承，错误处理、文件管理等），并包含章节示例、练习题以及章节复习题。
 
 ## 10.1 接下来该去哪里
 
-现在我们已经完成了 Java 基础知识的学习，让我们看看通过这些知识可以向哪些方向发展。首先，我们可以学习通用的应用程序开发。Java 可以被扩展，我们可以创建主要依赖 Java 进行计算和数据处理的 Windows Applet。此外，Java 还允许我们扩展到移动应用开发。大多数 Android 应用 都是用 Java 和 Kotlin（一种类似的编程语言）编写的。
+现在我们已经完成了 Java 基础知识的学习，让我们看看通过这些知识可以向哪些方向发展。首先，我们可以学习通用的应用程序开发。Java 可以被扩展，我们可以创建主要依赖 Java 进行计算和数据处理的 Windows Applet。此外，Java 还允许我们扩展到移动应用开发。大多数 Android 应用都是用 Java 和 Kotlin（一种类似的编程语言）编写的。
 
 除了将 Java 应用于各个领域外，你还可以学习其他语言。不同语言之间的语法通常没有太大区别，概念通常也相似。让我们来看用不同语言打印“Hello world”的几个例子。
 
 ### Java
 
-```
+```java
 class Main {
     public static void main(String[] args) {
         System.out.println("Hello world")
@@ -6812,7 +6526,7 @@ console.log("Hello world")
 
 ### Swift
 
-```python
+```swift
 print("Hello world")
 ```
 
@@ -6828,49 +6542,49 @@ print("Hello world")
 | :--- | :--- | :--- | :--- |
 | 0x0000 | 0 | <control>: NULL | |
 | 0x0001 | 1 | <control>: START OF HEADING | |
-| 0x0002 | 2 | control: START OF TEXT | |
-| 0x0003 | 3 | control: END OF TEXT | |
-| 0x0004 | 4 | control: END OF TRANSMISSION | |
-| 0x0005 | 5 | control: ENQUIRY | |
-| 0x0006 | 6 | control: ACKNOWLEDGE | |
-| 0x0007 | 7 | control: BELL | |
-| 0x0008 | 8 | control: BACKSPACE | |
-| 0x0009 | 9 | control: HORIZONTAL TABULATION | |
-| 0x000A | 10 | control: LINE FEED | |
-| 0x000B | 11 | control: VERTICAL TABULATION | |
-| 0x000C | 12 | control: FORM FEED | |
-| 0x000D | 13 | control: CARRIAGE RETURN | |
-| 0x000E | 14 | control: SHIFT OUT | |
-| 0x000F | 15 | control: SHIFT IN | |
-| 0x0010 | 16 | control: DATA LINK ESCAPE | |
-| 0x0011 | 17 | control: DEVICE CONTROL ONE | |
-| 0x0012 | 18 | control: DEVICE CONTROL TWO | |
-| 0x0013 | 19 | control: DEVICE CONTROL THREE | |
-| 0x0014 | 20 | control: DEVICE CONTROL FOUR | |
-| 0x0015 | 21 | control: NEGATIVE ACKNOWLEDGE | |
-| 0x0016 | 22 | control: SYNCHRONOUS IDLE | |
-| 0x0017 | 23 | control: END OF TRANSMISSION BLOCK | |
-| 0x0018 | 24 | control: CANCEL | |
-| 0x0019 | 25 | control: END OF MEDIUM | |
-| 0x001A | 26 | control: SUBSTITUTE | |
-| 0x001B | 27 | control: ESCAPE | |
-| 0x001C | 28 | control: FILE SEPARATOR | |
-| 0x001D | 29 | control: GROUP SEPARATOR | |
-| 0x001E | 30 | control: RECORD SEPARATOR | |
-| 0x001F | 31 | control: UNIT SEPARATOR | |
+| 0x0002 | 2 | <control>: START OF TEXT | |
+| 0x0003 | 3 | <control>: END OF TEXT | |
+| 0x0004 | 4 | <control>: END OF TRANSMISSION | |
+| 0x0005 | 5 | <control>: ENQUIRY | |
+| 0x0006 | 6 | <control>: ACKNOWLEDGE | |
+| 0x0007 | 7 | <control>: BELL | |
+| 0x0008 | 8 | <control>: BACKSPACE | |
+| 0x0009 | 9 | <control>: HORIZONTAL TABULATION | |
+| 0x000A | 10 | <control>: LINE FEED | |
+| 0x000B | 11 | <control>: VERTICAL TABULATION | |
+| 0x000C | 12 | <control>: FORM FEED | |
+| 0x000D | 13 | <control>: CARRIAGE RETURN | |
+| 0x000E | 14 | <control>: SHIFT OUT | |
+| 0x000F | 15 | <control>: SHIFT IN | |
+| 0x0010 | 16 | <control>: DATA LINK ESCAPE | |
+| 0x0011 | 17 | <control>: DEVICE CONTROL ONE | |
+| 0x0012 | 18 | <control>: DEVICE CONTROL TWO | |
+| 0x0013 | 19 | <control>: DEVICE CONTROL THREE | |
+| 0x0014 | 20 | <control>: DEVICE CONTROL FOUR | |
+| 0x0015 | 21 | <control>: NEGATIVE ACKNOWLEDGE | |
+| 0x0016 | 22 | <control>: SYNCHRONOUS IDLE | |
+| 0x0017 | 23 | <control>: END OF TRANSMISSION BLOCK | |
+| 0x0018 | 24 | <control>: CANCEL | |
+| 0x0019 | 25 | <control>: END OF MEDIUM | |
+| 0x001A | 26 | <control>: SUBSTITUTE | |
+| 0x001B | 27 | <control>: ESCAPE | |
+| 0x001C | 28 | <control>: FILE SEPARATOR | |
+| 0x001D | 29 | <control>: GROUP SEPARATOR | |
+| 0x001E | 30 | <control>: RECORD SEPARATOR | |
+| 0x001F | 31 | <control>: UNIT SEPARATOR | |
 | 0x0020 | 32 | SPACE | |
 | 0x0021 | 33 | EXCLAMATION MARK | ! |
-| 0x0022 | 34 | QUOTATION MARK | ” |
+| 0x0022 | 34 | QUOTATION MARK | " |
 | 0x0023 | 35 | NUMBER SIGN | # |
 | 0x0024 | 36 | DOLLAR SIGN | $ |
 | 0x0025 | 37 | PERCENT SIGN | % |
-| 0x0026 | 38 | AMPERSAND | ![epub/OEBPS/images/texmath/8fcd54109a0a4273103d91841c4a3129ba1a59f1](img/image0046.jpeg) (注：此处原文包含图片链接的乱码，翻译已保留逻辑结构） |
-| 0x0027 | 39 | APOSTROPHE | ’ |
-| 0x0028 | 40 | LEFT PARENESIS | ( |
-| 0x0029 | 41 | RIGHT PARENESIS | ) |
+| 0x0026 | 38 | AMPERSAND | & |
+| 0x0027 | 39 | APOSTROPHE | ' |
+| 0x0028 | 40 | LEFT PARENTHESIS | ( |
+| 0x0029 | 41 | RIGHT PARENTHESIS | ) |
 | 0x002A | 42 | ASTERISK | * |
 | 0x002B | 43 | PLUS SIGN | + |
-| 0x002C | 44 | COMMA | |
+| 0x002C | 44 | COMMA | , |
 | 0x002D | 45 | HYPHEN-MINUS | - |
 | 0x002E | 46 | FULL STOP | . |
 | 0x002F | 47 | SOLIDUS | / |
@@ -6886,72 +6600,76 @@ print("Hello world")
 | 0x0039 | 57 | DIGIT NINE | 9 |
 | 0x003A | 58 | COLON | : |
 | 0x003B | 59 | SEMICOLON | ; |
-| 0x003C | 60 | LESS-THAN SIGN | |
+| 0x003C | 60 | LESS-THAN SIGN | < |
 | 0x003D | 61 | EQUALS SIGN | = |
-| 0x003E | 62 | GREATER-THAN SIGN | |
+| 0x003E | 62 | GREATER-THAN SIGN | > |
 | 0x003F | 63 | QUESTION MARK | ? |
 | 0x0040 | 64 | COMMERCIAL AT | @ |
-| 0x0041 | 65 | LATIN CAPITAL LETTER | A |
-| 0x0042 | 66 | LATIN CAPITAL LETTER | B |
-| 0x0043 | 67 | LATIN CAPITAL LETTER | C |
-| 0x0044 | 68 | LATIN CAPITAL LETTER | D |
-| 0x0045 | 69 | LATIN CAPITAL LETTER | E |
-| 0x0046 | 70 | LATIN CAPITAL LETTER | F |
-| 0x0047 | 71 | LATIN CAPITAL LETTER | G |
-| 0x0048 | 72 | LATIN CAPITAL LETTER | H |
-| 0x0049 | 73 | LATIN CAPITAL LETTER | I |
-| 0x004A | 74 | LATIN CAPITAL LETTER | J |
-| 0x004B | 75 | LATIN CAPITAL LETTER | K |
-| 0x004C | 76 | LATIN CAPITAL LETTER | L |
-| 0x004D | 77 | LATIN CAPITAL LETTER | M |
-| 0x004E | 78 | LATIN CAPITAL LETTER | N |
-| 0x004F | 79 | LATIN CAPITAL LETTER | O |
-| 0x0050 | 80 | LATIN CAPITAL LETTER | P |
-| 0x0051 | 81 | LATIN CAPITAL LETTER | Q |
-| 0x0052 | 82 | LATIN CAPITAL LETTER | R |
-| 0x0053 | 83 | LATIN CAPITAL LETTER | S |
-| 0x0054 | 84 | LATIN CAPITAL LETTER | T |
-| 0x0055 | 85 | LATIN CAPITAL LETTER | U |
-| 0x0056 | 86 | LATIN CAPITAL LETTER | V |
-| 0x0057 | 87 | LATIN CAPITAL LETTER | W |
-| 0x0058 | 88 | LATIN CAPITAL LETTER | X |
-| 0x0059 | 89 | LATIN CAPITAL LETTER | Y |
-| 0x005A | 90 | LATIN CAPITAL LETTER | Z |
-| 0x005B | 91 | LEFT SQUARE BRACKET | [ |
-| 0x005C | 92 | REVERSE SOLIDUS | \ |
-| 0x005D | 93 | RIGHT SQUARE BRACKET | ] |
-| 0x005E | 94 | CIRCUMLEX ACCENT | �� |
-| 0x005F | 95 | LOW LINE | _ |
-| 0x0060 | 96 | GRAVE ACCENT | ` |
-| 0x0061 | 97 | LATIN SMALL LETTER | a |
-| 0x0062 | 98 | LATIN SMALL LETTER | b |
-| 0x0063 | 99 | LATIN SMALL LETTER | c |
-| 0x0064 | 100 | LATIN SMALL LETTER | d |
-| 0x0065 | 101 | LATIN SMALL LETTER | e |
-| 0x0066 | 102 | LATIN SMALL LETTER | f |
-| 0x0067 | 103 | LATIN SMALL LETTER | g |
-| 0x0068 | 104 | LATIN SMALL LETTER | h |
-| 0x0069 | 105 | LATIN SMALL LETTER | i |
-| 0x006A | 106 | LATIN SMALL LETTER | j |
-| 0x006B | 107 | LATIN SMALL LETTER | k |
-| 0x006C | 108 | LATIN SMALL LETTER | l |
-| 0x006D | 109 | LATIN SMALL LETTER | m |
-| 0x006E | 110 | LATIN SMALL LETTER | n |
-| 0x006F | 111 | LATIN SMALL LETTER | o |
-| 0x0070 | 112 | LATIN SMALL LETTER | p |
-| 0x0071 | 113 | LATIN SMALL LETTER | q |
-| 0x0072 | 114 | LATIN SMALL LETTER | r |
-| 0x0073 | 115 | LATIN SMALL LETTER | s |
-| 0x0074 | 116 | LATIN SMALL LETTER | t |
-| 0x0075 | 117 | LATIN SMALL LETTER | u |
-| 0x0076 | 118 | LATIN SMALL LETTER | v |
-| 0x0077 | 119 | LATIN SMALL LETTER | w |
-| 0x0078 | 120 | LATIN SMALL LETTER | x |
-| 0x0079 | 121 | LATIN SMALL LETTER | y |
-| 0x007A | 122 | LATIN SMALL LETTER | z |
-| 0x007B | 123 | LEFT CURLY BRACKET | { |
-| 0x007C | 124 | VERTICAL LINE | &#124 |
-| 0x007D | 125 | RIGHT CURLY BRACKET | } |
-| 0x007E | 126 | TILDE | ~ |
-| 0x007F | 127 | control: DELETE |  |
+| 0x0041 | 65 | LATIN CAPITAL LETTER A | A |
+| 0x0042 | 66 | LATIN CAPITAL LETTER B | B |
+| 0x0043 | 67 | LATIN CAPITAL LETTER C | C |
+| 0x0044 | 68 | LATIN CAPITAL LETTER D | D |
+| 0x0045 | 69 | LATIN CAPITAL LETTER E | E |
+| 0x0046 | 70 | LATIN CAPITAL LETTER F | F |
+| 0x0047 | 71 | LATIN CAPITAL LETTER G | G |
+| 0x0048 | 72 | LATIN CAPITAL LETTER H | H |
+| 0x0049 | 73 | LATIN CAPITAL LETTER I | I |
+| 0x004A | 74 | LATIN CAPITAL LETTER J | J |
+| 0x004B | 75 | LATIN CAPITAL LETTER K | K |
+| 0x004C | 76 | LATIN CAPITAL LETTER L | L |
+| 0x004D | 77 | LATIN CAPITAL LETTER M | M |
+| 0x004E | 78 | LATIN CAPITAL LETTER N | N |
+| 0x004F | 79 | LATIN CAPITAL LETTER O | O |
+| 0x0050 | 80 | LATIN CAPITAL LETTER P | P |
+| 0x0051 | 81 | LATIN CAPITAL LETTER Q | Q |
+| 0x0052 | 82 | LATIN CAPITAL LETTER R | R |
+| 0x0053 | 83 | LATIN CAPITAL LETTER S | S |
+| 0x0054 | 84 | LATIN CAPITAL LETTER T | T |
+| 0x0055 | 85 | LATIN CAPITAL LETTER U | U |
+| 0x0056 | 86 | LATIN CAPITAL LETTER V | V |
+| 0x0057 | 87 | LATIN CAPITAL LETTER W | W |
 
+
+
+| Code Point | Decimal | Name | Character |
+| :--- | :--- | :--- | :--- |
+| `0x0058` | 88 | LATIN CAPITAL LETTER | `X` |
+| `0x0059` | 89 | LATIN CAPITAL LETTER | `Y` |
+| `0x005A` | 90 | LATIN CAPITAL LETTER | `Z` |
+| `0x005B` | 91 | LEFT SQUARE BRACKET | `[` |
+| `0x005C` | 92 | REVERSE SOLIDUS | `\` |
+| `0x005D` | 93 | RIGHT SQUARE BRACKET | `]` |
+| `0x005E` | 94 | CIRCUMFLEX ACCENT | `^` |
+| `0x005F` | 95 | LOW LINE | `_` |
+| `0x0060` | 96 | GRAVE ACCENT | `` ` `` |
+| `0x0061` | 97 | LATIN SMALL LETTER | `a` |
+| `0x0062` | 98 | LATIN SMALL LETTER | `b` |
+| `0x0063` | 99 | LATIN SMALL LETTER | `c` |
+| `0x0064` | 100 | LATIN SMALL LETTER | `d` |
+| `0x0065` | 101 | LATIN SMALL LETTER | `e` |
+| `0x0066` | 102 | LATIN SMALL LETTER | `f` |
+| `0x0067` | 103 | LATIN SMALL LETTER | `g` |
+| `0x0068` | 104 | LATIN SMALL LETTER | `h` |
+| `0x0069` | 105 | LATIN SMALL LETTER | `i` |
+| `0x006A` | 106 | LATIN SMALL LETTER | `j` |
+| `0x006B` | 107 | LATIN SMALL LETTER | `k` |
+| `0x006C` | 108 | LATIN SMALL LETTER | `l` |
+| `0x006D` | 109 | LATIN SMALL LETTER | `m` |
+| `0x006E` | 110 | LATIN SMALL LETTER | `n` |
+| `0x006F` | 111 | LATIN SMALL LETTER | `o` |
+| `0x0070` | 112 | LATIN SMALL LETTER | `p` |
+| `0x0071` | 113 | LATIN SMALL LETTER | `q` |
+| `0x0072` | 114 | LATIN SMALL LETTER | `r` |
+| `0x0073` | 115 | LATIN SMALL LETTER | `s` |
+| `0x0074` | 116 | LATIN SMALL LETTER | `t` |
+| `0x0075` | 117 | LATIN SMALL LETTER | `u` |
+| `0x0076` | 118 | LATIN SMALL LETTER | `v` |
+| `0x0077` | 119 | LATIN SMALL LETTER | `w` |
+| `0x0078` | 120 | LATIN SMALL LETTER | `x` |
+| `0x0079` | 121 | LATIN SMALL LETTER | `y` |
+| `0x007A` | 122 | LATIN SMALL LETTER | `z` |
+| `0x007B` | 123 | LEFT CURLY BRACKET | `{` |
+| `0x007C` | 124 | VERTICAL LINE | `|` |
+| `0x007D` | 125 | RIGHT CURLY BRACKET | `}` |
+| `0x007E` | 126 | TILDE | `~` |
+| `0x007F` | 127 | control: DELETE | `` |

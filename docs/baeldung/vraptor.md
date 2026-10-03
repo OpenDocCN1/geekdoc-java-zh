@@ -1,18 +1,19 @@
+
 # Java 中的 VRaptor 简介
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/vraptor>
 
-## 1.**概述**
+## 1. 概述
 
-在本文中，我们将看看 [VRaptor](https://web.archive.org/web/20220526044748/http://www.vraptor.org/en/) ，这是一个简单明了的 Java MVC web 框架，它利用了 Java 上下文和依赖注入技术，易于掌握。
+在本文中，我们将看看 [VRaptor](https://web.archive.org/web/20220526044748/http://www.vraptor.org/en/)，这是一个简单明了的 Java MVC web 框架，它利用了 Java 上下文和依赖注入技术，易于掌握。
 
-就像 Spring-**一样，它非常依赖注释，并且与 Hibernate** 配合得非常好。
+就像 Spring 一样，它非常依赖注释，并且与 Hibernate 配合得非常好。
 
 它还附带了一些有用的插件——比如用于内部化和单元测试。
 
 因此，让我们探索一下 VRaptor 的不同组件，并创建一个示例项目。
 
-## 2。Maven 依赖性和设置
+## 2. Maven 依赖性和设置
 
 一个快速启动并运行的方法是从[官方库](https://web.archive.org/web/20220526044748/https://bintray.com/caelum/VRaptor4/br.com.caelum.vraptor/)下载`vraptor-blank-project-distribution`。
 
@@ -22,21 +23,21 @@
 
 该目录应包含:
 
-*   `src/`
-*   `pom.xml`
-*   和`README.md`
+- `src/`
+- `pom.xml`
+- 和`README.md`
 
 该项目是基于 Maven 的，并带有`tomcat7` Maven 插件，它提供了运行应用程序的 servlet 容器。
 
-它还有一个默认的`IndexController`，只有一个方法—`index()`。
+它还有一个默认的`IndexController`，只有一个方法——`index()`。
 
-默认情况下，通过该方法渲染的视图位于`webapp/WEB-INF/jsp/index/index.jsp` 中——这遵循了`WEB-INF/jsp/` `controller_name/method_name.`的惯例
+默认情况下，通过该方法渲染的视图位于`webapp/WEB-INF/jsp/index/index.jsp`中——这遵循了`WEB-INF/jsp/` `controller_name/method_name.`的惯例
 
-为了启动服务器，我们将从项目的根目录执行命令`mvn tomcat7` : `run`。
+为了启动服务器，我们将从项目的根目录执行命令`mvn tomcat7 : run`。
 
-如果成功，如果我们访问`http://localhost:8080,`，浏览器将显示`It works!! VRaptor!`。
+如果成功，如果我们访问`http://localhost:8080`，浏览器将显示`It works!! VRaptor!`。
 
-**如果我们面对`java.lang.LinkageError: loader constraint violation”,` 那么，我们必须修改`pom.xml`中的下列依赖关系**:
+**如果我们面对`java.lang.LinkageError: loader constraint violation`，那么，我们必须修改`pom.xml`中的下列依赖关系**:
 
 ```java
 <dependency>
@@ -45,8 +46,8 @@
     <version>2.1.2.Final</version>
     <exclusions>
         <exclusion>
-	    <groupId>org.jboss.spec.javax.el</groupId>
-	    <artifactId>jboss-el-api_3.0_spec</artifactId>
+            <groupId>org.jboss.spec.javax.el</groupId>
+            <artifactId>jboss-el-api_3.0_spec</artifactId>
         </exclusion>
     </exclusions>
 </dependency>
@@ -55,10 +56,10 @@
     <artifactId>weld-core-impl</artifactId>
     <version>2.1.2.Final</version>
     <exclusions>
-       <exclusion>
-          <groupId>org.jboss.spec.javax.el</groupId>
-  	  <artifactId>jboss-el-api_3.0_spec</artifactId>
-       </exclusion>
+        <exclusion>
+            <groupId>org.jboss.spec.javax.el</groupId>
+            <artifactId>jboss-el-api_3.0_spec</artifactId>
+        </exclusion>
     </exclusions>
 </dependency>
 ```
@@ -89,11 +90,11 @@
 </dependency>
 ```
 
-最新版本的 [`vraptor-freemarker`、](https://web.archive.org/web/20220526044748/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22br.com.caelum.vraptor%22%20AND%20a%3A%22vraptor-freemarker%22) [`mysql-connector-java`](https://web.archive.org/web/20220526044748/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22mysql%22%20AND%20a%3A%22mysql-connector-java%22) 、 [`freemarker`](https://web.archive.org/web/20220526044748/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22org.freemarker%22%20AND%20a%3A%22freemarker%22) 神器可以在 Maven Central 找到。
+最新版本的`vraptor-freemarker`、`mysql-connector-java`、`freemarker` 神器可以在 Maven Central 找到。
 
 现在我们可以开始了，让我们建立一个简单的博客站点。
 
-## 3。休眠支持
+## 3. 休眠支持
 
 VRaptor 提供了各种与数据库交互的插件，其中一个是与 Hibernate 4 协同工作的`vraptor-hibernate`。
 
@@ -101,13 +102,13 @@ VRaptor 提供了各种与数据库交互的插件，其中一个是与 Hibernat
 
 插件就绪后，我们需要一个标准的 Hibernate 配置文件——在资源库中可以找到一个例子。
 
-VRaptor 使用一种称为生产者的技术来使对象可用于 DI 管理。更多关于这个[的细节在这里](https://web.archive.org/web/20220526044748/http://www.vraptor.org/en/docs/components/)。
+VRaptor 使用一种称为生产者的技术来使对象可用于 DI 管理。更多关于这个的[细节在这里](https://web.archive.org/web/20220526044748/http://www.vraptor.org/en/docs/components/)。
 
-## 4。 **在 VRaptor 中定义 Web 路由**
+## 4. 在 VRaptor 中定义 Web 路由
 
-在 VRaptor 中，路由定义驻留在控制器中，这些控制器只是简单的`@Controller`-带注释的 Java 对象——就像 Spring 中一样。
+在 VRaptor 中，路由定义驻留在控制器中，这些控制器只是简单的`@Controller`注释的 Java 对象——就像 Spring 中一样。
 
-`@Path`注释用于将请求路径映射到特定的控制器，而`@Get, @Post, @Put, @Delete` 和`@Patch` 注释用于指定 HTTP 请求类型。
+`@Path`注释用于将请求路径映射到特定的控制器，而`@Get`、`@Post`、`@Put`、`@Delete`和`@Patch`注释用于指定 HTTP 请求类型。
 
 路由映射配置看起来类似于 JAX-RS 的方式，但没有正式实施该标准。
 
@@ -130,11 +131,11 @@ public void view(int id) {
 
 让我们在文章的下一部分看看这一点。
 
-## 5。视图和模板引擎
+## 5. 视图和模板引擎
 
 默认情况下，可以使用 JSP 实现视图。然而，也可以使用其他模板引擎——在本文中，我们将使用 Freemarker。
 
-让我们从在默认视图目录(src/main/resources/templates)中创建`index.ftl and saving` 开始:
+让我们从在默认视图目录(`src/main/resources/templates`)中创建`index.ftl`并保存开始:
 
 ```java
 <html>
@@ -148,7 +149,7 @@ It works!! ${variable}
 </html>
 ```
 
-现在，我们可以使用带有`FreemarkerView` 类的已定义视图进行视图渲染:
+现在，我们可以使用带有`FreemarkerView`类的已定义视图进行视图渲染:
 
 ```java
 @Path("/")
@@ -160,11 +161,11 @@ public void index() {
 
 `Result`对象持有模型状态——它有重定向到另一个页面、URL 或控制器方法的方法；可以使用 CDI 将其注入控制器。
 
-在我们的例子中， `variable`被 Freemarker 解析。因此，`index.ftl`中的`${variable}`占位符被替换为“VRaptor！”。
+在我们的例子中，`variable`被 Freemarker 解析。因此，`index.ftl`中的`${variable}`占位符被替换为“VRaptor！”。
 
 这里记录了更高级的用法[。](https://web.archive.org/web/20220526044748/http://www.vraptor.org/en/docs/view-and-ajax/)
 
-## 6。表单提交处理示例
+## 6. 表单提交处理示例
 
 让我们看看如何处理带有验证的表单提交:
 
@@ -181,8 +182,8 @@ public void add(Post post) {
     Object id = postDao.add(post);
 
     if(Objects.nonNull(id)) {
-       result.include("status", "Post Added Successfully");
-         result.redirectTo(IndexController.class).index();
+        result.include("status", "Post Added Successfully");
+        result.redirectTo(IndexController.class).index();
     } else {
         result.include(
           "error", "There was an error creating the post. Try Again");
@@ -197,7 +198,7 @@ public void add(Post post) {
 
 **注意，输入字段的名称必须以小写的对象名为前缀。**
 
-例如，负责添加新文章的视图有输入字段:`post.title`和`post.post`，它们对应于`Post`中的字段`title` 和`post` 。`java` 分别为:
+例如，负责添加新文章的视图有输入字段:`post.title`和`post.post`，它们对应于`Post.java`中的字段`title`和`post`分别为:
 
 ```java
 <input type="text" class="form-control" placeholder="Title" 
@@ -218,7 +219,7 @@ if(validator.hasErrors()) {
 validator.onErrorRedirectTo(this).addForm();
 ```
 
-## 7 .**。结论**
+## 7. 结论
 
 总之，我们已经浏览了 VRaptor，并了解了基本的 MVC 功能是如何实现的。
 

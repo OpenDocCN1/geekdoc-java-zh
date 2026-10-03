@@ -1,10 +1,10 @@
+
 # Java 后端编码技术
-
-
 
 ![](img/file0.png)
 
 1. 标题页
+
 2. 封面
 
 # 第 1 章：引言 - 代码统一
@@ -80,17 +80,21 @@
    - `@Transactional`：行为——必须记住在事务中运行，需要理解代理机制。
    - 显式：事务边界在代码中可见。
    - **Result 胜出 +2**
+
 2. **业务/技术比例：**
    - 两种方法都是技术基础设施。
    - **平局（0）**
+
 3. **设计影响：**
    - `@Transactional`：将业务逻辑与 Spring 框架耦合。
    - 显式：业务逻辑保持框架无关。
    - **Result 胜出 +2**
+
 4. **可靠性：**
    - `@Transactional`：在某些情况下静默失败（私有方法、自调用）。
    - 显式：如果忘记处理事务，编译器会报错。
    - **Result 胜出 +1**
+
 5. **复杂度：**
    - `@Transactional`：隐藏的控制流。
    - 显式：控制流可见可见。
@@ -106,18 +110,14 @@
 
 ### 什么是副作用？
 
-
-
-
-
 `side effect`（副作用）是指函数在计算和返回值之外执行的所有操作：
 
-*   写入数据库
-*   发起 HTTP 调用
-*   写入文件
-*   打印到控制台
-*   修改全局变量
-*   抛出异常
+* 写入数据库
+* 发起 HTTP 调用
+* 写入文件
+* 打印到控制台
+* 修改全局变量
+* 抛出异常
 
 `Pure function`（纯函数，无副作用）：
 
@@ -214,13 +214,14 @@ Result<String> result = Result.success(email)
 
 你是在说：“这是对该值要执行的操作……**如果**你有它并且**当**你准备好时。”
 
-*   `Option`：“**如果**值存在，我会应用你的操作”
-*   `Result`：“**如果**目前为止没有错误，我会应用你的操作”
-*   `Promise`：“**当**异步结果到达时，我会应用你的操作”
+* `Option`：“**如果**值存在，我会应用你的操作”
+* `Result`：“**如果**目前为止没有错误，我会应用你的操作”
+* `Promise`：“**当**异步结果到达时，我会应用你的操作”
 
 每个 monad 都有：
-*   `map`：“如果/当值可用时，转换该值”
-*   `flatMap`：“如果/当当前操作成功时，链式另一个操作”
+
+* `map`：“如果/当值可用时，转换该值”
+* `flatMap`：“如果/当当前操作成功时，链式另一个操作”
 
 ### 实用主义，而非纯粹
 
@@ -235,15 +236,17 @@ JBCT 使用*实用主义的* monads。不要求遵守 Monad 法。纯洁性不�
 传递给操作的所有输入数据必须被视为不可变且只读。这并不是为了教条式的函数纯洁性——而是为了维护使并发代码可预测的安全性保证。
 
 **什么必须是不可变的：**
-*   在并行操作之间传递的数据（Fork-Join 模式）
-*   任何操作的输入参数
-*   从用例返回的响应类型
-*   作为 map 键或集合中的值对象
+
+* 在并行操作之间传递的数据（Fork-Join 模式）
+* 任何操作的输入参数
+* 从用例返回的响应类型
+* 作为 map 键或集合中的值对象
 
 **什么可以是可变的（线程限制）：**
-*   单次操作内的局部状态（累加器、构建器）
-*   适配器边界内的工作对象
-*   局限于顺序模式的状态
+
+* 单次操作内的局部状态（累加器、构建器）
+* 适配器边界内的工作对象
+* 局限于顺序模式的状态
 
 **核心原则：** 当状态是**线程限制**（由单线程访问）时，可变性是安全的。并行模式需要不可变输入，因为不存在隔离。
 
@@ -252,35 +255,38 @@ JBCT 使用*实用主义的* monads。不要求遵守 Monad 法。纯洁性不�
 ## 谁应该使用 JBCT？
 
 **如果你符合以下情况，你应该使用它：**
-*   你正在构建后端服务（REST API、微服务、批处理程序）
-*   你希望代码易于新成员理解
-*   你正在与 AI 辅助编程工作，并希望生成的代码与你的结构一致
-*   你重视可测试性并希望尽量减少 mock
-*   你厌倦了架构争论，想要机械化的规则
+
+* 你正在构建后端服务（REST API、微服务、批处理程序）
+* 你希望代码易于新成员理解
+* 你正在与 AI 辅助编程工作，并希望生成的代码与你的结构一致
+* 你重视可测试性并希望尽量减少 mock
+* 你厌倦了架构争论，想要机械化的规则
 
 **以下情况下可能不适用：**
-*   你正在构建 UI 应用（关注点和模式不同）
-*   你需要极端的性能优化（存在抽象开销）
-*   你的团队深度投入了冲突的架构
-*   你更倾向于带有状态的面向对象的设计
+
+* 你正在构建 UI 应用（关注点和模式不同）
+* 你需要极端的性能优化（存在抽象开销）
+* 你的团队深度投入了冲突的架构
+* 你更倾向于带有状态的面向对象的设计
 
 * * *
 
 ## 核心要点
 
-1.  **JBCT 统一了代码**——让代码在团队和 AI 协作之间具有预测性
-2.  **五个标准**指导所有决策——心理开销、业务/技术比例、设计影响、可靠性、复杂度
-3.  **副作用位于边缘**——保持业务逻辑纯洁，在适配器中隔离 I/O
-4.  **组合优于命令式**——链式操作，让结构处理错误
-5.  **Monad 反转了控制**——你描述转换，monad 处理执行
+1. **JBCT 统一了代码**——让代码在团队和 AI 协作之间具有预测性
+2. **五个标准**指导所有决策——心理开销、业务/技术比例、设计影响、可靠性、复杂度
+3. **副作用位于边缘**——保持业务逻辑纯洁，在适配器中隔离 I/O
+4. **组合优于命令式**——链式操作，让结构处理错误
+5. **Monad 反转了控制**——你描述转换，monad 处理执行
 
 * * *
 
 ## 练习
 
 参见 附录 B 获取以下练习：
-*   练习 1.1：返回类型选择
-*   练习 1.2：Option vs Result
+
+* 练习 1.1：返回类型选择
+* 练习 1.2：Option vs Result
 
 * * *
 
@@ -288,30 +294,27 @@ JBCT 使用*实用主义的* monads。不要求遵守 Monad 法。纯洁性不�
 
 第 2 章 介绍了构成其他所有内容的四种返回类型：`T`、`Option<T>`、`Result<T>` 和 `Promise<T>`。你将学习何时使用每种类型、它们如何组合，以及为什么这四个类型就是你需要的全部。
 
-
-
-
-
 ## T - 同步，不会失败，始终存在
 
 当操作是纯计算，且没有失败或数据丢失的可能性时使用。例如数学计算、有效数据的转换、简单的 getter。如果你无法想象该函数可能失败或返回空值，则它返回 `T`。
 
-```
-[](#cb6-1)public record FullName(String value) {
-[](#cb6-2)    public String initials() {  // 返回 String (T)
-[](#cb6-3)        return value.chars()
-[](#cb6-4)                    .filter(Character::isUpperCase)
-[](#cb6-5)                    .collect(StringBuilder::new,
-[](#cb6-6)                             StringBuilder::appendCodePoint,
-[](#cb6-7)                             StringBuilder::append)
-[](#cb6-8)                    .toString();
-[](#cb6-9)    }
-[](#cb6-10)}
+```java
+public record FullName(String value) {
+    public String initials() {  // 返回 String (T)
+        return value.chars()
+                    .filter(Character::isUpperCase)
+                    .collect(StringBuilder::new,
+                             StringBuilder::appendCodePoint,
+                             StringBuilder::append)
+                    .toString();
+    }
+}
 ```
 
 签名 `String initials()` 告诉你：它总是成功，总是返回一个值，并立即完成。
 
 **返回 `T` 的场景：**
+
 - 纯计算（例如 `calculateTotal`、`formatCurrency`）
 - 已经有效的数据转换（例如 `toUpperCase`、`extractId`）
 - 必需字段的 getter（例如 `user.email()`、`order.total()`）
@@ -322,15 +325,16 @@ JBCT 使用*实用主义的* monads。不要求遵守 Monad 法。纯洁性不�
 
 当缺失是一个有效结果但不会失败时使用。例如可能找不到任何内容的查找、可选配置、或者当 null 在语义上具有意义的数据库列。关键在于：数据缺失是正常的业务行为，而不是错误。
 
-```
-[](#cb7-1)public interface PreferenceRepository {
-[](#cb7-2)    Option<Theme> findThemePreference(UserId id);  // 可能未设置
-[](#cb7-3)}
+```java
+public interface PreferenceRepository {
+    Option<Theme> findThemePreference(UserId id);  // 可能未设置
+}
 ```
 
 签名 `Option<Theme>` 告诉你：它总是成功，但值可能不存在。调用者必须处理两种情况。
 
 **返回 `Option<T>` 的场景：**
+
 - 查找可能没有找到结果（例如 `findByUsername`）
 - 字段在领域中确实是可选的（例如 `user.middleName()`）
 - “未找到”是一个正常结果，而不是错误
@@ -343,89 +347,87 @@ JBCT 使用*实用主义的* monads。不要求遵守 Monad 法。纯洁性不�
 
 > **注意：** `Cause` 代表领域失败或错误原因。将其视为“失败原因（FailureReason）”或“领域错误（DomainError）”——业务操作失败的强类型表示。
 
+
+
 ```
-[](#cb8-1)public record Email(String value) {
-[](#cb8-2)    private static final Pattern EMAIL_PATTERN =
-[](#cb8-3)        Pattern.compile("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$");
-[](#cb8-4)    private static final Fn1<Cause, String> INVALID_EMAIL =
-[](#cb8-5)        Causes.forOneValue("Invalid email format: %s");
-[](#cb8-6)
-[](#cb8-7)    public static Result<Email> email(String raw) {
-[](#cb8-8)        return Verify.ensure(raw, Verify::Is::notNull)
-[](#cb8-9)                     .map(String::trim)
-[](#cb8-10)                     .filter(INVALID_EMAIL, EMAIL_PATTERN.asMatchPredicate())
-[](#cb8-11)                     .map(Email::new);
-[](#cb8-12)    }
-[](#cb8-13)}
+public record Email(String value) {
+    private static final Pattern EMAIL_PATTERN =
+        Pattern.compile("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$");
+    private static final Fn1<Cause, String> INVALID_EMAIL =
+        Causes.forOneValue("Invalid email format: %s");
+
+    public static Result<Email> email(String raw) {
+        return Verify.ensure(raw, Verify::Is::notNull)
+                     .map(String::trim)
+                     .filter(INVALID_EMAIL, EMAIL_PATTERN.asMatchPredicate())
+                     .map(Email::new);
+    }
+}
 ```
 
-签名 `Result<Email>` 告诉你：它可能失败（格式无效），立即完成，且失败是强类型的。
+签名`Result<Email>`告诉你：它可能失败（格式无效），立即完成，且失败是强类型的。
 
-**返回 `Result<T>` 的场景：**
-- 验证输入（例如 `Email.email(raw)`）
-- 强制业务规则（例如 `checkInvariant`）
-- 解析或构建领域对象（例如 `OrderId.orderId(raw)`）
+**返回`Result<T>`的场景：**
+
+- 验证输入（例如`Email.email(raw)`）
+- 强制业务规则（例如`checkInvariant`）
+- 解析或构建领域对象（例如`OrderId.orderId(raw)`）
 
 > **为什么使用 Result：错误处理哲学**
-
+>
 > 错误处理逻辑应该位于存在业务上下文以做出决策的地方。有时，这接近于错误发生的地方；有时，错误会原封地传递，因为只有调用者拥有足够的上下文来做决定。
-
+>
 > 不同的机制有不同的权衡：
-
+>
 > | 机制 | 透明度 | 易用性 | 可靠性 |
 > | --- | --- | --- | --- |
 > | **检查异常 (Checked exceptions)** | ✅ 显式 | ❌ 冗长、耦合 | ✅ 编译器强制 |
 > | **非异常 (Unchecked exceptions)** | ❌ 隐藏 | ⚠️ 心理负担 | ❌ 静默失败 |
 > | **错误作为值 (Go)** | ✅ 可见 | ❌ 手动传递 | ❌ 易被忽略 |
 > | **函数式 (Result)** | ✅ 类型内可见 | ✅ 单子组合 | ✅ 编译器强制 |
+>
+> `Result<T>`结合了优点：签名显式、通过`map`/`flatMap`实现良好的易用性、经过编译器验证的处理。
 
-> `Result<T>` 结合了优点：签名显式、通过 `map`/`flatMap` 实现良好的易用性、经过编译器验证的处理。
+## `Promise<T>` - 异步，可能失败
 
-* * *
-
-## Promise<T> - 异步，可能失败
-
-用于任何 I/O 操作、外部服务调用或可能阻塞的计算。`Promise<T>` 在语义上等于 `Result<T>`，但它是异步的——失败包含在 Promise 内部，而不是嵌套在内部。
+用于任何 I/O 操作、外部服务调用或可能阻塞的计算。`Promise<T>`在语义上等于`Result<T>`，但它是异步的——失败包含在 Promise 内部，而不是嵌套在内部。
 
 ```
-[](#cb9-1)public interface AccountRepository {
-[](#cb9-2)    Promise<Account> findById(AccountId id);
-[](#cb9-3)}
+public interface AccountRepository {
+    Promise<Account> findById(AccountId id);
+}
 ```
 
-签名 `Promise<Account>` 告诉你：它可能失败，异步完成。
+签名`Promise<Account>`告诉你：它可能失败，异步完成。
 
-**返回 `Promise<T>` 的场景：**
+**返回`Promise<T>`的场景：**
+
 - 任何 I/O 操作（数据库、文件系统）
 - 外部服务调用
 - 可能阻塞或耗时的操作
 
-```
-
-
-
-
-
 | `Promise<Option<Result<T>>>` | 三层嵌套 - 架构异味 |
+| --- | --- |
 
 **规则：** 每个单子领域的关注点（可选性、失败、异步）在返回类型中最多出现一次。
 
 ## 为什么不使用 Java 内置类型？
 
-**“我不能直接用 `Optional`、`CompletableFuture` 和异常吗？”**
+**“我不能直接用`Optional`、`CompletableFuture`和异常吗？”**
 
 你可以那么做，但你会遇到这些问题：
 
 | Java 方案 | 问题 | JBCT 解决方案 |
 | --- | --- | --- |
-| `return null` | 隐藏的可选性 → 运行时 NPE | `Option<T>` 在类型中显式表示 |
-| `Optional<T> ` | 无法表示失败 | `Result<T>` 用于强类型错误 |
-| `try-catch` | 不可见见的控制流 | `Result<T>` - 将错误视为值 |
-| `CompletableFuture<T>` | 复杂的错误处理 | `Promise<T>` 一致的模式 |
+| `return null` | 隐藏的可选性 → 运行时 NPE | `Option<T>`在类型中显式表示 |
+| `Optional<T>` | 无法表示失败 | `Result<T>`用于强类型错误 |
+| `try-catch` | 不可见见的控制流 | `Result<T>`- 将错误视为值 |
+| `CompletableFuture<T>` | 复杂的错误处理 | `Promise<T>`一致的模式 |
 
 **核心差异：**
+
 - **类型显式化**：签名告知你失败模式，没有隐藏的异常
-- **一致的组合**：`map`/`flatMap` 在所有类型上的行为相同
+- **一致的组合**：`map`/`flatMap`在所有类型上的行为相同
 - **无嵌套**：每个类型层级处理一个关注点
 - **更好的推断**：AI 仅通过类型即可生成正确的错误处理
 
@@ -440,9 +442,11 @@ JBCT 使用*实用主义的* monads。不要求遵守 Monad 法。纯洁性不�
 Option.option(value)
 Result.success(value)
 Promise.success(value)
+
 // Option → Result/Promise
 option.toResult(cause)
 option.async(cause)
+
 // Result → Promise
 result.async()
 ```
@@ -460,13 +464,12 @@ public Promise<Response> execute(Request request) {
 
 ### 禁止嵌套：`Promise<Result<T>>`
 
-**禁止使用 `Promise<Result<T>>`。** `Promise<T>` 已经携带了失败信息 - 嵌套 `Result` 会创建两个错误通道。
+**禁止使用`Promise<Result<T>>`。** `Promise<T>`已经携带了失败信息 - 嵌套`Result`会创建两个错误通道。
 
 **错误示例：**
 
 ```java
 Promise<Result<User>> loadUser(UserId id) { /* ... */ }
-
 // 调用者必须解包两次 - 荒谬的仪式感
 loadUser(id)
     .flatMap(resultUser -> resultUser.fold(
@@ -479,14 +482,13 @@ loadUser(id)
 
 ```java
 Promise<User> loadUser(UserId id) { /* ... */ }
-
 // 调用者只需链式调用
 return loadUser(id).flatMap(nextStep);
 ```
 
 ### 允许嵌套：`Result<Option<T>>`
 
-少数允许 `Result<Option<T>>` 用于“可能会通过失败的可选值”。
+少数允许`Result<Option<T>>`用于“可能会通过失败的可选值”。
 
 ```java
 Result<Option<ReferralCode>> refCode = ReferralCode.referralCode(input);
@@ -495,7 +497,7 @@ Result<Option<ReferralCode>> refCode = ReferralCode.referralCode(input);
 // Failure(cause) = 已提供但无效
 ```
 
-使用 `Verify.ensureOption()` (Pragmatica Lite 0.9.0+) 实现此模式：
+使用`Verify.ensureOption()`(Pragmatica Lite 0.9.0+) 实现此模式：
 
 ```java
 public static Result<Option<ReferralCode>> referralCode(String raw) {
@@ -509,7 +511,7 @@ public static Result<Option<ReferralCode>> referralCode(String raw) {
 
 ## API 快速参考
 
-## 类型转换
+### 类型转换
 
 ```
 // Option 转换
@@ -537,9 +539,11 @@ cause.promise()             // Cause → Promise
 Option.some(value)
 Option.none()
 Option.option(nullable)     // null → none
+
 // Result
 Result.success(value)
 cause.result()              // 推荐用于失败
+
 // Promise
 Promise.success(value)
 cause.promise()             // 推荐用于失败
@@ -550,20 +554,21 @@ Promise.promise()           // 未解析
 
 1. **四种类型涵盖所有情况**：`Option`, `Result`, `Promise`
 2. **签名说明一切**：失败模式、可选性、同步性
-3. **提升，永不嵌套**：转换为高级类型，永远不要使用 `Promise<Result<T>>`
-4. **一致的组合**：所有类型均使用相同的 `map`/`flatMap`
-5. **使用 Cause 方法**：优先使用 `cause.result()` 而非 `Result.failure(cause)`
+3. **提升，永不嵌套**：转换为高级类型，永远不要使用`Promise<Result<T>>`
+4. **一致的组合**：所有类型均使用相同的`map`/`flatMap`
+5. **使用 Cause 方法**：优先使用`cause.result()`而非`Result.failure(cause)`
 
 ## 练习
 
-参见 `附录 B` 获取练习：
+参见`附录 B`获取练习：
+
 - 练习 1.3：类型提升
 - 练习 1.4：Cause 的创建
 - 练习 1.5：Pragmatica 操作
 
 ## 接下来
 
-`第 3 章` 将介绍 Pragmatica Lite Core - 提供这些类型的库。你将深入学习 API 并查看常见模式。
+`第 3 章`将介绍 Pragmatica Lite Core - 提供这些类型的库。你将深入学习 API 并查看常见模式。
 
 # 第 3 章：Pragmatica 基础
 
@@ -571,14 +576,14 @@ Promise.promise()           // 未解析
 
 ## 为什么自定义库？
 
-Java 提供了 `Optional` 和 `CompletableFuture`。为什么不使用它们？
+Java 提供了`Optional`和`CompletableFuture`。为什么不使用它们？
 
 ### Java 内置类型的问题
 
 | 类型 | 问题 |
 | --- | --- |
 | `Optional` | 没有错误通道 - 你知道某些东西丢失了但不知道为什么 |
-| `Optional` | 并非为验证设计 - `orElseThrow` 会丢失上下文 |
+| `Optional` | 并非为验证设计 - `orElseThrow`会丢失上下文 |
 | `CompletableFuture` | 使用异常作为控制流 - 检查异常无法组合 |
 | `CompletableFuture` | API 冗长 - `thenApply`, `thenCompose`, `exceptionally` |
 | `null` | 十亿美元错误 - 没有类型安全，运行时会发生 NPE |
@@ -622,7 +627,7 @@ Option<User> nobody = Option.none();
 Option<User> fromNullable = Option.option(possiblyNullValue);
 ```
 
-**使用场景：**值可能不存在，但缺失并不算作错误。
+**使用场景：** 值可能不存在，但缺失并不算作错误。
 
 **示例：** 缓存查询、可选配置、搜索结果。
 
@@ -639,13 +644,9 @@ Result<Email> invalid = INVALID_EMAIL.result();  // 推荐：流式风格
 Result<Email> invalid2 = Causes.cause("Invalid format").result();
 ```
 
-**使用场景：**可能会带强类型错误失败的同步操作。
+**使用场景：** 可能会带强类型错误失败的同步操作。
 
 **示例：** 验证、解析、业务规则检查。
-
-
-
-
 
 ### `Promise<T>` - 异步操作可能失败
 
@@ -678,9 +679,7 @@ Cause withContext = INVALID_EMAIL.apply("not-an-email");
 Cause fromException = Causes.fromThrowable(exception);
 ```
 
-**使用场景：** 在 `Result` 或 `Promise` 中表示失败原因。
-
-***
+**使用场景：** 在`Result`或`Promise`中表示失败原因。
 
 ## 设计哲学
 
@@ -703,10 +702,17 @@ Cause fromException = Causes.fromThrowable(exception);
 // 应当这样做：使用 Cause 方法
 Cause error = VALIDATION_FAILED;
 return error.result();   // Result<T>
+```
+
+
+
+```java
 return error.promise();  // Promise<T>
 
 // 避免：使用带有 Cause 的工厂方法
+
 return Result.failure(error);   // 可用但冗长
+
 return Promise.failure(error);  // 可用但冗长
 ```
 
@@ -714,12 +720,17 @@ return Promise.failure(error);  // 可用但冗长
 
 ```java
 // 向上提升是安全的
+
 Option<T> option = ...;
+
 Result<T> result = option.toResult(CAUSE_IF_EMPTY);
+
 Promise<T> promise = result.async();
 
 // 向下转换会丢失信息
+
 Result<T> result = ...;
+
 Option<T> option = result.option();  // 丢失错误信息！
 ```
 
@@ -733,12 +744,15 @@ Option<T> option = result.option();  // 丢失错误信息！
 Option<User> option = findUser(id);
 
 // Option -> Result（为空情况提供 cause）
+
 Result<User> result = option.toResult(USER_NOT_FOUND);
 
 // Option -> Promise（为空情况提供 cause）
+
 Promise<User> promise = option.async(USER_NOT_FOUND);
 
 // Option -> Java Optional（仅用于互操作性）
+
 Optional<User> javaOptional = option.toOptional();
 ```
 
@@ -748,9 +762,11 @@ Optional<User> javaOptional = option.toOptional();
 Result<User> result = validateUser(input);
 
 // Result -> Promise（提升到异步上下文）
+
 Promise<User> promise = result.async();
 
 // Result -> Option（丢失错误 - 请谨慎使用）
+
 Option<User> option = result.option();
 ```
 
@@ -760,9 +776,11 @@ Option<User> option = result.option();
 Promise<User> promise = fetchUser(id);
 
 // Promise -> Result（阻塞当前线程）
+
 Result<User> result = promise.await();
 
 // Promise -> 带超时的 Result
+
 Result<User> result = promise.await(TimeSpan.seconds(5));
 ```
 
@@ -774,8 +792,11 @@ Result<User> result = promise.await(TimeSpan.seconds(5));
 
 ```java
 Result<String> raw = Result.success("USER@COM");
+
 Result<String> normalized = raw
+
     .map(String::trim)
+
     .map(String::toLowerCase);
 ```
 
@@ -783,13 +804,19 @@ Result<String> normalized = raw
 
 ```java
 Result<Email> email = Email.email(raw);
+
 Result<Password> password = Password.password(raw);
+
 // 错误：嵌套的 Result
+
 Result<Result<ValidRequest>> nested = email.map(e ->
+
     password.map(p -> new ValidRequest(e, p)));
 
 // 正确：平坦链式
+
 Result<ValidRequest> flat = email.flatMap(e ->
+
     password.map(p -> new ValidRequest(e, p)));
 ```
 
@@ -797,8 +824,11 @@ Result<ValidRequest> flat = email.flatMap(e ->
 
 ```java
 Result<Integer> age = Result.success(25);
+
 Result<Integer> adult = age.filter(
+
     Causes.cause("Must be 18 or older"),
+
     a -> a >= 18);
 ```
 
@@ -806,10 +836,15 @@ Result<Integer> adult = age.filter(
 
 ```java
 Promise<Config> config = loadFromDatabase()
+
     .recover(cause -> switch (cause) {
+
         case DatabaseError -> loadFromFile();
+
         case FileError -> Promise.success(Config.defaults());
+
         default -> cause.promise();
+
     });
 ```
 
@@ -817,9 +852,11 @@ Promise<Config> config = loadFromDatabase()
 
 ```java
 // or：备用值
+
 String name = option.or("Anonymous");
 
 // orElse：包装后的备用方案
+
 Option<User> user = cache.find(id).orElse(database.find(id));
 ```
 
@@ -831,9 +868,13 @@ Option<User> user = cache.find(id).orElse(database.find(id));
 
 ```java
 Result<ValidRequest> request = Result.all(
+
     Email.email(raw.email()),
+
     Password.password(raw.password()),
+
     Name.name(raw.name())
+
 ).map(ValidRequest::new);
 ```
 
@@ -843,9 +884,13 @@ Result<ValidRequest> request = Result.all(
 
 ```java
 Promise<Dashboard> dashboard = Promise.all(
+
     fetchProfile(userId),
+
     fetchOrders(userId),
+
     fetchPreferences(userId)
+
 ).map(Dashboard::new);
 ```
 
@@ -855,13 +900,19 @@ Promise<Dashboard> dashboard = Promise.all(
 
 ```java
 // 校验邮箱列表
+
 Result<List<Email>> emails = Result.allOf(
+
     rawEmails.stream().map(Email::email).toList()
+
 );
 
 // 并行获取多个用户
+
 Promise<List<Result<User>>> users = Promise.allOf(
+
     userIds.stream().map(this::fetchUser).toList()
+
 );
 ```
 
@@ -869,9 +920,13 @@ Promise<List<Result<User>>> users = Promise.allOf(
 
 ```java
 Promise<Config> config = Promise.any(
+
     loadFromPrimarySource(),
+
     loadFromSecondarySource(),
+
     loadFromFallback()
+
 );
 ```
 
@@ -879,16 +934,21 @@ Promise<Config> config = Promise.any(
 
 ## 使用 lift 进行异常处理
 
-###  lift - 封装抛异常的代码
+### lift - 封装抛异常的代码
 
 ```java
 // 封装可能抛异常的 supplier
+
 Result<Integer> parsed = Result.lift(() -> Integer.parseInt(raw));
 
 // 自带自定义错误映射
+
 Result<Integer> parsed = Result.lift(
+
     ParseError::new,
+
     () -> Integer.parseInt(raw)
+
 );
 ```
 
@@ -896,18 +956,29 @@ Result<Integer> parsed = Result.lift(
 
 ```java
 // 单参数
+
 Result<Hash> hashed = Result.lift1(
+
     HashError::new,
+
     encoder::encode,
+
     password.value()
+
 );
 
 // 双参数
+
 Result<Token> token = Result.lift2(
+
     TokenError::new,
+
     tokenService::generate,
+
     userId,
+
     expiry
+
 );
 ```
 
@@ -915,8 +986,11 @@ Result<Token> token = Result.lift2(
 
 ```java
 Promise<User> user = Promise.lift(
+
     DatabaseError::new,
+
     () -> jdbcTemplate.queryForObject(sql, mapper, id)
+
 );
 ```
 
@@ -926,27 +1000,31 @@ Promise<User> user = Promise.lift(
 
 ### Verify.Is 谓词
 
-
-
-
-
 ```java
 import org.pragmatica.lang.utils.Verify;
 
 // 检查
+
 Verify.ensure(value, Verify.Is::notNull)
+
 Verify.ensure(value, Verify.Is::notBlank)
+
 Verify.ensure(value, Verify.Is::notEmpty)
 
 // 长度检查
+
 Verify.ensure(password, Verify.Is::lenBetween, 8, 128)
 
 // 模式匹配
+
 Verify.ensure(email, Verify.Is::matches, EMAIL_PATTERN)
 
 // 数值检查
+
 Verify.ensure(age, Verify.Is::positive)
+
 Verify.ensure(age, Verify.Is::between, 0, 150)
+
 Verify.ensure(quantity, Verify.Is::lessThanOrEqualTo, 100)
 ```
 
@@ -954,11 +1032,17 @@ Verify.ensure(quantity, Verify.Is::lessThanOrEqualTo, 100)
 
 ```java
 public static Result<Password> password(String raw) {
+
     return Verify.ensure(raw, Verify.Is::notNull)
+
         .filter(TOO_SHORT, s -> Verify.Is.lenBetween(s, 8, 128))
+
         .filter(NO_DIGIT, DIGIT_PATTERN.asMatchPredicate())
+
         .filter(NO_UPPER, UPPER_PATTERN.asMatchPredicate())
+
         .map(Password::new);
+
 }
 ```
 
@@ -968,16 +1052,23 @@ public static Result<Password> password(String raw) {
 import org.pragmatica.lang.parse.*;
 
 // 代替 Result.lift(() -> Integer.parseInt(raw))
+
 Result<Integer> number = Number.parseInt(raw);
+
 Result<Long> bigNumber = Number.parseLong(raw);
+
 Result<BigDecimal> decimal = Number.parseBigDecimal(raw);
 
 // 日期/时间解析
+
 Result<LocalDate> date = DateTime.parseLocalDate(raw);
+
 Result<Instant> instant = DateTime.parseInstant(raw);
 
 // 网络类型
+
 Result<UUID> uuid = Network.parseUUID(raw);
+
 Result<URI> uri = Network.parseURI(raw);
 ```
 
@@ -989,11 +1080,15 @@ Result<URI> uri = Network.parseURI(raw);
 
 ```java
 result
+
     .onSuccess(user -> log.info("Found user: {}", user.id()))
+
     .onFailure(cause -> log.warn("User not found: {}", cause.message()));
 
 promise
+
     .onSuccess(data -> cache.put(key, data))
+
     .onFailure(cause -> metrics.incrementFailure());
 ```
 
@@ -1001,11 +1096,17 @@ promise
 
 ```java
 promise.onResult(result -> {
+
     if (result.isSuccess()) {
+
         metrics.recordSuccess();
+
     } else {
+
         metrics.recordFailure();
+
     }
+
 });
 ```
 
@@ -1013,9 +1114,13 @@ promise.onResult(result -> {
 
 ```java
 // Result -> ResponseEntity
+
 ResponseEntity<?> response = result.fold(
+
     cause -> toErrorResponse(cause),    // 失败情况在前
+
     data -> ResponseEntity.ok(data)     // 成功情况在后
+
 );
 ```
 
@@ -1027,13 +1132,17 @@ ResponseEntity<?> response = result.fold(
 
 ```java
 // 使用 Unit，而非 Void
+
 Result<Unit> validated = checkBusinessRule(input);
+
 Promise<Unit> sent = sendNotification(user);
 
 // 创建一个无值的成功结果
+
 Result<Unit> ok = Result.unitResult();
 
 // 将任何结果转换为 Unit
+
 Promise<Unit> ignored = fetchData().mapToUnit();
 ```
 
@@ -1049,8 +1158,11 @@ Promise 具有精确一次的解析语义：
 Promise<User> promise = Promise.promise();
 
 // 只有第一次解析生效
+
 promise.succeed(user1);  // 解析该 promise
+
 promise.succeed(user2);  // 被忽略
+
 promise.fail(cause);     // 被忽略
 ```
 
@@ -1060,12 +1172,9 @@ promise.fail(cause);     // 被忽略
 
 ```java
 Promise<User> promise = Promise.promise();
+
 // ... (逻辑继续)
 ```
-
-
-
-
 
 # 为什么基于这些标准：
 
@@ -1080,22 +1189,33 @@ Promise<User> promise = Promise.promise();
 
 ```java
 // 别这样做：校验与构造分离
+
 public class Email {
+
     private final String value;
 
     public Email(String value) {
+
         this.value = value;  // 接受任何输入
+
     }
 
     public boolean isValid() {  // 调用者必须记住检查
+
         return value != null && value.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$");
+
     }
+
 }
 
 // 客户端代码必须手动校验：
+
 Email email = new Email(input);
+
 if (!email.isValid()) {
+
     throw new ValidationException("Invalid email");
+
 }
 ```
 
@@ -1111,22 +1231,39 @@ if (!email.isValid()) {
 
 ```java
 // 这样做：校验即构造
+
 public record Email(String value) {
+
     private static final Pattern EMAIL_PATTERN =
+
         Pattern.compile("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$");
+
     private static final Fn1<Cause, String> INVALID_EMAIL =
+
         Causes.forOneValue("Invalid email format: %s");
 
     public static Result<Email> email(String raw) {
+
         return Verify.ensure(raw, Verify.Is::notNull)
+
                      .map(String::trim)
+
                      .filter(INVALID_EMAIL, EMAIL_PATTERN.asMatchPredicate())
+```
+
+
+
+```java
                      .map(Email::new);
+
     }
+
 }
 
 // 客户端代码获取 Result：
+
 Result<Email> result = Email.email(input);
+
 // 如果是 Success，则 Email 是有效的。这是保证的。
 ```
 
@@ -1142,7 +1279,9 @@ Result<Email> result = Email.email(input);
 
 ```java
 Email.email(raw)
+
 Password.password(raw)
+
 AccountId.accountId(raw)
 ```
 
@@ -1152,10 +1291,13 @@ AccountId.accountId(raw)
 
 ```java
 // 这样做：使用 Valid 前缀
+
 record ValidRequest(Email email, Password password) { ... }
+
 record ValidUser(Email email, HashedPassword hashed) { ... }
 
 // 别这样做：使用 Validated 前缀（太冗长）
+
 record ValidatedRequest(...)
 ```
 
@@ -1167,16 +1309,25 @@ record ValidatedRequest(...)
 
 ```java
 public record ReferralCode(String value) {
+
     private static final Pattern PATTERN = Pattern.compile("^[A-Z0-9]{6}$");
+
     private static final Cause INVALID_FORMAT = Causes.cause("Invalid referral code format");
 
     public static Result<Option<ReferralCode>> referralCode(String raw) {
+
         return Verify.ensureOption(
+
             Option.option(raw).map(String::trim).filter(s -> !s.isEmpty()),
+
             PATTERN.asMatchPredicate(),
+
             INVALID_FORMAT
+
         ).map(opt -> opt.map(ReferralCode::new));
+
     }
+
 }
 ```
 
@@ -1198,11 +1349,17 @@ public record ReferralCode(String value) {
 
 ```java
 public static Result<Email> email(String raw) {
+
     return Verify.ensure(raw, Verify.Is::notNull)
+
                  .map(String::trim)           // 去除空格
+
                  .map(String::toLowerCase)    // 转小写以便比较
+
                  .filter(INVALID_EMAIL, EMAIL_PATTERN.asMatchPredicate())
+
                  .map(Email::new);
+
 }
 ```
 
@@ -1217,7 +1374,7 @@ public static Result<Email> email(String raw) {
 | 校验类型 | 位置 | 示例 |
 | :--- | :--- | :--- |
 | **单字段不变性** | 值对象工厂 | 邮箱格式、密码强度、ID 格式 |
-| **跨字段不变性** | ValidRequest 工厂 | 密码不包含邮箱后缀、日期范围 |
+| **跨字段不变性** | `ValidRequest` 工厂 | 密码不包含邮箱后缀、日期范围 |
 | **外部状态不变性** | 用例（Use case）步骤 | 邮箱唯一性（数据库）、信用检查 |
 
 **理由：**
@@ -1227,54 +1384,75 @@ public static Result<Email> email(String raw) {
 
 ```java
 // 值对象：单字段不变性
+
 public record Email(String value) {
+
     public static Result<Email> email(String raw) { /* 仅格式检查 */ }
+
 }
 
 // ValidRequest：跨字段不变性
+
 record ValidRegistration(Email email, Password password) {
+
     public static Result<ValidRegistration> validRegistration(Email email, Password pwd) {
+
         // 检查密码是否包含邮箱本地部分
+
     }
+
 }
 
 // 用例步骤：外部状态不变性
+
 interface CheckEmailUnique {
+
     Promise<Email> apply(Email email);  // 数据库查询
+
 }
 ```
 
 ***
 
-## 使用 Result.all() 进行跨字段校验
+## 使用 `Result.all()` 进行跨字段校验
 
 使用 `Result.all()` 校验独立的字段，然后添加跨字段规则：
 
 **示例：密码不能包含邮箱本地部分**
 
-
-
-
-
 ```java
 record ValidRegistration(Email email, Password password) {
+
     private static final Cause PASSWORD_CONTAINS_EMAIL =
+
         Causes.cause("Password cannot contain email local part");
 
     static Result<ValidRegistration> validRegistration(String emailRaw,
+
                                                        String passwordRaw) {
+
         return Result.all(Email.email(emailRaw),
+
                          Password.password(passwordRaw))
+
                      .flatMap(ValidRegistration::checkPasswordNotContainsEmail);
+
     }
 
     private static Result<ValidRegistration> checkPasswordNotContainsEmail(
+
             Email email, Password pwd) {
+
         String localPart = email.value().split("@")[0];
+
         return pwd.value().contains(localPart)
+
             ? PASSWORD_CONTAINS_EMAIL.result()
+
             : Result.success(new ValidRegistration(email, pwd));
+
     }
+
 }
 ```
 
@@ -1292,19 +1470,29 @@ record ValidRegistration(Email email, Password password) {
 
 ```java
 record DateRange(LocalDate start, LocalDate end) {
+
     private static final Fn1<Cause, LocalDate> END_BEFORE_START =
+
         date -> Causes.cause("End date must be after start date: " + date);
 
     public static Result<DateRange> dateRange(LocalDate start, LocalDate end) {
+
         return Verify.ensure(start, Verify.Is::notNull)
+
                      .flatMap(_ -> Verify.ensure(end, Verify.Is::notNull))
+
                      .flatMap(_ -> Verify.ensure(end, isAfter(start), END_BEFORE_START))
+
                      .map(_ -> new DateRange(start, end));
+
     }
 
     private static Predicate<LocalDate> isAfter(LocalDate start) {
+
         return end -> end.isAfter(start);
+
     }
+
 }
 ```
 
@@ -1312,22 +1500,35 @@ record DateRange(LocalDate start, LocalDate end) {
 
 ```java
 record ValidOrder(OrderId id, Money total, List<LineItem> items) {
+
     private static final Fn1<Cause, Money> TOTAL_MISMATCH =
+
         Causes.forOneValue("Order total does not match line items. Expected: %s");
 
     public static Result<ValidOrder> validOrder(OrderId id,
+
                                                 Money total,
+
                                                 List<LineItem> items) {
+
         return total.equals(calculateTotal(items))
+
             ? Result.success(new ValidOrder(id, total, items))
+
             : TOTAL_MISMATCH.apply(calculateTotal(items)).result();
+
     }
 
     private static Money calculateTotal(List<LineItem> items) {
+
         return items.stream()
+
                     .map(LineItem::subtotal)
+
                     .reduce(Money.ZERO, Money::add);
+
     }
+
 }
 ```
 
@@ -1335,14 +1536,23 @@ record ValidOrder(OrderId id, Money total, List<LineItem> items) {
 
 ```java
 record ValidRegistration(Email email, Password password, Age age) {
+
     public static Result<ValidRegistration> validate(String emailRaw,
+
                                                      String passwordRaw,
+
                                                      String ageRaw) {
+
         return Result.all(Email.email(emailRaw),
+
                          Password.password(passwordRaw),
+
                          Age.age(ageRaw))
+
                      .map(ValidRegistration::new);
+
     }
+
 }
 ```
 
@@ -1356,22 +1566,36 @@ record ValidRegistration(Email email, Password password, Age age) {
 
 ```java
 // 之前：带有 @Valid 的 Spring 控制器
+
 @PostMapping("/register")
+
 public ResponseEntity<?> register(@Valid RegistrationRequest dto) {
+
     var request = new ValidRegistration.Request(dto.email(), dto.password());
+
     return registerUser.execute(request)
+
                        .fold(errorResponse, successResponse);
+
 }
 
 // 之后：完全迁移
+
 @PostMapping("/register")
+
 public ResponseEntity<?> register(@RequestBody RegistrationRequest raw) {
+
     return registerUser.execute(raw)
+
                        .fold(errorResponse, successResponse);
+
 }
 ```
 
-**3. 逐渐将验证从服务移动到值对象：**
+
+
+### 3. 逐渐将验证从服务移动到值对象：
+
 - 找到一个带有手动验证的服务方法
 - 将该验证提取到值对象中
 - 更新调用者使用该值对象
@@ -1390,17 +1614,15 @@ public ResponseEntity<?> register(@RequestBody RegistrationRequest raw) {
 
 ## 练习题
 
-参见 附录 B 关于以下内容的练习：
-- 练习 2.1：PhoneNumber 值对象
-- 练习 2.2：DateRange 聚合验证
+参见附录 B 关于以下内容的练习：
+
+- 练习 2.1：`PhoneNumber` 值对象
+- 练习 2.2：`DateRange` 聚合验证
 - 练习 2.3：错误累积 vs 短路机制
 
 ## 后续
 
-第 5 章 涵盖了错误处理 - 如何定义类型错误、组合它们以及如何在不使用异常的情况下干净地处理失败。
-
-
-
+第 5 章涵盖了错误处理 - 如何定义类型错误、组合它们以及如何在不使用异常的情况下干净地处理失败。
 
 业务失败并非异常——它们是业务规则的预期结果。电子邮件无效不是异常；而是输入不良的正常情况。账户被锁定不是异常；它是一种业务状态。
 
@@ -1442,7 +1664,6 @@ public User loginUser(String email, String password) throws
     InvalidPasswordException,
     AccountLockedException,
     CredentialMismatchException {
-
     if (!isValidEmail(email)) {
         throw new InvalidEmailException(email);
     }
@@ -1451,6 +1672,7 @@ public User loginUser(String email, String password) throws
 ```
 
 **问题：**
+
 - 检类型异常污染了签名
 - 非检类型异常是不可见的
 - 异常层次结构创建了耦合
@@ -1495,12 +1717,12 @@ public sealed interface LoginError extends Cause {
             return "Account is locked: " + userId;
         }
     }
-
     enum InvalidCredentials implements LoginError {
         // ...
     }
 }
 ```
+
 （注：原文在代码块中有一些碎片化的行，我保留了密封接口定义的逻辑结构）。
 
 ***
@@ -1515,6 +1737,7 @@ Result.all(Email.email("not-email"),
            Password.password("weak"))
       .flatMap(this::processLogin);
 ```
+
 返回：`CompositeCause(["Invalid email format: not-email", "Password must be at least 8 characters"])`。用户一次性看到所有错误，而不是反复修复重试。
 
 ***
@@ -1567,10 +1790,6 @@ public Promise<Option<User>> findById(UserId id) {
 ## 适配器异常：边界
 
 外部代码抛出异常。**适配器**捕获并转换它们：
-
-
-
-
 
 ```java
 class JpaUserRepository implements UserRepository {
@@ -1690,7 +1909,7 @@ void execute_succeeds() {
 
 1. **无业务异常** - 错误是值，而不是被抛出的异常
 2. **密封接口 (Sealed interfaces)** - 定义穷尽的错误类型
-3. **Result.all()** - 累积所有失败，而不仅仅是第一个
+3. **`Result.all()`** - 累积所有失败，而不仅仅是第一个
 4. **适配器进行转换** - 在边界处将异常转换为原因 (Cause)
 5. **永远不要嵌套** - `Promise<Result<T>>`
 6. **测试** - 使用函数式断言
@@ -1707,15 +1926,11 @@ void execute_succeeds() {
 
 你将学习：
 
-* 什么时候可以接受 null，以及什么时候不可以
-* 使用回退值进行错误恢复
-* 适配器边界处的错误处理
+- 什么时候可以接受 null，以及什么时候不可以
+- 使用回退值进行错误恢复
+- 适配器边界处的错误处理
 
 如果操作可能失败（数据库错误），请使用 `Result<Option<T>>`。
-
-
-
-
 
 ```java
 // Adapter layer - JOOQ insert with optional field
@@ -1740,15 +1955,19 @@ public Promise<Unit> saveUser(User user) {
 PreparedStatement stmt = connection.prepareStatement(
     "INSERT INTO users (id, email, referral_code) VALUES (?, ?, ?)");
 stmt.setString(1, user.id().value());
-stmt.setString(2, user.email().value());
-stmt.setString(3, user.refCode().map(ReferralCode::value).orElse(null));  // Option -> null
 ```
 
-**模式**：仅在将 `Option<T>` 映射到数据库空列时使用 `.orElse(null)`。
+
+
+`stmt.setString(2, user.email().value());`
+
+`stmt.setString(3, user.refCode().map(ReferralCode::value).orElse(null));  // Option -> null`
+
+**模式**：仅在将`Option<T>`映射到数据库空列时使用`.orElse(null)`。
 
 ### 3. 验证测试
 
-在测试输入中使用 `null` 来验证校验是否能正确拒绝 `null`：
+在测试输入中使用`null`来验证校验是否能正确拒绝`null`：
 
 ```java
 @Test
@@ -1765,7 +1984,7 @@ void validRequest_fails_whenFieldNull() {
 }
 ```
 
-**模式**：在测试输入中使用 `null` 来验证校验行为。
+**模式**：在测试输入中使用`null`来验证校验行为。
 
 ***
 
@@ -1773,7 +1992,7 @@ void validRequest_fails_whenFieldNull() {
 
 ### 永远不要在 JBCT 组件之间传递 Null
 
-业务逻辑组件使用领域类型进行通信，绝不使用 null：
+业务逻辑组件使用领域类型进行通信，绝不使用`null`：
 
 ```java
 // 不要：在业务逻辑中进行防御性 null 检查
@@ -1798,11 +2017,11 @@ public Result<Order> processOrder(User user, Option<Cart> cart) {
 }
 ```
 
-**规则**：如果一个值可能不存在，请使用 `Option<T>` 参数，绝不要使用 null。
+**规则**：如果一个值可能不存在，请使用`Option<T>`参数，绝不要使用`null`。
 
 ### 永远不要用 Null 区分“未知”与“缺失”
 
-Null 混了了含义：“值未设置”和“值未知/错误”。使用类型来区分：
+`Null`混了了含义：“值未设置”和“值未知/错误”。使用类型来区分：
 
 ```java
 // 不要：Null 意味着“未知”
@@ -1852,22 +2071,20 @@ public Result<User> enrichUser(User user) {
 | 上下文 | Null 使用 | 正确方法 |
 | --- | --- | --- |
 | JBCT 的返回值 | 绝不 | Null 仅存在于边界处 |
-| JBCT 组件之间的参数 | 绝不 | 使用 `Option<T>` |
-| 写入空列 | 允许 | 在边界处 `.orElse(null)` |
-| 测试输入 | 允许 | 测试 null |
-| “未知”或“缺失”语义 | 绝不 | 使用 `Option<T>` 或 `Result<T>` |
+| JBCT 组件之间的参数 | 绝不 | 使用`Option<T>` |
+| 写入空列 | 允许 | 在边界处`.orElse(null)` |
+| 测试输入 | 允许 | 测试`null` |
+| “未知”或“缺失”语义 | 绝不 | 使用`Option<T>`或`Result<T>` |
 
 ***
 
-## 错误恢复
+## 错误恢复模式
 
- 模式
-
-到目前为止，我们关注的是错误的**处理**——即如何通过 `Result` 和 `Promise` 表示并传播失败。但真实的系统需要**恢复**——即提供回备值、重试操作或在发生错误时优雅地降级。
+到目前为止，我们关注的是错误的**处理**——即如何通过`Result`和`Promise`表示并传播失败。但真实的系统需要**恢复**——即提供回备值、重试操作或在发生错误时优雅地降级。
 
 ### 提供回备值
 
-当操作失败时，你可以使用 `.or()` 替换默认值：
+当操作失败时，你可以使用`.or()`替换默认值：
 
 ```java
 // 提供字面量回备值
@@ -1884,7 +2101,7 @@ public Config getConfig(String key) {
 }
 ```
 
-`.or()` 方法适用于 `Option`、`Result` 和 `Promise`：
+`.or()`方法适用于`Option`、`Result`和`Promise`：
 
 ```java
 // Option<T> - 如果为空时提供值
@@ -1902,10 +2119,7 @@ promise.or(() -> computeDefault())
 
 ### 回退到备用操作
 
-当你想要尝试一个返回相同单子类型的备用操作时，使用 `.orElse()`：
-
-
-
+当你想要尝试一个返回相同单子类型的备用操作时，使用`.orElse()`：
 
 ```java
 // 尝试缓存，然后是数据库，最后是内存
@@ -1923,11 +2137,11 @@ public Result<Config> loadConfig(String key) {
 }
 ```
 
-**区别**：`.or(value)` - 替换普通值 - `.orElse(M<T>)` - 替换为另一个 `Result`/`Promise`/`Option`
+**区别**：`.or(value)`- 替换普通值 -`.orElse(M<T>)`- 替换为另一个`Result`/`Promise`/`Option`
 
 ### 从特定失败中恢复
 
-当你想根据错误将失败转换为成功时，使用 `.recover()`：
+当你想根据错误将失败转换为成功时，使用`.recover()`：
 
 ```java
 public Result<User> findUserOrGuest(UserId id) {
@@ -2006,75 +2220,77 @@ public interface LoadConfig {
 | 默认值 | `.or(value)` | 有固定回退可用 |
 | 懒性默认 | `.or(() -> compute())` | 回退创建开销较大 |
 | 备选操作 | `.or(() -> compute())` | 回退创建开销较大 |
-| `.orElse(M<T>)` | 替换为另一个 `Result`/`Promise`/`Option` | 从特定失败中恢复 |
-
-
-
+| `.orElse(M<T>)` | 替换为另一个`Result`/`Promise`/`Option` | 从特定失败中恢复 |
 
 ### 调试不直观
 
-``````
-[](#cb101-1)// 堆栈跟踪指向 generateReport() 第 45 行
-[](#cb101-2)// 但是哪一步失败了？验证？Fork-Join fetch？计算？格式化？
-[](#cb101-3)// 如果不步入整个函数就无法得知
+```java
+// 堆栈跟踪指向 generateReport() 第 45 行
+// 但是哪一步失败了？验证？Fork-Join fetch？计算？格式化？
+// 如果不步入整个函数就无法得知
 ```
 
 ### 无法复用
 
-``````
-[](#cb102-1)// 另一个用例需要相同的 Fork-Join fetch 逻辑
-[](#cb102-2)// 但它深埋在 generateReport() 内部
-[](#cb102-3)// 无法复用 - 必须复制粘贴或重构
+```java
+// 另一个用例需要相同的 Fork-Join fetch 逻辑
+// 但它深埋在 generateReport() 内部
+// 无法复用 - 必须复制粘贴或重构
 ```
 
 ### 每个函数使用单一模式
 
 - 每个函数都是可独立测试的
 - 模式可以在不同用例间复用
-- 失败位置是局部的（堆栈跟踪显示“fetchReportData 失败”）
+- 失败位置是局部的（堆栈跟踪显示“`fetchReportData`失败”）
 - 结构可预测且易于扫描
 
 ### 违规示例
 
-```
-[](#cb103-1)// 不要：混合使用 Sequencer（顺序执行器）和 Fork-Join
-[](#cb103-2)public Result<Report> generateReport(ReportRequest request) {
-[](#cb103-3)    return ValidRequest.validRequest(request)
-[](#cb103-4)                       .flatMap(valid -> {
-[](#cb103-5)                           // Sequencer 从这里开始
-[](#cb103-6)                           var userData = fetchUserData(valid.userId());
-[](#cb103-7)                           var salesData = fetchSalesData(valid.dateRange());
-[](#cb103-8)
-[](#cb103-9)                           // 等，我们现在在做 Fork-Join 了？
-[](#cb103-10)                           return Result.all(userData, salesData)
-[](#cb103-11)                                        .flatMap((user, sales) -> computeMetrics(user, sales))
-[](#cb103-12)                                        .flatMap(this::formatReport);  // 回到 Sequencer
-[](#cb103-13)                       });
-[](#cb103-14)}
+```java
+// 不要：混合使用 Sequencer（顺序执行器）和 Fork-Join
+public Result<Report> generateReport(ReportRequest request) {
+    return ValidRequest.validRequest(request)
+                       .flatMap(valid -> {
+                           // Sequencer 从这里开始
+                           var userData = fetchUserData(valid.userId());
+                           var salesData = fetchSalesData(valid.dateRange());
+
+                           // 等，我们现在在做 Fork-Join 了？
+                           return Result.all(userData, salesData)
+                                        .flatMap((user, sales) -> computeMetrics(user, sales))
+                                        .flatMap(this::formatReport);  // 回到 Sequencer
+                       });
+}
 ```
 
-该函数起初是一个 Sequencer（验证 -> 获取 -> 计算 -> 格式化），但 `fetchUserData` 和 `fetchSalesData` 是独立的，因此我们突然在中间执行了 Fork-Join。抽象层级混合。难以测试。一眼无法看出该函数的作用。
+该函数起初是一个 Sequencer（验证 -> 获取 -> 计算 -> 格式化），但`fetchUserData`和`fetchSalesData`是独立的，因此我们突然在中间执行了 Fork-Join。抽象层级混合。难以测试。一眼无法看出该函数的作用。
 
 ### 修正后
 
-``````
-[](#cb104-1)// 应该：每个函数一种模式
-[](#cb104-2)public Result<Report> generateReport(ReportRequest request) {
-[](#cb104-3)    return ValidRequest.validRequest(request)
-[](#cb104-4)                       .flatMap(this::fetchReportData)
-[](#cb104-5)                       .flatMap(this::computeMetrics)
-[](#cb104-6)                       .flatMap(this::formatReport);
-[](#cb104-7)}
-[](#cb104-8)
-[](#cb104-9)private Result<ReportData> fetchReportData(ValidRequest request) {
-[](#cb104-10)    // 这个函数是一个 Fork-Join
-[](#cb104-11)    return Result.all(fetchUserData(request.userId()),
-[](#cb104-12)                      fetchSalesData(request.dateRange()))
-[](#cb104-13)                 .map(ReportData::new);
-[](#cb104-14)}
+```java
+// 应该：每个函数一种模式
+public Result<Report> generateReport(ReportRequest request) {
 ```
 
-现在 `generateReport` 是一个纯的 Sequencer（验证 -> 获取 -> 计算 -> 格式化），而 `fetchReportData` 是纯的 Fork-Join。每个函数都有明确的任务。
+
+
+```
+return ValidRequest.validRequest(request)
+                   .flatMap(this::fetchReportData)
+                   .flatMap(this::computeMetrics)
+                   .flatMap(this::formatReport);
+}
+
+private Result<ReportData> fetchReportData(ValidRequest request) {
+    // 这个函数是一个 Fork-Join
+    return Result.all(fetchUserData(request.userId()),
+                      fetchSalesData(request.dateRange()))
+                 .map(ReportData::new);
+}
+```
+
+现在`generateReport`是一个纯的 Sequencer（验证 -> 获取 -> 计算 -> 格式化），而`fetchReportData`是纯的 Fork-Join。每个函数都有明确的任务。
 
 ### 机械化重构
 
@@ -2082,131 +2298,134 @@ public interface LoadConfig {
 
 **经验法则**：每个函数一种模式。如果你看到两种模式，请提取其中一个。
 
-* *
+* * *
 
 ## 单一抽象层级
 
-**规则**：Lambda 内部不要有复杂逻辑。传递给 `map`、`flatMap` 和类似组合器的 Lambda 可能仅包含：
-- 方法引用（例如 `Email::new`、`this::processUser`）
-- 带有参数转发的单方法调用（例如 `param -> someMethod(outerParam, param)`）
+**规则**：Lambda 内部不要有复杂逻辑。传递给`map`、`flatMap`和类似组合器的 Lambda 可能仅包含：
+
+- 方法引用（例如`Email::new`、`this::processUser`）
+- 带有参数转发的单方法调用（例如`param -> someMethod(outerParam, param)`）
 
 **为什么？** Lambda 是组合点，而不是实现位置。当你将逻辑埋在 Lambda 内部时，隐藏了抽象层级，并使代码难以阅读、测试和复用。将复杂逻辑提取到命名函数中——名称记录了意图，函数可以孤立地测试，且组合链保持保持扁平且易读。
 
 **基于标准的理由：**
-- **心理负担**：扁平的组合链是线性扫描的——无需进入嵌套逻辑 (+2) 
-- **业务/技术比例**：命名函数记录了意图；匿名 Lambda 隐藏了意图 (+2) 
-- **复杂度**：每个函数都可孤立测试；埋入的 Lambda 逻辑需要通过容器进行测试 (+2) 
+
+- **心理负担**：扁平的组合链是线性扫描的——无需进入嵌套逻辑 (+2)
+- **业务/技术比例**：命名函数记录了意图；匿名 Lambda 隐藏了意图 (+2)
+- **复杂度**：每个函数都可孤立测试；埋入的 Lambda 逻辑需要通过容器进行测试 (+2)
 
 ### 反模式
 
-``````
-[](#cb105-1)// 不要：Lambda 内部编写复杂逻辑
-[](#cb105-2)return fetchUser(userId)
-[](#cb105-3)    .flatMap(user -> {
-[](#cb105-4)        if (user.isActive() && user.hasPermission("admin")) {
-[](#cb105-5)            return loadAdminDashboard(user)
-[](#cb105-6)                .map(dashboard -> {
-[](#cb105-7)                    var summary = new Summary(
-[](#cb105-8)                        dashboard.metrics(),
-[](#cb105-9)                        dashboard.alerts().stream()
-[](#cb105-10)                            .filter(Alert::isUrgent)
-[](#cb105-11)                            .toList()
-[](#cb105-12)                    );
-[](#cb105-13)                    return new Response(user, summary);
-[](#cb105-14)                });
-[](#cb105-15)        } else {
-[](#cb105-16)            return AccessError.InsufficientPermissions.INSTANCE.promise();
-[](#cb105-17)        }
-[](#cb105-18)    });
+```
+// 不要：Lambda 内部编写复杂逻辑
+return fetchUser(userId)
+    .flatMap(user -> {
+        if (user.isActive() && user.hasPermission("admin")) {
+            return loadAdminDashboard(user)
+                .map(dashboard -> {
+                    var summary = new Summary(
+                        dashboard.metrics(),
+                        dashboard.alerts().stream()
+                            .filter(Alert::isUrgent)
+                            .toList()
+                    );
+                    return new Response(user, summary);
+                });
+        } else {
+            return AccessError.InsufficientPermissions.INSTANCE.promise();
+        }
+    });
 ```
 
-这个 Lambda 包含了：条件逻辑、嵌套 map、流处理、对象构造。抽象层级混合。难以测试。难以阅读。
+这个 Lambda 包含了：条件逻辑、嵌套`map`、流处理、对象构造。抽象层级混合。难以测试。难以阅读。
 
 ### 正确方法
 
-``````
-[](#cb106-1)//// 应该：提取到命名函数
-[](#cb106-2)return fetchUser(userId)
-[](#cb106-3)    .flatMap(this::checkAccess)
-[](#cb106-4)    .flatMap(this::loadDashboard)
-[](#cb106-5)    .map(this::formatResponse);
-[](#cb106-6)
-[](#cb106-7)private Promise<User> checkAccess(User user) {
-[](#cb106-8)    return user.isActive() && user.hasPermission("admin")
-[](#cb106-9)        ? Promise.just(user)
-[](#cb106-10)        : AccessError.InsufficientPermissions.INSTANCE.promise();
-[](#cb106-11)}
-[](#cb106-12)private Promise<Dashboard> loadDashboard(User user) {
-[](#cb106-13)    return loadAdminDashboard(user)
-[](#cb106-14)        .map(dashboard -> {
-[](#cb106-15)                    var summary = new Summary(
-[](#cb106-16)                        dashboard.metrics(),
-[](#cb106-17)                        dashboard.alerts().stream()
-[](#cb106-18)                            .filter(Alert::isUrgent)
-[](#cb106-19)                            .toList()
-[](#cb106-20)                    );
-[](#cb106-21)                    return new Response(user, summary);
-[](#cb106-22)                });
 ```
+//// 应该：提取到命名函数
+return fetchUser(userId)
+    .flatMap(this::checkAccess)
+    .flatMap(this::loadDashboard)
+    .map(this::formatResponse);
+
+private Promise<User> checkAccess(User user) {
+    return user.isActive() && user.hasPermission("admin")
+        ? Promise.just(user)
+        : AccessError.InsufficientPermissions.INSTANCE.promise();
+}
+
+private Promise<Dashboard> loadDashboard(User user) {
+    return loadAdminDashboard(user)
+        .map(dashboard -> {
+                    var summary = new Summary(
+                        dashboard.metrics(),
+                        dashboard.alerts().stream()
+                            .filter(Alert::isUrgent)
+                            .toList()
+                    );
+                    return new Response(user, summary);
+                });
+```
+
 *(注：由于您提供的原文中 Correct Approach 部分存在重复和混乱，此处已根据逻辑推全了最完整的重构翻译。)*
 
-
-
-
-
 # Zone 1 (用例级) - 高层业务目标：
-- `RegisterUser.execute()`, `ProcessOrder.execute()`, `LoadDashboard.execute()`
+
+- `RegisterUser.execute()`，`ProcessOrder.execute()`，`LoadDashboard.execute()`
 - 每个用例对应一个 Zone 1 函数 - 入口
 
 # Zone 2 (编排级) - 协调拆解目标的步骤：
-- `Sequencer/Fork-Join` 模式中的步骤接口
-- 动词：`validate`, `process`, `handle`, `transform`, `apply`, `check`, `load`, `save`, `manage`, `configure`, `initialize`
-- 示例：`ValidateInput.apply()`, `ProcessPayment.apply()`, `HandleNotification.apply()`
+
+- `Sequencer/Fork-Join`模式中的步骤接口
+- 动词：`validate`，`process`，`handle`，`transform`，`apply`，`check`，`load`，`save`，`manage`，`configure`，`initialize`
+- 示例：`ValidateInput.apply()`，`ProcessPayment.apply()`，`HandleNotification.apply()`
 
 # Zone 3 (实现级) - 具体技术操作：
+
 - 业务叶和适配器叶节点
-- 动词：`get`, `set`, `fetch`, `parse`, `calculate`, `convert`, `hash`, `format`, `encode`, `decode`, `extract`, `split`, `join`, `log`, `send`, `receive`, `read`, `write`, `add`, `remove`
-- 示例：`hashPassword()`, `parseJson()`, `fetchFromDatabase()`, `calculateTax()`
+- 动词：`get`，`set`，`fetch`，`parse`，`calculate`，`convert`，`hash`，`format`，`encode`，`decode`，`extract`，`split`，`join`，`log`，`send`，`receive`，`read`，`write`，`add`，`remove`
+- 示例：`hashPassword()`，`parseJson()`，`fetchFromDatabase()`，`calculateTax()`
 
 **核心洞察：** 每个区域的函数应只调用同一区域或下一层级的函数。Zone 2 函数调用其他 Zone 2 步骤或 Zone 3 叶节点。Zone 3 叶节点执行原子操作。这创建了自然的层次结构。
 
 ## 示例 - 维护区域一致性：
 
 ```
-[](#cb110-1)// 好 - 所有步骤都位于 Zone 2（编排级）
-[](#cb110-2)public Promise<Response> execute(Request request) {
-[](#cb110-3)    return ValidRequest.validRequest(request)              // Zone 2: validate
-[](#cb110-4)                       .async()
-[](#cb110-5)                       .flatMap(this::processCredentials)  // Zone 2: process
-[](#cb110-6)                       .flatMap(this::saveUser)            // Zone 2: save
-[](#cb110-7)                       .flatMap(this::sendConfirmation);   // Zone 2: send
-[](#cb110-8)}
-[](#cb110-9)
-[](#cb110-10)//  - 在同一链中混合了 Zone 2 和 Zone 3
-[](#cb110-11)public Promise<Response> execute(Request request) {
-[](#cb110-12)    return ValidRequest.validRequest(request)              // Zone 2
-[](#cb110-13)                       .async()
-[](#cb110-14)                       .flatMap(this::hashPassword)        // Zone 3 - 太具体了！
-[](#cb110-15)                       .flatMap(this::saveUser)            // Zone 2
-[](#cb110-16)                       .flatMap(this::fetchConfirmToken);  // Zone 3 - 太具体了！
-[](#cb110-17)}
+// 好 - 所有步骤都位于 Zone 2（编排级）
+public Promise<Response> execute(Request request) {
+    return ValidRequest.validRequest(request)              // Zone 2: validate
+                       .async()
+                       .flatMap(this::processCredentials)  // Zone 2: process
+                       .flatMap(this::saveUser)            // Zone 2: save
+                       .flatMap(this::sendConfirmation);   // Zone 2: send
+}
+
+//  - 在同一链中混合了 Zone 2 和 Zone 3
+public Promise<Response> execute(Request request) {
+    return ValidRequest.validRequest(request)              // Zone 2
+                       .async()
+                       .flatMap(this::hashPassword)        // Zone 3 - 太具体了！
+                       .flatMap(this::saveUser)            // Zone 2
+                       .flatMap(this::fetchConfirmToken);  // Zone 3 - 太具体了！
+}
 ```
 
-在坏示例中，`hashPassword` 和 `fetchConfirmToken` 是 Zone 3 操作（具体的细节细节）。它们应该被封装在 Zone 2 步骤中，如 `processCredentials` 和 `sendConfirmation`。
+在坏示例中，`hashPassword`和`fetchConfirmToken`是 Zone 3 操作（具体的细节细节）。它们应该被封装在 Zone 2 步骤中，如`processCredentials`和`sendConfirmation`。
 
 ### 阶梯规则测试 (The Stepdown Rule Test)
 
 验证抽象层级的一种简单方法：在每个函数前加上“为了”（to），大声读出你的代码。它听起来应该像一个自然的叙述：
 
 ```
-[](#cb111-1)// 大声读这个：
-[](#cb111-2)// "为了执行，我们验证请求，
-[](#cb111-3)//  然后我们处理支付，
-[](#cb111-4)//  然后我们发送确认。”
-[](#cb111-5)return ValidRequest.validRequest(request)
-[](#cb111-6)                   .async()
-[](#cb111-7)                   .flatMap(this::processPayment)
-[](#cb111-8)                   .flatMap(this::sendConfirmation);
+// 大声读这个：
+// "为了执行，我们验证请求，
+//  然后我们处理支付，
+//  然后我们发送确认。”
+return ValidRequest.validRequest(request)
+                   .async()
+                   .flatMap(this::processPayment)
+                   .flatMap(this::sendConfirmation);
 ```
 
 如果加上“为了”让听起来很别扭或过于详细（“为了哈希密码，然后保存到数据库，然后从缓存获取”），说明你混合了抽象层级。
@@ -2218,6 +2437,7 @@ public interface LoadConfig {
 **定义：** `Leaf`（没有子步骤的原子操作）是处理的最小单元 - 一个只做一件事且没有内部步骤的函数。它可能是业务叶节点（纯计算），可能是适配器叶节点（I/O 或副作用）。
 
 **原理（基于标准）：**
+
 - **认知开销**：原子操作没有需要跟踪的内部步骤 - 立即理解 (+2)
 - **业务/技术比例**：业务叶节点是纯领域逻辑；适配器叶节点隔离了技术关注点 (+2)
 - **复杂度**：每个叶节点单一职责 - 没有隐藏的交互 (+2)
@@ -2228,58 +2448,65 @@ public interface LoadConfig {
 业务叶节点是转换数据或强制业务规则的纯函数：
 
 ```
-[](#cb112-1)//简单的计算叶节点
-[](#cb112-2)public static Price calculateDiscount(Price original, Percentage rate) {
-[](#cb112-3)    return original.multiply(rate);
-[](#cb112-4)}
-[](#cb112-5)
+//简单的计算叶节点
+public static Price calculateDiscount(Price original, Percentage rate) {
+    return original.multiply(rate);
+}
+
 // 领域规则强制叶节点
-[](#cb112-6)public static Result<Unit> checkInventory(Product product, Quantity requested) {
-[](#cb112-7)    return product.availableQuantity().isGreaterThanOrEqual(requested)
-[](#cb112-8)        ? Result.unitResult()
-[](#cb112-9)        : InsufficientInventory.cause(product.id(), requested);
-[](#cb112-10)}
-[](#cb112-11)
+public static Result<Unit> checkInventory(Product product, Quantity requested) {
+    return product.availableQuantity().isGreaterThanOrEqual(requested)
+        ? Result.unitResult()
+        : InsufficientInventory.cause(product.id(), requested);
+}
+
 // 数据转换叶节点
-[](#cb112-12)public static OrderSummary toSummary(Order order) {
-[](#cb112-13)    return new OrderSummary(order.id(),
-[](#cb112-14)                            order.totalAmount(),
-[](#cb112-15)                            order.items().size());
-[](#cb112-16)}
+public static OrderSummary toSummary(Order order) {
+    return new OrderSummary(order.id(),
+                            order.totalAmount(),
+                            order.items().size());
+}
 ```
 
 如果没有 I/O 也没有副作用，它就是业务叶节点。保持每个叶节点专注于一个转换或一个业务规则。
 
 ### 适配器叶节点 (Adapter Leaves)
 
-适配器叶节点与外部系统集成：数据库、HTTP 客户端、消息队列、文件系统。它们将外部错误映射到领域 `Causes`。
+适配器叶节点与外部系统集成：数据库、HTTP 客户端、消息队列、文件系统。它们将外部错误映射到领域`Causes`。
 
 ```
-[](#cb113-1)public interface UserRepository {
-[](#cb113-2)    Promise<Option<User>> findByEmail(Email email);
-[](#cb113-3)}
+public interface UserRepository {
+    Promise<Option<User>> findByEmail(Email email);
+}
+
 // 适配器叶节点
-[](#cb113-4)class PostgresUserRepository implements UserRepository {
-[](#cb113-5)    private final DataSource dataSource;
-[](#cb113-6)    public Promise<Option<User>> findByEmail(Email) {
-[](#cb113-7)        return Promise.lift(RepositoryError::new,
-[](#cb113-8)                            () -> {
-[](#cb113-9)                                try (var conn = dataSource.getConnection();
-[](#cb113-10)                                     var stmt = conn.prepareStatement(
-[](#cb113-11)                                         "SELECT * FROM users WHERE email = ?")) {
-[](#cb113-12)                                    stmt.setString(1, email.value());
-[](#cb113-13)                                    var rs = stmt.executeQuery();
-[](#cb113-14)                                    return rs.next() ? mapUser(rs) : null;
-[](#cb113-15)                                 }
-[](#cb113-16)                            }).map(Option::option);
-[](#cb113-17)    }
-[](#cb113-18)    private User mapUser(ResultSet rs) throws SQLException {
-[](#cb113-19)        return new User(/* ... */);
-[](#cb113-20)    }
+class PostgresUserRepository implements UserRepository {
+    private final DataSource dataSource;
+    public Promise<Option<User>> findByEmail(Email) {
+        return Promise.lift(RepositoryError::new,
+                            () -> {
+                                try (var conn = dataSource.getConnection();
+                                     var stmt = conn.prepareStatement(
+```
+
+
+
+```java
+"SELECT * FROM users WHERE email = ?")) {
+    stmt.setString(1, email.value());
+    var rs = stmt.executeQuery();
+    return rs.next() ? mapUser(rs) : null;
+}
+}).map(Option::option);
+}
+
+private User mapUser(ResultSet rs) throws SQLException {
+    return new User(/* ... */);
+}
 }
 ```
 
-适配器捕获 `SQLException` 并将其封装在领域 `Cause` `RepositoryError.DatabaseFailure` 中。调用者永远看不到 `SQLException`。
+适配器捕获`SQLException`并将其封装在领域`Cause` `RepositoryError.DatabaseFailure`中。调用者永远看不到`SQLException`。
 
 ## 线程安全
 
@@ -2289,18 +2516,15 @@ public interface LoadConfig {
 
 **如果一个叶节点只被一个调用者使用**，将其保持在附近（同一个文件、同一个包）。
 
-**如果它被复用**，立即将其移动到最近的 `shared` 包。不要推迟——当共享代码留在错误的位置时，技术债就会累积。
+**如果它被复用**，立即将其移动到最近的`shared`包。不要推迟——当共享代码留在错误的位置时，技术债就会累积。
 
-***
+---
 
 ## 模式：条件 (Condition)
 
 条件表示基于数据的分支逻辑。关键在于：将条件表示为值而不是而不是流副作用。保持分支处于相同的抽象层级。
 
 ### 简单条件
-
-
-
 
 ```java
 // 执行：将条件作为返回 monad 的表达式
@@ -2327,7 +2551,7 @@ Result<ShippingCost> calculateShipping(Order order, ShippingMethod method) {
 }
 ```
 
-每个 case 都返回 `Result<ShippingCost>`。switch 表达式求值出一个单一结果。
+每个 case 都返回`Result<ShippingCost>`。switch 表达式求值出一个单一结果。
 
 ### 嵌套条件
 
@@ -2371,7 +2595,7 @@ private Result<Discount> standardDiscount(Order order) {
 
 ### 带有 Monad 的条件
 
-在适用时使用 `filter` 进行更整洁的组合：
+在适用时使用`filter`进行更整洁的组合：
 
 ```java
 // 避免：lambda 中的三元运算符
@@ -2386,7 +2610,7 @@ return fetchUser(userId)
     .flatMap(this::processActiveUser);
 ```
 
-***
+---
 
 ## 模式：迭代
 
@@ -2409,7 +2633,7 @@ Result<List<Email>> parseEmails(List<String> rawEmails) {
 }
 ```
 
-`Result.allOf` 将 `List<Result<Email>>` 聚合为 `Result<List<Email>>`。如果任何邮件无效，你将得到一个包含所有失败信息的 `Composite`。
+`Result.allOf`将`List<Result<Email>>`聚合为`Result<List<Email>>`。如果任何邮件无效，你将得到一个包含所有失败信息的`Composite`。
 
 ### 过滤与转换
 
@@ -2426,7 +2650,7 @@ private ActiveUser toActiveUser(User user) {
 }
 ```
 
-纯净转换，无副作用，返回 `List<ActiveUser>`（不是 `Result`，因为这可能会失败）。
+纯净转换，无副作用，返回`List<ActiveUser>`（不是`Result`，因为这可能会失败）。
 
 ### 异步迭代
 
@@ -2490,7 +2714,7 @@ Result<List<Email>> emails = Result.allOf(
 );
 ```
 
-***
+---
 
 ## 命名规范
 
@@ -2506,11 +2730,11 @@ Password.password("Secret123")
 AccountId.accountId("ACC-001")
 ```
 
-这种模式对 grep 友好：搜索 `Email.email` 可以找到所有构造位置。
+这种模式对 grep 友好：搜索`Email.email`可以找到所有构造位置。
 
 ### 已验证输入命名
 
-使用 `Valid` 前缀（而非 `Validated`）来表示已验证输入的类型：
+使用`Valid`前缀（而非`Validated`）来表示已验证输入的类型：
 
 ```java
 // 执行：使用 Valid 前缀
@@ -2533,11 +2757,6 @@ record ValidatedRequest(...)
 | `handle` | 协调事件的响应 | `HandleRefund` |
 | `load` | 为使用检索数据 | `LoadUserProfile` |
 | `save` | 持久化更改 | `SaveOrder` |
-
-
-
-
-
 | `check` | 验证条件 | `CheckInventory` |
 
 ## Zone 3 动词（叶子节点 - 实现）
@@ -2556,11 +2775,11 @@ record ValidatedRequest(...)
 
 遵循模式：`methodName_outcome_condition`
 
-```
-[](#cb127-1)void validRequest_succeeds_forValidInput()
-[](#cb127-2)void validRequest_fails_forInvalidEmail()
-[](#cb127-3)void execute_succeeds_forValidInput()
-[](#cb127-4)void execute_fails_whenEmailAlreadyExists()
+```java
+void validRequest_succeeds_forValidInput()
+void validRequest_fails_forInvalidEmail()
+void execute_succeeds_forValidInput()
+void execute_fails_whenEmailAlreadyExists()
 ```
 
 ## 核心要点
@@ -2595,7 +2814,7 @@ record ValidatedRequest(...)
 
 ## 模式：序列器 (Sequencer)
 
-**定义：** `Sequencer` 使用 `map` 和 `flatMap` 线性地链接依赖步骤。每个步骤的输出作为下一个步骤的输入。这是实现用例逻辑的主要模式。
+**定义：** `Sequencer`使用`map`和`flatMap`线性地链接依赖步骤。每个步骤的输出作为下一个步骤的输入。这是实现用例逻辑的主要模式。
 
 **原理（基于标准）：**
 - **心理开销**：线性流，2-5 个步骤符合短期记忆容量——结构可预测 (+3) 
@@ -2605,7 +2824,7 @@ record ValidatedRequest(...)
 
 ### 2-5 原则
 
-一个 `Sequencer` 应该有 2 到 5 个步骤。少于 2 个可能仅仅是一个 `Leaf`（叶子节点）。超过 5 个则需要拆分——提取子序列器或对步骤分组。
+一个`Sequencer`应该有 2 到 5 个步骤。少于 2 个可能仅仅是一个`Leaf`（叶子节点）。超过 5 个则需要拆分——提取子序列器或对步骤分组。
 
 > 该规则旨在限制局部复杂度。它源自短期记忆的平均大小——7 +/- 2 个元素。
 
@@ -2613,91 +2832,99 @@ record ValidatedRequest(...)
 
 ### 同步示例
 
+```java
+public interface ProcessOrder {
 ```
-[](#cb128-1)public interface ProcessOrder {
-[](#cb128-2)    record Request(String orderId, String paymentToken) {}
-[](#cb128-3)    record Response(OrderConfirmation confirmation) {}
-[](#cb128-4)
-[](#cb128-5)    Result<Response> execute(Request request);
-[](#cb128-6)
-[](#cb128-7)    interface ValidateInput {
-[](#cb128-8)        Result<ValidRequest> apply(Request raw);
-[](#cb128-9)    }
-[](#cb128-10)    interface ReserveInventory {
-[](#cb128-11)        Result<Reservation> apply(ValidRequest req);
-[](#cb128-12)    }
-[](#cb128-13)    interface ProcessPayment {
-[](#cb128-14)        Result<Payment> apply(Reservation reservation);
-[](#cb128-15)    }
-[](#cb128-16)    interface ConfirmOrder {
-[](#cb128-17)        Result<Response> apply(Payment payment);
-[](#cb128-18)    }
-[](#cb128-19)
-[](#cb128-20)    static ProcessOrder processOrder(ValidateInput validate,
-[](#cb128-21)                                     ReserveInventory reserve,
-[](#cb128-22)                                     ProcessPayment processPayment) {
-[](#cb128-23)    return request -> validate.apply(request)
-[](#cb128-24)                                     .flatMap(reserve::apply)
-[](#cb128-25)                                     .flatMap(processPayment::apply)
-[](#cb128-26)                                     .flatMap(confirm::apply);
-[](#cb128-27)    }
+
+
+
+```
+record Request(String orderId, String paymentToken) {}
+
+record Response(OrderConfirmation confirmation) {}
+
+Result<Response> execute(Request request);
+
+interface ValidateInput {
+    Result<ValidRequest> apply(Request raw);
+}
+
+interface ReserveInventory {
+    Result<Reservation> apply(ValidRequest req);
+}
+
+interface ProcessPayment {
+    Result<Payment> apply(Reservation reservation);
+}
+
+interface ConfirmOrder {
+    Result<Response> apply(Payment payment);
+}
+
+static ProcessOrder processOrder(ValidateInput validate,
+                                 ReserveInventory reserve,
+                                 ProcessPayment processPayment) {
+    return request -> validate.apply(request)
+                              .flatMap(reserve::apply)
+                              .flatMap(processPayment::apply)
+                              .flatMap(confirm::apply);
 }
 ```
 
 ### 异步示例
 
 ```
-[](#cb129-1)public Promise<Response> execute(Request request) {
-[](#cb129-2)    return validate.apply(request)
-[](#cb129-3)                                     .async()
-[](#cb129-4)                                     .flatMap(reserve::apply)
-[](#cb129-5)                                     .flatMap(processPayment::apply)
-[](#cb129-6)                                     .flatMap(confirm::apply);
-[](#cb129-7)}
+public Promise<Response> execute(Request request) {
+    return validate.apply(request)
+                   .async()
+                   .flatMap(reserve::apply)
+                   .flatMap(processPayment::apply)
+                   .flatMap(confirm::apply);
+}
 ```
 
 ### 何时提取子序列器
 
-如果一个步骤变得复杂，将其提取到自己的接口中。假设 `processPayment` 实际上需要：授权卡 -> 扣款 -> 记录交易。这是三个依赖步骤——一个序列器。提取如下：
+如果一个步骤变得复杂，将其提取到自己的接口中。假设`processPayment`实际上需要：授权卡 -> 扣款 -> 记录交易。这是三个依赖步骤——一个序列器。提取如下：
 
 ```
-[](#cb130-1)interface ProcessPayment {
-[](#cb130-2)    Promise<Payment> apply(Reservation reservation);
-[](#cb130-3)}
+interface ProcessPayment {
+    Promise<Payment> apply(Reservation reservation);
+}
 
-[](#cb130-4)interface CreditCardPaymentProcessor extends ProcessPayment {
-[](#cb130-5)    interface AuthorizeCard {
-[](#cb130-6)        Promise<Reservation> apply(Reservation reservation);
-[](#cb130-7)    }
-[](#cb130-8)    interface CaptureFunds {
-[](#cb130-9)        Promise<Reservation> apply(Reservation reservation);
-[](#cb130-10)    }
-[](#cb130-11)    interface RecordTransaction {
-[](#cb130-12)        Promise<Payment> apply(Reservation reservation);
-[](#cb130-13)    }
-[](#cb130-14)    static CreditCardPaymentProcessor creditCardPaymentProcessor(
-[](#cb130-15)            AuthorizeCard authorizeCard,
-[](#cb130-16)            CaptureFunds captureFunds,
-[](#cb130-17)            RecordTransaction recordTransaction) {
-[](#cb130-18)        return (reservation) -> authorizeCard.apply(reservation)
-[](#cb130-19)                                             .flatMap(captureFunds::apply)
-[](#cb130-20)                                             .flatMap(recordTransaction::apply);
-[](#cb130-21)    }
+interface CreditCardPaymentProcessor extends ProcessPayment {
+    interface AuthorizeCard {
+        Promise<Reservation> apply(Reservation reservation);
+    }
+
+    interface CaptureFunds {
+        Promise<Reservation> apply(Reservation reservation);
+    }
+
+    interface RecordTransaction {
+        Promise<Payment> apply(Reservation reservation);
+    }
+
+    static CreditCardPaymentProcessor creditCardPaymentProcessor(
+            AuthorizeCard authorizeCard,
+            CaptureFunds captureFunds,
+            RecordTransaction recordTransaction) {
+        return (reservation) -> authorizeCard.apply(reservation)
+                                             .flatMap(captureFunds::apply)
+                                             .flatMap(recordTransaction::apply);
+    }
 }
 ```
 
-现在 `CreditCardPaymentProcessor` 本身是一个包含三个步骤的序列器。顶层用例仍然保持着清晰的 4 步骤链。
+现在`CreditCardPaymentProcessor`本身是一个包含三个步骤的序列器。顶层用例仍然保持着清晰的 4 步骤链。
 
 ## 线程安全
-
-
-
 
 Sequencer 模式通过`顺序执行实现线程安全` - 步骤按顺序一个接一个执行，永远并行。每个步骤都是隔离且线程绑定的。单个步骤内部的可变本地状态是安全的，因为步骤不会重叠。在步骤之间传递的数据必须是不可变的。
 
 ## 常见错误
 
-**不要在 flatMap 中嵌套逻辑：**
+不要在`flatMap`中嵌套逻辑：
 
 ```java
 // DON'T: 业务逻辑埋没在 lambda 中
@@ -2729,7 +2956,7 @@ private Result<ValidRequest> applyDiscountIfEligible(ValidRequest request) {
 }
 ```
 
-**不要在 Sequencer 中不经提取就混合 Fork-Join：**
+不要在 Sequencer 中不经提取就混合 Fork-Join：
 
 ```java
 // DON'T: 在序列中间突然执行 Fork-Join
@@ -2759,13 +2986,12 @@ private Promise<ReservationInput> fetchUserAndProduct(ValidRequest request) {
 }
 ```
 
-***
-
 ## 模式：Fork-Join
 
 **定义：** Fork-Join（也称为扇出-扇入）并发执行独立操作并合并它们的结果。当你有多个分支之间没有依赖关系的并行工作时，请使用它。
 
 **设计原理（基于标准）：**
+
 - **心理开销**：并行执行在结构中是显式化的 - 没有隐藏的并发 (+2)
 - **复杂度**：独立性约束充当设计验证器 - 强制进行合理的数据组织 (+3)
 - **可靠性**：类型系统防止依赖操作被并行化 (+2)
@@ -2773,9 +2999,9 @@ private Promise<ReservationInput> fetchUserAndProduct(ValidRequest request) {
 
 ### 两种主要形式
 
-**1. `Result.all(...)` - 同步聚合：**
+**1.`Result.all(...)` - 同步聚合：**
 
-不是并发的，只是收集多个 Result：
+不是并发的，只是收集多个`Result`：
 
 ```java
 // 验证多个独立字段
@@ -2785,9 +3011,9 @@ Result<ValidRequest> validated = Result.all(Email.email(raw.email()),
                                        .flatMap(ValidRequest::new);
 ```
 
-如果全部成功，你将获得一个传递给组合器的值元组。如果任何一个失败，你将得到一个包含所有失败的 `CompositeCause`（而不是第一个）。
+如果全部成功，你将获得一个传递给组合器的值元组。如果任何一个失败，你将得到一个包含所有失败的`CompositeCause`（而不是第一个）。
 
-**2. `Promise.all(...)` - 并行异步执行：**
+**2.`Promise.all(...)` - 并行异步执行：**
 
 ```java
 // 并行运行独立的 I/O 操作
@@ -2807,7 +3033,7 @@ private Dashboard createDashboard(Profile profile, List<Order> orders, List<Noti
 
 ### 特殊 Fork-Join 情况
 
-**1. `allOf(Collection<Promise<T>>)` - 韧性集合：**
+**1.`allOf(Collection<Promise<T>>)` - 韧性集合：**
 
 ```java
 // 从动态数量的源获取数据
@@ -2825,16 +3051,16 @@ private Report createReport(List<Result<HealthStatus>> results) {
                            .map(Result::value)
                            .toList();
     var failures = results.stream()
-                            .filter(Result::isFailure)
-                            .map(Result::cause)
-                            .toList();
+                          .filter(Result::isFailure)
+                          .map(Result::cause)
+                          .toList();
     return new Report(successes, failures);
 }
 ```
 
-返回 `Promise<List<Result<T>>>` - 与快速失败的 `Promise.all()` 不同，`allOf()` 等待所有完成并收集成功和失败。
+返回`Promise<List<Result<T>>>` - 与快速失败的`Promise.all()`不同，`allOf()`等待所有完成并收集成功和失败。
 
-**2. `Promise.any(Promise<T>...)` - 第一个成功胜出：**
+**2.`Promise.any(Promise<T>...)` - 第一个成功胜出：**
 
 ```java
 // 多个数据源竞争
@@ -2845,23 +3071,26 @@ Promise<ExchangeRate> fetchRate(Currency from, Currency to) {
 }
 ```
 
-返回第一个成功完成的 Promise，取消其余操作。
+
+
+返回第一个成功完成的`Promise`，取消其余操作。
 
 ### 独立性与线程安全
 
 Fork-Join 有一个关键约束：**所有分支必须具有不可变输入且是真正独立的**。
 
-> **注意**：类型级别的独立性并不等同于基础设施级别的独立性。在代码层面看起来独立的的操作在基础设施层面可能会冲突： - **数据库锁**：两个查询可能会在共享行上发生死锁 - **速率限制**：并行 API 调用可能会耗尽配额 - **连接池**：并行操作可能会竞争连接 - **事务**：同一事务中的操作可能有顺序要求
-
-> 
-
+> **注意**：类型级别的独立性并不等同于基础设施级别的独立性。在代码层面看起来独立的的操作在基础设施层面可能会冲突：
+> - **数据库锁**：两个查询可能会在共享行上发生死锁
+> - **速率限制**：并行 API 调用可能会耗尽配额
+> - **连接池**：并行操作可能会竞争连接
+> - **事务**：同一事务中的操作可能有顺序要求
+>
 > 验证基础设施约束，而不仅仅是类型签名。
 
-**设计上的独立性** - 当你尝试编写 Fork-Join 并发现隐藏依赖关系时，它揭示了设计问题： - 数据冗余：如果分支 A 需要分支 B 的数据，可能这些数据应该提前提供 - 错误的数据组织：依赖关系表明数据被分在不同的源中，而它们应该放在一起 - 缺失抽象：隐藏的依赖关系可能意味着缺少某个概念
-
-
-
-
+**设计上的独立性** - 当你尝试编写 Fork-Join 并发现隐藏依赖关系时，它揭示了设计问题：
+- 数据冗余：如果分支 A 需要分支 B 的数据，可能这些数据应该提前提供
+- 错误的数据组织：依赖关系表明数据被分在不同的源中，而它们应该放在一起
+- 缺失抽象：隐藏的依赖关系可能意味着缺少某个概念
 
 ## 线程安全
 
@@ -2911,7 +3140,7 @@ Promise.all(allocateInventory(orderId),   // 可能会锁定库存
             chargePayment(paymentToken))  // 只有在库存成功时才应该收费
 ```
 
-如果库存分配失败，我们已经收了客户的。使用 `Sequencer`。
+如果库存分配失败，我们已经收了客户的。使用`Sequencer`。
 
 **不要忽略 Fork-Join 分支中的错误：**
 
@@ -2939,7 +3168,7 @@ Promise.all(fetchPrimary(id).recover(err -> Option.none()),  // 隐藏了失败
 
 **局部关注点：** 当切面仅适用于该步骤时，包装单个步骤。例如：仅对外部 API 调用进行重试。
 
-**跨越关注点：** 包装整个 `execute()` 方法。例如：整个用例的指标统计。
+**跨越关注点：** 包装整个`execute()`方法。例如：整个用例的指标统计。
 
 ### 示例：步骤上的重试切面
 
@@ -2962,7 +3191,6 @@ static ProcessUserData processUserData(..., UserServiceClient userServiceClient,
                                  .maxAttempts(3)
                                  .backoff(exponential(100, 2.0))
                                  .build();
-
     return new processUserData(validateInput,
                                withRetry(retryPolicy, userServiceClient),  // 被装饰的
                                processData);
@@ -3009,7 +3237,7 @@ var decoratedStep = withMetrics(metricsPolicy,
 | Retry → Timeout → Operation | 每次尝试都有自己的超时 |
 
 **超时行为：**
-- **逻辑上**：截止日期后后带有 `TimeoutError` 解析
+- **逻辑上**：截止日期后后带有`TimeoutError`解析
 - **实际中**：底层操作可能会继续
 - **规则**：超时不保证清理
 
@@ -3029,9 +3257,7 @@ void retryAspect_retriesOnFailure() {
     var failingStep = new FlakyStep(2);  // 失败次数
     var retryPolicy = RetryPolicy.maxAttempts(3);
     var decorated = withRetry(retryPolicy, failingStep);
-
     var result = decorated.apply(input).await();
-
     assertTrue(result.isSuccess());
     assertEquals(3, failingStep.invocationCount());
 }
@@ -3040,9 +3266,7 @@ void retryAspect_retriesOnFailure() {
 @Test
 void loginUser_success() {
     var useCase = LoginUser.loginUser(mockValidate, mockCheckCreds, mockGenerateToken);
-
     var result = useCase.execute(validRequest).await();
-
     assertTrue(result.isSuccess());
     // 关于重试、超时等的断言
 }
@@ -3050,16 +3274,12 @@ void loginUser_success() {
 
 **不要将切面逻辑混合到业务逻辑中：**
 
-
-
-
-
 ```java
-[](#cb149-1)// 避免：不要在步骤内部编写重试逻辑
-[](#cb149-2)Promise<Profile> fetchProfile(UserId id) {
-[](#cb149-3)    return retryWithBackoff(() -> httpClient.get("/users/" + id.value())
-[](#cb149-4)            .map(this::parseProfile);
-[](#cb149-5)}
+// 避免：不要在步骤内部编写重试逻辑
+Promise<Profile> fetchProfile(UserId id) {
+    return retryWithBackoff(() -> httpClient.get("/users/" + id.value())
+            .map(this::parseProfile);
+}
 ```
 
 提取到切面装饰器（aspect decorator）。
@@ -3067,13 +3287,13 @@ void loginUser_success() {
 **要保持切面的组合性和可用性：**
 
 ```java
-[](#cb150-1)static <I, O> Fn1<I, Promise<O>> withTimeout(TimeSpan timeout, Fn1<I, Promise<O>> step) {
-[](#cb150-2)    return input -> step.apply(input).timeout(timeout);
-[](#cb150-3)}
-[](#cb150-4)
+static <I, O> Fn1<I, Promise<O>> withTimeout(TimeSpan timeout, Fn1<I, Promise<O>> step) {
+    return input -> step.apply(input).timeout(timeout);
+}
+
 static <I, O> Fn1<I, Promise<O>> withRetry(RetryPolicy policy, Fn1<I, Promise<O>> step) {
-[](#cb150-6)    return input -> retryLogic(policy, () -> step.apply(input));
-[](#cb150-7)}
+    return input -> retryLogic(policy, () -> step.apply(input));
+}
 ```
 
 ### 日志哲学
@@ -3088,22 +3308,23 @@ static <I, O> Fn1<I, Promise<O>> withRetry(RetryPolicy policy, Fn1<I, Promise<O>
 **实现：** 在构造时将叶子节点的实现封装在日志切面中：
 
 ```java
-[](#cb151-1)public interface UserRepository {
-[](#cb151-2)    Promise<User> findById(UserId id);
-[](#cb151-4)
+public interface UserRepository {
+    Promise<User> findById(UserId id);
+
     static UserRepository create(DataSource ds, Logger log) {
-[](#cb151-5)        var impl = new UserRepositoryImpl(ds);
-[](#cb151-6)        return withLogging(log, "UserRepository", impl);
-[](#cb151-7)    }
+        var impl = new UserRepositoryImpl(ds);
+        return withLogging(log, "UserRepository", impl);
+    }
 }
-[](#cb151-10)public static UserRepository withLogging(Logger log, String name, UserRepository impl) {
-[](#cb151-11)    return id -> {
-[](#cb151-12)        var correlationId = CorrelationContext.current();
-[](#cb151-13)        log.debug("[{}] {}.findById input: {}", correlationId, name, id);
-[](#cb151-15)        return impl.findById(id)
-[](#cb151-16)                   .onSuccess(user -> log.debug("[{}] {}.findById success", correlationId, name))
-[](#cb151-17)                   .onFailure(cause -> log.warn("[{}] {}.findById failure: {}", correlationId, name, cause.message()));
-[](#cb151-19)    };
+
+public static UserRepository withLogging(Logger log, String name, UserRepository impl) {
+    return id -> {
+        var correlationId = CorrelationContext.current();
+        log.debug("[{}] {}.findById input: {}", correlationId, name, id);
+        return impl.findById(id)
+                   .onSuccess(user -> log.debug("[{}] {}.findById success", correlationId, name))
+                   .onFailure(cause -> log.warn("[{}] {}.findById failure: {}", correlationId, name, cause.message()));
+    };
 }
 ```
 
@@ -3115,15 +3336,16 @@ static <I, O> Fn1<I, Promise<O>> withRetry(RetryPolicy policy, Fn1<I, Promise<O>
 **反模式 - 在组合代码中散布日志：**
 
 ```java
-[](#cb152-1)// 避免：不要在组合代码中写日志
-[](#cb152-2)return validateInput(request)
-[](#cb152-3)    .onSuccess(v -> log.info("Validated"))  // 噪声
-[](#cb152-4)    .flatMap(this::fetchUser)
-[](#cb152-5)    .onSuccess(u -> log.info("Fetched user"))  // 噪声
-[](#cb152-6)    .flatMap(this::processOrder);
-[](#cb152-8)// 做到：在构造时封装叶子节点
-[](#cb152-9)static ProcessOrder processOrder(UserRepository users, Logger log) {
-[](#cb152-10)    return new ProcessOrderImpl(withLogging(log, "users", users));
+// 避免：不要在组合代码中写日志
+return validateInput(request)
+    .onSuccess(v -> log.info("Validated"))  // 噪声
+    .flatMap(this::fetchUser)
+    .onSuccess(u -> log.info("Fetched user"))  // 噪声
+    .flatMap(this::processOrder);
+
+// 做到：在构造时封装叶子节点
+static ProcessOrder processOrder(UserRepository users, Logger log) {
+    return new ProcessOrderImpl(withLogging(log, "users", users));
 }
 ```
 
@@ -3196,8 +3418,15 @@ return Result.success(total);
 
 ```java
 // 不安全：共享的可变上下文
+```
+
+
+
+```java
 DiscountContext context = new DiscountContext(); // 可变的！
+
 Promise.all(applyBogo(cart, context), // 同时访问上下文
+
             applyPercentOff(cart, context)); // 竞态
 ```
 
@@ -3207,7 +3436,9 @@ Promise.all(applyBogo(cart, context), // 同时访问上下文
 
 ```java
 return user.isPremium()
+
     ? processPremium(user)
+
     : processBasic(user);
 ```
 
@@ -3217,7 +3448,9 @@ return user.isPremium()
 
 ```java
 var results = items.stream()
+
                    .map(Item::validate) // 顺序执行
+
                    .toList();
 ```
 
@@ -3227,7 +3460,9 @@ var results = items.stream()
 
 ```java
 // 安全：切面保留了底层的安全性
+
 var retried = withRetry(retryPolicy, sequentialStep); // 仍然顺序执行
+
 var retried = withRetry(retryPolicy, forkJoinStep);   // 仍然并行
 ```
 
@@ -3235,22 +3470,20 @@ var retried = withRetry(retryPolicy, forkJoinStep);   // 仍然并行
 
 Promise 解析具有精确一次语义，并内置了同步机制。
 
-
-
-
-
-```
+```java
 Promise<User> promise = Promise.promise();
 
 // Thread 1
+
 promise.resolve(Result.success(user));
 
 // Thread 2
+
 promise.resolve(Result.success(anotherUser));  // 忽略 - 已解析
 ```
 
-*   第一个 `resolve()` 胜出，后续调用会被忽略
-*   `flatMap`/`map` 链式会在执行前等待解析完成
+*   第一个`resolve()`胜出，后续调用会被忽略
+*   `flatMap`/`map`链式会在执行前等待解析完成
 *   解析（Resolution）作为顺序链的同步点
 
 * * *
@@ -3261,10 +3494,13 @@ promise.resolve(Result.success(anotherUser));  // 忽略 - 已解析
 
 ```java
 // 错误：跨并行操作共享的可变列表
+
 private final List<String> errors = new ArrayList<>();
 
 Promise.all(validateEmail(request).onFailure(e -> errors.add(e.message())),     // 数据竞态
+
             validatePassword(request).onFailure(e -> errors.add(e.message())))  // 数据竞态
+
        .map(this::process);
 ```
 
@@ -3272,8 +3508,11 @@ Promise.all(validateEmail(request).onFailure(e -> errors.add(e.message())),     
 
 ```java
 // 正确：每个操作返回自己的结果
+
 Promise.all(validateEmail(request),
+
             validatePassword(request))
+
        .map((emailResult, passwordResult) -> combineResults(emailResult, passwordResult));
 ```
 
@@ -3281,24 +3520,33 @@ Promise.all(validateEmail(request),
 
 ```java
 // 错误：假设了顺序
+
 Promise.all(incrementCounter(), incrementCounter())  // 可能并发执行！
 ```
 
-`Promise.all` 并行运行操作。如果顺序很重要，请使用 `Sequencer`。
+`Promise.all`并行运行操作。如果顺序很重要，请使用`Sequencer`。
 
 ### 错误 3：修改输入参数
 
 ```java
 // 错误：修改共享输入
+
 private Promise<Discount> applyDiscount(Cart cart) {
+
     cart.setSubtotal(cart.subtotal().subtract(discount));  // 数据竞态
+
     return Promise.success(new Discount(discount));
+
 }
 
 // 正确：创建新实例
+
 private Promise<Discount> applyDiscount(Cart cart) {
+
     var discountAmount = calculateDiscountFor(cart);
+
     return Promise.success(new Discount(cart, discountAmount));  // 返回新数据
+
 }
 ```
 
@@ -3308,7 +3556,7 @@ private Promise<Discount> applyDiscount(Cart cart) {
 
 使用此清单来验证并行操作是否真正独立：
 
-如果任何复复选框失败，请使用 `Sequencer` 代替 `Fork-Join`。
+如果任何复复选框失败，请使用`Sequencer`代替`Fork-Join`。
 
 * * *
 
@@ -3332,18 +3580,27 @@ private Promise<Discount> applyDiscount(Cart cart) {
 
 ```java
 // 安全：测试范围内的可变状态
+
 @Test
+
 void execute_succeeds_forValidInput() {
+
     List<String> callLog = new ArrayList<>();  // 可变，但仅限测试范围
 
     CheckEmail checkEmail = req -> {
+
         callLog.add("email");  // 顺序执行
+
         return Promise.success(req);
+
     };
 
     useCase.execute(request)
+
            .await()
+
            .onSuccess(response -> assertEquals(List.of("email"), callLog));
+
 }
 ```
 
@@ -3377,7 +3634,7 @@ void execute_succeeds_forValidInput() {
 
 ## 练习
 
-参见 `附录 B` 获取：
+参见`附录 B`获取：
 *   3.6：识别线程安全
 *   3.7：将不安全的模式转换为安全的模式
 
@@ -3393,7 +3650,7 @@ void execute_succeeds_forValidInput() {
 *   演进过程：存根 -> 实现 -> 测试就绪
 *   如何处理复杂性
 
-**要求：** `第 9 章：线程安全`
+**要求：**`第 9 章：线程安全`
 
 ## 传统测试的问题
 
@@ -3401,51 +3658,73 @@ void execute_succeeds_forValidInput() {
 
 ```java
 // 针对组件的单独测试
+
 class ValidateInputTest {
+
     @Test void emailValidation() { }
+
     @Test void passwordValidation() { }
+
 } // 10 个测试
 ```
 
 ```java
 // 22 个测试
+
 class CheckCredentialsTest {
+
     @Test void validCredentials() { }
+
     @Test void invalidCredentials() { }
+
 } // 5 个测试
 ```
 
 ```java
 // 22 个测试
+
 class CheckAccountStatusTest {
+
     @Test void activeAccount() { }
+
     @Test void inactiveAccount() { }
+
 } // 3 个测试
 ```
 
 ```java
 // 22 个测试
+
 class GenerateTokenTest {
+
     @Test void tokenGeneration() { }
+
 } // 4 个测试
 ```
 
-
-
-
 ```java
 class EmailTest {
+
     @ParameterizedTest
+
     @ValueSource(strings = {"bad", "no@domain", "@missing", "CAPS@TEST.COM"})
+
     void email_rejectsInvalidFormat(String raw) {
+
         Email.email(raw).onSuccess(Assertions::fail);
+
     }
 
     @Test
+
     void email_normalizesToLowercase() {
+
         Email.email("USER@EXAMPLE.COM")
+
              .onSuccess(email -> assertEquals("user@example.com", email.value()));
+
     }
+
 }
 ```
 
@@ -3461,9 +3740,13 @@ class EmailTest {
 
 ```java
 class PricingEngineTest {
+
     @Test void volumeDiscount_appliesAtThreshold() { /* ... */ }
+
     @Test void combinedDiscounts_stackCorrectly() { /* ... */ }
+
     @Test void edgeCases_handleGracefully() { /* ... */ }
+
 }
 ```
 
@@ -3475,27 +3758,43 @@ class PricingEngineTest {
 
 ```java
 class UserLoginTest {
+
     CheckCredentials mockCredentials;
+
     CheckAccountStatus mockStatus;
+
     GenerateToken mockToken;
+
     UserLogin useCase;
 
     @BeforeEach
+
     void setup() {
+
         mockCredentials = vr -> Result.success(new Credentials("user-1"));
+
         mockStatus = c -> Result.success(new Account(c.userId(), true));
+
         mockToken = acc -> Result.success(new Response("token-" + acc.userId()));
+
         useCase = UserLogin.userLogin(mockCredentials, mockStatus, mockToken);
+
     }
 
     @Test
+
     void execute_succeeds_for_ValidInput() {
+
         var request = new Request("john@example.com", "Valid123", null);
 
         useCase.execute(request)
+
                .onFailure(Assertions::fail)
+
                .onSuccess(response -> assertEquals("token-user-1", response.token()));
+
     }
+
 }
 ```
 
@@ -3511,11 +3810,17 @@ class UserLoginTest {
 
 ```
 阶段 1: 全部存桩
+
     |
+
 阶段 2: 实现并测试验证
+
     |
+
 阶段 3-N: 增量实现步骤
+
     |
+
 最终：生产就绪
 ```
 
@@ -3529,14 +3834,19 @@ class UserLoginTest {
 
 ```java
 public interface UserLogin {
+
     record Request(String email, String password, String referral) {}
+
     record Response(String token) {}
 
     Result<Response> execute(Request request);
 
     static UserLogin userLogin() {
+
         return request -> Result.success(new Response("stub-token"));
+
     }
+
 }
 ```
 
@@ -3544,13 +3854,21 @@ public interface UserLogin {
 
 ```java
 class UserLoginTest {
+
     @Test
+
     void execute_succeeds_forValidInput() {
+
         var useCase = UserLogin.userLogin();
+
         var request = new Request("john@example.com", "Valid123", null);
+
         useCase.execute(request)
+
                .onSuccess(response -> assertEquals("stub-token", response.token()));
+
     }
+
 }
 ```
 
@@ -3560,12 +3878,19 @@ class UserLoginTest {
 
 ```java
 record ValidRequest(Email email, Password password, Option<ReferralCode> referral) {
+
     static Result<ValidRequest> validRequest(Request raw) {
+
         return Result.all(Email.email(raw.email()),
+
                           Password.password(raw.password()),
+
                           ReferralCode(raw.referral()))
+
                      .map(ValidRequest::new);
+
     }
+
 }
 ```
 
@@ -3573,7 +3898,9 @@ record ValidRequest(Email email, Password password, Option<ReferralCode> referra
 
 ```java
 static UserLogin userLogin() {
+
     return request -> ValidRequest.validRequest(request).map(_ -> new Response("stub-token"));
+
 }
 ```
 
@@ -3581,32 +3908,48 @@ static UserLogin userLogin() {
 
 ```java
 @Test
+
 void execute_fails_forInvalidEmail() {
+
     var useCase = UserLogin.userLogin();
+
     var request = new Request("bad-email", "Valid123", null);
+
     useCase.execute(request)
+
            .onSuccess(Assertions::fail);
+
 }
 
 @Test
+
 void execute_aggregatesMultipleErrors() {
+
     var useCase = UserLogin.userLogin();
+
     var request = new Request("bad", "weak", "invalid");
+
     useCase.execute(request)
+
            .onSuccess(Assertions::fail)
+
            .onFailure(cause -> assertInstanceOf(CompositeCause.class, cause));
+
 }
 ```
+
+
 
 ### 阶段 3-N：继续扩展
 
 对每个剩余的步骤重复上述操作：
+
 - 添加步骤接口
 - 更新工厂以接受依赖
 - 更新现有的测试存桩
 - 添加步骤失败场景
 
-* *
+* * *
 
 ## 处理复杂的输入对象
 
@@ -3664,13 +4007,9 @@ public interface TestVectors {
 
 ### 使用哪种方法？
 
-*   **标准向量：** 简单的用例、字段少、变化有限
-*   **工厂方法：** 中等复杂度、系统性的字段变体
-*   **构建器：** 复杂对象、许多可选字段、多种组合
-
-
-
-
+- **标准向量：** 简单的用例、字段少、变化有限
+- **工厂方法：** 中等复杂度、系统性的字段变体
+- **构建器：** 复杂对象、许多可选字段、多种组合
 
 ## 核心要点
 
@@ -3684,7 +4023,8 @@ public interface TestVectors {
 
 ## 练习
 
-参见 附录 B 关于以下内容的练习：
+参见附录 B 关于以下内容的练习：
+
 - 练习 4.1：构建测试数据构建器
 - 练习 4.2：演进测试流程演练
 
@@ -3692,16 +4032,16 @@ public interface TestVectors {
 
 ## 下一步
 
-第 11 章 涵盖了实践中的测试——组织大型测试套件、完整的 `RegisterUser` 示例，以及从传统单元测试的迁移。
+第 11 章涵盖了实践中的测试——组织大型测试套件、完整的`RegisterUser`示例，以及从传统单元测试的迁移。
 
 # 第 11 章：实践中的测试
 
 ## 你将学习
 
-* 如何组织大量的测试用例而不会陷入复杂性泥潭
-* 在什么位置测试什么（值对象、叶节点、用例、适配器）
-* 完整的示例示例：从 Stub 到生产环境的 `RegisterUser`
-* 如何从传统单元测试迁移
+- 如何组织大量的测试用例而不会陷入复杂性泥潭
+- 在什么位置测试什么（值对象、叶节点、用例、适配器）
+- 完整的示例示例：从 Stub 到生产环境的`RegisterUser`
+- 如何从传统单元测试迁移
 
 **前提条件：** 第 10 章：测试哲学
 
@@ -3767,6 +4107,7 @@ class UserLoginTest {
 ```
 
 **优势：**
+
 - IDE 可折叠嵌套类
 - 高层级扫描
 - 按场景类型查找测试
@@ -3848,7 +4189,8 @@ class PricingEngine {
     }
 }
 ```
-值得 `PricingEngineTest` 包含 20 个以上的测试
+
+值得`PricingEngineTest`包含 20 个以上的测试
 
 **简单的叶节点（通过集成测试覆盖）：**
 
@@ -3857,6 +4199,7 @@ static Price applyTax(Price base) {
     return new Price(base.amount().multiply(TAX_RATE));
 }
 ```
+
 不需要专门的测试 - 由用例覆盖
 
 **准则：** 如果叶节点有 3 个以上分支或超过 20 行，请编写单元测试。
@@ -3867,15 +4210,12 @@ static Price applyTax(Price base) {
 class RegisterUserTest {
     // 快乐路径
     @Test void execute_succeeds_forValidInput() { }
-
     // 验证失败
     @Test void execute_fails_forInvalidEmail() { }
     @Test void execute_fails_forWeakPassword() { }
-
     // 步骤失败
     @Test void execute_fails_whenEmailAlreadyExists() { }
     @Test void execute_fails_whenPasswordHashingFails() { }
-
     // 分支条件
     @Test void execute_sendsWelcomeEmail_forNewUser() { }
 }
@@ -3899,10 +4239,6 @@ class JooqUserRepositoryTest {
 
 ## 测试金字塔
 
-
-
-
-
 ```
  /\
             /  \
@@ -3924,9 +4260,9 @@ class JooqUserRepositoryTest {
 
 **为什么？** 因为我们的业务逻辑是组合式的。测试碎片会遗漏重点。
 
-***
+* * *
 
-## 完整示例：用户注册 RegisterUser
+## 完整示例：用户注册`RegisterUser`
 
 ### 阶段 1：填充所有内容（Stub Everything）
 
@@ -3934,7 +4270,6 @@ class JooqUserRepositoryTest {
 public interface RegisterUser {
     record Request(String email, String password) {}
     record Response(String userId) {}
-
     Promise<Response> execute(Request request);
 
     static RegisterUser registerUser() {
@@ -3950,7 +4285,6 @@ public interface RegisterUser {
 void execute_succeeds_forValidInput() {
     var useCase = RegisterUser.registerUser();
     var request = new Request("john@example.com", "Valid123");
-
     useCase.execute(request)
            .await()
            .onFailure(Assertions::fail)
@@ -3968,7 +4302,11 @@ record ValidRequest(Email email, Password password) {
                      .map(ValidRequest::new);
     }
 }
+```
 
+
+
+```java
 static RegisterUser registerUser() {
     return request -> ValidRequest.validRequest(request)
                                   .async()
@@ -4017,26 +4355,33 @@ class RegisterUserTest {
         SendWelcomeEmail stubEmail = u -> Promise.success(u);
         useCase = RegisterUser.registerUser(stubUniqueness, stubHash, stubSave, stubEmail);
     }
+
     @Nested
     class HappyPath {
         @Test
         void execute_succeeds_for_ValidInput() { ... }
     }
+
     @Nested
     class ValidationFailures {
         @Test
         void execute_fails_for_InvalidEmail() { ... }
+
         @Test
         void execute_fails_for_Password() { ... }
     }
+
     @Nested
     class StepFailures {
         @Test
         void execute_fails_whenEmailExists() { ... }
+
         @Test
         void execute_fails_whenHashingFails() { ... }
+
         @Test
         void execute_fails_whenSaveFails() { ... }
+
         @Test
         void execute_fails_whenEmailFails() { ... }
     }
@@ -4049,7 +4394,7 @@ class RegisterUserTest {
 
 ## 迁移指南：从传统到演进
 
-### 步骤 1 ：添加集成测试
+### 步骤 1：添加集成测试
 
 从为关键场景添加集成测试开始：
 
@@ -4064,32 +4409,36 @@ class CheckCredentialsTest {
 class UserLoginTest {
     @Test
     void execute_succeeds_forValidInput() { ... }
+
     @Test
     void execute_fails_whenCredentialsInvalid() { ... }
 }
 ```
 
-### 步骤 2 ：识别冗余
+### 步骤 2：识别冗余
 
-当你你添加集成测试时，注意哪些单元测试变得了冗余。
+当你添加集成测试时，注意哪些单元测试变得了冗余。
 
 **问题：** 单元测试是否提供了集成测试之外的价值？
+
 - 如果为**否** -> 删除单元测试
 - 如果为**是**（复杂逻辑、多分支） -> 保留单元测试
 
-### 步骤 3 ：删除冗余的单元测试
+### 步骤 3：删除冗余的单元测试
 
 **保留：**
+
 - 复杂的业务叶节点测试
 - 值对象测试（始终保留）
 - 集成测试未覆盖的边缘情况测试
 
 **删除：**
+
 - 简单的步骤测试（已被集成测试覆盖）
 - 重度依赖 Mock 的测试（测试框架多于逻辑本身）
 - 在重构时会崩溃的测试
 
-### 步骤 4 ：最终状态
+### 步骤 4：最终状态
 
 ```
 迁移前：
@@ -4105,10 +4454,6 @@ class UserLoginTest {
 ```
 
 **结果：** 测试更少，覆盖率更高，更有信心，脆弱性更低。
-
-
-
-
 
 ```java
 @Test
@@ -4181,6 +4526,7 @@ void forkJoin_completesAllBranches() {
 ## 练习题
 
 参见 Appendix B 获取以下内容的练习：
+
 - 练习 4.3：测试套的组织
 - 练习 4.4：从传统测试的迁移
 
@@ -4188,15 +4534,15 @@ void forkJoin_completesAllBranches() {
 
 ## 接下来
 
-第 12 章 展示了完整的 RegisterUser 用例——从需求到生产代码，演示了所有模式如何协同工作。
+第 12 章 展示了完整的`RegisterUser`用例——从需求到生产代码，演示了所有模式如何协同工作。
 
 # 第 12 章：完整示例 - RegisterUser
 
 ## 你将学习
 
-* 从需求到实现的完整用例
-* 所有模式在实践中是如何协同运作的
-* 逐步演进的开发方法
+- 从需求到实现的完整用例
+- 所有模式在实践中是如何协同运作的
+- 逐步演进的开发方法
 
 **前提条件：** 第 11 章：实践中的测试
 
@@ -4207,23 +4553,28 @@ void forkJoin_completesAllBranches() {
 **用例：** 注册新用户账户。
 
 **输入（原始）：**
+
 - 邮箱（字符串）
 - 密码（字符串）
 - 推荐码（可选字符串）
 
 **输出：**
+
 - 用户 ID
 - 确认令牌 (token)
 
 **验证规则：**
+
 - 邮箱：非空、格式有效、转换为小写归一化
 - 密码：非空、至少 8 个字符、至少一个大写字母和一个数字
 - 推荐码：可选；如果存在，必须恰好为 6 个大写字母数字
 
 **跨字段规则：**
+
 - 邮箱尚未注册
 
 **步骤：**
+
 1. 验证输入
 2. 检查邮箱唯一性（异步，数据库）
 3. 密码哈希（同步，计算密集型计算）
@@ -4232,7 +4583,7 @@ void forkJoin_completesAllBranches() {
 
 ***
 
-##  1：用例接口
+## 1：用例接口
 
 ```java
 package com.example.app.usecase.registeruser;
@@ -4279,7 +4630,7 @@ public interface RegisterUser {
 
 ***
 
-##  2：已验证的请求
+## 2：已验证的请求
 
 ```java
 record ValidRequest(Email email, Password password, Option<ReferralCode> referralCode) {
@@ -4296,7 +4647,7 @@ record ValidRequest(Email email, Password password, Option<ReferralCode> referra
 
 ***
 
-##  3：值对象
+## 3：值对象
 
 **Email：**
 
@@ -4306,6 +4657,7 @@ package com.example.app.domain.shared;
 public record Email(String value) {
     private static final Pattern EMAIL_PATTERN =
         Pattern.compile("^[a-z0-9+_.-]+@[a-z0-9.-]+$");
+
     private static final Fn1<Cause, String> INVALID_EMAIL =
         Causes.forOneValue("无效邮箱格式: %s");
 
@@ -4321,42 +4673,45 @@ public record Email(String value) {
 
 **Password：**
 
-
-
-
-
 ```java
 public record Password(String value) {
     private static final Cause TOO_SHORT =
         Causes.cause("Password must be at least 8 characters");
+
     private static final Cause MISSING_UPPERCASE =
-        Causes.cause("Password must contain uppercase letter");
-    private static final Cause MISSING_DIGIT =
-        Causes.cause("Password must contain digit");
+```
 
-    public static Result<Password> password(String raw) {
-        return Verify.ensure(raw, Verify.Is::notNull)
-                     .filter(TOO_SHORT, s -> Verify.Is.lenBetween(s, 8, 128))
-                     .flatMap(Password::ensureUppercase)
-                     .flatMap(Password::ensureDigit)
-                     .map(Password::new);
-    }
 
-    private static Result<String> ensureUppercase(String raw) {
-        return contains(raw, Character::isUpperCase)
-                ? Result.success(raw)
-                : MISSING_UPPERCASE.result();
-    }
 
-    private static Result<String> ensureDigit(String raw) {
-        return contains(raw, Character::isDigit)
-                ? Result.success(raw)
-                : MISSING_DIGIT.result();
-    }
+```java
+Causes.cause("Password must contain uppercase letter");
 
-    private static boolean contains(CharSequence sequence, IntPredicate predicate) {
-        return sequence.chars().anyMatch(predicate);
-    }
+private static final Cause MISSING_DIGIT =
+    Causes.cause("Password must contain digit");
+
+public static Result<Password> password(String raw) {
+    return Verify.ensure(raw, Verify.Is::notNull)
+                 .filter(TOO_SHORT, s -> Verify.Is.lenBetween(s, 8, 128))
+                 .flatMap(Password::ensureUppercase)
+                 .flatMap(Password::ensureDigit)
+                 .map(Password::new);
+}
+
+private static Result<String> ensureUppercase(String raw) {
+    return contains(raw, Character::isUpperCase)
+            ? Result.success(raw)
+            : MISSING_UPPERCASE.result();
+}
+
+private static Result<String> ensureDigit(String raw) {
+    return contains(raw, Character::isDigit)
+            ? Result.success(raw)
+            : MISSING_DIGIT.result();
+}
+
+private static boolean contains(CharSequence sequence, IntPredicate predicate) {
+    return sequence.chars().anyMatch(predicate);
+}
 }
 ```
 
@@ -4500,15 +4855,10 @@ public sealed interface RegistrationError extends Cause {
 }
 ```
 
-
-
-
-
 ```java
 @Test
 void validRequest_fails_forInvalidEmail() {
     var request = new Request("not-an-email", "Valid1234", null);
-
     ValidRequest.validRequest(request)
                 .onSuccess(Assertions::fail);
 }
@@ -4516,7 +4866,6 @@ void validRequest_fails_forInvalidEmail() {
 @Test
 void validRequest_succeeds_forValidInput() {
     var request = new Request("user@example.com", "Valid1234", "ABC123");
-
     ValidRequest.validRequest(request)
                 .onFailure(Assertions::fail)
                 .onSuccess(valid -> {
@@ -4559,14 +4908,13 @@ void execute_fails_whenEmailAlreadyExists() {
     CheckEmailUniqueness checkEmail = req ->
         RegistrationError.General.EMAIL_ALREADY_REGISTERED.promise();
     // ... other stubs
-
     useCase.execute(request)
           .await()
           .onSuccess(Assertions::fail);
 }
 ```
 
-***
+
 
 ## 模式总结
 
@@ -4580,8 +4928,6 @@ void execute_fails_whenEmailAlreadyExists() {
 | `SaveUser` | 适配器叶子 (Adapter Leaf) | 数据库写入 |
 | `RegistrationError` | 密封接口 (Sealed Interface) | 类型化错误层级 |
 
-***
-
 ## 核心要点
 
 1. **用例接口** - 包含工厂、步骤接口和类型
@@ -4591,15 +4937,11 @@ void execute_fails_whenEmailAlreadyExists() {
 5. **适配器实现步骤接口** - JOOQ、HTTP 客户端
 6. **测试使用存根** - 仅对适配器进行存根
 
-***
-
 ## 练习题
 
 参阅 附录 B 获取以下练习：
 - 练习 5.1：扩展带有邮箱验证的 `RegisterUser`
 - 练习 5.3：添加高级推荐
-
-***
 
 ## 下一步
 
@@ -4609,13 +4951,12 @@ void execute_fails_whenEmailAlreadyExists() {
 
 本章将详细介绍从需求到生产级代码构建一个完整的电子商务订单用例的过程。
 
-***
-
 ## 需求
 
 **业务目标：** 允许客户对其购物车进行下单。
 
-**流程：** 1. 验证订单请求
+**流程：** 
+1. 验证订单请求
 2. 检查所有物品的库存（并行）
 3. 预留库存
 4. 处理支付
@@ -4634,8 +4975,6 @@ void execute_fails_whenEmailAlreadyExists() {
 - 支付被拒绝
 - 支付超时
 - 数据库失败
-
-***
 
 ## 领域分析
 
@@ -4659,8 +4998,6 @@ void execute_fails_whenEmailAlreadyExists() {
 | 预留 + 创建 | 顺序执行器 | 严格排序 |
 | 发送通知 | 带有切面的叶子 | 尽力而为，不导致订单失败 |
 
-***
-
 ## 包结构
 
 ```
@@ -4678,11 +5015,9 @@ com.example.shop.domain.shared/
   OrderId.java
 ```
 
-***
-
 ### 步骤 1：值对象
 
-### ProductId
+#### ProductId
 
 ```java
 package com.example.shop.domain.shared;
@@ -4703,7 +5038,7 @@ public record ProductId(String value) {
 }
 ```
 
-### Quantity
+#### Quantity
 
 ```java
 package com.example.shop.domain.shared;
@@ -4730,9 +5065,7 @@ public record Quantity(int value) {
 }
 ```
 
-
-
-
+#### Money
 
 ```java
 package com.example.shop.domain.shared;
@@ -4740,7 +5073,6 @@ package com.example.shop.domain.shared;
 import org.pragmatica.lang.Result;
 import org.pragmatica.lang.Cause;
 import org.pragmatica.lang.utils.Causes;
-
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -4776,7 +5108,8 @@ public record Money(BigDecimal value) {
 }
 ```
 
-### 地址
+#### 地址
+
 ```java
 package com.example.shop.domain.shared;
 
@@ -4790,7 +5123,7 @@ public record Address(
     String city,
     String postalCode,
     String country
-)) {
+) {
     private static final Cause STREET_REQUIRED = Causes.cause("Street is required");
     private static final Cause CITY_REQUIRED = Causes.cause("City is required");
     private static final Cause POSTAL_CODE_REQUIRED = Causes.cause("Postal code is required");
@@ -4813,7 +5146,8 @@ public record Address(
 }
 ```
 
-###  2 ：错误类型
+### 步骤 2：错误类型
+
 ```java
 package com.example.shop.usecase.placeorder;
 
@@ -4873,6 +5207,7 @@ public sealed interface OrderError extends Cause {
 ### 步骤 3：校验后的请求
 
 #### 原始请求（来自 API）
+
 ```java
 package com.example.shop.usecase.placeorder;
 
@@ -4884,11 +5219,17 @@ public record OrderRequest(
     AddressRequest shippingAddress
 ) {
     public record LineItemRequest(String productId, int quantity) {}
-    public record AddressRequest(String street, String city, String postalCode, String country) {}
 }
 ```
 
+
+
+```java
+public record AddressRequest(String street, String city, String postalCode, String country) {}
+```
+
 #### 校验后的订单行项目
+
 ```java
 package com.example.shop.usecase.placeorder;
 
@@ -4906,10 +5247,6 @@ public record OrderLine(ProductId productId, Quantity quantity) {
 }
 ```
 
-
-
-
-
 ```java
 package com.example.shop.usecase.placeorder;
 
@@ -4918,7 +5255,6 @@ import org.pragmatica.lang.Cause;
 import org.pragmatica.lang.utils.Causes;
 import com.example.shop.domain.shared.CustomerId;
 import com.example.shop.domain.shared.Address;
-
 import java.util.List;
 
 public record ValidOrderRequest(
@@ -4945,7 +5281,6 @@ public record ValidOrderRequest(
         if (items == null || items.isEmpty()) {
             return EMPTY_ORDER.result();
         }
-
         return Result.allOf(
             items.stream()
                 .map(OrderLine::orderLine)
@@ -4955,9 +5290,7 @@ public record ValidOrderRequest(
 }
 ```
 
-***
-
-## 第 4 ：步骤接口
+## 第 4：步骤接口
 
 ```java
 package com.example.shop.usecase.placeorder;
@@ -4968,12 +5301,11 @@ import com.example.shop.domain.shared.OrderId;
 import com.example.shop.domain.shared.Money;
 
 public interface PlaceOrder {
-
     record Response(OrderId orderId, Money total) {}
 
     Promise<Response> execute(OrderRequest request);
 
-    // 步骤 1:检查所有商品的库存 (Fork-Join)
+    // 步骤 1: 检查所有商品的库存 (Fork-Join)
     interface CheckInventory {
         Promise<ValidOrderRequest> apply(ValidOrderRequest request);
     }
@@ -5037,7 +5369,6 @@ public interface PlaceOrder {
         PriceCalculator priceCalculator
     ) {
         var total = priceCalculator.calculate(request);
-
         return reserveInventory.apply(request)
             .flatMap(reservation -> processPayment.apply(reservation, total)
                 .flatMap(payment -> createOrder.apply(reservation, payment))
@@ -5055,8 +5386,6 @@ public interface PlaceOrder {
     }
 }
 ```
-
-***
 
 ## 第 5：支持类型
 
@@ -5102,9 +5431,6 @@ public interface PriceCalculator {
 }
 ```
 
-
-
-
 ```java
 package com.example.shop.adapter.inventory;
 
@@ -5114,7 +5440,6 @@ import com.example.shop.usecase.placeorder.ValidOrderRequest;
 import com.example.shop.usecase.placeorder.OrderLine;
 import com.example.shop.usecase.placeorder.OrderError;
 import com.example.shop.domain.shared.ProductId;
-
 import java.util.List;
 
 public class InventoryChecker implements CheckInventory {
@@ -5130,7 +5455,6 @@ public class InventoryChecker implements CheckInventory {
         var checks = request.items().stream()
             .map(this::checkItem)
             .toList();
-
         return Promise.allOf(checks)
             .flatMap(results -> aggregateResults(results, request));
     }
@@ -5172,6 +5496,10 @@ public class InventoryChecker implements CheckInventory {
 ### ProcessPayment（带有错误映射的叶子节点）
 
 ```java
+
+
+
+```java
 package com.example.shop.adapter.payment;
 
 import org.pragmatica.lang.Promise;
@@ -5180,7 +5508,6 @@ import com.example.shop.usecase.placeorder.ReservedInventory;
 import com.example.shop.usecase.placeorder.PaymentConfirmation;
 import com.example.shop.usecase.placeorder.OrderError;
 import com.example.shop.domain.shared.Money;
-
 import java.time.Instant;
 import java.util.concurrent.TimeoutException;
 
@@ -5233,9 +5560,7 @@ import com.example.shop.usecase.placeorder.ReservedInventory;
 import com.example.shop.usecase.placeorder.PaymentConfirmation;
 import com.example.shop.usecase.placeorder.OrderError;
 import com.example.shop.domain.shared.OrderId;
-
 import java.util.UUID;
-
 import static com.example.shop.adapter.persistence.Tables.*;
 
 public class JooqOrderRepository implements CreateOrder {
@@ -5251,14 +5576,12 @@ public class JooqOrderRepository implements CreateOrder {
             _ -> OrderError.General.DATABASE_ERROR,
             () -> {
                 var orderId = UUID.randomUUID().toString();
-
                 dsl.insertInto(ORDERS)
                     .set(ORDERS.ID, orderId)
                     .set(ORDERS.RESERVATION_ID, reservation.reservationId())
                     .set(ORDERS.PAYMENT_TX_ID, payment.transactionId())
                     .set(ORDERS.STATUS, "CONFIRMED")
                     .execute();
-
                 for (var item : reservation.items()) {
                     dsl.insertInto(ORDER_ITEMS)
                         .set(ORDER_ITEMS.ORDER_ID, orderId)
@@ -5266,7 +5589,6 @@ public class JooqOrderRepository implements CreateOrder {
                         .set(ORDER_ITEMS.QUANTITY, item.quantity())
                         .execute();
                 }
-
                 return new OrderId(orderId);
             }
         );
@@ -5274,12 +5596,8 @@ public class JooqOrderRepository implements CreateOrder {
 }
 ```
 
-
-
-
 ```java
 class QuantityTest {
-
     @Nested
     class ValidationSucceeds {
         @Test
@@ -5339,7 +5657,6 @@ class PlaceOrderTest {
         PlaceOrder.SendConfirmation sendConfirmation = (id, req) -> Promise.success(null);
         PlaceOrder.ReleaseInventory releaseInventory = res -> Promise.success(null);
         PriceCalculator priceCalculator = req -> new Money(BigDecimal.valueOf(99.99));
-
         useCase = PlaceOrder.placeOrder(
             checkInventory, reserveInventory, processPayment,
             createOrder, sendConfirmation, releaseInventory, priceCalculator
@@ -5357,7 +5674,6 @@ class PlaceOrderTest {
                 )),
                 new OrderRequest.AddressRequest("123 Main St", "City", "12345", "US")
             );
-
             useCase.execute(request)
                 .await()
                 .onFailure(Assertions::fail)
@@ -5376,7 +5692,6 @@ class PlaceOrderTest {
                 List.of(),
                 new OrderRequest.AddressRequest("123 Main St", "City", "12345", "US")
             );
-
             useCase.execute(request)
                 .await()
                 .onSuccess(Assertions::fail);
@@ -5389,11 +5704,9 @@ class PlaceOrderTest {
         void execute_fails_whenInventoryInsufficient() {
             PlaceOrder.CheckInventory failingCheck = req ->
                 new OrderError.InsufficientInventory(List.of()).promise();
-
             var failingUseCase = PlaceOrder.placeOrder(
                 failingCheck, null, null, null, null, null
             );
-
             failingUseCase.execute(validRequest())
                 .await()
                 .onSuccess(Assertions::fail);
@@ -5402,7 +5715,6 @@ class PlaceOrderTest {
         @Test
         void execute_releasesInventory_whenPaymentFails() {
             var released = new AtomicBoolean(false);
-
             PlaceOrder.ReserveInventory reserveInventory = req -> Promise.success(
                 new ReservedInventory("res-123", List.of(), Instant.now().plusMinutes(15))
             );
@@ -5412,38 +5724,63 @@ class PlaceOrderTest {
                 released.set(true);
                 return Promise.success(null);
             };
-
             var failingUseCase = PlaceOrder.placeOrder(
-                req -> Promise.success(req),
-                reserveInventory,
-                failingPayment,
-                null,
-                null,
-                releaseInventory,
-                req -> Money.ZERO
-            );
-
-            failingUseCase.execute(validRequest())
-                .await()
-                .onSuccess(Assertions::fail);
-
-            assertTrue(released.get(), "支付失败时应释放库存");
-        }
-    }
-
-    private OrderRequest validRequest() {
-        return new OrderRequest(
-            "550e8400-e29b-41d4-a716-446655440000",
-            List.of(new OrderRequest.LineItemRequest(
-                "660e8400-e29b-41d4-a716-446655440001", 2
-            )),
-            new OrderRequest.AddressRequest("123 Main St", "City", "12345", "US")
-        );
-    }
-}
 ```
 
-* * *
+
+
+```
+req -> Promise.success(req),
+
+reserveInventory,
+
+failingPayment,
+
+null,
+
+null,
+
+releaseInventory,
+
+req -> Money.ZERO
+
+);
+
+failingUseCase.execute(validRequest())
+
+.await()
+
+.onSuccess(Assertions::fail);
+
+assertTrue(released.get(), "支付失败时应释放库存");
+
+}
+
+}
+
+private OrderRequest validRequest() {
+
+return new OrderRequest(
+
+"550e8400-e29b-41d4-a716-446655440000",
+
+List.of(new OrderRequest.LineItemRequest(
+
+"660e8400-e29b-41d4-a716-446655440001", 2
+
+)),
+
+new OrderRequest.AddressRequest("123 Main St", "City", "12345", "US")
+
+);
+
+}
+
+}
+
+```
+
+---
 
 ## 展示的关键模式
 
@@ -5459,20 +5796,19 @@ class PlaceOrderTest {
 
 此示例演示了在预留库存后支付失败时的补偿机制（回滚）：
 
-
-
-
-
 ```
 reserve() -> pay() -> create()
-              |
-              v (failure)
-         release() -> propagate error
+
+|
+
+v (failure)
+
+release() -> propagate error
 ```
 
 `recover()` 方法允许在无需 try-catch 的情况下实现整洁的补偿逻辑。
 
-* * *
+---
 
 ## 练习
 
@@ -5481,7 +5817,7 @@ reserve() -> pay() -> create()
 3. **添加重试切面：** 用重试切面包装 `ProcessPayment`，该切面在超时时重试，但在被拒绝时不重试。
 4. **测试补偿逻辑：** 编写一个测试，验证当 `CreateOrder` 失败时库存会被释放（而不仅仅是 `ProcessPayment`）。
 
-* * *
+---
 
 ## 总结
 
@@ -5500,9 +5836,7 @@ PlaceOrder 展示了：
 
 此重点示例演示了用于内容管理领域中路由逻辑的“条件模式（Condition pattern）”。
 
-* * *
-
-## 
+---
 
 **业务目标：** 允许作者通过审批工作流提交文章发布。
 
@@ -5517,7 +5851,7 @@ PlaceOrder 展示了：
 - 新作者需要高级审批且必须通过抄袭检测
 - 所有文章都必须通过内容验证（长度、格式）
 
-* * *
+---
 
 ## 领域模型
 
@@ -5529,185 +5863,293 @@ public record ArticleId(String value) { /* 为了简洁省略了工厂方法 */ 
 public record AuthorId(String value) { /* 为了简洁省略了工厂方法 */ }
 
 public record Article(
-    ArticleId id,
-    AuthorId authorId,
-    String title,
-    String content,
-    AuthorTier authorTier
+
+ArticleId id,
+
+AuthorId authorId,
+
+String title,
+
+String content,
+
+AuthorTier authorTier
+
 ) {}
 
 public enum PublishStatus {
-    PUBLISHED,
-    PENDING_EDITORIAL_REVIEW,
-    PENDING_SENIOR_REVIEW
+
+PUBLISHED,
+
+PENDING_EDITORIAL_REVIEW,
+
+PENDING_SENIOR_REVIEW
+
 }
 
 public record PublishResult(ArticleId articleId, PublishStatus status) {}
 ```
 
-* * *
+---
 
 ## 错误类型
 
 ```
 public sealed interface PublishError extends Cause {
 
-    enum General implements PublishError {
-        TITLE_TOO_SHORT("标题至少需要 10 个字符"),
-        CONTENT_TOO_SHORT("内容至少需要 500 个字符"),
-        PLAGIARISM_DETECTED("内容未通过抄袭检测"),
-        SAVE_FAILED("保存文章失败");
+enum General implements PublishError {
 
-        private final String message;
+TITLE_TOO_SHORT("标题至少需要 10 个字符"),
 
-        General(String message) {
-            this.message = message;
-        }
+CONTENT_TOO_SHORT("内容至少需要 500 个字符"),
 
-        @Override
-        public String message() {
-            return message;
-        }
-    }
+PLAGIARISM_DETECTED("内容未通过抄袭检测"),
+
+SAVE_FAILED("保存文章失败");
+
+private final String message;
+
+General(String message) {
+
+this.message = message;
+
+}
+
+@Override
+
+public String message() {
+
+return message;
+
+}
+
+}
+
 }
 ```
 
-* * *
+---
 
 ## 验证过的请求
 
 ```
 public record ValidArticle(
-    AuthorId authorId,
-    String title,
-    String content,
-    AuthorTier authorTier
+
+AuthorId authorId,
+
+String title,
+
+String content,
+
+AuthorTier authorTier
+
 ) {
-    private static final int MIN_TITLE_LENGTH = 10;
-    private static final int MIN_CONTENT_LENGTH = 500;
 
-    public static Result<ValidArticle> validArticle(
-        String authorId,
-        String title,
-        String content,
-        AuthorTier tier
-    ) {
-        return Result.all(
-            AuthorId.authorId(authorId),
-            validateTitle(title),
-            validateContent(content),
-            Result.success(tier)
-        ).map(ValidArticle::new);
-    }
+private static final int MIN_TITLE_LENGTH = 10;
 
-    private static Result<String> validateTitle(String title) {
-        return Verify.ensure(title, Verify.Is::notBlank)
-            .flatMap(t -> t.trim().length() >= MIN_TITLE_LENGTH
-                ? Result.success(t.trim())
-                : PublishError.General.TITLE_TOO_SHORT.result());
-    }
+private static final int MIN_CONTENT_LENGTH = 500;
 
-    private static Result<String> validateContent(String content) {
-        return Verify.ensure(content, Verify.Is::notBlank)
-            .flatMap(c -> c.trim().length() >= MIN_CONTENT_LENGTH
-                ? Result.success(c.trim())
-                : PublishError.General.CONTENT_TOO_SHORT.result());
-    }
+public static Result<ValidArticle> validArticle(
+
+String authorId,
+
+String title,
+
+String content,
+
+AuthorTier tier
+
+) {
+
+return Result.all(
+
+AuthorId.authorId(authorId),
+
+validateTitle(title),
+
+validateContent(content),
+
+Result.success(tier)
+
+).map(ValidArticle::new);
+
+}
+
+private static Result<String> validateTitle(String title) {
+
+return Verify.ensure(title, Verify.Is::notBlank)
+
+.flatMap(t -> t.trim().length() >= MIN_TITLE_LENGTH
+
+? Result.success(t.trim())
+
+: PublishError.General.TITLE_TOO_SHORT.result());
+
+}
+
+private static Result<String> validateContent(String content) {
+
+return Verify.ensure(content, Verify.Is::notBlank)
+
+.flatMap(c -> c.trim().length() >= MIN_CONTENT_LENGTH
+
+? Result.success(c.trim())
+
+: PublishError.General.CONTENT_TOO_SHORT.result());
+
+}
+
 }
 ```
 
-* * *
+---
 
 ## 使用条件模式的用例
-
-
-
-
 
 ```java
 public interface PublishArticle {
 
-    Promise<PublishResult> execute(ArticleRequest request);
+Promise<PublishResult> execute(ArticleRequest request);
 
-    // 步骤接口
-    interface SaveArticle {
-        Promise<ArticleId> apply(ValidArticle article);
-    }
+// 步骤接口
 
-    interface CheckPlagiarism {
-        Promise<ValidArticle> apply(ValidArticle article);
-    }
+interface SaveArticle {
 
-    interface QueueForReview {
-        Promise<PublishResult> apply(ArticleId id, PublishStatus status);
-    }
+Promise<ArticleId> apply(ValidArticle article);
 
-    // 演示条件模式的工厂方法
-    static PublishArticle publishArticle(
-        SaveArticle saveArticle,
-        CheckPlagiarism checkPlagiarism,
-        QueueForReview queueForReview
-    ) {
-        return request -> ValidArticle.validArticle(
-                request.authorId(),
-                request.title(),
-                request.content(),
-                request.authorTier()
-            )
-            .async()
-            .flatMap(article -> routeByAuthorTier(
-                article, saveArticle, checkPlagiarism, queueForReview
-            ));
-    }
+}
 
-    // 条件模式：仅进行路由，不进行数据转换
-    private static Promise<PublishResult> routeByAuthorTier(
-        ValidArticle article,
-        SaveArticle saveArticle,
-        CheckPlagiarism checkPlagiarism,
-        QueueForReview queueForReview
-    ) {
-        return switch (article.authorTier()) {
-            case PREMIUM -> publishImmediately(article, saveArticle);
-            case STANDARD -> queueForEditorialReview(article, saveArticle, queueForReview);
-            case NEW -> queueWithPlagiarismCheck(article, saveArticle, checkPlagiarism, queueForReview);
-        };
-    }
+interface CheckPlagiarism {
 
-    // 路径 1：优质 - 自动发布
-    private static Promise<PublishResult> publishImmediately(
-        ValidArticle article,
-        SaveArticle saveArticle
-    ) {
-        return saveArticle.apply(article)
-            .map(id -> new PublishResult(id, PublishStatus.PUBLISHED));
-    }
+Promise<ValidArticle> apply(ValidArticle article);
 
-    // 路径 2：标准 - 待审核
-    private static Promise<PublishResult> queueForEditorialReview(
-        ValidArticle article,
-        SaveArticle saveArticle,
-        QueueForReview queueForReview
-    ) {
-        return saveArticle.apply(article)
-            .flatMap(id -> queueForReview.apply(id, PublishStatus.PENDING_EDITORIAL_REVIEW));
-    }
+}
 
-    // 路径 3：新用户 - 查重检查 + 高级审核
-    private static Promise<PublishResult> queueWithPlagiarismCheck(
-        ValidArticle article,
-        SaveArticle saveArticle,
-        CheckPlagiarism checkPlagiarism,
-        QueueForReview queueForReview
-    ) {
-        return checkPlagiarism.apply(article)
-            .flatMap(saveArticle::apply)
-            .flatMap(id -> queueForReview.apply(id, PublishStatus.PENDING_SENIOR_REVIEW));
-    }
+interface QueueForReview {
+
+Promise<PublishResult> apply(ArticleId id, PublishStatus status);
+
+}
+
+// 演示条件模式的工厂方法
+
+static PublishArticle publishArticle(
+
+SaveArticle saveArticle,
+
+CheckPlagiarism checkPlagiarism,
+
+QueueForReview queueForReview
+
+) {
+
+return request -> ValidArticle.validArticle(
+
+request.authorId(),
+
+request.title(),
+
+request.content(),
+
+request.authorTier()
+
+)
+
+.async()
+
+.flatMap(article -> routeByAuthorTier(
+
+article, saveArticle, checkPlagiarism, queueForReview
+
+));
+
+}
+
+// 条件模式：仅进行路由，不进行数据转换
+
+private static Promise<PublishResult> routeByAuthorTier(
+
+ValidArticle article,
+
+SaveArticle saveArticle,
+
+CheckPlagiarism checkPlagiarism,
+
+QueueForReview queueForReview
+
+) {
+
+return switch (article.authorTier()) {
+
+case PREMIUM -> publishImmediately(article, saveArticle);
+
+case STANDARD -> queueForEditorialReview(article, saveArticle, queueForReview);
+
+case NEW -> queueWithPlagiarismCheck(article, saveArticle, checkPlagiarism, queueForReview);
+
+};
+
+}
+
+// 路径 1：优质 - 自动发布
+
+private static Promise<PublishResult> publishImmediately(
+
+ValidArticle article,
+
+SaveArticle saveArticle
+
+) {
+
+return saveArticle.apply(article)
+
+.map(id -> new PublishResult(id, PublishStatus.PUBLISHED));
+
+}
+
+// 路径 2：标准 - 待审核
+
+private static Promise<PublishResult> queueForEditorialReview(
+
+ValidArticle article,
+
+SaveArticle saveArticle,
+
+QueueForReview queueForReview
+
+) {
+
+return saveArticle.apply(article)
+
+.flatMap(id -> queueForReview.apply(id, PublishStatus.PENDING_EDITORIAL_REVIEW));
+
+}
+
+// 路径 3：新用户 - 查重检查 + 高级审核
+
+private static Promise<PublishResult> queueWithPlagiarismCheck(
+
+ValidArticle article,
+
+SaveArticle saveArticle,
+
+CheckPlagiarism checkPlagiarism,
+
+QueueForReview queueForReview
+
+) {
+
+return checkPlagiarism.apply(article)
+
+.flatMap(saveArticle::apply)
+
+.flatMap(id -> queueForReview.apply(id, PublishStatus.PENDING_SENIOR_REVIEW));
+
+}
+
 }
 ```
 
-* * *
+---
 
 ## 关键点：条件模式 (Condition Pattern)
 
@@ -5717,9 +6159,13 @@ public interface PublishArticle {
 
 ```java
 return switch (article.authorTier()) {
-    case PREMIUM -> publishImmediately(...);      // 路由到路径 A
-    case STANDARD -> queueForEditorialReview(...); // 路由到路径 B
-    case NEW -> queueWithPlagiarismCheck(...);    // 路由到路径 C
+
+case PREMIUM -> publishImmediately(...);      // 路由到路径 A
+
+case STANDARD -> queueForEditorialReview(...); // 路由到路径 B
+
+case NEW -> queueWithPlagiarismCheck(...);    // 路由到路径 C
+
 };
 ```
 
@@ -5729,16 +6175,29 @@ return switch (article.authorTier()) {
 
 ```java
 // 错误：在条件中进行转换
+
 return switch (article.authorTier()) {
-    case PREMIUM -> saveArticle.apply(article)
-        .map(id -> new PublishResult(id, PublishStatus.PUBLISHED));  // 这里内容太多了
-    ...
+
+case PREMIUM -> saveArticle.apply(article)
+
+.map(id -> new PublishResult(id, PublishStatus.PUBLISHED));  // 这里内容太多了
+
+...
+
 };
 
 // 正确：路由到处理该路径的方法
+
 return switch (article.authorTier()) {
+```
+
+
+
+```java
     case PREMIUM -> publishImmediately(article, saveArticle);  // 委托
+
     ...
+
 };
 ```
 
@@ -5746,25 +6205,22 @@ return switch (article.authorTier()) {
 
 1. **逻辑清晰的路由逻辑** - 在一处展示了所有可能的路径
 2. **可测试的分支** - 每个路由方法都可以独立进行测试
-3. **可扩展性** - 添加新的作者等级仅需添加一个 case
-4. **类型安全** - 如果 switch 不完整，编译器会发出警告
+3. **可扩展性** - 添加新的作者等级仅需添加一个`case`
+4. **类型安全** - 如果`switch`不完整，编译器会发出警告
 
 * * *
 
 ## 测试
-
-
-
 
 ```java
 class PublishArticleTest {
 
     @Nested
     class Routing {
+
         @Test
         void execute_publishesImmediately_forPremiumAuthor() {
             var saved = new AtomicReference<ValidArticle>();
-
             PublishArticle.SaveArticle saveArticle = article -> {
                 saved.set(article);
                 return Promise.success(new ArticleId("art-123"));
@@ -5804,11 +6260,11 @@ class PublishArticleTest {
         @Test
         void execute_checksPlagiarism_forNewAuthor() {
             var plagiarismChecked = new AtomicBoolean(false);
-
             PublishArticle.CheckPlagiarism checkPlagiarism = article -> {
                 plagiarismChecked.set(true);
                 return Promise.success(article);
             };
+
             var useCase = PublishArticle.publishArticle(
                 article -> Promise.success(new ArticleId("art-123")),
                 checkPlagiarism,
@@ -5828,6 +6284,7 @@ class PublishArticleTest {
         void execute_fails_whenPlagiarismDetected() {
             PublishArticle.CheckPlagiarism failingCheck = article ->
                 PublishError.General.PLAGIISM_DETECTED.promise();
+
             var useCase = PublishArticle.publishArticle(
                 article -> Promise.success(new ArticleId("art-123")),
                 failingCheck,
@@ -5853,23 +6310,23 @@ class PublishArticleTest {
 
 ## 练习
 
-1. **添加等级升级**：如果一个 `NEW` 作者拥有 10 篇以上已发布的文章，将其路由为 `STANDARD`。此逻辑应该属于哪里？
-2. **添加定时发布**：`PREMIUM` 作者可以指定发布日期。修改 `Condition` 以以不同的方式路由定时文章。
-3. **提取到过滤器**：使用 `.filter()` 代替单独步骤接口来重写抄袭检查。
+1. **添加等级升级**：如果一个`NEW`作者拥有 10 篇以上已发布的文章，将其路由为`STANDARD`。此逻辑应该属于哪里？
+2. **添加定时发布**：`PREMIUM`作者可以指定发布日期。修改`Condition`以以不同的方式路由定时文章。
+3. **提取到过滤器**：使用`.filter()`代替单独步骤接口来重写抄袭检查。
 
 ## 总结
 
-`PublishArticle` 展示了：
+`PublishArticle`展示了：
 
 - **用于路由的条件模式**：使用切换表达式选择执行路径
 - **条件中不进行转换**：每个分支都委托给一个方法
 - **带枚举的模式匹配**：类型安全的穷尽式的路由
 - **可测试的分支**：每个路由都经过独立测试
-- **与其他模式组合**：路由包含 `Sequencer` 链
+- **与其他模式组合**：路由包含`Sequencer`链
 
 # 第 14b 节：重点示例 - 资金转账
 
-此重点示例演示了在具有审计要求的金融领域中用于跨切关注点的 `Aspects`。
+此重点示例演示了在具有审计要求的金融领域中用于跨切关注点的`Aspects`。
 
 ## 需求
 
@@ -5884,7 +6341,7 @@ class PublishArticleTest {
 - 所有超过阈值的转账都需要额外的授权
 
 **技术需求：**
-- **幂等性**：相同的 `request ID` 不得执行两次
+- **幂等性**：相同的`request ID`不得执行两次
 - **超时**：外部调用必须在 5 秒后超时
 - **重试**：瞬态故障应重试最多 3 次
 
@@ -5924,10 +6381,9 @@ public record TransferResult(
 ) {}
 ```
 
-
-
 ```java
 public sealed interface TransferError extends Cause {
+
     enum General implements TransferError {
         INSUFFICIENT_FUNDS("源账户余额不足"),
         SAME_ACCOUNT("不能转账至同一账户"),
@@ -6004,12 +6460,8 @@ public record ValidTransfer(
 
 ## 带有切面的用例
 
-
-
-
 ```java
 public interface TransferFunds {
-
     Promise<TransferResult> execute(TransferRequest request);
 
     // 步骤接口
@@ -6027,187 +6479,322 @@ public interface TransferFunds {
 
     interface AuditLog {
         Promise<Unit> apply(AuditEntry entry);
-    }
-
-    // 使用面向组合的工厂
-    static TransferFunds transferFunds(
-        CheckIdempotency checkIdempotency,
-        CheckBalance checkBalance,
-        ExecuteTransfer executeTransfer,
-        AuditLog auditLog,
-        TimeSpan timeout,
-        RetryPolicy retryPolicy
-    ) {
-        // 使用切面装饰 executeTransfer
-        var decoratedExecute = withRetry(retryPolicy,
-            withTimeout(timeout,
-                withAudit(auditLog, executeTransfer)
-            )
-        );
-
-        return request -> ValidTransfer.validTransfer(request)
-            .async()
-            .flatMap(checkIdempotency::apply)
-            .flatMap(checkBalance::apply)
-            .flatMap(decoratedExecute);
-    }
-
-    // 切面：超时
-    private static Fn1<ValidTransfer, Promise<TransferResult>> withTimeout(
-        TimeSpan timeout,
-        Fn1<ValidTransfer, Promise<TransferResult>> step
-    ) {
-        return transfer -> step.apply(transfer).timeout(timeout);
-    }
-
-    // 切面：重试
-    private static Fn1<ValidTransfer, Promise<TransferResult>> withRetry(
-        RetryPolicy policy,
-        Fn1<ValidTransfer, Promise<TransferResult>> step
-    ) {
-        return transfer -> retryWithPolicy(policy, () -> step.apply(transfer));
-    }
-
-    private static Promise<TransferResult> retryWithPolicy(
-        RetryPolicy policy,
-        Supplier<Promise<TransferResult>> operation
-    ) {
-        return operation.get()
-            .recover(cause -> {
-                if (policy.shouldRetry(cause) && policy.attemptsRemaining() > 0) {
-                    return retryWithPolicy(policy.decrementAttempts(), operation);
-                }
-                return cause.promise();
-            });
-    }
-
-    // 切面：审计（通过执行前后日志包装执行过程）
-    private static Fn1<ValidTransfer, Promise<TransferResult>> withAudit(
-        AuditLog auditLog,
-        Fn1<ValidTransfer, Promise<TransferResult>> step
-    ) {
-        return transfer -> {
-            var startTime = Instant.now();
-
-            return step.apply(transfer)
-                .onResult(result -> logAuditEntry(auditLog, transfer, result, startTime));
-        };
-    }
-
-    private static void logAuditEntry(
-        AuditLog auditLog,
-        ValidTransfer transfer,
-        Result<TransferResult> result,
-        Instant startTime
-    ) {
-        var entry = new AuditEntry(
-            transfer.requestId(),
-            "TRANSFER",
-            transfer.initiatedBy(),
-            startTime,
-            Instant.now(),
-            result.isSuccess() ? "SUCCESS" : "FAILURE",
-            result.fold(Cause::message, r -> "Transfer completed: " + r.transferId().value())
-        );
-        // 尽力而为：记录日志，如果审计失败则不处理
-        auditLog.apply(entry)
-            .onFailure(e -> { /* fallback */ });
-    }
-}
-
-// 支持类型
-record AuditEntry(
-    String requestId,
-    String operation,
-    String initiatedBy,
-    Instant startedAt,
-    Instant completedAt,
-    String outcome,
-    String details
-) {}
-
-record RetryPolicy(
-    int maxAttempts,
-    int attemptsRemaining,
-    Set<Class extends Cause> retryableErrors
-) {
-    public static RetryPolicy retry(int maxAttempts, Set<Class extends Cause> retryableErrors) {
-        return new RetryPolicy(maxAttempts, maxAttempts, retryableErrors);
-    }
-
-    public boolean shouldRetry(Cause cause) {
-        return retryableErrors.stream()
-            .anyMatch(error -> error.isInstance(cause));
-    }
-
-    public RetryPolicy decrementAttempts() {
-        return new RetryPolicy(maxAttempts, attemptsRemaining - 1, retryableErrors);
-    }
-}
-
-// 步骤实现
-class IdempotencyChecker implements TransferFunds.CheckIdempotency {
-    private final IdempotencyStore store;
-
-    public IdempotencyChecker(IdempotencyStore store) {
-        this.store = store;
-    }
-
-    @Override
-    public Promise<ValidTransfer> apply(ValidTransfer transfer) {
-        return Promise.lift(
-            _ -> TransferError.General.TRANSFER_FAILED,
-            () -> store.exists(transfer.requestId())
-        ).flatMap(exists -> exists
-            ? TransferError.General.DUPLICATE_REQUEST.promise()
-            : Promise.success(transfer));
-    }
-}
-
-class BalanceChecker implements TransferFunds.CheckBalance {
-    private final AccountRepository accounts;
-
-    public BalanceChecker(AccountRepository accounts) {
-        this.accounts = accounts;
-    }
-
-    @Override
-    public Promise<ValidTransfer> apply(ValidTransfer transfer) {
-        return accounts.getBalance(transfer.sourceAccount())
-            .flatMap(balance -> balance.isGreaterThan(transfer.amount())
-                ? Promise.success(transfer)
-                : TransferError.General.INSUFFICIENT_FUNDS.promise());
-    }
-}
-```
-
 
 
 
 ```java
-public class TransferExecutor implements TransferFunds.ExecuteTransfer {
+    }
+
+    // 使用面向组合的工厂
+
+    static TransferFunds transferFunds(
+
+        CheckIdempotency checkIdempotency,
+
+        CheckBalance checkBalance,
+
+        ExecuteTransfer executeTransfer,
+
+        AuditLog auditLog,
+
+        TimeSpan timeout,
+
+        RetryPolicy retryPolicy
+
+    ) {
+
+        // 使用切面装饰 executeTransfer
+
+        var decoratedExecute = withRetry(retryPolicy,
+
+            withTimeout(timeout,
+
+                withAudit(auditLog, executeTransfer)
+
+            )
+
+        );
+
+        return request -> ValidTransfer.validTransfer(request)
+
+            .async()
+
+            .flatMap(checkIdempotency::apply)
+
+            .flatMap(checkBalance::apply)
+
+            .flatMap(decoratedExecute);
+
+    }
+
+    // 切面：超时
+
+    private static Fn1<ValidTransfer, Promise<TransferResult>> withTimeout(
+
+        TimeSpan timeout,
+
+        Fn1<ValidTransfer, Promise<TransferResult>> step
+
+    ) {
+
+        return transfer -> step.apply(transfer).timeout(timeout);
+
+    }
+
+    // 切面：重试
+
+    private static Fn1<ValidTransfer, Promise<TransferResult>> withRetry(
+
+        RetryPolicy policy,
+
+        Fn1<ValidTransfer, Promise<TransferResult>> step
+
+    ) {
+
+        return transfer -> retryWithPolicy(policy, () -> step.apply(transfer));
+
+    }
+
+    private static Promise<TransferResult> retryWithPolicy(
+
+        RetryPolicy policy,
+
+        Supplier<Promise<TransferResult>> operation
+
+    ) {
+
+        return operation.get()
+
+            .recover(cause -> {
+
+                if (policy.shouldRetry(cause) && policy.attemptsRemaining() > 0) {
+
+                    return retryWithPolicy(policy.decrementAttempts(), operation);
+
+                }
+
+                return cause.promise();
+
+            });
+
+    }
+
+    // 切面：审计（通过执行前后日志包装执行过程）
+
+    private static Fn1<ValidTransfer, Promise<TransferResult>> withAudit(
+
+        AuditLog auditLog,
+
+        Fn1<ValidTransfer, Promise<TransferResult>> step
+
+    ) {
+
+        return transfer -> {
+
+            var startTime = Instant.now();
+
+            return step.apply(transfer)
+
+                .onResult(result -> logAuditEntry(auditLog, transfer, result, startTime));
+
+        };
+
+    }
+
+    private static void logAuditEntry(
+
+        AuditLog auditLog,
+
+        ValidTransfer transfer,
+
+        Result<TransferResult> result,
+
+        Instant startTime
+
+    ) {
+
+        var entry = new AuditEntry(
+
+            transfer.requestId(),
+
+            "TRANSFER",
+
+            transfer.initiatedBy(),
+
+            startTime,
+
+            Instant.now(),
+
+            result.isSuccess() ? "SUCCESS" : "FAILURE",
+
+            result.fold(Cause::message, r -> "Transfer completed: " + r.transferId().value())
+
+        );
+
+        // 尽力而为：记录日志，如果审计失败则不处理
+
+        auditLog.apply(entry)
+
+            .onFailure(e -> { /* fallback */ });
+
+    }
+
+}
+
+// 支持类型
+
+record AuditEntry(
+
+    String requestId,
+
+    String operation,
+
+    String initiatedBy,
+
+    Instant startedAt,
+
+    Instant completedAt,
+
+    String outcome,
+
+    String details
+
+) {}
+
+record RetryPolicy(
+
+    int maxAttempts,
+
+    int attemptsRemaining,
+
+    Set<Class extends Cause> retryableErrors
+
+) {
+
+    public static RetryPolicy retry(int maxAttempts, Set<Class extends Cause> retryableErrors) {
+
+        return new RetryPolicy(maxAttempts, maxAttempts, retryableErrors);
+
+    }
+
+    public boolean shouldRetry(Cause cause) {
+
+        return retryableErrors.stream()
+
+            .anyMatch(error -> error.isInstance(cause));
+
+    }
+
+    public RetryPolicy decrementAttempts() {
+
+        return new RetryPolicy(maxAttempts, attemptsRemaining - 1, retryableErrors);
+
+    }
+
+}
+
+// 步骤实现
+
+class IdempotencyChecker implements TransferFunds.CheckIdempotency {
+
+    private final IdempotencyStore store;
+
+    public IdempotencyChecker(IdempotencyStore store) {
+
+        this.store = store;
+
+    }
+
+    @Override
+
+    public Promise<ValidTransfer> apply(ValidTransfer transfer) {
+
+        return Promise.lift(
+
+            _ -> TransferError.General.TRANSFER_FAILED,
+
+            () -> store.exists(transfer.requestId())
+
+        ).flatMap(exists -> exists
+
+            ? TransferError.General.DUPLICATE_REQUEST.promise()
+
+            : Promise.success(transfer));
+
+    }
+
+}
+
+class BalanceChecker implements TransferFunds.CheckBalance {
+
     private final AccountRepository accounts;
+
+    public BalanceChecker(AccountRepository accounts) {
+
+        this.accounts = accounts;
+
+    }
+
+    @Override
+
+    public Promise<ValidTransfer> apply(ValidTransfer transfer) {
+
+        return accounts.getBalance(transfer.sourceAccount())
+
+            .flatMap(balance -> balance.isGreaterThan(transfer.amount())
+
+                ? Promise.success(transfer)
+
+                : TransferError.General.INSUFFICIENT_FUNDS.promise());
+
+    }
+
+}
+```
+
+```java
+public class TransferExecutor implements TransferFunds.ExecuteTransfer {
+
+    private final AccountRepository accounts;
+
     private final IdempotencyStore idempotencyStore;
 
     @Override
+
     public Promise<TransferResult> apply(ValidTransfer transfer) {
+
         return Promise.lift(
+
             _ -> TransferError.General.TRANSFER_FAILED,
+
             () -> executeInTransaction(transfer)
+
         );
+
     }
 
     private TransferResult executeInTransaction(ValidTransfer transfer) {
+
         // Transaction
+
         accounts.debit(transfer.sourceAccount(), transfer.amount());
+
         accounts.credit(transfer.destinationAccount(), transfer.amount());
+
         idempotencyStore.record(transfer.requestId());
+
         return new TransferResult(
+
             UUID.randomUUID().toString(),
+
             transfer.amount(),
+
             Instant.now()
+
         );
+
     }
+
 }
 ```
 
@@ -6227,15 +6814,19 @@ Request -> [Retry -> [Timeout -> [Audit -> Execute]]]
 
 顺序至关重要。切面是从外向内应用的：
 
-```
+```java
 var decorated = withRetry(policy,      // 1. 外层：重试封装所有内容
+
     withTimeout(timeout,                // 2. 中层：每次尝试的超时
+
         withAudit(auditLog, execute)    // 3. 内层：对每次尝试进行审计
+
     )
+
 );
 ```
 
-这意味着：`Retry` 包裹了 `timeout`（每次重试尝试都有自己的超时），`timeout` 包裹了 `audit`（审计在超时范围内发生），`audit` 包裹了 `execute`（执行过程被审计）。
+这意味着：`Retry`包裹了`timeout`（每次重试尝试都有自己的超时），`timeout`包裹了`audit`（审计在超时范围内发生），`audit`包裹了`execute`（执行过程被审计）。
 
 ### 标准组合顺序
 
@@ -6254,154 +6845,170 @@ var decorated = withRetry(policy,      // 1. 外层：重试封装所有内容
 
 ```java
 @Test
+
 void withTimeout_fails_whenTimeoutExceeds() {
+
     var slowStep = transfer -> Promise.<TransferResult>promise()
+
         .timeout(TimeSpan.timeSpan(100).millis()); // 永远不会解析
 
     var decorated = withTimeout(TimeSpan.timeSpan(50).millis(), slowStep);
 
     decorated.apply(validTransfer())
+
         .await()
+
         .onSuccess(Assertions::fail); // 应该超时
+
 }
 ```
-
-
-
 
 ```java
 class TransferFundsTest {
 
     @Nested
+
     class Aspects {
 
         @Test
+
         void execute_retriesOnTransientFailure() {
+
             var attempts = new AtomicInteger(0);
 
             TransferFunds.ExecuteTransfer failingThenSucceeding = transfer -> {
+
                 if (attempts.incrementAndGet() < 3) {
+
                     return new TransientError().promise();
+
                 }
+
                 return Promise.success(new TransferResult(
+
                     new TransferId("tx-123"),
+
                     transfer.amount(),
+
                     Instant.now()
+
                 ));
+
             };
 
             var policy = RetryPolicy.retryPolicy(3, Set.of(TransientError.class));
 
             var useCase = TransferFunds.transferFunds(
+
                 t -> Promise.success(t),
+
                 t -> Promise.success(t),
+
                 failingThenSucceeding,
+
                 e -> Promise.success(Unit.INSTANCE),
+
                 TimeSpan.timeSpan(5).seconds(),
+
                 policy
+
             );
 
             useCase.execute(validRequest())
+
                 .await()
+
                 .onFailure(Assertions::fail)
+
                 .onSuccess(result -> assertEquals(3, attempts.get()));
+
         }
 
         @Test
-        void execute_auditsSuccessfulTransfer() {
-            var auditedEntries = new ArrayList<AuditEntry>();
-
-            TransferFunds.AuditLog auditLog = entry -> {
-                auditedEntries.add(entry);
-                return Promise.success(Unit.INSTANCE);
-            };
-
-            var useCase = TransferFunds.transferFunds(
-                t -> Promise.success(t),
-                t -> Promise.success(t),
-                t -> Promise.success(new TransferResult(new TransferId("tx-123"), t.amount(), Instant.now())),
-                auditLog,
-                TimeSpan.timeSpan(5).seconds(),
-                RetryPolicy.retryPolicy(0, Set.of())
-            );
-
-            useCase.execute(validRequest())
-                .await()
-                .onFailure(Assertions::fail);
-
-            assertEquals(1, auditedEntries.size());
-            assertEquals("SUCCESS", auditedEntries.get(0).outcome());
-        }
-
-        @Test
-        void execute_auditsFailedTransfer() {
-            var auditedEntries = new ArrayList<AuditEntry>();
-
-            TransferFunds.AuditLog auditLog = entry -> {
-                auditedEntries.add(entry);
-                return Promise.success(Unit.INSTANCE);
-            };
-
-            var useCase = TransferFunds.transferFunds(
-                t -> Promise.success(t),
-                TransferError.General.INSUFFICIENT_FUNDS.promise(),
-                t -> Promise.success(new TransferResult(new TransferId("tx-123"), t.amount(), Instant.now())),
-                auditLog,
-                TimeSpan.timeSpan(5).seconds(),
-                RetryPolicy.retryPolicy(0, Set.of())
-            );
-
-            useCase.execute(validRequest())
-                .await()
-                .onSuccess(Assertions::fail);
-
-            // 即使失败了也会记录审计
-            assertEquals(1, auditedEntries.size());
-            assertEquals("FAILURE", auditedEntries.get(0).outcome());
-        }
-
-        @Test
-        void execute_succeedsIfAuditFails() {
-            TransferFunds.AuditLog failingAudit = entry ->
-                Cause("Audit unavailable").promise();
-            var useCase = TransferFunds.transferFunds(
-                t -> Promise.success(t),
-                t -> Promise.success(t),
-                t -> Promise.success(new TransferResult(new TransferId("tx-123"), t.amount(), Instant.now())),
-                failingAudit,
-                TimeSpan.timeSpan(5).seconds(),
-                RetryPolicy.retryPolicy(0, Set.of())
-            );
-
-            // 如果审计失败，转账仍应该成功
-            useCase.execute(validRequest())
-                .await()
-                .onFailure(Assertions::fail);
-        }
-    }
-
-    private TransferRequest validRequest() {
-        return new TransferRequest(
-            "req-123",
-            "acc-source",
-            "acc-dest",
-            100.00,
-            "user@example.com"
-        );
-    }
-
-    static class TransientError implements Cause {
-        @Override
-        public String message() {
-            return "Transient error";
-        }
-    }
-}
 ```
 
 
 
+```java
+void execute_auditsSuccessfulTransfer() {
+    var auditedEntries = new ArrayList<AuditEntry>();
+    TransferFunds.AuditLog auditLog = entry -> {
+        auditedEntries.add(entry);
+        return Promise.success(Unit.INSTANCE);
+    };
+    var useCase = TransferFunds.transferFunds(
+        t -> Promise.success(t),
+        t -> Promise.success(t),
+        t -> Promise.success(new TransferResult(new TransferId("tx-123"), t.amount(), Instant.now())),
+        auditLog,
+        TimeSpan.timeSpan(5).seconds(),
+        RetryPolicy.retryPolicy(0, Set.of())
+    );
+    useCase.execute(validRequest())
+        .await()
+        .onFailure(Assertions::fail);
+    assertEquals(1, auditedEntries.size());
+    assertEquals("SUCCESS", auditedEntries.get(0).outcome());
+}
 
+@Test
+void execute_auditsFailedTransfer() {
+    var auditedEntries = new ArrayList<AuditEntry>();
+    TransferFunds.AuditLog auditLog = entry -> {
+        auditedEntries.add(entry);
+        return Promise.success(Unit.INSTANCE);
+    };
+    var useCase = TransferFunds.transferFunds(
+        t -> Promise.success(t),
+        TransferError.General.INSUFFICIENT_FUNDS.promise(),
+        t -> Promise.success(new TransferResult(new TransferId("tx-123"), t.amount(), Instant.now())),
+        auditLog,
+        TimeSpan.timeSpan(5).seconds(),
+        RetryPolicy.retryPolicy(0, Set.of())
+    );
+    useCase.execute(validRequest())
+        .await()
+        .onSuccess(Assertions::fail);
+    // 即使失败了也会记录审计
+    assertEquals(1, auditedEntries.size());
+    assertEquals("FAILURE", auditedEntries.get(0).outcome());
+}
+
+@Test
+void execute_succeedsIfAuditFails() {
+    TransferFunds.AuditLog failingAudit = entry ->
+        Cause("Audit unavailable").promise();
+    var useCase = TransferFunds.transferFunds(
+        t -> Promise.success(t),
+        t -> Promise.success(t),
+        t -> Promise.success(new TransferResult(new TransferId("tx-123"), t.amount(), Instant.now())),
+        failingAudit,
+        TimeSpan.timeSpan(5).seconds(),
+        RetryPolicy.retryPolicy(0, Set.of())
+    );
+    // 如果审计失败，转账仍应该成功
+    useCase.execute(validRequest())
+        .await()
+        .onFailure(Assertions::fail);
+}
+
+private TransferRequest validRequest() {
+    return new TransferRequest(
+        "req-123",
+        "acc-source",
+        "acc-dest",
+        100.00,
+        "user@example.com"
+    );
+}
+
+static class TransientError implements Cause {
+    @Override
+    public String message() {
+        return "Transient error";
+    }
+}
+```
 
 ## 为什么按标准进行垂直切片（vertical slicing）
 
@@ -6416,9 +7023,9 @@ class TransferFundsTest {
 com.example.app/
 |-- usecase/
 |   |-- registeruser/              # 用例 1 (垂直切片)
-|   ||-- RegisterUser.java      # 用例接口 + 工厂方法
-|   ||-- RegistrationError.java # 密封错误接口
-|   ||-- [internal types]       # 有效请求，中间记录
+|   |   |-- RegisterUser.java      # 用例接口 + 工厂方法
+|   |   |-- RegistrationError.java # 密封错误接口
+|   |   |-- [internal types]       # 有效请求，中间记录
 |   |
 |   |-- getuserprofile/            # 用例 2 (垂直切片)
 |       |-- GetUserProfile.java
@@ -6433,7 +7040,7 @@ com.example.app/
 |
 |-- adapter/
 |   |-- rest/                      # 入站适配器 (HTTP)
-|   ||-- UserController.java
+|   |   |-- UserController.java
 |   |
 |   |-- persistence/               # 出站适配器 (DB)
 |       |-- JooqUserRepository.java
@@ -6444,7 +7051,7 @@ com.example.app/
 
 ### 包放置规则
 
-### 用例包
+#### 用例包
 
 `com.example.app.usecase.<usecasename>`:
 - 用例接口和工厂方法
@@ -6454,7 +7061,7 @@ com.example.app/
 
 **规则**：如果一个类型仅被此用例使用，则保留在此处。
 
-### 领域共享
+#### 领域共享
 
 `com.example.app.domain.shared`:
 - 跨多个用例复用的值对象
@@ -6463,7 +7070,7 @@ com.example.app/
 
 **反模式**：不要预先创建此类结构——让复用驱动移动。
 
-### 适配器包
+#### 适配器包
 
 `com.example.app.adapter.*`:
 - `adapter.rest` - HTTP 控制器，请求/响应 DTOs
@@ -6473,7 +7080,7 @@ com.example.app/
 
 **规则**：适配器实现来自用例的步骤接口。
 
-### 配置包
+#### 配置包
 
 `com.example.app.config`:
 - Spring/框架配置
@@ -6535,33 +7142,48 @@ bootstrap      -> adapters, application, domain
 7. 静态导入（与分组顺序一致）
 ```
 
-### 按文件类型排序排序
+### 按文件类型排序
 
-**用例接口**：1. 公共 API（Request, Response records） 2. `execute` 方法 3. 内部类型（`ValidRequest` + 校验辅助方法）4. 步骤接口 5. 领域片段（仅由此用例使用的 records）6. 工厂方法
+**用例接口**：
+1. 公共 API（`Request`, `Response` records）
+2. `execute` 方法
+3. 内部类型（`ValidRequest` + 校验辅助方法）
+4. 步骤接口
+5. 领域片段（仅由此用例使用的 records）
+6. 工厂方法
 
-**值对象**：1. 静态常量（模式，原因工厂）2. 工厂方法 3. 辅助方法
+**值对象**：
+1. 静态常量（模式，原因工厂）
+2. 工厂方法
+3. 辅助方法
 
-**错误接口**：1. 枚举变体（固定消息错误，分组）2. 记录变体（携带数据的错误）
+**错误接口**：
+1. 枚举变体（固定消息错误，分组）
+2. 记录变体（携带数据的错误）
 
-**步骤实现**：1. 依赖项（final 字段）2. 构造函数 3. 接口方法 4. 私有辅助方法
+**步骤实现**：
+1. 依赖项（`final` 字段）
+2. 构造函数
+3. 接口方法
+4. 私有辅助方法
 
-**工具接口**：1. 常量 2. 静态方法 3. `unused` 记录（始终在最后——防止实现）
+**工具接口**：
+1. 常量
+2. 静态方法
+3. `unused` 记录（始终在最后——防止实现）
 
 ### 工具接口模式
 
-工具接口取代了工具类。使用 `sealed` 修符配合 `unused` 记录可以防止实现：
+工具接口取代了工具类。使用 `sealed` 修饰符配合 `unused` 记录可以防止实现：
 
 ```java
 public sealed interface ValidationUtils {
-
     static Pattern PHONE_PATTERN = Pattern.compile("^\\+?[0-9]{10,14}$");
-
     static Result<String> normalizePhone(String raw) {
         return Verify.ensure(raw, Verify.Is::notNull)
                      .map(s -> s.replaceAll("\\s-", ""))
                      .filter(PHONE_PATTERN.asPredicate());
     }
-
     record unused() implements ValidationUtils {}
 }
 ```
@@ -6577,9 +7199,9 @@ public sealed interface ValidationUtils {
 
 ## 框架集成
 
-### 完整示例：Spring REST -> 用例 -> JOQ
+### 完整示例：Spring REST -> 用例 -> JOOQ
 
-### 1. 用例（功能性核心）
+#### 1. 用例（功能性核心）
 
 ```java
 public interface GetUserProfile {
@@ -6591,13 +7213,10 @@ public interface GetUserProfile {
                                 user.displayName());
         }
     }
-
     Promise<Response> execute(Request request);
-
     interface FetchUser {
         Promise<User> apply(UserId userId);
     }
-
     static GetUserProfile getUserProfile(FetchUser fetchUser) {
         return request -> UserId.userId(request.userId())
                                 .async()
@@ -6609,47 +7228,42 @@ public interface GetUserProfile {
 
 纯业务逻辑。无框架依赖。
 
-### 2. REST 控制器（入站适配器）
-
-
-
+#### 2. REST 控制器（入站适配器）
 
 ```java
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
     private final GetUserProfile getUserProfile;
-
     public UserController(GetUserProfile getUserProfile) {
         this.getUserProfile = getUserProfile;
     }
-
     @GetMapping("/{userId}")
     public ResponseEntity<?> getProfile(@PathVariable String userId) {
         var request = new GetUserProfile.Request(userId);
-
         return getUserProfile.execute(request)
             .await()
             .fold(this::toErrorResponse,
                   response -> ResponseEntity.ok(response));
     }
-
     private ResponseEntity<?> toErrorResponse(Cause cause) {
         return switch (cause) {
             case ProfileError.UserNotFound _ ->
-                ResponseEntity.status(HttpStatus.NOT_FOUND)
-                              .body(Map.of("error", cause.message()))
+```
 
-            case ProfileError.InvalidUserId _ ->
-                ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                              .body(Map.of("error", cause.message()));
 
-            default ->
-                ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                              .body(Map.of("error", "Internal server error"));
-        };
-    }
-}
+
+```java
+ResponseEntity.status(HttpStatus.NOT_FOUND)
+              .body(Map.of("error", cause.message()))
+
+case ProfileError.InvalidUserId _ ->
+    ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                  .body(Map.of("error", cause.message()));
+
+default ->
+    ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                  .body(Map.of("error", "Internal server error"));
 ```
 
 薄适配器：HTTP -> 请求 -> 用例 -> 响应原因 -> HTTP。
@@ -6691,7 +7305,6 @@ public class JooqUserRepository implements GetUserProfile.FetchUser {
 ```java
 @Configuration
 public class UseCaseConfig {
-
     @Bean
     public GetUserProfile getUserProfile(JooqUserRepository repository) {
         return GetUserProfile.getUserProfile(repository);
@@ -6704,21 +7317,26 @@ public class UseCaseConfig {
 ## 核心原则
 
 ### 1. 垂直切片 (Vertical Slicing)
+
 每个用例包都是一个垂直切片，包含了该功能所需的所有内容。
 
 ### 2. 最小共享 (Minimal Sharing)
+
 仅在真正可复用时才共享对象。过早共享会导致耦合。
 
 ### 3. 框架位于边缘 (Framework at Edges)
+
 业务逻辑（`use cases`、`domain`）零框架依赖。适配器处理框架集成。
 
 ### 4. 清晰的依赖关系
+
 - `Use cases` 依赖于 `domain`
 - `Adapters` 依赖 `use cases`（实现接口）
 - `Config` 依赖 `use cases` + `adapters`（将它们连接在一起）
 - **绝不要**：`use case` 依赖 `adapter`
 
 ### 5. 适配器隔离 (Adapter Isolation)
+
 所有的 I/O 操作都存在 `adapters` 中。框架切换（`Spring` -> `Micronaut`）仅影响 `adapters`。
 
 ## 事项存放处
@@ -6735,6 +7353,7 @@ public class UseCaseConfig {
 | 配置 | `config` | Bean 组装 |
 
 ## 核心收获
+
 1. **垂直切片**：每个用例都是自包含的
 2. **移动到共享层**：不要过早这么做
 3. **框架位于边缘**：用例中是纯业务业务逻辑
@@ -6742,16 +7361,20 @@ public class UseCaseConfig {
 5. **需要时模块化**：不要过早模块化
 
 ## 练习题
-参考 `附录 B` 的练习：
+
+参考`附录 B`的练习：
+
 - 练习 5.4：包组织
 - 练习 6.2：模块设置
 
 ## 接下来
-`第 16 章：系统化应用` 将涵盖系统化应用——编写和审查 JBCT 代码的清单。
+
+`第 16 章：系统化应用`将涵盖系统化应用——编写和审查 JBCT 代码的清单。
 
 # 第 16 章：系统化应用
 
 ## 你将学到
+
 - 用于保持一致的 JBCT 应用的 8 个检查点
 - 供立即查询的快速表格
 - 常见错误的违反违规模式
@@ -6760,7 +7383,9 @@ public class UseCaseConfig {
 **前提条件**：`第 15 章：项目结构`
 
 ## 检查点方法 (The Checkpoint Approach)
+
 JBCT 应用通过**检查点**工作：即在编码过程中停顿并验证的特定时刻。每个检查点包含：
+
 - **触发器**：何时应用
 - **规则**：检查什么
 - **修复**：如何纠正违规
@@ -6768,18 +7393,21 @@ JBCT 应用通过**检查点**工作：即在编码过程中停顿并验证的�
 目标是通过系统化验证实现 100% 的合规，而不是英雄式的努力。
 
 ## 检查点 1：编写 Lambda 之前
-**触发器**：正准备写 `->`
+
+**触发器**：正准备写`->`
 
 ### 待检查规则
+
 | 规则 | 检查 | 修复 |
 | --- | --- | --- |
-| L1 | 是否可以使用方法引用？ | 使用 `Type::method` |
-| L2 | Lambda 是否有 `{}`？ | 提取到命名方法 |
+| L1 | 是否可以使用方法引用？ | 使用`Type::method` |
+| L2 | Lambda 是否有`{}`？ | 提取到命名方法 |
 | L3 | 内部是否有嵌套的单子操作？ | 提取内部操作 |
-| L4 | 控制流 (`if`/`switch`/`try`)？ | 提取到命名方法 |
+| L4 | 控制流（`if`/`switch`/`try`）？ | 提取到命名方法 |
 | L5 | 多个语句？ | 提取到命名方法 |
 
 ### 允许的 Lambda 形式（详尽列表）
+
 ```java
 // 方法引用（始终优先）
 .map(Email::new)
@@ -6794,6 +7422,7 @@ JBCT 应用通过**检查点**工作：即在编码过程中停顿并验证的�
 ```
 
 ### 提取模式
+
 ```java
 // 之前（违规）
 .map(data -> {
@@ -6815,9 +7444,11 @@ private int cacheAndCount(Data data) {
 ***
 
 ## 检查点 2：选择返回类型
+
 **触发器**：编写方法签名
 
 ### 决策树
+
 ```
 此操作会失败吗？
 |-- NO：值可能缺失吗？
@@ -6829,64 +7460,59 @@ private int cacheAndCount(Data data) {
 ```
 
 ### 待检查规则
+
 | 规则 | 检查 | 修复 |
 | --- | --- | --- |
 | R1 | Result 是否总是成功？ | 更改为 T |
 | R2 | Option 是否总是存在？ | 更改为 T |
-| R3 | 使用了 `Promise<Result<T>>`？ | 仅使用 `Promise<T>` |
+| R3 | 使用了`Promise<Result<T>>`？ | 仅使用`Promise<T>` |
 | R4 | 返回 Void？ | 使用 Unit |
-| R5 | 返回 null？ | 使用 `Option<T>` |
-
-
-
+| R5 | 返回 null？ | 使用`Option<T>` |
 
 ## 检查点 3：编写工厂方法
 
-**触发条件**: 为类型创建构造逻辑
+**触发条件**：为类型创建构造逻辑
 
 ### 检查规则
 
 | 规则 | 检查 | 修复 |
-
 | --- | --- | --- |
-
-| F1 | 名称是否符合 `TypeName.typeName()`？ | 重命名 |
+| F1 | 名称是否符合`TypeName.typeName()`？ | 重命名 |
 | F2 | 验证是否在构造时发生？ | 移动到工厂方法 |
 | F3 | 返回类型是否匹配验证需求？ | 应用检查点 2 |
 | F4 | 构造函数是否公开？ | 使工厂方法成为唯一入口 |
 
 ### 模式
 
-```
-[](#cb266-1)public record Email(String value) {
-[](#cb266-2)    // 带有验证的工厂 -> Result<T>
-[](#cb266-3)    public static Result<Email> email(String raw) {
-[](#cb266-4)        return Verify.ensure(raw, Verify.Is::notNull)
-[](#cb266-5)            .map(String::trim)
-[](#cb266-6)            .filter(INVALID_EMAIL, s -> PATTERN.matcher(s).matches())
-[](#cb266-7)            .map(Email::new);
-[](#cb266-8)    }
-[](#cb266-9)}
-[](#cb266-11)public record Config(DbUrl url, DbPassword pass) {
-[](#cb266-12)    // 不带验证的工厂 -> T
-[](#cb266-13)    public static Config config(DbUrl url, DbPassword pass) {
-[](#cb266-14)        return new Config(url, pass);
-[](#cb266-15)    }
-[](#cb266-16)}
+```java
+public record Email(String value) {
+    // 带有验证的工厂 -> Result<T>
+    public static Result<Email> email(String raw) {
+        return Verify.ensure(raw, Verify.Is::notNull)
+            .map(String::trim)
+            .filter(INVALID_EMAIL, s -> PATTERN.matcher(s).matches())
+            .map(Email::new);
+    }
+}
+
+public record Config(DbUrl url, DbPassword pass) {
+    // 不带验证的工厂 -> T
+    public static Config config(DbUrl url, DbPassword pass) {
+        return new Config(url, pass);
+    }
+}
 ```
 
 * * *
 
 ## 检查点 4：设计类/接口
 
-**触发条件**: 创建新类型
+**触发条件**：创建新类型
 
 ### 检查规则
 
 | 规则 | 检查 | 修复 |
-
 | --- | --- | --- |
-
 | D1 | 它属于哪个区域？ | 放在正确的包中 |
 | D2 | 是否将 I/O 与领域逻辑混在一起？ | 拆分为独立的类型 |
 | D3 | 是否使用原始类型表示领域概念？ | 提取值对象 |
@@ -6909,52 +7535,48 @@ Zone C (基础设施层): DB、外部 API、配置加载
 
 ## 检查点 5：编写单单链
 
-**触发条件**: 链式调用 `.map()/.flatMap()/.filter()` 等
+**触发条件**：链式调用`.map()`/`.flatMap()`/`.filter()`等
 
 ### 检查规则
 
 | 规则 | 检查 | 修复 |
-
 | --- | --- | --- |
-
 | M1 | 每个方法是否只有单一模式？ | 提取混合模式 |
-| M2 | 链长度是否 <= `5` 步？ | 拆分为组合方法 |
-| M3 | 副作用是否仅在终端操作中？ | 移动到 `.onSuccess()/.onFailure()` |
+| M2 | 链长度是否 <= `5`步？ | 拆分为组合方法 |
+| M3 | 副作用是否仅在终端操作中？ | 移动到`.onSuccess()`/`.onFailure()` |
 | M4 | 日志是否与逻辑混合？ | 将日志移动到适当的层 |
 
 ### 模式分离
 
-```
-[](#cb268-1)// 违反：混合了顺序器(Sequencer) + 并行(Fork-Join)
-[](#cb268-2)return validate(request)
-[](#cb268-3)    .flatMap(req -> Result.all(
-[](#cb268-4)        checkInventory(req),
-[](#cb268-5)        validatePayment(req)
-[](#cb268-6)    ).map((inv, pay) -> proceed(req)));
-[](#cb268-7)
-[](#cb268-8)// 修复：提取并行合并
-[](#cb268-9)return validate(request)
-[](#cb268-10)    .flatMap(this::validateOrder)
-[](#cb268-11)    .flatMap(this::processOrder);
-[](#cb268-12)
-[](#cb268-13)private Result<ValidRequest> validateOrder(ValidRequest req) {
-[](#cb268-14)    return Result.all(checkInventory(req), validatePayment(req))
-[](#cb268-15)    .map((inv, pay) -> req);
-[](#cb268-16)}
+```java
+// 违反：混合了顺序器(Sequencer) + 并行(Fork-Join)
+return validate(request)
+    .flatMap(req -> Result.all(
+        checkInventory(req),
+        validatePayment(req)
+    ).map((inv, pay) -> proceed(req)));
+
+// 修复：提取并行合并
+return validate(request)
+    .flatMap(this::validateOrder)
+    .flatMap(this::processOrder);
+
+private Result<ValidRequest> validateOrder(ValidRequest req) {
+    return Result.all(checkInventory(req), validatePayment(req))
+        .map((inv, pay) -> req);
+}
 ```
 
 * * *
 
 ## 检查点 6：添加日志
 
-**触发条件**: 添加日志语句
+**触发条件**：添加日志语句
 
 ### 检查规则
 
 | 规则 | 检查 | 修复 |
-
 | --- | --- | --- |
-
 | G1 | 日志是否依赖数据？ | 移除条件 |
 | G2 | Logger 是否作为参数传递？ | 将日志移动到所有者处 |
 | G3 | 是否在纯转换中记录日志？ | 移动到终端操作 |
@@ -6962,24 +7584,24 @@ Zone C (基础设施层): DB、外部 API、配置加载
 
 ### 所有权模式
 
-```
-[](#cb269-1)// 违反：调用者替被调用者记录
-[](#cb269-2)cache.refresh()
-[](#cb269-3)    .onSuccess(count -> log.debug("Refreshed {}", count));
-[](#cb269-4)
-[](#cb269-5)// 修复：缓存自身拥有自己的日志
-[](#cb269-6)// 在 GenerationCache 中:
-[](#cb269-7)public Result<Integer> refresh() {
-[](#cb269-8)    return doRefresh()
-[](#cb269-9)        .onSuccess(count -> log.debug("Refreshed {}", count));
-[](#cb269-10)}
+```java
+// 违反：调用者替被调用者记录
+cache.refresh()
+    .onSuccess(count -> log.debug("Refreshed {}", count));
+
+// 修复：缓存自身拥有自己的日志
+// 在 GenerationCache 中:
+public Result<Integer> refresh() {
+    return doRefresh()
+        .onSuccess(count -> log.debug("Refreshed {}", count));
+}
 ```
 
 * * *
 
 ## 检查点 7：检查完整性
 
-**触发条件**: 在提交代码进行评审前
+**触发条件**：在提交代码进行评审前
 
 ### 验证清单
 
@@ -6987,7 +7609,7 @@ Zone C (基础设施层): DB、外部 API、配置加载
 
 ## 检查点 8：实现模式
 
-**触发条件**: 选择实现风格
+**触发条件**：选择实现风格
 
 ### 嵌套记录 vs Lambda 模式
 
@@ -7001,20 +7623,18 @@ Zone C (基础设施层): DB、外部 API、配置加载
 
 **嵌套记录模式**（需要状态时）：
 
-```
-[](#cb271-1)static GenerationCache generationCache(WorkConfig config) {
-[](#cb271-2)    record generationCache(
-[](#cb271-3)        AtomicReference<Instant> lastRefreshTime,
-[](#cb271-4)        ConcurrentMap<String, Generation> cache
+```java
+static GenerationCache generationCache(WorkConfig config) {
+    record generationCache(
+        AtomicReference<Instant> lastRefreshTime,
+        ConcurrentMap<String, Generation> cache
     ) {}
-[](#cb271-5)    return new generationCache(
+    return new generationCache(
         new AtomicReference<>(Instant.now()),
         new ConcurrentHashMap<>()
     );
 }
 ```
-
-
 
 
 
@@ -7068,12 +7688,10 @@ public class UserService {
         // 校验
         validateEmail(dto.getEmail());
         validatePassword(dto.getPassword());
-
         // 业务逻辑
         if (userRepository.existsByEmail(dto.getEmail())) {
             throw new EmailExistsException();
         }
-
         // 基础设施
         String hashedPassword = passwordEncoder.encode(dto.getPassword());
         User user = new User(dto.getEmail(), hashedPassword);
@@ -7091,11 +7709,11 @@ public class UserService {
 **做法：** 1. 添加 Pragmatica Lite 依赖 2. 为经常校验的字段创建值对象 3. 在新代码中使用值对象 4. 逐渐替换现有代码中的基本类型
 
 **从这些值对象开始：**
-- Email
-- Password
-- UserId / CustomerId / OrderId
-- Money / Currency
-- 手机号 
+- `Email`
+- `Password`
+- `UserId` / `CustomerId` / `OrderId`
+- `Money` / `Currency`
+- 手机号
 
 **示例：添加 Email 值对象**
 
@@ -7206,10 +7824,6 @@ public ResponseEntity<?> applyDiscount(
 
 **在此之前：胖 Service (Fat service)**
 
-
-
-
-
 ```java
 @Service
 public class OrderService {
@@ -7223,14 +7837,12 @@ public class OrderService {
         if (dto.getItems().isEmpty()) {
             throw new ValidationException("Order must have items");
         }
-
         // 检查库存
         for (ItemDto item : dto.getItems()) {
             if (!inventoryService.hasStock(item.getProductId(), item.getQuantity())) {
                 throw new InsufficientStockException(item.getProductId());
             }
         }
-
         // 处理支付
         PaymentResult payment;
         try {
@@ -7238,18 +7850,15 @@ public class OrderService {
         } catch (PaymentException e) {
             throw new OrderException("Payment failed", e);
         }
-
         // 创建订单
         Order order = new Order(dto.getCustomerId(), dto.getItems(), payment.getTransactionId());
         orderRepository.save(order);
-
         // 发送通知 (尽力而为)
         try {
             notificationService.sendOrderConfirmation(order);
         } catch (Exception e) {
             log.warn("Failed to send notification", e);
         }
-
         return order;
     }
 }
@@ -7310,25 +7919,32 @@ public class OrderService {
         this.placeOrder = PlaceOrder.placeOrder(
             inventoryChecker,
             paymentProcessor,
-            orderRepository,
-            notificationSender
-        );
-    }
+```
 
-    public Order placeOrder(OrderDto dto) {
-        return placeOrder.execute(toRequest(dto))
-            .await()
-            .fold(
-                cause -> { throw toException(cause); },
-                confirmation -> toOrder(confirmation)
-            );
-    }
+
+
+```java
+orderRepository,
+notificationSender
+);
+
+}
+
+public Order placeOrder(OrderDto dto) {
+    return placeOrder.execute(toRequest(dto))
+        .await()
+        .fold(
+            cause -> { throw toException(cause); },
+            confirmation -> toOrder(confirmation)
+        );
+}
+
 }
 ```
 
-### 第 4 ：适配器隔离（第 9-12 周）
+### 第 4：适配器隔离（第 9-12 周）
 
-**目标：** 将所有的 I/O 都通过 `Promise.lift` 封装在适配器中。
+**目标：** 将所有的 I/O 都通过`Promise.lift`封装在适配器中。
 
 **识别适配器：**
 - 数据库存储库
@@ -7395,6 +8011,7 @@ Optional<User> back = option.toOptional();
 public Promise<User> fetchUser(UserId id) {
     var promise = Promise.<User>promise();
     CompletableFuture<User> cf = httpClient.getUser(id.value());
+
     cf.whenComplete((result, error) -> {
         if (error != null) {
             promise.fail(Causes.fromThrowable(error));
@@ -7421,11 +8038,7 @@ public static <T> Promise<T> fromCompletableFuture(
 }
 ```
 
-
-
-
-
-## 在适配器中 - 使用 `Promise.lift`：
+## 在适配器中 - 使用`Promise.lift`：
 
 ```java
 public Promise<User> findUser(UserId id) {
@@ -7551,9 +8164,7 @@ try {
 }
 ```
 
-
-
-```
+```java
 @RestController
 public class UserController {
     @Autowired private UserService userService;
@@ -7657,9 +8268,8 @@ public class JpaUserRepository implements UserRepository {
     private final JpaUserEntityRepository jpaRepo;
 }
 ```
-（注：原文中关于 JpaUserRepository 的原始代码不完整或格式错误，我已根据上下文清理了结构。）
 
-
+（注：原文中关于`JpaUserRepository`的原始代码不完整或格式错误，我已根据上下文清理了结构。）
 
 Scott Wlaschin 在 F# 中采用的方法，使用“双轨道”类型来处理错误。
 
@@ -7668,7 +8278,13 @@ Scott Wlaschin 在 F# 中采用的方法，使用“双轨道”类型来处理�
 ```
 Success Track:  ───●───────●───────●───────●─── → Success
                    │       │       │       │
+```
+
+
+
+```
                    ↓       ↓       ↓       ↓
+
 Failure Track:  ───────────────────────────────→ Failure
 ```
 
@@ -7784,7 +8400,9 @@ vavr 是一个更全面的 FP 库。Pragmatica Lite 是为 JBCT 量身定制的�
 fun divide(a: Int, b: Int): Either<DivisionError, Int> =
     if (b == 0) DivisionError.DivideByZero.left()
     else (a / b).right()
-``````kotlin
+```
+
+```kotlin
 // Validated 用于累积错误
 fun validateUser(name: String, age: Int): ValidatedNel<ValidationError, User> =
     ValidatedNel.applicative<ValidationError>().mapN(
@@ -7807,7 +8425,7 @@ Arrow-kt 证明了这些模式在 Kotlin 中运行良好。
 - **Validated** = 类似于 `Result.all()`
 - **类型化错误** = 等于 `Cause`
 
-结论
+## 结论
 
 如果你使用 Kotlin，Arrow-kt 提供了类似的能力。由于语言特性（协程、密封类），语法上有所不同。
 
@@ -7846,7 +8464,9 @@ JBCT: - 适用于任何架构风格（分层、六边形、清洁） - 使用轨
 ## 练习
 
 1. **映射你的架构**：你当前项目使用了什么架构？使用 ROP 风格和 `Result` 重构它。哪些错误是隐式的？
+
 2. **比较错误处理**：从代码库中取一个基于异常的方法。使用 JBCT 类型重写它。
+
 3. **跨语言模式**：如果你有 Kotlin 服务，比较 Arrow-kt 的 `Either` 与 JBCT 的 `Result`。模式相似吗？
 
 ## 总结
@@ -7868,9 +8488,6 @@ JBCT 增加了：- **统一的方法论** - 架构 + 实现 + 测试 - **结构�
 # 第 19 章：故障排除与常见问题
 
 本章连接了常见问题、调试技术以及关于 JBCT 的常见问题。
-
-
-
 
 ## 调试单子链 (Monadic Chains)
 
@@ -8037,6 +8654,8 @@ public void processOrder(Order order) {
 
 **修复：** 始终处理 `Result`：
 
+
+
 ```java
 // 正确：Result 流转
 public Result<OrderId> processOrder(Order order) {
@@ -8068,6 +8687,7 @@ public Result<OrderId> processOrder(Order order) {
     return process(data);
 })
 ```
+
 *(注：原文中提供的修复文本不完整，我保留了其逻辑结构)*。
 
 ### 错误：多语句 lambda
@@ -8135,14 +8755,11 @@ Email email = new Email("user@example.com");  // 跳过了校验！
 Result<Email> email = Email.email("user@example.com");
 ```
 
-
-
-
-
 - `Settings` → `Editor` → `Inlay Hints` → `Java` → `Parameter hints`
 - Enable `Show hints for lambdas`
 
 2. **折叠匿名类：**
+
 - `Settings` → `Editor` → `General` → `Code Folding`
 - Enable `Lambda expressions`
 
@@ -8214,7 +8831,7 @@ void email_fails_for_InvalidInput() {
 }
 ```
 
-### 问题：“异步测试是不稳定的（flaky）” 
+### 问题：“异步测试是不稳定的（flaky）”
 
 **症状：** 测试有时通过，有时失败。
 
@@ -8303,11 +8920,13 @@ A：`JBCT` 的 `Promise` 比响应式流更简单。当你需要背压（backpre
 **Q：什么时候该用异常代替 Result？**
 
 A：在以下情况使用异常：
+
 - 编程错误（`IllegalArgumentException`, `NullPointerException`）
 - 不可恢复的系统故障
 - 框架要求（Spring 的 `@Transactional` 回滚）
 
 在以下情况使用 `Result`：
+
 - 业务失败（验证、未找到、冲突）
 - 预期的错误状况
 - 调用用者可能想要处理任何情况
@@ -8366,6 +8985,7 @@ A：是的。值对象为每个验证规则编写单元测试。用例则通过�
 **Q：一个用例应该有多少个测试？**
 
 至少：
+
 - 1 个用例的顺畅路径（happy path）测试
 - 每个步骤失败一个测试
 - `ValidRequest` 中的每条验证规则一个测试
@@ -8379,6 +8999,7 @@ A：优先使用 Stubs（简单的 lambda 实现）。Mocks 会增加复杂度�
 **Q：DTO 放在哪里？**
 
 A：在适配器边界：
+
 - 控制器中的 Request DTO（立即转换为领域类型）
 - 来自用例 `Response` 记录的 Response DTO
 - 领域层没有 DTO
@@ -8423,10 +9044,7 @@ CheckEmail checkEmail = req -> Promise.success(req);
 
 **原因：** 在需要 `flatMap` 的地方使用了 `map`。
 
-
-
-
-## **修复：** 检查映射函数是否返回 `Result`。如果是，请使用 `flatMap`：
+**修复：** 检查映射函数是否返回 `Result`。如果是，请使用 `flatMap`：
 
 ```
 [](#cb331-1)// 错误：validate 返回 Result<ValidEmail>
@@ -8488,18 +9106,20 @@ CheckEmail checkEmail = req -> Promise.success(req);
 
 **Maven:**
 
+
+
 ```
-[](#cb334-1)<dependency>
-[](#cb334-2)   <groupId>org.pragmatica-lite</groupId>
-[](#cb334-3)   <artifactId>core</artifactId>
-[](#cb334-4)   <version>0.9.9</version>
-[](#cb334-5)</dependency>
+<dependency>
+  <groupId>org.pragmatica-lite</groupId>
+  <artifactId>core</artifactId>
+  <version>0.9.9</version>
+</dependency>
 ```
 
 **Gradle:**
 
 ```
-[](#cb335-1)implementation 'org.pragmatica-lite:core:0.9.9'
+implementation 'org.pragmatica-lite:core:0.9.9'
 ```
 
 **文档：** https://central.sonatype.com/artifact/org.pragmatica-lite/core
@@ -8508,7 +9128,7 @@ CheckEmail checkEmail = req -> Promise.success(req);
 
 ## 类型转换
 
-### Option 转换
+### `Option` 转换
 
 | 从 | 到 | 方法 |
 | --- | --- | --- |
@@ -8518,14 +9138,14 @@ CheckEmail checkEmail = req -> Promise.success(req);
 | `Option<T>` | `Promise<T>` | `.async()` (使用 `CoreError.emptyOption`) |
 | `Option<T>` | `Optional<T>` | `.toOptional()` |
 
-### Result 转换
+### `Result` 转换
 
 | 从 | 到 | 方法 |
 | --- | --- | --- |
 | `Result<T>` | `Option<T>` | `.option()` (丢失错误) |
 | `Result<T>` | `Promise<T>` | `.async()` |
 
-### Promise 转换
+### `Promise` 转换
 
 | 从 | 到 | 方法 |
 | --- | --- | --- |
@@ -8533,7 +9153,7 @@ CheckEmail checkEmail = req -> Promise.success(req);
 | `Promise<T>` | `Result<T>` | `.await()` (阻塞) |
 | `Promise<T>` | `Result<T>` | `.await(TimeSpan timeout)` |
 
-### Cause 转换
+### `Cause` 转换
 
 | 从 | 到 | 方法 |
 | --- | --- | --- |
@@ -8542,202 +9162,195 @@ CheckEmail checkEmail = req -> Promise.success(req);
 
 ***
 
-### 创建实例
+## 创建实例
 
-### Option
-
-```
-[](#cb336-1)Option.some(value)           // 创建有值的 option
-[](#cb336-2)Option.present(value)        // some() 的别名
-[](#cb336-3)Option.none()                // 创建空的 option
-[](#cb336-4)Option.empty()               // none() 的别名
-[](#cb336-5)Option.option(nullable)      // null -> none, value -> some
-[](#cb336-6)Option.from(Optional<T>)     // 转换 Java Optional
-```
-
-### Result
+### `Option`
 
 ```
-[](#cb337-1)Result.success(value)        // 创建成功
-[](#cb337-2)Result.ok(value)             // success() 的别名
-[](#cb337-3)Result.unitResult()          // 带有 Unit 值的成功
-[](#cb337-4)Result.failure(cause)        // 创建失败 (优先使用 cause.result())
-[](#cb337-5)Result.err(cause)            // failure() 的别名
+Option.some(value)           // 创建有值的 option
+Option.present(value)        // some() 的别名
+Option.none()                // 创建空的 option
+Option.empty()               // none() 的别名
+Option.option(nullable)      // null -> none, value -> some
+Option.from(Optional<T>)     // 转换 Java Optional
 ```
 
-### Promise
+### `Result`
 
 ```
-[](#cb338-1)Promise.success(value)                   // 解析的成功
-[](#cb338-2)Promise.ok(value)                        // success() 的别名
-[](#cb338-3)Promise.unitPromise()                    // 使用 Unit 解析
-[](#cb338-4)Promise.failure(cause)                   // 解析失败 (优先使用 cause.promise())
-[](#cb338-5)Promise.resolved(Result<T> result)       // 从 result 解析
-[](#cb338-6)Promise.promise()                        // 未解析的 promise
-[](#cb338-7)Promise.promise(Consumer<Promise<T>>)    // 未解析，异步运行 consumer
-[](#cb338-8)Promise.promise(Supplier<Result<T>>)     // 异步执行 supplier
+Result.success(value)        // 创建成功
+Result.ok(value)             // success() 的别名
+Result.unitResult()          // 带有 Unit 值的成功
+Result.failure(cause)        // 创建失败 (优先使用 cause.result())
+Result.err(cause)            // failure() 的别名
+```
+
+### `Promise`
+
+```
+Promise.success(value)                   // 解析的成功
+Promise.ok(value)                        // success() 的别名
+Promise.unitPromise()                    // 使用 Unit 解析
+Promise.failure(cause)                   // 解析失败 (优先使用 cause.promise())
+Promise.resolved(Result<T> result)       // 从 result 解析
+Promise.promise()                        // 未解析的 promise
+Promise.promise(Consumer<Promise<T>>)    // 未解析，异步运行 consumer
+Promise.promise(Supplier<Result<T>>)     // 异步执行 supplier
 ```
 
 ***
 
-## 异常处理 (lift 方法)
+## 异常处理 (`lift` 方法)
 
-### Result.lift
+### `Result.lift`
 
 ```
-[](#cb339-1)// 基础 lift
-[](#cb339-2)Result.lift(ThrowingFn<U> supplier)
-[](#cb339-3)Result.lift(ThrowingFn<Cause, Throwable> mapper, supplier)
-[](#cb339-4)Result.lift(ThrowingRunnable runnable)  // 返回 Result<Unit>
-[](#cb339-5)Result.lift(Cause, ThrowingFn<U> supplier)  // 修复
-[](#cb339-6) // 直接调用 (lift + apply)
-[](#cb339-7)Result.lift(ThrowingFn1<R, T1> fn, T1 value)
+// 基础 lift
+Result.lift(ThrowingFn<U> supplier)
+Result.lift(ThrowingFn<Cause, Throwable> mapper, supplier)
+Result.lift(ThrowingRunnable runnable)  // 返回 Result<Unit>
+Result.lift(Cause, ThrowingFn<U> supplier)  // 修复
+// 直接调用 (lift + apply)
+Result.lift(ThrowingFn1<R, T1> fn, T1 value)
 ```
-
-
-
 
 ### Callback Methods
 
 ```
-[](#cb346-1)// Option
-[](#cb346-2).onPresent(Consumer<T>)
-[](#cb346-3).onEmpty(Runnable)
-[](#cb346-4).apply(Consumer<T>, Runnable)  // 分叉
-[](#cb346-5)
-[](#cb346-6)// Result
-[](#cb346-7).onSuccess(Consumer<T>)
-[](#cb346-8).onFailure(Consumer<Cause>)
-[](#cb346-9).onResult(Consumer<Result<T>>)
-[](#cb346-10).apply(Consumer<T>, Consumer<Cause>)  // 分叉
-[](#cb346-11)
-[](#cb346-12)// Promise (与 Result 相同，增加了异步变)
-[](#cb346-13).onSuccessAsync(Consumer<T>)
-[](#cb346-14).onFailureAsync(Consumer<Cause>)
-[](#cb346-15).withSuccess(Consumer<T>)  // 返回自身用于链式调用
+// Option
+.onPresent(Consumer<T>)
+.onEmpty(Runnable)
+.apply(Consumer<T>, Runnable)  // 分叉
+
+// Result
+.onSuccess(Consumer<T>)
+.onFailure(Consumer<Cause>)
+.onResult(Consumer<Result<T>>)
+.apply(Consumer<T>, Consumer<Cause>)  // 分叉
+
+// Promise (与 Result 相同，增加了异步变)
+.onSuccessAsync(Consumer<T>)
+.onFailureAsync(Consumer<Cause>)
+.withSuccess(Consumer<T>)  // 返回自身用于链式调用
 ```
 
-### fold
+### `fold`
 
 ```
-[](#cb347-1)// Option
-[](#cb347-2).fold(Supplier<R> empty, Fn1<R, T> present)
-[](#cb347-3)
-[](#cb347-4)// Result/Promise
-[](#cb347-5).fold(Fn1<R, Cause> failure, Fn1<R, T> success)
+// Option
+.fold(Supplier<R> empty, Fn1<R, T> present)
+
+// Result/Promise
+.fold(Fn1<R, Cause> failure, Fn1<R, T> success)
 ```
 
 ### Recovery
 
 ```
-[](#cb348-1).or(T replacement)                    // 回备值
-[](#cb348-2).or(Supplier<T> supplier)             // 懒性回备
-[](#cb348-3).orElse(M<T> replacement)             // 回备单元值
-[](#cb348-4).recover(Fn1<T, Cause> mapper)        // Result/Promise: 从失败恢复
+.or(T replacement)                    // 回备值
+.or(Supplier<T> supplier)             // 懒性回备
+.orElse(M<T> replacement)             // 回备单元值
+.recover(Fn1<T, Cause> mapper)        // Result/Promise: 从失败恢复
 ```
 
-* * *
+***
 
-## Verify.Is Predicates
+## `Verify.Is` Predicates
 
 ```
-[](#cb349-1)// Null 检查
-[](#cb349-2)Verify.Is::notNull
-[](#cb349-3)
-[](#cb349-4)// 字符串检查
-[](#cb349-5)Verify.Is::empty
-[](#cb349-6)Verify.Is::notEmpty
-[](#cb349-7)Verify.Is::blank
-[](#cb349-8)Verify.Is::notBlank
-[](#cb349-9)Verify.Is::lenBetween        // lenBetween(8, 128)
-[](#cb349-10)Verify.Is::contains
-[](#cb349-11)Verify.Is::notContains
-[](#cb349-12)Verify.Is::matches           // matches(Pattern)
-[](#cb349-13)
-[](#cb349-14)// 数字值检查
-[](#cb349-15)Verify.Is::positive
-[](#cb349-16)Verify.Is::negative
-[](#cb349-17)Verify.Is::nonNegative
-[](#cb349-18)Verify.Is::nonPositive
-[](#cb349-19)Verify.Is::greaterThan
-[](#cb349-20)Verify.Is::lessThan
-[](#cb349-21)Verify.Is::between           // between(0, 150)
-[](#cb349-22)Verify.Is::equalTo
-[](#cb349-23)Verify.Is::notEqualTo
+// Null 检查
+Verify.Is::notNull
+
+// 字符串检查
+Verify.Is::empty
+Verify.Is::notEmpty
+Verify.Is::blank
+Verify.Is::notBlank
+Verify.Is::lenBetween        // lenBetween(8, 128)
+Verify.Is::contains
+Verify.Is::notContains
+Verify.Is::matches           // matches(Pattern)
+
+// 数字值检查
+Verify.Is::positive
+Verify.Is::negative
+Verify.Is::nonNegative
+Verify.Is::nonPositive
+Verify.Is::greaterThan
+Verify.Is::lessThan
+Verify.Is::between           // between(0, 150)
+Verify.Is::equalTo
+Verify.Is::notEqualTo
 ```
 
 **Usage：**
 
 ```
-[](#cb350-1)Verify.ensure(password, Verify.Is::lenBetween, 8, 128)
-[](#cb350-2)Verify.ensure(age, Verify.Is::between, 0, 150)
+Verify.ensure(password, Verify.Is::lenBetween, 8, 128)
+Verify.ensure(age, Verify.Is::between, 0, 150)
 ```
 
-* * *
+***
 
 ## Parse Subpackage
 
 ### Number Parsing
 
 ```
-[](#cb351-1)Number.parseInt(String)           // -> Result<Integer>
-[](#cb351-2)Number.parseLong(String)          // -> Result<Long>
-[](#cb351-3)Number.parseDouble(String)        // -> Result<Double>
-[](#cb351-4)Number.parseBigDecimal(String)    // -> Result<BigDecimal>
+Number.parseInt(String)           // -> Result<Integer>
+Number.parseLong(String)          // -> Result<Long>
+Number.parseDouble(String)        // -> Result<Double>
+Number.parseBigDecimal(String)    // -> Result<BigDecimal>
 ```
 
 ### DateTime Parsing
 
 ```
-[](#cb352-1)DateTime.parseLocalDate(String)       // -> Result<LocalDate>
-[](#cb352-2)DateTime.parseLocalTime(String)       // -> Result<LocalTime>
-[](#cb352-3)DateTime.parseLocalDateTime(String)   // -> Result<LocalDateTime>
-[](#cb352-4)DateTime.parseInstant(String)         // -> Result<Instant>
+DateTime.parseLocalDate(String)       // -> Result<LocalDate>
+DateTime.parseLocalTime(String)       // -> Result<LocalTime>
+DateTime.parseLocalDateTime(String)   // -> Result<LocalDateTime>
+DateTime.parseInstant(String)         // -> Result<Instant>
 ```
 
 ### Network Parsing
 
 ```
-[](#cb353-1)Network.parseUUID(String)        // -> Result<UUID>
-[](#cb353-2)Network.parseURL(String)         // -> Result<URL>
-[](#cb353-3)Network.parseURI(String)         // -> Result<URI>
+Network.parseUUID(String)        // -> Result<UUID>
+Network.parseURL(String)         // -> Result<URL>
+Network.parseURI(String)         // -> Result<URI>
 ```
 
-* * *
+***
 
-## Causes Utilities
-
-```
-[](#cb354-1)Causes.cause(String message)                          // 简单原因
-[](#cb354-2)Causes.cause(String message, Option<Cause> source)    // 带来源的原因
-[](#cb354-3)Causes.fromThrowable(Throwable)                       // 转换异常
-[](#cb354-4)Causes.forOneValue(String template)                   // Fn1<Cause, T> 工厂
-[](#cb354-5)Causes.forTwoValues(String template)                  // Fn2<Cause, T1, T2>
-[](#cb354-6)Causes.forThreeValues(String template)                // Fn3<Cause, T1, T2, T3>
-[](#cb354-7)Causes.composite(Result<?>...)                        // 结果组合
-```
-
-**模板语法（使用 String.format）：**
+## `Causes` Utilities
 
 ```
-[](#cb355-1)Causes.forOneValue("Invalid email: %s")           // 正确
-[](#cb355-2)Causes.forTwoValues("Range error: %s to %s")      // 正确
+Causes.cause(String message)                          // 简单原因
+Causes.cause(String message, Option<Cause> source)    // 带来源的原因
+Causes.fromThrowable(Throwable)                       // 转换异常
+Causes.forOneValue(String template)                   // Fn1<Cause, T> 工厂
+Causes.forTwoValues(String template)                  // Fn2<Cause, T1, T2>
+Causes.forThreeValues(String template)                // Fn3<Cause, T1, T2, T3>
+Causes.composite(Result<?>...)                        // 结果组合
 ```
 
-* * *
-
-## Promise-Specific Operations
+**模板语法（使用 `String.format`）：**
 
 ```
-[](#cb356-1)// Option
-[](#cb356-2).onSuccessAsync(Consumer<T>)
-[](#cb356-3).onFailureAsync(Consumer<Cause>)
-[](#cb356-4).withSuccess(Consumer<T>)  // 返回自身用于链式调用
+Causes.forOneValue("Invalid email: %s")           // 正确
+Causes.forTwoValues("Range error: %s to %s")      // 正确
 ```
 
+***
 
+## `Promise`-Specific Operations
 
-
+```
+// Option
+.onSuccessAsync(Consumer<T>)
+.onFailureAsync(Consumer<Cause>)
+.withSuccess(Consumer<T>)  // 返回自身用于链式调用
+```
 
 ```
 public Result<User> authenticate(String email, String password)
@@ -8786,16 +9399,19 @@ public Promise<UserProfile> loadProfile(String userId) {
             .or(() -> database.fetchProfile(id)));
 }
 ```
+
 </details>
 
-***
+
 
 ### 练习 1.4 [初级] - 原因创建 (Cause Creation)
 
-为用户注册系统创建合适的 Cause 定义：
+为用户注册系统创建合适的`Cause`定义：
 
 1. 邮箱已存在
+
 2. 密码太弱（应包含具体的薄弱点）
+
 3. 用户名包含无效字符（应显示是哪些字符）
 
 <details><summary>解答</summary>
@@ -8834,6 +9450,7 @@ public sealed interface RegistrationError extends Cause {
     }
 }
 ```
+
 </details>
 
 ***
@@ -8866,10 +9483,15 @@ Result.all(success, failure).map((a, b) -> a + b)
 <details><summary>解答</summary>
 
 1. `20` - 将 10 映射为 20，`or()` 返回值
+
 2. `0` - failure 跳过 map，`or()` 返回回备值
+
 3. `Result.success(10)` - 谓词判断通过
+
 4. `Result.failure(Cause("not negative"))` - 谓词失败
-5. `Result.failure(Cause("error"))` - all() 累积了第二个的失败
+
+5. `Result.failure(Cause("error"))` - `all()` 累积了第二个的失败
+
 </details>
 
 ***
@@ -8879,8 +9501,11 @@ Result.all(success, failure).map((a, b) -> a + b)
 ### 练习 2.1 [初级] - 值对象创建
 
 创建一个 `PhoneNumber` 值对象，其要求：
+
 - 接受格式为“+1-555-123-4567”或“5551234567”的字符串
+
 - 规范化为仅数字
+
 - 必须是 10-15 位数字
 
 <details><summary>解答</summary>
@@ -8908,6 +9533,7 @@ record PhoneNumber(String value) {
     }
 }
 ```
+
 </details>
 
 ***
@@ -8915,8 +9541,11 @@ record PhoneNumber(String value) {
 ### 练习 2.2 [中级] - 聚合校验
 
 创建一个包含 `from` 和 `to` 字段的 `DateRange` 值对象，其中：
+
 - 两个日期都是必须的
+
 - `from` 必须在 `to` 之前或等于它
+
 - 者都不能在过去
 
 <details><summary>解答</summary>
@@ -8947,6 +9576,7 @@ record DateRange(LocalDate from, LocalDate to) {
     }
 }
 ```
+
 </details>
 
 ***
@@ -8954,10 +9584,6 @@ record DateRange(LocalDate from, LocalDate to) {
 ### 练习 2.3 [中级] - 错误累积与 短路
 
 解释行为和输出的差异：
-
-
-
-
 
 ```java
 // Version A
@@ -8978,6 +9604,7 @@ Result<ValidForm> validateB(Form form) {
 如果输入同时包含无效的邮箱和无效的密码，每个版本会返回什么？
 
 <details>
+
 <summary>解决方案</summary>
 
 **版本 A (短路)：** 返回一个仅包含邮箱错误的失败。`flatMap` 会在第一个失败处停止。
@@ -8985,8 +9612,11 @@ Result<ValidForm> validateB(Form form) {
 **版本 B (累积)：** 返回一个包含两个错误的 `CompositeCause` 失败。`Result.all()` 会收集所有失败项。
 
 **何时使用每个版本：**
+
 - 当错误之间存在依赖关系时（后续验证需要之前步骤的值），使用 `flatMap` 链。
+
 - 当验证是相互独立的，且你想向用户显示所有错误时，使用 `Result.all()`。
+
 </details>
 
 ***
@@ -9019,6 +9649,7 @@ public User processUser(UserDto dto) {
 ```
 
 <details>
+
 <summary>解决方案</summary>
 
 ```java
@@ -9052,6 +9683,7 @@ private Result<Option<Address>> processOptionalAddress(AddressDto dto) {
 // User  接受 Option 类型
 public record User(Email email, Option<Name> name, Option<Address> address) {}
 ```
+
 </details> 
 
 ***
@@ -9075,6 +9707,7 @@ private Config defaultConfig() { /* ... */ }
 ```
 
 <details>
+
 <summary>解决方案</summary>
 
 ```java
@@ -9098,6 +9731,7 @@ private Promise<Config> recoverFromFileError(Cause cause) {
     };
 }
 ```
+
 </details>
 
 ***
@@ -9107,6 +9741,8 @@ private Promise<Config> recoverFromFileError(Cause cause) {
 ### 练习 3.1 [初级] - 模式识别
 
 识别每个代码段使用的模式：
+
+
 
 ```java
 // A
@@ -9134,12 +9770,17 @@ return Promise.lift(DatabaseError::new,
 ```
 
 <details>
+
 <summary>解决方案</summary>
 
 * **A: 序列器 (Sequencer)**：依赖性步骤的线性链
+
 * **B: 分叉-合并 (Fork-Join)**：并行的独立操作组合
+
 * **C: 条件 (Condition)**：基于判别符的路由
+
 * **D: 叶节点 (Leaf)**：封装外部 I/O 的适配器
+
 </details>
 
 ***
@@ -9155,10 +9796,6 @@ public interface LoadDashboard {
     record Dashboard(UserProfile profile, List<Order> orders, List<Product> recommendations) {}
 }
 ```
-
-
-
-
 
 ```java
 public interface LoadDashboard {
@@ -9250,6 +9887,7 @@ public interface SendNotification {
     }
 }
 ```
+
 </details>
 
 ### 练习 3.4 [高级] - 实现切面
@@ -9302,6 +9940,7 @@ public interface FetchData {
     }
 }
 ```
+
 </details>
 
 ### 练习 3.5 [中级] - 线程安全分析
@@ -9328,16 +9967,16 @@ public class OrderProcessor {
 <details><summary>解决方案</summary>
 
 **问题：**
+
 1. `processedOrders` 是可变的，且被多个线程（Promise 回调）访问。
+
 2. `totalAmount` 是一个原始类型，执行了非原子的读-修改-写操作。
+
 3. 回调中的状态变更违反了 JBCT 原则。
 
 **修复：移除共享可变状态，返回不可变结果**
+
 </details>
-
-
-
-
 
 ```java
 public class OrderProcessor {
@@ -9402,6 +10041,8 @@ public record Age(int value) {
 
 <details><summary>解决方案</summary>
 
+
+
 ```java
 class AgeTest {
 
@@ -9439,7 +10080,8 @@ class AgeTest {
     }
 }
 ```
-</details> 
+
+</details>
 
 ***
 
@@ -9513,7 +10155,8 @@ class TransferFundsTest {
     }
 }
 ```
-</details> 
+
+</details>
 
 ***
 
@@ -9530,10 +10173,6 @@ public interface SlowService {
     }
 }
 ```
-
-
-
-
 
 ```java
 class SlowServiceTest {
@@ -9582,6 +10221,7 @@ class SlowServiceTest {
 ### 练习 5.1 [中级] - 完成用例设计
 
 为“取消订单”设计一个用例接口，并满足以下要求：
+
 - 验证订单是否存在并属于该用户
 - 仅待处理订单可以取消
 - 如果已经扣款则进行退款
@@ -9637,6 +10277,8 @@ public interface CancelOrder {
                 .onFailure(cause -> log.warn("Notification failed", cause)));
     }
 }
+```
+
 </details>
 
 ### 练习 5.2 [高级] - 补偿模式
@@ -9649,67 +10291,93 @@ public interface CancelOrder {
 // 如果确认失败，退款并释放座位
 ```
 
+```java
+public interface BookSeat {
 
+    Promise<Booking> execute(BookingRequest request);
+
+    interface ReserveSeat {
+
+        Promise<ReservationId> apply(SeatId seatId);
+
+    }
+
+    interface ReleaseSeat {
+
+        Promise<Unit> apply(ReservationId reservationId);
+
+    }
+
+    interface ChargePayment {
+
+        Promise<PaymentId> apply(UserId userId, Money amount);
+
+    }
+
+    interface RefundPayment {
+
+        Promise<Unit> apply(PaymentId paymentId);
+
+    }
+
+    interface SendConfirmation {
+
+        Promise<Unit> apply(UserId userId, ReservationId reservationId);
+
+    }
+
+    static BookSeat create(ReserveSeat reserveSeat,
+
+                           ReleaseSeat releaseSeat,
+
+                           ChargePayment chargePayment,
+
+                           RefundPayment refundPayment,
+
+                           SendConfirmation sendConfirmation) {
+
+        return request -> reserveSeat.apply(request.seatId())
+
+            .flatMap(reservationId ->
+
+                chargePayment.apply(request.userId(), request.amount())
+
+                    .recover(cause -> compensateReservation(releaseSeat, reservationId, cause))
+
+                    .flatMap(paymentId ->
+
+                        sendConfirmation.apply(request.userId(), reservationId)
+
+                            .recover(cause -> compensatePayment(
+
+                                            releaseSeat, refundPayment,
+
+                                            reservationId, paymentId, cause))
+
+                            .map(unit -> new Booking(reservationId, paymentId))));
+
+    }
+
+    private static Promise<PaymentId> compensateReservation(ReleaseSeat releaseSeat,
+```
 
 
 
 ```java
-public interface BookSeat {
-    Promise<Booking> execute(BookingRequest request);
+ReservationId reservationId,
+Cause originalCause) {
+    return releaseSeat.apply(reservationId)
+        .flatMap(unit -> originalCause.promise());
+}
 
-    interface ReserveSeat {
-        Promise<ReservationId> apply(SeatId seatId);
-    }
-
-    interface ReleaseSeat {
-        Promise<Unit> apply(ReservationId reservationId);
-    }
-
-    interface ChargePayment {
-        Promise<PaymentId> apply(UserId userId, Money amount);
-    }
-
-    interface RefundPayment {
-        Promise<Unit> apply(PaymentId paymentId);
-    }
-
-    interface SendConfirmation {
-        Promise<Unit> apply(UserId userId, ReservationId reservationId);
-    }
-
-    static BookSeat create(ReserveSeat reserveSeat,
-                           ReleaseSeat releaseSeat,
-                           ChargePayment chargePayment,
-                           RefundPayment refundPayment,
-                           SendConfirmation sendConfirmation) {
-        return request -> reserveSeat.apply(request.seatId())
-            .flatMap(reservationId ->
-                chargePayment.apply(request.userId(), request.amount())
-                    .recover(cause -> compensateReservation(releaseSeat, reservationId, cause))
-                    .flatMap(paymentId ->
-                        sendConfirmation.apply(request.userId(), reservationId)
-                            .recover(cause -> compensatePayment(
-                                            releaseSeat, refundPayment,
-                                            reservationId, paymentId, cause))
-                            .map(unit -> new Booking(reservationId, paymentId))));
-    }
-
-    private static Promise<PaymentId> compensateReservation(ReleaseSeat releaseSeat,
-                                                             ReservationId reservationId,
-                                                             Cause originalCause) {
-        return releaseSeat.apply(reservationId)
-            .flatMap(unit -> originalCause.promise());
-    }
-
-    private static Promise<Unit> compensatePayment(ReleaseSeat releaseSeat,
-                                                    RefundPayment refundPayment,
-                                                    ReservationId reservationId,
-                                                    PaymentId paymentId,
-                                                    Cause originalCause) {
-        return Promise.all(releaseSeat.apply(reservationId),
-                          refundPayment.apply(paymentId))
-                      .flatMap((u1, u2) -> originalCause.promise());
-    }
+private static Promise<Unit> compensatePayment(ReleaseSeat releaseSeat,
+                                                RefundPayment refundPayment,
+                                                ReservationId reservationId,
+                                                PaymentId paymentId,
+                                                Cause originalCause) {
+    return Promise.all(releaseSeat.apply(reservationId),
+                      refundPayment.apply(paymentId))
+                  .flatMap((u1, u2) -> originalCause.promise());
 }
 ```
 
@@ -9717,17 +10385,15 @@ public interface BookSeat {
 
 给定这些类，将它们组织到正确的包结构中：
 
-```
-- `RegisterUser` (用例接口)
-- `RegisterUserImpl` (用例实现 - 如果需要)
-- `ValidRegistration` (已校验的请求)
-- `Email`, `Password`, `Username` (值对象)
-- `UserRepository` (步骤接口)
-- `JpaUserRepository` (存储库实现)
-- `RegistrationError` (错误类型)
-- `UserController` (REST 控制器)
-- `UserDto` (API DTO)
-```
+- `RegisterUser`（用例接口）
+- `RegisterUserImpl`（用例实现 - 如果需要）
+- `ValidRegistration`（已校验的请求）
+- `Email`、`Password`、`Username`（值对象）
+- `UserRepository`（步骤接口）
+- `JpaUserRepository`（存储库实现）
+- `RegistrationError`（错误类型）
+- `UserController`（REST 控制器）
+- `UserDto`（API DTO）
 
 <details><summary>查看答案</summary>
 
@@ -9752,13 +10418,18 @@ src/main/java/com/example/user/
 │       ├── UserController.java     # REST 控制器
 │       └── UserDto.java            # API DTO
 └── config/
-    └── UserConfiguration.java      # Spring 配
+    └── UserConfiguration.java      # Spring 配置
 ```
 
-**备注：** - 不需要 `RegisterUserImpl` - 接口中的工厂方法创建了实现 - `ValidRegistration` 嵌套在 `RegisterUser` 中作为 `ValidRequest` 记录 - `UserRepository` 不独立存在 - 它是用例内部的步骤接口
+**备注：**
+
+- 不需要`RegisterUserImpl` - 接口中的工厂方法创建了实现
+- `ValidRegistration`嵌套在`RegisterUser`中作为`ValidRequest`记录
+- `UserRepository`不独立存在 - 它是用例内部的步骤接口
+
 </details>
 
-* * *
+---
 
 ## 第 VI 部分：采用（第 16-19 章）
 
@@ -9776,11 +10447,9 @@ public class UserService {
         if (email == null || !email.contains("@")) {
             throw new ValidationException("Invalid email");
         }
-
         if (userRepository.findByEmail(email).isPresent()) {
             throw new EmailExistsException();
         }
-
         User user = new User();
         user.setEmail(email);
         user.setPassword(passwordEncoder.encode(password));
@@ -9793,11 +10462,11 @@ public class UserService {
 
 **发现的违规项：**
 
-1. **基本类型过度使用** - 使用 `String` 处理邮箱和密码，而不是值对象
+1. **基本类型过度使用** - 使用`String`处理邮箱和密码，而不是值对象
 2. **校验位置错误** - 在控制器或服务中进行校验，而不是值对象
-3. **使用异常处理业务错误** - `EmailExistsException` 应该是一个 `Cause`
-4. **可变实体** - 使用 setter 而不是不可变记录 (record)
-5. **字段注入** - 使用 `@Autowired` 而不是构造函数注入
+3. **使用异常处理业务错误** - `EmailExistsException`应该是一个`Cause`
+4. **可变实体** - 使用 setter 而不是不可变记录（record）
+5. **字段注入** - 使用`@Autowired`而不是构造函数注入
 6. **缺少用例接口** - 业务逻辑直接写在服务类中
 
 **重构后：**
@@ -9826,102 +10495,122 @@ public interface CreateUser {
     }
 }
 ```
+
 </details>
 
-* * *
+---
 
 ### 练习 6.2 [中级] - 迁移计划
 
 你有一个遗留服务。请规划一个分阶段的迁移计划：
 
-
-
-
-
 ```java
-[](#cb396-1)@Service
-[](#cb396-2)public class OrderService {
-[](#cb396-3)    public Order placeOrder(OrderDto dto) {
-[](#cb396-4)        // 50 lines of validation
-[](#cb396-5)        // 30 lines of inventory check
-[](#cb396-6)        // 40 lines of payment processing
-[](#cb396-7)        // 20 lines of order creation
-[](#cb396-8)        // 15 lines of notification
-[](#cb396-9)    }
-[](#cb396-10)}
+@Service
+public class OrderService {
+    public Order placeOrder(OrderDto dto) {
+        // 50 lines of validation
+        // 30 lines of inventory check
+        // 40 lines of payment processing
+        // 20 lines of order creation
+        // 15 lines of notification
+    }
+}
 ```
 
-解决方案
+**解决方案**
 
-**阶段 1：值对象（第 1 周）** - 创建：`OrderId`, `ProductId`, `Quantity`, `Money`, `CustomerId` - 并行方法：`placeOrderValidated(ValidOrderRequest request)` - 保留原方法，并在内部调用校验的版本
+**阶段 1：值对象（第 1 周）**
 
-**阶段 2：在新代码中实现结果（第 2 周）** - 将验证提取到 `ValidOrderRequest.validRequest(OrderDto)` - 返回 `Result<Order>` 而不是抛出异常 - 创建 `OrderError` 密封接口（sealed interface）
+- 创建：`OrderId`、`ProductId`、`Quantity`、`Money`、`CustomerId`
+- 并行方法：`placeOrderValidated(ValidOrderRequest request)`
+- 保留原方法，并在内部调用校验的版本
 
-**阶段 3：提取用例（第 3-4 周）** - 创建带有步骤接口的 `PlaceOrder` 接口：
-- `CheckInventory`
-- `ProcessPayment`
-- `CreateOrder`
-- `SendNotification`
-- 将业务逻辑移动到工厂方法 - 服务转变为调用用例的薄封装
+**阶段 2：在新代码中实现结果（第 2 周）**
 
-**阶段 4：适配器隔离（第 5 周）** - 使用 `Promise.lift()` 封装库存检查
-- 使用 `Promise.lift()` 封装支付网关
-- 使用 `Promise.lift()` 封装存储库
+- 将验证提取到`ValidOrderRequest.validRequest(OrderDto)`
+- 返回`Result<Order>`而不是抛出异常
+- 创建`OrderError`密封接口（sealed interface）
+
+**阶段 3：提取用例（第 3-4 周）**
+
+- 创建带有步骤接口的`PlaceOrder`接口：
+  - `CheckInventory`
+  - `ProcessPayment`
+  - `CreateOrder`
+  - `SendNotification`
+- 将业务逻辑移动到工厂方法
+- 服务转变为调用用例的薄封装
+
+**阶段 4：适配器隔离（第 5 周）**
+
+- 使用`Promise.lift()`封装库存检查
+- 使用`Promise.lift()`封装支付网关
+- 使用`Promise.lift()`封装存储库
 - 邮件服务作为即发即忘的 Promise
 
-**迁移提交：** 1. 添加值对象 2. 添加 `ValidOrderRequest` 3. 添加 `OrderError` 类型 4. 提取 `PlaceOrder` 接口 5. 适配器实现步骤接口 6. 将服务转换为用例包装器 7. 移除旧方法
+**迁移提交：**
 
-***
+1. 添加值对象
+2. 添加`ValidOrderRequest`
+3. 添加`OrderError`类型
+4. 提取`PlaceOrder`接口
+5. 适配器实现步骤接口
+6. 将服务转换为用例包装器
+7. 移除旧方法
+
+---
 
 ### 练习 6.3 [学者] - 调试练习
 
-此链链静默失败。添加调试代码以找到位置：
+此链静默失败。添加调试代码以找到位置：
 
 ```java
-[](#cb397-1)public Promise<Report> generateReport(ReportRequest request) {
-[](#cb397-2)    return validateRequest(request)
-[](#cb397-3)        .flatMap(this::fetchData)
-[](#cb397-4)        .flatMap(this::transformData)
-[](#cb397-5)        .flatMap(this::formatReport);
-[](#cb397-6)}
+public Promise<Report> generateReport(ReportRequest request) {
+    return validateRequest(request)
+        .flatMap(this::fetchData)
+        .flatMap(this::transformData)
+        .flatMap(this::formatReport);
+}
 ```
 
-解决方案
+**解决方案**
 
 ```java
-[](#cb398-1)public Promise<Report> generateReport(ReportRequest request) {
-[](#cb398-2)    return validateRequest(request)
-[](#cb398-3)        .onSuccess(r -> log.debug("Validated: {}", r))
-[](#cb398-4)        .onFailure(c -> log.error("Validation failed: {}", c.message()))
-[](#cb398-5)        .flatMap(this::fetchData)
-[](#cb398-6)        .onSuccess(d -> log.debug("Fetched {} records", d.size()))
-[](#cb398-7)        .onFailure(c -> log.error("Fetch failed: {}", c.message()))
-[](#cb398-8)        .flatMap(this::transformData)
-[](#cb398-9)        .onSuccess(t -> log.debug("Transformed to {} items", t.size()))
-[](#cb398-10)        .onFailure(c -> log.error("Transform failed: {}", c.message()))
-[](#cb398-11)        .flatMap(this::formatReport)
-[](#cb398-12)        .onSuccess(r -> log.debug("Report generated: {} pages", r.pageCount()))
-[](#cb398-13)        .onFailure(c -> log.error("Format failed: {}", c.message()));
-[](#cb398-14)}
+public Promise<Report> generateReport(ReportRequest request) {
+    return validateRequest(request)
+        .onSuccess(r -> log.debug("Validated: {}", r))
+        .onFailure(c -> log.error("Validation failed: {}", c.message()))
+        .flatMap(this::fetchData)
+        .onSuccess(d -> log.debug("Fetched {} records", d.size()))
+        .onFailure(c -> log.error("Fetch failed: {}", c.message()))
+        .flatMap(this::transformData)
+        .onSuccess(t -> log.debug("Transformed to {} items", t.size()))
+        .onFailure(c -> log.error("Transform failed: {}", c.message()))
+        .flatMap(this::formatReport)
+        .onSuccess(r -> log.debug("Report generated: {} pages", r.pageCount()))
+        .onFailure(c -> log.error("Format failed: {}", c.message()));
+}
 ```
 
 **替代方案：提取到命名方法以便设置断点：**
 
 ```java
-[](#cb399-1)public Promise<Report> generateReport(ReportRequest request) {
-[](#cb399-2)    return validateRequestStep(request)
-[](#cb399-3)        .flatMap(this::fetchDataStep)
-[](#cb399-4)        .flatMap(this::transformDataStep)
-[](#cb399-5)        .flatMap(this::formatReportStep);
-[](#cb399-6)}
-[](#cb399-8)private Promise<ValidRequest> validateRequestStep(ReportRequest request) {
-[](#cb399-9)    log.debug("Validating request");
-[](#cb399-10)    return validateRequest(request);  // 断点在此处
-[](#cb399-11)}
-[](#cb399-13)// ... 其他步骤类似上
-``` 
+public Promise<Report> generateReport(ReportRequest request) {
+    return validateRequestStep(request)
+        .flatMap(this::fetchDataStep)
+        .flatMap(this::transformDataStep)
+        .flatMap(this::formatReportStep);
+}
 
-***
+private Promise<ValidRequest> validateRequestStep(ReportRequest request) {
+    log.debug("Validating request");
+    return validateRequest(request);  // 断点在此处
+}
+
+// ... 其他步骤类似上
+```
+
+
 
 ## 总结
 
@@ -9939,132 +10628,145 @@ public interface CreateUser {
 ## 附录：术语表
 
 ### A
+
 **适配器 (Adapter)**：一种桥接外部系统的组件。实现步骤接口。
 
-**聚合 (Aggregation)**：将多个 `Result` 或 `Promise` 值合并为一个。`Result.all()` 会累积失败信息。
+**聚合 (Aggregation)**：将多个`Result`或`Promise`值合并为一个。`Result.all()`会累积失败信息。
 
 **切面模式 (Aspects Pattern)**：一种用于跨交叉关注点（如重试、超时、审计）的结构化模式。封装在函数周围。
 
 ### B
-**分叉 (Bifurcation)**：同时处理成功和失败情况。`fold()` 和 `apply()` 方法接受两个处理器 - 分别对应每种结果。
+
+**分叉 (Bifurcation)**：同时处理成功和失败情况。`fold()`和`apply()`方法接受两个处理器 - 分别对应每种结果。
 
 ### C
+
 **原因 (Cause)**：Pragmatica Lite 中的类型化错误值。代表操作失败的原因。定义为密封接口。
 
-**链 (Chain)**：通过 `flatMap()` 连接的单子操作序列。每一步都接收上一步的成功值。
+**链 (Chain)**：通过`flatMap()`连接的单子操作序列。每一步都接收上一步的成功值。
 
 **清洁架构 (Clean Architecture)**：Uncle Bob 提出的具有同心层和依赖关系的架构风格。
 
-**复合原因 (CompositeCause)**：包含多个子原因的原因。当多个验证失败时，由 `Result.all()` 创建。
+**复合原因 (CompositeCause)**：包含多个子原因的原因。当多个验证失败时，由`Result.all()`创建。
 
 **条件模式 (Condition Pattern)**：一种根据区分符值进行路由的结构化模式。使用 switch 表达式实现。
 
 ### D
+
 **依赖倒置 (Dependency Inversion)**：依赖关系指向抽象而非实现。在 JBCT 中，用例依赖于步骤接口，适配器实现接口。
 
 **领域区域 (Domain Zone)**：包含纯业务逻辑的架构层。包含用例、值对象和步骤接口。不包含框架依赖。
 
 ### E
-**错误累积 (Error Accumulation)**：收集所有错误而不是在第一个错误处停止。`Result.all()` 会累积失败。
 
-**异常包装 (Exception Wrapping)**：在适配器边界将异常转换为 Cause 值。通过 `Promise.lift()` 或 `Result.lift()` 完成。
+**错误累积 (Error Accumulation)**：收集所有错误而不是在第一个错误处停止。`Result.all()`会累积失败。
+
+**异常包装 (Exception Wrapping)**：在适配器边界将异常转换为 Cause 值。通过`Promise.lift()`或`Result.lift()`完成。
 
 **外部区域 (External Zone)**：应用程序之外的一切：数据库、外部 API、消息队列、文件系统。
 
 ### F
-**工厂方法 (Factory Method)**：创建值对象或用例实例的静态方法。值对象工厂返回 `Result<T>` 以强制执行校验。
 
-**快速失败 (Fail-Fast)**：在第一个失败处停止。`flatMap()` 链和 `Promise.all()` 都是快速失败。
+**工厂方法 (Factory Method)**：创建值对象或用例实例的静态方法。值对象工厂返回`Result<T>`以强制执行校验。
+
+**快速失败 (Fail-Fast)**：在第一个失败处停止。`flatMap()`链和`Promise.all()`都是快速失败。
 
 **flatMap**：单子绑定操作。连接依赖操作。如果输入是失败，则跳过该操作。防止嵌套单子（`Result<Result<T>>`）。
 
-**Fn1, Fn2, Fn3**：Pragmatica Lite 中用于 1、2 或 3 个参数的函数式接口。类似于 Java 的 `Function` 但具有更好的组合性。
+**Fn1, Fn2, Fn3**：Pragmatica Lite 中用于 1、2 或 3 个参数的函数式接口。类似于 Java 的`Function`但具有更好的组合性。
 
-**分叉-合并模式 (Fork-Join Pattern)**：用于并行独立操作的结构化模式。使用 `Promise.all()` 并行运行操作并合并结果。
+**分叉-合并模式 (Fork-Join Pattern)**：用于并行独立操作的结构化模式。使用`Promise.all()`并行运行操作并合并结果。
 
-***
+## 六边形架构
 
-
-
-
-
-# 六边形架构
 端口与适配器（Ports and Adapters）架构。领域位于中心，适配器位于边缘。JBCT 的步骤接口（step interfaces）类似于端口。
 
-## I
-**不变性（Immutability）** 创建后无法修改的对象。Java `records` 默认是不可变的。对于 JBCT 的线程安全至关重要。
+### I
 
-**迭代模式（Iteration Pattern）** 一种处理集合的结构模式。使用 `Promise.allOf()` 进行并行处理或使用流操作进行顺序处理。
+**不变性（Immutability）** 创建后无法修改的对象。Java`records`默认是不可变的。对于 JBCT 的线程安全至关重要。
 
-## J
+**迭代模式（Iteration Pattern）** 一种处理集合的结构模式。使用`Promise.allOf()`进行并行处理或使用流操作进行顺序处理。
+
+### J
+
 **JBCT** Java 后端编码技术。一种使用函数式组合和显式错误处理编写可维护的后端 Java 代码的方法。
 
-## L
-**叶子模式（Leaf Pattern）** 一种用于无依赖原子操作的结构模式。通常由适配器通过 `Promise.lift()` 封装外部 I/O。
+### L
 
-**提升（Lift）** 将值或操作转换为单态上下文。`Result.lift()` 将抛出异常的代码封装在 `Result` 中。`result.async()` 将 `Result` 提升为 `Promise`。
+**叶子模式（Leaf Pattern）** 一种用于无依赖原子操作的结构模式。通常由适配器通过`Promise.lift()`封装外部 I/O。
 
-## M
-**map** 在保留容器的同时转换成功值。它不会展平嵌套容器——当映射器返回单态类型时，使用 `flatMap()`。
+**提升（Lift）** 将值或操作转换为单态上下文。`Result.lift()`将抛出异常的代码封装在`Result`中。`result.async()`将`Result`提升为`Promise`。
 
-**单态（Monad）** 一种用于链接可能有副作用的操作的设计模式。`Option`、`Result` 和 `Promise` 都是单态。关键操作是 `flatMap()`。
+### M
 
-## O
-**Option** 一种表示可能缺失值的类型。当缺失是正常现象而非错误时使用它。当缺失应视为错误时将其转换为 `Result`。
+**map** 在保留容器的同时转换成功值。它不会展平嵌套容器——当映射器返回单态类型时，使用`flatMap()`。
 
-## P
+**单态（Monad）** 一种用于链接可能有副作用的操作的设计模式。`Option`、`Result`和`Promise`都是单态。关键操作是`flatMap()`。
+
+### O
+
+**Option** 一种表示可能缺失值的类型。当缺失是正常现象而非错误时使用它。当缺失应视为错误时将其转换为`Result`。
+
+### P
+
 **解析而非验证（Parse, Don’t Validate）** 一种原则：与其验证数据并继续使用原始类型，不如将数据解析为经过验证的类型，使无效状态变得不可表示。
 
 **端口（Port）** 在六边形架构中，定义领域如何与外部世界交互的接口。类似于 JBCT 的步骤接口。
 
-**Pragmatica Lite** 一个轻量级 Java 库，提供了 `Option`、`Result`、`Promise` 和 `Cause` 类型。JBCT 模式的字体。
+**Pragmatica Lite** 一个轻量级 Java 库，提供了`Option`、`Result`、`Promise`和`Cause`类型。JBCT 模式的字体。
 
 **Promise** 用于表示可能失败的异步操作的类型。将异步执行与显式错误处理相结合。
 
 **纯函数（Pure Function）** 一种没有副作用且对相同输入始终返回相同输出的函数。值对象工厂应该是纯的。
 
-## R
-**面向铁路的编程（ROP）** 一种使用“双轨道”类型的错误处理方法。分为成功轨道和失败轨道。JBCT 通过 `Result` 和 `Promise` 使用此模型。
+### R
+
+**面向铁路的编程（ROP）** 一种使用“双轨道”类型的错误处理方法。分为成功轨道和失败轨道。JBCT 通过`Result`和`Promise`使用此模型。
 
 **Record** Java 的不可变数据类（自 Java 14 起）。在 JBCT 中用于值对象、请求、响应和错误类型。
 
-**recover（恢复）** 处理失败并可能将其转换为成功。接受一个函数 `Cause -> M<T>`，该函数可以提供回退值或重新抛出异常。
+**recover（恢复）** 处理失败并可能将其转换为成功。接受一个函数`Cause -> M<T>`，该函数可以提供回退值或重新抛出异常。
 
-**Result** 用于表示可能失败的同步操作的类型。包含一个成功值或一个 `Cause`。
+**Result** 用于表示可能失败的同步操作的类型。包含一个成功值或一个`Cause`。
 
-**Result.all** 组合多个 `Results`，将所有失败累积到 `CompositeCause` 中。用于独立验证。
+**Result.all** 组合多个`Results`，将所有失败累积到`CompositeCause`中。用于独立验证。
 
-## S
-**密封接口（Sealed Interface）** Java 的受限继承（自 Java 17 起）。所有实现类必须在编译时已知。用于 `Cause` 类型和详尽的 switch 表达式。
+### S
 
-**顺序器模式（Sequencer Pattern）** 一种用于依赖操作线性链的结构模式。每个步骤依赖于上一步的输出。使用 `flatMap()` 链。
+**密封接口（Sealed Interface）** Java 的受限继承（自 Java 17 起）。所有实现类必须在编译时已知。用于`Cause`类型和详尽的 switch 表达式。
 
-**短路（Short-Circuit）** 在首次发生失败时停止执行。`flatMap()` 链支持短路。`Result.all()` 不支持短路。
+**顺序器模式（Sequencer Pattern）** 一种用于依赖操作线性链的结构模式。每个步骤依赖于上一步的输出。使用`flatMap()`链。
+
+**短路（Short-Circuit）** 在首次发生失败时停止执行。`flatMap()`链支持短路。`Result.all()`不支持短路。
 
 **步骤接口（Step Interface）** 定义用例中单个操作的函数接口。由适配器实现。
 
 **存根（Stub）** 一个返回预定义值的测试双胞。声明在用例内部。
 
-## T
+### T
+
 **三个区域（Three Zones）** JBCT 的架构模型：外部（外部系统）、适配器（边界翻译）、领域（纯业务逻辑）。
 
 **TimeSpan** Pragmatica Lite 的持续时间类型。通过流式 API 创建：`TimeSpan(5).seconds()`。
 
-**类型提升（Type Lifting）** 从低级类型转换为高级类型：`T` → `Option` → `Result` → `Promise`。一种会增加信息的安全的方向。
+**类型提升（Type Lifting）** 从低级类型转换为高级类型：`T`→`Option`→`Result`→`Promise`。一种会增加信息的安全的方向。
 
-## U
-**Unit** 一种表示“无结果”的单一值类型。用于替代 `Void` 表示执行成功但不返回内容的操作。
+### U
 
-**用例（Use Case）** 作为函数接口暴露的单个业务操作。包含 `Request`/`ValidRequest`/`Response` 记录和步骤接口。
+**Unit** 一种表示“无结果”的单一值类型。用于替代`Void`表示执行成功但不返回内容的操作。
 
-## V
-**验证（Validation）** 检查数据是否符合要求。在 JBCT 中，验证发生在值对象工厂中，返回 `Result<T>`。
+**用例（Use Case）** 作为函数接口暴露的单个业务操作。包含`Request`/`ValidRequest`/`Response`记录和步骤接口。
+
+### V
+
+**验证（Validation）** 检查数据是否符合要求。在 JBCT 中，验证发生在值对象工厂中，返回`Result<T>`。
 
 **值对象（Value Object）** 表示领域概念的不可变对象。通过强制验证的工厂方法创建。例如：`Email`、`Money`、`UserId`。
 
-**Verify** Pragmatica Lite 中用于验证谓词的工具类。`Verify.ensure()` 从谓词创建 `Result`。`Verify.Is` 提供了常用的谓词。
+**Verify** Pragmatica Lite 中用于验证谓词的工具类。`Verify.ensure()`从谓词创建`Result`。`Verify.Is`提供了常用的谓词。
 
-## W
+### W
+
 **包装器（Wrapper）** 一个在另一个函数周围添加行为的函数。用于切面模式中的横切关注点。
 
 ## 快速参考
@@ -10086,4 +10788,3 @@ public interface CreateUser {
 | Unit (单元) | “无结果”的类型 |
 | Use Case (用例) | 单个业务操作 |
 | Value Object (值对象) | 不可变的经过验证的领域概念 |
-

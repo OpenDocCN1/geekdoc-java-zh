@@ -1,19 +1,18 @@
+
 # Learn Java JPA Spring：从初学者到专家高级指南及面试技巧
-
-
 
 ![](img/cover.jpeg)
 
-
 在本书中，你将学习带有图解的解释以及实际练习，并附带执行成功的输出结果。提供分步说明的现成解决方案。
 
-
 ## 引言
-逐步学习 JPA 编程。`JPA` (`Java Persistence API`）是一个强大的框架，用于快速构建健壮的数据驱动应用程序。我们应用程序处理的大部分数据必须存储在数据存储中、检索、处理和分析。如果该数据存储是关系型数据库且你使用如 `Java` 这样的面向对象的编程语言，那么你应该查看 `JPA`。
+
+逐步学习 JPA 编程。`JPA`（`Java Persistence API`）是一个强大的框架，用于快速构建健壮的数据驱动应用程序。我们应用程序处理的大部分数据必须存储在数据存储中、检索、处理和分析。如果该数据存储是关系型数据库且你使用如 `Java` 这样的面向对象的编程语言，那么你应该查看 `JPA`。
 
 `JPA` 是一种对象关系映射（ORM）工具，它将 Java 对象映射到关系型数据库并允许查询操作。在本书中，你将学习 `Java Persistence API` 及其用于映射实体的注解，以及 JPA 与 `spring` 框架的集成。
 
 ## 第 1 章：JPA 一一映射
+
 1. `JPA OneToOne Mapping`
 2. `JPA OneToOne Lazy Load Mapping`
 3. `JPA OneToOne Join Column Mapping`
@@ -23,6 +22,7 @@
 7. `JPA OneToOne Bidirectional Mapping`
 
 ### 示例 1：JPA 一一映射
+
 在这里，你将学习如何在 `JPA` 映射中实现一一映射。此示例假设一个 `Person`（人员）只能属于一个 `department`（部门），而一个 `department` 只能有一个。在 `Person` 实体中，我们用 `@OneToOne` 注解标记 `Department` 引用属性。
 
 ```java
@@ -44,9 +44,11 @@ em.persist(d);
 ```
 
 **示例 1：**
+
 此示例假设一个 `Person` 只能属于一个 `department`，而一个 `department` 只能有一个。
 
 **Person.java**
+
 ```java
 package com.abd.jpa;
 import javax.persistence.Entity;
@@ -71,11 +73,12 @@ public class Person {
     public String getName() {return name;}
     public void setName(String name) {this.name = name;}
     @Override
-    public String toString() {return "Person [id=" + id + ", name=" + name + "]}
+    public String toString() {return "Person [id=" + id + ", name=" + name + "]"}
 }
 ```
 
 **Department.java**
+
 ```java
 package com.abd.jpa;
 import javax.persistence.Entity;
@@ -95,6 +98,7 @@ public class Department {
 ```
 
 **PersonDaoImpl.java**
+
 ```java
 package com.abd.jpa;
 import javax.persistence.EntityManager;
@@ -116,6 +120,7 @@ private EntityManager em;}
 ```
 
 **Helper.java**
+
 ```java
 package com.abd.jpa;
 import java.sql.Connection;
@@ -138,10 +143,10 @@ public class Helper {
                 while (rs.next()) {
                     System.out.println(" Row:");
                     for (int i = 0; i < metadata.getColumnCount(); i++) {
-                        System.out.println("   Column Name: "+ metadata.getColumnLabel(i + 1)+", ");
-                        System.out.println("   Column Type: "+ metadata.getColumnTypeName(i + 1)+": ");
+                        System.out.println("   Column Name: "+ metadata.getColumnLabel(i + 1)+", ");
+                        System.out.println("   Column Type: "+ metadata.getColumnTypeName(i + 1)+": ");
                         Object value = rs.getObject(i + 1);
-                        System.out.println("   Column Value: "+value+"\n");
+                        System.out.println("   Column Value: "+value+"\n");
                     }
                 }
             }
@@ -150,16 +155,13 @@ public class Helper {
 ```
 
 **persistence.xml**
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
     <persistence-unit name="jpaData" />
 </persistence>
 ```
-
-
-
-
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -213,13 +215,20 @@ public class Client {
 **输出**
 
 表名: DEPARTMENT
+
 行: 列名: ID, 列类型: BIGINT, 列值: 1
+
 列名: NAME, 列类型: VARCHAR, 列值: Design
 
 表名: PERSON
+
 行: 列名: ID, 列类型: BIGINT, 列值: 1
+
 列名: NAME, 列类型: VARCHAR, 列值: Tom
-列名: DEPARTMENT_ID, 列类型: BIGINT, 列值: 1
+
+
+
+列名：`DEPARTMENT_ID`，列类型：`BIGINT`，列值：`1`
 
 ## 2 JPA OneToOne 懒加载映射
 
@@ -387,10 +396,6 @@ public class Helper {
 </persistence>
 ```
 
-
-
-
-
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"xmlns:security="http://www.springframework.org/schema/security" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
@@ -441,13 +446,19 @@ public class Client {
 
 ### 输出
 
-- 表名: DEPARTMENT
-行:列名: ID,列类型: BIGINT:列值: 1
-列名: NAME,列类型: VARCHAR:列值: Design
-- 表名: PERSON
-行:列名: ID,列类型: BIGINT:列值: 1
-列名: NAME,列类型: VARCHAR:列值: Tom
-列名: DEPARTMENT_ID,列类型: BIGINT:列值: 1
+- 表名：`DEPARTMENT`
+
+行：列名：`ID`，列类型：`BIGINT`：列值：`1`
+
+列名：`NAME`，列类型：`VARCHAR`：列值：`Design`
+
+- 表名：`PERSON`
+
+行：列名：`ID`，列类型：`BIGINT`：列值：`1`
+
+列名：`NAME`，列类型：`VARCHAR`：列值：`Tom`
+
+列名：`DEPARTMENT_ID`，列类型：`BIGINT`：列值：`1`
 
 ## 3 JPA 一对一外键列映射
 
@@ -466,6 +477,8 @@ private Department department;
 #### 示例 3：
 
 ### Person.java
+
+
 
 ```java
 package com.abd.jpa;
@@ -524,7 +537,8 @@ public class Department {
     public void setPerson(Person person) {this.person = person;}
 }
 ```
-Impl.java
+
+### Impl.java
 
 ```java
 package com.abd.jpa;
@@ -549,9 +563,6 @@ public class PersonDaoImpl {
     }
 }
 ```
-
-
-
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -604,12 +615,17 @@ public class Client {
 ### 输出
 
 表名: DEPARTMENT
+
 行:列名: ID,列类型: BIGINT:列值: 1
+
 列名: NAME,列类型: VARCHAR:列值: Design
 
 表名: PERSON
+
 行:列名: ID,列类型: BIGINT:列值: 1
+
 列名: NAME,列类型: VARCHAR:列值: Tom
+
 列名: DEPT_ID,列类型: BIGINT:列值: 1
 
 ## 4 JPA 一对一主键连接列映射
@@ -728,6 +744,8 @@ public class PersonDaoImpl {
 }
 ```
 
+
+
 ### Helper.java
 
 ```java
@@ -752,10 +770,10 @@ public class Helper {
                 while (rs.next()) {
                     System.out.println(" Row:");
                     for (int i = 0; i < metadata.getColumnCount(); i++) {
-                        System.out.println("   Column Name: "+ metadata.getColumnLabel(i + 1)+", ");
-                        System.out.println("   Column Type: "+ metadata.getColumnTypeName(i + 1)+": ");
+                        System.out.println("   Column Name: "+ metadata.getColumnLabel(i + 1)+", ");
+                        System.out.println("   Column Type: "+ metadata.getColumnTypeName(i + 1)+": ");
                         Object value = rs.getObject(i + 1);
-                        System.out.println("   Column Value: "+value+"\n");
+                        System.out.println("   Column Value: "+value+"\n");
                     }
                 }
             }
@@ -774,10 +792,6 @@ public class Helper {
     <persistence-unit name="jpaData"/>
 </persistence>
 ```
-
-
-
-
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -839,11 +853,15 @@ public class Client {
 ### 输出
 
 表名: DEPARTMENT
+
 行: 列名: ID, 列类型: BIGINT, 列值: 1
+
 列名: NAME, 列类型: VARCHAR, 列值: Design
 
 表名: PERSON
+
 行: 列名: ID, 列类型: BIGINT, 列值: 1
+
 列名: NAME, 列类型: VARCHAR, 列值: Tom
 
 ## 5 JPA 一一对映射级联映射 (OneToOne Map Mapping)
@@ -957,6 +975,8 @@ public class Department {
 
 #### PersonDaoImpl.java
 
+
+
 ```java
 package com.abd.jpa;
 import java.util.List;
@@ -1033,10 +1053,6 @@ public class Helper {
     <persistence-unit name="jpaData" />
 </persistence>
 ```
-
-
-
-
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -1149,6 +1165,8 @@ public class ParkingSpace {
 
 #### PersonDaoImpl.java
 
+
+
 ```java
 package com.abd.jpa;
 import javax.persistence.EntityManager;
@@ -1196,10 +1214,10 @@ public class Helper {
                 while (rs.next()) {
                     System.out.println(" Row:");
                     for (int i = 0; i < metadata.getColumnCount(); i++) {
-                        System.out.println(" Column Name: "+ metadata.getColumnLabel(i + 1)+", ");
-                        System.out.println(" Column Type: "+ metadata.getColumnTypeName(i + 1)+": ");
+                        System.out.println(" Column Name: "+ metadata.getColumnLabel(i + 1)+", ");
+                        System.out.println(" Column Type: "+ metadata.getColumnTypeName(i + 1)+": ");
                         Object value = rs.getObject(i + 1);
-                        System.out.println("   Column Value: "+value+"\n");
+                        System.out.println("   Column Value: "+value+"\n");
                     }
                 }
             }
@@ -1218,10 +1236,6 @@ public class Helper {
     <persistence-unit name="jpaData" />
 </persistence>
 ```
-
-
-
-
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -1255,7 +1269,8 @@ public class Helper {
 </beans>
 ```
 
-Client.java
+### Client.java
+
 ```java
 package com.abd.jpa;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -1273,14 +1288,21 @@ public class Client {
 ### 输出
 
 Table Name: PARKING_SPACE
+
 Row:Column Name: ID,Column Type: INTEGER,Column Value: 1
+
 Column Name: LOCATION,Column Type: VARCHAR,Column Value: East
+
 Column Name: LOT,Column Type: INTEGER,Column Value: 1
 
 Table Name: PROFESSOR
+
 Row:Column Name: ID,Column Type: INTEGER,Column Value: 1
+
 Column Name: NAME,Column Type: VARCHAR,Column Value: name
+
 Column Name: SALARY,Column Type: BIGINT,Column Value: 12345
+
 Column Name: PSPACE_ID,Column Type: INTEGER,Column Value: 1
 
 ## 7 JPA 一对一双向映射
@@ -1289,7 +1311,8 @@ Column Name: PSPACE_ID,Column Type: INTEGER,Column Value: 1
 
 #### 示例 7：
 
-Person.java
+### Person.java
+
 ```java
 package com.abd.jpa;
 import javax.persistence.Entity;
@@ -1336,7 +1359,8 @@ public class Person {
 }
 ```
 
-Department.java
+### Department.java
+
 ```java
 package com.abd.jpa;
 import javax.persistence.Entity;
@@ -1373,7 +1397,10 @@ public class Department {
 }
 ```
 
-PersonDaoImpl.java
+### PersonDaoImpl.java
+
+
+
 ```java
 package com.abd.jpa;
 import javax.persistence.EntityManager;
@@ -1394,7 +1421,8 @@ public class PersonDaoImpl {
 }
 ```
 
-Helper.java
+`Helper.java`
+
 ```java
 package com.abd.jpa;
 import java.sql.Connection;
@@ -1417,10 +1445,10 @@ public class Helper {
                 while (rs.next()) {
                     System.out.println(" Row:");
                     for (int i = 0; i < metadata.getColumnCount(); i++) {
-                        System.out.println("    Column Name: "+ metadata.getColumnLabel(i + 1)+", ");
-                        System.out.println("    Column Type: "+ metadata.getColumnTypeName(i + 1)+": ");
+                        System.out.println("    Column Name: "+ metadata.getColumnLabel(i + 1)+", ");
+                        System.out.println("    Column Type: "+ metadata.getColumnTypeName(i + 1)+": ");
                         Object value = rs.getObject(i + 1);
-                        System.out.println("    Column Value: "+value+"\n");
+                        System.out.println("    Column Value: "+value+"\n");
                     }
                 }
             }
@@ -1431,16 +1459,14 @@ public class Helper {
 }
 ```
 
-persistence.xml
+`persistence.xml`
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
     <persistence-unit name="jpaData" />
 </persistence>
 ```
-
-
-
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -1472,7 +1498,7 @@ persistence.xml
 </beans>
 ```
 
-**Client.java**
+`Client.java`
 
 ```java
 package com.abd.jpa;
@@ -1490,25 +1516,31 @@ public class Client {
 
 **输出**
 
-表名: DEPARTMENT
-行:列名: ID,列类型: BIGINT:列值: 1
-列名: NAME,列类型: VARCHAR:列值: Design
-表名: PERSON
-行:列名: ID,列类型: BIGINT:列值: 1
-列名: NAME,列类型: VARCHAR:列值: Tom
-列名: DEPT_ID,列类型: BIGINT:列值: 1
+表名: `DEPARTMENT`
 
-# 第 2 章：JPA 一一对多映射
+行:列名: `ID`,列类型: `BIGINT`:列值: `1`
 
-1. JPA 一一对多映射
-2. JPA 一一对多表映射
-3. JPA 一一对多单向映射
-4. JPA 一一对多排序 映射
-5. JPA Persist OrderedList 映射
-6. JPA 一一对多 Map Key 映射
-7. JPA 一一对多无类型映射
+列名: `NAME`,列类型: `VARCHAR`:列值: `Design`
 
-## JPA 一一对多映射
+表名: `PERSON`
+
+行:列名: `ID`,列类型: `BIGINT`:列值: `1`
+
+列名: `NAME`,列类型: `VARCHAR`:列值: `Tom`
+
+列名: `DEPT_ID`,列类型: `BIGINT`:列值: `1`
+
+# 第 2 章：JPA 一对多映射
+
+1. JPA 一对多映射
+2. JPA 一对多表映射
+3. JPA 一对多单向映射
+4. JPA 一对多排序映射
+5. JPA `Persist OrderedList` 映射
+6. JPA 一对多 `Map Key` 映射
+7. JPA 一对多无类型映射
+
+## JPA 一对多映射
 
 ![](img/image_rsrcBT6.jpg)
 
@@ -1534,7 +1566,7 @@ public class Person {
 
 我们用 `@ManyToOne` 标记 `Department`，以指示 `Department` 和 `Employee` 之间的关系。
 
-**Person.java**
+`Person.java`
 
 ```java
 package com.abd.jpa;
@@ -1560,7 +1592,7 @@ public class Person {
 }
 ```
 
-**Department.java**
+`Department.java`
 
 ```java
 package com.abd.jpa;
@@ -1579,7 +1611,7 @@ public class Department {
 }
 ```
 
-**PersonImpl.java**
+`PersonImpl.java`
 
 ```java
 package com.abd.jpa;
@@ -1604,11 +1636,14 @@ public class Person {
     public void setId(Long id) {this.id = id; }
 }
 ```
-*(注：此处原文中 Person.java 和 Department.java 的代码块似乎存在重复或混淆，已根据要求保留代码格式并仅翻译描述部分)*
+
+*(注：此处原文中 `Person.java` 和 `Department.java` 的代码块似乎存在重复或混淆，已根据要求保留代码格式并仅翻译描述部分)*
 
 *修正：严格按照原文结构翻译：*
 
-**Person.java**
+`Person.java`
+
+
 
 ```java
 package com.abd.jpa;
@@ -1718,10 +1753,6 @@ public class Helper {
 }
 ```
 
-
-
-
-
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context" xmlns:security="http://www.springframework.org/schema/security" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
@@ -1774,20 +1805,28 @@ public class Client {
 ### Output
 
 Table Name: DEPARTMENT
+
 Row:Column Name: ID,Column Type: BIGINT:Column Value: 1
+
 Column Name: NAME,Column Type: VARCHAR:Column Value: Design
 
 Table Name: PERSON
+
 Row:Column Name: ID,Column Type: BIGINT:Column Value: 1
+
 Column Name: NAME,Column Type: VARCHAR:Column Value: Tom
+
 Column Name: DEPARTMENT_ID,Column Type: BIGINT:Column Value: 1
+
 Row:Column Name: ID,Column Type: BIGINT:Column Value: 2
+
 Column Name: NAME,Column Type: VARCHAR:Column Value: Jack
+
 Column Name: DEPARTMENT_ID,Column Type: BIGINT:Column Value: 1
 
 ## 2 JPA 一对多连接表映射
 
-!![](img/image_rsrcBT6.jpg)
+![](img/image_rsrcBT6.jpg)
 
 在这里，你将学习如何实现一对多的映射。
 
@@ -1802,6 +1841,8 @@ private Set<Person> persons = new HashSet<Person>();
 ```
 
 ### Person.java
+
+
 
 ```java
 package com.abd.jpa;
@@ -1910,10 +1951,6 @@ public class Department {
 }
 ```
 
-
-
-
-
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"xmlns:security="http://www.springframework.org/schema/security"xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsdhttp://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsdhttp://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsdhttp://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
@@ -1965,19 +2002,33 @@ public class Client {
 ### 输出
 
 表名: DEPARTMENT
+
 行:列名: ID,列类型: BIGINT:列值: 1
+
 列名: NAME,列类型: VARCHAR:列值: Design
+
 表名: PERSON
+
 行:列名: ID,列类型: BIGINT:列值: 1
+
 列名: NAME,列类型: VARCHAR:列值: Tom
+
 列名: DEPARTMENT_ID,列类型: BIGINT:列值: 1
+
 行:列名: ID,列类型: BIGINT:列值: 2
+
 列名: NAME,列类型: VARCHAR:列值: Jack
+
 列名: DEPARTMENT_ID,列类型: BIGINT:列值: 1
+
 表名: PERSON_DEP
+
 行:列名: EMP_ID,列类型: BIGINT:列值: 1
+
 列名: PHONE_ID,列类型: BIGINT:列值: 1
+
 行:列名: EMP_ID,列类型: BIGINT:列值: 1
+
 列名: PHONE_ID,列类型: BIGINT:列值: 2
 
 ## 3 JPA 一对多单向映射
@@ -2077,6 +2128,8 @@ public class Phone {
 
 #### PersonDaoImpl.java
 
+
+
 ```java
 package com.abd.jpa;
 import javax.persistence.EntityManager;
@@ -2099,7 +2152,7 @@ public class PersonDaoImpl {
 }
 ```
 
-### Helper.java
+### `Helper.java`
 
 ```java
 package com.abd.jpa;
@@ -2136,10 +2189,6 @@ public class Helper {
     }
 }
 ```
-
-
-
-
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -2181,7 +2230,8 @@ public class Helper {
 </beans>
 ```
 
-Client.java
+### `Client.java`
+
 ```java
 package com.abd.jpa;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -2196,36 +2246,47 @@ public class Client {
 }
 ```
 
-Output
+### Output
 
 Table Name: EMP_PHON
+
 Row:Column Name: EMP_ID,Column Type: INTEGER:Column Value: 1
+
 Column Name: PHONE_ID,Column Type: INTEGER:Column Value: 1
+
 Table Name: PHONE
+
 Row:Column Name: ID,Column Type: INTEGER:Column Value: 1
+
 Column Name: NUM,Column Type: VARCHAR:Column Value: 1234509876
+
 Column Name: TYPE,Column Type: VARCHAR:Column Value: null
+
 Table Name: PROFESSOR
+
 Row:Column Name: ID,Column Type: INTEGER:Column Value: 1
+
 Column Name: NAME,Column Type: VARCHAR:Column Value: name
+
 Column Name: SALARY,Column Type: BIGINT:Column Value: 12345
 
 ## 4 JPA OneToMany OrderBy 映射
 
-!![](img/image_rsrcBT6.jpg)
+![](img/image_rsrcBT6.jpg)
 
 在这里你将学习如何实现一对多映射。
 
-以下代码展示了如何在一对多映射中设置 order by 属性。
+以下代码展示了如何在一对多映射中设置 `order by` 属性。
 
-`@OrderBy("name ASC")` 用于按人员姓名对 person 集合进行排序。
+`@OrderBy("name ASC")` 用于按人员姓名对 `person` 集合进行排序。
 
 ```java
 @OneToMany(targetEntity=Person.class, mappedBy="department")@OrderBy("name ASC")
 private Set<Person> persons = new HashSet<Person>();
 ```
 
-Person.java
+### `Person.java`
+
 ```java
 package com.abd.jpa;
 import javax.persistence.Entity;
@@ -2270,7 +2331,8 @@ public class Person {
 }
 ```
 
-Department.java
+### `Department.java`
+
 ```java
 package com.abd.jpa;
 import java.util.HashSet;
@@ -2309,7 +2371,10 @@ public class Department {
 }
 ```
 
-PersonDaoImpl.java
+### `PersonDaoImpl.java`
+
+
+
 ```java
 package com.abd.jpa;
 import java.util.List;
@@ -2337,7 +2402,8 @@ public class PersonDaoImpl {
 }
 ```
 
-Helper.java
+`Helper.java`
+
 ```java
 package com.abd.jpa;
 import java.sql.Connection;
@@ -2374,10 +2440,6 @@ public class Helper {
 }
 ```
 
-
-
-
-
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"xmlns:security="http://www.springframework.org/schema/security" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsdhttp://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsdhttp://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsdhttp://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
@@ -2408,7 +2470,7 @@ public class Helper {
 </beans>
 ```
 
-### Client.java
+### `Client.java`
 
 ```java
 package com.abd.jpa;
@@ -2426,17 +2488,25 @@ public class Client {
 
 ### 输出
 
-表名：DEPARTMENT
-行:列名: ID,列类型: BIGINT,列值: 1
-列名: NAME,列类型: VARCHAR,列值: Design
+表名：`DEPARTMENT`
 
-表名：PERSON
-行:列名: ID,列类型: BIGINT,列值: 1
-列名: NAME,列类型: VARCHAR,列值: Tom
-列名: DEPARTMENT_ID,列类型: BIGINT,列值: 1
-行:列名: ID,列类型: BIGINT,列值: 2
-列名: NAME,列类型: VARCHAR,列值: Jack
-列名: DEPARTMENT_ID,列类型: BIGINT,列值: 1
+行:列名: `ID`,列类型: `BIGINT`,列值: `1`
+
+列名: `NAME`,列类型: `VARCHAR`,列值: `Design`
+
+表名：`PERSON`
+
+行:列名: `ID`,列类型: `BIGINT`,列值: `1`
+
+列名: `NAME`,列类型: `VARCHAR`,列值: `Tom`
+
+列名: `DEPARTMENT_ID`,列类型: `BIGINT`,列值: `1`
+
+行:列名: `ID`,列类型: `BIGINT`,列值: `2`
+
+列名: `NAME`,列类型: `VARCHAR`,列值: `Jack`
+
+列名: `DEPARTMENT_ID`,列类型: `BIGINT`,列值: `1`
 
 ## 5 JPA 有序列表 List 映射
 
@@ -2448,7 +2518,7 @@ public class Client {
 private List<PrintJob> jobs;
 ```
 
-### PrintJob.java
+### `PrintJob.java`
 
 ```java
 package com.abd.jpa;
@@ -2468,7 +2538,7 @@ public class PrintJob {
 }
 ```
 
-### PrintQueue.java
+### `PrintQueue.java`
 
 ```java
 package com.abd.jpa;
@@ -2499,7 +2569,7 @@ public class PrintQueue {
 }
 ```
 
-#### PersonDaoImpl.java
+#### `PersonDaoImpl.java`
 
 ```java
 package com.abd.jpa;
@@ -2523,7 +2593,9 @@ public class PersonDaoImpl {
 }
 ```
 
-### Helper.java
+### `Helper.java`
+
+
 
 ```java
 package com.abd.jpa;
@@ -2562,10 +2634,6 @@ public class Helper {
 ```
 
 ### persistence.xml
-
-
-
-
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -2618,18 +2686,24 @@ public class Client {
 ### 输出
 
 Table Name: PRINTJOB
+
 Row:
+
 Column Name: ID,Column Type: INTEGER,Column Value: 1
+
 Column Name: QUEUE_NAME,Column Type: VARCHAR,Column Value: q1
+
 Column Name: PRINT_ORDER,Column Type: INTEGER,Column Value: 0
 
 Table Name: PRINTQUEUE
+
 Row:
+
 Column Name: NAME,Column Type: VARCHAR,Column Value: q1
 
 ## 6 JPA OneToMany Map Key 映射
 
-!![](img/image_rsrcBT6.jpg)
+![](img/image_rsrcBT6.jpg)
 
 在这里你将学习如何实现一对多映射。
 
@@ -2763,6 +2837,8 @@ public class PersonDaoImpl {
 
 ### Helper.java
 
+
+
 ```java
 package com.abd.jpa;
 import java.sql.Connection;
@@ -2807,10 +2883,6 @@ public class Helper {
     <persistence-unit name="jpaData" />
 </persistence>
 ```
-
-
-
-
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -2933,16 +3005,14 @@ public class Employee {
 }
 ```
 
-
-
-
-
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="1.0"xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"><persistence-unit name="jpaData" /></persistence>
 ```
 
 `applicationContext.xml`
+
+
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -2991,19 +3061,29 @@ public class Client {
 `Output`
 
 表名: `DEPARTMENT`
+
 行:列名: `ID`,列类型: `INTEGER`:列值: 1
+
 列名: `NAME`,列类型: `VARCHAR`:列值: test
+
 表名: `EMPLOYEE`
+
 行:列名: `ID`,列类型: `INTEGER`:列值: 1
+
 列名: `NAME`,列类型: `VARCHAR`:列值: Tom
+
 列名: `SALARY`,列类型: `BIGINT`:列值: 0
+
 列名: `DEPARTMENT_ID`,列类型: `INTEGER`:列值: null
+
 表名: `EMP_PHONE`
 
 # 第 3 章：JPA 多对一映射
 
 1. JPA ManyToOne 映射
+
 2. JPA ManyToOne 关联列映射
+
 3. JPA ManyToOne 关联列映射
 
 ## 1. JPA ManyToOne 映射
@@ -3019,6 +3099,7 @@ public class Client {
 在 `Person` 类的 `department` 字段中，使用 `@ManyToOne` 注解标记了 `Department`。
 
 `Person.java` (初始定义片段)
+
 ```java
 @Entity
 public class Person {
@@ -3054,10 +3135,6 @@ public class Person {
 
 （此处后续内容由于输入文本不完整未显示，已翻译翻译提供的可见部分）
 
-
-
-
-
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"xmlns:security="http://www.springframework.org/schema/security" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
@@ -3090,7 +3167,7 @@ public class Person {
 </beans>
 ```
 
-Client.java
+`Client.java`
 
 ```java
 package com.abd.jpa;
@@ -3108,21 +3185,29 @@ public class Client {
 
 ### 输出
 
-表名: DEPARTMENT
-行:列名: ID,列类型: BIGINT:列值: 1
-列名: NAME,列类型: VARCHAR:列值: Design
+表名: `DEPARTMENT`
 
-表名: PERSON
-行:列名: ID,列类型: BIGINT:列值: 1
-列名: NAME,列类型: VARCHAR:列值: Jack
-列名: DEPARTMENT_ID,列类型: BIGINT:列值: 1
-行:列名: ID,列类型: BIGINT:列值: 2
-列名: NAME,列类型: VARCHAR:列值: Tom
-列名: DEPARTMENT_ID,列类型: BIGINT:列值: 1
+行:列名: `ID`,列类型: `BIGINT`:列值: 1
+
+列名: `NAME`,列类型: `VARCHAR`:列值: Design
+
+表名: `PERSON`
+
+行:列名: `ID`,列类型: `BIGINT`:列值: 1
+
+列名: `NAME`,列类型: `VARCHAR`:列值: Jack
+
+列名: `DEPARTMENT_ID`,列类型: `BIGINT`:列值: 1
+
+行:列名: `ID`,列类型: `BIGINT`:列值: 2
+
+列名: `NAME`,列类型: `VARCHAR`:列值: Tom
+
+列名: `DEPARTMENT_ID`,列类型: `BIGINT`:列值: 1
 
 ## 2 JPA 多对一 关联列映射
 
-!![](img/image_rsrcBT6.jpg)
+![](img/image_rsrcBT6.jpg)
 
 以下代码展示了如何在多对一映射中设置连接列。
 
@@ -3132,7 +3217,15 @@ public class Client {
 private Department department;
 ```
 
-Person.java
+`Person.java`
+
+
+
+# JPA 多对一关联列映射示例
+
+## 实体类
+
+### Person.java
 
 ```java
 package com.abd.jpa;
@@ -3166,7 +3259,7 @@ public class Person {
 }
 ```
 
-Department.java
+### Department.java
 
 ```java
 package com.abd.jpa;
@@ -3198,7 +3291,9 @@ public class Department implements Serializable {
 }
 ```
 
-PersonDaoImpl.java
+## DAO 实现类
+
+### PersonDaoImpl.java
 
 ```java
 package com.abd.jpa;
@@ -3217,7 +3312,9 @@ public class PersonDaoImpl {
 }
 ```
 
-Helper.java
+## 辅助工具类
+
+### Helper.java
 
 ```java
 package com.abd.jpa;
@@ -3255,9 +3352,7 @@ public class Helper {
 }
 ```
 
-
-
-
+## Spring 配置文件
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -3291,6 +3386,8 @@ public class Helper {
 </beans>
 ```
 
+## 客户端入口
+
 ### Client.java
 
 ```java
@@ -3307,24 +3404,35 @@ public class Client {
 }
 ```
 
-### 输出
+## 输出结果
 
 表名: DEPARTMENT
+
 行:列名: ID,列类型: BIGINT:列值: 1
+
 列名: NAME,列类型: VARCHAR:列值: Design
+
 表名: PERSON
+
 行:列名: ID,列类型: BIGINT:列值: 1
+
 列名: NAME,列类型: VARCHAR:列值: Tom
+
 列名: DEPT_NAME,列类型: VARCHAR:列值: Design
+
 列名: DEPT_ID,列类型: BIGINT:列值: 1
+
 行:列名: ID,列类型: BIGINT:列值: 2
+
 列名: NAME,列类型: VARCHAR:列值: Jack
+
 列名: DEPT_NAME,列类型: VARCHAR:列值: Design
+
 列名: DEPT_ID,列类型: BIGINT:列值: 1
 
-## 3 JPA ManyToOne 关联列映射
+## JPA ManyToOne 关联列映射
 
-!![](img/image_rsrcBT6.jpg)
+![](img/image_rsrcBT6.jpg)
 
 以下代码标记了多对一映射中使用的关联列。
 
@@ -3334,7 +3442,7 @@ public class Client {
 private Department department;
 ```
 
-### Person.java
+
 
 ```java
 package com.abd.jpa;
@@ -3403,9 +3511,6 @@ public class Department {
 }
 ```
 
-
-
-
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context" xmlns:security="http://www.springframework.org/schema/security" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
@@ -3456,23 +3561,34 @@ public class Client {
 
 ### 输出
 
-表名: DEPARTMENT
-行:列名: ID, 列类型: BIGINT: 列值: 1
-列名: NAME, 列类型: VARCHAR: 列值: Design
+表名: `DEPARTMENT`
 
-表名: PERSON
-行:列名: ID, 列类型: BIGINT: 列值: 1
-列名: NAME, 列类型: VARCHAR: 列值: Tom
-列名: DEPT_ID, 列类型: BIGINT: 列值: 1
-行:列名: ID, 列类型: BIGINT: 列值: 2
-列名: NAME, 列类型: VARCHAR: 列值: Jack
-列名: DEPT_ID, 列类型: BIGINT: 列值: 1
+行:列名: `ID`, 列类型: `BIGINT`: 列值: `1`
+
+列名: `NAME`, 列类型: `VARCHAR`: 列值: `Design`
+
+表名: `PERSON`
+
+行:列名: `ID`, 列类型: `BIGINT`: 列值: `1`
+
+列名: `NAME`, 列类型: `VARCHAR`: 列值: `Tom`
+
+列名: `DEPT_ID`, 列类型: `BIGINT`: 列值: `1`
+
+行:列名: `ID`, 列类型: `BIGINT`: 列值: `2`
+
+列名: `NAME`, 列类型: `VARCHAR`: 列值: `Jack`
+
+列名: `DEPT_ID`, 列类型: `BIGINT`: 列值: `1`
 
 # 第 4 章：JPA 多对多映射
 
 ## 1. JPA ManyToMany 映射
+
 2. JPA ManyToMany 关联表映射
+
 3. JPA ManyToMany 双向映射
+
 4. JPA ManyToMany 可嵌入映射
 
 ### 1.1 JPA ManyToMany 映射
@@ -3579,6 +3695,8 @@ public class Department implements java.io.Serializable {
 
 #### PersonDaoImpl.java
 
+
+
 ```java
 package com.abd.jpa;
 import javax.persistence.EntityManager;
@@ -3606,7 +3724,7 @@ public class PersonDaoImpl {
 }
 ```
 
-### Helper.java
+## Helper.java
 
 ```java
 package com.abd.jpa;
@@ -3645,10 +3763,6 @@ public class Helper {
 }
 ```
 
-
-
-
-
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"xmlns:security="http://www.springframework.org/schema/security" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsdhttp://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsdhttp://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsdhttp://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
@@ -3681,7 +3795,7 @@ public class Helper {
 </beans>
 ```
 
-### Client.java
+## Client.java
 
 ```java
 package com.abd.jpa;
@@ -3697,32 +3811,50 @@ public class Client {
 }
 ```
 
-### 输出
+## 输出
 
 表名: DEPARTMENT
+
 行:列名: ID,列类型: BIGINT,列值: 1
+
 列名: NAME,列类型: VARCHAR,列值: Design
+
 行:列名: ID,列类型: BIGINT,列值: 2
+
 列名: NAME,列类型: VARCHAR,列值: Testing
 
 表名: DEPARTMENT_PERSON
+
 行:列名: DEPARTMENT_ID,列类型: BIGINT,列值: 1
+
 列名: PERSONS_ID,列类型: BIGINT,列值: 1
+
 行:列名: DEPARTMENT_ID,列类型: BIGINT,列值: 1
+
 列名: PERSONS_ID,列类型: BIGINT,列值: 2
 
 表名: PERSON
+
 行:列名: ID,列类型: BIGINT,列值: 1
+
 列名: NAME,列类型: VARCHAR,列值: Tom
+
 行:列名: ID,列类型: BIGINT,列值: 2
+
 列名: NAME,列类型: VARCHAR,列值: Jack
 
 表名: PERSON_DEPARTMENT
+
 行:列名: PERSON_ID,列类型: BIGINT,列值: 1
+
 列名: DEPARTMENTS_ID,列类型: BIGINT,列值: 1
+
 行:列名: PERSON_ID,列类型: BIGINT,列值: 1
+
 列名: DEPARTMENTS_ID,列类型: BIGINT,列值: 2
+
 行:列名: PERSON_ID,列类型: BIGINT,列值: 2
+
 列名: DEPARTMENTS_ID,列类型: BIGINT,列值: 2
 
 ## 2 JPA 多对多 关联表映射
@@ -3731,7 +3863,7 @@ public class Client {
 
 以下代码展示了如何为多对多映射设置关联表。
 
-### Person.java
+## Person.java
 
 ```java
 package com.abd.jpa;
@@ -3770,7 +3902,11 @@ public class Person {
 }
 ```
 
-### Department.java
+## Department.java
+
+
+
+## 1. 实体类 `Department.java`
 
 ```java
 package com.abd.jpa;
@@ -3804,7 +3940,7 @@ public class Department implements java.io.Serializable {
 }
 ```
 
-#### PersonDaoImpl.java
+## 2. 数据访问对象 `PersonDaoImpl.java`
 
 ```java
 package com.abd.jpa;
@@ -3836,7 +3972,7 @@ public class PersonDaoImpl {
 }
 ```
 
-### Helper.java
+## 3. 辅助类 `Helper.java`
 
 ```java
 package com.abd.jpa;
@@ -3875,60 +4011,144 @@ public class Helper {
 }
 ```
 
-### persistence.xml
+## 4. 配置文件
 
+### 4.1 `persistence.xml`
 
-
-
-
-### 配置文件
-
-### persistence.xml
 ```xml
 <?xml version="1.0" encoding="UTF-8"?><persistence version="1.0"xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"><persistence-unit name="jpaData" /></persistence>
 ```
 
-### applicationContext.xml
+### 4.2 `applicationContext.xml`
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?><beans xmlns="http://www.springframework.org/schema/beans"xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context" xmlns:security="http://www.springframework.org/schema/security" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsdhttp://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsdhttp://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsdhttp://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd"><tx:annotation-driven /><context:annotation-config /><bean id="personDao" class="com.abd.jpa.PersonDaoImpl" /><bean id="dataSource"class="org.springframework.jdbc.datasource.DriverManagerDataSource"><property name="driverClassName"><value>com.mysql.jdbc.Driver</value></property><property name="url"><value>jdbc:mysql://localhost/db1</value></property><property name="username"><value>root</value></property><property name="password"><value>root</value></property></bean><bean id="entityManagerFactory"class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"><property name="dataSource" ref="dataSource" /><property name="persistenceUnitName" value="jpaData" /><property name="jpaVendorAdapter"><bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" /></property><property name="jpaProperties"><props><prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop><prop key="hibernate.show_sql">true</prop><prop key="hibernate.hbm2ddl.auto">update</prop></props></property></bean><bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"><property name="entityManagerFactory" ref="entityManagerFactory" /></bean></beans>
 ```
 
-### 源代码
+## 5. 客户端代码 `Client.java`
 
-### Client.java
 ```java
 package com.abd.jpa;import org.springframework.context.support.ClassPathXmlApplicationContext;public class Client {public static void main(String[] args) {ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");PersonDaoImpl dao = (PersonDaoImpl) context.getBean("personDao");dao.test();context.close();Helper.checkData();}}
 ```
 
-## 3 JPA 多对多双向映射
+## 6. JPA 多对多双向映射
 
 ![](img/image_rsrcBTA.jpg)![](img/image_rsrcBTB.jpg)![](img/image_rsrcBTC.jpg)
 
 以下代码展示了如何创建一个双向的多对多映射。
 
-#### Professor.java
+### 6.1 `Professor.java`
+
 ```java
 package com.abd.jpa;import java.util.ArrayList;import java.util.Collection;import javax.persistence.Entity;import javax.persistence.GeneratedValue;import javax.persistence.GenerationType;import javax.persistence.Id;import javax.persistence.ManyToMany;@Entitypublic class Professor {@Id @GeneratedValue(strategy=GenerationType.IDENTITY)private int id;private String name;private long salary;@ManyToManyprivate Collection<Project> projects;public Professor() {projects = new ArrayList<Project>();}public int getId() {return id;}public void setId(int id) {this.id = id;}public String getName() {return name;}public void setName(String name) {this.name = name;}public long getSalary() {return salary;}public void setSalary(long salary) {this.salary = salary;}public void addProject(Project project) {if (!getProjects().contains(project)) {projects.add(project);}if (!project.getEmployees().contains(this)) {project.getEmployees().add(this);}}public Collection<Project> getProjects() {return projects;}public String toString() {return "Employee id: " + getId() + " name: " + getName() +" with " + getProjects().size() + " projects";}}
 ```
 
-#### Project.java
-```java
-package com.abd.jpa;import java.util.ArrayList;import java.util.Collection;import javax.persistence.Entity;import javax.persistence.GeneratedValue;import javax.persistence.GenerationType;import javax.persistence.Id;import javax.persistence.ManyToMany;@Entitypublic class Project {@Id @GeneratedValue(strategy=GenerationType.IDENTITY)protected int id;protected String name;@ManyToMany(mappedBy="projects")private Collection<Professor> employees;public Project() {employees = new ArrayList<Professor>();}public int getId() {return id;}public void setId(int projectNo) {this.id = projectNo;}public String getName() {return name;}public void setName(String projectName) {this.name = projectName;}public Collection<Professor> getEmployees() {return employees;}public void addEmployee(Professor employee) {if (!getEmployees().contains(employee)) {employees.add(employee);}if (!employee.getProjects().contains(this)) {employee.getProjects().add(this);}}public String toString() {return "Project id: " + getId() + ", name: " + getName() +" with " + getEmployees().size() + " employees";}}
-```
-
-#### PersonDaoImpl.java
-```java
-package com.abd.jpa;import javax.persistence.EntityManager;import javax.persistence.PersistenceContext;import org.springframework.transaction.annotation.Transactional;@Transactionalpublic class PersonDaoImpl {public void test() {Professor emp = new Professor();emp.setName("name");emp.setSalary(12345);Project p = new Project();p.setName("Chem");p.getEmployees().add(emp);emp.getProjects().add(p);em.persist(p);em.persist(emp);}@PersistenceContextprivate EntityManager em;}}
-```
+### 6.2 `Project.java`
 
 
 
+# JPA 多对多关系示例
 
+以下代码展示了使用 JPA 和 Spring 实现多对多关系的完整示例，包含实体类、DAO 实现、辅助工具类以及相关配置文件。
 
-### Helper.java
+## 实体类：`Project.java`
 
 ```java
 package com.abd.jpa;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+
+@Entity
+public class Project {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    protected int id;
+    protected String name;
+
+    @ManyToMany(mappedBy = "projects")
+    private Collection<Professor> employees;
+
+    public Project() {
+        employees = new ArrayList<Professor>();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int projectNo) {
+        this.id = projectNo;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String projectName) {
+        this.name = projectName;
+    }
+
+    public Collection<Professor> getEmployees() {
+        return employees;
+    }
+
+    public void addEmployee(Professor employee) {
+        if (!getEmployees().contains(employee)) {
+            employees.add(employee);
+        }
+        if (!employee.getProjects().contains(this)) {
+            employee.getProjects().add(this);
+        }
+    }
+
+    public String toString() {
+        return "Project id: " + getId() + ", name: " + getName() +
+                " with " + getEmployees().size() + " employees";
+    }
+}
+```
+
+## DAO 实现：`PersonDaoImpl.java`
+
+```java
+package com.abd.jpa;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import org.springframework.transaction.annotation.Transactional;
+
+@Transactional
+public class PersonDaoImpl {
+    public void test() {
+        Professor emp = new Professor();
+        emp.setName("name");
+        emp.setSalary(12345);
+
+        Project p = new Project();
+        p.setName("Chem");
+        p.getEmployees().add(emp);
+        emp.getProjects().add(p);
+
+        em.persist(p);
+        em.persist(emp);
+    }
+
+    @PersistenceContext
+    private EntityManager em;
+}
+```
+
+## 辅助工具类：`Helper.java`
+
+```java
+package com.abd.jpa;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -3942,51 +4162,73 @@ public class Helper {
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/db1", "root", "root");
             Statement st = conn.createStatement();
             ResultSet mrs = conn.getMetaData().getTables(null, null, null, new String[] { "TABLE" });
+
             while (mrs.next()) {
                 String tableName = mrs.getString(3);
-                System.out.println("\n\n\n\nTable Name: "+ tableName);
+                System.out.println("\n\n\n\nTable Name: " + tableName);
                 ResultSet rs = st.executeQuery("select * from " + tableName);
                 ResultSetMetaData metadata = rs.getMetaData();
+
                 while (rs.next()) {
                     System.out.println(" Row:");
                     for (int i = 0; i < metadata.getColumnCount(); i++) {
-                        System.out.println("    Column Name: "+ metadata.getColumnLabel(i + 1)+",  ");
-                        System.out.println("    Column Type: "+ metadata.getColumnTypeName(i + 1)+":  ");
+                        System.out.println("    Column Name: " + metadata.getColumnLabel(i + 1) + ",  ");
+                        System.out.println("    Column Type: " + metadata.getColumnTypeName(i + 1) + ":  ");
                         Object value = rs.getObject(i + 1);
-                        System.out.println("    Column Value: "+value+"\n");
+                        System.out.println("    Column Value: " + value + "\n");
                     }
                 }
             }
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
 ```
 
-### persistence.xml
+## 配置文件：`persistence.xml`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+                                 http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
     <persistence-unit name="jpaData" />
 </persistence>
 ```
 
-### applicationContext.xml
+## 配置文件：`applicationContext.xml`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context" xmlns:security="http://www.springframework.org/schema/security" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+                           http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context-3.2.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
+
     <tx:annotation-driven />
     <context:annotation-config />
+
     <bean id="personDao" class="com.abd.jpa.PersonDaoImpl" />
+
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName"><value>com.mysql.jdbc.Driver</value></property>
         <property name="url"><value>jdbc:mysql://localhost/db1</value></property>
         <property name="username"><value>root</value></property>
         <property name="password"><value>root</value></property>
     </bean>
+
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <property name="persistenceUnitName" value="jpaData" />
@@ -4001,16 +4243,18 @@ public class Helper {
             </props>
         </property>
     </bean>
+
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory" />
     </bean>
 </beans>
 ```
 
-### Client.java
+## 客户端入口：`Client.java`
 
 ```java
 package com.abd.jpa;
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Client {
@@ -4024,25 +4268,24 @@ public class Client {
 }
 ```
 
-### Output
+## 运行输出示例
 
 ```
 Table Name: PROFESSOR
 Row:
-Column Name: ID,Column Type: INT:  
+Column Name: ID, Column Type: INT:  
 Column Value: 1
 
-Column Name: NAME,Column Type: VARCHAR:  
+Column Name: NAME, Column Type: VARCHAR:  
 Column Value: John
 
-Column Name: LAST,Column Type: VARCHAR:  
+Column Name: LAST, Column Type: VARCHAR:  
 Column Value: Doe
 ```
 
+## 实体类：`Department.java`
 
 
-
-### Department.java
 
 ```java
 package com.abd.jpa;
@@ -4251,21 +4494,12 @@ Column Name: L_NAME, Column Type: VARCHAR,  Column Value: Smith
 Column Name: SALARY, Column Type: BIGINT,  Column Value: 0
 ```
 
+# MVC（模型视图控制器）架构
 
-
-
-
-# MVC (模型视图控制器) 架构
-
-对于视图（向浏览器显示结果数据）
-结果数据来自 (`Tables`)
-在连接数据库后
-前端控制器将获取相应的 (`JSP 页面`)
-并将数据放入 (`JSP 页面`)中
-然后将 (`JSP 页面`) 发送回浏览器
-浏览器将进行显示。
+对于视图（向浏览器显示结果数据），结果数据来自`Tables`。在连接数据库后，前端控制器将获取相应的`JSP 页面`，并将数据放入`JSP 页面`中，然后将`JSP 页面`发送回浏览器，浏览器将进行显示。
 
 ## 首页
+
 | ![](img/image_rsrcBTD.jpg) |
 
 ## 环境
@@ -4280,84 +4514,99 @@ Column Name: SALARY, Column Type: BIGINT,  Column Value: 0
 | 设计模式 | `Front Controller`, `MVC`, `Factory`, `DAO`, `Proxy`, `Singleton`, `Abstract factory pattern`, `Template pattern`, `SessionFactory`, `TransactionFactory` |
 
 ## 目录结构
+
 | ![](img/image_rsrcBTE.jpg) |
 
 ### 目录结构（展开）
+
 | ![](img/image_rsrcBTF.jpg) |
+
 | ![](img/image_rsrcBTG.jpg) |
+
 | ![](img/image_rsrcBTH.jpg) |
+
 | ![](img/image_rsrcBTJ.jpg) |
 
 ## 首页
+
 | ![](img/image_rsrcBTD.jpg) |
 
 ## 管理员模块 I
+
 ### 登录
+
 | ![](img/image_rsrcBTK.jpg) |
+
 ### 登录成功
+
 | ![](img/image_rsrcBTM.jpg) |
+
 ### 添加医生账号
+
 | ![](img/image_rsrcBTN.jpg) |
+
 ### 添加医生账号成功
+
 | ![](img/image_rsrcBTP.jpg) |
+
 ### 查看医院医生信息
-| ![](img/image_rsrcBTR.jpg) |
+
+
+
 ### 删除医生信息
-| ![](img/image_rsrcBTS.jpg) |
 
 ## 患者模块 II
+
 ### 患者注册
-| ![](img/image_rsrcBTT.jpg) |
-| 患者注册成功
-| ![](img/image_rsrcBTU.jpg) |
+
+患者注册成功
+
 ### 查看所有医生
-| ![](img/image_rsrcBTV.jpg) |
+
 ### 查找预约
-| ![](img/image_rsrcBTW.jpg) |
+
 ### 查找可用医生预约列表
-| ![](img/image_rsrcBTX.jpg) |
+
 ### 选择预约以确定医生的医生
-| ![](img/image_rsrcBTY.jpg) |
+
 ### 医生预约已确认
-| ![](img/image_rsrcBTZ.jpg) |
+
 ### 医生预约总数
-| ![](img/image_rsrcBU0.jpg) |
+
 ### 取消选定的医生预约
-| ![](img/image_rsrcBU1.jpg) |
+
 ### 取消医生预约成功
-| ![](img/image_rsrcBU2.jpg) |
+
 ### 查询医生记录
-| ![](img/image_rsrcBU3.jpg) |
+
 ### 查询医生诊断记录
-| ![](img/image_rsrcBU4.jpg) |
 
 ## 医生模块 III
+
 ### 医生登录
-| ![](img/image_rsrcBU5.jpg) |
-### 医生登录成功
-| ![](img/image_rsrcBU6.jpg) |
+
+医生登录成功
+
 ### 修改密码
-| ![](img/image_rsrcBU7.jpg) |
-### 修改密码成功
-| ![](img/image_rsrcBU8.jpg) |
+
+修改密码成功
+
 ### 查看患者预约
-| ![](img/image_rsrcBU9.jpg) |
+
 ### 创建患者记录
-| ![](img/image_rsrcBUA.jpg) |
-### 创建患者记录
-| ![](img/image_rsrcBUB.jpg) |
-### 创建患者记录成功
-| ![](img/image_rsrcBUC.jpg) |
+
+创建患者记录成功
+
 ### 修改患者记录
-| ![](img/image_rsrcBUD.jpg) |
-### 修改患者记录成功
-| ![](img/image_rsrcBUE.jpg) |
+
+修改患者记录成功
+
 ### 结束治疗
-| ![](img/image_rsrcBUF.jpg) |
-### 结束治疗成功
-| ![](img/image_rsrcBUG.jpg) |
+
+结束治疗成功
 
 ## 医院系统（工作流）
+
 - **步骤 1**: `患者` $\rightarrow$ `所需医生` $\rightarrow$ `预约`
 - **步骤 2**: `医生` $\rightarrow$ `医生查看预约` $\rightarrow$ `治疗`
 - **步骤 3**: `患者` $\rightarrow$ `查看治疗`
@@ -4367,11 +4616,14 @@ Column Name: SALARY, Column Type: BIGINT,  Column Value: 0
 # 医院系统设计文档
 
 ## 1. 医院门诊预约系统功能
+
 ### 1.1 系统整体功能
+
 - 权限级别操作，具有清晰分类，当系统进行身份验证时。
 - 个人隐私保护：患者的医疗记录仅在医生治疗期间由患者本人负责，其他包括管理员在内的任何人均无权访问。
 
 ### 1.2 患者角色
+
 - 注册用户，设置登录用户名和密码。
 - 自定义查询医生姓名。
 - 根据查询结果进行预约；如果指定的医生预约量已满，则预约失败。结果返回给患者。
@@ -4379,16 +4631,20 @@ Column Name: SALARY, Column Type: BIGINT,  Column Value: 0
 - 预约后可以查看医生信息。
 
 ### 1.3 医生角色
+
 - 可以查看患者的预约背景。
 - 查询患者记录。
 - 创建患者记录。
 - 修改患者记录。
 
 ### 1.4 管理员角色
+
 - 添加和删除医生账号。
 
 ## 2. 设计流程
+
 根据需求分析，分离主要实体：
+
 - `医生` (`doctor`)
 - `患者` (`patient`)
 - `医疗记录` (`history`)
@@ -4398,43 +4654,36 @@ Column Name: SALARY, Column Type: BIGINT,  Column Value: 0
 - 医生当前可用预约数 (`currappointment`)
 
 ### 模块层次图
-| ![](img/image_rsrcBUH.jpg) |
 
 ### 组件图
-| ![](img/image_rsrcBUJ.jpg) |
 
 ### 注册序列图（患者用户）
-| ![](img/image_rsrcBUK.jpg) |
 
 ### 患者活动图
-| ![](img/image_rsrcBUM.jpg) |
 
 ### 医生活动图
-| ![](img/image_rsrcBUN.jpg) |
 
 ### 管理员活动图
-| ![](img/image_rsrcBUP.jpg) |
 
 ### 在 `MySQL (Server)` 中创建数据库 (tarena1)
-| ![](img/image_rsrcBUR.jpg) |
 
 ### 将你的（医院 Web 应用）部署到 Tomcat 服务器
+
 首页显示如下：
+
 首页
-| ![](img/image_rsrcBTD.jpg) |
 
 再次进入 `MySQL (Server)`
+
 ```sql
 show tables;
 ```
+
 由于你已经在 Tomcat 服务器中运行了（医院 Web 应用），此时会出现自动生成的表。
 
 ### 插入 SQL 语句
+
 首先 $\rightarrow$ 插入给定的 SQL 语句
-
-
-
-
 
 # 插入指定的 SQL 语句
 
@@ -4504,7 +4753,7 @@ create table dl_appointment(
 
 | DID | 医生编号 | 主键 | 外键 |
 | :--- | :--- | :--- | :--- |
-| dl doctor | | | `DID` |
+| `dl_doctor` | | | `DID` |
 | SunA | 周日上午可用预约最大人数 | | |
 | SunP | 周日下午可用预约最大人数 | | |
 | MonA | 周一上午可用预约人数 | | |
@@ -4585,7 +4834,7 @@ create table dl_history (
 
 | PID | 生成的患者编号 | 姓名 | 用户名 | 密码 | 年龄 | 性别 | 家庭地址 | 电话号码 | 患者历史 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| | | | | | 1-男性, 0-女性 | | |
+| | | | | | 1-男性, 0-女性 | | | |
 
 ```sql
 create sequence dl_patient_seq;
@@ -4620,23 +4869,22 @@ create table dl_pinqueue (
 );
 ```
 
-
-
-
-
 # 数据库凭据与表脚本
 
 ## ADMIN
+
 - **user**: `apassword`
 - **table**: `atable`
 - **arenaTotal TABLE**: `7`
 
 ## dl_patient
+
 - **user**: `Amar`
 - **password**: `Amar`
 - **首位注册患者（自动生成密码=123456）**: 请查看表，如有需要您可以更改您的密码。
 
 ## dl_doctor
+
 - **user**: `Indira`
 - **password**: `Indira`
 
@@ -4649,6 +4897,9 @@ insert into dl_admin values(2, 'Admin', 'Admin', 'admin@abc.com', '21345', 'Admi
 ```
 
 ### dl_doctor 表插入
+
+
+
 ```sql
 INSERT INTO `dl_doctor` (`DID`, `Name`, `Password`, `Age`, `Sex`, `Level`, `Section`, `Specialism`, `Phone`)
 INSERT INTO `dl_doctor` VALUES ('001', 'Indira', 'Indira', 28, 0, 'Professor', 'Eye', 'Short Sighted', '82330000');
@@ -4680,6 +4931,7 @@ INSERT INTO `dl_doctor` VALUES ('027', 'Indira1', 'Indira1', 28, 0, 'Professor',
 ```
 
 ### dl_appointment 表插入
+
 ```sql
 INSERT INTO `dl_appointment` (`DID`, `SunA`, `SunP`, `MonA`, `MonP`, `TueA`, `TueP`, `WedA`, `WedP`, `ThuA`, `ThuP`, `FriA`, `FriP`, `SatA`, `SatP`)
 INSERT INTO `dl_appointment` VALUES ('001', 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4);
@@ -4687,6 +4939,7 @@ INSERT INTO `dl_appointment` VALUES ('002', 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 
 ```
 
 ### dl_curappointment 表插入
+
 ```sql
 INSERT INTO `dl_curappointment` (`DID`, `SunA`, `SunP`, `MonA`, `MonP`, `TueA`, `TueP`, `WedA`, `WedP`, `ThuA`, `ThuP`, `FriA`, `FriP`, `SatA`, `SatP`)
 INSERT INTO `dl_curappointment` VALUES ('001', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
@@ -4714,6 +4967,7 @@ INSERT INTO `dl_curappointment` VALUES ('022', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
 ```
 
 ### dl_patient 表插入
+
 ```sql
 INSERT INTO `dl_patient` (`PID`, `Name`, `Username`, `Password`, `Age`, `Sex`, `Address`, `Phone`)
 INSERT INTO `dl_patient` VALUES (1001, 'Amar', 'Amar', 'Amar', 20, 0, '1 A AMAR', '34552345');
@@ -4724,14 +4978,11 @@ INSERT INTO `dl_patient` VALUES (1005, 'Shyam', 'Shyam', 'Shyam', 45, 0, '2 B PU
 ```
 
 ### dl_history 表插入
+
 ```sql
 INSERT INTO `dl_history` (`HID`, `Doctor`, `Description`, `Diagnose`, `Patient`, `Rx`, `Finished`, `FDate`, `SDate`)
 INSERT INTO `dl_history` VALUES (2, '001', 'Headache', 'Sars', 1001, 'Madecine', 0, '2024-01-23 19:02:00:0', '2024-01-21 19:03:51:0 ');
 ```
-
-
-
-
 
 # 实体关系图
 
@@ -4740,7 +4991,9 @@ INSERT INTO `dl_history` VALUES (2, '001', 'Headache', 'Sars', 1001, 'Madecine',
 ## 第一节：通过图你将获得一些概述
 
 | ![](img/image_rsrcBUU.jpg) |
+
 | ![](img/image_rsrcBUV.jpg) |
+
 | ![](img/image_rsrcBTF.jpg) |
 
 #### 源代码结构
@@ -5053,7 +5306,6 @@ public class AllAction extends DispatchActionSupport {
 
 
 
-
 | ![](img/image_rsrcBUW.jpg) |
 
 | ![](img/image_rsrcBTF.jpg) |
@@ -5223,8 +5475,6 @@ public class AdminBizImpl implements AdminBiz {
 ```
 
 #### `DoctorBizImpl.java`
-
-
 
 
 
@@ -5437,20 +5687,20 @@ public class DoctorBizImpl implements DoctorBiz {
 }
 ```
 
-PatientBizImpl.java
-
-
+`PatientBizImpl.java`
 
 
 
 ```java
 package com.abd.biz.impl;
+
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
+
 import com.abd.biz.PatientBiz;
 import com.abd.dao.CurappointmentDao;
 import com.abd.dao.DoctorDao;
@@ -5907,19 +6157,22 @@ public class PatientBizImpl implements PatientBiz {
 
 
 
-
-
 # 第一部分图表你将获得一些概述
 
 | ![](img/image_rsrcBUX.jpg) |
+
 | ![](img/image_rsrcBTF.jpg) |
+
 | ![](img/image_rsrcBUY.jpg) |
+
 | ![](img/image_rsrcBUZ.jpg) |
+
 | ![](img/image_rsrcBV0.jpg) |
 
-## src\com\abd\dao
+## `src\com\abd\dao`
 
-### AdminDao.java
+### `AdminDao.java`
+
 ```java
 package com.abd.dao;
 import com.abd.entity.Admin;
@@ -5928,7 +6181,8 @@ public interface AdminDao {
 }
 ```
 
-### AppointmentDao.java
+### `AppointmentDao.java`
+
 ```java
 package com.abd.dao;
 import com.abd.entity.*;
@@ -5938,7 +6192,8 @@ public interface AppointmentDao {
 }
 ```
 
-### CurappointmentDao.java
+### `CurappointmentDao.java`
+
 ```java
 package com.abd.dao;
 import java.util.List;
@@ -5950,7 +6205,8 @@ public interface CurappointmentDao {
 }
 ```
 
-### DoctorDao.java
+### `DoctorDao.java`
+
 ```java
 package com.abd.dao;
 import java.util.List;
@@ -5965,7 +6221,8 @@ public interface DoctorDao {
 }
 ```
 
-### HistoryDao.java
+### `HistoryDao.java`
+
 ```java
 package com.abd.dao;
 import java.util.List;
@@ -5979,7 +6236,8 @@ public interface HistoryDao {
 }
 ```
 
-### PatientDao.java
+### `PatientDao.java`
+
 ```java
 package com.abd.dao;
 import com.abd.entity.Patient;
@@ -5990,7 +6248,8 @@ public interface PatientDao {
 }
 ```
 
-### PinqueueDao.java
+### `PinqueueDao.java`
+
 ```java
 package com.abd.dao;
 import java.util.List;
@@ -6005,9 +6264,10 @@ public interface PinqueueDao {
 }
 ```
 
-## src\com\abd\dao\impl
+## `src\com\abd\dao\impl`
 
-### AdminDaoImpl.java
+### `AdminDaoImpl.java`
+
 ```java
 package com.abd.dao.impl;
 import java.util.List;
@@ -6027,7 +6287,8 @@ public class AdminDaoImpl extends HibernateDaoSupport implements AdminDao {
 }
 ```
 
-### AppointmentDaoImpl.java
+### `AppointmentDaoImpl.java`
+
 ```java
 package com.abd.dao.impl;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
@@ -6043,7 +6304,8 @@ public class AppointmentDaoImpl extends HibernateDaoSupport implements Appointme
 }
 ```
 
-### CurappointmentDaoImpl.java
+### `CurappointmentDaoImpl.java`
+
 ```java
 package com.abd.dao.impl;
 import java.util.List;
@@ -6063,7 +6325,8 @@ public class CurappointmentDaoImpl extends HibernateDaoSupport implements Curapp
 }
 ```
 
-### DoctorDaoImpl.java
+### `DoctorDaoImpl.java`
+
 ```java
 package com.abd.dao.impl;
 import java.util.List;
@@ -6098,7 +6361,8 @@ public class DoctorDaoImpl extends HibernateDaoSupport implements DoctorDao {
 }
 ```
 
-### HistoryDaoImpl.java
+### `HistoryDaoImpl.java`
+
 ```java
 package com.abd.dao.impl;
 import java.util.List;
@@ -6126,7 +6390,8 @@ public class HistoryDaoImpl extends HibernateDaoSupport implements HistoryDao {
 }
 ```
 
-### PatientDaoImpl.java
+### `PatientDaoImpl.java`
+
 ```java
 package com.abd.dao.impl;
 import java.util.List;
@@ -6152,7 +6417,10 @@ public class PatientDaoImpl extends HibernateDaoSupport implements PatientDao {
 }
 ```
 
-### PinqueueDaoImpl.java
+### `PinqueueDaoImpl.java`
+
+
+
 ```java
 package com.abd.dao.impl;
 import java.util.List;
@@ -6195,15 +6463,11 @@ public class PinqueueDaoImpl extends HibernateDaoSupport implements PinqueueDao 
 
 | ![](img/image_rsrcBTG.jpg) |
 
-## src\com\abd\entity
+## `src\com\abd\entity`
 
-Admin.java
+`Admin.java`
 
-
-
-
-
-### Admin.java 
+### `Admin.java`
 
 ```java
 package com.abd.entity;
@@ -6266,7 +6530,7 @@ public class Admin implements Serializable {
 }
 ```
 
-### Appointment.java
+### `Appointment.java`
 
 ```java
 package com.abd.entity;
@@ -6442,7 +6706,9 @@ public class Appointment implements Serializable {
 }
 ```
 
-### Curappointment.java
+### `Curappointment.java`
+
+
 
 ```java
 package com.abd.entity;
@@ -6746,10 +7012,6 @@ public class Doctor implements Serializable {
 }
 ```
 
-
-
-
-
 ### DoctorQueryHistory.java
 
 ```java
@@ -6881,6 +7143,10 @@ public class DoctorQueryHistory implements Serializable {
 
 ### DoctorQueryPinqueue.java
 
+
+
+### `DoctorQueryPinqueue.java`
+
 ```java
 package com.abd.entity;
 import java.io.Serializable;
@@ -6965,7 +7231,7 @@ public class DoctorQueryPinqueue implements Serializable {
 }
 ```
 
-### History.java
+### `History.java`
 
 ```java
 package com.abd.entity;
@@ -7057,7 +7323,7 @@ public class History implements Serializable {
 }
 ```
 
-### Patient.java
+### `Patient.java`
 
 ```java
 package com.abd.entity;
@@ -7171,7 +7437,7 @@ public class Patient implements Serializable {
 }
 ```
 
-### Pinqueue.java
+### `Pinqueue.java`
 
 ```java
 package com.abd.entity;
@@ -7236,10 +7502,11 @@ public class Pinqueue implements Serializable {
 }
 ```
 
-### hosp.hbm.xml
+### `hosp.hbm.xml`
 
 
 
+以下为 Hibernate 映射文件 `hibernate-mapping.xml` 的完整内容，定义了实体类与数据库表之间的映射关系：
 
 ```xml
 <?xml version="1.0"?>
@@ -7363,10 +7630,9 @@ public class Pinqueue implements Serializable {
 </hibernate-mapping>
 ```
 
+### `EncodingFilter.java`
 
-
-
-### EncodingFilter.java
+以下为 `EncodingFilter.java` 的代码，位于路径 `src\com\abd\filter`：
 
 ```java
 package com.abd.filter;
@@ -7403,9 +7669,9 @@ public class EncodingFilter implements Filter {
 }
 ```
 
-路径：`src\com\abd\util`
+### `Util.java`
 
-### Util.java
+以下为 `Util.java` 的代码，位于路径 `src\com\abd\util`：
 
 ```java
 package com.abd.util;
@@ -7431,9 +7697,9 @@ public class Util {
 }
 ```
 
-路径：`src\res`
+### `AppResources.properties`
 
-### AppResources.properties
+以下为 `AppResources.properties` 的内容，位于路径 `src\res`：
 
 ```properties
 errors.password=password
@@ -7454,7 +7720,9 @@ errors.header=<font color="red">
 errors.footer=</font>
 ```
 
-### AppResources_zh.properties
+### `AppResources_zh.properties`
+
+以下为 `AppResources_zh.properties` 的内容，位于路径 `src\res`：
 
 ```properties
 errors.password=您的密码错误！
@@ -7472,9 +7740,15 @@ errors.header=<font color="red">
 errors.footer=</font>
 ```
 
-路径：`src`
+### `log4j.properties`
 
-### log4j.properties
+以下为 `log4j.properties` 的内容，位于路径 `src`：
+
+```properties
+# 此处为 log4j 配置文件内容
+```
+
+
 
 ```properties
 ### 将日志消息直接输出到标准输出 ###
@@ -7530,7 +7804,7 @@ log4j.logger.org.hibernate.connection.DriverManagerConnectionProvider=trace
 
 路径：`WebContent\`
 
-### addDoctor.jsp
+## addDoctor.jsp
 
 ```jsp
 <%@ page language="java" contentType="text/html; charset="UTF-8"
@@ -7577,17 +7851,14 @@ log4j.logger.org.hibernate.connection.DriverManagerConnectionProvider=trace
 </html>
 ```
 
-getDoctor.jsp
-
-
-
-
+## getDoctor.jsp
 
 # 项目结构
 
 ## WebContent
 
 ### Doctor Information.jsp
+
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
 <%@ page isELIgnored="false"%>
@@ -7655,6 +7926,11 @@ getDoctor.jsp
 ```
 
 ### login.jsp
+
+
+
+### 管理员登录页面
+
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
 <%@ page isELIgnored="false"%>
@@ -7702,6 +7978,7 @@ getDoctor.jsp
 ```
 
 ### main.jsp
+
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
 <%@page isELIgnored="false"%>
@@ -7739,6 +8016,7 @@ getDoctor.jsp
 ```
 
 ### removeDoctor.jsp
+
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
 <%@page isELIgnored="false"
@@ -7777,6 +8055,7 @@ getDoctor.jsp
 ```
 
 ### createHistory.jsp
+
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
 <%@page isELIgnored="false"
@@ -7831,52 +8110,14 @@ getDoctor.jsp
 ## WebContent/Database
 
 ### hospital.sql
+
 `hospital.sql` 的所有细节均已在开头给出
-
-
-
-
 
 ### getPatientHistory.jsp
 
-```html
-<%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
-<%@page isELIgnored="false"%(
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%(
-<%@include file="../include/ccs.inc" %>
-<!DOCTYPE html PUBLIC "-////W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>治疗结束</title>
-</head>
-<body bgcolor="#FFFFFF">
-  <table width="770" height="423" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#000000">
-    <tr>
-      <td height="421" bgcolor="#FFFFFF">
-        <%@ include file = "../include/head.inc" %>
-        <table width="770" height="290" border="0" align="center" cellpadding="0" cellspacing="0">
-          <tr>
-            <%@ include file = "../include/doctor.inc" %>
-            <td width="603" align="center" valign="top">
-              <table width="100%" height="85%" border="0" cellpadding="3" cellspacing="1" bgcolor="#666666">
-                <tr>
-                  <td width="488" height="400" align="center" valign="top" bgcolor="E3EDFF">
-                    <br>操作成功！
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-</body>
-</html>
-```
 
-### getPatientCase.jsp
+
+### `getPatientCase.jsp`
 
 ```html
 <%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
@@ -7952,7 +8193,7 @@ getDoctor.jsp
 </body>
 ```
 
-### getPatientIn.jsp
+### `getPatientIn.jsp`
 
 ```html
 <%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
@@ -8011,7 +8252,11 @@ getDoctor.jsp
 </html>
 ```
 
-### login.jsp
+### `login.jsp`
+
+
+
+## 医生登录页面（`login.jsp`）
 
 ```html
 <%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
@@ -8059,7 +8304,7 @@ getDoctor.jsp
 </html>
 ```
 
-### main.jsp
+## 医生主页面（`main.jsp`）
 
 ```html
 <%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
@@ -8098,11 +8343,7 @@ getDoctor.jsp
 </html>
 ```
 
-
-
-
-
-## updatePassword.jsp
+## 修改病历页面（`updatePassword.jsp`）
 
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
@@ -8152,7 +8393,7 @@ getDoctor.jsp
 </html>
 ```
 
-## updatePassword.jsp
+## 修改密码页面（`updatePassword.jsp`）
 
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
@@ -8199,7 +8440,9 @@ getDoctor.jsp
 </body>
 ```
 
-## WebContent/include/admin.inc
+
+
+## `WebContent/include/admin.inc`
 
 ```jsp
 <%@ page contentType="text/html; charset=UTF-8"%>
@@ -8208,21 +8451,21 @@ getDoctor.jsp
         <br>
         <p><a href="/hospital/default.jsp">返回首页</a></p>
         <c:if test="${empty admin}">
-            <p><a href="/hospital/admin.jsp">登录 (管理员)</a>a></p>
+            <p><a href="/hospital/admin.jsp">登录 (管理员)</a></p>
         </c:if>
         <c:if test="${!empty admin}">
-            <p><a href="/hospital/allAction.do?method=getDoctor">查看医院信息</a>a></p>
-            <p><a href="/hospital/admin.jsp">添加医生账号</a>a></p>
-            <p><a href="/hospital/allAction.do?method=getDoctor">删除医生账号</a>a></p>
-            <p><a href="/hospital/allAction.do?method=exit">退出</a>a></p>
+            <p><a href="/hospital/allAction.do?method=getDoctor">查看医院信息</a></p>
+            <p><a href="/hospital/admin.jsp">添加医生账号</a></p>
+            <p><a href="/hospital/allAction.do?method=getDoctor">删除医生账号</a></p>
+            <p><a href="/hospital/allAction.do?method=exit">退出</a></p>
         </c:if>
-        <p><a href="/hospital/patient/main.jsp">患者用户</a>a></p>
-        <p><a href="/hospital/doctor/main.jsp">医生用户</a>a></p>
+        <p><a href="/hospital/patient/main.jsp">患者用户</a></p>
+        <p><a href="/hospital/doctor/main.jsp">医生用户</a></p>
     </div>
 </td>
 ```
 
-## WebContent/include/ccs.inc
+## `WebContent/include/ccs.inc`
 
 ```css
 <style type="text/css">
@@ -8230,95 +8473,91 @@ body,td {font-size:12px;}a {font-size:12px;}a:link {text-decoration: none;}a:vis
 </style>
 ```
 
-## WebContent/include/doctor.inc
+## `WebContent/include/doctor.inc`
 
 ```jsp
 <%@ page contentType="text/html; charset=UTF-8"%>
 <td width="167" height="290" valign="top" bgcolor="8FB8">
     <div align="center">
         <br>
-        <p><a href="/hospital/default.jsp">返回首页</a>a></p>
+        <p><a href="/hospital/default.jsp">返回首页</a></p>
         <c:if test="${empty doctor}">
-            <p><a href="/hospital/doctor/login.jsp">登录 (医生用户)</a>a></p>
+            <p><a href="/hospital/doctor/login.jsp">登录 (医生用户)</a></p>
         </c:if>
         <c:if test="${!empty doctor}">
-            <p><a href="/hospital/doctor/updatePassword.jsp">修改密码</a>a></p>
-            <p><a href="/hospital/allAction.do?method=getAppointmentMessage&did=${doctor.did}">查看预约信息</a>a></p>
-            <p><a href="/hospital/allAction.do?method=getAppointmentMessage&did=${doctor.did}">创建记录</a>a></p>
-            <p><a href="/hospital/allAction.do?method=queryPatientHistory&did=${doctor.did}">查看病历</a>a></p>
-            <p><a href="/hospital/allAction.do?method=queryPatientHistory&did=${doctor.did}">修改病历</a>a></p>
-            <p><a href="/hospital/allAction.do?method=queryPatientHistory&did=${doctor.did}">结束治疗</a>a></p>
-            <p><a href="/hospital/allAction.do?method=exit">退出</a>a></p>
+            <p><a href="/hospital/doctor/updatePassword.jsp">修改密码</a></p>
+            <p><a href="/hospital/allAction.do?method=getAppointmentMessage&did=${doctor.did}">查看预约信息</a></p>
+            <p><a href="/hospital/allAction.do?method=getAppointmentMessage&did=${doctor.did}">创建记录</a></p>
+            <p><a href="/hospital/allAction.do?method=queryPatientHistory&did=${doctor.did}">查看病历</a></p>
+            <p><a href="/hospital/allAction.do?method=queryPatientHistory&did=${doctor.did}">修改病历</a></p>
+            <p><a href="/hospital/allAction.do?method=queryPatientHistory&did=${doctor.did}">结束治疗</a></p>
+            <p><a href="/hospital/allAction.do?method=exit">退出</a></p>
         </c:if>
-        <p><a href="/hospital/patient/main.jsp">患者用户</a>a></p>
-        <p><a href="/hospital/admin/main.jsp">管理员用户</a>a></p>
+        <p><a href="/hospital/patient/main.jsp">患者用户</a></p>
+        <p><a href="/hospital/admin/main.jsp">管理员用户</a></p>
     </div>
 </td>
 ```
 
-## WebContent/include/head.inc
+## `WebContent/include/head.inc`
 
 ```html
 <table width="770" border="0" align="center" cellpadding="0" cellspacing="0">
-    <tr>>
+    <tr>
         <td>&nbsp;</td>
         <td width="411">&nbsp;</td>
-    </tr>>
-    <tr>>
-        <td width="359"><img src="/hospital/images/LEFTBAR.GIF" width="359" height="39"></td>>
+    </tr>
+    <tr>
+        <td width="359"><img src="/hospital/images/LEFTBAR.GIF" width="359" height="39"></td>
         <td align="right" bgcolor="36CA1">&nbsp;</td>
-    </tr>>
-    <tr>>
-        <td colspan="2"><img src="/hospital/images/TOPBAR.GIF" width="770" height="69"></td>>
-    </tr>>
-    <tr>>
+    </tr>
+    <tr>
+        <td colspan="2"><img src="/hospital/images/TOPBAR.GIF" width="770" height="69"></td>
+    </tr>
+    <tr>
         <td colspan="2">
             <table width="100%" border="0" cellspacing="0" cellpadding="0" background="IMAGES/but_bg.gif">
-                <tr>>
+                <tr>
                     <td align="right">&nbsp;</td>
-                </tr>>
+                </tr>
             </table>
-        </td>>
-    </tr>>
+        </td>
+    </tr>
 </table>
 ```
 
-## WebContent/include/patient.inc
+## `WebContent/include/patient.inc`
 
 ```jsp
 <%@ page contentType="text/html; charset=UTF-8"%>
 <td width="167" height="290" valign="top" bgcolor="8FBEE8">
     <div align="center">
         <br>
-        <p><a href="/hospital/default.jsp">返回首页</a>a></p>
+        <p><a href="/hospital/default.jsp">返回首页</a></p>
         <c:if test="${empty patient}">
-            <p><a href="/hospital/patient/login.jsp">登录 (患者用户)</a>a></p>
-            <p><a href="/hospital/patient/register.jsp">注册</a>a></p>
+            <p><a href="/hospital/patient/login.jsp">登录 (患者用户)</a></p>
+            <p><a href="/hospital/patient/register.jsp">注册</a></p>
         </c:if>
         <c:if test="${!empty patient}">
-            <p><a href="/hospital/allAction.do?method=allDoctorMessage">查看所有医生</a>a></p>
-            <p><a href="/hospital/allAction.do?method=getMessage">预约</a>a></p>
-            <p><a href="/hospital/allAction.do?method=patientMyAppointment&pid=${patient.pid}">查看我的预约</a>a></p>
-            <p><a href="/hospital/allAction.do?method=patientMyAppointment&pid=${patient.pid}">取消预约</a>a></p>
-            <p><a href="/hospital/allAction.do?method=getDoctorMessage&pid=${patient.pid}">查询医生信息</a>a></p>
-            <p><a href="/hospital/allAction.do?method=queryHistory&pid=${patient.pid}">查询记录</a>a></p>
-            <p><a href="/hospital/allAction.do?method=exit">退出</a>a></p>
+            <p><a href="/hospital/allAction.do?method=allDoctorMessage">查看所有医生</a></p>
+            <p><a href="/hospital/allAction.do?method=getMessage">预约</a></p>
+            <p><a href="/hospital/allAction.do?method=patientMyAppointment&pid=${patient.pid}">查看我的预约</a></p>
+            <p><a href="/hospital/allAction.do?method=patientMyAppointment&pid=${patient.pid}">取消预约</a></p>
+            <p><a href="/hospital/allAction.do?method=getDoctorMessage&pid=${patient.pid}">查询医生信息</a></p>
+            <p><a href="/hospital/allAction.do?method=queryHistory&pid=${patient.pid}">查询记录</a></p>
+            <p><a href="/hospital/allAction.do?method=exit">退出</a></p>
         </c:if>
-        <p><a href="/hospital/doctor/main.jsp">医生用户</a>a></p>
-        <p><a href="/hospital/admin/main.jsp">管理员用户</a>a></p>
+        <p><a href="/hospital/doctor/main.jsp">医生用户</a></p>
+        <p><a href="/hospital/admin/main.jsp">管理员用户</a></p>
     </div>
 </td>
 ```
 
-## WebContent/patient
+## `WebContent/patient`
 
-cancleAppointment.jsp
+`cancleAppointment.jsp`
 
-
-
-
-
-### getAppointmentInfo.jsp
+### `getAppointmentInfo.jsp`
 
 ```html
 <%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
@@ -8357,66 +8596,11 @@ cancleAppointment.jsp
 </html>
 ```
 
-### getCurrentDoctorInfo.jsp
+### `getCurrentDoctorInfo.jsp`
 
-```html
-<%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
-<%@page isELIgnored="false"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@include file="../include/ccs.inc"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>在此输入标题</title>
-</head>
-<body bgcolor="#FFFFFF">
-<table width="770" height="423" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#000000">
-  <tr>
-    <td height="421" bgcolor="#FFFFFF">
-      <%@ include file = "../include/head.inc" %>
-      <table width="770" height="290" border="0" align="center" cellpadding="0" cellspacing="0">
-        <tr>
-          <%@ include file = "../include/patient.inc" %>
-          <td width="603" align="center" valign="top">
-            <table width="100%" height="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#666666">
-              <tr>
-                <td width="100%" height="400" align="center" valign="top" bgcolor="E3EDFF">
-                  <p align="left"><<strong>点击取消预约号</strong></p>
-                  <table width="100%">
-                    <tr>
-                      <th>预约号</th>
-                      <th>医生工号</th>
-                      <th>0－周日，1－周一，以此类推</th>
-                      <th>0- 上午，1- 下午</th>
-                      <th>预约日期</th>
-                    </tr>
-                    <c:forEach var="pi" items="${pinqueues}">
-                      <tr align="center">
-                        <td>
-                          <a href="/hospital/allAction.do?method=patientCancleAppointment&qid=${pi.qid}" onclick="return confirm('确定要取消这次预约吗？')">${pi.qid}</a>
-                        </td>
-                        <td>${pi.doctor.did}</td>
-                        <td>${pi.day}</td>
-                        <td>${pi.ap}</td>
-                        <td>${pi.t_date}</td>
-                      </tr>
-                    </c:forEach>
-                  </table>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
-</body>
-</html>
-```
 
-### getDoctorAppointmentInfo.jsp
+
+### `getDoctorAppointmentInfo.jsp`
 
 ```html
 <%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
@@ -8478,11 +8662,66 @@ cancleAppointment.jsp
 </html>
 ```
 
+### `doctorsReservation.jsp`
+
+```html
+<%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
+<%@page isELIgnored="false"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@include file="../include/ccs.inc"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>在此输入标题</title>
+</head>
+<body bgcolor="#FFFFFF">
+<table width="770" height="423" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#000000">
+  <tr>
+    <td height="421" bgcolor="#FFFFFF">
+      <%@ include file = "../include/head.inc" %>
+      <table width="770" height="290" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <%@ include file = "../include/patient.inc" %>
+          <td width="603" align="center" valign="top">
+            <table width="100%" height="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#666666">
+              <tr>
+                <td width="100%" height="400" align="center" valign="top" bgcolor="E3EDFF">
+                  <p align="left"><strong>点击取消预约号</strong></p>
+                  <table width="100%">
+                    <tr>
+                      <th>预约号</th>
+                      <th>医生工号</th>
+                      <th>0－周日，1－周一，以此类推</th>
+                      <th>0- 上午，1- 下午</th>
+                      <th>预约日期</th>
+                    </tr>
+                    <c:forEach var="pi" items="${pinqueues}">
+                      <tr align="center">
+                        <td>
+                          <a href="/hospital/allAction.do?method=patientCancleAppointment&qid=${pi.qid}" onclick="return confirm('确定要取消这次预约吗？')">${pi.qid}</a>
+                        </td>
+                        <td>${pi.doctor.did}</td>
+                        <td>${pi.day}</td>
+                        <td>${pi.ap}</td>
+                        <td>${pi.t_date}</td>
+                      </tr>
+                    </c:forEach>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+```
 
 
-
-
-### doctorsReservation.jsp
 
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
@@ -8559,6 +8798,10 @@ cancleAppointment.jsp
 
 ### getDoctorInfo.jsp
 
+
+
+### `getDoctorInfo2.jsp`
+
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
 <%@page isELIgnored="false"%>
@@ -8622,78 +8865,11 @@ cancleAppointment.jsp
 </html>
 ```
 
-### getDoctorInfo2.jsp
-
-```jsp
-<%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
-<%@page isELIgnored="false"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%(
-<%@include file="../include/ccs.inc"%>
-<!DOCTYPE html PUBLIC "-////W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html/loose.dtd">
-<html
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>所有医生</title>
-</head>
-<body bgcolor="#FFFFFF">
-    <table width="770" height="423" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#000000">
-        <<tr>
-            <td height="421" bgcolor="#FFFFFF">
-                <%@ include file "../include/head.inc" %>
-                <table width="770" height="290" border="0" align="center" cellpadding="0" cellspacing="0">
-                    <<tr>
-                        <%@ include file "../include/patient.inc" %>
-                        <td width="603" align="center" valign="top">
-                            <table width="100%" height="85%" border="0" cellpadding="3" cellspacing="1" bgcolor="#666666">
-                                <<tr>
-                                    <td width="100%" height="400" align="center" valign="top" bgcolor="E3EDFF">
-                                        <c:if test="${!empty doctors}">
-                                            <p align="left"><strong>点击医生姓名查看医生预约信息</strong></p>
-                                        </c:if>
-                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                            <<tr>
-                                                <th>全名</th>
-                                                <th>序号</th>
-                                                <th>年龄</th>
-                                                <th>性别（0 男 1 女）</th>
-                                                <th>职称</th>
-                                                <th>科室</th>
-                                                <th>专长</th>
-                                                <th>电话</th>
-                                            </tr></tr>
-                                            <c:forEach var="dd" items="${doctors}">
-                                                <<tr> align="center">
-                                                    <td><a href="/hospital/allAction.do?method=patientAppointmentMessage&did=${dd.did}">${dd.name}</a></td>
-                                                    <td>${dd.did}</td>
-                                                    <td>${dd.age}</td>
-                                                    <td>${dd.sex}</td>
-                                                    <td>${dd.levels}</td>
-                                                    <td>${dd.section}</td>
-                                                    <td>${dd.spe}</td>
-                                                    <td>${dd.phone}</td>
-                                                </</tr>>
-                                            </c:forEach>
-                                        </</table>
-                                    </</td>>
-                                </</tr>
-                            </</table>>
-                        </td>
-                    </</tr>
-                </table>
-            </</td>>
-        </</tr>>
-    </table>
-</body>
-</html>
-```
-
-### getHistory.jsp
-
-
-
-
+### `getHistory.jsp`
 
 ### 患者病历
+
+
 
 ```html
 <%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
@@ -8880,17 +9056,17 @@ cancleAppointment.jsp
 
 ### 患者查询医生.jsp
 
-
-
-
-
 # 查询医生 (Query.jsp)
+
+
+
+# 查询医生（queryDoctor.jsp）
 
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
 <%@page isELIgnored="false"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@include file="../include/ccs.inc" %}
+<%@include file="../include/ccs.inc" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html
 <head>
@@ -8969,14 +9145,13 @@ cancleAppointment.jsp
 </html>
 ```
 
-# 患者挂号 (register.jsp)
+# 患者挂号（register.jsp）
 
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
 <%@page isELIgnored="false"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@include file="../include/ccs.inc" %}
--text-correction- 
+<%@include file="../include/ccs.inc" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html
 <head>
@@ -9031,8 +9206,6 @@ cancleAppointment.jsp
 `WebContent\WEB-INF`
 
 `springweb-servlet.xml`
-
-
 
 
 
@@ -9146,8 +9319,6 @@ cancleAppointment.jsp
 ```
 
 `struts-config.xml`
-
-
 
 
 
@@ -9267,13 +9438,11 @@ cancleAppointment.jsp
 
 ### WebContent
 
-default.jsp
-
-
-
-
+`default.jsp`
 
 # 医院门诊预约系统 - 首页
+
+
 
 ```html
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
@@ -9394,4 +9563,3 @@ default.jsp
   <a>返回</a>
 </h1>
 ```
-

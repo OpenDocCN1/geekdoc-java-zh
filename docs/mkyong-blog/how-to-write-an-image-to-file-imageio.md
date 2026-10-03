@@ -1,46 +1,47 @@
+
 # 如何在 Java 中读写图像
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/how-to-write-an-image-to-file-imageio/>
 
-在 Java 中，我们可以使用 [javax.imageio.ImageIO](http://web.archive.org/web/20220619003336/https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/imageio/package-summary.html) 类来读写图像。
+在 Java 中，我们可以使用 [`javax.imageio.ImageIO`](http://web.archive.org/web/20220619003336/https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/imageio/package-summary.html) 类来读写图像。
 
-## 1.阅读图像
+## 1. 阅读图像
 
 从文件中读取图像。
 
 ```java
- BufferedImage image = ImageIO.read(new File("c:\\test\\image.png")); 
+BufferedImage image = ImageIO.read(new File("c:\\test\\image.png"));
 ```
 
 从 URL 读取图像。
 
 ```java
- BufferedImage image = ImageIO.read(new URL("https://example.com/image.png")); 
+BufferedImage image = ImageIO.read(new URL("https://example.com/image.png"));
 ```
 
-## 2.编写或保存图像
+## 2. 编写或保存图像
 
 以不同的图像格式编写或保存图像。
 
 ```java
- ImageIO.write(bufferedImage , "jpg", new File("c:\\test\\image.jpg"));
+ImageIO.write(bufferedImage, "jpg", new File("c:\\test\\image.jpg"));
 
-  ImageIO.write(bufferedImage , "gif", new File("c:\\test\\image.gif"));
+ImageIO.write(bufferedImage, "gif", new File("c:\\test\\image.gif"));
 
-  ImageIO.write(bufferedImage , "png", new File("c:\\test\\image.png")); 
+ImageIO.write(bufferedImage, "png", new File("c:\\test\\image.png"));
 ```
 
 下面的代码片段列出了所有支持的格式。
 
 ```java
- String writerNames[] = ImageIO.getWriterFormatNames();
-  Arrays.stream(writerNames).forEach(System.out::println); 
+String writerNames[] = ImageIO.getWriterFormatNames();
+Arrays.stream(writerNames).forEach(System.out::println);
 ```
 
-输出
+输出：
 
-```java
- PG
+```text
+PG
 jpg
 tiff
 bmp
@@ -55,17 +56,17 @@ tif
 TIF
 TIFF
 wbmp
-jpeg 
+jpeg
 ```
 
-## 3.读取、调整和保存图像。
+## 3. 读取、调整和保存图像
 
-一个完整的 Java 例子，使用`ImageIO`从一个 URL (Google logo)中读取一个图像，将其大小调整为`300x150`并保存到一个文件中。
+一个完整的 Java 例子，使用 `ImageIO` 从一个 URL（Google logo）中读取一个图像，将其大小调整为 `300x150` 并保存到一个文件中。
 
-ReadWriteImage.java
+`ReadWriteImage.java`
 
 ```java
- package com.mkyong.io.image;
+package com.mkyong.io.image;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -127,7 +128,7 @@ public class ReadWriteImage {
         return bi;
     }
 
-} 
+}
 ```
 
 下载的图像大小调整为 300×150。
@@ -136,14 +137,15 @@ public class ReadWriteImage {
 
 ## 下载源代码
 
-$ git 克隆[https://github.com/mkyong/core-java](http://web.archive.org/web/20220619003336/https://github.com/mkyong/core-java)
-
-$ cd java-io/howto/images
+```bash
+git clone https://github.com/mkyong/core-java
+cd java-io/howto/images
+```
 
 ## 参考
 
-*   [Java ImageIO](http://web.archive.org/web/20220619003336/https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/imageio/package-summary.html)
-*   [Java 教程–使用图像](http://web.archive.org/web/20220619003336/https://docs.oracle.com/javase/tutorial/img/index.html)
-*   [Java 调整图像大小](/web/20220619003336/https://mkyong.com/java/how-to-resize-an-image-in-java/)
+- [Java ImageIO](http://web.archive.org/web/20220619003336/https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/imageio/package-summary.html)
+- [Java 教程–使用图像](http://web.archive.org/web/20220619003336/https://docs.oracle.com/javase/tutorial/img/index.html)
+- [Java 调整图像大小](/web/20220619003336/https://mkyong.com/java/how-to-resize-an-image-in-java/)
 
 <input type="hidden" id="mkyong-current-postId" value="3052">

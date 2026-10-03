@@ -1,25 +1,31 @@
+
 # 具有 Spring 数据 JPA 规范的 REST 查询语言
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/rest-api-search-language-spring-data-specifications>
 
 [This article is part of a series:](javascript:void(0);)[• REST Query Language with Spring and JPA Criteria](/web/20220926194244/https://www.baeldung.com/rest-search-language-spring-jpa-criteria)
+
 • REST Query Language with Spring Data JPA Specifications (current article)[• REST Query Language with Spring Data JPA and Querydsl](/web/20220926194244/https://www.baeldung.com/rest-api-search-language-spring-data-querydsl)
+
 [• REST Query Language – Advanced Search Operations](/web/20220926194244/https://www.baeldung.com/rest-api-query-search-language-more-operations)
+
 [• REST Query Language – Implementing OR Operation](/web/20220926194244/https://www.baeldung.com/rest-api-query-search-or-operation)
+
 [• REST Query Language with RSQL](/web/20220926194244/https://www.baeldung.com/rest-api-search-language-rsql-fiql)
+
 [• REST Query Language with Querydsl Web Support](/web/20220926194244/https://www.baeldung.com/rest-api-search-querydsl-web-in-spring-data-jpa)
 
-## 1。概述
+## 1. 概述
 
-在本教程中，我们将使用 Spring Data JPA 和规范构建一个**搜索/过滤 REST API** 。
+在本教程中，我们将使用 Spring Data JPA 和规范构建一个**搜索/过滤 REST API**。
 
 我们在[这个系列](/web/20220926194244/https://www.baeldung.com/spring-rest-api-query-search-language-tutorial)的[第一篇文章](/web/20220926194244/https://www.baeldung.com/rest-search-language-spring-jpa-criteria "REST Query Language with Spring and JPA Criteria")中开始研究一种带有基于 JPA 标准的解决方案的查询语言。
 
-那么，**为什么是查询语言呢？因为通过非常简单的字段搜索/过滤我们的资源对于太复杂的 API 来说是不够的。**查询语言更加灵活**，允许我们筛选出我们需要的资源。**
+那么，**为什么是查询语言呢？**因为通过非常简单的字段搜索/过滤我们的资源对于太复杂的 API 来说是不够的。查询语言更加灵活，允许我们筛选出我们需要的资源。
 
-## 2。`User`实体
+## 2. `User`实体
 
-首先，让我们从搜索 API 的一个简单的`User`实体开始:
+首先，让我们从搜索 API 的一个简单的`User`实体开始：
 
 ```java
 @Entity
@@ -38,11 +44,11 @@ public class User {
 }
 ```
 
-## 3。使用`Specification`过滤
+## 3. 使用`Specification`过滤
 
-现在让我们直接进入问题中最有趣的部分:使用定制的 Spring 数据 JPA `Specifications`进行查询。
+现在让我们直接进入问题中最有趣的部分：使用定制的 Spring 数据 JPA `Specifications`进行查询。
 
-我们将创建一个实现`Specification`接口的`UserSpecification`，并且我们将**传入我们自己的约束来构造实际的查询**:
+我们将创建一个实现`Specification`接口的`UserSpecification`，并且我们将**传入我们自己的约束来构造实际的查询**：
 
 ```java
 public class UserSpecification implements Specification<User> {
@@ -74,7 +80,7 @@ public class UserSpecification implements Specification<User> {
 }
 ```
 
-正如我们所看到的，**我们基于一些简单的约束**创建了一个`Specification`，我们在下面的`SearchCriteria`类中表示它:
+正如我们所看到的，**我们基于一些简单的约束**创建了一个`Specification`，我们在下面的`SearchCriteria`类中表示它：
 
 ```java
 public class SearchCriteria {
@@ -84,30 +90,30 @@ public class SearchCriteria {
 }
 ```
 
-`SearchCriteria`实现持有一个约束的基本表示，我们将基于这个约束来构造查询:
+`SearchCriteria`实现持有一个约束的基本表示，我们将基于这个约束来构造查询：
 
-*   `key`:字段名称，例如`firstName`、`age`等。
-*   `operation`:运算，例如，相等，小于等。
-*   `value`:字段值，例如约翰，25 等。
+- `key`：字段名称，例如`firstName`、`age`等。
+- `operation`：运算，例如，相等，小于等。
+- `value`：字段值，例如约翰，25 等。
 
 当然，实现很简单，还可以改进。然而，它是我们需要的强大而灵活的操作的坚实基础。
 
-## 4。`UserRepository`
+## 4. `UserRepository`
 
 接下来，我们来看看`UserRepository`。
 
-我们只是扩展了`JpaSpecificationExecutor`来获得新的规范 API:
+我们只是扩展了`JpaSpecificationExecutor`来获得新的规范 API：
 
 ```java
 public interface UserRepository 
   extends JpaRepository<User, Long>, JpaSpecificationExecutor<User> {}
 ```
 
-## 5。测试搜索查询
+## 5. 测试搜索查询
 
 现在让我们测试一下新的搜索 API。
 
-首先，让我们创建一些用户，让他们在测试运行时做好准备:
+首先，让我们创建一些用户，让他们在测试运行时做好准备：
 
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -127,21 +133,21 @@ public class JPASpecificationIntegrationTest {
         userJohn = new User();
         userJohn.setFirstName("John");
         userJohn.setLastName("Doe");
-        userJohn.setEmail("[[email protected]](/web/20220926194244/https://www.baeldung.com/cdn-cgi/l/email-protection)");
+        userJohn.setEmail("[[email protected]](/web/20220926194244/https://www.baeldung.com/cdn-cgi/l/email-protection)");
         userJohn.setAge(22);
         repository.save(userJohn);
 
         userTom = new User();
         userTom.setFirstName("Tom");
         userTom.setLastName("Doe");
-        userTom.setEmail("[[email protected]](/web/20220926194244/https://www.baeldung.com/cdn-cgi/l/email-protection)");
+        userTom.setEmail("[[email protected]](/web/20220926194244/https://www.baeldung.com/cdn-cgi/l/email-protection)");
         userTom.setAge(26);
         repository.save(userTom);
     }
 }
 ```
 
-接下来，让我们看看如何查找姓氏为的用户:
+接下来，让我们看看如何查找姓氏为的用户：
 
 ```java
 @Test
@@ -156,7 +162,7 @@ public void givenLast_whenGettingListOfUsers_thenCorrect() {
 }
 ```
 
-现在，我们将找到一个名为**，姓为**的用户:
+现在，我们将找到一个名为**，姓为**的用户：
 
 ```java
 @Test
@@ -173,9 +179,9 @@ public void givenFirstAndLastName_whenGettingListOfUsers_thenCorrect() {
 }
 ```
 
-注:我们用`where`和`and`到**组合规格。**
+注：我们用`where`和`and`到**组合规格**。
 
-接下来，让我们找到一个具有给定的**姓氏和最小年龄**的用户:
+接下来，让我们找到一个具有给定的**姓氏和最小年龄**的用户：
 
 ```java
 @Test
@@ -193,7 +199,7 @@ public void givenLastAndAge_whenGettingListOfUsers_thenCorrect() {
 }
 ```
 
-现在我们来看看如何搜索一个**实际上并不存在的`User`**:
+现在我们来看看如何搜索一个**实际上并不存在的`User`**：
 
 ```java
 @Test
@@ -211,7 +217,7 @@ public void givenWrongFirstAndLast_whenGettingListOfUsers_thenCorrect() {
 }
 ```
 
-最后，我们将找到一个仅给出名字一部分的`User` **:**
+最后，我们将找到一个仅给出名字一部分的`User`：
 
 ```java
 @Test
@@ -226,11 +232,15 @@ public void givenPartialFirst_whenGettingListOfUsers_thenCorrect() {
 }
 ```
 
-## 6。结合`Specifications`
+## 6. 结合`Specifications`
 
-接下来，让我们看看如何结合我们的自定义`Specifications` 来使用多个约束，并根据多个标准进行过滤。
+接下来，让我们看看如何结合我们的自定义`Specifications`来使用多个约束，并根据多个标准进行过滤。
 
-我们将实现一个生成器— `UserSpecificationsBuilder` —来轻松流畅地组合`Specifications`:
+我们将实现一个生成器— `UserSpecificationsBuilder` —来轻松流畅地组合`Specifications`：
+
+
+
+以下是排版后的 Markdown 文档：
 
 ```java
 public class UserSpecificationsBuilder {
@@ -270,9 +280,9 @@ public class UserSpecificationsBuilder {
 }
 ```
 
-## 7。`UserController`
+## 7. `UserController`
 
-最后，让我们使用这个新的持久性搜索/过滤功能，**通过一个简单的`search`操作创建一个`UserController`来设置 REST API** :
+最后，让我们使用这个新的持久性搜索/过滤功能，通过一个简单的`search`操作创建一个`UserController`来设置 REST API：
 
 ```java
 @Controller
@@ -297,19 +307,19 @@ public class UserController {
 }
 ```
 
-注意，为了支持其他非英语系统，`Pattern`对象可以更改为:
+注意，为了支持其他非英语系统，`Pattern`对象可以更改为：
 
 ```java
 Pattern pattern = Pattern.compile("(\\w+?)(:|<|>)(\\w+?),", Pattern.UNICODE_CHARACTER_CLASS);
 ```
 
-下面是一个测试 API 的测试 URL:
+下面是一个测试 API 的测试 URL：
 
 ```java
 http://localhost:8080/users?search=lastName:doe,age>25
 ```
 
-下面是我的回答:
+下面是我的回答：
 
 ```java
 [{
@@ -321,22 +331,22 @@ http://localhost:8080/users?search=lastName:doe,age>25
 }]
 ```
 
-**在我们的`Pattern`示例中，由于搜索被一个“，”分开，所以搜索词不能包含这个字符。**该模式也不匹配空白。
+在我们的`Pattern`示例中，由于搜索被一个“，”分开，所以搜索词不能包含这个字符。该模式也不匹配空白。
 
 如果我们想搜索包含逗号的值，我们可以考虑使用不同的分隔符，如“；”。
 
-另一种选择是改变模式，搜索引号之间的值，然后从搜索词中去掉这些值:
+另一种选择是改变模式，搜索引号之间的值，然后从搜索词中去掉这些值：
 
 ```java
 Pattern pattern = Pattern.compile("(\\w+?)(:|<|>)(\"([^\"]+)\")");
 ```
 
-## 8。结论
+## 8. 结论
 
 本文介绍了一个简单的实现，它可以作为强大的 REST 查询语言的基础。
 
-我们很好地利用了 Spring 数据规范，以确保 API 远离领域，并且**可以选择处理许多其他类型的操作。**
+我们很好地利用了 Spring 数据规范，以确保 API 远离领域，并且可以选择处理许多其他类型的操作。
 
-该条的**完整实现**可以在[的 GitHub 项目](https://web.archive.org/web/20220926194244/https://github.com/eugenp/tutorials/tree/master/spring-web-modules/spring-rest-query-language "The Full Example Project on Github")中找到。这是一个基于 Maven 的项目，因此应该很容易导入和运行。
+该条的完整实现可以在[GitHub 项目](https://web.archive.org/web/20220926194244/https://github.com/eugenp/tutorials/tree/master/spring-web-modules/spring-rest-query-language "The Full Example Project on Github")中找到。这是一个基于 Maven 的项目，因此应该很容易导入和运行。
 
-Next **»**[REST Query Language with Spring Data JPA and Querydsl](/web/20220926194244/https://www.baeldung.com/rest-api-search-language-spring-data-querydsl)**«** Previous[REST Query Language with Spring and JPA Criteria](/web/20220926194244/https://www.baeldung.com/rest-search-language-spring-jpa-criteria)
+Next **»**[REST Query Language with Spring Data JPA and Querydsl](/web/20220926194244/https://www.baeldung.com/rest-api-search-language-spring-data-querydsl) **«** Previous[REST Query Language with Spring and JPA Criteria](/web/20220926194244/https://www.baeldung.com/rest-search-language-spring-jpa-criteria)

@@ -1,30 +1,31 @@
-# 如何在 Java 中修改 XML 文件—(DOM 解析器)
+
+# 如何在 Java 中修改 XML 文件——DOM 解析器
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/how-to-modify-xml-file-in-java-dom-parser/>
 
 本教程展示了如何使用 Java 内置的 DOM 解析器来修改 XML 文件。
 
-目录
+## 目录
 
-*   [1。XML 文件，](#the-xml-file-before-and-after)前后
-*   [2。Dom 解析器修改 XML 文件](#dom-parser-modify-xml-file)
-*   [3。下载源代码](#download-source-code)
-*   [4。参考文献](#references)
+1. [XML 文件前后对比](#1xml-文件前后对比)
+2. [使用 DOM 解析器修改 XML 文件](#2使用-dom-解析器修改-xml-文件)
+3. [下载源代码](#3下载源代码)
+4. [参考文献](#4参考文献)
 
 用 Java 11 测试。
 
-**注意**
-请阅读 [DOM parse XML](http://web.archive.org/web/20220625195254/https://mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/) 和 [DOM write XML](http://web.archive.org/web/20220625195254/https://mkyong.com/java/how-to-create-xml-file-in-java-dom/) 。
+> **注意**
+>
+> 请阅读 [DOM parse XML](http://web.archive.org/web/20220625195254/https://mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/) 和 [DOM write XML](http://web.archive.org/web/20220625195254/https://mkyong.com/java/how-to-create-xml-file-in-java/)。
 
-## 1。XML 文件，
-前后
+## 1。XML 文件前后对比
 
-原始 XML 文件。
+### 原始 XML 文件
 
-staff-simple.xml
+`staff-simple.xml`
 
 ```java
- <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <company>
     <staff id="1001">
         <name>mkyong</name>
@@ -34,27 +35,29 @@ staff-simple.xml
         <name>yflow</name>
         <role>admin</role>
     </staff>
-</company> 
+</company>
 ```
 
 稍后我们将使用 DOM 解析器来修改以下 XML 数据。
 
-对于员工 id `1001`
+对于员工 id `1001`：
 
-*   移除 XML 元素`name`。
-*   对于 XML 元素`role`，将值更新为“founder”。
+- 移除 XML 元素 `name`。
+- 对于 XML 元素 `role`，将值更新为“founder”。
 
-对于员工 id `1002`
+对于员工 id `1002`：
 
-*   将 XML 属性更新为`2222`。
-*   添加一个新的 XML 元素`salary`，包含属性和值。
-*   添加新的 XML 注释。
-*   重命名一个 XML 元素，从`name`到`n`(删除和添加)。
+- 将 XML 属性更新为 `2222`。
+- 添加一个新的 XML 元素 `salary`，包含属性和值。
+- 添加新的 XML 注释。
+- 重命名一个 XML 元素，从 `name` 到 `n`（删除和添加）。
+
+### 修改后的 XML 文件
 
 下面是最终修改后的 XML 文件。
 
 ```java
- <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <company>
     <staff id="1001">
         <role>founder</role>
@@ -65,17 +68,17 @@ staff-simple.xml
         <!--from name to n-->
         <n>yflow</n>
     </staff>
-</company> 
+</company>
 ```
 
-## 2。Dom 解析器修改 XML 文件
+## 2。使用 DOM 解析器修改 XML 文件
 
-下面是 DOM 解析器获取原始 XML 文件`staff-simple.xml`，修改 XML 并生成修改后的 XML 文件`staff-modified.xml`的例子。
+下面是 DOM 解析器获取原始 XML 文件 `staff-simple.xml`、修改 XML 并生成修改后的 XML 文件 `staff-modified.xml` 的例子。
 
-ModifyXmlDomParser.java
+`ModifyXmlDomParser.java`
 
 ```java
- package com.mkyong.xml.dom;
+package com.mkyong.xml.dom;
 
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
@@ -237,15 +240,17 @@ public class ModifyXmlDomParser {
 
     }
 
-} 
+}
 ```
 
-输出–修改后的 XML 文件。
+输出——修改后的 XML 文件：
 
-c:\\test\\staff-modified.xml
+`c:\\test\\staff-modified.xml`
+
+
 
 ```java
- <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <company>
     <staff id="1001">
         <role>founder</role>
@@ -259,26 +264,26 @@ c:\\test\\staff-modified.xml
         <!--from name to n-->
         <n>yflow</n>
     </staff>
-</company> 
+</company>
 ```
 
 ## 3。下载源代码
 
-$ git 克隆[https://github.com/mkyong/core-java](http://web.archive.org/web/20220625195254/https://github.com/mkyong/core-java)
-
-$ cd java-xml
-
-$ CD src/main/Java/com/mkyong/XML/DOM/
+```bash
+git clone https://github.com/mkyong/core-java
+cd java-xml
+cd src/main/Java/com/mkyong/XML/DOM/
+```
 
 ## 4。参考文献
 
-*   [维基百科–用于 XML 处理的 Java API](http://web.archive.org/web/20220625195254/https://en.wikipedia.org/wiki/Java_API_for_XML_Processing)
-*   [维基百科–文档对象模型](http://web.archive.org/web/20220625195254/https://en.wikipedia.org/wiki/Document_Object_Model)
-*   [Oracle–文档对象模型](http://web.archive.org/web/20220625195254/https://docs.oracle.com/javase/tutorial/jaxp/dom/index.html)
-*   [如何在 Java 中读取 XML 文件—(DOM 解析器)](http://web.archive.org/web/20220625195254/https://mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/)
-*   [如何在 Java 中读取 XML 文件—(SAX 解析器)](http://web.archive.org/web/20220625195254/https://mkyong.com/java/how-to-read-xml-file-in-java-sax-parser/)
-*   [Java DOM 解析器 XML 和 XSLT 示例](http://web.archive.org/web/20220625195254/https://mkyong.com/java/java-dom-parser-xml-and-xslt-examples/)
-*   [用 Java Dom 和 XSLT 漂亮地打印 XML](http://web.archive.org/web/20220625195254/https://mkyong.com/java/pretty-print-xml-with-java-dom-and-xslt/)
-*   [JAXB hello world 示例](http://web.archive.org/web/20220625195254/https://mkyong.com/java/jaxb-hello-world-example/)
+- [维基百科–用于 XML 处理的 Java API](http://web.archive.org/web/20220625195254/https://en.wikipedia.org/wiki/Java_API_for_XML_Processing)
+- [维基百科–文档对象模型](http://web.archive.org/web/20220625195254/https://en.wikipedia.org/wiki/Document_Object_Model)
+- [Oracle–文档对象模型](http://web.archive.org/web/20220625195254/https://docs.oracle.com/javase/tutorial/jaxp/dom/index.html)
+- [如何在 Java 中读取 XML 文件—(DOM 解析器)](http://web.archive.org/web/20220625195254/https://mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/)
+- [如何在 Java 中读取 XML 文件—(SAX 解析器)](http://web.archive.org/web/20220625195254/https://mkyong.com/java/how-to-read-xml-file-in-java-sax-parser/)
+- [Java DOM 解析器 XML 和 XSLT 示例](http://web.archive.org/web/20220625195254/https://mkyong.com/java/java-dom-parser-xml-and-xslt-examples/)
+- [用 Java Dom 和 XSLT 漂亮地打印 XML](http://web.archive.org/web/20220625195254/https://mkyong.com/java/pretty-print-xml-with-java-dom-and-xslt/)
+- [JAXB hello world 示例](http://web.archive.org/web/20220625195254/https://mkyong.com/java/jaxb-hello-world-example/)
 
-<input type="hidden" id="mkyong-current-postId" value="9895">
+`<input type="hidden" id="mkyong-current-postId" value="9895">`

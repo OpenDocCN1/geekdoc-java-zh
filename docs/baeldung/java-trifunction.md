@@ -1,14 +1,15 @@
+
 # Java 中的三函数接口
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-trifunction>
 
-## 1.概观
+## 1. 概观
 
-在本文中，我们将定义一个`TriFunction` [`FunctionalInterface`](/web/20221116161839/https://www.baeldung.com/java-8-functional-interfaces) ，它表示一个接受三个参数并计算结果的函数。稍后，我们还将看到一个使用 [Vavr](/web/20221116161839/https://www.baeldung.com/vavr) 库的内置`Function3`的例子。
+在本文中，我们将定义一个`TriFunction` [`FunctionalInterface`](https://web.archive.org/web/20221116161839/https://www.baeldung.com/java-8-functional-interfaces)，它表示一个接受三个参数并计算结果的函数。稍后，我们还将看到一个使用 [Vavr](https://web.archive.org/web/20221116161839/https://www.baeldung.com/vavr) 库的内置`Function3`的例子。
 
-## 2.创建我们自己的`TriFunction`界面
+## 2. 创建我们自己的`TriFunction`界面
 
-从版本 8 开始，Java 定义了`[BiFunction](/web/20221116161839/https://www.baeldung.com/java-bifunction-interface) FunctionalInterface`。它表示一个接受两个参数并计算其结果的函数。为了允许函数组合，它还提供了一个`andThen()`方法，将另一个`Function`应用于`BiFunction`的结果。
+从版本 8 开始，Java 定义了`[BiFunction](https://web.archive.org/web/20221116161839/https://www.baeldung.com/java-bifunction-interface) FunctionalInterface`。它表示一个接受两个参数并计算其结果的函数。为了允许函数组合，它还提供了一个`andThen()`方法，将另一个`Function`应用于`BiFunction`的结果。
 
 **同样，我们将定义我们的`TriFunction`接口，并赋予它`andThen()`方法:**
 
@@ -31,7 +32,7 @@ public interface TriFunction<T, U, V, R> {
 static TriFunction<Integer, Integer, Integer, Integer> multiplyThenAdd = (x, y, z) -> x * y + z;
 ```
 
-让我们注意，只有当两个第一操作数的乘积低于 [`Integer`最大值](/web/20221116161839/https://www.baeldung.com/cs/max-int-java-c-python)时，这个方法的结果才是准确的。
+让我们注意，只有当两个第一操作数的乘积低于 [`Integer`最大值](https://web.archive.org/web/20221116161839/https://www.baeldung.com/cs/max-int-java-c-python)时，这个方法的结果才是准确的。
 
 例如，我们可以使用`andThen()`方法来定义一个`TriFunction`,它:
 
@@ -68,11 +69,11 @@ static TriFunction<Integer, String, Boolean, String> convertIntegerOrReturnStrin
 };
 ```
 
-## 3.使用 Vavr 的`Function3`
+## 3. 使用 Vavr 的`Function3`
 
 **Vavr 库已经定义了一个`Function3`接口，它具有我们想要的行为。**首先，让我们将 Vavr [依赖项](https://web.archive.org/web/20221116161839/https://search.maven.org/search?q=io.vavr)添加到我们的项目中:
 
-```java
+```xml
 <dependency>
     <groupId>io.vavr</groupId>
     <artifactId>vavr</artifactId>
@@ -88,10 +89,10 @@ static Function3<Integer, Integer, Integer, Integer> multiplyThenAdd = (x, y, z)
 static Function3<Integer, Integer, Integer, Integer> multiplyThenAddThenDivideByTen = multiplyThenAdd.andThen(x -> x / 10);
 ```
 
-如果我们需要定义多达 8 个参数的函数，使用 Vavr 可能是一个不错的选择。 `Function4`、`Function5,` ……`Function8`确实已经在库中定义好了。
+如果我们需要定义多达 8 个参数的函数，使用 Vavr 可能是一个不错的选择。`Function4`、`Function5,` ……`Function8`确实已经在库中定义好了。
 
-## 4.结论
+## 4. 结论
 
 在本教程中，我们为一个接受 3 个参数的函数实现了自己的`FunctionalInterface`。我们还强调了 Vavr 库包含这种功能的实现。
 
-和往常一样，代码可以在 GitHub 的[上获得。](https://web.archive.org/web/20221116161839/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-function)
+和往常一样，代码可以在 GitHub 的[这里](https://web.archive.org/web/20221116161839/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-function)获得。

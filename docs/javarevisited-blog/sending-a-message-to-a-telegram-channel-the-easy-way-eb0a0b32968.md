@@ -1,3 +1,4 @@
+
 # 以最简单的方式向电报信道发送消息
 
 > 原文：<https://medium.com/javarevisited/sending-a-message-to-a-telegram-channel-the-easy-way-eb0a0b32968?source=collection_archive---------0----------------------->

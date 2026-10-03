@@ -1,24 +1,28 @@
+
+
 # 具有 Querydsl Web 支持的 REST 查询语言
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/rest-api-search-querydsl-web-in-spring-data-jpa>
 
-[This article is part of a series:](javascript:void(0);)[• REST Query Language with Spring and JPA Criteria](/web/20220701020622/https://www.baeldung.com/rest-search-language-spring-jpa-criteria)
-[• REST Query Language with Spring Data JPA Specifications](/web/20220701020622/https://www.baeldung.com/rest-api-search-language-spring-data-specifications)
-[• REST Query Language with Spring Data JPA and Querydsl](/web/20220701020622/https://www.baeldung.com/rest-api-search-language-spring-data-querydsl)
-[• REST Query Language – Advanced Search Operations](/web/20220701020622/https://www.baeldung.com/rest-api-query-search-language-more-operations)
-[• REST Query Language – Implementing OR Operation](/web/20220701020622/https://www.baeldung.com/rest-api-query-search-or-operation)
-[• REST Query Language with RSQL](/web/20220701020622/https://www.baeldung.com/rest-api-search-language-rsql-fiql)
-• REST Query Language with Querydsl Web Support (current article)
+本文是系列文章的一部分：
 
-## 1。概述
+- [REST Query Language with Spring and JPA Criteria](/web/20220701020622/https://www.baeldung.com/rest-search-language-spring-jpa-criteria)
+- [REST Query Language with Spring Data JPA Specifications](/web/20220701020622/https://www.baeldung.com/rest-api-search-language-spring-data-specifications)
+- [REST Query Language with Spring Data JPA and Querydsl](/web/20220701020622/https://www.baeldung.com/rest-api-search-language-spring-data-querydsl)
+- [REST Query Language – Advanced Search Operations](/web/20220701020622/https://www.baeldung.com/rest-api-query-search-language-more-operations)
+- [REST Query Language – Implementing OR Operation](/web/20220701020622/https://www.baeldung.com/rest-api-query-search-or-operation)
+- [REST Query Language with RSQL](/web/20220701020622/https://www.baeldung.com/rest-api-search-language-rsql-fiql)
+- REST Query Language with Querydsl Web Support (当前文章)
+
+## 1. 概述
 
 在这个快速教程中，我们将讨论 Spring Data Querydsl Web 支持。
 
-这绝对是我们在 REST 查询语言系列的[中关注的所有其他方法的一个有趣的替代。](/web/20220701020622/https://www.baeldung.com/spring-rest-api-query-search-language-tutorial)
+这绝对是我们在 REST 查询语言系列中关注的所有其他方法的一个有趣的替代。
 
-## 2。Maven 配置
+## 2. Maven 配置
 
-首先，让我们从我们的 maven 配置开始:
+首先，让我们从我们的 Maven 配置开始：
 
 ```java
 <parent>
@@ -46,14 +50,14 @@
         <artifactId>querydsl-jpa</artifactId>
         <version>${querydsl.version}</version>
     </dependency>
-...
+    ...
 ```
 
-请注意，从 **1.11** 开始，Querydsl web 支持在 **spring-data-commons** 中可用
+请注意，从 **1.11** 开始，Querydsl web 支持在 **spring-data-commons** 中可用。
 
-## 3。用户资源库
+## 3. 用户资源库
 
-接下来，让我们看看我们的存储库:
+接下来，让我们看看我们的存储库：
 
 ```java
 public interface UserRepository extends 
@@ -67,17 +71,17 @@ public interface UserRepository extends
 }
 ```
 
-请注意:
+请注意：
 
-*   我们正在覆盖`QuerydslBinderCustomizer` `customize()`来定制默认绑定
-*   我们正在定制默认的`equals`绑定来忽略所有`String`属性的大小写
-*   我们还从`Predicate`解析中排除了用户的电子邮件
+- 我们正在覆盖 `QuerydslBinderCustomizer.customize()` 来定制默认绑定。
+- 我们正在定制默认的 `equals` 绑定来忽略所有 `String` 属性的 `equals` 绑定。
+- 我们还从 `Predicate` 解析中排除了用户的电子邮件。
 
-点击查看完整文档[。](https://web.archive.org/web/20220701020622/https://docs.spring.io/spring-data/jpa/docs/1.9.0.RELEASE/reference/html/#core.web.type-safe)
+点击[此处](https://web.archive.org/web/20220701020622/https://docs.spring.io/spring-data/jpa/docs/1.9.0.RELEASE/reference/html/#core.web.type-safe)查看完整文档。
 
-## 4。用户控制器
+## 4. 用户控制器
 
-现在，让我们来看看控制器:
+现在，让我们来看看控制器：
 
 ```java
 @RequestMapping(method = RequestMethod.GET, value = "/users")
@@ -88,15 +92,15 @@ public Iterable<User> findAllByWebQuerydsl(
 }
 ```
 
-这是有趣的部分——注意**我们是如何使用`@QuerydslPredicate`注释直接从 HttpRequest** 中获得谓词的。
+这是有趣的部分——注意我们是如何使用 `@QuerydslPredicate` 注释直接从 `HttpRequest` 中获得谓词的。
 
-以下是包含这种类型查询的 URL 的外观:
+以下是包含这种类型查询的 URL 的外观：
 
-```java
+```
 http://localhost:8080/users?firstName=john
 ```
 
-下面是一个潜在反应是如何构成的:
+下面是一个潜在反应是如何构成的：
 
 ```java
 [
@@ -104,15 +108,15 @@ http://localhost:8080/users?firstName=john
       "id":1,
       "firstName":"john",
       "lastName":"doe",
-      "email":"[[email protected]](/web/20220701020622/https://www.baeldung.com/cdn-cgi/l/email-protection)",
+      "email":"[[email protected]](/web/20220701020622/https://www.baeldung.com/cdn-cgi/l/email-protection)",
       "age":11
    }
 ]
 ```
 
-## 5。现场测试
+## 5. 现场测试
 
-最后，让我们测试一下新的 Querydsl Web 支持:
+最后，让我们测试一下新的 Querydsl Web 支持：
 
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -121,8 +125,8 @@ http://localhost:8080/users?firstName=john
 public class UserLiveTest {
 
     private ObjectMapper mapper = new ObjectMapper();
-    private User userJohn = new User("john", "doe", "[[email protected]](/web/20220701020622/https://www.baeldung.com/cdn-cgi/l/email-protection)");
-    private User userTom = new User("tom", "doe", "[[email protected]](/web/20220701020622/https://www.baeldung.com/cdn-cgi/l/email-protection)");
+    private User userJohn = new User("john", "doe", "[[email protected]](/web/20220701020622/https://www.baeldung.com/cdn-cgi/l/email-protection)");
+    private User userTom = new User("tom", "doe", "[[email protected]](/web/20220701020622/https://www.baeldung.com/cdn-cgi/l/email-protection)");
 
     private static boolean setupDataCreated = false;
 
@@ -146,7 +150,7 @@ public class UserLiveTest {
 }
 ```
 
-首先，让我们获取系统中的所有用户:
+首先，让我们获取系统中的所有用户：
 
 ```java
 @Test
@@ -157,7 +161,7 @@ public void whenGettingListOfUsers_thenCorrect() {
 }
 ```
 
-接下来，让我们通过**的名字**来查找用户:
+接下来，让我们通过**名字**来查找用户：
 
 ```java
 @Test
@@ -169,7 +173,7 @@ public void givenFirstName_whenGettingListOfUsers_thenCorrect() {
 }
 ```
 
-接下来，以免通过**部分姓氏**找到用户:
+接下来，让我们通过**部分姓氏**找到用户：
 
 ```java
 @Test
@@ -180,7 +184,7 @@ public void givenPartialLastName_whenGettingListOfUsers_thenCorrect() {
 }
 ```
 
-现在，让我们试着通过**电子邮件**找到用户:
+现在，让我们试着通过**电子邮件**找到用户：
 
 ```java
 @Test
@@ -191,10 +195,11 @@ public void givenEmail_whenGettingListOfUsers_thenIgnored() {
 }
 ```
 
-注意:当我们试图通过电子邮件查找用户时，该查询被忽略，因为我们从`Predicate`解析中排除了用户的电子邮件。
+注意：当我们试图通过电子邮件查找用户时，该查询被忽略，因为我们从 `Predicate` 解析中排除了用户的电子邮件。
 
-## 6。结论
+## 6. 结论
 
-在本文中，我们快速介绍了 Spring Data Querydsl Web 支持，以及一种直接从 HTTP 请求中获取`Predicate`并使用它来检索数据的酷而简单的方法。
+在本文中，我们快速介绍了 Spring Data Querydsl Web 支持，以及一种直接从 HTTP 请求中获取 `Predicate` 并使用它来检索数据的酷而简单的方法。
 
-**«** Previous[REST Query Language with RSQL](/web/20220701020622/https://www.baeldung.com/rest-api-search-language-rsql-fiql)
+**上一篇**：[REST Query Language with RSQL](/web/20220701020622/https://www.baeldung.com/rest-api-search-language-rsql-fiql)
+

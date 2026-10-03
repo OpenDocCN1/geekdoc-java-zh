@@ -1,4 +1,5 @@
-# 关于 BreakIterator 类
+
+# 关于 `BreakIterator` 类
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/text/about.html`](https://docs.oracle.com/javase/tutorial/i18n/text/about.html)
 
@@ -6,17 +7,13 @@
 
 ```java
 Locale[] locales = BreakIterator.getAvailableLocales();
-
 ```
 
 您可以使用`BreakIterator`类分析四种边界类型：字符、单词、句子和潜在的换行符。在实例化`BreakIterator`时，调用适当的工厂方法：
 
 +   `getCharacterInstance`
-
 +   `getWordInstance`
-
 +   `getSentenceInstance`
-
 +   `getLineInstance`
 
 每个`BreakIterator`实例只能检测一种类型的边界。例如，如果您想定位字符和单词边界，您需要创建两个单独的实例。
@@ -25,9 +22,7 @@ Locale[] locales = BreakIterator.getAvailableLocales();
 
 ![带有边界指示的文本“希望是羽毛的东西”。](img/i18n-4.gif)
 
-*此图已经缩小以适应页面。
-
-点击图像以查看其自然大小。*
+*此图已经缩小以适应页面。点击图像以查看其自然大小。*
 
 您应该仅将`BreakIterator`类与自然语言文本一起使用。要对编程语言进行标记化，请使用`StreamTokenizer`类。
 

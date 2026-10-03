@@ -1,3 +1,4 @@
+
 # Path 操作
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/io/pathOps.html`](https://docs.oracle.com/javase/tutorial/essential/io/pathOps.html)
@@ -6,19 +7,13 @@
 
 本节涵盖以下内容：
 
-+   创建一个 Path
-
-+   检索有关 Path 的信息
-
-+   从 Path 中删除冗余
-
-+   转换 Path
-
-+   连接两个路径
-
-+   在两个路径之间创建路径
-
-+   比较两个路径
++ 创建一个 Path
++ 检索有关 Path 的信息
++ 从 Path 中删除冗余
++ 转换 Path
++ 连接两个路径
++ 在两个路径之间创建路径
++ 比较两个路径
 
 ## 创建一个 Path
 
@@ -30,21 +25,18 @@
 Path p1 = Paths.get("/tmp/foo");
 Path p2 = Paths.get(args[0]);
 Path p3 = Paths.get(URI.create("file:///Users/joe/FileTest.java"));
-
 ```
 
 `Paths.get`方法是以下代码的简写：
 
 ```java
 Path p4 = FileSystems.getDefault().getPath("/users/sally");
-
 ```
 
 以下示例假定您的主目录是`/u/joe`，则创建`/u/joe/logs/foo.log`，或者如果您在 Windows 上，则为`C:\joe\logs\foo.log`。
 
 ```java
 Path p5 = Paths.get(System.getProperty("user.home"),"logs", "foo.log");
-
 ```
 
 ## 检索有关路径的信息
@@ -73,7 +65,6 @@ System.out.format("getNameCount: %d%n", path.getNameCount());
 System.out.format("subpath(0,2): %s%n", path.subpath(0,2));
 System.out.format("getParent: %s%n", path.getParent());
 System.out.format("getRoot: %s%n", path.getRoot());
-
 ```
 
 这是 Windows 和 Solaris OS 的输出：
@@ -96,7 +87,6 @@ Path path = Paths.get("sally/bar");
 or
 // Microsoft Windows syntax
 Path path = Paths.get("sally\\bar");
-
 ```
 
 以下是 Windows 和 Solaris OS 的输出：
@@ -120,7 +110,6 @@ Path path = Paths.get("sally\\bar");
 ```java
 /home/./joe/foo
 /home/sally/../joe/foo
-
 ```
 
 `normalize`方法会删除任何冗余元素，包括任何“.`”或“`*directory*/..`”出现。前面两个示例都会规范化为`/home/joe/foo`。
@@ -137,7 +126,6 @@ Path path = Paths.get("sally\\bar");
 Path p1 = Paths.get("/home/logfile");
 // Result is file:///home/logfile
 System.out.format("%s%n", p1.toUri());
-
 ```
 
 [`toAbsolutePath`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html#toAbsolutePath--)方法将路径转换为绝对路径。如果传入的路径已经是绝对路径，则返回相同的`Path`对象。在处理用户输入的文件名时，`toAbsolutePath`方法非常有帮助。例如：
@@ -170,18 +158,15 @@ public class FileTest {
         Path fullPath = inputPath.toAbsolutePath();
     }
 }
-
 ```
 
 `toAbsolutePath`方法转换用户输入并返回一个`Path`，在查询时返回有用的值。此方法不需要文件存在即可工作。
 
 [`toRealPath`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html#toRealPath-java.nio.file.LinkOption...-)方法返回现有文件的*真实*路径。该方法一次执行多个操作：
 
-+   如果向该方法传递`true`，并且文件系统支持符号链接，则该方法会解析路径中的任何符号链接。
-
-+   如果`Path`是相对路径，则返回绝对路径。
-
-+   如果`Path`包含任何多余的元素，则返回一个删除了这些元素的路径。
++ 如果向该方法传递`true`，并且文件系统支持符号链接，则该方法会解析路径中的任何符号链接。
++ 如果`Path`是相对路径，则返回绝对路径。
++ 如果`Path`包含任何多余的元素，则返回一个删除了这些元素的路径。
 
 如果文件不存在或无法访问，则此方法会抛出异常。您可以在需要处理这些情况时捕获异常。例如：
 
@@ -195,7 +180,6 @@ try {
     System.err.format("%s%n", x);
     // Logic for other sort of file error.
 }
-
 ```
 
 ## 连接两个路径
@@ -216,7 +200,6 @@ or
 Path p1 = Paths.get("C:\\home\\joe\\foo");
 // Result is C:\home\joe\foo\bar
 System.out.format("%s%n", p1.resolve("bar"));
-
 ```
 
 将绝对路径传递给`resolve`方法会返回传入的路径：
@@ -224,7 +207,6 @@ System.out.format("%s%n", p1.resolve("bar"));
 ```java
 // Result is /home/joe
 Paths.get("foo").resolve("/home/joe");
-
 ```
 
 ## 创建两个路径之间的路径
@@ -236,7 +218,6 @@ Paths.get("foo").resolve("/home/joe");
 ```java
 Path p1 = Paths.get("joe");
 Path p2 = Paths.get("sally");
-
 ```
 
 在没有其他信息的情况下，假定`joe`和`sally`是兄弟姐妹，即在树结构中处于同一级别的节点。要从`joe`导航到`sally`，你需要先向上导航一级到父节点，然后再向下导航到`sally`：
@@ -246,7 +227,6 @@ Path p2 = Paths.get("sally");
 Path p1_to_p2 = p1.relativize(p2);
 // Result is ../joe
 Path p2_to_p1 = p2.relativize(p1);
-
 ```
 
 考虑一个稍微复杂的例子：
@@ -258,7 +238,6 @@ Path p3 = Paths.get("home/sally/bar");
 Path p1_to_p3 = p1.relativize(p3);
 // Result is ../..
 Path p3_to_p1 = p3.relativize(p1);
-
 ```
 
 在这个例子中，这两个路径共享相同的节点`home`。要从`home`导航到`bar`，你首先向下导航一级到`sally`，然后再向下导航一级到`bar`。从`bar`到`home`的导航需要向上移动两级。
@@ -278,23 +257,23 @@ Path beginning = Paths.get("/home");
 Path ending = Paths.get("foo");
 
 if (path.equals(otherPath)) {
-    // *equality logic here*
+    // equality logic here
 } else if (path.startsWith(beginning)) {
-    // *path begins with "/home"*
+    // path begins with "/home"
 } else if (path.endsWith(ending)) {
-    // *path ends with "foo"*
+    // path ends with "foo"
 }
-
 ```
 
 `Path`类实现了[`Iterable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)接口。[`iterator`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html#iterator--)方法返回一个对象，使你能够遍历路径中的名称元素。返回的第一个元素是在目录树中最接近根的元素。以下代码片段遍历一个路径，打印每个名称元素：
+
+
 
 ```java
 Path path = ...;
 for (Path name: path) {
     System.out.println(name);
 }
-
 ```
 
 `Path`类还实现了[`Comparable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html)接口。你可以使用`compareTo`比较`Path`对象，这对于排序很有用。

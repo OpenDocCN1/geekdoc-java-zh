@@ -1,8 +1,9 @@
-# 学习之旅— —源代码分析
+
+# 学习之旅——源代码分析
 
 > 原文：<https://medium.com/javarevisited/netty-learning-journey-source-code-analysis-netty-d4b4c9196577?source=collection_archive---------7----------------------->
 
-## 线程本地分配机制和 PooledByteBuf 线程级对象池原理分析
+## 线程本地分配机制和 `PooledByteBuf` 线程级对象池原理分析
 
 ![](img/b87857bb2568352004ad51f376b5f4e5.png)
 

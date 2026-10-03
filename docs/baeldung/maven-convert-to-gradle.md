@@ -1,18 +1,19 @@
+
 # 将 Maven 版本转换为 Gradle
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/maven-convert-to-gradle>
 
-## 1.概观
+## 1. 概观
 
 在本教程中，我们将学习如何将 Maven 版本转换为 Gradle 版本。**为此，我们将在现有的 Maven 项目上使用`gradle init`命令。**
 
-## 2\. Gradle Setup
+## 2. Gradle Setup
 
 让我们通过下载一个 [Gradle 发行版](https://web.archive.org/web/20220524051518/https://gradle.org/releases/)并按照指定的[指令](https://web.archive.org/web/20220524051518/https://gradle.org/install/)在我们的机器上安装 Gradle。我们也可以深入[了解更多关于 Gradle](/web/20220524051518/https://www.baeldung.com/gradle) 的信息。
 
-## 3.Maven 构建文件
+## 3. Maven 构建文件
 
-让我们从一个标准的 Maven Java 项目开始，它的根目录下有下面的`pom.xml`文件:
+让我们从一个标准的 Maven Java 项目开始，它的根目录下有下面的`pom.xml`文件：
 
 ```java
 <project 
@@ -32,9 +33,9 @@
 </project>
 ```
 
-## 4.转换为 Gradle
+## 4. 转换为 Gradle
 
-**让我们转到这个 Maven 项目的根目录，包含主目录`pom.xml,` 并执行`gradle init`命令。**当提示响应时，让我们键入`yes` 并按 `enter.` ，我们应该会看到以下输出:
+**让我们转到这个 Maven 项目的根目录，包含主目录`pom.xml`，并执行`gradle init`命令。**当提示响应时，让我们键入`yes`并按`enter`。我们应该会看到以下输出：
 
 ```java
 $ gradle init
@@ -49,13 +50,13 @@ BUILD SUCCESSFUL in 3s
 2 actionable tasks: 2 executed
 ```
 
-## 5.生成的梯度构建文件
+## 5. 生成的 Gradle 构建文件
 
-现在让我们重新检查项目根目录的内容。我们现在应该在根目录中看到许多新文件。如果想更深入，可以看看[gradle-build-settings-properties](/web/20220524051518/https://www.baeldung.com/gradle-build-settings-properties)。
+现在让我们重新检查项目根目录的内容。我们现在应该在根目录中看到许多新文件。如果想更深入，可以看看`gradle-build-settings-properties`。
 
-### 5.1.`build.gradle`
+### 5.1. `build.gradle`
 
-**`build.gradle `文件是我们 Gradle 构建过程的核心组件，它直接等同于 Maven 构建的`pom.xml `文件。**我们在这里可以看到`pom.xml`属性，如`groupId,` `version,` 和 `dependencies` 被翻译成它们的 Gradle 等价物。另外还有`sourceCompatibility`的属性，它告诉我们编译 Java 源代码时使用哪个 Java 版本。在插件部分，我们有' [java](https://web.archive.org/web/20220524051518/https://docs.gradle.org/current/userguide/java_plugin.html#java_plugin) ，它为构建任何类型的 java 项目提供支持，还有' maven-publish '，它为将工件发布到 maven 兼容的存储库提供支持。
+**`build.gradle`文件是我们 Gradle 构建过程的核心组件，它直接等同于 Maven 构建的`pom.xml`文件。**我们在这里可以看到`pom.xml`属性，如`groupId`、`version`和`dependencies`被翻译成它们的 Gradle 等价物。另外还有`sourceCompatibility`的属性，它告诉我们编译 Java 源代码时使用哪个 Java 版本。在插件部分，我们有`java`，它为构建任何类型的 java 项目提供支持，还有`maven-publish`，它为将工件发布到 maven 兼容的存储库提供支持。
 
 ```java
 /*
@@ -91,7 +92,7 @@ publishing {
 }
 ```
 
-### 5.2.s `ettings.gradle`
+### 5.2. `settings.gradle`
 
 **Gradle 在初始化阶段使用`settings.gradle`文件来确定构建中包含哪些项目。**
 
@@ -103,10 +104,10 @@ publishing {
 rootProject.name = 'maven-to-gradle' 
 ```
 
-### 5.3.`gradlew`和`gradlew.bat`
+### 5.3. `gradlew`和`gradlew.bat`
 
-Gradle 还生成了两个启动脚本，一个用于 Windows，一个用于 Unix。这些脚本可用于在没有预先安装 Gradle 的机器上运行项目。我们可以通过查看 [gradle-wrapper](/web/20220524051518/https://www.baeldung.com/gradle-wrapper) 来了解更多关于 Gradle 包装器文件的信息。
+Gradle 还生成了两个启动脚本，一个用于 Windows，一个用于 Unix。这些脚本可用于在没有预先安装 Gradle 的机器上运行项目。我们可以通过查看`gradle-wrapper`来了解更多关于 Gradle 包装器文件的信息。
 
-## 6.结论
+## 6. 结论
 
-在本文中，我们了解了如何将包含`pom.xml`的 Maven 构建转换为包含多个构建文件的 Gradle 构建，如`build.gradle`、`settings.gradle`、`gradlew,`和`gradlew.bat.` 。本文的源代码可以在 GitHub 上找到[。](https://web.archive.org/web/20220524051518/https://github.com/eugenp/tutorials/tree/master/gradle/maven-to-gradle)
+在本文中，我们了解了如何将包含`pom.xml`的 Maven 构建转换为包含多个构建文件的 Gradle 构建，如`build.gradle`、`settings.gradle`、`gradlew`，和`gradlew.bat`。本文的源代码可以在 GitHub 上找到[。](https://web.archive.org/web/20220524051518/https://github.com/eugenp/tutorials/tree/master/gradle/maven-to-gradle)

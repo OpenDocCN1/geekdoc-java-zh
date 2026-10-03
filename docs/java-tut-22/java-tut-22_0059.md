@@ -1,3 +1,4 @@
+
 # 创建和使用类和对象摘要
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/javaOO/summaryclasses.html`](https://docs.oracle.com/javase/tutorial/java/javaOO/summaryclasses.html)
@@ -14,21 +15,18 @@
 
 ```java
 *objectReference.variableName*
-
 ```
 
 方法的限定名称如下所示：
 
 ```java
 *objectReference.methodName(argumentList)*
-
 ```
 
 或：
 
 ```java
 *objectReference.methodName()*
-
 ```
 
 垃圾收集器会自动清理未使用的对象。如果程序不再持有对对象的引用，则该对象将被视为未使用。您可以通过将持有引用的变量设置为`null`来显式丢弃引用。

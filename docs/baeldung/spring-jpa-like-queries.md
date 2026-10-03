@@ -1,14 +1,15 @@
+
 # 比如 Spring JPA 存储库中的查询
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-jpa-like-queries>
 
-## 1.概观
+## 1. 概观
 
-在这个快速教程中，我们将介绍在 [Spring JPA 库](/web/20220707143830/https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa)中创建 LIKE 查询的不同方法。
+在这个快速教程中，我们将介绍在 [Spring JPA 库](/web/20220707143830/https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa)中创建 `LIKE` 查询的不同方法。
 
 我们将从创建查询方法时可以使用的各种关键字开始。然后，我们将用命名的和有序的参数覆盖`@Query`注释。
 
-## 2.设置
+## 2. 设置
 
 对于我们的例子，我们将查询一个`movie`表。
 
@@ -48,15 +49,15 @@ INSERT INTO movie(id, title, director, rating, duration)
     VALUES(7, 'The Sun Is Also a Star', 'Ry Russo-Young', 'PG-13', 100);
 ```
 
-## 3.比如查询方法
+## 3. 比如查询方法
 
 对于许多简单的查询场景，我们可以利用各种关键字在我们的存储库中创建查询方法。
 
 现在就让我们来探索一下。
 
-### 3.1.`Containing`、`Contains`、`IsContaining`和`Like`
+### 3.1. `Containing`、`Contains`、`IsContaining`和`Like`
 
-让我们看看如何使用查询方法执行以下 LIKE 查询:
+让我们看看如何使用查询方法执行以下 `LIKE` 查询:
 
 ```java
 SELECT * FROM movie WHERE title LIKE '%in%';
@@ -87,7 +88,7 @@ assertEquals(3, results.size());
 
 **Spring 也为我们提供了一个`Like`关键字，但是它的行为略有不同，因为我们需要为搜索参数提供通配符。**
 
-让我们定义一个 LIKE 查询方法:
+让我们定义一个 `LIKE` 查询方法:
 
 ```java
 List<Movie> findByTitleLike(String title);
@@ -100,7 +101,7 @@ results = movieRepository.findByTitleLike("%in%");
 assertEquals(3, results.size());
 ```
 
-### 3.2.`StartsWith`
+### 3.2. `StartsWith`
 
 让我们看看下面的查询:
 
@@ -121,7 +122,7 @@ List<Movie> results = movieRepository.findByRatingStartsWith("PG");
 assertEquals(6, results.size());
 ```
 
-### 3.3.`EndsWith`
+### 3.3. `EndsWith`
 
 **Spring 为我们提供了与`EndsWith`关键字相反的功能。**
 
@@ -144,7 +145,7 @@ List<Movie> results = movieRepository.findByDirectorEndsWith("Burton");
 assertEquals(1, results.size());
 ```
 
-### 3.4.不区分大小写
+### 3.4. 不区分大小写
 
 我们经常希望找到包含某个字符串的所有记录，而不考虑大小写。在 SQL 中，我们可以通过强制该列全部为大写或小写字母并为我们查询的值提供相同的值来实现这一点。
 
@@ -161,7 +162,7 @@ List<Movie> results = movieRepository.findByTitleContainingIgnoreCase("the");
 assertEquals(2, results.size());
 ```
 
-### 3.5.`Not`
+### 3.5. `Not`
 
 有时我们希望找到所有不包含特定字符串的记录。**我们可以使用`NotContains`、`NotContaining` 和`NotLike` 关键字来实现。**
 
@@ -193,11 +194,11 @@ assertEquals(5, results.size());
 
 我们可以以类似的方式使用`NotLike`来实现与`EndsWith`相结合的`Not` 功能。
 
-## 4.使用`@Query`
+## 4. 使用`@Query`
 
 有时，我们需要创建对于查询方法来说过于复杂的查询，或者会产生长得离谱的方法名。在那些情况下，**我们可以使用 [`@Query`注释](/web/20220707143830/https://www.baeldung.com/spring-data-jpa-query)来查询我们的数据库。**
 
-### 4.1.命名参数
+### 4.1. 命名参数
 
 为了进行比较，我们将创建一个与我们之前定义的`findByTitleContaining`方法等效的查询:
 
@@ -208,7 +209,7 @@ List<Movie> searchByTitleLike(@Param("title") String title);
 
 我们在提供的查询中包含通配符。`@Param`注释在这里很重要，因为我们使用了一个命名参数。
 
-### 4.2.有序参数
+### 4.2. 有序参数
 
 除了命名参数，我们还可以在查询中使用有序参数:
 
@@ -226,9 +227,9 @@ List<Movie> results = movieRepository.searchByRatingStartsWith("PG");
 assertEquals(6, results.size());
 ```
 
-当我们在带有不可信数据的 LIKE 查询中使用有序参数时，我们应该对传入的搜索值进行转义。
+当我们在带有不可信数据的 `LIKE` 查询中使用有序参数时，我们应该对传入的搜索值进行转义。
 
-如果我们使用 Spring Boot 2.4.1 或更高版本，我们可以使用[SpEL](/web/20220707143830/https://www.baeldung.com/spring-expression-language)方法:
+如果我们使用 Spring Boot 2.4.1 或更高版本，我们可以使用 [SpEL](/web/20220707143830/https://www.baeldung.com/spring-expression-language) 方法:
 
 ```java
 @Query("SELECT m FROM Movie m WHERE m.director LIKE %?#{escape([0])} escape ?#{escapeCharacter()}")
@@ -242,9 +243,9 @@ List<Movie> results = movieRepository.searchByDirectorEndsWith("Burton");
 assertEquals(1, results.size());
 ```
 
-## 5.结论
+## 5. 结论
 
-在这篇短文中，我们学习了如何在 Spring JPA 存储库中创建 LIKE 查询。
+在这篇短文中，我们学习了如何在 Spring JPA 存储库中创建 `LIKE` 查询。
 
 首先，我们学习了如何使用提供的关键字来创建查询方法。
 

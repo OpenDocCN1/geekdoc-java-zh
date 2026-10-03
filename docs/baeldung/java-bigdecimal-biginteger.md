@@ -1,25 +1,25 @@
-# Java 中的 BigDecimal 和 BigInteger
+
+# Java 中的 `BigDecimal` 和 `BigInteger`
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-bigdecimal-biginteger>
 
-## 1.概观
+## 1. 概观
 
-在本教程中，我们将演示 [`BigDecimal`](https://web.archive.org/web/20221130044147/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigDecimal.html) 和 [`BigInteger`](https://web.archive.org/web/20221130044147/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigInteger.html) 类。
+在本教程中，我们将演示 `BigDecimal` 和 `BigInteger` 类。
 
 我们将描述这两种数据类型、它们的特征以及它们的使用场景。我们还将简要介绍使用这两个类的各种操作。
 
-## 2.`BigDecimal`
+## 2. `BigDecimal`
 
-**`BigDecimal`表示不可变的任意精度有符号十进制数**。它由两部分组成:
-
-*   未缩放的值–任意精度的整数
-*   scale–一个 32 位整数，表示小数点右边的位数
+**`BigDecimal`表示不可变的任意精度有符号十进制数**。它由两部分组成：
+- 未缩放的值–任意精度的整数
+- scale–一个 32 位整数，表示小数点右边的位数
 
 例如，`BigDecimal` 3.14 的无标度值为 314，标度为 2。
 
 **我们使用`BigDecimal`进行高精度运算。我们也用它来计算需要控制的规模和四舍五入行为**。一个这样的例子是涉及金融交易的计算。
 
-**我们可以从`String`、字符数组、`int`、`long`、`BigInteger`、T6 中创建一个`BigDecimal`对象:**
+**我们可以从`String`、字符数组、`int`、`long`、`BigInteger` 中创建一个`BigDecimal`对象**：
 
 ```java
 @Test
@@ -39,7 +39,7 @@ public void whenBigDecimalCreated_thenValueMatches() {
 }
 ```
 
-我们也可以从`double`创建`BigDecimal`:
+我们也可以从`double`创建`BigDecimal`：
 
 ```java
 @Test
@@ -49,14 +49,13 @@ public void whenBigDecimalCreatedFromDouble_thenValueMayNotMatch() {
 }
 ```
 
-但是，在这种情况下，结果与预期不同(即 0.1)。这是因为:
+但是，在这种情况下，结果与预期不同（即 0.1）。这是因为：
+- `double`构造函数进行精确的翻译
+- 0.1 在`double`中没有精确的表示
 
-*   `double`构造函数进行精确的翻译
-*   0.1 在`double`中没有精确的表示
+因此，**我们应该使用 `String`构造函数而不是`double`构造函数**。
 
-因此，**我们应该使用 S `tring`构造函数而不是`double`构造函数**。
-
-此外，我们可以使用`valueOf`静态方法将`double`和`long`转换为`BigDecimal`:
+此外，我们可以使用`valueOf`静态方法将`double`和`long`转换为`BigDecimal`：
 
 ```java
 @Test
@@ -75,13 +74,13 @@ public void whenBigDecimalCreatedUsingValueOf_thenValueMatches() {
 
 因此，**我们应该优先使用`valueOf`方法，而不是构造函数**。
 
-## 3.`BigDecimal`上的操作
+## 3. `BigDecimal`上的操作
 
-就像其他的`Number`类(`Integer`、`Long`、`Double`等)。)，`BigDecimal`提供了用于算术运算和比较运算的操作。它还提供缩放操作、舍入和格式转换操作。
+就像其他的`Number`类（`Integer`、`Long`、`Double`等），`BigDecimal`提供了用于算术运算和比较运算的操作。它还提供缩放操作、舍入和格式转换操作。
 
-它不会重载算术(+、-、/、*)或逻辑(>。< etc)运算符。而是用相应的方法——`add`、`subtract`、`multiply`、`divide`、`compareTo.`
+它不会重载算术（`+`、`-`、`/`、`*`）或逻辑（`>`、`<` etc）运算符。而是用相应的方法——`add`、`subtract`、`multiply`、`divide`、`compareTo`。
 
-**`BigDecimal`有提取各种属性的方法，比如精度、小数位数、符号**:
+**`BigDecimal`有提取各种属性的方法，比如精度、小数位数、符号**：
 
 ```java
 @Test
@@ -94,7 +93,7 @@ public void whenGettingAttributes_thenExpectedResult() {
 }
 ```
 
-**我们使用`compareTo`方法**比较两位大小数的值:
+**我们使用`compareTo`方法**比较两位大小数的值：
 
 ```java
 @Test
@@ -126,7 +125,7 @@ public void whenEqualsCalled_thenSizeAndScaleMatched() {
 }
 ```
 
-**我们通过调用相应的方法**来执行算术运算:
+**我们通过调用相应的方法**执行算术运算：
 
 ```java
 @Test
@@ -148,35 +147,33 @@ public void whenPerformingArithmetic_thenExpectedResult() {
 
 **由于`BigDecimal`是不可变的，这些操作不会修改现有的对象。**相反，它们返回新的对象。
 
-## 4.舍入和`BigDecimal`
+## 4. 舍入和`BigDecimal`
 
-通过舍入一个数字，我们用另一个更短、更简单、更有意义的数字来代替它。例如，我们将$24.784917 四舍五入到$24.78，因为我们没有小数美分。
+通过舍入一个数字，我们用另一个更短、更简单、更有意义的数字来代替它。例如，我们将 $24.784917 四舍五入到 $24.78，因为我们没有小数美分。
 
 要使用的精度和舍入模式因计算而异。例如，美国联邦纳税申报表指定使用`HALF_UP`四舍五入到整美元金额。
 
-**有两个类控制舍入行为—`RoundingMode`和`MathContext`** 。
+**有两个类控制舍入行为—`RoundingMode`和`MathContext`**。
 
-`enum [RoundingMode](https://web.archive.org/web/20221130044147/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/RoundingMode.html)` 提供八种成圆模式:
-
-*   `CEILING –`向正无穷大舍入
-*   `FLOOR –`向负无穷大舍入
-*   `UP –`从零开始舍入
-*   `DOWN –`向零舍入
-*   `HALF_UP –`向“最近的邻居”舍入，除非两个邻居等距，在这种情况下会向上舍入
-*   `HALF_DOWN –`向“最近的邻居”舍入，除非两个邻居等距，在这种情况下向下舍入
-*   `HALF_EVEN – `向“最近的邻居”舍入，除非两个邻居等距，在这种情况下，向偶数邻居舍入
-*   `UNNECESSARY –`不需要舍入，如果没有精确的结果，则抛出`ArithmeticException`
+`enum RoundingMode` 提供八种成圆模式：
+- `CEILING` –向正无穷大舍入
+- `FLOOR` –向负无穷大舍入
+- `UP` –从零开始舍入
+- `DOWN` –向零舍入
+- `HALF_UP` –向“最近的邻居”舍入，除非两个邻居等距，在这种情况下会向上舍入
+- `HALF_DOWN` –向“最近的邻居”舍入，除非两个邻居等距，在这种情况下向下舍入
+- `HALF_EVEN` – 向“最近的邻居”舍入，除非两个邻居等距，在这种情况下，向偶数邻居舍入
+- `UNNECESSARY` –不需要舍入，如果没有精确的结果，则抛出`ArithmeticException`
 
 `HALF_EVEN`舍入模式将舍入操作产生的偏差降至最低。它经常被使用。它也被称为**银行家的四舍五入**。
 
-**[`MathContext`](https://web.archive.org/web/20221130044147/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/MathContext.html) 封装了精度和舍入模式**。有几个预定义的 MathContexts:
+**`MathContext` 封装了精度和舍入模式**。有几个预定义的 `MathContexts`：
+- `DECIMAL32` – 7 位数精度和半偶数舍入模式
+- `DECIMAL64` – 16 位精度，半偶数舍入模式
+- `DECIMAL128` – 34 位精度，半偶数舍入模式
+- `UNLIMITED` –无限精度运算
 
-*   `DECIMAL32`–7 位数精度和半偶数舍入模式
-*   `DECIMAL64`–16 位精度，半偶数舍入模式
-*   `DECIMAL128`–34 位精度，半偶数舍入模式
-*   `UNLIMITED`–无限精度运算
-
-使用这个类，我们可以使用指定的精度和舍入行为来舍入一个`BigDecimal`数:
+使用这个类，我们可以使用指定的精度和舍入行为来舍入一个`BigDecimal`数：
 
 ```java
 @Test
@@ -192,7 +189,7 @@ public void whenRoundingDecimal_thenExpectedResult() {
 
 现在，让我们通过一个示例计算来研究舍入概念。
 
-让我们写一个方法，在给定数量和单价的情况下，计算一个项目的总支付金额。让我们也应用贴现率和销售税率。我们使用`setScale`方法将最终结果四舍五入到美分:
+让我们写一个方法，在给定数量和单价的情况下，计算一个项目的总支付金额。让我们也应用贴现率和销售税率。我们使用`setScale`方法将最终结果四舍五入到美分：
 
 ```java
 public static BigDecimal calculateTotalAmount(BigDecimal quantity,
@@ -210,7 +207,7 @@ public static BigDecimal calculateTotalAmount(BigDecimal quantity,
 }
 ```
 
-现在，让我们为这个方法编写一个单元测试:
+现在，让我们为这个方法编写一个单元测试：
 
 ```java
 @Test
@@ -227,15 +224,15 @@ public void givenPurchaseTxn_whenCalculatingTotalAmount_thenExpectedResult() {
 }
 ```
 
-## 5.`BigInteger`
+## 5. `BigInteger`
 
 **`BigInteger`代表不可变的任意精度整数**。它类似于原始整数类型，但允许任意大的值。
 
-**当涉及的整数大于`long`类型的极限时使用。**例如，50 的阶乘是`30414093201713378043612608166064768844377641568960512000000000000\.` 这个值对于`int or long`数据类型来说太大了。它只能存储在一个`BigInteger`变量中。
+**当涉及的整数大于`long`类型的极限时使用。**例如，50 的阶乘是 `30414093201713378043612608166064768844377641568960512000000000000`。这个值对于 `int` 或 `long` 数据类型来说太大了。它只能存储在一个`BigInteger`变量中。
 
 它广泛应用于安全和密码应用中。
 
-**我们可以从一个`byte`数组或者`String`** 中创建`BigInteger`:
+**我们可以从一个`byte`数组或者`String`** 中创建`BigInteger`：
 
 ```java
 @Test
@@ -252,24 +249,26 @@ public void whenBigIntegerCreatedFromConstructor_thenExpectedResult() {
 }
 ```
 
-另外，**我们可以使用静态方法** `**valueOf**:`将`long`转换为`BigInteger`
+另外，**我们可以使用静态方法 `valueOf`** 将`long`转换为`BigInteger`。
+
+
 
 ```java
 @Test
 public void whenLongConvertedToBigInteger_thenValueMatches() {
-    BigInteger bi =  BigInteger.valueOf(2305843009213693951L);
+    BigInteger bi = BigInteger.valueOf(2305843009213693951L);
 
     assertEquals("2305843009213693951", bi.toString());
 }
 ```
 
-## 6.`BigInteger`上的操作
+## 6. `BigInteger`上的操作
 
 与`int`和`long`类似，`BigInteger`实现所有的算术和逻辑运算。但是，它不会使操作员过载。
 
-它还实现了来自`Math`类的相应方法:`abs`、`min`、`max`、`pow`、`signum`。
+它还实现了来自`Math`类的相应方法：`abs`、`min`、`max`、`pow`、`signum`。
 
-**我们使用`compareTo`方法比较两个大整数的值:**
+我们使用`compareTo`方法比较两个大整数的值：
 
 ```java
 @Test
@@ -284,7 +283,7 @@ public void givenBigIntegers_whentCompared_thenExpectedResult() {
 }
 ```
 
-**我们通过调用相应的方法进行算术运算:**
+我们通过调用相应的方法进行算术运算：
 
 ```java
 @Test
@@ -304,9 +303,9 @@ public void givenBigIntegers_whenPerformingArithmetic_thenExpectedResult() {
 }
 ```
 
-由于`BigInteger`是不可变的，**这些操作不会修改现有的对象。与**、`int`和`long`、**不同，这些操作不会溢出。**
+由于`BigInteger`是不可变的，这些操作不会修改现有的对象。与`int`和`long`不同，这些操作不会溢出。
 
-**`BigInteger`有类似于`int``long`**的位操作。但是，我们需要使用方法而不是运算符:
+`BigInteger`有类似于`int`和`long`的位操作。但是，我们需要使用方法而不是运算符：
 
 ```java
 @Test
@@ -332,7 +331,7 @@ public void givenBigIntegers_whenPerformingBitOperations_thenExpectedResult() {
 }
 ```
 
-**它有额外的位操作方法**:
+它有额外的位操作方法：
 
 ```java
 @Test
@@ -357,7 +356,7 @@ public void givenBigIntegers_whenPerformingBitManipulations_thenExpectedResult()
 }
 ```
 
-**`BigInteger`提供 GCD 计算和模运算的方法**:
+`BigInteger`提供 GCD 计算和模运算的方法：
 
 ```java
 @Test
@@ -378,7 +377,7 @@ public void givenBigIntegers_whenModularCalculation_thenExpectedResult() {
 }
 ```
 
-**它还具有与素数生成和素性测试相关的方法**:
+它还具有与素数生成和素性测试相关的方法：
 
 ```java
 @Test
@@ -390,8 +389,8 @@ public void givenBigIntegers_whenPrimeOperations_thenExpectedResult() {
 }
 ```
 
-## 7.结论
+## 7. 结论
 
-在这个快速教程中，我们探索了类`BigDecimal`和`BigInteger. `,它们对于原始整数类型不能满足要求的高级数值计算非常有用。
+在这个快速教程中，我们探索了类`BigDecimal`和`BigInteger`，它们对于原始整数类型不能满足要求的高级数值计算非常有用。
 
-像往常一样，完整的源代码可以在 GitHub 上找到[。](https://web.archive.org/web/20221130044147/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-numbers)
+像往常一样，完整的源代码可以在 GitHub 上找到。

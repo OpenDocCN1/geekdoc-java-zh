@@ -1,3 +1,4 @@
+
 # Spring @每个人都会犯的事务性错误
 
 > 原文：<https://medium.com/javarevisited/spring-transactional-mistakes-everyone-did-31418e5a6d6b?source=collection_archive---------0----------------------->
@@ -6,35 +7,37 @@
 
 [粘土银行](https://unsplash.com/@claybanks?utm_source=medium&utm_medium=referral)在 [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral) 拍摄的照片
 
-大概用的最多的一个 Spring 注释就是 ***@Transactional*** 。尽管它很受欢迎，但它有时会被误用，导致一些事情不是软件工程师想要的。
+大概用的最多的一个 Spring 注释就是`@Transactional`。尽管它很受欢迎，但它有时会被误用，导致一些事情不是软件工程师想要的。
 
 在这篇文章中，我收集了我个人在项目中遇到的问题。我希望这个列表能帮助你更好地理解事务，并帮助你解决一些问题。
 
 # 1.同一类中的调用
 
-***@ Transactional***很少被足够多的测试覆盖，这就导致了有些问题乍一看是看不出来的。因此，您可能会遇到以下代码:
+`@Transactional`很少被足够多的测试覆盖，这就导致了有些问题乍一看是看不出来的。因此，您可能会遇到以下代码:
 
-批注在 registerAccount 方法中不起作用
+批注在`registerAccount`方法中不起作用
 
-在这种情况下，当调用`registerAccount()`时，保存用户和创建团队不会在普通事务中执行。***@ Transactional***由[面向方面编程](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#aop)提供支持。因此，当一个 bean 被另一个 bean 调用时，就会发生处理。在上面的示例中，方法是从同一个类中调用的，因此不能应用任何代理。其他标注如[***@ Cacheable***](https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#cache)也是如此。
+在这种情况下，当调用`registerAccount()`时，保存用户和创建团队不会在普通事务中执行。`@Transactional`由[面向方面编程](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#aop)提供支持。因此，当一个 bean 被另一个 bean 调用时，就会发生处理。在上面的示例中，方法是从同一个类中调用的，因此不能应用任何代理。其他标注如[`@Cacheable`](https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#cache)也是如此。
 
 这个问题可以用三种基本方法解决:
 
 1.  自我注射
+
 2.  创建另一个抽象层
-3.  通过包装`createAccount()`调用，在`registerAccount()`方法中使用 **TransactionTemplate**
 
-第一种方法似乎不太明显，但这样一来，如果***@ Transactional***包含参数，我们就避免了逻辑的重复。
+3.  通过包装`createAccount()`调用，在`registerAccount()`方法中使用`TransactionTemplate`
 
-该注释在 registerAccount 方法中起作用
+第一种方法似乎不太明显，但这样一来，如果`@Transactional`包含参数，我们就避免了逻辑的重复。
 
-如果你用 Lombok，别忘了在你的 lombok.config 中添加 [***@Lazy*** 。](https://stackoverflow.com/questions/59505213/how-to-use-lazy-annotation-in-a-class-constructor-with-lombok)
+该注释在`registerAccount`方法中起作用
+
+如果你用 Lombok，别忘了在你的`lombok.config`中添加[`@Lazy`](https://stackoverflow.com/questions/59505213/how-to-use-lazy-annotation-in-a-class-constructor-with-lombok)。
 
 # 2.处理不是所有的异常
 
 默认情况下，回滚只发生在[运行时异常](http://www.java67.com/2012/12/difference-between-runtimeexception-and-checked-exception.html)和[错误](https://javarevisited.blogspot.com/2013/06/10-java-exception-and-error-interview-questions-answers-programming.html#axzz6kGEVKsf7)时。同时，代码可能包含已检查的异常，其中也有必要回滚事务。
 
-如果需要在出现 StripeException 时回滚，请将 roll back 设置为
+如果需要在出现`StripeException`时回滚，请将`rollback`设置为
 
 # 3.事务隔离级别和传播
 
@@ -62,19 +65,19 @@ PostgreSQL 中的选择更新
 
 ## 实体的版本控制(乐观锁定)
 
-这种方式有助于避免堵塞。这个想法是给我们的实体添加一个列`version`。因此，只有当数据库中实体的版本与应用程序中的版本相匹配时，我们才能选择数据并更新它。在使用 [JPA](https://spring.io/projects/spring-data-jpa) 的情况下，可以使用***@版本*** 标注。
+这种方式有助于避免堵塞。这个想法是给我们的实体添加一个列`version`。因此，只有当数据库中实体的版本与应用程序中的版本相匹配时，我们才能选择数据并更新它。在使用 [JPA](https://spring.io/projects/spring-data-jpa) 的情况下，可以使用`@Version`标注。
 
 # 5.两个不同的数据源
 
 例如，我们创建了一个新版本的数据存储区，但仍需要在一段时间内维护旧版本。
 
-当然，在这种情况下，只有一个`save`会被事务处理，即在那个被认为是默认的[**transactional manager**](https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#transaction)中。
+当然，在这种情况下，只有一个`save`会被事务处理，即在那个被认为是默认的[`transactional manager`](https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#transaction)中。
 
 [弹簧](/javarevisited/top-10-free-courses-to-learn-spring-framework-for-java-developers-639db9348d25)在这里提供了两种选择。
 
 ## ChainedTransactionManager
 
-ChainedTransactionManager 是声明多个数据源的一种方式，在这种方式中，在出现异常的情况下，回滚将以相反的顺序发生。因此，对于三个数据源，如果第二个数据源在提交期间发生错误，只有前两个数据源会尝试回滚。第三个已经提交了更改。
+`ChainedTransactionManager`是声明多个数据源的一种方式，在这种方式中，在出现异常的情况下，回滚将以相反的顺序发生。因此，对于三个数据源，如果第二个数据源在提交期间发生错误，只有前两个数据源会尝试回滚。第三个已经提交了更改。
 
 ## JtaTransactionManager
 

@@ -1,35 +1,39 @@
+
 # Struts 2 + Spring 3 + Quartz 1.8 调度器示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/struts2/struts-2-spring-3-quartz-1-8-scheduler-example/>
 
-在本教程中，我们将向您展示如何集成**Struts 2+Spring 3+Quartz 1 . 8 . 6**。
+在本教程中，我们将向您展示如何集成 **Struts 2 + Spring 3 + Quartz 1.8.6**。
 
-**Why NOT Quartz 2?**
-Currently, Spring 3 is still NOT support Quartz 2 APIs, see this [SPR-8581 bug report](http://web.archive.org/web/20190304032247/https://jira.springsource.org/browse/SPR-8581). Will update this article again once bug fixed is released.
+**为什么不用 Quartz 2？**
 
-使用的工具
+目前，Spring 3 仍不支持 Quartz 2 API，请参阅此 [SPR-8581 bug 报告](http://web.archive.org/web/20190304032247/https://jira.springsource.org/browse/SPR-8581)。一旦 bug 修复发布，将再次更新本文。
 
-1.  弹簧 3.1.5 释放
-2.  石英
-3.  支柱 2.3.4
-4.  支柱 2-弹簧-插件 2.3.4
-5.  maven3
-6.  Eclipse 4.2
+## 使用的工具
 
-## 1.项目文件夹
+1. Spring 3.1.2.RELEASE
+2. Quartz 1.8.6
+3. Struts 2.3.4
+4. Struts 2-Spring 插件 2.3.4
+5. Maven 3
+6. Eclipse 4.2
+
+## 1. 项目文件夹
 
 这是最终的项目文件夹结构。
 
-![](img/4b2adf15a4ed33eb9acfb684225612d0.png "struts2-spring3-quartz") ## 2.依赖库
+![](img/4b2adf15a4ed33eb9acfb684225612d0.png "struts2-spring3-quartz")
 
-集成与这个 [Spring 2.5.6 + Quartz 1.6](http://web.archive.org/web/20190304032247/http://www.mkyong.com/struts2/struts-2-spring-quartz-scheduler-integration-example/) 类似，只是 Spring3 的依赖关系有点混乱，阅读下面的 Maven pom.xml 了解开发本教程所需的所有依赖关系。
+## 2. 依赖库
+
+集成与这个 [Spring 2.5.6 + Quartz 1.6](http://web.archive.org/web/20190304032247/http://www.mkyong.com/struts2/struts-2-spring-quartz-scheduler-integration-example/) 类似，只是 Spring 3 的依赖关系有点混乱，阅读下面的 Maven `pom.xml` 了解开发本教程所需的所有依赖关系。
 
 查看 XML 注释可以理解为什么需要这个 jar。
 
-*文件:pom.xml*
+*文件：`pom.xml`*
 
-```java
- ...
+```xml
+...
 <dependencies>
 
   <!-- Struts 2 -->
@@ -88,17 +92,17 @@ Currently, Spring 3 is still NOT support Quartz 2 APIs, see this [SPR-8581 bug r
   </dependency>
 
 </dependencies>
-  ... 
+...
 ```
 
- ## 3.弹簧 3 +石英
+## 3. Spring 3 + Quartz
 
-要集成 Spring3 和 Quartz，需要创建一个扩展了`org.springframework.scheduling.quartz.QuartzJobBean`的类，并实现`executeInternal()`方法，就像在 Quartz 中创建调度作业一样。
+要集成 Spring 3 和 Quartz，需要创建一个扩展了 `org.springframework.scheduling.quartz.QuartzJobBean` 的类，并实现 `executeInternal()` 方法，就像在 Quartz 中创建调度作业一样。
 
-*文件:SchedulerJob.java*
+*文件：`SchedulerJob.java`*
 
 ```java
- package com.mkyong.quartz;
+package com.mkyong.quartz;
 
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
@@ -113,13 +117,13 @@ public class SchedulerJob extends QuartzJobBean
 		System.out.println("Struts 2.3.4 + Quartz 1.8.6 + Spring 3.1.2");
 
 	}
-} 
+}
 ```
 
-*File:application context . XML*–将整个 Quartz 的调度程序和 Spring 细节放在`applicationContext.xml`中。有关详细信息，请参见 XML 注释。
+*文件：`applicationContext.xml`* —— 将整个 Quartz 的调度程序和 Spring 细节放在 `applicationContext.xml` 中。有关详细信息，请参见 XML 注释。
 
-```java
- <beans 
+```xml
+<beans 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.springframework.org/schema/beans
   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
@@ -150,20 +154,21 @@ public class SchedulerJob extends QuartzJobBean
 	</property>
   </bean>
 
-</beans> 
+</beans>
 ```
 
-## 4.支柱 2 +弹簧 3
+## 4. Struts 2 + Spring 3
 
-要集成 **Struts 2 + Spring** ，只需将`org.springframework.web.context.ContextLoaderListener`监听器类放在`web.xml`文件中。
+要集成 **Struts 2 + Spring**，只需将 `org.springframework.web.context.ContextLoaderListener` 监听器类放在 `web.xml` 文件中。
 
-**Note**
-For detail, please read this [Struts 2 + Spring integration example](http://web.archive.org/web/20190304032247/http://www.mkyong.com/struts2/struts-2-spring-integration-example/).
+**注意**
 
-*文件:web.xml*
+有关详细信息，请阅读此 [Struts 2 + Spring 集成示例](http://web.archive.org/web/20190304032247/http://www.mkyong.com/struts2/struts-2-spring-integration-example/)。
 
-```java
- <!DOCTYPE web-app PUBLIC
+*文件：`web.xml`*
+
+```xml
+<!DOCTYPE web-app PUBLIC
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
@@ -188,15 +193,15 @@ For detail, please read this [Struts 2 + Spring integration example](http://web.
 	  </listener-class>
 	</listener>
 
-</web-app> 
+</web-app>
 ```
 
-## 5.演示
+## 5. 演示
 
-完成，当 Strut2 启动时，它调用 Spring 并运行定义的 Quartz 的任务。
+完成，当 Struts 2 启动时，它调用 Spring 并运行定义的 Quartz 的任务。
 
 ```java
- Jul 24, 2012 4:49:07 PM org.apache.coyote.AbstractProtocol start
+Jul 24, 2012 4:49:07 PM org.apache.coyote.AbstractProtocol start
 INFO: Starting ProtocolHandler ["http-bio-8080"]
 Jul 24, 2012 4:49:07 PM org.apache.coyote.AbstractProtocol start
 INFO: Starting ProtocolHandler ["ajp-bio-8009"]
@@ -204,26 +209,19 @@ Jul 24, 2012 4:49:07 PM org.apache.catalina.startup.Catalina start
 INFO: Server startup in 3430 ms
 Struts 2.3.4 + Quartz 1.8.6 + Spring 3.1.2  //run this every 10 seconds.
 Struts 2.3.4 + Quartz 1.8.6 + Spring 3.1.2
-Struts 2.3.4 + Quartz 1.8.6 + Spring 3.1.2 
+Struts 2.3.4 + Quartz 1.8.6 + Spring 3.1.2
 ```
 
 ## 下载源代码
 
-Download it – [Struts2-Spring3-Quartz-Example.zip](http://web.archive.org/web/20190304032247/http://www.mkyong.com/wp-content/uploads/2012/07/Struts2-Spring3-Quartz-Example.zip) (20 KB).
+下载：[Struts2-Spring3-Quartz-Example.zip](http://web.archive.org/web/20190304032247/http://www.mkyong.com/wp-content/uploads/2012/07/Struts2-Spring3-Quartz-Example.zip)（20 KB）。
 
 ## 参考
 
-1.  [Struts 2 + Spring 集成示例](http://web.archive.org/web/20190304032247/http://www.mkyong.com/struts2/struts-2-spring-integration-example/)
-2.  [Struts 2 Spring 插件文档](http://web.archive.org/web/20190304032247/http://struts.apache.org/2.x/docs/spring-plugin.html)
-3.  [QuartzJobBean JavaDoc](http://web.archive.org/web/20190304032247/http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/scheduling/quartz/QuartzJobBean.html)
-4.  [Spring 应支持石英 2.0 CronTrigger 接口](http://web.archive.org/web/20190304032247/https://jira.springsource.org/browse/SPR-8581)
-5.  [支柱 2 +弹簧 2.5.6 +石英集成示例](http://web.archive.org/web/20190304032247/http://www.mkyong.com/struts2/struts-2-spring-quartz-scheduler-integration-example/)
+1. [Struts 2 + Spring 集成示例](http://web.archive.org/web/20190304032247/http://www.mkyong.com/struts2/struts-2-spring-integration-example/)
+2. [Struts 2 Spring 插件文档](http://web.archive.org/web/20190304032247/http://struts.apache.org/2.x/docs/spring-plugin.html)
+3. [QuartzJobBean JavaDoc](http://web.archive.org/web/20190304032247/http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/scheduling/quartz/QuartzJobBean.html)
+4. [Spring 应支持 Quartz 2.0 CronTrigger 接口](http://web.archive.org/web/20190304032247/https://jira.springsource.org/browse/SPR-8581)
+5. [Struts 2 + Spring 2.5.6 + Quartz 集成示例](http://web.archive.org/web/20190304032247/http://www.mkyong.com/struts2/struts-2-spring-quartz-scheduler-integration-example/)
 
 [quartz](http://web.archive.org/web/20190304032247/http://www.mkyong.com/tag/quartz/) [scheduler](http://web.archive.org/web/20190304032247/http://www.mkyong.com/tag/scheduler/) [spring3](http://web.archive.org/web/20190304032247/http://www.mkyong.com/tag/spring3/) [struts2](http://web.archive.org/web/20190304032247/http://www.mkyong.com/tag/struts2/)
-
-
-
-
-
-
-

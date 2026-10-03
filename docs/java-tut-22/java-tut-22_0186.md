@@ -1,3 +1,4 @@
+
 # 随机访问文件
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/io/rafs.html`](https://docs.oracle.com/javase/tutorial/essential/io/rafs.html)
@@ -6,17 +7,13 @@
 
 这种功能是通过[`SeekableByteChannel`](https://docs.oracle.com/javase/8/docs/api/java/nio/channels/SeekableByteChannel.html)接口实现的。`SeekableByteChannel`接口扩展了通道 I/O 的概念，具有当前位置的概念。方法使您能够设置或查询位置，然后可以从该位置读取数据或将数据写入该位置。API 由一些易于使用的方法组成：
 
-+   [`position`](https://docs.oracle.com/javase/8/docs/api/java/nio/channels/SeekableByteChannel.html#position--) – 返回通道的当前位置
-
++   [`position()`](https://docs.oracle.com/javase/8/docs/api/java/nio/channels/SeekableByteChannel.html#position--) – 返回通道的当前位置
 +   [`position(long)`](https://docs.oracle.com/javase/8/docs/api/java/nio/channels/SeekableByteChannel.html#position-long-) – 设置通道的位置
-
 +   [`read(ByteBuffer)`](https://docs.oracle.com/javase/8/docs/api/java/nio/channels/SeekableByteChannel.html#read-java.nio.ByteBuffer-) – 从通道读取字节到缓冲区
-
 +   [`write(ByteBuffer)`](https://docs.oracle.com/javase/8/docs/api/java/nio/channels/SeekableByteChannel.html#write-java.nio.ByteBuffer-) – 将缓冲区中的字节写入通道
-
 +   [`truncate(long)`](https://docs.oracle.com/javase/8/docs/api/java/nio/channels/SeekableByteChannel.html#truncate-long-) – 截断与通道连接的文件（或其他实体）
 
-使用通道 I/O 读写文件 显示`Path.newByteChannel`方法返回`SeekableByteChannel`的实例。在默认文件系统上，您可以直接使用该通道，或者将其转换为[`FileChannel`](https://docs.oracle.com/javase/8/docs/api/java/nio/channels/FileChannel.html)，从而可以访问更高级的功能，例如将文件的某个区域直接映射到内存以实现更快的访问，锁定文件的某个区域，或者从绝对位置读取和写入字节而不影响通道的当前位置。
+使用通道 I/O 读写文件显示`Path.newByteChannel`方法返回`SeekableByteChannel`的实例。在默认文件系统上，您可以直接使用该通道，或者将其转换为[`FileChannel`](https://docs.oracle.com/javase/8/docs/api/java/nio/channels/FileChannel.html)，从而可以访问更高级的功能，例如将文件的某个区域直接映射到内存以实现更快的访问，锁定文件的某个区域，或者从绝对位置读取和写入字节而不影响通道的当前位置。
 
 以下代码片段通过使用`newByteChannel`方法打开文件进行读写。返回的`SeekableByteChannel`被转换为`FileChannel`。然后，从文件开头读取 12 个字节，并在该位置写入字符串"I was here!"。文件中的当前位置移动到末尾，并将开头的 12 个字节追加。最后，追加字符串"I was here!"，并关闭文件上的通道。
 
@@ -53,5 +50,4 @@ try (FileChannel fc = (FileChannel.open(file, READ, WRITE))) {
 } catch (IOException x) {
     System.out.println("I/O Exception: " + x);
 }
-
 ```

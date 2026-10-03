@@ -1,12 +1,11 @@
-# 编程面试忍者：50道带Java解决方案的编程题，助力你的面试实践指南
 
-
+# 编程面试忍者：50 道带 Java 解决方案的编程题，助力你的面试实践指南
 
 ![](img/00002.jpeg)
 
 # 引言
 
-获得你梦想以的软件工程师工作可能取决于你在编码面试中的表现。这可能是你面试过程中最重要的一部分。
+获得你梦想中的软件工程师工作可能取决于你在编码面试中的表现。这可能是你面试过程中最重要的一部分。
 
 你的招聘官会建议你重新复习大学的算法和数据结构教科书，以温习计算机科学的基础知识。虽然这是必要的，但远远不够。在算法书中看到的问题类型并不是为了让你在短短 45 分钟的压力下解决而设计的。准备编码面试最好的方法是练习与你可能被要求解决的题目类似的题目。这本书的目的就是：为你提供一些面试编码示例题以及相应的解决方案代码。
 
@@ -28,7 +27,7 @@
 
 ## 运行复杂度
 
-大多数情况下，面试官会询问你程序的运行时间，即大 O 复杂度，也就是运行的最坏情况分析。在某些情况下，例如处理大 O 分析不佳的流行算法（如 `quicksort`），了解其平均运行时间也是用的。
+大多数情况下，面试官会询问你程序的运行时间，即大 O 复杂度，也就是运行的最坏情况分析。在某些情况下，例如处理大 O 分析不佳的流行算法（如 `quicksort`），了解其平均运行时间也是有用的。
 
 ## 数据结构
 
@@ -76,7 +75,7 @@ class TNode {
 
 在某些情况下，树节点可能有一个指向其父节点的指针。
 
-二叉树的一种流行特殊类型是二叉搜索树 (`BST`)，其中每个节点的元素必须大于其左子树中的所有元素，且小于其右子树中的所有元素。
+二叉树的一种流行特殊类型是二叉搜索树（`BST`），其中每个节点的元素必须大于其左子树中的所有元素，且小于其右子树中的所有元素。
 
 访问树中每个节点的过程被称为树遍历。按深度优先顺序探索树有三种基本方法。以下示例代码通过三种基本遍历打印树：
 
@@ -107,7 +106,7 @@ public static void postOrder(TNode root) {
 
 哈希映射用于将键与值关联起来。这种数据结构的优势是，理论上每个操作（插入、删除、查找）平均需要 `O(1)` 时间。
 
-要向哈希表中插入新元素，你需要计算键的哈希值。如果计算出的哈希值已存在于结构中，则使用冲突解决解决技术。两种最常用的解决技术是：
+要向哈希表中插入新元素，你需要计算键的哈希值。如果计算出的哈希值已存在于结构中，则使用冲突解决技术。两种最常用的解决技术是：
 
 - **单独链法**：每个桶是独立的，对于每个哈希值索引都使用某种动态列表。
 - **开放寻址**：不断检查桶直到找到未被占用的桶为止。
@@ -140,7 +139,7 @@ Queue<String> queue = new LinkedList<String>();
 
 一组通过链接连接的节点。可以使用邻接矩阵或邻接列表表示。面试官可能会问及图论，因为它被广泛应用于许多算法。
 
-### 字典树 (Tries)
+### 字典树（Tries）
 
 一种通常持有字符的树数据结构，在字符串处理中有许多应用。通常，节点的所有后代都有与其关联的字符串的前缀，根节点与空字符串关联。这种数据结构的流行应用是词典查询（例如文本框中的简单自动完成功能）。
 
@@ -148,10 +147,10 @@ Queue<String> queue = new LinkedList<String>();
 
 面试官极少要求你实现特定的复杂且长的算法（如 `Dijkstra`、`A*` 等）。然而，你应该了解这些算法的工作原理、用途，并能够在涉及已知算法时进行基础对话。此外，建议了解动态规划是什么以及如何工作，并能够识别它。以下是建议学会如何实现的简单算法，以防面试官要求你实现算法的修改版：
 
-- 广度优先搜索 (BFS) / 深度优先搜索 (DFS)
-- 合并排序 (Mergesort)
-- 快速排序 (Quicksort)
-- 二分查找 (Binary Search)
+- 广度优先搜索（`BFS`）/深度优先搜索（`DFS`）
+- 合并排序（`Mergesort`）
+- 快速排序（`Quicksort`）
+- 二分查找（`Binary Search`）
 
 ## 其他
 
@@ -161,22 +160,22 @@ Queue<String> queue = new LinkedList<String>();
 
 ### 面向对象设计
 
-面试官可能会你描述给定系统的基本对象。因此，掌握面向对象原理的基础知识至关重要。
+面试官可能会要求你描述给定系统的基本对象。因此，掌握面向对象原理的基础知识至关重要。
 
 ### 测试
-
-
-
 
 面试官可能会要求你测试你自己的解决方案。你需要知道如何创建测试用例，甚至涵盖边界情况（即输入意料之外的内容）。此外，了解 `Unit Testing`（单元测试）的基本原理并提及它是非常建议的。
 
 ### 系统编程
+
 可能会问及 `threading`（线程）、`locks`（锁）和 `mutex`（互斥锁）等概念，特别是如果面试包含理论部分的话。
 
 ### 位运算
+
 可能会问及使用位运算符的二进制操作，特别是在专注于底层软件的公司。
 
 ### 程序内存
+
 `stack`（栈）和 `heap`（堆）内存区域之间的区别以及各自的使用场景。
 
 # 练习题
@@ -189,23 +188,21 @@ Queue<String> queue = new LinkedList<String>();
 
 如果问题的解决方案需要从主程序以特定方式调用，则该驱动程序的调用记录如下：
 
-.
-.
-.
-
 `main program calls()`
 
 在编码面试中，你可能被问到理论问题和开放式的系统设计问题。这些不在本书的范围内，但最后两个问题包含了一些你可能会被问到的示例。
 
-## 1. 找到多数元素。在这个问题中，多数元素定义为在数组中出现次数超过 `n/2` 次的数字。
+## 1. 找到多数元素
+
+在这个问题中，多数元素定义为在数组中出现次数超过 `n/2` 次的数字。
 
 例如：
+
 输入：`3,2,2,1,2,2,1`
+
 输出：`2`
 
-_______________
-
-### 解决方案：
+### 解决方案
 
 ```java
 public static int findMajCandidate(int[] arr) {
@@ -244,34 +241,28 @@ public static boolean verifyMajCandidate(int[] arr, int maj) {
 }
 ```
 
-.
-.
-.
-
 ```java
 int maj = findMajCandidate(arr);
-if (maj == Integer.MIN_VALUE || verifyMajCandidate(arr, maj)==false) {
+if (maj == Integer.MIN_VALUE || verifyMajCandidate(arr, maj) == false) {
     System.out.println("No majority element found.");
 } else {
     System.out.println("Majority element: " + maj);
 }
 ```
 
-运行时间复杂度：
-`O(N)`
+**运行时间复杂度：** `O(N)`
 
-空间复杂度：
-`O(1)`
+**空间复杂度：** `O(1)`
 
-## 2. 找到整数数组中连续子序列的最大和。
+## 2. 找到整数数组中连续子序列的最大和
 
 例如：
+
 输入：`1,-3,2,5,-8`
+
 输出：`7`
 
-_______________
-
-### 解决方案：
+### 解决方案
 
 ```java
 public static int maxSubSequence(int[] arr) {
@@ -287,17 +278,13 @@ public static int maxSubSequence(int[] arr) {
 }
 ```
 
-运行时间复杂度：
-`O(N)`
+**运行时间复杂度：** `O(N)`
 
-空间复杂度：
-`O(1)`
+**空间复杂度：** `O(1)`
 
-## 3. 给定两个二叉树，判断它们是否相等（具有相同的内容和结构）。
+## 3. 给定两个二叉树，判断它们是否相等（具有相同的内容和结构）
 
-_______________
-
-### 解决方案：
+### 解决方案
 
 ```java
 public static boolean isTreeSame(TNode T1, TNode T2) {
@@ -314,25 +301,27 @@ public static boolean isTreeSame(TNode T1, TNode T2) {
 }
 ```
 
-运行时间复杂度：
-`O(N)`
+**运行时间复杂度：** `O(N)`
 
-空间复杂度：
-`O(1)`
+**空间复杂度：** `O(1)`
 
-## 4. 在二叉搜索树 (BST) 中找到给定范围内的元素数量。
+## 4. 在二叉搜索树（BST）中找到给定范围内的元素数量
 
 例如：
+
 输入：范围`(2,6)`
+
 树：
-5
-3
-7
+
+```text
+    5
+   / \
+  3   7
+```
+
 输出：`2`
 
-_______________
-
-### 解决方案：
+### 解决方案
 
 ```java
 public static int numbersInRange(TNode node, int start, int end) {
@@ -349,25 +338,27 @@ public static int numbersInRange(TNode node, int start, int end) {
 }
 ```
 
-运行时间复杂度：
-`O(N)`
+**运行时间复杂度：** `O(N)`
 
-空间复杂度：
-`O(1)`
+**空间复杂度：** `O(1)`
 
-## 5. 给定一个带有父节点指针的树，找到中序遍历的下一个节点。
+## 5. 给定一个带有父节点指针的树，找到中序遍历的下一个节点
 
 例如：
+
 输入：节点`3`
+
 树：
-5
-3
-7
+
+```text
+    5
+   / \
+  3   7
+```
+
 输出：`5`
 
-_______________
-
-### 解决方案：
+### 解决方案
 
 ```java
 public static TNode nextInOrder(TNode n) {
@@ -390,25 +381,27 @@ public static TNode nextInOrder(TNode n) {
 }
 ```
 
-运行时间复杂度：
-`O(N)`
+**运行时间复杂度：** `O(N)`
 
-空间复杂度：
-`O(1)`
+**空间复杂度：** `O(1)`
 
-## 6. 给定一个带有父节点指针的树，找到后序遍历的下一个节点。
+## 6. 给定一个带有父节点指针的树，找到后序遍历的下一个节点
 
 例如：
+
 输入：节点`7`
+
 树：
-5
-3
-7
+
+```text
+    5
+   / \
+  3   7
+```
+
 输出：`5`
 
-_______________
-
-### 解决方案：
+### 解决方案
 
 ```java
 public static TNode nextPostOrder(TNode n) {
@@ -426,9 +419,6 @@ public static TNode nextPostOrder(TNode n) {
     return p;
 }
 ```
-
-
-
 
 ```java
 if (arr == null) {
@@ -449,19 +439,26 @@ return Integer.MIN_VALUE;
 }
 ```
 
-### 运行复杂度：
-O(logN)
+### 运行复杂度
 
-### 空间复杂度：
-O(1)
+`O(logN)`
 
-## 10. 从数字数组中找到一个局部最小值。
+### 空间复杂度
+
+
+
+# O(1)
+
+## 10. 从数字数组中找到一个局部最小值
 
 例如：
+
 输入：9, 7, 2, 8, 5, 6, 3, 4
+
 输出：2 或 5 或 3
 
-### 解决方案：
+### 解决方案
+
 ```java
 public static int findLocalMin(int[] arr, int st, int end) {
     int mid = (st + end) / 2;
@@ -479,19 +476,24 @@ public static int findLocalMin(int[] arr, int st, int end) {
 }
 ```
 
-### 运行复杂度：
-O(logN)
+### 运行复杂度
 
-### 空间复杂度：
-O(1)
+`O(logN)`
 
-## 11. 给定一个先严格递增后严格递减的数字数组，找到最大数。
+### 空间复杂度
+
+`O(1)`
+
+## 11. 给定一个先严格递增后严格递减的数字数组，找到最大数
 
 例如：
+
 输入：1, 2, 3, 4, 5, 4, 3, 2
+
 输出：5
 
-### 解决方案：
+### 解决方案
+
 ```java
 public static int findMax(int[] arr) {
     if (arr == null || arr.length <= 3) {
@@ -513,21 +515,28 @@ public static int findMax(int[] arr) {
 }
 ```
 
-### 运行复杂度：
-O(logN)
+### 运行复杂度
 
-### 空间复杂度：
-O(1)
+`O(logN)`
 
-## 12. 仅使用整数实现平方根函数 (sqrt)。
+### 空间复杂度
+
+`O(1)`
+
+## 12. 仅使用整数实现平方根函数（`sqrt`）
 
 例如：
+
 输入：4
+
 输出：2
+
 输入：5
+
 输出：2 或 3（两个值允许，因为正确结果是小数）
 
-### 解决方案：
+### 解决方案
+
 ```java
 public static int sqrt(int target, int st, int end) {
     if (st >= end) {
@@ -545,21 +554,28 @@ public static int sqrt(int target, int st, int end) {
 }
 ```
 
-### 运行复杂度：
-O(logN)
+### 运行复杂度
 
-### 空间复杂度：
-O(1)
+`O(logN)`
 
-## 13. 给定一个排序过但旋转了未知次数的数组，找到目标元素的位置。
+### 空间复杂度
+
+`O(1)`
+
+## 13. 给定一个排序过但旋转了未知次数的数组，找到目标元素的位置
 
 例如：
+
 输入：
+
 旋转后的数组：4, 5, 6, 7, 0, 1, 2
+
 目标：6
+
 输出：2
 
-### 解决方案：
+### 解决方案
+
 ```java
 public static int binaryRoatedSearch(int[] arr, int target) {
     if (arr == null) {
@@ -591,25 +607,34 @@ public static int binaryRoatedSearch(int[] arr, int target) {
 }
 ```
 
-### 信息：
+### 信息
+
 如果输入数组包含重复项，则只能通过线性搜索在 `O(N)` 运行时间内找到目标。
 
-### 运行复杂度：
-O(logN)
+### 运行复杂度
 
-### 空间复杂度：
-O(1)
+`O(logN)`
 
-## 14. 给定一个包含多个相同整数的排序数组，找到目标整数的起始和结束位置。
+### 空间复杂度
+
+`O(1)`
+
+## 14. 给定一个包含多个相同整数的排序数组，找到目标整数的起始和结束位置
 
 例如：
+
 排序数组：1, 2, 3, 7, 7, 9, 9
+
 目标：7
+
 输出：
+
 起始位置：3
+
 结束位置：5
 
-### 解决方案：
+### 解决方案
+
 ```java
 public static int modifiedSearch(int[] arr, int target) {
     int st = 0, end = arr.length - 1;
@@ -640,19 +665,24 @@ public static int[] findRange(int[] arr, int target) {
 }
 ```
 
-### 运行复杂度：
-O(logN)
+### 运行复杂度
 
-### 空间复杂度：
-O(1)
+`O(logN)`
 
-## 15. 给定一个数组，每个位置表示可以向前移动的步数，找到到达数组结尾最小步数。
+### 空间复杂度
+
+`O(1)`
+
+## 15. 给定一个数组，每个位置表示可以向前移动的步数，找到到达数组结尾的最小步数
 
 例如：
+
 输入：2, 1, 1, 8, 1, 1
+
 输出：3
 
-### 解决方案：
+### 解决方案
+
 ```java
 public static int minNumOfSteps(int[] arr) {
     if (arr == null) {
@@ -673,26 +703,37 @@ public static int minNumOfSteps(int[] arr) {
 }
 ```
 
-### 运行复杂度：
-O(N²)
+### 运行复杂度
 
-### 空间复杂度：
-O(N)
+`O(N²)`
 
-## 16. 给定一个整数二维数组和一个起始点，找到与起始点值相同的连续区域。
+### 空间复杂度
+
+`O(N)`
+
+## 16. 给定一个整数二维数组和一个起始点，找到与起始点值相同的连续区域
 
 例如：
+
 输入：
+
 起始点：(0,0)
+
 数组：
+
 1 1 2
+
 1 3 2
+
 2 2 1
+
 输出：3
 
-### 解决方案：
+### 解决方案
+
 ```java
 static int mArea = 0;
+
 public static void findAreaHelper(int[][] arr, boolean[][] visited, int x, int y) {
     if (x < 0 || x >= arr[0].length || y < 0 || y >= arr.length) {
         return;
@@ -716,25 +757,35 @@ public static void findArea(int[][] arr, int x, int y) {
     findAreaHelper(arr, visited, x, y); // value 应在此处定义
 }
 ```
+
 （注：`value` 在原始片段中未定义，但根据上下文暗示）。
 
-### 运行复杂度：
-O(N²)
+### 运行复杂度
 
-### 空间复杂度：
-O(N)
+`O(N²)`
 
-## 17. 给定一个元组数组，代表程序所需的 RAM 数量以及开始和结束时间，找到最大 RAM 数量。
+### 空间复杂度
+
+`O(N)`
+
+## 17. 给定一个元组数组，代表程序所需的 RAM 数量以及开始和结束时间，找到最大 RAM 数量
 
 例如：
+
 输入：
+
 开始时间 结束时间 需要 RAM
+
 2 4 1
+
 3 6 2
+
 3 9 3
+
 输出：6
 
-### 解决方案：
+### 解决方案
+
 ```java
 class Triple {
     int startTime, endTime, ramNeeded;
@@ -758,22 +809,28 @@ public static int maxRamNeeded(List<Triple> in) {
 }
 ```
 
-### 信息：
+### 信息
+
 `TreeMap` 始终根据其键排序。插入代价为 `O(logN)`。
 
-### 运行复杂度：
-O(NlogN)
+### 运行复杂度
 
-### 空间复杂度：
-O(N)
+`O(NlogN)`
 
-## 18. 在不内置函数的情况下计算数字的幂。
+### 空间复杂度
+
+`O(N)`
+
+## 18. 在不使用内置函数的情况下计算数字的幂
 
 例如：
+
 输入：2³
+
 输出：8
 
-### 解决方案：
+### 解决方案
+
 ```java
 public static long pow(int a, int b) {
     long[] M = new long[b + 1];
@@ -794,13 +851,16 @@ public static long powHelper(int a, int b, long[] M) {
 }
 ```
 
-## 19. 给定一个整数数组，将数组重新排列为波浪数组（a1 >= a2 <= a3 >= a4 <= a5 >= …）。
+## 19. 给定一个整数数组，将数组重新排列为波浪数组（`a1 >= a2 <= a3 >= a4 <= a5 >= …`）
 
 例如：
+
 输入：1, 3, 2, 4, 5, 6, 7
+
 输出：2, 1, 4, 3, 6, 5, 7
 
-### 解决方案：
+### 解决方案
+
 ```java
 public static void waveSort(int[] arr) {
     if (arr == null) {
@@ -815,22 +875,28 @@ public static void waveSort(int[] arr) {
 }
 ```
 
-### 信息：
+### 信息
+
 如果列表中存在重复项，可能无效。
 
-### 运行复杂度：
-O(NlogN)
+### 运行复杂度
 
-### 空间复杂度：
-O(1)
+`O(NlogN)`
 
-## 20. 反转整数的位。
+### 空间复杂度
+
+`O(1)`
+
+## 20. 反转整数的位
 
 例如：
+
 输入：1011
+
 输出：1101
 
-### 解决方案：
+### 解决方案
+
 ```java
 public static int swapBits(int x, int i, int j) {
     int lo = ((x >> i) & 1);
@@ -842,10 +908,6 @@ public static int swapBits(int x, int i, int j) {
 }
 ```
 
-
-
-
-
 ```java
 public static int revBits(int x, int numOfBits) {
     for (int i = 0; i < numOfBits; i++) {
@@ -855,28 +917,34 @@ public static int revBits(int x, int numOfBits) {
 }
 ```
 
-### INFO
-- 与 `1` 进行 `XOR` (`^`) 将翻转位的值。
-- 与两个位进行 `XOR` (`^`)，如果它们不同则返回 `1`。
+### 信息
 
-### RUNNING TIME COMPLEXITY
+- 与 `1` 进行 `XOR`（`^`）将翻转位的值。
+- 与两个位进行 `XOR`（`^`），如果它们不同则返回 `1`。
+
+### 运行复杂度
+
 - `O(N)`
 
-### SPACE COMPLEXITY
+### 空间复杂度
+
 - `O(1)`
 
----
+## 21. 在无序数组中就地找到第 k 大整数
 
-## 21. 在无序数组中就地找到第 k 大整数。
+例如：
 
-e.g:
-**输入:**
-- `array`: `5, 8, 3, 1`
-- `k`: `2`
+**输入：**
 
-**输出:** `3`
+- `array`：`5, 8, 3, 1`
+- `k`：`2`
 
-### SOLUTION
+**输出：**`3`
+
+### 解决方案
+
+
+
 ```java
 public static void swap(int[] arr, int x, int y) {
     int temp = arr[x];
@@ -913,15 +981,19 @@ public static int quickselect(int[] arr, int first, int last, int k) {
 ```
 
 ### INFO
-如果你更明智地选择 `pivot`，例如选择每 5 个元素一组的中位数，你可以避免 `O(N²)` 的最坏时间复杂度。
+
+如果你更明智地选择`pivot`，例如选择每 5 个元素一组的中位数，你可以避免`O(N²)`的最坏时间复杂度。
 
 ### AVERAGE RUNNING TIME COMPLEXITY
+
 - `O(N)`
 
 ### WORST RUNNING TIME COMPLEXITY
+
 - `O(N²)`
 
 ### SPACE COMPLEXITY
+
 - `O(1)`
 
 ---
@@ -929,18 +1001,24 @@ public static int quickselect(int[] arr, int first, int last, int k) {
 ## 22. 给定一棵树是完全二叉树（即每个叶子节点以外的节点有两个孩子）以及该树的前序和后序遍历，请重建它。
 
 e.g:
+
 **输入:**
+
 - `pre-order`: `5, 3, 7`
+
 - `post-order`: `3, 7, 5`
 
 **输出:**
+
 **树:**
+
 ```
 5
 3 7
 ```
 
 ### SOLUTION
+
 ```java
 static int mPreIndex = 0;
 public static TNode constructTree(int[] pre, int[] post, int lo, int hi) {
@@ -969,18 +1047,24 @@ public static TNode constructTree(int[] pre, int[] post, int lo, int hi) {
 ## 23. 给定一棵树的中序和前序遍历，请重建它。
 
 e.g:
+
 **输入:**
+
 - `in-order`: `3, 5, 7`
+
 - `pre-order`: `3, 7, 5`
 
 **输出:**
+
 **树:**
+
 ```
 5
 3 7
 ```
 
 ### SOLUTION
+
 ```java
 static int mPreIndex = 0;
 public static TNode constructTree(int[] in, int[] pre, int lo, int hi) {
@@ -1009,17 +1093,22 @@ public static TNode constructTree(int[] in, int[] pre, int lo, int hi) {
 ## 24. 给定一棵树是二叉搜索树 (BST)以及该树的前序遍历，请重建它。
 
 e.g:
+
 **输入:**
+
 - `pre-order`: `5, 3, 7`
 
 **输出:**
+
 **树:**
+
 ```
 5
 3 7
 ```
 
 ### SOLUTION
+
 ```java
 public static TNode constructTree(int[] pre, int lo, int hi) {
     if (lo > hi) {
@@ -1046,6 +1135,7 @@ public static TNode constructTree(int[] pre, int lo, int hi) {
 ## 25. 从二叉搜索树 (BST) 中删除一个节点。
 
 ### SOLUTION
+
 ```java
 public static TNode deleteNodeFromBST(TNode root, int key) {
     if (root == null) {
@@ -1076,9 +1166,13 @@ public static TNode deleteNodeFromBST(TNode root, int key) {
     return root;
 }
 ```
+
 ### RUNNING TIME COMPLEXITY
+
 - `O(N)`
+
 ### SPACE COMPLEXITY
+
 - `O(1)`
 
 ---
@@ -1086,10 +1180,13 @@ public static TNode deleteNodeFromBST(TNode root, int key) {
 ## 26. 检查给定字符串是否括号平衡。
 
 e.g:
+
 - **输入:** `(())`, **输出:** `true`
+
 - **输入:** `()`, **输出:** `false`
 
 ### SOLUTION
+
 ```java
 public static boolean isBalanced(char[] str) {
     int count = 0, i;
@@ -1109,9 +1206,13 @@ public static boolean isBalanced(char[] str) {
     return true;
 }
 ```
+
 ### RUNNING TIME COMPLEXITY
+
 - `O(N)`
+
 ### SPACE COMPLEXITY
+
 - `O(1)`
 
 ---
@@ -1119,9 +1220,11 @@ public static boolean isBalanced(char[] str) {
 ## 27. 检查给定字符串是否包含 `[]`、`()` 或 `{}`。
 
 e.g:
+
 - **输入:** `[{()`, **输出:** `true`
 
 ### SOLUTION
+
 ```java
 public static boolean isBalanced(char[] str) {
     HashMap<Character, Character> hm;
@@ -1146,9 +1249,13 @@ public static boolean isBalanced(char[] str) {
     return s.isEmpty();
 }
 ```
+
 ### RUNNING TIME COMPLEXITY
+
 - `O(N)`
+
 ### SPACE COMPLEXITY
+
 - `O(N)`
 
 ---
@@ -1156,17 +1263,23 @@ public static boolean isBalanced(char[] str) {
 ## 28. 在行列均排序的整数二维数组中找到一个数字的位置。
 
 e.g:
+
 **输入:**
+
 - `array`:
+
 ```
 1 4 7
 2 5 8
 3 6 9
 ```
+
 - `num`: `3`
+
 **输出:** `(2, 0)`
 
 ### SOLUTION
+
 ```java
 class Point {
     int x, y;
@@ -1194,9 +1307,13 @@ public static Point findNum(int[][] arr, int num) {
     return new Point(-1, -1);
 }
 ```
+
 ### RUNNING TIME COMPLEXITY
+
 - `O(N)`
+
 ### SPACE COMPLEXITY
+
 - `O(1)`
 
 ---
@@ -1204,18 +1321,25 @@ public static Point findNum(int[][] arr, int num) {
 ## 29. 在每个节点都有指向父节点指针的二叉树中找到两个节点的公共祖先。
 
 e.g:
+
 **输入:**
+
 - `node1`: `1`
+
 - `node2`: `7`
+
 - **树:**
+
 ```
 5
 3 7
 1
 ```
+
 **输出:** `5`
 
 ### SOLUTION
+
 ```java
 public static TNode findLCA(TNode n1, TNode n2, TNode root) {
     HashSet<TNode> set1 = new HashSet<TNode>();
@@ -1234,9 +1358,13 @@ public static TNode findLCA(TNode n1, TNode n2, TNode root) {
     }
 }
 ```
+
 ### RUNNING TIME COMPLEXITY
+
 - `O(N)`
+
 ### SPACE COMPLEXITY
+
 - `O(N)`
 
 ---
@@ -1244,18 +1372,25 @@ public static TNode findLCA(TNode n1, TNode n2, TNode root) {
 ## 30. 在二叉树就地找到两个节点的公共祖先（不使用额外内存）。
 
 e.g:
+
 **输入:**
+
 - `node1`: `1`
+
 - `node2`: `7`
+
 - **树:**
+
 ```
 5
 3 7
 1
 ```
+
 **输出:** `5`
 
 ### SOLUTION
+
 ```java
 public static TNode findLCA(TNode n1, TNode n2, TNode root) {
     if (root == null) {
@@ -1276,9 +1411,13 @@ public static TNode findLCA(TNode n1, TNode n2, TNode root) {
     }
 }
 ```
+
 ### RUNNING TIME COMPLEXITY
+
 - `O(N)`
+
 ### SPACE COMPLEXITY
+
 - `O(1)`
 
 ---
@@ -1286,10 +1425,13 @@ public static TNode findLCA(TNode n1, TNode n2, TNode root) {
 ## 31. 给你一个整数数组，代表某只股票每天的价格。如果你只允许在某一天买入股票并在另一天卖出，找到你能获得的最大收益。
 
 e.g:
+
 - **输入:** `2, 1, 6, 5, 9`
+
 **输出:** `8`
 
 ### SOLUTION
+
 ```java
 public static int maxRevenue(int[] arr) {
     if (arr == null || arr.length == 0) {
@@ -1304,9 +1446,13 @@ public static int maxRevenue(int[] arr) {
     return maxRev;
 }
 ```
+
 ### RUNNING TIME COMPLEXITY
+
 - `O(N)`
+
 ### SPACE COMPLEXITY
+
 - `O(1)`
 
 ---
@@ -1314,19 +1460,22 @@ public static int maxRevenue(int[] arr) {
 ## 32. 从双向链表中删除整数的单次出现。
 
 e.g:
+
 **输入:**
+
 - `list`: `2 -> 5 -> 8 -> 9`
+
 - `val`: `5`
+
 **输出:** `2 -> 8 -> 9`
 
 ### SOLUTION
+
 ```java
 class DLLNode {
     int  data;
 }
 ```
-
-
 
 
 
@@ -1358,22 +1507,24 @@ public static DLLNode removeNode(DDLNode head, int x) {
 ```
 
 运行时间复杂度：
+
 `O(N)`
 
 空间复杂度：
+
 `O(1)`
 
 ---
 
-### 33. 给定双向链表，在原地反转它。
+### 33. 给定双向链表，在原地反转它
 
 例如：
+
 输入：`2 -> 5 -> 8 -> 9`
+
 输出：`9 -> 8 -> 5 -> 2`
 
-_______________
-
-### 解决方案：
+### 解决方案
 
 ```java
 class DLLNode {
@@ -1398,24 +1549,28 @@ public static DLLNode revList(DLLNode head) {
 ```
 
 运行时间复杂度：
+
 `O(N)`
 
 空间复杂度：
+
 `O(1)`
 
 ---
 
-### 34. 给定一个排序后的整数数组和一个目标整数，判断是否可以通过两个整数之和生成该目标整数。
+### 34. 给定一个排序后的整数数组和一个目标整数，判断是否可以通过两个整数之和生成该目标整数
 
 例如：
+
 输入：
+
 数组：`1, 2, 5, 7, 8, 9`
+
 目标：`7`
+
 输出：`true`
 
-_______________
-
-### 解决方案：
+### 解决方案
 
 ```java
 public static boolean is2SumTarget(int[] arr, int target) {
@@ -1439,24 +1594,28 @@ public static boolean is2SumTarget(int[] arr, int target) {
 ```
 
 运行时间复杂度：
+
 `O(N)`
 
 空间复杂度：
+
 `O(1)`
 
 ---
 
-### 35. 给定一个排序后的整数数组和一个目标整数，判断是否可以通过三个整数之和生成该目标整数。
+### 35. 给定一个排序后的整数数组和一个目标整数，判断是否可以通过三个整数之和生成该目标整数
 
 例如：
+
 输入：
+
 数组：`1, 2, 5, 7, 8, 9`
+
 目标：`17`
+
 输出：`true`
 
-_______________
-
-### 解决方案：
+### 解决方案
 
 ```java
 public static boolean is3SumTarget(int[] arr, int target) {
@@ -1482,25 +1641,32 @@ public static boolean is3SumTarget(int[] arr, int target) {
 ```
 
 运行时间复杂度：
+
 `O(N²)`
 
 空间复杂度：
+
 `O(1)`
 
 ---
 
-### 36. 给定一二叉树，判断它是否为二叉搜索树（BST）。
+### 36. 给定一棵二叉树，判断它是否为二叉搜索树（BST）
 
 例如：
+
 输入：
+
 树：
+
+```text
 5
+
 9 7
+```
+
 输出：`false`
 
-_______________
-
-### 解决方案：
+### 解决方案
 
 ```java
 public static boolean isBST(TNode root, int min, int max) {
@@ -1518,22 +1684,24 @@ public static boolean isBST(TNode root, int min, int max) {
 `isBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);`
 
 运行时间复杂度：
+
 `O(N)`
 
 空间复杂度：
+
 `O(1)`
 
 ---
 
-### 37. 给定一个整数数组，其中所有整数都出现两次，只有一个出现一次，找到那个只出现一次的整数。
+### 37. 给定一个整数数组，其中所有整数都出现两次，只有一个出现一次，找到那个只出现一次的整数
 
 例如：
+
 输入：`2, 4, 2, 3, 5, 3, 4`
+
 输出：`5`
 
-_______________
-
-### 解决方案：
+### 解决方案
 
 ```java
 public static int findSingle(int[] arr) {
@@ -1556,22 +1724,24 @@ public static int findSingle(int[] arr) {
 ```
 
 运行时间复杂度：
+
 `O(N)`
 
 空间复杂度：
+
 `O(N)`
 
 ---
 
-### 38. 给定一个整数数组，除一个整数外所有整数都重复多次，找到重复次数最多的整数。
+### 38. 给定一个整数数组，除一个整数外所有整数都重复多次，找到重复次数最多的整数
 
 例如：
+
 输入：`1, 1, 4, 4, 4, 5, 6`
+
 输出：`4`
 
-_______________
-
-### 解决方案：
+### 解决方案
 
 ```java
 public static int findMost(int[] arr) {
@@ -1599,26 +1769,34 @@ public static int findMost(int[] arr) {
 ```
 
 运行时间复杂度：
+
 `O(N)`
 
 空间复杂度：
+
 `O(1)`
 
 ---
 
-### 39. 打印二叉树的垂直层序。
+### 39. 打印二叉树的垂直层序
 
 例如：
+
 输入：
+
 树：
+
+```text
 5
+
 9 7
+```
+
 输出：
-9 5 7
 
-_______________
+`9 5 7`
 
-### 解决方案：
+### 解决方案
 
 ```java
 public static void makeVerticalOrder(TNode root, int hd, HashMap<Integer, List<Integer>> hm, int[] minMax) {
@@ -1648,19 +1826,25 @@ System.out.println();
 
 ---
 
-### 40. 打印二叉树的层序遍历。
+### 40. 打印二叉树的层序遍历
 
 例如：
+
 输入：
+
 树：
+
+```text
 5
+
 9 7
+```
+
 输出：
-5 9 7
 
-_______________
+`5 9 7`
 
-### 解决方案：
+### 解决方案
 
 ```java
 public static void printLevelOrder(TNode root) {
@@ -1687,15 +1871,16 @@ public static void printLevelOrder(TNode root) {
 
 ---
 
-### 41. 给定双向链表，用递归和迭代的方法在原地反转它。
+### 41. 给定双向链表，用递归和迭代的方法在原地反转它
 
 例如：
+
 输入：`3 -> 9 -> 6 -> 2`
+
 输出：`2 -> 6 -> 9 -> 3`
 
-_______________
+### 递归
 
-### 递归：
 ```java
 public static DLLNode revList(DLLNode head, DLLNode prev) {
     if (head == null) {
@@ -1710,9 +1895,11 @@ public static DLLNode revList(DLLNode head, DLLNode prev) {
     }
 }
 ```
+
 `revList(head, null);`
 
-### 迭代：
+### 迭代
+
 ```java
 public static DLLNode revList(DLLNode head) {
     if (head == null) {
@@ -1728,33 +1915,45 @@ public static DLLNode revList(DLLNode head) {
     return prev;
 }
 ```
+
 `revList(head);`
 
 运行时间复杂度：
+
 `O(N)`
 
 空间复杂度：
+
 `O(1)`
 
 ---
 
-## 42. 实现一个模式匹配函数，其中：
+### 42. 实现一个模式匹配函数
+
+其中：
+
 1. `.` 匹配任意单个字符。
-2. `*` 匹配所在字符的零 个或多个实例。
+2. `*` 匹配所在字符的零个或多个实例。
 
 例如：
+
 输入：
+
 字符串：`aabc`
+
 模式：`a*b.`
+
 输出：`true`
+
 输入：
+
 字符串：`bc`
+
 模式：`a*b.`
+
 输出：`true`
 
-_______________
-
-### 解决方案：
+### 解决方案
 
 ```java
 public static boolean isMatch(char[] str, char[] pat, int s, int p) {
@@ -1774,17 +1973,19 @@ public static boolean isMatch(char[] str, char[] pat, int s, int p) {
 }
 ```
 
-`boolean result = isMatch(str, pat, 0 ,0);`
+`boolean result = isMatch(str, pat, 0, 0);`
 
----### 43. 给定一个只包含 0、1 或 2 的数组，不使用任何排序函数进行排序。
+---
+
+### 43. 给定一个只包含 0、1 或 2 的数组，不使用任何排序函数进行排序
 
 例如：
+
 输入：`0, 1, 1, 0, 2, 1`
+
 输出：`0, 0, 1, 1, 1, 2`
 
-_______________
-
-### 解决方案：
+### 解决方案
 
 ```java
 public static void swap(int[] arr, int x, int y) {
@@ -1799,10 +2000,6 @@ public static void sort012(int[] arr) {
     }
 }
 ```
-
-
-
-
 
 ```java
 int st = 0, mid = 0, end = arr.length - 1;
@@ -1824,21 +2021,33 @@ while (mid <= end) {
     }
 }
 ```
+
 **运行时间复杂度：**
-O(N)
+
+`O(N)`
 
 **空间复杂度：**
-O(1)
 
-## 44. 计算两个字符数组形式给出的二进制数的和。以字符串形式返回。
+`O(1)`
+
+---
+
+## 44. 计算两个字符数组形式给出的二进制数的和，以字符串形式返回
 
 **示例：**
+
 输入：
-num 1: 001
-num2: 101
-输出: 110
+
+num 1: `001`
+
+num2: `101`
+
+输出：`110`
 
 ### 解决方案
+
+
+
 ```java
 public static String addBinary(char[] num1, char[] num2) {
     int p1 = num1.length - 1;
@@ -1858,22 +2067,31 @@ public static String addBinary(char[] num1, char[] num2) {
     return res;
 }
 ```
+
 **运行时间复杂度：**
-O(N)
-N: max(num1.length, num2.length)
+
+`O(N)`
+
+`N`: `max(num1.length, num2.length)`
 
 **空间复杂度：**
-O(1)
+
+`O(1)`
 
 ## 45. 在不使用任何内置函数的情况下反转整数。
 
 **示例：**
-输入: 123
-输出: 321
-输入: -123
-输出: -321
+
+输入: `123`
+
+输出: `321`
+
+输入: `-123`
+
+输出: `-321`
 
 ### 解决方案
+
 ```java
 public static int revInt(int x) {
     boolean negative = false;
@@ -1893,22 +2111,31 @@ public static int revInt(int x) {
     return res;
 }
 ```
+
 **运行时间复杂度：**
-O(N)
-N: x 的数字位数
+
+`O(N)`
+
+`N`: `x` 的数字位数
 
 **空间复杂度：**
-O(1)
+
+`O(1)`
 
 ## 46. 合并两个有序的链表。
 
 **示例：**
+
 输入：
-list 1: 2 -> 4 -> 5
-list 2: 3 -> 7
-输出: 2 -> 3 -> 4 -> 5 -> 7
+
+`list 1`: `2 -> 4 -> 5`
+
+`list 2`: `3 -> 7`
+
+输出: `2 -> 3 -> 4 -> 5 -> 7`
 
 ### 解决方案
+
 ```java
 public static LLNode mergeLists(LLNode n1, LLNode n2) {
     if (n1 == null) {
@@ -1928,21 +2155,29 @@ public static LLNode mergeLists(LLNode n1, LLNode n2) {
     return res;
 }
 ```
+
 **运行时间复杂度：**
-O(N)
+
+`O(N)`
 
 **空间复杂度：**
-O(1)
+
+`O(1)`
 
 ## 47. 给定一个单词列表，在每行打印使用相同字母可以创建的单词。
 
 **示例：**
-输入: abc, hello, cba
+
+输入: `abc`, `hello`, `cba`
+
 输出：
-abc cba
-hello
+
+`abc cba`
+
+`hello`
 
 ### 解决方案
+
 ```java
 public static void bucketAnagram(List<String> input) {
     HashMap<String, List<String>> hm;
@@ -1968,21 +2203,29 @@ public static void bucketAnagram(List<String> input) {
     }
 }
 ```
+
 **运行时间复杂度：**
-O(N*MlogM)
-N: 输入单词的个数
-M: 最大输入单词中的字符数
+
+`O(N*MlogM)`
+
+`N`: 输入单词的个数
+
+`M`: 最大输入单词中的字符数
 
 **空间复杂度：**
-O(NM)
 
-## 48. 给出一个长度为 K 的整数数组，其中数组的最后一个元素为空，且其他所有值（从 1 到 k）都在数组中，找到缺失的数字。
+`O(NM)`
+
+## 48. 给出一个长度为 `K` 的整数数组，其中数组的最后一个元素为空，且其他所有值（从 `1` 到 `k`）都在数组中，找到缺失的数字。
 
 **示例：**
-输入: 4, 5, 1, 3, _
-输出: 2
+
+输入: `4, 5, 1, 3, _`
+
+输出: `2`
 
 ### 解决方案
+
 ```java
 public static int missingNumber(int[] arr) {
     if (arr == null) {
@@ -1997,24 +2240,33 @@ public static int missingNumber(int[] arr) {
     return sumFrom1toK - sumOfArray;
 }
 ```
+
 **说明：** 也可以使用等差数列求和公式 `sum1toK = k*(k+1))/2`。`K` 是数组的长度。
 
 **运行时间复杂度：**
-O(N)
+
+`O(N)`
 
 **空间复杂度：**
-O(1)
+
+`O(1)`
 
 ## 49. 给定一个二叉树，找到路径的最大和。路径可以从任意节点开始并到任意节点结束。
 
 **示例：**
+
 输入：
-tree: 5
-3 1
-10
-输出: 9
+
+`tree`: `5`
+
+`3 1`
+
+`10`
+
+输出: `9`
 
 ### 解决方案
+
 ```java
 static int mPathSum = Integer.MIN_VALUE;
 public static int maxPathIntree(Node root) {
@@ -2029,17 +2281,21 @@ public static int maxPathIntree(Node root) {
     return root.data + Math.max(0, Math.max(leftSum, rightSum));
 }
 ```
+
 **说明：** 函数使用全局变量 `mPathSum` 来返回结果。
 
 **运行时间复杂度：**
-O(N)
+
+`O(N)`
 
 **空间复杂度：**
-O(1)
+
+`O(1)`
 
 ## 50. 给无图图，每个节点包含一个标签和一个邻居列表，复制整个数据结构。
 
 ### 解决方案
+
 ```java
 class Node {
     String label;
@@ -2075,73 +2331,123 @@ public static Node copyGraph(Node node) {
     return newNode;
 }
 ```
+
 **运行时间复杂度：**
-O(N)
+
+`O(N)`
 
 **空间复杂度：**
-O(N)
+
+`O(N)`
 
 ## 51. 以下是面试中可能会问的一些理论问题。注意，大公司通常不问这类问题，但很多其他公司会。
 
-- 什么是 HashMap？它是如何工作的？
+- 什么是 `HashMap`？它是如何工作的？
+
 - Java 中 `HashMap` 和 `TreeMap` 有什么区别？
+
 - 如果我想在 Java 中使用自定义对象作为 `HashMap` 的键，需要重写哪些函数？
+
 - 什么是虚拟内存？它是如何工作的？
+
 - 进程和线程之间有什么区别？
+
 - C/C++ 中的虚构造函数和析构函数是什么？
+
 - 值传递和引用传递是什么？
-- 什么是 `AVL` 树和红树（RBTree）？自平衡树和普通树的插入/删除/查找时间是多少？
+
+- 什么是 `AVL` 树和红树（`RBTree`）？自平衡树和普通树的插入/删除/查找时间是多少？
+
 - 定义资源管理中的死锁和饥饿。
+
 - 非阻塞线程安全意味着什么？
+
 - 如何防止死锁？
+
 - 如何实现 `mutex`锁？
-- 互斥锁（Mutex）和信号量（Semaphore）有什么区别？
+
+- 互斥锁（`Mutex`）和信号量（`Semaphore`）有什么区别？
+
 - 垃圾回收器如何检测哪些对象不再被使用？
+
 - 抢占式和协作式多任务有什么区别？
-- 进程间通信（IPC）的哪些形式？
-- IPC 中的管道（Pipes）、消息队列（Message Queues）、共享内存（Shared Memory）、映射文件（Mapped Files）有什么区别？
+
+- 进程间通信（`IPC`）的哪些形式？
+
+- `IPC` 中的管道（`Pipes`）、消息队列（`Message Queues`）、共享内存（`Shared Memory`）、映射文件（`Mapped Files`）有什么区别？
+
 - C++ 中 `struct` 和 `class` 有什么区别？
-- Java 中抽象类（Abstract class）和接口（Interface）有什么区别？
+
+- Java 中抽象类（`Abstract class`）和接口（`Interface`）有什么区别？
+
 - 在什么情况下使用抽象类，什么情况下使用接口？
+
 - C++ 和 Java 的主要区别是什么？
-- 什么是小端序（Little Endian 和大和大序（Big Endian）？
+
+- 什么是小端序（`Little Endian`）和大端序（`Big Endian`）？
+
 - 逻辑移位和算术移位有什么区别？
-- 什么是栈溢出（stack overflow）？
+
+- 什么是栈溢出（`stack overflow`）？
+
 - 什么是多态？
-- Java 中的泛型（Generics）是什么？
+
+- Java 中的泛型（`Generics`）是什么？
+
 - 什么是内存碎片？
+
 - 如果 `int` 值在 C++ 中溢出会发生什么？在 Java 中会发生什么？
-- 什么是单元测试（Unit Testing）？
+
+- 什么是单元测试（`Unit Testing`）？
+
 - 你如何让你的解决方案并行运行？
+
 - 你知道哪些软件设计模式？
-- 系统开发生命周期（SDLC）是什么？
-- 什么是软件原型（prototyping）？
-- 缓存的某些淘汰策略（eviction policies）有哪些？
+
+- 系统开发生命周期（`SDLC`）是什么？
+
+- 什么是软件原型（`prototyping`）？
+
+- 缓存的某些淘汰策略（`eviction policies`）有哪些？
+
 - 什么是分布式文件系统？
-
-
-
-
 
 # 52. 以下是在编程面试中可能被到的开放式问题。这些问题可能是系统设计题，也可能是面向对象的设计题。这些问题没有标准答案，面试官只是想看到你对大规模问题的解决方案进行高层设计的方法。
 
 - 设计并解释停车场管理软件所需的必要类和架构。
-- 设计并解释一个可以绘制不同形状的软件所需的必要类和架构。
-- 设计并解释扑牌游戏所需的必要类和架构。
-- 设计并解释即时通讯应用所需的必要类和架构。
-- 设计并解释蛇吃大游戏所需的必要类和架构。
-- 设计一个提供校园内导航路线的应用程序。
-- 设计一个具有 LRU 淘汰策略和 `O(1)` 访问时间的缓存。
-- 设计一个可以缓存结果的 HTTP 下载器。
-- 设计一个类似 PasteBin 的服务。
-- 设计一个 URL 缩短器服务。
-- 设计一个用于动态提供地图图像的服务器架构。
-- 设计一个为每个请求返回唯一 ID 的系统。该 ID 应随着时间的推移而增加。
-- 如何确保程序没有内存泄漏？
-- 设计一个存储键值对的分布式系统。
-- 设计一个公司员工使用访问卡来记录工作时间的系统。
-- 在数百万用户同时发送请求的系统（例如搜索引擎）中，设计一种方法给第十亿个请求请求者发放奖励。
-- 你如何为应用程序设计一个全自动的构建/测试/部署系统？
-- 如何设计一个文本编辑器？
-- 你如何在存储介质中表示 URL 以避免重复？
 
+- 设计并解释一个可以绘制不同形状的软件所需的必要类和架构。
+
+- 设计并解释扑牌游戏所需的必要类和架构。
+
+- 设计并解释即时通讯应用所需的必要类和架构。
+
+- 设计并解释蛇吃大游戏所需的必要类和架构。
+
+- 设计一个提供校园内导航路线的应用程序。
+
+- 设计一个具有 `LRU` 淘汰策略和 `O(1)` 访问时间的缓存。
+
+- 设计一个可以缓存结果的 `HTTP` 下载器。
+
+- 设计一个类似 `PasteBin` 的服务。
+
+- 设计一个 `URL` 缩短器服务。
+
+- 设计一个用于动态提供地图图像的服务器架构。
+
+- 设计一个为每个请求返回唯一 ID 的系统。该 ID 应随着时间的推移而增加。
+
+- 如何确保程序没有内存泄漏？
+
+- 设计一个存储键值对的分布式系统。
+
+- 设计一个公司员工使用访问卡来记录工作时间的系统。
+
+- 在数百万用户同时发送请求的系统（例如搜索引擎）中，设计一种方法给第十亿个请求请求者发放奖励。
+
+- 你如何为应用程序设计一个全自动的构建/测试/部署系统？
+
+- 如何设计一个文本编辑器？
+
+- 你如何在存储介质中表示 `URL` 以避免重复？

@@ -1,48 +1,38 @@
+
 # Java 动态代理
-
-
 
 ![](img/cover.jpg)
 
-
-
-
-
-
-
-
-
-
-# 献辞
+## 献辞
 
 本书献给所有那些不得不维护我们代码的可怜灵魂。我们真的深表歉意。
 
-# 致谢
+## 致谢
 
-我原以为这本书的初稿已经不错了。当我把它拿出来评审时，我并没有仅仅邀请了少数技术专家，而是邀请了我的 [Java 专人士通讯报](https://www.javaspecialists.eu) 的读者们来看一看。有 500 多位热心的人提供帮助。他们剖析了这本书，并给了我 1000 多条非常有价值的意见。我采纳了几乎所有的建议，这本书现在比原来好得多。这不是我的书，这是我们的书，是由我们优秀且慷慨的 Java 专家社区共同努力的。
+我原以为这本书的初稿已经不错了。当我把它拿出来评审时，我并没有仅仅邀请少数技术专家，而是邀请了我的 [Java 专人士通讯报](https://www.javaspecialists.eu) 的读者们来看一看。有 500 多位热心的人提供帮助。他们剖析了这本书，并给了我 1000 多条非常有价值的意见。我采纳了几乎所有的建议，这本书现在比原来好得多。这不是我的书，这是我们的书，是由我们优秀且慷慨的 Java 专家社区共同努力的。
 
 到为止最有价值的意见来自我的朋友 Gail Anderson、John Stephen Green 和 Joseph Ottinger。Gail 和 Joseph 充满活力地投入书中，修改了几乎所有的句子使它们变得更好。剩下的任何糟糕文本都是他们完成评审后添加的。John 费力地运行了所有的代码示例，是少数弄清楚 `VTable` 如何工作的读者之一。
 
 我们的前 10 位超级评审员每人至少贡献了 25 条意见：
 
-* Gail Anderson
-* Alasdair Collinson
-* Joseph Ottinger
-* Vlad Lazurenko
-* John Stephen Green
-* Charles A. Sharp
-* Cor Takken
-* Chris Menard
-* Heinz Huber
-* Ronak Patel
+- Gail Anderson
+- Alasdair Collinson
+- Joseph Ottinger
+- Vlad Lazurenko
+- John Stephen Green
+- Charles A. Sharp
+- Cor Takken
+- Chris Menard
+- Heinz Huber
+- Ronak Patel
 
-特别感谢 [Grails Framework](https://grails.org/) 和 [Micronaut](https://micronaut.io/) 的创建者 Graeme Rocher，他阅读了书的初稿并提供了宝反馈。
+特别感谢 [Grails Framework](https://grails.org/) 和 [Micronaut](https://micronaut.io/) 的创建者 Graeme Rocher，他阅读了书的初稿并提供了宝贵的反馈。
 
 另一个特别感谢 Brian Goetz，我的老朋友兼畅销作家，他出色的建议推迟了这本书的发布，因为我不得不加入它们。
 
 Kirk Pepperdine 十年来一直是我在 Java 性能方面的导师，并在一起查看某些基准测试结果方面非常有帮助。
 
-我使用 Java 平台模块系统 (JPMS) 将书中的示例模块化。Simone Bordet 和 Robert Scholte 修复了项目结构以能够兼容 Maven。
+我使用 Java 平台模块系统（JPMS）将书中的示例模块化。Simone Bordet 和 Robert Scholte 修复了项目结构以能够兼容 Maven。
 
 此外，我想感谢以下评审员的贡献：
 
@@ -54,23 +44,19 @@ Sven Ruppert 和我在 2015 年出版了一本关于相同主题的书，尽管�
 
 非常感谢 InfoQ 的编辑 Lawrence Nyveen 的帮助。
 
-# 前言
+## 前言
 
 现在是 2000 年。我们的行业度过了千年虫危机。“智能手机”也能告诉时间。Java 是一门没有泛型、Lambda 表达式或类型推断的语言。部署我们的 EAR 文件需要长时间。EAR 文件？是的，Spring 框架还有很长的路要走。程序员使用 RMI 和 CORBA。
 
-工具生成大量的底层代码。例如，远程方法调用 (RMI) 使用 [`rmic`](https://docs.oracle.com/en/java/javase/13/docs/specs/man/rmic.html) 工具生成存根和骨架类以支持代理。（事实上，`rmic` 在现代发行版中仍然存在于 JDK/bin 目录中。）2000 年 5 月，Sun 发布了 Java 1.3 —— 以及动态代理。不需要单独的构建步骤，通过指定要实现的接口即可动态创建新类。这些动态类的所有方法调用都路由到单个 `InvocationHandler`。底层代码使用动态代理在内存中创建存根和骨架类。
+工具生成大量的底层代码。例如，远程方法调用（RMI）使用 [`rmic`](https://docs.oracle.com/en/java/javase/13/docs/specs/man/rmic.html) 工具生成存根和骨架类以支持代理。（事实上，`rmic` 在现代发行版中仍然存在于 `JDK/bin` 目录中。）2000 年 5 月，Sun 发布了 Java 1.3——以及动态代理。不需要单独的构建步骤，通过指定要实现的接口即可动态创建新类。这些动态类的所有方法调用都路由到单个 `InvocationHandler`。底层代码使用动态代理在内存中创建存根和骨架类。
 
-## 大收益
+### 大收益
 
 动态代理使代码更容易维护。与其手工编写大量类，我们编写一个动态代理。这是“不要重复”原则的加强版。
 
 例如，一家公司用一个动态代理替换了 60 万条生成的代码语句。他们编写了一个神奇工具将他们的专有语言转换为 Java。他们的业务系统有数百个实体。他们的工具将每个实体转换为几个 Java 类。然而，在初始生成之后，程序员必须手动维护这些代码。维护工作既枯燥又容易出错。一个动态代理取代了这一切。
 
-
-
-
-
-像 `Gradle`这样的构建工具对模型、任务、操作和监听器使用了代理。示例包括 `BuildOperationListener`、`StandardOutputListener` 和 `ProgressListener`。Maven 通过 `MavenPluginManager` 和 `CircularDependencyProxy` 使用它们进行插件管理。
+像 `Gradle` 这样的构建工具对模型、任务、操作和监听器使用了代理。示例包括 `BuildOperationListener`、`StandardOutputListener` 和 `ProgressListener`。Maven 通过 `MavenPluginManager` 和 `CircularDependencyProxy` 使用它们进行插件管理。
 
 `JBoss` 和 `Spring Framework` 等应用容器使用代理进行依赖注入。示例包括 `@Inject`、`@Qualifier`、`@Autowired` 和 `@Bean`。作用域生命周期管理也使用了动态代理。
 
@@ -80,30 +66,30 @@ Sven Ruppert 和我在 2015 年出版了一本关于相同主题的书，尽管�
 
 同样在 Spring 中，`InitBinder` 的动态代理将 HTTP 表单字段绑定到数据模型。我们每天使用的许多框架：`Spring Framework`、`WildFly`、`NetBeans Platform`、`Apache Tomcat` 和 `OpenJDK` 等，底层都使用了动态代理。
 
-## 等一下……
+### 等一下……
 
 动态代理并非最好的工具。虽然非常方便，但与直接方法调用相比，动态代理上的方法调用性能开销会有略微增加。在本书中，我们将学习如何减少使用动态代理对性能的影响。
 
-## 我们将学习什么？
+### 我们将学习什么？
 
 在某些情况下，动态代理是特定问题的完美选择。通过深入研究它们并在各种场景中观察它们，我们将学会识别哪些地方使用它们是合理的。我们将学会识别它们的优缺点。
 
 这使得使用动态代理的系统调试变得更加容易。
 
-## 简单来说？
+### 简单来说？
 
 即使是像这样的微型书籍也需要几天时间来阅读和完全理解。为了让这些材料更易于获取，我创建了一个[自学课程](https://javaspecialists.teachable.com/p/dynamic-proxies-in-java)，对每个构建模块进行了详细解释。课程每个章节都有练习题，并附有模型答案。
 
-## Java 版本
+### Java 版本
 
 我们使用 Java 11 LTS 编译了本书的代码。在使代码更清晰的地方，我们对局部变量使用了 Java 10 的 `var` 关键字。
 
-虽然我们在书中使用了浅反射，但尽量避免使用深反射。Mark Reinhold 在 OpenJDK [JPMS (JSR 376) 专家组邮件列表](http://mail.openjdk.java.net/pipermail/jpms-spec-experts/2016-October/000431.html)上定义了这些术语。
+虽然我们在书中使用了浅反射，但尽量避免使用深反射。Mark Reinhold 在 OpenJDK [JPMS（JSR 376）专家组邮件列表](http://mail.openjdk.java.net/pipermail/jpms-spec-experts/2016-October/000431.html)上定义了这些术语。
 
-*   **浅反射访问**是通过核心反射 API (`java.lang.reflect`) 在运行时进行的访问，而不使用 `setAccessible`。只能访问已导出包中的公共元素。
-*   **深反射访问**是在运行时通过核心反射 API 进行访问，并使用 `setAccessible` 方法来进入非公共元素。任何包中的任何元素，无论是否公共，无论是否已导出，都可以访问。深反射访问包含了浅反射访问。
+- **浅反射访问**是通过核心反射 API（`java.lang.reflect`）在运行时进行的访问，而不使用 `setAccessible`。只能访问已导出包中的公共元素。
+- **深反射访问**是在运行时通过核心反射 API 进行访问，并使用 `setAccessible` 方法来进入非公共元素。任何包中的任何元素，无论是否公共，无论是否已导出，都可以访问。深反射访问包含了浅反射访问。
 
-## 玩得愉快！
+### 玩得愉快！
 
 我希望你会喜欢这本书，并发现它既实用又能激发智力。也许有时还会有趣。
 
@@ -119,7 +105,7 @@ Heinz M. Kabutz 博士
 
 模式最重要的标识符之一是它的名称。在《Timeless Way of Building》中，亚历山德写道：“寻找名称是发明或发现模式过程的基本组成部分。只要模式有一个很弱的名称，就意味着它不是一个清晰的概念，你不能让我去制造‘一个’。”
 
-设计模式同样为常见的编码技术命名，使得意图的传达更加容易。了解模式有助于我们更快地理解现有设计。遗憾的是，GoF 的模式名称没有亚历山德的那么丰富。“像 wrapper（包装器）这样的名称可能意味着任何意思。因此，我们也依赖*意图*来清晰地识别每个模式。
+设计模式同样为常见的编码技术命名，使得意图的传达更加容易。了解模式有助于我们更快地理解现有设计。遗憾的是，GoF 的模式名称没有亚历山德的那么丰富。“像 wrapper（包装器）这样的名称可能意味着任何意思。因此，我们也依赖意图来清晰地识别每个模式。
 
 在书中，我们将主要关注四个模式：`proxy`、`adapter`、`decorator` 和 `composite`。它们都是结构性模式，这意味着它们不描述行为或对象的创建，而是类和对象如何相互作用。
 
@@ -141,17 +127,13 @@ Heinz M. Kabutz 博士
 
 代理有几种用例：
 
-*   **虚拟代理**按需创建昂贵对象。示例是 Spring Framework 中的 `LazyConnectionDataSourceProxy`，它在创建第一个 `Statement` 时延迟创建真实的 JDBC `DataSource`。
-*   **远程代理**为位于不同地址空间（例如远程机器上）的对象提供本地表示。注意，远程代理没有远程对象的真实指针，而是通过 RPC、RMI、Thrift、ProtoBuf、gRPC、REST、HTTP、TCP/UDP 或不同的远程调用机制调用方法。
-*   **保护代理**控制对原始对象的访问。这可能是为了访问控制或线程安全。示例是 `Collections.synchronizedCollection()`，它返回一个受竞态条件保护的新 `Collection`。
+- **虚拟代理**按需创建昂贵对象。示例是 Spring Framework 中的 `LazyConnectionDataSourceProxy`，它在创建第一个 `Statement` 时延迟创建真实的 JDBC `DataSource`。
+- **远程代理**为位于不同地址空间（例如远程机器上）的对象提供本地表示。注意，远程代理没有远程对象的真实指针，而是通过 RPC、RMI、Thrift、ProtoBuf、gRPC、REST、HTTP、TCP/UDP 或不同的远程调用机制调用方法。
+- **保护代理**控制对原始对象的访问。这可能是为了访问控制或线程安全。示例是 `Collections.synchronizedCollection()`，它返回一个受竞态条件保护的新 `Collection`。
 
 ## 适配器模式
 
-
-
-
-
-意图：“将一个类的接口转换为客户端期望的另一个接口。适配器允许那些因接口不兼容而无法工作的类共同工作。” (GoF 1994, p. 139)
+意图：“将一个类的接口转换为客户端期望的另一个接口。适配器允许那些因接口不兼容而无法工作的类共同工作。”（GoF 1994, p. 139）
 
 适配器模式的目标是让对象协同工作，即使它们的接口不兼容。它是模式中的“外交官”。适配器模式既可以实现为使用组合的对象适配器，也可以实现为使用继承的类适配器。
 
@@ -175,6 +157,8 @@ Java 中对象适配器的示例是 `InputStreamReader`，它将 `InputStream` �
 
 在代理模式中，`RealSubject` 实现了 `Subject` 接口。如果我们去掉这种继承关系，它还是代理吗，还是会变成适配器？同样，如果一个适配器中的 `Adaptee` 恰好实现了 `Target`，那么该模式会变成代理吗？
 
+
+
 这取决于意图。例如，在 EJB 的话 bean 中，实现 bean 并不直接继承远程接口，因为这些方法会抛出不兼容的异常。远程接口会抛出 `RemoteException`，而实现 bean 会抛出业务异常。
 
 对象适配器的结构与代理相似。在两种情况下，客户端都使用顶层接口 `Target` 或 `Subject`。我们在 `Adapter` 或 `Proxy` 中拥有该的实现。
@@ -193,7 +177,7 @@ Java 中对象适配器的示例是 `InputStreamReader`，它将 `InputStream` �
 
 在列表 1.1 中，我们创建一个指向文件 `data.bin.gz` 的 `FileOutputStream`。我们用 `GZIPOutputStream`、`BufferedOutputStream` 和 `DataOutputStream` 对其进行装饰。链中的每个环节都增加了一个功能。然后我们写入了 0 到 1,000 之间的 1000 万个随机整数。
 
-```
+```java
 //:~ core/src/main/.../ch01/InputStreamDemo.java
 try (var out = new DataOutputStream(
     new BufferedOutputStream(
@@ -218,7 +202,7 @@ try (var out = new DataOutputStream(
 
 在列表 1.2 中，我们从 `DataInputStream` 读取，它反过来又从 `BufferedInputStream`、`GZIPInputStream` 和 `FileInputStream` 读取。
 
-```
+```java
 //:~ core/src/main/.../ch01/InputStreamDemo.java
 try (
     // 分别声明 "fis" 以确保它被关闭，
@@ -270,10 +254,6 @@ try (
 
 我们使用责任链模式使方法处理代码更易于理解。当代码具有列表 1.3 所示的形式时，这种模式非常有用。
 
-
-
-
-
 ```java
 //:~ core/src/main/.../ch01/ChainDemo.java
 public void handleWithoutChain(
@@ -292,7 +272,7 @@ public void handleWithoutChain(
 
 Listing 1.3: 嵌套的 if-else-if 结构。
 
-我们没有使用多条件 if-else 语句，而是创建了一个抽象的 `Handler` 类。`handle()` 的默认实现是将调用沿着链向下传递给下一个处理程序。
+我们没有使用多条件 `if-else` 语句，而是创建了一个抽象的 `Handler` 类。`handle()` 的默认实现是将调用沿着链向下传递给下一个处理程序。
 
 ```java
 //:~ core/src/main/.../ch01/Handler.java
@@ -328,7 +308,7 @@ public class MapHandler extends Handler {
 }
 ```
 
-Listing 1.5: Map 的具体处理程序。
+Listing 1.5: `Map` 的具体处理程序。
 
 在我们的类内部，我们将按照 Listing 1.6 所示的方式设置链。
 
@@ -342,7 +322,7 @@ private final Handler chain =
 
 Listing 1.6: 作为字段的处理程序链。
 
-与 Listing 1.3 中复杂的 if-else-if 结构相比，我们可以这样写：
+与 Listing 1.3 中复杂的 `if-else-if` 结构相比，我们可以这样写：
 
 ```java
 //:~ core/src/main/.../ch01/ChainDemo.java
@@ -354,11 +334,11 @@ private void handleWithChain(
 
 Listing 1.7: 使用责任链处理程序。
 
-该模式使得复杂的 if-else-if 方法变得易于理解。该模式的一个已知缺点是，如果没有找到合适的处理程序，请求可能会在链的末端丢失。在第 4 章中，我们将学习这种模式如何帮助我们处理方法调用。我们还将看到如何防止请求从链的末端掉。
+该模式使得复杂的 `if-else-if` 方法变得易于理解。该模式的一个已知缺点是，如果没有找到合适的处理程序，请求可能会在链的末端丢失。在第 4 章中，我们将学习这种模式如何帮助我们处理方法调用。我们还将看到如何防止请求从链的末端掉。
 
 # 手工代理
 
-由于我们的书名中包含“代理（proxies）”，我们应该更详细地检查代理设计模式。代理有多种形式和类型。例如，我们提到过用于延迟初始化的**虚拟代理**、用于访问远程地址空间对象的**远程代理**以及用于添加安全层的**保护代理**。
+由于我们的书名中包含“代理（proxies）”，我们应该更详细地检查代理设计模式。代理有多种形式和类型。例如，我们提到过用于延迟初始化的虚拟代理、用于访问远程地址空间对象的远程代理以及用于添加安全层的保护代理。
 
 提醒一下，GoF 书中的代理设计模式结构如图 7 所示。
 
@@ -495,6 +475,8 @@ public class VirtualMap<K, V> implements CustomMap<K, V> {
 
 Listing 2.3: `VirtualMap` 代理类。
 
+
+
 让我们看看如何使用它。我们的局部变量 `map` 指向一个 `VirtualMap` 实例。在第一次调用诸如 `put()` 或 `get()` 方法之前，真正的 `HashMap` 不会被创建。当我们这样做时，供应器会被调用，`HashMap` 被创建。之后，所有的调用都路由到包含的 `HashMap` 中。
 
 ```java
@@ -517,17 +499,13 @@ publicMapDemo {
 
 Listing 2.4: `VirtualProxyDemo`。
 
-
-
-
-
 # 使用远程代理调用远程方法
 
 大使馆是远程国家的本地代表。当我们申请签证、续换护照，或者在不乘坐飞机的情况下与远程实体（该国政府）交互时，就会访问它们。大使馆有点就像远程代理。
 
 假设我们想申请访问加拿大的签证。
 
-```
+```java
 //:~ core/src/main/.../ch02/remote/Canada.java
 public interface Canada {
   boolean canGetVisa(String name,
@@ -538,9 +516,9 @@ public interface Canada {
 
 列表 2.6：`Canada`。
 
-我们的实现类定义在 `RealCanada` 内部，它检查最关键的属性。该类名听起来像某种啤酒的名字：*“Real Canada - 入口极其顺滑。啊。扑灭最深处的渴…………​。”*
+我们的实现类定义在 `RealCanada` 内部，它检查最关键的属性。该类名听起来像某种啤酒的名字：“Real Canada - 入口极其顺滑。啊。扑灭最深处的渴…………​。”
 
-```
+```java
 //:~ core/src/main/.../ch02/remote/RealCanada.java
 public class RealCanada implements Canada {
   @Override
@@ -557,7 +535,7 @@ public class RealCanada implements Canada {
 
 我们将使用 [Jetty Web 服务器](https://github.com/eclipse/jetty.project) 发布它。
 
-```
+```java
 //:~ core/src/main/.../ch02/remote/ServicePublisher.java
 /**
  * @author Simone Bordet
@@ -591,6 +569,7 @@ public class ServicePublisher extends AbstractHandler {
       response.setStatus(HttpServletResponse.SC_NOT_FOUND);
     }
   }
+
   public static void main(String... args) throws Exception {
     Canada canada = new RealCanada();
     var server = new Server(8080);
@@ -606,11 +585,12 @@ public class ServicePublisher extends AbstractHandler {
 
 接下来，我们创建一个远程代理，连接到该 REST 服务并调用方法。
 
-```
+```java
 //:~ core/src/main/.../ch02/remote/CanadianEmbassy.java
 public class CanadianEmbassy implements Canada {
   private final HttpClient httpClient =
       HttpClient.newBuilder().build();
+
   @Override
   public boolean canGetVisa(String name,
                             boolean married,
@@ -642,7 +622,7 @@ public class CanadianEmbassy implements Canada {
 
 `Client` 看起来就是普通的 Java 代码，完全感知不到远程实现。
 
-```
+```java
 //:~ core/src/main/.../ch02/remote/Client.java
 public class Client {
   public static void main(String... args) {
@@ -658,7 +638,7 @@ public class Client {
 }
 ```
 
-列表 2.10：Client。
+列表 2.10：`Client`。
 
 我们通过以下方式运行此示例：首先启动 `ServicePublisher` 类，然后运行我们的 `Client`。
 
@@ -676,20 +656,21 @@ visaObtained = true
 
 我们需要保护对象，就像保护资产。保护代理可以防止以下情况：
 
-*   并发访问导致的竞态条件。
-*   未经授权的修改。
-*   对敏感状态的非法访问。
+- 并发访问导致的竞态条件。
+- 未经授权的修改。
+- 对敏感状态的非法访问。
 
 我们将查看不同的保护代理。
 
-### `SynchronizedMap`
+## `SynchronizedMap`
 
-我们的 `HashMap` 在列表 2.2 中不是线程安全的。它依赖于 `java.util.HashMap`，这无法在并发访问保护状态。为了说明，考虑列表 2.12。我们使用并行流向 map 放入 46,000 个条目。然后通过 `forEach()` 遍历 map 并统计有多少条目。最后，我们打印出值。
+我们的 `HashMap` 在列表 2.2 中不是线程安全的。它依赖于 `java.util.HashMap`，这无法在并发访问保护状态。为了说明，考虑列表 2.12。我们使用并行流向 `map` 放入 46,000 个条目。然后通过 `forEach()` 遍历 `map` 并统计有多少条目。最后，我们打印出值。
 
 ```java
 //:~ core/src/test/.../ch02/protection/ConcurrentTest.java
 public class ConcurrentTest {
   public static final int SQUARES = 46_000;
+
   public void check(Map<Integer, Integer> map) {
     System.out.println("Checking " + map.getClass().getSimpleName());
     try {
@@ -699,6 +680,7 @@ public class ConcurrentTest {
     } catch (Exception e) {
       System.err.println(e);
     }
+
     // count actual entries
     var entries = new LongAdder();
     map.forEach((k, v) -> entries.increment());
@@ -713,7 +695,7 @@ public class ConcurrentTest {
 }
 ```
 
-列表 2.12：`ConcurrentTest` 使用并行流并发修改 map。
+列表 2.12：`ConcurrentTest` 使用并行流并发修改 `map`。
 
 我们的 `CustomHashMapTest` 为 `ConcurrentTest` 提供了 `CustomHashMap`。
 
@@ -733,7 +715,7 @@ public class CustomHashMapTest extends ConcurrentTest {
 
 列表 2.13：`CustomHashMapTest`。
 
-在配备 6 核心的 2018 款 MacBook Pro (i9) 上多次运行此代码，统计出的 `entries` 从未等于于 `map.size()`。计数也不等于 46,000。例如，列表 2.14 是其中一次运行的输出。
+在配备 6 核心的 2018 款 MacBook Pro (i9) 上多次运行此代码，统计出的 `entries` 从未等于 `map.size()`。计数也不等于 46,000。例如，列表 2.14 是其中一次运行的输出。
 
 ```
 CustomHashMap constructed
@@ -745,10 +727,6 @@ java.lang.AssertionError: entries=35474, map.size=41663
 
 列表 2.14：来自 `CustomHashMapTest` 的输出。
 
-
-
-
-
 为了解决 `CustomHashMap` 中的竞态条件，我们将使用 `SynchronizedCustomMap` 对其进行代理。在委托给 `CustomMap` 方法之前，我们将所有方法都标记为 `synchronized`。
 
 ```java
@@ -756,29 +734,36 @@ java.lang.AssertionError: entries=35474, map.size=41663
 public class SynchronizedCustomMap<K, V>
     implements CustomMap<K, V> {
   private final CustomMap<K, V> map;
+
   public SynchronizedCustomMap(CustomMap<K, V> map) {
     this.map = map;
   }
+
   @Override
   public synchronized int size() {
     return map.size();
   }
+
   @Override
   public synchronized V get(Object key) {
     return map.get(key);
   }
+
   @Override
   public synchronized V put(K key, V value) {
     return map.put(key, value);
   }
+
   @Override
   public synchronized V remove(Object key) {
     return map.remove(key);
   }
+
   @Override
   public synchronized void clear() {
     map.clear();
   }
+
   @Override
   public synchronized void forEach(
       BiConsumer<? super K, ? super V> action) {
@@ -790,6 +775,8 @@ public class SynchronizedCustomMap<K, V>
 Listing 2.15: `SynchronizedCustomMap` 使用 `synchronized` 来保证线程安全。
 
 我们的 `SynchronizedTest` 创建了一个代理自 `CustomHashMap` 的 `SynchronizedCustomMap`，并将其传递给 `ConcurrentTest`。
+
+
 
 ```java
 //:~ core/src/test/.../ch02/protection/SynchronizedTest.java
@@ -892,9 +879,6 @@ public class SynchronizedVirtualTest extends ConcurrentTest {
 
 Listing 2.20: 级联保护代理与虚拟代理。
 
-
-
-
 为了实现这种透明性，让我们首先完善代理的 `equals()` 方法。请注意，委托给 `map` 与我们之前编写代理方法的方法一致。
 
 ```java
@@ -940,7 +924,7 @@ public final int hashCode() {
 
 列表 2.25：正确的 `CustomHashMap.equals()`。
 
-我们在 `CustomMapEqualsTest` 中看到了 `equals()` 方法的实际应用。要查看更完整的测试集，请访问 [github.com/kabutz/dynamic-proxies-samples](https://github.com/kabutz/dynamic-proxies-samples/tree/master/core/src/test/java/eu/javaspecialists/books/dynamicproxies/ch02/equals).
+我们在 `CustomMapEqualsTest` 中看到了 `equals()` 方法的实际应用。要查看更完整的测试集，请访问 [github.com/kabutz/dynamic-proxies-samples](https://github.com/kabutz/dynamic-proxies-samples/tree/master/core/src/test/java/eu/javaspecialists/books/dynamicproxies/ch02/equals)。
 
 ```java
 //:~ core/src/test/.../ch02/equals/CustomMapEqualsTest.java
@@ -1010,11 +994,10 @@ public interface InvocationHandler {
 
 `invoke()` 方法有三个参数：
 
-
-
-
 - `Object proxy` 是调用 `invoke()` 的动态代理类的实例。我们将在稍后的章节中使用它。
+
 - `Method method` 是一个 `java.lang.reflect.Method` 对象，对应被调用的方法。该方法要么来自创建动态代理时所使用的接口之一，要么来自 `Object` 类的三个公共非 final 方法之一，即 `hashCode()`、`equals(Object)` 或 `toString()`。
+
 - `Object[] args` 是传递给该方法的参数数组。当方法没有任何参数时，该数组为 `null`。
 
 `invoke()` 方法声明它会抛出 `Throwable`。然而，方法应该只抛出那些在其方法签名中声明的受检异常（checked exceptions）。这是动态代理如何具有动态性的另一个例子——静态类型系统显示为 `Throwable`，但对于它们可以抛出哪些异常存在着动态约束。
@@ -1025,8 +1008,10 @@ public interface InvocationHandler {
 
 大部分代码都是自而易懂的，除了 `logFine` 优化部分。`System.nanoTime()` 是一个昂贵的系统调用，除非在启用细粒日志（fine logging），否则我们希望避免调用它。由于级别在我们调用 `method.invoke()` 期间可能会发生，我们将原始设置写入一个 `final` 局部变量 `logFine` 中。再次，`method.invoke()` 是动态代理如何具有动态性的一个例子——我们经常委托给底层功能，并且通过反射来实现这一点。
 
+
+
 ```
-//:~ core/src/main/.../handlers/LoggingInvocationHandler.java
+/*:~ core/src/main/.../handlers/LoggingInvocationHandler.java */
 public final class LoggingInvocationHandler
     implements InvocationHandler {
   private final Logger log;
@@ -1060,7 +1045,8 @@ public final class LoggingInvocationHandler
   }
 }
 ```
-列表 3.5: `LoggingInvocationHandler`。
+
+列表 3.5：`LoggingInvocationHandler`。
 
 在列表 3.6 的 `LoggingProxyDemo` 中，我们创建了一个 `LoggingInvocationHandler`，它将所有方法调用记录到 `ConcurrentHashMap` 中。
 
@@ -1087,7 +1073,8 @@ map.put("two", 2);
 System.out.println(map);
 map.clear();
 ```
-列表 3.6: map 的日志方法。
+
+列表 3.6：`map` 的日志方法。
 
 ## 动态类的名称
 
@@ -1102,7 +1089,8 @@ public interface ISODateParser {
   LocalDate parse(String date) throws ParseException;
 }
 ```
-列表 3.7: `ISODateParser` 接口。
+
+列表 3.7：`ISODateParser` 接口。
 
 我们创建一个动态代理并将类名打印到 `System.out`。
 
@@ -1120,14 +1108,16 @@ public class ProxyName {
   }
 }
 ```
-列表 3.8: `ProxyName`。
+
+列表 3.8：`ProxyName`。
 
 输出显示类名为 `com.sun.proxy.$Proxy0`。
 
 ```
 class com.sun.proxy.$Proxy0
 ```
-列表 3.9: `ProxyName` 输出。
+
+列表 3.9：`ProxyName` 输出。
 
 动态代理通常命名为 `$Proxy` 后跟数字。当所有接口都是公共的，包通常是 `com.sun.proxy`，但在你的操作系统和 JDK 上可能是另一个包。类名和包可能会随版本之间甚至运行之间变化。当我们从模块内部未导出的包创建动态代理时，包名会有不同。如果至少有一个接口是非公共的，代理类将位于该接口所在的包中。无法为位于不同包的非公共接口创建动态代理。
 
@@ -1136,10 +1126,6 @@ class com.sun.proxy.$Proxy0
 我们可以通过系统属性 `-Djdk.proxy.ProxyGenerator.saveGeneratedFiles=true`（Java 9+）或较早版本 Java 中的 `-Dsun.misc.ProxyGenerator.saveGeneratedFiles=true` 将生成的代理类转储到当前工作目录。
 
 例如，列表 3.10 显示了从 `ISODateParser` 接口生成的动态代理。我们可以看到 `$Proxy0` 派自 `java.lang.reflect.Proxy`，后者存储了 `InvocationHandler` 实例 `h`。公共接口方法以及 `java.lang.Object` 的 `hashCode()`、`equals()` 和 `toString()` 都有关联的静态字段 `Method` 对象。这些字段在类加载时在静态初始化块中初始化。在每个方法实现中，代理实例、`Method` 实例和包含参数的数组被传递给 `InvocationHandler`。例如，查看 `parse(String)` 的实现。
-
-
-
-
 
 ```java
 package com.sun.proxy;
@@ -1235,6 +1221,8 @@ public final class $Proxy0 extends Proxy
 
 例如，这里是我们的 `MethodTurboBooster`。如果由于某种原因得到了异常，我们将返回原始代理对象。默认开启了加速功能，但我们可以通过 `-Deu.javaspecialists.books.dynamicproxies.util.MethodTurboBooster.disabled=true` 禁用它。
 
+
+
 ```java
 //:~ core/src/main/.../util/MethodTurboBooster.java
 /**
@@ -1329,7 +1317,7 @@ System.out.println(comp.compareTo("hello"));
 
 当我们运行这段代码时，看到的而是三个链在一起的异常。
 
-```
+```text
 Exception in thread "main" java.lang.reflect.UndeclaredThrowableException
 	at com.sun.proxy.$Proxy0.compareTo(Unknown Source)
 	at ...ch03.gotchas.RecastingBroken.main
@@ -1343,10 +1331,6 @@ Caused by: java.lang.ClassCastException: class com.sun.proxy.$Proxy0
 列表 3.13：来自 `RecastingBroken` 的输出。
 
 如果我们直接抛出 `ClassCastException`，由于它是 `RuntimeException`，我们的代理代码将将其传递给调用者。因此，如果我们在 `InvocationHandler.handle()` 方法中使用反射，我们需要抛出包含在 `InvocationTargetException` 内部异常。为了方便起见，我们在列表 3.14 中编写了一个 `ExceptionUnwrappingInvocationHandler`。
-
-
-
-
 
 ```java
 //:~ core/src/main/.../handlers/ExceptionUnwrappingInvocationHandler.java
@@ -1393,7 +1377,7 @@ Listing 3.15: `RecastingExceptionsFixed`。
 
 这一次，当我们运行它时，输出是单个 `ClassCastException`。正是我们需要的！
 
-```
+```text
 Exception in thread "main" java.lang.ClassCastException: class
       com.sun.proxy.$Proxy0 cannot be cast to class java.lang.String
 	at java.base/java.lang.String.compareTo(String.java:134)
@@ -1402,7 +1386,7 @@ Exception in thread "main" java.lang.ClassCastException: class
 
 Listing 3.16: `RecastingExceptionsFixed` 的输出。
 
-## 强制转换 (Casting)
+## 强制转换（Casting）
 
 本节包含了我们在本书其余部分将将使用的静态工厂方法。
 
@@ -1483,7 +1467,7 @@ LocalDate funnyDate = parser.parse("2020-04-31");
 
 Listing 3.20: 使用 `Proxies` 创建简单代理。
 
-```
+```text
 palindrome = "2020-02-02"
 RealISODateParser
 Exception in thread "main" java.time.format.DateTimeParseException: 2020-04-31
@@ -1491,9 +1475,12 @@ Exception in thread "main" java.time.format.DateTimeParseException: 2020-04-31
 
 Listing 3.21: 代理的输出。
 
-## 虚拟代理 (Virtual proxy)
+## 虚拟代理（Virtual proxy）
 
 在列表 2.3 的手工代理中，我们忘记了代理 `toString()`。通过动态代理，我们可以创建一个接受 `Supplier<? extends S>` 作为参数的 `VirtualProxyHandler`。
+
+
+
 
 ```java
 //:~ core/src/main/.../handlers/VirtualProxyHandler.java
@@ -1521,7 +1508,7 @@ public final class VirtualProxyHandler<S>
 
 Listing 3.22: `VirtualProxyHandler`。
 
-我们可以为我们的 `Proxies` Fac 面添加一个静态工厂方法。
+我们可以为我们的`Proxies` Facade添加一个静态工厂方法。
 
 ```java
 //:~ core/src/main/.../Proxies.java
@@ -1537,7 +1524,7 @@ public static <S> S virtualProxy(
 
 Listing 3.23: `Proxies.virtualProxy()`。
 
-我们的虚拟代理测试现在通过 `Proxies.virtualProxy(CustomMap.class, CustomHashMap::new)` 创建 `CustomMap`。
+我们的虚拟代理测试现在通过`Proxies.virtualProxy(CustomMap.class, CustomHashMap::new)`创建`CustomMap`。
 
 ```java
 //:~ core/src/main/.../ch03/virtual/VirtualProxyDemo.java
@@ -1558,15 +1545,11 @@ Listing 3.24: `VirtualProxyDemo`。
 
 输出与我们在列表 2.5 中的手工虚拟代理完全相同。
 
-## 同步动态代理 (Synchronized dynamic proxy)
+## 同步动态代理（Synchronized dynamic proxy）
 
-我们不需要像在列表 2.15 中那样手工制作一个同步保护代理，而是编写一个 `SynchronizedHandler`。它会同步所有对 `subject` 方法的调用，并使用 `proxy` 作为我们的监视锁。
+我们不需要像在列表 2.15 中那样手工制作一个同步保护代理，而是编写一个`SynchronizedHandler`。它会同步所有对`subject`方法的调用，并使用`proxy`作为我们的监视锁。
 
-
-
-
-
-```
+```java
 //:~ core/src/main/.../handlers/SynchronizedHandler.java
 public final class SynchronizedHandler<S>
     implements InvocationHandler, Serializable {
@@ -1589,7 +1572,7 @@ public final class SynchronizedHandler<S>
 
 Listing 3.25: `SynchronizedHandler`。
 
-我们的 `Proxies` 外面类现在有了一个静态工厂方法 `synchronizedProxy()`。
+我们的`Proxies`外部类现在有了一个静态工厂方法`synchronizedProxy()`。
 
 ```java
 //:~ core/src/main/.../Proxies.java
@@ -1603,7 +1586,7 @@ public static <S> S synchronizedProxy(
 
 Listing 3.26: `Proxies.synchronizedProxy()`。
 
-我们可以通过来自 Listing 2.16 的 `SynchronizedTest` 来验证同步工作是否符合预期。
+我们可以通过来自 Listing 2.16 的`SynchronizedTest`来验证同步工作是否符合预期。
 
 ```java
 //:~ core/src/test/.../ch03/protection/SynchronizedTest.java
@@ -1619,7 +1602,7 @@ public class SynchronizedTest extends ConcurrentTest {
 
 Listing 3.27: `SynchronizedTest`。
 
-我们的 `SynchronizedTest` 的输出证明了它可能运行正常。是的，这是一种谨慎的措辞，但很难证明 Bug 的不存在，尤其是在并发代码中。
+我们的`SynchronizedTest`的输出证明了它可能运行正常。是的，这是一种谨慎的措辞，但很难证明 Bug 的不存在，尤其是在并发代码中。
 
 ```
 CustomHashMap constructed
@@ -1628,11 +1611,11 @@ entries = 46000
 map.size() = 46000
 ```
 
-Listing 3.28: `SynchronizedTest` 的输出。
+Listing 3.28: `SynchronizedTest`的输出。
 
 ### 级联多个动态代理
 
-在上一章中，我们级联了一个同步保护代理和一个虚拟代理。我们可以对新创建的动态代理执行同样的操作。注意，我们需要在调用 `virtualProxy()` 时添加一个类型证言（type witness），以指定泛型类型 `S` 是 `CustomMap<Integer, Integer>`。否则，编译器会将我们的虚拟代理转换为 `CustomHashMap`，导致导致 `ClassCastException`。
+在上一章中，我们级联了一个同步保护代理和一个虚拟代理。我们可以对新创建的动态代理执行同样的操作。注意，我们需要在调用`virtualProxy()`时添加一个类型证言（type witness），以指定泛型类型`S`是`CustomMap<Integer, Integer>`。否则，编译器会将我们的虚拟代理转换为`CustomHashMap`，导致`ClassCastException`。
 
 ```java
 //:~ core/src/test/.../ch03/protection/SynchronizedVirtualTest.java
@@ -1651,7 +1634,7 @@ public class SynchronizedVirtualTest extends ConcurrentTest {
 
 Listing 3.29: `SynchronizedVirtualTest`。
 
-我们的 `SynchronizedVirtualTest` 的输出所示 Listing 3.30。
+我们的`SynchronizedVirtualTest`的输出如 Listing 3.30 所示。
 
 ```
 Checking $Proxy0
@@ -1663,19 +1646,19 @@ map = {0=0, 1=1, 2=4, 3=9, 4=16, 5=25, ..., 45999=2115908001}
 
 Listing 3.30: 级联动态代理的输出。
 
-这一次，`toString()` 方法由我们的动态代理自动地路由了。
+这一次，`toString()`方法由我们的动态代理自动地路由了。
 
-## 带有动态代理的 `EnhancedStream`
+## 带有动态代理的`EnhancedStream`
 
-我最近发现了动态代理的一个很棒用例。Java 8 的 streams 在如何实现 `distinct()` 方面观点相当狭隘。如果两个对象是 `equal()`，那么它们就是不同的，且通常保留第一个元素并丢弃后续元素。
+我最近发现了动态代理的一个很棒用例。Java 8 的 streams 在如何实现`distinct()`方面观点相当狭隘。如果两个对象是`equal()`，那么它们就是不同的，且通常保留第一个元素并丢弃后续元素。
 
 如果我们想要一种不同的相等性定义呢？仿照乔治·奥威尔的《动物农场》的话说，当两个对象相等时，一个对象能比另一个更“相等”吗？
 
-例如，`ArrayDeque` 有两个 `clone()` 方法，一个返回 `Object`，另一个返回 `ArrayDeque`。在决定保留哪一个时，我们应该选择返回类型派生得最多的那个：`ArrayDeque clone()`。`Stream` 中普通的 `distinct()` 方法无法做出这种选择。
+例如，`ArrayDeque`有两个`clone()`方法，一个返回`Object`，另一个返回`ArrayDeque`。在决定保留哪一个时，我们应该选择返回类型派生得最多的那个：`ArrayDeque clone()`。`Stream`中普通的`distinct()`方法无法做出这种选择。
 
-`Stream` 的优秀特性之一是它的流式接口。一旦我们有了一个 `Stream`，许多方法都会返回相同的 `Stream` 类型，这样我们就可以链式调用方法。如果我们增强流，那么这些方法也应该返回我们的 `EnhancedStream`。
+`Stream`的优秀特性之一是它的流式接口。一旦我们有了一个`Stream`，许多方法都会返回相同的`Stream`类型，这样我们就可以链式调用方法。如果我们增强流，那么这些方法也应该返回我们的`EnhancedStream`。
 
-我们在 Listing 3.31 中的接口 `EnhancedStream` 扩展了 `Stream` 并添加了一个新的 `distinct()` 方法。它还重写了所有返回 `Stream` 的方法，改为返回 `EnhancedStream`。最后，我们有两个用于创建流的静态工厂方法。
+我们在 Listing 3.31 中的接口`EnhancedStream`扩展了`Stream`并添加了一个新的`distinct()`方法。它还重写了所有返回`Stream`的方法，改为返回`EnhancedStream`。最后，我们有两个用于创建流的静态工厂方法。
 
 ```java
 //:~ core/src/main/.../ch03/enhancedstream/EnhancedStream.java
@@ -1729,8 +1712,6 @@ Listing 3.31: `EnhancedStream<T>`。
 
 
 
-
-
 ```java
 //:~ core/src/main/.../ch03/enhancedstream/EnhancedStreamHandler.java
 public class EnhancedStreamHandler<T>
@@ -1768,6 +1749,7 @@ public class EnhancedStreamHandler<T>
                         BinaryOperator<T> merger) {
     distinct(t -> new Key<>(t, hashCode, equals), merger);
   }
+
   private void distinct(Function<T, ?> keyGen,
                         BinaryOperator<T> merger) {
     delegate = delegate.collect(Collectors.toMap(keyGen::apply,
@@ -1842,7 +1824,7 @@ public class EnhancedStreamHandler<T>
 }
 ```
 
-列表 3.32: `EnhancedStreamHandler<T>`。
+列表 3.32：`EnhancedStreamHandler<T>`。
 
 例如，`EnhancedStreamDemo` 展示了当我们使用增强型流为 `ArrayDeque` 和 `ConcurrentSkipListSet` 创建去重方法时发生的情况。
 
@@ -1920,11 +1902,11 @@ public class EnhancedStreamDemo {
 }
 ```
 
-列表 3.33: `EnhancedStreamDemo`。
+列表 3.33：`EnhancedStreamDemo`。
 
 输出显示我们的 `EnhancedStream` 返回按名称和参数唯一的方法。此外，它总是保留返回类型更具体的方法。因此，`ArrayDeque clone()` 和 `NavigableSet headSet(Object)` 被保留，而 `Object clone()` 和 `SortedSet headSet(Object)` 被丢弃了。
 
-```
+```text
 Normal ArrayDeque clone() Methods:
   ArrayDeque clone()
   Object clone()
@@ -1954,15 +1936,11 @@ Distinct ConcurrentSkipListSet:
   NavigableSet tailSet(Object)
 ```
 
-列表 3.34: `EnhancedStreamDemo` 的输出。
-
-
-
-
+列表 3.34：`EnhancedStreamDemo` 的输出。
 
 在 [The Java Specialists' Newsletter 274](https://www.javaspecialists.eu/archive/Issue274.html) 中，我们读到如何手工构建一个 `EnhancedStream` 装饰器。这是非常单调且重复的工作。我们必须实现所有方法并费力地对它们进行委托。我们的动态代理解决方案只有一个方法 `invoke()`，其中包含了针对三种不同类型方法的逻辑。
 
-我们的动态代理方法也存在一些缺点。对于某些被代理的方法，可能会有轻微的方法调用开销。例如，每当我们的返回类型为 `EnhancedStream` 时，都需要进行一次 map 查找。我们将在下一章中学习如何使用一种特殊的 map（我们称之为 `VTable`）来提高速度。现在，我们可以沉浸在避免了反复重复编写相同代码段的满足感中。
+我们的动态代理方法也存在一些缺点。对于某些被代理的方法，可能会有轻微的方法调用开销。例如，每当我们的返回类型为 `EnhancedStream` 时，都需要进行一次 `map` 查找。我们将在下一章中学习如何使用一种特殊的 `map`（我们称之为 `VTable`）来提高速度。现在，我们可以沉浸在避免了反复重复编写相同代码段的满足感中。
 
 ## 动态代理的局限性
 
@@ -1970,13 +1948,15 @@ Distinct ConcurrentSkipListSet:
 
 最大的限制之一是，我们只能代理接口，因为它们派生自 `java.lang.reflect.Proxy`。Java 不支持多类继承。
 
-当类由我们自己时，我们可以尝试将类重构为接口。但当我们尝试代理第三方类时，这将无济于。
+当类由我们自己时，我们可以尝试将类重构为接口。但当我们尝试代理第三方类时，这将无济于事。
 
 像 `CGLib` 这样的工具可以创建类的动态代理，但它们并不是标准 JDK 的。
 
+
+
 ### `UndeclaredThrowableException`
 
-虽然 `invoke` 方法定义为抛出任何 `Throwable`，但我们允许抛出在代理方法中声明的检查异常（checked exceptions）。
+虽然`invoke()`方法定义为抛出任何`Throwable`，但我们允许抛出在代理方法中声明的检查异常（checked exceptions）。
 
 ```java
 //:~ core/src/main/.../ch03/gotchas/UndeclaredExceptionThrown.java
@@ -1995,7 +1975,7 @@ public class UndeclaredExceptionThrown {
 
 Listing 3.35: `UndeclaredExceptionThrown`。
 
-当我们在 `Runnable` 上调用 `run()` 时，检查异常 `IOException` 被包装在未检查异常 `UndeclaredThrowableException` 中。这仅适用于不属于代理接口方法签的检查异常。
+当我们在`Runnable`上调用`run()`时，检查异常`IOException`被包装在未检查异常`UndeclaredThrowableException`中。这仅适用于不属于代理接口方法签的检查异常。
 
 ```text
 Exception in "main" java.lang.reflect.UndeclaredThrowableException
@@ -2006,11 +1986,11 @@ Caused by: java.io.IOException: bad exception
 	... 2 more
 ```
 
-Listing 3.36: 异常导致了未检查的 `UndeclaredThrowableException`。
+Listing 3.36: 异常导致了未检查的`UndeclaredThrowableException`。
 
-### 神秘的 `com.sun.proxy.Proxy$0` 类
+### 神秘的`com.sun.proxy.Proxy$0`类
 
-如所述，代理类的名称通常遵循命名约定：公共接口使用 `com.sun.proxy.Proxy$0`，包级访问访问接口使用 `packagename.Proxy$0`。当接口未从模块中导出时，代理位于一个非导出的包中：例如 `com.sun.proxy.jdk.proxy1`。
+如所述，代理类的名称通常遵循命名约定：公共接口使用`com.sun.proxy.Proxy$0`，包级访问接口使用`packagename.Proxy$0`。当接口未从模块中导出时，代理位于一个非导出的包中：例如`com.sun.proxy.jdk.proxy1`。
 
 ```java
 //:~ core/src/main/.../ch03/gotchas/ProxyNaming.java
@@ -2043,19 +2023,19 @@ class com.sun.proxy.jdk.proxy1.$Proxy1
 class eu.javaspecialists.books.dynamicproxies.ch03.gotchas.$Proxy2
 ```
 
-Listing 3.38: `ProxyNaming` 的输出。
+Listing 3.38: `ProxyNaming`的输出。
 
-Java 语言规范并没有规定代理必须遵循此命名约定，但这是 OpenJDK 目前的实现方式。请注意，当我们为公共接口创建代理时，这些类会被添加到 `com.sun.proxy` 包中。然而，当我们为非公共接口创建代理时，类必须与接口处于同一个包中——在我们的示例中，是 `eu.javaspecialists.books.dynamicproxies.ch03`。
+Java 语言规范并没有规定代理必须遵循此命名约定，但这是 OpenJDK 目前的实现方式。请注意，当我们为公共接口创建代理时，这些类会被添加到`com.sun.proxy`包中。然而，当我们为非公共接口创建代理时，类必须与接口处于同一个包中——在我们的示例中，是`eu.javaspecialists.books.dynamicproxies.ch03`。
 
 ### 更深的调用栈
 
-我们的调用栈也可能包含对 `$Proxy0` 和反射方法调用的引用。像 [IntelliJ IDEA](https://www.jetbrains.com/idea/) 这样的 IDE 可能会隐藏这些细节，如图 9 所示。
+我们的调用栈也可能包含对`$Proxy0`和反射方法调用的引用。像 [IntelliJ IDEA](https://www.jetbrains.com/idea/) 这样的 IDE 可能会隐藏这些细节，如图 9 所示。
 
 ![StackTraceFiltering](img/StackTraceFiltering.png)
 
 图 9: 代理方法调用的堆栈跟踪。
 
-这是一个使用递归动态代理计算阶的示例。在德语中，我们将这个例子称为 *“an den Haaren herbeigezogen”*，意思是我们是揪着头发把它拉过来的。换句话说，这是一种编写阶代码代码极不实际的方法，仅用于说明递归动态代理调用可能是什么样子。请不要写这样的代码！
+这是一个使用递归动态代理计算阶的示例。在德语中，我们将这个例子称为“an den Haaren herbeigezogen”，意思是我们是揪着头发把它拉过来的。换句话说，这是一种编写阶代码代码极不实际的方法，仅用于说明递归动态代理调用可能是什么样子。请不要写这样的代码！
 
 ```java
 //:~ core/src/main/.../ch03/gotchas/RecursiveDynamicProxy.java
@@ -2119,27 +2099,23 @@ etc.
 
 Listing 3.40: 得益于动态代理和反射的深层调用栈。
 
-调用栈中的额外的行可能只会造成轻小的困扰。如果它们导致了 `StackOverflowError`，那么在那种情况下，避免使用代理或通过 JVM 参数 `-Xss` 增加线程栈的大小是合适的。
+调用栈中的额外的行可能只会造成轻小的困扰。如果它们导致了`StackOverflowError`，那么在那种情况下，避免使用代理或通过 JVM 参数`-Xss`增加线程栈的大小是合适的。
 
 ### 泄露的抽象
 
 动态代理目前被视为普通的 Java 类，尽管是动态创建的。这使得基础设施代码泄露给了用户。如果能够从用户处隐藏这些类将会更好。
 
+在写作时，[JEP 371](https://openjdk.java.net/jeps/371) 的目标是 Java 15，并建议引入`hidden classes`（隐藏类）。这些类无法被其他类的字节码直接使用，而是通过框架代码通过反射来访问。
 
-
-
-
-在写作时，[JEP 371](https://openjdk.java.net/jeps/371) 的目标是 Java 15，并建议引入 `hidden classes`（隐藏类）。这些类无法被其他类的字节码直接使用，而是通过框架代码通过反射来访问。
-
-`hidden classes` 有许多优点：它们的方法不会出现在堆栈跟踪轨迹中。它们更容易被卸载。访问控制更加精细且严格。
+`hidden classes`有许多优点：它们的方法不会出现在堆栈跟踪轨迹中。它们更容易被卸载。访问控制更加精细且严格。
 
 ### 共享代理类
 
-Java 试图尽量减少其创建的动态代理类的数量。每当我们调用 `Proxy.newProxyInstance()` 时，它都会检查之前是否已经为给定的类加载器和目标接口组合创建过动态代理。接口在数组内部存储的顺序是有重要的。如果找到了动态代理类，则将使用它来创建代理对象。`InvocationHandler` 总是被传递给 `java.lang.reflect.Proxy` 超类，所有的动态代理类都派生自该类。
+Java 试图尽量减少其创建的动态代理类的数量。每当我们调用`Proxy.newProxyInstance()`时，它都会检查之前是否已经为给定的类加载器和目标接口组合创建过动态代理。接口在数组内部存储的顺序是有重要的。如果找到了动态代理类，则将使用它来创建代理对象。`InvocationHandler`总是被传递给`java.lang.reflect.Proxy`超类，所有的动态代理类都派生自该类。
 
-例如，考虑列表 3.41 中的 `ProxyClassesByInterface`。`Collection` 继承自 `Iterable`，因此我们可以认为由 `Collection` 和 `Iterable` 组合成的代理等同于仅包含 `Collection` 的代理。然而，我们看到对于每种接口组合，都会创建唯一的代理类。
+例如，考虑列表 3.41 中的`ProxyClassesByInterface`。`Collection`继承自`Iterable`，因此我们可以认为由`Collection`和`Iterable`组合成的代理等同于仅包含`Collection`的代理。然而，我们看到对于每种接口组合，都会创建唯一的代理类。
 
-```
+```java
 //:~ core/src/main/.../ch03/gotchas/ProxyClassesByInterface.java
 public class ProxyClassesByInterface {
   static final InvocationHandler BLANK = (p, m, a) -> null;
@@ -2172,16 +2148,16 @@ Java 在其动态代理类的缓存中使用弱引用，以确保我们不会发
 
 调用动态代理的方法可能较慢，原因有几点：
 
-*   原始返回类型和参数需要装箱为相应的包装对象。当原始值超出它们的缓存范围时，这可能会增加对象创建的开销。
-*   参数需要封装进数组。如果该数组逃逸了 `InvocationHandler.invoke()` 方法，则可能无法通过逃逸分析被消除。
-*   `Method` 类存在健忘症问题——它在每次调用时都会检查权限。我们尝试通过列表 3.11 所示的加速（turbo-boost）机制来消除这种代价。
-*   所有动态代理都派生自单一的 `java.lang.reflect.Proxy` 类，该类存储了我们 `InvocationHandler` 的引用。当一个字段始终持有接口的一种实现时，调用该字段值上方法的调用点是单态的（monomorphic），而不是多态的（polymorphic）。HotSpot 编译器对单态和双态有优化。对于单态，编译器可以在运行时内联方法调用。然而，由于动态代理可以持有 `InvocationHandler` 的多个实现之一，HotSpot 可能无法内联到 `invoke()` 方法调用，从而使其变为元态的（megamorphic）。关于多态性能的更多信息，请参阅 [The Java Specialists' Newsletter](https://www.javaspecialists.eu/) 中的 [“Polymorphism Performance Mysteries”](https://www.javaspecialists.eu/archive/Issue157.html) 和 [“Polymorphism Performance Mysteries Explained”](https://www.javaspecialists.eu/archive/Issue158.html)。
+- 原始返回类型和参数需要装箱为相应的包装对象。当原始值超出它们的缓存范围时，这可能会增加对象创建的开销。
+- 参数需要封装进数组。如果该数组逃逸了`InvocationHandler.invoke()`方法，则可能无法通过逃逸分析被消除。
+- `Method`类存在健忘症问题——它在每次调用时都会检查权限。我们尝试通过列表 3.11 所示的加速（turbo-boost）机制来消除这种代价。
+- 所有动态代理都派生自单一的`java.lang.reflect.Proxy`类，该类存储了我们`InvocationHandler`的引用。当一个字段始终持有接口的一种实现时，调用该字段值上方法的调用点是单态的（monomorphic），而不是多态的（polymorphic）。HotSpot 编译器对单态和双态有优化。对于单态，编译器可以在运行时内联方法调用。然而，由于动态代理可以持有`InvocationHandler`的多个实现之一，HotSpot 可能无法内联到`invoke()`方法调用，从而使其变为元态的（megamorphic）。关于多态性能的更多信息，请参阅 [The Java Specialists' Newsletter](https://www.javaspecialists.eu/) 中的 [“Polymorphism Performance Mysteries”](https://www.javaspecialists.eu/archive/Issue157.html) 和 [“Polymorphism Performance Mysteries Explained”](https://www.javaspecialists.eu/archive/Issue158.html)。
 
 想要编写性能关键代码的程序员需要知道如何对代码进行基准测试。运行基准测试的推荐工具是 [Java Microbenchmark Harness](https://openjdk.java.net/projects/code-tools/jmh/) (JMH)。
 
-对于我们的实验，我们定义了一个带有两个方法的 `Worker` 接口：`increment()` 和 `consumeCPU()`。`increment()` 方法返回一个 `long`，它将通过自动装箱转换为 `Long` 对象。`consumeCPU()` 方法返回 `void`，因此不需要创建对象。
+对于我们的实验，我们定义了一个带有两个方法的`Worker`接口：`increment()`和`consumeCPU()`。`increment()`方法返回一个`long`，它将通过自动装箱转换为`Long`对象。`consumeCPU()`方法返回`void`，因此不需要创建对象。
 
-```
+```java
 //:~ benchmark/src/main/.../ch03/benchmarks/Worker.java
 public interface Worker {
   long increment();
@@ -2191,9 +2167,9 @@ public interface Worker {
 
 列表 3.42：`Worker`。
 
-我们的 `RealWorker` 实现 `Worker`。在 `increment()` 方法中，它递增一个 `long` 类型字段并返回新值。在 `consumeCPU()` 方法中，它使用 JMH 的 `Blackhole` 类来消耗几个 CPU 周期。
+我们的`RealWorker`实现`Worker`。在`increment()`方法中，它递增一个`long`类型字段并返回新值。在`consumeCPU()`方法中，它使用 JMH 的`Blackhole`类来消耗几个 CPU 周期。
 
-```
+```java
 //:~ benchmark/src/main/.../ch03/benchmarks/RealWorker.java
 public class RealWorker implements Worker {
   private long counter = 0;
@@ -2210,9 +2186,9 @@ public class RealWorker implements Worker {
 
 列表 3.43：`RealWorker`。
 
-我们的 `ProxyWorker` 遵循代理模式并指向 `RealWorker`。
+我们的`ProxyWorker`遵循代理模式并指向`RealWorker`。
 
-```
+```java
 //:~ benchmark/src/main/.../ch03/benchmarks/ProxyWorker.java
 public class ProxyWorker implements Worker {
   private final RealWorker worker = new RealWorker();
@@ -2229,17 +2205,15 @@ public class ProxyWorker implements Worker {
 
 列表 3.44：`ProxyWorker`。
 
-在我们的 `MethodCallBenchmark` 中，有五种调用 `increment()` 和 `consumeCPU()` 的方式：
-
-*   `directCall` 直接在 `RealWorker` 实例上调用方法。
-*   `staticProxy` 调用 `ProxyWorker` 实例的方法，然后它将调用委托给 `RealWorker`。
-*   `dynamicProxyThenDirectCall` 创建 `Worker` 的动态代理，但直接委托给 `RealWorker` 的方法。
-*   `dynamicProxyThenReflectiveCall` (turbo) 是我们 `Worker` 的动态代理，它使用给定的 `method` 参数通过反射调用将方法委托给 `RealWorker` 实例。该动态代理实例经过了加速（turbo-boosted）。
-*   `dynamicProxyThenReflectiveCall` (no turbo) 与上相同，但没有加速。
 
 
+在我们的`MethodCallBenchmark`中，有五种调用`increment()`和`consumeCPU()`的方式：
 
-
+- `directCall`直接在`RealWorker`实例上调用方法。
+- `staticProxy`调用`ProxyWorker`实例的方法，然后它将调用委托给`RealWorker`。
+- `dynamicProxyThenDirectCall`创建`Worker`的动态代理，但直接委托给`RealWorker`的方法。
+- `dynamicProxyThenReflectiveCall`（turbo）是我们`Worker`的动态代理，它使用给定的`method`参数通过反射调用将方法委托给`RealWorker`实例。该动态代理实例经过了加速（turbo-boosted）。
+- `dynamicProxyThenReflectiveCall`（no turbo）与上相同，但没有加速。
 
 ```java
 //:~ benchmark/src/main/.../ch03/benchmarks/MethodCallBenchmark.java
@@ -2309,39 +2283,39 @@ public class MethodCallBenchmark {
 
 Listing 3.45: `MethodCallBenchmark`。
 
-我们的 `MethodCallBenchmark` 结果运行在配备六核 i9 的 MacBook Pro (2018) 上，使用 Java 14+36-1461 并带有吞吐量收集器。所有单位均为纳秒/操作。
+我们的`MethodCallBenchmark`结果运行在配备六核 i9 的 MacBook Pro（2018）上，使用 Java 14+36-1461 并带有吞吐量收集器。所有单位均为纳秒/操作。
 
-### `increment()` 的结果
+### `increment()`的结果
 
-我们的结果表显示，在 Java 14 中，`dynamicProxyDirectCall` 比 `staticProxy` 慢了约 1.4 纳秒。在 Java 13 中，差异大约为 2.6 纳秒，因为 `increment()` 返回的每个原始 `long` 都装箱为 `Long` 对象，每次方法调用产生 24 字节垃圾。
+我们的结果表显示，在 Java 14 中，`dynamicProxyDirectCall`比`staticProxy`慢了约 1.4 纳秒。在 Java 13 中，差异大约为 2.6 纳秒，因为`increment()`返回的每个原始`long`都装箱为`Long`对象，每次方法调用产生 24 字节垃圾。
 
-在 `dynamicProxyReflectiveCall` 中通过反射调用 `Method` 对象又增加了 3.1 纳秒，如果我们关闭睿频加速（turbo boost），该值会进一步增加 1.4 纳秒。在我们尝试过的所有 Java 版本中，`dynamicProxyReflectiveCall` 都会为返回的 Integer 为方法调用分配 24 字节。
+在`dynamicProxyReflectiveCall`中通过反射调用`Method`对象又增加了 3.1 纳秒，如果我们关闭睿频加速（turbo boost），该值会进一步增加 1.4 纳秒。在我们尝试过的所有 Java 版本中，`dynamicProxyReflectiveCall`都会为返回的`Integer`为方法调用分配 24 字节。
 
-| Benchmark 测试 `increment()` | ns/op ± 误差 |
+| Benchmark 测试`increment()` | ns/op ± 误差 |
 | :--- | :--- |
-| directCall | 1.957 ± 0.004 |
-| staticProxy | 2.369 ± 0.018 |
-| dynamicProxyDirectCall | 3.726 ± 0.016 |
-| dynamicProxyReflectiveCall (turbo) | 6.853 ± 0.201 |
-| dynamicProxyReflectiveCall (no turbo) | 8.238 ± 0.282 |
+| `directCall` | 1.957 ± 0.004 |
+| `staticProxy` | 2.369 ± 0.018 |
+| `dynamicProxyDirectCall` | 3.726 ± 0.016 |
+| `dynamicProxyReflectiveCall`（turbo） | 6.853 ± 0.201 |
+| `dynamicProxyReflectiveCall`（no turbo） | 8.238 ± 0.282 |
 
-### `consumeCPU()` 的结果
+### `consumeCPU()`的结果
 
-`consumeCPU()` 的结果接近得多，因为我们没有装箱成本。`dynamicProxyDirectCall` 比 `staticProxy` 慢约 0.7 纳秒。在 `dynamicProxyReflectiveCall` 中通过反射调用 `Method` 对象仅增加 0.8 纳秒，如果我们关闭睿频加速，这会进一步增加 1.7 纳秒。
+`consumeCPU()`的结果接近得多，因为我们没有装箱成本。`dynamicProxyDirectCall`比`staticProxy`慢约 0.7 纳秒。在`dynamicProxyReflectiveCall`中通过反射调用`Method`对象仅增加 0.8 纳秒，如果我们关闭睿频加速，这会进一步增加 1.7 纳秒。
 
-| Benchmark 测试 `consumeCPU()` | ns/op ± 误差 |
+| Benchmark 测试`consumeCPU()` | ns/op ± 误差 |
 | :--- | :--- |
-| directCall | 3.270 ± 0.028 |
-| staticProxy | 3.788 ± 0.018 |
-| dynamicProxyDirectCall | 4.461 ± 0.020 |
-| dynamicProxyReflectiveCall (turbo) | 5.231 ± 0.053 |
-| dynamicProxyReflectiveCall (no turbo) | 6.960 ± 0.409 |
+| `directCall` | 3.270 ± 0.028 |
+| `staticProxy` | 3.788 ± 0.018 |
+| `dynamicProxyDirectCall` | 4.461 ± 0.020 |
+| `dynamicProxyReflectiveCall`（turbo） | 5.231 ± 0.053 |
+| `dynamicProxyReflectiveCall`（no turbo） | 6.960 ± 0.409 |
 
 ### 基准结果总结
 
-对于 `increment()`，4.5 纳秒和对于 `consumeCPU()`，1.4 纳秒的方法调用开销在典型的业务逻辑中很少被察觉到。尽管如此，意识到方法调用开销略高是有好的，并且对于性能敏感的代码可能会避免使用动态代理，特别是当我们在密集循环中调用被代理的方法时。
+对于`increment()`，4.5 纳秒和对于`consumeCPU()`，1.4 纳秒的方法调用开销在典型的业务逻辑中很少被察觉到。尽管如此，意识到方法调用开销略高是有好的，并且对于性能敏感的代码可能会避免使用动态代理，特别是当我们在密集循环中调用被代理的方法时。
 
-# 动态装饰器 (Dynamic Decorator)
+# 动态装饰器（Dynamic Decorator）
 
 装饰器在不创建子类的情况下，动态地为对象附加额外的职责。正如我们在第 1 章中看到的，装饰器用于向裸流添加功能。在本章中，我们将看到如何创建一个动态装饰器。
 
@@ -2353,7 +2327,7 @@ Listing 3.45: `MethodCallBenchmark`。
 
 图 10. 装饰器结构。
 
-装饰器也被称为过滤器（filter）。在我看来，装饰器是“添加”，而过滤器是“取走”。如果我们想要一个真正的不可变集合，可以创建一个不包含任何变器方法的过滤器接口。以列表 4.1 中的 `ImmutableIterable` 为例。在其中，我们去掉了 `iterator()` 方法，因为 `Iterator` 包含了 `remove()` 方法。我们当然可以让 `iterator()` 方法返回一个 `ImmutableIterator`，但我将此留给读者作为练习。
+装饰器也被称为过滤器（filter）。在我看来，装饰器是“添加”，而过滤器是“取走”。如果我们想要一个真正的不可变集合，可以创建一个不包含任何变器方法的过滤器接口。以列表 4.1 中的`ImmutableIterable`为例。在其中，我们去掉了`iterator()`方法，因为`Iterator`包含了`remove()`方法。我们当然可以让`iterator()`方法返回一个`ImmutableIterator`，但我将此留给读者作为练习。
 
 ```java
 //:~ core/src/main/...ch04/immutablecollection/ImmutableIterable.java
@@ -2365,9 +2339,10 @@ public interface ImmutableIterable<E> {
   //    Iterator<E> iterator();
 }
 ```
-列表 4.1: `ImmutableIterable`。
 
-我们的 `ImmutableCollection` 还过滤掉了任何可能更改集合的方法。我们添加了一个默认方法 `printAll()`。动态代理实现了接口的所有公共方法，甚至是默认方法。在 Java 中，可以在子类中使用 `super` 关键字调用父类方法，但从外部无法这样做。例如，当类重写了 `hashCode()` 时，该类的用户无法调用默认的 `Object.hashCode()` 方法。由于这个原因，Java 提供了 `System.identityHashCode()`，以防我们需要生成与 `Object.hashCode()` 相同的哈希值。这让我们遇到了麻烦。如果该方法没有在生成的动态代理中被重写，我们可以调用默认方法，它将引导我们进入方法。幸运的是有一种技巧允许我们在接口上调用默认方法，我们在查看 `VTable` 时会看到。
+列表 4.1：`ImmutableIterable`。
+
+我们的`ImmutableCollection`还过滤掉了任何可能更改集合的方法。我们添加了一个默认方法`printAll()`。动态代理实现了接口的所有公共方法，甚至是默认方法。在 Java 中，可以在子类中使用`super`关键字调用父类方法，但从外部无法这样做。例如，当类重写了`hashCode()`时，该类的用户无法调用默认的`Object.hashCode()`方法。由于这个原因，Java 提供了`System.identityHashCode()`，以防我们需要生成与`Object.hashCode()`相同的哈希值。这让我们遇到了麻烦。如果该方法没有在生成的动态代理中被重写，我们可以调用默认方法，它将引导我们进入方法。幸运的是有一种技巧允许我们在接口上调用默认方法，我们在查看`VTable`时会看到。
 
 ```java
 //:~ core/src/main/...ch04/immutablecollection/ImmutableCollection.java
@@ -2398,13 +2373,10 @@ public interface ImmutableCollection<E>
   //    void clear();
 }
 ```
-列表 4.2: `ImmutableCollection`。
 
-为了展示如何使用它来过滤现有集合，让我们编写 `HandcodedFilter`。`ImmutableCollection` 内部的每个方法都委托给封装的 `Collection`。你可能会同意编写这样的代码相当平庸。
+列表 4.2：`ImmutableCollection`。
 
-
-
-
+为了展示如何使用它来过滤现有集合，让我们编写`HandcodedFilter`。`ImmutableCollection`内部的每个方法都委托给封装的`Collection`。你可能会同意编写这样的代码相当平庸。
 
 ```java
 //:~ core/src/main/.../ch04/immutablecollection/HandcodedFilter.java
@@ -2465,7 +2437,7 @@ public class HandcodedFilter<E>
 
 Listing 4.3：`HandcodedFilter`。
 
-以下是如何使用 `HandcodedFilter` 来过滤掉我们不需要支持的方法。
+以下是如何使用`HandcodedFilter`来过滤掉我们不需要支持的方法。
 
 ```java
 //:~ core/src/main/.../ch04/immutablecollection/HandcodedFilterDemo.java
@@ -2499,9 +2471,11 @@ Peter
 Mary
 ```
 
-Listing 4.5：来自 `HandcodedFilter` 的输出。
+Listing 4.5：来自`HandcodedFilter`的输出。
 
 ## 使用动态代理实现过滤器
+
+
 
 与其手动编写装饰器（decorator），我们可以使用 Java 的动态代理（dynamic proxy）来创建一个装饰器。我们的规则如下：
 
@@ -2577,7 +2551,7 @@ Class: Proxy0
 
 Listing 4.9：来自 `DynamicFilter` 的输出。
 
-## InfiniteRandomDouble 装饰器
+## `InfiniteRandomDouble` 装饰器
 
 假设我们希望生成无限的 `Double` 实例，因此我们在 Listing 4.10 中编写了 `InfiniteRandomDouble` 类。
 
@@ -2629,11 +2603,7 @@ public class DefaultMethodCallDemo {
 }
 ```
 
-Listing 4.11：`DefaultMethodCallDemo`。在没有 `--add-opens` 参数的情况下运行会抛出 `IllegalArgumentException`，因为默认方法 `remove()` 和 `forEachRemaining()` 只有在 `.java.util` 包开放时才能被包含。
-
-
-
-
+Listing 4.11：`DefaultMethodCallDemo`。在没有 `--add-opens` 参数的情况下运行会抛出 `IllegalArgumentException`，因为默认方法 `remove()` 和 `forEachRemaining()` 只有在 `java.util` 包开放时才能被包含。
 
 ```
 Exception in thread "main" java.lang.IllegalArgumentException: \
@@ -2681,13 +2651,13 @@ Listing 4.13：使用 `--add-opens` 时的 `DynamicFilterDemo` 输出。
 
 匹配方法时的一个巨大成本是调用 `getParameterTypes()`，它在每次调用时都会克隆内部的 `Class<?>[]`。`ParameterTypesFetcher` 让我们能够直接访问内部的数组。我们可以通过 JVM 参数 `-Deu.javaspecialists.books.dynamicproxies.util.ParameterTypesFetcher.enabled=true` 来启用此性能优化。
 
-我们使用[策略设计模式](https://javaspecialists.teachable.com/p/dpc5) 来决定如何返回参数类型。当 `ParameterTypesFetcher` 类加载时，我们将 `PARAMETER_FETCHER` 绑定到正确的策略类型。由于我们在一个 JVM 内只使用一种策略，HotSpot 编译器可以激进地优化这些方法，可能内联代码从而消除方法调用开销。
+我们使用[策略设计模式](https://javaspecialists.teachable.com/p/dpc5)来决定如何返回参数类型。当 `ParameterTypesFetcher` 类加载时，我们将 `PARAMETER_FETCHER` 绑定到正确的策略类型。由于我们在一个 JVM 内只使用一种策略，HotSpot 编译器可以激进地优化这些方法，可能内联代码从而消除方法调用开销。
 
 ```java
 //:~ core/src/main/.../util/ParameterTypesFetcher.java
 /**
  * 默认禁用快速获取参数类型数组，
- *可以通过以下方式启用：
+ * 可以通过以下方式启用：
  * -Deu.javaspecialists.books.dynamicproxies.util. \
  * ParameterTypesFetcher.enabled=true
  */
@@ -2744,6 +2714,7 @@ public final class ParameterTypesFetcher {
         // 异常处理
       }
     }
+
     @Override
     public Class<?>[] getParameterTypes(Method method) {
       return (Class<?>[]) METHOD_PARAMETER_TYPES.get(method);
@@ -2757,6 +2728,8 @@ Listing 4.14：`ParameterTypesFetcher`。
 ### `MethodKey`
 
 `MethodKey` 在 4.15 中根据名称和参数类型比较方法对象。
+
+
 
 ```java
 //:~ core/src/main/.../util/MethodKey.java
@@ -2843,14 +2816,9 @@ Listing 4.15：`MethodKey`。`VTable` 和 `VTable.Builder`
 
 `VTable` 创建了一个自定义哈希表，根据名称和参数类型查找方法。普通方法使用 `lookup(Method)` 查找，而默认接口方法则使用 `lookupDefaultMethod(Method)` 查找。
 
-
-
-
-
 我们使用 `VTable.Builder` 创建 `VTable` 实例，并参考了 [Effective Java](https://www.oreilly.com/library/view/effective-java-3rd/9780134686097/) 中的构建器模式。
 
 更多的注释已在 `VTable` 源码中。我鼓励你花一点时间阅读这些代码，但如果你觉得太困难，也可以先跳过，稍后再回来。
-
 
 
 
@@ -3173,13 +3141,13 @@ public final class VTable {
 
 
 
-Listing 4.16: `VTable` 和 `VTable.Builder`。
+## 列表 4.16：`VTable` 和 `VTable.Builder`
 
-### `VTables` Fac 面
+### `VTables` Facade
 
-`VTable` 最常见的用例是映射无关接口之间的方法，以及映射默认接口方法。我们的 `VTables` Fac 面包含了静态工厂方法，用于构建此类 `VTable` 实例。
+`VTable` 最常见的用例是映射无关接口之间的方法，以及映射默认接口方法。我们的 `VTables` Facade 包含了静态工厂方法，用于构建此类 `VTable` 实例。
 
-```
+```java
 //:~ core/src/main/.../util/VTables.java
 public final class VTables {
   private VTables() {}
@@ -3214,11 +3182,11 @@ public final class VTables {
 }
 ```
 
-Listing 4.17: `VTables` Fac 面。
+列表 4.17：`VTables` Facade。
 
 例如，为了在 `List` 和 `ArrayDeque` 之间建立一个 `VTable`，我们只需编写列表 4.18 中的代码即可。
 
-```
+```java
 //:~ core/src/test/.../util/VTablesDemo.java
 public class VTablesDemo {
   public static void main(String... args) {
@@ -3228,11 +3196,11 @@ public class VTablesDemo {
 }
 ```
 
-Listing 4.18: `VTablesDemo`。
+列表 4.18：`VTablesDemo`。
 
 输出显示了 `ArrayDeque` 中同样出现在 `List` 中的所有方法。
 
-```
+```text
 public boolean java.util.ArrayDeque.add(java.lang.Object)
 public boolean java.util.ArrayDeque.isEmpty()
 public int java.util.ArrayDeque.size()
@@ -3244,7 +3212,7 @@ public void java.util.ArrayDeque.clear()
 etc.
 ```
 
-Listing 4.19: `VTablesDemo` 的输出。
+列表 4.19：`VTablesDemo` 的输出。
 
 ### `ChainedInvocationHandler`
 
@@ -3252,15 +3220,15 @@ Listing 4.19: `VTablesDemo` 的输出。
 
 我们的 `ChainedInvocationHandler` 是该模式中的根处理器。除了将请求传递给链中的下一个处理器外，如果没有发现合适的方法，它还会抛出一个 `AssertionError`。我们鼓励此类的用户在链链后调用 `checkAllMethodsAreHandled(Class<?>… targets)`，以验证该链能够处理目标接口中的所有方法。
 
-```
+```java
 //:~ core/src/main/.../util/chain/ChainedInvocationHandler.java
 /**
  * 用于调用处理器的责任链设计模式。
  * invoke 方法默认将调用传递给
  * 链中的下一个元素。如果没有人可以处理
-该调用，
+ * 该调用，
  * 那么就会抛出 AssertionError。一旦构建了完整的链，
- * 我们应该通过调用 #checkAllMethodsAreHandled(targets) 
+ * 我们应该通过调用 #checkAllMethodsAreHandled(targets)
  * 检查目标接口中的所有方法是否都能被我们的链所处理。
  */
 public abstract class ChainedInvocationHandler
@@ -3285,17 +3253,17 @@ public abstract class ChainedInvocationHandler
    * 在一切设置完成后，应在链的第一个节点上调用。
    * 如果任何方法未被我们的链处理，则抛出 IllegalArgumentException。
    *
-   * @throws UnhandledMethodException 如果 targets 中的任何方法 
-   *                                  都未被链 
+   * @throws UnhandledMethodException 如果 targets 中的任何方法
+   *                                  都未被链
    *                                  处理的
-   * @throws IllegalArgumentException 如果目标之一 
+   * @throws IllegalArgumentException 如果目标之一
    *                                  不是接口
    */
   public void checkAllMethodsAreHandled(Class<?>... targets) {
-        if (Stream.of(targets)
-            .anyMatch(Predicate.not(Class::isInterface)))
-          throw new IllegalArgumentException(
-              "target classes must be interfaces");
+    if (Stream.of(targets)
+        .anyMatch(Predicate.not(Class::isInterface)))
+      throw new IllegalArgumentException(
+          "target classes must be interfaces");
     Collection<Method> unhandled =
         findUnhandledMethods(targets)
             .collect(Collectors.toList());
@@ -3320,35 +3288,38 @@ public abstract class ChainedInvocationHandler
 }
 ```
 
-Listing 4.20: `ChainedInvocationHandler`。
+列表 4.20：`ChainedInvocationHandler`。
 
 我们还定义了一个名为 `UnhandledMethodException` 的新异常，如 4.21 所示。它是 `IllegalArgumentException` 的特殊类型，只能在 `chain` 包内实例化。
 
-```
+```java
 //:~ core/src/main/.../util/chain/UnhandledMethodException.java
 public final class UnhandledMethodException
     extends IllegalArgumentException {
   private final Collection<Method> unhandled;
+
   UnhandledMethodException(Collection<Method> unhandled) {
     super("Unhandled methods: " + unhandled);
     this.unhandled = List.copyOf(unhandled);
   }
+
   public Collection<Method> getUnhandled() {
     return unhandled;
   }
 }
 ```
 
-Listing 4.21: `UnhandledMethodException`。
+列表 4.21：`UnhandledMethodException`。
 
 我们的 `VTableHandler` 接收参数：用于调用方法的 `receiver` 对象、用于将目标接口方法映射到接收器类的 `vtable`，以及链中的 `next` 链接。
 
-```
+```java
 //:~ core/src/main/.../util/chain/VTableHandler.java
 public final class VTableHandler
     extends ChainedInvocationHandler {
   private final VTable vtable;
   private final Object receiver;
+
   public VTableHandler(Object receiver, VTable vtable,
                        ChainedInvocationHandler next) {
     super(next);
@@ -3373,9 +3344,7 @@ public final class VTableHandler
 }
 ```
 
-Listing 4.22: `VTableHandler`。
-
-
+列表 4.22：`VTableHandler`。
 
 默认接口方法的调用方式略有不同。它们不是在接收者对象上调用的，而是在传入 `invoke()` 方法的 `proxy` 参数上调用的。因此，我们的 `VTableDefaultMethodsHandler` 仅通过查找默认接口方法的 `vtable` 和链中的 `next` 处理器来构建。很有可能，这个处理器将是链中的最后一个。
 
@@ -3388,6 +3357,7 @@ Listing 4.22: `VTableHandler`。
 public final class VTableDefaultMethodsHandler
     extends ChainedInvocationHandler {
   private final VTable vtable;
+
   public VTableDefaultMethodsHandler(
       VTable vtable, ChainedInvocationHandler next) {
     super(next);
@@ -3414,17 +3384,19 @@ public final class VTableDefaultMethodsHandler
 }
 ```
 
-列表 4.23: `VTableDefaultMethodsHandler`。
+列表 4.23：`VTableDefaultMethodsHandler`。
 
 细心的读者会注意到，之前的两个类看起来非常相似。为了好玩，我们使用泛型和 lambda 将这两种查找方法统一为了一个。它行得通，但在书中解释起来会更具挑战性。代码位于我们 GitHub 上 [dynamic-proxies-samples](https://github.com/kabutz/dynamic-proxies-samples) 仓库的 `core/src/test/…​/util/chain` 包中。
 
 # 动态对象适配器
 
-## Rapper 包装器 (Rapper wrappers)
+## Rapper 包装器（Rapper wrappers）
 
 想象一个歌手的类层次结构：低音、男中音和高音。他们都属于一个合唱团。
 
-Cacophony 是希腊语，意为“难听的声音”。![歌手](img/Singers.jpg)
+Cacophony 是希腊语，意为“难听的声音”。
+
+![歌手](img/Singers.jpg)
 
 现在想象一个 rapper 站在合唱团旁边，显得孤孤伶单。这个 rapper 想要加入合唱团，但不能。只允许歌手，抱歉。
 
@@ -3436,23 +3408,25 @@ Cacophony 是希腊语，意为“难听的声音”。![歌手](img/Singers.jpg
 
 但让我们暂时抛开对说唱音乐质量的感受。我们同时也假设我们无法更改 `Rapper` 类。
 
-### 类适配器模式 (Class adapter pattern)
+### 类适配器模式（Class adapter pattern）
 
-创建 rapper 包装器最简单的方法是使用类适配器模式。我们创建一个实现 `Singer` 并扩展 `Rapper` 的 `SingingRapper`。在 `sing()` 方法中，我们调用 `talk()`。
+
+
+创建 `rapper` 包装器最简单的方法是使用类适配器模式。我们创建一个实现 `Singer` 并扩展 `Rapper` 的 `SingingRapper`。在 `sing()` 方法中，我们调用 `talk()`。
 
 ![SingingRapperClassAdapter](img/SingingRapperClassAdapter.png)
 
-图 12。一个会唱歌会说话的 rapper。
+图 12。一个会唱歌会说话的 `rapper`。
 
-我们的 `SingingRapper` 扩展了 `Rapper`，使其既是 rapper 又是歌手。如果只有一种 `Rapper` 类型，这种方法运行良好，但 rapper 类型的列表似乎是无尽的：东海岸、西海岸、boom bap、drill、emo rap、mumble rap、gangsta、trap……列表没完没了。看起来是一个很好的低代码解决方案，结果发现需要几十个类似的类，每种独特的 rap 风格一个类。
+我们的 `SingingRapper` 扩展了 `Rapper`，使其既是 `rapper` 又是歌手。如果只有一种 `Rapper` 类型，这种方法运行良好，但 `rapper` 类型的列表似乎是无尽的：东海岸、西海岸、boom bap、drill、emo rap、mumble rap、gangsta、trap……列表没完没了。看起来是一个很好的低代码解决方案，结果发现需要几十个类似的类，每种独特的 rap 风格一个类。
 
 ### 对象适配器模式 (Object adapter pattern)
 
-对象适配器模式将 rapper 作为构造函数参数，并将 `sing()` 方法委托给其 rapper 的 `talk()` 方法。我们可以接受任何 `Rapper` 的子类作为参数，甚至是 `MumbleRapper`。我们的 rapper 包装器现在实现了 `Singer`，但没有扩展 `Rapper`，所以它不是 rapper。我们可以调用 `sing()`，但 `talk()` 不再可见了。
+对象适配器模式将 `rapper` 作为构造函数参数，并将 `sing()` 方法委托给其 `rapper` 的 `talk()` 方法。我们可以接受任何 `Rapper` 的子类作为参数，甚至是 `MumbleRapper`。我们的 `rapper` 包装器现在实现了 `Singer`，但没有扩展 `Rapper`，所以它不是 `rapper`。我们可以调用 `sing()`，但 `talk()` 不再可见了。
 
 ![SingingRapperObjectAdapter](img/SingingRapperObjectAdapter.png)
 
-图 13。将 rapper 变成歌手。
+图 13。将 `rapper` 变成歌手。
 
 对象适配器模式似乎是两者中更好的选择。但如果 `Rapper` 和 `Singer` 许多许多共同方法，例如 `clap()`、`bow()` 和 `dance()` 呢？使用类适配器模式时，我们只需要实现 `sing()` 方法。而对象适配器模式则要求我们委托所有方法。当目标接口非常丰富时，这可能会变得繁琐。
 
@@ -3542,9 +3516,6 @@ public interface BetterCollection<E> extends Collection<E> {
 列表 5.4: `BetterCollection`。
 
 使用类适配器时生活是美好的。为了制作一个更好的 `ConcurrentSkipListSet`，我们可以扩展这个类并实现 `BetterCollection`。代码看起来与 `BetterArrayList` 相似。
-
-
-
 
 ```java
 //:~ core/src/main/.../ch05/bettercollection/BetterConcurrentSkipListSet.java
@@ -3711,10 +3682,14 @@ Listing 5.8: `BetterCollectionObjectAdapterDemo` 的输出。
 如之前，代理和适配对象的类结构是相似的。我们可以创建一个动态适配器吗？我们动态适配器的静态工厂方法接收以下内容：
 
 - `Class<E> target` 是我们想要适配的接口类。例如，`BetterCollection`。
+
 - `Object adaptee` 是我们接口想要包装的对象。例如，`ArrayList<String>`。
+
 - `Object adapter` 是应该使用的对象。
 
 我们的 `ObjectAdapterHandler` 为适配器、适配对象和默认方法创建 `VTables`，并将它们排列成链。
+
+
 
 ```java
 //:~ core/src/main/.../handlers/ObjectAdapterHandler.java
@@ -3745,7 +3720,7 @@ public final class ObjectAdapterHandler
 }
 ```
 
-Listing 5.9: `ObjectAdapterHandler`。
+列表 5.9：`ObjectAdapterHandler`。
 
 我们在无处不在的 `Proxies` 类中添加另一个静态工厂方法，它将根据上面的 `InvocationHandler` 创建对象适配器。
 
@@ -3761,13 +3736,9 @@ public static <T> T adapt(Class<? super T> target,
 }
 ```
 
-Listing 5.10: `Proxies.adapt()`。
+列表 5.10：`Proxies.adapt()`。
 
 例如，为了创建一个 `BetterCollectionFactory`，我们可以制作适配器，它在 `toArray()` 方法中首先创建正确类型的数组。然后它修改 `add()` 函数以验证对象的类型是否正确，类似于 `Collections.checkedCollection()` 的工作方式。
-
-
-
-
 
 ```java
 //:~ core/src/main/.../ch05/bettercollection/BetterCollectionFactory.java
@@ -3958,8 +3929,6 @@ public class AdapterPuzzle2 {
 
 
 
-
-
 ```java
 //:~ benchmark/src/main/.../ch05/benchmarks/AdapterBenchmark.java
 @Fork(value = 3, jvmArgsAppend = {"-XX:+UseParallelGC",
@@ -4087,9 +4056,9 @@ public class AdapterBenchmark {
 }
 ```
 
-列表 5.16: `AdapterBenchmark`。
+列表 5.16：`AdapterBenchmark`。
 
-这些结果是在一台配备六核 i9 的 MacBook Pro (2018) 上运行 Java 14+36-1461 的 `AdapterBenchmark` 得到的。时间单位为每次操作纳秒（ns/op），内存分配单位为每次操作字节（B/op），通过使用 `-XX:+/-DoEscapeAnalysis` JVM 参数开启或关闭了逃逸分析。`ParameterTypesFetcher` 和 `MethodTurboBooster` 均已启用。
+这些结果是在一台配备六核 i9 的 MacBook Pro（2018）上运行 Java 14+36-1461 的 `AdapterBenchmark` 得到的。时间单位为每次操作纳秒（ns/op），内存分配单位为每次操作字节（B/op），通过使用 `-XX:+/-DoEscapeAnalysis` JVM 参数开启或关闭了逃逸分析。`ParameterTypesFetcher` 和 `MethodTurboBooster` 均已启用。
 
 ### `size()` 的性能
 
@@ -4130,13 +4099,9 @@ public class AdapterBenchmark {
 | objectAdapterForEach() | 16.768 ± 0.047 | 0 / 32 |
 | dynamicObjectAdapterForEach() | 42.431 ± 0.262 | 56 / 56 |
 
-
-
-
-
 当我们使用动态代理时，由于参数数组、装箱的返回值以及逃逸分析不如直接调用那样有效，我们还可能会获得更高的对象分配率。
 
-# 动态组合 (Dynamic Composite)
+# 动态组合（Dynamic Composite）
 
 我们使用组合设计模式来创建对象的组合。一个示例是包含文件、符号链接和其他目录的目录结构。ZIP 文件也被视为一个组合，它包含目录、文件甚至是其他 ZIP 文件。我们还在 GUI 框架中看到这种模式的应用，面板可以包含按钮、标签、文本字段或其他面板。
 
@@ -4152,7 +4117,7 @@ GoF 的组合模式结构如图 14 所示。
 
 ## 联系人、个人和分发列表
 
-Java 最早的动态代理教程之一发表在 [The Java Specialists' Newsletter](https://www.javaspecialists.eu/archive/Issue005.html) 中，通过电子邮件发送。该通讯报最初有 80 个联系人，我在 Microsoft Outlook 中为他们创建了一个分发列表。为了减少垃圾邮件，Microsoft Outlook 限制了单个分发列表中的联系人数量。一旦订阅人数达到限制，我就创建了分发列表的组合。
+Java 最早的动态代理教程之一发表在[The Java Specialists' Newsletter](https://www.javaspecialists.eu/archive/Issue005.html)中，通过电子邮件发送。该通讯报最初有 80 个联系人，我在 Microsoft Outlook 中为他们创建了一个分发列表。为了减少垃圾邮件，Microsoft Outlook 限制了单个分发列表中的联系人数量。一旦订阅人数达到限制，我就创建了分发列表的组合。
 
 我们新的 `Contact` 示例结构如图 15 所示。
 
@@ -4171,7 +4136,8 @@ public interface Contact {
   int count();
 }
 ```
-列表 6.2：Contact 接口。
+
+列表 6.2：`Contact` 接口。
 
 `Person` 是我们的垃圾邮件受害者。
 
@@ -4193,9 +4159,12 @@ public class Person implements Contact {
   }
 }
 ```
-列表 6.3：Person 类。
+
+列表 6.3：`Person` 类。
 
 我们的 `DistributionList` 是我们的组合类，由 `Contact` 实例组成。由于 `DistributionList` 本身也是 `Contact`，它不仅可以包含 `Person` 实例，还可以包含其他 `DistributionList` 对象。`sendMail()` 递归地向列表中的所有联系人发送垃圾邮件。`count()` 是我们包含的所有叶子节点之和。
+
+
 
 ```java
 //:~ core/src/main/.../ch06/contact/DistributionList.java
@@ -4208,160 +4177,49 @@ public class DistributionList implements Contact {
   public boolean add(Contact c) {
     return contacts.add(c);
   }
+
   @Override
   public boolean remove(Contact c) {
     return contacts.remove(c);
   }
+
   @Override
   public void sendMail(String body) {
     contacts.forEach(contact -> contact.sendMail(body));
   }
+
   @Override
   public int count() {
     return contacts.stream().mapToInt(Contact::count).sum();
   }
 }
 ```
-列表 6.4：DistributionList 类。
+
+列表 6.4：`DistributionList` 类。
 
 现在我们已经看到了 `Contact` 如何与 `Person` 和 `DistributionList` 关联，是时候看一个示例了。
 
 ```java
 //:~ core/src/main/.../ch06/contact/ContactDemo.java
+
 Contact javaSpecialistsNewsletter = new DistributionList();
+
 System.out.println(javaSpecialistsNewsletter.count());
+
 javaSpecialistsNewsletter.add(new Person("john@aol.com"));
+
 javaSpecialistsNewsletter.sendMail("Hello there 1");
+
 System.out.println(javaSpecialistsNewsletter.count());
 
 Contact allStudents = new DistributionList();
+
 allStudents.add(new Person("peter@absa.co.za"));
+
 allStudents.add(new Person("mzani@absa.co.za"));
-javaSpecialistsNewsletter.sendMail("Hello there 1"); // 注意：此处原文逻辑似乎有重复，按原文保留
-// 修正：遵循原文文本内容
-javaSpecialistsNewsletter.sendMail("Hello there 1"); 
-// 重新根据原文提供的代码块对齐：
-Contact javaSpecialistsNewsletter = new DistributionList();
-System.out.println(javaSpecialistsNewsletter.count());
-javaSpecialistsNewsletter.add(new Person("john@aol.com"));
-javaSpecialistsNewsletter.sendMail("Hello there 1");
-System.out.println(javaSpecialistsNewsletter.count());
 
-Contact allStudents = new DistributionList();
-allStudents.add(new Person("peter@absa.co.za"));
-allStudents.add(new Person("mzani@absa.co.za"));
-javaSpecialistsNewsletter.sendMail("Hello there 1"); // 此处原文代码块逻辑较乱，按原样翻译
-
-// 重新重新对齐原文代码块内容：
-```java
-//:~ core/src/main/.../ch06/contact/ContactDemo.java
-Contact javaSpecialistsNewsletter = new DistributionList();
-System.out.println(javaSpecialistsNewsletter.count());
-javaSpecialistsNewsletter.add(new Person("john@aol.com"));
-javaSpecialistsNewsletter.sendMail("Hello there 1");
-System.out.println(javaSpecialistsNewsletter.count());
-
-Contact allStudents = new DistributionList();
-allStudents.add(new Person("peter@absa.co.za"));
-allStudents.add(new Person("mzani@absa.co.za"));
-javaSpecialistsNewsletter.sendMail("Hello there 1"); // 原文此处可能有逻辑跳转，但按字符翻译
-```
-(注：由于原文代码块较复杂，以下为对应翻译内容)
-
-```java
-//:~ core/src/main/.../ch06/contact/ContactDemo.java
-Contact javaSpecialistsNewsletter = new DistributionList();
-System.out.println(javaSpecialistsNewsletter.count());
-javaSpecialistsNewsletter.add(new Person("john@aol.com"));
-javaSpecialistsNewsletter.sendMail("Hello there 1");
-System.out.println(javaSpecialistsNewsletter.count());
-
-Contact allStudents = new DistributionList();
-allStudents.add(new Person("peter@absa.co.za"));
-allStudents.add(new Person("mzani@absa.co.za"));
-javaSpecialistsNewsletter.sendMail("Hello there 1"); 
-```
-*纠正：直接翻译原文提供的代码块内容：*
-
-```java
-//:~ core/src/main/.../ch06/contact/ContactDemo.java
-Contact javaSpecialistsNewsletter = new DistributionList();
-System.out.println(javaSpecialistsNewsletter.count());
-javaSpecialistsNewsletter.add(new Person("john@aol.com"));
-javaSpecialistsNewsletter.sendMail("Hello there 1");
-System.out.println(javaSpecialistsNewsletter.count());
-
-Contact allStudents = new DistributionList();
-allStudents.add(new Person("peter@absa.co.za"));
-allStudents.add(new Person("mzani@absa.co.za"));
 javaSpecialistsNewsletter.sendMail("Hello there 1");
 ```
-(由于原文示例代码块中存在重复和混乱，以下严格按照原文文本进行翻译)
-
-```java
-//:~ core/src/main/.../ch06/contact/ContactDemo.java
-Contact javaSpecialistsNewsletter = new DistributionList();
-System.out.println(javaSpecialistsNewsletter.count());
-javaSpecialistsNewsletter.add(new Person("john@aol.com"));
-javaSpecialistsNewsletter.sendMail("Hello there 1");
-System.out.println(javaSpecialistsNewsletter.count());
-
-Contact allStudents = new DistributionList();
-allStudents.add(new Person("peter@absa.co.za"));
-allStudents.add(new Person("mzani@absa.co.za"));
-javaSpecialistsNewsletter.sendMail("Hello there 1");
-```
-*Wait, 重新审视原文代码块，这里是更准确的翻译对应：*
-
-```java
-//:~ core/src/main/.../ch06/contact/ContactDemo.java
-Contact javaSpecialistsNewsletter = new DistributionList();
-System.out.println(javaSpecialistsNewsletter.count());
-javaSpecialistsNewsletter.add(new Person("john@aol.com"));
-javaSpecialistsNewsletter.sendMail("Hello there 1");
-System.out.println(javaSpecialistsNewsletter.count());
-
-Contact allStudents = new DistributionList();
-allStudents.add(new Person("peter@absa.co.za"));
-allStudents.add(new Person("mzani@absa.co.za"));
-javaSpecialistsNewsletter.sendMail("Hello there 1");
-```
-(实际上，原文的示例代码块非常杂乱，我将提供最接近原文文本的翻译版本)
-
-```java
-//:~ core/src/main/.../ch06/contact/ContactDemo.java
-Contact javaSpecialistsNewsletter = new DistributionList();
-System.out.println(javaSpecialistsNewsletter.count());
-javaSpecialistsNewsletter.add(new Person("john@aol.com"));
-javaSpecialistsNewsletter.sendMail("Hello there 1");
-System.out.println(javaSpecialistsNewsletter.count());
-
-Contact allStudents = new DistributionList();
-allStudents.add(new Person("peter@absa.co.za"));
-allStudents.add(new Person("mzani@absa.co.za"));
-javaSpecialistsNewsletter.sendMail("Hello there 1");
-```
-(由于代码块不需要翻译，我将保持其结构)
-
-*实际上，原文中的代码块是：*
-```java
-//:~ core/src/main/.../ch06/contact/ContactDemo.java
-Contact javaSpecialistsNewsletter = new DistributionList();
-System.out.println(javaSpecialistsNewsletter.count());
-javaSpecialistsNewsletter.add(new Person("john@aol.com"));
-javaSpecialistsNewsletter.sendMail("Hello there 1");
-System.out.println(javaSpecialistsNewsletter.count());
-
-Contact allStudents = new DistributionList();
-allStudents.add(new Person("peter@absa.co.za"));
-allStudents.add(new Person("mzani@absa.co.za"));
-javaSpecialistsNewsletter.sendMail("Hello there 1");
-```
-(这里我将跳过代码翻译，直接翻译描述文字)
-
-现在我们已经看到了 `Contact` 如何与 `Person` 和 `DistributionList` 关联，是时候看一个示例了。
-
-(代码块保持不变)
 
 列表 6.5：创建组合结构。
 
@@ -4369,21 +4227,29 @@ javaSpecialistsNewsletter.sendMail("Hello there 1");
 
 ![ContactObject](img/ContactObjectExample.png)
 
-图 16。ContactDemo 对象图。
+图 16。`ContactDemo` 对象图。
 
 当我们运行这个程序时，我们看到如下输出。
 
-```
+```text
 0
+
 1
+
 Sending Hello there 1 to john@aol.com
+
 1
+
 2
+
 Sending Hello there 1 to peter@absa.co.za
+
 Sending Hello there 1 to mzani@absa.co.za
+
 3
 ```
-列表 6.6：ContactDemo 输出。
+
+列表 6.6：`ContactDemo` 输出。
 
 ## 为组合破解动态代理
 
@@ -4397,39 +4263,50 @@ Sending Hello there 1 to mzani@absa.co.za
 
 ```java
 //:~ core/src/main/.../handlers/BaseComponent.java
+
 public interface BaseComponent<T> {
+
   default boolean add(T t) { return false; }
+
   default boolean remove(T t) { return false; }
+
 }
 ```
-列表 6.7：BaseComponent 接口。
+
+列表 6.7：`BaseComponent` 接口。
 
 我们进一步让 `Contact` 扩展 `BaseComponent<Contact>`，继承 `add()` 和 `remove()` 方法。
 
 ```java
 //:~ core/src/main/.../ch06/contactdynamic/Contact.java
+
 public interface Contact extends BaseComponent<Contact> {
+
   void sendMail(String body);
+
   int count();
+
 }
 ```
+
+
+
+
+```text
 列表 6.8：Contact 接口。
 
 我们的 `Contact` 扩展 `BaseComponent<Contact>`，如图 17 所示。
 
 ![ContactDynamicExample](img/ContactDynamicExample.png)
 
-图 17。Contact 扩展 BaseComponent。
+图 17。Contact 扩展 `BaseComponent`。
+```
 
-[/content] (抱歉，由于在处理代码块时出现了重复混乱，以下是整理后的、干净的翻译版本)
-
----
-
-[content]
+（抱歉，由于在处理代码块时出现了重复混乱，以下是整理后的、干净的翻译版本）
 
 当我们使用动态代理时，我们还可能会获得更高的对象分配率，由于参数数组、装箱的返回值以及逃逸分析不如直接调用那样有效。
 
-# 动态组合 (Dynamic Composite)
+# 动态组合（Dynamic Composite）
 
 我们使用组合设计模式来创建对象的组合。一个示例是包含文件、符号链接和其他目录的目录结构。ZIP 文件也被视为一个组合，它包含目录、文件甚至是其他 ZIP 文件。我们还在 GUI 框架中看到这种模式的应用，面板可以包含按钮、标签、文本字段或其他面板。
 
@@ -4445,7 +4322,7 @@ GoF 的组合模式结构如图 14 所示。
 
 ## 联系人、个人和分发列表
 
-Java 最早的动态代理教程之一发表在 [The Java Specialists' Newsletter](https://www.javaspecialists.eu/archive/Issue005.html) 中，通过电子邮件发送。该通讯报最初有 80 个联系人，我在 Microsoft Outlook 中为他们创建了一个分发列表。为了减少垃圾邮件，Microsoft Outlook 限制了单个分发列表中的联系人数量。一旦订阅人数达到限制，我就创建了分发列表的组合。
+Java 最早的动态代理教程之一发表在[The Java Specialists' Newsletter](https://www.javaspecialists.eu/archive/Issue005.html)中，通过电子邮件发送。该通讯报最初有 80 个联系人，我在 Microsoft Outlook 中为他们创建了一个分发列表。为了减少垃圾邮件，Microsoft Outlook 限制了单个分发列表中的联系人数量。一旦订阅人数达到限制，我就创建了分发列表的组合。
 
 我们新的 `Contact` 示例结构如图 15 所示。
 
@@ -4457,13 +4334,20 @@ Java 最早的动态代理教程之一发表在 [The Java Specialists' Newslette
 
 ```java
 //:~ core/src/main/.../ch06/contact/Contact.java
+
 public interface Contact {
+
   default boolean add(Contact c) { return false; }
+
   default boolean remove(Contact c) { return false; }
+
   void sendMail(String body);
+
   int count();
+
 }
 ```
+
 列表 6.2：Contact 接口。
 
 `Person` 是我们的垃圾邮件受害者。
@@ -4472,81 +4356,127 @@ public interface Contact {
 
 ```java
 //:~ core/src/main/.../ch06/contact/Person.java
+
 public class Person implements Contact {
+
   private final String email;
+
   public Person(String email) {this.email = email;}
+
   @Override
+
   public void sendMail(String body) {
+
     // connecting to JavaMail and off it goes ...
+
     System.out.println("Sending " + body + " to " + email);
+
   }
+
   @Override
+
   public int count() {
+
     return 1;
+
   }
+
 }
 ```
+
 列表 6.3：Person 类。
 
 我们的 `DistributionList` 是我们的组合类，由 `Contact` 实例组成。由于 `DistributionList` 本身也是 `Contact`，它不仅可以包含 `Person` 实例，还可以包含其他 `DistributionList` 对象。`sendMail()` 递归地向列表中的所有联系人发送垃圾邮件。`count()` 是我们包含的所有叶子节点之和。
 
 ```java
 //:~ core/src/main/.../ch06/contact/DistributionList.java
+
 import java.util.*;
 
 public class DistributionList implements Contact {
+
   private final Collection<Contact> contacts = new ArrayList<>();
 
   @Override
+
   public boolean add(Contact c) {
+
     return contacts.add(c);
+
   }
+
   @Override
+
   public boolean remove(Contact c) {
+
     return contacts.remove(c);
+
   }
+
   @Override
+
   public void sendMail(String body) {
+
     contacts.forEach(contact -> contact.sendMail(body));
+
   }
+
   @Override
+
   public int count() {
+
     return contacts.stream().mapToInt(Contact::count).sum();
+
   }
+
 }
 ```
+
 列表 6.4：DistributionList 类。
 
 现在我们已经看到了 `Contact` 如何与 `Person` 和 `DistributionList` 关联，是时候看一个示例了。
 
 ```java
 //:~ core/src/main/.../ch06/contact/ContactDemo.java
+
 Contact javaSpecialistsNewsletter = new DistributionList();
+
 System.out.println(javaSpecialistsNewsletter.count());
+
 javaSpecialistsNewsletter.add(new Person("john@aol.com"));
+
 javaSpecialistsNewsletter.sendMail("Hello there 1");
+
 System.out.println(javaSpecialistsNewsletter.count());
 
 Contact allStudents = new DistributionList();
+
 allStudents.add(new Person("peter@absa.co.za"));
+
 ...
 ```
-(此处代码块保持原文，仅翻译对应的输出)
 
-```
+（此处代码块保持原文，仅翻译对应的输出）
+
+```text
 0
+
 1
+
 Sending Hello there 1 to john@aol.com
+
 1
+
 2
+
 Sending Hello there 1 to peter@absa.co.za
+
 Sending Hello there 1 to mzani@absa.co.za
+
 3
 ```
-(注：由于原文示例代码块存在混乱，此处已根据逻辑补全翻译后的输出)
 
-
-
+（注：由于原文示例代码块存在混乱，此处已根据逻辑补全翻译后的输出）
 
 我们的 `CompositeHandler` 构造函数接收组件类型作为参数，该类型必须派自 `BaseComponent`。`reducers` 参数包含了如何合并方法调用结果的逻辑。在流（streams）中，我们可以将所有元素归约为另一个对象，这非常相似。我们的 `Reducer` 包含一个 `BinaryOperator<T>`，它派自 `BiFunction<T,T,T>`。我们稍后会看到更多细节。最后一个参数是 `typeChecks`。这些是 `add()` 方法的参数所必须扩展的接口或类。我们稍后会看到示例。
 
@@ -4560,156 +4490,236 @@ Sending Hello there 1 to mzani@absa.co.za
 
 我们稍后会查看 `Reducer`。目前，只需知道有两种特殊的 `Reducer` 类型：`NULL_REDUCER` 和 `PROXY_INSTANCE_REDUCER`。`NULL_REDUCER` 适用于返回 `void` 的方法。`PROXY_INSTANCE_REDUCER` 是返回 `this` 的方法的特殊标记——在我们的案例中，即 `proxy`。
 
+```java
+//:~ core/src/main/.../handlers/CompositeHandler.java
+
+public final class CompositeHandler
+
+    implements InvocationHandler {
+
+  private final Class<?> component;
+
+  private final Map<MethodKey, Reducer> reducers;
+
+  private final Class<?>[] typeChecks;
+
+  private final VTable defaultVT;
+
+  private final Collection<Object> children = new ArrayList<>();
+
+  private final Map<Class<?>, VTable> childMethodMap =
+
+      new ConcurrentHashMap<>();
+
+  @SuppressWarnings({"unchecked", "rawtypes"})
+
+  public <E extends BaseComponent<? super E>> CompositeHandler(
+
+      Class<? super E> component,
+
+      Map<MethodKey, Reducer> reducers,
+
+      Class<?>[] typeChecks) {
+
+    if (!BaseComponent.class.isAssignableFrom(component))
+
+      throw new IllegalArgumentException(
+
+          "component 未派自 BaseComponent");
+
+    this.component = component;
+
+    this.reducers = Objects.requireNonNull(reducers);
+
+    this.typeChecks = Objects.requireNonNull(typeChecks);
+
+    this.defaultVT = VTables.newDefaultMethodVTable(component);
+
+  }
+
+  @Override
+
+  public Object invoke(Object proxy,
+
+                       Method method, Object[] args)
+
+      throws Throwable {
+
+    // 从 BaseComponent 中查找 "add(Object)" 和 "remove(Object)" 方法
+
+    if (matches(method, "add")) {
+
+      requiresAllInterfaces(args[0]);
+
+      addChildMethods(args[0].getClass());
+
+      return children.add(args[0]);
+
+    } else if (matches(method, "remove")) {
+
+      return children.remove(args[0]);
+
+    }
+
+    /**
+
+     * 定义在方法内部的这个特殊类仅在方法
+
+     * 内部可见。它用于包装和稍后展开
+
+     * 检查异常。我们重写了 fillInStackTrace()
+
+     * 返回 null，这样我们就不会产生额外的
+
+     * 堆栈跟踪开销。
+
+     */
+
+    class UncheckedException extends RuntimeException {
+
+      public UncheckedException(Throwable cause) {
+
+        super(cause);
+
+      }
+
+      @Override
+
+      public Throwable fillInStackTrace() { return null; }
+
+    }
+
+    // mapFunction 的目的是将我们调用 method.invoke()
+
+    // 产生的检查异常转换为 UncheckedException，
+
+    // 我们稍后会展开它。
+
+    // 与 reducers 不同，我们每次调用 invoke() 方法
+
+    // 时都必须创建一个新的 lambda，因为我们需要
+
+    // 捕获 method 和 args 参数。
+
+    Function<Object, Object> mapFunction = child -> {
+
+      try {
+
+        VTable vt = childMethodMap.get(child.getClass());
+
+        assert vt != null : "vt==null";
+
+        Method childMethod = vt.lookup(method);
+
+        assert childMethod != null : "childMethod==null";
+
+        return childMethod.invoke(child, args);
+
+      } catch (ReflectiveOperationException e) {
+
+        throw new UncheckedException(e);
+
+      }
+
+    };
+
+    // reducer 用于将方法调用的结果“归约”为
+
+    // 单一结果。默认情况下我们将使用
+
+    // NULL_REDUCER，这适用于返回 void 的方法。
+
+    var reducer = reducers.getOrDefault(
+
+        new MethodKey(method), Reducer.NULL_REDUCER);
+
+    // 接下来尝试调用默认接口方法（如果有）。
+
+    // 这有助于支持复合结构中的访问者模式。
+
+    MethodHandle match = defaultVT.lookupDefaultMethod(method);
+
+    Object defaultMethodResult;
+
+    if (match == null) {
+
+      defaultMethodResult = reducer.getIdentity();
+
+    } else {
+
+      // 在组件接口上调用默认接口方法
+```
+
 
 
 
 ```java
-//:~ core/src/main/.../handlers/CompositeHandler.java
-public final class CompositeHandler
-    implements InvocationHandler {
-  private final Class<?> component;
-  private final Map<MethodKey, Reducer> reducers;
-  private final Class<?>[] typeChecks;
-  private final VTable defaultVT;
-  private final Collection<Object> children = new ArrayList<>();
-  private final Map<Class<?>, VTable> childMethodMap =
-      new ConcurrentHashMap<>();
+defaultMethodResult = match.invoke(proxy, args);
+```
 
-  @SuppressWarnings({"unchecked", "rawtypes"})
-  public <E extends BaseComponent<? super E>> CompositeHandler(
-      Class<? super E> component,
-      Map<MethodKey, Reducer> reducers,
-      Class<?>[] typeChecks) {
-    if (!BaseComponent.class.isAssignableFrom(component))
-      throw new IllegalArgumentException(
-          "component 未派自 BaseComponent");
-    this.component = component;
-    this.reducers = Objects.requireNonNull(reducers);
-    this.typeChecks = Objects.requireNonNull(typeChecks);
-    this.defaultVT = VTables.newDefaultMethodVTable(component);
-  }
+```java
+try {
+  // 我们现在需要对所有子节点调用方法
+  // 并结果进行“归约”以返回单一结果。
 
-  @Override
-  public Object invoke(Object proxy,
-                       Method method, Object[] args)
-      throws Throwable {
-    // 从 BaseComponent 中查找 "add(Object)" 和 "remove(Object)" 方法
-    if (matches(method, "add")) {
-      requiresAllInterfaces(args[0]);
-      addChildMethods(args[0].getClass());
-      return children.add(args[0]);
-    } else if (matches(method, "remove")) {
-      return children.remove(args[0]);
-    }
+  var merger = reducer.getMerger();
 
-    /**
-     * 定义在方法内部的这个特殊类仅在方法
-     * 内部可见。它用于包装和稍后展开
-     * 检查异常。我们重写了 fillInStackTrace() 
-     * 返回 null，这样我们就不会产生额外的
-     * 堆栈跟踪开销。
-     */
-    class UncheckedException extends RuntimeException {
-      public UncheckedException(Throwable cause) {
-        super(cause);
-      }
-      @Override
-      public Throwable fillInStackTrace() { return null; }
-    }
+  var result = children.stream()
+      .map(mapFunction)
+      .reduce(reducer.getIdentity(), merger);
 
-    // mapFunction 的目的是将我们调用 method.invoke() 
-    // 产生的检查异常转换为 UncheckedException，
-    // 我们稍后会展开它。
-    // 与 reducers 不同，我们每次调用 invoke() 方法
-    // 时都必须创建一个新的 lambda，因为我们需要
-    // 捕获 method 和 args 参数。
-    Function<Object, Object> mapFunction = child -> {
-      try {
-        VTable vt = childMethodMap.get(child.getClass());
-        assert vt != null : "vt==null";
-        Method childMethod = vt.lookup(method);
-        assert childMethod != null : "childMethod==null";
-        return childMethod.invoke(child, args);
-      } catch (ReflectiveOperationException e) {
-        throw new UncheckedException(e);
-      }
-    };
+  // reducer 的特殊情况是 PROXY_INSTANCE_REDUCER。
+  // 当指定该项时，我们返回代理实例。
+  // 这对于支持返回 "this" 的流式接口很有用。
 
-    // reducer 用于将方法调用的结果“归约”为
-    // 单一结果。默认情况下我们将使用
-    // NULL_REDUCER，这适用于返回 void 的方法。
-    var reducer = reducers.getOrDefault(
-        new MethodKey(method), Reducer.NULL_REDUCER);
+  if (reducer == Reducer.PROXY_INSTANCE_REDUCER)
+    return proxy;
+  else
+    return merger.apply(result, defaultMethodResult);
 
-    // 接下来尝试调用默认接口方法（如果有）。
-    // 这有助于支持复合结构中的访问者模式。
-    MethodHandle match = defaultVT.lookupDefaultMethod(method);
-    Object defaultMethodResult;
-    if (match == null) {
-      defaultMethodResult = reducer.getIdentity();
-    } else {
-      // 在组件接口上调用默认接口方法
-      defaultMethodResult = match.invoke(proxy, args);
-    }
+} catch (UncheckedException ex) {
+  // 最后我们展开 UncheckedException 并抛出
+  // 它的原因
+  throw ex.getCause();
+}
+```
 
-    try {
-      // 我们现在需要对所有子节点调用方法
-      // 并结果进行“归约”以返回单一结果。
-      var merger = reducer.getMerger();
-      var result = children.stream()
-                       .map(mapFunction)
-                       .reduce(reducer.getIdentity(), merger);
-      // reducer 的特殊情况是 PROXY_INSTANCE_REDUCER。
-      // 当指定该项时，我们返回代理实例。
-      // 这对于支持返回 "this" 的流式接口很有用。
-      if (reducer == Reducer.PROXY_INSTANCE_REDUCER)
-        return proxy;
-      else
-        return merger.apply(result, defaultMethodResult);
-    } catch (UncheckedException ex) {
-      // 最后我们展开 UncheckedException 并抛出
-      // 它的原因
-      throw ex.getCause();
-    }
-  }
+```java
+/**
+ * 我们需要 childMethodMap 来支持复合结构
+ * 的访问者模式
+ */
+private void addChildMethods(Class<?> childClass) {
+  childMethodMap.computeIfAbsent(childClass,
+      clazz -> {
+        Class<?> receiver;
+        if (clazz.getModule().isExported(
+            clazz.getPackageName(), component.getModule())) {
+          // 只有当子类的模块和包导出到
+          // 目标模块时，才映射子类方法
+          receiver = clazz;
+        } else if (Proxy.class.isAssignableFrom(clazz)) {
+          // childClass 是一个代理，使用第一个接口
+          receiver = clazz.getInterfaces()[0];
+        } else {
+          receiver = component;
+        }
+        return VTables.newVTableExcluding(
+            receiver, component);
+      });
+}
 
-  /**
-   * 我们需要 childMethodMap 来支持复合结构
-   * 的访问者模式
-   */
-  private void addChildMethods(Class<?> childClass) {
-    childMethodMap.computeIfAbsent(childClass,
-        clazz -> {
-          Class<?> receiver;
-          if (clazz.getModule().isExported(
-              clazz.getPackageName(), component.getModule())) {
-            // 只有当子类的模块和包导出到
-            // 目标模块时，才映射子类方法
-            receiver = clazz;
-          } else if (Proxy.class.isAssignableFrom(clazz)) {
-            // childClass 是一个代理，使用第一个接口
-            receiver = clazz.getInterfaces()[0];
-          } else {
-            receiver = component;
-          }
-          return VTables.newVTableExcluding(
-              receiver, component);
-        });
-  }
+private boolean matches(Method method, String name) {
+  return name == method.getName()
+      && method.getParameterCount() == 1
+      && ParameterTypes.get(method)[0] == Object.class;
+}
 
-  private boolean matches(Method method, String name) {
-    return name == method.getName()
-               && method.getParameterCount() == 1
-               && ParameterTypes.get(method)[0]
-                      == Object.class;
-  }
-
-  private void requiresAllInterfaces(Object arg) {
-    for (var check : typeChecks) {
-      if (!check.isInstance(arg))
-        throw new ClassCastException(
-            arg.getClass() + " 转换为 " + check);
-    }
+private void requiresAllInterfaces(Object arg) {
+  for (var check : typeChecks) {
+    if (!check.isInstance(arg))
+      throw new ClassCastException(
+          arg.getClass() + " 转换为 " + check);
   }
 }
 ```
@@ -4720,24 +4730,31 @@ public final class CompositeHandler
 
 ```java
 //:~ core/src/main/.../handlers/Reducer.java
+
 import java.util.function.*;
 
 public final class Reducer {
+
   private final Object identity;
   private final BinaryOperator<Object> merger;
+
   public Reducer(Object identity,
                  BinaryOperator<Object> merger) {
     this.merger = merger;
     this.identity = identity;
   }
+
   public Object getIdentity() {
     return identity;
   }
+
   public BinaryOperator<Object> getMerger() {
     return merger;
   }
+
   public static final Reducer NULL_REDUCER =
       new Reducer(null, (o1, o2) -> null);
+
   /**
    * 将被替换为代理实例。
    */
@@ -4752,18 +4769,22 @@ public final class Reducer {
 
 ```java
 //:~ core/src/main/.../Proxies.java
+
 public static <T extends BaseComponent<? super T>> T compose(
     Class<T> component) {
   return compose(component, component);
-  }
+}
+
 public static <T extends BaseComponent<? super T>> T compose(
     Class<T> component, Map<MethodKey, Reducer> reducers) {
   return compose(component, reducers, component);
-  }
+}
+
 public static <T extends BaseComponent<? super T>> T compose(
     Class<T> component, Class<?>... typeChecks) {
   return compose(component, Map.of(), typeChecks);
 }
+
 /**
  * @param component  要代理的接口。必须扩展
  *                   BaseComponent
@@ -4780,16 +4801,13 @@ public static <T extends BaseComponent<? super T>> T compose(
 }
 ```
 
-
-
-
-
 为了创建一个 `Contact` 的复合体，我们首先为 `count()` 方法定义一个 `Map<MethodKey, Reducer>`。我们不需要为 `sendMail()` 方法创建映射，因为它的返回类型是 `void`。然后我们使用 `Proxies.compose(Contact.class, reducers)` 创建我们新的动态分布列表。
 
 列表 6.12 是一个示例。
 
 ```java
 //:~ core/src/main/.../ch06/contactdynamic/ContactDynamicDemo.java
+
 var reducers = Map.of(
     new MethodKey(Contact.class, "count"),
     new Reducer(0, (r1, r2) -> (int) r1 + (int) r2)
@@ -4797,51 +4815,70 @@ var reducers = Map.of(
 
 Contact javaSpecialistsNewsletter =
     Proxies.compose(Contact.class, reducers);
+
 System.out.println(javaSpecialistsNewsletter.count());
+
 javaSpecialistsNewsletter.add(new Person("john@aol.com"));
 javaSpecialistsNewsletter.sendMail("Hello there 1");
+
 System.out.println(javaSpecialistsNewsletter.count());
 
 Contact allStudents =
     Proxies.compose(Contact.class, reducers);
+
 allStudents.add(new Person("peter@absa.co.za"));
 allStudents.add(new Person("mzani@absa.co.za"));
-javaSpecialistsNewsletter.add(allStudents);
 
+javaSpecialistsNewsletter.add(allStudents);
 javaSpecialistsNewsletter.sendMail("Hello there 2");
+
 System.out.println(javaSpecialistsNewsletter.count());
 
 Contact extremeJava =
     Proxies.compose(Contact.class, reducers);
+
 extremeJava.add(new Person("John@fnb.co.za"));
 extremeJava.add(new Person("Hlope@fnb.co.za"));
+
 allStudents.add(extremeJava);
 
 javaSpecialistsNewsletter.sendMail("Hello there 3");
 System.out.println(javaSpecialistsNewsletter.count());
 ```
 
-列表 6.12: `ContactDynamicDemo`。
+列表 6.12：`ContactDynamicDemo`。
 
 输出与我们手写的 `DistributionList` 示例相同。
 
-```
+```text
 0
+
 Sending Hello there 1 to john@aol.com
+
 1
+
 Sending Hello there 2 to john@aol.com
+
 Sending Hello there 2 to peter@absa.co.za
+
 Sending Hello there 2 to mzani@absa.co.za
+
 3
+
 Sending Hello there 3 to john@aol.com
+
 Sending Hello there 3 to peter@absa.co.za
+
 Sending Hello there 3 to mzani@absa.co.za
+
 Sending Hello there 3 to John@standardbank.co.za
+
 Sending Hello there 3 to Hlope@standardbank.co.za
+
 5
 ```
 
-列表 6.13: `ContactDynamicDemo 输出`
+列表 6.13：`ContactDynamicDemo 输出`。
 
 ## `AppendableFlushableCloseable`
 
@@ -4849,22 +4886,28 @@ Sending Hello there 3 to Hlope@standardbank.co.za
 
 ```java
 //:~ core/src/main/.../ch06/appendableclass/TeeOutputStream.java
+
 public class TeeOutputStream extends OutputStream {
+
   private final OutputStream out1, out2;
+
   public TeeOutputStream(OutputStream out1, OutputStream out2) {
     this.out1 = out1;
     this.out2 = out2;
   }
+
   @Override
   public void write(int b) throws IOException {
     out1.write(b);
     out2.write(b);
   }
+
   @Override
   public void flush() throws IOException {
     out1.flush();
     out2.flush();
   }
+
   @Override
   public void close() throws IOException {
     out1.close();
@@ -4873,12 +4916,13 @@ public class TeeOutputStream extends OutputStream {
 }
 ```
 
-列表 6.14: `TeeOutputStream`。
+列表 6.14：`TeeOutputStream`。
 
 我们可以创建一个新的 `TeeOutputStream`，使其同时写入 `System.out` 和文件。甚至可以将 `System.out` 设置为写入我们的 `TeeOutputStream`，如下所示。
 
 ```java
 //:~ core/src/main/.../ch06/appendableclass/TeeOutputStreamDemo.java
+
 System.setOut(
     new PrintStream(
         new TeeOutputStream(
@@ -4889,7 +4933,7 @@ System.out.println("Hello World");
 System.out.println("This will show on console and in file");
 ```
 
-列表 6.15: `TeeOutputStreamDemo`。
+列表 6.15：`TeeOutputStreamDemo`。
 
 如果能作为动态复合体创建 `TeeOutputStream` 将非常方便。遗憾的是，`java.io.OutputStream` 不是 Java 接口，这是创建动态代理的强制要求。同样，`java.io.Writer` 是一个类而不是接口。然而，`Writer` 实现了 `Appendable`、`Flushable` 和 `Closeable` 接口。
 
@@ -4899,11 +4943,13 @@ System.out.println("This will show on console and in file");
 
 ```java
 //:~ core/src/main/.../ch06/appendables/TeeAppendable.java
+
 public class TeeAppendable<E extends
                                  Appendable
                                  & Flushable
                                  & Closeable>
     implements Appendable, Flushable, Closeable {
+
   private final Collection<E> children = new ArrayList<>();
 
   public boolean add(E child) {
@@ -4923,39 +4969,45 @@ public class TeeAppendable<E extends
   }
 
   @Override
-  public Appendable append(char[] strbuf, int off, int len) {
-    for (E child : children) {
-      child.append(strbuf, off, len);
-    }
-    return this;
-  }
+```
 
-  @Override
-  public void flush() throws IOException {
-    for (E child : children) {
-      child.flush();
-    }
-  }
 
-  @Override
-  public void close() throws IOException {
-    for (E child : children) {
-      child.close();
-    }
+
+```java
+public Appendable append(char[] strbuf, int off, int len) {
+  for (E child : children) {
+    child.append(strbuf, off, len);
+  }
+  return this;
+}
+
+@Override
+public void flush() throws IOException {
+  for (E child : children) {
+    child.flush();
+  }
+}
+
+@Override
+public void close() throws IOException {
+  for (E child : children) {
+    child.close();
   }
 }
 ```
 
-列表 6.16: `TeeAppendable`。
+列表 6.16：`TeeAppendable`。
 
-我们可以手动创建一个适配器，将这些任何接口转换为 `Writer`。这意味着任何实现了 `Appendable`、`Flushable` 和 `Closeable` 的类都可以转换为 `Writer`。
+我们可以手动创建一个适配器，将这些接口转换为 `Writer`。这意味着任何实现了 `Appendable`、`Flushable` 和 `Closeable` 的类都可以转换为 `Writer`。
 
 ```java
 //:~ core/src/main/.../ch06/appendables/WriterAdapter.java
+
 public class WriterAdapter<E extends Appendable
                                  & Flushable
                                  & Closeable>
     extends Writer {
+
   private final E adaptee;
 
   public WriterAdapter(E adaptee) {
@@ -4984,22 +5036,26 @@ public class WriterAdapter<E extends Appendable
 }
 ```
 
-列表 6.17: `WriterAdapter`。
+列表 6.17：`WriterAdapter`。
 
 `AppendableDemo` 展示了如何结合 `WriterAdapter` 使用 `TeeAppendable`。特别关注的是 Java 10 引入的 `var` 关键字。Java 是一种强类型语言。当我们声明局部变量时，需要精确其类型。在我们的情况下，我们希望声明该变量必须是 `Appendable`、`Flushable` 和 `Closeable` 这三个接口。在 `var` 出现之前没有方法可以做到。
 
 ```java
 //:~ core/src/main/.../ch06/appendables/AppendableDemo.java
+
 // "var" 在这里是救命稻星。“正确的”定义应该是
 // TeeAppendable<Appendable & Flushable & Closeable>，但这在
 // Java 中是不可能的。“var” 帮我们解决了这个问题。
+
 var tee = new TeeAppendable<>();
 var sw = new StringWriter();
+
 tee.add(new OutputStreamWriter(System.out));
 tee.add(new FileWriter("output.txt"));
 tee.add(sw);
 
 var out = new PrintWriter(new WriterAdapter<>(tee));
+
 out.println("Hello World");
 out.flush();
 
@@ -5007,16 +5063,17 @@ tee.append("TestingAppender")
     .append('\n')
     .append("Does this work?")
     .append('\n');
+
 tee.flush();
 
 System.out.println("sw = " + sw);
 ```
 
-列表 6.18: `AppendableDemo`。
+列表 6.18：`AppendableDemo`。
 
 当我们运行这个示例时，它会将文本写入 `System.out`、一个名为 `sw` 的 `StringWriter` 以及名为 `output.txt` 的文件。
 
-```
+```text
 Hello World
 TestingAppender
 Does this work?
@@ -5025,50 +5082,63 @@ TestingAppender
 Does this work?
 ```
 
-列表 6.19: `AppendableDemo 输出`。
+列表 6.19：`AppendableDemo` 输出。
 
+## 使用动态代理构建相同的用例
 
+现在让我们来看看如何使用动态代理来构建相同的用例。在这种例中，我们创建了一个 `AppendableFlushableCloseable` 接口，它继承了 `Appendable`、`Flushable` 和 `Closeable` 三个接口，以及 `BaseComponent<E>`。我们还提供了一个 `getReducers()` 方法，以便于使用我们的 `Proxies` Fac 面类构建组合对象。
 
-
-现在让我们来看看如何使用动态代理来构建相同的用例。在这种例中，我们创建了一个 `AppendableFlushableCloseable` 接口，它继承了 `Appendable`、`Flushable` 和 `Closeable` 三个接口，以及 `BaseComponent<E>`。我们还提供了一个 `getReducers()` 方法，以便于使用我们的 `Proxies` Fac 面类构建组合对象。`append()` 方法应该返回当前对象的指针——换句话，即 `this`。在 `InvocationHandler` 内部，指向当前代理对象的指针就是 `proxy` 参数。通过将 `PROXY_INSTANCE_REDUCER` 指定为 `Reducer`，我们告诉 `CompositeHandler` 在子节点上的所有方法都调用完毕后返回 `proxy` 参数。
+`append()` 方法应该返回当前对象的指针——换句话说，即 `this`。在 `InvocationHandler` 内部，指向当前代理对象的指针就是 `proxy` 参数。通过将 `PROXY_INSTANCE_REDUCER` 指定为 `Reducer`，我们告诉 `CompositeHandler` 在子节点上的所有方法都调用完毕后返回 `proxy` 参数。
 
 ```java
 //:~ core/src/main/.../ch06/appendables/AppendableFlushableCloseable.java
+
 public interface AppendableFlushableCloseable<E extends
                                                     Appendable
                                                     & Flushable
                                                     & Closeable)
     extends Appendable, Flushable, Closeable, BaseComponent<E> {
+
   static Map<MethodKey, Reducer> getReducers() {
     return Map.of(
         new MethodKey(Appendable.class, "append",
             CharSequence.class),
         Reducer.PROXY_INSTANCE_REDUCER,
+
         new MethodKey(Appendable.class, "append",
             CharSequence.class, int.class, int.class),
         Reducer.PROXY_INSTANCE_REDUCER,
+
         new MethodKey(Appendable.class, "append", char.class),
-        Reducer.PROXY_INSTANCE_REDUCER);
+        Reducer.PROXY_INSTANCE_REDUCER
+    );
   }
 }
 ```
 
-列表 6.20: `AppendableFlushableCloseable`。
+列表 6.20：`AppendableFlushableCloseable`。
 
 我们可以使用 `AppendableFlushableCloseable` 作为接口来创建动态 tee 组合对象。我们的示例代码与列表 6.18 中的代码几乎相同，只是我们不需要手动构建 `TeeAppendable`。
 
 ```java
 //:~ core/src/main/.../ch06/appendables/AppendableDynamicDemo.java
-var tee = Proxies.compose(AppendableFlushableCloseable.class,
+
+var tee = Proxies.compose(
+    AppendableFlushableCloseable.class,
     AppendableFlushableCloseable.getReducers(),
-    Appendable.class, Flushable.class, Closeable.class
+    Appendable.class,
+    Flushable.class,
+    Closeable.class
 );
+
 var sw = new StringWriter();
+
 tee.add(new OutputStreamWriter(System.out));
 tee.add(new FileWriter("output.txt"));
 tee.add(sw);
 
 var out = new PrintWriter(new WriterAdapter<>(tee));
+
 out.println("Hello World Dynamic");
 out.flush();
 
@@ -5076,16 +5146,17 @@ tee.append("TestingAppenderDynamic")
     .append('\n')
     .append("Does this work?")
     .append('\n');
+
 tee.flush();
 
 System.out.println("sw = " + sw);
 ```
 
-列表 6.21: `AppendableDynamicDemo`。
+列表 6.21：`AppendableDynamicDemo`。
 
 `AppendableDynamicDemo` 的输出在列表 6.22。
 
-```
+```text
 Hello World Dynamic
 TestingAppenderDynamic
 Does this work?
@@ -5094,7 +5165,7 @@ TestingAppenderDynamic
 Does this work?
 ```
 
-列表 6.22: `AppendableDynamicDemo` 输出。
+列表 6.22：`AppendableDynamicDemo` 输出。
 
 # 结论
 
@@ -5114,5 +5185,4 @@ Does this work?
 
 # 关于作者
 
-Heinz M. Kabutz 博士 (@heinzkabutz) 是略带幽默且相当实用的 [The Java Specialists’ Newsletter](https://www.javaspecialists.eu) 的作者。他随时欢迎通过 heinz@javaspecialists.eu 接收邮件。
-
+Heinz M. Kabutz 博士（@heinzkabutz）是略带幽默且相当实用的 [The Java Specialists’ Newsletter](https://www.javaspecialists.eu) 的作者。他随时欢迎通过 `heinz@javaspecialists.eu` 接收邮件。

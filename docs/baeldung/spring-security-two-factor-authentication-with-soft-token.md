@@ -1,26 +1,26 @@
-# 具有 Spring 安全性的双因素认证
 
-> 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-security-two-factor-authentication-with-soft-token>
 
-## 1。概述
+## 具有 Spring 安全性的双因素认证
 
-在本教程中，我们将使用软令牌和 Spring 安全实现[双因素认证功能](https://web.archive.org/web/20220822105735/https://en.wikipedia.org/wiki/Multi-factor_authentication)。
+## 1. 概述
 
-我们将在现有的简单登录流程中添加新功能[，并使用](https://web.archive.org/web/20220822105735/https://github.com/Baeldung/spring-security-registration)[谷歌认证应用](https://web.archive.org/web/20220822105735/https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en)来生成令牌。
+在本教程中，我们将使用软令牌和 `Spring` 安全实现双因素认证功能。
 
-简而言之，双因素身份验证是一个验证过程，它遵循众所周知的“用户知道一些东西，用户拥有一些东西”的原则。
+我们将在现有的简单登录流程中添加新功能，并使用谷歌认证应用来生成令牌。
 
-因此，用户在身份验证过程中提供了一个额外的“验证令牌”——基于基于时间的一次性密码 [TOTP](https://web.archive.org/web/20220822105735/https://tools.ietf.org/html/rfc6238) 算法的一次性密码验证码。
+简而言之，双因素身份验证是一个验证过程，它遵循众所周知的“用户知道一些东西，用户拥有一些东西”的原则。因此，用户在身份验证过程中提供了一个额外的“验证令牌”——基于基于时间的一次性密码 `TOTP` 算法的一次性密码验证码。
 
-## 2。Maven 配置
+## 2. Maven 配置
 
-首先，为了在我们的应用中使用 Google Authenticator，我们需要:
+首先，为了在我们的应用中使用 `Google Authenticator`，我们需要：
 
-*   生成密钥
-*   通过 QR 码向用户提供密钥
-*   使用此密钥验证用户输入的令牌。
+- 生成密钥
 
-我们将使用一个简单的服务器端[库](https://web.archive.org/web/20220822105735/https://github.com/aerogear/aerogear-otp-java)，通过向我们的`pom.xml`添加以下依赖项来生成/验证一次性密码:
+- 通过 QR 码向用户提供密钥
+
+- 使用此密钥验证用户输入的令牌
+
+我们将使用一个简单的服务器端库，通过向我们的`pom.xml`添加以下依赖项来生成/验证一次性密码：
 
 ```java
 <dependency>
@@ -30,9 +30,9 @@
 </dependency>
 ```
 
-## 3。用户实体
+## 3. 用户实体
 
-接下来，我们将修改用户实体以保存额外信息，如下所示:
+接下来，我们将修改用户实体以保存额外信息，如下所示：
 
 ```java
 @Entity
@@ -49,16 +49,17 @@ public class User {
 }
 ```
 
-请注意:
+请注意：
 
-*   我们为每个用户保存了一个随机密码，供以后生成验证码时使用
-*   我们的两步验证是可选的
+- 我们为每个用户保存了一个随机密码，供以后生成验证码时使用
 
-## 4。额外登录参数
+- 我们的两步验证是可选的
 
-首先，我们需要调整我们的安全配置来接受额外的参数——验证令牌。我们可以通过使用 custom `AuthenticationDetailsSource`来实现这一点:
+## 4. 额外登录参数
 
-这是我们的`CustomWebAuthenticationDetailsSource`:
+首先，我们需要调整我们的安全配置来接受额外的参数——验证令牌。我们可以通过使用 custom `AuthenticationDetailsSource`来实现这一点：
+
+这是我们的`CustomWebAuthenticationDetailsSource`：
 
 ```java
 @Component
@@ -72,7 +73,7 @@ public class CustomWebAuthenticationDetailsSource implements
 }
 ```
 
-这里是`CustomWebAuthenticationDetails`:
+这里是`CustomWebAuthenticationDetails`：
 
 ```java
 public class CustomWebAuthenticationDetails extends WebAuthenticationDetails {
@@ -90,7 +91,7 @@ public class CustomWebAuthenticationDetails extends WebAuthenticationDetails {
 }
 ```
 
-我们的安全配置:
+我们的安全配置：
 
 ```java
 @Configuration
@@ -109,7 +110,7 @@ public class LssSecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
-最后，向我们的登录表单添加额外的参数:
+最后，向我们的登录表单添加额外的参数：
 
 ```java
 <labelth:text="#{label.form.login2fa}">
@@ -118,11 +119,11 @@ public class LssSecurityConfig extends WebSecurityConfigurerAdapter {
 <input type='text' name='code'/>
 ```
 
-注意:我们需要在我们的安全配置中设置我们的自定义`AuthenticationDetailsSource`。
+注意：我们需要在我们的安全配置中设置我们的自定义`AuthenticationDetailsSource`。
 
-## 5。自定义认证提供商
+## 5. 自定义认证提供商
 
-接下来，我们需要一个定制的`AuthenticationProvider`来处理额外的参数验证:
+接下来，我们需要一个定制的`AuthenticationProvider`来处理额外的参数验证：
 
 ```java
 public class CustomAuthenticationProvider extends DaoAuthenticationProvider {
@@ -170,7 +171,7 @@ public class CustomAuthenticationProvider extends DaoAuthenticationProvider {
 
 请注意，在我们验证了一次性密码验证码之后，我们只是将身份验证委托给了下游。
 
-这是我们的身份验证提供者 bean
+这是我们的身份验证提供者 bean：
 
 ```java
 @Bean
@@ -182,19 +183,19 @@ public DaoAuthenticationProvider authProvider() {
 }
 ```
 
-## 6。注册流程
+## 6. 注册流程
 
 现在，为了让用户能够使用应用程序生成令牌，他们需要在注册时进行适当的设置。
 
 因此，我们需要对注册流程做一些简单的修改——允许选择使用两步验证的用户**扫描他们稍后需要登录的二维码**。
 
-首先，我们将这个简单的输入添加到注册表中:
+首先，我们将这个简单的输入添加到注册表中：
 
 ```java
 Use Two step verification <input type="checkbox" name="using2FA" value="true"/>
 ```
 
-然后，在我们的`RegistrationController`中，我们根据用户确认注册后的选择重定向用户:
+然后，在我们的`RegistrationController`中，我们根据用户确认注册后的选择重定向用户：
 
 ```java
 @GetMapping("/registrationConfirm")
@@ -215,7 +216,7 @@ public String confirmRegistration(@RequestParam("token") String token, ...) {
 }
 ```
 
-这是我们的方法:
+这是我们的方法：
 
 ```java
 public static String QR_PREFIX = 
@@ -230,7 +231,7 @@ public String generateQRUrl(User user) {
 }
 ```
 
-这是我们的`qrcode.html`:
+这是我们的`qrcode.html`：
 
 ```java
 <html>
@@ -247,16 +248,19 @@ public String generateQRUrl(User user) {
 </html>
 ```
 
-请注意:
+请注意：
 
-*   `generateQRUrl()`用于生成二维码网址的方法
-*   这个二维码将被使用谷歌认证应用的用户手机扫描
-*   该应用程序将生成一个 6 位数字的代码，有效期仅为 30 秒，这是理想的验证码
-*   此验证码将在登录时使用我们的自定义`AuthenticationProvider`进行验证
+- `generateQRUrl()`用于生成二维码网址的方法
 
-## 7。启用两步验证
+- 这个二维码将被使用谷歌认证应用的用户手机扫描
 
-接下来，我们将确保用户可以随时更改他们的登录首选项，如下所示:
+- 该应用程序将生成一个 6 位数字的代码，有效期仅为 30 秒，这是理想的验证码
+
+- 此验证码将在登录时使用我们的自定义`AuthenticationProvider`进行验证
+
+## 7. 启用两步验证
+
+接下来，我们将确保用户可以随时更改他们的登录首选项，如下所示：
 
 ```java
 @PostMapping("/user/update/2fa")
@@ -270,7 +274,7 @@ public GenericResponse modifyUser2FA(@RequestParam("use2FA") boolean use2FA)
 }
 ```
 
-这里是`updateUser2FA()`:
+这里是`updateUser2FA()`：
 
 ```java
 @Override
@@ -287,7 +291,16 @@ public User updateUser2FA(boolean use2FA) {
 }
 ```
 
-这是前端:
+这是前端：
+
+
+
+
+## 8. 结论
+
+在这个快速教程中，我们展示了如何使用具有 Spring 安全性的软令牌实现双因素身份验证。
+
+完整的源代码可以在 GitHub 的[上找到。](https://web.archive.org/web/20220822105735/https://github.com/Baeldung/spring-security-registration)
 
 ```java
 <div th:if="${#authentication.principal.using2FA}">
@@ -322,9 +335,3 @@ function set2FA(use2FA){
 }
 </script>
 ```
-
-## 8。结论
-
-在这个快速教程中，我们展示了如何使用具有 Spring 安全性的软令牌实现双因素身份验证。
-
-完整的源代码可以在 GitHub 的[上找到。](https://web.archive.org/web/20220822105735/https://github.com/Baeldung/spring-security-registration)

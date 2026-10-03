@@ -1,3 +1,4 @@
+
 # 从观察者设计模式开始的 JAVA 开发人员指南
 
 > 原文：<https://medium.com/javarevisited/java-developer-guide-to-start-with-observer-design-pattern-17355b138329?source=collection_archive---------2----------------------->
@@ -24,25 +25,25 @@ Twitter 和脸书等所有社交媒体网站都是这种模式的典型例子。
 
 ## 主题定义
 
-在 Subject 接口中，声明了三个方法。 **addObserver** 方法用于添加订阅者， **removeObserver** 方法用于删除现有订阅者， **notifyObservers** 方法用于向所有订阅者发送通知。
+在`Subject`接口中，声明了三个方法。`addObserver`方法用于添加订阅者，`removeObserver`方法用于删除现有订阅者，`notifyObservers`方法用于向所有订阅者发送通知。
 
 主题界面
 
 ## 具体主题
 
-对于具体的 Subject，我创建了一个 **CryptoCurrency** 类，其中包含了来自 **Subject** 接口的所有实现方法，以及用于加密货币的名称和价格的新字段。
+对于具体的`Subject`，我创建了一个`CryptoCurrency`类，其中包含了来自`Subject`接口的所有实现方法，以及用于加密货币的名称和价格的新字段。
 
 具体主题
 
 ## 观察者定义
 
-在**观察者**接口中，只有一个方法被声明为**通知**，该方法将被具体的主体调用。
+在`Observer`接口中，只有一个方法被声明为`notify`，该方法将被具体的主体调用。
 
 观察者界面
 
 ## 具体的观察者
 
-对于具体的观察者，我创建了 3 个类。 **PriceWatcher** 类被创建用来告诉更新**加密货币**具体主体的当前和以前的价格。 **CryptoCurrencyBuyer** 类是为调用外部 API 在货币低于一定金额时购买加密货币而创建的。类似地，创建了 **CryptoCurrencySeller** 类，用于在货币达到一定金额以上时调用外部 API 来出售加密货币。
+对于具体的观察者，我创建了 3 个类。`PriceWatcher`类被创建用来告诉更新`CryptoCurrency`具体主体的当前和以前的价格。`CryptoCurrencyBuyer`类是为调用外部 API 在货币低于一定金额时购买加密货币而创建的。类似地，创建了`CryptoCurrencySeller`类，用于在货币达到一定金额以上时调用外部 API 来出售加密货币。
 
 第一个具体的观察者
 
@@ -60,11 +61,15 @@ Twitter 和脸书等所有社交媒体网站都是这种模式的典型例子。
 
 # 实施中的关键点
 
-*   这里的**主体**和**观察者**是接口。但是它也可以是一个抽象类，并不局限于只使用接口。
-*   **具体主体**需要根据要求维护**集合**中的所有**观察者**。在这里，我使用了 **CopyOnWriteArrayList** (故障安全)集合来存储所有的观察器，因为我有一些**观察器**，它们将在**notify observators**方法中迭代时自行移除。
-*   当**具体主体**的状态发生变化时，需要调用 **notifyObservers** 方法。
-*   每个**具体观察者**需要实现**通知**方法，以便根据其需求采取行动，消耗**主题**的变化。
-*   对于每个**具体观察者**，需要用**添加观察者**的方法与**主体**连接，用**移除观察者**的方法分离。
+*   这里的`Subject`和`Observer`是接口。但是它也可以是一个抽象类，并不局限于只使用接口。
+
+*   `ConcreteSubject`需要根据要求维护`Collection`中的所有`Observer`。在这里，我使用了`CopyOnWriteArrayList`(故障安全)集合来存储所有的观察器，因为我有一些`Observer`，它们将在`notifyObservers`方法中迭代时自行移除。
+
+*   当`ConcreteSubject`的状态发生变化时，需要调用`notifyObservers`方法。
+
+*   每个`ConcreteObserver`需要实现`notify`方法，以便根据其需求采取行动，消耗`Subject`的变化。
+
+*   对于每个`ConcreteObserver`，需要用`addObserver`的方法与`Subject`连接，用`removeObserver`的方法分离。
 
 *你最喜欢的设计模式是什么，或者如果你想更好地理解任何其他模式或主题，请随时联系我，在*[*LinkedIn*](https://www.linkedin.com/in/ritvik92/)*或*[*Google Form*](https://forms.gle/XFsuo1ZbP35gfqAX7)*上，我下次会尽力介绍！*
 

@@ -1,4 +1,5 @@
-# Java 中的微优化。字符串.等于()
+
+# Java 中的微优化：`String.equals()`
 
 > 原文：<https://medium.com/javarevisited/micro-optimizations-in-java-string-equals-22be19fd8416?source=collection_archive---------1----------------------->
 

@@ -1,3 +1,4 @@
+
 # 让正则表达式成为你的 Java 朋友
 
 > 原文：<https://medium.com/javarevisited/making-regex-your-friend-in-java-ddc5bf7f9a66?source=collection_archive---------1----------------------->
@@ -12,11 +13,11 @@
 
 让我们深入研究一下。
 
-# 正则表达式构造
+## 正则表达式构造
 
 首先，我们来谈谈一些有助于构造你的[正则表达式](/javarevisited/7-best-regular-expression-courses-for-developers-to-learn-in-2021-9b8cb37bb3a5)的构造。请注意，这些都与 Java 相关，我相信它们会因语言而异。
 
-## 括号“[]”与括号“()”
+### 括号“[]”与括号“()”
 
 括号称为**字符类**，圆括号称为**捕获组**【1】。
 
@@ -33,11 +34,11 @@ false
 
 捕获组是完全不同的东西。这是一种方式，让你说你希望你的[正则表达式](https://javarevisited.blogspot.com/2016/10/how-to-check-if-string-is-numeric-in-Java.html)保存它找到的东西，以便你以后可以检索它。换句话说，你告诉正则表达式“匹配我的正则表达式，但是为我保存这些子结果”。让我们看一个例子。
 
-这里我们尝试匹配一个格式为:DIGIT+DIGIT=DIGIT 的字符串。我们想提取数字。
+这里我们尝试匹配一个格式为：`DIGIT+DIGIT=DIGIT` 的字符串。我们想提取数字。
 
-第一种模式只使用字符类，“+”(被转义，因为它在 regex 中有另一种含义)和“=”。第二种模式使用未命名的捕获组。最后一种模式使用命名捕获组。
+第一种模式只使用字符类，“`+`”（被转义，因为它在 regex 中有另一种含义）和“`=`”。第二种模式使用未命名的捕获组。最后一种模式使用命名捕获组。
 
-请注意命名捕获组的语法:(？<name>图案)</name>
+请注意命名捕获组的语法：`(?<name>图案)`
 
 下面是它的输出。
 
@@ -63,7 +64,7 @@ true
 
 这是讨论**匹配**和**查找**之间差异的好时机。
 
-## 匹配与查找
+### 匹配与查找
 
 基本上有两种方法可以使用你的正则表达式。一种是**对整串匹配**。另一个用途是**查找**子字符串。
 
@@ -84,21 +85,21 @@ Number of groups: 1
 4
 ```
 
-我们可以注意到，第一个组号 0 总是来自原始模式的整个匹配。而且组数基本上是 1 +定义的组。
+我们可以注意到，第一个组号 0 总是来自原始模式的整个匹配。而且组数基本上是 1 + 定义的组。
 
 这个例子只是在一个字符串中查找数字，基本上没有其他考虑。因此，一个简单的规则是，如果要查找特定的子字符串，使用 **find** ，如果要确保字符串的特定格式，使用 **matches** 。
 
-## 量词
+### 量词
 
 到目前为止，我只展示了匹配单次出现的例子。但是有时能够指定重复发生是有帮助的。量词其实有三种，**贪**、**舍不得**和**所有格**。
 
-在本文中，我将只涉及贪婪的 T10，但是如果需要的话，可以随意查看其他两个。假设您对寻找数字序列感兴趣。比方说，我们想把前面的“数字+数字=数字”的例子推广到“100+50=150”这样的数字。
+在本文中，我将只涉及贪婪的，但是如果需要的话，可以随意查看其他两个。假设您对寻找数字序列感兴趣。比方说，我们想把前面的“数字+数字=数字”的例子推广到“100+50=150”这样的数字。
 
-我还使用了一个预定义的字符类“\d”，它仅仅表示一个数字，你可以在这里找到更多预定义的类【1】。
+我还使用了一个预定义的字符类“`\d`”，它仅仅表示一个数字，你可以在这里找到更多预定义的类【1】。
 
-“\\d{1，}”的意思是至少应该有一位数字。你可以给它另一个参数，这样你允许最大值为 3，例如:" \\d{1，3}。
+“`\\d{1,}`”的意思是至少应该有一位数字。你可以给它另一个参数，这样你允许最大值为 3，例如：“`\\d{1,3}`”。
 
-## “或”运算符
+### “或”运算符
 
 如果需要条件匹配，这个操作符会很有帮助。假设我们有类似“评分 5”、“分数 2”、“分数 3”和“分数 9”的字符串。在提取数字时，我们需要确保格式正确。为此，我们可以使用**或**操作符。
 
@@ -120,27 +121,27 @@ Point 9
 false
 ```
 
-我添加了“s{0，1}”，以表明您可以将 OR 中的表达式变得任意复杂。
+我添加了“`s{0,1}`”，以表明您可以将 OR 中的表达式变得任意复杂。
 
-## 反向引用
+### 反向引用
 
 假设你得到如下的字符串。
 
-*   苹果:3 个苹果
-*   橘子:4 个橘子
-*   香蕉:1 根香蕉
+*   苹果：3 个苹果
+*   橘子：4 个橘子
+*   香蕉：1 根香蕉
 
-本质上，您希望匹配类似于“单词:数字单词”的内容
+本质上，您希望匹配类似于“单词：数字单词”的内容
 
-为此，你需要能够引用模式内部的匹配，这是使用**反向引用**来完成的，就像这样**。**
+为此，你需要能够引用模式内部的匹配，这是使用**反向引用**来完成的，就像这样。
 
-您可以看到，我在模式的末尾使用语法“\\k <name>”引用了命名的捕获组“fruit”。</name>
+您可以看到，我在模式的末尾使用语法“`\\k<name>`”引用了命名的捕获组“`fruit`”。
 
-这是本文的最后一项。我希望这些工具能让你在 Java 中使用[正则表达式时更有信心。我想以一篇关于性能的笔记和在野外使用 regex 的技巧来结束这篇文章。](https://javarevisited.blogspot.com/2020/04/top-5-courses-to-learn-regular-expression-regex.html)
+这是本文的最后一项。我希望这些工具能让你在 Java 中使用[正则表达式](https://javarevisited.blogspot.com/2020/04/top-5-courses-to-learn-regular-expression-regex.html)时更有信心。我想以一篇关于性能的笔记和在野外使用 regex 的技巧来结束这篇文章。
 
-# 编译模式
+## 编译模式
 
-在[模式](https://javarevisited.blogspot.com/2016/02/2-ways-to-split-string-with-dot-in-java-using-regular-expression.html)上使用 matches 函数(参见第一个例子)实际上编译了一个正则表达式并在后台匹配它。其他示例在模式上显式使用了 compile 方法。这个函数非常昂贵，我可以在下面演示。
+在[模式](https://javarevisited.blogspot.com/2016/02/2-ways-to-split-string-with-dot-in-java-using-regular-expression.html)上使用 `matches` 函数（参见第一个例子）实际上编译了一个正则表达式并在后台匹配它。其他示例在模式上显式使用了 `compile` 方法。这个函数非常昂贵，我可以在下面演示。
 
 所以你想在方法调用中重用它，也许把它设置成一个[静态最终字段](http://javarevisited.blogspot.sg/2017/01/how-public-static-final-variable-works.html#axzz51iekrZ00)。
 
@@ -160,9 +161,10 @@ false
 
 我在以前的文章中谈到过这一点，比如当我比较 [LinkedList 和 ArrayList](https://www.java67.com/2012/12/difference-between-arraylist-vs-LinkedList-java.html) 时，以及我在 Java 中进行微基准测试时的主要技巧，请参见下面的链接。
 
-</javarevisited/consider-linkedlist-in-java-2fed1b945b48>  <https://ludvigwesterdahl.medium.com/some-tips-for-microbenchmarking-in-java-46d6c9b669d9>  
+</javarevisited/consider-linkedlist-in-java-2fed1b945b48>  <https://ludvigwesterdahl.medium.com/some-tips-for-microbenchmarking-in-java-46d6c9b669d9>
 
-## 参考
+### 参考
 
-[1]模式(Java SE 13 & JDK 13)
-[https://docs . Oracle . com/en/Java/javase/13/docs/API/Java . base/Java/util/regex/Pattern . html](https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/regex/Pattern.html)
+[1] 模式（Java SE 13 & JDK 13）
+
+[https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/regex/Pattern.html](https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/regex/Pattern.html)

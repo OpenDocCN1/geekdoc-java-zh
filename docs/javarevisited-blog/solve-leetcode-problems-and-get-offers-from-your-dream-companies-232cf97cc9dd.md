@@ -1,4 +1,5 @@
-# Leetcode 22。生成括号[解决方案]
+
+# Leetcode 22. 生成括号[解决方案]
 
 > 原文：<https://medium.com/javarevisited/solve-leetcode-problems-and-get-offers-from-your-dream-companies-232cf97cc9dd?source=collection_archive---------1----------------------->
 

@@ -1,3 +1,4 @@
+
 # Spring 将日期注入 bean 属性–custom Date editor
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring/spring-how-to-pass-a-date-into-bean-property-customdateeditor/>
@@ -5,7 +6,7 @@
 这个 Spring 示例向您展示了如何将一个“日期”注入到 bean 属性中。
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 import java.util.Date;
 
@@ -26,13 +27,13 @@ public class Customer {
 		return "Customer [date=" + date + "]";
 	}
 
-} 
+}
 ```
 
 Bean 配置文件
 
 ```java
- <beans 
+<beans
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
@@ -41,13 +42,13 @@ Bean 配置文件
 		<property name="date" value="2010-01-31" />
 	</bean>
 
-</beans> 
+</beans>
 ```
 
 运行它
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -61,32 +62,32 @@ public class App {
 		System.out.println(cust);
 
 	}
-} 
+}
 ```
 
-您将遇到以下错误消息:
+您将遇到以下错误消息：
 
 ```java
- Caused by: org.springframework.beans.TypeMismatchException: 
-	Failed to convert property value of type [java.lang.String] to 
-	required type [java.util.Date] for property 'date'; 
+Caused by: org.springframework.beans.TypeMismatchException:
+	Failed to convert property value of type [java.lang.String] to
+	required type [java.util.Date] for property 'date';
 
-nested exception is java.lang.IllegalArgumentException: 
+nested exception is java.lang.IllegalArgumentException:
 	Cannot convert value of type [java.lang.String] to
-	required type [java.util.Date] for property 'date': 
-	no matching editors or conversion strategy found 
+	required type [java.util.Date] for property 'date':
+	no matching editors or conversion strategy found
 ```
 
 ## 解决办法
 
-在 Spring 中，您可以通过两种方法注入日期:
+在 Spring 中，您可以通过两种方法注入日期：
 
- ## 1.工厂豆
+## 1. 工厂豆
 
 声明一个日期格式 bean，在“客户”bean 中，引用“日期格式”bean 作为工厂 bean。工厂方法会调用`SimpleDateFormat.parse()`自动将字符串转换成日期对象。
 
 ```java
- <beans 
+<beans
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
@@ -103,15 +104,15 @@ nested exception is java.lang.IllegalArgumentException:
 		</property>
 	</bean>
 
-</beans> 
+</beans>
 ```
 
- ## 2.自定义日期编辑器
+## 2. 自定义日期编辑器
 
-声明一个 CustomDateEditor 类，将 String 转换成 **java.util.Date** 。
+声明一个`CustomDateEditor`类，将`String`转换成`java.util.Date`。
 
 ```java
- <bean id="dateEditor"
+<bean id="dateEditor"
 	   class="org.springframework.beans.propertyeditors.CustomDateEditor">
 
 		<constructor-arg>
@@ -120,13 +121,13 @@ nested exception is java.lang.IllegalArgumentException:
 			</bean>
 		</constructor-arg>
 		<constructor-arg value="true" />
-	</bean> 
+	</bean>
 ```
 
-并声明另一个“CustomEditorConfigurer”，使 Spring 转换类型为 **java.util.Date** 的 bean 属性。
+并声明另一个`CustomEditorConfigurer`，使 Spring 转换类型为`java.util.Date`的 bean 属性。
 
 ```java
- <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
 		<property name="customEditors">
 			<map>
 				<entry key="java.util.Date">
@@ -134,13 +135,13 @@ nested exception is java.lang.IllegalArgumentException:
 				</entry>
 			</map>
 		</property>
-	</bean> 
+	</bean>
 ```
 
 bean 配置文件的完整示例。
 
 ```java
- <beans 
+<beans
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
@@ -171,7 +172,7 @@ bean 配置文件的完整示例。
 		<property name="date" value="2010-02-31" />
 	</bean>
 
-</beans> 
+</beans>
 ```
 
 ## 下载源代码
@@ -180,13 +181,6 @@ Download It – [Spring-CustomDateEditor-Example.zip](http://web.archive.org/web
 
 ## 参考
 
-1.  [春天房产编辑](http://web.archive.org/web/20190213135022/http://static.springsource.org/spring/docs/2.5.6/api/org/springframework/beans/propertyeditors/package-tree.html)
+1. [春天房产编辑](http://web.archive.org/web/20190213135022/http://static.springsource.org/spring/docs/2.5.6/api/org/springframework/beans/propertyeditors/package-tree.html)
 
 [date](http://web.archive.org/web/20190213135022/http://www.mkyong.com/tag/date/) [spring](http://web.archive.org/web/20190213135022/http://www.mkyong.com/tag/spring/)
-
-
-
-
-
-
-

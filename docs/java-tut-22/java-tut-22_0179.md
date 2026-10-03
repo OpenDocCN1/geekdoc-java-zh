@@ -1,3 +1,4 @@
+
 # 文件操作
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/io/fileOps.html`](https://docs.oracle.com/javase/tutorial/essential/io/fileOps.html)
@@ -5,28 +6,22 @@
 [`Files`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html)类是`java.nio.file`包的另一个主要入口点。该类提供了丰富的静态方法集，用于读取、写入和操作文件和目录。`Files`方法适用于`Path`对象的实例。在继续阅读其余部分之前，您应该熟悉以下常见概念：
 
 +   释放系统资源
-
 +   捕获异常
-
 +   可变参数
-
 +   原子操作
-
 +   方法链
-
 +   什么是 Glob？
-
 +   链接感知
 
 ## 释放系统资源
 
-此 API 中使用的许多资源，如流或通道，实现或扩展了[`java.io.Closeable`](https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html)接口。`Closeable`资源的要求是在不再需要时必须调用`close`方法来释放资源。忽略关闭资源可能会对应用程序的性能产生负面影响。下一节描述的`try-`with-resources 语句会为您处理此步骤。
+此 API 中使用的许多资源，如流或通道，实现或扩展了[`java.io.Closeable`](https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html)接口。`Closeable`资源的要求是在不再需要时必须调用`close`方法来释放资源。忽略关闭资源可能会对应用程序的性能产生负面影响。下一节描述的`try-with-resources`语句会为您处理此步骤。
 
 ## 捕获异常
 
 在文件 I/O 中，意外情况是生活中的一个事实：文件存在（或不存在）时预期的，程序无法访问文件系统，默认文件系统实现不支持特定功能，等等。可能会遇到许多错误。
 
-所有访问文件系统的方法都可能抛出`IOException`。最佳做法是通过将这些方法嵌入到 Java SE 7 版本中引入的`try-`with-resources 语句中来捕获这些异常。`try-`with-resources 语句的优点是编译器在不再需要时会自动生成关闭资源的代码。以下代码显示了这种情况可能如何：
+所有访问文件系统的方法都可能抛出`IOException`。最佳做法是通过将这些方法嵌入到 Java SE 7 版本中引入的`try-with-resources`语句中来捕获这些异常。`try-with-resources`语句的优点是编译器在不再需要时会自动生成关闭资源的代码。以下代码显示了这种情况可能如何：
 
 ```java
 Charset charset = Charset.forName("US-ASCII");
@@ -36,7 +31,6 @@ try (BufferedWriter writer = Files.newBufferedWriter(file, charset)) {
 } catch (IOException x) {
     System.err.format("IOException: %s%n", x);
 }
-
 ```
 
 有关更多信息，请参阅 try-with-resources 语句。
@@ -55,7 +49,6 @@ try {
 } finally {
     if (writer != null) writer.close();
 }
-
 ```
 
 有关更多信息，请参阅捕获和处理异常。
@@ -70,7 +63,6 @@ try (...) {
 } catch (NoSuchFileException x) {
     System.err.format("%s does not exist\n", x.getFile());
 }
-
 ```
 
 为了清晰起见，本课程中的文件 I/O 示例可能不显示异常处理，但您的代码应始终包含它。
@@ -81,7 +73,6 @@ try (...) {
 
 ```java
 Path Files.move(Path, Path, CopyOption...)
-
 ```
 
 当一个方法接受可变参数时，您可以传递逗号分隔的值列表或值数组（`CopyOption[]`）。
@@ -97,7 +88,6 @@ Files.move(source,
            target,
            REPLACE_EXISTING,
            ATOMIC_MOVE);
-
 ```
 
 有关可变参数语法的更多信息，请参见可变参数。
@@ -119,7 +109,6 @@ String value = Charset.defaultCharset().decode(buf).toString();
 UserPrincipal group =
     file.getFileSystem().getUserPrincipalLookupService().
          lookupPrincipalByName("me");
-
 ```
 
 这种技术产生了紧凑的代码，并使您能够避免声明您不需要的临时变量。
@@ -133,43 +122,26 @@ UserPrincipal group =
 通配符模式被指定为一个字符串，并与其他字符串（如目录或文件名）匹配。通配符语法遵循几个简单的规则：
 
 +   星号`*`匹配任意数量的字符（包括零个）。
-
 +   两个星号`**`的工作方式类似于`*`，但跨越目录边界。这种语法通常用于匹配完整路径。
-
 +   问号，`?`，匹配恰好一个字符。
-
 +   大括号指定一组子模式。例如：
-
     +   `{太阳,月亮,星星}` 匹配"太阳"、"月亮"或"星星"。
-
     +   `{temp*,tmp*}` 匹配所有以"temp"或"tmp"开头的字符串。
-
 +   方括号传达一组单个字符，或者当使用连字符字符（`-`）时，传达一组字符范围。例如：
-
     +   `[aeiou]` 匹配任何小写元音字母。
-
     +   `[0-9]` 匹配任何数字。
-
     +   `[A-Z]` 匹配任何大写字母。
-
     +   `[a-z,A-Z]` 匹配任何大写或小写字母。在方括号内，`*`、`?`和`\`代表它们自身。
-
 +   所有其他字符都代表它们自身。
-
 +   要匹配`*`、`?`或其他特殊字符，可以使用反斜杠字符`\`进行转义。例如：`\\`匹配一个反斜杠，`\?`匹配问号。
 
 以下是一些通配符语法示例：
 
 +   `*.html` – 匹配所有以 *.html* 结尾的字符串
-
 +   `???` – 匹配所有恰好有三个字母或数字的字符串
-
 +   `*[0-9]*` – 匹配所有包含数字值的字符串
-
 +   `*.{htm,html,pdf}` – 匹配任何以 *.htm*、*.html* 或 *.pdf* 结尾的字符串
-
-+   `a?*.java` – 匹配任何以 `a` 开头，后跟至少一个字母或数字，并以 *.java* 结尾的字符串
-
++   `a?*.java` – 匹配任何以`a`开头，后跟至少一个字母或数字，并以 *.java* 结尾的字符串
 +   `{foo*,*[0-9]*}` – 匹配任何以 *foo* 开头的字符串或任何包含数字值的字符串
 
 * * *

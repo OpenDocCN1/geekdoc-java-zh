@@ -1,27 +1,28 @@
-# jQuery–子选择器示例
+
+# jQuery 子选择器示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jquery/jquery-child-selector-example/>
 
-**jQuery 子选择器(X > Y)** 用于选择与“X”元素的子元素“Y”匹配的所有元素。
+**jQuery 子选择器（`X > Y`）**用于选择与“X”元素的子元素“Y”匹配的所有元素。
 
-举个例子，
+举个例子：
 
-*   **$(' form>input ')**–选择所有由< input >匹配的元素，这些元素是由< form >匹配的元素的子元素，只有子元素匹配，孙子、曾孙不匹配。
+- `$('form > input')`——选择所有由`<input>`匹配的元素，这些元素是由`<form>`匹配的元素的子元素，只有子元素匹配，孙子、曾孙不匹配。
 
 ## jQuery 示例
 
-在本例中，只有“文本框 1”和“文本框 4”匹配(表单元素的子元素)，而“文本框 2”(孙元素)和“文本框 3”(曾孙元素)不匹配。
+在本例中，只有“文本框 1”和“文本框 4”匹配（表单元素的子元素），而“文本框 2”（孙元素）和“文本框 3”（曾孙元素）不匹配。
 
 ```java
- <html>
+<html>
 <head>
 <title>jQuery child selector example</title>
 
 <script type="text/javascript" src="jquery-1.3.2.min.js"></script>
 
- <style type="text/css">
+<style type="text/css">
   div { padding:8px 0px 8px 8px; }
- </style>
+</style>
 
 </head>
 
@@ -65,7 +66,7 @@ $(document).ready(function(){
 <p> I'm form siblings #4 - P </p>
 
 </body>
-</html> 
+</html>
 ```
 
 [http://web.archive.org/web/20220618072947if_/https://www.mkyong.com/wp-content/uploads/jQuery/jQuery-child-selector.html](http://web.archive.org/web/20220618072947if_/https://www.mkyong.com/wp-content/uploads/jQuery/jQuery-child-selector.html)

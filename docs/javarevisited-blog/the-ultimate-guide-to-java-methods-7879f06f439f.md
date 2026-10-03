@@ -1,3 +1,4 @@
+
 # Java 方法的终极指南
 
 > 原文：<https://medium.com/javarevisited/the-ultimate-guide-to-java-methods-7879f06f439f?source=collection_archive---------4----------------------->

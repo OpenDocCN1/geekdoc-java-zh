@@ -1,3 +1,4 @@
+
 # 使用 Spring Cloud Stream 和 RabbitMQ 的事件驱动微服务
 
 > 原文：<https://medium.com/javarevisited/event-driven-microservices-with-spring-cloud-stream-and-rabbitmq-add4166fe223?source=collection_archive---------0----------------------->

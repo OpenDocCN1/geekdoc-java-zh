@@ -1,3 +1,4 @@
+
 # 使用预定义格式
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/format/numberFormat.html`](https://docs.oracle.com/javase/tutorial/i18n/format/numberFormat.html)
@@ -25,7 +26,6 @@ static public void displayNumber(Locale currentLocale) {
     System.out.println(quantityOut + "   " + currentLocale.toString());
     System.out.println(amountOut + "   " + currentLocale.toString());
 }
-
 ```
 
 这个例子打印如下内容；它展示了相同数字的格式如何随着[`Locale`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html)的不同而变化：
@@ -37,7 +37,6 @@ static public void displayNumber(Locale currentLocale) {
 345.987,246   de_DE
 123,456   en_US
 345,987.246   en_US
-
 ```
 
 ### 使用阿拉伯数字以外的数字形状
@@ -65,7 +64,6 @@ static public void displayCurrency( Locale currentLocale) {
         currentCurrency.getDisplayName() + ": " +
         currencyFormatter.format(currencyAmount));
 }
-
 ```
 
 由上述代码生成的输出如下所示：
@@ -74,7 +72,6 @@ static public void displayCurrency( Locale currentLocale) {
 French (France), Euro: 9 876 543,21 €
 German (Germany), Euro: 9.876.543,21 €
 English (United States), US Dollar: $9,876,543.21
-
 ```
 
 乍一看，这个输出可能看起来对您来说是错误的，因为数字值都是相同的。当然，9 876 543,21 €不等同于$9,876,543.21。然而，请记住，[`NumberFormat`](https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html)类不知道汇率。属于[`NumberFormat`](https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html)类的方法格式化货币，但不会转换它们。
@@ -121,7 +118,6 @@ English (United States), US Dollar: $9,876,543.21
     System.out.println(
         "Symbol for US Dollar, en-UK locale: " +
         currencyInstance.getSymbol(enGBLocale));
-
     ```
 
     该摘录打印如下内容：
@@ -129,7 +125,6 @@ English (United States), US Dollar: $9,876,543.21
     ```java
     Symbol for US Dollar, en-US locale: $
     Symbol for US Dollar, en-UK locale: USD
-
     ```
 
     此摘录演示了货币符号可以根据区域设置而变化。
@@ -145,7 +140,6 @@ English (United States), US Dollar: $9,876,543.21
 ```java
 # Sample currency property for Canada
 CA=CAD,124,2
-
 ```
 
 `CAD`代表加拿大元；`124`是加拿大元的数字代码；`2`是小单位，表示货币需要表示分数货币的小数位数。例如，以下属性文件将把默认的加拿大货币替换为没有比加拿大元更小单位的加拿大元：
@@ -171,7 +165,6 @@ static public void displayPercent(Locale currentLocale) {
     percentOut = percentFormatter.format(percent);
     System.out.println(percentOut + "   " + currentLocale.toString());
 }
-
 ```
 
 这个示例打印如下内容：
@@ -180,5 +173,4 @@ static public void displayPercent(Locale currentLocale) {
 75 %   fr_FR
 75%   de_DE
 75%   en_US
-
 ```

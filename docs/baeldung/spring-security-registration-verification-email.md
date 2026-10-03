@@ -1,25 +1,29 @@
-# 春季安全注册–重新发送验证电子邮件
+
+# 春季安全注册——重新发送验证电子邮件
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-security-registration-verification-email>
 
-[This article is part of a series:](javascript:void(0);)[• Spring Security Registration Tutorial](/web/20220529025330/https://www.baeldung.com/spring-security-registration)
-[• The Registration Process With Spring Security](/web/20220529025330/https://www.baeldung.com/registration-with-spring-mvc-and-spring-security)
-[• Registration – Activate a New Account by Email](/web/20220529025330/https://www.baeldung.com/registration-verify-user-by-email)
-• Spring Security Registration – Resend Verification Email (current article)[• Registration with Spring Security – Password Encoding](/web/20220529025330/https://www.baeldung.com/spring-security-registration-password-encoding-bcrypt)
-[• The Registration API becomes RESTful](/web/20220529025330/https://www.baeldung.com/registration-restful-api)
-[• Spring Security – Reset Your Password](/web/20220529025330/https://www.baeldung.com/spring-security-registration-i-forgot-my-password)
-[• Registration – Password Strength and Rules](/web/20220529025330/https://www.baeldung.com/registration-password-strength-and-rules)
-[• Updating your Password](/web/20220529025330/https://www.baeldung.com/updating-your-password/)
+[This article is part of a series:](javascript:void(0);)
 
-## 1。概述
+- [• Spring Security Registration Tutorial](/web/20220529025330/https://www.baeldung.com/spring-security-registration)
+- [• The Registration Process With Spring Security](/web/20220529025330/https://www.baeldung.com/registration-with-spring-mvc-and-spring-security)
+- [• Registration – Activate a New Account by Email](/web/20220529025330/https://www.baeldung.com/registration-verify-user-by-email)
+- • Spring Security Registration – Resend Verification Email (current article)
+- [• Registration with Spring Security – Password Encoding](/web/20220529025330/https://www.baeldung.com/spring-security-registration-password-encoding-bcrypt)
+- [• The Registration API becomes RESTful](/web/20220529025330/https://www.baeldung.com/registration-restful-api)
+- [• Spring Security – Reset Your Password](/web/20220529025330/https://www.baeldung.com/spring-security-registration-i-forgot-my-password)
+- [• Registration – Password Strength and Rules](/web/20220529025330/https://www.baeldung.com/registration-password-strength-and-rules)
+- [• Updating your Password](/web/20220529025330/https://www.baeldung.com/updating-your-password/)
 
-在本教程中——我们继续正在进行的 **`Registration with Spring Security`系列**,看看如何向用户重新发送验证链接，以防在他们有机会激活他们的帐户之前过期。
+## 1. 概述
 
-## 2。重新发送验证链接
+在本教程中——我们继续正在进行的`Registration with Spring Security`系列，看看如何向用户重新发送验证链接，以防在他们有机会激活他们的帐户之前过期。
 
-首先，让我们看看当用户**请求另一个验证链接**时会发生什么，以防前一个过期。
+## 2. 重新发送验证链接
 
-首先，我们将使用新的`expireDate`重置现有令牌。然后，我们将向用户发送一封新的电子邮件，其中包含新的链接/令牌:
+首先，让我们看看当用户请求另一个验证链接时会发生什么，以防前一个过期。
+
+首先，我们将使用新的`expireDate`重置现有令牌。然后，我们将向用户发送一封新的电子邮件，其中包含新的链接/令牌：
 
 ```java
 @GetMapping("/user/resendRegistrationToken")
@@ -41,7 +45,7 @@ public GenericResponse resendRegistrationToken(
 }
 ```
 
-以及用于实际构建用户收到的电子邮件消息的实用程序—`constructResendVerificationTokenEmail()`:
+以及用于实际构建用户收到的电子邮件消息的实用程序——`constructResendVerificationTokenEmail()`：
 
 ```java
 private SimpleMailMessage constructResendVerificationTokenEmail
@@ -58,7 +62,7 @@ private SimpleMailMessage constructResendVerificationTokenEmail
 }
 ```
 
-我们还需要修改现有的注册功能——在模型**上添加一些关于令牌**到期的新信息:
+我们还需要修改现有的注册功能——在模型上添加一些关于令牌到期的新信息：
 
 ```java
 @GetMapping("/registrationConfirm")
@@ -87,9 +91,9 @@ public String confirmRegistration(
 }
 ```
 
-## 3。异常处理程序
+## 3. 异常处理程序
 
-在某些情况下，前面的功能是抛出异常；这些异常需要被处理，我们将用定制的异常处理程序来处理这些异常:
+在某些情况下，前面的功能会抛出异常；这些异常需要被处理，我们将用定制的异常处理程序来处理这些异常：
 
 ```java
 @ControllerAdvice
@@ -132,10 +136,10 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
 }
 ```
 
-请注意:
+请注意：
 
-*   我们使用`@ControllerAdvice`注释来处理整个应用程序中的异常
-*   我们使用一个简单的对象`GenericResponse`来发送响应:
+- 我们使用`@ControllerAdvice`注释来处理整个应用程序中的异常。
+- 我们使用一个简单的对象`GenericResponse`来发送响应：
 
 ```java
 public class GenericResponse {
@@ -155,9 +159,9 @@ public class GenericResponse {
 }
 ```
 
-## 4。修改`badUser.html`
+## 4. 修改`badUser.html`
 
-我们现在将修改`badUser.html`,使用户仅在其令牌过期时才能获得新的`VerificationToken`:
+我们现在将修改`badUser.html`，使用户仅在其令牌过期时才能获得新的`VerificationToken`：
 
 ```java
 <html>
@@ -202,12 +206,14 @@ function resendToken(){
 </html>
 ```
 
-注意，我们在这里使用了一些非常基本的 javascript 和 JQuery 来处理“/user/resendRegistrationToken”的响应，并基于它重定向用户。
+注意，我们在这里使用了一些非常基本的 JavaScript 和 jQuery 来处理`/user/resendRegistrationToken`的响应，并基于它重定向用户。
 
-## 5。结论
+## 5. 结论
 
-在这篇短文中，我们允许用户**请求一个新的验证链接来激活他们的帐户**，以防旧帐户过期。
+在这篇短文中，我们允许用户请求一个新的验证链接来激活他们的帐户，以防旧帐户过期。
 
-本教程的**完整实现**可以在[的 github 项目](https://web.archive.org/web/20220529025330/https://github.com/Baeldung/spring-security-registration "The Full Registration/Authentication Example Project on Github ")中找到——这是一个基于 Eclipse 的项目，所以它应该很容易导入和运行。
+本教程的完整实现可以在[GitHub 项目](https://web.archive.org/web/20220529025330/https://github.com/Baeldung/spring-security-registration "The Full Registration/Authentication Example Project on Github ")中找到——这是一个基于 Eclipse 的项目，所以它应该很容易导入和运行。
 
-Next **»**[Registration with Spring Security – Password Encoding](/web/20220529025330/https://www.baeldung.com/spring-security-registration-password-encoding-bcrypt)**«** Previous[Registration – Activate a New Account by Email](/web/20220529025330/https://www.baeldung.com/registration-verify-user-by-email)
+
+
+Next **»** [Registration with Spring Security – Password Encoding](/web/20220529025330/https://www.baeldung.com/spring-security-registration-password-encoding-bcrypt) **«** Previous [Registration – Activate a New Account by Email](/web/20220529025330/https://www.baeldung.com/registration-verify-user-by-email)

@@ -1,24 +1,20 @@
+
 # REST API 的自定义错误消息处理
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/global-error-handler-in-a-spring-rest-api>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将讨论如何为 Spring REST API 实现一个全局错误处理器。
 
 我们将使用每个异常的语义为客户端构建有意义的错误消息，明确的目标是为客户端提供所有信息，以便轻松地诊断问题。
 
-## 延伸阅读:
+## 延伸阅读
 
-## [弹簧响应状态异常](/web/20220720100342/https://www.baeldung.com/spring-response-status-exception)
+- [弹簧响应状态异常](/web/20220720100342/https://www.baeldung.com/spring-response-status-exception)：了解如何在 Spring 中使用 `ResponseStatusException` 将状态码应用于 HTTP 响应。[阅读更多](/web/20220720100342/https://www.baeldung.com/spring-response-status-exception) →
+- [带弹簧的刀架错误处理](/web/20220720100342/https://www.baeldung.com/exception-handling-for-rest-with-spring)：针对 REST API 的异常处理——说明 Spring 3.2 推荐的新方法以及早期解决方案。[阅读更多](/web/20220720100342/https://www.baeldung.com/exception-handling-for-rest-with-spring) →
 
-Learn how to apply status codes to HTTP responses in Spring with ResponseStatusException.[Read more](/web/20220720100342/https://www.baeldung.com/spring-response-status-exception) →
-
-## [带弹簧的刀架错误处理](/web/20220720100342/https://www.baeldung.com/exception-handling-for-rest-with-spring)
-
-Exception Handling for a REST API - illustrate the new Spring 3.2 recommended approach as well as earlier solutions .[Read more](/web/20220720100342/https://www.baeldung.com/exception-handling-for-rest-with-spring) →
-
-## 2。自定义错误消息
+## 2. 自定义错误消息
 
 让我们从实现一个通过网络发送错误的简单结构开始——`ApiError`:
 
@@ -45,13 +41,13 @@ public class ApiError {
 }
 ```
 
-这里的信息应该很简单:
+这里的信息应该很简单：
 
-*   `status`–HTTP 状态代码
-*   `message`–与异常相关的错误信息
-*   `error`–构建的错误信息列表
+- `status`——HTTP 状态代码
+- `message`——与异常相关的错误信息
+- `error`——构建的错误信息列表
 
-当然，对于 Spring 中实际的异常处理逻辑，[我们将使用](/web/20220720100342/https://www.baeldung.com/exception-handling-for-rest-with-spring)的`@ControllerAdvice`注释:
+当然，对于 Spring 中实际的异常处理逻辑，[我们将使用](/web/20220720100342/https://www.baeldung.com/exception-handling-for-rest-with-spring)的 `@ControllerAdvice` 注释：
 
 ```java
 @ControllerAdvice
@@ -60,14 +56,14 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
 }
 ```
 
-## 3。处理错误请求异常
+## 3. 处理错误请求异常
 
-### 3.1。异常处理
+### 3.1. 异常处理
 
-现在让我们看看如何处理最常见的客户端错误——基本上是客户端向 API 发送无效请求的场景:
+现在让我们看看如何处理最常见的客户端错误——基本上是客户端向 API 发送无效请求的场景：
 
-*   `BindException`–当出现致命的绑定错误时，抛出该异常。
-*   `MethodArgumentNotValidException`–当用`@Valid`注释的参数验证失败时，抛出该异常:
+- `BindException`——当出现致命的绑定错误时，抛出该异常。
+- `MethodArgumentNotValidException`——当用 `@Valid` 注释的参数验证失败时，抛出该异常：
 
 ```java
 @Override
@@ -91,15 +87,14 @@ protected ResponseEntity<Object> handleMethodArgumentNotValid(
 } 
 ```
 
-请注意，**我们从`ResponseEntityExceptionHandler`中重写了一个基础方法，并提供了我们自己的定制实现。**
+请注意，**我们从 `ResponseEntityExceptionHandler` 中重写了一个基础方法，并提供了我们自己的定制实现。**
 
 情况并不总是这样。有时，我们需要处理一个自定义的异常，这个异常在基类中没有默认的实现，我们将在后面看到。
 
-接下来:
+接下来：
 
-*   `MissingServletRequestPartException`–当找不到多部分请求的一部分时，抛出该异常。
-
-*   `MissingServletRequestParameterException`–当请求缺少参数时，抛出该异常:
+- `MissingServletRequestPartException`——当找不到多部分请求的一部分时，抛出该异常。
+- `MissingServletRequestParameterException`——当请求缺少参数时，抛出该异常：
 
 ```java
 @Override
@@ -115,7 +110,7 @@ protected ResponseEntity<Object> handleMissingServletRequestParameter(
 }
 ```
 
-*   `ConstraintViolationException`–此异常报告违反约束的结果:
+- `ConstraintViolationException`——此异常报告违反约束的结果：
 
 ```java
 @ExceptionHandler({ ConstraintViolationException.class })
@@ -134,9 +129,8 @@ public ResponseEntity<Object> handleConstraintViolation(
 }
 ```
 
-*   `TypeMismatchException`–试图用错误的类型设置 bean 属性时抛出此异常。
-
-*   `MethodArgumentTypeMismatchException`–当方法参数不是预期的类型时，抛出此异常:
+- `TypeMismatchException`——试图用错误的类型设置 bean 属性时抛出此异常。
+- `MethodArgumentTypeMismatchException`——当方法参数不是预期的类型时，抛出此异常：
 
 ```java
 @ExceptionHandler({ MethodArgumentTypeMismatchException.class })
@@ -152,11 +146,11 @@ public ResponseEntity<Object> handleMethodArgumentTypeMismatch(
 }
 ```
 
-### 3.2。从客户端使用 API
+### 3.2. 从客户端使用 API
 
-现在让我们来看一个遇到`MethodArgumentTypeMismatchException`的测试。
+现在让我们来看一个遇到 `MethodArgumentTypeMismatchException` 的测试。
 
-我们将**发送一个请求，将`id`作为`String`而不是`long`** :
+我们将**发送一个请求，将 `id` 作为 `String` 而不是 `long`**：
 
 ```java
 @Test
@@ -170,14 +164,14 @@ public void whenMethodArgumentMismatch_thenBadRequest() {
 }
 ```
 
-最后，考虑同样的请求:
+最后，考虑同样的请求：
 
 ```java
 Request method:	GET
 Request path:	http://localhost:8080/spring-security-rest/api/foos/ccc 
 ```
 
-**下面是这种 JSON 错误响应的样子**:
+**下面是这种 JSON 错误响应的样子**：
 
 ```java
 {
@@ -192,11 +186,11 @@ Request path:	http://localhost:8080/spring-security-rest/api/foos/ccc
 }
 ```
 
-## 4。把手`NoHandlerFoundException`
+## 4. 处理 `NoHandlerFoundException`
 
-接下来，我们可以定制 servlet 来抛出这个异常，而不是发送 404 响应:
+接下来，我们可以定制 servlet 来抛出这个异常，而不是发送 404 响应：
 
-```java
+```xml
 <servlet>
     <servlet-name>api</servlet-name>
     <servlet-class>
@@ -208,7 +202,7 @@ Request path:	http://localhost:8080/spring-security-rest/api/foos/ccc
 </servlet>
 ```
 
-然后，一旦发生这种情况，我们可以像处理任何其他异常一样简单地处理它:
+然后，一旦发生这种情况，我们可以像处理任何其他异常一样简单地处理它：
 
 ```java
 @Override
@@ -221,7 +215,7 @@ protected ResponseEntity<Object> handleNoHandlerFoundException(
 }
 ```
 
-这里有一个简单的测试:
+这里有一个简单的测试：
 
 ```java
 @Test
@@ -235,14 +229,14 @@ public void whenNoHandlerForHttpRequest_thenNotFound() {
 }
 ```
 
-让我们看看完整的请求:
+让我们看看完整的请求：
 
 ```java
 Request method:	DELETE
 Request path:	http://localhost:8080/spring-security-rest/api/xx
 ```
 
-以及**错误 JSON 响应**:
+以及**错误 JSON 响应**：
 
 ```java
 {
@@ -256,9 +250,15 @@ Request path:	http://localhost:8080/spring-security-rest/api/xx
 
 接下来，我们将看看另一个有趣的异常。
 
-## 5。把手`HttpRequestMethodNotSupportedException`
+## 5. 处理 `HttpRequestMethodNotSupportedException`
 
-当我们用不支持的 HTTP 方法发送请求时，会发生`HttpRequestMethodNotSupportedException`:
+当我们用不支持的 HTTP 方法发送请求时，会发生 `HttpRequestMethodNotSupportedException`。
+
+
+
+## 覆盖默认错误处理的实现
+
+以下代码展示了如何覆盖`ResponseEntityExceptionHandler`中的`handleHttpRequestMethodNotSupported()`方法，以处理不支持的HTTP方法请求：
 
 ```java
 @Override
@@ -280,7 +280,9 @@ protected ResponseEntity<Object> handleHttpRequestMethodNotSupported(
 }
 ```
 
-下面是重现该异常的简单测试:
+### 重现异常的测试
+
+下面是重现该异常的简单测试：
 
 ```java
 @Test
@@ -294,14 +296,14 @@ public void whenHttpRequestMethodNotSupported_thenMethodNotAllowed() {
 }
 ```
 
-这是完整的请求:
+这是完整的请求：
 
 ```java
 Request method:	DELETE
 Request path:	http://localhost:8080/spring-security-rest/api/foos/1
 ```
 
-以及**错误 JSON 响应**:
+以及**错误 JSON 响应**：
 
 ```java
 {
@@ -313,9 +315,9 @@ Request path:	http://localhost:8080/spring-security-rest/api/foos/1
 }
 ```
 
-## 6。把手`HttpMediaTypeNotSupportedException`
+## 处理`HttpMediaTypeNotSupportedException`
 
-现在让我们来处理`HttpMediaTypeNotSupportedException`，它发生在客户端发送一个带有不支持的媒体类型的请求时:
+现在让我们来处理`HttpMediaTypeNotSupportedException`，它发生在客户端发送一个带有不支持的媒体类型的请求时：
 
 ```java
 @Override
@@ -336,7 +338,9 @@ protected ResponseEntity<Object> handleHttpMediaTypeNotSupported(
 }
 ```
 
-下面是一个关于这个问题的简单测试:
+### 测试不支持的媒体类型
+
+下面是一个关于这个问题的简单测试：
 
 ```java
 @Test
@@ -350,7 +354,7 @@ public void whenSendInvalidHttpMediaType_thenUnsupportedMediaType() {
 }
 ```
 
-最后，这里有一个请求示例:
+最后，这里有一个请求示例：
 
 ```java
 Request method:	POST
@@ -358,7 +362,7 @@ Request path:	http://localhost:8080/spring-security-
 Headers:	Content-Type=text/plain; charset=ISO-8859-1
 ```
 
-和**错误 JSON 响应:**
+和**错误 JSON 响应**：
 
 ```java
 {
@@ -374,9 +378,9 @@ Headers:	Content-Type=text/plain; charset=ISO-8859-1
 }
 ```
 
-## 7。默认处理程序
+## 默认处理程序
 
-最后，我们将实现一个回退处理程序—一种无所不包的逻辑类型，用于处理所有其他没有特定处理程序的异常:
+最后，我们将实现一个回退处理程序—一种无所不包的逻辑类型，用于处理所有其他没有特定处理程序的异常：
 
 ```java
 @ExceptionHandler({ Exception.class })
@@ -388,7 +392,7 @@ public ResponseEntity<Object> handleAll(Exception ex, WebRequest request) {
 }
 ```
 
-## 8。结论
+## 结论
 
 为 Spring REST API 构建一个合适的、成熟的错误处理程序是困难的，并且肯定是一个迭代的过程。希望本教程将是一个很好的起点，也是一个很好的锚，帮助 API 客户快速、轻松地诊断错误并克服它们。
 

@@ -1,3 +1,4 @@
+
 # 国际化后
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/intro/after.html`](https://docs.oracle.com/javase/tutorial/i18n/intro/after.html)
@@ -33,17 +34,12 @@ public class I18NSample {
         System.out.println(messages.getString("farewell"));
     }
 }
-
 ```
 
 要编译和运行此程序，您需要这些源文件：
 
-+   ``I18NSample.java``
-
-+   ``MessagesBundle.properties``
-
-+   ``MessagesBundle_de_DE.properties``
-
-+   ``MessagesBundle_en_US.properties``
-
-+   ``MessagesBundle_fr_FR.properties``
++ `I18NSample.java`
++ `MessagesBundle.properties`
++ `MessagesBundle_de_DE.properties`
++ `MessagesBundle_en_US.properties`
++ `MessagesBundle_fr_FR.properties`

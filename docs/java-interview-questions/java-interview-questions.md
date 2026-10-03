@@ -1,52 +1,17 @@
+
 # Java 面试题
 
-
-
-
-
-
-![](img/3a1f05d633ac206e82f7a3d535c6f6c8_0_0.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 前言
+## 前言
 
 在本指南中，我们将讨论 Java 面试中可能使用的不同类型的问题，以便雇主测试你对 Java 以及通用面向对象编程的技能。
 
 在接下来的章节中，我们将讨论面向对象编程及其特性、关于 Java 及其功能的通用问题、Java 集合（Collections）、垃圾回收器、异常处理、Java Applets、Swing、JDBC、远程方法调用（RMI）、Servlets 和 JSP。
 
-# 关于作者
+## 关于作者
 
-Sotirios-Efstathios (Stathis) Maneas 是雅典国立和卡波迪斯特里安大学信息科学与电信系的一名研究生。他的主要兴趣领域包括分布式系统、网络爬虫、模型检查（model checking）、操作系统、编程语言和 Web应用程序。
+Sotirios-Efstathios (Stathis) Maneas 是雅典国立和卡波迪斯特里安大学信息科学与电信系的一名研究生。他的主要兴趣领域包括分布式系统、网络爬虫、模型检查（model checking）、操作系统、编程语言和 Web 应用程序。
 
-# 第1 章
-
-## 面向对象编程 (OOP)
+## 第 1 章：面向对象编程 (OOP)
 
 Java 是一种并发的、基于类的且面向对象的编程语言。面向对象软件开发的优势如下所示：
 
@@ -55,11 +20,11 @@ Java 是一种并发的、基于类的且面向对象的编程语言。面向对
 - 提高代码的可靠性和灵活性。
 - 增强了对代码的理解。
 
-面向对象编程包含许多重要特性，例如**封装、继承、多态**和**抽象**。我们在接下来的章节中分别分析每个特性。
+面向对象编程包含许多重要特性，例如`封装`、`继承`、`多态`和`抽象`。我们在接下来的章节中分别分析每个特性。
 
 ### 1.1 封装
 
-封装提供了对象隐藏其内部特征和行为的能力。每个对象提供若干方法，其他对象可以访问这些方法并更改其内部数据。在 Java 中，有三种访问修饰符：public（公共）、private（私有）和 protected（保护）。每个修饰符对其他类（无论是在相同包内还是外部包中）施加不同的访问权限。使用封装的一些优点列举如下：
+封装提供了对象隐藏其内部特征和行为的能力。每个对象提供若干方法，其他对象可以访问这些方法并更改其内部数据。在 Java 中，有三种访问修饰符：`public`（公共）、`private`（私有）和 `protected`（保护）。每个修饰符对其他类（无论是在相同包内还是外部包中）施加不同的访问权限。使用封装的一些优点列举如下：
 
 - 每个对象的内部状态通过隐藏其属性受到保护。
 - 它增加了代码的可用性和可维护性，因为对象的行为可以独立地更改或扩展。
@@ -83,9 +48,7 @@ Java 是一种并发的、基于类的且面向对象的编程语言。面向对
 
 抽象和封装是互补的概念。一方面，抽象侧重于对象的行为。另一方面，封装侧重于对象行为的实现。封装通常通过隐藏对象内部状态的信息来实现，因此可以看作是用于提供抽象的策略。
 
-# 第2 章
-
-## 关于 Java 的通用问题
+## 第 2 章：关于 Java 的通用问题
 
 ### 2.1 什么是 JVM？为什么 Java 被称为平台无关编程语言？
 
@@ -97,7 +60,7 @@ Java 运行时（JRE）基本上是你的 Java 程序运行的 Java 虚拟机（
 
 ### 2.3 “static”关键字意味着什么？
 
-static 关键字表示该成员或方法属于类，而不是实例。在 Java 中可以重写静态方法吗？
+`static` 关键字表示该成员或方法属于类，而不是实例。在 Java 中可以重写静态方法吗？
 
 ### 2.4 可以访问静态变量吗？
 
@@ -107,20 +70,20 @@ static 关键字表示该成员或方法属于类，而不是实例。在 Java �
 
 Java 支持的原始类型包括：
 
-- byte
-- short
-- int
-- long
-- float
-- double
-- boolean
-- char
+- `byte`
+- `short`
+- `int`
+- `long`
+- `float`
+- `double`
+- `boolean`
+- `char`
 
-自动装箱是原始类型与其对应的包装类之间的自动转换。例如，将 int 转换为 Integer，反之则称为自动拆箱。
+自动装箱是原始类型与其对应的包装类之间的自动转换。例如，将 `int` 转换为 `Integer`，反之则称为自动拆箱。
 
 ### 2.6 Java 中的方法重写和重载有什么区别？
 
-方法重载发生在同一个类中，多个方法具有相同的方法但参数不同。另一方面，方法重写定义为子类定义了与父类相同的方法。
+方法重载发生在同一个类中，多个方法具有相同的方法名但参数不同。另一方面，方法重写定义为子类定义了与父类相同的方法。
 
 ### 2.7 什么是构造函数？Java 中的构造函数重载
 
@@ -128,22 +91,19 @@ Java 支持的原始类型包括：
 
 ### 2.8 Java 支持多重继承吗？
 
-Java 不多重继承。每个类只能扩展一个类，但可以实现多个接口。
+Java 不支持多重继承。每个类只能扩展一个类，但可以实现多个接口。
 
 ### 2.9 接口（Interface）和抽象类（Abstract class）的区别是什么？
 
 Java 提供并支持抽象类和接口。两者共享某些特性，但在以下方面不同：
 
 - 接口中的所有方法都是隐式抽象的。
-
-# Java 面试题
-
 - 类可以实现多个接口，但只能扩展一个抽象类。
 - 为了让类实现接口，必须实现其所有声明的方法。然而，类也可以不实现抽象类的所有声明方法，在这种情况下，子类也必须被声明为抽象的。
 - 抽象类可以实现接口而无需提供方法的实现。
-- Java 接口中的变量默认是 final 的。抽象类可以包含非 final 变量。
-- Java 接口的成员默认是 public 的。抽象类的成员可以是 private、protected 或 public。
-- 接口是绝对抽象的，不能实例化。抽象类也不能实例化，但如果它包含 main 方法则可以调用。
+- Java 接口中的变量默认是 `final` 的。抽象类可以包含非 `final` 变量。
+- Java 接口的成员默认是 `public` 的。抽象类的成员可以是 `private`、`protected` 或 `public`。
+- 接口是绝对抽象的，不能实例化。抽象类也不能实例化，但如果它包含 `main` 方法则可以调用。
 
 另查看 JDK 8 中抽象类和接口的差异。
 
@@ -151,13 +111,7 @@ Java 提供并支持抽象类和接口。两者共享某些特性，但在以下
 
 当对象按值传递时，意味着传递的是对象的副本。因此，即使对该对象进行更改，也不会影响原始值。当对象按引用传递时，传递的不是实际对象，而是对象的引用。因此，外部方法所做的任何更改都会反映在所有地方。
 
-
-
-
-
-# 第3章
-
-## Java 线程
+## 第 3 章：Java 线程
 
 ### 3.1 进程和线程之间有什么区别？
 
@@ -167,23 +121,23 @@ Java 提供并支持抽象类和接口。两者共享某些特性，但在以下
 
 创建线程有三种方式可以实现：
 
--   一个类可以继承 `Thread` 类。
--   一个类可以实现 `Runnable` 接口。
--   应用程序可以使用 `Executor` 框架来创建线程池。
+- 一个类可以继承 `Thread` 类。
+- 一个类可以实现 `Runnable` 接口。
+- 应用程序可以使用 `Executor` 框架来创建线程池。
 
 通常优选 `Runnable` 接口，因为它不需要对象继承 `Thread` 类。如果你的应用程序设计需要多重继承，只有接口可以为你提供帮助。此外，线程池非常高效，且非常容易实现和使用。
 
-## 3.3 高层地解释可用的线程状态。
+### 3.3 高层地解释可用的线程状态。
 
 在执行过程中，线程可能处于以下状态之一：
 
--   就绪（Runnable）：线程已准备好运行，但并不一定立即启动。
--   运行（Running）：处理器正在积极执行线程代码。
--   等待（Waiting）：线程处于阻塞状态，等待某些外部处理完成。
--   睡眠（Sleeping）：线程被强制休眠。
--   I/O 阻塞（Blocked on I/O）：等待 I/O 操作完成。
--   同步阻塞（Blocked on Synchronization）：等待获取锁。
--   死亡（Dead）：线程已完成执行。
+- 就绪（Runnable）：线程已准备好运行，但并不一定立即启动。
+- 运行（Running）：处理器正在积极执行线程代码。
+- 等待（Waiting）：线程处于阻塞状态，等待某些外部处理完成。
+- 睡眠（Sleeping）：线程被强制休眠。
+- I/O 阻塞（Blocked on I/O）：等待 I/O 操作完成。
+- 同步阻塞（Blocked on Synchronization）：等待获取锁。
+- 死亡（Dead）：线程已完成执行。
 
 ### 3.4 同步方法（synchronized method）和同步块（synchronized block）之间有什么区别？
 
@@ -195,44 +149,42 @@ JVM 使用锁结合监视器工作。监视器本质上是一个守护者，监�
 
 ### 3.6 什么是死锁？
 
-当两个进程在继续之前互相等待对方完成时发生的条件。结果是两个进程都无休等待。
+当两个进程在继续之前互相等待对方完成时发生的条件。结果是两个进程都无休止等待。
 
 ### 3.7 如何确保 N 个线程可以访问 N 个资源而不产生死锁？
 
 在使用 N 个线程时避免死锁的一种简单方法是为锁施加顺序，并强制每个线程遵循该顺序。因此，如果所有线程按照相同的顺序锁定和解锁互斥锁，就不会产生死锁。
 
-# 第4章
-
-## Java 集合（Collections）
+## 第 4 章：Java 集合（Collections）
 
 ### 4.1 Java 集合框架的基础接口有哪些？
 
 Java 集合框架提供了一组设计良好的接口和类，支持对对象集合进行操作。Java 集合框架中最基础的接口是：
 
--   `Collection`：表示一组被称为“元素”的对象。
--   `Set`：一种不能包含重复元素的集合。
--   `List`：一种有序集合，可以包含重复元素。
--   `Map`：一种将键映射到值的对象，不能包含重复的键。
+- `Collection`：表示一组被称为“元素”的对象。
+- `Set`：一种不能包含重复元素的集合。
+- `List`：一种有序集合，可以包含重复元素。
+- `Map`：一种将键映射到值的对象，不能包含重复的键。
 
 ### 4.2 为什么 Collection 没有扩展 `Cloneable` 和 `Serializable` 接口？
 
-`Collection` 接口指定了一组被称为元素的对象。`Collection` 的每个具体实现都可以选择自己的自己的维护和排序元素的方式。某些集合允许重复键，而另一些不允许。在处理实际实现时，克隆或序列化的语义和影响会起作用。因此，集合的具体实现应该决定它们如何可以被克隆或序列化。
+`Collection` 接口指定了一组被称为元素的对象。`Collection` 的每个具体实现都可以选择自己的维护和排序元素的方式。某些集合允许重复键，而另一些不允许。在处理实际实现时，克隆或序列化的语义和影响会起作用。因此，集合的具体实现应该决定它们如何可以被克隆或序列化。
 
 ### 4.3 什么是迭代器（Iterator）？
 
-`Iterator` 接口提供了许多方法，能够遍历任何 Java `Collection`。集合包含一个返回 `Iterator` 实例的迭代器。迭代器能够在迭代期间从底层集合中删除元素。
+`Iterator` 接口提供了许多方法，能够遍历任何 Java `Collection`。集合包含一个返回 `Iterator` 实例的迭代器方法。迭代器能够在迭代期间从底层集合中删除元素。
 
 ### 4.4 Iterator 和 ListIterator 之间有什么区别？
 
 这些元素的区别列举如下：
 
--   `Iterator` 可以用于遍历 `Set` 和 `List` 集合，而 `ListIterator` 只能用于遍历 `List`。
--   `Iterator` 只能正向遍历集合，而 `ListIterator` 可以双向遍历 `List`。
--   `ListIterator` 实现了 `Iterator` 接口并包含了额外功能，如添加元素、替换元素、获取前一个后续元素的索引位置等。
+- `Iterator` 可以用于遍历 `Set` 和 `List` 集合，而 `ListIterator` 只能用于遍历 `List`。
+- `Iterator` 只能正向遍历集合，而 `ListIterator` 可以双向遍历 `List`。
+- `ListIterator` 实现了 `Iterator` 接口并包含了额外功能，如添加元素、替换元素、获取前一个后续元素的索引位置等。
 
 ### 4.5 快速失败（fail-fast）和安全失败（fail-safe）有什么区别？
 
-迭代器的快速失败属性与底层集合的副本一起工作，因此不受受集合中任何修改的影响。`java.util` 包中的所有集合都是快速失败的，而 `java.util.concurrent` 中的集合类是安全失败的。快速失败迭代器抛出 `ConcurrentModificationException`，而安全失败迭代器永远不会抛此类异常。
+迭代器的快速失败属性与底层集合的副本一起工作，因此不受集合中任何修改的影响。`java.util` 包中的所有集合都是快速失败的，而 `java.util.concurrent` 中的集合类是安全失败的。快速失败迭代器抛出 `ConcurrentModificationException`，而安全失败迭代器永远不会抛此类异常。
 
 ### 4.6 HashMap 在 Java 中是如何工作的？
 
@@ -240,7 +192,7 @@ Java 集合框架提供了一组设计良好的接口和类，支持对对象集
 
 ### 4.7 hashCode() 和 equals() 方法的重要性是什么？
 
-在 Java 中，`HashMap` 使用 `hashCode` 和 `equals` 方法来确定键值对的索引并检测重复。具体来说，`hashCode` 方法用于确定指定键的位置。由于不同的键可能会产生相同的值，因此使用 `equals` 方法来确定键是否真实存在于集合中。`HashMap` 的重要性在于。
+在 Java 中，`HashMap` 使用 `hashCode` 和 `equals` 方法来确定键值对的索引并检测重复。具体来说，`hashCode` 方法用于确定指定键的位置。由于不同的键可能会产生相同的值，因此使用 `equals` 方法来确定键是否真实存在于集合中。
 
 ### 4.8 HashMap 和 Hashtable 之间有什么区别？
 
@@ -250,15 +202,15 @@ Java 集合框架提供了一组设计良好的接口和类，支持对对象集
 
 `ArrayList` 和 `LinkedList` 的区别如下：
 
--   `ArrayList` 是数组支持的，而 `LinkedList` 是链表支持的。
--   `ArrayList` 提供随机访问，复杂度为 O(1)，而 `LinkedList` 的访问复杂度为 O(n)。
--   `ArrayList` 在插入和删除操作上较慢，而 `LinkedList` 在这些方面更快。
+- `ArrayList` 是数组支持的，而 `LinkedList` 是链表支持的。
+- `ArrayList` 提供随机访问，复杂度为 O(1)，而 `LinkedList` 的访问复杂度为 O(n)。
+- `ArrayList` 在插入和删除操作上较慢，而 `LinkedList` 在这些方面更快。
 
 ### 4.10 Comparable 和 Comparator 接口是什么？
 
-Java  `Comparable` 接口包含一个方法 `compareTo()`。该方法比较两个对象以施加顺序。具体来说，它返回一个负整数、零或正整数，指示对象小于或大于。
+Java `Comparable` 接口包含一个方法 `compareTo()`。该方法比较两个对象以施加顺序。具体来说，它返回一个负整数、零或正整数，指示对象小于或大于。
 
-Java  `Comparator` 接口包含两个方法 `compare` 和 `equals`。第一个方法比较输入参数并施加顺序。它返回一个负整数、零或正整数，指示第一个参数小于或大于第二个参数。第二个方法在对象相等时返回 true。
+Java `Comparator` 接口包含两个方法 `compare` 和 `equals`。第一个方法比较输入参数并施加顺序。它返回一个负整数、零或正整数，指示第一个参数小于或大于第二个参数。第二个方法在对象相等时返回 true。
 
 ### 4.11 什么是 Java 优先级队列（Priority Queue）？
 
@@ -268,23 +220,14 @@ Java  `Comparator` 接口包含两个方法 `compare` 和 `equals`。第一个�
 
 大 O 符号简单地描述了算法随着数据量增加如何扩展或执行。大 O 符号也可以用于描述其他行为，例如内存消耗。由于集合类是实际的数据结构，我们通常使用大 O 符号来权衡时间、内存并选择最佳实现。
 
-
-
-
-
 ### 4.15 关于 Java 集合框架，有哪些最佳实践？
 
--   根据应用需求选择合适的集合类型对性能至关重要。例如，如果元素的大小是固定且预先已知的，我们应该使用 `Array` 而不是 `ArrayList`。
-
--   某些集合类允许我们指定其初始容量。因此，如果我们对将要存储的元素数量有估算，可以使用它来避免重新调整大小（resizing）。
-
--   始终使用泛型（Generics）来确保类型安全、可读性和健壮性。此外，通过使用泛型，我们可以避免在运行时出现 `ClassCastException`。
-
--   使用 Java 开发工具包（JDK）提供的不可变类作为 Map 的键，以避免为我们的自定义类实现 `hashCode` 和 `equals` 方法。
-
--   面向接口编程，而不是面向实现编程。
-
--   当底层集合实际上为空时，返回长度为零的集合或数组，而不是返回 `null`。
+- 根据应用需求选择合适的集合类型对性能至关重要。例如，如果元素的大小是固定且预先已知的，我们应该使用 `Array` 而不是 `ArrayList`。
+- 某些集合类允许我们指定其初始容量。因此，如果我们对将要存储的元素数量有估算，可以使用它来避免重新调整大小（resizing）。
+- 始终使用泛型（Generics）来确保类型安全、可读性和健壮性。此外，通过使用泛型，我们可以避免在运行时出现 `ClassCastException`。
+- 使用 Java 开发工具包（JDK）提供的不可变类作为 Map 的键，以避免为我们的自定义类实现 `hashCode` 和 `equals` 方法。
+- 面向接口编程，而不是面向实现编程。
+- 当底层集合实际上为空时，返回长度为零的集合或数组，而不是返回 `null`。
 
 ### 4.16 Enumeration（枚举）和 Iterator（迭代器）接口的区别是什么？
 
@@ -292,7 +235,9 @@ Enumeration 的执行速度与 Iterator 相当，且消耗的内存极少。然�
 
 ### 4.17 HashSet 和 TreeSet 的区别是什么？
 
-HashSet 是使用哈希表实现的，因此它的元素是无序的。HashSet 的 `add`、`remove` 和 `contains` 方法的时间复杂度为 $O(1)$。相比之下，TreeSet 是使用树结构实现的。TreeSet 中的元素是有排序的，其 `add`、`remove` 和 `contains` 方法的时间复杂度为 $O(\log n)$。
+`HashSet` 是使用哈希表实现的，因此它的元素是无序的。`HashSet` 的 `add`、`remove` 和 `contains` 方法的时间复杂度为 $O(1)$。相比之下，`TreeSet` 是使用树结构实现的。`TreeSet` 中的元素是有排序的，其 `add`、`remove` 和 `contains` 方法的时间复杂度为 $O(\log n)$。
+
+## 第 5 章：垃圾回收器
 
 JVM 拥有一个堆（heap），它是分配所有类实例和数组的运行时区域。它在 JVM 启动时创建。对象的堆内存由一个称为垃圾回收器（garbage collector）的自动内存管理系统回收。堆内存由活对象和死对象组成。活对象可以被应用程序访问，不会成为垃圾回收的对象。死对象是指那些应用程序永远无法访问但尚未被垃圾回收器回收的对象。这些对象会一直占用堆空间，直到最终被垃圾回收器回收。
 
@@ -308,49 +253,50 @@ JVM 拥有一个堆（heap），它是分配所有类实例和数组的运行时
 
 垃圾回收确实会在 PermGen 空间发生，如果 PermGen 空间满了或超过了阈值，可能会触发全垃圾回收（full garbage collection）。如果你仔细观察垃圾回收器的输出，你会发现 PermGen 空间也会被垃圾回收。这就是为什么正确设置 PermGen 空间的大小对于避免频繁的全垃圾回收非常重要。此外，请查看我们的文章《Java 8: PermGen to Metaspace》。
 
-## 第 6 章
-
-## 异常处理
+## 第 6 章：异常处理
 
 ### 6.1 Java 中有两种类型的异常？它们之间有什么区别？
 
-Java 有两种类型的异常：异常（checked exceptions）和未检异常（unchecked exceptions）。如果未检异常可以通过方法或构造函数的执行被抛出，并传播到方法或构造函数的边界之外，则不需要在方法或构造函数的 `throws` 句中声明。相反，检出异常必须在方法或构造函数的 `throws` 句中声明。在此处查看 Java 异常处理的技巧。
 
-### 6.2 Java 中 Exception 和 Error 的区别是什么？
 
-Error 和 Exception 类都是 `Throwable` 类的子类。`Exception` 类用于用户程序应该捕获的异常情况。`Error` 类定义了用户程序无法预期捕获的异常。
+# Java 异常处理
 
-### 6.3 `throw` 和 `throws` 的区别是什么？
+Java 有两种类型的异常：检查异常（checked exceptions）和未检查异常（unchecked exceptions）。如果未检查异常可以通过方法或构造函数的执行被抛出，并传播到方法或构造函数的边界之外，则不需要在方法或构造函数的 `throws` 子句中声明。相反，检查异常必须在方法或构造函数的 `throws` 子句中声明。在此处查看 Java 异常处理的技巧。
+
+## 6.2 Java 中 Exception 和 Error 的区别是什么？
+
+`Error` 和 `Exception` 类都是 `Throwable` 类的子类。`Exception` 类用于用户程序应该捕获的异常情况。`Error` 类定义了用户程序无法预期捕获的异常。
+
+## 6.3 `throw` 和 `throws` 的区别是什么？
 
 `throw` 关键字用于在程序内部显式地抛出异常。相反，`throws` 子句用于指示方法未处理某些异常。每个方法必须指定它不处理哪些异常，以便该方法的调用者可以防范可能的异常。最后，多个异常之间用逗号分隔。
 
-### 6.4 `finally` 块在异常处理中的重要性是什么？
+## 6.4 `finally` 块在异常处理中的重要性是什么？
 
 `finally` 块无论是否实际抛出异常，始终会被执行。即使在缺少 `catch` 语句且抛出异常的情况下，`finally` 块也会执行。最后要提到的是，`finally` 块用于释放 I/O 缓冲区、数据库连接等。
 
-### 6.5 异常处理后 Exception 对象会发生什么？
+## 6.5 异常处理后 Exception 对象会发生什么？
 
-Exception 对象将在下一次垃圾回收时处理。
+`Exception` 对象将在下一次垃圾回收时处理。
 
 ## 6.6 `finally` 块和 `finalize()` 方法有什么区别？
 
 `finally` 块无论是否抛出异常都会执行，用于释放应用程序持有的资源。`finalize()` 是 `Object` 类的一个受保护方法，由 Java 虚拟机（JVM）在对象被垃圾回收之前调用。
 
-## 第 7 章
+# 第 7 章：Java Applets
 
-## Java Applets
-
-### 7.1 什么是 Applet？
+## 7.1 什么是 Applet？
 
 Applet 是一种可以嵌入 HTML 页面并在浏览器中执行的 Java 程序。
 
 ## 7.2 阐述 Applet 的生命周期。
 
 Applet 可能会经历以下状态：
-- Init: 初始化 Applet。
-- Start: 开始执行 Applet。
-- Stop: 停止 Applet 的执行。
-- Destroy: 在卸载 Applet 前进行最后的清理工作。
+
+- **Init**：初始化 Applet。
+- **Start**：开始执行 Applet。
+- **Stop**：停止 Applet 的执行。
+- **Destroy**：在卸载 Applet 前进行最后的清理工作。
 
 ## 7.3 Applet 加载时会发生什么？
 
@@ -363,6 +309,7 @@ Applet 在浏览器内部执行，而 Java Application 是在浏览器外执行�
 ## 7.5 对 Applet 有哪些限制？
 
 出于安全考虑，对 Applet 实施以下限制：
+
 - Applet 不能加载库或定义原生方法。
 - Applet 不能读取某些系统属性。
 - Applet 不能建立来源的网络连接。
@@ -384,148 +331,139 @@ Applet 在浏览器内部执行，而 Java Application 是在浏览器外执行�
 
 Applet 安全管理器是一种对 Java 应用施加限制的机制。浏览器只能有一个安全管理器。安全管理器在启动时建立，之后无法被替换、重载、覆盖或扩展。
 
+# 第 8 章：Swing
 
+## 8.1 Choice（选择框）和 List（列表）之间有什么区别？
 
+`Choice` 以紧凑格式显示，必须向下展开用户才能看到所有可用选项的列表。`Choice` 中只能选择一个项。`List` 的显示方式可以使得多个 `List` 项同时可见。`List` 支持选择一个或多个 `List` 项。
 
-
-## 第 8 章
-
-## Swing
-
-### 8.1 Choice（选择框）和 List（列表）之间有什么区别？
-
-Choice 以紧凑格式显示，必须向下展开用户才能看到所有可用选项的列表。Choice 中只能选择一个项。List 的显示方式可以使得多个 List 目同时可见。List 支持选择一个或多个 List 目。
-
-### 8.2 什么是布局管理器（layout manager）？
+## 8.2 什么是布局管理器（layout manager）？
 
 布局管理器用于组织容器中的组件。
 
-### 8.3 ScrollPane 和 JScrollPane 之间有什么区别？
+## 8.3 `Scrollbar`、`ScrollPane` 和 `JScrollPane` 之间有什么区别？
 
-Scrollbar（滚动条）是一个组件，但不是容器。ScrollPane 是一个容器。JScrollPane 处理其自身的事件并执行自己的滚动操作。
+`Scrollbar`（滚动条）是一个组件，但不是容器。`ScrollPane` 是一个容器。`JScrollPane` 处理其自身的事件并执行自己的滚动操作。
 
-### 8.4 哪些 Swing 方法是线程安全的？
+## 8.4 哪些 Swing 方法是线程安全的？
 
-只有三个线程方法：repaint、revalidate 和 invalidate。
+只有三个线程安全方法：`repaint()`、`revalidate()` 和 `invalidate()`。
 
-### 8.5 请列出三个支持绘制的 Component 子类。
+## 8.5 请列出三个支持绘制的 Component 子类。
 
-Canvas、Frame、Panel 和 Applet 类支持绘制。
+`Canvas`、`Frame`、`Panel` 和 `Applet` 类支持绘制。
 
-### 8.6 什么是裁剪（clipping）？
+## 8.6 什么是裁剪（clipping）？
 
 裁剪被定义为将绘制操作限制在特定区域或形状内的过程。
 
-### 8.7 MenuItem（菜单项）和 CheckboxMenuItem（复选框菜单项）之间有什么区别？
+## 8.7 `MenuItem`（菜单项）和 `CheckboxMenuItem`（复选框菜单项）之间有什么区别？
 
-CheckboxMenuItem 继承了 MenuItem 类，并支持可以选中或未选中的菜单项。
+`CheckboxMenuItem` 继承了 `MenuItem` 类，并支持可以选中或未选中的菜单项。
 
-### 8.8 BorderLayout（边布局布局）的元素是如何组织的？
+## 8.8 `BorderLayout`（边界布局）的元素是如何组织的？
 
-BorderLayout 的元素组织在容器的边界（北、南、东、西）和中心。
+`BorderLayout` 的元素组织在容器的边界（北、南、东、西）和中心。
 
-### 8.9 GridItemLayout（网格布局布局）的元素是如何组织的？
+## 8.9 `GridBagLayout`（网格包布局）的元素是如何组织的？
 
-GridBagLayout 的元素根据网格组织。元素的大小各异，并可能占据网格的多个行或多列。行和列的大小可以不同。
+`GridBagLayout` 的元素根据网格组织。元素的大小各异，并可能占据网格的多个行或多列。行和列的大小可以不同。
 
-### 8.10 Window（窗口）和 Frame（帧）之间有什么区别？
+## 8.10 `Window`（窗口）和 `Frame`（帧）之间有什么区别？
 
-Frame 继承了 Window 类，定义了一个可以带有菜单栏的主应用程序窗口。
+`Frame` 继承了 `Window` 类，定义了一个可以带有菜单栏的主应用程序窗口。
 
-### 8.11 裁剪（clipping）和重绘（repainting）之间之间什么关系？
+## 8.11 裁剪（clipping）和重绘（repainting）之间有什么关系？
 
 当窗口被 AWT 绘制线程重绘时，它会将裁剪区域设置为需要重绘的窗口区域。
 
-### 8.12 事件监听器接口（event-listener interface）和事件适配器类（event-adapter class）之间有什么关系？
+## 8.12 事件监听器接口（event-listener interface）和事件适配器类（event-adapter class）之间有什么关系？
 
 事件监听器接口定义了事件处理器处理特定事件时必须实现的方法。事件适配器提供了事件监听器接口的默认实现。
 
-### 8.13 GUI 组件如何处理它自己的事件？
+## 8.13 GUI 组件如何处理它自己的事件？
 
 GUI 组件可以通过实现相应的事件监听器接口并将其添加为自己的事件监听器来处理它自己的事件。
 
-### 8.14 Java 布局管理器相比传统的窗口系统有什么优势？
+## 8.14 Java 布局管理器相比传统的窗口系统有什么优势？
 
-Java 使用布局管理器在所有窗口平台上以一致的方式布局组件。由于布局管理器不不受限于于绝对的大小和定位，它们能够适应窗口系统之间特定的平台差异。
+Java 使用布局管理器在所有窗口平台上以一致的方式布局组件。由于布局管理器不受限于绝对的大小和定位，它们能够适应窗口系统之间特定的平台差异。
 
-### 8.15 Java 为所有 Swing 组件使用了哪种设计模式？
+## 8.15 Java 为所有 Swing 组件使用了哪种设计模式？
 
-Java 为所有 Swing 组件使用的设计模式是模型-视图控制器（MVC）模式。
+Java 为所有 Swing 组件使用的设计模式是模型-视图-控制器（MVC）模式。
 
-## 第 9 章
+# 第 9 章：JDBC
 
-## JDBC
-
-### 9.1 什么是 JDBC？
+## 9.1 什么是 JDBC？
 
 JDBC 是一个抽象层，允许用户在数据库之间进行选择。JDBC 允许开发者用 Java 编写数据库应用程序，无需担心特定数据库的底层细节。
 
-### 9.2 解释 Driver（驱动）在 JDBC 中的作用。
+## 9.2 解释 Driver（驱动）在 JDBC 中的作用。
 
-JDBC 驱动提供了 JDBC API 提供的抽象类的特定厂商实现。每个驱动程序必须为 `java.sql` 包中的以下类提供实现：Connection、Statement、PreparedStatement、CallableStatement、ResultSet 和 Driver。
+JDBC 驱动提供了 JDBC API 提供的抽象类的特定厂商实现。每个驱动程序必须为 `java.sql` 包中的以下类提供实现：`Connection`、`Statement`、`PreparedStatement`、`CallableStatement`、`ResultSet` 和 `Driver`。
 
-### 9.3 Class.forName 方法的目的是什么？
+## 9.3 `Class.forName()` 方法的目的是什么？
 
 此方法用于加载将建立数据库连接的驱动。
 
-### 9.4 PreparedStatement 相比 Statement 有什么优势？
+## 9.4 `PreparedStatement` 相比 `Statement` 有什么优势？
 
-PreparedStatements 是预编译的，因此它们的性能好得多。此外，PreparedStatement 对象可以使用不同的查询输入值对其进行复用。
+`PreparedStatement` 是预编译的，因此它们的性能好得多。此外，`PreparedStatement` 对象可以使用不同的查询输入值对其进行复用。
 
-### 9.5 CallableStatement 的用途是什么？请列出用于准备 CallableStatement 的方法。
+## 9.5 `CallableStatement` 的用途是什么？请列出用于准备 `CallableStatement` 的方法。
 
-CallableStatement 用于执行存储过程（stored procedures）。存储过程由数据库存储并提供。存储过程可以接受来自用户的输入值并返回结果。强烈建议使用存储过程，因为它提供了安全性和模块化。准备 CallableStatement 的方法是：`CallableStatement.prepareCall();`。
+`CallableStatement` 用于执行存储过程（stored procedures）。存储过程由数据库存储并提供。存储过程可以接受来自用户的输入值并返回结果。强烈建议使用存储过程，因为它提供了安全性和模块化。准备 `CallableStatement` 的方法是：`CallableStatement.prepareCall()`。
 
-### 9.6 连接池化（Connection pooling）意味着什么？
+## 9.6 连接池化（Connection pooling）意味着什么？
 
-与数据库的交互在打开和关闭数据库连接方面可能是昂昂的。特别是当数据库客户端数量增加时，这种成本非常高，会消耗大量的资源。应用程序服务器在启动时获取一个数据库连接池并维护在池中。连接请求由池中的连接提供服务。在连接结束时，请求返回池中，并可以用于满足未来的请求。
+与数据库的交互在打开和关闭数据库连接方面可能是昂贵的。特别是当数据库客户端数量增加时，这种成本非常高，会消耗大量的资源。应用程序服务器在启动时获取一个数据库连接池并维护在池中。连接请求由池中的连接提供服务。在连接结束时，请求返回池中，并可以用于满足未来的请求。
 
-## 第 10 章
+# 第 10 章：远程方法调用（RMI）
 
-## 远程方法调用（RMI）
+## 10.1 什么是 RMI？
 
-### 10.1 什么是 RMI？
+远程方法调用（Java RMI）是一种 Java API，它执行远程过程调用（RPC）的面向对象等价操作，并支持序列化类的直接传输和分布式垃圾回收。远程方法调用（RMI）也可以被视为在远程运行对象上激活方法的过程。RMI 提供了位置透明性，因为用户感觉方法是在本地执行的。
 
-远程方法调用（Java RMI）是一种 Java API，它执行远程过程调用（RPC）的面向对象等的操作，并支持序列化类的直接传输和分布式垃圾回收。远程方法调用（RMI）也可以被视为在远程运行对象上激活方法的过程。RMI 提供了位置透明性，因为用户感觉方法是在本地执行的。
-
-### 10.2 RMI 的基本原理是什么？
+## 10.2 RMI 的基本原理是什么？
 
 RMI 架构基于一个非常重要的原理，即接口和实现是分离的。
 
-### 10.3 RMI 包含哪些层？
+## 10.3 RMI 包含哪些层？
 
 RMI 架构包含以下层：
-- 存根（Stub）和骨（Skeleton）层：位于接口下方。
-- 引用层（Reference Layer）：处理客户端到服务器的引用。
-- 传输层（Transport layer）：负责连接 JVM。
 
-### 10.4 远程接口（Remote Interface）在 RMI 中的作用是什么？
+- **存根（Stub）和骨架（Skeleton）层**：位于接口下方。
+- **引用层（Reference Layer）**：处理客户端到服务器的引用。
+- **传输层（Transport Layer）**：负责连接 JVM。
+
+## 10.4 远程接口（Remote Interface）在 RMI 中的作用是什么？
 
 远程接口用于标识可以从非本地虚拟机调用的方法。任何远程对象必须直接或间接地实现此接口。
 
-### 10.5 java.rmi.Naming 的作用是什么？
+## 10.5 `java.rmi.Naming` 的作用是什么？
 
-`java.rmi.Naming` 类提供了存储和获取远程对象引用的方法。Naming 类的每个方法都以 URL 格式作为参数。
+`java.rmi.Naming` 类提供了存储和获取远程对象引用的方法。`Naming` 类的每个方法都以 URL 格式作为参数。
 
-### 10.6 RMI 中的绑定（binding）意味着什么？
+## 10.6 RMI 中的绑定（binding）意味着什么？
 
-绑定是为远程对象关联或注册名称的过程，以便以后查找该远程对象。远程对象可以使用 N 类的 bind 或 rebind 方法与名称关联。
+绑定是为远程对象关联或注册名称的过程，以便以后查找该远程对象。远程对象可以使用 `Naming` 类的 `bind` 或 `rebind` 方法与名称关联。
 
-### 10.7 Naming 类的 bind() 方法和 rebind() 方法有什么区别？
+## 10.7 `Naming` 类的 `bind()` 方法和 `rebind()` 方法有什么区别？
 
 `bind()` 方法负责将特定名称绑定到远程对象，而 `rebind()` 方法负责将特定名称重新绑定到新的远程对象。如果已存在绑定，该绑定将被替换。
 
-### 10.8 制作 RMI 程序涉及哪些步骤？
+## 10.8 制作 RMI 程序涉及哪些步骤？
 
 为了让 RMI 程序工作，必须涉及以下步骤：
 
 - 编译所有源文件。
 - 使用 `rmic` 生成存根。
-- 启动 `rmireistry`。
+- 启动 `rmiregistry`。
 - 启动 `RMIServer`。
 - 运行客户端程序。
 
-### 10.9 存根（stub）在 RMI 中的作用是什么？
+## 10.9 存根（stub）在 RMI 中的作用是什么？
 
 远程对象的存根作为客户端的本地代表或代理。调用者调用本地存根的方法，存根负责在远程对象上执行该方法。当存根的方法被调用时，它会经历以下步骤：
 
@@ -535,69 +473,59 @@ RMI 架构包含以下层：
 - 反序列化返回值或在方法未成功执行时的异常。
 - 将值返回给调用者。
 
-### 10.10 什么是 DGC？它是如何工作的？
+## 10.10 什么是 DGC？它是如何工作的？
 
 DGC 是分布式垃圾回收（Distributed Garbage Collection）。远程方法调用（RMI）使用 DGC 进行自动垃圾回收。由于 RMI 涉及跨 JVM 的远程引用，垃圾回收非常困难。DGC 使用引用计数算法为远程对象提供自动内存管理。
 
+## 10.11 RMI 中使用 `RMISecurityManager` 的目的是什么？
 
+`RMISecurityManager` 提供了一个可以供使用下载代码的 RMI 应用程序使用的管理器。如果没有设置安全管理器，RMI 的类加载器将不会从远程位置下载任何类。
 
+## 10.12 解释编组（Marshalling）和反编组（Demarshalling）。
 
-
-Java 面试题
-
-## 10.11 问 RMI 中使用 RMISecurityManager 的目的是什么？
-
-RMISecurityManager 提供了一个可以供使用下载代码的 RMI 应用程序使用的管理器。如果没有设置安全管理器，RMI 的类加载器将不会从远程位置下载任何类。
-
-### 10.12 解释序列化（Marshalling）和反序列化（demmarshalling）。
-
-当应用程序想要将其内存对象跨网络传递到另一个主机，或将其持久化到存储器时，必须将内存表示转换为合适的格式。这个过程被称为序列化，而还原操作被称为反序列化。
+当应用程序想要将其内存对象跨网络传递到另一个主机，或将其持久化到存储器时，必须将内存表示转换为合适的格式。这个过程被称为编组，而还原操作被称为反编组。
 
 ## 10.13 解释序列化（Serialization）和反序列化（Deserialization）。
 
 Java 提供了一种名为对象序列化的机制，其中对象可以被表示为字节序列，并包含了对象的数据、对象的类型信息以及对象中存储的数据类型。因此，序列化可以被视为一种扁平化对象的方法，以便将其存储在磁盘上，稍后读取并重建。反序列化是将对象从扁平化状态转换为存活对象的逆过程。
 
-## 第 11 章
+# 第 11 章：Servlets
 
-## Servlets
-
-### 11.1 什么是 Servlet？
+## 11.1 什么是 Servlet？
 
 Servlet 是一种 Java 编程语言类，用于处理客户端请求并生成动态 Web 内容。Servlet 主要用于处理或存储由 HTML 表单提交的数据，提供动态内容，并管理无状态 HTTP 协议中不存在的状态信息。
 
-### 11.2 解释 Servlet 的架构。
+## 11.2 解释 Servlet 的架构。
 
-所有 Servlet 必须实现的抽象类是 `javax.servlet.Servlet` 接口。每个 Servlet 必须直接或间接地通过扩展 `javax.servlet.GenericServlet` 或 `javax.servlet.http.HttpServlet` 来实现它。最后，每个 Servlet 都能使用多线程并行处理多个请求。
+所有 Servlet 必须实现的核心接口是 `javax.servlet.Servlet`。每个 Servlet 必须直接或间接地通过扩展 `javax.servlet.GenericServlet` 或 `javax.servlet.http.HttpServlet` 来实现它。最后，每个 Servlet 都能使用多线程并行处理多个请求。
 
 ## 11.3 Applet 和 Servlet 之间有什么区别？
 
 Applet 是运行在客户端机器 Web 浏览器内部的客户端 Java 程序。相比之下，Servlet 是运行在 Web 服务器上的服务器端组件。Applet 可以使用用户界面类，而 Servlet 没有用户界面。相反，Servlet 等待客户端的 HTTP 请求，并在每个请求中生成响应。
 
-## 11.4 GenericServlet 和 HttpServlet 之间有什么区别？
+## 11.4 `GenericServlet` 和 `HttpServlet` 之间有什么区别？
 
-GenericServlet 是一种通用的、与协议无关的 Servlet，它实现了 `ServletConfig` 接口。扩展 GenericServlet 类的 Servlet 应该重写 `service` 方法。最后，为了开发用于 Web 且使用 HTTP 协议处理请求的 HTTP Servlet，你的 Servlet 必须扩展 `HttpServlet`。此处有 Servlet 示例。
+`GenericServlet` 是一种通用的、与协议无关的 Servlet，它实现了 `ServletConfig` 接口。扩展 `GenericServlet` 类的 Servlet 应该重写 `service()` 方法。最后，为了开发用于 Web 且使用 HTTP 协议处理请求的 HTTP Servlet，你的 Servlet 必须扩展 `HttpServlet`。此处有 Servlet 示例。
 
-### 11.5 解释 Servlet 的生命周期。
+## 11.5 解释 Servlet 的生命周期。
 
-在每个客户端请求时，Servlet 引擎都会加载 Servlet 并调用其 `init` 方法，以初始化 Servlet。然后，Servlet 对象通过为每个请求单独调用 `service` 方法来处理来自该客户端的所有后续请求。最后，通过调用服务的 `destroy` 方法移除 Servlet。
-
-Java 面试题
+在每个客户端请求时，Servlet 引擎都会加载 Servlet 并调用其 `init()` 方法，以初始化 Servlet。然后，Servlet 对象通过为每个请求单独调用 `service()` 方法来处理来自该客户端的所有后续请求。最后，通过调用服务的 `destroy()` 方法移除 Servlet。
 
 ## 11.6 `doGet()` 和 `doPost()` 之间有什么区别？
 
-GET 方法将键值对添加到请求的 URL 中。因此，客户端请求中的字符数量存在限制，随后导致可以使用的值数量受到限制。此外，请求的值是可见的，因此不能通过它传递敏感信息。
+`doGet()` 方法将键值对添加到请求的 URL 中。因此，客户端请求中的字符数量存在限制，随后导致可以使用的值数量受到限制。此外，请求的值是可见的，因此不能通过它传递敏感信息。
 
-POST 方法超过了 GET 请求施加的限制，将请求的值发送在请求体（body）中。此外，发送的值数量没有限制。最后，通过 POST 请求传递的敏感信息对外部客户端是不可见的。
+`doPost()` 方法超过了 `doGet()` 请求施加的限制，将请求的值发送在请求体（body）中。此外，发送的值数量没有限制。最后，通过 `doPost()` 请求传递的敏感信息对外部客户端是不可见的。
 
-### 11.7 什么是 Web 应用？
+## 11.7 什么是 Web 应用？
 
-Web 应用是 Web 或应用程序服务器的动态扩展。Web 应用有两种类型：面向演示的面向面向服务的。面向演示的 Web 应用生成交互式 Web 页面，这些页面包含各种类型的标记语言和针对请求的动态内容。相反，面向服务的 Web 应用实现了 Web 服务的端点。通常情况下，Web 应用可以被视为安装在服务器命名空间特定子集下的 Servlet 集合。
+Web 应用是 Web 或应用程序服务器的动态扩展。Web 应用有两种类型：面向演示的和面向服务的。面向演示的 Web 应用生成交互式 Web 页面，这些页面包含各种类型的标记语言和针对请求的动态内容。相反，面向服务的 Web 应用实现了 Web 服务的端点。通常情况下，Web 应用可以被视为安装在服务器命名空间特定子集下的 Servlet 集合。
 
-### 11.8 什么是服务端包含（SSI）？
+## 11.8 什么是服务端包含（SSI）？
 
-服务端包含 (SSI) 是一种简单的解释型服务器端脚本语言，几乎专门用于 Web，并嵌入 Servlet 中。SSI 最常用的用法是包含文件内容。通常情况下，Web 应用可以被视为安装在服务器命名空间特定子集下的 Servlet 集合。
+服务端包含 (SSI) 是一种简单的解释型服务器端脚本语言，几乎专门用于 Web，并嵌入 Servlet 中。SSI 最常用的用法是包含文件内容。
 
-### 11.9 什么是 Servlet 链（Servlet Chaining）？
+## 11.9 什么是 Servlet 链（Servlet Chaining）？
 
 Servlet 链是指将一个 Servlet 的输出发送给第二个 Servlet 方法。第二个 Servlet 的输出发送给第三个，依此类推。最后浏览器接收响应。
 
@@ -605,13 +533,16 @@ Servlet 链是指将一个 Servlet 的输出发送给第二个 Servlet 方法。
 
 `HttpServlet` 类有用于查找客户端 IP 地址或主机名的函数。`getRemoteAddr()` 返回 IP 地址，`getRemoteHost()` 获取名称。
 
-### 11.11 HTTP 响应的结构是什么？
+## 11.11 HTTP 响应的结构是什么？
 
 HTTP 响应由三部分组成：
 
-- 状态码：描述响应的状态。它可以用于检查请求是否成功完成。如果请求失败，默认返回状态码 `SC_OK`。
-- HTTP Header：它们包含更多关于响应的信息。例如，头部可能会指定日期/时间。查看如何在 Servlet 中获取头部。
-- 主体：它包含响应的内容。主体可能包含 HTML 代码、图像等。主体由 HTTP 事务中紧随头部传输的字节组成。
+- **状态码**：描述响应的状态。它可以用于检查请求是否成功完成。如果请求失败，默认返回状态码 `SC_OK`。
+- **HTTP Header**：它们包含更多关于响应的信息。例如，头部可能会指定日期/时间。查看如何在 Servlet 中获取头部。
+
+
+
+- **主体**：它包含响应的内容。主体可能包含 HTML 代码、图像等。主体由 HTTP 事务中紧随头部传输的字节组成。
 
 ## 11.12 什么是 Cookie？Session 和 Cookie 之间有什么区别？
 
@@ -636,13 +567,7 @@ HTTP 隧道是一种将使用各种网络协议的通信封装在 HTTP 或 HTTPS
 
 URL 编码过程负责将 URL 中的所有空格以及其他额外的特殊字符转换为它们相应的十六进制表示。相应的，URL 解码是完全相反的过程。
 
-
-
-
-
-## 第 12 章
-
-## JSP
+## 第 12 章：JSP
 
 ### 12.1 什么是 JSP 页面？
 
@@ -650,62 +575,59 @@ Java Server Page（JSP）是一种包含两种类型文本的文档：静态数�
 
 ### 12.2 如何处理 JSP 请求？
 
-当 JSP 请求到达时，浏览器首先请求一个扩展名为 .jsp 的页面。然后，Web 服务器读取该请求并使用 JSP 编译器将 JSP 转换为 servlet 类。请注意，JSP 文件仅在页面的首次请求时或当 JSP 文件发生变化时进行编译。随后会调用生成的 servlet 类来处理浏览器的请求。请求执行完成后，servlet 就会向客户端发送响应。查看如何在 JSP 中获取请求参数（Request parameters）。
+当 JSP 请求到达时，浏览器首先请求一个扩展名为 `.jsp` 的页面。然后，Web 服务器读取该请求并使用 JSP 编译器将 JSP 转换为 servlet 类。请注意，JSP 文件仅在页面的首次请求时或当 JSP 文件发生变化时进行编译。随后会调用生成的 servlet 类来处理浏览器的请求。请求执行完成后，servlet 就会向客户端发送响应。查看如何在 JSP 中获取请求参数（Request parameters）。
 
 ### 12.3 JSP 有哪些优势？
 
 使用 JSP 技术的优势如下所示：
 
--   JSP 页面被动态编译为 servlet，开发者可以轻松地对演示代码进行更新。
--   JSP 页面可以进行预编译。
--   JSP 页面可以很容易与静态模板（包括 HTML 或 XML 片段）以及生成动态内容的代码结合。
--   开发者可以提供自定义的 JSP 标签库，页面作者可以使用类似于 XML 的语法访问这些标签库。
--   开发者可以在组件级别进行逻辑更改，而无需编辑使用应用程序逻辑的单个页面。
+- JSP 页面被动态编译为 servlet，开发者可以轻松地对演示代码进行更新。
+- JSP 页面可以进行预编译。
+- JSP 页面可以很容易与静态模板（包括 HTML 或 XML 片段）以及生成动态内容的代码结合。
+- 开发者可以提供自定义的 JSP 标签库，页面作者可以使用类似于 XML 的语法访问这些标签库。
+- 开发者可以在组件级别进行逻辑更改，而无需编辑使用应用程序逻辑的单个页面。
 
 ### 12.4 什么是指令（Directives）？JSP 中提供了哪些类型的指令？
 
-指令是 JSP 页面编译为 servlet 时由 JSP 引擎处理的指令。指令用于设置页面级指令、从外部文件插入数据以及指定自定义标签库。指令定义在 `<% ... %>` 之间。不同类型的指令如下所示：
+指令是 JSP 页面编译为 servlet 时由 JSP 引擎处理的指令。指令用于设置页面级指令、从外部文件插入数据以及指定自定义标签库。指令定义在 `<%@ ... %>` 之间。不同类型的指令如下所示：
 
--   Include directive（包含指令）：用于包含文件并将文件内容与当前页面合并。
--   Page directive（页面指令）：用于在 JSP 页面中定义特定属性，例如错误页面（error page）和缓冲区（buffer）。
--   Taglib：用于声明页面使用的标签库。
+- **Include directive（包含指令）**：用于包含文件并将文件内容与当前页面合并。
+- **Page directive（页面指令）**：用于在 JSP 页面中定义特定属性，例如错误页面（error page）和缓冲区（buffer）。
+- **Taglib**：用于声明页面使用的标签库。
 
 ### 12.5 什么是 JSP 动作（actions）？
 
-# Java 面试题
-
 JSP 动作使用 XML 语法结构来控制 servlet 引擎的行为。JSP 动作在请求 JSP 页面时执行。它们可以动态插入文件、重用 JavaBeans 组件、将用户转发到另一个页面，或为 Java 插件生成 HTML。某些可用动作列如下：
 
--   jsp:include：在请求 JSP 页面时包含一个文件。
--   jsp:useBean：查找或实例化一个 JavaBean。
--   jsp:setProperty：设置 JavaBean 的属性。
--   jsp:getProperty：获取 JavaBean 的属性。
--   jsp:forward：将请求者转发到新页面。
--   jsp:plugin：生成特定浏览器的代码。
+- `jsp:include`：在请求 JSP 页面时包含一个文件。
+- `jsp:useBean`：查找或实例化一个 JavaBean。
+- `jsp:setProperty`：设置 JavaBean 的属性。
+- `jsp:getProperty`：获取 JavaBean 的属性。
+- `jsp:forward`：将请求者转发到新页面。
+- `jsp:plugin`：生成特定浏览器的代码。
 
 ### 12.6 什么是脚本段（Scriptlets）？
 
-在服务器页面（JSP）技术中，脚本段是嵌入在 JSP 页面中的 Java 代码段。脚本段是标签内的所有内容。在这些标签之间，用户可以添加任何有效的脚本段。
+在服务器页面（JSP）技术中，脚本段是嵌入在 JSP 页面中的 Java 代码段。脚本段是 `<% ... %>` 标签内的所有内容。在这些标签之间，用户可以添加任何有效的脚本段。
 
-### 12.7 什么是声明（Decarations）？
+### 12.7 什么是声明（Declarations）？
 
-声明类似于 Java 中的变量声明。声明用于声明变量，供后续在表达式（expressions）或脚本段中使用。要添加声明，必须使用特定的序列来包裹你的声明。
+声明类似于 Java 中的变量声明。声明用于声明变量，供后续在表达式（expressions）或脚本段中使用。要添加声明，必须使用 `<%! ... %>` 序列来包裹你的声明。
 
 ### 12.8 什么是表达式（Expressions）？
 
-JSP 表达式用于将语言表达式的值（转换为字符串）插入到 Web 服务器返回给客户端的数据流中。表达式定义在 `<% = ... %>` 标签之间。
+JSP 表达式用于将语言表达式的值（转换为字符串）插入到 Web 服务器返回给客户端的数据流中。表达式定义在 `<%= ... %>` 标签之间。
 
 ### 12.9 什么是隐式对象（implicit objects），它们是什么？
 
 JSP 隐式对象是 JSP 容器在每个页面中为开发者提供的对象。开发者可以直接调用它们，而无需显式声明。JSP 隐式对象也被称为预定义变量。以下对象在 JSP 页面中被视为隐式：
 
--   application
--   page
--   request
--   response
--   session
--   exception
--   out
--   config
--   pageContext
-
+- `application`
+- `page`
+- `request`
+- `response`
+- `session`
+- `exception`
+- `out`
+- `config`
+- `pageContext`

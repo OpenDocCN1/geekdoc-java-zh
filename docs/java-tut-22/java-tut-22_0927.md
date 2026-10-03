@@ -1,3 +1,4 @@
+
 # 解析 URL
 
 > 原文：[`docs.oracle.com/javase/tutorial/networking/urls/urlInfo.html`](https://docs.oracle.com/javase/tutorial/networking/urls/urlInfo.html)
@@ -36,13 +37,13 @@
 
 返回 URL 的引用组件。
 
-* * *
+---
 
 **注意：**
 
 请记住，并非所有 URL 地址都包含这些组件。URL 类提供这些方法是因为 HTTP URL 包含这些组件，可能是最常用的 URL。URL 类在某种程度上是以 HTTP 为中心的。
 
-* * *
+---
 
 您可以使用这些`get*XXX*`方法获取有关 URL 的信息，而不管您使用哪种构造函数创建 URL 对象。
 
@@ -68,7 +69,6 @@ public class ParseURL {
         System.out.println("ref = " + aURL.getRef());
     }
 }
-
 ```
 
 下面是程序显示的输出：
@@ -82,5 +82,4 @@ path = /docs/books/tutorial/index.html
 query = name=networking
 filename = /docs/books/tutorial/index.html?name=networking
 ref = DOWNLOADING
-
 ```

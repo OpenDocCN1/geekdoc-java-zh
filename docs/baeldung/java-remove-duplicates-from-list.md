@@ -1,14 +1,15 @@
+
 # 用 Java 删除列表中的所有重复项
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-remove-duplicates-from-list>
 
-## 1。简介
+## 1. 简介
 
 在这个快速教程中，我们将学习如何从列表中清除重复的元素。首先，我们将使用普通 Java，然后是 Guava，最后是一个基于 Java 8 Lambda 的解决方案。
 
 本教程是 Baeldung 上的[**Java-回到基础**系列](/web/20220626202510/https://www.baeldung.com/java-tutorial "The Java Guide on IO and Collections")的一部分。
 
-## 2。使用普通 Java 从列表中删除重复项
+## 2. 使用普通 Java 从列表中删除重复项
 
 我们可以使用标准的 Java 集合框架**通过集合**轻松地从列表中删除重复的元素:
 
@@ -42,21 +43,21 @@ public void
 }
 ```
 
-## 延伸阅读:
+## 延伸阅读
 
-## [Java 集合面试问题](/web/20220626202510/https://www.baeldung.com/java-collections-interview-questions)
+### Java 集合面试问题
 
-A set of practical Collections-related Java interview questions[Read more](/web/20220626202510/https://www.baeldung.com/java-collections-interview-questions) →
+A set of practical Collections-related Java interview questions [Read more](/web/20220626202510/https://www.baeldung.com/java-collections-interview-questions) →
 
-## [Java–合并多个集合](/web/20220626202510/https://www.baeldung.com/java-combine-multiple-collections)
+### Java–合并多个集合
 
-A quick and practical guide to combining multiple collections in Java[Read more](/web/20220626202510/https://www.baeldung.com/java-combine-multiple-collections) →
+A quick and practical guide to combining multiple collections in Java [Read more](/web/20220626202510/https://www.baeldung.com/java-combine-multiple-collections) →
 
-## [如何用 Java 找到列表中的元素](/web/20220626202510/https://www.baeldung.com/find-list-element-java)
+### 如何用 Java 找到列表中的元素
 
-Have a look at some quick ways to find an element in a list in Java[Read more](/web/20220626202510/https://www.baeldung.com/find-list-element-java) →
+Have a look at some quick ways to find an element in a list in Java [Read more](/web/20220626202510/https://www.baeldung.com/find-list-element-java) →
 
-## 3。使用番石榴从列表中删除重复项
+## 3. 使用番石榴从列表中删除重复项
 
 我们也可以用番石榴做同样的事情:
 
@@ -90,7 +91,7 @@ public void
 }
 ```
 
-## 4。使用 Java 8 Lambdas 从列表中删除重复项
+## 4. 使用 Java 8 Lambdas 从列表中删除重复项
 
 最后，让我们看一个新的解决方案，在 Java 8 中使用 Lambdas。我们将**使用来自流 API 的`distinct()`方法，**根据`equals()`方法返回的结果返回一个由不同元素组成的流。
 
@@ -109,9 +110,9 @@ public void
 }
 ```
 
-现在我们有了三种快速清理 a `List.`中所有重复项目的方法
+现在我们有了三种快速清理`List.`中所有重复项目的方法
 
-## 5.结论
+## 5. 结论
 
 在本文中，我们展示了使用普通 Java、Google Guava 和 Java 8 从列表中删除重复项是多么容易。
 

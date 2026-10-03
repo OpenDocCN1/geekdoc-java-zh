@@ -1,6 +1,5 @@
+
 # Java 设计模式：构建可扩展且可维护的系统
-
-
 
 ![](img/image_rsrc5RD.jpg)
 
@@ -8,12 +7,13 @@
 
 ## 设计模式简介
 
-### 什么是设计模式？ 
+### 什么是设计模式？
+
 * 什么是设计模式？
 * 软件设计的演变
 * 使用设计模式的好处
 * 理解面向对象原则
-* 四人行 (GoF) 设计模式
+* 四人帮 (GoF) 设计模式
 * 设计模式分类
 * 如何识别合适的模式
 
@@ -22,6 +22,7 @@
 ## 创建模式概述
 
 ## 创建模式简介
+
 * 对象创建的重要性
 * 工厂模式基础
 * 抽象工厂模式详解
@@ -31,6 +32,7 @@
 * 真实场景下创建模式的比较
 
 ### 工厂模式
+
 * 工厂方法：目的与用例
 * 在 Java 中实现工厂方法
 * 抽象工厂 vs 工厂方法
@@ -41,6 +43,7 @@
 * 工厂模式的真实案例
 
 ## 单例模式深度解析
+
 * 理解单例及其意图
 * 在 Java 中实现单例的不同方式
 * 单例的线程安全
@@ -53,30 +56,28 @@
 ## 结构模式概述
 
 ## 结构模式简介
+
 * 对象组合的重要性
 * 适配器模式：桥接不兼容性
 * 扩展功能的装饰器模式
 * 用于控制访问的代理模式
 * 用于层次结构的组合模式
-* 用于内存优化的享量模式
+* 用于内存优化的享元模式
 * 结构模式的真实应用
 
 ## 行为模式概述
 
 ### 行为模式简介
+
 * 责任链模式
 * 用于封装请求的命令模式
 * 用于语言解析的解释器模式
 * 用于集合的迭代器模式
 * 用于对象协调的中介者模式
-* 用于撤销功能的备备模式
+* 用于撤销功能的备忘录模式
 * 行为模式的实际应用
 
-
-
-
-
-“内容源自 Aarav Joshi 编写的书籍，已开源供公众使用。”
+内容源自 Aarav Joshi 编写的书籍，已开源供公众使用。
 
 本书是在人工智能的帮助下，在 Aarav Joshi 的细致指导和专业知识下协作完成的。尽管我们已尽力确保内容的准确性和可靠性，但鼓励读者针对特定的应用或用例独立地验证相关信息。
 
@@ -84,24 +85,24 @@
 
 请务必查看我们的作品：
 
-*   [Investor Central German](https://german.investorcentral.co.uk/)
-*   [Smart Living](https://smartliving.investorcentral.co.uk/)
-*   [Epochs & Echoes](https://epochsandechoes.com/)
-*   [Puzzling Mysteries](https://www.puzzlingmysteries.com/)
-*   [Hindutva](https://hindutva.epochsandechoes.com/)
-*   [Elite Dev](https://elitedev.in/)
-*   [JS Schools](https://jsschools.com/)
+* [Investor Central German](https://german.investorcentral.co.uk/)
+* [Smart Living](https://smartliving.investorcentral.co.uk/)
+* [Epochs & Echoes](https://epochsandechoes.com/)
+* [Puzzling Mysteries](https://www.puzzlingmysteries.com/)
+* [Hindutva](https://hindutva.epochsandechoes.com/)
+* [Elite Dev](https://elitedev.in/)
+* [JS Schools](https://jsschools.com/)
 
 ***
 
 ### 我们在 Medium 上
 
-*   [Tech Koala Insights](https://techkoalainsights.com/)
-*   [Epochs & Echoes World](https://world.epochsandechoes.com/)
-*   [Investor Central Medium](https://medium.investorcentral.co.uk/)
-*   [Puzzling Mysteries Medium](https://medium.com/puzzling-mysteries)
-*   [Science & Epochs Medium](https://science.epochsandechoes.com/)
-*   [Modern Hindutva](https://modernhindutva.substack.com/)
+* [Tech Koala Insights](https://techkoalainsights.com/)
+* [Epochs & Echoes World](https://world.epochsandechoes.com/)
+* [Investor Central Medium](https://medium.investorcentral.co.uk/)
+* [Puzzling Mysteries Medium](https://medium.com/puzzling-mysteries)
+* [Science & Epochs Medium](https://science.epochsandechoes.com/)
+* [Modern Hindutva](https://modernhindutva.substack.com/)
 
 ***
 
@@ -111,31 +112,45 @@
 
 101 Books
 
-如有任何问题，请通过 2019ab0406@wilp.bits-pilani.ac.in 与我们联系
-
+如有任何问题，请通过 `2019ab0406@wilp.bits-pilani.ac.in` 与我们联系
 
 ## 什么是设计模式？
 
-软件开发中的设计模式是对常见编程问题的成熟解决方案。它们为解决反复出现的设计问题提供了结构化的方法，增强了代码质量、可维护性和扩展性。本节将深入探讨设计模式的本质，追溯其起源，并研究它们在现代软件工程中的关键作用。我们将探索这些模式如何从面向对象编程的最佳实践演变而来，成为开发者不可或缺的工具。通过理解设计模式的基本概念和历史背景，读者将对它们在 Java 开发中的实际应用和长期收益产生见解。
+软件开发中的设计模式是对常见编程问题的成熟解决方案。它们为解决反复出现的设计问题提供了结构化的方法，增强了代码质量、可维护性和扩展性。本节将深入探讨设计模式的本质，追溯其起源，并研究它们在现代软件工程中的关键作用。我们将探索这些模式如何从面向对象编程的最佳实践演变而来，成为开发者不可或缺的工具。通过理解设计模式的基本概念和历史背景，读者将对它们在 `Java` 开发中的实际应用和长期收益产生见解。
 
 设计模式是解决常见软件设计问题的复用模板。它们为开发者提供了一种共同的语言，使团队能够高效地交流复杂的思想。软件工程中的设计模式概念在 20 世纪 90 年代流行，尽管其根源可以追溯到早期的架构设计原则。
 
 设计模式通过提供几个关键优势，在软件开发中起着至关重要的作用：
 
-3.  **可维护性**：通过遵循既有模式，代码变得更具可读性且更容易维护，特别是对于熟悉这些模式的开发者而言。
+3. **可维护性**：通过遵循既有模式，代码变得更具可读性且更容易维护，特别是对于熟悉这些模式的开发者而言。
 
 ```java
 public class Singleton {
     private static Singleton instance;
+
+    private Singleton() {}
+
+    public static Singleton getInstance() {
+        if (instance == null) {
+            instance = new Singleton();
         }
         return instance;
     }
+
+    public void showMessage() {
         System.out.println("Hello from Singleton!");
+    }
+}
 ```
+
 在这个示例中，`Singleton` 类具有一个私有构造函数以防止直接实例化。`getInstance()` 方法在实例不存在时创建一个单一实例，或者返回已有的实例。这确保了该类只会创建一个实例。
 
 ```java
 public class Main {
+    public static void main(String[] args) {
+        Singleton singleton = Singleton.getInstance();
+        singleton.showMessage();
+    }
 }
 ```
 
@@ -143,29 +158,47 @@ public class Main {
 
 人们可能会问：“设计模式如何与其他软件开发方法产生联系？”设计模式补充了各种开发方法，包括敏捷开发方法。在敏捷环境中，模式可以帮助团队快速迭代设计、高效重构代码并保持代码库的灵活性。
 
-
-
 在 `Java` 开发的背景下，设计模式具有特别的价值。`Java` 的面向对象特性和广泛的生态系统使其成为设计模式的理想语言。许多 `Java` 框架和库（如 `Spring`）广泛利用设计模式，这进一步强调了它们在 `Java` 世界中的重要性。
 
 设计模式随着软件行业的发展不断演进。新的模式不断涌现，以应对云计算、大数据和人工智能等领域的挑战。对于现代 `Java` 开发者来说，关注这些动态至关重要。
 
 软件设计的演变标志着开发者处理问题和体系架构方法的重大转变。本节探讨了从过程化编程到面向对象设计的历程，以及随后设计模式的出现。我们将研究软件开发范式的改变如何导致了结构化、可维护且可扩展的代码。通过理解这种演变，开发者可以更好地体会设计模式在现代 `Java` 开发中的背景和重要性。
 
-这种认识导致了 20 世纪 80 年代和 90 年代面向对象编程 (`OOP`) 的起。`OOP` 引入了一种全新的软件设计思维，以封装数据和行为的对象为中心。这种范式转变允许更好地组织代码、提高复用性并对真实世界系统进行更直观的建模。
+这种认识导致了 20 世纪 80 年代和 90 年代面向对象编程 (`OOP`) 的兴起。`OOP` 引入了一种全新的软件设计思维，以封装数据和行为的对象为中心。这种范式转变允许更好地组织代码、提高复用性并对真实世界系统进行更直观的建模。
 
-- **多态 (Polymorphism)**：不同类型的对象通过通用接口进行操作的能力。这使得代码更具灵性和扩展性。
+* **多态 (Polymorphism)**：不同类型的对象通过通用接口进行操作的能力。这使得代码更具灵活性和扩展性。
+
 这些原则构成了面向对象设计的基础，为更复杂的软件架构铺平了道路。然而，当开发者开始使用 `OOP` 时，他们开始在不同的项目中观察到反复出现的问题。这种观察导致了设计模式的形式化。
 
-然而，由 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides（合称为臭名“四人帮”或 `GoF`）于 1994 年出版的《设计模式：可复用面向对象软件的基础》真正向软件开发中推广了这一概念。这本书编录了 23 种经典设计模式，将其分为创建型、结构型和行为模式。
+然而，由 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides（合称为“四人帮”或 `GoF`）于 1994 年出版的《设计模式：可复用面向对象软件的基础》真正向软件开发中推广了这一概念。这本书编录了 23 种经典设计模式，将其分为创建型、结构型和行为型模式。
 
+```java
+interface Animal {
     void makeSound();
+}
+
 class Dog implements Animal {
+    public void makeSound() {
+        System.out.println("Woof");
     }
 }
 
-        return new Dog();
+class Cat implements Animal {
+    public void makeSound() {
+        System.out.println("Meow");
+    }
+}
 
-        return new Cat();
+class AnimalFactory {
+    public Animal createAnimal(String type) {
+        if ("dog".equalsIgnoreCase(type)) {
+            return new Dog();
+        } else if ("cat".equalsIgnoreCase(type)) {
+            return new Cat();
+        }
+        return null;
+    }
+}
 ```
 
 随着软件系统规模和复杂性的持续增长，设计模式不断演变以应对新挑战。例如，分布式系统和 Web 应用程序的兴起导致了专门为这些环境设计的模式的发展，例如用于 Web 应用程序的模型-视图-控制器 (`MVC`) 模式。
@@ -173,20 +206,73 @@ class Dog implements Animal {
 从过程化编程向面向对象编程的转变是如何影响软件维护和可扩展性的？这种转变允许将代码更好地组织成模块化、可重用的组件。封装了数据和行为的对象可以更容易地进行维护和扩展，而不会影响系统的其他部分。这种模块化也提高了可扩展性，因为可以通过创建新对象或扩展现有对象来添加新功能，而无需修改单体式代码库。
 
 ## 使用设计模式的好处
+
+```java
 public class DatabaseConnection {
-    }
+    private static DatabaseConnection instance;
+    private DatabaseConnection() {}
+
+    public static synchronized DatabaseConnection getInstance() {
+        if (instance == null) {
+            instance = new DatabaseConnection();
         }
+        return instance;
+    }
 }
+```
+
 可读性是使用设计模式的另一个显著优势。它们提供了通用的词汇和结构，使得代码对其他开发者更容易理解。当团队成员遇到实现良好的设计模式时，他们可以快速理解代码的意图和功能，即使这些代码不是他们编写的。这种共同的理解促进了协作，并使代码维护更容易。
+
+```java
 interface Vehicle {
+    void drive();
+}
+
+class Car implements Vehicle {
+    public void drive() {
+        System.out.println("Driving a car");
+    }
+}
+
+class Motorcycle implements Vehicle {
     public void drive() {
         System.out.println("Riding a motorcycle");
-    createVehicle() {
+    }
 }
+
+interface VehicleFactory {
+    Vehicle createVehicle();
+}
+
+class CarFactory implements VehicleFactory {
+    public Vehicle createVehicle() {
+        return new Car();
+    }
+}
+
+class MotorcycleFactory implements VehicleFactory {
+    public Vehicle createVehicle() {
+        return new Motorcycle();
+    }
+}
+```
+
+```java
 import java.util.List;
-        observers.add(observer);
+
+interface SortStrategy {
+    void sort(int[] array);
+}
+
+class QuickSort implements SortStrategy {
     public void sort(int[] array) {
         // Quick sort implementation
+    }
+}
+
+class MergeSort implements SortStrategy {
+    public void sort(int[] array) {
+        // Merge sort implementation
     }
 }
 
@@ -203,12 +289,37 @@ public class Sorter {
 }
 ```
 
-
-
-
 ```java
-return new WordDocument();
+interface Document {
+    void open();
 }
+
+class PdfDocument implements Document {
+    public void open() {
+        System.out.println("Opening PDF document");
+    }
+}
+
+class WordDocument implements Document {
+    public void open() {
+        System.out.println("Opening Word document");
+    }
+}
+
+interface DocumentFactory {
+    Document createDocument();
+}
+
+class PdfDocumentFactory implements DocumentFactory {
+    public Document createDocument() {
+        return new PdfDocument();
+    }
+}
+
+class WordDocumentFactory implements DocumentFactory {
+    public Document createDocument() {
+        return new WordDocument();
+    }
 }
 ```
 
@@ -257,9 +368,11 @@ public class HTMLReportStrategy implements ReportStrategy {
 
 public class ReportGenerator {
     private ReportStrategy strategy;
+
     public void setStrategy(ReportStrategy strategy) {
         this.strategy = strategy;
     }
+
     public void generateReport(ReportData data) {
         strategy.generateReport(data);
     }
@@ -277,9 +390,11 @@ public class ReportGenerator {
 ```java
 public abstract class Validator {
     protected Validator nextValidator;
+
     public void setNext(Validator validator) {
         this.nextValidator = validator;
     }
+
     public abstract boolean validate(String input);
 }
 
@@ -305,23 +420,24 @@ public class NumericValidator extends Validator {
 
 public class ValidationChain {
     private Validator first;
+
     public ValidationChain() {
         first = new LengthValidator();
         Validator second = new NumericValidator();
         first.setNext(second);
     }
+
     public boolean validate(String input) {
         return first.validate(input);
     }
 }
 ```
 
-
-
-
-一旦安装并配置了 `JDK`，下一步是选择一个集成开发环境（IDE）。虽然可以使用简单的文本编辑器编写 Java 代码，但 IDE 提供了许多优势，例如代码补全、调试工具和项目管理功能。流行的 Java IDE 包括 `IntelliJ IDEA`、`Eclipse` 和 `NetBeans`。
+一旦安装并配置了 `JDK`，下一步是选择一个集成开发环境（IDE）。虽然可以使用简单的文本编辑器编写 `Java` 代码，但 IDE 提供了许多优势，例如代码补全、调试工具和项目管理功能。流行的 Java IDE 包括 `IntelliJ IDEA`、`Eclipse` 和 `NetBeans`。
 
 `IntelliJ IDEA` 由 JetBrains 开发，以其智能代码辅助和符合人体工程学的设计而闻名。它提供免费的 `Community Edition`（社区版）和带有额外功能的付费 `Ultimate Edition`（旗舰版）。要设置 `IntelliJ IDEA`，请从 JetBrains 网站下载相应的版本并按照安装向导操作。安装完成后，可以通过设置偏好的快捷键绑定、代码样式和插件来配置 IDE。
+
+
 
 `Eclipse` 是一个开源 IDE，是 Java 开发者中的另一个流行选择。它提供了丰富的插件和自定义选项。要设置 `Eclipse`，请从 Eclipse 网站下载相应的包并将其解压到你指定的位置。然后你可以启动 `Eclipse` 并配置你的工作区偏好，包括代码格式化程序和保存操作。
 
@@ -334,7 +450,7 @@ git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
 
-构建自动化工具如 `Maven` 或 `Gradle`）对于管理依赖和构建项目至关重要。例如，`Maven` 使用项目对象模型 (`POM`) 文件来定义项目结构和依赖。要设置 `Maven`，请从 Apache Maven 网站下载并将其 `bin` 目录添加到你的 `PATH` 中。你可以使用以下命令创建一个新的 `Maven` 项目：
+构建自动化工具如 `Maven` 或 `Gradle` 对于管理依赖和构建项目至关重要。例如，`Maven` 使用项目对象模型 (`POM`) 文件来定义项目结构和依赖。要设置 `Maven`，请从 Apache Maven 网站下载并将其 `bin` 目录添加到你的 `PATH` 中。你可以使用以下命令创建一个新的 `Maven` 项目：
 
 ```bash
 mvn archetype:generate -DgroupId=com.example -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
@@ -402,9 +518,6 @@ public class VehicleFactory {
 
 这种方法可行，但它违反了开闭原则，因为添加新的车辆类型需要修改现有代码。创建模式为此类问题提供了更优雅、可扩展的解决方案。
 
-
-
-
 创建型模式的另一个显著优势是能够隐藏对象创建的复杂性。它们封装了关于使用哪些具体类的知识，并隐藏了这些类实例是如何创建和组合的。这种封装在处理复杂的对象创建过程或当创建 `logic` 需要集中管理时尤为有用。
 
 创建型模式还便于对对象创建过程进行更好的控制。它们允许对对象的创建方式和时机进行细粒度的控制，这对于高效管理资源至关重要，尤其是在资源受限的环境中。
@@ -461,7 +574,7 @@ public class DatabaseConnection {
 
 创建型模式对代码的可重用性也有很大贡献。通过抽象对象创建过程，这些模式允许相同的构建代码用于不同类型的对象。这种重用性不仅节省了开发时间，还提高了整个代码库的一致性。
 
-例如，建造器模式在处理复杂对象的构建时特别有用。它将复杂对象的构建与其表示分离来，允许相同的构建过程创建不同的表示。
+例如，建造者模式在处理复杂对象的构建时特别有用。它将复杂对象的构建与其表示分离来，允许相同的构建过程创建不同的表示。
 
 ```java
 public class Computer {
@@ -519,9 +632,6 @@ Computer computer = new Computer.Builder()
 在接下来的章节中，我们将深入探讨特定的创建型模式，探索它们的独特特性、实现细节和适用场景。每个模式都解决了特定的对象创建挑战，理解它们的细差别将使你能够针对特定的设计问题选择正确的模式。
 
 结论，创建型模式构成了工具箱中不可或缺的一部分。它们为对象创建提供了强大的机制，促进了松耦合并增强了灵活性。
-
-
-
 
 此修订后的版本提供了更大的灵活性，因为可以在不修改 `OrderProcessor` 类的情况下注入不同的支付网关。这种方法对可维护性有什么影响？
 
@@ -597,6 +707,8 @@ public class MacFactory implements GUIFactory {
 该模式允许创建一致的一组对象（在此情况下为 GUI 元素），而不指定它们的具体类。这种方法如何贡献于具有多个平台特定实现的大型应用的可维护性？
 
 对象创建对代码设计的影响还扩展到了性能考虑方面。低效的对象创建会导致性能瓶颈，特别是在资源密集型应用程序中。像 `Object Pool` 这样的模式可以帮助管理昂贵对象的创建和重用：
+
+
 
 ```java
 public class DatabaseConnectionPool {
@@ -677,7 +789,7 @@ public class Computer {
 
 该模式允许创建具有许多可选组件或配置的复杂对象。与使用多个构造函数或 setter 方法相比，这种方法如何增强可维护性和可扩展性？
 
-总之，对象创建在 Java 中的重要性远超简单的类实例化。它在决定系统的的整体设计、灵活性和可维护性方面起着至关重要的作用。通过仔细考虑对象创建策略并采用适当的设计模式，开发者可以创建更健壮、可扩展且易于维护的 Java 应用程序。随着我们在接下来的章节中深入探讨特定的创建模式，我们将探索这些概念如何应用于解决现实世界的设计挑战并提高 Java 代码的质量。
+总之，对象创建在 Java 中的重要性远超简单的类实例化。它在决定系统的整体设计、灵活性和可维护性方面起着至关重要的作用。通过仔细考虑对象创建策略并采用适当的设计模式，开发者可以创建更健壮、可扩展且易于维护的 Java 应用程序。随着我们在接下来的章节中深入探讨特定的创建模式，我们将探索这些概念如何应用于解决现实世界的设计挑战并提高 Java 代码的质量。
 
 ## 工厂模式基础
 
@@ -698,31 +810,20 @@ public class PDFDocument implements Document {
         System.out.println("Opening PDF document");
     }
     public void save() {
-```
-
-
-
-
-```java
-System.out.println("Saving PDF document");
-
-}
-
+        System.out.println("Saving PDF document");
+    }
 }
 
 public class WordDocument implements Document {
-
     public void open() {
         System.out.println("Opening Word document");
     }
-
     public void save() {
         System.out.println("Saving Word document");
     }
 }
 
 public class DocumentFactory {
-
     public Document createDocument(String type) {
         if ("pdf".equalsIgnoreCase(type)) {
             return new PDFDocument();
@@ -742,7 +843,6 @@ public class DocumentFactory {
 
 ```java
 public abstract class Vehicle {
-
     public abstract int getWheel();
 
     public static Vehicle createVehicle(String type) {
@@ -756,7 +856,6 @@ public abstract class Vehicle {
 }
 
 public class Car extends Vehicle {
-
     @Override
     public int getWheel() {
         return 4;
@@ -764,7 +863,6 @@ public class Car extends Vehicle {
 }
 
 public class Motorcycle extends Vehicle {
-
     @Override
     public int getWheel() {
         return 2;
@@ -774,7 +872,7 @@ public class Motorcycle extends Vehicle {
 
 这种方法允许在抽象基类中进行集中对象创建。这种实现与上一个示例有什么不同？它可能提供哪些优势？
 
-工厂模式在系统必须独立于其产品的创建、组合和表示的场景中脱颖出色。它在框架和库中特别有用，因为代码需要在不知道特定类的情况下与各种产品类型协同工作。例如，数据库连接框架可能会使用工厂根据配置设置创建适当的数据库连接对象。
+工厂模式在系统必须独立于其产品的创建、组合和表示的场景中脱颖而出。它在框架和库中特别有用，因为代码需要在不知道特定类的情况下与各种产品类型协同工作。例如，数据库连接框架可能会使用工厂根据配置设置创建适当的数据库连接对象。
 
 工厂模式的核心优势之一是它能够促进松耦合。通过集中对象创建，它减少了类与类之间的依赖：
 
@@ -800,7 +898,6 @@ public class OrderProcessor {
 
 ```java
 public class MockDocument implements Document {
-
     public void open() {
         // Mock implementation
     }
@@ -811,7 +908,6 @@ public class MockDocument implements Document {
 }
 
 public class TestOrderProcessor {
-
     @Test
     public void testOrderProcessor() {
         DocumentFactory mockFactory = new MockFactory();
@@ -821,13 +917,29 @@ public class TestOrderProcessor {
 }
 ```
 
+## 抽象工厂模式
 
+`Abstract Factory Pattern` 提供了一个接口，用于创建相关或依赖对象的家族，而无需指定它们的具体类。该模式在系统需要独立于其产品的创建、组合和表示方式时特别有用。
 
-
+考虑一个需要支持多种操作系统 UI 组件的跨平台 GUI 库：
 
 ```java
-// Concrete products for Windows
+// Abstract products
+interface Button {
+    void paint();
+}
 
+interface Checkbox {
+    void paint();
+}
+
+// Abstract factory
+interface GUIFactory {
+    Button createButton();
+    Checkbox createCheckbox();
+}
+
+// Concrete products for Windows
 class WindowsButton implements Button {
     public void paint() {
         System.out.println("Render a button in Windows style");
@@ -841,7 +953,6 @@ class WindowsCheckbox implements Checkbox {
 }
 
 // Concrete products for macOS
-
 class MacButton implements Button {
     public void paint() {
         System.out.println("Render a button in macOS style");
@@ -855,7 +966,6 @@ class MacCheckbox implements Checkbox {
 }
 
 // Concrete factories
-
 class WindowsFactory implements GUIFactory {
     public Button createButton() {
         return new WindowsButton();
@@ -877,9 +987,9 @@ class MacFactory implements GUIFactory {
 }
 ```
 
-在在此实现中，我们为产品定义了抽象接口（`Button` 和 `Checkbox`）以及抽象工厂接口（`GUIFactory`）。然后，为每个产品变体和相应的工厂创建了具体实现。这种结构是如何确保我们始终为特定的操作系统创建兼容的 UI 组件的？
+在此实现中，我们为产品定义了抽象接口（`Button` 和 `Checkbox`）以及抽象工厂接口（`GUIFactory`）。然后，为每个产品变体和相应的工厂创建了具体实现。这种结构是如何确保我们始终为特定的操作系统创建兼容的 UI 组件的？
 
-`抽象工厂模式` 的威力在于它能够强制创建一致的对象族。使用这些工厂的客户端代码可以创建 UI 组件，而无需知道它正在创建对象的特定类：
+`Abstract Factory Pattern` 的威力在于它能够强制创建一致的对象族。使用这些工厂的客户端代码可以创建 UI 组件，而无需知道它正在创建对象的特定类：
 
 ```java
 class Application {
@@ -907,7 +1017,7 @@ app.paint();
 
 这种方法允许我们通过简单更改使用的具体工厂来轻松切换不同的 UI 样式。与使用条件逻辑来创建不同的 UI 组件相比，这种设计如何提高系统的灵活性可维护性？
 
-`抽象工厂模式` 在大型系统中的一个关键优势是它能够在不修改现有代码的情况下支持添加新的产品族。例如，如果我们想添加对 Linux UI 样式的支持，可以通过创建新的具体产品和一个新的具体工厂来实现：
+`Abstract Factory Pattern` 在大型系统中的一个关键优势是它能够在不修改现有代码的情况下支持添加新的产品族。例如，如果我们想添加对 Linux UI 样式的支持，可以通过创建新的具体产品和一个新的具体工厂来实现：
 
 ```java
 class LinuxButton implements Button {
@@ -933,9 +1043,11 @@ class LinuxFactory implements GUIFactory {
 }
 ```
 
-这种扩展性对于随时间推需要引入新变体或对象族的大型系统至关重要。这种模式是如何支持面向对象设计的“开闭原则”的？
+这种扩展性对于随时间推移需要引入新变体或对象族的大型系统至关重要。这种模式是如何支持面向对象设计的“开闭原则”的？
 
-`抽象工厂模式` 在需要封装复杂的对象创建过程的场景下也表现出色。例如，在数据库连接框架中，抽象工厂可以处理各种特定于数据库的对象的创建：
+`Abstract Factory Pattern` 在需要封装复杂的对象创建过程的场景下也表现出色。例如，在数据库连接框架中，抽象工厂可以处理各种特定于数据库的对象的创建：
+
+
 
 ```java
 interface ConnectionFactory {
@@ -963,9 +1075,9 @@ class PostgreSQLFactory implements ConnectionFactory {
 
 这种方法允许我们在不暴露细节的情况下与不同的数据库进行工作。这对框架有什么好处？
 
-虽然 `抽象工厂模式` 提供了许多优势，但考虑其潜在的缺点也是重要的。该模式可能会引入复杂性，特别是使添加新类型更具挑战性。开发者如何平衡这些权衡？
+虽然`抽象工厂模式`提供了许多优势，但考虑其潜在的缺点也是重要的。该模式可能会引入复杂性，特别是使添加新类型更具挑战性。开发者如何平衡这些权衡？
 
-`抽象工厂模式` 通常与其他模式结合良好工作。例如，它可以与`单例模式`结合以确保只存在一个实例：
+`抽象工厂模式`通常与其他模式结合良好工作。例如，它可以与`单例模式`结合以确保只存在一个实例：
 
 ```java
 class WindowsFactory implements GUIFactory {
@@ -983,7 +1095,7 @@ class WindowsFactory implements GUIFactory {
 }
 ```
 
-使用 `抽象工厂模式` 的系统测试可以通过其固有的抽象性简化。可以轻松创建模拟工厂（Mock factories）：
+使用`抽象工厂模式`的系统测试可以通过其固有的抽象性简化。可以轻松创建模拟工厂（Mock factories）：
 
 ```java
 class MockGUIFactory implements GUIFactory {
@@ -1007,7 +1119,7 @@ class TestApplication {
 
 这种方法允许对应用程序逻辑进行隔离测试，而不依赖于具体的实现。这种可测试性如何提高系统的整体质量和可维护性？
 
-在大型系统中，`抽象工厂模式` 在管理复杂性和确保不同子系统之间的一致性方面可以着至关重要的作用。例如，在多户应用程序中，不同的租户可能需要各种服务的不同实现：
+在大型系统中，`抽象工厂模式`在管理复杂性和确保不同子系统之间的一致性方面可以着至关重要的作用。例如，在多户应用程序中，不同的租户可能需要各种服务的不同实现：
 
 ```java
 interface ServiceFactory {
@@ -1027,7 +1139,7 @@ class SmallBusinessServiceFactory implements ServiceFactory {
 
 这种结构允许应用程序根据租户的需求无缝切换不同的服务实现。这种灵活性如何贡献于系统的可扩展性和可维护性？
 
-`抽象工厂模式` 在涉及配置驱动的对象创建场景下也证明非常有价值。通过将配置设置映射到特定的工厂实现，系统可以在不更改代码的情况下动态调整行为：
+`抽象工厂模式`在涉及配置驱动的对象创建场景下也证明非常有价值。通过将配置设置映射到特定的工厂实现，系统可以在不更改代码的情况下动态调整行为：
 
 ```java
 class FactoryProvider {
@@ -1035,25 +1147,10 @@ class FactoryProvider {
         if ("windows".equalsIgnoreCase(config)) {
             return new WindowsFactory();
         } else if ("mac".equalsIgnoreCase(config)) {
-            // ...
+            return new MacFactory();
         }
-        return null;
+        throw new IllegalArgumentException("Unknown OS");
     }
-}
-```
-
-
-
-
-
-```java
-return new MacFactory();
-
-}
-
-throw new IllegalArgumentException("Unknown OS");
-
-}
 }
 ```
 
@@ -1061,9 +1158,7 @@ throw new IllegalArgumentException("Unknown OS");
 
 ```java
 String osConfig = getOSConfigFromSettings();
-
 GUIFactory factory = FactoryProvider.getFactory(osConfig);
-
 Application app = new Application(factory);
 ```
 
@@ -1081,11 +1176,8 @@ Application app = new Application(factory);
 
 ```java
 public class BasicSingleton {
-
     private static BasicSingleton instance;
-
     private BasicSingleton() {}
-
     public static BasicSingleton getInstance() {
         if (instance == null) {
             instance = new BasicSingleton();
@@ -1095,17 +1187,14 @@ public class BasicSingleton {
 }
 ```
 
-这种实现虽然简单，但不是线程安全的。在多线程环境中，多个线程可能同时评估条件 `instance == null` 为真，导致创建了多个实例。这将如何违反单例模式的核心原则？
+这种实现虽然简单，但不是线程安全的。在多线程环境中，多个线程可能同时评估条件`instance == null`为真，导致创建了多个实例。这将如何违反单例模式的核心原则？
 
 为了解决线程安全，一种方法是使用同步（synchronization）：
 
 ```java
 public class ThreadSafeSingleton {
-
     private static ThreadSafeSingleton instance;
-
     private ThreadSafeSingleton() {}
-
     public static synchronized ThreadSafeSingleton getInstance() {
         if (instance == null) {
             instance = new ThreadSafeSingleton();
@@ -1115,17 +1204,14 @@ public class ThreadSafeSingleton {
 }
 ```
 
-虽然这种实现确保了线程安全，但由于对整个方法进行了同步，引入了性能开销。每次调用 `getInstance()` 产生同步成本，即使实例已经创建。在高并发场景下，这可能会成为瓶颈。我们该如何优化这种实现以减少不必要的同步？
+虽然这种实现确保了线程安全，但由于对整个方法进行了同步，引入了性能开销。每次调用`getInstance()`产生同步成本，即使实例已经创建。在高并发场景下，这可能会成为瓶颈。我们该如何优化这种实现以减少不必要的同步？
 
 优化线程安全单例的一种流行方法是双重检查锁定（double-checked locking）模式：
 
 ```java
 public class DoubleCheckedSingleton {
-
     private static volatile DoubleCheckedSingleton instance;
-
     private DoubleCheckedSingleton() {}
-
     public static DoubleCheckedSingleton getInstance() {
         if (instance == null) {
             synchronized (DoubleCheckedSingleton.class) {
@@ -1139,54 +1225,46 @@ public class DoubleCheckedSingleton {
 }
 ```
 
-这种实现通过只在第一次创建实例时进行同步减少了同步开销。`volatile` 关键字确保对 `instance` 变量的更改对其他线程立可见。然而，双重检查锁定的正确实现较为复杂，在某些 JVM 实现中可能存在细微问题。这种方法的潜在风险是什么？
+这种实现通过只在第一次创建实例时进行同步减少了同步开销。`volatile`关键字确保对`instance`变量的更改对其他线程立可见。然而，双重检查锁定的正确实现较为复杂，在某些 JVM 实现中可能存在细微问题。这种方法的潜在风险是什么？
 
 另一种结合了简单性与线程安全的替代方法是按需加载内部类模式（initialization-on-demand idiom）：
 
 ```java
 public class HolderSingleton {
-
     private HolderSingleton() {}
-
     private static class Holder {
         static final HolderSingleton INSTANCE = new HolderSingleton();
     }
-
     public static HolderSingleton getInstance() {
         return Holder.INSTANCE;
     }
 }
 ```
 
-这种实现利用了 JVM 的类加载机制来确保线程安全。`Holder` 类在第一次调用 `getInstance()` 之前不会被加载，此时可以保证是线程安全的。这种方法在不需要显式同步的情况下提供了懒加载初始化（lazy initialization）。在简单性和性能方面，它与之前的实现相比如何？
+这种实现利用了 JVM 的类加载机制来确保线程安全。`Holder`类在第一次调用`getInstance()`之前不会被加载，此时可以保证是线程安全的。这种方法在不需要显式同步的情况下提供了懒加载初始化（lazy initialization）。在简单性和性能方面，它与之前的实现相比如何？
 
-另一种在 Java 5 中引入的方法是使用枚举`enum`）来实现单例：
+另一种在 Java 5 中引入的方法是使用枚举（`enum`）来实现单例：
 
 ```java
 public enum EnumSingleton {
     INSTANCE;
-
     public void doSomething() {
         // 单例行为
     }
 }
 ```
 
-这种实现非常简洁，免费提供了序列化支持，并由 JVM 保证了是线程安全的。它通常被认为是在 Java 中实现单例的最佳方式。然而，它在懒加载初始化和继承方面缺乏灵活性。在什么场景下 `enum` 方法适用？
+这种实现非常简洁，免费提供了序列化支持，并由 JVM 保证了是线程安全的。它通常被认为是在 Java 中实现单例的最佳方式。然而，它在懒加载初始化和继承方面缺乏灵活性。在什么场景下`enum`方法适用？
 
-在实现单例时，考虑序列化（serialization）至关重要。序列化的单例在反序列化时可能会创建一个新实例，从而违反单例原则。为了防止这一点，你需要实现 `readResolve()` 方法：
+在实现单例时，考虑序列化（serialization）至关重要。序列化的单例在反序列化时可能会创建一个新实例，从而违反单例原则。为了防止这一点，你需要实现`readResolve()`方法：
 
 ```java
 public class SerializableSingleton implements Serializable {
-
     private static final SerializableSingleton INSTANCE = new SerializableSingleton();
-
     private SerializableSingleton() {}
-
     public static SerializableSingleton getInstance() {
         return INSTANCE;
     }
-
     protected Object readResolve() {
         return INSTANCE;
     }
@@ -1199,44 +1277,33 @@ public class SerializableSingleton implements Serializable {
 
 ```java
 public class SingletonService {
-
     private static SingletonService instance;
-
     private SingletonService() {}
-
     public static SingletonService getInstance() {
         if (instance == null) {
             instance = new SingletonService();
         }
         return instance;
     }
-
     // 服务方法
 }
 
 public class Client {
-
     private final SingletonService service;
-
     public Client(SingletonService service) {
         this.service = service;
     }
-
     // 使用服务的客户端方法
 }
 ```
 
 通过将单例注入到依赖类中，我们使代码更加模块化且测试。这种方法如何影响传统单例的全局访问属性？
 
-
-
-
-在某些情况下，你可能需要创建一个 `Singletons`（单例）注册表，特别是在需要多个相同类型但具有不同键的 `Singleton` 的场景下：
+在某些情况下，你可能需要创建一个`Singletons`（单例）注册表，特别是在需要多个相同类型但具有不同键的`Singleton`的场景下：
 
 ```java
 public class SingletonRegistry {
     private static final Map<String, Object> REGISTRY = new ConcurrentHashMap<>();
-
     public static <T> T getSingleton(String key, Supplier<T> creator) {
         return (T) REGISTRY.computeIfAbsent(key, k -> creator.get());
     }
@@ -1244,16 +1311,19 @@ public class SingletonRegistry {
 ```
 
 // Usage
+
 ```java
 Singleton1 s1 = SingletonRegistry.getSingleton("key1", Singleton1::new);
 Singleton2 s2 = SingletonRegistry.getSingleton("key2", Singleton2::new);
 ```
 
-这种方法在保持每个键 `Singleton` 原则的同时提供了灵活性。这种模式在大型系统中管理资源时可能会有什么用？
+这种方法在保持每个键`Singleton`原则的同时提供了灵活性。这种模式在大型系统中管理资源时可能会有什么用？
 
-在使用 `Singletons` 时，意识到潜在的内存泄漏至关重要，特别是在使用多个类加载器的应用程序中（例如在应用服务器中）。`Singletons` 可能会防止类被垃圾回收，导致内存问题。开发者如何在长时间运行的应用程序中降低这种风险？
+在使用`Singletons`时，意识到潜在的内存泄漏至关重要，特别是在使用多个类加载器的应用程序中（例如在应用服务器中）。`Singletons`可能会防止类被垃圾回收，导致内存问题。开发者如何在长时间运行的应用程序中降低这种风险？
 
-测试使用 `Singletons` 的代码可能是挑战性的，因为全局状态会影响测试隔离性。一种方法是使用依赖注入和接口：
+测试使用`Singletons`的代码可能是挑战性的，因为全局状态会影响测试隔离性。一种方法是使用依赖注入和接口：
+
+
 
 ```java
 public interface SingletonService {
@@ -1292,13 +1362,14 @@ public class Client {
 ```
 
 // In tests
+
 ```java
 Client client = new Client(new TestSingletonService());
 ```
 
-这种方法允许对依赖 `Singletons` 的代码进行更的 mock 和测试。这与其他 `Singleton` 依赖代码的测试策略相比如何？
+这种方法允许对依赖 `Singletons` 的代码进行更好的 mock 和测试。这与其他 `Singleton` 依赖代码的测试策略相比如何？
 
-在并发环境中，考虑 `Singletons` 对可扩展性的影响至关重要。虽然 `Singletons` 可以提供一个中心化的控制点，但它们也可能成为颈。在这种情况下，考虑使用线程本地存储或分区的 `Singletons`：
+在并发环境中，考虑 `Singletons` 对可扩展性的影响至关重要。虽然 `Singletons` 可以提供一个中心化的控制点，但它们也可能成为瓶颈。在这种情况下，考虑使用线程本地存储或分区的 `Singletons`：
 
 ```java
 public class PartitionedSingleton {
@@ -1431,47 +1502,40 @@ public class ImmutablePerson {
 
     ImmutablePerson(Builder builder) {
         this.firstName = builder.firstName;
-    }
-}
-```
-
-
-
-
-```java
-this.lastName = builder.lastName;
-this.age = builder.age;
-this.address = builder.address;
-}
-
-public static class Builder {
-    private String firstName;
-    private String lastName;
-    private int age;
-    private String address;
-
-    public Builder firstName(String firstName) {
-        this.firstName = firstName;
-        return this;
+        this.lastName = builder.lastName;
+        this.age = builder.age;
+        this.address = builder.address;
     }
 
-    public Builder lastName(String lastName) {
-        this.lastName = lastName;
-        return this;
-    }
+    public static class Builder {
+        private String firstName;
+        private String lastName;
+        private int age;
+        private String address;
 
-    public Builder age(int age) {
-        this.age = age;
-        return this;
-    }
+        public Builder firstName(String firstName) {
+            this.firstName = firstName;
+            return this;
+        }
 
-    public Builder address(String address) {
-        this.address = address;
-        return this;
-    }
+        public Builder lastName(String lastName) {
+            this.lastName = lastName;
+            return this;
+        }
 
-    public ImmutablePerson build() {
-        return new ImmutablePerson(this);
+        public Builder age(int age) {
+            this.age = age;
+            return this;
+        }
+
+        public Builder address(String address) {
+            this.address = address;
+            return this;
+        }
+
+        public ImmutablePerson build() {
+            return new ImmutablePerson(this);
+        }
     }
 }
 ```
@@ -1531,6 +1595,8 @@ public class Account {
 这种实现确保了 `Account` 对象只能通过有效参数创建。这可能有助于防止无效状态的产生？
 
 构建模式可以扩展以创建构建器层次结构，这在处理继承关系时特别有用：
+
+
 
 ```java
 abstract class Computer {
@@ -1722,10 +1788,6 @@ public void testPizzaBuilder() {
 }
 ```
 
-
-
-
-
 ```java
             .cheese(true)
             .pepperoni(true)
@@ -1892,6 +1954,8 @@ public class DeepCopy implements Serializable {
 
 原型模式在对象创建成本高昂或复杂的场景下可能特别有用。例如，考虑你正在处理数据库连接的场景：
 
+
+
 ```java
 public class DatabaseConnection implements Prototype<DatabaseConnection> {
     private String url;
@@ -1937,10 +2001,6 @@ DatabaseConnection clone = original.clone();
 
 原型模式还可以与其他模式结合，以创建更灵活的系统。例如，你可以将其与工厂模式结合，创建一个原型注册表：
 
-
-
-
-
 ```java
 public class PrototypeRegistry {
 
@@ -1966,7 +2026,7 @@ DatabaseConnection newConnection = (DatabaseConnection) registry.getPrototype("c
 
 这种模式的组合是如何增强系统对象创建的灵活性的？
 
-在实现`Prototype Pattern`（原型模式）时，考虑克隆具有复杂状态对象的后果。。例如，如果对象包含对其他对象或资源的引用，你需要决定这些引用应该是共享还是也被克隆。这一决定会影响系统的行为和性能。
+在实现`Prototype Pattern`（原型模式）时，考虑克隆具有复杂状态对象的后果。例如，如果对象包含对其他对象或资源的引用，你需要决定这些引用应该是共享还是也被克隆。这一决定会影响系统的行为和性能。
 
 考虑一种场景，你有一个管理外部资源的原型：
 
@@ -2045,7 +2105,7 @@ public void testPrototypeIndependence() {
 
 ## 真实世界中的创建模式比较
 
-`Comparing Creational Patterns in Real-World`章节对创建模式进行了全面的分析。每种模式在现代软件中都有其优势、缺点和最佳用例。单例模式（Singleton pattern）确保一个类只有一个实例，并提供该实例全局访问点。它通常用于管理共享资源或配置。
+`Comparing Creational Patterns in Real-World`章节对创建模式进行了全面的分析。每种模式在现代软件中都有其优势、缺点和最佳用例。单例模式（`Singleton pattern`）确保一个类只有一个实例，并提供该实例全局访问点。它通常用于管理共享资源或配置。
 
 ```java
 public class ConfigurationManager {
@@ -2125,10 +2185,6 @@ public interface Button {
 }
 ```
 
-
-
-
-
 ```java
 public interface Checkbox {
     void render();
@@ -2186,7 +2242,7 @@ public class MacGUIFactory implements GUIFactory {
 
 在什么情况下，抽象工厂模式比工厂方法更合适？
 
-建造器模式将复杂对象的构建与它的表示分离，允许通过相同的构建过程创建不同的表示。当对象需要根据多种可能的配置创建时，它特别有用。考虑一个餐点订单系统：
+建造者模式将复杂对象的构建与它的表示分离，允许通过相同的构建过程创建不同的表示。当对象需要根据多种可能的配置创建时，它特别有用。考虑一个餐点订单系统：
 
 ```java
 public class Meal {
@@ -2219,6 +2275,8 @@ public class Meal {
     }
 }
 ```
+
+
 
 ```java
 public interface MealBuilder {
@@ -2273,6 +2331,8 @@ public class MealDirector {
 
 在对象创建方面，建造器模式与抽象工厂模式有什么区别？
 
+### 原型模式
+
 原型模式通过使用原型实例指定要创建的对象类型，通过复制来创建新对象。当创建一个对象的成本比复制一个更高时，它非常有用。考虑一个文档管理系统：
 
 ```java
@@ -2314,25 +2374,23 @@ public class Document implements Prototype<Document> {
 
 你何时选择原型模式而不是其他创建模式？
 
-每种创建模式都有其优势和理想的使用场景。`单例`确保了实例实例，这对于协调整个系统的操作非常有用，但可能会引入全局状态。`工厂方法`允许在父类中进行灵活的对象创建，由子类来更改创建对象的类型。`抽象工厂`创建相关对象族，维持了整个系统的一致性。`建造器`将复杂对象的构建与其表示分离，允许分步创建。`原型`允许通过复制现有实例来实现高效的对象创建。
+### 创建型模式对比
 
-在实践中，这些模式通常会被结合或调整以满足特定需求。例如，你可能会使用`单例工厂`来管理跨系统的对象创建，或者结合`建造器`和`原型`模式来实现具有高效复制能力的复杂对象创建。
+每种创建模式都有其优势和理想的使用场景。`单例`确保了实例唯一，这对于协调整个系统的操作非常有用，但可能会引入全局状态。`工厂方法`允许在父类中进行灵活的对象创建，由子类来更改创建对象的类型。`抽象工厂`创建相关对象族，维持了整个系统的一致性。`建造者`将复杂对象的构建与其表示分离，允许分步创建。`原型`允许通过复制现有实例来实现高效的对象创建。
+
+在实践中，这些模式通常会被结合或调整以满足特定需求。例如，你可能会使用`单例工厂`来管理跨系统的对象创建，或者结合`建造者`和`原型`模式来实现具有高效复制能力的复杂对象创建。
 
 在设计软件时，考虑系统的特定需求至关重要。你正在处理资源密集型的对象创建吗？你需要确保相关对象族的一致性吗？对象创建的灵活性是优先任务吗？回答这些问题将引导你选择最合适的创建模式或模式组合。
 
 记住，虽然设计模式为常见问题提供了证明过的解决方案，但不应盲目应用。始终要考虑权衡以及对系统架构的潜在影响。关键在于明智地使用模式，根据你的特定需求进行调整，同时保持代码的清晰和灵活性。
 
-
-
-
-
 ## 工厂方法模式
 
 工厂方法模式解决了面向对象编程中的一个常见挑战：如何在不指定具体类的情况下创建对象。当一个类无法预见到它需要创建的对象类型，或者当一个类想要将对象创建的责任委托给它的子类时，这种模式变得特别有用。通过使用`Factory Method`，我们可以实现创建者与产品之间的松耦合，使代码更具灵活性且易于扩展。
 
-工厂方法模式的主要目的之一是提供封装对象创建逻辑的方法。我们不再直接使用 `new` 关键字来实例化对象，而是定义一个接口或抽象类，其中包含一个充当工厂的角色的方法。该方法通常被称为 `createProduct()` 或类似的名称，负责创建并返回产品的实例。子类随后可以重写此方法以更改创建的产类型。
+工厂方法模式的主要目的之一是提供封装对象创建逻辑的方法。我们不再直接使用 `new` 关键字来实例化对象，而是定义一个接口或抽象类，其中包含一个充当工厂的角色的方法。该方法通常被称为 `createProduct()` 或类似的名称，负责创建并返回产品的实例。子类随后可以重写此方法以更改创建的产品类型。
 
-## 问题描述
+### 问题描述
 
 让我们考虑这样一个场景：我们正在开发一个文档处理应用程序，它需要处理不同类型的文档，例如 PDF、Word 文档和纯文本文件。如果不使用工厂方法模式，我们的代码可能会像这样：
 
@@ -2356,7 +2414,7 @@ public class DocumentProcessor {
 
 这种方法有几个缺点。它违反了**开闭原则**，因为每当我们添加新的文档类型时，都需要修改 `DocumentProcessor` 类。它还让 `DocumentProcessor` 与特定的文档实现紧密耦合。
 
-## 使用工厂方法的解决方案
+### 使用工厂方法的解决方案
 
 现在，让我们看看如何使用工厂方法模式来改进它：
 
@@ -2389,11 +2447,11 @@ public class WordDocumentFactory extends DocumentFactory {
 
 通过这种实现，我们将文档的创建逻辑与处理逻辑分离开了。`DocumentFactory` 类定义了创建文档的接口，并提供了一个处理它们的模板方法。具体的工厂（如 `PDFDocumentFactory` 和 `WordDocumentFactory`）重写 `createDocument()` 方法来返回特定的文档类型。
 
-## 优点
+### 优点
 
 这种设计具有几个优点。首先，现在很容易在不修改现有代码的情况下添加新的文档类型。我们只需要创建一个扩展 `DocumentFactory` 的新工厂类即可。其次，使用这些工厂的客户端代码不需要特定的文档类，促进了松耦合。
 
-## 在框架开发中的应用
+### 在框架开发中的应用
 
 工厂方法模式的另一个关键用例是框架开发。框架通常需要提供默认实现，同时允许用户扩展和自定义行为。工厂方法模式通过定义子类可以重写的钩子方法实现了这种灵活性。
 
@@ -2432,7 +2490,7 @@ public class XMLRequestHandler extends RequestHandler {
 
 在这个例中，`RequestHandler` 类定义了结构，但通过 `createResponse()` 方法将创建工作委托给子类。
 
-## 复杂对象的创建
+### 复杂对象的创建
 
 当创建一个对象涉及不仅仅是构造函数时，工厂方法也很有价值。可能涉及初始化步骤、资源分配或复杂的逻辑。考虑不同数据库连接的设置：
 
@@ -2465,7 +2523,7 @@ public class OracleFactory extends DatabaseFactory {
 
 在这种情况下，`DatabaseFactory` 中的 `createConnection()` 方法处理所有连接的通用设置，而特定类型则留给子类处理。
 
-## 运行时配置
+### 运行时配置
 
 工厂方法在运行时确定要创建对象的精确类型的场景下表现优异。这在依赖注入或处理配置文件时特别有用。例如，想象一个根据配置设置使用不同实现的日志系统：
 
@@ -2508,9 +2566,6 @@ public class ConsoleLoggerFactory extends LoggerFactory {
 
 在这种设置下，`getLogger()` 方法使用工厂方法模式根据输入创建适当日志记录器。这允许轻松地更改日志实现，而不影响使用日志记录器的代码。
 
-
-
-
 虽然工厂方法模式提供了许多优势，但审慎地使用它至关重要。过度使用会导致子类爆炸并增加复杂性。在以下情况下，该模式最为有效：
 
 1. 一个类不知道创建对象时需要哪些子类。
@@ -2524,6 +2579,8 @@ public class ConsoleLoggerFactory extends LoggerFactory {
 工厂方法模式是 Java 中一种基础的设计模式，为对象创建提供了一种结构化的方法。本节将探讨工厂方法模式的实际实现，重点关注代码示例、最佳实践和测试策略。我们将深入研究创建灵活且可维护工厂类的细微差别，讨论要避免的常见陷阱，并通过有效的测试确保工厂实现的健壮性。通过理解这些实际方面，开发者可以利用工厂方法模式在 Java 项目中创建更模块化、可扩展且可测试的代码。
 
 在 Java 中实现工厂方法模式涉及创建一个定义工厂方法的接口或抽象类，然后实现具体的工厂类，通过重写该方法来产生特定对象。让我们从一个基础示例开始来说这一概念：
+
+
 
 ```java
 public interface Product {
@@ -2691,9 +2748,6 @@ class DocumentFactoryTest {
 
 这些测试验证了创建了正确的文档类型，并且 `processDocument` 方法调用了创建的文档上预期的方法。
 
-
-
-
 实现工厂方法模式时，考虑“面向接口而非面向实现”的原则是非常重要的。这意味着你的客户端代码应该依赖于抽象工厂和产品，而不是具体的实现。这种方法增强了灵活性，并使得在未来添加新的产品类型变得更容易。
 
 另一个最佳实践是在适当的情况下将工厂方法与其他模式结合使用。例如，你可能会将其与策略模式结合以创建不同的算法：
@@ -2706,7 +2760,7 @@ public interface SortStrategy {
 public class BubbleSortStrategy implements SortStrategy {
     @Override
     public void sort(List<Integer> data) {
-        // 泡排序实现
+        // 冒泡排序实现
     }
 }
 
@@ -2738,7 +2792,7 @@ public class QuickSortFactory extends SortStrategyFactory {
 
 这种组合允许你动态地创建不同的排序策略，在保持关注点分离的同时，提供了算法选择的灵活性。
 
-在实现工厂方法模式时，考虑性能影响也很，特别是在对象创建频繁的场景下。在这种情况下，你可能希望将工厂方法与对象池或缓存技术结合起来以优化资源使用：
+在实现工厂方法模式时，考虑性能影响也很重要，特别是在对象创建频繁的场景下。在这种情况下，你可能希望将工厂方法与对象池或缓存技术结合起来以优化资源使用：
 
 ```java
 public class ConnectionFactory {
@@ -2811,6 +2865,8 @@ public class CreatorB extends Creator {
 
 相比之下，抽象工厂模式提供了一个创建一组相关对象的接口，而不指定它们的具体类。它本质上是“工厂的工厂”。以下是一个示例：
 
+
+
 ```java
 public interface Button {
     void render();
@@ -2870,7 +2926,9 @@ public class MacFactory implements GUIFactory {
 
 关键区别在于它们的范围和灵活性。工厂方法侧重于创建单个产品，而抽象工厂创建相关产品族。这使得抽象工厂更适用于需要确保创建的产品相互兼容的场景，例如跨平台工具包。
 
-应该何时使用每种模式？当你有一个单一产品层次结构并希望将实例化逻辑委托给子类时，工厂方法是理想的。它在以下情况下特别有用：
+## 应该何时使用每种模式？
+
+当你有一个单一产品层次结构并希望将实例化逻辑委托给子类时，工厂方法是理想的。它在以下情况下特别有用：
 
 1. 类无法预知它需要创建的对象类型。
 2. 类希望由子类来指定它创建的对象。
@@ -2883,7 +2941,13 @@ public class MacFactory implements GUIFactory {
 3. 一族相关的产品对象被设计为共同使用，并且你需要强制这种约束。
 4. 你希望提供一个产品类库，并且只公开它们的接口而不是实现。
 
-让我们考虑一个真实世界的场景来说来说这些区别。假设你正在开发一个需要处理不同文件格式的文档处理系统。工厂方法的方法可能如下：
+## 真实世界场景对比
+
+让我们考虑一个真实世界的场景来说明这些区别。假设你正在开发一个需要处理不同文件格式的文档处理系统。
+
+### 工厂方法模式
+
+工厂方法的方法可能如下：
 
 ```java
 public interface Document {
@@ -2892,9 +2956,6 @@ public interface Document {
     void save();
 }
 ```
-
-
-
 
 ```java
 public abstract class DocumentFactory {
@@ -2924,7 +2985,11 @@ public class DocxFactory extends DocumentFactory {
 }
 ```
 
-如果你只处理文档创建，这种方法效果良好。但是，如果你的系统还需要处理每种文档类型的相关对象（如格式化器、转换器或读取器），抽象工厂（Abstract Factory）方法会更加合适：
+如果你只处理文档创建，这种方法效果良好。
+
+### 抽象工厂模式
+
+但是，如果你的系统还需要处理每种文档类型的相关对象（如格式化器、转换器或读取器），抽象工厂方法会更加合适：
 
 ```java
 public interface DocumentFactory {
@@ -2964,11 +3029,11 @@ public class DocxFactory implements DocumentFactory {
 
 这种抽象工厂实现确保了所有创建的对象（文档、格式化器、转换器）在各自的家族（PDF 或 DOCX）中是兼容。
 
-### 这些模式如何影响代码的可维护性和扩展性？
+## 这些模式如何影响代码的可维护性和扩展性？
 
-工厂方法（Factory Method）通常会导致更多的子类，因为每种变体都需要一个新的子类。这可能导致小类的泛滥，在大型系统中可能更难维护。然而，它提供了清晰的关注点分离，并易于添加新的产品类型。
+工厂方法通常会导致更多的子类，因为每种变体都需要一个新的子类。这可能导致小类的泛滥，在大型系统中可能更难维护。然而，它提供了清晰的关注点分离，并易于添加新的产品类型。
 
-抽象工厂（Abstract Factory）虽然初始实现较为复杂，但对产品族提供了更好的封装。切换整个产品族更容易，这在需要一致创建多个相互关联对象的场景下特别有用。然而，添加新类型的产品可能具有挑战性，因为这需要修改 `AbstractFactory` 接口及其所有的实现类。
+抽象工厂虽然初始实现较为复杂，但对产品族提供了更好的封装。切换整个产品族更容易，这在需要一致创建多个相互关联对象的场景下特别有用。然而，添加新类型的产品可能具有挑战性，因为这需要修改 `AbstractFactory` 接口及其所有的实现类。
 
 在测试方面，两种模式都通过允许使用 mock 对象使得单元测试变得更容易。使用工厂方法时，你可以轻松地用 mock 工厂来于测试：
 
@@ -2990,9 +3055,11 @@ class DocumentProcessorTest {
 
 同样，使用抽象工厂，你可以模拟整个产品族，以便对复杂系统进行全面测试。
 
-结论，虽然工厂方法和抽象工厂模式都为管理对象创建提供了强大的工具，但选择取决于你系统的特定需求。工厂方法为单产品线提供了简单性和灵活性，而抽象工厂在管理相关产品族方面表现出色。通过理解这些细微差别，你可以做出明智决策，从而构建更健壮、可维护且可扩展的 Java 应用。
+## 结论
 
-### 使用工厂模式的依赖注入
+虽然工厂方法和抽象工厂模式都为管理对象创建提供了强大的工具，但选择取决于你系统的特定需求。工厂方法为单产品线提供了简单性和灵活性，而抽象工厂在管理相关产品族方面表现出色。通过理解这些细微差别，你可以做出明智决策，从而构建更健壮、可维护且可扩展的 Java 应用。
+
+# 使用工厂模式的依赖注入
 
 使用工厂模式的依赖注入 - 集成，减少紧耦合
 
@@ -3059,7 +3126,9 @@ smsNotifier.sendNotification("Hello, SMS!");
 2. 我们可以在不更改 `NotificationManager` 类的情况下轻松添加新类型的 `MessageService`。
 3. 测试变得更容易了，因为我们可以在单元测试中注入 mock 服务。
 
-这是如何减少紧耦合的？在紧耦合的系统中，类对其他类有直接的了解和依赖。通过通过工厂使用依赖注入，我们正在遵循面向对象设计中的依赖倒置原则（这是 SOLID 原则之一）。该原则规定，高层模块不应依赖低层模块，两者都应该依赖于抽象。
+## 这是如何减少紧耦合的？
+
+在紧耦合的系统中，类对其他类有直接的了解和依赖。通过通过工厂使用依赖注入，我们正在遵循面向对象设计中的依赖倒置原则（这是 SOLID 原则之一）。该原则规定，高层模块不应依赖低层模块，两者都应该依赖于抽象。
 
 让我们考虑一个具有多个依赖的复杂场景：
 
@@ -3068,10 +3137,6 @@ public interface UserRepository {
     User findById(int id);
 }
 ```
-
-
-
-
 
 ```java
 public interface Logger {
@@ -3108,7 +3173,7 @@ public class ServiceFactory {
 }
 ```
 
-### 实现概述
+## 实现概述
 
 在此项设置中，`ServiceFactory` 负责创建和组装所有的依赖项。`UserService` 不需要知道它的依赖项是如何创建的，也不需要知道它们的具体实现。
 
@@ -3134,11 +3199,13 @@ public class AppConfig {
 }
 ```
 
-通过这种配置，`Spring` 在创建 `UserService`  时会自动创建并注入依赖项。
+通过这种配置，`Spring` 在创建 `UserService` 时会自动创建并注入依赖项。
 
-### 对测试的影响
+## 对测试的影响
 
 这种方法对测试有什么影响？它通过允许轻松替换依赖项显著简化了单元测试：
+
+
 
 ```java
 @Test
@@ -3261,16 +3328,6 @@ public class DistributedFactoryImpl implements DistributedFactory {
 }
 ```
 
-
-
-
-
-```java
-return node.createProduct(productType);
-    }
-}
-```
-
 这种分布式方法允许通过在系统负载增加时添加更多工厂节点来实现水平扩展。
 
 缓存是工厂模式扩展容的另一个关键策略，特别是在处理开销昂的对象创建过程时。通过缓存频繁创建的对象，我们可以显著减轻工厂的负载并提高整个系统的性能。
@@ -3292,7 +3349,7 @@ public class CachingFactory {
 }
 ```
 
-该实现使用并发哈希映射（ConcurrentHashMap）在多线程环境中安全地缓存产品。`computeIfAbsent` 方法确保只有在缓存中不存在该产品时才会进行创建。
+该实现使用并发哈希映射（`ConcurrentHashMap`）在多线程环境中安全地缓存产品。`computeIfAbsent` 方法确保只有在缓存中不存在该产品时才会进行创建。
 
 对于处理大量产品类型的系统，可以考虑实现分级工厂系统。这种方法将工厂组织成树形结构，允许进行更高效的产品类型查找和创建。
 
@@ -3420,6 +3477,8 @@ public class GodFactory {
 
 另一个陷阱是“静态工厂方法”反模式，即将工厂方法实现为静态方法。虽然这看起来很方便，但它让代码更难测试和扩展：
 
+
+
 ```java
 public class StaticFactory {
     public static Product createProduct(String type) {
@@ -3443,10 +3502,6 @@ public class ConcreteProductFactory implements ProductFactory {
 }
 ```
 
-
-
-
-
 ```java
 // Implementation
 
@@ -3455,7 +3510,7 @@ public class ConcreteProductFactory implements ProductFactory {
 }
 ```
 
-“工厂重复”（Factory Duplication）反模式发生在相似的工厂逻辑在多个类中被重复使用时。这违反了 DRY（不要重复编写自己）原则，并可能导致维护问题。为了避免这种情况，请考虑为相关的工厂使用公共基类或接口：
+“工厂重复”反模式发生在相似的工厂逻辑在多个类中被重复使用时。这违反了 DRY（不要重复编写自己）原则，并可能导致维护问题。为了避免这种情况，请考虑为相关的工厂使用公共基类或接口：
 
 ```java
 public abstract class AbstractProductFactory {
@@ -3497,7 +3552,7 @@ public class LoggingFactory implements ProductFactory {
 
 这种日志方法有助于跟踪对象创建的流程，在调试生产环境中的问题时可能是无价的。
 
-另一个常见的陷阱是工厂实现中的“过度使用反射”（Overuse of Reflection）。虽然反射可以提供灵活性，但也可能导致性能问题，并使代码难以理解和维护：
+另一个常见的陷阱是工厂实现中的“过度使用反射”。虽然反射可以提供灵活性，但也可能导致性能问题，并使代码难以理解和维护：
 
 ```java
 public class ReflectiveFactory {
@@ -3515,7 +3570,7 @@ public class ReflectiveFactory {
 
 相反，考虑使用基于 Map 的方法或依赖注入来编写更具维护性和性能更高的代码。
 
-“忽略异常处理”（Ignoring Exception Handling）陷阱发生在工厂在对象创建过程中没有妥善处理异常。这会导致错误信息不明确且调试困难：
+“忽略异常处理”陷阱发生在工厂在对象创建过程中没有妥善处理异常。这会导致错误信息不明确且调试困难：
 
 ```java
 public class PoorExceptionHandlingFactory {
@@ -3573,7 +3628,7 @@ public class ThreadSafeFactory {
 }
 ```
 
-另一个常见的陷阱是工厂实现中的“与具体紧耦合”（Tight Coupling to Concrete Classes）。这会导致系统灵活性降低且难以扩展：
+另一个常见的陷阱是工厂实现中的“与具体紧耦合”。这会导致系统灵活性降低且难以扩展：
 
 ```java
 public class TightlyCoupledFactory {
@@ -3608,7 +3663,7 @@ public class LooseCoupledFactory {
 }
 ```
 
-“忽略性能考虑”（Ignoring Performance Considerations）陷阱发生在工厂在没有缓存的情况下重复创建昂贵的对象。这会导致高负载场景下的性能问题：
+“忽略性能考虑”陷阱发生在工厂在没有缓存的情况下重复创建昂贵的对象。这会导致高负载场景下的性能问题：
 
 ```java
 public class NonCachingFactory {
@@ -3654,9 +3709,6 @@ public class DebugFriendlyFactory {
     }
 }
 ```
-
-
-
 
 单元测试是验证工厂模式实现的基础。一个设计良好的工厂单元测试套件应该涵盖各种场景，包括不同类型产品的创建、无效输入的处理以及对象属性的验证。请考虑以下简单产品工厂的示例：
 
@@ -3727,6 +3779,14 @@ public class ResourceAwareProductFactory {
 
 我们可以使用 mock 对象来测试这个工厂：
 
+
+
+# 工厂模式的测试与实际应用
+
+## 测试工厂模式
+
+### 单元测试与 Mock 对象
+
 ```java
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -3756,6 +3816,8 @@ class ResourceAwareProductFactoryTest {
 
 这些测试展示了我们如何使用 mock 对象来模拟不同的场景，并验证工厂在各种条件下的行为。
 
+### 性能分析
+
 性能分析是测试工厂模式的另一个关键方面，特别是在对象创建频繁或资源密集型的系统中。我们可以使用像 `JMH`（Java Microbenchmark Harness）这样的基准测试工具来衡量工厂的性能：
 
 ```java
@@ -3765,8 +3827,9 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.AverageTime)
 @TimeUnit(TimeUnit.SECONDS)
 @State(Scope.Thread)
-public classFactoryBenchmark {
+public class FactoryBenchmark {
     private ProductFactory factory;
+    
     @Setup
     public void setup() {
         factory = new ProductFactory();
@@ -3786,7 +3849,9 @@ public classFactoryBenchmark {
 
 该基准测试衡量了创建不同类型产品的平均时间。通过运行此类基准测试，我们可以识别性能瓶颈并优化我们的工厂。
 
-我们如何如何确保工厂模式在多线程环境中是线程安全的？对于可能被并发访问的工厂来说，线程安全至关重要。我们可以使用 Java 并发工具（Java Concurrency Utilities）等工具来创建压力测试：
+### 并发测试
+
+我们如何如何确保工厂模式在多线程环境中是线程安全的？对于可能被并发访问的工厂来说，线程安全至关重要。我们可以使用 Java 并发工具等工具来创建压力测试：
 
 ```java
 import java.util.concurrent.CountDownLatch;
@@ -3828,6 +3893,8 @@ class ConcurrentFactoryTest {
 
 此测试创建了多个同时访问工厂的线程，有助于识别并发问题。
 
+### 边界情况与错误处理
+
 在测试工厂模式时，考虑边界情况和错误处理同样重要。我们应该测试资源耗尽、无效配置和系统故障等场景：
 
 ```java
@@ -3850,14 +3917,15 @@ void testFactoryWithInvalidConfiguration() {
 
 这些测试有助于确保我们的工厂实现能够优雅地处理异常情况。
 
+### 总结
+
 总结来说，工厂模式的全面测试涉及单元测试、mock 对象、性能分析和并发测试的结合。通过彻底测试我们的工厂实现，我们可以确保它们在实际应用中的可靠性、效率和可扩展性。请记住随着工厂模式的演进不断完善和扩展你的测试套件，以保持其随时间推移的健壮性和维护性。
 
-
-
+## 工厂模式的实际应用
 
 本节探讨了工厂模式在各个行业中的实际应用，重点关注电子商务和银行业。我们将研究这些模式如何解决现实世界中的问题、增强系统灵活性并提高代码的可维护性。通过具体的示例，我们将展示如何将工厂模式应用于复杂的业务环境中创建稳健且可扩展的解决方案。通过理解这些真实世界的实现方式，开发者可以获得如何在自己的项目中有效利用工厂模式的见解。
 
-## 电商系统
+### 电商系统
 
 电子商务系统通常采用工厂模式来管理多样化的产品目录并处理复杂的订单处理工作流。考虑一个销售多种类型产品的在线市场，每种产品都有独特的属性和处理要求。工厂模式可以高效地管理不同类型产品的创建：
 
@@ -3943,7 +4011,7 @@ public class OrderFactory {
 
 该工厂封装了确定适当订单类型的逻辑，简化了整个应用程序中的订单创建过程。
 
-## 银行系统
+### 银行系统
 
 银行系统也从工厂模式中受益，特别是在管理各种账户类型和金融产品方面。考虑一家提供不同类型账户的银行，每个账户都有特定的特征和处理要求：
 
@@ -4007,6 +4075,12 @@ public class AccountFactory {
 
 这种工厂模式允许银行系统轻松地引入新的账户类型，并以集中的方式管理它们的创建。它还在账户接口及其各种实现之间提供了清晰的分离，使系统更具维护性和可扩展性。
 
+
+
+# 工厂模式在不同行业的应用
+
+## 银行系统中的交易处理
+
 工厂模式可能如何应用于处理银行系统中的不同类型金融交易？考虑一个需要处理各种类型交易的交易处理系统，例如存款、取款和转账：
 
 ```java
@@ -4060,7 +4134,9 @@ public class TransactionFactory {
 }
 ```
 
-这种工厂模式封装了不同类型类型的创建逻辑，使得未来更容易添加新的交易类型，并确保所有交易都遵循共同接口。
+这种工厂模式封装了不同类型的创建逻辑，使得未来更容易添加新的交易类型，并确保所有交易都遵循共同接口。
+
+## 保险业中的保单创建
 
 在保险业中，工厂模式可以创建不同类型的保险保单：
 
@@ -4085,26 +4161,16 @@ public class InsurancePolicyFactory {
                 return new AutoInsurance(policyDetails);
             case "home":
                 return new HomeInsurance(policyDetails);
+            default:
+                throw new IllegalArgumentException("Unknown policy type: " + type);
         }
     }
 }
 ```
 
-
-
-
-
-```java
-            return new HomeInsurance(policyDetails);
-
-        default:
-            throw new IllegalArgumentException("Unknown policy type: " + type);
-    }
-    }
-}
-```
-
 这种工厂允许保险公司轻松地管理不同的策略类型，并根据需要引入新的类型。
+
+## 医疗保健领域的医疗记录管理
 
 在医疗保健领域，工厂模式可以用于创建不同类型的医疗记录或患者管理系统：
 
@@ -4116,15 +4182,15 @@ public interface MedicalRecord {
 }
 
 public class OutpatientRecord implements MedicalRecord {
- // 诊记录的实现
+    // 门诊记录的实现
 }
 
 public class InpatientRecord implements MedicalRecord {
- // 住院记录的实现
+    // 住院记录的实现
 }
 
 public class MedicalRecordFactory {
-    public MedicalRecord createRecord(String patientType,  String patientId) {
+    public MedicalRecord createRecord(String patientType, String patientId) {
         switch (patientType.toLowerCase()) {
             case "outpatient":
                 return new OutpatientRecord(patientId);
@@ -4139,9 +4205,11 @@ public class MedicalRecordFactory {
 
 这种工厂模式允许医疗系统高效地管理不同类型的医疗记录，确保每种记录类型在遵循通用接口的同时，保持其特定特性。
 
-总之，工厂模式在各个行业中应用广泛，从电子商务、银行到保险和医疗保健。它们为复杂系统中的对象创建提供了一种灵活且易于维护的方法，允许产品线或服务范围的于扩展和修改。通过集中化创建逻辑并为不同的对象类型提供通用接口，工厂模式为在现实场景中构建可扩展且健壮的软件系统做出了巨大贡献。
+## 总结
 
-## 单例模式深度解析
+总之，工厂模式在各个行业中应用广泛，从电子商务、银行到保险和医疗保健。它们为复杂系统中的对象创建提供了一种灵活且易于维护的方法，允许产品线或服务范围的扩展和修改。通过集中化创建逻辑并为不同的对象类型提供通用接口，工厂模式为在现实场景中构建可扩展且健壮的软件系统做出了巨大贡献。
+
+# 单例模式深度解析
 
 ## 理解单例及其意图
 
@@ -4187,7 +4255,7 @@ public class ConfigurationManager {
 
 考虑这个问题：在什么情况下，单例可能比依赖注入更优？
 
-虽然依赖注入通常因为其灵活性可测试性而青青，但在某些场景下单例可能是合适的。例如，在处理无状态类或管理全局状态时，单例可能更简单更高效。
+虽然依赖注入通常因为其灵活性和可测试性而受青睐，但在某些场景下单例可能是合适的。例如，在处理无状态类或管理全局状态时，单例可能更简单更高效。
 
 实现单例模式时的另一个重要考虑因素是线程安全。所示的基础实现不是线程安全的，可能会导致多个实例的创建。为了解决这个问题，我们可以使用同步或利用 Java 内置的懒加载机制：
 
@@ -4208,7 +4276,7 @@ public class ThreadSafeSingleton {
 }
 ```
 
-此实现使用了双重检查锁定来确保线程安全，同时最大限地减少了同步对性能的影响。
+此实现使用了双重检查锁定来确保线程安全，同时最大限度地减少了同步对性能的影响。
 
 单例模式的一种常见误用是将其作为全局变量。虽然单例提供了全局访问，但将其视为全局变量会导致紧耦合，并使代码更难以维护。明智地使用单例并在适当时考虑替代设计至关重要。
 
@@ -4234,29 +4302,22 @@ public class DatabaseConnectionPool {
 
     public synchronized Connection getConnection() {
         if (connectionPool.isEmpty()) {
-```
+            // 如果连接池为空，则创建一个新连接
+            return createNewConnection();
+        } else {
+            // 从池中返回一个现有连接
+            return connectionPool.remove(0);
+        }
+    }
 
+    public synchronized void releaseConnection(Connection connection) {
+        connectionPool.add(connection);
+    }
 
-
-
-
-```java
-// 如果连接池为空，则创建一个新连接
-return createNewConnection();
-
-} else {
-    // 从池中返回一个现有连接
-    return connectionPool.remove(0);
-}
-}
-
-public synchronized void releaseConnection(Connection connection) {
-    connectionPool.add(connection);
-}
-
-private Connection createNewConnection() {
-    // 创建新数据库连接的逻辑
-    return null; // 占位返回
+    private Connection createNewConnection() {
+        // 创建新数据库连接的逻辑
+        return null; // 占位返回
+    }
 }
 ```
 
@@ -4266,13 +4327,13 @@ private Connection createNewConnection() {
 
 单例模式也应用于日志系统、缓存机制和配置管理。在这些情况下，拥有一个单一的控制点可以简化整个系统设计并提高一致性。
 
-然而，权衡收益与潜在缺点是非常关重要的。如果需求发生演变，单例可能会使后期修改设计变得更加困难。它们还会在应用程序中引入全局状态，这会导致代码更难以推理和维护。
+然而，权衡收益与潜在缺点是非常关键的。如果需求发生演变，单例可能会使后期修改设计变得更加困难。它们还会在应用程序中引入全局状态，这会导致代码更难以推理和维护。
 
 在我们考虑使用单例时，重要的问题是：单例模式会如何影响我们应用程序的可扩展性？
 
 在某些情况下，单例在高并发场景下可能会成为瓶颈。如果许多线程不断访问同一个单例对象，会导致竞争和性能问题。如果单例管理共享资源或执行耗时操作时，情况尤为如此。
 
-为了缓解此类问题，可以考虑使用懒加载初始化或按需加载持有者模式（initialization-on-demand holder idiom）等技术：
+为了缓解此类问题，可以考虑使用懒加载初始化或按需加载持有者模式等技术：
 
 ```java
 public class OnDemandSingleton {
@@ -4291,7 +4352,7 @@ public class OnDemandSingleton {
 
 结论是，单例模式是 Java 开发者工具箱中强大的工具，但它需要仔细的考虑。它的主要意图是确保类只有一个实例，并为该实例提供全局访问。当使用适当时，它可以简化资源管理、提高一致性并优化性能。然而，意识到其局限性和潜在陷阱至关重要。
 
-在实现单例之前，请考虑依赖注入等替代设计是否能提供更大的灵活性可测试性。如果你选择使用单例，请确保它是以线程安全的方式实现的，并且没有违背单一职责原则或引入不必要的全局状态。
+在实现单例之前，请考虑依赖注入等替代设计是否能提供更大的灵活性和可测试性。如果你选择使用单例，请确保它是以线程安全的方式实现的，并且没有违背单一职责原则或引入不必要的全局状态。
 
 记住，设计模式是解决常见问题的工具，而不是强制规定。关键在于理解单例模式背后的意图，并在它为你的应用程序设计和功能提供清晰优势的地方审慎地使用。
 
@@ -4300,6 +4361,8 @@ public class OnDemandSingleton {
 本节探讨了在 Java 中实现单例模式的各种方法，重点关注饿汉初始化、懒加载初始化以及枚举的使用。这些方法在线程安全、性能和简单性方面提供了不同的权衡。
 
 饿汉初始化是单例实现最简单的形式。在这种方法中，实例在类加载时被创建：
+
+
 
 ```java
 public class EagerSingleton {
@@ -4390,10 +4453,6 @@ public enum EnumSingleton {
 ```
 
 枚举单例本质上是线程安全的，并免费地了序列化支持。当单例不需要懒加载初始化时，它们特别有用。
-
-
-
-
 
 需要注意的是，虽然单例（Singletons）非常很有用，但应该谨慎使用。它们可能会引入全局状态并使测试变得更具挑战性。在适当的情况下，请考虑依赖注入等替代方案。
 
@@ -4569,10 +4628,6 @@ public class HolderSingleton {
 
 另一种线程安全的方法是使用 `enum`：
 
-
-
-
-
 ```java
 public enum EnumSingleton {
     INSTANCE;
@@ -4615,13 +4670,18 @@ public class ReflectionSafeSingleton {
 在实现线程安全的单例时，考虑以下问题：
 
 1. 应用程序的性能要求是什么？
+
 2. `Singleton` 被访问的频率是多少？
+
 3. 是否需要懒初始化，还是可以急早创建实例？
+
 4. 是否有 `Singleton` 需要线程安全地管理的共享资源？
 
 回答这些问题将有助于引导你的实现选择，并确保你的 `Singleton` 既线程安全又高效。
 
 值得注意的是，虽然单例在某些场景下有用，但应该谨慎使用。它们可能会引入全局状态并使测试更具挑战性。在许多情况下，依赖注入（dependency injection）或其他设计模式可能是更合适的替代方案。
+
+
 
 实现线程安全的单例时，考虑应用程序并发模型的广泛背景也很重要。例如，如果你正在使用一个管理对象生命周期的框架（如 `Spring`），你可能利用框架内置的创建和管理 `Singleton` 实例的机制。
 
@@ -4693,9 +4753,6 @@ public class ThreadSafeLazySingleton {
 
 这种模式最小化了同步的使用，提高了多线程场景下的性能。然而，它更复杂，并且需要仔细的实现以避免微妙的并发问题。
 
-
-
-
 懒初始化可以提高启动性能和资源利用率，特别是对于很少使用的 `Singletons`。然而，懒初始化为了确保线程安全而所需的同步机制可能会在线程环境中引入轻微的性能开销。
 
 为了说明性能差异，考虑一个简单的基准测试：
@@ -4741,16 +4798,20 @@ public class HolderSingleton {
 }
 ```
 
-这种方法利用 JVM 类加载机制，在不使用显式同步的情况下提供了懒初始化，在简单性、线程安全和性能之间实现了良好的平衡。
+这种方法利用 `JVM` 类加载机制，在不使用显式同步的情况下提供了懒初始化，在简单性、线程安全和性能之间实现了良好的平衡。
 
-在实现 `Singletons` 时，对应用程序进行性能分析（profile）至关重要，以理解所选初始化策略的实际影响。JVM 优化、垃圾回收和特定的使用模式等因素都可能以可能并不显而易见的方式影响性能。
+在实现 `Singletons` 时，对应用程序进行性能分析（profile）至关重要，以理解所选初始化策略的实际影响。`JVM` 优化、垃圾回收和特定的使用模式等因素都可能以可能并不显而易见的方式影响性能。
 
 在决定使用懒初始化还是饿初始化时，请考虑以下问题：
 
 1. `Singleton` 对你应用程序的核心功能有多重要？
+
 2. `Singleton` 的资源需求是什么？
+
 3. `Singleton` 被访问的频率是多少？
+
 4. 你的应用程序的并发要求是什么？
+
 5. 启动时间对你的应用程序有多重要？
 
 回答这些问题将有助于指导你的决策过程，并确保你为特定的用例例选择了最合适的初始化策略。
@@ -4839,12 +4900,10 @@ public class ConsensusBasedSingleton {
 
 这种方法允许更具韧性的系统，当当前领导者故障时，可以选出新的领导者。
 
-
-
-
 在分布式系统中实现单例模式还需要考虑数据一致性和同步问题。`CAP 定理` 指出，分布式系统无法同时提供一致性（Consistency）、可用性（Availability）和分区容性（Partition tolerance）。根据你系统的需求，你可能需要优先考虑某些方面。
 
 ### 强一致性
+
 对于需要强一致性的系统，你可能使用分布式锁或事务：
 
 ```java
@@ -4886,7 +4945,10 @@ public class ConsistentDistributedSingleton {
 这种方法确保了强一致性，但在网络分区期间可能会影响可用性。
 
 ### 最终一致性
+
 对于优先考虑可用性的系统，你可能选择最终一致性：
+
+
 
 ```java
 public class EventuallyConsistentSingleton {
@@ -4917,6 +4979,7 @@ public class EventuallyConsistentSingleton {
 这种方法允许高可用性，但可能导致节点之间出现临时的不一致。
 
 ### 设计考虑
+
 在分布式系统中实现单例模式时，请考虑以下问题：
 
 1. 绝对唯一性对你的系统功能有多重要？
@@ -4928,7 +4991,8 @@ public class EventuallyConsistentSingleton {
 解决这些问题将帮助你设计出一种平衡单例模式原则与分布式系统现实情况的解决方案。
 
 ## 结论
-总之，虽然传统的单例模式在分布式环境中面临挑战，但可以采用各种策略来维护其核心原则。无论通过中心化存储、共识算法还是最终一致性模型，关键在于调整模式以适应你分布式系统的特定需求和限制。通过仔细考虑一致性、可用性和容错性等因素，你可以创建出在多实例环境中保留单例模式本质的健健且可扩展的解决方案。
+
+总之，虽然传统的单例模式在分布式环境中面临挑战，但可以采用各种策略来维护其核心原则。无论通过中心化存储、共识算法还是最终一致性模型，关键在于调整模式以适应你分布式系统的特定需求和限制。通过仔细考虑一致性、可用性和容错性等因素，你可以创建出在多实例环境中保留单例模式本质的健壮且可扩展的解决方案。
 
 ## 带序列化的单例
 
@@ -5029,22 +5093,14 @@ public class StatefulSingleton implements Serializable {
     }
 
     private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
-```
+        in.defaultReadObject();
+        instance = this;
+    }
 
-
-
-
-```java
-in.defaultReadObject();
-
-instance = this;
-
+    protected Object readResolve() {
+        return instance;
+    }
 }
-
-protected Object readResolve() {
-    return instance;
-}
-
 ```
 
 这种实现确保了状态被正确序列化，并且在反序列化期间更新了单例实例。
@@ -5096,7 +5152,7 @@ public class DistributedStatefulSingleton implements Serializable {
 在处理单例和序列化工作时，请考虑以下问题：
 
 1. 你的单例是真正的无状态的，还是包含可变状态？
-2. 在反序列化过程中，防止即使是瞬间创建多个实例有多有多重要？
+2. 在反序列化过程中，防止即使是瞬间创建多个实例有多重要？
 3. 你是否在一个状态一致性至关重要的分布式环境中工作？
 4. 你是否需要为了长期存储或传输对单例支持版本控制？
 
@@ -5104,7 +5160,7 @@ public class DistributedStatefulSingleton implements Serializable {
 
 总之，虽然序列化给单例模式带来了挑战，但可以采用各种技术来维护其完整性。无论是通过实现 `readResolve()`、使用基于枚举的单例，还是自定义序列化方法，都能确保你的单例在序列化和反序列化时仍然符合其初衷。
 
-## 单例使用的中的常见反模式
+## 单例使用中的常见反模式
 
 ### 单例使用的常见反模式 - 过度使用、非预期副作用
 
@@ -5222,6 +5278,8 @@ class Logger {
 
 这种实现不是线程安全的，可能会导致竞态条件或资源泄漏。线程安全的版本需要适当的同步：
 
+
+
 ```java
 class Logger {
     private static volatile Logger instance;
@@ -5252,10 +5310,6 @@ class Logger {
     }
 }
 ```
-
-
-
-
 
 虽然这解决了线程安全问题，但由于同步机制引入了性能开销。在许多情况下，更好的解决方案是使用专门的日志框架，它可以更高效地处理这些问题。
 
@@ -5295,16 +5349,23 @@ public class CacheManager {
 为了解决这些问题，请考虑以下单例的替代方案：
 
 1. **依赖注入**：将所需的依赖项显式地传递给需要它的对象。
+
 2. **工厂方法**：使用工厂方法创建实例，允许对象创建更具灵活性。
+
 3. **服务定位器**：使用服务的中央注册表，在消费者和实现之间提供一种层间接性。
+
 4. **静态工具类**：对于真正的无状态全局行为，可以考虑使用静态工具类而不是单例。
 
 使用单例时，请问自己这些问题：
 
 1. 全局状态真的是必要的吗，或者功能是否可以封装在特定对象内部？
+
 2. `Singleton` 是否可以替换为需要的地方注入的依赖？
+
 3. `Singleton` 将如何影响系统的可测试性和模块化？
+
 4. 是否有需要解决的线程安全问题？
+
 5. `Singleton` 是否可能导致内存管理问题？
 
 通过仔细考虑这些问题和替代方案，你可以避免许多与单例使用相关的常见陷阱。
@@ -5417,33 +5478,18 @@ public class CacheManager {
         }
         return instance;
     }
-}
-```
 
+    public void put(String key, Object value) {
+        cache.put(key, value);
+    }
 
+    public Object get(String key) {
+        return cache.get(key);
+    }
 
-
-
-```java
-            synchronized (CacheManager.class) {
-                if (instance == null) {
-                    instance = new CacheManager();
-                }
-            }
-        }
-        return instance;
-}
-
-public void put(String key, Object value) {
-    cache.put(key, value);
-}
-
-public Object get(String key) {
-    return cache.get(key);
-}
-
-public void remove(String key) {
-    cache.remove(key);
+    public void remove(String key) {
+        cache.remove(key);
+    }
 }
 ```
 
@@ -5458,15 +5504,21 @@ public void remove(String key) {
 在这些真实世界应用中实现 `Singletons`（单例）时，请考虑以下最佳实践：
 
 1. 使用延迟初始化，将资源分配推迟到需要为止。
+
 2. 确保线程安全，特别是对于并发访问的资源。
+
 3. 在初始化期间优雅地处理异常。
+
 4. 对于不需要延迟初始化的简单 `Singletons`，考虑使用 `enums`（枚举）。
+
 5. 谨慎在 `Singletons` 中存储可变状态，以避免意外之外的副作用。
 
 需要注意的是，虽然 `Singletons` 在这些场景中可能有用，但它们并不总是最佳解决方案。随着应用程序的增长，请考虑过渡到更灵活且易于维护的方法：
 
 1. 对于日志记录，使用提供更多功能和可配置性的成熟日志框架。
+
 2. 对于配置管理，考虑使用依赖注入在需要的地方传递配置对象，以提高测试性和灵活性。
+
 3. 对于缓存，评估分布式缓存解决方案以实现大型应用程序的可扩展性。
 
 在这些场景中中使用 `Singletons` 可能会如何影响应用程序的可扩展性？请考虑在 `Singletons` 的简单性与替代方案的灵活性之间的权衡。
@@ -5475,7 +5527,7 @@ public void remove(String key) {
 
 ## 结构模式概述
 
-## 结构模式简介
+### 结构模式简介
 
 Java 中的结构模式是本质上的设计原则，专注于如何组合对象和类以形成更大的结构。这些模式提供了一种组织和管理对象之间关系的方法，增强了软件设计中的活性和效率。它们解决了对象组合、接口适配和系统组织中的常见挑战。通过利用结构模式，开发者可以创建更具维护性、可扩展性和适应性的软件系统。本节将探索结构模式的核心概念、其目的，并介绍 Java 开发中最常用的结构模式。
 
@@ -5524,6 +5576,8 @@ class PrinterAdapter implements NewPrinter {
 `Decorator` 模式允许静态或动态地为单个对象添加行为，而不影响来自同一类别的其他对象的行为。这种模式用于在运行时扩展或更改对象的功能。
 
 考虑这个 `Decorator` 模式的示例：
+
+
 
 ```java
 interface Coffee {
@@ -5588,45 +5642,38 @@ interface Image {
 }
 
 class RealImage implements Image {
-```
+    private String fileName;
 
-
-
-
-
-```java
-private  String fileName;
-
-public  RealImage(String fileName)  {
-    this.fileName  = fileName;
-    loadFromDisk();
-}
-
-private  void  loadFromDisk()  {
-    System.out.println("Loading "  + fileName);
-}
-
-@Override
-public  void  display()  {
-    System.out.println("Displaying "  + fileName);
-}
-}
-
-class ProxyImage implements  Image  {
-    private RealImage realImage;
-    private  String fileName;
-
-public  ProxyImage(String fileName)  {
-    this.fileName  = fileName;
-}
-
-@Override
-public  void  display()  {
-    if  (realImage ==  null)  {
-realImage =  new  RealImage(fileName);
+    public RealImage(String fileName) {
+        this.fileName = fileName;
+        loadFromDisk();
     }
-    realImage.display();
+
+    private void loadFromDisk() {
+        System.out.println("Loading " + fileName);
+    }
+
+    @Override
+    public void display() {
+        System.out.println("Displaying " + fileName);
+    }
 }
+
+class ProxyImage implements Image {
+    private RealImage realImage;
+    private String fileName;
+
+    public ProxyImage(String fileName) {
+        this.fileName = fileName;
+    }
+
+    @Override
+    public void display() {
+        if (realImage == null) {
+            realImage = new RealImage(fileName);
+        }
+        realImage.display();
+    }
 }
 ```
 
@@ -5637,106 +5684,106 @@ realImage =  new  RealImage(fileName);
 这里是组合模式的简单实现：
 
 ```java
-import  java.util.ArrayList;
-import  java.util.List;
+import java.util.ArrayList;
+import java.util.List;
 
-interface  Component  {
-    void  operation();
+interface Component {
+    void operation();
 }
 
-class Leaf implements  Component  {
-private  String name;
+class Leaf implements Component {
+    private String name;
 
-public  Leaf(String name)  {
-    this.name  = name;
-}
+    public Leaf(String name) {
+        this.name = name;
+    }
 
-@Override
-public  void  operation()  {
-    System.out.println("Leaf "  + name +  " operation");
-}
-}
-
-class  Composite  implements  Component  {
-private  List<Component> children =  new  ArrayList<>();
-
-public  void  add(Component component)  {
-    children.add(component);
-}
-
-public  void  remove(Component component)  {
-    children.remove(component);
-}
-
-@Override
-public  void  operation()  {
-    for  (Component child : children)  {
-        child.operation();
+    @Override
+    public void operation() {
+        System.out.println("Leaf " + name + " operation");
     }
 }
+
+class Composite implements Component {
+    private List<Component> children = new ArrayList<>();
+
+    public void add(Component component) {
+        children.add(component);
+    }
+
+    public void remove(Component component) {
+        children.remove(component);
+    }
+
+    @Override
+    public void operation() {
+        for (Component child : children) {
+            child.operation();
+        }
+    }
 }
 ```
 
 这种模式允许你构建复杂的树形结构，并与结构中的所有对象统一交互，无论它们是叶子节点还是组合节点。
 
-`Flyweight`（重量级）模式用于通过与相似对象尽可能地共享来最小化内存占用或计算开销。在处理可以以某种统一方式控制大量相似对象时，它特别有用。
+`Flyweight`（享元）模式用于通过与相似对象尽可能地共享来最小化内存占用或计算开销。在处理可以以某种统一方式控制大量相似对象时，它特别有用。
 
-这里是重量级模式的一个基础示例：
+这里是享元模式的一个基础示例：
 
 ```java
-import  java.util.HashMap;
-import  java.util.Map;
+import java.util.HashMap;
+import java.util.Map;
 
-interface  Shape  {
-    void  draw();
+interface Shape {
+    void draw();
 }
 
-class Circle implements  Shape  {
-    private  String color;
-    private  int x;
-    private  int y;
-    private  int radius;
+class Circle implements Shape {
+    private String color;
+    private int x;
+    private int y;
+    private int radius;
 
-public  Circle(String color)  {
-    this.color  = color;
-}
+    public Circle(String color) {
+        this.color = color;
+    }
 
-public  void  setX(int x)  {
-    this.x  = x;
-}
+    public void setX(int x) {
+        this.x = x;
+    }
 
-public  void  setY(int y)  {
-    this.y  = y;
-}
+    public void setY(int y) {
+        this.y = y;
+    }
 
-public  void  setRadius(int radius)  {
-    this.radius  = radius;
-}
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
 
-@Override
-public  void  draw()  {
-    System.out.println("Circle: Draw() [Color : "  + color + ", x : "  + x + ", y :"  + y + ", radius :"  + radius);
-}
+    @Override
+    public void draw() {
+        System.out.println("Circle: Draw() [Color : " + color + ", x : " + x + ", y :" + y + ", radius :" + radius);
+    }
 }
 
 class ShapeFactory {
-    private  static  final  Map<String,  Shape> circleMap =  new  HashMap<>();
+    private static final Map<String, Shape> circleMap = new HashMap<>();
 
-public  static  Shape  getCircle(String color)  {
-    Circle circle =  (Circle)circleMap.get(color);
-    if(circle ==  null)  {
-circle =  new  Circle(color);
-        circleMap.put(color, circle);
-        System.out.println("Creating circle of color :  + color);
+    public static Shape getCircle(String color) {
+        Circle circle = (Circle) circleMap.get(color);
+        if (circle == null) {
+            circle = new Circle(color);
+            circleMap.put(color, circle);
+            System.out.println("Creating circle of color : " + color);
+        }
+        return circle;
     }
-    return circle;
-}
 }
 ```
 
 在这个示例中，`ShapeFactory` 创建并管理 `Circle` 对象，确保相同颜色的圆被重用而不是重新创建。
 
-理解并应用这些结构模式可以显著提高 Java 应用的设计和可维护性。它们为常见问题提供了解决方案，并促进了代码的复用、灵活性可扩展性。然而，谨慎使用这些模式很重要，因为过度使用或误用会导致不必要的复杂性。在决定使用哪种结构模式时，请考虑你试图解决的特定问题。你是在尝试适配不兼容接口吗？使用 `Adapter`（适配器）模式。需要动态地为对象添加职责？`Decorator`（装饰器）模式可能合适。处理复杂的层次结构？考虑 `Composite`（组合）模式。你如何在当前项目中应用这些结构模式呢？你能识别出这些模式可以简化你的代码或改进其设计的场景吗？
+理解并应用这些结构模式可以显著提高 Java 应用的设计和可维护性。它们为常见问题提供了解决方案，并促进了代码的复用、灵活性和可扩展性。然而，谨慎使用这些模式很重要，因为过度使用或误用会导致不必要的复杂性。在决定使用哪种结构模式时，请考虑你试图解决的特定问题。你是在尝试适配不兼容接口吗？使用 `Adapter`（适配器）模式。需要动态地为对象添加职责？`Decorator`（装饰器）模式可能合适。处理复杂的层次结构？考虑 `Composite`（组合）模式。你如何在当前项目中应用这些结构模式呢？你能识别出这些模式可以简化你的代码或改进其设计的场景吗？
 
 ## 对象组合的重要性
 
@@ -5747,48 +5794,48 @@ circle =  new  Circle(color);
 考虑一个需要实现支持各种形状的绘图应用程序。使用继承，我们可能会创建一个基类 `Shape` 并从中派生特定的形状类。然而，随着形状数量增加或我们需要添加新属性时，这种方法可能会出现问题。通过组合，我们可以创建一个更灵活的设计：
 
 ```java
-interface  Shape  {
-    void  draw();
+interface Shape {
+    void draw();
 }
 
-class Circle implements  Shape  {
-private  int radius;
+class Circle implements Shape {
+    private int radius;
 
-public  Circle(int radius)  {
-    this.radius  = radius;
+    public Circle(int radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Drawing a circle with radius " + radius);
+    }
 }
 
-@Override
-public  void  draw()  {
-    System.out.println("Drawing a circle with radius "  + radius);
-}
-}
+class Rectangle implements Shape {
+    private int width;
+    private int height;
 
-class  Rectangle  implements  Shape  {
-    private  int width;
-    private  int height;
+    public Rectangle(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
 
-public  Rectangle(int width,  int height)  {
-    this.width  = width;
-    this.height  = height;
-}
-
-@Override
-public  void  draw()  {
-    System.out.println("Drawing a rectangle with width "  + width + " and height "  + height);
-}
+    @Override
+    public void draw() {
+        System.out.println("Drawing a rectangle with width " + width + " and height " + height);
+    }
 }
 
 class DrawingTool {
-    private  Shape shape;
+    private Shape shape;
 
-public  void  setShape(Shape shape)  {
-    this.shape  = shape;
-}
+    public void setShape(Shape shape) {
+        this.shape = shape;
+    }
 
-public  void  drawShape()  {
-    shape.draw();
-}
+    public void drawShape() {
+        shape.draw();
+    }
 }
 ```
 
@@ -5799,35 +5846,29 @@ public  void  drawShape()  {
 让我们考虑一个想要创建不同类型车辆的场景：
 
 ```java
-interface  Engine  {
-    void  start();
+interface Engine {
+    void start();
 }
 
-class ElectricEngine implements  Engine  {
+class ElectricEngine implements Engine {
     @Override
-public  void  start()  {
-    System.out.println("Electric engine starting...");
-}
+    public void start() {
+        System.out.println("Electric engine starting...");
+    }
 }
 
-class GasolineEngine implements  Engine  {
+class GasolineEngine implements Engine {
     @Override
-public  void  start()  {
-    System.out.println("Gasoline engine starting...");
-}
+    public void start() {
+        System.out.println("Gasoline engine starting...");
+    }
 }
 
 class Vehicle {
     private Engine engine;
-}
-```
 
-
-
-
-```java
-public class Vehicle(Engine engine) {
-    this.engine = engine;
+    public Vehicle(Engine engine) {
+        this.engine = engine;
     }
 
     public void startVehicle() {
@@ -5849,9 +5890,9 @@ class Motorcycle extends Vehicle {
 }
 ```
 
-在这种设计中，我们使用组合（composition）将不同类型的引擎注入到车辆中。这种方法允许我们创建车辆和引擎的各种组合，而无需创建复杂的继承体系。我们可以轻松地添加新的引擎类型或车辆类型，而不会影响现有类。
+在这种设计中，我们使用组合将不同类型的引擎注入到车辆中。这种方法允许我们创建车辆和引擎的各种组合，而无需创建复杂的继承体系。我们可以轻松地添加新的引擎类型或车辆类型，而不会影响现有类。
 
-组合也有遵循 SOLID 设计原则中的单一职责原则（`SRP`）和开闭原则（`OCP`）。通过将复杂对象拆解为更小、更关注特定功能的组件，每个类或接口都可以拥有单一的、定义良好的职责。这使得代码更易理解、测试和维护。
+组合也有助于遵循 SOLID 设计原则中的单一职责原则（`SRP`）和开闭原则（`OCP`）。通过将复杂对象拆解为更小、更关注特定功能的组件，每个类或接口都可以拥有单一的、定义良好的职责。这使得代码更易理解、测试和维护。
 
 此外，组合有助于更好的封装。在继承中，子类通常可以访问父类的内部细节，这可能导致紧耦合和脆弱的代码。组合允许对象通过定义良好的接口进行交互，隐藏它们的内部实现细节，并减少组件之间的依赖。
 
@@ -5878,7 +5919,8 @@ class JSONFormatter implements LogFormatter {
 
 class Logger {
     private LogFormatter formatter;
-public Logger(LogFormatter formatter) {
+
+    public Logger(LogFormatter formatter) {
         this.formatter = formatter;
     }
 
@@ -5893,14 +5935,14 @@ public Logger(LogFormatter formatter) {
 
 虽然组合提供了许多优势，但重要的是，它并不总是继承的替代品。在某些情况下，继承是更合适的，特别是在处理“是一个...”（is-a）关系或当你想利用多态性时。关键是在符合你特定设计需求最合理的地方使用每种方法。
 
-你可能会如何在你当前的项目中应用对象组合来提高灵性和可维护性？你是否能识别出哪些领域将继承替换为组合可以导致更健壮的设计？
+你可能会如何在你当前的项目中应用对象组合来提高灵活性和可维护性？你是否能识别出哪些领域将继承替换为组合可以导致更健壮的设计？
 
 在实践中，许多设计模式利用对象组合来实现其目标。例如，策略模式使用组合来定义一组算法，封装每种算法并使它们可以互换。装饰器模式依赖组合动态地向对象添加新行为，而不会影响同一类的其他对象。
 
 当你使用对象组合设计和实现系统时，请考虑以下最佳实践：
 
 1. 在设计对象之间的关系时，优先使用组合而非继承。
-2. 使用接口定义组件之间的约，促进松耦合。
+2. 使用接口定义组件之间的约定，促进松耦合。
 3. 通过依赖于抽象而非具体实现来应用依赖倒置原则。
 4. 使用工厂方法或依赖注入来管理对象的创建和组合。
 5. 定期审查你的设计，以寻找将复杂对象分解为更简单、更关注的组件的机会。
@@ -5909,33 +5951,37 @@ public Logger(LogFormatter formatter) {
 
 ## 适配器模式：桥接不兼容性
 
+
+
+# 适配器模式
+
 适配器模式（Adapter Pattern）是一种结构性设计模式，允许接口不兼容的对象协作。它充当两个不兼容接口之间的桥梁，将一个类的接口转换为客户端期望的另一个接口。这种模式在将新组件集成到现有系统中，或与无法修改的第三方库工作时特别有用。适配器模式通过允许因接口不兼容而无法工作的类进行协作，促进了代码的重用和活性。在本节中，我们将探索 Java 中适配器模式的概念、实现和现实场景，演示如何使用它创建更具可维护性和可扩展性的系统。
 
 适配器模式通过引入一个将一个接口转换为另一个接口的包装类解决了接口不兼容的问题。这个包装类被称为适配器，实现了客户端期望的接口。通过这样做，它允许客户端使用通常情况下无法使用的对象。
 
-这是一个简单的示例：
+## 基础示例：媒体播放器
 
 ```java
 // 客户端期望的现有接口
 interface MediaPlayer {
-    play(String audioType, String fileName);
+    void play(String audioType, String fileName);
 }
 
 // 我们想要使用的新接口
 interface AdvancedMediaPlayer {
-    void playlc(String fileName);
-    void play4(String fileName);
+    void playVlc(String fileName);
+    void playMp4(String fileName);
 }
 
 // 新接口的具体实现
 class VlcPlayer implements AdvancedMediaPlayer {
     @Override
-    public void playlc(String fileName) {
+    public void playVlc(String fileName) {
         System.out.println("Playing vlc file: " + fileName);
     }
 
     @Override
-    public void play4(String fileName) {
+    public void playMp4(String fileName) {
         // 什么都不做
     }
 }
@@ -5953,7 +5999,7 @@ class MediaAdapter implements MediaPlayer {
     @Override
     public void play(String audioType, String fileName) {
         if (audioType.equalsIgnoreCase("vlc")) {
-            advancedMusicPlayer.playlc(fileName);
+            advancedMusicPlayer.playVlc(fileName);
         }
     }
 }
@@ -5976,21 +6022,20 @@ class AudioPlayer implements MediaPlayer {
 }
 ```
 
-在这个示例中，我们有一个客户端代码使用的现有 `MediaPlayer` 接口。我们想要集成一个支持额外音频格式的新 `AdvancedMediaPlayer` 接口。我们没有修改现有代码，而是创建了一个实现 `MediaPlayer` 接口的 `MediaAdapter`它在内部使用 `AdvancedMediaPlayer` 来播放新的音频格式。
-
-
-
+在这个示例中，我们有一个客户端代码使用的现有 `MediaPlayer` 接口。我们想要集成一个支持额外音频格式的新 `AdvancedMediaPlayer` 接口。我们没有修改现有代码，而是创建了一个实现 `MediaPlayer` 接口的 `MediaAdapter`，它在内部使用 `AdvancedMediaPlayer` 来播放新的音频格式。
 
 你可能会如何在自己的项目中应用 `Adapter Pattern`（适配器模式）来集成不兼容的组件或库？
 
 `Adapter Pattern` 在处理遗留系统或第三方库的场景下特别有用。它允许你在应用程序代码和外部组件之间创建一个抽象层，使得在未来切换或升级这些组件变得更加容易。
+
+## 现实场景：支付网关集成
 
 考虑一个真实世界的场景：你正在构建一个电子商务应用程序，它需要集成多个支付网关。每个支付网关可能都有自己独特的 API 和方法签名。使用 `Adapter Pattern`，你可以创建一个统一的接口来处理支付，同时适配每个网关的特定需求：
 
 ```java
 // 所有支付方式的通用接口
 interface PaymentProcessor {
-  boolean processPayment(double amount);
+    boolean processPayment(double amount);
 }
 
 // PayPal API (第三方库)
@@ -6062,6 +6107,8 @@ class PaymentService {
 2. **可测试性**：适配器模式使得为了测试目的而模拟支付网关变得更加容易。
 3. **可维护性**：如果支付网关更新了其 API，你只需要更新相应的适配器。
 
+## 现实场景：数据格式适配
+
 `Adapter Pattern` 在处理不兼容的数据格式的场景下同样有用。例如，考虑一个需要与不同文件格式工作的系统：
 
 ```java
@@ -6123,9 +6170,9 @@ class DataProcessor {
 
 （注：原文的最后几个类包含碎片化的逻辑；上述代码根据所提供的片段表示了预期的结构逻辑。）
 
+---
 
-
-
+# 装饰器模式
 
 ```java
 public SugarDecorator(Coffee coffee) {
@@ -6163,6 +6210,10 @@ System.out.println(myCoffee.getDescription() + " costs $" + myCoffee.getCost());
 装饰器模式在需要动态且透明地为对象添加责任，同时不影响其他对象的场景下特别有用。它通常用于图形用户界面（GUI）工具包，在其中你可能想为窗口或面板添加滚动条或边框。另一个常见用例是 I/O 流，可以使用各种装饰器来添加缓冲、压缩或加密功能。
 
 让我们考虑一个涉及文档处理系统的更复杂的示例：
+
+
+
+# 装饰器模式
 
 ```java
 interface Document {
@@ -6260,9 +6311,9 @@ class TimestampDecorator extends DocumentDecorator {
 
 装饰器模式是扩展行为的强大工具。它促进了开闭原则，允许你在不修改现有代码的情况下添加新功能。虽然装饰器模式具有许多优势，但请注意潜在的缺点：
 
-1. 复杂性：拥有许多装饰器类的系统可能会变得更难理解。
-2. 对象身份：被装饰的组件与原始对象没有相同的身份。
-3. 顺序：装饰器的顺序有时会影响结果。
+1. **复杂性**：拥有许多装饰器类的系统可能会变得更难理解。
+2. **对象身份**：被装饰的组件与原始对象没有相同的身份。
+3. **顺序**：装饰器的顺序有时会影响结果。
 
 为了缓解这些问题，请考虑：
 
@@ -6271,15 +6322,15 @@ class TimestampDecorator extends DocumentDecorator {
 - 考虑使用工厂或构建器模式。
 - 记录预期的顺序。
 
-## 用于控制访问的代理模式
+# 用于控制访问的代理模式
 
 代理模式是一种结构性模式，它为另一个对象提供代理或占位符，以控制对其的访问。当你需要在对象上添加一个层时（无论是为了性能、访问控制还是简化接口），这种模式就特别有用。在本节中，我们将探索 Java 中代理模式的概念、实现和实际应用，重点关注远程代理、虚拟代理和保护代理。
 
 代理模式通过引入与真实对象实现相同接口的代理类来工作。该代理控制对真实对象的访问，允许你在请求到达真实对象之前或之后执行额外的操作。有几种类型的代理，每种都有特定的用途：
 
-1. 远程代理：作为不同地址空间中对象的本地代表。
-2. 虚拟代理：按需创建昂贵的对象。
-3. 保护代理：控制对原始对象的访问。
+1. **远程代理**：作为不同地址空间中对象的本地代表。
+2. **虚拟代理**：按需创建昂贵的对象。
+3. **保护代理**：控制对原始对象的访问。
 
 让我们从一个简单的保护代理示例开始：
 
@@ -6322,16 +6373,8 @@ class ImageProxy implements Image {
 }
 ```
 
-
-
-
-
 ```java
 realImage.display();
-
-}
-
-}
 ```
 
 在这个示例中，`ImageProxy` 充当虚拟代理，只有在需要时才创建 `RealImage`。这在处理资源密集型对象时，对于性能优化特别有用。
@@ -6348,9 +6391,9 @@ image.display();  // RealImage 被显示，无需重新加载
 
 代理模式在需要为了各种目的添加一层间接层的场景下表现尤为出色。让我们更详细地探索每类型的代理：
 
-### 远程代理 (Remote Proxy)
+## 远程代理
 
-远程代理为不同地址空间中的对象提供一个本地表示。。这在对象需要跨网络进行通信的分布式系统中特别有用。这里是一个简化的示例：
+远程代理为不同地址空间中的对象提供一个本地表示。这在对象需要跨网络进行通信的分布式系统中特别有用。这里是一个简化的示例：
 
 ```java
 interface RemoteService {
@@ -6382,7 +6425,7 @@ class RemoteServiceProxy implements RemoteService {
 
 在现实场景中，代理将处理网络通信、序列化和错误处理，向客户端提供简单的接口，同时抽象掉远程通信的复杂性。
 
-### 虚拟代理 (Virtual Proxy)
+## 虚拟代理
 
 虚拟代理按需创建昂贵的对象。这通过推迟资源密集型对象的创建（直到真正需要时），有助于提高应用程序性能。我们已经通过 `ImageProxy` 见过这个例子，但让我们来看另一个场景：
 
@@ -6421,7 +6464,7 @@ class VirtualExpensiveObjectProxy implements ExpensiveObject {
 
 这种虚拟代理推迟了 `RealExpensiveObject` 的创建，直到其 `process` 方法被实际调用，如果对象从未被使用，则可以节省资源。
 
-### 保护代理 (Protection Proxy)
+## 保护代理
 
 保护代理控制对原始对象的访问。这对于在不同用户或组件具有不同权限的系统中实现访问控制特别有用。这是一个示例：
 
@@ -6475,7 +6518,7 @@ class ProtectionProxy implements SensitiveOperation {
 1. 明确定义接口。
 2. 仅在必要时使用代理。
 
-## 用于层级结构的组合模式 (Composite Pattern)
+# 用于层级结构的组合模式
 
 组合模式是一种结构性模式，允许将对象组合成树形结构。它由三个主要部分组成：`Component` 接口、`Leaf`（叶子）类和 `Composite`（组合）类。`Component` 接口为简单和复杂元素定义了共同操作。`Leaf` 类代表没有子节点的单个对象，而 `Composite` 类代表有子节点的对象。
 
@@ -6540,10 +6583,6 @@ documents.add(file1);
 documents.add(file2);
 ```
 
-
-
-
-
 ```java
 root.add(documents);
 root.operation();
@@ -6551,7 +6590,11 @@ root.operation();
 
 这段代码创建了一个简单的文件系统结构，其中根目录包含一个“Documents”（文档）文件夹，该文件夹又包含两个文件。`operation()` 方法对所有组件递归调用，展示了该模式轻松遍历复杂结构的能力。
 
-组合模式（Composite Pattern）的递归性质是其核心优势之一。它允许创建深层嵌套结构，并可以相对容易地进行遍历和操作。让我们扩展示例，包含一个更复杂的文件系统结构：
+
+
+# 组合模式（Composite Pattern）
+
+组合模式的递归性质是其核心优势之一。它允许创建深层嵌套结构，并可以相对容易地进行遍历和操作。让我们扩展示例，包含一个更复杂的文件系统结构：
 
 ```java
 class FileSystemComponent implements Component {
@@ -6662,22 +6705,27 @@ class AdditionExpression implements Expression {
 ```java
 Expression expression = new AdditionExpression(
     new NumberExpression(5),
-    new AdditionExpression(3),
-    new NumberExpression(2)
+    new AdditionExpression(
+        new NumberExpression(3),
+        new NumberExpression(2)
+    )
 );
 System.out.println("Result: " + expression.evaluate()); // 输出: 10
 ```
 
 组合模式具有多个益处：
+
 1. 通过对单个对象进行统一处理，简化了客户端代码。
 2. 使得更容易添加新类型的组件而无需更改代码。
-3. 为了一种了一种表示部分-整体（part-whole）层次结构的自然方式。
+3. 为表示部分-整体（part-whole）层次结构提供了一种自然方式。
 
 然而，意识到潜在的缺点也很重要：
+
 1. 可能会使设计过于通用，导致限制组件变得困难。
-2. 对于简单的层级结构或当部分-整体结构不是主要方面时，可能大过其实。
+2. 对于简单的层级结构或当部分-整体结构不是主要方面时，可能大材小用。
 
 在实现组合模式时，请考虑这些最佳实践：
+
 1. 为所有组件明确定义通用接口。
 2. 决定是在 `Component` 接口中实现子管理，还是仅在 `Composite` 类中实现。
 3. 对于遍历整个结构的昂贵操作，考虑使用缓存机制。
@@ -6685,17 +6733,17 @@ System.out.println("Result: " + expression.evaluate()); // 输出: 10
 
 组合模式是处理 Java 中树形结构的强大工具。通过理解其实现和递归性质，你可以为分级结构创建灵活且可维护的解决方案。无论你是在构建文件系统、GUI 组件还是复杂的表达式，组合模式为表示部分-整体层次结构提供了坚实的基础。
 
-## 用于内存优化的享量模式
+# 用于内存优化的享元模式
 
-享量模式（Flyweight Pattern）是一种结构性设计模式，专注于通过与相似对象共享尽可能多的数据来最小化内存占用并提高性能。该模式在处理具有某些共享状态的大量对象时特别有用。在本节，我们将探索 Java 中享量模式的实现、它对内存优化的优势，以及在应用程序中共享实例的策略。
+享元模式（Flyweight Pattern）是一种结构性设计模式，专注于通过与相似对象共享尽可能多的数据来最小化内存占用并提高性能。该模式在处理具有某些共享状态的大量对象时特别有用。在本节，我们将探索 Java 中享元模式的实现、它对内存优化的优势，以及在应用程序中共享实例的策略。
 
-享量模式将对象的内部状态（共享）与外部状态（唯一）分离。通过这种方式，它允许在多个对象之间高效复用公共数据，显著减少内存消耗。这种模式在应用程序需要创建大量相似对象的场景中特别有用，例如图形界面、游戏开发或大规模数据处理系统。
+享元模式将对象的内部状态（共享）与外部状态（唯一）分离。通过这种方式，它允许在多个对象之间高效复用公共数据，显著减少内存消耗。这种模式在应用程序需要创建大量相似对象的场景中特别有用，例如图形界面、游戏开发或大规模数据处理系统。
 
-让我们从检查享量模式的基本实现开始：
+让我们从检查享元模式的基本实现开始：
 
 ```java
 interface Shape {
-    draw(int x, int y);
+    void draw(int x, int y);
 }
 
 class Circle implements Shape {
@@ -6720,7 +6768,7 @@ class ShapeFactory {
     private static final Map<String, Shape> circleMap = new HashMap<>();
 
     public static Shape getCircle(String color) {
-        Circle circle = (Circle)circleMap.get(color);
+        Circle circle = (Circle) circleMap.get(color);
         if (circle == null) {
             circle = new Circle(color);
             circleMap.put(color, circle);
@@ -6731,7 +6779,7 @@ class ShapeFactory {
 }
 ```
 
-在这个示例中，`Circle` 类代表一个享量对象。`color` 是内部状态，被多个实例共享，而坐标 `(x, y)` 和 `radius` 是传递给 `draw` 方法的外部状态。`ShapeFactory` 管理享量对象，确保每个颜色只创建一个实例。
+在这个示例中，`Circle` 类代表一个享元对象。`color` 是内部状态，被多个实例共享，而坐标 `(x, y)` 和 `radius` 是传递给 `draw()` 方法的外部状态。`ShapeFactory` 管理享元对象，确保每个颜色只创建一个实例。
 
 你将如何使用此模式来高效地绘制多个圆形？
 
@@ -6741,38 +6789,29 @@ class FlyweightDemo {
 
     public static void main(String[] args) {
         for (int i = 0; i < 20; ++i) {
-            Circle circle = (Circle)ShapeFactory.getCircle(getRandomColor());
+            Circle circle = (Circle) ShapeFactory.getCircle(getRandomColor());
             circle.setRadius(100);
             circle.draw(getRandomX(), getRandomY());
         }
     }
 
     private static String getRandomColor() {
-        return colors[(int)(Math.random() * colors.length)];
-    }
-}
-```
-
-
-
-
-
-```java
+        return colors[(int) (Math.random() * colors.length)];
     }
 
     private static int getRandomX() {
-        return (int)(Math.random() * 100);
+        return (int) (Math.random() * 100);
     }
 
     private static int getRandomY() {
-        return (int)(Math.random() * 100);
+        return (int) (Math.random() * 100);
     }
 }
 ```
 
-此演示创建了 20 个具有随机颜色、位置和固定半径的圆形。尽管创建了多个圆形对象，但享用模式（Flyweight Pattern）确保了实际上创建并共享了五个 `Circle` 实例（每个颜色一个）。
+此演示创建了 20 个具有随机颜色、位置和固定半径的圆形。尽管创建了多个圆形对象，但享元模式确保了实际上创建并共享了五个 `Circle` 实例（每个颜色一个）。
 
-在处理更复杂的对象或更大数量的实例时，享用模式的有效性会变得更加明显。让我们考虑一个涉及文本渲染的更复杂的示例：
+在处理更复杂的对象或更大数量的实例时，享元模式的有效性会变得更加明显。让我们考虑一个涉及文本渲染的更复杂的示例：
 
 ```java
 class Character {
@@ -6804,7 +6843,7 @@ class CharacterFactory {
 }
 ```
 
-在这个文本渲染示例中，每个符号、字体和大小的唯一组合都被视为一个享用权重对象。`CharacterFactory` 确保了每个唯一组合只会被创建一个实例。
+在这个文本渲染示例中，每个符号、字体和大小的唯一组合都被视为一个享元对象。`CharacterFactory` 确保了每个唯一组合只会被创建一个实例。
 
 让我们用它来渲染一个句子：
 
@@ -6822,9 +6861,9 @@ public class TextEditor {
 }
 ```
 
-这段代码使用享用模式渲染文本的每个字符。尽管文本包含 25 个字符，但只有唯一的字符会被创建为单独的对象，从而显著减少了内存占用。
+这段代码使用享元模式渲染文本的每个字符。尽管文本包含 25 个字符，但只有唯一的字符会被创建为单独的对象，从而显著减少了内存占用。
 
-享用模式提供了若干优点：
+享元模式提供了若干优点：
 
 1. 通过在多个对象之间共享公共数据来减少内存占用。
 2. 改进了涉及大量相似对象的场景下的性能。
@@ -6836,19 +6875,19 @@ public class TextEditor {
 2. 在对象较少或对象创建不频繁的场景下，可能会存在性能开销。
 3. 当外部状态难以从内部状态分离时，实现难度较大。
 
-在实现享用模式时，请考虑这些最佳实践：
+在实现享元模式时，请考虑这些最佳实践：
 
 1. 明确识别对象的内部状态和外部状态。
-2. 使用工厂方法来管理享用对象并确保适当的共享。
-3. 使享用对象变为不可变对象，以防止副作用。
+2. 使用工厂方法来管理享元对象并确保适当的共享。
+3. 使享元对象变为不可变对象，以防止副作用。
 
-享用模式在以下场景中特别有用：
+享元模式在以下场景中特别有用：
 
 1. 文本编辑器，其中字符是共享的。
 2. 游戏开发，用于纹理和声音。
 3. GUI 应用，其中元素是共享的。
 
-## 结构模式的应用应用
+# 结构模式的应用
 
 结构模式处理如何组合类和对象以形成更大的结构，同时保持这些结构的灵活和高效。例如，适配器（Adapter）、装饰器（Decorator）和组合（Composite）等模式被广泛使用。
 
@@ -6895,6 +6934,12 @@ mainWindow.render();
 
 在缓存系统中，经常使用代理（Proxy）模式为另一个对象提供代理或占位符，以控制对其访问。这对于实现昂贵资源的懒加载或添加访问控制层特别有用。这里是一个基于代理的系统示例：
 
+
+
+# 设计模式详解：结构型与行为型模式
+
+## 代理模式
+
 ```java
 interface Image {
     void display();
@@ -6936,8 +6981,7 @@ class ProxyImage implements Image {
 
 在这个示例中，`ProxyImage` 充当 `RealImage` 的代理，直到真正需要时才延迟昂贵的图像加载操作。
 
-
-
+## 适配器模式
 
 适配器模式是另一种在现实世界应用中广泛使用的结构型模式，特别是在集成第三方库或遗留系统时。它允许不兼容的接口协同工作。考虑这样一个场景：现代应用程序需要与旧的支付网关交互：
 
@@ -6967,6 +7011,8 @@ class PaymentAdapter implements ModernPaymentGateway {
 ```
 
 这种适配器允许现代系统在不修改新代码或遗留系统的情况下使用旧的支付网关。它将现代接口的方法调用转换为遗留系统可以理解的格式。
+
+## 装饰器模式
 
 装饰器模式在需要动态为对象添加职责的场景下特别有用。在 Web 开发中，它经常用于为 Web 组件或服务添加功能。这里是一个使用装饰器模式为 Web 服务添加日志记录和计时的示例：
 
@@ -7022,7 +7068,9 @@ service.fetch("http://example.com");
 
 这种方法允许灵活地组合行为，而无需修改核心 `WebService` 的实现。
 
-享用模式（如上一节所述）被应用在需要高效管理大量相似对象的场景。在游戏开发中，它经常用于粒子系统或地形渲染。这里是一个使用享用模式实现粒子系统的简化示例：
+## 享元模式
+
+享元模式（如上一节所述）被应用在需要高效管理大量相似对象的场景。在游戏开发中，它经常用于粒子系统或地形渲染。这里是一个使用享元模式实现粒子系统的简化示例：
 
 ```java
 class ParticleType {
@@ -7045,8 +7093,7 @@ class ParticleSystem {
 }
 ```
 
-
-
+## 行为模式概述
 
 行为模式的核心优势之一是它们能够促进对象之间的松耦合。这是通过为通信定义清晰的接口来实现的，通常使用抽象来允许对象在不了解协作者具体实现细节的情况下进行交互。因此，行为模式使得修改或替换系统组件而不影响其他部分变得更加容易，从而使代码更具可维护性和活性。
 
@@ -7056,7 +7103,7 @@ class ParticleSystem {
 
 ### 案例研究：观察者模式
 
-让我们来看一个在 Java 中实现模式模式的简单示例。`Observer`模式是一种常用的行为模式，定义了对象之间的一对多的依赖关系。当一个对象（主题）的状态发生变化时，所有所有的依赖者（观察者）都会收到通知并自动更新。这是一个基础实现：
+让我们来看一个在 Java 中实现观察者模式的简单示例。`Observer` 模式是一种常用的行为模式，定义了对象之间的一对多的依赖关系。当一个对象（主题）的状态发生变化时，所有的依赖者（观察者）都会收到通知并自动更新。这是一个基础实现：
 
 ```java
 import java.util.ArrayList;
@@ -7117,15 +7164,15 @@ class NewsChannel implements Observer {
 }
 ```
 
-在这个示例中，`NewsAgency` 作为主题，而 `NewsChannel` 实例是观察者。当新闻机构接收到新信息时，它会通知所有注册的新频道。这种模式允许系统保持灵活，可以在不修改主题代码的情况下添加或删除新的观察者。
+在这个示例中，`NewsAgency` 作为主题，而 `NewsChannel` 实例是观察者。当新闻机构接收到新信息时，它会通知所有注册的新闻频道。这种模式允许系统保持灵活，可以在不修改主题代码的情况下添加或删除新的观察者。
 
 ### 组合行为模式
 
-行为模式通常与其他设计模式结合使用，以创建更复杂、更强大的系统。例如，`Strategy`模式可以与`Factory`模式结合，创建一个可以在运行时动态选择和应用不同算法的系统。这种组合允许根据变化的条件或需求调整系统行为，具有极大的灵活性。
+行为模式通常与其他设计模式结合使用，以创建更复杂、更强大的系统。例如，`Strategy` 模式可以与 `Factory` 模式结合，创建一个可以在运行时动态选择和应用不同算法的系统。这种组合允许根据变化的条件或需求调整系统行为，具有极大的灵活性。
 
 你会如何使用行为模式来改进复杂系统的设计？考虑你正在开发一个工作流管理系统的场景。你需要处理各种类型的工作流，每种工作流都有自己的步骤和规则。行为模式如何帮助设计一个灵活且可扩展的解决方案？
 
-一种方法是使用`Chain of Responsibility`（责任链）模式来处理工作流步骤，使用`Command`（命令）模式封装步骤中的每个动作，并使用`State`（状态）模式管理整个工作流状态。这些模式的组合允许轻松地添加新的工作流类型和步骤，同时保持核心系统的灵活和可维护性。
+一种方法是使用 `Chain of Responsibility`（责任链）模式来处理工作流步骤，使用 `Command`（命令）模式封装步骤中的每个动作，并使用 `State`（状态）模式管理整个工作流状态。这些模式的组合允许轻松地添加新的工作流类型和步骤，同时保持核心系统的灵活和可维护性。
 
 让我们看看这些模式如何协同工作的简化版示例：
 
@@ -7203,10 +7250,7 @@ class WorkflowContext {
 }
 ```
 
-这个示例演示了多个行为模式如何共同工作以创建一个灵活的工作流系统。`Chain of Responsibility`模式（由 `WorkflowStep` 表示）允许在工作流中轻松添加或删除步骤。`Command`模式（`WorkflowAction`）封装了单个动作，使其于添加新类型的动作。`State`模式（`WorkflowState`）管理工作流的整体状态，允许复杂的状态转换。
-
-
-
+这个示例演示了多个行为模式如何共同工作以创建一个灵活的工作流系统。`Chain of Responsibility` 模式（由 `WorkflowStep` 表示）允许在工作流中轻松添加或删除步骤。`Command` 模式（`WorkflowAction`）封装了单个动作，使其易于添加新类型的动作。`State` 模式（`WorkflowState`）管理工作流的整体状态，允许复杂的状态转换。
 
 当你探索行为模式时，会发现它们通常以不同的方式解决相似的问题。例如，`Strategy`（策略模式）和 `State`（状态模式）都处理行为的变化，但它们的应用语境不同。`Strategy` 模式通常用于你有多个可以相互替换的算法时，而 `State` 模式则更适用于管理对象内部复杂的状态转换。
 
@@ -7216,6 +7260,8 @@ class WorkflowContext {
 
 随着软件系统复杂性的增加，行为模式的重要性变得更加凸显。它们为管理复杂的对象交互和行为提供了一套词汇和工具。在大规模系统中，行为模式可以帮助维护秩序和结构，使整个系统更易管理并随着时间的推移更容易演进。
 
+
+
 总之，行为模式是 Java 开发者工具箱中强大的工具。它们为对象通信和交互中的常见问题提供了经过验证的解决方案，提高了松耦合、灵活性可维护性。通过理解并有效应用这些模式，开发者可以创建更健壮、可扩展且适应性强的 Java 应用程序。当你继续探索行为模式时，你会发现它们如何被组合和调整以解决各种软件设计挑战，最终带来架构更好、更高效的系统。
 
 ## 责任链模式
@@ -7224,7 +7270,7 @@ class WorkflowContext {
 
 在这种模式中，链中的每个处理程序都决定是处理请求还是将其传递给链中的下一个处理程序。这种方法促进了对象之间的松耦合，因为发送者不需要知道哪个对象将最终处理其请求。`Chain of Responsibility` 模式经常用于事件处理系统、日志框架以及 Web 应用程序中的中间件组件。
 
-让我们探索 `Chain of Responsibility` 模式在 Java 中如何工作，并检查其关键组件和实现细节。我们将从一个基础示例开始来说说明核心概念：
+让我们探索 `Chain of Responsibility` 模式在 Java 中如何工作，并检查其关键组件和实现细节。我们将从一个基础示例开始来说明核心概念：
 
 ```java
 abstract class Handler {
@@ -7274,19 +7320,21 @@ class Request {
 
 要使用这个链，我们需要设置好处理程序并将请求通过它们传递。
 
-
-
-
 1. 无法保证请求一定会被处理。它可能会到达链的末端而未经过任何处理。
+
 2. 很难调试和观察请求在链中的流转。
+
 3. 如果实现得不当，长链可能会导致性能下降。
 
-在实现责任链模式（Chain of Responsibility pattern）时，请考虑以下最佳实践：
+在实现责任链模式（`Chain of Responsibility pattern`）时，请考虑以下最佳实践：
 
-1. 为处理器（handlers）定义一个清晰且一致的接口。
+1. 为处理器（`handlers`）定义一个清晰且一致的接口。
+
 2. 实现一种结束链的机制，可以在链的末尾设置一个默认处理器，或者在每个处理器中检查链是否已到结束。
+
 3. 注意链中处理器的顺序，因为这可能会影响系统的行为。
-4. 考虑使用构建器模式（builder）或工厂模式（factory pattern）来构建复杂的链。
+
+4. 考虑使用构建器模式（`builder`）或工厂模式（`factory pattern`）来构建复杂的链。
 
 你如何在自己的项目中应用责任链模式？考虑那些你有多个可以处理请求的对象，或者你希望分阶段处理请求的场景。这种模式提供的灵活性和解耦可以在这些情况下产生更具可维护性和扩展性的代码。
 
@@ -7456,17 +7504,13 @@ public class Main {
 
 这个示例演示了命令模式如何促进撤销功能和操作日志。每个命令都通过 `CommandManager` 执行，该执行器跟踪用于撤销的命令并记录每个操作。
 
+### 为由多个子命令的操作实现一个复合命令
 
-
-
-
-## 4. 为由多个子命令的操作实现一个复合命令。
-
-命令模式将请求封装为对象的能力，为应用程序中的复杂功能提供了可能。通过将请求者与动作的执行者分离，你可以在执行这些动作的方式和时间上获得活性。这种分离在需要对操作进行队列、记录或撤销的系统中特别有价值。
+命令模式将请求封装为对象的能力，为应用程序中的复杂功能提供了可能。通过将请求者与动作的执行者分离，你可以在执行这些动作的方式和时间上获得灵活性。这种分离在需要对操作进行队列、记录或撤销的系统中特别有价值。
 
 ## 用于语言解析的解释器模式
 
-解释器模式是一种行为设计模式，它定义了一种语言语法并提供了一个解释器来评估该语言中的句子。该模式对于解析和评估自定义脚本语言或复杂表达式特别有用在本节中，我们将探索如何在 Java 中实现解释器模式，重点关注其在自定义脚本和表达式评估中的应用。我们将检查模式的核心组件，讨论最佳实践，并提供实际示例来说明其在真实场景中的用法。
+解释器模式是一种行为设计模式，它定义了一种语言语法并提供了一个解释器来评估该语言中的句子。该模式对于解析和评估自定义脚本语言或复杂表达式特别有用。在本节中，我们将探索如何在 Java 中实现解释器模式，重点关注其在自定义脚本和表达式评估中的应用。我们将检查模式的核心组件，讨论最佳实践，并提供实际示例来说明其在真实场景中的用法。
 
 解释器模式用于定义语言的语法表示，并提供一个解释器来处理这种语法。当你需要评估复杂表达式或为你的应用程序创建领域特定语言（DSL）时，这种模式特别有用。该模式允许你将复杂问题分解为更小、更容易管理的部分，每个部分由一个简单的语法规则表示。
 
@@ -7507,6 +7551,8 @@ class Context {
 在这个基础实现中，我们有一个定义了 `interpret()` 方法的 `Expression` 接口。`NumberExpression` 类表示简单的数字，而 `AddExpression` 类表示两个表达式的相加。`Context` 类可以用于存储解释期间所需的变量或其他信息。
 
 现在，让我们增强这个实现，以支持更复杂的表达式评估系统：
+
+
 
 ```java
 import java.util.Map;
@@ -7637,11 +7683,7 @@ class Main {
 3. 为无效表达式实现错误处理。
 4. 扩展解析器以处理更复杂的语法规则。
 
-
-
-
-
-# 4. 如果你需要对抽象语法树执行不自然地适合 `interpret` 方法的操作，请使用 `Visitor` 模式。
+### 4. 如果你需要对抽象语法树执行不自然地适合 `interpret` 方法的操作，请使用 `Visitor` 模式。
 
 `Interpreter`（解释器）模式表示和评估复杂表达式的能力使其成为创建领域特定语言（DSL）和表达式评估器的强大工具。通过将复杂问题分解为更简单的语法规则，你可以为语言处理任务创建灵活且可扩展的系统。
 
@@ -7785,11 +7827,7 @@ class BinaryTree<T> implements Container<T> {
 }
 ```
 
-
-
-
-
-# 3. 你如何将迭代器模式与组合模式（Composite）或访问器（Visitor）等模式结合以解决更复杂的问题？
+### 3. 你如何将迭代器模式与组合模式（Composite）或访问器（Visitor）等模式结合以解决更复杂的问题？
 
 迭代器模式为各种集合提供标准接口的能力使其成为面向对象设计中极具价值的工具。通过抽象遍历逻辑，它允许代码更具活性和可维护性，特别是在处理复杂或自定义数据结构的系统中。
 
@@ -7800,6 +7838,8 @@ class BinaryTree<T> implements Container<T> {
 中者模式在多个对象需要相互作用，但它们之间的直接连接会导致复杂且紧耦合的设计的系统中特别有用。通过引入一个协调组件间通信的中者对象，我们可以实现更模块化、更灵活的架构。
 
 让我们从检查中者模式的基本实现开始：
+
+
 
 ```java
 import java.util.ArrayList;
@@ -7990,9 +8030,6 @@ public class Main {
 2. 为系统内部不同类型的交互创建专门的中者。
 3. 将中者模式与命令（Command）或观察者（Observer）模式结合，以构建更灵活的架构。
 
-
-
-
 你可能会如何在自己的项目中应用中者模式（Mediator pattern）？考虑以下场景：你有多个对象需要相互相互作用，但直接连接会导致复杂且紧密耦合的设计。在处理复杂系统时，该模式提供的灵活性可以带来更具可维护性和扩展性的代码。
 
 在使用中者模式设计系统时，请思考以下问题：
@@ -8089,6 +8126,8 @@ public class MementoDemo {
 
 在处理复杂对象时，备忘模式会变得更加强大。让我们考虑一个具有撤销功能的文本编辑器的高级示例：
 
+
+
 ```java
 class TextEditor {
     private StringBuilder content;
@@ -8184,10 +8223,7 @@ public class TextEditorDemo {
 
 这个示例演示了备忘模式如何允许对文本编辑器进行复杂的状态管理，为文本内容和光标位置提供撤销功能。
 
-
-
-
-## 4. 结合 `Memento` 模式和 `Command` 模式以实现更全面的撤销/重做功能。
+### 4. 结合 `Memento` 模式和 `Command` 模式以实现更全面的撤销/重做功能
 
 `Memento` 模式可以被扩展以支持更高级的功能：
 
@@ -8203,7 +8239,7 @@ public class TextEditorDemo {
 2. 你可以通过何种方式将 `Memento` 模式与其他模式结合，创建更强大的状态管理系统？
 3. 你如何使用 `Memento` 模式实现基于时间或基于事件的自动状态保存机制？
 
-`Memento` 模式捕获和恢复对象状态的能力使其成为软件设计中不可价值的工具，特别是对于需要撤销功能或状态历史的应用。通过允许对象在不违反封装的情况下将其状态外部化，它能够创建更具活性和可维护性的系统。
+`Memento` 模式捕获和恢复对象状态的能力使其成为软件设计中不可或缺的工具，特别是对于需要撤销功能或状态历史的应用。通过允许对象在不违反封装的情况下将其状态外部化，它能够创建更具活性和可维护性的系统。
 
 ## 行为模式的现实应用
 
@@ -8315,7 +8351,11 @@ class ApprovalWorkflow {
 }
 ```
 
-这个示例展示了策略如何轻松地切换。转向 AI 部分，行为模式对于创建动态角色至关重要。`State` 模式通常用于管理不同的行为：
+这个示例展示了策略如何轻松地切换。
+
+### 游戏 AI
+
+转向 AI 部分，行为模式对于创建动态角色至关重要。`State` 模式通常用于管理不同的行为：
 
 ```java
 interface EnemyState {
@@ -8406,15 +8446,14 @@ class GameEvent {
 
 
 
-
 ```java
 public GameEvent(String type) {
     this.type = type;
-    }
+}
 
-    public String getType() {
-        return type;
-    }
+public String getType() {
+    return type;
+}
 }
 
 class GameEventManager {
@@ -8619,9 +8658,6 @@ class StockDisplay implements Observer {
 }
 ```
 
-
-
-
 在本示例中，`StockPrice` 扩展了 `Subject` 类，代表一个可以被观察的股票价格。`StockDisplay` 类实现了 `Observer` 接口，代表一个显示股票价格显示元素。
 
 我们可以如下使用这些类：
@@ -8669,41 +8705,39 @@ public class GUIExample {
 
 另一个考虑是，如果有很多观察者或者更新过程很复杂，可能会出现性能问题。在这种情况下，可能会
 
-
-
-
 ```java
 private int itemCount;
 
-    public VendingMachine(int itemCount) {
-        this.itemCount = itemCount;
-        if (itemCount > 0) {
-            currentState = new NoCoinState();
-        } else {
-            currentState = new OutOfStockState();
-        }
+public VendingMachine(int itemCount) {
+    this.itemCount = itemCount;
+    if (itemCount > 0) {
+        currentState = new NoCoinState();
+    } else {
+        currentState = new OutOfStockState();
     }
+}
 
-    public void setState(VendingMachineState state) {
-        this.currentState = state;
-    }
+public void setState(VendingMachineState state) {
+    this.currentState = state;
+}
 
-    public void insertCoin() {
-        currentState.insertCoin(this);
-    }
+public void insertCoin() {
+    currentState.insertCoin(this);
+}
 
-    public void ejectCoin() {
-        currentState.ejectCoin(this);
-    }
+public void ejectCoin() {
+    currentState.ejectCoin(this);
+}
 
-    public void dispenseItem() {
-        currentState.dispenseItem(this);
-        if (--itemCount == 0) {
-            setState(new OutOfStockState());
-        }
+public void dispenseItem() {
+    currentState.dispenseItem(this);
+    if (--itemCount == 0) {
+        setState(new OutOfStockState());
     }
 }
 ```
+
+
 
 ```java
 class NoCoinState implements VendingMachineState {
@@ -8755,7 +8789,9 @@ class OutOfStockState implements VendingMachineState {
         System.out.println("Machine is out of stock");
     }
 }
-```在这个售货机的示例中，每个状态（`NoCoinState`、`HasCoinState`,`OutOfStockState`）都实现了 `VendingMachineState` 接口。`VendingMachine` 类作为上下文维护当前状态并将操作委托给该状态。这种设计允许在不改变 `VendingMachine` 类的情况下轻松添加新状态或修改现有状态。
+```
+
+在这个售货机的示例中，每个状态（`NoCoinState`、`HasCoinState`、`OutOfStockState`）都实现了 `VendingMachineState` 接口。`VendingMachine` 类作为上下文维护当前状态并将操作委托给该状态。这种设计允许在不改变 `VendingMachine` 类的情况下轻松添加新状态或修改现有状态。
 
 状态模式特别适用于需要根据内部状态动态改变行为的场景。它常用于工作流管理系统，文档或任务在各种状态之间流转，每个状态都有自己允许的操作和转换。
 
@@ -8822,9 +8858,7 @@ class WalkingState implements CharacterState {
 }
 ```
 
-
-
-
+### 策略模式
 
 策略模式是一种行为设计模式，允许在运行时选择算法。本节将深入探讨策略模式在 Java 中的实现和优势，重点关注其提供可切换算法以及减少条件逻辑的能力。我们将探索该模式如何通过封装不同的算法并使它们相互互换，来提高软件系统的灵活性和可维护性。通过实际示例和真实世界的应用，我们将演示策略模式如何增强代码结构、简化复杂的决策过程，并在不影响客户端代码的情况下，方便地添加或修改算法。
 
@@ -8876,11 +8910,11 @@ class ShoppingCart {
 }
 ```
 
-在这个示例示例，`PaymentStrategy` 接口定义了所有具体策略必须实现的 `pay` 方法。`ShoppingCart` 类充当上下文，维护对当前策略的引用并使用它处理支付。`CreditCardPayment` 和 `PayPalPayment` 是 `PaymentStrategy` 的实现。
+在这个示例中，`PaymentStrategy` 接口定义了所有具体策略必须实现的 `pay` 方法。`ShoppingCart` 类充当上下文，维护对当前策略的引用并使用它处理支付。`CreditCardPayment` 和 `PayPalPayment` 是 `PaymentStrategy` 的实现。
 
-这种模式如何提高代码的可维护性和活性？通过将不同的支付方法封装在单独类中，策略模式允许在不影响 `ShoppingCart` 类或其他策略的情况下轻松添加或修改支付选项。这种关注点的分离使得代码更具模块化和扩展性。
+这种模式如何提高代码的可维护性和灵活性？通过将不同的支付方法封装在单独类中，策略模式允许在不影响 `ShoppingCart` 类或其他策略的情况下轻松添加或修改支付选项。这种关注点的分离使得代码更具模块化和扩展性。
 
-让我们考虑一个可以有效策略模式的真实场景：导航应用的路线规划系统。用户可能会根据偏好选择不同的路由策略（例如：最快路线、最短距离、避开收费）。
+让我们考虑一个可以有效使用策略模式的真实场景：导航应用的路线规划系统。用户可能会根据偏好选择不同的路由策略（例如：最快路线、最短距离、避开收费）。
 
 ```java
 interface RoutingStrategy {
@@ -8920,11 +8954,8 @@ class NavigationSystem {
     }
 }
 ```
+
 在这个导航系统中，每个路由策略（`FastestRouteStrategy`、`ShortestRouteStrategy`、`AvoidTollsStrategy`）都实现了 `RoutingStrategy`。`NavigationSystem` 类充当上下文，维护当前策略并将路线计算委托给它。
-
-
-
-
 
 ```java
 case BUBBLE_SORT:
@@ -8944,7 +8975,7 @@ default:
 
 总之，策略模式为在面向对象的系统中管理可交换的算法提供了一种强大的方法。通过将不同的算法封装在独立的类中，它促进了代码的整洁和更高的可维护性，并允许轻松扩展。
 
-## 模板方法框架 (Template Method for Frameworks)
+## 模板方法框架
 
 模板方法是一种强大的设计模式，它在基类中定义算法的骨架，允许子类重写算法的某些步骤而不改变算法的结构。通过这种方式，开发者可以实现特定的行为，同时保持代码的复用。
 
@@ -9011,8 +9042,6 @@ class Tea extends Beverage {
 ```
 
 模板方法通过在基类中定义算法流程，为子类提供了扩展的灵活性。它关注于算法的一致性，同时允许子类根据运行时需求调整特定步骤。这种方法减少了代码重复，并增强了系统的可维护性。
-
-
 
 
 
@@ -9185,8 +9214,6 @@ class ShapeDrawer implements ShapeVisitor {
 }
 ```
 
-
-
 在这个示例中，我们有两个具体的元素类（`Circle` 和 `Rectangle`），它们实现了 `Shape` 接口。`ShapeVisitor` 接口为每种形状类型声明了访问方法。我们随后有两个具体的访问者类：用于计算形状总面积的 `AreaCalculator` 以及用于模拟绘制形状的 `ShapeDrawer`。
 
 这种模式是如何提高代码的可维护性和灵活性的？通过将算法（访问者）与对象结构（元素）分离，访问者模式允许在不修改元素类的情况下轻松地添加新操作。这种关注点分离使得代码更具模块化和可扩展性。
@@ -9282,6 +9309,8 @@ class PlainTextConverter implements DocumentVisitor {
 3. GUI 框架：为不同的 UI 组件实现渲染和事件处理。
 
 让我们使用访问者模式实现一个简单的文件系统示例：
+
+
 
 ```java
 // Element interface
@@ -9386,8 +9415,6 @@ class StructurePrinter implements FileSystemVisitor {
 虽然访问者模式提供了许多好处，但考虑潜在的缺点也是重要的。一个考虑因素是访问者与元素类之间存在紧密耦合的风险，因为访问者需要了解所有的具体的元素类型。此外，如果频繁添加新的元素类型，则所有现有的访问者都需要更新。
 
 我们如何确保访问者模式保持灵活且可维护呢？一种方法是使用双重派发（Double Dispatch）技术，它允许根据访问者和元素类型进行运行时方法选择。这可以通过让元素调用访问者上相应的访问方法并将自身作为参数传递来实现。
-
-
 
 综上所述，`Visitor` 模式提供了一种将算法与对象结构分离的强大方式，允许在不修改现有类的情况下轻松添加新操作。通过在访问者类中封装相关操作并使用双重分发（double dispatch），它提升了代码的组织结构和扩展性。无论是应用于简单的对象层次结构还是复杂的数据结构，`Visitor` 模式都为在面向对象的系统中对多种对象集执行操作提供了一种灵活且可扩展的方法。
 
@@ -9556,7 +9583,6 @@ interface Element {
     <R> R accept(Function<? super Element, ? extends R> visitor);
 }
 ```
-
 
 
 
@@ -9778,13 +9804,8 @@ class ConcreteCommand implements Command {
 
     @Override
     public void execute() {
-```
-
-
-
-```java
-System.out.println("Executing command: " + action);
-}
+        System.out.println("Executing command: " + action);
+    }
 }
 
 abstract class Handler {
@@ -9831,9 +9852,11 @@ handler1.handleRequest("delete");  // Passed to handler2
 handler1.handleRequest("update");  // Not handled
 ```
 
-这种组合允许了一个灵活且可扩展的系统，新命令可以轻松地添加到链中的不同处理器中。每个处理器都可以决定是处理请求还是将其传递给链链，而处理过程本身被封装在 `Command` 对象中。
+这种组合允许了一个灵活且可扩展的系统，新命令可以轻松地添加到链中的不同处理器中。每个处理器都可以决定是处理请求还是将其传递给链，而处理过程本身被封装在 `Command` 对象中。
 
 中介者模式可以与 `Observer` 模式有效结合，以创建一个强大的事件驱动架构。这种组合在多个组件需要在没有直接耦合的情况下进行交互的复杂系统中特别有用。以下是一个示例：
+
+
 
 ```java
 import java.util.*;
@@ -9912,7 +9935,7 @@ component2.triggerEvent("event2");
 
 模式的测试与调试是实现健壮且可靠系统的关键方面。本节深入探讨了确保行为模式正确实现并按预期运行的最佳实践、工具和技术。我们将探索单元测试、集成测试和复杂实现调试的策略。通过掌握这些技术，开发者可以创建出充分利用行为模式能力的更稳定且易于维护的系统。
 
-测试行为模式需要对模式的意图和预期行为有深入理解。一种有效的方法是从模式各个组件的单元测试开始，然后进展到验证模式不同部分之间交互的集成测试。例如，在测试 `Observer` 模式时，你可能首先分别测试 `subject` 和 `observer` 类。以下是 `Observer` 模式的单元测试示例：
+测试行为模式需要对模式的意图和预期行为有深入理解。一种有效的方法是从模式各个组件的单元测试开始，然后进展到验证模式不同部分之间交互的集成测试。例如，在测试 `Observer` 模式时，你可能首先分别测试 `Subject` 和 `Observer` 类。以下是 `Observer` 模式的单元测试示例：
 
 ```java
 import org.junit.jupiter.api.Test;
@@ -9958,32 +9981,18 @@ class ChainOfResponsibilityTest {
         Handler handler3 = new ConcreteHandler3();
         handler1.setNext(handler2);
         handler2.setNext(handler3);
+
+        assertEquals("Handler1", handler1.handleRequest("Type1"));
+        assertEquals("Handler2", handler1.handleRequest("Type2"));
+        assertEquals("Handler3", handler1.handleRequest("Type3"));
+        assertNull(handler1.handleRequest("Unknown"));
     }
 }
 ```
 
+此测试验证了请求是否正确地沿着链传递并由相应的处理器处理。
 
-
-
-```java
-handler2.setNext(handler3);
-
-assertEquals("Handler1", handler1.handleRequest("Type1"));
-
-assertEquals("Handler2", handler1.handleRequest("Type2"));
-
-assertEquals("Handler3", handler1.handleRequest("Type3"));
-
-assertNull(handler1.handleRequest("Unknown"));
-
-}
-
-}
-```
-
-此测试验证了请求是否正确地沿着链链传递并由相应的处理器处理。
-
-在调试行为模式时，日志记录（logging）是一个非常有价值的工具。通过添加策略性的日志语句，你可以追踪控制流通过模式的过程，并识别可能出现问题的地方。例如，在 `State` 模式的实现中：
+在调试行为模式时，日志记录（`logging`）是一个非常有价值的工具。通过添加策略性的日志语句，你可以追踪控制流通过模式的过程，并识别可能出现问题的地方。例如，在 `State` 模式的实现中：
 
 ```java
 class ConcreteState implements State {
@@ -9998,7 +10007,7 @@ class ConcreteState implements State {
 }
 ```
 
-这些日志语句可以帮助确定位状态转换过程中可能发生意外行为的位置。
+这些日志语句可以帮助确定状态转换过程中可能发生意外行为的位置。
 
 对于涉及复杂对象交互的模式（如 `Mediator` 或 `Visitor`），可视化调试工具会非常有帮助。许多 IDE 提供了序列图生成工具，可以使方法调用的流可视化，从而更容易理解和调试复杂的交互。
 
@@ -10073,7 +10082,7 @@ public class FlyweightBenchmark {
 }
 ```
 
-在测试行为模式时，考虑正向路径（happy path）和错误情况非常重要。例如，在测试 `Command` 模式时，你可能想验证它在发生异常时的行为：`assertThrows(Exception.class, invoker::execute)`
+在测试行为模式时，考虑正向路径（`happy path`）和错误情况非常重要。例如，在测试 `Command` 模式时，你可能想验证它在发生异常时的行为：
 
 ```java
 @Test
@@ -10087,7 +10096,7 @@ void testCommandException() {
 
 由于行为模式通常涉及复杂的交互，集成测试变得至关重要。诸如 `Arquillian` 的工具在更真实的环境中测试模式会非常有用。
 
-在调试行为模式时，使用契约设计（design by contract）原则通常很有帮助。通过在代码中添加前置条件、后置条件和不变式，你可以尽早发现违反模式的行为。例如，在 `State` 模式的实现中：
+在调试行为模式时，使用契约设计（`design by contract`）原则通常很有帮助。通过在代码中添加前置条件、后置条件和不变式，你可以尽早发现违反模式的行为。例如，在 `State` 模式的实现中：
 
 ```java
 class Context {
@@ -10109,11 +10118,11 @@ class Context {
 
 
 
+# 将设计模式集成到软件架构中
 
+将设计模式集成到软件架构中带来了许多益处。它增强了代码的模块化，使得在不影响其他部分的情况下更容易更新和维护系统的特定部分。这种模块化还提高了代码重用性，允许开发者在不同的项目或同一项目的不同部分应用经过验证的解决方案。设计模式通过提供灵活的结构来适应需求的增长和变化，从而有助于系统的可扩展性。
 
-将设计模式集成到软件架构中带来了许多益处。它增强了代码的模块化，使得在不影响其他部分的情况下更容易更新和维护系统的特定部分。这种模块化还提高了代码重用性，允许开发者在不同的项目或同一项目的不同部分应用经过的的。设计模式通过提供灵活的结构来适应需求的增长和变化，从而有助于系统的可扩展性。
-
-## 策略模式 (Strategy Pattern)
+## 策略模式
 
 考虑这样一个场景：大型电子商务平台需要实现一个支付处理系统。该架构可能会采用 `Strategy` 模式来处理不同的支付方法：
 
@@ -10147,7 +10156,7 @@ public class PaymentProcessor {
 
 在这个示例中，`Strategy` 模式允许系统在不修改现有代码的情况下轻松添加新的支付方法，提升了扩展性和维护性。
 
-## 依赖注入模式 (Dependency Injection Pattern)
+## 依赖注入模式
 
 设计模式在管理系统架构内部依赖关系也起着至关重要的作用。例如，`Dependency Injection` 模式有助于创建松耦合的组件：
 
@@ -10166,7 +10175,7 @@ public class OrderService {
 
 这种方法允许更容易测试，因为依赖可以被轻松 mock 或替换，并且增强了系统的整体灵活性。
 
-### 观察者模式 (Observer Pattern)
+## 观察者模式
 
 在大系统中，设计模式对性能和可扩展性有显著影响。例如，`Observer` 模式可以用于实现事件驱动架构：
 
@@ -10194,9 +10203,9 @@ public class OrderManager {
 
 这种模式允许构建解耦、可扩展的系统，不同的组件可以在无紧耦合的情况下对变化做出响应。
 
-## 装饰器模式 (Decorator Pattern)
+## 装饰器模式
 
-设计模式有助于创建更具维护可读性的代码。它们为开发者提供了通用的语言和解决方案，开发者可以使用它们来交流和实现复杂的想法。例如，`Decorator` 模式可以用于为对象添加功能：
+设计模式有助于创建更具维护性和可读性的代码。它们为开发者提供了通用的语言和解决方案，开发者可以使用它们来交流和实现复杂的想法。例如，`Decorator` 模式可以用于为对象添加功能：
 
 ```java
 public interface Coffee {
@@ -10241,9 +10250,9 @@ class Milk extends CoffeeDecorator {
 
 这种模式允许对象进行灵活组合，使得在不更改现有代码的情况下更容易添加或删除功能。
 
-## 微服务中的熔断器 (Circuit Breaker in Microservices)
+## 微服务中的熔断器模式
 
-在将设计模式集成到软件架构时，考虑系统的特定需求和限制很重要。过度使用模式会导致不复杂，因此审慎地应用它们至关重要。关键在于能够在灵活性、维护性或性能方面提供明确收益的地方使用模式。
+在将设计模式集成到软件架构时，考虑系统的特定需求和限制很重要。过度使用模式会导致不必要的复杂性，因此审慎地应用它们至关重要。关键在于能够在灵活性、维护性或性能方面提供明确收益的地方使用模式。
 
 在微服务架构中，设计模式起着特别重要的作用。它们有助于管理分布式系统的复杂性。例如，`Circuit Breaker` 模式可以用于处理服务间通信的故障：
 
@@ -10288,7 +10297,7 @@ class CircuitBreaker {
 
 这种模式有助于防止微服务环境中的级联故障，增强系统的整体韧性。
 
-## 仓库模式 (Repository Pattern)
+## 仓库模式
 
 设计模式还有助于创建更具测试性的架构。通过促进松耦合和关注点分离，它们更容易编写单元测试和进行集成测试。例如，`Repository` 模式可以用于抽象数据访问逻辑：
 
@@ -10314,16 +10323,13 @@ class DatabaseUserRepository implements UserRepository {
 
 这种模式允许在测试中更容易地 mock 数据访问，并在业务逻辑与数据存储机制之间提供清晰的隔离。
 
-
-
-
 总之，设计模式通过为常见的设计问题提供重用的解决方案，在软件架构中起着至关重要的作用。它们增强了模块化，提高了代码重用性，并有助于构建可扩展和可维护的系统。通过将设计模式集成到框架中，开发者可以创建更加健壮、灵活且高效的软件系统。随着软件开发领域的不断演进，设计模式在构建有效软件架构方面的重要性可能会增加，使其成为现代开发者工具箱中不可或缺的工具。
 
-## 使用设计模式的 MVC（模型-视图-控制器）
+# 使用设计模式的 MVC（模型-视图-控制器）
 
-MVC（模型-视图-控制器）模式是软件设计中的一种架构方法，对于创建可扩展和可维护的系统特别有用。该模式将应用程序逻辑分为三个相互关联的组件，每个组件都有独特的职责。通过将 MVC 与与其他模式相结合，开发者可以创建高度模块化且灵活的应用程序，从而更容易开发、测试和维护。
+MVC（模型-视图-控制器）模式是软件设计中的一种架构方法，对于创建可扩展和可维护的系统特别有用。该模式将应用程序逻辑分为三个相互关联的组件，每个组件都有独特的职责。通过将 MVC 与其他模式相结合，开发者可以创建高度模块化且灵活的应用程序，从而更容易开发、测试和维护。
 
-模型（Model）代表应用程序的数据和业务逻辑。它管理数据、对其执行操作，并定义数据处理的规则。视图（View）负责向用户展示数据，通常以用户界面的形式存在。控制器（Controller）作为模型和视图之间的中间器，处理用户输入、更新模型并相应地刷新视图。
+模型（Model）代表应用程序的数据和业务逻辑。它管理数据、对其执行操作，并定义数据处理的规则。视图（View）负责向用户展示数据，通常以用户界面的形式存在。控制器（Controller）作为模型和视图之间的中介者，处理用户输入、更新模型并相应地刷新视图。
 
 让我们看看如何在 Java 中实现 MVC，并结合各种设计模式来增强其功能和可维护性：
 
@@ -10369,7 +10375,7 @@ public class UserController {
 
 这种基础实现演示了 MVC 中的关注点分离。模型（`UserModel`）管理数据，视图（`UserView`）处理展示，而控制器（`UserController`）在它们之间协调。
 
-为了增强这种 MVC 结构，我们可以引入额外的设计模式。例如，可以使用观察者模式（Observer pattern）在模型和视图之间建立更动态的关系：
+为了增强这种 MVC 结构，我们可以引入额外的设计模式。例如，可以使用观察者模式在模型和视图之间建立更动态的关系：
 
 ```java
 import java.util.ArrayList;
@@ -10417,9 +10423,11 @@ public class ObserverUserView implements UserObserver {
 }
 ```
 
-在这个增强版本中，模型变成了一个观测实体，而视图充当观察者。这允许在模型发生变化时自动更新视图，减少组件之间的耦合。
+在这个增强版本中，模型变成了一个可观测实体，而视图充当观察者。这允许在模型发生变化时自动更新视图，减少组件之间的耦合。
 
-可以使用工厂方法模式（Factory Method pattern）来创建不同类型的视图或模型，为 MVC 结构提供灵活性：
+可以使用工厂方法模式来创建不同类型的视图或模型，为 MVC 结构提供灵活性：
+
+
 
 ```java
 // Factory
@@ -10538,36 +10546,30 @@ public class ValidatedUserModel {
     private String username;
     private String email;
     private ValidationStrategy usernameValidator;
-}
-```
+    private ValidationStrategy emailValidator;
 
-
-
-
-```java
-private ValidationStrategy emailValidator;
-
-public ValidatedUserModel(ValidationStrategy usernameValidator, ValidationStrategy emailValidator) {
-    this.usernameValidator = usernameValidator;
-    this.emailValidator = emailValidator;
-}
-
-public void setUsername(String username) {
-    if (usernameValidator.validate(username)) {
-        this.username = username;
-    } else {
-        throw new IllegalArgumentException("Invalid username");
+    public ValidatedUserModel(ValidationStrategy usernameValidator, ValidationStrategy emailValidator) {
+        this.usernameValidator = usernameValidator;
+        this.emailValidator = emailValidator;
     }
-}
 
-public void setEmail(String email) {
-    if (emailValidator.validate(email)) {
-        this.email = email;
-    } else {
-        throw new IllegalArgumentException("Invalid email");
+    public void setUsername(String username) {
+        if (usernameValidator.validate(username)) {
+            this.username = username;
+        } else {
+            throw new IllegalArgumentException("Invalid username");
+        }
     }
+
+    public void setEmail(String email) {
+        if (emailValidator.validate(email)) {
+            this.email = email;
+        } else {
+            throw new IllegalArgumentException("Invalid email");
+        }
+    }
+    // Getters
 }
-// Getters
 ```
 
 这种基于策略的验证允许在不修改模型核心逻辑的情况下，轻松切换验证规则。
@@ -10715,6 +10717,8 @@ public class DirectorApproval extends ApprovalHandler {
 
 持久化层负责数据存储和检索。在这里，`Data Access Object` (DAO) 和 `Repository` 模式被广泛用于抽象数据持久化的细节：
 
+
+
 ```java
 public interface UserDAO {
     User findById(int id);
@@ -10747,10 +10751,6 @@ public class UnitOfWork {
     private List<User> newUsers = new ArrayList<>();
 }
 ```
-
-
-
-
 
 ```java
 private List<User> dirtyUsers = new ArrayList<>();
@@ -10849,7 +10849,7 @@ public class Order extends Observable {
 
 本节探讨了设计模式在微服务架构中的集成，重点关注如何在有效利用各种模式的同时实现可扩展性和独立性。微服务架构之所以流行，是因为它能够创建高度模块化、独立部署的服务，这些服务可以被单独进行开发、扩展和维护。我们将研究如何应用设计模式来解决微服务开发中的常见挑战，增强系统韧性并促进服务之间的松耦合。通过理解这些概念，开发者可以创建健壮、可扩展且易于维护的微服务系统。
 
-微服务架构将复杂的应用程序拆分为更小的、独立部署的服务。每个服务负责特定的功能，并通过定义良好的 `APIs`与其他服务通信。这种方法具有许多优点，包括提高可扩展性、灵活性且于维护。然而，它也引入了与服务发现、通信数据一致性相关的挑战。
+微服务架构将复杂的应用程序拆分为更小的、独立部署的服务。每个服务负责特定的功能，并通过定义良好的 `APIs` 与其他服务通信。这种方法具有许多优点，包括提高可扩展性、灵活性且于维护。然而，它也引入了与服务发现、通信数据一致性相关的挑战。
 
 让我们先研究如何实现 `API Gateway`（API 网关）模式以为客户端提供一个统一的入口：
 
@@ -10956,23 +10956,17 @@ class CircuitBreaker {
     }
 
     public void recordFailure() {
-```
+        failureCount++;
 
+        if (failureCount >= failureThreshold) {
+            state = State.OPEN;
+            lastFailureTime = System.currentTimeMillis();
+        }
+    }
 
-
-
-
-```java
-failureCount++;
-
-if (failureCount >= failureThreshold) {
-    state = State.OPEN;
-    lastFailureTime = System.currentTimeMillis();
-}
-}
-
-private enum State {
-    CLOSED, OPEN, HALF_OPEN
+    private enum State {
+        CLOSED, OPEN, HALF_OPEN
+    }
 }
 ```
 
@@ -11040,6 +11034,8 @@ class ReserveInventoryStep implements SagaStep<OrderContext> {
 该模式有助于在不依赖分布式事务的情况下，维护跨服务的数据的数据一致性。
 
 事件溯源（Event Sourcing）模式可以用于将应用程序状态的所有更改捕获为事件序列：
+
+
 
 ```java
 public interface Event {
@@ -11179,12 +11175,6 @@ class ConcreteObserver implements Observer {
 
 ```java
 import java.util.concurrent.ConcurrentHashMap;
-```
-
-
-
-
-```java
 import java.util.concurrent.CopyOnWriteArrayList;
 
 interface EventListener {
@@ -11229,7 +11219,7 @@ class EventBus {
 
 这种 `EventBus` 实现提供了一种更灵活且可扩展的事件处理方法。它使用并发集合来确保线程安全，允许多个线程同时发布和订阅事件而不会冲突。
 
-为了演示这种事件驱动的系统如何在真实场景中中使用，让我们考虑一个简单的股票交易应用：
+为了演示这种事件驱动的系统如何在真实场景中使用，让我们考虑一个简单的股票交易应用：
 
 ```java
 class StockExchange {
@@ -11321,12 +11311,8 @@ class AsyncEventBus {
 
 这个 `AsyncEventBus` 使用 `ExecutorService` 来异步处理事件。`publish` 方法现在返回一个 `CompletableFuture`，允许调用者根据需要处理完成情况或错误。
 
-
-
-
 ```java
 return new User(id, "John Doe", "john@example.com");
-
 }
 
 public static void main(String[] args) {
@@ -11338,6 +11324,8 @@ public static void main(String[] args) {
 这个简单的微服务处理与用户相关的操作。在微服务架构中，你可能为用户、订单、库存等独立的服务。每个服务都可以根据其特定的负载需求进行扩展。
 
 可扩展性的另一个关键模式是使用缓存。缓存通过在内存中存储频繁访问的数据，显著减少数据库和后端服务的负载。`Cache-Aside` 模式在这种场景下非常常用：
+
+
 
 ```java
 public class UserService {
@@ -11519,11 +11507,7 @@ public class MetricsCollector {
 
 这个简单的指标收集器允许跟踪系统的各种性能指标。
 
-
-
-
-
-## 云系统中的设计模式
+# 云系统中的设计模式
 
 云系统中的设计模式聚焦于设计模式在分布式和云原生应用中的应用。本节探索了传统设计模式如何演变并适应以应对云环境的独特挑战。我们研究了解决分布式系统中可扩展性、韧性和弹性的模式。讨论涵盖了管理微服务、处理数据一致性以及确保云架构中高可用性的策略。我们将探索这些模式如何帮助构建健壮、可扩展且易于维护的云应用程序，以及它们如何与云特定的技术和服务进行相互作用。
 
@@ -11531,7 +11515,7 @@ public class MetricsCollector {
 
 ## 微服务
 
-我们之前提到过的微服务模式在云环境中变得更加关重要。在云原生应用中，每个微服务都可以独立地进行部署、扩展和管理。这与提供 `Kubernetes` 等容器编排服务的云平台非常契合。这里是一个使用 `Spring Boot` 设计用于云端部署的简单微服务示例：
+我们之前提到过的微服务模式在云环境中变得更加关键。在云原生应用中，每个微服务都可以独立地进行部署、扩展和管理。这与提供 `Kubernetes` 等容器编排服务的云平台非常契合。这里是一个使用 `Spring Boot` 设计用于云端部署的简单微服务示例：
 
 ```java
 @SpringBootApplication
@@ -11629,6 +11613,8 @@ public class GatewayConfig {
 
 Saga 模式对于管理微服务中的分布式事务至关重要。它帮助在不产生紧耦合的情况下维护跨服务的数据一致性。这里是一个简化的协调器示例：
 
+
+
 ```java
 @Service
 public class OrderSaga {
@@ -11721,9 +11707,6 @@ public class BulkheadConfig {
 
 此配置为不同的服务创建了独立的舱壁，限制了并发调用数并设置了等待时间。
 
-
-
-
 当我们考虑云系统中的这些模式时，思考它们如何与云特定的服务和功能进行交互至关重要。你可能会如何利用云平台提供的托管服务来更高效地实现这些模式？在多云或混合云环境中应用这些模式时，会产生哪些额外的考虑因素？
 
 此外，由于云原生应用通常需要处理大规模数据，你可能会如何将这些模式与 `Apache Spark` 等大数据处理框架或云端数据仓库结合起来？在全局分布的云应用中实现 `CQRS` 或 `Event Sourcing`（事件溯源）等模式时，在一致性和延迟方面可能会遇到哪些挑战？
@@ -11736,7 +11719,7 @@ public class BulkheadConfig {
 
 在电子商务领域，大型在线零售商其订单处理系统面临挑战。现有的单体架构难以处理促销活动期间的峰值负载，且缺乏添加新功能的灵活性。开发团队决定使用微服务架构重新设计系统，利用多种设计模式来解决特定问题。
 
-开发团队使用了 `Saga` 模式来管理分布式事务，并利用了多种设计模式来解决特定的关注点。该模式对于维护订单、支付和库存之间的之间的一致性至关重要。以下是他们如何实现 `Saga` 模式的简化示例：
+开发团队使用了 `Saga` 模式来管理分布式事务，并利用了多种设计模式来解决特定的关注点。该模式对于维护订单、支付和库存之间的一致性至关重要。以下是他们如何实现 `Saga` 模式的简化示例：
 
 ```java
 public class OrderSaga {
@@ -11873,11 +11856,7 @@ public class SavingsAccountInterest implements InterestCalculationStrategy {
         return balance * 0.05;  // 5% 利率
     }
 }
-```
 
-
-
-```java
 public class CheckingAccountInterest implements InterestCalculationStrategy {
     public double calculateInterest(double balance) {
         return balance * 0.01;  // 1% interest
@@ -11900,6 +11879,8 @@ public class Account {
 这种方法允许轻松添加新的账户类型和利息计算方法，而无需修改现有代码。
 
 在医疗领域的一个案例中，一个医院管理系统使用了中者模式（Mediator pattern）来协调涉及患者入院、医生分配和资源配置的复杂工作流：
+
+
 
 ```java
 public interface HospitalMediator {
@@ -11951,11 +11932,11 @@ public class HospitalCoordinator implements HospitalMediator {
 
 与促进最佳实践和提高代码质量的设计模式不同，反模式引入了技术债，降低了代码维护性，并可能导致性能问题。它们通常源于经验缺乏、时间限制或对软件设计原则的误解。
 
-模式与反模式之间的一个关键区别是它们随时间产生的影响。设计模式倾向于改进系统结构，使其更易维护和扩展。另一方面，反模式可能提供短期利益，但随着系统的增长或需求的变化，会导致日益日益困难。
+模式与反模式之间的一个关键区别是它们随时间产生的影响。设计模式倾向于改进系统结构，使其更易维护和扩展。另一方面，反模式可能提供短期利益，但随着系统的增长或需求的变化，会导致日益困难。
 
 反模式可以以各种形式出现，从架构决策到编码实践都有。例如，“上帝对象”（God Object）反模式发生在单个类承担了过多责任时，这违反了单一职责原则。这可能导致一个单式的、难以维护的代码库。
 
-另一个常见的反模式是“面条代码”（Spaghetti Code），即程序结构纠缠在一起且缺乏清晰的组织。这使得代码难以理解、调试和修改。相比之下，MVC（模型-视图-控制器）等设计模式促进了清晰的分离。
+另一个常见的反模式是“面条代码”（Spaghetti Code），即程序结构纠缠在一起且缺乏清晰的组织。这使得代码难以理解、调试和修改。相比之下，`MVC`（模型-视图-控制器）等设计模式促进了清晰的分离。
 
 需要注意的是，什么构成了反模式取决于上下文。在一种场景下运行良好的解决方案，在另一种场景中可能是反模式。识别反模式需要对软件设计的深层理解以及批判性评估解决方案的能力。
 
@@ -12001,7 +11982,9 @@ class UserManager {
 这段代码显示了几反模式：
 
 1. 单例反模式：虽然 `Singleton` 是一种设计模式，但在这里使用是不恰的。它使类难以测试并创建了全局状态。
+
 2. 上帝对象反模式：`UserManager` 类负责了太多事情——管理用户、发送电子邮件和生成报告。这违反了单一职责原则。
+
 3. 特性嫉妒反模式：`sendEmail` 方法可能放在单独的 `EmailService` 类中更合适。
 
 更合适的设计会将这些关注点分离：
@@ -12036,10 +12019,6 @@ class EmailService {
 }
 ```
 
-
-
-
-
 ```java
             // Code to send email to user
         }
@@ -12065,25 +12044,39 @@ public class ReportGenerator {
 理解反模式的根源有助于防止它们的发生。常见原因包括：
 
 1. 缺乏经验或知识
+
 2. 时间压力和仓促开发
+
 3. 对设计原则的误解
+
 4. 过度工程或过早优化
+
 5. 规划或架构设计不当
 
 为了避免陷入反模式陷阱，开发者应该：
+
 1. 持续学习软件设计原则和模式
+
 2. 练习批判性思维并定期审查自己的代码
+
 3. 鼓励开发团队内部的开放沟通和代码审查
+
 4. 优先考虑代码的可读性和可维护性，而非巧妙或过度复杂的解决方案
+
 5. 愿意随着时间的推移重构和改进代码
 
 同样，理解模式与反模式之间的界限有时是模糊的。在一种语境下运行良好的模式在另一种语境下可能会出现问题。这强调了上下文感知设计决策的重要性。
 
 考虑以下问题：你如何识别自己代码中的潜在反模式？一种方法是寻找代码异味（code smells）的迹象——代码中可能指示更深层次问题的症状。这些包括：
+
 1. 重复代码
+
 2. 长方法或长类
+
 3. 类之间过度耦合
+
 4. 类内部缺乏内聚性
+
 5. 过度使用注释来解释复杂逻辑
 
 解决这些代码异味通常会导致发现并解决底层的反模式。
@@ -12225,10 +12218,8 @@ public List<Integer> getPrimes(int n) {
 
 
 
-
-
 ```java
-            isPrime[j] = false;
+isPrime[j] = false;
         }
     }
 }
@@ -12241,7 +12232,7 @@ return primes;
 }
 ```
 
-虽然这种`埃拉斯特尼筛法`(Sieve of Eratosthenes）的实现非常高效，但对于较小的 `n` 值来说，可能过度设计了。除非性能分析显示有优化需求，否则更简单的方法可能更：
+虽然这种`埃拉斯特尼筛法`(Sieve of Eratosthenes)的实现非常高效，但对于较小的 `n` 值来说，可能过度设计了。除非性能分析显示有优化需求，否则更简单的方法可能更好：
 
 ```java
 public List<Integer> getPrimes(int n) {
@@ -12262,6 +12253,8 @@ private boolean isPrime(int num) {
     return true;
 }
 ```
+
+### “魔术数字”反模式
 
 “魔术数字”反模式涉及在整个代码中使用硬编码的数值字面量，这使得代码难以理解和维护。考虑这个例子：
 
@@ -12300,6 +12293,8 @@ public class SalaryCalculator {
 }
 ```
 
+### “重造轮子”反模式
+
 “重造轮子”反模式发生在开发者为标准库或框架中已经存在的功能创建自定义实现时。例如：
 
 ```java
@@ -12330,6 +12325,8 @@ public class StringProcessor {
     }
 }
 ```
+
+### “循环依赖”反模式
 
 “循环依赖”反模式发生在两个或多个类相互依赖，创建了一个复杂且紧耦合的系统。例如：
 
@@ -12379,6 +12376,8 @@ public class ClassB {
 }
 ```
 
+### “过多的 Getter 和 Setter”反模式
+
 “过多的 Getter 和 Setter”反模式，也称为“贫血模型”，发生在类仅仅是数据持有者而没有任何行为时。这通常会导致在面向对象的语言中出现程序化的编程风格。例如：
 
 ```java
@@ -12417,13 +12416,13 @@ public class Order {
 
 通过理解和解决这些常见的反模式，Java 开发者可以创建更健壮、可维护且高效的应用程序。这是一个持续学习和改进的过程，需要时刻保持警惕并对软件工艺进行追求。
 
-## 识别和避免代码味
+## 识别和避免代码异味
 
-代码味是软件设计和实现中潜在问题的指标。本节探讨了在 Java 应用中识别和防止代码味的技术。通过理解这些问题，开发者可以提高代码质量、维护性和整体系统设计。
+代码异味是软件设计和实现中潜在问题的指标。本节探讨了在 Java 应用中识别和防止代码异味的技术。通过理解这些问题，开发者可以提高代码质量、维护性和整体系统设计。
 
-代码味通常是深层设计问题的症状。它们可能是微妙的，需要仔细分析才能检测和解决。常见的代码味包括代码重复、长方法、大类以及组件之间的过度耦合。在开发早期识别这些问题从远来看可以节省大量精力。
+代码异味通常是深层设计问题的症状。它们可能是微妙的，需要仔细分析才能检测和解决。常见的代码异味包括代码重复、长方法、大类以及组件之间的过度耦合。在开发早期识别这些问题从长远来看可以节省大量精力。
 
-检测代码味的一种有效技术是静态代码分析。`SonarQube`、`PMD` 和 `FindBugs` 等工具可以扫描 Java 代码并突出潜在问题。例如，`SonarQube` 可以检测重复代码块：
+检测代码异味的一种有效技术是静态代码分析。`SonarQube`、`PMD` 和 `FindBugs` 等工具可以扫描 Java 代码并突出潜在问题。例如，`SonarQube` 可以检测重复代码块：
 
 ```java
 public class OrderProcessor {
@@ -12434,29 +12433,19 @@ public class OrderProcessor {
         }
         order.setTotal(total);
     }
-public void calculateInvoice(Invoice invoice) {
-}
-}
-```
-
-
-
-
-
-```java
-double total = 0;
-
-for (Item item : invoice.getItems()) {
-    total += item.getPrice() * item.getQuantity();
-}
-
-invoice.setTotal(total);
+    public void calculateInvoice(Invoice invoice) {
+        double total = 0;
+        for (Item item : invoice.getItems()) {
+            total += item.getPrice() * item.getQuantity();
+        }
+        invoice.setTotal(total);
+    }
 }
 ```
 
 在这种情况下，工具将标记出重复的计算逻辑，并建议重构以消除冗余。
 
-另一种技术是人工代码审查。经验丰富的开发者通常可以在同行评审期间发现代码异味（code smells）。他们可能会注意到如长参数列表等问题，这可能意味着需要进行重构：
+另一种技术是人工代码审查。经验丰富的开发者通常可以在同行评审期间发现代码异味。他们可能会注意到如长参数列表等问题，这可能意味着需要进行重构：
 
 ```java
 public void createUser(String username, String password, String email,
@@ -12492,7 +12481,7 @@ public String getDiscountType(Customer customer) {
 
 由于嵌套条件，该方法具有很高的 `圈复杂度`。使用 `Strategy` 模式或规则引擎进行重构可以简化这种逻辑。
 
-防止代码异味涉及采用良好的编码实践和设计原则。`SOLID` 原则（单一职责、开闭、里氏替换、接口隔离和依赖倒转）为创建创建可维护的代码提供了坚实的基础。例如，应用单一职责原则可以帮助防止“上帝对象”异味：
+防止代码异味涉及采用良好的编码实践和设计原则。`SOLID` 原则（单一职责、开闭、里氏替换、接口隔离和依赖倒转）为创建可维护的代码提供了坚实的基础。例如，应用单一职责原则可以帮助防止“上帝对象”异味：
 
 ```java
 public class OrderProcessor {
@@ -12521,19 +12510,17 @@ public void processOrder(Order order) {
 }
 ```
 
-
-
-
-
 ## 将反模式重构为模式
 
 将不良实践转换为可重用的解决方案是软件开发人员的一项关键技能。本节将探索在 Java 代码中识别反模式并应用设计模式以提高代码质量、可维护性和扩展性的过程。我们将检查常见的反模式、它们的负面影响，并提供将其重构为结构良好、基于模式的解决方案的逐步指导。通过实际示例和真实场景，开发者将学习如何将有问题的代码转换为遵循最佳实践和设计原则的健壮、可重用的设计。
 
 反模式是看似有用但最终产生的问题多于其解决问题的重复解决方案。它们通常源于缺乏理解、时间限制，或者在没有适当设计考虑的情况下尝试解决问题。识别并重构这些反模式对于维护健康的代码库和确保项目的长期成功至关重要。
 
-## 上帝对象（God Object）反模式
+### 上帝对象（God Object）反模式
 
 一种常见的反模式是“上帝对象”，即单个类承担了过多的职责，违反了单一职责原则。考虑以下示例：
+
+
 
 ```java
 public class OrderManager {
@@ -12763,20 +12750,6 @@ public class PDFReportGenerator extends ReportGenerator {
         // PDF 特有的生成逻辑
     }
 }
-```
-
-
-
-
-
-```java
-    }
-
-    @Override
-    protected void generateContent(Document doc, Data data) {
-        // PDF-specific report generation
-    }
-}
 
 public class WordReportGenerator extends ReportGenerator {
     @Override
@@ -12786,12 +12759,14 @@ public class WordReportGenerator extends ReportGenerator {
 
     @Override
     protected void generateContent(Document doc, Data data) {
-        // Word-specific report generation
+        // Word 特有的生成逻辑
     }
 }
 ```
 
 这个重构后的版本使用了 `Template Method` 模式在基类中定义报告生成算法的骨架，允许子类实现特定步骤，而无需重复公共代码。
+
+## “散弹式手术”（Shotgun Surgery）反模式
 
 “散弹式手术”（Shotgun Surgery）反模式发生在当单一更改需要对许多不同的类进行修改时。这通常意味着关注点分离做得不好。考虑一个客户信息分散在多个类中的系统：
 
@@ -12825,6 +12800,8 @@ public class ShippingLabel {
 ```
 
 为了重构这些代码，我们可以应用 `Observer` 模式：
+
+
 
 ```java
 public class Customer implements Subject {
@@ -12899,6 +12876,8 @@ public class ShippingLabel implements Observer {
 ```
 
 这个重构后的版本将客户的责任集中在 `Customer` 类中，并使用 `Observer` 模式通知依赖对象变化。这消除了客户信息发生变化时进行“手术”修改的需求。
+
+## “切换语句”（Switch Statement）反模式
 
 “切换语句”（Switch Statement）反模式发生在使用复杂的条件逻辑根据类型来确定行为时。这会导致代码难以维护和扩展。考虑这个例子：
 
@@ -12991,7 +12970,7 @@ public class PaymentProcessor {
 在重构时，请考虑以下指南：
 
 1. 识别问题的根源，而不仅仅是症状。
-2. 从从小、进式的更改开始，而不是大规模的重写。
+2. 从小的、渐进式的更改开始，而不是大规模的重写。
 3. 保持完整的测试套件，确保重构不会引入新的 Bug。
 4. 记录重构的原因和所应用的模式，以帮助未来的维护者理解设计决策。
 5. 考虑对整个系统架构和性能的影响。
@@ -13002,11 +12981,7 @@ public class PaymentProcessor {
 
 ## 过度使用设计模式：一种真实的风险
 
-
-
-
-
-设计模式是开发者工具箱中强大的工具，但过度使用或误用它们会导致不必要的复杂性和维护挑战。本节将探究与过度使用设计模式相关的风险，并就何时应避免应用这些模式提供指导。理解这些细差别对于构建高效、可维护且可扩展的 Java 系统至关重要。
+设计模式是开发者工具箱中强大的工具，但过度使用或误用它们会导致不必要的复杂性和维护挑战。本节将探究与过度使用设计模式相关的风险，并就何时应避免应用这些模式提供指导。理解这些细微差别对于构建高效、可维护且可扩展的 Java 系统至关重要。
 
 设计模式为软件设计中反复出现的问题提供了优雅的解决方案。然而，它们的应用应该是审慎且有目的的。过度使用模式会导致代码过于复杂、可读性降低以及维护开销增加。必须承认，并不是每一个编码问题都需要设计模式的解决方案。
 
@@ -13107,6 +13082,10 @@ public class Application {
 
 例如，装饰器模式（Decorator pattern）在动态为对象添加功能方面非常强大。然而，过度使用会创建深层的装饰器链，可能会影响性能：
 
+
+
+# 代码质量工具与技术
+
 ```java
 public interface Coffee {
     double getCost();
@@ -13164,9 +13143,6 @@ Coffee coffee = new Sugar(new Milk(new SimpleCoffee()));
 System.out.println(coffee.getDescription() + " costs $" + coffee.getCost());
 ```
 
-
-
-
 本节深入探讨了在 Java 开发中确保代码质量的关键工具和技术。它探索了静态分析工具、代码审查的重要性，以及使用指标来衡量和改进代码质量。这些实践对于维持软件开发的高标准、减少技术债以及构建健壮且可维护的系统至关重要。通过实施这些工具和技术，开发者可以尽早识别潜在问题，提高代码一致性并提升整体软件质量。
 
 ## 静态分析工具
@@ -13218,7 +13194,7 @@ mvn sonar:sonar
 </project>
 ```
 
-通过此配置，`SpotBugs` 将在 `Maven` 构建过程中自动运行，向开发者警警示潜在的 bug。
+通过此配置，`SpotBugs` 将在 `Maven` 构建过程中自动运行，向开发者警示潜在的 bug。
 
 ## 代码审查
 
@@ -13317,7 +13293,7 @@ jobs:
 
 实施这些工具和技术需要开发团队的文化转变。营造一个重视代码质量并鼓励持续改进的环境至关重要。定期的团队讨论、最佳实践的分享以及对改进的庆祝有助于强化这些实践的重要性。
 
-团队如何平衡彻底代码检查的需求与快速交付功能的压力？可以采取哪些策略使代码质量成为开发过程的一部分，而不是事后才？
+团队如何平衡彻底代码检查的需求与快速交付功能的压力？可以采取哪些策略使代码质量成为开发过程的一部分，而不是事后才想？
 
 另一个考虑是代码质量实践对开发者生产力的影响。虽然这些工具和技术最终会带来更具维护性和健壮的代码，但最初可能会减慢开发。团队如何管理这种权衡，并向利益相关者证明投资代码质量的长期价值？
 
@@ -13325,16 +13301,13 @@ jobs:
 
 随着代码库变得越来越庞大复杂，这些工具和技术变得愈发突出。特别是大规模重构工作可以从自动化分析和指标中大大获益。团队如何利用这些工具来引导和验证重大重构计划？
 
-
-
-
 最后，值得考虑这些代码质量实践如何与其他软件开发方法论和实践相互作用。例如，它们如何融入到敏捷开发流程中？它们又如何与 DevOps 实践对齐，以确保整个软件生命周期的质量？
 
 通过解决这些问题和挑战，开发团队可以创建一个用于维护和改进代码质量的稳健框架。这不仅能带来更可靠、更易维护的软件，还能带来更令人满意且更高效的开发体验。
 
-## 反模式重构的测试
+# 反模式重构的测试
 
-反模式重构测试 - 验证改进的最佳实践
+## 反模式重构测试 - 验证改进的最佳实践
 
 本节重点关注 Java 开发中反模式重构的测试这一关键过程。它探索了验证重构过程中所做改进的最佳实践，确保更改能够提高代码质量和可维护性。本节涵盖了开发者可以用来有效验证其重构成果的各种测试策略、工具和技术。通过遵循这些最佳实践，团队可以信地将问题代码转换为更健壮、高效的解决方案，减少技术债务并提高整体系统性能。
 
@@ -13424,6 +13397,8 @@ class RegressionTest {
 }
 ```
 
+
+
 该测试验证了重构后的功能仍然产生预期结果。在重构时，必须关注功能性和非功能方面（如性能和资源使用）。性能测试可以确保重构没有引入回归。`JMH`（Java Microbenchmark Harness）是一个用于性能测试的有用工具：
 
 ```java
@@ -13506,10 +13481,6 @@ class PerformanceTest {
 
 该插件允许你对重构后的代码运行 SonarQube 分析。
 
-
-
-
-
 ## 团队如何平衡重构代码的彻底测试需求与快速交付特性的压力？可以采用哪些策略来使重构和测试成为开发过程中不可或缺的一部分？
 
 当团队为重构后的代码实施这些测试实践时，他们可能会在解释和采取测试结果方面面临挑战。例如，团队应该如何对测试过程中发现的问题进行优先级排序？为了整体代码的改进，何时接受微小的回归是合适的？
@@ -13527,8 +13498,6 @@ class PerformanceTest {
 通过解决这些问题和挑战，开发团队可以创建一个健壮的框架，用于验证反模式重构期间的改进。这不仅带来了更可靠、更易维护的软件，还有助于带来更加自信高效的开发体验。
 
 ## 反模式修复的真实案例
-
-反模式修复的真实案例 - 来自真实项目的教训
 
 本节深入探讨了 Java 项目中反模式修复的实际示例，从真实世界的经验中提供了宝贵的见解。它探索了开发团队如何成功地识别、处理和重构问题代码模式，从而提升了系统性能、可维护性和扩展性。通过研究这些案例研究，读者将更深入地理解在修复反模式期间面临的挑战以及克服这些挑战所采用的策略。本节提供了重构前后的代码片段示例，突显了应用设计模式原则解决常见反模式的转型性影响。
 
@@ -13672,9 +13641,6 @@ public class TransactionProcessor {
 
 这种重构消除了复杂的嵌套条件，使代码更具扩展性和可维护性。
 
-
-
-
 “散弹式手术”（Shotgun Surgery）反模式是 Java 项目中另一个常见问题，即单处更改需要对多个类进行修改。一个现实世界的示例出现在一个内容管理系统中，该系统中用户权限分散在各个不同的类中：
 
 ```java
@@ -13737,7 +13703,13 @@ public class ArticleService implements PermissionObserver {
 
 这次重构将权限检查集中化，使得跨系统管理和修改权限变得更容易。
 
-开发团队如何有效地识别并优先处理代码库中的反模式？可以采用哪些策略来确保反模式的修复不会引入新问题，或对现有功能产生负面影响？
+
+
+# 开发团队如何有效识别并优先处理代码库中的反模式？
+
+可以采用哪些策略来确保反模式的修复不会引入新问题，或对现有功能产生负面影响？
+
+## “复制粘贴编程”反模式
 
 “复制粘贴编程”（Copy-Paste Programming）反模式是许多 Java 项目中的常见陷阱。它发生在开发者重复代码而不是创建可重用组件时。一个现实世界的示例出现在一个财务报告系统中，其中类似的计算逻辑被复制到多个报告生成器中：
 
@@ -13798,6 +13770,8 @@ public class ExpenseReportGenerator extends ReportGenerator {
 
 这次重构消除了代码重复，并使得添加新类型的报告变得更容易。
 
+## “过早优化”反模式
+
 “过早优化”（Premature Optimization）反模式是许多 Java 开发者掉入的另一个陷阱。在一个项目中，团队为数据库查询实现了一种复杂的缓存机制，认为它会提高性能：
 
 ```java
@@ -13832,18 +13806,17 @@ public class SimplifiedQueryExecutor {
 
 他们随后专注于优化实际查询执行和数据库设计，这带来了更好的性能提升。
 
+## 总结与思考
+
 这些现实世界的示例说明了在 Java 项目中识别和解决反模式的重要性。通过应用适当的设计模式和原则，开发团队可以显著提高代码质量、可维护性和性能。然而，在重构时保持谨慎态度并进行彻底测试至关重要的，以确保修复不会引入新问题或回归。
 
 当开发团队应对反模式时，还必须考虑对系统架构和团队工作流的广泛影响。组织如何培养一种从源头上防止反模式产生的文化？代码审查、结对编程和持续教育在维护代码质量和防止反模式再次发生方面起什么作用？
 
-
-
-
 测试设计模式面临的主要挑战之一是需要验证涉及多个对象或抽象类的复杂交互和行为。为了解决这个问题，开发者通常会使用专门的测试框架和技术，以便对测试环境进行精确控制，并为模拟（mocking）和断言提供强大的工具。
 
-## 创建型模式
+# 创建型模式
 
-在测试`Factory Method`（工厂方法）或`Abstract Factory`（抽象工厂）等创建模式时，重点通常在于验证是否根据给定参数创建了正确类型的对象。例如，考虑一个简单的工厂方法方法实现：
+在测试 `Factory Method`（工厂方法）或 `Abstract Factory`（抽象工厂）等创建模式时，重点通常在于验证是否根据给定参数创建了正确类型的对象。例如，考虑一个简单的工厂方法实现：
 
 ```java
 public interface Product {
@@ -13879,7 +13852,7 @@ public class ConcreteCreatorB extends Creator {
 }
 ```
 
-为了测试此实现，我们可能会使用`JUnit`和`Mockito`编写测试用例：
+为了测试此实现，我们可能会使用 `JUnit` 和 `Mockito` 编写测试用例：
 
 ```java
 import org.junit.Test;
@@ -13913,11 +13886,11 @@ public class FactoryMethodTest {
 }
 ```
 
-在这个测试用例中，我们验证了每个具体创建器是否创建了正确类型的产品。我们还使用`Mockito`创建模拟对象，并验证了产品的`operation()`方法是否被调用。
+在这个测试用例中，我们验证了每个具体创建器是否创建了正确类型的产品。我们还使用 `Mockito` 创建模拟对象，并验证了产品的 `operation()` 方法是否被调用。
 
-## 结构模式
+# 结构模式
 
-对于`Decorator`（装饰器）或`Adapter`（适配器）等结构模式，测试通常涉及验证被包装或适配的对象的行为是否正确，以及附加功能是否按预期应用。考虑一个简单的`Decorator`模式实现：
+对于 `Decorator`（装饰器）或 `Adapter`（适配器）等结构模式，测试通常涉及验证被包装或适配的对象的行为是否正确，以及附加功能是否按预期应用。考虑一个简单的 `Decorator` 模式实现：
 
 ```java
 public interface Component {
@@ -14008,9 +13981,11 @@ public class DecoratorTest {
 
 在这些测试用例中，我们验证了每个装饰器都正确地包装了组件并添加了功能。我们还测试了嵌套装饰器，并使用模拟对象验证了装饰器与其包装组件之间的交互。
 
-## 行为模式
+# 行为模式
 
-在测试`Observer`（观察者）或`Strategy`（策略）等行为模式时，重点通常在于验证是否调用了正确的方法，以及模式在不同场景下的行为是否一致。例如，考虑一个简单的`Observer`模式实现：
+在测试 `Observer`（观察者）或 `Strategy`（策略）等行为模式时，重点通常在于验证是否调用了正确的方法，以及模式在不同场景下的行为是否一致。例如，考虑一个简单的 `Observer` 模式实现：
+
+
 
 ```java
 import java.util.ArrayList;
@@ -14083,52 +14058,41 @@ public class ObserverTest {
     @Test
     public void testConcreteObserver() {
         Subject subject = new Subject();
+        ConcreteObserver observer = new ConcreteObserver("Observer1");
+        subject.attach(observer);
+        subject.setState("Test State");
+        assertEquals("Test State", observer.getObserverState());
     }
-}
-```
 
-
-
-
-
-```java
-ConcreteObserver observer = new ConcreteObserver("Observer1");
-
-subject.attach(observer);
-subject.setState("Test State");
-
-assertEquals("Test State", observer.getObserverState());
-
-}
-
-@Test
-public void testMultipleObservers() {
-    Subject subject = new Subject();
-    ConcreteObserver observer1 = new ConcreteObserver("Observer1");
-    ConcreteObserver observer2 = new ConcreteObserver("Observer2");
-    subject.attach(observer1);
-    subject.attach(observer2);
-    subject.setState("Shared State");
-    assertEquals("Shared State", observer1.getObserverState());
-    assertEquals("Shared State", observer2.getObserverState());
+    @Test
+    public void testMultipleObservers() {
+        Subject subject = new Subject();
+        ConcreteObserver observer1 = new ConcreteObserver("Observer1");
+        ConcreteObserver observer2 = new ConcreteObserver("Observer2");
+        subject.attach(observer1);
+        subject.attach(observer2);
+        subject.setState("Shared State");
+        assertEquals("Shared State", observer1.getObserverState());
+        assertEquals("Shared State", observer2.getObserverState());
+    }
 }
 ```
 
 在这些测试用例中，我们验证了观察者是否被正确附加和解绑，它们在主体状态改变时是否能够接收更新，以及能否同时通知多个观察者。
 
-在测试设计模式时，不仅要考虑正常路径（happy path），还要考虑边界情况和潜在的错误条件。例如，当输入空或无效输入时，模式的表现如何？如果依赖项不可或抛出异常会发生什么？这些场景应该涵盖在你的测试用例中，以确保实现的健壮性。
+在测试设计模式时，不仅要考虑正常路径（`happy path`），还要考虑边界情况和潜在的错误条件。例如，当输入空或无效输入时，模式的表现如何？如果依赖项不可用或抛出异常会发生什么？这些场景应该涵盖在你的测试用例中，以确保实现的健壮性。
 
-此外，在测试更复杂的模式或模式组合时，可能需要使用高级模拟技术，如部分模拟（partial mocks）或 Spy 对象（spy objects），在允许系统其他部分正常运行的同时验证特定行为。
+此外，在测试更复杂的模式或模式组合时，可能需要使用高级模拟技术，如部分模拟（`partial mocks`）或 Spy 对象（`spy objects`），在允许系统其他部分正常运行的同时验证特定行为。
 
-性能测试是另一个需要考虑的重要方面，特别是对于可能影响系统性能的模式，如 `Singleton`（单例）或 `Flyweight`（权重）。在这些情况下，你可能希望编写基准测试或压力测试，以确保模式实现在负载下的良好扩展。
+性能测试是另一个需要考虑的重要方面，特别是对于可能影响系统性能的模式，如 `Singleton`（单例）或 `Flyweight`（享元）。在这些情况下，你可能希望编写基准测试或压力测试，以确保模式实现在负载下的良好扩展。
 
 通过彻底测试设计模式的实现，开发者对代码的正确性和可靠性更有信心。这不仅有助于在开发早期发现 Bug，还能使代码库更易重构和维护。由于设计模式通常构成大型软件系统的骨干，在全面测试上投入时间可以在代码质量和长期维护性方面获得巨大回报。
 
 如何确保你对设计模式的单元测试是全面的并涵盖了所有重要场景？哪些策略可以用于涉及多个组件之间复杂交互的模式？
 
-## 设计中的模拟与打桩（Mocking and Stubbing）
+## 设计中的模拟与打桩
 
-模拟（Mocking）和打桩（Stubbing）是设计模式单元测试中的基本技术，允许开发者隔离组件并独立对其进行测试。本节探索了模拟框架的使用以及在测试设计模式实现时有效隔离组件的策略。通过利用这些技术，开发者可以创建更健壮、更可靠的测试，确保他们的设计模式实现在隔离环境中和作为系统部分时都能正常运行。
+模拟（`Mocking`）和打桩（`Stubbing`）是设计模式单元测试中的基本技术，允许开发者隔离组件并独立对其进行测试。本节探索了模拟框架的使用以及在测试设计模式实现时有效隔离组件的策略。通过利用这些技术，开发者可以创建更健壮、更可靠的测试，确保他们的设计模式实现在隔离环境中和作为系统部分时都能正常运行。
 
 模拟框架提供了强大的工具来创建模拟对象，以控制的方式模拟真实对象的行为。这些框架允许开发者对方法调用、返回值以及对象之间的交互定义特定的预期。在设计模式的背景下，模拟对于测试可能涉及多个对象或抽象类的复杂交互和行为特别有用。
 
@@ -14205,7 +14169,7 @@ public class ShoppingCartTest {
 }
 ```
 
-在这些测试中，我们使用 `Mockito` 创建模拟对象。打桩（Stubbing）是与模拟配合另一种重要技术。它涉及为方法调用定义返回值。这在测试依赖项时特别有用。例如，让我们考虑这样一个场景：我们有一个 `Factory` 模式，它依赖于配置服务来决定创建哪个对象：
+在这些测试中，我们使用 `Mockito` 创建模拟对象。打桩（`Stubbing`）是与模拟配合另一种重要技术。它涉及为方法调用定义返回值。这在测试依赖项时特别有用。例如，让我们考虑这样一个场景：我们有一个 `Factory` 模式，它依赖于配置服务来决定创建哪个对象：
 
 ```java
 public interface Product {
@@ -14269,39 +14233,31 @@ public class ProductFactoryTest {
     public void testCreateProductB() {
         ConfigurationService mockConfig = mock(ConfigurationService.class);
         when(mockConfig.getProductType()).thenReturn("B");
+        ProductFactory factory = new ProductFactory(mockConfig);
+        Product product = factory.createProduct();
+        assertTrue(product instanceof ConcreteProductB);
+        assertEquals("Product B", product.getName());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testCreateProductUnknownType() {
+        ConfigurationService mockConfig = mock(ConfigurationService.class);
+        when(mockConfig.getProductType()).thenReturn("C");
+        ProductFactory factory = new ProductFactory(mockConfig);
+        factory.createProduct();
     }
 }
 ```
 
+在这些测试中，我们使用存桩（`stubbing`）来控制模拟配置服务上 `getProductType()` 方法的返回值。这允许我们能够在不需要配置服务的实际实现的情况下，测试不同的场景。
 
-
-
-
-```java
-ProductFactory factory = new ProductFactory(mockConfig);
-
-Product product = factory.createProduct();
-
-assertTrue(product instanceof ConcreteProductB);
-
-assertEquals("Product B", product.getName());
-
-}
-
-@Test(expected = IllegalArgumentException.class)
-public void testCreateProductUnknownType() {
-    ConfigurationService mockConfig = mock(ConfigurationService.class);
-    when(mockConfig.getProductType()).thenReturn("C");
-    ProductFactory factory = new ProductFactory(mockConfig);
-    factory.createProduct();
-}
-```
-
-在这些测试中，我们使用存桩（stubbing）来控制模拟配置服务上 `getProductType()` 方法的返回值。这允许我们能够在不需要配置服务的实际实现的情况下，测试不同的场景。
-
-在测试涉及多个组件之间复杂交互的设计模式时，通常需要结合使用模拟（mocking）和存桩（stubbing）技术。例如，在测试 `Observer`（观察者）模式时，可能会创建模拟观察者并对其 `update` 方法进行存桩，以验证在主体状态改变时这些方法是否被正确调用。
+在测试涉及多个组件之间复杂交互的设计模式时，通常需要结合使用模拟（`mocking`）和存桩（`stubbing`）技术。例如，在测试 `Observer`（观察者）模式时，可能会创建模拟观察者并对其 `update` 方法进行存桩，以验证在主体状态改变时这些方法是否被正确调用。
 
 在测试设计模式时，隔离组件至关重要，因为它能让你专注于模式实现的特定行为，而不受依赖组件复杂性的影响。这种隔离可以通过模拟、存桩以及测试用例的精心设计来实现。
+
+
+
+# 隔离组件的有效策略
 
 隔离组件的一种有效策略是使用依赖注入，允许你在测试中轻松地将真实依赖替换为模拟对象。这种方法在测试如 `Factory`、`Builder` 或 `Decorator` 模式等模式时特别有用，因为这些模式的实现通常依赖于其他对象或服务。
 
@@ -14310,6 +14266,8 @@ public void testCreateProductUnknownType() {
 在处理涉及复杂状态管理的模式（如 `State` 或 `Memento`）时，使用允许设置特定测试状态的双胞会有帮助。这可能涉及使用 `CountDownLatch` 或 `CompletableFuture` 等工具来同步测试执行，并验证事件是否被正确触发和处理。
 
 开发者如何在单元测试中对彻底隔离的需求与测试设计模式实现中组件间真实交互的重要性之间取得平衡？可以采用哪些策略来确保随着模式实现复杂性的增加，测试仍然保持可维护性和意义？
+
+# 测试状态转换与生命周期
 
 在测试涉及复杂生命周期或状态转换的设计模式（如 `State` 模式或 `Builder` 模式）时，不仅要考虑单个状态或步骤，还要考虑它们之间的转换。测试这些场景的一种方法是使用状态机测试技术，在其中你定义一组有效状态和转换，然后编写测试来验证系统是否正确在这些状态之间移动。
 
@@ -14448,11 +14406,9 @@ public class VendingMachineTest {
 
 在这些测试中，我们不仅验证了正确的状态转换，还验证了自动售货机在每个状态下对无效操作的响应。这种方法使我们能够彻底测试 `State` 模式的实现，同时保持测试专注于模式的行为。
 
+# 测试复杂交互：使用测试间谍
 
-
-
-
-在测试涉及多个对象之间复杂交互的设计模式（例如 `Mediator`get 者模式或 `Observer` 观察者模式）时，除了 mock（mocks）之外，使用测试间谍（test spies）也会帮助。测试间谍允许你记录方法调用并验证对象之间的交互，同时仍然允许调用真实方法。
+在测试涉及多个对象之间复杂交互的设计模式（例如 `Mediator` 中介者模式或 `Observer` 观察者模式）时，除了 mock（mocks）之外，使用测试间谍（test spies）也会帮助。测试间谍允许你记录方法调用并验证对象之间的交互，同时仍然允许调用真实方法。
 
 例如，考虑一个用于聊天室的 `Mediator` 模式的简化实现：
 
@@ -14542,24 +14498,28 @@ public class ChatRoomTest {
 
 在此测试中，我们使用 Mockito 的 `spy()` 方法为我们的 `ChatUser` 对象创建测试间谍。这允许我们验证在发送消息时是否在正确的用户上调用了 `receive()` 方法，同时允许执行真实的方法实现。
 
+# 保持测试可维护性的策略
+
 随着设计模式实现的复杂性增加，将测试结构化为可维护且有意义的方式变得越来越重要。实现这一目标的某些策略包括：
 
 1. 使用描述性的测试名称，清晰地指示正在测试的场景。
 2. 将相关的测试分组到单独的测试类或嵌套类中。
-3 使用 使用方法（setup methods）减少测试代码中的重复。
+3. 使用设置方法（setup methods）减少测试代码中的重复。
 4. 为常用操作创建辅助方法。
 5. 使用仅输入上不同的参数化测试。
 6. 审慎地使用测试双胞（test doubles），侧重于隔离被测试的组件。
 
 通过采用这些技术并不断完善你的测试方法，你可以创建一个健壮的测试套件，它能够有效验证设计模式实现的行为，同时随着系统的演进保持可维护性。
 
-## 复杂实现的调试
+# 复杂实现的调试
 
 本节重点关注复杂模式实现的调试，为识别设计模式实现中问题的工具和技术提供见解。由于设计模式的抽象性质以及组件之间复杂的交互，调试设计模式带来了独特的挑战。本节探索了解决基于模式的代码中问题的有效策略、工具和最佳实践，使开发者能够维护和优化他们的模式实现。
 
-调试设计模式实现通常需要结合传统的调试技术和特定于模式的方法。调试复杂模式最有效的工具之一是健壮的日志系统。通过在实现中策略性地放置日志语句，开发者可以获得有关执行流和对象在不同时间点状态的宝见解。
+调试设计模式实现通常需要结合传统的调试技术和特定于模式的方法。调试复杂模式最有效的工具之一是健壮的日志系统。通过在实现中策略性地放置日志语句，开发者可以获得有关执行流和对象在不同时间点状态的宝贵见解。
 
 考虑以下带有添加日志的 `Singleton` 实现示例：
+
+
 
 ```java
 import java.util.logging.Logger;
@@ -14638,13 +14598,9 @@ public class ConcreteHandler2 extends Handler {
 
 通过在每个 `handleRequest` 方法中设置断点，开发者可以单步执行并观察请求是如何在链中传递的直到被处理或到达链的末尾。
 
-
-
-
-
 在调试 `Observer` 或 `Strategy` 等行为模式时，使用条件断点或监视点来监控特定变量或对象状态的变化通常非常有帮助。这对于识别意外的状态更改或确保观察者被正确通知特别有用。
 
-对于 `Decorator` 或 `Composite` 等结构型模式，将对象结构可视化对于调试来说是无与比比的。许多 IDE 提供了对象检查工具，允许开发者在运行时探索对象之间的关系。这有助于识别对象组合中的问题或组合对象结构中的意外变化。
+对于 `Decorator` 或 `Composite` 等结构型模式，将对象结构可视化对于调试来说是无与伦比的。许多 IDE 提供了对象检查工具，允许开发者在运行时探索对象之间的关系。这有助于识别对象组合中的问题或组合对象结构中的意外变化。
 
 在调试与模式实现相关的性能问题时，性能分析工具（Profiling tools）极其有用。例如，在处理 `Flyweight` 模式时，性能分析可以帮助识别内存使用模式，并确保对象共享按预期运行。
 
@@ -14712,7 +14668,7 @@ public class DocumentBuilder {
 
 在处理涉及动态行为或运行时组合的模式（如 `Strategy` 或 `Decorator`）时，实现提供对象当前配置详细信息的 `toString()` 方法会有帮助。这使得在调试复杂交互时更容易理解系统的状态。
 
-例如，考虑一个为基础 `Coffee` 对象添加特的 `Decorator` 模式实现：
+例如，考虑一个为基础 `Coffee` 对象添加特性的 `Decorator` 模式实现：
 
 ```java
 public interface Coffee {
@@ -14783,7 +14739,7 @@ public class Sugar extends CoffeeDecorator {
 }
 ```
 
-有了这些 `toString()` 实现，调试复杂的配置变得简单得了：
+有了这些 `toString()` 实现，调试复杂的配置变得简单得多：
 
 ```java
 Coffee coffee = new Sugar(new Milk(new SimpleCoffee()));
@@ -14791,7 +14747,7 @@ System.out.println(coffee);
 // Output: Sugar(Milk(SimpleCoffee(cost=1.00, description='Simple Coffee')))
 ```
 
-此输出清晰地显示了装饰对象的结构，使得更容易识别装饰过程中的问题或意外的。
+此输出清晰地显示了装饰对象的结构，使得更容易识别装饰过程中的问题或意外的配置。
 
 在调试 `Factory` 或 `Abstract Factory` 模式中与对象创建的问题时，实现一个跟踪对象创建的注册表或日志系统会有帮助。这有助于识别对象缓存、意外的对象类型或错误的工厂方法调用等问题。
 
@@ -14803,10 +14759,6 @@ System.out.println(coffee);
 
 最终而言，有效调试复杂模式实现的关键在于对模式本身的深入理解、对调试工具和技术的策略性使用，以及针对你的特定用例和需求开发特定的模式调试策略。
 
-
-
-
-
 ## 使用结构模式进行性能测试
 
 使用结构模式进行性能测试重点在于评估和优化使用结构设计模式设计的系统效率。本节将探索对模式实现进行基准测试、识别性能瓶颈以及改进速度和内存使用的技术。我们将研究如 `Adapter`、`Decorator` 和 `Composite` 等结构模式如何影响系统性能，并提供衡量和增强其效率的策略。通过实际示例和最佳实践，开发者将学习创建不仅结构良好而且高性能且可扩展的基于模式的系统。
@@ -14815,7 +14767,7 @@ System.out.println(coffee);
 
 ## 适配器模式 (Adapter Pattern)
 
-让我们从 `Adapter` 模式开始，它通常用于让不兼容的接口工作。虽然 `Adapter` 模式提供了很大的活性，但由于额外的间接层，它可能会引入性能开销。考虑以下示例：
+让我们从 `Adapter` 模式开始，它通常用于让不兼容的接口工作。虽然 `Adapter` 模式提供了很大的灵活性，但由于额外的间接层，它可能会引入性能开销。考虑以下示例：
 
 ```java
 public interface Target {
@@ -14843,6 +14795,8 @@ public class Adapter implements Target {
 
 为了对此 `Adapter` 实现进行性能基准测试，我们可以使用简单的微基准测试方法：
 
+
+
 ```java
 public class AdapterBenchmark {
     private static final int ITERATIONS = 1_000_000;
@@ -14863,6 +14817,7 @@ public class AdapterBenchmark {
 该基准测试测量了执行适配方法一百万次所需的时间。虽然这种方法提供了基本的性能衡量，但重要的是，为了获得更准确的结果，你应该使用专用的基准测试工具，如 `JMH` (Java Microbenchmark Harness)。
 
 在优化 `Adapter` 模式的性能时，请考虑以下策略：
+
 1. 减少适配器内部方法调用的次数。
 2. 如果适配方法频繁用相同参数调用，请使用缓存机制。
 3. 考虑使用组合而不是继承来实现适配器，因为组合通常能提供更好的性能。
@@ -14911,6 +14866,7 @@ public class ConcreteDecoratorA extends Decorator {
 ```
 
 优化 `Decorator` 模式实现：
+
 1. 尽量减少链中装饰器的数量。
 2. 如果多个装饰器总是一起使用，考虑将多个装饰器合并为单个装饰器。
 3. 对资源密集型装饰器使用懒性初始化。
@@ -14955,6 +14911,7 @@ class Composite extends Component {
 ```
 
 优化 `Composite` 实现时：
+
 1. 使用适当的数据结构来存储子节点（例如，频繁添加使用 `ArrayList`，频繁删除使用 `LinkedList`）。
 2. 为组合结构实现懒性加载。
 3. 考虑为频繁访问的操作使用缓存机制。
@@ -14996,16 +14953,13 @@ System.out.println("Memory used: " + (usedMemoryAfter - usedMemoryBefore) + " by
 ```
 
 在针对速度和内存优化结构模式时，考虑以下通用策略：
+
 1. 尽可能使用懒性初始化，以将对象创建推迟到需要时。
 2. 为频繁访问的数据或计算结果实现缓存机制。
 3. 使用弱引用或软引用，以允许垃圾回收器在必要时回收内存。
 4. 对于小型不可变数据，考虑使用值对象以减少内存开销。
 
 重要的是，优化始终应该基于实际的性能测量和剖析结果。过早优化会导致代码变得不必要的复杂而没有显著的性能提升。
-
-
-
-
 
 在进行性能测试时，确保你正在测试反映实际使用模式的真实场景。这可能涉及创建在规模和复杂性上模拟生产数据的测试数据。
 
@@ -15016,6 +14970,7 @@ System.out.println("Memory used: " + (usedMemoryAfter - usedMemoryBefore) + " by
 在优化模式实现时，保持原始模式的意图和收益至关重要。过度优化会导致代码更难以理解和维护，从而可能抵消最初使用该模式所带来的优势。
 
 考虑将设计模式与其他性能优化技术结合使用，例如：
+
 1. 针对计算密集型任务的多线程和并行处理。
 2. 针对 I/O 密集型操作的异步编程。
 3. 针对数据密集型应用的数据库查询优化和缓存。
@@ -15084,6 +15039,7 @@ public class ConcreteObserver implements Observer {
 ```
 
 为了测试这个 `Observer` 模式实现，我们需要验证以下几个方面：
+
 1. `Observers` 被正确注册和移除。
 2. 当主体状态更改时，所有注册的观察者都会收到通知。
 3. `Observers` 接收到了正确的更新状态。
@@ -15118,6 +15074,7 @@ public class ObserverPatternTest {
     }
 }
 ```
+
 在这些测试中，我们使用 `Mockito` 创建模拟的 `Observer` 对象。这允许我们验证 `update` 方法是否被调用。
 
 在测试允许算法选择的 Strategy 模式时，我们需要确保选择了正确的策略。以下是一个简单的 `Strategy` 模式：
@@ -15154,6 +15111,8 @@ public class SortContext {
 
 为了测试此 Strategy 模式实现，可以使用以下代码：
 
+
+
 ```java
 public class StrategyPatternTest {
     @Test
@@ -15173,11 +15132,12 @@ public class StrategyPatternTest {
     }
 }
 ```
+
 该测试验证了根据 `context` 的配置调用了正确的 `strategy`。
 
 ### 命令模式 (Command Pattern)
 
-Command 模式将请求封装为对象，允许对客户端进行参数化、请求队列以及操作日志。测试 Command 模式涉及验证命令是否正确执行以及撤销功能是否按预期工作。
+`Command` 模式将请求封装为对象，允许对客户端进行参数化、请求队列以及操作日志。测试 `Command` 模式涉及验证命令是否正确执行以及撤销功能是否按预期工作。
 
 ```java
 public interface Command {
@@ -15195,16 +15155,9 @@ public class LightOnCommand implements Command {
     public void execute() {
         light.turnOn();
     }
-}
-```
 
-
-
-
-
-```java
-public void undo() {
-    light.turnOff();
+    public void undo() {
+        light.turnOff();
     }
 }
 
@@ -15307,9 +15260,6 @@ public class ChainOfResponsibilityTest {
     }
 }
 ```
-
-
-
 
 让我们考虑这样一个场景：我们有一个系统使用了多种模式：用于创建产品的 `Factory Method`（工厂方法）、用于通知产品变化的 `Observer`（观察者）、以及用于应用不同折扣计算的 `Strategy`（策略模式）。以下是一个简化的实现：
 
@@ -15436,14 +15386,22 @@ class ProductServiceIntegrationTest {
             Math.abs(90.0 - product.getPrice()) < 0.001
         ));
     }
+}
 ```
 
-该集成测试验证了： 
+该集成测试验证了：
+
 1. `Factory Method` 正确地创建了产品。
-2. `Strategy` 预期预期应用了折扣。
+2. `Strategy` 预期应用了折扣。
 3. `Observer` 收到了正确的产品信息通知。
 
 在共同测试多个模式时，考虑各种场景和边缘情况非常重要。例如：
+
+
+
+# 集成测试与模式
+
+## 多模式集成测试示例
 
 ```java
 @Test
@@ -15468,6 +15426,7 @@ void testMultipleObserversWithDiscounts() {
         "Product A".equals(product.getName()) &&
         Math.abs(80.0 - product.getPrice()) < 0.001
     ));
+}
 ```
 
 该测试验证了多个观察者被正确通知，并且不同的折扣策略按预期应用。
@@ -15522,15 +15481,9 @@ void testGlobalDiscountIntegration() {
     GlobalDiscountManager.getInstance().setGlobalDiscountRate(10);
     service.createAndNotifyProduct("New Global Discounted Product", 100.0);
     verify(mockObserver).update(argThat(product ->
-```
-
-
-
-
-```java
-"New Global Discounted Product".equals(product.getName()) &&
-Math.abs(90.0 - product.getPrice()) < 0.001
-));
+        "New Global Discounted Product".equals(product.getName()) &&
+        Math.abs(90.0 - product.getPrice()) < 0.001
+    ));
 }
 ```
 
@@ -15541,7 +15494,7 @@ Math.abs(90.0 - product.getPrice()) < 0.001
 1. **模式交互**：验证模式之间是否按预期协同工作，且不会相互干扰对方的功能。
 2. **状态管理**：确保对象的状态在不同的模式交互中能够被正确维护。
 3. **错误处理**：测试系统在涉及多个模式时如何处理错误或意外输入。
-4. **性能**：评估共同使用多个模式对性能的影响，特别是在高负载或交互交互（interactions）的场景下。
+4. **性能**：评估共同使用多个模式对性能的影响，特别是在高负载或交互频繁的场景下。
 5. **可扩展性**：验证多个模式的集成不会阻碍系统的扩展能力。
 
 开发者如何能确保其集成测试覆盖了模式之间所有的关键交互？在系统演进和引入新模式时，可以采用哪些策略来维护这些测试？
@@ -15556,37 +15509,25 @@ Math.abs(90.0 - product.getPrice()) < 0.001
 
 通过遵循这些实践并不断完善你的集成测试方法，你可以确保万无一失。
 
-## 集成测试与模式
+## 集成测试与模式核心价值
 
-集成测试与模式关注于模式的实现，确保其正确性。集成测试（CI）在开发周期中起着至关重要的作用，它确保不同模块之间能够协同工作。通过集成测试，可以发现单元测试无法覆盖的边界。
+集成测试与模式关注于模式的实现，确保其正确性。集成测试（CI）在开发周期中起着至关重要的作用，它确保不同模块之间能够协同工作。通过集成测试，可以发现单元测试无法覆盖的边界，确保系统的稳定性和一致性。
 
-集成测试（CI）在开发周期中起着至关重要的作用，它确保不同模块之间能够协同工作。通过集成测试，可以发现单元测试无法覆盖的边界。通过集成测试，可以确保系统的稳定性和一致性。
+将这些测试集成到 `CI` 流水线中可以确保模式的实现得到持续验证和维护。这种方法有助于尽早发现问题、防止回归，并维护系统架构的完整性。
 
-集成测试（CI）在开发周期中起着至关重要的作用，它确保不同模块之间能够协同工作。通过集成测试，可以发现单元测试无法覆盖的边界。通过集成测试，可以确保系统的稳定性和一致性。
-
-集成测试（CI）在开发周期中起着至关重要的作用，它确保不同模块之间能够协同工作。通过集成测试，可以发现单元测试无法覆盖的边界。通过集成测试，可以确保系统的稳定性和一致性。
-
-集成测试（CI）在开发周期中起着至关重要的作用，它确保不同模块之间能够协同工作。通过集成测试，可以发现单元测试无法覆盖的边界。通过集成测试，可以确保系统的稳定性和一致性。
-
-
-
-
-
-将这些测试集成到 CI 流水线中可以确保模式的实现得到持续验证和维护。这种方法有助于尽早发现问题、防止回归，并维护系统架构的完整性。
-
-团队如何才能有效平衡全面的模式测试需求与维护快速高效的 CI 流水线的目标？可以采用哪些策略来划分测试优先级，并确保关键模式行为始终得到验证？
+团队如何才能有效平衡全面的模式测试需求与维护快速高效的 `CI` 流水线的目标？可以采用哪些策略来划分测试优先级，并确保关键模式行为始终得到验证？
 
 为了应对这些挑战，请考虑以下方法：
 
 1. **测试分类**：根据重要性和运行时间对测试进行分类。验证核心模式行为的关键测试应始终运行，而更广泛的测试可以降低运行频率。
-2. **并行执行**：利用并行测试执行来缩短整个流水线的时间。许多 CI 工具支持在多个节点上同时运行测试。
+2. **并行执行**：利用并行测试执行来缩短整个流水线的时间。许多 `CI` 工具支持在多个节点上同时运行测试。
 3. **增量测试**：实施智能测试选择策略，仅运行受近期更改影响的测试，减少不必要的测试执行。
 4. **性能分析**：定期对测试性能进行分析，识别并优化运行缓慢的测试，特别是与模式实现相关的测试。
 5. **自动化代码审查**：实施自动化代码审查工具，在进入测试阶段之前识别潜在的模式相关问题。
 
-通过不断完善和优化 CI 过程，团队可以确保设计模式实现在整个开发生命周期内保持健壮和有效。这种方法不仅提高了代码质量，还通过对模式相关更改提供快速反馈，增强了开发者的效率。
+通过不断完善和优化 `CI` 过程，团队可以确保设计模式实现在整个开发生命周期内保持健壮和有效。这种方法不仅提高了代码质量，还通过对模式相关更改提供快速反馈，增强了开发者的效率。
 
-## 模式测试案例研究
+# 模式测试案例研究
 
 模式测试案例研究为设计模式在企业级系统中的实际应用提供了宝贵的见解。本节研究了大型项目如何有效地实现和测试设计模式的真实示例。我们将探索各种测试策略、遇到的挑战以及经验丰富的开发者设计的解决方案。通过分析这些案例研究，我们将对复杂生产环境中模式测试的最佳实践有更深入的理解。这些知识将帮助读者将类似的技术应用于自己的项目中，确保模式实现的健壮性和可维护性。
 
@@ -15671,17 +15612,21 @@ Scenario: 根据客户类型应用不同的定价策略
 
 这种方法帮助弥合了技术实现与业务需求之间的鸿沟，确保模式实现符合公司的目标。
 
+
+
+# 团队还实施了持续集成（CI）流水线
+
 团队还实施了持续集成（CI）流水线，在每次代码提交时自动运行所有这些测试。他们使用 `Jenkins` 进行 CI，并集成了如 `SonarQube` 等静态代码分析工具，以便在开发早期识别模式实现中的潜在问题。
 
-该电子商务平台所采用的测试策略可能会如何适配于其他类型的企业级系统？对于具有不同扩展性需求或领域特定限制的系统，还需要哪些考虑因素？
+## 该电子商务平台所采用的测试策略可能会如何适配于其他类型的企业级系统？
 
-
-
-
+对于具有不同扩展性需求或领域特定限制的系统，还需要哪些考虑因素？
 
 为了解决这些问题，让我们考虑另一个金融服务公司的案例研究，该公司使用设计模式开发了一个交易平台。该系统对实时性能和数据一致性有严格的要求。
 
-交易平台的开发团队侧重于在极端市场条件下对他们的模式实现进行压力测试。他们模拟了高频交易场景，以确保如 `Observer`（用于市场数据更新）和 `Command`（用于订单执行）等模式能够处理快速的状态变化，而不会损害系统的完整性。
+## 交易平台的开发团队侧重于在极端市场条件下对他们的模式实现进行压力测试
+
+他们模拟了高频交易场景，以确保如 `Observer`（用于市场数据更新）和 `Command`（用于订单执行）等模式能够处理快速的状态变化，而不会损害系统的完整性。
 
 他们开发了一个自定义测试框架，该框架可以在每秒注入数千次市场数据更新的同时，处理交易订单。这个框架帮助他们识别了模式实现中的竞态条件和并发问题。以下是他们如何在高负载下测试 `Observer` 模式的简化示例：
 
@@ -15724,13 +15669,13 @@ public void testMarketDataObserverUnderHighLoad() throws InterruptedException {
 
 通过将这些策略适应到他们的特定需求，开发团队可以确保随着系统的演进和扩展，他们的设计模式实现能够保持健壮、高性能和可维护性。
 
-## 设计模式最佳实践
+# 设计模式最佳实践
 
 ## 何时使用设计模式
 
 本节深入探讨了在 Java 开发中识别使用设计模式的合适场景的关键方面。它探索了在特定问题中选择正确模式背后的决策过程，强调了理解问题领域和模式意图的重要性。内容涵盖了选择设计模式时需要考虑的各种因素，包括可扩展性、可维护性和性能影响。它还讨论了需要避免的常见陷阱，并提供了实际示例，以说明在现实软件开发场景中何时以及如何有效地应用不同的模式。
 
-设计模式是开发者工具箱中强大的工具，但知道何时使用它们与理解如何实现它们同样关重要。关键在于识别模式设计用于解决的问题，并将它们与你在软件开发项目中所面临的挑战相匹配。在考虑使用设计模式时，务要首先明确定义你试图解决的问题。问问自己：你的系统的具体要求和限制是什么？你可能需要适应的未来潜在更改或扩展有哪些？
+设计模式是开发者工具箱中强大的工具，但知道何时使用它们与理解如何实现它们同样关键。关键在于识别模式设计用于解决的问题，并将它们与你在软件开发项目中所面临的挑战相匹配。在考虑使用设计模式时，务要首先明确定义你试图解决的问题。问问自己：你的系统的具体要求和限制是什么？你可能需要适应的未来潜在更改或扩展有哪些？
 
 判断设计模式可能合适的首要指标之一是当你在代码库中遇到反复出现的问题时。如果你发现自己在应用程序的不同部分反复编写相似的代码结构，那么可能是时候考虑一种可以抽象和标准化这种常见行为的模式了。例如，如果你频繁创建具有复杂初始化过程的对象，`Builder` 模式可以提供一个更优雅、更灵活的解决方案。
 
@@ -15785,15 +15730,8 @@ interface LogStrategy {
 
 class ConsoleLogStrategy implements LogStrategy {
     public void log(String message, LogLevel level) {
-```
-
-
-
-
-```java
-System.out.println(level + ": " + message);
-}
-
+        System.out.println(level + ": " + message);
+    }
 }
 
 class FileLogStrategy implements LogStrategy {
@@ -15902,15 +15840,15 @@ root.display();
 
 在这个示例中，`Factory Method` 模式（`DocumentFactory`）用于创建不同类型的文档，而 `Composite` 模式（`Folder`）允许将这些文档组织成树形结构。这种组合在对象创建和组织方面提供了灵活性。
 
-
-
-
-
 另一个强大的组合是将 `Observer` 模式与 `Strategy` 模式结合使用。这种配对在需要通知多个对象关于主体状态的变化，且这些对象需要根据其特定策略做出不同反应场景中特别有用。
 
 让我们考虑一个股票监控系统，其中不同类型的投资者（保守型、激进型）需要被通知股票价格的变化，并做出相应的反应：
 
-```
+
+
+## 代码示例：Observer 与 Strategy 模式的组合
+
+```java
 interface StockObserver {
   void update(String stock, double price);
 }
@@ -16007,7 +15945,7 @@ market.setStockPrice("AAPL", 150.0);
 
 以下是一个如何使用依赖注入来管理 `Factory` 模式与 `Observer` 模式之间依赖关系的示例：
 
-```
+```java
 interface Product {
   void operation();
 }
@@ -16034,18 +15972,12 @@ class ProductFactory {
         notifyObservers(product);
         return product;
     }
-}
-```
 
-
-
-
-
-```java
-for (ProductObserver observer : observers) {
-    observer.onProductCreated(product);
-}
-}
+    private void notifyObservers(Product product) {
+        for (ProductObserver observer : observers) {
+            observer.onProductCreated(product);
+        }
+    }
 }
 
 class LoggingObserver implements ProductObserver {
@@ -16056,6 +15988,7 @@ class LoggingObserver implements ProductObserver {
 ```
 
 ### 使用
+
 ```java
 List<ProductObserver> observers = Arrays.asList(new LoggingObserver());
 ProductFactory factory = new ProductFactory(observers);
@@ -16112,6 +16045,7 @@ class OnlineOrderProcessor extends OrderProcessor {
 ```
 
 ### 使用
+
 ```java
 PaymentStrategy creditCardPayment = new CreditCardPayment();
 OrderProcessor processor = new OnlineOrderProcessor(creditCardPayment);
@@ -16169,15 +16103,12 @@ class OrderProcessor implements EventListener {
 ```
 
 ### 使用
+
 ```java
 EventBus eventBus = new EventBus();
 eventBus.subscribe("OrderCreated", new OrderProcessor());
 eventBus.publish("OrderCreated", new OrderCreatedEvent("ORDER-123"));
 ```
-
-
-
-
 
 设计模式的有效文档对于维护开发团队内部的一性以及促进最佳实践至关重要。文档良好的模式对于经验丰富的开发者和新成员来说都是宝贵的资源，它们为讨论软件设计解决方案提供了通用的语言和框架。标准化的文档确保所有团队成员都能获取相同的信息，从而减少模式实现过程中的误解和不一致。
 
@@ -16197,47 +16128,49 @@ eventBus.publish("OrderCreated", new OrderCreatedEvent("ORDER-123"));
 
 以下是你如何记录观察者模式（Observer pattern）的示例：
 
+
+
 ```java
 /**
-* Observer 者模式
-* 分类: 行为型
-*
-* 意图:
-* 定义对象之间一对多的依赖关系，当一个对象的状态发生变化时，
-*所有的依赖者都会收到通知并自动更新。
-*
-* 动机:
-* 当你需要在不使相关对象紧耦合的情况下维护它们之间的一性时。
-*
-* 结构:
-*  - Subject (Observable): 知道其观察者并提供添加/移除观察者的接口。
-*  - Observer: 为通知变化的对象定义更新接口。
-*  - ConcreteSubject: 存储 ConcreteObserver 对象感兴趣的状态并发送通知。
-*  - ConcreteObserver: 维护对 ConcreteSubject 对象的引用并实现 Observer 接口。
-*
-* 参与者:
-*  - Subject (Observable)
-*  - Observer
-*  - ConcreteSubject
-*  - ConcreteObserver
-*
-* 协作:
-*  - ConcreteSubject 在发生变化时通知其观察者。
-*  - Observers 在收到通知后向 Subject 请求更新信息。
-*
-* 结果:
-*  + 支持 Subject 和 Observer 之间的松散耦合。
-*  + 允许广播通信。
-*  - 意外更新：当发生无关变化时，观察者可能会收到通知。
-*
-* 实现:
-*  1. 定义带有 update 方法的 Observer 接口。
-*  2. 实现 Subject 类，包含注册和注销观察者方法。
-*  3. 实现 ConcreteSubject，确保其在状态变化时通知观察者。
-*  4. 实现 ConcreteObserver 类，对 Subject 的更新做出反应。
-*
-* 示例代码:
-*/
+ * Observer 模式
+ * 分类: 行为型
+ *
+ * 意图:
+ * 定义对象之间一对多的依赖关系，当一个对象的状态发生变化时，
+ * 所有的依赖者都会收到通知并自动更新。
+ *
+ * 动机:
+ * 当你需要在不使相关对象紧耦合的情况下维护它们之间的一致性时。
+ *
+ * 结构:
+ *  - Subject (Observable): 知道其观察者并提供添加/移除观察者的接口。
+ *  - Observer: 为通知变化的对象定义更新接口。
+ *  - ConcreteSubject: 存储 ConcreteObserver 对象感兴趣的状态并发送通知。
+ *  - ConcreteObserver: 维护对 ConcreteSubject 对象的引用并实现 Observer 接口。
+ *
+ * 参与者:
+ *  - Subject (Observable)
+ *  - Observer
+ *  - ConcreteSubject
+ *  - ConcreteObserver
+ *
+ * 协作:
+ *  - ConcreteSubject 在发生变化时通知其观察者。
+ *  - Observers 在收到通知后向 Subject 请求更新信息。
+ *
+ * 结果:
+ *  + 支持 Subject 和 Observer 之间的松散耦合。
+ *  + 允许广播通信。
+ *  - 意外更新：当发生无关变化时，观察者可能会收到通知。
+ *
+ * 实现:
+ *  1. 定义带有 update 方法的 Observer 接口。
+ *  2. 实现 Subject 类，包含注册和注销观察者方法。
+ *  3. 实现 ConcreteSubject，确保其在状态变化时通知观察者。
+ *  4. 实现 ConcreteObserver 类，对 Subject 的更新做出反应。
+ *
+ * 示例代码:
+ */
 
 // Observer interface
 interface Observer {
@@ -16292,31 +16225,36 @@ subject.attach(observer2);
 subject.setState("New State");
 
 /**
-* 已知用途:
-* - 用户界面中的事件处理系统
-* - 发布-订阅模式中的订阅机制
-*
-* 相关模式:
-* - Mediator: 可用于协调更新
-* - Singleton: 常用于 Subject
-*/
+ * 已知用途:
+ * - 用户界面中的事件处理系统
+ * - 发布-订阅模式中的订阅机制
+ *
+ * 相关模式:
+ * - Mediator: 可用于协调更新
+ * - Singleton: 常用于 Subject
+ */
 ```
 
-
-
+## 设计模式在敏捷开发中的集成
 
 本节探讨了设计模式在敏捷开发方法论中的集成，重点关注如何在迭代和增量软件开发过程中有效地适配和应用这些模式。敏捷方法论强调灵活性、协作和快速交付，这有时似乎与设计模式的结构化性质相抵触。然而，在用得当的情况下，设计模式可以显著增强敏捷开发实践，在遵循敏捷原则的同时提高代码质量、可维护性和扩展性。
 
-敏捷开发方法论（如 `Scrum` 和 `极限编程 (XP)`）优先考虑在短迭代中交付可运行的软件。在引入设计模式时，这种方法可能会带来挑战，因为模式通常需要前期的规划和对长期架构决策的考虑。然而，设计模式的益处（包括改进代码组织、重用性和可维护性）与生产高质量、适应性软件的敏捷目标高度合。
+敏捷开发方法论（如 `Scrum` 和 `极限编程 (XP)`）优先考虑在短迭代中交付可运行的软件。在引入设计模式时，这种方法可能会带来挑战，因为模式通常需要前期的规划和对长期架构决策的考虑。然而，设计模式的益处（包括改进代码组织、重用性和可维护性）与生产高质量、适应性软件的敏捷目标高度一致。
 
 要将设计模式有效地集成到敏捷开发中，团队必须在敏捷性和结构化之间取得平衡。这涉及采用灵活的模式实现方法，专注于提供即时价值的模式，同时对随着项目进展的重构和演进保持开放态度。以下是将设计模式适配敏捷方法论的一些策略：
 
 1. **增量式模式应用**：不要在初期就实现复杂模式，而是随着需求的出现逐渐引入。这种方法符合敏捷的响应变化的原则，并避免了在开发过程早期进行过度工程。
+
 2. **模式重构**：准备好随着系统的增长而重构和演进模式实现。敏捷方法论鼓励持续改进，这也延伸到了设计模式的应用。
+
 3. **即时模式选择**：根据当前的迭代目标和即时需求选择模式，而不是试图预测所有的未来需求。这种方法有助于在保持敏捷性的同时，从基于模式的设计中获益。
+
 4. **协作式模式决策**：让整个开发团队参与模式选择和实现的讨论。这符合敏捷的团队协作和集体所有权原则。
-5. **模式驱动的用户故事**：在适当的情况下，将模式相关的任务整合到用户故事或待办事项中。这确保了模式的实现与为最终用户交付价值紧挂钩。
-6. **轻量级文档**：在项目内部维护简洁、时的模式使用文档。这有助于知识共享，并帮助新团队成员快速理解系统设计。
+
+5. **模式驱动的用户故事**：在适当的情况下，将模式相关的任务整合到用户故事或待办事项中。这确保了模式的实现与为最终用户交付价值紧密相关。
+
+6. **轻量级文档**：在项目内部维护简洁、及时的模式使用文档。这有助于知识共享，并帮助新团队成员快速理解系统设计。
+
 7. **带模式的持续集成**：频繁集成模式实现，并确保它们被自动化测试覆盖。这支持了敏捷的持续集成和交付实践。
 
 让我们来看一个在敏捷项目中如何增量地引入 `Strategy` 模式的示例：
@@ -16383,17 +16321,15 @@ processor.setPaymentStrategy(new CreditCardPayment());
 processor.processPayment(100.00);
 ```
 
+## 敏捷开发中模式应用的最佳实践
 
+1. **模式库**：开发并维护一个针对团队特定领域和技术栈的常用模式库。
 
+2. **迭代的模式精炼**：随着项目进展和需求变化，对模式实现的演进保持开放态度。
 
+3. **指标与反馈**：监控模式使用对代码质量、开发速度和可维护性的影响。利用这些反馈来指导未来的模式采用决策。
 
-2. **模式库**：开发并维护一个针对团队特定领域和技术栈的常用模式库。
-
-3. **迭代的模式精炼**：随着项目进展和需求变化，对模式模式的演进保持开放态度。
-
-4. **指标与反馈**：监控模式使用对代码质量、开发速度和可维护性的影响。利用这些反馈来指导指导未来的模式采用决策。
-
-5. **模式感知规划**：在冲刺计划（sprint planning）和待办列表梳理（backlog grooming）会议期间考虑潜在的模式应用。
+4. **模式感知规划**：在冲刺计划（`sprint planning`）和待办列表梳理（`backlog grooming`）会议期间考虑潜在的模式应用。
 
 通过采用这些策略，敏捷团队可以利用设计模式的力量创建更健壮、更易于维护的软件，同时保持敏捷开发标志性的灵活性和响应能力。关键是将模式视为支持敏捷原则的工具，而不是限制开发的僵性结构。
 
@@ -16401,15 +16337,17 @@ processor.processPayment(100.00);
 
 ## 利用 Java 框架实现模式
 
-利用 Java 框架实现模式 - Spring、Hibernate 以及其他框架
-
 本节探讨了设计模式在流行的 Java 框架中的集成，重点关注这些框架如何利用模式提供健壮、可扩展且可维护的解决方案。我们将检查 `Spring`、`Hibernate` 以及其他广泛使用的框架如何将设计模式纳入其架构，以及开发者如何利用这些实现来构建更高效、更灵活的应用。通过理解这些框架中的模式用法，开发者可以对框架选择做出明智决策，有效地扩展功能，并在自己的自定义解决方案应用类似的原理。
 
-Java 框架通常包含多个设计模式来解决复杂问题，并为开发者提供强大的复复抽象。这些框架是模式如何在现实场景中应用的极实例，为模式实现和组合的最佳实践提供了见解。让我们探索一些关键框架及其模式用法：
+Java 框架通常包含多个设计模式来解决复杂问题，并为开发者提供强大的抽象。这些框架是模式如何在现实场景中应用的极佳实例，为模式实现和组合的最佳实践提供了见解。让我们探索一些关键框架及其模式用法：
+
+### Spring Framework
 
 `Spring Framework` 是最常用的 Java 框架之一，以其全面的生态系统和灵活的架构闻名。它高度依赖各种设计模式来实现依赖注入、面向切面编程和模块化设计的目标。Spring 中一些著名的模式实现包括：
 
-1. **依赖注入（DI）模式**：`Spring` 的核心功能围绕 `DI` 模式构建，它是控制反转 (IoC) 原则的实现。这种模式允许组件之间松耦合，使系统更具模块化且易于测试。这里是 `Spring` 使用 DI 的简单示例：
+#### 1. 依赖注入（DI）模式
+
+`Spring` 的核心功能围绕 `DI` 模式构建，它是控制反转 (`IoC`) 原则的实现。这种模式允许组件之间松耦合，使系统更具模块化且易于测试。这里是 `Spring` 使用 DI 的简单示例：
 
 ```java
 @Component
@@ -16446,7 +16384,9 @@ public class AppConfig {
 
 在这个示例中，`Spring` 自动将 `UserRepository` 注入到 `UserService` 中，管理对象的创建和生命周期。
 
-2. **代理模式**：`Spring AOP`（面向切面编程）使用动态代理来实现日志、安全和事务管理等交叉关注点。这允许开发者将这些关注点与核心业务逻辑分离。这里是一个简单的切面示例：
+#### 2. 代理模式
+
+`Spring AOP`（面向切面编程）使用动态代理来实现日志、安全和事务管理等交叉关注点。这允许开发者将这些关注点与核心业务逻辑分离。这里是一个简单的切面示例：
 
 ```java
 @Aspect
@@ -16465,7 +16405,9 @@ public class LoggingAspect {
 
 该切面记录了 `com.example.service` 包下所有方法的执行情况。
 
-3. **模板方法模式**：`Spring` 的 `JdbcTemplate` 和 `RestTemplate` 使用此模式定义算法的骨架，同时允许子类重写特定步骤。例如：
+#### 3. 模板方法模式
+
+`Spring` 的 `JdbcTemplate` 和 `RestTemplate` 使用此模式定义算法的骨架，同时允许子类重写特定步骤。例如：
 
 ```java
 @Repository
@@ -16487,22 +16429,32 @@ public class UserJdbcRepository {
 }
 ```
 
-在这里，`JdbcTemplate` 处理了样板代码，允许开发者专注于映射。`Hibernate` 作为一个流行的 ORM（对象-关系映射）框架，也大量使用了模式：
+在这里，`JdbcTemplate` 处理了样板代码，允许开发者专注于映射。
 
-1. **工厂模式**：`Hibernate` 使用 `SessionFactory` 来创建 `Session` 对象，这些对象用于数据库操作。这种模式集中了复杂对象的创建：
+### Hibernate
+
+`Hibernate` 作为一个流行的 ORM（对象-关系映射）框架，也大量使用了模式：
+
+#### 1. 工厂模式
+
+`Hibernate` 使用 `SessionFactory` 来创建 `Session` 对象，这些对象用于数据库操作。这种模式集中了复杂对象的创建：
+
+
 
 ```java
 SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 Session session = sessionFactory.openSession();
 try {
     User user = session.get(User.class, 1L);
-// Perform operations with user
+    // Perform operations with user
 } finally {
     session.close();
 }
 ```
 
-2. **代理模式**：`Hibernate` 使用代理来提高性能。当检索到一个带有懒加载关联的实体时，，`Hibernate` 返回一个代理对象，该对象在被访问时加载实际数据：
+## 2. 代理模式
+
+`Hibernate` 使用代理来提高性能。当检索到一个带有懒加载关联的实体时，`Hibernate` 返回一个代理对象，该对象在被访问时加载实际数据：
 
 ```java
 @Entity
@@ -16522,7 +16474,9 @@ User user = session.get(User.class, 1L);
 List<Order> orders = user.getOrders(); // 这触发了懒加载
 ```
 
-3. **观察者模式**：`Hibernate` 的事件系统使用这种模式允许在实体生命周期的各个点执行自定义逻辑：
+## 3. 观察者模式
+
+`Hibernate` 的事件系统使用这种模式允许在实体生命周期的各个点执行自定义逻辑：
 
 ```java
 @Entity
@@ -16544,23 +16498,18 @@ public class UserListener {
 }
 ```
 
-其他框架如 `Apache Struts` 和 `Java EE` 也包含了各种设计模式。例如，`Struts` 使用前端控制器（Front Controller）模式处理 Web 请求，而 `Java EE` 的 `EJB`（企业豆）使用会话外观（Session Facade）模式来简化客户端对业务逻辑的访问。
+其他框架如 `Apache Struts` 和 `Java EE` 也包含了各种设计模式。例如，`Struts` 使用前端控制器模式处理 Web 请求，而 `Java EE` 的 `EJB`（企业豆）使用会话外观模式来简化客户端对业务逻辑的访问。
 
 理解这些框架如何实现设计模式可以为开发者提供宝贵的见解。它允许他们：
 
 - 通过遵循现有的模式结构有效地扩展框架。
 - 创建与框架无缝集成的自定义组件。
 - 在自己的应用程序设计中应用类似的模式方法。
-
-
-
-
-
-# 4. 根据框架的模式实现以及它们与项目需求的匹配程度，对使用哪个框架做出明智决策。
+- 根据框架的模式实现以及它们与项目需求的匹配程度，对使用哪个框架做出明智决策。
 
 了解这些框架中模式的使用，将如何影响你在为新项目选择框架的决策过程？你会优先考虑哪些因素？
 
-在利用这些框架时，以下几至关重要：
+在利用这些框架时，以下几点至关重要：
 
 1. 理解底层模式，以便有效地使用框架并在必要时对其进行扩展。
 2. 避免通过尝试实现矛盾的模式来与框架的设计“对着干”。
@@ -16569,15 +16518,15 @@ public class UserListener {
 
 通过利用这些框架及其模式实现，开发者可以构建更健壮、可维护且可扩展的应用程序，同时缩短开发时间并减少潜在错误。关键在于不仅要理解如何使用框架，还要理解它为什么要这样设计，以及它的模式使用如何解决常见的开发挑战。
 
-## 使用设计模式优化代码
+# 使用设计模式优化代码
 
 设计模式为优化代码性能和增强可维护性提供了强大的工具。本节将探索开发者如何利用这些模式来创建更高效、更可持续的 Java 应用程序。我们将检查有助于性能提升的特定模式，讨论使用模式增强代码可维护性的策略，并提供实现这些优化的实际示例。通过理解和应用这些技术，开发者可以创建健壮的系统，这些系统不仅运行良好，还能适应未来的变化和需求。
 
 设计模式在使用得当时，可以显著提高 Java 应用程序的性能和可维护性。让我们探索各种模式如何贡献于这些方面：
 
-### 性能优化
+## 性能优化
 
-`Flyweight`模式是优化内存使用的极佳选择，特别是对于涉及大量相似对象的场景。通过在多个对象之间共享状态的公共部分，减少了内存占用并提高了系统的整体性能。考虑一个需要表示数千个字符的文本编辑器应用程序：
+`Flyweight` 模式是优化内存使用的极佳选择，特别是对于涉及大量相似对象的场景。通过在多个对象之间共享状态的公共部分，减少了内存占用并提高了系统的整体性能。考虑一个需要表示数千个字符的文本编辑器应用程序：
 
 ```java
 public class CharacterFlyweight {
@@ -16608,7 +16557,7 @@ public class CharacterFlyweightFactory {
 
 在这个示例中，我们没有为每个字符创建一个新对象，而是复用具有相同属性的现有对象，显著减少了内存消耗。
 
-`Proxy`模式可以通过延迟加载和缓存机制来增强性能。这在处理资源密集型操作或远程服务调用时特别有用。这是一个延迟加载大图像的虚拟代理示例：
+`Proxy` 模式可以通过延迟加载和缓存机制来增强性能。这在处理资源密集型操作或远程服务调用时特别有用。这是一个延迟加载大图像的虚拟代理示例：
 
 ```java
 public interface Image {
@@ -16651,7 +16600,7 @@ public class ProxyImage implements Image {
 
 该代理推迟了 `RealImage` 对象的创建，直到需要，如果图像从未被显示，就可以节省资源。
 
-`Strategy`模式可以用于为同一任务实现不同的算法，允许根据当前上下文或输入大小在运行时选择效率最高的算法。这可以带来性能：
+`Strategy` 模式可以用于为同一任务实现不同的算法，允许根据当前上下文或输入大小在运行时选择效率最高的算法。这可以带来性能提升：
 
 ```java
 public interface SortStrategy {
@@ -16694,9 +16643,9 @@ sorter.performSort(array);
 
 这种方法允许应用程序根据输入大小选择最有效的排序算法，从而优化性能。
 
-### 可维护性改进
+## 可维护性改进
 
-`Observer`模式通过解耦需要通知状态的对象来增强可维护性。这减少了依赖，并可以在不修改现有代码的情况下添加新的订阅者：
+`Observer` 模式通过解耦需要通知状态的对象来增强可维护性。这减少了依赖，并可以在不修改现有代码的情况下添加新的订阅者：
 
 ```java
 import java.util.ArrayList;
@@ -16742,7 +16691,7 @@ public class ConcreteObserver implements Observer {
 
 这种模式允许在不修改主体的情况下轻松添加新的观察者，提高了扩展性。
 
-`Template Method`模式通过在基类中定义算法骨架同时允许子类覆盖特定步骤来提高可维护性。这促进了代码复用并确保了相关算法的一致性：
+`Template Method` 模式通过在基类中定义算法骨架同时允许子类覆盖特定步骤来提高可维护性。这促进了代码复用并确保了相关算法的一致性：
 
 ```java
 public abstract class DataProcessor {
@@ -16775,16 +16724,7 @@ public class XMLDataProcessor extends DataProcessor {
 
     @Override
     protected void processSpecificData() {
-    }
-}
-```
-
-
-
-
-
-```java
-System.out.println("Processing XML-specific data");
+        System.out.println("Processing XML-specific data");
     }
 }
 ```
@@ -16854,11 +16794,21 @@ public class Milk extends CoffeeDecorator {
 
 通过深思熟虑地应用这些模式和原则，开发者可以创建高效、高性能，又易于维护且能适应未来变化的 Java 应用程序。关键在于理解每个模式的优缺点，并将它们应用在对整体系统架构和代码质量提供清晰收益的场景中。
 
-## 设计模式的未来趋势
+# 设计模式的未来趋势
+
+
+
+# Java 开发中设计模式的未来
 
 Java 开发中设计模式的未来正在快速演变，受到新兴技术和不断变化的软件架构范式的影响。本节将探索设计模式的最新趋势及其对 Java 开发实践的潜在影响。
 
-随着技术的进步，新的模式不断出现以应对软件开发的现代挑战。微服务架构催生了如 `Circuit Breaker`（熔断器）之类的模式，它通过防止分布式系统的级联故障来增强系统的韧性。这是一个简单的实现：
+## 新兴技术驱动的模式
+
+随着技术的进步，新的模式不断出现以应对软件开发的现代挑战。
+
+### 微服务架构模式
+
+微服务架构催生了如 `Circuit Breaker`（熔断器）之类的模式，它通过防止分布式系统的级联故障来增强系统的韧性。这是一个简单的实现：
 
 ```java
 public class CircuitBreaker {
@@ -16897,6 +16847,8 @@ public class CircuitBreaker {
 
 这种模式防止对故障服务的重复调用，允许其恢复并提高整体稳定性。
 
+### 响应式编程模式
+
 响应式编程的兴起导致了 `Reactive Observer`（响应式观察者）等模式，它是 `Observer` 模式的演变。这种模式在处理数据流时特别有用：
 
 ```java
@@ -16925,6 +16877,8 @@ public class ReactiveObserver {
 
 这种模式允许高效地处理异步事件，这是现代响应式应用中至关重要的特性。
 
+### 云计算模式
+
 云计算的日益普及导致了云特定模式的发展。例如，`Bulkhead`（隔离）模式通过隔离应用程序的组件来防止级联故障：
 
 ```java
@@ -16932,8 +16886,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
 public class BulkheadExample {
-    private ThreadExecutor paymentPool;
-    private ThreadExecutor orderPool;
+    private ThreadPoolExecutor paymentPool;
+    private ThreadPoolExecutor orderPool;
 
     public BulkheadExample() {
         paymentPool = (ThreadPoolExecutor) Executors.newFixedThreadPool(10);
@@ -16951,6 +16905,8 @@ public class BulkheadExample {
 ```
 
 这种模式确保了系统的某部分过载时不会影响整个应用程序。
+
+### 机器学习与 AI 模式
 
 机器学习和人工智能对设计模式的影响也变得显而易见。例如，`Strategy`（策略）模式正被用于切换不同的机器学习模型：
 
@@ -16988,6 +16944,8 @@ public class ModelSelector {
 
 这种方法允许根据特定的需求或性能特征轻松切换不同的机器学习模型。
 
+### 无服务器计算模式
+
 无服务器计算的出现也影响着设计模式。`Event-Driven`（事件驱动）模式正被用于无服务器架构：
 
 ```java
@@ -17002,34 +16960,25 @@ public class ServerlessEventHandler {
                 handleOrderPlaced(event);
                 break;
             default:
+                System.out.println("Unknown event type: " + eventType);
         }
     }
-}
-```
 
+    private void handleUserCreated(Map<String, Object> event) {
+        // 处理用户创建的逻辑
+    }
 
-
-
-
-```java
-System.out.println("Unknown event type: " + eventType);
-}
-}
-
-private void handleUserCreated(Map<String, Object> event) {
-    // 处理用户创建的逻辑
-}
-
-private void handleOrderPlaced(Map<String, Object> event) {
-    // 处理订单提交的逻辑
-}
-
+    private void handleOrderPlaced(Map<String, Object> event) {
+        // 处理订单提交的逻辑
+    }
 }
 ```
 
 这种模式允许在无服务器环境中高效地处理各种事件，促进了松耦合和可扩展性。
 
-对安全性的日益日益关注导致了特定安全模式的出现。例如，**凭据提供者（Credential Provider）模式**提供了一种安全管理和分发凭据的 get：
+### 安全模式
+
+对安全性的日益关注导致了特定安全模式的出现。例如，`Credential Provider`（凭据提供者）模式提供了一种安全管理和分发凭据的方式：
 
 ```java
 public interface CredentialProvider {
@@ -17044,9 +16993,11 @@ public class EnvironmentCredentialProvider implements CredentialProvider {
 
 public class SecureService {
     private CredentialProvider credentialProvider;
+
     public SecureService(CredentialProvider credentialProvider) {
         this.credentialProvider = credentialProvider;
     }
+
     public void performSecureOperation() {
         String credential = credentialProvider.getCredential("DATABASE");
         // 安全地使用凭据
@@ -17054,9 +17005,15 @@ public class SecureService {
 }
 ```
 
-这种模式通过凭凭据管理并允许轻松轮换凭据来增强安全性。
+这种模式通过集中凭据管理并允许轻松轮换凭据来增强安全性。
 
-随着 Java 的不断演进，我们正看到利用新语言特征的模式。Java 17 引入的**密封类（Sealed Classes）模式**提供了一种限制类层次结构的方法：
+## 语言特性驱动的模式
+
+随着 Java 的不断演进，我们正看到利用新语言特征的模式。
+
+### 密封类模式
+
+Java 17 引入的 `Sealed Classes`（密封类）模式提供了一种限制类层次结构的方法：
 
 ```java
 public sealed interface Shape
@@ -17066,9 +17023,11 @@ public sealed interface Shape
 
 public final class Circle implements Shape {
     private double radius;
+
     public Circle(double radius) {
         this.radius = radius;
     }
+
     @Override
     public double area() {
         return Math.PI * radius * radius;
@@ -17080,7 +17039,9 @@ public final class Circle implements Shape {
 
 这种模式允许更受控的扩展性，并可以带来更健壮且易于维护的代码。
 
-软件系统日益增长的复杂度导致了管理这种复杂性的模式的发展。例如，**Saga 模式**被用于管理分布式系统中的长事务：
+### 分布式事务模式
+
+软件系统日益增长的复杂度导致了管理这种复杂性的模式的发展。例如，`Saga` 模式被用于管理分布式系统中的长事务：
 
 ```java
 public interface SagaStep<T> {
@@ -17090,6 +17051,7 @@ public interface SagaStep<T> {
 
 public class OrderSaga {
     private List<SagaStep<OrderContext>> steps;
+
     public OrderSaga() {
         steps = new ArrayList<>();
         steps.add(new ValidateInventoryStep());
@@ -17097,6 +17059,7 @@ public class OrderSaga {
         steps.add(new ProcessPaymentStep());
         steps.add(new UpdateOrderStep());
     }
+
     public void execute(OrderContext context) {
         for (SagaStep<OrderContext> step : steps) {
             try {
@@ -17107,6 +17070,7 @@ public class OrderSaga {
             }
         }
     }
+
     private void compensate(OrderContext context, SagaStep<OrderContext> failedStep) {
         for (int i = steps.indexOf(failedStep) - 1; i >= 0; i--) {
             steps.get(i).compensate(context);
@@ -17115,17 +17079,19 @@ public class OrderSaga {
 }
 ```
 
-这种模式通过将复杂的分布式事务分解分为一系列更小的步骤，来帮助管理这些事务。
+这种模式通过将复杂的分布式事务分解为一系列更小的步骤，来帮助管理这些事务。
+
+## 未来展望
 
 展望未来，你认为这些新兴模式将如何影响我们设计和实现 Java 的方式？新模式可能会带来哪些挑战，开发者应该如何做准备？设计模式的演进反映了软件开发格局的不断变化。随着新技术的出现和软件架构变得复杂，设计模式将继续适应。紧跟这些趋势并理解如何有效应用它们的开发者将能够构建健壮、可扩展且易于维护的 Java 应用。
 
-## 真实世界案例研究
+# 真实世界案例研究：使用设计模式的电子商务应用程序
 
-## 使用设计模式的电子商务应用程序
+本节深入探讨了设计模式在电子商务系统中的应用，重点关注订单处理、库存管理和结账功能。我们探索了如何结合各种模式来创建一个健壮、可扩展且易于维护的架构以处理电子商务业务。在开发电子商务应用程序时，主要挑战之一是创建一个能够处理复杂订单处理，同时保持库存水平准确并提供流畅体验的系统。设计模式通过为常见问题提供经过测试的解决方案，在解决这些挑战中起着关键的作用。
 
-本节深入探讨了设计模式在电子商务系统中的应用，重点关注订单处理、库存管理和结账功能。我们探索了如何结合各种模式来创建一个健壮、可扩展且易于维护的架构以处理电子商务业务。在开发电子商务应用程序时，主要挑战之一是创建一个能够处理复杂订单处理，同时保持库存水平准确并提供流畅体验的系统。设计模式通过为常见问题提供经过测试的解决方案，在解决这些挑战中着着关重要的作用。
+## 订单处理：工厂方法模式
 
-让我们从订单处理开始。**工厂方法模式（Factory Method）**在这里特别有用，因为它允许创建不同订单，而不会将订单过程与特定类紧耦合。这是一个示例：
+让我们从订单处理开始。`Factory Method`（工厂方法模式）在这里特别有用，因为它允许创建不同订单，而不会将订单过程与特定类紧耦合。这是一个示例：
 
 ```java
 public interface Order {
@@ -17163,7 +17129,11 @@ public class ExpressOrderFactory extends OrderFactory {
 
 这种方法允许在不修改现有代码的情况下轻松扩展订单类型。例如，如果我们需要添加一种新类型的订单，只需创建一个实现 `Order` 接口的新类以及相应的工厂即可。
 
-库存管理是电子商务系统的另一个关键方面。在这里，**观察者模式（Observer pattern）**在维护实时库存水平方面特别有效。考虑以下实现：
+## 库存管理：观察者模式
+
+库存管理是电子商务系统的另一个关键方面。在这里，`Observer pattern`（观察者模式）在维护实时库存水平方面特别有效。考虑以下实现：
+
+
 
 ```java
 import java.util.ArrayList;
@@ -17203,10 +17173,6 @@ public class InventoryDisplay implements InventoryObserver {
 ```
 
 这种模式允许在库存水平发生变化时自动通知系统的各个组件，确保应用程序的所有部分都有最新信息。
-
-
-
-
 
 对于结账过程，可以使用`Strategy`模式来灵活地处理不同的支付方法。以下是实现方式：
 
@@ -17358,12 +17324,7 @@ public class ShippedState implements OrderState {
 }
 ```
 
-
-
-
-在银行系统中，实现稳健的账户管理和交易处理功能至关重要。创建性模式在开发这些系统时起着至关重要的作用，提供了确保灵活性、扩展性和安全性的解决方案。
-
-## 账户管理
+# 账户管理
 
 让我们从账户管理开始。`Abstract Factory`模式在这里特别有用，因为它允许创建不同类型的账户，而不会将账户创建过程与特定的账户类紧密耦合。以下是一个实现示例：
 
@@ -17444,7 +17405,7 @@ public class CheckingAccountFactory implements AccountFactory {
 
 这种方法允许在不修改现有代码的情况下轻松扩展账户类型。例如，如果我们我们需要添加一种新类型的账户，只需创建一个实现 `Account` 接口的新类以及相应的工厂即可。
 
-## 交易处理
+# 交易处理
 
 交易处理是银行系统的另一个关键方面。在这里，`Builder`模式在构建复杂的交易对象时特别有效。考虑以下实现：
 
@@ -17499,7 +17460,9 @@ public class Transaction {
 }
 ```
 
-该模式允许灵活创建具有不同属性的交易对象。对于处理不同类型的交易，我们考虑使用 `Factory Method`模式：
+
+
+该模式允许灵活创建具有不同属性的交易对象。对于处理不同类型的交易，我们考虑使用 `Factory Method` 模式：
 
 ```java
 public interface TransactionProcessor {
@@ -17549,7 +17512,7 @@ public class TransferFactory extends TransactionFactory {
 
 ## 系统集成
 
-为了将这些组件整合在一起，我们使用 `Facade`模式为这个复杂的子系统提供一个简化的接口：
+为了将这些组件整合在一起，我们使用 `Facade` 模式为这个复杂的子系统提供一个简化的接口：
 
 ```java
 public class BankingSystem {
@@ -17585,8 +17548,6 @@ public class BankingSystem {
     }
 }
 ```
-
-
 
 该外观模式（Facade）为主要的银行操作提供了一个简单的接口，从客户端代码中隐藏了底层系统的复杂性。
 
@@ -17653,7 +17614,7 @@ public class AuthenticationManager {
 
 在可扩展性方面，这些模式的使用可以显著提高系统处理增长的能力。例如，抽象工厂模式（Abstract Factory）允许方便地添加新的账户类型，而工厂方法模式（Factory Method）则确保了可以在不破坏现有代码的情况下添加新的事务类型。
 
-我们如何才能确保银行系统在演过程中仍然保持可维护性呢？一个关键策略是在使用设计模式的同时，遵循 SOLID 原则。例如，通过将关注点分离到不同的类和接口（如 `Account`、`TransactionProcessor`）来尊重单一职责原则。通过允许扩展而不进行修改，维护了开闭原则，正如我们所看到的，我们能够添加新的账户类型或事务处理器，而无需更改现有代码。
+我们如何才能确保银行系统在演进过程中仍然保持可维护性呢？一个关键策略是在使用设计模式的同时，遵循 SOLID 原则。例如，通过将关注点分离到不同的类和接口（如 `Account`、`TransactionProcessor`）来尊重单一职责原则。通过允许扩展而不进行修改，维护了开闭原则，正如我们所看到的，我们能够添加新的账户类型或事务处理器，而无需更改现有代码。
 
 总之，创建型设计模式在银行系统中的应用为处理复杂操作提供了一个健壮的框架，同时保持了灵活性、可扩展性和安全性。通过利用抽象工厂、`Builder`、`Factory Method` 和 `Singleton` 等模式，开发者可以创建出不仅功能完备而且能够适应变化的业务需求和技术进步的系统。随着银行技术的不断演进，这些模式的审慎应用对于构建能够应对这一关键且高度监管行业挑战的系统将至关重要。
 
@@ -17661,7 +17622,7 @@ public class AuthenticationManager {
 
 ## 社交媒体平台与行为模式
 
-社交媒体平台章节探讨了行为设计模式在开发动态交互功能中的应用。我们关注三个核心组件：通知、信息流生成和用户交互。本章的这部分展示了如何利用行为模式来创建灵活、高效且引人入目的社交媒体功能。通过实际的代码示例和详细说明，我们阐述这些模式如何协同工作，构建一个能够处理复杂用户交互和实时更新的响应式可扩展社交媒体系统。
+社交媒体平台章节探讨了行为设计模式在开发动态交互功能中的应用。我们关注三个核心组件：通知、信息流生成和用户交互。本章的这部分展示了如何利用行为模式来创建灵活、高效且引人入胜的社交媒体功能。通过实际的代码示例和详细说明，我们阐述这些模式如何协同工作，构建一个能够处理复杂用户交互和实时更新的响应式可扩展社交媒体系统。
 
 在社交媒体平台中，行为设计模式在管理复杂用户交互、实时更新和高效数据处理方面起着关键作用。让我们探索如何应用这些模式来创建健壮的通知系统、动态信息流生成和交互式用户体验。
 
@@ -17868,8 +17829,6 @@ class SocialMediaFacade {
 
 `Facade` 为底层系统提供了简化的接口。除了这些模式之外，我们还可能使用 `State` 来管理用户状态。
 
-
-
 资源管理是游戏开发的一个关键方面，`Flyweight` 模式对于优化内存占用极其有用，特别是对于重复的游戏元素，例如 2D 游戏中的瓷砖块或粒子系统中的粒子：
 
 ```java
@@ -18012,10 +17971,7 @@ class GameEngine {
 }
 ```
 
-
- 标签似乎不完整（在结尾处中断了）。根据您提供的代码逻辑和上下文，我为您翻译了已给出的完整部分：
-
-[content]
+标签似乎不完整（在结尾处中断了）。根据您提供的代码逻辑和上下文，我为您翻译了已给出的完整部分：
 
 ```java
     void removeObserver(Observer o);
@@ -18077,6 +18033,8 @@ class AlertSystem implements Observer {
 在这个示例中，`WeatherStation` 充当主体（subject），而 `DataLogger` 和 `AlertSystem` 是观察者（observers）。当气象站的测量数据变化时，它会通知所有注册的观察者，这些观察者会根据特定的职责做出响应。
 
 我们如何扩展这种模式以处理更复杂的 IoT 场景？考虑一个具有多种类型传感器和各种数据消费者的系统。我们可以使用接口和泛型创建一个更灵活的架构：
+
+
 
 ```java
 interface IoTSensor<T> {
@@ -18190,7 +18148,7 @@ class EventProcessingSystem implements IoTObserver<Float> {
 }
 ```
 
-这种设计允许灵活的事件处理策略，可以轻松地从系统中添加或移除。可以实现不同类型的事件处理器来处理 IoT 数据的各个方面，例如阈值监控、异常检测或数据聚合。在大规模 IoT 系统中，可扩展性是一个关关的问题。我们如何确保我们的 `Observer` 模式实现能够高效处理大量的传感器和观察者？一种方法是使用带有消息队列的发布/订阅系统：
+这种设计允许灵活的事件处理策略，可以轻松地从系统中添加或移除。可以实现不同类型的事件处理器来处理 IoT 数据的各个方面，例如阈值监控、异常检测或数据聚合。在大规模 IoT 系统中，可扩展性是一个关键的问题。我们如何确保我们的 `Observer` 模式实现能够高效处理大量的传感器和观察者？一种方法是使用带有消息队列的发布/订阅系统：
 
 ```java
 import java.util.concurrent.BlockingQueue;
@@ -18262,24 +18220,21 @@ class EventConsumer implements Runnable {
 }
 ```
 
-
-
-
 这种模式如何应用到真实的物联网（IoT）场景中？考虑一个智能家居系统，各种传感器（温度、湿度、运动等）需要与不同的子系统（气候控制、安全、能源管理）进行通信。`Observer` 模式结合事件总线（event bus）方法可以提供一种灵活且可扩展的架构，在不修改现有组件的情况下即可轻松添加新的传感器和子系统。
 
 总之，`Observer` 模式为构建灵活且可扩展的物联网系统提供了强大的基础。通过将传感器与数据消费者解耦，它允许系统易于扩展和修改。当与事件处理和消息队列等其他模式和技术相结合时，它可以处理物联网应用中常见的复杂、实时和大量数据场景。
 
 还有哪些设计模式可以补充物联网系统中的 `Observer` 模式？像 `Command` 或 `责任链`（Chain of Responsibility）这样的模式如何被集成以处理更复杂的事件处理场景？
 
-## 使用模式重构遗留系统
+# 使用模式重构遗留系统
 
-## 使用模式重构遗留系统 - 代码库现代化与读性增强
+## 使用模式重构遗留系统 - 代码库现代化与可读性增强
 
 本节探讨了使用设计模式重构遗留系统的关键过程，重点关注代码库的现代化和可读性的增强。我们深入研究了识别需要改进区域、选择适当模式以及实施提高系统可维护性和可扩展性更改的实用策略。通过真实世界的示例和代码演示，我们说明了设计模式如何将过时的单体结构转换为更灵活、模块化的架构。讨论强调了增量重构、测试策略以及管理更新遗留代码相关风险的重要性。
 
 遗留系统在软件开发中经常面临重大挑战，特点是技术过时、依赖关系复杂以及维护性差。这些系统虽然对许多组织至关重要，但可能成为创新和敏捷性的瓶颈。使用设计模式重构此类系统提供了一种结构化的现代化方法。
 
-遗留系统的重构于对现有代码库的彻底分析。这包括识别高复杂度、频繁更改或性能瓶颈的区域。代码指标（如圈复杂度、耦合和内聚）可以为潜在的重构目标提供宝贵的见解。
+遗留系统的重构始于对现有代码库的彻底分析。这包括识别高复杂度、频繁更改或性能瓶颈的区域。代码指标（如圈复杂度、耦合和内聚）可以为潜在的重构目标提供宝贵的见解。
 
 考虑一个用于零售管理应用的遗留系统。原始实现可能具有具有紧耦合组件的单体结构：
 
@@ -18333,6 +18288,14 @@ public class RetailFacade {
 
 这种重构引入了更清晰的关注点分离，每个服务负责系统的某个方面。为了进一步提高系统的灵活性和可扩展性，我们可以在 `Facade` 模式的基础上引入 `Strategy` 模式来处理订单：
 
+
+
+# 遗留系统重构设计模式
+
+## 门面模式简化复杂子系统
+
+遗留系统通常包含难以使用和维护的复杂子系统。`Facade`（门面）模式为这些子系统提供了一个简化的接口。
+
 ```java
 public interface OrderProcessing {
     void processOrder(Order order);
@@ -18366,6 +18329,8 @@ public class RetailFacade {
     }
 }
 ```
+
+## 装饰器模式增强日志功能
 
 遗留系统经常存在日志记录差的问题。可以使用 `Decorator` 模式来添加日志功能而不修改现有代码：
 
@@ -18402,6 +18367,8 @@ public class LoggingOrder implements OrderProcessor {
 
 这种装饰器在不更改现有 `OrderProcessor` 实现的情况下添加了日志功能，遵循了开闭原则。
 
+## 规则引擎模式管理业务规则
+
 随着遗留系统随时间积累了复杂的业务规则，可以使用 `Rules Engine` 模式来更有效地管理和执行这些规则：
 
 ```java
@@ -18429,22 +18396,16 @@ public class RulesEngine {
     }
 
     public boolean evaluateRules(Order order) {
-```
-
-
-
-
-```java
-return rules.stream().allMatch(rule -> rule.evaluate(order));
-
-}
-
+        return rules.stream().allMatch(rule -> rule.evaluate(order));
+    }
 }
 ```
 
 这种模式允许在不改变核心订单处理逻辑的情况下，轻松添加、删除或修改业务规则。
 
-在重构遗留系统时，保持向兼容性至关重要。`Adapter`（适配器）模式可以将新组件与现有接口集成：
+## 适配器模式保持向后兼容性
+
+在重构遗留系统时，保持向后兼容性至关重要。`Adapter`（适配器）模式可以将新组件与现有接口集成：
 
 ```java
 public interface LegacyInventorySystem {
@@ -18472,6 +18433,8 @@ public class InventoryAdapter implements LegacyInventorySystem {
 ```
 
 该适配器允许在期望旧接口的地方使用新的库存系统，从而促进系统的逐步升级。
+
+## 组合模式重构层次结构
 
 重构遗留系统通常涉及拆分大型单体类。`Composite`（组合）模式在重构复杂的层次结构时非常有用：
 
@@ -18518,7 +18481,9 @@ public class CompositeReport extends ReportComponent {
 
 这种模式允许在创建复杂报告结构的同时，保持简单的报告生成接口。
 
-在重构遗留系统时，采用渐进式的方法非常重要。我们如何确保每一步重构都能改进系统而不引入引入新问题呢？一种有效的方法是将重构与全面测试相结合：
+## 渐进式重构与测试结合
+
+在重构遗留系统时，采用渐进式的方法非常重要。我们如何确保每一步重构都能改进系统而不引入新问题呢？一种有效的方法是将重构与全面测试相结合：
 
 ```java
 public class OrderProcessorTest {
@@ -18536,15 +18501,19 @@ public class OrderProcessorTest {
 }
 ```
 
-通过维护健壮的测试套件，我们可以放进行重构，确保每次更改都保留或改进了系统的功能。
+通过维护健壮的测试套件，我们可以放心地进行重构，确保每次更改都保留或改进了系统的功能。
+
+## 总结与思考
 
 结论，使用设计模式重构遗留系统是代码库现代化和增强可读性的强大方法。通过应用 `Facade`（门面）、`Strategy`（策略）、`Decorator`（装饰器）和 `Adapter`（适配器）等模式，我们可以将复杂的单体系统转换为更模块化、更易维护的架构。成功重构的关键在于渐进式的更改、全面的测试以及对现有系统和所应用模式的深度理解。
 
 还有哪些设计模式对于重构遗留系统可能特别有用？`SOLID` 等原则如何指导重构过程和模式选择？
 
-## 移动应用开发中的模式
+# 移动应用开发中的模式
 
-移动应用开发中的模式在创建高效、可扩展且用户友好的应用程序中起着至关的作用。本节重点关注两个方面：离线优先设计和数据同步。这些概念对于现代移动应用是必要的，它们需要在各种条件下无缝运行，同时保持设备和服务器之间的数据一致性。我们将探索将这些模式纳入 Java 应用的实践实现、挑战和最佳实践。
+移动应用开发中的模式在创建高效、可扩展且用户友好的应用程序中起着至关重要的作用。本节重点关注两个方面：离线优先设计和数据同步。这些概念对于现代移动应用是必要的，它们需要在各种条件下无缝运行，同时保持设备和服务器之间的数据一致性。我们将探索将这些模式纳入 Java 应用的实践实现、挑战和最佳实践。
+
+## 离线优先设计
 
 离线优先设计是移动应用开发中的基本方法，它无论连接情况如何都优先考虑无缝的用户体验。这种模式确保应用在离线时仍然保持可用且响应迅速，并在重新连接时进行数据同步。我们如何在基于 Java 应用中实现这一点？
 
@@ -18564,6 +18533,7 @@ public class Note {
         this.isSynced = false;
     }
     // Getters and setters
+}
 ```
 
 为了支持离线优先功能，我们需要本地数据库来存储笔记。Android 的 `Room` 库是此目的的极佳选择：
@@ -18595,6 +18565,8 @@ public abstract class AppDatabase extends RoomDatabase {
 
 通过这种设置，应用可以在本地存储和检索笔记，确保即使离线也能运行。但在网络可用时我们如何处理同步呢？
 
+## 数据同步机制
+
 实现同步机制对于维护本地设备和服务器之间的数据一致性至关重要。这是一个基础同步服务：
 
 ```java
@@ -18624,6 +18596,8 @@ public class SyncService {
 
 该服务从本地数据库检索未同步的笔记并尝试与服务器同步。为了确保应用保持稳定，优雅地处理潜在的网络错误很重要。
 
+## 后台同步调度
+
 我们如何高效地触发此同步过程？一种方法是使用 Android 的 `WorkManager` 进行定期后台同步：
 
 ```java
@@ -18645,7 +18619,6 @@ public class SyncWorker extends Worker {
     }
 }
 ```
-
 
 
 
@@ -18779,7 +18752,7 @@ public class EncryptionHelper {
 
 ### 开源 Java 项目中的设计模式 - 分析热门仓库，汲取教训
 
-本节深入探讨了设计模式在真实开源 Java 项目中的实际应用。通过检查热门仓库，我们获得了关于经验丰富的开发者如何这些这些模式创建健壮、可扩展且易于维护的系统的宝贵见解。此分析提供了模式实现的具体示例，突出了最佳实践，并从成功的开源项目中汲取了教训。对于寻求提高技能并创建高标准软件的开发者来说，理解设计模式如何应用于生产级代码是至关重要的。
+本节深入探讨了设计模式在真实开源 Java 项目中的实际应用。通过检查热门仓库，我们获得了关于经验丰富的开发者如何使用这些模式创建健壮、可扩展且易于维护的系统的宝贵见解。此分析提供了模式实现的具体示例，突出了最佳实践，并从成功的开源项目中汲取了教训。对于寻求提高技能并创建高标准软件的开发者来说，理解设计模式如何应用于生产级代码是至关重要的。
 
 `GitHub` 作为一个领先的开源协作平台，托管了大量的 Java 项目，这些项目都是设计模式实施的绝佳案例研究。让我们探索一些显著的示例以及它们采用的模式。
 
@@ -18818,10 +18791,7 @@ props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.get
 props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
 ```
 
-
-
-
-```
+```java
 Producer<String, String> producer = new KafkaProducer<>(props);
 ```
 
@@ -18834,9 +18804,8 @@ List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David");
 
 Collection<String> filteredNames = Collections2.filter(names, name -> name.startsWith("A"));
 ```
-等一下，让我根据块块规则重新格式化上述代码：
 
-在 `Collections2.filter(names, name -> name.startsWith("A"))` 中
+在 `Collections2.filter(names, name -> name.startsWith("A"))` 中，`Collections2` 类提供了静态工厂方法来装饰集合。
 
 这种模式允许在不改变对象结构的情况下，向对象动态添加行为。这如何增强使用 Guava 代码的灵活性呢？它允许开发者在不修改现有类的情况下扩展功能，从而遵循了开闭原则。
 
@@ -18869,7 +18838,7 @@ public class User {
 
 Netty 框架用于构建高性能网络应用程序，它在流水线架构中采用了责任链模式：
 
-```
+```java
 ChannelPipeline pipeline = ch.pipeline();
 
 pipeline.addLast("decoder", new StringDecoder());
@@ -18881,17 +18850,22 @@ pipeline.addLast("handler", new EchoServerHandler());
 
 ### 开源项目的关键启示
 
-研究这些开源项目揭示了几个关键训：
+研究这些开源项目揭示了几个关键教训：
 
 1. **模式适配**：成功的项目通常会调整设计模式以适应其特定需求，而不是僵板地遵循教科书式的实现。
+
 2. **模式组合**：许多项目协作使用多种模式来解决复杂问题。例如，Spring 在其核心容器中结合了工厂、单例和代理模式。
+
 3. **性能考虑**：虽然模式可以改进代码结构，但它们对性能的影响经过了仔细考虑。Hibernate 使用代理模式进行懒性加载是平衡设计优雅性与性能优化的典型范例。
+
 4. **可测试性**：像 Spring 这样的项目展示设计模式如何通过促进松耦合和依赖注入来增强可测试性。
+
 5. **扩展性**：RxJava 中的观察者模式和 Netty 中的责任链模式展示了设计模式如何有助于构建能够处理高并发和复杂事件流的可扩展系统。
-6. **文档**：这些项目中对设计模式的良好记录为社区当了学习资源，并有助于代码库的维护。
+
+6. **文档**：这些项目中对设计模式的良好记录为社区提供了学习资源，并有助于代码库的维护。
+
 7. **模式的演变**：开源项目展示了传统模式如何演变以满足现代开发需求，例如观察者模式在响应式编程框架中的适配。
 
 我们还能从这些开源实现中得出哪些其他教训？这些模式在未来的 Java 项目中可能会如何被适配或改进？
 
-通过学习这些设计模式的实际应用，开发者可以获得关于有效软件设计的实践见解。从这些开源项目中中学到的教训为以增强代码质量、可维护性和性能的方式实现模式提供了宝贵的指导。
-
+通过学习这些设计模式的实际应用，开发者可以获得关于有效软件设计的实践见解。从这些开源项目中学到的教训为以增强代码质量、可维护性和性能的方式实现模式提供了宝贵的指导。

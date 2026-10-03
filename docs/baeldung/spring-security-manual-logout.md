@@ -1,25 +1,26 @@
+
 # 使用 Spring Security 手动注销
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-security-manual-logout>
 
-## 1.介绍
+## 1. 介绍
 
 Spring Security 是保护基于 Spring 的应用程序的标准。它有几个功能来管理用户的身份验证，包括登录和注销。
 
-在本教程中，我们将重点介绍使用 Spring Security 手动注销 **。**
+在本教程中，我们将重点介绍使用 Spring Security 手动注销。
 
-我们先假设读者已经了解了标准的 [春季安全注销](/web/20220630140457/https://www.baeldung.com/spring-security-logout)流程。
+我们先假设读者已经了解了标准的[春季安全注销](https://www.baeldung.com/spring-security-logout)流程。
 
-## 2.基本注销
+## 2. 基本注销
 
-当 **用户试图注销时，会对其当前会话状态** 产生若干后果。我们需要用两个步骤来销毁会话:
+当用户试图注销时，会对其当前会话状态产生若干后果。我们需要用两个步骤来销毁会话：
 
-1.  使 HTTP 会话信息无效。
-2.  清除`SecurityContext`，因为它包含认证信息。
+1. 使 HTTP 会话信息无效。
+2. 清除`SecurityContext`，因为它包含认证信息。
 
-这两个动作由`SecurityContextLogoutHandler.` 执行
+这两个动作由`SecurityContextLogoutHandler`执行。
 
-让我们看看实际情况:
+让我们看看实际情况：
 
 ```java
 @Configuration
@@ -38,11 +39,11 @@ public class DefaultLogoutConfiguration extends WebSecurityConfigurerAdapter {
 
 请注意，`SecurityContextLogoutHandler`是由 Spring Security 默认添加的——我们只是为了清晰起见才在这里显示它。
 
-## 3.Cookie 清除注销
+## 3. Cookie 清除注销
 
 通常，注销还需要我们清除部分或全部用户的 cookies。
 
-为此，我们可以创建自己的`LogoutHandler` 来遍历所有 cookies，并在注销时使它们过期:
+为此，我们可以创建自己的`LogoutHandler`来遍历所有 cookies，并在注销时使它们过期：
 
 ```java
 @Configuration
@@ -65,13 +66,13 @@ public class AllCookieClearingLogoutConfiguration extends WebSecurityConfigurerA
 }
 ```
 
-事实上，Spring Security 提供了`CookieClearingLogoutHandler` ，这是一个现成的注销处理程序，用于清除 cookie。
+事实上，Spring Security 提供了`CookieClearingLogoutHandler`，这是一个现成的注销处理程序，用于清除 cookie。
 
-## 4.`Clear-Site-Data`表头注销
+## 4. `Clear-Site-Data`表头注销
 
-同样，我们可以使用一个特殊的 HTTP 响应头来实现同样的事情；这就是 [**`Clear-Site-Data`报头**](/web/20220630140457/https://www.baeldung.com/spring-security-clear-site-data-header) 发挥作用的地方。
+同样，我们可以使用一个特殊的 HTTP 响应头来实现同样的事情；这就是[**`Clear-Site-Data`报头**](https://www.baeldung.com/spring-security-clear-site-data-header)发挥作用的地方。
 
-基本上，`Clear-Data-Site`头清除了与请求网站相关的浏览数据(cookies、存储、缓存):
+基本上，`Clear-Data-Site`头清除了与请求网站相关的浏览数据(cookies、存储、缓存)：
 
 ```java
 @Configuration
@@ -91,13 +92,13 @@ public class ClearSiteDataHeaderLogoutConfiguration extends WebSecurityConfigure
 }
 ```
 
-然而，当我们仅清除一种类型的存储时，存储清理可能会破坏应用程序状态。因此，由于[不完全清除](https://web.archive.org/web/20220630140457/https://w3c.github.io/webappsec-clear-site-data/#incomplete)，只有在请求是安全的情况下才会应用报头。
+然而，当我们仅清除一种类型的存储时，存储清理可能会破坏应用程序状态。因此，由于[不完全清除](https://w3c.github.io/webappsec-clear-site-data/#incomplete)，只有在请求是安全的情况下才会应用报头。
 
-## 5.请求注销
+## 5. 请求注销
 
-同样，我们可以使用 [`HttpServletRequest.logout()`](https://web.archive.org/web/20220630140457/https://docs.spring.io/spring-security/site/docs/current/reference/html5/#servletapi-logout) 的方法来注销用户。
+同样，我们可以使用[`HttpServletRequest.logout()`](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#servletapi-logout)的方法来注销用户。
 
-首先，让我们添加必要的配置，以便根据请求手动调用`logout()`:
+首先，让我们添加必要的配置，以便根据请求手动调用`logout()`：
 
 ```java
 @Configuration
@@ -119,7 +120,7 @@ public static class LogoutOnRequestConfiguration extends WebSecurityConfigurerAd
 }
 ```
 
-最后，让我们创建一个测试用例来确认一切都按预期运行:
+最后，让我们创建一个测试用例来确认一切都按预期运行：
 
 ```java
 @Test
@@ -133,8 +134,8 @@ public void givenLoggedUserWhenUserLogoutOnRequestThenSessionCleared() throws Ex
 }
 ```
 
-## 6.结论
+## 6. 结论
 
 总之，Spring Security 有许多处理认证场景的内置特性。掌握如何以编程方式使用这些特性总是很方便的。
 
-和往常一样，这些例子的代码可以在 GitHub 的[上找到。](https://web.archive.org/web/20220630140457/https://github.com/eugenp/tutorials/tree/master/spring-security-modules/spring-5-security)
+和往常一样，这些例子的代码可以在 GitHub 的[上找到。](https://github.com/eugenp/tutorials/tree/master/spring-security-modules/spring-5-security)

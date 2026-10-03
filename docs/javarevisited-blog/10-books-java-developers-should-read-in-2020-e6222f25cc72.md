@@ -1,3 +1,4 @@
+
 # 2023 年 Java 开发人员应该阅读的 23 本书
 
 > 原文：<https://medium.com/javarevisited/10-books-java-developers-should-read-in-2020-e6222f25cc72?source=collection_archive---------0----------------------->
@@ -47,7 +48,7 @@
 你应该知道的 97 件事情中的几件:
 
 *   “行为容易，状态难”——Edson Yanaga
-*   “学习 Java 习惯用法并将其存储在大脑中”——作者 [Jeanne Boyarsky](https://medium.com/u/8d2bb6bc11d9?source=post_page-----e6222f25cc72--------------------------------)
+*   “学习 Java 习惯用语并将其存储在大脑中”——作者 [Jeanne Boyarsky](https://medium.com/u/8d2bb6bc11d9?source=post_page-----e6222f25cc72--------------------------------)
 *   “从 JVM 性能角度看 Java 编程”——作者 [Monica Beckwith](https://medium.com/u/61ef13f51b58?source=post_page-----e6222f25cc72--------------------------------)
 *   “垃圾收集是你的朋友”——霍利·K·卡明斯
 *   “Java 不可描述的类型”——[本·埃文斯](https://medium.com/u/61f7d78ffe04?source=post_page-----e6222f25cc72--------------------------------)
@@ -84,7 +85,7 @@
 
 如果你喜欢食谱，那么这本书是一本好书。如题，它包含了 Java 8 和 9 中严重问题的简单解决方案。
 
-您将了解如何使用 lambda 表达式、方法引用和流 API 使用 Java 8 习惯用法编写代码。
+您将了解如何使用 lambda 表达式、方法引用和流 API 使用 Java 8 习惯用语编写代码。
 
 如果你想通过学习教程和例子来学习 Java 8 和 Java 9，这是一本非常好的书。如果你需要资源，那么你也可以看看我列出的[学习 Java 8 到 Java 14](/javarevisited/top-5-courses-to-learn-new-features-of-java-8-to-java-13-107eb51d2a13) 的最佳在线课程，这是一个学习 Java 新特性的短期课程集。
 
@@ -104,15 +105,17 @@ Java 9 版本的亮点之一是 Java 模块化或 Java 模块，这本书提供�
 
 如果你急着学 Java，那么这就是我推荐给你的书。我是凯西·s·霍斯特曼作品的忠实粉丝，也非常喜欢他所涵盖的大量细节。
 
+
+
 看过他其他关于 [Java 8](/javarevisited/7-best-java-tutorials-and-books-to-learn-lambda-expression-and-stream-api-and-other-features-3083e6038e14) 、 [Scala](https://javarevisited.blogspot.com/2019/01/5-free-scala-programming-courses-for-java-programmers-learn-online.html) 、[核心 Java](/javarevisited/10-free-courses-to-learn-java-in-2019-22d1f33a3915) 的书，可以说看完这本书你也会成为他的粉丝。
 
 最近已经更新涵盖了 [Java SE 9 特性](/javarevisited/5-courses-to-learn-java-9-features-in-depth-373f7afcf9fa)，如果你想学习 Java 9，那么这是你 2023 年应该读的第一本书。顺便说一句，我们目前正在开发 Java 14，所以仍然有点过时，但是任何一本书都很难跟上 Java 6 个月的发布周期。
 
-因此，学习 Java 的最好方法是将这本书与更新的课程结合起来，如 Udemy 上 Tim Buchalaka 的[**完整的 Java 大师班**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F) ，它不仅能给你一些主动的指导学习，还能帮助你快速学习 Java。
+因此，学习 Java 的最好方法是将这本书与更新的课程结合起来，如 Udemy 上 Tim Buchalaka 的[完整的 Java 大师班](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F) ，它不仅能给你一些主动的指导学习，还能帮助你快速学习 Java。
 
 [![](img/5c538d82872d39e6853ea42294ba400a.png)](http://www.java67.com/2018/02/3-books-to-learn-java-from-scratch-in.html)
 
-## 8.[春天微服务在行动](https://www.amazon.com/Spring-Microservices-Action-John-Carnell/dp/1617293989?tag=javamysqlanta-20)
+## 8. 春天微服务在行动
 
 软件开发界越来越倾向于微服务架构，因为它在开发、支持、部署、可伸缩性和可靠性方面提供了许多好处。
 
@@ -120,17 +123,17 @@ Java 9 版本的亮点之一是 Java 模块化或 Java 模块，这本书提供�
 
 如果你热衷于用 Spring 框架进行微服务开发，那么这本书就是给你的。
 
-如果你愿意，你也可以将这本书与同为博主、Udemy 畅销书作家的 Ranga Karnam 的《与 Spring Boot 的 [**大师微服务》和《春云**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmicroservices-with-spring-boot-and-spring-cloud%2F) 相结合。如果你正在寻找一些实用的知识，这是一个很好的课程。
+如果你愿意，你也可以将这本书与同为博主、Udemy 畅销书作家的 Ranga Karnam 的《与 Spring Boot 的 [大师微服务》和《春云](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmicroservices-with-spring-boot-and-spring-cloud%2F) 相结合。如果你正在寻找一些实用的知识，这是一个很好的课程。
 
 [![](img/d2468dba0efd4512b732f23dd7af3408.png)](https://manning.com/books/spring-microservices-in-action?a_aid=javarevisited&a_bid=93d4e4f4)
 
-## 9.[清洁建筑](http://javarevisited.blogspot.sg/2017/09/clean-architecture-by-uncle-bob-martin.html#axzz4tzMEHSJw)
+## 9. 清洁架构
 
 这是我去年读过的一本书，非常喜欢。我是 Robert C. Martin 或者包括 Bob 的忠实粉丝，读过他的 [Clean Code](http://javarevisited.blogspot.sg/2017/10/clean-code-by-uncle-bob-book-review.html) 和 [Clean Coder](http://javarevisited.blogspot.sg/2014/09/top-6-books-to-learn-programming-coding.html#axzz4tzMEHSJw) 的书，我必须说这本书完成了 clean codebook 的三部曲。这本书将告诉你如何创建一个能够经受时间考验的软件架构，并且消除对设计模式和软件架构的误解。如果你是一名经验丰富的 Java 开发人员，并且正在考虑成为一名解决方案架构师，那么这是你应该在 2023 年阅读的一本书。如果你需要课程，可以看看我之前的文章[我最喜欢的学习软件架构的课程](/javarevisited/top-5-courses-to-learn-software-architecture-in-2020-best-of-lot-5d34ebc52e9)。
 
 ![](img/09c6ae4b94a6b7fa7e9d861c1fc4f593.png)
 
-## 10.[春季 5 食谱:解决问题的方法](https://www.amazon.com/Spring-5-Recipes-Problem-Solution-Approach/dp/1484227891?tag=javamysqlanta-20)
+## 10. 春季 5 食谱:解决问题的方法
 
 Spring 5 是流行的 Java 应用程序开发框架的最新版本，它在 Spring 中引入了反应式编程特性。毫无疑问，Spring 是 Java 开发中最流行的框架，所以了解一下 [Spring 5](https://javarevisited.blogspot.com/2018/06/top-6-spring-framework-online-courses-Java-programmers.html) 中的新特性并保持最新是值得的。
 
@@ -138,15 +141,15 @@ Spring 5 是流行的 Java 应用程序开发框架的最新版本，它在 Spri
 
 [![](img/1afb9ca449a6612125fb575c83332d49.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fspring-framework-5-beginner-to-guru%2F)
 
-## 11.[科特林在行动](http://javarevisited.blogspot.sg/2018/02/top-3-jvm-languages-java-programmer-learn.html#axzz56WXxxAC0)
+## 11. 科特林在行动
 
 Java 开发人员学习其他 JVM 语言，如 [Scala](https://dev.to/javinpaul/why-java-programmer-should-learn-scala-and-functional-programming-5hej) 、 [Groovy](https://javarevisited.blogspot.com/2017/08/top-5-books-to-learn-groovy-for-java.html#axzz5dPh77Fzl) 和 Closure，成为通晓多种语言的程序员，这是很常见的，Kotlin 无疑是这一时刻的领导者。
 
-2017 年，谷歌宣布 Kotlin 作为 Google IO 中 Android 开发的官方语言，从此对学习 [Kotlin](/javarevisited/kotlin-vs-scala-which-is-right-for-you-dc91db366b0) 产生了浓厚的兴趣。然而，更重要的是，它提供了生产力优势，并且是 100%的 Java。所以，如果你想在 2023 年学习一门 JVM 语言，我会说，学习 Kotlin 就好了，如果你需要一门课程来结合这本书更好地学习，你可以加入 Udemy 上的 [**完整的 Android Kotlin 开发者课程**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-kotlin-developer-course%2F) ，这是学习 Kotlin 最深入和最实用的课程之一。
+2017 年，谷歌宣布 Kotlin 作为 Google IO 中 Android 开发的官方语言，从此对学习 [Kotlin](/javarevisited/kotlin-vs-scala-which-is-right-for-you-dc91db366b0) 产生了浓厚的兴趣。然而，更重要的是，它提供了生产力优势，并且是 100%的 Java。所以，如果你想在 2023 年学习一门 JVM 语言，我会说，学习 Kotlin 就好了，如果你需要一门课程来结合这本书更好地学习，你可以加入 Udemy 上的 [完整的 Android Kotlin 开发者课程](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-kotlin-developer-course%2F) ，这是学习 Kotlin 最深入和最实用的课程之一。
 
 [![](img/92c8a0328ac9f9b72e99a1bffc61a1f5.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-kotlin-developer-course%2F)
 
-## 12. [Java:初学者指南，第七版](http://javarevisited.blogspot.sg/2017/12/top-20-java-books-of-2017-which-you-can-read-in-2018.html#axzz58AXV2r1A)
+## 12. Java:初学者指南，第七版
 
 这是又一本从零开始学习核心 Java 的经典书籍。这本书的第七版现在已经出来了，更新后涵盖了 Java SE 9。
 
@@ -158,17 +161,17 @@ Java 开发人员学习其他 JVM 语言，如 [Scala](https://dev.to/javinpaul/
 
 ![](img/284c72517d71a3b8e52806870f931059.png)
 
-## 13. [Spring Boot:启动并运行](https://www.oreilly.com/library/view/spring-boot-up/9781492076971/)
+## 13. Spring Boot:启动并运行
 
 这是一本学习 Spring Boot 的好书，作者是来自 VMware 的 [Mark Heckler](https://medium.com/u/5fda8d47ecf8?source=post_page-----e6222f25cc72--------------------------------) ，他是 Spring 的幕后公司，引导你了解 Spring Boot 的架构和方法，以及调试、测试和部署等主题。我
 
 如果你想用 Spring Boot 快速有效地开发云原生 Java 或 Kotlin 应用——使用反应式编程、构建 API 和创建各种数据库访问——这本书正适合你。这仍是一部进展中的作品，但值得一读。
 
-为了获得更好的学习体验，你还可以将这本书与欧根·帕拉斯基夫的[**Learn Spring:The Certification Class**](https://courses.baeldung.com/p/ls-certification-class?utm_source=javarevisited&utm_medium=web&utm_campaign=lss&affcode=22136_bkwjs9xa)结合起来，这可能是从头开始学习 Spring 5 和 Spring Boot 2 的最佳课程，以一种有指导的、以代码为中心的方式
+为了获得更好的学习体验，你还可以将这本书与欧根·帕拉斯基夫的[Learn Spring:The Certification Class](https://courses.baeldung.com/p/ls-certification-class?utm_source=javarevisited&utm_medium=web&utm_campaign=lss&affcode=22136_bkwjs9xa)结合起来，这可能是从头开始学习 Spring 5 和 Spring Boot 2 的最佳课程，以一种有指导的、以代码为中心的方式
 
 [![](img/1d86baa60e461765db242e4c63b15a99.png)](https://courses.baeldung.com/p/ls-certification-class?utm_source=javarevisited&utm_medium=web&utm_campaign=lss&affcode=22136_bkwjs9xa)
 
-## 14.[反作用弹簧](https://www.amazon.com/Reactive-Spring-Josh-Long-ebook/dp/B08H4QZFM8/?tag=javamysqlanta-20)
+## 14. 反作用弹簧
 
 反应式编程是软件开发的未来，这似乎是另一本关于使用 Spring 学习反应式编程的好书。
 
@@ -182,7 +185,7 @@ Java 开发人员学习其他 JVM 语言，如 [Scala](https://dev.to/javinpaul/
 
 [![](img/53d50c6e928504772a3bad8b8ad751ac.png)](https://www.amazon.com/Reactive-Spring-Josh-Long-ebook/dp/B08H4QZFM8/?tag=javamysqlanta-20)
 
-## 15. [Java 对比:成为 Java 工匠 70 例](https://amzn.to/2l33Aul)
+## 15. Java 对比:成为 Java 工匠 70 例
 
 对于真正想磨练自己的 Java 技能，成为一名 Java 工匠的 Java 程序员来说，这又是一本很棒的书。这不是一本关于句法和语义的书，而是如何以更好的方式做现实世界中的事情。如果你想成为每个公司都想雇佣的专业 Java 开发人员，那么这本书就是为你准备的。
 
@@ -196,13 +199,15 @@ Java 开发人员学习其他 JVM 语言，如 [Scala](https://dev.to/javinpaul/
 
 简而言之，每一个 Java 开发人员都应该阅读的一本实用、实用、解释清楚的书。如果你喜欢有效的 Java，我想你也会喜欢这本书。
 
-## 16.[Ng-Book——关于 Angular 的全集](https://gumroad.com/a/221148275)
+## 16. Ng-Book——关于 Angular 的全集
 
 这并不完全是一本 Java 书，但却是一本值得 Java 开发人员阅读的书，尤其是那些使用 Angular 和 Javascript 构建前端的全栈 Java 开发人员。
 
 这本书，也被称为 Ng-Book，经常被称为 Angular 的圣经。如果你正在寻找一个简单而详细的角度世界指南，那么这本书是给你的。
 
 另外，还有什么比框架开发者自己写的书更好的呢？
+
+
 
 **作者和撰稿人:** [内特·默里](https://medium.com/u/6538666cdb34?source=post_page-----e6222f25cc72--------------------------------) [费利佩·库里](https://medium.com/u/2dc4fd2962e7?source=post_page-----e6222f25cc72--------------------------------) [阿里·勒纳](https://medium.com/u/aca4e71969df?source=post_page-----e6222f25cc72--------------------------------) [卡洛斯·塔沃尔达](https://medium.com/u/bb2517e9de0b?source=post_page-----e6222f25cc72--------------------------------) [尼克·拉博伊](https://medium.com/u/a51dc06b165e?source=post_page-----e6222f25cc72--------------------------------) [伯克·荷兰](https://medium.com/u/d4377b6d15d2?source=post_page-----e6222f25cc72--------------------------------)
 
@@ -255,11 +260,17 @@ Java 开发人员学习其他 JVM 语言，如 [Scala](https://dev.to/javinpaul/
 **以下是你将在本书中学到的关键内容:**
 
 *   **网络和数据访问**
+
 *   **开发者工具和测试支持**
+
 *   **操作特征**
+
 *   **[码头集装箱](/javarevisited/top-10-free-courses-to-learn-jenkins-docker-and-kubernetes-for-devops-in-2020-best-of-lot-62a0541ffeb3)**
+
 *   **使用 BlockHound 发现瓶颈**
+
 *   **信息发送**
+
 *   **安全性**
 
 **使用 Project Reactor 编写，您的应用程序将以前所未有的方式扩展。**
@@ -308,35 +319,37 @@ Java 开发人员学习其他 JVM 语言，如 [Scala](https://dev.to/javinpaul/
 
 ## **23.[Java 故障排除](https://www.amazon.com/exec/obidos/ASIN/1617299774?tag=javamysqlanta-20)**
 
-**这是一本新的 Java 书籍，初学者和有经验的 Java 开发人员都可以阅读，以学习如何有效地排除 Java 应用程序的故障。实际上，对于想学习如何调试和优化 JVM 应用程序的高级 Java 开发人员来说，这是一本很好的读物。**
 
-**[![](img/ec5d9f0a389caf0f227f7bc3926e3863.png)](https://www.amazon.com/exec/obidos/ASIN/1617299774?tag=javamysqlanta-20)**
 
-**以上是 Java 开发人员在 2023 年可以阅读的一些有趣而有用的书籍。说实话，有很多东西要学，甚至要让自己跟上 Java 世界发生的事情，比如 Java 9 到 Java 17，Spring 5，[微服务](/javarevisited/top-5-courses-to-learn-microservices-in-java-and-spring-framework-e9fed1ba804d)， [Kotlin](https://hackernoon.com/top-5-kotlin-programming-courses-for-java-and-android-programmers-49e842b8af1a) 等。这些书不仅能为你提供最新的知识，还能增进你对新功能的理解。
+这是一本新的 Java 书籍，初学者和有经验的 Java 开发人员都可以阅读，以学习如何有效地排除 Java 应用程序的故障。实际上，对于想学习如何调试和优化 JVM 应用程序的高级 Java 开发人员来说，这是一本很好的读物。
 
-其他 **Java 文章**你可能喜欢**
+[![](img/ec5d9f0a389caf0f227f7bc3926e3863.png)](https://www.amazon.com/exec/obidos/ASIN/1617299774?tag=javamysqlanta-20)
 
-*   **[2023 年 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html#axzz64YOHJ2TL)**
-*   **[成为全栈 Java 开发人员的前 5 门课程](https://javarevisited.blogspot.com/2020/04/top-5-courses-to-become-full-stack-java-developer-with-Angular-and-Reactjs.html#axzz6Nq9yk7Sc)**
-*   **[2023 年 Java 开发者应该学会的 10 件事](http://javarevisited.blogspot.sg/2017/12/10-things-java-programmers-should-learn.html#axzz53ENLS1RB)**
-*   **[10 门高级核心 Java 课程](https://javarevisited.blogspot.com/2020/04/top-10-advanced-core-java-courses-for-experienced-developers.html)**
-*   **[Kotlin 还是 Java？Android 开发者选择哪个比较好？](http://javarevisited.blogspot.sg/2018/02/kotlin-vs-java-which-language-android.html)**
-*   **[学习 Spring 框架的 10 门免费课程](/javarevisited/top-10-free-courses-to-learn-spring-framework-for-java-developers-639db9348d25)**
-*   **[Java 程序员的 10 个日常工具](http://javarevisited.blogspot.sg/2017/03/10-tools-used-by-java-programming-Developers.html#axzz55lrMRnNC)**
-*   **[学习春天和 Spring Boot 在线的 5 门免费课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)**
-*   **[2023 年 Java 开发人员应该学习的 10 个框架](http://www.java67.com/2018/01/top-10-web-mobile-and-big-data-framework-libraries-technologies-programmers-should-learn-in-2018.html)**
-*   **[成为解决方案架构师的前 5 门课程](https://hackernoon.com/top-5-courses-to-become-a-software-architect-or-solution-architect-t05f3650)**
-*   **[成为更好的 Java 开发人员的 10 个技巧](https://javarevisited.blogspot.com/2018/05/10-tips-to-become-better-java-developer.html#axzz5jwmmAbXI)**
-*   **[Python 还是 Java？从哪种语言开始比较好？](http://javarevisited.blogspot.sg/2013/11/java-vs-python-which-programming-laungage-to-learn-first.html#axzz55UE6mabh)**
-*   **[Java 开发人员的五大 Spring Boot 特性](https://javarevisited.blogspot.com/2018/11/top-5-spring-boot-features-java.html)**
-*   **[学习 Docker、Jenkins 和 Maven 的 10 门免费课程](/javarevisited/top-10-free-courses-to-learn-maven-jenkins-and-docker-for-java-developers-51fa7a1e66f6)**
+以上是 Java 开发人员在 2023 年可以阅读的一些有趣而有用的书籍。说实话，有很多东西要学，甚至要让自己跟上 Java 世界发生的事情，比如 Java 9 到 Java 17，Spring 5，[微服务](/javarevisited/top-5-courses-to-learn-microservices-in-java-and-spring-framework-e9fed1ba804d)， [Kotlin](https://hackernoon.com/top-5-kotlin-programming-courses-for-java-and-android-programmers-49e842b8af1a) 等。这些书不仅能为你提供最新的知识，还能增进你对新功能的理解。
 
-**感谢您阅读本文。如果你喜欢这些书，那么请分享给你的朋友和同事。如果你有任何建议或者任何你认为 Java 开发者应该在 2023 年阅读的书，那么请留言。**
+## 其他 Java 文章你可能喜欢
 
-**如果你正在寻找一些高级课程来成为一名更好的 Java 开发人员，我还建议你去看看 Educative 上的 [**Web 应用和软件架构 101**](https://www.educative.io/courses/web-application-software-architecture-101?affiliate_id=5073518643380224) 课程，这是学习现代软件架构的较好课程之一。**
+* [2023 年 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html#axzz64YOHJ2TL)
+* [成为全栈 Java 开发人员的前 5 门课程](https://javarevisited.blogspot.com/2020/04/top-5-courses-to-become-full-stack-java-developer-with-Angular-and-Reactjs.html#axzz6Nq9yk7Sc)
+* [2023 年 Java 开发者应该学会的 10 件事](http://javarevisited.blogspot.sg/2017/12/10-things-java-programmers-should-learn.html#axzz53ENLS1RB)
+* [10 门高级核心 Java 课程](https://javarevisited.blogspot.com/2020/04/top-10-advanced-core-java-courses-for-experienced-developers.html)
+* [Kotlin 还是 Java？Android 开发者选择哪个比较好？](http://javarevisited.blogspot.sg/2018/02/kotlin-vs-java-which-language-android.html)
+* [学习 Spring 框架的 10 门免费课程](/javarevisited/top-10-free-courses-to-learn-spring-framework-for-java-developers-639db9348d25)
+* [Java 程序员的 10 个日常工具](http://javarevisited.blogspot.sg/2017/03/10-tools-used-by-java-programming-Developers.html#axzz55lrMRnNC)
+* [学习春天和 Spring Boot 在线的 5 门免费课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
+* [2023 年 Java 开发人员应该学习的 10 个框架](http://www.java67.com/2018/01/top-10-web-mobile-and-big-data-framework-libraries-technologies-programmers-should-learn-in-2018.html)
+* [成为解决方案架构师的前 5 门课程](https://hackernoon.com/top-5-courses-to-become-a-software-architect-or-solution-architect-t05f3650)
+* [成为更好的 Java 开发人员的 10 个技巧](https://javarevisited.blogspot.com/2018/05/10-tips-to-become-better-java-developer.html#axzz5jwmmAbXI)
+* [Python 还是 Java？从哪种语言开始比较好？](http://javarevisited.blogspot.sg/2013/11/java-vs-python-which-programming-laungage-to-learn-first.html#axzz55UE6mabh)
+* [Java 开发人员的五大 Spring Boot 特性](https://javarevisited.blogspot.com/2018/11/top-5-spring-boot-features-java.html)
+* [学习 Docker、Jenkins 和 Maven 的 10 门免费课程](/javarevisited/top-10-free-courses-to-learn-maven-jenkins-and-docker-for-java-developers-51fa7a1e66f6)
 
-**<https://www.educative.io/courses/web-application-software-architecture-101?affiliate_id=5073518643380224>  
+感谢您阅读本文。如果你喜欢这些书，那么请分享给你的朋友和同事。如果你有任何建议或者任何你认为 Java 开发者应该在 2023 年阅读的书，那么请留言。
 
-**P. P. S —** 快速更新，[**Pluralsight 免费周末 2023**](https://pluralsight.pxf.io/c/1193463/871467/7490) 就在这里，你可以在这个周末免费访问所有 7000+ Pluralsight 课程和项目。好好利用这一点，学习一项新技能或提升现有技能。不要错过这个，这只是这个周末。这又是一个链接:
+如果你正在寻找一些高级课程来成为一名更好的 Java 开发人员，我还建议你去看看 Educative 上的 [Web 应用和软件架构 101](https://www.educative.io/courses/web-application-software-architecture-101?affiliate_id=5073518643380224) 课程，这是学习现代软件架构的较好课程之一。
 
-<https://pluralsight.pxf.io/c/1193463/871467/7490> **
+<https://www.educative.io/courses/web-application-software-architecture-101?affiliate_id=5073518643380224>
+
+P. P. S — 快速更新，[Pluralsight 免费周末 2023](https://pluralsight.pxf.io/c/1193463/871467/7490) 就在这里，你可以在这个周末免费访问所有 7000+ Pluralsight 课程和项目。好好利用这一点，学习一项新技能或提升现有技能。不要错过这个，这只是这个周末。这又是一个链接：
+
+<https://pluralsight.pxf.io/c/1193463/871467/7490>

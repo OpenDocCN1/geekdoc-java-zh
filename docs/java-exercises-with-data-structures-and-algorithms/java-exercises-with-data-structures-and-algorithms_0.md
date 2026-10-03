@@ -1,9 +1,7 @@
+
 # Java 数据结构与算法练习指南
 
-
-
 ![](img/image_rsrc5RM.jpg)
-
 
 Copyright © 2024 Haris Tsetsekas
 
@@ -50,9 +48,10 @@ public class Student {
     }
 }
 ```
+
 列表 1-1: Student.java
 
-该类包含关于学生及其已成功完成课程的信息。`Courses` 数组包含课程的 ID。
+该类包含关于学生及其已成功完成课程的信息。`courses` 数组包含课程的 ID。
 
 接下来，我们为大学课程定义一个类：
 
@@ -86,6 +85,7 @@ public class Course {
     }
 }
 ```
+
 列表 1-2: Course.java
 
 每门课程包含一个先修课程 ID 数组。该类还包含一个方法，用于判断学生是否可以选某门课程。对于每门先修课程，该方法都会尝试与学生已修过的课程进行匹配。
@@ -129,6 +129,7 @@ public class UniversityCourses {
     }
 }
 ```
+
 列表 1-3: UniversityCourses.java
 
 ## 2. 餐厅预约
@@ -148,6 +149,7 @@ public class Customer {
     }
 }
 ```
+
 列表 2-1: Customer.java
 
 该类包含姓名。它也可以包含电话或其他详情。
@@ -165,6 +167,7 @@ public class Table {
     }
 }
 ```
+
 列表 2-2: Table.java
 
 桌子对象包含其 ID 以及其容量信息（可以容纳的人数）。
@@ -186,6 +189,7 @@ public class Reservation {
     }
 }
 ```
+
 列表 2-3: Reservation.java
 
 预约包含对 `Customer` 和 `Table` 对象的引用。它还包含起始和结束时间段（不包含结束）。
@@ -206,6 +210,7 @@ public class Restaurant {
     }
 }
 ```
+
 列表 2-4: Restaurant.java
 
 `addTable()` 方法将桌子的引用添加到 `tables` 列表中。
@@ -222,13 +227,10 @@ public boolean isTableAvailable(Table table, int startTimeSlot, int endTimeSlot)
     );
 }
 ```
+
 列表 2-5: Restaurant.java
 
-
-
-
-
-`findAvailableTables()` 方法搜索从 `tables` 列表获取的流，以便找到指定时间段内所有可表格。
+`findAvailableTables()` 方法搜索从 `tables` 列表获取的流，以便找到指定时间段内所有可用桌子。
 
 ```java
 public List<Table> findAvailableTables(int capacity, int startTimeSlot,int endTimeSlot) {
@@ -237,7 +239,8 @@ public List<Table> findAvailableTables(int capacity, int startTimeSlot,int endTi
     return availableTables;
 }
 ```
-Listing 2-6: `Restaurant.java`
+
+列表 2-6: Restaurant.java
 
 我们使用 `filter()` 来获取容量符合或超过人数的空桌。选定的桌子将通过 `collect()` 方法收集到一个新的列表中。该列表在根据桌子容量按升序排序后返回，因为我们正尝试先填满最小的桌子。
 
@@ -254,7 +257,8 @@ public void addReservation(String name, int capacity, int startSlot, int endSlot
     }
 }
 ```
-Listing 2-7: `Restaurant.java`
+
+列表 2-7: Restaurant.java
 
 接下来，我们有一个方法可以在控制台中打印所有订单：
 
@@ -266,9 +270,12 @@ public void printReservations() {
     }
 }
 ```
-Listing 2-8: `Restaurant.java`
+
+列表 2-8: Restaurant.java
 
 最后，在 `main()` 方法中，我们向 `Restaurant` 对象添加桌子，并尝试为特定的容量和时间段预订。某些订单将成功，但另一些订单将没有可用桌子。最后，我们打印系统中所有可用的订单。
+
+
 
 ```java
 public static void main(String[] args) {
@@ -285,6 +292,7 @@ public static void main(String[] args) {
     restaurant.printReservations();
 }
 ```
+
 Listing 2-9: `Restaurant.java`
 
 你可以在 GitHub 上找到这个项目：
@@ -307,6 +315,7 @@ public class Book {
     public int available;
 }
 ```
+
 Listing 3-1: `Book.java`
 
 ```java
@@ -319,6 +328,7 @@ public class LendingEvent {
     public int returned;
 }
 ```
+
 Listing 3-2: `LendingEvent.java`
 
 对于每本书，我们记录标题和作者。我们还保留了关于它是否可用或当前已借出的信息（分别为 1 或 0）。
@@ -339,6 +349,7 @@ public class Library {
 ...
 }
 ```
+
 Listing 3-3: `Library.java`
 
 `Library` 类的第一个方法用于在图书馆目录中添加新书籍：
@@ -359,6 +370,7 @@ public void addBook() throws IOException {
     System.out.println("Book added.");
 }
 ```
+
 Listing 3-4: `Library.java`
 
 在开始，我们使用 `PrintWriter` 对象打开书籍文件。构造函数的第二个参数是 `true`，这意味着我们将内容附加到文件末尾，当前内容不会被擦除。从用户那里获取书籍标题和作者后，我们将新的书籍对象写入文件末尾。使用的格式如下：
@@ -387,6 +399,7 @@ public void listBooks() throws IOException {
     }
 }
 ```
+
 Listing 3-5: `Library.java`
 
 在这里，我们从开始打开文件并使用 `readLine()` 读取每本书的详情。
@@ -434,10 +447,8 @@ public void lendBook() throws IOException {
     }
 }
 ```
+
 Listing 3-6: `Library.java`
-
-
-
 
 我们首先尝试通过 `.lines().toArray(String[]::new)` 读取书籍文件中的所有条目来查找所需的书籍。书籍条目将存储在一个字符串数组中。`String[]::new` 是一个创建新 `String` 数组的函数。它会被 `toArray()` 调用以创建一个新数组。
 
@@ -496,6 +507,7 @@ public void returnBook() throws IOException {
     }
 }
 ```
+
 列表 3-7: `Library.java`
 
 在这里，我们再次将所有的书籍文件条目读入字符串数组，并尝试查找所需的文件。然后，我们从相应文件中读取所有的借阅事件，并搜索特定书籍的借阅事件。
@@ -503,6 +515,8 @@ public void returnBook() throws IOException {
 如果我们找到了该事件，则将其状态更改为“已还”，并将所有条目写回借阅文件。最后，在将书籍可用性状态改回 1 之后，我们还将所有的书籍条目存储到相应的文件中。
 
 现在，让我们来看列出事件的方法：
+
+
 
 ```java
 public void listLendingEvents() throws IOException {
@@ -524,6 +538,7 @@ public void listLendingEvents() throws IOException {
     }
 }
 ```
+
 列表 3-8: `Library.java`
 
 最后是处理与用户交互的 `main()` 方法：
@@ -550,15 +565,16 @@ public static void main(String[] args) throws IOException {
     } while (choice != 0);
 }
 ```
+
 列表 3-9: `Library.java`
 
 在这里，我们再次将所有的书籍文件条目读入字符串数组，并尝试查找所需的文件。然后，我们从相应文件中读取所有的书籍借阅事件，并搜索特定书籍的借阅事件。
 
 如果我们找到了该事件，则将其状态更改为“已还”，并将所有条目写回借阅文件。最后，在将书籍可用性状态改回 1 之后，我们还将所有的书籍条目存储到相应的文件中。
 
-你可以在 GitHub 上找到此项目：https://github.com/htset/java_dsa/tree/master/Library](https://github.com/htset/java_dsa/tree/master/Library)
+你可以在 GitHub 上找到此项目：https://github.com/htset/java_dsa/tree/master/Library
 
-## 联系列表（Contact List）
+## 联系列表
 
 哈希表将存储姓名和电话号码。
 
@@ -566,7 +582,7 @@ public static void main(String[] args) throws IOException {
 
 哈希表（也称为哈希表）是一种根据键高效组织和检索数据结构。哈希表通常使用链法来处理这些冲突。
 
-## 解决方案（Proposed Solution）
+## 解决方案
 
 这是使用的类的定义：
 
@@ -588,6 +604,7 @@ public class ContactList {
     private Contact[] bucketTable;
 }
 ```
+
 列表 4-1: `ContactList.java`
 
 `ContactList` 类包含一个 100 个条目的表。每个条目包含一个 `Contact` 对象的引用。本质上，`ContactList` 类是链表的数组；通过这种方式，联系列表可以随着我们添加元素而扩展。
@@ -603,6 +620,7 @@ private int hash(String name) {
     return Math.abs(hash) % HASH_SIZE;
 }
 ```
+
 列表 4-2: `ContactList.java`
 
 此方法基于 Daniel J. Bernstein 编写哈希函数（也称为 dj2）。该方法返回哈希表的索引，我们应该在那里插入特定的联系人。
@@ -617,6 +635,7 @@ public ContactList() {
     }
 }
 ```
+
 列表 4-3: `ContactList.java`
 
 我们首先根据联系人的计算哈希索引，然后创建一个新的 `Contact` 对象。在填充对象属性后，我们将对象插入到相应桶的头部。以下是添加联系人的代码：
@@ -632,10 +651,8 @@ public void contactAdd(String name, String phone) {
     bucketTable[hashIndex] = newContact;
 }
 ```
+
 列表 4-4: `ContactList.java`
-
-
-
 
 ```java
 public void contactRemove(String name) {
@@ -660,7 +677,8 @@ public void contactRemove(String name) {
     System.out.println("Contact '" + name + "' not found.");
 }
 ```
-Listing 4-5: `ContactList.java`
+
+列表 4-5: `ContactList.java`
 
 要删除一个条目，我们首先需要它的哈希值。我们使用这个整数值作为索引来获取相应的桶。然后我们逐个搜索桶中的条目，直到找到特定的联系人。接着，我们像从链表中删除删除节点一样，从桶中移除该条目。
 
@@ -680,7 +698,8 @@ public void contactSearch(String name) {
     System.out.println("Contact '" + name + "' not found.");
 }
 ```
-Listing 4-6: `ContactList.java`
+
+列表 4-6: `ContactList.java`
 
 最后，在 `main()` 方法中，我们创建了一个电话簿并用它来添加、删除和搜索联系人：
 
@@ -698,11 +717,12 @@ public static void main(String[] args) {
     phonebook.contactSearch("Jane");
 }
 ```
-Listing 4-7: `ContactList.java`
+
+列表 4-7: `ContactList.java`
 
 你可以在 GitHub 上找到这个项目：
 
-[`github.com/htset/java_exercises_dsa/tree/master/ContactList`](https://github.com/htset/java_exercises_dsa/tree/master/ContactList)
+`github.com/htset/java_exercises_dsa/tree/master/ContactList`
 
 # 5. 优先级待办事项列表
 
@@ -713,6 +733,8 @@ Listing 4-7: `ContactList.java`
 ### 建议的解决方案
 
 首先来看 `Todo.java` 中的 `main()` 方法：
+
+
 
 ```java
 package Todo;
@@ -728,11 +750,11 @@ public class Todo {
         do {
             try {
                 System.out.println("\nTo-Do List Manager");
-                System.out.println("1\. Add Task");
-                System.out.println("2\. Remove Task");
-                System.out.println("3\. Display Tasks");
-                System.out.println("4\. Sort Tasks by Priority");
-                System.out.println("0\. Exit");
+                System.out.println("1. Add Task");
+                System.out.println("2. Remove Task");
+                System.out.println("3. Display Tasks");
+                System.out.println("4. Sort Tasks by Priority");
+                System.out.println("0. Exit");
                 System.out.print("Enter your choice: ");
                 choice = Integer.parseInt(scanner.nextLine());
                 switch (choice) {
@@ -773,9 +795,10 @@ public class Todo {
     }
 }
 ```
+
 Listing 5-1: `Todo.java`
 
-`main` 方法处理用户输入并调用链表的相应方法。
+`main()` 方法处理用户输入并调用链表的相应方法。
 
 这里是 `Task` 类的定义：
 
@@ -789,6 +812,7 @@ public class Task {
     }
 }
 ```
+
 Listing 5-2: `Task.java`
 
 链表由 `Task` 节点组成。`head` 变量指向链表的头部：
@@ -801,6 +825,7 @@ public class TodoList {
 
     public TodoList() {
 ```
+
 Listing 5-3: `TodoList.java`
 
 构造函数初始化链表结构。
@@ -829,6 +854,7 @@ public void addTask(String description, int priority) {
     size++;
 }
 ```
+
 Listing 5-4: `TodoList.java`
 
 接下来，我们定义 `removeTask()` 方法：
@@ -866,6 +892,7 @@ public void removeTask(int index) {
     size--;
 }
 ```
+
 Listing 5-5: `TodoList.java`
 
 待办事项列表的参数是链表中的索引，我们在任务列表期间显示。
@@ -877,11 +904,12 @@ public void displayTasks() {
     Task temp = head;
     int i = 1;
     while (temp != null) {
-        System.out.println(i++ + ") Description: " + temp.description+ ", Priority: " + temp.priority);
+        System.out.println(i++ + ") Description: " + temp.description + ", Priority: " + temp.priority);
         temp = temp.next;
     }
 }
 ```
+
 Listing 5-6: `TodoList.java`
 
 最后，我们展示根据优先级排序任务的代码：
@@ -913,16 +941,14 @@ public void sortTasks() {
     } while (swapped != 0); //quit loop when no swap happened
 }
 ```
+
 Listing 5-7: `TodoList.java`
 
 代码采用冒泡排序算法执行任务排序操作。在冒泡排序中，我们对链表进行多次遍历。每当我们发现一个任务的优先级低于下一个任务时，就会对这些相邻任务进行交换。随着时间的推移，所有条目将根据优先级进行排序，最终会出现一次没有发生交换的循环。这就是算法结束的时候。
 
-# 6.        歌曲列表
+# 6. 歌曲列表
 
 我们将创建一个简单的程序，接收一个歌曲数组并按照艺术家、专辑或发行日期对其排序，使用插入排序。
-
-
-
 
 `Song` 类将包含有关歌曲标题、艺术家、专辑和发行年份的信息：
 
@@ -941,7 +967,8 @@ public class Song {
     }
 }
 ```
-列表 6-1：`Song.java`
+
+Listing 6-1: `Song.java`
 
 接下来，我们定义了三个方法，用于比较：
 
@@ -963,7 +990,8 @@ public class Songs {
     }
 }
 ```
-列表 6-2：`Songs.java`
+
+Listing 6-2: `Songs.java`
 
 在前两个方法中，我们比较两个字符串，而在第三个方法中，我们比较两个整数。这些方法将被 `insertionSort()` 方法使用：
 
@@ -982,7 +1010,8 @@ public static void insertionSort(Song[] arr, Comparator<Song> comparator) {
     }
 }
 ```
-列表 6-3：`Songs.java`
+
+Listing 6-3: `Songs.java`
 
 我们使用 `Comparator` 接口是为了使用之前定义的 3 个静态方法之一。该接口随后被用作 `insertionSort()` 方法的参数，指定对 `Song` 数组排序的比较逻辑。
 
@@ -1007,7 +1036,8 @@ class CompareByArtist implements Comparator<Song> {
     }
 }
 ```
-列表 6-4：`Songs.java`
+
+Listing 6-4: `Songs.java`
 
 然后我们像这样调用 `insertionSort()`：
 
@@ -1016,6 +1046,8 @@ class CompareByArtist implements Comparator<Song> {
 插入排序的工作原理是取数组中的每个元素，并将其移动到数组左侧的排序位置。在任何时刻，数组的左部分都是排序的，而我们从右部分获取项目。当我们把一个元素移动到数组中的某个位置时，右侧的所有项目都必须向右移动一位。
 
 这一切在 `main()` 方法中都得到了说明，在该方法中我们调用了三次 `insertionSort()`，每次传递一个不同的比较方法。每次，数组都以不同的方式进行排序：
+
+
 
 ```java
 public static void main(String[] args) {
@@ -1053,6 +1085,7 @@ public static void main(String[] args) {
     }
 }
 ```
+
 列表 6-5：`Songs.java`
 
 你可以在 GitHub 上找到这个项目：
@@ -1076,6 +1109,7 @@ public class Task {
     }
 }
 ```
+
 列表 7-1：`Task.java`
 
 ```java
@@ -1089,6 +1123,7 @@ public class Worker {
     }
 }
 ```
+
 列表 7-2：`Worker.java`
 
 `Worker` 类包含了工作者的 ID 以及工作负载。
@@ -1145,41 +1180,37 @@ public class TaskAllocation {
         } while (choice != 4);
         scanner.close();
     }
-}...
+}
 ```
+
 列表 7-3：`TaskAllocation.java`
 
 接下来，我们实现添加任务并将其分配给工作者的方法：
 
 ```java
 // 添加任务并分配给工作者的方法
-static void addTask(PriorityQueue<Worker> workerQueue,List<Task> tasks, Scanner scanner) {
+static void addTask(PriorityQueue<Worker> workerQueue, List<Task> tasks, Scanner scanner) {
     System.out.print("Enter task description: ");
-    String description = scanner.next(); 
+    String description = scanner.next();
 
     System.out.print("Enter task duration (in minutes): ");
+    int duration = scanner.nextInt();
+    if (workerQueue.size() == 0) {
+        System.out.println("No workers available! Task cannot be assigned.");
+        return;
+    }
+    // 取出工作量最短的线程
+    Worker worker = workerQueue.poll();
+    // 将任务分配给该线程并更新工作量
+    tasks.add(new Task(description, duration));
+    System.out.println("Task added successfully and allocated to Worker " + worker.id + "!");
+    // 更新工作量
+    worker.workload += duration;
+    // 将更新后的线程存回队列
+    workerQueue.add(worker);
 }
 ```
 
-
-
-
-```java
-int duration = scanner.nextInt();
-if (workerQueue.size() == 0) {
-    System.out.println("No workers available! Task cannot be assigned.");
-    return;
-}
-// 取出工作量最短的线程
-Worker worker = workerQueue.poll();
-// 将任务分配给该线程并更新工作量
-tasks.add(new Task(description, duration));
-System.out.println("Task added successfully and allocated to Worker " + worker.id + "!");
-// 更新工作量
-worker.workload += duration;
-// 将更新后的线程存回队列
-workerQueue.add(worker);
-```
 代码列表 7-4：`TaskAllocation.java`
 
 为了找到工作量最低的线程，我们将线程存储在优先级队列中。请注意，我们使用 `workload` 属性作为用于排序优先级队列的参数。这在 `main()` 方法中的队列定义中已经指定：
@@ -1211,6 +1242,7 @@ static void printWorkersQueue(PriorityQueue<Worker> workerQueue) {
     }
 }
 ```
+
 代码列表 7-5：`TaskAllocation.java`
 
 请注意，遍历优先级队列将得到一个无序的线程列表。显然，这是在不逐个取出每个元素的情况下获取优先级队列内容的唯一方法。
@@ -1245,7 +1277,7 @@ public class WordFrequencies {
     public static void main(String[] args) {
         Map<String, Integer> wordFrequency = new HashMap<>();
         // 从文件读取文本
-        try (BufferedReader inputFile= new BufferedReader(new FileReader("input.txt"))) {
+        try (BufferedReader inputFile = new BufferedReader(new FileReader("input.txt"))) {
             String line;
             while ((line = inputFile.readLine()) != null) {
                 for (String word : line.split(" ")) {
@@ -1264,6 +1296,7 @@ public class WordFrequencies {
     }
 }
 ```
+
 代码列表 8-1：`WordFrequencies.java`
 
 通过使用 `BufferedReader` 对象，我们逐行读取输入文件。然后，根据空格拆分每行，并处理每个单词将其转换为小写并移除非字母字符。这种处理由 `cleanWord()` 方法完成，它接收一个字符串，将其拆分为字符，然后过滤字符以只保留字母和数字。最后，它将每个字符映射为小写，并根据它们创建一个新字符串。
@@ -1289,17 +1322,23 @@ public class WordFrequencies {
 ```java
 package SyntaxChecker;
 public class Stack {
+}
 ```
+
 代码列表 9-1：`Stack`
 
 这里是栈初始化的代码：
 
 ```java
 public Stack() {
+}
 ```
-代码列表 9-2：`Stack.`
+
+代码列表 9-2：`Stack`
 
 接下来，我们添加 `push` 和 `pop` 方法，以及一个检查栈是否为空的方法：
+
+
 
 ```java
 public void push(char c) {
@@ -1320,6 +1359,7 @@ public boolean isEmpty() {
     return (top == -1);
 }
 ```
+
 代码列表 9-3：`Stack.java`
 
 代码中最关键的部分是检查文件是否平衡的算法：
@@ -1372,10 +1412,8 @@ public class SyntaxChecker {
     }
 }
 ```
+
 代码列表 9-4：`SyntaxChecker.java`
-
-
-
 
 注意，这是该算法的一个简单版本。事实上，如果我们尝试检查练习题自身的源文件（`SyntaxChecker.java`）的括号平衡情况，我们将得到一个错误——尽管代码是可以编译的。这是因为我们在检查过程中代码中使用了单个字符（左括号或右括号），如如下行所示：
 
@@ -1402,6 +1440,7 @@ if (c == '(' || c == '[' || c == '{')
 ```java
 private int[][] matrix = {{0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},{0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0},{0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0},{0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0},{0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0},{0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0},{0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0},{0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0},{0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0},{0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0},{0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0},{0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0},{0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0},{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0},{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0}};
 ```
+
 列表 10-1: `MazeSolver.java`
 
 迷宫的入口在左上角，出口在右下角。
@@ -1424,6 +1463,7 @@ public class Point {
     }
 }
 ```
+
 列表 10-2: `Point.java`
 
 这里是栈的代码：
@@ -1448,7 +1488,9 @@ public class Stack<T> {
     public T pop() {
         return items[top--];
     }
+}
 ```
+
 列表 10-3: `Stack.java`
 
 为了让它更有趣，我们使用泛型创建了一个栈。栈最终将包含一个点对象的数组。我们定义了初始化栈的方法、检查它是否为空以及 `push` 和 `pop` 方法。注意我们保持简单，没有包含边界检查，因为我们将实例化容量为 `ROWS*COLS` 的栈来解决迷宫。
@@ -1466,6 +1508,7 @@ public class Maze {
     public Maze() { }
 }
 ```
+
 列表 10-4: `Maze.java`
 
 接下来，我们添加检查是否可以移动到单元格的代码：
@@ -1476,6 +1519,7 @@ private boolean canMove(int row, int col) {
     return (row >= 0 && row < ROWS && col >= 0 && col < COLS && matrix[row][col] == 0);
 }
 ```
+
 列表 10-5: `Maze.java`
 
 该单元格必须在迷宫边界内并且应该是走廊的一部分。
@@ -1492,6 +1536,7 @@ public void print() {
     }
 }
 ```
+
 列表 10-6: `Maze.java`
 
 以下方法实现了迷宫求解算法：
@@ -1522,6 +1567,7 @@ public int solve(int row, int col) {
     return 0;
 }
 ```
+
 列表 10-7: `Maze.java`
 
 # 11. 文件索引器
@@ -1529,9 +1575,6 @@ public int solve(int row, int col) {
 在这个练习中，我们将创建一个程序，递归地索引指定文件夹中的所有文件。索引文件的信息（文件名和在磁盘上的位置）将存储在二叉搜索树 (BST) 中，以便快速搜索。
 
 二叉搜索树结构是一种每个节点只有两个子节点（左和右）的树。这里是该类的定义：
-
-
-
 
 ```java
 package FileIndexer;
@@ -1554,6 +1597,7 @@ class FileIndexer {
 
     private Node root;
     ... 
+}
 ```
 
 列表 11-1: `FileIndexer.java`
@@ -1596,6 +1640,8 @@ private void insertNode(String fileName, String filePath) {
 
 接下来，我们定义了递归将所有文件索引到树中的方法：
 
+
+
 ```java
 // 索引指定的目录
 private void indexDirectoryHelper(String dirPath) {
@@ -1632,7 +1678,7 @@ private void indexDirectoryHelper(String dirPath) {
 
 然后，我们遍历目录并同样递归地索引它们。
 
-接下来，我们定义了一个递归删除树节点节点的方法：
+接下来，我们定义了一个递归删除树节点的方法：
 
 ```java
 // 递归释放内存
@@ -1647,7 +1693,7 @@ private void deleteSubtree(Node root) {
 
 列表 11-4: `FileIndexer.java`
 
-我们通过将子树的根设置为 null 来实现这一点，这样子树将被垃圾回收器移除。
+我们通过将子树的根设置为 `null` 来实现这一点，这样子树将被垃圾回收器移除。
 
 然后，我们有了目录遍历方法（也是递归的）：
 
@@ -1730,10 +1776,6 @@ public static void main(String[] args) {
 
 列表 11-8: `FileIndexer.java`
 
-
-
-
-
 ```java
 x.height = Math.max(getHeight(x.left), getHeight(x.right)) + 1;//返回新根节点
 return x;}
@@ -1750,6 +1792,7 @@ private InventoryNode rotateLeft(InventoryNode x) {
     //返回新根节点
     return y;}
 ```
+
 列表 12-4：`Inventory.java`
 
 这两个方法将在我们尝试向树中插入新节点时使用：
@@ -1788,6 +1831,7 @@ private InventoryNode insertProduct(Node node, Product product) {
     }
     return node;}
 ```
+
 列表 12-5：`Inventory.java`
 
 这里的思想是在向树插入新节点后检查树的平衡。如果树变得不平衡，我们必须向左或向右对其进行旋转。
@@ -1817,6 +1861,7 @@ private InventoryNode searchProduct(InventoryNode node, int id) {
     else
         return searchProduct(node.right, id);}
 ```
+
 列表 12-6：`Inventory.java`
 
 遍历树意味着访问树中的每个节点，这是递归执行的，首先处理左分支，然后处理右分支。
@@ -1836,6 +1881,7 @@ public InventoryNode searchProduct(int id) {
     return searchProduct(root, id);
 }
 ```
+
 列表 12-7：`Inventory.java`
 
 我们使用这种约定是因为具有相同名的私有方法（`insertProduct`、`traverseTree` 和 `searchProduct`）会被递归调用。通过这种方式，我们为使用我们代码的程序员提供了一个整洁的接口。
@@ -1863,7 +1909,7 @@ public static void main(String[] args) {
 }
 ```
 
-# 13 社交网络 (Social Network)
+# 13 社交网络
 
 社交网络本质上是一个表示用户及其连接的图。在这个练习中，我们将创建一个这样的图并实现根据用户推荐新朋友的功能。
 
@@ -1891,11 +1937,16 @@ class User {
     }
 }
 ```
+
 列表 13-1：`SocialNetwork.java`
 
 `User` 类包含了用户名称以及朋友的链表。
 
 接下来，我们定义了一个队列类，将用于推荐算法。为了学习目的，我们将自己实现队列，而不是使用 `java` 包中的包：
+
+
+
+# 13. 社交网络
 
 ```java
 class MyQueue {
@@ -1942,12 +1993,10 @@ class MyQueue {
     }
 }
 ```
+
 列表 13-2：`SocialNetwork.java`
 
 队列包含用户的索引，因为它们将出现在用户数组中（见下文 `Graph` 类）。
-
-
-
 
 现在，让我们看看如何将用户插入到图中，以及如何定义他们与朋友之间的连接。我们定义了 `Graph` 类，它本质上包含社交网络中所有用户的数组：
 
@@ -1963,6 +2012,7 @@ class Graph {
     }
 }
 ```
+
 列表 13-3: `SocialNetwork.java`
 
 接下来，我们提供了向图中添加新用户的功能：
@@ -1977,6 +2027,7 @@ public void addUser(String name) {
     numUsers++;
 }
 ```
+
 列表 13-4: `SocialNetwork.java`
 
 我们使用以下方法为用户添加新的连接：
@@ -1996,6 +2047,7 @@ public void addConnection(int src, int dest) {
     users[dest].friends = newFriendDest;
 }
 ```
+
 列表 13-5: `SocialNetwork.java`
 
 注意，当我们添加新连接时，我们将其是双向的。也就是说，我们为连接的每个端都插入了一个朋友节点。
@@ -2039,6 +2091,7 @@ public void recommendFriends(int userIndex) {
     }
 }
 ```
+
 列表 13-6: `SocialNetwork.java`
 
 `recommendFriends()` 方法使用广度优先搜索 (BFS) 来遍历社交网络图，从指定的用户开始，并访问所有连接的用户以推荐朋友。它使用 `visited[]` 数组将用户标记为已访问，以避免重复推荐同一个朋友，并将每个朋友入队，以确保所有潜在朋友都能被发现和推荐。
@@ -2071,6 +2124,7 @@ public class SocialNetwork {
     }
 }
 ```
+
 列表 13-7: `SocialNetwork.java`
 
 在 `main()` 中，我们向图中添加用户，并输入他们的朋友连接。然后我们运行算法来获取朋友推荐。
@@ -2083,7 +2137,7 @@ https://github.com/htset/java_exercises_dsa/tree/master/SocialNetwork
 
 让我们创建一个控制台应用程序，维护城市之间的航班列表，并根据票价找到最佳航班组合。
 
-### 建议的解决方案
+## 建议的解决方案
 
 这个问题涉及在城市之间创建一个图。该图是带权重的，权重为相应的机票费用。我们将使用 Dijkstra 算法来寻找这两个城市之间最廉价的路径。
 
@@ -2104,6 +2158,7 @@ public class Flights {
     }
 ...
 ```
+
 列表 14-1: `Flights.java`
 
 接下来，我们定义 `FlightGraph` 类：
@@ -2114,6 +2169,7 @@ public static class FlightGraph {
     public Map<String, City> cities = new HashMap<>();
     ...
 ```
+
 列表 14-2: `Flights.java`
 
 该类包含所有城市及其名称的映射。我们可以通过以下方法添加城市和航班连接：
@@ -2128,6 +2184,7 @@ public void addFlight(String src, String dest, int cost) {
     cities.get(src).flights.put(dest, cost);
 }
 ```
+
 列表 14-3: `Flights.java`
 
 注意，我们假设航班是双向的，并且具有相同的价格。
@@ -2175,9 +2232,8 @@ public List<String> findCheapestRoute(String src, String dest, Map<String, Integ
     return path;
 }
 ```
+
 列表 14-4: `Flights.java`
-
-
 
 完成完成后，我们使用上一个节点映射中存储的信息重构从源点到终点的最短路径，从而确定路线的总价格。
 
@@ -2199,12 +2255,15 @@ public void displayAllFlights(String src, String dest) {
     dfs(src, dest, visited, path);
 }
 ```
-Listing 14-5: `Flights.java`
+
+列表 14-5: `Flights.java`
 
 我们看到 `displayAllFlights()` 方法调用了递归的 `dfs()` 方法：
 
+
+
 ```java
-//Recursive DFS function to find all flights between source and destination
+// Recursive DFS function to find all flights between source and destination
 private void dfs(String src, String dest, Set<String> visited, Stack<String> path) {
     visited.add(src);
     if (src.equals(dest)) {
@@ -2221,6 +2280,7 @@ private void dfs(String src, String dest, Set<String> visited, Stack<String> pat
     visited.remove(src);
 }
 ```
+
 Listing 14-6: `Flights.java`
 
 `FlightGraph` 类中的 `dfs()` 方法通过递归实现深度优先搜索 (DFS)，用于在航班网络中寻找源城市和终点城市之间所有可能的航班。
@@ -2231,14 +2291,15 @@ Listing 14-6: `Flights.java`
 
 在回溯时，它会将当前城市从 `path` 栈中移除并标记为未访问，以便探索其他替代路径。此过程不断重复，直到网络中的所有城市都经过探索。
 
-我们使用上述栈在 `PrintPath()` 方法中打印最终路径：
+我们使用上述栈在 `printPath()` 方法中打印最终路径：
 
 ```java
-//Helper function to print a path (stack content)
+// Helper function to print a path (stack content)
 private void printPath(Stack<String> path) {
     System.out.println(String.join(" -> ", path));
 }
 ```
+
 Listing 14-7: `Flights.java`
 
 最后在 `main()` 中，我们向图中添加了城市和航班，并要求用户选择一对城市以计算最佳（最廉价）的航班组合：
@@ -2267,21 +2328,22 @@ public static void main(String[] args) {
     System.out.print("Enter destination city: ");
     String destination = scanner.nextLine();
 
-    //Display all possible flights
+    // Display all possible flights
     System.out.println("All possible flights between " + departure + " and " + destination + ":");
     graph.displayAllFlights(departure, destination);
 
-    //Find the cheapest route and total price
+    // Find the cheapest route and total price
     Map<String, Integer> dist = new HashMap<>();
     List<String> route = graph.findCheapestRoute(departure, destination, dist);
     int totalPrice = dist.get(destination);
 
-    //Display the cheapest route and total price
+    // Display the cheapest route and total price
     System.out.print("Cheapest Route: ");
     System.out.println(String.join(" -> ", route));
     System.out.println("Total Price: " + totalPrice);
 }
 ```
+
 Listing 14-8: `Flights.java`
 
 你可以在 GitHub 上找到这个项目：
@@ -2336,6 +2398,7 @@ class Image {
     }
 }
 ```
+
 Listing 15-1: `MNISTImages.java`
 
 在类内部，我们实现了 `Image` 构造函数和一个打印星号的方法。我们还实现了一个计算当前图像与传入参数图像之间欧几里得距离的方法。如果图像相似，距离将最小；相反，如果图像差异很大，距离会更高。
@@ -2391,14 +2454,11 @@ public class MNISTImages {
 }
 ```
 
-
-
-
-## 列表 15-2: `MNISTImages.java`
+Listing 15-2: `MNISTImages.java`
 
 我们使用一个 `ArrayList` 对象来存储图像引用。在打开 `input.dat` 二进制文件后，我们使用 `skip()` 跳过前 15 字节。然后，在循环中，我们使用 `read()` 每次读取一个图像（784 字节）到缓冲区中，并将其复制到列表中相应的 `Image` 对象中。
 
-此后，我们从列表中随机选择一个图像，并将其打印出来：在字节为 0 的地方使用空格，在图像字节为非 0 的地方使用星号（`**`）。通过这种方式，我们可以了解所选手写数字的大致情况：
+此后，我们从列表中随机选择一个图像，并将其打印出来：在字节为 0 的地方使用空格，在图像字节为非 0 的地方使用星号（`*`）。通过这种方式，我们可以了解所选手写数字的大致情况：
 
 ![](img/image_rsrc5RP.jpg)
 
@@ -2420,7 +2480,7 @@ public class MNISTImages {
 
 在这个练习中，我们将创建一个简单的 HTTP 服务器，用于提供静态内容（仅限 HTML 文件）。该服务器将利用缓存机制，保留最近的服务内容，以提高服务器的性能。
 
-### 建议的解决方案
+## 建议的解决方案
 
 Web 服务器缓存是一个存储之前发送到客户端浏览器内容的结构。缓存空间有限，因此当填满时，我们需要清空最久未使用（LRU）的条目为新条目腾出空间。此外，当服务器使用某个条目向客户端发送内容时，该条目会被移动到列表头部，因为它是最近使用的条目。
 
@@ -2448,7 +2508,7 @@ public class LRUCache {
     ...
 ```
 
-### 列表 16-1: `LRUCache.java`
+Listing 16-1: `LRUCache.java`
 
 缓存实现为双向链表。在这类链表中，我们可以向两个方向（向前和向后）移动。双向链表在我们情况下是有益的，因为我们可以高效地在列表任何位置删除和插入节点，而不需要从列表开始遍历。简单的链表或甚至数组也可以实现相同的效果，但性能较低。
 
@@ -2465,9 +2525,11 @@ public static void main(String[] args) {
 }
 ```
 
-### 列表 16-2: `WebServerCache.java`
+Listing 16-2: `WebServerCache.java`
 
-在这里，我们创建一个 `HttpServer` 类的对象，它将处理与客户端的连接。让我们它是如何实现的：
+在这里，我们创建一个 `HttpServer` 类的对象，它将处理与客户端的连接。让我们看看它是如何实现的：
+
+
 
 ```java
 package WebServerCache;
@@ -2512,10 +2574,8 @@ class HttpServer {
     }
 }
 ```
-*(注：由于原文文本从 handleRequest 处开始出现了严重的逻辑混乱和重复，上述译文已根据代码逻辑进行了修正和整合，以确保技术文档的可读性，同时保留了所有的代码结构)*
 
-
-
+*(注：由于原文文本从 `handleRequest` 处开始出现了严重的逻辑混乱和重复，上述译文已根据代码逻辑进行了修正和整合，以确保技术文档的可读性，同时保留了所有的代码结构)*
 
 如果我们已经达到了最大缓存大小，那么 LRU 算法就会启动：我们删除最近未使用的条目（列表末尾的节点），并为新条目的插入（在列表头部）腾出空间。
 
@@ -2533,6 +2593,7 @@ Node createNode(String url, String content) {
     return newNode;
 }
 ```
+
 Listing 16-6: `LRUCache.java`
 
 接下来，我们看看如何向缓存头部插入新节点：
@@ -2550,6 +2611,7 @@ void insertAtHead(Node node) {
     System.out.println("Node inserted at head: " + node.content);
 }
 ```
+
 Listing 16-7: `LRUCache.java`
 
 注意，在所有操作中，我们必须处理所有的四个引用：`head`、`tail`、`next`、`prev`。
@@ -2576,6 +2638,7 @@ void moveToHead(Node node) {
     System.out.println("Node moved to head: " + node.content);
 }
 ```
+
 Listing 16-8: `LRUCache.java`
 
 最后，这里是节点删除的代码：
@@ -2596,11 +2659,12 @@ void deleteNode(Node node) {
     System.out.println("Node deleted: " + node.content);
 }
 ```
+
 Listing 16-9: `LRUCache.java`
 
 你可以在 GitHub 上找到这个项目：
 
-`https://github.com/htset/java_exercises_dsa/tree/master/WebServerCache
+`https://github.com/htset/java_exercises_dsa/tree/master/WebServerCache`
 
 # 17. 分布式拍卖
 
@@ -2643,6 +2707,7 @@ public class AuctionServer {
     }
 ...
 ```
+
 Listing 17-1: `AuctionServer.java`
 
 在这里，我们将 `Client` 类定义为 `AuctionServer` 类内部的 `static` 类。`Client` 存储了已连接客户端的信息（其 `ID` 以及相应的 `Socket` 和 `BufferedWriter` 对象）。
@@ -2662,6 +2727,7 @@ private static int winningClient = 0; // 获胜的客户端
 //拍卖结束的定时器
 private static Timer timer;
 ```
+
 Listing 17-2: `AuctionServer.java`
 
 现在我们展示 `main()` 方法：
@@ -2710,6 +2776,7 @@ public static void main(String[] args) {
     }
 }
 ```
+
 Listing 17-3: `AuctionServer.java`
 
 我们打开 `ServerSocket` 并监听新连接。我们还启动了一个 20 秒的定时器。当定时器过期时，`timerCompletion()` 方法将被调用，结束拍卖过程。
@@ -2717,6 +2784,8 @@ Listing 17-3: `AuctionServer.java`
 当新连接到达时，我们在 `clients` 数组中存储客户端详情并产生新线程。该线程将运行 `handleClient()` 方法，与特定的客户端进行通信。
 
 现在，让我们看看 `handleClient()` 方法：
+
+
 
 ```java
 //处理客户端报价
@@ -2765,9 +2834,8 @@ private static void handleClient(int clientId) {
     }
 }
 ```
+
 Listing 17-4: `AuctionServer.java`
-
-
 
 如果客户端确实发送了有效的出价，我们将将其与当前最高出价进行比较，如果我们获得了更高的出价，则更新此值。我们还会通知所有客户端已提交的出价。此外，我们还会重置计时器，以获得一个新的 20 秒周期。
 
@@ -2787,6 +2855,7 @@ private static void broadcastMessage(String msg) throws IOException {
     }
 }
 ```
+
 列表 17-5：`AuctionServer.java`
 
 当计时器最终过期时，将调用 `timerCompletionRoutine()` 方法：
@@ -2805,6 +2874,7 @@ private static void timerCompletionRoutine() {
     System.exit(0);
 }
 ```
+
 列表 17-6：`AuctionServer.java`
 
 在通知所有客户端获胜出价后，我们退出程序。当客户端接收到拍卖结束的消息时，相应的客户端将关闭套字。
@@ -2868,11 +2938,12 @@ public class AuctionClient {
     }
 }
 ```
+
 列表 17-7：`AuctionClient.java`
 
 在这里，我们创建了一个 `Socket` 对象并连接到服务器。如果连接成功，我们将产生一个新线程，用于接收并打印来自服务器的信息。
 
-通信的发送部分（即向服务器提交出价）将由主线程执。。如果我们让同一个线程来处理数据的发送和接收，就会出现问题，因为 `readLine()` 方法会阻塞并导致用户无法发送新的出价。
+通信的发送部分（即向服务器提交出价）将由主线程执行。如果我们让同一个线程来处理数据的发送和接收，就会出现问题，因为 `readLine()` 方法会阻塞并导致用户无法发送新的出价。
 
 以下是线程处理器的回调方法：
 
@@ -2912,6 +2983,7 @@ private static void receiveHandler() {
     }
 }
 ```
+
 列表 17-6：`AuctionClient.java`
 
 该线程接收来自拍卖服务器的消息并将其打印在控制台上。当收到以“Auction”开头的最终消息时，它将关闭关闭资源并退出程序。
@@ -2920,4 +2992,3 @@ private static void receiveHandler() {
 
 - https://github.com/htset/java_exercises_dsa/tree/master/AuctionServer
 - https://github.com/htset/java_exercises_dsa/tree/master/AuctionClient
-

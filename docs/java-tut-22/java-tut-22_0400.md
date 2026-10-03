@@ -1,3 +1,4 @@
+
 # 如何使用模型
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/components/model.html`](https://docs.oracle.com/javase/tutorial/uiswing/components/model.html)
@@ -10,7 +11,7 @@
 
 模型还有其他好处。它们意味着数据不会在程序的数据结构和 Swing 组件的数据结构之间复制。此外，模型会自动将更改传播给所有感兴趣的侦听器，使得 GUI 能够轻松与数据保持同步。例如，要向列表添加项目，可以调用列表模型的方法。当模型的数据发生变化时，模型会向`JList`和任何其他已注册的侦听器发送事件，GUI 相应更新。
 
-虽然 Swing 的模型架构有时被称为模型-视图-控制器（MVC）设计，但实际上并不是这样。 Swing 组件通常是这样实现的，即视图和控制器是不可分割的，由外观提供的单个 UI 对象实现。 Swing 模型架构更准确地描述为*可分离的模型架构*。如果你对了解更多关于 Swing 模型架构感兴趣，请参阅[Swing 架构概述](http://www.oracle.com/technetwork/java/architecture-142923.html)，这是*Swing 连接*中的一篇文章。
+虽然 Swing 的模型架构有时被称为模型-视图-控制器（MVC）设计，但实际上并不是这样。Swing 组件通常是这样实现的，即视图和控制器是不可分割的，由外观提供的单个 UI 对象实现。Swing 模型架构更准确地描述为*可分离的模型架构*。如果你对了解更多关于 Swing 模型架构感兴趣，请参阅[Swing 架构概述](http://www.oracle.com/technetwork/java/architecture-142923.html)，这是*Swing 连接*中的一篇文章。
 
 ## 一个示例：Converter
 
@@ -30,18 +31,18 @@
 
 要了解各个组件的模型，请参阅各个组件的"How to"页面和 API 文档。以下是一些直接使用模型的示例：
 
-+   除了最简单的表格示例之外，所有示例都实现了自定义表格数据模型。
++ 除了最简单的表格示例之外，所有示例都实现了自定义表格数据模型。
 
-+   颜色选择器演示在颜色选择器的选择模型上有更改监听器，以便在用户选择新颜色时通知。在 ColorChooserDemo2 中，`CrayonPanel`类直接使用颜色选择模型来设置当前颜色。
++ 颜色选择器演示在颜色选择器的选择模型上有更改监听器，以便在用户选择新颜色时通知。在 ColorChooserDemo2 中，`CrayonPanel`类直接使用颜色选择模型来设置当前颜色。
 
-+   DynamicTreeDemo 示例设置了树模型（为`DefaultTreeModel`的一个实例），直接与其交互，并监听其变化。
++ DynamicTreeDemo 示例设置了树模型（为`DefaultTreeModel`的一个实例），直接与其交互，并监听其变化。
 
-+   ListDemo 设置列表数据模型（为`DefaultListModel`的一个实例）并直接与其交互。
++ ListDemo 设置列表数据模型（为`DefaultListModel`的一个实例）并直接与其交互。
 
-+   SharedModelDemo 定义了一个扩展`DefaultListModel`并实现`TableModel`的`SharedDataModel`类。一个`JList`和一个`JTable`共享`SharedDataModel`的一个实例，提供模型数据的不同视图。
++ SharedModelDemo 定义了一个扩展`DefaultListModel`并实现`TableModel`的`SharedDataModel`类。一个`JList`和一个`JTable`共享`SharedDataModel`的一个实例，提供模型数据的不同视图。
 
-+   在事件监听器示例中，ListDataEventDemo 直接创建并使用`DefaultListModel`。
++ 在事件监听器示例中，ListDataEventDemo 直接创建并使用`DefaultListModel`。
 
-+   我们的微调器示例创建微调器模型。
++ 我们的微调器示例创建微调器模型。
 
-+   正如你已经看到的，转换器示例定义了两个自定义滑块模型。
++ 正如你已经看到的，转换器示例定义了两个自定义滑块模型。

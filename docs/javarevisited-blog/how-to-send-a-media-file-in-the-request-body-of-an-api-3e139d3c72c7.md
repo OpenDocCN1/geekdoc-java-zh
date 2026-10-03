@@ -1,3 +1,4 @@
+
 # 如何在 API 的请求体中发送媒体文件
 
 > 原文：<https://medium.com/javarevisited/how-to-send-a-media-file-in-the-request-body-of-an-api-3e139d3c72c7?source=collection_archive---------1----------------------->

@@ -1,3 +1,4 @@
+
 # 我最喜欢的 2023 年学习软件架构的课程——最好的
 
 > 原文：<https://medium.com/javarevisited/top-5-courses-to-learn-software-architecture-in-2020-best-of-lot-5d34ebc52e9?source=collection_archive---------0----------------------->
@@ -118,7 +119,9 @@
 
 本课程不仅介绍了不同的体系结构模式，还解释了每种方法的优缺点，并带您经历一个不同的场景，其中某个特定的体系结构比其他的更适合。
 
-以下是加入课程的链接— [**Web 应用&软件架构 101**](https://www.educative.io/courses/web-application-software-architecture-101?affiliate_id=5073518643380224)
+
+
+以下是加入课程的链接 — [**Web 应用&软件架构 101**](https://www.educative.io/courses/web-application-software-architecture-101?affiliate_id=5073518643380224)
 
 老实说，这不仅是高级开发人员的最佳课程，也是每个软件开发人员的最佳课程，因为它将拓展你的思维过程，让你成为一个更自信的 web 开发人员。现在的课程有很大的折扣，只需 44 美元，原价 79 美元，对他们来说有点贵，但是值得。
 
@@ -130,23 +133,36 @@
 
 这是一份令人满意的职业，无论是从薪酬还是工作方面来说，因为你得到了很多关注，可以与组织中从首席执行官到开发人员的高层和低层交谈，并了解关于你的应用和解决方案的大部分事情。
 
-其他**文章你可能喜欢**探讨
+## 其他文章你可能喜欢探讨
+
 [2023 年 Java 和 Web 开发者应该学会的 10 件事](http://javarevisited.blogspot.sg/2017/12/10-things-java-programmers-should-learn.html#axzz53ENLS1RB)
+
 [2023 年要看的 10 种编程语言](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html)
+
 [Java 开发者应该知道的 10 种测试工具](http://javarevisited.blogspot.sg/2018/01/10-unit-testing-and-integration-tools-for-java-programmers.html)
+
 [5 种框架 Java 开发者应该学会的 2023 年](http://javarevisited.blogspot.sg/2018/04/top-5-java-frameworks-to-learn-in-2018_27.html)
+
 [每个 Java 开发者都应该知道的 10 种工具](https://javarevisited.blogspot.com/2019/02/10-tools-advanced-java-developers-should-know.html)
-[最后，Java 有 var 来声明局部变量](http://javarevisited.blogspot.sg/2017/12/top-5-courses-to-learn-big-data-and.html)
+
+[最后，Java 有 `var` 来声明局部变量](http://javarevisited.blogspot.sg/2017/12/top-5-courses-to-learn-big-data-and.html)
+
 [2023 年每个 Java 程序员都应该读的 10 本书](http://www.java67.com/2018/02/10-books-java-developers-should-read-in.html)
+
 [Java 开发人员在日常工作中使用的 10 个工具](http://javarevisited.blogspot.sg/2017/03/10-tools-used-by-java-programming-Developers.html#axzz55lrMRnNC)
+
 [成为更好的 Java 程序员的 10 个技巧](https://javarevisited.blogspot.com/2018/05/10-tips-to-become-better-java-developer.html)
 
 感谢您阅读本文。如果您发现这些课程对成为软件架构师或学习软件架构有用，请与您的朋友和同事分享。如果您有任何问题或反馈，请留言。cc
 
 **P.S.** —如果你正在寻找学习 Java 设计模式的免费课程，这对于软件架构师来说也是至关重要的，那么你也可以查看 Udemy 上的 [**Java 设计模式和架构**](http://bit.ly/java-design-patterns-tutorial) 课程。它是完全免费的，并且有大量关于 Java 程序员使用设计模式的有用信息。
 
-<http://bit.ly/java-design-patterns-tutorial>  
+<http://bit.ly/java-design-patterns-tutorial>
 
 ## 你可能喜欢的其他媒体文章
 
-</javarevisited/top-5-courses-to-learn-microservices-in-java-and-spring-framework-e9fed1ba804d>  </javarevisited/10-free-spring-boot-tutorials-and-courses-for-java-developers-53dfe084587e>  </javarevisited/25-software-design-interview-questions-to-crack-any-programming-and-technical-interviews-4b8237942db0> 
+</javarevisited/top-5-courses-to-learn-microservices-in-java-and-spring-framework-e9fed1ba804d>
+
+</javarevisited/10-free-spring-boot-tutorials-and-courses-for-java-developers-53dfe084587e>
+
+</javarevisited/25-software-design-interview-questions-to-crack-any-programming-and-technical-interviews-4b8237942db0>

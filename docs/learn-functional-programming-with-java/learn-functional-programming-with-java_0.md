@@ -1,6 +1,5 @@
+
 # Java 泛式编程学习
-
-
 
 ![](img/cover00121.jpeg)
 
@@ -12,14 +11,18 @@
 
 以下是函数式编程的关键方面。
 
-- **函数 (Functions)** – 函数是执行特定任务的语句块。函数接受数据、处理数据并返回结果。编写函数主要是为了支持重用性概念。一旦写好函数，就可以轻松地调用它，而无需反复编写相同的代码。
+- **函数（Functions）** – 函数是执行特定任务的语句块。函数接受数据、处理数据并返回结果。编写函数主要是为了支持重用性概念。一旦写好函数，就可以轻松地调用它，而无需反复编写相同的代码。
 
 函数式编程围绕一等函数、纯函数和高阶函数展开。
 
-- **一等函数（First Class Function）**是指使用一等实体（如 `String`、数字）的函数，这些实体可以作为参数传递、返回或赋值给变量。
+- **一等函数（First Class Function）**是指使用一等实体（如`String`、数字）的函数，这些实体可以作为参数传递、返回或赋值给变量。
+
 - **高阶函数（High Order Function）**是指既可以接受函数作为参数，也可以返回一个函数的函数。
+
 - **纯函数（Pure Function）**是指在执行过程中没有副作用的函数。
+
 - **函数组合（Functional Composition）** – 在命令式编程中，函数被用于组织可执行的代码，重点在于代码的组织。但在函数式编程中，重点在于函数是如何组织和组合的。数据和函数通常作为参数传递并返回。这使得编程更具能力和表现力。
+
 - **链式接口（Fluent Interfaces）** – 链式接口有助于组合易于编写和理解的表达式。这些接口在每个方法的返回类型再次被重用时有助于方法的链式调用。例如 –
 
 ```java
@@ -27,10 +30,14 @@ LocalDate futureDate = LocalDate.now().plusYears(2).plusDays(3);
 ```
 
 - **及早求值与惰性求值（Eager vs Lazy Evaluation）** – 及早求值意味着表达式一旦遇到就会求值，而惰性求值是指延迟执行直到满足特定条件。例如，Java 8 中的函数式编程支持流。
+
 - **持久性数据结构（Persistent Data Structure）** – 持久性数据结构维护其版本。每当数据更改时，都会创建一个新副本因此是不可变的。此类集合是线程安全的。
+
 - **递归（Recursion）** – 函数可以通过调用自己来实现。Java 的函数式编程支持递归。
+
 - **并行（Parallelism）** 没有副作用的函数可以任何顺序调用，因此是并行的。
-- **Optionals** – Optional 是一个永远不返回 null 的特殊类。返回的对象具有 `isPresent()` 方法。
+
+- **Optionals** – `Optional`是一个永远不返回`null`的特殊类。返回的对象具有`isPresent()`方法。
 
 # Java 函数式编程 – 函数
 
@@ -38,8 +45,10 @@ LocalDate futureDate = LocalDate.now().plusYears(2).plusDays(3);
 
 函数式编程围绕一等函数、纯函数和高阶函数展开。
 
-- **一等函数（First Class Function）**是指使用一等实体（如 `String`、数字）的函数，这些实体可以作为参数传递、返回或赋值给变量。
+- **一等函数（First Class Function）**是指使用一等实体（如`String`、数字）的函数，这些实体可以作为参数传递、返回或赋值给变量。
+
 - **高阶函数（High Order Function）**是指既可以接受函数作为参数，也可以返回一个函数的函数。
+
 - **纯函数（Pure Function）**是指在执行过程中没有副作用的函数。
 
 ## 一等函数 (First Class Function)
@@ -63,13 +72,18 @@ interface SquareMaker {
 ```
 
 ### 输出
+
 1
+
 4
+
 9
+
 16
+
 25
 
-在这里我们使用 Lambda 表达式创建了平方函数的实现并赋值给变量 `squareMaker`。
+在这里我们使用 Lambda 表达式创建了平方函数的实现并赋值给变量`squareMaker`。
 
 ## 高阶函数 (High Order Function)
 
@@ -98,22 +112,28 @@ public class FunctionTester {
 ```
 
 ### 输出
+
 1
+
 4
+
 9
+
 16
+
 25
+
 1
+
 8
+
 27
+
 64
+
 125
 
-
-
-
-
-纯函数不会修改任何全局变量，也不会修改作为参数传递给它的引用。因此，它没有副作用。当用相同的参数调用时，它总是返回相同的值。这类函数非常有用并且是线程安全的。在示例中，`sum` 是一个纯函数。
+纯函数不会修改任何全局变量，也不会修改作为参数传递给它的引用。因此，它没有副作用。当用相同的参数调用时，它总是返回相同的值。这类函数非常有用并且是线程安全的。在示例中，`sum`是一个纯函数。
 
 ```java
 public class FunctionTester {
@@ -130,11 +150,12 @@ public class FunctionTester {
 ```
 
 ### 输出
+
 3
 
 # Java 函数式编程 – 组合
 
-函数组合是指是一种将多个函数组合成单个函数的技术。我们可以组合 lambda 表达式组合。Java 通过 `Predicate` 和 `Function` 类提供了内置支持。以下示例展示了如何使用谓词方法组合两个函数。
+函数组合是指是一种将多个函数组合成单个函数的技术。我们可以组合 lambda 表达式组合。Java 通过`Predicate`和`Function`类提供了内置支持。以下示例展示了如何使用谓词方法组合两个函数。
 
 ```java
 import java.util.function.Predicate;
@@ -151,9 +172,10 @@ public class FunctionTester {
 ```
 
 ### 输出
+
 true
 
-`Predicate` 提供了 `and()` 和 `or()` 方法来组合函数。而 `Function` 提供了 `compose` 和 `andThen` 方法来组合函数。以下示例展示了如何使用 Function 方法组合两个函数。
+`Predicate`提供了`and()`和`or()`方法来组合函数。而`Function`提供了`compose`和`andThen`方法来组合函数。以下示例展示了如何使用`Function`方法组合两个函数。
 
 ```java
 import java.util.function.Function;
@@ -171,7 +193,9 @@ public class FunctionTester {
 ```
 
 ### 输出
+
 18
+
 12
 
 # 饿求值 vs 懒求值
@@ -205,21 +229,27 @@ public class FunctionTester {
 ```
 
 ### 输出
+
 Checking name:
+
 Checking password:
-failed.
-Checking name:
+
 failed.
 
-在这里 `checkInEagerWay()` 函数首先评估参数然后执行其语句。而 `checkInLazyWay()` 执行其语句并根据需要评估参数。由于 `&&` 是短路运算符，`checkInLazyWay` 只评估了第一个为 false 的参数，完全没有评估第二个参数。
+Checking name:
+
+failed.
+
+在这里`checkInEagerWay()`函数首先评估参数然后执行其语句。而`checkInLazyWay()`执行其语句并根据需要评估参数。由于`&&`是短路运算符，`checkInLazyWay`只评估了第一个为 false 的参数，完全没有评估第二个参数。
 
 # 持久化数据结构
 
-如果一个数据结构能够将其之前的更新作为独立版本维护，并且每个版本都可以相应地访问和更新，则称它是持久化的。这使得数据结构变得不可变且线程安全。例如，Java 中的 `String` 类对象是不可变的。当我们对字符串进行任何更改时，JVM 都会创建一个新的字符串对象，分配新值并保留旧值作为旧字符串对象。
+如果一个数据结构能够将其之前的更新作为独立版本维护，并且每个版本都可以相应地访问和更新，则称它是持久化的。这使得数据结构变得不可变且线程安全。例如，Java 中的`String`类对象是不可变的。当我们对字符串进行任何更改时，JVM 都会创建一个新的字符串对象，分配新值并保留旧值作为旧字符串对象。
 
 持久化数据结构也称为函数式数据结构。考虑以下情况——
 
 ## 非持久化方式
+
 ```java
 public static Person updateAge(Person person, int age) {
     person.setAge(age);
@@ -228,6 +258,7 @@ public static Person updateAge(Person person, int age) {
 ```
 
 ## 持久化方式
+
 ```java
 public static Person updateAge(Person pPerson, int age) {
     Person person = new Person();
@@ -265,9 +296,13 @@ public class FunctionTester {
     }
 }
 ```
+
 ### 输出
+
 Sum using imperative way. Sum(5) : 15
+
 Sum using recursive way. Sum(5) : 15
+
 使用递归，我们通过 n-1 的自然数来得到所需的结果。
 
 ## 尾递归
@@ -288,11 +323,17 @@ public class FunctionTester {
     }
 }
 ```
+
 ### 输出
+
 5
+
 4
+
 3
+
 2
+
 1
 
 ## 头递归
@@ -314,16 +355,24 @@ public class FunctionTester {
     }
 }
 ```
+
 ### 输出
+
 1
+
 2
+
 3
+
 4
+
 5
 
 # Java 函数式编程 – 并行
 
-并行是函数式编程的核心概念，通过将大任务分解为较小的独立任务，然后以并行方式完成这些小任务，最后组合完整结果。随着多核处理器的出现，这种技术有助于加快代码执行。Java 有基于线程的并行处理支持，但学习非常困难且难以实现 Bug。Java 8 之后，stream 提供了 `parallel()` 方法，集合 提供了 `parallelStream()` 方法来并行方式完成任务。查看下例：
+并行是函数式编程的核心概念，通过将大任务分解为较小的独立任务，然后以并行方式完成这些小任务，最后组合完整结果。随着多核处理器的出现，这种技术有助于加快代码执行。Java 有基于线程的并行处理支持，但学习非常困难且难以实现 Bug。Java 8 之后，`stream`提供了`parallel()`方法，集合提供了`parallelStream()`方法来并行方式完成任务。查看下例：
+
+
 
 ```java
 import java.util.ArrayList;
@@ -360,17 +409,12 @@ public class FunctionTester {
 }
 ```
 
-
-
-
-
-```
+```java
 .forEachOrdered(e ->  System.out.print(e +  " "));
 
 System.out.println("");
 
 }
-
 ```
 
 ### Output
@@ -396,13 +440,17 @@ System.out.println("");
 Monad 是函数式编程中的一个核心概念。Monad 是一种有助于表示缺失值的设计模式。它允许包装潜在的空值，允许在其周围进行转换，并在存在时提取实际值。根据定义，一个 monad 包含以下参数：
 
 *   `一个泛型类型` − `M<T>`
+
 *   `一个 unit 函数` − `T -> M<T>`
+
 *   `一个 bind 操作` − `M<T> bind T -> M<U> = M<U>`
 
 ## 关键操作
 
 *   `左恒等 (Left Identity)` − 如果一个函数在一个特定值的 monad 上进行 bind，那么其结果将与函数作用于该值的结果相同。
+
 *   `右恒等 (Right Identity)` − 如果 monad 的返回方法与原始值的 monad 相同。
+
 *   `结合律 (Associativity)` − 函数可以按任何顺序应用于 monad 上。
 
 ## Optional 类
@@ -410,7 +458,9 @@ Monad 是函数式编程中的一个核心概念。Monad 是一种有助于表�
 Java 8 引入了作为 monad 的 `Optional` 类。它提供了与 monad 等效的操作。例如，`return` 是一个接收值并返回 monad 的操作。`Optional.of()` 接收参数并返回 `Optional` 对象。在类似的基础上，`bind` 是将函数绑定到 monad 以产生新 monad 的操作。`Optional.flatMap()` 是在 `Optional` 上执行操作并将结果作为 `Optional` 返回的方法。
 
 *   `一个泛型类型` − `Optional<T>`
+
 *   `一个 unit 函数` − `Optional.of()`
+
 *   `一个 bind 操作` − `Optional.flatMap()`
 
 ### 示例 − 左恒等
@@ -518,6 +568,7 @@ public class FunctionTester {
     }
 }
 ```
+
 *(注：提示中关于柯里化的文本不完整，我根据描述重构了逻辑).*
 
 # Java 函数式编程 – 归约 (Reducing)
@@ -540,6 +591,7 @@ public class FunctionTester {
     }
 }
 ```
+
 *(注：提示中关于柯里化的文本不完整，我根据描述重构了逻辑).*
 
 # Java 函数式编程 – 归约 (Reducing)
@@ -562,11 +614,8 @@ public class FunctionTester {
     }
 }
 ```
+
 *(注：提示中关于柯里化的文本不完整，我根据描述重构了逻辑).*
-
-
-
-
 
 ```java
 interface MathOperation {
@@ -595,15 +644,21 @@ private int operate(int a, int b, MathOperation mathOperation) {
 它应该产生如下输出 −
 
 10 + 5 = 15
+
 10 - 5 = 5
+
 10 x 5 = 50
+
 10 / 5 = 2
+
 Hello Mahesh
+
 Hello Suresh
 
 以下是上述示例中需要考虑的重要点。
 
 - `Lambda expressions` 主要用于定义函数式接口的内联实现，即只有一个方法的接口。在上面的示例中，我们使用了各种类型的 lambda 表达式来定义 `MathOperation` 接口的 `operation` 方法。然后，我们定义了 `GreetingService` 接口的 `sayMessage` 方法实现。
+
 - `Lambda expression` 消除了对匿名类的需求，并为 Java 提供了非常简单且强大的函数编程能力。
 
 ## 范围
@@ -711,7 +766,9 @@ public interface vehicle {
 
 ## 默认方法示例
 
-使用你选择的任何编辑器在例如 `C:\> JAVA` 中创建以下 Java 程序。
+
+
+使用你选择的任何编辑器在例如`C:\> JAVA`中创建以下 Java 程序。
 
 ### Java8Tester.java
 
@@ -750,30 +807,35 @@ class Car implements Vehicle, FourWheeler {
 
 ### 验证结果
 
-使用 `javac` 编译器按照如下编译类 −
+使用`javac`编译器按照如下编译类 −
 
 `C:\JAVA>javac Java8Tester.java`
 
-现在如下运行 `Java8Tester` −
+现在如下运行`Java8Tester` −
 
 `C:\JAVA>java Java8Tester`
 
 它应该产生如下输出 −
 
+```
 I am a vehicle!
+
 I am a four wheeler!
+
 Blowing horn!!!
+
 I am a car!
+```
 
 ## 函数式接口
 
-函数式接口只有一个方法。函数式接口定义在 `java.util.function` 包中。
+函数式接口只有一个方法。函数式接口定义在`java.util.function`包中。
 
 ## 函数式接口示例
 
-`Predicate<T>` 接口是一个接收单个输入并返回 Boolean 的函数式接口。该接口表示对对象的测试。
+`Predicate<T>`接口是一个接收单个输入并返回 Boolean 的函数式接口。该接口表示对对象的测试。
 
-使用你选择的任何编辑器在例如 `C:\> JAVA` 中创建以下 Java 程序。
+使用你选择的任何编辑器在例如`C:\> JAVA`中创建以下 Java 程序。
 
 ### Java8Tester.java
 
@@ -814,48 +876,69 @@ public class Java8Tester {
 
 ### 验证结果
 
-使用 `javac` 编译器按照如下编译类 −
+使用`javac`编译器按照如下编译类 −
 
 `C:\JAVA>javac Java8Tester.java`
 
-现在如下运行 `Java8Tester` −
+现在如下运行`Java8Tester` −
 
 `C:\JAVA>java Java8Tester`
 
 它应该产生如下输出 −
 
+```
 Print all numbers:
+
 1
+
 2
+
 3
+
 4
+
 5
+
 6
+
 7
+
 8
+
 9
+
 Print even numbers:
+
 2
+
 4
+
 6
+
 8
+
 Print numbers greater than 3:
+
 4
+
 5
+
 6
+
 7
+
 8
+
 9
+```
 
 ## 函数式编程 - 方法引用
 
-方法引用帮助通过方法名称指向方法。方法引用使用 `::` 符号描述。方法引用可以指向以下类型的方法 −
+方法引用帮助通过方法名称指向方法。方法引用使用`::`符号描述。方法引用可以指向以下类型的方法 −
 
-- **静态方法**：可以使用 `ClassName::Method name` 符号引用静态方法。
-- **实例方法**：可以使用 `Object::Method name` 符号引用实例方法。
+- **静态方法**：可以使用`ClassName::Method name`符号引用静态方法。
 
-
-
+- **实例方法**：可以使用`Object::Method name`符号引用实例方法。
 
 以下示例展示了 Java 8 及更高版本中方法引用（Method references）的工作方式。
 
@@ -903,6 +986,7 @@ public class FunctionTester {
 ```
 
 ### 输出
+
 ```
 Vehicle[Hyundai, Verna, 2018]
 Vehicle[Tata, Harrier, 2019]
@@ -910,13 +994,16 @@ Vehicle[Tata, Harrier, 2019]
 
 ## 构造方法引用（Constructor References）
 
-构造方法引用有助于指向构造方法。使用 `::new` 符号访问构造引用。
+构造方法引用有助于指向构造方法。使用`::new`符号访问构造引用。
 
 ```java
 //构造方法引用
 Factory vehicle_factory = Vehicle::new;
+```
 
 以下示例展示了 Java 8 及更高版本中构造方法引用的工作方式。
+
+```java
 interface Factory {
     Vehicle prepare(String make, String model, int year);
 }
@@ -949,6 +1036,7 @@ public class FunctionTester {
 ```
 
 ### 输出
+
 ```
 Vehicle[Honda, Civic, 2017]
 ```
@@ -986,6 +1074,7 @@ public class FunctionTester {
 ```
 
 ### 输出
+
 ```
 [1, 4, 9, 49, 25]
 [abc, bc, efg, abcd, jkl]
@@ -995,10 +1084,12 @@ public class FunctionTester {
 # 函数式编程 - 高阶函数（High Order Functions）
 
 如果一个函数满足以下任何条件，则被视为高阶函数：
+
 * 它接受一个或多个函数作为参数。
+
 * 它在执行后返回一个函数。
 
-Java 8 的 `Collections.sort()` 方法是高阶函数的一个理想示例。它接受一个参数。参见示例 −
+Java 8 的`Collections.sort()`方法是高阶函数的一个理想示例。它接受一个参数。参见示例 −
 
 ```java
 import java.util.Arrays;
@@ -1012,238 +1103,13 @@ public class FunctionTester {
         List<Integer> numbers = Arrays.asList(3, 4, 6, 7, 9);
         // 将函数作为 lambda 表达式传递
         Collections.sort(numbers, (a,b) ->{ return a.compareTo(b); });
-        }
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
+}
 ```
+
 *(注：由于原文在结尾处截断，此处仅根据提供的文本片段完成翻译。若需完整翻译，请提供完整文本。)*
 
-
-
-在这里 `sum()` 是一个纯函数，因为它在不同时间传入 2 和 3 作为参数时它总是返回 5，并且没有副作用。
+在这里`sum()`是一个纯函数，因为它在不同时间传入 2 和 3 作为参数时它总是返回 5，并且没有副作用。
 
 ## 示例- 不纯函数
 
@@ -1272,7 +1138,7 @@ public class FunctionTester {
 5.4830887819586795
 ```
 
-在这里 `randomSum()` 是一个不纯函数，因为它在不同时间传入 2 和 3 作为参数时它会返回不同的结果，并且会修改实例变量的状态。
+在这里`randomSum()`是一个不纯函数，因为它在不同时间传入 2 和 3 作为参数时它会返回不同的结果，并且会修改实例变量的状态。
 
 # 函数式编程 - 类型推断
 
@@ -1281,6 +1147,8 @@ public class FunctionTester {
 请看下方的示例以明确类型推断。
 
 ## 示例- 类型推断
+
+
 
 ```java
 public class FunctionTester {
@@ -1304,11 +1172,11 @@ public class FunctionTester {
 Hello World!
 ```
 
-Lambda 表达式最初将每个参数及其返回类型视为 Object，然后据此推断数据类型。在第一种情况下，推断出的类型是 Integer；在第二种情况下推断出的类型是 String。
+Lambda 表达式最初将每个参数及其返回类型视为 `Object`，然后据此推断数据类型。在第一种情况下，推断出的类型是 `Integer`；在第二种情况下推断出的类型是 `String`。
 
 # Lambda 表达式中的异常处理
 
-当函数抛出检查异常（checked exception）时，Lambda 表达式很难编写。见下例 -
+当函数抛出检查异常（checked exception）时，Lambda 表达式很难编写。见下例：
 
 ```java
 import java.net.URLEncoder;
@@ -1329,9 +1197,9 @@ public class FunctionTester {
 }
 ```
 
-上面的代码无法编译，因为 `URLEncoder.encode()` 抛出了 `UnsupportedEncodingException`，而该异常无法被 `encodedAddress()` 方法抛出。
+上面的代码无法编译，因为`URLEncoder.encode()`抛出了`UnsupportedEncodingException`，而该异常无法被`encodedAddress()`方法抛出。
 
-一种可能的解决方案是将 `URLEncoder.encode()` 提取到单独的方法并在那里处理异常。
+一种可能的解决方案是将`URLEncoder.encode()`提取到单独的方法并在那里处理异常。
 
 ```java
 import java.io.UnsupportedEncodingException;
@@ -1410,11 +1278,7 @@ www.google.com
 
 Stream API 在 Java 8 中引入，是为了方便 Java 中的函数式编程。Stream API 旨在以函数式方式处理对象集合。根据定义，Stream 是一个 Java 组件，可以对对象集合进行处理。
 
-（注：此处原文中存在大量重复的描述性文本，已根据逻辑进行翻译并保持核心意图）
-
-Stream API 在 Java 8 中引入，是为了方便 Java 中的函数式编程。Stream API 旨在以函数式方式处理对象集合。根据定义，Stream 是一个 Java 组件，可以对对象集合进行处理。
-
-## 示例- 中间方法
+## 示例 - 中间方法
 
 ```java
 import java.util.Arrays;
@@ -1492,19 +1356,17 @@ Two
 
 # 函数式编程 - 终端方法
 
-当在 Stream 上调用终端方法时，迭代将在流以及任何其他链式流上开始。终端方法不返回 `Stream`，因此一旦在 Stream 上调用了终端方法，其非终端方法或中间方法的链式就会停止/终止。
+当在 Stream 上调用终端方法时，迭代将在流以及任何其他链式流上开始。终端方法不返回`Stream`，因此一旦在 Stream 上调用了终端方法，其非终端方法或中间方法的链式就会停止/终止。
 
+通常，终端操作方法返回单个值，并在流的每个元素上调用。以下是`Stream`接口中一些重要的终端操作方法。每个终端函数接收一个谓词函数，启动元素的迭代，并对每个元素应用该谓词。
 
-
-通常，终端操作方法返回单个值，并在流的每个元素上调用。以下是 `Stream` 接口中一些重要的终端操作方法。每个终端函数接收一个谓词函数，启动元素的迭代，并对每个元素应用该谓词。
-
-- `anyMatch` — 如果任意一个元素满足谓词（返回 true），则返回 true。如果没有元素匹配，则返回 false。
-- `allMatch` — 如果任意一个元素不满足谓词（返回 false），则返回 false。如果所有元素都匹配，则返回 true。
-- `noneMatch` — 如果没有元素匹配，则返回 true，否则返回 false。
+- `anyMatch` — 如果任意一个元素满足谓词（返回 `true`），则返回 `true`。如果没有元素匹配，则返回 `false`。
+- `allMatch` — 如果任意一个元素不满足谓词（返回 `false`），则返回 `false`。如果所有元素都匹配，则返回 `true`。
+- `noneMatch` — 如果没有元素匹配，则返回 `true`，否则返回 `false`。
 - `collect` — 将每个元素存储到传入的集合中。
 - `count` — 返回通过中间方法的元素计数。
-- `findAny` — 返回包含任意一个元素的 `Optional` 实例，或者返回空实例。
-- `findFirst` — 在 `Optional` 实例下返回第一个元素。对于空流，返回空实例。
+- `findAny` — 返回包含任意一个元素的`Optional`实例，或者返回空实例。
+- `findFirst` — 在`Optional`实例下返回第一个元素。对于空流，返回空实例。
 - `forEach` — 在每个元素上应用消费者函数。用于打印流的所有元素。
 - `min` — 返回流中最小的元素。根据传递的比较器谓词对元素进行比较。
 - `max` — 返回流中最大的元素。根据传递的比较器谓词对元素进行比较。
@@ -1603,16 +1465,18 @@ Example - reduce
 reduced: One, Two, Three, Four, Five, One
 ```
 
+
+
 # 函数式编程 - 无限流
 
-集合（Collections）是内存数据结构，包含集合中的所有元素，我们通过外部迭代来遍历集合；而 `Stream` 是一种固定数据结构，元素按需计算，`Stream` 具有内置迭代来遍历每个元素。下面的示例显示了如何从数组创建 `Stream`。
+集合（Collections）是内存数据结构，包含集合中的所有元素，我们通过外部迭代来遍历集合；而`Stream`是一种固定数据结构，元素按需计算，`Stream`具有内置迭代来遍历每个元素。下面的示例显示了如何从数组创建`Stream`。
 
 ```java
 int[] numbers = {1, 2, 3, 4};
 Stream numbersFromArray = Arrays.stream(numbers);
 ```
 
-可以使用 `Stream.iterate()` 或 `Stream.generate()` 方法创建 `Stream`，这些方法可以传递条件。考虑我们需要 3 的倍数列表的情况。
+可以使用`Stream.iterate()`或`Stream.generate()`方法创建`Stream`，这些方法可以传递条件。考虑我们需要 3 的倍数列表的情况。
 
 ## 示例 - 无限流
 
@@ -1643,15 +1507,16 @@ public class FunctionTester {
 24
 27
 ```
-为了对无限流进行操作，我们使用了 `Stream` 的 `limit()` 方法，当计数达到 10 时限制数字迭代。
+
+为了对无限流进行操作，我们使用了`Stream`的`limit()`方法，当计数达到 10 时限制数字迭代。
 
 # 函数式编程 - 固定长度流
 
 有多种方法可以创建固定长度流。
 
-- 使用 `Stream.of()` 方法
-- 使用 `Collection.stream()` 方法
-- 使用 `Stream.builder()` 方法
+- 使用`Stream.of()`方法
+- 使用`Collection.stream()`方法
+- 使用`Stream.builder()`方法
 
 下面的示例显示了所有创建固定长度流的方法。
 
@@ -1709,4 +1574,3 @@ StreamBuilder.build():
 4
 5
 ```
-

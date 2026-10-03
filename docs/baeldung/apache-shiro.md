@@ -1,32 +1,25 @@
+
 # 阿帕奇·希罗简介
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/apache-shiro>
 
- ![announcement-icon.png](img/f941b97c607d3bb0797a8d2dc0b8ccf0.png)
+![announcement-icon.png](img/f941b97c607d3bb0797a8d2dc0b8ccf0.png)
 
-It’s just plain hard to get true, **real-time visibility into a running auth flow.**
+在真实的认证流程中获得实时的可见性非常困难。流程的某些部分可能完全对我们隐藏；如果完整的授权过程需要从远程OAuth生产服务器重定向，那么每个调试工作都必须经过生产服务器。这在本地实际上无法调试，无法重现确切的运行状态，也无法检查底层实际发生了什么。这并不理想。
 
-Parts of the process can be completely hidden from us; if the complete authorization process requires a redirect from a remote OAuth production server, then every debugging effort must go through the production server.
+基于这些挑战，我们构建了Lightrun——一个实时的生产调试工具——让你通过代码级信息理解复杂流程。无需远程调试器，无需停止运行中的服务，即可添加日志、获取快照（虚拟断点）和检测指标，最重要的是——**实时且无副作用**。
 
-It’s practically unfeasible to debug this locally. There’s no way to reproduce the exact state and no way to inspect what is actually happening under the hood. Not ideal.
+**通过这个5分钟教程了解如何使用Lightrun调试这类场景**：
 
-Knowing these types of challenges, we built Lightrun - a real-time production debugging tool - to allow you to understand complicated flows with code-level information. Add logs, take snapshots (virtual breakpoints), and instrument metrics without a remote debugger, without stopping the running service, and, most importantly - **in real-time and without side effects**.
-
-**Learn more with this 5-minute tutorial** focused on debugging these kinds of scenarios using Lightrun:
-
-[>> Debugging Authentication and Authorization Using Lightrun](/web/20220524130132/https://www.baeldung.com/lightrun-n-security)
+[>> 使用Lightrun调试认证和授权](/web/20220524130132/https://www.baeldung.com/lightrun-n-security)
 
 ## 1。概述
 
-在本文中，我们将看看[阿帕奇·希罗](https://web.archive.org/web/20220524130132/https://shiro.apache.org/)，一个通用的 Java 安全框架。
-
-该框架是高度可定制和模块化的，因为它提供了认证、授权、加密和会话管理。
+在本文中，我们将看看[阿帕奇·希罗](https://web.archive.org/web/20220524130132/https://shiro.apache.org/)，一个通用的Java安全框架。该框架高度可定制和模块化，因为它提供了认证、授权、加密和会话管理。
 
 ## 2。依赖性
 
-阿帕奇·希罗有许多[模块](https://web.archive.org/web/20220524130132/https://shiro.apache.org/download.html)。然而，在本教程中，我们只使用了`shiro-core`工件。
-
-让我们把它添加到我们的`pom.xml`:
+阿帕奇·希罗有许多[模块](https://web.archive.org/web/20220524130132/https://shiro.apache.org/download.html)。然而，在本教程中，我们只使用`shiro-core`工件。让我们把它添加到`pom.xml`：
 
 ```java
 <dependency>
@@ -36,13 +29,11 @@ Knowing these types of challenges, we built Lightrun - a real-time production de
 </dependency>
 ```
 
-最新版本的阿帕奇·希罗模块可以在 Maven Central 上找到。
+最新版本的阿帕奇·希罗模块可以在Maven Central上找到。
 
 ## 3。配置安全管理器
 
-`SecurityManager`是阿帕奇·希罗框架的中心部分。应用程序通常只有一个运行的实例。
-
-在本教程中，我们将在桌面环境中探索该框架。要配置框架，我们需要在资源文件夹中创建一个`shiro.ini`文件，内容如下:
+`SecurityManager`是阿帕奇·希罗框架的中心部分。应用程序通常只有一个运行的实例。在本教程中，我们将在桌面环境中探索该框架。要配置框架，我们需要在资源文件夹中创建一个`shiro.ini`文件，内容如下：
 
 ```java
 [users]
@@ -56,15 +47,9 @@ editor = articles:*
 author = articles:compose,articles:save
 ```
 
-`shiro.ini`配置文件的`[users]`部分定义了被`SecurityManager`识别的用户凭证。`p`格式为:`rincipal (username) = password, role1, role2, …, role`。
+`shiro.ini`配置文件的`[users]`部分定义了被`SecurityManager`识别的用户凭证。格式为：`principal (username) = password, role1, role2, ..., roleN`。角色及其相关权限在`[roles]`部分声明。`admin`角色被授予对应用程序每个部分的权限和访问权，这由通配符(`*`)符号表示。`editor`角色拥有与`articles`相关的所有权限，而`author`角色只能拥有`compose`和`save`一篇文章。
 
-角色及其相关权限在`[roles]`部分声明。`admin` 角色被授予对应用程序每个部分的权限和访问权。这由通配符`(*)`符号表示。
-
-`editor`角色拥有与`articles` 相关的所有权限，而`author`角色只能拥有`compose` 和`save` 一篇文章。
-
-`SecurityManager`用于配置`SecurityUtils`类。从`SecurityUtils`中，我们可以获得与系统交互的当前用户，并执行认证和授权操作。
-
-让我们使用`IniRealm`从`shiro.ini`文件中加载我们的用户和角色定义，然后使用它来配置`DefaultSecurityManager`对象:
+`SecurityManager`用于配置`SecurityUtils`类。从`SecurityUtils`中，我们可以获得与系统交互的当前用户，并执行认证和授权操作。让我们使用`IniRealm`从`shiro.ini`文件中加载用户和角色定义，然后使用它来配置`DefaultSecurityManager`对象：
 
 ```java
 IniRealm iniRealm = new IniRealm("classpath:shiro.ini");
@@ -78,11 +63,7 @@ Subject currentUser = SecurityUtils.getSubject();
 
 ## 4。认证
 
-在阿帕奇·希罗的术语中，`Subject`是任何与系统交互的实体。它可能是一个人，一个脚本，或者一个 REST 客户机。
-
-调用`SecurityUtils.getSubject()`返回当前`Subject`的一个实例，即 `currentUser`。
-
-现在我们有了`currentUser`对象，我们可以对提供的凭证执行认证:
+在阿帕奇·希罗的术语中，`Subject`是任何与系统交互的实体。它可能是一个人、一个脚本或一个REST客户机。调用`SecurityUtils.getSubject()`返回当前`Subject`的一个实例，即`currentUser`。现在我们有了`currentUser`对象，我们可以对提供的凭证执行认证：
 
 ```java
 if (!currentUser.isAuthenticated()) {               
@@ -103,25 +84,13 @@ if (!currentUser.isAuthenticated()) {
 }
 ```
 
-首先，我们检查当前用户是否还没有被认证。然后，我们用用户的主体`(username)`和凭证`(password).`创建一个认证令牌
-
-接下来，我们尝试使用令牌登录。如果所提供的凭证是正确的，那么一切都会好的。
-
-不同的情况有不同的例外。也可以抛出一个更适合应用程序需求的自定义异常。这可以通过子类化`AccountException`类来实现。
+首先，我们检查当前用户是否还没有被认证。然后，我们用用户的主体(`username`)和凭证(`password`)创建一个认证令牌。接下来，我们尝试使用令牌登录。如果所提供的凭证是正确的，那么一切都会正常。不同的情况有不同的异常。也可以抛出更适合应用程序需求的自定义异常，这可以通过子类化`AccountException`类来实现。
 
 ## 5。授权
 
-身份验证试图验证用户的身份，而授权试图控制对系统中某些资源的访问。
+身份验证试图验证用户的身份，而授权试图控制对系统中某些资源的访问。回想一下，我们为在`shiro.ini`文件中创建的每个用户分配了一个或多个角色。此外，在角色部分，我们为每个角色定义了不同的权限或访问级别。现在让我们看看如何在应用程序中使用它来加强用户访问控制。
 
-回想一下，我们为在`shiro.ini`文件中创建的每个用户分配了一个或多个角色。此外，在角色部分，我们为每个角色定义了不同的权限或访问级别。
-
-现在让我们看看如何在我们的应用程序中使用它来加强用户访问控制。
-
-在`shiro.ini`文件中，我们给予管理员对系统每个部分的完全访问权。
-
-编辑者可以完全访问关于`articles`的每一个资源/操作，而作者只能编写和保存`articles`。
-
-让我们欢迎基于角色的当前用户:
+在`shiro.ini`文件中，我们给予管理员对系统每个部分的完全访问权。编辑者可以完全访问关于`articles`的每一个资源/操作，而作者只能编写和保存`articles`。让我们基于角色欢迎当前用户：
 
 ```java
 if (currentUser.hasRole("admin")) {       
@@ -135,7 +104,7 @@ if (currentUser.hasRole("admin")) {
 }
 ```
 
-现在，让我们看看当前用户在系统中被允许做什么:
+现在，让我们看看当前用户在系统中被允许做什么：
 
 ```java
 if(currentUser.isPermitted("articles:compose")) {            
@@ -159,15 +128,9 @@ if(currentUser.isPermitted("articles:publish")) {
 
 ## 6。领域配置
 
-在实际应用中，我们需要一种从数据库而不是从`shiro.ini`文件中获取用户凭证的方法。这就是境界这个概念发挥作用的地方。
+在实际应用中，我们需要一种从数据库而不是从`shiro.ini`文件中获取用户凭证的方法，这就是领域这个概念发挥作用的地方。在阿帕奇·希罗的术语中，[领域](https://web.archive.org/web/20220524130132/https://shiro.apache.org/realm.html)是一个DAO，它指向认证和授权所需的用户凭证的存储。要创建一个领域，我们只需要实现`Realm`接口，那可能是乏味的；然而，该框架带有默认的实现，我们可以从中派生出子类，其中一个实现就是`JdbcRealm`。
 
-在阿帕奇·希罗的术语中，[领域](https://web.archive.org/web/20220524130132/https://shiro.apache.org/realm.html)是一个 DAO，它指向认证和授权所需的用户凭证的存储。
-
-要创建一个领域，我们只需要实现`Realm`接口。那可能是乏味的；然而，该框架带有默认的实现，我们可以从中派生出子类。其中一个实现就是`JdbcRealm`。
-
-我们创建一个自定义领域实现，它扩展了`JdbcRealm`类并覆盖了以下方法:`doGetAuthenticationInfo()`、`doGetAuthorizationInfo()`、`getRoleNamesForUser()`和`getPermissions()`。
-
-让我们通过子类化`JdbcRealm`类来创建一个领域:
+我们创建一个自定义领域实现，它扩展了`JdbcRealm`类并覆盖了以下方法：`doGetAuthenticationInfo()`、`doGetAuthorizationInfo()`、`getRoleNamesForUser()`和`getPermissions()`。让我们通过子类化`JdbcRealm`类来创建一个领域：
 
 ```java
 public class MyCustomRealm extends JdbcRealm {
@@ -175,7 +138,7 @@ public class MyCustomRealm extends JdbcRealm {
 }
 ```
 
-为了简单起见，我们使用`java.util.Map`来模拟一个数据库:
+为了简单起见，我们使用`java.util.Map`来模拟一个数据库：
 
 ```java
 private Map<String, String> credentials = new HashMap<>();
@@ -199,7 +162,7 @@ private Map<String, Set<String>> perm = new HashMap<>();
 }
 ```
 
-让我们继续并覆盖`doGetAuthenticationInfo()`:
+让我们继续并覆盖`doGetAuthenticationInfo()`：
 
 ```java
 protected AuthenticationInfo 
@@ -221,11 +184,7 @@ protected AuthenticationInfo
 }
 ```
 
-我们首先将提供的`AuthenticationToken`转换为`UsernamePasswordToken`。从`uToken`中，我们提取用户名(`uToken.getUsername()`，并使用它从数据库中获取用户凭证(密码)。
-
-如果没有找到记录——我们抛出一个`UnknownAccountException`,否则我们使用凭证和用户名构造一个从方法返回的`SimpleAuthenticatioInfo`对象。
-
-如果用户凭证用 salt 散列，我们需要返回一个带有相关 salt 的`SimpleAuthenticationInfo`:
+我们首先将提供的`AuthenticationToken`转换为`UsernamePasswordToken`。从`uToken`中，我们提取用户名(`uToken.getUsername()`)并使用它从数据库中获取用户凭证（密码）。如果没有找到记录，我们抛出一个`UnknownAccountException`；否则，我们使用凭证和用户名构造一个从方法返回的`SimpleAuthenticationInfo`对象。如果用户凭证用salt散列，我们需要返回一个带有相关salt的`SimpleAuthenticationInfo`：
 
 ```java
 return new SimpleAuthenticationInfo(
@@ -237,6 +196,9 @@ return new SimpleAuthenticationInfo(
 ```
 
 我们还需要覆盖`doGetAuthorizationInfo()`，以及`getRoleNamesForUser()`和`getPermissions()`。
+
+
+
 
 最后，让我们将自定义领域插入到`securityManager`中。我们需要做的就是用我们的自定义领域替换上面的`IniRealm` ，并将其传递给`DefaultSecurityManager`的构造函数:
 
@@ -253,7 +215,7 @@ SecurityManager securityManager = new DefaultSecurityManager(realm);
 
 如果我们散列密码，我们需要通知框架使用一个`HashedCredentialsMatcher`来代替。带散列密码的 INI 配置可以在[这里](https://web.archive.org/web/20220524130132/https://shiro.apache.org/realm.html#Realm-HashingCredentials)找到。
 
-## 7。注销
+## 7. 注销
 
 现在我们已经验证了用户，是时候实现注销了。只需调用一个方法就可以做到这一点，该方法会使用户会话无效并注销用户:
 
@@ -261,7 +223,7 @@ SecurityManager securityManager = new DefaultSecurityManager(realm);
 currentUser.logout();
 ```
 
-## 8。会话管理
+## 8. 会话管理
 
 该框架自然带有其会话管理系统。如果在 web 环境中使用，它默认为`HttpSession` 实现。
 
@@ -278,13 +240,13 @@ if (value.equals("value")) {
 }
 ```
 
-## 9。使用 Spring 的 Web 应用程序 Shiro】
+## 9. 使用 Spring 的 Web 应用程序 Shiro
 
 到目前为止，我们已经概述了阿帕奇·希罗的基本结构，并在桌面环境中实现了它。让我们继续将框架集成到 Spring Boot 应用程序中。
 
 注意，这里主要关注的是 Shiro，而不是 Spring 应用程序——我们只打算用它来驱动一个简单的示例应用程序。
 
-### 9.1。依赖性
+### 9.1. 依赖性
 
 首先，我们需要将 Spring Boot 父依赖项添加到我们的`pom.xml`:
 
@@ -314,7 +276,7 @@ if (value.equals("value")) {
 </dependency>
 ```
 
-### 9.2。配置
+### 9.2. 配置
 
 将`shiro-spring-boot-web-starter`依赖项添加到我们的`pom.xml`中将默认配置阿帕奇·希罗应用程序的一些特性，比如`SecurityManager`。
 
@@ -358,7 +320,7 @@ shiro.unauthorizedUrl = /login
 
 既然`authc`过滤器已经被应用到了`/secure`，那么对该路由的所有请求都将需要表单认证。
 
-### 9.3。认证和授权
+### 9.3. 认证和授权
 
 让我们用下面的路径映射创建一个`ShiroSpringController`:`/index`、`/login, /logout` 和`/secure.`
 
@@ -425,11 +387,11 @@ return "secure";
 
 另外，请注意，框架提供了额外的[注释](https://web.archive.org/web/20220524130132/https://shiro.apache.org/spring.html)，可以与过滤器链定义一起使用，以保护我们的应用程序。
 
-## 10.JEE 一体化
+## 10. JEE 一体化
 
 将阿帕奇·希罗集成到 JEE 应用程序中只是配置`web.xml`文件的问题。像往常一样，配置期望`shiro.ini`在类路径中。详细的配置示例可在[这里](https://web.archive.org/web/20220524130132/https://shiro.apache.org/web.html#Web-%7B%7Bweb.xml%7D%7D)找到。此外，JSP 标签可以在[这里](https://web.archive.org/web/20220524130132/https://shiro.apache.org/web.html#Web-JSP%2FGSPTagLibrary)找到。
 
-## 11。结论
+## 11. 结论
 
 在本教程中，我们研究了阿帕奇·希罗的认证和授权机制。我们还关注了如何定义一个自定义领域并将其插入到`SecurityManager`中。
 

@@ -1,30 +1,35 @@
-# hibernate–一对多示例(注释)
+
+
+# Hibernate 一对多示例（注释）
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/hibernate/hibernate-one-to-many-relationship-example-annotation/>
 
-在本教程中，它将重用之前的“ [Hibernate 一对多关系示例 XML 映射](http://web.archive.org/web/20210507115125/http://www.mkyong.com/hibernate/hibernate-one-to-many-relationship-example/)”教程的整个基础设施，并对其进行增强以支持 Hibernate / JPA 注释。
+在本教程中，它将重用之前的“[Hibernate 一对多关系示例 XML 映射](http://web.archive.org/web/20210507115125/http://www.mkyong.com/hibernate/hibernate-one-to-many-relationship-example/)”教程的整个基础设施，并对其进行增强以支持 Hibernate / JPA 注释。
 
 ## 项目结构
 
 查看本教程的新项目结构。
 
-![one to many annotation folder](img/8913f87ef8868487c90a0abcf71ddc9a.png "one-to-many-annotation-relationship-folder")**Note**
-Since Hibernate 3.6, annotation codes are merged into the Hibernate core module, so, the [previous pom.xml](http://web.archive.org/web/20210507115125/http://www.mkyong.com/hibernate/hibernate-one-to-many-relationship-example/) file can be reuse.
+![one to many annotation folder](img/8913f87ef8868487c90a0abcf71ddc9a.png "one-to-many-annotation-relationship-folder")
 
-## 1.“一对多”表关系
+**Note**
+
+Since Hibernate 3.6, annotation codes are merged into the Hibernate core module, so, the [previous `pom.xml`](http://web.archive.org/web/20210507115125/http://www.mkyong.com/hibernate/hibernate-one-to-many-relationship-example/) file can be reuse.
+
+## 1. “一对多”表关系
 
 再看前面的一对多表关系。
 
 ![one to many table relationship](img/b63b5fb7484cc753f46b53cc053cce4e.png "one-to-many-relationship")
 
-## 2.Hibernate 模型类
+## 2. Hibernate 模型类
 
-更新以前的模型类—`Stock.java`和`StockDailyRecord.java`，并在里面定义注释代码。
+更新以前的模型类——`Stock.java`和`StockDailyRecord.java`，并在里面定义注释代码。
 
-*文件:Stock.java*
+### 文件：`Stock.java`
 
 ```java
- package com.mkyong.stock;
+package com.mkyong.stock;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -103,13 +108,13 @@ public class Stock implements java.io.Serializable {
 		this.stockDailyRecords = stockDailyRecords;
 	}
 
-} 
+}
 ```
 
-*文件:StockDailyRecord.java*
+### 文件：`StockDailyRecord.java`
 
 ```java
- package com.mkyong.stock;
+package com.mkyong.stock;
 
 import java.util.Date;
 import javax.persistence.Column;
@@ -126,7 +131,7 @@ import javax.persistence.TemporalType;
 import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "stock_daily_record", catalog = "mkyongdb", 
+@Table(name = "stock_daily_record", catalog = "mkyongdb",
 uniqueConstraints = @UniqueConstraint(columnNames = "DATE"))
 public class StockDailyRecord implements java.io.Serializable {
 
@@ -223,17 +228,17 @@ public class StockDailyRecord implements java.io.Serializable {
 		this.date = date;
 	}
 
-} 
+}
 ```
 
-## 3.休眠配置文件
+## 3. 休眠配置文件
 
-将带注释的类`Stock.java`和`StockDailyRecord.java`放在`hibernate.cfg.xml`中，如下所示:
+将带注释的类`Stock.java`和`StockDailyRecord.java`放在`hibernate.cfg.xml`中，如下所示：
 
-*文件:hibernate.cfg.xml*
+### 文件：`hibernate.cfg.xml`
 
-```java
- <?xml version="1.0" encoding="utf-8"?>
+```xml
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC
 "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
@@ -249,17 +254,17 @@ public class StockDailyRecord implements java.io.Serializable {
     <mapping class="com.mkyong.stock.Stock" />
     <mapping class="com.mkyong.stock.StockDailyRecord" />
 </session-factory>
-</hibernate-configuration> 
+</hibernate-configuration>
 ```
 
-## 4.运行它
+## 4. 运行它
 
-运行它，Hibernate 将在 STOCK 表中插入一行，在 STOCK_DAILY_RECORD 表中插入一行。
+运行它，Hibernate 将在 `STOCK` 表中插入一行，在 `STOCK_DAILY_RECORD` 表中插入一行。
 
-*文件:App.java*
+### 文件：`App.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.Date;
 
@@ -289,7 +294,7 @@ public class App {
         stockDailyRecords.setVolume(3000000L);
         stockDailyRecords.setDate(new Date());
 
-        stockDailyRecords.setStock(stock);        
+        stockDailyRecords.setStock(stock);
         stock.getStockDailyRecords().add(stockDailyRecords);
 
         session.save(stockDailyRecords);
@@ -297,13 +302,16 @@ public class App {
 	session.getTransaction().commit();
 	System.out.println("Done");
 	}
-} 
+}
 ```
 
-*输出*
+### 输出
+
+
+
 
 ```java
- Hibernate one to many (Annotation)
+Hibernate one to many (Annotation)
 Hibernate: 
     insert 
     into
@@ -318,13 +326,13 @@ Hibernate:
         (DATE, PRICE_CHANGE, PRICE_CLOSE, PRICE_OPEN, STOCK_ID, VOLUME) 
     values
         (?, ?, ?, ?, ?, ?)
-Done 
+Done
 ```
 
 Download it – [Hibernate-one-to-many-annotation.zip](http://web.archive.org/web/20210507115125/http://www.mkyong.com/wp-content/uploads/2011/04/Hibernate-one-to-many-annotation.zip) (9KB)
 
 ## 参考
 
-1.  [Hibernate 文档–一对多关系](http://web.archive.org/web/20210507115125/http://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/mapping.html#d0e7576)
+1. [Hibernate 文档–一对多关系](http://web.archive.org/web/20210507115125/http://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/mapping.html#d0e7576)
 
-Tags : [hibernate](http://web.archive.org/web/20210507115125/https://mkyong.com/tag/hibernate/) [one-to-many](http://web.archive.org/web/20210507115125/https://mkyong.com/tag/one-to-many/)<input type="hidden" id="mkyong-current-postId" value="8690">
+Tags: [hibernate](http://web.archive.org/web/20210507115125/https://mkyong.com/tag/hibernate/) [one-to-many](http://web.archive.org/web/20210507115125/https://mkyong.com/tag/one-to-many/)

@@ -1,3 +1,4 @@
+
 # 什么是 CQRS？在微服务中有多重要？
 
 > 原文：<https://medium.com/javarevisited/what-is-cqrs-how-important-is-it-in-microservices-20e65dc17c25?source=collection_archive---------0----------------------->

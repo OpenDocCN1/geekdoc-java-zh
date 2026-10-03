@@ -1,8 +1,9 @@
+
 # Java 周刊，第 378 期
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-weekly-378>
 
-## 1。Spring 和 Java
+## 1. Spring 和 Java
 
 [**> > JEP 401:图元对象(预览)**](https://web.archive.org/web/20221129002153/https://openjdk.java.net/jeps/401)【openjdk.java.net】
 
@@ -27,7 +28,7 @@
 
 *   [**> >一个精彩的播客:Java 冠军和传奇人物安吉·琼斯**](https://web.archive.org/web/20221129002153/https://spring.io/blog/2021/03/18/a-bootiful-podcast-fellow-java-champion-and-legend-angie-jones) [ spring.io ]
 *   [**> >在 Arm64 上启用 Java:Windows–成功案例！**](https://web.archive.org/web/20221129002153/https://www.infoq.com/presentations/java-windows-arm/)【infoq.com】
-*   [**>>booti ful Cassandra 与 DataStax 的 Patrick McFadin、Cedrick Lunven、Spring 的 Josh Long**](https://web.archive.org/web/20221129002153/https://spring.io/blog/2021/03/22/bootiful-cassandra-with-datastax-s-patrick-mcfadin-cedrick-lunven-and-spring-s-josh-long)[Spring . io
+*   [**>>booti ful Cassandra 与 DataStax 的 Patrick McFadin、Cedrick Lunven、Spring 的 Josh Long**](https://web.archive.org/web/20221129002153/https://spring.io/blog/2021/03/22/bootiful-cassandra-with-datastax-s-patrick-mcfadin-cedrick-lunven-and-spring-s-josh-long)[Spring . io]
 
 **升级时间:**
 
@@ -39,7 +40,7 @@
 *   [**> >春云 AWS 2.3 现已上市**](https://web.archive.org/web/20221129002153/https://spring.io/blog/2021/03/17/spring-cloud-aws-2-3-is-now-available)Spring . io
 *   [**> >弹簧工具 4.10.0 发布**](https://web.archive.org/web/20221129002153/https://spring.io/blog/2021/03/17/spring-tools-4-10-0-released)Spring . io
 
-## 2。技术
+## 2. 技术
 
 [**> >乐观与悲观锁定**](https://web.archive.org/web/20221129002153/https://vladmihalcea.com/optimistic-vs-pessimistic-locking/)【vladmihalcea.com】
 
@@ -51,7 +52,7 @@
 *   [**> > 11 年质因数形**](https://web.archive.org/web/20221129002153/http://blog.code-cop.org/2021/03/11-years-prime-factors-kata.html)【blog.code-cop.org】
 *   [**> >改写技术面试**](https://web.archive.org/web/20221129002153/https://aphyr.com/posts/353-rewriting-the-technical-interview)【aphyr.com】
 
-## 3。沉思
+## 3. 沉思
 
 [**> >亚马逊 S3**T3【allthingsdistributed.com15 岁生日快乐](https://web.archive.org/web/20221129002153/https://www.allthingsdistributed.com/2021/03/happy-15th-birthday-amazon-s3.html)
 
@@ -62,7 +63,7 @@
 *   [**> >敏捷工具箱:10 分钟故事时间**](https://web.archive.org/web/20221129002153/https://blog.codecentric.de/en/2021/03/10-minute-story-time/)[blog . code centric . de]
 *   [**> >规模收益&增长工具**](https://web.archive.org/web/20221129002153/https://netflixtechblog.com/scaling-revenue-growth-tooling-87ff969d4241)【netflixtechblog.com】
 
-## 4。漫画
+## 4. 漫画
 
 本周我最喜欢的迪尔伯特。
 
@@ -72,9 +73,9 @@
 
 [**> >缩放时遮罩**](https://web.archive.org/web/20221129002153/https://dilbert.com/strip/2021-03-19)【dilbert.com】
 
-## 5。本周精选
+## 5. 本周精选
 
-近二十年来，Spring 一直是在 Java 生态系统中构建 web 应用的途径。 **把 Kotlin 加入** ，再加上 Java，可以相当强大。
+近二十年来，Spring 一直是在 Java 生态系统中构建 web 应用的途径。**把 Kotlin 加入**，再加上 Java，可以相当强大。
 
 Kotlin 和 Java 之间的互操作性是显而易见的——让渐进的小步骤变得非常容易。
 
@@ -82,8 +83,8 @@ Kotlin 和 Java 之间的互操作性是显而易见的——让渐进的小步�
 
 [**> >科特林**](/web/20221129002153/https://www.baeldung.com/jetbrains-kotlin)
 
-还有，要想深入了解 Kotlin with Spring，绝对要看看官方(及正在进行中)‘`Spring time in Kotlin`‘[视频系列这里](https://web.archive.org/web/20221129002153/https://youtube.com/playlist?list=PLlFc5cFwUnmxOJL0GSSZ1Vot4KL2Vwe7x) 。
+还有，要想深入了解 Kotlin with Spring，绝对要看看官方(及正在进行中)的“`Spring time in Kotlin`” [视频系列这里](https://web.archive.org/web/20221129002153/https://youtube.com/playlist?list=PLlFc5cFwUnmxOJL0GSSZ1Vot4KL2Vwe7x)。
 
 享受吧。
 
-Next **»**[Java Weekly, Issue 379](/web/20221129002153/https://www.baeldung.com/java-weekly-379)**«** Previous[Java Weekly, Issue 377](/web/20221129002153/https://www.baeldung.com/java-weekly-377)
+Next **»** [Java Weekly, Issue 379](/web/20221129002153/https://www.baeldung.com/java-weekly-379) **«** Previous [Java Weekly, Issue 377](/web/20221129002153/https://www.baeldung.com/java-weekly-377)

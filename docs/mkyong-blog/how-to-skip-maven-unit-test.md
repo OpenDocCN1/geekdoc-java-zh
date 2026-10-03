@@ -1,4 +1,6 @@
-# maven——如何跳过单元测试
+
+
+# Maven——如何跳过单元测试
 
 > 原文：<http://web.archive.org/web/20230101150211/https://www.mkyong.com/maven/how-to-skip-maven-unit-test/>
 
@@ -8,110 +10,115 @@
 
 在本文中，我们将向您展示几种跳过单元测试的方法。
 
-## 1.maven.test.skip=true
+## 1. `maven.test.skip=true`
 
-1.1 为了跳过单元测试，使用了这个参数`-Dmaven.test.skip=true`
+### 1.1 使用参数跳过单元测试
 
-Terminal
+为了跳过单元测试，使用参数`-Dmaven.test.skip=true`：
 
-```java
- $ mvn package -Dmaven.test.skip=true
-#no test 
+**Terminal**
+
+```bash
+mvn package -Dmaven.test.skip=true
+# no test
 ```
 
-1.2 或在`pom.xml`中定义
+### 1.2 在 `pom.xml` 中定义
 
-pom.xml
+**pom.xml**
 
-```java
- <properties>
-        <maven.test.skip>true</maven.test.skip>
-    </properties> 
+```xml
+<properties>
+    <maven.test.skip>true</maven.test.skip>
+</properties>
 ```
 
-Terminal
+**Terminal**
 
-```java
- $ mvn package
-#no test 
+```bash
+mvn package
+# no test
 ```
 
-## 2.Maven Surefire 插件
+## 2. Maven Surefire 插件
 
-2.1 或者，在 surefire 插件中使用这个`-DskipTests`。
+### 2.1 使用 `-DskipTests`
 
-Terminal
+在 Surefire 插件中使用`-DskipTests`：
 
-```java
- $ mvn package -DskipTests
-#no test 
+**Terminal**
+
+```bash
+mvn package -DskipTests
+# no test
 ```
 
-2.2 或者这个。
+### 2.2 在 `pom.xml` 中配置
 
-pom.xml
+**pom.xml**
 
-```java
- <plugin>
+```xml
+<plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-surefire-plugin</artifactId>
     <version>3.0.0-M1</version>
     <configuration>
         <skipTests>true</skipTests>
     </configuration>
-</plugin> 
+</plugin>
 ```
 
-2.3 跳过一些测试类。
+### 2.3 跳过一些测试类
 
-pom.xml
+**pom.xml**
 
-```java
- <plugin>
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-surefire-plugin</artifactId>
-		<version>3.0.0-M1</version>
-		<configuration>
-			<excludes>
-				<exclude>**/TestMagic*.java</exclude>
-				<exclude>**/TestMessage*.java</exclude>
-			</excludes>
-		</configuration>
-    </plugin> 
+```xml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.0.0-M1</version>
+    <configuration>
+        <excludes>
+            <exclude>**/TestMagic*.java</exclude>
+            <exclude>**/TestMessage*.java</exclude>
+        </excludes>
+    </configuration>
+</plugin>
 ```
 
-## 3.Maven 简介
+## 3. Maven 简介
 
-3.1 创建一个自定义概要文件来跳过单元测试。
+### 3.1 创建自定义概要文件以跳过单元测试
 
-pom.xml
+**pom.xml**
 
-```java
- <profiles>
-        <profile>
-			<id>xtest</id>
-			<properties>
-				<maven.test.skip>true</maven.test.skip>
-			</properties>
-		</profile>
-    </profiles> 
+```xml
+<profiles>
+    <profile>
+        <id>xtest</id>
+        <properties>
+            <maven.test.skip>true</maven.test.skip>
+        </properties>
+    </profile>
+</profiles>
 ```
 
-3.2 使用`-P`选项激活轮廓。
+### 3.2 使用 `-P` 选项激活概要文件
 
-Terminal
+**Terminal**
 
-```java
- $ mvn package -Pxtest
-#no test 
+```bash
+mvn package -Pxtest
+# no test
 ```
 
 ## 参考
 
-1.  [Maven Surefire 插件](http://web.archive.org/web/20221212193805/https://maven.apache.org/surefire/maven-surefire-plugin/index.html)
-2.  [试验的包含和排除](http://web.archive.org/web/20221212193805/https://maven.apache.org/surefire/maven-surefire-plugin/examples/inclusion-exclusion.html)
-3.  [跳过测试](http://web.archive.org/web/20221212193805/https://maven.apache.org/surefire/maven-surefire-plugin/examples/skipping-tests.html)
-4.  [Maven 概要示例](http://web.archive.org/web/20221212193805/http://www.mkyong.com/maven/maven-profiles-example/)
-5.  [如何用 Maven 运行单元测试](http://web.archive.org/web/20221212193805/http://www.mkyong.com/maven/how-to-run-unit-test-with-maven/)
+1. [Maven Surefire 插件](http://web.archive.org/web/20221212193805/https://maven.apache.org/surefire/maven-surefire-plugin/index.html)
+2. [试验的包含和排除](http://web.archive.org/web/20221212193805/https://maven.apache.org/surefire/maven-surefire-plugin/examples/inclusion-exclusion.html)
+3. [跳过测试](http://web.archive.org/web/20221212193805/https://maven.apache.org/surefire/maven-surefire-plugin/examples/skipping-tests.html)
+4. [Maven 概要示例](http://web.archive.org/web/20221212193805/http://www.mkyong.com/maven/maven-profiles-example/)
+5. [如何用 Maven 运行单元测试](http://web.archive.org/web/20221212193805/http://www.mkyong.com/maven/how-to-run-unit-test-with-maven/)
 
 <input type="hidden" id="mkyong-current-postId" value="1258">
+

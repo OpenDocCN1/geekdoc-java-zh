@@ -1,30 +1,31 @@
-# Spring Boot 教程-引导一个简单的应用程序
+
+# Spring Boot 教程：引导一个简单的应用程序
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-boot-start>
 
-## 1。概述
+## 1. 概述
 
 Spring Boot 是 Spring 平台的一个自以为是的补充，专注于约定胜于配置——对于以最小的努力开始和创建独立的生产级应用程序非常有用。
 
-本教程是 Boot 的起点，换句话说，是一种以简单方式开始使用基本 web 应用程序的方法。
+本教程是 Boot 的起点，换句话说，是一种以简单方式开始使用基本 Web 应用程序的方法。
 
 我们将讨论一些核心配置、前端、快速数据操作和异常处理。
 
-## 延伸阅读:
+## 延伸阅读
 
-## [如何更改 Spring Boot 的默认端口](/web/20220923104110/https://www.baeldung.com/spring-boot-change-port)
+### 如何更改 Spring Boot 的默认端口
 
-Have a look at how you can change the default port in a Spring Boot application.[Read more](/web/20220923104110/https://www.baeldung.com/spring-boot-change-port) →
+Have a look at how you can change the default port in a Spring Boot application. [Read more](/web/20220923104110/https://www.baeldung.com/spring-boot-change-port) →
 
-## [Spring Boot 新手入门](/web/20220923104110/https://www.baeldung.com/spring-boot-starters)
+### Spring Boot 新手入门
 
-A quick overview of the most common Spring Boot Starters, along with examples on how to use them in a real-world project.[Read more](/web/20220923104110/https://www.baeldung.com/spring-boot-starters) →
+A quick overview of the most common Spring Boot Starters, along with examples on how to use them in a real-world project. [Read more](/web/20220923104110/https://www.baeldung.com/spring-boot-starters) →
 
-## 2。设置
+## 2. 设置
 
 首先，让我们使用 [Spring Initializr](https://web.archive.org/web/20220923104110/https://start.spring.io/) 为我们的项目生成基础。
 
-生成的项目依赖于引导父项目:
+生成的项目依赖于引导父项目：
 
 ```java
 <parent>
@@ -35,7 +36,7 @@ A quick overview of the most common Spring Boot Starters, along with examples on
 </parent>
 ```
 
-最初的依赖非常简单:
+最初的依赖非常简单：
 
 ```java
 <dependency>
@@ -52,9 +53,9 @@ A quick overview of the most common Spring Boot Starters, along with examples on
 </dependency>
 ```
 
-## 3。应用程序配置
+## 3. 应用程序配置
 
-接下来，我们将为我们的应用程序配置一个简单的`main`类:
+接下来，我们将为我们的应用程序配置一个简单的 `main` 类：
 
 ```java
 @SpringBootApplication
@@ -65,21 +66,21 @@ public class Application {
 } 
 ```
 
-请注意**如何使用`@SpringBootApplication` 作为我们的主要应用程序配置类。**幕后，那相当于`@Configuration`、`@EnableAutoConfiguration,`和`@ComponentScan`合在一起。
+请注意如何使用 `@SpringBootApplication` 作为我们的主要应用程序配置类。幕后，那相当于 `@Configuration`、`@EnableAutoConfiguration` 和 `@ComponentScan` 合在一起。
 
-最后，我们将定义一个简单的`application.properties` 文件，它现在只有一个属性:
+最后，我们将定义一个简单的 `application.properties` 文件，它现在只有一个属性：
 
 ```java
 server.port=8081 
 ```
 
-`server.port`将服务器端口从默认的 8080 更改为 8081；当然，Spring Boot 还有更多[房产可供选择](https://web.archive.org/web/20220923104110/https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html)。
+`server.port` 将服务器端口从默认的 8080 更改为 8081；当然，Spring Boot 还有更多[房产可供选择](https://web.archive.org/web/20220923104110/https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html)。
 
-## 4。简单的 MVC 视图
+## 4. 简单的 MVC 视图
 
 现在让我们使用百里香叶添加一个简单的前端。
 
-首先，我们需要将`spring-boot-starter-thymeleaf`依赖项添加到我们的`pom.xml`中:
+首先，我们需要将 `spring-boot-starter-thymeleaf` 依赖项添加到我们的 `pom.xml` 中：
 
 ```java
 <dependency> 
@@ -90,7 +91,7 @@ server.port=8081
 
 默认情况下会启用百里香。不需要额外的配置。
 
-我们现在可以在我们的`application.properties`中配置它:
+我们现在可以在我们的 `application.properties` 中配置它：
 
 ```java
 spring.thymeleaf.cache=false
@@ -101,7 +102,7 @@ spring.thymeleaf.suffix=.html
 spring.application.name=Bootstrap Spring Boot 
 ```
 
-接下来，我们将定义一个简单的[控制器](/web/20220923104110/https://www.baeldung.com/spring-controllers)和一个带有欢迎消息的基本主页:
+接下来，我们将定义一个简单的[控制器](/web/20220923104110/https://www.baeldung.com/spring-controllers)和一个带有欢迎消息的基本主页：
 
 ```java
 @Controller
@@ -117,7 +118,7 @@ public class SimpleController {
 } 
 ```
 
-最后，这里是我们的`home.html`:
+最后，这里是我们的 `home.html`：
 
 ```java
 <html>
@@ -131,9 +132,9 @@ public class SimpleController {
 
 请注意我们如何使用在属性中定义的属性，然后注入它，这样我们就可以在主页上显示它。
 
-## 5。安全性
+## 5. 安全性
 
-接下来，让我们通过首先包含安全启动程序来增加应用程序的安全性:
+接下来，让我们通过首先包含安全启动程序来增加应用程序的安全性：
 
 ```java
 <dependency> 
@@ -142,11 +143,11 @@ public class SimpleController {
 </dependency> 
 ```
 
-到目前为止，我们可以注意到一种模式:**大多数 Spring 库都可以通过使用简单的引导启动器轻松地导入到我们的项目中。**
+到目前为止，我们可以注意到一种模式：**大多数 Spring 库都可以通过使用简单的引导启动器轻松地导入到我们的项目中。**
 
-一旦`spring-boot-starter-security`依赖项位于应用程序的类路径上，默认情况下所有端点都是安全的，使用基于 Spring Security 的内容协商策略的`httpBasic`或`formLogin`。
+一旦 `spring-boot-starter-security` 依赖项位于应用程序的类路径上，默认情况下所有端点都是安全的，使用基于 Spring Security 的内容协商策略的 `httpBasic` 或 `formLogin`。
 
-这就是为什么，如果我们在类路径上有 starter，我们通常应该定义我们自己的定制安全配置:
+这就是为什么，如果我们在类路径上有 starter，我们通常应该定义我们自己的定制安全配置：
 
 ```java
 @Configuration
@@ -170,9 +171,9 @@ public class SecurityConfig {
 
 当然，Spring 安全性是一个广泛的主题，不容易在几行配置中涵盖。所以，我们肯定鼓励[更深入地阅读主题](/web/20220923104110/https://www.baeldung.com/security-spring)。
 
-## 6。简单持久性
+## 6. 简单持久性
 
-让我们首先定义我们的数据模型，一个简单的`Book`实体:
+让我们首先定义我们的数据模型，一个简单的 `Book` 实体：
 
 ```java
 @Entity
@@ -190,7 +191,7 @@ public class Book {
 }
 ```
 
-和它的存储库，在这里很好地利用了 Spring 数据:
+和它的存储库，在这里很好地利用了 Spring 数据：
 
 ```java
 public interface BookRepository extends CrudRepository<Book, Long> {
@@ -198,7 +199,7 @@ public interface BookRepository extends CrudRepository<Book, Long> {
 }
 ```
 
-最后，我们当然需要配置新的持久层:
+最后，我们当然需要配置新的持久层：
 
 ```java
 @EnableJpaRepositories("com.baeldung.persistence.repo") 
@@ -209,14 +210,14 @@ public class Application {
 }
 ```
 
-请注意，我们使用了以下内容:
+请注意，我们使用了以下内容：
 
-*   `@EnableJpaRepositories`扫描指定软件包中的存储库
-*   `@EntityScan` 领取我们的 JPA 实体
+- `@EnableJpaRepositories` 扫描指定软件包中的存储库。
+- `@EntityScan` 领取我们的 JPA 实体。
 
 为了简单起见，我们在这里使用 H2 内存数据库。这是为了让我们在运行项目时没有任何外部依赖。
 
-一旦我们包含了 H2 依赖， **Spring Boot 会自动检测它并设置我们的持久性**,除了数据源属性之外，不需要额外的配置:
+一旦我们包含了 H2 依赖，**Spring Boot 会自动检测它并设置我们的持久性**，除了数据源属性之外，不需要额外的配置：
 
 ```java
 spring.datasource.driver-class-name=org.h2.Driver
@@ -227,11 +228,11 @@ spring.datasource.password=
 
 当然，像安全性一样，持久性是一个比这里的基本设置更广泛的主题，当然需要进一步探索。
 
-## 7。Web 和控制器
+## 7. Web 和控制器
 
-接下来，让我们看看 web 层。我们将从设置一个简单的控制器`BookController`开始。
+接下来，让我们看看 Web 层。我们将从设置一个简单的控制器 `BookController` 开始。
 
-我们将实现基本的 CRUD 操作，通过一些简单的验证来公开`Book`资源:
+我们将实现基本的 CRUD 操作，通过一些简单的验证来公开 `Book` 资源：
 
 ```java
 @RestController
@@ -282,13 +283,13 @@ public class BookController {
 } 
 ```
 
-考虑到应用程序的这一方面是一个 API，我们在这里使用了@ `RestController`注释——它相当于一个`@Controller`和`@ResponseBody`——这样每个方法都可以将返回的资源正确地编组到 HTTP 响应中。
+考虑到应用程序的这一方面是一个 API，我们在这里使用了 `@RestController` 注释——它相当于一个 `@Controller` 和 `@ResponseBody`——这样每个方法都可以将返回的资源正确地编组到 HTTP 响应中。
 
-注意，我们在这里将我们的`Book`实体公开为我们的外部资源。这对于这个简单的应用程序来说很好，但是在现实世界的应用程序中，我们可能会希望[将这两个概念](/web/20220923104110/https://www.baeldung.com/entity-to-and-from-dto-for-a-java-spring-application)分开。
+注意，我们在这里将我们的 `Book` 实体公开为我们的外部资源。这对于这个简单的应用程序来说很好，但是在现实世界的应用程序中，我们可能会希望[将这两个概念](/web/20220923104110/https://www.baeldung.com/entity-to-and-from-dto-for-a-java-spring-application)分开。
 
-## 8。错误处理
+## 8. 错误处理
 
-既然核心应用程序已经准备就绪，让我们关注一下**一个简单的集中式错误处理机制**使用`@ControllerAdvice`:
+既然核心应用程序已经准备就绪，让我们关注一下**一个简单的集中式错误处理机制**，使用 `@ControllerAdvice`：
 
 ```java
 @ControllerAdvice
@@ -312,7 +313,9 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 } 
 ```
 
-除了我们在这里处理的标准异常，我们还使用了一个自定义异常，`BookNotFoundException`:
+除了我们在这里处理的标准异常，我们还使用了一个自定义异常，`BookNotFoundException`：
+
+
 
 ```java
 public class BookNotFoundException extends RuntimeException {
@@ -347,11 +350,11 @@ public class BookNotFoundException extends RuntimeException {
 server.error.path=/error2
 ```
 
-## 9。测试
+## 9. 测试
 
 最后，让我们测试一下我们的新书 API。
 
-我们可以利用 [`@SpringBootTest`](/web/20220923104110/https://www.baeldung.com/spring-boot-testing) 加载应用上下文，并验证运行应用时没有错误:
+我们可以利用 [`@SpringBootTest`](https://www.baeldung.com/spring-boot-testing) 加载应用上下文，并验证运行应用时没有错误:
 
 ```java
 @RunWith(SpringRunner.class)
@@ -364,9 +367,9 @@ public class SpringContextTest {
 }
 ```
 
-接下来，让我们添加一个 JUnit 测试来验证对我们编写的 API 的调用，使用[放心](/web/20220923104110/https://www.baeldung.com/rest-assured-tutorial)。
+接下来，让我们添加一个 JUnit 测试来验证对我们编写的 API 的调用，使用[放心](https://www.baeldung.com/rest-assured-tutorial)。
 
-首先，我们将添加 [`rest-assured`](https://web.archive.org/web/20220923104110/https://search.maven.org/artifact/io.rest-assured/rest-assured) 依赖项:
+首先，我们将添加 [`rest-assured`](https://search.maven.org/artifact/io.rest-assured/rest-assured) 依赖项:
 
 ```java
 <dependency>
@@ -508,7 +511,7 @@ public void whenDeleteCreatedBook_thenOk() {
 } 
 ```
 
-## 10。结论
+## 10. 结论
 
 这是对 Spring Boot 的快速而全面的介绍。
 
@@ -516,4 +519,4 @@ public void whenDeleteCreatedBook_thenOk() {
 
 这就是为什么我们在网站上有不止一篇关于靴子的文章。
 
-和往常一样，我们这里的例子的完整源代码在 GitHub 上的[。](https://web.archive.org/web/20220923104110/https://github.com/eugenp/tutorials/tree/master/spring-boot-modules/spring-boot-bootstrap)
+和往常一样，我们这里的例子的完整源代码在 GitHub 上的[。](https://github.com/eugenp/tutorials/tree/master/spring-boot-modules/spring-boot-bootstrap)

@@ -1,3 +1,4 @@
+
 # 如何做好开发者的领导者
 
 > 原文：<https://medium.com/javarevisited/how-to-be-a-good-leader-for-developers-fbd5a9a2cae4?source=collection_archive---------2----------------------->

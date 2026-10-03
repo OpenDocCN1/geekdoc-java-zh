@@ -1,3 +1,4 @@
+
 # 演示 - DropDemo
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/dnd/dropmodedemo.html`](https://docs.oracle.com/javase/tutorial/uiswing/dnd/dropmodedemo.html)
@@ -12,19 +13,19 @@
 
 **试试这个：**
 
-1.  点击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行`DropDemo`（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 DropDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/DropDemoProject/DropDemo.jnlp)
+1. 点击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行`DropDemo`（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 DropDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/DropDemoProject/DropDemo.jnlp)
 
-1.  在文本区域中选择一些文本并将其拖放到列表中。所选列表条目将被替换，并且该项目将成为当前选择。这就是`USE_SELECTION`的工作原理，提供了向后兼容性，但否则不建议使用。
+2. 在文本区域中选择一些文本并将其拖放到列表中。所选列表条目将被替换，并且该项目将成为当前选择。这就是`USE_SELECTION`的工作原理，提供了向后兼容性，但否则不建议使用。
 
-1.  将列表拖放模式更改为`ON`并尝试相同操作。再次，所选列表项将被替换，但当前选择不会移动。
+3. 将列表拖放模式更改为`ON`并尝试相同操作。再次，所选列表项将被替换，但当前选择不会移动。
 
-1.  将列表拖放模式更改为`INSERT`并重复相同操作。添加的文本将插入到拖放位置。在此模式下，无法修改现有列表项。
+4. 将列表拖放模式更改为`INSERT`并重复相同操作。添加的文本将插入到拖放位置。在此模式下，无法修改现有列表项。
 
-1.  将列表拖放模式更改为`ON_OR_INSERT`。根据光标位置，您可以插入新文本或替换现有文本。
+5. 将列表拖放模式更改为`ON_OR_INSERT`。根据光标位置，您可以插入新文本或替换现有文本。
 
 * * *
 
-这里是``ListTransferHandler``的实现，用于``DropDemo.java``。
+这里是`ListTransferHandler`的实现，用于`DropDemo.java`。
 
 此列表的传输处理程序支持复制和移动，并重新实现了列表默认提供的拖动支持。
 
@@ -138,7 +139,6 @@ public class ListTransferHandler extends TransferHandler {
         addIndex = -1;
     }
 }
-
 ```
 
 接下来我们将看一下目标如何选择拖放操作。

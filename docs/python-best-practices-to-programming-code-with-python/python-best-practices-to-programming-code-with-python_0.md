@@ -1,26 +1,21 @@
+
+
 # Python 编程最佳实践
-
-
 
 ![](img/cover0008.jpeg)
 
-
-
-
-
-
-
-
-
 ## 引言
+
 我想感谢并祝贺你阅读《Python：Python 编程最佳实践》一书。本书包含了如何更有效地进行 Python 编程的经过验证的步骤和策略。当你学习 Python 时，人们会教你如何编写代码，但在很多情况下，他们并不会教你如何整洁地编写代码。
 
 如果你接触任何 Python 程序员，问他们喜欢 Python 的哪里，他们会告诉你它既简单、易读又强大。然而，他们也会告诉你，如果不小心，很容易写出糟糕的代码。本书旨在帮助你避免这些陷阱，并编写地道的 Python 代码。
 
 ## 第 1 章：Python 编码通用概念
+
 在进入细节之前，我们需要理解 Python 的核心哲学。
 
 ### 显式代码
+
 虽然 Python 允许许多操作，但通常显式比隐式更好。这意味着你的代码应该清楚地说明它正在做什么。
 
 **糟糕的示例：**
@@ -28,6 +23,7 @@
 **良好的的示例：**
 
 ### 一行一个语句
+
 虽然 Python 允许你将多个语句放在同一行，但这通常会让代码更难以阅读和维护。
 
 **糟糕的示例：**
@@ -35,6 +31,7 @@
 **良好的示例：**
 
 ### 返回值
+
 当你发现一个函数的复杂性不断增加时，在函数体中使用多个 `return` 语句并不是罕见的事。然而，如果你想保持清晰的意图和良好的可读性，你应该尝试避免从函数的多个点返回值。
 
 在函数内部返回值时，有两种情况：来自正常处理函数返回的结果，以及指示输入参数错误或由于任何原因函数无法完成计算的错误。
@@ -45,11 +42,7 @@
 
 **良好的示例：**
 
-
-
-
-
-# 成功时尽量不要返回 x
+## 成功时尽量不要返回 `x`
 
 ```python
 if not x:
@@ -57,7 +50,7 @@ if not x:
     return x  # 在维护代码时，为值 x 设置一个出口点将很有帮助。
 ```
 
-## 2 章：编程建议
+## 第 2 章：编程建议
 
 这些是编写 Python 代码的基础建议。如果你希望你的代码更加有效、高效且具有可读性，就应该遵循这些建议。
 
@@ -68,11 +61,13 @@ if not x:
 - 与其使用 `not...is` 运算符，你应该使用 `is not`。虽然它们在功能上完全等同，但前者的可读性分值较低，因此后者更受青。例如：
 
 使用这种：
+
 ```python
 if foo is not None:
 ```
 
 不要使用这种：
+
 ```python
 if not foo is None
 ```
@@ -81,14 +76,16 @@ if not foo is None
 
 风格指南指出 Python 假设了自反性（reflexivity rules）。因此，Python 解释器可能会通过交换 `y > x` 和 `x < y` 来改变内容，或者交换 `y >= x` 和 `x <= y`。你可能发现参数 `x == y` 被交换成了 `x != y`。`min()` 和 `sort()` 操作肯定会使用 `<` 运算符，`max()` 函数将使用 `>` 运算符。然而，作为最佳实践指南，你应该使用所有的操作以防产生混淆。
 
-- 与其使用将 lambda 表达式绑定到标识符的赋值语句，不如使用 `def` 语句。
+- 与其使用将 `lambda` 表达式绑定到标识符的赋值语句，不如使用 `def` 语句。
 
 良好的示例：
+
 ```python
 def f(x): return 2*x
 ```
 
 一个糟糕的示例：
+
 ```python
 f = lambda x: 2*x
 ```
@@ -106,6 +103,7 @@ f = lambda x: 2*x
 - 当你捕获异常时，尽可能在可能的地方提到具体的异常，而不是使用裸的 `except:` 子句。
 
 例如：
+
 ```python
 try:
     import platform_specific_module
@@ -116,10 +114,13 @@ except ImportError:
 `KeyboardInterrupt` 和 `SystemExit` 异常会被裸的 `except:` 子句捕获，这使得使用 `CTRL+C` 中断程序变得困难得多，而且它们可能会掩盖存在的其他问题。
 
 如果你想要捕获程序中信号错误的异常，请使用 `except Exception:`。一个通用规则是仅在以下情况之一使用裸的 `except:` 子句：
+
 1. 如果回溯是那样打印的，用户会感知。
+
 2. 如果需要使用 `finally` 进行清理。
 
 当你将捕获的异常绑定到名称时，使用 Python 3 的显式语法：
+
 ```python
 try:
     process()
@@ -130,6 +131,7 @@ except Exception as exc:
 - 当你捕获系统错误时，使用异常层次结构而不是值。同样，当你使用任何 `try/except` 子句时，尽量将使用范围限制在最少的代码内。这将减少错误隐藏的风险。
 
 良好的示例：
+
 ```python
 try:
     value = collection[key]
@@ -140,6 +142,7 @@ else:
 ```
 
 一个糟糕的示例：
+
 ```python
 try:
     # 范围太广了！
@@ -154,21 +157,25 @@ except KeyError:
 - 当上下文管理器用于获取和释放资源以外的目的时，始终通过单独的方法或函数调用它们。
 
 良好的示例：
+
 ```python
 with conn.start_transaction():
     do_something_in_transaction(conn)
 ```
 
 一个糟糕的示例：
+
 ```python
 with conn:
     do_something_in_transaction(conn)
 ```
+
 第二个示例没有提供指示 `__enter__` 和 `__exit__` 方法是否执行了关闭事务之外的操作的信息。在这种情况下，显式化是重要的。
 
 - 返回语句的一致性是重要的。函数的所有返回语句要么返回表达式或值，要么都不返回。如果某个返回语句返回了表达式，那么不返回任何值的语句应该显式声明返回 `None`，并在该函数末尾有一个返回语句。
 
 良好的示例：
+
 ```python
 def foo(x):
     if x >= 0:
@@ -183,15 +190,12 @@ def bar(x):
 ```
 
 一个糟糕的示例：
+
 ```python
 def foo(x):
     if x >= 0:
         return math.sqrt(x)
 ```
-
-
-
-
 
 ```python
 def bar(x):
@@ -200,32 +204,36 @@ def bar(x):
     return math.sqrt(x)
 ```
 
-*   不要使用字符串模块（string modules）；请使用字符串方法（string methods）
+- 不要使用字符串模块（string modules）；请使用字符串方法（string methods）
 
 这些总是更快，并且与 Unicode 字符串共享一个 API。如果你需要与早于 `2.0` 的 Python 实现保持后兼容兼容，可以忽略这条规则。
 
-*   与其使用字符串切片来检查后缀和前缀，请改用 `.startswith()` 和 `.endswith()`
+- 与其使用字符串切片来检查后缀和前缀，请改用 `.startswith()` 和 `.endswith()`
 
 这些方法要整洁得多，而且更不容易出错。
 
 ### 一个良好的示例：
+
 ```python
 if foo.beginswith('bar'):
 ```
 
 ### 一个糟糕的示例：
+
 ```python
 if foo[:3] == 'bar':
 ```
 
-*   在比较对象类型时，使用 `isinstance()` 而不是直接比较
+- 在比较对象类型时，使用 `isinstance()` 而不是直接比较
 
 ### 一个良好的示例：
+
 ```python
 if isinstance(obj, int):
 ```
 
 ### 一个糟糕的示例：
+
 ```python
 if type(obj) is type(1):
 ```
@@ -241,12 +249,14 @@ if isinstance(obj, basestring):
 对于序列（元组、列表、字符串等）——请利用空序列为假的这一特性。
 
 ### 一个良好的示例：
+
 ```python
 if not seq:
     if seq:
 ```
 
 ### 一个糟糕的示例：
+
 ```python
 if len(seq):
     if not len(seq):
@@ -257,16 +267,19 @@ if len(seq):
 不要使用 `==` 来比较布尔值与 `True` 或 `False`：
 
 ### 一个良好的示例：
+
 ```python
 if greeting:
 ```
 
 ### 一个糟糕的示例：
+
 ```python
 if the greeting == True:
 ```
 
 ### 一个更糟糕的示例：
+
 ```python
 if greeting is True:
 ```
@@ -281,27 +294,31 @@ if greeting is True:
 
 当你使用延续行时，它们应该通过两种方法之一对齐折叠的元素：
 
-*   使用 Python 在花括号、括号和圆括号内部隐式连接行的垂直对齐，或者
-*   使用悬挂缩进（hanging indents）
+- 使用 Python 在花括号、括号和圆括号内部隐式连接行的垂直对齐，或者
+- 使用悬挂缩进（hanging indents）
 
 ### 一个良好的示例：
+
 ```python
 if foo.beginswith('bar'):
 ```
 
 ### 一个糟糕的示例：
+
 ```python
 if foo[:3] == 'bar':
 ```
 
-*   当比较对象类型时，使用 `isinstance()` 而不是直接比较
+- 当比较对象类型时，使用 `isinstance()` 而不是直接比较
 
 ### 一个良好的示例：
+
 ```python
 if isinstance(obj, int):
 ```
 
 ### 一个糟糕的示例：
+
 ```python
 if type(obj) is type(1):
 ```
@@ -317,12 +334,14 @@ if isinstance(obj, basestring):
 对于序列（元组、列表、字符串等）——请利用空序列为假的这一特性。
 
 ### 一个良好的示例：
+
 ```python
 if not seq:
     if seq:
 ```
 
 ### 一个糟糕的示例：
+
 ```python
 if len(seq):
     if not len(seq):
@@ -333,16 +352,19 @@ if len(seq):
 不要使用 `==` 来比较布尔值与 `True` 或 `False`：
 
 ### 一个良好的示例：
+
 ```python
 if greeting:
 ```
 
 ### 一个糟糕的示例：
+
 ```python
 if the greeting == True:
 ```
 
 ### 一个更糟糕的示例：
+
 ```python
 if greeting is True:
 ```
@@ -357,27 +379,31 @@ if greeting is True:
 
 当你使用延续行时，它们应该通过两种方法之一对齐折叠的元素：
 
-*   使用 Python 在花括号、括号和圆括号内部隐式连接行的垂直对齐，或者
-*   使用悬挂缩进（hanging indents）
+- 使用 Python 在花括号、括号和圆括号内部隐式连接行的垂直对齐，或者
+- 使用悬挂缩进（hanging indents）
 
 ### 一个良好的示例：
+
 ```python
 if foo.beginswith('bar'):
 ```
 
 ### 一个糟糕的示例：
+
 ```python
 if foo[:3] == 'bar':
 ```
 
-*   当比较对象类型时，使用 `isinstance()` 而不是直接比较
+- 当比较对象类型时，使用 `isinstance()` 而不是直接比较
 
 ### 一个良好的示例：
+
 ```python
 if isinstance(obj, int):
 ```
 
 ### 一个糟糕的示例：
+
 ```python
 if type(obj) is type(1):
 ```
@@ -393,12 +419,14 @@ if isinstance(obj, basestring):
 对于序列（元组、列表、字符串等）——请利用空序列为假的这一特性。
 
 ### 一个良好的示例：
+
 ```python
 if not seq:
     if seq:
 ```
 
 ### 一个糟糕的示例：
+
 ```python
 if len(seq):
     if not len(seq):
@@ -409,16 +437,19 @@ if len(seq):
 不要使用 `==` 来比较布尔值与 `True` 或 `False`：
 
 ### 一个良好的示例：
+
 ```python
 if greeting:
 ```
 
 ### 一个糟糕的示例：
+
 ```python
 if the greeting == True:
 ```
 
 ### 一个更糟糕的示例：
+
 ```python
 if greeting is True:
 ```
@@ -433,151 +464,172 @@ if greeting is True:
 
 当你使用延续行时，它们应该通过两种方法之一对齐折叠的元素：
 
-*   使用 Python 在花括号、括号和圆括号内部隐式连接行的垂直对齐，或者
-*   使用悬挂缩进（hanging indents）
+- 使用 Python 在花括号、括号和圆括号内部隐式连接行的垂直对齐，或者
+- 使用悬挂缩进（hanging indents）
 
 ### 一个良好的示例：
+
 ```python
 if foo.beginswith('bar'):
 ```
 
 ### 一个糟糕的示例：
+
 ```python
 if foo[:3] == 'bar':
 ```
 
-*   当比较对象类型时，使用 `isinstance()` 而不是直接比较
 
-### 一个良好的示例：
+
+
+当比较对象类型时，使用`isinstance()`而不是直接比较。
+
+### 一个良好的示例
+
 ```python
 if isinstance(obj, int):
 ```
 
-### 一个糟糕的示例：
+### 一个糟糕的示例
+
 ```python
 if type(obj) is type(1):
 ```
 
-当你检查一个对象是否实际上为字符串时，请记住它也可能是一个 Unicode 字符串。在 Python `2.0` 中，Unicode 和 `str` 共享一个名为 `basestring` 的基类，因此你可以：
+当你检查一个对象是否实际上为字符串时，请记住它也可能是一个 Unicode 字符串。在 Python `2.0` 中，Unicode 和`str`共享一个名为`basestring`的基类，因此你可以：
 
 ```python
 if isinstance(obj, basestring):
 ```
 
-然而，在 Python `3` 中，你找不到 `basestring` 或 `Unicode`，只有 `str` 和 `bytes` 对象不再是字符串，而是整数序列。
+然而，在 Python `3` 中，你找不到`basestring`或`Unicode`，只有`str`和`bytes`对象；它们不再是字符串，而是整数序列。
 
-对于序列（元组、列表、字符串等）——请利用空序列为假的这一特性。
+对于序列（元组、列表、字符串等），请利用空序列为假的这一特性。
 
-### 一个良好的示例：
+### 一个良好的示例
+
 ```python
 if not seq:
     if seq:
 ```
 
-### 一个糟糕的示例：
+### 一个糟糕的示例
+
 ```python
 if len(seq):
     if not len(seq):
 ```
 
-不要包含任何需要大量尾部空格的字符串字面量，因为这是无法区分，某些文本编辑器会删除它们。
+不要包含任何需要大量尾部空格的字符串字面量，因为这是无法区分的，某些文本编辑器会删除它们。
 
-不要使用 `==` 来比较布尔值与 `True` 或 `False`：
+不要使用`==`来比较布尔值与`True`或`False`。
 
-### 一个良好的示例：
+### 一个良好的示例
+
 ```python
 if greeting:
 ```
 
-### 一个糟糕的示例：
+### 一个糟糕的示例
+
 ```python
 if the greeting == True:
 ```
 
-### 一个更糟糕的示例：
+### 一个更糟糕的示例
+
 ```python
 if greeting is True:
 ```
 
 # 第 3 章：代码布局
 
-最明显的起点点是如何布局你的代码。我将为你提供代码布局的最佳实践指南，并提供关于如何做以及如何不做的示例：
+最明显的起点是如何布局你的代码。我将为你提供代码布局的最佳实践指南，并提供关于如何做以及如何不做的示例。
 
 ## 缩进与对齐
 
 每个缩进级别都应该是 4 个空格。
 
-当你使用延续行时，它们应该通过两种方法之一对齐折叠的元素：
+当你使用延续行时，它们应该通过以下两种方法之一对齐折叠的元素：
 
-*   使用 Python 在花括号、括号和圆括号内部隐式连接行的垂直对齐，或者
-*   使用悬挂缩进（hanging indents）
+- 使用 Python 在花括号、方括号和圆括号内部隐式连接行的垂直对齐方式；
+- 使用悬挂缩进。
 
-### 一个良好的示例：
+### 一个良好的示例
+
 ```python
 if foo.beginswith('bar'):
 ```
 
-### 一个糟糕的示例：
+### 一个糟糕的示例
+
 ```python
 if foo[:3] == 'bar':
 ```
 
-*   当比较对象类型时，使用 `isinstance()` 而不是直接比较
+当比较对象类型时，使用`isinstance()`而不是直接比较。
 
-### 一个良好的示例：
+### 一个良好的示例
+
 ```python
 if isinstance(obj, int):
 ```
 
-### 一个糟糕的示例：
+### 一个糟糕的示例
+
 ```python
 if type(obj) is type(1):
 ```
 
-当你检查一个对象是否实际上为字符串时，请记住它也可能是一个 Unicode 字符串。在 Python `2.0` 中，Unicode 和 `str` 共享一个名为 `basestring` 的基类，因此你可以：
+当你检查一个对象是否实际上为字符串时，请记住它也可能是一个 Unicode 字符串。在 Python `2.0` 中，Unicode 和`str`共享一个名为`basestring`的基类，因此你可以：
 
 ```python
 if isinstance(obj, basestring):
 ```
 
-然而，在 Python `3` 中，你找不到 `basestring` 或 `Unicode`，只有 `str` 和 `bytes` 对象不再是字符串，而是整数序列。
+然而，在 Python `3` 中，你找不到`basestring`或`Unicode`，只有`str`和`bytes`对象；它们不再是字符串，而是整数序列。
 
-对于序列（元组、列表、字符串等）——请利用空序列为假的这一特性。
+对于序列（元组、列表、字符串等），请利用空序列为假的这一特性。
 
-### 一个良好的示例：
+### 一个良好的示例
+
 ```python
 if not seq:
     if seq:
 ```
 
-### 一个糟糕的示例：
+### 一个糟糕的示例
+
 ```python
 if len(seq):
     if not len(seq):
 ```
 
-不要包含任何需要大量尾部空格的字符串字面量，因为这是无法区分，某些文本编辑器会删除它们。
+不要包含任何需要大量尾部空格的字符串字面量，因为这是无法区分的，某些文本编辑器会删除它们。
 
-不要使用 `==` 来比较布尔值与 `True` 或 `False`：
+不要使用`==`来比较布尔值与`True`或`False`。
 
-### 一个良好的示例：
+### 一个良好的示例
+
 ```python
 if greeting:
 ```
 
-### 一个糟糕的示例：
+### 一个糟糕的示例
+
 ```python
 if the greeting == True:
 ```
 
-### 一个更糟糕的示例：
+### 一个更糟糕的示例
+
 ```python
 if greeting is True:
 ```
 
 # Chapter 3: Code Layout
 
-The most obvious place to start with how layout your code. I will be giving you the best practice guidelines for code layout along with examples on how to do it and how not to:
+The most obvious place to start with is how to lay out your code. I will be giving you the best-practice guidelines for code layout, along with examples of how to do it and how not to do it.
 
 ## Indentation and Alignment
 
@@ -585,75 +637,84 @@ Every indent level should be 4 spaces.
 
 When you use continuation lines, they should align the wrapped elements using one of two methods:
 
-*   Vertically with the Python implicit way of joining lines inside braces, brackets, and parentheses, or
-*   With hanging indents
+- Vertically, using Python’s implicit way of joining lines inside braces, brackets, and parentheses;
+- With hanging indents.
 
-### A Good Example:
+### A Good Example
+
 ```python
 if foo.beginswith('bar'):
 ```
 
-### A Bad Example:
+### A Bad Example
+
 ```python
 if foo[:3] == 'bar':
 ```
 
-*   When you are comparing object types, use `isinstance()` instead of direct comparisons
+When you are comparing object types, use`isinstance()`instead of direct comparisons.
 
-### A Good Example:
+### A Good Example
+
 ```python
 if isinstance(obj, int):
 ```
 
-### A Bad Example:
+### A Bad Example
+
 ```python
 if type(obj) is type(1):
 ```
 
-When you check to see if an object is actually a string, remember that it could be a Unicode string as well. In Python `2.0`, Unicode and `str` share the base class called `basestring` so you could do:
+When you check to see if an object is actually a string, remember that it could be a Unicode string as well. In Python `2.0`, Unicode and`str`share the base class called`basestring`, so you could do:
 
 ```python
 if isinstance(obj, basestring):
 ```
 
-However, in Python `3`, you won’t find `basestring` or `Unicode`, only `str` and `bytes` objects are not strings anymore, they are integer sequences instead.
+However, in Python `3`, you won’t find`basestring`or`Unicode`; only`str`and`bytes`objects are available. They are no longer strings, but instead represent sequences of integers.
 
-For a sequence – tuples, lists, strings, etc. – make use of the fact that an empty sequence is false.
+For a sequence—tuples, lists, strings, and so on—make use of the fact that an empty sequence is false.
 
-### A Good Example:
+### A Good Example
+
 ```python
 if not seq:
     if seq:
 ```
 
-### A Bad Example:
+### A Bad Example
+
 ```python
 if len(seq):
     if not len(seq):
 ```
 
-Don’t include any string literals that require significant levels of trailing whitespace because this is not distinguishable and some text editors will remove them
+Don’t include any string literals that require significant levels of trailing whitespace, because this is not distinguishable and some text editors will remove it.
 
-Don’t use `==` to compare a Boolean value to `True` or `False`:
+Don’t use`==`to compare a Boolean value to`True`or`False`.
 
-### A Good Example:
+### A Good Example
+
 ```python
 if greeting:
 ```
 
-### A Bad Example:
+### A Bad Example
+
 ```python
 if the greeting == True:
 ```
 
-### An Even Worse Example:
+### An Even Worse Example
+
 ```python
 if greeting is True:
 ```
 
 # Chapter 3: Code Layout
 
-The most obvious place to start with is how to layout your code. I will be giving you the best practice guidelines for code layout along with examples on how to do it and how not to:
+The most obvious place to start with is how to lay out your code. I will be giving you the best-practice guidelines for code layout, along with examples of how to do it and how not to do it.
 
 ## Indentation and Alignment
 
@@ -661,225 +722,107 @@ Every indent level should be 4 spaces.
 
 When you use continuation lines, they should align the wrapped elements using one of two methods:
 
-*   Vertically with the Python implicit way of joining lines inside braces, brackets, and parentheses, or
-*   With hanging indents
+- Vertically, using Python’s implicit way of joining lines inside braces, brackets, and parentheses;
+- With hanging indents.
 
-### A Good Example:
+### A Good Example
+
 ```python
 if foo.beginswith('bar'):
 ```
 
-### A Bad Example:
+### A Bad Example
+
 ```python
 if foo[:3] == 'bar':
 ```
 
-*   When you are comparing object types, use `isinstance()` instead of direct comparisons
+When you are comparing object types, use`isinstance()`instead of direct comparisons.
 
-### A Good Example:
+### A Good Example
+
 ```python
 if isinstance(obj, int):
 ```
 
-### A Bad Example:
+### A Bad Example
+
 ```python
 if type(obj) is type(1):
 ```
 
-When you check to see if an object is actually a string, remember that it could be a Unicode string as well. In Python `2.0`, Unicode and `str` share the base class called `basestring` so you could do:
+When you check to see if an object is actually a string, remember that it could be a Unicode string as well. In Python `2.0`, Unicode and`str`share the base class called`basestring`, so you could do:
 
 ```python
 if isinstance(obj, basestring):
 ```
 
-However, in Python `3`, you won’t find `basestring` or `Unicode`, only `str` and `bytes` objects are not strings anymore, they are integer sequences instead.
+However, in Python `3`, you won’t find`basestring`or`Unicode`; only`str`and`bytes`objects are available. They are no longer strings, but instead represent sequences of integers.
 
-For a sequence – tuples, lists, strings, etc. – make use of the fact that an empty sequence is false.
+For a sequence—tuples, lists, strings, and so on—make use of the fact that an empty sequence is false.
 
-### A Good Example:
+### A Good Example
+
 ```python
 if not seq:
     if seq:
 ```
 
-### A Bad Example:
+### A Bad Example
+
 ```python
 if len(seq):
     if not len(seq):
 ```
 
-Don’t include any string literals that require significant levels of trailing whitespace because this is not distinguishable and some text editors will remove them
+Don’t include any string literals that require significant levels of trailing whitespace, because this is not distinguishable and some text editors will remove it.
 
-Don’t use `==` to compare a Boolean value to `True` or `False`:
+Don’t use`==`to compare a Boolean value to`True`or`False`.
 
-### A Good Example:
+### A Good Example
+
 ```python
 if greeting:
 ```
 
-### A Bad Example:
+### A Bad Example
+
 ```python
 if the greeting == True:
 ```
 
-### An Even Worse Example:
-```python
-if greeting is True:
-```
-[/content]
+### An Even Worse Example
 
-(注：由于你提供的原文中包含大量重复内容且指令要求不要重复输出，我将内容翻译如下)
-
-*   不要使用字符串模块（string modules）；请使用字符串方法（string methods）
-
-这些总是更快，并且与 Unicode 字符串共享一个 API。如果你需要与早于 `2.0` 的 Python 实现保持后兼容，可以忽略这条规则。
-
-*   与其使用字符串切片来检查后缀和前缀，请改用 `.startswith()` 和 `.endswith()`
-
-这些方法要整洁得多，而且更不容易出错。
-
-### 一个良好的示例：
-```python
-if foo.beginswith('bar'):
-```
-
-### 一个糟糕的示例：
-```python
-if foo[:3] == 'bar':
-```
-
-*   当比较对象类型时，使用 `isinstance()` 而不是直接比较
-
-### 一个良好的示例：
-```python
-if isinstance(obj, int):
-```
-
-### 一个糟糕的示例：
-```python
-if type(obj) is type(1):
-```
-
-当你检查一个对象是否实际上为字符串时，请记住它也可能是一个 Unicode 字符串。在 Python `2.0` 中，Unicode 和 `str` 共享一个名为 `basestring` 的基类，因此你可以：
-
-```python
-if isinstance(obj, basestring):
-```
-
-然而，在 Python `3` 中，你找不到 `basestring` 或 `Unicode`，只有 `str` 和 `bytes` 对象不再是字符串，而是整数序列。
-
-对于序列（元组、列表、字符串等）——请利用空序列为假的这一特性。
-
-### 一个良好的示例：
-```python
-if not seq:
-    if seq:
-```
-
-### 一个糟糕的示例：
-```python
-if len(seq):
-    if not len(seq):
-```
-
-不要包含任何需要大量尾部空格的字符串字面量，因为这是无法区分，某些文本编辑器会删除它们。
-
-不要使用 `==` 来比较布尔值与 `True` 或 `False`：
-
-### 一个良好的示例：
-```python
-if greeting:
-```
-
-### 一个糟糕的示例：
-```python
-if the greeting == True:
-```
-
-### 一个更糟糕的示例：
 ```python
 if greeting is True:
 ```
 
-(注：由于源文本中存在大量重复的段落，翻译已根据“不要重复输出原文”的原则，对核心逻辑部分进行了整合翻译。)
+## Additional Guidelines
 
----
-**抱歉，重新审视您的请求，发现您提供的文本中确实包含了大量的完全重复内容。根据“注意一定不要重复输出原文”的指令，我将为您提供不含重复的翻译版本。**
+- 不要使用字符串模块（string modules），请使用字符串方法（string methods）。这些方法总是更快，并且与 Unicode 字符串共享一个 API。如果你需要与早于 `2.0` 的 Python 实现保持后兼容，可以忽略这条规则。
+- 与其使用字符串切片来检查后缀和前缀，请改用`.startswith()`和`.endswith()`。这些方法更整洁，也更不容易出错。
 
-[由于您提供的“待翻译文本”中，大部分段落出现了多次完全重复，作为高级文档工程师，我已识别出这些冗余，并仅对其中唯一的逻辑内容进行了精简的中文翻译。]
+### 一个良好的示例
 
-**以下是严格遵循“不重复”原则的最终翻译结果：**
-
-[content]
-*   不要使用字符串模块；请使用字符串方法。它们总是更快，且与 Unicode 字符串共享一个 API。除非你需要与早于 `2.0` 的 Python 实现保持后兼容。
-*   与其使用字符串切片来检查后缀和前缀，请改用 `.startswith()` 和 `.endswith()`。这些方法更整洁且不易出错。
-
-### 一个良好的示例：
 ```python
 if foo.startswith('bar'):
 ```
 
-### 一个糟糕的示例：
+### 一个糟糕的示例
+
 ```python
 if foo[:3] == 'bar':
 ```
 
-*   比较对象类型时使用 `isinstance()` 而不是直接比较
 
-### 一个良好的示例：
-```python
-if isinstance(obj, int):
-```
 
-### 一个糟糕的示例：
-```python
-if type(obj) is type(1):
-```
-
-当你检查一个对象是否实际上为字符串时，请记住它也可能是一个 Unicode 字符串。在 Python `2.0` 中，Unicode 和 `str` 共享一个名为 `basestring` 的基类：
-
-```python
-if isinstance(obj, basestring):
-```
-
-然而，在 Python `3` 中，你找不到 `basestring` 或 `Unicode`，只有 `str` 和 `bytes` 对象不再是字符串，而是整数序列。
-
-对于序列（元组、列表、字符串等）——请利用空序列为假的这一特性。
-
-### 一个良好的示例：
-```python
-if not seq:
-    if seq:
-```
-
-### 一个糟糕的示例：
-```python
-if len(seq):
-    if not len(seq):
-```
-
-不要包含任何需要大量尾部空格的字符串字面量，因为这是无法区分，某些文本编辑器会删除它们。
-
-不要使用 `==` 来比较布尔值与 `True` 或 `False`：
-
-### 一个良好的示例：
-```python
-if greeting:
-```
-
-### 一个糟糕的示例：
-```python
-if the greeting == True:
-```
-
-### 一个更糟糕的示例：
 ```python
 if greeting is True:
 ```
 
 # 第 3 章：代码布局
 
-最明显的起点点是如何布局你的代码。我将为你提供代码布局的最佳实践指南，并提供关于如何做以及如何不做的示例：
+最明显的起点是如何布局你的代码。我将为你提供代码布局的最佳实践指南，并提供关于如何做以及如何不做的示例：
 
 ## 缩进与对齐
 
@@ -887,27 +830,27 @@ if greeting is True:
 
 当你使用延续行时，它们应该通过两种方法之一对齐折叠的元素：
 
-*   使用 Python 在花括号、括号和圆括号内部隐式连接行的垂直对齐，或者
-*   使用悬挂缩进（hanging indents）
+* 使用 Python 在花括号、括号和圆括号内部隐式连接行的垂直对齐，或者
 
+* 使用悬挂缩进（hanging indents）
 
-
-
-现在，这两个函数看起来完全一样，仅仅是因为 `lookup_set` 利用了 Python 集合（sets）是哈希表这一事实。然而，每个示例中 `lookup` 的性能是不同的。为了判断一个特定项目是否包含在列表中，Python 必须搜索每一个项目，直到找到匹配的项为止。这需要时间，特别是当你的列表很长时。使用集合，每个项目都有一个哈希值，它能告诉 Python 去哪里里查找匹配的项。这使得即使集合很大，搜索速度也会快得多。你也可以以相同的方式搜索字典。由于性能存在差异，在以下情况下，使用集合或字典比使用列表更好的主意：
+现在，这两个函数看起来完全一样，仅仅是因为 `lookup_set` 利用了 Python 集合（sets）是哈希表这一事实。然而，每个示例中 `lookup` 的性能是不同的。为了判断一个特定项目是否包含在列表中，Python 必须搜索每一个项目，直到找到匹配的项为止。这需要时间，特别是当你的列表很长时。使用集合，每个项目都有一个哈希值，它能告诉 Python 去哪里查找匹配的项。这使得即使集合很大，搜索速度也会快得多。你也可以以相同的方式搜索字典。由于性能存在差异，在以下情况下，使用集合或字典比使用列表更好的主意：
 
 * 当集合包含大量项时
+
 * 当你需要频繁地在集合中查找项时
+
 * 没有重复项时
 
 对于较小的集合或那些不太可能频繁搜索的集合，建立哈希表所需的额外内存和时间，通常会超过你通过提高搜索速度所节省的时间。
 
 ## 第 5 章：注释
 
-由于你已经有了一些 Python 编程的经验，你会知道注释在程序运行时是不可见的。注释的作用是帮助编码员和其他阅读代码的人理解做了什么以及为什么要这样做。现在，有些人认为，因为注释是不可见的，所以没必要写它们；而另一些人写的注释毫无意义且与他们的代码矛盾。我必须告诉你，在这者之间，拥有一个矛盾的注释比完全不写要糟糕得多，因此，每当你对代码进行更改时，都必须确保更新你的注释。
+由于你已经有了一些 Python 编程的经验，你会知道注释在程序运行时是不可见的。注释的作用是帮助编码员和其他阅读代码的人理解做了什么以及为什么要这样做。现在，有些人认为，因为注释是不可见的，所以没必要写它们；而另一些人写的注释毫无意义且与他们的代码矛盾。我必须告诉你，在这两者之间，拥有一个矛盾的注释比完全不写要糟糕得多，因此，每当你对代码进行更改时，都必须确保更新你的注释。
 
-当你写一条注释时，确保它是一个带有正确结尾的完整句子。正如你写任何内容一样，你的注释（无论是句子还是短语）必须大写字母开头。该规则的唯一例外是它是以小字母开头的标识符——这里的黄金法则是你**永远不要**改变标识符的大小写！
+当你写一条注释时，确保它是一个带有正确结尾的完整句子。正如你写任何内容一样，你的注释（无论是句子还是短语）必须大写字母开头。该规则的唯一例外是它是以小写字母开头的标识符——这里的黄金法则是你**永远不要**改变标识符的大小写！
 
-如果你使用短注释，可以省略结尾的句号。如果你在写块注释，这些注释通常由至少一段组成，有时更多，且每一段都由完整的句子组成。这些句子中的每一个都必须有一个句号。每个句号后面应该有 2 个空格，且所有注释都应该用英文编写。唯一的例外是你 200% 确定你的代码永远不会被不通或不读你母语言的人阅读。
+如果你使用短注释，可以省略结尾的句号。如果你在写块注释，这些注释通常由至少一段组成，有时更多，且每一段都由完整的句子组成。这些句子中的每一个都必须有一个句号。每个句号后面应该有 2 个空格，且所有注释都应该用英文编写。唯一的例外是你 200% 确定你的代码永远不会被不通或不读你母语的人阅读。
 
 ## 块注释
 
@@ -936,6 +879,7 @@ x = x + 1              # Compensate for the border
 为了让你的 Python 代码变得更好，请遵循这些规范：检查你的变量是否等于常量。没有必要对值与 `0`、`None` 或 `True` 进行显式比较；相反，你可以将其加入 `if`-语句中。看以下示例：
 
 ### 糟糕的示例
+
 ```python
 if attr == True:
     print 'True!'
@@ -945,6 +889,7 @@ if attr == None:
 ```
 
 ### 良好的示例
+
 ```python
 # 只看它的值
 if attr:
@@ -964,6 +909,7 @@ if attr is None:
 不要使用 `dict.has_key()` 方法，请使用 `x in d` 语法或使用 `dict.get()` 来传递默认参数。
 
 ### 糟糕的示例
+
 ```python
 d = {'hello': 'world'}
 
@@ -974,6 +920,7 @@ else:
 ```
 
 ### 良好的示例
+
 ```python
 d = {'hello': 'world'}
 print d.get('hello', 'default_value') # prints 'world'
@@ -981,6 +928,7 @@ print d.get('thingy', 'default_value') # prints 'default_value'
 ```
 
 ### 或者：
+
 ```python
 if 'hello' in d:
 ```
@@ -990,6 +938,7 @@ if 'hello' in d:
 对于较小的集合或那些不太可能频繁搜索的集合...使用列表推导式或 `map()`。
 
 ### 糟糕的示例
+
 ```python
 a = [5, 4, 3]
 for i in a:
@@ -997,6 +946,7 @@ for i in a:
 ```
 
 ### 良好的示例
+
 ```python
 a = [5, 4, 3]
 b = [i + 3 for i in a]
@@ -1007,6 +957,7 @@ b = [i + 3 for i in a]
 当你想要从文件中读取内容时，最好使用 `with` 语法，因为它会自动关闭文件。
 
 ### 糟糕的示例
+
 ```python
 f = open('file.txt')
 a = f.read()
@@ -1015,14 +966,12 @@ f.close()
 ```
 
 ### 良好的示例
+
 ```python
 with open('file.txt') as f:
     for line in f:
         print line
 ```
-
-
-
 
 话虽如此，如果你发现自己必须不断拆分长行，这说明你正尝试做太多的事情，这将会影响代码的可读性。
 
@@ -1044,7 +993,7 @@ with open('file.txt') as f:
 
 2. **关键字参数（Keyword Argument）** – 这些参数包含默认值，且不是强制性的。关键字参数有时用于发送到函数的可选参数。当一个函数包含至少 2 或 3 个（最好更多）位置参数时，很容易被记住。使用带有默认值的关键字参数会更有帮助。例如，你可以定义一个完整的 `send` 函数为 `send(message, to, cc=None, bcc=None)`。`cc` 和 `bcc` 的使用是可选的，如果给它们赋予其他值，它们的值都为 `None`。
 
-在 Python 中，有几种方法可以使用关键字参数调用函数。例如，你可以遵循定义中的参数顺序，而不显式地命名这些参数；例如，`send('Hello', 'World', 'Galactus', 'God')`。在这里，你正在向 Galactus 发送消息的抄送，并向 God 发送盲抄。你也可以以不同的顺序命名参数，例如，`send('Helloagain', 'World', bcc='God', cc='Galactus')`。除非你有非常充分的理由不尽可能遵循正确的语法，否则这两个示例最好被避免；它们既冗长又不可可读。最好的方法，即最接近函数定义的方法，是 `send('Hello', 'World', cc='Galactus', bcc='God')`。
+在 Python 中，有几种方法可以使用关键字参数调用函数。例如，你可以遵循定义中的参数顺序，而不显式地命名这些参数；例如，`send('Hello', 'World', 'Galactus', 'God')`。在这里，你正在向 Galactus 发送消息的抄送，并向 God 发送盲抄。你也可以以不同的顺序命名参数，例如，`send('Helloagain', 'World', bcc='God', cc='Galactus')`。除非你有非常充分的理由不尽可能遵循正确的语法，否则这两个示例最好被避免；它们既冗长又不可读。最好的方法，即最接近函数定义的方法，是 `send('Hello', 'World', cc='Galactus', bcc='God')`。
 
 3. **任意参数列表（Arbitrary Argument List）** - 这是向函数传递参数的另一种方法。有时，函数的意图通过具有数量位置参数的签名来表达更好，这个数量是可以扩展的。在这种情况下，最好使用 `*args` 结构来定义它。在参数体中，`args` 是所有剩余位置参数的元组。例如，你可以使用 `send(message, *args)` 并将所有接收者列为单独参数：`send('Hello', 'Galactus', 'Dad', 'God')` —— 在函数体内，`args` 等于 `('Galactus', 'Dad', 'God')`。
 
@@ -1059,6 +1008,7 @@ with open('file.txt') as f:
 保持简单并遵循这些编写 Python 函数的规则：
 
 * 是可读的 – 名称和参数不需要任何解释
+
 * 易于更改 – 你可以添加关键字参数而不会破坏其他代码。
 
 # 第 8 章：命名规范
@@ -1070,14 +1020,23 @@ with open('file.txt') as f:
 有许多不同的命名样式，因此识别在使用哪种样式是有帮助的。以下是区分常用的命名样式：
 
 * `B` – 单字母大写
+
 * `b` – 单字母小写
+
 * `lowercase_with_underscores`
+
 * `lowercase`
+
 * `UPPERCASE_WITH_UNDERSCORES`
+
 * `UPPERCASE`
+
 * `CapitalizedWords` – 通常称为 CamelCase，因为字母看起来像
+
 * `mixedCase` – 与 CamelCase 不同，因为首字母是小写
+
 * `Capital_Words_With_Underscore` – 不是一种漂亮的样式！
+
 * 在 CamelCase 中使用缩写时，你应该确保所有的缩写字母都大写。例如，与其使用 `HttpServerError`，不如使用 `HTTPSError`。
 
 还可以使用另一种样式，即放置一个唯一的前缀（短的），将一组相关的名称放在一起。这在 Python 中并不常用，但我提到它是为了让你知道它的存在。一个例子是 `os.stat()` 函数 —— 它将返回一个元组，其中包含的项目如 `st_size`, `st_mode`, `st_mtime` 等。
@@ -1085,14 +1044,12 @@ with open('file.txt') as f:
 这些是一些使用末尾下划线或前导下划线的形式，通常可以与任何大小规范结合：
 
 * `_one_leading_underscore` – 这通常是“内部使用”的指示，但并不强。
+
 * `One_trailing_underscore_` – 通常用于防止与 Python 关键字冲突，例如：`tkinter.Toplevel(master, class_='ClassName')`
-* `__two_leading_underscores` – 当你命名类属性时，这会引发名称修饰（mangling），例如：（在类 FootBar 内部，`__boo`) 会变成 `(_FootBar__boo)`
 
+* `__two_leading_underscores` – 当你命名类属性时，这会引发名称修饰（mangling），例如：（在类 `FootBar` 内部，`__boo`）会变成 `(_FootBar__boo)`
 
-
-
-
-*   `two_leading_and_two_trailing_underscores` 是属性或“魔法”对象，存在于用户控制的命名空间中。例如：`__init__`、`__file__` 或 `__import__`。
+* `two_leading_and_two_trailing_underscores` 是属性或“魔法”对象，存在于用户控制的命名空间中。例如：`__init__`、`__file__` 或 `__import__`。
 
 ## 规范性
 
@@ -1102,7 +1059,7 @@ with open('file.txt') as f:
 
 ## 模块和包的命名
 
-所有的模块名称都应该是简短且全小写的。你 可以在模块名中使用下划线，但仅当它能提高可读性时才。Python 包也是如此——使用简短且全小写的名称——但不要使用下划线。
+所有的模块名称都应该是简短且全小写的。你可以在模块名中使用下划线，但仅当它能提高可读性时才。Python 包也是如此——使用简短且全小写的名称——但不要使用下划线。
 
 当你有一个用 C 或 C++ 编写的扩展模块，并且它配有一个具有面向对象接口的 Python 模块时，C 或 C++ 模块将以下划线开头，例如 `_socket`。
 
@@ -1135,7 +1092,7 @@ KT_contra = TypeVar('KT_contra', contravariant=True)
 
 ## 函数
 
-所有函数名均为小写，并在需要提高可读性的地方用下划线分隔单词。mixedCase 约定仅在已以此风格的语境中使用，以保持向后兼容性。
+所有函数名均为小写，并在需要提高可读性的地方用下划线分隔单词。`mixedCase` 约定仅在已以此风格的语境中使用，以保持向后兼容性。
 
 ## 实例变量和方法名
 
@@ -1149,7 +1106,7 @@ KT_contra = TypeVar('KT_contra', contravariant=True)
 
 ## 继承设计
 
-必须遵守的规则之一是确定实例变量或类方法是非公开的公共的。如果你无法决定，请选择非公开，因为你可以以后轻松将其改为公共，而将公共改为非公开并不那么容易。
+必须遵守的规则之一是确定实例变量或类方法是非公开的还是公共的。如果你无法决定，请选择非公开，因为你可以以后轻松将其改为公共，而将公共改为非公开并不那么容易。
 
 公共属性是指与类无关的客户端会使用的属性，而非公开属性是不供第三方使用的。对于公共属性，你保证了从开始到结束的向后兼容；而对于非公开属性，你不需要，并且可以移除或更改该属性。注意，不使用“私有”一词，这是因为 Python 语言中没有真正的私有属性。
 
@@ -1157,10 +1114,13 @@ KT_contra = TypeVar('KT_contra', contravariant=True)
 
 结合以上所有点，这些是 Pythonic 的准则：
 
-*   公共属性不能有前缀下划线。
-*   如果公共属性与关键字（保留字）冲突，请在属性名称末尾添加一个下划线。这是比使用拼写错误或缩写更优的方法。
-*   对于公共数据属性，最好的方法是只暴露属性名称，而不使用任何复杂的修改器（mutator）或访问器（accessor）方法。如果简单的属性需要扩展其功能行为，Python 可以轻松实现。
-*   如果你正在使用一个将被子类的类，并且你也使用了不会被子类的属性，考虑添加 2 个前缀下划线，但不要添加任何末尾下划线。这将触发名称修饰，并有助于降低子类具有相同名称属性时发生冲突的风险。
+* 公共属性不能有前缀下划线。
+
+* 如果公共属性与关键字（保留字）冲突，请在属性名称末尾添加一个下划线。这是比使用拼写错误或缩写更优的方法。
+
+* 对于公共数据属性，最好的方法是只暴露属性名称，而不使用任何复杂的修改器（mutator）或访问器（accessor）方法。如果简单的属性需要扩展其功能行为，Python 可以轻松实现。
+
+* 如果你正在使用一个将被子类的类，并且你也使用了不会被子类的属性，考虑添加 2 个前缀下划线，但不要添加任何末尾下划线。这将触发名称修饰，并有助于降低子类具有相同名称属性时发生冲突的风险。
 
 ## 第 9 章：在语句和表达式中使用空格
 
@@ -1168,26 +1128,32 @@ KT_contra = TypeVar('KT_contra', contravariant=True)
 
 在以下情况下不要使用不必要的空格：
 
-*   紧邻大括号、中括号或圆括号内部
+* 紧邻大括号、中括号或圆括号内部
 
 良好的示例：
+
+
+
 ```python
 ham(spam[1], {eggs: 2})
 ```
 
 错误的示例：
+
 ```python
 ham( spam[ 1 ], { eggs: 2 } )
 ```
 
-*   在冒号、分号或逗号之前
+- 在冒号、分号或逗号之前
 
 良好的示例：
+
 ```python
 if x == 4:
 ```
 
 错误的示例：
+
 ```python
 if x == 4 :
 ```
@@ -1195,11 +1161,13 @@ if x == 4 :
 然而，在切片（slice）中，冒号类似于运算符，应该在两侧都包含等的空格。例外是省略的切片。
 
 良好的示例：
+
 ```python
 spam[1:8], ham[1:2]
 ```
 
 错误的示例：
+
 ```python
 spam[1 : 8], ham[1 : 2]
 ```
@@ -1210,33 +1178,38 @@ spam[1 : 8], ham[1 : 2]
 spam[: upper]
 ```
 
-*   在函数调用参数列表起始圆括号前
+- 在函数调用参数列表起始圆括号前
 
 良好的示例：
+
 ```python
 ham(1)
 ```
 
 错误的示例：
+
 ```python
 ham (1)
 ```
 
-*   在切片或索引的起始圆括号前
+- 在切片或索引的起始圆括号前
 
 良好的示例：
+
 ```python
 dct['key'] = lst[index]
 ```
 
 错误的示例：
+
 ```python
 dct ['key'] = lst [index]
 ```
 
-*   当运算符（如赋值）周围有多个空格以与其他运算符对齐
+- 当运算符（如赋值）周围有多个空格以与其他运算符对齐
 
 良好的示例：
+
 ```python
 x = 1
 y = 2
@@ -1244,49 +1217,47 @@ long_variable = 3
 ```
 
 错误的示例：
+
 ```python
-x         = 1
-y         = 2
+x         = 1
+y         = 2
 long_variable = 3
 ```
 
 ## 其他建议
 
-在代码中处避免行尾空格，因为它是不可见的且会引起混淆。例如，如果你放了一个反斜杠并跟着一个空格然后换行——这不会被视为行延续符。事实上，某些文本编辑器不会保留它，并且某些项目包含的提交钩子会直接拒绝它——其中之一就是 CPython。
+在代码中避免行尾空格，因为它是不可见的且会引起混淆。例如，如果你放了一个反斜杠并跟着一个空格然后换行——这不会被视为行延续符。事实上，某些文本编辑器不会保留它，并且某些项目包含的提交钩子会直接拒绝它——其中之一就是 CPython。
 
-以下二元运算符应该被单个空格包围——两侧各一个
+以下二元运算符应该被单个空格包围——两侧各一个：
 
-*   赋值 (`=`)
-*   复合赋值 (`+=`, `-=` 等）
+- 赋值（`=`）
+- 复合赋值（`+=`、`-=` 等）
 
 以下比较运算符的处理方式相同：
 
-*   `==`
-*   `<`
-*   `>`
-*   `!=`
-*   `<>`
-*   `<=`
-*   `>=`
-*   `in`
-*   `not in`
-*   `is`
-*   `is not`
+- `==`
+- `<`
+- `>`
+- `!=`
+- `<>`
+- `<=`
+- `>=`
+- `in`
+- `not in`
+- `is`
+- `is not`
 
 以及这些布尔值：
 
-*   `and`
-*   `or`
-*   `not`
-
-
-
+- `and`
+- `or`
+- `not`
 
 如果你使用了不同优先级的运算符，请考虑在优先级最低的运算符周围添加空格——此处请根据你的判断来决定。然而，空格不应超过一个空格，并确保运算符两侧的空格数量相同——不要在一侧放 1 个而在另一侧放 2 个：
 
-### 良好的示例：
+### 良好的示例
 
-```
+```python
 i = i + 1
 submitted += 1
 x = x*2 - 1
@@ -1294,9 +1265,9 @@ hypot2 = x*x + y*y
 c = (a+b) * (a-b)
 ```
 
-### 糟糕的示例：
+### 糟糕的示例
 
-```
+```python
 i=i+1
 submitted +=1
 x = x * 2 - 1
@@ -1306,14 +1277,14 @@ c = (a + b) * (a - b)
 
 当你使用 `=` 号来指示参数或关键字参数的默认值时，不要在符号周围添加空格：
 
-### 良好的示例：
+### 良好的示例
 
 ```python
 def complex(real, imag=0.0):
     return magic(r=real, i=imag)
 ```
 
-### 糟糕的示例：
+### 糟糕的示例
 
 ```python
 def complex(real, imag = 0.0):
@@ -1322,14 +1293,14 @@ def complex(real, imag = 0.0):
 
 对于函数注解中的冒号，使用标准规则，并确保在使用了 `->` 时周围有空格：
 
-### 良好的示例：
+### 良好的示例
 
 ```python
 def munge(input: AnyStr): ...
 def munge() -> AnyStr: ...
 ```
 
-### 糟糕的示例：
+### 糟糕的示例
 
 ```python
 def munge(input:AnyStr): ...
@@ -1338,14 +1309,14 @@ def munge()->PosInt: ...
 
 当结合默认值和参数注解使用时，`=` 号周围应该有空格——除非该参数同时具有默认值和注解，否则不要这样做：
 
-### 良好的示例：
+### 良好的示例
 
 ```python
 def munge(sep: AnyStr = None): ...
 def munge(input: AnyStr, sep: AnyStr = None, limit=1000): ...
 ```
 
-### 糟糕的示例：
+### 糟糕的示例
 
 ```python
 def munge(input: AnyStr=None): ...
@@ -1354,7 +1325,7 @@ def munge(input: AnyStr, limit = 1000): ...
 
 使用复合语句（即在一行内编写多个语句）不是良好的习惯：
 
-### 良好的示例：
+### 良好的示例
 
 ```python
 if foo == 'that':
@@ -1364,16 +1335,16 @@ do_two()
 do_three()
 ```
 
-### 尽量不要这样做：
+### 尽量不要这样做
 
 ```python
 if foo == 'that': do_that_thing()
 do_one(); do_two(); do_three()
 ```
 
-偶尔在一行内使用 `if`、`for` 和 `while` 语句是可以的，只要它们的体很小，但你永远不要对包含多个从的语句这样做。此外，永远不要折叠非常长的行：
+偶尔在一行内使用 `if`、`for` 和 `while` 语句是可以的，只要它们的体很小，但你永远不要对包含多个从句的语句这样做。此外，永远不要折叠非常长的行：
 
-### 尽量不要这样做：
+### 尽量不要这样做
 
 ```python
 if foo == 'that': do_that_thing()
@@ -1381,7 +1352,7 @@ for x in lst: total += x
 while t < 10: t = delay()
 ```
 
-### 绝对不要：
+### 绝对不要
 
 ```python
 if foo == 'that': do_that_thing()
@@ -1401,7 +1372,7 @@ if foo == 'that': one(); two(); three()
 
 最后，如果你觉得这本书有帮助，可以请你帮一个小忙吗？请考虑在 `Amamzon.com` 上给我留评价；这不仅对我有用，对潜在读者也有益。
 
-感谢你，祝你在成为更好的 Python 程序员的道路上顺利
+感谢你，祝你在成为更好的 Python 程序员的道路上顺利。
 
 ## 关于作者
 
@@ -1414,4 +1385,3 @@ Charlie 想要一种能够轻松学习并提高编程技能的教学方法。他
 应用同样的方法，Charlie 成功学习了不同的编程语言，现在正通过编写书籍教授这一领域。
 
 通过他写的关于计算机编程的书，他希望提供巨大的价值，并帮助对学习计算机相关话题感兴趣的读者。
-

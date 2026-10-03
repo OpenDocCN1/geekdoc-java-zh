@@ -1,3 +1,4 @@
+
 # 如何创建 Java 流
 
 > 原文：<https://medium.com/javarevisited/how-to-create-java-streams-5d7cff33d0d9?source=collection_archive---------2----------------------->

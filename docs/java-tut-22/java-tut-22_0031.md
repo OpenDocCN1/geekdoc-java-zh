@@ -1,3 +1,4 @@
+
 # 运算符概要
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html`](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html)
@@ -8,7 +9,6 @@
 
 ```java
 =       Simple assignment operator
-
 ```
 
 ## 算术运算符
@@ -20,7 +20,6 @@
 *       Multiplication operator
 /       Division operator
 %       Remainder operator
-
 ```
 
 ## 一元运算符
@@ -37,7 +36,6 @@
         a value by 1
 !       Logical complement operator;
         inverts the value of a boolean
-
 ```
 
 ## 相等性和关系运算符
@@ -49,7 +47,6 @@
 >=      Greater than or equal to
 <       Less than
 <=      Less than or equal to
-
 ```
 
 ## 条件运算符
@@ -59,7 +56,6 @@
 ||      Conditional-OR
 ?:      Ternary (shorthand for 
         if-then-else statement)
-
 ```
 
 ## 类型比较运算符
@@ -67,7 +63,6 @@
 ```java
 instanceof      Compares an object to 
                 a specified type 
-
 ```
 
 ## 位运算符和位移运算符
@@ -80,5 +75,4 @@ instanceof      Compares an object to
 &       Bitwise AND
 ^       Bitwise exclusive OR
 |       Bitwise inclusive OR
-
 ```

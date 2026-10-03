@@ -1,13 +1,14 @@
-# spring simple JDBC template batch update()示例
+
+# Spring SimpleJdbcTemplate batchUpdate() 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring/spring-simplejdbctemplate-batchupdate-example/>
 
-在本教程中，我们将向您展示如何在 SimpleJdbcTemplate 类中使用`batchUpdate()`。
+在本教程中，我们将向您展示如何在`SimpleJdbcTemplate`类中使用`batchUpdate()`。
 
-参见 SimpleJdbcTemplate 类中的`batchUpdate()`示例。
+参见`SimpleJdbcTemplate`类中的`batchUpdate()`示例。
 
 ```java
- //insert batch example
+//insert batch example
 public void insertBatch(final List<Customer> customers){
 	String sql = "INSERT INTO CUSTOMER " +
 		"(CUST_ID, NAME, AGE) VALUES (?, ?, ?)";
@@ -26,7 +27,7 @@ public void insertBatch(final List<Customer> customers){
 或者，您可以直接执行 SQL。
 
 ```java
- //insert batch example with SQL
+//insert batch example with SQL
 public void insertBatchSQL(final String sql){
 
 	getJdbcTemplate().batchUpdate(new String[]{sql});
@@ -36,8 +37,8 @@ public void insertBatchSQL(final String sql){
 
 Spring 的 bean 配置文件
 
-```java
- <beans 
+```xml
+<beans 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
@@ -63,7 +64,7 @@ Spring 的 bean 配置文件
 运行它
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -105,11 +106,12 @@ public class App
 
 ## 下载源代码
 
-Download it – [Spring-SimpleJdbcTemplate-batchUpdate-Example.zip](http://web.archive.org/web/20190310101928/http://www.mkyong.com/wp-content/uploads/2010/03/Spring-JDBC-Example.zip) (15 KB)[jdbc](http://web.archive.org/web/20190310101928/http://www.mkyong.com/tag/jdbc/) [spring](http://web.archive.org/web/20190310101928/http://www.mkyong.com/tag/spring/)![](img/e2d83b8cab0c8439728b378ab3126b0c.png) (function (i,d,s,o,m,r,c,l,w,q,y,h,g) { var e=d.getElementById(r);if(e===null){ var t = d.createElement(o); t.src = g; t.id = r; t.setAttribute(m, s);t.async = 1;var n=d.getElementsByTagName(o)[0];n.parentNode.insertBefore(t, n); var dt=new Date().getTime(); try{i[l][w+y](h,i[l][q+y](h)+'&amp;'+dt);}catch(er){i[h]=dt;} } else if(typeof i[c]!=='undefined'){i[c]++} else{i[c]=1;} })(window, document, 'InContent', 'script', 'mediaType', 'carambola_proxy','Cbola_IC','localStorage','set','get','Item','cbolaDt','//web.archive.org/web/20190310101928/http://route.carambo.la/inimage/getlayer?pid=myky82&amp;did=112239&amp;wid=0')<input type="hidden" id="mkyong-postId" value="3816">
+Download it – [Spring-SimpleJdbcTemplate-batchUpdate-Example.zip](http://web.archive.org/web/20190310101928/http://www.mkyong.com/wp-content/uploads/2010/03/Spring-JDBC-Example.zip) (15 KB)
 
+[jdbc](http://web.archive.org/web/20190310101928/http://www.mkyong.com/tag/jdbc/) [spring](http://web.archive.org/web/20190310101928/http://www.mkyong.com/tag/spring/)
 
+![](img/e2d83b8cab0c8439728b378ab3126b0c.png)
 
+(function (i,d,s,o,m,r,c,l,w,q,y,h,g) { var e=d.getElementById(r);if(e===null){ var t = d.createElement(o); t.src = g; t.id = r; t.setAttribute(m, s);t.async = 1;var n=d.getElementsByTagName(o)[0];n.parentNode.insertBefore(t, n); var dt=new Date().getTime(); try{i[l][w+y](h,i[l][q+y](h)+'&amp;'+dt);}catch(er){i[h]=dt;} } else if(typeof i[c]!=='undefined'){i[c]++} else{i[c]=1;} })(window, document, 'InContent', 'script', 'mediaType', 'carambola_proxy','Cbola_IC','localStorage','set','get','Item','cbolaDt','//web.archive.org/web/20190310101928/http://route.carambo.la/inimage/getlayer?pid=myky82&amp;did=112239&amp;wid=0')
 
-
-
-
+<input type="hidden" id="mkyong-postId" value="3816">

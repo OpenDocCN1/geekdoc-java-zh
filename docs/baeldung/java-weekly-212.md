@@ -1,40 +1,41 @@
+
 # Java 周刊，第 212 期
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-weekly-212>
 
 **开始了……**
 
-## 1。Spring 和 Java
+## 1. Spring 和 Java
 
 #### [**> >创建用于验证的 kot Lin DSL**](https://web.archive.org/web/20220628132307/https://blog.sourced-bvba.be//article/2018/01/13/kotlin-validation/)[blog . sourced-bvba . be]
 
-在 Kotlin 中，DSL 可能非常强大——尤其是当它们利用具体化的泛型时。
+在 `Kotlin` 中，`DSL` 可能非常强大——尤其是当它们利用具体化的泛型时。
 
 #### [**> >弹簧、电抗器、弹性搜索:用假测试数据做标记**](https://web.archive.org/web/20220628132307/http://www.nurkiewicz.com/2018/01/spring-reactor-and-elasticsearch.html)【nurkiewicz.com】
 
 #### [**> >用 Dropwizard 监控和测量无功应用指标**](https://web.archive.org/web/20220628132307/http://www.nurkiewicz.com/2018/01/monitoring-and-measuring-reactive.html)【nurkiewicz.com】
 
-几个有趣的例子说明了**使用 Dropwizard 监控一个反应式应用程序**。
+几个有趣的例子说明了**使用 `Dropwizard` 监控一个反应式应用程序**。
 
 #### [**> >用 Spring HATEOAS**](https://web.archive.org/web/20220628132307/https://spring.io/blog/2018/01/12/building-richer-hypermedia-with-spring-hateoas)[Spring . io]构建更丰富的超媒体
 
-启示是另一个有趣的概念，它通过在 REST API 生成的响应中包含特定领域的元数据，允许从超媒体中获取更多信息。
+启示是另一个有趣的概念，它通过在 `REST API` 生成的响应中包含特定领域的元数据，允许从超媒体中获取更多信息。
 
 #### [**>>Java EE**T3【infoq.com】无 JCP](https://web.archive.org/web/20220628132307/https://www.infoq.com/news/2018/01/no-jcp-for-javaee)
 
-看起来 Java EE 将**不会利用标准的 Java 社区进程**。
+看起来 `Java EE` 将**不会利用标准的 `Java` 社区进程**。
 
 #### [**> > Java EE vs 春考**](https://web.archive.org/web/20220628132307/https://antoniogoncalves.org/2018/01/16/java-ee-vs-spring-testing/)【antoniogoncalves.org】
 
-集成测试在托管环境中很重要；即使它们稍微难以维护，它们也应该尽可能容易编写。在 Java EE 中，情况并非总是如此，在 Java EE 中，集成测试有时很难设置并且相当繁重。
+集成测试在托管环境中很重要；即使它们稍微难以维护，它们也应该尽可能容易编写。在 `Java EE` 中，情况并非总是如此，在 `Java EE` 中，集成测试有时很难设置并且相当繁重。
 
 #### [**> >先睹为快用里程碑 1**](https://web.archive.org/web/20220628132307/https://spring.io/blog/2018/01/16/sneak-peek-at-reactor-core-3-2-with-milestone-1) [ spring.io ]
 
-看起来 Reactor-Core 3.2 将最终提供一种定义异常回退的便捷方式。
+看起来 `Reactor-Core 3.2` 将最终提供一种定义异常回退的便捷方式。
 
 #### [**> > Spring Boot 度量监控使用普罗米修斯&格拉法纳**[aboullaite . me](https://web.archive.org/web/20220628132307/https://aboullaite.me/spring-boot-monitoring-prometheus-grafana/)
 
-一个使用 Prometheus 和 Grafana 监控 Spring Boot 应用程序的简单例子。好东西。
+一个使用 `Prometheus` 和 `Grafana` 监控 `Spring Boot` 应用程序的简单例子。好东西。
 
 #### 同样值得一读:
 
@@ -66,7 +67,7 @@
 
 *   #### [**>>IntelliJ IDEA 2017。3 .3 发布**](https://web.archive.org/web/20220628132307/https://blog.jetbrains.com/idea/2018/01/intellij-idea-2017-3-3-is-released/)【blog . jetbrains . com】
 
-## 2。技术和思考
+## 2. 技术和思考
 
 #### [**>>2018 年微服狂飙之死**](https://web.archive.org/web/20220628132307/http://www.dwmkerr.com/the-death-of-microservice-madness-in-2018/)【dwmkerr.com】
 
@@ -85,6 +86,7 @@
 *   #### [**> > How to set up the self-hosted Kubeadm Kubernetes cluster**](https://web.archive.org/web/20220628132307/http://stytex.de/blog/2018/01/16/how-to-recover-self-hosted-kubeadm-kubernetes-cluster-after-reboot/) [ stytex.de
 
     after & restart?
+
 *   #### [**>在 MongoDB 3.6 中改变流**](https://web.archive.org/web/20220628132307/https://blog.codecentric.de/en/2018/01/change-streams-mongodb-3-6/)博客。代码为中心。德
 
 *   #### [**> > How does Netflix build a high-speed continuous delivery platform**](https://web.archive.org/web/20220628132307/https://thenewstack.io/netflix-built-spinnaker-high-velocity-continuous-delivery-platform/) [ the new stack.io ]
@@ -101,7 +103,7 @@
 
 *   #### [> > Soft skills of software developers](https://web.archive.org/web/20220628132307/http://blog.scottlogic.com/2018/01/13/soft-skills-for-software-developers.html) [blog.scottlogic.com]
 
-## 3。漫画
+## 3. 漫画
 
 本周我最喜欢的迪尔伯特。
 
@@ -111,6 +113,7 @@
 
 #### [**> > Boss 变巨魔**](https://web.archive.org/web/20220628132307/http://dilbert.com/strip/2017-10-23)【dilbert.com】
 
-## 4。本周精选
+## 4. 本周精选
 
 #### [> >让他们粘贴密码](https://web.archive.org/web/20220628132307/https://www.ncsc.gov.uk/blog-post/let-them-paste-passwords)【www.ncsc.gov.uk】
+

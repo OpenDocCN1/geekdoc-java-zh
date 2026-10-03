@@ -1,3 +1,4 @@
+
 # Spring Security + Hibernate XML 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring-security/spring-security-hibernate-xml-example/>
@@ -6,170 +7,173 @@
 
 在本教程中，我们将向您展示如何在 Spring Security、XML 配置示例中集成 Hibernate 4。
 
-**Note**
-For annotation version, please read this [Spring Security + Hibernate Annotation Example](http://web.archive.org/web/20190223081526/http://www.mkyong.com/spring-security/spring-security-hibernate-annotation-example/).
+**注意**
 
-使用的技术:
+对于注解版本，请阅读此 [Spring Security + Hibernate 注解示例](http://web.archive.org/web/20190223081526/http://www.mkyong.com/spring-security/spring-security-hibernate-annotation-example/)。
 
-1.  弹簧 3.2.8 释放
-2.  Spring Security 3.2.3 .发布
-3.  Hibernate 4.2.11 .最终版
-4.  MySQL 服务器 5.6
-5.  JDK 1.6
-6.  maven3
-7.  Eclipse 4.3
+使用的技术：
 
-快速笔记
+1. Spring 3.2.8.RELEASE
+2. Spring Security 3.2.3.RELEASE
+3. Hibernate 4.2.11.Final
+4. MySQL Server 5.6
+5. JDK 1.6
+6. Maven 3
+7. Eclipse 4.3
 
-1.  用`hibernate4.LocalSessionFactoryBean`创建一个会话工厂
-2.  将会话工厂注入用户道
-3.  为了与 Spring Security 集成，创建一个实现`UserDetailsService`接口的类，并用 UserDao 加载用户
-4.  必须声明事务管理器，否则 Hibernate 在 Spring 中将无法工作
+快速笔记：
 
-## 1.项目目录
+1. 用`hibernate4.LocalSessionFactoryBean`创建一个会话工厂
+2. 将会话工厂注入`UserDao`
+3. 为了与 Spring Security 集成，创建一个实现`UserDetailsService`接口的类，并用`UserDao`加载用户
+4. 必须声明事务管理器，否则 Hibernate 在 Spring 中将无法工作
+
+## 1. 项目目录
 
 最终项目目录结构。
 
-![spring-security-hibernate-directory](img/2569d2ebf480a13e5bf6b3666124ca99.png) ## 2.项目依赖性
+![spring-security-hibernate-directory](img/2569d2ebf480a13e5bf6b3666124ca99.png)
+
+## 2. 项目依赖性
 
 POM 文件中项目依赖项的列表。
 
-pom.xml
+`pom.xml`
 
 ```java
- <properties>
-		<spring.version>3.2.8.RELEASE</spring.version>
-		<spring.security.version>3.2.3.RELEASE</spring.security.version>
-		<jstl.version>1.2</jstl.version>
-		<mysql.connector.version>5.1.30</mysql.connector.version>
-		<logback.version>1.1.2</logback.version>
-		<slf4j.version>1.7.6</slf4j.version>
-		<hibernate.version>4.2.11.Final</hibernate.version>
-		<dbcp.version>1.4</dbcp.version>
-		<servletapi.version>2.5</servletapi.version>
-	</properties>
+<properties>
+    <spring.version>3.2.8.RELEASE</spring.version>
+    <spring.security.version>3.2.3.RELEASE</spring.security.version>
+    <jstl.version>1.2</jstl.version>
+    <mysql.connector.version>5.1.30</mysql.connector.version>
+    <logback.version>1.1.2</logback.version>
+    <slf4j.version>1.7.6</slf4j.version>
+    <hibernate.version>4.2.11.Final</hibernate.version>
+    <dbcp.version>1.4</dbcp.version>
+    <servletapi.version>2.5</servletapi.version>
+</properties>
 
-	<dependencies>
+<dependencies>
 
-		<!-- database pool -->
-		<dependency>
-			<groupId>commons-dbcp</groupId>
-			<artifactId>commons-dbcp</artifactId>
-			<version>${dbcp.version}</version>
-		</dependency>
+    <!-- database pool -->
+    <dependency>
+        <groupId>commons-dbcp</groupId>
+        <artifactId>commons-dbcp</artifactId>
+        <version>${dbcp.version}</version>
+    </dependency>
 
-		<!-- Hibernate ORM -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>${hibernate.version}</version>
-		</dependency>
+    <!-- Hibernate ORM -->
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>${hibernate.version}</version>
+    </dependency>
 
-		<!-- Spring 3 dependencies -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>${spring.version}</version>
-			<exclusions>
-			  <exclusion>
-				<groupId>commons-logging</groupId>
-				<artifactId>commons-logging</artifactId>
-			  </exclusion>
-			</exclusions>
-		</dependency>
+    <!-- Spring 3 dependencies -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>${spring.version}</version>
+        <exclusions>
+            <exclusion>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
 
-		<!-- Spring MVC -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
+    <!-- Spring MVC -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
 
-		<!-- Spring + aspects -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-aspects</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
+    <!-- Spring + aspects -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-aspects</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
 
-		<!-- ORM integration, e.g Hibernate -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
+    <!-- ORM integration, e.g Hibernate -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-orm</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
 
-		<!-- Spring Security -->
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-web</artifactId>
-			<version>${spring.security.version}</version>
-		</dependency>
+    <!-- Spring Security -->
+    <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-web</artifactId>
+        <version>${spring.security.version}</version>
+    </dependency>
 
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-config</artifactId>
-			<version>${spring.security.version}</version>
-		</dependency>
+    <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-config</artifactId>
+        <version>${spring.security.version}</version>
+    </dependency>
 
-		<!-- Spring Security JSP Taglib -->
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-taglibs</artifactId>
-			<version>${spring.security.version}</version>
-		</dependency>
+    <!-- Spring Security JSP Taglib -->
+    <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-taglibs</artifactId>
+        <version>${spring.security.version}</version>
+    </dependency>
 
-		<!-- jstl for jsp page -->
-		<dependency>
-			<groupId>jstl</groupId>
-			<artifactId>jstl</artifactId>
-			<version>${jstl.version}</version>
-		</dependency>
+    <!-- jstl for jsp page -->
+    <dependency>
+        <groupId>jstl</groupId>
+        <artifactId>jstl</artifactId>
+        <version>${jstl.version}</version>
+    </dependency>
 
-		<!-- MySql Driver -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>${mysql.connector.version}</version>
-		</dependency>
+    <!-- MySql Driver -->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${mysql.connector.version}</version>
+    </dependency>
 
-		<!-- logging, slf4j -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>${slf4j.version}</version>
-		</dependency>
+    <!-- logging, slf4j -->
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j.version}</version>
+    </dependency>
 
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jcl-over-slf4j</artifactId>
-			<version>${slf4j.version}</version>
-		</dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>jcl-over-slf4j</artifactId>
+        <version>${slf4j.version}</version>
+    </dependency>
 
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>${logback.version}</version>
-		</dependency>
+    <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>${logback.version}</version>
+    </dependency>
 
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>${servletapi.version}</version>
-			<scope>provided</scope>
-		</dependency>
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>servlet-api</artifactId>
+        <version>${servletapi.version}</version>
+        <scope>provided</scope>
+    </dependency>
 
-	</dependencies> 
+</dependencies>
 ```
 
- ## 3.用户表
+## 3. 用户表
 
 创建存储用户和用户角色的表的 SQL 脚本。
 
-mysql.sql
+`mysql.sql`
 
 ```java
- CREATE  TABLE users (
+CREATE TABLE users (
   username VARCHAR(45) NOT NULL ,
   password VARCHAR(60) NOT NULL ,
   enabled TINYINT NOT NULL DEFAULT 1 ,
@@ -194,51 +198,51 @@ VALUES ('mkyong', 'ROLE_USER');
 INSERT INTO user_roles (username, role)
 VALUES ('mkyong', 'ROLE_ADMIN');
 INSERT INTO user_roles (username, role)
-VALUES ('alex', 'ROLE_USER'); 
+VALUES ('alex', 'ROLE_USER');
 ```
 
-## 4.用户模型+ Hibernate XML 映射
+## 4. 用户模型 + Hibernate XML 映射
 
 模型类及其 XML 映射文件。
 
-User.java
+`User.java`
 
 ```java
- package com.mkyong.users.model;
+package com.mkyong.users.model;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class User {
 
-	private String username;
-	private String password;
-	private boolean enabled;
-	private Set<UserRole> userRole = new HashSet<UserRole>(0);
+    private String username;
+    private String password;
+    private boolean enabled;
+    private Set<UserRole> userRole = new HashSet<UserRole>(0);
 
-	//getter and setter methods
-} 
+    //getter and setter methods
+}
 ```
 
-UserRole.java
+`UserRole.java`
 
 ```java
- package com.mkyong.users.model;
+package com.mkyong.users.model;
 
 public class UserRole{
 
-	private Integer userRoleId;
-	private User user;
-	private String role;
+    private Integer userRoleId;
+    private User user;
+    private String role;
 
-	//getter and setter methods
-} 
+    //getter and setter methods
+}
 ```
 
-Users.hbm.xml
+`Users.hbm.xml`
 
 ```java
- <?xml version="1.0"?>
+<?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
@@ -260,13 +264,13 @@ Users.hbm.xml
             <one-to-many class="com.mkyong.users.model.UserRole" />
         </set>
     </class>
-</hibernate-mapping> 
+</hibernate-mapping>
 ```
 
-UserRoles.hbm.xml
+`UserRoles.hbm.xml`
 
 ```java
- <?xml version="1.0"?>
+<?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
@@ -282,79 +286,43 @@ UserRoles.hbm.xml
             <column name="role" length="45" not-null="true" />
         </property>
     </class>
-</hibernate-mapping> 
+</hibernate-mapping>
 ```
 
-## 5.道类
+## 5. DAO 类
 
 创建一个`UserDao`类，通过 Hibernate 从数据库加载用户。
 
-UserDao.java
+`UserDao.java`
 
 ```java
- package com.mkyong.users.dao;
+package com.mkyong.users.dao;
 
 import com.mkyong.users.model.User;
 
 public interface UserDao {
 
-	User findByUserName(String username);
+    User findByUserName(String username);
 
-} 
+}
 ```
 
-UserDaoImpl.java
+`UserDaoImpl.java`
 
-```java
- package com.mkyong.users.dao;
 
-import java.util.ArrayList;
-import java.util.List;
-import org.hibernate.SessionFactory;
 
-import com.mkyong.users.model.User;
-
-public class UserDaoImpl implements UserDao {
-
-	private SessionFactory sessionFactory;
-
-	@SuppressWarnings("unchecked")
-	public User findByUserName(String username) {
-
-		List<User> users = new ArrayList<User>();
-
-		users = getSessionFactory().getCurrentSession()
-			.createQuery("from User where username=?")
-			.setParameter(0, username).list();
-
-		if (users.size() > 0) {
-			return users.get(0);
-		} else {
-			return null;
-		}
-
-	}
-
-	public SessionFactory getSessionFactory() {
-		return sessionFactory;
-	}
-
-	public void setSessionFactory(SessionFactory sessionFactory) {
-		this.sessionFactory = sessionFactory;
-	}
-
-} 
-```
-
-## 6.用户详细信息服务
+## 6. 用户详细信息服务
 
 创建一个自定义的`UserDetailsService`，从`UserDao`加载用户，然后建立用户的权限。
 
-**Note**
-Example is reference from this Spring’s [JdbcDaoImpl](org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl)MyUserDetailsService.java
+**注意**
+
+示例参考自 Spring 的 [JdbcDaoImpl](org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl)。
+
+`MyUserDetailsService.java`
 
 ```java
- package com.mkyong.users.service;
+package com.mkyong.users.service;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -417,17 +385,17 @@ public class MyUserDetailsService implements UserDetailsService {
 		this.userDao = userDao;
 	}
 
-} 
+}
 ```
 
-## 7.Spring 安全 XML
+## 7. Spring 安全 XML
 
-看评论，应该不言自明。
+看注释，应该不言自明。
 
-spring-security.xml
+`spring-security.xml`
 
-```java
- <beans:beans 
+```xml
+<beans:beans 
 	xmlns:beans="http://www.springframework.org/schema/beans" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
@@ -458,13 +426,13 @@ spring-security.xml
 		</authentication-provider>
 	</authentication-manager>
 
-</beans:beans> 
+</beans:beans>
 ```
 
-spring-database.xml
+`spring-database.xml`
 
-```java
- <beans 
+```xml
+<beans 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:tx="http://www.springframework.org/schema/tx"
@@ -535,21 +503,22 @@ spring-database.xml
 	    <aop:advisor advice-ref="txAdvice" pointcut-ref="userServicePointCut" />
 	</aop:config>
 
-</beans> 
+</beans>
 ```
 
 完成了。
 
-**Note**
-Those JSP, web.xml and controller files are omitted, it’s quite a standard code, if you are interested on it, please download the full source code at the end of the article.
+**注意**
 
-## 8.项目演示
+那些 JSP、`web.xml` 和控制器文件被省略了，它们是相当标准的代码，如果你感兴趣，请在文章末尾下载完整源代码。
+
+## 8. 项目演示
 
 下面的视频演示是针对 [Spring 安全数据库登录与 JDBC](http://web.archive.org/web/20190223081526/http://www.mkyong.com/spring-security/spring-security-form-login-using-database/) 教程的。由于本教程生成相同的输出，但是使用 Hibernate 来加载用户，所以视频演示被重用。
 
 [//web.archive.org/web/20190223081526if_/http://www.youtube.com/embed/2ms57c2EdUg](//web.archive.org/web/20190223081526if_/http://www.youtube.com/embed/2ms57c2EdUg)
 
-8.1 访问受密码保护的页面:http://localhost:8080/spring-security-hibernate/admin，显示登录页面。
+8.1 访问受密码保护的页面：`http://localhost:8080/spring-security-hibernate/admin`，显示登录页面。
 
 ![spring-security-hibernate1](img/6354f20564c105daac5f432af598e227.png)
 
@@ -563,23 +532,24 @@ Those JSP, web.xml and controller files are omitted, it’s quite a standard cod
 
 ## 下载源代码
 
-Download it – [spring-security-hibernate.zip](http://web.archive.org/web/20190223081526/http://www.mkyong.com/wp-content/uploads/2014/05/spring-security-hibernate.zip) (30 KB)
+下载 – [spring-security-hibernate.zip](http://web.archive.org/web/20190223081526/http://www.mkyong.com/wp-content/uploads/2014/05/spring-security-hibernate.zip) (30 KB)
 
 ## 参考
 
-1.  [春季 ORM–冬眠](http://web.archive.org/web/20190223081526/http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/htmlsingle/#orm-hibernate)
-2.  [春季冬眠 4 LocalSessionFactoryBean JavaDoc](http://web.archive.org/web/20190223081526/http://docs.spring.io/spring/docs/3.2.x/javadoc-api/org/springframework/orm/hibernate4/LocalSessionFactoryBean.html)
-3.  [春季冬眠 3 LocalSessionFactoryBean JavaDoc](http://web.archive.org/web/20190223081526/http://docs.spring.io/spring/docs/3.2.x/javadoc-api/org/springframework/orm/hibernate3/LocalSessionFactoryBean.html)
-4.  [春季交易管理](http://web.archive.org/web/20190223081526/http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/htmlsingle/#transaction)
-5.  [Hibernate ORM 文档](http://web.archive.org/web/20190223081526/http://hibernate.org/orm/documentation/)
-6.  [用 JDBC 的 Spring 安全表单登录数据库](http://web.archive.org/web/20190223081526/http://www.mkyong.com/spring-security/spring-security-form-login-using-database/)
-7.  [休眠:没有为当前线程](http://web.archive.org/web/20190223081526/http://www.mkyong.com/spring/spring-hibernate-no-session-found-for-current-thread/)找到会话
+
+
+1. [春季 ORM–冬眠](http://web.archive.org/web/20190223081526/http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/htmlsingle/#orm-hibernate)
+
+2. [春季冬眠 4 `LocalSessionFactoryBean` JavaDoc](http://web.archive.org/web/20190223081526/http://docs.spring.io/spring/docs/3.2.x/javadoc-api/org/springframework/orm/hibernate4/LocalSessionFactoryBean.html)
+
+3. [春季冬眠 3 `LocalSessionFactoryBean` JavaDoc](http://web.archive.org/web/20190223081526/http://docs.spring.io/spring/docs/3.2.x/javadoc-api/org/springframework/orm/hibernate3/LocalSessionFactoryBean.html)
+
+4. [春季交易管理](http://web.archive.org/web/20190223081526/http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/htmlsingle/#transaction)
+
+5. [Hibernate ORM 文档](http://web.archive.org/web/20190223081526/http://hibernate.org/orm/documentation/)
+
+6. [用 JDBC 的 Spring 安全表单登录数据库](http://web.archive.org/web/20190223081526/http://www.mkyong.com/spring-security/spring-security-form-login-using-database/)
+
+7. [休眠:没有为当前线程](http://web.archive.org/web/20190223081526/http://www.mkyong.com/spring/spring-hibernate-no-session-found-for-current-thread/)找到会话
 
 [hibernate](http://web.archive.org/web/20190223081526/http://www.mkyong.com/tag/hibernate/) [spring hibernate](http://web.archive.org/web/20190223081526/http://www.mkyong.com/tag/spring-hibernate/) [spring security](http://web.archive.org/web/20190223081526/http://www.mkyong.com/tag/spring-security/)
-
-
-
-
-
-
-

@@ -1,20 +1,21 @@
+
 # 自定义 Keycloak 的登录页面
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/keycloak-custom-login-page>
 
-## 1.概观
+## 1\. 概观
 
 [Keycloak](https://web.archive.org/web/20221025121005/https://www.keycloak.org/) 是一个第三方授权服务器，用于管理我们的 web 或移动应用程序的认证和授权要求。它使用默认登录页面代表我们的应用程序登录用户。
 
 在本教程中，我们将重点关注如何为我们的 Keycloak 服务器定制登录页面，这样我们就可以有不同的外观和感觉。我们将在独立服务器和嵌入式服务器中看到这种情况。
 
-我们将在[的基础上为 Keycloak 教程](/web/20221025121005/https://www.baeldung.com/spring-keycloak-custom-themes)定制主题。
+我们将在[的基础上为 Keycloak 教程定制主题](/web/20221025121005/https://www.baeldung.com/spring-keycloak-custom-themes)。
 
-## 2.自定义独立的 Keycloak 服务器
+## 2\. 自定义独立的 Keycloak 服务器
 
 继续我们的 [`custom`](/web/20221025121005/https://www.baeldung.com/spring-keycloak-custom-themes#default-themes) 主题的例子，让我们先看看独立服务器。
 
-### 2.1.管理控制台设置
+### 2.1\. 管理控制台设置
 
 要启动服务器，让我们导航到保存 Keycloak 发行版的目录，并从它的`bin`文件夹中运行这个命令:
 
@@ -36,7 +37,7 @@
 
 [![](img/0dc966491c47f250bbbfbd11f8743872.png)](/web/20221025121005/https://www.baeldung.com/wp-content/uploads/2020/08/default_loginpage-1.png)
 
-### 2.2.添加自定义
+### 2.2\. 添加自定义
 
 现在假设我们需要改变背景。为此，我们将打开`login/resources/css/login.css`并更改类定义:
 
@@ -89,7 +90,7 @@ password=Enter Password:
 
 登录页面现在将显示我们的自定义消息，而不是域名。
 
-## 3.定制嵌入式 Keycloak 服务器
+## 3\. 定制嵌入式 Keycloak 服务器
 
 这里的第一步是将我们为独立服务器更改的所有工件添加到我们的嵌入式授权服务器的源代码中。
 
@@ -111,7 +112,7 @@ password=Enter Password:
 
 正如我们所看到的，之前为独立服务器所做的所有定制，比如背景、标签名称和页面标题，都出现在这里。
 
-## 4.绕过 Keycloak 登录页面
+## 4\. 绕过 Keycloak 登录页面
 
 从技术上来说，我们完全可以通过使用[密码或者直接访问授权](https://web.archive.org/web/20221025121005/https://oauth.net/2/grant-types/password/)流程来绕过 Keycloak 登录页面。然而，**强烈建议根本不要使用这种资助类型。**
 
@@ -121,7 +122,7 @@ password=Enter Password:
 
 但是，由于 Keycloak 提供了丰富的登录选项功能集——如记住我、密码重置和 MFA——仅举几例，所以没有理由忽略它。
 
-## 5.结论
+## 5\. 结论
 
 在本教程中，**我们学习了如何更改 Keycloak 的默认登录页面并添加我们的定制**。
 

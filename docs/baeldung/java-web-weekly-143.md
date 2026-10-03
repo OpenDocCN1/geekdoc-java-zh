@@ -1,3 +1,4 @@
+
 # Java 网络周刊，第 143 期
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-web-weekly-143>
@@ -6,123 +7,92 @@
 
 **开始了……**
 
-## 1。Spring 和 Java
+## 1. Spring 和 Java
 
-#### [> >建议工期变更为 JDK 9](https://web.archive.org/web/20220628112841/http://mail.openjdk.java.net/pipermail/jdk9-dev/2015-December/003149.html)T3【mail.openjdk.java.net】T4
+#### [>> 建议工期变更为 JDK 9](https://web.archive.org/web/20220628112841/http://mail.openjdk.java.net/pipermail/jdk9-dev/2015-December/003149.html) - `mail.openjdk.java.net`
 
-这件事必须先做。
+这件事必须先做。不出所料，**Java 9 推迟了 4 个月**，GA 将在明年 7 月发布。
 
-不出所料， **Java 9 推迟了 4 个月**，GA 将在明年 7 月发布。
-
-#### [>>Java 9 中接口的私有方法](https://web.archive.org/web/20220628112841/http://blog.joda.org/2016/09/private-methods-in-interfaces-in-java-9.html)【joda.org】
+#### [>> Java 9 中接口的私有方法](https://web.archive.org/web/20220628112841/http://blog.joda.org/2016/09/private-methods-in-interfaces-in-java-9.html) - `joda.org`
 
 Java 9 正在接口上添加私有方法。是的，你没看错🙂
 
-#### [> > Java EE 8 推迟到 2017 年底，甲骨文在 JavaOne 大会](https://web.archive.org/web/20220628112841/https://www.infoq.com/news/2016/09/java-ee-delayed-2017)【infoq.com】宣布
+#### [>> Java EE 8 推迟到 2017 年底，甲骨文在 JavaOne 大会宣布](https://web.archive.org/web/20220628112841/https://www.infoq.com/news/2016/09/java-ee-delayed-2017) - `infoq.com`
 
 Java EE 8 的时间表和**时间线更加清晰。**
 
-#### [> >需要反馈–应该添加哪些约束？](https://web.archive.org/web/20220628112841/http://beanvalidation.org/news/2016/09/15/which-constraints-to-add/)【beanvalidation.org】
+#### [>> 需要反馈 – 应该添加哪些约束？](https://web.archive.org/web/20220628112841/http://beanvalidation.org/news/2016/09/15/which-constraints-to-add/) - `beanvalidation.org`
 
-一个非常快速的调查，要求对应该成为新 bean 验证标准一部分的确切约束**进行反馈。**
+一个非常快速的调查，要求对应该成为新 bean 验证标准一部分的确切约束**进行反馈。** 如果你正在使用这个标准（你可能正在使用），这绝对值得投票。
 
-如果你正在使用这个标准(你可能正在使用)，这绝对值得投票。
+#### [>> 如何使用 Java 8 简化 JPA 和 Hibernate 集成测试 lambdas](https://web.archive.org/web/20220628112841/http://in.relation.to/2016/09/15/integration-tests-and-java-8-lambdas/) - `in.relation.to`
 
-#### [> >如何使用 Java 8 简化 JPA 和 Hibernate 集成测试 lambdas](https://web.archive.org/web/20220628112841/http://in.relation.to/2016/09/15/integration-tests-and-java-8-lambdas/)[relation . to
+看到 Hibernate 中的一些 **Java 8 的优点**真酷。
 
-看到 Hibernate 中的一些 **Java 8 的优点真酷。**
+#### [>> JHipster 3.7 教程 Pt 3：使用 OAuth 2 安全服务通信](https://web.archive.org/web/20220628112841/http://stytex.de/blog/2016/09/15/jhipster-3-dot-7-secure-service-communication/) - `stytex.de`
 
-#### [> > JHipster 3.7 教程 Pt 3:使用 oauth 2](https://web.archive.org/web/20220628112841/http://stytex.de/blog/2016/09/15/jhipster-3-dot-7-secure-service-communication/)[stytex . de]安全服务通信
+快速探索 JHipster 中的**新 UAA 功能**——这也是我计划花时间尝试的事情。
 
-快速探索 JHipster 中的**新 UAA 功能——这也是我计划花时间尝试的事情。**
-
-#### [> >完整指南:继承策略与 JPA 和 Hibernate](https://web.archive.org/web/20220628112841/http://www.thoughts-on-java.org/complete-guide-inheritance-strategies-jpa-hibernate/)T3【thoughts-on-java.org】和
+#### [>> 完整指南：继承策略与 JPA 和 Hibernate](https://web.archive.org/web/20220628112841/http://www.thoughts-on-java.org/complete-guide-inheritance-strategies-jpa-hibernate/) - `thoughts-on-java.org`
 
 很好地处理继承策略是理解和使用 JPA 和 Hibernate 的一个重要方面——本文是重温基础知识的好方法。
 
-#### [>>JavaOne 2016——观众一睹 JShell](https://web.archive.org/web/20220628112841/https://www.infoq.com/news/2016/09/JavaOne-2016-Keynote-JShell)【infoq.com】的威力
+#### [>> JavaOne 2016 – 观众一睹 JShell 的威力](https://web.archive.org/web/20220628112841/https://www.infoq.com/news/2016/09/JavaOne-2016-Keynote-JShell) - `infoq.com`
 
 JShell 是 Java 9 即将没落时我最兴奋的特性之一。
 
-#### [> >资源泄漏:救援指挥模式](https://web.archive.org/web/20220628112841/https://plumbr.eu/blog/memory-leaks/resource-leakages-command-pattern-to-the-rescue)plumbr . eu
+#### [>> 资源泄漏：救援指挥模式](https://web.archive.org/web/20220628112841/https://plumbr.eu/blog/memory-leaks/resource-leakages-command-pattern-to-the-rescue) - `plumbr.eu`
 
 听着——无论怎么想象，这都不是什么新鲜事。无论如何都要阅读它——它可能会让代码表现得更好。
 
-**[> >甲骨文把 NetBeans 送给阿帕奇基金会](https://web.archive.org/web/20220628112841/https://www.infoq.com/news/2016/09/oracle-netbeans-apache)**【infoq.com】
+#### [>> 甲骨文把 NetBeans 送给阿帕奇基金会](https://web.archive.org/web/20220628112841/https://www.infoq.com/news/2016/09/oracle-netbeans-apache) - `infoq.com`
 
-甲骨文的一个**意外举动，希望对项目产生积极的影响。**
+甲骨文的一个**意外举动，希望对项目产生积极的影响。** 也就是说，这也可能意味着当前的 Oracle 团队将缓慢但肯定地从项目中退出，这肯定也会产生影响。
 
-也就是说，这也可能意味着当前的 Oracle 团队将缓慢但肯定地从项目中退出，这肯定也会产生影响。
+**同样值得一读：**
 
-**同样值得一读:**
+* [>> 【JavaZone 2016】](https://web.archive.org/web/20220628112841/https://trishagee.github.io/post/javazone_2016/) - `trishagee.github.io`
+* [>> 使用 JPA / Hibernate 的 5 个理由](https://web.archive.org/web/20220628112841/https://www.sitepoint.com/5-reasons-to-use-jpa-hibernate/) - `sitepoint.com`
+* [>> 使用 JPA 和 Hibernate 懒加载实体属性的最佳方式](https://web.archive.org/web/20220628112841/https://vladmihalcea.com/2016/09/20/the-best-way-to-lazy-load-entity-attributes-using-jpa-and-hibernate/) - `vladmihalcea.com`
+* [>> 在 Pivotal CF 上使用 Elasticsearch 运行 Hibernate Search](https://web.archive.org/web/20220628112841/http://info.michael-simons.eu/2016/09/20/running-hibernate-search-with-elasticsearch-on-pivotal-cf/) - `info.michael-simons.eu`
+* [>> 使用 Kafka Stream 模式入门](https://web.archive.org/web/20220628112841/https://vanwilgenburg.wordpress.com/2016/09/19/getting-started-with-akka-stream-kafka/) - `vanwilgenburg.com`
+* [>> 暴动游戏 API：成全祖尔之命](https://web.archive.org/web/20220628112841/https://engineering.riotgames.com/news/riot-games-api-fulfilling-zuuls-destiny) - `engineering.riotgames.com`
+* [>> Knewton 的 API 基础设施：什么是边缘服务？](https://web.archive.org/web/20220628112841/https://medium.com/) - `medium.com`
+* [>> 用微服务和容器替换遗留的 Java EE 应用服务器](https://web.archive.org/web/20220628112841/http://blog.eisele.net/2016/09/replacing-legacy-java-ee-application.html) - `eisele.net`
+* [>> 关于 Java 日期细微差别的痛苦提醒](https://web.archive.org/web/20220628112841/https://marxsoftware.blogspot.com/2016/09/painful-java-date-nuances.html) - `marxsoftware.com`
+* [>> 分享你的统计数据和通过机器学习改进代码完成](https://web.archive.org/web/20220628112841/https://blog.jetbrains.com/idea/2016/09/share-your-stats-to-improve-code-completion-via-machine-learning/) - `jetbrains.com`
+* [>> JavaOne 2016 必看：你不应错过的 7 个活动和会议](https://web.archive.org/web/20220628112841/http://blog.takipi.com/javaone-2016-essentials-7-events-and-sessions-that-you-shouldnt-miss/) - `takipi.com`
 
-*   #### [>>【javazone 2016】](https://web.archive.org/web/20220628112841/https://trishagee.github.io/post/javazone_2016/)【trish】。吉卜赛人。我〔T6〕〔T7〕
+**网络研讨会和演示：**
 
-*   #### [**>使用 JPA /休眠的 5 个理由**【【sitepoint.com】T4](https://web.archive.org/web/20220628112841/https://www.sitepoint.com/5-reasons-to-use-jpa-hibernate/)
+* [>> Java EE：在实习方案环境中访问 Docker 中的资源](https://web.archive.org/web/20220628112841/http://www.adam-bien.com/roller/abien/entry/java_ee_accessing_resources_in) - `adam-bien.com`
+* [>> 引擎盖下的 HotSpot](https://web.archive.org/web/20220628112841/https://www.infoq.com/presentations/hotspot-memory-data-structures) - `infoq.com` 以及 [>> JavaOne 2016：引擎盖下的 HotSpot](https://web.archive.org/web/20220628112841/http://alblue.bandlem.com/2016/09/javaone-hotspot.html) - `alblue.bandlem.com`
+* [>> Google 企业云平台](https://web.archive.org/web/20220628112841/https://www.infoq.com/presentations/google-cloud-enterprise) - `infoq.com`
+* [>> 坚持达到云铸造厂](https://web.archive.org/web/20220628112841/https://www.infoq.com/presentations/pcf-persistence) - `infoq.com`
+* [>> 在 OpenStack 上部署云铸造厂的经验](https://web.archive.org/web/20220628112841/https://www.infoq.com/presentations/cloud-foundry-open-stack) - `infoq.com`
+* [>> 在自定义 PCF 中生成 tiles](https://web.archive.org/web/20220628112841/https://www.infoq.com/presentations/tile-generation-pcf) - `infoq.com`
+* [>> 你的微服务是否赤裸且恐惧？](https://web.archive.org/web/20220628112841/https://www.infoq.com/presentations/microservices-monitoring) - `infoq.com`
+* [>> 用 Java 8 介绍 Akka Actors](https://web.archive.org/web/20220628112841/https://blog.jetbrains.com/idea/2016/09/webinar-recording-introduction-to-akka-actors-with-java-8/) - `jetbrains.com`
+* [>> 科技与自由的互助力量](https://web.archive.org/web/20220628112841/https://www.infoq.com/presentations/liberty-mutual) - `infoq.com`
 
-*   #### [> > JPA and hibernate](https://web.archive.org/web/20220628112841/https://vladmihalcea.com/2016/09/20/the-best-way-to-lazy-load-entity-attributes-using-jpa-and-hibernate/) T3 [vladmihalcea.com] and
+**升级时间：**
 
-    are the best ways to load entity attributes lazily.
-*   #### [> > Run a flexible dormant search and search](https://web.archive.org/web/20220628112841/http://info.michael-simons.eu/2016/09/20/running-hibernate-search-with-elasticsearch-on-pivotal-cf/) [ info.michael-simons.eu
+* [>> Spring Boot 1.4.1 和 1.3.8 现已可用](https://web.archive.org/web/20220628112841/https://spring.io/blog/2016/09/21/spring-boot-1-4-1-and-1-3-8-available-now) - `spring.io`
+* [>> Spring 框架 5.0 M2 发布](https://web.archive.org/web/20220628112841/https://spring.io/blog/2016/09/21/spring-framework-5-0-m2-released) - `spring.io`
+* [>> Spring 框架 4.3.3 和 4.2.8 现在可用](https://web.archive.org/web/20220628112841/https://spring.io/blog/2016/09/19/spring-framework-4-3-3-and-4-2-8-available-now) - `spring.io`
+* [>> Hibernate ORM 5.0.11.Final 和 5.1.2.Final 版本发布](https://web.archive.org/web/20220628112841/http://in.relation.to/2016/09/19/hibernate-orm-5011-final-and-512-final-release/) - `in.relation.to`
+* [>> Spring MVC 原型更新 – Spring 4.3.2 推出](https://web.archive.org/web/20220628112841/http://blog.codeleak.pl/2016/09/spring-mvc-archetype-updated-spring-432.html) - `codeleak.pl`
+* [>> Spring 集成 4.3.2 可用](https://web.archive.org/web/20220628112841/https://spring.io/blog/2016/09/19/spring-integration-4-3-2-is-available) - `spring.io`
+* [>> Apache Kafka 1.1 GA Spring 和 Spring 集成 Kafka 2.1 GA 可用](https://web.archive.org/web/20220628112841/https://spring.io/blog/2016/09/19/spring-for-apache-kafka-1-1-ga-and-spring-integration-kafka-2-1-ga-are-available) - `spring.io`
+* [>> Spring 发布版本 2.3.1 和 2.4.0 Web 服务](https://web.archive.org/web/20220628112841/https://spring.io/blog/2016/09/21/spring-boot-1-4-1-and-1-3-8-available-now) - `infoq.com`
 
-    on Pivotal CF
-*   #### [> > Introduction to Kafka Stream-use Kafka Stream Mode](https://web.archive.org/web/20220628112841/https://vanwilgenburg.wordpress.com/2016/09/19/getting-started-with-akka-stream-kafka/) [vanwilgenburg.com]
+## 2. 沉思
 
-*   #### [>暴动游戏 API:成全祖尔之命](https://web.archive.org/web/20220628112841/https://engineering.riotgames.com/news/riot-games-api-fulfilling-zuuls-destiny)
+#### [>> 你是否犯了过度工程罪？](https://web.archive.org/web/20220628112841/https://blog.frankel.ch/are-you-guilty-of-overengineering/) - `frankel.ch`
 
-*   [ Knewton's API infrastructure: What are the edge services? 【 medium.com】
-*   #### [> > Replace the legacy Java EE application server](https://web.archive.org/web/20220628112841/http://blog.eisele.net/2016/09/replacing-legacy-java-ee-application.html) [eisele.net]
+这篇文章很好地说明了为什么 `TDD` 如此有用。设计是进行 `TDD` 的主要原因——这种设计几乎总是导致更少的不必要的抽象，就像这里描述的那样。
 
-    with microservices and containers
-*   #### [> > Painful reminder of the nuances of Java dates](https://web.archive.org/web/20220628112841/https://marxsoftware.blogspot.com/2016/09/painful-java-date-nuances.html) [marxsoftware.com]
 
-*   #### [> > Share your statistical data and improve code completion through machine learning](https://web.archive.org/web/20220628112841/https://blog.jetbrains.com/idea/2016/09/share-your-stats-to-improve-code-completion-via-machine-learning/) [jetbrains.com]
-
-*   #### [> > JavaOne 2016 must-have: 7 events and conferences you should not miss](https://web.archive.org/web/20220628112841/http://blog.takipi.com/javaone-2016-essentials-7-events-and-sessions-that-you-shouldnt-miss/) [takipi.com
-
-**网络研讨会和演示:**
-
-*   #### [> > Java EE:在实习方案环境中访问码头工中的资源](https://web.archive.org/web/20220628112841/http://www.adam-bien.com/roller/abien/entry/java_ee_accessing_resources_in "Java EE: Accessing Resources In Docker In Stage Environment")【Adam-good . com】
-
-*   #### [> >引擎盖下的热点](https://web.archive.org/web/20220628112841/https://www.infoq.com/presentations/hotspot-memory-data-structures) 【infoq.com】以及 **[> > JavaOne 2016:引擎盖下的热点](https://web.archive.org/web/20220628112841/http://alblue.bandlem.com/2016/09/javaone-hotspot.html)**alblue.bandlem.com)
-
-*   #### [> > Google Enterprise Cloud Platform](https://web.archive.org/web/20220628112841/https://www.infoq.com/presentations/google-cloud-enterprise) [infoq.com
-
-*   #### [> > insist on reaching the cloud foundry](https://web.archive.org/web/20220628112841/https://www.infoq.com/presentations/pcf-persistence) [infoq.com]
-
-*   #### [>在 OpenStack 上部署云铸造厂的经验](https://web.archive.org/web/20220628112841/https://www.infoq.com/presentations/cloud-foundry-open-stack)【infoq . com】T5
-
-*   #### [> > Generate tiles in the custom PCF](https://web.archive.org/web/20220628112841/https://www.infoq.com/presentations/tile-generation-pcf) [infoq.com]
-
-*   #### [> > Are your micro-services naked and afraid?](https://web.archive.org/web/20220628112841/https://www.infoq.com/presentations/microservices-monitoring) 【 infoq.com】
-
-*   #### [>用 Java 语言(一种计算机语言，尤用于创建网站)介绍阿卡演员 8](https://web.archive.org/web/20220628112841/https://blog.jetbrains.com/idea/2016/09/webinar-recording-introduction-to-akka-actors-with-java-8/)
-
-*   #### [> > The enabling force of scientific and technological freedom and mutual assistance](https://web.archive.org/web/20220628112841/https://www.infoq.com/presentations/liberty-mutual) [infoq.com]
-
-**升级时间:**
-
-*   #### [>>Spring Boot 1 . 4 . 1 和 1.3.8 现已可用](https://web.archive.org/web/20220628112841/https://spring.io/blog/2016/09/21/spring-boot-1-4-1-and-1-3-8-available-now) 春天。io
-
-*   #### [> >春天框架 5.0 M2 发布](https://web.archive.org/web/20220628112841/https://spring.io/blog/2016/09/21/spring-framework-5-0-m2-released) 春天。io
-
-*   #### [> >春天框架 4.3.3 和 4.2.8 现在可用](https://web.archive.org/web/20220628112841/https://spring.io/blog/2016/09/19/spring-framework-4-3-3-and-4-2-8-available-now) 春天。io
-
-*   #### [>冬眠 ORM 5.0.11 .最终和最终版本发布](https://web.archive.org/web/20220628112841/http://in.relation.to/2016/09/19/hibernate-orm-5011-final-and-512-final-release/) 在。与的关系
-
-*   #### [> >春天 MVC 原型更新——春天 4。3 .2 推出](https://web.archive.org/web/20220628112841/http://blog.codeleak.pl/2016/09/spring-mvc-archetype-updated-spring-432.html)[code leak . pl]
-
-*   #### [> >春集成 4。3 .2 可用](https://web.archive.org/web/20220628112841/https://spring.io/blog/2016/09/19/spring-integration-4-3-2-is-available) 春天。io
-
-*   #### [> >阿帕奇卡夫卡 1.1 GA 春天和春天集成 Kafka 2.1 GA 可用](https://web.archive.org/web/20220628112841/https://spring.io/blog/2016/09/19/spring-for-apache-kafka-1-1-ga-and-spring-integration-kafka-2-1-ga-are-available)spring . io
-
-*   #### [> >春天发布版本 2.3.1 和 2 .4 .0 Web 服务](https://web.archive.org/web/20220628112841/https://spring.io/blog/2016/09/21/spring-boot-1-4-1-and-1-3-8-available-now) 【infoq.com】
-
-## 2。沉思
-
-#### [> >你是否犯了过度工程罪？](https://web.archive.org/web/20220628112841/https://blog.frankel.ch/are-you-guilty-of-overengineering/)frankel . ch
-
-这篇文章很好地说明了为什么 TDD 如此有用。设计是进行 TDD 的主要原因——这种设计几乎总是导致更少的不必要的抽象，就像这里描述的那样。
 
 #### [> >老怪胎](https://web.archive.org/web/20220628112841/https://www.tbray.org/ongoing/When/201x/2016/09/14/Old-Geek)【tbray.org】
 

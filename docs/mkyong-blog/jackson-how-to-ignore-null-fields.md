@@ -1,3 +1,4 @@
+
 # Jackson——如何忽略空字段
 
 > 原文：<http://web.archive.org/web/20230101150211/https://www.mkyong.com/java/jackson-how-to-ignore-null-fields/>
@@ -6,14 +7,14 @@
 
 *用杰克逊 2.9.8 测试的 PS*
 
-## 1.Jackson 默认包含空字段
+## 1. Jackson 默认包含空字段
 
 1.1 审查 POJO，以便稍后进行测试。
 
-Staff.java
+`Staff.java`
 
 ```java
- public class Staff {
+public class Staff {
 
     private String name;
     private int age;
@@ -24,10 +25,10 @@ Staff.java
 
 1.2 默认情况下，Jackson 将包含空字段。
 
-JacksonExample.java
+`JacksonExample.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -59,7 +60,7 @@ public class JacksonExample {
 输出
 
 ```java
- {
+{
   "name" : "mkyong",
   "age" : 38,
   "position" : null,
@@ -70,12 +71,12 @@ public class JacksonExample {
 
 要忽略`null`字段，请将`@JsonInclude`放在类级别或字段级别。
 
-## 2.@ JSON include–类级别
+## 2. @JsonInclude——类级别
 
-Staff.java
+`Staff.java`
 
 ```java
- import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 											//	ignore null fields , class level
 @JsonInclude(JsonInclude.Include.NON_NULL) 	//  ignore all null fields
@@ -92,18 +93,18 @@ public class Staff {
 输出
 
 ```java
- {
+{
   "name" : "mkyong",
   "age" : 38
 } 
 ```
 
-## 3.@ JSON include–字段级别
+## 3. @JsonInclude——字段级别
 
-Staff.java
+`Staff.java`
 
 ```java
- import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 public class Staff {
 
@@ -122,21 +123,21 @@ public class Staff {
 输出
 
 ```java
- {
+{
   "name" : "mkyong",
   "age" : 38,
   "salary" : null
 } 
 ```
 
-## 4.object mapper . setserializationinclusion
+## 4. ObjectMapper.setSerializationInclusion
 
-或者，我们也可以配置全局忽略空字段:
+或者，我们也可以配置全局忽略空字段：
 
-JacksonExample2.java
+`JacksonExample2.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -172,7 +173,7 @@ public class JacksonExample2 {
 输出
 
 ```java
- {
+{
   "name" : "mkyong",
   "age" : 38
 } 
@@ -180,7 +181,7 @@ public class JacksonExample2 {
 
 ## 参考
 
-*   [杰克逊数据绑定](http://web.archive.org/web/20210815070227/https://github.com/FasterXML/jackson-databind/)
-*   [Jackson 2–将 Java 对象转换成 JSON 从 JSON 转换过来](http://web.archive.org/web/20210815070227/https://www.mkyong.com/java/jackson-2-convert-java-object-to-from-json/)
+* [杰克逊数据绑定](http://web.archive.org/web/20210815070227/https://github.com/FasterXML/jackson-databind/)
+* [Jackson 2——将 Java 对象转换成 JSON 从 JSON 转换过来](http://web.archive.org/web/20210815070227/https://www.mkyong.com/java/jackson-2-convert-java-object-to-from-json/)
 
-Tags : [jackson](http://web.archive.org/web/20210815070227/https://mkyong.com/tag/jackson/) [json](http://web.archive.org/web/20210815070227/https://mkyong.com/tag/json/) [null](http://web.archive.org/web/20210815070227/https://mkyong.com/tag/null/)<input type="hidden" id="mkyong-current-postId" value="15080">
+Tags : [jackson](http://web.archive.org/web/20210815070227/https://mkyong.com/tag/jackson/) [json](http://web.archive.org/web/20210815070227/https://mkyong.com/tag/json/) [null](http://web.archive.org/web/20210815070227/https://mkyong.com/tag/null/)

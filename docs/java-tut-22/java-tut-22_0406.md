@@ -1,3 +1,4 @@
+
 # 初始线程
 
 > 译文：[`docs.oracle.com/javase/tutorial/uiswing/concurrency/initial.html`](https://docs.oracle.com/javase/tutorial/uiswing/concurrency/initial.html)
@@ -16,7 +17,6 @@ SwingUtilities.invokeLater(new Runnable() {
         createAndShowGUI();
     }
 });
-
 ```
 
 在 applet 中，GUI 创建任务必须从`init`方法中使用`invokeAndWait`启动；否则，`init`可能在 GUI 创建之前返回，这可能会导致 Web 浏览器启动 applet 时出现问题。在任何其他类型的程序中，调度 GUI 创建任务通常是初始线程做的最后一件事情，因此无论是使用`invokeLater`还是`invokeAndWait`都无所谓。

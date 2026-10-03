@@ -1,37 +1,7 @@
+
 # Java 编程入门指南（儿童编程系列）
 
-
-
-
-
-
-
-
-
-
-
 https://archive.org/details/understandingcod0000hill
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Java 简介
 
@@ -59,21 +29,17 @@ Java 是一种面向对象的语言（OOP），这意味着它关注对象。对
 
 学习 Java 的第一步是搭建你的环境。你可以使用文本编辑器或集成开发环境（IDE）。IDE 是你可以在其中编写和测试程序的软件。某些 IDE 的优势之一是它们会检查你的工作。
 
-你还需要确保已向电脑下载了 Java 开发工具包（JDK）。JDK 任何平台均免费下载。当你启动新项目后，请确保仔细命名，使用 .java 扩展名并保存。
+你还需要确保已向电脑下载了 Java 开发工具包（JDK）。JDK 任何平台均免费下载。当你启动新项目后，请确保仔细命名，使用 `.java` 扩展名并保存。
 
 你可以使用多种不同的文本编辑器和 IDE 创建程序。一些流行的 IDE 包括：
+
 - NetBeans
 - Eclipse
 - IntelliJ
 
-
-
-
-
-
 ### 工作空间 - Java - FavoriteFoods/src/foods/FavoriteFoods.java - Eclipse
 
-FavoriteFoods.java
+`FavoriteFoods.java`
 
 ```java
 package foods;
@@ -91,7 +57,7 @@ public class FavoriteFoods {
 
 ### 工作空间 - Java - FavoriteFoods/src/foods/FavoriteFoods.java - Eclipse
 
-FavoriteFoods.java
+`FavoriteFoods.java`
 
 ```java
 package foods;
@@ -142,30 +108,14 @@ public class HelloWorld {
 ```
 
 HelloWorld [Java ] /Library/Java/VirtualMachines/jdk8.0.111/jdk/Contents/Home
+
 Hello world! 这个“Hello World”程序是在 Eclipse 中编写的。代码行 `System.out.println("Hello world!")` 是主方法，它将在控制台中打印该行文本。
 
 ![](img/08bcf051ae32d63af14aba42d7934d6b_20.png)
 
 ## Java
 
-Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，，可以用于很多 Java。。 某些 语言语言理解，，可以可以很多很多。。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，，可以 很多事情。Java 比某些编程语言
-理解， 可以用于很多事情。Java   语言 
-， 可以 很多 。
-     
-
-
-
- Java 
-
-
-
-
-00111
-211114242777
-
- 22
-
-
+Java 比某些编程语言更容易理解，并且可以用于很多事情。
 
 ### Java 运算
 
@@ -205,7 +155,7 @@ Java 比某些编程语言更容易理解，并且可以用于很多事情。Jav
 
 **环境 (environment)**：计算机硬件和软件的结合，允许用户执行各种任务。
 
-**文件扩展名 (file extension)**：构成文件名最后部分的字母和数字，例如 .docx 或 .txt。
+**文件扩展名 (file extension)**：构成文件名最后部分的字母和数字，例如 `.docx` 或 `.txt`。
 
 **函数 (function)**：执行特定任务程序部分。
 
@@ -219,44 +169,9 @@ Java 比某些编程语言更容易理解，并且可以用于很多事情。Jav
 
 **变量 (variable)**：可以根据条件或传递给程序的其他信息而改变的占位值。
 
-[/content]
 
-*(注：由于原文文本中存在大量重复的段落和乱码化的文本块，翻译时已遵循“不要重复输出原文”的原则，仅提取并翻译了核心逻辑内容，并去除了无意义的重复。)*
 
---- 
-**抱歉，之前的处理出现了重复。以下是干净后的翻译：**
-
-[content]
-### 工作空间 - Java - FavoriteFoods/src/foods/FavoriteFoods.java - Eclipse
-
-FavoriteFoods.java
-
-```java
-package foods;
-
-public class FavoriteFoods {
-    public static void main(String[] args) {
-        System.out.println("Chocolate, Pasta, Cheese");
-    }
-}
-```
-
-| 问题 | Javadoc | 描述 | 控制台 |
-| :--- | :--- | :--- | :--- |
-| FavoriteFoods 中的异常 [Java 应用] | Library/Java/VirtualMachines/jdk8.0.111/jdk/Contents/Home/bin/java (2017年1月28日, 上午8:47:25) | Chocolate, Pasta, Cheese |
-
-这是一个打印食物列表的简单程序。第一张图像使用了空格来分隔程序的每个部分。第二张没有使用空格。两个程序都可以运行并打印，正如 `System.out.println("Chocolate, Pasta, Cheese");` 所示。然而，由于程序每行之间有分隔，带有空格的程序读起来要容易得多。
-
-## 变量与数据类型
-
-**变量**是放置对象或信息的地方。这些信息可以是字母、数字或其他字符。在程序中使用变量时，你必须先给它起一个名字（例如“tax”），然后用数据类型来定义它。
-
-在处理数字时，你会使用 `int`、`long`、`float` 和 `double` 数据类型。`int` 类型是 `integer`（整数）的缩写，用于较小的整数。`long` 类型用于非常大的整数；`float` 用于带有小数点的数字；而 `double` 用于带有小数点的非常大的数字。
-
-如果我们让程序计算包含销售税的物品成本，我们可能会使用一个名为“tax”的变量和数据类型 `float`。
-
-```java
-Java 的许多不同变量存储信息。Java 中最基础的变量被称为原始类型（primitives）。这些包括 "byte"、"short"、"int"、"long"、"float"、"double"、"char" 和 "boolean"。
+Java 的许多不同变量存储信息。Java 中最基础的变量被称为原始类型（primitives）。这些包括 `byte`、`short`、`int`、`long`、`float`、`double`、`char` 和 `boolean`。
 
 ## 代码规范
 
@@ -266,7 +181,7 @@ Java 的许多不同变量存储信息。Java 中最基础的变量被称为原�
 
 ## 你好世界！
 
-Hello World 是一个基础程序，告诉计算机打印或显示文本“Hello world!”要编写此程序，你首先必须在你的 IDE 或文本编辑器中创建一个新项目，并命名为“HelloWorld.java”。
+Hello World 是一个基础程序，告诉计算机打印或显示文本“Hello world!”。要编写此程序，你首先必须在你的 IDE 或文本编辑器中创建一个新项目，并命名为 `HelloWorld.java`。
 
 接下来，你将创建一个类来解释程序的目的。然后，编写你的主方法（main method），它是程序运行时执行的第一行代码。Java 中的主方法就像一个待办事项列表：主方法中始终使用以下单词：`public static void main(String [] args){`。程序的最后一行是打印行，它告诉计算机在程序每次运行时都打印一次“Hello world!”。这意味着这些词将在运行程序的屏幕或终端上显示。
 
@@ -274,12 +189,15 @@ Hello World 是一个基础程序，告诉计算机打印或显示文本“Hello
 public class HelloWorld {
 
     public static void main(String[] args) {
+
         System.out.println("Hello world!");
+
     }
+
 }
 ```
 
-HelloWorld [Java 应用] /Library/Java/VirtualMachines/jdk8.0.111/jdk/Contents/Home
+HelloWorld [Java 应用] `/Library/Java/VirtualMachines/jdk8.0.111/jdk/Contents/Home`
 Hello world! 这个“Hello World”程序是在 Eclipse 中编写的。代码行 `System.out.println("Hello world!")` 是主方法，它将在控制台中打印该行文本。
 
 ![](img/08bcf051ae32d63af14aba42d7934d6b_20.png)
@@ -287,8 +205,6 @@ Hello world! 这个“Hello World”程序是在 Eclipse 中编写的。代码�
 ## Java
 
 Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。Java 比某些编程语言更容易理解，并且可以用于很多事情。
-
-*(注：原文中该段存在大量重复和乱码，此处已根据要求精简了可读的逻辑描述。)*
 
 ### Java 运算
 
@@ -326,7 +242,7 @@ Java 比某些编程语言更容易理解，并且可以用于很多事情。Jav
 
 **环境 (environment)**：计算机硬件和软件的结合，允许用户执行各种任务。
 
-**文件扩展名 (file extension)**：构成文件名最后部分的字母和数字，例如 .docx 或 .txt。
+**文件扩展名 (file extension)**：构成文件名最后部分的字母和数字，例如 `.docx` 或 `.txt`。
 
 **函数 (function)**：执行特定任务程序部分。
 
@@ -339,9 +255,6 @@ Java 比某些编程语言更容易理解，并且可以用于很多事情。Jav
 **教程 (tutorial)**：提供特定主题信息的书籍或引导程序。
 
 **变量 (variable)**：可以根据条件或传递给程序的其他信息而改变的占位值。
-
-
-
 
 ## 索引
 
@@ -409,7 +322,7 @@ Windows, 18
 
 ## 网站
 
-由于互联网链接的变动性，PowerKias Press 开发了与本书主题相关的在线网站列表。该网站会定期更新。请使用此链接访问网站：www.powerkidlinks.com/skcc/java/
+由于互联网链接的变动性，PowerKias Press 开发了与本书主题相关的在线网站列表。该网站会定期更新。请使用此链接访问网站：`www.powerkidlinks.com/skcc/java/`
 
 ## 本系列书目
 
@@ -425,6 +338,3 @@ Windows, 18
 - 什么是用户体验设计？
 - 什么是用户界面设计？
 - 为什么有这么多编程语言？
-
-
-

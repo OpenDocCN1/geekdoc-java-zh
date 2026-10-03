@@ -1,8 +1,9 @@
+
 # 存储由数据库索引的文件
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-db-storing-files>
 
-## 1.概观
+## 1. 概观
 
 当我们构建某种内容管理解决方案时，我们需要解决两个问题。我们需要一个地方来存储文件本身，我们需要某种数据库来索引它们。
 
@@ -10,7 +11,7 @@
 
 在本文中，我们将用一个基本的图像归档应用程序来说明这两种方法。我们还将为上传和下载实现 REST APIs。
 
-## 2.用例
+## 2. 用例
 
 我们的图像存档应用程序将允许我们**上传和下载 JPEG 图像**。
 
@@ -18,11 +19,11 @@
 
 我们将使用一个关系数据库，用 [Spring Data JPA](/web/20221129124459/https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa) 和 [Hibernate](/web/20221129124459/https://www.baeldung.com/tag/hibernate/) 。
 
-## 3.数据库存储
+## 3. 数据库存储
 
 让我们从我们的数据库开始。
 
-### 3.1.图像实体
+### 3.1. 图像实体
 
 首先，让我们创建我们的`Image`实体:
 
@@ -46,7 +47,7 @@ class Image {
 
 其次，我们有了[冬眠`@Lob`注解](/web/20221129124459/https://www.baeldung.com/hibernate-lob)。这就是我们如何告诉 JPA 我们**打算存储一个潜在的大二进制文件**。
 
-### 3.2.图像存储库
+### 3.2. 图像存储库
 
 接下来，我们需要一个**存储库来连接数据库**。
 
@@ -59,11 +60,11 @@ interface ImageDbRepository extends JpaRepository<Image, Long> {}
 
 现在我们准备保存我们的图像。我们只需要一种方法将它们上传到我们的应用程序中。
 
-### 4.休息控制器
+### 4. 休息控制器
 
 我们将使用一个 [`MultipartFile`来上传](/web/20221129124459/https://www.baeldung.com/spring-file-upload)我们的图片。上传将返回我们稍后可以用来下载图像的`imageId`。
 
-### 4.1.图像上传
+### 4.1. 图像上传
 
 让我们从创建支持上传的`ImageController` 开始:
 
@@ -90,9 +91,9 @@ class ImageController {
 
 该控制器返回生成的 id 作为其响应的主体。
 
-### 4.2.图像下载
+### 4.2. 图像下载
 
-现在，让我们添加一个下载路径`:`
+现在，让我们添加一个下载路径:
 
 ```java
 @GetMapping(value = "/image/{imageId}", produces = MediaType.IMAGE_JPEG_VALUE)
@@ -107,7 +108,7 @@ Resource downloadImage(@PathVariable Long imageId) {
 
 `imageId`路径变量包含上传时生成的 id。如果提供了一个无效的 id，那么我们将使用`ResponseStatusException`返回一个 HTTP 响应代码 404(未找到)。否则，我们将把存储的文件字节包装在一个`ByteArrayResource`中，这样就可以下载它们。
 
-## 5.数据库映像存档测试
+## 5. 数据库映像存档测试
 
 现在我们准备测试我们的图像存档。
 
@@ -123,7 +124,7 @@ mvn package
 java -jar target/image-archive-0.0.1-SNAPSHOT.jar
 ```
 
-### 5.1.图像上传测试
+### 5.1. 图像上传测试
 
 在我们的应用程序运行之后，我们将**使用 [`curl`命令行工具](/web/20221129124459/https://www.baeldung.com/curl-rest)上传我们的图像**:
 
@@ -138,7 +139,7 @@ curl -H "Content-Type: multipart/form-data" \
 1
 ```
 
-### 5.2.图像下载测试
+### 5.2. 图像下载测试
 
 然后我们可以下载我们的图像:
 
@@ -169,7 +170,7 @@ curl -v http://localhost:8080/image/1 -o image.jpeg
 
 我们也可以点击 [`http://localhost:8080/image/1`](https://web.archive.org/web/20221129124459/http://localhost:8080/image/1) 在浏览器中下载图片。
 
-## 6.分离内容和位置
+## 6. 分离内容和位置
 
 到目前为止，我们能够在数据库中上传和下载图像。
 
@@ -187,11 +188,11 @@ String location;
 
 我们的上传服务不是将文件的字节写入数据库，而是将文件存储在适当的服务中——在本例中是文件系统——然后将文件的位置放入数据库。
 
-## 7.文件系统存储
+## 7. 文件系统存储
 
 让我们在解决方案中添加将图像存储在文件系统中的功能。
 
-### 7.1.保存在文件系统中
+### 7.1. 保存在文件系统中
 
 首先，我们需要将图像保存到文件系统:
 
@@ -222,7 +223,7 @@ class FileSystemRepository {
 /workspace/archive-achive/target/classes/1602949218879-baeldung.jpeg
 ```
 
-### 7.2.从文件系统中检索
+### 7.2. 从文件系统中检索
 
 现在让我们实现代码来从文件系统中获取我们的映像:
 
@@ -241,7 +242,7 @@ FileSystemResource findInFileSystem(String location) {
 
 此外，我们正在捕捉读取文件时可能发生的任何异常。我们可能还希望抛出带有特定 HTTP 状态的异常。
 
-### 7.3.数据流和 Spring 资源
+### 7.3. 数据流和 Spring 资源
 
 我们的`findInFileSystem`方法返回一个`[FileSystemResource](https://web.archive.org/web/20221129124459/https://docs.spring.io/spring-framework/docs/3.0.x/javadoc-api/org/springframework/core/io/FileSystemResource.html),` 一个 [Spring 的`Resource`](/web/20221129124459/https://www.baeldung.com/spring-classpath-file-access) 接口的实现。
 
@@ -249,11 +250,11 @@ FileSystemResource findInFileSystem(String location) {
 
 这种方法是将文件流式传输到客户端的一个很好的通用解决方案。如果我们使用云存储而不是文件系统，我们可以为另一个资源的实现替换`FileSystemResource`，比如`[InputStreamResource](https://web.archive.org/web/20221129124459/https://docs.spring.io/spring-framework/docs/3.2.4.RELEASE_to_4.0.0.M3/Spring%20Framework%203.2.4.RELEASE/org/springframework/core/io/InputStreamResource.html)`或 [`ByteArrayResource`](https://web.archive.org/web/20221129124459/https://docs.spring.io/spring-framework/docs/3.0.6.RELEASE_to_3.1.0.BUILD-SNAPSHOT/3.0.6.RELEASE/org/springframework/core/io/ByteArrayResource.html) 。
 
-## 8.连接文件内容和位置
+## 8. 连接文件内容和位置
 
 现在我们有了我们的`FileSystemRepository,` ,我们需要把它和我们的`ImageDbRepository.`联系起来
 
-### 8.1.保存在数据库和文件系统中
+### 8.1. 保存在数据库和文件系统中
 
 让我们创建一个`FileLocationService`，从我们的保存流开始:
 
@@ -277,7 +278,7 @@ class FileLocationService {
 
 首先，我们**将映像保存在文件系统**中。然后我们**将包含其`location`的记录保存在数据库**中。
 
-### 8.2.从数据库和文件系统中检索
+### 8.2. 从数据库和文件系统中检索
 
 现在，让我们创建一个方法来使用它的`id`找到我们的图像:
 
@@ -292,11 +293,13 @@ FileSystemResource find(Long imageId) {
 
 首先，我们**在数据库**中寻找我们的图像。然后我们得到它的位置，**从文件系统**中获取它。
 
-如果我们在数据库中没有找到`imageId`，我们将使用 ResponseStatusException 返回一个 HTTP Not Found 响应`.`
+如果我们在数据库中没有找到`imageId`，我们将使用`ResponseStatusException`返回一个 HTTP Not Found 响应。
 
-## 9.文件系统上传和下载
+## 9. 文件系统上传和下载
 
 最后，让我们创建`FileSystemImageController:`
+
+
 
 ```java
 @RestController
@@ -318,30 +321,30 @@ class FileSystemImageController {
 }
 ```
 
-首先，我们让新路径从“/ `file-system`”开始。
+首先，我们让新路径从`/file-system`开始。
 
 然后我们创建了类似于`ImageController`中的上传路径，但是没有`dbImage`对象。
 
 最后，我们有自己的下载路径，它使用`FileLocationService`来查找图像，并将`FileSystemResource`作为 HTTP 响应返回。
 
-## 10.文件系统映像存档测试
+## 10. 文件系统映像存档测试
 
-现在，我们可以像测试数据库版本一样测试我们的文件系统版本，尽管路径现在以“`file-system`”开头:
+现在，我们可以像测试数据库版本一样测试我们的文件系统版本，尽管路径现在以`file-system`开头：
 
 ```java
 curl -H "Content-Type: multipart/form-data" \
-  -F "[[email protected]](/web/20221129124459/https://www.baeldung.com/cdn-cgi/l/email-protection)" http://localhost:8080/file-system/image
+  -F "[[email protected]](/web/20221129124459/https://www.baeldung.com/cdn-cgi/l/email-protection)" http://localhost:8080/file-system/image
 
 1
 ```
 
-然后我们下载:
+然后我们下载：
 
 ```java
 curl -v http://localhost:8080/file-system/image/1 -o image.jpeg
 ```
 
-## 11.结论
+## 11. 结论
 
 在本文中，我们学习了如何在数据库中保存文件信息，将文件内容保存在同一行或外部位置。
 

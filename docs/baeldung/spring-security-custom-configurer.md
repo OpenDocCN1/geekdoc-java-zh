@@ -1,8 +1,9 @@
+
 # 自定义 Spring 安全配置器
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-security-custom-configurer>
 
-## 1。概述
+## 1. 概述
 
 Spring Security Java 配置支持为我们提供了强大的流畅 APIs 为应用程序定义安全映射和规则。
 
@@ -10,9 +11,9 @@ Spring Security Java 配置支持为我们提供了强大的流畅 APIs 为应�
 
 对于我们这里的快速示例，我们将添加根据给定的错误状态代码列表为经过身份验证的用户记录错误的功能。
 
-## 2。`SecurityConfigurer` 一种风俗
+## 2. `SecurityConfigurer` 一种风俗
 
-为了开始定义我们的配置器，首先**我们需要扩展`AbstractHttpConfigurer`类**:
+为了开始定义我们的配置器，首先**我们需要扩展`AbstractHttpConfigurer`类**：
 
 ```java
 public class ClientErrorLoggingConfigurer 
@@ -42,7 +43,7 @@ public class ClientErrorLoggingConfigurer
 
 我们还可以选择在`init()`方法中添加额外的配置，它在`configure()`方法之前执行。
 
-接下来，让我们定义在自定义实现中注册的 Spring 安全过滤器类:
+接下来，让我们定义在自定义实现中注册的 Spring 安全过滤器类：
 
 ```java
 public class ClientErrorLoggingFilter extends GenericFilterBean {
@@ -66,9 +67,9 @@ public class ClientErrorLoggingFilter extends GenericFilterBean {
 }
 ```
 
-这是一个标准的 Spring filter 类，它扩展了`GenericFilterBean`并覆盖了`doFilter()`方法。它有两个属性，分别代表我们将用来显示消息的记录器和`errorCodes.`的`List`
+这是一个标准的 Spring filter 类，它扩展了`GenericFilterBean`并覆盖了`doFilter()`方法。它有两个属性，分别代表我们将用来显示消息的记录器和`errorCodes`的`List`。
 
-让我们仔细看看`doFilter()`方法:
+让我们仔细看看`doFilter()`方法：
 
 ```java
 Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -94,9 +95,9 @@ if (errorCodes == null) {
 
 如果这是空的，那么我们将显示任何客户端错误状态代码。否则，我们将首先检查错误代码是否是给定的状态代码`List`的一部分。
 
-## 3。使用自定义配置器
+## 3. 使用自定义配置器
 
-现在我们有了自己的自定义 API，**我们可以通过定义 bean，然后使用`HttpSecurity:`的`apply()`方法**将它添加到 Spring 安全配置中
+现在我们有了自己的自定义 API，**我们可以通过定义 bean，然后使用`HttpSecurity`的`apply()`方法**将它添加到 Spring 安全配置中：
 
 ```java
 @Configuration
@@ -117,7 +118,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
-我们还可以用我们想要记录的特定错误代码列表来定义 bean:
+我们还可以用我们想要记录的特定错误代码列表来定义 bean：
 
 ```java
 @Bean
@@ -128,21 +129,21 @@ public ClientErrorLoggingConfigurer clientErrorLogging() {
 
 仅此而已！现在，我们的安全配置将包括自定义过滤器并显示日志消息。
 
-如果我们希望默认添加定制配置器，我们可以使用`META-INF/spring.factories`文件:
+如果我们希望默认添加定制配置器，我们可以使用`META-INF/spring.factories`文件：
 
 ```java
 org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer = com.baeldung.dsl.ClientErrorLoggingConfigurer
 ```
 
-要手动禁用它，我们可以使用`disable()`方法:
+要手动禁用它，我们可以使用`disable()`方法：
 
 ```java
 //...
 .apply(clientErrorLogging()).disable();
 ```
 
-## 4。结论
+## 4. 结论
 
-在这个快速教程中，我们关注了 Spring 安全配置支持的一个高级特性——**我们已经看到了如何定义我们自己的自定义`SecurityConfigurer`** 。
+在这个快速教程中，我们关注了 Spring 安全配置支持的一个高级特性——**我们已经看到了如何定义我们自己的自定义`SecurityConfigurer`**。
 
-和往常一样，这个例子的完整源代码可以在 GitHub 上找到[。](https://web.archive.org/web/20220628105252/https://github.com/eugenp/tutorials/tree/master/spring-security-modules/spring-5-security)
+和往常一样，这个例子的完整源代码可以在 GitHub 上找到。

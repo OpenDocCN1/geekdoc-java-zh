@@ -1,16 +1,17 @@
+
 # Spring 数据 JPA 存储库填充器
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-data-jpa-repository-populators>
 
-## 1.介绍
+## 1. 介绍
 
-在这篇简短的文章中，我们将通过一个简单的例子来探索 **Spring JPA 存储库填充器**。Spring Data JPA repository populator 是`data.sql`脚本的一个很好的替代品。
+在这篇简短的文章中，我们将通过一个简单的例子来探索 **Spring JPA 存储库填充器**。`Spring Data JPA repository populator`是`data.sql`脚本的一个很好的替代品。
 
-spring Data JPA repository populator 支持 JSON 和 XML 文件格式。在接下来的章节中，我们将看到如何使用 Spring Data JPA repository populator。
+`Spring Data JPA repository populator`支持 JSON 和 XML 文件格式。在接下来的章节中，我们将看到如何使用`Spring Data JPA repository populator`。
 
-## 2.示例应用程序
+## 2. 示例应用程序
 
-首先，假设我们有一个`Fruit`实体类和一个水果库存来填充我们的数据库:
+首先，假设我们有一个`Fruit`实体类和一个水果库存来填充我们的数据库：
 
 ```java
 @Entity
@@ -24,7 +25,7 @@ public class Fruit {
 }
 ```
 
-我们将扩展`JpaRepository `以从数据库中读取`Fruit`数据:
+我们将扩展`JpaRepository`以从数据库中读取`Fruit`数据：
 
 ```java
 @Repository
@@ -35,9 +36,9 @@ public interface FruitRepository extends JpaRepository<Fruit, Long> {
 
 在下一节中，我们将使用 JSON 格式来存储和填充初始水果数据。
 
-## 3.JSON 存储库填充器
+## 3. JSON 存储库填充器
 
-让我们用`Fruit`数据创建一个 JSON 文件。我们将在`src/main/resources`中创建这个文件，并将其命名为`fruit-data.json`:
+让我们用`Fruit`数据创建一个 JSON 文件。我们将在`src/main/resources`中创建这个文件，并将其命名为`fruit-data.json`：
 
 ```java
 [
@@ -58,7 +59,7 @@ public interface FruitRepository extends JpaRepository<Fruit, Long> {
 
 **应该在每个 JSON 对象的`_class`字段中给出实体类名。**剩余的键映射到我们的`Fruit`实体的列。
 
-现在，我们将在`pom.xml`中添加 [`jackson-databind`](https://web.archive.org/web/20220629001722/https://search.maven.org/search?q=g:com.fasterxml.jackson.core%20a:jackson-databind) 依赖关系:
+现在，我们将在`pom.xml`中添加[`jackson-databind`](https://web.archive.org/web/20220629001722/https://search.maven.org/search?q=g:com.fasterxml.jackson.core%20a:jackson-databind)依赖关系：
 
 ```java
 <dependency>
@@ -68,7 +69,7 @@ public interface FruitRepository extends JpaRepository<Fruit, Long> {
 </dependency>
 ```
 
-最后，我们必须添加一个存储库填充器 bean。这个存储库填充器 bean 将从`fruit-data.json`文件中读取数据，并在应用程序启动时将其填充到数据库中:
+最后，我们必须添加一个存储库填充器 bean。这个存储库填充器 bean 将从`fruit-data.json`文件中读取数据，并在应用程序启动时将其填充到数据库中：
 
 ```java
 @Bean
@@ -79,7 +80,7 @@ public Jackson2RepositoryPopulatorFactoryBean getRespositoryPopulator() {
 }
 ```
 
-我们已经准备好对我们的配置进行单元测试:
+我们已经准备好对我们的配置进行单元测试：
 
 ```java
 @Test
@@ -99,13 +100,13 @@ public void givenFruitJsonPopulatorThenShouldInsertRecordOnStart() {
 }
 ```
 
-## 4.XML 存储库填充器
+## 4. XML 存储库填充器
 
 在这一节中，我们将看到如何在存储库填充器中使用 XML 文件。首先，我们将创建一个包含所需的`Fruit`细节的 XML 文件。
 
 这里，一个 XML 文件代表一个水果的数据。
 
-`apple-fruit-data.xml`:
+`apple-fruit-data.xml`：
 
 ```java
 <fruit>
@@ -115,7 +116,7 @@ public void givenFruitJsonPopulatorThenShouldInsertRecordOnStart() {
 </fruit>
 ```
 
-`guava-fruit-data.xml`:
+`guava-fruit-data.xml`：
 
 ```java
 <fruit>
@@ -125,19 +126,19 @@ public void givenFruitJsonPopulatorThenShouldInsertRecordOnStart() {
 </fruit>
 ```
 
-同样，我们将这些 XML 文件存储在`src/main/resources` `.`中
+同样，我们将这些 XML 文件存储在`src/main/resources`中。
 
-此外，我们将在`pom.xml`中添加`[spring-oxm](https://web.archive.org/web/20220629001722/https://search.maven.org/search?q=g:org.springframework%20a:spring-oxm)` maven 依赖项:
+此外，我们将在`pom.xml`中添加[`spring-oxm`](https://web.archive.org/web/20220629001722/https://search.maven.org/search?q=g:org.springframework%20a:spring-oxm) Maven 依赖项：
 
 ```java
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-oxm</artifactId>
     <version>5.1.5.RELEASE</version>
-</dependency> 
+</dependency>
 ```
 
-此外，我们需要给我们的实体类添加`@XmlRootElement` 注释:
+此外，我们需要给我们的实体类添加`@XmlRootElement`注释：
 
 ```java
 @XmlRootElement
@@ -147,7 +148,7 @@ public class Fruit {
 }
 ```
 
-最后，我们将定义一个存储库填充器 bean。该 bean 将读取 XML 文件并填充数据:
+最后，我们将定义一个存储库填充器 bean。该 bean 将读取 XML 文件并填充数据：
 
 ```java
 @Bean
@@ -165,6 +166,7 @@ public UnmarshallerRepositoryPopulatorFactoryBean repositoryPopulator() {
 
 我们可以对 XML 存储库填充器进行单元测试，就像我们对 JSON 填充器进行单元测试一样。
 
-## 4.结论
+## 5. 结论
 
-在本教程中，我们学习了如何使用 **Spring 数据 JPA 存储库填充器**。用于本教程的完整源代码可以在 GitHub 的[上找到。](https://web.archive.org/web/20220629001722/https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-jpa-repo)
+在本教程中，我们学习了如何使用 **Spring 数据 JPA 存储库填充器**。用于本教程的完整源代码可以在 [GitHub](https://web.archive.org/web/20220629001722/https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-jpa-repo) 上找到。
+

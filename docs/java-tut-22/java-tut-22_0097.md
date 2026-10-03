@@ -1,3 +1,4 @@
+
 # 继承摘要
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/IandI/summaryinherit.html`](https://docs.oracle.com/javase/tutorial/java/IandI/summaryinherit.html)
@@ -10,4 +11,4 @@
 
 通过在类的声明中使用`final`关键字，可以防止类被子类化。同样，通过将方法声明为最终方法，可以防止子类覆盖它。
 
-抽象类只能被子类化；它不能被实例化。抽象类可以包含抽象方法声明但未实现的方法。然后子类为抽象方法提供实现。
+抽象类只能被子类化；它不能被实例化。抽象类可以包含抽象方法——声明但未实现的方法。然后子类为抽象方法提供实现。

@@ -1,3 +1,4 @@
+
 # 注解基础知识
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/annotations/basics.html`](https://docs.oracle.com/javase/tutorial/java/annotations/basics.html)
@@ -8,7 +9,6 @@
 
 ```java
 @Entity
-
 ```
 
 符号`@`告诉编译器接下来是一个注解。在下面的例子中，注解的名称是`Override`：
@@ -16,7 +16,6 @@
 ```java
 @Override
 void mySuperMethod() { ... }
-
 ```
 
 注解可以包括*元素*，这些元素可以是命名的或未命名的，并且这些元素有值：
@@ -27,7 +26,6 @@ void mySuperMethod() { ... }
    date = "3/27/2003"
 )
 class MyClass { ... }
-
 ```
 
 或
@@ -35,7 +33,6 @@ class MyClass { ... }
 ```java
 @SuppressWarnings(value = "unchecked")
 void myMethod() { ... }
-
 ```
 
 如果只有一个名为`value`的元素，则名称可以省略，如：
@@ -43,7 +40,6 @@ void myMethod() { ... }
 ```java
 @SuppressWarnings("unchecked")
 void myMethod() { ... }
-
 ```
 
 如果注解没有元素，则括号可以省略，如前面的`@Override`示例所示。
@@ -54,7 +50,6 @@ void myMethod() { ... }
 @Author(name = "Jane Doe")
 @EBook
 class MyClass { ... }
-
 ```
 
 如果注解具有相同的类型，则称为重复注解：
@@ -63,7 +58,6 @@ class MyClass { ... }
 @Author(name = "Jane Doe")
 @Author(name = "John Smith")
 class MyClass { ... }
-
 ```
 
 从 Java SE 8 发布开始支持重复注解。更多信息，请参见重复注解。
@@ -79,31 +73,27 @@ class MyClass { ... }
 +   类实例创建表达式：
 
     ```java
-        new @Interned MyObject();
-
+    new @Interned MyObject();
     ```
 
 +   类型转换：
 
     ```java
-        myString = (@NonNull String) str;
-
+    myString = (@NonNull String) str;
     ```
 
 +   `implements`子句：
 
     ```java
-        class UnmodifiableList<T> implements
-            @Readonly List<@Readonly T> { ... }
-
+    class UnmodifiableList<T> implements
+        @Readonly List<@Readonly T> { ... }
     ```
 
 +   抛出异常声明：
 
     ```java
-        void monitorTemperature() throws
-            @Critical TemperatureException { ... }
-
+    void monitorTemperature() throws
+        @Critical TemperatureException { ... }
     ```
 
 这种形式的注解称为*类型注解*。更多信息，请参见类型注解和可插入类型系统。

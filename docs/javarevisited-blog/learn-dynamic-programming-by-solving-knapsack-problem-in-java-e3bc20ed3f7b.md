@@ -1,3 +1,4 @@
+
 # 用 Java 解决背包问题学习动态编程
 
 > 原文：<https://medium.com/javarevisited/learn-dynamic-programming-by-solving-knapsack-problem-in-java-e3bc20ed3f7b?source=collection_archive---------3----------------------->
@@ -8,4 +9,4 @@
 
 由[杰里米·毕晓普](https://unsplash.com/@jeremybishop?utm_source=medium&utm_medium=referral)在 [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral) 上拍摄的照片
 
-# 什么是动态编程？
+## 什么是动态编程？

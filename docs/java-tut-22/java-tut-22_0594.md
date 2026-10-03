@@ -1,3 +1,4 @@
+
 # 自定义资源包加载
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/resbundle/control.html`](https://docs.oracle.com/javase/tutorial/i18n/resbundle/control.html)
@@ -13,30 +14,25 @@ public static final ResourceBundle getBundle(
     String baseName,
     ResourceBundle.Control cont
     // ...
-
 ```
 
 指定的控制提供了资源包加载过程的信息。
 
 下面的示例程序`RBControl.java`说明了如何为中文区域定义自己的搜索路径。
 
-## 1\. 创建`properties`文件。
+## 1. 创建`properties`文件
 
 正如之前所述，您可以从类或`properties`文件中加载资源。这些文件包含以下区域的描述：
 
-+   ``RBControl.properties``  全局
-
-+   ``RBControl_zh.properties``  仅语言：简体中文
-
-+   ``RBControl_zh_cn.properties``  仅区域：中国
-
-+   ``RBControl_zh_hk.properties``  仅区域：香港
-
-+   ``RBControl_zh_tw.properties``  台湾
++   `RBControl.properties` – 全局
++   `RBControl_zh.properties` – 仅语言：简体中文
++   `RBControl_zh_cn.properties` – 仅区域：中国
++   `RBControl_zh_hk.properties` – 仅区域：香港
++   `RBControl_zh_tw.properties` – 台湾
 
 在此示例中，应用程序为香港地区创建了一个新的区域设置。
 
-## 2\. 创建一个`ResourceBundle`实例。
+## 2. 创建一个`ResourceBundle`实例
 
 与上一节中的示例一样，此应用程序通过调用`getBundle`方法创建了一个`ResourceBundle`实例：
 
@@ -49,12 +45,11 @@ private static void test(Locale locale) {
                                     // ...
                             }
                         );
-
 ```
 
 `getBundle`方法搜索具有 RBControl 前缀的`properties`文件。然而，此方法包含一个`Control`参数，用于驱动搜索中文区域的过程。
 
-## 3\. 调用`getCandidateLocales`方法
+## 3. 调用`getCandidateLocales`方法
 
 `getCandidateLocales`方法返回一个候选区域的`Locales`对象列表，用于基本名称和区域设置。
 
@@ -67,10 +62,9 @@ new ResourceBundle.Control() {
                 // ...                                        
     }
 }
-
 ```
 
-默认实现返回以下`Locale`对象的列表：Locale(语言, 国家)。
+默认实现返回以下`Locale`对象的列表：`Locale(语言, 国家)`。
 
 然而，此方法被覆盖以实现以下特定行为：
 
@@ -90,12 +84,11 @@ if (locale.equals(new Locale("zh", "HK"))) {
                // no Locale.CHINESE here
                Locale.ROOT);
 }
-
 ```
 
 注意，候选区域序列的最后一个元素必须是根区域。
 
-## 4\. 调用`test`类
+## 4. 调用`test`类
 
 为以下四种不同的区域设置调用`test`类：
 
@@ -106,10 +99,9 @@ public static void main(String[] args) {
     test(Locale.TAIWAN);
     test(Locale.CANADA);
 }
-
 ```
 
-## 5\. 运行示例程序
+## 5. 运行示例程序
 
 你将看到程序的输出如下：
 
@@ -126,7 +118,6 @@ locale: zh_TW
 locale: en_CA
         region: global
         language: English
-
 ```
 
 请注意，新创建的区域被分配为香港地区，因为在适当的`properties`文件中指定了。繁体中文被分配为台湾区域的语言。

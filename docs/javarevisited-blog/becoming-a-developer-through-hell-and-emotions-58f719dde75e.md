@@ -1,3 +1,4 @@
+
 # 成为一名开发人员——通过地狱和情感
 
 > 原文：<https://medium.com/javarevisited/becoming-a-developer-through-hell-and-emotions-58f719dde75e?source=collection_archive---------1----------------------->

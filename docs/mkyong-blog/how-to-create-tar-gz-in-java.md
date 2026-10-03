@@ -1,31 +1,33 @@
+
+
 # 如何用 Java 创建 tar.gz
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/how-to-create-tar-gz-in-java/>
 
-在 Java 中，我们有`ZipOutputStream`到[创建一个 zip 文件](/web/20220629160044/https://mkyong.com/java/how-to-compress-files-in-zip-format/)，还有`GZIPOutputStream`到[使用 Gzip](/web/20220629160044/https://mkyong.com/java/how-to-compress-a-file-in-gzip-format/) 压缩一个文件，但是没有官方 API 创建一个`tar.gz`文件。
+在 Java 中，我们有`ZipOutputStream`来[创建一个 zip 文件](/web/20220629160044/https://mkyong.com/java/how-to-compress-files-in-zip-format/)，还有`GZIPOutputStream`来[使用 Gzip](/web/20220629160044/https://mkyong.com/java/how-to-compress-a-file-in-gzip-format/)压缩一个文件，但是没有官方 API 创建一个`tar.gz`文件。
 
-在 Java 中，我们可以使用 [Apache Commons Compress](http://web.archive.org/web/20220629160044/https://commons.apache.org/proper/commons-compress/) (仍在开发中)来创建一个`.tar.gz`文件。
+在 Java 中，我们可以使用 [Apache Commons Compress](http://web.archive.org/web/20220629160044/https://commons.apache.org/proper/commons-compress/)（仍在开发中）来创建一个`.tar.gz`文件。
 
-pom.xml
+## `pom.xml`
 
 ```java
- <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-compress</artifactId>
-      <version>1.20</version>
-  </dependency> 
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-compress</artifactId>
+    <version>1.20</version>
+</dependency>
 ```
 
-**注释**
+## 注释
 
-1.  [tar](http://web.archive.org/web/20220629160044/https://en.wikipedia.org/wiki/Tar_(computing)) 用于将文件收集到一个归档文件中，即 tarball，通常带有后缀`.tar`
-2.  [Gzip](http://web.archive.org/web/20220629160044/https://en.wikipedia.org/wiki/Gzip) 用于压缩文件以节省空间，通常带有后缀`.gz`
-3.  `tar.gz`或`.tgz`的意思是将所有文件组合成一个归档文件，并用 Gzip 压缩。
+1. [tar](http://web.archive.org/web/20220629160044/https://en.wikipedia.org/wiki/Tar_(computing))用于将文件收集到一个归档文件中，即 tarball，通常带有后缀`.tar`。
+2. [Gzip](http://web.archive.org/web/20220629160044/https://en.wikipedia.org/wiki/Gzip)用于压缩文件以节省空间，通常带有后缀`.gz`。
+3. `tar.gz`或`.tgz`的意思是将所有文件组合成一个归档文件，并用 Gzip 压缩。
 
 下面的代码片段将创建一个`tar.gz`文件。
 
 ```java
- import org.apache.commons.compress.archivers.tar.TarArchiveEntry;
+import org.apache.commons.compress.archivers.tar.TarArchiveEntry;
 import org.apache.commons.compress.archivers.tar.TarArchiveOutputStream;
 import org.apache.commons.compress.compressors.gzip.GzipCompressorOutputStream;
 
@@ -35,24 +37,23 @@ try (OutputStream fOut = Files.newOutputStream(Paths.get("output.tar.gz"));
      GzipCompressorOutputStream gzOut = new GzipCompressorOutputStream(buffOut);
      TarArchiveOutputStream tOut = new TarArchiveOutputStream(gzOut)) {
 
-       TarArchiveEntry tarEntry = new TarArchiveEntry(file,fileName);
+    TarArchiveEntry tarEntry = new TarArchiveEntry(file, fileName);
 
-       tOut.putArchiveEntry(tarEntry);
+    tOut.putArchiveEntry(tarEntry);
 
-       // copy file to TarArchiveOutputStream
-       Files.copy(path, tOut);
+    // copy file to TarArchiveOutputStream
+    Files.copy(path, tOut);
 
-       tOut.closeArchiveEntry();
+    tOut.closeArchiveEntry();
 
-       tOut.finish();
-
-     } 
+    tOut.finish();
+}
 ```
 
 下面的代码片段将解压一个`.tar.gz`文件。
 
 ```java
- import org.apache.commons.compress.archivers.ArchiveEntry;
+import org.apache.commons.compress.archivers.ArchiveEntry;
 import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
 import org.apache.commons.compress.compressors.gzip.GzipCompressorInputStream;
 
@@ -72,19 +73,18 @@ try (InputStream fi = Files.newInputStream(Paths.get("input.tar.gz"));
 
         // copy TarArchiveInputStream to newPath
         Files.copy(ti, newPath);
-
     }
-} 
+}
 ```
 
-## 1.向 tar.gz 添加两个文件
+## 1. 向 tar.gz 添加两个文件
 
 这个例子展示了如何将两个文件添加到一个`tar.gz`文件中。
 
-TarGzipExample1.java
+### `TarGzipExample1.java`
 
 ```java
- package com.mkyong.io.howto.compress;
+package com.mkyong.io.howto.compress;
 
 import org.apache.commons.compress.archivers.tar.TarArchiveEntry;
 import org.apache.commons.compress.archivers.tar.TarArchiveOutputStream;
@@ -154,29 +154,32 @@ public class TarGzipExample1 {
 
     }
 
-} 
+}
 ```
 
-输出——它将`sitemap.xml`和`file.txt`添加到一个归档文件`output.tar`中，并用 Gzip 压缩，结果是一个`output.tar.gz`
+输出——它将`sitemap.xml`和`file.txt`添加到一个归档文件`output.tar`中，并用 Gzip 压缩，结果是一个`output.tar.gz`。
 
-Terminal
+### Terminal
 
 ```java
- $ tar -tvf /home/mkyong/test/output.tar.gz
+$ tar -tvf /home/mkyong/test/output.tar.gz
 -rw-r--r-- 0/0          396719 2020-08-12 14:02 sitemap.xml
--rw-r--r-- 0/0              15 2020-08-11 17:56 file.txt 
+-rw-r--r-- 0/0              15 2020-08-11 17:56 file.txt
 ```
 
-## 2.向 tar.gz 添加一个目录
+## 2. 向 tar.gz 添加一个目录
 
-这个例子将一个目录，包括它的子文件和子目录添加到一个归档文件中，Gzip 将它压缩到一个`.tar.gz`
+这个例子将一个目录，包括它的子文件和子目录添加到一个归档文件中，Gzip 将它压缩到一个`.tar.gz`。
 
-这个想法是用`Files.walkFileTree`遍历一个文件树，将文件一个一个的添加到`TarArchiveOutputStream`中。
+这个想法是用`Files.walkFileTree`遍历一个文件树，将文件一个一个地添加到`TarArchiveOutputStream`中。
 
-TarGzipExample2.java
+### `TarGzipExample2.java`
+
+
+
 
 ```java
- package com.mkyong.io.howto.compress;
+package com.mkyong.io.howto.compress;
 
 import org.apache.commons.compress.archivers.tar.TarArchiveEntry;
 import org.apache.commons.compress.archivers.tar.TarArchiveOutputStream;
@@ -268,75 +271,75 @@ public class TarGzipExample2 {
 
     }
 
-} 
+}
 ```
 
-## 3.向 tar.gz 添加字符串
+## 3. 向 tar.gz 添加字符串
 
 这个例子将`String`添加到一个`ByteArrayInputStream`中，并将其直接放入`TarArchiveOutputStream`中。意思是创建一个文件，不保存到本地磁盘，直接放入`tar.gz`中。
 
 ```java
- public static void createTarGzipFilesOnDemand() throws IOException {
+public static void createTarGzipFilesOnDemand() throws IOException {
 
-        String data1 = "Test data 1";
-        String fileName1 = "111.txt";
+    String data1 = "Test data 1";
+    String fileName1 = "111.txt";
 
-        String data2 = "Test data 2 3 4";
-        String fileName2 = "folder/222.txt";
+    String data2 = "Test data 2 3 4";
+    String fileName2 = "folder/222.txt";
 
-        String outputTarGzip = "/home/mkyong/output.tar.gz";
+    String outputTarGzip = "/home/mkyong/output.tar.gz";
 
-        try (OutputStream fOut = Files.newOutputStream(Paths.get(outputTarGzip));
-             BufferedOutputStream buffOut = new BufferedOutputStream(fOut);
-             GzipCompressorOutputStream gzOut = new GzipCompressorOutputStream(buffOut);
-             TarArchiveOutputStream tOut = new TarArchiveOutputStream(gzOut)) {
+    try (OutputStream fOut = Files.newOutputStream(Paths.get(outputTarGzip));
+         BufferedOutputStream buffOut = new BufferedOutputStream(fOut);
+         GzipCompressorOutputStream gzOut = new GzipCompressorOutputStream(buffOut);
+         TarArchiveOutputStream tOut = new TarArchiveOutputStream(gzOut)) {
 
-            createTarArchiveEntry(fileName1, data1, tOut);
-            createTarArchiveEntry(fileName2, data2, tOut);
+        createTarArchiveEntry(fileName1, data1, tOut);
+        createTarArchiveEntry(fileName2, data2, tOut);
 
-            tOut.finish();
-        }
-
+        tOut.finish();
     }
 
-    private static void createTarArchiveEntry(String fileName,
-                                              String data,
-                                              TarArchiveOutputStream tOut)
-                                              throws IOException {
+}
 
-        byte[] dataInBytes = data.getBytes();
+private static void createTarArchiveEntry(String fileName,
+                                          String data,
+                                          TarArchiveOutputStream tOut)
+                                          throws IOException {
 
-        // create a byte[] input stream
-        ByteArrayInputStream baOut1 = new ByteArrayInputStream(dataInBytes);
+    byte[] dataInBytes = data.getBytes();
 
-        TarArchiveEntry tarEntry = new TarArchiveEntry(fileName);
+    // create a byte[] input stream
+    ByteArrayInputStream baOut1 = new ByteArrayInputStream(dataInBytes);
 
-        // need defined the file size, else error
-        tarEntry.setSize(dataInBytes.length);
-        // tarEntry.setSize(baOut1.available()); alternative
+    TarArchiveEntry tarEntry = new TarArchiveEntry(fileName);
 
-        tOut.putArchiveEntry(tarEntry);
+    // need defined the file size, else error
+    tarEntry.setSize(dataInBytes.length);
+    // tarEntry.setSize(baOut1.available()); alternative
 
-        // copy ByteArrayInputStream to TarArchiveOutputStream
-        byte[] buffer = new byte[1024];
-        int len;
-        while ((len = baOut1.read(buffer)) > 0) {
-            tOut.write(buffer, 0, len);
-        }
+    tOut.putArchiveEntry(tarEntry);
 
-        tOut.closeArchiveEntry();
+    // copy ByteArrayInputStream to TarArchiveOutputStream
+    byte[] buffer = new byte[1024];
+    int len;
+    while ((len = baOut1.read(buffer)) > 0) {
+        tOut.write(buffer, 0, len);
+    }
 
-    } 
+    tOut.closeArchiveEntry();
+
+}
 ```
 
-## 4.解压缩文件-tar.gz
+## 4. 解压缩文件-tar.gz
 
 这个例子展示了如何解压缩和提取一个`tar.gz`文件，它还检查了 [zip slip 漏洞](http://web.archive.org/web/20220629160044/https://snyk.io/research/zip-slip-vulnerability)。
 
-TarGzipExample4.java
+`TarGzipExample4.java`
 
 ```java
- package com.mkyong.io.howto.compress;
+package com.mkyong.io.howto.compress;
 
 import org.apache.commons.compress.archivers.ArchiveEntry;
 import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
@@ -423,25 +426,34 @@ public class TarGzipExample4 {
         return normalizePath;
     }
 
-} 
+}
 ```
 
 **延伸阅读**
+
 请查看官方 [Apache Commons 压缩示例](http://web.archive.org/web/20220629160044/https://commons.apache.org/proper/commons-compress/examples.html)。
 
 ## 下载源代码
 
-$ git 克隆[https://github.com/mkyong/core-java](http://web.archive.org/web/20220629160044/https://github.com/mkyong/core-java)
 
-$ cd java-io
+
+```bash
+git clone https://github.com/mkyong/core-java
+```
+
+```bash
+cd java-io
+```
 
 ## 参考
 
-*   [维基百科-取](http://web.archive.org/web/20220629160044/https://en.wikipedia.org/wiki/Tar_(computing))
-*   [Gzip](http://web.archive.org/web/20220629160044/https://en.wikipedia.org/wiki/Gzip)
-*   [Apache Commons 压缩](http://web.archive.org/web/20220629160044/https://commons.apache.org/proper/commons-compress/)
-*   [Java–创建一个 zip 文件](/web/20220629160044/https://mkyong.com/java/how-to-compress-files-in-zip-format/)
-*   [Java–压缩 Gzip 中的文件](/web/20220629160044/https://mkyong.com/java/how-to-compress-a-file-in-gzip-format/)
-*   [拉链滑动漏洞](http://web.archive.org/web/20220629160044/https://snyk.io/research/zip-slip-vulnerability)
+- [维基百科—取](http://web.archive.org/web/20220629160044/https://en.wikipedia.org/wiki/Tar_(computing))
+- [Gzip](http://web.archive.org/web/20220629160044/https://en.wikipedia.org/wiki/Gzip)
+- [Apache Commons 压缩](http://web.archive.org/web/20220629160044/https://commons.apache.org/proper/commons-compress/)
+- [Java—创建一个 zip 文件](/web/20220629160044/https://mkyong.com/java/how-to-compress-files-in-zip-format/)
+- [Java—压缩 Gzip 中的文件](/web/20220629160044/https://mkyong.com/java/how-to-compress-a-file-in-gzip-format/)
+- [拉链滑动漏洞](http://web.archive.org/web/20220629160044/https://snyk.io/research/zip-slip-vulnerability)
 
+```html
 <input type="hidden" id="mkyong-current-postId" value="16133">
+```

@@ -1,3 +1,4 @@
+
 # JSF 2.0 + JDBC 集成示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jsf2/jsf-2-0-jdbc-integration-example/>
@@ -8,14 +9,14 @@
 
 ![](img/f1b559b6cd8ffdcd1c2bbb5b8c3597ea.png "jsf2-jdbc-integration-example-folder")
 
-## 1.表结构
+## 1. 表结构
 
-创建一个“*客户*”表，并插入五条虚拟记录。稍后，通过 JSF `h:dataTable`显示。
+创建一个“客户”表，并插入五条虚拟记录。稍后，通过 JSF `h:dataTable` 显示。
 
 *SQL 命令*
 
-```java
- DROP TABLE IF EXISTS `mkyongdb`.`customer`;
+```sql
+DROP TABLE IF EXISTS `mkyongdb`.`customer`;
 CREATE TABLE  `mkyongdb`.`customer` (
   `CUSTOMER_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `NAME` varchar(45) NOT NULL,
@@ -33,21 +34,21 @@ values(3, 'mkyong3', 'address3', now());
 insert into mkyongdb.customer(customer_id, name, address, created_date) 
 values(4, 'mkyong4', 'address4', now());
 insert into mkyongdb.customer(customer_id, name, address, created_date) 
-values(5, 'mkyong5', 'address5', now()); 
+values(5, 'mkyong5', 'address5', now());
 ```
 
- ## 2.MySQL 数据源
+## 2. MySQL 数据源
 
-配置一个名为"**JDBC/mkyondb**"的 MySQL 数据源，遵循本文-[如何在 Tomcat 6 中配置 MySQL 数据源](http://web.archive.org/web/20190310100507/http://www.mkyong.com/tomcat/how-to-configure-mysql-datasource-in-tomcat-6/)
+配置一个名为 `JDBC/mkyondb` 的 MySQL 数据源，遵循本文：[如何在 Tomcat 6 中配置 MySQL 数据源](http://web.archive.org/web/20190310100507/http://www.mkyong.com/tomcat/how-to-configure-mysql-datasource-in-tomcat-6/)
 
- ## 3.模型类
+## 3. 模型类
 
-创建一个“ *Customer* ”模型类来存储表记录。
+创建一个 `Customer` 模型类来存储表记录。
 
-*文件:Customer.java*
+*文件：`Customer.java`*
 
 ```java
- package com.mkyong.customer.model;
+package com.mkyong.customer.model;
 
 import java.util.Date;
 
@@ -59,17 +60,17 @@ public class Customer{
 	public Date created_date;
 
 	//getter and setter methods 
-} 
+}
 ```
 
-## 4.JDBC 的例子
+## 4. JDBC 的例子
 
-一个 JSF 2.0 托管 bean，通过`@Resource`注入 data source "**JDBC/mkyondb**，使用普通的 JDBC API 从数据库中检索所有的客户记录并存储到一个列表中。
+一个 JSF 2.0 托管 bean，通过 `@Resource` 注入 data source `JDBC/mkyondb`，使用普通的 JDBC API 从数据库中检索所有的客户记录并存储到一个列表中。
 
-*文件:CustomerBean.java*
+*文件：`CustomerBean.java`*
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.io.Serializable;
 import java.sql.Connection;
@@ -143,15 +144,15 @@ public class CustomerBean implements Serializable{
 
 		return list;
 	}
-} 
+}
 ```
 
-## 5.JSF 页面数据表
+## 5. JSF 页面数据表
 
-一个 JSF 2.0 xhtml 页面，使用`h:dataTable`以表格布局格式显示所有客户记录。
+一个 JSF 2.0 xhtml 页面，使用 `h:dataTable` 以表格布局格式显示所有客户记录。
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html    
@@ -204,10 +205,10 @@ public class CustomerBean implements Serializable{
 
     </h:body>
 
-</html> 
+</html>
 ```
 
-## 6.演示
+## 6. 演示
 
 运行它，查看输出
 
@@ -219,16 +220,9 @@ Download It – [JSF-2-JDBC-Integration-Example.zip](http://web.archive.org/web/
 
 ## 参考
 
-1.  [Java 中的 JDBC 例子](http://web.archive.org/web/20190310100507/http://www.mkyong.com/java/how-to-connect-to-mysql-with-jdbc-driver-java/)
-2.  [Tomcat 6 中的 JNDI 数据源示例](http://web.archive.org/web/20190310100507/http://tomcat.apache.org/tomcat-6.0-doc/jndi-datasource-examples-howto.html)
-3.  [在 Tomcat 6 中配置 MySQL 数据源](http://web.archive.org/web/20190310100507/http://www.mkyong.com/tomcat/how-to-configure-mysql-datasource-in-tomcat-6/)
-4.  [JSF 2 数据表示例](http://web.archive.org/web/20190310100507/http://www.mkyong.com/jsf2/jsf-2-datatable-sorting-example/)
+1. [Java 中的 JDBC 例子](http://web.archive.org/web/20190310100507/http://www.mkyong.com/java/how-to-connect-to-mysql-with-jdbc-driver-java/)
+2. [Tomcat 6 中的 JNDI 数据源示例](http://web.archive.org/web/20190310100507/http://tomcat.apache.org/tomcat-6.0-doc/jndi-datasource-examples-howto.html)
+3. [在 Tomcat 6 中配置 MySQL 数据源](http://web.archive.org/web/20190310100507/http://www.mkyong.com/tomcat/how-to-configure-mysql-datasource-in-tomcat-6/)
+4. [JSF 2 数据表示例](http://web.archive.org/web/20190310100507/http://www.mkyong.com/jsf2/jsf-2-datatable-sorting-example/)
 
 [integration](http://web.archive.org/web/20190310100507/http://www.mkyong.com/tag/integration/) [jdbc](http://web.archive.org/web/20190310100507/http://www.mkyong.com/tag/jdbc/) [jsf2](http://web.archive.org/web/20190310100507/http://www.mkyong.com/tag/jsf2/)
-
-
-
-
-
-
-

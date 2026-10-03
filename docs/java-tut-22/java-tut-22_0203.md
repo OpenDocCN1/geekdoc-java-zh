@@ -1,3 +1,4 @@
+
 # 简单线程示例
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/concurrency/simple.html`](https://docs.oracle.com/javase/tutorial/essential/concurrency/simple.html)
@@ -7,7 +8,6 @@
 `MessageLoop` 线程会打印一系列消息。如果在打印完所有消息之前被中断，`MessageLoop` 线程会打印一条消息然后退出。
 
 ```java
-
 public class SimpleThreads {
 
     // Display a message, preceded by
@@ -90,5 +90,4 @@ public class SimpleThreads {
         threadMessage("Finally!");
     }
 }
-
 ```

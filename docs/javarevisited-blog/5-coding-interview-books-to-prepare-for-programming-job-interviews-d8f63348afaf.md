@@ -1,3 +1,4 @@
+
 # 5 编面试本，为 2023 年编程工作面试做准备
 
 > 原文：<https://medium.com/javarevisited/5-coding-interview-books-to-prepare-for-programming-job-interviews-d8f63348afaf?source=collection_archive---------0----------------------->
@@ -101,36 +102,40 @@
 再来看看这本书里一个比较有意思的问题:
 
 **你有一个文件，里面有 40 亿个 32 位整数。找到一个不在文件中的整数。**
+
 如果你有足够的内存，你会怎么做？如果你只有几百字节的内存，但是允许你写临时文件，那怎么办？
 
 这本书还有一个续集叫做 [**更多编程珍珠**](https://www.amazon.com/More-Programming-Pearls-Confessions-Coder/dp/0201118890?tag=javamysqlanta-20) **:一个程序员的自白**，但那并不是真正关于编程面试或算法设计的，尽管如此，对任何程序员来说都是一本好书。
 
 这些都在这个**关于编码或编程面试的前 5 本书的列表中**。我在这里提到的所有论文都是最好的，你可以根据你的目标和你要面试的公司进一步筛选。
 
-例如，如果你的目标是谷歌，那么编程面试的要素和算法设计手册是必读的，但对于大多数编程工作面试来说， [**破解编码面试书**](http://www.amazon.com/dp/098478280X/?tag=javamysqlanta-20) 将完成工作，因为它涵盖了最受欢迎的问题。
 
-**推荐文章**
-如果你和我一样是书呆子，这里有几篇文章可以探索一些最好的编程书籍及其有用的资源:
 
-*   每个程序员都应该读的 10 本书([列出](http://java67.blogspot.com/2015/09/top-10-algorithm-books-every-programmer-read-learn.html))
-*   我最喜欢的学习算法和数据结构的免费课程([课程](https://www.freecodecamp.org/news/these-are-the-best-free-courses-to-learn-data-structures-and-algorithms-in-depth-4d52f0d6b35a/?gi=a41bf34d0c99)
-*   排名前五的数据结构和算法书籍([列表](http://javarevisited.blogspot.com/2015/07/5-data-structure-and-algorithm-books-best-must-read.html))
-*   2023 年学习 Java 编程的 10 门免费课程([课程](/javarevisited/10-free-courses-to-learn-java-in-2019-22d1f33a3915))
-*   破解编程求职面试的 10 门课程([门课程](https://hackernoon.com/10-data-structure-algorithms-and-programming-courses-to-crack-any-coding-interview-e1c50b30b927))
-*   5 本能让你成为摇滚明星开发者的书
-*   每个程序员都应该阅读的 10 本算法书([列举](http://java67.blogspot.com/2015/09/top-10-algorithm-books-every-programmer-read-learn.html))
-*   5 本面向对象设计、模式和最佳实践书籍([列表](http://javarevisited.blogspot.com/2013/06/5-must-read-books-to-learn-object.html))
-*   10 门学习数据结构和算法的课程([门课程](https://www.java67.com/2019/07/top-10-online-courses-to-learn-data-structure-and-algorithms-in-java.html)
-*   6 学习和掌握编程的书籍([列表](http://javarevisited.blogspot.com/2014/09/top-6-books-to-learn-programming-coding.html))
-*   2023 年学习 Python 编程的 10 门免费课程([门课程](https://javarevisited.blogspot.com/2018/12/10-free-python-courses-for-programmers.html))
-*   来自访谈的 50 多个数据结构和算法问题([问题](https://hackernoon.com/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0))
+例如，如果你的目标是谷歌，那么编程面试的要素和算法设计手册是必读的，但对于大多数编程工作面试来说，[破解编码面试书](http://www.amazon.com/dp/098478280X/?tag=javamysqlanta-20)将完成工作，因为它涵盖了最受欢迎的问题。
+
+## 推荐文章
+
+如果你和我一样是书呆子，这里有几篇文章可以探索一些最好的编程书籍及其有用的资源：
+
+- 每个程序员都应该读的 10 本书（[列出](http://java67.blogspot.com/2015/09/top-10-algorithm-books-every-programmer-read-learn.html)）
+- 我最喜欢的学习算法和数据结构的免费课程（[课程](https://www.freecodecamp.org/news/these-are-the-best-free-courses-to-learn-data-structures-and-algorithms-in-depth-4d52f0d6b35a/?gi=a41bf34d0c99)）
+- 排名前五的数据结构和算法书籍（[列表](http://javarevisited.blogspot.com/2015/07/5-data-structure-and-algorithm-books-best-must-read.html)）
+- 2023 年学习 Java 编程的 10 门免费课程（[课程](/javarevisited/10-free-courses-to-learn-java-in-2019-22d1f33a3915)）
+- 破解编程求职面试的 10 门课程（[课程](https://hackernoon.com/10-data-structure-algorithms-and-programming-courses-to-crack-any-coding-interview-e1c50b30b927)）
+- 5 本能让你成为摇滚明星开发者的书
+- 每个程序员都应该阅读的 10 本算法书（[列举](http://java67.blogspot.com/2015/09/top-10-algorithm-books-every-programmer-read-learn.html)）
+- 5 本面向对象设计、模式和最佳实践书籍（[列表](http://javarevisited.blogspot.com/2013/06/5-must-read-books-to-learn-object.html)）
+- 10 门学习数据结构和算法的课程（[课程](https://www.java67.com/2019/07/top-10-online-courses-to-learn-data-structure-and-algorithms-in-java.html)）
+- 6 学习和掌握编程的书籍（[列表](http://javarevisited.blogspot.com/2014/09/top-6-books-to-learn-programming-coding.html)）
+- 2023 年学习 Python 编程的 10 门免费课程（[课程](https://javarevisited.blogspot.com/2018/12/10-free-python-courses-for-programmers.html)）
+- 来自访谈的 50 多个数据结构和算法问题（[问题](https://hackernoon.com/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0)）
 
 感谢您阅读本文。如果你喜欢这些 Java 数据结构和算法课程，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
 
-**P. S.** —如果你正在寻找一些免费的算法课程来提高你对数据结构和算法的理解，那么你也应该检查一下这个列表中的 [**免费的数据结构和算法课程**](https://hackernoon.com/10-free-data-structure-and-algorithm-courses-junior-developers-should-explore-978b72871af5) ，它们是完全免费的
+**P. S.** —如果你正在寻找一些免费的算法课程来提高你对数据结构和算法的理解，那么你也应该检查一下这个列表中的[免费的数据结构和算法课程](https://hackernoon.com/10-free-data-structure-and-algorithm-courses-junior-developers-should-explore-978b72871af5)，它们是完全免费的
 
-<https://hackernoon.com/10-free-data-structure-and-algorithm-courses-junior-developers-should-explore-978b72871af5>  
+<https://hackernoon.com/10-free-data-structure-and-algorithm-courses-junior-developers-should-explore-978b72871af5>
 
-你准备好面试了吗？ [**参加 TripleByte 的测验**](https://triplebyte.com/a/aWqVhD4/d) ，直接进入顶级科技公司的最后一轮面试，如 Coursera、Adobe、Dropbox、Grammarly、优步、Quora、Evernote、Twitch 等等。
+你准备好面试了吗？[参加 TripleByte 的测验](https://triplebyte.com/a/aWqVhD4/d)，直接进入顶级科技公司的最后一轮面试，如 Coursera、Adobe、Dropbox、Grammarly、优步、Quora、Evernote、Twitch 等等。
 
-<https://triplebyte.com/a/aWqVhD4/d> 
+<https://triplebyte.com/a/aWqVhD4/d>

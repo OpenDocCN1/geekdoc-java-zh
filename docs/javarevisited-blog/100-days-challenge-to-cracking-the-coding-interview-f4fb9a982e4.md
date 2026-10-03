@@ -1,8 +1,9 @@
+
 # 第 17 天—轮换阵列
 
 > 原文：<https://medium.com/javarevisited/100-days-challenge-to-cracking-the-coding-interview-f4fb9a982e4?source=collection_archive---------0----------------------->
 
-## **亚马逊 100 天**
+## 亚马逊 100 天
 
 [**100 天亚马逊—**](https://leetcode.com/problems/diameter-of-binary-tree/) **第 17 天—** [**旋转数组**](https://leetcode.com/problems/rotate-array/)
 

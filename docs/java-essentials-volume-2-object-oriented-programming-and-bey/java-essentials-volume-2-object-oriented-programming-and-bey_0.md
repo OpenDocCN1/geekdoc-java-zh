@@ -1,9 +1,7 @@
+
 # Java 核心基础卷 2：面向对象编程及进阶
 
-
-
 ![](img/cover-front1.jpg)
-
 
 作为我们尊贵的读者，您购买本书已包含了访问增强您学习体验的专属在线资源的权限。这些资源可以从我们的网站 [www.vibrantpublishers.com](http://www.vibrantpublishers.com) 下载，其创建旨在帮助您有效地应用 Java® 概念。
 
@@ -14,8 +12,8 @@
 
 ## 为什么这些在线资源具有价值：
 
-● **实际应用**：提供的可下载代码便于于进行测试和使用。
-● **增强学习体验**：额外的编程任务将提供实践经验，并帮助您在实际场景中应用从书中中学的知识。
+* **实际应用**：提供的可下载代码便于进行测试和使用。
+* **增强学习体验**：额外的编程任务将提供实践经验，并帮助您在实际场景中应用从书中学到的知识。
 
 ## 如何获取您的在线资源：
 
@@ -33,37 +31,27 @@
 
 ![image](img/title-page.jpg)
 
-
-
-
-
-
-
-
-
-
-
 | 标题 | 平装本* ISBN |
 | :--- | :--- |
-| 商业与创业 | |
+| **商业与创业** | |
 | 商务沟通要义 | 9781636511634 |
 | 商业伦理要义 | 9781636513324 |
 | 商业法要义 | 9781636511702 |
 | 商业计划要义 | 9781636511214 |
-| 商业策略要义 | 9781949395778 |
+| 商业策略要义 | 9781636511778 |
 | 创业要义 | 9781636511603 |
 | 国际商务要义 | 9781636513294 |
 | 管理原理要义 | 9781636511542 |
-| 计算机科学与技术 | |
+| **计算机科学与技术** | |
 | 区块链要义 | 9781636513003 |
 | 网络安全要义 | 9781636514888 |
 | 机器学习要义 | 9781636513775 |
 | Python 要义 | 9781636512938 |
-| 商业数据科学 | |
+| **商业数据科学** | |
 | 商务分析要义 | 9781636514154 |
 | 商业智能要义 | 9781636513362 |
 | 数据分析要义 | 9781636511184 |
-| 数据素养 | |
+| **数据素养** | |
 | 成本会计要义 | 9781636511030 |
 | 财务会计要义 | 9781636510972 |
 | 财务管理要义 | 9781636511009 |
@@ -72,18 +60,18 @@
 | 个人财务要义 | 9781636514796 |
 | 经济学原理 | 9781636512334 |
 | 多样性、公平与包容 | 9781636511122 |
-| 人力资源管理 | 9781636510347 |
-| HR | |
+| **人力资源管理** | |
+| HR | 9781636510347 |
 | HR 分析 | |
 | 组织行为 | 9781636511733 |
 | 组织发展 | 9781636512181 |
 | 组织成功 | 9781636510057 |
-| 领导力 | |
+| **领导力** | |
 | 领导力 | 9781636514765 |
 | 领导力的重要性 | 9781636512273 |
 | 印度转型之路 | 9781636510316 |
 | 时间管理 | 9781636511665 |
-| 现代营销 | |
+| **现代营销** | |
 | 数字化营销 | 9781636513263 |
 | 社交媒体 | 9781949395747 |
 | 营销管理 | 9781636511788 |
@@ -91,58 +79,56 @@
 | 现代广告 | 9781636514857 |
 | 销售 | 9781636510743 |
 | 销售管理 | 9781636511733 |
-| 运营 | |
+| **运营** | |
 | 敏捷 | 9781636510057 |
 | 运营与供应链 | 9781949395242 |
 | 产品管理 | 9781636514796 |
 | 项目管理 | 9781636510712 |
 | 利益相关者参与 | 9781636511511 |
 
-
-
-
-
 在行业内，Decamora 博士曾与 Sun Microsystems Philippines、Phoenix One Knowledge Solutions Inc. 以及 ActiveLearning Inc. 等领先机构合作，提供 `Java` 培训和软件开发解决方案。他的专业领域涵盖 `Java` 编程、企业应用和 Web 技术。
 
-除了教学，Decamora 博士还是一位备受欢迎的演讲者和培训师，曾举办过关于 `Java` 编程、软件工程和新兴技术的研讨会和工作。他对知识共享的热情体现在他通过实践见解和现实应用赋能学习者的承诺中。
+除了教学，Decamora 博士还是一位备受欢迎的演讲者和培训师，曾举办过关于 `Java` 编程、软件工程和新兴技术的研讨会和工作坊。他对知识共享的热情体现在他通过实践见解和现实应用赋能学习者的承诺中。
 
 这本书证明了他致力于让各个水平的学习者都能掌握 `Java` 的投入。通过清晰的解释和实战示例，Decamora 博士继续激励并指导下一代开发者。
 
 # 专家如何评价这本书！
 
-**Java Essentials Volume 2**
+## Java Essentials Volume 2
 
 `Java Essentials Volume 2` 是一本编写精良的教材，为每一章设定了清晰的学习目标。它通过清晰、代码良好的示例引导学生学习。我支持这种对设计和工程的关注，而非仅仅是“编程”。
+
 – John McManus，博士
 计算机科学副教授
 Randolph-Macon College
 
 我曾对初创公司和大型组织中各个级别的工程师进行面试、技术评估、指导并共同工作，我见证了时间的推移，偏离核心 `Java` 最佳实践是多么容易。这本书是基础知识的价值参考，也是跟上现代语言特性的有力指南，受益于职业生涯各个阶段的开发者。
+
 – Shay Brennan-Kelly
 首席软件工程师
 
-终于，有一本既尊重我的经验又挑战我安于现状的 `Java` 书。对话式的流流让你保持投入，出其意料的练习让你保持严谨，而深度则让你流连忘返。这是正确的技术写作典范。
+终于，有一本既尊重我的经验又挑战我安于现状的 `Java` 书。对话式的流程让你保持投入，出其意料的练习让你保持严谨，而深度则让你流连忘返。这是正确的技术写作典范。
+
 – Dineshotham Kumar K
 软件工程师
 Candescent Technologies
 
-
-### 多选择题
-### 多选择题
-
 ## 2 面向对象概念简介
+
 ### 2.1 对象 vs 类
-## 2.2 对象实例化
 
+### 2.2 对象实例化
 
-局限性与不良实践：
-- 当影响可读性时不要使用：`var x = someMethod();` // x 存储了什么？`String userName = someMethod();` //清晰且显式
-- 不能在未初始化的情况下 var：`var total;` // 错误：无法推断类型；`var total = 0;` // OK
-- 它不能用于方法参数或返回类型：`public void print(var name) {}` // 不允许；`public var getName() { return "Alice"; }` // 不允许
+#### 局限性与不良实践：
 
-使用 var 的用处
-- 减少代码冗余性
-- 在某些情况下提高可读性
+* 当影响可读性时不要使用：`var x = someMethod();` // x 存储了什么？`String userName = someMethod();` // 清晰且显式
+* 不能在未初始化的情况下使用 `var`：`var total;` // 错误：无法推断类型；`var total = 0;` // OK
+* 它不能用于方法参数或返回类型：`public void print(var name) {}` // 不允许；`public var getName() { return "Alice"; }` // 不允许
+
+#### 使用 var 的用处
+
+* 减少代码冗余性
+* 在某些情况下提高可读性
 
 在 Java 10 中，引入了 `var` 关键字，通过允许编译器从赋值右侧的值推断变量类型，从而简化局部变量的声明。这一特性并没有让 Java 变成动态类型语言；类型仍然在编译时确定。使用 `var` 时，最好在能够提高代码清晰度的地方使用，而不是仅仅让代码变短。此外，用 `var` 声明的变量必须在声明时初始化。
 
@@ -198,186 +184,156 @@ class Person {
 }
 ```
 
-
-
-
+```
 水果：苹果
-
 水果：香蕉
-
 水果：樱桃
-
 你好，我是 Lawrence，我今年 25 岁。
+```
 
-![image](img/pin.jpg) 注意事项
+![image](img/pin.jpg) **注意事项**
 
-●`var` 让代码更短且更易于读，同时仍保持类型安全。
-●你可以在方法、循环和代码块中使用 `var`。
-●你不能写 `var x;` 或 `var y = null;`，因为编译器将不知道类型。
-●`var` 并不意味着 Java 是动态类型语言——一旦类型被推断，它就被固定了。
+* `var` 让代码更短且更易于读，同时仍保持类型安全。
+* 你可以在方法、循环和代码块中使用 `var`。
+* 你不能写 `var x;` 或 `var y = null;`，因为编译器将不知道类型。
+* `var` 并不意味着 Java 是动态类型语言——一旦类型被推断，它就被固定了。
 
-![](img/note.jpg) 章节总结
+![](img/note.jpg) **章节总结**
 
-● 原始数据类型是 Java 提供的基本数据类型。它们直接在内存中存储简单值，并且不是对象。
+* 原始数据类型是 Java 提供的基本数据类型。它们直接在内存中存储简单值，并且不是对象。
+* 引用数据类型包括对象和数组。它们存储指向实际数据的引用（内存地址），而不是数据本身。示例包括类的实例、接口和数组。
+* 用户自定义类是由程序员创建的，用于表示自定义数据类型。这些是引用数据类型，因为这些类的变量持有指向从类创建的对象的引用，而不是对象数据本身。
+* 当你将一个引用变量赋值给另一个变量时，两个变量都指向内存中的同一个对象。通过其中一个引用修改对象将会在通过另一个引用访问时反映出来。
+* 在 Java 中，方法参数始终是通过值传递的。对于原始数据类型，传递的是实际值。对于引用数据类型，传递的是引用（内存地址），而不是对象本身。
+* 局部变量作用域：局部变量的作用域被限制在声明它的代码块（例如方法或循环）中。不能在该代码块之外访问。
+* `this` 引用是 Java 中的一个关键字，用于实例方法或构造函数内部，指向当前对象。它可以帮助区分实例变量和同名的参数、调用其他构造函数，并返回当前对象实例。
 
-● 引用数据类型包括对象和数组。它们存储指向实际数据的引用（内存地址），而不是数据本身。示例包括类的实例、接口和数组。
-
-● 用户自定义类是由程序员创建的，用于表示自定义数据类型。这些是引用数据类型，因为这些类的变量持有指向从类创建的对象的引用，而不是对象数据本身。
-
-●当你将一个引用变量赋值给另一个变量时，两个变量都指向内存中的同一个对象。通过其中一个引用修改对象将会在通过另一个引用访问时反映出来。
-
-● 在 Java 中，方法参数始终是通过值传递的。对于原始数据类型，传递的是实际值。对于引用数据类型，传递的是引用（内存地址），而不是对象本身。
-
-● 局部变量作用域：局部变量的作用域被限制在声明它的代码块（例如方法或循环）中。不能在该代码块之外访问。
-
-● `this` 引用是 Java 中的一个关键字，用于实例方法或构造函数内部，指向当前对象。它可以帮助区分实例变量和同名的参数、调用其他构造函数，并返回当前对象实例。
-
-![](img/Quiz_Icon.jpg) 单选题
+![](img/Quiz_Icon.jpg) **单选题**
 
 1. 下列哪项被认为是引用数据类型？
-
-a. `String`
-b. `int`
-c. `boolean`
-d. `char`
+   a. `String`
+   b. `int`
+   c. `boolean`
+   d. `char`
 
 2. 你在 API 文档中找到的类称什么？
-
-a. 引用数据类型
-b. 原始数据类型
-c. `Integer` 类型
-d. 普通数据类型
+   a. 引用数据类型
+   b. 原始数据类型
+   c. `Integer` 类型
+   d. 普通数据类型
 
 3. 给定下面的示例代码：
-
-```java
-public class Main{
-    private int m = 100;
-    public Main(int m) {
-        this.m = m;
-    }
-    public static void main(String args[]) {
-        Main myMain = new Main(200);
-        System.out.print(myMain.m);
-    }
-}
-```
-
-输出将是什么？
-
-a. 100
-b. 200
-c. 300
-d. 500
+   ```java
+   public class Main{
+       private int m = 100;
+       public Main(int m) {
+           this.m = m;
+       }
+       public static void main(String args[]) {
+           Main myMain = new Main(200);
+           System.out.print(myMain.m);
+       }
+   }
+   ```
+   输出将是什么？
+   a. 100
+   b. 200
+   c. 300
+   d. 500
 
 4. 关于 `this` 关键字，以下哪一个陈述**不正确**的？
-
-a. 你可以在实例方法或构造函数内部通过 `this` 引用当前对象的任何成员。
-b. 在构造函数内部，你也可以使用 `this` 关键字调用同一类中的另一个构造函数。
-c. `this` 关键字可以作为对类的引用。
-d. 在实例方法或构造函数内部，`this` 是指向当前对象的引用——即正在调用其方法或构造函数的对象。
+   a. 你可以在实例方法或构造函数内部通过 `this` 引用当前对象的任何成员。
+   b. 在构造函数内部，你也可以使用 `this` 关键字调用同一类中的另一个构造函数。
+   c. `this` 关键字可以作为对类的引用。
+   d. 在实例方法或构造函数内部，`this` 是指向当前对象的引用——即正在调用其方法或构造函数的对象。
 
 5. 关于引用数据类型，以下哪一个陈述**不正确**的？
-
-a. 引用数据类型扩展了所有原始数据类型。
-b. 引用变量包含对象的地址而不是对象本身。
-c. 对象的地址是由操作系统在对象实例化阶段（通常称为创建阶段）分配的。
-d. 引用数据类型的值是内存地址，可以硬编码在你的 Java 代码中。
+   a. 引用数据类型扩展了所有原始数据类型。
+   b. 引用变量包含对象的地址而不是对象本身。
+   c. 对象的地址是由操作系统在对象实例化阶段（通常称为创建阶段）分配的。
+   d. 引用数据类型的值是内存地址，可以硬编码在你的 Java 代码中。
 
 6. 假设存在一个有效的类 `Person`，它有一个接受 2 个参数的构造函数，即 `String name` 和 `int age`，并且提供了 `getName()` 方法。考虑下面的代码段：
-
-```java
-Person p1 = new Person("Lawrence", 20); // 1
-String str = p1; // 2
-String name = p1.getName(); // 3
-```
-
-下列哪一个陈述**不正确**的？
-
-a. 第 1 行将从 `Person` 类实例化对象 `p1`。
-b. 第 2 行会导致错误。
-c. 第 3 行将获取人对象的名称。
-d. 三行代码都能正常编译并运行。
+   ```java
+   Person p1 = new Person("Lawrence", 20); // 1
+   String str = p1; // 2
+   String name = p1.getName(); // 3
+   ```
+   下列哪一个陈述**不正确**的？
+   a. 第 1 行将从 `Person` 类实例化对象 `p1`。
+   b. 第 2 行会导致错误。
+   c. 第 3 行将获取人对象的名称。
+   d. 三行代码都能正常编译并运行。
 
 7. 给定下面的方法：
-
-```java
-public void doStuff(int x) {
-    int y;
-}
-```
-
-关于给定方法中声明的局部变量，以下哪一个是**不正确**的？
-
-a. 一旦 `doStuff()` 方法结束，局部变量 `x` 和 `y` 将从内存中删除。
-b. 局部变量 `y` 的初始值为 0。
-c. 当正确调用 `doStuff()` 方法时，局部变量 `x` 将具有传递它的值。
-d. 局部变量 `y` 在使用之前应该先初始化。
+   ```java
+   public void doStuff(int x) {
+       int y;
+   }
+   ```
+   关于给定方法中声明的局部变量，以下哪一个是**不正确**的？
+   a. 一旦 `doStuff()` 方法结束，局部变量 `x` 和 `y` 将从内存中删除。
+   b. 局部变量 `y` 的初始值为 0。
+   c. 当正确调用 `doStuff()` 方法时，局部变量 `x` 将具有传递它的值。
+   d. 局部变量 `y` 在使用之前应该先初始化。
 
 8. 下列哪项**不是**引用数据类型？
-
-a. `float`
-b. `Button`
-c. `Person`
-d. `String`
+   a. `float`
+   b. `Button`
+   c. `Person`
+   d. `String`
 
 9. 以下哪一个陈述**不正确**？
-
-a. 变量的值与其数据类型有关。
-b. 如果变量是引用类型，则你传递引用类型。
-c. 所有变量无论类型如何、无论作用域如何，定义的初始值。
-d. 当你将对象传递给方法时，传递的是内存地址。
+   a. 变量的值与其数据类型有关。
+   b. 如果变量是引用类型，则你传递引用类型。
+   c. 所有变量无论类型如何、无论作用域如何，定义的初始值。
+   d. 当你将对象传递给方法时，传递的是内存地址。
 
 10. 下列哪项是引用数据类型？
+    a. `byte`
+    b. `char`
+    c. `float`
+    d. `Person`
 
-a. `byte`
-b. `char`
-c. `float`
-d. `Person`
-
-单选题答案
+**单选题答案**
 
 | 1 - a | 2 - a | 3 - b | 4 - c | 5 - d |
 | 6 - d | 7 - b | 8 - a | 9 - c | 10 - d |
 
-![](img/code.jpg) 编程任务
+![](img/code.jpg) **编程任务**
 
-目标：
+**目标：**
 
 编写一个 Java 程序，展示你对原始数据类型、引用数据类型、自定义类、引用赋值、值传递、局部变量作用域以及 `this` 引用的理解。
 
-要求：
+**要求：**
 
 1. 创建一个名为 `Person` 的自定义类：
-
-定义 `Person` 类及其以下属性：`String name` 和 `int age`。
-在 `Person` 类中包含以下方法：
-●构造函数接受 `String name` 和 `int age` 初始化 `name` 和 `age` 属性。
-●`updateAge()` 方法接受 `Person` 对象和一个 `int` 值，以更新传递的 `person` 对象的 `age`。
-●`incrementAge()` 方法增加当前 `person` 的 `age` 并返回更新后的 `person` 对象。
-●`displayInfo()` 方法打印 `person` 的 `name` 和 `age`。
+   定义 `Person` 类及其以下属性：`String name` 和 `int age`。
+   在 `Person` 类中包含以下方法：
+   * 构造函数接受 `String name` 和 `int age` 初始化 `name` 和 `age` 属性。
+   * `updateAge()` 方法接受 `Person` 对象和一个 `int` 值，以更新传递的 `person` 对象的 `age`。
+   * `incrementAge()` 方法增加当前 `person` 的 `age` 并返回更新后的 `person` 对象。
+   * `displayInfo()` 方法打印 `person` 的 `name` 和 `age`。
 
 2. 主程序：
-
-创建一个 `Person` 对象，并按照构造函数所述初始化名称和年龄值。
-将 `Person` 对象传递给方法，使用 `updateAge()` 更新其年龄。
-使用 `incrementAge()` 增加 `Person` 对象的年龄并赋值给一个新的引用变量。
-演示更改引用变量和局部变量作用域对 `Person` 对象的影响。
-在 `Person` 类内部使用 `this` 关键字来实现方法复用。
-
-
-
-
+   * 创建一个 `Person` 对象，并按照构造函数所述初始化名称和年龄值。
+   * 将 `Person` 对象传递给方法，使用 `updateAge()` 更新其年龄。
+   * 使用 `incrementAge()` 增加 `Person` 对象的年龄并赋值给一个新的引用变量。
+   * 演示更改引用变量和局部变量作用域对 `Person` 对象的影响。
+   * 在 `Person` 类内部使用 `this` 关键字来实现方法复用。
 
 在 Java 编程世界，理解面向对象的原则对于编写健壮、可重用且易维护的代码至关重要。本章通过引入定义 Java 应用设计和结构的核心概念，为面向对象编程（OOP）奠定了基础。你将学习类和对象之间的区别、如何创建和使用它们，以及封装如何帮助保护内部数据。本章还涵盖了构造函数——包括默认构造函数的规则——以及实例方法和静态方法之间的区别。最后，我们将探索 Java 源文件的组织方式、包（packages）和导入（imports）的工作原理，以及如何使用 JAR 文件、清单文件（manifest files）和 Java API 文档打包并记录你的应用程序。
 
 ## 2.1 对象与类
 
+
+
 ### 2.1.1 什么是对象？
 
-对象是任何真实存在。它们可以是概念性的或物理的。你周围现在的任何东西都是对象：椅子、桌子、书籍，甚至是你的纸张。但对象不仅限于我们周围的实体。当你使用桌面应用程序或你喜喜欢的文字处理器时，你也能看到其中的对象。按钮、工具栏，甚至是工作区域或对话框都是对象。物理对象可以是实体的或无形的，可见的，如 `Button` 和 `String`，以及不可见的，如数据库连接和网络连接。
+对象是任何真实存在。它们可以是概念性的或物理的。你周围现在的任何东西都是对象：椅子、桌子、书籍，甚至是你的纸张。但对象不仅限于我们周围的实体。当你使用桌面应用程序或你喜欢的文字处理器时，你也能看到其中的对象。按钮、工具栏，甚至是工作区域或对话框都是对象。物理对象可以是实体的或无形的，可见的，如 `Button` 和 `String`，以及不可见的，如数据库连接和网络连接。
 
-对象也可以是概念性的。概念对象是那些不可见但以意义方式存在的对象。这类对象也很有用，它们也代表了一组数据。概念对象的示例包括错误（errors）、异常（exceptions）、数据库连接、网络连接、触发事件等。我们将在单独的章节讨论错误、异常和事件。现在，理解这些都是概念对象的示例就很重要的。
+对象也可以是概念性的。概念对象是那些不可见但以意义方式存在的对象。这类对象也很有用，它们也代表了一组数据。概念对象的示例包括错误（errors）、异常（exceptions）、数据库连接、网络连接、触发事件等。我们将在单独的章节讨论错误、异常和事件。现在，理解这些都是概念对象的示例就很重要。
 
 ### 2.1.2 什么是类？
 
@@ -391,7 +347,7 @@ d. `Person`
 
 这里有一个清晰的对比表格来总结 Java 内存结构：Java 7 对比 Java 8+。
 
-表 2.1 Java 内存结构对比
+**表 2.1 Java 内存结构对比**
 
 | 内存区域 | Java 7 及更早版本 | Java 8 及以后 |
 | :--- | :--- | :--- |
@@ -401,7 +357,7 @@ d. `Person`
 | 元空间 (Metaspace) | 不可用 | 取代 PermGen；在原生内存中存储类元数据 |
 | 垃圾回收器 (GC) | 清理堆和 PermGen | 清理堆和元空间（如果需要） |
 
-图 2.1 显示类与对象之间关系的图表
+**图 2.1** 显示类与对象之间关系的图表
 
 ![image](img/fig2-1.jpg)
 
@@ -409,7 +365,7 @@ d. `Person`
 
 考虑图 2.2 中的示例。
 
-图 2.2 Person 类的 UML 图
+**图 2.2** Person 类的 UML 图
 
 ![image](img/fig2-2.jpg)
 
@@ -424,7 +380,7 @@ public class Person
 }
 ```
 
-在给定的 UML 图中，顶部部分（灰色）包含类名，第二部分（白色）包含类中的属性或变量，第三部分（黑色）包含类中的方法。至于它们的访问权限，加号 (+) 表示公有（public），而在本章的后半部分，你还会看到减号 (-) 符号，它用于声明某些内容为私有（private）。公有和私有访问修符将在稍后进行更详细的讨论。
+在给定的 UML 图中，顶部部分（灰色）包含类名，第二部分（白色）包含类中的属性或变量，第三部分（黑色）包含类中的方法。至于它们的访问权限，加号 (`+`) 表示公有（public），而在本章的后半部分，你还会看到减号 (`-`) 符号，它用于声明某些内容为私有（private）。公有和私有访问修饰符将在稍后进行更详细的讨论。
 
 ## 2.2 对象实例化
 
@@ -462,8 +418,10 @@ System.out.println(p2.name + " at age " + p2.age);
 
 这将给我们输出：
 
+```
 Lawrence at age 20
 Walter at age 5
+```
 
 ## 2.3 封装 - 即数据隐藏与实现
 
@@ -471,7 +429,7 @@ Walter at age 5
 
 这个类声明有什么问题？
 
-图 2.3 带有公共变量的 Person 类的 UML 图
+**图 2.3** 带有公共变量的 Person 类的 UML 图
 
 ![image](img/fig2-3.jpg)
 
@@ -490,14 +448,11 @@ p2.age = -5;
 
 会有程序问题吗？编译器会在第 14 行有问题吗？不会。这段代码可以编译并运行。编译器在第 14 行不会有任何问题，因为赋值给 `p2.age` 的值 -5 是一个有效的整数值。这段代码唯一的问题是它代表了一个不现实的对象。
 
-
-
-
 Java 被认为是一种面向对象的编程语言，这意味着它具有模拟现实世界对象行为的能力。在这种情况下，一个人的年龄不能为负值。在我们的现实世界中，一个人的年龄必须大于等于零。
 
 那么，我们该如何解决这个问题呢？这就是封装发挥用场的地方。封装是一种面向对象的特性，它可以隐藏或保护数据免受直接访问。因此，我们不再将所有属性声明为 `public`，而是可以将它们声明为 `private`，以禁用其他类对属性的直接访问。封装通过限制其可访问性来保护你的数据。
 
-图 2.4 带有私有变量的 `Person` 类 UML 图
+**图 2.4** 带有私有变量的 `Person` 类 UML 图
 
 ![image](img/fig2-4.jpg)
 
@@ -520,11 +475,11 @@ Setters 和 getters 是用于创建 `JavaBeans` 的约定。它们也被用于�
 
 `Java Bean` 只是一个 `POJO`——普通 Java 对象（Plain Old Java Object），这是一个封装良好的类的约定术语。`JavaBeans` 等同于企业 Java Beans (`EJB`)。`EJBs` 是 Java EE 程序的业务组件，超出了我们的讨论范围。
 
-`JavaBeans` 是 Java 中可重用的软件组件，遵循某些规则，使得它们在不同的程序中易使用。一个关键规则是 `Java Bean` 必须具有 `private` 变量（字段），并提供 `public` 方法来访问或修改这些变量，这些被称为“getters”和“setters”。getters 允许你读取变量的值，而 setters 允许你更改它。这种结构确保了 bean 内部的数据可以在应用程序的不同部分得到安全且一致 get 管理。
+`JavaBeans` 是 Java 中可重用的软件组件，遵循某些规则，使得它们在不同的程序中易使用。一个关键规则是 `Java Bean` 必须具有 `private` 变量（字段），并提供 `public` 方法来访问或修改这些变量，这些被称为“getters”和“setters”。getters 允许你读取变量的值，而 setters 允许你更改它。这种结构确保了 bean 内部的数据可以在应用程序的不同部分得到安全且一致地管理。
 
 这是一个 `Java Bean` 的示例。
 
-图 2.5 Java Bean 类 `Person` 的 UML 图
+**图 2.5** Java Bean 类 `Person` 的 UML 图
 
 ![image](img/fig2-5.jpg)
 
@@ -593,8 +548,10 @@ System.out.println(p2.getName() + " is " + p2.getAge() + " years old.");
 
 `public` getters 是旨在返回值的方法。在第 17 行和第 18 行调用时，分别返回一个 `String` 值和一个 `integer` 值。`p1.getName()` 返回一个 `String` 值，而 `p1.getAge()` 返回一个 `integer` 值，该值将通过 `System.out.println()` 方法打印。getters 的返回值可以打印到屏幕上，也可以存储在变量中。一旦编译并执行，它将输出：
 
+```
 Lawrence at age 30
 Walter at age 0
+```
 
 ## 2.4 构造函数
 
@@ -645,7 +602,7 @@ public class MyClass {
 MyClass mc = new MyClass();
 ```
 
-
+## 2.5 方法
 
 方法用于创建一个子程序，该子程序可以从主方法或另一个方法中调用任意次数。方法可以在传递值或不传递值的情况下执行；这些值被称为参数，有时也称为参数列表。
 
@@ -653,7 +610,6 @@ MyClass mc = new MyClass();
 
 ```
 <modifiers> <return_type> methodName(<parameter_list>)
-
 {
     // method body
 }
@@ -676,7 +632,7 @@ System.out.println(p1.getName());
 int nameLength = p1.getName().length();
 ```
 
-实例变量和方法属于一个对象，并通过该对象进行使用。要访问它们，你首先需要使用 `new` 关键字创建该类的对象。然后，你可以使用对象的名称后接点（'.'）来调用其方法或访问其变量。
+实例变量和方法属于一个对象，并通过该对象进行使用。要访问它们，你首先需要使用 `new` 关键字创建该类的对象。然后，你可以使用对象的名称后接点（`.`）来调用其方法或访问其变量。
 
 而静态方法通过类名进行调用。
 
@@ -699,13 +655,15 @@ int num = Integer.parseInt(strNum);
 
 ### 2.6.1 Java package 语句
 
-Java 中的包指的是子目录。一个包可以包含类或子包。以[图 2.6]中的图为例。
+Java 中的包指的是子目录。一个包可以包含类或子包。以**图 2.6**中的图为例。
 
-图 2.6 包包图
+**图 2.6** 包包图
 
 ![image](img/fig2-6.jpg)
 
 我们将 `MyProj` 作为一个包，在 `MyProj` 内部我们有三个子包，即：`subA`、`subB` 和 `test`。在 `subA` 内部，我们有一个子包 `subAA`。
+
+
 
 包内部也可以包含类。包 `subA` 包含 `A.class`，`subAA` 包含 `AA.class`，包 `subB` 包含 `B.class`，包 `test` 包含 `TestMe.class`，作为我们的测试类。
 
@@ -715,10 +673,14 @@ Java 中的包指的是子目录。一个包可以包含类或子包。以[图 2
    `package <top_level_pkg_name>[.<sub_pkg_name>]*;`
    示例：
    `package subA.subAA;`
+
 2. 包的声明只能放在 Java 源文件的开头。
+
 3. 每个源文件只允许一个 (1) 包声明。
+
 4. 在没有包语句的情况下，生成的类文件将放在默认包中（当前工作目录）。
-5. 包语句之间必须用点 (.) 分隔，以确保子目录的表示平台无关。
+
+5. 包语句之间必须用点 (`.`) 分隔，以确保子目录的表示平台无关。
 
 ### 2.6.2 import 语句
 
@@ -755,9 +717,6 @@ Import 语句用于告诉编译器哪里找到应用程序将使用的需要的�
 13 }
 ```
 
-
-
-
 | 特性 | 包 (Packages)：按功能组织类（例如 `test`, `utils`）。 | 模块 (Modules)：保持整个包结构并定义清晰的边界。 |
 | :--- | :--- | :--- |
 | 可可见性 | 包中的类可以被任何其他代码导入。 | 模块可以只导出想要共享的包并隐藏其他包。 |
@@ -769,7 +728,7 @@ Import 语句用于告诉编译器哪里找到应用程序将使用的需要的�
 
 ## 2.8 JAR (Java Archive) 文件
 
-一个复杂的应用程序通常由一组类文件组成，而不仅仅是一个类文件。当这些类文件需要交付给客户时，我们需要将它们放入一个名为 JAR 文件或 Java 归档文件（Java Archive File）的文件。这个 JAR 文件代表了一组共同工作的类。
+一个复杂的应用程序通常由一组类文件组成，而不仅仅是一个类文件。当这些类文件需要交付给客户时，我们需要将它们放入一个名为 JAR 文件或 Java 归档文件的文件。这个 JAR 文件代表了一组共同工作的类。
 
 考虑之前提供的目录结构。成功编译后，生成的类文件被放在 `classes` 文件夹下。
 
@@ -777,25 +736,32 @@ Import 语句用于告诉编译器哪里找到应用程序将使用的需要的�
 
 ![image](img/fig2-8.jpg)
 
-这些位于 `classes` 文件夹下的类文件现在可以归档了。类类的归档可以使用 JDK 安装带的 `jar` 工具完成。
+这些位于 `classes` 文件夹下的类文件现在可以归档了。类文件的归档可以使用 JDK 安装带的 `jar` 工具完成。
 
 创建 Jar 文件有两种方法。
 
 ### 1. 不使用清单文件 (manifest file)
 
 创建：
+
 ```bash
 jar cvf <JarFile.jar> <Files>
 ```
+
 即
+
 ```bash
 jar cvf MyJar1.jar *
 ```
+
 运行：
+
 ```bash
 java -cp <JarFile.jar> <fullyQualifiedName>
 ```
+
 即
+
 ```bash
 java -cp MyJar1.jar test.TestMe
 ```
@@ -803,18 +769,25 @@ java -cp MyJar1.jar test.TestMe
 ### 2. 使用清单文件，也称为可执行 Jar 文件。
 
 创建：
+
 ```bash
 jar cvfm <JarFile.jar> <manifestFile> <Files>
 ```
+
 即
+
 ```bash
 jar cvfm MyJar2.jar manif.txt *
 ```
+
 运行：
+
 ```bash
 java -jar <JarFile.jar>
 ```
+
 即
+
 ```bash
 java -jar MyJar2.jar
 ```
@@ -828,10 +801,12 @@ java -jar MyJar2.jar
 `<Main-Class tag/s><separator><value><ENTERKEY>`
 
 清单文件看起来如下：
+
 ```
 Manifest-Version: 1.0
 Main-Class: test.TestMe
 ```
+
 务必在最后一行之后添加一个换行符，以便在运行时，Java 虚拟机可以读取该行输入。如果你的清单文件中缺少 `ENTER KEY` 字符，`JVM` 将其视为无效的清单文件，因为它无法读取其内容。
 
 对于大多数 IDE，清单文件也是自动创建的。你只需要编辑它并在 `Main-Class` 标签中包含测试类的全限定名。如果你想让 JAR 文件成为可执行（可运行）的 JAR 文件，这是必须的。
@@ -846,9 +821,11 @@ Main-Class: test.TestMe
 要了解你 API 内部的类，可以在 Oracle® 网站下载 API 文档。
 
 你也可以通过 URL 在线访问 API 文档：
+
 `http://docs.oracle.com/javase/<javaSEversion>/docs/api/index.html`
 
 示例：
+
 `https://docs.oracle.com/javase/23/docs/api/index.html`
 
 注意：书中附带的在线资源也提供了链接。
@@ -868,9 +845,13 @@ Main-Class: test.TestMe
 在本章中，我们讨论了以下内容：
 
 - 对象可以是物理或概念实体，代表现实世界中的物品。模块包括类和包。UML 图（如类图和状态图）用于视觉化地表示这些结构。
+
 - 构造方法是一种特殊方法，其名称与类名相同且没有返回类型。每个类至少有一个；如果程序员没有定义，Java 会提供一个默认的无参构造方法。
+
 - Java 方法是重用的代码块，可以在 `main` 方法或其他方法中调用，可以传递或不传递值（参数）。方法可以有各种访问修饰符，并可以是实例方法（需要对象）或静态方法（直接通过类名调用）。
+
 - Java 源代码布局可以有一个包声明，也可以没有。对于导入语句，可以有多个也可以没有。对于类，可以有多个非公共类或一个包含多个非公共类的类。包、导入语句和类声明都是可选的。如果存在，它们的顺序必须从包开始，然后是导入语句，最后是类列表。
+
 - 一个复杂的应用程序通常由一组类文件组成，而不仅仅是一个类文件。当这些类文件需要交付给客户时，我们需要将它们放入一个名为 JAR 文件或 Java 归档文件的文件。这个 JAR 文件代表了一组共同工作的类。
 
 ![image](img/Quiz_Icon.jpg)
@@ -878,20 +859,24 @@ Main-Class: test.TestMe
 ## 选择题
 
 1. 哪个术语指的是与类名相同并用于实例化（创建）对象的特殊构造？
+
 a. 类
+
 b. 方法
+
 c. 构造方法
+
 d. 垃圾回收
 
 2. 关于静态方法，以下哪项是正确的？
+
 a. 你可以通过类名访问静态方法。
+
 b. 你必须先实例化对象才能访问静态方法。
+
 c. 你只能通过对象的名称访问静态方法。
+
 d. 你不能重载静态方法。
-
-
-
-
 
 ### 3. 在下面的 Java 代码段中：
 
@@ -903,36 +888,55 @@ int myMethod(){
 ```
 
 该方法的返回类型是什么？
+
 a. `int`
+
 b. `void`
+
 c. `myMethod`
+
 d. `none`
 
 ### 4. 下列陈述中哪一项是不正确的？
+
 a. 如果方法的返回类型是 `int`，那么你传递给方法参数的值也必须是 `int`。
+
 b. 方法可以返回 `int`，同时也可以具有不同的参数类型。
+
 c. 如果一个方法**不返回**任何值，则其返回类型应该是 `void` 类型。
+
 d. 如果方法的返回类型是 `int`，则方法内部必须包含一个 `return` 语句并返回一个 `int` 类型的值。
 
 ### 5. 下面四个选项中有三个是狗对象的属性；哪一个是方法？
+
 a. `age`
+
 b. `bark()`
+
 c. `color`
+
 d. `breed`
 
 ### 6. 你编写了一个名为 `Animal` 的类，它包含以下内容：
+
 ```java
 public void eat() {}
 public void breath() {}
 public void sleep() {}
 ```
+
 你如何称类类的类的内容？
+
 a. `comments`
+
 b. `attributes`
+
 c. `constructors`
+
 d. `methods`
 
 ### 7. 假定如下类声明：
+
 ```java
 public class Person {
     Person(String name){}
@@ -941,31 +945,49 @@ public class Person {
 ```
 
 下列哪个操作会导致创建 `Person` 类实例时发生错误？
+
 a. `Person p = new Person("Lawrence", 20);`
+
 b. `Person p = new Person();`
+
 c. `Person p = new Person("Percy");`
+
 d. `Person p = new Person("Jerry", 25);`
 
 ### 8. 选项中有三个对象和一个类；哪一个选项是类？
+
 a. `iPhone X`
+
 b. `Nokia 3310`
+
 c. `Samsung Galaxy`
+
 d. `Smartphone`
 
 ### 9. 假定创建 `Student` 对象的代码行：
+
 ```java
 Student aStudent = new Student();
 ```
+
 创建 `Student` 对象时使用了以下哪个运算符？
+
 a. `Student`
+
 b. `=`
+
 c. `aStudent`
+
 d. `new`
 
 ### 10. Java API 文档提供了什么？
+
 a. 用于编写 Java 代码的集成开发环境 (IDE)
+
 b. 关于 Java 关键字语法和用法的详细信息
+
 c. Java 平台提供的类和方法的描述及用法
+
 d. 用于学习 Java 的教程和代码示例
 
 ## 多项选择题答案页
@@ -978,6 +1000,7 @@ d. 用于学习 Java 的教程和代码示例
 ## 编码任务
 
 #### 编码任务 1：完成 Student 类
+
 给定 `Student` 类的部分代码，它包含 3 个属性：`name`、`studentNumber` 和 `course`。
 
 你需要提供 setter 方法和 getter 方法，以及一个缺失了体的构造函数体。
@@ -1036,33 +1059,40 @@ public class TestStudent {
 ```
 
 #### 编码任务 2：创建并使用简单类
+
 指令：
+
 1. 创建一个名为 `Book` 的类，包含以下私有字段：
    - `String title`
    - `String author`
    - `int yearPublished`
+
 2. 添加一个初始化所有三个字段的构造函数。
+
 3. 为每个字段提供公共 getter 和 setter 方法。
+
 4. 添加一个名为 `displayInfo()` 的实例方法，按格式打印书籍详情：`"Title: <title>, Author: <author>, Year: <yearPublished>"`
+
 5. 在 `main` 方法中实例化 `Book` 对象，使用 setter 修改数据，并调用 `displayInfo()`。
 
 #### 编码任务 3：使用静态方法探索结构
+
 目标：练习静态方法、包语句和结构。
 
 指令：
+
 1. 创建一个名为 `utilities` 的包。
+
 2. 在 `utilities` 包内部定义一个 `MathHelper` 类，包含：
    - 一个静态方法 `square(int number)` 返回数字的平方。
    - 一个静态方法 `isEven(int number)` 如果数字为偶数则返回 true，否则返回 false。
+
 3. 创建另一个名为 `mainapp` 的包。
+
 4. 在 `mainapp` 中创建一个 `MainProgram` 类，其包含一个 `main` 方法：
    - 导入并使用 `MathHelper` 类。
    - 调用 `MathHelper` 的两个方法。
    - 打印结果。
-
-
-
-
 
 假设你目前是一个 `Employee` 对象。作为一名 `Employee`，你拥有以下属性：`name`、`salary`、`birthDate` 以及一个可以显示你所有信息的方法，我们称其为 `getDetails()`。
 
@@ -1078,7 +1108,10 @@ public class Employee {
 在大多数情况下，`Managers` 也是 `Employees`。`Employees` 和 `Managers` 都有各自的名字、工资和出生日期。在这些属性之上，`Managers` 还有他们负责管理和运行的部门。
 
 图 3.2 Manager 类
+
 ![image](img/fig3-2.jpg)
+
+
 
 ```java
 public class Manager {
@@ -1093,6 +1126,7 @@ public class Manager {
 这种情况非常需要继承。继承是一种通过扩展现有的类来成为其超类（又称父类）来重用类的方法。在我们的示例中，`Manager` 类继承了 `Employee` 类，这意味着 `Employee` 类拥有的任何东西，`Manager` 类也拥有。
 
 图 3.3 Employee 和 Manager 类
+
 ![image](img/fig3-3.jpg)
 
 ## 3.3 “是（is-a）”关系
@@ -1122,6 +1156,7 @@ class Manager extends Employee {
 这显示 `Manager` 类是子类，而 `Employee` 类是超类，如果我们对这两个类都应用“is-a”关系，我们可以说一个 `Manager` “是一个” `Employee`。
 
 图 3.4 继承 Employee 类的 Manager 类
+
 ![image](img/fig3-4.jpg)
 
 ```java
@@ -1145,14 +1180,16 @@ public class Manager extends Employee {
 
 在 Java 编程语言中，我们只能实现单继承，这意味着你只能继承自一个超类（父类）。虽然这没有限制超类只能有一个子类，但它可以拥有多个子类。
 
-请注意[图 3.5]中的类 UML 图。每个类都只有一个超类。在这个 UML 中，你还会注意到一个超类有多个子类，例如 `Employee` 类有几个直接子类，如 `Manager`、`Engineer` 和 `Secretary`，而 `Director` 类是 `Manager` 类的子类，`Manager` 类又是 `Employee` 类的子类。因此，应用“is-a”关系，我们可以说 `Director` “是一个” `Manager`。说 `Director` “是一个” `Employee` 也是正确的`Director` 可能不是 `Employee` 类的直接子类，但它仍然属于同一个层级，所以 `Director` 也是一个 `Employee`。
+请注意[图 3.5]中的类 UML 图。每个类都只有一个超类。在这个 UML 中，你还会注意到一个超类有多个子类，例如 `Employee` 类有几个直接子类，如 `Manager`、`Engineer` 和 `Secretary`，而 `Director` 类是 `Manager` 类的子类，`Manager` 类又是 `Employee` 类的子类。因此，应用“is-a”关系，我们可以说 `Director` “是一个” `Manager`。说 `Director` “是一个” `Employee` 也是正确的。`Director` 可能不是 `Employee` 类的直接子类，但它仍然属于同一个层级，所以 `Director` 也是一个 `Employee`。
 
 图 3.5 单继承层级示例
+
 ![image](img/fig3-5.jpg)
 
 在 C++ 和其他面向对象的编程语言中，允许多继承，但 Java 不允许。这引出了问题：Java 是否劣于 C++？答案是“否定的”。多继承有几个缺点。以[图 3.6] 为例。
 
 图 3.6 多继承概念
+
 ![image](img/fig3-6.jpg)
 
 假设类 `A` 和类 `B` 都是父类，并且都有一个名为 `doStuff()` 的公共方法，该方法包含两个不同的方法实现。另一个名为类 `C` 的类是类 `A` 和类 `B` 的子类。
@@ -1182,10 +1219,6 @@ public class Manager extends Employee {
 
 在某些情况下，当你从超类继承了一个方法，但你发现继承的方法并不足以完成子类所需的职责。为了解决这个困境，你可以重写你继承的方法。
 
-
-
-
-
 ```java
 public String department;
 
@@ -1195,10 +1228,9 @@ public String getDetails() {
            "\nSalary: " + salary +
            "\nDepartment: " + department;
 }
-}
 ```
 
-在这个示例中，`Manager` 类的 `getDetails()` 方法重写了 `Employee` 类的 `getDetails()` 方法。这是因为 `Manager` 的 `getDetails()` 方法应该提供比继承自父 类的 `getDetails()` 方法更多的信息。
+在这个示例中，`Manager` 类的 `getDetails()` 方法重写了 `Employee` 类的 `getDetails()` 方法。这是因为 `Manager` 的 `getDetails()` 方法应该提供比继承自父类的 `getDetails()` 方法更多的信息。
 
 ## 3.7 方法重写的规则
 
@@ -1349,10 +1381,6 @@ public class Overloading1 {
 
 在这个示例中，我们看到 `sum` 方法有多个声明，它们都可以在第 9 行、13 行和第 17 行看到。
 
-
-
-
-
 如果用户随后需要累加 2、3 或 4 个整数值，我们只需要调用 `sum()` 方法并将整数值作为参数传递进去即可。所有声明的 `sum()` 方法都会接受传递给它的 `int` 值，并计算总和，然后返回所有传递参数的整数和。唯一的局限性是，给定代码中的 `sum()` 方法只能接受 2、3 或 4 个 `int` 值。为每种数量的 `int` 值编写一个方法是不切实际的。
 
 为了克服这种局限性，Java SE 5.0 引入了一个新的语言特性，它被称为 var-args（可变长度参数）。这意味着现在可以向 var-args 方法传递任意数量的参数。
@@ -1362,6 +1390,7 @@ public class Overloading1 {
 ### 1. 每个方法只能有一个 var-args。
 
 正确示例：
+
 ```java
 protected void doStuff(double… args){}
 public static void main(String… args){}
@@ -1369,6 +1398,7 @@ public void doSomething(int… args){}
 ```
 
 错误示例：
+
 ```java
 protected void doStuff(double… arg1, int… args2){}
 // Java 不允许在单个方法中使用多个可变长度参数。
@@ -1386,19 +1416,23 @@ public void doSomething(int[] args…){}
 ### 2. 如果有多个参数，var-arg 参数必须是参数列表中的最后一个参数。
 
 正确示例：
+
 ```java
 protected void doStuff(String str, Object… args){}
 public void doSomething(char ch, int… args){}
 ```
 
 错误示例：
+
+
+
 ```java
-protected void doSomething (double… arg1, int args2){}
+protected void doSomething(double... arg1, int args2) {}
 // 可变长度 (...) 必须是方法签名中的
 // 最后一个参数。在这里，double... arg1
 // 被错误地放置在 int args2 之前。
 
-public void doStuff(String param1, char… param2, int param3){}
+public void doStuff(String param1, char... param2, int param3) {}
 // 类似的问题，char... param2 应该是
 // 最终参数，但后面有一个 int 参数。
 // 可变长度参数只能出现在末尾。
@@ -1423,8 +1457,7 @@ public class Overloading2 {
     }
     public static int sum(double... num) {
         double total = 0;
-        for (double n : num)
-        {
+        for (double n : num) {
             total += n;
         }
         return total;
@@ -1464,8 +1497,11 @@ public class ConstructorChaining {
 ```
 
 在实例化类 `C` 的对象后，你会发现输出是：
+
 A
+
 B
+
 C
 
 输出给人一种父类构造函数被继承的印象；然而，事实并非如此。关于继承和构造函数有一条规则：构造函数不被继承，但它们是链式的。我们称之为“构造函数链”（constructor-chain）。
@@ -1499,8 +1535,11 @@ public class ConstructorChaining {
 ```
 
 一旦编译并运行，它的输出将是：
+
 A
+
 B
+
 C
 
 这段代码的输出与之前相同。注意第 5、13 和 21 行。`super()` 关键字被插入到了每个构造函数的第一行。根据规则，如果构造函数没有调用 `this()` 或 `super()`，Java 会在构造函数的第一行添加一个默认的 `super()` 调用，正如你在第 5、13 和 21 行所示。`super()` 的调用允许当前构造函数调用父类的构造函数。这就是“构造函数链”术语的由来。至于之前的更改呢？如果一个类没有继承任何父类，它会自动继承 `Object` 类，它是所有类类的根。
@@ -1538,9 +1577,6 @@ public class Employee {
 ```
 
 对于所有构造函数，使用 `this()` 或 `super()` 是可选的。`this()` 调用实际上是对同类构造函数或同一类内构造函数的调用，而 `super()` 调用则是对父类构造函数的调用。
-
-
-
 
 对于所有构造函数，使用 `this()` 或 `super()` 是可选的。`this()` 的调用实际上是对同类中另一个构造函数或同类构造函数的调用，而 `super()` 的调用是对父类构造函数的调用。
 
@@ -1613,9 +1649,6 @@ System.out.println(p1 == p2);
 System.out.println(p1.equals(p2));
 ```
 
-
-
-
 ```java
 13    System.out.println(p2.hashCode());
 15    System.out.println(p1);
@@ -1623,6 +1656,7 @@ System.out.println(p1.equals(p2));
 ```
 
 如果我们编译并运行这段代码，我们将会得到以下输出：
+
 ```
 false
 true
@@ -1633,6 +1667,7 @@ Lawrence, at age 30
 ```
 
 输出的前两行：
+
 ```
 false
 true
@@ -1654,15 +1689,25 @@ true
 ## 章节总结
 
 - 讨论了`继承`，它是面向对象编程（OOP）的基支柱之一。这促进了代码的重用。
+
 - `Classes`、`superclasses` 和 `subclasses` 是在讨论继承概念时应该了解的重要概念。在其他 OOP 中，可以使用某些术语来代替，例如父类和子类。但在 Java 中，我们使用 `superclass` 和 `subclass` 术语。
+
 - “is-a”关系是软件工程中使用的另一个术语。在某些情况下，我们使用“...的子类”或“派生自”术语。
+
 - `Java` 在其他面向对象编程语言中是独特的，因为它使用了单继承的概念。然而，我们将在第 5 章“其他类特性”中讨论如何在 Java 中使用多重继承的想法。
+
 - 在第二章中，我们引入了 `public` 和 `private` 访问修饰符来解释封装的概念，在本章中，我们讨论了所有的四个访问修饰符。
+
 - Java 中的方法重写发生在子类提供其父类中已定义的方法的特定实现时。这允许子类在保持相同方法签名的同时，自定义或完全替换该方法的行为。本章讨论了五条方法重写规则。
+
 - `super` 关键字用于子类内部，以引用其直接父类。它可以被用于调用父类的构造函数、访问父类方法或访问父类字段，从而允许子类继承并利用其父类的功能。
+
 - 方法重载（在其他资源中有时称为方法重载）允许一个类拥有多个同名但参数不同的方法。通过允许根据传递的参数的数量或类型以不同的方式调用方法，提供了灵活性，提高了了同一类内代码的可读性和可重用性。我们在本章中还讨论了方法重载的规则。
+
 - 在 Java 中，继承和构造函数之间密切相关，但有不同的角色。当子类被实例化时，它的构造函数会隐式或显式地调用其父类的构造函数，以确保被继承字段的正确初始化。这通常使用 `super` 关键字完成，如果用于调用父类构造函数，则它必须是子类构造函数的第一条语句。我们在本章中还查看了 `super()` 的用法和 `this()` 的用法。
+
 - Java 中的构造函数重载允许类拥有多个具有不同参数列表的构造函数。这为创建具有各种初始状态的对象提供了灵活性，因为每个构造函数都可以根据对象创建期间传递的参数执行不同的初始化任务。
+
 - 还讨论了作为所有类根的 `Object` 类。还建议在你创建自己的类时，最好在你自己的用户定义类中重写 `toString()`、`equals()` 和 `hashCode()` 方法。
 
 ![](img/Quiz_Icon.jpg) 多选题
@@ -1670,12 +1715,17 @@ true
 ### 多选题
 
 1. 关于构造函数，以下哪项是**不正确**的？
+
 a. 我们重载构造函数。
+
 b. 我们可以重用构造函数。
+
 c. 我们可以链式调用构造函数。
+
 d. 我们可以从父类继承构造函数。
 
 2. 考虑以下代码：
+
 ```java
 class MyClass {
     MyClass(String str1, String str2) {
@@ -1689,13 +1739,21 @@ class MyClass {
     }
 }
 ```
+
 如果编译代码会发生什么？
+
 a. 代码将编译并运行，并显示：Java Oracle
+
 b. 代码将导致编译错误，因为构造函数是相同的。
+
 c. 代码将编译并运行，并显示：Java.
+
 d. 代码将编译并运行，并显示：Oracle.
 
 3. 给定以下类：
+
+
+
 ```java
 class A {
     public void printInfo() {
@@ -1716,31 +1774,49 @@ class Test {
     }
 }
 ```
+
 编译并运行代码的输出是什么？
+
 a. AB
+
 b. A
+
 c. B
+
 d. 编译错误
 
 4. 在子类中，哪个方法可以重写？
+
 a. toString
+
 b. equals
+
 c. hashCode
+
 d. extends
 
 5. 关于继承关系，以下哪项是**不正确**的？
+
 a. 类只能继承一个父类。
+
 b. 类可以拥有多个父类。
+
 c. 所有的方法都可以被重写。
+
 d. 类可以拥有多个子类。
 
 6. 关于方法重写，以下哪项是**不正确**的？
+
 a. 在没有调用 `this()` 和 `super()` 的情况下，Java 会自动在构造函数的第一行插入 `super()` 调用。
+
 b. `super()` 调用用于调用父类的构造函数。
+
 c. 构造函数不能重载。
+
 d. `this()` 调用用于调用当前类的构造函数。
 
 7. 给以下两个类，`Person` 类和 `Employee` 类：
+
 ```java
 class Person {
     private String name;
@@ -1755,39 +1831,49 @@ class Employee extends Person {
     }
 }
 ```
+
 哪一行会导致编译错误？
+
 a. 第 1 行会导致编译错误。
+
 b. 第 2 行会导致编译错误。
+
 c. 第 3 行会导致编译错误。
+
 d. 第 4 行会导致编译错误。
 
 8. 关于构造函数链式调用，以下哪项是**不正确**的？
+
 a. 在没有调用 `this()` 和调用 `super()` 的情况下，Java 会自动在构造函数的第一行插入 `super()` 调用。
+
 b. `super()` 调用用于调用父类的构造函数。
+
 c. 构造函数可以重载。
+
 d. `this()` 调用用于调用当前类的构造函数。
 
 9. 哪种访问修饰符可以限制在同一类、同包和相同继承树内的访问权限？
+
 a. `private`
+
 b. `<default>`
+
 c. `protected`
+
 d. `public`
 
 ### 多选题答案
+
 | 1 – d | 2 – b | 3 – a | 4 – a | 5 – a |
+
 | 6 – a | 7 – b | 8 – b | 9 – c | 10 – c |
 
 ![](img/code.jpg) 编程任务
 
-编程任务 1:
-
-
-
-
-
 # 第 4 章：多态
 
 ## 核心学习目标
+
 - 学习多态概念
 - 虚方法调用
 - 异构数组
@@ -1806,6 +1892,7 @@ d. `public`
 在本章的示例中，我将使用 `Employee` 类，引用不同类型的“员工”，如经理、总监、工程师和秘书。让我们考虑图 4.1 所示层次结构。
 
 ### 图 4.1 单继承示例
+
 ![Images/klo.jpg](img/klo.jpg)
 
 以下是多态用法的一个示例：
@@ -1825,27 +1912,35 @@ e.getDetails(); //
 **指令：**
 
 ### A. 创建基类 Animal
+
 - **字段：**
   - `name (String)`：动物的名字。
   - `age (int)`：动物的年龄。
+
 - **构造函数：** 初始化 `name` 和 `age`。
+
 - **方法：**
-  - `makeSound()`：一个打印（"Some generic sound”）的方法。
+  - `makeSound()`：一个打印（"Some generic sound"）的方法。
   - `displayInfo()`：一个打印动物名字和年龄的方法。
 
 ### B. 创建一个扩展 Animal 的子类 Dog
+
 - **构造函数：** 调用父类构造函数以初始化 `name` 和 `age`。
+
 - **方法：**
   - 重写 `makeSound()` 方法以打印 "Woof! Woof!"。
   - 添加一个方法 `fetch()`，打印 "Fetching the ball!"。
 
 ### C. 创建另一个扩展 Animal 的子类 Cat
+
 - **构造函数：** 调用父类构造函数以初始化 `name` 和 `age`。
+
 - **方法：**
   - 重写 `makeSound()` 方法以打印 "Meow! Meow! Meow!"。
   - 添加一个方法 `purr()`，打印 "Purring softly!"。
 
 ### D. 创建带有 main 方法的 TestAnimal 类
+
 实例化 `Dog` 和 `Cat` 的对象。调用它们的方法来演示每个类的行为。
 
 ```java
@@ -1864,6 +1959,7 @@ public class TestAnimal {
 ```
 
 **预期输出：**
+
 ```
 Name: Buddy, Age: 3
 Woof! Woof!
@@ -1876,6 +1972,7 @@ Purring softly!
 根据带有属性列表和构造函数的 UML 图，编写该 UML 图的类版本并将其保存为 `Student.java`。除了 `Student.java` 之外，你还需要创建一个名为 `TestStudent.java` 的对应测试类，其中包含 `main` 方法。
 
 **Student**
+
 - `- name: String`
 - `- studentId: int`
 - `- course: String`
@@ -1886,9 +1983,6 @@ Purring softly!
 - `+ hashCode()`
 
 在 `main` 方法中，你需要创建两个名为 `s1` 和 `s2` 的 `Student` 对象。为两个对象提供相同的 `name`、`studentId` 和 `course`以便测试 `equals()` 和 `hashCode()` 方法。同样重写 `toString()` 方法以打印对象的标识。提供 setter 和 getter 方法。
-
-
-
 
 考虑以下代码段：
 
@@ -1909,91 +2003,99 @@ Purring softly!
 这里是一个包含额外方法的可用代码，可以更好地演示多态性。源代码 `Employee.java` 包含了所有三个类：`Employee` 类、`Manager` 类和 `Director` 类。
 
 ```java
-1 class Employee {
-2     String name;
-3     double salary;
-4     public String getDetails() {
-5         return "Name: " + name +
-6                   "\nSalary: " + salary;
-7     }
-8     public void work() {
-9             System.out.println("Work work work...");
-10    }
-11 }
-12 class Manager extends Employee {
-13     String department;
-14     public String getDetails() {
-15         return super.getDetails() +
-16                   "\nDepartment: " + department;
-17     }
-18     public void callMeeting() {
-19             System.out.println("Call Department Meeting..");
-20     }
-21 }
-22 class Director extends Manager {
-23     double carAllowance;
-24     public String getDetails() {
-25         return super.getDetails() +
-26                   "\nCar Allowance: " + carAllowance;
-27     }
-28     public void playGolf() {
-29             System.out.println("Play Golf..");
-30     }
-31 }
+class Employee {
+    String name;
+    double salary;
+    public String getDetails() {
+        return "Name: " + name +
+                  "\nSalary: " + salary;
+    }
+    public void work() {
+            System.out.println("Work work work...");
+    }
+}
+class Manager extends Employee {
+    String department;
+    public String getDetails() {
+        return super.getDetails() +
+                  "\nDepartment: " + department;
+    }
+    public void callMeeting() {
+            System.out.println("Call Department Meeting..");
+    }
+}
+class Director extends Manager {
+    double carAllowance;
+    public String getDetails() {
+        return super.getDetails() +
+                  "\nCar Allowance: " + carAllowance;
+    }
+    public void playGolf() {
+            System.out.println("Play Golf..");
+    }
+}
 ```
 
 结合 `Employee.java`，我们还有 `TestEmployee.java`。以下是代码：
 
 ```java
-1    public class TestEmployee {
-2        public static void main(String[] args)    {
-3             Employee e = new Employee();
-4             Employee m = new Manager();
-5             Employee d = new Director();
-6         
-7             doEmployeeStuff(e);      //一个 Employee 对象
-8             // doEmployeeStuff(m);      //一个 Manager 对象
-9             // doEmployeeStuff(d);      //一个 Director 对象
-10        }
-11
-12        public static void doEmployeeStuff(Employee e)
-13        {
-14            e.work();
-15            if (e instanceof Director)
-16            {
-17                Director d = (Director) e;
-18                d.callMeeting();
-19                d.playGolf();
-20            }
-21            else if (e instanceof Manager)
-22            {
-23                Manager m = (Manager) e;
-24                m.callMeeting();
-25            }
-26        }
-27    }
+public class TestEmployee {
+    public static void main(String[] args)    {
+         Employee e = new Employee();
+         Employee m = new Manager();
+         Employee d = new Director();
+     
+         doEmployeeStuff(e);      //一个 Employee 对象
+         // doEmployeeStuff(m);      //一个 Manager 对象
+         // doEmployeeStuff(d);      //一个 Director 对象
+    }
+
+    public static void doEmployeeStuff(Employee e)
+    {
+        e.work();
+        if (e instanceof Director)
+        {
+            Director d = (Director) e;
+            d.callMeeting();
+            d.playGolf();
+        }
+        else if (e instanceof Manager)
+        {
+            Manager m = (Manager) e;
+            m.callMeeting();
+        }
+    }
+}
 ```
 
 如果 `doEmployeeStuff()` 方法接收第 7 行的 `Employee` 对象，输出将是：
+
 `Work work...`
 
 如果使用第 8 行的 `doEmployeeStuff(m)` 更改为 `Manager` 对象，输出将是：
+
 `Work work...`
+
 `Call Department Meeting..`
 
 如果使用第 9 行的 `doEmployeeStuff(d)` 更改为 `Director` 对象，输出将是：
+
 `Work work...`
+
 `Call Department Meeting..`
+
 `Play Golf..`
 
 ## 4.3 异构数组
 
 在大多数编程语言中，数组本质上通常是同质的。同质数组始终具有相同类型的元素值。考虑这个代表我们喜喜咖啡的 `String` 对象数组。这是一个同质数组的示例。
+
 `String coffee[] = {"Espresso", "Java", "Mochachino"};`
 
 通过多态性，异构数组也是可能的。考虑之前图 4.1 中的层次结构。假设你有一个名为 `staff[]` 的 `Employee` 对象数组，你的老板希望你显示所有员工对象的详细信息，这些不同的员工对象，如 `Director`、`Manager`、`Employee` 和 `Engineer` 对象。
 
 考虑此代码段：
+
 ```java
 // 声明一个名为 staff 的 Employees 数组
 // 演示异构数组
@@ -2014,6 +2116,8 @@ for (int i = 0; i < staff.length; i++)
 ```
 
 这段示例代码通过调用每个对象的 `getDetails()` 方法来显示所有员工的详细信息。每当循环迭代，变量 `i` 从 0 开始增加，语句 `staff[i].getDetails()` 返回的值取决于 `staff[i]` 指向的对象。
+
+
 
 如果 `i = 0`，`staff[0]` 指向 `Manager` 对象，它将返回 `Manager` 对象的名称、工资和部门信息。
 
@@ -2086,9 +2190,6 @@ class Bird extends Animal {
 }
 ```
 
-
-
-
 ```java
 // my birdly methods
 public void layEggs() {
@@ -2096,8 +2197,8 @@ public void layEggs() {
 }
 
 public void buildNest() {
-    System.out.println("Build Nests");
-}
+        System.out.println("Build Nests");
+    }
 ```
 
 这里是一个演示如何在方法中使用多态参数的示例代码：
@@ -2135,6 +2236,7 @@ public class TestAnimal
 在第 9 行和第 10 行中，`doAnimalStuff()` 方法传递了一个狗对象和一个老鹰对象。
 
 9 `doAnimalStuff(dog);`
+
 10 `doAnimalStuff(eagle);`
 
 代码 `TestAnimal.java` 的第 12 行，方法 `doAnimalStuff(Animal a)` 接受任何类型的 `Animal` 对象作为其参数。你可以在该方法中传递一个 `Mammal` 对象或 `Bird` 对象。只要你传递的对象是 `Animal` 类的子类，这都是可能的。在这种情况下，`Mammal` 和 `Bird` 类都是 `Animal` 类的子类。这是一个如何使用多态参数的示例。
@@ -2164,6 +2266,7 @@ if (a instanceof Mammal) {
 Java 中的 `instanceof` 运算符用于检查对象是否属于特定类型。在 JDK 14 之前，每当使用 `instanceof` 时，通常需要紧跟一个显式的强制转换。这使得代码变得更长且更难以阅读。
 
 旧方法（Java 14 之前）：
+
 ```java
 if (obj instanceof String) {
     String text = (String) obj; // 手动转换
@@ -2174,42 +2277,53 @@ if (obj instanceof String) {
 从 JDK 14 开始（并在 JDK 16 中最终确定），Java 引入了对 `instanceof` 的模式匹配。此功能允许你在一步操作中检查类型并将结果赋值给变量。该变量会自动进行强制转换，你可以直接使用它。
 
 新方法（JDK 14+）：
+
 ```java
 if (obj instanceof String text) {
     System.out.println(text.toLowerCase());
 }
 ```
+
 在这里，`text` 被称为模式变量。如果条件为真，Java 在 `if` 块内部将其处理为正确的类型。
 
 为什么这样更好？
+
 - 代码更少：不需要单独的强制转换。
+
 - 意图更清晰：类型检查和变量创建在同一个地方完成完成。
+
 - 错误更少：减少了运行时发生强制转换错误的概率。
 
 这是一个匹配 `String` 的示例：
+
 ```java
 Object data = "Pattern Matching in Java";
 if (data instanceof String str) {
     System.out.println("Length: " + str.length());
 }
 ```
+
 如果 `data` 是一个 `String`，`str` 将被创建并可以直接使用，无需任何强制转换。
 
 这是另一个一个匹配自定义类的示例：
+
 ```java
 if (shape instanceof Circle c) {
     System.out.println("Radius: " + c.getRadius());
 }
 ```
+
 如果 `shape` 是一个 `Circle`，`c` 可以直接访问它的方法和字段。`instanceof` 的模式匹配使得 Java 中的类型检查变得更加简洁、可读且安全，特别是在处理复杂的对象层次结构时。
 
 我们还可以将模式匹配和逻辑运算符结合在一起使用：
+
 ```java
 Object obj = "Hello Java";
 if (obj instanceof String s && s.length() > 5) {
     System.out.println("String 's' is longer than" + "5 characters: " + s);
 }
 ```
+
 在这种情况下，类型模式为 `obj instanceof String s`。在确定 `obj` 是否为 `String` 实例之后，它将 `obj` 绑定到类型为 `String` 的新变量 `s`。然后，该类型检查使用 `&&`（短路与）运算符与新绑定的变量 `s` 的条件（`s.length() > 5`）相结合。这使得以更简洁的方式对对象执行类型检查和其他操作成为可能。
 
 ## 4.6 对象的强制转换
@@ -2237,9 +2351,6 @@ if (a instanceof Mammal m) {
 
 在对对象应用类型转换之前，应该先对引用变量进行测试，以防止运行时问题。这就是为什么使用 `if-else` 语句和 `instanceof` 运算符检查对象类型被认为是一种良好的代码习惯。
 
-
-
-
 Java 中的 `instanceof` 运算符用于检查一个对象是否是特定类的实例，或者是否实现了某个接口。它允许在执行特定于类型的操作之前，通过验证对象的类型来确保安全的类型转换。
 
 Java 中的对象转换（Casting）允许你将父类类型的对象引用转换为子类类型，从而访问子类特有的方法和字段。这种类型转换需要显式语法，并且必须使用 `instanceof` 运算符进行验证，以确保对象确实是目标子类的实例，从而避免遇到 `ClassCastException`。
@@ -2261,15 +2372,21 @@ class Employee extends Person {
 下列哪条语句（独立调用时）会导致编译错误？
 
 a. `Person p = new Employee();`
+
 b. `Employee e = new Person();`
+
 c. `Employee e = new Employee();`
+
 d. `Person p = new Person();`
 
 2. **为了判断是否可以将对象传递给方法的参数，我们应该寻找哪种类关系？**
 
 a. 'just-a'
+
 b. 'is-a'
+
 c. 'has-a'
+
 d. 'but-a'
 
 3. **考虑以下类声明：**
@@ -2284,22 +2401,31 @@ class Director extends Manager {}
 下列哪个声明是无效的？
 
 a. `Employee d = new Director();`
+
 b. `Manager m = new Person();`
+
 c. `Person p = new Manager();`
+
 d. `Manager md = new Director();`
 
 4. **下列哪条语句代表了从子类构造函数调用父类构造函数的有效格式？**
 
 a. `subclass(name, score);`
+
 b. `extends(name, score);`
+
 c. `super(name, score);`
+
 d. `superclass(name, score);`
 
 5. **如果 `jrStudent` 是 `Student` 的对象，下列哪个语句为 true？**
 
 a. `instanceof Student = jrStudent`
+
 b. `Student = instanceof jrStudent`
+
 c. `jrStudent instanceof Student`
+
 d. `Student instanceof jrStudent`
 
 6. **给定下方代码，提供了行号供参考。**
@@ -2319,39 +2445,56 @@ d. `Student instanceof jrStudent`
 以及四个声明：
 
 `SubClass doStuff(int x) { return new SubClass(); }`
+
 `SubClass doStuff(int x) { return new SuperClass(); }`
+
 `SuperClass doStuff(int x) { return new SubClass(); }`
+
 `SuperClass doStuff(int y) { return new SuperClass(); }`
 
 在第 8 行独立插入给定的声明中，有多少个允许代码编译？
 
 a. 1
+
 b. 2
+
 c. 3
+
 d. 4
 
 7. **关于多态（Polymorphism），以下哪项描述是正确的？**
 
 a. 多态是指通过声明私有访问权限的变量并创建公共方法来设置和获取私有变量的值，从而从用户处隐藏实现细节的过程。
+
 b. 多态是将数据（变量）和作用于数据的代码（方法）封装成一个单一单元的机制。
+
 c. 多态允许我们复用父类的属性和方法。
+
 d. 多态使用来自父类或当前类中的方法来执行不同的任务。这允许我们以不同的方式执行单一操作。
 
 8. **考虑包含方法 `togglePower()` 的类 `Device`。`Device` 类有一个子类 `Tablet`，该类拥有 `browse()` 方法。`SmartPhone` 类有一个方法 `makeCall()`，并且是 `Device` 类的子类。下列哪个描述是不正确的？**
 
 a. `SmartPhone "is-a" Tablet`
+
 b. `SmartPhone "is-a" Device`
+
 c. `Tablet "is-a" Device`
+
 d. `Tablet "has-a" togglePower()`
 
 9. **考虑类 `Employee`，它有一个子类 `Manager`，而 `Director` 类又是 `Manager` 的子类。下列哪个对象实例化是不允许的？**
 
 a. 使用 `Manager` 对象实例的 `Director d` 引用类型。
+
 b. 使用 `Manager` 对象实例的 `Employee e` 引用类型。
+
 c. 使用 `Director` 对象实例的 `Employee e` 引用类型。
+
 d. 使用 `Director` 对象实例的 `Manager m` 引用类型。
 
 10. **给定：**
+
+
 
 ```java
 class A {
@@ -2388,17 +2531,17 @@ public class TestClass {
 输出是什么？
 
 a. Class B, Class C
+
 b. Class A, Class B
+
 c. Class A, Class C
+
 d. Class C, Class B
 
 **多选题答案键**
 
 | 1: b | 2: b | 3: b | 4: c | 5: c | 6: c | 7: d | 8: a | 9: a | 10: c |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-
-
-
 
 - 编写一个 `printAnimalSound` 方法，接收一个 `Animal` 引用作为参数并调用 `makeSound` 方法。
 - 创建一个 `Animal` 对象的列表，包含 `Dog`、`Cat` 和 `Bird` 的实例。
@@ -2448,12 +2591,14 @@ public class AnimalKingdom {
 ```
 
 任务：
+
 - 按照描述实现 `Animal`、`Dog`、`Cat` 和 `Bird` 类。
 - 实现 `printAnimalSound` 方法以演示多态。
 - 创建一个 `Animal` 对象的数组并用 `Dog`、`Cat` 和 `Bird` 的实例填充。
 - 遍历数组，对每种动物调用 `printAnimalSound` 方法和 `move` 方法，以演示多态和方法重写。
 
 预期输出：
+
 ```
 Bark
 Dog is running
@@ -2464,11 +2609,13 @@ Bird is flying
 ```
 
 # 第 5 章
+
 # 其他类特性
 
 ![](img/klo.jpg)
 
 ## 核心学习目标
+
 - 理解并使用静态成员、包装类和静态导入。
 - 将 `final` 关键字应用于变量、方法和类。
 - 定义并使用枚举（enums）来表示一组预定义的常量。
@@ -2525,9 +2672,6 @@ public class StaticExample1 {
 ## 5.3 Math 类和 System 类
 
 `Math` 和 `System` 类是使用 `static` 的示例。
-
-
-
 
 ```java
 import static <pkg_list>.<class_name>.<member_name>;
@@ -2661,13 +2805,11 @@ public class Student {
 }
 ```
 
-
-
-
-
 `record` 关键字在 Java 14 中作为“预览性特性”引入，并在 Java 16 中作为固定特性包含。`record` 关键字用于一个意图仅拥有在构造函数设置的 final 变量的类。
 
 在 Java 14 之前，我们可以使用以下代码：
+
+
 
 ```java
 // TestPoint.java
@@ -2720,7 +2862,9 @@ public class TestPoint {
     }
 }
 ```
+
 这段 Java 14 之前的代码可以编译并运行，输出如下：
+
 ```
 Point 1 is at: 0 and 0
 Point 2 is at: 10 and 20
@@ -2731,6 +2875,7 @@ Point 3 is at: 10 and 20
 Comparing p1 and p2: false
 Comparing p2 and p3: true
 ```
+
 由于 `Point` 是一个用户定义的类，因此需要从 `Object` 类重写 `equals()` 和 `toString()` 方法。从 Java 14 开始，我们可以使用 `record` 特性编写相同的代码，它会隐式地重写来自 `Object` 类的 `equals()` 和 `toString()` 方法实现。这个版本更短且更容易编写。
 
 ```java
@@ -2756,15 +2901,21 @@ class TestPoint {
     }
 }
 ```
+
 此版本可以使用 `--enable-preview` 和 `-source` 选项进行编译。使用 Java 14 编译：
+
 ```bash
 javac --enable-preview -source 14 TestPoint.java
 ```
+
 成功编译后，我们通过 Java 14 执行程序，并在执行期间使用虚拟机选项 `--enable-preview`：
+
 ```bash
 java --enable-preview TestPoint
 ```
+
 执行时，这是预期的输出：
+
 ```
 Point 1 is at: 0 and 0
 Point 2 is at: 10 and 20
@@ -2775,12 +2926,14 @@ Point 3 is at: 10 and 20
 Comparing p1 and p2: false
 Comparing p2 and p3: true
 ```
+
 请注意，Java 14 的代码比 Java 14 之前的代码要短得多。然而，输出是相同的。使用 Java 16 及更高版本进行编译，可以直接编译：
+
 ```bash
 javac TestPoint.java
 ```
 
-## 5.8 的 enum 关键字
+## 5.8 `enum` 关键字
 
 在 Java 1.5 发布之前，枚举（enumeration）的概念已经存在，但 Java 有的是另一种处理方式。`enum` 关键字用于定义一种称为枚举的特殊数据类型，它表示一组固定的常量，例如星期几或方向。
 
@@ -2804,6 +2957,7 @@ class InnerPlanets {
     }
 }
 ```
+
 `enum` 开始作为一种新语言特性引入，允许声明一组常量值。可以使用 `enums` 的示例包括：星期、每天的小时、月份，甚至是扑克牌的花色和点。这些示例总有一组固定的值。`enum` 内部声明的所有值都是常量，因此通常全大写写。它允许以描述性的方式声明一组值。这里是使用 `enum` 的示例代码：
 
 ```java
@@ -2826,6 +2980,7 @@ class TestInnerPlanets {
     }
 }
 ```
+
 在旧的枚举中，编译时没有进行类型安全检查。通过这个 Java 5 特性，它限制了编译时检查的值范围，从而消除了 `switch` 中 `default` 语句的需求。枚举类型也可以在类内部声明，例如所示：
 
 ```java
@@ -2841,12 +2996,11 @@ class TestInnerPlanets {
 }
 ```
 
-
-
+## `abstract` 关键字
 
 `abstract` 关键字只能用于类和方法。`abstract` 关键字意味着“没有具体的实现”；因此，抽象方法在其方法体中没有任何实现，只有方法签名。按照规则，如果一个类包含抽象方法，则该类本身也必须声明为抽象类。
 
-如果一个类被声明为 `abstract`，则你无法从抽象类实例化对象。抽象类充当模板，强制其子类重写那些在所有动物子类中都应该存在的方法。在我们的示例中，抽象类 `Animal` 包含了既抽象方法和非抽象方法，这些方法必须在所有类型的动物对象中存在。所有动物都会进食、呼吸和睡眠，但这些方法的实现方式不同于每种类型的动物。因此，我们将 `eat`、`breathe` 和 `sleep` 方法声明为抽象方法，强制 `Animal` 类的所有子类都拥有这些方法的具体实现。另一方面，`play` 方法是非抽象方法，并且具有具体的实现（也称为方法体）。重写 `play` 方法是可选的，并不是强制要求的，因为它是一个非抽象方法。
+如果一个类被声明为 `abstract`，则你无法从抽象类实例化对象。抽象类充当模板，强制其子类重写那些在所有动物子类中都应该存在的方法。在我们的示例中，抽象类 `Animal` 包含了既抽象方法和非抽象方法，这些方法必须在所有类型的动物对象中存在。所有动物都会进食、呼吸和睡眠，但这些方法的实现方式不同于每种类型的动物。因此，我们将 `eat()`、`breathe()` 和 `sleep()` 方法声明为抽象方法，强制 `Animal` 类的所有子类都拥有这些方法的具体实现。另一方面，`play()` 方法是非抽象方法，并且具有具体的实现（也称为方法体）。重写 `play()` 方法是可选的，并不是强制要求的，因为它是一个非抽象方法。
 
 ### 图 5.2 抽象类 Animal 类图
 
@@ -2959,6 +3113,8 @@ public class TestAnimal {
 
 考虑修改后的测试类：
 
+
+
 ```java
 // TestAnimal2.java
 public class TestAnimal2 {
@@ -3016,15 +3172,8 @@ interface I7 { public final double pi = 3.14; }
 ```java
 <modifier> interface <name> [extends <superInterface>*]
 {
-```
-
-
-
-
-
-```java
-<member_variables>*
-<member_methods>*
+    <member_variables>*
+    <member_methods>*
 }
 ```
 
@@ -3040,7 +3189,7 @@ interface I3 extends I1, I2 {
 }
 ```
 
-图 5.4 FlyingObject 接口
+### 图 5.4 FlyingObject 接口
 
 ![image](img/fig5-4.jpg)
 
@@ -3087,7 +3236,7 @@ public class Airplane implements FlyingObject {
 
 考虑下方的图，`Bird` 类扩展了 `Animal` 类同时实现了 `FlyingObject` 接口。由于 `FlyingObject` 接口中的所有方法都是抽象方法，`Bird` 类需要重写 `takeOff()`、`land()` 和 `fly()` 方法。抽象类 `Animal` 也是如此，`Bird` 类也应该重写抽象方法 `eat()`、`breathe()` 和 `sleep()`。对于 `play()` 方法，重写它是可选的，因为它是一个具体方法而不是抽象方法。此外，`Bird` 类还可以声明自己特有的方法，这些方法仅在 `Bird` 对象中存在，如 `feedYoung()` 和 `buildNest()`。
 
-图 5.5 在 Java 中用于多继承的 FlyingObject 接口
+### 图 5.5 在 Java 中用于多继承的 FlyingObject 接口
 
 ![image](img/fig5-5.jpg)
 
@@ -3224,10 +3373,6 @@ public class DefaultInterface implements MyInterface {
 }
 ```
 
-
-
-
-
 `Java` 接口的优势之一是能够模拟多重继承，而不会出现实现父类中同时存在的方法时带来的缺陷。
 
 如果同一个类实现的两个接口中存在两个相同的默认方法，在这种情况下，可以使用 `InterfaceName.super.defaultMethod()` 语法。
@@ -3266,6 +3411,7 @@ public class DefaultInterfaceMultipleInheritance implements MyInterface1, MyInte
 ```
 
 执行时，我们将得到以下输出：
+
 ```
 Inside MyInterface 1
 Inside MyInterface 2
@@ -3307,6 +3453,7 @@ public class StaticInterface implements MyInterface {
 ```
 
 输出将是：
+
 ```
 Inside doStuff..
 Inside doSomething..
@@ -3319,6 +3466,8 @@ Inside doSomething..
 接口中的私有方法允许你在同一个接口的默认方法和静态方法之间共享代码，而无需将这些辅助方法暴露给实现类。
 
 这是一个示例：
+
+
 
 ```java
 // MyInterface.java
@@ -3360,7 +3509,7 @@ public class StaticInterface implements MyInterface {
 }
 ```
 
-在此代码中，接口 `MyInterface` 展示了如何使用私有方法支持接口内部的代码复用（这是 `JDK 9` 中添加的功能）。接口定义了三种方法：抽象方法 (`doStuff()`)、静态方法 (`doSomething()`) 和默认方法 (`doMore()`）。静态方法和默认方法都调用了私有辅助方法 `logCommon()`，该方法会打印日志消息。这个私有方法对实现类 (`StaticInterface`）不可见，但它允许在 `doSomething()` 和 `doMore()` 之间共享公共逻辑，而无需重复代码。在 `main` 方法中，创建了一个 `StaticInterface` 的对象。调用 `si.doStuff()` 运行类自身的实现，而 `si.doMore()` 执行接口中定义的默认方法。同时，`MyInterface.doSomething()` 运行接口的静态方法。默认方法和静态方法都成功复用了来自私有方法的隐藏代码，展示了接口中的私有方法如何改进代码组织和可维护性。
+在此代码中，接口 `MyInterface` 展示了如何使用私有方法支持接口内部的代码复用（这是 `JDK 9` 中添加的功能）。接口定义了三种方法：抽象方法 (`doStuff()`)、静态方法 (`doSomething()`) 和默认方法 (`doMore()`)。静态方法和默认方法都调用了私有辅助方法 `logCommon()`，该方法会打印日志消息。这个私有方法对实现类 (`StaticInterface`) 不可见，但它允许在 `doSomething()` 和 `doMore()` 之间共享公共逻辑，而无需重复代码。在 `main` 方法中，创建了一个 `StaticInterface` 的对象。调用 `si.doStuff()` 运行类自身的实现，而 `si.doMore()` 执行接口中定义的默认方法。同时，`MyInterface.doSomething()` 运行接口的静态方法。默认方法和静态方法都成功复用了来自私有方法的隐藏代码，展示了接口中的私有方法如何改进代码组织和可维护性。
 
 ## 5.15 密封类 (JDK 17+)
 
@@ -3376,7 +3525,9 @@ public class StaticInterface implements MyInterface {
 
 密封类或接口允许你严格定义哪些类可以扩展或实现它。
 
-`sealed interface Shape permits Circle, Rectangle {}`
+```java
+sealed interface Shape permits Circle, Rectangle {}
+```
 
 这告诉编译器只有 `Circle` 和 `Rectangle` 被允许实现 `Shape` 接口。没有其他类可以实现 `Shape`，这有助于编译器更好地对程序进行推理。
 
@@ -3410,22 +3561,19 @@ public class Main {
 }
 ```
 
-
-
-
-因为编译器知道 `Shape` 的所有可能的子类型，它可以验证完备性。这意味着如果逻辑中缺失了任何子类型，编译器都可以向你发出——就像对枚举（enums）使用 `switch` 语句的工作一样。
+因为编译器知道 `Shape` 的所有可能的子类型，它可以验证完备性。这意味着如果逻辑中缺失了任何子类型，编译器都可以向你发出警告——就像对枚举（enums）使用 `switch` 语句的工作一样。
 
 ### 为什么这很有用？
 
-● 编译时安全：编译器知道所有允许的子类型，因此它可以捕获缺失的情况。
-● 更好的可读性：更少的类型转换和更清晰的控制流。
-● 提高可维护性：添加新的允许子类将导致模式匹配中出现编译错误，直到对其进行处理为止。
+- 编译时安全：编译器知道所有允许的子类型，因此它可以捕获缺失的情况。
+- 更好的可读性：更少的类型转换和更清晰的控制流。
+- 提高可维护性：添加新的允许子类将导致模式匹配中出现编译错误，直到对其进行处理为止。
 
 所有允许的子类必须是 `final` 或 `sealed`。
 
 ## 5.16 函数式接口与 Lambda (->) 运算符
 
-函数式接口本质上是一个只声明了一个抽象方法的接口。在接口声明之之上，放置了 `@FunctionalInterface` 注解，用来指示该接口旨在作为函数式接口。
+函数式接口本质上是一个只声明了一个抽象方法的接口。在接口声明之上，放置了 `@FunctionalInterface` 注解，用来指示该接口旨在作为函数式接口。
 
 注解是元数据的形式，可以提供有关代码的额外信息，而不影响其行为。注解可以用于向编译器提供指令、定义配置，或在运行时处理期间提供帮助。在这个示例中，`@FunctionalInterface` 注解告诉编译器该接口仅包含一个方法，使其成为一个 `FunctionalInterface`。
 
@@ -3488,17 +3636,19 @@ public class LambdaAnotherExample {
 ```
 
 这将带我们得到输出：
+
 `Joe, next year you will be 31 years old.`
 
-![](img/note.jpg) 章节总结`、`hashCode()` 和 `toString()`。
-● Java 中的 `enum` 关键字用于定义一组命名常量，代表固定值的集合。
-● Java 中的 `abstract` 关键字用于定义无法实例化或直接实现的类和方法。
-● 在 Java 中，`interface` 关键字用于声明一个约定，允许类实现某些方法而不指定它们应该如何实现。接口允许多重继承的概念。
-● 在 Java 8 中，接口中引入 `default` 方法允许在接口内部包含方法实现，提供了一种在破坏现有实现的情况下添加新功能的方法。
-● Java 8 的另一个语言特性更新是接口现在可以包含 `static` 方法，这些是属于接口本身而非任何实现类的工具方法。
-● 函数式接口（Functional Interface）是一个包含恰好一个抽象方法的接口。它们用于将函数表示为对象。Java 中的 lambda `(->)` 运算符用于快速、简洁地定义匿名函数，使得在不需要冗长的匿名内部类的情况下更容易实现 `Functional Interfaces`。这种组合使得 Java 能够更具表达力的函数式风格编程。
+![](img/note.jpg) **章节总结**
 
-![](img/Quiz_Icon.jpg) 多选题
+- Java 中的 `enum` 关键字用于定义一组命名常量，代表固定值的集合。
+- Java 中的 `abstract` 关键字用于定义无法实例化或直接实现的类和方法。
+- 在 Java 中，`interface` 关键字用于声明一个约定，允许类实现某些方法而不指定它们应该如何实现。接口允许多重继承的概念。
+- 在 Java 8 中，接口中引入 `default` 方法允许在接口内部包含方法实现，提供了一种在破坏现有实现的情况下添加新功能的方法。
+- Java 8 的另一个语言特性更新是接口现在可以包含 `static` 方法，这些是属于接口本身而非任何实现类的工具方法。
+- 函数式接口（Functional Interface）是一个包含恰好一个抽象方法的接口。它们用于将函数表示为对象。Java 中的 lambda `(->)` 运算符用于快速、简洁地定义匿名函数，使得在不需要冗长的匿名内部类的情况下更容易实现 `Functional Interfaces`。这种组合使得 Java 能够更具表达力的函数式风格编程。
+
+![](img/Quiz_Icon.jpg) **多选题**
 
 1. 给定以下代码段：
 
@@ -3511,34 +3661,22 @@ class MyString extends String {
 `String` 类是一个 `final` 类。关于此代码段，以下陈述哪一个**不正确**？
 
 a. 此代码将通过编译并继承 `String` 类的所有内容。
-
-
-
-
 b. `MyString` 类可以继承任何类，只要它不是一个 `final` 类。
-
 c. `String` 类是一个 `final` 类，因此不能被继承。
-
 d. `MyString` 类将导致编译错误。
 
 2. 关于抽象类（abstract classes），以下哪项陈述是**不正确**的？
 
 a. 你可以声明一个顶层的 `final` 抽象类。
-
 b. 你可以声明一个只包含抽象方法的抽象类。
-
 c. 抽象类不能被实例化。
-
 d. 你可以声明一个包含普通（非抽象）方法的抽象类。
 
 3. 声明一个不返回内容且可以在任何地方访问的抽象方法 `eat()` 的正确方式是哪个？
 
 a. `public abstract void eat();`
-
 b. `public abstract Object eat() { return null; }`
-
 c. `public abstract void eat() { }`
-
 d. `public abstract void eat() { return null; }`
 
 4. 假定以下接口代码：
@@ -3555,13 +3693,9 @@ public interface MyInterface {
 代码的哪行会导致编译错误？
 
 a. 第 1 行会导致编译错误。
-
 b. 第 2 行会导致编译错误。
-
 c. 第 3 行会导致编译错误。
-
 d. 第 4 行会导致编译错误。
-
 e. 整个代码没有错误。
 
 5. 假定以下代码：
@@ -3575,40 +3709,29 @@ class PetBird extends Bird {}
 以下哪个声明会导致编译错误？
 
 a. `Bird bb = new Bird();`
-
 b. `Bird bf = new Flyable();`
-
 c. `PetBird pp = new PetBird();`
-
 d. `Flyable fp = new PetBird();`
 
 6. 遵循 Java 命名规范，哪种声明常量 String `birthday` 最合适？
 
 a. `final String birth_day = "June 1, 2000";`
-
 b. `final String birthDay = "June 1, 2000";`
-
 c. `final String BIRTHDAY = "June 1, 2000";`
-
 d. `final String BirthDay = "June 1, 2000";`
 
 7. 你称呼内部应该只有一个方法的接口为什么什么？
 
 a. 单例接口 (Singleton Interface)
-
 b. 单接口 (Mono Interface)
 c. 唯一接口 (Singular Interface)
-
 d. 函数式接口 (Functional Interface)
 
 8. 给定以下常量，哪一个不适合声明为枚举（`enum`）？
 
 a. 年份：一月到十二月
-
 b. 花牌：方片、红桃、黑桃、梅花
-
 c. 星期：星期一到星期日
-
 d. 你的朋友的名字：Lawrence, Percy, Jerry 和 Eric
 
 9. 假定以下声明所有不同咖啡尺寸的代码，你如何将值赋值给变量 `size`？
@@ -3634,24 +3757,18 @@ public class CoffeeTest1 {
 以下哪个代码插入 `main` 方法的注释中后，将使代码正常运行？
 
 a. `drink.size = SHORT;`
-
 b. `drink.size = CoffeeSize.0;`
-
 c. `drink.size = Coffee.SHORT;`
-
 d. `drink.size = CoffeeSize.SHORT;`
 
 10. 以下哪项**不是**一个包装类（Wrapper Class）？
 
 a. Boolean
-
 b. Character
-
 c. String
-
 d. Integer
 
-多选题答案页
+**多选题答案页**
 
 | 1 – a | 2 – a | 3 – a | 4 – b | 5 – b |
 | 6 – c | 7 – d | 8 – d | 9 – d | 10 – c |
@@ -3663,59 +3780,89 @@ d. Integer
 创建一个程序，通过命令行接收数值输入。根据输入的数量，程序将决定它是哪种形状。命令行中的所有输入都应该是大于 0 的整数值。对于单个输入，它是圆形的；对于两个输入，它是正方形或矩形；对于三个输入，它是三角形。程序将显示形状类型、细节、周长和面积。确保你遵循给定的 UML 图。
 
 注意：
+
 `length > width`
 
 你需要根据给定的 UML 创建以下类：
+
 `Shapes.java`, `Circle.java`, `Rectangle.java`, `Square.java` 和 `Triangle.java`。你还被要求创建一个名为 `TestShapes.java` 的测试类，其中包含 `main` 方法，该方法将被编译并运行，且应通过命令行接收值。
 
 以下是运行输出示例：
 
-运行示例 1：
-`java TestShapes 15`
+**运行示例 1：**
+
+```text
+java TestShapes 15
+```
+
 Type: Circle
 Radius: 15
 Perimeter: 94.2
 Area: 706.5
 
-运行示例 2：
-`java TestShapes 12 24`
+**运行示例 2：**
+
+```text
+java TestShapes 12 24
+```
+
 Type: Rectangle
 Length: 24
 Perimeter: 72
 Area: 288
 
-运行示例 3：
-`java TestShapes 24 12`
+**运行示例 3：**
+
+```text
+java TestShapes 24 12
+```
+
 Type: Rectangle
 Length: 24
 Perimeter: 72
 Area: 288
 
-运行示例 4：
-`java TestShapes 12 12`
+**运行示例 4：**
+
+```text
+java TestShapes 12 12
+```
+
 Type: Square
 Side: 12
 Perimeter: 48
 Area: 144
 
-运行示例 5：
+**运行示例 5：**
+
+
+
 `java TestShapes 9 15 12`
+
 Type: Triangle
+
 Side1: 9
+
 Side2: 15
+
 Side3: 12
+
 Perimeter: 36
+
 Area: 54
 
 ### 编码任务 2：抽象类与接口
 
 目标：
+
 此任务旨在测试学生对 Java 中 `abstract` 关键字和接口的理解。学生需要设计并实现一个模拟不同类型内容的内容管理系统 (CMS)。
 
 要求：
 
-抽象类：Content
+#### 抽象类：Content
+
 创建一个名为 `Content` 的抽象类，包含：
+
 - 两个属性：`title` (String) 和 `author` (String)。
 - 一个初始化 `title` 和 `author` 的构造函数。
 - 两个抽象方法：
@@ -3724,43 +3871,51 @@ Area: 54
 - 一个具体方法：
     - `void publish()` - 该方法应打印内容已发布的消息。
 
-接口：
+#### 接口
+
 创建两个接口：
+
 - `Readable`：定义方法 `void read()`，该方法由可以阅读的内容类型实现。
 - `Watchable`：定义方法 `void watch()`，该方法由可以观看的内容类型实现。
 
-内容的类：
+#### 内容的类
 
-Article
+##### Article
+
 该类继承 `Content` 并实现 `Readable` 接口。
+
 - 添加一个属性 `wordCount` (int)。
 - 实现 `displayInfo()` 方法，显示 `title`、`author` 和 `wordCount`。
 - 实现 `calculateReadingTime()` 方法，根据每分钟 200 字的平均阅读速度计算阅读时间。
 - 实现 `read()` 方法，打印正在阅读文章的消息。
 
-Video
+##### Video
+
 该类继承 `Content` 并实现 `Watchable` 接口。
+
 - 添加一个属性 `duration` (double)，表示视频时长（单位：分钟）。
 - 实现 `displayInfo()` 方法，显示 `title`、`author` 和 `duration`。
 - 实现 `calculateReadingTime()` 方法，返回时长（因为消耗视频的时间就是其时长）。
 - 实现 `watch()` 方法，打印正在观看视频的消息。
 
-Podcast
+##### Podcast
+
 该类继承 `Content` 并同时实现 `Readable` 和 `Watchable` 接口。
+
 - 添加属性 `duration` (double) 和 `transcript` (boolean)，表示是否有转稿。
 - 实现 `displayInfo()` 方法，显示 `title`、`author`、`duration` 以及是否有转稿。
 - 实现 `calculateReadingTime()` 方法，根据时长（如果观看的话）或根据字数（如果转稿可用，则假设一个固定的字数）来计算时间。
 - 根据播客是否有转稿，实现对应的 `read()` 和 `watch()` 方法。
 
-
-
+#### Main 方法要求
 
 - 在 `main` 方法中，创建 `Article`、`Video` 和 `Podcast` 的实例。
 - 使用 `displayInfo()` 显示它们的信息。
 - 根据需要演示调用 `read()` 或 `watch()` 方法。
 - 发布每种内容类型。
 
-示例输出：
+#### 示例输出
+
 ```
 Article: "Learn Java The Right Way", by Dr. Lawrence Decamora
 Word Count: 1200
@@ -3773,6 +3928,7 @@ Duration: 30.0 minutes
 Estimated Watching Time: 30.0 minutes
 Watching Video: "Java Tutorial"
 Publishing content: Java Tutorial
+
 Podcast: "Java Basics", by John Doe
 Duration: 20.0 minutes
 Transcript Available: true
@@ -3832,6 +3988,7 @@ Publishing content: Java Basics
 ```
 
 通过命令行的运行时执行：
+
 ```bash
 java AddArgs1 10 20 30 40
 Sum: 100
@@ -3848,6 +4005,7 @@ Exception in thread "main" java.lang.NumberFormatException: For input string: "2
 ```
 
 当抛出异常且未处理时，会出现一个堆栈跟踪（stack trace）。堆栈跟踪告诉用户有关抛出异常的信息。堆栈跟踪的最后一行是：
+
 `at AddArgs1.main(AddArgs1.java:8)`
 
 这意味着异常源于源代码 `AddArgs1.java` 的第 8 行，位于 `main` 方法中。
@@ -3881,11 +4039,11 @@ Exception in thread "main" java.lang.NumberFormatException: For input string: "2
 20            // Exception 对象到第 15 行
 21            throw new Exception();
 22    }
-Wait,, the the numbers:
 23 }
 ```
 
 可能的输出是：
+
 ```
 Exception in thread "main" java.lang.Exception
 at SomeClass.method2(SomeClass.java:21)
@@ -3893,108 +4051,7 @@ at SomeClass.method1(SomeClass.java:15)
 at SomeClass.main(SomeClass.java:9)
 ```
 
-[/content] (注：抱歉，我似乎在上面的回复中误操作了翻译任务的结束逻辑，以下是针对您提供文本的正确翻译：)
 
-[content]
-
-- 在 `main` 方法中，创建 `Article`、`Video` 和 `Podcast` 的实例。
-- 使用 `displayInfo()` 显示它们的信息。
-- 根据需要演示调用 `read()` 或 `watch()` 方法。
-- 发布每种内容类型。
-
-示例输出：
-```
-Article: "Learn Java The Right Way", by Dr. Lawrence Decamora
-Word Count: 1200
-Estimated Reading Time: 6.0 minutes
-Reading Article: "Learn Java The Right Way"
-Publishing content: Learn Java The Right Way
-
-Video: "Java Tutorial", by Michelle Decamora
-Duration: 30.0 minutes
-Estimated Watching Time: 30.0 minutes
-Watching Video: "Java Tutorial"
-Publishing content: Java Tutorial
-Podcast: "Java Basics", by John Doe
-Duration: 20.0 minutes
-Transcript Available: true
-Estimated Reading Time: 5.0 minutes
-Reading Podcast: "Java Basics"
-Watching Podcast: "Java Basics"
-Publishing content: Java Basics
-```
-
-# 第 6 章：异常与断言
-
-![](img/klo.jpg)
-
-## 核心学习目标
-
-- 区分 Java 中的异常（exceptions）和错误（errors）。
-- 使用 `try-catch` 和 `finally` 块优雅地处理异常。
-- 利用多个 `catch` 块和参数化 `try` 来处理不同的异常类型。
-- 应用“处理或声明”（handle-or-declare）规则并在遵守异常条件的同时重写方法。
-- 为特定的应用程序场景创建自定义 `Exception` 子类。
-- 在开发过程中通过断言检查（assertion checks）验证假设和不变性。
-
-在 Java 编程中，构建健壮可靠的应用程序对于提供流畅无中断的用户体验至关重要。为了实现这一点，Java 提供了强大的机制——异常和断言——帮助你优雅地处理意外情况并验证代码的假设。异常处理允许你响应问题（如无效输入或资源不可用），而不会导致应用程序崩溃，从而使你的代码更具韧性，并且更容易调试和维护。另一方面，断言在开发期间提供了额外的安全保障，允许你检查条件和不变性，以帮助及早发现 Bug 并避免未来的问题。在本章中，我们将探索 Java 中的 `Exception` 和 `Error` 层次结构、`try-catch` 块、`finally` 和 `throw` 的工作原理、何时以及如何创建自定义异常，以及如何有效使用断言来产生更可靠、健壮的代码。
-
-## 6.1 异常类与错误类
-
-`Exception` 是代码序列在编译时或运行时出现的异常状态的对象的化表示。`Exception` 对象处理意外情况，如网络失败、文件名拼写错误或缺失、打印机突然离线等。`Exception` 类是 `Throwable` 类的子类，表示可以被捕获和处理的错误。
-
-`Error` 类是 `Throwable` 类的子类，代表 Java 运行时环境中的严重问题，应用程序通常不进行处理。
-
-异常可以分为两类：编译时可能遇到的检查异常（checked exception）和运行时可能遇到的非检查异常（unchecked exception）。非检查异常通常被称为 `RuntimeException`。
-
-### 6.1.1 为什么我们需要异常处理？
-
-以下是需要异常处理的原因：
-
-1. 告知用户（用通俗的话说）程序崩溃期间发生了什么。
-2. 允许用户在程序崩溃期间保存所有（如果不是大部分）未保存的数据。
-3. 允许用户优雅地退出程序。
-
-让我们看看如果抛出异常且未处理，程序崩溃会什么样。这里有一个名为 `AddArgs1.java` 的示例代码，它通过命令行接收整数值，将其相加并显示和。
-
-```java
-// AddArgs1.java
-1 public class AddArgs1 {
-2
-3     public static void main(String[] args) {
-4
-5             int sum = 0;
-6             for (String arg : args) {
-7
-8                     sum += Integer.parseInt(arg);
-9             }
-10            System.out.println("Sum: " + sum);
-11    }
-12 }
-```
-
-通过命令行的运行时执行：
-```bash
-java AddArgs1 10 20 30 40
-Sum: 100
-```
-
-输出看起来良好，因为通过命令行传递的值都是整数。现在让我们尝试另一次运行时。这次，我们在命令行中包含非整数值。
-
-```bash
-java AddArgs1 10 2.2 thirty 40
-Exception in thread "main" java.lang.NumberFormatException: For input string: "2.2" at java.lang.NumberFormatException.forInputString(Unknown Source)
-    at java.lang.Integer.parseInt(Unknown Source)
-    at java.lang.Integer.parseInt(Unknown Source)
-    at AddArgs1.main(AddArgs1.java:8)
-```
-
-当抛出异常且未处理时，会出现一个堆栈跟踪（stack trace）。堆栈跟踪告诉用户有关抛出异常的信息。堆栈跟踪的最后一行是：
-`at AddArgs1.main(AddArgs1.java:8)`
-
-这意味着异常源于源代码 `AddArgs1.java` 的第 8 行，位于 `main` 方法中。
-
-## 6.2 Java 的方法：调用栈机制
 
 如果一个方法无法以通常的方式完成任务，Java 允许它有一个替代的退出路径。它并不试图从发生异常对象的方法返回值，而是“抛出”一个封装了错误信息的对象。然后 Java 开始寻找可以处理该错误的处理程序。
 
@@ -4028,6 +4085,7 @@ Wait,, the the numbers:
 ```
 
 可能的输出是：
+
 ```
 Exception in thread "main" java.lang.Exception
 at SomeClass.method2(SomeClass.java:21)
@@ -4041,39 +4099,40 @@ at SomeClass.main(SomeClass.java:9)
 
 ![](img/fig6-1.jpg)
 
-这里是 Java 调用栈机制的清晰解释，结合了图 6.1 和示例代码 SomeClass.java。
+这里是 Java 调用栈机制的清晰解释，结合了图 6.1 和示例代码 `SomeClass.java`。
 
 图像中的数字与方法调用和异常传播流程直接对应：
 
-步骤 1 — 首先调用 `main()`
+### 步骤 1 — 首先调用 `main()`
+
 Java 虚拟机从 `main()` 开始执行。
 
-步骤 2 — `main()` 调用 `method1()`
+### 步骤 2 — `main()` 调用 `method1()`
+
 栈增加一个 `method1()` 的新栈帧。
 
-步骤 3 — `method1()` 然后调用 `method2()`
+### 步骤 3 — `method1()` 然后调用 `method2()`
+
 栈再次增加另一个 `method2()` 的栈帧。
 
-步骤 4 — 在 `method2()` 内部抛出异常
+### 步骤 4 — 在 `method2()` 内部抛出异常
+
 `throw new Exception()`
 
-步骤 5 — 异常返回到 `method1()`
+### 步骤 5 — 异常返回到 `method1()`
+
 `method1()` 没有 `try-catch` 块来处理它；因此，它退出并从栈中移除。
 
-
-
-
-
-```
+```java
 // 此处未捕获异常
 ```
 
-## 步骤 6 — 异常到达 main()
+### 步骤 6 — 异常到达 `main()`
 
 * `Exception` 在 `main()` 中也没有被处理。
 * 因此，`main` 栈帧退出，程序异常终止。
 
-```
+```java
 // 此处同样未捕获异常
 ```
 
@@ -4252,17 +4311,9 @@ public class TestFinally2 {
                 System.out.println("inside the finally block..");
             }
         }
+        System.out.println("after the loop..");
     }
 }
-```
-
-
-
-
-```java
-23    System.out.println("after the loop..");
-24 }
-25 }
 ```
 
 如果你编译并运行此代码，将得到以下输出：
@@ -4301,22 +4352,20 @@ try {
 
 ![image](img/fig6-2.jpg)
 
-[表 6.1] 提供了最常用异常列表及其描述。
-
 ### 表 6.1 常用异常及其描述
 
 | 异常名称 | 描述 |
 | --- | --- |
-| NullPointerException | 当应用程序尝试访问空对象的方法或字段时抛出。 |
-| ArrayIndexOutOfBoundsException | 使用非法索引访问数组时抛出。 |
-| ArithmeticException |发生非法算术运算（如除以零）时抛出。 |
-| ClassCastException | 当对象转换为其不是实例的子类时抛出。 |
-| IOException | 当 I/O 操作失败或中断（如文件读写错误）时抛出。 |
-| FileNotFoundException | 当尝试打开不存在的文件时抛出的 `IOException` 的子类。 |
-| NumberFormatException | 当将字符串转换为数字类型时格式无效时抛出。 |
-| IllegalArgumentException | 方法接收无效参数时抛出。 |
-| InterruptedException | 当线程在睡眠、等待或暂停时被中断时抛出。 |
-| SQLException | 表示与数据库访问或其他 SQL 相关的问题。 |
+| `NullPointerException` | 当应用程序尝试访问空对象的方法或字段时抛出。 |
+| `ArrayIndexOutOfBoundsException` | 使用非法索引访问数组时抛出。 |
+| `ArithmeticException` | 发生非法算术运算（如除以零）时抛出。 |
+| `ClassCastException` | 当对象转换为其不是实例的子类时抛出。 |
+| `IOException` | 当 I/O 操作失败或中断（如文件读写错误）时抛出。 |
+| `FileNotFoundException` | 当尝试打开不存在的文件时抛出的 `IOException` 的子类。 |
+| `NumberFormatException` | 当将字符串转换为数字类型时格式无效时抛出。 |
+| `IllegalArgumentException` | 方法接收无效参数时抛出。 |
+| `InterruptedException` | 当线程在睡眠、等待或暂停时被中断时抛出。 |
+| `SQLException` | 表示与数据库访问或其他 SQL 相关的问题。 |
 
 ## 6.5 catch 块中的多个异常
 
@@ -4348,6 +4397,8 @@ catch(IOException | SQLException ex) {
 在示例代码中，如果 `try` 块抛出 `IOException` 或 `SQLException` 对象，任何一个都由同一个 `catch` 块捕获。与第一个相比，这段代码更短、更简洁。
 
 ## 6.6 参数化 try 块（资源管理器）
+
+
 
 从 Java SE7 开始，`try` 块现在可以拥有资源。这些资源是在执行后需要关闭的对象。任何实现 `java.lang.AutoCloseable` 接口的对象（包括所有实现 `java.io.Closeable` 接口的对象类型）都可以作为参数传递给 `try` 块。
 
@@ -4421,8 +4472,6 @@ void someMethod() throws SQLException, IOException {}
 ```
 
 这是一个声明 `Exception` 对象的示例代码。
-
-
 
 声明 `Exception` 仅用于检查异常（checked exceptions），并且在方法签名后使用 `throws` 关键字，就像第 6 行一样。这相当于签一份豁免书，允许检查异常通过编译过程。另一方面，`RuntimeException` 对象或未检查异常（unchecked exceptions）不应该声明；而是根据需要处理 `RuntimeException` 对象。如果声明了异常并在运行时发生，仍然会发生异常终止。在大多数情况下，`Exception` 的声明只在软件开发阶段进行，并在软件质量保证测试期间逐渐转换为已处理的异常。
 
@@ -4505,7 +4554,9 @@ public class AfterJDK11 {
 让我们分为三种情况：
 
 - 情况 1：`TestSuper` 和 `TestSub1` 的关系：在这一继承关系中，一切正常。它将编译并运行，因为父类 `TestSuper` 声明了 `IOException`，而子类 `TestSub1` 没有声明异常。这是可以接受的。
+
 - 情况 2：`TestSuper` 和 `TestSub2` 的关系：这也是可以接受的。在父类 `TestSuper` 中有 `IOException`，而子类 `TestSub2` 声明了两个异常：`FileNotFoundException` 和 `EOFException`。这是可以接受的，因为 `FileNotFoundException` 和 `EOFException` 都是 `IOException` 的子类。
+
 - 情况 3：`TestSuper` 和 `TestSub3` 的关系：这种关系会导致错误。在父类 `TestSuper` 中声明了 `IOException`，而子类 `TestSub3` 声明了两个异常：`IOException` 和 `SQLException`。`IOException` 是允许的，因为它已经在父类中声明过了。然而，`SQLException` 是导致错误的原因，因为它不是 `IOException` 的子类。
 
 ## 6.10 创建你的异常
@@ -4548,6 +4599,7 @@ class MyException {
 ```
 
 示例输出：
+
 ```
 Inside try block of  candy.
 Inside catch block  of candy.
@@ -4593,10 +4645,6 @@ public class MyOtherException {
 
 正如你所看到的，`LoginException` 类被视为未检查异常因为它扩展了 `RuntimeException` 类。这意味着编译器在编译期间看不到这种类型的异常。这也意味着处理此类异常类的最佳方法是使用 `try-catch-block`，而不仅仅是使用 `throws` 关键字。
 
-
-
-
-
 断言（Assertions）用于检查程序员的假设。Java 中的断言是验证程序员对代码在执行过程中特定点行为的假设的关键工具。通过直接在代码中嵌入断言检查，开发者可以在开发过程的早期主动识别并解决错误，确保程序逻辑符合预期条件。断言检查可以通过编程方式放置在代码中，但其是否执行取决于运行时的配置。断言可以在两种模式下运行：启用或禁用。当启用时（使用 `-ea` 或 `-enableassertions` 标志），将会评估断言条件，如果评估失败，则会抛出 `AssertionError`。当禁用时（默认情况），JVM 将忽略断言且不产生影响。这种灵活性使得断言可以在开发期间用于调试，而不影响生产环境的性能，成为构建更可靠、无错误代码的强大方法。
 
 ## 6.12.1 assert 关键字的语法
@@ -4608,6 +4656,8 @@ public class MyOtherException {
 如果你想自定义显示的消息，可以自定义 `<detail_expression>` 部分。如果 `<boolean_expression>` 返回 `false` 值，它将抛出 `AssertionError`。
 
 这里有一个示例代码：
+
+
 
 ```java
 1 // TestAssert.java
@@ -4627,12 +4677,14 @@ public class TestAssert {
 ```
 
 示例输出：
+
 ```
 java TestAssert 15 30
 15:30
 ```
 
 这里是另一个：
+
 ```
 java TestAssert 15 300
 15:300
@@ -4642,12 +4694,12 @@ java TestAssert 15 300
 
 Java 1.4 的行为与 Java 1.5 及更高版本不同，如表 6.2 所示。
 
-表 6.2 Java 1.4 和 Java 1.5 中的默认断言设置
+### 表 6.2 Java 1.4 和 Java 1.5 中的默认断言设置
 
 | | 编译时 | 运行时 |
 | :--- | :--- | :--- |
-| java 1.4 | `javac -source 1.4 Filename.java` | 默认行为：启用；禁用：`java -da Filename` |
-| java 1.5 and 1.6 | `java Filename.java` | 默认行为：禁用；启用：`java -ea Filename` |
+| Java 1.4 | `javac -source 1.4 Filename.java` | 默认行为：启用；禁用：`java -da Filename` |
+| Java 1.5 and 1.6 | `java Filename.java` | 默认行为：禁用；启用：`java -ea Filename` |
 
 在最后一个运行时示例中，没有出现错误是因为使用的运行时环境是 Java 1.5 或以上版本。这意味着在程序执行或运行时，代码中的断言检查被禁用了，从而忽略了断言检查。如果你想启用断言检查，你可能需要这样重新运行你的应用程序：
 
@@ -4690,43 +4742,41 @@ at TestAssert.main(TestAssert.java:9)
 java -ea UnicodeAssertionExample
 ```
 
-
-
-
-
 * 在 Java 中创建你自己的异常，你需要编写一个继承自 `Exception` 类（用于受检异常）或 `RuntimeException` 类（用于非检查异常）的新类。这个自定义的异常类可以包含额外的构造函数和方法，以提供针对你应用程序需求的特定错误细节或行为，也可以仅仅是一个空类。
+
 * 在重写方法时，重写方法不能声明抛出比被重写方法更多或更广泛的检查异常。然而，它可以声明更少或更窄的检查异常，或任意数量的非检查异常，以确保子类与父类的异常处理预期保持一致。
+
 * Java 中的 `assert` 关键字用于创建断言，断言是一种测试代码中假设的语句，通常用于调试。如果断言为假，则会抛出 `AssertionError`，允许开发者在开发期间检测并纠正逻辑错误。
 
-![](img/Quiz_Icon.jpg) 多选题
+### 多选题
 
 1. 下列情况可能会导致 `Exception`，但 ________ 除。
 
-a. `JVM` 内存耗尽。
-b. 向服务器发送文件时，连接被中断。
-c. 尝试将一个整数除以整数 `0`。
-d. 尝试访问一个写错误的文件。
+   a. `JVM` 内存耗尽。
+   b. 向服务器发送文件时，连接被中断。
+   c. 尝试将一个整数除以整数 `0`。
+   d. 尝试访问一个写错误的文件。
 
 2. 你如何创建你自己的 `Exception`？
 
-a. 创建 `throws new Exception()` 构造函数调用
-b. 创建一个类并继承 `Exception` 类
-c. `throw an Exception object`
-d. `throw an IOException object`
+   a. 创建 `throws new Exception()` 构造函数调用
+   b. 创建一个类并继承 `Exception` 类
+   c. `throw an Exception object`
+   d. `throw an IOException object`
 
 3. 当你创建一个自定义异常时，你创建了一个继承自 `java.lang` 包中 `Exception`类的类。你正在创建哪种类型的 `Exception` 类？
 
-a. 你正在创建一个 `RuntimeException`。
-b. 你正在创建一个非检查异常。
-c. 异常类型异，取决于你正在使用的操作系统。
-d. 你正在创建一个受检异常。
+   a. 你正在创建一个 `RuntimeException`。
+   b. 你正在创建一个非检查异常。
+   c. 异常类型异，取决于你正在使用的操作系统。
+   d. 你正在创建一个受检异常。
 
 4. 填空：如果你的程序崩溃，Java 将把 ____________ 打印到终端、输出控制台或 `cmd.com` 窗口（`cmd` 窗口），它会告诉你错误发生时正在执行的方法列表。
 
-a. 编译错误信息
-b. 编译日志
-c. 堆栈跟踪 (stack trace)
-d. `VM` 日志
+   a. 编译错误信息
+   b. 编译日志
+   c. 堆栈跟踪 (stack trace)
+   d. `VM` 日志
 
 5. 给定以下代码：
 
@@ -4741,54 +4791,54 @@ class TestAssert {
 
 以下哪个陈述是 true 的？
 
-a. 命令行调用 `java TestAssert` 将产生输出 `more info`
-b. 命令行调用 `java TestAssert` 将产生输出 `after assert`
-c. 命令行调用 `java TestAssert` 将产生输出 `more info after assert`
-d. 命令行调用 `java TestAssert` 将产生输出 `after the assert more info`
+   a. 命令行调用 `java TestAssert` 将产生输出 `more info`
+   b. 命令行调用 `java TestAssert` 将产生输出 `after assert`
+   c. 命令行调用 `java TestAssert` 将产生输出 `more info after assert`
+   d. 命令行调用 `java TestAssert` 将产生输出 `after the assert more info`
 
 6. 下列关键字中**没有**用于异常处理的是？
 
-a. `try`
-b. `break`
-c. `catch`
-d. `finally`
+   a. `try`
+   b. `break`
+   c. `catch`
+   d. `finally`
 
 7. 哪个关键字用于声明 `Exception`？
 
-a. `try`
-b. `throw`
-c. `throws`
-d. `catch`
+   a. `try`
+   b. `throw`
+   c. `throws`
+   d. `catch`
 
-8. ` ________ 关键字用于手动导致抛出一个异常对象。
+8. `________` 关键字用于手动导致抛出一个异常对象。
 
-a. `try`
-b. `catch`
-c. `throw`
-d. `throws`
+   a. `try`
+   b. `catch`
+   c. `throw`
+   d. `throws`
 
-9. 在创建你自己的异常时，你需要创建一个继承自 `________ ` 的类。这种用户定义的异常被认为是非检查异常。
+9. 在创建你自己的异常时，你需要创建一个继承自 `________` 的类。这种用户定义的异常被认为是非检查异常。
 
-a. `Object`
-b. `Throwable`
-c. `Exception`
-d. `RuntimeException`
+   a. `Object`
+   b. `Throwable`
+   c. `Exception`
+   d. `RuntimeException`
 
 10. 下面哪个代码段在开启断言的情况下执行时会抛出 `AssertionError`？
 
-a. `assert(false);`
-b. `assert(true);`
-c. `assert(false || true);`
-d. `assert(assert);`
+    a. `assert(false);`
+    b. `assert(true);`
+    c. `assert(false || true);`
+    d. `assert(assert);`
 
-## 多选题答案页
+### 多选题答案页
 
 | 1 – a | 2 – b | 3 – d | 4 – c | 5 – b |
 | 6 – b | 7 – c | 8 – c | 9 – d | 10 – a |
 
-![](img/code.jpg) 编程任务
+### 编程任务
 
-### 编程任务 1
+#### 编程任务 1
 
 你需要重新访问 第 5 章 中的编程任务 #1：`Shapes`，并考虑为以下场景添加异常处理：
 
@@ -4799,6 +4849,7 @@ d. `assert(assert);`
 这里是新的运行时输出示例：
 
 示例输出 #1:
+
 ```bash
 java TestShapes -15 <ENTER>
 A negative value was passed.
@@ -4806,6 +4857,7 @@ An IllegalArgumentException is caught.
 ```
 
 示例输出 #2:
+
 ```bash
 java TestShapes <ENTER>
 Pass one to three values via command line.
@@ -4813,6 +4865,7 @@ An IllegalArgumentException is caught.
 ```
 
 示例输出 #3:
+
 ```bash
 java TestShapes 10 20 30 40 <ENTER>
 Limit your arguments to a maximum of 3 values.
@@ -4820,13 +4873,14 @@ An IllegalArgumentException is caught.
 ```
 
 示例输出 #4:
+
 ```bash
 java TestShapes 10 test 20 <ENTER>
 An argument contains a String value.
 A NumberFormatException is caught.
 ```
 
-### 编程任务 2
+#### 编程任务 2
 
 勾股定理是最著名的数学原理之一。它断言直角三角形中两条直边的平方和等于最长边（即斜边）的平方。这可以表示为：`a2 + b2 = c2`，其中 `a` 和 `b` 是两条直边的长度，而 `c` 是斜边的长度。
 
@@ -4840,25 +4894,24 @@ A NumberFormatException is caught.
 
 此外，在每行代码后添加注释，以描述其目的和功能。
 
-
-
+## 第 7 章 I/O 流
 
 流（Stream）被定义为从源到目的地或汇点的数据流。源（`source`）流启动数据流，而目的地（`destination`，即 `sink`）则终止数据流。源也称为输入流，汇点也称为输出流。源和汇点都是节点流（node streams），也称为端点。这些流可以在数据输入输出之前之前之后进行打开和关闭。
 
 有不同类型的节点，例如文件节点、内存节点、管道或线程间（`pipe`）节点。
 
-## 7.2 基础流类
+### 7.2 基础流类
 
 Java 维护了两组流：字节流和字符流，它们都有各自的输入和输出流类。
 
-表 7.1 基础流类 - 字节流与字符流
+#### 表 7.1 基础流类 - 字节流与字符流
 
 | 流 | 字节流 | 字符流 |
 | :--- | :--- | :--- |
 | 源流 | `InputStream` | `Reader` |
 | 汇点流 | `OutputStream` | `Writer` |
 
-## 7.3 流中的数据
+### 7.3 流中的数据
 
 `java.io` 包下有一些类允许将字节流转换为 Unicode 文本或字符流，反之亦然。`Reader` 和 `Writer` 类处理 Unicode 文本，而字节流处理原始字节数据。
 
@@ -4872,9 +4925,7 @@ Java 维护了两组流：字节流和字符流，它们都有各自的输入和
 
 这让你能够根据特定需求选择最合适的工具，并更容易以高效、方便且可靠的方式执行 I/O 操作。表 7.2 列出了常见的节点流类。
 
-表 7.2 显示了示例节点流及其对应的类。
-
-表 7.2 示例节点流 - 字节流与字符流
+#### 表 7.2 示例节点流 - 字节流与字符流
 
 | 类型 | 字节流 | 字符流 |
 | :--- | :--- | :--- |
@@ -4887,11 +4938,11 @@ Java 维护了两组流：字节流和字符流，它们都有各自的输入和
 
 字节流类中的大多数方法也存在于字符流类中。这就是为什么在大多数情况下，字节流可以完成的任何功能字符流也可以完成。这两种流之间的唯一区别在于它们处理的字符类型。字节流可以处理非文本文本或压缩的数据，而字符流可以处理基于文本的或未压缩的数据。字节流可以处理的示例文件类型包括 JPG、PDF、MP3、AVI 等。对于字符流，我们有 txt、html、css、xml、js、csv 以及其他未编译的源码，如 py、cpp 和 java 文件。
 
-## 7.4 I/O 流链
+### 7.4 I/O 流链
 
 图 7.1 显示，可以将数据从字节流转换并传递到字符流，反之亦然，以便 JVM 以 Unicode 格式处理上述数据，然后它可以返回变为非 Unicode 数据，用于存储、显示、流传输或进一步处理。
 
-图 7.1 I/O 流链
+#### 图 7.1 I/O 流链
 
 ```
 ![image](img/fig7-1.jpg)
@@ -4899,11 +4950,11 @@ Java 维护了两组流：字节流和字符流，它们都有各自的输入和
 
 这种场景的一个示例是从键盘接受键值。Java 1.0 使用的字符编码是 ASCII（美国信息交换标准代码）。它使用 7 位编码 128 个字符，包括英文字母、数字和一些控制字符。通常，这些字符都出现在标准键盘上。1997 年 Java 1.1 发布时，主要变化之一是字符编码。它从 ASCII 更改为 Unicode 以满足国际化支持的需求，允许包含英语字母以外的其他字符。Unicode 是一个全面的标准，可以使用不同的编码形式（UTF-8、UTF-16、UTF-32）编码超过 110 万个字符。它涵盖了各种语言、符号和表情符号，与 ASCII 相比提供了更广泛的全球支持。因此，当我们从 ASCII 格式的键盘输入时，它将通过管道或转换为 Unicode，以便 JVM 可以进行处理。
 
-## 7.5 Java I/O
+### 7.5 Java I/O
 
 Java I/O（输入和输出）提供了一组类和方法，用于从各种数据源（如文件、内存和网络连接）读取数据以及写入数据。它同时支持用于处理二进制数据的字节流和用于管理文本数据的字符流，使其对于不同类型的输入输出具有通用性。
 
-## 7.6 通过键盘读取
+### 7.6 通过键盘读取
 
 从标准输入读取使用一个名为 `System.in` 的预定义对象。`System.in` 是一个默认打开并准备好提供数据的输入流。通常，我们使用此代码段设置输入：`BufferedReader(new InputStreamReader(System.in))`。
 
@@ -4929,15 +4980,13 @@ public class KeyboardInput {
 
 在 Windows 命令行提示符中，Ctrl + Z 等于空字符，而在 Unix / Linux / Mac OS 终端窗口中，那等于 Ctrl + D。在给定的代码中，需要空字符来终止循环。
 
+
+
 ### 7.6.1 String 到原始数据类型的转换
-
-
-
-
 
 在开发过程中，我们经常会遇到需要将存储为字符串的值转换为原始数据类型以便进行计算或逻辑处理的情况。在 Java 中处理数据时，将字符串转换为数值和布尔类型是至关重要的。以下是将 `String` 值转换为不同数值和布尔类型的几种方法。
 
-## 1. String 到整数类型的转换
+#### 1. String 到整数类型的转换
 
 要将表示整数的 `String` 转换为 `byte`、`short`、`int` 或 `long` 等整数数据类型，可以使用包装类相应的解析（parse）方法。请参考以下代码：
 
@@ -4952,7 +5001,7 @@ long lNum = Long.parseLong(strNum); // 转换为 long
 
 当处理字符串形式的输入（例如用户输入或文件数据）并需进行数值处理时，这些方法特别有用。
 
-## 2. String 到浮点类型的转换
+#### 2. String 到浮点类型的转换
 
 表示小数的字符串可以使用对应的方法转换为 `float` 或 `double`。请查看下面的代码段：
 
@@ -4965,7 +5014,7 @@ double d = Double.parseDouble(sNum); // 转换为 double
 
 这些转换允许对带有小数部分的数字进行精确处理，例如在科学或金融应用中进行计算。
 
-## 3. String 到布尔类型的转换
+#### 3. String 到布尔类型的转换
 
 处理存储为字符串的逻辑数据时，`Boolean.parseBoolean()` 方法可以将字符串转换为布尔值。如果字符串等于 `"true"`（不区分大小写），该方法返回 `true`；对于任何其他值返回 `false`：
 
@@ -4978,7 +5027,7 @@ boolean b = Boolean.parseBoolean(str); // 转换为 boolean
 
 通过理解这些转换，开发者可以无缝地将字符串输入转换为适当的数据类型，实现准确高效的计算。
 
-## 7.6.2 使用 java.util.Scanner 类接受格式化输入 – 重温 Scanner 类
+### 7.6.2 使用 java.util.Scanner 类接受格式化输入 – 重温 Scanner 类
 
 从 Java 5.0 版本开始，现在可以使用 `java.util` 包下的 `Scanner` 类来接受格式化输入。可以使用你的 `Scanner` 对象从任何数据源接受格式化输入。
 
@@ -5026,7 +5075,7 @@ GPA is: 1.75
 
 ![image](img/fig7-2.jpg)
 
-## 7.6.3 使用 String.format() 方法显示格式化输出
+### 7.6.3 使用 String.format() 方法显示格式化输出
 
 在 Java 1.4 的时代，需要几行代码才能按照你想要格式化输出。然而，自 Java 5.0 出生以来，格式化输出从未如此简单。通过使用 `String.format()` 或 `System.out.printf()` 方法，你可以使用这些方法来格式化输出。
 
@@ -5063,27 +5112,26 @@ public class DisplayAverage {
 }
 ```
 
+### 7.7 File 类常用方法
 
+| 方法 | 描述 |
+| :--- | :--- |
+| `String getParent()` | 返回文件或目录的父目录。 |
+| `long lastModified()` | 显示文件的最后修改时间戳。 |
+| `long length()` | 显示以字节为单位的文件大小。 |
+| `boolean renameTo(File newName)` | 将文件重命名为指定的新名称。 |
+| `boolean delete()` | 删除文件或目录。 |
+| `boolean mkdir()` | 创建新目录。 |
+| `String[] list()` | 列出目录内文件和目录的名称。 |
+| `boolean exists()` | 检查文件或目录是否存在。 |
+| `boolean canWrite()` | 验证文件是否可写。 |
+| `boolean canRead()` | 验证文件是否可读。 |
+| `boolean isFile()` | 测试所指的文件是否为普通文件。 |
+| `boolean isDirectory()` | 检查路径是否为目录。 |
+| `boolean isAbsolute()` | 确认路径是否为绝对路径。 |
+| `boolean isHidden()` | 检查文件或目录是否隐藏。 |
 
-
-| | 方法 | 描述 |
-| :--- | :--- | :--- |
-| | `String getParent()` | 返回文件或目录的父目录。 |
-| | `long lastModified()` | 显示文件的最后修改时间戳。 |
-| | `long length()` | 显示以字节为单位的文件 own。 |
-| 文件修改 | `boolean renameTo(File newName)` | 将文件重命名为指定的新名称。 |
-| | `boolean delete()` | 删除文件或目录。 |
-| 目录工具 | `boolean mkdir()` | 创建新目录。 |
-| | `String[] list()` | 列出目录内文件和目录的名称。 |
-| 文件测试 | `boolean exists()` | 检查文件或目录是否存在。 |
-| | `boolean canWrite()` | 验证文件是否可写。 |
-| | `boolean canRead()` | 验证文件是否可读。 |
-| | `boolean isFile()` | 测试所指的文件是否为普通文件。 |
-| | `boolean isDirectory()` | 检查路径是否为目录。 |
-| | `boolean isAbsolute()` | 确认路径是否为绝对路径。 |
-| | `boolean isHidden()` | 检查文件或目录是否隐藏。 |
-
-## 7.8 从文件中读取输入
+### 7.8 从文件中读取输入
 
 到目前为止，所有的输入都是通过键盘完成的，键盘恰是标准输入设备。这允许程序直接从用户处读取数据。然而，在某些情况下，程序需要从文件接收输入。应用程序可以对文件进行读取和写入。
 
@@ -5121,7 +5169,7 @@ public class ReadFile {
 
 该程序将要求用户在命令行输入文件名（`args[0]`），然后程序将打开该文件。如果文件存在，它将读取每一行文本并在屏幕上显示文件的所有内容。如果文件不存在，将抛出 `FileNotFoundException`。
 
-## 7.9 向文件中写入输入
+### 7.9 向文件中写入输入
 
 为了实现文件的写入能力，我们使用 `FileWriter` 类和 `PrintWriter` 类。
 
@@ -5160,45 +5208,56 @@ public class WriteFile {
 }
 ```
 
-
-
-
-
 ## 测验题
 
 ### 6. 如果你要在代码中使用 `Scanner` 类，必须包含哪一个导入语句？
 
 a. `import java.util.Scanner;`
+
 b. `import java.lang.Scanner;`
+
 c. `import java.awt.Scanner;`
+
 d. `import java.io.Scanner;`
 
 ### 7. 使用 `Scanner` 类接收用户输入时，如果用户没有为变量的数据类型输入正确的值，将抛出什么类型的 `Exception` 异常对象？
 
 a. `InputMismatchException`
+
 b. `NumberFormatException`
+
 c. `IOException`
+
 d. `IllegalArgumentException`
 
 ### 8. 如果你计划同时使用 `BufferedReader` 和 `InputStreamReader`，你应该导入哪个包？
 
 a. `java.io` 包
+
 b. `java.lang` 包
+
 c. `java.awt` 包
+
 d. `java.util` 包
 
 ### 9. `InputStreamReader` 类有一个名为 _______ 的方法，它可以释放与它相关的任何系统资源。
 
 a. `release()`
+
 b. `disconnect()`
+
 c. `close()`
+
 d. `stop()`
 
 ### 10. `java.io` 包下哪个类被用于获取文本文件的读取权限？
 
 a. `FileInputStream`
+
 b. `File`
+
 c. `FileReader`
+
 d. `FileInputStreamReader`
 
 ## 多选题答案页
@@ -5214,6 +5273,8 @@ d. `FileInputStreamReader`
 
 创建一个 Java 程序，读取名为 `userList.txt` 的文本文件。该文件名应通过命令行传递。该文件包含一个用户名和密码的列表。奇数行包含用户名，偶数行包含前行用户名对应的密码。以下是 `userList.txt` 中 `String` 列表的示例内容：
 
+| 行号 | 内容 |
+| --- | --- |
 | 1 | user1 |
 | 2 | password1 |
 | 3 | user2 |
@@ -5224,6 +5285,7 @@ d. `FileInputStreamReader`
 一旦在文件 `userList.txt` 中读取了 `String` 值，你将创建名为 `usernames.txt` 和 `password.txt` 的两个文本文件。`usernames.txt` 文件包含所有位于奇数行的用户名，而密码将写入 `password.txt` 文件中。不需要输出消息，但如果能提供代码已成功运行的确认会更好。你判断代码是否运行的唯一方法是当 `usernames.txt` 和 `password.txt` 都包含了正确的 `String` 值。
 
 `usernames.txt` 应包含以下内容：
+
 ```
 user1
 user2
@@ -5231,6 +5293,7 @@ user3
 ```
 
 `password.txt` 应包含以下内容：
+
 ```
 password1
 password2
@@ -5239,36 +5302,46 @@ password3
 
 ### 编码任务 2：Java 文件 IO
 
-#### 目标：
+#### 目标
+
 编写一个 Java 程序，从一个文本文件读取数据，处理数据，并将处理后的数据写入另一个文本文件。
 
-#### 练习详情：
+#### 练习详情
 
-**输入文件：**
+**输入文件**
+
 你将获得一个名为 `input.txt` 的文本文件，其中包含多行数据。假设该文件格式如下，每行代表一个记录（包含姓名、年龄和城市）：
+
 ```
 Alice,30,New York
 Bob,25,Los Angeles
 Charlie,35,Chicago
 ```
+
 你需要读取这些数据，筛选年龄大于 28 岁的记录，并将这些姓名和城市写入名为 `output.txt` 的文件中。
 
 **任务 1：读取文件**
+
 使用 `BufferedReader` 读取 `input.txt` 的内容。
 
 **任务 2：处理数据**
+
 处理读取到的数据，筛选年龄大于 28 岁的记录。
 
 **任务 3：写入新文件**
+
 使用 `BufferedWriter` 或 `FileWriter` 将处理结果写入 `output.txt`。
 
 **任务 4：处理异常**
+
 使用 `try-catch` 块处理可能出现的 `IOException` 异常。
 
 **任务 5：关闭资源**
+
 在操作完成后，确保通过 `close()` 方法关闭流。
 
 **任务 6：显示结果**
+
 在控制台输出处理后的数据以进行验证。
 
 # 第 8 章：Java 集合与泛型简介
@@ -5276,6 +5349,7 @@ Charlie,35,Chicago
 ![](img/collection.jpg)
 
 ## 本章学习目标
+
 - 理解 `Collection` 接口在 Java 中的作用
 - 区分 `Set`、`List` 和 `Map` 之间的区别
 - 学习如何使用 `Iterator` 迭代器遍历元素
@@ -5283,16 +5357,17 @@ Charlie,35,Chicago
 - 利用菱操作符 `<>` 简化实例化
 - 开发根据问题选择合适集合的技能
 
-本章将介绍 Java 集合框架（Collections Framework），这是一组用于高效存储、检索和操作对象对象的类和接口。在这里你将学习主要的集合类型——`Set`、`List` 和 `Map`——以及它们如何解决不同的问题。
+
+
+# 本章将介绍 Java 集合框架（Collections Framework）
+
+这是一组用于高效存储、检索和操作对象的类和接口。在这里你将学习主要的集合类型——`Set`、`List` 和 `Map`——以及它们如何解决不同的问题。
 
 ## 8.1 Collection 接口
 
 `Collection` 接口是层次结构中的根接口。它代表一组被称为元素的对象。
 
-有些集合允许重复元素，而有些不允许。有些是有序的，有些则不是。Java 工具包没有提供任何直接实现。它只提供了更具体的子接口，如 `set` 和 `list`。该接口通常用于传递和操作集合，当需要通用性时。
-
-
-
+有些集合允许重复元素，而有些不允许。有些是有序的，有些则不是。Java 工具包没有提供任何直接实现。它只提供了更具体的子接口，如 `Set` 和 `List`。该接口通常用于传递和操作集合，当需要通用性时。
 
 在考虑这些接口的实现类时，`Set` 有如 `HashSet` 和 `TreeSet` 等显著的实现。对于 `List`，常见的实现包括 `Vector`、`ArrayList` 和 `LinkedList`。
 
@@ -5308,7 +5383,7 @@ Charlie,35,Chicago
 
 表 8.1 列出了集合与数组之间的主要区别。
 
-表 8.1 集合对比数组
+### 表 8.1 集合对比数组
 
 | 集合 | 数组 |
 | --- | --- |
@@ -5317,7 +5392,7 @@ Charlie,35,Chicago
 | 可变，`Collection` 对象可以根据你向集合内部添加或删除对象而变大或变小。 | 长度在创建数组对象时已固定。 |
 | 使用 `.size()` 方法检查 `Collection` 内部元素的数量。 | 使用属性 `.length` 检查数组的大小。 |
 
-## 8.2 Set 接口](#08_Contents.xhtml_ch8-2)
+## 8.2 Set 接口
 
 让我们深入研究 `Collection` 接口的一个子接口，即 `Set` 接口。`Set` 接口设计用于存储一组无序的元素，这意味着元素的顺序是不保证的。
 
@@ -5425,9 +5500,6 @@ java SetExample <ENTER>
 
 在编译和运行 `SetExample.java` 后，我们注意到一个编译警告，这在初始示例中很常见，因为还没有使用 Java 泛型（Generics）。虽然这些警告不是错误，但通常的做法是认真对待它们。
 
-
-
-
 在这个示例中，尽管向 `Set` 添加了七个对象，但打印 `Set` 时只有五个唯一元素。请注意，“java" 和 "Lawrence" 字符串只出现了一次，尽管在第 9 行和第 10 行添加了 "java"，第 6 行和第 11 行添加了字符串 "Lawrence"。Java 中的 `HashSet` 是一种存储唯一元素的集合，并提供了使用哈希表进行添加、删除和搜索项目的高效操作。它不维护元素的特定顺序，并会自动消除重复。这种行为源于继承自 `Collection` 接口的 `add()` 方法，该方法返回一个布尔值。如果尝试添加重复元素，该方法简单地返回 `false`，表示元素未被添加。
 
 ## 8.3 List 接口
@@ -5455,7 +5527,10 @@ public class ListExample {
 ```
 
 运行时输出：
-`[Lawrence, 100, false, java, java, Lawrence, 3.0]`
+
+```
+[Lawrence, 100, false, java, java, Lawrence, 3.0]
+```
 
 与上一个示例中的代码一样，你会遇到类似的编译警告。我们将在本章节后面讨论 Java 泛型（Generics）概念时消除该警告。
 
@@ -5477,7 +5552,7 @@ public class ListExample {
 
 要总结 `Set` 和 `List` 的区别，你可以查阅表 8.2。
 
-表 8.2 Set 和 List 接口的比较。
+### 表 8.2 Set 和 List 接口的比较
 
 | 特性 | Set | List |
 | --- | --- | --- |
@@ -5530,21 +5605,26 @@ public class MapExample {
 ```
 
 运行时输出：
+
+```
 Original Map Values:
 {one=uno, two=dos, three=tres}
+
 Updated Map Values:
 {one=uno, two=dos, three=trois}
+
 [one, two, three]
+
 [uno, dos, tres]
+
 [one=uno, two=dos, three=trois]
-
-
-
-
+```
 
 与 `Set` 或 `List` 不同（在其中你会使用 `add()` 方法插入元素），在 `Map` 中，你使用 `put()` 方法。该方法插入一对对象——其中一个作为键（key），另一个作为值（value）。在这个示例中，键和值都是字符串。
 
 例如，键 `"one"` 关联值 `"uno"`，`"two"` 关联 `"dos"`，`"three"` 关联 `"tres"`。使用 `System.out.println(map);` 打印原始的 `Map` 值时，你将会在运行时输出中看到键值对。
+
+
 
 然而，如果你使用已有的键插入另一个键值对，例如用新值 `"teen"` 关联 `"three"`，它将覆盖与该键关联的旧值。这意味着键值对 `"three", "teen"` 将替换 map 中的键值对 `"three", "tres"`。
 
@@ -5615,7 +5695,7 @@ public class Person {
 }
 ```
 
-在我们的测试类中，我们实例化五个 `Person` 对象。我们将创建一个实现为 `HashSet` 的集合 `myFriends`，并添加这些 `Person` 对象。由于 `HashSet` 不保证顺序，当我们使用 `System.out.println(myFriends);` 打印集合时，元素的顺序可能与添加它们的顺序不同。此外，输出将被封装在方括号中。这里是我们的测试类 TestPerson.java 的代码。
+在我们的测试类中，我们实例化五个 `Person` 对象。我们将创建一个实现为 `HashSet` 的集合 `myFriends`，并添加这些 `Person` 对象。由于 `HashSet` 不保证顺序，当我们使用 `System.out.println(myFriends);` 打印集合时，元素的顺序可能与添加它们的顺序不同。此外，输出将被封装在方括号中。这里是我们的测试类 `TestPerson.java` 的代码。
 
 ```java
 import java.util.*;
@@ -5644,16 +5724,18 @@ public class TestPerson {
 ```
 
 运行时输出：
+
 `[Edwin, at age 20, Lesley, at age 27, Percy, at age 30, Jerry, at age 18, Ericson, at age 24]`
 
 如果我们想单独打印每个朋友的信息，并计算该组的平均年龄，可以使用 `Iterator` 接口。由于我们正在处理 `Set`，因此可以使用迭代器。
 
 它的工作原理如下：
+
 - 我们使用 `myFriends.iterator()` 创建一个迭代器。`iterator()` 方法定义在 `Set` 接口中并返回一个迭代器对象。
 - 迭代器提供三个主要方法：`hasNext()`、`next()` 和 `remove()`。这些方法帮助我们循环遍历集合。
 - 我们使用 `while` 循环来遍历集合。条件 `it.hasNext()` 检查是否有更多元素待处理。如果为真，我们通过 `it.next()` 获取下一个元素。
 - 如果需要，我们可以通过适当的类型转换将检索到的元素存储在变量中（例如 `Person` 对象）。
-- 为了计算平均年龄，我们使用 `p.getAge()` 计算所有 `Person` 对象的年龄总和，然后除以通过 `myFriends.size()` 获取的元素总数。下面是我们的测试类 TestPerson.java 的更新版本，这次使用了 `Iterator` 对象。
+- 为了计算平均年龄，我们使用 `p.getAge()` 计算所有 `Person` 对象的年龄总和，然后除以通过 `myFriends.size()` 获取的元素总数。下面是我们的测试类 `TestPerson.java` 的更新版本，这次使用了 `Iterator` 对象。
 
 ```java
 import java.util.*;
@@ -5690,22 +5772,25 @@ public class TestPerson {
 }
 ```
 
-最后，我们编译并运行修改后的 TestPerson.java。输出将显示每个朋友的细节，并显示平均年龄。
+最后，我们编译并运行修改后的 `TestPerson.java`。输出将显示每个朋友的细节，并显示平均年龄。
 
 运行时输出：
+
 Edwin, at age 20
+
 Lesley, at age 27
+
 Percy, at age 30
+
 Jerry, at age 18
+
 Ericson, at age 24
+
 Sum: 119
+
 Average age of my Friends: 23.8
 
 这种方法允许我们遍历集合中的每个元素，执行平均值等计算，并以自定义格式显示结果。
-
-
-
-
 
 ## 8.6 泛型框架简介
 
@@ -5817,6 +5902,8 @@ Map<Integer, String> idToName = Map.of(1, "Apple", 2, "Banana");
 
 让我们重新回顾第一章讨论过的 JDK 10 `var` 关键字。`var` 关键字允许编译器推断变量类型，在使用泛型集合时可以提高代码的可读性。当类型从右侧显而易见时，这种方法特别有用：
 
+
+
 ```java
 var names = List.of("Jane", "John", "Doe");
 var idMap = new HashMap<Integer, String>();
@@ -5828,12 +5915,9 @@ var idMap = new HashMap<Integer, String>();
 
 在 JDK 10 中，Java 引入了新的收集器方法，可以直接从流（streams）中创建只读集合。这些是 `Collectors.toUnmodifiableList()`、`Collectors.toUnmodifiableSet()` 和 `Collectors.toUnmodifiableMap()` 方法。
 
-
-
-
 在此之前，你通常会将元素收集到一个普通集合中，然后使用 `Collections.unmodifiableList()` 或类似方法对其进行封装。现在，你只需一步即可生成不可修改的集合，使代码更加简洁且更不容易出错。不可修改的集合在创建后无法被更改，任何添加、删除或更新元素的尝试都会导致 `UnsupportedOperationException`。当你希望确保 `stream` 操作的结果保持一致，并且不会在程序的其他地方被无意中修改时，这种方法非常有用。
 
-以下是演示这些新方法的的示例代码：
+以下是演示这些新方法的示例代码：
 
 ```java
 import java.util.List;
@@ -5905,29 +5989,40 @@ public class SequencedCollectionExample {
 ```
 
 执行后的输出如下：
+
+```
 First fruit: Apple
 Last fruit: Cherry
 Fruits in reverse:
 Cherry
 Banana
 Apple
+```
 
 在此示例中，我们使用 `getFirst()` 和 `getLast()` 来快速检索第一个和最后一个元素，并使用 `reversed()` 从末尾到开始循环列表——这一切无需编写额外的逻辑。此功能使得处理不同集合类型的有序集合更加简单且一致。这些在较新 JDK 版本中引入的增强功能构建在集合框架（Collections Framework）和泛型（Generics）的坚实基础之上。它们促进了不可变性、简洁性和更安全的类型处理，允许开发者编写更具表现力且易于维护的代码。
 
 ## 章节总结
 
 - `Collection` 接口是 Java 集合层次结构的根，代表一组被称为元素的对象的组，并作为 `Set` 和 `List` 等更具体的子接口的基础。虽然 Java 开发工具包（JDK）没有提供此接口的直接实现，但它被广泛用于以最大的通用性传递和操作集合。
+
 - Java 中的 `Collection` 对象是集合框架（Collections Framework）的一部分，提供了列表、集合和队列等动态数据结构，这些结构的大小可以增大或缩小，并提供了各种操作元素的方法。相比之下，`Arrays` 是固定大小的并存储特定类型的元素，与集合相比提供的内置方法较少。
+
 - Java 中的 `Set` 接口设计用于存储一组无序的、唯一的元素，禁止重复且最多允许一个 `null` 元素。当向 `Set` 添加重复元素时，只保留第一次出现的内容，后续的重复元素会被忽略。
+
 - `List` 接口表示一种有序集合，元素的序列被予以维护，允许重复并能够通过索引访问，这与存储无序、唯一元素且不允许重复的 `Set` 接口不同。在比较使用 `List` 和 `Set` 的示例时，`List`（例如 `ArrayList`）保留插入顺序并包含所有元素，而 `Set`（例如 `HashSet`）则排除重复且不保证顺序。
+
 - `Map` 是另一种数据结构，它以键值对的形式存储元素，每个键（K）都关联一个对应的值（V），允许根据键进行高效检索。与 `Set` 和 `List` 接口使用单个类型参数（E）表示元素不同，`Map` 接口使用两个类型参数（K 和 `V`）来定义它所持有的键和值的类型。
+
 - `Set`、`List` 和 `Map` 接口允许添加和打印集合的对象，通常显示在方括号（[]）中。为了在遍历集合时格式化输出或进行计算，可以使用 `Iterator` 接口进行正向迭代（特别是对于无序的 `Set`），或使用 `ListIterator` 接口对 `List` 进行双向迭代。
+
 - 泛型（Generics）框架极大提高了 Java 集合框架的实用性和安全性。它消除了获取对象时的强制转换，确保了编译时的类型安全，并允许代码更加简洁易读。通过在集合中声明特定类型，可以创建同质集合并避免与类型匹配相关的运行时错误。
+
 - Java SE7 引入的钻石操作符 `<>` 简化了泛型框架的使用，允许编译器从声明中推断集合的类型，消除了在赋值语句两侧重复类型的类型。这一功能减少了冗余并增强了代码的可读性，例如 `Set<Person> mySet = new HashSet<>();`，这种情况下不再需要两次指定 `Person` 类型。
 
 ### 多选题
 
 1. 给定定的 main 方法：
+
 ```java
 public static void main(String[] args) {
     Set<Object> s = new HashSet<Object>();
@@ -5936,9 +6031,6 @@ public static void main(String[] args) {
     System.out.println(s);
 }
 ```
-
-
-
 
 假设 `main` 方法位于有效的 Java 源文件中，且所有必要的 import 语句均已提供。以下叙述哪个是**正确**的？
 
@@ -6002,7 +6094,7 @@ d. `Set` 可以包含重复的键但唯一的值。
 
 7. 下述代码段的输出是什么？
 
-```
+```java
 Set<String> mySet = new HashSet<>();
 mySet.add("apple");
 mySet.add("banana");
@@ -6013,13 +6105,14 @@ System.out.println(mySet.size());
 a. 1
 
 b. 2
+
 c. 3
 
 d. 编译错误
 
 8. 考虑以下代码段。哪个陈述是正确的？
 
-```
+```java
 Set<Integer> numbers = new HashSet<>();
 numbers.add(3);
 numbers.add(1);
@@ -6048,7 +6141,7 @@ d. `List` 提供了一个方法可以在不使用任何额外数据结构的情�
 
 10. 给定下面的代码段，输出是什么？可以查看 API 文档以了解如何使用 `ArrayList` 方法。
 
-```
+```java
 List<String> list = new ArrayList<>();
 list.add("A");
 list.add("B");
@@ -6071,26 +6164,35 @@ d. `[A, E, B, D, C]`
 | 1 – a | 2 – a | 3 – a | 4 – b | 5 – d |
 | 6 – c | 7 – b | 8 – a | 9 – d | 10 – c |
 
-![](img/code.jpg) # 任务
+![](img/code.jpg)
+
+# 任务
 
 ## 任务 1：使用 Java Collections 的图书管理系统
 
 #### 任务概述：
+
 设计并实现一个基础图书管理系统，能够存储、管理和检索有关书籍的信息。你将利用 Java Collections 来处理书籍的存储和操作。系统中的每本书都应该有一个唯一标识符、标题、作者和体派。
 
 #### 任务分解：
 
 **1. 创建 Book 类：**
+
 创建一个具有以下属性的 `Book` 类：
+
 - `String title`
 - `String author`
 - `String isbn` (每本书的唯一标识符)
 - `String genre`
+
 - 实现构造函数、访问器方法、修改器方法以及 `toString()` 方法以便方便显示书籍信息。
 
 **2. 创建 Library 类：**
+
 使用 `Set<Book>` 来维护书籍集合，确保集合中不存在两本 `ISBN` 相同的书籍。
+
 实现以下方法：
+
 - `void addBook(Book book)`：向图书馆添加一本新书。
 - `Book searchByISBN(String isbn)`：根据 `ISBN` 检索书籍。如果未找到书籍则返回 `null`。
 - `List<Book> searchByAuthor(String author)`：返回指定作者的书籍列表。
@@ -6099,7 +6201,9 @@ d. `[A, E, B, D, C]`
 - `void displayBooks()`：显示图书馆中所有的书籍。
 
 **3. Main 类：**
+
 在 `main` 方法中演示图书馆的功能：
+
 - 添加几本书书。
 - 按 `ISBN` 搜索。
 - 按作者或体派搜索。
@@ -6107,15 +6211,20 @@ d. `[A, E, B, D, C]`
 - 使用 `Iterator` 显示所有书籍。
 
 **额外指南：**
+
 - 确保系统不允许存在重复的 `ISBN`。
 - 处理边界情况，例如搜索不存在的 `ISBN`。
 
 ## 任务 2：简单登录应用
 
 #### 任务概述：
+
 创建一个 Java 程序，从名为 `userList.txt` 的文件读取用户凭据。文件名应通过命令行传递。文件包含用户名和密码。奇数行是用户名，偶数行是密码。使用 `HashMap` 访问用户名和密码。
 
 #### `userList.txt` 示例：
+
+| 行号 | 内容 |
+| :--- | :--- |
 | 1 | user1 |
 | 2 | password1 |
 | 3 | user2 |
@@ -6124,11 +6233,13 @@ d. `[A, E, B, D, C]`
 | 6 | password3 |
 
 #### 要求：
+
 - 从 `userList.txt` 读取条目。
 - 将它们存储在 `HashMap` 中。
 - 提示用户输入用户名和密码。
 
 #### 示例运行 1：
+
 ```
 java Login userList.txt
 Enter username: user1
@@ -6137,6 +6248,7 @@ Access Granted
 ```
 
 #### 示例运行 2：
+
 ```
 java Login userList.txt
 Enter username: someValue
@@ -6144,9 +6256,9 @@ Enter password: somePassword
 Access Denied
 ```
 
+随着 Java 的演进，引入了被称为 `Swing` 的第二代用户界面工具包，提供了更高级的功能和灵活性。除了 `AWT` 和 `Swing`，Java 现在还提供了 `JavaFX`，这是另一个用于创建丰富用户界面的强大工具包。然而，对于本文讨论，我们将关注 `AWT`。
 
 
-随着 Java 的演进，引入了被称为 `Swing` 的第二代用户界面工具包，提供了更高级的功能和灵活性。除了 `AWT` 和 `Swing`，Java 现在还提供了 `JavaFX`，这是另一个用于创建丰富用户界强大工具包。然而，对于本文讨论，我们将关注 `AWT`。
 
 首先，让我们回顾一个基本概念：在 Java 中，`Object` 类是所有类层次结构的根。`Object` 的子类之一是 `Component` 类，它代表用户界面中可以交互的任何视觉元素。组件的示例包括按钮、标签、复选框、选择框、列表框甚至容器。
 
@@ -6194,9 +6306,6 @@ Access Denied
 在示例代码中，声明了一个 `Frame` 对象，并在第 9 行到第 12 行定义了构造函数和方法。这种方法是构建 GUI 应用的最佳实践。首先，你声明所有的组件和容器。然后，在构造函数中初始化它们，就像提供的代码中一样。最后，你定义方法来管理这些组件的行为。
 
 在 `startApp()` 方法中（这是一个用户自定义方法），我们设置了帧的属性。例如，我们将背景颜色设置为黄色，并设置帧的大小为 200 像素宽和 200 像素高。
-
-
-
 
 ```java
 26 }
@@ -6312,12 +6421,15 @@ public class FlowLayoutExample {
 当我们尝试编译并运行这段代码时，将得到下面的输出。尝试水平和垂直调整 frame 的大小，观察按钮如何在 frame 内重新对齐。下面的图片显示了 `Frame` 在调整大小后的不同版本。
 
 图 9.4 FlowLayout 示例输出 1
+
 ![image](img/fig9-4.jpg)
 
 图 9.5 FlowLayout 示例输出 2
+
 ![image](img/fig9-5.jpg)
 
 图 9.6 FlowLayout 示例输出 3
+
 ![image](img/fig9-6.jpg)
 
 在这段代码中，我们创建了一个 frame 和四个按钮。每个按钮都标有数学运算符：加、减、乘、除。在声明并初始化 frame 和按钮后，我们将 frame 的布局设置为 `FlowLayout`，使用 `f.setLayout(new FlowLayout())`。如果你调整窗口，你会注意到按钮会自动重新定位。FlowLayout 还允许你指定布局内组件的对齐方式。默认情况下是对中对齐，但你可以在设置布局时传递不同的对齐方式，例如 `FlowLayout.LEFT` 或 `FlowLayout.RIGHT`。这是 `java.awt` 包提供的布局管理器的一个例子，它让你预览布局管理器在组织 GUI 组件时有多强大和灵活。
@@ -6329,6 +6441,7 @@ public class FlowLayoutExample {
 如果你在添加组件时没有指定区域，它将被放置在 `CENTER` 区域。该区域是默认区域，也是唯一可以同时水平和垂直扩展的区域。`NORTH` 和 `SOUTH` 区域的组件只在水平方向调整，而 `EAST` 和 `WEST` 区域只在垂直方向调整。
 
 图 9.7 BorderLayout 
+
 ![image](img/fig9-7.jpg)
 
 让我们来看一个例子。假设我们有一个五个按钮的 frame：北部按钮 (`bNorth`)、南部按钮 (`bSouth`)、中心按钮 (`bCenter`)、西部按钮 (`bWest`) 和东部按钮 (`bEast`)。在我们的类构造函数中，我们将首先创建 frame 和按钮。
@@ -6344,43 +6457,36 @@ public class BorderLayoutExample
     private Button bNorth, bSouth, bCenter, bWest, bEast;
 
     public BorderLayoutExample() {
-```
+        f = new Frame("BorderLayout Example");
 
+        bNorth = new Button("North");
+        bSouth = new Button("South");
+        bCenter = new Button("Center");
+        bWest = new Button("West");
+        bEast = new Button("East");
+    }
 
+    public void startApp()
+    {
+        // frames 默认使用 BorderLayout 布局，
+        // 不需要更改 Frame f 的 
+        // 布局管理器；
 
+        f.add(bNorth, BorderLayout.NORTH);
+        f.add(bSouth, BorderLayout.SOUTH);
+        f.add(bCenter, BorderLayout.CENTER);
+        f.add(bWest, BorderLayout.WEST);
+        f.add(bEast, BorderLayout.EAST);
 
+        f.setSize(400, 200);
+        f.setVisible(true);
+    }
 
-```java
-{
-    f = new Frame("BorderLayout Example");
-
-    bNorth = new Button("North");
-    bSouth = new Button("South");
-    bCenter = new Button("Center");
-    bWest = new Button("West");
-    bEast = new Button("East");
-}
-
-public void startApp()
-{
-    // frames 默认使用 BorderLayout 布局，
-    // 不需要更改 Frame f 的 
-    // 布局管理器；
-
-    f.add(bNorth, BorderLayout.NORTH);
-    f.add(bSouth, BorderLayout.SOUTH);
-    f.add(bCenter, BorderLayout.CENTER);
-    f.add(bWest, BorderLayout.WEST);
-    f.add(bEast, BorderLayout.EAST);
-
-    f.setSize(400, 200);
-    f.setVisible(true);
-}
-
-public static void main(String args[])
-{
-    BorderLayoutExample be = new BorderLayoutExample();
-    be.startApp();
+    public static void main(String args[])
+    {
+        BorderLayoutExample be = new BorderLayoutExample();
+        be.startApp();
+    }
 }
 ```
 
@@ -6401,6 +6507,8 @@ public static void main(String args[])
 例如，假设你有六个按钮，并将它们放置在一个使用 `GridLayout` 的窗口中。无论你如何调整窗口，所有六个按钮都会等比例大小以适应窗口。这使得 `GridLayout` 成为构建扫雷游戏或计算器等应用程序的理想选择，因为这些程序需要一致的按钮网格。
 
 现在，让我们保存为 `GridLayoutExample.java` 的示例代码。在这个示例中，我们有一个窗口和六个按钮。在构造函数内部，我们创建了窗口和这六个按钮。
+
+
 
 ```java
 import java.awt.*;
@@ -6450,11 +6558,8 @@ public class GridLayoutExample
 
 默认情况下，窗口使用 `BorderLayout`，因此我们需要通过调用窗口的 `setLayout()` 方法将其设置为 `new GridLayout()`。在创建 `GridLayout` 时，可以向其构造函数传递两个或四个整数值。在代码的第 23 行，`f.setLayout(new GridLayout(3, 2))` 创建了一个具有 3 行 2 列的网格。
 
-
-
-
-
 ## 2. 定义类和变量
+
 接下来，创建一个名为 `SimpleCalculator` 的类，并为框架、标签、文本框和按钮定义必要的变量。
 
 图 9.13 `SimpleCalculator.java` 使用的容器和组件列表。
@@ -6483,27 +6588,43 @@ public class SimpleCalculator {
 ```
 
 ## 3. 初始化组件
+
 在构造函数内部，初始化框架和组件。
 
 `f = new Frame("My First GUI App");`
+
 `l1 = new Label("First:");`
+
 `l2 = new Label("Second:");`
+
 `l3 = new Label("Result:");`
+
 `tf1 = new TextField("0.0", 15);`
+
 `tf2 = new TextField("0.0", 15);`
+
 `tf3 = new TextField("0.0", 15);`
+
 `bAdd = new Button("+");`
+
 `bSub = new Button("-");`
+
 `bMul = new Button("*");`
+
 `bDiv = new Button("/");`
+
 `bClear = new Button("C");`
 
 ## 4. 使用面板进行布局
+
 创建四个面板来存放你的组件。
 
 `Panel p1 = new Panel();`
+
 `Panel p2 = new Panel();`
+
 `Panel p3 = new Panel();`
+
 `Panel p4 = new Panel();`
 
 图 9.14 将所有组件组合在一起。
@@ -6513,30 +6634,46 @@ public class SimpleCalculator {
 向每个面板添加组件。
 
 `p1.add(l1);`
+
 `p1.add(tf1);`
+
 `p2.add(l2);`
+
 `p2.add(tf2);`
+
 `p3.add(l3);`
+
 `p3.add(tf3);`
+
 `p4.add(bAdd);`
+
 `p4.add(bSub);`
+
 `p4.add(bMul);`
+
 `p4.add(bDiv);`
+
 `p4.add(bClear);`
 
 ## 5. 设置布局并将面板添加到框架
+
 为框架设置布局并添加面板。
 
 `f.setLayout(new GridLayout(4, 1));`
+
 `f.add(p1);`
+
 `f.add(p2);`
+
 `f.add(p3);`
+
 `f.add(p4);`
 
 ## 6. 显示框架
+
 最后，打包框架并使其可见。
 
-当 m 编译并运行这段代码时，你将看到一个带有标签、文本框和整齐排列按钮的简单用户界面。框架会自动调整大小以适应组件。然而，请注意，此计算器目前只显示 UI；它还没有执行任何计算或对按钮点击做出响应。在下一章中，我们将讨论事件处理技术，这将使我们能够响应按钮点击以执行计算。
+当编译并运行这段代码时，你将看到一个带有标签、文本框和整齐排列按钮的简单用户界面。框架会自动调整大小以适应组件。然而，请注意，此计算器目前只显示 UI；它还没有执行任何计算或对按钮点击做出响应。在下一章中，我们将讨论事件处理技术，这将使我们能够响应按钮点击以执行计算。
 
 这里是最终组合后的代码：
 
@@ -6617,30 +6754,42 @@ public class SimpleCalculator
     }
 }
 ```
+
 编译并运行此代码，你将看到如下输出：
 
 图 9.15 运行时输出。
 
 ## 总结
-- 框架（Frame）是 GUI 应用程序的窗口，而 面板（Panel）是用于组织组件的容器。
-- 布局管理器（Layout Managers）控制组件在容器中的排列方式和大小。
+
+- 框架（`Frame`）是 GUI 应用程序的窗口，而 面板（`Panel`）是用于组织组件的容器。
+- 布局管理器（`Layout Managers`）控制组件在容器中的排列方式和大小。
 - 通过嵌套不同的面板，可以创建复杂的界面。
 - `AWT` 提供了多种布局选项。
 
 ## 选择题
+
 1. 如何更改容器的布局管理器？
+
    a. 使用 `setLayout()` 方法
+
    b. 创建后，无法更改布局管理器
+
    c. 使用 `setLayoutManager()` 方法
+
    d. 使用 `updateLayout()` 方法
 
 2. 如何使用 `FlowLayout` 指明组件的位置？
+
    a. `FlowLayout` 将自动放置组件
+
    b. 向 `add()` 方法传递 `X/Y` 参数
+
    c. 分配行/列引用
+
    d. 指定区域：`North`, `South`, `East`, `West`
 
 3. 下述代码最好描述了程序的外观？
+
 ```java
 import java.awt.*;
 public class FlowAp extends Frame{
@@ -6657,12 +6806,17 @@ public class FlowAp extends Frame{
     }
 }
 ```
+
    a. 框架边缘各有一个标记为 One 到 Four 的按钮
+
    b. 框架中心有一个标记为 Four 的大按钮
+
    c. 按钮从上到下排列 Four
+
    d. 运行时错误，未设置 `LayoutManager`
 
 4. 此代码运行时最接近的外观是？
+
 ```java
 import java.awt.*;
 public class ComplexLayout extends Frame{
@@ -6682,14 +6836,14 @@ public class ComplexLayout extends Frame{
     }
 }
 ```
+
    a. 按钮将不会显示
+
    b. 只有标记为 Three 的按钮占据整个框架
+
    c. 按钮将在框架底部从左到右排列
 
-
-
-
-d. 按钮将从 `Frame` 顶部从左到右运行
+   d. 按钮将从 `Frame` 顶部从左到右运行
 
 5. 当你尝试编译并运行以下代码时，将显示什么？
 
@@ -6712,15 +6866,21 @@ public class MyButton extends Frame{
 ```
 
 a. 一个按钮占据整个框架，显示 Hello
+
 b. 框架顶部有两个按钮，一个显示 Hello，另一个显示 Bye
+
 c. 一个按钮占据整个框架，显示 Bye
+
 d. 两个按钮并排占据整个框架，Hello 在左侧，Bye 在右侧
 
 6. 如果你想使用 `GridLayout` 类，应该导入以下哪个包？
 
 a. `java.awt.event.*;`
+
 b. `java.awt.*;`
+
 c. `java.awt.events.*;`
+
 d. `javax.swing.*;`
 
 7. 给定以下代码：
@@ -6740,29 +6900,41 @@ public class MyFrame extends Frame{
 如何将框架表面的颜色设置为粉色？
 
 a. `s.setColor(PINK);`
+
 b. `s.setBackground(Color.pink);`
+
 c. `s.Background(pink);`
+
 d. `s.color = Color.pink;`
 
 8. 下列布局管理器中，哪个不是 `java.awt` 包的一部分？
 
 a. `FlowLayout`
+
 b. `GridLayout`
+
 c. `BoxLayout`
+
 d. `CardLayout`
 
 9. 下列哪个是 `Container` 对象？
 
 a. `TextField`
+
 b. `Button`
+
 c. `TextArea`
+
 d. `Frame`
 
 10. 在构建 GUI 应用时，以下哪项是**不需要**的？
 
 a. `Components`
+
 b. `Containers`
+
 c. `Layout Managers`
+
 d. `File`
 
 ### 多选择答案键
@@ -6772,9 +6944,12 @@ d. `File`
 
 ![](img/code.jpg) 编码任务
 
-● 创建一个 Java ，要求用户输入 0 到 255 之间的四个 (4) 个整数。这些数值代表原色 (R) 红色、(G) 绿色、(B) 蓝色和 (A) Alpha ——颜色的透明度。
+● 创建一个 Java 程序，要求用户输入 0 到 255 之间的四个 (4) 个整数。这些数值代表原色 (R) 红色、(G) 绿色、(B) 蓝色和 (A) Alpha ——颜色的透明度。
+
 ● 这些值应在文本字段中输入。
+
 ● 你需要提供一个“COMPUTE”（计算）`Button`，根据四个文本字段中输入的值来计算颜色。
+
 ● `frame` 的下半部分应提供一个面板，用于根据四个文本字段的值显示计算出的颜色。检查 `java.awt.Color` 类构造函数的 API，使其接受四个 (4) 个 `RGBA`（红色、绿色、蓝色和 Alpha）值。
 
 以下是指定的输出格式：
@@ -6788,13 +6963,20 @@ d. `File`
 ![](img/klo.jpg) 主要学习目标
 
 ● 理解 Java GUI 应用中事件处理的基本原理
+
 ● 探索委托事件模型及其组件：事件源和监听器
+
 ● 学习如何实现监听器接口以响应各种用户操作
+
 ● 发现如何使用适配器类（adapter classes）、内部类和匿名类来简化事件处理
+
 ● 使用 lambda 表达式编写更简洁、更易读的事件处理代码
+
 ● 通过 Java 事件处理技术构建一个简单的计算器，应用你所学习的知识
 
 本章深入探讨了 Java 事件处理技术的核心原理，为管理图形应用程序中的用户交互提供了坚实的基础。你将从探索委托事件模型开始，在该模型中，事件源将事件处理委托给监听器——从而实现更整洁、模块化的代码。
+
+
 
 我们将涵盖事件处理的基础知识，并研究使用监听器接口响应事件的不同方式，以及通过适配器类、内部类和匿名类实现的简化策略。这些技术将帮助你根据点击按钮、鼠标移动或按键等用户操作来控制程序的行为。
 
@@ -6806,7 +6988,7 @@ d. `File`
 
 ![10.1 事件处理过程](img/fig10.jpg)
 
-在该模型中，事件源是一个组件（例如按钮），它负责产生事件。监听器是一个想要响应事件的对象。为了做到这一点，监听器必须实现一个特定的接口。每当事件发生时，该监听器就会注册到事件源上。这种设置支持一多多的关系，允许事件源通知监听器。通过将事件生成与其处理分离，委托模型促进了更整洁、模块化的设计。
+在该模型中，事件源是一个组件（例如按钮），它负责产生事件。监听器是一个想要响应事件的对象。为了做到这一点，监听器必须实现一个特定的接口。每当事件发生时，该监听器就会注册到事件源上。这种设置支持一对多的关系，允许事件源通知监听器。通过将事件生成与其处理分离，委托模型促进了更整洁、模块化的设计。
 
 例如，在文档中，点击加粗按钮或使用快捷键 `CTRL-B` 都会触发事件。事件处理器是设计用于管理事件并执行预期行为的方法。因此，点击加粗按钮或按下 `CTRL-B` 都会触发同一个事件处理器来使文本加粗。
 
@@ -6814,10 +6996,7 @@ d. `File`
 
 每个事件都封装在一个事件对象中，Java 的 `java.util.EventObject` 类是所有事件对象的父类，其子类包括 `ActionEvent` 和 `WindowEvent`。
 
-
-
-
-图 10.2 展示了 Java 中的事件委托模型。当用户与组件交互时（例如在图形用户界面 (GUI) 中点击按钮）——会生成一个事件，在这种情况下具体是一个 `ActionEvent`。该事件并不是由按钮本身处理，而是被委托给一个或多个实现了 `actionPerformed(ActionEvent e)` 方法的外部事件处理器。这些处理器包含了响应用户操作的逻辑。这种模型了 GUI 与事件处理逻辑之间的清晰分离，允许不同的类或方法根据其注册的方式，以多种方式处理同一个事件。
+图 10.2 展示了 Java 中的事件委托模型。当用户与组件交互时（例如在图形用户界面 (GUI) 中点击按钮）——会生成一个事件，在这种情况下具体是一个 `ActionEvent`。该事件并不是由按钮本身处理，而是被委托给一个或多个实现了 `actionPerformed(ActionEvent e)` 方法的外部事件处理器。这些处理器包含了响应用户操作的逻辑。这种模型实现了 GUI 与事件处理逻辑之间的清晰分离，允许不同的类或方法根据其注册的方式，以多种方式处理同一个事件。
 
 图 10.2 事件委托模型
 
@@ -7022,10 +7201,6 @@ public class SampleAdapter extends WindowAdapter
 
 图 10.3 运行 `SampleAdapter.java` 代码的截图
 
-
-
-
-
 ![image](img/fig10-3.jpg)
 
 由于适配器类是一个抽象类，我们必须使用 `extends` 关键字，这有时会成为使用适配器类的缺点。第 28 到 31 行是唯一需要的，因为你只需要在 `WindowAdapter` 类中重写一个方法。
@@ -7050,7 +7225,7 @@ public class SampleAdapter extends WindowAdapter
 | | | `componentHidden(ComponentEvent)` |
 | | | `componentResized(ComponentEvent)` |
 | | | `componentShown(ComponentEvent)` |
-|  | `WindowAdapter` | `windowClosing(WindowEvent)` |
+| 窗口 | `WindowAdapter` | `windowClosing(WindowEvent)` |
 | | | `windowOpened(WindowEvent)` |
 | | | `windowIconified(WindowEvent)` |
 | | | `windowDeiconified(WindowEvent)` |
@@ -7064,9 +7239,11 @@ public class SampleAdapter extends WindowAdapter
 
 内部类的目的是创建紧耦合的组件。对于 GUI 应用程序，它用于将 UI 代码和事件处理代码组合在单个代码库。
 
+
+
 在 AWT GUI 应用程序中，内部类常用于事件处理，因为它允许事件监听器访问外部类的方法和字段，而不需要额外的引用。这使得代码更有组织且更易管理。通过将事件处理程序定义为内部类，事件处理逻辑保持封装在主类中，减少了杂乱并提高了可读性。此外，由于内部类可以访问其所在类的私有成员，它简化了与 UI 组件的交互。例如，如果点击按钮需要更新标签或更改另一个组件的状态，内部类可以直接完成此操作而不需要额外的方法或引用。这种方法让事件处理代码与它管理的组件保持接近，使应用程序更结构化、更具维护性。
 
-在 AWT 应用程序中使用内部类进行事件处理可以使代码更整洁、更有组织。内部类可以直接直接访问外部类的变量和方法，这意味着你不需要传递额外的参数来操作组件。这减少了样板代码量，并使事件处理逻辑更易理解和维护。此外，由于内部类与外部类绑定，它可以专门用于处理该特定实例的事件，将相关代码放在一起。
+在 AWT 应用程序中使用内部类进行事件处理可以使代码更整洁、更有组织。内部类可以直接访问外部类的变量和方法，这意味着你不需要传递额外的参数来操作组件。这减少了样板代码量，并使事件处理逻辑更易理解和维护。此外，由于内部类与外部类绑定，它可以专门用于处理该特定实例的事件，将相关代码放在一起。
 
 以下是我们如何在构建 GUI 应用程序时实现内部类。
 
@@ -7169,9 +7346,6 @@ b.addActionListener(e -> {
 ```
 
 ## 10.3 使用事件处理程序构建 SimpleCalculator 应用程序
-
-
-
 
 让我们在 `main()` 方法之前添加这段代码。`actionPerformed()` 方法将通过调用 `getSource()` 方法来确定点击了哪个按钮。一旦我们知道了事件的源（按钮），我们就可以执行相应的操作，无论是对文本框中输入的数字进行加法、减法、乘法还是除法。
 
@@ -7288,7 +7462,9 @@ public class SimpleCalculator implements ActionListener {
         sc.startApp();
     }
 }
-```（注：原文包含行号且 main 方法被部分截断；我根据标准的 Java 模式重构了逻辑结构）。
+```
+
+（注：原文包含行号且 main 方法被部分截断；我根据标准的 Java 模式重构了逻辑结构）。
 
 这应该为你提供一个具有正常事件处理的运行时环境。图 10.4 显示了我们的 `SimpleCalculator` 程序的示例截图。
 
@@ -7297,11 +7473,13 @@ public class SimpleCalculator implements ActionListener {
 ## 章节总结
 
 - Java 中的事件处理涉及诸如按钮点击、鼠标移动或快捷键等交互，这些交互被捕获为事件并绑定到称为“事件源”的特定组件。每个事件都会触发一个方法，即“事件处理程序”，该方法执行所需的操作，以确保在不同类型的用户交互中行为的一致性。
+
 - 有多种不同的事件处理技术，即委托模型、使用监听器接口、使用适配器类、内部类、匿名类以及使用 Lambda 表达式。
 
 ### 单选择题
 
 1. 当你尝试编译并运行这段代码时，会发生什么？
+
 ```java
 import java.awt.*;
 import java.awt.event.*;
@@ -7318,90 +7496,131 @@ public class MyWindowClosing extends Frame implements WindowListener{
     }
 }
 ```
+
 a. 编译错误
+
 b. 运行时无输出
+
 c. 运行时错误
+
 d. 编译通过
 
 2. 如果你需要使用事件处理的类，需要导入哪个包？
+
 a. `javax.events` 包
+
 b. `java.awt` 包
+
 c. `javax.event` 包
+
 d. `java.event` 包
 
 3. 下列哪个不会产生事件对象？
+
 a. 点击按钮
+
 b. 查看窗口内容
+
 c. 在文本区域中输入
+
 d. 按回键
 
 4. 下列哪个是 `java.event` 包中的一个抽象类？
+
 a. `ActionListener`
+
 b. `MouseListener`
+
 c. `MouseAdapter`
+
 d. `MouseListener`
 
 5. 用户与组件之间的交互对象称为什么？
+
 a. 适配器类
+
 b. 监听器
+
 c. 事件处理器
+
 d. 事件
 
 6. 关于事件处理器，以下哪项是正确的？
+
 a. 事件处理器代表用户与组件之间的交互。
+
 b. 事件处理器是在事件发生时被调用的方法。
+
 c. 事件处理器向所有监听器发送事件。
+
 d. 事件处理器始终位于 GUI 组件所在的代码中。
 
 7. 如果你想为多个 GUI 组件复用事件处理器，应该哪种策略？
+
 a. 扩展适配器类
+
 b. 使用匿名类
+
 c. 将事件处理器委托到不同的代码
+
 d. 使用内部类
 
 8. 代码段应该使用哪个关键字？
+
 ```java
 private class MyEventHandler ________ WindowAdapter {
     // 一代码
 }
 ```
+
 a. `extends`
+
 b. `implements`
+
 c. `overload`
+
 d. `override`
 
 9. 使用 Lambda 表达式作为事件处理技术时，你应该使用以下哪个运算符？
+
 a. `->`
+
 b. `=>`
+
 c. `-=>`
+
 d. `==>`
 
 10. 下列哪个不是一个监听器接口？
+
 a. `MouseListener`
+
 b. `MouseAdapter`
+
 c. `MouseMotionListener`
+
 d. `ActionListener`
 
 ### 选择题答案
 
 | 1 - a | 2 - d | 3 - b | 4 - c | 5 - d |
+
 | 6 - b | 7 - c | 8 - a | 9 - a | 10 - b |
 
 ### 编程任务
 
 #### 编程任务 1：我的颜色器（带事件处理器）
 
--复习第 9 章的编程任务。为你的颜色器提供所需的功能。它应该接受用户在相应文本框中输入的（红、绿、蓝、Alpha）值。红色、绿色和蓝色是原色，而 Alpha 代表颜色的透明度。它控制颜色应该有多不透明或透明。红、绿、蓝和 Alpha 值的范围从 0 到 255。如果 Alpha 值为 0，则意味着完全透明（完全视），），255 则意味着完全不透明（无透明度）。
+复习第 9 章的编程任务。为你的颜色器提供所需的功能。它应该接受用户在相应文本框中输入的（红、绿、蓝、Alpha）值。红色、绿色和蓝色是原色，而 Alpha 代表颜色的透明度。它控制颜色应该有多不透明或透明。红、绿、蓝和 Alpha 值的范围从 0 到 255。如果 Alpha 值为 0，则意味着完全透明（完全视），），255 则意味着完全不透明（无透明度）。
 
+捕获文本字段中输入的无效值。如果用户输入以下任何内容，则抛出异常：
 
-
-
-- 捕获文本字段中输入的无效值。如果用户输入以下任何内容，则抛出异常：
 - 负值
 - 超出 0 到 255 范围的值
 - 非整数值
 - 空文本字段。
-- 使用来自四个文本字段的计算值更新 `Panel` 的背景颜色。你可能想查看 API 中 `Color` 类的构造函数，可以在那里传递四个整数值来实例化颜色。
+
+使用来自四个文本字段的计算值更新 `Panel` 的背景颜色。你可能想查看 API 中 `Color` 类的构造函数，可以在那里传递四个整数值来实例化颜色。
 
 以下是示例输出：
 
@@ -7418,6 +7637,8 @@ d. `ActionListener`
 - 探索常用的 Swing 组件，例如 `JCheckBox`、`JRadioButton`、`JComboBox`、`JList` 和 `JLabel`
 - 获得使用 Swing 设计图形用户界面的实践经验
 - 学习如何将你的 Swing 应用程序打包并发布为 Java Archive (JAR) 文件
+
+
 
 在最后一章中，我们将探讨 `AWT` 和 `Swing` 之间的关键区别，重点关注 Swing 如何为构建 Java 图形界面提供更灵活、现代的方法。虽然 `AWT` 为 GUI 开发奠定了基础，但 `Swing` 通过更丰富的组件集和对外观（look and feel）更好的控制对其进行了增强。你将学习如何将现有的基于 `AWT` 的应用程序转换为基于 Swing 的应用程序，解锁更高级的功能并改进视觉设计。我们还将仔细查看几个常用的 Swing 组件——例如 `JCheckBox`、`JRadioButton`、`JComboBox`、`JList` 和 `JLabel`——并查看它们如何增强用户交互。最后，本章将引导你将 Swing 应用程序打包成 Java Archive (JAR) 文件，使其易跨平台共享、运行或部署。完成本章后，你将准备好使用 Swing 设计、构建和发布全功能的 Java 桌面应用程序。
 
@@ -7445,7 +7666,7 @@ Java `AWT`（抽象窗口工具包）和 `Swing` 都用于构建 Java 图形用�
 
 ## 11.2 将你的 AWT 应用转换为基于 Swing 的应用
 
-在本节中，我们将重点关注将 `AWT`（抽象窗口工具包）应用程序转换为基于 Swing 的基础应用程序。为了实现这一点，在我们的简单计算器应用程序中导入 `javax.swing` 包是关重要的。
+在本节中，我们将重点关注将 `AWT`（抽象窗口工具包）应用程序转换为基于 Swing 的基础应用程序。为了实现这一点，在我们的简单计算器应用程序中导入 `javax.swing` 包是关键的。
 
 简单回顾一下，原始计算器应用程序使用了各种 `AWT` 组件，包括面板、帧、标签、文本字段和按钮。它还包含了 `AWT` 事件包来管理事件处理，例如使用 `ActionListener` 响应按钮点击，或实现关闭按钮处理程序，使用户按下 Command+Q（macOS）或 Alt+F4（Windows）时允许应用程序关闭。这构成了一个功能完整的 `AWT` 应用程序。
 
@@ -7563,10 +7784,6 @@ private class MyCloseHandler extends WindowAdapter {
 }
 ```
 
-
-
-
-
 ```java
     public void windowClosing(WindowEvent we)
     {
@@ -7592,7 +7809,7 @@ private class MyCloseHandler extends WindowAdapter {
 
 ![image](img/fig11-3.jpg)
 
-为了启动我们计算器应用程序的转换，我们从修改组件和容器的声明开始，在声明中以及构造函数（即实例化组件和容器的地方）中在适当的位置添加 "J" 前缀。这把它们转换为基于 Swing 的组件。重要的是，不应对布局管理器进行任何更改，因为 Swing 并没有提供自己的版本。
+为了启动我们计算器应用程序的转换，我们从修改组件和容器的声明开始，在声明中以及构造函数（即实例化组件和容器的地方）在适当的位置添加 "J" 前缀。这把它们转换为基于 Swing 的组件。重要的是，不应对布局管理器进行任何更改，因为 Swing 并没有提供自己的版本。
 
 关于关闭按钮处理器，有一个保留现有功能的选项，也可以将其修改为使用 Swing 的框架方法（frame method）来关闭。一旦保存更改，我们可以编译代码（使用 `javac SimpleCalculator.java`），应用程序现在将作为一个基于 Swing 的组件运行。
 
@@ -7676,7 +7893,7 @@ public class SimpleCalculator implements ActionListener
 }
 ```
 
-## 11.3 Swing Swing 组件
+## 11.3 Swing 组件
 
 ### 11.3.1 JCheckBox：RGBCheckBox.java
 
@@ -7704,33 +7921,27 @@ public class RGBCheckBox {
 
 3. 构造函数：构造函数 `RGBCheckBox()` 初始化了 `JFrame` 和 `JButton` 对象，并创建了三个复选框：红、绿、蓝。这些组件将是用户界面的一部分。
 
+
+
 ```java
 public RGBCheckBox() {
     f = new JFrame("JCheckBox Example");
     b = new JButton("Click Me!");
     red = new JCheckBox(" Red ");
     green = new JCheckBox(" Green ");
+    blue = new JCheckBox(" Blue ");
 }
 ```
 
+### 4. `startApp()` 方法
 
-
-
-
-```java
-blue = new JCheckBox(" Blue ");
-
-}
-```
-
-### 4. StartApp 方法
 `startApp()` 方法配置了框架的布局，它使用具有 4 行 1 列的 `GridLayout` 来垂直显示复选框和按钮。使用 `setSelected(true)` 方法用于预选红色和蓝色的复选框。
 
 `setLayout(new GridLayout(4, 1))` 确保组件被排列在四行中。
 
 `f.add()` 方法按照所需的顺序将组件添加到框架中。
 
-`f.setBounds(100, 100, 300, 200)` 明了窗口左上角的位置 `(100,100)` 及其尺寸 `(300x200)`。
+`f.setBounds(100, 100, 300, 200)` 设定窗口左上角的位置 `(100,100)` 及其尺寸 `(300x200)`。
 
 `f.setVisible(true)` 让窗口对用户可见。
 
@@ -7748,7 +7959,8 @@ public void startApp() {
 }
 ```
 
-### 5. Main 方法
+### 5. `main` 方法
+
 `main` 方法作为程序的入口点。它创建了 `RGBCheckBox` 类的一个实例并调用 `startApp()` 方法来显示 UI。
 
 ```java
@@ -7759,21 +7971,27 @@ public static void main(String args[]) {
 ```
 
 # 代码工作原理
+
 当程序运行时，会出现一个带有三个复选框的窗口：红色、绿色和蓝色。红色和蓝色复选框被预选中。用户可以勾选或取消这些框的任何组合。
 
 还会显示一个标记为“Click Me!”的按钮，尽管它目前没有实现功能。未来的扩展可能包括为按钮和复选框添加事件监听器，以便在点击时执行操作。
 
 ## 图 11.4 RGBCheckBox 运行时
+
 ![image](img/fig11-4.jpg)
 
 ## 关键点
+
 - `JCheckBox` 是 Swing 框架的一部分，它继承了父类的许多方法，允许进行广泛的定制。
+
 - `setBounds()` 方法用于对窗口进行定位和调整大小，对其布局提供了更多控制。
 
 这个简单的示例演示了如何使用 Java 中的 Swing 组件创建一个带有多个复选框的基础 GUI。你可以通过添加事件处理来进一步扩展，使 UI 具有交互性。
 
 ## 这里是完整的源代码：
+
 ### RGBCheckBox.java
+
 ```java
 import java.awt.*;
 import javax.swing.*;
@@ -7811,28 +8029,40 @@ public class RGBCheckBox {
 ```
 
 # 运行说明
+
 1. 将此代码保存为名为 `RGBCheckBox.java` 的文件。
+
 2. 使用 `javac RGBCheckBox.java` 编译代码。
+
 3. 使用 `java RGBCheckBox` 运行程序。
+
 当你运行时，将出现一个带有三个复选框（红色、绿色和蓝色）的窗口，红色和蓝色被预选，并还有一个“Click Me!”按钮。
 
 ### RGBRadioButton.java
+
 在解释中，我们将分解如何使用 `JRadioButton` 组件创建一个基础 Swing 应用程序，展示单选按钮和复选框之间的区别。
 
 ## 单选按钮与复选框的关键区别
+
 - **单选按钮 (Radio buttons)**：允许用户一次只选择一个选项。当你选择一个单选按钮时，同一组中之前选中的任何按钮都会取消选择。
-- **复选框 (JCheckBox)**：允许用户选择多个选项。你可以独立地选择或取消选择多个选项。
+
+- **复选框 (`JCheckBox`)**：允许用户选择多个选项。你可以独立地选择或取消选择多个选项。
 
 ## 代码分解
+
 ### 1. 类和导入语句
+
 我们首先导入必要的包：
+
 ```java
 import java.awt.*; // 用于 GridLayout 和其他布局管理器
 import javax.swing.*; // 用于 JFrame, JButton
 ```
 
 ### 2. 创建主类
+
 在这种情况下，类名为 `RGBRadioButton`：
+
 ```java
 public class RGBRadioButton {
     // 声明组件：JFrame, JButton 和 JRadioButton
@@ -7844,15 +8074,17 @@ public class RGBRadioButton {
     public RGBRadioButton() {
         f = new JFrame("RGBRadioButton Example");
         red = new JRadioButton(" Red "); // 红色
-        green = new JRadioButton(" Green ");// 绿色
+        green = new JRadioButton(" Green "); // 绿色
         blue = new JRadioButton(" Blue "); // 蓝色
         b = new JButton("Click Me!"); // 按钮
     }
 }
 ```
 
-### 3. startApp 方法
+### 3. `startApp` 方法
+
 该方法设置布局并将组件（单选按钮、按钮等）添加到框架中：
+
 ```java
 public void startApp() {
     // 设置 4 行 1 列的 GridLayout 以垂直排列组件
@@ -7877,10 +8109,6 @@ public void startApp() {
     f.setVisible(true);
 }
 ```
-
-
-
-
 
 在 Swing 中，即使点击了窗口上的关闭按钮，应用程序可能也不会完全终止，除非添加特定的代码来处理窗口关闭。默认行为是，除非另有指定，否则窗口只会隐藏而退出。
 
@@ -7926,7 +8154,7 @@ public class RGBRadioButton {
 }
 ```
 
-### 11.3.3 JComboBox: JComboBoxExample.java
+### 11.3.3 `JComboBox`: JComboBoxExample.java
 
 Java 中的 `JComboBox` 是一种 Swing 组件，允许用户从下拉列表中选择项目。它既可以是一个不可编辑的列表（用户从预定义值中选择），也可以是一个可编辑的列表（用户也可以输入自己的内容）。该组件结合了按钮和文本字段的功能，为用户提供了一种灵活的输入方式。
 
@@ -7935,15 +8163,21 @@ Java 中的 `JComboBox` 是一种 Swing 组件，允许用户从下拉列表中�
 #### 代码中使用的组件
 
 * `JFrame`：承载应用程序所有组件的窗口或容器。
+
 * `JButton`：一个可以触发事件的可点击按钮。
+
 * `JComboBox`：包含供用户选择的选项的下拉列表。
+
 * `JLabel`：根据用户操作显示消息的标签。
+
 * `String Array`：包含颜色列表的数组，这些颜色将显示在 `JComboBox` 中。
 
 #### 代码解析
 
 **1. 类的声明**
+
 `JComboBoxExample` 类开始声明用于表示 `JFrame`、`JButton`、`JComboBox` 和 `JLabel` 的私有变量，这些变量将用于整个应用程序。
+
 ```java
 private JFrame f;
 private JButton b;
@@ -7951,14 +8185,21 @@ private JComboBox<String> cb;
 private JLabel label;
 private String colorList[];
 ```
+
 * `f` 代表帧窗口。
+
 * `b` 是标记为 "Show" 的按钮。
+
 * `cb` 是包含选项的 `JComboBox`。
+
 * `label` 将显示所选的颜色。
+
 * `colorList` 保存预定义的值。
 
 **2. 构造函数**
+
 构造函数初始化 GUI（图形用户界面）的所有组件。它创建了帧、按钮和标签，同时使用 `setBounds()` 方法分配位置，该方法定义了它们的位置和大小。
+
 ```java
 public JComboBoxExample() {
     f = new JFrame("JComboBox List");
@@ -7972,13 +8213,19 @@ public JComboBoxExample() {
     b.setBounds(200, 100, 75, 20);
 }
 ```
+
 * 创建了一个标题为 "JComboBox List" 的新 `JFrame`。
+
 * `JLabel` 居中对齐并设置了其大小。
+
 * `JComboBox` 使用 `colorList` 数组填充。
+
 * 创建了标记为 "Show" 的 `JButton`。
 
 **3. 启动应用程序**
+
 `startApp()` 方法负责将组件添加到帧中并使帧可见。
+
 ```java
 public void startApp() {
     f.setLayout(null); // 不使用布局管理器，因此使用 setBounds 手动设置位置。
@@ -7989,10 +8236,13 @@ public void startApp() {
     f.setVisible(true); // 使帧可见。
 }
 ```
+
 该方法通过调用 `f.setLayout(null)` 禁用了默认布局管理器，允许对组件进行手动定位。
 
 **4. 按钮的事件处理**
+
 为了使按钮具有功能，添加了一个 `ActionListener`。当按钮被点击时，从 `JComboBox` 中获取被选项目并显示在 `JLabel` 中。
+
 ```java
 b.addActionListener(new ActionListener() {
     public void actionPerformed(ActionEvent ae) {
@@ -8001,12 +8251,17 @@ b.addActionListener(new ActionListener() {
     }
 });
 ```
+
 * `ActionListener` 监听按钮点击。
+
 * 当按钮被点击时，使用 `cb.getSelectedIndex()` 获取 `JComboBox` 中的选值并将其设置在标签中。
+
 * 标签文本更新为所选的颜色名称。
 
-**5. Main 方法**
+**5. `main` 方法**
+
 `main` 方法创建 `JComboBoxExample` 类的实例并通过调用 `startApp()` 启动应用程序。
+
 ```java
 public static void main(String args[]) {
     JComboBoxExample jcbe = new JComboBoxExample();
@@ -8015,22 +8270,24 @@ public static void main(String args[]) {
 ```
 
 #### 行为
+
 当应用程序运行时：
+
 * 出现一个带有 `JComboBox` 的窗口。用户可以从下拉列表中进行选择。
+
 * 点击 "Show" 按钮后，选中的颜色将显示在标签上。
 
 为了方便，这里是完整的代码：`JComboBoxExample.java`。
 
-### 11.3.4 JList: RGBJList.java
+### 11.3.4 `JList`: RGBJList.java
 
 `JList` 用于显示项目列表，用户从中选择一个或多个元素。通过 `JList`，你可以灵活地启用单选或多选，允许用户一次选择多个项目。
-
-
-
 
 要创建一个 `JList`，必须有一个“列表模型（list model）”，它作为你想在 `JList` 中显示的元素的容器。你可以将列表模型想象成数据持有者，而 `JList` 则作为显示这些项目的视觉界面。
 
 在提供的示例代码中，创建了一个名为 `RGBJList` 的类。该类声明了一个框架（`JFrame`）和一个标签（`JLabel`），用于显示颜色选项列表。首先实例化框架并设置为使用 `FlowLayout`，这有助于将组件从左到右排列，类似于段落中的文本。
+
+
 
 在 `startApp()` 方法中，创建了一个 `DefaultListModel` 来存储列表数据。该模型的类型为 `String`，意味着它将存储一组表示颜色名称的字符串值。使用 `addElement()` 方法将诸如“Red（红色）”、“Green（绿色）”和“Blue（蓝色）”等项添加到模型中。
 
@@ -8040,7 +8297,7 @@ public static void main(String args[]) {
 
 最后，通过 `setVisible(true)` 方法使框架可见，允许应用程序窗口显示给用户。
 
-当你运行代码时，你将看到一个颜色选项列表（“Red”、“Green”和“Blue”）。由于调用了 `setSelectedIndex(0)`，初始状态下“Red”是被中的。用户可以点击任何颜色进行选择。他们还可以通过按住 `Shift` 或 `Command` (Mac) / `Control` (Windows) 键并点击额外的颜色来完成多项选择。
+当你运行代码时，你将看到一个颜色选项列表（“Red”、“Green”和“Blue”）。由于调用了 `setSelectedIndex(0)`，初始状态下“Red”是被选中的。用户可以点击任何颜色进行选择。他们还可以通过按住 `Shift` 或 `Command` (Mac) / `Control` (Windows) 键并点击额外的颜色来完成多项选择。
 
 以下是保存为 `RGBJList.java` 的示例代码：
 
@@ -8083,8 +8340,6 @@ public class RGBJList {
     }
 }
 ```
-
-
 
 这里是完整的代码：`CounterApp.java`
 
@@ -8151,51 +8406,61 @@ public class CounterApp implements ActionListener {
 }
 ```
 
-## 将你的应用程序打包为 Java 存档 (JAR) 文件
+# 将你的应用程序打包为 Java 存档 (JAR) 文件
 
-### JAR 文件概述
+## JAR 文件概述
+
 JAR 代表 Java Archive（Java 存档），是一种用于在单个文件中分发应用程序或库的文件格式。与 ZIP 文件类似，JAR 文件将多个文件打包在一起，但它是专门为 Java 相关文件（如 `.class` 文件、资源和元数据）设计的。JAR 文件使得跨平台分发 Java 程序及其相关文件变得简单。JAR 文件有两种常见类型：
 
 - 普通 JAR 文件：打包了 Java 类和资源，但没有指定主类。
 - 可执行的 JAR 文件：包含一个 `MANIFEST.MF` 文件，其中声明了主类，使得 JAR 文件可以直接执行。
 
-### 创建 JAR 文件的分步指南
+## 创建 JAR 文件的分步指南
 
-#### 设置基础项目
+### 设置基础项目
+
 在创建 JAR 文件之前，你需要组织你的项目文件。假设你正在使用以下目录结构：
 
 - `src/`：包含你的源代码（`.java` 文件）。
 - `classes/`：这是存储编译后的 `.class` 文件的地方。
 - `dist/`：这是打包后存储 JAR 文件的地方。
 
-#### 在你的 Java 文件中添加包声明
-在将你的应用程序转换为 JAR 文件时，至关重要的是确保 Java 类是包的一部分。例如，如果你的 `SimpleCalculator.java` 文件位于 `src/demo/` 文件夹中，你的源代码应该在文件文件开头包含以下包声明：
+### 在你的 Java 文件中添加包声明
+
+在将你的应用程序转换为 JAR 文件时，至关重要的是确保 Java 类是包的一部分。例如，如果你的 `SimpleCalculator.java` 文件位于 `src/demo/` 文件夹中，你的源代码应该在文件开头包含以下包声明：
 
 ```java
 package demo;
 ```
+
 包声明应该反映你的项目文件夹结构。包含你的 `.java` 文件的文件夹（在本例中为 `demo/`）应该是包名。
 
-#### 编译 Java 源代码（命令行）
+### 编译 Java 源代码（命令行）
+
 要编译源代码，请打开终端并导航到项目的 `src/` 目录。以下命令将编译 `SimpleCalculator.java` 文件：
 
 ```bash
 javac -d ../classes demo/SimpleCalculator.java
 ```
+
 解释：
+
 - `javac`：Java 编译器命令。
 - `-d ../classes`：指定编译后的 `.class` 文件的输出目录（在本例中为 `classes/` 文件夹）。
 - `demo/SimpleCalculator.java`：要编译的源文件路径。
 
 编译完成后，`classes/` 文件夹将如下所示。
 
-#### 创建普通 JAR 文件（命令行）
+### 创建普通 JAR 文件（命令行）
+
 现在你已经有了编译后的 `.class` 文件，可以创建一个普通 JAR 文件（不带清单文件）。从 `classes/` 目录运行以下命令：
 
 ```bash
 jar cvf MyApp.jar demo/
 ```
+
 解释：
+
 - `jar`：用于创建或管理 JAR 文件的命令。
 - `cvf`：用于创建 JAR 文件的选项：
     - `c`：创建新 JAR
@@ -8206,175 +8471,223 @@ jar cvf MyApp.jar demo/
 
 此命令将在 `classes/` 目录下创建一个名为 `MyApp.jar` 的文件，其中包含 `demo/` 文件夹的内容。
 
-#### 运行普通 JAR 文件（命令行）
+### 运行普通 JAR 文件（命令行）
+
 由于你现在已经有了编译后的 `.class` 文件，要运行它，你需要指定路径和全限定类名：
 
 ```bash
 java -cp MyApp.jar demo.SimpleCalculator
 ```
+
 解释：
+
 - `java`：Java 运行命令。
-- `cp MyApp.jar`：指定 JAR 文件作为类路径。
+- `-cp MyApp.jar`：指定 JAR 文件作为类路径。
 - `demo.SimpleCalculator`：类的全限定类名。
 
-#### 创建可执行的 JAR 文件
+### 创建可执行的 JAR 文件
+
 可执行的 JAR 文件包含一个 `MANIFEST.MF` 文件，指定了运行 JAR 时执行的主类。以下是创建方法：
 
-**第一步：创建清单文件**
+#### 第一步：创建清单文件
+
 在 `classes/` 目录下创建一个名为 `manifest.txt` 的文件，内容如下：
 
 ```
 Main-Class: demo.SimpleCalculator
 ```
+
 **注意**：确保文件末尾有一个空行。这是清单格式的要求。
 
-**第二步：创建可执行 JAR**
+#### 第二步：创建可执行 JAR
+
 使用以下命令带清单创建 JAR 文件：
 
 ```bash
 jar cvfm MyAppExecutable.jar manifest.txt demo/
 ```
+
 解释：
+
 - `cvfm`：`m` 用于指定清单文件。
 - `MyAppExecutable.jar`：生成的可执行 JAR 文件。
 - `manifest.txt`：清单文件的路径。
 - `demo/`：包含编译后的 `.class` 文件的文件夹。
 
-**第三步：运行可执行 JAR 文件**
+#### 第三步：运行可执行 JAR 文件
+
 创建可执行 JAR 后，你可以简单地通过使用 `java -jar` 命令来运行：
 
 ```bash
 java -jar MyAppExecutable.jar
 ```
+
 由于 `MANIFEST.MF` 文件包含了 `Main-Class` 条目；你不需要指定类名或类路径。
 
-### 使用 NetBeans IDE 创建 JAR 文件
+## 使用 NetBeans IDE 创建 JAR 文件
+
 如果你使用 NetBeans 等 IDE，创建 JAR 文件的过程会更加简单。
 
-**第一步：在 NetBeans 中创建 Java 项目**
+### 第一步：在 NetBeans 中创建 Java 项目
+
 1. 打开 NetBeans 并新建项目（File > New Project）。
 2. 选择 `Java with Ant` 作为项目类型，并为项目命名为 `SwingDesktopAppProject`。
 3. 在项目设置期间确保取消勾选“Create Main Class”，因为你稍后会手动添加类。
 
-**第二步：添加源代码和包**
+### 第二步：添加源代码和包
+
 1. 在项目窗口中，右键点击 `Source Packages` 并选择 `New > Java Class`。
 2. 创建一个名为 `demo` 的包以及名为 `SimpleCalculator` 的类（与之前相同）。
 3. 将计算器的 Java 代码添加到 `SimpleCalculator.java` 文件中，包括包声明。
 
-**第三步：运行并测试你的应用程序**
+### 第三步：运行并测试你的应用程序
+
 1. 在项目选项卡中，右键点击 `SimpleCalculator.java` 并选择 `Run File`。
 2. NetBeans 将编译并运行你的应用程序。你应该能看到计算器在运行。
 
-**第四步：在 NetBeans 中创建可执行 JAR**
-
-
-
-
+### 第四步：在 NetBeans 中创建可执行 JAR
 
 1. 添加 `Main-Class` 声明：进入 `NetBeans` 中的 `Files` 标签页。打开项目文件夹下的 `manifest.mf` 文件。
-
 2. 在 `manifest.mf` 文件中添加以下条目：
 
 ```
 Main-Class: demo.SimpleCalculator
 ```
+
 确保该条目之后有一个空行。
 
 3. 构建项目：在 `Projects` 标签页中右键点击你的项目，并选择 `Clean and Build`。这将编译你的项目并将其打包成 `JAR` 文件。
-
 4. 找到 JAR 文件：可执行的 `JAR` 文件将位于项目目录的 `dist/` 文件夹中。
 
 ### 步骤 5：运行可执行的 JAR
 
 你可以通过在终端中进入 `dist/` 文件夹并使用以下命令运行 `JAR` 文件：
 
-```
+```bash
 java -jar SwingDesktopAppProject.jar
 ```
 
 通过上述步骤，你可以使用命令行或像 `NetBeans` 这样的 IDE 创建普通 JAR 和可执行 JAR 文件。这两种 JAR 文件之间的关键区别在于是否存在包含有 `Main-Class` 声明的 `MANIFEST.MF` 文件，这允许你无需显式指定类路径或主类即可运行 JAR 文件。
 
-![](img/note.jpg) 章节总结
+![](img/note.jpg)
+
+## 章节总结
 
 - `Java AWT` 和 `Swing` 都用于构建 GUI，但 `AWT` 依赖于原生操作系统组件，使其具有平台依赖性；而 `Swing` 提供了轻量级、平台无关组件，在不同平台上看起来保持一致。`Swing` 还提供了更多功能，例如额外的组件以及对可定制外观和感觉的支持，并且遵循 MVC 设计模式，与 `AWT` 不同。
-
 - 本课重点在于通过导入 `javax.swing` 包将基于 `AWT` 的计算器应用程序转换为基于 `Swing` 的应用程序。这种转换涉及将 `AWT` 组件（如 `Frame` 和 `Button`）替换为相应的 `Swing` 组件（如 `JFrame` 和 `JButton`），同时保留相同的布局管理器和事件处理。尽管两个版本的功能相似，但 `Swing` 提供了增强的视觉吸引力和平台独立的 UI 特性，这在 Windows 系统上尤为明显。
-
 - `JAR`（Java 存档）文件用于将 Java 应用程序或库打包到单个文件中，以便分发。主要有两种类型：普通 JAR（打包了类文件但未指定主类）和可执行 JAR（包含一个有 `Main-Class` 声明的清单文件，以便直接执行）。你可以通过编译 Java 代码、将其组织到目录并使用 `jar` 命令来创建 JAR 文件。或者，像 `NetBeans` 这样的 IDE 可以简化这一过程，自动打包你的项目并为可执行 JAR 创建必要的清单文件。
 
-![](img/Quiz_Icon.jpg) 单选题
+![](img/Quiz_Icon.jpg)
+
+## 单选题
 
 1. 如果你想使用 `Swing` 框架，应该导入哪个包？
-a. `javax.swing` 包
-b. `java.swing` 包
-c. `java.awt` 包
-d. `java.awt.swing` 包
 
-2. 下列哪项**不是**我们可以可以导入的有效 GUI / 事件包？
-a. `javax.swing.*;`
-b. `java.swing.*;`
-c. `java.awt.*;`
-d. `java.awt.event.*;`
+   a. `javax.swing` 包
+   b. `java.swing` 包
+   c. `java.awt` 包
+   d. `java.awt.swing` 包
+
+2. 下列哪项**不是**我们可以导入的有效 GUI / 事件包？
+
+   a. `javax.swing.*;`
+   b. `java.swing.*;`
+   c. `java.awt.*;`
+   d. `java.awt.event.*;`
 
 3. 你正计划创建一个可执行的 JAR 文件，你的测试类位于 `classes\myFolder\MyTestClass.class`。你当前的文件夹（当前工作目录）在 `classes\` 下。假设你在相同文件夹（`classes`）中有一个名为 `manif.mf` 的正确清单文件，以下哪个命令允许你创建一个可执行的 JAR 文件？
-a. `jar cvfm MyJar.jar manif.mf`
-b. `jar cvf MyJar.jar manif.mf`
+
+   a. `jar cvfm MyJar.jar manif.mf`
+   b. `jar cvf MyJar.jar manif.mf`
+
+
+
 c. `jar cvf MyJar.jar *`
+
 d. `jar cvfm MyJar.jar manif.mf *`
 
 4. 你创建了一个名为 `MyJar.jar` 的不可执行 JAR 文件。测试类位于 `classes\myFolder\MyTestClass.class`。你在 `classes` 文件夹内部创建了 JAR 文件。以下哪个命令是运行 JAR 文件的正确方法？
+
 a. `java -jar myFolder.MyTestClass`
+
 b. `jar MyJar.jar myFolder.MyTestClass`
+
 c. `java -cp MyJar.jar myFolder.MyTestClass`
+
 d. `java -jar MyJar.jar`
 
 5. JAR 代表什么？
+
 a. `Java Archive Resource`
+
 b. `Java Application Resource`
+
 c. `Java Automatic Resource`
+
 d. `Java ARchive`
 
 6. 你称那个包含 JAR 文件中打包信息的特殊文件为什么？
+
 a. `class file`
+
 b. `manifest file`
+
 c. `Java Source File`
+
 d. `Executable File`
 
 7. 关于 `Swing`，以下哪项是**错误**的？
+
 a. 与 `AWT` 不同，`Java Swing` 提供了一系列平台无关且轻量级的组件。
+
 b. `Swing` 包构建在 `AWT（抽象窗口工具包）之上。
+
 c. 你可以在 `javax.swing` 包下找到 `Frame`、`Button` 和 `Label` 类。
+
 d. `Java Swing` 包是 Java 基础类 (JFC) 的一部分，用于创建窗口应用程序。
 
 8. 哪个 `Swing` 组件是单选按钮的实现，可以选择或取消选择某项，并与 `ButtonGroup` 对象一起使用创建一个一次只能选择一个按钮组？
+
 a. `JComboBox`
+
 b. `JCheckbox`
+
 c. `JRadioButton`
+
 d. `JList`
 
 9. 哪个 `Swing` 组件显示对象列表并允许用户选择一个或多个项目？这还需要一个 `ListModel` 来维护用户可以选择的列表内容？
+
 a. `JList`
+
 b. `JRadioButton`
+
 c. `JComboBox`
+
 d. `JCheckbox`
 
 10. 关于 `Swing` 组件，以下哪项是**错误**的？
+
 a. `Swing` 组件是平台无关的。
+
 b. `Swing` 提供的组件比 `AWT` 少。
+
 c. `Swing` 组件是轻量级组件。
+
 d. `Swing` 支持插件式外观和感觉组件。
 
-单选题答案
+### 单选题答案
 
 | 1 – a | 2 – b | 3 – d | 4 – c | 5 – d |
+| :--- | :--- | :--- | :--- | :--- |
 | 6 – b | 7 – c | 8 – c | 9 – a | 10 – b |
 
 ![](img/code.jpg) 编程任务
 
 - 回习 15 章的编程任务：我的颜色计算器（带事件处理器），并将你的 `AWT` 颜色计算器转换为 `Swing 应用程序`。
+
 - 为你的颜色计算器创建一个可执行的 JAR 文件，这样当你双击 JAR 文件时，它将启动你的颜色计算器。
 
 ![image](img/pg496.jpg)
 
 ![image](img/BE-back.jpg)
-

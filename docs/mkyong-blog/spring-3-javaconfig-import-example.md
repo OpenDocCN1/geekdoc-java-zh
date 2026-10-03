@@ -1,3 +1,4 @@
+
 # Spring 3 JavaConfig @Import 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring3/spring-3-javaconfig-import-example/>
@@ -5,21 +6,21 @@
 通常，您会将一个大的 Spring XML bean 文件分割成多个小文件，按模块或类别分组，以使事情更易于维护和模块化。举个例子，
 
 ```java
- <beans 
+<beans 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 	<import resource="config/customer.xml"/>
-        <import resource="config/scheduler.xml"/>
+	<import resource="config/scheduler.xml"/>
 
 </beans> 
 ```
 
-在 Spring3 JavaConfig 中，等效的功能是 **@Import** 。
+在 Spring3 JavaConfig 中，等效的功能是`@Import`。
 
 ```java
- package com.mkyong.config;
+package com.mkyong.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -31,22 +32,24 @@ public class AppConfig {
 } 
 ```
 
-## @导入示例
+## @Import 示例
 
-查看使用 JavaConfig **@Import** 的完整示例。
+查看使用 JavaConfig `@Import` 的完整示例。
 
- ## 1.目录结构
+## 1. 目录结构
 
 这个例子的目录结构。
 
-![directory structure of this example](img/75dc53702eaa717c9d626df5c045bc67.png "spring-javaconfig-import") ## 2.春豆
+![directory structure of this example](img/75dc53702eaa717c9d626df5c045bc67.png "spring-javaconfig-import")
 
-两个简单的春豆。
+## 2. Spring Bean
 
-*文件:CustomerBo.java*
+两个简单的 Spring Bean。
+
+*文件：`CustomerBo.java`*
 
 ```java
- package com.mkyong.core;
+package com.mkyong.core;
 
 public class CustomerBo {
 
@@ -58,10 +61,10 @@ public class CustomerBo {
 } 
 ```
 
-*文件:SchedulerBo.java*
+*文件：`SchedulerBo.java`*
 
 ```java
- package com.mkyong.core;
+package com.mkyong.core;
 
 public class SchedulerBo {
 
@@ -73,14 +76,14 @@ public class SchedulerBo {
 } 
 ```
 
-## 3.@配置示例
+## 3. @Configuration 示例
 
-现在，使用 JavaConfig**@ Configuration**来声明上面的 beans。
+现在，使用 JavaConfig `@Configuration` 来声明上面的 beans。
 
-*文件:CustomerConfig.java*
+*文件：`CustomerConfig.java`*
 
 ```java
- package com.mkyong.config;
+package com.mkyong.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -99,10 +102,10 @@ public class CustomerConfig {
 } 
 ```
 
-*文件:SchedulerConfig.java*
+*文件：`SchedulerConfig.java`*
 
 ```java
- package com.mkyong.config;
+package com.mkyong.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -121,14 +124,14 @@ public class SchedulerConfig {
 } 
 ```
 
-## 4.@导入示例
+## 4. @Import 示例
 
-使用 **@Import** 加载多个配置文件。
+使用`@Import`加载多个配置文件。
 
-*文件:AppConfig.java*
+*文件：`AppConfig.java`*
 
 ```java
- package com.mkyong.config;
+package com.mkyong.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -140,12 +143,12 @@ public class AppConfig {
 } 
 ```
 
-## 5.运行它
+## 5. 运行它
 
 加载主配置文件，并测试它。
 
 ```java
- package com.mkyong.core;
+package com.mkyong.core;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -170,7 +173,7 @@ public class App {
 输出
 
 ```java
- CustomerBo : Hello 1
+CustomerBo : Hello 1
 SchedulerBo : Hello 2 
 ```
 
@@ -180,14 +183,7 @@ Download It – [Spring3-JavaConfig-Import-Example.zip](http://web.archive.org/w
 
 ## 参考
 
-1.  [spring 3 @配置示例](http://web.archive.org/web/20190224163317/http://www.mkyong.com/spring3/spring-3-javaconfig-example/)
-2.  [Spring XML 导入示例](http://web.archive.org/web/20190224163317/http://www.mkyong.com/spring/load-multiple-spring-bean-configuration-file/)
+1. [Spring 3 @Configuration 示例](http://web.archive.org/web/20190224163317/http://www.mkyong.com/spring3/spring-3-javaconfig-example/)
+2. [Spring XML 导入示例](http://web.archive.org/web/20190224163317/http://www.mkyong.com/spring/load-multiple-spring-bean-configuration-file/)
 
 [javaconfig](http://web.archive.org/web/20190224163317/http://www.mkyong.com/tag/javaconfig/) [spring3](http://web.archive.org/web/20190224163317/http://www.mkyong.com/tag/spring3/)
-
-
-
-
-
-
-

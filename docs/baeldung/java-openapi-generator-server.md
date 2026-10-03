@@ -1,24 +1,25 @@
-# 使用 Open API 生成器实现 OpenAPI 服务器
+
+## 使用 Open API 生成器实现 OpenAPI 服务器
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-openapi-generator-server>
 
-## 1.概观
+### 1. 概观
 
-顾名思义， [OpenAPI 生成器](https://web.archive.org/web/20221022125227/https://github.com/OpenAPITools/openapi-generator)根据 [OpenAPI](/web/20221022125227/https://www.baeldung.com/spring-rest-openapi-documentation) 规范生成代码。它可以为客户端库、服务器存根、文档和配置创建代码。
+顾名思义，[OpenAPI 生成器](https://web.archive.org/web/20221022125227/https://github.com/OpenAPITools/openapi-generator)根据[OpenAPI](/web/20221022125227/https://www.baeldung.com/spring-rest-openapi-documentation)规范生成代码。它可以为客户端库、服务器存根、文档和配置创建代码。
 
 它支持各种语言和框架。值得注意的是，它支持 C++、C#、Java、PHP、Python、Ruby、Scala——几乎所有广泛使用的语言。
 
 在本教程中，我们将学习如何通过 Maven 插件使用 OpenAPI Generator 实现一个基于 Spring 的服务器存根。
 
-使用生成器的其他方式是通过其 [CLI](https://web.archive.org/web/20221022125227/https://openapi-generator.tech/docs/installation/) 或[在线工具](https://web.archive.org/web/20221022125227/http://api.openapi-generator.tech/index.html)。
+使用生成器的其他方式是通过其[CLI](https://web.archive.org/web/20221022125227/https://openapi-generator.tech/docs/installation/)或[在线工具](https://web.archive.org/web/20221022125227/http://api.openapi-generator.tech/index.html)。
 
-## 2.YAML 文件
+### 2. YAML 文件
 
 首先，我们需要一个指定 API 的 YAML 文件。我们将把它作为我们的生成器的输入来生成一个服务器存根。
 
 这是我们`petstore.yml`的一个片段:
 
-```java
+```yaml
 openapi: "3.0.0"
 paths:
   /pets:
@@ -70,13 +71,13 @@ components:
           type: string
 ```
 
-## 3.Maven 依赖性
+### 3. Maven 依赖性
 
-### 3.1.OpenAPI 生成器插件
+#### 3.1. OpenAPI 生成器插件
 
-接下来，让我们为生成器插件添加 [Maven 依赖关系](https://web.archive.org/web/20221022125227/https://search.maven.org/search?q=a:openapi-generator-maven-plugin%20AND%20g:%20org.openapitools):
+接下来，让我们为生成器插件添加[Maven 依赖关系](https://web.archive.org/web/20221022125227/https://search.maven.org/search?q=a:openapi-generator-maven-plugin%20AND%20g:%20org.openapitools):
 
-```java
+```xml
 <plugin>
     <groupId>org.openapitools</groupId>
     <artifactId>openapi-generator-maven-plugin</artifactId>
@@ -109,17 +110,17 @@ components:
 
 然后`apiPackage`指定 API 将被生成到的包名。
 
-接下来，我们有生成器放置数据模型的`modelPackage` 。
+接下来，我们有生成器放置数据模型的`modelPackage`。
 
-通过将`delegatePattern`设置为`true`，我们要求创建一个接口，该接口可以作为定制的 [`@Service`](/web/20221022125227/https://www.baeldung.com/spring-bean-annotations#service) 类来实现。
+通过将`delegatePattern`设置为`true`，我们要求创建一个接口，该接口可以作为定制的[`@Service`](/web/20221022125227/https://www.baeldung.com/spring-bean-annotations#service)类来实现。
 
-重要的是，无论我们使用 CLI、Maven/Gradle 插件还是在线生成选项，OpenAPI 生成器的 **[选项都是相同的。](https://web.archive.org/web/20221022125227/https://openapi-generator.tech/docs/generators/spring/)**
+重要的是，无论我们使用 CLI、Maven/Gradle 插件还是在线生成选项，OpenAPI 生成器的**[选项都是相同的。](https://web.archive.org/web/20221022125227/https://openapi-generator.tech/docs/generators/spring/)**
 
-### 3.2.Maven 依赖性
+#### 3.2. Maven 依赖性
 
-由于我们将生成一个 Spring 服务器，**我们还需要它的依赖项( [Spring Boot 启动网站](https://web.archive.org/web/20221022125227/https://search.maven.org/search?q=a:spring-boot-starter-web%20AND%20g:org.springframework.boot)和 [Spring 数据 JPA](https://web.archive.org/web/20221022125227/https://search.maven.org/search?q=a:spring-data-jpa%20AND%20g:org.springframework.data) )，这样生成的代码就能按预期编译和运行**:
+由于我们将生成一个 Spring 服务器，**我们还需要它的依赖项（[Spring Boot 启动网站](https://web.archive.org/web/20221022125227/https://search.maven.org/search?q=a:spring-boot-starter-web%20AND%20g:org.springframework.boot)和[Spring 数据 JPA](https://web.archive.org/web/20221022125227/https://search.maven.org/search?q=a:spring-data-jpa%20AND%20g:org.springframework.data)），这样生成的代码就能按预期编译和运行**:
 
-```java
+```xml
 <dependencies>
     <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -134,9 +135,9 @@ components:
 </dependencies>
 ```
 
-除了上面的 Spring 依赖项，我们还需要 [`jackson-databind`](https://web.archive.org/web/20221022125227/https://search.maven.org/search?q=a:jackson-databind-nullable) 和`[swagger2](https://web.archive.org/web/20221022125227/https://search.maven.org/search?q=a:springfox-swagger2)`依赖项，这样我们生成的代码才能成功编译:
+除了上面的 Spring 依赖项，我们还需要[`jackson-databind`](https://web.archive.org/web/20221022125227/https://search.maven.org/search?q=a:jackson-databind-nullable)和[`swagger2`](https://web.archive.org/web/20221022125227/https://search.maven.org/search?q=a:springfox-swagger2)依赖项，这样我们生成的代码才能成功编译:
 
-```java
+```xml
 <dependency>
     <groupId>org.openapitools</groupId>
     <artifactId>jackson-databind-nullable</artifactId>
@@ -149,11 +150,11 @@ components:
 </dependency>
 ```
 
-## 4.代码生成
+### 4. 代码生成
 
 要生成服务器存根，我们只需运行以下命令:
 
-```java
+```bash
 mvn clean install
 ```
 
@@ -229,7 +230,9 @@ public interface PetsApiDelegate {
 } 
 ```
 
-在那之后，我们看到**有一个`PetsApiController`类简单地连接了委托人**:
+在那之后，我们看到**有一个`PetsApiController`类简单地连接了委托人**。
+
+
 
 ```java
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", 
@@ -252,9 +255,9 @@ public class PetsApiController implements PetsApi {
 } 
 ```
 
-在`modelPackage`中，基于我们的 YAML 输入中定义的`schemas`，生成了一对被称为`Error`和`Pet`的**数据模型 POJOs。**
+在`modelPackage`中，基于我们的 YAML 输入中定义的`schemas`，生成了一对被称为`Error`和`Pet`的数据模型 POJOs。
 
-让我们来看看其中的一个——`Pet`:
+让我们来看看其中的一个——`Pet`：
 
 ```java
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", 
@@ -283,13 +286,13 @@ public class Pet {
 } 
 ```
 
-## 5.测试服务器
+## 5. 测试服务器
 
 现在，要使服务器存根发挥服务器的功能，只需添加一个委托者接口的实现。
 
 为了简单起见，我们不在这里这样做，而是只测试存根。
 
-此外，在此之前，我们需要一个弹簧:
+此外，在此之前，我们需要一个弹簧：
 
 ```java
 @SpringBootApplication
@@ -300,15 +303,15 @@ public class Application {
 }
 ```
 
-### 5.1.使用`curl`进行测试
+### 5.1. 使用`curl`进行测试
 
-启动应用程序后，我们只需运行命令:
+启动应用程序后，我们只需运行命令：
 
 ```java
 curl -I http://localhost:8080/pets/
 ```
 
-这是预期的结果:
+这是预期的结果：
 
 ```java
 HTTP/1.1 501 
@@ -317,9 +320,9 @@ Date: Fri, 26 Mar 2021 17:29:25 GMT
 Connection: close
 ```
 
-### 5.2.集成测试
+### 5.2. 集成测试
 
-或者，我们可以编写一个简单的[集成测试](/web/20221022125227/https://www.baeldung.com/spring-boot-testing#integration-testing-with-springboottest)来实现相同的功能:
+或者，我们可以编写一个简单的[集成测试](/web/20221022125227/https://www.baeldung.com/spring-boot-testing#integration-testing-with-springboottest)来实现相同的功能：
 
 ```java
 @RunWith(SpringRunner.class)
@@ -343,9 +346,9 @@ public class OpenApiPetsIntegrationTest {
 }
 ```
 
-## 6.结论
+## 6. 结论
 
-在本文中，**我们看到了如何使用 OpenAPI 生成器的 Maven 插件从 YAML 规范生成基于 Spring 的服务器存根。**
+在本文中，我们看到了如何使用 OpenAPI 生成器的 Maven 插件从 YAML 规范生成基于 Spring 的服务器存根。
 
 下一步，我们还可以用它来[生成一个客户端](/web/20221022125227/https://www.baeldung.com/spring-boot-rest-client-swagger-codegen#generate-rest-client-with-openapi-generator)。
 

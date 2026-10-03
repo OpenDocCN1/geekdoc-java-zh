@@ -1,16 +1,17 @@
+
 # Spring LDAP 概述
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-ldap>
 
-## 1。概述
+## 1. 概述
 
 LDAP 目录服务器是读取优化的分层数据存储。通常，它们用于存储用户身份验证和授权所需的用户相关信息。
 
 在本文中，我们将探索 Spring LDAP APIs 来验证和搜索用户，以及在目录服务器中创建和修改用户。同一组 API 可用于管理 LDAP 中任何其他类型的条目。
 
-## 2。Maven 依赖关系
+## 2. Maven 依赖关系
 
-让我们从添加所需的 Maven 依赖项开始:
+让我们从添加所需的 Maven 依赖项开始：
 
 ```java
 <dependency>
@@ -20,11 +21,11 @@ LDAP 目录服务器是读取优化的分层数据存储。通常，它们用于
 </dependency>
 ```
 
-这个依赖关系的最新版本可以在 spring-ldap-core 中找到。
+这个依赖关系的最新版本可以在`spring-ldap-core`中找到。
 
-## 3。数据准备
+## 3. 数据准备
 
-出于本文的目的，让我们首先创建以下 LDAP 条目:
+出于本文的目的，让我们首先创建以下 LDAP 条目：
 
 ```java
 ou=users,dc=example,dc=com (objectClass=organizationalUnit)
@@ -32,11 +33,11 @@ ou=users,dc=example,dc=com (objectClass=organizationalUnit)
 
 在此节点下，我们将创建新用户、修改现有用户、验证现有用户和搜索信息。
 
-## 4。spring LDAP API
+## 4. Spring LDAP API
 
-### 4.1。`ContextSource` & `LdapTemplate` Bean 定义
+### 4.1. `ContextSource` 与 `LdapTemplate` Bean 定义
 
-`ContextSource`用于创建`LdapTemplate`。在下一节中，我们将看到在用户认证过程中使用`ContextSource`:
+`ContextSource`用于创建`LdapTemplate`。在下一节中，我们将看到在用户认证过程中使用`ContextSource`：
 
 ```java
 @Bean
@@ -55,7 +56,7 @@ public LdapContextSource contextSource() {
 }
 ```
 
-`LdapTemplate`用于创建和修改 LDAP 条目:
+`LdapTemplate`用于创建和修改 LDAP 条目：
 
 ```java
 @Bean
@@ -64,11 +65,11 @@ public LdapTemplate ldapTemplate() {
 }
 ```
 
-### 4.2。使用 Spring Boot
+### 4.2. 使用 Spring Boot
 
-**当我们在 Spring Boot 项目上工作时，我们可以使用 [Spring Boot 启动器数据 Ldap](https://web.archive.org/web/20220921015126/https://search.maven.org/search?q=a:spring-boot-starter-data-ldap) 依赖，它将自动为我们装备`LdapContextSource `和`LdapTemplate `。**
+**当我们在 Spring Boot 项目上工作时，我们可以使用 [Spring Boot 启动器数据 Ldap](https://web.archive.org/web/20220921015126/https://search.maven.org/search?q=a:spring-boot-starter-data-ldap) 依赖，它将自动为我们装备`LdapContextSource`和`LdapTemplate`。**
 
-要启用自动配置，我们需要确保在 pom.xml 中将`spring-boot-starter-data-ldap` Starter 或`spring-ldap-core`定义为依赖项:
+要启用自动配置，我们需要确保在`pom.xml`中将`spring-boot-starter-data-ldap` Starter 或`spring-ldap-core`定义为依赖项：
 
 ```java
 <dependency>
@@ -77,7 +78,7 @@ public LdapTemplate ldapTemplate() {
 </dependency>
 ```
 
-要连接到 LDAP，我们需要在应用程序中提供连接设置。属性:
+要连接到 LDAP，我们需要在应用程序中提供连接设置。属性：
 
 ```java
 spring.ldap.url=ldap://localhost:18889
@@ -93,9 +94,9 @@ spring.ldap.password=secret
 private LdapTemplate ldapTemplate;
 ```
 
-### 4.3。用户认证
+### 4.3. 用户认证
 
-现在让我们实现一个简单的逻辑来验证现有用户:
+现在让我们实现一个简单的逻辑来验证现有用户：
 
 ```java
 public void authenticate(String username, String password) {
@@ -108,11 +109,11 @@ public void authenticate(String username, String password) {
 }
 ```
 
-### 4.4。用户创建
+### 4.4. 用户创建
 
 接下来，让我们创建一个新用户，并将密码的 SHA 散列存储在 LDAP 中。
 
-在身份验证时，LDAP 服务器会生成所提供密码的 SHA 哈希，并将其与存储的密码进行比较:
+在身份验证时，LDAP 服务器会生成所提供密码的 SHA 哈希，并将其与存储的密码进行比较：
 
 ```java
 public void create(String username, String password) {
@@ -143,9 +144,9 @@ public void create(String username, String password) {
 
 最后，使用`LdapTemplate`的`bind()`方法在 LDAP 服务器中创建一个条目。
 
-### 4.5。用户修改
+### 4.5. 用户修改
 
-我们可以使用以下方法修改现有用户或条目:
+我们可以使用以下方法修改现有用户或条目：
 
 ```java
 public void modify(String username, String password) {
@@ -174,9 +175,9 @@ public void modify(String username, String password) {
 
 `lookupContext()`方法用于查找所提供的用户。
 
-### 4.6。用户搜索
+### 4.6. 用户搜索
 
-我们可以使用搜索过滤器搜索现有用户:
+我们可以使用搜索过滤器搜索现有用户：
 
 ```java
 public List<String> search(String username) {
@@ -190,9 +191,9 @@ public List<String> search(String username) {
 
 `AttributesMapper`用于从找到的条目中获取所需的属性值。在内部，Spring `LdapTemplate`为找到的所有条目调用`AttributesMapper`，并创建一个属性值列表。
 
-## 5。测试
+## 5. 测试
 
-`spring-ldap-test`提供基于 ApacheDS 1.5.5 的嵌入式 LDAP 服务器。为了设置嵌入式 LDAP 服务器进行测试，我们需要配置以下 Spring bean:
+`spring-ldap-test`提供基于 ApacheDS 1.5.5 的嵌入式 LDAP 服务器。为了设置嵌入式 LDAP 服务器进行测试，我们需要配置以下 Spring bean：
 
 ```java
 @Bean
@@ -218,7 +219,7 @@ public TestContextSourceFactoryBean testContextSource() {
 }
 ```
 
-让我们用 JUnit 测试我们的用户搜索方法:
+让我们用 JUnit 测试我们的用户搜索方法：
 
 ```java
 @Test
@@ -231,8 +232,8 @@ public void
 }
 ```
 
-## 6。结论
+## 6. 结论
 
 在本文中，我们介绍了 Spring LDAP APIs，并开发了在 LDAP 服务器中进行用户认证、用户搜索、用户创建和修改的简单方法。
 
-与往常一样，Github 项目的[中提供了完整的源代码。测试是在 Maven 概要文件“live”下创建的，因此可以使用选项“-P live”运行。](https://web.archive.org/web/20220921015126/https://github.com/eugenp/tutorials/tree/master/spring-security-modules/spring-security-ldap)
+与往常一样，完整源代码可在 [Github 项目](https://web.archive.org/web/20220921015126/https://github.com/eugenp/tutorials/tree/master/spring-security-modules/spring-security-ldap) 中找到。测试是在 Maven 概要文件 "live" 下创建的，因此可以使用选项 "-P live" 运行。

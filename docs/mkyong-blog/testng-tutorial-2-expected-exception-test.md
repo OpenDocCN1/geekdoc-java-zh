@@ -1,3 +1,4 @@
+
 # TestNG–预期异常测试
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/unittest/testng-tutorial-2-expected-exception-test/>
@@ -6,12 +7,12 @@
 
 ## 1.运行时异常
 
-这个例子向你展示了如何测试一个运行时异常。如果方法`divisionWithException ()`抛出一个运行时异常——`ArithmeticException`，它将被传递。
+这个例子向你展示了如何测试一个运行时异常。如果方法`divisionWithException()`抛出一个运行时异常——`ArithmeticException`，它将被传递。
 
-TestRuntime.java
+`TestRuntime.java`
 
 ```java
- package com.mkyong.testng.examples.exception;
+package com.mkyong.testng.examples.exception;
 
 import org.testng.annotations.Test;
 
@@ -22,19 +23,19 @@ public class TestRuntime {
 		int i = 1 / 0;
 	}
 
-} 
+}
 ```
 
 上述单元测试将通过。
 
- ## 2.检查异常
+## 2.检查异常
 
 检查一个简单的业务对象，保存和更新方法，如果出错，抛出自定义的检查异常。
 
-OrderBo.java
+`OrderBo.java`
 
 ```java
- package com.mkyong.testng.project.order;
+package com.mkyong.testng.project.order;
 
 public class OrderBo {
 
@@ -56,15 +57,15 @@ public class OrderBo {
 	throw new OrderNotFoundException("Order is not exists");
 
   }
-} 
+}
 ```
 
 测试预期异常的示例。
 
-TestCheckedException.java
+`TestCheckedException.java`
 
 ```java
- package com.mkyong.testng.examples.exception;
+package com.mkyong.testng.examples.exception;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -103,24 +104,17 @@ public class TestCheckedException {
 	orderBo.update(data);
   }
 
-} 
+}
 ```
 
 上述单元测试将通过。
 
- ## 下载源代码
+## 下载源代码
 
 Download it – [TestNG-Example-Excepted-Exception.zip](http://web.archive.org/web/20190227120235/http://www.mkyong.com/wp-content/uploads/2009/05/TestNG-Example-Excepted-Exception.zip) (11 kb)
 
 ## 参考
 
-1.  [TestNG 预期异常 JavaDoc](http://web.archive.org/web/20190227120235/http://testng.org/javadoc/org/testng/annotations/ExpectedExceptions.html)
+1. [TestNG 预期异常 JavaDoc](http://web.archive.org/web/20190227120235/http://testng.org/javadoc/org/testng/annotations/ExpectedExceptions.html)
 
 [expected exception](http://web.archive.org/web/20190227120235/http://www.mkyong.com/tag/expected-exception/) [testng](http://web.archive.org/web/20190227120235/http://www.mkyong.com/tag/testng/)
-
-
-
-
-
-
-

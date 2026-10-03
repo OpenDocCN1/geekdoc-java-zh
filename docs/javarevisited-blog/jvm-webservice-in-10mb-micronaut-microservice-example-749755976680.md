@@ -1,18 +1,19 @@
+
 # 10MB 的 JVM WebService？- Micronaut 微服务示例
 
 > 原文：<https://medium.com/javarevisited/jvm-webservice-in-10mb-micronaut-microservice-example-749755976680?source=collection_archive---------0----------------------->
 
-*如果你正在使用 Spring Boot 开发微服务，你应该知道每次 JVM 启动需要多少时间。在这个无服务器技术的新时代，人们正在谈论在几毫秒甚至更短的时间内产生新的服务器，让我们看看如何利用 Micronaut 及其 CLI 来创建运行在< 10MB 内存中的高效微服务。*
+如果你正在使用 Spring Boot 开发微服务，你应该知道每次 JVM 启动需要多少时间。在这个无服务器技术的新时代，人们正在谈论在几毫秒甚至更短的时间内产生新的服务器，让我们看看如何利用 Micronaut 及其 CLI 来创建运行在 < 10MB 内存中的高效微服务。
 
 ![](img/bfe7afd3af960aca543b9b93b8418a28.png)
 
 [Micronaut](https://micronaut.io) —是由 Graeme Rocher 和他的团队【OCI[的团队构建了 Grails 框架】创建的开源框架](https://objectcomputing.com)
 
-# 证明文件
+## 证明文件
 
 我花更多的时间阅读文档，而不是查看实际的实现代码。Micronaut 文档对于一个非常新的框架来说是非常优秀的，它有大量的文档，其中还内置了反馈。虽然大多数特性几乎与 Spring Boot 的[相似，但 Micronaut 直接使用 JSR 的规范作为其实现模式。](http://www.java67.com/2019/01/top-5-spring-boot-annotations-java-programmers-should-know.html)
 
-# 准时到提前
+## 准时到提前
 
 Micronaut 与当前版本的 Spring Boot(撰写本文时为 2.1+版本)的不同之处在于更快的启动时间。大多数不再使用 JVM 语言的开发人员抱怨内存占用和体系结构会大大降低 JVM 的性能。
 
@@ -20,18 +21,21 @@ Android 平台通过利用提前编译(AOC 参考—[InfoQ](https://www.infoq.co
 
 Micronaut 使用 AOC，这为无服务器的未来创造了使用 Java 框架的新的有效方法。
 
-# 命令行界面(CLI)
+## 命令行界面(CLI)
 
 更不用说来自`grails-cli`的灵感了，`micronaut-cli`提供了丰富的特性来创建控制器、beans 和模型类，以及它们对应的自动生成测试代码的测试类——几乎解决了大多数框架遗漏的测试代码生成问题。
 
-## 装置
+### 装置
 
 如果您使用的是 Mac，请遵循此处[的步骤](https://docs.micronaut.io/latest/guide/index.html#installHomebrew)
+
 如果您使用的是基于 Unix 的系统，请遵循此处[的步骤](https://docs.micronaut.io/latest/guide/index.html#installSdkman)。
+
 如果您使用的是 Windows，请从[开始执行步骤](https://docs.micronaut.io/latest/guide/index.html#installWindows)
+
 一旦安装完毕，`cli` 就可以作为`mn`引用
 
-## 用法(mn 帮助)
+### 用法(mn 帮助)
 
 ```
 create-app — Creates an application
@@ -41,7 +45,7 @@ create-function — Creates a serverless function application
 create-profile — Creates a profile
 ```
 
-# 创建我们的第一个微机器人服务
+## 创建我们的第一个微机器人服务
 
 使用`micronaut cli`，让我们开始创建第一个`micronaut` 应用程序。
 
@@ -77,7 +81,7 @@ create-profile — Creates a profile
 
 默认情况下 cli 使用 [Gradle](http://www.java67.com/2018/04/10-tools-java-developers-should-learn.html) ，如果你想使用 [Maven](http://www.java67.com/2018/02/6-free-maven-and-jenkins-online-courses-for-java-developers.html) 作为构建工具，你可以使用`mn create-app micronaut-example --build maven`
 
-一旦您进入项目目录，cli 就会变成 micronaut 项目特定的 cli，并提供不同的选项(`mn help`或`mn --help`):
+一旦您进入项目目录，cli 就会变成 micronaut 项目特定的 cli，并提供不同的选项(`mn help`或`mn --help`)：
 
 ```
 create-bean - Creates a singleton bean
@@ -137,11 +141,12 @@ import org.junit.Test;import static org.junit.Assert.assertEquals;public class H
 `micronaut-example-0.1-all.jar`具备启动示例服务器所需的所有条件。
 
 使用下面的命令
+
 `java -Xmx10M -jar micronaut-example-0.1-all.jar`启动内存为 10MB 的 JVM
 
 您可以看到服务器在`[http://localhost:8080/](http://localhost:8080/.)`启动并运行。如果要使用不同的端口，请使用属性对其进行配置。
 
-# 使用 JConsole 的虚拟机图
+## 使用 JConsole 的虚拟机图
 
 使用 JConsole，让我们连接到 Micronaut JVM，先睹为快堆的大小。`jconsole`与 OpenJDK 打包在一起，可以直接从`java/bin`文件夹启动。
 
@@ -157,7 +162,7 @@ JConsole 启动屏幕
 
 Micronaut JVM 的堆大小
 
-# 将来的
+## 将来的
 
 有了 Spring 社区创建的强大生态系统，很难用这些新框架来颠覆企业世界。我对微型机器人的未来充满希望。我正在等待其他框架(尤其是 Spring)采用提前编译来减少启动时间。
 

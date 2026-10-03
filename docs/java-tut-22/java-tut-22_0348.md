@@ -1,3 +1,4 @@
+
 # `JarRunner`类
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/jar/jarrunner.html`](https://docs.oracle.com/javase/tutorial/deployment/jar/jarrunner.html)
@@ -6,7 +7,6 @@
 
 ```java
 java JarRunner *url [arguments]*
-
 ```
 
 在前一节中，我们已经看到`JarClassLoader`如何能够从给定的 URL 标识和加载 JAR 捆绑应用程序的主类。因此，要完成`JarRunner`应用程序，我们需要能够从命令行获取 URL 和任何参数，并将它们传递给`JarClassLoader`的实例。这些任务属于`JarRunner`类，是`JarRunner`应用程序的入口点。
@@ -24,16 +24,14 @@ public static void main(String[] args) {
     } catch (MalformedURLException e) {
         fatal("Invalid URL: " + args[0]);
     }
-
 ```
 
-如果`args.length < 1`，这意味着在命令行中没有指定 URL，因此会打印出使用消息。如果第一个命令行参数是一个有效的 URL，则会创建一个新的`URL`对象来表示它。
+如果`args.length < 1`，这意味着在命令行中没有指定 URL，因此会打印出使用消息。如果第一个命令行参数是一个有效的 URL，则会创建一个新的`URL`对象来表示它。
 
 接下来，`JarRunner`创建了一个新的`JarClassLoader`实例，并将在命令行中指定的 URL 传递给构造函数：
 
 ```java
 JarClassLoader cl = new JarClassLoader(url);
-
 ```
 
 正如我们在前一节中看到的，通过`JarClassLoader`，`JarRunner`利用 JAR 处理 API。
@@ -53,7 +51,6 @@ if (name == null) {
     fatal("Specified jar file does not contain a 'Main-Class'" +
           " manifest attribute");
 }
-
 ```
 
 关键语句已用粗体标出。其他语句用于错误处理。
@@ -75,7 +72,6 @@ try {
     e.getTargetException().printStackTrace();
     System.exit(1);
 }
-
 ```
 
 回想一下，第一个命令行参数是 JAR 捆绑应用程序的 URL。因此，要传递给该应用程序的任何参数都在`args`数组中的元素`1`及以后。`JarRunner`获取这些元素，并创建一个名为`newArgs`的新数组传递给应用程序（上面的粗体行）。然后，`JarRunner`将入口点的类名和新参数列表传递给`JarClassLoader`的`invokeClass`方法。正如我们在前一节中看到的，`invokeClass`将加载应用程序的入口点类，传递任何参数，并启动应用程序。

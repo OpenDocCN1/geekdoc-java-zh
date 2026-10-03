@@ -1,8 +1,9 @@
+
 # 用 Cassandra、Astra、REST 和 GraphQL 构建一个仪表板，记录状态更新
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/cassandra-astra-rest-dashboard-updates>
 
-## 1。简介
+## 1. 简介
 
 在我们的[上一篇文章](/web/20221127034840/https://www.baeldung.com/cassandra-astra-stargate-dashboard)中，我们看到了使用 [DataStax Astra](/web/20221127034840/https://www.baeldung.com/datastax-signup) 构建一个仪表板来查看复仇者联盟的当前状态，一个由 [Apache Cassandra](https://web.archive.org/web/20221127034840/https://cassandra.apache.org/) 驱动的 DBaaS 使用 [Stargate](/web/20221127034840/https://www.baeldung.com/stargate) 来提供额外的 API 来使用它。
 
@@ -14,9 +15,9 @@
 
 我们之所以使用 Cassandra，是因为它提供了一种非常有效的方式来存储时间序列数据，我们写的时间比读的时间要多得多。这里的目标是一个可以频繁更新的系统——例如，每 30 秒更新一次——然后可以让用户很容易地看到最近记录的事件。
 
-## 2。构建数据库模式
+## 2. 构建数据库模式
 
-与我们在上一篇文章中使用的文档 API 不同，这将使用 [REST](/web/20221127034840/https://www.baeldung.com/datastax-docs-astra) 和[graph QL](/web/20221127034840/https://www.baeldung.com/datastax-docs-GraphQL)API 来构建。**这些工作在一个 Cassandra 表之上，这些 API 完全可以相互协作以及与 CQL API 协作。**
+与我们在上一篇文章中使用的文档 API 不同，这将使用 [REST](/web/20221127034840/https://www.baeldung.com/datastax-docs-astra) 和 [GraphQL](/web/20221127034840/https://www.baeldung.com/datastax-docs-GraphQL) API 来构建。**这些工作在一个 Cassandra 表之上，这些 API 完全可以相互协作以及与 CQL API 协作。**
 
 为了处理这些，我们需要已经为我们存储数据的表定义了一个模式。我们使用的表格是为特定的模式设计的——按照事件发生的时间顺序为给定的复仇者查找事件。
 
@@ -37,25 +38,25 @@ CREATE TABLE events (
 
 | 复仇者 | 时间戳 | 纬度 | 经度 | 状态 |
 | --- | --- | --- | --- | --- |
-| 猎鹰 | 2021-05-16 09:00:30.000000+0000 |  40.715255 |  -73.975353 | 0.999954 |
-| 用潜望镜侦察潜水艇的装置 |  2021-05-16 09:00:30.000000+0000 |  40.714602 |  -73.975238 |  0.99986 |
-| 用潜望镜侦察潜水艇的装置 |  2021-05-16 09:01:00.000000+0000 |  40.713572 |  -73.975289 | 0.999804 |
+| 猎鹰 | 2021-05-16 09:00:30.000000+0000 | 40.715255 | -73.975353 | 0.999954 |
+| 用潜望镜侦察潜水艇的装置 | 2021-05-16 09:00:30.000000+0000 | 40.714602 | -73.975238 | 0.99986 |
+| 用潜望镜侦察潜水艇的装置 | 2021-05-16 09:01:00.000000+0000 | 40.713572 | -73.975289 | 0.999804 |
 
-这将我们的表定义为具有[多行分区](/web/20221127034840/https://www.baeldung.com/datastax-cassandra-tables)，分区键为“avenger”，聚类键为“timestamp”。Cassandra 使用分区键来确定数据存储在哪个节点上。聚集键用于确定数据在分区中的存储顺序。
+这将我们的表定义为具有[多行分区](/web/20221127034840/https://www.baeldung.com/datastax-cassandra-tables)，分区键为`avenger`，聚类键为`timestamp`。Cassandra 使用分区键来确定数据存储在哪个节点上。聚集键用于确定数据在分区中的存储顺序。
 
-通过指明“复仇者”是我们的分区键，它将确保同一复仇者的所有数据都保存在一起。通过指出“时间戳”是我们的聚集键，它将把数据以最有效的顺序存储在这个分区中，以便我们检索。鉴于我们对这些数据的核心查询是为单个复仇者选择每个事件，即我们的分区键，按事件的时间戳排序，即我们的聚类键，Cassandra 可以让我们非常高效地访问这些数据。
+通过指明`avenger`是我们的分区键，它将确保同一复仇者的所有数据都保存在一起。通过指出`timestamp`是我们的聚集键，它将把数据以最有效的顺序存储在这个分区中，以便我们检索。鉴于我们对这些数据的核心查询是为单个复仇者选择每个事件，即我们的分区键，按事件的时间戳排序，即我们的聚类键，Cassandra 可以让我们非常高效地访问这些数据。
 
 此外，应用程序的设计使用方式意味着我们在近乎连续的基础上编写事件数据。例如，我们可能每 30 秒从每个复仇者那里得到一个新事件。以这种方式构造我们的表可以非常有效地将新事件插入到正确分区的正确位置。
 
 为了方便起见，我们用于预填充数据库的[脚本](https://web.archive.org/web/20221127034840/https://github.com/Baeldung/datastax-cassandra/blob/main/avengers-dashboard/data.sh)也将创建并填充这个模式。
 
-## 3。使用 Astra、REST、&graph QL API构建客户端层
+## 3. 使用 Astra、REST 和 GraphQL API 构建客户端层
 
 为了不同的目的，我们将同时使用 REST 和 GraphQL APIs 与 Astra 进行交互。REST API 将用于向表中插入新事件。GraphQL API 将用于再次检索它们。
 
 为了最好地做到这一点，我们需要一个客户端层来执行与 Astra 的交互。对于另外两个 API，它们相当于我们在上一篇文章中构建的`DocumentClient`类。
 
-### 3.1。休息客户端
+### 3.1. REST 客户端
 
 首先，我们的 REST 客户端。**我们将使用它来插入新的完整记录**，因此只需要一个方法来插入数据:
 
@@ -88,7 +89,7 @@ public class RestClient {
 }
 ```
 
-### 3.2。GraphQL 客户端
+### 3.2. GraphQL 客户端
 
 然后，我们的 GraphQL 客户端。**这一次我们进行了一次完整的 GraphQL 查询，并返回它获取的数据**:
 
@@ -123,11 +124,11 @@ public class GraphqlClient {
 
 这就是与 Astra 交互所需要的一切，因为这些 API 只是通过 HTTP 交换 JSON 文档来工作。
 
-## 4。记录单个事件
+## 4. 记录单个事件
 
 为了显示事件，我们需要能够记录它们。这将建立在我们之前更新`statuses`表的功能之上，并将额外的新记录插入到`events`表中。
 
-### 4.1。插入事件
+### 4.1. 插入事件
 
 我们首先需要的是这个表中数据的表示。这将表示为一个 Java 记录:
 
@@ -157,7 +158,7 @@ public class EventsService {
 }
 ```
 
-### 4.2。更新 API
+### 4.2. 更新 API
 
 最后，我们需要一个控制器来接收事件。**这是对我们在上一篇文章中写的`UpdateController`的扩展，以连接新的`EventsService`，然后从我们的`update`方法**中调用它。
 
@@ -177,17 +178,17 @@ public class UpdateController {
 }
 ```
 
-此时，调用我们的 API 来记录复仇者的状态既会更新 status 文档，又会在 events 表中插入一条新记录。这将允许我们记录发生的每一个更新事件。
+此时，调用我们的 API 来记录复仇者的状态既会更新 `status` 文档，又会在 `events` 表中插入一条新记录。这将允许我们记录发生的每一个更新事件。
 
-这意味着，每当我们接到一个更新复仇者状态的电话时，我们都会向该表添加一条新记录。实际上，我们需要通过修剪或添加额外的分区来支持数据存储的规模，但这超出了本文的范围。【T2
+这意味着，每当我们接到一个更新复仇者状态的电话时，我们都会向该表添加一条新记录。实际上，我们需要通过修剪或添加额外的分区来支持数据存储的规模，但这超出了本文的范围。
 
-## 5。通过 GraphQL API 向用户提供事件
+## 5. 通过 GraphQL API 向用户提供事件
 
 一旦我们的表中有了事件，下一步就是让它们对用户可用。**我们将使用 GraphQL API 来实现这一点，为给定的复仇者一次检索一页事件，这些事件总是有序的，因此最近的事件排在最前面**。
 
 使用 GraphQL，我们还能够只检索我们真正感兴趣的字段的子集，而不是全部。如果我们获取大量的记录，那么这有助于降低负载大小，从而提高性能。
 
-### 5.1。检索事件
+### 5.1. 检索事件
 
 我们首先需要的是我们正在检索的数据的表示。这是表中存储的实际数据的子集。因此，我们需要一个不同的类来表示它:
 
@@ -237,13 +238,15 @@ public class EventsService {
 
 这里我们有两个内部类，它们纯粹是为了表示 GraphQL API 返回的 JSON 结构，直到我们感兴趣的部分——这些完全是 GraphQL API 的人工制品。
 
-然后我们有了一个方法，为我们想要的细节构建一个 GraphQL 查询，通过`avenger`字段过滤并通过`timestamp`字段降序排序。在传递给我们的 GraphQL 客户端以获取实际数据之前，我们将使用实际的 Avenger ID 和页面状态。
+然后我们有了一个方法，为我们想要的细节构建一个 GraphQL 查询，通过 `avenger` 字段过滤并通过 `timestamp` 字段降序排序。在传递给我们的 GraphQL 客户端以获取实际数据之前，我们将使用实际的 Avenger ID 和页面状态。
 
-### 5.2。在 UI 中显示事件
+### 5.2. 在 UI 中显示事件
 
 既然我们可以从数据库中获取事件，那么我们可以将它连接到我们的用户界面。
 
-首先，我们将更新我们在上一篇文章中编写的`StatusesController`,以支持获取事件的 UI 端点:
+首先，我们将更新我们在上一篇文章中编写的 `StatusesController`，以支持获取事件的 UI 端点。
+
+
 
 ```java
 public class StatusesController {
@@ -261,10 +264,10 @@ public class StatusesController {
 
     return result;
   }
-} 
+}
 ```
 
-然后我们需要更新模板来呈现事件表。我们将向`dashboard.html`文件添加一个新表，只有在从控制器接收到的模型中存在`events`对象时，才会呈现该表:
+然后我们需要更新模板来呈现事件表。我们将向`dashboard.html`文件添加一个新表，只有在从控制器接收到的模型中存在`events`对象时，才会呈现该表：
 
 ```java
 ......
@@ -305,7 +308,7 @@ public class StatusesController {
 
 这包括底部的一个链接，可以转到下一页，它通过我们的事件数据和我们正在查看的复仇者的 ID 来传递页面状态。
 
-最后，我们需要更新状态卡，以允许我们链接到这个条目的 events 表。这只是每张卡片标题周围的一个超链接，呈现在`status.html:`中
+最后，我们需要更新状态卡，以允许我们链接到这个条目的 events 表。这只是每张卡片标题周围的一个超链接，呈现在`status.html`中：
 
 ```java
 ......
@@ -315,13 +318,13 @@ public class StatusesController {
 ......
 ```
 
-**我们现在可以启动应用程序，点击卡片查看导致此状态的最近事件:**
+**我们现在可以启动应用程序，点击卡片查看导致此状态的最近事件：**
 
 [![cassandra avengers status dashboard events](img/b6316b86d1ba586bf0a0cf6c7be89c84.png)](/web/20221127034840/https://www.baeldung.com/wp-content/uploads/2021/06/cassandra-avengers-status-dashboard-events.png)
 
-复仇者联盟状态仪表板使用 GraphQL 扩展了状态更新
+# 复仇者联盟状态仪表板使用 GraphQL 扩展了状态更新
 
-## 6。总结
+## 6. 总结
 
 **在这里，我们看到了 Astra REST 和 GraphQL APIs 如何用于处理基于行的数据，以及它们如何协同工作**。我们也开始看到 Cassandra 和这些 API 可以很好地用于大规模数据集。
 

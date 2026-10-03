@@ -1,14 +1,16 @@
+
+
 # 将 Gradle 构建文件转换为 Maven POM
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/gradle-build-to-maven-pom>
 
-## 1.介绍
+## 1. 介绍
 
 在本教程中，我们将看看如何将 Gradle 构建文件转换为 Maven POM 文件。我们将使用 Gradle 版作为例子，我们还将探索一些可用的定制选项。
 
-## 2.Gradle 构建文件
+## 2. Gradle 构建文件
 
-让我们从一个标准的 Gradle Java 项目`gradle-to-maven`开始，使用下面的`build.gradle`文件:
+让我们从一个标准的 Gradle Java 项目`gradle-to-maven`开始，使用下面的`build.gradle`文件：
 
 ```java
 repositories {
@@ -26,11 +28,11 @@ dependencies {
 }
 ```
 
-## 3。Maven 插件
+## 3. Maven 插件
 
 Gradle 附带了一个 [Maven 插件](https://web.archive.org/web/20220926191334/https://docs.gradle.org/current/userguide/maven_plugin.html)，它增加了将 Gradle 文件转换为 Maven POM 文件的支持。它还可以将工件部署到 Maven 存储库中。
 
-要使用它，让我们将 Maven 发布插件添加到我们的`build.gradle` 文件中:
+要使用它，让我们将 Maven 发布插件添加到我们的`build.gradle` 文件中：
 
 ```java
 apply plugin: 'maven-publish'
@@ -38,7 +40,7 @@ apply plugin: 'maven-publish'
 
 插件使用 Gradle 文件中的`group`和`version`并将它们添加到 POM 文件中。此外，它会自动从目录名中提取`artifactId`。
 
-插件也会自动添加`publish`任务。因此，为了进行转换，让我们将发布的基本定义添加到 POM 文件中:
+插件也会自动添加`publish`任务。因此，为了进行转换，让我们将发布的基本定义添加到 POM 文件中：
 
 ```java
 publishing {
@@ -57,22 +59,22 @@ publishing {
 }
 ```
 
-现在，我们可以将我们的`customLibrary`发布到一个本地的基于目录的存储库，用于演示目的:
+现在，我们可以将我们的`customLibrary`发布到一个本地的基于目录的存储库，用于演示目的：
 
 ```java
 gradle publish
 ```
 
-运行上面的命令会创建一个包含这些子目录的`build`目录:
+运行上面的命令会创建一个包含这些子目录的`build`目录：
 
-*   `libs –` 包含名为`${artifactId}-${version}.jar`的罐子
-*   **`publications/customLibrary` `–` 包含转换后的 POM 文件，文件名为`pom-default.xml`**
-*   `tmp/jar –` 包含载货单的
-*   `repo`–用作包含已发布工件的存储库的文件系统位置
+- `libs` – 包含名为`${artifactId}-${version}.jar`的罐子
+- `publications/customLibrary` – 包含转换后的 POM 文件，文件名为`pom-default.xml`
+- `tmp/jar` – 包含载货单的
+- `repo` – 用作包含已发布工件的存储库的文件系统位置
 
-生成的 POM 文件将如下所示:
+生成的 POM 文件将如下所示：
 
-```java
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" 
 
@@ -96,13 +98,13 @@ gradle publish
 
 `publish`任务还将这个 POM 文件和 JAR 上传到指定的存储库。
 
-## 4.定制 Maven 插件
+## 4. 定制 Maven 插件
 
 在某些情况下，在生成的 POM 文件中自定义项目信息可能会很有用。让我们来看看。
 
-### 4.1.`groupId,` `artifactId,`和`version`
+### 4.1. `groupId`、`artifactId`和`version`
 
-改变 POM 的`groupId`、`artifactId`和`version`可以在`publications/{publicationName}`块中操作:
+改变 POM 的`groupId`、`artifactId`和`version`可以在`publications/{publicationName}`块中操作：
 
 ```java
 publishing {
@@ -116,17 +118,17 @@ publishing {
 }
 ```
 
-运行 `publish`任务现在会产生带有上面提供的信息的 POM 文件:
+运行 `publish`任务现在会产生带有上面提供的信息的 POM 文件：
 
-```java
+```xml
 <groupId>com.baeldung.sample</groupId>
 <artifactId>gradle-maven-converter</artifactId>
 <version>0.0.1-maven</version>
 ```
 
-### 4.2.自动生成的内容
+### 4.2. 自动生成的内容
 
-Maven 插件还使得更改任何生成的 POM 元素变得简单。例如，要将默认的`runtime`范围改为`compile`，我们可以将下面的闭包添加到`pom.withXml`方法中:
+Maven 插件还使得更改任何生成的 POM 元素变得简单。例如，要将默认的`runtime`范围改为`compile`，我们可以将下面的闭包添加到`pom.withXml`方法中：
 
 ```java
 pom.withXml {
@@ -144,9 +146,9 @@ pom.withXml {
 }
 ```
 
-这将更改生成的 POM 文件中所有依赖项的范围:
+这将更改生成的 POM 文件中所有依赖项的范围：
 
-```java
+```xml
 <dependency>
   <groupId>org.slf4j</groupId>
   <artifactId>slf4j-api</artifactId>
@@ -155,11 +157,11 @@ pom.withXml {
 </dependency>
 ```
 
-### 4.3.附加说明
+### 4.3. 附加说明
 
-最后，如果我们想要添加额外的信息，**我们可以在`pom` 函数中包含这种 Maven 支持的元素。**
+最后，如果我们想要添加额外的信息，**我们可以在`pom`函数中包含这种 Maven 支持的元素。**
 
-让我们添加一些许可证信息:
+让我们添加一些许可证信息：
 
 ```java
 ...
@@ -174,9 +176,9 @@ pom {
 ...
 ```
 
-我们现在可以看到添加到 POM 中的许可证信息:
+我们现在可以看到添加到 POM 中的许可证信息：
 
-```java
+```xml
 ... 
 <licenses>
   <license>
@@ -187,8 +189,9 @@ pom {
 ...
 ```
 
-## 5.结论
+## 5. 结论
 
 在这个快速教程中，我们学习了如何将 Gradle 构建文件转换为 Maven POM。
 
 和往常一样，这篇文章的源代码可以在 GitHub 上找到[。](https://web.archive.org/web/20220926191334/https://github.com/eugenp/tutorials/tree/master/gradle-modules/gradle/gradle-to-maven)
+

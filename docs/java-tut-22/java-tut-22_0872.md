@@ -1,4 +1,5 @@
-# HighScorePermission 类
+
+# `HighScorePermission` 类
 
 > 原文：[`docs.oracle.com/javase/tutorial/security/userperm/perm.html`](https://docs.oracle.com/javase/tutorial/security/userperm/perm.html)
 
@@ -10,10 +11,9 @@
 
 我们的 `HighScorePermission` 是一个简单的权限，因此可以从 `java.security.BasicPermission` 扩展。
 
-通常，`BasicPermission` 类中的方法实现本身不需要被其子类重写。这就是我们的 `HighScorePermission` 的情况，所以我们只需要实现构造函数，它们只是调用超类的构造函数，如`以下`所示：
+通常，`BasicPermission` 类中的方法实现本身不需要被其子类重写。这就是我们的 `HighScorePermission` 的情况，所以我们只需要实现构造函数，它们只是调用超类的构造函数，如下所示：
 
 ```java
-
 package com.scoredev.scores;
 
 import java.security.*;
@@ -32,5 +32,4 @@ public final class HighScorePermission extends BasicPermission {
 	super(name, actions);
     }
 }
-
 ```

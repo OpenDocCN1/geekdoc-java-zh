@@ -1,3 +1,4 @@
+
 # 从小程序调用 JavaScript 代码
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/applet/invokingJavaScriptFromApplet.html`](https://docs.oracle.com/javase/tutorial/deployment/applet/invokingJavaScriptFromApplet.html)
@@ -6,7 +7,7 @@ Java 小程序可以调用与小程序在同一网页中的 JavaScript 函数。
 
 `netscape.javascript.JSObject`类使 Java 小程序能够检索对 JavaScript 对象的引用并与网页交互。接下来描述的数据摘要小程序调用 JavaScript 代码从网页中检索信息，并将数据摘要写回网页。
 
-假设您有一个带有几个 JavaScript 函数的网页。示例``AppletPage.html``具有用于检索年龄、地址和电话号码的 JavaScript 函数。还有一个名为`userName`的变量，一开始没有值。
+假设您有一个带有几个 JavaScript 函数的网页。示例`AppletPage.html`具有用于检索年龄、地址和电话号码的 JavaScript 函数。还有一个名为`userName`的变量，一开始没有值。
 
 ```java
 <head>
@@ -50,15 +51,12 @@ Java 小程序可以调用与小程序在同一网页中的 JavaScript 函数。
                              // the summary 
     <!-- ... -->
 </body>
-
 ```
 
 接下来，考虑一个名为`DataSummaryApplet`的小程序类。`DataSummaryApplet`类执行以下操作。
 
 +   调用`JSObject`的`setMember`方法将`userName`变量设置为"John Doe"。
-
 +   检索年龄、地址和电话号码，并构建包含这些数据摘要的字符串。
-
 +   调用`writeSummary` JavaScript 函数将摘要写回网页。
 
 该小程序首先需要按以下方式检索对`JSObject`的引用：
@@ -67,15 +65,13 @@ Java 小程序可以调用与小程序在同一网页中的 JavaScript 函数。
 ...
 JSObject window = JSObject.getWindow(this);
 ...
-
 ```
 
-将前述语句放入 try...catch...块中以处理`netscape.javascript.JSException`。
+将前述语句放入`try...catch...`块中以处理`netscape.javascript.JSException`。
 
 现在，小程序已经有了对`JSObject`的引用，它可以通过`JSObject`的`eval`和`call`方法调用相关的 JavaScript 函数。
 
 ```java
-
 package javatojs;
 
 import java.applet.Applet;
@@ -114,7 +110,6 @@ public class DataSummaryApplet extends Applet {
         }
     }
 }
-
 ```
 
 要编译具有对`netscape.javascript`包中类的引用的 Java 代码，请在类路径中包含`<您的 JDK 路径>/jre/lib/plugin.jar`。在运行时，Java 插件软件会自动使这些类对小程序可用。
@@ -125,21 +120,12 @@ public class DataSummaryApplet extends Applet {
 Result of applet's Java calls to JavaScript on this page
 
 John Doe : 25 : 1 Example Lane, Santa Clara, CA : 408-555-0100, 408-555-0102
-
 ```
 
-在浏览器中打开``AppletPage.html``以查看数据摘要小程序。
-
-* * *
+在浏览器中打开`AppletPage.html`以查看数据摘要小程序。
 
 **注意：** 如果您看不到小程序运行，请安装至少[Java SE Development Kit (JDK) 6 update 10](http://www.oracle.com/technetwork/java/javase/downloads/index.html)版本。
 
-* * *
-
-* * *
-
 **注意：** 如果您看不到示例运行，请确保在浏览器中启用 JavaScript 解释器，以便部署工具包脚本能够正常运行。
-
-* * *
 
 下载源代码以进一步实验*从小程序调用 JavaScript 代码*示例。

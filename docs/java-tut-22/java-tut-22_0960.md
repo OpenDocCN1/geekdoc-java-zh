@@ -1,3 +1,4 @@
+
 # 将遗留代码转换为使用泛型
 
 > 原文：[`docs.oracle.com/javase/tutorial/extra/generics/convert.html`](https://docs.oracle.com/javase/tutorial/extra/generics/convert.html)
@@ -13,7 +14,6 @@ interface Collection {
     public boolean containsAll(Collection c);
     public boolean addAll(Collection c);
 }
-
 ```
 
 一个天真的泛型尝试可能是以下内容：
@@ -24,7 +24,6 @@ interface Collection<E> {
     public boolean containsAll(Collection<E> c);
     public boolean addAll(Collection<E> c);
 }
-
 ```
 
 虽然这肯定是类型安全的，但它并不符合 API 的原始契约。`containsAll()`方法适用于任何类型的传入集合。只有当传入集合确实只包含`E`的实例时才会成功，但：
@@ -40,21 +39,18 @@ interface Collection<E> {
 ```java
 public static <T extends Comparable<? super T>> 
         T max(Collection<T> coll)
-
 ```
 
 这很好，除了这个签名的擦除是：
 
 ```java
 public static Comparable max(Collection coll)
-
 ```
 
 这与`max()`的原始签名不同：
 
 ```java
 public static Object max(Collection coll)
-
 ```
 
 当然可以为`max()`指定这个签名，但没有这样做，所有调用`Collections.max()`的旧二进制类文件都依赖于返回`Object`的签名。
@@ -64,7 +60,6 @@ public static Object max(Collection coll)
 ```java
 public static <T extends Object & Comparable<? super T>> 
         T max(Collection<T> coll)
-
 ```
 
 这是给类型参数*多重边界*的一个示例，使用语法`T1 & T2 ... & Tn`。具有多重边界的类型变量被认为是边界中列出的所有类型的子类型。当使用多重边界时，边界中提到的第一个类型被用作类型变量的擦除。
@@ -76,7 +71,6 @@ public static <T extends Object & Comparable<? super T>>
 ```java
 public static <T extends Object & Comparable<? super T>> 
         T max(Collection<? extends T> coll)
-
 ```
 
 在实践中很少会出现这么复杂的情况，但是专家库设计者在转换现有 API 时应该准备好仔细思考。
@@ -100,7 +94,6 @@ public class Bar extends Foo {
         ...
     }
 }
-
 ```
 
 利用协变返回，你将其修改为：
@@ -120,7 +113,6 @@ public class Bar extends Foo {
         ...
     }
 }
-
 ```
 
 现在，假设你的代码的第三方客户写了以下内容：
@@ -132,7 +124,6 @@ public class Baz extends Bar {
         ...
     }
 }
-
 ```
 
 Java 虚拟机不直接支持具有不同返回类型的方法重写。这个特性由编译器支持。因此，除非重新编译类`Baz`，否则它将无法正确重写`Bar`的`create()`方法。此外，`Baz`将需要修改，因为代码将被拒绝——`Baz`中的`create()`的返回类型不是`Bar`中`create()`的返回类型的子类型。

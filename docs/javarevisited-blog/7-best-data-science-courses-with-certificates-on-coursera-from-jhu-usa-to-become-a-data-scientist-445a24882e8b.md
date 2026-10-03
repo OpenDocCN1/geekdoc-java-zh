@@ -1,3 +1,4 @@
+
 # Coursera 上的 7 门最佳数据科学课程，证书将在 2023 年成为数据科学家
 
 > 原文：<https://medium.com/javarevisited/7-best-data-science-courses-with-certificates-on-coursera-from-jhu-usa-to-become-a-data-scientist-445a24882e8b?source=collection_archive---------1----------------------->
@@ -10,7 +11,7 @@ image_credit — coursera
 
 大家好，如果你想在 2023 年开始数据科学和机器学习的职业生涯，并寻找最好的资源，如带证书的在线课程，那么你来对地方了。
 
-前面我已经分享了学习 [*软件开发*](/javarevisited/10-best-software-development-courses-certifications-from-coursera-4ccc59aae201) 、 [***Python 编程***](/javarevisited/7-best-google-professional-certificates-on-coursera-to-learn-data-analytics-python-and-it-support-42147311cfe2) 、 [**云计算**](https://javarevisited.blogspot.com/2020/08/top-10-coursera-certifications-to-learn-cloud-computing-aws.html) 、 [Web 开发](https://javarevisited.blogspot.com/2020/08/top-10-coursera-certifications-to-learn-web-development.html#axzz6ddRPg7l6)的最好的 Coursera 课程，而在这篇文章中，我准备分享约翰霍普金斯大学最好的在线课程和认证，让 Python 和 r 都从零开始学习数据科学
+前面我已经分享了学习 [*软件开发*](/javarevisited/10-best-software-development-courses-certifications-from-coursera-4ccc59aae201) 、 [***Python 编程***](/javarevisited/7-best-google-professional-certificates-on-coursera-to-learn-data-analytics-python-and-it-support-42147311cfe2) 、 [**云计算**](https://javarevisited.blogspot.com/2020/08/top-10-coursera-certifications-to-learn-cloud-computing-aws.html) 、 [Web 开发](https://javarevisited.blogspot.com/2020/08/top-10-coursera-certifications-to-learn-web-development.html#axzz6ddRPg7l6)的最好的 Coursera 课程，而在这篇文章中，我准备分享约翰霍普金斯大学最好的在线课程和认证，让 Python 和 r 都从零开始学习数据科学。
 
 约翰·霍普斯金大学是位于马里兰州巴尔的摩的世界一流大学之一。它成立于 1876 年，也是美国第一所研究型大学，是 9 个世界级学术部门作为一所大学共同工作的所在地。
 
@@ -34,14 +35,13 @@ Coursera 专业化是帮助你掌握一项技能的一系列课程。它在专�
 
 ## 1.[JHU 大学数据科学专业](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fjhu-data-science)
 
-这是约翰霍普金斯大学最受欢迎的数据科学专业，非常适合开始你的数据科学职业生涯。该专业包含十门课程的数据科学入门课程，这些课程由约翰霍普金斯大学的领先教授
-Jeff Leek 博士、Roger D. Peng 博士和 Brian Caffo 博士精心组织、开发和讲授。
+这是约翰霍普金斯大学最受欢迎的数据科学专业，非常适合开始你的数据科学职业生涯。该专业包含十门课程的数据科学入门课程，这些课程由约翰霍普金斯大学的领先教授 Jeff Leek 博士、Roger D. Peng 博士和 Brian Caffo 博士精心组织、开发和讲授。
 
 以下是您将在该数据科学专业中学习到的关键技能。
 
 *   如何使用 R 编程语言来清理、分析和可视化数据？
 *   从数据采集到发布的整个数据科学管道。
-*   如何使用 GitHub 管理数据科学项目并与其他数据科学家合作
+*   如何使用 GitHub 管理数据科学项目并与其他数据科学家合作。
 *   如何使用回归模型进行回归分析、最小二乘法和推断。
 
 如果你想用 R 和 Python 学习数据科学，这个 JHU 课程是完美的。你会学到很多抢手的技能像 R 编程，机器学习，数据分析，回归分析，数据操纵，[数据分析](/javarevisited/11-best-coursera-certifications-and-courses-for-data-science-and-analysis-in-2021-65ce1ac810a5)，聚类分析，还有像 R Studio， [Git](https://www.java67.com/2019/04/top-5-courses-to-learn-git-and-github.html) ，[正则表达式](https://javarevisited.blogspot.com/2020/04/top-5-courses-to-learn-regular-expression-regex.html#axzz6d6JZB400)等工具。
@@ -112,68 +112,70 @@ Jeff Leek 博士、Roger D. Peng 博士和 Brian Caffo 博士精心组织、开�
 
 **[![](img/8dcee9799abbff9ce3058b95d876fca4.png)](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Ftidyverse-data-science-r)**
 
-## **6.[数据科学:统计学和机器学习](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdata-science-statistics-machine-learning)**
 
-**这是约翰霍普金斯大学的高级数据科学专业，面向熟悉数据科学基础知识和 R 编程语言的人。这个项目继续并发展了数据科学的材料:使用 R 专门化的基础。**
 
-**在这个项目中，你将学习统计推断、回归模型、机器学习和数据产品的开发。**
+## 6. [数据科学：统计学和机器学习](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdata-science-statistics-machine-learning)
 
-**在顶点项目中，您将应用通过使用真实世界的数据构建数据产品而学到的技能。完成后，学习者将有一个文件夹，展示他们对材料的掌握程度。**
+这是约翰霍普金斯大学的高级数据科学专业，面向熟悉数据科学基础知识和 `R` 编程语言的人。这个项目继续并发展了数据科学的材料：使用 `R` 专门化的基础。
 
-**该专业的五门课程与数据科学专业的第二部分课程相同，数据科学专业是列表中的第一个项目。这种专业化适合于已经掌握了基础知识并想直接跳到更高级课程的学习者。**
+在这个项目中，你将学习统计推断、回归模型、机器学习和数据产品的开发。
 
-**以下是参加 JHU 课程的链接— [数据科学:统计和机器学习](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdata-science-statistics-machine-learning)**
+在顶点项目中，您将应用通过使用真实世界的数据构建数据产品而学到的技能。完成后，学习者将有一个文件夹，展示他们对材料的掌握程度。
 
-**[![](img/1b6730da0a38937ff3ca3b607c68b302.png)](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdata-science-statistics-machine-learning)**
+该专业的五门课程与数据科学专业的第二部分课程相同，数据科学专业是列表中的第一个项目。这种专业化适合于已经掌握了基础知识并想直接跳到更高级课程的学习者。
 
-## **7.[数据科学专业高级统计](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fadvanced-statistics-data-science)**
+以下是参加 JHU 课程的链接 — [数据科学：统计和机器学习](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdata-science-statistics-machine-learning)
 
-**静力学对于数据科学家来说至关重要，这是一门为数据科学学习统计学的神奇课程。您可以参加本课程，熟悉概率和统计、数据分析和数据科学线性模型的基本概念。**
+[![](img/1b6730da0a38937ff3ca3b607c68b302.png)](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fdata-science-statistics-machine-learning)
 
-**这个项目从数理统计训练营开始，特别是生物统计学应用中的概念和方法。这些范围从概率、分布和可能性概念到假设检验和病例对照抽样。**
+## 7. [数据科学专业高级统计](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fadvanced-statistics-data-science)
 
-**以下是您将在本课程中学到的内容:**
+静力学对于数据科学家来说至关重要，这是一门为数据科学学习统计学的神奇课程。您可以参加本课程，熟悉概率和统计、数据分析和数据科学线性模型的基本概念。
 
-*   **概率、期望值、条件概率、分布、置信区间、自举、二项式比例等。**
-*   **线性模型的典型例子。**
-*   **线性回归模型的矩阵代数。**
+这个项目从数理统计训练营开始，特别是生物统计学应用中的概念和方法。这些范围从概率、分布和可能性概念到假设检验和病例对照抽样。
 
-**这个项目有 4 门课程。它们将为学习者回归建模的线性代数处理打下坚实的基础，并极大地增强应用数据科学家对回归模型的一般理解。**
+以下是您将在本课程中学到的内容：
 
-****这是参加本课程** — [数据科学专业高级统计](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fadvanced-statistics-data-science)的链接**
+- 概率、期望值、条件概率、分布、置信区间、自举、二项式比例等。
+- 线性模型的典型例子。
+- 线性回归模型的矩阵代数。
 
-**[![](img/484742211067d347fb2b73092b5abdd3.png)](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fadvanced-statistics-data-science)**
+这个项目有 4 门课程。它们将为学习者回归建模的线性代数处理打下坚实的基础，并极大地增强应用数据科学家对回归模型的一般理解。
 
-**以上是关于 2023 年约翰霍普金斯大学的**最佳认证和学习数据科学的课程。JHU 有 Python 和 R 编程语言两种学习数据科学的课程，你可以选择符合你需要的课程。****
+这是参加本课程 — [数据科学专业高级统计](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fadvanced-statistics-data-science) 的链接
 
-**约翰·霍普金斯大学不仅在美国，而且在世界上都是一所知名的大学，在学习数据科学等热门技能方面，他们有一些非常好的教授和教育工作者。**
+[![](img/484742211067d347fb2b73092b5abdd3.png)](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fadvanced-statistics-data-science)
 
-**许多人试图进入 JHU，但谢天谢地，你不需要去美国向精英中的精英学习；你可以加入 Coursera 的这些课程和专业，在家或办公室在线学习。Coursera 通过提供顶级大学课程材料和教师访问，使在线学习变得更加容易。**
+以上是关于 2023 年约翰霍普金斯大学的最佳认证和学习数据科学的课程。JHU 有 `Python` 和 `R` 编程语言两种学习数据科学的课程，你可以选择符合你需要的课程。
 
-**顺便说一下，除了单独加入这些课程和专业，你还可以加入 Coursera Plus 的 [**，**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus) 订阅计划，让你无限制地访问他们最受欢迎的课程、专业、专业证书和指导项目。**
+约翰·霍普金斯大学不仅在美国，而且在世界上都是一所知名的大学，在学习数据科学等热门技能方面，他们有一些非常好的教授和教育工作者。
 
-**<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
+许多人试图进入 JHU，但谢天谢地，你不需要去美国向精英中的精英学习；你可以加入 Coursera 的这些课程和专业，在家或办公室在线学习。Coursera 通过提供顶级大学课程材料和教师访问，使在线学习变得更加容易。
 
-你可能喜欢的其他 **Coursera 资源文章**:
+顺便说一下，除了单独加入这些课程和专业，你还可以加入 Coursera Plus 的 [订阅计划](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus)，让你无限制地访问他们最受欢迎的课程、专业、专业证书和指导项目。
 
-*   [2023 年 15 门免费 Coursera 课程供初学者加入](https://javarevisited.blogspot.com/2021/05/15-free-coursera-courses-to-learn-online.html)
-*   [开始职业生涯的十大 Coursera 认证](/javarevisited/top-10-coursera-certificates-to-start-your-career-in-cloud-data-science-ai-mainframe-and-it-558690c83587)
-*   [学习 Python 的 10 个 Coursera 专业化和认证](https://javarevisited.blogspot.com/2020/02/10-best-coursera-courses--for-python.html)
-*   [面向程序员和开发人员的 Coursera 十大项目](https://javarevisited.blogspot.com/2020/08/top-10-coursera-projects-to-learn-essential-programming-skills.html)
-*   Udemy vs. CodeCademy vs. OneMonth？
-*   [5 个最佳 Coursera 程序员职业证书](https://javarevisited.blogspot.com/2019/10/top-5-coursera-professional-certificates-for-programmers-IT-professionals.html)
-*   [Udemy vs . Educative vs . CodeCademy？新手用哪个比较好](/javarevisited/codecademy-or-pluralsight-which-is-a-better-platform-to-learn-coding-skills-59251a080642)
-*   [2023 年学习 Python 可以做的 8 个项目](/javarevisited/8-projects-you-can-buil-to-learn-python-in-2020-251dd5350d56)
-*   [你可以在 Coursera 上在线申请的前 5 个计算机科学学位](https://javarevisited.blogspot.com/2020/04/is-it-possible-to-get-master-of-computer-science-degree-online-coursera.html)
-*   [Coursera Plus Review——在 Coursera 上学习的更好方式](https://javarevisited.blogspot.com/2020/08/coursera-plus-better-way-to-take-coursera-courses-specilizations-certification.html)
-*   [Udemy vs Coursera？学理工和编程哪个好](https://javarevisited.blogspot.com/2020/01/coursera-vs-udemy-which-is-better-for-programming-tech.html)
-*   [Coursera 证书对工作和事业有帮助吗](https://javarevisited.blogspot.com/2020/02/does-udemy-coursera-edx-educative-or.html)？
-*   [2023 年学习人工智能的 7 门最佳课程](/javarevisited/7-best-courses-to-learn-artificial-intelligence-in-2020-26d59d62f6fe)
-*   [Udemy vs 复数视线？哪个学习平台比较好？](https://javarevisited.blogspot.com/2019/10/udemy-vs-pluralsight-review-which-is-better-to-learn-code.html)
-*   你可以在 Coursera Online 上获得 5 个数据科学学位
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
-感谢您阅读本文。如果你喜欢约翰霍普金斯大学 Coursera 上的这些 b *est 数据科学认证和课程*，请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
+你可能喜欢的其他 **Coursera 资源文章**：
 
-**P. S. —** 如果你喜欢 Udemy 的课程，还可以在 Udemy 上查看 [**数据科学课程 2023:365 Careers 完成的数据科学训练营**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-data-science-course-complete-data-science-bootcamp%2F) 课程。这是在 Udemy 上学习数据科学的最佳课程之一，你只需花 10 美元就可以在 Udemy sales 上获得，这种情况时有发生。
+- [2023 年 15 门免费 Coursera 课程供初学者加入](https://javarevisited.blogspot.com/2021/05/15-free-coursera-courses-to-learn-online.html)
+- [开始职业生涯的十大 Coursera 认证](/javarevisited/top-10-coursera-certificates-to-start-your-career-in-cloud-data-science-ai-mainframe-and-it-558690c83587)
+- [学习 Python 的 10 个 Coursera 专业化和认证](https://javarevisited.blogspot.com/2020/02/10-best-coursera-courses--for-python.html)
+- [面向程序员和开发人员的 Coursera 十大项目](https://javarevisited.blogspot.com/2020/08/top-10-coursera-projects-to-learn-essential-programming-skills.html)
+- Udemy vs. CodeCademy vs. OneMonth？
+- [5 个最佳 Coursera 程序员职业证书](https://javarevisited.blogspot.com/2019/10/top-5-coursera-professional-certificates-for-programmers-IT-professionals.html)
+- [Udemy vs . Educative vs . CodeCademy？新手用哪个比较好](/javarevisited/codecademy-or-pluralsight-which-is-a-better-platform-to-learn-coding-skills-59251a080642)
+- [2023 年学习 Python 可以做的 8 个项目](/javarevisited/8-projects-you-can-buil-to-learn-python-in-2020-251dd5350d56)
+- [你可以在 Coursera 上在线申请的前 5 个计算机科学学位](https://javarevisited.blogspot.com/2020/04/is-it-possible-to-get-master-of-computer-science-degree-online-coursera.html)
+- [Coursera Plus Review——在 Coursera 上学习的更好方式](https://javarevisited.blogspot.com/2020/08/coursera-plus-better-way-to-take-coursera-courses-specilizations-certification.html)
+- [Udemy vs Coursera？学理工和编程哪个好](https://javarevisited.blogspot.com/2020/01/coursera-vs-udemy-which-is-better-for-programming-tech.html)
+- [Coursera 证书对工作和事业有帮助吗](https://javarevisited.blogspot.com/2020/02/does-udemy-coursera-edx-educative-or.html)？
+- [2023 年学习人工智能的 7 门最佳课程](/javarevisited/7-best-courses-to-learn-artificial-intelligence-in-2020-26d59d62f6fe)
+- [Udemy vs 复数视线？哪个学习平台比较好？](https://javarevisited.blogspot.com/2019/10/udemy-vs-pluralsight-review-which-is-better-to-learn-code.html)
+- 你可以在 Coursera Online 上获得 5 个数据科学学位
 
-<https://javarevisited.blogspot.com/2022/02/top-5-jose-portilla-courses-from-udemy.html> **
+感谢您阅读本文。如果你喜欢约翰霍普金斯大学 Coursera 上的这些最佳数据科学认证和课程，请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
+
+**P. S. —** 如果你喜欢 Udemy 的课程，还可以在 Udemy 上查看 [数据科学课程 2023：365 Careers 完成的数据科学训练营](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-data-science-course-complete-data-science-bootcamp%2F) 课程。这是在 Udemy 上学习数据科学的最佳课程之一，你只需花 10 美元就可以在 Udemy sales 上获得，这种情况时有发生。
+
+<https://javarevisited.blogspot.com/2022/02/top-5-jose-portilla-courses-from-udemy.html>

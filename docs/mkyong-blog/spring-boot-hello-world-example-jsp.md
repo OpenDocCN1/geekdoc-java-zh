@@ -1,31 +1,32 @@
+
 # Spring Boot Hello World 示例 JSP
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-boot-hello-world-example-jsp/>
 
-一个 [Spring Boot](http://web.archive.org/web/20220815221140/https://projects.spring.io/spring-boot/) 的 web 应用例子，使用`embedded Tomcat + JSP template`，并打包成一个可执行的 WAR 文件。
+一个 [Spring Boot](http://web.archive.org/web/20220815221140/https://projects.spring.io/spring-boot/) 的 web 应用例子，使用 `embedded Tomcat + JSP template`，并打包成一个可执行的 WAR 文件。
 
-使用的技术:
+使用的技术：
 
-1.  Spring Boot 1.4.2 版本
-2.  弹簧 4.3.4 释放
-3.  Tomcat Embed 8.5.6
-4.  maven3
-5.  Java 8
+1. Spring Boot 1.4.2 版本
+2. 弹簧 4.3.4 释放
+3. Tomcat Embed 8.5.6
+4. maven3
+5. Java 8
 
-## 1.项目目录
+## 1. 项目目录
 
-手动创建以下文件夹:
+手动创建以下文件夹：
 
 ![spring-boot-web-jsp-project-directory](img/fdd6be8592c16a7c03a00c1ba015da16.png)
 
-## 2.项目相关性
+## 2. 项目相关性
 
 Maven 例子。阅读注释，了解更多信息。
 
-pom.xml
+`pom.xml`
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <project  
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
@@ -103,13 +104,13 @@ pom.xml
 			</plugin>
 		</plugins>
 	</build>
-</project> 
+</project>
 ```
 
-显示项目部门:
+显示项目依赖：
 
-```java
- $ mvn dependency:tree
+```bash
+$ mvn dependency:tree
 
 [INFO] Scanning for projects...
 [INFO]
@@ -160,17 +161,17 @@ pom.xml
 [INFO] Total time: 1.327 s
 [INFO] Finished at: 2016-11-28T16:57:00+08:00
 [INFO] Final Memory: 20M/309M
-[INFO] ------------------------------------------------------------------------ 
+[INFO] ------------------------------------------------------------------------
 ```
 
-## 3.弹簧弹簧
+## 3. 弹簧弹簧
 
-3.1 这个`SpringBootServletInitializer`运行一个来自传统战争部署的`SpringApplication`
+3.1 这个 `SpringBootServletInitializer` 运行一个来自传统 WAR 部署的 `SpringApplication`。
 
-SpringBootWebApplication.java
+`SpringBootWebApplication.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -189,15 +190,15 @@ public class SpringBootWebApplication extends SpringBootServletInitializer {
 		SpringApplication.run(SpringBootWebApplication.class, args);
 	}
 
-} 
+}
 ```
 
 3.2 一个简单的 Spring 控制器类。
 
-WelcomeController.java
+`WelcomeController.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.Map;
 
@@ -218,17 +219,19 @@ public class WelcomeController {
 		return "welcome";
 	}
 
-} 
+}
 ```
 
-## 4.JSP +资源+静态文件
+## 4. JSP + 资源 + 静态文件
 
-4.1 对于 JSP 文件，放入`src/main/webapp/WEB-INF/jsp/`
+4.1 对于 JSP 文件，放入 `src/main/webapp/WEB-INF/jsp/`。
 
-src/main/webapp/WEB-INF/jsp/welcome.jsp
+`src/main/webapp/WEB-INF/jsp/welcome.jsp`
 
-```java
- <!DOCTYPE html>
+
+
+```html
+<!DOCTYPE html>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="en">
@@ -275,43 +278,44 @@ src/main/webapp/WEB-INF/jsp/welcome.jsp
 
 </body>
 
-</html> 
+</html>
 ```
 
 4.2 对于 CSS 或 Javascript 等静态文件，放入`/src/main/resources/static/`
 
-/src/main/resources/static/css/main.css
+`/src/main/resources/static/css/main.css`
 
-```java
- h1{
+```css
+h1{
 	color:#0000FF;
 }
 
 h2{
 	color:#FF0000;
-} 
+}
 ```
 
 4.3 对于属性文件，输入`/src/main/resources/`
 
-/src/main/resources/application.properties
+`/src/main/resources/application.properties`
 
-```java
- spring.mvc.view.prefix: /WEB-INF/jsp/
+```properties
+spring.mvc.view.prefix: /WEB-INF/jsp/
 spring.mvc.view.suffix: .jsp
 
-welcome.message: Hello Mkyong 
+welcome.message: Hello Mkyong
 ```
 
 **Note**
-Spring Boot, convention over configuration, no need to declare the resource mapping like [this](http://web.archive.org/web/20220815221140/https://www.mkyong.com/spring-mvc/spring-mvc-how-to-include-js-or-css-files-in-a-jsp-page/). The resource mapping just handles automatically – Read this article – [Spring Boot Serving static content](http://web.archive.org/web/20220815221140/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-static-content)
 
-## 5.演示
+Spring Boot，约定优于配置，无需像[这样](http://web.archive.org/web/20220815221140/https://www.mkyong.com/spring-mvc/spring-mvc-how-to-include-js-or-css-files-in-a-jsp-page/)声明资源映射。资源映射会自动处理——阅读这篇文章——[Spring Boot 提供静态内容](http://web.archive.org/web/20220815221140/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-static-content)
+
+## 5. 演示
 
 5.1 启动 Spring Boot 网络应用程序。
 
-```java
- project$ mvn spring-boot:run
+```bash
+project$ mvn spring-boot:run
 
 //...
   .   ____          _            __ _ _
@@ -340,7 +344,7 @@ Spring Boot, convention over configuration, no need to declare the resource mapp
 //...
 
 2016-11-28 17:25:26.841  INFO 4696 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
-2016-11-28 17:25:26.846  INFO 4696 --- [           main] com.mkyong.SpringBootWebApplication      : Started SpringBootWebApplication in 2.403 seconds (JVM running for 5.08) 
+2016-11-28 17:25:26.846  INFO 4696 --- [           main] com.mkyong.SpringBootWebApplication      : Started SpringBootWebApplication in 2.403 seconds (JVM running for 5.08)
 ```
 
 5.2 访问 *http://localhost:8080*
@@ -349,8 +353,8 @@ Spring Boot, convention over configuration, no need to declare the resource mapp
 
 5.3 Maven 将项目打包成可执行的`WAR`文件。在`target`文件夹中会生成一个 18M++的`WAR`文件。
 
-```java
- project$ mvn clean package
+```bash
+project$ mvn clean package
 
 ...
 [INFO] Building war: ...\spring-boot-web-jsp\target\spring-boot-web-jsp-1.0.war
@@ -358,28 +362,33 @@ Spring Boot, convention over configuration, no need to declare the resource mapp
 [INFO] --- spring-boot-maven-plugin:1.4.2.RELEASE:repackage (default) @ spring-boot-web-jsp ---
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------ 
+[INFO] ------------------------------------------------------------------------
 ```
 
-运行它，再次访问 *http://localhost:8080* 。
+运行它，再次访问 *http://localhost:8080*。
 
-```java
- project$ java -jar target/spring-boot-web-jsp-1.0.war 
+```bash
+project$ java -jar target/spring-boot-web-jsp-1.0.war
 ```
 
-**JSP limitations**
-You can’t create an executable `jar` to run this embedded Tomcat + JSP web example, because of a hard coded file pattern in Tomcat. Read this [Spring Boot – JSP limitation](http://web.archive.org/web/20220815221140/https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-developing-web-applications.html#boot-features-jsp-limitations).
+**JSP 限制**
+
+由于 Tomcat 中的硬编码文件模式，您无法创建可执行的`jar`来运行此嵌入式 Tomcat + JSP Web 示例。阅读此 [Spring Boot – JSP 限制](http://web.archive.org/web/20220815221140/https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-developing-web-applications.html#boot-features-jsp-limitations)。
 
 ## 下载源代码
 
-Download it – [spring-boot-web-jsp.zip (8KB)](http://web.archive.org/web/20220815221140/http://www.mkyong.com/wp-content/uploads/2016/11/spring-boot-web-jsp.zip)
+下载它 – [spring-boot-web-jsp.zip (8KB)](http://web.archive.org/web/20220815221140/http://www.mkyong.com/wp-content/uploads/2016/11/spring-boot-web-jsp.zip)
 
 ## 参考
 
-1.  [Spring Boot–静态内容](http://web.archive.org/web/20220815221140/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-static-content)
-2.  [SpringBootServletInitializer JavaDoc](http://web.archive.org/web/20220815221140/https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/context/web/SpringBootServletInitializer.html)
-3.  [部署 Spring Boot 应用](http://web.archive.org/web/20220815221140/https://spring.io/blog/2014/03/07/deploying-spring-boot-applications)
-4.  [Spring Boot–JSP 限制](http://web.archive.org/web/20220815221140/https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-developing-web-applications.html#boot-features-jsp-limitations)
-5.  [spring MVC–in ucci CSS 文件](http://web.archive.org/web/20220815221140/https://www.mkyong.com/spring-mvc/spring-mvc-how-to-include-js-or-css-files-in-a-jsp-page/)
+1. [Spring Boot–静态内容](http://web.archive.org/web/20220815221140/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-static-content)
+
+2. [SpringBootServletInitializer JavaDoc](http://web.archive.org/web/20220815221140/https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/context/web/SpringBootServletInitializer.html)
+
+3. [部署 Spring Boot 应用](http://web.archive.org/web/20220815221140/https://spring.io/blog/2014/03/07/deploying-spring-boot-applications)
+
+4. [Spring Boot–JSP 限制](http://web.archive.org/web/20220815221140/https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-developing-web-applications.html#boot-features-jsp-limitations)
+
+5. [spring MVC–in ucci CSS 文件](http://web.archive.org/web/20220815221140/https://www.mkyong.com/spring-mvc/spring-mvc-how-to-include-js-or-css-files-in-a-jsp-page/)
 
 <input type="hidden" id="mkyong-current-postId" value="14132">

@@ -1,3 +1,4 @@
+
 # 十六、版本控制的使用
 
 ## IntelliJ IDEA 下的版本控制介绍
@@ -10,8 +11,9 @@
 
 **图片 16.1** IntelliJ IDEA 下的版本控制介绍
 
-> *   很多人认为 IntelliJ IDEA 自带了 SVN 或是 Git 等版本控制工具，认为只要安装了 IntelliJ IDEA 就可以完全使用版本控制应有的功能。这完全是一种错误的解读，IntelliJ IDEA 是自带对这些版本控制工具的支持插件，但是该装什么版本控制客户端还是要照样装的。
-> *   如上图标注 1 所示，IntelliJ IDEA 对版本控制的支持是以插件化的方式来实现的。旗舰版默认支持目前主流的版本控制软件：CVS、Subversion（SVN）、Git、ClearCase、Mercurial、Perforce、TFS。又因为目前太多人使用 Github 进行协同或是项目版本管理，所以 IntelliJ IDEA 同时自带了 Github 插件，方便 Checkout 和管理你的 Github 项目。
+> * 很多人认为 IntelliJ IDEA 自带了 SVN 或是 Git 等版本控制工具，认为只要安装了 IntelliJ IDEA 就可以完全使用版本控制应有的功能。这完全是一种错误的解读，IntelliJ IDEA 是自带对这些版本控制工具的支持插件，但是该装什么版本控制客户端还是要照样装的。
+
+> * 如上图标注 1 所示，IntelliJ IDEA 对版本控制的支持是以插件化的方式来实现的。旗舰版默认支持目前主流的版本控制软件：CVS、Subversion（SVN）、Git、ClearCase、Mercurial、Perforce、TFS。又因为目前太多人使用 Github 进行协同或是项目版本管理，所以 IntelliJ IDEA 同时自带了 Github 插件，方便 Checkout 和管理你的 Github 项目。
 
 ## SVN 的配置
 
@@ -19,22 +21,25 @@
 
 SVN 主要使用的版本有 1.6、1.7、1.8，最新的是 1.9。推荐大家使用 1.8 的。如果你的项目使用的是 1.6 的版本，在安装 1.8 之后是可以直接对项目文件进行升级的，所以无需担心，也因此更加推荐大家使用 1.8。
 
-> *   Subversion 官网下载：[`subversion.apache.org/download/#recommended-release`](https://subversion.apache.org/download/#recommended-release)
-> *   TortoiseSVN 官网下载：[`tortoisesvn.net/downloads.zh.html`](http://tortoisesvn.net/downloads.zh.html)
+> * Subversion 官网下载：[`subversion.apache.org/download/#recommended-release`](https://subversion.apache.org/download/#recommended-release)
+
+> * TortoiseSVN 官网下载：[`tortoisesvn.net/downloads.zh.html`](http://tortoisesvn.net/downloads.zh.html)
 
 ![SVN 的使用](img/xvi-b-version-control-system-svn-introduce-1.jpg)
 
 **图片 16.2** SVN 的使用
 
-> *   如上图箭头所示，在安装 TortoiseSVN 的时候，默认 `command line client tools`，是不安装的，这里建议勾选上。
+> * 如上图箭头所示，在安装 TortoiseSVN 的时候，默认 `command line client tools`，是不安装的，这里建议勾选上。
 
 ![SVN 的使用](img/xvi-b-version-control-system-svn-introduce-2.jpg)
 
 **图片 16.3** SVN 的使用
 
-> *   如上图标注 1 所示，勾选 `Use command line client`
-> *   如上图标注 2 所示，建议 svn 的路径自己根据安装后的路径进行选择，不然有时候 IntelliJ IDEA 无法识别到会报：`Cannot run program "svn"` 这类错误。
-> *   如上图标注 3 所示，当使用一段时间 SVN 以后，发现各种 SVN 相关问题无法解决，可以考虑点击此按钮进行清除一下缓存。
+> * 如上图标注 1 所示，勾选 `Use command line client`
+
+> * 如上图标注 2 所示，建议 svn 的路径自己根据安装后的路径进行选择，不然有时候 IntelliJ IDEA 无法识别到会报：`Cannot run program "svn"` 这类错误。
+
+> * 如上图标注 3 所示，当使用一段时间 SVN 以后，发现各种 SVN 相关问题无法解决，可以考虑点击此按钮进行清除一下缓存。
 
 根据目前的使用经验来看，IntelliJ IDEA 下 SVN 的使用经历并不算愉快，至少比 Git 不好用很多，经常遇到很多问题，所以这里也算是先给大家提个醒。如果紧急情况下 IntelliJ IDEA 无法更新、提交的时候，要记得使用 TortoiseSVN 来操作。
 
@@ -44,8 +49,9 @@ SVN 主要使用的版本有 1.6、1.7、1.8，最新的是 1.9。推荐大家�
 
 Git 主要的版本有 1.X、2.X，最新的是 2.X，使用版本随意，但是不要太新了，不然可能 IntelliJ IDEA 小旧版本会无法支持可能。
 
-> *   Git 官网下载：[`git-scm.com/`](http://git-scm.com/)
-> *   TortoiseGit 官网下载：[`download.tortoisegit.org/tgit/`](http://download.tortoisegit.org/tgit/)
+> * Git 官网下载：[`git-scm.com/`](http://git-scm.com/)
+
+> * TortoiseGit 官网下载：[`download.tortoisegit.org/tgit/`](http://download.tortoisegit.org/tgit/)
 
 ![Git 的使用](img/xvi-c-version-control-system-git-introduce-1.jpg)
 
@@ -59,25 +65,25 @@ Git 主要的版本有 1.X、2.X，最新的是 2.X，使用版本随意，但�
 
 **图片 16.5** Github 的使用
 
-> *   如上图标注 1 所示，填写你的 Github 登录账号和密码，点击 `Test` 可以进行测试是否可以正确连上。
+> * 如上图标注 1 所示，填写你的 Github 登录账号和密码，点击 `Test` 可以进行测试是否可以正确连上。
 
 ![Github 的使用](img/xvi-d-version-control-system-github-introduce-2.jpg)
 
 **图片 16.6** Github 的使用
 
-> *   如上图标注 1 所示，支持直接从你当前登录的 Github 账号上 Checkout 项目。
+> * 如上图标注 1 所示，支持直接从你当前登录的 Github 账号上 Checkout 项目。
 
 ![Github 的使用](img/xvi-d-version-control-system-github-introduce-3.jpg)
 
 **图片 16.7** Github 的使用
 
-> *   如上图标注 1 所示，支持把当前本地项目分享到你的 Github 账号上。
+> * 如上图标注 1 所示，支持把当前本地项目分享到你的 Github 账号上。
 
 ![Github 的使用](img/xvi-d-version-control-system-github-introduce-4.jpg)
 
 **图片 16.8** Github 的使用
 
-> *   如上图标注 1 所示，支持创建 `Gist`。Github 的 Gist 官网地址：[`gist.github.com/`](https://gist.github.com/)
+> * 如上图标注 1 所示，支持创建 `Gist`。Github 的 Gist 官网地址：[`gist.github.com/`](https://gist.github.com/)
 
 ## 版本控制主要操作按钮
 
@@ -85,31 +91,35 @@ Git 主要的版本有 1.X、2.X，最新的是 2.X，使用版本随意，但�
 
 **图片 16.9** 版本控制主要操作按钮
 
-> *   如上图标注 1 所示，对目录进行右键弹出的菜单选项。
+> * 如上图标注 1 所示，对目录进行右键弹出的菜单选项。
 
 ![版本控制主要操作按钮](img/xvi-e-version-control-system-operation-introduce-2.jpg)
 
 **图片 16.10** 版本控制主要操作按钮
 
-> *   如上图标注 1 所示，对文件进行右键弹出的菜单选项。
+> * 如上图标注 1 所示，对文件进行右键弹出的菜单选项。
 
 ![版本控制主要操作按钮](img/xvi-e-version-control-system-operation-introduce-3.jpg)
 
 **图片 16.11** 版本控制主要操作按钮
 
-> *   如上图标注红圈所示，为工具栏上版本控制操作按钮，基本上大家也都是使用这里进行操作。
-> 
-> > *   第一个按钮：`Update Project` 更新项目。
-> > *   第二个按钮：`Commit changes` 提交项目上所有变化文件。点击这个按钮不会立马提交所有文件，而是先弹出一个被修改文件的一个汇总框，具体操作下面会有图片进行专门介绍。
-> > *   第三个按钮：`Compare with the Same Repository Version` 当前文件与服务器上该文件通版本的内容进行比较。如果当前编辑的文件没有修改，则是灰色不可点击。
-> > *   第四个按钮：`Show history` 显示当前文件的历史记录。
-> > *   第五个按钮：`Revert` 还原当前被修改的文件到违背修改的版本状态下。如果当前编辑的文件没有修改，则是灰色不可点击。
+> * 如上图标注红圈所示，为工具栏上版本控制操作按钮，基本上大家也都是使用这里进行操作。
+
+> > * 第一个按钮：`Update Project` 更新项目。
+
+> > * 第二个按钮：`Commit changes` 提交项目上所有变化文件。点击这个按钮不会立马提交所有文件，而是先弹出一个被修改文件的一个汇总框，具体操作下面会有图片进行专门介绍。
+
+> > * 第三个按钮：`Compare with the Same Repository Version` 当前文件与服务器上该文件通版本的内容进行比较。如果当前编辑的文件没有修改，则是灰色不可点击。
+
+> > * 第四个按钮：`Show history` 显示当前文件的历史记录。
+
+> > * 第五个按钮：`Revert` 还原当前被修改的文件到违背修改的版本状态下。如果当前编辑的文件没有修改，则是灰色不可点击。
 
 ![版本控制主要操作按钮](img/xvi-e-version-control-system-operation-introduce-4.jpg)
 
 **图片 16.12** 版本控制主要操作按钮
 
-> *   如上图标注 1 所示，菜单栏上的版本控制操作区。
+> * 如上图标注 1 所示，菜单栏上的版本控制操作区。
 
 ## 版本控制相关的常用设置说明
 
@@ -117,53 +127,65 @@ Git 主要的版本有 1.X、2.X，最新的是 2.X，使用版本随意，但�
 
 **图片 16.13** 版本控制相关的常用设置说明
 
-> *   如上图标注 1 所示，当前项目使用的版本控制是 `Git`。如果你不愿意这个项目继续使用版本控制可以点击旁边的减号按钮，如果你要切换版本控制，可以点击 `Git`，会出现 IntelliJ IDEA 支持的各种版本控制选择列表，但是我们一般情况下一个项目不会有多个版本控制的。
-> *   如上图标注 2 所示，`Show directories with changed descendants` 表示子目录有文件被修改了，则该文件的所有上层目录都显示版本控制被概念的颜色。默认是不勾选的，我一般建议勾选此功能。
+> * 如上图标注 1 所示，当前项目使用的版本控制是 `Git`。如果你不愿意这个项目继续使用版本控制可以点击旁边的减号按钮，如果你要切换版本控制，可以点击 `Git`，会出现 IntelliJ IDEA 支持的各种版本控制选择列表，但是我们一般情况下一个项目不会有多个版本控制的。
+
+> * 如上图标注 2 所示，`Show directories with changed descendants` 表示子目录有文件被修改了，则该文件的所有上层目录都显示版本控制被概念的颜色。默认是不勾选的，我一般建议勾选此功能。
 
 ![版本控制相关的常用设置说明](img/xvi-f-version-control-system-settings-introduce-2.jpg)
 
 **图片 16.14** 版本控制相关的常用设置说明
 
-> *   如上图标注 1 所示，`When files are created` 表示当有新文件放进项目中的时候 IntelliJ IDEA 做如何处理，默认是 `Show options before adding to version control` 表示弹出提示选项，让开发者决定这些新文件是加入到版本控制中还是不加入。如果不想弹出提示，则选择下面两个选项进行默认操作。
-> *   如上图标注 2 所示，`When files are deleted` 表示当有新文件在项目中被删除的时候 IntelliJ IDEA 做如何处理，默认是 `Show options before removing from version control` 表示弹出提示选项，让开发者决定这些被删除的是否从版本控制中删除。如果不想弹出提示，则选择下面两个选项进行默认操作。
+> * 如上图标注 1 所示，`When files are created` 表示当有新文件放进项目中的时候 IntelliJ IDEA 做如何处理，默认是 `Show options before adding to version control` 表示弹出提示选项，让开发者决定这些新文件是加入到版本控制中还是不加入。如果不想弹出提示，则选择下面两个选项进行默认操作。
+
+> * 如上图标注 2 所示，`When files are deleted` 表示当有新文件在项目中被删除的时候 IntelliJ IDEA 做如何处理，默认是 `Show options before removing from version control` 表示弹出提示选项，让开发者决定这些被删除的是否从版本控制中删除。如果不想弹出提示，则选择下面两个选项进行默认操作。
 
 ![版本控制相关的常用设置说明](img/xvi-f-version-control-system-settings-introduce-3.jpg)
 
 **图片 16.15** 版本控制相关的常用设置说明
 
-> *   如上图标注 1 所示，对于不想加入到版本控制的文件，可以添加要此忽略的列表中。但是如果已经加入到版本控制的文件使用此功能，则表示该文件 或 目录无法再使用版本控制相关的操作，比如提交、更新等。我个人使用过程中发现在 SVN 上此功能不太好用，Git 上是可以用的。
+> * 如上图标注 1 所示，对于不想加入到版本控制的文件，可以添加要此忽略的列表中。但是如果已经加入到版本控制的文件使用此功能，则表示该文件 或 目录无法再使用版本控制相关的操作，比如提交、更新等。我个人使用过程中发现在 SVN 上此功能不太好用，Git 上是可以用的。
 
 ![版本控制相关的常用设置说明](img/xvi-f-version-control-system-settings-introduce-4.jpg)
 
 **图片 16.16** 版本控制相关的常用设置说明
 
-> *   上图所示的弹出层就是本文上面说的 `Commit Changes` 点击后弹出的变动文件汇总弹出层。
-> *   如上图标注 1 所示，可以在文件上右键进行操作。
-> 
-> > *   `Show Diff` 当前文件与服务器上该文件通版本的内容进行比较。
-> > *   `Move to Another Changelist` 将选中的文件转移到其他的 `Change list` 中。`Change list` 是一个重要的概念，这里需要进行重点说明。很多时候，我们开发一个项目同时并发的任务可能有很多，每个任务涉及到的文件可能都是基于业务来讲的。所以就会存在一个这样的情况：我改了 30 个文件，其中 15 个文件是属于订单问题，剩下 15 个是会员问题，那我希望提交代码的时候是根据业务区分这些文件的，这样我填写 `Commit Message` 是好描述的，同时在文件多的情况下，我也好区分这些要提交的文件业务模块。所以我一般会把属于订单的 15 个文件转移到其他的 `Change list`中，先把专注点集中在 15 个会员问题的文件，先提交会员问题的 `Change list`，然后在提交订单会员的 `Change list`。我个人还有一种用法是把一些文件暂时不提交的文件转移到一个我指定的 `Change list`，等后面我觉得有必要提交了，再做提交操作，这样这些文件就不会干扰我当前修改的文件提交。总结下 `Change list` 的功能就是为了让你更好地管理你的版本控制文件，让你的专注点得到更好的集中，从而提供效率。
-> > *   `Jump to Source` 打开并跳转到被选中。
-> > *   如上图标注 2 所示，可以根据工具栏按钮进行操作，操作的对象会鼠标选中的文件，多选可以按 `Ctrl` 后不放，需要注意的是这个更前面的复选框是没有多大关系的。
-> > *   如上图标注 3 所示，可以在提交前自动对被提交的文件进行一些操作事件（该项目使用的 Git，使用其他版本控制可能有些按钮有差异。）：
-> >     
-> >     
-> > *   `Reformat code` 格式化代码，如果是 Web 开发建议不要勾选，因为格式化 JSP 类文件，格式化效果不好。如果都是 Java 类则可以安心格式化。
-> >     
-> >     
-> > *   `Rearrange code` 重新编排代码，IntelliJ IDEA 支持各种复杂的编排设置选项，这个会在后面说。设置好了编码功能之后，这里就可以尝试勾选这个进行自动编排。
-> > *   `Optimize imports` 优化导入包，会在自动去掉没有使用的包。这个建议都勾选，这个只对 Java 类有作用，所以不用担心有副作用。
-> > *   `Perform code analysis` 进行代码分析，这个建议不用在提交的时候处理，而是在开发完之后，要专门养成对代码进行分析的习惯。IntelliJ IDEA 集成了代码分析功能。
-> > *   `Check TODO` 检查代码中的 `TODO`。`TODO` 功能后面也会有章节进行讲解，这里简单介绍：这是一个记录待办事项的功能。
-> > *   `Cleanup` 清除下版本控制系统，去掉一些版本控制系统的错误信息，建议勾选。
-> > *   如上图标注 4 所示，填写提交的信息。
-> > *   如上图标注 5 所示，`Change list` 改变列表，这是一个下拉选项，说明我们可以切换不同的 `Change list`，提交不同的 `Change list` 文件。
-> > *   如上图标注箭头所示，我们可以查看我们提交历史中使用的 `Commit Message`，有些时候，我们做得是同一个任务，但是需要提交多次，为了更好管理项目，建议是提交的 `Message` 是保持一致的。
+> * 上图所示的弹出层就是本文上面说的 `Commit Changes` 点击后弹出的变动文件汇总弹出层。
+
+> * 如上图标注 1 所示，可以在文件上右键进行操作。
+
+> > * `Show Diff` 当前文件与服务器上该文件通版本的内容进行比较。
+
+> > * `Move to Another Changelist` 将选中的文件转移到其他的 `Change list` 中。`Change list` 是一个重要的概念，这里需要进行重点说明。很多时候，我们开发一个项目同时并发的任务可能有很多，每个任务涉及到的文件可能都是基于业务来讲的。所以就会存在一个这样的情况：我改了 30 个文件，其中 15 个文件是属于订单问题，剩下 15 个是会员问题，那我希望提交代码的时候是根据业务区分这些文件的，这样我填写 `Commit Message` 是好描述的，同时在文件多的情况下，我也好区分这些要提交的文件业务模块。所以我一般会把属于订单的 15 个文件转移到其他的 `Change list`中，先把专注点集中在 15 个会员问题的文件，先提交会员问题的 `Change list`，然后在提交订单会员的 `Change list`。我个人还有一种用法是把一些文件暂时不提交的文件转移到一个我指定的 `Change list`，等后面我觉得有必要提交了，再做提交操作，这样这些文件就不会干扰我当前修改的文件提交。总结下 `Change list` 的功能就是为了让你更好地管理你的版本控制文件，让你的专注点得到更好的集中，从而提供效率。
+
+> > * `Jump to Source` 打开并跳转到被选中。
+
+> > * 如上图标注 2 所示，可以根据工具栏按钮进行操作，操作的对象会鼠标选中的文件，多选可以按 `Ctrl` 后不放，需要注意的是这个更前面的复选框是没有多大关系的。
+
+> > * 如上图标注 3 所示，可以在提交前自动对被提交的文件进行一些操作事件（该项目使用的 Git，使用其他版本控制可能有些按钮有差异。）：
+
+> > * `Reformat code` 格式化代码，如果是 Web 开发建议不要勾选，因为格式化 JSP 类文件，格式化效果不好。如果都是 Java 类则可以安心格式化。
+
+> > * `Rearrange code` 重新编排代码，IntelliJ IDEA 支持各种复杂的编排设置选项，这个会在后面说。设置好了编码功能之后，这里就可以尝试勾选这个进行自动编排。
+
+> > * `Optimize imports` 优化导入包，会在自动去掉没有使用的包。这个建议都勾选，这个只对 Java 类有作用，所以不用担心有副作用。
+
+> > * `Perform code analysis` 进行代码分析，这个建议不用在提交的时候处理，而是在开发完之后，要专门养成对代码进行分析的习惯。IntelliJ IDEA 集成了代码分析功能。
+
+> > * `Check TODO` 检查代码中的 `TODO`。`TODO` 功能后面也会有章节进行讲解，这里简单介绍：这是一个记录待办事项的功能。
+
+> > * `Cleanup` 清除下版本控制系统，去掉一些版本控制系统的错误信息，建议勾选。
+
+> > * 如上图标注 4 所示，填写提交的信息。
+
+> > * 如上图标注 5 所示，`Change list` 改变列表，这是一个下拉选项，说明我们可以切换不同的 `Change list`，提交不同的 `Change list` 文件。
+
+> > * 如上图标注箭头所示，我们可以查看我们提交历史中使用的 `Commit Message`，有些时候，我们做得是同一个任务，但是需要提交多次，为了更好管理项目，建议是提交的 `Message` 是保持一致的。
 
 ![版本控制相关的常用设置说明](img/xvi-f-version-control-system-settings-introduce-5.jpg)
 
 **图片 16.17** 版本控制相关的常用设置说明
 
-> *   如上图标注箭头所示，如果你使用的 Git，点击此位置可以切换分支和创建分支，以及合并、删除分支等操作。
+> * 如上图标注箭头所示，如果你使用的 Git，点击此位置可以切换分支和创建分支，以及合并、删除分支等操作。
 
 ## SVN 的使用
 

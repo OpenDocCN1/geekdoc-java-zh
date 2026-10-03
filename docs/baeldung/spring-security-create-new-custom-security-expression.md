@@ -1,8 +1,9 @@
+
 # 具有 Spring 安全性的自定义安全表达式
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-security-create-new-custom-security-expression>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将关注于用 Spring Security 创建一个定制的安全表达式。
 
@@ -10,7 +11,7 @@
 
 我们将首先讨论如何创建一个自定义的`PermissionEvaluator`，然后是一个完全自定义的表达式——最后是如何覆盖一个内置的安全表达式。
 
-## 2。用户实体
+## 2. 用户实体
 
 首先，让我们为创建新的安全表达式打下基础。
 
@@ -110,7 +111,7 @@ public class MyUserPrincipal implements UserDetails {
 }
 ```
 
-准备好所有这些类后，我们将在一个基本的`UserDetailsService`实现中使用我们的自定义`Principal` :
+准备好所有这些类后，我们将在一个基本的`UserDetailsService`实现中使用我们的自定义`Principal`:
 
 ```java
 @Service
@@ -132,7 +133,7 @@ public class MyUserDetailsService implements UserDetailsService {
 
 如您所见，这些关系并不复杂——用户有一个或多个特权，每个用户属于一个组织。
 
-## 3。数据设置
+## 3. 数据设置
 
 接下来，让我们用简单的测试数据初始化我们的数据库:
 
@@ -157,7 +158,7 @@ public class SetupData {
 }
 ```
 
-下面是我们的`init` 方法:
+下面是我们的`init`方法:
 
 ```java
 private void initPrivileges() {
@@ -200,12 +201,12 @@ private void initUsers() {
 }
 ```
 
-请注意:
+请注意：
 
-*   用户“约翰”只有`FOO_READ_PRIVILEGE`
-*   用户“汤姆”同时拥有`FOO_READ_PRIVILEGE`和`FOO_WRITE_PRIVILEGE`
+- 用户“约翰”只有`FOO_READ_PRIVILEGE`
+- 用户“汤姆”同时拥有`FOO_READ_PRIVILEGE`和`FOO_WRITE_PRIVILEGE`
 
-## 4。自定义权限评估器
+## 4. 自定义权限评估器
 
 现在，我们已经准备好开始实现我们的新表达式了——通过一个新的自定义权限评估器。
 
@@ -213,7 +214,7 @@ private void initUsers() {
 
 让我们开始吧。
 
-### 4.1。`PermissionEvaluator`
+### 4.1. `PermissionEvaluator`
 
 为了创建我们自己的自定义权限评估器，我们需要实现`PermissionEvaluator`接口:
 
@@ -256,7 +257,7 @@ private boolean hasPrivilege(Authentication auth, String targetType, String perm
 }
 ```
 
-**我们现在有了一个新的安全表达式，可以使用了:`hasPermission`。**
+**我们现在有了一个新的安全表达式，可以使用了：`hasPermission`。**
 
 因此，不使用更硬编码的版本:
 
@@ -276,9 +277,9 @@ private boolean hasPrivilege(Authentication auth, String targetType, String perm
 @PreAuthorize("hasPermission(#id, 'Foo', 'read')")
 ```
 
-注意:`#id`表示方法参数，`Foo`表示目标对象类型。
+注意：`#id`表示方法参数，`Foo`表示目标对象类型。
 
-### 4.2。方法安全配置
+### 4.2. 方法安全配置
 
 仅仅定义`CustomPermissionEvaluator`是不够的——我们还需要在我们的方法安全配置中使用它:
 
@@ -297,7 +298,7 @@ public class MethodSecurityConfig extends GlobalMethodSecurityConfiguration {
 }
 ```
 
-### 4.3。实践中的例子
+### 4.3. 实践中的例子
 
 现在让我们开始使用新的表达式——在几个简单的控制器方法中:
 
@@ -324,9 +325,11 @@ public class MainController {
 
 好了，我们都准备好了，并在实践中使用新的表达方式。
 
-### 4.4。现场测试
+### 4.4. 现场测试
 
 现在让我们编写一个简单的现场测试——点击 API 并确保一切正常:
+
+
 
 ```java
 @Test
@@ -365,7 +368,7 @@ private RequestSpecification givenAuth(String username, String password) {
 }
 ```
 
-## 5。一个新的安全表达式
+## 5. 一个新的安全表达式
 
 使用之前的解决方案，我们能够定义和使用`hasPermission`表达式——这非常有用。
 
@@ -373,7 +376,7 @@ private RequestSpecification givenAuth(String username, String password) {
 
 因此，在这一节中，我们将进行完全自定义，我们将实现一个名为`isMember()`的安全表达式，检查主体是否是某个组织的成员。
 
-### 5.1。自定义方法安全表达式
+### 5.1. 自定义方法安全表达式
 
 为了创建这个新的自定义表达式，我们需要从实现根注释开始，所有安全表达式的计算都从这里开始:
 
@@ -398,7 +401,7 @@ public class CustomMethodSecurityExpressionRoot
 
 还要注意我们是如何扩展`SecurityExpressionRoot`来包含内置表达式的。
 
-### 5.2。自定义表达式处理器
+### 5.2. 自定义表达式处理器
 
 接下来，我们需要在表达式处理程序中注入我们的`CustomMethodSecurityExpressionRoot`:
 
@@ -421,7 +424,7 @@ public class CustomMethodSecurityExpressionHandler
 }
 ```
 
-### 5.3。方法安全配置
+### 5.3. 方法安全配置
 
 现在，我们需要在方法安全配置中使用我们的`CustomMethodSecurityExpressionHandler`:
 
@@ -439,7 +442,7 @@ public class MethodSecurityConfig extends GlobalMethodSecurityConfiguration {
 }
 ```
 
-### 5.4。使用新的表达式
+### 5.4. 使用新的表达式
 
 下面是一个使用`isMember()`保护控制器方法的简单例子:
 
@@ -452,7 +455,7 @@ public Organization findOrgById(@PathVariable long id) {
 }
 ```
 
-### 5.5。现场测试
+### 5.5. 现场测试
 
 最后，这里是对用户“`john`”的一个简单的现场测试:
 
@@ -471,11 +474,11 @@ public void givenUserMemberNotInOrganization_whenGetOrganization_thenForbidden()
 }
 ```
 
-## 6。禁用内置安全表达式
+## 6. 禁用内置安全表达式
 
 最后，让我们看看如何覆盖内置的安全表达式——我们将讨论禁用`hasAuthority()`。
 
-### 6.1。自定义安全表达式根
+### 6.1. 自定义安全表达式根
 
 我们将从编写自己的`SecurityExpressionRoot`开始，主要是因为内置方法是`final`，所以我们不能覆盖它们:
 
@@ -498,7 +501,7 @@ public class MySecurityExpressionRoot implements MethodSecurityExpressionOperati
 
 在定义了这个根节点之后，我们必须将它注入到表达式处理程序中，然后将该处理程序连接到我们的配置中——就像我们在第 5 节中所做的那样。
 
-### 6.2。示例–使用表达式
+### 6.2. 示例–使用表达式
 
 现在，如果我们想使用`hasAuthority()`来保护方法——如下所示，当我们试图访问方法时，它将抛出`RuntimeException`:
 
@@ -511,7 +514,7 @@ public Foo findFooByName(@RequestParam String name) {
 }
 ```
 
-### 6.3。现场测试
+### 6.3. 现场测试
 
 最后，这是我们的简单测试:
 
@@ -524,7 +527,7 @@ public void givenDisabledSecurityExpression_whenGetFooByName_thenError() {
 }
 ```
 
-## 7。结论
+## 7. 结论
 
 在本指南中，我们深入探讨了在 Spring Security 中实现自定义安全表达式的各种方法，如果现有的方法还不够的话。
 

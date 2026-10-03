@@ -1,3 +1,4 @@
+
 # 线程池
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/concurrency/pools.html`](https://docs.oracle.com/javase/tutorial/essential/concurrency/pools.html)
@@ -10,12 +11,12 @@
 
 使用固定线程池的一个重要优势是应用程序在使用它时*优雅降级*。要理解这一点，考虑一个 Web 服务器应用程序，其中每个 HTTP 请求都由一个单独的线程处理。如果应用程序只是为每个新的 HTTP 请求创建一个新线程，并且系统接收到的请求多于它立即处理的能力，当所有这些线程的开销超过系统容量时，应用程序将突然停止响应*所有*请求。通过限制可以创建的线程数量，应用程序将不会像请求进来那样快速地为 HTTP 请求提供服务，但它将以系统能够维持的速度为它们提供服务。
 
-创建使用固定线程池的执行器的简单方法是在[`java.util.concurrent.Executors`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html)中调用[`newFixedThreadPool`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html#newFixedThreadPool-int-)工厂方法。该类还提供以下工厂方法：
+创建使用固定线程池的执行器的简单方法是在`java.util.concurrent.Executors`中调用`newFixedThreadPool`工厂方法。该类还提供以下工厂方法：
 
-+   [`newCachedThreadPool`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html#newCachedThreadPool-int-)方法创建一个具有可扩展线程池的执行器。此执行器适用于启动许多短暂任务的应用程序。
++   `newCachedThreadPool`方法创建一个具有可扩展线程池的执行器。此执行器适用于启动许多短暂任务的应用程序。
 
-+   [`newSingleThreadExecutor`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html#newSingleThreadExecutor-int-)方法创建一个一次执行一个任务的执行器。
++   `newSingleThreadExecutor`方法创建一个一次执行一个任务的执行器。
 
 +   几个工厂方法是上述执行器的`ScheduledExecutorService`版本。
 
-如果上述工厂方法提供的任何执行器都不符合您的需求，构造[`java.util.concurrent.ThreadPoolExecutor`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ThreadPoolExecutor.html)或[`java.util.concurrent.ScheduledThreadPoolExecutor`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledThreadPoolExecutor.html)的实例将为您提供额外的选项。
+如果上述工厂方法提供的任何执行器都不符合您的需求，构造`java.util.concurrent.ThreadPoolExecutor`或`java.util.concurrent.ScheduledThreadPoolExecutor`的实例将为您提供额外的选项。

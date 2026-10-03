@@ -1,3 +1,4 @@
+
 # 二分搜索法树
 
 > 原文：<https://medium.com/javarevisited/binary-search-trees-cab4b53953fa?source=collection_archive---------3----------------------->
@@ -14,7 +15,7 @@
 
 树形结构
 
-正如您在图中看到的，只能有一个根节点，所有其他节点都是通过使用根节点来访问的。c 是 F 和 G 节点的父节点，它们被认为是子节点。这些节点可以有**两个子节点，但不能超过两个子节点。**一些节点可以不存在被认为是叶节点的子节点。
+正如您在图中看到的，只能有一个根节点，所有其他节点都是通过使用根节点来访问的。`c`是`F`和`G`节点的父节点，它们被认为是子节点。这些节点可以有**两个子节点，但不能超过两个子节点。**一些节点可以不存在被认为是叶节点的子节点。
 
 **二叉树的属性是什么？**
 
@@ -36,13 +37,15 @@
 
 **如何实现二叉树？**
 
-我们将使用一个辅助的*节点*类来存储 *int* 值。并保存对每个孩子的引用:
+我们将使用一个辅助的`Node`类来存储`int`值。并保存对每个孩子的引用：
 
 ```
-class **Node** {
+class Node {
     int value;
     Node leftChild;
-    Node rightChild; Node(int value) {
+    Node rightChild;
+
+    Node(int value) {
         this.value = value;
         rightChild = null;
         leftChild = null;
@@ -50,10 +53,12 @@ class **Node** {
 }
 ```
 
-然后我们将添加树的开始节点，通常称为*根:*
+然后我们将添加树的开始节点，通常称为`root`：
 
 ```
-public class **BinaryTree** { Node root; // ...
+public class BinaryTree {
+    Node root;
+    // ...
 }
 ```
 
@@ -69,10 +74,10 @@ public class **BinaryTree** { Node root; // ...
 
 [二叉查找树](https://javarevisited.blogspot.com/2015/10/how-to-implement-binary-search-tree-in-java-example.html#axzz6dXsEfLvJ)，在计算机科学中也称为有序或排序二叉树，是一种有根二叉树数据结构，其中每个内部节点存储一个大于该节点左子树中所有关键字但小于该节点右子树中所有关键字的关键字。
 
-二叉树和二叉查找树有什么区别？
+**二叉树和二叉查找树有什么区别？**
 
 [二叉树](https://www.java67.com/2020/02/top-40-binary-tree-interview-questions.html)是一种简单的结构，具有简单的约束，即任何父节点都不能有两个以上的子节点，但是二叉查找树是二叉树的一个版本，它遵循节点应该被排序的特定顺序。
 
 在我的下一篇文章中，我希望解释二叉树的这些基本操作。如此快乐的编码！！
 
-</javarevisited/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0>  </hackernoon/10-data-structure-algorithms-and-programming-courses-to-crack-any-coding-interview-e1c50b30b927> 
+</javarevisited/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0>  </hackernoon/10-data-structure-algorithms-and-programming-courses-to-crack-any-coding-interview-e1c50b30b927>

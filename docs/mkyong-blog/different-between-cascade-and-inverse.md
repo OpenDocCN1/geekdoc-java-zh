@@ -1,23 +1,24 @@
+
 # 级联和逆之间的不同
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/hibernate/different-between-cascade-and-inverse/>
 
-许多 Hibernate 开发人员对 cascade 选项和 inverse 关键字感到困惑。在某些方面..它们一开始看起来真的很相似，两者都与关系有关。
+许多 Hibernate 开发人员对 `cascade` 选项和 `inverse` 关键字感到困惑。在某些方面，它们一开始看起来真的很相似，两者都与关系有关。
 
 ## 级联与反向
 
-然而，级联和逆之间没有关系，两者是完全不同的概念。
+然而，`cascade` 和 `inverse` 之间没有关系，两者是完全不同的概念。
 
- ## 1.相反的
+### 1. 相反的
 
-这用于决定哪一方是管理关系的关系所有者(插入或更新外键列)。
+这用于决定哪一方是管理关系的关系所有者（插入或更新外键列）。
 
-##### 例子
+#### 例子
 
-在此示例中，关系所有者属于 stockDailyRecords (inverse=true)。
+在此示例中，关系所有者属于 `stockDailyRecords`（`inverse=true`）。
 
 ```java
- <!-- Stock.hbm.xml -->
+<!-- Stock.hbm.xml -->
 <hibernate-mapping>
     <class name="com.mkyong.common.Stock" table="stock" ...>
     ...
@@ -27,49 +28,49 @@
         </key>
         <one-to-many class="com.mkyong.common.StockDailyRecord" />
     </set>
-    ... 
+    ...
 ```
 
-当您保存或更新股票对象时
+当您保存或更新 `stock` 对象时：
 
 ```java
- session.save(stock);
-session.update(stock); 
+session.save(stock);
+session.update(stock);
 ```
 
-Hibernate 只会插入或更新股票表，不会更新外键列。[此处有更多详细示例……](http://web.archive.org/web/20190306163129/http://www.mkyong.com/hibernate/inverse-true-example-and-explanation/)
+Hibernate 只会插入或更新 `stock` 表，不会更新外键列。[此处有更多详细示例……](http://web.archive.org/web/20190306163129/http://www.mkyong.com/hibernate/inverse-true-example-and-explanation/)
 
- ## 2.串联
+### 2. 串联
 
-在 cascade 中，在一个操作(保存、更新和删除)完成后，它决定是否需要在另一个有关系实体上调用其他操作(保存、更新和删除)。
+在 `cascade` 中，在一个操作（保存、更新和删除）完成后，它决定是否需要在另一个有关系实体上调用其他操作（保存、更新和删除）。
 
-##### 例子
+#### 例子
 
-在本例中，在 stockDailyRecords 上声明了 cascade="save-update"。
+在本例中，在 `stockDailyRecords` 上声明了 `cascade="save-update"`。
 
 ```java
- <!-- Stock.hbm.xml -->
+<!-- Stock.hbm.xml -->
 <hibernate-mapping>
     <class name="com.mkyong.common.Stock" table="stock" ...>
     ...
-    <set name="stockDailyRecords" table="stock_daily_record" 
+    <set name="stockDailyRecords" table="stock_daily_record"
         cascade="save-update" inverse="true">
         <key>
             <column name="STOCK_ID" not-null="true" />
         </key>
         <one-to-many class="com.mkyong.common.StockDailyRecord" />
     </set>
-    ... 
+    ...
 ```
 
-当您保存或更新股票对象时
+当您保存或更新 `stock` 对象时：
 
 ```java
- session.save(stock);
-session.update(stock); 
+session.save(stock);
+session.update(stock);
 ```
 
-它会将记录插入或更新到股票表中，并在 StockDailyRecord 上调用另一个 insert 或 update 语句(cascade="save-update ")。[此处有更多详细示例……](http://web.archive.org/web/20190306163129/http://www.mkyong.com/hibernate/hibernate-cascade-example-save-update-delete-and-delete-orphan/)
+它会将记录插入或更新到 `stock` 表中，并在 `StockDailyRecord` 上调用另一个 `insert` 或 `update` 语句（`cascade="save-update"`）。[此处有更多详细示例……](http://web.archive.org/web/20190306163129/http://www.mkyong.com/hibernate/hibernate-cascade-example-save-update-delete-and-delete-orphan/)
 
 ## 结论
 
@@ -77,14 +78,7 @@ session.update(stock);
 
 ## 参考
 
-1.[逆= "真"例及解释](http://web.archive.org/web/20190306163129/http://www.mkyong.com/hibernate/inverse-true-example-and-explanation/)
-2。[级联示例–保存、更新和删除](http://web.archive.org/web/20190306163129/http://www.mkyong.com/hibernate/hibernate-cascade-example-save-update-delete-and-delete-orphan/)
+1. [逆 = "真"例及解释](http://web.archive.org/web/20190306163129/http://www.mkyong.com/hibernate/inverse-true-example-and-explanation/)
+2. [级联示例–保存、更新和删除](http://web.archive.org/web/20190306163129/http://www.mkyong.com/hibernate/hibernate-cascade-example-save-update-delete-and-delete-orphan/)
 
 [cascade](http://web.archive.org/web/20190306163129/http://www.mkyong.com/tag/cascade/) [hibernate](http://web.archive.org/web/20190306163129/http://www.mkyong.com/tag/hibernate/)
-
-
-
-
-
-
-

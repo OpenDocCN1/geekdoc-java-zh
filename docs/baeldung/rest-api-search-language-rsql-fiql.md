@@ -1,21 +1,27 @@
+
 # 使用 RSQL 的 REST 查询语言
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/rest-api-search-language-rsql-fiql>
 
 [This article is part of a series:](javascript:void(0);)[• REST Query Language with Spring and JPA Criteria](/web/20220701014319/https://www.baeldung.com/rest-search-language-spring-jpa-criteria)
+
 [• REST Query Language with Spring Data JPA Specifications](/web/20220701014319/https://www.baeldung.com/rest-api-search-language-spring-data-specifications)
+
 [• REST Query Language with Spring Data JPA and Querydsl](/web/20220701014319/https://www.baeldung.com/rest-api-search-language-spring-data-querydsl)
+
 [• REST Query Language – Advanced Search Operations](/web/20220701014319/https://www.baeldung.com/rest-api-query-search-language-more-operations)
+
 [• REST Query Language – Implementing OR Operation](/web/20220701014319/https://www.baeldung.com/rest-api-query-search-or-operation)
+
 • REST Query Language with RSQL (current article)[• REST Query Language with Querydsl Web Support](/web/20220701014319/https://www.baeldung.com/rest-api-search-querydsl-web-in-spring-data-jpa)
 
-## 1。概述
+## 1. 概述
 
 在[系列的第五篇文章](/web/20220701014319/https://www.baeldung.com/spring-rest-api-query-search-language-tutorial)中，我们将展示如何在**的帮助下构建 REST API 查询语言，这是一个很酷的库——[rsql 解析器](https://web.archive.org/web/20220701014319/https://github.com/jirutka/rsql-parser)。**
 
-RSQL 是提要条目查询语言( [FIQL](https://web.archive.org/web/20220701014319/https://tools.ietf.org/html/draft-nottingham-atompub-fiql-00) )的超集——提要的一个干净简单的过滤语法；所以它非常自然地适合 REST API。【T2
+`RSQL`是提要条目查询语言( [FIQL](https://web.archive.org/web/20220701014319/https://tools.ietf.org/html/draft-nottingham-atompub-fiql-00) )的超集——提要的一个干净简单的过滤语法；所以它非常自然地适合 REST API。
 
-## 2。准备工作
+## 2. 准备工作
 
 首先，让我们向库中添加一个 Maven [依赖项](https://web.archive.org/web/20220701014319/https://search.maven.org/artifact/cz.jirutka.rsql/rsql-parser):
 
@@ -44,9 +50,9 @@ public class User {
 }
 ```
 
-## 3。解析请求
+## 3. 解析请求
 
-RSQL 表达式在内部以节点的形式表示，visitor 模式用于解析输入。
+`RSQL`表达式在内部以节点的形式表示，`visitor`模式用于解析输入。
 
 记住这一点，我们将实现 [`RSQLVisitor`接口](https://web.archive.org/web/20220701014319/https://github.com/jirutka/rsql-parser/blob/master/src/main/java/cz/jirutka/rsql/parser/ast/RSQLVisitor.java)并创建我们自己的访问者实现—`CustomRsqlVisitor`:
 
@@ -130,15 +136,18 @@ public class GenericRsqlSpecBuilder<T> {
 注意如何:
 
 *   `LogicalNode`是一个**和** `/` **或** `Node`并且有多个子女
+
 *   `ComparisonNode`没有子节点，它保存了**选择器、操作符和参数**
 
 例如，对于查询“`name==john`”–我们有:
 
 1.  **选择器**:“名称”
+
 2.  **操作员** : "== "
+
 3.  **争论**:【约翰】
 
-## 4。`Specification`创建自定义
+## 4. `Specification`创建自定义
 
 当构建查询时，我们使用了一个`Specification:`
 
@@ -217,7 +226,9 @@ public class GenericRsqlSpecification<T> implements Specification<T> {
 
 请注意规范是如何使用泛型的，并且不依赖于任何特定的实体(比如用户)。
 
-接下来——这是我们的**枚举“`RsqlSearchOperation`”**,它包含默认的 rsql 解析器操作符:
+接下来——这是我们的**枚举“`RsqlSearchOperation`”**,它包含默认的 `rsql` 解析器操作符:
+
+
 
 ```java
 public enum RsqlSearchOperation {
@@ -247,11 +258,11 @@ public enum RsqlSearchOperation {
 }
 ```
 
-## 5。测试搜索查询
+## 5. 测试搜索查询
 
-现在，让我们通过一些真实场景开始测试我们新的灵活操作:
+现在，让我们通过一些真实场景开始测试我们新的灵活操作：
 
-首先，让我们初始化数据:
+首先，让我们初始化数据：
 
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -272,25 +283,25 @@ public class RsqlTest {
         userJohn = new User();
         userJohn.setFirstName("john");
         userJohn.setLastName("doe");
-        userJohn.setEmail("[[email protected]](/web/20220701014319/https://www.baeldung.com/cdn-cgi/l/email-protection)");
+        userJohn.setEmail("[[email protected]](/web/20220701014319/https://www.baeldung.com/cdn-cgi/l/email-protection)");
         userJohn.setAge(22);
         repository.save(userJohn);
 
         userTom = new User();
         userTom.setFirstName("tom");
         userTom.setLastName("doe");
-        userTom.setEmail("[[email protected]](/web/20220701014319/https://www.baeldung.com/cdn-cgi/l/email-protection)");
+        userTom.setEmail("[[email protected]](/web/20220701014319/https://www.baeldung.com/cdn-cgi/l/email-protection)");
         userTom.setAge(26);
         repository.save(userTom);
     }
 }
 ```
 
-现在让我们测试不同的操作:
+现在让我们测试不同的操作：
 
-### 5.1。测试等式
+### 5.1. 测试等式
 
-在下面的例子中，我们将通过用户的`first`和`last name`来搜索用户:
+在下面的例子中，我们将通过用户的`first`和`last name`来搜索用户：
 
 ```java
 @Test
@@ -304,9 +315,9 @@ public void givenFirstAndLastName_whenGettingListOfUsers_thenCorrect() {
 }
 ```
 
-### 5.2。测试否定
+### 5.2. 测试否定
 
-接下来，让我们通过他们的`first name`搜索不是“john”的用户:
+接下来，让我们通过他们的`first name`搜索不是“john”的用户：
 
 ```java
 @Test
@@ -320,9 +331,9 @@ public void givenFirstNameInverse_whenGettingListOfUsers_thenCorrect() {
 }
 ```
 
-### 5.3。测试大于
+### 5.3. 测试大于
 
-接下来，我们将搜索`age`大于`25`的用户:
+接下来，我们将搜索`age`大于`25`的用户：
 
 ```java
 @Test
@@ -336,9 +347,9 @@ public void givenMinAge_whenGettingListOfUsers_thenCorrect() {
 }
 ```
 
-### 5.4。测试如
+### 5.4. 测试如
 
-接下来，我们将搜索其`first name`以`jo`开头的用户:
+接下来，我们将搜索其`first name`以`jo`开头的用户：
 
 ```java
 @Test
@@ -352,9 +363,9 @@ public void givenFirstNamePrefix_whenGettingListOfUsers_thenCorrect() {
 }
 ```
 
-### 5.5。测试`IN`
+### 5.5. 测试`IN`
 
-接下来，我们将搜索其`first name`为“`john`”或“`jack`”的用户:
+接下来，我们将搜索其`first name`为“`john`”或“`jack`”的用户：
 
 ```java
 @Test
@@ -368,9 +379,9 @@ public void givenListOfFirstName_whenGettingListOfUsers_thenCorrect() {
 }
 ```
 
-## `**6\. UserController**`
+## 6. `UserController`
 
-最后，让我们将这一切与控制器联系起来:
+最后，让我们将这一切与控制器联系起来：
 
 ```java
 @RequestMapping(method = RequestMethod.GET, value = "/users")
@@ -382,28 +393,28 @@ public List<User> findAllByRsql(@RequestParam(value = "search") String search) {
 }
 ```
 
-以下是一个示例 URL:
+以下是一个示例 URL：
 
 ```java
 http://localhost:8080/users?search=firstName==jo*;age<25
 ```
 
-回应是:
+回应是：
 
 ```java
 [{
     "id":1,
     "firstName":"john",
     "lastName":"doe",
-    "email":"[[email protected]](/web/20220701014319/https://www.baeldung.com/cdn-cgi/l/email-protection)",
+    "email":"[[email protected]](/web/20220701014319/https://www.baeldung.com/cdn-cgi/l/email-protection)",
     "age":24
 }]
 ```
 
-## 7 .**。结论**
+## 7. 结论
 
 本教程演示了如何为 REST API 构建查询/搜索语言，而不必重新发明语法，而是使用 FIQL / RSQL。
 
 本文的**完整实现**可以在[的 GitHub 项目](https://web.archive.org/web/20220701014319/https://github.com/eugenp/tutorials/tree/master/spring-web-modules/spring-rest-query-language "The Full Example Project on Github")中找到——这是一个基于 Maven 的项目，因此应该很容易导入和运行。
 
-Next **»**[REST Query Language with Querydsl Web Support](/web/20220701014319/https://www.baeldung.com/rest-api-search-querydsl-web-in-spring-data-jpa)**«** Previous[REST Query Language – Implementing OR Operation](/web/20220701014319/https://www.baeldung.com/rest-api-query-search-or-operation)
+Next **»** [REST Query Language with Querydsl Web Support](/web/20220701014319/https://www.baeldung.com/rest-api-search-querydsl-web-in-spring-data-jpa) **«** Previous [REST Query Language – Implementing OR Operation](/web/20220701014319/https://www.baeldung.com/rest-api-query-search-or-operation)

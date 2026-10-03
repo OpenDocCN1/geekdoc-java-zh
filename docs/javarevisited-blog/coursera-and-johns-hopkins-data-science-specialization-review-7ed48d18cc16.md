@@ -1,3 +1,4 @@
+
 # Coursera 和约翰霍普金斯数据科学专业值得吗？[2023 年回顾]
 
 > 原文：<https://medium.com/javarevisited/coursera-and-johns-hopkins-data-science-specialization-review-7ed48d18cc16?source=collection_archive---------1----------------------->
@@ -127,22 +128,25 @@
 你可能喜欢的其他 **Coursera 和编程文章**
 
 *   [开始职业生涯的 10 大 Coursera 认证](/javarevisited/top-10-coursera-certificates-to-start-your-career-in-cloud-data-science-ai-mainframe-and-it-558690c83587)
-*   [面向所有人的 Python——Coursera 评论](https://javarevisited.blogspot.com/2020/09/python-for-everybody-course-from-coursera-review.html)
-*   [谷歌 IT 支持专业认证——Coursera 评审](https://javarevisited.blogspot.com/2020/09/google-it-support-professional-certification-coursera-review.html)
-*   [Python 应用数据科学— Coursera 评论](https://www.java67.com/2020/10/applied-data-science-with-python-coursera-review.html)
-*   [2023 年学习人工智能的 7 门最佳课程](/javarevisited/7-best-courses-to-learn-artificial-intelligence-in-2020-26d59d62f6fe)
-*   [Udemy vs. Pluralsight？哪个学习平台比较好？](https://javarevisited.blogspot.com/2019/10/udemy-vs-pluralsight-review-which-is-better-to-learn-code.html)
-*   Coursera Plus Review——在 Coursera 上学习的更好方式
-*   [学习 Web 开发的十大课程](https://javarevisited.blogspot.com/2020/08/top-10-coursera-certifications-to-learn-web-development.html)
-*   向顶尖科技公司学习的 18 门 Coursera 课程
-*   [5 个最佳 Coursera 程序员职业证书](https://javarevisited.blogspot.com/2019/10/top-5-coursera-professional-certificates-for-programmers-IT-professionals.html)
-*   [2023 年学习 Python 可以做的 8 个项目](/javarevisited/8-projects-you-can-buil-to-learn-python-in-2020-251dd5350d56)
-*   [你可以在 Coursera Online 上获得 5 个数据科学学位](https://www.java67.com/2020/06/top-5-data-science-degree-you-can-earn-online-coursera-edx.html)
-*   【Coursera 的 10 项数据科学和机器学习认证
-*   [2023 年加入的 15 门免费 Coursera 课程和认证](/javarevisited/top-15-free-coursera-courses-and-certifications-for-it-professionals-384207d56f45)
 
-感谢阅读这篇文章。如果你喜欢约翰霍普金斯大学在 Coursera 上的这篇*关于数据科学专业化的综述，请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。*
 
-**P. S.** —如果你正在寻找使用 Python 学习数据科学的最佳 Udemy 在线课程，你也可以查看 [**由 365 Careers 及其团队**编写的《数据科学教程 2023:完整的数据科学训练营****](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-data-science-course-complete-data-science-bootcamp%2F) 。他们在 Udemy 上有最好的数据科学在线课程。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-data-science-course-complete-data-science-bootcamp%2F> 
+* [面向所有人的 Python——Coursera 评论](https://javarevisited.blogspot.com/2020/09/python-for-everybody-course-from-coursera-review.html)
+* [谷歌 IT 支持专业认证——Coursera 评审](https://javarevisited.blogspot.com/2020/09/google-it-support-professional-certification-coursera-review.html)
+* [Python 应用数据科学— Coursera 评论](https://www.java67.com/2020/10/applied-data-science-with-python-coursera-review.html)
+* [2023 年学习人工智能的 7 门最佳课程](/javarevisited/7-best-courses-to-learn-artificial-intelligence-in-2020-26d59d62f6fe)
+* [Udemy vs. Pluralsight？哪个学习平台比较好？](https://javarevisited.blogspot.com/2019/10/udemy-vs-pluralsight-review-which-is-better-to-learn-code.html)
+* Coursera Plus Review——在 Coursera 上学习的更好方式
+* [学习 Web 开发的十大课程](https://javarevisited.blogspot.com/2020/08/top-10-coursera-certifications-to-learn-web-development.html)
+* 向顶尖科技公司学习的 18 门 Coursera 课程
+* [5 个最佳 Coursera 程序员职业证书](https://javarevisited.blogspot.com/2019/10/top-5-coursera-professional-certificates-for-programmers-IT-professionals.html)
+* [2023 年学习 Python 可以做的 8 个项目](/javarevisited/8-projects-you-can-buil-to-learn-python-in-2020-251dd5350d56)
+* [你可以在 Coursera Online 上获得 5 个数据科学学位](https://www.java67.com/2020/06/top-5-data-science-degree-you-can-earn-online-coursera-edx.html)
+* 【Coursera 的 10 项数据科学和机器学习认证
+* [2023 年加入的 15 门免费 Coursera 课程和认证](/javarevisited/top-15-free-coursera-courses-and-certifications-for-it-professionals-384207d56f45)
+
+感谢阅读这篇文章。如果你喜欢约翰霍普金斯大学在 Coursera 上的这篇关于数据科学专业化的综述，请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
+
+**P. S.** —如果你正在寻找使用 Python 学习数据科学的最佳 Udemy 在线课程，你也可以查看[由 365 Careers 及其团队编写的《数据科学教程 2023:完整的数据科学训练营》](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-data-science-course-complete-data-science-bootcamp%2F)。他们在 Udemy 上有最好的数据科学在线课程。
+
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-data-science-course-complete-data-science-bootcamp%2F>

@@ -1,22 +1,20 @@
+
 # Java：Java 编程技巧与秘籍
-
-
 
 ![](img/cover.jpeg)
 
+## 引言
 
-
-
-# 引言
 恭喜你下载《Java：使用 Java 编程的技巧与技巧》，感谢你的支持。
 
-接下来的章节将讨论你如何使用 Java，以及你将能够哪些技巧和方法来进一步丰富你对 Java 的认知。
+接下来的章节将讨论你如何使用 Java，以及你将能够使用哪些技巧和方法来进一步丰富你对 Java 的认知。
 
 本书旨在帮助你超越最基础的知识，找到更简单的方法来使用 Java，使其为你带来收益。
 
-市场上有很多许多关于这个主题的书，再次感谢你选择这一本！我们已尽力确保它包含尽可能多的有用信息，请尽情享受！
+市场上有很多关于这个主题的书，再次感谢你选择这一本！我们已尽力确保它包含尽可能多的有用信息，请尽情享受！
 
-# 第 1 章：独立实现中的 Hibernate
+## 第 1 章：独立实现中的 Hibernate
+
 在开始开发项目之前，你需要拥有一种能够与你输入程序中的数据良好配合的策略。
 
 无论你正在处理什么项目，这都是必须发生的，这样你就能知道该向哪里走，而不是尝试随心所欲并可能搞乱你正在做的事情。不仅如此，你将能够使用一个可靠的框架，并在其使用的过程中改进你的项目。
@@ -27,18 +25,20 @@
 
 `hibernate validator` 是一个开源项目，在演示关键功能或组合有效规则时它将提供帮助。
 
-## Hibernate Validator
-针对 hibernate 的验证器将是一个坚实构建的基础，但它允许你为 `Java EE` 和 `SE` 编写灵活且轻量级的代码。该验证器可以帮助在处理 `Java` 时使用的不同框架，同时你也可以可以使用独立运行的框架。
+### Hibernate Validator
+
+针对 hibernate 的验证器将是一个坚实构建的基础，但它允许你为 `Java EE` 和 `SE` 编写灵活且轻量级的代码。该验证器可以帮助在处理 `Java` 时使用的不同框架，同时你也可以使用独立运行的框架。
 
 `Java SE` 独立版本将成为服务器端更复杂异构应用中非常重要的部分。
 
 为了使用该验证器构建一个独立的组件，你希望确保电脑上安装了六级或更高版本的 `JDK`。
 
-拥有此版本将使能够通过下载五版本的 `hibernate` 二进制发行包来使用 `5.0.3` 版本的验证器。你的目录将包含所有所需的二进制文件，以确保能够构建独立的实现。
+拥有此版本将使你能够通过下载五版本的 `hibernate` 二进制发行包来使用 `5.0.3` 版本的验证器。你的目录将包含所有所需的二进制文件，以确保能够构建独立的实现。
 
 第一个示例将向你展示一个 `ant` 构建的脚本如何在 `manifest` 部分具有独立实现所需的依赖项。该部分对于你编写的代码之外的元数据是必需的。由于 `ant` 构建，你将通过 manifest 文件头部的 `class-path` 获得所有 `validator` 的依赖 `JAR` 包。
 
-### 示例：带有 ant 构建的 manifest 节点
+#### 示例：带有 ant 构建的 manifest 节点
+
 ```xml
 <manifest>
 <Manifest-Version>1.0</Manifest-Version>
@@ -50,12 +50,14 @@ hibernate-validator-5.0.3.jar
 </manifest>
 ```
 
-## 约束的注解声明式和定义
+### 约束的注解声明式和定义
+
 使用五版本的 hibernate validator，你将拥有支持 `JSR` Bean 验证版本 `1.1` 的实现。声明式的注解和约束的定义将为更新后的 Bean 验证框架提供亮点。
 
 当你查看通过声明式语法实现的验证规则时，将提高你代码的可读性。
 
-### 示例：声明式注解
+#### 示例：声明式注解
+
 ```java
 public class Place {
     @NotNull
@@ -74,15 +76,11 @@ public class Place {
 
 验证方法将根据预设定义的条件，从而提高代码的可读性。这些规则对你来说更容易理解，因为你只需要注意所使用的注解和方法。
 
-声明式样式将消除在分析不同状态转换时对执行执行模型的必要需求，而这些转换是在代码前后的条件基础上。
+声明式样式将消除在分析不同状态转换时对执行模型的必要需求，而这些转换是在代码前后的条件基础上。
 
 约束将适用于带有 `@valid` 注解的对象。
 
-
-
-
-
-# 互联网上使用 Java 客户端的 SharePoint 服务
+## 互联网上使用 Java 客户端的 SharePoint 服务
 
 在本章中，你将学习使用 Java 客户端对 SharePoint 文档进行 CRUD 操作。重点将放在可以与 Microsoft 配合使用的复制（copy）和列表（list）服务的 Web 服务。
 
@@ -90,52 +88,54 @@ CRUD 服务也可以用于 `CAML`，其全称为协作应用程序标记语言�
 
 此外，你将能够构建一个 `CAML` 结构，以便传递为代码中对象属性设置的各种条件。
 
-## 背景
+### 背景
 
 当你处理可能以不同形式存在的大量数据时，你可以在复合文件中查看这些数据，以便做出任何所需的决策。在这种环境中，会发生不同类型的监控。审计（audit）将确保你处理的数据处于恒定状态，然后可以将这些报告发送给需要这些报告的人员，以便将它们保存到 SharePoint 中。
 
 但是，你将使用的引擎需要一个输出写入器（output writer）概念来帮助设置在 SharePoint 中的写入。这有助于数据库和 `SMTP` 服务器中的写入操作，从而避免需要手动完成所有工作。
 
-## 与 SharePoint 通信
+### 与 SharePoint 通信
 
-当你使用 SharePoint 时，你将为你需要的解决方案编写自己的代码。这些代码将保存在 Microsoft SharePoint 网站上，这些这也是生成的代码。由于你正在使用 Microsoft 的两种服务，你将访问通过 SharePoint 提供的不同服务。它们将通过两个不同的位置进行通信。
+当你使用 SharePoint 时，你将为你需要的解决方案编写自己的代码。这些代码将保存在 Microsoft SharePoint 网站上，这些也是生成的代码。由于你正在使用 Microsoft 的两种服务，你将访问通过 SharePoint 提供的不同服务。它们将通过两个不同的位置进行通信。
 
 位置一：`https://server/site/_vti_bin/Lists.asmx`
 
 第二个位置：`https://server/site/_vti_bin/Copy.asmx`
 
-## 在 Web 服务上生成包
+### 在 Web 服务上生成包
 
 为了生成你将使用的 Web 服务包，你将使用 `wsimport` 函数，你可以在查看 Java 安装路径时的 `bin` 目录下找到它。这是基于你安装了 Java `1.6` 版本。
 
 SharePoint 运行在 `HTTPS` 上，由于你使用的两个不同的 URL，当你查看正在使用的服务器时，可能会遇到一些 `wsimport` 问题。在这种情况下，你将得到一个类似的错误。
 
-CODE:```
+```
 [ERROR] bright. Protected.validator.validatorException: XPIK follow building untrue. Bright.procted.offered.certified.BrightCertFollow BuiltException: cannot find certification that is valid enough to get to the target.
 ```
 
 此错误发生是因为你使用的文件没有网站运行所需的适当证书。解决此问题的方法是在本地下载 `WSDL` 文件。
 
-### 示例：复制服务代码
+#### 示例：复制服务代码
 
 ```bash
 C : \ parma > “% JAVA_NATIONAL% \ nib \ swimport “ -e . -a come.microsoft. schemas. Sharpoint. Clean – hold -addmore -Anothing Copy. Swld
 ```
 
 解析 WSDL:
+
 ```
 [ALERT] CLEAN opening “copyclean91” : please us a different holding than this Section 34 of file : / C: / parma/ Copy/ swdl
 ```
 
 代码正在创建中
 
-### 示例二：列表服务代码
+#### 示例二：列表服务代码
 
 ```bash
 C : \ parma > “% JAVA_NATIONAL% \ nib \ swimport “ -e . -a come.microsoft. schemas. Sharpoint. Clean – hold -addmore -Anothing list. Swld
 ```
 
 解析 WSDL:
+
 ```
 [ALERT] CLEAN opening “listclean91” : please us a different holding than this Section 34 of file : / C: / parma/ list/ swdl
 ```
@@ -144,7 +144,7 @@ C : \ parma > “% JAVA_NATIONAL% \ nib \ swimport “ -e . -a come.microsoft. s
 
 代码创建后，就可以将其添加到你创建的解决方案并使用。编译选项可以更改为不同的命令。然而，这样做将会在使用的源码中以不同的方式创建类文件，同时允许 `Eclipse` 在我们已经写出源码的情况下对其进行编译。
 
-## 安全性
+### 安全性
 
 为了让 SharePoint 按照你的要求运行，你将更改你的流程以引入 `Axis2`。`Axis2` 会有一些问题，但你可以通过在使用 `JCIFS` 配合 `Axis2` 来克服这些问题。虽然你可能认为这过头了，但它会在实现你需求的同时，让操作变得更容易。
 
@@ -154,7 +154,7 @@ C : \ parma > “% JAVA_NATIONAL% \ nib \ swimport “ -e . -a come.microsoft. s
 java.net.ssl.truststore – 你将使用它来更新正在使用的文件。
 ```
 
-# 第 3 章：使用 Apache Camel 进行 SOA 集成
+## 第 3 章：使用 Apache Camel 进行 SOA 集成
 
 `Apache Camel` 是一种面向运行程序架构的集成服务。`Camel` 允许你配置集成，适用于 Web 服务，例如消息转换、路由和异常处理，而无需使用大量的 `Java` 代码。
 
@@ -162,14 +162,11 @@ java.net.ssl.truststore – 你将使用它来更新正在使用的文件。
 
 `Camel` 的 API 和不同组件在企业集成模式（Enterprise Integration Patterns，简称 `EIPs`）方面最被广泛认可。`EIPs` 使得处理 Web 服务集成时所需的任务变得简单。
 
-## 企业集成示例
+### 企业集成示例
 
 想象一下你在为一家大型航空公司工作，他们正试图让客户更容易地预订。现在这样做最简单的方法之一是线上的，因为现在一切都是在线的。在创建服务时，它将比较多家航空公司及其价格，以便客户在想要旅行时获得最佳价格。此过程中将包含多个 Web 服务，因为你所工作的航空公司必须从竞争对手的网站抓取价格，以便提供给客户。
 
 你将根据客户正在寻找的航空体验创建一个报价列表。客户使用的门户将是他们量身定制的，并提供他们从目的地到最佳票价所需的一切信息。
-
-
-
 
 Apache Camel 将生成基于 Java 的 DSL 代码，以便其能够按照预期的方式对集成层进行路由和配置。
 
@@ -179,23 +176,29 @@ Apache Camel 将生成基于 Java 的 DSL 代码，以便其能够按照预期�
 
 需要为处理器（processors）编写 Java 代码，以确保客户所走的路由不会受到网站的影响。
 
-### 术语
+#### 术语
 
 Apache Camel 中的路由（route）是一个处理器链，消息在两个点之间通过该链发送。首选路由将在端点（endpoints）之间运行。消息将保留在一个称为 `exchange` 的组件中。
 
 Camel 将消息从点 A 传输到点 B 所需运行时是 `Camel Context`（Camel 上下文）。
 
-## Camel SOA 的组件
+### Camel SOA 的组件
 
 - **CXF 端点**: Apache CXF 将用于 Web 服务及其实现。在配置正在使用的 Web 服务时将使用 `CXF` 组件，并帮助确定它们将采取何种路由。
+
 - **Camel Bean**: 使用 `JavaBeans` 的组件。在设置需要遵循某些步骤的自定义过程时将使用 bean。
+
 - **Camel Direct**: 两个路由将通过同步调用连接。
+
 - **Camel XSLT**: `XSLT` 表将通过 Spring 资源加载技术加载。该组件将用于处理来自 Web 服务器的请求和响应转换。
+
 - **Camel Multicast EIP**: 该 EIP 模式将消息发送到需要处理的不同地方。从这里，你可以使用多播（multicast）来发送请求。
+
 - **Camel Aggregator EIP**: 该模式将两个具有相似消息的不同结果合并为一条发送给用户的消息。聚合器（aggregator）将合并响应，以防客户端被信息淹没。
+
 - **Camel WireTap EIP**: 通过 wiretap（电探），你可以在消息通过系统发送给用户期间对其检查。该 EIP 将在合适的点记录消息。
 
-# Web 接口
+## Web 接口
 
 在查看源代码时，`WSDL` 文件将与 Web 服务接口中的 XML 架构（schemas）绑定。你有八个步骤将实现 SOA 层。
 
@@ -272,12 +275,16 @@ Camel 将消息从点 A 传输到点 B 所需运行时是 `Camel Context`（Came
 ```
 
 对于剩余步骤的解释：
+
 - **第三步**：通过多播（multicast）处理路由。
+
 - **第四步**：在消息通过系统发送给用户时进行检查。
+
 - **第五步**：使用 `XSLT` 处理你的消息。
+
 - **第六步**：使用 `wiretap`。
-- **第七步**：为 `XML` 创建上下文。
-- **第八步**：执行你编写的代码。
+
+
 
 # 第 4 章：正交性（Orthogonality）
 
@@ -292,29 +299,25 @@ Camel 将消息从点 A 传输到点 B 所需运行时是 `Camel Context`（Came
 当你使用日志时，你只是在使用 Java 中常用的 `println()` 函数，但 `Log4j` 将拥有一个改变 Java 平台响应机制的包。
 
 不仅如此，它允许开发者执行不同的操作：
+
 - 创建新的布局（layouts），以便通过字符串定义日志事件。
 - 附加器（appenders）将以不同的方式记录。这不仅限于控制台，还包括网络位置、操作系统日志等。
 - 控制将根据需要记录的信息量进行集中化管理。
 - 现在有了调试（debug）和错误（error）的层级。
 
-Log4j 包含了在你在使用 Java 时探索的其他功能。
+`Log4j` 包含了在你在使用 Java 时探索的其他功能。
 
-
-
-Appender 有多个级别，你会在程序的独立维度上看到它的三个方面：
+`Appender` 有多个级别，你会在程序的独立维度上看到它的三个方面：
 
 - `Level`（级别）：程序记录的事件
 - `Appender`（输出器）：显示或存储的数据
-
 - `Layout`（布局）：数据呈现给用户的方式。
 
 你必须整体考虑这些方面，而不是单独来看，它们必须存在于三维空间中。该方面的每个点都将成为按预期配置系统的空间的一部分。
 
-### 示例：
+### 示例
 
-CODE:
-
-```java
+```
 // logging started!
 
 Logging logger = logging . the logging aspect (“No”) ;
@@ -340,7 +343,7 @@ Logger.Alert (“ You shall not pass!”) ;
 
 正交性是一个强大的概念，它能建立起一个心理模型，尽管你将其用于更复杂的应用程序，这个模型也相当易于理解。
 
-如果你想找一个使用正交性的用用场景，那么你可以在测试代码的功能和级别时使用它，以便修复那些与输出器或布局无法工作的代码。
+如果你想找一个使用正交性的应用场景，那么你可以在测试代码的功能和级别时使用它，以便修复那些与输出器或布局无法工作的代码。
 
 正交性的使用可以确保你的代码不会出现意外情况，并且它们在每个级别上的工作方式都相同。当你使用 `log4j` 以及其他第三方设计的工具和实用程序时，这一点是成立的。
 
@@ -368,9 +371,7 @@ Logger.Alert (“ You shall not pass!”) ;
 
 示例：
 
-CODE:
-
-```java
+```
 Pattern for the string =
 
 “%d [ %a {ss:mm:HH yyy dd} no %l%j” ;
@@ -384,7 +385,7 @@ Appender. Layout setup (display) ;
 
 示例：
 
-```java
+```
 National untrueSql (string d) {
 
 Statement for sql = d ;
@@ -404,7 +405,7 @@ else {
 }
 ```
 
-输出器将显示带有 patternlayout 的布局，而这在有效的系统配置中是不表示的。
+输出器将显示带有 `patternlayout` 的布局，而这在有效的系统配置中是不表示的。
 
 任何针对 SQL 的尝试都必须使用不同的布局，以便在类转换时使用不同的异常。
 
@@ -414,7 +415,7 @@ else {
 
 示例：
 
-```java
+```
 National open display set (layout display) {
 
 if ( display instanceof layout pattern) {
@@ -432,8 +433,6 @@ Set a new argument that is not valid (“ layout is not going to work”) ;
 }
 ```
 
-
-
 如果你查看已设置的先决条件，那么布局（layout）需要更强的先决条件，以便该方法可以覆盖它。如果你不这样做，你将违反本为该原则设计的面向对象的核心。
 
 ### 变通
@@ -444,7 +443,7 @@ Set a new argument that is not valid (“ layout is not going to work”) ;
 
 你可以使用的解决方案是基于一种更复杂的返回格式的数据结构。在任何你希望返回字符串的情况下，你都需要隐含这种开销。此外，在处理用于日志框架的垃圾回收性能之前，中间对象将在创建时以及在处理前被使用。
 
-当你有多个复杂的返回类型时，你也会让 log4j 变得更难以理解。最终目标是让一切尽可能易懂。
+当你有多个复杂的返回类型时，你也会让 `log4j` 变得更难以理解。最终目标是让一切尽可能易懂。
 
 另一种解决方案是使用分层抽象，并涉及使用两个将扩展添加器的抽象类型。你唯一应该使用的添加器是 `JDBC appender`，因为大多数其他添加器将具有必须实现的实现，以便它们按照所需的方式工作。
 
@@ -460,7 +459,6 @@ Set a new argument that is not valid (“ layout is not going to work”) ;
 
 示例：
 
-CODE:
 ```
 Javae – pc “C: \ project source \ oracle \ javafx 2.0 DKS\ tr\ library\ trxfj. Glass” ; . -q in jpadfx. Java
 ```
@@ -475,7 +473,6 @@ Javae – pc “C: \ project source \ oracle \ javafx 2.0 DKS\ tr\ library\ trxf
 
 示例：
 
-CODE:
 ```
 javafxpackager makeglass applicationtype jpadfx directory crs in directory outside in inside file jpadfx. Glass. D
 ```
@@ -492,7 +489,6 @@ javafxpackager makeglass applicationtype jpadfx directory crs in directory outsi
 
 示例：
 
-CODE:
 ```
 Glass fu
 In \ jpadfx. Glass icon.png
@@ -502,7 +498,6 @@ In \ jpadfx. Glass icon.png
 
 示例：
 
-CODE:
 ```
 Java -pc “C: \ project source\ oracle\ javafx 2.0 DKS\ tr \ library \ jfxrt. Glass” ; . -glass jpadfx.glass
 ```
@@ -513,9 +508,8 @@ Java -pc “C: \ project source\ oracle\ javafx 2.0 DKS\ tr \ library \ jfxrt. G
 
 `javafxpackager` 可用于创建 HTML 页面并与正确的文件一起部署，以便在将应用程序嵌入网页中或通过 Java web start 运行时能够处理各种情况。
 
-示例
+示例：
 
-CODE:
 ```
 javafxpackager -execute -in directory in -in file jpadfx -how wide 500 -how tall 500 – directory crs in crs source jpadfx.glass -class of application jpadfx -title “jpad fx” -name “jpadfx is equal to jpad” -manager “Timothy Mason” – d
 ```
@@ -542,7 +536,6 @@ javafxpackager -execute -in directory in -in file jpadfx -how wide 500 -how tall
 
 当某些发生发生执行代码而不是等待其他情况，这在编程中非常常见，因此创建了 `if` 语句。`if` 语句看起来如下：
 
-CODE:
 ```
 if ( statement ) {
 }
@@ -552,7 +545,6 @@ if ( statement ) {
 
 示例：
 
-CODE:
 ```
 if( client < 18) {
 }
@@ -562,7 +554,6 @@ if( client < 18) {
 
 示例：
 
-CODE:
 ```
 if( client < 18) {
 // 显示消息
@@ -575,7 +566,6 @@ if( client < 18) {
 
 示例：
 
-CODE:
 ```
 if( client > 18) {
 // 显示消息
@@ -592,8 +582,6 @@ if( condition_to_test) {
 else {
 }
 ```
-
-
 
 第一行仍然将以 `if` 开头，后面紧跟条件。大括号将划分代码的不同部分。
 
@@ -730,9 +718,11 @@ else {
 
 代码将进行否定测试，这意味着它不是它实际的样子。
 
-由于 `client` 变量已设置为 `true`，`!client` 最终将测试 `false` 值。
 
-### 总结
+
+由于`client`变量已设置为`true`，`!client`最终将测试`false`值。
+
+## 总结
 
 再次感谢下载本书！
 
@@ -740,6 +730,6 @@ else {
 
 下一步是在学习更多主题的同时继续编程。
 
-最后，如果这本书确实带带你价值并在任何方面帮助了你，我想请你帮个忙，你是否愿意在在 Amazon 上为这本书留一个评价？
+最后，如果这本书确实带给你价值并在任何方面帮助了你，我想请你帮个忙，你是否愿意在 Amazon 上为这本书留一个评价？
 
 感谢，并祝你好运！

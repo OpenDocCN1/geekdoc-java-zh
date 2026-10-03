@@ -1,3 +1,4 @@
+
 # 数字总结
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/data/numbersummary.html`](https://docs.oracle.com/javase/tutorial/java/data/numbersummary.html)

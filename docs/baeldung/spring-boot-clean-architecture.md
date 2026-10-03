@@ -1,3 +1,4 @@
+
 # 用 Spring Boot 清洁建筑
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-boot-clean-architecture>
@@ -12,7 +13,7 @@
 
 ## 2.干净的架构概述
 
-干净的架构编译了许多代码设计和原则，像[](/web/20221128043253/https://www.baeldung.com/solid-principles)[稳定的抽象](https://web.archive.org/web/20221128043253/https://wiki.c2.com/?StableAbstractionsPrinciple)等等。但是，**的核心思想是** **根据业务价值** 对系统进行层级划分。因此，最高级别有业务规则，每个较低的级别离 I/O 设备越来越近。
+干净的架构编译了许多代码设计和原则，像[稳定抽象](https://web.archive.org/web/20221128043253/https://wiki.c2.com/?StableAbstractionsPrinciple)等等。但是，**的核心思想是** **根据业务价值** 对系统进行层级划分。因此，最高级别有业务规则，每个较低的级别离 I/O 设备越来越近。
 
 此外，我们可以将级别转换为层。在这种情况下，情况正好相反。内层等于最高层，依此类推:
 
@@ -54,7 +55,7 @@ interface UserFactory {
 }
 ```
 
-我们创建了一个用户 [工厂方法](/web/20221128043253/https://www.baeldung.com/creational-design-patterns#factory-method) 因为两个原因。将 [稳定的抽象原则](https://web.archive.org/web/20221128043253/https://wiki.c2.com/?StableAbstractionsPrinciple) 储存起来，以隔离用户创建。
+我们创建了一个用户工厂方法因为两个原因。将稳定抽象原则储存起来，以隔离用户创建。
 
 接下来，让我们实现这两者:
 
@@ -82,7 +83,7 @@ class CommonUserFactory implements UserFactory {
 }
 ```
 
-如果我们有一个复杂的业务，那么我们应该尽可能清晰地构建我们的领域代码。所以，这一层是应用[设计模式](/web/20221128043253/https://www.baeldung.com/design-patterns-series)的好地方。特别是，**[域驱动设计](/web/20221128043253/https://www.baeldung.com/java-modules-ddd-bounded-contexts)要考虑进去。**
+如果我们有一个复杂的业务，那么我们应该尽可能清晰地构建我们的领域代码。所以，这一层是应用设计模式的好地方。特别是，**域驱动设计要考虑进去。**
 
 ### 4.1.单元测试
 
@@ -142,7 +143,7 @@ class UserRegisterInteractor implements UserInputBoundary {
 
 ### 5.2.输入和输出边界
 
-边界是定义组件如何交互的契约。****输入边界将我们的用例暴露给外层:****
+边界是定义组件如何交互的契约。**输入边界将我们的用例暴露给外层:**
 
 ```java
 interface UserInputBoundary {
@@ -177,10 +178,12 @@ interface UserPresenter {
 在继续之前，**注意** **边界是如何定义系统** 的自然划分的契约。但是我们还必须决定我们的应用程序将如何交付:
 
 *   整体式——可能使用某种包装结构来组织
+
 *   通过使用模块
+
 *   通过使用服务/微服务
 
-考虑到这一点，**我们可以用任何解耦模式****达到干净的架构目标。因此，**我们应该准备根据我们当前和未来的业务需求在这些策略之间进行转换**。在选择了我们的解耦模式之后，代码划分应该基于我们的边界发生。**
+考虑到这一点，**我们可以用任何解耦模式** **达到干净的架构目标。因此，**我们应该准备根据我们当前和未来的业务需求在这些策略之间进行转换**。在选择了我们的解耦模式之后，代码划分应该基于我们的边界发生。**
 
 ### 5.4.请求和响应模型
 
@@ -202,7 +205,8 @@ class UserRequestModel {
 
 但是为什么我们会有这么多相似的物体呢？当我们得到重复的代码时，它可以是两种类型:
 
-*   错误或偶然的重复——代码相似是偶然的，因为每个对象都有不同的改变原因。如果我们试图移除它，我们将冒着违反 [单一责任原则](/web/20221128043253/https://www.baeldung.com/java-single-responsibility-principle) 的风险。
+*   错误或偶然的重复——代码相似是偶然的，因为每个对象都有不同的改变原因。如果我们试图移除它，我们将冒着违反单一责任原则的风险。
+
 *   真正的重复——代码因同样的原因而改变。因此，我们应该删除它
 
 由于每个模型有不同的职责，我们得到了所有这些对象。
@@ -256,7 +260,7 @@ class UserDataMapper {
 
 正如我们所见，`Mapper`的目标是将我们的对象映射到数据库格式。
 
-接下来，`JpaRepository`使用我们的[实体](/web/20221128043253/https://www.baeldung.com/jpa-entities):
+接下来，`JpaRepository`使用我们的实体:
 
 ```java
 @Repository
@@ -288,7 +292,7 @@ class JpaUser implements UserRegisterDsGateway {
 }
 ```
 
-在大多数情况下，代码是不言自明的。除了我们的方法之外，还要注意 `UserRegisterDsGateway's` 的名称。如果我们选择了`UserDsGateway`来代替，那么其他`User`用例将会违反 [**接口分离原则**](/web/20221128043253/https://www.baeldung.com/java-interface-segregation) 。
+在大多数情况下，代码是不言自明的。除了我们的方法之外，还要注意 `UserRegisterDsGateway's` 的名称。如果我们选择了`UserDsGateway`来代替，那么其他`User`用例将会违反接口分离原则。
 
 ### 6.2.`User`注册 API
 
@@ -315,6 +319,8 @@ class UserRegisterController {
 
 在回应之前，我们应该格式化我们的回应:
 
+
+
 ```java
 class UserResponseFormatter implements UserPresenter {
 
@@ -332,7 +338,7 @@ class UserResponseFormatter implements UserPresenter {
 }
 ```
 
-我们的 `UserRegisterInteractor` 迫使我们创造了一个展示者。尽管如此，表示规则只涉及适配器内部。此外， **w** **凡是很难测试的东西，我们都应该把它分为可测试的和不可测试的。** 所以， `UserResponseFormatter` 很容易让我们验证我们的呈现规则:
+我们的`UserRegisterInteractor`迫使我们创造了一个展示者。尽管如此，表示规则只涉及适配器内部。此外，**凡是很难测试的东西，我们都应该把它分为可测试的和不可测试的。**所以，`UserResponseFormatter`很容易让我们验证我们的呈现规则：
 
 ```java
 @Test
@@ -346,26 +352,26 @@ void givenDateAnd3HourTime_whenPrepareSuccessView_thenReturnOnly3HourTime() {
 
 如我们所见，在将逻辑发送到视图之前，我们测试了所有的逻辑。因此，**只有卑微的物体在不可测试的部分**。
 
-## 7.驱动因素和框架
+## 7. 驱动因素和框架
 
-事实上，我们通常不在这里编码。这是因为该层**代表与外部代理**的最低级别连接。例如，连接数据库或 web 框架的 H2 驱动程序。在这里，**我们将使用 [spring-boot](/web/20221128043253/https://www.baeldung.com/spring-boot) 作为 [web](/web/20221128043253/https://www.baeldung.com/bootstraping-a-web-application-with-spring-and-java-based-configuration) 和[依赖注入](/web/20221128043253/https://www.baeldung.com/spring-dependency-injection)框架**。所以，我们需要它的启动点:
+事实上，我们通常不在这里编码。这是因为该层**代表与外部代理的最低级别连接**。例如，连接数据库或 web 框架的 H2 驱动程序。在这里，**我们将使用[spring-boot](/web/20221128043253/https://www.baeldung.com/spring-boot) 作为 [web](/web/20221128043253/https://www.baeldung.com/bootstraping-a-web-application-with-spring-and-java-based-configuration) 和 [依赖注入](/web/20221128043253/https://www.baeldung.com/spring-dependency-injection) 框架**。所以，我们需要它的启动点：
 
 ```java
 @SpringBootApplication
 public class CleanArchitectureApplication {
     public static void main(String[] args) {
-      SpringApplication.run(CleanArchitectureApplication.class);
+        SpringApplication.run(CleanArchitectureApplication.class);
     }
 }
 ```
 
-**直到现在，我们都没有在业务中使用任何** **[弹簧标注](/web/20221128043253/https://www.baeldung.com/spring-bean-annotations)** **。除了弹簧专用适配器**，作为我们的 `UserRegisterController` 。这是**因为** **我们应该** **把弹簧靴当成其他任何细节** 。
+**直到现在，我们都没有在业务中使用任何 [弹簧标注](/web/20221128043253/https://www.baeldung.com/spring-bean-annotations)。**除了弹簧专用适配器，作为我们的`UserRegisterController`。这是因为**我们应该把弹簧靴当成其他任何细节**。
 
-## 8.可怕的主阶级
+## 8. 可怕的主阶级
 
 最后，最后一块！
 
-到目前为止，我们遵循了[稳定抽象原则](https://web.archive.org/web/20221128043253/https://wiki.c2.com/?StableAbstractionsPrinciple)。 同样，我们用 [控制反转](/web/20221128043253/https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring) 保护我们的内层免受外部代理的侵害。最后，我们将所有对象的创建和使用分离开来。此时，由我们来 **创建我们剩余的依赖项，并将它们注入我们的项目** :
+到目前为止，我们遵循了[稳定抽象原则](https://web.archive.org/web/20221128043253/https://wiki.c2.com/?StableAbstractionsPrinciple)。同样，我们用 [控制反转](/web/20221128043253/https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring) 保护我们的内层免受外部代理的侵害。最后，我们将所有对象的创建和使用分离开来。此时，由我们来**创建我们剩余的依赖项，并将它们注入我们的项目**：
 
 ```java
 @Bean
@@ -390,16 +396,16 @@ static TypeFilter removeModelAndEntitiesFilter() {
 }
 ```
 
-在我们的例子中，我们使用 spring-boot [依赖注入](/web/20221128043253/https://www.baeldung.com/spring-dependency-injection) 来创建我们所有的实例。由于我们没有使用 [`@Component`](/web/20221128043253/https://www.baeldung.com/spring-bean-annotations#component) ，我们扫描了我们的根包，只忽略了`Model` 对象 。
+在我们的例子中，我们使用 spring-boot [依赖注入](/web/20221128043253/https://www.baeldung.com/spring-dependency-injection) 来创建我们所有的实例。由于我们没有使用 [`@Component`](/web/20221128043253/https://www.baeldung.com/spring-bean-annotations#component) ，我们扫描了我们的根包，只忽略了`Model`对象。
 
-尽管这个策略看起来更复杂，但它将我们的业务从 DI 框架中分离出来。另一方面，**主类获得了对我们整个系统**的控制权。这就是为什么 clean architecture 认为它是一个包含所有其他层的特殊层:
+尽管这个策略看起来更复杂，但它将我们的业务从 DI 框架中分离出来。另一方面，**主类获得了对我们整个系统的控制权**。这就是为什么 clean architecture 认为它是一个包含所有其他层的特殊层：
 
 [![user clean architecture layers](img/c191405ba2f326821423517bfa3a052c.png)](/web/20221128043253/https://www.baeldung.com/wp-content/uploads/2021/01/user-clean-architecture-layers.png)
 
-## 9.结论
+## 9. 结论
 
-在本文中，我们了解了 Bob 叔叔的 **干净的架构是如何建立在许多设计模式和原则** 之上的。此外，我们使用 Spring Boot 创建了一个应用它的用例。
+在本文中，我们了解了 Bob 叔叔的**干净的架构是如何建立在许多设计模式和原则**之上的。此外，我们使用 Spring Boot 创建了一个应用它的用例。
 
-尽管如此，我们还是抛开了一些原则。但是，它们都指向同一个方向。我们可以引用它的创造者的话来概括:“一个好的建筑师 **必须最大化未做出的决定** 。”，我们通过 **使用边界** 从细节上保护我们的业务代码。
+尽管如此，我们还是抛开了一些原则。但是，它们都指向同一个方向。我们可以引用它的创造者的话来概括：“一个好的建筑师**必须最大化未做出的决定**。”，我们通过**使用边界**从细节上保护我们的业务代码。
 
-像往常一样，完整的代码可以在 GitHub 的[上找到。](https://web.archive.org/web/20221128043253/https://github.com/eugenp/tutorials/tree/master/patterns-modules/clean-architecture)**
+像往常一样，完整的代码可以在 GitHub 的[上找到。](https://web.archive.org/web/20221128043253/https://github.com/eugenp/tutorials/tree/master/patterns-modules/clean-architecture)

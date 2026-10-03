@@ -1,31 +1,7 @@
+
 # Core Java 简易教程：Android 智能手机应用、边缘设备及物联网的流行语言
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 前言
+## 前言
 
 作者坚信，本书将为那些希望通过通俗易懂的语言理解 Java 概念的学生们提供帮助，书中提供了多种类比理解和代码段。
 
@@ -33,62 +9,50 @@
 
 俗话说：“人有非非，孰能无完”。从此来看，我们希望书中的不足能得到原谅。同时，作者欢迎任何形式的建设性批评和改进建议。欢迎所有明智建议，作者将尽力在本书的后续版本中纳入这些宝贵的建议。
 
-
-
-
-
-
-
-
-
-  - 8.7 断言
-
-
-
-
-
-
-
-
-
-  - 18.4 Map
-
-
-
-  - 21.6 split()
-
-
-
-
-
-
-
+- 8.7 断言
+- 18.4 Map
+- 21.6 split()
 
 ## 28.11 序列化（Serialization）与外部化（Externalization）的区别
+
 ## 28.12 Serial Version UID
 
 # 第29章 分词（Tokenizing）
+
 ## 29.1 引言
+
 ### 29.1.1 使用 String Tokenizer
+
 ### 29.1.2 使用 Stream Tokenizer
 
 # 第30章 Scanner 类
+
 ## 30.1 引言
+
 ## 30.2 类声明
+
 ## 30.3 Java 中交互式输入/输出的示例
+
 ## 30.4 类构造函数
+
 ### 30.5 类方法
 
 # 第31章 注解（Annotations）
+
 ## 31.1 引言
+
 ## 31.2 注解的类型
+
 ## 31.3 内置注解
 
 # 第32章 Java.util.concurrent 包
+
 ## 32.1 Java.util.concurrent
+
 ## 32.2 其他原子类
 
 # 第33章 执行器框架（Executor Framework）
+
 ## 33.1 引言
 
 ## 1.1 引言
@@ -101,7 +65,7 @@ Java 是一种高级编程语言，最初由 Sun Microsystems 公司开发，由
 
 图 1.1: C 编程与 Java 编程
 
-C 程序以 .c 扩展名保存。在成功编译“c”程序后，将生成原生代码或 .exe 文件，该文件是依赖平台的，不能在任何其他平台上运行。此 .exe 文件是依赖平台的，因为它添加了与相应平台兼容性相关的兼容问题。当我们编写 Java 程序时，必须以 java 扩展名保存。在成功编译 Java 程序后，将生成 .class 文件，这被称为字节码（byte code），尽管有相应的平台 JDK/JRE，它也是平台无关的。
+C 程序以 `.c` 扩展名保存。在成功编译“c”程序后，将生成原生代码或 `.exe` 文件，该文件是依赖平台的，不能在任何其他平台上运行。此 `.exe` 文件是依赖平台的，因为它添加了与相应平台兼容性相关的兼容问题。当我们编写 Java 程序时，必须以 `.java` 扩展名保存。在成功编译 Java 程序后，将生成 `.class` 文件，这被称为字节码（byte code），尽管有相应的平台 JDK/JRE，它也是平台无关的。
 
 问 1：为什么在“C”编程语言中可以获取原生代码，而在 Java 编程语言中无法获取原生代码？
 
@@ -111,9 +75,9 @@ C 程序以 .c 扩展名保存。在成功编译“c”程序后，将生成原�
 
 源代码（Source Code）：开发者编写的程序（人类可读格式）。
 
-字节码（Byte Code）：在 Java 程序成功编译后，将生成字节码，即 .class 文件，这被称为字节码。该字节码将在运行程序时被进一步处理。
+字节码（Byte Code）：在 Java 程序成功编译后，将生成字节码，即 `.class` 文件，这被称为字节码。该字节码将在运行程序时被进一步处理。
 
-Java 编译器（Java Compiler）：这是一个名为 `javac.exe` 的程序，主要负责检查语言的语法。在程序成功编译后，它还会生成以类命名的 .class 文件。
+Java 编译器（Java Compiler）：这是一个名为 `javac.exe` 的程序，主要负责检查语言的语法。在程序成功编译后，它还会生成以类命名的 `.class` 文件。
 
 解释器（Interpreter）：这是一个扩展名为 `java.exe` 的程序。解释器主要负责逐行将字节码生成原生代码。将字节码转换为原生代码是一个耗时的过程。因此，为了解决这个问题，从 Java 2 开始引入了 JIT 编译器。
 
@@ -147,6 +111,7 @@ JDK（Java 开发工具包）：根据 Sun Oracle 的发布有不同的版本。
 ## 1.4 安装 JDK
 
 步骤：
+
 1. 打开 JDK。
 2. 打开 Java8 文件夹。
 3. 双击 JDK 1.8。
@@ -191,6 +156,7 @@ JDK（Java 开发工具包）：根据 Sun Oracle 的发布有不同的版本。
 ### 临时路径设置
 
 设置临时路径：
+
 1. 在命令行提示符中进入相应的工作目录。
 2. 复制 JDK 路径。
 3. 在命令行提示符输入：`set path=%path%;C:\Java\jdk1.7\bin`
@@ -204,6 +170,7 @@ JDK（Java 开发工具包）：根据 Sun Oracle 的发布有不同的版本。
 ### 永久路径设置
 
 设置永久路径：
+
 1. 右点击“我的电脑”图标。
 2. 点击“属性”。
 3. 点击“高级系统设置”。
@@ -230,21 +197,21 @@ JDK（Java 开发工具包）：根据 Sun Oracle 的发布有不同的版本。
 
 ### 1.4.2 如何编译 Java 程序
 
-编写你的 Java 程序并以 .java 扩展名保存。
+编写你的 Java 程序并以 `.java` 扩展名保存。
 
-Java 程序成功编译后将生成以类命名的 (.class) 文件，被称为“字节码”。整个 Java 程序必须写在类内部。
+Java 程序成功编译后将生成以类命名的 (`.class`) 文件，被称为“字节码”。整个 Java 程序必须写在类内部。
 
 要编译 Java 程序，打开命令行提示符。
 
 进入工作目录。
 
-语法：`javac filename（你保存的 Java 程序文件名）。例如：`javac Jtc1.java`
+语法：`javac filename`（你保存的 Java 程序文件名）。例如：`javac Jtc1.java`
 
-在编译 Java 程序时，你需要提供保存 Java 程序的文件名。你可以以任何名称后接 .java 扩展名保存 Java 程序。class 文件将以类名命名，而不是以文件名命名。始终建议以包含 main 方法类的名称保存 Java 程序。
+在编译 Java 程序时，你需要提供保存 Java 程序的文件名。你可以以任何名称后接 `.java` 扩展名保存 Java 程序。class 文件将以类名命名，而不是以文件名命名。始终建议以包含 main 方法类的名称保存 Java 程序。
 
 ### 1.4.3 运行 Java 程序
 
-在运行 Java 程序时，你需要提供包含 main 方法的 .class 文件名。例如：`java Jtc1`
+在运行 Java 程序时，你需要提供包含 main 方法的 `.class` 文件名。例如：`java Jtc1`
 
 ```
 Java –verbose Commands jconsole
@@ -266,13 +233,9 @@ public class Jtc2 {
 }
 ```
 
-
-
-
-
 # 输出
 
-编译：`javac Jtc2.java` - 首先会生成两个 .class 文件，第一个是 Hello，第二个是 Jtc2。
+编译：`javac Jtc2.java` - 首先会生成两个 `.class` 文件，第一个是 Hello，第二个是 Jtc2。
 
 运行：`java Jtc2`
 
@@ -280,29 +243,27 @@ Hello 中的 m1 - 输出
 
 运行：`java Hello`
 
-错误：类 Hello 中未找到 main 方法，请按如下方式定义 main 方法：Public static void main(String args[])
+错误：类 Hello 中未找到 main 方法，请按如下方式定义 main 方法：`Public static void main(String args[])`
 
-上述程序可以以任何名称后接 .java 扩展名保存，在编译程序时，你需要提供保存程序的文件名。
+上述程序可以以任何名称后接 `.java` 扩展名保存，在编译程序时，你需要提供保存程序的文件名。
 
-成功编译上述程序后，将生成两个 .class 文件，即 Jtc2 和 Hello。
+成功编译上述程序后，将生成两个 `.class` 文件，即 Jtc2 和 Hello。
 
 # 注意
 
-.class 文件的生成不依赖于你保存程序或 main 方法的方式。源文件中有多少个类，就会生成相应数量的 .class 文件。
+`.class` 文件的生成不依赖于你保存程序或 main 方法的方式。源文件中有多少个类，就会生成相应数量的 `.class` 文件。
 
-在运行程序时，你需要提供包含 main 方法的 (.class) 文件名，即 J2c。
+在运行程序时，你需要提供包含 main 方法的 (`.class`) 文件名，即 J2c。
 
-问题 3：假设你正以某个名称后接 .java 扩展名保存一个 Java 程序，但在该编辑器中你没有写任何任何内容，那么当我们编译它时会发生什么？它会被视为 Java 程序吗？
+问题 3：假设你正以某个名称后接 `.java` 扩展名保存一个 Java 程序，但在该编辑器中你没有写任何任何内容，那么当我们编译它时会发生什么？它会被视为 Java 程序吗？
 
-答：它会被视为 Java 程序，但为了成功编译，内部必须包含某些内容；但如果相应的编辑器没有任何内容，那么就不存在编译程序的问题。因此，我们甚至无法预期生成任何 .class 文件。
+答：它会被视为 Java 程序，但为了成功编译，内部必须包含某些内容；但如果相应的编辑器没有任何内容，那么就不存在编译程序的问题。因此，我们甚至无法预期生成任何 `.class` 文件。
 
 问题 4：我们是否可以通过键盘对字节码进行任何形式的更改或替换？
 
 答：不，不可以。如果你对现有的字节码进行任何更改，将无法成功运行该程序，因为你从键盘提供的任何输入都将以输入流的形式存在，而其含义与现有不同。
 
-第 2 章
-
-# Java 语言
+# 第 2 章 Java 语言
 
 ## 2.1 字符集
 
@@ -401,7 +362,7 @@ Java 中有以下关键字：
 
 标识符是赋予变量、方法、类等的名称。
 
-- 必须以字母、货币符号（$）或下划线（_）开头。
+- 必须以字母、货币符号（`$`）或下划线（`_`）开头。
 - 不能以数字开头。
 - 不能是关键字。
 - 可以包含字母、数字、货币符号和下划线。
@@ -412,7 +373,6 @@ Java 中有以下关键字：
 
 - 类级变量：可以在类中的任何地方访问。如果你没有为对应数据类型的类级变量赋值，它将将由 JVM 内部进行赋值。
 - 局部变量：在任何块、方法、构造函数或任何局部范围内定义的变量被称为局部变量。变量不会由 JVM 隐式初始化，即该变量必须在开发者使用之前显式地初始化。
-
 
 ```java
 }
@@ -434,11 +394,11 @@ public class Jtc7 {
 
 如果你想声明一个在后续程序中不能改变的固定值变量，请将该变量声明为“final”。
 
-final int tab=20;
+`final int tab=20;`
 
-static final int abl=20;
+`static final int abl=20;`
 
-static final int AB=30;
+`static final int AB=30;`
 
 # 程序 2.4
 
@@ -462,11 +422,13 @@ Hello h2= new Hello();
 
 Q 1: 我们可以更改 `final` 变量的值吗？
 
-答：在更改 `final` 变量的值之前有一些条件，例如，如果它是实例 变量并且在声明时已经初始化，那么你将无法更改它的值；如果它是实例 变量且在声明时没有初始化，那么在不同的对象上下文中，你可以为同一个 `final` 变量赋予不同的值。
 
-Q 2: 是否始终必要在声明时初始化 `final` 变量的值？
 
-答：不，不需要在声明时初始化 `final` 变量的值。它可以通过以下不同方式进行初始化：
+答：在更改`final`变量的值之前有一些条件，例如，如果它是实例变量并且在声明时已经初始化，那么你将无法更改它的值；如果它是实例变量且在声明时没有初始化，那么在不同的对象上下文中，你可以为同一个`final`变量赋予不同的值。
+
+**Q 2: 是否始终必要在声明时初始化`final`变量的值？**
+
+答：不，不需要在声明时初始化`final`变量的值。它可以通过以下不同方式进行初始化：
 
 - 在声明时初始化。
 - 通过代码块（如果是实例变量，则我们需要使用实例块进行初始化；如果是静态变量，则需要在静态块中显式初始化）。
@@ -476,9 +438,9 @@ Q 2: 是否始终必要在声明时初始化 `final` 变量的值？
 
 字面量是可以赋值给对应数据类型变量的值。字面量主要有以下几种类型：
 
-a) 整数字面量：整数字面量进一步分为以下部分：
+**a) 整数字面量**：整数字面量进一步分为以下部分：
 
-- 十进制字面量：十进制字面量不能以 0 开头，即它可以是 0 到 9 之间的任何数字。
+- **十进制字面量**：十进制字面量不能以 0 开头，即它可以是 0 到 9 之间的任何数字。
 
 ```java
 例如：
@@ -487,9 +449,9 @@ int i2=89746;
 int i3=0123456; // 不正确
 ```
 
-对于 `i3`，它会报错，即如果它以 0 开头，则会被被视为八进制，而八进制必须在 0 到 7 的范围内。
+对于`i3`，它会报错，即如果它以 0 开头，则会被被视为八进制，而八进制必须在 0 到 7 的范围内。
 
-- 八进制字面量：八进制字面量必须在 0 到 7 之间，但必须以 0 开头。
+- **八进制字面量**：八进制字面量必须在 0 到 7 之间，但必须以 0 开头。
 
 ```java
 例如：
@@ -498,16 +460,19 @@ int b=01267;
 int c=01248; // 不正确
 ```
 
-- 十进制字面量：十六进制字面量必须以 0x (0X) 或 0x 开头，并且必须在 0 到 9 以及 A 到 F 的范围之内。
+- **十六进制字面量**：十六进制字面量必须以`0x`（`0X`）开头，并且必须在 0 到 9 以及 A 到 F 的范围之内。
 
 注意：a 到 f 或 A 到 F 的含义相同。
 
 例如：
+
+```java
 int i1=0x1234A;
 int i2=0X1234a;
 int i3=1234a0X // 不正确
+```
 
-十六进制字面量不需要在中间某处有 0X，但同样重要的是十六进制不能以 OX 开头。
+十六进制字面量不需要在中间某处有`0X`，但同样重要的是十六进制不能以`OX`开头。
 
 ```java
 程序 2.5
@@ -553,7 +518,7 @@ public class Jtc9 {
 }
 ```
 
-# 输出:
+**输出：**
 
 ```
 C:\Windows\System32\cmd.exe
@@ -572,9 +537,9 @@ m1 in Hello
 2147483648
 ```
 
-b) 浮点字面量：为了提高数值字面量的可读性，引入了下划线 (_)。它可以提高可读性。记住下划线 (_) 不能开头也不能结尾。下划线不能用在小数点之前或紧跟其后。
+**b) 浮点字面量**：为了提高数值字面量的可读性，引入了下划线 (`_`)。它可以提高可读性。记住下划线 (`_`) 不能开头也不能结尾。下划线不能用在小数点之前或紧跟其后。
 
-# 程序 2.6
+**程序 2.6**
 
 ```java
 class Hello{
@@ -614,7 +579,7 @@ public class Jtc10 {
 }
 ```
 
-# 输出:
+**输出：**
 
 ```
 C:\Windows\System32\cmd.exe
@@ -632,18 +597,24 @@ m1 in Hello
 
 浮点字面量可以用两种方式表示：
 
-- 浮点表示法。
+- **浮点表示法**。
+
+```java
 例如 float f1=10.11; // 不正确
 float f2=10.11f;
 double d1=99.99;
 double d2=99.88d;
 double d3=99.66D; //正确
+```
 
-- 指数表示法。
+- **指数表示法**。
+
+```java
 double d1=9.9E+5;
 double d2=9.9E-5;
+```
 
-# 程序 2.7
+**程序 2.7**
 
 ```java
 class Hai{
@@ -683,13 +654,12 @@ class Hai{
 }
 ```
 
+在 Java 中没有空字符，但当你向单引号内赋值任何字符字面量而不提供任何空格时，它将被视为空字面量，并在编译时会报错。注释掉的行意味着编译器将通过转换为 Unicode 来忽略该行，但再次不会从库中进行验证。在`jtc13`中，我们写了`character ch6=null`，这并不意味着它是一个字符字面量，而是`ch6`是`main`方法内部可用的引用变量，我们显式地赋值了引用变量的默认值。
 
+**d) 字符串字面量**：任何被双引号 (`" "`) 包裹的内容都将被视为字符串字面量。在 Java 中，字符串不是原始数据类型，而是一个位于`java.lang`包中的特殊类。无论你在双引号中包含什么内容，当你尝试打印时，它都会打印在控制台上。但在处理转义字符时，它将显示其设计的原始值。
 
-在 Java 中没有空字符，但当你向单引号内赋值任何字符字面量而不提供任何空格时，它将被视为空字面量，并在编译时会报错。注释掉的行意味着编译器将通过转换为 Unicode 来忽略该行，但再次不会从库中进行验证。在 jtc13 中，我们写了 `character ch6=null`，这并不意味着它是一个字符字面量，而是 `ch6` 是 `main` 方法内部可用的引用变量，我们显式地赋值了引用变量的默认值。
+**程序 2.10**
 
-d) 字符串字面量：任何被双引号 (" ") 包裹的内容都将被视为字符串字面量。在 Java 中，字符串不是原始数据类型，而是一个位于 `java.lang` 包中的特殊类。无论你在双引号中包含什么内容，当你尝试打印时，它都会打印在控制台上。但在处理转义字符时，它将显示其设计的原始值。
-
-## 程序 2.10
 ```java
 class Hello{
     String s1;
@@ -744,6 +714,7 @@ public class Jtc14 {
     }
 }
 ```
+
 **输出：**
 
 ```
@@ -764,9 +735,6 @@ C:\program\java\bin
 
 String :null
 ```
-
-
-
 
 ```java
 class Hello{
@@ -803,7 +771,7 @@ public class Jtc17 {
 }
 ```
 
-Output:
+**输出：**
 
 ```
 C:\Windows\System32\cmd.exe
@@ -824,36 +792,42 @@ D:\program\All JTC Program>java Jtc17
 
 各种类型的运算符有：
 
-- 算术运算符 (+,-,*,/%)
-- 赋值运算符 (=,+,,-=-,*=)
-- 关系运算符 (==,<=,>=,<>)
-- 逻辑运算符 (&&,||,!)
-- 位运算符运算符 (&,|,~,>>)
-- 三元运算符 (: ?)
-- 增量/减运算符 (++,--)
-- new 运算符
-- instanceof 运算符
+- 算术运算符 (`+,-,*,/,%`)
+- 赋值运算符 (`=,+=,-=,*=`)
+- 关系运算符 (`==,<=,>=,<>`)
+- 逻辑运算符 (`&&,||,!`)
+- 位运算符 (`&,|,~,>>`)
+- 三元运算符 (`? :`)
+- 增量/减运算符 (`++,--`)
+- `new`运算符
+- `instanceof`运算符
 
 | 运算符 | 优先级 |
 | --- | --- |
-| 后置 | expr++ expr-- |
-| 一元 | ++expr --expr +expr -expr ! |
-| 乘法 | * / % |
-| 加法 | + - |
-| 移位 | << >>> |
-| 关系 | < > >= instanceof |
-| 等于 | == != |
-| 位与 | & |
-| 位异或 | ^ |
-| 位按位或 | | |
-| 逻辑与 | && |
-| 逻辑或 | || |
-| 三元 | ? : |
-| 赋值 | = += -= *= &= == <= >= >>> |
+| 后置 | `expr++ expr--` |
+| 一元 | `++expr --expr +expr -expr !` |
+| 乘法 | `* / %` |
+| 加法 | `+ -` |
+| 移位 | `<< >>>` |
+| 关系 | `< > >= instanceof` |
+| 等于 | `== !=` |
+| 位与 | `&` |
+| 位异或 | `^` |
+| 位按位或 | `|` |
+| 逻辑与 | `&&` |
+| 逻辑或 | `||` |
+| 三元 | `? :` |
+| 赋值 | `= += -= *= &= == <= >= >>>` |
 
 算术运算符：算术运算符是需要两个操作数的二元运算符。算术运算的结果取决于所用操作数的类型。通过使用算术运算符我们可以构造表达式。
 
-# 程序 3.1
+**程序 3.1**
+
+
+
+# Java 运算符与类型转换示例
+
+## 程序 3.1：基本类型转换
 
 ```java
 class Hello{
@@ -904,7 +878,7 @@ m1 in Hello
 24041
 ```
 
-注：
+**注：** 使用 `final` 修饰的常量在编译时进行类型检查。
 
 ```java
 final byte b3=10;
@@ -930,6 +904,8 @@ void m1(){
 }
 ```
 
+**类型转换表：**
+
 | + | Byte | short | long | float | double | char |
 |---|---|---|---|---|---|---|
 | Byte | | | | | | |
@@ -940,7 +916,7 @@ void m1(){
 | double | | | | | | |
 | Char | | | | | | |
 
-# 程序 3.2
+## 程序 3.2：浮点数与字符运算
 
 ```java
 class Hello{
@@ -973,7 +949,7 @@ public class Jtc19 {
 }
 ```
 
-输出：
+**输出：**
 
 ```
 javac Jtc19.java
@@ -986,7 +962,9 @@ NaN
 error: possible loss of precision:转换 to char
 ```
 
-赋值运算符：用于将值赋值给对应的数据类型。
+## 赋值运算符
+
+赋值运算符用于将值赋值给对应的数据类型。
 
 ```java
 byte b1=20;
@@ -995,13 +973,15 @@ byte b12=b1;
 int i12=i1;
 ```
 
-赋值值时应记住以下几点：
+赋值时应记住以下几点：
 
 - 如果源类型和目标类型相同，则赋值是可能的。
-- 当目标类型大于源类型时。
-- 当目标类型小于源类型时，无法直接赋值，需要强制类型类型。
+- 当目标类型大于源类型时，赋值是可能的。
+- 当目标类型小于源类型时，无法直接赋值，需要强制类型转换。
 
-关系运算符：关系运算符用于建立两个表达式之间的关系，使用关系运算符可以构造关系表达式。关系运算符的结果总是返回布尔值（true或false）。
+## 关系运算符
+
+关系运算符用于建立两个表达式之间的关系，使用关系运算符可以构造关系表达式。关系运算符的结果总是返回布尔值（`true`或`false`）。
 
 ```java
 int a=10;
@@ -1009,11 +989,13 @@ int b=20;
 (a>b)
 ```
 
-逻辑运算符：逻辑运算符用于构造逻辑表达式。逻辑表达式总是给出布尔值。逻辑运算用于两个关系表达式之间。
+## 逻辑运算符
 
-真值表：
+逻辑运算符用于构造逻辑表达式。逻辑表达式总是给出布尔值。逻辑运算用于两个关系表达式之间。
 
-| A | B | A&&B | A||B |
+**真值表：**
+
+| A | B | A&&B | A\|\|B |
 |---|---|---|---|
 | F | F | F | F |
 | F | T | F | T |
@@ -1021,29 +1003,34 @@ int b=20;
 | T | T | T | T |
 
 例如：
+
+```java
 int a=10;
 int b=20;
 (a>b)
+```
 
-位运算符：位运算符用于处理单个位。主要有两种移位运算符：
+## 位运算符
 
-左移运算符：该运算符用于处理单个位，将位向左侧移动指定的次数。当你向左移动位时，值将变为原来的两倍。
+位运算符用于处理单个位。主要有两种移位运算符：
+
+**左移运算符：** 该运算符用于处理单个位，将位向左侧移动指定的次数。当你向左移动位时，值将变为原来的两倍。
 
 ```java
 int i=16;
 i<<2
 ```
 
-右移运算符：将位向右移动指定的位数。当位向右移动一位时，，值将变为原来的一半。在涉及精度部分的情况下，精度部分将被忽略。
+**右移运算符：** 将位向右移动指定的位数。当位向右移动一位时，值将变为原来的一半。在涉及精度部分的情况下，精度部分将被忽略。
 
 ```java
 int i=3;
 i>>3
 ```
 
-问题 1：求数字 i=16 的反码。
+### 问题 1：求数字 `i=16` 的反码
 
-答案：
+**答案：**
 
 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 |---|---|---|---|---|---|---|---|
@@ -1054,7 +1041,7 @@ i>>3
 
 数字的反码 = (取反后 1 的位位置和) - (最大位表示和) = -256
 
-问题 2：编写一个程序求数字 i=500 的反码。
+### 问题 2：编写一个程序求数字 `i=500` 的反码
 
 ```java
 class Hello{
@@ -1080,7 +1067,7 @@ public class Jtc25 {
 }
 ```
 
-程序 3.3
+## 程序 3.3：位运算与逻辑运算
 
 ```java
 class Hello{
@@ -1108,17 +1095,13 @@ public class Jtc26 {
 }
 ```
 
-逻辑与 (&&) 和位与 (&) 的区别：
+### 逻辑与 (`&&`) 和位与 (`&`) 的区别
 
 逻辑与仅适用于关系表达式，而位与既可以适用于数值表达式也可以适用于关系表达式。
 
-例如：当两个关系表达式之间应用逻辑与(&&) 时，如果第一个表达式返回 true，则才会计算第二个表达式，否则不会。即第二个表达式的评估依赖于第一个表达式的结果。而在位与 (&) 的情况下，第二个表达式的评估是独立于第一个的。
+例如：当两个关系表达式之间应用逻辑与(`&&`) 时，如果第一个表达式返回 `true`，则才会计算第二个表达式，否则不会。即第二个表达式的评估依赖于第一个表达式的结果。而在位与 (`&`) 的情况下，第二个表达式的评估是独立于第一个的。
 
-
-
-
-
-例:-
+**例：**
 
 ```java
 int i1=10;
@@ -1126,9 +1109,11 @@ int i2=11;
 int i1=++i1;//i1=11;
 ```
 
-后置递增或递减运算符：后置递增/递减运算符的处理，首先执行赋值，然后将变量的值加一，
+## 前置递增/递减运算符
 
-例如:-
+前置递增/递减运算符的处理：首先将变量的值加一（或减一），然后执行赋值。
+
+**例如：**
 
 ```java
 int i1=10;
@@ -1137,7 +1122,7 @@ int i1=i++;
 int i2=i--;
 ```
 
-## 程序 3.4
+## 程序 3.4：递增/递减运算符示例
 
 ```java
 class Hello{
@@ -1165,11 +1150,11 @@ class Jtc27{
 }
 ```
 
-## 输出:
+**输出：**
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_92_0.png)
 
-## 程序 3.5
+## 程序 3.5：更多运算符示例
 
 ```java
 class Hello{
@@ -1227,11 +1212,13 @@ h1.m1();
 }
 ```
 
-## 输出:
+**输出：**
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_94_0.png)
 
-递增；递减运算符：递增或递减运算符不能应用于任何值或 final 变量。
+## 递增/递减运算符的限制
+
+递增或递减运算符不能应用于任何值或 `final` 变量。
 
 ```java
 int i16=++i++;
@@ -1239,19 +1226,25 @@ int i16=++i++;
 
 在 `i16` 的情况下首先处理 `p1`，因此在处理 `p1` 之后，递增/递减运算符不能应用于任何值。
 
-new 运算符：`new` 运算符用于在堆中分配内存，通过 `new` 运算符我们可以创建类的对象。
+## `new` 运算符
+
+`new` 运算符用于在堆中分配内存，通过 `new` 运算符我们可以创建类的对象。
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_95_0.png)
 
-图 3.3: new
+图 3.3: `new`
 
-三元运算符：三元运算符用于检查小型条件并根据该条件返回结果（它的工作方式类似于 if-else）。
+## 三元运算符
 
-语法:-
+三元运算符用于检查小型条件并根据该条件返回结果（它的工作方式类似于 `if-else`）。
 
+**语法：**
+
+```
 类型变量=(条件) ? 真部分 : 假部分
+```
 
-例如:-
+**例如：**
 
 ```java
 int a=10;
@@ -1259,7 +1252,7 @@ int b=20;
 int c=(a
 ```
 
-## 程序 3.6
+## 程序 3.6：三元运算符与命令行参数
 
 ```java
 public class Jtc {
@@ -1284,24 +1277,24 @@ System.out.println(args[i]);
 }
 ```
 
-## 错误
+**错误：**
 
+```
 在线程 "main" java.lang.ArrayIndexOutOfBoundsException: 0 at Source.Jtc29.main(10)
-
 在线程 "main" java.lang.Error: 未解决编译问题：类型不匹配：无法将 int 转换为 String at Source.Jtc29.main(16)
-
-在线程 "main" java.lang.NumberFormatException: 输入“a” at java.lang.NumberFormatException.forInput(Unknown Source)
+在线线程 "main" java.lang.NumberFormatException: 输入“a” at java.lang.NumberFormatException.forInput(Unknown Source)
 at Integer.parseInt(Unknown Source)
 at Integer.parseInt(Unknown Source)
 at Source.Jtc29.main(10)
+```
 
-## 从命令行获取值:
+## 从命令行获取值
 
-main 方法中的参数 `args[]` 存储了所有值。根据我们的需求，可以逐个获取这些值。从命令行无法获取固定值。`Integer.parseInt()`：`integer` 是一个类，其中包含 `parseInt` 方法，用于将其范围内的字符串转换为整数类型。
+`main` 方法中的参数 `args[]` 存储了所有值。根据我们的需求，可以逐个获取这些值。从命令行无法获取固定值。`Integer.parseInt()`：`Integer` 是一个类，其中包含 `parseInt` 方法，用于将其范围内的字符串转换为整数类型。
 
-问：我们可以编写嵌套的三元运算符吗？
+**问：** 我们可以编写嵌套的三元运算符吗？
 
-答：可以。例如
+**答：** 可以。例如：
 
 ```java
 public class Jtc30 {
@@ -1313,17 +1306,21 @@ public class Jtc30 {
 }
 ```
 
+```
 在线程 "main" java.lang.NullPointerException at Source.Jtc30.main(7)
+```
 
-当请求资源不可用，你将得到空指针。在 main 方法 `args[]` 的情况下，从命令行提供的任何输入在 JVM 内部会被视为数组的大小。数组大小是不预定义的，因为我们不知道用户将从命令行提供多少输入。
 
-instanceof 运算符：`instanceof` 运算符用于检查是否为相应的引用。如果引用包含，则返回 true，否则返回 false。注意：要在两个不同类型之间应用 `instanceof`，它们必须存在父子关系。
+
+当请求资源不可用，你将得到空指针。在`main`方法`args[]`的情况下，从命令行提供的任何输入在JVM内部会被视为数组的大小。数组大小是不预定义的，因为我们不知道用户将从命令行提供多少输入。
+
+`instanceof`运算符：`instanceof`运算符用于检查是否为相应的引用。如果引用包含，则返回`true`，否则返回`false`。注意：要在两个不同类型之间应用`instanceof`，它们必须存在父子关系。
 
 ## instanceof 和 isinstance() 的区别
 
 | InstanceOf | isinstance() |
 |---|---|
-| instanceof 运算符可以检查给定对象是否为特定类型 | `isinstance()` 是类中存在的一个方法，我们可以使用 `isinstance()` 方法检查给定对象是否为特定类型 |
+| `instanceof`运算符可以检查给定对象是否为特定类型 | `isinstance()`是类中存在的一个方法，我们可以使用`isinstance()`方法检查给定对象是否为特定类型 |
 | 我们在开始时知道类型 | 我们在开始时不知道类型，它在运行时动态确定 |
 
 ## 程序 3.7
@@ -1439,10 +1436,6 @@ public class Jtc33 {
 }
 ```
 
-
-
-
-
 ```
 D:\program\All JTC Program>javac Jtc33.java
 D:\program\All JTC Program>java Jtc33
@@ -1467,7 +1460,7 @@ Datatype variable_Name=(Datatype) variable_2;
 
 - 显式类型转换（Explicit type casting）：当目标数据类型小于源类型时，称为窄转换，此时你需要显式地将其转换为对应的目标类型。
 
-例：byte b12 = (byte) i1;
+例：`byte b12 = (byte) i1;`
 
 ## 程序 3.10
 
@@ -1554,7 +1547,7 @@ h1.m1();
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_107_0.png)
 
-**注意：** 在行中进行不同类型的转换被称为多重类型转换。在 `b1+=10` 的情况下，称为复合赋值，不需要执行显式类型转换，会自动转换为对应的目标类型。
+**注意：** 在行中进行不同类型的转换被称为多重类型转换。在`b1+=10`的情况下，称为复合赋值，不需要执行显式类型转换，会自动转换为对应的目标类型。
 
 ## 程序 3.12
 
@@ -1601,6 +1594,7 @@ h1.m1();
 控制语句主要有以下类型：
 
 - 条件语句
+
 - 循环语句
 
 ### 4.2.1 条件语句
@@ -1610,29 +1604,52 @@ h1.m1();
 条件语句主要有以下类型：
 
 - 1. if
-  - a) if(condition){
+
+  - a) `if(condition){`
+
     语句;
-  }
-  - b) if(condition){
+
+  `}`
+
+  - b) `if(condition){`
+
     语句;
-  }else{
+
+  `}else{`
+
     语句;
-  }
-  - c) if(condition 1){
+
+  `}`
+
+  - c) `if(condition 1){`
+
     语句;
-  }else if(condition 2)
+
+  `}else if(condition 2)`
+
     语句;
-  }else{
+
+  `}else{`
+
     语句;
-  }
-  - d) if(condition){
+
+  `}`
+
+  - d) `if(condition){`
+
     语句;
-  }else{
-    if(condition){
+
+  `}else{`
+
+    `if(condition){`
+
     语句;
-  }else{
+
+  `}else{`
+
     语句;
-  }
+
+  `}`
 
 ## 程序 4.1
 
@@ -1674,16 +1691,25 @@ System.out.println("else");
 }
 ```
 
-错误：java.lang.Error: 编译问题：类型不匹配，无法从 int 转换为 boolean，位于 Source.Jtc35.main(Jtc35.java:6)
+错误：`java.lang.Error: 编译问题：类型不匹配，无法从 int 转换为 boolean，位于 Source.Jtc35.main(Jtc35.java:6)`
 
-**注意：** 在 Java 中1 不等于 true 或 false。你需要提供一个返回 true 或 false 的关系表达式。Switch：
+**注意：** 在Java中1不等于`true`或`false`。你需要提供一个返回`true`或`false`的关系表达式。Switch：
+
+```
 switch(...){
+
 case 1: 语句1;
+
 case 2: 语句1;
+
 case 3: 语句1;
+
 default: 语句1;
+
 }
-如果不在每个 case 之后编写“break”，则将无法获得格式化的输出。
+```
+
+如果不在每个`case`之后编写`break`，则将无法获得格式化的输出。
 
 ## 程序 4.3
 
@@ -1711,15 +1737,18 @@ class Jtc36 {
 }
 ```
 
-错误：java.lang.Error: 编译问题：重复的 case，位于 Source.Jtc36.main(Jtc36.java:7)
+错误：`java.lang.Error: 编译问题：重复的 case，位于 Source.Jtc36.main(Jtc36.java:7)`
 
-Q1:你可以在 switch 内部任何地方写 default 语句吗？
+Q1:你可以在`switch`内部任何地方写`default`语句吗？
+
 答：可以
 
-Q2:我可以写多个 default 语句吗？
+Q2:我可以写多个`default`语句吗？
+
 答：不能
 
 Q3:我可以重复标签吗？
+
 答：不能
 
 ## 程序 4.4
@@ -1746,94 +1775,107 @@ break;
 
 # 输出:
 
-JDK 4 byte, short, int 和 char 在 switch 中是允许的。JDK5 enum 在 switch 中也是允许的。JDK1.7 String 在 switch 中也是允许的。
+JDK 4 `byte`, `short`, `int`和`char`在`switch`中是允许的。JDK5 `enum`在`switch`中也是允许的。JDK1.7 `String`在`switch`中也是允许的。
 
-img/0ba0276697a7bf420ad4269e7fc94740_118_0.png)
+![](img/0ba0276697a7bf420ad4269e7fc94740_118_0.png)
 
-在 switch 中使用 enum 时记住以下几点：switch 中的 case 数字必须是 enum 的类型，否则将产生编译错误。
+在`switch`中使用`enum`时记住以下几点：`switch`中的`case`数字必须是`enum`的类型，否则将产生编译错误。
 
 ## 程序 4.5
 
+
+
 ```java
 enum MONTH {
-JAN,FEB,MARCH,APR
+    JAN, FEB, MARCH, APR
 }
 
-class Hello{
-void m1(char ch) {
-System.out.println("char in Switch in m1");
-switch(ch) {
-case 'A':
-System.out.println("case A");
-break;
-case 'B':
-System.out.println("case B");
-break;
-case 'C':
-System.out.println("case C");
-break;
-case 'D':
-System.out.println("case D");
-break;
-default:
-System.out.println("invalid case in m1");
+class Hello {
+    void m1(char ch) {
+        System.out.println("char in Switch in m1");
+        switch (ch) {
+            case 'A':
+                System.out.println("case A");
+                break;
+            case 'B':
+                System.out.println("case B");
+                break;
+            case 'C':
+                System.out.println("case C");
+                break;
+            case 'D':
+                System.out.println("case D");
+                break;
+            default:
+                System.out.println("invalid case in m1");
+        }
+    }
+
+    void m2() {
+        System.out.println("Enum in switch in m2");
+        MONTH m[] = MONTH.values();
+        for (MONTH m1 : m) {
+            System.out.println(m1 + "--- " + m1.ordinal());
+        }
+        MONTH m1 = MONTH.FEB;
+        switch (m1) {
+            case JAN:
+                System.out.println("JAN");
+                break;
+            case FEB:
+                System.out.println("FEB");
+                break;
+            case JULY:
+                System.out.println("JULY");
+                break;
+            default:
+                System.out.println("Invalid Enum Type");
+        }
+    }
+
+    void m3(String str) {
+        System.out.println("String from JDK 1.7 in m3");
+        switch (str) {
+            case "AB":
+                System.out.println("AB");
+                break;
+            case "BC":
+                System.out.println("BC");
+                break;
+            case "CD":
+                System.out.println("CD");
+                break;
+            default:
+                System.out.println("Invalid String case");
+        }
+    }
 }
-}
-void m2() {
-System.out.println("Enum in switch in m2");
-MONTH m[]=MONTH.values();
-for(MONTH m1:m) {
-System.out.println(m1+"--- "+m1.ordinal());
-}
-MONTH m1=MONTH.FEB;
-switch(m1) {
-case JAN: System.out.println("JAN");
-break;
-case FEB: System.out.println("FEB");
-break;
-case JULY: System.out.println("JULY");
-break;
-default: System.out.println("Invalid Enum Type");
-}
-}
-void m3(String str) {
-System.out.println("String from JDK 1.7 in m3");
-switch(str) {
-case "AB": System.out.println("AB");
-break;
-case "BC": System.out.println("BC");
-break;
-case "CD": System.out.println("CD");
-break;
-default: System.out.println("Invalid String case");
-}
-}
+
 class Jtc38 {
-public static void main(String arg[]) {
-Hello h1=new Hello();
-h1.m1('A');
-h1.m2();
-h1.m3(arg[0]);
-}
-}
+    public static void main(String arg[]) {
+        Hello h1 = new Hello();
+        h1.m1('A');
+        h1.m2();
+        h1.m3(arg[0]);
+    }
 }
 ```
 
-错误：java.lang.Error: 编译问题：
+错误：`java.lang.Error`：编译问题：
 
+`JULY` 无法解析或不是 `Source` 中的字段
 
+at at `Source.Hello.m2(Jtc38.java:37)`
 
-JULY 无法解析或不是 Source 中的字段
-at at Source.Hello.m2(Jtc38.java:37)
-at at Source.Jtc38.main(Jtc38.java:59)
+at at `Source.Jtc38.main(Jtc38.java:59)`
 
-# 程序 4.6
+## 程序 4.6
 
 ```java
 public class Jtc39 {
     public static void main(String[] args) {
         int i = Integer.parseInt(args[0]);
-        switch(1) {
+        switch (1) {
             case 1:
                 System.out.println("Case 1");
                 break;
@@ -1854,12 +1896,13 @@ public class Jtc39 {
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_121_0.png)
 
+## 程序 4.7
+
 ```java
-Program 4.7
 public class Jtc40 {
     public static void main(String[] args) {
         char ch = 'A';
-        switch(ch) {
+        switch (ch) {
             case 1:
                 System.out.println("Case 1");
                 break;
@@ -1873,11 +1916,11 @@ public class Jtc40 {
 }
 ```
 
-# 输出：
+输出：
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_122_0.png)
 
-程序 4.8
+## 程序 4.8
 
 ```java
 public class Jtc41 {
@@ -1886,7 +1929,7 @@ public class Jtc41 {
         final int i1 = 3;
         final int i2;
         i2 = 3;
-        switch(1) {
+        switch (1) {
             case 1:
                 System.out.println("ONE");
                 break;
@@ -1913,17 +1956,17 @@ public class Jtc41 {
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_123_0.png)
 
-注意：在 switch 情况中，case 必须是常量，不应该存在对应 case 值是变量的情况。
+注意：在 `switch` 情况中，`case` 必须是常量，不应该存在对应 `case` 值是变量的情况。
 
-在 Jtc40 情况中，我们提供了 case 1 和 case ‘A’，在这种情况下，传递给 switch 的参数必须与 switch 内部包含的 case 类型相同。
+在 `Jtc40` 情况中，我们提供了 `case 1` 和 `case 'A'`，在这种情况下，传递给 `switch` 的参数必须与 `switch` 内部包含的 `case` 类型相同。
 
 ### 4.2.2 循环控制语句
 
 循环控制语句用于根据某些特定条件按指定的次数重复某些任务。循环控制语句主要有以下类型。
 
-- 1. for 循环
+- **1. `for` 循环**
 
-For 用于根据某些特定条件按指定的次数迭代循环。
+`for` 用于根据某些特定条件按指定的次数迭代循环。
 
 ```java
 语法: for(初始化; 条件; 增量/递减 )
@@ -1932,18 +1975,18 @@ For 用于根据某些特定条件按指定的次数迭代循环。
 }
 ```
 
-for 循环的处理：在处理 for 循环时，首先会进行初始化，然后检查条件或评估条件，如果满足条件则返回 true，处理循环内部包含的语句，然后执行增量或递减。然后再次评估条件，如果返回 true，则此过程将继续，直到条件部分不再返回 false。
+`for` 循环的处理：在处理 `for` 循环时，首先会进行初始化，然后检查条件或评估条件，如果满足条件则返回 `true`，处理循环内部包含的语句，然后执行增量或递减。然后再次评估条件，如果返回 `true`，则此过程将继续，直到条件部分不再返回 `false`。
 
-# 程序 4.9
+## 程序 4.9
 
 ```java
 public class Jtc42 {
     public static void main(String[] args) {
-        for(int i=0;i<10;i++){
+        for (int i = 0; i < 10; i++) {
             System.out.println(i);
         }
-        int i=0;
-        for(i<10) {
+        int i = 0;
+        for (i < 10) {
             System.out.println(i);
         }
         i++;
@@ -1951,33 +1994,33 @@ public class Jtc42 {
     /*for(System.out.println(i);System.out.println("ABC");i++) {
         System.out.println(i);
     */
-    for(System.out.println(i); ;i++) {
-        if(i<10){
+    for (System.out.println(i); ; i++) {
+        if (i < 10) {
             System.out.println(i);
         }
     }
-    for(int j=0;j<20;j++) {
-        System.out.println("IN FOR : "+j);
-        if(i==3) {
+    for (int j = 0; j < 20; j++) {
+        System.out.println("IN FOR : " + j);
+        if (i == 3) {
             break;
             System.out.println("After Loop");
         }
-        for(int j=0;j<20;j++) {
-            System.out.println("IN FOR : "+j);
-            if(i==3) {
+        for (int j = 0; j < 20; j++) {
+            System.out.println("IN FOR : " + j);
+            if (i == 3) {
                 System.out.exit(0);
                 System.out.println("After Loop");
             }
-            for(int j=0;j<10;j++) {
-                if(i==3) {
-                    System.out.println("In FOR LOOP If"+i);
+            for (int j = 0; j < 10; j++) {
+                if (i == 3) {
+                    System.out.println("In FOR LOOP If" + i);
                     System.exit(0);
                 }
                 System.out.println(i);
             }
         }
-        int k=0;
-        for(k=0;k<10;k++)
+        int k = 0;
+        for (k = 0; k < 10; k++)
             i++;
         System.out.println(i);
     }
@@ -1988,9 +2031,9 @@ public class Jtc42 {
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_127_0.png)
 
-# 2. while 循环
+## 2. `while` 循环
 
-while 循环是 for 循环的描述形式。在 while 循环中，首先评估条件，如果返回 true，则处理内部的语句，然后执行增量或递减。它会反复重复，直到条件不满足或返回 false。
+`while` 循环是 `for` 循环的描述形式。在 `while` 循环中，首先评估条件，如果返回 `true`，则处理内部的语句，然后执行增量或递减。它会反复重复，直到条件不满足或返回 `false`。
 
 ```java
 while(条件){
@@ -1999,7 +2042,7 @@ while(条件){
 }
 ```
 
-# 3. do-while 循环
+## 3. `do-while` 循环
 
 ```java
 do{
@@ -2008,19 +2051,19 @@ do{
 } while(条件);
 ```
 
-在 do-while 中，在不检查条件的情况下，它会处理一次语句，第二次迭代时检查条件。如果返回 true，循环将继续，否则将退出 do-while 循环。
+在 `do-while` 中，在不检查条件的情况下，它会处理一次语句，第二次迭代时检查条件。如果返回 `true`，循环将继续，否则将退出 `do-while` 循环。
 
-问：比较 while 和 do-while，从更好的控制角度来看，应该主要使用哪一个？
+问：比较 `while` 和 `do-while`，从更好的控制角度来看，应该主要使用哪一个？
 
-答：通常建议使用 while 循环代替 do-while，因为我们可以通过 while 获得更好的控制。
+答：通常建议使用 `while` 循环代替 `do-while`，因为我们可以通过 `while` 获得更好的控制。
 
-# 示例
+## 示例
 
 ```java
 public class JtcLoop {
     public static void main(String[] args) {
-        byte b=Byte.MIN_VALUE;
-        if(b==0) {
+        byte b = Byte.MIN_VALUE;
+        if (b == 0) {
             System.out.println("JTC!");
         }
     }
@@ -2030,8 +2073,8 @@ public class JtcLoop {
 ```java
 public class Jtc {
     public static void main(String[] args) {
-        int j=0;
-        for(int i=0;i<100;i++){
+        int j = 0;
+        for (int i = 0; i < 100; i++) {
             j++;
         }
         System.out.println(j);
@@ -2041,11 +2084,11 @@ public class Jtc {
 
 ```java
 public class Jtc {
-    static final int END=Integer.MAX_VALUE;
-    static final int START=Integer.MIN_VALUE;
+    static final int END = Integer.MAX_VALUE;
+    static final int START = Integer.MIN_VALUE;
     public static void main(String[] args) {
-        int count=0;
-        for(int i=START;i++){
+        int count = 0;
+        for (int i = START; i++; ) {
             count++;
         }
         System.out.println(count);
@@ -2057,14 +2100,15 @@ public class Jtc {
 public class Jtc {
     // 注意：此处原文代码似乎有误（缺少括号或逻辑），但作为翻译，仅保持逻辑结构
     public static void main(String[] args) {
-        int count=0;
-        for(int i=START;i++){
+        int count = 0;
+        for (int i = START; i++; ) {
             count++;
         }
         System.out.println(count);
     }
 }
 ```
+
 *(注：原文提供的后几段代码块存在多处语法错误或重复，翻译时已根据要求保留了格式并对描述进行了翻译)*
 
 ## 5.1 引言
@@ -2075,50 +2119,59 @@ public class Jtc {
 
 数组主要有以下类型：
 
-- 1. 静态数组
+- **1. 静态数组**
 
-语法: `array_name[]={val1,val2,...valn}`
+语法：`array_name[]={val1,val2,...valn}`
+
 示例：`int a[]={11,22,33,44}`
 
-- 2. 动态数组
+- **2. 动态数组**
 
-语法: `array_name[]=new Data[size]`
+语法：`array_name[]=new Data[size]`
+
 示例：`int a[]=new int[4]`
 
 0
-0
-0
-0
-0
-0
-a[3]=303
-a[2]=303
-a[1]=202
-a[0]=101
 
+0
+
+0
+
+0
+
+0
+
+0
+
+`a[3]=303`
+
+`a[2]=303`
+
+`a[1]=202`
+
+`a[0]=101`
 
 ```java
 /*for(char ch1='\0';ch1<\u00ff';ch1++) {
 System.out.println(ch1);
 }*/
-Hello h1[]=new Hello[5];
-Hello h11=new Hello();
+Hello h1[] = new Hello[5];
+Hello h11 = new Hello();
 System.out.println(h11);
-for(int i=0;i<h1.length;i++){
+for (int i = 0; i < h1.length; i++) {
     System.out.println(h1[i]);
 }
-String str1[][]={{"abc","xyz"},{"mno"}};
-for(int i=0;i<str1.length;i++){
-    System.out.println(str1[i]+""+str1[i].length());
-}
+String str1[][] = {{"abc", "xyz"}, {"mno"}};
+for (int i = 0; i < str1.length; i++) {
+    System.out.println(str1[i] + "" + str1[i].length());
 }
 ```
 
-# 输出:
+输出：
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_139_0.png)
 
-# 程序 5.3
+## 程序 5.3
 
 ```java
 class Hello {
@@ -2133,21 +2186,21 @@ class Hai {
 }
 public class Jtc46 {
     public static void main(String[] args) {
-        Hello h1[]=new Hello[2];
+        Hello h1[] = new Hello[2];
 
-        h1[0]=new Hello();
+        h1[0] = new Hello();
         //h1[1]=new Hai();
-        Object o[]=new Object[2];
-        o[0]=new Hello();
-        o[1]=new Hai();
-        for(int i=0;i<o.length;i++) {
+        Object o[] = new Object[2];
+        o[0] = new Hello();
+        o[1] = new Hai();
+        for (int i = 0; i < o.length; i++) {
             System.out.println(o[i]);
         }
     }
 }
 ```
 
-# 输出:
+输出：
 
 ```text
 D:\program\All JTC Program>javac jtc47.java
@@ -2174,7 +2227,9 @@ D:\program\All JTC Program>java jtc47
 found :88
 ```
 
-# 程序 5.4
+## 程序 5.4
+
+
 
 ```java
 class Hello {
@@ -2263,7 +2318,7 @@ public class Jtc47 {
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_144_0.png)
 
-例如：int a[][]=new int[3][3]
+例如：`int a[][]=new int[3][3]`
 
 | 0 | 1 | 2 |
 |---|---|---|
@@ -2273,96 +2328,11 @@ public class Jtc47 {
 
 图 5.1: 多维数组
 
-# 三维数组:
+## 三维数组
 
-例如：int a[][][]=new int[3][3][3]
+例如：`int a[][][]=new int[3][3][3]`
 
-![](img/0ba0276697a7bf420ad4269e7fc94740_144_0) # 三维数组：例如：int a[][][]=new int[3][3][3]
-
-# 三维数组
-
-```java
-public class Jtc46 {
-    public static void main(String[] args){
-        System.out.println("Dynamic Array");
-        int a[][]=new int[3][3];
-        for(int i=0;i<3;i++){
-            for(int j=0;j<3;j++){
-                System(int k=0;k<3;
-
-
-                    System.out.println
-
-
-][
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-![](img/0ba0276697a7bf420ad4269e7fc94740_144_0) # 三维数组
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-0;
-3;
-
- {
-        System.out.println("Static Array");
-        int b[][][]=new int[3][3][3];
-        for(int i=0;i<3;i++){
-            for(int j=0;j<3;j++){
-                for(int k=0;k<3;k++){
-                    System.out.println(b[i][j][k]);
-                }
-            }
-        }
-    }
-}
-```
-
-# 静态数组
+![](img/0ba0276697a7bf420ad4269e7fc94740_144_0)
 
 ```java
 public class Jtc46 {
@@ -2387,7 +2357,32 @@ public class Jtc46 {
 }
 ```
 
-# 输出:
+## 静态数组
+
+```java
+public class Jtc46 {
+    public static void main(String[] args){
+        System.out.println("Dynamic Array");
+        int a[][]=new int[3][3];
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                System.out.println(a[i][j]);
+            }
+        }
+        System.out.println("Static Array");
+        int b[][][]=new int[3][3][3];
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                for(int k=0;k<3;k++){
+                    System.out.println(b[i][j][k]);
+                }
+            }
+        }
+    }
+}
+```
+
+## 输出
 
 ```text
 Dynamic Array
@@ -2415,18 +2410,14 @@ Static Array
 2 0 2
 ```
 
-
-
-
-
 | 实例变量 | 静态变量 |
 | :--- | :--- |
 | 1) 直接在类中定义，不使用 `static` 关键字。 | 1) 使用 `static` 关键字直接在类内部定义。 |
 | 2) 对于实例变量，内会在对象创建时分配内存。 | 2) 对于静态变量，内会在类加载时分配内存。 |
 | 3) 实例变量成员无法在任何静态上下文中直接访问。 | 3) 静态变量可以在静态上下文中也可以在实例上下文中直接访问。 |
-| 4) 实例变量只能通过对应类的对象引用来访问。 | 4) 静态变量可以通过以下不同方式访问：<br>a) 使用包含 `null` 的引用变量。<br>Hello h=null;<br>SOP(h.c);<br>b) 直接通过类名访问。<br>SOP(Hello.c);<br>使用包含对应类对象引用的引用变量。<br>Hello h1=new Hello();<br>SOP(h1.c); |
+| 4) 实例变量只能通过对应类的对象引用来访问。 | 4) 静态变量可以通过以下不同方式访问：<br>a) 使用包含 `null` 的引用变量。<br>`Hello h=null;`<br>`SOP(h.c);`<br>b) 直接通过类名访问。<br>`SOP(Hello.c);`<br>使用包含对应类对象引用的引用变量。<br>`Hello h1=new Hello();`<br>`SOP(h1.c);` |
 
-# 程序 6.1
+## 程序 6.1
 
 ```java
 class hello
@@ -2473,7 +2464,7 @@ class Jtc51 {
 }
 ```
 
-```
+```text
 C:\Windows\System32\cmd.exe
 D:\program\All JTC Program>javac Jtc51.java
 D:\program\All JTC Program>java Jtc51
@@ -2490,7 +2481,7 @@ static variable
 30
 ```
 
-# Q1 : 类到底什么时候被加载到主内存中？
+## Q1 : 类到底什么时候被加载到主内存中？
 
 答：类可以通过三种方式加载到主内存中：
 
@@ -2502,13 +2493,13 @@ static variable
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_161_0.png)
 
-Q2 : 一个类可以加载到主内存中多少次？
+## Q2 : 一个类可以加载到主内存中多少次？
 
 答：1次
 
 注意：在对象创建时，首先实例变量会获得内存，然后进行其他后续处理。
 
-# 程序 6.2
+## 程序 6.2
 
 ```java
 class Hello{
@@ -2542,11 +2533,11 @@ class Jtc52{
 }
 ```
 
-# 输出：
+## 输出
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_162_0.png)
 
-# 程序 6.3
+## 程序 6.3
 
 ```java
 class Hello{
@@ -2586,9 +2577,9 @@ class Jtc53{
 }
 ```
 
-# 输出：
+## 输出
 
-```
+```text
 d:\program\All JTC Program>javac jtc53.java
 d:\program\All JTC Program>java jtc53
 m1 in Hello
@@ -2603,9 +2594,9 @@ m2 in Hello
 20
 ```
 
-注意：方法 m1 中的变量 `aa` 不会被视为实例变量，它是一个局部变量。方法 m2 中的变量 `ab` 不等于静态变量，它是一个局部变量。
+注意：方法 `m1` 中的变量 `aa` 不会被视为实例变量，它是一个局部变量。方法 `m2` 中的变量 `ab` 不等于静态变量，它是一个局部变量。
 
-# 程序 6.4
+## 程序 6.4
 
 ```java
 class Hello{
@@ -2632,9 +2623,9 @@ class Jtc54{
 }
 ```
 
-# 输出：
+## 输出
 
-```
+```text
 D:\program\All JTC Program>java Jtc54
 In method
 20
@@ -2645,25 +2636,29 @@ m1 in Hello
 
 类内部的一对括号被称为块（block）。主要有两种块：
 
-静态块（Static Block）：直接在类中使用带有 `static` 关键字定义的块。
+**静态块（Static Block）**：直接在类中使用带有 `static` 关键字定义的块。
 
 示例：
+
 ```java
 class Hello{
     static{}
 }
 ```
 
-实例块（Instance Block）：直接在类中使用不带 `static` 关键字定义的块。
+**实例块（Instance Block）**：直接在类中使用不带 `static` 关键字定义的块。
 
 示例：
+
 ```java
 class Hello{
     {}
 }
 ```
 
-### 实例块与静态块的区别：
+### 实例块与静态块的区别
+
+
 
 | 实例块 | 静态块 |
 | :--- | :--- |
@@ -2673,11 +2668,11 @@ class Hello{
 | 4. 实例块只在对象创建时处理。 | 4. 静态块在类加载时处理。 |
 | 5. 实例块会在类对象创建时被处理多次。 | 5. 静态块只处理一次，且是在类加载时。 |
 
-# 注意
+## 注意
 
 在任何局部上下文中定义的块不等同于实例块和静态块。它仅被视为局部块。在任何局部上下文中定义的块只有在相应的上下文被处理时才会处理。与方法不同，块会自动处理，即你不能显式地调用任何块。
 
-# 程序 6.5
+## 程序 6.5
 
 ```java
 实例和静态块的处理：
@@ -2723,13 +2718,13 @@ class Jtc55{
 }
 ```
 
-# 输出：
+## 输出
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_169_0.png)
 
 实例和静态块的处理（带有 IB 和 SB 的数量）。
 
-# 程序 6.6
+## 程序 6.6
 
 ```java
 class Hello{
@@ -2779,9 +2774,7 @@ class Jtc56{
 }
 ```
 
-
-
-```
+```java
 D:\program\All JTC Program>java Jtc56
 SB1 in Jtc56
 222
@@ -2801,19 +2794,19 @@ IB1 in Jtc56
 
 当你通过包含 `main` 方法的类名运行程序时，JVM 内部会获取该类名，并借助该类名的帮助来调用 `main` 方法。
 
-当 JVM 访问类的静态成员时，它首先会检查相应的类（Jtc56）是否已经加载到主内存中。如果尚未加载，它将会先为 `Jtc56` 类的静态变量分配内存。
+当 JVM 访问类的静态成员时，它首先会检查相应的类（`Jtc56`）是否已经加载到主内存中。如果尚未加载，它将会先为 `Jtc56` 类的静态变量分配内存。
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_172_0.png)
 
-如果存在任何静态块（static block），则该块将被处理。
+如果存在任何静态块（`static` block），则该块将被处理。
 
-如果你直接访问了类的任何实例变量（instance variable），它将会报错，因为在处理静态块的过程中，该实例变量的内存尚未被分配。
+如果你直接访问了类的任何实例变量（`instance variable`），它将会报错，因为在处理静态块的过程中，该实例变量的内存尚未被分配。
 
 在处理完静态块之后，它将访问 `main` 方法。在 `main` 方法中，你通过类名 `Hello.c` 直接访问了 `Hello` 的静态变量。
 
 在访问静态变量时，它会检查类 `Hello` 是否已加载到主内存中。如果类 `Hello` 未加载到主内存，它将加载该类；在加载类时，会先分配静态变量内存，然后处理静态块。这个过程只会执行一次。
 
-如果你不创建任何对象，任何实例变量或任何实例块（instance block）都不会被处理。
+如果你不创建任何对象，任何实例变量或任何实例块（`instance block`）都不会被处理。
 
 使用 `Class.forName(… )` 动态加载类
 
@@ -2864,9 +2857,9 @@ System.out.println(Hello.b);
 }
 ```
 
-# 输出:
+## 输出
 
-```
+```java
 D:\program\All JTC Program>javac Jtc57.java
 D:\program\All JTC Program>java Jtc57
 Error: Could not find or load main class Jtc57
@@ -2925,7 +2918,7 @@ public static void main(String args[])throws Exception{
 
 ## 注意
 
-`‘forName’ 方法仅用于将类加载到主内存中。
+`forName` 方法仅用于将类加载到主内存中。
 
 当我们在另一个块内部定义一个块时，该块既不是实例块也不是静态块。它仅仅是一个局部块。
 
@@ -2937,9 +2930,10 @@ public static void main(String args[])throws Exception{
 
 在处理完静态块之后，它将访问 `main` 方法。在 `main` 方法中，你通过类名 `Hello.c` 直接访问了 `Hello` 的静态变量。
 
-在访问静态变量时，会会 ` `Hello` 加载加载内存内存内存。
+在访问静态变量时，会检查类 `Hello` 是否已加载到主内存中。如果类 `Hello` 未加载到主内存中，它将加载该类；在加载类时，会先分配静态变量内存，然后会处理静态块。
 
-if(str.equals("HelloHello
+```java
+if(str.equals("Hello")){
 System.out.println("Hello is loaded");
 }
 else{
@@ -2951,12 +2945,12 @@ System.out.println(Hello.b);
 }
 }
 ```
+
 *(注：由于原文文本部分存在逻辑重复和断码，译文已根据上下文进行了语义对齐处理，保持了核心技术意图)*
 
 **修正后的逻辑译文部分：**
 
-[content]
-`‘forName’ 方法仅用于将类加载到主内存中。
+`forName` 方法仅用于将类加载到主内存中。
 
 当我们在另一个块内部定义一个块时，该块既不是实例块也不是静态块。它仅仅是一个局部块。
 
@@ -3032,17 +3026,14 @@ h2.m1();
 }
 ```
 
-
-
-
-```
+```java
 }
 }
 ```
 
-# Output:
+## 输出
 
-```
+```java
 D:\program\All JTC Program\java Jtc61
 SB in Hello
 IB in Hello
@@ -3053,7 +3044,8 @@ m4 in Hello
 19090
 ```
 
-程序 6.11
+## 程序 6.11
+
 ```java
 class Hello{
 int a=10;
@@ -3095,11 +3087,11 @@ Hello.m22(null);
 }
 ```
 
-# Output:
+## 输出
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_186_0.png)
 
-# 程序 6.12
+## 程序 6.12
 
 ```java
 class Hai {
@@ -3133,22 +3125,31 @@ class Hello{
     return 11;
   }
   Object m15(){
-    System.out.println("m15 in Hello");
-    return new Hai();
-  }
-  static Hai m16(){
-    System.out.println("m16() in Hello"); return new Hai();
-  }
-}
-class Jtc63 {
-  public static void main(String args[]){
-    Hello h1=new Hello();
 ```
 
-```java
+
+
+`System.out.println("m15 in Hello");`
+
+`return new Hai();`
+
+`static Hai m16(){`
+
+`System.out.println("m16() in Hello"); return new Hai();`
+
+`}`
+
+`}`
+
+`class Jtc63 {`
+
+`public static void main(String args[]){`
+
+`Hello h1=new Hello();`
+
+```
 int i=h1.m11();
 System.out.println(i);
-
 Hai hai=h1.m12();
 hai.m1();
 Hai Hai=h1.m13(null);
@@ -3158,12 +3159,13 @@ Hai hai2=Hello.m16();
 Hai hai3=Hello.m16();
 System.out.println(hai2.hashCode());
 System.out.println(hai3.hashCode());
-
-}
-}
 ```
 
-# Output:
+`}`
+
+`}`
+
+## Output
 
 ```
 D:\program\All JTC Program>java Jtc63
@@ -3182,21 +3184,25 @@ m16() in Hello
 1311053135
 ```
 
-程序 6.13
+## 程序 6.13
+
 ```java
 class Hai{
-void m1(){
-System.out.println("m1 in Hello");
+    void m1(){
+        System.out.println("m1 in Hello");
+    }
 }
 ```
 
 ```java
 class Hello {
-    static Hai hai=new Hai(); static Hai getHai() {
-    System.out.println("getHai() in Hello");
-    return hai;
+    static Hai hai=new Hai(); 
+    static Hai getHai() {
+        System.out.println("getHai() in Hello");
+        return hai;
     }
 }
+
 class Jtc64 {
     public static void main(String args[]) {
         Hai hai=Hello.getHai();
@@ -3207,7 +3213,7 @@ class Jtc64 {
 }
 ```
 
-# Output:
+## Output
 
 ```
 p:\program\All JTC Program>javac Jtc64.java
@@ -3218,46 +3224,44 @@ getHai() in Hello
 366712642
 ```
 
-注意：你不能将方法参数指定为 'void'。
+注意：你不能将方法参数指定为 `void`。
 
-# 程序 6.14
+## 程序 6.14
 
 ```java
 class Hello {
-    int m1()
-```
+    int m1() {
+        System.out.println("M1 in Hello");
+        return 10;
+    }
+    static int m2() {
+        System.out.println("m2 in Hello");
+        return 20;
+    }
+    //static int i1=m1();
+    static int i2=m2();
+    int i3=m1();
+    int i4=m2();
+    static int m3() {
+        System.out.println("m3 in Hello");
+        return 100;
+    }
+    static void m4(int a) {
+        System.out.println("m4(int a) in Hello");
+        System.out.println(a);
+    }
+}
 
-```java
-System.out.println("M1 in Hello");
-return 10;
-}
-static int m2() {
-System.out.println("m2 in Hello");
-return 20;
-}
-//static int i1=m1();
-static int i2=m2();
-int i3=m1();
-int i4=m2();
-static int m3() {
-System.out.println("m3 in Hello");
-return 100;
-}
-static void m4(int a) {
-System.out.println("m4(int a) in Hello");
-System.out.println(a);
-}
-}
 class Jtc65 {
-public static void main(String[] args[]) {
-//Hello h1=new Hello();
-Hello.m2();
-Hello.m3();
+    public static void main(String[] args[]) {
+        //Hello h1=new Hello();
+        Hello.m2();
+        Hello.m3();
+    }
 }
-
 ```
 
-# Output:
+## Output
 
 ```
 D:\program\All JTC Program>java Jtc65
@@ -3267,32 +3271,34 @@ m4(int a) in Hello
 100
 ```
 
-程序 6.15
+## 程序 6.15
 
 ```java
 class Hello{
-int m1(){
-System.out.println("m1 in Hello");
-return 10;
+    int m1(){
+        System.out.println("m1 in Hello");
+        return 10;
+    }
+    int m2(){
+        System.out.println("m2 in Hello");
+        return 20;
+    }
+    void m3(){
+        System.out.println("m3 in Hello");
+    }
 }
-int m2(){
-System.out.println("m2 in Hello");
-return 20;
-}
-void m3(){
-System.out.println("m3 in Hello");
-}
+
 class Jtc66{
-public static void main(String[] args[]){
-Hello h1=new Hello();
-System.out.println(h1.m1());
-System.out.println(h1.m2());
-h1.m3();
-}
+    public static void main(String[] args[]){
+        Hello h1=new Hello();
+        System.out.println(h1.m1());
+        System.out.println(h1.m2());
+        h1.m3();
+    }
 }
 ```
 
-# Output:
+## Output
 
 ```
 D:\program\All JTC Program>java Jtc66
@@ -3318,47 +3324,49 @@ m3 in Hello
     - 参数顺序
     - 参数数量
 
-# 程序 6.16
+## 程序 6.16
 
 ```java
 class Arith{
-void sum1() {
-System.out.println("sum1 in Arith");
+    void sum1() {
+        System.out.println("sum1 in Arith");
+    }
+    void sum1(int a) {
+        System.out.println("sum1(int a) in Arith");
+    }
+    void sum1(byte b1) {
+        System.out.println("sum1(byte b1) in Arith");
+    }
+    void sum1(int a, byte b1) {
+        System.out.println("sum1(int a, b1) in Arith");
+    }
+    void sum1(byte b1,int a) {
+        System.out.println("sum1(byte b1, a) in Arith");
+    }
+    void sum1(int a, int b) {
+        System.out.println("sum1(a, b) in Arith");
+    }
+    void sum1(int a, double d) {
+        System.out.println("sum1(a, d) in Arith");
+    }
+    void sum1(double d,int a) {
+        System.out.println("sum1(d, a) in Arith");
+    }
 }
-void sum1(int a) {
-System.out.println("sum1(int a) in Arith");
-}
-void sum1(byte b1) {
-System.out.println("sum1(byte b1) in Arith");
-}
-void sum1(int a, byte b1) {
-System.out.println("sum1(int a, b1) in Arith");
-}
-void sum1(byte b1,int a) {
-System.out.println("sum1(byte b1, a) in Arith");
-}
-void sum1(int a, int b) {
-System.out.println("sum1(a, b) in Arith");
-}
-void sum1(int a, double d) {
-System.out.println("sum1(a, d) in Arith");
-}
-void sum1(double d,int a) {
-System.out.println("sum1(d, a) in Arith");
-}
+
 public class Jtc67 {
     public static void main(String[] arg[]) {
         Arith ar=new Arith();
-        sum1();
-        sum1(111);
-        sum1((byte)111);
+        ar.sum1();
+        ar.sum1(111);
+        ar.sum1((byte)111);
         ar.sum1(111,22.22);
         ar.sum1(22.22,111);
     }
 }
 ```
 
-# Output:
+## Output
 
 ```
 D:\program\All JTC Program>java Jtc67
@@ -3369,40 +3377,42 @@ sum1(int a, d) in Arith
 sum1(d, a) in Arith
 ```
 
-# 程序 6.17
+## 程序 6.17
 
 ```java
 class Hai {
 }
+
 class Hello {
-void m1(){
-System.out.println("m1 in Hello");
+    void m1(){
+        System.out.println("m1 in Hello");
+    }
+    void m1(Hai hai) {
+        System.out.println("m1(Hai hai) in Hello");
+    }
+    void m1(int a[]) {
+        System.out.println("m1(int a[]) in Hello");
+    }
+    void m1(Object O) {
+        System.out.println("m1(Object O) in Hello");
+    }
+    void m1(String str) {
+        System.out.println("m1(string str) in Hello");
+    }
 }
-void m1(Hai hai) {
-System.out.println("m1(Hai hai) in Hello");
-}
-void m1(int a[]) {
-System.out.println("m1(int a[]) in Hello");
-}
-void m1(Object O) {
-System.out.println("m1(Object O) in Hello");
-}
-void m1(String str) {
-System.out.println("m1(string str) in Hello");
-}
-}
+
 class Jtc68{
     public static void main(String arg[]){
-    Hello h1=new Hello();
-    h1.m1();
-    h1.m1(new Hai());
-    //h1.m1(null);
-    h1.m1("abc");
+        Hello h1=new Hello();
+        h1.m1();
+        h1.m1(new Hai());
+        //h1.m1(null);
+        h1.m1("abc");
     }
 }
 ```
 
-# Output:
+## Output
 
 ```
 D:\program\All JTC Program>java jtc68
@@ -3411,26 +3421,27 @@ m1(Hai hai) in Hello
 m1(string str) in Hello
 ```
 
-错误：引用 m1 歧义，Hello 中的方法 m1 (int []) 和方法 m1(String) 都匹配 - h1.m1(null);
+错误：引用 `m1` 歧义，`Hello` 中的方法 `m1(int [])` 和方法 `m1(String)` 都匹配 - `h1.m1(null);`
 
-# 程序 6.18
+## 程序 6.18
 
 ```java
 class Hello{
     void m1(final int a) {
-    System.out.println("m1 in Hello"+a);
+        System.out.println("m1 in Hello"+a);
     }
 }
+
 class Jtc70{
-public static void main(String arg[]){
-Hello h1=new Hello();
-h1.m1(100);
-h1.m1(200);
-}
+    public static void main(String arg[]){
+        Hello h1=new Hello();
+        h1.m1(100);
+        h1.m1(200);
+    }
 }
 ```
 
-Output:
+## Output
 
 ```
 D:\program\All JTC Program>java jtc70
@@ -3438,36 +3449,31 @@ m1 in Hello100
 m1 in Hello200
 ```
 
-注意：在 Jtc70 中，我们将 m1 方法参数声明为 final 变量。每当我们通过传递参数调用 m1 方法时，仅为变量 'a' 分配内存，并在处理完方法后分配的内存将被销毁。因此，如果为变量 'a' 分配的内存被销毁或释放，下次调用此 final 变量 'a' 方法时，'a' 将不存在，将进行新的内存分配。
+注意：在 `Jtc70` 中，我们将 `m1` 方法参数声明为 `final` 变量。每当我们通过传递参数调用 `m1` 方法时，仅为变量 `a` 分配内存，并在处理完方法后分配的内存将被销毁。因此，如果为变量 `a` 分配的内存被销毁或释放，下次调用此 `final` 变量 `a` 方法时，`a` 将不存在，将进行新的内存分配。
 
-# 程序 6.19
+## 程序 6.19
 
 ```java
 class Hello{
-void m1(byte b1){
-System.out.println("m1(byte b1) in Hello");
+    void m1(byte b1){
+        System.out.println("m1(byte b1) in Hello");
+    }
+    void m1(short s) {
+        System.out.println("m1(short s) in Hello");
+        return;// 空返回语句
+    }
+    void m1(int i) {
+        System.out.println("m1(int i) in Hello");
+    }
+    /*: 无效的方法声明，需要返回类型。 */
+    void m1(long l) {
+        System.out.println("m1(long l) in Hello");
+    }
+    void m1(char ch) {
+        System.out.println("m1(char ch):"+ch);
+    }
 }
-```
 
-
-
-
-
-```java
-void m1(short s) {
-    System.out.println("m1(short s) in Hello");
-    return;// 空返回语句
-}
-void m1(int i) {
-    System.out.println("m1(int i) in Hello");
-}
-/*: 无效的方法声明，需要返回类型。 */
-void m1(long l) {
-    System.out.println("m1(long l) in Hello");
-}
-void m1(char ch) {
-    System.out.println("m1(char ch):"+ch);
-}
 class Jtc71 {
     public static void main(String[] arg[]) {
         Hello h1 = new Hello();
@@ -3479,7 +3485,7 @@ class Jtc71 {
 }
 ```
 
-# 输出:
+## 输出
 
 ```
 D:\program\All JTC Program>java Jtc71
@@ -3489,11 +3495,11 @@ m1(byte b) in Hello
 m1(short s) in Hello
 ```
 
-# 注意
+## 注意
 
 当你通过传递某些整数调用 `m1()` 时，带有整数参数的 `m1()` 将被处理。如果没有找到整数参数，它将检查更高级兼容的数据类型。如果可用，则会调用该方法。
 
-# 程序 6.20
+## 程序 6.20
 
 ```java
 class Hello{
@@ -3514,16 +3520,16 @@ class Hello{
 }
 ```
 
-# 输出:
+## 输出
 
 ```
 D:\program\All JTC Program>java jtc72
 main in (String arg[]) in Jtc72
 ```
 
-# 注意
+## 注意
 
-JVM 通过“public static void main(String arg[])”来识别 main 方法的签名。当你运行程序时，JVM 会自动调用此方法，而其他 main 方法必须显式地调用。
+JVM 通过 `public static void main(String arg[])` 来识别 `main` 方法的签名。当你运行程序时，JVM 会自动调用此方法，而其他 `main` 方法必须显式地调用。
 
 我们可以在类中编写多个 `main` 方法，但它们必须是重载的 `main` 方法。
 
@@ -3531,7 +3537,7 @@ Q3：我可以调用 `main` 方法吗？
 
 答：是的，我们可以根据需要调用 `main` 方法。
 
-# 程序 6.21
+## 程序 6.21
 
 ```java
 class Hai{
@@ -3551,28 +3557,28 @@ class Jtc73 {
     }
     String str[]={"abcd"};
     Hai.main(str);
-    
     public static void main(String arg[]) {
         System.out.println("main in Jtc73");
     }
 }
 ```
 
-# 输出:
+## 输出
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_202_0.png)
 
-# 注意
+## 注意
 
 对于 `Jtc73` 来说，输出取决于我们运行程序时使用的名称。如果我们以 `Jtc73` 的名称运行程序，JVM 首先在内部写入一段代码（`Jtc73.main()`）。为了调用这些 `main` 方法，必须将 `Jtc73` 类加载到内存中。而在静态块中我们调用了 `Hai.main()`。
 
-# 程序 6.22
+## 程序 6.22
 
 ```java
 class Hai {
     public static void main(String arg[]) {
     }
 }
+
 class Jtc74 {
     static {
         System.out.println("SB in Jtc74");
@@ -3584,6 +3590,8 @@ class Jtc74 {
     }
 }
 ```
+
+
 
 # 输出:
 
@@ -3606,6 +3614,7 @@ class Hello {
         System.out.println("m2() in Hello");
     }
 }
+
 class Jtc75 {
     Hello h1 = new Hello();
     static Jtc75 jtc75 = new Jtc75();
@@ -3640,7 +3649,7 @@ m2() in Hello
 
 ## 7.1 什么是构造函数
 
-它是一个与类同名的特殊方法，用于初始化类的实例变量。甚至可以初始化静态变量，但这不是推荐的做法。构造函数不能有任何返回类型（如 `void`）。构造函数会在对象创建时自动处理；你不能显式地调用构造函数。如果构造函数有返回类型，它将被视为普通方法，即在你调用它时才会被处理。你可以编写多个构造函数，但它们在以下方面不同：
+它是一个与类同名的特殊方法，用于初始化类的实例变量。甚至可以初始化静态变量，但这不是推荐的做法。构造函数不能有任何返回类型（如`void`）。构造函数会在对象创建时自动处理；你不能显式地调用构造函数。如果构造函数有返回类型，它将被视为普通方法，即在你调用它时才会被处理。你可以编写多个构造函数，但它们在以下方面不同：
 
 ### 参数数量
 
@@ -3669,6 +3678,7 @@ class Hello {
         System.out.println("m1 in Hello");
     }
 }
+
 class Jtc76 {
     public static void main(String arg[]) {
         Hello h1 = new Hello();
@@ -3710,7 +3720,7 @@ m1 in Hello
 
 # 注意
 
-当我们创建一个类的对象时，引用变量 `h1` 将被分配并赋值 `null`。类的实例变量将在堆内获取内存。类的实例块将被处理。相应的构造函数将被处理处理。最后，对象引用将赋值给引用变量。
+当我们创建一个类的对象时，引用变量`h1`将被分配并赋值`null`。类的实例变量将在堆内获取内存。类的实例块将被处理。相应的构造函数将被处理。最后，对象引用将赋值给引用变量。
 
 # 程序 7.2
 
@@ -3744,6 +3754,7 @@ class Hello {
         System.out.println(b);
     }
 }
+
 class Jtc77 {
     public static void main(String args[]) {
         Hello h1 = new Hello();
@@ -3787,6 +3798,7 @@ class Hello {
         System.out.println(c);
     }
 }
+
 class Jtc78 {
     public static void main(String arg[]) {
         // Hello h1=new Hello();
@@ -3803,35 +3815,31 @@ class Jtc78 {
 
 # 错误
 
-Java17: 类 Hello 中的构造函数 无法应用于给定类型：
-Hello h2=new Hello(111);
+Java17: 类`Hello`中的构造函数无法应用于给定类型：
+`Hello h2=new Hello(111);`
 
-需要：无参数找到：int
+需要：无参数找到：`int`
 原因：实际和形式参数列表不匹配
 
-类 Hello 中的构造函数 无法应用于给定类型：
-Hello h1=new Hello();
+类`Hello`中的构造函数无法应用于给定类型：
+`Hello h1=new Hello();`
 
-需要：无参数找到：int
+需要：无参数找到：`int`
 原因：实际和形式参数列表不匹配
 
 # 注意
 
-当你在类内部没有编写任何参数化构造函数时，JVM 会在内部或自动插入默认构造函数。
-
-
-
-
+当你在类内部没有编写任何参数化构造函数时，JVM会在内部或自动插入默认构造函数。
 
 ## 7.2 final 变量与静态 final 变量
 
-final 变量可以通过三种方式声明：
+`final`变量可以通过三种方式声明：
 
 - 在声明时
 - 通过代码块（block）的帮助
 - 构造函数
 
-静态 final 变量应该在以下位置进行初始化：
+静态`final`变量应该在以下位置进行初始化：
 
 - 在声明时
 - 静态块（static block）
@@ -3852,6 +3860,7 @@ class Hello {
         System.out.println(a);
     }
 }
+
 class Jtc79 {
     public static void main(String arg[]) {
         Hello h1 = new Hello();
@@ -3869,9 +3878,9 @@ final Hello(int a1){
 1 error
 ```
 
-Q2 : 我可以将类的构造函数声明为 static 吗？
+Q2 : 我可以将类的构造函数声明为`static`吗？
 
-答：不能，我们不能将类的构造函数声明为 static。
+答：不能，我们不能将类的构造函数声明为`static`。
 
 # 程序 7.5
 
@@ -3882,7 +3891,8 @@ class Hello {
     static final int c;
     /*
     {System.out.println("IB in Hello"); b=200; c=300;
-    */ static {
+    */
+    static {
         System.out.println("SB in Hello");
         c = 100;
     }
@@ -3931,9 +3941,9 @@ m1 in Hello
 100
 ```
 
-Note: Hello h1=new Hello(); Hello h2=new Hello();
+Note: `Hello h1=new Hello();` `Hello h2=new Hello();`
 
-ERROR: variable b might already been initialized. (Fig. 7.2)
+ERROR: variable `b` might already been initialized. (Fig. 7.2)
 
 ```java
 b=a1;
@@ -3963,6 +3973,7 @@ class Hello {
         System.out.println("2 param constructor in Hello");
     }
 }
+
 class Jtc81 {
     public static void main(String[] args) {
         // Hello h1=new Hello();
@@ -3995,9 +4006,9 @@ Q3 : 类级变量和局部变量可以有相同的名称吗？
 
 答：是的，可以这样做。
 
-Q4 : 我们可以将类的默认构造函数声明为 private 吗？
+Q4 : 我们可以将类的默认构造函数声明为`private`吗？
 
-答：是的，我们可以将类的构造函数声明为私。但当你将类的构造函数声明为私时，你无法从类外部创建该类的对象，因为类的私有构造函数无法从外部访问。
+答：是的，我们可以将类的构造函数声明为私有。但当你将类的构造函数声明为私有时，你无法从类外部创建该类的对象，因为类的私有构造函数无法从外部访问。
 
 Q5 : 构造函数的主要益处或用途是什么？
 
@@ -4005,7 +4016,7 @@ Q5 : 构造函数的主要益处或用途是什么？
 
 # 注意
 
-在大多数情况下，建议使用 setters 和 getters 而不是使用构造函数，这与构造函数相比节省了大量内存。
+在大多数情况下，建议使用`setters`和`getters`而不是使用构造函数，这与构造函数相比节省了大量内存。
 
 ## 8.1 虚拟机
 
@@ -4020,11 +4031,11 @@ Q5 : 构造函数的主要益处或用途是什么？
 
 ## 8.2 JVM
 
-JVM 是 JRE 的部分。负责加载和执行 Java 应用。
+`JVM`是`JRE`的部分。负责加载和执行Java应用。
 
 ## 8.3 this
 
-`this` 是一个指向当前对象的引用变量。
+`this`是一个指向当前对象的引用变量。
 
 # 程序 8.1
 
@@ -4033,221 +4044,382 @@ class Hello {
     int a;
     int b;
     static int c = 30;
-
     Hello() {
         System.out.println("default constructor in Hello");
     }
-
     Hello(int a) {
         System.out.println("1 param constructor in Hello");
         this.a = a;
     }
-
     Hello(int a, int b) {
         System.out.println("2 param constructor in Hello");
         this.a = a;
         this.b = b;
     }
-
     Hello(int a, int b, int c) {
-        System.out.println("3 param constructor in Hello");
-        this.a = a;
-        this.b = b;
-        this.c = c;
-    }
-
-    void show() {
-        System.out.println("show in Hello");
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
-        System.out.println(this.a);
-        System.out.println(this.b);
-        System.out.println(this.c);
-    }
-}
-
-class Jtc82 {
-    public static void main(String[] arg[]) {
-        Hello h1 = new Hello();
-        h1.show();
-
-        Hello h2 = new Hello(111);
-        h2.show();
-
-        Hello h3 = new Hello(222, 333);
-        h3.show();
-
-        Hello h4 = new Hello(444, 555, 666);
-        h4.show();
-    }
-}
-```
-
-输出:
-```
-default constructor in Hello
-show in Hello
-0
-0
-30
-0
-0
-30
-1 param constructor in Hello
-show in Hello
-111
-0
-30
-111
-0
-30
-2 param constructor in Hello
-show in Hello
-222
-333
-30
-222
-333
-30
-3 param constructor in Hello
-show in Hello
-444
-555
-30
-444
-555
-30
 ```
 
 
 
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`。
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+---
 
 ```java
-Hello(int a) {
-    System.out.println("1 param constructor in Hello");
-    System.out.println(this);
-    System.out.println(this.hashCode());
-    this.a = a;
-}
+System.out.println("3 param constructor in Hello");
 
-Hello(int a, int b) {
-    System.out.println("2 param constructor in Hello");
-    System.out.println(this);
-    System.out.println(this.hashCode());
-    this.a = a;
-    this.b = b;
+this.a = a;
+
+this.b = b;
+
+this.c = c;
+
 }
 
 void show() {
-    int a = 100;
-    int b = 200;
-    int c = 300;
+
     System.out.println("show in Hello");
-    System.out.println(this);
+
     System.out.println(a);
+
     System.out.println(b);
+
     System.out.println(c);
+
     System.out.println(this.a);
+
     System.out.println(this.b);
+
     System.out.println(this.c);
+
+}
+
+}
+
+class Jtc82 {
+
+    public static void main(String[] arg[]) {
+
+        Hello h1 = new Hello();
+
+        h1.show();
+
+        Hello h2 = new Hello(111);
+
+        h2.show();
+
+        Hello h3 = new Hello(222, 333);
+
+        h3.show();
+
+        Hello h4 = new Hello(444, 555, 666);
+
+        h4.show();
+
+    }
+
+}
+```
+
+输出：
+
+```
+default constructor in Hello
+
+show in Hello
+
+0
+
+0
+
+30
+
+0
+
+0
+
+30
+
+1 param constructor in Hello
+
+show in Hello
+
+111
+
+0
+
+30
+
+111
+
+0
+
+30
+
+2 param constructor in Hello
+
+show in Hello
+
+222
+
+333
+
+30
+
+222
+
+333
+
+30
+
+3 param constructor in Hello
+
+show in Hello
+
+444
+
+555
+
+30
+
+444
+
+555
+
+30
+```
+
+---
+
+```java
+Hello(int a) {
+
+    System.out.println("1 param constructor in Hello");
+
+    System.out.println(this);
+
+    System.out.println(this.hashCode());
+
+    this.a = a;
+
+}
+
+Hello(int a, int b) {
+
+    System.out.println("2 param constructor in Hello");
+
+    System.out.println(this);
+
+    System.out.println(this.hashCode());
+
+    this.a = a;
+
+    this.b = b;
+
+}
+
+void show() {
+
+    int a = 100;
+
+    int b = 200;
+
+    int c = 300;
+
+    System.out.println("show in Hello");
+
+    System.out.println(this);
+
+    System.out.println(a);
+
+    System.out.println(b);
+
+    System.out.println(c);
+
+    System.out.println(this.a);
+
+    System.out.println(this.b);
+
+    System.out.println(this.c);
+
 }
 
 static void show1() {
+
     int a = 999;
+
     int b = 888;
+
     int c = 777;
+
     System.out.println("show1 in Hello");
+
     // System.out.println(a);
+
     // System.out.println(b);
+
     System.out.println(c);
+
     System.out.println(a);
+
     System.out.println(b);
+
     System.out.println(c);
+
     // System.out.println(this.a);
+
     // System.out.println(this.b);
+
     // System.out.println(this.c);
+
 }
+
 }
+
 }
 
 class Jtc83 {
+
     public static void main(String args[]) {
+
         Hello h1 = new Hello();
+
         System.out.println(h1);
+
         System.out.println(h1.hashCode());
+
         h1.show();
+
         System.out.println("***2nd object creation***");
+
         Hello h2 = new Hello(999);
+
         h2.show();
+
     }
+
 }
 ```
 
-# 输出:
+输出：
 
 ```
 D:\program\All JTC Program\java Jtc8
+
 S8 in Hello
+
 101
+
 202
+
 303
+
 101
+
 202
+
 303
+
 IB in Hello
+
 Hello@15db9742
+
 366712642
+
 101
+
 202
+
 303
+
 default constructor in Hello
+
 Hello@15db9742
+
 366712642
+
 Hello@15db9742
+
 366712642
+
 show in Hello
+
 Hello@15db9742
+
 100
+
 200
+
 300
+
 0
+
 0
+
 30
 ```
 
 ```
 ***2nd object creation***
+
 IB in Hello
+
 Hello@6d06d69c
+
 1829164700
+
 101
+
 202
+
 303
+
 101
+
 202
+
 303
+
 1 param constructor in Hello
+
 Hello@6d06d69c
+
 1829164700
+
 show in Hello
+
 Hello@6d06d69c
+
 100
+
 200
+
 300
+
 999
+
 0
+
 30
 ```
 
 注意：
 
-通过使用 "this"，我们可以在构造方法内部调用当前类的构造方法。
+通过使用`this`，我们可以在构造方法内部调用当前类的构造方法。
 
 在构造方法中调用当前类构造方法时，请记住以下几点：
 
-- "this" 必须是构造方法内部条语句。
+- `this`必须是构造方法内部的第一条语句。
 - 从构造方法最多只能调用一个构造方法。
 - 不允许构造方法的循环调用。
 
@@ -4255,66 +4427,103 @@ Hello@6d06d69c
 
 ```java
 class Hello {
+
     int a;
+
     int b;
+
     static int c = 30;
 
     {
+
         System.out.println("IB in Hello");
+
     }
 
     static {
+
         System.out.println("SB in Hello");
+
     }
 
     Hello(int a, int b, int c) {
+
         // this(5451);
+
         System.out.println("3 param constructor in Hello");
+
         System.out.println(a);
+
         System.out.println(b);
+
         System.out.println(c);
+
     }
 
     Hello(22, 33, 44);
+
     System.out.println("2 param constructor in Hello");
+
     this.a = a;
+
     this.b = b;
+
     }
 
     Hello(int a) {
+
         this(888, 777);
+
         System.out.println("1 param constructor in Hello");
+
         this.a = a;
+
     }
 
     Hello() {
+
         this(999);
+
         System.out.println("default constructor in Hello");
+
     }
 
     void show() {
+
         System.out.println("show in Hello");
+
         System.out.println(a);
+
         System.out.println(b);
+
         System.out.println(c);
+
     }
+
 }
 
 class Jtc84 {
+
     public static void main(String args[]) {
+
         Hello h1 = new Hello();
+
         h1.show();
+
     }
+
 }
 ```
 
-# 输出:
+输出：
 
+```
 ERROR: 递归构造方法调用。
+```
 
 记住以下几点：
 
-- 'this' 必须是构造方法内部的第一条语句。
+- `this`必须是构造方法内部的第一条语句。
 - 从构造方法只能调用一个构造方法。
 - 不允许构造方法的循环调用。
 - 不能在构造方法以外的任何方法中调用构造方法。
@@ -4323,263 +4532,458 @@ ERROR: 递归构造方法调用。
 
 ```java
 class Hello {
+
     int a;
+
     int b;
+
     static int c = 30;
 
     Hello() {
+
         System.out.println("Default Constructor");
+
     }
 
     Hello(int a) {
+
         System.out.println("1 Parameterised Constructor");
+
         this.a = a;
+
     }
 
     Hello(int a, int b) {
+
         System.out.println("2 Parameterised Constructor");
+
         this.a = a;
+
         this.b = b;
+
     }
 
     Hello(int a, int b, int c) {
+
         System.out.println("3 Parameterised Constructor");
+
         this.a = a;
+
         this.b = b;
+
         this.c = c;
+
     }
 
     void show() {
+
         System.out.println("Show method inside Class");
+
         System.out.println(a);
+
         System.out.println(b);
+
         System.out.println(c);
+
         System.out.println(this.a);
+
         System.out.println(this.b);
+
         System.out.println(this.c);
+
     }
+
 }
 
 class Jtc29 {
+
     public static void main(String args[]) {
+
         Hello h1 = new Hello();
+
         h1.show();
+
         Hello h2 = new Hello(10);
+
         h2.show();
+
         Hello h3 = new Hello(11,13);
+
         h3.show();
+
         Hello h4 = new Hello(101,201,301);
+
         h4.show();
+
     }
+
 }
 ```
-*(注：由于原文文本中存在大量代码语法错误（如括号未闭合、重复定义），翻译时保留了原文的结构并仅翻译文本描述)*
 
+*（注：由于原文文本中存在大量代码语法错误（如括号未闭合、重复定义），翻译时保留了原文的结构并仅翻译文本描述）*
+
+---
 
 ```java
 System.out.println(c);
+
 System.out.println(a);
+
 System.out.println(b);
+
 System.out.println(c);
+
 }
+
 static
+
 int a=101;
 ```
 
 ```java
 int b=202;
-int c=303;
-System.out.println("SB in Hello");
-//System.out.println(this);
-System.out.println(a);
-System.out.println(b);
-System.out.println(c);
-System.out.println(a);
-System.out.println(b);
-System.out.println(c);
-}
-Hello() {
-    System.out.println("Default constructor in Hello");
-    System.out.println(this);
-    System.out.println(this.hashCode());
-}
-Hello(int a) {
-    System.out.println("1 parameter constructor in Hello");
-    System.out.println(this);
-    System.out.println(this.hashCode());
-    this.a=a;
-}
-Hello(int a,int b) {
-    System.out.println("2 parameter constructor in Hello");
-    System.out.println(this);
-    System.out.println(this.hashCode());
-    this.a=a; this.b=b;
-}
-void show(){
 
+int c=303;
+
+System.out.println("SB in Hello");
+
+//System.out.println(this);
+
+System.out.println(a);
+
+System.out.println(b);
+
+System.out.println(c);
+
+System.out.println(a);
+
+System.out.println(b);
+
+System.out.println(c);
+
+}
+
+Hello() {
+
+    System.out.println("Default constructor in Hello");
+
+    System.out.println(this);
+
+    System.out.println(this.hashCode());
+
+}
+
+Hello(int a) {
+
+    System.out.println("1 parameter constructor in Hello");
+
+    System.out.println(this);
+
+    System.out.println(this.hashCode());
+
+    this.a=a;
+
+}
+
+Hello(int a,int b) {
+
+    System.out.println("2 parameter constructor in Hello");
+
+    System.out.println(this);
+
+    System.out.println(this.hashCode());
+
+    this.a=a; this.b=b;
+
+}
+
+void show(){
 ```
 
 ```java
 int a=10;
+
 int b=20;
+
 int c=30;
+
 System.out.println("show in Hello");
+
 System.out.println(this);
+
 System.out.println(a);
+
 System.out.println(b);
+
 System.out.println(c);
+
 System.out.println(this.a);
+
 System.out.println(this.b);
+
 System.out.println(this.c);
+
 }
+
 static void show1() {
+
     int a=110;
+
     int b=220;
+
     int c=330;
+
     System.out.println("show1 in Hello");
+
     //System.out.println(a);
+
     //System.out.println(b);
+
     //System.out.println(c);
+
     System.out.println(a);
+
     System.out.println(b);
+
     System.out.println(c);
+
     //System.out.println(this.a);
+
     //System.out.println(this.b);
 ```
 
 ```java
 //System.out.println(this.c);
+
 }
+
 }
 ```
 
 ```java
 class Jtc34{
+
     public static void main(String arg[]){
+
         Hello h1=new Hello();
+
         System.out.println(h1);
+
         System.out.println(h1.hashCode());
+
         h1.show();
+
         System.out.println("******** 2nd Object Creation********");
+
         Hello h2=new Hello(999);
+
         h2.show();
+
     }
+
 }
 ```
 
 # 注意
 
-当你在创建类的对象时，在内部处理相应的构造函数，JVM 会检查是否存在“this”或“super”语句。
+当你在创建类的对象时，在内部处理相应的构造函数，JVM会检查是否存在`this`或`super`语句。
 
-如果没有可用的“this”语句，则它将处理该构造函数；但如果存在任何“this”语句，它会首先尝试处理该构造函数。在处理完构造函数后，它会回到当前类的构造函数。
+如果没有可用的`this`语句，则它将处理该构造函数；但如果存在任何`this`语句，它会首先尝试处理该构造函数。在处理完构造函数后，它会回到当前类的构造函数。
 
-在构造函数中，当我们使用这两个语句时，编译时会报错，因为为了调用构造函数，“this” 必须是构造函数内部的第一条语句。
+在构造函数中，当我们使用这两个语句时，编译时会报错，因为为了调用构造函数，`this`必须是构造函数内部的第一条语句。
 
-在 Jtc84 的情况下，当我们根据默认构造函数创建对象时，它首先会尝试处理 Hello 类的默认构造函数。
+在`Jtc84`的情况下，当我们根据默认构造函数创建对象时，它首先会尝试处理`Hello`类的默认构造函数。
 
-在处理默认构造函数时，它遇到了带有一个参数的“this”语句，因此控制权将立即转移到单参数构造函数。
+在处理默认构造函数时，它遇到了带有一个参数的`this`语句，因此控制权将立即转移到单参数构造函数。
 
-在处理单参数构造函数时，它遇到了带有两个参数的“this”语句，因此在处理单参数构造函数之前，控制权将转移到双参数构造函数，然后同样地转移到三参数构造函数。
+在处理单参数构造函数时，它遇到了带有两个参数的`this`语句，因此在处理单参数构造函数之前，控制权将转移到双参数构造函数，然后同样地转移到三参数构造函数。
 
-在处理过程中，将先处理前三个参数构造函数，然后是 2 个、1 个，最后处理默认的。
+在处理过程中，将先处理前三个参数构造函数，然后是2个、1个，最后处理默认的。
 
 # 程序 8.4
 
 ```java
 class Student {
+
     int sid;
+
     String name;
+
     double fee;
+
     static Student s1 = null;
-    private Student() {
-    }
-    static {
-        s1 = new Student();
-    }
+```
 
-    public static Student getStudent() {
-        return s1;
-    }
-    public void setSid(int sid) {
-        this.sid = sid;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-    public void setFee(double fee) {
-        this.fee = fee;
-    }
-    public int getSid() {
-        return sid;
-    }
-    public String getName() {
-        return name;
-    }
-    public double getFee() {
-        return fee;
-    }
-    /*
-    Student() {System.out.println("default constructor in Hello");}
-    */
-    /*
-    Student(int sid,String name,double fee) {this.sid=sid; this.name=name; this.fee=fee; }
-    */
-    public String toString() {
-        return "Name \t:" + name + "\n ID \t:" + sid + "\n Fee \t:" + fee;
-    }
 
-    /*
-    * void display() { System.out.println("displaying details of student");
-    * System.out.println(sid); System.out.println(name);
-    * System.out.println(fee);
-    */
+`private Student()` {
+
 }
-public class Jtc85 {
-    public static void main(String arg[]) {
-        // Student s1=new Student();
-        // s1.display();
-        /*
-        System.out.println(s1);
-        System.out.println(s1.toString());
-        Student s2=new Student(101,"some",0.0);
-        System.out.println(s2);
-        Student s3=new Student(202,"some",88.99);
-        System.out.println(s3);
-        */
-        Student s11 = null;
-        s11 = Student();
-        System.out.println(s11);
-        s11.setName('java');
-        s11.setSid(101);
-        s11.setFee(99.99);
-        System.out.println(s11);
-        System.out.println(s11.getName());
-        Student s12 = Student();
-        System.out.println(s12);
 
-        System.out.println(s11.equals(s12));
-        System.out.println(s11 == s12);
-        System.out.println(s11.hashCode());
-        System.out.println(s12.hashCode());
-    }
+`static` {
+
+`s1 = new Student();`
+
 }
+
+`public static Student getStudent()` {
+
+`return s1;`
+
+}
+
+`public void setSid(int sid)` {
+
+`this.sid = sid;`
+
+}
+
+`public void setName(String name)` {
+
+`this.name = name;`
+
+}
+
+`public void setFee(double fee)` {
+
+`this.fee = fee;`
+
+}
+
+`public int getSid()` {
+
+`return sid;`
+
+}
+
+`public String getName()` {
+
+`return name;`
+
+}
+
+`public double getFee()` {
+
+`return fee;`
+
+}
+
+`/*
+
+Student() {System.out.println("default constructor in Hello");}
+
+*/`
+
+`/*
+
+Student(int sid,String name,double fee) {this.sid=sid; this.name=name; this.fee=fee; }
+
+*/`
+
+`public String toString()` {
+
+`return "Name \t:" + name + "\n ID \t:" + sid + "\n Fee \t:" + fee;`
+
+}
+
+`/*
+
+* void display() { System.out.println("displaying details of student");
+
+* System.out.println(sid); System.out.println(name);
+
+* System.out.println(fee);
+
+*/`
+
+}
+
+`public class Jtc85` {
+
+`public static void main(String arg[])` {
+
+`// Student s1=new Student();`
+
+`// s1.display();`
+
+`/*
+
+System.out.println(s1);
+
+System.out.println(s1.toString());
+
+Student s2=new Student(101,"some",0.0);
+
+System.out.println(s2);
+
+Student s3=new Student(202,"some",88.99);
+
+System.out.println(s3);
+
+*/`
+
+`Student s11 = null;`
+
+`s11 = Student();`
+
+`System.out.println(s11);`
+
+`s11.setName('java');`
+
+`s11.setSid(101);`
+
+`s11.setFee(99.99);`
+
+`System.out.println(s11);`
+
+`System.out.println(s11.getName());`
+
+`Student s12 = Student();`
+
+`System.out.println(s12);`
+
+`System.out.println(s11.equals(s12));`
+
+`System.out.println(s11 == s12);`
+
+`System.out.println(s11.hashCode());`
+
+`System.out.println(s12.hashCode());`
+
+}
+
+}
+
 ```# 输出：
 
 ```
-D:\program\All Program>java jtc85
-Name :null
-ID :0
-Fee :0.0
-Name :java
-ID :101
-Fee :99.99
-Name :java
-ID :101
-Fee :99.99
-true
-366742
-366742
+
+`D:\program\All Program>java jtc85`
+
+`Name :null`
+
+`ID :0`
+
+`Fee :0.0`
+
+`Name :java`
+
+`ID :101`
+
+`Fee :99.99`
+
+`Name :java`
+
+`ID :101`
+
+`Fee :99.99`
+
+`true`
+
+`366742`
+
+`366742`
+
 ```# 8.4 VAR-ARG 方法
 
 VAR-ARG 方法在 JDK1.5 中引入，VAR-ARG 指变长参数。
@@ -4588,17 +4992,12 @@ VAR-ARG 是基于数组实现的。
 
 在编写 VAR-ARG 方法时请记住：
 
-VAR-ARG 必须是方法的最后一个参数。
-
-一个方法不能包含多个 VAR-ARG。
-
-VAR-ARG 不能是第一个参数。
-
-在调用 VAR-ARG 方法时，优先考虑 VAR-ARG 方法。
-
-如果没有精确匹配的方法，则将引用 VAR-ARG 方法。
-
-在无任何方法的情况下，将只引用 VAR-ARG 方法。
+- VAR-ARG 必须是方法的最后一个参数。
+- 一个方法不能包含多个 VAR-ARG。
+- VAR-ARG 不能是第一个参数。
+- 在调用 VAR-ARG 方法时，优先考虑 VAR-ARG 方法。
+- 如果没有精确匹配的方法，则将引用 VAR-ARG 方法。
+- 在无任何方法的情况下，将只引用 VAR-ARG 方法。
 
 # 语法
 
@@ -4620,7 +5019,9 @@ VAR-ARG 不能是第一个参数。
 8) void m1(double...d,int...a){
 //NOT OK
 }
-```# 程序 8.5
+```
+
+# 程序 8.5
 
 ```java
 class Hello {
@@ -4654,6 +5055,7 @@ class Hello {
         System.out.println("m2(int a,int b) in Hello");
     }
 }
+
 class Jtc86 {
     public static void main(String arg[]) {
         Hello h1 = new Hello();
@@ -4685,9 +5087,11 @@ m2 in Hello
 ```
 
 程序 8.6
+
 ```java
 class Hai {
 }
+
 class Hello {
     void m1() {
         System.out.println("m1 in Hello");
@@ -4719,6 +5123,7 @@ class Hello {
     }
     */
 }
+
 class Jtc87 {
     public static void main(String arg[]) {
         Hello h1 = new Hello();
@@ -4731,12 +5136,9 @@ class Jtc87 {
 
 # 错误
 
-无法在 Hello 中同时声明 m1(int[]) 和 m1(int... a){ void m1(int a[]) {
+无法在 `Hello` 中同时声明 `m1(int[])` 和 `m1(int... a)`，如 `void m1(int a[])` 所示。
 
-引用 m1 是模糊的，方法 m1(int... ) in Hello
-&method m1(Hai) in Hello 均匹配 h1.m1(null);
-
-
+引用 `m1` 是模糊的，方法 `m1(int... )` 在 `Hello` 中与方法 `m1(Hai)` 在 `Hello` 中均匹配 `h1.m1(null);`
 
 ```java
 class Hello {
@@ -4790,6 +5192,7 @@ show in Hello
 ```
 
 Program 8.8
+
 ```java
 class Hai {
     static Hello h1 = new Hello();
@@ -4871,52 +5274,107 @@ class Hello {
             System.out.println(b1);
             System.out.println("local block in IB");
         }
+```
+
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+---
+
+```
         // System.out.println(a1);
+
         // System.out.println(b1);
+
     }
+
     static {
+
         System.out.println("SB in Hello");
+
         int a = 101;
+
         int b = 202;
+
         // static int c=303;
+
         {
+
             System.out.println("local block in SB");
+
             int a1 = 111;
+
             int b1 = 222;
+
             System.out.println(a);
+
             System.out.println(b);
+
             // System.out.println(this.a);
+
             // System.out.println(this.b);
+
             System.out.println(c);
+
             System.out.println(a1);
+
             System.out.println(b1);
+
             System.out.println("local block in SB");
+
         }
+
         // System.out.println(a1);
+
         // System.out.println(b1);
+
     }
+
     Hello() {
+
         System.out.println("default constructor in Hello");
+
     }
+
     Hello(int a1, int b1) {}
+
     void m1() {
+
         System.out.println("m1 in Hello");
+
     }
+
 }
 
 class Jtc90 {
+
     public static void main(String args[]) {
+
         Hello h1 = new Hello();
+
         h1.m1();
+
     }
+
 }
 ```
 
-Q2: 我们可以将类的变量声明为 `final` 吗？
+Q2: 我们可以将类的变量声明为`final`吗？
 
 答: 可以。
 
-Q3: 我们可以将局部变量声明为 `private` 吗？
+Q3: 我们可以将局部变量声明为`private`吗？
 
 答: 不可以，类的局部成员不能使用任何访问修饰符。
 
@@ -4924,24 +5382,41 @@ Q3: 我们可以将局部变量声明为 `private` 吗？
 
 ```java
 class Hello {
+
     int a = 10;
+
     void m1() {
+
         System.out.println("m1 in Hello");
+
         int a = 20;
+
         {
+
             System.out.println("local block in m1");
+
             // int a=30;
+
             System.out.println(a);
+
         }
+
         System.out.println(this.a);
+
     }
+
 }
 
 class Jtc91 {
+
     public static void main(String args[]) {
+
         Hello h1 = new Hello();
+
         h1.m1();
+
     }
+
 }
 ```
 
@@ -4949,33 +5424,53 @@ class Jtc91 {
 
 ```
 D:\program\All JTC Program>java Jtc1
+
 m1 in Hello
+
 local block in m1
+
 20
+
 10
 ```
-/* 错误：m1() 中已定义 a - int a=30; */
+
+/* 错误：`m1()`中已定义`a` - `int a=30;` */
 
 # 程序 8.11
 
 ```java
 class Hello {
+
     int a = 30;
+
     private int b = 20;
+
     void m1() {
+
         System.out.println("m1 in Hello");
+
         // int aa=10;
+
         // System.out.println(aa);
+
         System.out.println(a);
+
         System.out.println(b);
+
     }
+
 }
 
 class Jtc92 {
+
     public static void main(String args[]) {
+
         Hello h1 = new Hello();
+
         h1.m1();
+
     }
+
 }
 ```
 
@@ -4983,8 +5478,11 @@ class Jtc92 {
 
 ```
 D:\program\All JTC Programs>java Jtc2
+
 m1 in Hello
+
 30
+
 20
 ```
 
@@ -4992,22 +5490,37 @@ m1 in Hello
 
 ```java
 class Hello {
+
     static int s;
+
     static final int c = 30;
+
     static final int b;
+
     static {
+
         System.out.println("SB in Hello");
+
         b = 10;
+
     }
+
 }
 
 class Jtc93 {
+
     public static void main(String arg[]) {
+
         System.out.println("in main");
+
         // System.out.println(Hello.a);
+
         // System.out.println(Hello.b);
+
         System.out.println(Hello.c);
+
     }
+
 }
 ```
 
@@ -5015,13 +5528,15 @@ class Jtc93 {
 
 ```
 D:\program\All JTC Program>java Jtc3
+
 in main
+
 30
 ```
 
 # 注意
 
-在 Jtc93 中，当你通过类名直接访问静态变量 `a` 和 `b` 时，静态块会被处理；而当你只通过类名访问静态变量 `c` 时，静态块不会被处理，因为 `static final int c=30` 在声明时已经初始化，即变量 `c` 的值可用，因此不需要处理静态块。
+在`Jtc93`中，当你通过类名直接访问静态变量`a`和`b`时，静态块会被处理；而当你只通过类名访问静态变量`c`时，静态块不会被处理，因为`static final int c=30`在声明时已经初始化，即变量`c`的值可用，因此不需要处理静态块。
 
 # 8.7 断言 (Assertions)
 
@@ -5031,22 +5546,27 @@ in main
 
 因此，断言的主要目的是进行调试。通常我们可以在开发环境或测试环境中进行调试，但不能不在生产环境中，因此该概念适用于开发和测试环境，而不适用于生产环境。
 
-# 作为关键字和标识符的 assert
+# 作为关键字和标识符的`assert`
 
-`assert` 关键字是在 1.4 版本中引入的，因此从 1.4 版本开始我们不能将 `assert` 作为标识符，但在 1.3 之前我们可以将 `assert` 作为标识符。
+`assert`关键字是在 1.4 版本中引入的，因此从 1.4 版本开始我们不能将`assert`作为标识符，但在 1.3 之前我们可以将`assert`作为标识符。
 
 # 示例
 
 ```java
 class Hai {
+
   public static void main(String[] args) {
+
     int assert = 10;
+
     System.out.println(assert);
+
   }
+
 }
 ```
 
-注意：始终可以使用 `-source` 根据特定版本编译 Java 程序。
+注意：始终可以使用`-source`根据特定版本编译 Java 程序。
 
 # 断言语句的类型
 
@@ -5060,50 +5580,56 @@ class Hai {
 assert(b);//b 应该是布尔类型。
 ```
 
-如果 `b` 为真，则我们的假设是正确的，并正常继续运行程序的剩余部分。
+如果`b`为真，则我们的假设是正确的，并正常继续运行程序的剩余部分。
 
-如果 `b` 为假，则我们的假设失败，因此通过抛出断言错误来停止程序执行。
+如果`b`为假，则我们的假设失败，因此通过抛出断言错误来停止程序执行。
 
 ## 2. 增强版本
-
-
-
 
 通过使用带参数的版本，我们可以配合断言错误（assertion error）传递额外的信息。
 
 语法：
 
+```
 assert(b):e;
-'b' 应该是布尔类型。
-'e' 可以是任何类型。
+```
+
+`b`应该是布尔类型。`e`可以是任何类型。
 
 # 示例
 
 ```java
 class Hello{
+
     public static void main(String args[])
+
     {
+
     int a=10;
+
     assert(a>10):"Less";
+
     System.out.println("value of a is : "+a);
+
     }
+
 }
 ```
 
 # 各运行时标志
 
-- -ea: 在所有非系统类（用户自定义类）中启用断言。
-- -enableassertions: 与 -ea 完全相同。
-- -da: 在所有非系统类中禁用断言。
-- -disableassertions: 与 -da 完全相同。
-- -esa: 在所有系统类（预定义类或应用程序类）中启用断言。
-- -enablesystemassertions: 与 -esa 完全相同。
-- -dsa: 在所有系统类中禁用断言。
-- -disablesystemassertions: 与 -dsa 完全相同。
+- `-ea`: 在所有非系统类（用户自定义类）中启用断言。
+- `-enableassertions`: 与`-ea`完全相同。
+- `-da`: 在所有非系统类中禁用断言。
+- `-disableassertions`: 与`-da`完全相同。
+- `-esa`: 在所有系统类（预定义类或应用程序类）中启用断言。
+- `-enablesystemassertions`: 与`-esa`完全相同。
+- `-dsa`: 在所有系统类中禁用断言。
+- `-disablesystemassertions`: 与`-dsa`完全相同。
 
 # 断言的适当与不当使用
 
-将编程逻辑与 assert 语句混合始终是不适当的，因为无法保证 assert 语句在运行时始终会执行。
+将编程逻辑与`assert`语句混合始终是不适当的，因为无法保证`assert`语句在运行时始终会执行。
 
 对于验证公方法的参数使用，使用断言始终是不适当的，因为外部人员不知道我们本地系统是否启用或禁用了断言。而在执行调试时，如果某个地方控制流无法到达，那里就是使用断言的最佳位置。
 
@@ -5111,28 +5637,37 @@ class Hello{
 
 使用断言验证私有方法的参数始终是适当的。
 
-使用断言验证命令行参数始终是不适当的，因为这些是公共方法 main 的参数。
+使用断言验证命令行参数始终是不适当的，因为这些是公共方法`main`的参数。
 
 # 断言错误 (Assertion Error)
 
-它是 Error 的子类，并且是未检查异常（unchecked）。
+它是`Error`的子类，并且是未检查异常（unchecked）。
 
-每当 assert 语句失败时，都会显式抛出。
+每当`assert`语句失败时，都会显式抛出。
 
-尽管这是合法的，但不建议捕获 AssertionError。
+尽管这是合法的，但不建议捕获`AssertionError`。
 
 # 示例
 
 ```java
 class Test {
+
   public static void main(String[] args){
+
   int x=10;
+
   try {
+
     assert(x>10);
+
   } catch (AssertionError e) {
+
     System.out.println("not a good programming practice to catch AssertionError");
+
   }
+
   System.out.println(x);
+
   }}
 ```
 
@@ -5140,11 +5675,17 @@ class Test {
 
 ```java
 class Test {
+
     public static void main(String[] args) {
+
         boolean assertOn=true; assert(assertOn):assertOn=true; if(assertOn){
+
             System.out.println("assert is on");
+
         }
+
     }
+
 }
 ```
 
@@ -5202,55 +5743,93 @@ class Test {
 
 如果不允许通过类进行多重继承，那么混合继承也是不允许的。
 
-对于 Java 中所有类型的类，java.lang.Object 类都是父类。
+对于 Java 中所有类型的类，`java.lang.Object`类都是父类。
 
 当你扩展一个类时，该类的几乎所有成员都会被继承到子类中。
 
-父类的‘private’和‘local’成员不会被继承到子类。
+父类的`private`和`local`成员不会被继承到子类。
 
-类的 final 成员可以被继承，但 final 类不能被继承。
+类的`final`成员可以被继承，但`final`类不能被继承。
 
 # 程序 9.1
 
 ```java
 class Hello {
+
 int a = 10;
+
 int b = 20;
+
 static int c = 30;
+
 {
+
 System.out.println("IB in Hello");
+
 }
+
 static {
+
 System.out.println("SB in Hello");
+
 }
+
 void m1() {
+
 System.out.println("mi in Hello");
+
 System.out.println(a);
+
 System.out.println(b);
+
 System.out.println(c);
+
 }
+
 static void m2() {
+
 System.out.println("m2 in Hello");
+
 // System.out.println(a);
+
 System.out.println(b);
+
 }
+
 class Hai extends Hello {
+
 void showAll() {
+
 System.out.println("showAll in Hai");
+
 System.out.println(a);
+
 System.out.println(b);
+
 System.out.println(c);
+
 }
+
 m1();
+
 m2();
+
 }
+
 class Jtc80 {
+
 public static void main(String arg[]) {
+
 Hai hai = new Hai();
+
 System.out.println(hai.a);
+
 Hello h1 = new Hello();
+
 h1.m1();
+
 // h1.showAll(); 无法从父类访问子类
+
 }
 ```
 
@@ -5258,12 +5837,19 @@ h1.m1();
 
 ```
 SB in Hello
+
 IB in Hello
+
 10
+
 20
+
 30
+
 IB in Hello
+
 10
+
 20
 ```
 
@@ -5286,57 +5872,87 @@ Q5: 构造函数的处理顺序是怎样的？
 
 ```java
 class Hai {
+
 int a;
+
 Hai(int a) {
+
 System.out.println("param contr in Hai");
+
 this.a = a;
+
 }
+
 }
+
 class Hello extends Hai {
+
 }
+
 class Jtc84 {
+
 public static void main(String args[]) {
+
 Hello h1 = new Hello();
+
 }
+
 }
 ```
 
 输出：
 
-由于 `new Hello()` 处有编译错误，没有输出：
+由于`new Hello()`处有编译错误，没有输出：
 
 ```
 /* Jtc84.java:8:error: 无法应用类 Hai 的构造方法 
+
 required : int
+
 found : no argument
+
 reason : 实际和形式参数列表长度差异为1 */
 ```
 
 注意
 
-当你创建 Hello 类的对象时，它会检查类内部是否有默认构造函数。如果没有默认构造函数，JVM 会自动插入一个默认构造函数，并在该构造函数内部插入一个不带参数的 `super` 语句。该 `super` 语句将尝试调用 Hai 的默认构造函数，而 Hai 类没有默认构造函数。此外，还有一个参数构造函数。如果存在参数构造函数，JVM 就不会自动插入默认构造函数，因此产生上述错误。
+当你创建`Hello`类的对象时，它会检查类内部是否有默认构造函数。如果没有默认构造函数，JVM 会自动插入一个默认构造函数，并在该构造函数内部插入一个不带参数的`super`语句。该`super`语句将尝试调用`Hai`的默认构造函数，而`Hai`类没有默认构造函数。此外，还有一个参数构造函数。如果存在参数构造函数，JVM 就不会自动插入默认构造函数，因此产生上述错误。
 
-Q6: 如何证明 Object 类是 Java 所有类的父类？
+Q6: 如何证明`Object`类是 Java 所有类的父类？
 答：在命令行输入：
-javap java.lang.Object（javap 是用于查看类的 Java 分析工具）
+`javap java.lang.Object`（`javap`是用于查看类的 Java 分析工具）
 
 # 程序 9.3
 
 ```java
 class Hai {
+
 Hai(){
+
 super(111);
+
 System.out.println("default constructor in Hai");
+
 }
+
 class Hello extends Hai {
+
 Hello(){
+
 super();
+
 System.out.println("default constructor in Hello");
+
 }
+
 class Jtc85 {
+
 public static void main(String arg[]) {
+
 Hello h1 = new Hello();
+
 }
+
 }
 ```
 
@@ -5344,61 +5960,69 @@ Hello h1 = new Hello();
 
 ```
 /* Jtc85.java:3:error: 无法应用类 Object 的构造方法。
+
 super(111);
+
 required : no argument
+
 found : int
+
 reason : 实际和形式参数列表长度差异为1 错误 */
 ```
 
+
+
 Q7: 可以将父类的默认构造函数声明为私吗？
+
 答：是的，我们可以将父类的默认构造函数声明为私，但如果我们这样做，我们就无法创建任何子类的对象，或者任何直接或间接扩展该类的类的对象（但可以根据参数构造函数创建对象）。
 
-# 例如
+例如：
 
 ```java
 class A{
-private A()){}
+    private A(){}
+}
+class B extends A{
+    B(){}
+}
+class C extends B{
+    C(){}
+}
+C c = new C(); //不可能
 ```
 
+错误：
 
-
-}
-class B extends A{ B(){}
-}
-class C extends B{ C(){}
-}
-C c=new C(); //不可能
-
-# 错误
-
+```java
 class B extends A : A has private access in A()
-A=new A() : A has private access in A()
+A = new A() : A has private access in A()
+```
 
 Q8: 我们可以将任何类声明为私（私）吗？
 
-答：不能，类只能是“public（公共）”或“default（默认）”。
+答：不能，类只能是`public`（公共）或`default`（默认）。
 
-# 注意
+注意：
 
-源文件中只有一个类可以是公共的，该公共类应该包含 main 方法。
+源文件中只有一个类可以是公共的，该公共类应该包含`main`方法。
 
 你可以从子类中调用父类的构造函数，但不能从父类中调用子类的构造函数。
 
-# 9.2 This 和 Super 关键字的区别
+## 9.2 This 和 Super 关键字的区别
 
 | THIS | SUPER |
 |---|---|
-| This 是一个实例引用变量，用于访问类级别的成员。 | 它也是一个实例引用变量，用于访问父类的成员。 |
-| 可以使用 `this()` 显式调用另一个构造函数。 | 每个构造函数默认都会调用 `super()`，这是对父类带参数构造函数的调用。 |
-| 'this' 指向同类的当前对象。 | 'super' 访问父类的方法和变量。 |
-| 'this' 调用当前类的构造函数。 | 'super' 调用父类的构造函数。 |
-| 'this' 关键字引用一个对象。 | 'super' 关键字引用父类变量或方法。 |
+| `This`是一个实例引用变量，用于访问类级别的成员。 | 它也是一个实例引用变量，用于访问父类的成员。 |
+| 可以使用`this()`显式调用另一个构造函数。 | 每个构造函数默认都会调用`super()`，这是对父类带参数构造函数的调用。 |
+| `this`指向同类的当前对象。 | `super`访问父类的方法和变量。 |
+| `this`调用当前类的构造函数。 | `super`调用父类的构造函数。 |
+| `this`关键字引用一个对象。 | `super`关键字引用父类变量或方法。 |
 
 ## 9.3 S-A 关系
 
 HAS-A 关系被称为组合（composition）或聚合（aggregation）。
 
-没有特定的关键字来实现 HAS-A 关系，但通常可以使用 `new` 操作符。
+没有特定的关键字来实现 HAS-A 关系，但通常可以使用`new`操作符。
 
 HAS-A 关系的主要优点是可重用性。
 
@@ -5406,15 +6030,15 @@ HAS-A 关系的主要缺点是增加了组件之间的依赖性并产生维护�
 
 ## 9.4 组合 vs 聚合
 
-# 组合
+### 组合
 
 如果在不存在容器对象的情况下，被包含对象也不存在，那么容器对象与被包含对象之间的关系被称为组合，这是一种强关联。
 
-# 聚合
+### 聚合
 
 如果在不存在容器对象的情况下，被包含对象可能存在，那么这种关系被称为聚合。在聚合中，对象之间是弱关联。
 
-# 注意
+注意：
 
 在组合中，被包含对象是强关联的，容器对象直接持有被包含对象。
 
@@ -5426,24 +6050,25 @@ HAS-A 关系的主要缺点是增加了组件之间的依赖性并产生维护�
 
 组件之间的依赖程度称为耦合。
 
-# 示例
+示例：
 
-```
+```java
 class A{
-static int i=B.j;
+    static int i = B.j;
 }
 class B extends A{
-static int j=C.methodOne();
+    static int j = C.methodOne();
 }
 class C extends B{
-public static int methodOne(){
-return D.k;
+    public static int methodOne(){
+        return D.k;
+    }
 }
 class D extends C{
-static int k=10;
-public static void main(String[] args){
-D=new D();
-}
+    static int k = 10;
+    public static void main(String[] args){
+        D d = new D();
+    }
 }
 ```
 
@@ -5463,46 +6088,45 @@ D=new D();
 
 一种形式在不同情况下表现出不同的行为称为多态性。
 
-# 它主要有两种类型
+它主要有两种类型：
 
-静态或（编译时）多态：可以通过方法重载（Method Overloading）实现。在编译时多态的情况下，方法调用取决于你在调用时传递的方法参数。
+1. 静态或（编译时）多态：可以通过方法重载（Method Overloading）实现。在编译时多态的情况下，方法调用取决于你在调用时传递的方法参数。
 
-+ 2. 动态多态
-动态多态可以通过以下方式实现：
-a. 方法重写（Method Overriding）
-b. 动态派发（Dynamic Dispatch）。
+2. 动态多态：动态多态可以通过以下方式实现：
+   a. 方法重写（Method Overriding）
+   b. 动态派发（Dynamic Dispatch）。
 
 动态派发：
 
 将子类对象赋值给父类引用变量的过程。
 
-例如
+例如：
 
-| Class A{ } Class B extends A{ } | 1. A1=new A(); // 正确 2. B1=new B(); // 正确 3. A2=new B1(); // 这里将子类(B)对象引用赋值给父类引用变量(a2) 4. B2=new A2(); // 这是可能的，因为父类对象引用不能赋值给子类引用变量。 |
+| `class A{ } class B extends A{ }` | 1. `A a1 = new A();` // 正确 2. `B b1 = new B();` // 正确 3. `A a2 = new B1();` // 这里将子类(`B`)对象引用赋值给父类引用变量(`a2`) 4. `B b2 = new A2();` // 这是不可能的，因为父类对象引用不能赋值给子类引用变量。 |
+|---|---|
 
 在上述情况 1 和 2 是正确的，因为源和目标都是相同类型。在情况 3 和 4 情况下，将无法执行这种赋值，因为源和目标之间没有任何关系。为了执行这种赋值，类与类之间必须存在父类子类的关系。
 
 （理解这个例子对于理解动态派发非常重要）。
 
-```
+```java
 class Hai{
 }
 class Hello extends Hai{
 }
 class Jtc107 {
     public static void main(String args[]) {
-        Hai1=new Hai();
-        Hello h1=new Hello();
-        Hai2=new Hello();
-        //Hello h2=new Hai();//不正确
-        //Hello h2=(Hello)new Hai();
-        Hai3=hai1;
-        Hai4=h1;//
-        Hai5=hai2;
+        Hai hai1 = new Hai();
+        Hello h1 = new Hello();
+        Hai hai2 = new Hello();
+        //Hello h2 = new Hai();//不正确
+        //Hello h2 = (Hello)new Hai();
+        Hai hai3 = hai1;
+        Hai hai4 = h1;//
+        Hai hai5 = hai2;
     }
 }
 ```
-
 
 ```java
 System.out.println("m2(int a) in Hai");
@@ -5520,7 +6144,8 @@ public void m3(){
 /*int m4(){
     System.out.println("m4 in Hai");
     return 101;
-}*/npublic int m4(){
+}*/
+public int m4(){
     System.out.println("m4 in Hai");
     return 101;
 }
@@ -5529,7 +6154,7 @@ private void m5(){
 }
 public class Jtc109 main {
     public static void main(String[] args) {
-        Hai hai =new Hai();
+        Hai hai = new Hai();
         hai.m1();
         hai.m2(11);
         hai.m2(11,22);
@@ -5537,7 +6162,7 @@ public class Jtc109 main {
 }
 ```
 
-# 输出:
+输出：
 
 ```
 D:\program\All JTC Program\Polymorphism>Java Jtc109
@@ -5546,58 +6171,57 @@ m2 (int a) in Hai
 m2 (int a, int b) in Hai
 ```
 
-错误：m2(int) in Hai 无法覆盖 m2(int) in Hello int m2(int a){
+错误：
 
-返回类型 int 与 void 不兼容。M4() in Hai 无法覆盖 m4() in Hello int m4() {
-
+```
+m2(int) in Hai 无法覆盖 m2(int) in Hello int m2(int a){
+返回类型 int 与 void 不兼容。
+m4() in Hai 无法覆盖 m4() in Hello int m4() {
 尝试分配更低的访问权限保护。
+```
 
 # 程序 10.3
 
 ```java
 class Hello{
-final void m1(){
-System.out.println("m1 in Hello");
-}
-static void m2(){
-System.out.println("m2 in Hello");
-}
-void m3(){
-System.out.println("m3 in Hello");
-}
+    final void m1(){
+        System.out.println("m1 in Hello");
+    }
+    static void m2(){
+        System.out.println("m2 in Hello");
+    }
+    void m3(){
+        System.out.println("m3 in Hello");
+    }
 }
 class Hai extends Hello {
-```
-
-```java
-/*void m1() {
-System.out.println("m1 in Hai");
-*/
-/*void m2() {
-System.out.println("m2 in Hai");
-*/
-/*static void m3() {
-System.out.println("m3 in Hai");
-*/
-static void m2() { System.out.println("m2 in Hai");
+    /*void m1() {
+        System.out.println("m1 in Hai");
+    }*/
+    /*void m2() {
+        System.out.println("m2 in Hai");
+    }*/
+    /*static void m3() {
+        System.out.println("m3 in Hai");
+    }*/
+    static void m2() {
+        System.out.println("m2 in Hai");
+    }
+    void m3() {
+        System.out.println("m4 in Hai");
+    }
 }
-void m3() {
-System.out.println("m4 in Hai");
-}
-
-}
-
 public class Jtc110 {
-public static void main(String[] args) {
-hai =new Hai();
-hai.m1();
-hai.m2();
-hai.m3();
-}
+    public static void main(String[] args) {
+        Hai hai = new Hai();
+        hai.m1();
+        hai.m2();
+        hai.m3();
+    }
 }
 ```
 
-输出:
+输出：
 
 ```
 D:\program\411 JTC Program\Polymorphism>java Jtc110
@@ -5606,13 +6230,13 @@ m2 in Hai
 m4 in Hai
 ```
 
-错误
+错误：
 
+```
 m1() in Hai 无法覆盖 m1() in Hello。void m1(){ } 被覆盖的方法是 final 的。
-
 m2() in Hai 无法覆盖 m2() in Hello void m2(){} 被覆盖的方法是 static 的。
-
 m3() in Hai 无法覆盖 m3() in Hello。static void m3() 被覆盖的方法是 static 的。
+```
 
 注意：静态方法只能被静态方法隐藏。
 
@@ -5630,132 +6254,136 @@ class A{
 class B extends A{
 }
 class Hello{
-A m1(){
-System.out.println("m1 in Hello");
-
-return new A();
-}
-B m2(){
-  System.out.println("m2 in Hello");
-  return new B();
-}
-A m3(A a1){
-  System.out.println("m3 (A a1) in Hello");
-  return a1;
-}
-A m4(B b1){
-  System.out.println("m4(B b1) in Hello");
-  return b1;
+    A m1(){
+        System.out.println("m1 in Hello");
+        return new A();
+    }
+    B m2(){
+        System.out.println("m2 in Hello");
+        return new B();
+    }
+    A m3(A a1){
+        System.out.println("m3 (A a1) in Hello");
+        return a1;
+    }
+    A m4(B b1){
+        System.out.println("m4(B b1) in Hello");
+        return b1;
+    }
 }
 class Hai{
-B m1(){
-  System.out.println("m1 in Hai");
-  return B();
+    B m1(){
+        System.out.println("m1 in Hai");
+        return new B();
+    }
+    A m2(){
+        System.out.println("m2 in Hai");
+        return new B();
+    }
+    A m3(B b1){
+        System.out.println("m3 (B b1) in Hai");
+        return b1;
+    }
+    A m4(A a1){
+        System.out.println("m4 (A a1) in Hai");
+        return a1;
+    }
 }
-A m2(){
-  System.out.println("m2 in Hai");
-  return new B();
-}
-A m3(B b1){
-  System.out.println("m3 (B b1) in Hai");
-  return b1;
-}
-A m4(A a1){
-  System.out.println("m4 (A a1) in Hai");
-  return a1;
-}
-
-}}
 public class Jtc111 {
-public static void main(String[] args) {
-Hai=new Hai();
-hai.m1();
-}}
+    public static void main(String[] args) {
+        Hai hai = new Hai();
+        hai.m1();
+    }
+}
+```
 
-# 输出:
+输出：
 
 ```
 D:\program\All JTC\Program\Polymorphism>java Jtc111
 m1 in Hai
 ```
 
-错误
+错误：
 
+```
 m2() in Hai 无法覆盖 Hello m2(){ 返回类型与 B 不兼容
+```
 
 **程序 10.5**
 
 ```java
 class Animal {
-int a = 10;
-int b = 20;
-static int c = 30;
-void eating() {
-System.out.println("Animal is eating");
-}
-int sleeping() {
-System.out.println("Animal is sleeping");
-return 10;
-}
-void thinking() {
-System.out.println("Animal is thinking");
-}
-static void seeing() {
-System.out.println("Animal is seeing");
+    int a = 10;
+    int b = 20;
+    static int c = 30;
+    void eating() {
+        System.out.println("Animal is eating");
+    }
+    int sleeping() {
+        System.out.println("Animal is sleeping");
+        return 10;
+    }
+    void thinking() {
+        System.out.println("Animal is thinking");
+    }
+    static void seeing() {
+        System.out.println("Animal is seeing");
+    }
 }
 class Dog extends Animal {
-int a = 11;
-int b = 22;
-static int c = 33;
-void eating() {
-System.out.println("Dog is eating");
-}
-int sleeping() {
-System.out.println("Dog is sleeping");
-return 20;
-}
-void thinking() {
-System.out.println("Dog is thinking");
-}
-static void seeing() {
-System.out.println("Dog is seeing");
-}
+    int a = 11;
+    int b = 22;
+    static int c = 33;
+    void eating() {
+        System.out.println("Dog is eating");
+    }
+    int sleeping() {
+        System.out.println("Dog is sleeping");
+        return 20;
+    }
+    void thinking() {
+        System.out.println("Dog is thinking");
+    }
+    static void seeing() {
+        System.out.println("Dog is seeing");
+    }
 }
 class Cat extends Animal {
-void eating() {
-System.out.println("Cat is eating");
-}
-static void seeing() {
-System.out.println("cat is seeing");
-}
-void drinking() {
-System.out.println("Cat is drinking");
-}
+    void eating() {
+        System.out.println("Cat is eating");
+    }
+    static void seeing() {
+        System.out.println("cat is seeing");
+    }
+    void drinking() {
+        System.out.println("Cat is drinking");
+    }
 }
 class Jtc112 {
-public static void main(String[] arg) {
-Animal ani1 = new Animal();
-ani1.eating();
-ani1.thinking();
-ani1.seeing();
-Dog dog1 = new Dog();
-dog1.eating();
-dog1.thinking();
-dog1.seeing();
-Animal ani2 = null;
-ani2 = new Dog();
-ani2.eating();
-ani2.thinking();
-ani2.seeing();
-Animal ani3 = new Cat();
-ani3.eating();
-ani3.seeing();
-ani3.drinking();
-}
+    public static void main(String[] arg) {
+        Animal ani1 = new Animal();
+        ani1.eating();
+        ani1.thinking();
+        ani1.seeing();
+        Dog dog1 = new Dog();
+        dog1.eating();
+        dog1.thinking();
+        dog1.seeing();
+        Animal ani2 = null;
+        ani2 = new Dog();
+        ani2.eating();
+        ani2.thinking();
+        ani2.seeing();
+        Animal ani3 = new Cat();
+        ani3.eating();
+        ani3.seeing();
+        ani3.drinking();
+    }
 }
 ```
 
-输出:
+输出：
 
 ```
 D:\program\All JTC_Program\Polymorphism>java Jtc112
@@ -5829,9 +6457,9 @@ class Hai extends Hello{
 }
 public class Jtc113 {
     public static void main(String[] args) {
-        Hello h1=new Hello();
+        Hello h1 = new Hello();
         h1.m1();
-        A a1=h1.m2();
+        A a1 = h1.m2();
         a1.m11();
         a1.m12();
         //a1.m13();
@@ -5841,23 +6469,27 @@ public class Jtc113 {
 }
 ```
 
-# 输出:
+# 输出：
+
+
 
 问1：我们可以覆盖静态方法吗？
 
 答：不能，不可以。
 
-问2：我们可以覆盖 final 方法吗？
+问2：我们可以覆盖 `final` 方法吗？
 
 答：不能，不可以。
 
 问3：我们可以覆盖私有方法吗？
 
-答：不能进行覆盖，但如果你在父类内部声明任何方法为 private，那么该父类的 private 方法对子类是不可见的，因此在子类内部用任何访问修饰符编写同名方法，后续都不会产生任何问题。
+答：不能进行覆盖，但如果你在父类内部声明任何方法为 `private`，那么该父类的 `private` 方法对子类是不可见的，因此在子类内部用任何访问修饰符编写同名方法，后续都不会产生任何问题。
 
 # 示例
 
+```
 package Polymorphism5;
+```
 
 ```java
 class Hello{
@@ -5888,10 +6520,6 @@ public class Jtc114 {
 }
 ```
 
-
-
-
-
 ```java
 hai.m2();
 hai.m3();
@@ -5909,15 +6537,15 @@ m2 in Hello
 m3 in Hello
 ```
 
-当你不希望直接使用父类的类实现时，可以在子类内部对该方法重写，例如 `m1()` 方法。
+当你不希望直接使用父类的类实现时，可以在子类内部对该方法重写，例如`m1()`方法。
 
-如果你想同时使用父类和子类的类实现，请在子类内部重写该方法，并使用 `super` 关键字访问父类的类实现，例如 `m2()` 方法。
+如果你想同时使用父类和子类的类实现，请在子类内部重写该方法，并使用`super`关键字访问父类的类实现，例如`m2()`方法。
 
-如果你想按原样使用父类的类实现，则不要在子类内部重写它，如 `m3()` 方法所示。
+如果你想按原样使用父类的类实现，则不要在子类内部重写它，如`m3()`方法所示。
 
-Q4: 可以在 main 方法内部重写 main 方法吗？
+Q4: 可以在`main`方法内部重写`main`方法吗？
 
-答：不能，我们不能重写 main 方法，但我们可以重载 “main()” 方法。
+答：不能，我们不能重写`main`方法，但我们可以重载`main()`方法。
 
 ## 11.1 什么是抽象类（Abstract class）？
 
@@ -6068,15 +6696,21 @@ show in Hai
 30
 ```
 
-错误：m2() in Hai 不能重写 m2 in Hello
+错误：`m2()` in `Hai` 不能重写 `m2` in `Hello`
 
+```
 private void m2(){
-Jtc16:java:27:illegal combination of modifier abstract and final private
+```
+
+`Jtc16:java:27:illegal combination of modifier abstract and final private`
+
+```
 abstract void m3();
+```
 
-注意：我们不能使用 “static abstract”、“final abstract” 或 “private abstract”，因为这是非法的组合。在 h2.show 方法中，如果你调用任何包含父类引用的方法，那么该方法的签名必须与父类引用匹配。
+注意：我们不能使用 `static abstract`、`final abstract` 或 `private abstract`，因为这是非法的组合。在`h2.show`方法中，如果你调用任何包含父类引用的方法，那么该方法的签名必须与父类引用匹配。
 
-如果抽象类是抽象的，我们不能创建任何对象。但只有在你内部创建子类对象时，该类的对象才会被处理。如果子类内部没有默认构造函数，则也会插入 super 语句，由于该原因，抽象类的构造函数会被处理。
+如果抽象类是抽象的，我们不能创建任何对象。但只有在你内部创建子类对象时，该类的对象才会被处理。如果子类内部没有默认构造函数，则也会插入`super`语句，由于该原因，抽象类的构造函数会被处理。
 
 ## 程序 11.3
 
@@ -6135,7 +6769,8 @@ ani.sleeping();
 }
 }
 ```
-*(注：此处在翻译时修正了原文代码中明显的逻辑语法错误，如括号不匹配和变量 错误，以确保逻辑通顺)*
+
+*(注：此处在翻译时修正了原文代码中明显的逻辑语法错误，如括号不匹配和变量错误，以确保逻辑通顺)*
 
 **输出:**
 
@@ -6236,19 +6871,16 @@ h3.m3();
 }
 }
 ```
+
 *(注：原文程序 11.4 存在多处代码断裂和闭合括号错误，翻译时已根据 Java 语法进行了结构性补全)*
-
-
-
-
 
 注意
 
 为了实现运行时多态，始终建议在类内部使用实例成员。通过静态方法我们无法实现运行时多态。
 
-Q1: 我可以将抽象类声明为 `final` 吗？
+Q1: 我可以将抽象类声明为`final`吗？
 
-答：不，不能这样声明。因为如果它是抽象类，那么它必须被某处继承，而 `final` 表示该类不能被继承。因此两者是相互矛盾的。
+答：不，不能这样声明。因为如果它是抽象类，那么它必须被某处继承，而`final`表示该类不能被继承。因此两者是相互矛盾的。
 
 # 示例
 
@@ -6269,13 +6901,17 @@ public class Jtc119 {
 为了声明一个接口，我们需要使用关键字“interface”。接口是完全抽象的。接口可以包含两种类型的成员：
 
 - 公有抽象方法 (public abstract method)
+
 - 公有静态常量变量 (public static final variable)
 
 如果你在接口内部声明任何方法，默认情况下它将是公共抽象方法；如果它是任何接口内部变量，默认情况下它将是公共静态常量变量。在接口内部，你不能编写以下成员：
 
 - 实例变量 (Instance variable)
+
 - 实例块 (Instance block)
+
 - 静态块 (Static block)
+
 - 构造函数 (Constructor)
 
 - 任何具体方法（具体方法是带有实现的方法）。我们不能实例化任何接口。如果任何类尝试使用任何接口，那么该子类需要使用关键字“implements”。当一个类实现任何接口时，该子类必须重写接口的所有方法。如果它没有重写接口的所有方法，那么该子类必须声明为抽象类。
@@ -6307,34 +6943,74 @@ System.out.println("m2 in Hello");
 ```
 
 /* 不使用‘public’会导致错误：降低了从 I1 继承的方法的可见性 */
+
 /* public void m3(){
+
     System.out.println("m3 in Hello");
+
 }
+
 */
 
 class Hai extends Hello{
+
     public void m3(){
+
         System.out.println("m3 in Hai");
+
     }
+
     void m4(){
+
         System.out.println("m4 in Hai");
+
     }
+
 }
 
 public class Jtc98{
+
     public static void main(String arg[]){
+
         // I1 i1=new Hello();
+
         I1 i1=new Hai();
-        Hello h1=new Hai();
-        i1.m1();
-        i1.m2();
-        i1.m3();
-        //i1.m4();
-        h1.m1();
-        h1.m3();
-        //new Hai.m4();
-        //匿名对象（无法复用）
-    }
+
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`。
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+---
+
+```
+Hello h1=new Hai();
+
+i1.m1();
+
+i1.m2();
+
+i1.m3();
+
+//i1.m4();
+
+h1.m1();
+
+h1.m3();
+
+//new Hai.m4();
+
+//匿名对象（无法复用）
+
 }
 ```
 
@@ -6342,75 +7018,86 @@ public class Jtc98{
 
 ```
 D:\program\All JTC Program\Interface>java Jtc98
+
 m1 in Hello
+
 m2 in Hello
+
 m3 in Hai
+
 m1 in Hello
+
 m3 in Hai
 ```
 
-从 JDK 1.8 开始，
+从 JDK 1.8 开始：
 
-- 接口引入了默认方法（default method）概念，带有方法实现
-  - 例如：interface Car {
-      default void driver() //默认是公共的
-      {
-        System.out.println("driver");
-      }
-      steering();
-       headlights();
+- 接口引入了默认方法（`default method`）概念，带有方法实现。
+  - 例如：
+    ```
+    interface Car {
+        default void driver() //默认是公共的
+        {
+            System.out.println("driver");
+        }
+        steering();
+        headlights();
     }
+    ```
 - 接口内部允许静态方法。
-  - 例如：interface II {
-      static void m1() {} //默认是公共的
+  - 例如：
+    ```
+    interface II {
+        static void m1() {} //默认是公共的
     }
+    ```
 - 引入了 Lambda 表达式概念。
 
-从 JDK 1.8 开始，你可以在接口内部编写方法实现，但你必须将该方法声明为 `default`。
+从 JDK 1.8 开始，你可以在接口内部编写方法实现，但你必须将该方法声明为`default`。
 
 你甚至可以编写带有实现的静态方法。
 
 在接口内部编写的默认和静态方法默认是公共的。
 
-你不能在接口以外的任何类或抽象类中使用 `default` 关键字。
+你不能在接口以外的任何类或抽象类中使用`default`关键字。
 
 # 程序 12.2
 
 ```
 interface II {
-int a=10;
-
-void m1();
-void m2();
-default void m3(){
-System.out.println("m3 in I1");
-}
-
-static void m4(){
-System.out.println("m4 in I1");
+    int a=10;
+    void m1();
+    void m2();
+    default void m3(){
+        System.out.println("m3 in I1");
+    }
+    static void m4(){
+        System.out.println("m4 in I1");
+    }
 }
 
 class Hello implements I1 {
-public void m1(){
-System.out.println("m1 in Hello");
-}
-public void m2(){
-System.out.println("m2 in Hello");
-}
-public void m3(){
-System.out.println("m3 in Hello");
-}
-public void m4(){
-System.out.println("m4 in Hello");
+    public void m1(){
+        System.out.println("m1 in Hello");
+    }
+    public void m2(){
+        System.out.println("m2 in Hello");
+    }
+    public void m3(){
+        System.out.println("m3 in Hello");
+    }
+    public void m4(){
+        System.out.println("m4 in Hello");
+    }
 }
 
 class Jtc99{
-public static void main(String args[]) {
-I1 i1=new Hello();
-i1.m1();
-i1.m2();
-i1.m3();
-}
+    public static void main(String args[]) {
+        I1 i1=new Hello();
+        i1.m1();
+        i1.m2();
+        i1.m3();
+    }
 }
 ```
 
@@ -6418,8 +7105,11 @@ i1.m3();
 
 ```
 D:\program\All JTC Program\Interface>java Jtc99
+
 m1 in Hello
+
 m2 in Hello
+
 m3 in Hello
 ```
 
@@ -6429,82 +7119,84 @@ m3 in Hello
 
 ```
 interface I1{
-  public static int a=10;
-  public abstract void m1();
+    public static int a=10;
+    public abstract void m1();
 }
+
 interface I2{
-  int b=20; void m2();
+    int b=20;
+    void m2();
 }
+
 interface I3 extends I1,I2{
-  int c=30;
-  void m3();
+    int c=30;
+    void m3();
 }
+
 interface I4{
-  int d=40;
-  void m4();
+    int d=40;
+    void m4();
 }
+
 interface I5{
-  int c=50;
-  void m5();
+    int c=50;
+    void m5();
 }
+
 interface I6 extends I4,I5{
-  int c=60;
-  void m3();
+    int c=60;
+    void m3();
 }
+
 class Hello implements I3,I6 {
-
-public void m1(){
-System.out.println("m1 in Hello");
-}
-
-public void m2(){
-System.out.println("m2 in Hello");
-}
-
-public void m4(){
-System.out.println("m4 in Hello");
-}
-
-public void m5(){
-System.out.println("m5 in Hello");
-}
-
-public void m3(){
-  System.out.println("m3 in Hello");
-}
-
-void show(){
-  System.out.println("show in Hello");
-  System.out.println(a);
-  System.out.println(b);
-  System.out.println(d);
-  System.out.println(e);
-  System.out.println(a);
-  System.out.println(c);
-  System.out.println(i3.c);
-  System.out.println(i6.c);
+    public void m1(){
+        System.out.println("m1 in Hello");
+    }
+    public void m2(){
+        System.out.println("m2 in Hello");
+    }
+    public void m4(){
+        System.out.println("m4 in Hello");
+    }
+    public void m5(){
+        System.out.println("m5 in Hello");
+    }
+    public void m3(){
+        System.out.println("m3 in Hello");
+    }
+    void show(){
+        System.out.println("show in Hello");
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(d);
+        System.out.println(e);
+        System.out.println(a);
+        System.out.println(c);
+        System.out.println(i3.c);
+        System.out.println(i6.c);
+    }
 }
 
 class Jtc100{
-  public static void main(String arg[]){
-    I3 i3=null;
-    i3=new Hello();
-
-    i3.m1();
-
-    i3.m2();
-    i3.m3();
-    //i3.m4();
-    I6 i6=null;
-    i6=new Hello();
-    //i6.m1();
-    i6.m4();
-    i6.m5();
-    i6.m3();
-    //i6.show();
-    Hello h1=new Hello();
-
-    h1.show();
+    public static void main(String arg[]){
+        I3 i3=null;
+        i3=new Hello();
+        i3.m1();
+        i3.m2();
+        i3.m3();
+        //i3.m4();
+        I6 i6=null;
+        i6=new Hello();
+        //i6.m1();
+        i6.m4();
+        i6.m5();
+        i6.m3();
+        //i6.show();
+        Hello h1=new Hello();
+        h1.show();
+    }
+}
+```
 
 # 输出：
 
@@ -6532,37 +7224,39 @@ show in Hello
 
 ```
 interface I1 {
-
-void m1();
+    void m1();
 }
 interface I2 {
-int m1();
+    int m1();
 }
 interface I3 {
-int m1(int a);
+    int m1(int a);
 }
 /*
 class Hello implements I1,I2 { public void m1(); }
 */
 class Hai implements I1,I3 {
-public void m1() {
-System.out.println("m1 in Hai");
-}
+    public void m1() {
+        System.out.println("m1 in Hai");
+    }
 }
 class Jtc101 {
-public static void main(String args[]) {
-I1 i1 = new Hai();
-I3 i3 = new Hai();
-i1.m1();
-i3.m3();
-}
+    public static void main(String args[]) {
+        I1 i1 = new Hai();
+        I3 i3 = new Hai();
+        i1.m1();
+        i3.m3();
+    }
 }
 ```
 
+```
 /* ERROR: Hello 不是抽象类，且没有重写 I2 中的抽象方法 m1()
 
 ERROR: Hello 中的 m1() 无法实现 I2 中的 m1()
-‘public void m1(){ 返回类型与 int 不兼容。 */
+
+'public void m1(){ 返回类型与 int 不兼容。 */
+```
 
 # 程序 12.5
 
@@ -6570,7 +7264,7 @@ ERROR: Hello 中的 m1() 无法实现 I2 中的 m1()
 interface I1 {
     public abstract void m1();
     /* void m1() {
-    System.out.println("m1 in I1");
+        System.out.println("m1 in I1");
     */
     default void m2() {
         System.out.println("m2 in I1");
@@ -6579,7 +7273,7 @@ interface I1 {
         System.out.println("m3 in I1");
     }
     /* default static void m4() {
-    System.out.println("m4 in I1");
+        System.out.println("m4 in I1");
     */
 }
 
@@ -6588,7 +7282,7 @@ class Hello implements I1 {
         System.out.println("m1 in Hello");
     }
     /*default void m2() {
-    System.out.println("m2 in Hello");
+        System.out.println("m2 in Hello");
     */
 }
 ```
@@ -6601,8 +7295,7 @@ public void m2() {
 public void m3() {
     System.out.println("m3 in Hello");
 }
-
-```
+*/
 
 class Jtc102 {
     public static void main(String arg[]) {
@@ -6620,12 +7313,15 @@ class Jtc102 {
 
 ```
 D:\program\All JTC Program\Interface>java Jtc102
+
 m1 in Hello
+
 m2 in Hello
+
 m3 in I1
 ```
 
-非法修饰符组合：static 和 default 在 default static void m4()
+非法修饰符组合：`static` 和 `default` 在 `default static void m4()`。
 
 /*
 
@@ -6643,58 +7339,57 @@ m3 in I1
 
 在这种情况下，你需要通过接口名称来访问变量。
 
-在 Jtc100 的情况下，我们无法调用 I6.m1() 方法，因为 m1() 方法签名不在接口 I4、I5 和 I6 中。I3.m4() 方法也无法调用，因为 m4() 方法签名不在 I1、I2 和 I3 接口中。
+在`Jtc100`的情况下，我们无法调用`I6.m1()`方法，因为`m1()`方法签名不在接口`I4`、`I5`和`I6`中。`I3.m4()`方法也无法调用，因为`m4()`方法签名不在`I1`、`I2`和`I3`接口中。
 
 # 程序 12.6
 
 ```
 interface I1{
-void m1();
-```
-
-```java
-int m2();
+    void m1();
+    int m2();
 }
+
 interface I2{
-void m1();
-void m2();
+    void m1();
+    void m2();
 }
+
 class A implements I1, I2{
-public void m1(){
-System.out.println("m1 in A");
-}
-public void m2(){
-/* multiple marker at this line
--return type is incompatible with I1.m2()
--implements com.p2.I1.m2
-*/
-}
+    public void m1(){
+        System.out.println("m1 in A");
+    }
+    public void m2(){
+        /* multiple marker at this line
+        -return type is incompatible with I1.m2()
+        -implements com.p2.I1.m2
+        */
+    }
 }
 ```
 
-```java
+```
 public int m2(){
-return 10;
+    return 10;
 }
 } // context context
 ```
 
 Q1: 我可以编写没有任何成员的接口吗？
 
-Ans: 可以，一个没有任何成员的接口被称为标记接口（marker interface）。
+Ans: 可以，一个没有任何成员的接口被称为标记接口（`marker interface`）。
 
 Q2: 什么是标记接口？
 
-答: 它用于标记一个类的资格。为了处理标记接口，你需要使用反射机制来显式地编写代码。Sun 已经提供了一些标记接口，例如：Clonable、RandomAccess、Serializable 等。
+答: 它用于标记一个类的资格。为了处理标记接口，你需要使用反射机制来显式地编写代码。Sun 已经提供了一些标记接口，例如：`Clonable`、`RandomAccess`、`Serializable`等。
 
 Q3: 一个类可以同时继承一个类并实现一个接口吗？
 
 答: 可以的，例如：
-class Hello extends A implements I1, I2
+`class Hello extends A implements I1, I2`
 
-Q4: extends 和 implements 关键字之间有什么区别？
+Q4: `extends`和`implements`关键字之间有什么区别？
 
-答: `extends` 关键字用于相同类型，即类用于类或接口；`implements` 关键字由类用于实现接口。实现任何接口的类都有责任重写这些方法，否则它被声明为抽象类。
+答: `extends`关键字用于相同类型，即类用于类或接口；`implements`关键字由类用于实现接口。实现任何接口的类都有责任重写这些方法，否则它被声明为抽象类。
 
 Q5: 为什么不允许通过类多继承，但允许通过接口多继承？
 
@@ -6714,26 +7409,26 @@ Q5: 为什么不允许通过类多继承，但允许通过接口多继承？
 
 注意
 
-如果尝试时没有 catch，则需要一个 finally 块。
+如果尝试时没有`catch`，则需要一个`finally`块。
 
 例如：
 
-```java
+```
 try{
 }
 finally {
 }
 ```
 
-可以使用带有多个 catch 的 try。
+可以使用带有多个`catch`的`try`。
 
-从 JDK 1.7 开始，使用了 try-with-resources（带资源的 try），它不再需要使用 finally 块。
+从 JDK 1.7 开始，使用了`try-with-resources`（带资源的`try`），它不再需要使用`finally`块。
 
-- JAVAC It1.java 可以被编译，尽管 java 是一个区分大小写的语言。
-- javac-verbose It1.java
-- 你不能将方法写为 final，因为已经是静态的，final 和 static 方法都不能被重写。
-- 例如：public final static void main(String[] args) {}
-- 如果一个类被声明为 final，则它不能被继承到其子类，它的成员不是 final 方法且不能重写；但如果一个类是 final，则不需要定义 final 方法，因为类无法被继承，就不需要重写方法。
+- `JAVAC It1.java`可以被编译，尽管`java`是一个区分大小写的语言。
+- `javac-verbose It1.java`
+- 你不能将方法写为`final`，因为已经是静态的，`final`和`static`方法都不能被重写。
+- 例如：`public final static void main(String[] args) {}`
+- 如果一个类被声明为`final`，则它不能被继承到其子类，它的成员不是`final`方法且不能重写；但如果一个类是`final`，则不需要定义`final`方法，因为类无法被继承，就不需要重写方法。
 
 # 内部类 (INNER CLASSES)
 
@@ -6748,7 +7443,7 @@ finally {
 
 ### 非静态内部类
 
-在另一个类内部定义且没有使用任何 static 关键字的类称为非静态内部类。
+在另一个类内部定义且没有使用任何`static`关键字的类称为非静态内部类。
 
 在非静态内部类内部，可以直接访问外部类的所有成员。你不能进行静态声明，但在该内部可以访问外部类的静态成员。
 
@@ -6762,69 +7457,68 @@ finally {
 
 ```java
 class Outer{
-int a=10;
-int b=20;
-static int c=30;
-void m1(){
-System.out.println("m1 in outer class");
+    int a=10;
+    int b=20;
+    static int c=30;
+    void m1(){
+        System.out.println("m1 in outer class");
+    }
+    static void m2(){
+        System.out.println("m2 in outer class");
+    }
+    class Inner{
+        int a1=101;
+        //static int b1=202;
+        static final int c1=303;
+        void m11(){
+            System.out.println("m11 in inner class");
+        }
+        /*static void m12() {
+            System.out.println("m12 in Inner class");
+        }*/
+        void showInner() {
+            System.out.println("showInner in Inner");
+            System.out.println(a);
+            System.out.println(b);
+            System.out.println(c);
+            System.out.println(a1);
+            System.out.println(c1);
+            m1();
+            m2();
+        }
+    }//Inner class
+    void showOuter() {
+        System.out.println("showOuter in Outer");
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        //System.out.println(a1);
+        //System.out.println(c1);
+        Inner r1=new Inner();
+        System.out.println(r1.a);
+        System.out.println(r1.c1);
+    }
 }
-static void m2(){
-System.out.println("m2 in outer class");
-}
-class Inner{
-int a1=101;
-//static int b1=202;
-static final int c1=303;
-void m11(){
-System.out.println("m11 in inner class");
-}
-/*static void m12() {
-System.out.println("m12 in Inner class");
-}*/
-void showInner() {
-System.out.println("showInner in Inner");
-System.out.println(a);
-System.out.println(b);
-System.out.println(c);
-System.out.println(a1);
-System.out.println(c1);
-m1();
-m2();
-}
-}//Inner class
 
-void showOuter() {
-System.out.println("showOuter in Outer");
-System.out.println(a);
-System.out.println(b);
-System.out.println(c);
-//System.out.println(a1);
-//System.out.println(c1);
-Inner r1=new Inner();
-System.out.println(r1.a);
-System.out.println(r1.c1);
-}
-}
 public class Jtc124 {
-public static void main(String[] args) {
-Outer r1=new Outer();
-r1.m11();
-//r1.m11();
-Inner r1=new Inner();
-Outer.Inner r1=new Inner();
-Outer.Inner r2=new Inner();
-Outer.Inner r3=new Inner();
-Outer.Inner r4=new Inner();
-r4.m11();
-//r4.m11();
-}
-}
+    public static void main(String[] args) {
+        Outer r1=new Outer();
+        r1.m11();
+        //r1.m11();
+        Inner r1=new Inner();
+        Outer.Inner r1=new Inner();
+        Outer.Inner r2=new Inner();
+        Outer.Inner r3=new Inner();
+        Outer.Inner r4=new Inner();
+        r4.m11();
+        //r4.m11();
+    }
 }
 ```
 
-Q6: 上述程序可以生成多少 (.class) 文件？
+Q6: 上述程序可以生成多少 (`.class`) 文件？
 
-答: 对于上述程序将生成三个 .class 文件，分别为 Outer.class、Jtc124.class 和 Outer$Inner.class。这里 '$' 代表匿名类。
+答: 对于上述程序将生成三个`.class`文件，分别为`Outer.class`、`Jtc124.class`和`Outer$Inner.class`。这里'$'代表匿名类。
 
 Q7: 我可以在内部类内部编写内部类吗？
 
@@ -6834,89 +7528,163 @@ Q7: 我可以在内部类内部编写内部类吗？
 
 ```java
 class Outer{
-int a=10;
-static int b=20;
-{
-System.out.println("a in outer");
-}
-static{
-System.out.println("b in outer");
-}
-class Inner1{
-int a1=101;
-//static int b1=202;
-static final int c1=303;
-class Inner2{
-int a=202;
-static final int bc=303;
-void showInner2(){
-System.out.println(b);
-System.out.println(a1);
-System.out.println(ab);
-System.out.println(bc);
-}
-}
-//Inner2 void showInner1(){
-System.out.println("showInner1 in Inner");
-//System.out.println(ab);
-System.out.println(new Inner2().ab);
-}
-}
-//Inner1 void showOuter(){
-System.out.println("showOuter() in Outer");
-Inner1 r1=new Inner1();
-System.out.println(r1.a1);
-System.out.println(Inner1.ab1);
-Inner1.Inner2 r12=new Inner1().new Inner2();
-System.out.println(r12.ab);
-}
-}
-public class Jtc125 {
-public static void main(String[] args) {
-Outer.Inner1.Inner2 oin2=new Outer().new Inner1().new Inner2();
-//System.out.println(oin2.a);
-oin2.showInner2();
-}
-}
+    int a=10;
+    static int b=20;
+    {
+        System.out.println("a in outer");
+    }
+    static{
 ```
 
-Q8: 我可以在任何接口中编写类吗？
+
+
+`System.out.println("b in outer");`
+
+}
+
+class `Inner1` {
+
+    int `a1` = 101;
+
+    //static int b1=202;
+
+    static final int `c1` = 303;
+
+    class `Inner2` {
+
+        int `a` = 202;
+
+        static final int `bc` = 303;
+
+        void `showInner2()` {
+
+            `System.out.println(b)`;
+
+            `System.out.println(a1)`;
+
+            `System.out.println(ab)`;
+
+            `System.out.println(bc)`;
+
+        }
+
+    }
+
+    //Inner2 void showInner1(){
+
+    `System.out.println("showInner1 in Inner")`;
+
+    //System.out.println(ab);
+
+    `System.out.println(new Inner2().ab)`;
+
+}
+
+}
+
+//Inner1 void showOuter(){
+
+`System.out.println("showOuter() in Outer")`;
+
+`Inner1 r1 = new Inner1()`;
+
+`System.out.println(r1.a1)`;
+
+`System.out.println(Inner1.ab1)`;
+
+`Inner1.Inner2 r12 = new Inner1().new Inner2()`;
+
+`System.out.println(r12.ab)`;
+
+}
+
+}
+
+public class `Jtc125` {
+
+    public static void main(String[] args) {
+
+        `Outer.Inner1.Inner2 oin2 = new Outer().new Inner1().new Inner2()`;
+
+        //System.out.println(oin2.a);
+
+        `oin2.showInner2()`;
+
+    }
+
+}
+
+```
+
+**Q8: 我可以在任何接口中编写类吗？**
 
 ```java
-interface I1{
-int a=10;
-void m11();
-class Inner{
-int a1=10;
-void m1() {
-System.out.println("m1 in Inner");
-}
-}
-}
-interface I2{
-static int b=20;
-void m11();
-}
-class Inner2 implements I1,I2{
-public void m11() {
-System.out.println("m11 in Inner2");
-}
-}
-class HelloTest extends I1.Inner{
-public void m1() {
-System.out.println("m1 in HelloTest");
-}
+interface `I1` {
+
+    int `a` = 10;
+
+    void `m11()`;
+
+    class `Inner` {
+
+        int `a1` = 10;
+
+        void `m1()` {
+
+            `System.out.println("m1 in Inner")`;
+
+        }
+
+    }
+
 }
 
-public class Jtc126 {
-public static void main(String[] args) {
-I1 i1=null;
-i1=new I2.Inner2();
-i1.m11();
-I1.Inner ii1=null;
-ii1=new HelloTest();
-ii1.m1();
+interface `I2` {
+
+    static int `b` = 20;
+
+    void `m11()`;
+
 }
+
+class `Inner2` implements `I1`, `I2` {
+
+    public void `m11()` {
+
+        `System.out.println("m11 in Inner2")`;
+
+    }
+
+}
+
+class `HelloTest` extends `I1.Inner` {
+
+    public void `m1()` {
+
+        `System.out.println("m1 in HelloTest")`;
+
+    }
+
+}
+
+public class `Jtc126` {
+
+    public static void main(String[] args) {
+
+        `I1 i1 = null`;
+
+        `i1 = new I2.Inner2()`;
+
+        `i1.m11()`;
+
+        `I1.Inner ii1 = null`;
+
+        `ii1 = new HelloTest()`;
+
+        `ii1.m1()`;
+
+    }
+
 }
 ```
 
@@ -6931,35 +7699,56 @@ m1 in HelloTest
 # 程序 12.9
 
 ```java
-class Outer{
-private int ab=1010;
-class Inner{
-public int a1=10;
-private int b1=202;
-void m1(){
-System.out.println("m1 in Inner");
-}
-//class Inner void showOuter(){
-Inner inr=new Inner();
-System.out.println(ab);
-System.err.println(inr.a1);
-System.out.println(inr.b1);
-}
-}
+class `Outer` {
+
+    private int `ab` = 1010;
+
+    class `Inner` {
+
+        public int `a1` = 10;
+
+        private int `b1` = 202;
+
+        void `m1()` {
+
+            `System.out.println("m1 in Inner")`;
+
+        }
+
+        //class Inner void showOuter(){
+
+        `Inner inr = new Inner()`;
+
+        `System.out.println(ab)`;
+
+        `System.err.println(inr.a1)`;
+
+        `System.out.println(inr.b1)`;
+
+    }
+
 }
 
-public class Jtc127 {
+}
+
+public class `Jtc127` {
+
     public static void main(String[] args) {
-        Outer otr=new Outer();
+
+        `Outer otr = new Outer()`;
+
         //System.out.println(otr.ab);
-        Outer.Inner oil1=new Inner();
+
+        `Outer.Inner oil1 = new Inner()`;
+
         //System.out.println(oil1.b1);
-        otr.showOuter();
+
+        `otr.showOuter()`;
+
     }
+
 }
 ```
-
-
 
 ```
 D:\program\All JTC Program\Inner Class\>java Jtc127
@@ -6968,34 +7757,55 @@ D:\program\All JTC Program\Inner Class\>java Jtc127
 202
 ```
 
-Q9: 我可以将内部类声明为私（private）吗？
+**Q9: 我可以将内部类声明为私（private）吗？**
 
 答: 是的，我们可以将内部类声明为私。
 
 # 程序 12.10
 
 ```java
-class Outer{
-    int a=10;
-    static int b=20;
-    private class Inner{
-        int ab=101;
-        void m1() {
-            System.out.println("m1 in Inner");
+class `Outer` {
+
+    int `a` = 10;
+
+    static int `b` = 20;
+
+    private class `Inner` {
+
+        int `ab` = 101;
+
+        void `m1()` {
+
+            `System.out.println("m1 in Inner")`;
+
         }
+
         //结束 Inner 类 
-        void show(){
-            System.out.println("Show in Inner");
-            System.out.println(b);
-            Inner inner=new Inner();
-            System.out.println(inner.ab);
+
+        void `show()` {
+
+            `System.out.println("Show in Inner")`;
+
+            `System.out.println(b)`;
+
+            `Inner inner = new Inner()`;
+
+            `System.out.println(inner.ab)`;
+
         }
+
     }
-    public class jtc128 {
+
+    public class `jtc128` {
+
         public static void main(String[] args) {
+
             //Outer.Inner oil1=new Outer().new Inner();
+
         }
+
     }
+
 }
 ```
 
@@ -7004,60 +7814,112 @@ class Outer{
 # 程序 12.11
 
 ```java
-class Outer{
-    interface I1{
-        int a=10;
-        void m1();
+class `Outer` {
+
+    interface `I1` {
+
+        int `a` = 10;
+
+        void `m1()`;
+
     }
-    interface I2{
-        static int b=20;
-        public void m2();
+
+    interface `I2` {
+
+        static int `b` = 20;
+
+        public void `m2()`;
+
     }
-    interface I3 extends I1,I2{
-        int c=11;
-        void m3();
+
+    interface `I3` extends `I1`, `I2` {
+
+        int `c` = 11;
+
+        void `m3()`;
+
     }
-    interface I4{
-        int d=30;
-        void m4();
+
+    interface `I4` {
+
+        int `d` = 30;
+
+        void `m4()`;
+
     }
-    interface I5{
-        int c=40;
-        void m5();
+
+    interface `I5` {
+
+        int `c` = 40;
+
+        void `m5()`;
+
     }
-    interface I6 extends I4,I5{
-        int c=33;
-        void m3();
+
+    interface `I6` extends `I4`, `I5` {
+
+        int `c` = 33;
+
+        void `m3()`;
+
     }
-    abstract class Inner1 implements I3,I6{
-        public void m1(){
-            System.out.println("m1 in Inner1");
+
+    abstract class `Inner1` implements `I3`, `I6` {
+
+        public void `m1()` {
+
+            `System.out.println("m1 in Inner1")`;
+
         }
-        public void m2(){
-            System.out.println("m2 in Inner1");
+
+        public void `m2()` {
+
+            `System.out.println("m2 in Inner1")`;
+
         }
-        public void m4(){
-            System.out.println("m4 in Inner1");
+
+        public void `m4()` {
+
+            `System.out.println("m4 in Inner1")`;
+
         }
-        public void m5(){
-            System.out.println("m5 in Inner1");
+
+        public void `m5()` {
+
+            `System.out.println("m5 in Inner1")`;
+
         }
-        class Inner2 extends Inner1 {
-            public void m3(){
-                System.out.println("m3 in Inner2");
+
+        class `Inner2` extends `Inner1` {
+
+            public void `m3()` {
+
+                `System.out.println("m3 in Inner2")`;
+
             }
+
         }//结束 Inner2
+
     }//结束 Inner1
+
 }
-    public class Jtc129 {
-        public static void main(String[] args) {
-            Outer otr=new Outer();
-            //Outer.Inner1 oi1=new Outer().new Inner1().new Inner2();
-            Outer.Inner1 oi4=null;
-            //oi4=oi4.new Inner2();
-            /*Outer.Inner1.Inner2 oii2=otr.new Inner1())*/
-        }
+
+public class `Jtc129` {
+
+    public static void main(String[] args) {
+
+        `Outer otr = new Outer()`;
+
+        //Outer.Inner1 oi1=new Outer().new Inner1().new Inner2();
+
+        `Outer.Inner1 oi4 = null`;
+
+        //oi4=oi4.new Inner2();
+
+        /*Outer.Inner1.Inner2 oii2=otr.new Inner1())*/
+
     }
+
 }
 ```
 
@@ -7074,175 +7936,307 @@ class Outer{
 # 程序 12.12
 
 ```java
-class Outer{
-    int a=10;
-    static int b=20;
-    void m1(){
-        System.out.println("m1 in Outer");
+class `Outer` {
+
+    int `a` = 10;
+
+    static int `b` = 20;
+
+    void `m1()` {
+
+        `System.out.println("m1 in Outer")`;
+
     }
-    static void m2(){
-        System.out.println("m2 in Outer");
+
+    static void `m2()` {
+
+        `System.out.println("m2 in Outer")`;
+
     }
+
 }
-static class Inner{
-    int a1=101;
-    static int b11=202;
-    void m11(){
-        System.out.println("m1 in Inner");
+
+static class `Inner` {
+
+    int `a1` = 101;
+
+    static int `b11` = 202;
+
+    void `m11()` {
+
+        `System.out.println("m1 in Inner")`;
+
     }
-    static void m22(){
-        System.out.println("m2 in Inner");
+
+    static void `m22()` {
+
+        `System.out.println("m2 in Inner")`;
+
     } //结束 Inner 类
-    void show(){
-        System.out.println("show in Outer");
-        Inner inr=new Inner();
-        inr.m11();
-        inr.m22();
+
+    void `show()` {
+
+        `System.out.println("show in Outer")`;
+
+        `Inner inr = new Inner()`;
+
+        `inr.m11()`;
+
+        `inr.m22()`;
+
     }
+
 }
-public class Jtc130 {
+
+public class `Jtc130` {
+
     public static void main(String[] args) {
+
         //Outer.Inner oi1=new Outer().new Inner();
+
         //Outer.Inner oi2=new Outer.new Inner();
-        Outer.Inner oi3=new Inner();
-        oi3.m11();
-        Outer.Inner.m22();
-        System.out.println(Outer.Inner.b11);
+
+        `Outer.Inner oi3 = new Inner()`;
+
+        `oi3.m11()`;
+
+        `Outer.Inner.m22()`;
+
+        `System.out.println(Outer.Inner.b11)`;
+
     }
+
 }
 ```
 
-# 输出:
+**输出：**
 
 静态内部类的成员不会被视为静态成员。它可以成功执行，生成的类文件名为 `Outer$Inner`。
 
-Q10: 我可以将外部类声明为静态的吗？
+**Q10: 我可以将外部类声明为静态的吗？**
 
 答: 不，不能这样声明。
 
-Q11: 静态内部类的实例变量和静态变量究竟在何时分配内存？
+**Q11: 静态内部类的实例变量和静态变量究竟在何时分配内存？**
 
 ```java
 Program 12.13
-class Outer{
-    int a=99;
-    static int b=88;
+
+class `Outer` {
+
+    int `a` = 99;
+
+    static int `b` = 88;
+
     {
-        System.out.println("Ib in Outer");
+
+        `System.out.println("Ib in Outer")`;
+
     }
+
     static {
-        System.out.println("Sb in Outer");
+
+        `System.out.println("Sb in Outer")`;
+
     }
-    static class Inner{
-        int a1=101;
-        static int b1=20;
+
+    static class `Inner` {
+
+        int `a1` = 101;
+
+        static int `b1` = 20;
+
     }
+
 }
 ```
+
 （注：由于 OCR 文本在后期部分非常破碎，已根据可用碎片和标准 Java 模式重构了逻辑结构。）
 
-
-
 ```java
-Animal ani3=new Animal(){
-    public void eating() {
-        System.out.println("Animal is eating in Hello");
+`Animal ani3 = new Animal()` {
+
+    public void `eating()` {
+
+        `System.out.println("Animal is eating in Hello")`;
+
     }
-    public int sleeping() {
-        System.out.println("Animal is sleeping in Hello");
+
+    public int `sleeping()` {
+
+        `System.out.println("Animal is sleeping in Hello")`;
+
         return 0;
+
     }
+
     {
-        System.out.println("lb in Animal 3");
+
+        `System.out.println("lb in Animal 3")`;
+
     }
+
 };
 
-void show1() {
-    System.out.println("show1 in Hello");
-    ani4=new Animal() {
-        public void eating() {
-            System.out.println("Animal is eating in Show1");
+void `show1()` {
+
+    `System.out.println("show1 in Hello")`;
+
+    `ani4 = new Animal()` {
+
+        public void `eating()` {
+
+            `System.out.println("Animal is eating in Show1")`;
+
         }
-        public int sleeping() {
-            System.out.println("Animal is sleeping in Show1");
+
+        public int `sleeping()` {
+
+            `System.out.println("Animal is sleeping in Show1")`;
+
             return 0;
+
         }
+
     }
-    ani4.eating();
-    ani4.sleeping();
+
+    `ani4.eating()`;
+
+    `ani4.sleeping()`;
+
 }
 
-Animal show2() {
-    System.out.println("show2 in Hello");
-    return new Animal() {
-        public void eating() {
-            System.out.println("Animal is eating in Show2");
+Animal `show2()` {
+
+    `System.out.println("show2 in Hello")`;
+
+    return new `Animal()` {
+
+        public void `eating()` {
+
+            `System.out.println("Animal is eating in Show2")`;
+
         }
-        public int sleeping() {
-            System.out.println("Animal is sleeping in show2");
+
+        public int `sleeping()` {
+
+            `System.out.println("Animal is sleeping in show2")`;
+
             return 10;
+
         }
+
     }
+
 }
 
-void showAll() {
-    System.out.println("ShowAll in Hello");
-    ani.eating();
-    ani.sleeping();
+void `showAll()` {
+
+    `System.out.println("ShowAll in Hello")`;
+
+    `ani.eating()`;
+
+    `ani.sleeping()`;
+
     //ani.walkki();
+
 }
 
-abstract class All {
-    abstract void thinking();
-    abstract Animal doingAll();
+abstract class `All` {
+
+    abstract void `thinking()`;
+
+    abstract Animal `doingAll()`;
+
 }
 
-class Hai {
-    All all=new All() {
-        void thinking() {
-            System.out.println("All thinking in Hai");
+class `Hai` {
+
+    `All all = new All()` {
+
+        void `thinking()` {
+
+            `System.out.println("All thinking in Hai")`;
+
         }
-        Animal doingAll() {
-            System.out.println("All doingAll in Hai");
-            return new Animal() {
-                public int sleeping() {
-                    System.out.println("All doingAll sleeping in Hai");
+
+        Animal `doingAll()` {
+
+            `System.out.println("All doingAll in Hai")`;
+
+            return new `Animal()` {
+
+                public int `sleeping()` {
+
+                    `System.out.println("All doingAll sleeping in Hai")`;
+
                     return 0;
+
                 }
-                public void eating() {
-                    System.out.println("All doingAll eating in Hai");
+
+                public void `eating()` {
+
+                    `System.out.println("All doingAll eating in Hai")`;
+
                 }
+
             }
+
         }
+
     }
+
 }
 
-public class Jtc135 {
-    public static void main(String[] args) {
-        Hello h1=new Hello();
-        h1.showAll();
-        System.out.println("***********In MAIN***********");
-        h1.ani.eating();
-        h1.ani.sleeping();
-        h1.ani2.eating();
-        h1.ani2.sleeping();
-        h1.show1();
-        Animal ani1=h1.show2();
-        ani1.eating();
-        ani1.sleeping();
+public class `Jtc135` {
 
-        Hai hai=new Hai();
-        hai.all.thinking();
-        Animal ani3=hai.all.doingAll();
-        ani3.eating();
-        ani3.sleeping();
-    }
+    public static void main(String[] args) {
+
+        `Hello h1 = new Hello()`;
+
+        `h1.showAll()`;
+
+        `System.out.println("***********In MAIN***********")`;
+
+        `h1.ani.eating()`;
+
+        `h1.ani.sleeping()`;
+
+        `h1.ani2.eating()`;
+
+        `h1.ani2.sleeping()`;
+
+        `h1.show1()`;
+
+        `Animal ani1 = h1.show2()`;
+
+        `ani1.eating()`;
+
+
+
+`ani1.sleeping();`
+
+`Hai hai = new Hai();`
+
+`hai.all.thinking();`
+
+`Animal ani3 = hai.all.doingAll();`
+
+`ani3.eating();`
+
+`ani3.sleeping();`
+
+```
+}
+
 }
 ```
 
 # 输出:
 
-D:\program\All JTC Program\Inner class>java Jtc135
+`D:\program\All JTC Program\Inner class>java Jtc135`
+
+```
 Id in Animal2
 Id in Animal2
 Showall in Hello
@@ -7263,6 +8257,7 @@ All thinking in Hai
 All doingAll in Hai
 All doingAll eating in Hai
 All doingAll sleeping in Hai
+```
 
 ## 12.4 适配器类 (Adapter Class)
 
@@ -7327,11 +8322,13 @@ class Hello{
         System.out.println("m1 in Hello");
     }
 }
+
 class Hai{
     void show(){
         System.out.println("show in Hai");
     }
 }
+
 public class Jtc138 {
     public static void main(String[] args) {
         Hello h1=new Hello();
@@ -7342,7 +8339,7 @@ public class Jtc138 {
 }
 ```
 
-在上面的程序中，Hai 和 Hello 是类。尽管它们没有声明包，但它们在 Java 中中被视为默认包。
+在上面的程序中，`Hai` 和 `Hello` 是类。尽管它们没有声明包，但它们在 Java 中中被视为默认包。
 
 在 Java 中，`java.lang` 是内置包。
 
@@ -7360,6 +8357,7 @@ package name;
 
 ```java
 package com.Jtc.p12;
+
 class Hai {
     public int b=20;
     public void show(){
@@ -7372,9 +8370,9 @@ class Hai {
 
 ```java
 package com.Jtc.p12;
+
 public class Hello{
     public int a=10;
-
     public void m1(){
         System.out.println("m1 in Hello");
     }
@@ -7385,7 +8383,9 @@ public class Hello{
 
 ```java
 package com.Jtc.p13;
+
 import com.Jtc.p12.*;
+
 public class HelloHai{
     public int c=30;
     public void show(){
@@ -7398,15 +8398,16 @@ public class HelloHai{
 
 ```java
 package com.Jtc.p14;
+
 import com.Jtc.p12.*;
 import com.Jtc.p13.*;
+
 public class Jtc140 {
     public static void main(String[] args) {
         Hello h1=new Hello();
         Hai hai=new Hai();
         HelloHai hh=new HelloHai();
         h1.m1();
-
         hai.show();
         hh.show();
     }
@@ -7419,12 +8420,12 @@ public class Jtc140 {
 
 ## 语法
 
-Import package name;
+`Import package name;`
 
 例如：
 
-Import com.Jtc.p1.hello
-Import com.Jtc.p1 *;
+`Import com.Jtc.p1.hello`
+`Import com.Jtc.p1 *;`
 
 当你编写第一个导入语句时，只有 `com.jtc p1` 包中的 `hello` 类会被导入；而在第二个导入语句中，`com jtc p1` 内部的所有类将被导入。
 
@@ -7432,8 +8433,10 @@ Import com.Jtc.p1 *;
 
 ```java
 package com.Jtc.p1;
+
 class Hello{
 }
+
 class Jtc57{
     public static void main(String args[]){
         System.out.println("Main in Jtc57");
@@ -7441,16 +8444,15 @@ class Jtc57{
 }
 ```
 
-
-
-
 ```java
 package com.jtc.a1;
+
 class A{
     void m1(){
         System.out.println("m1 in A");
     }
 }
+
 package com.jtc.a1;
 
 class B{
@@ -7458,13 +8460,17 @@ class B{
         System.out.println("M2 in B");
     }
 }
+
 package org.jtc.p1;
+
 public class Hai{
     public void m2(){
         System.out.println("m2 in Hai");
     }
 }
+
 package org.jtc.p1;
+
 public class Hello{
     public void m1(){
         System.out.println("m1 in Hello");
@@ -7473,7 +8479,9 @@ public class Hello{
         System.out.println("main in Hello");
     }
 }
+
 package org.jtc.p2;
+
 public class HelloA{
     public void m3() {
         System.out.println("m3 in HelloA");
@@ -7482,13 +8490,14 @@ public class HelloA{
         System.out.println("main in HelloA");
     }
 }
-}
 ```
 
 ```java
 package org.jtc.p4;
+
 import org.jtc.p1.*;
 import org.jtc.p2.HelloA;
+
 class Jtc91{
     public static void main(String arg[]){
         Hello h1=new Hello();
@@ -7504,7 +8513,7 @@ class Jtc91{
 
 # 静态导入 (Static Import)
 
-静态导入是从 jdk-1.5 开始引入的。通过使用静态导入，我们可以只导入类的静态成员。
+静态导入是从 `jdk-1.5` 开始引入的。通过使用静态导入，我们可以只导入类的静态成员。
 
 # 注意
 
@@ -7528,9 +8537,11 @@ import static java.lang.System.out;
 
 # 静态导入程序
 
-- 1) Hello.java
+- 1) `Hello.java`
+
 ```java
 package com.Jtc.p1;
+
 public class Hello {
     public static void m1() {
         System.out.println("-- m1() in com.Jtc.p1.Hello class --");
@@ -7550,9 +8561,11 @@ public class Hello {
 }
 ```
 
-- 2) Abc.java
+- 2) `Abc.java`
+
 ```java
 package com.Jtc.p2;
+
 public class Abc {
     public static void mm1() {
         System.out.println("-- m1() in com.Jtc.p2.Abc --");
@@ -7569,12 +8582,15 @@ public class Abc {
 }
 ```
 
-- 3) Jtc1.java
+- 3) `Jtc1.java`
+
 ```java
 package org.wb.test;
+
 import static com.Jtc.p1.Hello.m1;
 import static com.Jtc.p1.Hello.m4;
 import static com.Jtc.p2.Ab.*;
+
 public class Jtc1 {
     public static void main(String[] args) {
         // Hello.m1();
@@ -7591,12 +8607,15 @@ public class Jtc1 {
 }
 ```
 
-- 4) Jtc2.java
+- 4) `Jtc2.java`
+
 ```java
 package org.wb.test;
+
 import static com.Jtc.p1.Hello.m1;
 import static com.Jtc.p1.Hello.m4;
 import static com.Jtc.p1.Hello;
+
 public class Jtc2 {
     public static void main(String[] args) {
         m1();
@@ -7609,11 +8628,14 @@ public class Jtc2 {
 }
 ```
 
-- 5) Jtc3.java
+- 5) `Jtc3.java`
+
 ```java
 package org.wb.test;
+
 import static com.Jtc.p1.Hello.*;
 import static com.Jtc.p2.Ab.*;
+
 public class Jtc3 {
     public static void main(String[] args) {
         m1();
@@ -7624,14 +8646,17 @@ public class Jtc3 {
 }
 ```
 
-- 6) Jtc4.java
+- 6) `Jtc4.java`
+
 ```java
 package org.wb.test;
+
 import static com.Jtc.p1.Hello.*;
 import static com.Jtc.p2.Ab.*;
 import static com.Jtc.p1.Hello;
 import static com.Jtc.p2.Ab;
 import static java.lang.System.*;
+
 public class Jtc4 {
     public static void main(String[] args) {
         m1();
@@ -7651,11 +8676,7 @@ public class Jtc4 {
 
 当你编写第三个静态导入语句时，对于后续的 `import static java.lang.System.out`，只有 `out` 是可用的。
 
-
-
-
-
-package. 该类方法用于获取在相应的引用变量内部可用的对象引用所指向的类名。
+`package.` 该类方法用于获取在相应的引用变量内部可用的对象引用所指向的类名。
 
 该方法的返回类型为 `java.lang.Class`
 
@@ -7663,34 +8684,55 @@ package. 该类方法用于获取在相应的引用变量内部可用的对象�
 
 ```java
 package com.p1;
+
 class Hello {
 }
+
 class A {
 }
+
 class B extends A {
 }
+
 public class Jtc {
     public static void main(String arg[]) {
         System.out.println("in main");
         Hello h1 = new Hello();
         Class cls = h1.getClass();
         System.out.println(cls);
-        String cname = cls.getName();
-        System.out.println(cname);
-        Hello h2 = null;
-        // System.out.println(h2.getClass().getNmae());
-        System.out.println("*******\n");
-        A a1 = new A();
-        A a2 = new B();
-        Object o = new String("abc");
-        System.out.println(a1.getClass().getName());
-        System.out.println(a2.getClass().getName());
-        System.out.println(o.getClass().getName());
     }
 }
 ```
 
-# public native int hashCode() 方法
+
+
+`String cname = cls.getName();`
+
+`System.out.println(cname);`
+
+`Hello h2 = null;`
+
+`// System.out.println(h2.getClass().getNmae());`
+
+`System.out.println("*******\n");`
+
+`A a1 = new A();`
+
+`A a2 = new B();`
+
+`Object o = new String("abc");`
+
+`System.out.println(a1.getClass().getName());`
+
+`System.out.println(a2.getClass().getName());`
+
+`System.out.println(o.getClass().getName());`
+
+```
+}
+```
+
+# `public native int hashCode()` 方法
 
 当你创建任何对象时，所有对象的哈希码都会由 JVM 内部分配。根据该哈希码，JVM 能够唯一地标识每个对象。对于每个对象，都会生成唯一的 `hashCode()`，该方法主要负责以整数的形式生成 `hashCode()`。根据需要，你可以在类内部重写 `hashCode` 方法，并提供自己的实现来生成 `hashCode()`。
 
@@ -7711,11 +8753,11 @@ public int hashCode() {
 
 始终建议编写 `hashCode()` 方法实现，使其为每个对象返回一个唯一的 `hashCode`。
 
-### public boolean equals(Object) 方法：
+### `public boolean equals(Object)` 方法
 
 `java.lang.Object` 类中提供了 `equals()` 方法。它用于按以下方式比较两个对象：
 
-a) 基于引用
+a) 基于引用  
 b) 基于内容
 
 如果你使用 `java.lang.Object` 类中的默认 `equals(Object)` 方法实现，那么它将基于引用进行比较。
@@ -7728,17 +8770,17 @@ public boolean equals(Object o) {
 }
 ```
 
-# equals() 方法与 hashCode() 方法之间的约定：
+# `equals()` 方法与 `hashCode()` 方法之间的约定
 
 - 两个等效的对象应该放在同一个桶中，但同一个桶中的所有对象并不一定相等。
 - 两个等效的对象：必须具有相同的 `hashCode()`，即如果 `h1.equals(h2)` 为 `true`，则 `h1.hashCode()==h2.hashCode()` 应该返回 `true`。
 - 如果两个对象通过 `equals(..)` 方法不相等，则对它们的 `hashCode` 没有限制，可能相同也可能不同。
-- 如果两个对象的 `hashCode` 相同，则这些对象通过 `.equals` 方法可能相等也可能相等。
+- 如果两个对象的 `hashCode` 相同，则这些对象通过 `.equals` 方法可能相等也可能不相等。
 - 如果两个对象的 `hashCode` 不相等，则这些对象通过 `.equals` 方法一定不相等。
 
 为了满足上述 `equals()` 方法和 `hashCode()` 方法之间的约定，每当我们重写 `equals()` 方法时，必须重写 `hashCode` 方法，否则我们不会得到任何编译错误或运行时错误，但这不是良好的编程习惯。
 
-# 考虑以下代码：
+# 考虑以下代码
 
 ```java
 class Hello {
@@ -7756,11 +8798,9 @@ class Hello {
 }
 ```
 
+# 内部 JVM 任务
 
-
-
-
-内部 JVM 任务，JVM 会准备一个未使用或未引用的对象列表。每当 JVM 感到任何堆内存相关问题时，它就会调用垃圾回收（Garbage Collection）来回收或清理未使用或未引用的对象分配的内存。在调用垃圾回收时，JVM 准备未使用对象的列表并将其交给 (gc)。gc() 尝试回收未使用对象分配的内存，在此过程中，某些对象可能会拒绝 gc() 回，因为这些对象持有某些资源连接或文件连接等。因此，为了回收相应对象分配的内存，我们需要确保分配的资源未被使用并进行资源清理。
+JVM 会准备一个未使用或未引用的对象列表。每当 JVM 感到任何堆内存相关问题时，它就会调用垃圾回收（Garbage Collection）来回收或清理未使用或未引用的对象分配的内存。在调用垃圾回收时，JVM 准备未使用对象的列表并将其交给 `gc()`。`gc()` 尝试回收未使用对象分配的内存，在此过程中，某些对象可能会拒绝 `gc()` 回收，因为这些对象持有某些资源连接或文件连接等。因此，为了回收相应对象分配的内存，我们需要确保分配的资源未被使用并进行资源清理。
 
 # JVM Task
 
@@ -7768,20 +8808,20 @@ JVM 会准备一个未使用或未引用的对象列表。
 
 每当 JVM 感到任何堆内存相关问题时，它就会调用 GC 来回收或清理未使用或未引用的对象分配的内存。
 
-```
+```java
 System.runFinalization();
 ```
 
-```
+```java
 System.gc();
 ```
 
-无法保证 gc 何何时会被调用。gc() 的调用取决于 CPU 调度器。
+无法保证 `gc` 何时会被调用。`gc()` 的调用取决于 CPU 调度器。
 
-# System.gc()
+# `System.gc()`
 
-gc() 方法是 System 类中的一个静态方法。
-当你显式调用或编写 System.gc() 时，gc() 将尝试调用垃圾收集器。
+`gc()` 方法是 `System` 类中的一个静态方法。  
+当你显式调用或编写 `System.gc()` 时，`gc()` 将尝试调用垃圾收集器。
 
 # Cloning
 
@@ -7790,23 +8830,24 @@ gc() 方法是 System 类中的一个静态方法。
 - 浅克隆 / 浅拷贝
 - 深克隆 / 深拷贝
 
-当你尝试克隆任何对象时，对应的类对象必须实现 “Cloneable” 接口。
+当你尝试克隆任何对象时，对应的类对象必须实现 `Cloneable` 接口。
 
 # Shallow Cloning
 
-在浅克隆的情况下的情况下，只有顶层对象会被克隆，所有的深层对象都将保持原样使用。Object 类中提供的 clone 方法的默认实现用于浅克隆，它将以浅层的方式克隆对象。为了克隆任何类，对应的类对象必须实现“Cloneable 接口”。现有对象和克隆对象都必须具有不同的地址（仅限顶层）。（Clone() 方法是一个实例方法，不能在静态上下文中调用。（图 14.1）
+在浅克隆的情况下，只有顶层对象会被克隆，所有的深层对象都将保持原样使用。`Object` 类中提供的 `clone` 方法的默认实现用于浅克隆，它将以浅层的方式克隆对象。为了克隆任何类，对应的类对象必须实现 `Cloneable` 接口。现有对象和克隆对象都必须具有不同的地址（仅限顶层）。（`Clone()` 方法是一个实例方法，不能在静态上下文中调用。（图 14.1）
 
 # Example
 
 ```java
 package com.jtc2;
+
 class A {
     int p;
-
     A(int p) {
         this.p = p;
     }
 }
+
 class B {
     int q;
     A a1;
@@ -7815,6 +8856,7 @@ class B {
         this.a1 = a1;
     }
 }
+
 class C {
     int r;
     B b1;
@@ -7826,13 +8868,13 @@ class C {
         System.out.println("IB in C");
     }
 }
+
 class Hello implements Cloneable {
     int x;
     C c1;
     {
         System.out.println("IB in Hello");
     }
-
     Hello(int x,C c1) {
         this.x=x;
         this.c1=c1;
@@ -7854,6 +8896,7 @@ class Hello implements Cloneable {
         System.out.println(c1.b1.a1.p);
     }
 }
+
 public class Jtc1 {
     public static void main(String[] arg[]) {
         A a1 = new A(111);
@@ -7862,7 +8905,6 @@ public class Jtc1 {
         Hello h1 = new Hello(444, c1);
         // Hello h2=h1.clone();
         // Hello h2=clone();
-
         Hello h2 = (Hello) h1.myClone();
         System.out.println(h1 == h2);
         System.out.println(h1.c1 == h2.c1);
@@ -7890,7 +8932,7 @@ public class Jtc1 {
 
 # Deep cloning
 
-在深克隆的情况下，所有的顶层对象和深层对象都将被克隆。object 中提供的 clone() 方法用于浅克隆（图 14.2）。如果你想实现深克隆，必须按照以下签名重写你自己的 clone() 方法：
+在深克隆的情况下，所有的顶层对象和深层对象都将被克隆。`Object` 中提供的 `clone()` 方法用于浅克隆（图 14.2）。如果你想实现深克隆，必须按照以下签名重写你自己的 `clone()` 方法：
 
 ```java
 public Object clone() {
@@ -7902,12 +8944,14 @@ public Object clone() {
 
 ```java
 package com.jtc3;
+
 class A {
     int p;
     A(int p) {
         this.p = p;
     }
 }
+
 class B {
     int q;
     A a1;
@@ -7916,6 +8960,7 @@ class B {
         this.a1 = a1;
     }
 }
+
 class C {
     int r;
     B b1;
@@ -7927,6 +8972,7 @@ class C {
         System.out.println("IB in C");
     }
 }
+
 class Hello implements Cloneable {
     int x;
     C c1;
@@ -7955,9 +9001,6 @@ class Hello implements Cloneable {
     }
 }
 ```
-
-
-
 
 ```java
 void showClone() throws CloneNotSupportedException {
@@ -8002,28 +9045,30 @@ class LoginInfo {
 
 通过使用 sun 系统提供的反射 API（即 `java.lang.reflect` API），我们可以在运行时不知道编译时对应的实体和操作名称的情况下，获取大多数类级别的属性，如类、接口、字段和方法。在这里，实体指的是类，操作指的是方法。此外，我们还可以实例化新对象、调用方法并注入值。
 
-反射 API 是非常强大的，虽然它在通用编程或基础编程中并不经常用用，但 Java 和 J2EE 的许多概念都是基于反射设计的。有许多框架和工具恰恰地使用了反射。
+反射 API 是非常强大的，虽然它在通用编程或基础编程中并不经常使用，但 Java 和 J2EE 的许多概念都是基于反射设计的。有许多框架和工具恰恰地使用了反射。
 
 - Struts
 - Hibernate
 - Spring
 - JUnit
 - Tomcat
-- ✓ Eclipse
+- Eclipse
 - 以及更多……
 
 由于一些问题，建议不要在通用编程中使用反射。
 
-- ✓ 性能较差
-- ✓ 安全限制
-- ✓ 安全问题
-- ✓ 高维护成本
+- 性能较差
+- 安全限制
+- 安全问题
+- 高维护成本
 
 # 程序 14.1
 
 ```java
 package com.jtc;
+
 import java.lang.reflect.*;
+
 public class Jtc1 {
     public static void main(String[] args) {
         try {
@@ -8037,115 +9082,87 @@ public class Jtc1 {
             System.out.println(cls.getPackage());
             System.out.println(cls.getPackage().getName());
             System.out.println(cls.getSuperclass());
-            System.out.println(cls.getSuperclass().getName());
-            Class c[]=cls.getInterfaces();
-
-            for(int i=0; i<c.length; i++) {
-                System.out.println(c[i].getName());
-            }
-            System.out.println(cls.getModifiers());
-            System.out.println(Modifier.PUBLIC);
-            System.out.println(Modifier.FINAL);
-        }catch(Exception e) {
-            e.printStackTrace();
-        }
-    }
-}
-interface i1{}
-interface i2{}
-final class Hello extends i1,i2 {
-    int a=10;
-    int b;
-    Hello() {}
-    Hello(int b) {
-        this.b=b;
-    }
-    void show() {
-        System.out.println(a);
-        System.out.println(b);
-    }
-}
 ```
+
+
 
 # 程序 14.2
 
 ```java
 package com.jtc;
+
 import java.lang.reflect.*;
+
 public class Jtc2 {
     public static void main(String[] args) {
-
-        try{
-            Class cls=Class.forName("com.jtc.Hello");
-            Hello h=(Hello)cls.newInstance();
+        try {
+            Class cls = Class.forName("com.jtc.Hello");
+            Hello h = (Hello) cls.newInstance();
             h.show();
             System.out.println(Modifier.PUBLIC);
             System.out.println(Modifier.FINAL);
             System.out.println(Modifier.STATIC);
             System.out.println("fields");
-            Field f[]=cls.getFields();
-            for(int i=0; i<f.length; i++) {
-                System.out.println(f[i].Modifiers()+"..."+f[i].getType()+"..."+f[i].getName());
+            Field f[] = cls.getFields();
+            for (int i = 0; i < f.length; i++) {
+                System.out.println(f[i].Modifiers() + "..." + f[i].getType() + "..." + f[i].getName());
             }
-
             System.out.println("Declared fields");
-            Field[] ff[]=cls.getDeclaredFields();
-            for(int i=0; i<ff.length; i++) {
-                System.out.println(ff[i].Modifiers()+"..."+ff[i].getType()+"..."+ff[i].getName());
+            Field[] ff[] = cls.getDeclaredFields();
+            for (int i = 0; i < ff.length; i++) {
+                System.out.println(ff[i].Modifiers() + "..." + ff[i].getType() + "..." + ff[i].getName());
             }
-
             System.out.println("methods");
-            Method[] m[]=cls.getMethods();
-            for(int i=0; i<m.length; i++) {
-                System.out.println(m[i].Modifiers()+"..."+m[i].getReturnType()+"..."+m[i].getName());
+            Method[] m[] = cls.getMethods();
+            for (int i = 0; i < m.length; i++) {
+                System.out.println(m[i].Modifiers() + "..." + m[i].getReturnType() + "..." + m[i].getName());
             }
-
             // Declared methods
             System.out.println("Declared methods");
-            Method mm[]=cls.getDeclaredMethods();
-            for(int i=0; i<mm.length; i++) {
-                System.out.println(mm[i].Modifiers()+"..."+mm[i].getReturnType()+"..."+mm[i].getName());
+            Method mm[] = cls.getDeclaredMethods();
+            for (int i = 0; i < mm.length; i++) {
+                System.out.println(mm[i].Modifiers() + "..." + mm[i].getReturnType() + "..." + mm[i].getName());
             }
-
             // constructors
             System.out.println("constructors");
-            Constructor c[]=cls.getConstructors();
-            for(int i=0; i<c.length; i++) {
-                System.out.println(c[i].Modifiers()+""+c[i].getName());
+            Constructor c[] = cls.getConstructors();
+            for (int i = 0; i < c.length; i++) {
+                System.out.println(c[i].Modifiers() + "" + c[i].getName());
             }
-
             // invoking methods dynamically
-            mm=cls.getDeclaredMethods();
-            for(int i=0; i<mm.length; i++) {
-                if(mm[i].getName().equals("show")) 
-                    mm[i].invoke(h,null);
+            mm = cls.getDeclaredMethods();
+            for (int i = 0; i < mm.length; i++) {
+                if (mm[i].getName().equals("show"))
+                    mm[i].invoke(h, null);
             }
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
+
 class Hai {
-    public int x=200; 
-    public void hai(){
+    public int x = 200;
+    public void hai() {
         System.out.println("hai");
     }
 }
+
 class Hello extends Hai {
-    public static int a=10;
-    public static int b=20;
+    public static int a = 10;
+    public static int b = 20;
     Hello() {}
-    public void show(){
+    public void show() {
         System.out.println("show");
         System.out.println(a);
         System.out.println(b);
     }
-    public void m1(String s1,String s2){
+    public void m1(String s1, String s2) {
         System.out.println("m1");
         System.out.println(s1);
         System.out.println(s2);
     }
-    public void m2(int x,int y){
+    public void m2(int x, int y) {
         System.out.println("m2");
         System.out.println(x);
         System.out.println(y);
@@ -8157,42 +9174,45 @@ class Hello extends Hai {
 
 ```java
 package com.jtc;
+
 import java.lang.reflect.*;
+
 public class Jtc3 {
     public static void main(String[] args) {
         try {
-            Class cls=Class.forName("com.jtc.Hello");
-            Hello h=(Hello)cls.newInstance();
+            Class cls = Class.forName("com.jtc.Hello");
+            Hello h = (Hello) cls.newInstance();
             // invoking methods dynamically
-            Method[] mm=cls.getDeclaredMethods();
-            for(int i=0; i<mm.length; i++) {
-                if(mm[i].getName().equals("show")) {
-                    mm[i].invoke(h,null);
+            Method[] mm = cls.getDeclaredMethods();
+            for (int i = 0; i < mm.length; i++) {
+                if (mm[i].getName().equals("show")) {
+                    mm[i].invoke(h, null);
                 }
-                if(mm[i].getName().equals("m1")) {
-                    Object[] o={"jtc1","jtc2"};
-                    mm[i].invoke(h,o);
+                if (mm[i].getName().equals("m1")) {
+                    Object[] o = {"jtc1", "jtc2"};
+                    mm[i].invoke(h, o);
                 }
-                if(mm[i].getName().equals("m2")) {
-                    Object o[]={new Integer(99),new Integer(88)};
-                    mm[i].invoke(h,o);
+                if (mm[i].getName().equals("m2")) {
+                    Object o[] = {new Integer(99), new Integer(88)};
+                    mm[i].invoke(h, o);
                 }
             }
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
+
 class Hello {
-    public void show(){
+    public void show() {
         System.out.println("show");
     }
-    public void m1(String s1,String s2){
+    public void m1(String s1, String s2) {
         System.out.println("m1");
         System.out.println(s1);
         System.out.println(s2);
     }
-    public void m2(int x,int y) {
+    public void m2(int x, int y) {
         System.out.println("m2");
         System.out.println(x);
         System.out.println(y);
@@ -8204,51 +9224,51 @@ class Hello {
 
 ```java
 package com.jtc;
+
 import java.lang.reflect.*;
 import java.io.*;
-public class Jtc4{
-  public static void main(String[] args) throws Exception {
-    Class cls=Class.forName("Student");
-    System.out.println("*** INTERFACES ***");
-    Class inters[]=cls.getInterfaces();
-    for(int i=0; i<inters.length; i++) {
-      System.out.println(inters[i]);
+
+public class Jtc4 {
+    public static void main(String[] args) throws Exception {
+        Class cls = Class.forName("Student");
+        System.out.println("*** INTERFACES ***");
+        Class inters[] = cls.getInterfaces();
+        for (int i = 0; i < inters.length; i++) {
+            System.out.println(inters[i]);
+        }
+        System.out.println("*** PUBLIC CONSTRUCTOR ***");
+        Constructor pubCons[] = cls.getConstructors();
+        for (int i = 0; i < pubCons.length; i++) {
+            System.out.println(pubCons[i]);
+        }
+        System.out.println("*** DECLARED CONSTRUCTOR ***");
+        Constructor decCons[] = cls.getDeclaredConstructors();
+        for (int i = 0; i < decCons.length; i++) {
+            System.out.println(decCons[i]);
+        }
+        System.out.println("*** PUBLIC FIELD ***");
+        Field pubFlds[] = cls.getFields();
+        for (int i = 0; i < pubFlds.length; i++) {
+            System.out.println(pubFlds[i]);
+        }
+        System.out.println("*** DECLARED FIELD ***");
+        Field decFlds[] = cls.getDeclaredFields();
+        for (int i = 0; i < decFlds.length; i++) {
+            System.out.println(decFlds[i]);
+        }
+        System.out.println("*** PUBLIC INNER CLASSES ***");
+        Class innClass[] = cls.getClasses();
+        for (int i = 0; i < innClass.length; i++) {
+            System.out.println(innClass[i]);
+        }
     }
-    System.out.println("*** PUBLIC CONSTRUCTOR ***");
-    Constructor pubCons[]=cls.getConstructors();
-    for(int i=0; i<pubCons.length; i++) {
-      System.out.println(pubCons[i]);
-    }
-    System.out.println("*** DECLARED CONSTRUCTOR ***");
-    Constructor decCons[]=cls.getDeclaredConstructors();
-    for(int i=0; i<decCons.length; i++) {
-      System.out.println(decCons[i]);
-    }
-    System.out.println("*** PUBLIC FIELD ***");
-    Field pubFlds[]=cls.getFields();
-    for(int i=0; i<pubFlds.length; i++) {
-      System.out.println(pubFlds[i]);
-    }
-    System.out.println("*** DECLARED FIELD ***");
-    Field decFlds[]=cls.getDeclaredFields();
-    for(int i=0; i<decFlds.length; i++) {
-      System.out.println(decFlds[i]);
-    }
-    System.out.println("*** PUBLIC INNER CLASSES ***");
-    Class innClass[]=cls.getClasses();
-    for(int i=0; i<innClass.length; i++) {
-      System.out.println(innClass[i]);
-    }
-  }
 }
 ```
 
 # 程序：访问方法信息
 
-
-
 ```java
-public class Jtc5{
+public class Jtc5 {
     public static void main(String str[]) throws Exception {
         Class cls = Class.forName("Student");
         Object st = new Student();
@@ -8297,72 +9317,137 @@ class Student {
 
 ```java
 package com.jtc.ref.obj;
+
 import java.io.*;
+```
+
+
+
+# 程序：使用反射动态调用方法
+
+```java
 import java.lang.reflect.*;
 
 public class Jtc6 {
+
     public static void main(String[] args) throws Exception {
+
         if (args.length == 1) {
+
             String cName = args[0];
+
             Class c1 = Class.forName(cName);
+
             DataInputStream dis = new DataInputStream(System.in);
+
             Method[] ms = c1.getDeclaredMethods();
+
             for (int i = 0; i < ms.length; i++) {
+
                 Method m = ms[i];
+
                 System.out.println("\n正在调用方法 " + m.getName());
+
                 Object objReq = null;
+
                 int mod = m.getModifiers();
+
                 boolean st = Modifier.isStatic(mod);
+
                 if (!st) {
+
                     objReq = c1.newInstance();
+
                 }
+
                 Class[] params = m.getParameterTypes();
+
                 Object[] reqArgs = new Object[params.length];
+
                 for (int j = 0; j < params.length; j++) {
+
                     String type = params[j].getName();
+
                     System.out.println("输入类型为的值\t:" + type);
+
                     String val = dis.readLine();
+
                     if (type.equals("boolean")) reqArgs[j] = new Boolean(val);
+
                     else if (type.equals("byte")) reqArgs[j] = new Byte(val);
+
                     else if (type.equals("char")) reqArgs[j] = new Character(val.charAt(0));
+
                     else if (type.equals("short")) reqArgs[j] = new Short(val);
+
                     else if (type.equals("int")) reqArgs[j] = new Integer(val);
+
                     else if (type.equals("long")) reqArgs[j] = new Long(val);
+
                     else if (type.equals("float")) reqArgs[j] = new Float(val);
+
                     else if (type.equals("double")) reqArgs[j] = new Double(val);
+
                     else if (type.equals("java.lang.String")) reqArgs[j] = val;
+
                 }
+
                 Object res = m.invoke(objReq, reqArgs);
+
                 System.out.println("结果为\t:" + res);
+
             } else {
+
                 System.out.println("请提供全限定类名和方法名作为 CLA");
+
             }
+
         }
+
     }
+
 }
 
 class Student {
+
     private void showDetails() {
+
         System.out.println("--showDetails() of Student\t:" + this);
+
     }
 
     static int searchId(int ab, String bc, boolean b1) {
+
         System.out.println("--searchId() of Student\t:");
+
         System.out.println("ab\t:" + ab);
+
         System.out.println("bc\t:" + bc);
+
         System.out.println("b1\t:" + b1);
+
         return 99;
+
     }
 
     boolean verifyStudent(char ch, String bc, boolean b1, long val, float f1) {
+
         System.out.println("--verifyStudent() of Student\t:" + this);
+
         System.out.println("ch\t:" + ch);
+
         System.out.println("bc\t:" + bc);
+
         System.out.println("b1\t:" + b1);
+
         System.out.println("val\t:" + val);
+
         System.out.println("f1\t:" + f1);
+
         return true;
+
     }
+
 }
 ```
 
@@ -8370,42 +9455,77 @@ class Student {
 
 ```java
 package com.jtc.ref.obj;
+
 import java.io.*;
+
 import java.lang.reflect.*;
 
 public class Jtc7 {
+
     public static void main(String[] args) throws Exception {
+
         if (args.length != 1) {
+
             System.out.println("提供全限定类名作为 CLA");
+
             System.exit(0);
+
         }
+
         DataInputStream dis = new DataInputStream(System.in);
+
         String className = args[0];
+
         Class cl = Class.forName(className);
+
         Constructor[] cons = cl.getConstructors();
+
         for (int k = 0; k < cons.length; k++) {
+
             Constructor c = cons[k];
+
             Class[] cParams = c.getParameterTypes();
+
             Object[] objArgs = new Object[cParams.length];
+
             for (int i = 0; i < cParams.length; i++) {
+
                 Class p = cParams[i];
+
                 System.out.println("输入类型为的值:" + p.getSimpleName());
+
                 String val = dis.readLine();
+
                 if (type.equals("boolean")) objArgs[i] = new Boolean(val);
+
                 else if (type.equals("byte")) objArgs[i] = new Byte(val);
+
                 else if (type.equals("short")) objArgs[i] = new Short(val);
+
                 else if (type.equals("char")) objArgs[i] = new Character(val.charAt(0));
+
                 else if (type.equals("int")) objArgs[i] = new Integer(val);
+
                 else if (type.equals("long")) objArgs[i] = new Long(val);
+
                 else if (type.equals("float")) objArgs[i] = new Float(val);
+
                 else if (type.equals("double")) objArgs[i] = new Double(val);
+
                 else if (type.equals("String")) objArgs[i] = val;
+
                 else objArgs[i] = p.newInstance();
+
             }
+
             Object obj = c.newInstance(objArgs);
+
             System.out.println(obj);
+
         }
+
     }
+
 }
 ```
 
@@ -8415,32 +9535,53 @@ public class Jtc7 {
 package com.jtc.ref.obj;
 
 public class Employee {
+
     private int eid;
+
     private String eName;
+
     private String email;
+
     private long phone;
+
     private boolean permanent;
+
     private Address empAdd;
 
     public Employee(int eid, String email, long phone, Address empAdd) {
+
         this.eid = eid;
+
         this.email = email;
+
         this.phone = phone;
+
         this.empAdd = empAdd;
+
     }
 
     public Employee(int eid, String eName, String email, long phone, boolean permanent, Address empAdd) {
+
         this.eid = eid;
+
         this.eName = eName;
+
         this.email = email;
+
         this.phone = phone;
+
         this.permanent = permanent;
+
         this.empAdd = empAdd;
+
     }
 
     public String toString() {
+
         return "Employee[eid=" + eid + ", eName=" + eName + ", email=" + email + ", phone=" + phone + ", permanent=" + permanent + ", empAdd=" + empAdd + "]";
+
     }
+
 }
 ```
 
@@ -8450,26 +9591,30 @@ public class Employee {
 package com.jtc.ref.obj;
 
 public class Address {
+
     public String toString() {
+
         return "Emp Address";
+
     }
+
 }
 ```
 
 ## 14.1.2 java.lang.String 类
 
-- String 不是数据类型，它是 java.lang 包中的一个特殊类。
-- String 是一个 final 类，不能被其他类继承。
-- String 对象在本质上是不可变的，无法进行任何更改。
+- `String` 不是数据类型，它是 `java.lang` 包中的一个特殊类。
+- `String` 是一个 `final` 类，不能被其他类继承。
+- `String` 对象在本质上是不可变的，无法进行任何更改。
 - 每当你将一个字符串与另一个字符串拼接时，都会创建一个新对象。
-- String 使用特殊的内存区域，即字符串常量池（String-Constant-Pool）来实现字符串对象的复用。
-- String 对象可以通过两种方式创建：
-    - 不使用 new 关键字
-    - 使用 new 关键字
+- `String` 使用特殊的内存区域，即字符串常量池（`String-Constant-Pool`）来实现字符串对象的复用。
+- `String` 对象可以通过两种方式创建：
+    - 不使用 `new` 关键字
+    - 使用 `new` 关键字
 
 # 不使用 new 关键字创建 String 对象
 
-当我们不使用 new 关键字创建 String 对象时，首先会检查该字符串字面量是否存在于字符串常量池中。
+当我们不使用 `new` 关键字创建 `String` 对象时，首先会检查该字符串字面量是否存在于字符串常量池中。
 
 如果字符串常量池中不存在该字面量，则会在字符串常量池中创建一个新的字面量，并指向对应的引用变量。
 
@@ -8481,61 +9626,91 @@ public class Address {
 package com.jtc24;
 
 public class Jtc124{
+
     public static void main(String[] args){
+
         String s1="jtc";
+
         String s2="jtc";
+
         String s3="jtc1";
+
         String s4="jtc1";
+
         System.out.println(s1==s2); //true
+
         System.out.println(s1==s3); //false
+
         System.out.println(s3==s4); //true
+
     }
+
 }
 ```
 
-
-
-
-
 ## 使用 new 操作符创建 String 对象
 
-当使用 `new` 操作符创建 String 对象时，它会首先检查 SCP（字符串常量池）内部该字符串字面量是否存在于 SCP 中。
+当使用 `new` 操作符创建 `String` 对象时，它会首先检查 SCP（字符串常量池）内部该字符串字面量是否存在于 SCP 中。
 
 如果 SCP 中不存在，它会在 SCP 中创建一个新的字面量，然后离开 SCP，在 SCP 外部创建一个新的字面量并指向该对象。
 
-如果字符串字面量已经在 SCP（字符串常量池）中存在，则不会在 SCP 内部创建任何新的字面量；它会离开 SCP，在堆（Heap）中创建一个字符串字面量并指向它；
+如果字符串字面量已经在 SCP（字符串常量池）中存在，则不会在 SCP 内部创建任何新的字面量；它会离开 SCP，在堆（`Heap`）中创建一个字符串字面量并指向它。
 
 ## 示例
 
 ```java
 package com.jtc5;
+
 public class Jtc125{
+
     public static void main(String arg[]){
+
         String s1=new String("jtc");
+
         String s2=new String("jtc");
+
         String s3=new String("jtcindia");
+
         String s4=new String("india");
+
         String s5=s1+s4;
+
         System.out.println(s1==s2);
+
         System.out.println(s2==s3);
+
         System.out.println(s3==s5);
+
     }
+
 }
 ```
 
 ```java
 package com.Jtc6;
+
 public class Jtc126{
+
     public static void main(String arg[]) {
+
         String s1="jtc";
+
         String s2="jtc";
+
         String s3="jtcnoida";
+
         String s4=new String("jtc");
+
         String s5=new String("jtcnoida");
+
         System.out.println(s1==s2);
+
         System.out.println(s1==s3);
+
         System.out.println(s3==s5);
+
     }
+
 }
 ```
 
@@ -8544,37 +9719,59 @@ public class Jtc126{
 
 ```java
 package com.jtc7;
-public class Jtc127 {
-    public static void main(String arg[]) {
-        String s=new String("jtcnoida");
-        String s1="jtcnoida";
-        String s2="jtcnoida";
-        String s3="jtc";
-        String s4="noida";
 
-        String s5=s3+s4;
-        String s6=new String("jtc");
-        String s7=new String("noida");
-        String s9="jtc"+"noida";
-        String s10="jtc+s4";
-        String s11=s3+'noida";
-        String s8=s6+s7;
-        System.out.println(s==s1);
-        System.out.println(s1==s2);
-        System.out.println(s1==s5);
-        System.out.println(s5==s8);
-        System.out.println("****CHECKING****");
-        System.out.println(s1==s9);
-        System.out.println(s1==s10);
-        System.out.println(s1==s11);
-        System.out.println(s5==s8);
-    }
-}
+public class Jtc127 {
+
+    public static void main(String arg[]) {
+
+        String s=new String("jtcnoida");
+
+        String s1="jtcnoida";
+
+        String s2="jtcnoida";
+
+        String s3="jtc";
+```
+
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+---
+
+```java
+String s4="noida";
+String s5=s3+s4;
+String s6=new String("jtc");
+String s7=new String("noida");
+String s9="jtc"+"noida";
+String s10="jtc+s4";
+String s11=s3+'noida";
+String s8=s6+s7;
+System.out.println(s==s1);
+System.out.println(s1==s2);
+System.out.println(s1==s5);
+System.out.println(s5==s8);
+System.out.println("****CHECKING****");
+System.out.println(s1==s9);
+System.out.println(s1==s10);
+System.out.println(s1==s11);
+System.out.println(s5==s8);
 ```
 
 ## intern() 方法
 
-intern() 方法用于指向字符串常量池（SCP）内部的字符串字面量，如果该字符串字面量在 SCP 中可用。
+`intern()`方法用于指向字符串常量池（SCP）内部的字符串字面量，如果该字符串字面量在 SCP 中可用。
 
 如果不可，它会在池中创建一个新的字面量并指向它。
 
@@ -8582,6 +9779,7 @@ intern() 方法用于指向字符串常量池（SCP）内部的字符串字面�
 
 ```java
 package com.jtc8;
+
 public class Jtc128{
     public static void main(String args[]){
         String s1=new String("som");
@@ -8595,14 +9793,18 @@ public class Jtc128{
         System.out.println(s1==s2.intern());
         System.out.println("********");
         System.out.println("Checking:"+s2.intern());
-    }## 编写不可变类 (Immutable class)
+    }
+}
+```
+
+## 编写不可变类 (Immutable class)
 
 不可变类意味着不应该允许创建或修改现有对象。
 
 创建一个不可变类需要遵循以下步骤：
 
-- 将类声明为 `final`
-- 将类的字段声明为 `private`
+- 将类声明为`final`
+- 将类的字段声明为`private`
 - 一旦创建对象，就对其进行任何更改。
 
 如果我们尝试进行任何更改将创建一个新对象。如果内容没有变化，则重用现有对象。这种行为被称为不可变性。
@@ -8636,13 +9838,13 @@ final class CreateImmutable {
 
 ## Final 与不可变性 (Immutability)
 
-`final` 修饰符适用于变量，而不可变性概念适用于对象。
+`final`修饰符适用于变量，而不可变性概念适用于对象。
 
-如果引用变量被声明为 `final`，我们就不能对其进行重新赋值，但这并不意味着不能对该对象进行任何更改。
+如果引用变量被声明为`final`，我们就不能对其进行重新赋值，但这并不意味着不能对该对象进行任何更改。
 
-也就是说，通过将引用变量声明为 `final`，我们并不会获得不可变性。
+也就是说，通过将引用变量声明为`final`，我们并不会获得不可变性。
 
-final 和不可变性是两个不同的概念。
+`final`和不可变性是两个不同的概念。
 
 ## 示例
 
@@ -8657,12 +9859,12 @@ class Hello{
 }
 ```
 
-在上面的示例中，尽管 "sb" 是 `final`，我们仍然可以对相应的对象进行任何更改。也就是说，通过 `final` 关键字我们并没有获得不可变性。
+在上面的示例中，尽管`sb`是`final`，我们仍然可以对相应的对象进行任何更改。也就是说，通过`final`关键字我们并没有获得不可变性。
 
 Q1：以下哪些是有意义的？
 
-- final 变量（有效）
-- final 对象（无效）
+- `final`变量（有效）
+- `final`对象（无效）
 - 不可变变量（无效）
 - 不可变对象（有效）
 
@@ -8703,11 +9905,9 @@ public class Jtc130{
 }
 ```
 
-`String` 类中的 `hashCode()` 方法是基于 ASCII 值重写的。
+`String`类中的`hashCode()`方法是基于 ASCII 值重写的。
 
-`equals()` 方法是基于内容的重写的。
-
-
+`equals()`方法是基于内容的重写的。
 
 ```java
 String s12="Hi I am in Java Training Center, sleeping in core Java class;
@@ -8719,7 +9919,9 @@ System.out.println(str1.regionMatches(0,"jtcindia",0,8)); //true
 System.out.println(str1.regionMatches(3,"india",0,5)) //true
 System.out.println(str1.regionMatches(true,3,"india",0,5)); //true
 }
-```## compareTo() 方法
+```
+
+## compareTo() 方法
 
 该方法用于根据 ASCII 值逐个字符地比较两个字符串。
 
@@ -8727,11 +9929,11 @@ System.out.println(str1.regionMatches(true,3,"india",0,5)); //true
 
 （当没有发现差异时，返回 0；当发现第一个差异时，将不再比较后续字符。）
 
-compareTo() 方法的返回类型在“java.lang.Comparable”接口中可用。
+`compareTo()`方法的返回类型在`java.lang.Comparable`接口中可用。
 
-你的字符串类实现了 Comparable 接口，并在 String 类中重写了 compareTo() 方法。
+你的字符串类实现了`Comparable`接口，并在`String`类中重写了`compareTo()`方法。
 
-compareToIgnoreCase() 方法用于在忽略字母大小写的情况下比较两个字符串。
+`compareToIgnoreCase()`方法用于在忽略字母大小写的情况下比较两个字符串。
 
 ## 示例
 
@@ -8747,13 +9949,15 @@ public class Jtc131{
     System.out.println(s1.compareToIgnoreCase(s2)); //0
     }
 }
-```## split () 方法
+```
 
-该方法用于根据某些特定标准分割(String)，但我们使用 split() 方法分割字符串时会不必要地创建许多不同的对象。当你使用 split() 方法指定分割字符串的标准时，该特定标准不会包含在结果中。在使用 split() 方法分割字符串时，它是根据指定的标准进行分割的，但在分割后，它会被存储在字符串数组中，这会不必要地创建 n 个对象。
+## split() 方法
 
-当创建了不必要的 String 对象时，可能会导致堆内存相关的问题。
+该方法用于根据某些特定标准分割`String`，但我们使用`split()`方法分割字符串时会不必要地创建许多不同的对象。当你使用`split()`方法指定分割字符串的标准时，该特定标准不会包含在结果中。在使用`split()`方法分割字符串时，它是根据指定的标准进行分割的，但在分割后，它会被存储在字符串数组中，这会不必要地创建 n 个对象。
 
-因此，始终建议不要使用 split() 方法。
+当创建了不必要的`String`对象时，可能会导致堆内存相关的问题。
+
+因此，始终建议不要使用`split()`方法。
 
 ## 示例
 
@@ -8763,12 +9967,17 @@ String s2[]=str.split("java");
 for(int i=0;i<s2.length; i++)
     System.out.println(s2[i]);
 ```
+
 →输出:
 
+```
 Hi I am in
+
 training center for classes
+```
 
 Q2 : 写一个程序根据通配符分割字符串
+
 ```java
 class Jtc {
 public static void main(String args[]) {
@@ -8777,9 +9986,11 @@ String s2[]=s1.split("\\.,.?!");
 for(int i=0;i<s2.length; i++)
     System.out.println(s2[i]);
 }}
-```## startsWith()
+```
 
-该方法在 String 类中可用。它用于检查相应的字符串字面量在内部是否以指定的字符串开头。内部上 startswith() 方法基于 ASCII 值工作。如果指定的字符串确实是以该字符串字面量开头，则返回 true，否则返回 false。
+## startsWith()
+
+该方法在`String`类中可用。它用于检查相应的字符串字面量在内部是否以指定的字符串开头。内部上`startswith()`方法基于 ASCII 值工作。如果指定的字符串确实是以该字符串字面量开头，则返回 true，否则返回 false。
 
 ## indexOf()
 
@@ -8787,25 +9998,27 @@ for(int i=0;i<s2.length; i++)
 
 ## indexOf(char, int)
 
-当你指定 (char ,int) 时，它在指定的索引位置之前不会对该特定字符进行检查，在该索引位置之后，它将尝试搜索指定的位置，如果匹配则返回索引位置，否则返回 -1。如果提供的某个索引位置不可用，它也会返回 -1。
+当你指定`(char ,int)`时，它在指定的索引位置之前不会对该特定字符进行检查，在该索引位置之后，它将尝试搜索指定的位置，如果匹配则返回索引位置，否则返回 -1。如果提供的某个索引位置不可用，它也会返回 -1。
 
 ## regionMatches()
 
-在 regionMatches 中主要有四个参数，语法如下：
+在`regionMatches`中主要有四个参数，语法如下：
 
 ```
 regionMatches(int offset, String str, int onset, int length)
 ```
 
-regionMatches 的第一个参数表示你调用它的方法的引用索引位置，第二个参数字符串用于与你在第一个参数中指定的索引位置进行比较，第三个参数 int 表示你在 regionMatches 参数中指定的字符串的索引位置。下一个 int 参数表示两个字符串中需要比较的字符数，即从指定位置开始的 onset 或 offset 字符串。
+`regionMatches`的第一个参数表示你调用它的方法的引用索引位置，第二个参数字符串用于与你在第一个参数中指定的索引位置进行比较，第三个参数`int`表示你在`regionMatches`参数中指定的字符串的索引位置。下一个`int`参数表示两个字符串中需要比较的字符数，即从指定位置开始的`onset`或`offset`字符串。
 
+```
 regionMatches(boolean ignoreCase, int offset, String str, int onset, int length)
+```
 
-当你不指定任何 Boolean 参数时，默认为 false，这意味着在匹配指定区域时，它会在考虑大小写的情况下比较字符串。此外，即使你显式地将 false 作为方法参数，它也会考虑指定字符串的大小写。如果参数为 true，则忽略字符串的大小写。
+当你不指定任何`Boolean`参数时，默认为 false，这意味着在匹配指定区域时，它会在考虑大小写的情况下比较字符串。此外，即使你显式地将 false 作为方法参数，它也会考虑指定字符串的大小写。如果参数为 true，则忽略字符串的大小写。
 
 ## matches()
 
-该方法用于匹配模式。在匹配模式时，* 代表字符的持续，直到遇到下一个字符为止。
+该方法用于匹配模式。在匹配模式时，`*`代表字符的持续，直到遇到下一个字符为止。
 
 ```java
 public class Jtc {
@@ -8830,15 +10043,11 @@ System.out.println(s1.matches("*a*b*cd*e*"));
 
 ## substring(int begin)
 
-返回从 begin 索引到字符串结束的子字符串。
+返回从`begin`索引到字符串结束的子字符串。
 
 ## substring(int begin, int end)
 
-返回从 begin 索引到 end-1 索引的子字符串。
-
-
-
-
+返回从`begin`索引到`end-1`索引的子字符串。
 
 返回指定字符第一次出现位置的索引；如果指定的字符不存在，则返回 -1。
 
@@ -8870,23 +10079,23 @@ class StringDemo{
 
 ## 14.1.3 java.lang.StringBuffer类
 
-StringBuffer 是 `java.lang` 包中的一个类。它是一个 `final` 类，不能被子类继承。StringBuffer 对象在本质上是可变的，也就是说，如果你执行任何拼接或其他操作，它将修改源。String 的几乎所有成员都是同步的，因此这会影响应用程序的并发性。（StringBuffer 成员的使用会影响应用程序的并发性）。StringBuffer 对象支持序列化。
+`StringBuffer`是`java.lang`包中的一个类。它是一个`final`类，不能被子类继承。`StringBuffer`对象在本质上是可变的，也就是说，如果你执行任何拼接或其他操作，它将修改源。`String`的几乎所有成员都是同步的，因此这会影响应用程序的并发性。（`StringBuffer`成员的使用会影响应用程序的并发性）。`StringBuffer`对象支持序列化。
 
-StringBuffer 不像 String 那样使用特殊的内存位置。String 使用常量池来实现对象的重用。StringBuffer 使用容量（capacity）概念来存储字符串（容量=16）。在不使用“new” 算符的情况下，无法创建 StringBuffer 对象。
+`StringBuffer`不像`String`那样使用特殊的内存位置。`String`使用常量池来实现对象的重用。`StringBuffer`使用容量（capacity）概念来存储字符串（容量=16）。在不使用`new`算符的情况下，无法创建`StringBuffer`对象。
 
-如果内容频繁变化，则绝不建议使用 String 对象，因为每次变化都会在内部创建一个新对象。
+如果内容频繁变化，则绝不建议使用`String`对象，因为每次变化都会在内部创建一个新对象。
 
-为了处理这类需求，我们应该使用 StringBuffer 概念。
+为了处理这类需求，我们应该使用`StringBuffer`概念。
 
-StringBuffer 相比于 String 的主要优势是，所有必要的更改都只在现有对象上执行，而不是创建新对象。（不会创建新对象）
+`StringBuffer`相比于`String`的主要优势是，所有必要的更改都只在现有对象上执行，而不是创建新对象。（不会创建新对象）
 
-StringBuffer 不使用任何 SCP 或任何特殊的内存位置来提高字符串字面量的可用性。
+`StringBuffer`不使用任何 SCP 或任何特殊的内存位置来提高字符串字面量的可用性。
 
-创建一个具有默认初始容量“16”的空 StringBuilder 对象。一旦 StringBuilder 对象达到其最大容量，将创建一个新的 StringBuilder 对象。
+创建一个具有默认初始容量“16”的空`StringBuilder`对象。一旦`StringBuilder`对象达到其最大容量，将创建一个新的`StringBuilder`对象。
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_458_0.png)
 
-StringBuilder 使用缓冲区来存储字符串字面量。
+`StringBuilder`使用缓冲区来存储字符串字面量。
 
 ```java
 StringBuilder sb1="ABC";
@@ -8894,6 +10103,8 @@ sb1.append("xyz");
 ```
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_458_1.png)
+
+
 
 ```java
 public class Jtc132 {
@@ -8912,75 +10123,106 @@ public class Jtc132 {
 ```
 
 公式：
-(初始容量+1)*2
+
+`(初始容量+1)*2`
 
 # StringBuffer 的重要方法
 
-```public int length();```
-返回 StringBuffer 中存在的字符数量。
+```java
+public int length();
+```
 
-```public int int capacity();```
-返回 StringBuffer 能够容纳（持有）的字符总数。
+返回`StringBuffer`中存在的字符数量。
 
-```java int char charAt(int index);```
+```java
+public int capacity();
+```
+
+返回`StringBuffer`能够容纳（持有）的字符总数。
+
+```java
+public char charAt(int index);
+```
+
 返回位于指定索引的字符。
 
-```javapublic void setCharAt(int index, char ch);```
+```java
+public void setCharAt(int index, char ch);
+```
+
 将指定索引处的字符替换为提供的字符。
 
 ```java
- StringBuilder append(String s);```
+public StringBuilder append(String s);
+```
 
 ```java
-public StringBuffer insert(int index,String s);```
+public StringBuffer insert(int index, String s);
+```
 
 ```java
-public StringBuffer delete(int begin,int end);```
-删除从 begin 索引到 end n-1 索引的字符。
+public StringBuffer delete(int begin, int end);
+```
+
+删除从`begin`索引到`end-1`索引的字符。
 
 ```java
-public delete delete((int););```
+public StringBuffer deleteCharAt(int index);
+```
+
 删除位于指定索引的字符。
 
 ```java
- void set setLengthintint););```
+public void setLength(int newLength);
+```
+
 只保留指定数量的字符并移除所有剩余字符。
 
-```java void void trimToSize();```
+```java
+public void trimToSize();
+```
+
 释放额外分配的空闲内存，使容量和大小相等。
 
-```javaajapublic void ensureCapacity(int initialcapacity);
-
+```java
+public void ensureCapacity(int minimumCapacity);
 ```
+
 根据需求动态增加容量。
 
 # 注意
 
-StringBuffer 中提供的每个方法都是同步的，因此一次允许一个线程操作 StringBuffer 对象，这增加了线程的等待时间并产生性能问题。为了解决这个问题，我们应该选择 StringBuilder。
+`StringBuffer`中提供的每个方法都是同步的，因此一次允许一个线程操作`StringBuffer`对象，这增加了线程的等待时间并产生性能问题。为了解决这个问题，我们应该选择`StringBuilder`。
 
 # 程序 14.6
 
 ```java
 package com.p33;
+
 public class Jtc133{
     public static void main(String arg[]){
-    /* char x='X';
-    int i=0;
-    System.out.println(true?x:0);
-    System.out.println(false?i:x);
-    */ System.out.println("J"+"j");
-    System.out.println("S+"+J");
+        /* char x='X';
+        int i=0;
+        System.out.println(true?x:0);
+        System.out.println(false?i:x);
+        */
+        System.out.println("J"+"j");
+        System.out.println("S+"+"J");
     }
 }
+```
+
+```java
 package com.jtc12;
+
 public class Jtc134{
     public static void main(String arg[]){
-    StringBuffer sb1=new StringBuffer("jtc");
-    System.out.println(sb1.capacity());
-    System.out.println(sb1.length());
-    sb1.append("jtcindia");
-    System.out.println(sb1.capacity());
-    System.out.println(sb1.length());
+        StringBuffer sb1=new StringBuffer("jtc");
+        System.out.println(sb1.capacity());
+        System.out.println(sb1.length());
+        sb1.append("jtcindia");
+        System.out.println(sb1.capacity());
+        System.out.println(sb1.length());
     }
 }
 ```
@@ -8995,44 +10237,41 @@ System.out.println(sb1.length());
 sb1.append("jtcindiajtc123");
 System.out.println(sb1.capacity());
 System.out.println(sb1.length());
+
 String s1="jtc";
 String s2="jtc";
 StringBuilder sb1=new StringBuilder("jtc");
 StringBuilder sb22=new StringBuilder("jtc");
+
 System.out.println(s1.equals(s2));
 System.out.println(s1.hashCode()==s2.hashCode());
 System.out.println(sb1.hashCode());
 System.out.println(s1.hashCode());
-System.out.println(s1.hashCode==sb1.hashCode());
+System.out.println(s1.hashCode()==sb1.hashCode());
 System.out.println(sb1.equals(sb22));
 System.out.println(sb1.equals(s2));
-}
 ```
-/* 这个示例证明在 StringBuffer 类中，hashCode() 和 equals() 并没有基于 ASCII 值重写。
 
-StringBuffer 类中的所有方法都是同步的。这意味着一次只有一个线程在处理。*/
+/* 这个示例证明在`StringBuffer`类中，`hashCode()`和`equals()`并没有基于ASCII值重写。`StringBuffer`类中的所有方法都是同步的。这意味着一次只有一个线程在处理。*/
 
 # StringBuffer VS StringBuilder
 
 | StringBuffer | StringBuilder |
-|---|---|n| StringBuffer 中存在的每个方法都是同步的 | StringBuilder 中没有方法是同步的 |
-| 一次允许一个线程操作 StringBuffer 对象，因此 StringBuffer 对象是线程安全的 | 允许多个线程同时操作 StringBuilder 对象，StringBuilder 不是线程安全的 |
-| 它增加了线程的等待时间，因此相对性能较低 | 线程不需要等待，因此相对性能较高。 |
-| 在 1.0 版本中引入。 | 在 1.5 版本中引入。 |
+|---|---|
+| `StringBuffer`中存在的每个方法都是同步的 | `StringBuilder`中没有方法是同步的 |
+| 一次允许一个线程操作`StringBuffer`对象，因此`StringBuffer`对象是线程安全的 | 允许多个线程同时操作`StringBuilder`对象，`StringBuilder`不是线程安全的 |
+| 它增加了线程的等待时间，因此相对性能较低 | 线程不需要等待，因此相对性能较高 |
+| 在1.0版本中引入 | 在1.5版本中引入 |
 
 # String VS StringBuffer VS StringBuilder
 
-如果内容是固定的且不会频繁变化，我们应该使用 String。
+如果内容是固定的且不会频繁变化，我们应该使用`String`。
 
-如果内容频繁变化但需要线程安全，我们应该使用 StringBuilder。
+如果内容频繁变化但需要线程安全，我们应该使用`StringBuffer`。
 
-如果内容频繁变化且不需要线程安全，我们应该使用 StringBuilder。
+如果内容频繁变化且不需要线程安全，我们应该使用`StringBuilder`。
 
-
-
-
-
-sb.m1().m2().m3()..........
+`sb.m1().m2().m3()..........`
 
 在方法链调用中，所有方法将从左到右求值。
 
@@ -9042,8 +10281,8 @@ sb.m1().m2().m3()..........
 class StringBufferDemo{
     public static void main(String[] args) {
         StringBuffer sb = new StringBuffer();
-        sb.append("som").insert(5,"prakash").delete(11,13).reverse();
-        .append("java").insert(18,"abcd").reverse();
+        sb.append("som").insert(5,"prakash").delete(11,13).reverse()
+          .append("java").insert(18,"abcd").reverse();
         System.out.println(sb);
     }
 }
@@ -9059,19 +10298,21 @@ class StringBufferDemo{
 
 # 实现单例模式的步骤
 
-- 将类的默认构造函数声明为私有（private），这样无法从类外部创建该类的对象。
+- 将类的默认构造函数声明为私有（`private`），这样无法从类外部创建该类的对象。
 - 声明一个静态引用变量。
 - 声明一个静态块，并在该块内部创建该类的对象。
-- 编写一个返回类型为该类的静态 `getter()` 方法。
+- 编写一个返回类型为该类的静态`getter()`方法。
 
 # 示例
 
 ```java
 package com.jtc13;
+
 class Hello{
     // 1. 将类的默认构造函数声明为私有
     private Hello(){
     }
+
     // 2. 静态引用变量
     static Hello h1=null;
 
@@ -9079,14 +10320,17 @@ class Hello{
     static {
         h1=new Hello();
     }
+
     // 4. 静态 getter 方法
     static Hello getHello(){ 
         return h1;
     }
+
     void m1(){ 
         System.out.println("m1 in Hello");
     }
 }
+
 public class Jtc134{
     public static void main(String args[]){
         // Hello h1=new Hello();
@@ -9102,11 +10346,11 @@ public class Jtc134{
 }
 ```
 
-/* Hello 类的对象 h1 会类加载时被创建。引用变量将先处理，然后是静态块。 */
+/* `Hello`类的对象`h1`会在类加载时被创建。引用变量将先处理，然后是静态块。*/
 
-# 14.1.4.java.lang.System 类
+# 14.1.4. java.lang.System 类
 
-System 是 java.lang 包中的一个最终类（final class）。System 类的默认构造函数被声明为私有，而且你不需要创建 System 类对象，因为 System 类的几乎所有成员都是静态的（static）。因此，可以通过类名直接访问它们。
+`System`是`java.lang`包中的一个最终类（`final class`）。`System`类的默认构造函数被声明为私有，而且你不需要创建`System`类对象，因为`System`类的几乎所有成员都是静态的（`static`）。因此，可以通过类名直接访问它们。
 
 # 变量
 
@@ -9136,52 +10380,52 @@ public static void setOut(java.io.PrintStream out)
 public static void setErr(java.io.PrintStream err)
 ```
 
-System.in 的默认实现是输入设备（即键盘），因此提供给你的 Java 程序的输入将由“in”提供。
+`System.in`的默认实现是输入设备（即键盘），因此提供给你的Java程序的输入将由`in`提供。
 
-in 是“输入流”的引用变量，如果你想从其他输入设备获取输入，则需要更改 in 的实现。由于 in 是静态最终变量（static final variable），在机器层面我们无法直接更改它的值，但我们可以更改它的实现方式。
+`in`是“输入流”的引用变量，如果你想从其他输入设备获取输入，则需要更改`in`的实现。由于`in`是静态最终变量（`static final variable`），在机器层面我们无法直接更改它的值，但我们可以更改它的实现方式。
 
-# PrintStream out:
+# PrintStream out
 
-out 也是一个静态最终变量，其实现无法被更改。out 的默认实现是你的输出设备（即控制台）。如果你想更改此，也可以指定。
+`out`也是一个静态最终变量，其实现无法被更改。`out`的默认实现是你的输出设备（即控制台）。如果你想更改此，也可以指定。
 
 # java.io.PrintStream err
 
-err 也是 PrintStream.err 的引用。它的默认实现与 out 一样都是控制台。
+`err`也是`PrintStream.err`的引用。它的默认实现与`out`一样都是控制台。
 
 ```java
 public static native long currentTimeMillis()
 ```
 
-这是 System 类内部可用的静态方法。
-currentTimeMillis 用于返回从 1970 年 1 月 1 日午夜到当前的时间差。
+这是`System`类内部可用的静态方法。`currentTimeMillis`用于返回从1970年1月1日午夜到当前的时间差。
 
-- i. public static void setIn(java.io.InputStream in)
-- ii. public static void setOut(java.io.OutputStream out)
-- iii. public static void setErr(java.io.OutputStream err)
+- i. `public static void setIn(java.io.InputStream in)`
+- ii. `public static void setOut(java.io.OutputStream out)`
+- iii. `public static void setErr(java.io.OutputStream err)`
 
-因为 in, out, err 都是静态最终引用变量。
+因为`in`、`out`、`err`都是静态最终引用变量。
 
-in 负责从你的键盘获取输入。默认情况下，“in”指向键盘。
+`in`负责从你的键盘获取输入。默认情况下，`in`指向键盘。
 
-out & err 是 PrintStream 的引用。它们都指向控制台本身。
+`out`和`err`是`PrintStream`的引用。它们都指向控制台本身。
 
-System.out.println() 用于在你的控制台上显示普通消息。
+`System.out.println()`用于在你的控制台上显示普通消息。
 
-System.err.println() 用于在你的控制台上显示错误消息。
+`System.err.println()`用于在你的控制台上显示错误消息。
 
-通过使用 setIn(), setOut(), setErr() 方法，我们可以分别更改 in, out 和 err 的实现。
+通过使用`setIn()`、`setOut()`、`setErr()`方法，我们可以分别更改`in`、`out`和`err`的实现。
 
 ```java
-public native void arraycopy(java.lang.Object src, int srcPos, java.lang.Object dest, int destPos, int length);
+public static native void arraycopy(java.lang.Object src, int srcPos, java.lang.Object dest, int destPos, int length);
 ```
 
-arraycopy 用于将一个数组元素复制到另一个数组。第一个参数 java.lang.Object 是需要复制数组的源数组。第一个 int 参数指定源数组的索引位置（从该处开始复制），下一个 java.lang.Object 参数是需要复制数组的目标数组。下一个 int 参数指定目标数组中需要复制的的索引位置，最后一个 int 参数指定不被复制的参数个数。
+`arraycopy`用于将一个数组元素复制到另一个数组。第一个参数`java.lang.Object`是需要复制数组的源数组。第一个`int`参数指定源数组的索引位置（从该处开始复制），下一个`java.lang.Object`参数是需要复制数组的目标数组。下一个`int`参数指定目标数组中需要复制的索引位置，最后一个`int`参数指定不被复制的参数个数。
 
 # 程序 14.7
 
 ```java
 import java.io.FileOutputStream;
 import java.io.PrintStream;
+
 public class Jtc3 {
     public static void main(String[] args) throws Exception {
         System.out.println("---array copy---");
@@ -9190,33 +10434,29 @@ public class Jtc3 {
         for (int i=0;i<a.length; i++) {
             System.out.println("A array"+a[i]+"\t"+i);
         }
-
         for (int i=0;i<b.length; i++) {
             System.out.println("B Array"+b[i]+"\t"+i);
         }
-
         System.arraycopy(a, 0, b, 0, a.length);
     }
 }
 ```
 
+`Runtime rt=new Runtime();` //不可以
 
+`Runtime`对象可以通过以下方式创建：
 
+`Runtime rt=Runtime.getRuntime();` //可以
 
-
-Runtime rt=new Runtime(); //不可以
-
-Runtime 对象可以通过以下方式创建：
-
-Runtime rt=Runtime.getRuntime(); //可以
-
-Runtime 对象的创建过程如下：
+`Runtime`对象的创建过程如下：
 
 ```java
 class Runtime{
     private Runtime(){
     }
+
     private static Runtime rt=null;
+
     static {
         rt=new Runtime();
     }
@@ -9229,14 +10469,18 @@ public static Runtime getRuntime(){
 }
 ```
 
-Runtime rt=Runtime.getRuntime(); //可以
-Runtime rt=new Runtime(); //不可以
+`Runtime rt=Runtime.getRuntime();` //可以
+`Runtime rt=new Runtime();` //不可以
 
 ## METHODS
 
+```java
 public native int availableProcessors();
+```
 
+```java
 public native long freeMemory();
+```
 
 ```java
 public native long totalMemory();
@@ -9246,45 +10490,59 @@ public native long totalMemory();
 public native long maxMemory();
 ```
 
-availableProcessors(): 返回你本地机器上可用的处理器数量。
+`availableProcessors()`: 返回你本地机器上可用的处理器数量。
 
-freeMemory(): 返回未使用的堆内存量。
+`freeMemory()`: 返回未使用的堆内存量。
 
-totalMemory(): 返回为堆分配的内存总量。
+`totalMemory()`: 返回为堆分配的内存总量。
 
-maxMemory(): 返回可用于堆的最大内存量。
+`maxMemory()`: 返回可用于堆的最大内存量。
 
-exec(): 用于执行运行时指定的进程。
+`exec()`: 用于执行运行时指定的进程。
 
-# public java.lang.Process exec(String);
+```java
+public java.lang.Process exec(String command);
+```
 
-程序 14.8
+# 程序 14.8
 
 ```java
 import java.io.IOException;
+
 public class Jtc {
     public static void main(String[] args) throws IOException {
         //Runtime rt=new Runtime();
-
         Runtime rt=null;
         Runtime.getRuntime();
         Runtime rt1=Runtime.getRuntime();
-
         System.out.println(rt);
-        System.out.println(rt1);
-        System.out.println(rt.hashCode()==rt1.hashCode());
-        System.out.println(rt.availableProcessors());
-        System.out.println(rt.totalMemory());
-        System.out.println(rt.freeMemory());
-        System.out.println(rt.maxMemory());
-        System.out.println(rt1.totalMemory()-rt1.freeMemory());
-        Process p1=rt.exec("notepad");
-        System.out.println(p1);
-        rt.exec("spaint");
-        rt.exec("calc");
     }
 }
 ```
+
+
+
+`System.out.println(rt1);`
+
+`System.out.println(rt.hashCode()==rt1.hashCode());`
+
+`System.out.println(rt.availableProcessors());`
+
+`System.out.println(rt.totalMemory());`
+
+`System.out.println(rt.freeMemory());`
+
+`System.out.println(rt.maxMemory());`
+
+`System.out.println(rt1.totalMemory()-rt1.freeMemory());`
+
+`Process p1=rt.exec("notepad");`
+
+`System.out.println(p1);`
+
+`rt.exec("spaint");`
+
+`rt.exec("calc");`
 
 ## 15.1 什么是包装类 (Wrapper class)
 
@@ -9293,14 +10551,15 @@ public class Jtc {
 - 将基本类型封装成对象形式，以便我们可以像处理对象一样处理基本类型。
 - 为基本类型定义若干所需的工具类函数。
 
-几乎所有的包装类都定义了以下构造函数：一个可以接受对应的基本类型作为参数，另一个可以接受 String 作为参数。
+几乎所有的包装类都定义了以下构造函数：一个可以接受对应的基本类型作为参数，另一个可以接受`String`作为参数。
 
 ### 示例
 
-Integer i=new Integer(10);
-Integer i=new Integer("10");
+`Integer i=new Integer(10);`
 
-如果 String 的格式不正确（即它不代表数字），我们将得到一个抛出“NumberFormatException”的运行时异常。
+`Integer i=new Integer("10");`
+
+如果`String`的格式不正确（即它不代表数字），我们将得到一个抛出`NumberFormatException`的运行时异常。
 
 ### 示例
 
@@ -9313,20 +10572,25 @@ class WrapperClassDemo {
 }
 ```
 
-Float 类定义了三个带有 float、String 和 double 参数的构造函数。
-Float f=new Float(10.5);
-Float f=new Float("10.5f");
-Float f=new Float(10.5);
-Float f=new Float("10.5");
+`Float`类定义了三个带有`float`、`String`和`double`参数的构造函数。
 
-Character 类只定义了一个构造函数，可以接受 char 基本类型作为参数，没有接受 String 参数的构造函数。
+`Float f=new Float(10.5);`
 
-Character ch=new Character('a');//有效
-Character ch=new Character("a");//无效
+`Float f=new Float("10.5f");`
 
-Boolean 类定义了两个带有 boolean 基本类型和 String 参数的构造函数。
+`Float f=new Float(10.5);`
 
-如果我们想传递 boolean 基本类型，唯一允许的值是 true、false，且字母应为小写。
+`Float f=new Float("10.5");`
+
+`Character`类只定义了一个构造函数，可以接受`char`基本类型作为参数，没有接受`String`参数的构造函数。
+
+`Character ch=new Character('a');`//有效
+
+`Character ch=new Character("a");`//无效
+
+`Boolean`类定义了两个带有`boolean`基本类型和`String`参数的构造函数。
+
+如果我们想传递`boolean`基本类型，唯一允许的值是`true`、`false`，且字母应为小写。
 
 ### 示例
 
@@ -9338,7 +10602,7 @@ Boolean b=new Boolean(False);//编译错误
 Boolean b=new Boolean(TRUE);//编译错误
 ```
 
-如果我们传递的是 String 参数，大小写和内容并不重要。如果内容是不区分大小写的字符串 "true"，则它被视为 true；在所有其他情况下它被视为 false。
+如果我们传递的是`String`参数，大小写和内容并不重要。如果内容是不区分大小写的字符串`"true"`，则它被视为`true`；在所有其他情况下它被视为`false`。
 
 ### 示例
 
@@ -9378,29 +10642,29 @@ class WrapperClassDemo {
 
 注意：
 
-在所有包装类中，toString() 方法都被重写以返回其内容。
+在所有包装类中，`toString()`方法都被重写以返回其内容。
 
-在所有包装类中，equals() 方法都被重写用于进行内容比较。
+在所有包装类中，`equals()`方法都被重写用于进行内容比较。
 
 ### 示例
 
 ```java
 Integer i1 = new Integer(10);
 Integer i2 = new Integer(10);
-System.out.println(i1.equals(i2));truetrue
+System.out.println(i1.equals(i2));//true
 System.out.println(i1==i2);//false
 ```
 
 ## 15.2 工具方法
 
-- valueOf() 方法。
-- xxxValue() 方法。
-- parseXxx() 方法。
-- toString() 方法。
+- `valueOf()`方法。
+- `xxxValue()`方法。
+- `parseXxx()`方法。
+- `toString()`方法。
 
-### valueOf() 方法
+### `valueOf()`方法
 
-可以使用 valueOf() 方法从基本类型或 String 创建包装对象。
+可以使用`valueOf()`方法从基本类型或`String`创建包装对象。
 
 ```java
 class WrapperClassDemo {
@@ -9417,16 +10681,16 @@ class WrapperClassDemo {
 }
 ```
 
-### xxxValue() 方法
+### `xxxValue()`方法
 
-可以使用 xxxValue() 方法将包装对象转换为基本类型。数值类型的包装类（Byte, Short, Integer, Long, Float, Double）包含以下转换为基本类型的 xxxValue() 方法：
+可以使用`xxxValue()`方法将包装对象转换为基本类型。数值类型的包装类（`Byte`, `Short`, `Integer`, `Long`, `Float`, `Double`）包含以下转换为基本类型的`xxxValue()`方法：
 
-- byteValue()
-- shortValue()
-- intValue()
-- longValue()
-- floatValue()
-- doubleValue()
+- `byteValue()`
+- `shortValue()`
+- `intValue()`
+- `longValue()`
+- `floatValue()`
+- `doubleValue()`
 
 ### 示例
 
@@ -9444,9 +10708,9 @@ class WrapperClassDemo {
 }
 ```
 
-### charValue() 方法
+### `charValue()`方法
 
-Character 类包含 charValue() 方法将 Character 对象转换为 char。
+`Character`类包含`charValue()`方法将`Character`对象转换为`char`。
 
 ### 示例
 
@@ -9460,9 +10724,9 @@ class WrapperClassDemo {
 }
 ```
 
-### booleanValue() 方法
+### `booleanValue()`方法
 
-Boolean 类包含 booleanValue() 方法将 Boolean 对象转换为 boolean 基本类型。
+`Boolean`类包含`booleanValue()`方法将`Boolean`对象转换为`boolean`基本类型。
 
 ### 示例
 
@@ -9476,13 +10740,11 @@ class WrapperClassDemo {
 }
 ```
 
-
-
 ```java
 public static primitive parseXxx(String s,int radix);
 ```
 
-radix 的允许范围是：2 到 36
+`radix`的允许范围是：2 到 36
 
 ## 示例
 
@@ -9495,9 +10757,9 @@ class WrapperClassDemo{
 }
 ```
 
-## 15.2.4 toString() 方法
+## 15.2.4 `toString()`方法
 
-我们可以使用 toString() 方法将包装对象（或）基本数据类型转换为 String。
+我们可以使用`toString()`方法将包装对象（或）基本数据类型转换为`String`。
 
 ### 形式 1
 
@@ -9505,27 +10767,27 @@ class WrapperClassDemo{
 public String toString();
 ```
 
-每个包装类（包括 Character 类）都包含上述 `toString()` 方法，用于将包装对象转换为 String。
+每个包装类（包括`Character`类）都包含上述`toString()`方法，用于将包装对象转换为`String`。
 
-它是 `Object` 类中 `toString()` 方法的重写版本。
+它是`Object`类中`toString()`方法的重写版本。
 
-当我们尝试打印包装对象的引用时，内部只会执行这个 `toString()` 方法。
+当我们尝试打印包装对象的引用时，内部只会执行这个`toString()`方法。
 
 ### 示例
 
 ```java
 class WrapperClassDemo {
-public static void main(String[] args) {
-Integer i=Integer.valueOf("10");
-System.out.println(i);//10
-System.out.println(i.toString());//10
+    public static void main(String[] args) {
+        Integer i=Integer.valueOf("10");
+        System.out.println(i);//10
+        System.out.println(i.toString());//10
+    }
 }
-```
 ```
 
 ### 形式 2
 
-每个包装类都包含一个静态 `toString()` 方法，将基本数据类型转换为 String。
+每个包装类都包含一个静态`toString()`方法，将基本数据类型转换为`String`。
 
 ```java
 public static String toString(primitive p);
@@ -9536,19 +10798,19 @@ public static String toString(primitive p);
 ```java
 class WrapperClassDemo {
     public static void main(String[] args){
-    String s1=Integer.toString(10);
-    String s2=Boolean.toString(true);
-    String s3=Character.toString('a');
-
-    System.out.println(s1); //10
-    System.out.println(s2); //true
-    System.out.println(s3); //a
-}}
+        String s1=Integer.toString(10);
+        String s2=Boolean.toString(true);
+        String s3=Character.toString('a');
+        System.out.println(s1); //10
+        System.out.println(s2); //true
+        System.out.println(s3); //a
+    }
+}
 ```
 
 ### 形式 3
 
-Integer 和 Long 类包含以下静态 `toString()` 方法，将基本数据类型转换为指定进制的 String 形式。
+`Integer`和`Long`类包含以下静态`toString()`方法，将基本数据类型转换为指定进制的`String`形式。
 
 ```java
 public static String toString(primitive p, int radix);
@@ -9559,16 +10821,17 @@ public static String toString(primitive p, int radix);
 ```java
 class WrapperClassDemo {
     public static void main(String[] args){
-    String s1=Integer.toString(7,2);
-    String s2=Integer.toString(17,2);
-System.out.println(s1);//111
-System.out.println(s2);//10001
-}}
+        String s1=Integer.toString(7,2);
+        String s2=Integer.toString(17,2);
+        System.out.println(s1);//111
+        System.out.println(s2);//10001
+    }
+}
 ```
 
 ### 形式 4
 
-Integer 和 Long 类包含以下 toXxxString() 方法。
+`Integer`和`Long`类包含以下`toXxxString()`方法。
 
 ```java
 public static String toBinaryString(primitive p);
@@ -9580,17 +10843,17 @@ public static String toHexString(primitive p);
 
 ```java
 class WrapperClassDemo {
-public static void main(String[] args) {
-String s1=Integer.toBinaryString(7);
-
-String s2=Integer.toOctalString(10);
-String s3=Integer.toHexString(20);
-String s4=Integer.toHexString(10);
-System.out.println(s1);//111
-System.out.println(s2);//12
-System.out.println(s3);//14
-System.out.println(s4);//a
-}}
+    public static void main(String[] args) {
+        String s1=Integer.toBinaryString(7);
+        String s2=Integer.toOctalString(10);
+        String s3=Integer.toHexString(20);
+        String s4=Integer.toHexString(10);
+        System.out.println(s1);//111
+        System.out.println(s2);//12
+        System.out.println(s3);//14
+        System.out.println(s4);//a
+    }
+}
 ```
 
 ## 自动装箱 (AutoBoxing)
@@ -9599,37 +10862,34 @@ System.out.println(s4);//a
 
 ```java
 public class Jtc7 {
-public static void main(String[] args) {
-Integer in = 123;// 自动装箱
-in++;
-
-System.out.println(in + 10);
-int ab = in; // 自动拆箱
-// int ab=in.intValue();
-
-long val = 123;
-// Long ref=new Integer(123);
-// Long obj3= 1234; // 宽转换和自动装箱
-Long obj2 = 1234L; // 自动装箱
-Object obj4 = 1234; // 自动装箱和宽转换
-Number num = 1234; // 自动装箱和宽转换
-System.out.println(" \ ");
-Integer in1 = 123;
-Integer in2 = in1;
-System.out.println(in1 + "\t" + in2);
-System.out.println(in1 == in2);
-in1++;
-
-// int t=in1.intValue();
-// t++;
-// in1=new Integer(t);
-System.out.println(in1 + "\t" + in2);
-System.out.println(in1 == in2);
-}
+    public static void main(String[] args) {
+        Integer in = 123;// 自动装箱
+        in++;
+        System.out.println(in + 10);
+        int ab = in; // 自动拆箱
+        // int ab=in.intValue();
+        long val = 123;
+        // Long ref=new Integer(123);
+        // Long obj3= 1234; // 宽转换和自动装箱
+        Long obj2 = 1234L; // 自动装箱
+        Object obj4 = 1234; // 自动装箱和宽转换
+        Number num = 1234; // 自动装箱和宽转换
+        System.out.println(" \ ");
+        Integer in1 = 123;
+        Integer in2 = in1;
+        System.out.println(in1 + "\t" + in2);
+        System.out.println(in1 == in2);
+        in1++;
+        // int t=in1.intValue();
+        // t++;
+        // in1=new Integer(t);
+        System.out.println(in1 + "\t" + in2);
+        System.out.println(in1 == in2);
+    }
 }
 ```
 
-### 示例
+
 
 ```java
 public class Jtc8 {
@@ -9739,7 +10999,7 @@ class BoxingLoading {
 
 - a. 编译时错误：在编译错误的情况下，如果有任何语法错误，则被称为编译时错误，会在编译时被识别。编译时错误表明编译器无法编译该特定程序。
 
-- b. 运行时错误：通过 JVM 的帮助在运行时识别出的错误被称为运行时错误。运行时错误显示了 JVM 的低效性。例如：没有 main 方法（编译器可以编译没有 main 方法的代码）。如果识别出任何栈内存问题，将由 `java.lang.StackOverflowError` 表示（JVM 处理所需的内存）。
+- b. 运行时错误：通过 `JVM` 的帮助在运行时识别出的错误被称为运行时错误。运行时错误显示了 `JVM` 的低效性。例如：没有 `main` 方法（编译器可以编译没有 `main` 方法的代码）。如果识别出任何栈内存问题，将由 `java.lang.StackOverflowError` 表示（`JVM` 处理所需的内存）。
 
 ## 16.2 异常
 
@@ -9748,6 +11008,7 @@ class BoxingLoading {
 异常分为两种类型：
 
 - 编译时异常 / 检举异常 (Checked exception)
+
 - 运行时异常 / 非检举异常 (Unchecked exception)
 
 ### 示例
@@ -9772,15 +11033,21 @@ Exception in thread "main"
 java.lang.ArrayIndexOutOfBoundsException : 0
 ```
 
-java Jtc103 abc (enter)
-In Jtc103
-Exception in thread "main"
-java.lang.NumberFormatException : for input string "abc"
+`java Jtc103 abc` (enter)
 
-java Jtc103 0 (enter)
-in Jtc103
+In Jtc103
+
 Exception in thread "main"
-java.lang.ArithmeticException : 1 by zero */*
+
+`java.lang.NumberFormatException` : for input string "abc"
+
+`java Jtc103 0` (enter)
+
+in Jtc103
+
+Exception in thread "main"
+
+`java.lang.ArithmeticException` : 1 by zero */*
 
 对于所有类型的异常和错误，`java.lang.Throwable` 是父类型。
 
@@ -9813,41 +11080,46 @@ class Jtc104{
 
 # 输出：
 
-java Jtc104 (enter)
+`java Jtc104` (enter)
+
 In Jtc104
+
 Exception in thread "main"
-java.lang.ArrayIndexOutOfBoundsException : 0
 
-
-
-
+`java.lang.ArrayIndexOutOfBoundsException` : 0
 
 ## 工作原理
 
-每当识别出任何问题时，JVM 将内部执行以下操作：
+每当识别出任何问题时，`JVM` 将内部执行以下操作：
 
-一旦识别出任何问题，控制权立即转移到 JVM。
+一旦识别出任何问题，控制权立即转移到 `JVM`。
 
-现在，JVM 将识别问题的具体类型。
+现在，`JVM` 将识别问题的具体类型。
 
 在识别出具体类型后，它将创建该异常的对象并将其抛给程序。
 
-在程序中，它将尝试搜索匹配的 catch 块。
+在程序中，它将尝试搜索匹配的 `catch` 块。
 
-如果找到了匹配的 catch 块，则将处理相应的 catch 块。
+如果找到了匹配的 `catch` 块，则将处理相应的 `catch` 块。
 
-## 16.2.1 通过编写多个 try 和 catch 处理异常
+## 16.2.1 通过编写多个 `try` 和 `catch` 处理异常
 
 - 将你想要监控的代码段封装在 `try` 块内部
+
 - 为该 `try` 块编写关联的 `catch` 块，并指定正确的异常类型
+
 - 通过使用 `catch`，你一次只能处理一个异常。
+
 - 你可以为 `try` 编写多个 `catch` 块来处理多种类型的异常。
 
-在编写多个 try 和 catch 时，请记住以下几：
+在编写多个 `try` 和 `catch` 时，请记住以下几：
 
 - `try` 和 `catch` 之间不应有任何语句。
+
 - `catch` 和 `catch` 之间不应有任何语句。
+
 - 你可以写不带 `catch` 的 `try`，但不能写不带 `try` 的 `catch`。
+
 - 当你写 `catch` 块时，`catch` 参数应该是子类类型。它不能是从父类到子类的参数。
 
 ## 示例
@@ -9905,9 +11177,9 @@ public class Jtc106{
 }
 ```
 
-从 JDK1.7 开始，你可以通过编写单个 `try` 和 `catch` 来处理多个异常。
+从 `JDK1.7` 开始，你可以通过编写单个 `try` 和 `catch` 来处理多个异常。
 
-在 `catch` 中，你可以编写用管道运算符 `(| )` 分隔的多个异常。
+在 `catch` 中，你可以编写用管道运算符 (`|`) 分隔的多个异常。
 
 但请确保不要在其中编写任何父类异常。
 
@@ -9975,57 +11247,61 @@ public class Jtc107{
 记住以下几点：
 
 - `try` 和 `catch` 之间不应有任何语句。
-- `catch` 和 `catch` 之间不应有任何语句。
-- 你可以写不带 `catch` 的 `try`，但不能写不带 `try` 的 `catch`。
-- 当你写 `catch` 块时，`catch` 参数应该是子类类型。它不能是从父类到子类的参数。
-每当识别出任何问题时，JVM 将内部执行以下操作：
-一旦识别出任何问题，控制权立即转移到 JVM。
 
-现在，JVM 将识别问题的具体类型。
+- `catch` 和 `catch` 之间不应有任何语句。
+
+- 你可以写不带 `catch` 的 `try`，但不能写不带 `try` 的 `catch`。
+
+- 当你写 `catch` 块时，`catch` 参数应该是子类类型。它不能是从父类到子类的参数。
+
+每当识别出任何问题时，`JVM` 将内部执行以下操作：
+
+一旦识别出任何问题，控制权立即转移到 `JVM`。
+
+现在，`JVM` 将识别问题的具体类型。
 
 在识别出具体类型后，它将创建该异常的对象并将其抛给程序。
 
-在程序中，它将尝试搜索匹配的 catch 块。
+在程序中，它将尝试搜索匹配的 `catch` 块。
 
-如果找到了匹配的 catch 块，则将处理相应的 catch 块。
+如果找到了匹配的 `catch` 块，则将处理相应的 `catch` 块。
 
 当遇到任何 `return` 语句时，之后的其他语句将不再被处理。控制权立即转移到方法的调用者。
 
 在某些情况下，某些语句无论是否执行 `return` 语句，处理都是非常重要。
 
 例如：关闭资源。如果你使用了资源但没有妥善关闭，可能会导致某些问题。为了确保该语句在任何情况下都能被处理，你需要使用 `finally` 块。
+
 当你将任何语句封装在 `finally` 块内部时，无论是否遇到 `return` 语句，无论是否发生异常，`finally` 块始终会被处理。
 
 **注意**
 
 只有在使用 `System.exit()` 时，`finally` 块才不会被处理。
 
-从 JDK1.7 开始，你可以通过编写单个 `try` 和 `catch` 来处理多个异常。
 
-在 `catch` 中，你可以编写用管道运算符 `(| )` 分隔的多个异常。
+
+从 JDK1.7 开始，你可以通过编写单个`try`和`catch`来处理多个异常。
+
+在`catch`中，你可以编写用管道运算符（`|`）分隔的多个异常。
 
 但请确保不要在其中编写任何父类异常。
-
-（注：后续文本中存在大量重复的示例代码和说明，根据指令“不要重复输出原文”，此处已完成核心逻辑翻译及关键示例）
-
-
 
 ```java
 dos.close();
 }
 catch(Exception e){
-}}}}
+}}
 ```
 
-如果你想开发自定义资源，请通过实现 `AutoCloseable` 接口来编写你的资源类。
+如果你想开发自定义资源，请通过实现`AutoCloseable`接口来编写你的资源类。
 
-在 `AutoCloseable` 接口中只有一个方法 `close()`。
+在`AutoCloseable`接口中只有一个方法`close()`。
 
-必须根据资源需求在你的类中重写此 `close()` 方法。
+必须根据资源需求在你的类中重写此`close()`方法。
 
-如果你在 `try with resource` 中使用资源，则你的资源必须实现 `AutoCloseable` 接口，否则将导致编译错误。
+如果你在`try with resource`中使用资源，则你的资源必须实现`AutoCloseable`接口，否则将导致编译错误。
 
-如果我们使用 `try with resource` 且它满足所有约束条件，那么就没有必要编写任何 `finally` 块，你可以轻松地完成。
+如果我们使用`try with resource`且它满足所有约束条件，那么就没有必要编写任何`finally`块，你可以轻松地完成。
 
 ## 16.4 异常的类型
 
@@ -10038,7 +11314,7 @@ catch(Exception e){
 
 在编译期间被编译器捕获或由编译器捕获的异常称为编译时异常。
 
-此外，除 `java.lang.RuntimeException` 之外，`java.lang.Exception` 的子类都称为编译时异常。
+此外，除`java.lang.RuntimeException`之外，`java.lang.Exception`的子类都称为编译时异常。
 
 注意：
 
@@ -10047,31 +11323,31 @@ catch(Exception e){
 - 用户定义
 - 内置类型
 
-编译时异常必须通过编写 `try` 和 `catch` 或者通过向上传（propagation）来完成处理或报告。
+编译时异常必须通过编写`try`和`catch`或者通过向上传（propagation）来完成处理或报告。
 
 例如：`java.lang.IOException`、`FileNotFoundException`、`SQLException`、`JSPException`。
 
 ## 未检出异常或运行时异常
 
-`java.lang.RuntimeException` 的子类异常称为未检出异常或运行时异常。
+`java.lang.RuntimeException`的子类异常称为未检出异常或运行时异常。
 
 这些异常将由 JVM 调用。
 
-不需要通过编写 `try` 和 `catch` 或通过向上传来报告。即使你想这样做，也可以处理它。
+不需要通过编写`try`和`catch`或通过向上传来报告。即使你想这样做，也可以处理它。
 
 运行时异常也分为两种类型：
 
-- 用户定义：根据应用程序需求由开发者创建的异常称为用户定义异常。例如：InsufficientFoundException`、`AccountNumberDoesNotExist`。
+- 用户定义：根据应用程序需求由开发者创建的异常称为用户定义异常。例如：`InsufficientFoundException`、`AccountNumberDoesNotExist`。
 - 内置：由技术供应商提供的异常称为内置异常。这些也可以是检查异常和未检出异常。例如：`ServletException`、`JSPException`、`EJBException`。
 
 ## 编写自定义异常的步骤
 
-- 通过扩展 `java.lang.Exception` 或 `java.lang.RuntimeException` 来编写异常类。
+- 通过扩展`java.lang.Exception`或`java.lang.RuntimeException`来编写异常类。
 - 在异常类内部声明一些实例变量。
 - 在异常类内部编写默认构造函数。
 - 如果需要，编写一个带参数的构造函数。
-- 重写 `toString()` 方法（它内部会调用 `getMessage()`）。
-- 重写 `getMessage()` 方法（它在 `throwable` 类内部可用，并提供异常的精确原因）。
+- 重写`toString()`方法（它内部会调用`getMessage()`）。
+- 重写`getMessage()`方法（它在`throwable`类内部可用，并提供异常的精确原因）。
 
 ## e.printStackTrace() 提供以下信息
 
@@ -10079,11 +11355,11 @@ catch(Exception e){
 + => 异常原因
 + => 异常位置
 
-`Throw` 将异常发送到下一层进行处理；取决于异常的类型。
+`Throw`将异常发送到下一层进行处理；取决于异常的类型。
 
 检查异常必须通过以下方式之一处理：
 
-- `try n catch` 块，或
+- `try n catch`块，或
 - 传递到另一层（方法头部的传播）
 
 未检出异常可以由 JVM 处理
@@ -10163,11 +11439,11 @@ public class Jtc114 {
 
 ## 16.5 “throw” 关键字
 
-`throw` 关键字用于从方法体中抛出异常。
+`throw`关键字用于从方法体中抛出异常。
 
-如果你抛出任何未检出异常，并没有硬性规定要求你必须使用 `try` 和 `catch` 或通过传播来报告该异常。
+如果你抛出任何未检出异常，并没有硬性规定要求你必须使用`try`和`catch`或通过传播来报告该异常。
 
-但是，总是建议使用 `try` 和 `catch` 处理方法体中的 `throw`。
+但是，总是建议使用`try`和`catch`处理方法体中的`throw`。
 
 语法
 
@@ -10181,17 +11457,17 @@ void m1(){
 }
 ```
 
-如果你从方法体中抛出任何检查异常，则你必须通过编写 `try` 和 `catch` 或在方法头部通过传播来报告该异常。
+如果你从方法体中抛出任何检查异常，则你必须通过编写`try`和`catch`或在方法头部通过传播来报告该异常。
 
 ## 16.6 “throws” 关键字
 
-`throws` 用于从方法体中抛出异常。
+`throws`用于从方法体中抛出异常。
 
-如果你抛出任何未检出异常，没有硬性规定要求你通过 `try` 和 `catch` 或传播来报告它。
+如果你抛出任何未检出异常，没有硬性规定要求你通过`try`和`catch`或传播来报告它。
 
-但是，总是建议使用 `try` 和 `catch` 处理方法体中的 `throw`。
+但是，总是建议使用`try`和`catch`处理方法体中的`throw`。
 
-如果你从方法体中抛出任何检查异常，你必须在方法头部通过 `try` 和 `catch` 或传播来报告异常。注意：总是建议使用 `try` 和 `catch` 处理方法体中的 `throw`。
+如果你从方法体中抛出任何检查异常，你必须在方法头部通过`try`和`catch`或传播来报告异常。注意：总是建议使用`try`和`catch`处理方法体中的`throw`。
 
 ## 示例
 
@@ -10336,6 +11612,8 @@ class Hello {
 }
 ```
 
+
+
 ```java
 import java.io.IOException;
 import java.sql.SQLException;
@@ -10401,8 +11679,6 @@ class Hello {
 }
 ```
 
-
-
 ```java
             System.out.println(e);
         }
@@ -10436,15 +11712,17 @@ public class Jtc118{
 
 ## 16.7 方法
 
-### printStackTrace()
-- 可用位于 java.lang.Throwable
-- 它用于提供关于任何异常的以下 3 个信息：
-- 异常类型
-- 异常原因
-- 异常发生的行号
+### `printStackTrace()`
 
-### getMessage()
-- 可用位于 java.lang.Throwable
+- 可用位于`java.lang.Throwable`
+- 它用于提供关于任何异常的以下 3 个信息：
+  - 异常类型
+  - 异常原因
+  - 异常发生的行号
+
+### `getMessage()`
+
+- 可用位于`java.lang.Throwable`
 - 此方法用于提供异常发生的具体原因。
 
 ## 示例
@@ -10467,6 +11745,7 @@ class Hello{
 ```
 
 (2)
+
 ```java
 import java.io.IOException;
 public class Hello {
@@ -10481,6 +11760,7 @@ public class Hello {
 ```
 
 (3)
+
 ```java
 public class XYZ{
     public static void main(String arg[]) {
@@ -10494,6 +11774,7 @@ public class XYZ{
 ```
 
 (4)
+
 ```java
 interface Type1 {
   void f()throws CloneNotSupportedException
@@ -10515,6 +11796,7 @@ interface Type3 extends Type1,Type2 {
 ```
 
 (5)
+
 ```java
 public class Hello{
     public static final long GUEST_USER_ID=-1;
@@ -10539,6 +11821,7 @@ class IdUnavailableException extends Exception {
 ```
 
 (6)
+
 ```java
 public class HelloGoodbye{
     public static void main(String args[]){
@@ -10553,6 +11836,7 @@ public class HelloGoodbye{
 ```
 
 (7)
+
 ```java
 public class Reluctant {
   public Reluctant inrnalInstance=new Relactant();
@@ -10571,6 +11855,7 @@ public class Reluctant {
 ```
 
 (8)
+
 ```java
 import java.io.*;
 public class Copy {
@@ -10598,6 +11883,7 @@ public class Copy {
 ```
 
 (9)
+
 ```java
 public class Loop {
     int n=0;
@@ -10616,6 +11902,7 @@ public class Loop {
 ```
 
 (10)
+
 ```java
 public class Thrower {
     public static void main(String args[]) {
@@ -10629,6 +11916,7 @@ public class Thrower {
 ```
 
 (11)
+
 ```java
 class Strange {
     public static void main(String args[]) {
@@ -10643,6 +11931,7 @@ class Missing {}
 ```
 
 (12)
+
 ```java
 class Workout{
     public static void main(String args[]) {
@@ -10659,27 +11948,29 @@ class Workout{
 class Test {}
 ```
 
-## 16.8 Difference between printStackTrace()
+## 16.8 Difference between `printStackTrace()`
 
-- For hard coded names at Runtime: we will get ClassNotFoundError, which is unchecked.
-- For dynamically provided names at Runtime: if class files not available then we will get Exception, which is checked.
+- 对于硬编码名称在运行时：我们会得到`ClassNotFoundError`，它是未检查的。
+- 对于动态提供的名称在运行时：如果类文件不可用，那么我们会得到`Exception`，它是受检查的。
 
 ## Example
 
+
+
 ```java
 public class Jtc5 {
-    public static final long GUEST_USER_ID=-1;
+    public static final long GUEST_USER_ID = -1;
     private static final long USER_ID;
     static {
         try {
-            USER_ID=getUserIdFromEnvironment();
-        } catch(IdUnavailableException e){
-            USER_ID=GUEST_USER_ID;
+            USER_ID = getUserIdFromEnvironment();
+        } catch (IdUnavailableException e) {
+            USER_ID = GUEST_USER_ID;
             System.out.println("logging in as guest");
         }
     }
     private static long getUserIdFromEnvironment() throws IdUnavailableException {
-        throw new IdUnavailableException(); //simulate an error
+        throw new IdUnavailableException(); // simulate an error
     }
 
     public static void main(String args[]) {
@@ -10702,7 +11993,7 @@ public class Jtc5 {
 }
 ```
 
-Example - Try with resource
+## Example - Try with resource
 
 ```java
 import java.io.InputStream;
@@ -10722,7 +12013,7 @@ class ResourceUser {
         long length = 0;
         try (JtcResource resource = new JtcResource()) {
             InputStream fis = new FileInputStream(fileName);
-            /* JtcAnotherResource other=new JtcResource(); */
+            /* JtcAnotherResource other = new JtcResource(); */
             while (true) {
                 int x = fis.read();
                 if (x == -1) break;
@@ -10737,22 +12028,21 @@ class ResourceUser {
     }
 }
 class JtcResource implements AutoCloseable {
-    public void close()
-    throws Exception {
+    public void close() throws Exception {
         System.out.println("** close method() of JtcResource **\t:" + this);
     }
 }
 class JtcAnotherResource { }
 ```
 
-## Example - Rethrowing Exceptions with Improved Type Checking.
+## Example - Rethrowing Exceptions with Improved Type Checking
 
-Before Java 7
+### Before Java 7
 
 ```java
 public class ObjectCreator {
     public static Object getInstance(String className) throws Exception {
-        Object ref = null; 
+        Object ref = null;
         try {
             Class cl = Class.forName(className);
             ref = cl.newInstance();
@@ -10761,10 +12051,6 @@ public class ObjectCreator {
     }
 }
 ```
-
-
-
-
 
 ```java
 } catch (Exception e) {
@@ -10776,7 +12062,7 @@ return ref;
 }
 ```
 
-# 来自 Java 7
+### From Java 7
 
 ```java
 public class ObjectCreator {
@@ -10801,8 +12087,8 @@ public class ObjectCreator {
 
 多任务处理主要有两种类型：
 
-- 1 ) 基于进程的多任务处理。
-- 2 ) 基于线程的多任务处理。
+- 1) 基于进程的多任务处理。
+- 2) 基于线程的多任务处理。
 
 | 基于进程 | 基于线程 |
 | :--- | :--- |
@@ -10811,9 +12097,7 @@ public class ObjectCreator {
 | 3) | 3) |
 | 4) 在基于进程的多任务处理中，上下文切换相当困难。 | 4) 在基于线程的情况下，上下文切换非常简单。 |
 
-注意
-
-线程将共享资源，这将由 CPU 调度算法决定并由线程生命周期管理。
+注意：线程将共享资源，这将由 CPU 调度算法决定并由线程生命周期管理。
 
 Java 中的每个线程将由一个特殊的生命周期机制管理，所有这些处理完全取决于调度算法。
 
@@ -10821,17 +12105,17 @@ Java 中的每个线程将由一个特殊的生命周期机制管理，所有这
 
 Sun 提供了以下 API 来管理线程：
 
-- 1) Java.lang.Thread
-- 2) Java.lang.ThreadGroup
-- 3) Java.lang.Runnable 接口
+- 1) `Java.lang.Thread`
+- 2) `Java.lang.ThreadGroup`
+- 3) `Java.lang.Runnable` 接口
 
-每当 JVM 启动时，内部会创建一个名为 ‘main’ 的 ThreadGroup，在该 ThreadGroup 下将创建一个名为该 的另一个线程。
+每当 JVM 启动时，内部会创建一个名为 `main` 的 `ThreadGroup`，在该 `ThreadGroup` 下将创建一个名为该的另一个线程。
 
 Java 中的每个线程将被分配一个特定的任务，并在完成后移动到死亡状态。
 
 在 Java 中，几乎所有工作都是基于线程的。
 
-# 示例
+### 示例
 
 ```java
 public class Jtc181 {
@@ -10856,7 +12140,7 @@ public class Jtc181 {
             System.out.println(Thread.currentThread().getName() + " under the thread group of : " + Thread.currentThread().getThreadGroup().getName());
             try {
                 Thread.sleep(500);
-            } catch(Exception e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -10864,35 +12148,30 @@ public class Jtc181 {
 }
 ```
 
-# 以下是主线程的任务
+### 以下是主线程的任务
 
-主线程在内部将使用反射机制获取 main() 方法的名字。
-
-主线程在内部会创建一个类型为 java.lang.Class 的默认对象。
-
-它创建一个字符串对象，以便将其作为参数传递给 main() 方法。
-
-如果有任何命令行参数，则将命令行参数设置为 main() 方法。
-
-它通过传递字符串引用作为参数来调用 main 方法，在完成指定的任务后，线程将移动到死亡状态。
-
-所有的子线程都将从主线程本身创建。
+- 主线程在内部将使用反射机制获取 `main()` 方法的名字。
+- 主线程在内部会创建一个类型为 `java.lang.Class` 的默认对象。
+- 它创建一个字符串对象，以便将其作为参数传递给 `main()` 方法。
+- 如果有任何命令行参数，则将命令行参数设置为 `main()` 方法。
+- 它通过传递字符串引用作为参数来调用 `main` 方法，在完成指定的任务后，线程将移动到死亡状态。
+- 所有的子线程都将从主线程本身创建。
 
 ## 17.3 用户自定义线程
 
 用户也可以开发或编写自己的线程。用户自定义线程主要可以通过两种方式创建：
 
-- 1) 通过扩展 java.lang.Thread 类。
+- 1) 通过扩展 `java.lang.Thread` 类。
 
-通过扩展 Thread 类编写用户自定义线程的步骤：
+通过扩展 `Thread` 类编写用户自定义线程的步骤：
 
-1. 通过扩展 Thread 类编写你的用户自定义线程。
-2. 在 Thread 类内部声明一些实例变量。
-3. 在 Thread 类内部声明构造函数。
-4. 为了从线程类调用构造函数，我们需要使用 super 语句，紧接着我们需要通过编写 start() 方法来启动每个线程。
-5. 为了处理线程，我们需要在类内部编写 run() 方法的实现，但当你通过扩展 Thread 类创建用户自定义线程时，并不是强制要求重写 run() 方法。
+1. 通过扩展 `Thread` 类编写你的用户自定义线程。
+2. 在 `Thread` 类内部声明一些实例变量。
+3. 在 `Thread` 类内部声明构造函数。
+4. 为了从线程类调用构造函数，我们需要使用 `super` 语句，紧接着我们需要通过编写 `start()` 方法来启动每个线程。
+5. 为了处理线程，我们需要在类内部编写 `run()` 方法的实现，但当你通过扩展 `Thread` 类创建用户自定义线程时，并不是强制要求重写 `run()` 方法。
 
-# 示例
+### 示例
 
 ```java
 class HelloThread extends Thread {
@@ -10910,7 +12189,7 @@ class HelloThread extends Thread {
             System.out.println(Thread.currentThread().getName() + " under the thread group of : " + Thread.currentThread().getThreadGroup().getName());
             try {
                 Thread.sleep(500);
-            } catch(Exception e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -10918,14 +12197,12 @@ class HelloThread extends Thread {
 }
 ```
 
-
-
 ```java
 }
 }
 public class Jtc184 {
     public static void main(String[] args) {
-        MyThread mt=new MyThread();
+        MyThread mt = new MyThread();
         mt.m1();
     }
 }
@@ -10934,11 +12211,12 @@ public class Jtc184 {
 ## 17.4 线程优先级 (Thread Priority)
 
 这是一个 JVM 分给每个线程的数字。
+
 主要定义了三个线程优先级：
 
-- 1) MIN_PRIORITY
-- 2) MAX_PRIORITY
-- 3) NORM_PRIORITY
+- 1) `MIN_PRIORITY`
+- 2) `MAX_PRIORITY`
+- 3) `NORM_PRIORITY`
 
 任何线程的最低优先级为 1。
 
@@ -10948,21 +12226,19 @@ public class Jtc184 {
 
 这种线程优先级将被 JVM 内部用于在 CPU 调度器遵循基于优先级的算法时分配 CPU 时间。如果 CPU 调度器没有遵循任何基于优先级的算法，那么线程优先级就没有意义。
 
-```java
-final void setPriority(int): 通过使用 setPriority() 方法我们可以更改线程的优先级，但你提供的线程优先级不能大于 10 或小于 1。
-```
+`final void setPriority(int)`：通过使用 `setPriority()` 方法我们可以更改线程的优先级，但你提供的线程优先级不能大于 10 或小于 1。
 
-`final int getPriority()` : 通过此我们可以获取线程的优先级。这个 getPriority() 是一个 final 方法，在你的类内部无法重写。
+`final int getPriority()`：通过此我们可以获取线程的优先级。这个 `getPriority()` 是一个 `final` 方法，在你的类内部无法重写。
 
-Q2 : 我可以调用 run() 吗？
+**Q2**：我可以调用 `run()` 吗？
 
-答 : 是的，我们可以显式地调用 run()，但这个 run() 的行为不像由 CPU 调度器控制的正常 run()。
+答：是的，我们可以显式地调用 `run()`，但这个 `run()` 的行为不像由 CPU 调度器控制的正常 `run()`。
 
-Q3 : 我可以重载 run() 吗？
+**Q3**：我可以重载 `run()` 吗？
 
-答 : 是的，我们可以重载 run()，但重载后的 run() 行为不像正常的 run()，它不会被线程调度算法或线程自动调用。
+答：是的，我们可以重载 `run()`，但重载后的 `run()` 行为不像正常的 `run()`，它不会被线程调度算法或线程自动调用。
 
-# 示例 (Example)
+### 示例 (Example)
 
 ```java
 interface I1 {
@@ -10970,45 +12246,48 @@ interface I1 {
     void start();
 }
 class Hello extends Thread implements I1 {
-    public Hello(){
+    public Hello() {
         super();
         run();
     }
-    public void start(){
+    public void start() {
         System.out.println("Run in Hello");
         System.out.println(Thread.currentThread().getName());
     }
-    void m1(){
+    void m1() {
         System.out.println("m1 in Hello");
-        Thread t1=new Thread(this); t1.start();
+        Thread t1 = new Thread(this);
+        t1.start();
     }
 }
 public class Jtc185 {
     public static void main(String[] args) {
-        Hello h1=new Hello();
+        Hello h1 = new Hello();
         h1.m1();
-        //h1.run();
+        // h1.run();
     }
 }
 ```
 
-Q4 : 我可以多次启动一个线程吗？
+**Q4**：我可以多次启动一个线程吗？
 
-答: 我们可以调用 start()，但会抛出异常 `java.lang.IllegalThreadStateException`。
+答：我们可以调用 `start()`，但会抛出异常 `java.lang.IllegalThreadStateException`。
 
-Q5 : 假设你需要通过实现 Runnable 接口或扩展 Thread 类来开发自定义线程，你倾向于哪一个？为什么？
+**Q5**：假设你需要通过实现 `Runnable` 接口或扩展 `Thread` 类来开发自定义线程，你倾向于哪一个？为什么？
 
-答 : 总是建议通过实现 Runnable 接口来编写自定义线程，这样你还可以实现多继承；而如果你通过扩展 Thread 类来开发自定义线程，你将无法实现多继承。
+答：总是建议通过实现 `Runnable` 接口来编写自定义线程，这样你还可以实现多继承；而如果你通过扩展 `Thread` 类来开发自定义线程，你将无法实现多继承。
 
-yield(): 当你使用 yield 时，它将赋予处于就绪（Ready to run）状态且优先级最高的线程优先执行。该方法仅在 CPU 调度器遵循或基于基于优先级的算法处理线程时有效。但建议不要使用 yield()，因为没有处理上的保证。
 
-# 17.5 线程生命周期 (Thread Life Cycle)
+
+`yield()`：当你使用`yield`时，它将赋予处于就绪（Ready to run）状态且优先级最高的线程优先执行。该方法仅在 CPU 调度器遵循或基于基于优先级的算法处理线程时有效。但建议不要使用`yield()`，因为没有处理上的保证。
+
+## 17.5 线程生命周期 (Thread Life Cycle)
 
 众所周知，每个线程都通过生命周期机制进行处理，为了完成完整的线程处理，必须跨越不同的状态。
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_562_0.png)
 
-# 1) 从启动 (Start) 到就绪 (Ready to Run) 状态
+### 1) 从启动 (Start) 到就绪 (Ready to Run) 状态
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_562_1.png)
 
@@ -11024,30 +12303,27 @@ yield(): 当你使用 yield 时，它将赋予处于就绪（Ready to run）状�
 
 现在 CPU 调度器准备好了某些调度算法，其主要任务是保持运行状态忙碌。该运行状态不应该空闲。在 CPU 调度器中实现了许多不同类型的调度算法，但我们不确定当前运行的是哪种调度算法，因此在 particular调度算法中进入的线程将被处理以运行状态。进入运行状态意味着执行了指定的任务或获得了 CPU 时间。
 
-Q6 : run() 到底是什么时候调用的？
+Q6 : `run()` 到底是什么时候调用的？
 
-答 : run() 在启动线程时调用，但每当 CPU 调度器为该特定线程分配 CPU 时间，或者当线程获取与时间相关的 CPU 时间时，run() 就会被调用。
+答 : `run()` 在启动线程时调用，但每当 CPU 调度器为该特定线程分配 CPU 时间，或者当线程获取与时间相关的 CPU 时间时，`run()` 就会被调用。
 
-Q7 : 我可以显式调用 run() 吗？
+Q7 : 我可以显式调用 `run()` 吗？
 
-答 : 是的，我们可以显式调用 run()，但这样并没有实际用途，因为根据 JLS（Java语言规范），每当线程获取 CPU 时间时，run() 会被自动调用。
+答 : 是的，我们可以显式调用 `run()`，但这样并没有实际用途，因为根据 JLS（Java语言规范），每当线程获取 CPU 时间时，`run()` 会被自动调用。
 
 Q8 : 假设两个线程处于就绪状态且具有相同的优先级，恰好 CPU 调度器...
 
+### 死锁条件
 
+让我们假设一种情况：有两个线程`t1`和`t2`分别持有资源`R1`和`R2`。线程`t1`正在请求资源`R2`，而线程`t2`正在请求`R1`。线程`t1`只有在获取资源`R2`后才会释放`R1`，而线程`t2`只有在获取资源`R1`后才会释放`R2`。
 
+当我们调用`destroy()`或`stop()`时，该线程将进入死亡状态（dead state），一旦线程死亡，它就无法重启；或者一旦线程移动到死亡状态，它就无法再次进入就绪状态（Ready to run state）。当某个任务分配给线程时，如果该线程完成了任务，该线程将自动进入死亡状态。
 
-## 死锁条件
+`Join()`：当我们针对特定线程调用`join()`方法时，当前运行的线程将进入等待状态（wait state），并为我们调用`join()`的线程提供运行的机会。
 
-让我们假设一种情况：有两个线程 t1 和 t2 分别持有资源 R1 和 R2。线程 t1 正在请求资源 R2，而线程 t2 正在请求 R1。线程 t1 只有在获取资源 R2 后才会释放 R1，而线程 t2 只有在获取资源 R1 后才会释放 R2。
+`Join(long)`：当我们通过提供参数或指定参数调用`join()`时，该线程将等待指定的时间以等待运行中的线程完成，之后它将立即进入等待状态。
 
-当我们调用 `destroy()` 或 `stop()` 时，该线程将进入死亡状态（dead state），一旦线程死亡，它就无法重启；或者一旦线程移动到死亡状态，它就无法再次进入就绪状态（Ready to run state）。当某个任务分配给线程时，如果该线程完成了任务，该线程将自动进入死亡状态。
-
-Join(): 当我们针对特定线程调用 `join()` 方法时，当前运行的线程将进入等待状态（wait state），并为我们调用 `join()` 的线程提供运行的机会。
-
-Join(long): 当我们通过提供参数或指定参数调用 `join()` 时，该线程将等待指定的时间以等待运行中的线程完成，之后它将立即进入等待状态。
-
-## 示例
+### 示例
 
 ```java
 class JtcThread1 extends Thread {
@@ -11100,9 +12376,9 @@ public class Jtc189 {
 
 - 1 ) 方法级同步：为了实现这种同步，我们需要对其进行声明。
 
-情况 1：有两个线程 t2（此处应为重复）等待通过对象 h1 访问非同步方法 M1，将会存在并发情况。
+情况 1：有两个线程`t2`（此处应为重复）等待通过对象`h1`访问非同步方法`M1`，将会存在并发情况。
 
-## 示例
+### 示例
 
 ```java
 class Account{
@@ -11154,47 +12430,47 @@ public class Jtc190 {
 }
 ```
 
-情况 2：有两个线程 t1 和 t2 尝试通过对象 h1 和 h2 访问非同步方法 m1，将会存在并发情况。
+情况 2：有两个线程`t1`和`t2`尝试通过对象`h1`和`h2`访问非同步方法`m1`，将会存在并发情况。
 
-情况 3：有两个线程 t1 和 t2 尝试通过同一个对象访问非同步方法 m1 和 m2，将会存在并发情况。
+情况 3：有两个线程`t1`和`t2`尝试通过同一个对象访问非同步方法`m1`和`m2`，将会存在并发情况。
 
-情况 4：有两个线程 t1 和 t2 尝试通过对象 h1 和 h2 访问非同步方法 m1，将会存在并发情况。
+情况 4：有两个线程`t1`和`t2`尝试通过对象`h1`和`h2`访问非同步方法`m1`，将会存在并发情况。
 
-情况 5：有两个线程 t1 和 t2 尝试通过同一个对象访问非同步方法 m1，将会存在并发情况。
+情况 5：有两个线程`t1`和`t2`尝试通过同一个对象访问非同步方法`m1`，将会存在并发情况。
 
-情况 6：有两个线程 t1 和 t2 尝试通过同一个对象访问非同步方法 m1，将会存在并发情况。
+情况 6：有两个线程`t1`和`t2`尝试通过同一个对象访问非同步方法`m1`，将会存在并发情况。
 
-情况 7：有两个线程 t1 和 t2 尝试通过同一个对象访问非同步方法 m1，将会存在并发情况。
+情况 7：有两个线程`t1`和`t2`尝试通过同一个对象访问非同步方法`m1`，将会存在并发情况。
 
-情况 8：有两个线程 t1 和 t2 尝试通过同一个对象访问非同步方法 m1，将会存在并发情况。
+情况 8：有两个线程`t1`和`t2`尝试通过同一个对象访问非同步方法`m1`，将会存在并发情况。
 
-情况 9：有两个线程 t1 和 t2 尝试通过同一个对象访问非同步方法 m1，将会存在并发情况。
+情况 9：有两个线程`t1`和`t2`尝试通过同一个对象访问非同步方法`m1`，将会存在并发情况。
 
-情况 10：有两个线程 t1 和 t2 尝试通过同一个对象访问非同步方法 m1，将会存在并发情况。
+情况 10：有两个线程`t1`和`t2`尝试通过同一个对象访问非同步方法`m1`，将会存在并发情况。
 
-情况 11：有两个线程 t1 和 t2 尝试通过同一个对象访问非同步方法 m1，将会存在并发情况。
+情况 11：有两个线程`t1`和`t2`尝试通过同一个对象访问非同步方法`m1`，将会存在并发情况。
 
-情况 12：有两个线程 t1 和 t2 尝试通过同一个对象访问非同步方法 m1，将会存在并发情况。
+情况 12：有两个线程`t1`和`t2`尝试通过同一个对象访问非同步方法`m1`，将会存在并发情况。
 
-情况 13：有两个线程 t1 和 t2 尝试通过同一个对象访问非同步方法 m1，将会存在并发情况。
+情况 13：有两个线程`t1`和`t2`尝试通过同一个对象访问非同步方法`m1`，将会存在并发情况。
 
-情况 14：有两个线程 t1 和 t2 尝试通过同一个对象访问非同步方法 m1，将会存在并发情况。
+情况 14：有两个线程`t1`和`t2`尝试通过同一个对象访问非同步方法`m1`，将会存在并发情况。
 
-情况 15：有两个线程 t1 和 t2 尝试通过同一个对象访问非同步方法 m1，将会存在并发情况。
+情况 15：有两个线程`t1`和`t2`尝试通过同一个对象访问非同步方法`m1`，将会存在并发情况。
 
-## 守护线程 (Daemon Thread)
+### 守护线程 (Daemon Thread)
 
 这是一种服务线程，用于为当前执行的主线程提供服务。守护线程在主线程执行期间存在。一旦主线程完成任务，守护线程将自动销毁。
 
-## 记住以下几
+#### 记住以下几
 
 - 守护线程将被锁定。
-- 类型为 java.lang 的守护线程。
+
+- 类型为`java.lang`的守护线程。
+
 - 在块同步的情况下，第三个对象将被锁定。
+
 - 在块同步的情况下，第三个对象将被锁定。
-
-
-
 
 ```java
 for(int i=1;i<=5;i++){
@@ -11250,27 +12526,27 @@ public class Jtc5 {
 }
 ```
 
-Q12 : 我可以将 `run` 方法声明为 `synchronized` 吗？
+Q12 : 我可以将`run`方法声明为`synchronized`吗？
 
-答：可以，因为 `run()` 方法本身已经以同步的方式运行了。
+答：可以，因为`run()`方法本身已经以同步的方式运行了。
 
-Q 13: 我可以显式地调用 `run()` 方法吗？
+Q 13: 我可以显式地调用`run()`方法吗？
 
 答：可以，但这样做没有意义。
 
-isDaemon(): 它用于检查线程是否为守护线程（Daemon thread）。如果是守护线程，则返回 true，否则返回 false。
+`isDaemon()`：它用于检查线程是否为守护线程（Daemon thread）。如果是守护线程，则返回`true`，否则返回`false`。
 
-setDaemon(Boolean): 如果你想将任何线程设置为守护线程，可以使用此方法并传递值 true。
+`setDaemon(Boolean)`：如果你想将任何线程设置为守护线程，可以使用此方法并传递值`true`。
 
-从 JDK 1.5 开始，`stop()`、`suspend()` 和 `destroy()` 已被弃用。当线程进入睡眠状态（sleep state）时，它不会释放锁；但在等待状态（wait state）下它会释放锁状态。
+从 JDK 1.5 开始，`stop()`、`suspend()`和`destroy()`已被弃用。当线程进入睡眠状态（sleep state）时，它不会释放锁；但在等待状态（wait state）下它会释放锁状态。
 
 ## 17.7 线程间通信
 
 睡眠（sleeping）线程与等待（wait）线程的区别
 
-假设有两个线程 t1 和 t2，它们都在访问同步方法。考虑当线程 t1 正在访问方法 `m1()` 被要求睡眠时，线程 t1 将进入睡眠状态而不释放锁；而当 t2 访问同步方法 `m2()` 并被要求等待时，它将释放锁。
+假设有两个线程`t1`和`t2`，它们都在访问同步方法。考虑当线程`t1`正在访问方法`m1()`被要求睡眠时，线程`t1`将进入睡眠状态而不释放锁；而当`t2`访问同步方法`m2()`并被要求等待时，它将释放锁。
 
-示例
+### 示例
 
 ```java
 class Stack {
@@ -11352,34 +12628,37 @@ Q14 : 进程和线程之间的区别是什么？
 
 JVM 运行在单个进程中，JVM 内部线程共享该进程的堆（heap）。这就是为什么多个线程可能会访问同一个对象。线程共享堆但自己的栈（stack），这就是一个线程调用方法的方式。
 
-Q15 : 睡眠（sleeping）和 `wait()` 之间的区别是什么？
+Q15 : 睡眠（sleeping）和`wait()`之间的区别是什么？
 
 答：是的，但这样做没有意义。
 
-Q16 : `join()` 的作用是什么？
+Q16 : `join()`的作用是什么？
 
-答：`join()` 用于允许一个线程等待另一个线程执行完毕。
-
-
+答：`join()`用于允许一个线程等待另一个线程执行完毕。
 
 ## 17.16 构造函数
 
-`ThreadLocal tl = new ThreadLocal();` 创建一个 ThreadLocal 变量。
+`ThreadLocal tl = new ThreadLocal();` 创建一个`ThreadLocal`变量。
 
 ### 方法
 
-- 1) Object get(); 返回当前线程关联的 ThreadLocal 变量的值。
-- 2) Object initialValue(); 返回当前线程 ThreadLocal 变量的初始值。`initialValue()` 的默认实现返回 `null`。
+- 1) `Object get()`；返回当前线程关联的`ThreadLocal`变量的值。
 
-要自定义我们的 `initialValue`，我们需要重写 `initialValue()`。
-- 3) void set(Object newValue); 设置新值。
-- 4) void remove(); 移除当前线程的本地变量值。
+- 2) `Object initialValue()`；返回当前线程`ThreadLocal`变量的初始值。`initialValue()`的默认实现返回`null`。
 
-在移除 之后，如果我们尝试访问它，它将通过调用 `initialValue()` 再次初始化。
+要自定义我们的`initialValue`，我们需要重写`initialValue()`。
+
+- 3) `void set(Object newValue)`；设置新值。
+
+- 4) `void remove()`；移除当前线程的本地变量值。
+
+在移除之后，如果我们尝试访问它，它将通过调用`initialValue()`再次初始化。
 
 此方法在 1.5 版本中新增。
 
 ### 示例
+
+
 
 ```java
 class ThreadLocalDemo {
@@ -11423,29 +12702,29 @@ class ThreadLocalDemo {
 
 `synchronized` 关键字必须定义在方法内部，无法在多个方法之间声明。
 
-为了克服上述问题，Sun 在 1.5 版本中引入了 `java.util.concurrent.locks` 包。
+为了克服上述问题，Sun 在 1.5 版本中引入了`java.util.concurrent.locks`包。
 
 它还为程序员提供了若干增强，以便对并发提供更多控制。
 
 ## 17.18 Lock (接口)
 
-Lock 对象类似于线程为了执行 `synchronized` 方法或 `synchronized` 块而获取的隐式锁。
+`Lock`对象类似于线程为了执行`synchronized`方法或`synchronized`块而获取的隐式锁。
 
-Lock 实现提供了比传统的隐式锁更广泛的操作。
+`Lock`实现提供了比传统的隐式锁更广泛的操作。
 
 ### Lock 接口的重要方法
 
-- 1) void lock();
+- 1) `void lock();`
 
 它锁定锁对象。
 
 如果锁对象已被其他线程锁定，则它将等待直到它被解锁。
 
-- 2) boolean tryLock();
+- 2) `boolean tryLock();`
 
 如果锁可用，则获取锁。
 
-如果锁可用，则线程获取锁并返回 `true`。如果锁不可用，则此方法返回 `false` 并继续执行。
+如果锁可用，则线程获取锁并返回`true`。如果锁不可用，则此方法返回`false`并继续执行。
 
 在这种情况下，线程永远不会被阻塞。
 
@@ -11457,7 +12736,7 @@ if (l.tryLock()) {
 }
 ```
 
-- 3) boolean tryLock(long time, TimeUnit unit);
+- 3) `boolean tryLock(long time, TimeUnit unit);`
 
 如果锁可用，则获取锁。
 
@@ -11472,42 +12751,43 @@ enum TimeUnit {
 }
 ```
 
-- 4) void lockInterruptedly();
+- 4) `void lockInterruptedly();`
 
 除非当前线程被中断，否则获取锁。如果锁可用，则立即获取锁。
 
 如果锁不可用，则线程将进行等待；如果在等待期间被中断，则不会获取锁。
 
-- 5) void unlock(); 释放锁。
+- 5) `void unlock();` 释放锁。
 
 ## 17.19 ReentrantLock
 
-它实现了 `Lock` 接口，是 `Object` 的直接子类。
+它实现了`Lock`接口，是`Object`的直接子类。
 
 Reentrant（重入）意味着线程可以多次获取同一个锁而没有问题。
 
-在内部，每当我们调用 `lock()` 时，ReentrantLock 会增加计数，每当我们调用 `unlock()` 时会减少计数，当计数达到 ‘0’ 时，锁将被释放。
+在内部，每当我们调用`lock()`时，`ReentrantLock`会增加计数，每当我们调用`unlock()`时会减少计数，当计数达到‘0’时，锁将被释放。
 
-- 1) ReentrantLock rl = new ReentrantLock(); 创建一个 ReentrantLock 实例。
+- 1) `ReentrantLock rl = new ReentrantLock();` 创建一个`ReentrantLock`实例。
 
-- 2) ReentrantLock rl = new ReentrantLock(boolean fairness); 创建一个带有给定公平性的 ReentrantLock 实例。
+- 2) `ReentrantLock rl = new ReentrantLock(boolean fairness);` 创建一个带有给定公平性的`ReentrantLock`实例。
 
-如果公平性为 `true`，当锁可用时，等待最长的线程将获取锁，即它遵循先先出（FIFO）。
+如果公平性为`true`，当锁可用时，等待最长的线程将获取锁，即它遵循先先出（FIFO）。
 
-如果公平性为 `false`，我们无法保证哪个线程会在锁可用时获取该锁。
+如果公平性为`false`，我们无法保证哪个线程会在锁可用时获取该锁。
 
 注意：如果我们不指定任何公平性属性，默认是非公平的。
 
 ### ReentrantLock 的重要方法
 
-- void lock();
-- boolean tryLock();
-- boolean tryLock(long time, TimeUnit unit);
-- void lockInterruptedly();
-- void unlock();
+- `void lock();`
 
+- `boolean tryLock();`
 
+- `boolean tryLock(long time, TimeUnit unit);`
 
+- `void lockInterruptedly();`
+
+- `void unlock();`
 
 ```java
 MyThread(String name) {
@@ -11567,7 +12847,7 @@ ExecutorService service = Executors.newFixedThreadPool(3);
 service.submit(job);
 ```
 
-我们可以使用 shutdown() 来关闭 ExecutorService。
+我们可以使用`shutdown()`来关闭`ExecutorService`。
 
 ```java
 service.shutdown();
@@ -11614,19 +12894,20 @@ class ExecutorDemo {
 ```
 
 在上面的程序 17.3 中，17 个线程负责执行 6 个任务。
+
 这样，单个线程就可以被重用于多个任务。
 
 注意：通常我们可以使用线程池概念来实现服务器（Web 服务器和应用服务器）。
 
 # 17.21 Callable 和 Future
 
-在 Runnable 任务的情况下，线程不会返回任何内容。
+在`Runnable`任务的情况下，线程不会返回任何内容。
 
-如果需要线程在执行后返回某些结果，那么我们应该使用 Callable。
+如果需要线程在执行后返回某些结果，那么我们应该使用`Callable`。
 
-Callable 接口仅包含一个方法 `public Object call() throws Exception`。如果我们将一个 Callable 对象提交给 Executor，框架将返回一个类型为 `java.util.concurrent.Future` 的对象。
+`Callable`接口仅包含一个方法`public Object call() throws Exception`。如果我们将一个`Callable`对象提交给`Executor`，框架将返回一个类型为`java.util.concurrent.Future`的对象。
 
-Future 对象可以从 Callable 任务中检索结果。
+`Future`对象可以从`Callable`任务中检索结果。
 
 示例
 
@@ -11801,139 +13082,141 @@ class Jtc5 {
 
 # 程序：使用 wait(), notifyAll() 的示例
 
+
+
 ```java
 package com.p3;
-class Stack{
-int x;
-boolean flag=false;
-synchronized void push(int x) {
-if(flag) {
-  try {
-    wait();
-  } catch(Exception e) {
-    System.out.println(e);
-  }
+
+class Stack {
+    int x;
+    boolean flag = false;
+
+    synchronized void push(int x) {
+        if (flag) {
+            try {
+                wait();
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+        this.x = x;
+        System.out.println(x + " is pushed");
+        flag = true;
+        notifyAll();
+    }
+
+    synchronized int pop() {
+        if (!flag) {
+            try {
+                wait();
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+        System.out.println(x + " is popped");
+        flag = false;
+        return x;
+    }
 }
-this.x=x;
-System.out.println(x+" is pushed");
-flag=true;
-notifyAll();
-}
-synchronized int pop() {
-if(!flag) {
-  try {
-    wait();
-  } catch(Exception e) {
-    System.out.println(e);
-  }
-}
-System.out.println(x+" is popped");
-flag=false;
-return x;
-}
-}
+
 class A1 implements Runnable {
-Stack st=null;
-A1(Stack st) {
-this.st=st;
-}
-public void run(){
-int a=1;
-for(int i=0; i<7; i++) {
-    st.push(a++);
-    try {
-        Thread.sleep(1000);
-    } catch (Exception e) {
-        System.out.println(e);
+    Stack st = null;
+
+    A1(Stack st) {
+        this.st = st;
+    }
+
+    public void run() {
+        int a = 1;
+        for (int i = 0; i < 7; i++) {
+            st.push(a++);
+            try {
+                Thread.sleep(1000);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
     }
 }
-}
-}
+
 class B1 implements Runnable {
-Stack st=null;
-B1(Stack st) {
-this.st=st;
-}
-public void run(){
-int a=1;
-for(int i=0; i<7; i++) {
-    st.pop();
-    try {
-        Thread.sleep(1000);
-    } catch (Exception e) {
-        System.out.println(e);
+    Stack st = null;
+
+    B1(Stack st) {
+        this.st = st;
+    }
+
+    public void run() {
+        int a = 1;
+        for (int i = 0; i < 7; i++) {
+            st.pop();
+            try {
+                Thread.sleep(1000);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
     }
 }
-}
-}
+
 class Jtc7 {
-public static void main(String[] args[]) {
-    Stack st=new Stack();
-    Thread t1=new Thread(new A1(st));
-    Thread t2=new Thread(new B1(st));
-    t1.start();
-    t2.start();
-}
+    public static void main(String[] args) {
+        Stack st = new Stack();
+        Thread t1 = new Thread(new A1(st));
+        Thread t2 = new Thread(new B1(st));
+        t1.start();
+        t2.start();
+    }
 }
 ```
 
-18.1 java.util 包或 集合框架
+## 18.1 java.util 包或集合框架
 
 在 Java 中，当我们尝试向数组中存储元素时，可能会遇到以下问题：
 
-数组是静态的，也就是说，为了在数组中存储元素，我们首先需要声明大小。
-
-如果我们向数组中存储某些元素，可能无法填充整个数组长度，在这种情况下会造成内存浪费。
-
-如果你超过了数组的大小，它将抛出异常，即 `java.lang.Array out of bounds exception`。
-
-在声明任何数组之前，我们需要先声明数组的类型，也就是说你想要声明什么类型，并且在该数组中你只能存储相同类型的元素。但在某些情况下，我们可以在数组中存储不同类型的元素。
+- 数组是静态的，也就是说，为了在数组中存储元素，我们首先需要声明大小。
+- 如果我们向数组中存储某些元素，可能无法填充整个数组长度，在这种情况下会造成内存浪费。
+- 如果你超过了数组的大小，它将抛出异常，即`java.lang.Array out of bounds exception`。
+- 在声明任何数组之前，我们需要先声明数组的类型，也就是说你想要声明什么类型，并且在该数组中你只能存储相同类型的元素。但在某些情况下，我们可以在数组中存储不同类型的元素。
 
 例如：
 
+```java
+Object O[] = new Object[3];
+O[0] = new Hail();
+O[1] = new Hello();
+O[2] = new String("AB");
 ```
-Object O[] =new Object [3];
-O[]=new Hail();
-O[1]=new Hello();
-O[2]=new String("AB");
-```
 
+在访问数组时，我们需要初始化、让计算机执行条件检查以及增加或递减计数器。在访问数组时，你需要执行这些许多任务。假设有一个长度为 1000 的数组，其中只有几百个元素是有效的，因此尽管如此你仍然需要不断地循环一千次，这是没有意义的。
 
-
-
-在访问数组时，我们需要初始化、让计算机执行条件检查以及增加或递减计数器。在访问数组时，你需要执行这些许多任务。假设有一个长度为 1000 的数组，其中只有几百个元素是有效的，因此尽管如此你仍然需要不地循环一千次，这是没有意义的。
-
-如果你想从数组中删除特定索引位置的元素，那是非常困难的。
-
-在数组的情况下，我们无法避免元素的重复性。
-
-在数组中，元素将按照添加的顺序存储，也就是说没有提供按排序顺序存储元素的功能。
-
-当你创建一个具有特定大小的数组时，它需要连续的内存位置（即磁盘空间）。如果该内存位置不可用，可能会出现某些内存相关问题，即堆溢。这将抛出 "java.lang.VirtualMachineError"。
-
-假设在字符串数组的情况下，当我们尝试对其进行反转操作时，首先需要将其拆分并存储在字符串数组中，我们需要将其拆分并存储在字符串数组中，然后我们需要进行访问（使用 for 循环），这将创建许多不必要的对象，这是不推荐的。
+- 如果你想从数组中删除特定索引位置的元素，那是非常困难的。
+- 在数组的情况下，我们无法避免元素的重复性。
+- 在数组中，元素将按照添加的顺序存储，也就是说没有提供按排序顺序存储元素的功能。
+- 当你创建一个具有特定大小的数组时，它需要连续的内存位置（即磁盘空间）。如果该内存位置不可用，可能会出现某些内存相关问题，即堆溢出。这将抛出`java.lang.VirtualMachineError`。
+- 假设在字符串数组的情况下，当我们尝试对其进行反转操作时，首先需要将其拆分并存储在字符串数组中，我们需要将其拆分并存储在字符串数组中，然后我们需要进行访问（使用`for`循环），这将创建许多不必要的对象，这是不推荐的。
 
 为了解决数组集合的问题，引入了集合框架（Collection Framework）。在这个集合框架中，他们引入了五个类：
 
-- Dictionary（字典）
-- Properties（属性）
-- Hash table（哈希表）
-- Vector（向量）
-- Stack（栈）
+- `Dictionary`（字典）
+- `Properties`（属性）
+- `HashTable`（哈希表）
+- `Vector`（向量）
+- `Stack`（栈）
 
-这五个类被称为称为旧类（legacy classes）。上述五个类几乎解决了数组的所有问题，但它们仍然无法解决数组的许多主要问题。
+这五个类被称为旧类（legacy classes）。上述五个类几乎解决了数组的所有问题，但它们仍然无法解决数组的许多主要问题。
 
 这五个旧类可以存储不同类型的元素。
 
-它们在性质上不是静态的，也就是说它们的大小是可以增长。为了解决访问问题，SUN 引入了 Enumeration 接口来访问这些旧类中的元素。
+它们在性质上不是静态的，也就是说它们的大小是可以增长的。为了解决访问问题，SUN 引入了`Enumeration`接口来访问这些旧类中的元素。
 
 所有这些旧类在本质上都是完全同步的，因此使用这些旧类会减慢应用程序的速度。尽管如此，这些旧类仍然无法解决数组的问题，例如元素的重复性等。
 
 该集合框架经过重构以解决旧类的问题，在旧类中，有两个旧类被重构并被添加到集合中。
 
-# HashTable
+## HashTable
 
-# Vector
+## Vector
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_626_0.png)
 
@@ -11941,54 +13224,53 @@ O[2]=new String("AB");
 
 ## 18.2 Collection
 
-Collection 是位于 `java.util` 包中的一个接口。collection 进一步被 list 和 set 扩展。
+`Collection`是位于`java.util`包中的一个接口。`collection`进一步被`list`和`set`扩展。
 
-所有的 collections 方法在 list 和 set 中都可用。此 collection 接口没有被 map 接口扩展。
+所有的`collections`方法在`list`和`set`中都可用。此`collection`接口没有被`map`接口扩展。
 
 ## 18.3 List Interface
 
-List 是位于 `java.util` 包中的一个接口，此外此 list 由以下类实现：
+`List`是位于`java.util`包中的一个接口，此外此`list`由以下类实现：
 
-- ArrayList
-- LinkedList
-- Vector
+- `ArrayList`
+- `LinkedList`
+- `Vector`
 
-所有这些 list 类都以重复性的方式存储元素。
+所有这些`list`类都以重复性的方式存储元素。
 
-# ArrayList
+## ArrayList
 
-它是位于 `java.util` 包中的一个类。
+它是位于`java.util`包中的一个类。
 
-它继承自 AbstractList 类并实现了 List、RandomAccess、Cloneable 和 Serializable 接口。
+它继承自`AbstractList`类并实现了`List`、`RandomAccess`、`Cloneable`和`Serializable`接口。
 
-ArrayList 实现了 list 接口。
+`ArrayList`实现了`list`接口。
 
-ArrayList 按照添加的顺序存储元素。
+`ArrayList`按照添加的顺序存储元素。
 
-ArrayList 使用索引表示来存储元素。
+`ArrayList`使用索引表示来存储元素。
 
-在 ArrayList 中允许不同类型的元素。
+在`ArrayList`中允许不同类型的元素。
 
-可以使用 ListIterator 多次访问 ArrayList 元素。
+可以使用`ListIterator`多次访问`ArrayList`元素。
 
-ArrayList 的没有任何方法是同步的。因此 ArrayList 类也是不是同步的。所以，使用它不会影响应用程序的并发性。
+`ArrayList`的没有任何方法是同步的。因此`ArrayList`类也是不是同步的。所以，使用它不会影响应用程序的并发性。
 
-可以使用 Iterator 和 ListIterator 访问 ArrayList 元素。通过 enumeration 我们无法访问 ArrayList 的元素。
+可以使用`Iterator`和`ListIterator`访问`ArrayList`元素。通过`enumeration`我们无法访问`ArrayList`的元素。
 
-使用 Iterator 只能正向访问一次 ArrayList 元素。
+使用`Iterator`只能正向访问一次`ArrayList`元素。
 
-# Example
+## Example
 
-```
+```java
 import java.util.*;
-class Hello{
-void m1(){
-    System.out.println("m1 in Hello");
+
+class Hello {
+    void m1() {
+        System.out.println("m1 in Hello");
+    }
 }
 ```
-
-
-
 
 ```java
 li.add("last");
@@ -12025,119 +13307,118 @@ System.out.println("using Iterator");
 Iterator it = li.iterator();
 
 while (it.hasNext()) {
-  System.out.println(it.next());
+    System.out.println(it.next());
 }
 while (it.hasNext()) {
-  System.out.println(it.next());
+    System.out.println(it.next());
 }
 System.out.println("\n*****List Iterator Forward*****");
 ListIterator l1 = li.listIterator();
 while (l1.hasNext()) {
-  System.out.println(l1.next());
+    System.out.println(l1.next());
 }
 System.out.println("***********previous***********");
 while (l1.hasPrevious()) {
-  System.out.println(l1.previous());
-  // System.out.println(l1.previous());
-  Object o = l1.previous();
-  System.out.println(o);
+    System.out.println(l1.previous());
+    // System.out.println(l1.previous());
+    Object o = l1.previous();
+    System.out.println(o);
 }
 ```
 
-# Vector
+## Vector
 
-Vector 是一个遗留类（legacy class）。
+`Vector`是一个遗留类（legacy class）。
 
-Vector 继承 `AbstractList` 并实现了 `List`、`RandomAccess`、`Cloneable` 和 `Serializable` 接口。
+`Vector`继承`AbstractList`并实现了`List`、`RandomAccess`、`Cloneable`和`Serializable`接口。
 
-Vector 经过了重新设计并包含在集合框架中。
+`Vector`经过了重新设计并包含在集合框架中。
 
-Vector 用于存储不同类型的元素。
+`Vector`用于存储不同类型的元素。
 
-Vector 允许重复元素。
+`Vector`允许重复元素。
 
-Vector 使用索引表示法存储元素。
+`Vector`使用索引表示法存储元素。
 
-Vector 元素可以随机访问。
+`Vector`元素可以随机访问。
 
-Vector 允许 `null` 值。
+`Vector`允许`null`值。
 
-Vector 中允许存在多个 `null` 值。
+`Vector`中允许存在多个`null`值。
 
 它按照元素添加的顺序存储元素。
 
-可以通过 `Iterator`、`ListIterator` 和 `Enumeration` 访问 Vector 元素。
+可以通过`Iterator`、`ListIterator`和`Enumeration`访问`Vector`元素。
 
-当 Vector 还是遗留类时，使用 `Enumeration` 来访问元素。这种枚举器在集合框架中也继续使用。
+当`Vector`还是遗留类时，使用`Enumeration`来访问元素。这种枚举器在集合框架中也继续使用。
 
-通过使用 `Enumeration`，我们只能访问遗留类或已重新设计并包含在集合框架中的类的元素。
+通过使用`Enumeration`，我们只能访问遗留类或已重新设计并包含在集合框架中的类的元素。
 
-当 Vector 还是遗留类时，几乎所有的成员都是同步的（synchronized），因此这会影响应用程序的并发性。
+当`Vector`还是遗留类时，几乎所有的成员都是同步的（synchronized），因此这会影响应用程序的并发性。
 
-Vector 对象支持序列化和克隆。
+`Vector`对象支持序列化和克隆。
 
-# 示例
+## 示例
 
 ```java
 import java.util.*;
+
 public class Hello02 {
     public static void main(String[] args) {
-    Vector v1 = new Vector();
-    ArrayList al = new ArrayList();
-    System.out.println(al.size());
+        Vector v1 = new Vector();
+        ArrayList al = new ArrayList();
+        System.out.println(al.size());
 
-    System.out.println(al);
-    al.add("aa");
-    al.add("bb");
-    al.add("cc");
-    al.add("dd");
-    al.add("ce");
-    System.out.println(al.size());
-    System.out.println(al);
-    System.out.println("***********\n");
-    v1.addAll(al);
-    System.out.println(v1);
-    v1.add("xyz");
-    v1.add(123);
-    v1.addElement("abc");
-    v1.addElement(9999);
-    System.out.println(v1);
-    System.out.println("***********\n");
-    Enumeration en = v1.elements();
-    while(en.hasMoreElements()) {
-        System.out.println(en.nextElement());
-    }
-    ListIterator li = v1.listIterator();
-    while(li.hasNext()) {
-        System.out.println(li.next());
-    }
-    System.out.println("**************\n");
-    while(li.hasPrevious()) { 
-        System.out.println(li.previous());
+        System.out.println(al);
+        al.add("aa");
+        al.add("bb");
+        al.add("cc");
+        al.add("dd");
+        al.add("ce");
+        System.out.println(al.size());
+        System.out.println(al);
+        System.out.println("***********\n");
+        v1.addAll(al);
+        System.out.println(v1);
+        v1.add("xyz");
+        v1.add(123);
+        v1.addElement("abc");
+        v1.addElement(9999);
+        System.out.println(v1);
+        System.out.println("***********\n");
+        Enumeration en = v1.elements();
+        while (en.hasMoreElements()) {
+            System.out.println(en.nextElement());
+        }
+        ListIterator li = v1.listIterator();
+        while (li.hasNext()) {
+            System.out.println(li.next());
+        }
+        System.out.println("**************\n");
+        while (li.hasPrevious()) {
+            System.out.println(li.previous());
+        }
     }
 }
 ```
 
-| LIST | 重复元素 | 相同或不同 | Null 值 | 索引或 | 随机或顺序 | 同步 | Enumeration | Iterator | ListIterator | 序列化与克隆 | 顺序 |
+| LIST | 重复元素 | 相同或不同 | Null 值 | 索引或节点 | 随机或顺序 | 同步 | Enumeration | Iterator | ListIterator | 序列化与克隆 | 顺序 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| ArrayList | 是 | 相同 | 是 | 索引 | 随机 | 否 | 否 | 是 | 是 | 是 | 插入顺序 |
-| LinkedList | 是 | 相同 | 是 | 节点 | 顺序 | 否 | 否 | 是 | 是 | 是 | 插入顺序 |
-| Vector | 是 | 相同 | 是 | 索引 | 随机 | 是 | 是 | 是 | 是 | 是 | 插入顺序 |
+| `ArrayList` | 是 | 相同 | 是 | 索引 | 随机 | 否 | 否 | 是 | 是 | 是 | 插入顺序 |
+| `LinkedList` | 是 | 相同 | 是 | 节点 | 顺序 | 否 | 否 | 是 | 是 | 是 | 插入顺序 |
+| `Vector` | 是 | 相同 | 是 | 索引 | 随机 | 是 | 是 | 是 | 是 | 是 | 插入顺序 |
 
-Q1：我可以同步 ArrayList 和 LinkedList 吗？  
-答：可以，我们可以通过调用 `Collections.synchronizedList(list)` 来显式地同步。
+**Q1：** 我可以同步`ArrayList`和`LinkedList`吗？
+
+**答：** 可以，我们可以通过调用`Collections.synchronizedList(list)`来显式地同步。
 
 ## 18.4 SET
 
-Set 是 `java.util` 包中的一个接口。
+`Set`是`java.util`包中的一个接口。
 
-Set 继承 `AbstractCollection` 并实现了 `Set`、`Cloneable` 和 `Serializable` 接口。
+`Set`继承`AbstractCollection`并实现了`Set`、`Cloneable`和`Serializable`接口。
 
-Set 不允许重复元素。
-
-
-
-
+`Set`不允许重复元素。
 
 ```java
 HashSet hs = new HashSet();
@@ -12166,21 +13447,21 @@ System.out.println(lhs.add("som"));
 System.out.println(lhs);
 ```
 
-*(注：您提供的待翻译文本仅为代码块，根据注意事项“内联代码和代码块不需要翻译”，上述内容保持原样，无需翻译。)*
+## 18.6 Comparable 和 Comparator 的区别
 
+当我们想要以多种方式对对象进行排序时，我们需要使用`Comparable`和`Comparator`。
 
-
-## 18.6 Comparable 和 Comparator 的区别。
-
-当我们想要以多种方式对对象进行排序时，我们需要使用 Comparable 和 Comparator。
-
-| Comparable | Comparator |
+| `Comparable` | `Comparator` |
 |---|---|
-| • Comparable 是一个位于 `java.lang` 包中的接口（Interface）。 | • Comparator 也是一个位于 `java.util` 包中的接口（Interface）。 |
-| • 如果你想以一种特定的方式对任何类进行排序，它们需要实现 `Comparable` 接口，该接口提供了单一的比较方式。 | • Comparator 接口提供了多种不同的比较方式。 |
-| • 当一个类实现 `Comparable` 接口时，你需要在类内部重写 `compareTo()` 方法。 | • 如果一个类实现 `Comparator` 接口，那么该类必须在类内部重写 `compare(Object o)` 方法。 |
-| • 调用 Comparable 对象的 `Collections.sort`。 | • 调用 `Collections.sort(Collection_Type, Comparator)`。 |
-| 即 `Collections.sort(Comparable)`。 | • Comparator 接口可以由第三方类实现，而无需修改需要排序的对象的主类。 |
+| • `Comparable`是一个位于`java.lang`包中的接口（Interface）。 | • `Comparator`也是一个位于`java.util`包中的接口（Interface）。 |
+| • 如果你想以一种特定的方式对任何类进行排序，它们需要实现`Comparable`接口，该接口提供了单一的比较方式。 | • `Comparator`接口提供了多种不同的比较方式。 |
+| • 当一个类实现`Comparable`接口时，你需要在类内部重写`compareTo()`方法。 | • 如果一个类实现`Comparator`接口，那么该类必须在类内部重写`compare(Object o)`方法。 |
+
+
+
+| • 调用 `Comparable` 对象的 `Collections.sort`。 | • 调用 `Collections.sort(Collection_Type, Comparator)`。 |
+
+| 即 `Collections.sort(Comparable)`。 | • `Comparator` 接口可以由第三方类实现，而无需修改需要排序的对象的主类。 |
 
 ```java
 import java.util.*;
@@ -12276,9 +13557,9 @@ class Jtc {
 
 ## 18.7 String Tokenizer
 
-StringTokenizer 是一个位于 `java.util` 包中的类。
+`StringTokenizer` 是一个位于 `java.util` 包中的类。
 
-当你需要处理字符串时，如果你想反转该字符串，需要使用 `split` 类的 `split` 方法，并在指定字符串标准后，你需要将其存储在字符串数组中，这会产生产生字符串对象，可能会导致 `java.lang.OutOfMemoryError` 内存问题。之后在访问字符串数组时，初始化计数器并相应地增加或减少。但通过使用 StringTokenizer，我们可以以 token 的形式拆分字符串，这样不会产生任何额外的对象，并且可以以枚举的方式轻松访问 token。
+当你需要处理字符串时，如果你想反转该字符串，需要使用 `split` 类的 `split` 方法，并在指定字符串标准后，你需要将其存储在字符串数组中，这会产生产生字符串对象，可能会导致 `java.lang.OutOfMemoryError` 内存问题。之后在访问字符串数组时，初始化计数器并相应地增加或减少。但通过使用 `StringTokenizer`，我们可以以 token 的形式拆分字符串，这样不会产生任何额外的对象，并且可以以枚举的方式轻松访问 token。
 
 ## 18.8 hasMoreTokens()
 
@@ -12303,27 +13584,33 @@ public class Jtc197 {
 }
 ```
 
-
-
-
-
 ## 18.9 枚举 (Enumeration) 与迭代器 (Iterator) 的区别
 
 | Enumeration | Iterator |
+
 |---|---|
-| * Enumeration 是 java.util 包中的一个接口，也被称为旧版接口（legacy Interface）。 | * 它也是 java.util 包中的一个接口，主要用于从集合框架（collection framework）中引入。 |
-| * 使用 enumeration，我们只能访问旧类中的元素。 | * 使用 Iterator，我们既可以访问旧类的元素，也可以访问集合类的元素。 |
-| * 使用 enumeration，我们只能按正向顺序访问元素。 | * 使用 Iterator，我们可以按正向访问元素，即只能访问一次。 |
-| * 使用 enumeration，我们无法从集合中删除任何元素。 | * 使用 Iterator，我们可以从集合中删除元素。 |
+
+| * `Enumeration` 是 `java.util` 包中的一个接口，也被称为旧版接口（legacy Interface）。 | * 它也是 `java.util` 包中的一个接口，主要用于从集合框架（collection framework）中引入。 |
+
+| * 使用 `Enumeration`，我们只能访问旧类中的元素。 | * 使用 `Iterator`，我们既可以访问旧类的元素，也可以访问集合类的元素。 |
+
+| * 使用 `Enumeration`，我们只能按正向顺序访问元素。 | * 使用 `Iterator`，我们可以按正向访问元素，即只能访问一次。 |
+
+| * 使用 `Enumeration`，我们无法从集合中删除任何元素。 | * 使用 `Iterator`，我们可以从集合中删除元素。 |
 
 ## 18.10 迭代器 (Iterator) 与 列表迭代器 (ListIterator) 的区别
 
 | Iterator | ListIterator |
+
 | --- | --- |
-| • Iterator 是 java.util 包中的一个接口。 | • ListIterator 也是 java.util 包中的一个接口，并继承了 Iterator 接口。 |
-| • 使用 Iterator，我们只能按正向访问元素。 | • 使用 ListIterator，我们可以同时按正向和反向方向访问元素。 |
-| • 使用 Iterator，我们只能从集合中删除元素。 | • 使用 ListIterator，我们可以从集合中删除元素，也可以向集合添加元素。 |
-| • 使用 Iterator，我们可以访问 List（列表）和 Set（集合）的元素。 | • 使用 ListIterator，我们只能访问 List类的元素。 |
+
+| • `Iterator` 是 `java.util` 包中的一个接口。 | • `ListIterator` 也是 `java.util` 包中的一个接口，并继承了 `Iterator` 接口。 |
+
+| • 使用 `Iterator`，我们只能按正向访问元素。 | • 使用 `ListIterator`，我们可以同时按正向和反向方向访问元素。 |
+
+| • 使用 `Iterator`，我们只能从集合中删除元素。 | • 使用 `ListIterator`，我们可以从集合中删除元素，也可以向集合添加元素。 |
+
+| • 使用 `Iterator`，我们可以访问 `List`（列表）和 `Set`（集合）的元素。 | • 使用 `ListIterator`，我们只能访问 `List` 类的元素。 |
 
 ## 18.11 addElements()
 
@@ -12331,21 +13618,21 @@ public class Jtc197 {
 
 ## 18.12 Timer 和 TimerTask
 
-TimerTask 是一个实现 Runnable 接口的抽象类。
+`TimerTask` 是一个实现 `Runnable` 接口的抽象类。
 
-TimerTask 类位于 java.util 包中。
+`TimerTask` 类位于 `java.util` 包中。
 
-TimerTask 类没有自己的抽象方法。它只拥有 Runnable 接口的抽象方法，该方法在 TimerTask 类内部不会被重写。这留给了开发者根据需要编写 `run()` 方法的实现。
+`TimerTask` 类没有自己的抽象方法。它只拥有 `Runnable` 接口的抽象方法，该方法在 `TimerTask` 类内部不会被重写。这留给了开发者根据需要编写 `run()` 方法的实现。
 
-Timer 类：它是 java.util 包中的一个类。
+`Timer` 类：它是 `java.util` 包中的一个类。
 
-Timer 类有许多方法用于根据需要调度任务。
+`Timer` 类有许多方法用于根据需要调度任务。
 
 这两种情况都将用于相应地调度任务。
 
 ## 18.13 方法
 
-addElements(): 通过使用 `addElement()`，我们可以向已重构并包含在集合框架中的旧类添加元素。因为 `addElement` 用于向旧类添加元素。
+`addElements()`: 通过使用 `addElement()`，我们可以向已重构并包含在集合框架中的旧类添加元素。因为 `addElement` 用于向旧类添加元素。
 
 `addElement()` 和 `add()` 在处理顺序上没有区别。
 
@@ -12407,27 +13694,27 @@ public class Jtc13 {
 
 ### 18.13.1 Stack (栈)
 
-它是 Vector 的子类。
+它是 `Vector` 的子类。
 
-当需要后进先出 (LIFO) 顺序时，我们应该使用 Stack。`Stack s= new Stack();`
+当需要后进先出 (LIFO) 顺序时，我们应该使用 `Stack`。`Stack s= new Stack();`
 
 ### Stack 中的方法
 
-Object push(Object o);
+`Object push(Object o);`
 
 向栈中插入一个对象。
 
-Object pop();
+`Object pop();`
 
 删除并返回栈顶元素。
 
-Object peek();
+`Object peek();`
 
 返回栈顶元素但不删除。
 
-boolean empty();
+`boolean empty();`
 
-如果栈为空，则返回 true。
+如果栈为空，则返回 `true`。
 
 ```java
 int search(Object o);
@@ -12437,9 +13724,9 @@ int search(Object o);
 
 ### 18.13.2 空值接受 (Null Acceptance)
 
-对于空的 TreeSet，在插入第一个元素“null”之后，再次插入 null 是可能的；但如果我们尝试插入任何其他元素，将得到 `NullPointerException`。
+对于空的 `TreeSet`，在插入第一个元素 `null` 之后，再次插入 `null` 是可能的；但如果我们尝试插入任何其他元素，将得到 `NullPointerException`。
 
-对于非空的 TreeSet，如果我们尝试插入 `null`，将得到 `NullPointerException`。
+对于非空的 `TreeSet`，如果我们尝试插入 `null`，将得到 `NullPointerException`。
 
 ### 示例
 
@@ -12457,21 +13744,21 @@ class TreeSetDemo{
 }
 ```
 
-注意：线程“main”中的异常：java.lang.ClassCastException: StringBuffer 无法转换为 java.lang.Comparable
+注意：线程“main”中的异常：`java.lang.ClassCastException`: `StringBuffer` 无法转换为 `java.lang.Comparable`
 
-如果依赖默认排序，对象必须是同质的，否则将得到 `ClassCastException`。当且仅当相应的类实现了 Comparable 时，对象才是 Comparable。
+如果依赖默认排序，对象必须是同质的，否则将得到 `ClassCastException`。当且仅当相应的类实现了 `Comparable` 时，对象才是 `Comparable`。
 
 ## 18.14 Entry (节点)
 
-每个键值对被称为一个 entry。因此，Map 被视为一组 entry 内部接口。
+每个键值对被称为一个 entry。因此，`Map` 被视为一组 entry 内部接口。
 
 ## 18.15 IdentityHashMap
 
-它与 HashMap 相似，区别在于以下几点：
+它与 `HashMap` 相似，区别在于以下几点：
 
-在 HashMap 的情况下，JVM 始终使用 `equals()` 方法来识别重复键，这用于内容比较。
+在 `HashMap` 的情况下，JVM 始终使用 `equals()` 方法来识别重复键，这用于内容比较。
 
-但在 IdentityHashMap 的情况下，JVM 将使用 `==` 运算符来识别重复键，这用于引用比较。
+但在 `IdentityHashMap` 的情况下，JVM 将使用 `==` 运算符来识别重复键，这用于引用比较。
 
 ### 示例
 
@@ -12489,29 +13776,31 @@ class HashMapDemo{
 }
 ```
 
-在上面的程序中，i1 和 i2 是重复键，因为 `i1.equals(i2)` 返回 `true`。
+在上面的程序中，`i1` 和 `i2` 是重复键，因为 `i1.equals(i2)` 返回 `true`。
 
-在上面的程序中，如果我们把 HashMap 换成 IdentityHashMap，那么 i1 和 i2 就重复键，因为 `i1==i2` 为 `false`，因此在这种情况下输出为 `{10=som, 10=prakash}`。
+在上面的程序中，如果我们把 `HashMap` 换成 `IdentityHashMap`，那么 `i1` 和 `i2` 就重复键，因为 `i1==i2` 为 `false`，因此在这种情况下输出为 `{10=som, 10=prakash}`。
 
 ## 18.16 WeakHashMap (弱引用)
 
-它与 HashMap 相似，区别在于以下几点：
+它与 `HashMap` 相似，区别在于以下几点：
 
-在普通 HashMap 的情况下，即使对象没有任何引用，只要它与 HashMap 关联，它就不会被垃圾回收（GC）。那是 HashMap 主导了垃圾回收。
+在普通 `HashMap` 的情况下，即使对象没有任何引用，只要它与 `HashMap` 关联，它就不会被垃圾回收（GC）。那是 `HashMap` 主导了垃圾回收。
 
-但在 WeakHashMap 的情况下，如果一个对象没有任何引用，即使它与 WeakHashMap 关联，它也是可以被垃圾回收的。垃圾回收主导了 WeakHashMap。
+但在 `WeakHashMap` 的情况下，如果一个对象没有任何引用，即使它与 `WeakHashMap` 关联，它也是可以被垃圾回收的。垃圾回收主导了 `WeakHashMap`。
 
 ### 示例
+
+
 
 ```java
 import java.util.*;
 class WeakHashMapDemo {
     public static void main(String[] args) throws Exception {
-        WeakHashMap m=new WeakHashMap();
-        Temp t=new Temp();
-        m.put(t,"som");
+        WeakHashMap m = new WeakHashMap();
+        Temp t = new Temp();
+        m.put(t, "som");
         System.out.println(m);
-        t=null;
+        t = null;
         System.gc();
         Thread.sleep(5000);
         System.out.println(m);
@@ -12521,121 +13810,119 @@ class Temp {
 ```
 
 ```java
-public String toString(){
+public String toString() {
     return "Temp";
 }
-public void finalize(){
+public void finalize() {
     System.out.println("finalize() method called");
 }
 }
 ```
 
-在上面的程序中，如果我们把 WeakHashMap 换成普通的 HashMap，那么对象将不会被垃圾回收销毁，在这种情况下输出不是空的。
-
-
-
-
+在上面的程序中，如果我们把`WeakHashMap`换成普通的`HashMap`，那么对象将不会被垃圾回收销毁，在这种情况下输出不是空的。
 
 ## 18.17 SortedMap
 
-它是 Map 的子接口。
+它是`Map`的子接口。
 
-如果我们想根据键（keys）的某种排序来表示一组键值对，那么应该选择 SortedMap。
+如果我们想根据键（`keys`）的某种排序来表示一组键值对，那么应该选择`SortedMap`。
 
-排序只能基于键（keys），而不能基于值（values）。SortedMap 接口定义了以下 6 个特定方法。
+排序只能基于键（`keys`），而不能基于值（`values`）。`SortedMap`接口定义了以下 6 个特定方法。
 
-```
+```java
 Object firstKey();
 ```
 
-```
+```java
 Object lastKey();
 ```
 
-```
+```java
 SortedMap headMap(Object key);
 ```
 
-```
+```java
 SortedMap tailMap(Object key);
 ```
 
-```
-SortedMap subMap(Object key1,Object key2);
+```java
+SortedMap subMap(Object key1, Object key2);
 ```
 
-```
+```java
 Comparator comparator();
 ```
 
 ## 18.18 Properties
 
-Properties 类是 Hashtable 的子类。
+`Properties`类是`Hashtable`的子类。
 
-在我们的程序中，如果有任何像 DBUserName、Password 等这样频繁变化的内容，这类类型的值不建议在 Java 应用程序中硬编码，因为每次更改我们都必须重新编译、构建和部署应用程序，有时还需要重启服务器，这会对客户产生巨大的业务影响。
+在我们的程序中，如果有任何像`DBUserName`、`Password`等这样频繁变化的内容，这类类型的值不建议在`Java`应用程序中硬编码，因为每次更改我们都必须重新编译、构建和部署应用程序，有时还需要重启服务器，这会对客户产生巨大的业务影响。
 
-这类变量我们必须硬编码在属性文件中（property files），并且我们必须从属性文件中读取值到 Java 应用程序中。
+这类变量我们必须硬编码在属性文件中（`property files`），并且我们必须从属性文件中读取值到`Java`应用程序中。
 
-这种方法的主要优势是，如果属性文件发生任何更改，这些更改将自动适用于 Java 应用程序，只需重新部署即可。
+这种方法的主要优势是，如果属性文件发生任何更改，这些更改将自动适用于`Java`应用程序，只需重新部署即可。
 
-通过使用 Properties 对象，我们可以从属性文件中读取并保持属性到 Java 应用程序中。
+通过使用`Properties`对象，我们可以从属性文件中读取并保持属性到`Java`应用程序中。
 
+```java
+Properties p = new Properties();
 ```
-Properties p=new Properties();
-```
 
-在属性中，键和值“都应该是 String 类型”。
+在属性中，键和值“都应该是`String`类型”。
 
 ## Properties 类中的方法
 
-```
+```java
 String getProperty(String propertyname);
 ```
 
 返回与指定属性关联的值。
 
-```
-String setproperty(String propertyname,String propertyvalue);
+```java
+String setProperty(String propertyname, String propertyvalue);
 ```
 
 设置一个新的属性。
 
-```
-Enumeration propertyNames(); void load(InputStream is);
-// 我们可以传递任何 InputStream。用于将属性文件中的属性加载到 java Properties 对象中。
-```
-
-```
-void store(OutputStream os,String comment);
+```java
+Enumeration propertyNames();
+void load(InputStream is);
+// 我们可以传递任何`InputStream`。用于将属性文件中的属性加载到`Java` `Properties`对象中。
 ```
 
+```java
+void store(OutputStream os, String comment);
 ```
-// 我们可以传递任何 OutputStream。用于将 Properties 对象中的属性存储到属性文件中。
+
+```java
+// 我们可以传递任何`OutputStream`。用于将`Properties`对象中的属性存储到属性文件中。
 ```
 
 ## 示例
 
-```
+```java
 import java.util.*;
 import java.io.*;
-class PropertiesDemo{
-public static void main(String[] args)throws Exception {
-Properties p=new Properties();
-FileInputStream fis=new FileInputStream("abc.properties");
-p.load(fis);
-System.out.println(p);
-String s=p.getProperty("som");
-System.out.println(s);//8888 p.setProperty("abh","9999999")
-Enumeration e=p.propertyNames();
+class PropertiesDemo {
+    public static void main(String[] args) throws Exception {
+        Properties p = new Properties();
+        FileInputStream fis = new FileInputStream("abc.properties");
+        p.load(fis);
+        System.out.println(p);
+        String s = p.getProperty("som");
+        System.out.println(s); // 8888
+        p.setProperty("abh", "9999999");
+        Enumeration e = p.propertyNames();
 ```
 
-```
-while(e.hasMoreElements()){
-  String s1=(String)e.nextElement();
-  System.out.println(s1);
+```java
+while (e.hasMoreElements()) {
+    String s1 = (String) e.nextElement();
+    System.out.println(s1);
 }
-FileOutputStream fos=new FileOutputStream("abc.properties");
-p.store(fos,"updated by som");
+FileOutputStream fos = new FileOutputStream("abc.properties");
+p.store(fos, "updated by som");
 }
 ```
 
@@ -12644,19 +13931,18 @@ p.store(fos,"updated by som");
 ```java
 import java.util.*;
 import java.io.*;
-class PropertiesDemo{
-  public static void main(String[] args)throws Exception {
-
-  Properties p=new Properties();
-  FileInputStream fis=new FileInputStream("db.properties");
-  p.load(fis);
-  String url=p.getProperty("url");
-  String user=p.getProperty("user");
-  String pwd=p.getProperty("pwd");
-  Connection conn=DriverManager.getConnection(url, user, pwd);
-  FileOutputStream fos=new FileOutputStream("db.properties");
-  p.store(fos,"updated by som");
-}
+class PropertiesDemo {
+    public static void main(String[] args) throws Exception {
+        Properties p = new Properties();
+        FileInputStream fis = new FileInputStream("db.properties");
+        p.load(fis);
+        String url = p.getProperty("url");
+        String user = p.getProperty("user");
+        String pwd = p.getProperty("pwd");
+        Connection conn = DriverManager.getConnection(url, user, pwd);
+        FileOutputStream fos = new FileOutputStream("db.properties");
+        p.store(fos, "updated by som");
+    }
 }
 ```
 
@@ -12665,84 +13951,85 @@ class PropertiesDemo{
 ```java
 import java.util.*;
 import java.io.*;
-class PropertiesDemo{
-
-public static void main(String[] args) Exception {
-    Properties p=new Properties();
-    FileInputStream fis=new FileInputStream("abc.properties");
-    p.load(fis);
-    System.out.println(p);
-    String s=p.getProperty("som");
-    System.out.println(s);/8888 p.setProperty("som","9999999");
-    Enumeration e=p.propertyNames();
-    while(e.hasMoreElements()){
-        String s1=(String)e.nextElement();
-        System.out.println(s1);
+class PropertiesDemo {
+    public static void main(String[] args) throws Exception {
+        Properties p = new Properties();
+        FileInputStream fis = new FileInputStream("abc.properties");
+        p.load(fis);
+        System.out.println(p);
+        String s = p.getProperty("som");
+        System.out.println(s); // 8888
+        p.setProperty("som", "9999999");
+        Enumeration e = p.propertyNames();
+        while (e.hasMoreElements()) {
+            String s1 = (String) e.nextElement();
+            System.out.println(s1);
+        }
     }
 }
 
-FileOutputStream fos=new FileOutputStream("abc.properties");
-p.store(fos,"updated by som");
-}}
+FileOutputStream fos = new FileOutputStream("abc.properties");
+p.store(fos, "updated by som");
+}
 ```
 
 ## 18.19 Queue
 
-Queue 是 Collection 的子接口。
+`Queue`是`Collection`的子接口。
 
-如果我们想在处理之前（在某事发生之前）表示一组单独的对象，那么应该选择 Queue 接口。
+如果我们想在处理之前（在某事发生之前）表示一组单独的对象，那么应该选择`Queue`接口。
 
-通常 Queue 遵循先入先出（FIFO） 顺序，但根据我们的需求，我们也可以实现自己的顺序。
+通常`Queue`遵循先入先出（`FIFO`）顺序，但根据我们的需求，我们也可以实现自己的顺序。
 
-从 1.5 版本开始，LinkedList 也实现了 Queue 接口。
+从 1.5 版本开始，`LinkedList`也实现了`Queue`接口。
 
-基于 LinkedList 的 Queue 实现始终遵循先入先出顺序。
+基于`LinkedList`的`Queue`实现始终遵循先入先出顺序。
 
-假设我们需要为十万个手机号码发送短信，在发送消息之前，我们必须将所有手机号码存储到 Queue 中，这样第一个插入的号码将触发第一个消息（FIFO）。
+假设我们需要为十万个手机号码发送短信，在发送消息之前，我们必须将所有手机号码存储到`Queue`中，这样第一个插入的号码将触发第一个消息（`FIFO`）。
 
-Queue 接口方法
+### Queue 接口方法
 
-```
+```java
 boolean offer(Object o);
 ```
 
-向 Queue 添加一个对象。
+向`Queue`添加一个对象。
 
-```
+```java
 Object poll();
 ```
 
-移除并返回 Queue 的头部元素，如果 Queue 为空，则将得到 null。
+移除并返回`Queue`的头部元素，如果`Queue`为空，则将得到`null`。
 
-```
+```java
 Object remove();
 ```
 
-移除并返回 Queue 的头部元素。如果 Queue 为空，此方法将抛出名为 NoSuchElementException 的运行时异常。
+移除并返回`Queue`的头部元素。如果`Queue`为空，此方法将抛出名为`NoSuchElementException`的运行时异常。
 
-```
+```java
 Object peek();
 ```
 
-返回 Queue 的头部元素而不将其移除。
+返回`Queue`的头部元素而不将其移除。
 
 ## 18.20 PriorityQueue
 
-PriorityQueue 是一种数据结构，用于根据优先级在处理之前表示一组单独的对象。
+`PriorityQueue`是一种数据结构，用于根据优先级在处理之前表示一组单独的对象。
 
-顺序可以是自然顺序，也可以通过 Comparator 自定义排序顺序。
+顺序可以是自然顺序，也可以通过`Comparator`自定义排序顺序。
 
 不允许有重复对象。
 
 插入顺序是不被保留的，但对象将根据优先级插入。
 
-如果 Queue 为空，则会抛出 NullPointerException。
+如果`Queue`为空，则会抛出`NullPointerException`。
 
-```
+```java
 Object element();
 ```
 
-创建一个默认容量的 PriorityQueue。
+创建一个默认容量的`PriorityQueue`。
 
 ```java
 import java.util.Comparator;
@@ -12756,7 +14043,8 @@ public class Jtc18 {
         while (true) {
             int val = sc.nextInt();
             if (val == 0)
-                break; pq.offer(val);
+                break;
+            pq.offer(val);
         }
         System.out.printf("Number of values stored is %d.\n", pq.size());
         for (Integer in : pq) {
@@ -12769,80 +14057,83 @@ public class Jtc18 {
 ```java
 import java.util.*;
 import java.io.*;
-class PropertiesDemo{
-  public static void main(String[] args)throws Exception {
-
-  Properties p=new Properties();
-  FileInputStream fis=new FileInputStream("db.properties");
-  p.load(fis);
-  String url=p.getProperty("url");
-  String user=p.getProperty("user");
-  String pwd=p.getProperty("pwd");
-  Connection conn=DriverManager.getConnection(url, user, pwd);
-  FileOutputStream fos=new FileOutputStream("db.properties");
-  p.store(fos,"updated by som");
-}
+class PropertiesDemo {
+    public static void main(String[] args) throws Exception {
+        Properties p = new Properties();
+        FileInputStream fis = new FileInputStream("db.properties");
+        p.load(fis);
+        String url = p.getProperty("url");
+        String user = p.getProperty("user");
+        String pwd = p.getProperty("pwd");
+        Connection conn = DriverManager.getConnection(url, user, pwd);
+        FileOutputStream fos = new FileOutputStream("db.properties");
+        p.store(fos, "updated by som");
+    }
 }
 ```
 
 ```java
 System.out.println("Enter values of int type[0 - Exit]");
 while (true) {
-  int val = sc.nextInt();
-  if (val == 0) break; pq1.offer(val);
+    int val = sc.nextInt();
+    if (val == 0)
+        break;
+    pq1.offer(val);
 }
-  System.out.println("---");
-  System.out.println("Size:\t" + pq1.size());
-  System.out.println(pq1.peek());
-  System.out.println("Size:\t" + pq1.size());
+System.out.println("---");
+System.out.println("Size:\t" + pq1.size());
+System.out.println(pq1.peek());
+System.out.println("Size:\t" + pq1.size());
 
 System.out.println(pq1.poll());
 System.out.println("Size:\t" + pq1.size());
 System.out.println("Remaining Values in PQ1");
 for (Integer in : pq1) {
-  System.out.println(in);
+    System.out.println(in);
 }
-}}
+}
 class PQSort implements Comparator {
-  public int compare(Integer i1, Integer i2) { return i1 - i2; }
+    public int compare(Integer i1, Integer i2) {
+        return i1 - i2;
+    }
 }
 ```
 
-注意：某些平台可能未为 PriorityQueue 提供良好的支持 [windowsXP]。
+注意：某些平台可能未为`PriorityQueue`提供良好的支持 [windowsXP]。
 
 ## 18.21 NavigableSet
 
-NavigableSet 是 SortedSet 的子接口。
+`NavigableSet`是`SortedSet`的子接口。
 
-它提供了多种用于导航的方法。NavigableSet 接口定义了以下方法。
+它提供了多种用于导航的方法。`NavigableSet`接口定义了以下方法。
 
-ceiling(e);
+`ceiling(e);`
 
-返回 >= e 的最小元素。
+返回 `>= e` 的最小元素。
 
-higher(e);
+`higher(e);`
 
-返回 > e 的最小元素。
+返回 `> e` 的最小元素。
 
-floor(e);
+`floor(e);`
 
-返回 <= e 的最大元素。
+返回 `<= e` 的最大元素。
 
-lower(e);
+`lower(e);`
 
-返回 < e 的最大元素。
+返回 `< e` 的最大元素。
 
-pollFirst();
-
-
+`pollFirst();`
 
 移除并返回第一个元素。
-pollLast();
+
+`pollLast();`
 
 移除并返回最后一个元素。
-descendingSet();
 
-返回倒序排列的 SortedSet。
+`descendingSet();`
+
+返回倒序排列的`SortedSet`。
 
 # 示例
 
@@ -12871,9 +14162,9 @@ class NavigableSetDemo {
 
 ## 18.22 NavigableMap
 
-它是 SortedMap 的子接口，定义了几个用于导航目的的方法。
+它是`SortedMap`的子接口，定义了几个用于导航目的的方法。
 
-NavigableMap 接口定义了以下方法：ceilingKey(e); higherKey(e); floorKey(e); lowerKey(e); pollFirstEntry(); pollLastEntry(); descendingMap(e);
+`NavigableMap`接口定义了以下方法：`ceilingKey(e);` `higherKey(e);` `floorKey(e);` `lowerKey(e);` `pollFirstEntry();` `pollLastEntry();` `descendingMap(e);`
 
 # 示例
 
@@ -12902,27 +14193,29 @@ class NavigableMapDemo {
 
 # Collections
 
-Collections 类为集合对象定义了几个工具方法。
+`Collections`类为集合对象定义了几个工具方法。
 
-### 对 List 的元素进行排序：
+### 对`List`的元素进行排序：
 
-Collections 类定义了以下方法来对 List 的元素排序：
+
+
+`Collections`类定义了以下方法来对`List`的元素排序：
 
 ```java
 public static void sort(List l);
 ```
 
-在这种情况下，要按照默认的自然排序顺序对 List 的元素排序，元素必须是同质且可比较的，否则我们将得到 ClassCastException。
+在这种情况下，要按照默认的自然排序顺序对`List`的元素排序，元素必须是同质且可比较的，否则我们将得到`ClassCastException`。
 
-List 不应包含 null 值，否则我们将得到 NullPointerException。
+`List`不应包含`null`值，否则我们将得到`NullPointerException`。
 
 ```java
 public static void sort(List l, Comparator c);
 ```
 
-按照自定义的排序顺序对 List 的元素进行排序。
+按照自定义的排序顺序对`List`的元素进行排序。
 
-# 示例
+## 示例
 
 ```java
 import java.util.*;
@@ -12971,7 +14264,7 @@ class EmailComparator implements Comparator {
 }
 ```
 
-# 示例
+## 示例
 
 ```java
 import java.util.*;
@@ -13017,23 +14310,23 @@ class Jtc {
 }
 ```
 
-# 查找 List 中的元素
+## 查找 List 中的元素
 
-Collections 类定义了以下方法来搜索 List 的元素：
+`Collections`类定义了以下方法来搜索`List`的元素：
 
 ```java
 public static int binarySearch(List l, Object obj);
 ```
 
-如果 List 是按照默认排序排序的，则使用此方法。
+如果`List`是按照默认排序排序的，则使用此方法。
 
 ```java
 public static int binarySearch(List l, Object obj, Comparator c);
 ```
 
-如果 List 是按照 Comparator 排序的，则使用此方法。
+如果`List`是按照`Comparator`排序的，则使用此方法。
 
-# 程序 18.1
+## 程序 18.1
 
 ```java
 import java.util.*;
@@ -13075,13 +14368,13 @@ public class Jtc {
 }
 ```
 
-这些搜索方法内部使用二分查找。搜索成功返回索引，搜索失败返回插入点。插入点是可以在排序列表中放置元素的位置。调用 `binarySearch()` 方法之前，列表必须是排序的，否则将得到不可预测的结果。如果 List 是按照 Comparator 排序的，在搜索操作时应传递相同的 Comparator 对象，否则将得到不可预测的结果。注意：对于具有 n 个元素的列表，`binarySearch()` 方法的搜索成功范围为：0 到 n-1。搜索失败范围为：-(n+1) 到 -1。总结果范围为：-(n+1) 到 n-1。
+这些搜索方法内部使用二分查找。搜索成功返回索引，搜索失败返回插入点。插入点是可以在排序列表中放置元素的位置。调用`binarySearch()`方法之前，列表必须是排序的，否则将得到不可预测的结果。如果`List`是按照`Comparator`排序的，在搜索操作时应传递相同的`Comparator`对象，否则将得到不可预测的结果。注意：对于具有`n`个元素的列表，`binarySearch()`方法的搜索成功范围为：`0`到`n-1`。搜索失败范围为：`-(n+1)`到`-1`。总结果范围为：`-(n+1)`到`n-1`。
 
-# 反转 List 的元素
+## 反转 List 的元素
 
-我们可以使用 `reverse()` 方法反转 List 的元素。
+我们可以使用`reverse()`方法反转`List`的元素。
 
-# 程序 18.2：反转 list 的元素。
+## 程序 18.2：反转 list 的元素
 
 ```java
 import java.util.*;
@@ -13100,9 +14393,9 @@ class CollectionsReverseDemo {
 }
 ```
 
-# 数组
+## 数组
 
-Arrays 类为数组定义了几个工具方法。对数组元素进行排序：
+`Arrays`类为数组定义了几个工具方法。对数组元素进行排序：
 
 ```java
 public static void sort(primitive[] p); // 可以给出任何基本数据类型
@@ -13114,15 +14407,15 @@ public static void sort(primitive[] p); // 可以给出任何基本数据类型
 public static void sort(object[] o);
 ```
 
-按照默认的自然排序顺序对 object[] 数组元素进行排序。在这种情况下，对象应该是同质的且可比较的。
+按照默认的自然排序顺序对`object[]`数组元素进行排序。在这种情况下，对象应该是同质的且可比较的。
 
 ```java
 public static void sort(object[] o, Comparator c);
 ```
 
-按照自定义的排序顺序对 object[] 数组元素进行排序。注意：我们可以按照默认的自然排序顺序或自定义排序顺序对数组排序，但我们只能按照默认的自然排序顺序对基本类型数组排序。
+按照自定义的排序顺序对`object[]`数组元素进行排序。注意：我们可以按照默认的自然排序顺序或自定义排序顺序对数组排序，但我们只能按照默认的自然排序顺序对基本类型数组排序。
 
-# 程序 18.3
+## 程序 18.3
 
 ```java
 import java.util.*;
@@ -13148,8 +14441,6 @@ public class Jtc9 {
     }
 }
 ```
-
-
 
 ```java
 System.out.println(Arrays.equals(arr, arr2));
@@ -13180,7 +14471,7 @@ System.out.println();
 
 ## 搜索数组中的元素
 
-Arrays 类定义了以下方法来搜索数组中的元素。
+`Arrays`类定义了以下方法来搜索数组中的元素。
 
 ```java
 public static int binarySearch(primitive[] p, primitive key);
@@ -13188,23 +14479,23 @@ public static int binarySearch(Object[] p, Object key);
 public static int binarySearch(Object[] p, Object key, Comparator c);
 ```
 
-Arrays 类 `binarySearch()` 方法的所有规则与 Collections 类 `binarySearch()` 方法完全相同。
+`Arrays`类`binarySearch()`方法的所有规则与`Collections`类`binarySearch()`方法完全相同。
 
 ## 18.23 将数组转换为 List
 
-Arrays 类定义了以下方法将数组以 List 的形式查看。
+`Arrays`类定义了以下方法将数组以`List`的形式查看。
 
 ```java
 public static List asList(Object[] o);
 ```
 
-严格来说，我们并不是在创建一个独立的 List 对象，而是在以 List 的形式查看数组。
+严格来说，我们并不是在创建一个独立的`List`对象，而是在以`List`的形式查看数组。
 
-如果我们通过 List 引用进行任何更改，这些更改将自动反映到数组引用上；同理，如果我们通过数组引用进行任何更改，这些更改也将自动反映到 List 引用上。
+如果我们通过`List`引用进行任何更改，这些更改将自动反映到数组引用上；同理，如果我们通过数组引用进行任何更改，这些更改也将自动反映到`List`引用上。
 
-如果我们通过 List 引用尝试执行任何会改变大小的操作，我们将得到一个名为 `UnsupportedOperationException` 的运行时异常。
+如果我们通过`List`引用尝试执行任何会改变大小的操作，我们将得到一个名为`UnsupportedOperationException`的运行时异常。
 
-如果我们通过 List 引用尝试插入任何异构对象，我们将得到一个名为 `ArrayStoreException` 的运行时异常。
+如果我们通过`List`引用尝试插入任何异构对象，我们将得到一个名为`ArrayStoreException`的运行时异常。
 
 ## 示例
 
@@ -13213,24 +14504,41 @@ import java.util.Calendar;
 import java.util.Formatter;
 ```
 
+```java
 public class Jtc15 {
+
     public static void main(String[] args) {
+
         Formatter fmt1 = new Formatter();
+
         String name = "SomPraksh";
+
         int age = 23;
+
         fmt1.format("My Name is %s and age is %d", name, age);
+
         System.out.println(fmt1);
 
         Formatter fmt2 = new Formatter();
 
         fmt2.format("%%c - %f - %b %n%05d - %o - %x - %X", 'C', 99.99, true,
+
 3456, 3456, 3456);
+
         System.out.println(fmt2);
+
         Formatter fmt3 = new Formatter();
+
         Calendar cal = Calendar.getInstance();
-        fmt3.format("%%tr %n%tc %n%tl:%tM", cal, cal, cal, cal);
-        System.out.println(fmt3);
-    }
+```
+
+
+
+`fmt3.format("%%tr %n%tc %n%tl:%tM", cal, cal, cal, cal);`
+
+`System.out.println(fmt3);`
+
+```
 }
 ```
 
@@ -13242,13 +14550,13 @@ public class Jtc15 {
 
 数组总是类型安全的，也就是说我们可以对数组内部存在的元素类型提供保证。
 
-例如，如果我们的编程需求是存储 String 类型的对象，建议使用 String 数组。在字符串数组的情况下，我们只能添加 String 类型的对象；如果我们不小心尝试添加任何其他类型，将得到编译时错误。
+例如，如果我们的编程需求是存储 `String` 类型的对象，建议使用 `String` 数组。在字符串数组的情况下，我们只能添加 `String` 类型的对象；如果我们不小心尝试添加任何其他类型，将得到编译时错误。
 
 也就是说，我们始终可以对数组内部存在的元素类型提供保证，因此数组在类型方面是安全的，即数组是类型安全的。
 
 但集合（Collections）不是类型安全的，也就是说我们无法对集合内部存在的元素类型提供任何保证。
 
-例如，如果我们的编程需求是仅存储 String 类型的对象，则绝不建议使用 ArrayList。
+例如，如果我们的编程需求是仅存储 `String` 类型的对象，则绝不建议使用 `ArrayList`。
 
 如果我们不小心尝试添加任何其他类型，不会得到任何编译时错误，但程序可能会在运行时失败。
 
@@ -13266,11 +14574,11 @@ public class Jtc15 {
 
 - 为集合提供类型安全。
 - 解决类型转换问题。
-- 为了仅存储 String 类型的对象，我们可以如下所示创建一个泛型版本的 ArrayList。
+- 为了仅存储 `String` 类型的对象，我们可以如下所示创建一个泛型版本的 `ArrayList`。
 
-对于这个 ArrayList，我们只能添加 String 类型的对象；如果我们不小心尝试添加任何其他类型，将得到编译时错误，也就是说通过泛型我们获得了类型安全。
+对于这个 `ArrayList`，我们只能添加 `String` 类型的对象；如果我们不小心尝试添加任何其他类型，将得到编译时错误，也就是说通过泛型我们获得了类型安全。
 
-在获取元素时，不需要执行任何类型转换，我们可以直接将元素赋值给 String 类型变量。
+在获取元素时，不需要执行任何类型转换，我们可以直接将元素赋值给 `String` 类型变量。
 
 ## 19.2 泛型类
 
@@ -13284,21 +14592,21 @@ public class Jtc15 {
 
 - 为集合提供类型安全。
 - 解决类型转换问题。
-- 为了仅存储 String 类型的对象，我们可以如下所示创建一个泛型版本的 ArrayList。
+- 为了仅存储 `String` 类型的对象，我们可以如下所示创建一个泛型版本的 `ArrayList`。
 
-对于这个 ArrayList，我们只能添加 String 类型的对象；如果我们不小心尝试添加任何其他类型，将得到编译时错误，也就是说通过泛型我们获得了类型安全。
+对于这个 `ArrayList`，我们只能添加 `String` 类型的对象；如果我们不小心尝试添加任何其他类型，将得到编译时错误，也就是说通过泛型我们获得了类型安全。
 
-在获取元素时，不需要执行任何类型转换，我们可以直接将元素赋值给 String 类型变量。
+在获取元素时，不需要执行任何类型转换，我们可以直接将元素赋值给 `String` 类型变量。
 
 ## 19.3 边界类型
 
 可以使用 `extends` 关键字为特定范围界定类型参数，这种类型被称为边界类型（Bounded Types）。
 
-如果 x 是一个类，那么作为类型参数我们可以传递 x 或其子类。如果 x 是一个接口，那么作为类型参数我们可以传递 x 或其实现类。
+如果 `x` 是一个类，那么作为类型参数我们可以传递 `x` 或其子类。如果 `x` 是一个接口，那么作为类型参数我们可以传递 `x` 或其实现类。
 
 但 `implements` 关键字的用途可以用 `extends` 关键字来代替。
 
-作为类型参数，可以使用任何有效的 Java 标识符，但习惯上始终使用 T。
+作为类型参数，可以使用任何有效的 Java 标识符，但习惯上始终使用 `T`。
 
 我们可以传递任意数量的参数，不需要一定是一个。`HashMap h=new HashMap();` 我们甚至可以在组合中定义边界类型。
 
@@ -13306,15 +14614,11 @@ public class Jtc15 {
 
 我们不能同时扩展多个类。
 
-
-
-
-
 # 19.4 通用方法与通配符字符 (?)
 
-methodOne(ArrayList l)
+`methodOne(ArrayList l)`
 
-此方法仅适用于 String 类型的 ArrayList。
+此方法仅适用于 `String` 类型的 `ArrayList`。
 
 # 示例
 
@@ -13325,25 +14629,25 @@ l.add(10);//(无效)在方法内部，我们只能向 List 中添加 String 类�
 //对象和 null。methodOne(ArrayList l):
 ```
 
-我们可以将此方法用于任何类型的 ArrayList，但在方法内部除了 null 之外，我们不能向 List 中添加任何内容。
+我们可以将此方法用于任何类型的 `ArrayList`，但在方法内部除了 `null` 之外，我们不能向 `List` 中添加任何内容。
 
-当我们只执行读操作时，此方法非常有用用。
+当我们只执行读操作时，此方法非常有用。
 
-methodOne(ArrayList<? extends x> l)
+`methodOne(ArrayList<? extends x> l)`
 
-如果 x 是一个类，则该方法适用于 x 或其子类的 ArrayList。
+如果 `x` 是一个类，则该方法适用于 `x` 或其子类的 `ArrayList`。
 
-如果 x 是一个接口，则该方法适用于 x 类型或其实现类的 ArrayList。
+如果 `x` 是一个接口，则该方法适用于 `x` 类型或其实现类的 `ArrayList`。
 
-在这种情况下，方法内部除了 null 之外也无法向 List 中添加任何内容。
+在这种情况下，方法内部除了 `null` 之外也无法向 `List` 中添加任何内容。
 
-methodOne(ArrayList<?super x> l)
+`methodOne(ArrayList<? super x> l)`
 
-如果 x 是一个类，则该方法适用于 x 类型或其超类的 ArrayList。
+如果 `x` 是一个类，则该方法适用于 `x` 类型或其超类的 `ArrayList`。
 
-如果 x 是一个接口，则该方法适用于 x 类型或 x 实现类的超类的 ArrayList。
+如果 `x` 是一个接口，则该方法适用于 `x` 类型或 `x` 实现类的超类的 `ArrayList`。
 
-但在方法内部，我们可以向 List 添加 x 类型的对象和 null。
+但在方法内部，我们可以向 `List` 添加 `x` 类型的对象和 `null`。
 
 # 以下哪些是允许的？
 
@@ -13377,7 +14681,6 @@ public <extends Number&Comparable> void methodOne(T t){}//有效
 public <extends Number&Comparable&Runnable> void methodFour(T t) {}//有效
 public < extends Number&Thread> void methodOne(T t){}//无效
 public < extends Number&Thread> void methodOne(T t){}//有效
-
 public <extends Runnable&Number> void methodOne(T t){}//无效
 ```
 
@@ -13404,7 +14707,6 @@ class Test {
         l.add(10.5);//编译错误：找不到符号，方法 add(double)
         System.out.println(l);//[A, 10.5, true]
     }
-
     public static void methodOne(ArrayList l) {
         l.add(10);
         l.add(10.5);
@@ -13447,7 +14749,6 @@ public class Jtc12 {
         list1.add("Welcome");
         // list1.add(new Integer(12));
         Iterator<String> it1 = list1.iterator();
-
         while (it1.hasNext()) {
             String str = it1.next();
             System.out.println(str);
@@ -13469,26 +14770,23 @@ public class Jtc12 {
 }
 ```
 
-
-
-
 ```java
 public static NumberFormat getNumberInstance(Locale l);
 ```
 
-一旦获取 NumberFormat 对象，我们就可以调用以下方法对数字进行格式化和解析。
+一旦获取 `NumberFormat` 对象，我们就可以调用以下方法对数字进行格式化和解析。
 
 ```java
 public String format(long l); public String format(double d);
 ```
 
-将数字从 java 格式转换为特定 Locale 格式
+将数字从 java 格式转换为特定 `Locale` 格式
 
 ```java
 public Number parse(String source) throws ParseException
 ```
 
-将日期从特定 Locale 字符串格式转换为 java 特定格式。
+将日期从特定 `Locale` 字符串格式转换为 java 特定格式。
 
 要求：编写一个程序，将 java 数字格式显示为意大利特定的格式。
 
@@ -13526,7 +14824,6 @@ class NumberFormatDemo{
         System.out.println("UK notation is :"+nf1.format(d));
         NumberFormat nf2=NumberFormat.getCurrencyInstance(Locale.US);
         System.out.println("US notation is :"+nf2.format(d));
-
         NumberFormat nf3=NumberFormat.getCurrencyInstance(Locale.ITALY);
         System.out.println("ITALY notation is :"+nf3.format(d));
     }
@@ -13535,7 +14832,7 @@ class NumberFormatDemo{
 
 # 20.4 设置最大、最小、小数位数和整数位数
 
-NumberFormat 类为此定义了以下方法。
+`NumberFormat` 类为此定义了以下方法。
 
 ```java
 public void setMaximumFractionDigits(int n);
@@ -13567,85 +14864,55 @@ System.out.println(nf.format(123456.789));
 }
 ```
 
+
+
 ## 20.5 DateFormat
 
-不同国家遵循不同的样式来表示日期。我们可以使用 DateFormat 类根据特定的 locale 来格式化日期。
+不同国家遵循不同的样式来表示日期。我们可以使用`DateFormat`类根据特定的`locale`来格式化日期。
 
-DateFormat 类存在于 java.text 包中，是一个抽象类。
+`DateFormat`类存在于`java.text`包中，是一个抽象类。
 
-# 获取默认 Locale 的 DateFormat 对象
+### 获取默认 Locale 的 DateFormat 对象
 
-DateFormat 类为此定义了以下方法。
+`DateFormat`类为此定义了以下方法。
 
 默认样式是中等（Medium）样式
 
-获取特定 Locale 的 DateFormat 对象：
+获取特定`Locale`的`DateFormat`对象：
 
 ```java
 public static DateFormat getDateInstance(int style, Locale l);
 ```
 
-一旦获取 DateFormat 对象，我们就可以使用以下方法对日期进行格式化和解析。
+一旦获取`DateFormat`对象，我们就可以使用以下方法对日期进行格式化和解析。
 
 ```java
 public String format(Date date);
 ```
 
-将日期从 java 格式转换为特定 locale 的字符串格式。
+将日期从`java`格式转换为特定`locale`的字符串格式。
 
 ```java
 public Date parse(String source) throws ParseException
 ```
 
-将日期从特定 locale 格式转换为 java 格式。
+将日期从特定`locale`格式转换为`java`格式。
 
-Q2：编写一个程序，用美国格式的所有样式表示当前系统日期。
+**Q2：**编写一个程序，用美国格式的所有样式表示当前系统日期。
 
 答：
 
 ```java
 import java.text.*;
 import java.util.*;
+
 public class DateFormatDemo{
     public static void main(String args[]){
         System.out.println("full form is :"+DateFormat.getDateInstance(0).format(new Date()));
     }
 }
-
-System.out.println("long form is :"+DateFormat.getInstance(1).format(new Date()));
-System.out.println("medium form is :"+DateFormat.getDateInstance(2).format(new Date()));
-System.out.println("short form is :"+DateFormat.getInstance(3).format(new Date()));
 ```
 
-注意：默认样式是中等样式。
-
-Q3：编写一个程序，以英国、美国和意大利样式表示当前系统日期。
-
-答：
-
-```java
-import java.text.*;
-
-import java.util.*;
-public class DateFormatDemo {
-    public static void main(String args[]){
-        DateFormat UK=DateFormat.getInstance(0,Locale.UK);
-        DateFormat US=DateFormat.getInstance(0,Locale.US);
-        DateFormat ITALY=DateFormat.getInstance(0,Locale.ITALY);
-        System.out.println("UK style is :"+UK.format(new Date()));
-        System.out.println("US style is :"+US.format(new Date()));
-        System.out.println("ITALY style is :"+ITALY.format(new Date()));
-    }
-}
-
-```
-*(注：在翻译中修正了示例代码中原处逻辑错误 `ITALY.format` 为 `ITALY.format` 以保持代码逻辑一致性，但严格遵循翻译要求)*
-*纠正：原文代码中 `System.out.println("ITALY style is :"+ITALY.format(new Date()));` 处原文字为 `ITALY.format`，此处根据原文意图重新检查，原文为 `ITALY=DateFormat.getInstance(0,Locale.ITALY);` 所以 `ITALY.format` 是正确的。*
-
-重新审视原文代码片段：
-`System.out.println("ITALY style is :"+ITALY.format(new Date()));` (我之前误读了变量，保持一致即可)
-
-修正后的译文代码部分：
 ```java
 System.out.println("long form is :"+DateFormat.getInstance(1).format(new Date()));
 System.out.println("medium form is :"+DateFormat.getDateInstance(2).format(new Date()));
@@ -13654,14 +14921,14 @@ System.out.println("short form is :"+DateFormat.getInstance(3).format(new Date()
 
 注意：默认样式是中等样式。
 
-Q3：编写一个程序，以英国、美国和意大利样式表示当前系统日期。
+**Q3：**编写一个程序，以英国、美国和意大利样式表示当前系统日期。
 
 答：
 
 ```java
 import java.text.*;
-
 import java.util.*;
+
 public class DateFormatDemo {
     public static void main(String args[]){
         DateFormat UK=DateFormat.getInstance(0,Locale.UK);
@@ -13674,55 +14941,55 @@ public class DateFormatDemo {
 }
 ```
 
-获取特定 的 DateFormat 对象
+获取特定`Locale`的`DateFormat`对象
 
-DateFormat 类为此定义了以下方法。
+`DateFormat`类为此定义了以下方法。
 
 示例
 
 ```java
 import java.text.*;
 import java.util.*;
+
 public class DateFormatDemo {
 ```
-*(由于原文文本极其混乱且重复，我将整体重新梳理。以下是完整的翻译内容：)*
 
-[content]
 ```java
 public static NumberFormat getNumberInstance(Locale l);
 ```
 
-一旦获取 NumberFormat 对象，我们就可以调用以下方法对数字进行格式化和解析。
+一旦获取`NumberFormat`对象，我们就可以调用以下方法对数字进行格式化和解析。
 
 ```java
 public String format(long l); public String format(double d);
 ```
 
-将数字从 java 格式转换为特定 Locale 格式
+将数字从`java`格式转换为特定`Locale`格式
 
 ```java
 public Number parse(String source) throws ParseException
 ```
 
-将日期从特定 Locale 字符串格式转换为 java 格式。
+将日期从特定`Locale`字符串格式转换为`java`格式。
 
-要求：编写一个程序，将 java 数字格式显示为意大利特定的格式。
+**要求：**编写一个程序，将`java`数字格式显示为意大利特定的格式。
 
-# 示例
+### 示例
 
 ```java
 import java.util.*;
 import java.text.*;
+
 class NumberFormatDemo {
-public static void main(String[] args) {
-double d=123456.789;
-Number nf=NumberFormat.getInstance(Locale.ITALY);
-System.out.println("ITALY form is :"+nf.format(d));
-}}
+    public static void main(String[] args) {
+        double d=123456.789;
+        Number nf=NumberFormat.getInstance(Locale.ITALY);
+        System.out.println("ITALY form is :"+nf.format(d));
+    }
 }
 ```
 
-Q1：编写一个程序，以印度、英国、美国和意大利的货币格式打印 java 数字。
+**Q1：**编写一个程序，以印度、英国、美国和意大利的货币格式打印`java`数字。
 
 答：
 
@@ -13732,6 +14999,7 @@ import java.util.*;
 
 ```java
 import java.text.*;
+
 class NumberFormatDemo{
     public static void main(String args[]){
         double d=123456.789;
@@ -13742,16 +15010,15 @@ class NumberFormatDemo{
         System.out.println("UK notation is :"+nf1.format(d));
         NumberFormat nf2=NumberFormat.getCurrencyInstance(Locale.US);
         System.out.println("US notation is :"+nf2.format(d));
-
         NumberFormat nf3=NumberFormat.getCurrencyInstance(Locale.ITALY);
         System.out.println("ITALY notation is :"+nf3.format(d));
     }
 }
 ```
 
-# 20.4 设置最大、最小、小数位数和整数位数
+## 20.4 设置最大、最小、小数位数和整数位数
 
-NumberFormat 类为此定义了以下方法。
+`NumberFormat`类为此定义了以下方法。
 
 ```java
 public void setMaximumFractionDigits(int n);
@@ -13764,84 +15031,89 @@ public void setMinimumIntegerDigits(int n);
 
 ```java
 import java.text.*;
+
 public class NumberFormatExample{
-public static void main(String[] args) {
-NumberFormat nf=NumberFormat.getInstance();
-nf.setMaximumFractionDigits(3);
-System.out.println(nf.format(123.4));
-System.out.println(nf.format(123.4567));
-nf.setMinimumFractionDigits(3);
-System.out.println(nf.format(123.4));
-System.out.println(nf.format(123.4567));
-nf.setMaximumIntegerDigits(3);
-System.out.println(nf.format(123.4));
-System.out.println(nf.format(123456.789));
-nf.setMinimumIntegerDigits(3);
-System.out.println(nf.format(123.4));
-System.out.println(nf.format(123456.789));
-}}
+    public static void main(String[] args) {
+        NumberFormat nf=NumberFormat.getInstance();
+        nf.setMaximumFractionDigits(3);
+        System.out.println(nf.format(123.4));
+        System.out.println(nf.format(123.4567));
+        nf.setMinimumFractionDigits(3);
+        System.out.println(nf.format(123.4));
+        System.out.println(nf.format(123.4567));
+        nf.setMaximumIntegerDigits(3);
+        System.out.println(nf.format(123.4));
+        System.out.println(nf.format(123456.789));
+        nf.setMinimumIntegerDigits(3);
+        System.out.println(nf.format(123.4));
+        System.out.println(nf.format(123456.789));
+    }
 }
 ```
 
 ## 20.5 DateFormat
 
-不同国家遵循不同的样式来表示日期。我们可以使用 DateFormat 类根据特定的 locale 来格式化日期。
+不同国家遵循不同的样式来表示日期。我们可以使用`DateFormat`类根据特定的`locale`来格式化日期。
 
-DateFormat 类存在于 java.text 包中，是一个抽象类。
+`DateFormat`类存在于`java.text`包中，是一个抽象类。
 
-# 获取默认 Locale 的 DateFormat 对象
+### 获取默认 Locale 的 DateFormat 对象
 
-DateFormat 类为此定义了以下方法。
+`DateFormat`类为此定义了以下方法。
 
 默认样式是中等（Medium）样式
 
-获取特定 Locale 的 DateFormat 对象：
+获取特定`Locale`的`DateFormat`对象：
 
 ```java
 public static DateFormat getDateInstance(int style, Locale l);
 ```
 
-一旦获取 DateFormat 对象，我们就可以使用以下方法对日期进行格式化和解析。
+一旦获取`DateFormat`对象，我们就可以使用以下方法对日期进行格式化和解析。
 
 ```java
 public String format(Date date);
 ```
 
-将日期从 java 格式转换为特定 locale 的字符串格式。
+将日期从`java`格式转换为特定`locale`的字符串格式。
 
 ```java
 public Date parse(String source) throws ParseException
 ```
 
-将日期从特定 locale 格式转换为 java 格式。
+将日期从特定`locale`格式转换为`java`格式。
 
-Q2：编写一个程序，用美国格式的所有样式表示当前系统日期。
+**Q2：**编写一个程序，用美国格式的所有样式表示当前系统日期。
 
 答：
 
 ```java
 import java.text.*;
 import java.util.*;
+
 public class DateFormatDemo{
     public static void main(String args[]){
         System.out.println("full form is :"+DateFormat.getDateInstance(0).format(new Date()));
     }
 }
+```
 
+```java
 System.out.println("long form is :"+DateFormat.getInstance(1).format(new Date()));
 System.out.println("medium form is :"+DateFormat.getDateInstance(2).format(new Date()));
 System.out.println("short form is :"+DateFormat.getInstance(3).format(new Date()));
+```
 
 注意：默认样式是中等样式。
 
-Q3：编写一个程序，以英国、美国和意大利样式表示当前系统日期。
+**Q3：**编写一个程序，以英国、美国和意大利样式表示当前系统日期。
 
 答：
 
 ```java
 import java.text.*;
-
 import java.util.*;
+
 public class DateFormatDemo {
     public static void main(String args[]){
         DateFormat UK=DateFormat.getInstance(0,Locale.UK);
@@ -13853,23 +15125,21 @@ public class DateFormatDemo {
     }
 }
 ```
-*(注：由于提供的原始文本存在大量重复和乱码，以上翻译已根据上下文逻辑进行了最合理的对齐和去重处理。)*
-
-
-
 
 ## 21.5 量化符
 
 量化符用于指定匹配的字符数量。
-- `a`: 恰好一个 'a'
-- `a+`: 至少一个 'a'
-- `a*`: 任意数量的 'a'包括零个
-- `a?`: 最多一个 'a'
 
-## 示例
+- `a`: 恰好一个`'a'`
+- `a+`: 至少一个`'a'`
+- `a*`: 任意数量的`'a'`包括零个
+- `a?`: 最多一个`'a'`
+
+### 示例
 
 ```java
 import java.util.regex.*;
+
 class RegularExpressionDemo{
     public static void main(String[] args) {
         Pattern p = Pattern.compile("x");
@@ -13883,12 +15153,13 @@ class RegularExpressionDemo{
 
 ## 21.6 Pattern类的 split() 方法
 
-Pattern 类包含 `split()` 方法，用于根据正则表达式分割给定字符串。
+`Pattern`类包含`split()`方法，用于根据正则表达式分割给定字符串。
 
 ### 示例
 
 ```java
 import java.util.regex.*;
+
 class RegularExpressionDemo{
     public static void main(String[] args) {
         Pattern p = Pattern.compile("\s");
@@ -13904,6 +15175,8 @@ class RegularExpressionDemo{
 
 ## 22.1 介绍
 
+
+
 IO 代表输入输出（input output）。在 Java 中，我们可以编写各种程序，但 Sun 提供了一个非常大的 API 来处理输入和显示相应的输出。以下是关于 I/O 的基本点：
 
 - 系统文件中的数据被称为持久化数据，因为它们在程序运行后仍然存在。
@@ -13913,25 +15186,28 @@ IO 代表输入输出（input output）。在 Java 中，我们可以编写各�
 - 流也可以通过互联网进行传输。
 
 我们自动我们创建了三个流：
-- `System.out`: 标准输出流
-- `System.in`: 标准输入流
-- `System.err`: 标准错误流
+
+- `System.out`：标准输出流
+- `System.in`：标准输入流
+- `System.err`：标准错误流
 
 ## 表 I. System 类中的数据字段
 
 | 变量 | 类型 | 目的 |
 | --- | --- | --- |
-| err | PrintStream | “标准错误”输出流。该流已经打开并准备好接收输出数据。 |
-| in | InputStream | “标准输入”流。该流已经打开并准备好提供输入数据。 |
-| out | PrintStream | “标准输出”流。该流已经打开并准备好接收输出数据。 |
+| `err` | `PrintStream` | “标准错误”输出流。该流已经打开并准备好接收输出数据。 |
+| `in` | `InputStream` | “标准输入”流。该流已经打开并准备好提供输入数据。 |
+| `out` | `PrintStream` | “标准输出”流。该流已经打开并准备好接收输出数据。 |
 
 ## 22.2 流
 
 流是一种管道，通过你可以将数据从一个地方传输到另一个地方。根据你正在执行的操作，操作分为两种类型：
+
 1. 读取数据
 2. 写入数据
 
 现在根据数据的类型，这些操作被分为两类：
+
 1. 字节流
 2. 字符流
 
@@ -14022,31 +15298,27 @@ public class Jtc207 {
 }
 ```
 
-
-
-
-
-| java.lang.Exception | java.io.IOException | CharConversionException | InvalidClassException |
-|---|---|---|---|
-| | | EOFException | InvalidObjectException |
-| | InterruptedIOException | NotActiveException |
-| | ObjectAccessException | NotSerializationException |
-| ProtocolException | OptionalDataException | | |
-| RemoteException | StreamruptedException | | |
-| SocketException | WriteAbortedException | | |
-| SyntaxFailException | | | |
-| UnknownHostException | | | |
-| UnknownServiceException | | | |
-| UTFDataFormatException | | | |
-| ZipException | | | |
+| `java.lang.Exception` | `java.io.IOException` | `CharConversionException` | `InvalidClassException` |
+| --- | --- | --- | --- |
+| | | `EOFException` | `InvalidObjectException` |
+| | `InterruptedIOException` | `NotActiveException` |
+| | `ObjectAccessException` | `NotSerializationException` |
+| `ProtocolException` | `OptionalDataException` | | |
+| `RemoteException` | `StreamruptedException` | | |
+| `SocketException` | `WriteAbortedException` | | |
+| `SyntaxFailException` | | | |
+| `UnknownHostException` | | | |
+| `UnknownServiceException` | | | |
+| `UTFDataFormatException` | | | |
+| `ZipException` | | | |
 
 此图展示了异常的列表：
 
-EOFException 在你意外到达文件末尾时发出信号。
+`EOFException` 在你意外到达文件末尾时发出信号。
 
-UnknownHostException 表示你正尝试连接到一个不存在的远程主机。
+`UnknownHostException` 表示你正尝试连接到一个不存在的远程主机。
 
-ZipException 表示在读取或写入 zip 文件时发生了错误。
+`ZipException` 表示在读取或写入 zip 文件时发生了错误。
 
 通常情况下，会在 `try` 块中捕获 `IOException`，并打印 `IOException` 中 `Object` 类的 `toString()` 方法的值作为最小输出打印。你应该以适用于应用程序的方式处理该异常。
 
@@ -14167,8 +15439,11 @@ Reader 是基于字符的输入流，读取 Unicode 字符。
 
 `abstract read()` 将字符读取到数组的一部分（从偏移量到长度开始）并返回读取的字符数，或者在到达文件末尾时返回 -1。
 
-`read()` API:
+`read()` API：
+
+```
 int read(char[] buffer, int offset, int length)
+```
 
 ## 字符输入流
 
@@ -14192,9 +15467,12 @@ Writer 是基于字符的输出流，写入字符字节并将 Unicode 转换为�
 
 `abstract void write()` 方法接受一个字符数组并写入字符数组的一部分。
 
-`write()` API:
+`write()` API：
+
+```
 void write(int character)
 void write(char[] buffer, int offset, int length)
+```
 
 ## 字符输出流
 
@@ -14222,10 +15500,6 @@ void write(char[] buffer, int offset, int length)
 - 序列
 - 字符数组
 
-
-
-
-
 ## 23.2 字节数组 (Byte arrays)
 
 让我们进入字节数组领域。字节会来自字节数组吗？当创建一个 `ByteArrayInputStream` 对象时，会向它传递一个数组。然后你可以像使用 `InputStream` 一样从该数组读取字节。
@@ -14249,6 +15523,8 @@ void write(char[] buffer, int offset, int length)
 我们稍后的“分词”（Tokenizing）部分将展示如何使用 `StringTokenizer` 将由分隔符划分的字符串拆分为单独的值。
 
 ### 示例
+
+
 
 ```java
 import java.io.*;
@@ -14354,9 +15630,6 @@ class Hotel{
 
 `InputStreamReader` 从 `InputStream` 读取字节并将其转换为字符。`InputStreamReader` 使用字节的默认字符编码，通常是 ASCII。如果读取的字节是 ASCII 字节，则每次使用一个字节来形成一个字符。
 
-
-
-
 如果字节不是 ASCII（例如中文或其他语言），你可能也希望将其转换为 Unicode。需要指定字节流的特定编码，`InputStreamReader` 会将其转换为 Unicode。通过备用构造函数，你可以指定 `InputStream` 上字节的编码。
 
 # OutputStream
@@ -14368,7 +15641,9 @@ class Hotel{
 本节将探讨 `File` 类，这是一个重要的非流类，它以一种平台无关的方式表示文件或目录名称。`File` 类提供了以下方法：
 
 - 列出目录
+
 - 查询文件属性
+
 - 重命名和删除文件
 
 ## 24.2 File 类
@@ -14378,8 +15653,11 @@ class Hotel{
 `File` 对象的方法有：
 
 - 构造函数
+
 - 测试方法（Test methods）
+
 - 操作方法（Action methods）
+
 - 列表方法（List methods）
 
 ## 24.3 构造函数
@@ -14500,6 +15778,8 @@ class MyFilter implements FilenameFilter
 
 ## 示例
 
+
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -14605,11 +15885,10 @@ class Hotel
 
 如果你想从非默认编码的文件读取 Unicode 字符，你必须在 `FileInputStream` 上构建自己的 `InputStreamReader`。
 
-
-
-FileWriter 是 `OutputStreamWriter` 的便利子类，用于写入字符文件。FileWriter 的构造函数也假设默认编码和缓冲区大小。如果你想使用除默认以外的编码，必须在 `FileOutputStream` 上创建自己的 `OutputStreamWriter`。
+`FileWriter` 是 `OutputStreamWriter` 的便利子类，用于写入字符文件。`FileWriter` 的构造函数也假设默认编码和缓冲区大小。如果你想使用除默认以外的编码，必须在 `FileOutputStream` 上创建自己的 `OutputStreamWriter`。
 
 ## 第 25 章
+
 缓冲
 
 ## 25.1 什么是缓冲？
@@ -14629,6 +15908,7 @@ FileWriter 是 `OutputStreamWriter` 的便利子类，用于写入字符文件�
 当该缓冲区满时，它将一次性写入操作系统。如果缓冲区满了、流满了，或者 `flush()` 方法强制将流缓冲的任何输出写入其目标地，它就会自动写入。因此，对于 `BufferedOutputStream`，你需要告诉它：
 
 - 你将要使用的输出流
+
 - 如果你不喜欢默认值，指定的缓冲区大小
 
 ![](img/0ba0276697a7bf420ad4269e7fc94740_803_0.png)
@@ -14647,12 +15927,12 @@ FileWriter 是 `OutputStreamWriter` 的便利子类，用于写入字符文件�
 
 ## 示例
 
-```
+```java
 import java.io.*;
 import java.util.*;
 ```
 
-```
+```java
 class TextReaderWriterExample
 {
     static BufferedReader system_in = new BufferedReader(
@@ -14680,7 +15960,7 @@ class TextReaderWriterExample
             BufferedReader br = new BufferedReader(fr);
 ```
 
-```
+```java
 Hotel a_hotel = new Hotel();
 while (a_hotel.read_from_br(br))
 {
@@ -14714,7 +15994,7 @@ class Hotel
     }
 ```
 
-```
+```java
 catch(IOException e)
 {
     System.err.println(e); return false;
@@ -14724,7 +16004,7 @@ return true;
 }
 ```
 
-```
+```java
 boolean write_to_pw(PrintWriter pw)
 {
     pw.print(name);
@@ -14737,7 +16017,7 @@ boolean write_to_pw(PrintWriter pw)
 }
 ```
 
-```
+```java
 boolean read_from_br(BufferedReader br)
 {
     try {
@@ -14753,7 +16033,7 @@ boolean read_from_br(BufferedReader br)
     }
 ```
 
-```
+```java
 catch(IOException e)
 {
     System.err.println(e);
@@ -14787,26 +16067,24 @@ static int to_int(String value)
 
 `newline()` 方法是 `BufferedWriter` 的一部分，它将平台分隔符输出到流中。
 
-## 何使用 BufferedWriter
+## 如何使用 BufferedWriter
 
 你通常对输出使用 `BufferedWriter`。只有当你为用户编写提示信息时，才不想使用缓冲输出。提示只有在缓冲区满时才会出现，因此对于这类情况，你不希望使用缓冲。
 
 `PrintWriter()` API:
 
-```
+```java
 PrintWriter out = new
 PrintWriter (new BufferedWriter (new FileWriter("file.out")));
 ```
-
-
-
-
 
 ## 26.1 什么是过滤？
 
 使用过滤是从规模得得输入或输出流中读取或写入数据的子集。过滤可以与数据格式无关（例如，你需要统计列表中的项目数量），也可以与数据格式直接相关（例如，你需要获取表格某行中的所有数据）。你将过滤器附加到输入或输出流上以过滤数据。
 
-FilterInputStream 和 FilterOutputStream 过滤输入和输出字节。创建 `FilterInputStream` 时，会为它指定一个 `InputStream` 来进行过滤。同样，在创建 `FilterOutputStream` 时，你会指定一个 `OutputStream` 进行过滤。它们封装了现有的 `InputStream` 或 `OutputStream`，以提供缓冲、校验和等功能。
+`FilterInputStream` 和 `FilterOutputStream` 过滤输入和输出字节。创建 `FilterInputStream` 时，会为它指定一个 `InputStream` 来进行过滤。同样，在创建 `FilterOutputStream` 时，你会指定一个 `OutputStream` 进行过滤。它们封装了现有的 `InputStream` 或 `OutputStream`，以提供缓冲、校验和等功能。
+
+
 
 对于字符 I/O，我们有抽象类 `FilterWriter` 和 `FilterReader`。`FilterReader` 是字符输入流的超类，从另一个字符输入流读取数据并进行过滤，并在调用自己的 `read()` 方法时返回过滤后的数据。`FilterWriter` 用于字符输出流，在将数据写入另一个字符输出流之前对其写入的数据进行过滤。
 
@@ -14828,15 +16106,15 @@ PushbackReader(Reader in) void unread(int character) void unread(char [] buffer)
 
 有时当你从 `InputStream` 读取一个字节时，它意味着一个新数据块的开始（例如，一个新的标记）。你可能会说：“我已经读了这个字节，但现在真的无法处理它。我想把它推回 `InputStream` 中。当我以后回来读取 `InputStream` 时，我想再次获取那个相同的字节。”
 
-你使用 `unread()` 方法将字节推回流。当你再次读取它时，你将读到之前 `unread()` 的数据。你可以 `unread()` 单个字节、字节数组，或者带有带有偏移量和长度的字节数组。
+你使用 `unread()` 方法将字节推回流。当你再次读取它时，你将读到之前 `unread()` 的数据。你可以 `unread()` 单个字节、字节数组，或者带有偏移量和长度的字节数组。
 
 如果你在读取字符，可以回退字符而不是字节。你使用 `PushbackReader`，它的工作方式与 `PushbackInputStream` 相同。
 
 使用 `unread()` 方法回退单个字符、字符数组，或者带有偏移量和长度的字符数组。
 
-LineNumberReader 与 LineNumberInputStream。
+`LineNumberReader` 与 `LineNumberInputStream`。
 
-`LineNumberReader` 是一种字符输入流，它可以跟踪从它中读取的文本行数。行被认为由换行符 (\n)、回车符或回车符后跟换行符来终止。`readLine()` 方法返回行中的所有字符，但不包含终止符。`getLineNumber()` 方法返回已读取的行数。
+`LineNumberReader` 是一种字符输入流，它可以跟踪从它中读取的文本行数。行被认为由换行符 (`\n`)、回车符或回车符后跟换行符来终止。`readLine()` 方法返回行中的所有字符，但不包含终止符。`getLineNumber()` 方法返回已读取的行数。
 
 如果由于某种原因，你想重置行号，可以通过 `setLineNumber()` 来此，并从该点开始重新计算行数。
 
@@ -14851,7 +16129,7 @@ String readLine() int getLineNumber()
 void setLineNumber(int line_num)
 ```
 
-PrintStream 与 PrintWriter
+`PrintStream` 与 `PrintWriter`
 
 `PrintStream` 用于将 Java 数据作为文本输出。它实现了许多方法来显示 Java 原始数据类型的文本表示。
 
@@ -14864,9 +16142,10 @@ PrintStream 与 PrintWriter
 `PrintStream` 和 `PrintWriter` 类都采用了刷新机制，会将数据从内部缓冲区移动到输出流。刷新通过两种方式实现：
 
 - 自动刷新，即当你调用 `println` 时会进行刷新。
+
 - 不带自动刷新，即只有在调用 `flush()` 方法时才会发生刷新。
 
-对于 `PrintStream` 类，如果写入了换行符，输出就会刷新。在 `PrintWriter` 类中，如果你启用了自动刷新，则只有在调用 `println()` 方法时输出才会刷新。`PrintWriter` 的 `println()` 方法使用系统属性 `line.separator`，而不是 `PrintStream` 使用的换行符 (\n)。
+对于 `PrintStream` 类，如果写入了换行符，输出就会刷新。在 `PrintWriter` 类中，如果你启用了自动刷新，则只有在调用 `println()` 方法时输出才会刷新。`PrintWriter` 的 `println()` 方法使用系统属性 `line.separator`，而不是 `PrintStream` 使用的换行符 (`\n`)。
 
 # PrintWriter 过程
 
@@ -14876,16 +16155,19 @@ PrintStream 与 PrintWriter
 
 # PrintWriter() API
 
+```
 PrintWriter (Writer w)
 PrintWriter (Writer w, Boolean autoflush)
 PrintWriter (OutputStream os)
 PrintWriter (OutputStream os, Boolean autoflush)
+```
 
 ## 26.3 校验和 (Checksumming)
 
 本节探讨校验和。`Checksum` 是几个类实现的一个接口。让我们来看看它涵盖什么：
 
 - 什么是校验和？它是如何工作的？
+
 - 什么是消息摘要 (message digest)？它是如何工作的？
 
 校验和与消息摘要 (Checksum versus message digest)
@@ -14907,7 +16189,7 @@ void update(byte [] array, int offset, int length)
 
 # CheckedInputStream 和 CheckedOutputStream
 
-让我们创建一个 `Checksum` 对象并使用它来过滤输入或输出流。当向 `CheckedOutputStream` 写入字节时，会自动计算校验和。`CheckedOutputStream` 会调用 `Checksum` 对象中的 `update()` 方法。然后，该字节将发送到其最终目的地。在任何时刻，你都可以向 `Checksum` 对象询问当前校验和。你可以写出所有字节
+让我们创建一个 `Checksum` 对象并使用它来过滤输入或输出流。当向 `CheckedOutputStream` 写入字节时，会自动计算校验和。`CheckedOutputStream` 会调用 `Checksum` 对象中的 `update()` 方法。然后，该字节将发送到其最终目的地。在任何时刻，你都可以向 `Checksum` 对象询问当前校验和。你可以写出所有字节。
 
 使用 `OutputStream` 和 `Checksum` 类型的对象构造 `CheckedOutputStream`。CRC32 和 Adler32 是你可以选择或创建的两种校验和类型。周期性地（例如每 512 字节），获取当前校验和并将这四个字节通过流发送。
 
@@ -14920,8 +16202,6 @@ void update(byte [] array, int offset, int length)
 校验和只能给你提供一个 32 位的值。如果一个位发生变化，你会注意到，但如果许多位发生变化，你可能会得到相同的校验和。
 
 以下是示例代码：
-
-
 
 ```java
 FileOutputStream os = new FileOutputStream("Temp1.tmp");
@@ -14969,7 +16249,7 @@ byte [] digest()
 
 ### MessageDigest: 示例代码
 
-第一行创建一个指向 `temp.tmp` 文件的 `FileOutputStream`。创建一个 `MessageDigest` 对象。正如代码 `md = MessageDigest.getInstance()` 所示，你正在向它传递你想要使用的消息摘要算法名称。它返回返回一个 `MessageDigest` 类型的对象。如果你传递的字符串不是摘要名称，它会抛出 `NoSuchAlgorithmException`。
+第一行创建一个指向 `temp.tmp` 文件的 `FileOutputStream`。创建一个 `MessageDigest` 对象。正如代码 `md = MessageDigest.getInstance()` 所示，你正在向它传递你想要使用的消息摘要算法名称。它返回一个 `MessageDigest` 类型的对象。如果你传递的字符串不是摘要名称，它会抛出 `NoSuchAlgorithmException`。
 
 在获取 `MessageDigest` 后，使用它来构建一个 `DigestOutputStream`。字节被写入底层的 `OutputStream` 并添加到摘要中。你可以通过调用 `md.digest()` 获取 `MessageDigest`。它返回摘要或一个字节数组。现在你可以存储它或将其发送。
 
@@ -15001,9 +16281,11 @@ byte [] digest = md.digest();
 
 本节探讨 Java 代码中的膨胀和压缩。这些术语与“压缩”和“解压缩”相同。本节的一些要点包括：
 
-- DeflaterInputStream 和 DeflaterOutputStream
-- ZipInputStream 和 ZipOutputStream
-- ZipFile
+- `DeflaterInputStream` 和 `DeflaterOutputStream`
+
+- `ZipInputStream` 和 `ZipOutputStream`
+
+- `ZipFile`
 
 ### Deflater
 
@@ -15021,21 +16303,23 @@ byte [] digest = md.digest();
 
 如果你决定使用自己的 `Deflater` 或 `Inflater` 而不是默认值，那么就是……
 
-（注：原文此处存在大量完全重复的段落，关于 InflaterInputStream 和 ZipOutputStream。根据翻译指令“不要重复输出原文”，此处仅保留核心逻辑描述，且由于原文本身为重复性错误，译文已进行去冗处理，以符合高级文档工程师的规范。）
-
 ## 26.7 ZipInputStream
 
-`ZipInputStream` 是我们的下一个停点。你可以使用该类在流中读取 zip 文件。你获取已压缩目录中的第一个条目。然后你可以读取第一个条目的的数据，它是自动解压缩的。接着你获取下一个条目并解压缩，以此此类推。`ZipInputStream` 继承自 `InflaterInputStream`。方法包括从表中获取下一个条目以及关闭条目。关闭条目允许在不完成当前条目数据的情况下读取下一个条目。`ZipInputStream` 中的 `read()` 方法在读取最后一个条目时返回 -1。
+`ZipInputStream` 是我们的下一个停点。你可以使用该类在流中读取 zip 文件。你获取已压缩目录中的第一个条目。然后你可以读取第一个条目的的数据，它是自动解压缩的。接着你获取下一个条目并解压缩，以此类推。`ZipInputStream` 继承自 `InflaterInputStream`。方法包括从表中获取下一个条目以及关闭条目。关闭条目允许在不完成当前条目数据的情况下读取下一个条目。`ZipInputStream` 中的 `read()` 方法在读取最后一个条目时返回 -1。
 
 ### ZipInputStream 方法
 
+```
 getNextEntry()
 closeEntry()
 read()
+```
 
 ### ZipInputStream: 示例代码
 
 下面的代码解压缩文件的示例。你将打开 `test.zip`，即我们的 zip 文件。该文件是 `ZipInputStream` 的源。因此 `zis` 指向 `test.zip`。`getNextEntry()` 方法最初返回 zip 文件表的第一个条目。现在可以使用该条目的引用。
+
+
 
 ```java
 import java.util.zip.*;
@@ -15079,11 +16363,7 @@ class ZipFileExample {
 }
 ```
 
-
-
-
-
-如果条目为 null，则意味着已到达文件末尾。从此处开始从 zip 文件读取时，读取的数据对应于该条目并自动解压缩。在这种情况下，已经包装了一个 `DataInputStream` 并用于读取它。`dis` 将直接从 zip 文件中的相应位置读取并关闭它。下一个条目将打开文件并再次从 zip 文件开始读取，读取下一个条目。
+如果条目为 `null`，则意味着已到达文件末尾。从此处开始从 zip 文件读取时，读取的数据对应于该条目并自动解压缩。在这种情况下，已经包装了一个 `DataInputStream` 并用于读取它。`dis` 将直接从 zip 文件中的相应位置读取并关闭它。下一个条目将打开文件并再次从 zip 文件开始读取，读取下一个条目。
 
 # 示例
 
@@ -15116,15 +16396,18 @@ class ZipInputStreamExample {
 ## 26.8 ZipOutputStream
 
 `ZipInputStream` 读取 zip 格式流；`ZipOutputStream` 写入 zip 格式的流。此类允许我们创建 zip 文件。
+
 `ZipOutputStream` 继承自 `DeflaterOutputStream`。`ZipOutputStream` 中的一个方法是 `putNextEntry()`，它将下一个条目放入压缩文件列表中。你需要为要压缩的每个文件创建一个 zip 条目。
 
 `putNextEntry()` 方法写入一个条目并为数据输出定位流。你可以开始写入下一组压缩数据。与其他类中的 `close()` 方法类似，`closeEntry()` 方法会关闭已完成的条目；此时你就可以准备创建下一个条目了。
 
 ## ZipOutputStream 方法
 
-- putNextEntry()
-- closeEntry()
-- write()
+- `putNextEntry()`
+
+- `closeEntry()`
+
+- `write()`
 
 ## ZipOutputStream：示例代码
 
@@ -15277,18 +16560,17 @@ class DataOutputExample {
 }
 ```
 
-
-
-
 ## 27.3 RandomAccessFile: 示例代码
 
-RandomAccessFile 同时实现了 `DataInput` 和 `DataOutput`。你通过文件名构造一个 RandomAccessFile。然后，你可以在 RandomAccessFile 上同时使用读取和写写方法，例如 `readInt()` 和 `writeInt()`。
+`RandomAccessFile` 同时实现了 `DataInput` 和 `DataOutput`。你通过文件名构造一个 `RandomAccessFile`。然后，你可以在 `RandomAccessFile` 上同时使用读取和写写方法，例如 `readInt()` 和 `writeInt()`。
 
 随机访问意味着你可以将下一次读取或写入操作定位在文件中特定的字节位置。你可以通过 `getFilePointer()` 获取当前位置。稍后，可以通过将该位置传递给 `seek()` 返回相同的位置。
 
-下面的示例代码展示了向文件写入三个整数（int）。在第二次写入之前的文件位置存储在指针中。在写入接两个整数后，位置恢复到该指针。`readInt()` 返回了值 15。
+下面的示例代码展示了向文件写入三个整数（`int`）。在第二次写入之前的文件位置存储在指针中。在写入接两个整数后，位置恢复到该指针。`readInt()` 返回了值 15。
 
 # 示例
+
+
 
 ```java
 import java.io.*;
@@ -15372,8 +16654,6 @@ YourClass yc = (YourClass) ois.readObject();
 ## 28.5 添加序列化: 示例代码
 
 ## 28.6 自定义序列化: 示例代码
-
-
 
 ```java
 return value;
@@ -15559,15 +16839,13 @@ final 变量会通过其值直接参与序列化，因此将 final 声明为 `tr
 //编译器为 final 变量赋值值
 ```
 
-
-
-
-
 ## 28.8 自定义序列化
 
 在默认序列化过程中，由于 `transient` 关键字的存在可能会导致信息的丢失。（例如：mango, money, box）
 
 # 示例
+
+
 
 ```java
 import java.io.*;
@@ -15590,29 +16868,29 @@ class CustomizedSerializeDemo{
 }
 ```
 
-在上述示例中，序列化之前 Account 对象可以提供正确的用户名和密码。但在反序列化后，Account 对象只能提供用户名而不能提供密码。这是由于将密码声明为 `transient`。因此，进行默认序列化时由于 `transient` 关键字可能会导致信息丢失。
+在上述示例中，序列化之前`Account`对象可以提供正确的用户名和密码。但在反序列化后，`Account`对象只能提供用户名而不能提供密码。这是由于将密码声明为`transient`。因此，进行默认序列化时由于`transient`关键字可能会导致信息丢失。
 
 我们可以通过使用自定义序列化来恢复这种信息的丢失。
 
-我们可以通过使用以下 **private void writeObject(ObjectOutputStream os) throws Exception.** 来实现自定义序列化。
+我们可以通过使用以下`private void writeObject(ObjectOutputStream os) throws Exception.`来实现自定义序列化。
 
-该方法会在序列化时由 JVM 自动执行。这是一个回调方法。因此，在序列化时，如果我们想执行任何额外工作，必须在该方法中定义。
+该方法会在序列化时由JVM自动执行。这是一个回调方法。因此，在序列化时，如果我们想执行任何额外工作，必须在该方法中定义。
 
-（准备加密后的密码并将加密后的密码单独写入文件）private void readObject(ObjectInputStream is) throws Exception.。
+（准备加密后的密码并将加密后的密码单独写入文件）`private void readObject(ObjectInputStream is) throws Exception.`。
 
-该方法会在反序列化时由 JVM 自动执行。因此，在反序列化时，如果我们想执行任何额外活动，必须在该方法中定义。
+该方法会在反序列化时由JVM自动执行。因此，在反序列化时，如果我们想执行任何额外活动，必须在该方法中定义。
 
 （读取加密后的密码，执行解密并将解密后的密码赋值给当前对象的密码变量）
 
 ## 28.9 关于继承的序列化
 
-## 情况 1
+### 情况 1
 
-如果父类实现了 `Serializable`，那么默认情况下每个子类都会实现 `Serializable`。这意味着 `Serializable` 特性是从父类继承到子类的。
+如果父类实现了`Serializable`，那么默认情况下每个子类都会实现`Serializable`。这意味着`Serializable`特性是从父类继承到子类的。
 
-因此，即使子类没有实现 `Serializable`，只要父类实现了 `Serializable` 接口，我们就可以序列化子类对象。
+因此，即使子类没有实现`Serializable`，只要父类实现了`Serializable`接口，我们就可以序列化子类对象。
 
-# 示例
+#### 示例
 
 ```java
 import java.io.*;
@@ -15637,23 +16915,23 @@ class SerializableWRTInheritance{
 }
 ```
 
-尽管 Dog 类没有显式实现 `Serializable` 接口，但我们可以序列化 Dog 对象，因为它的父类 animal 已经实现了 `Serializable` 接口。
+尽管`Dog`类没有显式实现`Serializable`接口，但我们可以序列化`Dog`对象，因为它的父类`Animal`已经实现了`Serializable`接口。
 
-注意：Object 类没有实现 `Serializable` 接口。
+注意：`Object`类没有实现`Serializable`接口。
 
-## 情况 2
+### 情况 2
 
-即使父类没有实现 `Serializable`，我们也可以序列化实现了 `Serializable` 接口的子对象。
+即使父类没有实现`Serializable`，我们也可以序列化实现了`Serializable`接口的子对象。
 
-在序列化时，JVM 会忽略来自非 `Serializable` 父类的实例变量值，而是 JVM 会将这些变量的默认值保存到文件中。
+在序列化时，JVM会忽略来自非`Serializable`父类的实例变量值，而是JVM会将这些变量的默认值保存到文件中。
 
-在反序列化时，JVM 会检查是否有任何父类是非 `Serializable` 的。如果任何父类不是 `Serializable` 的，JVM 会为每个不可序列化的父类创建一个单独的对象，并将其实例变量共享给当前对象。
+在反序列化时，JVM会检查是否有任何父类是非`Serializable`的。如果任何父类不是`Serializable`的，JVM会为每个不可序列化的父类创建一个单独的对象，并将其实例变量共享给当前对象。
 
-为了为不可序列化的父类创建对象，JVM 始终会调用该不可序列化父类的无参构造函数（默认构造函数），因此每个不可序列化的父类都必须包含无参构造函数，否则我们将得到运行时异常“InvalidClassException”。
+为了为不可序列化的父类创建对象，JVM始终会调用该不可序列化父类的无参构造函数（默认构造函数），因此每个不可序列化的父类都必须包含无参构造函数，否则我们将得到运行时异常`InvalidClassException`。
 
 如果不可序列化的父类是抽象类，则仅执行实例控制流并将其实例变量共享给当前对象。
 
-# 示例
+#### 示例
 
 ```java
 import java.io.*;
@@ -15688,18 +16966,19 @@ class SerializableWRTInheritance{
 
 ## 28.10 外部化
 
-在默认序列化中，一切都由 JVM 处理，程序员没有任何控制权。
+在默认序列化中，一切都由JVM处理，程序员没有任何控制权。
 
 在序列化中，总对象总是会被保存的，无法保存对象的局部，这在某些点会产生性能问题。
 
-为了克服这些问题，我们应该采用外部化（Externalization），其中一切都由程序员处理，JVM 没有任何控制权。
+为了克服这些问题，我们应该采用外部化（Externalization），其中一切都由程序员处理，JVM没有任何控制权。
 
 外部化相对于序列化的主要优势是我们可以根据需求保存整个对象或对象的局部。
 
-要为任何对象提供 `Externalizable` 能力，相应的类应该实现 `Externalizable` 接口。`Externalizable` 接口是 `Serializable` 接口的子接口。`Externalizable` 接口定义了两方法：
+要为任何对象提供`Externalizable`能力，相应的类应该实现`Externalizable`接口。`Externalizable`接口是`Serializable`接口的子接口。`Externalizable`接口定义了两方法：
 
-- writeExternal( )
-- readExternal( )
+- `writeExternal( )`
+
+- `readExternal( )`
 
 ```java
 public void writeExternal(ObjectOutput out) throws IOException
@@ -15713,11 +16992,11 @@ public void readExternal(ObjectInput in) throws IOException, ClassNotFoundExcept
 
 该方法会在反序列化时自动执行，通过该方法，我们必须编写代码从文件中读取所需的变量并赋值给当前对象。
 
-在反序列化时，JVM 会通过执行该对象的无参构造函数创建一个单独的对象，然后 JVM 将调用 `readExternal()` 方法。
+在反序列化时，JVM会通过执行该对象的无参构造函数创建一个单独的对象，然后JVM将调用`readExternal()`方法。
 
-每个 `Externalizable` 类都必须包含无参构造函数，否则我们将得到说“InvalidClassException”的运行时异常。
+每个`Externalizable`类都必须包含无参构造函数，否则我们将得到说`InvalidClassException`的运行时异常。
 
-# 示例
+#### 示例
 
 ```java
 import java.io.*;
@@ -15760,53 +17039,48 @@ public class Externalization {
 }
 ```
 
-在外部化中，`transient` 关键字将不起任何作用，因此不需要 `transient` 关键字。
-
-
-
-
+在外部化中，`transient`关键字将不起任何作用，因此不需要`transient`关键字。
 
 ## 28.11 序列化 (Serialization) 与 外部化 (Externalization) 的区别
 
 | 序列化 (Serialization) | 外部化 (Externalization) |
 |---|---|
 | 用于默认序列化 | 用于自定义序列化 |
-| 这里一切由 JVM 处理，程序员没有任何控制权。 | 这里一切由程序员处理，JVM 没有任何控制权。 |
+| 这里一切由JVM处理，程序员没有任何控制权。 | 这里一切由程序员处理，JVM没有任何控制权。 |
 | 这里总是保存整个对象，无法保存对象的一部分。 | 这里我们可以根据自己的需求保存整个对象或对象的一部分。 |
 | 如果我们要将整个对象保存到文件中，序列化是最佳选择。 | 如果我们要保存对象的一部分，外部化是最佳选择。 |
-
 | 性能相对较低 | 性能相对较高 |
-|---|---|
-| Serializable 接口不包含任何方法，它是一个标记接口（marker interface）。 | Externalizable 接口包含 2 个方法：<br>1. writeExternal()<br>2. readExternal()<br>它不是标记接口。 |
-| Serializable 类不需要包含公共无参构造函数。 | Externalizable 类必须包含公共无参构造函数，否则我们将得到提示为“InvalidClassException”的 RuntimeException。 |
-| transient 关键字在序列化中起作用 | transient 关键字在外部化中不起任何作用 |
+| `Serializable`接口不包含任何方法，它是一个标记接口（marker interface）。 | `Externalizable`接口包含2个方法：<br>1. `writeExternal()`<br>2. `readExternal()`<br>它不是标记接口。 |
+| `Serializable`类不需要包含公共无参构造函数。 | `Externalizable`类必须包含公共无参构造函数，否则我们将得到提示为`InvalidClassException`的`RuntimeException`。 |
+| `transient`关键字在序列化中起作用 | `transient`关键字在外部化中不起任何作用 |
 
 ## 28.12 serialVersionUID
 
-为了在内部执行序列化与反序列化，JVM 将使用一个唯一标识符，这本质就是 serialVersionUID。
+为了在内部执行序列化与反序列化，JVM将使用一个唯一标识符，这本质就是`serialVersionUID`。
 
-在序列化时，JVM 会随对象一起保存 serialVersionUID。
+在序列化时，JVM会随对象一起保存`serialVersionUID`。
 
-在反序列化时，JVM 将比较 serialVersionUID，如果匹配则仅进行反序列化，否则我们将得到提示为“InvalidClassException”的 RuntimeException。
+在反序列化时，JVM将比较`serialVersionUID`，如果匹配则仅进行反序列化，否则我们将得到提示为`InvalidClassException`的`RuntimeException`。
 
-# 这一过程依赖于默认的 serialVersionUID 以及
+这一过程依赖于默认的`serialVersionUID`以及
 
-在序列化对象后，如果我们更改了 .class 文件，那么我们就无法执行反序列化，因为本地类和序列化对象之间的 serialVersionUID 不匹配。在这种情况下，在反序列化时我们将得到提示为“InvalidClassException”的 RuntimeException。
+在序列化对象后，如果我们更改了`.class`文件，那么我们就无法执行反序列化，因为本地类和序列化对象之间的`serialVersionUID`不匹配。在这种情况下，在反序列化时我们将得到提示为`InvalidClassException`的`RuntimeException`。
 
-发送方和接收方都应该使用相同版本的 JVM，如果 JVM 版本之间存在不兼容性，接收方将因为 serialVersionUID 不同而无法反序列化，这种情况下接收方将得到提示为“InvalidClassException”的 RuntimeException。
+发送方和接收方都应该使用相同版本的JVM，如果JVM版本之间存在不兼容性，接收方将因为`serialVersionUID`不同而无法反序列化，这种情况下接收方将得到提示为`InvalidClassException`的`RuntimeException`。
 
-为了在内部生成 serialVersionUID，JVM 将使用复杂的算法，这可能会产生性能问题。
+为了在内部生成`serialVersionUID`，JVM将使用复杂的算法，这可能会产生性能问题。
 
-我们可以通过配置自己的 serialVersionUID 来解决上述问题。
-我们可以按照如下方式配置 serialVersionUID：
+我们可以通过配置自己的`serialVersionUID`来解决上述问题。
 
-```
+我们可以按照如下方式配置`serialVersionUID`：
+
+```java
 private static final long serialVersionUID = 1L;
 ```
 
-# 示例
+#### 示例
 
-```
+```java
 class Dog implements Serializable {
     private static final long serialVersionUID=1L;
     int i=10;
@@ -15830,60 +17104,68 @@ class Receiver{
 }
 ```
 
-在上述程序中，序列化后即使我们对 Dog.class 文件进行了任何更改，我们也可以反序列化对象。
+在上述程序中，序列化后即使我们对`Dog.class`文件进行了任何更改，我们也可以反序列化对象。
 
-如果我们配置了了自己的 serialVersionUID，发送方和接收方就不需要维护相同的 JVM 版本。
+如果我们配置了了自己的`serialVersionUID`，发送方和接收方就不需要维护相同的JVM版本。
 
-注意：某些 IDE 会生成显式的 serialVersionUID。
+注意：某些IDE会生成显式的`serialVersionUID`。
 
 ## 29.1 简介
 
 我们旅程的最后一个终站引入了字符串分词（string tokenizing），并涵盖了以下主题：
 
-- StringTokenizer
-- StreamTokenizer
+- `StringTokenizer`
 
-## 29.1.1 使用 StringTokenizer
+- `StreamTokenizer`
+
+### 29.1.1 使用 StringTokenizer
 
 记得以前你写写过包含由分隔符分隔的数据项的行吗？分隔数据项（或称为标记，tokens）的分隔符可能是逗号、分号或制表符。
 
-StringTokenizer API：
-- StringTokenizer(String string_to_tokenize,String delimiters)
-- boolean hasMoreTokens()
-- String nextToken()
-- String nextToken(String new_delimiter)
-- int countTokens()
+`StringTokenizer` API：
 
-当你你重新读入每行时，你需要分离这些标记。每行都可能代表一个名称和地址，例如邮件合并文件中的内容。我们希望将该行拆分成各个部分，例如名称、街道、城市、州和邮政编码。
+- `StringTokenizer(String string_to_tokenize,String delimiters)`
 
-实现该功能的方法是使用 StringTokenizer 类。虽然它不是 I/O 层次结构的一部分，但我们在这里介绍它，因为它在读取被分隔的流时非常有用。以下是该类的工作原理。
+- `boolean hasMoreTokens()`
 
-# 构建 StringTokenizer 对象
+- `String nextToken()`
 
-你构造一个 StringTokenizer 对象，并给它你想要拆分的字符串以及分隔符是什么。也就是说，你告诉它哪些字符将用于用于拆分字符串中的标记。在我们构造了该类型的对象后，我们可以向它提问几个问题：
+- `String nextToken(String new_delimiter)`
+
+
+
+- `int countTokens()`
+
+当你重新读入每行时，你需要分离这些标记。每行都可能代表一个名称和地址，例如邮件合并文件中的内容。我们希望将该行拆分成各个部分，例如名称、街道、城市、州和邮政编码。
+
+实现该功能的方法是使用`StringTokenizer`类。虽然它不是 I/O 层次结构的一部分，但我们在这里介绍它，因为它在读取被分隔的流时非常有用。以下是该类的工作原理。
+
+## 构建 StringTokenizer 对象
+
+你构造一个`StringTokenizer`对象，并给它你想要拆分的字符串以及分隔符是什么。也就是说，你告诉它哪些字符将用于拆分字符串中的标记。在我们构造了该类型的对象后，我们可以向它提问几个问题：
 
 - 这个字符串中有多少个标记？
 - 我已经用完了这个字符串中的所有标记吗？
 - 给我字符串中的下一个标记。
 
-StringTokenizer 将拆分字符串并向你返回下一个分隔符之前的字符（作为 String）。如果没有更多标记，它的方法将抛出 NoSuchElementException。因为此异常派生自 RuntimeException，所以它没有在 throws 子句中声明，因此你不需要捕获它。
+`StringTokenizer`将拆分字符串并向你返回下一个分隔符之前的字符（作为`String`）。如果没有更多标记，它的方法将抛出`NoSuchElementException`。因为此异常派生自`RuntimeException`，所以它没有在`throws`子句中声明，因此你不需要捕获它。
 
-还有一点：你可以为每个标记切换分隔符。换句话说，即使你创建了一个 StringTokenizer 对象，你也可以说：“对于下一个标记，更改分隔符。”
+还有一点：你可以为每个标记切换分隔符。换句话说，即使你创建了一个`StringTokenizer`对象，你也可以说：“对于下一个标记，更改分隔符。”
 
-# StringTokenizer: 示例代码
+## StringTokenizer: 示例代码
 
-看下面的代码。注意我们的字符串中有一个竖线和一个问号。这些是我们的分隔符。我们将创建一个新的 StringTokenizer，并向它传递 abc|?ghi。StringTokenizerhasMoreTokens() 如果还有更多标记则返回 true。如果是 true，我们将调用 nextToken()。这返回一个 String，在第一次循环时 s 的值为 abc。第二次循环时 hasMoreTokens() 仍为 true。现在我们获取下一个标记，def 是字符串的值。第三次循环时 hasMoreTokens() 仍为 true；返回了 ghi。
+看下面的代码。注意我们的字符串中有一个竖线和一个问号。这些是我们的分隔符。我们将创建一个新的`StringTokenizer`，并向它传递`abc|?ghi`。`StringTokenizer.hasMoreTokens()`如果还有更多标记则返回`true`。如果是`true`，我们将调用`nextToken()`。这返回一个`String`，在第一次循环时`s`的值为`abc`。第二次循环时`hasMoreTokens()`仍为`true`。现在我们获取下一个标记，`def`是字符串的值。第三次循环时`hasMoreTokens()`仍为`true`；返回了`ghi`。
 
-现在再循环一次，hasMoreTokens() 为 false。此时，我们退出循环。所以我们毫不费力地就拆分了字符串。
+现在再循环一次，`hasMoreTokens()`为`false`。此时，我们退出循环。所以我们毫不费力地就拆分了字符串。
 
-# 示例
+### 示例
 
-```
+```java
 import java.io.*;
 import java.util.*;
 ```
 
-```
+```java
 public class StringTokenizerExample {
     public static void main(String[] args[]){
         String line = "abc|def]?ghi";
@@ -15898,25 +17180,17 @@ public class StringTokenizerExample {
 
 ## 29.1.2 StreamTokenizer
 
-你可以解析整个输入流。与解析字符串的 StringTokenizer 不同，StreamTokenizer 读取并将并分解标记。解析过程由句法表和标志控制。
+你可以解析整个输入流。与解析字符串的`StringTokenizer`不同，`StreamTokenizer`读取并分解标记。解析过程由句法表和标志控制。
 
-每个解析出的标记都被放入一个类别中。类别包括标识符、数字、引用字符串以及各种注释样式。所执行的解析适用于将 Java、C 或 C++ 源文件拆分为其标记。StreamTokenizer 不在 I/O 层次结构中，但因为它与流配合使用，我们在这里介绍了它。
+每个解析出的标记都被放入一个类别中。类别包括标识符、数字、引用字符串以及各种注释样式。所执行的解析适用于将 Java、C 或 C++ 源文件拆分为其标记。`StreamTokenizer`不在 I/O 层次结构中，但因为它与流配合使用，我们在这里介绍了它。
 
-StreamTokenizer 识别从 u0000 到 u00FF 范围的字符。每个字符值可以具有多五个可能的属性。这些属性是空白字符、字母、数字、字符串引号和注释字符。
+`StreamTokenizer`识别从`\u0000`到`\u00FF`范围的字符。每个字符值可以具有至多五个可能的属性。这些属性是空白字符、字母、数字、字符串引号和注释字符。
 
-空白字符字符被用于分隔标记。
-
-字母字符是标识符的一部分。
-
-数字字符可以是标识符或数字的一部分。
-
-字符串引号字符包裹一个引用字符串。
-
-
-
-
-
-注释字符位于注释之前或包裹注释。
+- 空白字符被用于分隔标记。
+- 字母字符是标识符的一部分。
+- 数字字符可以是标识符或数字的一部分。
+- 字符串引号字符包裹一个引用字符串。
+- 注释字符位于注释之前或包裹注释。
 
 不具有任何这些属性的字符是普通字符。当遇到普通字符时，它被视为单个字符令牌（token）。
 
@@ -15924,31 +17198,28 @@ StreamTokenizer 识别从 u0000 到 u00FF 范围的字符。每个字符值可�
 
 ## StreamTokenizer 的用法
 
-要使用 StreamTokenizer，你需要用底层的 `Reader` 构造它。然后设置语法表和标志。接下来，对令牌进行循环，不断调用 `nextToken()` 直到它返回 `TT_EOF` 为止。
+要使用`StreamTokenizer`，你需要用底层的`Reader`构造它。然后设置语法表和标志。接下来，对令牌进行循环，不断调用`nextToken()`直到它返回`TT_EOF`为止。
 
-`nextToken()` 方法解析下一个令牌。该类型既由方法返回，也会存放在 `type` 字段中。如果令牌是一个单词，其值将放在 `sval` 字段（字符串值）中；如果令牌是一个数字，则放在 `nval` 字段（数值值）中。
+`nextToken()`方法解析下一个令牌。该类型既由方法返回，也会存放在`type`字段中。如果令牌是一个单词，其值将放在`sval`字段（字符串值）中；如果令牌是一个数字，则放在`nval`字段（数值值）中。
 
 令牌类型可以是字符也可以是值，代表令牌的类型。如果令牌由单个字符组成，则类型的值为该字符的值。如果令牌是带引号的字符串，该值为引号字符的值。否则，它是以下之一：
 
-- TT_EOF 意味着已读取流的末尾。
-
-- TT_EOL 意味着已读取行尾（如果行结束符被视为令牌）。
-
-- TT_NUMBER 意味着读取了一个数字令牌。
-
-- TT_WORD 意味着读取了一个单词令牌。
+- `TT_EOF`意味着已读取流的末尾。
+- `TT_EOL`意味着已读取行尾（如果行结束符被视为令牌）。
+- `TT_NUMBER`意味着读取了一个数字令牌。
+- `TT_WORD`意味着读取了一个单词令牌。
 
 ## StreamTokenizer 的方法
 
-StreamTokenizer 中有许多方法来设置语法表。我们这里只提到两种。第一个是 `resetSyntax()`，它将所有字符设为普通字符。第二个是 `wordChars()`，它赋予一组字符字母属性。
+`StreamTokenizer`中有许多方法来设置语法表。我们这里只提到两种。第一个是`resetSyntax()`，它将所有字符设为普通字符。第二个是`wordChars()`，它赋予一组字符字母属性。
 
 ## StreamTokenizer：示例代码
 
-这是一个简单的示例，展示了 StreamTokenizer 的用法。它将文件拆分为由小写或或大写字母组成的单词。当找到一个单词时，`nextToken()` 返回 `TT_EOF`。
+这是一个简单的示例，展示了`StreamTokenizer`的用法。它将文件拆分为由小写或大写字母组成的单词。当找到一个单词时，`nextToken()`返回`TT_EOF`。
 
-如果发现普通字符（在这种情况下，任何未被设置为字母的字符），`nextToken()` 返回该字符的值。
+如果发现普通字符（在这种情况下，任何未被设置为字母的字符），`nextToken()`返回该字符的值。
 
-## 示例
+### 示例
 
 ```java
 import java.io.*;
@@ -15978,11 +17249,11 @@ public class StreamTokenizerExample{
 
 ## 30.1 介绍
 
-`java.util.Scanner` 类是一个简单的文本扫描器，可以使用正则表达式解析基本数据类型和字符串。以下是关于 Scanner 的重要点：Scanner 使用分隔符模式将输入拆分为令牌，该模式默认匹配匹配空白字符。扫描操作可能会阻塞等待输入。在没有外部同步的情况下，Scanner 在多线程使用中是不安全的。
+`java.util.Scanner`类是一个简单的文本扫描器，可以使用正则表达式解析基本数据类型和字符串。以下是关于`Scanner`的重要点：`Scanner`使用分隔符模式将输入拆分为令牌，该模式默认匹配空白字符。扫描操作可能会阻塞等待输入。在没有外部同步的情况下，`Scanner`在多线程使用中是不安全的。
 
 ## 30.2 类声明
 
-以下是 `java.util.Scanner` 类的声明：
+以下是`java.util.Scanner`类的声明：
 
 ```java
 public final class Scanner
@@ -15996,41 +17267,41 @@ Java 中的输入/输出可以使用键盘和屏幕、文件或这些方法的�
 
 ## 显示输出 [ 标准输出 ]
 
-在 Java 中显示输出是使用 `System.out` 对象。你不需要创建 `System.out` 对象。它在 Java 程序中始终可用。有 3 个方法可以显示输出：`print()`、`printf()` 和 `println()`。
+在 Java 中显示输出是使用`System.out`对象。你不需要创建`System.out`对象。它在 Java 程序中始终可用。有 3 个方法可以显示输出：`print()`、`printf()`和`println()`。
 
-`print()` 方法通常用于显示提示符或行的一部分内容。它不会自动将光标移动到新行的开头。
+`print()`方法通常用于显示提示符或行的一部分内容。它不会自动将光标移动到新行的开头。
 
-`printf()` 方法的输出与 `print()` 方法完全相同，区别在于它始终会在执行的最后一个动作将光标移动到新行的开头。
+`println()`方法的输出与`print()`方法完全相同，区别在于它始终会在执行的最后一个动作将光标移动到新行的开头。
 
-`printf()` 方法用于输出格式化的文本和数字。与 `print()` 方法一样，它不会自动将光标移动到新行的开头。
+`printf()`方法用于输出格式化的文本和数字。与`print()`方法一样，它不会自动将光标移动到新行的开头。
 
 ## 键盘输入 [ 标准输入 ]
 
-在 Java 中接受键盘输入是通过使用 `Scanner` 对象完成的。Java 中有一个 `System.in` 对象可以获取输入，但它的功能不多。相反，Java 程序员通常倾向于使用一个“映射”到 `System.in` 对象的 `Scanner` 对象。`System.in` 对象（类似于 `System.out` 对象）已经存在并可用。但你必须创建一个 `Scanner` 对象。
+在 Java 中接受键盘输入是通过使用`Scanner`对象完成的。Java 中有一个`System.in`对象可以获取输入，但它的功能不多。相反，Java 程序员通常倾向于使用一个“映射”到`System.in`对象的`Scanner`对象。`System.in`对象（类似于`System.out`对象）已经存在并可用。但你必须创建一个`Scanner`对象。
 
-一旦你创建了 `Scanner` 对象并将其“映射”到 `System.in` 对象，就可以使用以下方法测试输入。输入在 Java 程序中始终以字符字符串（`String` 类型）的形式出现。可以使用方法将字符串转换为字符、整数或浮点数。可以使用方法将字符串转换为：
+一旦你创建了`Scanner`对象并将其“映射”到`System.in`对象，就可以使用以下方法测试输入。输入在 Java 程序中始终以字符字符串（`String`类型）的形式出现。可以使用方法将字符串转换为字符、整数或浮点数。可以使用方法将字符串转换为：
 
-- hasNext() 检查是否有内容？返回 true 或 false。
-- nextInt() 获取一个整数
-- nextDouble() 获取一个双精度浮
-- next() 获取由空白分隔的字符串
-- nextLine() 获取整行作为字符串
+- `hasNext()`检查是否有内容？返回`true`或`false`。
+- `nextInt()`获取一个整数
+- `nextDouble()`获取一个双精度浮点数
+- `next()`获取由空白分隔的字符串
+- `nextLine()`获取整行作为字符串
 
 注意：没有方法可以直接读取字符。
 
 ## 30.3 Java 交互式输入/输出示例
 
-使用“映射”到 `System.in` 对象的 `Scanner` 对象进行输入，使用 `System.out` 对象进行输出。
+使用“映射”到`System.in`对象的`Scanner`对象进行输入，使用`System.out`对象进行输出。
 
-## 输入
+### 输入
 
-使用 System 类中的标准输入对象 Scanner 创建输入对象。Scanner 类位于 `java.util` 包中。
+使用`System`类中的标准输入对象`Scanner`创建输入对象。`Scanner`类位于`java.util`包中。
 
 ```java
 Scanner input = new Scanner(System.in); //输入对象通常称为 input
 ```
 
-使用 Scanner 类方法获取用户通过键盘输入的值。
+使用`Scanner`类方法获取用户通过键盘输入的值。
 
 ```java
 int num1;
@@ -16044,11 +17315,11 @@ num2 = input.nextDouble(); // 获取双精度数字并赋值给 num2
 str = input.nextLine(); // 获取字符串并赋值给 str
 ```
 
-## 输出：
+### 输出
 
-使用 System 类中的标准输出对象 System.out 。
+使用`System`类中的标准输出对象`System.out`。
 
-使用 PrintStream 类方法（`printf()`、`print()`、`println()`）通过 `System.out` 对象将输出到屏幕。`System.out` 对象是 `PrintStream` 类型的对象。
+使用`PrintStream`类方法（`printf()`、`print()`、`println()`）通过`System.out`对象将输出到屏幕。`System.out`对象是`PrintStream`类型的对象。
 
 ```java
 System.out.print("你叫什么名字？ ");
@@ -16060,115 +17331,118 @@ System.out.printf("你的总价为 $%.2f\n", purchasePrice);
 
 ## 30.4 类构造函数
 
-Scanner 类构造函数及描述
+`Scanner`类构造函数及描述：
 
-# 1 ScannerFilesource
-
-构造一个新的 Scanner，从指定的文件中扫描值。
-
-# 2 ScannerFilesource,StringcharsetName
-
-构造一个新的 Scanner，从指定的文件中扫描值。
-
-# 3 ScannerInputStreamsource
-
-构造一个新的 Scanner，从指定的输入流中扫描值。
-
-# 4 ScannerInputStreamsource,StringcharsetName
-
-构造一个新的 Scanner，从指定的输入流中扫描值。
-
-# 5 ScannerReadablesource
-
-构造一个新的 Scanner，从指定的源中扫描值。
-
-# 6 ScannerReadableByteChannelsource
-
-构造一个新的 Scanner，从指定的通道扫描值。
-
-# 7 ScannerReadableByteChannelsource,StringcharsetName
-
-构造一个新的 Scanner，从指定的通道扫描值。
-
-# 8 ScannerStringsource
-
-构造一个新的 Scanner，从指定的字符串中扫描值。
-
-
-
-
+1. `Scanner(File source)` — 构造一个新的`Scanner`，从指定的文件中扫描值。
+2. `Scanner(File source, String charsetName)` — 构造一个新的`Scanner`，从指定的文件中扫描值。
+3. `Scanner(InputStream source)` — 构造一个新的`Scanner`，从指定的输入流中扫描值。
+4. `Scanner(InputStream source, String charsetName)` — 构造一个新的`Scanner`，从指定的输入流中扫描值。
+5. `Scanner(Readable source)` — 构造一个新的`Scanner`，从指定的源中扫描值。
+6. `Scanner(ReadableByteChannel source)` — 构造一个新的`Scanner`，从指定的通道扫描值。
+7. `Scanner(ReadableByteChannel source, String charsetName)` — 构造一个新的`Scanner`，从指定的通道扫描值。
+8. `Scanner(String source)` — 构造一个新的`Scanner`，从指定的字符串中扫描值。
 
 ## 30.5 类方法
 
-| Scanner 类方法 | 说明 |
+| `Scanner`类方法 | 说明 |
 | :--- | :--- |
 | 1 `void close()` | 此方法关闭此扫描器。 |
-| 2 `Pattern delimiter()` | 此方法返回 Scanner 当前正在用于匹配分隔符的 Pattern。 |
-| 3 `String findInLinePattern(pattern)` | 此方法尝试在忽略分隔符的情况下，查找指定模式的下一次出现。 |
-| 4 `String findInLineString(pattern)` | 此方法尝试在忽略分隔符的情况下，查找由指定字符串构建的模式的下一次出现。 |
-| 5 `String findWithinHorizonPattern(pattern,inhorizon)` | 此方法尝试查找指定模式的下一次出现。 |
-| 6 `String findWithinHorizonString(pattern,inhorizon)` | 此方法尝试在忽略分隔符的情况下，查找由指定字符串构建的模式的下一次出现。 |
-| 7 `boolean hasNext()` | 如果此扫描器的输入中还有另一个标记，则返回 true。 |
-| 8 `boolean hasNextPattern(pattern)` | 如果下一个完整的标记匹配指定的模式，则返回 true。 |
-| 9 `boolean hasNextString(pattern)` | 如果下一个标记匹配由指定字符串构建的模式，则返回 true。 |
-| 10 `boolean hasNextBigDecimal()` | 如果此扫描器输入中的下一个标记可以使用 `nextBigDecimal` 方法解释为 BigDecimal，则返回 true。 |
-| 11 `boolean hasNextBigInteger()` | 如果此扫描器输入中的下一个标记可以在默认基数下通过 `nextBigInteger` 方法解释为 BigInteger，则返回 true。 |
-| 12 `boolean hasNextBigInteger(radix)` | 如果此扫描器输入中的下一个标记可以在指定基数下通过 `nextBigInteger` 方法解释为 BigInteger，则返回 true。 |
-| 13 `boolean hasNextBoolean()` | 如果此扫描器输入中的下一个标记可以使用从字符串“true|false”创建的不区分大小写的模式解释为布尔值，则返回 true。 |
-| 14 `boolean hasNextByte()` | 如果此扫描器输入中的下一个标记可以在默认基数下通过 `nextByte` 方法解释为字节值，则返回 true。 |
-| 15 `boolean hasNextByte(radix)` | 如果此扫描器输入中的下一个标记可以在指定基数下通过 `nextByte` 方法解释为字节值，则返回 true。 |
-| 16 `boolean hasNextDouble()` | 如果此扫描器输入中的下一个标记可以使用 `nextDouble` 方法解释为双精度数值，则返回 true。 |
-| 17 `boolean hasNextFloat()` | 如果此扫描器输入中的下一个标记可以使用 `nextFloat` 方法解释为浮点数，则返回 true。 |
-| 18 `boolean hasNextInt()` | 如果此扫描器输入中的下一个标记可以在默认基数下通过 `nextInt` 方法解释为整值，则返回 true。 |
-| 19 `boolean hasNextInt(radix)` | 如果此扫描器输入中的下一个标记可以在指定基数下通过 `nextInt` 方法解释为整值，则返回 true。 |
-| 20 `boolean hasNextLine()` | 如果此扫描器的输入中还有另一行，则返回 true。 |
-| 21 `boolean hasNextLong()` | 如果此扫描器输入中的下一个标记可以在默认基数下通过 `nextLong` 方法解释为长整值，则返回 true。 |
-| 22 `boolean hasNextLong(radix)` | 如果此扫描器输入中的下一个标记可以在指定基数下通过 `nextLong` 方法解释为长整值，则返回 true。 |
-| 23 `boolean hasNextShort()` | 如果此扫描器输入中的下一个标记可以在默认基数下通过 `nextShort` 方法解释为短整值，则返回 true。 |
-| 24 `boolean hasNextShort(radix)` | 如果此扫描器输入中的下一个标记可以在指定基数下通过 `nextShort` 方法解释为短整值，则返回 true。 |
-| 25 `IOException ioException()` | 此方法返回此扫描器底层 Readable 上一次抛出的 IOException。 |
-| 26 `Locale locale()` | 此方法返回此扫描器的区域设置（Locale）。 |
+| 2 `Pattern delimiter()` | 此方法返回`Scanner`当前正在用于匹配分隔符的`Pattern`。 |
+| 3 `String findInLine(Pattern pattern)` | 此方法尝试在忽略分隔符的情况下，查找指定模式的下一次出现。 |
+| 4 `String findInLine(String pattern)` | 此方法尝试在忽略分隔符的情况下，查找由指定字符串构建的模式的下一次出现。 |
+| 5 `String findWithinHorizon(Pattern pattern, int horizon)` | 此方法尝试查找指定模式的下一次出现。 |
+| 6 `String findWithinHorizon(String pattern, int horizon)` | 此方法尝试在忽略分隔符的情况下，查找由指定字符串构建的模式的下一次出现。 |
+| 7 `boolean hasNext()` | 如果此扫描器的输入中还有另一个标记，则返回`true`。 |
+| 8 `boolean hasNext(Pattern pattern)` | 如果下一个完整的标记匹配指定的模式，则返回`true`。 |
+| 9 `boolean hasNext(String pattern)` | 如果下一个标记匹配由指定字符串构建的模式，则返回`true`。 |
+| 10 `boolean hasNextBigDecimal()` | 如果此扫描器输入中的下一个标记可以使用`nextBigDecimal`方法解释为`BigDecimal`，则返回`true`。 |
+| 11 `boolean hasNextBigInteger()` | 如果此扫描器输入中的下一个标记可以在默认基数下通过`nextBigInteger`方法解释为`BigInteger`，则返回`true`。 |
+| 12 `boolean hasNextBigInteger(int radix)` | 如果此扫描器输入中的下一个标记可以在指定基数下通过`nextBigInteger`方法解释为`BigInteger`，则返回`true`。 |
+| 13 `boolean hasNextBoolean()` | 如果此扫描器输入中的下一个标记可以使用从字符串“true\|false”创建的不区分大小写的模式解释为布尔值，则返回`true`。 |
+| 14 `boolean hasNextByte()` | 如果此扫描器输入中的下一个标记可以在默认基数下通过`nextByte`方法解释为字节值，则返回`true`。 |
+| 15 `boolean hasNextByte(int radix)` | 如果此扫描器输入中的下一个标记可以在指定基数下通过`nextByte`方法解释为字节值，则返回`true`。 |
+| 16 `boolean hasNextDouble()` | 如果此扫描器输入中的下一个标记可以使用`nextDouble`方法解释为双精度数值，则返回`true`。 |
+| 17 `boolean hasNextFloat()` | 如果此扫描器输入中的下一个标记可以使用`nextFloat`方法解释为浮点数，则返回`true`。 |
+| 18 `boolean hasNextInt()` | 如果此扫描器输入中的下一个标记可以在默认基数下通过`nextInt`方法解释为整值，则返回`true`。 |
+| 19 `boolean hasNextInt(int radix)` | 如果此扫描器输入中的下一个标记可以在指定基数下通过`nextInt`方法解释为整值，则返回`true`。 |
+| 20 `boolean hasNextLine()` | 如果此扫描器的输入中还有另一行，则返回`true`。 |
+| 21 `boolean hasNextLong()` | 如果此扫描器输入中的下一个标记可以在默认基数下通过`nextLong`方法解释为长整值，则返回`true`。 |
+| 22 `boolean hasNextLong(int radix)` | 如果此扫描器输入中的下一个标记可以在指定基数下通过`nextLong`方法解释为长整值，则返回`true`。 |
+| 23 `boolean hasNextShort()` | 如果此扫描器输入中的下一个标记可以在默认基数下通过`nextShort`方法解释为短整值，则返回`true`。 |
+
+
+
+| 24 `boolean hasNextShort(radix)` | 如果此扫描器输入中的下一个标记可以在指定基数下通过`nextShort`方法解释为短整值，则返回 true。 |
+
+| 25 `IOException ioException()` | 此方法返回此扫描器底层`Readable`上一次抛出的`IOException`。 |
+
+| 26 `Locale locale()` | 此方法返回此扫描器的区域设置（`Locale`）。 |
+
 | 27 `MatchResult match()` | 此方法返回此扫描器执行的最后扫描操作的匹配。 |
+
 | 28 `String next()` | 此方法查找并返回此扫描器的下一个完整标记。 |
+
 | 29 `String nextPattern(pattern)` | 如果下一个标记匹配指定的模式，则返回该标记。 |
+
 | 30 `String nextString(pattern)` | 如果下一个标记匹配由指定字符串构建的模式，则返回该标记。 |
-| 31 `BigDecimal nextBigDecimal()` | 此方法将输入的下一个标记扫描为 BigDecimal。 |
-| 32 `BigInteger nextBigInteger()` | 此方法将输入的下一个标记扫描为 BigInteger。 |
-| 33 `BigInteger nextBigInteger(radix)` | 此方法将输入的下一个标记扫描为 BigInteger。 |
+
+| 31 `BigDecimal nextBigDecimal()` | 此方法将输入的下一个标记扫描为`BigDecimal`。 |
+
+| 32 `BigInteger nextBigInteger()` | 此方法将输入的下一个标记扫描为`BigInteger`。 |
+
+| 33 `BigInteger nextBigInteger(radix)` | 此方法将输入的下一个标记扫描为`BigInteger`。 |
+
 | 34 `boolean nextBoolean()` | 此方法将输入的下一个标记扫描为布尔值并返回该值。 |
+
 | 35 `byte nextByte()` | 此方法将输入的下一个标记扫描为字节。 |
+
 | 36 `byte nextByte(radix)` | 此方法将输入的下一个标记扫描为字节。 |
+
 | 37 `double nextDouble()` | 此方法将输入的下一个标记扫描为双精度数值。 |
+
 | 38 `float nextFloat()` | 此方法将输入的下一个标记扫描为浮点数。 |
+
 | 39 `int nextInt()` | 此方法将输入的下一个标记扫描为整值。 |
+
 | 40 `int nextInt(radix)` | 此方法将输入的下一个标记扫描为整值。 |
+
 | 41 `String nextLine()` | 此方法跳过当前行并返回输入内容。 |
+
 | 42 `long nextLong()` | 此方法将输入的下一个标记扫描为长整值。 |
+
 | 43 `long nextLong(radix)` | 此方法将输入的下一个标记扫描为长整值。 |
+
 | 44 `short nextShort()` | 此方法将输入的下一个标记扫描为短整值。 |
+
 | 45 `short nextShort(radix)` | 此方法将输入的下一个标记扫描为短整值。 |
+
 | 46 `int radix()` | 此方法返回扫描器的默认基数。 |
-| 47 `void remove()` | 此实现不支持 remove 操作。 |
+
+| 47 `void remove()` | 此实现不支持`remove`操作。 |
+
 | 48 `void reset()` | 此方法重置此扫描器。 |
+
 | 49 `void skipPattern(pattern)` | 此方法跳过匹配指定模式的内容。 |
+
 | 50 `void skipString(pattern)` | 此方法跳过匹配由指定字符串构建的模式的内容。 |
+
 | 51 `String toString()` | 此方法返回此扫描器的字符串表示。 |
+
 | 52 `void useDelimiter(pattern)` | 此方法设置此扫描器的分隔符为指定的模式。 |
+
 | 53 `void useDelimiterString(pattern)` | 此方法设置此扫描器的分隔符为由指定字符串构建的模式。 |
-| 54 `void useLocale(locale)` | 此方法设置此扫描器的区域设置为为指定的区域设置。 |
+
+| 54 `void useLocale(locale)` | 此方法设置此扫描器的区域设置为指定的区域设置。 |
+
 | 55 `void useRadix(radix)` | 此方法设置此扫描器的默认基数为指定的基数。 |
-
-
-
-
 
 ## 31.1 引言
 
-注解（Annotations）提供在 Java 类内部指定元数据（Metadata）的特殊方式，而不是在 XML 文件内部。
+注解（`Annotations`）提供在 Java 类内部指定元数据（`Metadata`）的特殊方式，而不是在 XML 文件内部。
 
-当你使用 Struts、Hibernate、Spring、EJB 开发基于 J2EE 应用时，你需要编写许多特定于相应框架或技术的 XML文档。
+当你使用 Struts、Hibernate、Spring、EJB 开发基于 J2EE 应用时，你需要编写许多特定于相应框架或技术的 XML 文档。
 
-通过 jdk1.5，你可以在类内部指定与 Struts、Hibernate、Spring 相关的元数据，从而避免这些 XML 文件。
+通过 JDK 1.5，你可以在类内部指定与 Struts、Hibernate、Spring 相关的元数据，从而避免这些 XML 文件。
 
 注解的实现和使用主要包含三项任务：
 
@@ -16180,9 +17454,10 @@ Scanner 类构造函数及描述
 
 作为开发者，你只需要负责使用注解即可。
 
-如果你需要，可以使用以下语法创建自定义注解：--
+如果你需要，可以使用以下语法创建自定义注解：
 
 1) 定义注解
+
 语法：
 
 ```java
@@ -16204,6 +17479,7 @@ Scanner 类构造函数及描述
 ```
 
 使用注解
+
 ```java
 @Author(aname="Som",age=106)
 class Hello
@@ -16225,19 +17501,20 @@ class Hello
 ```
 
 使用注解
+
 ```java
 @Servlet(name="login",url="login.jtc",load=1)
 class LoginServlet{
 }
 ```
 
-// 这里不需要继承 HttpServlet
+// 这里不需要继承`HttpServlet`
 
 注解定义为你提供了一种新的用户自定义数据类型。
 
-你定义的每个注解都是 `java.lang.annotation.Annotation` 的子类型，它是默认的超类类型。
+你定义的每个注解都是`java.lang.annotation.Annotation`的子类型，它是默认的超类类型。
 
-所有注解成员将由 JVM 内部实现。如果你想处理注解，可以使用以下类及其方法来获取信息：-
+所有注解成员将由 JVM 内部实现。如果你想处理注解，可以使用以下类及其方法来获取信息：
 
 ### java.lang.Class
 
@@ -16251,9 +17528,9 @@ public class[] getAnnotations();
 
 你可以开发以下类型的注解：
 
-- 标记注解（Marker Annotations）
-- 单值注解（Single Valued Annotations）
-- 多值注解（Multi Valued Annotations）
+- 标记注解（`Marker Annotations`）
+- 单值注解（`Single Valued Annotations`）
+- 多值注解（`Multi Valued Annotations`）
 
 ### 标记注解
 
@@ -16265,7 +17542,9 @@ public class[] getAnnotations();
 @interface Serializable{
 }
 ```
+
 用法：
+
 ```java
 @Serializable
 class Hello{
@@ -16285,6 +17564,7 @@ class Hello{
 ```
 
 用法：
+
 ```java
 @Author(value="som")
 or
@@ -16308,6 +17588,7 @@ class Hello{
 ```
 
 用法：
+
 ```java
 @Employee(eid=101,ename="Som",phone=333333)
 class Hello{
@@ -16319,24 +17600,24 @@ class Hello{
 
 ## 31.3 内置注解
 
-- @Retention
-- @Target
-- @Inherited
-- @Deprecated
-- @Override
-- @SuppressWarnings 等。
+- `@Retention`
+- `@Target`
+- `@Inherited`
+- `@Deprecated`
+- `@Override`
+- `@SuppressWarnings` 等。
 
 ### @Retention
 
-此注解用于指定注解的保留策略（Retention policy）。保留策略指明了注解的作用范围。你可以定义以下保留策略：
+此注解用于指定注解的保留策略（`Retention policy`）。保留策略指明了注解的作用范围。你可以定义以下保留策略：
 
-#### **适用于任何注解的策略**
+#### 适用于任何注解的策略
 
-- SOURCE
-- CLASS
-- RUNTIME
+- `SOURCE`
+- `CLASS`
+- `RUNTIME`
 
-这三种保留策略在名为 `RetentionPolicy` 的枚举（enum）中定义为常量。
+这三种保留策略在名为`RetentionPolicy`的枚举（`enum`）中定义为常量。
 
 用法
 
@@ -16348,19 +17629,19 @@ class Hello{
 
 ### SOURCE
 
-当 `RetentionPolicy` 为 `SOURCE` 时，注解仅在源代码可用，字节码（Byte Code）和原生代码（Native Code）无效。Source 是默认的保留策略。
+当`RetentionPolicy`为`SOURCE`时，注解仅在源代码可用，字节码（`Byte Code`）和原生代码（`Native Code`）无效。`SOURCE`是默认的保留策略。
 
 ### CLASS
 
-当 `RetentionPolicy` 为 `CLASS` 时，注解在源代码和字节码可用，但在原生代码中无效。
+当`RetentionPolicy`为`CLASS`时，注解在源代码和字节码可用，但在原生代码中无效。
 
 ### RUNTIME
 
-当 `RetentionPolicy` 为 `RUNTIME` 时，注解在源代码、字节码和原生代码中可用。
+当`RetentionPolicy`为`RUNTIME`时，注解在源代码、字节码和原生代码中可用。
 
 ### @Target
 
-此注解用于指定目标（Target），即指定注解应该被用于类、方法、字段、构造函数还是所有。所有目标都定义在名为 `ElementType` 的枚举常量中。
+此注解用于指定目标（`Target`），即指定注解应该被用于类、方法、字段、构造函数还是所有。所有目标都定义在名为`ElementType`的枚举常量中。
 
 例如：
 
@@ -16375,11 +17656,11 @@ class Hello{
 
 ### @Inherited
 
-如果你定义任何自定义注解，默认情况下该注解不会被子类继承。如果你想让子类继承父类的注解，则注解的定义必须标记为 `@Inherited`。
+如果你定义任何自定义注解，默认情况下该注解不会被子类继承。如果你想让子类继承父类的注解，则注解的定义必须标记为`@Inherited`。
 
 ### @Deprecated
 
-此注解用于将自定义方法定义为已弃（deprecated）。如果你定义了一个实现不可用或在未来版本中可能会发生更改的方法，你可以将该方法定义为 `@Deprecated`。
+此注解用于将自定义方法定义为已弃用（`deprecated`）。如果你定义了一个实现不可用或在未来版本中可能会发生更改的方法，你可以将该方法定义为`@Deprecated`。
 
 ### @Override
 
@@ -16388,8 +17669,6 @@ class Hello{
 ### @SuppressWarnings
 
 通过使用此注解你可以抑制警告。编译源文件时不会显示任何警告。
-
-
 
 ```java
 int id() default 99;
@@ -16413,6 +17692,7 @@ class BBStudent {
      class LoginServlet{
      */
 ```
+
 ```java
 @JtcServlet(url = "regster.Jtc")
 class RegisterServlet { }
@@ -16457,6 +17737,7 @@ class Jtc22 {
     }
 }
 ```
+
 ```java
 @Retention(RetentionPolicy.RUNTIME) @interface JtcCloneable { }
 ```
@@ -16526,6 +17807,8 @@ class JtcEmployee {
 }
 ```
 
+
+
 ```java
 class JJdbcTemplate {
   public void save(Object obj) throws Exception {
@@ -16567,194 +17850,78 @@ class JJdbcTemplate {
 }
 ```
 
-
-
-立即在锁对象上调用 `tryLock()` 方法会立即返回一个布尔值，定义是否可以锁定对象。
+立即在锁对象上调用`tryLock()`方法会立即返回一个布尔值，定义是否可以锁定对象。
 
 获取显式锁的线程永远不会死锁，这与获取隐式锁的线程形成对比，后者可能会死锁。
 
-完成锁定资源的使用后，调用 `unlock()` 方法将释放该对象的锁。
+完成锁定资源的使用后，调用`unlock()`方法将释放该对象的锁。
 
-如果我们不想继续等待超过指定的时间，可以调用带参数的 `tryLock()` 方法，指定我们在放弃尝试获取锁之前想要等待多久。我们向此方法传递两个参数：一个表示时间值的 `long` 值和一个 `TimeUnit` 对象。
+如果我们不想继续等待超过指定的时间，可以调用带参数的`tryLock()`方法，指定我们在放弃尝试获取锁之前想要等待多久。我们向此方法传递两个参数：一个表示时间值的`long`值和一个`TimeUnit`对象。
 
-还可以声明线程在等待锁时可以被中断。`lockInterruptibly()` 方法将尝试获取对象的锁，除非它被中断，此时将抛出一个 `InterruptedException`。
+还可以声明线程在等待锁时可以被中断。`lockInterruptibly()`方法将尝试获取对象的锁，除非它被中断，此时将抛出一个`InterruptedException`。
 
-隐式锁不能跨越多个代码块，锁在 `synchronized` 块结束时释放。然而，显式锁对象可以跨越多个方法。
+隐式锁不能跨越多个代码块，锁在`synchronized`块结束时释放。然而，显式锁对象可以跨越多个方法。
 
-`ReadWriteLock` 维护一对锁：一个是读锁，只要没有正在进行的写操作，多个线程就可以获取；另一个是写锁，一次只能由一个线程获取。要获取读锁，必须调用 `readLock()`。必须调用 `writeLock()` 方法来获取写锁。
+`ReadWriteLock`接口维护一对锁：一个是读锁，只要没有正在进行的写操作，多个线程就可以获取；另一个是写锁，一次只能由一个线程获取。要获取读锁，必须调用`readLock()`。必须调用`writeLock()`方法来获取写锁。
 
-`ReentrantReadWriteLock` 是实现 `ReadWriteLock` 接口的类。
-
-Java 添加了许多类来支持读取和比较变量，以及修改和写入变量的原子操作。这些添加是为了消除非原子操作（如增加原始类型变量）发生线程干扰的可能性。
-
-`AtomicInteger` 是其中一个类，并具有原子操作 `incrementAndGet()` 和 `decrementAndGet()`。这些方法的任何并发执行都不会导致线程干扰。该类的方法以 `getAndXxx` 和 `xxxAndGet` 的形式存在，其中 `xxx` 是要执行的操作，例如递增或减小。
-
-当调用 `getAndXxx` 类型的方法时，它们返回旧值；而当调用 `xxxAndGet` 方法时，它们会执行操作然后返回更新后的值。
-
-## 32.2 其他原子类有：
-
-- AtomicBoolean
-- AtomicLong
-- AtomicIntegerArray
-- AtomicLongArray
-- AtomicReference
-
-无效的原子类是：
-
-- AtomicByte
-- AtomicShort
-- AtomicFloat
-- AtomicDouble
-
-## 33.1 简介
-
-Java 中的执行器框架（Executor framework）将任务的提交和任务的执行分离开。任务可以通过 `Runnable` 和 `Callable` 接口创建。
-
-`ExecutorService` 扩展了 `Executor` 并添加了许多方法来管理正在执行的任务以及执行这些任务的执行器的生命周期。
-
-`ScheduledExecutorService` 扩展了 `ExecutorService`，支持任务的定期执行或未来执行。`Future` 类代表异步任务的状态，该类有很多操作可以查询状态并取消 `Future` 对象。
-
-`Executors` 类为上述接口定义了许多工具和工厂方法。
-
-实现 `Executor` 接口时，只需要实现一个方法——`execute()`。通过此方法，我们可以决定如何执行 `Runnable`（接口 `Runnable`）任务，包括任务执行的顺序、可以并发执行的任务数量以及可以队列的任务数量。
-
-`Callable` 接口与 `Runnable` 接口的区别仅在于方法的签名：首先，该接口的唯一方法名为 `call`，与 `Runnable` 接口不同，具有返回值以及抛出受检查异常的能力。
-
-此外，`Callable` 接口是一个泛型接口，类型参数定义了 `call()` 方法可以返回的值类型。
-
-如果 `call` 方法不需要返回值，我们可以将类型参数定义为 `Void`。
-
-`Callable` 对象不能像 `Runnable` 对象那样传递给线程进行执行，因此我们在执行 `Callable` 对象时使用 `ExecutorService` 接口。
-
-`ExecutorService` 定义了管理任务进度和终止的方法。可以将单个 `Runnable` 或 `Callable` 对象提交给 `ExecutorService` 并返回 `Future` 对象。可以提交多个 `Runnable` 对象并返回 `Future` 对象。还存在方法用于关闭 `ExecutorService` 并允许或不允许已提交的任务完成。
-
-线程池允许创建一个预定义大小的可重用线程池，以并发执行任务。
-
-Java 7 添加了 `fork/join` 框架以支持硬件并行。它的目的是将较大的任务拆分为可以并行执行的较小任务，并在完成后合并各个任务的结果。
-
-`fork/join` 框架通过评估要执行任务的大小来工作：如果任务不够大到可以拆分，它将按顺序执行；如果足够大，任务将被拆分，直到小到可以顺序执行为止。
-
-在每个任务完成后，结果将合并回分叉该任务的线程。
-
-`ForkJoinPool` 是 `fork/join` 框架的一个具体实现，它实现了 `ExecutorService` 接口。`fork/join` 框架维护一个提交执行的任务队列，但它实现了一种工作窃取算法。一旦某个线程的队列中不再有任务，它将从其他线程的队列中窃取任务。这防止了等待线程的阻塞。
-
-使用 `fork/join` 框架时，任何必须进行处理的用户自定义类都应该扩展抽象类 `ForkJoinTask`以便在 `ForkJoinPool` 中执行。
-
-`ForkJoinTask` 被两个类扩展——用于不返回结果计算的 `RecursiveAction` 和用于返回结果的计算的 `RecursiveTask`。
-
-# 示例
-
-```java
-CarHire.java
-public class CarHire implements Runnable {
-    String carReg;
-
-    public CarHire(String carReg) {
-        this.carReg = carReg;
-    }
-
-    public void run() {
-        System.out.println("Completed hire of " + this.carReg);
-    }
-}
-```
-
-# 示例
-
-```java
-CarHireCallable.java
-import java.util.Map;
-public class CarHireCallable implements Runnable {
-    String carReg;
-
-    public CarHire(String carReg) {
-        this.carReg = carReg;
-    }
-
-    public void run() {
-        System.out.println("Completed hire of " + this.carReg);
-    }
-}
-```
-*(注：此处原文示例中 CarHireCallable 的代码似乎与 CarHire 重复，按要求不翻译代码块)*
-
-等等，重新审视原文示例，原文中的 `CarHireCallable.java` 代码块确实是 `Runnable` 的实现。我将严格遵循“代码块不需要翻译”的原则。
-
-由于我需要翻译的是“以下需要翻译的文本”，我将开始从 `immediately Calling method...` 之后到最后的 `}` 结束。
-
-[content]
-立即在锁对象上调用 `tryLock()` 方法会立即返回一个布尔值，定义是否可以锁定对象。
-
-获取显式锁的线程永远不会死锁，这与获取隐式锁的线程形成对比，后者可能会死锁。
-
-完成锁定资源的使用后，调用 `unlock()` 方法将释放该对象的锁。
-
-如果我们不想继续等待超过指定的时间，可以调用带参数的 `tryLock()` 方法，指定我们在放弃尝试获取锁之前想要等待多久。我们向此方法传递两个参数：一个表示时间值的 `long` 值和一个 `TimeUnit` 对象。
-
-还可以声明线程在等待锁时可以被中断。`lockInterruptibly()` 方法将尝试获取对象的锁，除非它被中断，此时将抛出一个 `InterruptedException`。
-
-隐式锁不能跨越多个代码块，锁在 `synchronized` 块结束时释放。然而，显式锁对象可以跨越多个方法。
-
-`ReadWriteLock` 接口维护一对锁：一个是读锁，只要没有正在进行的写操作，多个线程就可以获取；另一个是写锁，一次只能由一个线程获取。要获取读锁，必须调用 `readLock()`。必须调用 `writeLock()` 方法来获取写锁。
-
-`ReentrantReadWriteLock` 是实现 `ReadWriteLock` 接口的类。
+`ReentrantReadWriteLock`是实现`ReadWriteLock`接口的类。
 
 Java 添加了许多类来支持读取和比较变量，以及修改和写入变量的原子操作。这些添加是为了消除非原子操作（如增加原始类型变量）发生线程干扰的可能性。
 
-`AtomicInteger` 是其中一个类，并具有原子操作 `incrementAndGet()` 和 `decrementAndGet()`。这些方法的任何并发执行都不会导致线程干扰。该类的方法以 `getAndXxx` 和 `xxxAndGet` 的形式存在，其中 `xxx` 是要执行的操作，例如递增或减小。
+`AtomicInteger`是其中一个类，并具有原子操作`incrementAndGet()`和`decrementAndGet()`。这些方法的任何并发执行都不会导致线程干扰。该类的方法以`getAndXxx`和`xxxAndGet`的形式存在，其中`xxx`是要执行的操作，例如递增或减小。
 
-当调用 `getAndXxx` 类型的方法时，它们返回旧值；而当调用 `xxxAndGet` 方法时，它们会执行操作然后返回更新后的值。
+当调用`getAndXxx`类型的方法时，它们返回旧值；而当调用`xxxAndGet`方法时，它们会执行操作然后返回更新后的值。
 
 ## 32.2 其他原子类有：
 
-- AtomicBoolean
-- AtomicLong
-- AtomicIntegerArray
-- AtomicLongArray
-- AtomicReference
+- `AtomicBoolean`
+- `AtomicLong`
+- `AtomicIntegerArray`
+- `AtomicLongArray`
+- `AtomicReference`
 
 无效的原子类是：
 
-- AtomicByte
-- AtomicShort
-- AtomicFloat
-- AtomicDouble
+- `AtomicByte`
+- `AtomicShort`
+- `AtomicFloat`
+- `AtomicDouble`
 
 ## 33.1 简介
 
-Java 中的执行器框架（Executor framework）将任务的提交和任务的执行分离开。任务可以通过 `Runnable` 和 `Callable` 接口创建。
+Java 中的执行器框架（`Executor` framework）将任务的提交和任务的执行分离开。任务可以通过`Runnable`和`Callable`接口创建。
 
-`ExecutorService` 扩展了 `Executor` 并添加了许多方法来管理正在执行的任务以及执行这些任务的执行器的生命周期。
+`ExecutorService`扩展了`Executor`并添加了许多方法来管理正在执行的任务以及执行这些任务的执行器的生命周期。
 
-`ScheduledExecutorService` 扩展了 `ExecutorService`，支持任务的定期执行或未来执行。`Future` 类代表异步任务的状态，该类有很多操作可以查询状态并取消 `Future` 对象。
+`ScheduledExecutorService`扩展了`ExecutorService`，支持任务的定期执行或未来执行。`Future`类代表异步任务的状态，该类有很多操作可以查询状态并取消`Future`对象。
 
-`Executors` 类为上述接口定义了许多工具和工厂方法。
+`Executors`类为上述接口定义了许多工具和工厂方法。
 
-实现 `Executor` 接口时，只需要实现一个方法——`execute()`。通过此方法，我们可以决定如何执行 `Runnable`（接口 `Runnable`）任务，包括任务执行的顺序、可以并发执行的任务数量以及可以队列的任务数量。
+实现`Executor`接口时，只需要实现一个方法——`execute()`。通过此方法，我们可以决定如何执行`Runnable`（接口`Runnable`）任务，包括任务执行的顺序、可以并发执行的任务数量以及可以队列的任务数量。
 
-`Callable` 接口与 `Runnable` 接口的区别仅在于方法的签名：首先，该接口的唯一方法名为 `call`，与 `Runnable` 接口不同，具有返回值以及抛出受检查异常的能力。
+`Callable`接口与`Runnable`接口的区别仅在于方法的签名：首先，该接口的唯一方法名为`call`，与`Runnable`接口不同，具有返回值以及抛出受检查异常的能力。
 
-此外，`Callable` 接口是一个泛型接口，类型参数定义了 `call()` 方法可以返回的值类型。
+此外，`Callable`接口是一个泛型接口，类型参数定义了`call()`方法可以返回的值类型。
 
-如果 `call` 方法不需要返回值，我们可以将类型参数定义为 `Void`。
+如果`call`方法不需要返回值，我们可以将类型参数定义为`Void`。
 
-`Callable` 对象不能像 `Runnable` 对象那样传递给线程进行执行，因此我们在执行 `Callable` 对象时使用 `ExecutorService` 接口。
+`Callable`对象不能像`Runnable`对象那样传递给线程进行执行，因此我们在执行`Callable`对象时使用`ExecutorService`接口。
 
-`ExecutorService` 定义了管理任务进度和终止的方法。可以将单个 `Runnable` 或 `Callable` 对象提交给 `ExecutorService` 并返回 `Future` 对象。可以提交多个 `Runnable` 对象并返回 `Future` 对象。还存在方法用于关闭 `ExecutorService` 并允许或不允许已提交的任务完成。
+`ExecutorService`定义了管理任务进度和终止的方法。可以将单个`Runnable`或`Callable`对象提交给`ExecutorService`并返回`Future`对象。可以提交多个`Runnable`对象并返回`Future`对象。还存在方法用于关闭`ExecutorService`并允许或不允许已提交的任务完成。
 
 线程池允许创建一个预定义大小的可重用线程池，以并发执行任务。
 
-`fork/join` 框架被添加到 Java 7 以支持硬件并行。它的目的是将较大的任务拆分为可以并行执行的较小任务，并在完成后合并各个任务的结果。
+`fork/join`框架被添加到 Java 7 以支持硬件并行。它的目的是将较大的任务拆分为可以并行执行的较小任务，并在完成后合并各个任务的结果。
 
-`fork/join` 框架通过评估要执行任务的大小来工作：如果任务不够大到可以拆分，它将按顺序执行；如果足够大，任务将被拆分，直到小到可以顺序执行为止。
+`fork/join`框架通过评估要执行任务的大小来工作：如果任务不够大到可以拆分，它将按顺序执行；如果足够大，任务将被拆分，直到小到可以顺序执行为止。
 
 在每个任务完成后，结果将合并回分叉该任务的线程。
 
-`ForkJoinPool` 是 `fork/join` 框架的一个具体实现，它实现了 `ExecutorService` 接口。`fork/join` 框架维护一个提交执行的任务队列，但它实现了一种工作窃取算法。一旦某个线程的队列中不再有任务，它将从其他线程的队列中窃取任务。这防止了等待线程的阻塞。
+`ForkJoinPool`是`fork/join`框架的一个具体实现，它实现了`ExecutorService`接口。`fork/join`框架维护一个提交执行的任务队列，但它实现了一种工作窃取算法。一旦某个线程的队列中不再有任务，它将从其他线程的队列中窃取任务。这防止了等待线程的阻塞。
 
-使用 `fork/join` 框架时，任何必须进行处理的用户自定义类都应该扩展抽象类 `ForkJoinTask`以便在 `ForkJoinPool` 中执行。
+使用`fork/join`框架时，任何必须进行处理的用户自定义类都应该扩展抽象类`ForkJoinTask`以便在`ForkJoinPool`中执行。
 
-`ForkJoinTask` 被两个类扩展——用于不返回结果计算的 `RecursiveAction` 和用于返回结果的计算的 `RecursiveTask`。
+`ForkJoinTask`被两个类扩展——用于不返回结果计算的`RecursiveAction`和用于返回结果的计算的`RecursiveTask`。
 
 # 示例
 
@@ -16793,133 +17960,80 @@ public class CarHireCallable implements Runnable {
 
 # 示例
 
-```java
-CarHireCallable.java
-import java.util.Map;
-import java.util.concurrent.Callable;
-
-public class CarHireCallable implements Callable {
-    String carReg;
-    String driverName;
-    Map<String, String> driverCarMap = new HashMap<>();
-
-    public CarHireCallable(String carReg, String driverName) {
-        this.carReg = carReg;
-        this.driverName = driverName;
-    }
-
-    public Boolean call() throws Exception {
-        if(driverName.equals(driverCarMap.get(carReg))){
-            System.out.println(driverName()+" hired car "+carReg());
-            return true;
-        } else {
-            System.out.println("Incorrect driver pairing: "+this.carReg+", "+this.driverName);
-            return false;
-        }
-    }
-
-    public String getDriverName() {
-        return driverName;
-    }
-
-    public String getCarReg() {
-        return carReg;
-    }
-}
-```
-*(注：由于用户提供的原文文本中 `CarHireCallable.java` 代码块内容与 `CarHire.java` 完全重复，且根据“代码块不需要翻译”原则，我将保持原始代码块内容。但发现用户提供的待翻译文本中 `CarHireCallable.java` 块确实出现了两次，且 第一次是 Runnable，第二次是 Callable？不对，我仔细看用户提供的“需要翻译的文本”部分)*
-
-**重新检查用户提供的“需要翻译的文本”：**
-1. `CarHire.java` (Runnable)
-2. `CarHireCallable.java` (Runnable - *这里原文似乎写错了，但我不翻译代码*)
-3. `CarHireCallable.java` (Callable - *这里又出现了，且内容变了*)
-
-等等，我发现用户提供的“需要翻译的文本”中，`CarHireCallable.java` 出现了两次，且内容完全不同。我将按照原文顺序逐行翻译，**不翻译代码块内容**。
-
-*(纠正：我发现用户提供的文本中 `CarHireCallable.java` 第一次出现确实是 `Runnable` 代码，第二次出现是 `Callable` 代码。我将严格执行翻译文本，保留代码块。)*
-
-等等，我发现用户提供的文本中 `CarHireCallable..java     ` ` ``....................。
-另一个。。
 
 
-
-
-
-，最终的翻译文：
-
-[content]
-立即在锁对象上调用 `tryLock()` 方法会立即返回一个布尔值，定义是否可以锁定对象。
+立即在锁对象上调用`tryLock()`方法会立即返回一个布尔值，定义是否可以锁定对象。
 
 获取显式锁的线程永远不会死锁，这与获取隐式锁的线程形成对比，后者可能会死锁。
 
-完成锁定资源的使用后，调用 `unlock()` 方法将释放该对象的锁。
+完成锁定资源的使用后，调用`unlock()`方法将释放该对象的锁。
 
-如果我们不想继续等待超过指定的时间，可以调用带参数的 `tryLock()` 方法，指定我们在放弃尝试获取锁之前想要等待多久。我们向此方法传递两个参数：一个表示时间值的 `long` 值和一个 `TimeUnit` 对象。
+如果我们不想继续等待超过指定的时间，可以调用带参数的`tryLock()`方法，指定我们在放弃尝试获取锁之前想要等待多久。我们向此方法传递两个参数：一个表示时间值的`long`值和一个`TimeUnit`对象。
 
-还可以声明线程在等待锁时可以被中断。`lockInterruptibly()` 方法将尝试获取对象的锁，除非它被中断，此时将抛出一个 `InterruptedException`。
+还可以声明线程在等待锁时可以被中断。`lockInterruptibly()`方法将尝试获取对象的锁，除非它被中断，此时将抛出一个`InterruptedException`。
 
-隐式锁不能跨越多个代码块，锁在 `synchronized` 块结束时释放。然而，显式锁对象可以跨越多个方法。
+隐式锁不能跨越多个代码块，锁在`synchronized`块结束时释放。然而，显式锁对象可以跨越多个方法。
 
-`ReadWriteLock` 接口维护一对锁：一个是读锁，只要没有正在进行的写操作，多个线程就可以获取；另一个是写锁，一次只能由一个线程获取。要获取读锁，必须调用 `readLock()`。必须调用 `writeLock()` 方法来获取写锁。
+`ReadWriteLock`接口维护一对锁：一个是读锁，只要没有正在进行的写操作，多个线程就可以获取；另一个是写锁，一次只能由一个线程获取。要获取读锁，必须调用`readLock()`。必须调用`writeLock()`方法来获取写锁。
 
-`ReentrantReadWriteLock` 是实现 `ReadWriteLock` 接口的类。
+`ReentrantReadWriteLock`是实现`ReadWriteLock`接口的类。
 
 Java 添加了许多类来支持读取和比较变量，以及修改和写入变量的原子操作。这些添加是为了消除非原子操作（如增加原始类型变量）发生线程干扰的可能性。
 
-`AtomicInteger` 是其中一个类，并具有原子操作 `incrementAndGet()` 和 `decrementAndGet()`。这些方法的任何并发执行都不会导致线程干扰。该类的方法以 `getAndXxx` 和 `xxxAndGet` 的形式存在，其中 `xxx` 是要执行的操作，例如递增或减小。
+`AtomicInteger`是其中一个类，并具有原子操作`incrementAndGet()`和`decrementAndGet()`。这些方法的任何并发执行都不会导致线程干扰。该类的方法以`getAndXxx`和`xxxAndGet`的形式存在，其中`xxx`是要执行的操作，例如递增或减小。
 
-当调用 `getAndXxx` 类型的方法时，它们返回旧值；而当调用 `xxxAndGet` 方法时，它们会执行操作然后返回更新后的值。
+当调用`getAndXxx`类型的方法时，它们返回旧值；而当调用`xxxAndGet`方法时，它们会执行操作然后返回更新后的值。
 
 ## 32.2 其他原子类有：
 
-- AtomicBoolean
-- AtomicLong
-- AtomicIntegerArray
-- AtomicLongArray
-- AtomicReference
+- `AtomicBoolean`
+- `AtomicLong`
+- `AtomicIntegerArray`
+- `AtomicLongArray`
+- `AtomicReference`
 
 无效的原子类是：
 
-- AtomicByte
-- AtomicShort
-- AtomicFloat
-- AtomicDouble
+- `AtomicByte`
+- `AtomicShort`
+- `AtomicFloat`
+- `AtomicDouble`
 
-## 33.1 简介 
+## 33.1 简介
 
-Java 中的执行器框架（Executor framework）将任务的提交和任务的执行分离开。任务可以通过 `Runnable` 和 `Callable` 接口创建。
+Java 中的执行器框架（Executor framework）将任务的提交和任务的执行分离开。任务可以通过`Runnable`和`Callable`接口创建。
 
-`ExecutorService` 扩展了 `Executor` 并添加了许多方法来管理正在执行的任务以及执行这些任务的执行器的生命周期。
+`ExecutorService`扩展了`Executor`并添加了许多方法来管理正在执行的任务以及执行这些任务的执行器的生命周期。
 
-`ScheduledExecutorService` 扩展了 `ExecutorService`，支持任务的定期执行或未来执行。`Future` 类代表异步任务的状态，该类有很多操作可以查询状态并取消 `Future` 对象。
+`ScheduledExecutorService`扩展了`ExecutorService`，支持任务的定期执行或未来执行。`Future`类代表异步任务的状态，该类有很多操作可以查询状态并取消`Future`对象。
 
-`Executors` 类为上述接口定义了许多工具和工厂方法。
+`Executors`类为上述接口定义了许多工具和工厂方法。
 
-实现 `Executor` 接口时，只需要实现一个方法——`execute()`。通过此方法，我们可以决定如何执行 `Runnable`（接口 `Runnable`）任务，包括任务执行的顺序、可以并发执行的任务数量以及可以队列的任务数量。
+实现`Executor`接口时，只需要实现一个方法——`execute()`。通过此方法，我们可以决定如何执行`Runnable`（接口`Runnable`）任务，包括任务执行的顺序、可以并发执行的任务数量以及可以队列的任务数量。
 
-`Callable` 接口与 `Runnable` 接口的区别仅在于方法的签名：首先，该接口的唯一方法名为 `call`，与 `Runnable` 接口不同，具有返回值以及抛出受检查异常的能力。
+`Callable`接口与`Runnable`接口的区别仅在于方法的签名：首先，该接口的唯一方法名为`call`，与`Runnable`接口不同，具有返回值以及抛出受检查异常的能力。
 
-此外，`Callable` 接口是一个泛型接口，类型参数定义了 `call()` 方法可以返回的值类型。
+此外，`Callable`接口是一个泛型接口，类型参数定义了`call()`方法可以返回的值类型。
 
-如果 `call` 方法不需要返回值，我们可以将类型参数定义为 `Void`。
+如果`call`方法不需要返回值，我们可以将类型参数定义为`Void`。
 
-`Callable` 对象不能像 `Runnable` 对象那样传递给线程进行执行，因此我们在执行 `Callable` 对象时使用 `ExecutorService` 接口。
+`Callable`对象不能像`Runnable`对象那样传递给线程进行执行，因此我们在执行`Callable`对象时使用`ExecutorService`接口。
 
-`ExecutorService` 定义了管理任务进度和终止的方法。可以将单个 `Runnable` 或 `Callable` 对象提交给 `ExecutorService` 并返回 `Future` 对象。可以提交多个 `Runnable` 对象并返回 `Future` 对象。还存在方法用于关闭 `ExecutorService` 并允许或不允许已提交的任务完成。
+`ExecutorService`定义了管理任务进度和终止的方法。可以将单个`Runnable`或`Callable`对象提交给`ExecutorService`并返回`Future`对象。可以提交多个`Runnable`对象并返回`Future`对象。还存在方法用于关闭`ExecutorService`并允许或不允许已提交的任务完成。
 
 线程池允许创建一个预定义大小的可重用线程池，以并发执行任务。
 
-`fork/join` 框架被添加到 Java 7 以支持硬件并行。它的目的是将较大的任务拆分为可以并行执行的较小任务，并在完成后合并各个任务的结果。
+`fork/join`框架被添加到 Java 7 以支持硬件并行。它的目的是将较大的任务拆分为可以并行执行的较小任务，并在完成后合并各个任务的结果。
 
-`fork/join` 框架通过评估要执行任务的大小来工作：如果任务不够大到可以拆分，它将按顺序执行；如果足够大，任务将被拆分，直到小到可以顺序执行为止。
+`fork/join`框架通过评估要执行任务的大小来工作：如果任务不够大到可以拆分，它将按顺序执行；如果足够大，任务将被拆分，直到小到可以顺序执行为止。
 
 在每个任务完成后，结果将合并回分叉该任务的线程。
 
-`ForkJoinPool` 是 `fork/join` 框架的一个具体实现，它实现了 `ExecutorService` 接口。`fork/join` 框架维护一个提交执行的任务队列，但它实现了一种工作窃取算法。一旦某个线程的队列中不再有任务，它将从其他线程的队列中窃取任务。这防止了等待线程的阻塞。
+`ForkJoinPool`是`fork/join`框架的一个具体实现，它实现了`ExecutorService`接口。`fork/join`框架维护一个提交执行的任务队列，但它实现了一种工作窃取算法。一旦某个线程的队列中不再有任务，它将从其他线程的队列中窃取任务。这防止了等待线程的阻塞。
 
-使用 `fork/join` 框架时，任何必须进行处理的用户自定义类都应该扩展抽象类 `ForkJoinTask`以便在 `ForkJoinPool` 中执行。
+使用`fork/join`框架时，任何必须进行处理的用户自定义类都应该扩展抽象类`ForkJoinTask`以便在`ForkJoinPool`中执行。
 
-`ForkJoinTask` 被两个类扩展——用于不返回结果计算的 `RecursiveAction` 和用于返回结果的计算的 `RecursiveTask`。
+`ForkJoinTask`被两个类扩展——用于不返回结果计算的`RecursiveAction`和用于返回结果的计算的`RecursiveTask`。
 
 # 示例
 
@@ -16993,11 +18107,6 @@ public class CarHireCallable implements Callable {
     }
 }
 ```
-*(注：由于用户提供的原文文本中 `CarHireCallable.java` 代码块出现了两次，且内容完全不同，我将按照原文顺序逐行翻译，**不翻译代码块内容**。)*
-
-等等，我发现用户提供的文本中 `CarHireCallable.java` 第一次出现确实是 `Runnable` 代码，第二次出现是 `Callable` 代码。我将严格执行翻译文本，保留代码块。)*
-
-
 
 ```java
 // 这一行应该抛出异常，因为它在
@@ -17037,11 +18146,11 @@ public class ScheduledTaskExecutor {
 
 # 枚举 (Enum)
 
-enum 是从 jdk1.5 开始引入的关键字。
+`enum`是从 jdk1.5 开始引入的关键字。
 
-enum 是一种类，其字段由一组该枚举类型的固定常量组成。
+`enum`是一种类，其字段由一组该枚举类型的固定常量组成。
 
-如果你想在类类型中定义常量是不可能的，但我们可以在 enum 中实现这一点。
+如果你想在类类型中定义常量是不可能的，但我们可以在`enum`中实现这一点。
 
 ```java
 class Hello{
@@ -17060,7 +18169,7 @@ enum MyEnum{
 }
 ```
 
-对于每一个定义的枚举常量，都会创建一个 Enum 类型的 Enum 对象。
+对于每一个定义的枚举常量，都会创建一个`Enum`类型的`Enum`对象。
 
 # 示例
 
@@ -17069,9 +18178,9 @@ MyEnum obj1 = new MyEnum(); // 错误
 MyEnum obj2 = MyEnum.X;
 ```
 
-MyEnum obj3 = MyEnum.Y;
+`MyEnum obj3 = MyEnum.Y;`
 
-你不能为 Enum 创建实例，但可以声明引用变量。
+你不能为`Enum`创建实例，但可以声明引用变量。
 
 ```java
 package com.jtc.jtc2;
@@ -17112,18 +18221,20 @@ public class jtc2 {
 
 你可以通过以下方法访问这些值：
 
-- String name();
-- int ordinal();
+- `String name();`
+- `int ordinal();`
+
+
 
 # 枚举与类的区别
 
 | 类 (Class) | 枚举 (Enum) |
 | :--- | :--- |
-| 1) 对于每一个类，java.lang.Object 都是父类。 | 1) 对于每一个枚举，java.lang.Enum 是父类型。 |
-| 2) 类可以实例化。 | 2) 枚 无法实例化，但你可以声明引用变量。 |
+| 1) 对于每一个类，`java.lang.Object` 都是父类。 | 1) 对于每一个枚举，`java.lang.Enum` 是父类型。 |
+| 2) 类可以实例化。 | 2) 枚举无法实例化，但你可以声明引用变量。 |
 | 3) 一个类可以继承另一个类。 | 3) 一个枚举不能继承另一个枚举。 |
-| 4) 类可以被标记为 abstract 或 final。 | 4) 枚不能被标记为 abstract 或 final。 |
-| 5) 类可以包含抽象方法。 | 5) 枚不能包含抽象方法。 |
+| 4) 类可以被标记为 `abstract` 或 `final`。 | 4) 枚举不能被标记为 `abstract` 或 `final`。 |
+| 5) 类可以包含抽象方法。 | 5) 枚举不能包含抽象方法。 |
 
 # 相似点
 
@@ -17307,7 +18418,6 @@ class Jtc1 {
     }
 }
 ```
-
 
 ```java
 static void m1StaticMethod() {

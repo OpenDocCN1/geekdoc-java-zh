@@ -1,53 +1,54 @@
+
 # 使用 MongoDB 和 Spring Boot 上传和检索文件
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-boot-mongodb-upload-file>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将讨论如何使用 MongoDB 和 Spring Boot 上传和检索文件。
 
-**我们将使用 MongoDB `BSON`处理小文件，使用`GridFS`处理大文件。**
+**我们将使用 MongoDB `BSON` 处理小文件，使用 `GridFS` 处理大文件。**
 
-## 2。Maven 配置
+## 2. Maven 配置
 
-首先，我们将把`[spring-boot-starter-data-mongodb](https://web.archive.org/web/20220626211356/https://search.maven.org/search?q=g:org.springframework.boot%20AND%20a:spring-boot-starter-data-mongodb)`依赖项添加到我们的`pom.xml`中:
+首先，我们将把 [`spring-boot-starter-data-mongodb`](https://web.archive.org/web/20220626211356/https://search.maven.org/search?q=g:org.springframework.boot%20AND%20a:spring-boot-starter-data-mongodb) 依赖项添加到我们的 `pom.xml` 中：
 
-```java
+```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-data-mongodb</artifactId>
 </dependency>
 ```
 
-此外，我们将需要`spring-boot-starter-web`和`spring-boot-starter-thymeleaf`依赖项来显示我们应用程序的用户界面。这些依赖也显示在我们的[Spring Boot 百里香叶](/web/20220626211356/https://www.baeldung.com/spring-boot-crud-thymeleaf)指南中。
+此外，我们将需要 `spring-boot-starter-web` 和 `spring-boot-starter-thymeleaf` 依赖项来显示我们应用程序的用户界面。这些依赖也显示在我们的 [Spring Boot 百里香叶](/web/20220626211356/https://www.baeldung.com/spring-boot-crud-thymeleaf) 指南中。
 
-在本教程中，我们使用的是 Spring Boot 版本 2.x
+在本教程中，我们使用的是 Spring Boot 版本 2.x。
 
-## 3。Spring Boot 房产
+## 3. Spring Boot 属性
 
 接下来，我们将配置必要的 Spring Boot 属性。
 
-让我们从**MongoDB 属性**开始:
+让我们从 **MongoDB 属性** 开始：
 
-```java
+```properties
 spring.data.mongodb.host=localhost
 spring.data.mongodb.port=27017
 spring.data.mongodb.database=springboot-mongo
 ```
 
-**我们还将设置 Servlet 多部分属性，以允许上传大文件:**
+**我们还将设置 Servlet 多部分属性，以允许上传大文件：**
 
-```java
+```properties
 spring.servlet.multipart.max-file-size=256MB
 spring.servlet.multipart.max-request-size=256MB
 spring.servlet.multipart.enabled=true
 ```
 
-## 4。上传小文件
+## 4. 上传小文件
 
-现在，我们将讨论如何使用 MongoDB `BSON`上传和检索小文件(大小< 16MB)。
+现在，我们将讨论如何使用 MongoDB `BSON` 上传和检索小文件（大小 < 16MB）。
 
-这里，我们有一个简单的`Document`类— `Photo.` **我们将把我们的图像文件存储在一个`BSON` `Binary`** :
+这里，我们有一个简单的 `Document` 类——`Photo`。**我们将把我们的图像文件存储在一个 `BSON` `Binary` 中：**
 
 ```java
 @Document(collection = "photos")
@@ -61,16 +62,16 @@ public class Photo {
 }
 ```
 
-我们会有一个简单的`PhotoRepository`:
+我们会有一个简单的 `PhotoRepository`：
 
 ```java
 public interface PhotoRepository extends MongoRepository<Photo, String> { }
 ```
 
-现在，对于`PhotoService`，我们只有两种方法:
+现在，对于 `PhotoService`，我们只有两种方法：
 
-*   `addPhoto()` —将`Photo`上传到 MongoDB
-*   `getPhoto()` —检索具有给定 id 的`Photo`
+- `addPhoto()` —— 将 `Photo` 上传到 MongoDB。
+- `getPhoto()` —— 检索具有给定 id 的 `Photo`。
 
 ```java
 @Service
@@ -92,11 +93,11 @@ public class PhotoService {
 }
 ```
 
-## 5。上传大文件
+## 5. 上传大文件
 
-**现在，我们将使用`GridFS`来上传和检索大文件。**
+**现在，我们将使用 `GridFS` 来上传和检索大文件。**
 
-首先，我们将定义一个简单的 DTO 来表示一个大文件:
+首先，我们将定义一个简单的 DTO 来表示一个大文件：
 
 ```java
 public class Video {
@@ -105,7 +106,7 @@ public class Video {
 }
 ```
 
-类似于`PhotoService`，我们将有一个带有两种方法的`VideoService`—`addVideo()`和`getVideo()`:
+类似于 `PhotoService`，我们将有一个带有两种方法的 `VideoService`——`addVideo()` 和 `getVideo()`：
 
 ```java
 @Service
@@ -136,17 +137,17 @@ public class VideoService {
 }
 ```
 
-关于使用 Spring 的更多细节，请查看我们的 Spring Data MongoDB 文章中的 [GridFS。](/web/20220626211356/https://www.baeldung.com/spring-data-mongodb-gridfs)
+关于使用 Spring 的更多细节，请查看我们的 Spring Data MongoDB 文章中的 [GridFS](/web/20220626211356/https://www.baeldung.com/spring-data-mongodb-gridfs)。
 
-## 6。控制器
+## 6. 控制器
 
-现在，让我们来看看控制器— `PhotoController`和`VideoController`。
+现在，让我们来看看控制器——`PhotoController` 和 `VideoController`。
 
-### 6.1。`PhotoController`
+### 6.1. `PhotoController`
 
-首先，**我们有`PhotoController,` ，它将使用我们的`PhotoService`来添加/获取照片**。
+首先，**我们有 `PhotoController`，它将使用我们的 `PhotoService` 来添加和获取照片。**
 
-我们将定义`addPhoto()`方法来上传并创建一个新的`Photo`:
+我们将定义 `addPhoto()` 方法来上传并创建一个新的 `Photo`：
 
 ```java
 @PostMapping("/photos/add")
@@ -158,7 +159,7 @@ public String addPhoto(@RequestParam("title") String title,
 }
 ```
 
-我们还需要`getPhoto()`来检索具有给定 id 的照片:
+我们还需要 `getPhoto()` 来检索具有给定 id 的照片：
 
 ```java
 @GetMapping("/photos/{id}")
@@ -171,13 +172,13 @@ public String getPhoto(@PathVariable String id, Model model) {
 }
 ```
 
-**注意，由于我们将图像数据作为`byte[]`返回，我们将它转换为`Base64` `String`以在前端显示。**
+**注意，由于我们将图像数据作为 `byte[]` 返回，我们将它转换为 `Base64` `String` 以在前端显示。**
 
-### 6.2。`VideoController`
+### 6.2. `VideoController`
 
-接下来，我们来看看我们的`VideoController`。
+接下来，我们来看看我们的 `VideoController`。
 
-这将有一个类似的方法`addVideo()`，上传一个`Video`到我们的 MongoDB:
+这将有一个类似的方法 `addVideo()`，上传一个 `Video` 到我们的 MongoDB：
 
 ```java
 @PostMapping("/videos/add")
@@ -188,7 +189,7 @@ public String addVideo(@RequestParam("title") String title,
 }
 ```
 
-这里我们用`getVideo()`来检索一个带有给定`id`的`Video`:
+这里我们用 `getVideo()` 来检索一个带有给定 `id` 的 `Video`：
 
 ```java
 @GetMapping("/videos/{id}")
@@ -200,7 +201,7 @@ public String getVideo(@PathVariable String id, Model model) throws Exception {
 }
 ```
 
-我们还可以添加一个`streamVideo()`方法，该方法将从`Video` `InputStream`创建一个流 URL:
+我们还可以添加一个 `streamVideo()` 方法，该方法将从 `Video` `InputStream` 创建一个流 URL：
 
 ```java
 @GetMapping("/videos/stream/{id}")
@@ -210,12 +211,13 @@ public void streamVideo(@PathVariable String id, HttpServletResponse response) t
 }
 ```
 
-## 7。前端
+## 7. 前端
 
 最后，让我们看看我们的前端。
-让我们从`uploadPhoto.html`开始，它提供了一个简单的上传图片的表单:
 
-```java
+让我们从 `uploadPhoto.html` 开始，它提供了一个简单的上传图片的表单：
+
+```html
 <html>
 <body>
 <h1>Upload new Photo</h1>
@@ -228,9 +230,9 @@ public void streamVideo(@PathVariable String id, HttpServletResponse response) t
 </html>
 ```
 
-接下来，我们将添加`photos.html`视图来显示我们的照片:
+接下来，我们将添加 `photos.html` 视图来显示我们的照片：
 
-```java
+```html
 <html>
 <body>
     <h1>View Photo</h1>
@@ -240,9 +242,9 @@ public void streamVideo(@PathVariable String id, HttpServletResponse response) t
 </html>
 ```
 
-类似地，我们用`uploadVideo.html`上传一个`Video`:
+类似地，我们用 `uploadVideo.html` 上传一个 `Video`：
 
-```java
+```html
 <html>
 <body>
 <h1>Upload new Video</h1>
@@ -255,9 +257,9 @@ public void streamVideo(@PathVariable String id, HttpServletResponse response) t
 </html>
 ```
 
-和`videos.html`显示视频:
+和 `videos.html` 显示视频：
 
-```java
+```html
 <html>
 <body>
     <h1>View Video</h1>
@@ -269,8 +271,8 @@ public void streamVideo(@PathVariable String id, HttpServletResponse response) t
 </html>
 ```
 
-## 8。结论
+## 8. 结论
 
-在本文中，我们学习了如何使用 MongoDB 和 Spring Boot 上传和检索文件。我们使用了`BSON`和`GridFS`来上传和检索文件。
+在本文中，我们学习了如何使用 MongoDB 和 Spring Boot 上传和检索文件。我们使用了 `BSON` 和 `GridFS` 来上传和检索文件。
 
-和往常一样，完整的源代码可以在 [GitHub 项目](https://web.archive.org/web/20220626211356/https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-boot-persistence-mongodb)中获得。
+和往常一样，完整的源代码可以在 [GitHub 项目](https://web.archive.org/web/20220626211356/https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-boot-persistence-mongodb) 中获得。

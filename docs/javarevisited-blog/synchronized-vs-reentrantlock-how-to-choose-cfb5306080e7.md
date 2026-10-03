@@ -1,8 +1,9 @@
+
 # Synchronized VS ReentrantLock，如何选择？
 
 > 原文：<https://medium.com/javarevisited/synchronized-vs-reentrantlock-how-to-choose-cfb5306080e7?source=collection_archive---------1----------------------->
 
-在多线程场景中，我们经常使用 Synchronized 和 Reentrantlock。你知道它们之间的区别吗？
+在多线程场景中，我们经常使用`Synchronized`和`Reentrantlock`。你知道它们之间的区别吗？
 
 ![](img/85e5261c711e371cdcdc1ad9d4d866cc.png)
 

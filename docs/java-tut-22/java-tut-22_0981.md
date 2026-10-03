@@ -1,3 +1,5 @@
+
+
 # 命名异常
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/ops/exception.html`](https://docs.oracle.com/javase/tutorial/jndi/ops/exception.html)
@@ -12,7 +14,6 @@ try {
     // Handle the error
     System.err.println(e);
 }
-
 ```
 
 ## 异常类层次结构
@@ -32,7 +33,6 @@ try {
     // Handle the error
     System.err.println(e);
 }
-
 ```
 
 ## 枚举
@@ -45,4 +45,5 @@ try {
 
 在本教程文本中嵌入的内联示例代码中，通常为了可读性而省略了`try/catch`子句。通常，因为这里只显示代码片段，所以只包含直接用于说明概念的行。如果查看本教程附带的源文件，您将看到用于`NamingException`的`try/catch`子句的适当位置。
 
-javax.naming 包中的异常可以在[这里](https://docs.oracle.com/javase/8/docs/api/javax/naming/package-summary.html)找到。
+`javax.naming`包中的异常可以在[这里](https://docs.oracle.com/javase/8/docs/api/javax/naming/package-summary.html)找到。
+

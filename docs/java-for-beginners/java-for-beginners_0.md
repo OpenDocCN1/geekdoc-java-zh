@@ -1,10 +1,5 @@
+
 # Java 入门指南
-
-
-
-
-![Image](img/page-divider.png)
-
 
 ## Java 简介
 
@@ -12,9 +7,7 @@ Java 由 James Gosling、Patrick Naughton、Chris Warth、Ed Frank 和 Mike Sher
 
 这种继承了这两种知名且简单的编程语言的特性，使得 `java` 对计算机行业巨头更具吸引力，从而导致了大规模的成功。但 `java` 被误解为 `C++` 的复杂的互联网版本。在实践和哲学上，它与 `C++` 有显著区别。如果你有良好的 `C++` 知识，你会发现 `java` 是你的菜，并且在使用和理解 `java` 时感到轻松。
 
-![Image](img/java-logo.jpeg)
-
-Java Logo
+![Java Logo](img/java-logo.jpeg)
 
 因此，计算机语言的进化有两个主要原因。
 
@@ -56,11 +49,7 @@ Java 通过新的功能和网络程序重新设计了互联网，这些如下：
 
 在 J2SE 5 中，开发工具包被称为 `JDK 5`。
 
-在 J2SE 5 中，开发工具包被称为 `JDK 5`。
-
 ## Java 特性
-
-![Image](img/page-divider.png)
 
 ### 面向对象编程
 
@@ -71,26 +60,19 @@ Java 通过新的功能和网络程序重新设计了互联网，这些如下：
 
 ### OOP 原则
 
-- **封装**: 它保护数据免受外部干扰和误用。通过包装器实现。
-- 这防止了外部源访问数据。
+- **封装**：它保护数据免受外部干扰和误用。通过包装器实现。这防止了外部源访问数据。
 
-![Image](img/encapsulation.png)
-封装
+![封装](img/encapsulation.png)
 
 在 Java 中的封装
 
-- **继承**: 在此对象可以获取其他对象的属性。它遵循分级概念。
-- 它包含类和子类。
-- 这种特性是面向对象的。
-- 继承也可以与封装进行交互。
+- **继承**：在此对象可以获取其他对象的属性。它遵循分级概念。它包含类和子类。这种特性是面向对象的。继承也可以与封装进行交互。
 
-![Image](img/inheritance.png)
-继承
+![继承](img/inheritance.png)
 
-- **多态**: 它意味着有多种执行方法的方法。
+- **多态**：它意味着有多种执行方法的方法。
 
-![Image](img/polymorphism.png)
-多态
+![多态](img/polymorphism.png)
 
 ### 字节码
 
@@ -128,148 +110,176 @@ Java 通过新的功能和网络程序重新设计了互联网，这些如下：
 - 这是在运行时采取的操作，例如解析、验证和添加对象。
 - 它为我们提供了函数，允许我们动态地链接代码，这种方式是安全的。
 
+## 在 `java cmd` 中调用文件
 
-
-
-
-# 在 `java cmd` 中调用文件
-
-调用文件：“Example.java”。
-
-![Image](img/page-divider.png)
+调用文件：`Example.java`。
 
 ## 数据类型
 
 ### 整数
+
 它包括以下带符号的整数。
 
-- `Byte`: 宽度为 8 位，范围从 -128 到 127。它是最小的整数类型。当用户处理来自网络或文件的流或流动数据时它非常有用。
+- `Byte`：宽度为 8 位，范围从 -128 到 127。它是最小的整数类型。当用户处理来自网络或文件的流或流动数据时它非常有用。
+
 两个名为 `x` 和 `y` 的 `byte` 变量声明如下：
+
 ```java
 Byte x, y;
 ```
 
-- `Short`: 这种整数的宽度为 16 位，范围从 -32,768 到 32,767。它是 `java` 中不常用的数据类型。
+- `Short`：这种整数的宽度为 16 位，范围从 -32,768 到 32,767。它是 `java` 中不常用的数据类型。
+
 声明：
+
 ```java
 Short a;
 Short b;
 ```
 
-- `Int`: 这种整数的宽度为 32 位，范围从 -2,147,483,648 到 2,147,483,647。与 `byte` 和 `short` 相比，它更高效。它通常用于控制循环和索引数组。
+- `Int`：这种整数的宽度为 32 位，范围从 -2,147,483,648 到 2,147,483,647。与 `byte` 和 `short` 相比，它更高效。它通常用于控制循环和索引数组。
+
 声明：
+
 ```java
 Int a;
 ```
 
-- `Long`: 这种整数的宽度为 64 位，范围从 -9,223,372,036,854,775,808 到 9,223,372,036,854,775,807。它用于那些整数无法处理的大数值。
+- `Long`：这种整数的宽度为 64 位，范围从 -9,223,372,036,854,775,808 到 9,223,372,036,854,775,807。它用于那些整数无法处理的大数值。
+
 声明：
+
 ```java
 Int light speed;
 Long days;
 Long second;
-Seconds = days *24 *60*60;
+Seconds = days * 24 * 60 * 60;
 ```
 
 ### 浮点类型
+
 这是用于用于计算的实数，如平方根、正弦和余弦。它们分为类型。
 
-- `Float`: 宽度为 32 位，范围从 1.4e-045 到 3.4e + 038。`Float` 用作小数部分的变量类型，但指定为单精度。它可以用于表示美元和分。
+- `Float`：宽度为 32 位，范围从 1.4e-045 到 3.4e + 038。`Float` 用作小数部分的变量类型，但指定为单精度。它可以用于表示美元和分。
+
 声明：
+
 ```java
 Float hightemp;
 ```
 
-- `Double`: 宽度为 64 位，范围从 4.9e-324 到 1.8e + 308。它被使用并经过优化，可以用于高速数学计算。它具有双精度，比单精度更快。诸如 `sin()` 和 `sqrt()` 等函数返回 `double` 值。
+- `Double`：宽度为 64 位，范围从 4.9e-324 到 1.8e + 308。它被使用并经过优化，可以用于高速数学计算。它具有双精度，比单精度更快。诸如 `sin()` 和 `sqrt()` 等函数返回 `double` 值。
+
 声明：
+
 ```java
 Double pi, r, a;
 r = 10.4;
 pi = 3.14;
-a = pi* r * r;
+a = pi * r * r;
 ```
 
 ### 字符
+
 - `java` 中用于存储或声明字符的数据类型是 `char`。
 - 它是 `java` 中的 16 位类型。`char` 的范围是 0 到 65,536。
 - 本质上没有负数的 `chars`。
 
 `char` 的程序演示：
+
 ```java
 Class charExample
 {
-Public static void main (String args []) {
-    Char a, b;
-    a=88;
-    b=’y’;
-    system.out.print (“a and b: “);
-    system.out.println (a + “ “ +b);
-}
+    Public static void main (String args []) {
+        Char a, b;
+        a = 88;
+        b = 'y';
+        system.out.print ("a and b: ");
+        system.out.println (a + " " + b);
+    }
 }
 ```
 
 ### 布尔型
+
 - 它是逻辑值的原始类型。
 - 它倾向于只有两个可能值之一，`true` 或 `false`。
 - 它受 `if` 或 `for` 控制语句支配。
 
 ## 变量
+
 它是存储的基本单元，变量具有作用域、可见性和生命周期。
 
 变量声明：
+
 ```java
 Int x, y, z;
 ```
+
 或
+
 ```java
-Int x=1, y=2, z=5;
+Int x = 1, y = 2, z = 5;
 ```
 
 ## 类型转换与强制转换
+
 如果两个类型之间存在任何兼容性，`java` 将自动执行转换。
 
 ### Java 自动转换
+
 - 它在满足两个条件时执行。
 - 当两个类型兼容时；
 - 目标类型大于源类型。
 - 在两个条件都满足后，会发生宽转换。
 
 ### 强制转换兼容类型
+
 - 这是一种简单且显式的类型转换。
 - 当浮点类型转换附加到整数类型时，这种转换被称为截断。
 - 这是一种转换，有时被称为窄化转换。
 
 ## 数组
+
 它是相似变量的组，通过共同名称引用。数组中的可用元素通过索引访问。它可以被创建，并可能有一个或多个维度。
 
 ### 数组的类型
+
 数组主要有两种类型：
+
 1. 一维数组
 2. 多维数组
 
 ### 一维数组
+
 它是相似类型数据的列表。在创建数组之前，你需要先创建一个任意类型的变量。
+
 语法：
+
 ```java
 Type variable-name [ ];
 Int year_month [ ];
 ```
 
 ### 多维数组
+
 它是数组的数组，需要指定每个维度数组变量，使用其他方括号表示的额外索引。
+
 ```java
 Int twoD [ ] [ ] = new int [6] [7];
 ```
-![Image](img/page-divider.png)
 
 ## 运算符
+
 有四种主要的运算符：
+
 - 算术运算符
 - 位运算运算符
 - 关系运算符
 - 布尔逻辑运算符
 
 ### 算术运算符
+
 - 加法 Addition：此运算符用于相加值。用 `+` 表示。例如 `A = a + 4`。
 - 减法：此运算符用于减去值。用 `-` 表示。例如 `A = a - 4`。
 - 乘法：此运算符用于相乘值。用 `*` 表示。例如 `A = a * 4`。
@@ -279,6 +289,7 @@ Int twoD [ ] [ ] = new int [6] [7];
 - 递减 Decrement：此运算符用于减少操作数。用 `--` 表示。例如 `a--`。
 
 ### 位运算运算符
+
 - 一元取反 NOT：它反转所有位。用 `~` 表示。
 - 与逻辑 And：如果两个操作数均为 1，则产生 1。用 `&` 表示。
 - 逻辑或 OR：如果任一操作数为 1，则用 `|` 表示。
@@ -287,6 +298,7 @@ Int twoD [ ] [ ] = new int [6] [7];
 - 右移：它将所有位向右侧移动。用 `>>` 表示。
 
 ### 关系运算符
+
 - 等于 Equal to：此运算符显示值相等。用 `==` 表示。
 - 不等于 Not equal to：此关系运算符显示值不相等。用 `!=` 表示。
 - 大于 Greater than：此运算符显示一个值比另一个值大。用 `>` 表示。
@@ -295,58 +307,62 @@ Int twoD [ ] [ ] = new int [6] [7];
 - 小于等于 Less than or equal to：这显示一个值小于或等于另一个值而不大于。用 `<=` 表示。
 
 ### 布尔逻辑运算符
+
 - 逻辑与 AND：用 `&` 表示。
 - 逻辑或 OR：符号为 `|`。
 - 逻辑异或 XOR：使用 `^` 显示。
 - 逻辑一元取反 Unitary Not：显示为 `!`。
 
 ### 赋值运算符
+
 赋值是等号，用 `=` 表示。
+
 通用表示：
+
 ```java
 var = expression;
 ```
+
 在此处，表示 `var` 的变量应与 `expression` 的类型兼容。
+
 ```java
 Int a, b, c;
 a = b = c = 100;
 ```
 
 ### ? 运算符
+
 这用于替换 if then else 语句，并用 `?` 表示。
+
 例如：
+
 ```
 expression a ? expression b : expression c
 ```
 
-
-
-
 上文的示例说明，如果表达式 `a` 为真，则求值表达式 `b`，否则求值表达式 `c`。
-
-![Image](img/page-divider.png)
 
 ## 控制语句
 
 `java` 中有三种语句。
 
-1.  选择语句
-2.  迭代语句
-3.  跳转语句
+1. 选择语句
+2. 迭代语句
+3. 跳转语句
 
 ## 选择语句
 
-*   它的作用是根据在运行时才能确定的动态条件来管理待执行程序的执行流转。
-*   它提供了灵活性。
+- 它的作用是根据在运行时才能确定的动态条件来管理待执行程序的执行流转。
+- 它提供了灵活性。
 
 ### `If` 语句
+
 - 它为程序的执行提供了不同的路径。
 
 #### 语法
 
 ```
 If (condition provided) statement a;
-
 Else
 Statement b;
 ```
@@ -354,18 +370,18 @@ Statement b;
 这意味着如果条件为真，则执行 `statement a`；但如果条件为假，则执行 `statement b`。
 
 #### 示例
+
 ```
 int a, b;
-
-If (x < y) a=0;
-
+If (x < y) a = 0;
 Else
-b=0; 
+b = 0; 
 ```
 
 现在有一类使用 `if` 语句的程序类型，即嵌套 `if` 语句，这在编程世界中是非常常见的方法。
 
 #### 示例
+
 ```
 If (a == 10) {
     If (b < 15) i = j;
@@ -380,18 +396,15 @@ Else
 现在，括号中的第二个 `if` 语句与 `else` 关联。另一种使用 `if` 语句的程序类型是 `if-else-if` 阶梯语句。
 
 #### 示例
+
 ```
 If (condition)
 Statement;
-
 Else if (condition)
 Statement;
-
 Else if (condition)
 Statement;
-
 ...
-
 Else
 Statement;
 ```
@@ -411,7 +424,7 @@ Switch (expression)
     Case value 2:
         Statement
         Break;
-...
+    ...
     Case vale n:
         Statement
         Break;
@@ -423,26 +436,28 @@ Switch (expression)
 `switch` 语句的功能是将给定的值与所有 case 进行比较，当找到匹配项时，执行程序序列。
 
 #### 示例
+
 ```java
 Class sampswitch {
     Public static void main (string args [])
     {
         Switch (i)
         {
-            Case0:
-                System.out.println (“i is zero.”);
+            Case 0:
+                System.out.println ("i is zero.");
                 Break;
-            Case1:
-                System.out.println(“i is one.”)
+            Case 1:
+                System.out.println("i is one.")
                 Break;
             Default:
-                System.out.println (“i is greater than 4.”)
+                System.out.println ("i is greater than 4.")
         }
     }
 }
 ```
 
 #### 输出
+
 ```
 i is zero.
 i is one.
@@ -451,6 +466,7 @@ i is greater than 4.
 ```
 
 #### 嵌套 switch 循环程序示例
+
 ```java
 Switch (countfigures)
 {
@@ -458,10 +474,10 @@ Switch (countfigures)
         Switch (targetvalue)
         {//nested switch//
             Case 0:
-                System.out.println (“target is zero”;
+                System.out.println ("target is zero";
                 Break;
             Case 1:
-                System.out.println (“target is one”;
+                System.out.println ("target is one";
                 Break;
         }
         Break;
@@ -470,9 +486,10 @@ Switch (countfigures)
 ```
 
 #### `switch` 语句的重要特性是：
-*   与 `if` 不同，`Switch` 语句只能检查相等性。
-*   在同一个 `switch` 中不能有两个具有相同值的 case 常量。
-*   它比使用一组嵌套的 `if` 语句更有效。
+
+- 与 `if` 不同，`Switch` 语句只能检查相等性。
+- 在同一个 `switch` 中不能有两个具有相同值的 case 常量。
+- 它比使用一组嵌套的 `if` 语句更有效。
 
 ## 迭代语句
 
@@ -486,21 +503,22 @@ Switch (countfigures)
 
 ```
 While (condition) {
-    // 循环体体
+    // 循环体
 }
 ```
 
 当条件为真时，执行循环。当条件为假时，控制权将传递到循环后的下一行代码。
 
 #### 示例
+
 ```java
 Class while {
     Public static void main (string args [])
     {
         Int n = 5;
-        While (n>0)
+        While (n > 0)
         {
-            System.out.println (“tick “+ n);
+            System.out.println ("tick " + n);
             n--;
         }
     }
@@ -508,14 +526,15 @@ Class while {
 ```
 
 #### 输出
-```
+
+
+
 It will tick 5 times
 Tick 5
 Tick 4
 Tick 3
 Tick 2
 Tick 1
-```
 
 ### `Do-while` 语句
 
@@ -526,10 +545,10 @@ Tick 1
 ```
 do
 {
-    System.out.println (“tick”+ n);
-    n-- ;
+    System.out.println ("tick" + n);
+    n--;
 }
-While n > 0);
+while (n > 0);
 ```
 
 ### `For` 语句
@@ -541,25 +560,26 @@ While n > 0);
 #### 语法
 
 ```
-For (initialize; condition; iterate)
+for (initialize; condition; iterate)
 {
     循环体
 }
 ```
 
 #### 示例
+
 ```java
-Class fortick
+class Fortick
 {
-    Public static void main (string args [])
+    public static void main (String args [])
     {
-        Int n;
-        For (n=11; n>0; n--);
+        int n;
+        for (n=11; n>0; n--);
     }
 }
 ```
 
-## 跳跳语句
+## 跳转语句
 
 `Java` 支持三种跳转语句，如下：
 
@@ -576,14 +596,15 @@ Class fortick
 它为循环提供了提前结束。
 
 #### 示例
+
 ```java
-Class continue
+class Continue
 {
-    Public static void main (string args [])
+    public static void main (String args [])
     {
-        For (int i=0; i<5; i++)
+        for (int i=0; i<5; i++)
         {
-            If (i%2 == 0) continue;
+            if (i%2 == 0) continue;
             System.out.println(i);
         }
     }
@@ -595,13 +616,13 @@ Class continue
 它用于从方法返回值。
 
 #### 示例
+
 ```java
-Class return {
-{
-    Public static void main (string args [])
+class Return {
+    public static void main (String args [])
     {
-        Boolean t = true;
-        System.out.println(return);
+        boolean t = true;
+        System.out.println("return");
     }
 }
 ```
@@ -615,15 +636,16 @@ Class return {
 #### 语法
 
 ```
-`ClassName`
+ClassName
 {
-    `methodName`(`parameters`)
+    methodName(parameters)
 }
 ```
 
 #### 示例
+
 ```java
-Class box
+class Box
 {
     int width;
     int height;
@@ -637,34 +659,36 @@ Class box
 ![Image](img/overloading.png)
 
 #### 示例
+
 ```java
-Class overload
+class Overload
 {
     void test () {
-        System.out.println (“no parameter”);
+        System.out.println ("no parameter");
     }
 
     void test (int a) {
-        System.out.println (“a: “+ a);
+        System.out.println ("a: " + a);
     }
 
     void test (int a, int b) {
-        System.out.println (“a and b: “+ a +“+ b);
+        System.out.println ("a and b: " + a + " " + b);
     }
 
     void test (double a) {
-        System.out.println (“double a: “+ a);
+        System.out.println ("double a: " + a);
     }
 }
 ```
 
 #### 示例
+
 ```java
-Class overload1
+class Overload1
 {
-    Public static void main (string args [])
+    public static void main (String args [])
     {
-        Overload ob = new overload ();
+        Overload ob = new Overload ();
         ob.test ();
         ob.test (10);
         ob.test (10, 20);
@@ -680,48 +704,51 @@ Class overload1
 ![Image](img/inheritance.png)
 
 ### 继承的基础程序
+
 ```java
-Class x
+class X
 {
     int i, j;
-    void show ( )
+    void show ()
     {
-        System.out.println (“i and j:” + i +“+ j);
+        System.out.println ("i and j:" + i + " " + j);
     }
 }
 
-Class y extends x
+class Y extends X
 {
     int a;
-    show() {
-        System.out.println (“a: “+ a );
+    void show() {
+        System.out.println ("a: " + a );
     }
-    void sum ( )
+    void sum ()
     {
-        System.out.println (“i + j + a: “+ (i + j + a) );
+        System.out.println ("i + j + a: " + (i + j + a) );
     }
 }
 ```
 
 #### 示例
+
 ```java
-Class simheritance
+class Simheritance
 {
-    Public static void main (string args [])
+    public static void main (String args [])
     {
-        q Superob = new q ( );
-        p superob = new p ( );
-        Subob. i = 8;
-        Subob. j = 7;
-        Subob. a = 9;
-        System.out.println (“contents”);
-        Subob.showij ( );
-        Subob.showa ( );
+        Y subob = new Y ();
+        X superob = new X ();
+        subob.i = 8;
+        subob.j = 7;
+        subob.a = 9;
+        System.out.println ("contents");
+        subob.show();
+        subob.sum();
     }
 }
 ```
 
 #### 输出
+
 ```
 Contents:
 I and j: 8 7
@@ -739,47 +766,41 @@ Sum of i, j and a: 24
 ### 继承显示重写
 
 示例代码
+
 ```java
-Class x {
+class X {
     int a, b;
     X (int p, int q)
     {
-        p= a;
-        q= b;
+        a = p;
+        b = q;
     }
-    Void show ( )
+    void show ()
     {
-        System.out.println (“a and b: “+ i +“ ”+ j);
+        System.out.println ("a and b: " + a + " " + b);
     }
 }
 
-Class y extends x {
-    Int r;
+class Y extends X {
+    int r;
     Y (int a, int b, int c)
     {
-        Super (a, b);
+        super (a, b);
         r = c;
     }
-    Void show ( ) {
-        System.out.println (“r: “+ r );
+    void show () {
+        System.out.println ("r: " + r );
     }
 }
 
-Class override {
-    Public static void main (string args [])
+class Override {
+    public static void main (String args [])
     {
-        y subob = new y (1, 2, 3);
-        subob. Show ();
+        Y subob = new Y (1, 2, 3);
+        subob.show ();
     }
 }
 ```
-
-
-
-
-}
-
-}
 
 #### 输出
 
@@ -812,19 +833,19 @@ Class override {
 #### 语法
 
 ```java
-Package pkg;
+package pkg;
 ```
 
 表示多级包
 
 ```java
-Package pkgx [.pkgy [.pkgz]];
+package pkgx [.pkgy [.pkgz]];
 ```
 
 例如
 
 ```java
-Package java.awt.image a;
+package java.awt.image;
 ```
 
 ### 查找包
@@ -832,12 +853,12 @@ Package java.awt.image a;
 有三种查找包的方法。java 运行时系统使用工作目录；如果包位于子目录，则它会被发现；或者你可以像所示通过设置类的位置来设置位置。
 
 ```java
-Package mpack
+package mpack
 ```
 
 也可以配合 `java` 和 `javac` 使用类路径（class path）来指定类的位置，如下：
 
-`C: \ myprograms\java\mpack`
+`C:\myprograms\java\mpack`
 
 ### 访问保护
 
@@ -858,7 +879,7 @@ Package mpack
 #### 语法
 
 ```java
-Import pkga [.pkgb]. (classname d *);
+import pkga [.pkgb]. (classname | *);
 ```
 
 ## 接口 (Interface)
@@ -874,15 +895,15 @@ Import pkga [.pkgb]. (classname d *);
 ### 声明
 
 ```java
-Access interface m
+access interface M
 {
-    Return method 1 (parameter list);
-    Return method 2 (parameter list);
-    Type final variable name 1 = value;
-    Type final variable name 2 = value;
-    //…
-    Return type method name n (parameter list);
-    Type final varname n = value;
+    returnType method1 (parameterList);
+    returnType method2 (parameterList);
+    type final variableName1 = value;
+    type final variableName2 = value;
+    //...
+    returnType methodNameN (parameterList);
+    type final varNameN = value;
 }
 ```
 
@@ -891,9 +912,9 @@ Access interface m
 例如
 
 ```java
-Interface callback
+interface Callback
 {
-    Void callback (int parm);
+    void callback (int param);
 }
 ```
 
@@ -904,18 +925,18 @@ Interface callback
 例如
 
 ```java
-Class client call back
+class ClientCallback
 {
-    Public void callback (int x)
+    public void callback (int x)
     {
-        System.out.println (“callback” + x);
+        System.out.println ("callback " + x);
     }
 }
 ```
 
 ![Image](img/page-divider.png)
 
-## 异常处理 (Exceptional Handling)
+## 异常处理 (Exception Handling)
 
 这是一个影响 java 程序性能的缺点，因为它可以发生在任何点。它的发生处于执行状态下。
 
@@ -927,8 +948,8 @@ Class client call back
 
 常见的异常有：
 
-- `Checked`（检检异常）- 这些异常无法由程序员预测，而且在执行期间甚至无法被忽略。
-- `Runtime`（运行时异常）- 这是一种动态异常，但与检异常不同，它可以被忽略。
+- `Checked`（检查异常）- 这些异常无法由程序员预测，而且在执行期间甚至无法被忽略。
+- `Runtime`（运行时异常）- 这是一种动态异常，但与检查异常不同，它可以被忽略。
 - `Errors`（错误）- 这些也会被忽略，因为无法做什么来克服它，而且这不受程序员控制。
 
 ![Image](img/exception.png)
@@ -944,7 +965,7 @@ Class client call back
 #### 语法
 
 ```java
-throw Throwableinstance;
+throw ThrowableInstance;
 ```
 
 ![Image](img/throw.png)
@@ -956,24 +977,25 @@ throw Throwableinstance;
 例如
 
 ```java
-Class throwdem
+class ThrowDemo
 {
-    Static void demopro ( )
+    static void demoProc ()
     {
-        Try {
-            Throw new NullPointerException (“dem “);
+        try {
+            throw new NullPointerException ("demo");
         } catch (NullPointerException e)
         {
-            System.out.println (“caught inside demipro. “);
-            Throw e;
+            System.out.println ("caught inside demoProc. ");
+            throw e;
         }
     }
-    Public static void main (string args [ ] {
-        Try {
-            Demopro ( );
+    public static void main (String args [])
+    {
+        try {
+            demoProc ();
         }
-        Catch (NullPointerException e) {
-            System.out.println (recatch: “+ e);
+        catch (NullPointerException e) {
+            System.out.println ("recatch: " + e);
         }
     }
 }
@@ -986,17 +1008,17 @@ Class throwdem
 #### 语法
 
 ```java
-Class finally dem
+class FinallyDemo
 {
-    Static void pro x ( )
+    static void procX ()
     {
-        Try {
-            System.out.println (“in proc x”);
-            Throw new runtimeException (“demo”);
+        try {
+            System.out.println ("in proc X");
+            throw new RuntimeException ("demo");
         }
-        Finally
+        finally
         {
-            System.out.println (“pro x finally”);
+            System.out.println ("proc X finally");
         }
     }
 }
@@ -1004,26 +1026,26 @@ Class finally dem
 
 ![Image](img/page-divider.png)
 
-## 事件处理 (Event handling)
+## 事件处理 (Event Handling)
 
 ### 事件 (Event)
 
 它显示源状态的变化。
 
-### 事件源 (Event sources)
+### 事件源 (Event Sources)
 
 它是生成事件的对象。
 
 #### 语法
 
 ```java
-Public void add TypeListener (TypeListner l)
+public void addTypeListener (TypeListener l)
 ```
 
 例如
 
-- `Addkeylistner ()` - 注册键盘事件。
-- `Addmousemotionlistner ()` - 注册鼠标移动监听器。
+- `addKeyListener()` - 注册键盘事件。
+- `addMouseMotionListener()` - 注册鼠标移动监听器。
 
 ### 事件类 (Action Event Class)
 
@@ -1033,7 +1055,7 @@ Public void add TypeListener (TypeListner l)
 
 java 中的事件发生
 
-### 键键事件类 (Key event class)
+### 键盘事件类 (Key Event Class)
 
 它由键盘按键输入产生，有三种类型。
 
@@ -1041,7 +1063,7 @@ java 中的事件发生
 2. `KEY_RELEASED`
 3. `KEY_TYPED`
 
-### 鼠标事件类 (Mouse event class)
+### 鼠标事件类 (Mouse Event Class)
 
 有八种鼠标事件类。
 
@@ -1052,15 +1074,15 @@ java 中的事件发生
 5. `MOUSE_MOVED`
 6. `MOUSE_PRESSED`
 7. `MOUSE_RELEASED`
-8. `MOUSE_WHELED`
+8. `MOUSE_WHEEL`
 
-### 监听器接口 (Action listener interface)
+### 监听器接口 (Action Listener Interface)
 
 它用于定义调用事件时执行的操作。它用于感知方法的响应。
 
 ![Image](img/page-divider.png)
 
-## Applet 类 (The Applet class)
+## Applet 类 (The Applet Class)
 
 它包含了用于 java 执行和详细控制的方法。Applet 的初始化和终止如下：
 
@@ -1077,7 +1099,7 @@ java 中的事件发生
 
 ![Image](img/applet.png)
 
-### Applet 生成 (Applet generation)
+### Applet 生成 (Applet Generation)
 
 HTML applet 标签
 
@@ -1091,8 +1113,8 @@ WIDTH=pixels HEIGHT=pixels
 [ALIGN=alignment]
 [VSPACE=pixels] [HSPACE=pixels]
 >
-[PARANAME=attribute name VALUE= attributevalue>]
-…
+[<PARAM NAME=attribute name VALUE= attributevalue>]
+...
 [没有 java 时显示的 HTML]
 </APPLET>
 ```
@@ -1101,13 +1123,13 @@ WIDTH=pixels HEIGHT=pixels
 
 HTML applet 标签
 
-音频接口 (Audioclip interface)
+音频接口 (AudioClip Interface)
 
 - `play()` - 开始音频。
 - `stop()` - 停止音频。
 - `loop()` - 无断循环播放。
 
-Applet 子接口 (Applet sub interface)
+Applet 子接口 (Applet Sub Interface)
 
 它提供了一个 Applet 和浏览器之间进行通信的链接。
 

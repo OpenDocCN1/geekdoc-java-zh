@@ -1,20 +1,23 @@
+
 # Java 中线程的匮乏
 
 > 原文：<https://medium.com/javarevisited/starvation-of-threads-in-java-e3d6bcfeb770?source=collection_archive---------1----------------------->
 
 ![](img/5c5ffcf7ae2cb9ffcc5e4974356efc8f.png)
 
-**定义:**Java 中的线程饥饿据说发生在某个特定的线程无法访问对象或资源，导致等待和执行时间增加的时候。
+**定义：** Java 中的线程饥饿据说发生在某个特定的线程无法访问对象或资源，导致等待和执行时间增加的时候。
 
-当两个或更多线程被分配给 CPU(中央处理器)并在执行中花费大量时间时，就会发生饥饿，因为其他等待线程无法获得 CPU 来继续执行。
+当两个或更多线程被分配给 CPU（中央处理器）并在执行中花费大量时间时，就会发生饥饿，因为其他等待线程无法获得 CPU 来继续执行。
 
-**饿死的原因:**
+**饿死的原因：**
 
-java 中线程饥饿的原因有很多，下面介绍了其中一些原因:
+Java 中线程饥饿的原因有很多，下面介绍了其中一些原因：
 
-*   **高优先级运行线程:**可能会有这样的情况，高优先级线程通过占用 CPU 运行，并且需要大量处理，这需要大量时间来完成，因此为了完全执行这项工作，具有低优先级顺序的其他线程必须等待很长时间，这将导致资源匮乏。
-*   **Java 中的 Synchronized Block:**可能会出现这样的情况，线程被允许进入 [synchronized block](https://www.java67.com/2013/01/difference-between-synchronized-block-vs-method-java-example.html) 的顺序与它们被编程调度的顺序相同，这导致另一个线程等待资源和对象，从而导致饥饿，其中除了特定线程之外的其他线程被给予 C.P.U .用于其执行。
-*   **等待对象的线程永远等待:**Java 中的 [notify()方法无法跟踪线程，如果有多个线程，哪个特定的线程正在被唤醒，因此可能存在任何线程正在被处理而其他线程从未被调用执行的风险。](https://javarevisited.blogspot.com/2015/07/how-to-use-wait-notify-and-notifyall-in.html#axzz6e8hmwujv)
+*   **高优先级运行线程：** 可能会有这样的情况，高优先级线程通过占用 CPU 运行，并且需要大量处理，这需要大量时间来完成，因此为了完全执行这项工作，具有低优先级顺序的其他线程必须等待很长时间，这将导致资源匮乏。
+
+*   **Java 中的 Synchronized Block：** 可能会出现这样的情况，线程被允许进入 [synchronized block](https://www.java67.com/2013/01/difference-between-synchronized-block-vs-method-java-example.html) 的顺序与它们被编程调度的顺序相同，这导致另一个线程等待资源和对象，从而导致饥饿，其中除了特定线程之外的其他线程被给予 CPU 用于其执行。
+
+*   **等待对象的线程永远等待：** Java 中的 [notify() 方法无法跟踪线程，如果有多个线程，哪个特定的线程正在被唤醒，因此可能存在任何线程正在被处理而其他线程从未被调用执行的风险。](https://javarevisited.blogspot.com/2015/07/how-to-use-wait-notify-and-notifyall-in.html#axzz6e8hmwujv)
 
 **线程饥饿示例**
 
@@ -60,7 +63,7 @@ class Starvation extends Thread {
 }
 ```
 
-**上述代码的输出将是:**
+**上述代码的输出将是：**
 
 ```
 Parent thread execution starts
@@ -77,13 +80,16 @@ Thread execution completes
 Parent thread execution completes.
 ```
 
-**消除饥饿的要点:**
+**消除饥饿的要点：**
 
-消除线程匮乏的一些要点如下:
+消除线程匮乏的一些要点如下：
 
-*   通过`Thread.yield()`方法的实现，当线程在进程中释放锁后获得一个公平的机会来占用 CPU，并可以获得一些时间来完成它的执行，直到原始线程再次获得对 CPU 的控制
+*   通过 `Thread.yield()` 方法的实现，当线程在进程中释放锁后获得一个公平的机会来占用 CPU，并可以获得一些时间来完成它的执行，直到原始线程再次获得对 CPU 的控制。
+
 *   还可以使用 [Thread.sleep()](http://www.java67.com/2015/06/how-to-pause-thread-in-java-using-sleep.html) 方法将机会给予其他线程执行。
 
 ## 你可能喜欢的其他线程文章
 
-<https://javarevisited.blogspot.com/2020/01/what-is-happens-before-in-java-concurrency.html>  <https://javarevisited.blogspot.com/2020/04/difference-between-atomic-volatile-and-synchronized-in-java-multi-threading.html>  </javarevisited/java-threadlocal-the-boon-and-the-bane-18263fa4f64> 
+<https://javarevisited.blogspot.com/2020/01/what-is-happens-before-in-java-concurrency.html>  
+<https://javarevisited.blogspot.com/2020/04/difference-between-atomic-volatile-and-synchronized-in-java-multi-threading.html>  
+</javarevisited/java-threadlocal-the-boon-and-the-bane-18263fa4f64>

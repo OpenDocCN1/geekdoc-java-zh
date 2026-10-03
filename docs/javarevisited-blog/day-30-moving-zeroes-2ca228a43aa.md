@@ -1,8 +1,9 @@
+
 # 第 30 天—移动零
 
 > 原文：<https://medium.com/javarevisited/day-30-moving-zeroes-2ca228a43aa?source=collection_archive---------1----------------------->
 
-## 1 **00 天亚马逊**
+## 100 天亚马逊
 
 [**亚马逊 100 天—第 30 天动零点**](https://leetcode.com/problems/move-zeroes/)
 

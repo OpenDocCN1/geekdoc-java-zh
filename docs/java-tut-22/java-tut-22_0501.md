@@ -1,3 +1,4 @@
+
 # 如何编写树展开监听器
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/events/treeexpansionlistener.html`](https://docs.oracle.com/javase/tutorial/uiswing/events/treeexpansionlistener.html)
@@ -16,11 +17,11 @@
 
 **试试这个：**
 
-1.  点击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 TreeExpandEventDemo（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 TreeExpandEventDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TreeExpandEventDemoProject/TreeExpandEventDemo.jnlp)
+1. 点击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行`TreeExpandEventDemo`（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 TreeExpandEventDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TreeExpandEventDemoProject/TreeExpandEventDemo.jnlp)
 
-1.  展开一个节点。将触发树展开事件。
+2. 展开一个节点。将触发树展开事件。
 
-1.  折叠节点。将触发树折叠事件。
+3. 折叠节点。将触发树折叠事件。
 
 * * *
 
@@ -54,12 +55,11 @@ public class TreeExpandEventDemo ... {
         }
     }
 }
-
 ```
 
 ## 树展开监听器 API
 
-TreeExpansionListener 接口
+`TreeExpansionListener`接口
 
 *`TreeExpansionListener`没有适配器类。*
 
@@ -68,7 +68,7 @@ TreeExpansionListener 接口
 | [treeCollapsed(TreeExpansionEvent)](https://docs.oracle.com/javase/8/docs/api/javax/swing/event/TreeExpansionListener.html#treeCollapsed-javax.swing.event.TreeExpansionEvent-) | 在树节点折叠后调用。 |
 | [treeExpanded(TreeExpansionEvent)](https://docs.oracle.com/javase/8/docs/api/javax/swing/event/TreeExpansionListener.html#treeExpanded-javax.swing.event.TreeExpansionEvent-) | 在树节点展开后调用。 |
 
-TreeExpansionEvent API
+`TreeExpansionEvent` API
 
 | 方法 | 目的 |
 | --- | --- |

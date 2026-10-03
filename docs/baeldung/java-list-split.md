@@ -1,8 +1,9 @@
+
 # 用 Java 对列表进行分区
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-list-split>
 
-## 1。概述
+## 1. 概述
 
 在本文中，我们将展示如何将一个列表分割成几个给定大小的子列表。
 
@@ -10,23 +11,23 @@
 
 这篇文章是 Baeldung 网站上的“**Java——回到基础的**”系列文章的一部分。
 
-## 延伸阅读:
+## 延伸阅读
 
-## [在 Java 中将列表转换成字符串](/web/20220929201248/https://www.baeldung.com/java-list-to-string)
+### [在 Java 中将列表转换成字符串](/web/20220929201248/https://www.baeldung.com/java-list-to-string)
 
-Learn how to convert a List to a String using different techniques.[Read more](/web/20220929201248/https://www.baeldung.com/java-list-to-string) →
+Learn how to convert a `List` to a `String` using different techniques.
 
-## [在 Java 中混洗收藏](/web/20220929201248/https://www.baeldung.com/java-shuffle-collection)
+### [在 Java 中混洗收藏](/web/20220929201248/https://www.baeldung.com/java-shuffle-collection)
 
-Learn how to shuffle various collections in Java.[Read more](/web/20220929201248/https://www.baeldung.com/java-shuffle-collection) →
+Learn how to shuffle various collections in Java.
 
-## [Java 中的 Spliterator 简介](/web/20220929201248/https://www.baeldung.com/java-spliterator)
+### [Java 中的 `Spliterator` 简介](/web/20220929201248/https://www.baeldung.com/java-spliterator)
 
-Learn about the Spliterator interface that can be used for traversing and partitioning sequences.[Read more](/web/20220929201248/https://www.baeldung.com/java-spliterator) →
+Learn about the `Spliterator` interface that can be used for traversing and partitioning sequences.
 
-## 2。用番石榴分割列表
+## 2. 用番石榴分割列表
 
-Guava 通过**`Lists.partition`操作**将列表划分为指定大小的子列表:
+Guava 通过 **`Lists.partition` 操作**将列表划分为指定大小的子列表：
 
 ```java
 @Test
@@ -41,9 +42,9 @@ public void givenList_whenParitioningIntoNSublists_thenCorrect() {
 }
 ```
 
-## 3。用番石榴分割收藏
+## 3. 用番石榴分割集合
 
-**番石榴也可用于分割系列**:
+**番石榴也可用于分割集合**：
 
 ```java
 @Test
@@ -58,7 +59,7 @@ public void givenCollection_whenParitioningIntoNSublists_thenCorrect() {
 }
 ```
 
-请记住，分区是原始集合的**子列表视图，**这意味着原始集合中的更改将反映在分区中:
+请记住，分区是原始集合的**子列表视图**，这意味着原始集合中的更改将反映在分区中：
 
 ```java
 @Test
@@ -77,9 +78,9 @@ public void givenListPartitioned_whenOriginalListIsModified_thenPartitionsChange
 }
 ```
 
-## 4。使用 Apache Commons 集合对列表进行分区
+## 4. 使用 Apache Commons 集合对列表进行分区
 
-Apache Commons Collections 的最新版本最近也增加了对列表分区的支持:
+Apache Commons Collections 的最新版本最近也增加了对列表分区的支持：
 
 ```java
 @Test
@@ -94,17 +95,17 @@ public void givenList_whenParitioningIntoNSublists_thenCorrect() {
 }
 ```
 
-与 Guava Iterables.partition 类似，Commons Collections 没有相应的选项来对原始集合进行分区。
+与 Guava 的 `Iterables.partition` 类似，Commons Collections 没有相应的选项来对原始集合进行分区。
 
-最后，同样的警告也适用于这里:产生的分区是原始列表的视图。
+最后，同样的警告也适用于这里：产生的分区是原始列表的视图。
 
-## 5。使用 Java8 对列表进行分区
+## 5. 使用 Java 8 对列表进行分区
 
-现在让我们看看如何使用 Java8 对我们的列表进行分区。
+现在让我们看看如何使用 Java 8 对我们的列表进行分区。
 
-### 5.1。`partitioningBy`吏
+### 5.1. 使用 `Collectors.partitioningBy()`
 
-我们可以使用`Collectors.partitioningBy()`将列表分成两个子列表:
+我们可以使用 `Collectors.partitioningBy()` 将列表分成两个子列表：
 
 ```java
 @Test
@@ -122,11 +123,11 @@ public void givenList_whenParitioningIntoSublistsUsingPartitionBy_thenCorrect() 
 }
 ```
 
-注意:产生的分区不是主列表的视图，所以主列表发生的任何变化都不会影响分区。
+注意：产生的分区不是主列表的视图，所以主列表发生的任何变化都不会影响分区。
 
-### 5.2。`groupingBy`吏
+### 5.2. 使用 `Collectors.groupingBy()`
 
-我们也可以使用 `Collectors.groupingBy()`将我们的列表分成多个分区:
+我们也可以使用 `Collectors.groupingBy()` 将我们的列表分成多个分区：
 
 ```java
 @Test
@@ -144,11 +145,11 @@ public final void givenList_whenParitioningIntoNSublistsUsingGroupingBy_thenCorr
 }
 ```
 
-注意:就像`Collectors.partitioningBy(),`一样，主列表中的变化不会影响最终的分区。
+注意：就像 `Collectors.partitioningBy()` 一样，主列表中的变化不会影响最终的分区。
 
-### 5.3。用分隔符分割列表
+### 5.3. 用分隔符分割列表
 
-我们还可以使用 Java8 通过分隔符来分割我们的列表:
+我们还可以使用 Java 8 通过分隔符来分割我们的列表：
 
 ```java
 @Test
@@ -171,10 +172,10 @@ public void givenList_whenSplittingBySeparator_thenCorrect() {
 }
 ```
 
-注意:我们使用“0”作为分隔符。我们首先获得列表中所有“0”元素的索引，然后在这些索引上拆分`List`。
+注意：我们使用 `0` 作为分隔符。我们首先获得列表中所有 `0` 元素的索引，然后在这些索引上拆分 `List`。
 
-## 6。结论
+## 6. 结论
 
 这里介绍的解决方案利用了额外的库，即 Guava 和 Apache Commons 集合。总的来说，这两者都是非常轻量级和非常有用的，所以在类路径中包含其中一个非常有意义。然而，如果这不是一个选项，这里显示的是一个只有 Java 的解决方案。
 
-所有这些例子和代码片段的实现可以在 GitHub 上找到。 这是一个基于 Maven 的项目，所以应该很容易导入和运行。
+所有这些例子和代码片段的实现可以在 GitHub 上找到。这是一个基于 Maven 的项目，所以应该很容易导入和运行。

@@ -1,3 +1,4 @@
+
 # 泛型和子类型
 
 > 原文：[`docs.oracle.com/javase/tutorial/extra/generics/subtype.html`](https://docs.oracle.com/javase/tutorial/extra/generics/subtype.html)
@@ -6,8 +7,7 @@
 
 ```java
 List<String> ls = new ArrayList<String>(); // 1
-List<Object> lo = ls; // 2 
-
+List<Object> lo = ls; // 2
 ```
 
 第 1 行肯定是合法的。问题的棘手部分在于第 2 行。这归结为一个问题：`String`的`List`是否是`Object`的`List`。大多数人本能地回答：“当然！”
@@ -17,7 +17,6 @@ List<Object> lo = ls; // 2
 ```java
 lo.add(new Object()); // 3
 String s = ls.get(0); // 4: Attempts to assign an Object to a String!
-
 ```
 
 在这里，我们给`ls`和`lo`取了别名。通过别名`lo`访问`String`的列表`ls`，我们可以向其中插入任意对象。结果`ls`不再只包含`String`，当我们尝试从中取出东西时，会得到一个不愉快的惊喜。

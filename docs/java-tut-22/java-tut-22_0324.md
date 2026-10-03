@@ -1,3 +1,4 @@
+
 # 使用一个通用的构建文件适用于所有平台
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/selfContainedApps/commonbuild.html`](https://docs.oracle.com/javase/tutorial/deployment/selfContainedApps/commonbuild.html)

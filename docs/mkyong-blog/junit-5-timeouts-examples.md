@@ -1,3 +1,4 @@
+
 # JUnit 5 超时示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/junit5/junit-5-timeouts-examples/>
@@ -6,12 +7,12 @@
 
 *用 JUnit 5.5.2 测试的 PS*
 
-## 1.@超时
+## 1. `@Timeout`
 
-TimeOutExample1.java
+`TimeOutExample1.java`
 
 ```java
- package com.mkyong.timeout;
+package com.mkyong.timeout;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -34,17 +35,17 @@ public class TimeOutExample1 {
     void test_this() {
     }
 
-} 
+}
 ```
 
-## 2.assertTimeout
+## 2. `assertTimeout`
 
 2.1 我们也可以使用`assertTimeout`让测试超时。
 
-TimeOutExample2.java
+`TimeOutExample2.java`
 
 ```java
- package com.mkyong.timeout;
+package com.mkyong.timeout;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -73,18 +74,26 @@ public class TimeOutExample2 {
         }
     }
 
-} 
+}
 ```
 
 ## 下载源代码
 
-$ git clone [https://github.com/mkyong/junit-examples](http://web.archive.org/web/20221225035521/https://github.com/mkyong/junit-examples)
+```
+$ git clone https://github.com/mkyong/junit-examples
+```
+
+```
 $ cd junit5-examples
+```
+
+```
 $ check src/test/java/com/mkyong/timeout/*.java
+```
 
 # 参考
 
-*   [JUnit 5 超时](http://web.archive.org/web/20221225035521/https://junit.org/junit5/docs/current/user-guide/#writing-tests-declarative-timeouts)
-*   [JUnit 5 断言](http://web.archive.org/web/20221225035521/https://junit.org/junit5/docs/current/user-guide/#writing-tests-assertions)
+* [JUnit 5 超时](http://web.archive.org/web/20221225035521/https://junit.org/junit5/docs/current/user-guide/#writing-tests-declarative-timeouts)
+* [JUnit 5 断言](http://web.archive.org/web/20221225035521/https://junit.org/junit5/docs/current/user-guide/#writing-tests-assertions)
 
 <input type="hidden" id="mkyong-current-postId" value="15264">

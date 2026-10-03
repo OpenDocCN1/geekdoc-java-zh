@@ -1,18 +1,19 @@
+
 # Spring Data REST 中的预测和摘录
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-data-rest-projections-excerpts>
 
-## 1。概述
+## 1. 概述
 
 在本文中，我们将探索 Spring Data REST 的投影和摘录概念。
 
 我们将学习如何**使用投影来创建模型的定制视图，以及如何使用摘录作为资源集合的默认视图**。
 
-## 2。我们的领域模型
+## 2. 我们的领域模型
 
-首先，让我们从定义我们的领域模型开始:`Book`和`Author.`
+首先，让我们从定义我们的领域模型开始：`Book`和`Author`。
 
-让我们来看看`Book`实体类:
+让我们来看看`Book`实体类：
 
 ```java
 @Entity
@@ -32,7 +33,7 @@ public class Book {
 }
 ```
 
-和`Author`型号:
+和`Author`型号：
 
 ```java
 @Entity
@@ -58,7 +59,7 @@ public class Author {
 
 这两个实体也有多对多的关系。
 
-接下来，让我们为每个模型定义标准的 Spring Data REST 存储库:
+接下来，让我们为每个模型定义标准的 Spring Data REST 存储库：
 
 ```java
 public interface BookRepository extends CrudRepository<Book, Long> {}
@@ -68,7 +69,7 @@ public interface BookRepository extends CrudRepository<Book, Long> {}
 public interface AuthorRepository extends CrudRepository<Author, Long> {}
 ```
 
-现在，我们可以访问`Book`端点，使用其在`http://localhost:8080/books/{id}:`的 id 来获取特定的`Book's`细节
+现在，我们可以访问`Book`端点，使用其在`http://localhost:8080/books/{id}`的 id 来获取特定的`Book`的细节：
 
 ```java
 {
@@ -88,15 +89,15 @@ public interface AuthorRepository extends CrudRepository<Author, Long> {}
 }
 ```
 
-注意，由于`Author`模型有自己的存储库，作者的详细信息不是响应的一部分。但是，我们可以找到它们之间的联系—`http://localhost:8080/books/1/authors.`
+注意，由于`Author`模型有自己的存储库，作者的详细信息不是响应的一部分。但是，我们可以找到它们之间的联系——`http://localhost:8080/books/1/authors`。
 
-## 3。创建投影
+## 3. 创建投影
 
-有时，**我们只对实体属性**的子集或自定义视图感兴趣。对于这种情况，我们可以利用投影。
+有时，**我们只对实体属性的子集或自定义视图感兴趣**。对于这种情况，我们可以利用投影。
 
 让我们使用 Spring Data REST 投影为我们的`Book`创建一个定制视图。
 
-我们将从创建一个简单的名为`CustomBook`的`Projection`开始:
+我们将从创建一个简单的名为`CustomBook`的`Projection`开始：
 
 ```java
 @Projection(
@@ -111,7 +112,7 @@ public interface CustomBook {
 
 在我们的例子中，`CustomBook`投影将只包括一本书的`title`。
 
-在创建了我们的`Projection:`之后，让我们再来看看我们的`Book`表示
+在创建了我们的`Projection`之后，让我们再来看看我们的`Book`表示：
 
 ```java
 {
@@ -132,7 +133,7 @@ public interface CustomBook {
 }
 ```
 
-太好了，我们可以看到一个链接到我们的投影。让我们检查一下我们在`http://localhost:8080/books/1?projection=customBook`创建的视图:
+太好了，我们可以看到一个链接到我们的投影。让我们检查一下我们在`http://localhost:8080/books/1?projection=customBook`创建的视图：
 
 ```java
 {
@@ -154,9 +155,9 @@ public interface CustomBook {
 
 在这里，我们可以看到我们只获得了`title`字段，而`isbn`不再出现在自定义视图中。
 
-一般来说，我们可以在`http://localhost:8080/books/1?projection={projection name}.`访问投影的结果
+一般来说，我们可以在`http://localhost:8080/books/1?projection={projection name}`访问投影的结果。
 
-另外，请注意，我们需要在与模型相同的包中定义我们的`Projection`。或者，我们可以使用`RepositoryRestConfigurerAdapter`来显式添加它:
+另外，请注意，我们需要在与模型相同的包中定义我们的`Projection`。或者，我们可以使用`RepositoryRestConfigurerAdapter`来显式添加它：
 
 ```java
 @Configuration
@@ -171,17 +172,17 @@ public class RestConfig implements RepositoryRestConfigurer {
 }
 ```
 
-## 4。向预测添加新数据
+## 4. 向预测添加新数据
 
 现在，让我们看看如何向我们的投影添加新数据。
 
 正如我们在上一节中讨论的，我们可以使用投影来选择视图中包含哪些属性。更重要的是，我们还可以添加原始视图中没有包含的数据。
 
-### 4.1。隐藏数据
+### 4.1. 隐藏数据
 
 默认情况下，id 不包含在原始资源视图中。
 
-为了在结果中看到 id，我们可以显式地包含`id`字段:
+为了在结果中看到 id，我们可以显式地包含`id`字段：
 
 ```java
 @Projection(
@@ -195,7 +196,7 @@ public interface CustomBook {
 }
 ```
 
-现在在`http://localhost:8080/books/1?projection={projection name}` 的输出将是:
+现在在`http://localhost:8080/books/1?projection={projection name}`的输出将是：
 
 ```java
 {
@@ -207,13 +208,13 @@ public interface CustomBook {
 }
 ```
 
-请注意，我们还可以用`@JsonIgnore.`包含原始视图中隐藏的数据
+请注意，我们还可以用`@JsonIgnore`包含原始视图中隐藏的数据。
 
-### 4.2。计算数据
+### 4.2. 计算数据
 
 我们还可以包括根据资源属性计算的新数据。
 
-例如，我们可以在预测中包括作者数量:
+例如，我们可以在预测中包括作者数量：
 
 ```java
 @Projection(name = "customBook", types = { Book.class }) 
@@ -229,7 +230,7 @@ public interface CustomBook {
 }
 ```
 
-我们可以在`http://localhost:8080/books/1?projection=customBook`查看:
+我们可以在`http://localhost:8080/books/1?projection=customBook`查看：
 
 ```java
 {
@@ -242,9 +243,9 @@ public interface CustomBook {
 }
 ```
 
-### 4.3。轻松访问相关资源
+### 4.3. 轻松访问相关资源
 
-最后，如果我们经常需要访问相关资源——就像我们的例子中的一本书的作者，我们可以通过显式包含它来避免额外的请求:
+最后，如果我们经常需要访问相关资源——就像我们的例子中的一本书的作者，我们可以通过显式包含它来避免额外的请求：
 
 ```java
 @Projection(
@@ -264,7 +265,7 @@ public interface CustomBook {
 }
 ```
 
-最终的`Projection`输出将是:
+最终的`Projection`输出将是：
 
 ```java
 {
@@ -291,20 +292,20 @@ public interface CustomBook {
 
 接下来，我们来看看摘录。
 
-## 5。摘录
+## 5. 摘录
 
 摘录是我们作为默认视图应用于资源集合的预测。
 
 让我们定制我们的`BookRepository`来自动使用`customBook` `Projection`进行收集响应。
 
-为此，我们将使用`@RepositoryRestResource`注释的`excerptProjection`属性:
+为此，我们将使用`@RepositoryRestResource`注释的`excerptProjection`属性：
 
 ```java
 @RepositoryRestResource(excerptProjection = CustomBook.class)
 public interface BookRepository extends CrudRepository<Book, Long> {}
 ```
 
-现在我们可以通过调用`http://localhost:8080/books`来确保`customBook`是图书收藏的默认视图:
+现在我们可以通过调用`http://localhost:8080/books`来确保`customBook`是图书收藏的默认视图：
 
 ```java
 {
@@ -341,7 +342,7 @@ public interface BookRepository extends CrudRepository<Book, Long> {}
 }
 ```
 
-这同样适用于在`http://localhost:8080/authors/1/books`查看特定作者的书籍:
+这同样适用于在`http://localhost:8080/authors/1/books`查看特定作者的书籍：
 
 ```java
 {
@@ -381,8 +382,8 @@ public interface BookRepository extends CrudRepository<Book, Long> {}
 
 最后一点，重要的是要记住**预测和摘录是只读的**。
 
-## 6。结论
+## 6. 结论
 
 我们学习了如何使用 Spring Data REST 投影来创建模型的定制视图。我们还学习了如何使用摘录作为资源集合的默认视图。
 
-示例的完整源代码可以在 GitHub 的[中找到。](https://web.archive.org/web/20220625234410/https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-rest)
+示例的完整源代码可以在 GitHub 的[中找到](https://web.archive.org/web/20220625234410/https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-rest)。

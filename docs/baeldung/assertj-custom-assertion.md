@@ -1,20 +1,22 @@
+
 # 使用 AssertJ 自定义断言
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/assertj-custom-assertion>
 
 [This article is part of a series:](javascript:void(0);)[• Introduction to AssertJ](/web/20221101120817/https://www.baeldung.com/introduction-to-assertj)
+
 [• AssertJ for Guava](/web/20221101120817/https://www.baeldung.com/assertJ-for-guava)
+
 [• AssertJ’s Java 8 Features](/web/20221101120817/https://www.baeldung.com/assertJ-java-8-features)
+
 • Custom Assertions with AssertJ (current article)
 
-## 1。概述
-
+## 1. 概述
 在本教程中，我们将逐步创建定制的 [AssertJ](https://web.archive.org/web/20221101120817/https://joel-costigliola.github.io/assertj/) 断言；AssertJ 的基本知识[可以在这里找到。](/web/20221101120817/https://www.baeldung.com/introduction-to-assertj)
 
 简单地说，定制断言允许创建特定于我们自己的类的断言，允许我们的测试更好地反映领域模型。
 
-## 2。测试中的类别
-
+## 2. 测试中的类别
 本教程中的测试用例将围绕`Person`类构建:
 
 ```java
@@ -37,11 +39,10 @@ public class Person {
 } 
 ```
 
-## 3。自定义断言类
-
+## 3. 自定义断言类
 编写定制的 AssertJ 断言类非常简单。**我们需要做的就是声明一个扩展`AbstractAssert`的类，添加一个需要的构造函数，并提供自定义断言方法。**
 
-断言类必须扩展`AbstractAssert`类，让我们能够访问 API 的基本断言方法，比如`isNotNull` 和`isEqualTo`。
+断言类必须扩展`AbstractAssert`类，让我们能够访问 API 的基本断言方法，比如`isNotNull`和`isEqualTo`。
 
 下面是`Person`的自定义断言类的框架:
 
@@ -122,8 +123,7 @@ public class Assertions {
 
 该类的静态方法具有相同的名称，并且通过它们的参数类型相互区别。
 
-## 4。行动中
-
+## 4. 行动中
 下面的测试用例将说明我们在上一节中创建的定制断言方法。注意，`assertThat`方法是从我们的自定义`Assertions`类导入的，而不是从核心 AssertJ API 导入的。
 
 下面是如何使用`hasFullName`方法:
@@ -163,15 +163,14 @@ public void whenPersonDoesNotHaveAMatchingNickname_thenIncorrect() {
 }
 ```
 
-## 5。断言生成器
-
+## 5. 断言生成器
 编写对应于对象模型的定制断言类为可读性很强的测试用例铺平了道路。
 
 然而，如果我们有很多类，为它们手动创建自定义断言类会很痛苦。这就是 AssertJ 断言生成器发挥作用的地方。
 
 要在 Maven 中使用断言生成器，我们需要在`pom.xml`文件中添加一个插件:
 
-```java
+```xml
 <plugin>
     <groupId>org.assertj</groupId>
     <artifactId>assertj-assertions-generator-maven-plugin</artifactId>
@@ -192,11 +191,11 @@ AssertJ 断言生成器为目标类的每个公共属性创建断言。每个断
 
 在项目基本目录中执行以下 Maven 命令:
 
-```java
+```bash
 mvn assertj:generate-assertions
 ```
 
-我们应该看到在`target` `/generated-test-sources/assertj-assertions`文件夹中生成的断言类。例如，为生成的断言生成的入口点类如下所示:
+我们应该看到在`target/generated-test-sources/assertj-assertions`文件夹中生成的断言类。例如，为生成的断言生成的入口点类如下所示:
 
 ```java
 // generated comments are stripped off for brevity
@@ -224,8 +223,7 @@ public class Assertions {
 
 因此，我们应该使用发电机作为辅助工具，使我们的生活更容易，而不是想当然。
 
-## 6。结论
-
+## 6. 结论
 在本教程中，我们展示了如何手动和自动地创建自定义断言，以便用 AssertJ 库创建可读的测试代码。
 
 如果我们只有少量的测试类，手工解决方案就足够了；否则，应使用发电机。

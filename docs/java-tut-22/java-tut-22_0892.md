@@ -1,3 +1,5 @@
+
+
 # 故障排除
 
 > 原文：[`docs.oracle.com/javase/tutorial/reflect/class/classTrouble.html`](https://docs.oracle.com/javase/tutorial/reflect/class/classTrouble.html)
@@ -9,7 +11,6 @@
 当调用方法时，会检查参数值的类型并可能进行转换。`ClassWarning`调用[`getMethod()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getMethod-java.lang.String-java.lang.Class...-)会导致典型的未经检查的转换警告：
 
 ```java
-
 import java.lang.reflect.Method;
 
 public class ClassWarning {
@@ -24,7 +25,6 @@ public class ClassWarning {
     	}
     }
 }
-
 ```
 
 ```java
@@ -37,7 +37,6 @@ ClassWarning.java:6: warning: [unchecked] unchecked call to getMethod
 Method m = c.getMethod("m");  // warning
                       ^
 1 warning
-
 ```
 
 许多库方法已经使用了泛型声明，包括[`Class`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)中的几个方法。由于`c`声明为*原始*类型（没有类型参数），并且[`getMethod()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getMethod-java.lang.String-java.lang.Class...-)的相应参数是参数化类型，因此会发生未经检查的转换。编译器需要生成警告。（参见[*Java 语言规范，Java SE 7 版*](https://docs.oracle.com/javase/specs/jls/se7/html/index.html)，章节[未经检查的转换](https://docs.oracle.com/javase/specs/jls/se7/html/jls-5.html#jls-5.1.9)和[方法调用转换](https://docs.oracle.com/javase/specs/jls/se7/html/jls-5.html#jls-5.3)。）
@@ -46,7 +45,6 @@ Method m = c.getMethod("m");  // warning
 
 ```java
 Class<?> c = warn.getClass();
-
 ```
 
 或者，可以在有问题的语句之前使用预定义的注释[`@SuppressWarnings`](https://docs.oracle.com/javase/8/docs/api/java/lang/SuppressWarnings.html)来明确抑制警告。
@@ -56,7 +54,6 @@ Class c = ClassWarning.class;
 @SuppressWarnings("unchecked")
 Method m = c.getMethod("m");  
 // warning gone
-
 ```
 
 * * *
@@ -67,10 +64,9 @@ Method m = c.getMethod("m");
 
 ## 当构造函数不可访问时会出现 InstantiationException
 
-[`Class.newInstance()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#newInstance--)如果尝试创建一个类的新实例且零参数构造函数不可见，则会抛出[`InstantiationException`](https://docs.oracle.com/javase/8/docs/api/java/lang/InstantiationException.html)。``ClassTrouble``示例展示了生成的堆栈跟踪。
+[`Class.newInstance()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#newInstance--)如果尝试创建一个类的新实例且零参数构造函数不可见，则会抛出[`InstantiationException`](https://docs.oracle.com/javase/8/docs/api/java/lang/InstantiationException.html)。`ClassTrouble`示例展示了生成的堆栈跟踪。
 
 ```java
-
 class Cls {
     private Cls() {}
 }
@@ -91,7 +87,6 @@ public class ClassTrouble {
 	}
     }
 }
-
 ```
 
 ```java
@@ -102,7 +97,6 @@ java.lang.IllegalAccessException: Class ClassTrouble can not access a member of
         at java.lang.Class.newInstance0(Class.java:349)
         at java.lang.Class.newInstance(Class.java:308)
         at ClassTrouble.main(ClassTrouble.java:9)
-
 ```
 
 [`Class.newInstance()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#newInstance--)的行为非常类似于`new`关键字，并且会因为与`new`相同的原因而失败。在反射中的典型解决方案是利用[`java.lang.reflect.AccessibleObject`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AccessibleObject.html)类，该类提供了抑制访问控制检查的能力；然而，这种方法不起作用，因为[`java.lang.Class`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)不扩展[`AccessibleObject`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AccessibleObject.html)。唯一的解决方案是修改代码以使用[`Constructor.newInstance()`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Constructor.html#newInstance-java.lang.Object...-)，该方法确实扩展了[`AccessibleObject`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AccessibleObject.html)。
@@ -114,3 +108,4 @@ java.lang.IllegalAccessException: Class ClassTrouble can not access a member of
 * * *
 
 使用[`Constructor.newInstance()`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Constructor.html#newInstance-java.lang.Object...-)可能会出现潜在问题的其他示例，可以在构造函数故障排除部分的成员课程中找到。
+

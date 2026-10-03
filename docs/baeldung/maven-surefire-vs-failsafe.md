@@ -1,8 +1,9 @@
+
 # Maven Surefire 和 Failsafe 插件的区别
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/maven-surefire-vs-failsafe>
 
-## 1.概观
+## 1. 概观
 
 在典型的测试驱动开发中，我们的目标是编写大量的低级单元测试，这些测试可以快速运行并独立设置。此外，还有一些依赖于外部系统的高级集成测试，例如，设置服务器或数据库。不出所料，这些通常既耗费资源又耗费时间。
 
@@ -10,11 +11,11 @@
 
 在本教程中，我们将比较在典型的 [Apache Maven](/web/20220628051932/https://www.baeldung.com/maven-guide) 版本中运行各种类型的测试最常用的 Surefire 和 Failsafe 插件。
 
-## 2.Surefire 插件
+## 2. Surefire 插件
 
 [Surefire 插件](/web/20220628051932/https://www.baeldung.com/maven-surefire-plugin)属于一组 Maven [核心](/web/20220628051932/https://www.baeldung.com/core-maven-plugins)插件，运行应用程序的单元测试。
 
-项目 POM 默认包含这个插件，但是我们也可以显式地配置它:
+项目 POM 默认包含这个插件，但是我们也可以显式地配置它：
 
 ```java
 <build>
@@ -31,7 +32,7 @@
 </build>
 ```
 
-该插件绑定到默认[生命周期](/web/20220628051932/https://www.baeldung.com/maven#introduction-8)的`test`阶段。因此，让我们用以下命令执行它:
+该插件绑定到默认[生命周期](/web/20220628051932/https://www.baeldung.com/maven#introduction-8)的`test`阶段。因此，让我们用以下命令执行它：
 
 ```java
 mvn clean test
@@ -43,13 +44,13 @@ mvn clean test
 
 Maven 为此提供了另一个插件。
 
-## 3.故障保护插件
+## 3. 故障保护插件
 
 [故障保护插件](/web/20220628051932/https://www.baeldung.com/maven-failsafe-plugin)被设计用来运行项目中的集成测试。
 
-### 3.1.配置
+### 3.1. 配置
 
-首先，让我们在项目 POM 中对此进行配置:
+首先，让我们在项目 POM 中对此进行配置：
 
 ```java
 <plugin>
@@ -69,7 +70,7 @@ Maven 为此提供了另一个插件。
 
 这里，插件的目标绑定到构建周期的`integration-test`和`verify`阶段，以便执行集成测试。
 
-现在，让我们从命令行执行`verify`阶段:
+现在，让我们从命令行执行`verify`阶段：
 
 ```java
 mvn clean verify
@@ -79,11 +80,11 @@ mvn clean verify
 
 相反，Maven 仍然执行`post-integration-test`阶段。因此，作为`post-integration-test`阶段的一部分，我们仍然可以执行任何清理和环境拆除工作。构建过程的后续`verify`阶段报告任何测试失败。
 
-### 3.2.例子
+### 3.2. 例子
 
 在我们的示例中，我们将配置一个 Jetty 服务器，在运行集成测试之前启动，在测试执行之后停止。
 
-首先，让我们将 Jetty 插件添加到 POM 中:
+首先，让我们将 Jetty 插件添加到 POM 中：
 
 ```java
 <plugin>
@@ -112,7 +113,7 @@ mvn clean verify
 
 在这里，我们已经添加了分别在`pre-integration-test`和`post-integration-test`阶段启动和停止 Jetty 服务器的配置。
 
-现在，让我们再次执行集成测试，并查看控制台输出:
+现在，让我们再次执行集成测试，并查看控制台输出：
 
 ```java
 ....
@@ -166,7 +167,7 @@ org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 
 为不同类型的测试使用不同插件的另一个好处是不同配置之间的分离。这提高了项目构建的可维护性。
 
-## 4.结论
+## 4. 结论
 
 在本文中，我们比较了 Surefire 和 Failsafe 插件用于分离和运行不同类型的测试。我们还看了一个例子，看到了故障安全插件如何为运行需要进一步设置和清理的测试提供额外的功能。
 

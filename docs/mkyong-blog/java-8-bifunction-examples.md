@@ -1,32 +1,33 @@
+
 # Java 8 双功能示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java8/java-8-bifunction-examples/>
 
-在 Java 8 中， [BiFunction](http://web.archive.org/web/20220801141255/https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html) 是一个函数接口；它接受两个参数并返回一个对象。
+在 Java 8 中，`BiFunction`是一个函数接口；它接受两个参数并返回一个对象。
 
-BiFunction.java
+`BiFunction.java`
 
 ```java
- @FunctionalInterface
+@FunctionalInterface
 public interface BiFunction<T, U, R> {
 
       R apply(T t, U u);
 
-} 
+}
 ```
 
-*   t–函数第一个参数的类型。
-*   u–函数的第二个参数的类型。
-*   r–函数结果的类型。
+* `t`–函数第一个参数的类型。
+* `u`–函数的第二个参数的类型。
+* `r`–函数结果的类型。
 
-## 1.`BiFunction<Integer, Integer, Integer>`
+## 1. `BiFunction<Integer, Integer, Integer>`
 
-1.1 本例采用两个`Integers`并返回一个`Integer`、`Double`或`List`
+1.1 本例采用两个`Integers`并返回一个`Integer`、`Double`或`List`。
 
-Java8BiFunction1.java
+`Java8BiFunction1.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.Arrays;
 import java.util.List;
@@ -59,25 +60,25 @@ public class Java8BiFunction1 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- 5
+5
 16.0
-[5] 
+[5]
 ```
 
-## 2.`BiFunction<Integer, Integer, Double>`
+## 2. `BiFunction<Integer, Integer, Double>`
 
 2.1 这个`BiFunction`取两个`Integer`返回一个`Double`，用`andThen()`用一个`Function`把它链接起来，把`Double`转换成`String`。
 
-Java8BiFunction2a.java
+`Java8BiFunction2a.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -98,21 +99,21 @@ public class Java8BiFunction2a {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- Result : 16.0 
+Result : 16.0
 ```
 
 2.2 这个例子将上面的程序转换成一个方法，该方法接受`BiFunction`和`Function`作为参数，并将它们链接在一起。
 
-Java8BiFunction2b.java
+`Java8BiFunction2b.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -137,33 +138,33 @@ public class Java8BiFunction2b {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- Result : 16.0 
+Result : 16.0
 ```
 
-2.3 此示例将上述方法转换为泛型方法:
+2.3 此示例将上述方法转换为泛型方法：
 
 ```java
- public static <A1, A2, R1, R2> R2 convert(A1 a1, A2 a2,
+public static <A1, A2, R1, R2> R2 convert(A1 a1, A2 a2,
                                           BiFunction<A1, A2, R1> func,
                                           Function<R1, R2> func2) {
 
     return func.andThen(func2).apply(a1, a2);
 
-} 
+}
 ```
 
-这个泛型方法有很多可能性，让我们看看:
+这个泛型方法有很多可能性，让我们看看：
 
-Java8BiFunction2c.java
+`Java8BiFunction2c.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -210,26 +211,26 @@ public class Java8BiFunction2c {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- Pow : 16.0
+Pow : 16.0
 Multiply : 4
 abcde
-100200 
+100200
 ```
 
-## 3.工厂
+## 3. 工厂
 
 3.1 这个例子使用`BiFunction`创建一个对象，充当一个工厂模式。
 
-Java8BiFunction3.java
+`Java8BiFunction3.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.function.BiFunction;
 
@@ -282,32 +283,34 @@ class GPS {
                 ", Longitude='" + Longitude + '\'' +
                 '}';
     }
-} 
+}
 ```
 
 输出
 
 ```java
- GPS{Latitude='40.741895', Longitude='-73.989308'} 
+GPS{Latitude='40.741895', Longitude='-73.989308'}
 ```
 
-`GPS::new`调用下面的构造函数，它接受两个参数并返回一个对象(GPS ),因此它与`BiFunction`签名匹配。
+`GPS::new`调用下面的构造函数，它接受两个参数并返回一个对象（`GPS`），因此它与`BiFunction`签名匹配。
 
 ```java
- public GPS(String latitude, String longitude) {
+public GPS(String latitude, String longitude) {
         Latitude = latitude;
         Longitude = longitude;
-    } 
+    }
 ```
 
-## 4.更大的
+## 4. 更大的
 
 4.1 通过一些条件过滤一个`List`。
 
-Java8BiFunction4.java
+`Java8BiFunction4.java`
+
+
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -384,27 +387,25 @@ public class Java8BiFunction4 {
 
     }
 
-} 
+}
 ```
 
-输出
+输出：
 
 ```java
- [node, java, javascript]
+[node, java, javascript]
 [node, java, javascript]
 [c++]
-[2, 4] 
+[2, 4]
 ```
 
 ## 参考
 
-*   [函数 JavaDoc](http://web.archive.org/web/20220801141255/https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html)
-*   [双功能 JavaDoc](http://web.archive.org/web/20220801141255/https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html)
-*   [Java 8 函数示例](http://web.archive.org/web/20220801141255/https://mkyong.com/java8/java-8-function-examples/)
-*   [Java 8 教程](/web/20220801141255/https://mkyong.com/tutorials/java-8-tutorials/)
-*   [Java 8 谓词示例](/web/20220801141255/https://mkyong.com/java8/java-8-predicate-examples/)
-*   [Java 8 双预测示例](/web/20220801141255/https://mkyong.com/java8/java-8-bipredicate-examples/)
-*   [Java 8 消费者示例](/web/20220801141255/https://mkyong.com/java8/java-8-consumer-examples/)
-*   [Java 8 双消费示例](/web/20220801141255/https://mkyong.com/java8/java-8-biconsumer-examples/)
-
-<input type="hidden" id="mkyong-current-postId" value="15492">
+- [函数 JavaDoc](http://web.archive.org/web/20220801141255/https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html)
+- [双功能 JavaDoc](http://web.archive.org/web/20220801141255/https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html)
+- [Java 8 函数示例](http://web.archive.org/web/20220801141255/https://mkyong.com/java8/java-8-function-examples/)
+- [Java 8 教程](/web/20220801141255/https://mkyong.com/tutorials/java-8-tutorials/)
+- [Java 8 谓词示例](/web/20220801141255/https://mkyong.com/java8/java-8-predicate-examples/)
+- [Java 8 双预测示例](/web/20220801141255/https://mkyong.com/java8/java-8-bipredicate-examples/)
+- [Java 8 消费者示例](/web/20220801141255/https://mkyong.com/java8/java-8-consumer-examples/)
+- [Java 8 双消费示例](/web/20220801141255/https://mkyong.com/java8/java-8-biconsumer-examples/)

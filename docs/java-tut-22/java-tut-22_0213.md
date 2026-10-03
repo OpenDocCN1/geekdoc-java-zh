@@ -1,3 +1,4 @@
+
 # 保护块
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/concurrency/guardmeth.html`](https://docs.oracle.com/javase/tutorial/essential/concurrency/guardmeth.html)
@@ -13,7 +14,6 @@ public void guardedJoy() {
     while(!joy) {}
     System.out.println("Joy has been achieved!");
 }
-
 ```
 
 一个更有效的保护块调用[`Object.wait`](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--)来挂起当前线程。调用`wait`不会返回，直到另一个线程发出通知，表明可能发生了某个特殊事件，尽管不一定是该线程正在等待的事件：
@@ -29,14 +29,13 @@ public synchronized void guardedJoy() {
     }
     System.out.println("Joy and efficiency have been achieved!");
 }
-
 ```
 
-* * *
+---
 
 **注意：**始终在测试等待的条件的循环中调用`wait`。不要假设中断是为了您正在等待的特定条件，或者该条件仍然为真。
 
-* * *
+---
 
 像许多暂停执行的方法一样，`wait`可能会抛出`InterruptedException`。在这个例子中，我们可以忽略这个异常，我们只关心`joy`的值。
 
@@ -49,23 +48,21 @@ public synchronized notifyJoy() {
     joy = true;
     notifyAll();
 }
-
 ```
 
 第二个线程释放锁后一段时间，第一个线程重新获取锁，并通过从`wait`调用返回来恢复执行。
 
-* * *
+---
 
 **注意：**还有第二种通知方法，`notify`，它唤醒单个线程。因为`notify`不允许您指定被唤醒的线程，所以它只在大规模并行应用程序中有用，即具有大量线程的程序，所有线程都在做类似的工作。在这种应用程序中，您不关心哪个线程被唤醒。
 
-* * *
+---
 
 让我们使用保护块来创建一个*生产者-消费者*应用程序。这种应用程序在两个线程之间共享数据：*生产者*创建数据，*消费者*对其进行处理。这两个线程使用共享对象进行通信。协调是必不可少的：消费者线程在生产者线程交付数据之前不得尝试检索数据，生产者线程在消费者尚未检索旧数据之前不得尝试交付新数据。
 
-在这个例子中，数据是一系列文本消息，通过一个类型为``Drop``的对象共享：
+在这个例子中，数据是一系列文本消息，通过一个类型为`Drop`的对象共享：
 
 ```java
-
 public class Drop {
     // Message sent from producer
     // to consumer.
@@ -109,13 +106,11 @@ public class Drop {
         notifyAll();
     }
 }
-
 ```
 
-生产者线程，在``Producer``中定义，发送一系列熟悉的消息。字符串"DONE"表示所有消息都已发送。为了模拟真实应用程序的不可预测性，生产者线程在消息之间暂停一段随机时间。
+生产者线程，在`Producer`中定义，发送一系列熟悉的消息。字符串"DONE"表示所有消息都已发送。为了模拟真实应用程序的不可预测性，生产者线程在消息之间暂停一段随机时间。
 
 ```java
-
 import java.util.Random;
 
 public class Producer implements Runnable {
@@ -145,13 +140,11 @@ public class Producer implements Runnable {
         drop.put("DONE");
     }
 }
-
 ```
 
-消费者线程，在``Consumer``中定义，简单地检索消息并打印出来，直到检索到"DONE"字符串为止。该线程还会暂停一段随机时间。
+消费者线程，在`Consumer`中定义，简单地检索消息并打印出来，直到检索到"DONE"字符串为止。该线程还会暂停一段随机时间。
 
 ```java
-
 import java.util.Random;
 
 public class Consumer implements Runnable {
@@ -173,13 +166,11 @@ public class Consumer implements Runnable {
         }
     }
 }
-
 ```
 
-最后，这是主线程，在``ProducerConsumerExample``中定义，启动生产者和消费者线程。
+最后，这是主线程，在`ProducerConsumerExample`中定义，启动生产者和消费者线程。
 
 ```java
-
 public class ProducerConsumerExample {
     public static void main(String[] args) {
         Drop drop = new Drop();
@@ -187,11 +178,10 @@ public class ProducerConsumerExample {
         (new Thread(new Consumer(drop))).start();
     }
 }
-
 ```
 
-* * *
+---
 
 **注意：** `Drop` 类是为了演示受保护的代码块而编写的。在尝试编写自己的数据共享对象之前，请查看 Java 集合框架中的现有数据结构，以避免重复造轮子。有关更多信息，请参考问题和练习部分。
 
-* * *
+---

@@ -1,14 +1,15 @@
+
 # 系统规则库指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-system-rules-junit>
 
-## 1.概观
+## 1. 概观
 
-有时当编写单元测试时，我们可能需要测试直接与 [`System`](/web/20221208143839/https://www.baeldung.com/java-lang-system) 类交互的代码。通常在应用程序中，比如直接调用`[System.exit](/web/20221208143839/https://www.baeldung.com/java-system-exit)`或使用`System.in`读取参数的命令行工具。
+有时在编写单元测试时，我们可能需要测试直接与 [`System`](/web/20221208143839/https://www.baeldung.com/java-lang-system) 类交互的代码。通常在应用程序中，比如直接调用`System.exit`或使用`System.in`读取参数的命令行工具。
 
 在本教程中，**我们将看看一个名为[系统规则](https://web.archive.org/web/20221208143839/https://stefanbirkner.github.io/system-rules/)的简洁外部库的最常见特性，它为测试使用`System`类**的代码提供了一组 [JUnit 规则](/web/20221208143839/https://www.baeldung.com/junit-4-rules)。
 
-## 2.Maven 依赖性
+## 2. Maven 依赖性
 
 首先，让我们将[系统规则依赖关系](https://web.archive.org/web/20221208143839/https://search.maven.org/classic/#search%7Cga%7C1%7Ca%3A%22system-rules%22)添加到我们的`pom.xml`中:
 
@@ -30,9 +31,9 @@
 </dependency>
 ```
 
-**由于系统规则不直接支持 [**JUnit5**](/web/20221208143839/https://www.baeldung.com/junit-5) ，我们增加了最后一个依赖项。**这提供了在测试中使用的系统 Lambda 包装方法。有一个基于[扩展](/web/20221208143839/https://www.baeldung.com/junit-5-extensions)的替代方案叫做[系统存根](/web/20221208143839/https://www.baeldung.com/java-system-stubs)。
+**由于系统规则不直接支持 [JUnit5](/web/20221208143839/https://www.baeldung.com/junit-5) ，我们增加了最后一个依赖项。**这提供了在测试中使用的系统 Lambda 包装方法。有一个基于[扩展](/web/20221208143839/https://www.baeldung.com/junit-5-extensions)的替代方案叫做[系统存根](/web/20221208143839/https://www.baeldung.com/java-system-stubs)。
 
-## 3.使用系统属性
+## 3. 使用系统属性
 
 简单概括一下，Java 平台使用一个 [`Properties`对象](/web/20221208143839/https://www.baeldung.com/java-properties)来提供关于本地系统和配置的信息。我们可以很容易地打印出属性:
 
@@ -57,7 +58,7 @@ os.name: Mac OS X
 
 在下一节中，我们将看到如何在测试完成后以简洁和简单的方式提供、清理并确保恢复系统属性值。
 
-## 4.提供系统属性
+## 4. 提供系统属性
 
 假设我们有一个系统属性`log_dir` ，它包含我们的日志应该被写入的位置，并且我们的应用程序在启动时设置这个位置:
 
@@ -65,7 +66,7 @@ os.name: Mac OS X
 System.setProperty("log_dir", "/tmp/baeldung/logs");
 ```
 
-### 4.1.提供单一属性
+### 4.1. 提供单一属性
 
 现在让我们考虑从我们的单元测试中，我们想要提供一个不同的值。我们可以使用`ProvideSystemProperty`规则来做到这一点:
 
@@ -100,7 +101,7 @@ public static void tearDownAfterClass() throws Exception {
 /tmp/baeldung/logs
 ```
 
-### 4.2.提供多种属性
+### 4.2. 提供多种属性
 
 如果我们需要提供多个属性，我们可以使用`and`方法将我们测试所需的尽可能多的属性值链接在一起:
 
@@ -110,7 +111,7 @@ public final ProvideSystemProperty providesSystemPropertyRule =
     new ProvideSystemProperty("log_dir", "test/resources").and("another_property", "another_value")
 ```
 
-### 4.3.从文件中提供属性
+### 4.3. 从文件中提供属性
 
 同样，我们也可以使用`ProvideSystemProperty`规则从文件或类路径资源中提供属性:
 
@@ -133,7 +134,7 @@ name=baeldung
 version=1.0
 ```
 
-### 4.4.用 JUnit5 和 Lambdas 提供属性
+### 4.4. 用 JUnit5 和 Lambdas 提供属性
 
 正如我们前面提到的，我们也可以使用库的 System Lambda 版本来实现与 JUnit5 兼容的测试。
 
@@ -160,7 +161,7 @@ void givenSetSystemProperty_whenGetLogDir_thenLogDirIsProvidedSuccessfully() thr
 
 不幸的是，没有内置的支持来使用`restoreSystemProperties` 方法从文件中提供属性。
 
-## 5.清除系统属性
+## 5. 清除系统属性
 
 有时，我们可能希望在测试开始时清除一组系统属性，并在测试结束时恢复它们的原始值，而不管测试是通过还是失败。
 
@@ -180,7 +181,7 @@ public void givenClearUsernameProperty_whenGetUserName_thenNull() {
 
 **方便的是，我们也可以将多个属性名传递给`ClearSystemProperties`构造函数。**
 
-## 6.嘲讽`System.in`
+## 6. 嘲讽`System.in`
 
 有时，我们可能会创建从`System.in`读取数据的交互式命令行应用程序。
 
@@ -224,13 +225,13 @@ void givenTwoNames_whenSystemInMock_thenNamesJoinedTogether() throws Exception {
 }
 ```
 
-**在这个变体中，我们使用类似命名的`withTextFromSystemIn `方法，它让我们指定所提供的`System.in`值。**
+**在这个变体中，我们使用类似命名的`withTextFromSystemIn`方法，它让我们指定所提供的`System.in`值。**
 
 重要的是，在这两种情况下，测试结束后，`System.in`的原始值将被恢复。
 
-## 7.测试`System.out`和`System.err`
+## 7. 测试`System.out`和`System.err`
 
-在之前的教程中，我们看到了如何使用系统规则进行单元测试`[System.out.println()](/web/20221208143839/https://www.baeldung.com/java-testing-system-out-println#using-system-rules).`
+在之前的教程中，我们看到了如何使用系统规则进行单元测试[`System.out.println()`](/web/20221208143839/https://www.baeldung.com/java-testing-system-out-println#using-system-rules)。
 
 方便的是，我们可以应用几乎相同的方法来测试与标准错误流交互的代码。这次我们使用`SystemErrRule`:
 
@@ -269,11 +270,13 @@ void givenTapSystemErr_whenInvokePrintln_thenOutputIsReturnedSuccessfully() thro
 
 在这个版本中，**我们使用了`tapSystemErr`方法，它执行语句并让我们捕获传递给`System.err`的内容。**
 
-## 8.处理`System.exit`
 
-命令行应用程序通常通过调用`System.exit`来终止。**如果我们想要测试这样一个应用程序，当我们的测试遇到调用`System.exit`的代码时，它很可能会在完成之前异常终止。**
 
-幸运的是，系统规则提供了一个简洁的解决方案，使用`ExpectedSystemExit`规则来处理这个问题:
+## 8. 处理 `System.exit`
+
+命令行应用程序通常通过调用 `System.exit` 来终止。**如果我们想要测试这样一个应用程序，当我们的测试遇到调用 `System.exit` 的代码时，它很可能会在完成之前异常终止。**
+
+幸运的是，系统规则提供了一个简洁的解决方案，使用 `ExpectedSystemExit` 规则来处理这个问题：
 
 ```java
 @Rule
@@ -290,9 +293,9 @@ private void exit() {
 }
 ```
 
-使用`ExpectedSystemExit`规则允许我们从测试中指定预期的`System.exit()`调用。在这个简单的例子中，我们还使用`expectSystemExitWithStatus`方法检查预期的状态代码。
+使用 `ExpectedSystemExit` 规则允许我们从测试中指定预期的 `System.exit()` 调用。在这个简单的例子中，我们还使用 `expectSystemExitWithStatus` 方法检查预期的状态代码。
 
-**我们可以在 JUnit 5 版本中使用`catchSystemExit`方法**实现类似的东西:
+**我们可以在 JUnit 5 版本中使用 `catchSystemExit` 方法** 实现类似的东西：
 
 ```java
 @Test
@@ -304,11 +307,11 @@ void givenCatchSystemExit_whenAppCallsSystemExit_thenStatusIsReturnedSuccessfull
 }
 ```
 
-## 9.结论
+## 9. 结论
 
 总而言之，在本教程中，我们已经详细探索了系统规则库。
 
-首先，我们从解释如何测试使用系统属性的代码开始。然后我们看了如何测试标准输出和标准输入。最后，我们看了如何处理从测试中调用 `System.exit`的代码。
+首先，我们从解释如何测试使用系统属性的代码开始。然后我们看了如何测试标准输出和标准输入。最后，我们看了如何处理从测试中调用 `System.exit` 的代码。
 
 系统规则库还支持从我们的测试中提供环境变量和特殊的安全管理器。请务必查看完整的[文档](https://web.archive.org/web/20221208143839/https://stefanbirkner.github.io/system-rules/)了解详情。
 

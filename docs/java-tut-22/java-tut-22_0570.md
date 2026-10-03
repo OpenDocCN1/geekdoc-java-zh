@@ -1,3 +1,4 @@
+
 # 非 ISO 日期转换
 
 > 原文：[`docs.oracle.com/javase/tutorial/datetime/iso/nonIso.html`](https://docs.oracle.com/javase/tutorial/datetime/iso/nonIso.html)
@@ -16,10 +17,9 @@ JapaneseDate jdate     = JapaneseDate.from(date);
 HijrahDate hdate       = HijrahDate.from(date);
 MinguoDate mdate       = MinguoDate.from(date);
 ThaiBuddhistDate tdate = ThaiBuddhistDate.from(date);
-
 ```
 
-``StringConverter``示例将从`LocalDate`转换为`ChronoLocalDate`再转换为`String`，然后再转回去。`toString`方法接受`LocalDate`实例和`Chronology`，并通过提供的`Chronology`返回转换后的字符串。`DateTimeFormatterBuilder`用于构建可用于打印日期的字符串：
+`StringConverter`示例将从`LocalDate`转换为`ChronoLocalDate`再转换为`String`，然后再转回去。`toString`方法接受`LocalDate`实例和`Chronology`，并通过提供的`Chronology`返回转换后的字符串。`DateTimeFormatterBuilder`用于构建可用于打印日期的字符串：
 
 ```java
 /**
@@ -56,7 +56,6 @@ public static String toString(LocalDate localDate, Chronology chrono) {
         return "";
     }
 }
-
 ```
 
 当使用以下日期调用预定义年表的方法时：
@@ -71,7 +70,6 @@ System.out.printf("%s%n",
      StringConverter.toString(date, ThaiBuddhistChronology.INSTANCE));
 System.out.printf("%s%n",
      StringConverter.toString(date, HijrahChronology.INSTANCE));
-
 ```
 
 输出如下：
@@ -81,7 +79,6 @@ System.out.printf("%s%n",
 10/29/0085 1
 10/29/2539 B.E.
 6/16/1417 1
-
 ```
 
 ## 转换为基于 ISO 的日期
@@ -90,12 +87,11 @@ System.out.printf("%s%n",
 
 ```java
 LocalDate date = LocalDate.from(JapaneseDate.now());
-
 ```
 
 其他基于时间的类也提供此方法，如果日期无法转换，则会抛出`DateTimeException`。
 
-来自``StringConverter``示例的`fromString`方法解析包含非 ISO 日期的`String`并返回`LocalDate`实例。
+来自`StringConverter`示例的`fromString`方法解析包含非 ISO 日期的`String`并返回`LocalDate`实例。
 
 ```java
 /**
@@ -128,7 +124,6 @@ public static LocalDate fromString(String text, Chronology chrono) {
     }
 return null;
 }
-
 ```
 
 当使用以下字符串调用方法时：
@@ -142,7 +137,6 @@ System.out.printf("%s%n", StringConverter.fromString("10/29/2539 B.E.",
     ThaiBuddhistChronology.INSTANCE));
 System.out.printf("%s%n", StringConverter.fromString("6/16/1417 1",
     HijrahChronology.INSTANCE));
-
 ```
 
 打印的字符串应该都能转换回 1996 年 10 月 29 日：
@@ -152,5 +146,4 @@ System.out.printf("%s%n", StringConverter.fromString("6/16/1417 1",
 1996-10-29
 1996-10-29
 1996-10-29
-
 ```

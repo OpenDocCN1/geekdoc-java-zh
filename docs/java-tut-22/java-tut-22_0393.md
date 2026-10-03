@@ -1,74 +1,55 @@
+
 # 如何使用表格
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/components/table.html`](https://docs.oracle.com/javase/tutorial/uiswing/components/table.html)
 
-使用[`JTable`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html)类可以显示数据表，可选择允许用户编辑数据。 `JTable`不包含或缓存数据；它只是您数据的一个视图。这里是一个典型表格在滚动窗格中显示的图片：
+使用[`JTable`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html)类可以显示数据表，可选择允许用户编辑数据。`JTable`不包含或缓存数据；它只是您数据的一个视图。这里是一个典型表格在滚动窗格中显示的图片：
 
 ![TableDemo 的快照，显示了一个典型的表格。](img/83a01506ca7c1365f675c3b5c4322c3c.png)
 
 本节的其余部分将向您展示如何完成一些常见的与表格相关的任务。本节涵盖以下主题：
 
-+   创建简单表格
-
-+   将表格添加到容器中
-
-+   设置和更改列宽
-
-+   用户选择
-
-+   创建表格模型
-
-+   监听数据更改
-
-+   触发数据更改事件
-
-+   概念：编辑器和渲染器
-
-+   使用自定义渲染器
-
-+   为单元格指定工具提示
-
-+   为列标题指定工具提示
-
-+   排序和过滤
-
-+   使用下拉框作为编辑器
-
-+   使用其他编辑器
-
-+   使用编辑器验证用户输入的文本
-
-+   打印
-
-+   使用表格的示例
++ 创建简单表格
++ 将表格添加到容器中
++ 设置和更改列宽
++ 用户选择
++ 创建表格模型
++ 监听数据更改
++ 触发数据更改事件
++ 概念：编辑器和渲染器
++ 使用自定义渲染器
++ 为单元格指定工具提示
++ 为列标题指定工具提示
++ 排序和过滤
++ 使用下拉框作为编辑器
++ 使用其他编辑器
++ 使用编辑器验证用户输入的文本
++ 打印
++ 使用表格的示例
 
 ## 创建简单表格
 
-* * *
-
 **试试这个：**
 
-1.  点击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行`SimpleTableDemo`（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自己编译和运行示例，请参考示例索引。
+1. 点击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行`SimpleTableDemo`（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自己编译和运行示例，请参考示例索引。
 
-    ![启动 SimpleTableDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/SimpleTableDemoProject/SimpleTableDemo.jnlp)
+   ![启动 SimpleTableDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/SimpleTableDemoProject/SimpleTableDemo.jnlp)
 
-1.  点击包含“滑雪”的单元格。
+2. 点击包含“滑雪”的单元格。
 
-    整个第一行被选中，表示您已选择了 Kathy Smith 的数据。特殊的高亮显示表示“滑雪”单元格可编辑。通常，双击文本单元格即可开始编辑。
+   整个第一行被选中，表示您已选择了 Kathy Smith 的数据。特殊的高亮显示表示“滑雪”单元格可编辑。通常，双击文本单元格即可开始编辑。
 
-1.  将光标放在“名字”上。现在按下鼠标按钮并向右拖动。
+3. 将光标放在“名字”上。现在按下鼠标按钮并向右拖动。
 
-    如您所见，用户可以重新排列表格中的列。
+   如您所见，用户可以重新排列表格中的列。
 
-1.  将光标放在列标题的右侧。现在按下鼠标按钮并向右或向左拖动。
+4. 将光标放在列标题的右侧。现在按下鼠标按钮并向右或向左拖动。
 
-    列的大小会改变，其他列会调整以填充剩余空间。
+   列的大小会改变，其他列会调整以填充剩余空间。
 
-1.  调整包含表格的窗口大小，使其比显示整个表格所需的空间更大。
+5. 调整包含表格的窗口大小，使其比显示整个表格所需的空间更大。
 
-    所有表格单元格变宽，扩展以填充额外的水平空间。
-
-* * *
+   所有表格单元格变宽，扩展以填充额外的水平空间。
 
 在`SimpleTableDemo.java`中的表格使用字符串数组声明列名：
 
@@ -78,7 +59,6 @@ String[] columnNames = {"First Name",
                         "Sport",
                         "# of Years",
                         "Vegetarian"};
-
 ```
 
 其数据被初始化并存储在二维对象数组中：
@@ -96,29 +76,24 @@ Object[][] data = {
     {"Joe", "Brown",
      "Pool", new Integer(10), new Boolean(false)}
 };
-
 ```
 
 然后使用这些数据和列名构建表格：
 
 ```java
 JTable table = new JTable(data, columnNames);
-
 ```
 
 有两个直接接受数据的`JTable`构造函数（`SimpleTableDemo`使用第一个）：
 
-+   `JTable(Object[][] rowData, Object[] columnNames)`
-
-+   `JTable(Vector rowData, Vector columnNames)`
++ `JTable(Object[][] rowData, Object[] columnNames)`
++ `JTable(Vector rowData, Vector columnNames)`
 
 这些构造函数的优点是易于使用。但是，这些构造函数也有缺点：
 
-+   它们会自动使每个单元格可编辑。
-
-+   它们将所有数据类型视为相同（字符串）。例如，如果表格列具有`Boolean`数据，表格可以将数据显示为复选框。但是，如果您使用前面列出的两个`JTable`构造函数之一，您的`Boolean`数据将显示为字符串。您可以在前一个图中的`Vegetarian`列中看到这种差异。
-
-+   它们要求您将所有表格数据放入数组或向量中，这对于某些数据可能不合适。例如，如果您正在从数据库实例化一组对象，您可能希望直接查询对象以获取其值，而不是将所有值复制到数组或向量中。
++ 它们会自动使每个单元格可编辑。
++ 它们将所有数据类型视为相同（字符串）。例如，如果表格列具有`Boolean`数据，表格可以将数据显示为复选框。但是，如果您使用前面列出的两个`JTable`构造函数之一，您的`Boolean`数据将显示为字符串。您可以在前一个图中的`Vegetarian`列中看到这种差异。
++ 它们要求您将所有表格数据放入数组或向量中，这对于某些数据可能不合适。例如，如果您正在从数据库实例化一组对象，您可能希望直接查询对象以获取其值，而不是将所有值复制到数组或向量中。
 
 如果您想绕过这些限制，您需要实现自己的表格模型，如创建表格模型中所述。
 
@@ -129,14 +104,12 @@ JTable table = new JTable(data, columnNames);
 ```java
 JScrollPane scrollPane = new JScrollPane(table);
 table.setFillsViewportHeight(true);
-
 ```
 
 此片段中的两行代码执行以下操作：
 
-+   使用引用表格对象的参数调用`JScrollPane`构造函数。这将创建一个作为表格容器的滚动窗格；表格会自动添加到容器中。
-
-+   调用`JTable.setFillsViewportHeight`来设置`fillsViewportHeight`属性。当此属性为`true`时，表格将使用容器的整个高度，即使表格没有足够的行来使用整个垂直空间。这使得将表格用作拖放目标更容易。
++ 使用引用表格对象的参数调用`JScrollPane`构造函数。这将创建一个作为表格容器的滚动窗格；表格会自动添加到容器中。
++ 调用`JTable.setFillsViewportHeight`来设置`fillsViewportHeight`属性。当此属性为`true`时，表格将使用容器的整个高度，即使表格没有足够的行来使用整个垂直空间。这使得将表格用作拖放目标更容易。
 
 滚动窗格会自动将表头放置在视口顶部。当表格数据滚动时，列名仍然可见在查看区域的顶部。
 
@@ -146,7 +119,6 @@ table.setFillsViewportHeight(true);
 container.setLayout(new BorderLayout());
 container.add(table.getTableHeader(), BorderLayout.PAGE_START);
 container.add(table, BorderLayout.CENTER);
-
 ```
 
 ## 设置和更改列宽度
@@ -167,12 +139,11 @@ for (int i = 0; i < 5; i++) {
         column.setPreferredWidth(50);
     }
 }
-
 ```
 
 正如前面的代码所示，表格中的每一列都由一个[`TableColumn`](https://docs.oracle.com/javase/8/docs/api/javax/swing/table/TableColumn.html)对象表示。`TableColumn`提供了用于获取和设置列的最小、首选和最大宽度的方法，以及用于获取当前宽度的方法。有关根据绘制单元格内容所需空间的近似值设置单元格宽度的示例，请参见`TableRenderDemo.java`中的`initColumnSizes`方法。
 
-当用户明确调整列宽时，列的*首选*宽度会被设置为用户指定的大小，成为列的新*当前*宽度。然而，当表格本身被调整大小时  通常是因为窗口大小调整 ；列的首选宽度不会改变。相反，现有的首选宽度会被用来计算新的列宽以填充可用空间。
+当用户明确调整列宽时，列的*首选*宽度会被设置为用户指定的大小，成为列的新*当前*宽度。然而，当表格本身被调整大小时——通常是因为窗口大小调整——列的首选宽度不会改变。相反，现有的首选宽度会被用来计算新的列宽以填充可用空间。
 
 您可以通过调用[`setAutoResizeMode`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#setAutoResizeMode-int-)来更改表格的调整大小行为。
 
@@ -192,7 +163,7 @@ for (int i = 0; i < 5; i++) {
 
 ![启动 TableSelectionDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TableSelectionDemoProject/TableSelectionDemo.jnlp)
 
-此示例程序呈现了熟悉的表格，并允许用户操作某些 JTable 选项。还有一个文本窗格记录选择事件。
+此示例程序呈现了熟悉的表格，并允许用户操作某些`JTable`选项。还有一个文本窗格记录选择事件。
 
 在下面的截图中，用户运行了程序，在第一行单击，然后在第三行按住控制键单击。注意最后单击的单元格周围的轮廓；这是 Metal 外观如何突出显示主要选择。
 
@@ -204,17 +175,11 @@ for (int i = 0; i < 5; i++) {
 
 回到`TableSelectionDemo`，注意“选择选项”下的三个选项复选框。每个复选框控制由`JTable`定义的`boolean`绑定变量的状态：
 
-+   “行选择”控制`rowSelectionAllowed`，其具有 setter 方法`setRowSelectionAllowed`和 getter 方法`getRowSelectionAllowed`。当此绑定属性为`true`（且`columnSelectionAllowed`属性为`false`）时，用户可以按行选择。
-
-+   “列选择”控制`columnSelectionAllowed`，其具有 setter 方法`setColumnSelectionAllowed`和 getter 方法`getColumnSelectionAllowed`。当此绑定属性为`true`（且`rowSelectionAllowed`绑定属性为`false`）时，用户可以按列选择。
-
-+   “单元格选择”控制`cellSelectionEnabled`，其具有 setter 方法`setCellSelectionEnabled`和 getter 方法`getCellSelectionEnabled`。当此绑定属性为`true`时，用户可以选择单个单元格或矩形块的单元格。
-
-* * *
++ “行选择”控制`rowSelectionAllowed`，其具有 setter 方法`setRowSelectionAllowed`和 getter 方法`getRowSelectionAllowed`。当此绑定属性为`true`（且`columnSelectionAllowed`属性为`false`）时，用户可以按行选择。
++ “列选择”控制`columnSelectionAllowed`，其具有 setter 方法`setColumnSelectionAllowed`和 getter 方法`getColumnSelectionAllowed`。当此绑定属性为`true`（且`rowSelectionAllowed`绑定属性为`false`）时，用户可以按列选择。
++ “单元格选择”控制`cellSelectionEnabled`，其具有 setter 方法`setCellSelectionEnabled`和 getter 方法`getCellSelectionEnabled`。当此绑定属性为`true`时，用户可以选择单个单元格或矩形块的单元格。
 
 **注意：** `JTable`使用非常简单的选择概念，作为行和列的交集进行管理。它不是设计为处理完全独立的单元格选择。
-
-* * *
 
 如果清除所有三个复选框（将所有三个绑定属性设置为`false`），则没有选择；只显示主要选择。
 
@@ -222,11 +187,7 @@ for (int i = 0; i < 5; i++) {
 
 您可能还注意到，更改三个选择选项中的任何一个都可能影响其他选项。这是因为允许行选择和列选择与启用单元格选择完全相同。`JTable`会根据需要自动更新三个绑定变量，以保持它们一致。
 
-* * *
-
 **注意：** 将`cellSelectionEnabled`设置为一个值会同时将`rowSelectionEnabled`和`columnSelectionEnabled`设置为该值。将`rowSelectionEnabled`和`columnSelectionEnabled`都设置为一个值会同时将`cellSelectionEnabled`设置为该值。将`rowSelectionEnabled`和`columnSelectionEnabled`设置为不同的值会同时将`cellSelectionEnabled`设置为`false`。
-
-* * *
 
 要检索当前选择，请使用[`JTable.getSelectedRows`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#getSelectedRows--)返回一个行索引数组，以及[`JTable.getSelectedColumns`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#getSelectedColumns--)返回一个列索引数组。要检索主选择的坐标，请参考表本身和表的列模型的选择模型。以下代码格式化一个包含主选择行和列的字符串：
 
@@ -234,16 +195,11 @@ for (int i = 0; i < 5; i++) {
 String.format("Lead Selection: %d, %d. ",
     table.getSelectionModel().getLeadSelectionIndex(),
     table.getColumnModel().getSelectionModel().getLeadSelectionIndex());
-
 ```
 
 用户选择会生成多个事件。有关这些事件的信息，请参考如何编写列表选择监听器中的编写事件监听器课程。
 
-* * *
-
 **注意：** 选择数据实际上描述了在“视图”中选择的单元格（表数据在任何排序或过滤后的外观），而不是在表模型中的单元格。除非您查看的数据已通过排序、过滤或用户操作列重新排列，否则此区别并不重要。在这种情况下，您必须使用排序和过滤中描述的转换方法转换选择坐标。
-
-* * *
 
 ## 创建表模型
 
@@ -252,6 +208,8 @@ String.format("Lead Selection: %d, %d. ",
 ![表、表对象、模型对象之间的关系](img/d13dc5ee108d9a200acb4a4d5031c767.png)
 
 `SimpleTableDemo`使用的`JTable`构造函数会使用以下代码创建其表模型：
+
+
 
 ```java
 new AbstractTableModel() {
@@ -270,7 +228,6 @@ new AbstractTableModel() {
         fireTableCellUpdated(row, col);
     }
 }
-
 ```
 
 如前面的代码所示，实现表模型可以很简单。通常，您会在[`AbstractTableModel`](https://docs.oracle.com/javase/8/docs/api/javax/swing/table/AbstractTableModel.html)类的子类中实现您的表模型。
@@ -340,7 +297,6 @@ class MyTableModel extends AbstractTableModel {
     }
     ...
 }
-
 ```
 
 ## 监听数据更改
@@ -370,7 +326,6 @@ public class SimpleTableDemo ... implements TableModelListener {
     }
     ...
 }
-
 ```
 
 ## 触发数据更改事件
@@ -386,7 +341,7 @@ public class SimpleTableDemo ... implements TableModelListener {
 | `fireTableDataChanged` | 更新整个表格（仅数据）。 |
 | `fireTableRowsInserted` | 插入新行。 |
 | `fireTableRowsDeleted` | 删除现有行 |
-| `fireTableStructureChanged`   | 使整个表格无效，包括数据和结构。 |
+| `fireTableStructureChanged` | 使整个表格无效，包括数据和结构。 |
 
 ## 概念：编辑器和渲染器
 
@@ -394,21 +349,16 @@ public class SimpleTableDemo ... implements TableModelListener {
 
 相反，通常使用单个*单元格渲染器*来绘制包含相同类型数据的所有单元格。您可以将渲染器视为可配置的墨水印，表格用它来将适当格式的数据印在每个单元格上。当用户开始编辑单元格数据时，*单元格编辑器*接管单元格，控制单元格的编辑行为。
 
-例如，在`TableDemo`中**# of Years**列中的每个单元格都包含`Number`数据  具体来说，是一个`Integer`对象。默认情况下，包含`Number`的列的单元格渲染器使用单个`JLabel`实例在列的单元格上绘制适当的数字，右对齐。如果用户开始编辑其中一个单元格，默认单元格编辑器使用右对齐的`JTextField`来控制单元格编辑。
+例如，在`TableDemo`中**# of Years**列中的每个单元格都包含`Number`数据 — 具体来说，是一个`Integer`对象。默认情况下，包含`Number`的列的单元格渲染器使用单个`JLabel`实例在列的单元格上绘制适当的数字，右对齐。如果用户开始编辑其中一个单元格，默认单元格编辑器使用右对齐的`JTextField`来控制单元格编辑。
 
 要选择显示列中单元格的渲染器，表格首先确定您是否为该特定列指定了渲染器。如果没有，则表格调用表格模型的`getColumnClass`方法，该方法获取列单元格的数据类型。接下来，表格将列的数据类型与已注册单元格渲染器的数据类型列表进行比较。此列表由表格初始化，但您可以添加或更改。目前，表格将以下类型的数据放入列表中：
 
-+   `Boolean`  使用复选框渲染。
-
-+   `Number`  由右对齐的标签渲染。
-
-+   `Double`、`Float`  与`Number`相同，但对象到文本的转换由[`NumberFormat`](https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html)实例执行（使用当前区域设置的默认数字格式）。
-
-+   `Date`  由一个标签渲染，对象到文本的转换由[`DateFormat`](https://docs.oracle.com/javase/8/docs/api/java/text/DateFormat.html)实例执行（使用日期和时间的短格式）。
-
-+   `ImageIcon`、`Icon`  由居中的标签渲染。
-
-+   `Object`  由显示对象字符串值的标签渲染。
++   `Boolean` — 使用复选框渲染。
++   `Number` — 由右对齐的标签渲染。
++   `Double`、`Float` — 与`Number`相同，但对象到文本的转换由[`NumberFormat`](https://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html)实例执行（使用当前区域设置的默认数字格式）。
++   `Date` — 由一个标签渲染，对象到文本的转换由[`DateFormat`](https://docs.oracle.com/javase/8/docs/api/java/text/DateFormat.html)实例执行（使用日期和时间的短格式）。
++   `ImageIcon`、`Icon` — 由居中的标签渲染。
++   `Object` — 由显示对象字符串值的标签渲染。
 
 单元格编辑器是使用类似的算法选择的。
 
@@ -443,7 +393,6 @@ static class DateRenderer extends DefaultTableCellRenderer {
         setText((value == null) ? "" : formatter.format(value));
     }
 }
-
 ```
 
 如果扩展`DefaultTableCellRenderer`不够，可以使用另一个超类构建渲染器。最简单的方法是创建一个现有组件的子类，使您的子类实现[`TableCellRenderer`](https://docs.oracle.com/javase/8/docs/api/javax/swing/table/TableCellRenderer.html)接口。`TableCellRenderer`只需要一个方法：`getTableCellRendererComponent`。您实现此方法应设置渲染组件以反映传入状态，然后返回组件。
@@ -483,17 +432,17 @@ public class ColorRenderer extends JLabel
         return this;
     }
 }
-
 ```
 
 这是从`TableDialogEditDemo.java`中注册`ColorRenderer`实例作为所有`Color`数据的默认渲染器的代码：
 
 ```java
 table.setDefaultRenderer(Color.class, new ColorRenderer(true));
-
 ```
 
 要指定特定单元格的渲染器，需要定义一个覆盖`getCellRenderer`方法的`JTable`子类。例如，以下代码使表格中第一列的第一个单元格使用自定义渲染器：
+
+
 
 ```java
 TableCellRenderer weirdRenderer = new WeirdRenderer();
@@ -506,7 +455,6 @@ table = new JTable(...) {
         return super.getCellRenderer(row, column);
     }
 };
-
 ```
 
 ## 为单元格指定工具提示
@@ -527,14 +475,12 @@ DefaultTableCellRenderer renderer =
         new DefaultTableCellRenderer();
 renderer.setToolTipText("Click for combo box");
 sportColumn.setCellRenderer(renderer);
-
 ```
 
 尽管前面示例中的工具提示文本是静态的，但您也可以实现根据单元格或程序状态变化的工具提示。以下是几种实现方式：
 
-+   在渲染器的`getTableCellRendererComponent`方法的实现中添加一点代码。
-
-+   覆盖`JTable`方法`getToolTipText(MouseEvent)`。
++ 在渲染器的`getTableCellRendererComponent`方法的实现中添加一点代码。
++ 覆盖`JTable`方法`getToolTipText(MouseEvent)`。
 
 在`TableDialogEditDemo`中添加代码到单元格渲染器的示例。点击启动按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行它（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。
 
@@ -558,7 +504,6 @@ public class ColorRenderer extends JLabel
         return this;
     }
 }
-
 ```
 
 这是工具提示的示例：
@@ -613,7 +558,6 @@ JTable table = new JTable(new MyTableModel()) {
     }
     ...
 }
-
 ```
 
 代码相当简单，除了`convertColumnIndexToModel`的调用可能有点复杂。这个调用是必要的，因为如果用户移动列，视图对于列的索引将不匹配模型对于列的索引。例如，用户可能会拖动**Vegetarian**列（模型认为在索引 4 处），使其显示为第一列 - 在视图索引 0 处。由于`prepareRenderer`提供了视图索引，您需要将视图索引转换为模型索引，以确保选择了预期的列。
@@ -627,7 +571,6 @@ JTable table = new JTable(new MyTableModel()) {
 ```java
 table.getTableHeader().setToolTipText(
         "Click to sort; Shift-Click to sort in reverse order");
-
 ```
 
 `TableToolTipsDemo.java`有一个示例，实现了根据列变化的列标题工具提示。如果运行`TableToolTipsDemo`（点击启动按钮）使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。
@@ -666,7 +609,6 @@ JTable table = new JTable(new MyTableModel()) {
         };
     }
 };
-
 ```
 
 ## 排序和过滤
@@ -676,10 +618,9 @@ JTable table = new JTable(new MyTableModel()) {
 ```java
 JTable table = new JTable();
 table.setAutoCreateRowSorter(true);
-
 ```
 
-此操作定义了一个是[`javax.swing.table.TableRowSorter`](https://docs.oracle.com/javase/8/docs/api/javax/swing/table/TableRowSorter.html)实例的行排序器。当用户单击列标题时，这提供了一个执行简单的区域特定排序的表格。这在``TableSortDemo.java``中演示，如下截图所示：
+此操作定义了一个是[`javax.swing.table.TableRowSorter`](https://docs.oracle.com/javase/8/docs/api/javax/swing/table/TableRowSorter.html)实例的行排序器。当用户单击列标题时，这提供了一个执行简单的区域特定排序的表格。这在`TableSortDemo.java`中演示，如下截图所示：
 
 ![点击姓氏后的 TableSortDemo](img/61a04647820bf9b58bca71907f38e0ec.png)
 
@@ -689,7 +630,6 @@ table.setAutoCreateRowSorter(true);
 TableRowSorter<TableModel> sorter 
     = new TableRowSorter<TableModel>(table.getModel());
 table.setRowSorter(sorter);
-
 ```
 
 `TableRowSorter`使用[`java.util.Comparator`](https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html)对象来对其行进行排序。实现此接口的类必须提供一个名为`compare`的方法，该方法定义了为排序目的比较任意两个对象的方式。例如，以下代码创建了一个`Comparator`，按每个字符串中的最后一个单词对一组字符串进行排序：
@@ -703,22 +643,19 @@ Comparator<String> comparator = new Comparator<String>() {
             .compareTo(strings2[strings2.length - 1]);
     }
 };
-
 ```
+
+
 
 这个例子相当简单；更典型的情况是，`Comparator`实现是[`java.text.Collator`](https://docs.oracle.com/javase/8/docs/api/java/text/Collator.html)的子类。您可以定义自己的子类，使用`Collator`中的工厂方法获取特定区域设置的`Comparator`，或者使用[`java.text.RuleBasedCollator`](https://docs.oracle.com/javase/8/docs/api/java/text/RuleBasedCollator.html)。
 
 要确定用于列的`Comparator`，`TableRowSorter`尝试依次应用以下规则。按照下面列出的顺序遵循规则；提供 sorter 的第一个规则使用`Comparator`，其余规则被忽略。
 
-1.  如果通过调用[`setComparator`](https://docs.oracle.com/javase/8/docs/api/javax/swing/DefaultRowSorter.html#setComparator-int-java.util.Comparator-)指定了比较器，则使用该比较器。
-
-1.  如果表模型报告列数据由字符串组成（`TableModel.getColumnClass`为该列返回`String.class`），则使用一个根据当前区域设置对字符串进行排序的比较器。
-
-1.  如果`TableModel.getColumnClass`返回的列类实现了`Comparable`，则使用一个根据[`Comparable.compareTo`](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html#compareTo-T-)返回的值对字符串进行排序的比较器。
-
-1.  如果通过调用[`setStringConverter`](https://docs.oracle.com/javase/8/docs/api/javax/swing/table/TableRowSorter.html#setStringConverter-javax.swing.table.TableStringConverter-)为表指定了字符串转换器，则使用一个根据当前区域设置对生成的字符串表示进行排序的比较器。
-
-1.  如果前述规则都不适用，则使用一个调用列数据的`toString`并根据当前区域设置对生成的字符串进行排序的比较器。
+1. 如果通过调用[`setComparator`](https://docs.oracle.com/javase/8/docs/api/javax/swing/DefaultRowSorter.html#setComparator-int-java.util.Comparator-)指定了比较器，则使用该比较器。
+2. 如果表模型报告列数据由字符串组成（`TableModel.getColumnClass`为该列返回`String.class`），则使用一个根据当前区域设置对字符串进行排序的比较器。
+3. 如果`TableModel.getColumnClass`返回的列类实现了`Comparable`，则使用一个根据[`Comparable.compareTo`](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html#compareTo-T-)返回的值对字符串进行排序的比较器。
+4. 如果通过调用[`setStringConverter`](https://docs.oracle.com/javase/8/docs/api/javax/swing/table/TableRowSorter.html#setStringConverter-javax.swing.table.TableStringConverter-)为表指定了字符串转换器，则使用一个根据当前区域设置对生成的字符串表示进行排序的比较器。
+5. 如果前述规则都不适用，则使用一个调用列数据的`toString`并根据当前区域设置对生成的字符串进行排序的比较器。
 
 对于更复杂的排序类型，可以对`TableRowSorter`或其父类[`javax.swing.DefaultRowSorter`](https://docs.oracle.com/javase/8/docs/api/javax/swing/DefaultRowSorter.html)进行子类化。
 
@@ -730,7 +667,6 @@ List <RowSorter.SortKey> sortKeys
 sortKeys.add(new RowSorter.SortKey(1, SortOrder.ASCENDING));
 sortKeys.add(new RowSorter.SortKey(0, SortOrder.ASCENDING));
 sorter.setSortKeys(sortKeys); 
-
 ```
 
 除了重新排序结果，表排序器还可以指定将显示哪些行。这称为*过滤*。`TableRowSorter`使用[`javax.swing.RowFilter`](https://docs.oracle.com/javase/8/docs/api/javax/swing/RowFilter.html)对象实现过滤。`RowFilter`实现了几个工厂方法，用于创建常见类型的过滤器。例如，[`regexFilter`](https://docs.oracle.com/javase/8/docs/api/javax/swing/RowFilter.html#regexFilter-java.lang.String-int...-)返回一个基于正则表达式进行过滤的`RowFilter`。
@@ -742,7 +678,6 @@ MyTableModel model = new MyTableModel();
 sorter = new TableRowSorter<MyTableModel>(model);
 table = new JTable(model);
 table.setRowSorter(sorter);
-
 ```
 
 然后，根据文本字段的当前值进行过滤：
@@ -758,24 +693,19 @@ private void newFilter() {
     }
     sorter.setRowFilter(rf);
 }
-
 ```
 
 在下一个示例中，每次文本字段更改时都会调用`newFilter()`。当用户输入复杂的正则表达式时，`try...catch`会防止语法异常干扰输入。
 
-当表格使用排序器时，用户看到的数据可能与数据模型指定的顺序不同，并且可能不包括数据模型指定的所有行。用户实际看到的数据称为*视图*，并具有自己的坐标系。`JTable`提供了一些方法，用于将模型坐标转换为视图坐标  [`convertColumnIndexToView`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#convertColumnIndexToView-int-) 和 [`convertRowIndexToView`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#convertRowIndexToView-int-)  以及将视图坐标转换为模型坐标  [`convertColumnIndexToModel`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#convertColumnIndexToModel-int-) 和 [`convertRowIndexToModel`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#convertRowIndexToModel-int-)。
-
-* * *
+当表格使用排序器时，用户看到的数据可能与数据模型指定的顺序不同，并且可能不包括数据模型指定的所有行。用户实际看到的数据称为*视图*，并具有自己的坐标系。`JTable`提供了一些方法，用于将模型坐标转换为视图坐标 — [`convertColumnIndexToView`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#convertColumnIndexToView-int-) 和 [`convertRowIndexToView`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#convertRowIndexToView-int-) — 以及将视图坐标转换为模型坐标 — [`convertColumnIndexToModel`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#convertColumnIndexToModel-int-) 和 [`convertRowIndexToModel`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#convertRowIndexToModel-int-)。
 
 **注意：** 使用排序器时，始终记得转换单元格坐标。
-
-* * *
 
 以下示例将本节讨论的思想汇集在一起。`TableFilterDemo.java` 对`TableDemo`进行了少量更改。这些包括本节前面的代码片段，为主表提供了排序器，并使用文本字段提供过滤正则表达式。以下屏幕截图显示在进行任何排序或过滤之前的`TableFilterDemo`。请注意，模型中的第 3 行仍然与视图中的第 3 行相同：
 
 ![没有排序的 TableFilterDemo](img/63cbfba3d454fc690616135adf8c4520.png)
 
-如果用户在第二列上点击两次，则第四行变为第一行  但仅在视图中：
+如果用户在第二列上点击两次，则第四行变为第一行 — 但仅在视图中：
 
 ![在第二列中进行反向排序的 TableFilterDemo](img/c2f801f9b1962c0b3b441ad81edc60df.png)
 
@@ -804,7 +734,6 @@ table.getSelectionModel().addListSelectionListener(
             }
         }
 );
-
 ```
 
 ## 使用组合框作为编辑器
@@ -822,7 +751,6 @@ comboBox.addItem("Speed reading");
 comboBox.addItem("Teaching high school");
 comboBox.addItem("None");
 sportColumn.setCellEditor(new DefaultCellEditor(comboBox));
-
 ```
 
 这是组合框编辑器的使用示例：
@@ -839,7 +767,7 @@ sportColumn.setCellEditor(new DefaultCellEditor(comboBox));
 
 如果您想指定除文本字段、复选框或组合框之外的编辑器，该怎么办？由于`DefaultCellEditor`不支持其他类型的组件，您需要做更多的工作。您需要创建一个实现[`TableCellEditor`](https://docs.oracle.com/javase/8/docs/api/javax/swing/table/TableCellEditor.html)接口的类。[`AbstractCellEditor`](https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractCellEditor.html)类是一个很好的超类。它实现了`TableCellEditor`的超级接口[`CellEditor`](https://docs.oracle.com/javase/8/docs/api/javax/swing/CellEditor.html)，省去了您实现单元格编辑器所需的事件触发代码的麻烦。
 
-您的单元格编辑器类至少需要定义两个方法  `getCellEditorValue` 和 `getTableCellEditorComponent`。`getCellEditorValue`方法是`CellEditor`所需的，返回单元格的当前值。`getTableCellEditorComponent`方法是`TableCellEditor`所需的，应配置并返回您要用作编辑器的组件。
+您的单元格编辑器类至少需要定义两个方法 — `getCellEditorValue` 和 `getTableCellEditorComponent`。`getCellEditorValue`方法是`CellEditor`所需的，返回单元格的当前值。`getTableCellEditorComponent`方法是`TableCellEditor`所需的，应配置并返回您要用作编辑器的组件。
 
 这是一个带有对话框的表格图片，间接地作为单元格编辑器。当用户开始编辑**Favorite Color**列中的单元格时，会出现一个按钮（真正的单元格编辑器），并弹出对话框，用户可以选择不同的颜色。
 
@@ -850,6 +778,8 @@ sportColumn.setCellEditor(new DefaultCellEditor(comboBox));
 ![启动 TableDialogEditDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TableDialogEditDemoProject/TableDialogEditDemo.jnlp)
 
 这里是代码，取自`ColorEditor.java`，用于实现单元格编辑器。
+
+
 
 ```java
 public class ColorEditor extends AbstractCellEditor
@@ -907,7 +837,6 @@ public class ColorEditor extends AbstractCellEditor
         return button;
     }
 }
-
 ```
 
 正如你所看到的，代码非常简单。唯一有点棘手的部分是在编辑器按钮的动作处理程序末尾调用`fireEditingStopped`。如果没有这个调用，即使模态对话框不再可见，编辑器仍然会保持活动状态。调用`fireEditingStopped`让表格知道它可以停用编辑器，让单元格再次由渲染器处理。
@@ -918,7 +847,7 @@ public class ColorEditor extends AbstractCellEditor
 
 当默认编辑器尝试创建与单元格列关联的类的新实例时，会自动检查用户输入的字符串。默认编辑器使用以`String`为参数的构造函数创建此实例。例如，在单元格类型为`Integer`的列中，当用户输入"123"时，默认编辑器使用等效于`new Integer("123")`的代码创建相应的`Integer`。如果构造函数抛出异常，则单元格的轮廓变为红色，并且拒绝让焦点移出单元格。如果您实现了用作列数据类型的类，如果您的类提供一个接受`String`类型单一参数的构造函数，您可以使用默认编辑器。
 
-如果您喜欢将文本字段作为单元格的编辑器，但希望自定义它  也许更严格地检查用户输入的文本或在文本无效时做出不同反应  您可以更改单元格编辑器以使用格式化文本字段。格式化文本字段可以在用户输入时连续检查值，或在用户指示输入结束后（例如按下 Enter 键）检查值。
+如果您喜欢将文本字段作为单元格的编辑器，但希望自定义它 — 也许更严格地检查用户输入的文本或在文本无效时做出不同反应 — 您可以更改单元格编辑器以使用格式化文本字段。格式化文本字段可以在用户输入时连续检查值，或在用户指示输入结束后（例如按下 Enter 键）检查值。
 
 以下代码取自名为`TableFTFEditDemo.java`的演示，设置了一个格式化文本字段作为编辑器，限制所有整数值在 0 和 100 之间。您可以运行`TableFTFEditDemo`（点击启动按钮）使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。
 
@@ -929,7 +858,6 @@ public class ColorEditor extends AbstractCellEditor
 ```java
 table.setDefaultEditor(Integer.class,
                        new IntegerEditor(0, 100));
-
 ```
 
 `IntegerEditor`类是`DefaultCellEditor`的子类，它使用`JFormattedTextField`而不是`DefaultCellEditor`支持的`JTextField`。它首先设置一个格式化文本字段，使用整数格式并具有指定的最小和最大值，使用如何使用格式化文本字段中描述的 API。然后，它重写了`DefaultCellEditor`的`getTableCellEditorComponent`、`getCellEditorValue`和`stopCellEditing`方法的实现，添加了格式化文本字段所需的操作。
@@ -948,12 +876,11 @@ try {
 } catch (java.awt.print.PrinterException e) {
     System.err.format("Cannot print %s%n", e.getMessage());
 }
-
 ```
 
 在普通的 Swing 应用程序上调用`print`会弹出一个标准的打印对话框。（在无头应用程序上，表格会直接打印。）返回值指示用户是否继续进行打印作业还是取消了。`JTable.print`可能会抛出`java.awt.print.PrinterException`，这是一个受检异常；这就是为什么上面的示例使用了`try ... catch`。
 
-`JTable`提供了几个带有各种选项的`print`重载。以下代码来自``TablePrintDemo.java``展示了如何定义页眉：
+`JTable`提供了几个带有各种选项的`print`重载。以下代码来自`TablePrintDemo.java`展示了如何定义页眉：
 
 ```java
 MessageFormat header = new MessageFormat("Page {0,number,integer}");
@@ -962,7 +889,6 @@ try {
 } catch (java.awt.print.PrinterException e) {
     System.err.format("Cannot print %s%n", e.getMessage());
 }
-
 ```
 
 对于更复杂的打印应用程序，请使用[`JTable.getPrintable`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#getPrintable-javax.swing.JTable.PrintMode-java.text.MessageFormat-java.text.MessageFormat-)来获取表格的`Printable`对象。有关`Printable`的更多信息，请参考 2D 图形路径中的打印课程。

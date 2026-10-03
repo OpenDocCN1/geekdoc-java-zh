@@ -1,48 +1,49 @@
-# Apache Shira 与 Java EE7 配对
 
+# Apache Shiro 与 Java EE 7 配对
 
+![封面](img/cover.jpg)
 
-![](img/cover.jpg)
+**Nebrass Lamouchi**
 
-![](img/default.jpg) **Nebrass Lamouchi**
+## 致谢
 
+致妈妈：无论如何，无法充分感谢你所做的一切。
 
+致爸爸的灵魂：我每天都在想念你……
 
+致 Firass：你是最好的，愿上帝保佑你……
 
-![](img/default.jpg) **Nebrass Lamouchi**
-
-
-致妈妈：无论如何，无法充分感谢你所的一切。
-致爸爸的灵魂：我每天都在想念你……​
-致 Firass：你是最好的，愿上帝保佑你……​
 致我的爱人：自从你进入我的生活，许多新的情感和感受开始喷涌而出……
 
-![](img/default.jpg) **Nebrass Lamouchi**
-
-
 我想向许多帮助我完成这本书的人表示感谢。感谢所有提供支持、阅读、撰写、提供评论以及协助编辑和设计的人。
+
 感谢我的朋友们，感谢你们在我需要时一直都在那里。
+
 感谢 Jérome Salles，感谢你教我 Java EE 艺术，以及给予我的支持和指导。
+
 感谢 Paul Bernardi 和 Geertjan Wielenga，感谢你们信任我的能力，并为我提供机会。
+
 感谢 Victor Grazi 和 Laurie Nyveen，这些为本书付出的优秀技术评审人员。感谢你们出色的工作。
-感谢 Ana Ciobotaru 和 Charles Humble，感谢你们让这本书的想法变为现实。感谢你们提供的提供的所有帮助和支持。
+
+感谢 Ana Ciobotaru 和 Charles Humble，感谢你们让这本书的想法变为现实。感谢你们提供的所有帮助和支持。
+
 最后，同样重要的是，我恳请这些年来一直陪伴在我身边但我未能提及的各位给予原谅。
 
-![](img/default.jpg) **Nebrass Lamouchi**
+## 引言
 
+在过去的几年里，我参与了许多使用 Java 开发应用程序的项目和公司。在这些应用程序中，我曾尝试实现身份验证与授权模块，有时会使用 `Spring Security` 或 `JBoss Picketlink`。
 
-在过去的几年里，我参与了许多使用 Java 开发应用程序的项目和公司。在这些应用程序中，我曾尝试实现身份验证与授权模块，有时会使用 Spring Security 或 JBoss Picketlink。
 我对 IT 安全的硕士研究以及在 OWASP 基金会的经验让我更有动力去探索如 `JAAS`、`JASPIC`、`Spring Security` 和 `Picketlink` 等安全框架。
 
-当我听到 Apache Shiro 时，我立刻就想使用它。它将我常用的框架整合到了一个易于使用的包中。我想写这本书，是因为我看到这对于初级 Java 开发者来说，能够快速入门并开始安全化他们的应用程序非常有帮助。我想进一步深化这个精彩项目的知识。我想向他们展示安全并不可怕，它只是另一个可以提高你的应用程序安全体验（Application Security eXperience）的框架。
+当我听到 `Apache Shiro` 时，我立刻就想使用它。它将我常用的框架整合到了一个易于使用的包中。我想写这本书，是因为我看到这对于初级 Java 开发者来说，能够快速入门并开始安全化他们的应用程序非常有帮助。我想进一步深化这个精彩项目的知识。我想向他们展示安全并不可怕，它只是另一个可以提高你的应用程序安全体验（Application Security eXperience）的框架。
 
 ## InfoQ 微型书包含什么内容？
 
-InfoQ 微型书的设计旨在精简扼要，旨在为希望快速深入地对新技术或技术获得坚实概念理解的技术架构师提供服务。你可以将这些书看作是对主题的策略性或本质性的涵盖。在读完微型书后，读者应该对某项技术有基本的理解，包括何时以及如何应用它、它与其他技术的关系，并总体上感觉自己吸收了已经搞清楚这项技术的其他人士的综合知识。这样，当他们的项目需要时，读者就能对该技术做出明智的，并在那时深入研究更详细的信息源（如较大的书籍或教程）。
+InfoQ 微型书的设计旨在精简扼要，旨在为希望快速深入地对新技术或技术获得坚实概念理解的技术架构师提供服务。你可以将这些书看作是对主题的策略性或本质性的涵盖。在读完微型书后，读者应该对某项技术有基本的理解，包括何时以及如何应用它、它与其他技术的关系，并总体上感觉自己吸收了已经搞清楚这项技术的其他人士的综合知识。这样，当他们的项目需要时，读者就能对该技术做出明智的决策，并在那时深入研究更详细的信息源（如较大的书籍或教程）。
 
 ## 本书适合读者
 
-本书专门针对希望通过学习如何将 Apache Shiro 与 Java EE 7 结合来快速了解 Apache Shiro 的 Java 开发者。
+本书专门针对希望通过学习如何将 `Apache Shiro` 与 Java EE 7 结合来快速了解 `Apache Shiro` 的 Java 开发者。
 
 ## 读本书需要什么
 
@@ -52,7 +53,7 @@ InfoQ 微型书的设计旨在精简扼要，旨在为希望快速深入地对�
 
 我们在书中使用了一些排版惯例，以区分不同类型的信息。
 
-文中的代码（包括命令、变量、文件名、XML 配置和属性名称）所示：ShiroFilterActivator 继承了 `ShiroFilter` 类。它的注解 `@WebFilter("/*")` 启用了所有请求的过滤器。
+文中的代码（包括命令、变量、文件名、XML 配置和属性名称）所示：`ShiroFilterActivator` 继承了 `ShiroFilter` 类。它的注解 `@WebFilter("/*")` 启用了所有请求的过滤器。
 
 代码块如下所示。根据你阅读本书的格式，颜色可能会不同。
 
@@ -66,6 +67,7 @@ InfoQ 微型书的设计旨在精简扼要，旨在为希望快速深入地对�
         bean-discovery-mode="all">
 </beans>
 ```
+
 Listing 1. `src/main/webapp/WEB-INF/beans.xml`
 
 ```java
@@ -74,6 +76,7 @@ public class JaxRsConfiguration extends Application {
     // JAX-RS 配置类
 }
 ```
+
 Listing 2. `src/main/java/demo/DemoApplication.java`
 
 当我们想要你注意代码特定部分时，会使用数字标注。
@@ -87,12 +90,14 @@ private String getCredentials(AuthenticationInfo info) { ①
 ```
 
 1. *①* 我们将基础 `AuthenticationInfo` 对象传递给 `getCredentials()` 方法。
+
 2. *②* `info.getCredentials()` 是 `getCredentials()` 方法调用的函数，用于从 `AuthenticationInfo` 实例获取 `credentials` 对象。
+
 3. *③* 将 `credentials` 实例的字符串格式返回给 `getCredentials()` 调用。
 
 最后，这段文字展示了引用格式。
 
-> “最后，重要的不是生命的长度，而是生命的跨度。”
+> “最后，重要的不是生命的长度，而是生命的广度。”
 
 > 
 
@@ -103,10 +108,6 @@ private String getCredentials(AuthenticationInfo info) { ①
 我们总是欢迎读者的反馈。告诉我们你对这本书的看法——你喜欢或不喜欢。读者反馈有助于我们开发你受益最大的书籍。向我们发送反馈，请邮件至 `feedback@infoq.com`。
 
 如果你在某个领域拥有知识并兴趣编写或贡献书籍，请查看我们的微型书指南：`http://www.infoq.com/minibook-guidelines`。
-
-
-
-
 
 每一位合格的 Java EE 开发者都知道，平台中必须具备安全 API，无论是原生提供的，还是由第三方框架提供的。但自 1999 年 12 月 12 日 Java EE 诞生以来，Java EE 一直缺乏一个完整且专用的安全规范。`JSR-375` 的创建是为了为 Java EE 安全提供一个完整的规范，它涵盖了所有需求，但将会在 Java EE 8 版本中可用，预计于 2017 年发布。
 
@@ -132,20 +133,19 @@ private String getCredentials(AuthenticationInfo info) { ①
 
 ## 编写本教程的动力
 
-在完成上项目后，我决定重新审视 `Apache Shiro`，那个三年前我无法使用的神秘框架。
+在完成上一个项目后，我决定重新审视 `Apache Shiro`，那个三年前我无法使用的神秘框架。
 
 奇怪的是，我发现 Shiro 网站页面多年来没有发生变化。没有新的板块，没有新的教程，也没有新的文档。显然，我在 YouTube、Vimeo 和 Dailymotion 上寻找 Shiro 的视频教程，但无果。我寻找了任何相关的书籍或文章，也没有显著结果。这对于一个 Apache 项目来说非常奇怪。通常情况下，任何 Apache 项目都能得到良好的覆盖。但 Shiro 并非如此。
 
 我尝试在一个示例项目中使用 Shiro，以下是我的初步反馈：
 
 * 它支持使用 `INI` 文件，这与 `Spring Security` 使用 `XML` 文件进行配置的风格不同。
+
 * 官方文档和资源不足。例如，网站上的官方教程只关注 `Stormpath`。
-* 最新版本 Shiro 的 `JavaDoc` 网站几乎无法访问（我已向 Apache Shiro Twitter 账号报告了此）。
+
+* 最新版本 Shiro 的 `JavaDoc` 网站几乎无法访问（我已向 Apache Shiro Twitter 账号报告了此问题）。
 
 我决定编写本教程来填补这一空白。
-
-![](img/default.jpg) **Nebrass Lamouchi**
-
 
 ## 什么是 Shiro？
 
@@ -160,8 +160,11 @@ private String getCredentials(AuthenticationInfo info) { ①
 `Apache Shiro` 涵盖了应用安全的四个核心关注：
 
 * 认证（Authentication），有时被称为“登录”，是证明用户是其所称身份的行为。
+
 * 授权（Authorization）访问控制的过程，即确定谁有权访问什么。
+
 * 会话管理（Session management）管理用户特定的会话，即使在非 Web 或 Enterprise JavaBeans (`EJB`) 应用中也是。
+
 * 加密（Cryptography）使用加密算法保持数据安全，同时保持易用性。
 
 ![ShiroFeatures](img/ShiroFeatures.png)
@@ -169,10 +172,15 @@ private String getCredentials(AuthenticationInfo info) { ①
 支持的环境包括：
 
 * Web 支持——Shiro 的 Web 支持 API 有助于保护 Web 应用。
-* 缓存（Caching）——缓存是 Apache Shiro 的特性，确保安全操作保持快速。
+
+* 缓存（Caching）——缓存是 `Apache Shiro` 的特性，确保安全操作保持快速。
+
 * 并发（Concurrency）——Shiro 的并发功能设计用于支持多线程应用。
+
 * 测试（Testing）——测试支持简化了单元测试和集成测试的创建，并确保你的代码是安全的。
+
 * “以身份运行”（Run As）——Shiro 允许用户假设另一个身份（如果有权限），这在管理场景中非常有用。
+
 * “记住我”（Remember Me）——Shiro 跨会话记住用户的身份，他们只需在需要时登录。
 
 ## 为什么不用 JAAS 或 Spring Security？
@@ -181,9 +189,6 @@ private String getCredentials(AuthenticationInfo info) { ①
 
 `Apache Shiro` 旨在通过提供一个用户友好、标准化的 API 来在项目中解决这些挑战。
 
-![](img/default.jpg) **Nebrass Lamouchi**
-
-
 ![logo shiro](img/logo-shiro.png)
 
 ## 技术栈
@@ -191,13 +196,12 @@ private String getCredentials(AuthenticationInfo info) { ①
 本教程使用了：
 
 * `Apache Shiro` 1.2.4
+
 * Java EE 7 后端，带有 `JPA` 2.1、`EJB` 3.2 和 `JAX-RS` 2.0
+
 * `Payara Server`
+
 * `NetBeans` 8.1 IDE
-
-
-
-
 
 # Java 平台企业版 (Java EE)
 
@@ -208,14 +212,23 @@ Java EE 的最新版本是 Java EE 7，于 2013 年 6 月发布。Java EE 7 平�
 Java EE 7 规范包括：
 
 * [WebSocket Java API — JSR-356](https://www.jcp.org/en/jsr/detail?id=356)
+
 * [JSON 处理 Java API — JSR-353](https://www.jcp.org/en/jsr/detail?id=353)
+
 * [Java 平台批处理应用 — JSR-352](https://www.jcp.org/ja/jsr/detail?id=352)
+
 * [Java EE 并发实用程序 — JSR-236](https://www.jcp.org/ja/jsr/detail?id=236)
+
 * [RESTful Web Services Java API — JSR-311](https://www.jcp.org/en/jsr/detail?id=311)
+
 * [Java Message Service 2.0 — JSR-343](https://www.jcp.org/en/jsr/detail?id=343)
+
 * [表达式语言 3.0 — JSR-341](https://www.jcp.org/en/jsr/detail?id=341)
+
 * [Enterprise JavaBeans 3.2 — JSR-345](https://www.jcp.org/en/jsr/detail?id=345)
-* [Java 持化 2.1 — JSR-338](https://www.jcp.org/en/jsr/detail?id=338)
+
+* [Java 持久化 2.1 — JSR-338](https://www.jcp.org/en/jsr/detail?id=338)
+
 * [JavaServer Faces 2.2 — JSR-344](https://www.jcp.org/en/jsr/detail?id=344)
 
 你可以在 [JSR-342](https://jcp.org/en/jsr/detail?id=342) 汇总页面找到关于 Java EE 7 规范的所有必要信息。
@@ -224,7 +237,7 @@ Java EE 7 规范。![javaee7](img/javaee7.jpg)
 
 ## Payara Server
 
-Payara Server 是 `GlassFish` 服务器的无缝替代品，并保证季度发布。Payara 团队为上游 `GlassFish` 服务器及其依赖库提供增强、错误修复和补丁。这使得 Payara Server 成为 Java EE 生态系统中中最适用于生产的应用程序服务器之一。Payara 团队还提供行业内顶级中间件工程师提供的 24/7 专用事故处理和软件支持。该团队欢迎贡献，并公开报告其在编写功能或修复错误方面的进展。此外，还有一个响应敏捷的社区对任何请求做出快速反应。Payara Server 在微调 `GlassFish` 的同时，保留了它的易用性和优美的管理功能。
+Payara Server 是 `GlassFish` 服务器的无缝替代品，并保证季度发布。Payara 团队为上游 `GlassFish` 服务器及其依赖库提供增强、错误修复和补丁。这使得 Payara Server 成为 Java EE 生态系统中适用于生产环境的应用程序服务器之一。Payara 团队还提供行业内顶级中间件工程师提供的 24/7 专用事故处理和软件支持。该团队欢迎贡献，并公开报告其在编写功能或修复错误方面的进展。此外，还有一个响应敏捷的社区对任何请求做出快速反应。Payara Server 在微调 `GlassFish` 的同时，保留了它的易用性和优美的管理功能。
 
 你可以从[项目网站](http://www.payara.fish/downloads) 获取 Payara Server 的最新版本。
 
@@ -233,6 +246,8 @@ Payara Server 是 `GlassFish` 服务器的无缝替代品，并保证季度发�
 ## NetBeans IDE
 
 NetBeans IDE 是 Oracle 提供的免费 Java IDE，旨在无需配置或插件即可减少编码错误并优化生产力。NetBeans 可以与你所有的环境组件（如数据库、自动化服务器、应用程序服务器、质量工具等）进行交互，而无需花费大量时间准备环境。
+
+
 
 NetBeans IDE 具有出色的调试器功能，可以优化重构和调试过程。它包含一个强大的文本编辑器，带有重构工具、代码补全、代码片段和分析器，甚至还有多语言拼写检查器。NetBeans 还通过开箱即 `Git`、`SVN`、`CVS` 和 `Mercurial` 等工具提供了强大的多系统版本控制。除了 Java 和 `JavaFX` 之外，NetBeans IDE 还支持 `C/C++`、`PHP` 和 `HTML5/JavaScript`。NetBeans IDE 适用于所有支持兼容 `JVM` 的操作系统。
 
@@ -243,7 +258,6 @@ NetBeans 在美国、法国、英国、荷兰、巴西等国家和全球范围�
 ![netbeans logo](img/netbeans-logo.png)
 
 ![](img/default.jpg) Nebrass Lamouchi
-
 
 本书剩余部分是一个分步骤演示的教程，旨在让你能够轻松跟随。
 
@@ -257,9 +271,9 @@ NetBeans 在美国、法国、英国、荷兰、巴西等国家和全球范围�
 * [WildFly](https://www.wildfly.org/)（推荐）
 * [NetBeans](https://netbeans.org/)（推荐）
 
-##  1 ：项目
+## 1：项目
 
-###  1.1 ：创建项目
+### 1.1：创建项目
 
 通过创建一个新的 Web 应用开始教程。
 
@@ -310,9 +324,9 @@ NetBeans 在美国、法国、英国、荷兰、巴西等国家和全球范围�
 </project>
 ```
 
-### 1.2 ：设计示例应用程序
+### 1.2：设计示例应用程序
 
-#### 1.2.1 ：BCE/ECB 模式
+#### 1.2.1：BCE/ECB 模式
 
 我们将使用实体-控制-边界（ECB）模式，这是模型-视图-控制器（MVC）模式的一种变体。在识别系统内执行序列的元素时，你可以将每个参与元素分类为三类之一：实体、控制或边界。
 
@@ -324,11 +338,7 @@ NetBeans 在美国、法国、英国、荷兰、巴西等国家和全球范围�
 
 边界-控制-实体模式。![bce structure](img/bce-structure.png)
 
-
-
-
-
-### 步骤 1.2.2: BCE 实现
+#### 1.2.2：BCE 实现
 
 创建一些空的 Java 包，仅用于突出应用程序中 BCE 模式的实现。这些包将采用以下格式：
 
@@ -342,7 +352,7 @@ NetBeans 在美国、法国、英国、荷兰、巴西等国家和全球范围�
 
 现在开始创建你的实体。
 
-## 步骤 2: JPA 实体
+## 步骤 2：JPA 实体
 
 使用 `JPA` 2.1 构建持久化实体。在 `com.targa.dev.shirotutorial.security.entity` 包中创建两个实体。
 
@@ -356,7 +366,7 @@ NetBeans 在美国、法国、英国、荷兰、巴西等国家和全球范围�
 
 **`Role` 和 `Permission` 实体的类图。** ![bce role permission](img/bce-role-permission.png)
 
-```
+```java
 @Entity ①
 @NamedQueries({ ②
     @NamedQuery(name = "User.findAll", query = "select u from User u"),
@@ -399,7 +409,7 @@ public class User {
 9. ⑨ 指定实体类中的版本字段，作为其乐观锁值。该版本号用于在执行合并（merge）操作时确保完整性，并用于乐观并发控制。
 10. ⑩ `Timestamp` 是版本属性的类型。
 
-```
+```java
 @Entity
 @NamedQueries({
     @NamedQuery(name = "Role.findAll", query = "SELECT r FROM Role r")
@@ -436,7 +446,7 @@ public class Role {
 * 删除
 * 查找
 
-```
+```java
 @Stateless
 public class UserService {
     @PersistenceContext
@@ -465,6 +475,7 @@ public class UserService {
     }
 }
 ```
+
 列表 3. UserService:
 
 ```java
@@ -496,11 +507,12 @@ public class RoleService {
     }
 }
 ```
+
 列表 4. RoleService:
 
 你的服务现在可以使用了。为了实现更灵活的依赖注入（CDI），创建一个 `beans.xml` 文件，并将 `bean-discovery-mode` 从 `annotated` 改为 `all`。
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://xmlns.jcp.org/xml/javaee"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -511,7 +523,7 @@ public class RoleService {
 </beans>
 ```
 
-## 步骤 3: Apache Shiro 
+## 步骤 3：Apache Shiro
 
 首先，在你的项目中添加 Apache Shiro 依赖：
 
@@ -524,6 +536,8 @@ public class RoleService {
 ```
 
 Apache Shiro 使用 INI 配置文件来定义参数。这是一个 `shiro.ini` 文件的示例：
+
+
 
 ```ini
 [main]
@@ -560,26 +574,27 @@ securityManager.realms = $jdbcRealm ⑤
 /account/** = authc
 ```
 
-1. ① **authc** 登录过滤器的配置](http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/filter/authc/FormAuthenticationFilter.html)﻿。
+1. ① [`authc`](http://shiro.apache.org/static/current/apidocs/org/apache/shiro/web/filter/authc/FormAuthenticationFilter.html) 登录过滤器的配置。
+
 2. ② 哈希密码匹配器。
+
 3. ③ 数据源。
-4. ④ JDBC  Realm。
+
+4. ④ JDBC Realm。
+
 5. ⑤ 安全管理器的领域（realms）。
+
 6. ⑥ URL 映射。
 
+② 对 [`passwordMatcher`](http://shiro.apache.org/static/current/apidocs/org/apache/shiro/authc/credential/PasswordMatcher.html) 和 [`passwordService`](http://shiro.apache.org/static/current/apidocs/org/apache/shiro/authc/credential/PasswordService.html) 的配置，它们是用于密码验证和匹配的组件。
 
+③ 此示例中 `Datasource` 的定义是一个 JDBC `DataSource`。
 
+④ 此示例中 `Realm` 的配置是一个 JDBC `Realm`。
 
+⑤ 这将配置好的 `Realm` 分配给 Shiro 的 `SecurityManager`。
 
-2. ② 对 [`passwordMatcher`](http://shiro.apache.org/static/current/apidocs/org/apache/shiro/authc/credential/PasswordMatcher.html) 和 [`passwordService`](http://shiro.apache.org/static/current/apidocs/org/apache/shiro/authc/credential/PasswordService.html) 的配置，它们是用于密码验证和匹配的组件。
-
-3. ③ 此示例中 `Datasource` 的定义是一个 JDBC `DataSource`。
-
-4. ④ 此示例中 `Realm` 的配置是一个 JDBC `Realm`。
-
-5. ⑤ 这将配置好的 `Realm` 分配给 Shiro 的 `SecurityManager`。
-
-6. ⑥ 这将 URL 模式分配给相应的过滤器。
+⑥ 这将 URL 模式分配给相应的过滤器。
 
 此 `shiro.ini` 文件必须放置在 `src/main/webapp/WEB-INF` 或 `src/main/resources` 中。若要启用 Shiro 框架，你必须配置你的 `web.xml` 文件。
 
@@ -610,6 +625,7 @@ securityManager.realms = $jdbcRealm ⑤
 在每一个新的 Java EE 版本中，你都应该尽量减少配置文件。本教程的一个重点是在不使用混乱配置文件的情况下构建我们的 Shiro 框架应用程序。你可以尝试用一些创新解决方案来绕过这个问题。例如，你可以使用 Servlet 3.0 的特性来代替 `web.xml` 文件，在代码中定义过滤器：
 
 - 你可以通过添加 servlet、过滤器、web 帧等方法来增加可插性。
+
 - 你可以通过针对 servlet、servlet 过滤器和 servlet 上下文监听器的注解来提高开发便利性。
 
 ## 第 4 步：Shiro：深入阶
@@ -623,14 +639,18 @@ securityManager.realms = $jdbcRealm ⑤
 过滤器可以执行的主要任务包括：
 
 - 查询请求并采取相应的行动。
+
 - 阻止请求-响应对继续向下传递。
+
 - 修改请求头和数据。你通过提供请求的自定义版本来实现这一点。
+
 - 修改响应头和数据。你通过提供响应的自定义版本来实现这一点。
+
 - 与外部资源交互。
 
 Shiro 过滤器是实现 Shiro 框架的 web 应用程序的主要过滤器。
 
-要实现这一点，引入扩展 `org.apache.shiro.web.servlet.ShiroFilter` 的类 `ShiroFilterActivator`，并将该过滤器应用于所有请求（"/*"）。
+要实现这一点，引入扩展 `org.apache.shiro.web.servlet.ShiroFilter` 的类 `ShiroFilterActivator`，并将该过滤器应用于所有请求（`"/*"`）。
 
 ```java
 @WebFilter("/*")
@@ -642,7 +662,7 @@ public class ShiroFilterActivator extends ShiroFilter {
 
 #### 第 4.1.2 步：从监听器到 @WebListener
 
-创建一个扩展 `org.apache.shiro.web.env.EnvironmentLoaderListener` 的 `ShiroListener` 类。在 `contextInitialized()` 方法中，使用 `DefaultWebEnvironment` 类名初始化 `ENVIRONMENT_CLASS_PARAM` (`shiroEnvironmentClass`)。它用于定义在 servlet 上文中使用的 `WebEnvironment` 实现类。
+创建一个扩展 `org.apache.shiro.web.env.EnvironmentLoaderListener` 的 `ShiroListener` 类。在 `contextInitialized()` 方法中，使用 `DefaultWebEnvironment` 类名初始化 `ENVIRONMENT_CLASS_PARAM`（`shiroEnvironmentClass`）。它用于定义在 servlet 上文中使用的 `WebEnvironment` 实现类。
 
 ```java
 @WebListener
@@ -685,7 +705,7 @@ Shiro 官方 JavaDoc 定义了一些 `WebEnvironment` 组件。它指出 `Filter
 
 ***
 
-首先创建一个类来持有 ShiroConfiguration 类的配置。该类有两个公共 getter。
+首先创建一个类来持有 `ShiroConfiguration` 类的配置。该类有两个公共 getter。
 
 ```java
 public class ShiroConfiguration {
@@ -721,11 +741,7 @@ public class ShiroConfiguration {
 
 你可以创建一个更优雅的 `ShiroListener`，为两个参数都使用 `@Inject`。
 
-
-
-
-
-```
+```java
 @WebListener
 public class ShiroListener extends EnvironmentLoaderListener {
     @Inject
@@ -761,56 +777,76 @@ Shiro 的 `SecurityManager` 有许多用于调调安全体验的功能和选项�
 以下是 Apache Shiro 框架中最重要的核心元素：
 
 * `SessionManager`
+
 * `Realm`
+
 * `Authenticator`
+
 * `Authorizer`
+
 * `CacheManager`
+
 * `SubjectDAO`
+
 * `CredentialsMatcher`
 
 在进入代码之前，让我们先回顾一下官方 Shiro Javadoc 中指定的定义：
 
 * `SessionManager` 负责所有应用程序会话的创建、维护和清理。
+
 * `Realm` 是一种安全组件，可以访问特定的应用程序安全实体（如用户、角色和权限），以确定身份验证和授权操作。`Realm` 通常与数据源（如关系型数据库、文件系统或类似的资源）有一一的对应关系。因此，该接口的实现使用特定数据源的 API 来确定授权数据（角色、权限等），例如 `JDBC`、`File IO`、`Hibernate` 或 `JPA` 或任何其他数据访问 API。`Realm` 本质上是一个特定的安全的 DAO。
+
 * `Authenticator` 负责应用程序中的账户身份验证。它是进入 Shiro API 的主要入口点之一。
+
 * `Authorizer` 为任何给 `Subject`（即应用程序用户）执行授权（访问控制）操作。每个方法都需要一个主体主体（principal）来为相应的用户执行操作。
+
 * `CacheManager` 提供并维护缓存实例的生命周期。Shiro 本身没有实现完整的缓存机制，因为这超出了安全框架的核心范畴。相反，该接口在底层缓存框架的主管理器组件（例如 `JCache`、`Ehcache`、`JCS`、`OSCache`、`JBoss Cache`、`Terracotta`、`Coherence`、`GigaSpaces` 等）之上提供了一个抽象 API，允许 Shiro 用户配置选择的任何缓存机制。
+
 * `SubjectDAO` 是一种数据访问对象的设计规范，允许会话访问企业信息系统（EIS）。它提供了常用的 CRUD 方法：
-    * create (`org.apache.shiro.session.Session`)
-    * readSession (`java.io.Serializable`)
-    * update (`org.apache.shiro.session.Session`)
-    * delete (`org.apache.shiro.session.Session`)
-* `CredentialsMatcher` 是一个接口，由类实现以判断 `AuthenticationToken` 提供的凭据与系统中存储的对应账户凭据是否匹配。
-* `PasswordMatcher` 是 `CredentialsMatcher` 的实现，它对哈希后的文本密码采用最佳实践比较。
-* `RememberMeManager` 是 Shiro 框架 `SecurityManager` 接口的默认具体实现，基于一组 `Realms`。该实现通过父类实现将其身份验证、授权和会话操作分别委托给封装的 `Authenticator`、`Authorizer` 和 `SessionManager` 实例。
+
+    * `create(org.apache.shiro.session.Session)`
+
+    * `readSession(java.io.Serializable)`
+
+    * `update(org.apache.shiro.session.Session)`
+
+    * `delete(org.apache.shiro.session.Session)`
+
+
+
+`CredentialsMatcher` 是一个接口，由类实现以判断 `AuthenticationToken` 提供的凭据与系统中存储的对应账户凭据是否匹配。
+
+`PasswordMatcher` 是 `CredentialsMatcher` 的实现，它对哈希后的文本密码采用最佳实践比较。
+
+`RememberMeManager` 是 Shiro 框架 `SecurityManager` 接口的默认具体实现，基于一组 `Realms`。该实现通过父类实现将其身份验证、授权和会话操作分别委托给封装的 `Authenticator`、`Authorizer` 和 `SessionManager` 实例。
 
 Shiro 的 JavaDoc 有些不足，但希望我们的解释能改善这一点。
 
 对于你的 `SecurityManager`，你将：
 
-* 使用 `DefaultWebSecurityManager` 作为实现。
-* 创建你自定义的 `Realm`（我们稍后会看到原因）。
-* 使用带有自定义 `PasswordService` 的 `PasswordMatcher` 作为 `CredentialsMatcher`。
-* 使用 `CookieRememberMeManager` 作为 `RememberMeManager`，因为你的实现将使用 cookie 来记住和跟踪用户 (`Subjects`）。你将为 `RememberMeManager` 添加 `CipherKey` 以改进 cookie 命名。
-* 还有一个大惊喜，你将使用一个缓存管理器，即 `EhCacheManager`！（Shiro 承诺在未来的版本中提供对 `Hazelcast` 等缓存提供器的原生支持）。
+- 使用 `DefaultWebSecurityManager` 作为实现。
+- 创建你自定义的 `Realm`（我们稍后会看到原因）。
+- 使用带有自定义 `PasswordService` 的 `PasswordMatcher` 作为 `CredentialsMatcher`。
+- 使用 `CookieRememberMeManager` 作为 `RememberMeManager`，因为你的实现将使用 cookie 来记住和跟踪用户（`Subjects`）。你将为 `RememberMeManager` 添加 `CipherKey` 以改进 cookie 命名。
+- 还有一个大惊喜，你将使用一个缓存管理器，即 `EhCacheManager`！（Shiro 承诺在未来的版本中提供对 `Hazelcast` 等缓存提供器的原生支持）。
 
 ### 步骤 4.2.1.1: 编写 Realm
 
 要创建 `Realm`，你必须创建一个扩展 `org.apache.shiro.realm.AuthorizingRealm` 抽象类并实现关键方法：
 
-* `doGetAuthenticationInfo(AuthenticationToken token)` 方法是位于存储系统（DB、LDAP 等）中的身份信息（在我们例中为用户名和密码）的“get”。
-* `doGetAuthorizationInfo(PrincipalCollection principals)` 方法是授权信息（在我们例中仅为角色，但根据项目选择的授权策略，可以是角色和权限，或仅限权限）的“get”。
+- `doGetAuthenticationInfo(AuthenticationToken token)` 方法是位于存储系统（DB、LDAP 等）中的身份信息（在我们例中为用户名和密码）的“get”。
+- `doGetAuthorizationInfo(PrincipalCollection principals)` 方法是授权信息（在我们例中仅为角色，但根据项目选择的授权策略，可以是角色和权限，或仅限权限）的“get”。
 
 由于此项目使用了带有 Shiro 框架的 Java EE 特性，你将使用 EJB 处理数据。因此我们将使用注入（或尝试）来调用 EJB。注意，Shiro 组件并不是 CDI 感知的，因为某些方法是 final 的。
 
 Stack Overflow 上有一些说明该问题的帖子：
 
-* [`stackoverflow.com/questions/15605038`](http://stackoverflow.com/questions/15605038)
-* [`stackoverflow.com/questions/18507629`](http://stackoverflow.com/questions/18507629)
+- [`stackoverflow.com/questions/15605038`](http://stackoverflow.com/questions/15605038)
+- [`stackoverflow.com/questions/18507629`](http://stackoverflow.com/questions/18507629)
 
 但不用担心——有一些技巧可以让它工作！注入我们的 EJB 至少有两种方法：`UserService` 和 `RoleService`。
 
-``````
+```java
 public class ShiroConfiguration {
     @Inject
     UserService userService;
@@ -834,11 +870,7 @@ public class ShiroConfiguration {
 
 **方法 2) 在 `Realm` 中使用经典的 JNDI 查找来获取对 EJB 的访问：** Java EE 6 规范为 EJB JNDI 查找名称提供了通用格式：`java:global[/appName]/moduleName/beanName`。
 
-
-
-
-
-查找名称中的 `appName` 组件被显示为可选，因为它不适用于部署在独立模块中的 beans。只有封装在 `.ear` 文件中的 beans 才会在 `java:global` 查找名称中包含 `appName` 组件。由于你的应用程序被打包为 WAR，因此在企业企业 Bean（EJB）的 JNDI 名称中不会有 `appName` 值。你的 `moduleName` 为 `"ShiroTutorial"`（请参见 `pom.xml`）。
+查找名称中的 `appName` 组件被显示为可选，因为它不适用于部署在独立模块中的 beans。只有封装在 `.ear` 文件中的 beans 才会在 `java:global` 查找名称中包含 `appName` 组件。由于你的应用程序被打包为 WAR，因此在企业 Bean（EJB）的 JNDI 名称中不会有 `appName` 值。你的 `moduleName` 为 `"ShiroTutorial"`（请参见 `pom.xml`）。
 
 因此，你 EJB 的 JNDI 名称为：
 
@@ -944,16 +976,16 @@ protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principal
 
 `CredentialsMatcher` 是用于验证凭据并检查是否可以授予访问的组件。`CredentialsMatcher` 接口有许多实现：
 
-* `AllowAllCredentialsMatcher`
-* `HashedCredentialsMatcher`
-* `Md2CredentialsMatcher`
-* `Md5CredentialsMatcher`
-* `PasswordMatcher`
-* `Sha1CredentialsMatcher`
-* `Sha256CredentialsMatcher`
-* `Sha384CredentialsMatcher`
-* `Sha512CredentialsMatcher`
-* `SimpleCredentialsMatcher`
+- `AllowAllCredentialsMatcher`
+- `HashedCredentialsMatcher`
+- `Md2CredentialsMatcher`
+- `Md5CredentialsMatcher`
+- `PasswordMatcher`
+- `Sha1CredentialsMatcher`
+- `Sha256CredentialsMatcher`
+- `Sha384CredentialsMatcher`
+- `Sha512CredentialsMatcher`
+- `SimpleCredentialsMatcher`
 
 `CredentialsMatcher` 的每个实现都有特定的属性和功能。例如，`SimpleCredentialsMatcher` 用于直接的明文比较。`PasswordMatcher` 使用内部的 `PasswordService` 来比较密码。Shiro 的 JavaDoc 将 `PasswordMatcher` 描述为“一个对哈希文本密码采用最佳实践比较的 `CredentialsMatcher`”。
 
@@ -1023,6 +1055,8 @@ public class BCryptPasswordService implements PasswordService {
 
 因此，更新你的 `ShiroConfiguration` 类。
 
+
+
 ```java
 public class ShiroConfiguration {
     @Inject
@@ -1044,16 +1078,13 @@ public class ShiroConfiguration {
 }
 ```
 
-##### 步骤 4.2.1.3：编写 RememberMeManager
+#### 步骤 4.2.1.3：编写 `RememberMeManager`
 
+接下来，为`SecurityManager`添加一个`RememberMeManager`，它将使用 Cookie 来记住安全会话。为此请使用`CookieRememberMeManager`实现。
 
+Cookie 值是多个主体（principals）集合的序列化表示经过 AES 加密表示后的 Base64 编码表示。简单来说，它包含了必要的用户信息，可以使用正确的密钥进行解密。使用默认密钥是不可行的，因为黑客通过查看 Shiro 的源码就能发现这一点，因此请指定自定义的`AES`密码密钥。
 
-
-接下来，为 `SecurityManager` 添加一个 `RememberMeManager`，它将使用 Cookie 来记住安全会话。为此请使用 `CookieRememberMeManager` 实现。
-
-Cookie 值是多个主体（principals）集合的序列化表示经过 AES 加密表示后的 Base64 编码表示。简单来说，它包含了必要的用户信息，可以使用正确的密钥进行解密。使用默认密钥是不可行的，因为黑客通过查看 Shiro 的源码就能发现这一点，因此请指定自定义的 `AES` 密码密钥。
-
-你自定义的 `RememberMeManager` 如下：
+你自定义的`RememberMeManager`如下：
 
 ```java
 byte[] cypherKey = String.format("0x%s", Hex.encodeToString(new AesCipherService().generateNewKey().getEncoded())).getBytes();
@@ -1064,11 +1095,11 @@ RememberMeManager rememberMeManager = new CookieRememberMeManager();
 securityManager.setRememberMeManager(rememberMeManager);
 ```
 
-你自定义的 `RememberMeManager` 已准备就绪。
+你自定义的`RememberMeManager`已准备就绪。
 
-### 步骤 4.2.1.4: 编写 CacheManager
+#### 步骤 4.2.1.4：编写 `CacheManager`
 
-Shiro 已开始支持缓存系统，虽然目前的支持尚显不足，但在未来的版本中它将变得更加健壮。但 Shiro 支持 EhCache，它非常符合本项目的需求。让我们将该依赖添加到 `pom.xml` 文件中。
+Shiro 已开始支持缓存系统，虽然目前的支持尚显不足，但在未来的版本中它将变得更加健壮。但 Shiro 支持 EhCache，它非常符合本项目的需求。让我们将该依赖添加到`pom.xml`文件中。
 
 ```xml
 <!-- EhCache Dependencies -->
@@ -1085,7 +1116,7 @@ Shiro 已开始支持缓存系统，虽然目前的支持尚显不足，但在�
 </dependency>
 ```
 
-接下来，在 `src/main/resources` 文件夹中创建 EhCache 配置文件。你可以将其命名为 `ehcache.xml`。
+接下来，在`src/main/resources`文件夹中创建 EhCache 配置文件。你可以将其命名为`ehcache.xml`。
 
 ```xml
 <ehcache name="shiro" updateCheck="false">
@@ -1103,11 +1134,11 @@ Shiro 已开始支持缓存系统，虽然目前的支持尚显不足，但在�
 </ehcache>
 ```
 
-我建议避免使用默认值，并始终将 `diskStore` 值指定为缓存存储的路径。
+我建议避免使用默认值，并始终将`diskStore`值指定为缓存存储的路径。
 
 ***
 
-现在，你可以在 `ShiroConfiguration` 类中为你的 `SecurityManager` 定义 `CacheManager`。
+现在，你可以在`ShiroConfiguration`类中为你的`SecurityManager`定义`CacheManager`。
 
 ```java
 CacheManager cacheManager = new EhCacheManager();
@@ -1115,11 +1146,11 @@ CacheManager cacheManager = new EhCacheManager();
 securityManager.setCacheManager(cacheManager);
 ```
 
-`classpath:ehcache.xml` 段表示 `ehcache.xml` 文件已在类路径可用。你刚刚将 `EhCacheManager` 设置为 `SecurityManager` 的 `CacheManager`。缓存将根据指定配置文件中定义的设置进行处理。
+`classpath:ehcache.xml`段表示`ehcache.xml`文件已在类路径可用。你刚刚将`EhCacheManager`设置为`SecurityManager`的`CacheManager`。缓存将根据指定配置文件中定义的设置进行处理。
 
-### 步骤 4.2.1.5: 组装组件
+#### 步骤 4.2.1.5：组装组件
 
-你的 `SecurityManager` 几乎准备就绪。你的 `SecurityManager` getter 方法将如下：
+你的`SecurityManager`几乎准备就绪。你的`SecurityManager` getter 方法将如下：
 
 ```java
 @Produces
@@ -1150,13 +1181,13 @@ Hex.encodeToString(new AesCipherService().generateNewKey().getEncoded()))
 }
 ```
 
-CDI 的 `@Produces` 注解标识一个“生产者”方法或字段，这意味着它将 `getSecurityManager()` 方法识别为 CDI 上文中 `WebSecurityManager` 实例的生产者。
+CDI 的`@Produces`注解标识一个“生产者”方法或字段，这意味着它将`getSecurityManager()`方法识别为 CDI 上文中`WebSecurityManager`实例的生产者。
 
-`WebSecurityManager` 生产者已准备就绪。下一步是定义你的 `FilterChainResolver`。
+`WebSecurityManager`生产者已准备就绪。下一步是定义你的`FilterChainResolver`。
 
-### 步骤 4.2.2: 编写 FilterChainResolver 生产者
+#### 步骤 4.2.2：编写 `FilterChainResolver` 生产者
 
-`FilterChainResolver` 生产者方法提供了为应用程序中任何匹配的 URL 路径定义即时过滤器链的能力。这种方法比在 `web.xml` 中定义过滤器链的常用策略要灵活、强大且简洁得多；即使你从未使用任何其他 Shiro 功能，单凭这一点就足以证明其使用价值。`<URL path expression, filterName>` 将每个过滤器映射到其应用的 URL 路径表达式。
+`FilterChainResolver`生产者方法提供了为应用程序中任何匹配的 URL 路径定义即时过滤器链的能力。这种方法比在`web.xml`中定义过滤器链的常用策略要灵活、强大且简洁得多；即使你从未使用任何其他 Shiro 功能，单凭这一点就足以证明其使用价值。`<URL path expression, filterName>`将每个过滤器映射到其应用的 URL 路径表达式。
 
 URL 路径表达式按照它们定义的顺序对传入的请求进行求值，第一个匹配获胜。
 
@@ -1166,15 +1197,15 @@ Shiro 提供了大量的预定义过滤器。
 | --- | --- |
 | | |
 
-本项目主要使用 `anon`、`authc` 和 `user`：
+本项目主要使用`anon`、`authc`和`user`：
 
-- `anon` 允许立即访问路径，而无需执行安全检查。
-- `authc` 要求请求用户必须经过验证才能继续请求，通过重定向到 `loginUrl` 强制用户登录。
-- `user` 如果允许访问者是已知用户，则允许访问资源，已知用户定义为拥有主体（principal）。这意味着任何通过“记住我”功能验证或记住的用户都将被允许访问。
+- `anon`允许立即访问路径，而无需执行安全检查。
+- `authc`要求请求用户必须经过验证才能继续请求，通过重定向到`loginUrl`强制用户登录。
+- `user`如果允许访问者是已知用户，则允许访问资源，已知用户定义为拥有主体（principal）。这意味着任何通过“记住我”功能验证或记住的用户都将被允许访问。
 
 ***
 
-选择过滤器后，在 `FilterChainManager` 中指定你的选择。
+选择过滤器后，在`FilterChainManager`中指定你的选择。
 
 ```java
 FormAuthenticationFilter authc = new FormAuthenticationFilter();
@@ -1187,7 +1218,7 @@ fcMan.addFilter("anon", anon);
 fcMan.addFilter("user", user);
 ```
 
-接下来，定义过滤器所需的属性。例如，你的 `authc` 和 `user` 过滤器需要定义 `loginUrl`。
+接下来，定义过滤器所需的属性。例如，你的`authc`和`user`过滤器需要定义`loginUrl`。
 
 ```java
 authc.setLoginUrl("/login.html");
@@ -1204,7 +1235,7 @@ fcMan.createChain("/login.html", "authc");
 fcMan.createChain("/**", "user");
 ```
 
-将你的 `fcMan` `(FilterChainManager)` 设置为你正在产生的 `FilterChainResolver`。
+将你的`fcMan`（`FilterChainManager`）设置为你正在产生的`FilterChainResolver`。
 
 ```java
 PathMatchingFilterChainResolver resolver = new PathMatchingFilterChainResolver();
@@ -1214,11 +1245,7 @@ filterChainResolver = resolver;
 return filterChainResolver;
 ```
 
-最后，这就是 `FilterChainResolver` 生产者方法。
-
-
-
-
+最后，这就是`FilterChainResolver`生产者方法。
 
 ```java
 @Produces
@@ -1251,9 +1278,9 @@ public FilterChainResolver getFilterChainResolver() {
 }
 ```
 
-* * *
+***
 
-此时，你的 `WebSecurityManager` 和 `FilterChainResolver` CDI 生产者已经准备就绪，你可以更新 `ShiroListener` 类了。
+此时，你的`WebSecurityManager`和`FilterChainResolver` CDI 生产者已经准备就绪，你可以更新`ShiroListener`类了。
 
 ```java
 @WebListener
@@ -1282,21 +1309,23 @@ public class ShiroListener extends EnvironmentLoaderListener {
 }
 ```
 
-如你所见，你的 `ShiroListener` 中已启用 CDI 感知。
+如你所见，你的`ShiroListener`中已启用 CDI 感知。
 
 ## 第 5 步：将 Shiro 操作暴露为 REST 服务
 
 Java EE 7 对 REST Web 服务、HTML5、WebSockets 等许多功能提供了强有支持。为了从客户端与我们的应用程序交互，让我们使用 JAX-RS 创建一些 RESTful Web 服务来暴露服务器操作，例如：
 
-* 登录
-* 退出
-* 列出已连接的用户
-* 获取已连接用户的信息
-* 等
+- 登录
+- 退出
+- 列出已连接的用户
+- 获取已连接用户的信息
+- 等
 
 ### 5.1 节：启用 JAX-RS
 
-要启用 JAX-RS 服务，你必须定义一个 JAX-RS 应用类。在 `com.targa.dev.shirotutorial.security` 包的根目录下创建一个名为 `JaxRsConfiguration` 的类。但为什么要放在根目录下呢？
+
+
+要启用 JAX-RS 服务，你必须定义一个 JAX-RS 应用类。在`com.targa.dev.shirotutorial.security`包的根目录下创建一个名为`JaxRsConfiguration`的类。但为什么要放在根目录下呢？
 
 按照 BCE 模式，此类是配置（configuration）；它不是边界（boundary）、控制器（controller）或实体（entity）。由于它涉及应用程序的配置，因此属于包根。
 
@@ -1306,13 +1335,13 @@ public class JaxRsConfiguration extends Application {
 }
 ```
 
-RESTful 服务的根 URL 将为 `http://[ApplicationPath]/api/**`。
+RESTful 服务的根 URL 将为`http://[ApplicationPath]/api/**`。
 
-你希望有两个服务：用于登录、退出、列出已连接用户以及获取连接用户信息的 `Authentication` Web 服务，以及用于用户增删改查（CRUD）的 `User Management` Web 服务。
+你希望有两个服务：用于登录、退出、列出已连接用户以及获取连接用户信息的`Authentication` Web 服务，以及用于用户增删改查（CRUD）的`User Management` Web 服务。
 
-Web 服务将在 `com.targa.dev.shirotutorial.security.boundary` 中创建，因为它们是应用程序的边界，并将有助于与外部客户端交互。
+Web 服务将在`com.targa.dev.shirotutorial.security.boundary`中创建，因为它们是应用程序的边界，并将有助于与外部客户端交互。
 
-首先创建具有以下功能的 `Authentication` Web 服务：
+首先创建具有以下功能的`Authentication` Web 服务：
 
 * `login()`
 * `logout()`
@@ -1329,9 +1358,9 @@ public class AuthenticationResource {
 }
 ```
 
-该 Web 服务将通过 `http://[ApplicationPath]/api/auth` 访问。
+该 Web 服务将通过`http://[ApplicationPath]/api/auth`访问。
 
-* * *
+---
 
 登录时，使用以下代码：
 
@@ -1343,7 +1372,7 @@ try {
 }
 ```
 
-在上述代码中，`username` 和 `password` 是字符串，`rememberMe` 是布尔值。用户通过 HTML 表单提供这些值（例如）。因此，`login()` 方法如下：
+在上述代码中，`username`和`password`是字符串，`rememberMe`是布尔值。用户通过 HTML 表单提供这些值（例如）。因此，`login()`方法如下：
 
 ```java
 @POST
@@ -1377,12 +1406,12 @@ public Response login(@NotNull @FormParam("username") String username, ①
 }
 ```
 
-1. `@NotNull` 用于 bean 验证；在此定义验证是为了在尽可能早的时刻执行。
-2. `@FormParam("paramName")` 获取 HTTP 请求的参数。
-3. `@Context` 注入支持的资源实例。在这里，它注入了 `HttpServletRequest`。
+1. `@NotNull`用于 bean 验证；在此定义验证是为了在尽可能早的时刻执行。
+2. `@FormParam("paramName")`获取 HTTP 请求的参数。
+3. `@Context`注入支持的资源实例。在这里，它注入了`HttpServletRequest`。
 4. 这检查用户是否已身份验证。
 5. 从之前保存的请求获取请求 URL。如果没有保存的请求或使用了回退 URL。
-6. 我们将创建一个 `WebPages` 类，其中包含实用的页面 URL，例如 `HOME_URL`（应用程序首页）、`DASHBOARD_URL`（已连接用户的欢迎页）和 `LOGIN_URL`（登录页）。
+6. 我们将创建一个`WebPages`类，其中包含实用的页面 URL，例如`HOME_URL`（应用程序首页）、`DASHBOARD_URL`（已连接用户的欢迎页）和`LOGIN_URL`（登录页）。
 7. 我创建了这个方法来执行重定向到指定的 URL：
 
 ```java
@@ -1408,9 +1437,9 @@ private Response getRedirectResponse(String requestedPath, HttpServletRequest re
 }
 ```
 
-* * *
+---
 
-`logout()` 方法简单得多。
+`logout()`方法简单得多。
 
 ```java
 @GET
@@ -1421,11 +1450,7 @@ public Response logout(@Context HttpServletRequest request) {
 }
 ```
 
-这是 `getSubjectInfo()`。
-
-
-
-
+这是`getSubjectInfo()`。
 
 ```java
 @GET
@@ -1443,9 +1468,9 @@ public Response getSubjectInfo() {
 }
 ```
 
-`getConnectedUsers()` 的设计思想是创建一个持有所有已连接用户的集合。当用户登录时，该用户会被添加到集合中；当用户注销时，该用户会被从集合中移除。我们将利用 CDI 的一个优秀特性：CDI 事件机制。
+`getConnectedUsers()`的设计思想是创建一个持有所有已连接用户的集合。当用户登录时，该用户会被添加到集合中；当用户注销时，该用户会被从集合中移除。我们将利用 CDI 的一个优秀特性：CDI 事件机制。
 
-首先注入 `Event<T>` 来监听类型为 T 的触发事件。
+首先注入`Event<T>`来监听类型为 T 的触发事件。
 
 ```java
 @Inject
@@ -1455,11 +1480,11 @@ private Event<AuthenticationEvent> monitoring;
 private AuthenticationEventMonitor authenticationEventMonitor;
 ```
 
-`AuthenticationEventMonitor` 类是一个用于事件生产者和监控的持有类。
+`AuthenticationEventMonitor`类是一个用于事件生产者和监控的持有类。
 
-***
+---
 
-按照如下所示创建 `AuthenticationEvent` 事件类。
+按照如下所示创建`AuthenticationEvent`事件类。
 
 ```java
 public class AuthenticationEvent {
@@ -1487,7 +1512,7 @@ public class AuthenticationEvent {
 }
 ```
 
-***
+---
 
 接下来，为事件生产者和管理器创建一个持有类。
 
@@ -1531,9 +1556,9 @@ public class AuthenticationEventMonitor {
 }
 ```
 
-***
+---
 
-`AuthenticationResource` 类如下。
+`AuthenticationResource`类如下。
 
 ```java
 @Path("auth")
@@ -1580,52 +1605,51 @@ public class AuthenticationResource {
     }
 ```
 
+
+
 ```java
-    @GET
-    @Path("logout")
-    public Response logout(@Context HttpServletRequest request) {
-        SecurityUtils.getSubject().logout();
-        return this.getRedirectResponse(WebPages.HOME_URL, request);
-    }
+@GET
+@Path("logout")
+public Response logout(@Context HttpServletRequest request) {
+    SecurityUtils.getSubject().logout();
+    return this.getRedirectResponse(WebPages.HOME_URL, request);
+}
 
-    @GET
-    @Path("me")
-    public Response getSubjectInfo() {
-        Subject subject = SecurityUtils.getSubject();
-        if (subject != null && subject.isAuthenticated()) {
-            User connectedUser = this.userService.findByUsername(subject.getPrincipal().toString());
-            return Response.ok(connectedUser).build();
+@GET
+@Path("me")
+public Response getSubjectInfo() {
+    Subject subject = SecurityUtils.getSubject();
+    if (subject != null && subject.isAuthenticated()) {
+        User connectedUser = this.userService.findByUsername(subject.getPrincipal().toString());
+        return Response.ok(connectedUser).build();
+    } else {
+        return Response.serverError().type(MediaType.TEXT_HTML).build();
+    }
+}
+
+@GET
+@Path("users")
+public Response getConnectedUsers() {
+    List<String> connectedUsers = this.authenticationEventMonitor.getConnectedUsers();
+    return Response.ok(connectedUsers).build();
+}
+
+private Response getRedirectResponse(String requestedPath, HttpServletRequest request) {
+    String appName = request.getContextPath();
+    String baseUrl = request.getRequestURL().toString().split(request.getRequestURI())[0] + appName;
+
+    try {
+        if (requestedPath.split(appName).length > 1) {
+            baseUrl += requestedPath.split(appName)[1];
         } else {
-            return Response.serverError().type(MediaType.TEXT_HTML).build();
+            baseUrl += requestedPath;
         }
-    }
-
-    @GET
-    @Path("users")
-    public Response getConnectedUsers() {
-        List<String> connectedUsers = this.authenticationEventMonitor.getConnectedUsers();
-        return Response.ok(connectedUsers).build();
-    }
-
-    private Response getRedirectResponse(String requestedPath, HttpServletRequest request) {
-        String appName = request.getContextPath();
-        String baseUrl = request.getRequestURL().toString().split(request.getRequestURI())[0] + appName;
-
-        try {
-            if (requestedPath.split(appName).length > 1) {
-                baseUrl += requestedPath.split(appName)[1];
-            } else {
-                baseUrl += requestedPath;
-            }
-            return Response.seeOther(new URI(baseUrl)).build();
-        } catch (URISyntaxException ex) {
-            return Response.serverError().status(404).type(MediaType.TEXT_HTML).build();
-        }
+        return Response.seeOther(new URI(baseUrl)).build();
+    } catch (URISyntaxException ex) {
+        return Response.serverError().status(404).type(MediaType.TEXT_HTML).build();
     }
 }
 ```
-
-***
 
 然后创建 `UserResource` 类。
 
@@ -1672,12 +1696,7 @@ public class UserResource {
 }
 ```
 
-***
-
 JAX-RS 层中的最后一项是 `ExceptionMapper` 类。
-
-
-
 
 ```java
 @Provider
@@ -1733,8 +1752,6 @@ public class ShiroExceptionMapper implements ExceptionMapper<Exception> {
 </session-config>
 ```
 
-***
-
 ### 第 5.2 步：测试你的 RESTful 服务
 
 让我们编写一个小型 Java SE 应用形式的小型客户端来测试这些 Web 服务。客户端程序将向我们的 Web 服务发送请求，你将使用 `JUnit` 来检查一切是否正常。
@@ -1746,8 +1763,6 @@ public class ShiroExceptionMapper implements ExceptionMapper<Exception> {
 现在一切都解释完毕了，将这些组件组合成一个运行的项目：
 
 ![nb6](img/nb6.png)
-
-***
 
 接下来是……
 
@@ -1777,8 +1792,6 @@ public class ShiroExceptionMapper implements ExceptionMapper<Exception> {
 </project>
 ```
 
-***
-
 在你的 `pom.xml` 中添加 `JUnit` 依赖。
 
 ```xml
@@ -1804,8 +1817,6 @@ public class ShiroExceptionMapper implements ExceptionMapper<Exception> {
 
 创建你的第一个 JUnit 类。右键点击 Test Packages 并选择 New → JUnit。
 
-***
-
 由于你要测试登录功能，必须添加依赖项。以下假设你使用的是 Payara Server 及其 json-processing 模块：
 
 ![nb10](img/nb10.png)
@@ -1829,14 +1840,14 @@ public class LoginTest {
 对于成功登录：
 
 * 将用户名、密码和 `rememberMe` 发送到 RESTful 服务
+
 * 获取 "OK" 响应状态 (200)
 
 对于失败的登录尝试：
 
 * 将用户名、密码和 `rememberMe` 发送到 RESTful 服务
-* 获取 "Unauthorized" 响应状态 (401)
 
-***
+* 获取 "Unauthorized" 响应状态 (401)
 
 在测试登录操作之前，我们创建一个新的 `User` 记录。有很多方法可以实现，但让我们构建一个初始化 EJB，在应用程序启动时插入新用户。
 
@@ -1862,7 +1873,9 @@ public class InsertUser {
 ```
 
 1. `us` 用于用户实体的 CRUD 服务。
+
 2. `BCryptPasswordService` 用于匹配 `PasswordMatcher` 中密码的工具类。
+
 3. `@PostConstruct` 在 EJB 构建后执行带注解的方法（`public void insert()`）。
 
 为了避免每次重启时都重复记录，我们可以要求 ORM 在每次应用程序启动时 **drop-and-create** 表。要实现这一点，只需在你的 `persistence.xml` 文件的属性部分添加以下行：
@@ -1872,8 +1885,6 @@ public class InsertUser {
 ```
 
 测试方法将是：
-
-
 
 
 
@@ -1928,15 +1939,20 @@ public void testFailingLogin() {
 我们的 RESTful Web 服务可以使用任何可以发送 HTTP 请求的客户端来消费：
 
 * HTML5 页面
+
 * Swing 应用程序
+
 * iOS、Android 等移动应用
+
 * 等等
 
 例如，我们可以制作一个 AngularJS 单页应用 (SPA) 作为我们 JavaEE7 应用程序的视图层：
 
 * 在服务层进行 REST 调用。
+
 * 根据 HTTP 响应码管理你的 Auth² 操作。
-* 对于授权，你可以使用 AngularJS 授权插件（angular-route-authorisation、angular-http-auth、angular-permission 等）。
+
+* 对于授权，你可以使用 AngularJS 授权插件（`angular-route-authorisation`、`angular-http-auth`、`angular-permission` 等）。
 
 你可能需要微调代码以与你的授权机制保持一致。
 
@@ -1947,26 +1963,43 @@ public void testFailingLogin() {
 社区提供了许多集成方案：
 
 * 将 [Stormpath 用户管理](http://www.stormpath.com/blog/user-management-java-web-apps-stormpath-and-apache-shiro) 与 Shiro 结合，可以提供一个完整的应用安全和用户管理系统，且几乎不需要任何代码。
+
 * [Grails](http://grails.org/plugins/shiro) 提供了最新的 Grails/Shiro 集成，包括 Grails 2.0 和 Shiro 1.2。该插件为 Grails 应用程序添加了简单的身份验证和访问控制。
+
 * [OAuth](https://github.com/FeedTheCoffers/shiro-oauth) 为基于 Scribe 的 Apache Shiro OAuth 模块提供了源码。
+
 * [Google App Engine](https://github.com/cilogi/gaeshiro) 展示了将 Shiro 与 Google App Engine 以及 Google Guice 集成的一种方法，并带有前端用户注册和密码管理。
+
 * [Play Shiro Integration](https://github.com/wsargent/play-shiro) 简单地集成了 Apache Shiro 和 Play 2.0。如果你想尝试它，该项目自 Shiro 1.2 发布后可能需要处理无状态更新。
+
 * [The 55 Minutes Wicket project](https://github.com/55minutes/fiftyfive-wicket) 是一组实用的工具和库，用于增强 Apache Wicket Java Web 框架的生产力，包括 Shiro 集成。
-* [Lift Shiro](https://github.com/timperrett/lift-shiro) 将 Shiro 与 Lift Web 框架集成，使用 Lift 的 sitemap 代替 Shiro 内置的 web.xml 资源过滤器来控制 URL 的访问。
+
+* [Lift Shiro](https://github.com/timperrett/lift-shiro) 将 Shiro 与 Lift Web 框架集成，使用 Lift 的 sitemap 代替 Shiro 内置的 `web.xml` 资源过滤器来控制 URL 的访问。
 
 ## 建议
 
-1. 处理每一个 HTTP 错误代码（404, 400, 500 等），并尝试在每个响应的 HTTP 头部中包含显式的错误信息。
+1. 处理每一个 HTTP 错误代码（`404`、`400`、`500` 等），并尝试在每个响应的 HTTP 头部中包含显式的错误信息。
+
 2. 确保你的设计涵盖了最大的用例，并确保所有允许匿名访问的资源既不脆弱也不敏感。
+
 3. 尽可能激活并配置 SSL。
+
 4. 避免通过明文 HTTP 传输 `JSESSIONID` 参数。
+
 5. 避免使用 URL 参数进行会话跟踪。
+
 6. 确保定义了一个符合你需求的合理会话超时值。
+
 7. 尝试构建你对 Auth² 机制和策略的理解。查看 [OWASP](http://www.owasp.org) 的有用资源：
+
     1. [OWASP 身份认证备查清单](https://www.owasp.org/index.php/Authentication_Cheat_Sheet)
+
     2. [OWASP 授权指南](https://www.owasp.org/index.php/Guide_to_Authorization)
+
     3. [OWASP REST 安全备查清单](https://www.owasp.org/index.php/REST_Security_Cheat_Sheet)
+
     4. [OWASP 会话管理](https://www.owasp.org/index.php/Session_Management)
+
 8. 对你的应用程序进行渗透测试，以确保你的安全机制是强大的。使用 [OWASP 指南](https://www.owasp.org/index.php/Web_Application_Testing)。
 
 ![](img/default.jpg) Ne Nebrass Lamouchi
@@ -1976,14 +2009,17 @@ public void testFailingLogin() {
 建议你深入研究 Shiro 的官方文档。与 Spring Security 或 PicketLink 等框架相比，它的文档确实匮乏，后者拥有更多资源：
 
 * [https://shiro.apache.org/static/latest/apidocs/]
+
 * [http://shiro.apache.org/tutorial.html]
 
 有一些实用的教程，包括旧版本的 Shiro，例如 INI 和 XML 配置：
 
 * [http://meri-stuff.blogspot.fr/2011/03/shiro-part-1-basics.html]
+
 * [http://en.kodcu.com/2013/10/security-framework-2/]
+
 * [http://www.jjoe64.com/2014/01/apache-shiro-with-hibernates-full.html]
+
 * [http://balusc.omnifaces.org/2013/01/apache-shiro-is-it-ready-for-java-ee-6.html]
 
 你可以从这些教程中学习技巧，并将这些修改应用到任何 JavaEE7 项目中。
-

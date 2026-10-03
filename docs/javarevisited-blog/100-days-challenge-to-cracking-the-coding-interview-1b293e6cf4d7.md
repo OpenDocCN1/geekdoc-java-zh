@@ -1,8 +1,9 @@
+
 # 第 22 天—使用列表排队
 
 > 原文：<https://medium.com/javarevisited/100-days-challenge-to-cracking-the-coding-interview-1b293e6cf4d7?source=collection_archive---------0----------------------->
 
-## **亚马逊 100 天**
+## 亚马逊 100 天
 
 ![](img/ae6850e73d613c35cfedeefdfdc98912.png)
 

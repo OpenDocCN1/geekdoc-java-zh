@@ -1,8 +1,9 @@
+
 # 提供默认参数
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/selfContainedApps/defaultarg.html`](https://docs.oracle.com/javase/tutorial/deployment/selfContainedApps/defaultarg.html)
 
-当启动应用程序时，参数会传递给 Java 应用程序。自包含应用程序可以设置一个默认参数，当未指定参数时使用。使用`<fx:argument>`元素来定义参数。可以通过为每个参数添加一个`<fx:argument>`元素来传递多个参数。有关此元素的信息，请参阅[<fx:argument>](https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/javafx_ant_task_reference.html#JSDPG528)。
+当启动应用程序时，参数会传递给 Java 应用程序。自包含应用程序可以设置一个默认参数，当未指定参数时使用。使用`<fx:argument>`元素来定义参数。可以通过为每个参数添加一个`<fx:argument>`元素来传递多个参数。有关此元素的信息，请参阅[`<fx:argument>`](https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/javafx_ant_task_reference.html#JSDPG528)。
 
 在使用文件关联中描述的文件关联演示设置为使用打包在应用程序中的示例文件之一的名称作为默认参数。
 
@@ -15,7 +16,6 @@
                 version="1.0">
     <fx:argument>sample.js</fx:argument>
 </fx:application>
-
 ```
 
 查看`build.xml`以获取完整的构建代码。

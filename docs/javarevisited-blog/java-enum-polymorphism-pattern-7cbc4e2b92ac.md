@@ -1,3 +1,4 @@
+
 # Java 枚举多态性模式
 
 > 原文：<https://medium.com/javarevisited/java-enum-polymorphism-pattern-7cbc4e2b92ac?source=collection_archive---------0----------------------->

@@ -1,24 +1,23 @@
+
 # 从 JSON 文件加载 Spring Boot 属性
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-boot-json-properties>
 
-## 1。简介
+## 1. 简介
 
-使用外部配置属性是一种非常常见模式。
+使用外部配置属性是一种非常常见模式。而且，最常见的问题之一是在多种环境中改变我们的应用程序的行为的能力——例如开发、测试和生产——而不必改变部署工件。
 
-而且，最常见的问题之一是在多种环境中改变我们的应用程序的行为的能力——例如开发、测试和生产——而不必改变部署工件。
+在本教程中，**我们将关注如何在 Spring Boot 应用程序中从 JSON 文件加载属性**。
 
-在本教程中，**我们将关注** **如何在 Spring Boot 应用程序中从 JSON 文件加载属性**。
-
-## 2。在 Spring Boot 装载房产
+## 2. 在 Spring Boot 装载房产
 
 Spring 和 Spring Boot 为加载外部配置提供了强大的支持——你可以在本文的[中找到对基础知识的概述。](/web/20220630133227/https://www.baeldung.com/properties-with-spring)
 
-由于**这种支持主要集中在`.properties`和。`yml`文件——使用`JSON`通常需要额外的配置**。
+由于**这种支持主要集中在`.properties`和`.yml`文件——使用`JSON`通常需要额外的配置**。
 
 我们将假设基本特性是众所周知的——在这里，我们将关注于`JSON`特定的方面。
 
-## 3。通过命令行加载属性
+## 3. 通过命令行加载属性
 
 我们可以在命令行中以三种预定义的格式提供`JSON`数据。
 
@@ -28,9 +27,9 @@ Spring 和 Spring Boot 为加载外部配置提供了强大的支持——你可
 $ SPRING_APPLICATION_JSON='{"environment":{"name":"production"}}' java -jar app.jar
 ```
 
-提供的数据将被填充到 Spring `Environment`中。在这个例子中，我们将得到一个值为“production”的属性`environment.name` 。
+提供的数据将被填充到 Spring `Environment`中。在这个例子中，我们将得到一个值为"production"的属性`environment.name`。
 
-同样，我们可以将我们的`JSON`作为一个`System property, `来加载，例如:
+同样，我们可以将我们的`JSON`作为一个`System property`来加载，例如:
 
 ```java
 $ java -Dspring.application.json='{"environment":{"name":"production"}}' -jar app.jar
@@ -42,13 +41,13 @@ $ java -Dspring.application.json='{"environment":{"name":"production"}}' -jar ap
 $ java -jar app.jar --spring.application.json='{"environment":{"name":"production"}}'
 ```
 
-对于最后两种方法， `spring.application.json`属性将使用未解析的给定数据`String`来填充。
+对于最后两种方法，`spring.application.json`属性将使用未解析的给定数据`String`来填充。
 
 这些是将`JSON`数据加载到我们的应用程序中的最简单的选项。**这种简约方法的缺点是缺乏可扩展性。**
 
 在命令行中加载大量数据可能会很麻烦并且容易出错。
 
-## 4。通过`PropertySource`注释加载属性
+## 4. 通过`PropertySource`注释加载属性
 
 Spring Boot 提供了一个强大的生态系统来通过注释创建配置类。
 
@@ -72,7 +71,7 @@ public class JsonProperties {
 
 ```java
 {
-  "host" : "[[email protected]](/web/20220630133227/https://www.baeldung.com/cdn-cgi/l/email-protection)",
+  "host" : "[[email protected]](/web/20220630133227/https://www.baeldung.com/cdn-cgi/l/email-protection)",
   "port" : 9090,
   "resend" : true
 }
@@ -118,7 +117,7 @@ public class JsonPropertiesIntegrationTest {
 
     @Test
     public void whenPropertiesLoadedViaJsonPropertySource_thenLoadFlatValues() {
-        assertEquals("[[email protected]](/web/20220630133227/https://www.baeldung.com/cdn-cgi/l/email-protection)", jsonProperties.getHost());
+        assertEquals("[[email protected]](/web/20220630133227/https://www.baeldung.com/cdn-cgi/l/email-protection)", jsonProperties.getHost());
         assertEquals(9090, jsonProperties.getPort());
         assertTrue(jsonProperties.isResend());
     }
@@ -133,11 +132,11 @@ Failed to convert from type [java.lang.String]
 to type [boolean] for value 'true,'
 ```
 
-加载机制通过`PropertySource`注释成功地将类与 JSON 文件连接起来。但是`resend`属性的值被计算为“`true,”` ”(带逗号)，不能转换为布尔值。
+加载机制通过`PropertySource`注释成功地将类与 JSON 文件连接起来。但是`resend`属性的值被计算为"`true,`"(带逗号)，不能转换为布尔值。
 
 **因此，我们必须在加载机制中注入一个 JSON 解析器。**幸运的是，Spring Boot 附带了杰克森库，我们可以通过`PropertySourceFactory`使用它。
 
-## 5。使用`PropertySourceFactory` 解析 JSON
+## 5. 使用`PropertySourceFactory`解析 JSON
 
 **我们必须为客户`PropertySourceFactory`提供解析 JSON 数据的能力:**
 
@@ -200,9 +199,9 @@ public void whenPropertiesLoadedViaJsonPropertySource_thenLoadListValues() {
 }
 ```
 
-### 5.1。嵌套结构
+### 5.1. 嵌套结构
 
-处理嵌套的 JSON 结构不是一件容易的事情。作为更健壮的解决方案，Jackson 库的映射器将把嵌套数据映射到一个`Map. `
+处理嵌套的 JSON 结构不是一件容易的事情。作为更健壮的解决方案，Jackson 库的映射器将把嵌套数据映射到一个`Map`。
 
 所以我们可以用 getters 和 setters 向我们的`JsonProperties`类添加一个`Map`成员:
 
@@ -233,7 +232,7 @@ public void whenPropertiesLoadedViaJsonPropertySource_thenNestedLoadedAsMap() {
 }
 ```
 
-## 6。`ContextInitializer`使用自定义
+## 6. `ContextInitializer`使用自定义
 
 **如果我们想对属性的加载有更多的控制，我们可以使用 custom `ContextInitializers`。**
 
@@ -259,11 +258,11 @@ public class CustomJsonProperties {
 
 注意，我们不再使用`PropertySource`注释了。但是在`ConfigurationProperties`注释中，我们定义了一个前缀。
 
-在下一节中，我们将研究如何将属性加载到`‘custom'`名称空间中。
+在下一节中，我们将研究如何将属性加载到`'custom'`名称空间中。
 
-### 6.1。将属性加载到自定义名称空间
+### 6.1. 将属性加载到自定义名称空间
 
-为了给上面的 properties 类提供输入，我们将从 JSON 文件加载数据，在解析之后，我们将用`MapPropertySources:`填充 Spring `Environment`
+为了给上面的 properties 类提供输入，我们将从 JSON 文件加载数据，在解析之后，我们将用`MapPropertySources`填充 Spring `Environment`:
 
 ```java
 public class JsonPropertyContextInitializer
@@ -336,6 +335,8 @@ public class JsonPropertiesIntegrationTest {
 
 在自动连接我们的`CustomJsonProperties`类之后，我们可以从自定义名称空间测试数据绑定:
 
+
+
 ```java
 @Test
 public void whenLoadedIntoEnvironment_thenFlatValuesPopulated() {
@@ -345,13 +346,13 @@ public void whenLoadedIntoEnvironment_thenFlatValuesPopulated() {
 }
 ```
 
-### 6.2。展平嵌套结构
+### 6.2 展平嵌套结构
 
 Spring 框架提供了一个强大的机制来将属性绑定到对象成员中。此功能的基础是属性中的名称前缀。
 
-如果我们扩展我们的自定义`ApplicationInitializer`来将`Map`值转换成名称空间结构，那么框架可以将我们的嵌套数据结构直接加载到相应的对象中。
+如果我们扩展自定义的`ApplicationInitializer`来将`Map`值转换成名称空间结构，那么框架可以将我们的嵌套数据结构直接加载到相应的对象中。
 
-增强的`CustomJsonProperties`级:
+增强的`CustomJsonProperties`类：
 
 ```java
 @Configuration
@@ -376,7 +377,7 @@ public class CustomJsonProperties {
 }
 ```
 
-增强型`ApplicationContextInitializer`:
+增强型`ApplicationContextInitializer`：
 
 ```java
 public class JsonPropertyContextInitializer 
@@ -437,7 +438,7 @@ public class JsonPropertyContextInitializer
 }
 ```
 
-**因此，我们嵌套的 JSON 数据结构将被加载到一个配置对象:**
+因此，我们嵌套的 JSON 数据结构将被加载到一个配置对象：
 
 ```java
 @Test
@@ -450,10 +451,10 @@ public void whenLoadedIntoEnvironment_thenValuesLoadedIntoClassObject() {
 }
 ```
 
-## 7。结论
+## 7 结论
 
 Spring Boot 框架提供了一种通过命令行加载外部 JSON 数据的简单方法。在需要的情况下，我们可以通过正确配置的`PropertySourceFactory`来加载 JSON 数据。
 
 尽管加载嵌套属性是可以解决的，但是需要格外小心。
 
-和往常一样，代码可以在 GitHub 的[上获得。](https://web.archive.org/web/20220630133227/https://github.com/eugenp/tutorials/tree/master/spring-boot-modules/spring-boot-properties-3)
+和往常一样，代码可以在 GitHub 上获得。

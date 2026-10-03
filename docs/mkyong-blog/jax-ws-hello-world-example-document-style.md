@@ -1,3 +1,4 @@
+
 # JAX-WS Hello World 示例-文档样式
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/webservices/jax-ws/jax-ws-hello-world-example-document-style/>
@@ -10,16 +11,16 @@
 
 ## JAX-WS Web 服务端点
 
-下面是在 JAX WS 中创建文档样式 web 服务的步骤。
+下面是在 JAX-WS 中创建文档样式 web 服务的步骤。
 
- ## 1.创建 Web 服务端点接口
+### 1.创建 Web 服务端点接口
 
 实际上，用`@SOAPBinding`标注是可选的，因为默认样式是 document。
 
-*文件:HelloWorld.java*
+*文件：`HelloWorld.java`*
 
 ```java
- package com.mkyong.ws;
+package com.mkyong.ws;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -33,16 +34,19 @@ public interface HelloWorld{
 
 	@WebMethod String getHelloWorldAsString(String name);
 
-} 
+}
 ```
 
-**Note**
-In JAX-WS development, convert from “*RPC style*” to “*Document style*” is very easy, just change the `@SOAPBinding` style option. ## 2.创建 Web 服务端点实现
+**注意**
 
-*文件:HelloWorldImpl.java*
+在 JAX-WS 开发中，从“*RPC 风格*”转换为“*文档风格*”非常容易，只需更改`@SOAPBinding`样式选项。
+
+### 2.创建 Web 服务端点实现
+
+*文件：`HelloWorldImpl.java`*
 
 ```java
- package com.mkyong.ws;
+package com.mkyong.ws;
 
 import javax.jws.WebService;
 
@@ -55,15 +59,15 @@ public class HelloWorldImpl implements HelloWorld{
 		return "Hello World JAX-WS " + name;
 	}
 
-} 
+}
 ```
 
-## 3.创建端点发布者。
+### 3.创建端点发布者
 
-*文件:HelloWorldPublisher.java*
+*文件：`HelloWorldPublisher.java`*
 
 ```java
- package com.mkyong.endpoint;
+package com.mkyong.endpoint;
 
 import javax.xml.ws.Endpoint;
 import com.mkyong.ws.HelloWorldImpl;
@@ -75,32 +79,32 @@ public class HelloWorldPublisher{
 	   Endpoint.publish("http://localhost:9999/ws/hello", new HelloWorldImpl());
     }
 
-} 
+}
 ```
 
-等等，当您运行端点发布器时，您会遇到以下错误消息:
+等等，当您运行端点发布器时，您会遇到以下错误消息：
 
 ```java
- Wrapper class com.mkyong.ws.jaxws.GetHelloWorldAsString is not found. 
-    Have you run APT to generate them? 
+Wrapper class com.mkyong.ws.jaxws.GetHelloWorldAsString is not found. 
+    Have you run APT to generate them?
 ```
 
-见此[文](http://web.archive.org/web/20190310093210/http://www.mkyong.com/webservices/jax-ws/wrapper-class-package-jaxws-methodname-is-not-found-have-you-run-apt-to-generate-them/)。您需要使用“ **wsgen** 工具来生成必要的 JAX-WS 可移植工件。让我们进入下一步。
+见此[文](http://web.archive.org/web/20190310093210/http://www.mkyong.com/webservices/jax-ws/wrapper-class-package-jaxws-methodname-is-not-found-have-you-run-apt-to-generate-them/)。您需要使用“**wsgen**”工具来生成必要的 JAX-WS 可移植工件。让我们进入下一步。
 
-## 4.wsgen 命令
+### 4.`wsgen`命令
 
-文档样式需要额外的类来运行，您可以使用" **wsgen** "来生成所有必需的 Java 工件(映射类、wsdl 或 xsd 模式)。需要" **wsgen** "命令来读取服务端点实现类:
+文档样式需要额外的类来运行，您可以使用“**wsgen**”来生成所有必需的 Java 工件（映射类、wsdl 或 xsd 模式）。需要“**wsgen**”命令来读取服务端点实现类：
 
 ```java
- wsgen -keep -cp . com.mkyong.ws.HelloWorldImpl 
+wsgen -keep -cp . com.mkyong.ws.HelloWorldImpl
 ```
 
-它将生成两个类，将其复制到您的“ **package.jaxws** 文件夹中。
+它将生成两个类，将其复制到您的“**package.jaxws**”文件夹中。
 
-*文件:GetHelloWorldAsString.java*
+*文件：`GetHelloWorldAsString.java`*
 
 ```java
- package com.mkyong.ws.jaxws;
+package com.mkyong.ws.jaxws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -134,13 +138,13 @@ public class GetHelloWorldAsString {
         this.arg0 = arg0;
     }
 
-} 
+}
 ```
 
-*文件:GetHelloWorldAsStringResponse.java*
+*文件：`GetHelloWorldAsStringResponse.java`*
 
 ```java
- package com.mkyong.ws.jaxws;
+package com.mkyong.ws.jaxws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -174,24 +178,25 @@ public class GetHelloWorldAsStringResponse {
         this._return = _return;
     }
 
-} 
+}
 ```
 
-**Note**
-The “wsgen” tool is available in the “JDK_Path\bin\” folder. For detail, please read this [JAX-WS : wsgen tool example](http://web.archive.org/web/20190310093210/http://www.mkyong.com/webservices/jax-ws/jax-ws-wsgen-tool-example/) article.
+**注意**
 
-## 5.完成的
+“`wsgen`”工具位于“`JDK_Path\bin\`”文件夹中。有关详细信息，请阅读此 [JAX-WS：`wsgen`工具示例](http://web.archive.org/web/20190310093210/http://www.mkyong.com/webservices/jax-ws/jax-ws-wsgen-tool-example/) 文章。
 
-完成，发布并通过 URL 测试:*http://localhost:9999/ws/hello？wsdl* 。
+### 5.完成
+
+完成，发布并通过 URL 测试：*http://localhost:9999/ws/hello?wsdl*。
 
 ## Web 服务客户端
 
 创建 web 服务客户端以访问您发布的服务。
 
-*文件:HelloWorldClient.java*
+*文件：`HelloWorldClient.java`*
 
 ```java
- package com.mkyong.client;
+package com.mkyong.client;
 
 import java.net.URL;
 import javax.xml.namespace.QName;
@@ -213,37 +218,37 @@ public class HelloWorldClient{
 
     }
 
-} 
+}
 ```
 
 *输出*
 
 ```java
- Hello World JAX-WS mkyong 
+Hello World JAX-WS mkyong
 ```
 
 ## 跟踪 SOAP 流量
 
 从上到下，展示了 SOAP 信封如何在这个文档风格的 web 服务中在客户机和服务器之间流动。
 
-## 1.申请一份 WSDL 档案
+### 1.申请一份 WSDL 档案
 
-首先，客户端向服务端点发送一个 wsdl 请求:
+首先，客户端向服务端点发送一个 wsdl 请求：
 
-**客户端发送请求:**
+**客户端发送请求：**
 
 ```java
- GET /ws/hello?wsdl HTTP/1.1
+GET /ws/hello?wsdl HTTP/1.1
 User-Agent: Java/1.6.0_13
 Host: localhost:9999
 Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
-Connection: keep-alive 
+Connection: keep-alive
 ```
 
-**服务器发送响应:**
+**服务器发送响应：**
 
 ```java
- HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 Transfer-encoding: chunked
 Content-type: text/xml;charset=utf-8
 
@@ -304,17 +309,19 @@ Content-type: text/xml;charset=utf-8
 
 </port>
 </service>
-</definitions> 
+</definitions>
 ```
 
-## 2.getHelloWorldAsString(字符串名称)
+### 2.`getHelloWorldAsString(String name)`
 
 第二次调用，客户端将方法调用请求放入 SOAP 信封，并将其发送到服务端点。在服务端点，调用请求的方法，将结果放入 SOAP 信封，并将其发送回客户端。
 
-**客户端发送请求:**
+**客户端发送请求：**
+
+
 
 ```java
- POST /ws/hello HTTP/1.1
+POST /ws/hello HTTP/1.1
 SOAPAction: ""
 Accept: text/xml, multipart/related, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
 Content-Type: text/xml; charset=utf-8
@@ -330,13 +337,13 @@ Content-Length: 224
 				<arg0>mkyong</arg0>
 			</ns2:getHelloWorldAsString>
 		</S:Body>
-	</S:Envelope> 
+	</S:Envelope>
 ```
 
 **服务器发送响应:**
 
 ```java
- HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 Transfer-encoding: chunked
 Content-type: text/xml; charset=utf-8
 
@@ -347,16 +354,9 @@ Content-type: text/xml; charset=utf-8
 				<return>Hello World JAX-WS mkyong</return>
 			</ns2:getHelloWorldAsStringResponse>
 		</S:Body>
-	</S:Envelope> 
+	</S:Envelope>
 ```
 
 ## 下载源代码
 
-Download It – [JAX-WS-HelloWorld-Document-Example.zip](http://web.archive.org/web/20190310093210/http://www.mkyong.com/wp-content/uploads/2010/11/JAX-WS-HelloWorld-Document-Example.zip) (10KB)[hello world](http://web.archive.org/web/20190310093210/http://www.mkyong.com/tag/hello-world/) [jax-ws](http://web.archive.org/web/20190310093210/http://www.mkyong.com/tag/jax-ws/) [web services](http://web.archive.org/web/20190310093210/http://www.mkyong.com/tag/web-services/)
-
-
-
-
-
-
-
+Download It – [JAX-WS-HelloWorld-Document-Example.zip](http://web.archive.org/web/20190310093210/http://www.mkyong.com/wp-content/uploads/2010/11/JAX-WS-HelloWorld-Document-Example.zip) (10KB) [hello world](http://web.archive.org/web/20190310093210/http://www.mkyong.com/tag/hello-world/) [jax-ws](http://web.archive.org/web/20190310093210/http://www.mkyong.com/tag/jax-ws/) [web services](http://web.archive.org/web/20190310093210/http://www.mkyong.com/tag/web-services/)

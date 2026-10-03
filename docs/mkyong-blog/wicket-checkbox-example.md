@@ -1,3 +1,4 @@
+
 # Wicket 复选框示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/wicket/wicket-checkbox-example/>
@@ -5,7 +6,7 @@
 Wicket 示例创建一个复选框，并自动选中该复选框。
 
 ```java
- //Java 
+//Java 
 import org.apache.wicket.markup.html.form.CheckBox;
 ...
 final CheckBox chk0 = new CheckBox("checkbox0", Model.of(Boolean.TRUE));	
@@ -17,17 +18,18 @@ form.add(address);
 <input type="checkbox" wicket:id="checkbox1" /> 
 ```
 
-## 1.Wicket 复选框示例
+## 1. Wicket 复选框示例
 
 呈现复选框的不同方式，默认勾选了“chk0”和“chk2”。
 
-**Checked by default ?**
-To checked a checkbox, you just need to assign a “true” to the component. This concept applied to other web application frameworks as well.
+**默认勾选？**
 
-*文件:CheckBoxPage.java*
+要勾选复选框，只需为组件分配一个“true”值。这个概念同样适用于其他 Web 应用框架。
+
+*文件：`CheckBoxPage.java`*
 
 ```java
- package com.mkyong.user;
+package com.mkyong.user;
 
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.form.CheckBox;
@@ -73,14 +75,14 @@ public class CheckBoxPage extends WebPage {
 } 
 ```
 
- ## 2.Wicket HTML 页面
+## 2. Wicket HTML 页面
 
 呈现 3 个复选框的页面。
 
-*文件:CheckBoxPage.html*
+*文件：`CheckBoxPage.html`*
 
-```java
- <html>
+```html
+<html>
 <head>
 <style>
 label {
@@ -118,23 +120,16 @@ label {
 </html> 
 ```
 
- ## 3.演示
+## 3. 演示
 
-开始并访问—*http://localhost:8080/wicket examples/*
+开始并访问 — `http://localhost:8080/wicket examples/`
 
 默认情况下，“chk0”和“chk2”处于选中状态。
 
-![wicket checkbox](img/bf9f6960ca8d62160e64d36b41ca583a.png "wicket-checkbox-example1")![wicket checkbox example](img/1df3d8bd16fa7f17d69036332303074c.png "wicket-checkbox-example2")Download it – [Wicket-Checkbox-Example.zip](http://web.archive.org/web/20190306164345/http://www.mkyong.com/wp-content/uploads/2011/05/Wicket-Checkbox-Example.zip) (7KB)
+![wicket checkbox](img/bf9f6960ca8d62160e64d36b41ca583a.png "wicket-checkbox-example1")![wicket checkbox example](img/1df3d8bd16fa7f17d69036332303074c.png "wicket-checkbox-example2")下载 – [Wicket-Checkbox-Example.zip](http://web.archive.org/web/20190306164345/http://www.mkyong.com/wp-content/uploads/2011/05/Wicket-Checkbox-Example.zip) (7KB)
 
 ## 参考
 
-1.  [Wicket 复选框 Javadoc](http://web.archive.org/web/20190306164345/http://wicket.apache.org/apidocs/1.4/org/apache/wicket/markup/html/form/CheckBox.html)
+1. [Wicket 复选框 Javadoc](http://web.archive.org/web/20190306164345/http://wicket.apache.org/apidocs/1.4/org/apache/wicket/markup/html/form/CheckBox.html)
 
 [checkbox](http://web.archive.org/web/20190306164345/http://www.mkyong.com/tag/checkbox/) [wicket](http://web.archive.org/web/20190306164345/http://www.mkyong.com/tag/wicket/)
-
-
-
-
-
-
-

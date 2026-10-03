@@ -1,3 +1,4 @@
+
 # 实战 Groovy: Groovy：Java 程序员的 DSL
 
 *用 Groovy 编写更少的代码，完成更多的工作*
@@ -24,20 +25,20 @@ Groovy 是运行在 Java 平台上的现代编程语言。它将提供与现有 
 
 如果您以前从未使用过 Groovy，则首先需要安装 Groovy。安装步骤非常简单，这些步骤与安装 Ant 和 Tomcat 等常见 Java 应用程序甚至安装 Java 平台本身的步骤相同：
 
-1.  [下载](http://groovy.codehaus.org/Download) 最新的 Groovy ZIP 文件或 tarball。
-2.  将存档解压缩到所选目录中（您应当避免在目录名称中使用空格）。
-3.  创建 `GROOVY_HOME` 环境变量。
-4.  把 GROOVY_HOME/bin 添加到 `PATH` 中。
+1. [下载](http://groovy.codehaus.org/Download) 最新的 Groovy ZIP 文件或 tarball。
+2. 将存档解压缩到所选目录中（您应当避免在目录名称中使用空格）。
+3. 创建 `GROOVY_HOME` 环境变量。
+4. 把 `GROOVY_HOME/bin` 添加到 `PATH` 中。
 
 Groovy 运行在 Java 5 或 6 上的效果最佳。在命令提示中输入 `java -version` 以确认您使用的是最新版本。然后键入 `groovy -version` 以确保 Groovy 已正确安装。
 
 所有主要 IDE（Eclipse、IntelliJ 和 NetBeans）都有支持自动完成和分步调试等功能的 Groovy 插件。虽然拥有一个优秀的 IDE 对于目前编写 Java 代码来说几乎成为了一项必要要求，但是对于 Groovy 来说并非绝对。得益于 Groovy 语言的简明性，许多人都选择使用简单的文本编辑器编写。vi 和 Emacs 等常见开源编辑器都提供 Groovy 支持，Textpad（面向 Windows®）和 TextMate（面向 Mac OS X）等便宜的商业文本编辑器也提供 Groovy 支持（有关更多信息，请参阅 参考资料）。
 
-您稍后将在本文中看到，将 Groovy 与现有 Java 项目集成起来十分简单。您只需将一个 Groovy JAR 从 GROOVY_HOME/embeddable 添加到类路径中并把现有的 `javac` Ant 任务封装到 `groovyc` 任务中（Maven 提供类似的支持）。
+您稍后将在本文中看到，将 Groovy 与现有 Java 项目集成起来十分简单。您只需将一个 Groovy JAR 从 `GROOVY_HOME/embeddable` 添加到类路径中并把现有的 `javac` Ant 任务封装到 `groovyc` 任务中（Maven 提供类似的支持）。
 
 但是在掌握这些知识之前，我将从必修的 “Hello World” 示例开始。
 
-* * *
+---
 
 ## 进入 Groovy 世界
 
@@ -50,26 +51,26 @@ public class HelloJavaWorld{
   public static void main(String[] args){
     System.out.println("Hello Java World");
   }
-} 
+}
 ```
 
-首先创建名为 HelloJavaWorld.java 的文件并输入 `public class HelloJavaWorld`。许多刚开始使用 Java 的开发人员学到的第一课是如果类名与文件名不完全匹配（包括大小写），则类无法编译。另外，好奇的学生将在此时开始询问关于 `public` 和 `private` 之类的访问修饰符。
+首先创建名为 `HelloJavaWorld.java` 的文件并输入 `public class HelloJavaWorld`。许多刚开始使用 Java 的开发人员学到的第一课是如果类名与文件名不完全匹配（包括大小写），则类无法编译。另外，好奇的学生将在此时开始询问关于 `public` 和 `private` 之类的访问修饰符。
 
-下一行 — `public static void main(String[] args)`— 通常将引发关于实现细节的一连串问题：什么是 `static`？什么是 `void`？为什么需要将方法命名为 `main`？什么是 `String` 数组？而最后，尝试向刚开始使用 Java 的开发人员说明 `out` 是 `System` 类中的 `PrintStream` 对象的 `public`、`static`、`final` 实例。我永远也忘不了学生说 “天哪！其实我只是想输出 ‘Hello’”。
+下一行 — `public static void main(String[] args)` — 通常将引发关于实现细节的一连串问题：什么是 `static`？什么是 `void`？为什么需要将方法命名为 `main`？什么是 `String` 数组？而最后，尝试向刚开始使用 Java 的开发人员说明 `out` 是 `System` 类中的 `PrintStream` 对象的 `public`、`static`、`final` 实例。我永远也忘不了学生说 “天哪！其实我只是想输出 ‘Hello’”。
 
-将此示例与用 Groovy 编写的 “Hello World” 进行对照。创建名为 HelloGroovyWorld.groovy 的文件并输入清单 2 中所示的代码行：
+将此示例与用 Groovy 编写的 “Hello World” 进行对照。创建名为 `HelloGroovyWorld.groovy` 的文件并输入清单 2 中所示的代码行：
 
 ##### 清单 2\. 用 Groovy 代码编写的 “Hello World” 示例
 
 ```java
-println "Hello Groovy World" 
+println "Hello Groovy World"
 ```
 
 是的，这段代码是与清单 1 中所示的 Java 示例等效的 Groovy 代码。在本例中，所有实现细节 — 并不立即解决手头问题的 “知识” — 都隐藏在后台，只显示简单输出 “Hello” 的代码。输入 `groovy HelloGroovyWorld` 以确认它可以工作。
 
 这个小示例将演示 Groovy 的双重价值：它将显著地减少需要编写的代码行数，同时保留 Java 等效代码的语义。在下一节中，您将进一步探究这种理念。
 
-* * *
+---
 
 ## 深入研究 Hello World
 
@@ -81,7 +82,7 @@ Groovy 解释器将先在内存中编译源代码，然后再将其转到 JVM �
 
 ```java
 $ java HelloGroovyWorld
-Exception in thread "main" java.lang.NoClassDefFoundError: groovy/lang/Script 
+Exception in thread "main" java.lang.NoClassDefFoundError: groovy/lang/Script
 ```
 
 如前述，Groovy JAR 必须包含在 `CLASSPATH` 中。再次尝试执行代码，这一次把 `-classpath` 实参传递到 `java` 中，如清单 4 所示：
@@ -95,7 +96,7 @@ Hello Groovy World
 
 //For Windows
 $ java -classpath %GROOVY_HOME%/embeddable/groovy-all-x.y.z.jar;. HelloGroovyWorld
-Hello Groovy World 
+Hello Groovy World
 ```
 
 现在您已经取得了一些进展。但是为了证明 Groovy 脚本真正地保留 Java 示例的语义，您需要深入钻研字节码。首先，输入 `javap HelloJavaWorld`，如清单 5 所示：
@@ -108,7 +109,7 @@ Compiled from "HelloJavaWorld.java"
 public class HelloJavaWorld extends java.lang.Object{
   public HelloJavaWorld();
   public static void main(java.lang.String[]);
-} 
+}
 ```
 
 除了为您添加了 `javac` 编译器之外，这段代码中不应当有过多令人惊讶之处。您无需显式输入 `extends java.lang.Object` 或提供类的默认构造函数。
@@ -124,7 +125,7 @@ public class HelloGroovyWorld extends groovy.lang.Script{
   ...
   public static void main(java.lang.String[]);
   ...
-} 
+}
 ```
 
 ## 什么是 DSL？
@@ -137,19 +138,19 @@ Dave Thomas 进一步阐明 DSL 的概念（请参阅 参考资料）。他写�
 
 在这里，您可以看到 `groovyc` 编译器将获取源文件的名称并创建了一个同名的类（该类扩展 `groovy.lang.Script` 而非 `java.lang.Object`，这应当能帮助您理解尝试在 `CLASSPATH` 中没有 Groovy JAR 的情况下运行文件抛出 `NoClassDefFoundError` 异常的原因）。在所有其他编译器提供的方法之中，您应当能够找到一种优秀的旧 `public static void main(String[] args)` 方法。`groovyc` 编译器把脚本行封装到此方法中以保留 Java 语义。这意味着在使用 Groovy 时可以利用所有的现有 Java 知识。
 
-例如，下面是在 Groovy 脚本中接受命令行输入的方法。创建名为 Hello.groovy 的新文件并添加清单 7 中的代码行：
+例如，下面是在 Groovy 脚本中接受命令行输入的方法。创建名为 `Hello.groovy` 的新文件并添加清单 7 中的代码行：
 
 ##### 清单 7\. 接受命令行输入的 Groovy 脚本
 
 ```java
-println "Hello, " + args[0] 
+println "Hello, " + args[0]
 ```
 
-现在在命令行中输入 `groovy Hello Jane`。`args``String` 数组就在这里，就像任何一位 Java 开发人员期望的那样。在这里使用 `args` 对于新手可能没意义，但是它对于经验丰富的 Java 开发人员意义非凡。
+现在在命令行中输入 `groovy Hello Jane`。`args` `String` 数组就在这里，就像任何一位 Java 开发人员期望的那样。在这里使用 `args` 对于新手可能没意义，但是它对于经验丰富的 Java 开发人员意义非凡。
 
 Groovy 将把 Java 代码缩减为基本要素。您刚刚编写的 Groovy 脚本几乎和可执行的伪代码一样。表面上，该脚本简单得足以让新手能够理解，但是对于经验丰富的开发人员，它没有去掉 Java 语言的底层强大功能。这就是我将 Groovy 视为 Java 平台的特定于领域语言（DSL）的原因（请参阅 什么是 DSL？ 侧栏）。
 
-* * *
+---
 
 ## 普通的旧 Groovy 对象
 
@@ -167,7 +168,7 @@ public class JavaPerson{
 
   public String getLastName(){ return lastName; }
   public void setLastName(String lastName){ this.lastName = lastName; }
-} 
+}
 ```
 
 普通的旧 Groovy 对象（Plain Old Groovy Object，POGO）是 POJO 的简化的替代者。它们完全保留了 POJO 的语义，同时显著减少了需要编写的代码量。清单 9 显示了用 Groovy 编写的 “简易” person 类：
@@ -178,14 +179,14 @@ public class JavaPerson{
 class GroovyPerson{
   String firstName
   String lastName
-} 
+}
 ```
 
 除非您另外指定，否则 Groovy 中的所有类都是 `public` 的。所有属性都是 `private` 的，而所有方法都是 `public` 的。编译器将为每个属性自动提供一组 `public` getter 和 setter 方法。用 `javac` 编译 `JavaPerson` 并用 `groovyc` 编译 `GroovyPerson`。现在通过 `javap` 运行它们以确认该 Groovy 示例拥有 Java 示例所拥有的所有内容，甚至可以扩展 `java.lang.Object`（在先前的 `HelloGroovyWorld` 示例中未指定类，因此 Groovy 转而创建了扩展 `groovy.lang.Script` 的类）。
 
-所有这些意味着您可以立即开始使用 POGO 作为 POJO 的替代选择。Groovy 类是只剩下基本元素的 Java 类。在编译了 Groovy 类之后，其他 Java 类可以轻松地使用它，就好像它是用 Java 代码编写的。为了证明这一点，请创建一个名为 JavaTest.java 的文件并添加清单 10 中的代码：
+所有这些意味着您可以立即开始使用 POGO 作为 POJO 的替代选择。Groovy 类是只剩下基本元素的 Java 类。在编译了 Groovy 类之后，其他 Java 类可以轻松地使用它，就好像它是用 Java 代码编写的。为了证明这一点，请创建一个名为 `JavaTest.java` 的文件并添加清单 10 中的代码：
 
-##### 清单 10\. 从 Java 代码中调用 Groovy 类
+
 
 ```java
 public class JavaTest{
@@ -200,12 +201,12 @@ public class JavaTest{
     gp.setLastName("Smith");
     System.out.println("Hello " + gp.getFirstName());
   }
-} 
+}
 ```
 
-即使 getter 和 setter 不显示在 Groovy 源代码中，这项测试也证明了它们是存在于经过编译的 Groovy 类中并且完全可以正常运行。但是如果我不向您展示 Groovy 中的相应测试，则这个示例不算完整。创建一个名为 TestGroovy.groovy 的文件并添加清单 11 中的代码：
+即使 getter 和 setter 不显示在 Groovy 源代码中，这项测试也证明了它们是存在于经过编译的 Groovy 类中并且完全可以正常运行。但是如果我不向您展示 Groovy 中的相应测试，则这个示例不算完整。创建一个名为 `TestGroovy.groovy` 的文件并添加清单 11 中的代码：
 
-##### 清单 11\. 从 Groovy 中调用 Java 类
+##### 清单 11. 从 Groovy 中调用 Java 类
 
 ```java
 JavaPerson jp = new JavaPerson(firstName:"John", lastName:"Doe")
@@ -213,7 +214,7 @@ println "Greetings, " + jp.getFirstName() + ".
    It is a pleasure to make your acquaintance."
 
 GroovyPerson gp = new GroovyPerson(lastName:"Smith", firstName:"Jane")
-println "Howdy, ${gp.firstName}. How the heck are you?" 
+println "Howdy, ${gp.firstName}. How the heck are you?"
 ```
 
 您首先可能会注意到，Groovy 提供的新构造函数允许您命名字段并按照所需顺序指定这些字段。甚至更有趣的是，可以在 Java 类或 Groovy 类中使用此构造函数。这怎么可能？事实上，Groovy 先调用默认的无实参构造函数，然后调用每个字段的相应 setter。您可以模拟 Java 语言中的类似行为，但是由于 Java 语言缺少命名实参并且两个字段都是 `Strings`，因此您无法按照任何顺序传入名字和姓氏字段。
@@ -224,17 +225,17 @@ println "Howdy, ${gp.firstName}. How the heck are you?"
 
 我希望您也能够承认，在任何情况下，Groovy 都类似于简易版的 Java 语言 — “领域专家” 可能使用 Groovy “与同行进行有效地交流”，或者类似于老朋友之间随意的谈笑。
 
-* * *
+---
 
 ## 归根结底，Groovy 就是 Java 代码
 
 Groovy 最被低估的一个方面是它完全支持 Java 语法的事实。如前述，在使用 Groovy 时，您不必放弃一部分 Java 知识。在开始使用 Groovy 时，大部分代码最终看上去都像是传统的 Java 代码。但是随着您越来越熟悉新语法，代码将逐渐发展为包含更简明、更有表现力的 Groovy 风格。
 
-要证明 Groovy 代码可以看上去与 Java 代码完全相同，请将 JavaTest.java 复制到 JavaTestInGroovy.groovy 中，然后输入 `groovy JavaTestInGroovy`。您应当会看到同样的输出，但是请注意，您无需在运行前先编译 Groovy 类。
+要证明 Groovy 代码可以看上去与 Java 代码完全相同，请将 `JavaTest.java` 复制到 `JavaTestInGroovy.groovy` 中，然后输入 `groovy JavaTestInGroovy`。您应当会看到同样的输出，但是请注意，您无需在运行前先编译 Groovy 类。
 
-此次演示应当使经验丰富的 Java 开发人员能够不假思索地选择 Groovy。由于 Java 语法也是有效的 Groovy 语法，因此最开始的学习曲线实际上是不存在的。您可以将现有的 Java 版本与 Groovy、现有的 IDE 以及现有的生产环境结合使用。这意味着对您日常工作的干扰非常少。您只需确保 Groovy JAR 位于 `CLASSPATH` 中并调整构建脚本，以便 Groovy 类与 Java 类同时编译。下一节将向您展示如何向 Ant build.xml 文件中添加 `groovyc` 任务。
+此次演示应当使经验丰富的 Java 开发人员能够不假思索地选择 Groovy。由于 Java 语法也是有效的 Groovy 语法，因此最开始的学习曲线实际上是不存在的。您可以将现有的 Java 版本与 Groovy、现有的 IDE 以及现有的生产环境结合使用。这意味着对您日常工作的干扰非常少。您只需确保 Groovy JAR 位于 `CLASSPATH` 中并调整构建脚本，以便 Groovy 类与 Java 类同时编译。下一节将向您展示如何向 Ant `build.xml` 文件中添加 `groovyc` 任务。
 
-* * *
+---
 
 ## 用 Ant 编译 Groovy 代码
 
@@ -244,7 +245,7 @@ Groovy 最被低估的一个方面是它完全支持 Java 语法的事实。如�
 
 要从 Ant 中调用 `groovyc`，请使用 `taskdef` 定义任务，然后像平时使用 `javac` 任务一样使用 `groovyc` 任务（有关更多信息，请参阅 参考资料）。清单 12 显示了 Ant 构建脚本：
 
-##### 清单 12\. 用 Ant 编译 Groovy 和 Java 代码
+##### 清单 12. 用 Ant 编译 Groovy 和 Java 代码
 
 ```java
 <taskdef name="groovyc"
@@ -258,12 +259,12 @@ Groovy 最被低估的一个方面是它完全支持 Java 语法的事实。如�
    <path refid="testPath"/>
  </classpath>
  <javac debug="on" />
-</groovyc> 
+</groovyc>
 ```
 
 顺便说一下，包含 `${}` 的 `String` 看上去疑似 `GString`，是不是？Groovy 是一种优秀的语言，它从各种其他语言和库中借鉴了语法和功能。您经常会觉得似乎在其他语言中见过类似的特性。
 
-* * *
+---
 
 ## 结束语
 

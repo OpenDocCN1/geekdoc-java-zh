@@ -1,3 +1,4 @@
+
 # 方法引用
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html`](https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html)
@@ -93,7 +94,6 @@ Arrays.sort(rosterAsArray, Person::compareByAge);
 以下示例，`MethodReferencesExamples`，包含了前三种方法引用的示例：
 
 ```java
-
 import java.util.function.BiFunction;
 
 public class MethodReferencesExamples {
@@ -132,7 +132,6 @@ public class MethodReferencesExamples {
             mergeThings("Hello ", "World!", String::concat));
     }
 }
-
 ```
 
 所有的`System.out.println()`语句都打印相同的内容：`Hello World!`

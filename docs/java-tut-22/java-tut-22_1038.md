@@ -1,3 +1,4 @@
+
 # 调试 SDP
 
 > 原文：[`docs.oracle.com/javase/tutorial/sdp/sockets/debug.html`](https://docs.oracle.com/javase/tutorial/sdp/sockets/debug.html)
@@ -11,7 +12,6 @@
 BIND to 192.0.2.1:5000 (socket converted to SDP protocol)
 CONNECT to 129.156.232.160:80 (no match)
 CONNECT to 192.0.2.2:80 (socket converted to SDP protocol)
-
 ```
 
 这个第二个示例展示了输出重定向到名为`debug.log`的文件：
@@ -21,5 +21,4 @@ CONNECT to 192.0.2.2:80 (socket converted to SDP protocol)
 [1] 27310
 % tail -f debug.log
 BIND to 192.0.2.1:5000 (socket converted to SDP protocol)
-
 ```

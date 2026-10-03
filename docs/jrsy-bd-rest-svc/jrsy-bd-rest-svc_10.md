@@ -1,76 +1,71 @@
+
 # 用 Jersey 2 和 Spring 4 构建 RESTful web service
 
-本文介绍了如何通过 Jersey 框架优美的在 Java 实现了 REST 的 API。CRUD 的 操作存储在 MySQL 中
+本文介绍了如何通过 Jersey 框架优美的在 Java 实现了 REST 的 API。CRUD 的操作存储在 MySQL 中。
 
-## 1\. 示例
+## 1. 示例
 
 ### 1.1 为什么
 
-Spring 可以对于 REST 有自己的实现(见 [`spring.io/guides/tutorials/rest/`](https://spring.io/guides/tutorials/rest/))。 但本文展示的是用 “官方” 的 方法来实现 REST ，即使用 Jersey。
+Spring 可以对于 REST 有自己的实现（见 [`spring.io/guides/tutorials/rest/`](https://spring.io/guides/tutorials/rest/)）。但本文展示的是用“官方”的方法来实现 REST，即使用 Jersey。
 
-### 1.2 它是做什么的?
+### 1.2 它是做什么的？
 
-管理 资源。 REST API 将允许创建、检索、更新和删除这样的资源。
+管理资源。REST API 将允许创建、检索、更新和删除这样的资源。
 
 ### 1.3 架构及技术
 
-本示例项目使用多层结构，基于“Law of Demeter (LoD) or principle of least knowledge”（迪米特法则），是说一个软件实体要尽可能的只与和它最近的实体进行通讯。通常被表述为：talk only to your immediate friends ( 只和离你最近的朋友进行交互)。 “talk”，其实就是对象间方法的调用。这条规则表明了对象间方法调用的原则：（1）调用对象本身的方法；（2）调用通过参数传入的对象的方法；（3）在方法中创建的对象的方法；（4）所包含对象的方法。
+本示例项目使用多层结构，基于“Law of Demeter (LoD) or principle of least knowledge”（迪米特法则），是说一个软件实体要尽可能的只与和它最近的实体进行通讯。通常被表述为：talk only to your immediate friends（只和离你最近的朋友进行交互）。“talk”，其实就是对象间方法的调用。这条规则表明了对象间方法调用的原则：（1）调用对象本身的方法；（2）调用通过参数传入的对象的方法；（3）在方法中创建的对象的方法；（4）所包含对象的方法。
 
 主要分为三层：
 
-*   第一层：Jersey 实现对 REST 的支持，拥有 [外观模式](http://en.wikipedia.org/wiki/Facade_pattern)的角色并代理到逻辑业务层
-*   业务层: 发生逻辑的地方
-*   数据访问层： 是与持久数据存储（在我们的例子中是 MySql 数据库)交互的地方
+- 第一层：Jersey 实现对 REST 的支持，拥有[外观模式](http://en.wikipedia.org/wiki/Facade_pattern)的角色并代理到逻辑业务层
+- 业务层：发生逻辑的地方
+- 数据访问层：是与持久数据存储（在我们的例子中是 MySQL 数据库）交互的地方
 
 简述下技术框架：
 
-#### 1.3.1\. Jersey (外观)
+#### 1.3.1 Jersey（外观）
 
-[Jersey](https://jersey.java.net/) 是开源、拥有产品级别的质量，提供构建 RESTful Web Services,支持 JAX-RS APIs ，提供 [JAX-RS](https://jax-rs-spec.java.net/) (JSR 311 & JSR 339) 参考实现。
+[Jersey](https://jersey.java.net/) 是开源、拥有产品级别的质量，提供构建 RESTful Web Services，支持 JAX-RS APIs，提供 [JAX-RS](https://jax-rs-spec.java.net/)（JSR 311 & JSR 339）参考实现。
 
-#### 1.3.2\. Spring (业务层)
+#### 1.3.2 Spring（业务层）
 
-在我看来没有什么 比 [Spring](http://projects.spring.io/spring-framework/) 更好的办法让 pojo 具有不同的功能。 你会发现在本教程用 Jersey 2 和 Spring 4 构建 RESTful web service
+在我看来没有什么比 [Spring](http://projects.spring.io/spring-framework/) 更好的办法让 POJO 具有不同的功能。你会发现在本教程用 Jersey 2 和 Spring 4 构建 RESTful web service。
 
-#### 1.3.3\. JPA 2 / Hibernate (持久层)
+#### 1.3.3 JPA 2 / Hibernate（持久层）
 
 使用 Hibernate 实现 DAO 模式。
 
-#### 1.3.4\. Web 容器
+#### 1.3.4 Web 容器
 
-用 Maven 打包成 .war 文件开源部署在任意容器。一般用 [Tomcat](http://tomcat.apache.org/) 和 [Jetty](http://www.eclipse.org/jetty/) ，也可以是 Glassfih, Weblogic, JBoss 或 WebSphere.
+用 Maven 打包成 `.war` 文件开源部署在任意容器。一般用 [Tomcat](http://tomcat.apache.org/) 和 [Jetty](http://www.eclipse.org/jetty/)，也可以是 Glassfish、Weblogic、JBoss 或 WebSphere。
 
-#### 1.3.5\. MySQL 数据库
+#### 1.3.5 MySQL 数据库
 
-示例数据存储在一个 MySQL 表:
+示例数据存储在一个 MySQL 表：
 
-#### 1.3.6\. 技术版本
+#### 1.3.6 技术版本
 
-Jersey 2.9
+- Jersey 2.9
+- Spring 4.0.3
+- Hibernate 4
+- Maven 3
+- Tomcat 7
+- Jetty 9
+- MySQL 5.6
 
-Spring 4.0.3
+### 1.4 源码
 
-Hibernate 4
+见 [`github.com/waylau/RestDemo/tree/master/jersey-2-spring-4-rest`](https://github.com/waylau/RestDemo/tree/master/jersey-2-spring-4-rest)
 
-Maven 3
+## 2. 配置
 
-Tomcat 7
+开始呈现 REST API 的设计和实现之前，我们需要做一些配置。
 
-Jetty 9
+### 2.1 项目依赖
 
-MySql 5.6
-
-### 1.4\. 源码
-
-见[`github.com/waylau/RestDemo/tree/master/jersey-2-spring-4-rest`](https://github.com/waylau/RestDemo/tree/master/jersey-2-spring-4-rest)
-
-## 2\. 配置
-
-开始呈现 REST API 的设计和实现之前,我们需要做一些配置。
-
-### 2.1\. 项目依赖
-
-[Jersey Spring 扩展包](https://github.com/waylau/Jersey-2.x-User-Guide/tree/master/Chapter%2022.%20Spring%20DI%20%E4%BD%BF%E7%94%A8%20Spring%20%E6%B3%A8%E5%85%A5) 是必须要放在 项目 classpath 中。在 pom.xml 中添加下面依赖：
+[Jersey Spring 扩展包](https://github.com/waylau/Jersey-2.x-User-Guide/tree/master/Chapter%2022.%20Spring%20DI%20%E4%BD%BF%E7%94%A8%20Spring%20%E6%B3%A8%E5%85%A5) 是必须要放在项目 classpath 中。在 `pom.xml` 中添加下面依赖：
 
 ```java
 <dependency>
@@ -99,16 +94,17 @@ MySql 5.6
 </dependency> 
 ```
 
-*注意: jersey-spring3.jar 使用的是他自己的 Spring 库版本，所以如果你想使用自己的 (本例是使用 Spring 4.0.3.Release),你需要将这些库手动的移除。如果想看到其他 的库的依赖，请查看项目源码中的 pom.xml*
+注意：`jersey-spring3.jar` 使用的是他自己的 Spring 库版本，所以如果你想使用自己的（本例是使用 Spring 4.0.3.Release），你需要将这些库手动的移除。如果想看到其他的库的依赖，请查看项目源码中的 `pom.xml`。
 
-### 2.2\. web.xml
+### 2.2 web.xml
 
-应用部署描述
+应用部署描述：
 
 ```java
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.0" 
-
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
     <display-name>Demo - Restful Web Application</display-name>
 
@@ -149,11 +145,11 @@ MySql 5.6
 </web-app> 
 ```
 
-#### 2.2.1\. Jersey-servlet
+#### 2.2.1 Jersey-servlet
 
-注意 Jersey servlet 的配置，`javax.ws.rs.core.Application` 类定义了 JAX-RS 应用组件(root 资源 和 提供者 类) .本例使用 `ResourceConfig`, 是 Jersey 自己实现的 `Application` 类，提供了简化 JAX-RS 组件的能力。详见[JAX-RS 应用模型](https://github.com/waylau/Jersey-2.x-User-Guide/blob/master/Chapter%204.%20Application%20Deployment%20and%20Runtime%20Environments%20%E5%BA%94%E7%94%A8%E9%83%A8%E7%BD%B2%E5%92%8C%E8%BF%90%E8%A1%8C%E6%97%B6%E7%8E%AF%E5%A2%83/4.2.%20JAX-RS%20Application%20Model%20%E5%BA%94%E7%94%A8%E6%A8%A1%E5%9E%8B.md)
+注意 Jersey servlet 的配置，`javax.ws.rs.core.Application` 类定义了 JAX-RS 应用组件（root 资源和提供者类）。本例使用 `ResourceConfig`，是 Jersey 自己实现的 `Application` 类，提供了简化 JAX-RS 组件的能力。详见 [JAX-RS 应用模型](https://github.com/waylau/Jersey-2.x-User-Guide/blob/master/Chapter%204.%20Application%20Deployment%20and%20Runtime%20Environments%20%E5%BA%94%E7%94%A8%E9%83%A8%E7%BD%B2%E5%92%8C%E8%BF%90%E8%A1%8C%E6%97%B6%E7%8E%AF%E5%A2%83/4.2.%20JAX-RS%20Application%20Model%20%E5%BA%94%E7%94%A8%E6%A8%A1%E5%9E%8B.md)。
 
-`org.codingpedia.demo.rest.RestDemoJaxRsApplication` 是自己实现的 `ResourceConfig`类，注册应用的 resources, filters, exception mappers 和 feature :
+`org.codingpedia.demo.rest.RestDemoJaxRsApplication` 是自己实现的 `ResourceConfig` 类，注册应用的 resources、filters、exception mappers 和 feature：
 
 ```java
 package org.codingpedia.demo.rest.service;
@@ -195,13 +191,15 @@ public class RestDemoJaxRsApplication extends ResourceConfig {
 
 注意：
 
-*   `org.glassfish.jersey.server.spring.scope.RequestContextFilter` 是 Spring filter 提供了 JAX-RS 和 Spring 请求属性之间的桥梁。
-*   `org.codingpedia.demo.rest.resource.PodcastsResource` 这是“外观”组件，通过注解 暴露了 REST 的 API。稍后会描述
-*   `org.glassfish.jersey.jackson.JacksonFeature`,是一个 feature ，用 Jackson JSON 的提供者来解释 JSON。
+- `org.glassfish.jersey.server.spring.scope.RequestContextFilter` 是 Spring filter，提供了 JAX-RS 和 Spring 请求属性之间的桥梁。
+- `org.codingpedia.demo.rest.resource.PodcastsResource` 这是“外观”组件，通过注解暴露了 REST 的 API。稍后会描述。
+- `org.glassfish.jersey.jackson.JacksonFeature` 是一个 feature，用 Jackson JSON 的提供者来解释 JSON。
 
-#### 2.1.2\. Spring 配置
+#### 2.1.2 Spring 配置
 
-配置文件在 classpath 目录下的 spring/applicationContext.xml:
+配置文件在 classpath 目录下的 `spring/applicationContext.xml`：
+
+
 
 ```java
 <beans 
@@ -267,42 +265,42 @@ public class RestDemoJaxRsApplication extends ResourceConfig {
 </beans> 
 ```
 
-其中 `podcastsResource`是指向 REST API 实体
+其中`podcastsResource`是指向 REST API 实体
 
-## 3\. REST API (设计与实现)
+## 3. REST API（设计与实现）
 
-### 3.1\. 资源
+### 3.1. 资源
 
-#### 3.1.1\. 设计
+#### 3.1.1. 设计
 
 REST 中的资源主要包括下面两大思想：
 
 *   每个都指向了全球标示符（如，HTTP 中的 [URI](http://en.wikipedia.org/wiki/Uniform_resource_identifier)）
 *   有一个或多个表示（我们将在本示例使用 JSON 格式）
 
-REST 中的资源 一般是名词 (podcasts, customers, user, accounts 等) 而不是名词 (getPodcast, deleteUser 等）
+REST 中的资源一般是名词（`podcasts`、`customers`、`user`、`accounts` 等）而不是动词（`getPodcast`、`deleteUser` 等）。
 
 本教程使用的端点有：
 
-*   `/podcasts` – （注意复数）URI 标识的资源 podcasts 集合的播客
-*   `/podcasts/{id}` – 通过 podcasts 的 ID, URI 标识一个 podcasts 资源，
+*   `/podcasts` –（注意复数）URI 标识的资源 podcasts 集合的播客
+*   `/podcasts/{id}` – 通过 podcasts 的 ID，URI 标识一个 podcasts 资源
 
-#### 3.1.2\. 实现
+#### 3.1.2. 实现
 
-为求精简 ， podcast 只包含下列属性:
+为求精简，podcast 只包含下列属性：
 
-*   id – podcast 的唯一标识
-*   feed – podcast 的 feed url
-*   title – 标题
-*   linkOnPodcastpedia – 链接
-*   description – 描述
+*   `id` – podcast 的唯一标识
+*   `feed` – podcast 的 feed url
+*   `title` – 标题
+*   `linkOnPodcastpedia` – 链接
+*   `description` – 描述
 
-我用了两种 Java 类来表示 podcast 代码，是为了避免 类及其属性/方法 被 JPA 和 XML/JAXB/JSON 的注释堆满了：
+我用了两种 Java 类来表示 podcast 代码，是为了避免类及其属性/方法被 JPA 和 XML/JAXB/JSON 的注释堆满了：
 
-*   PodcastEntity.java – JPA 注解类用在 DB 和业务层
-*   Podcast.java – JAXB/JSON 注解类用在外观和业务层
+*   `PodcastEntity.java` – JPA 注解类用在 DB 和业务层
+*   `Podcast.java` – JAXB/JSON 注解类用在外观和业务层
 
-Podcast.java
+`Podcast.java`
 
 ```java
 package org.codingpedia.demo.rest.resource;
@@ -376,7 +374,7 @@ public class Podcast implements Serializable {
 } 
 ```
 
-转化成 JSON 输出如下
+转化成 JSON 输出如下：
 
 ```java
 {
@@ -389,20 +387,20 @@ public class Podcast implements Serializable {
 } 
 ```
 
-### 3.2\. 方法
+### 3.2. 方法
 
-简单的说明
+简单的说明：
 
 *   创建 = POST
 *   读 = GET
 *   更新 = PUT
 *   删除 = DELETE
 
-但不是一一映射，因为 PUT 也可以创建， POST 也可以用在更新。
+但不是一一映射，因为 PUT 也可以创建，POST 也可以用在更新。
 
-*注：读取和删除它是很清楚的，他们确实是和 GET 、DELETE 一对一的映射。无论如何，REST 是一种架构风格，不是一个规范，你应该适应你的架构需要，但如果你想让你的 API 让更多的公众愿意使用它，你应该遵循一定的“最佳实践”。*
+*注：读取和删除它是很清楚的，他们确实是和 GET、DELETE 一对一的映射。无论如何，REST 是一种架构风格，不是一个规范，你应该适应你的架构需要，但如果你想让你的 API 让更多的公众愿意使用它，你应该遵循一定的“最佳实践”。*
 
-`PodcastRestResource` 类 是处理所有的请求
+`PodcastRestResource` 类是处理所有的请求：
 
 ```java
 package org.codingpedia.demo.rest.resource;
@@ -417,23 +415,30 @@ public class PodcastResource {
 } 
 ```
 
-注意 类定义前面的 `@Path("/podcasts")`，所有与 podcast 关联的资源都会出现在 这个路径下。 `@Path` 注解值是关联 URI 的路径。
+注意类定义前面的`@Path("/podcasts")`，所有与 podcast 关联的资源都会出现在这个路径下。`@Path`注解值是关联 URI 的路径。
 
-在上面的例子中，该 Java 类将托管在`/podcasts` URI 路径。`PodcastService` 接口公开的业务逻辑 到 REST 外观层。
+在上面的例子中，该 Java 类将托管在`/podcasts` URI 路径。`PodcastService`接口公开的业务逻辑到 REST 外观层。
 
-#### 3.2.1\. 创建 podcast
+#### 3.2.1. 创建 podcast
 
-#### 3.2.1.1\. 设计
+#### 3.2.1.1. 设计
 
-常见的的方式利用 POST 创建资源，如前所述，创建一个新的资源，可以用 POST 和 PUT 的方法，我是这样做的：
+常见的方式利用 POST 创建资源，如前所述，创建一个新的资源，可以用 POST 和 PUT 的方法，我是这样做的：
 
-| **Description** | **URI** | **HTTP method** | **HTTP Status response** | | --- | --- | --- | --- | | 增加新的 podcast | /podcasts/ | POST | 201 Created | | 增加新的 podcast (必须传所有的值) | /podcasts/{id} | PUT | 201 Created |
+| **Description** | **URI** | **HTTP method** | **HTTP Status response** |
+| --- | --- | --- | --- |
+| 增加新的 podcast | `/podcasts/` | POST | 201 Created |
+| 增加新的 podcast（必须传所有的值） | `/podcasts/{id}` | PUT | 201 Created |
 
-PUT POST 最大的区别是 ，PUT 就是把你应该事先知道资源将被创建的位置和发送所有可能值的实体。
+PUT 和 POST 最大的区别是，PUT 就是把你应该事先知道资源将被创建的位置和发送所有可能值的实体。
 
-##### 3.2.1.2\. 实现
+##### 3.2.1.2. 实现
 
-###### 3.2.1.2.1\. POST 创建一个单资源
+###### 3.2.1.2.1. POST 创建一个单资源
+
+
+
+# 3.2.1.2.1 通过 JSON 创建单资源（“podcast”）
 
 ```java
 /**
@@ -454,27 +459,27 @@ public Response createPodcast(Podcast podcast) throws AppException {
             .header("Location",
                     "http://localhost:8888/demo-rest-jersey-spring/podcasts/"
                             + String.valueOf(createPodcastId)).build();
-} 
+}
 ```
 
-注解
+**注解**
 
-*   `@POST` – 指示方法响应到 HTTP POST 请求
-    *   @Consumes({MediaType.APPLICATION_JSON}) – 定义方法可以接受的媒体类型，本例为"application/json"
-    *   @Produces({MediaType.TEXT_HTML}) – 定义方法产生的媒体类型本例为 "text/html"
+- `@POST` – 指示方法响应到 HTTP POST 请求
+- `@Consumes({MediaType.APPLICATION_JSON})` – 定义方法可以接受的媒体类型，本例为 `"application/json"`
+- `@Produces({MediaType.TEXT_HTML})` – 定义方法产生的媒体类型，本例为 `"text/html"`
 
-响应
+**响应**
 
-*   成功: HTTP 状态 为 201 的 text/html 文件和头的位置指定的资源已被创建
-*   错误:
-    *   400：没有足够的数据提供
-    *   409：冲突了。如果在服务器端被确定 具有相同的 podcast 的存在
+- 成功：HTTP 状态为 201 的 `text/html` 文件，且头的位置指定了资源已被创建
+- 错误：
+  - 400：没有足够的数据提供
+  - 409：冲突了。如果在服务器端被确定具有相同的 podcast 的存在
 
-###### 3.2.1.2.2\. 通过 PUT 创建单资源 (“podcast”)
+## 3.2.1.2.2 通过 PUT 创建单资源（“podcast”）
 
-这将执行 更新 Podcast 处理。
+这将执行更新 Podcast 处理。
 
-###### 3.2.1.2.3\. 附加 – 通过表单创建 (“podcast”)资源
+## 3.2.1.2.3 附加 – 通过表单创建（“podcast”）资源
 
 ```java
 /**
@@ -509,37 +514,37 @@ public Response createPodcastFromApplicationFormURLencoded(
             .header("Location",
                     "http://localhost:8888/demo-rest-jersey-spring/podcasts/"
                             + String.valueOf(createPodcastid)).build();
-} 
+}
 ```
 
-注解
+**注解**
 
-*   `@POST` – 指示方法响应到 HTTP POST 请求
-*   `@Consumes({MediaType.APPLICATION_FORM_URLENCODED})` – 定义方法可以接受的媒体类型，本例为"application/x-www-form-urlencoded"
-*   `@FormParam` – 这个注解绑定的表单参数值包含了请求对应资源方法参数的实体。值是 URL 的解码，除非 禁用 解码的注解。
-*   `@Produces({MediaType.TEXT_HTML})` – 定义方法产生的媒体类型本例为 "text/html"
+- `@POST` – 指示方法响应到 HTTP POST 请求
+- `@Consumes({MediaType.APPLICATION_FORM_URLENCODED})` – 定义方法可以接受的媒体类型，本例为 `"application/x-www-form-urlencoded"`
+- `@FormParam` – 这个注解绑定的表单参数值包含了请求对应资源方法参数的实体。值是 URL 的解码，除非禁用解码的注解。
+- `@Produces({MediaType.TEXT_HTML})` – 定义方法产生的媒体类型，本例为 `"text/html"`
 
-响应
+**响应**
 
-*   成功: HTTP 状态 为 201 的 text/html 文件和头的位置指定的资源已被创建
-*   错误:
-    *   400：没有足够的数据提供
-    *   409：冲突了。如果在服务器端被确定 具有相同的 podcast 的存在
+- 成功：HTTP 状态为 201 的 `text/html` 文件，且头的位置指定了资源已被创建
+- 错误：
+  - 400：没有足够的数据提供
+  - 409：冲突了。如果在服务器端被确定具有相同的 podcast 的存在
 
-#### 3.2.2\. 读 podcast
+## 3.2.2 读 podcast
 
-##### 3.2.2.1\. 设计
+### 3.2.2.1 设计
 
-API 支持两种操作
+API 支持两种操作：
 
-*   返回 podcast 的集合
-*   根据 id 返回 podcast
+- 返回 podcast 的集合
+- 根据 id 返回 podcast
 
-注意到集合资源的参数–rderByInsertionDate 和 numberDaysToLookBack。在 URI 查询参数添加过滤器而不是路径的一部分这个是很有道理的。
+注意到集合资源的参数 `orderByInsertionDate` 和 `numberDaysToLookBack`。在 URI 查询参数添加过滤器而不是路径的一部分，这个是很有道理的。
 
-##### 3.2.2.2\. 实现
+### 3.2.2.2 实现
 
-###### 3.2.2.2.1\. 获取所有 podcasts (“/”)
+#### 3.2.2.2.1 获取所有 podcasts（“/”）
 
 ```java
 /**
@@ -561,19 +566,19 @@ public List<Podcast> getPodcasts(
     List<Podcast> podcasts = podcastService.getPodcasts(
             orderByInsertionDate, numberDaysToLookBack);
     return podcasts;
-} 
+}
 ```
 
-注解
+**注解**
 
-*   `@GET` – 指示方法响应到 HTTP GET 请求
-*   `@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})` – 定义方法可以接受的媒体类型，本例为"application/json" 或者 "application/xml"（在 Podcast 类前 添加 `@XmlRootElement` ），将返回 JSON 或者 XML 格式的 podcast 集合
+- `@GET` – 指示方法响应到 HTTP GET 请求
+- `@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})` – 定义方法可以接受的媒体类型，本例为 `"application/json"` 或者 `"application/xml"`（在 `Podcast` 类前添加 `@XmlRootElement`），将返回 JSON 或者 XML 格式的 podcast 集合
 
-响应
+**响应**
 
-*   成功: HTTP 状态 为 200 的 podcast 数据集合
+- 成功：HTTP 状态为 200 的 podcast 数据集合
 
-###### 3.2.2.2.1\. 读一个 podcast
+#### 3.2.2.2.2 读一个 podcast
 
 根据 id 获取一个 podcast
 
@@ -588,31 +593,35 @@ public Response getPodcastById(@PathParam("id") Long id)
     return Response.status(200).entity(podcastById)
             .header("Access-Control-Allow-Headers", "X-extra-header")
             .allow("OPTIONS").build();
-} 
+}
 ```
 
-注解
+**注解**
 
-*   `@GET` – 指示方法响应到 HTTP GET 请求
-*   `@PathParam("id")`- 绑定传递的参数值
-*   `@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})` – 定义方法可以接受的媒体类型，本例为"application/json" 或者 "application/xml"（在 Podcast 类前 添加 `@XmlRootElement` ），将返回 JSON 或者 XML 格式的 podcast 集合
+- `@GET` – 指示方法响应到 HTTP GET 请求
+- `@PathParam("id")` – 绑定传递的参数值
+- `@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})` – 定义方法可以接受的媒体类型，本例为 `"application/json"` 或者 `"application/xml"`（在 `Podcast` 类前添加 `@XmlRootElement`），将返回 JSON 或者 XML 格式的 podcast 集合
 
-响应
+**响应**
 
-*   成功: HTTP 状态 为 200 的 podcast
-*   错误： 404 Not found。如果没有在数据库中找到
+- 成功：HTTP 状态为 200 的 podcast
+- 错误：404 Not found。如果没有在数据库中找到
 
-#### 3.2.3\. 更新 podcast
+## 3.2.3 更新 podcast
 
-##### 3.2.3.1\. 设计
+### 3.2.3.1 设计
 
-| **Description** | **URI** | **HTTP method** | **HTTP Status response** | | --- | --- | --- | --- | | 更新 podcast (**完全**) | /podcasts/{id} | PUT | 200 OK | | 更新 podcast (**部分**) | /podcasts/{id} | POST | 200 OK |
+| Description | URI | HTTP method | HTTP Status response |
+| --- | --- | --- | --- |
+| 更新 podcast（**完全**） | `/podcasts/{id}` | PUT | 200 OK |
+| 更新 podcast（**部分**） | `/podcasts/{id}` | POST | 200 OK |
 
-1.完全更新 – 提供所有的值 2.部分更新 – 传递部分属性值即可
+1. 完全更新 – 提供所有的值
+2. 部分更新 – 传递部分属性值即可
 
-##### 3.2.3.1\. 实现
+### 3.2.3.2 实现
 
-###### 3.2.3.1.1\. 完全更新
+#### 3.2.3.2.1 完全更新
 
 创建或者完全更新资源
 
@@ -648,31 +657,31 @@ public Response putPodcastById(@PathParam("id") Long id, Podcast podcast)
                         "http://localhost:8888/demo-rest-jersey-spring/podcasts/"
                                 + String.valueOf(id)).build();
     }
-} 
+}
 ```
 
-注解
+**注解**
 
-*   `@PUT`– 指示方法响应到 HTTP PUT 请求
-*   `@PathParam("id")`- 绑定传递的参数值
-*   `@Consumes({MediaType.APPLICATION_JSON})` – 定义方法可以接受的媒体类型，本例为"application/json"
-*   `@Produces({MediaType.TEXT_HTML})` – 定义方法可以产生的媒体类型，本例为 t"ext/html"
+- `@PUT` – 指示方法响应到 HTTP PUT 请求
+- `@PathParam("id")` – 绑定传递的参数值
+- `@Consumes({MediaType.APPLICATION_JSON})` – 定义方法可以接受的媒体类型，本例为 `"application/json"`
+- `@Produces({MediaType.TEXT_HTML})` – 定义方法可以产生的媒体类型，本例为 `"text/html"`
 
-响应
+**响应**
 
-*   创建
-    *   成功: HTTP 状态 为 201 Created
-    *   错误： 400 Bad Request。如果需要的属性值没有提供
-*   完全更新：
-    *   成功: HTTP 状态 为 200
-    *   错误： 400 Bad Request。如果不是所有的属性都提供
+- 创建：
+  - 成功：HTTP 状态为 201 Created
+  - 错误：400 Bad Request。如果需要的属性值没有提供
+- 完全更新：
+  - 成功：HTTP 状态为 200
+  - 错误：400 Bad Request。如果不是所有的属性都提供
 
-###### 3.2.3.1.2\. 部分更新
+#### 3.2.3.2.2 部分更新
 
 ```java
 //PARTIAL update
 @POST
-@Path("{id}")   
+@Path("{id}")
 @Consumes({ MediaType.APPLICATION_JSON })
 @Produces({ MediaType.TEXT_HTML })
 public Response partialUpdatePodcast(@PathParam("id") Long id, Podcast podcast) throws AppException {
@@ -680,31 +689,36 @@ public Response partialUpdatePodcast(@PathParam("id") Long id, Podcast podcast) 
     podcastService.updatePartiallyPodcast(podcast);
     return Response.status(Response.Status.OK)// 200
             .entity("The podcast you specified has been successfully updated")
-            .build();   
-} 
+            .build();
+}
 ```
 
-注解
+**注解**
 
-*   `@POST` – 指示方法响应到 HTTP POST 请求
-*   `@PathParam("id")`- 绑定传递的参数值
-*   `@Consumes({MediaType.APPLICATION_JSON})` – 定义方法可以接受的媒体类型，本例为"application/json"
-*   `@Produces({MediaType.TEXT_HTML})` – 定义方法可以产生的媒体类型，本例为 t"ext/html"
+- `@POST` – 指示方法响应到 HTTP POST 请求
+- `@PathParam("id")` – 绑定传递的参数值
+- `@Consumes({MediaType.APPLICATION_JSON})` – 定义方法可以接受的媒体类型，本例为 `"application/json"`
+- `@Produces({MediaType.TEXT_HTML})` – 定义方法可以产生的媒体类型，本例为 `"text/html"`
 
-响应
+**响应**
 
-*   成功: HTTP 状态 为 200 OK
-*   错误： 404 Not Found。如果资源不存在
+- 成功：HTTP 状态为 200 OK
+- 错误：404 Not Found。如果资源不存在
 
-#### 3.2.4\. 删除 podcast
+## 3.2.4 删除 podcast
 
-##### 3.2.4.1\. 设计
+### 3.2.4.1 设计
 
-| **Description** | **URI** | **HTTP method** | **HTTP Status response** | | --- | --- | --- | --- | | 移除所有 podcasts | /podcasts/ | DELETE | 204 No content | | 移除特定位置的 podcast | /podcasts/{id} | DELETE | 204 No content |
 
-##### 3.2.4.2\. 实现
 
-###### 3.2.4.2.1\. 删除所有资源
+| **Description** | **URI** | **HTTP method** | **HTTP Status response** |
+| --- | --- | --- | --- |
+| 移除所有 podcasts | `/podcasts/` | `DELETE` | 204 No content |
+| 移除特定位置的 podcast | `/podcasts/{id}` | `DELETE` | 204 No content |
+
+### 3.2.4.2. 实现
+
+#### 3.2.4.2.1. 删除所有资源
 
 ```java
 @DELETE
@@ -713,19 +727,19 @@ public Response deletePodcasts() {
     podcastService.deletePodcasts();
     return Response.status(Response.Status.NO_CONTENT)// 204
             .entity("All podcasts have been successfully removed").build();
-} 
+}
 ```
 
-注解
+**注解**
 
-*   `@DELETE` – 指示方法响应到 HTTP DELETE 请求
-*   `@Produces({MediaType.TEXT_HTML})` – 定义方法可以产生的媒体类型，本例为"text/html"
+- `@DELETE` – 指示方法响应到 HTTP DELETE 请求
+- `@Produces({MediaType.TEXT_HTML})` – 定义方法可以产生的媒体类型，本例为 `"text/html"`
 
-响应
+**响应**
 
-*   返回 html 文档
+- 返回 html 文档
 
-###### 3.2.4.2.2\. 删除一个资源
+#### 3.2.4.2.2. 删除一个资源
 
 ```java
 @DELETE
@@ -735,26 +749,26 @@ public Response deletePodcastById(@PathParam("id") Long id) {
     podcastService.deletePodcastById(id);
     return Response.status(Response.Status.NO_CONTENT)// 204
             .entity("Podcast successfully removed from database").build();
-} 
+}
 ```
 
-注解
+**注解**
 
-*   `@DELETE` – 指示方法响应到 HTTP DELETE 请求
-*   `@PathParam("id")`- 绑定传递的参数值
-*   `@Consumes({MediaType.APPLICATION_JSON})` – 定义方法可以接受的媒体类型，本例为"application/json"
-*   `@Produces({MediaType.TEXT_HTML})` – 定义方法可以产生的媒体类型，本例为"text/html"
+- `@DELETE` – 指示方法响应到 HTTP DELETE 请求
+- `@PathParam("id")` - 绑定传递的参数值
+- `@Consumes({MediaType.APPLICATION_JSON})` – 定义方法可以接受的媒体类型，本例为 `"application/json"`
+- `@Produces({MediaType.TEXT_HTML})` – 定义方法可以产生的媒体类型，本例为 `"text/html"`
 
-响应
+**响应**
 
-*   成功: HTTP 状态 为 204 No Content
-*   错误： 404 Not Found。如果资源不存在
+- 成功: HTTP 状态 为 204 No Content
+- 错误： 404 Not Found。如果资源不存在
 
-## 4\. 日志
+### 4. 日志
 
 详见 [`www.codingpedia.org/ama/how-to-log-in-spring-with-slf4j-and-logback/`](http://www.codingpedia.org/ama/how-to-log-in-spring-with-slf4j-and-logback/)
 
-## 5\. 异常处理
+### 5. 异常处理
 
 错误处理要有统一的格式，就像下面
 
@@ -765,18 +779,18 @@ public Response deletePodcastById(@PathParam("id") Long id) {
    "message": "Provided data not sufficient for insertion",
    "link": "http://www.codingpedia.org/ama/tutorial-rest-api-design-and-implementation-with-jersey-and-spring",
    "developerMessage": "Please verify that the feed is properly generated/set"
-} 
+}
 ```
 
-## 6\. 服务端添加 CORS 支持
+### 6. 服务端添加 CORS 支持
 
-## 7\. 测试
+### 7. 测试
 
-### 7.1\. 在 Java 集成测试
+#### 7.1. 在 Java 集成测试
 
-### 7.1.1\. 配置
+##### 7.1.1. 配置
 
-##### 7.1.1.1 Jersey 客户端依赖
+###### 7.1.1.1 Jersey 客户端依赖
 
 ```java
 <dependency>
@@ -784,10 +798,10 @@ public Response deletePodcastById(@PathParam("id") Long id) {
     <artifactId>jersey-client</artifactId>
     <version>${jersey.version}</version>
     <scope>test</scope>
-</dependency> 
+</dependency>
 ```
 
-##### 7.1.1.2\. Failsafe 插件
+###### 7.1.1.2. Failsafe 插件
 
 ```java
 <plugins>
@@ -812,10 +826,10 @@ public Response deletePodcastById(@PathParam("id") Long id) {
         </executions>
     </plugin>
     [...]
-</plugins> 
+</plugins>
 ```
 
-##### 7.1.1.2\. Jetty Maven 插件
+###### 7.1.1.2. Jetty Maven 插件
 
 ```java
 <plugins>
@@ -837,7 +851,7 @@ public Response deletePodcastById(@PathParam("id") Long id) {
                 <phase>pre-integration-test</phase>
                 <goals>
                     <!-- stop any previous instance to free up the port -->
-                    <goal>stop</goal>               
+                    <goal>stop</goal>
                     <goal>run-exploded</goal>
                 </goals>
                 <configuration>
@@ -855,20 +869,20 @@ public Response deletePodcastById(@PathParam("id") Long id) {
         </executions>
     </plugin>
     [...]
-</plugins> 
+</plugins>
 ```
 
-详细配置见源码中的 pom.xml
+详细配置见源码中的 `pom.xml`
 
-#### 7.1.2\. 编译集成测试
+##### 7.1.2. 编译集成测试
 
 使用 JUnit 作为测试框架。默认的 Failsafe 插件 自动包含所有测试类
 
-*   "`_*/IT_.java`" – “IT”开头的文件.
-*   "`_*/_IT.java`" – “IT”结尾的文件.
-*   "`_*/_ITCase.java`" – “ITCase”结尾的文件.
+- `*/IT_.java` – “IT”开头的文件.
+- `*/_IT.java` – “IT”结尾的文件.
+- `*/_ITCase.java` – “ITCase”结尾的文件.
 
-创建了测试类 RestDemoServiceIT
+创建了测试类 `RestDemoServiceIT`
 
 ```java
 public class RestDemoServiceIT {
@@ -900,47 +914,47 @@ public class RestDemoServiceIT {
                                 .writeValueAsString(podcast));
 
     }
-} 
+}
 ```
 
-注意：
+**注意：**
 
-*   在客户也要注册 `JacksonFeature` ，这样才能解析 JSON 格式
-*   用 jetty 测试，端口 8888
-*   期望 返回 200 状态 给我们的请求
-*   `org.codehaus.jackson.map.ObjectMapper` 帮助返回格式化的 JSON
+- 在客户也要注册 `JacksonFeature` ，这样才能解析 JSON 格式
+- 用 jetty 测试，端口 8888
+- 期望 返回 200 状态 给我们的请求
+- `org.codehaus.jackson.map.ObjectMapper` 帮助返回格式化的 JSON
 
-#### 7.1.3\. 运行集成测试
+##### 7.1.3. 运行集成测试
 
 运行
 
 ```java
-mvn verify 
+mvn verify
 ```
 
 设置 `jetty.port` 属性到 8888,Eclipse 配置如下
 
-### 7.2\. 用 SoapUI 集成测试
+#### 7.2. 用 SoapUI 集成测试
 
 [youtube 视频教程](http://www.youtube.com/watch?v=XV7WW0bDy9c)（需翻墙）
 
-## 8\. 版本管理
+### 8. 版本管理
 
 几个要点：
 
-*   `URL: “/v1/podcasts/{id}”`
-*   `Accept/Content-type header: application/json; version=1`
+- `URL: "/v1/podcasts/{id}"`
+- `Accept/Content-type header: application/json; version=1`
 
 在 路径中 加入 版本信息
 
 ```java
 @Component
 @Path("/v1/podcasts")
-public class PodcastResource {...} 
+public class PodcastResource {...}
 ```
 
-参考：
+**参考：**
 
-*   [`jersey.java.net/`](https://jersey.java.net/)
-*   [`github.com/waylau/Jersey-2.x-User-Guide`](https://github.com/waylau/Jersey-2.x-User-Guide)
-*   [`www.codingpedia.org/ama/tutorial-rest-api-design-and-implementation-in-java-with-jersey-and-spring/`](http://www.codingpedia.org/ama/tutorial-rest-api-design-and-implementation-in-java-with-jersey-and-spring/)
+- [`jersey.java.net/`](https://jersey.java.net/)
+- [`github.com/waylau/Jersey-2.x-User-Guide`](https://github.com/waylau/Jersey-2.x-User-Guide)
+- [`www.codingpedia.org/ama/tutorial-rest-api-design-and-implementation-in-java-with-jersey-and-spring/`](http://www.codingpedia.org/ama/tutorial-rest-api-design-and-implementation-in-java-with-jersey-and-spring/)

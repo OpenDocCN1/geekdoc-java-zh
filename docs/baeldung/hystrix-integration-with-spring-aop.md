@@ -1,8 +1,9 @@
+
 # Hystrix 与现有 Spring 应用程序的集成
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/hystrix-integration-with-spring-aop>
 
-## 1.概观
+## 1. 概观
 
 在上一篇文章中，我们介绍了 Hystrix 的基础知识，以及它如何帮助构建容错和弹性应用。
 
@@ -10,11 +11,11 @@
 
 在本文中，我们将研究如何将 Hystrix 与现有的 Spring 应用程序集成。
 
-## 2.Hystrix 成为弹簧应用
+## 2. Hystrix 成为 Spring 应用
 
-### 2.1。现有应用程序
+### 2.1. 现有应用程序
 
-让我们看看应用程序现有的客户端调用者，它调用我们在上一篇文章中创建的`RemoteServiceTestSimulator`:
+让我们看看应用程序现有的客户端调用者，它调用我们在上一篇文章中创建的`RemoteServiceTestSimulator`：
 
 ```java
 @Component("springClient")
@@ -29,13 +30,13 @@ public class SpringExistingClient {
 }
 ```
 
-正如我们在上面的代码片段中看到的，`invokeRemoteServiceWithOutHystrix` 方法负责调用`RemoteServiceTestSimulator`远程服务。当然，真实世界的应用程序不会这么简单。
+正如我们在上面的代码片段中看到的，`invokeRemoteServiceWithOutHystrix`方法负责调用`RemoteServiceTestSimulator`远程服务。当然，真实世界的应用程序不会这么简单。
 
-### 2.2。创建一个迂回建议
+### 2.2. 创建一个迂回建议
 
 为了演示如何集成 Hystrix，我们将使用这个客户端作为示例。
 
-为此，**我们将定义一个`Around`建议，它将在`invokeRemoteService` 被执行**时生效:
+为此，**我们将定义一个`Around`建议，它将在`invokeRemoteService`被执行时生效**：
 
 ```java
 @Around("@annotation(com.baeldung.hystrix.HystrixCircuitBreaker)")
@@ -46,7 +47,7 @@ public Object circuitBreakerAround(ProceedingJoinPoint aJoinPoint) {
 
 上面的通知被设计成一个`Around`通知，将在一个用`@HystrixCircuitBreaker`注释的切入点上执行。
 
-现在让我们看看`HystrixCircuitBreaker`注释`:`的定义
+现在让我们看看`HystrixCircuitBreaker`注释的定义：
 
 ```java
 @Retention(RetentionPolicy.RUNTIME)
@@ -54,9 +55,9 @@ public Object circuitBreakerAround(ProceedingJoinPoint aJoinPoint) {
 public @interface HystrixCircuitBreaker {}
 ```
 
-### 2.3。Hystrix 逻辑
+### 2.3. Hystrix 逻辑
 
-现在我们来看看`RemoteServiceCommand`。它在示例代码中被实现为一个`static inner class`,以封装 Hystrix 调用逻辑:
+现在我们来看看`RemoteServiceCommand`。它在示例代码中被实现为一个`static inner class`，以封装 Hystrix 调用逻辑：
 
 ```java
 private static class RemoteServiceCommand extends HystrixCommand<String> {
@@ -81,9 +82,9 @@ private static class RemoteServiceCommand extends HystrixCommand<String> {
 
 `Aspect`组件的完整实现可以在[这里看到](https://web.archive.org/web/20220120025508/https://github.com/eugenp/tutorials/blob/master/hystrix/src/main/java/com/baeldung/hystrix/HystrixAspect.java)。
 
-### 2.4。用`@HystrixCircuitBreaker`标注
+### 2.4. 用`@HystrixCircuitBreaker`标注
 
-一旦定义了方面，我们就可以用如下所示的`@HystrixCircuitBreaker` 来注释我们的客户端方法，并且每次调用被注释的方法都会触发 Hystrix:
+一旦定义了方面，我们就可以用如下所示的`@HystrixCircuitBreaker`来注释我们的客户端方法，并且每次调用被注释的方法都会触发 Hystrix：
 
 ```java
 @HystrixCircuitBreaker
@@ -94,7 +95,7 @@ public String invokeRemoteServiceWithHystrix() throws InterruptedException{
 
 以下集成测试将展示 Hystrix 路线和非 Hystrix 路线之间的差异。
 
-### 2.5。测试集成
+### 2.5. 测试集成
 
 出于演示的目的，我们定义了两条方法执行路线，一条有 Hystrix，另一条没有。
 
@@ -115,12 +116,12 @@ public class SpringAndHystrixIntegrationTest {
       throws InterruptedException {
         assertThat(hystrixController.withOutHystrix(), equalTo("Success"));
     }
-} 
+}
 ```
 
-当测试执行时，您可以看到没有 Hystrix 的方法调用将等待远程服务的整个执行时间，而 Hystrix 路由将短路并在定义的超时(在我们的例子中是 10 秒)后抛出`HystrixRuntimeException`。
+当测试执行时，您可以看到没有 Hystrix 的方法调用将等待远程服务的整个执行时间，而 Hystrix 路由将短路并在定义的超时（在我们的例子中是 10 秒）后抛出`HystrixRuntimeException`。
 
-## 3.结论
+## 3. 结论
 
 我们可以为我们希望用不同配置进行的每个远程服务调用创建一个方面。在下一篇文章中，我们将从项目的开始着眼于集成 Hystrix。
 

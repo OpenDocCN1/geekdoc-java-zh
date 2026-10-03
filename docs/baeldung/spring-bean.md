@@ -1,42 +1,45 @@
+
 # 什么是春豆？
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-bean>
 
-## 1。概述
+## 1. 概述
 
-Bean 是 Spring 框架的一个关键概念。所以理解这个概念对于掌握框架的窍门并有效地使用它是至关重要的。
+`Bean`是 Spring 框架的一个关键概念。所以理解这个概念对于掌握框架的窍门并有效地使用它是至关重要的。
 
 不幸的是，对于春豆到底是什么这个简单的问题，没有明确的答案。有些解释过于浅显，以至于忽略了全局，而另一些解释则过于模糊。
 
 本教程将试图阐明这个主题，从官方文档中的描述开始。
 
-## 延伸阅读:
+## 延伸阅读
 
-## 为什么选择 Spring 作为你的 Java 框架？
+### 为什么选择 Spring 作为你的 Java 框架？
 
 A quick and practical overview of the main value proposition of Spring framework.[Read more](/web/20220913201843/https://www.baeldung.com/spring-why-to-choose) →
 
-## [了解春天的 getBean()](/web/20220913201843/https://www.baeldung.com/spring-getbean)
+### [了解春天的 getBean()](/web/20220913201843/https://www.baeldung.com/spring-getbean)
 
-Learn about the different variants of Spring's BeanFactory.getBean() method for retrieving a bean instance from the Spring container[Read more](/web/20220913201843/https://www.baeldung.com/spring-getbean) →
+Learn about the different variants of Spring's `BeanFactory.getBean()` method for retrieving a bean instance from the Spring container[Read more](/web/20220913201843/https://www.baeldung.com/spring-getbean) →
 
-## 2。Bean 定义
+## 2. Bean 定义
 
 下面是 Spring 框架文档中对 beans 的定义:
 
-`In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container.`
+```
+In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container.
+```
 
-这个定义简明扼要，但是没有详细说明一个重要的元素:Spring IoC 容器。让我们仔细看看它是什么，以及它带来的好处。
+这个定义简明扼要，但是没有详细说明一个重要的元素：Spring IoC 容器。让我们仔细看看它是什么，以及它带来的好处。
 
-## 3。控制反转
+## 3. 控制反转
 
-简单来说， [I](/web/20220913201843/https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring) [控制转换](/web/20220913201843/https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring) (IoC)就是**一个对象定义其依赖关系而不创建依赖关系的过程。这个对象将构建这种依赖关系的工作委托给一个 IoC 容器。**
+简单来说，[控制反转](/web/20220913201843/https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring)（IoC）就是**一个对象定义其依赖关系而不创建依赖关系的过程。这个对象将构建这种依赖关系的工作委托给一个 IoC 容器。**
 
 在深入研究 IoC 之前，让我们从声明几个域类开始。
 
-### 3.1。领域类别
+### 3.1. 领域类别
 
-假设我们有一个类声明:
+假设我们有一个类声明：
 
 ```java
 public class Company {
@@ -50,7 +53,7 @@ public class Company {
 }
 ```
 
-该类需要一个类型为`Address`的合作者:
+该类需要一个类型为`Address`的合作者：
 
 ```java
 public class Address {
@@ -66,12 +69,12 @@ public class Address {
 }
 ```
 
-### 3.2。传统方法
+### 3.2. 传统方法
 
-通常，我们用类的构造函数创建对象:
+通常，我们用类的构造函数创建对象：
 
 ```java
-Address address = new Address("High Street", 1000);
+Address address = new Address("High Street", 1000);
 Company company = new Company(address);
 ```
 
@@ -83,9 +86,9 @@ Company company = new Company(address);
 
 对象可以从 IoC 容器中检索它的依赖关系，而不是自己构造依赖关系。我们需要做的就是为容器提供适当的配置元数据。
 
-### 3.3。Bean 配置
+### 3.3. Bean 配置
 
-首先，让我们用`@Component`注释来装饰`Company`类:
+首先，让我们用`@Component`注释来装饰`Company`类：
 
 ```java
 @Component
@@ -94,7 +97,7 @@ public class Company {
 }
 ```
 
-下面是一个为 IoC 容器提供 bean 元数据的配置类:
+下面是一个为 IoC 容器提供 bean 元数据的配置类：
 
 ```java
 @Configuration
@@ -111,15 +114,15 @@ public class Config {
 
 当一个 Spring IoC 容器构造这些类型的对象时，所有的对象都被称为 Spring beans，因为它们是由 IoC 容器管理的。
 
-### 3.4。国际奥委会在行动
+### 3.4. 国际奥委会在行动
 
-因为我们在配置类中定义了 beans，**我们将需要一个`AnnotationConfigApplicationContext`类的实例来构建一个容器**:
+因为我们在配置类中定义了 beans，**我们将需要一个`AnnotationConfigApplicationContext`类的实例来构建一个容器**：
 
 ```java
 ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
 ```
 
-一个快速测试验证了 beans 的存在和属性值:
+一个快速测试验证了 beans 的存在和属性值：
 
 ```java
 Company company = context.getBean("company", Company.class);
@@ -129,7 +132,7 @@ assertEquals(1000, company.getAddress().getNumber());
 
 结果证明 IoC 容器已经正确地创建和初始化了 beans。
 
-## 4。结论
+## 4. 结论
 
 本文简要描述了 Spring beans 及其与 IoC 容器的关系。
 

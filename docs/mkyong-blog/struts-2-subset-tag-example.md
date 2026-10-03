@@ -1,21 +1,22 @@
+
 # Struts 2 子集标记示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts2/struts-2-subset-tag-example/>
 
-Download It – [Struts2-Subset-Tag-Example.zip](http://web.archive.org/web/20190222123713/http://www.mkyong.com/wp-content/uploads/2010/07/Struts2-Subset-Tag-Example.zip)
+下载：[Struts2-Subset-Tag-Example.zip](http://web.archive.org/web/20190222123713/http://www.mkyong.com/wp-content/uploads/2010/07/Struts2-Subset-Tag-Example.zip)
 
-Struts 2 **subset** 标签用于输出迭代器元素的子集或部分。在本教程中，您将创建一个" numbers "列表，包含 10 个元素(从 1 到 10)，并使用 subset 标签" **start & count** 属性和 **decider** 方法来输出一个迭代器的子集(列表)。
+Struts 2 `subset` 标签用于输出迭代器元素的子集或部分。在本教程中，您将创建一个"numbers"列表，包含 10 个元素（从 1 到 10），并使用 `subset` 标签的 `start` 和 `count` 属性以及 `decider` 方法来输出一个迭代器的子集（列表）。
 
-## 1.行动
+## 1. 行动
 
-将元素填充到列表中的 Action 类，以及过滤要显示的元素的 decider 方法。
+将元素填充到列表中的 Action 类，以及过滤要显示的元素的 `decider` 方法。
 
-If the decider method return a “true” means display this value; otherwise ignore it. You can do whatever filter logic here.
+如果 `decider` 方法返回 `true`，则表示显示该值；否则忽略它。您可以在此处执行任何过滤逻辑。
 
-**SubsetTagAction.java**
+`SubsetTagAction.java`
 
 ```java
- package com.mkyong.common.action;
+package com.mkyong.common.action;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,20 +65,20 @@ public class SubsetTagAction extends ActionSupport{
 	         }
 	     };
 	}	
-} 
+}
 ```
 
- ## 2.子集标签示例
+## 2. 子集标签示例
 
-一个 JSP 页面，展示了如何使用 **subset** 标签来输出迭代器的子集。
+一个 JSP 页面，展示了如何使用 `subset` 标签来输出迭代器的子集。
 
-The “**start**” and “**count**” attribute in the subset tag is start from 0 , which means **<s:subset source=”numbers” start=”1″ count=”5″>** will extract the element from **#2 to #6**.
+`subset` 标签中的 `start` 和 `count` 属性从 0 开始，这意味着 `<s:subset source="numbers" start="1" count="5">` 将提取从 `#2` 到 `#6` 的元素。
 
-**subset.jsp**
+`subset.jsp`
 
 ```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
- <html>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<html>
 <head>
 </head>
 
@@ -87,7 +88,7 @@ The “**start**” and “**count**” attribute in the subset tag is start fro
 <table border="1px" cellpadding="8px">
 <tr valign="top">
 <td>
-1\. Display all numbers.
+1. Display all numbers.
 <ol>
 <s:subset source="numbers">
    <s:iterator>
@@ -98,7 +99,7 @@ The “**start**” and “**count**” attribute in the subset tag is start fro
 </td>
 
 <td>
-2\. Display numbers , from #2 to #6
+2. Display numbers, from #2 to #6
 <ol>
 <s:subset source="numbers" start="1" count="5">
    <s:iterator>
@@ -109,7 +110,7 @@ The “**start**” and “**count**” attribute in the subset tag is start fro
 </td>
 
 <td>
-3\. Display numbers 7 only, with decider
+3. Display numbers 7 only, with decider
 <ol>
 <s:subset source="numbers" decider="numberDecider">
    <s:iterator>
@@ -122,15 +123,15 @@ The “**start**” and “**count**” attribute in the subset tag is start fro
 </table>
 
 </body>
-</html> 
+</html>
 ```
 
- ## 3.struts.xml
+## 3. struts.xml
 
 链接一下~
 
 ```java
- <?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
@@ -143,12 +144,12 @@ The “**start**” and “**count**” attribute in the subset tag is start fro
 			<result name="success">pages/subset.jsp</result>
 		</action>
 	</package>
-</struts> 
+</struts>
 ```
 
-## 4.演示
+## 4. 演示
 
-*http://localhost:8080/struts 2 example/subsettagaction . action*
+`http://localhost:8080/struts2example/subsetTagAction.action`
 
 **输出**
 
@@ -156,13 +157,6 @@ The “**start**” and “**count**” attribute in the subset tag is start fro
 
 ## 参考
 
-1.  [Struts 2 子集标签文档](http://web.archive.org/web/20190222123713/http://struts.apache.org/2.1.8/docs/subset.html)
+1. [Struts 2 子集标签文档](http://web.archive.org/web/20190222123713/http://struts.apache.org/2.1.8/docs/subset.html)
 
 [struts2](http://web.archive.org/web/20190222123713/http://www.mkyong.com/tag/struts2/)
-
-
-
-
-
-
-

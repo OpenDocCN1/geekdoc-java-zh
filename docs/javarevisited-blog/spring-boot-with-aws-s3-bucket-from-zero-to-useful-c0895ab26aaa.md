@@ -1,8 +1,9 @@
+
 # Spring Boot 用 AWS S3 斗从零到有用
 
 > 原文：<https://medium.com/javarevisited/spring-boot-with-aws-s3-bucket-from-zero-to-useful-c0895ab26aaa?source=collection_archive---------0----------------------->
 
-创建和读取的实用实现。AWS 云中的 txt 文件
+创建和读取的实用实现。AWS 云中的`txt`文件
 
 ![](img/815186eedf65c6fac568aa1a709df347.png)
 
@@ -15,12 +16,15 @@
 在谈论[亚马逊 S3](/javarevisited/7-best-aws-s3-and-dynamodb-courses-for-beginners-in-2021-a8a44b6066da) 时有一些概念:
 
 *   桶:这些是目录，有一个全局唯一的名字
-*   对象:这些文件有一个键，这个键是完整的路径。例如 s3://my-bucket/my-file.txt
+
+*   对象:这些文件有一个键，这个键是完整的路径。例如`s3://my-bucket/my-file.txt`
 
 对象的最大大小为 5TB，如果上载大于 5GB，则必须使用多部分上载。
 
 *   版本控制:在时段层启用。同一个键覆盖并递增版本:1，2，3…这是对文件进行版本控制的最佳实践。
+
     在木桶的“属性”下，你可以启用这个。
+
 *   S3 还可以维护静态网站，并使它们在互联网上可用。如果返回的是 HTTP 403(禁止的)，最好查看一下策略，确保它允许公共访问。
 
 ## S3 存储类
@@ -28,39 +32,53 @@
 **亚马逊 S3 标准**
 
 *   该类用于一般用途；
+
 *   跨多个可用性区域的 99.99999999%的对象弹性；
+
 *   用于经常访问的数据。
 
 **亚马逊 S3 标准版—不常访问**
 
 *   用于访问频率较低但需要快速访问的数据；
+
 *   99.99%可用性；
+
 *   与 S3 标准相比，成本更低；
+
 *   用于灾难恢复备份。
 
 **亚马逊 S3 一区**
 
 *   用于不经常访问的数据；
+
 *   它在单个 AZ(可用性区域)中具有 99.999999999%的耐久性；
+
 *   用于存储本地数据副本或可重新创建的数据的辅助备份。
 
 **亚马逊 S3 冰川即时检索**
 
 *   类用来归档东西，所以成本低；
+
 *   此处的数据存储时间必须至少为 90 天；
+
 *   毫秒级恢复非常适合每季度访问一次的数据。
 
 **亚马逊 S3 冰川灵活检索**
 
 *   也是用来存档东西的类，所以成本低；
+
 *   这里的数据存储时间也必须至少为 90 天；
+
 *   适合一年访问 1 ~ 2 次，异步检索的数据；
+
 *   恢复时间从几分钟到几小时不等。
 
 **亚马逊 S3 冰川深层档案**
 
 *   它具有长达 12 小时的数据恢复时间，适用于每年可访问 1 至 2 次的数据；
+
 *   跨多个可用性区域提供 99.999999999%的对象弹性；
+
 *   数据恢复可能需要 12 个小时。
 
 **亚马逊 S3 智能分层**
@@ -70,6 +88,7 @@
 例如，由于日常生活中的低访问权限，可以将对象移动到低访问权限层。如果以后访问该对象，它将被移回频繁访问的层。
 
 *   多个可用性区域中 99.999999999%的对象的持久性；
+
 *   它有一个小的监测和自动水平每月收费；
 
 ## 通过 AWS 控制台创建 S3
@@ -96,7 +115,7 @@
 
 ## 设置 Spring Boot 项目
 
-在这里，我将创建一个项目来创建和维护。亚马逊 s3 上的 txt 文件。
+在这里，我将创建一个项目来创建和维护。亚马逊 s3 上的`txt`文件。
 
 我首先将 AWS 依赖关系放在项目上:
 
@@ -127,9 +146,9 @@ public class AWSConfig {
     @Bean
     public AmazonS3 amazonS3() {
         AmazonS3 s3client = AmazonS3ClientBuilder
-                .*standard*()
+                .standard()
                 .withCredentials(new AWSStaticCredentialsProvider(credentials()))
-                .withRegion(Regions.*US_EAST_1*)
+                .withRegion(Regions.US_EAST_1)
                 .build();
         return s3client;
     }
@@ -137,7 +156,7 @@ public class AWSConfig {
 }
 ```
 
-在“accesskey”和“secretkey”中，每个用户将把他们在 IAM 中生成的安全凭证放入其中。
+在`accesskey`和`secretkey`中，每个用户将把他们在 IAM 中生成的安全凭证放入其中。
 
 这样做之后，一些动作是可能的，我为它们创建了一个服务类。
 
@@ -148,7 +167,7 @@ public class AWSConfig {
 ```
 public void createS3Bucket(String bucketName) {
     if(amazonS3Client.doesBucketExist(bucketName)) {
-        *log*.info("Bucket name already in use. Try another name.");
+        log.info("Bucket name already in use. Try another name.");
         return;
     }
     amazonS3Client.createBucket(bucketName);
@@ -170,7 +189,7 @@ public void deleteBucket(String bucketName){
     try {
         amazonS3Client.deleteBucket(bucketName);
     } catch (AmazonServiceException e) {
-        *log*.error(e.getErrorMessage());
+        log.error(e.getErrorMessage());
         return;
     }
 }
@@ -186,7 +205,7 @@ public void putObject(String bucketName, BucketObjectRepresentaion representatio
     String objectName = representation.getObjectName();
     String objectValue = representation.getText();
 
-    File file = new File("." + File.*separator* + objectName);
+    File file = new File("." + File.separator + objectName);
     FileWriter fileWriter = new FileWriter(file, false);
     PrintWriter printWriter = new PrintWriter(fileWriter);
     printWriter.println(objectValue);
@@ -194,10 +213,10 @@ public void putObject(String bucketName, BucketObjectRepresentaion representatio
     printWriter.close();
 
     try {
-        var putObjectRequest = new PutObjectRequest(bucketName, objectName, file).withCannedAcl(CannedAccessControlList.*PublicRead*);
+        var putObjectRequest = new PutObjectRequest(bucketName, objectName, file).withCannedAcl(CannedAccessControlList.PublicRead);
         amazonS3Client.putObject(putObjectRequest);
     } catch (Exception e){
-        *log*.error("Some error has ocurred.");
+        log.error("Some error has ocurred.");
     }
 
 }
@@ -219,9 +238,9 @@ public void downloadObject(String bucketName, String objectName){
     S3Object s3object = amazonS3Client.getObject(bucketName, objectName);
     S3ObjectInputStream inputStream = s3object.getObjectContent();
     try {
-        FileUtils.*copyInputStreamToFile*(inputStream, new File("." + File.*separator* + objectName));
+        FileUtils.copyInputStreamToFile(inputStream, new File("." + File.separator + objectName));
     } catch (IOException e) {
-        *log*.error(e.getMessage());
+        log.error(e.getMessage());
     }
 }
 ```
@@ -306,15 +325,18 @@ public class ControllerTests {
 ```
 
 **测试**
+
 到目前为止我们有以下操作:
 
 **发布**:[http://localhost:8080/buckets/bucket-name](http://localhost:8080/buckets/bucket-name)创建一个桶。
 
 **删除**:[http://localhost:8080/buckets/bucket-name](http://localhost:8080/buckets/bucket-name)删除一个桶。
 
+
+
 **GET**:[http://localhost:8080/buckets/](http://localhost:8080/buckets/)列出所有桶。
 
-**POST**:[http://localhost:8080/buckets/bucket-name/objects](http://localhost:8080/buckets/bucket-name/objects)用下面的正文创建一个对象:
+**POST**:[http://localhost:8080/buckets/bucket-name/objects](http://localhost:8080/buckets/bucket-name/objects)用下面的正文创建一个对象：
 
 ```
 {
@@ -323,36 +345,36 @@ public class ControllerTests {
 }
 ```
 
-**GET**:[http://localhost:8080/buckets/bucket-name/objects/object-name . txt](http://localhost:8080/buckets/bucket-name/objects/object-name.txt)按名称取对象并下载。
+**GET**:[http://localhost:8080/buckets/bucket-name/objects/object-name.txt](http://localhost:8080/buckets/bucket-name/objects/object-name.txt)按名称取对象并下载。
 
 **GET**:[http://localhost:8080/buckets/bucket-name/objects/](http://localhost:8080/buckets/bucket-name/objects/)列出已有的对象。
 
-**删除**:[http://localhost:8080/bucket/bucket-name/objects/object-name](http://localhost:8080/buckets/bucket-name/objects/object-name)删除一个对象。
+**删除**:[http://localhost:8080/buckets/bucket-name/objects/object-name](http://localhost:8080/buckets/bucket-name/objects/object-name)删除一个对象。
 
-**删除**:[http://localhost:8080/buckets/bucket-name/objects/](http://localhost:8080/buckets/bucket-name/objects/)用以下正文一次删除多个对象:
+**删除**:[http://localhost:8080/buckets/bucket-name/objects/](http://localhost:8080/buckets/bucket-name/objects/)用以下正文一次删除多个对象：
 
 ```
 ["nome-objeto-1.txt", "nome-objeto-2.txt"]
 ```
 
-**打补丁**:[http://localhost:8080/buckets/bucket-name/objects/object-name . txt/bucket-name 2](http://localhost:8080/buckets/bucket-name/objects/object-name.txt/bucket-name2)在两个桶之间移动一个对象。
+**打补丁**:[http://localhost:8080/buckets/bucket-name/objects/object-name.txt/bucket-name2](http://localhost:8080/buckets/bucket-name/objects/object-name.txt/bucket-name2)在两个桶之间移动一个对象。
 
 **公有 vs 私有**
 
 到目前为止，您可能已经注意到，bucket 和对象都是通过公共访问创建的，对吗？
 
-但是可以通过私人访问来创建它们。CannedAccessControlList 枚举可用于此目的:
+但是可以通过私人访问来创建它们。`CannedAccessControlList` 枚举可用于此目的：
 
 ```
 public enum CannedAccessControlList {
-    *Private*("private"),
-    *PublicRead*("public-read"),
-    *PublicReadWrite*("public-read-write"),
-    *AuthenticatedRead*("authenticated-read"),
-    *LogDeliveryWrite*("log-delivery-write"),
-    *BucketOwnerRead*("bucket-owner-read"),
-    *BucketOwnerFullControl*("bucket-owner-full-control"),
-    *AwsExecRead*("aws-exec-read");
+    Private("private"),
+    PublicRead("public-read"),
+    PublicReadWrite("public-read-write"),
+    AuthenticatedRead("authenticated-read"),
+    LogDeliveryWrite("log-delivery-write"),
+    BucketOwnerRead("bucket-owner-read"),
+    BucketOwnerFullControl("bucket-owner-full-control"),
+    AwsExecRead("aws-exec-read");
 
     private final String cannedAclHeader;
 
@@ -366,7 +388,7 @@ public enum CannedAccessControlList {
 }
 ```
 
-在这里，我将只使用 public 和 private，实现可能如下所示:
+在这里，我将只使用 `public` 和 `private`，实现可能如下所示：
 
 ```
 public void putObject(String bucketName, BucketObjectRepresentaion representation, boolean publicObject) throws IOException {
@@ -374,7 +396,7 @@ public void putObject(String bucketName, BucketObjectRepresentaion representatio
     String objectName = representation.getObjectName();
     String objectValue = representation.getText();
 
-    File file = new File("." + File.*separator* + objectName);
+    File file = new File("." + File.separator + objectName);
     FileWriter fileWriter = new FileWriter(file, false);
     PrintWriter printWriter = new PrintWriter(fileWriter);
     printWriter.println(objectValue);
@@ -383,20 +405,20 @@ public void putObject(String bucketName, BucketObjectRepresentaion representatio
 
     try {
         if(publicObject) {
-            var putObjectRequest = new PutObjectRequest(bucketName, objectName, file).withCannedAcl(CannedAccessControlList.*PublicRead*);
+            var putObjectRequest = new PutObjectRequest(bucketName, objectName, file).withCannedAcl(CannedAccessControlList.PublicRead);
             amazonS3Client.putObject(putObjectRequest);
         } else {
-            var putObjectRequest = new PutObjectRequest(bucketName, objectName, file).withCannedAcl(CannedAccessControlList.*Private*);
+            var putObjectRequest = new PutObjectRequest(bucketName, objectName, file).withCannedAcl(CannedAccessControlList.Private);
             amazonS3Client.putObject(putObjectRequest);
         }
     } catch (Exception e){
-        *log*.error("Some error has ocurred.");
+        log.error("Some error has ocurred.");
     }
 
 }
 ```
 
-与此同时，我还改变了[控制器](https://javarevisited.blogspot.com/2022/05/how-to-return-json-xml-or-thymeleaf-.html)用于测试:
+与此同时，我还改变了[控制器](https://javarevisited.blogspot.com/2022/05/how-to-return-json-xml-or-thymeleaf-.html)用于测试：
 
 ```
 @PostMapping(value = "/{bucketName}")
@@ -405,7 +427,7 @@ public void createBucket(@PathVariable String bucketName, @RequestParam boolean 
 }
 ```
 
-这样，我就可以选择创建一个具有[公共或私有访问权限](https://javarevisited.blogspot.com/2012/10/difference-between-private-protected-public-package-access-java.html)的对象。我在创建桶时做了同样的事情:
+这样，我就可以选择创建一个具有[公共或私有访问权限](https://javarevisited.blogspot.com/2012/10/difference-between-private-protected-public-package-access-java.html)的对象。我在创建桶时做了同样的事情：
 
 ```
 public void putObject(String bucketName, BucketObjectRepresentaion representation, boolean publicObject) throws IOException {
@@ -413,7 +435,7 @@ public void putObject(String bucketName, BucketObjectRepresentaion representatio
     String objectName = representation.getObjectName();
     String objectValue = representation.getText();
 
-    File file = new File("." + File.*separator* + objectName);
+    File file = new File("." + File.separator + objectName);
     FileWriter fileWriter = new FileWriter(file, false);
     PrintWriter printWriter = new PrintWriter(fileWriter);
     printWriter.println(objectValue);
@@ -422,20 +444,20 @@ public void putObject(String bucketName, BucketObjectRepresentaion representatio
 
     try {
         if(publicObject) {
-            var putObjectRequest = new PutObjectRequest(bucketName, objectName, file).withCannedAcl(CannedAccessControlList.*PublicRead*);
+            var putObjectRequest = new PutObjectRequest(bucketName, objectName, file).withCannedAcl(CannedAccessControlList.PublicRead);
             amazonS3Client.putObject(putObjectRequest);
         } else {
-            var putObjectRequest = new PutObjectRequest(bucketName, objectName, file).withCannedAcl(CannedAccessControlList.*Private*);
+            var putObjectRequest = new PutObjectRequest(bucketName, objectName, file).withCannedAcl(CannedAccessControlList.Private);
             amazonS3Client.putObject(putObjectRequest);
         }
     } catch (Exception e){
-        *log*.error("Some error has ocurred.");
+        log.error("Some error has ocurred.");
     }
 
 }
 ```
 
-测试用的[控制器](https://javarevisited.blogspot.com/2022/05/how-to-validate-incoming-payload-on-spring-.html):
+测试用的[控制器](https://javarevisited.blogspot.com/2022/05/how-to-validate-incoming-payload-on-spring-.html)：
 
 ```
 @PostMapping(value = "/{bucketName}/objects")
@@ -444,19 +466,19 @@ public void createObject(@PathVariable String bucketName, @RequestBody BucketObj
 }
 ```
 
-这些请求看起来像这样:
+这些请求看起来像这样：
 
-**POST**:[http://localhost:8080/buckets/bucket-name/objects？publicObject=true](http://localhost:8080/buckets/bucket-name/objects?publicObject=true) 用下面的主体创建一个对象:
+**POST**:[http://localhost:8080/buckets/bucket-name/objects?publicObject=true](http://localhost:8080/buckets/bucket-name/objects?publicObject=true) 用下面的主体创建一个对象：
 
 ```
 {
     "objectName": "object-name.txt",
-        "text": "value of object"
+    "text": "value of object"
 }
 ```
 
-**帖子**:[http://localhost:8080/bucket/bucket-name？publicBucket=true](http://localhost:8080/buckets/bucket-name?publicBucket=true) 创建一个存储桶。
+**POST**:[http://localhost:8080/buckets/bucket-name?publicBucket=true](http://localhost:8080/buckets/bucket-name?publicBucket=true) 创建一个存储桶。
 
-此代码是功能性的概念证明，可在此处参考:[https://github.com/mmarcosab/s3-example](https://github.com/mmarcosab/s3-example)
+此代码是功能性的概念证明，可在此处参考：[https://github.com/mmarcosab/s3-example](https://github.com/mmarcosab/s3-example)
 
-</javarevisited/21-spring-mvc-rest-interview-questions-answers-for-beginners-and-experienced-developers-21ad3d4c9b82>  </javarevisited/top-22-skills-professional-java-programmers-can-learn-in-2022-to-upgrade-themselves-bc3da73d7491>  </javarevisited/the-java-programmer-roadmap-f9db163ef2c2> 
+</javarevisited/21-spring-mvc-rest-interview-questions-answers-for-beginners-and-experienced-developers-21ad3d4c9b82>  </javarevisited/top-22-skills-professional-java-programmers-can-learn-in-2022-to-upgrade-themselves-bc3da73d7491>  </javarevisited/the-java-programmer-roadmap-f9db163ef2c2>

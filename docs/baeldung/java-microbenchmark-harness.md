@@ -1,16 +1,17 @@
+
 # 用 Java 进行微基准测试
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-microbenchmark-harness>
 
-## 1。简介
+## 1. 简介
 
-这篇简短的文章主要关注 JMH(Java 微基准测试工具)。首先，我们熟悉 API 并学习它的基础知识。然后我们会看到一些在编写微基准时应该考虑的最佳实践。
+这篇简短的文章主要关注 JMH（Java 微基准测试工具）。首先，我们熟悉 API 并学习它的基础知识。然后我们会看到一些在编写微基准时应该考虑的最佳实践。
 
 简单地说，JMH 负责 JVM 预热和代码优化之类的事情，让基准测试尽可能简单。
 
-## 2。入门
+## 2. 入门
 
-首先，我们实际上可以继续使用 Java 8，并简单地定义依赖关系:
+首先，我们实际上可以继续使用 Java 8，并简单地定义依赖关系：
 
 ```java
 <dependency>
@@ -27,7 +28,7 @@
 
 最新版本的 [JMH 核心](https://web.archive.org/web/20221012100327/https://search.maven.org/classic/#artifactdetails%7Corg.openjdk.jmh%7Cjmh-core%7C1.19%7Cjar)和 [JMH 注释处理器](https://web.archive.org/web/20221012100327/https://search.maven.org/classic/#artifactdetails%7Corg.openjdk.jmh%7Cjmh-generator-annprocess%7C1.19%7Cjar)可以在 Maven Central 找到。
 
-接下来，利用`@Benchmark`注释(在任何公共类中)创建一个简单的基准:
+接下来，利用`@Benchmark`注释（在任何公共类中）创建一个简单的基准：
 
 ```java
 @Benchmark
@@ -36,7 +37,7 @@ public void init() {
 }
 ```
 
-然后我们添加开始基准测试过程的主类:
+然后我们添加开始基准测试过程的主类：
 
 ```java
 public class BenchmarkRunner {
@@ -46,7 +47,7 @@ public class BenchmarkRunner {
 }
 ```
 
-现在运行`BenchmarkRunner`将执行我们可能有点无用的基准测试。运行完成后，会显示一个汇总表:
+现在运行`BenchmarkRunner`将执行我们可能有点无用的基准测试。运行完成后，会显示一个汇总表：
 
 ```java
 # Run complete. Total time: 00:06:45
@@ -54,9 +55,9 @@ Benchmark      Mode  Cnt Score            Error        Units
 BenchMark.init thrpt 200 3099210741.962 ± 17510507.589 ops/s
 ```
 
-## 3。基准类型
+## 3. 基准类型
 
-JMH 支持一些可能的基准:`Throughput,` `AverageTime,` `SampleTime`和`SingleShotTime`。这些可以通过`@BenchmarkMode`注释进行配置:
+JMH 支持一些可能的基准：`Throughput`、`AverageTime`、`SampleTime`和`SingleShotTime`。这些可以通过`@BenchmarkMode`注释进行配置：
 
 ```java
 @Benchmark
@@ -66,7 +67,7 @@ public void init() {
 }
 ```
 
-生成的表将有一个平均时间度量(而不是吞吐量):
+生成的表将有一个平均时间度量（而不是吞吐量）：
 
 ```java
 # Run complete. Total time: 00:00:40
@@ -74,9 +75,9 @@ Benchmark Mode Cnt  Score Error Units
 BenchMark.init avgt 20 ≈ 10⁻⁹ s/op
 ```
 
-## 4。配置预热和执行
+## 4. 配置预热和执行
 
-通过使用`@Fork`注释，我们可以设置基准执行是如何发生的:`value`参数控制基准将被执行的次数，而`warmup`参数控制在收集结果之前基准将被试运行的次数，例如:
+通过使用`@Fork`注释，我们可以设置基准执行是如何发生的：`value`参数控制基准将被执行的次数，而`warmup`参数控制在收集结果之前基准将被试运行的次数，例如：
 
 ```java
 @Benchmark
@@ -91,11 +92,11 @@ public void init() {
 
 另外，`@Warmup`注释可以用来控制预热迭代的次数。例如，`@Warmup(iterations = 5)`告诉 JMH 5 次预热迭代就足够了，而不是默认的 20 次。
 
-## 5。状态
+## 5. 状态
 
 现在让我们来看看如何利用`State`来执行一个不那么琐碎且更具指示性的散列算法基准测试任务。假设我们决定通过将密码散列几百次来增加对密码数据库的字典攻击的额外保护。
 
-我们可以通过使用一个`State`对象来研究性能影响:
+我们可以通过使用一个`State`对象来研究性能影响：
 
 ```java
 @State(Scope.Benchmark)
@@ -115,7 +116,7 @@ public class ExecutionPlan {
 }
 ```
 
-我们的基准方法将会是这样的:
+我们的基准方法将会是这样的：
 
 ```java
 @Fork(value = 1, warmups = 1)
@@ -133,7 +134,7 @@ public void benchMurmur3_128(ExecutionPlan plan) {
 
 这里，当字段`iterations`被传递给基准方法时，它将由 JMH 用来自`@Param`注释的适当值填充。在每次调用基准测试之前，都会调用`@Setup`带注释的方法，并创建一个新的`Hasher`来确保隔离。
 
-当执行完成时，我们将得到与下面类似的结果:
+当执行完成时，我们将得到与下面类似的结果：
 
 ```java
 # Run complete. Total time: 00:06:47
@@ -146,11 +147,11 @@ BenchMark.benchMurmur3_128           500  thrpt   20  18315.211 ±  222.534  ops
 BenchMark.benchMurmur3_128          1000  thrpt   20   8960.008 ±  658.524  ops/s
 ```
 
-## 6.死代码消除
+## 6. 死代码消除
 
 **运行微基准测试时，了解优化非常重要**。否则，它们可能会以非常误导的方式影响基准测试结果。
 
-为了更具体一点，让我们考虑一个例子:
+为了更具体一点，让我们考虑一个例子：
 
 ```java
 @Benchmark
@@ -167,7 +168,7 @@ public void objectCreation() {
 }
 ```
 
-我们期望对象分配比什么都不做花费更多。但是，如果我们运行基准测试:
+我们期望对象分配比什么都不做花费更多。但是，如果我们运行基准测试：
 
 ```java
 Benchmark                 Mode  Cnt  Score   Error  Units
@@ -179,7 +180,7 @@ BenchMark.objectCreation  avgt   40  0.613 ± 0.007  ns/op
 
 **在这里，我们是死代码消除的受害者**。编译器非常擅长优化掉多余的代码。事实上，这正是 JIT 编译器在这里所做的。
 
-为了防止这种优化，我们应该设法欺骗编译器，让它认为代码被其他组件使用。实现这一点的一种方法是返回创建的对象:
+为了防止这种优化，我们应该设法欺骗编译器，让它认为代码被其他组件使用。实现这一点的一种方法是返回创建的对象：
 
 ```java
 @Benchmark
@@ -190,7 +191,7 @@ public Object pillarsOfCreation() {
 }
 ```
 
-同样，我们可以让`[Blackhole](https://web.archive.org/web/20221012100327/http://javadox.com/org.openjdk.jmh/jmh-core/1.6.3/org/openjdk/jmh/infra/Blackhole.html)`消耗它:
+同样，我们可以让`Blackhole`（[文档](https://web.archive.org/web/20221012100327/http://javadox.com/org.openjdk.jmh/jmh-core/1.6.3/org/openjdk/jmh/infra/Blackhole.html)）消耗它：
 
 ```java
 @Benchmark
@@ -201,7 +202,7 @@ public void blackHole(Blackhole blackhole) {
 }
 ```
 
-让`Blackhole`消费对象是说服 JIT 编译器不应用死代码消除优化的一种方式。无论如何，如果我们再次运行这些基准，这些数字会更有意义:
+让`Blackhole`消耗对象是说服 JIT 编译器不应用死代码消除优化的一种方式。无论如何，如果我们再次运行这些基准，这些数字会更有意义：
 
 ```java
 Benchmark                    Mode  Cnt  Score   Error  Units
@@ -211,9 +212,9 @@ BenchMark.objectCreation     avgt   20  0.635 ± 0.011  ns/op
 BenchMark.pillarsOfCreation  avgt   20  4.061 ± 0.037  ns/op
 ```
 
-## 7.恒定折叠
+## 7. 恒定折叠
 
-让我们考虑另一个例子:
+让我们考虑另一个例子：
 
 ```java
 @Benchmark
@@ -224,7 +225,7 @@ public double foldedLog() {
 }
 ```
 
-**基于常数的计算可能会返回完全相同的输出，而不管执行的次数。因此，JIT 编译器很有可能会用对数函数调用的结果来替换它:**
+**基于常数的计算可能会返回完全相同的输出，而不管执行的次数。因此，JIT 编译器很有可能会用对数函数调用的结果来替换它：**
 
 ```java
 @Benchmark
@@ -235,7 +236,7 @@ public double foldedLog() {
 
 **这种形式的部分求值被称为常数折叠**。在这种情况下，常量合并完全避免了`Math.log`调用，而这正是基准测试的要点。
 
-为了防止常量合并，我们可以将常量状态封装在一个状态对象中:
+为了防止常量合并，我们可以将常量状态封装在一个状态对象中：
 
 ```java
 @State(Scope.Benchmark)
@@ -249,7 +250,7 @@ public double log(Log input) {
 }
 ```
 
-如果我们相互比较这些基准:
+如果我们相互比较这些基准：
 
 ```java
 Benchmark             Mode  Cnt          Score          Error  Units
@@ -257,10 +258,10 @@ BenchMark.foldedLog  thrpt   20  449313097.433 ± 11850214.900  ops/s
 BenchMark.log        thrpt   20   35317997.064 ±   604370.461  ops/s
 ```
 
-显然，与 T1 相比，`log`基准正在做一些严肃的工作，这是明智的。
+显然，与`foldedLog`相比，`log`基准正在做一些严肃的工作，这是明智的。
 
-## 8。结论
+## 8. 结论
 
 本教程关注并展示了 Java 的微观基准测试工具。
 
-和往常一样，代码示例可以在 GitHub 上找到[。](https://web.archive.org/web/20221012100327/https://github.com/eugenp/tutorials/tree/master/jmh)
+和往常一样，代码示例可以在 GitHub 上找到（[链接](https://web.archive.org/web/20221012100327/https://github.com/eugenp/tutorials/tree/master/jmh)）。

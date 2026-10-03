@@ -1,3 +1,4 @@
+
 # 创建 Locale
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/locale/create.html`](https://docs.oracle.com/javase/tutorial/i18n/locale/create.html)
@@ -7,18 +8,11 @@
 创建 `Locale` 对象的四种方法是：
 
 +   `Locale.Builder` 类
-
 +   `Locale` 构造函数
-
 +   `Locale.forLanguageTag` 工厂方法
-
 +   `Locale` 常量
 
-* * *
-
 **版本说明：** `Locale.Builder` 类和 `forLanguageTag` 方法是在 Java SE 7 发布中添加的。
-
-* * *
 
 ## `LocaleBuilder` 类
 
@@ -26,7 +20,6 @@
 
 ```java
 Locale aLocale = new Locale.Builder().setLanguage("fr").setRegion("CA").build();
-
 ```
 
 下一个示例创建了英语在美国和英国的 `Locale` 对象：
@@ -34,14 +27,12 @@ Locale aLocale = new Locale.Builder().setLanguage("fr").setRegion("CA").build();
 ```java
 Locale bLocale = new Locale.Builder().setLanguage("en").setRegion("US").build();
 Locale cLocale = new Locale.Builder().setLanguage("en").setRegion("GB").build();
-
 ```
 
 最后一个示例创建了俄语的 `Locale` 对象：
 
 ```java
 Locale dLocale = new Locale.Builder().setLanguage("ru").setScript("Cyrl").build();
-
 ```
 
 ## `Locale` 构造函数
@@ -49,9 +40,7 @@ Locale dLocale = new Locale.Builder().setLanguage("ru").setScript("Cyrl").build(
 `Locale` 类有三个可用的构造函数用于创建 `Locale` 对象：
 
 +   [`Locale(String language)`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#Locale-java.lang.String-)
-
 +   [`Locale(String language, String country)`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#Locale-java.lang.String-java.lang.String-)
-
 +   [`Locale(String language, String country, String variant)`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#Locale-java.lang.String-java.lang.String-java.lang.String-)
 
 以下示例创建了法语在加拿大，英语在美国和英国，以及俄语的 `Locale` 对象。
@@ -61,7 +50,6 @@ aLocale = new Locale("fr", "CA");
 bLocale = new Locale("en", "US");
 cLocale = new Locale("en", "GB");
 dLocale = new Locale("ru");
-
 ```
 
 在 JDK 7 之前的版本中，无法在 `Locale` 对象上设置脚本代码。
@@ -73,7 +61,6 @@ dLocale = new Locale("ru");
 ```java
 Locale aLocale = Locale.forLanguageTag("en-US");
 Locale bLocale = Locale.forLanguageTag("ja-JP-u-ca-japanese");
-
 ```
 
 ## `Locale` 常量
@@ -83,7 +70,6 @@ Locale bLocale = Locale.forLanguageTag("ja-JP-u-ca-japanese");
 ```java
 cLocale = Locale.JAPAN;
 dLocale = Locale.CANADA_FRENCH;
-
 ```
 
 当您指定语言常量时，`Locale` 的区域部分是未定义的。下面的三个语句创建等效的 `Locale` 对象：
@@ -92,16 +78,14 @@ dLocale = Locale.CANADA_FRENCH;
 j1Locale = Locale.JAPANESE;
 j2Locale = new Locale.Builder().setLanguage("ja").build();
 j3Locale = new Locale("ja");
-
 ```
 
-由以下三个语句创建的`Locale`对象也是等效的：
+由以下三个语句创建的 `Locale` 对象也是等效的：
 
 ```java
 j4Locale = Locale.JAPAN;
 j5Locale = new Locale.Builder().setLanguage("ja").setRegion("JP").build();
 j6Locale = new Locale("ja", "JP");
-
 ```
 
 ## 代码
@@ -142,13 +126,11 @@ j6Locale = new Locale("ja", "JP");
 | `Kana` | 片假名 |
 | `Latn` | 拉丁字母 |
 
-有三种方法可以检索`Locale`的脚本信息：
+有三种方法可以检索 `Locale` 的脚本信息：
 
-+   [`getScript()`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getScript--)  返回`Locale`对象的 4 字母脚本代码。如果未为区域设置定义脚本，则返回空字符串。
-
-+   [`getDisplayScript()`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getDisplayScript--)  返回适合显示给用户的区域设置脚本的名称。如果可能，名称将针对默认区域设置进行本地化。因此，例如，如果脚本代码是"Latn"，则返回的显示脚本名称将在英语语言区域设置下为"Latin"。
-
-+   [`getDisplayScript(Locale)`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getDisplayScript-java.util.Locale-)  返回指定`Locale`的显示名称，如果可能的话进行本地化。
++   [`getScript()`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getScript--) — 返回 `Locale` 对象的 4 字母脚本代码。如果未为区域设置定义脚本，则返回空字符串。
++   [`getDisplayScript()`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getDisplayScript--) — 返回适合显示给用户的区域设置脚本的名称。如果可能，名称将针对默认区域设置进行本地化。因此，例如，如果脚本代码是 `"Latn"`，则返回的显示脚本名称将在英语语言区域设置下为 `"Latin"`。
++   [`getDisplayScript(Locale)`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getDisplayScript-java.util.Locale-) — 返回指定 `Locale` 的显示名称，如果可能的话进行本地化。
 
 ### 地区代码
 
@@ -172,19 +154,15 @@ j6Locale = new Locale("ja", "JP");
 
 ### 变体代码
 
-可选的`variant`代码可用于进一步区分您的`Locale`。例如，变体代码可用于指示区域代码未涵盖的方言差异。
-
-* * *
+可选的 `variant` 代码可用于进一步区分您的 `Locale`。例如，变体代码可用于指示区域代码未涵盖的方言差异。
 
 **版本说明：** 在 Java SE 7 发布之前，变体代码有时用于标识不特定于语言或区域的差异。例如，它可能已用于标识计算平台之间的差异，如 Windows 或 UNIX。根据 IETF BCP 47 标准，不鼓励此用法。
 
 要定义与您的环境相关的非语言特定变体，请使用扩展机制，如 BCP 47 扩展中所解释的那样。
 
-* * *
-
 自 Java SE 7 发布以来，符合 IETF BCP 47 标准的变体代码专门用于指示定义语言或其方言的附加变体。IETF BCP 47 标准对变体子标记施加了语法限制。您可以在[`www.iana.org/assignments/language-subtag-registry`](http://www.iana.org/assignments/language-subtag-registry)上查看变体代码列表（搜索*变体*）。
 
-例如，Java SE 使用变体代码支持泰语。按照惯例，`th` 和 `th_TH` 区域设置的`NumberFormat`对象将使用常见的阿拉伯数字形状或阿拉伯数字来格式化泰国数字。然而，`th_TH_TH` 区域设置的`NumberFormat`将使用泰国数字形状。`ThaiDigits.java`中的摘录演示了这一点：
+例如，Java SE 使用变体代码支持泰语。按照惯例，`th` 和 `th_TH` 区域设置的 `NumberFormat` 对象将使用常见的阿拉伯数字形状或阿拉伯数字来格式化泰国数字。然而，`th_TH_TH` 区域设置的 `NumberFormat` 将使用泰国数字形状。`ThaiDigits.java` 中的摘录演示了这一点：
 
 ```java
 String outputString = new String();
@@ -199,7 +177,6 @@ for (Locale locale : thaiLocale) {
     outputString = outputString + locale.toString() + ": ";
     outputString = outputString + nf.format(573.34) + "\n";
 }
-
 ```
 
 以下是此示例的屏幕截图：

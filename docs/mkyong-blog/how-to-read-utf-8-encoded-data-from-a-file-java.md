@@ -1,56 +1,57 @@
-# 如何用 Java 读取 UTF 8 文件
+
+# 如何用 Java 读取 UTF-8 文件
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/how-to-read-utf-8-encoded-data-from-a-file-java/>
 
-在 Java 中， [InputStreamReader](http://web.archive.org/web/20220724142906/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/InputStreamReader.html) 接受一个[字符集](http://web.archive.org/web/20220724142906/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/charset/Charset.html)来将字节流解码成字符流。我们可以向`InputStreamReader`构造函数传递一个`StandardCharsets.UTF_8`来从 UTF-8 文件中读取数据。
+在 Java 中，[`InputStreamReader`](http://web.archive.org/web/20220724142906/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/InputStreamReader.html) 接受一个[字符集](http://web.archive.org/web/20220724142906/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/charset/Charset.html)，将字节流解码成字符流。我们可以向 `InputStreamReader` 构造函数传递一个 `StandardCharsets.UTF_8`，从 UTF-8 文件中读取数据。
 
 ```java
- import java.nio.charset.StandardCharsets;
+import java.nio.charset.StandardCharsets;
 
-  //...
-  try (FileInputStream fis = new FileInputStream(file);
-       InputStreamReader isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
-       BufferedReader reader = new BufferedReader(isr)
-  ) {
+//...
+try (FileInputStream fis = new FileInputStream(file);
+     InputStreamReader isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
+     BufferedReader reader = new BufferedReader(isr)
+) {
 
-      String str;
-      while ((str = reader.readLine()) != null) {
-          System.out.println(str);
-      }
+    String str;
+    while ((str = reader.readLine()) != null) {
+        System.out.println(str);
+    }
 
-  } catch (IOException e) {
-      e.printStackTrace();
-  } 
+} catch (IOException e) {
+    e.printStackTrace();
+}
 ```
 
-在 Java 7+中，许多文件读取 API 开始接受`charset`作为参数，使得读取 UTF-8 变得非常容易。
+在 Java 7+ 中，许多文件读取 API 开始接受 `charset` 作为参数，使得读取 UTF-8 变得非常容易。
 
 ```java
- // Java 7
-  BufferedReader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8);
+// Java 7
+BufferedReader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8);
 
-  // Java 8
-  List<String> list = Files.readAllLines(path, StandardCharsets.UTF_8);
+// Java 8
+List<String> list = Files.readAllLines(path, StandardCharsets.UTF_8);
 
-  // Java 8
-  Stream<String> lines = Files.lines(path, StandardCharsets.UTF_8);
+// Java 8
+Stream<String> lines = Files.lines(path, StandardCharsets.UTF_8);
 
-  // Java 11
-  String s = Files.readString(path, StandardCharsets.UTF_8); 
+// Java 11
+String s = Files.readString(path, StandardCharsets.UTF_8);
 ```
 
-## 1.UTF 八号档案
+## 1. UTF-8 文件
 
-一个 UTF 8 编码文件`c:\\temp\\test.txt`，有中文字符。
+一个 UTF-8 编码文件 `c:\\temp\\test.txt`，有中文字符。
 
 ![utf-8 file](img/650ab0c3aad0f833fa804c804a6df5fb.png)
 
-## 2.阅读 UTF-8 文件
+## 2. 读取 UTF-8 文件
 
-这个例子展示了几种读取 UTF 8 文件的方法。
+这个例子展示了几种读取 UTF-8 文件的方法。
 
 ```java
- package com.mkyong.io.howto;
+package com.mkyong.io.howto;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -154,35 +155,36 @@ public class UnicodeRead {
         }
 
     }
-} 
+}
 ```
 
-输出
+### 输出
 
 Terminal
 
-```java
- line 1
+```text
+line 1
 line 2
 line 3
-你好，世界 
+你好，世界
 ```
 
 **延伸阅读**
+
 [如何用 Java 写一个 UTF-8 文件](/web/20220724142906/https://mkyong.com/java/how-to-write-utf-8-encoded-data-into-a-file-java/)
 
 ## 下载源代码
 
-$ git 克隆[https://github.com/mkyong/core-java](http://web.archive.org/web/20220724142906/https://github.com/mkyong/core-java)
+`git clone` [https://github.com/mkyong/core-java](http://web.archive.org/web/20220724142906/https://github.com/mkyong/core-java)
 
-$ cd java-io
+`cd java-io`
 
 ## 参考
 
-*   [FileWriter JavaDoc](http://web.archive.org/web/20220724142906/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/FileWriter.html)
-*   [BufferedWriter JavaDoc](http://web.archive.org/web/20220724142906/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/BufferedWriter.html)
-*   [InputStreamReader JavaDoc](http://web.archive.org/web/20220724142906/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/InputStreamReader.html)
-*   [维基百科–UTF-8](http://web.archive.org/web/20220724142906/https://en.wikipedia.org/wiki/UTF-8)
-*   [Charset JavaDoc](http://web.archive.org/web/20220724142906/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/charset/Charset.html)
+- [FileWriter JavaDoc](http://web.archive.org/web/20220724142906/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/FileWriter.html)
+- [BufferedWriter JavaDoc](http://web.archive.org/web/20220724142906/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/BufferedWriter.html)
+- [InputStreamReader JavaDoc](http://web.archive.org/web/20220724142906/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/InputStreamReader.html)
+- [维基百科–UTF-8](http://web.archive.org/web/20220724142906/https://en.wikipedia.org/wiki/UTF-8)
+- [Charset JavaDoc](http://web.archive.org/web/20220724142906/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/charset/Charset.html)
 
 <input type="hidden" id="mkyong-current-postId" value="1319">

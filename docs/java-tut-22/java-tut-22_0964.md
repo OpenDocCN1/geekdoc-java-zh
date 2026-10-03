@@ -1,3 +1,5 @@
+
+
 # 显示模式
 
 > 原文：[`docs.oracle.com/javase/tutorial/extra/fullscreen/displaymode.html`](https://docs.oracle.com/javase/tutorial/extra/fullscreen/displaymode.html)
@@ -20,30 +22,27 @@
 
 以下是选择和设置显示模式的一些建议：
 
-+   在尝试更改图形设备上的显示模式之前，请检查`isDisplayChangeSupported`方法返回的值。
+- 在尝试更改图形设备上的显示模式之前，请检查`isDisplayChangeSupported`方法返回的值。
+- 在尝试更改显示模式之前，请确保您处于全屏独占模式。
+- 与使用全屏模式一样，设置显示模式在`try...finally`子句中更加健壮：
 
-+   在尝试更改显示模式之前，请确保您处于全屏独占模式。
+```java
+GraphicsDevice myDevice;
+Window myWindow;
+DisplayMode newDisplayMode;
+DisplayMode oldDisplayMode 
+    = myDevice.getDisplayMode();
 
-+   与使用全屏模式一样，设置显示模式在`try...finally`子句中更加健壮：
+try {
+    myDevice.setFullScreenWindow(myWindow);
+    myDevice.setDisplayMode(newDisplayMode);
+    ...
+} finally {
+    myDevice.setDisplayMode(oldDisplayMode);
+    myDevice.setFullScreenWindow(null);
+}
+```
 
-    ```java
-    GraphicsDevice myDevice;
-    Window myWindow;
-    DisplayMode newDisplayMode;
-    DisplayMode oldDisplayMode 
-        = myDevice.getDisplayMode();
+- 在为应用程序选择显示模式时，您可能希望保留首选显示模式列表，然后从可用显示模式列表中选择最佳显示模式。
+- 作为备用方案，如果您想要的显示模式不可用，您可能希望以固定大小的窗口模式运行。
 
-    try {
-        myDevice.setFullScreenWindow(myWindow);
-        myDevice.setDisplayMode(newDisplayMode);
-        ...
-    } finally {
-        myDevice.setDisplayMode(oldDisplayMode);
-        myDevice.setFullScreenWindow(null);
-    }
-
-    ```
-
-+   在为应用程序选择显示模式时，您可能希望保留首选显示模式列表，然后从可用显示模式列表中选择最佳显示模式。
-
-+   作为备用方案，如果您想要的显示模式不可用，您可能希望以固定大小的窗口模式运行。

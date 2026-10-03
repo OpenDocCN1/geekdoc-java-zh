@@ -1,3 +1,4 @@
+
 # 验证已签名的 JAR 文件
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/jar/verify.html`](https://docs.oracle.com/javase/tutorial/deployment/jar/verify.html)
@@ -10,21 +11,18 @@
 
 ```java
 jarsigner -verify *jar-file*
-
 ```
 
 这个命令将验证 JAR 文件的签名，并确保存档中的文件在签名后没有发生变化。如果验证成功，您将看到以下消息：
 
 ```java
 jar verified.
-
 ```
 
 如果您尝试验证一个未签名的 JAR 文件，将会出现以下消息：
 
 ```java
 jar is unsigned. (signatures missing or not parsable)
-
 ```
 
 如果验证失败，将显示相应的消息。例如，如果 JAR 文件的内容自签名以来发生了变化，当您尝试验证文件时，将会出现类似以下消息：
@@ -32,11 +30,6 @@ jar is unsigned. (signatures missing or not parsable)
 ```java
 jarsigner: java.lang.SecurityException: invalid SHA1 
 signature file digest for test/classes/Manifest.class
-
 ```
 
-* * *
-
 **注意：** 如果已签名的 JAR 文件使用了`jdk.jar.disabledAlgorithms`安全属性中指定的任何算法（其中`*java.home*`是您安装 JRE 的目录），JDK 将把已签名的 JAR 文件视为未签名。
-
-* * *

@@ -1,3 +1,4 @@
+
 # 内部类示例
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/javaOO/innerclasses.html`](https://docs.oracle.com/javase/tutorial/java/javaOO/innerclasses.html)
@@ -6,14 +7,11 @@
 
 接下来的`DataStructure.java`示例包括：
 
-+   包含构造函数以创建包含连续整数值（0、1、2、3 等）的数组的实例的`DataStructure`外部类，并且包含一个打印具有偶数索引值的数组元素的方法。
-
-+   `EvenIterator`内部类，实现了`DataStructureIterator`接口，该接口扩展了[`Iterator`](https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html)`<`[`Integer`](https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html)`>`接口。迭代器用于遍历数据结构，通常具有用于测试最后一个元素、检索当前元素和移动到下一个元素的方法。
-
-+   一个`main`方法，实例化一个`DataStructure`对象（`ds`），然后调用`printEven`方法来打印具有偶数索引值的数组`arrayOfInts`的元素。
++ 包含构造函数以创建包含连续整数值（0、1、2、3 等）的数组的实例的`DataStructure`外部类，并且包含一个打印具有偶数索引值的数组元素的方法。
++ `EvenIterator`内部类，实现了`DataStructureIterator`接口，该接口扩展了[`Iterator`](https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html)`<`[`Integer`](https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html)`>`接口。迭代器用于遍历数据结构，通常具有用于测试最后一个元素、检索当前元素和移动到下一个元素的方法。
++ 一个`main`方法，实例化一个`DataStructure`对象（`ds`），然后调用`printEven`方法来打印具有偶数索引值的数组`arrayOfInts`的元素。
 
 ```java
-
 public class DataStructure {
 
     // Create an array
@@ -72,14 +70,12 @@ public class DataStructure {
         ds.printEven();
     }
 }
-
 ```
 
 输出为：
 
 ```java
 0 2 4 6 8 10 12 14 
-
 ```
 
 请注意，`EvenIterator`类直接引用了`DataStructure`对象的`arrayOfInts`实例变量。

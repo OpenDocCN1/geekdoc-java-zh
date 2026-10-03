@@ -1,14 +1,15 @@
+
 # Java 字符串转换
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-string-conversions>
 
-## 1。概述
+## 1. 概述
 
 在这篇简短的文章中，我们将探索一些简单的将`String`对象转换成 Java 支持的不同数据类型的方法。
 
-## 2。将`String`转换为`int`或`Integer`或
+## 2. 将`String`转换为`int`、`Integer`
 
-如果我们需要将一个`String`转换成原语`int`或`Integer`包装类型，我们可以使用`parseInt()`或`valueOf()`API 来获得相应的`int`或`Integer`返回值:
+如果我们需要将一个`String`转换成原语`int`或`Integer`包装类型，我们可以使用`parseInt()`或`valueOf()` API 来获得相应的`int`或`Integer`返回值：
 
 ```java
 @Test
@@ -28,9 +29,9 @@ public void whenConvertedToInteger_thenCorrect() {
 }
 ```
 
-## 3。将`String`转换为`long`或`Long`或
+## 3. 将`String`转换为`long`、`Long`
 
-如果我们需要将一个`String`转换成原语`long`或`Long`包装类型，我们可以分别使用`parseLong()`或`valueOf()`:
+如果我们需要将一个`String`转换成原语`long`或`Long`包装类型，我们可以分别使用`parseLong()`或`valueOf()`：
 
 ```java
 @Test
@@ -50,9 +51,9 @@ public void whenConvertedToLong_thenCorrect() {
 }
 ```
 
-## 4。将`String`转换为`double`或`Double`或
+## 4. 将`String`转换为`double`、`Double`
 
-如果我们需要将一个`String`转换成原语`double`或`Double`包装类型，我们可以分别使用`parseDouble()`或`valueOf()`:
+如果我们需要将一个`String`转换成原语`double`或`Double`包装类型，我们可以分别使用`parseDouble()`或`valueOf()`：
 
 ```java
 @Test
@@ -72,11 +73,11 @@ public void whenConvertedToDouble_thenCorrect() {
 }
 ```
 
-## 5。将`String`转换为`ByteArray`
+## 5. 将`String`转换为`ByteArray`
 
 为了将`String`转换成一个字节数组，`getBytes()`使用平台的默认字符集将`String`编码成一个字节序列，并将结果存储到一个新的字节数组中。
 
-当传递的`String`不能使用默认字符集编码时，`getBytes()`的行为是未指定的。根据 java [文档](https://web.archive.org/web/20220625235933/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html)，当需要对编码过程进行更多控制时，应该使用[Java . nio . charset . charset encoder](https://web.archive.org/web/20220625235933/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/charset/CharsetEncoder.html)类:
+当传递的`String`不能使用默认字符集编码时，`getBytes()`的行为是未指定的。根据 Java [文档](https://web.archive.org/web/20220625235933/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html)，当需要对编码过程进行更多控制时，应该使用[Java.nio.charset.CharsetEncoder](https://web.archive.org/web/20220625235933/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/charset/CharsetEncoder.html)类：
 
 ```java
 @Test
@@ -88,9 +89,9 @@ public void whenConvertedToByteArr_thenCorrect() {
 }
 ```
 
-## 6。将`String`转换为`CharArray`
+## 6. 将`String`转换为`CharArray`
 
-为了将一个`String`转换成一个`CharArray`实例，我们可以简单地使用`toCharArray()`:
+为了将一个`String`转换成一个`CharArray`实例，我们可以简单地使用`toCharArray()`：
 
 ```java
 @Test
@@ -102,9 +103,9 @@ public void whenConvertedToCharArr_thenCorrect() {
 }
 ```
 
-## 7。将`String`转换为`boolean`或`Boolean`或
+## 7. 将`String`转换为`boolean`、`Boolean`
 
-要将一个`String`实例转换成原始的`boolean`或`Boolean`包装类型，我们可以分别使用`parseBoolean()`或`valueOf()`API:
+要将一个`String`实例转换成原始的`boolean`或`Boolean`包装类型，我们可以分别使用`parseBoolean()`或`valueOf()` API：
 
 ```java
 @Test
@@ -124,19 +125,19 @@ public void whenConvertedToBoolean_thenCorrect() {
 }
 ```
 
-## 8。将`String`转换为`Date`或`LocalDateTime`或
+## 8. 将`String`转换为`Date`、`LocalDateTime`
 
 Java 6 提供了用于表示日期的`java.util.Date`数据类型。Java 8 为`Date`和`Time`引入了新的 API，以解决旧的`java.util.Date`和`java.util.Calendar`的缺点。
 
 你可以阅读[这篇](/web/20220625235933/https://www.baeldung.com/java-8-date-time-intro)文章了解更多详情。
 
-### 8.1。将`String`转换为`java.util.Date`
+### 8.1. 将`String`转换为`java.util.Date`
 
 为了将`String`对象转换成`Date`对象，我们需要首先通过传递描述日期和时间格式的模式来构造一个`SimpleDateFormat`对象。
 
 例如，模式的可能值可以是“MM-dd-yyyy”或“yyyy-MM-dd”。接下来，我们需要调用传递了`String`的`parse`方法。
 
-作为参数传递的`String`应该与模式的格式相同。否则，运行时将抛出一个`ParseException`:
+作为参数传递的`String`应该与模式的格式相同。否则，运行时将抛出一个`ParseException`：
 
 ```java
 @Test
@@ -156,11 +157,11 @@ public void whenConvertedToDate_thenCorrect() throws ParseException {
 }
 ```
 
-### 8.2。将`String`转换为`java.time.LocalDateTime`
+### 8.2. 将`String`转换为`java.time.LocalDateTime`
 
 `LocalDateTime`是一个不可变的日期时间对象，表示时间，通常被视为年-月-日-小时-分-秒。
 
-为了将字符串对象转换成`LocalDateTime`对象，我们可以简单地使用`parse` API:
+为了将字符串对象转换成`LocalDateTime`对象，我们可以简单地使用`parse` API：
 
 ```java
 @Test
@@ -169,7 +170,7 @@ public void whenConvertedToLocalDateTime_thenCorrect() {
     int afterConvCalendarDay = 03;
     Month afterConvCalendarMonth = Month.DECEMBER;
     int afterConvCalendarYear = 2007;
-    LocalDateTime afterConvDate 
+    LocalDateTime afterConvDate
       = new UseLocalDateTime().getLocalDateTimeUsingParseMethod(str);
 
     assertEquals(afterConvDate.getDayOfMonth(), afterConvCalendarDay);
@@ -178,12 +179,12 @@ public void whenConvertedToLocalDateTime_thenCorrect() {
 }
 ```
 
-根据[Java . TIME . format . datetime formatter . iso _ LOCAL _ DATE _ TIME](https://web.archive.org/web/20220625235933/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/DateTimeFormatter.html#ISO_LOCAL_DATE_TIME)，`String`必须代表有效时间。否则，运行时会抛出一个`ParseException`。
+根据[Java.time.format.DateTimeFormatter.ISO_LOCAL_DATE_TIME](https://web.archive.org/web/20220625235933/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/DateTimeFormatter.html#ISO_LOCAL_DATE_TIME)，`String`必须代表有效时间。否则，运行时会抛出一个`ParseException`。
 
-例如“`2011-12-03`”表示有效的字符串格式，其中 4 位数表示年份，2 位数表示年份的月份，2 位数表示月份的日期 。
+例如“`2011-12-03`”表示有效的字符串格式，其中 4 位数表示年份，2 位数表示年份的月份，2 位数表示月份的日期。
 
-## 9。结论
+## 9. 结论
 
-在这篇快速教程中，我们介绍了将 S `tring`对象转换成 java 支持的不同数据类型的不同实用方法。
+在这篇快速教程中，我们介绍了将`String`对象转换成 Java 支持的不同数据类型的不同实用方法。
 
 GitHub 上的[提供了本文的完整源代码和所有代码片段。](https://web.archive.org/web/20220625235933/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-string-conversions-2)

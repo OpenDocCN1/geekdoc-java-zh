@@ -1,3 +1,4 @@
+
 # 二、关于
 
 ## 学习前提
@@ -20,19 +21,22 @@ IntelliJ IDEA 13 版本和 14 版本，在设置上差异很大，14 版本 Inte
 
 目前（2015 年 06 月）IntelliJ IDEA 官网最新版本信息为：**Version:14.1.4 Build:141.1532.4 Released:June 19th, 2015**。
 
-IntelliJ IDEA 有旗舰版和社区版本之分，本系列教程将以 `14.1.4` 的旗舰版进行演示和讲解。
+IntelliJ IDEA 有旗舰版和社区版本之分，本系列教程将以`14.1.4`的旗舰版进行演示和讲解。
 
 其中旗舰版（Ultimate Edition）为收费版本，有 30 天试用期。如果你是学生、老师、开源项目参与者都可以向官网免费试用旗舰版，具体你可以查看下面链接。社区版（Community Edition）为免费版本，功能较旗舰版少了很多。
 
 本教程使用的 IntelliJ IDEA 主题为较受欢迎的黑色：**Darcula**。
 
 > *   申请免费版本：[`www.jetbrains.com/idea/buy/`](https://www.jetbrains.com/idea/buy/)
+
 > *   旗舰版和社区版差异细节：[`www.jetbrains.com/idea/features/editions_comparison_matrix.html`](https://www.jetbrains.com/idea/features/editions_comparison_matrix.html)
 
 ## 教程演示的系统环境
 
 > *   系统：Windows 8.1 64 位 简体中文版
+
 > *   JDK 版本：1.8.0_05 64 位
+
 > *   建议使用 JDK 版本为：1.6 及 1.6 以上，更加详细的系统要求会在安装教程篇中进行讲解。
 
 ## IntelliJ IDEA 版本迭代习惯

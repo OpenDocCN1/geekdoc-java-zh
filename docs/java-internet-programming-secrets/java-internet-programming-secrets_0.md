@@ -1,14 +1,9 @@
+
 # JAVA Internet 编程秘籍
-
-
 
 ![](img/cover09342.jpeg)
 
-
 ## 第四部分：Java 与网络
-
-
-
 
 ## 图 1.2.
 
@@ -40,9 +35,6 @@ class bar extends foo {
     }
 }
 ```
-
-
-
 
 `<name parent class> implements <name interface> {...}`
 
@@ -117,6 +109,7 @@ class foo {
 在声明方法时，可以使用表 13 列出的修饰符。`public`、`protected` 和 `private` 的作用与声明变量时相同，用于限制对方法的访问。
 
 表 13. 方法修饰符
+
 | 修饰符 |  |
 | :--- | :--- |
 | public | |
@@ -132,7 +125,7 @@ class foo {
 
 ## Applet
 
-第五章
+### 第五Applet
 
 工作中的 Applet
 
@@ -149,9 +142,6 @@ Applet 的完成阶段：资源访问
 流的简单方法：消除闪烁
 
 到目前，你应该理解自顶向下编程和面向对象编程的区别，并对 Java 语言的语法和语义有理解。好了，现在是时候开始编程了。
-
-
-
 
 在接下来的章节中，将介绍编写 applet 的基础知识。让我们先从如何扩展 `Applet` 类开始，并描述一些重要的变通方法，以实现你所需的 applet 行为。我们将向你展示如何使用 `Applet` 类的方法从网络获取图像和声音。你将学习如何从 HTML 代码中获取参数，以便你的 applet 能够在无需重新编译的情况下出不同的行为。我们将解释如何让 applet 响应鼠标和键盘输入。最后，我们将展示如何使用线程使 applet 产生动画，以及如何消除 applet 中令人烦恼的闪烁。
 
@@ -272,14 +262,13 @@ applet 首次启动后的输出如图 5-3 所示。applet 初始化了一次，�
 | `destroy()` | 显式销 applet 时调用。 |
 | `paint(Graphics g)` | 当 applet 需要重绘图形窗口时调用。 |
 
-
-
-
 Java 语言提供了一种更简单且更强大的方式。
 
 HTML - 文档描述语言；Java 是一种很好的编程语言。你的 Java applet 可以使用 `Images` 作为图形象形或游戏街机风格的 `sprites`。下面的 Java applet 从网络接收接收图像和声音文件并显示它们。
 
 示例 5-3. Web applet。
+
+
 
 ```java
 import java.applet.*;
@@ -325,7 +314,7 @@ public class webapplet extends applet {
 
 这段代码段包含了三个你可能不熟悉的类引用：`java.awt.Image`、`java.applet.AudioClip` 和 `java.net.URL`。这些类就像 Java API 中的大多数类一样，其功能或多程度上与其名称所含义的一致。
 
-### Image 类
+## Image 类
 
 `Image` 类定义了一个简单的二维图形图像。`Graphics` 类（由 `paint` 方法使用）可以使用 `drawImage` 方法绘制图像，如下例所示：
 
@@ -343,13 +332,13 @@ g.drawImage(myImage, 0, 0, this);
 
 建议：如果你有必要将 applet 作为参数传递，可以使用关键字
 
-![](img/image09215.jpeg) 这种，这在第 4 章“语法与语义”中提到过。
+![](img/img/image09215.jpeg) 这种，这在第 4 章“语法与语义”中提到过。
 
 `applet` 类使用 `getImage(URL)` 方法从网络接收 `Images`。该方法完成自帮助接口 `AppletContext`（见上文侧边栏“Interface AppletContext”）。
 
 因此，Java applet 可以导入 浏览器支持的任何图形格式的图像。最常用的格式是 GIF 和 JPEG。图像加载通常需要一段时间，但我们可以在 applet 中继续并输出 `Images`，尽管实际上 `Images` 不会立即出现，而是持续一段时间后出现。如果你对图像有更多控制，可以使用 `media tracker` 类，我们将在第 9 章讨论它。
 
-### AudioClip 类
+## AudioClip 类
 
 `java.applet.AudioClip` 类是音频数据的高级表示。该类定义了三个方法：`play`、`loop` 和 `stop`。`applet` 类定义了 `getAudioClip` 方法，它根据给定的 `URL` 返回声音文件。与 `getImage` 方法一样，`getAudioClip` 方法实际上是由 applet 上执行的；因此，applet 能够使用浏览器支持的任何声音格式。例如，下面的代码：
 
@@ -360,7 +349,7 @@ mySound.play();
 
 播放此 `AudioClip` 代表的声音。`Applet` 类定义了一个方法 `play(URL)`，当给定声音文件的 `URL` 时，播放该文件。如果音频文件丢失或格式不受支持，则什么都不会发生。`AudioClip` 类和 `Image` 一样，在请求声音时即可使用，但实际上加载和播放声音可能需要一些时间。遗憾的是，可用于在使用之前加载图像的 `MediaTracker` 类尚未支持 `AudioClip`。
 
-### URL 类
+## URL 类
 
 `URL` 类，或统一资源定位符（“统一资源”）—— Web 的完整地址。Java 语言有一个专门的类来处理 URL。它的实例是一个包含内容的对象：
 
@@ -382,8 +371,6 @@ catch (MalformedURLException e) {
     // 此处执行代码
 }
 ```
-
-
 
 你可能注意到我们在示例 applet 中插入了一些数据，但具体来说是 `URL` 图像和声音文件。如果你是一名专业的程序员或计算机科学教授，你可能已经注意到了并露出了苦脸——对于既定标准来说，这种编程方式是不可接受的。每你想更改此 applet 使用的图像或声音文件时，都需要修改代码并重新编译该类。幸运的是，`Java` 有一种方法可以在运行时向 applet 传递参数，这些参数可以用于定义各种图形或声音文件。
 
@@ -455,9 +442,6 @@ public boolean mouseMove(Event evt, int x, int y) {
     return true; // 代码
 }
 ```
-
-
-
 
 当按下鼠标按钮时会调用此方法。如果按下一次按钮，小程序将处理单击事件；如果按下两次按钮，小程序将处理双击事件。
 
@@ -550,38 +534,37 @@ FakeEvt = new event(this, time, MOUSE_MOVE, new_x, new_y, 0, 0, null);
 
 
 
+你可以在 Java 程序中使用线程，并定义扩展类 `Thread`。这一过程在第 11 章“多线程”中进行了详细描述。但现在让我们解释如何允许 applet 使用线程。这种技术在某些情况下非常有用，例如当 applet 显示移动图像时，你又希望 applet 在动画播放期间执行其他有用的操作。
 
-你可以在 Java 程序中使用线程（streams），并定义扩展类 `thread`。这一过程在第 11 章“多线程”中进行了详细描述。但现在让我们解释如何允许 applet 使用线程。这种技术在某些情况下非常有用，例如当 applet 显示移动图像时，你又希望 applet 在动画播放期间执行其他有用的操作。
+## 接口 `Runnable`
 
-### 接口 `runnable`
-
-正如第 3 章“Java 面向对象”中所讨论，Java 语言没有考虑多重继承。applet 无法直接扩展 `Applet` 类或 `thread` 类。你可以通过 `runnable` 接口定义一个在线程内部运行的方法。该接口与 `Thread` 类一样，属于 `java.lang` 包。可以选择如下这种方式：
+正如第 3 章“Java 面向对象”中所讨论，Java 语言没有考虑多重继承。applet 无法直接扩展 `Applet` 类或 `Thread` 类。你可以通过 `Runnable` 接口定义一个在线程内部运行的方法。该接口与 `Thread` 类一样，属于 `java.lang` 包。可以选择如下这种方式：
 
 ```java
-class ThreadedApplet extends applet implements runnable {
+class ThreadedApplet extends Applet implements Runnable {
 
 }
 ```
 
-接口 `runnable` 告诉编译器该 `Class` 有一个 `run` 方法，该方法必须在线程内执行。要执行的方法由 applet 中直接创建的 `Thread` 类实例控制。我们将看到如何在实践中使用它：
+接口 `Runnable` 告诉编译器该 `Class` 有一个 `run` 方法，该方法必须在线程内执行。要执行的方法由 applet 中直接创建的 `Thread` 类实例控制。我们将看到如何在实践中使用它：
 
 ```java
-class ThreadedApplet extends applet implements runnable {
+class ThreadedApplet extends Applet implements Runnable {
     private Thread engine = null;
 
     // 我们的流
     public void init() {
-        engine = new thread(this);
+        engine = new Thread(this);
         // 此流现在控制我们的方法
     }
 
     public void start() {
-        englne.start();
+        engine.start();
         // 方法开始执行
     }
 
     public void stop() {
-        if (engine!=null && engine.isAlive()) {
+        if (engine != null && engine.isAlive()) {
             // 如果必要，
             engine.stop();
             // 停止执行方法
@@ -591,15 +574,14 @@ class ThreadedApplet extends applet implements runnable {
     public void run() {
         while (engine.isAlive()) {
             // 代码位于此处，执行，直到 applet 停止
-            stop
         }
     }
 }
 ```
 
-当 applet 初始化时，它会创建一个附加到 applet 上的新流。当 applet 启动时，线程的工作开始，它会在 `run` 方法中循环执行其代码，直到 applet 停止。
+当 applet 初始化时，它会创建一个附加到 applet 上的新线程。当 applet 启动时，线程的工作开始，它会在 `run` 方法中循环执行其代码，直到 applet 停止。
 
-### 用于从线程操作的简单方法
+## 用于从线程操作的简单方法
 
 `Thread` 类定义了许多管理线程的方法。我们将在第 11 章“多线程”中详细讨论它们。在表 5-7 中简要描述了需要记住的最重要方法。
 
@@ -607,12 +589,12 @@ class ThreadedApplet extends applet implements runnable {
 
 | 方法 | 描述 |
 | :--- | :--- |
-| `isAlive()` | 返回 `Boolean` 变量，指示当前流是否存。 |
+| `isAlive()` | 返回 `Boolean` 变量，指示当前线程是否存活。 |
 | `sleep(long)` | 请求线程睡眠指定的毫秒数。如果接收到另一个线程的中断信号，此方法将抛出 `InterruptedException`。（关于中断，请参见第 11 章“多线程”。） |
-| `start()` | 开始执行流。 |
-| `stop()` | 停止执行流。 |
-| `suspend()` | 临时挂流。 |
-| `resume()` | 恢复后继续执行流。 |
+| `start()` | 开始执行线程。 |
+| `stop()` | 停止执行线程。 |
+| `suspend()` | 临时挂起线程。 |
+| `resume()` | 恢复后继续执行线程。 |
 
 通过使用线程，我们可以扩展光标显示 applet（示例 5-5），如图 5-7 所示，以显示跟随光标的移动图像。我们将修改 applet 以允许用户对其进行某些控制：按下鼠标按钮停止并再次启动动画。
 
@@ -627,34 +609,34 @@ import java.applet.*;
 import java.awt.*;
 import java.net.*;
 
-// 此类有一个在流内部执行的方法，
+// 此类有一个在线程内部执行的方法，
 // 并通过在此 applet 中创建的线程实例进行控制
-public class AnimatedCursorApplet extends applet implements runnable {
+public class AnimatedCursorApplet extends Applet implements Runnable {
 
     private int mouse_x, mouse_y;
     // 角色图像数组
     private Image CursorImages[];
     // 当前图像索引
     private int CursorIndex = 0;
-    // 流管理实现方法
+    // 线程管理实现方法
     private Thread anim = null;
     // 动画未挂起
     private boolean paused = false;
 
     public void init() {
-        resize(250,250);
-        // 将流绑定到 applet
-        anim = new thread(this); 
+        resize(250, 250);
+        // 将线程绑定到 applet
+        anim = new Thread(this);
         mouse_x = 125;
         mouse_y = 125;
         // 为了开始接受五张图像
         CursorImages = new Image[5];
         int i;
-        String CursorParam; 
+        String CursorParam;
         URL CursorURL;
         // 填充图像数组
-        for (i=0; i<5; i++) {
-            CursorParam = getParameter("CURSORFILE"+i);
+        for (i = 0; i < 5; i++) {
+            CursorParam = getParameter("CURSORFILE" + i);
             try {
                 CursorURL = new URL(CursorParam);
                 CursorImages[i] = getImage(CursorURL);
@@ -667,7 +649,7 @@ public class AnimatedCursorApplet extends applet implements runnable {
 }
 ```
 
-### 消除闪烁
+## 消除闪烁
 
 除非你运行在速度惊人的图形工作站上，否则当启动此 applet 时，你肯定会看到几次恼人的闪烁，这是 applet 试图比技术上可能更快的速度重绘屏幕的结果。解决此问题的经典方案是双倍缓冲。该过程的流程图如图 5-8 所示。
 
@@ -675,25 +657,22 @@ public class AnimatedCursorApplet extends applet implements runnable {
 
 #### 图 5.8。
 
-当运行时外壳需要重绘图形窗口时——例如当窗口被遮挡或 applet 请求重新显示并重绘窗口时——applet 的修改方法会被调用，并将 `Graphics` 对象传递给它的图形窗口。在默认情况下，方法的修改只是传递 `Graphics` 对象的 `paint` 方法。
+当运行时外壳需要重绘图形窗口时——例如当窗口被遮挡或 applet 请求重新显示并重绘窗口时——applet 的 `update` 方法会被调用，并将 `Graphics` 对象传递给它的图形窗口。在默认情况下，`update` 方法只是传递 `Graphics` 对象给 `paint` 方法。
 
+Applet 可以定义一个虚拟屏幕进行绘图，而不是直接在图形窗口外壳上执行绘制。Applet 绘制的图像可以使用 `getGraphics` 方法传输到实际窗口中。该方法返回与图像关联的 `Graphics` 对象。Applet 将以尽可能快的速度在其上绘图。Applet 的 `update` 方法将图像显示在 `Graphics` 对象上，而不是允许 applet 直接显示在屏幕上。结果是，闪烁现象将会消失。
 
-
-
-Applet 可以定义一个虚拟屏幕进行绘图，而不是直接在图形窗口外壳上执行绘制。Applet 绘制的图像可以使用 `getCraphics` 方法传输到实际窗口中。该方法返回与图像关联的 `Graphics` 对象。Applet 将以尽可能快的速度在其上绘图。Applet 的修改方法将图像显示在 `Graphics` 对象上，而不是允许 applet 直接显示在屏幕上。结果是，闪烁现象将会消失。
-
-在绘制执行时的外壳 `Graphics` 对象与绘制虚拟图像的 `Graphics` 对象之间存在一个显著区别。窗口窗口在运行时会被清除，并且在每次修改时必须完全重新绘制。如果虚拟图像没有被显式着色，它将保留已经绘制的内容。如果你想使用此类图像显示移动图形，必须在每次修改它时都重新绘制图形周围的背景，否则你的图片在移动时会留下足迹。
+在绘制执行时的外壳 `Graphics` 对象与绘制虚拟图像的 `Graphics` 对象之间存在一个显著区别。窗口在运行时会被清除，并且在每次 `update` 时必须完全重新绘制。如果虚拟图像没有被显式着色，它将保留已经绘制的内容。如果你想使用此类图像显示移动图形，必须在每次修改它时都重新绘制图形周围的背景，否则你的图片在移动时会留下足迹。
 
 现在我们可以使用虚拟屏幕图像为 applet 显示光标添加双缓冲。
 
-示例 5-6a. 无闪烁的动画 applet 显示光标。
+示例 5-6b. 无闪烁的动画 applet 显示光标。
 
 ```java
 import java.awt.*;
 import java.applet.*;
 import java.net.*;
 
-public class AnimatedCursorApplet extends applet implements runnable {
+public class AnimatedCursorApplet extends Applet implements Runnable {
 
     private int mouse_x, mouse_y;
     private Image CursorImages[];
@@ -707,8 +686,8 @@ public class AnimatedCursorApplet extends applet implements runnable {
 
     // our interface to him
     public void init() {
-        resize(250,250);
-        OffscreenImage = createImage(250,250);
+        resize(250, 250);
+        OffscreenImage = createImage(250, 250);
         // new image
         OffscreenGraphics = OffscreenImage.getGraphics();
         // tie our interface to image
@@ -719,13 +698,13 @@ public class AnimatedCursorApplet extends applet implements runnable {
         int i;
         String CursorParam;
         URL CursorURL;
-        for (i=0; i<5; i++) {
-            CursorParam = getParameter("CURSORFILE"+i);
+        for (i = 0; i < 5; i++) {
+            CursorParam = getParameter("CURSORFILE" + i);
             try {
                 CursorURL = new URL(CursorParam);
                 CursorImages[i] = getImage(CursorURL);
             } catch (MalformedURLException e) {
-                CursorImages[i] = createImage(0,0);
+                CursorImages[i] = createImage(0, 0);
             }
         }
     }
@@ -735,7 +714,7 @@ public class AnimatedCursorApplet extends applet implements runnable {
     }
 
     public void stop() {
-        if (anim!=null && anim.isAlive()) {
+        if (anim != null && anim.isAlive()) {
             anim.stop();
         }
     }
@@ -743,7 +722,7 @@ public class AnimatedCursorApplet extends applet implements runnable {
     public synchronized void update(Graphics g) {
         paint(OffscreenGraphics);
         // say applet paint over our image
-        g.drawImage(OffscreenImage,0,0,this);
+        g.drawImage(OffscreenImage, 0, 0, this);
         // paint over real graphic window
     }
 
@@ -751,14 +730,14 @@ public class AnimatedCursorApplet extends applet implements runnable {
         int px, py;
         Image Cursor = CursorImages[CursorIndex];
         g.setColor(Color.white);
-        g.fillRect(0,0,249,249);
+        g.fillRect(0, 0, 249, 249);
         // draw over the old image
         g.setColor(Color.black);
-        g.drawRect(0,0,249,249);
+        g.drawRect(0, 0, 249, 249);
         // let's deduce frame
-        px = mouse_x - Cursor.getWidth(this)/2;
-        py = mouse_y - Cursor.getHeight(this)/2;
-        g.drawImage(Cursor,px,py,this);
+        px = mouse_x - Cursor.getWidth(this) / 2;
+        py = mouse_y - Cursor.getHeight(this) / 2;
+        g.drawImage(Cursor, px, py, this);
     }
 
     public boolean mouseMove(Event evt, int x, int y) {
@@ -779,12 +758,12 @@ public class AnimatedCursorApplet extends applet implements runnable {
     }
 
     public void run() {
-        while (anim!=null) {
+        while (anim != null) {
             try {
                 anim.sleep(50);
             } catch (InterruptedException e) {}
             CursorIndex = CursorIndex + 1;
-            if (CursorIndex==5) {
+            if (CursorIndex == 5) {
                 CursorIndex = 0;
             }
             repaint();
@@ -795,7 +774,7 @@ public class AnimatedCursorApplet extends applet implements runnable {
 
 # 接下来做什么
 
-读完这一章后，你可以在 Java applet 中编写多媒体程序。现在你可以从网络接收图像和声音数据，还可以从 HTML 代码获取执行期间参数，你可以处理用户界面开发并使用流恢复你的 applet。所有这些对于创建包含多媒体的 applet 都是必要的，但对于编写可以使用文本和其他输入设备与用户进行高级交互的 applet 来说还不够够。
+读完这一章后，你可以在 Java applet 中编写多媒体程序。现在你可以从网络接收图像和声音数据，还可以从 HTML 代码获取执行期间参数，你可以处理用户界面开发并使用线程恢复你的 applet。所有这些对于创建包含多媒体的 applet 都是必要的，但对于编写可以使用文本和其他输入设备与用户进行高级交互的 applet 来说还不够。
 
 到目前，你应该已经喜欢使用 Java 语言了。接下来的章节将讨论 API 提供的丰富的 Java 类层次。这些类和接口增加了有用的功能。
 
@@ -807,17 +786,15 @@ public class AnimatedCursorApplet extends applet implements runnable {
 
 （为了简洁省略了文本，保持结构：API 是 Java 开发工具包自带的一套巨大的工具。在其中你将找到字符串处理、网络、数学能力以及“主力军”——用于处理哈希表的程序。）
 
-
-
 该 API 非常易于使用，因此在学习那些绝对必要的部分时你不应该遇到任何重大问题。如果你真的沉浸在 API 的探索中，你将能够在不编写代码的情况下完成许多基本操作，并深入理解如何使用 Java 这种面向对象的语言特性。
 
 首先，我们必须理清 API 的结构。然后我们考虑 Java 语法，这样你就可以充分利用具体的类和接口。
 
 ## API 结构
 
-API - 包含了几十个现成的类、接口和异常。
+API 包含了几十个现成的类、接口和异常。
 
-在 API 内部，这些类、接口和异常被分为八个包：`java.applet`、`java.awt`、`java.awt.image`、`java.awt.peer`、`java.io`、`java.lang`、`java.net` 和 `java.util`。表 6-1 简要了每个包的作用。
+在 API 内部，这些类、接口和异常被分为八个包：`java.applet`、`java.awt`、`java.awt.image`、`java.awt.peer`、`java.io`、`java.lang`、`java.net` 和 `java.util`。表 6-1 简要说明了每个包的作用。
 
 表 6-1 API 包
 
@@ -833,21 +810,23 @@ API - 包含了几十个现成的类、接口和异常。
 
 `java.io` 处理输入和输出程序（见第 11 章，“多线程”）。
 
-`java.lang` 包含核心元素 `java.language`，如 `Object`、`String`、`Exception` 和线程（thread）。
+`java.lang` 包含核心元素，如 `Object`、`String`、`Exception` 和线程。
 
 `java.net` 处理与网络的交互（见第 11 章“多线程”和第 12 章“跨越 Applet 模型范围的编程”）。
 
 `java.util` 包含若干辅助类，通常用于结构化数据。
 
-请记住，包是相关的类和接口的集合，它们允许访问用 `protected` 修饰符定义的方法和变量。在许多情况下，成员被包含在其中一个包中，这是由于设计上的考虑，并且与 `protected` 关键字的使用有关。在其他情况下，某个成员可能属于某个包，是因为在它的目的上它与该包的其他成员最接近。使用 API 时，我们可以将不同的包视为功能性的机会。不要被 `java.awt.image` 和 `java.awt.peer` 误骗——它们的成员与 `java.awt` 包的成员没有特殊的语法关系。Java 的创建者为 API 选择这些名称，是为了显示这两个包的成员具有相似的功能性机会。
+请记住，包是相关的类和接口的集合，它们允许访问用 `protected` 修饰符定义的方法和变量。在许多情况下，成员被包含在其中一个包中，这是由于设计上的考虑，并且与 `protected` 关键字的使用有关。在其他情况下，某个成员可能属于某个包，是因为在它的目的上它与该包的其他成员最接近。使用 API 时，我们可以将不同的包视为功能性的机会。不要被 `java.awt.image` 和 `java.awt.peer` 误导——它们的成员与 `java.awt` 包的成员没有特殊的语法关系。Java 的创建者为 API 选择这些名称，是为了显示这两个包的成员具有相似的功能性机会。
 
-在日常编程中，包结构对你的重要体现在两个方面。首先，你需要使用 `import` 操作符来应用 API 中的类。但其次，你必须至少大致熟悉包的内容，因为如图 6-1 所示，交互式的 Java 开发工具包文 文也是按包划分的。每个类、接口和异常都有自己的 Web 页面，详细描述了所有可用的公共方法和变量。
+在日常编程中，包结构对你的重要体现在两个方面。首先，你需要使用 `import` 操作符来应用 API 中的类。但其次，你必须至少大致熟悉包的内容，因为如图 6-1 所示，交互式的 Java 开发工具包文档也是按包划分的。每个类、接口和异常都有自己的 Web 页面，详细描述了所有可用的公共方法和变量。
 
 ![](img/image09223.gif)
 
 ### 练习 6.1
 
 一旦你完成了这一章，请深入研究在线 JDK 文档。由于你确定在编译 Java 程序时会遇到错误，你将发现在线文档是无价的。这本书的生命将在我们的在线伴侣页面继续，在那里你可以找到 Sun Microsystems 提供的最新交互式文档。
+
+
 
 ## 使用 API
 
@@ -876,28 +855,37 @@ class MyApplet extends java.applet.applet {}
 考虑在示例类上最佳使用 `import` 操作符：
 
 1. 确定包含你想要使用的类的包。这很简单：因为我们的类全名是 `java.util.Date`，因此它包含在 `java.util` 包中。否则，我们将查阅交互式文档查找。
+
 2. 使用 `import` 语句导入类。如果我们只使用 `Date`，可以这样做：
+
 ```java
 import java.util.Date;
 ```
+
 通常会从一个包中使用几个类。在这种情况下，最好使用模板来导入所有类：
+
 ```java
 import java.util.*;
 ```
+
 3. 我们现在准备好使用我们的类来引用当前日期。使用 `import` 语句非常简单。要避免只导入包而不导入类的陷阱。你可能会通过以下导入语句掉入陷阱：
 
 ```java
 import java.util;
 ```
+
 这个操作实际上没有导入任何类。通过添加名称，我们声明变量：
 
 ```java
 Date d;
 ```
+
 或者在没有 `java.util.*` 语句的情况下：
+
 ```java
 java.util.Date d;
 ```
+
 无论是否有 `java.util.*` 语句，最后的代码都是正确的。然而，这种形式的代码很笨拙，容易出错。
 
 ### 静态方法对比动态方法
@@ -918,8 +906,6 @@ API 中的许多方法都是静态的，因为即使它们是动态的，也会�
 
 但这种便利性经常给 Java 新手带来错误，因为他们尝试动态地访问静态方法。因此，将每个类认为由两个独立的部分组成是有用的——一个动态的，另一个静态的。动态部分包含了变量和方法，它们是类实例的一部分——那些没有用 `static` 修饰符定义的方法。在我们 date 类中，这些就是我们 `parse` 方法之外的所有方法。
 
-
-
 另一方面，静态变量和方法只是属于某个类的工具方法，因为该类是你在逻辑上寻找它们的地方。例如，让我们考虑 `Date` 类中的 `parse` 方法。该方法接收一个格式化日期的字符串，并返回自格林威治标准时间 1970 年 1 月 1 日午夜以来经过的秒数。
 
 如果你需要此类功能机会，并且为了寻找它们而开始浏览在线 API 文档，你可能会查看 `Date` 类。通过查看 `Date` 类方法的描述，你会发现这样的方法已经存在了，你不需要自己编写它。
@@ -935,7 +921,9 @@ API 中的许多方法都是静态的，因为即使它们是动态的，也会�
 在参考在线文档查看给定方法是否为静态时，你可能会遇到其他访问修饰符的提示。这些修饰符都定义在第 3 章“Java 面向对象”中。在这里我们将对它们进行概述，考虑它们对我们使用 API 的影响。
 
 *   `protected` 修饰符。表示该方法或变量仅对此包中的其他类可见。由于我们创建的类不会被包含在任何 API 包中，因此此修饰符对我们没有施加任何限制。我们将在第 11 章“多线程”中介绍在设计中对 `protected` 关键字的使用，以及自定义包的实现。
+
 *   `final` 修饰符。意味着一个方法（或整个类）不能被子类。当我们使用作为 API 的类时，这个关键字对我们来说并不重要。然而，如果我们想创建自己的子类类 API，我们应该检查它是否没有被 `final` 帮助修饰符定义。
+
 *   `abstract` 修饰符。如果整个类都用 `abstract` 修饰符定义，那么我们只能实现它的子类。如果类成员中只有一个成员被用 `abstract` 修饰符定义，那么我们只能访问替换了该特定方法的子类成员（参见第 3 章“Java 面向对象”）。当你看到 `abstract` 修饰符时，不要忘记事情并非初眼看起来的那样。你可能应该考虑文档中包含的 API 树，并探索 API 提供的子类。在图 6-3 显示的抽象类树 `java.awt.Component` 中，理解此类的子类是学习 Java AWT 的大部分我们将在接下来的两个中充分探索它们。
 
 ![](img/image09226.gif)
@@ -943,6 +931,7 @@ API 中的许多方法都是静态的，因为即使它们是动态的，也会�
 #### 图 6.3
 
 *   `synchronized` 和 `native` 修饰符。对于 API 用户没有实际价值。为了对它们有一个大致的概念，让我们假设 `synchronized` 修饰符意味着特定的方法或变量只能在某些时刻访问，这对于多线程程序非常重要（见第 11 章）。但现在我们没有必要担心这个修饰符。
+
 *   `native` 修饰符指定该方法实际上是在动态链接库（DLL）中执行的，该库不是用 Java 编写的。假设代码中插入的所有非 `native` 修饰的方法都是用 Java 编写的。
 
 但现在，如果我们想要使用的方法是用 `native` 修饰符定义的，我们不需要特别留心。（更多细节我们将在第 12 章“框架模型 applet 后台编程”中考虑此类方法。）
@@ -992,11 +981,7 @@ class badApplet extends applet {
 
 *   如果方法作者认为应该抛出异常，那么这可能已经是处理该异常的充分理由。
 *   确保所有依赖于特定方法或设计者调用异常的代码都包含在处理块中。保证这一点的最简单方法是在块内部声明任何分配给特定方法或设计者的变量。
-
-
-
-
-- 始终使用你的异常处理块来智能地响应导致异常的情况。在我们糟糕的 applet 示例中，我们必须向用户解释“image”参数是无效的。在关键情况下，你可以在块处理中完成性能 applet 操作。
+*   始终使用你的异常处理块来智能地响应导致异常的情况。在我们糟糕的 applet 示例中，我们必须向用户解释“image”参数是无效的。在关键情况下，你可以在块处理中完成性能 applet 操作。
 
 ## `java.lang.Object` 类
 
@@ -1106,16 +1091,15 @@ System.out.println("S1 等于字符串 S2"); if (S1.equals(S2))
 System.out.println("S1 等于字符串 S2");
 ```
 
+
+
 如果 `S1` 字典序小于 `S2`，则 `compareTo` 方法返回的值为 -1；如果 `S1` 字典序大于 `S2` 则返回 1。正如下面的示例所示，“字典序”比较本质上意味着字母顺序比较。区别在于这种顺序扩展到了数字和其他非字母字符，因此 "a113" 在字典序上确实大于 "a112"。排序由 Unicode 值决定。
-
-
-
 
 词法排序源于 Unicode 字符的整数值。`compareTo` 方法根据其整数值对字符串的每个字符进行逐一比较。当它发现差异时，将如上文所述返回 `1` 或 `-1`。对于数字和字母，这种流式处理在直觉上是清晰且易于记忆的（节 6-7）。
 
 ![](img/image09230.gif)
 
-### Rice. 6.7.
+### Rice. 6.7
 
 更复杂的是使用“非英语”字母表以及特殊字符（如 `%`、`!` 或 `*`）时的字符串比较。学习数字数值相似符号的最简单方法（在 Rice 6-7 中未显示）是将 `char` 类型转换为 `int` 类型并类型转换出其含义：
 
@@ -1144,7 +1128,7 @@ public void strangeCharacter(char Strange) {
 
 ![](img/image09231.gif)
 
-### Rice. 6.8.
+### Rice. 6.8
 
 当我们开始解析字符串时，你会发现这两种比较方法非常有帮助。它们的整数值可以作为参数传递。例如，它们可以用于模拟 `endsWith` 和 `startsWith` 方法。下面给出的代码片段始终返回 `true`。
 
@@ -1230,7 +1214,7 @@ S = S.substring(0, 4);
 
 ![](img/image09232.gif)
 
-### Rice. 6.9.
+### Rice. 6.9
 
 使用 `StringTokenizer` 类解析行。
 
@@ -1246,9 +1230,6 @@ public int getSum(String S) {
 }
 ```
 
-
-
-
 ```java
 private int Add(String S) {
     // 在知道如何执行它之前，
@@ -1260,27 +1241,20 @@ private int Add(String S) {
 
 ### 表 6-8. StringTokenizer 类的构造函数
 
-### 构造函数描述
-
-`StringTokenizer(String S, String delim)` 根据 `delim` 分割 `S`。
-
-`StringTokenizer(String S, String delim, boolean returnDetims)`
-与上述相同，但如果 `delims == true`，分隔符将作为标记（tokens）返回。
-
-`StringTokenizer(String S)` 根据空格（`"\t\n\r"`）分割 `line`。
+| 构造函数 | 描述 |
+| :--- | :--- |
+| `StringTokenizer(String S, String delim)` | 根据 `delim` 分割 `S`。 |
+| `StringTokenizer(String S, String delim, boolean returnDetims)` | 与上述相同，但如果 `delims == true`，分隔符将作为标记（tokens）返回。 |
+| `StringTokenizer(String S)` | 根据空格（`"\t\n\r"`）分割 `line`。 |
 
 ### 表 6-9. StringTokenizer 类的方法
 
-## 方法描述
-
-`String nextToken()` 返回下一个标记。
-
-`String nextToken(String newDelim)`
-在切换分隔符为 `newDelim` 后，返回下一个标记。
-
-`boolean hasMoreTokens()` 如果还有未返回的标记，则返回 `true`。
-
-`int countTokens()` 返回 `line` 中的标记数量。
+| 方法 | 描述 |
+| :--- | :--- |
+| `String nextToken()` | 返回下一个标记。 |
+| `String nextToken(String newDelim)` | 在切换分隔符为 `newDelim` 后，返回下一个标记。 |
+| `boolean hasMoreTokens()` | 如果还有未返回的标记，则返回 `true`。 |
+| `int countTokens()` | 返回 `line` 中的标记数量。 |
 
 ## 其他数据类型中的行转换
 
@@ -1351,30 +1325,26 @@ try {
 
 建议：在上面的代码段中，要将字符串转换为 `byte` 和 `short`，请使用 `Integer.parseInt()` 然后对结果进行强制转换。
 
-
-
-
 容器允许你放入任意数量的对象，并为放置和搜索对象提供了非常实用的功能。`Hashtable` 类允许你创建键值对并通过键访问对象。`Vector` 类在需要创建许多许多同类的副本时非常有用，但无法预先知道这些副本的数量时。`Stack` 类允许你根据后入先出的原则跟踪一组对象。“面世”。
 
 ![](img/image09235.jpeg)
 
 让我们从最简单的数据容器 `Vector` 类开始吧。不要让它的名字误导了你——这个类并不是专门为复杂的科学或图形化程序预留的。`Vector` 类本质上是一个可扩展的数组。在课堂中理解了这一点后，你会发现它有许多用途。你是否曾经需要一个某种类型的数据数组，但又不知道它的具体值（大小）？`Vector` 类解决了这个问题。与数组不同，你可以根据需要向 vector 中添加任意数量的元素。在向 vector 添加完元素后，你可以创建一个正确大小的数组并将所有元素复制到其中。表 6-10 给出了完成此类工作所需的主要方法。
 
-表 6-10. `Vector` 类基本方法
+### 表 6-10. `Vector` 类基本方法
 
-## 方法描述
-
-`void addElement(Object o)` 添加一个对象。
-
-`void insertElementAt(Object oh, int i)` 在位置 i 插入对象 o。元素不会被销毁，大小增加 1。
-
-`void copyInto(Object someArray[])` 将 vector 中的所有元素复制到数组 `someArray` 中。
-
-`int length()` 返回 vector 中的元素数量。
+| 方法 | 描述 |
+| :--- | :--- |
+| `void addElement(Object o)` | 添加一个对象。 |
+| `void insertElementAt(Object oh, int i)` | 在位置 i 插入对象 o。元素不会被销毁，大小增加 1。 |
+| `void copyInto(Object someArray[])` | 将 vector 中的所有元素复制到数组 `someArray` 中。 |
+| `int length()` | 返回 vector 中的元素数量。 |
 
 让我们来看看这个数据结构的实际运行情况。还记得第 4 节中“语法与语义”的卡通 applet 吗？我们曾使用 `Applet` 类的 `getParam` 方法从 html 页面获取图像 URL。我们随意设置了 5 张图片。另一方面，我们可以统计图片的数量，然后创建一个该大小的数组。通过创建一个 vector，我们可以将遇到的每张图片都添加到 HTML 页面上对应的参数中。现在，我们可以编写可以加载任意数量图片的 applet 动画片了。
 
 示例 6-8. 从任意数量图片生成的 applet 动画片。
+
+
 
 ```java
 public class AnimatedApplet extends applet {
@@ -1406,9 +1376,9 @@ public class AnimatedApplet extends applet {
 }
 ```
 
-现在我们有一种方便的方法来保存任意数量的图片，而且我们把它们全部放入一个数组中。如果你愿意，也可以让它们留在 vector 中。由于使用 `insertElementAt` 方法可以访问存储在其中的任何图片，我们的 vector 也可以像数组一样工作。这种方法在我们预期稍后会有额外到达时是必要的。但如果我们不预期有新元素，通常使用 `copyInto` 方法是最好的。定义程序如何处理数组比处理 vector 要容易得多。在内存使用方面，应用数组更高效且直接。因此，通常在第一次调用时就很好地考虑数组的大小。
+现在我们有一种方便的方法来保存任意数量的图片，而且我们把它们全部放入一个数组中。如果你愿意，也可以让它们留在 `vector` 中。由于使用 `insertElementAt` 方法可以访问存储在其中的任何图片，我们的 `vector` 也可以像数组一样工作。这种方法在我们预期稍后会有额外到达时是必要的。但如果我们不预期有新元素，通常使用 `copyInto` 方法是最好的。定义程序如何处理数组比处理 `vector` 要容易得多。在内存使用方面，应用数组更高效且直接。因此，通常在第一次调用时就很好地考虑数组的大小。
 
-存储无限数量的对象是 `Vector` 类最强大的用途，但它也可以用于其他目的。表 6-11 描述了允许你对所有 vector 进行精确复制、查找特定元素、通过索引引用元素以及删除所有元素的方法。注意无法删除部分 vector 元素——delete 方法的工作原理是“全有或全无”。
+存储无限数量的对象是 `Vector` 类最强大的用途，但它也可以用于其他目的。表 6-11 描述了允许你对所有 `vector` 进行精确复制、查找特定元素、通过索引引用元素以及删除所有元素的方法。注意无法删除部分 `vector` 元素——`delete` 方法的工作原理是“全有或全无”。
 
 boolean
 
@@ -1416,19 +1386,14 @@ boolean
 
 ## 方法描述
 
-`boolean contains(Object o)` 如果对象位于 vector 中，则对每个元素执行 `o.equals(eachlObject)`。
+- `boolean contains(Object o)`：如果对象位于 `vector` 中，则对每个元素执行 `o.equals(eachlObject)`。
+- `int indexOf(Object o)`：返回对象的位置，如果它不在 `vector` 中则返回 -1。使用的 `equals` 方法与上述所示。
+- `int indexOf(Object oh, int i)`：与之前的方法 `indexOf` 相同，但从位置 i 开始搜索。
+- `int lastIndexOf(Object o)`：行为类似于 `int indexOf(Object o)`，但从最后一个元素开始搜索。
+- `int removeAllElements()`：删除 `vector` 中的所有元素。
+- `boolean isEmpty()`：如果 `vector` 为空，则返回 true。
 
-`int indexOf(Object o)` 返回对象的位置，如果它不在 vector 中则返回 -1。使用的 `equals` 方法与上述所示。
-
-`int indexOf(Object oh, int i)` 与之前的方法 `indexOf` 相同，但从位置 i 开始搜索。
-
-`int lastIndexOf(Object o)` 行为类似于 `int indexOf(Object o)`，但从最后一个元素开始搜索。
-
-`int removeAllElements()` 删除 vector 中的所有元素。
-
-`boolean isEmpty()` 如果 vector 为空，则返回 true。
-
-由于 `Vector` 类没有预定义的大小，你可能在想它有多有效。由于它是一个动态结构，我们不能期望它像数组一样高效——随着它的增长，它会不断需要更多空间。默认情况下会预留空间。你可以在 vector 创建后使用 `ensureCapacity` 或 `setSize` 方法控制 vector 的大小。如果你需要在不改变大小的情况下确保空间可用，可以使用 `ensureCapacity`。如果你的 vector 大于设置的大小，`setSize` 方法是危险的。因此最好使用 `ensureCapacity`。
+由于 `Vector` 类没有预定义的大小，你可能在想它有多有效。由于它是一个动态结构，我们不能期望它像数组一样高效——随着它的增长，它会不断需要更多空间。默认情况下会预留空间。你可以在 `vector` 创建后使用 `ensureCapacity` 或 `setSize` 方法控制 `vector` 的大小。如果你需要在不改变大小的情况下确保空间可用，可以使用 `ensureCapacity`。如果你的 `vector` 大于设置的大小，`setSize` 方法是危险的。因此最好使用 `ensureCapacity`。
 
 #### 方法
 
@@ -1438,29 +1403,21 @@ boolean
 
 #### 描述
 
-`Vector(int size)` 创建一个包含 size 个对象的 vector。
+- `Vector(int size)`：创建一个包含 size 个对象的 `vector`。
+- `Vector(int size, int inc)`：创建一个包含 size 个对象的 `vector`，并建立增量 inc。
+- `ensureCapacity(int size)`：如果容量小于 size，则提供足够的位置。
+- `setSize(int size)`：设置大小，可能会移除最后的元素。
 
-`Vector(int size, int inc)` 创建一个包含 size 个对象的 vector，并建立增量 inc。
+与 `vector` 最适合存储无限数量的对象一样，哈希表被用于存储无限数量的元素对。如图 6-10 所示，哈希表包含两列。一列包含键，另一列包含元素。每个键都与且仅与一个元素相关。如果你尝试向表中添加已存在的键-元素对，相应的元素将被替换。通过将元素对放入哈希表，你可以使用相关的键来访问它们。换句话说，你可以向哈希表传递某个对象，如果该对象是键之一，将返回与该键相关的元素。这些基本操作可以通过表 6-13 给出的方法完成。
 
-`ensureCapacity(int size)` 如果容量小于 size，则提供足够的位置。
-
-`setSize(int size)` 设置大小，可能会移除最后的元素。
-
-与 vector 最适合存储无限数量的对象一样，哈希表被用于存储无限数量的元素对。如图 6-10 所示，哈希表包含两列。一列包含键，另一列包含元素。每个键都与且仅与一个元素相关。如果你尝试向表中添加已存在的键-元素对，相应的元素将被替换。通过将元素对放入哈希表，你可以使用相关的键来访问它们。换句话说，你可以向哈希表传递某个对象，如果该对象是键之一，将返回与该键相关的元素。这些基本操作可以通过表 6-13 给出的方法完成。表 6-13. `Hashtable` 主要方法
+表 6-13. `Hashtable` 主要方法
 
 ## 方法描述
 
-`Object put(Object key, Object o)` 将键-元素对放入哈希表。如果键已在元素表中，则返回与之关联的元素。
-
-`Object get(Object key)` 返回与键相关的元素。
-
-`boolean containsKey(Object key)` 如果键位于表中，则返回 true。
-
-`Object remove(Object key)` 从表中删除键-元素对。
-
-
-
-
+- `Object put(Object key, Object o)`：将键-元素对放入哈希表。如果键已在元素表中，则返回与之关联的元素。
+- `Object get(Object key)`：返回与键相关的元素。
+- `boolean containsKey(Object key)`：如果键位于表中，则返回 true。
+- `Object remove(Object key)`：从表中删除键-元素对。
 
 现在我们来构建图 6-10 所示的哈希表。首先我们将编写一段不进行任何检查的简单代码，然后让它对错误更具健壮性。由于键是简单的数字，我们应该使用包装后的原始类型。注意此示例中的类型转换。完成工作后，如果我们知道名字，就可以找到人的年龄。
 
@@ -1582,9 +1539,6 @@ public class applet extends panel {
 }
 ```
 
-
-
-
 `java.applet` 和 `java.awt.peer` 中的所有接口都遵循与执行环境无关的类无关 API 这一目标。尽管这些接口非常重要，但当我们仅使用 API 时，它们并没有实际用处。例如，如果我们不编写运行 applet 的外壳，我们就永远不会遇到 `appletstub`。当我们在第 10 章“结构化程序”中开始开发自己的包时，我们可能会记住这种技术。但现在，尽量不要在这两个包的接口上感到困。
 
 ## 接口枚举 (Interface Enumeration)
@@ -1649,15 +1603,23 @@ System.out.println("             ");
 在这里我们使用 `printEnumeration` 方法来显示向量内容。此代码片段输出如下：
 
 Vector VI
+
 ![](img/image09237.jpeg)First element in VI
+
 vector V2
+
 ![](img/image09238.jpeg)First Element in VI Second element in V2
+
+
 
 我们将 `clone` 语句替换为简单的赋值，`V1` 将与 `V2` 相同，我们的输出将是：
 
 Vector VI
+
 ![](img/image09239.jpeg)First element in VI First element in V2
+
 vector V2
+
 First element in VI First element in V2
 
 虽然 `Cloneable` 接口很重要，但它没有 `clone` 方法那么重要。当我们看到一个类实现了 `Cloneable` 接口时，我们知道该类的作者提供了克隆功能。对于 `Runnable` 接口也是如此，但重要的是 `Runnable` 类支持流。我们已经在第 5 章“工作中的 Applet”中见过这个例子，当时我们让我们的 applet 具备了能力。
@@ -1667,34 +1629,37 @@ First element in VI First element in V2
 `java.util.Observer` 接口用于实现观察者模式。`Observable` 类维护一个观察者列表并通知它们变化。`Observer` 接口有一个 `update` 方法，当可观察对象变化时会被调用。
 
 `java.util.Observer`
+
 `java.util.Observable`
 
 `java.util.Observer` 接口用于实现观察者模式。`Observable` 类维护一个观察者列表并通知它们变化。`Observer` 接口有一个 `update` 方法，当可观察对象变化时会被调用。
 
 `java.util.Observer`
+
 `java.util.Observable`
 
 `java.util.Observer` 接口用于实现观察者模式。`Observable` 类维护一个观察者列表并通知它们变化。`Observer` 接口有一个 `update` 方法，当可观察对象变化时会被调用。
 
 `java.util.Observer`
+
 `java.util.Observable`
 
 `java.util.Observer` 接口用于实现观察者模式。`Observable` 类维护一个观察者列表并通知它们变化。`Observer` 接口有一个 `update` 方法，当可观察对象变化时会被调用。
 
 `java.util.Observer`
+
 `java.util.Observable`
 
 `java.util.Observer` 接口用于实现观察者模式。`Observable` 类维护一个观察者列表并通知它们变化。`Observer` 接口有一个 `update` 方法，当可观察对象变化时会被调用。
 
 `java.util.Observer`
+
 `java.util.Observable`
-
-
-
 
 ```java
 void notifyObservers(Object arg)
 ```
+
 添加观察者，以跟踪可观察实例后面。
 
 移除观察者。
@@ -1708,26 +1673,28 @@ void notifyObservers(Object arg)
 ```java
 void setChanged()
 ```
+
 强制 `hasChanged()` 返回 `true`。
 
 ```java
 void clearChanged()
 ```
+
 强制 `hasChanged()` 返回 `false`。
 
 # 数学与 API
 
 ## Math 类
 
-我们在第 2 章 **Java 编程基础* 中涵盖了基础运算符，但在稍后，你可能需要执行更复杂的操作。`java.lang` 包中的 `Math` 类包含 30 个算术方法，例如用于寻找成对数字的最大值或最小值的方法，或者获取自然对数的方法。它还包含了静态变量形式的数字 `e` 和 `pi`。
+我们在第 2 章 **Java 编程基础** 中涵盖了基础运算符，但在稍后，你可能需要执行更复杂的操作。`java.lang` 包中的 `Math` 类包含 30 个算术方法，例如用于寻找成对数字的最大值或最小值的方法，或者获取自然对数的方法。它还包含了静态变量形式的数字 `e` 和 `pi`。
 
 图 6-12 显示了 Java 在线文档中 `Math` 类的网页。我们不再尝试更详细地描述方法，而是重点关注如何在实践中使用它们。
 
 ![](img/image09241.gif)
 
-### 示例 6.12。
+### 示例 6.12
 
-#### 示例 6-14. 类 `Math` 的。
+#### 示例 6-14. 类 `Math` 的
 
 ```java
 public class DoSomeMath {
@@ -1758,7 +1725,7 @@ public class DoSomeMath {
 | MIN_VALUE | 给定类型的最小值。 | `Integer`, `Float`, `Long`, `Double` |
 | MAX_VALUE | 给定类型的最大值。 | `Integer`, `Float`, `Long`, `Double` |
 | NEGATIVE_INFINITY | 表示负无穷大。 | `Float`, `Double` |
-| POSITIVE_INFINITY | 表示正无穷大。 | `float`, `Double` |
+| POSITIVE_INFINITY | 表示正无穷大。 | `Float`, `Double` |
 | NaN | "不是数字"可能用于表示未赋值的值 | |
 
 # 第 7 章
@@ -1807,9 +1774,9 @@ Java 允许你比 HTML 更加方便和高效地使用这些基础用户界面元
 
 图 7-1 显示了 applet 的简单原型。在这个版本中，用户只需在框中输入数字并按回车即可查看结果。我们使用事件处理器拦截 `keyDown`，检查按下的键是否等于 `\n`，从而过滤按键并提供响应。`TextField` 和 `TextArea` 类的详细描述请见下一节。
 
-### 示例 7.1。
+### 示例 7.1
 
-#### 示例 7-1. Applet 金额计算，拦截按键事件。
+#### 示例 7-1. Applet 金额计算，拦截按键事件
 
 ```java
 import java.awt.*;
@@ -1848,10 +1815,6 @@ public class currencyConverter1 extends java.applet.Applet {
 }
 ```
 
-
-
-
-
 ```java
 // 处理按键的开发程序
 
@@ -1886,13 +1849,15 @@ field1.setEditable(true);
 第一行创建了一个宽度为二十个字符的 `TextField` 类型字段。第二行为该字段分配了一个允许编辑其中文本的属性。如果将第二行的 `true` 替换为 `false`，用户将无法编辑字段中的文本。
 
 然后我们创建一个宽度为 20 个字符、高度为 4 行的文本区域类型字段：
+
 ```java
-text area field2 = new TextArea(4,20);
+TextArea field2 = new TextArea(4,20);
 ```
 
-为了给这个编辑字段启用滚动条，程序中不需要提供任何设置，因为任何 `textArea` 类对象在创建时会自动接收此界面元素。
+为了给这个编辑字段启用滚动条，程序中不需要提供任何设置，因为任何 `TextArea` 类对象在创建时会自动接收此界面元素。
 
 程序在字段编辑中输出文本可以通过两种方法之一：
+
 ```java
 field1.setText("");
 field2.appendText(OutputString);
@@ -1939,6 +1904,11 @@ show();
 | 方法 | 说明 |
 | :--- | :--- |
 | `echoCharsSet()` | 如果字段有回显字符，则返回 true。 |
+
+
+
+| 方法 | 说明 |
+| :--- | :--- |
 | `getColumns()` | 返回行的字符数。 |
 | `getEchoChar()` | 返回回显字符。 |
 | `minimumSize(int)` | 返回指定宽度的最小尺寸。 |
@@ -1951,14 +1921,11 @@ show();
 ## 表 7-3: 文本区域类构造函数
 
 | 构造函数 | 说明 |
-| :--- | :---
-TextArea 类有多个构造函数。其中一个就在上面的示例程序中。
+| :--- | :--- |
 | `TextArea()` | 创建新的 `TextArea` 类型对象。 |
 | `TextArea(int, int)` | 根据指定的行数和字符数创建新对象。 |
 | `TextArea(String)` | 创建包含指定文本的新对象。 |
-
-#### TextArea(String, int, int)
-根据指定的行数和字符数创建包含指定文本的新对象。
+| `TextArea(String, int, int)` | 根据指定的行数和字符数创建包含指定文本的新对象。 |
 
 ## 表 7-4: 文本区域类方法
 
@@ -1971,54 +1938,48 @@ TextArea 类有多个构造函数。其中一个就在上面的示例程序中�
 | `minimumSize(int, int)` | 根据指定的行数和字符数返回字段可能拥有的最小尺寸。 |
 | `minimumSize()` | 返回字段的最小尺寸。 |
 | `paramString()` | 返回字符串类型，包含字段参数。 |
-
-
-
-
-`paramString()` 返回 `meaning` 类型 `String`，包含 `parameters` `fields`。
-
-`preferredSize(int, int)` 根据指定的 `quantity` 行 `lines` 和行字符 `characters` 返回 `natural` 尺寸 `fields`。
-
-`preferredSize()` 返回给定 `fields` 的 `natural` 尺寸。
-
-`replaceText(String, int, int)`
+| `preferredSize(int, int)` | 根据指定的行数和字符数返回字段的自然尺寸。 |
+| `preferredSize()` | 返回字段的自然尺寸。 |
+| `replaceText(String, int, int)` | 将指定数字符号之间的文本替换为指定的文本。 |
 
 # 按钮 (Buttons)
-
-将指定数字符号之间的文本替换为指定的文本。
 
 之前的版本货币转换 applet 通常通过按下 `Enter` 键来执行转换。现在，让我们通过添加一个按钮来修改该 applet，用户可以在输入原始值后通过该按钮重新计算。这里是创建一个标题为 `Convert:` 的按钮的方法：
 
 ```java
-button ConvertButton = new Button("convert");
+Button ConvertButton = new Button("convert");
 ```
 
-这就是在下方示例 7-2 中创建按钮的方式。在这个版本中，我们不再提供拦截 `Enter` 键的功能，因为现在计算仅通过点击 `button` 触发。此版本 applet 的外观如图图 7-2 所示。
+这就是在下方示例 7-2 中创建按钮的方式。在这个版本中，我们不再提供拦截 `Enter` 键的功能，因为现在计算仅通过点击 `button` 触发。此版本 applet 的外观如图 7-2 所示。
 
 ![](img/image0924.gif)
 
 #### 图 7.2.
 
-示例 7-2a. 包含按钮的金额金额重新计算 applet。
+示例 7-2a. 包含按钮的金额重新计算 applet。
 
 ```java
 import java.awt.*;
-import java.applet.applet;
+import java.applet.Applet;
 
-public class currencyConverter2 extends java.applet.applet { float conversion_ratio = UKratio;
+public class currencyConverter2 extends Applet {
+    float conversion_ratio = UKratio;
+    TextField field1 = new TextField(20);
+    TextArea field2 = new TextArea(4, 20);
+    Button ConvertButton = new Button("convert");
 
-TextField field1 = new TextField(20); text area field2 = new TextArea(4,20);
-
-button ConvertButton = new Button("convert"); public void init() {
-
-field1.setEditable(true);  field2.setEditable(false);  field1.resize(field1.preferredSize());  field2.resize(field2.preferredSize());  add(field1);
-
-add(field2);  add(ConvertButton);
-
-show();  // 在屏幕上输出创建的元素
-
-}  // init 方法结束
-```（等一下，让我重新格式化代码）
+    public void init() {
+        field1.setEditable(true);
+        field2.setEditable(false);
+        field1.resize(field1.preferredSize());
+        field2.resize(field2.preferredSize());
+        add(field1);
+        add(field2);
+        add(ConvertButton);
+        show();  // 在屏幕上输出创建的元素
+    }  // init 方法结束
+}
+```
 
 这段代码片段提供了创建标记为 "convert" 按钮的功能，按下时，输入的值将被重新计算并显示在相应的字段中。`init` 方法用于创建 applet。在 `field1` 中，用户可以输入自己的值，而 `field2` 用于输出并受保护不可编辑。屏幕元素界面通过 `add` 方法添加到 applet 中。任何要显示的元素必须添加到某个容器中（在本例中，默认容器是 applet 窗口）。`resize` 方法使文本编辑框根据它们的大小（在本例中为二十个字符）排列，并考虑到窗口宽度。
 
@@ -2028,67 +1989,57 @@ show();  // 在屏幕上输出创建的元素
 
 ```java
 public void convert() {
-
-float currency1, currency2;
-
-String InputString = field1.getText();  currency1 = Float.valueOf(InputString).floatValue();  currency2 = conversion_ratio * currency1;  String OutputString = Float.toString(currency2);  field2.setText(OutputString);
-
+    float currency1, currency2;
+    String InputString = field1.getText();
+    currency1 = Float.valueOf(InputString).floatValue();
+    currency2 = conversion_ratio * currency1;
+    String OutputString = Float.toString(currency2);
+    field2.setText(OutputString);
 }  // convert() 结束
 ```
 
-在这里创建了一个字符串变量，其中记录了来自字段 `field1` 的 `meaning`。然后将 `inputString` 变量转换为 `float`，并将转换结果赋值给 `currency1` 变量。将此值乘以 `conversion_ratio`，将结果赋值给 `currency2` 变量，然后在转换为 `String` 后，将结果字符串写入 `outputString` 变量。最后，将得到的值引入字段 `field2`。执行此重新计算的方法在下方的事件处理程序修复 `convert` 按钮被按下时被调用。
+在这里创建了一个字符串变量，其中记录了来自字段 `field1` 的值。然后将 `InputString` 变量转换为 `float`，并将转换结果赋值给 `currency1` 变量。将此值乘以 `conversion_ratio`，将结果赋值给 `currency2` 变量，然后在转换为 `String` 后，将结果字符串写入 `OutputString` 变量。最后，将得到的值引入字段 `field2`。执行此重新计算的方法在下方的事件处理程序修复 `convert` 按钮被按下时被调用。
 
 示例 7-2c. 拦截按钮按下。
 
 ```java
-public boolean action(Event evt, Object obj)
-
-{
-
-if ("Convert".equals(obj))
-
-{
-
-convert(); return true;
-
-}
-
-else { return false; }
-
+public boolean action(Event evt, Object obj) {
+    if ("Convert".equals(obj)) {
+        convert();
+        return true;
+    } else {
+        return false;
+    }
 }  // action() 结束
 
 }  // applet currencyConverter 结束
 ```
 
-此事件监听方法用于设置对点击 `convert` 按钮的响应。这一点，我们必须重写名为 `action` 的事件处理器。在事件处理器内部，会将对象的标识与字符串 "Convert"（即我们按钮上的标记）进行比较。事实上，这里可以不通过比较，因为在我们的示例中只有一个我们需要做出反应的事件事件。然而，以后当我们需要向 applet 添加其他按钮以及处理鼠标事件时，我们将使用这种机制来识别发生的事件。表 7-5 列出了按钮类的方法。
+此事件监听方法用于设置对点击 `convert` 按钮的响应。这一点，我们必须重写名为 `action` 的事件处理器。在事件处理器内部，会将对象的标识与字符串 "Convert"（即我们按钮上的标记）进行比较。事实上，这里可以不通过比较，因为在我们的示例中只有一个我们需要做出反应的事件。然而，以后当我们需要向 applet 添加其他按钮以及处理鼠标事件时，我们将使用这种机制来识别发生的事件。
 
-表 7-5. 按钮类方法
+## 表 7-5: 按钮类方法
 
-## 方法描述
-
-`getLabel()` 返回按钮上的标签。`paramString()` 返回按钮选项的字符串。`setLabel(String)` 设置按钮上的标记。
-
-现在，我们需要创建一个 HTML 页面，在其中嵌入我们的重新计算 applet。创建一个空白页面并将下面的代码放入其中。然后将 HTML 文件保存到与 applet `currencyConverter2.class` 相同的目录下。然后可以使用以下代码将 HTML 页面加载到 Netscape：
-
-```html
-<applet code="currencyConverter2.class" height=200 width=200></applet>
-```
+| 方法 | 说明 |
+| :--- | :--- |
+| `getLabel()` | 返回按钮上的标签。 |
+| `paramString()` | 返回按钮选项的字符串。 |
+| `setLabel(String)` | 设置按钮上的标记。 |
 
 # 开关 (Switches)
 
 为了吸引全世界的客户，我们的旅行社必须提供许多不同货币汇率重新计算金额的能力。让我们创建几个单选按钮（复选框），以便用户可以选择转换为美元的金额。就像 HTML 管理机构一样，通过：
 
 ```java
-button ConvertButton = new Button("convert");
+Button ConvertButton = new Button("convert");
 ```
 
 此行创建了一个名为 "UK Pound" 的新开关，其默认值为 false。要创建一个指示其所属组及其状态的开关，请使用以下构造函数：
 
 ```java
-checkbox UKCheck = new Checkbox("UK Pound", CurrencyGroup, false);
+Checkbox UKCheck = new Checkbox("UK Pound", CurrencyGroup, false);
 ```
 
-这创建了一个标记为 "UK Pound" 的单选按钮，属于 `CurrencyGroup` 组并默认为 false。将开关汇集的组是类组的实例。这里在之前的示例中使用了：
+这创建了一个标记为 "UK Pound" 的单选按钮，属于 `CurrencyGroup` 组并默认为 false。将开关汇集的组是 `CheckboxGroup` 类的实例。这里在之前的示例中使用了：
 
 ```java
 CheckboxGroup CurrencyGroup = new CheckboxGroup();
@@ -2099,11 +2050,11 @@ CheckboxGroup CurrencyGroup = new CheckboxGroup();
 现在编写检查，允许发现从两个开关——英镑或法郎——中哪一个被选定：
 
 ```java
-if (UKCheck == CurrencyGroup.getCurrent())
-
-{  System.out.println("UK Pound is checked");  }  else
-
-System.out.println("Franc is checked")
+if (UKCheck == CurrencyGroup.getCurrent()) {
+    System.out.println("UK Pound is checked");
+} else {
+    System.out.println("Franc is checked");
+}
 ```
 
 现在我们只需要重新货币转换 applet，以便根据所选的单选按钮使用不同的转换因子。此版本 applet 的文本显示在示例 7-3 中。在这里我们将再次使用拦截 `enter` 键，因此此版本中缺少 `Convert` 按钮。而在第一个版本中，按下 `Enter` 会启动重新计算（更多细节请参阅上面的“键盘输入”部分）。使用开关的 applet 视图如图 7-3 所示。
@@ -2112,96 +2063,90 @@ System.out.println("Franc is checked")
 
 #### 图 7.3.
 
-示例 7-3. 使用开关的金额金额重新计算 applet。
+示例 7-3. 使用开关的金额重新计算 applet。
 
 ```java
 import java.awt.*;
-import java.applet.applet;
+import java.applet.Applet;
 
-public class currencyConverter3 extends java.applet.applet { final float UKratio = 1.50f;
+public class currencyConverter3 extends Applet {
+    final float UKratio = 1.50f;
+    final float FRANCratio = 6.00f;
+    float conversion_ratio = UKratio;
+    TextField field1 = new TextField(20);
+    TextArea field2 = new TextArea(4, 20);
+    CheckboxGroup CurrencyGroup = new CheckboxGroup();
+    Checkbox UK_Pound = new Checkbox("UK Pound", CurrencyGroup, true);
+    Checkbox French_Franc = new Checkbox("French Franc", CurrencyGroup, false);
 
-final float FRANCratio = 6.00f; float conversion_ratio = UKratio;
-
-TextField field1 = new TextField(20);
-
-false);
-
-TextArea field2 = new TextArea(4,20); CheckboxGroup CurrencyGroup = new CheckboxGroup();
-
-```
-
-
-
-
-```java
-Checkbox UK_Pound = new Checkbox("UK Pound", CurrencyGroup, true);
-checkbox French_Franc = new Checkbox("French Franc", CurrencyGroup);
-
-public void init() {
-  field1.setEditable(true);
-  field2.setEditable(false);
-  add(field1);
-  add(field2);
-  add(UK_Pound);
-  add(French_Franc);
-  resize(field1.preferredSize());
-  resize(field2.preferredSize());
-  show();
-}
-
-public void convert() {
-  // function convert() not has changed
-  float currency1, currency2;
-  String InputString = field1.getText();
-  field1.setText("");
-  currency1 = Float.valueOf(InputString).floatValue();
-  currency2 = conversion_ratio * currency1;
-  String OutputString = "$" + InputString + " = " + "#" + Float.toString(currency2) + "\n";
-  field2.appendText(OutputString);
-} // the end convert
-
-public boolean handleEvent(Event evt) {
-  // interception developments clicks mice on alone from switches
-  if (evt.target == CurrencyGroupList) {
-    if ("UK Pound" == CurrencyGroupList.getSelectedItem()) {
-      conversion_ratio = UKratio;
+    public void init() {
+        field1.setEditable(true);
+        field2.setEditable(false);
+        add(field1);
+        add(field2);
+        add(UK_Pound);
+        add(French_Franc);
+        resize(field1.preferredSize());
+        resize(field2.preferredSize());
+        show();
     }
-    if ("French Franc" == (CurrencyGroupList.getSelectedItem())) {
-      conversion_ratio = FRANCratio;
-    }
-    // examination, which from switches pressed,
-    // And choice relevant coefficient recalculation
-    if (evt.target == field1) {
-      char c = (char)evt.key;
-      if (c == '\n') {
-        convert();
-        return true;
-      } else {
+
+    public void convert() {
+        // function convert() not has changed
+        float currency1, currency2;
+        String InputString = field1.getText();
+        field1.setText("");
+        currency1 = Float.valueOf(InputString).floatValue();
+        currency2 = conversion_ratio * currency1;
+        String OutputString = "$" + InputString + " = " + "#" + Float.toString(currency2) + "\n";
+        field2.appendText(OutputString);
+    } // the end convert
+
+    public boolean handleEvent(Event evt) {
+        // interception developments clicks mice on alone from switches
+        if (evt.target == CurrencyGroup) {
+            if ("UK Pound".equals(CurrencyGroup.getSelectedItem())) {
+                conversion_ratio = UKratio;
+            }
+            if ("French Franc".equals(CurrencyGroup.getSelectedItem())) {
+                conversion_ratio = FRANCratio;
+            }
+            // examination, which from switches pressed,
+            // And choice relevant coefficient recalculation
+        }
+        if (evt.target == field1) {
+            char c = (char) evt.key;
+            if (c == '\n') {
+                convert();
+                return true;
+            } else {
+                return false;
+            }
+        }
         return false;
-      }
     }
-    return false;
-  }
 } // the end applet
 ```
 
-在表 7-6 中列出了 `checkboxgroup` 类的方法，而在表 7-7 中列出了 `checkbox` 类的方法。
+## 表 7-6: CheckboxGroup 类方法
 
-### 表 7-6. CheckboxGroup 类方法
-## 方法描述
-- `getCurrent()`: 返回当前选中的开关。
-- `setCurrent()`: 移动开关上的选择，该选择引用 `(CheckboxInstance)` `CheckboxInstance`。
-- `toString()`: 返回给定组开关数值的字符串表示。
+| 方法 | 说明 |
+| :--- | :--- |
+| `getCurrent()` | 返回当前选中的开关。 |
+| `setCurrent(Checkbox)` | 移动开关上的选择，该选择引用 `Checkbox` 实例。 |
+| `toString()` | 返回给定组开关数值的字符串表示。 |
 
-### 表 7-7. checkbox 类方法
-## 方法描述
-- `getCheckboxGroup()`: 返回开关所属的组。
-- `getLabel()`: 返回标识开关的文本说明。
-- `getState()`: 返回对应于开关状态的布尔值含义。
-- `paramString()`: 返回开关的字符串参数。
-- `setCheckboxGroup(CheckboxGroupInstance)`: 将开关重新归类到指定的组。
-- `setLabel(String)`: 为给开关设置文本标签。
-- `setState(boolean)`: 设置开关状态。
+## 表 7-7: Checkbox 类方法
+
+| 方法 | 说明 |
+| :--- | :--- |
+| `getCheckboxGroup()` | 返回开关所属的组。 |
+| `getLabel()` | 返回标识开关的文本说明。 |
+| `getState()` | 返回对应于开关状态的布尔值。 |
+| `paramString()` | 返回开关的字符串参数。 |
+| `setCheckboxGroup(CheckboxGroup)` | 将开关重新归类到指定的组。 |
+| `setLabel(String)` | 为给开关设置文本标签。 |
+| `setState(boolean)` | 设置开关状态。 |
 
 # 列表
 
@@ -2210,11 +2155,14 @@ public boolean handleEvent(Event evt) {
 此表达式创建一个名为 `CurrencyList` 的新列表，同时显示的元素数量等于三个，且你一次只能选择一个元素。如果不是 `false` 而是 `true`，则意味着列表中可以同时选择多个元素。向列表中添加元素需要更多几次操作。我们 Applet 的新版本使用列表来选择示例 7-4 中所示货币之一，并计算货币金额。
 
 ### 示例 7-4. Applet
+
+
+
 ```java
 import java.awt.*;
 import java.applet.*;
 
-public class currency4 extends java.applet.applet {
+public class currency4 extends java.applet.Applet {
   final float UKratio = 1.50f;
   final float FRANCratio = 6.00f;
   float conversion_ratio = UKratio;
@@ -2235,10 +2183,13 @@ public class currency4 extends java.applet.applet {
     field2.resize(field2.preferredSize());
     show();
   } // the end init
+}
 ```
+
 这段代码段创建了一个高为两个元素的新列表，仅允许选择其中一个。创建列表后，我们必须向其填充元素。这与上一个例子不同，在那个例子中我们将单选按钮添加到组中。新元素是直接在 `List` 类实例中添加的——之前我们是单独创建开关然后将它们组合成组。在这里，我们只需要创建一个 `List` 类的实例，之后就可以添加任意数量的元素。然后我们使用 `select(0)` 方法将光标设置为列表中的第一个元素。之后，整个列表被通过 applet 方法 `add` 添加了。
 
 ### 示例 7-4b. Applet 中添加列表
+
 ```java
 public void convert() {
   // function convert() not has changed
@@ -2278,114 +2229,96 @@ public boolean handleEvent(Event evt) {
 表 7-8 给出了 `List` 类的一些方法的描述。
 
 ### 表 7-8. List 类常用方法
-## 方法描述
-- `addItem(String)`: 将指定的字符串作为新元素添加到列表末尾。
-- `addItem(String, int)`: 在指定索引之后将指定的字符串作为新元素。
-- `allowsMultipleSelections()`: 如果列表允许同时选择多个元素，则返回 `true`。
-- `clear()`: 通过删除所有元素来清除列表。
-- `countItems()`: 返回列表中元素的数量。
-- `delItem(int)`: 删除指定的列表元素。
-- `delItems(int, int)`: 删除指定范围内的元素。
-- `deselect(int)`: 取消对指定元素的选择。
-- `getItem(int)`: 获取指定索引的文本元素。
-- `getRows()`: 返回列表中同时可见元素的数量（其高度）。
-- `getSelectedIndex()`: 返回被选中元素的索引，如果没有选中的元素则返回 `-1`。
-- `getSelectedIndexes()`: 如果列表允许同时选择多个元素，则返回被选中元素的索引。
-- `getSelectedItem()`: 返回被选中元素的文本字符串，如果没有选中的元素则返回 `null`。
-- `getSelectedItems()`: 如果列表允许同时选择多个元素，则返回被选中元素的文本行。
-- `getVisibleIndex()`: 返回上次调用 `makeVisible` 方法时变为可见元素的索引。
 
+| 方法 | 描述 |
+| :--- | :--- |
+| `addItem(String)` | 将指定的字符串作为新元素添加到列表末尾。 |
+| `addItem(String, int)` | 在指定索引之后将指定的字符串作为新元素。 |
+| `allowsMultipleSelections()` | 如果列表允许同时选择多个元素，则返回 `true`。 |
+| `clear()` | 通过删除所有元素来清除列表。 |
+| `countItems()` | 返回列表中元素的数量。 |
+| `delItem(int)` | 删除指定的列表元素。 |
+| `delItems(int, int)` | 删除指定范围内的元素。 |
+| `deselect(int)` | 取消对指定元素的选择。 |
+| `getItem(int)` | 获取指定索引的文本元素。 |
+| `getRows()` | 返回列表中同时可见元素的数量（其高度）。 |
+| `getSelectedIndex()` | 返回被选中元素的索引，如果没有选中的元素则返回 `-1`。 |
+| `getSelectedIndexes()` | 如果列表允许同时选择多个元素，则返回被选中元素的索引。 |
+| `getSelectedItem()` | 返回被选中元素的文本字符串，如果没有选中的元素则返回 `null`。 |
+| `getSelectedItems()` | 如果列表允许同时选择多个元素，则返回被选中元素的文本行。 |
+| `getVisibleIndex()` | 返回上次调用 `makeVisible` 方法时变为可见元素的索引。 |
+| `isSelected(int)` | 如果选择了指定索引的元素，返回 `true`；反之返回 `false`。 |
+| `makeVisible(int)` | 滚动列表，使指定索引的元素可见。 |
+| `minimumSize(int)` | 返回由指定数量同时可见元素的列表将占据的最小尺寸。 |
+| `minimumSize()` | 返回列表的最小尺寸。 |
+| `paramString()` | 返回字符串参数列表。 |
+| `preferredSize(int)` | 返回由指定数量同时可见元素的列表的自然尺寸。 |
+| `preferredSize()` | 返回给定列表的自然尺寸。 |
+| `replaceItem(String, int)` | 替换指定索引的文本元素。 |
+| `select(int)` | 选中指定索引的元素。 |
+| `setMultipleSelections(boolean)` | 允许或禁止同时选择多个元素。 |
 
+## 下拉列表
 
-
-
-`isSelected(int)` 如果选择了指定索引的元素，返回 `true`；反之返回 `false`。
-
-`makeVisible(int)` 滚动列表，使指定索引的元素可见。
-
-`minimumSize(int)` 返回由指定数量同时可见元素的列表将占据的最小尺寸。
-
-`minimumSize()` 返回列表的最小尺寸。
-
-`paramString()` 返回字符串参数列表。
-
-`preferredSize(int)` 返回由指定数量同时可见元素的列表的自然尺寸。
-
-`preferredSize()` 返回给定列表的自然尺寸。
-
-`replaceItem(String, int)` 替换指定索引的文本元素。
-
-`select(int)` 选中指定索引的元素。
-
-`setMultipleSelections(boolean)` 允许或禁止同时选择多个元素。
-
-# # 下拉列表
-
-我们已经知道如何通过开关和列表对多种可能性的选择进行编程。另一种可以减小 applet 控件尺寸的方法是下拉列表（Choice）。这种接口组件与 `list` 类似，包含一组元素；此外，它还可以处于打开或关闭状态，在关闭状态下，列表中仅显示选中的元素（见图 7-5）。就像我们在上一个版本的 applet 中处理列表那样样，我们需要创建一个 `Choice` 类实例并向其中填充元素。
+我们已经知道如何通过开关和列表对多种可能性的选择进行编程。另一种可以减小 applet 控件尺寸的方法是下拉列表（Choice）。这种接口组件与 `List` 类似，包含一组元素；此外，它还可以处于打开或关闭状态，在关闭状态下，列表中仅显示选中的元素（见图 7-5）。就像我们在上一个版本的 applet 中处理列表那样，我们需要创建一个 `Choice` 类实例并向其中填充元素。
 
 ![](img/image0924.gif)
 
-## 示例 7.5
+### 示例 7.5
 
 下拉列表的创建方式与你熟悉的普通列表完全相同。基于上一个版本的 applet，你只需要将所有的 `CurrencyGroupList` ID 替换为 `CurrencyGroupChoice` ID 即可。创建新下拉列表的代码片段见示例 7-5。
 
 示例 7-5。在 applet 中添加下拉列表。
+
 ```java
 Choice CurrencyGroupChoice = new Choice();
-CurrencyGroupList.addItem("UK Pound");
-CurrencyGroupList.addItem("French Franc");
+CurrencyGroupChoice.addItem("UK Pound");
+CurrencyGroupChoice.addItem("French Franc");
 ```
 
 应将示例 7-5 中的文本插入到 applet 中，替换 `CurrencyGroupList` 的声明。该声明位于上版本的早期代码中，那里使用了普通列表（参见示例 7-4）。表 7-9 列出了 `Choice` 类的一些方法。
 
-表 7-9。`Choice` 类的实用方法
+### 表 7-9. `Choice` 类的实用方法
 
-## 方法描述
+| 方法 | 描述 |
+| :--- | :--- |
+| `addItem(String)` | 向下拉列表添加新元素。 |
+| `countItems()` | 返回下拉列表中的元素数量。 |
+| `getItem(int)` | 返回指定索引元素的字符串表示。 |
+| `getSelectedIndex()` | 返回所选元素的索引位置。 |
+| `getSelectedItem()` | 返回所选元素的字符串表示。 |
+| `paramString()` | 返回下拉列表的字符串参数。 |
+| `select(int)` | 将选择切换到指定索引的元素。 |
+| `select(String)` | 将选择切换到对应指定字符串的元素。 |
 
-`addItem(String)` 向下拉列表添加新元素。
-
-`countItems()` 返回下拉列表中的元素数量。
-
-`getItem(int)` 返回指定索引元素的字符串表示。
-
-`getSelectedIndex()` 返回所选元素的索引位置。
-
-`getSelectedItem()` 返回所选元素的字符串表示。
-
-`paramString()` 返回下拉列表的字符串参数。
-
-`select(int)` 将选择切换到指定索引的元素。
-
-`select(String)` 将选择切换到对应指定字符串的元素。
-
-# 滚动条
+## 滚动条
 
 滚动条会自动添加到编辑字段中，但你也可以单独使用它们。例如，在我们的货币汇转换 applet 中，你可以添加一个滚动条，用户可以通过它更改重新计算系数（见图 7-6）。这里是创建滚动条的构造函数：
 
-![](img/image0924.gif)
+![](img/img/image0924.gif)
 
-## 示例 7.6
+### 示例 7.6
 
 ```java
-Scrollbar ratioScrollBar = new Scrollbar(Scrollbar.HORIZONTAL, 150, 25, fifty, 250);
+Scrollbar ratioScrollBar = new Scrollbar(Scrollbar.HORIZONTAL, 150, 25, 50, 250);
 ```
 
 这里创建了一个水平滚动条，其初始位置设置为 150。滚动条在屏幕上的长度为 25，滑块对应最左位置的最小值为 50，最大值为 250（这些数值，以及当前位置引擎，可能仅以整数形式呈现）。
 
 让我们在我们的货币转换 applet 中添加这样一个滚动条。你还记得，到为止我们使用了 1.5 的转换因子，但现在我们允许用户更改此值：当滑块向左移动时，值减少 0.1；向右移动时，增加 0.1。在相邻的编辑字段中，我们将显示正在设置的值，以便用户看到自己的操作结果。
 
-示例 7-6a。通过滚动条重新计算金钱金额的 applet。
+#### 示例 7-6a。通过滚动条重新计算金钱金额的 applet。
 
 ```java
 import java.awt.*;
-import java.applet.applet;
+import java.applet.Applet;
 
-public class currencyConverter5 extends java.applet.applet {
+public class currencyConverter5 extends java.applet.Applet {
     float conversion_ratio = 1.5f;
     TextField field1 = new TextField(20);
     TextArea field2 = new TextArea(4,20);
     TextField ratioField = new TextField(5);
-    Scrollbar ratioScrollBar = new Scrollbar(Scrollbar.HORIZONTAL, 150, 25, fifty, 250);
+    Scrollbar ratioScrollBar = new Scrollbar(Scrollbar.HORIZONTAL, 150, 25, 50, 250);
 
     void init() {
         field1.setEditable(true);
@@ -2399,54 +2332,50 @@ public class currencyConverter5 extends java.applet.applet {
 }
 ```
 
-
-
-
 下文原文展示了如何使用文本注释来修改之前的版本的 applet（参见示例 7-6）。
 
 ![](img/image09248.gif)
 
-### Rice. 7.7.
-
-示例 7-7.从文本注释重新计算金额的 applet。
+#### 示例 7-7. 从文本注释重新计算金额的 applet。
 
 ```java
-public class currencyConverter76 extends java.applet.applet { float conversion_ratio = 1.5f;
+public class currencyConverter76 extends java.applet.Applet {
+    float conversion_ratio = 1.5f;
+    TextField field1 = new TextField(20);
+    TextArea field2 = new TextArea(4,20);
+    TextField ratioField = new TextField(5);
+    Scrollbar ratioScrollBar = new Scrollbar(Scrollbar.HORIZONTAL, 150, 25, 50, 250 );
 
-TextField field1 = new TextField(20); TextArea field2 = new TextArea(4,20); TextField ratioField = new TextField(5);
-
-scroll bar ratioScrollBar = new scrollbar( Scrollbar.HORIZONTAL, 150, 25, fifty, 250 );
-
-public void init() {
-
-field1.setEditable(true); field2.setEditable(false);
-
-add(new Label("Conversion Ratio")); add(ratioField);
-
-add(new Label("Adjust Ratio")); add(ratioScrollBar);
-
-add(new Label("Input number and hit ENTER")); add(field1);
-
-add(new Label("Converted Number")); add(field2); ratioField.setText("1.50"); resize(field1.preferredSize()); resize(field2.preferredSize()); show();
-
-} // the end init
+    public void init() {
+        field1.setEditable(true);
+        field2.setEditable(false);
+        add(new Label("Conversion Ratio"));
+        add(ratioField);
+        add(new Label("Adjust Ratio"));
+        add(ratioScrollBar);
+        add(new Label("Input number and hit ENTER"));
+        add(field1);
+        add(new Label("Converted Number"));
+        add(field2);
+        ratioField.setText("1.50");
+        resize(field1.preferredSize());
+        resize(field2.preferredSize());
+        show();
+    } // the end init
+}
 ```
 
-table 7-11. 有用方法标签
+### 表 7-11. 有用方法标签
 
-## 方法描述
+| 方法 | 描述 |
+| :--- | :--- |
+| `getAlignment()` | 返回给定注释的当前模式对齐。 |
+| `getText()` | 返回文本注释。 |
+| `paramString()` | 返回字符串参数注释。 |
+| `setAlignment(int)` | 设置注释的模式对齐。 |
+| `setText(String)` | 设置文本注释。 |
 
-`getAlignment()` 返回给定注释的当前模式对齐。
-
-`getText()` 返回文本注释。
-
-`paramString()` 返回字符串参数注释。
-
-`setAlignment(int)` 设置注释的模式对齐。
-
-`setText(String)` 设置文本注释。
-
-# 接下来做什么？
+## 接下来做什么？
 
 在本章中，我们已经介绍了适用于 applet 的用户界面主要组件。在下一章中，我们将利用所学知识，开始探索更复杂的组件，并讨论一些通用的用户界面设计和布局。
 
@@ -2454,7 +2383,7 @@ table 7-11. 有用方法标签
 
 ![](img/image09249.jpeg)
 
-关于用户界面
+### 关于用户界面
 
 Applet 外观 编程容器
 
@@ -2496,18 +2425,17 @@ FlowLayout BorderLayout GridLayout CardLayout GridBagLayout
 
 屏幕元素的选择适配是一项需要权衡方法的负责任务，特别是对于相当复杂的 applet 而言。如果你的 applet 为用户提供了许多选项和控件，并显示了许多异构信息，至少应该比较几种适配方案，尝试选择一个能让 applet 运行尽可能舒适和直观的方案。例如，提供版本信息、目的和作者的 applet，最好是使用“帮助”菜单项，因为任何有经验的用户都会恰好在那里搜索这些信息。
 
-在设计界面时，你应该尝试把自己置于对计算机和互联网知识最少的典型用户的立地。例如，一个想要查看帮助系统的典型用户会在窗口左上角搜索相应的菜单，这就是为什么明明的做法是恰好将其放在那里。必须遵循的界面构建传统，，不会以任何方式限制你作为设计者的创作自由。尽管对用户友好应该放在第一位（只要你预计会有你以外的人使用你的 applet），但它不会阻碍你在 applet 设计中投入某些原创性。
+在设计界面时，你应该尝试把自己置于对计算机和互联网知识最少的典型用户的立地。例如，一个想要查看帮助系统的典型用户会在窗口左上角搜索相应的菜单，这就是为什么明明的做法是恰好将其放在那里。必须遵循的界面构建传统，不会以任何方式限制你作为设计者的创作自由。尽管对用户友好应该放在第一位（只要你预计会有你以外的人使用你的 applet），但它不会阻碍你在 applet 设计中投入某些原创性。
 
 # 容器
 
-为了组合相关的控件，Java API 提供了三种类型的容器：面板（panels）、对话框（dialogs）和框架（frames）。所有容器都是 Component 类的子类，并用作包含其他界面元素的复合对象。在复杂界面的情况下，容器还允许相对于彼此以不同的方式排列元素组。例如，一组带有关联按钮的复选框或开关可以组合在一起，并相对于另一个界面元素以某种方式放置——例如编辑字段。
+
+
+为了组合相关的控件，Java API 提供了三种类型的容器：面板（panels）、对话框（dialogs）和框架（frames）。所有容器都是 `Component` 类的子类，并用作包含其他界面元素的复合对象。在复杂界面的情况下，容器还允许相对于彼此以不同的方式排列元素组。例如，一组带有关联按钮的复选框或开关可以组合在一起，并相对于另一个界面元素以某种方式放置——例如编辑字段。
 
 ## 面板
 
-
-
-
-Panel（面板）是 Java 中常用的容器类型。因此，在上述包含一组复选框和一个按钮的示例中，使用 `panel` 是最方便的。`panel` 是一个直接属于 `Container` 类的对象。`Panel` 可以被放在另一个容器（例如 `frame`）内部，也可以直接放在 Web 浏览器窗口中。当你的界面包含大量元素时，将具有相同含义的元素组合在帮助面板（help panels）中是有意义的。
+`Panel`（面板）是 Java 中常用的容器类型。因此，在上述包含一组复选框和一个按钮的示例中，使用 `panel` 是最方便的。`panel` 是一个直接属于 `Container` 类的对象。`Panel` 可以被放在另一个容器（例如 `frame`）内部，也可以直接放在 Web 浏览器窗口中。当你的界面包含大量元素时，将具有相同含义的元素组合在帮助面板（help panels）中是有意义的。
 
 面板还可以有它自己的布局管理器，且该布局管理器独立于包含此 `panel` 的容器的布局管理器。例如，假设我们使用简单的 `FlowLayout` 布局管理器来创建一个包含各种尺寸组件的 `frame`。现在，你需要在这个 `frame` 中放入一组五个相同大小的按钮。这可以通过将这些按钮排列在 `panel` 中并在其中应用 `GridLayout` 布局管理器（该布局器专门用于布局具有相同尺寸元素）来快速、方便地完成，然后将完成的 `panel` 放置在 `frame` 中。
 
@@ -2543,7 +2471,7 @@ Panel（面板）是 Java 中常用的容器类型。因此，在上述包含一
 
 你创建的所有 `frames` 自动实现 `MenuContainer` 类。也许是因为 `frame` 具有交互性。正这为什么 `frame` 是唯一自动实现 `MenuContainer` 类的容器，尽管理论上菜单可以被添加到任何容器中。
 
-### Addendum menu in applet（在 applet 中添加菜单）
+## Addendum menu in applet（在 applet 中添加菜单）
 
 单独的下拉菜单被添加到面板菜单——一个 `menubar` 类对象中，随后将该对象添加到相应的 `frame` 中。首先，我们需要创建一个 `MenuBar` 实例。之后，我们创建 `Menu` 类的实例并向它们添加命令。
 
@@ -2568,13 +2496,11 @@ Panel（面板）是 Java 中常用的容器类型。因此，在上述包含一
 frameNameInstantiation.setHelpMenu(m)
 ```
 
-
-
 最后，US 仍然使用实例菜单栏的框架。这是通过 `setMenuBar` 方法实现的，它与 `setHelpMenu` 一样，属于 `Frame` 类：`setMenuBar(Bar)`。
 
 此操作符允许将指定的面板菜单添加到当前框架中。规则是，此方法的调用放置在创建菜单代码的最末尾：首先创建一个 `MenuBar` 类的实例，然后创建 `Menu` 容器，接着将命令添加到已创建的菜单，只有在完成所有这些操作后，将创建的菜单添加到面板菜单中。
 
-### 菜单创建命令
+## 菜单创建命令
 
 在创建菜单时，你必须为每个下拉菜单实现 `Menu` 类，并为菜单中的每个命令实现 `MenuItem` 类。新菜单的声明格式如下：`Menu m = new Menu("Operation");`
 
@@ -2582,7 +2508,7 @@ frameNameInstantiation.setHelpMenu(m)
 
 由于对象的标题就足够访问对象（例如，菜单的标题或命令文本），我们可以将创建新命令并添加到菜单的步骤合并：
 
-```m
+```java
 m.add(new MenuItem("Adjust Ratio"));
 ```
 
@@ -2600,11 +2526,11 @@ new Menu("Operation", true);
 
 图 8.1。
 
-### 菜单事件处理
+## 菜单事件处理
 
 当用户选择菜单中的任一个命令时，它会产生相应的事件。程序对该事件以及任何其他事件的反应，是通过安装相应的处理器来确保的。因此，在本章的“添加菜单：CardLayout”小节的示例程序中，我们将进行如下检查：
 
-```
+```java
 if ((evt.id == Event.ACTION_EVENT) && (evt.target==m))
 ```
 
@@ -2616,7 +2542,7 @@ if ((evt.id == Event.ACTION_EVENT) && (evt.target==m))
 
 在本章的许多示例中，你和我都必须为输出信息设置字体。因此，是时候了解一下这方面的可能性了。AWT 提供了这些功能。使用的主要方法——`setFont` 方法——属于 `Component` 类而不是 `Font` 类。得益于此，我们不仅可以为每个组件单独更改字体，还可以让相关组件组从通用父对象继承字体参数。`new font` 构造函数如下：
 
-```
+```java
 new Font(String name, int style, int size);
 ```
 
@@ -2640,12 +2566,9 @@ int pixelSizeOfString = MyFontMetrics.stringWidth("Hello");
 
 以下是这些布局管理器的描述，以及它们在章后半部分工作示例中使用的概述。
 
-![](img/image09253.jpeg)。
+![](img/image09253.jpeg)
 
 ## FlowLayout
-
-
-
 
 你已经熟悉最简单的布局管理器 - `FlowLayout` 的活动结果。该管理器在货币转换小程序中作为默认管理器工作。该管理器的工作原理非常非常简单，可以归纳为：每个新添加的组件都放置在当前水平行中，如果该行仍有空间；否则，组件将向下移动并开始下一行水平行。因此，除了最后一行外，每一行都包含了当前容器宽度下能容纳的多个组件。每行的内容都居中，然后向容器的左、右边缘对齐。如果你先使用 `<APPLET>` 标签的 `HEIGHT` 和 `WIDTH` 属性计算出程序在 HTML 页面上分配区域的大小，这种算法可以让你获得相当专业的视觉效果。例如，如果你知道按钮的精确尺寸，可以设置小程序的宽度，使得按钮能够垂直排列。然而，通常尝试使用此管理器来实现美观的布局需要花费太多精力，这从长远来看是不划不入的，因为容器的任何缩放调整都会破坏精心构建的结构（例如，我们示例中的一列按钮可能会变成几行按钮）。
 
@@ -2673,39 +2596,35 @@ int pixelSizeOfString = MyFontMetrics.stringWidth("Hello");
 
 - `gridwidth`, `gridheight`：这些选项允许你为该组件保留的区域设置行（`gridwidth`）或列（`gridheight`）的单元格数量。默认值为 1。`GridBagConstraints.REMAINDER` 值指定添加的组件必须是行（`gridwidth`）或列（`gridheight`）最后一个。`GridBagConstraints.RELATIVE` 值表示此组件必须放置在其行（`gridwidth`）或列（`gridheight`）最后一个之后。
 
+
+
 - `fill`：当组件尺寸小于分配空间时使用此值，允许你指定组件是否缩放以及如何缩放。此参数可以取值 `GridBagConstraints.NONE`（默认）、`GridBagConstraints.HORIZONTAL`（意味着尽可能沿水平方向拉伸组件，但不改变其高度）、`GridBagConstraints.VERTICAL`（尽可能垂直地拉伸组件，但不改变其宽度）和 `GridBagConstraints.BOTH`（尽可能垂直和水平地拉伸组件）。
 
-- `ipadx`, `ipady`：这些选项允许你设置内边距，即在最小组件尺寸上的数量。这意味着组件的宽度不能小于其最小自然宽度加上 `ipadx*2` 像素（乘以二是因为内边距被添加到组件的两侧）。同样，组件的高度不能小于其最小自然高度加上 `ipady*2` 像素。
+- `ipadx`、`ipady`：这些选项允许你设置内边距，即在最小组件尺寸上的数量。这意味着组件的宽度不能小于其最小自然宽度加上 `ipadx*2` 像素（乘以二是因为内边距被添加到组件的两侧）。同样，组件的高度不能小于其最小自然高度加上 `ipady*2` 像素。
 
 - `insets`：此参数指示组件的外部缩进，即组件与为其分配区域边界之间的最小距离。
 
 - `anchor`：此选项用于组件小于其分配区域时，并允许指定在这些区域内的放置方式。允许的值如下：
 
+`GridBagLayout.CENTER`（中心）、`GridBagLayout.NORTH`（北）、`GridBagLayout.NORTHEAST`（东北）、`GridBagLayout.EAST`（东）、`GridBagLayout.SOUTHEAST`（东南）、`GridBagLayout.SOUTH`（南）、`GridBagLayout.SOUTHWEST`（西南）、`GridBagLayout.WEST`（西）、`GridBagLayout.NORTHWEST`（西北）
 
-
-
-`GridBagLayout.CENTER (中心)`、`GridBagLayout.NORTH (北)`、`GridBagLayout.NORTHEAST (东北)`、`GridBagLayout.EAST (东)`、`GridBagLayout.SOUTHEAST (东南)`、`GridBagLayout.SOUTH (南)`、`GridBagLayout.SOUTHWEST (西南)`、`GridBagLayout.WEST (西)`、`GridBagLayout.NORTHWEST (西北)`
-*   `weightx`、`weighty`：这两个参数用于指定空间分布的性质，对于容器尺寸变化时组件的行为至关重要。如果某行中没有组件的 `weightx` 值不同（或者某列中组件的 `weighty` 值不同），则该行（或列）的所有组件将彼此靠近并在内部居中。换句话说，这些参数的零值会导致布局管理器将所有空白推向容器的边缘。
+- `weightx`、`weighty`：这两个参数用于指定空间分布的性质，对于容器尺寸变化时组件的行为至关重要。如果某行中没有组件的 `weightx` 值不同（或者某列中组件的 `weighty` 值不同），则该行（或列）的所有组件将彼此靠近并在内部居中。换句话说，这些参数的零值会导致布局管理器将所有空白推向容器的边缘。
 
 # 布局管理器选择
 
 现在你需要为应用程序选择最适合的布局管理器。表 8-1 总结了所考虑布局器的应用建议。一个通用的建议是：在实践中尝试应用不同的布局管理器以检查它们对你情况的适用性。
 
-### 8-1 布局管理器选择
+### 表 8-1 布局管理器选择
 
 | 你的需求 | 应该使用 | 建议 |
 | :--- | :--- | :--- |
-| 快速放置所有组件，不关注组合 | `FlowLayout` |
-| 良好地排列所有组件 | `BorderLayout` |
-| 具有相同尺寸组件 | `GridLayout` |
-| 放置某些具有相同尺寸组件 | `GridBagLayout` |
-| 根据需要显示屏幕组件 | `CardLayout` |
-| 某些组件是持久的，某些需要调整 | |
-| 尽可能控制组件的位置，并对容器尺寸的变化有良好的反应 | |
-
-在单独面板中使用 `GridLayout`，将具有相同的组件聚集在一起，并将其他组件移到面板之外。
-
-在 `Panel` 中使用 `CardLayout`，用于根据需要输出组件，超出面板限制。
+| 快速放置所有组件，不关注组合 | `FlowLayout` | |
+| 良好地排列所有组件 | `BorderLayout` | |
+| 具有相同尺寸组件 | `GridLayout` | |
+| 放置某些具有相同尺寸组件 | `GridBagLayout` | |
+| 根据需要显示屏幕组件 | `CardLayout` | 在单独面板中使用 `GridLayout`，将具有相同的组件聚集在一起，并将其他组件移到面板之外。 |
+| 某些组件是持久的，某些需要调整 | `CardLayout` | 在 `Panel` 中使用 `CardLayout`，用于根据需要输出组件，超出面板限制。 |
+| 尽可能控制组件的位置，并对容器尺寸的变化有良好的反应 | `GridBagLayout` | |
 
 请记住，在单独面板中完全可以安装与相邻面板以及所属整个容器管理器不同的布局管理器。例如，如果在大型面板中使用 `GridBagLayout`，那么对于嵌套其中的较小面板，可以选择 `CardLayout`。
 
@@ -2735,8 +2654,9 @@ LeftPanel.add("North", ratioField);
 
 在开发并调试好元素界面后，你可以找出这种方式放置组件的窗口尺寸是多少。要获取此信息，可以使用以下返回容器尺寸的任一个方法：
 
-*   `preferredLayoutSize`：`public abstract Dimension preferredLayoutSize(Container parent)`。该方法根据父容器中的其他组件，计算指定面板的自然宽度和高度。
-*   `minimumLayoutSize`：`public abstract Dimension minimumLayoutSize(Container parent)`。该方法根据父容器中的其他组件，计算指定面板的最小宽度和高度。
+- `preferredLayoutSize`：`public abstract Dimension preferredLayoutSize(Container parent)`。该方法根据父容器中的其他组件，计算指定面板的自然宽度和高度。
+
+- `minimumLayoutSize`：`public abstract Dimension minimumLayoutSize(Container parent)`。该方法根据父容器中的其他组件，计算指定面板的最小宽度和高度。
 
 # 示例
 
@@ -2746,13 +2666,11 @@ LeftPanel.add("North", ratioField);
 
 让我们尝试使用框架构建金额计算 applet 界面。事实证明使用这种新界面可以实现相同的功能，只需引入非常小的更改。主要的变化是整个 applet 现在位于一个独立的框架中，而不是浏览器窗口。在这个示例中，我们将使用 `FlowLayout`，因为对我们来说，现在是快速获取结果，而不需要花费大量精力精确指定组件的位置。
 
-
-
 因为在这种情况下，我们正在向标准帧类添加新内容，所以我们使用了 `extends` 关键字。你可能并不完全理解为什么这是必要的。假设我们已经定义了类 `Frame1`。但请记住，我们启动的每个 applet 都是通过声明 `"AppletName extends Applet"` 的。在这种情况下，我们在这里创建了一个专门的设计器。因此，我们得到了自己的组件——在本文中是一个帧——它可以被反复重复使用，并在此基础上创建其他类。
 
 示例的其余部分与上一章的最后一个示例几乎相同。`setLayout` 方法设置在创建的帧使用的布局管理器。`setFont` 方法设置帧中显示文本的字体。同样，你可以为输入的任何组件设置字体。在我们创建了 `Frame1` 类之后，我们将在 applet 中创建的所有组件都将属于 `Frame1`，而不是 Web 浏览器的 applet 区域。通过将帧的设置为 300x250 像素，我们调用了 `pack` 方法，它会尝试在部署管理器限制的范围内将组件尽可能地放置在容器中。最后，我们调用 `show` 方法将帧输出到屏幕上。
 
-示例 8-1c. applet，使用帧。
+### 示例 8-1c. applet，使用帧
 
 ```java
 public void convert() {
@@ -2779,7 +2697,7 @@ public boolean handleEvent(Event evt) {
 } // the end applet
 ```
 
-此示例中的 `convert` 方法与我们在上一章中处理过的示例 applet 中的同名方法没有区别。`handleEvent` 方法也是如此，特别有趣的是，考虑到现在此方法处理了与帧的操作。这是因为所创建的帧是一个扩展，而负责事件处理程序的代码直接添加到了帧的属性中。在此，只有属于 `Frame` 类的 `handleEvent` 方法被重写了，而其他类中同名的方法（例如在基础课堂 applet `Window1` 中）的 `handleEvent` 方法保持完好无。
+此示例中的 `convert` 方法与我们在上一章中处理过的示例 applet 中的同名方法没有区别。`handleEvent` 方法也是如此，特别有趣的是，考虑到现在此方法处理了与帧的操作。这是因为所创建的帧是一个扩展，而负责事件处理程序的代码直接添加到了帧的属性中。在此，只有属于 `Frame` 类的 `handleEvent` 方法被重写了，而其他类中同名的方法（例如在基础课堂 applet `Window1` 中）的 `handleEvent` 方法保持完好无损。
 
 到为止，你应该已经清楚了如何构建一个创建你自己的窗口的 applet。如上所述，applet 接口的一个重要部分是使用许多不同界面元素的面板。面板与布局管理器的配合有助于 applet 界面的视觉化组织。你将在本章的后部分看到使用面板的示例，但现在让我们熟悉一种功能与帧最接近的元素——交互式窗口。
 
@@ -2791,9 +2709,9 @@ public boolean handleEvent(Event evt) {
 
 ![](img/image09255.gif)
 
-#### 图 8.3。
+#### 图 8.3
 
-示例 8-2a. 来自交互式窗口的 Applet。
+### 示例 8-2a. 来自交互式窗口的 Applet
 
 ```java
 import java.awt.*;
@@ -2828,7 +2746,7 @@ public class Show_Dialog extends applet {
 
 由于我们使用了属于 `Intro_Dialog` 类的 `Intro_Dialog` 构造函数，这些参数必须传递给高级类 `Show_Dialog`。`setLayout` 语句实际上可以省略，因为 `BorderLayout` 管理器已经是帧和对话框的默认管理器。我们在示例中开启此字符串是为了提醒，除非指定额外的参数位置，否则 `add(newComponent)` 方法将不起作用，例如 `add("center", newComponent)`。
 
-示例 8-2b. 使用帧的交互式窗口 Applet。
+### 示例 8-2b. 使用帧的交互式窗口 Applet
 
 ```java
 class Intro_Dialog extends Dialog {
@@ -2852,10 +2770,7 @@ class Intro_Dialog extends Dialog {
 }
 ```
 
-
-
-
-面板（Panel）是 AWT 中是最简单的容器。面板非常适合将标签、按钮以及其他界面元素进行分组，这些元素通常运行在浏览器窗口的 applet 中。然而，你也可以在创建了自己的帧或对话框的 applet 中使用面板。在这个示例中，我们还将使用 `BorderLayout` 管理器来布局面板组件。
+面板（`Panel`）是 AWT 中最简单的容器。面板非常适合将标签、按钮以及其他界面元素进行分组，这些元素通常运行在浏览器窗口的 applet 中。然而，你也可以在创建了自己的帧或对话框的 applet 中使用面板。在这个示例中，我们还将使用 `BorderLayout` 管理器来布局面板组件。
 
 在这一节中，让我们熟悉面板的使用。但我们不会完整地编写整个 applet 的代码，而是仅关注与面板相关的部分。
 
@@ -2863,64 +2778,51 @@ class Intro_Dialog extends Dialog {
 
 ![](img/image09258.gif)
 
-### 图 8.4。
+#### 图 8.4
 
-示例 8-3a. 使用面板的 applet。
+### 示例 8-3a. 使用面板的 applet
 
 ```java
-import java.awt.*;
-
+import java.awt*;
 import java.applet.applet;
 
 public class Panel1 extends applet { public void init() {
-
-new Frame1();
-
+    new Frame1();
 }
-
 } // the end Panel1
 
 class Panel_n_Frame extends Panel_n_Frame { float conversion_ratio = 1.5f; TextField field1 = new TextField(20); text area field2 = new TextArea(4,20);
-
 TextField ratioField = new TextField(5);
-
-scroll bar ratioScrollBar = new scrollbar ( scrollbar.VERTICAL, 150, 25, fifty,
-
-250 );
-
+scroll bar ratioScrollBar = new scrollbar ( scrollbar.VERTICAL, 150, 25, fifty, 250 );
 public Panel_n_Frame() {
-
 panel right panel = new Panel(); Panel LeftPanel = new Panel(); setLayout(new BorderLayout());
-
 setFont(new Font("Helvetica", Font.PLAIN, 16)); setBackground(color.gray);
-
 field1.setEditable(true); field2.setEditable(false); LeftPanel.setLayout(new BorderLayout()); LeftPanel.add("Center", ratioField); LeftPanel.add("North", ratioScrollBar); RightPanel.setLayout(new BorderLayout()); RightPanel.add("North", field1); RightPanel.add("South", field2); ratioField.setText("1.50"); resize(field1.preferredSize()); resize(field2.preferredSize()); resize(300,250);
-
 add("East", RightPanel); add("West", LeftPanel); pack();
-
 show();
-
 } // the end init
 ```
 
+
+
 在这里，作为变化，我们使用了一个垂直滚动条。通过创建面板 `RightPanel` 和 `LeftPanel`，我们向它们添加了界面组件。注意，`setLayout` 和 `setFont` 方法属于 `Panel_n_Frame` 类，而不是 `RightPanel` 和 `LeftPanel`。如果 applet 界面是在浏览器窗口中而不是独立窗口中，我们将修改用于程序窗口的大部分属性，这些属性都是为 applet 的工作分配的。
 
-每个面板都可以有自己的布局管理器。如你所知，`BorderLayout` 管理器需要选项中的之一：North、South、East、West 或 Center。`Center` 参数除了居中外，还有一个副作用——使用此选项指定的组件将尽可能地伸伸，填满容器的所有剩余空间。因此，如果你为 `ratioScrollbar` 指定 `Center` 参数而不是 `West`，结果将非常搞笑——滚动条的大小会增大，并占据左侧面板上的所有剩余空间。另一方面，可以使用此参数添加编辑框或画布，因为这些元素的性质允许在不失真的情况下自由缩放。在向面板添加所有必要元素后，我们必须在 applet 中添加面板——这些面板组件将自动添加。
+每个面板都可以有自己的布局管理器。如你所知，`BorderLayout` 管理器需要选项中的之一：North、South、East、West 或 Center。`Center` 参数除了居中外，还有一个副作用——使用此选项指定的组件将尽可能地伸展，填满容器的所有剩余空间。因此，如果你为 `ratioScrollbar` 指定 `Center` 参数而不是 `West`，结果将非常搞笑——滚动条的大小会增大，并占据左侧面板上的所有剩余空间。另一方面，可以使用此参数添加编辑框或画布，因为这些元素的性质允许在不失真的情况下自由缩放。在向面板添加所有必要元素后，我们必须在 applet 中添加面板——这些面板组件将自动添加。
 
-示例 8-3b. 使用面板的 applet。
+## 示例 8-3b. 使用面板的 applet
 
 ```java
 public void convert() {
 
-float currency1, currency2;
+    float currency1, currency2;
 
-String InputString = field1.getText(); field1.setText("");
+    String InputString = field1.getText(); field1.setText("");
 
-currency1 = Float.valueOf(InputString).floatValue(); currency2 = conversion_ratio * currency1;
+    currency1 = Float.valueOf(InputString).floatValue(); currency2 = conversion_ratio * currency1;
 
-String OutputString = "$" + InputString + " = " + "#" + Float.toString(currency2) + "\n";
+    String OutputString = "$" + InputString + " = " + "#" + Float.toString(currency2) + "\n";
 
-field2.appendText(OutputString);
+    field2.appendText(OutputString);
 
 } // the end convert
 
@@ -2928,11 +2830,11 @@ public boolean handleEvent(Event evt) { if (evt.target == ratioScrollBar)
 
 {
 
-int in;
+    int in;
 
-in = ratioScrollBar.getValue(); conversion_ratio = in/100f;
+    in = ratioScrollBar.getValue(); conversion_ratio = in/100f;
 
-ratioField.setText(Float.toString(conversion_ratio));
+    ratioField.setText(Float.toString(conversion_ratio));
 
 }
 
@@ -2940,18 +2842,18 @@ if (evt.target == field1)
 
 {
 
-char c=(char)evt.key; if (c == '\n')
+    char c=(char)evt.key; if (c == '\n')
 
-{
+    {
 
-convert();
+        convert();
 
-}
+    }
 }
 
 if (evt.id == Event.WINDOW_DESTROY) { dispose();
 
-return true;
+    return true;
 
 }
 
@@ -2968,7 +2870,7 @@ return false;
 
 `GridLayout` 管理器对于使用网格的 applet 特别有用。该管理器创建一个相同大小的正方形网格，每个网格包含一个组件。如示例 8-4 所示。
 
-示例 8-4. 使用管理器的 applet。
+## 示例 8-4. 使用管理器的 applet
 
 ```java
 import java.awt.*;
@@ -2977,32 +2879,33 @@ import java.applet.applet;
 
 public class Grid_1 extends Applet { float conversion_ratio = 1.5f; TextField field1 = new TextField(5); text area field2 = new TextArea(4,20);
 
-TextField ratioField = new TextField(5);
+    TextField ratioField = new TextField(5);
 
-scroll bar ratioScrollBar = new scrollbar (scrollbar.HORIZONTAL, 150, 25, fifty,
+    scroll bar ratioScrollBar = new scrollbar (scrollbar.HORIZONTAL, 150, 25, fifty,
 
-250 );
+    250 );
 
-public void init() {
+    public void init() {
 
-setLayout(new GridLayout(3,3));
+        setLayout(new GridLayout(3,3));
 
-setFont(new Font("Helvetica", Font.PLAIN, 12));
+        setFont(new Font("Helvetica", Font.PLAIN, 12));
 
-setBackground(color.gray); ratioField.setEditable(false); field1.setEditable(true); field2.setEditable(false); ratioField.setText("1.50"); field1.resize(field1.preferredSize()); field2.resize(field2.preferredSize()); ratioField.resize(15,25);
+        setBackground(color.gray); ratioField.setEditable(false); field1.setEditable(true); field2.setEditable(false); ratioField.setText("1.50"); field1.resize(field1.preferredSize()); field2.resize(field2.preferredSize()); ratioField.resize(15,25);
 
-ratioScrollBar.resize(ratioScrollBar.minimumSize()); add(ratioField);
+        ratioScrollBar.resize(ratioScrollBar.minimumSize()); add(ratioField);
 
-add(ratioScrollBar); add(field1); add(field2);
+        add(ratioScrollBar); add(field1); add(field2);
 
-} // the end init
+    } // the end init
+}
 ```
 
 applet 的外部视图如图 8.5 所示。注意条带和其他界面组件在放入矩形单元格后是如何改变其比例的。
 
 ![](img/image0259.gif)
 
-### 图 8.5。
+### 图 8.5
 
 在这个示例中，实现的网格大小为高两格、宽两格，因为整个示例仅包含四个控件。图 8-5 清晰地显示了布局管理器如何处理单元格尺寸大于其内部放置尺寸的情况。
 
@@ -3010,17 +2913,15 @@ applet 的外部视图如图 8.5 所示。注意条带和其他界面组件在�
 
 ![](img/image09261.jpeg)
 
-
-
 `CardLayout` 管理器允许你动态替换显示在屏幕上的组件，这对于包含一组嵌套组件的面板来说特别方便。示例 8-5 阐述此类接口的实现。在这个示例中，所有与转换系数变化相关的控制控件都收集在一个面板中（图 8-6），而输入和输出重新计算值的字段编辑框则在另一个面板中（图 8-7）。
 
 这些面板之间的切换通过从 applet 顶部下拉列表的两个位置中选择一个来实现。
 
 ![](img/image0926.gif)
 
-### 图 8.6.
+### 图 8.6
 
-示例 8-5a. 使用 `CardLayout` 管理器的 applet。
+## 示例 8-5a. 使用 `CardLayout` 管理器的 applet
 
 ```java
 import java.awt.*;
@@ -3070,15 +2971,16 @@ public class LayoutCard extends Applet {
         add("center", cards_panel);
         show();
     } // init 结束
+}
 ```
 
-这段代码向名为 `options_panel` 的面板（`Choice`）添加了一个下拉列表。该下拉列表包含两个项目：“Adjust Ratio”（调整比例）和“Calculate”（计算）。然后，包含下拉列表的 `options_panel` 被添加到窗口 applet 的顶部。接下来定义了管理器将工作的面板：`CardLayout`。按照惯，创建了面板的新实例并为其分配了一个管理器。在放置 `CardLayout` 后，又创建了两个面板，这两个面板将使用 `CardLayout` 管理器在屏幕上切换。这两个面板被添加到 `cards_panel` 面板中。其中一个面板包含一个显示转换系数的字段和一个用于其变化的滚动条，另一个包含两个用于输入原始值和输出重新计算结果的编辑字段。在将这两个面板添加到面板 `cards_panel` 时，为它们分配了标签（labels）——文本行“Adjust Ratio”和“Calculate”。
+这段代码向名为 `options_panel` 的面板（`Choice`）添加了一个下拉列表。该下拉列表包含两个项目：“Adjust Ratio”（调整比例）和“Calculate”（计算）。然后，包含下拉列表的 `options_panel` 被添加到窗口 applet 的顶部。接下来定义了管理器将工作的面板：`CardLayout`。按照惯例，创建了面板的新实例并为其分配了一个管理器。在放置 `CardLayout` 后，又创建了两个面板，这两个面板将使用 `CardLayout` 管理器在屏幕上切换。这两个面板被添加到 `cards_panel` 面板中。其中一个面板包含一个显示转换系数的字段和一个用于其变化的滚动条，另一个包含两个用于输入原始值和输出重新计算结果的编辑字段。在将这两个面板添加到面板 `cards_panel` 时，为它们分配了标签——文本行“Adjust Ratio”和“Calculate”。
 
 在将面板 `cards_panel` 添加到窗口 applet 后，它包含了两个面板——`cards_panel` 和 `options_panel`。嵌套面板添加到 `cards_panel` 的顺序决定了它们在调用 `next` 或 `previous` 方法时在屏幕上的输出顺序。
 
 除 `Togo` 之外，可以从 `Class CardLayout` 的帮助方法 `show` 从可用面板中撤回任何一个——正是我们在下面的事件处理器动作中并在并实现了这个方法。
 
-示例 8-5b. 使用 `CardLayout` 管理器的 applet。
+## 示例 8-5b. 使用 `CardLayout` 管理器的 applet
 
 ```java
 public void convert() {
@@ -3115,9 +3017,6 @@ public synchronized boolean handleEvent(Event evt) {
 
 这是因为同一个 applet 使用了动作事件处理器，并要求提供，这两个处理器事件不会被同时调用。
 
-
-
-
 ```java
 setFont(new Font("Helvetica", Font.PLAIN, 12)); setBackground(color.gray); ratioField.setEditable(false); field1.setEditable(true); field2.setEditable(false); ratioField.setText("1.50"); field1.resize(field1.preferredSize()); field2.resize(field2.preferredSize()); ratioField.resize(ratioField.preferredSize());
 
@@ -3133,6 +3032,8 @@ con.gridwidth = GridBagConstraints.REMAINDER;
 首先，创建布局管理器 `GridBagLayout` 和类 `gridBagConstraints` 的新实例。`GridBag` 被用作布局管理器，它是 `GridBagLayout` 的实例。如果你不更改 `gridBagConstraints` 类中包含的 `weightx` 和 `weighty` 值（它们的默认值为零），那么所有组件都将向中心聚集，而在这种情况下，我们完全不需要这样做。参数默认值 `fill` 等于 `both`，这意味着 `Components` 将在两个坐标上拉伸。在这里，滚动条是不必要的，字段 `ratioField` 和字段 `input` 不需要拉伸，因此将它们的 `fill` 参数设为 `NONE`。相反，输出值的字段应该尽可能地拉伸，因此它的 `fill` 参数被设置为 `former`（即 `BOTH`）。对于参数 `anchor`，使用了 `center`，得益于此，所有组件都放置在分配给它们的区域中心。因为在添加时，`ratioField` 字段必须位于其行最后一个元素之后，因此对于该组件，`gridwidth` 参数设置为 `RELATIVE`。对于应该是行末最后一个元素的滚动条 `ratioScroolBar`，`gridwidth` 参数的值被设置为 `REMAINDER`。
 
 在这个示例中，同一个 `gridBagConstraints` 实例被多次使用，因此在重用之前，即使是那些我们对默认值满意的限制器，也显式地分配所需的值。相反，其他参数在所有情况下都有相同的值，在重复使用 `gridBagConstraints` 实例之前，你不需要做任何事情。如果我们为每个组件创建一个 `gridBagConstraints` 实例，那么所有这些实例都必须将相同的参数设置为相同的值。因此，更经济的方法是创建一个该类的实例，并将其用于所有组件：
+
+
 
 ```java
 gridbag.setConstraints(ratioScrollBar, Con); add(ratioScrollBar); Con.gridwidth=GridBagConstraints.REMAINDER; gridbag.setConstraints(field1, Con); add(field1); Con.gridy=GridBagConstraints.RELATIVE; Con.fill = GridBagConstraints.BOTH; Con.gridwidth=GridBagConstraints.REMAINDER; Con.gridheight=GridBagConstraints.REMAINDER; gridbag.setConstraints(field2,Con); add(field2);
@@ -3181,10 +3082,8 @@ class Menu_Frame extends frame {
     }
 }
 ```
+
 *（注：提供的文本在代码部分包含大量的乱码片段和重复短语；根据您的要求，我已清理了结构，同时保留了可见的逻辑和变量。）*
-
-
-
 
 在本章中，我们熟悉了构建用户界面的更复杂的技术。通过应用本章讨论的技术以及第 7 章的基础元素，你将能够创建具有丰富、多样界面的应用程序（applets）。`Java` 中构建接口的核心是 `container`（容器）和 `manager`（管理器）适配的概念。我们在书的教程部分也将使用这些工具，届时我们将开发几个设计为 applet 的全功能程序。
 
@@ -3197,18 +3096,24 @@ class Menu_Frame extends frame {
 ## 图形与图像
 
 ## 使用 `Graphics` 类绘图
-绘制轮廓对象
-绘制填充对象
-文本与绘图
+
+### 绘制轮廓对象
+
+### 绘制填充对象
+
+### 文本与绘图
 
 ### `Image` 类的使用
 
-导入图像
-使用 `MediaTracker` 类
-创建图像
+#### 导入图像
 
-异步图像的接口
-图像处理
+#### 使用 `MediaTracker` 类
+
+#### 创建图像
+
+#### 异步图像的接口
+
+#### 图像处理
 
 在最后两个章节中，你已经学习了如何创建一个强大且具有吸引力的用户界面。本章将教你如何显示和管理图形，这可能会增加你的 Java applet 和程序的流行程度。
 
@@ -3232,18 +3137,16 @@ class Menu_Frame extends frame {
 
 表 9-1. 用于绘制轮廓形状的 `Graphics` 类方法
 
-## 方法描述
-
 | 方法 | 描述 |
 | :--- | :--- |
-| `drawLine(int, int, int, int)` | |
-| `drawRect(int, int, int, int)` | 从前两个整数（X 和 Y 坐标）给出的位置画线到后两个整数指示的位置。显示矩形。前两个整数表示矩形的左上角，最后两个整数表示宽度和高度。 |
-| `draw3DRect(int, int, int, boolean)` | 输出发光的三维矩形。设置前四个整数（与 `drawRect` 方法相同），`boolean` 参数指定矩形是否应凸于背景。 |
-| `drawRoundRect(int, int, int, int, int)` | 显示内接在由前四个整数指定的普通矩形内的圆角矩形。最后两个整数指定角部弧的宽度和高度。弧的宽度和高度定义了沿 x 轴或 y 轴的弧直径。值越大，曲线越平滑。 |
+| `drawLine(int, int, int, int)` | 从前两个整数（X 和 Y 坐标）给出的位置画线到后两个整数指示的位置。 |
+| `drawRect(int, int, int, int)` | 显示矩形。前两个整数表示矩形的左上角，最后两个整数表示宽度和高度。 |
+| `draw3DRect(int, int, int, int, boolean)` | 输出发光的三维矩形。设置前四个整数（与 `drawRect` 方法相同），`boolean` 参数指定矩形是否应凸于背景。 |
+| `drawRoundRect(int, int, int, int, int, int)` | 显示内接在由前四个整数指定的普通矩形内的圆角矩形。最后两个整数指定角部弧的宽度和高度。弧的宽度和高度定义了沿 x 轴或 y 轴的弧直径。值越大，曲线越平滑。 |
 | `drawOval(int, int, int, int)` | 输出一个内接在四个整数定义的矩形内的椭圆。 |
-| `drawArc(int, int, int, int, int, int)` | 显示内接在由前四个整数整数确定的矩形内的弧。最后两个整数指定起始角度和结束角度，以度为单位。角度从图形区域的右侧中心计算。正值表示旋转方向为逆时针，负值表示顺时针。 |
-| `drawPolygon(int [], int[], int)` | 显示多边形。整数数组包含多边形组成点的 X 和 Y 坐标，但整数数组表示点的总数。 |
-| `drawPolygon(polygon)` | 显示多边形。 |
+| `drawArc(int, int, int, int, int, int)` | 显示内接在由前四个整数确定的矩形内的弧。最后两个整数指定起始角度和结束角度，以度为单位。角度从图形区域的右侧中心计算。正值表示旋转方向为逆时针，负值表示顺时针。 |
+| `drawPolygon(int [], int[], int)` | 显示多边形。整数数组包含多边形组成点的 X 和 Y 坐标，最后一个整数表示点的总数。 |
+| `drawPolygon(Polygon)` | 显示多边形。 |
 
 `Graphics` 类的方法有几个你应该注意的特征。`draw3DRect` 方法绘制的矩形与 `fillRect` 方法在各方面都相同，无论它是否凸出。`drawArc` 方法与 `drawOval` 方法非常相似——事实上，当你调用 `drawOval(0, 0, X, Y)` 和 `drawArc(0, 0, X, Y, 0, 360)` 将产生相同的图像。`drawArc` 方法允许请求弧的一部分。
 
@@ -3281,7 +3184,7 @@ public class GraphicsApplet extends applet {
 
 ## 文本与绘图
 
-`Graphics` 类允许你显示非几何对象，即 `Images` 和以行、符号和字节数组形式存在的文本。`Images` 正我们在第 5 章看到的，可以放入 `Graphics` 对象的矩形中，但它们实际上代表了使用提供的绘制和填充方法难以或无法制作的复杂图像。
+`Graphics` 类允许你显示非几何对象，即 `Images` 和以行、符号和字节数组形式存在的文本。`Images` 正如我们在第 5 章看到的，可以放入 `Graphics` 对象的矩形中，但它们实际上代表了使用提供的绘制和填充方法难以或无法制作的复杂图像。
 
 输出文本和图像的方法列在表 9-2 中。对于它们没有额外的填充方法。
 
@@ -3289,28 +3192,12 @@ public class GraphicsApplet extends applet {
 
 | 方法 | 描述 |
 | :--- | :--- |
-| `drawString(String, int, int)` | |
-| `drawChars(char[], int, int, int, int)` | |
-| `drawBytes(byte[], int, int, int, int)` | |
-
-
-
-
-在特定位置用当前字体显示给定的字符串。
-
-将作为第一个参数传递的字符数组转换为 `string`，并输出到最后两个整数指定的位置。前两个整数表示要转换的 `array` 的初始值 `index` 和符号数量 `number`。
-
-以与最常用方法相同的方式显示数组类型的字节主题，使用 `drawChars` 方法。
-
-`drawImage(Image, int, int, OutputsObserver, ImageObserver)` 在指定的两个整型位置输出给定图像。`ImageObserver` 参数指定了一个类，该类将观察给定的图像，以便在数据广播完成后接收并输出图像。此接口将在本节的“导入和创建图像”中进行讨论。
-
-`drawImage(Image, int, int, color, imageobserver)`
-
-`drawImage(Image, int, int, int, int imageobserver)`
-
-在给定的两个整数位置输出给定图像，用给定的 `color` 进行实心填充背景。
-
-图像被放置在一个四个整数定义的矩形中。如有必要，图像将进行缩放以适应矩形。
+| `drawString(String, int, int)` | 在特定位置用当前字体显示给定的字符串。 |
+| `drawChars(char[], int, int, int, int)` | 将作为第一个参数传递的字符数组转换为 `String`，并输出到最后两个整数指定的位置。前两个整数表示要转换的数组的初始索引 `index` 和符号数量 `number`。 |
+| `drawBytes(byte[], int, int, int, int)` | 以与 `drawChars` 方法相同的方式显示字节数组。 |
+| `drawImage(Image, int, int, ImageObserver)` | 在指定的两个整型位置输出给定图像。`ImageObserver` 参数指定了一个类，该类将观察给定的图像，以便在数据广播完成后接收并输出图像。此接口将在本节的“导入和创建图像”中进行讨论。 |
+| `drawImage(Image, int, int, Color, ImageObserver)` | 在给定的两个整数位置输出给定图像，用给定的 `Color` 进行实心填充背景。 |
+| `drawImage(Image, int, int, int, int, ImageObserver)` | 图像被放置在一个四个整数定义的矩形中。如有必要，图像将进行缩放以适应矩形。 |
 
 ## 更改 `Graphics` 类
 
@@ -3318,116 +3205,96 @@ public class GraphicsApplet extends applet {
 
 表 9-3 `Graphics` 类的其他方法
 
-### 方法说明
-
-`Graphics create()` 创建一个新的图形对象，它是当前对象的拷贝。
-
-`Graphics create(int, int, int, int)` 创建一个由四个整数定义的矩形边界内的新 `Graphics` 对象。对对象所所的任何更改将反映在给定的矩形区域。
-
-`color getColor()` 返回绘制的当前颜色。`setColor(Color)` 设置当前绘制颜色。
-
-`setPaintMode()` 将绘制模式设置为始终使用指定的默认颜色进行绘制。
-
-`setXORMode(Color)` 用不同的颜色替换默认颜色来设置填充模式。绘制时，这种颜色的像素将被另一种颜色的像素替换，反之，第二种颜色的像素将被第一种颜色的像素替换。其余像素的变化无法预测。然而，如果你在激活 `XORMode` 期间对它们进行两次染色，它们将重置为原始颜色。此方法对于闪烁（增加亮度）或绘制简单的闪烁图片可能很有用。
-
-`Font getFont()` 返回当前字体。`setFont(Font)` 设置当前字体。
-
-`FontMetrics getFontMetrics()`
-
-`FontMetrics getFontMetrics(Font)`
-
-`clipRect(int, int, int, int)`
-
-`Rectangle getClipRect()`
-
-`copyArea(int, int, int, int, int, int)` 返回与当前字体相关的 `FontMetrics` 对象。返回一个与特定字体连接的 `FontMetrics` 对象。
-
-设置由四个整数指定的边界矩形，并将 `Graphics` 对象绘制其中。当设置了矩形限制时，在该矩形之外不会进行任何绘制。
-
-返回对象 `Rectangle` 的矩形限制。
-
-根据前四个整数复制矩形。沿 X 轴和 Y 轴移动的由最后两个整数给出。
-
-`dispose()` 使此 `Graphics` 对象不再可用。
+| 方法 | 说明 |
+| :--- | :--- |
+| `Graphics create()` | 创建一个新的图形对象，它是当前对象的拷贝。 |
+| `Graphics create(int, int, int, int)` | 创建一个由四个整数定义的矩形边界内的新 `Graphics` 对象。对该对象所做的任何更改将反映在给定的矩形区域。 |
+| `Color getColor()` | 返回绘制的当前颜色。 |
+| `setColor(Color)` | 设置当前绘制颜色。 |
+| `setPaintMode()` | 将绘制模式设置为始终使用指定的默认颜色进行绘制。 |
+| `setXORMode(Color)` | 用不同的颜色替换默认颜色来设置填充模式。绘制时，这种颜色的像素将被另一种颜色的像素替换，反之，第二种颜色的像素将被第一种颜色的像素替换。其余像素的变化无法预测。然而，如果你在激活 `XORMode` 期间对它们进行两次染色，它们将重置为原始颜色。此方法对于闪烁（增加亮度）或绘制简单的闪烁图片可能很有用。 |
+| `Font getFont()` | 返回当前字体。 |
+| `setFont(Font)` | 设置当前字体。 |
+| `FontMetrics getFontMetrics()` | 返回与当前字体相关的 `FontMetrics` 对象。 |
+| `FontMetrics getFontMetrics(Font)` | 返回一个与特定字体连接的 `FontMetrics` 对象。 |
+| `clipRect(int, int, int, int)` | 设置由四个整数指定的边界矩形，并将 `Graphics` 对象绘制其中。当设置了矩形限制时，在该矩形之外不会进行任何绘制。 |
+| `Rectangle getClipRect()` | 返回对象 `Rectangle` 的矩形限制。 |
+| `copyArea(int, int, int, int, int, int)` | 根据前四个整数复制矩形。沿 X 轴和 Y 轴移动的距离由最后两个整数给出。 |
+| `dispose()` | 使此 `Graphics` 对象不再可用。 |
 
 ### `Image` 类的使用
 
 虽然 `Graphics` 类的方法足以创建简单的图形图像（如条形图或图标菜单），但它们不允许你通过直接操作特定像素来执行复杂的图形操作。要做到这一点，你应该使用 `Image` 类。`Image` 对象有用之处在于它们提供了一个方便且一致的接口，用于处理从已知图形标准文件中导入的图像。在本节中，我们将讨论图像实际上是如何工作的，以及图像的异步工作，然后是数据无法立即获取的图像。
 
-`image` 类属于 `java.awt` 包，提供了几个方法，帮助请求图像的信息，例如其宽度或高度。这些方法列在表 9-4 中。
+`Image` 类属于 `java.awt` 包，提供了几个方法，帮助请求图像的信息，例如其宽度或高度。这些方法列在表 9-4 中。
 
 表 9-4 `Image` 类的方法
 
-### 方法说明
+| 方法 | 说明 |
+| :--- | :--- |
+| `Graphics getGraphics()` | 返回一个与图像连接的图形对象。 |
+| `int getHeight(ImageObserver)` | 如果已知，返回图像的高度。如果高度未知（可能是因为图像尚未接收），此方法返回 -1，并在高度已知时向给定的 `ImageObserver` 报告。 |
+| `int getWidth(ImageObserver)` | 如果已知，返回图像的宽度。如果宽度未知，此方法返回 -1，并在宽度已知时向给定的 `ImageObserver` 报告。 |
+| `Object getProperty(String, ImageObserver)` | 请求由 `String` 参数指定的属性值。例如，使用名称“comments”来保存包含图像文本描述的注释。如果该图像未定义所请求的属性，则此方法将返回一个 `UndefinedProperty` 对象。如果请求的属性可用但尚未存在（例如图像尚未接收），此方法将返回一个空指针，并在属性可用时向给定的 `ImageObserver` 报告。 |
+| `ImageProducer getSource()` | 返回产生这些图像像素的 `ImageProducer`。 |
+| `flush()` | 清除当前图像使用的所有资源，包括所有保存的像素数据。如果再次使用此图像，必须重新创建或加载。 |
 
-`Graphics getGraphics()` 返回一个与图像连接的图形对象。
+`ImageObserver` 和 `ImageProducer` 使用表 9-4 中提到的接口进行通信，并被 Java API 用于允许程序员处理数据尚未完全可用的图像。我们将在本章稍后的“异步图像接口”中讨论这些接口。记住，`Component` 类实现了 `ImageObserver` 接口，因此当你需要传递 `ImageObserver` 作为参数时，可以传递指向运行中的 `Component` 的链接。
 
-`int getHeight(ImageObserver)` 如果已知，返回图像的高度。如果高度未知（可能是因为图像尚未接收），此方法返回 -1，并在高度已知时向给定的 `ImageObserver`报告。
+`MediaTracker` 类是 `java.awt` 层次结构的一部分，提供了一种执行和管理这一过程的优秀方法。`MediaTracker` 的核心思想是：当图像被创建时，它会被添加到 `MediaTracker` 跟踪的对象列表中。为每个对象分配了某种意义上的优先级，程序员可以在任何时间挂起操作，直到所有给定优先级的对象都准备好显示为止。`MediaTracker` 类目前仅支持图像，但 Sun 公司计划在可预见的未来将其扩展到播放音频片段，并可能包括视频片段。`MediaTracker` 类提供的最有用方法列在表 9-5 中。
 
-`int getWidth(ImageObserver)` 如果已知，返回图像的宽度。如果宽度未知，此方法返回 -1，并在宽度已知时向给定的 `ImageObserver` 。
-
-`Object getProperty(String, imageobserver)` 请求由 `String` 参数指定的属性值。例如，使用名称“comments”来保存包含图像文本描述的注释。如果该图像未定义所请求的属性，则此方法将返回一个 `UndefinedProperty` 对象。如果请求的属性可用但尚未存在（例如图像尚未接收），此方法将返回一个空指针，并在属性可用时向给定的 `ImageObserver` 报告。
-
-`ImageProducer getSource()` 返回产生这些图像像素的 `ImageProducer`。
-
-`Flush()` 清除当前图像使用的所有资源，包括所有保存的像素数据。如果再次使用此图像，必须重新创建或加载。
-
-`ImageObserver` 和 `Producer` 使用表 1.9-4 中提到的接口进行通信，并被 Java API 用于允许程序员处理数据尚未完全可用的图像。我们将在本章稍后的“异步图像接口”中讨论这些接口。记住，`Component` 类实现了 `ImageObserver` 接口，因此当你需要传递 `ImageObserver` 作为参数时，可以传递指向运行中的 `Component` 的链接。
-
-
-
-
-`MediaTracker` 类是 `java.awt` 层次结构的一部分，提供了一种执行和管理这一过程的优秀方法。`MediaTracker` 的核心思想是：当图像被创建时，它会被添加到 `MediaTracker` 跟踪的对象列表中。为每个中间对象分配了某种意义上的优先级，程序员可能可以在任何时间挂起操作，直到所有给定优先级的对象都准备好显示为止。`MediaTracker` 类目前仅支持图像，但 Sun 公司计划在可预见的未来将其扩展到播放音频片段，并可能包括视频片段。`MediaTracker` 类提供的最有用方法列在表 9-5 中。
-
-### 表 9-5. `MediaTracker` 类最常用的方法
-
-## 方法描述
+表 9-5. `MediaTracker` 类最常用的方法
 
 | 方法 | 描述 |
 | :--- | :--- |
 | `MediaTracker(Component)` | 创建新的媒体跟踪器，它将成为给定组件的中间者。 |
 | `addImage(Image, int)` | 将具有特定优先级的图像添加到代理中。 |
-| `addImage(Image, int, int, int)` | 将具有优先级的图像添加到中间件中，该优先级由第一个整数决定。图像的 own 和高度被赋予以下值。 |
-| `boolean checkAll()` | 检查所有可跟踪中间件是否已完成加载。如果数据尚未开始加载，此方法不会启动加载。 |
-| `boolean checkAIl(boolean)` | 检查所有可跟踪中间件是否已完成加载。如果对象尚未加载且布尔参数为 true，则此方法将启动它们的加载。 |
-| `waitForAII()` | 等待所有可跟踪的中间件完成。`waitForAIl(long )` 直到所有被跟踪的中间件完成或经过某些毫秒后。 |
-| `waitForlD(int)` | 等待所有指定优先级的代理人完成。 |
-| `waitForlD(int, long)` | 等待所有指定优先级的中间件完成或经过某些毫秒后。 |
 
-下面是一个简单的代码段段，它通过 URL 请求图像并使用 `MediaTracker` 获取它。请注意，在用 `MediaTracker` 的 `waitForAll` 方法时，我们必须处理 `InterruptedException` —— 我们正在挂起当前的性能流，并且应该直接或间接地检查异常：
+
+
+| `addImage(Image, int, int, int)` | 将具有优先级的图像添加到中间件中，该优先级由第一个整数决定。图像的 own 和高度被赋予以下值。 |
+| :--- | :--- |
+| `boolean checkAll()` | 检查所有可跟踪中间件是否已完成加载。如果数据尚未开始加载，此方法不会启动加载。 |
+| `boolean checkAll(boolean)` | 检查所有可跟踪中间件是否已完成加载。如果对象尚未加载且布尔参数为 true，则此方法将启动它们的加载。 |
+| `waitForAll()` | 等待所有可跟踪的中间件完成。`waitForAll(long)` 直到所有被跟踪的中间件完成或经过某些毫秒后。 |
+| `waitForID(int)` | 等待所有指定优先级的代理人完成。 |
+| `waitForID(int, long)` | 等待所有指定优先级的中间件完成或经过某些毫秒后。 |
+
+下面是一个简单的代码段，它通过 URL 请求图像并使用 `MediaTracker` 获取它。请注意，在用 `MediaTracker` 的 `waitForAll` 方法时，我们必须处理 `InterruptedException` —— 我们正在挂起当前的性能流，并且应该直接或间接地检查异常：
 
 ```java
 MediaTracker tracker;
 
-tracker = new MedlaTracker(this); Image i;
+tracker = new MediaTracker(this);
+Image i;
 
-i = getImage(imageURL); tracker.addImage(i, one); try {
-
+i = getImage(imageURL);
+tracker.addImage(i, one);
+try {
     tracker.waitForAll();
-
 } catch (InterruptedException e) {}
 ```
 
 ## 创建图像
 
-我们现在可以从网络下载图像并确保它们被及时送达。如果我们想创建自己的图像呢？一旦 `Image` 类被用 `abstract` 修饰符定义，我们就无法直接创建图像了。`Component` 类提供了 `createImage` 方法，可以用于创建新的空 `Image` 类对象。为了在这些空 `Images` 中输出图表，我们可以使用 `getGraphics` 方法来请求 `Graphics` 对象。
+我们现在可以从网络下载图像并确保它们被及时送达。如果我们想创建自己的图像呢？一旦 `Image` 类被 `abstract` 修饰符定义，我们就无法直接创建图像了。`Component` 类提供了 `createImage` 方法，可以用于创建新的空 `Image` 类对象。为了在这些空 `Image` 中输出图表，我们可以使用 `getGraphics` 方法来请求 `Graphics` 对象。
 
 ![](img/image09269.jpeg)
 
-![](img/image09270.jpeg) 容器，它可以轻松地渲染到 `Canvas`。通常情况下，`Canvas` 类几乎专门用于显示图像。
+![](img/image09270.jpeg)
+
+容器，它可以轻松地渲染到 `Canvas`。通常情况下，`Canvas` 类几乎专门用于显示图像。
 
 `Component` 类还为我们提供了一些方法来检查图像的状态并为输出做准备，尽管使用 `MediaTracker` 来存储它们的指针可能更简单。所有这些方法都列在表 9-6 中。
 
 ### 表 9-6. 从 `Component` 类创建图像
 
-## 方法描述
-
 | 方法 | 描述 |
 | :--- | :--- |
-| `createlmage(int, int)` | 创建具有特定宽度和高度的新空图像。 |
-| `createlmage(ImageProducer)` | 从给定的 `ImageProducer` 请求图像。该接口在本章的“异步图像接口”部分下有描述。 |
-| `boolean prepareImage(lmage, imageobserver)` | 为显示图像做准备。参数 `ImageObserver` 指定要发送到图像状态的对象；这实际上是 `Component` 对象。此方法返回一个布尔值，表示完成或无图像输出。 |
-| `boolean preparelmage(Image, int, Trains to conclusion on the screen image from width And tall, int, imageobserver)` | 根据宽度和高度在屏幕上得出结论的整数参数。参数 `ImageObserver` 的工作方式与之前的方法相同。 |
+| `createImage(int, int)` | 创建具有特定宽度和高度的新空图像。 |
+| `createImage(ImageProducer)` | 从给定的 `ImageProducer` 请求图像。该接口在本章的“异步图像接口”部分下有描述。 |
+| `boolean prepareImage(Image, ImageObserver)` | 为显示图像做准备。参数 `ImageObserver` 指定要发送到图像状态的对象；这实际上是 `Component` 对象。此方法返回一个布尔值，表示完成或无图像输出。 |
+| `boolean prepareImage(Image, int, int, ImageObserver)` | 根据宽度和高度在屏幕上得出结论的整数参数。参数 `ImageObserver` 的工作方式与之前的方法相同。 |
 
 为你自己的项目创建图像最简单的方法包括：创建一个新的空 `Image` 对象，并使用 `Image` 类的 `getGraphics` 方法直接使用 `Graphics` 类的 `paint` 方法绘制图像（列在表 9-1 和 9-2 中）。如我们上面所述，这仍然没有赋予我们在像素级上处理图像的能力。要在像素级上工作，我们至少对几个为处理异步图像而开发的接口有基本的了解。
 
@@ -3446,10 +3313,10 @@ Java API 提供了这些接口的一些实现。我们将简要描述这些接�
 | 方法 | 描述 |
 | :--- | :--- |
 | `addConsumer(ImageConsumer)` | 将给定的 `ImageConsumer` 添加到接收数据的消费者列表中。 |
-| `boolean isConsumer(ImageConsumer)` | 返回布尔值，显示给定的 `ImageConsumer` 是否注册从此 `ImageObserver` 接收数据。 |
+| `boolean isConsumer(ImageConsumer)` | 返回布尔值，显示给定的 `ImageConsumer` 是否注册从此 `ImageProducer` 接收数据。 |
 | `removeConsumer(ImageConsumer)` | 从接收数据的消费者列表中移除给定的 `ImageConsumer`。 |
 | `requestTopDownLeftRightResend(ImageConsumer)` | 请求按照上下左右重新发送图像。 |
-| `start production(lmageConsumer)` | 注册感兴趣接收数据的 `ImageConsumer` 并开始输出图像。 |
+| `startProduction(ImageConsumer)` | 注册感兴趣接收数据的 `ImageConsumer` 并开始输出图像。 |
 
 ### 接口 ImageConsumer
 
@@ -3462,94 +3329,51 @@ Java API 提供了这些接口的一些实现。我们将简要描述这些接�
 | 方法 | 描述 |
 | :--- | :--- |
 | `imageComplete(int)` | `ImageProducer` 在图像就绪或加载过程中发生错误时调用此方法。整数参数表示图像的状态。可能的图像状态列在表 9-10 中。 |
-| `SetColorModel(colormodel)` | 设置图像的 `ColorModel` 类。 |
-| `SetDimensions(int, int)` | 设置宽度和图像高度。 |
-
-
-
-
-
-`setHints(int)` 设置来自 `lmageObserver` 的任何可用消息。这些消息可以开启，例如像素接收的顺序。
-
-整数参数包含所有所需消息的按位或运算结果。可能的消息列在表 9-9 中。
-
-`SetProperties(hashtable)`
-
-`SetPixels(int, int, int, int, ColorModel, byte[], int, int)`
-
-`SetPixels(int, int, int, int, ColorMode, int[], int, int)`
-
-设置与图像相关的属性。有时图像数据中会包含注释或描述。使用方法键进行定义，位于哈希表中是否存在任何内容。
-
-设置前四个整数指定的矩形内的像素。`ColorModel` 指定图像使用的 `ColorModel`。`byte` 数组包含实际的像素数据，最后两个整数包含索引的初始值和每行的像素数（视图大小）。矩形内位置为 `(X, Y)` 的像素在数组中的地址由以下公式给出：`Y * string_length + X (+ 如果不是零，则加上起始索引)`。
-
-与上一个方法相同，但使用整数数组而不是 `byte` 数组。
+| `setColorModel(ColorModel)` | 设置图像的 `ColorModel` 类。 |
+| `setDimensions(int, int)` | 设置宽度和图像高度。 |
+| `setHints(int)` | 设置来自 `ImageConsumer` 的任何可用消息。这些消息可以开启，例如像素接收的顺序。整数参数包含所有所需消息的按位或运算结果。可能的消息列在表 9-9 中。 |
+| `setProperties(Hashtable)` | 设置与图像相关的属性。有时图像数据中会包含注释或描述。使用方法键进行定义，位于哈希表中是否存在任何内容。 |
+| `setPixels(int, int, int, int, ColorModel, byte[], int, int)` | 设置前四个整数指定的矩形内的像素。`ColorModel` 指定图像使用的 `ColorModel`。`byte` 数组包含实际的像素数据，最后两个整数包含索引的初始值和每行的像素数（视图大小）。矩形内位置为 `(X, Y)` 的像素在数组中的地址由以下公式给出：`Y * string_length + X (+ 如果不是零，则加上起始索引)`。 |
+| `setPixels(int, int, int, int, ColorModel, int[], int, int)` | 与上一个方法相同，但使用整数数组而不是 `byte` 数组。 |
 
 图像在创建过程中可以处于定义的状态之一。此外，`ImageProducer` 可以向注册的 `ImageConsumer`（提示）发送关于其生成的像素的消息。`setHints` 和 `imageComplete` 方法将这些状态和消息作为整数传递给 `ImageConsumer` 接口。在 `ImageConsumer` 中，可能的的消息和状态值定义为静态整数。它们列在表 9-9 和 9-10 中。如果 `ImageProducer` 需要发送多个此类消息和图像状态，它将返回相应状态的按位或结果（更多细节请参见侧栏“位操作”）。
 
-表 9-9. 来自 `ImageProducer` 的消息
+### 表 9-9. 来自 `ImageProducer` 的消息
 
-#### 消息含义
+| 消息 | 含义 |
+| :--- | :--- |
+| `RANDOMPIXELORDER` | 像素将无特定顺序传输。 |
+| `TOPDOWNLEFTRIGHT` | 像素将按从上到下从左到右顺序传输。 |
+| `COMPLETESCANLINES` | 像素将按完整的光栅行（水平线）传输。 |
+| `SINGLEPASS` | 像素将一次性传输，每个像素仅安装一次。对于某些图像，尤其是 `JPEG` 格式，像素在多个通道后面传输，其中每个后续的像素都会澄清上一个。 |
+| `SINGLEFRAME` | 图像仅包含一帧图形数据，且它已经是完整的，`ImageProducer` 将不会再更改图像。 |
 
-`RANDOMPIXELORDER`: 像素将无特定顺序传输。
+### 表 9-10. 关于 `ImageProducer` 能力的消息
 
-`TOPDOWNLEFIRIGHT`: 像素将按从上到下从左到右顺序传输。
-
-`COMPLETESCANLINES`: 像素将按完整的光栅行（水平线）传输。
-
-`SINGLEPASS`: 像素将一次性传输，每个像素仅安装一次。对于某些图像，尤其是 `JPEG` 格式，像素在多个通道后面传输，其中每个后续的像素都会澄清上一个。
-
-`SINGLEFRAME`: 图像仅包含一帧图形数据，且它已经是完整的，`ImageProducer` 将不会再更改图像。
-
-表 9-10. 关于 `lmageProducer` 能力的消息
-
-#### 状态含义
-
-`IMAGEERROR`: 在记录 `Images` 数据时发生错误。
-
-`SINGLEFRAMEDONE`: 一帧图形数据已完成，但后续帧尚未就绪。
-
-`STATICIMAGEDONE`: 图像已就绪，`ImageProducer` 不再为此图像发送更多数据。
-
-`IMAGEABORTED`: 图像被人为中断。
+| 状态 | 含义 |
+| :--- | :--- |
+| `IMAGEERROR` | 在记录 `Images` 数据时发生错误。 |
+| `SINGLEFRAMEDONE` | 一帧图形数据已完成，但后续帧尚未就绪。 |
+| `STATICIMAGEDONE` | 图像已就绪，`ImageProducer` 不再为此图像发送更多数据。 |
+| `IMAGEABORTED` | 图像被人为中断。 |
 
 ### 接口 `ImageObserver`
 
 对于那些不感兴趣获取与图像相关的所有像素，但需要创建过程本身进度信息的类，Sun 提供了 `ImageObserver` 接口。该接口由一个 `imageUpdate` 方法和在接口中定义为静态整数的大量变量组成。这些状态变量在用途和实现上与 `ImageConsumer` 类的状态变量和消息非常相似。接口 `ImageObserver` 方法及其变量列在表 9-11 中。
 
-#### 方法与
+### 表 9-11. 接口 `ImageObserver` 方法和变量
 
-表 9-11. 接口 `ImageObserver` 方法和变量
-
-#### 描述
-
-变量
-
-`boolean imageUpdate(image, int, int, int, int, int)`
-
-当之前请求的 `ImageObserver` 信息可用时，`ImageProducer` 会触发此方法。`Image` 参数返回请求中图像的链接，第一个整数参数包含所有使用状态的按位或。
-
-最后四个整数通常解释为矩形限制，但可能是为了取消附近的状态。
-
-`WIDTH`: 表示 `Images` 已知的宽度，并且可以从限制矩形中推断。
-
-`HEIGHT`: 表示图像的高度已知，并且从限制矩形中推断。
-
-`PROPERTIES`: `Images` 已知的属性，并且可以通过 `Image` 类的 `getProperty` 方法接收。
-
-`SOMEBITS`: 大部分 `pixels`（但不是全部）现在可用。
-
-保证矩形限制已填充。
-
-`FRAMEBITS`: 多帧 `Images` 的完整帧现在可用。
-
-忽略矩形限制。
-
-`ALLBITS`: 图像是完整的，且忽略矩形限制。
-
-`ERROR`: 创建 `Images` 期间发生错误。
-
-`ABORT`: 图像创建在完成前被中止。如果此时没有出现错误消息，对任何 `Images` 数据的后续调用将完成其创建。
+| 方法 / 变量 | 描述 |
+| :--- | :--- |
+| `boolean imageUpdate(Image, int, int, int, int, int)` | 当之前请求的 `ImageObserver` 信息可用时，`ImageProducer` 会触发此方法。`Image` 参数返回请求中图像的链接，第一个整数参数包含所有使用状态的按位或。最后四个整数通常解释为矩形限制，但可能是为了取消附近的状态。 |
+| `WIDTH` | 表示 `Images` 已知的宽度，并且可以从限制矩形中推断。 |
+| `HEIGHT` | 表示图像的高度已知，并且从限制矩形中推断。 |
+| `PROPERTIES` | `Images` 已知的属性，并且可以通过 `Image` 类的 `getProperty` 方法接收。 |
+| `SOMEBITS` | 大部分 `pixels`（但不是全部）现在可用。保证矩形限制已填充。 |
+| `FRAMEBITS` | 多帧 `Images` 的完整帧现在可用。忽略矩形限制。 |
+| `ALLBITS` | 图像是完整的，且忽略矩形限制。 |
+| `ERROR` | 创建 `Images` 期间发生错误。 |
+| `ABORT` | 图像创建在完成前被中止。如果此时没有出现错误消息，对任何 `Images` 数据的后续调用将完成其创建。 |
 
 与此处描述的其他接口一样，大多数程序员永远不需要实现 `ImageObserver`。`java.awt.Component` 类实现了 `ImageObserver` 接口，允许它及其所有子类使用并显示异步 `Images`。当有新像素可输出所需分辨率的图像副本时，`Component` 会请求重绘。
 
@@ -3561,48 +3385,34 @@ Java API 提供了这些接口的一些实现。我们将简要描述这些接�
 
 `PixelGrabber` 类是 `ImageConsumer` 接口的实现，用于从图像或 `ImageProducer` 获取像素和颜色数据。你可以获取给定图像的所有像素，或仅获取图像的矩形部分。`PixelGrabber` 构造函数和其他独特方法见表 9-12。
 
-表 9-12. `Pixel Grabber` 构造函数和方法
+### 表 9-12. `PixelGrabber` 构造函数和方法
 
-#### 构造函数 / 方法
+| 构造函数 / 方法 | 描述 |
+| :--- | :--- |
+| `PixelGrabber(Image, int, int, int, int, int[], int, int)` | 创建一个新的 `PixelGrabber`，从指定的 `Image` 返回像素。前四个整数参数表示想要接收像素的限制区域形。像素值将复制到整数数组参数中；此数组的大小必须等于测量值，即宽度元素数乘以高度数。最后两个整数指示像素在数组中的初始索引以及每行的像素数（即为所选区域的宽度）。 |
+| `PixelGrabber(ImageProducer, int, int, int, int, int[], int, int)` | 创建一个新的 `PixelGrabber`，从指定的 `ImageProducer` 返回像素。参数含义同上。 |
+| `grabPixels()` | 请求 `Image` 或 `ImageProducer` 传输像素。此方法会阻塞直到接收数据。如果在数据到达之前被调用，将抛出 `InterruptedException` 异常。 |
+| `grabPixels(long)` | 请求 `Image` 或 `ImageProducer` 传递像素。此方法会阻塞，直到接收到数据或超过了参数指定的毫秒数。如果此方法在数据到达或指定时间通过之前被调用，它将抛出异常 `InterruptedException`。 |
+| `int status()` | 返回图像的状态，该状态是 `ImageObserver` 所有变量状态的位或结果。 |
 
-`PixelGrabber(Image, int, int, int, int, int[], int, int)`
-
-`Pixel Grabber(lmageProducer, int, int, int, int, int[], int, int)`
-
-#### 描述
-
-创建一个新的 `PixelGrabber`，从指定的 `Images` 返回像素。前四个整数参数表示想要接收像素的限制区域形。像素值将复制到整数数组参数中；此数组的大小必须等于测量值，即宽度元素数乘以高度数。最后两个整数指示像素在数组中的初始索引以及每行的像素数（即为所选区域的宽度）。
-
-```
-grabPixels() 请求 Image 或 ImageProducer 传输像素。此方法会阻塞直到接收数据。如果在数据到达之前被调用，将抛出 InterruptedException 异常。
-```
-
-
-
-
-
-`grabPixels(long)` 请求 `Image` 或 `ImageProducer` 传递像素。此方法会阻塞，直到接收到数据或超过了参数指定的毫秒数。如果此方法在数据到达或指定时间通过之前被调用，它将抛出异常 `InterruptedException`。
-
-`int status()` 返回图像的状态，该状态是 `ImageObserver` 所有变量状态的位或结果。
-
-接下来的代码片段说明了类 `Pixel Grabber` 的用法：
+接下来的代码片段说明了类 `PixelGrabber` 的用法：
 
 ```java
-Pixel Grabber grabber;
+PixelGrabber grabber;
 int width = myImage.getWidth(this);
 int height = myImage.getHeight(this);
-int ary[] = new ary[width*height];
+int ary[] = new int[width * height];
 
-grabber = new PixelGrabber(mylmage, 0, 0, width, height, ary, 0, width);
+grabber = new PixelGrabber(myImage, 0, 0, width, height, ary, 0, width);
 try {
     grabber.grabPixels();
 } catch (InterruptedException e) {}
 int status = grabber.status();
 
-if ((status & ImageObserver.ABORT) || (status & ImageObserver.ERROR)) {
+if ((status & ImageObserver.ABORT) != 0 || (status & ImageObserver.ERROR) != 0) {
     // 选择像素图像时发生了错误
 } else {
-    for (int i=0; i<ary.length; i++) {
+    for (int i = 0; i < ary.length; i++) {
         // 对数组中的像素进行任何操作
     }
 }
@@ -3612,27 +3422,28 @@ if ((status & ImageObserver.ABORT) || (status & ImageObserver.ERROR)) {
 
 ### 颜色模型
 
-接收到像素数组后，我们必须对其进行处理。每个像素在数组中都表示为单个整数。有必要从这个整数中提取绘制绘制或其他方式解释像素所需的所有数据。图像中每个像素的位置可以从数组中的位置推断出来，我们使用 `ColorModel` 类直接解释整个整数的颜色。
+接收到像素数组后，我们必须对其进行处理。每个像素在数组中都表示为单个整数。有必要从这个整数中提取绘制或其他方式解释像素所需的所有数据。图像中每个像素的位置可以从数组中的位置推断出来，我们使用 `ColorModel` 类直接解释整个整数的颜色。
 
 几乎任何颜色都可以表示为红、蓝、绿色调的唯一组合。还有基于其他颜色集合的组合，但它们专门用于计算机图形。几乎所有颜色显示器都通过红、蓝、绿三点的组合获取每个像素。`ColorModel` 类不仅允许我们解析像素数组中的整数并将每个整数拆分为红、蓝、绿分量，还能确定透明度。组件透明度控制像素的输出：如果像素是透明的，则背景颜色将转换为像素的显示颜色。图 9-2 显示了部分透明图像到不透明图像的叠加。
 
 ![](img/image09271.gif)
 
-#### Rice. 9.2.
+#### 图 9.2.
 
 `ColorModel` 类用 `abstract` 修饰符定义，尽管 Java API 中提供了它的两个扩展类，并在本节稍后部分进行了描述。表 9-13 列出了 `ColorModel` 类的方法。注意，`getRGBdefault()` 方法使用 `static` 修饰符声明，因此其使用方式可能是根据非抽象的默认 `RGB` 颜色模型返回链接的时间实现。
 
-表 9-13. colormodel 类方法
+### 表 9-13. `ColorModel` 类方法
 
-## 方法描述
+| 方法 | 描述 |
+| :--- | :--- |
+| `ColorModel(int)` | 创建一个支持指定位数颜色的颜色模型。位数直接控制该模型中可用唯一颜色的数量。每个像素 8 位提供 256 种不同的颜色。 |
+| `int getAlpha(int)` | 返回特定整数参数像素的组件透明度。 |
+| `int getBlue(int)` | 返回特定整数参数像素的蓝色分量。 |
+| `int getGreen(int)` | 返回整数参数指定的像素的绿色分量。 |
 
-`colormodel(int)` 创建一个支持指定位数颜色的颜色模型。位数直接控制该模型中可用唯一颜色的数量。每个像素 8 位提供 256 种不同的颜色。
 
-`int getAlpha(int)` 返回特定整数参数像素的组件透明度。
 
-`int getBlue(int)` 返回特定整数参数像素的蓝色分量。
-
-`int getGreen(int)` 返回整数参数指定的像素的绿色分量。
+## 方法概述
 
 `int getRed(int)` 返回整数参数指定的像素的红色分量。
 
@@ -3640,22 +3451,28 @@ if ((status & ImageObserver.ABORT) || (status & ImageObserver.ERROR)) {
 
 `int getRGB(int)` 返回指定的默认颜色模型 `RGB` 中由参数指定的像素值。
 
-`static colormodel getRGBdefault()` 返回由 `java.awt.image` 包使用的默认 RGB `ColorModel`。该方案为每个主色度和透明度分量分配了 8 位，这提供了 256 级红、蓝、绿颜色和透明度的渐变，总计共有 16777216 种颜色（不计算透明度色调）。
+`static ColorModel getRGBdefault()` 返回由 `java.awt.image` 包使用的默认 RGB `ColorModel`。该方案为每个主色度和透明度分量分配了 8 位，这提供了 256 级红、蓝、绿颜色和透明度的渐变，总计共有 16777216 种颜色（不计算透明度色调）。
 
-编码红、蓝、绿和透明度有两种基本方法，每种方法都是 32 位整数中的若干位整数。在第一种方法，像素的整数值被视为 `array` 索引，红、蓝、绿颜色和透明度从内部调色板表中获取。你不需要在表中排序颜色；符合性由模型创建者设置。`IndexColorModel` 继承自主 `ColorModel` 类，这样你就可以使用自己的调色板创建一个新的 `ColorModel` 类。当你构建模型时，你会创建颜色组件的数组。当程序员向模型请求颜色时，它会使用 `array` 索引。
+## 颜色编码方法
 
+编码红、蓝、绿和透明度有两种基本方法，每种方法都是 32 位整数中的若干位整数。
+
+### 索引颜色模型
+在第一种方法中，像素的整数值被视为 `array` 索引，红、蓝、绿颜色和透明度从内部调色板表中获取。你不需要在表中排序颜色；符合性由模型创建者设置。`IndexColorModel` 继承自主 `ColorModel` 类，这样你就可以使用自己的调色板创建一个新的 `ColorModel` 类。当你构建模型时，你会创建颜色组件的数组。当程序员向模型请求颜色时，它会使用 `array` 索引。
+
+### 直接颜色模型
 第二种方法：`DirectColorModel` 是 `ColorModel` 类的扩展。例如，我们可以使用 6 位红色、6 位蓝色、8 位绿色。根据该方案，我们将有 67108864 种可能的颜色。
 
 ![](img/image9272.gif)
 
-#### Rice. 9.3.
+## Rice. 9.3.
 
 现在 `PixelGrabber` 返回的整数像素值数组有了意义。`PixelGrabber` 使用的 `ColorModel` 是默认模型 `RGB`，可以使用表 9-13 列出的方法从像素中提取颜色信息。我们可以向早期示例中的循环中添加以下代码，分析数组中的特定颜色：
 
 ```java
-colormodel cm = ColorModel.getRGBdefault();
+ColorModel cm = ColorModel.getRGBdefault();
 int pixel;
-for (int i=0; i<ary.length; i++) {
+for (int i = 0; i < ary.length; i++) {
     pixel = ary[i];
     cm.getRed(pixel);
     cm.getBlue(pixel);
@@ -3666,102 +3483,98 @@ for (int i=0; i<ary.length; i++) {
 
 我们展示了如何将图像转换为数组，以及如何使用 `ColorModel` 类将这些数组中的值转换为颜色分量。反向转换（将数组转换为图像）使用 `MemoryImageSource` 类也同样简单。
 
-### 将数组转换为图像
+## 将数组转换为图像
 
 `MemoryImageSource` 类提供了一种将整数数组转换为 `Image` 类像素的方法。`MemoryImageSource` 类实现了 `ImageProducer` 接口，可以作为 `Component` 类 `createImage` 方法的参数使用。表 9-14 给出了 `MemoryImageSource` 类的构造函数。
 
-表 9-14. MemorylmageSource 类构造函数
+### 表 9-14. MemoryImageSource 类构造函数
 
-`MemoryImageSource(int, ColorModel, byte[], int, int)`
+| 构造函数 | 说明 |
+| :--- | :--- |
+| `MemoryImageSource(int, ColorModel, byte[], int, int)` | 创建一个新的 `ImageProducer`，它通过参数传递的字节数组中的像素值构建图像。前两个整数表示所需的图像宽度和高度，但参数 `colormodel` 设置了在解释数组时必须使用的像素值与颜色分量之间的 `ratio`（比例）。最后两个整数表示数组中的起始位置以及数组中每行像素占据的字节数（实际上是图像的 `width` 宽度）。 |
+| `MemoryImageSource(int, int, ColorModel, byte[], int, int, Hashtable)` | 工作方式与之前的构造函数相同。参数 `Hashtable` 建立了图像属性。 |
+| `MemoryImageSource(int, int, ColorModel, int[], int, int)` | 从给定的整数数组创建新的 `ImageProducer`。 |
+| `MemoryImageSource(int, int, ColorModel, int[], int, int, Hashtable)` | 从给定的整数数组创建新的 `ImageProducer`。 |
+| `MemoryImageSource(int, int, int[], int, int)` | 使用默认颜色模型 `RGB` 从给定的整数数组创建新的 `ImageProducer`。 |
+| `MemoryImageSource(int, int, ColorModel, int[], int, int, Hashtable)` | 使用默认颜色模型 `RGB` 从给定的整数数组创建新的 `ImageProducer`。 |
 
-`MemoryImageSource(int, int, ColorModel, byte[], int, int, hash table)`
-
-`MemoryImageSource(int, int, ColorModel, int[], int, int)`
-
-
-
-
-创建一个新的 `ImageProducer`，它通过参数传递的字节数组中的像素值构建图像。前两个整数表示所需的图像宽度和高度，但 `parameter` `colormodel` 设置了在解释数组时必须使用的像素值与颜色分量之间的 `ratio`（比例）。最后两个整数表示数组中的起始位置以及数组中每行像素占据的字节数（实际上是图像的 `width` 宽度）。
-
-工作方式与之前的构造函数相同。参数 `Hashtable` 建立了图像属性。
-
-从给定的整数数组创建新的 `ImageProducer`。
-
-`MemorylmageSource(int, int, ColorModel, int[], int, int, hash table)`
-
-`memorylmageSource(int, int, int[], int, int)`
-
-`memorylmageSource(int, int, ColorModel, int[], int, int, hash table)`
-
-从给定的整数数组创建新的 `ImageProducer`。
-
-使用默认颜色模型 `RGB` 从给定的整数数组创建新的 `ImageProducer`。
-
-使用默认颜色模型 `RGB` 从给定的整数数组创建新的 `ImageProducer`。
-
-这个类能更好地说明示例。下面我们给出一个完整的 applet，它从整数数组生成并输出图像。我们将为每个像素创建红色分量，根据每个像素的 `x` 和 `y` 坐标相应地添加缩放的正弦；同样，我们将为每个像素创建蓝色分量，但已经加上了 `X` 和 `Y` 坐标的余弦。每个像素的最终值通过位或 操作将具有 100% 值透明度的颜色的红色和蓝色分量组合，并移动分量直到它们与默认 RGB 颜色方案中的相应位置对齐。米饭上显示的准备图片的截图。9-4。
+这个类能更好地说明示例。下面我们给出一个完整的 applet，它从整数数组生成并输出图像。我们将为每个像素创建红色分量，根据每个像素的 `x` 和 `y` 坐标相应地添加缩放的正弦；同样，我们将为每个像素创建蓝色分量，但已经加上了 `X` 和 `Y` 坐标的余弦。每个像素的最终值通过位或操作将具有 100% 值透明度的颜色的红色和蓝色分量组合，并移动分量直到它们与默认 RGB 颜色方案中的相应位置对齐。图 9-4 显示的准备图片的截图。
 
 ![](img/image09273.gif)
 
-#### 米饭。9.4。
+### 图 9-4.
 
-示例 9-2. 类 MemoryImageSource 的用法。
+### 示例 9-2. 类 MemoryImageSource 的用法
 
 ```java
-import java.awt.*; import java.awt.image.*; import java.applet.*;
+import java.awt.*;
+import java.awt.image.*;
+import java.applet.*;
 
-public class ShadeApplet extends applet { Image myImage;
+public class ShadeApplet extends Applet {
+    Image myImage;
 
     public void init() {
-        resize(250,250);
-        int ary[] = new int[250*250];  for (int i=0; i<250; i++) {
-            for (int j=0; j<250; j++) {
-                double x = (16*Math.PI*j/250); double y = (16*Math.PI*i/250);
-                double p = (Math.sin(x)+Math.sin(y)+2)/4;  int redvalue = (int)Math.round(p*255);  double q = (Math.cos(x)+Math.cos(y)+2)/4;  int bluevalue = (int)Math.round(q*255);  ary[i*250+j] = (255<<24)|((redvalue)<<16)|(bluevalue);
+        resize(250, 250);
+        int ary[] = new int[250 * 250];
+        for (int i = 0; i < 250; i++) {
+            for (int j = 0; j < 250; j++) {
+                double x = (16 * Math.PI * j / 250);
+                double y = (16 * Math.PI * i / 250);
+                double p = (Math.sin(x) + Math.sin(y) + 2) / 4;
+                int redvalue = (int) Math.round(p * 255);
+                double q = (Math.cos(x) + Math.cos(y) + 2) / 4;
+                int bluevalue = (int) Math.round(q * 255);
+                ary[i * 250 + j] = (255 << 24) | ((redvalue) << 16) | (bluevalue);
             }
         }
 
         MemoryImageSource mis;
-        mis = new MemoryImageSource(250,250,ary,0,250);  myImage = createImage(mis);
+        mis = new MemoryImageSource(250, 250, ary, 0, 250);
+        myImage = createImage(mis);
     }
 
-    public void paint(Graphics g) { g.drawImage(myImage,0,0,this); }
+    public void paint(Graphics g) {
+        g.drawImage(myImage, 0, 0, this);
+    }
 }
 ```
 
-### 图像过滤
+## 图像过滤
 
-现在我们可以直接在位位上创建图像，而无需使用 `Graphics` 类提供的图形原语。我们甚至可以管理从网络加载的图像；通过 Pixel Grabber，我们可以从数组中接收像素值。我们可以使用 `MemoryImageSource` 类反转该过程。Java API 提供了两个专门为这些任务设计的类 `-FilteredImageSource` 和 `ImageFilter`。
+现在我们可以直接在位位上创建图像，而无需使用 `Graphics` 类提供的图形原语。我们甚至可以管理从网络加载的图像；通过 `PixelGrabber`，我们可以从数组中接收像素值。我们可以使用 `MemoryImageSource` 类反转该过程。Java API 提供了两个专门为这些任务设计的类：`FilteredImageSource` 和 `ImageFilter`。
 
 `FilteredImageSource` 类实现了 `ImageProducer` 接口。它接受 `ImageProducer` 和 `ImageFilter` 作为构造参数。通过创建图像，它从构造函数中定义的 `ImageProducer` 接收像素数据，然后按照 `ImageFilter` 规定的一致方式更改这些数据，并通过 `ImageConsumer` 发回修改后的数据。`ImageFilter` 类实现了 `ImageConsumer` 接口。它不改变像素数据。Java API 提供了两个简单的扩展，允许插入颜色滤镜或为新图像裁剪某些区域。
 
 `RGBImageFilter` 类默认不执行任何颜色过滤，但会根据指定的默认 RGB 颜色模型转换像素值和图像所使用的 `ColorModel`。为了对其进行颜色过滤，我们需要扩展该类的 `filterRGB` 方法以完成必要的过滤。考虑一个示例，即移除图像中所有的红色。
 
-示例 9-3. 过滤移除红色。
+### 示例 9-3. 过滤移除红色
 
 ```java
 import java.awt.image.*;
 
 public class NoRedFilter extends RGBImageFilter {
     public int filterRGB(int x, int y, int rgb) {
-        int alpha = (rgb & 0xff000000)>>24;  int red = (rgb & 0x00ff0000)>>16;  int green = (rgb & 0x0000ff00)>>8;  int blue = (rgb & 0x000000ff);
-        return ((alpha<<24)|(green<<8)|(blue));
+        int alpha = (rgb & 0xff000000) >> 24;
+        int red = (rgb & 0x00ff0000) >> 16;
+        int green = (rgb & 0x0000ff00) >> 8;
+        int blue = (rgb & 0x000000ff);
+        return ((alpha << 24) | (green << 8) | (blue));
     }
 }
 ```
 
-首先，我们通过指定给定数组默认 RGB 颜色方案中的像素颜色来拆解整数 `rgb` 变量，然后将透明度、绿色和蓝色分量加回 RGB 值，完全忽略红色值。请注意，由于我们传递了 `x` 和 `y` 坐标，我们可以根据位置更改滤镜颜色，但对于我们的简单滤镜来说，这是没用的。`RGBColorFilter` 类——一种实手的滤镜，你可以根据自己的需要进行开发，因为在需要时它会执行到给定的默认模型颜色 `RGB` 的转换。
+首先，我们通过指定给定数组默认 RGB 颜色方案中的像素颜色来拆解整数 `rgb` 变量，然后将透明度、绿色和蓝色分量加回 RGB 值，完全忽略红色值。请注意，由于我们传递了 `x` 和 `y` 坐标，我们可以根据位置更改滤镜颜色，但对于我们的简单滤镜来说，这是没用的。`RGBImageFilter` 类——一种实用的滤镜，你可以根据自己的需要进行开发，因为在需要时它会执行到给定的默认模型颜色 `RGB` 的转换。
 
-`CropImageFilter` 类用法非常简单；你不需要扩展它来裁剪图像。相反，你只需要在构建滤镜时定义想要裁剪的区域。构造函数需要四个整数作为参数，以定义矩形。这里有一个短示例，裁剪左上角的注入：
+`CropImageFilter` 类用法非常简单；你不需要扩展它来裁剪图像。相反，你只需要在构建滤镜时定义想要裁剪的区域。构造函数需要四个整数作为参数，以定义矩形。这里有一个短示例，裁剪左上角的区域：
 
 ```java
-FilteredlmageSource fis;
-CroplmageFilter filter;
-filter =new CropmageFilter(0,0,10,10);
-fis = new FilterlmageSource(mylmage.getSource(),filter);  Image myNewage = createImage(fis);
+FilteredImageSource fis;
+CropImageFilter filter;
+filter = new CropImageFilter(0, 0, 10, 10);
+fis = new FilteredImageSource(myImage.getSource(), filter);
+Image myNewImage = createImage(fis);
 ```
-
-
 
 现有的 Java 应用程序接口（API）工具提供了编写几乎任意复杂性应用程序的能力。当然，为了在需要时使用 API，必须编写相应的程序。在这里衡量的是，随着此类程序的增加，程序员越来越希望使用他们早些为其他目的编写过的新开发片段。既然如此，为什么不使用包（packages）呢？
 
@@ -3780,7 +3593,7 @@ fis = new FilterlmageSource(mylmage.getSource(),filter);  Image myNewage = creat
 如果你要比较同一类的两个对象，则必须重新定义此方法。如果没有重写，该类的对象只有在一种情况下是相等的（方法返回 `true`）——即所比较的对象实际上是同一个对象。至于如何重新定义这个方法，主要取决于类中的变量。考虑 `exampleClass` 类。假设它的构造函数和其他方法以某种方式改变了变量的值：
 
 ```java
-class exampleClass(
+class exampleClass {
     private String s;
     private int i;
     private int j;
@@ -3793,13 +3606,13 @@ class exampleClass(
 对于这样的类，比较两个变量值的方法非常合适。它可以转换为复合布尔表达式，但我们倾向于分别比较两个变量：
 
 ```java
-equals(Object obj) {
+boolean equals(Object obj) {
     if (obj == null) return false;
-    if (!obj instanceof exampleClass) return false;
+    if (!(obj instanceof exampleClass)) return false;
 
-    exampleClass ex = (exampleClass)obj;
-    if (!ex.i != i) return false;
-    if (!ex.j != j) return false;
+    exampleClass ex = (exampleClass) obj;
+    if (ex.i != i) return false;
+    if (ex.j != j) return false;
     return true;
 }
 ```
@@ -3826,13 +3639,13 @@ class myBox {
 
 ## 方法 `int hashCode()`
 
-这个方法与上述两个方法一样，必须始终被重写。如果不这样做，该类将无法与第 6 章讨论的 `java.util.hashtable` 类配合使用。为了学习如何构建方法以及理解为什么要重新定义它，让我们考虑更复杂的哈希表。
+这个方法与上述两个方法一样，必须始终被重写。如果不这样做，该类将无法与第 6 章讨论的 `java.util.Hashtable` 类配合使用。为了学习如何构建方法以及理解为什么要重新定义它，让我们考虑更复杂的哈希表。
 
 搜索速度是哈希表的主要优势之一。哈希表从不遍历所有内容。要在由 `N` 个键值对组成的表中查找一个元素，总共需要执行 `N` 次比较操作。如果 `N` 足够大，哈希表只需执行一次比较。
 
 哈希表如何决定将键/值对放入哪个桶（bucket）中？这使用了特殊的算法——哈希函数（hash function）。它的任务是让“键-值”分布在尽可能多的桶中，从而进一步简化，减少单个桶中键的数量。
 
-这就是 `hashCode` 方法发挥作用的地方。作为 `java.util.hashtable` 中哈希函数的参数，它传递的是整数。
+这就是 `hashCode` 方法发挥作用的地方。作为 `java.util.Hashtable` 中哈希函数的参数，它传递的是整数。
 
 ```java
 int hashCode() {
@@ -3840,14 +3653,15 @@ int hashCode() {
 }
 ```
 
-
-
-然而，理想情况在实践中很难实现。我们只能建议不要耗费许多个不眠之夜去开发一个完全满足所有标准的完美 `hashCode` 方法——通常通常来说，这是不可能的。因为 `hashCode` 返回的是一个 `integer`，它的可能值只有 `4294967296` 种。而在所有 `String` 类型的变量中存在 `9223372936854775897` 种可能值，而总长度仅为两个字符的 `long` 行寥寥这么多。现在，既然我们知道要为 `String` 类型获得最佳哈希值是不可能的，让我们看看 `String` 类型的开发者实现了什么。他们的主要目的是提供一种如何获取更唯一值的方法：
+然而，理想情况在实践中很难实现。我们只能建议不要耗费许多个不眠之夜去开发一个完全满足所有标准的完美 `hashCode` 方法——通常来说，这是不可能的。因为 `hashCode` 返回的是一个 `integer`，它的可能值只有 `4294967296` 种。而在所有 `String` 类型的变量中存在 `9223372936854775897` 种可能值，而总长度仅为两个字符的 `long` 行寥寥这么多。现在，既然我们知道要为 `String` 类型获得最佳哈希值是不可能的，让我们看看 `String` 类型的开发者实现了什么。他们的主要目的是提供一种如何获取更唯一值的方法：
 
 ```java
-// method hashCode class java.lang.hashCode public int hashCode() {
+// method hashCode class java.lang.String
+public int hashCode() {
     int h = 0;
-    int off = offset; char val[] = value; int len = count;
+    int off = offset;
+    char val[] = value;
+    int len = count;
     if (len < 16) {
         for (int i = len; i > 0; i--) {
             h = (h * 37) + val[off++];
@@ -3865,22 +3679,24 @@ int hashCode() {
 
 ![](img/image09275.jpeg)
 
-**建议**：`String` 类的源代码与其他 API 类一样，都在 JDK 中。有时，通过查看那里来熟悉 Java 开发者的观点或其他出于其他原因是很有趣且实用的。
+> **建议**：`String` 类的源代码与其他 API 类一样，都在 JDK 中。有时，通过查看那里来熟悉 Java 开发者的观点或其他出于其他原因是很有趣且实用的。
 
 ![](img/image09276.jpeg)
 
-### 方法对象 `clone()`
+## 方法 `Object clone()`
+
+
 
 你可能在第 2 章中记得，赋值运算符 `=` 并不会创建对象的副本。相反，如果它的操作数之一是实例变量，那么一个或两个变量将指向同一个对象。假设我们有一个由类表示的链表，该类包含一个整数和一个数据对象 `list`。`setNext` 方法允许根据给定的米饭创建数据结构，见 10-1。
 
 ![](img/image09277.gif)
 
-#### Rice. 10.1.
+### 图 10.1
 
-注意这些我们在 `object` 类中重写的方法，正如我们上面提到的：
+注意这些我们在 `Object` 类中重写的方法，正如我们上面提到的：
 
 ```java
-public class node {
+public class Node {
     private Object Data = null;
     private Node Next = null;
     private int num;
@@ -3888,12 +3704,12 @@ public class node {
     public void setData(Object obj) { Data = obj; }
     public void setNum(int someNum) { num = someNum; }
     public void setNext(Node node) { Next = node; }
-    public Object getData() { return data; }
-    public node getNextNode() { return Next; }
+    public Object getData() { return Data; }
+    public Node getNextNode() { return Next; }
 
     public boolean equals(Object obj) {
-        if (!(obj instanceof node)) return false;
-        node N = (node) obj;
+        if (!(obj instanceof Node)) return false;
+        Node N = (Node) obj;
         return ((N.num == num) && Data.equals(N.Data));
     }
 
@@ -3913,24 +3729,24 @@ public class node {
 如果我们执行以下操作：
 
 ```java
-node A = new node();
-node B = A;
+Node A = new Node();
+Node B = A;
 Integer I = new Integer(32);
-b.setNum(16);
-b.setData(32);
+B.setNum(16);
+B.setData(I);
 ```
 
-我们并没有得到两个不同的 `linkedListNode` 实例，而是总共只有一个，引用变量 `A` 和 `B` 都指向它。这意味着：
+我们并没有得到两个不同的 `LinkedListNode` 实例，而是总共只有一个，引用变量 `A` 和 `B` 都指向它。这意味着：
 
 `System.out.println(A);`
 
-将给出结果 "data=32, num=16"。（正如你记得的，`System.out.println` 方法在接收到 `Object` 类型参数后会调用 `toString` 方法并以行的形式显示结果。）如果我们真的需要实例的副本怎么办？这就是类的 `clone` 方法派上用场的地方。`object` 会复制实例，包括所有变量的当前状态。我们可以构造一个可以克隆的子类 `Node`：
+将给出结果 "Data = 32, num = 16"。（正如你记得的，`System.out.println` 方法在接收到 `Object` 类型参数后会调用 `toString` 方法并以行的形式显示结果。）如果我们真的需要实例的副本怎么办？这就是类的 `clone` 方法派上用场的地方。`Object` 会复制实例，包括所有变量的当前状态。我们可以构造一个可以克隆的子类 `Node`：
 
 ```java
-public class cloneableNode extends node implements cloneable {
+public class CloneableNode extends Node implements Cloneable {
     public Object clone() {
         try {
-            return superclone();
+            return super.clone();
         } catch (CloneNotSupportedException e) {
             // 这不会发生，因为
             // 我们已经将类声明为“implements Cloneable”
@@ -3940,15 +3756,13 @@ public class cloneableNode extends node implements cloneable {
 }
 ```
 
-我们在这里所做的都会调用 `object` 类的 `clone` 方法。由于会产生 `CloneNotSupportedException`，我们被迫处理它：
+我们在这里所做的都是调用 `Object` 类的 `clone` 方法。由于会产生 `CloneNotSupportedException`，我们被迫处理它：
 
 ```java
-cloneableNode A = new cloneableNode();
+CloneableNode A = new CloneableNode();
 ```
 
-
-
-```
+```java
 curList = curList.clone();
 ```
 
@@ -3964,13 +3778,13 @@ curList = curList.clone();
 
 通用性概念意味着，在编写程序时，要考虑到它在未来的使用前景。你的目标是创建一个易于构建的结构化通用代码封装，但首先需要解决具体要封装什么以及如何做最合适。
 
-许多程序员掉入了复杂的语法对象和广义面向对象的陷阱。重要的是记住，面向对象提供了比其他方法更直观的解决问题方式，然而，遗憾的是，计算机在直觉解决问题方面并没有我们人类那么擅长。曾几何时，程序是用汇编语言编写的。我们用那种语言编写多线程用户界面吗？当然可以！但汇编语言本身没有可以让我们轻松描述项目项目固有问题的机制。
+许多程序员掉入了复杂的语法对象和广义面向对象的陷阱。重要的是记住，面向对象提供了比其他方法更直观的解决问题方式，然而，遗憾的是，计算机在直觉解决问题方面并没有我们人类那么擅长。曾几何时，程序是用汇编语言编写的。我们用那种语言编写多线程用户界面吗？当然可以！但汇编语言本身没有可以让我们轻松描述项目固有问题的机制。
 
 这些考虑也适用于过程化编程语言。在过程化语言中，你有工具可以描述通用的动作序列，但程序中的非通用部分。只要程序执行数学计算，它的效果就良好，但一旦你尝试解决现实规模的问题，它就失效了。考虑航空运输管理问题。
 
 简而言之，它的表述如下：我们不希望飞机相互碰撞。时间、起飞、降落以及机场空间占用都是可访问的。
 
-问题由以下组件组成：飞机、它们的路线、停车位、跑道（runways）、空中交通塔和机库。在面向对象的语言中，问题可以表示为一组对象的集合，而在过程化语言中，我们仅限于描述可能的动作。
+问题由以下组件组成：飞机、它们的路线、停车位、跑道（`Runway`）、空中交通塔和机库。在面向对象的语言中，问题可以表示为一组对象的集合，而在过程化语言中，我们仅限于描述可能的动作。
 
 当然，上述问题也可以用过程化语言解决，但在这种情况下，所有的注意力将集中在上面。在面向对象的语言中，我们消除了对其细微差的研究，将所有注意力放在问题的实际解决上。编写有效程序的关键不是你写了什么，而是你写的什么。在开始编写代码之前，你是否正确地思考了问题？这种转变是已经研究过特定语言所有特征的资深程序员的特点。所以，让我们熟悉如何考虑程序使其变得更高效。
 
@@ -3984,11 +3798,12 @@ curList = curList.clone();
 
 ![image0927.gif](img/image0927.gif)
 
-#### 图 10.3.
+#### 图 10.3
 
 任务——示意性地勾勒包含解决问题的元素、对象的方法。（等等，让我们根据提供的文本重新检查文本结构）。
 
 实际上，查看文本：
+
 “任务——示意性地勾勒包含解决问题的元素、对象的方法。让我们重复早期思考对象和方法的阶段。只需列出属性列表，如表 10-1 所示即可。”
 
 **表 10-1. 航空运输系统元素的属性**
@@ -4005,13 +3820,9 @@ curList = curList.clone();
 
 （注：提供的文本似乎有很多混乱，我保留了原始文本但应用了格式规则。）
 
-***我将提供一个不包含内部注释的干净版本***
-
-
-
 针对上一个问题，我们将自定义接口和子系统网络从项目的其余部分分离了出来。现在是时候查看其他组件，并思考如何让它们变得通用了。例如，机库与停车场非常相似，而飞机本质上是运输设施的一种。在考虑一个程序实现自定义接口、网络和存储需要什么时，你得考虑这些组件是否在某些其他项目中也有应用。
 
-微妙之处在于，将那些将变得通用的、适用于复用的组件隔离出来。然后，在继续编写类和接口时，你真正获得了了可以大胆放入库中的通用代码。对于我们正在考虑的这个例子，我们构建了一个抽象类 `transport means`，而飞机则作为子类来实现它。
+微妙之处在于，将那些将变得通用的、适用于复用的组件隔离出来。然后，在继续编写类和接口时，你真正获得了可以大胆放入库中的通用代码。对于我们正在考虑的这个例子，我们构建了一个抽象类 `TransportMeans`，而飞机则作为子类来实现它。
 
 ### 如何在面向对象的 Java 中调整原始文本？
 
@@ -4023,11 +3834,11 @@ curList = curList.clone();
 
 ### 工作代码中的项目转换
 
-现在到了从图表转向编写实际程序的时刻了。正如我们在第 2 章中讨论的，包（package）是一个存放类、接口和异常的容器。要指示一个对象引用特定的包，需要使用 `package` 关键字配合分配的包名：
+现在到了从图表转向编写实际程序的时刻了。正如我们在第 2 章中讨论的，包（`package`）是一个存放类、接口和异常的容器。要指示一个对象引用特定的包，需要使用 `package` 关键字配合分配的包名：
 
 ```java
 package somePackage;
-public class someClass {
+public class SomeClass {
     // 类定义
 }
 ```
@@ -4036,7 +3847,7 @@ public class someClass {
 
 ```java
 package myPackages.someOtherPackage;
-public class someOtherClass {
+public class SomeOtherClass {
     // 类定义
 }
 ```
@@ -4047,19 +3858,19 @@ public class someOtherClass {
 
 我们为什么需要它呢？有时你希望某个特定方法只对某些对象可用，而不是对所有人。让我们考虑上面关于空中通信管理的例子。我们的飞机需要一个方法来寻找一个空闲的 `Runway`（跑道）进行着陆，但信息只能来自控制室。属于飞机类的 `setRunway` 方法声明了 `protected` 修饰符，并放置在描述空中交通控制室的同一个包中。这个包不能包含某些类，例如“airstrip”（跑道场）类。想象一下，如果这个类根据自己的意愿，突然调用 `setRunway` 方法并决定在繁忙的跑道上着陆会发生什么！
 
-你可以说：“所有这些类都没有自己的生命。毕竟，它们是由我编写的，还有谁比我更知道‘跑道’类不应该允许对‘飞机’类的 `setRunway` 方法进行调用？”是的，在简单项目中，你所说的是正确的。但当涉及到大项目时，某些模块确实在某种意义上开始拥有它们自己的生命。每当完成主要的项目实现后，任何人都可能来尝试做一些与系统设计基本原则完全背道而道的事。与此同时，系统是否有良好的文档一点并不重要。在这种情况下，最好的文档就是简单地禁止编译器访问未提供此类调用的类方法。”
+你可以说：“所有这些类都没有自己的生命。毕竟，它们是由我编写的，还有谁比我更知道‘跑道’类不应该允许对‘飞机’类的 `setRunway` 方法进行调用？”是的，在简单项目中，你所说的是正确的。但当涉及到大项目时，某些模块确实在某种意义上开始拥有它们自己的生命。每当完成主要的项目实现后，任何人都可能来尝试做一些与系统设计基本原则完全背道而道的事。与此同时，系统是否有良好的文档一点并不重要。在这种情况下，最好的文档就是简单地禁止编译器访问未提供此类调用的类方法。
 
 `protected` 修饰符即使在只有你一个人工作的相对较小的项目中也有意义。程序员往往在时间推移后忘记程序的规模，以及程序是如何设计的，而且当在几个月后回头看自己的文本时，你实际上就变成了那个“另一个”程序员。
 
 `final` 修饰符也用于防止继承或方法重写。`final` 修饰符即使在只有你一个人工作的相对较小的项目中也有意义。它防止……改变，以及他人。让我们考虑下一个例子：
 
 ```java
-class runway {
+class Runway {
     private final int physicalLocation;
     private final int physicalLength;
     private final int physicalWidth;
 
-    runway(int i, int j, int k) {
+    Runway(int i, int j, int k) {
         physicalLocation = i;
         physicalLength = j;
         physicalWidth = k;
@@ -4084,12 +3895,9 @@ class runway {
 复用类的一种方法是将其子类化。只需要添加父类中缺失的几个方法，就可以让类准备就绪。缺失的类方法已经在父类中描述过了。在设计大型系统时，你需要考虑 Java 关于对象类型转换的好处。
 
 ```java
-abstract class vehicle {
+abstract class Vehicle {
 }
 ```
-
-
-
 
 ```java
 String vehicleType();
@@ -4113,7 +3921,7 @@ abstract class Path {
 }
 ```
 
-到目前为止我们编写的所有内容仅代表了学术兴趣。当然，你的同事会欣赏面向对象的编程风格，但还需要一些实际实用的东西。一旦我们为不同类型的车辆（`Vehicle`）及其路线（`Path`）创建抽象类的子类，优势就会变得显而易见。此外，这些子类的实例可以使用父类 "vehicle" 中描述的泛型方法进行控制。接口以及以此方式创建的子类也是如此。
+到目前为止我们编写的所有内容仅代表了学术兴趣。当然，你的同事会欣赏面向对象的编程风格，但还需要一些实际实用的东西。一旦我们为不同类型的车辆（`Vehicle`）及其路线（`Path`）创建抽象类的子类，优势就会变得显而易见。此外，这些子类的实例可以使用父类 "Vehicle" 中描述的泛型方法进行控制。接口以及以此方式创建的子类也是如此。
 
 # 关于可维护性的代码检查
 
@@ -4123,7 +3931,7 @@ abstract class Path {
 
 ![](img/image09280.jpeg)
 
-**建议** Java 中的异常处理机制等于 C++，但它在此基础上增加了 `finally` 块，该块会在任何 `catch` 块之后运行。
+> **建议** Java 中的异常处理机制等于 C++，但它在此基础上增加了 `finally` 块，该块会在任何 `catch` 块之后运行。
 
 ![](img/image09281.jpeg)
 
@@ -4132,6 +3940,8 @@ abstract class Path {
 ## 异常拦截
 
 你首次在第 5 章在网络启动过程中遇到异常处理。你可能记得，如果无法转换为格式为 `URL` 的可变参数类型 `String`，`URL` 构造函数将抛出一个异常。让我们看看这里可以做什么：
+
+
 
 ```java
 public class someApplet extends applet {
@@ -4174,23 +3984,23 @@ public class someApplet extends applet {
 
 ## 方法描述
 
-`String getMessage()` 返回详细信息。如果是 `Throwable` 对象，它会在屏幕上输出。
-
-`void printStackTrace()` 打印堆栈跟踪的内容。栈的内容是在抛出异常时中断的所有方法。`Throwable fillInStackTrace()` 填充堆栈跟踪内容。在处理再次生成的异常时有用。`String toString()` 返回描述。
+*   `String getMessage()`：返回详细信息。如果是 `Throwable` 对象，它会在屏幕上输出。
+*   `void printStackTrace()`：打印堆栈跟踪的内容。栈的内容是在抛出异常时中断的所有方法。
+*   `Throwable fillInStackTrace()`：填充堆栈跟踪内容。在处理再次生成的异常时有用。
+*   `String toString()`：返回描述。
 
 `Throwable` 类的方法可以被 `Exception` 的子类重写，并且当然，还可以向它们添加额外方法。异常 API 文档在相关的网页上进行了描述。示例页面见下文。
 
-
-
-
-
-`URL U = new URL("http://www.vmedia.com/?.?"); Image I= getImage(U);`
-
 ```java
-//编译不会通过 - 没有 try-catch 块！
+URL U = new URL("http://www.vmedia.com/?.?");
+Image I = getImage(U);
 ```
 
-与简单的错误错误（`Error`）不同，异常时填充（运行时异常，`Runtime Exception`）不需要显式地处理。如果我们被要求这样做，程序的源代码将变成一片无法逾越的丛林。例如，如果我们应该捕获 `OutOfMemoryError`（“内存不足”）这种类型的异常，那么在每个生成任何新对象的语句之后都必须这样做！同样，对于在尝试访问某个对象尚未实现的非静态成员时所抛出的 `NullPointerException`（“空指针”），也是如此的。下面的代码片段演示了产生此类异常的方法之一：
+```java
+// 编译不会通过 - 没有 try-catch 块！
+```
+
+与简单的错误（`Error`）不同，异常时填充（运行时异常，`RuntimeException`）不需要显式地处理。如果我们被要求这样做，程序的源代码将变成一片无法逾越的丛林。例如，如果我们应该捕获 `OutOfMemoryError`（“内存不足”）这种类型的异常，那么在每个生成任何新对象的语句之后都必须这样做！同样，对于在尝试访问某个对象尚未实现的非静态成员时所抛出的 `NullPointerException`（“空指针”），也是如此的。下面的代码片段演示了产生此类异常的方法之一：
 
 ```java
 String S;
@@ -4198,17 +4008,18 @@ S.toLowerCase();
 // 将产生 NullPointerException 异常
 ```
 
-如果我们被迫处理 `NullpointerException` 异常，那么每次访问任何对象时都必须这样做。这与强制处理 `OutOfMemoryError` 一样痛苦不分。
+如果我们被迫处理 `NullPointerException` 异常，那么每次访问任何对象时都必须这样做。这与强制处理 `OutOfMemoryError` 一样痛苦不分。
 
 运行时异常与错误之间的主要区别在于它们在系统中所代表的失败类型。错误是你的程序可能无法帮助的情况。例如，程序几乎无法处理“内存溢出”错误。因此，在处理错误时，程序的意义不大。在这些情况下，能做的最好的事情就是正确地完成应用程序操作。
 
-运行时异常是操作过程中的失败情况，你完全可以自己应对。它们与错误不同，有时甚至需要进行处理。还记得在第 6 章中我们必须将 `String` 值转换为 `int` 值吗？在那种情况下，我们可以按照如下方式安排 `try catch` 块：
+运行时异常是操作过程中的失败情况，你完全可以自己应对。它们与错误不同，有时甚至需要进行处理。还记得在第 6 章中我们必须将 `String` 值转换为 `int` 值吗？在那种情况下，我们可以按照如下方式安排 `try-catch` 块：
 
 ```java
-String S="20"; try {
+String S = "20";
+try {
     int i = Integer.parseInt(S);
 } catch (NumberFormatException e) {
-    System.out.println("无法转换 - + + S);
+    System.out.println("无法转换 - " + S);
 }
 ```
 
@@ -4216,43 +4027,55 @@ String S="20"; try {
 
 ### 一个设计中的多个 catch 块
 
-因此，异常处理系统迫使我们对应用程序可能的意外保持小心。遗憾的是，在示例 10-1 中，我们并没有真正演示 Java 异常处理如何比简单的 `if`-`else` 结构更好。它每个 `try` 块只有一个 `catch` 块。实际上，与 `try` 块关联的 `catch` 块可以根据需要任意添加。这意味着 `try` 块中的语句在程序正常进行时执行。
+因此，异常处理系统迫使我们对应用程序可能的意外保持小心。遗憾的是，在示例 10-1 中，我们并没有真正演示 Java 异常处理如何比简单的 `if-else` 结构更好。它每个 `try` 块只有一个 `catch` 块。实际上，与 `try` 块关联的 `catch` 块可以根据需要任意添加。这意味着 `try` 块中的语句在程序正常进行时执行。
 
 对于研究你代码的程序员来说，理解他们想要在做什么并不困难。任何程序员都会欣赏将运行正常情况的代码与发生错误时执行的代码分开的能力。
 
 让我们来看一个演示优势的示例。我们以前只在 applet 中上传单个图形文件。现在让任务复杂化：假设 Web 设计师想要上传多个文件，并指定每个文件在屏幕上显示的时间——通常创建一个动画。如果某个指定的文件在 applet 执行时不可用，它将用一张特殊图片替换，告知设计师服务器上该文件，同时 HTML 页面上的特殊图标将指示页面作者没有相应的图像。如果未指定显示时间，则使用默认时间。我们的动画任务决定了以下应用：
 
 ```java
-class anumApplet extends applet { Image imgs[];
+class anumApplet extends applet {
+    Image imgs[];
     Integer pauses[];
     // 其他描述
     public void init() {
-        Vector imgVec = new Vector(); Vector pauseVec = new Vector();
-        Image deadImage = createDeadImage(); Integer defaultPause = new integer(100); int indx = one;
-        String imgName = getParam("image"+indx); while (imgName != null) {
+        Vector imgVec = new Vector();
+        Vector pauseVec = new Vector();
+        Image deadImage = createDeadImage();
+        Integer defaultPause = new Integer(100);
+        int indx = 1;
+        String imgName = getParam("image" + indx);
+        while (imgName != null) {
             try {
-                URL imgURL = new URL (getDocumentBase, imgname);
-                // 这里可能会出现 MalformedURLException imgVec.add(getImage(imgURL));
-                String pauseParam = getParam ("pause" + indx); Integer thisPause(pauseParam);
-                // 这里可能会出现 NumberFormatException pauseVec.add(thisPause);
+                URL imgURL = new URL(getDocumentBase(), imgName);
+                // 这里可能会出现 MalformedURLException
+                imgVec.add(getImage(imgURL));
+                String pauseParam = getParam("pause" + indx);
+                Integer thisPause = new Integer(pauseParam);
+                // 这里可能会出现 NumberFormatException
+                pauseVec.add(thisPause);
             } catch (MalformedURLException e) {
-                showStatus(e.getMessage()); System.out.println(e.getMessage()); imgVec.add(deadImage);
+                showStatus(e.getMessage());
+                System.out.println(e.getMessage());
+                imgVec.add(deadImage);
             } catch (NumberFormatException e) {
                 pauseVec.add(defaultPause);
-            } finally {indx = indx + one;}
+            } finally {
+                indx = indx + 1;
+            }
         }
-        imgs = new Image[imgVec.size()]; imgVec.copyInto(imgs); pauseVec.copyInto(pauses);
+        imgs = new Image[imgVec.size()];
+        imgVec.copyInto(imgs);
+        pauseVec.copyInto(pauses);
     }
 }
 ```
 
-在 `indx = indx + one;` 之前的 `finally` 块。`imgs = new Image[imgVec.size()]; imgVec.copyInto(imgs); pauseVec.copyInto(pauses);`（等等，我应该重新检查文本逻辑文本逻辑）。
+在 `indx = indx + 1;` 之前的 `finally` 块。
 
+如果我们抛出一个与错误或执行时异常无关的异常，它必须在方法的适当部分中进行声明。我们很快就会看到，一个方法可以抛出多个异常。为了显示方法生成了异常，我们使用关键字 `throw`。如果方法产生的异常其无法自行处理怎么办？它可以拦截该异常并将其进一步发送给调用它的方法。`throw` 语句之后必须紧跟一个 `Throwable` 类的实例。当然，我们可以使用任何可用的构造函数。
 
-
-如果我们抛出一个与错误或执行时异常（timing exceptions）无关的异常，它必须在方法的适当部分中进行声明。我们很快就会看到，一个方法可以抛出多个异常。为了显示方法生成了异常，我们使用关键字 `throw`。如果方法产生的异常其无法自行处理怎么办？它可以拦截该异常并将其进一步发送给调用它的方法。`throw` 语句之后必须紧跟一个 `Throwable` 类的类的实例。当然，我们可以使用任何可用的构造函数。
-
-现在我们将开始开始开发这个类，在此期间，我们将对“如何处理异常”这一主题有一个深刻的教训。第 4 章展示了数值基本类型之间总是可以相互转换。即使我们将 `int` 转换为 `byte` 并超出了 `byte` 类型可能取值范围的限制，转换也不会导致错误——我们只是得到了一个没有意义的结果。但如果我们想知道转换过程中是否发生了错误呢？实现这一点的最佳方法是创建一个特殊的类 `Convert`，其内容是设计用于测试此类情况的方法。如果类型转换导致信息丢失，方法将生成一个异常。对于每种类型的转换，我们都会开发一个对应的方法，一旦类型转换导致信息丢失，该方法就会抛出异常。这里是这些方法之一：
+现在我们将开始开发这个类，在此期间，我们将对“如何处理异常”这一主题有一个深刻的教训。第 4 章展示了数值基本类型之间总是可以相互转换。即使我们将 `int` 转换为 `byte` 并超出了 `byte` 类型可能取值范围的限制，转换也不会导致错误——我们只是得到了一个没有意义的结果。但如果我们想知道转换过程中是否发生了错误呢？实现这一点的最佳方法是创建一个特殊的类 `Convert`，其内容是设计用于测试此类情况的方法。如果类型转换导致信息丢失，方法将生成一个异常。对于每种类型的转换，我们都会开发一个对应的方法，一旦类型转换导致信息丢失，该方法就会抛出异常。这里是这些方法之一：
 
 ```java
 public static byte toByte(int I) throws Exception {
@@ -4261,84 +4084,84 @@ public static byte toByte(int I) throws Exception {
         mesg = mesg + I + " - is less than byte range";
         throw new Exception(mesg);
     }
-    if (I > 128) {
+    if (I < -128) {
         mesg = mesg + I + " - is less than byte range";
         throw new Exception(mesg);
     }
-    return (byte)I;
+    return (byte) I;
 }
 ```
 
 从一方面来说，我们的方法是处理如何处理异常的良好示例。如果我们无法生成异常，我们就没有方法来报告超出允许范围的整数值是多少。
 
-然而，我们最简单的示例绝对不适用于实际使用。如果发生了任何问题，我们的程序需要知道原因。否则，未来可能研究你代码的人将无法理解程序中发生了什么种错误。此外，正如你记得的，每种类型的异常都必须有单一的 catch 语句。这意味着使用你方法的人可能无法区分一个异常实例和另一个方法的产生的异常实例。
+然而，我们最简单的示例绝对不适用于实际使用。如果发生了任何问题，我们的程序需要知道原因。否则，未来可能研究你代码的人将无法理解程序中发生了什么种错误。此外，正如你记得的，每种类型的异常都必须有单一的 `catch` 语句。这意味着使用你方法的人可能无法区分一个异常实例和另一个方法产生的异常实例。
 
 这是一个语义问题，因为意义很少。我们必须编写自己的 `Exception` 子类并为它们提供有意义的名称。由于转换器类中的每个方法都必须生成自己的异常，我们开发了异常层次结构，如图 10-6 所示。
 
 ![](img/image09287.gif)
 
-#### 图 10.6。
+#### 图 10.6
 
 编写一个遵循此层次结构的程序非常简单。所有需要做的事情——就是为包含在 `MagnitudeLoss` 和 `PrecisionLoss` 层次结构部分中的不同异常类型添加构造函数。记住，与任何类一样，每个异常都必须放在单独的文件中：
 
-示例 10-1a。转换转换的异常。
+示例 10-1a。转换的异常。
 
 ```java
 public class ConvertException extends Exception {
     public ConvertException(String S) {
-        super("Couldn't convert: "+S);
+        super("Couldn't convert: " + S);
     }
 }
 
 public class StringFormatException extends ConvertException {
     public StringFormatException(String S) {
-        super("Bad String Format: "+S);
+        super("Bad String Format: " + S);
     }
 }
 
 public class MagnitudeLossException extends ConvertException {
     public MagnitudeLossException(String S) {
-        super("magnitude loss: - "+S);
+        super("magnitude loss: " + S);
     }
     // 注意：原文在此处有两个构造函数定义，存在语法错误
     public MagnitudeLossException(double d) {
-        this(""+d);
+        this("" + d);
     }
 }
 
 public class LongMagnitudeLossException extends MagnitudeLossException {
     public LongMagnitudeLossException(long l) {
-        super("long "+l);
+        super("long " + l);
     }
 }
 
 public class IntMagnitudeLossException extends MagnitudeLossException {
     public IntMagnitudeLossException(int i) {
-        super("int "+i);
+        super("int " + i);
     }
 }
 
 public class ShortMagnitudeLossException extends MagnitudeLossException {
     public ShortMagnitudeLossException(short s) {
-        super("short - "+s);
+        super("short - " + s);
     }
 }
 
 public class PrecisionLossException extends ConvertException {
     public PrecisionLossException(String S) {
-        super("Precision loss: "+S);
+        super("Precision loss: " + S);
     }
 }
 
 public class DoublePrecisionLossException extends PrecisionLossException {
     public DoublePrecisionLossException(double d) {
-        super("double: - "+d);
+        super("double: " + d);
     }
 }
 
 public class FloatPrecisionLossException extends PrecisionLossException {
     public FloatPrecisionLossException(float f) {
-        super("float: - "+f);
+        super("float: " + f);
     }
 }
 ```
@@ -4348,6 +4171,8 @@ public class FloatPrecisionLossException extends PrecisionLossException {
 现在，构建了异常后，我们可以继续开发 `Convert`。转换 `byte`，但一个方法使用了 `toByte(String)`。
 
 示例 10-1b. Convert 类。
+
+
 
 ```java
 public class Convert {
@@ -4410,8 +4235,6 @@ public static double toDouble(String S) throws StringFormatException {
 }
 ```
 
-
-
 由于 Java 是一种动态语言，我们可以动态获取有关对象的信息。为了实现这一点，请使用 `Class` 类 - `java.lang.Class`（图 10-7）。需要这个类是为了让我们发现我们正在处理的是什么种的对象，以及应用了哪些接口和许多特性。
 
 ![](img/image09288.gif)
@@ -4420,7 +4243,7 @@ public static double toDouble(String S) throws StringFormatException {
 
 当我们确切知道系统中会出现什么种类型的实例时，它在小型系统中很少被使用。在大型且复杂的系统中，我们可以使用这个类来理解我们正在处理哪一个实例。表 10-3 列出了 `Class` 类中定义的方法。通过返回一个 `Class` 对象，它们唯一地描述了一个特定的 `Class` 或 Java 接口。
 
-### 表 10-3. `class` 类的方法
+### 表 10-3. `Class` 类的方法
 
 #### 方法、用途及生成的异常
 
@@ -4434,7 +4257,7 @@ public static double toDouble(String S) throws StringFormatException {
 
 - `Class[] getInterfaces()`：返回与对应类拥有的接口对应的 `Class` 实例；如果该类没有任何接口，则返回零长度数组。不产生异常。
 
-- `class getSuperclass()`：返回实例类的父类。不产生异常。
+- `Class getSuperclass()`：返回实例类的父类。不产生异常。
 
 - `Object newInstance()`：创建对应类的新实例。产生异常：`InstantiationException`、`IllegalAccessException`。
 
@@ -4526,19 +4349,14 @@ Thread 1 Thread 2
 
 # runnable 类的创建流
 
+如果我们不想扩展上面示例中的 `Thread` 类怎么办？也许我们已经有了一个 `eat` 类，并且对它的功能机会非常满意，我们只是想让它作为一个独立的线程运行。答案很简单：使用 `Runnable` 接口。我们在第 3 章“Java 中的面向对象编程”中讨论过 Java 接口。接口为可执行的类定义一组标准功能提供了一种很好的方法。`Runnable` 接口实现了一个方法 `run`，它与 `work` 类中的 `thread` 非常相似。
 
+假设我们有一个想要转换为流的 `outputClass`。我们需要做的所有事情就是：实现 `Runnable` 接口，并创建共享方法 `run`。
 
-
-
-
-如果我们不想扩展上面示例中的 `Thread` 类怎么办？也许我们已经有了一个 `eat` 类，并且对它的功能机会非常满意，我们只是想让它作为一个独立的线程运行。答案很简单：使用 `runnable` 接口。我们在第 3 章“Java 中的面向对象编程”中讨论过 Java 接口。接口为可执行的类定义一组标准功能提供了一种很好的方法。`Runnable` 接口实现了一个方法 `run`，它与 `work` 类中的 `thread` 非常相似。
-
-假设我们有一个想要转换为流的 `outputClass`。我们需要做的所有事情就是：实现 `runnable` 接口，并创建共享方法 `run`。
-
-示例 11-2. `runnable` 接口的用法。
+示例 11-2. `Runnable` 接口的用法。
 
 ```java
-class outputClass implements runnable {
+class outputClass implements Runnable {
   String name;
 
   outputClass(String s) {
@@ -4570,12 +4388,18 @@ class runThreads {
 这两个示例的区别在于对 `Thread` 类构造函数的调用。在第一个示例中，我们调用了 `Thread(String)` 构造函数，而在第二个示例中调用了 `Thread(Runnable)`。我们也可以调用 `Thread(Runnable, String)` 构造函数。`Thread` 类有以下构造函数：
 
 * `Thread()`
-* `Thread(string)`
+
+* `Thread(String)`
+
 * `Thread(Runnable)`
-* `Thread(string, runnable)`
-* `Thread(thread group, string)`
-* `Thread(thread group, runnable)`
-* `Thread(ThreadGroup, runnable, string)`
+
+* `Thread(String, Runnable)`
+
+* `Thread(ThreadGroup, String)`
+
+* `Thread(ThreadGroup, Runnable)`
+
+* `Thread(ThreadGroup, Runnable, String)`
 
 我们稍后会讨论线程组。现在，让我们探索如何管理流。
 
@@ -4609,9 +4433,6 @@ class runThreads {
 
 你正越来越接近使用线程：你已经可以创建并管理它们了。你需要了解状态。如果你需要知道哪个线程正在运行，请使用 `isAlive`：结果为 `true` 表示什么。
 
-
-
-
 当我们创建这段代码时，我们实际上期望每个具有相同优先级的线程都能运行一段时间，然后将控制权让另一个线程。正如这个在 Windows 95 机器上运行的程序示例输出所示，我们得到了如预期的结果：
 
 ```
@@ -4643,11 +4464,13 @@ Thread 3
 
 Java 规范中并没有描述相同优先级的线程是如何执行的。这些线程似乎应该共享处理器，但情况并非总是如此。它们的执行顺序是由基本的操作系统和硬件手段决定的。显然，在单处理器系统上，我们不能期望超过一个线程同时执行。操作系统通过调度器为线程提供服务，调度器定义了执行顺序。
 
+
+
 让我们仔细观察在 Sun 机器上运行程序时发生了什么。第一个线程运行完毕，然后是线程 2，最后是线程 3。但如果第一个线程永远不结束，线程 2 和 3 将永远不会执行。当然，这导致了一些问题。高优先级线程将一直运行，而较低优先级的线程取决于操作系统可能无法运行。如果我们需要某种顺序，甚至仅仅是线程的顺序执行，我们就必须做一些工作。
 
-`yield` 方法为时间切片问题提供了一个简单的变通方法。如果使用了 `yield` 方法，线程将主动让出处理器，从而让其他线程也有获得处理器时间的机会。控制权的主动转移在长周期中尤为重要。让我们使用 `yield` 方法重写之前的程序。
+`yield()` 方法为时间切片问题提供了一个简单的变通方法。如果使用了 `yield()` 方法，线程将主动让出处理器，从而让其他线程也有获得处理器时间的机会。控制权的主动转移在长周期中尤为重要。让我们使用 `yield()` 方法重写之前的程序。
 
-### 示例 11-4. 方法 yield。
+### 示例 11-4. 方法 yield
 
 ```java
 class outputThread extends Thread {
@@ -4664,7 +4487,7 @@ class outputThread extends Thread {
 }
 
 class runThreads {
-    public static void main(String[] argv[]) {
+    public static void main(String[] argv) {
         outputThread t1 = new outputThread("Thread 1");
         outputThread t2 = new outputThread("Thread 2");
         outputThread t3 = new outputThread("Thread 3");
@@ -4675,15 +4498,16 @@ class runThreads {
 }
 ```
 
-这个选项只需要一个更改。我们在主线程循环中添加了 `yield` 命令。虽然这给了我们想要的结果，但这个解决方案有几个缺点。`yield` 方法消耗系统资源。在单线程情况下，使用 `yield` 是浪费时间。不要忘记，某些系统已经为我们提供了时间划分。另一个缺点是我们必须显式地让出控制权——但是如何发现、何时以及多频率这样做呢？
+这个选项只需要一个更改。我们在主线程循环中添加了 `yield()` 命令。虽然这给了我们想要的结果，但这个解决方案有几个缺点。`yield()` 方法消耗系统资源。在单线程情况下，使用 `yield()` 是浪费时间。不要忘记，某些系统已经为我们提供了时间划分。另一个缺点是我们必须显式地让出控制权——但是如何发现、何时以及多频率这样做呢？
 
 既然有些系统执行时间切片而另一些没有，我们可以开发一个简单的测试来确定系统的能力。以下代码判断系统是否提供了时间切片。
 
-### 示例 11-5a. 测试流 testThread。
+### 示例 11-5a. 测试线程 testThread
 
 ```java
 class testThread extends Thread {
     protected int val = 0;
+
     public void run() {
         while (true) {
             val++;
@@ -4696,9 +4520,9 @@ class testThread extends Thread {
 }
 ```
 
-第一个类只是一个测试线程。它只是在增加某个变量。在时间切片系统中，所有当前线程必须具有相等的值。没有时间切片的系统可能会导致单个线程接收到比其他线程多得的时间。以下代码定义并执行是否为时间切片系统。
+第一个类只是一个测试线程。它只是在增加某个变量。在时间切片系统中，所有当前线程必须具有相等的值。没有时间切片的系统可能会导致单个线程接收到比其他线程多得多的时间。以下代码定义并执行是否为时间切片系统。
 
-### 示例 11-5b. 时间切片可用性定义。
+### 示例 11-5b. 时间切片可用性定义
 
 ```java
 class isFair extends Thread {
@@ -4733,9 +4557,8 @@ class isFair extends Thread {
         if (t1.getVal() > 2 * t2.getVal()) {
             fair = false;
         } else {
+            fair = true;
         }
-        }
-        fair = true;
         determined = true;
     }
 }
@@ -4743,11 +4566,11 @@ class isFair extends Thread {
 
 `isFair` 类是这个示例的核心。它有一个 `isFair()` 方法，可以判断系统是否有切片。如果一个线程获得的时间是另一个的两倍，`fair = false`。
 
-### 示例 11-5c. 测试公平性。
+### 示例 11-5c. 测试公平性
 
 ```java
 class isFair {
-    public static void main(String[] argv[]) {
+    public static void main(String[] argv) {
         isFair tThread = new isFair();
         if (tThread.isFair()) {
             System.out.println("System has slicing");
@@ -4758,18 +4581,15 @@ class isFair {
 }
 ```
 
-
-
-
-从效率的角度来看，在代码中放置 `yield` 语句会更好。两种方法都不是理想的解决方案，但线程共享 CPU 时间需要某些机制。不要认为仅仅因为你的系统支持时间切片，其他系统也是如此——它们确实是支持的。`Java` 是可移植性最好的语言之一，但如果你忽视调度问题，你可能会降低它的可移植性。
+从效率的角度来看，在代码中放置 `yield()` 语句会更好。两种方法都不是理想的解决方案，但线程共享 CPU 时间需要某些机制。不要认为仅仅因为你的系统支持时间切片，其他系统也是如此——它们确实是支持的。`Java` 是可移植性最好的语言之一，但如果你忽视调度问题，你可能会降低它的可移植性。
 
 你可能会问为什么 `Java` 开发者要这样做。最好的答案是他们本该这么做。规划最好留给操作系统。如果 `Java` 承担线程调度的任务，将是浪费且低效的。大多数现代处理器在硬件层面都支持多任务处理。无论程序代码有多优秀，都无法与硬件实现相比。在 Solaris 系统下，Sun 为优先级流提供了完全支持，有一天 `Java` 将能够利用这种基础 `OS` 的这种优势。
 
-## 线程分组 (Grouping flows)
+## 线程分组
 
 管理多个线程不会引起任何实际问题，但设想你需要跟踪成百上千线程。遍历每个线程将非常繁琐。在编写互联网服务器时可能会遇到这种情况——某些程序处理成千上万个并发会话。假设你必须产生某些监控系统，你需要结束所有会话。你有两个选择：创建一个检查每个线程的循环并显式停止流，或者使用线程组。
 
-线程是分级分组的。每个组可以包含无限数量的流。你可以访问每个线程并在整个线程组执行挂起（suspend）和停止（stop）操作。让我们创建多个线程组：
+线程是分级分组的。每个组可以包含无限数量的流。你可以访问每个线程并在整个线程组执行挂起（`suspend()`）和停止（`stop()`）操作。让我们创建多个线程组：
 
 ```java
 ThreadGroup parent = new ThreadGroup("parent");
@@ -4787,13 +4607,13 @@ Thread t1 = new Thread(parent);
 Thread t2 = new Thread(child, "t2");
 ```
 
-现在我们已经在不同组中拥有了一些线程，对它们能做什么？与线程组配合的最有用方法是 `suspend`、`resume` 和 `stop`。`ThreadGroup` 中的每个线程都会被调用相应的方法。`ThreadGroup` 对后代同样有效。使用这些方法，我们可以轻松地对大量流执行操作。
+现在我们已经在不同组中拥有了一些线程，对它们能做什么？与线程组配合的最有用方法是 `suspend()`、`resume()` 和 `stop()`。`ThreadGroup` 中的每个线程都会被调用相应的方法。`ThreadGroup` 对后代同样有效。使用这些方法，我们可以轻松地对大量流执行操作。
 
 线程组还有其他功能，主要由 `Java` 虚拟机使用，并处理线程间的保护。基本上 `Java` 虚拟机应该防止我们的线程被其自身的线程所干扰。在 `ThreadGroup` 中派生的流无法管理父组中的线程。你可能并不需要这种行为。目前关于此点的文档较少，因此最好查看原文。这通常由 `Java` 虚拟机实现，以保护其流免受用户流的影响。
 
-最后一部分将完成多线程问题。到目前为止，我们的流完全没有影响系统中的其他流。我们本应该担心相对的时间使用，但线程之间没有共享数据。这通常是计算机科学课程中学习的学术材料。我们可以为你提供简要概述，但本书的性质不允许详细探讨这一主题。我们建议你进行一些独立研究。查阅关于并发处理请求的书，或者关于操作系统的书籍。你可能感兴趣的话题包括同步、信号量、死锁和竞态条件（terms racing）。
+最后一部分将完成多线程问题。到目前为止，我们的流完全没有影响系统中的其他流。我们本应该担心相对的时间使用，但线程之间没有共享数据。这通常是计算机科学课程中学习的学术材料。我们可以为你提供简要概述，但本书的性质不允许详细探讨这一主题。我们建议你进行一些独立研究。查阅关于并发处理请求的书，或者关于操作系统的书籍。你可能感兴趣的话题包括同步、信号量、死锁和竞态条件。
 
-## 同步流 (Synchronization flows)
+## 同步流
 
 让我们想象一下你有一个计算机科学博士学位。你花费了多年学习编程的复杂性。你可能研究过交互式查询处理或并行编程学科。你接受过多任务训练，并花大量时间学习与此类问题相关的最新算法。
 
@@ -4801,9 +4621,9 @@ Thread t2 = new Thread(child, "t2");
 
 在程序中运行许多线程会导致一些问题。如果流互不干扰，就不会产生问题，但情况并非总是如此。多线程有时需要一个线程与另一个线程通信，通常通过 `public resource`。这正是困难开始的地方。
 
-### 监视器 (Monitors)：保护公共变量
+### 监视器：保护公共变量
 
-我们使用一个简单的例子来说说明在与多个线程工作时可能会遇到的一些问题。想象一个有多个不同方向的火车站，但某个方向只有一个用于装卸的通道。在主线某处，火车必须进入进入装卸区域的轨道以接近车站。假设我们有两个通往车站的分支，它们最终合并为一条。
+我们使用一个简单的例子来说明在与多个线程工作时可能会遇到的一些问题。想象一个有多个不同方向的火车站，但某个方向只有一个用于装卸的通道。在主线某处，火车必须进入进入装卸区域的轨道以接近车站。假设我们有两个通往车站的分支，它们最终合并为一条。
 
 ```java
 class display {
@@ -4815,7 +4635,7 @@ class display {
     public void showLoc(String train, int seq, int len) {
         if (train.compareTo("train1") == 0) {
             begin1 = seq;
-            end1 = seq + len - one;
+            end1 = seq + len - 1;
             if (seq > switch1Loc) {
                 System.out.println("train1 near " + seq);
             } else if (seq + len > switch2Loc) {
@@ -4824,7 +4644,7 @@ class display {
         }
         if (train.compareTo("train2") == 0) {
             begin2 = seq;
-            end2 = seq + len - one;
+            end2 = seq + len - 1;
             if (seq > switch1Loc) {
                 System.out.println("train2 near " + seq);
             } else if (seq + len > switch2Loc) {
@@ -4838,21 +4658,19 @@ class display {
     }
 }
 ```
+
 *(注：由于原文代码片段缺失且包含占位符，上述代码块已根据描述的逻辑进行了重构，并保留了文中提到的变量名。)*
-
-
-
 
 `Display` 类用于显示我们列车的移动情况。如果两列列车处于同一位置和同一轨道上，它会发现碰撞。这种检查他只在列车位于车站时进行。为了方便起见，我们开启了 `display` 类的代码。
 
-#### 示例 11-7b. 代码模拟了站台。
+#### 示例 11-7b. 代码模拟了站台
 
 ```java
 class testTrains1 {
-    public static void main(String argv[]) {
+    public static void main(String[] argv) {
         display display = new display();
-        train1 t1 = new train1("train1",display);
-        train1 t2 = new train1("train2",display); 
+        train1 t1 = new train1("train1", display);
+        train1 t2 = new train1("train2", display);
         t1.start();
         t2.start();
     }
@@ -4869,11 +4687,11 @@ CRASH @ 10 own
 
 报纸标题在尖叫着事故，程序员因无能被解雇。律师威胁要起诉。公司必须立即修复程序。
 
-也许有人会记得在他以前学过的那门操作系统课程中，教授提到过监视器（monitors）。监视器简单来说跟踪跟踪变量的线程。在我们的情况下，使用了一个道器变量。在任何时刻，只有一列列车可以处于道器位置。当另一列列车通过危险区域时，我们需要降低车速。
+也许有人会记得在他以前学过的那门操作系统课程中，教授提到过监视器。监视器简单来说跟踪跟踪变量的线程。在我们的情况下，使用了一个道器变量。在任何时刻，只有一列列车可以处于道器位置。当另一列列车通过危险区域时，我们需要降低车速。
 
-Java 提供了一种保护程序中变量的机制。问题归结为两个线程试图同时执行某些操作。我们需要一个线程等待另一个完成。该操作可能包含几条命令。这些命令被称为临界区（critical section）。临界区域——这部分代码必须被保护，以防止系统崩溃。在我们的列车案例中，临界区位于 `step` 方法中。不允许列车在轨道已被占用的时间进入轨道。
+Java 提供了一种保护程序中变量的机制。问题归结为两个线程试图同时执行某些操作。我们需要一个线程等待另一个完成。该操作可能包含几条命令。这些命令被称为临界区。临界区域——这部分代码必须被保护，以防止系统崩溃。在我们的列车案例中，临界区位于 `step` 方法中。不允许列车在轨道已被占用的时间进入轨道。
 
-我们可以创建一个 `trainSwitch` 类来保护我们的道器。它将包含两个方法——`lock`（阻塞）和 `unlock`（解锁）。进入危险道路时，列车必须调用 `lock`。一旦列车离开轨道，它就会调用 `unlock`。所有其他列车在进入此路之前都必须等待，直到它被解锁。
+我们可以创建一个 `trainSwitch` 类来保护我们的道器。它将包含两个方法——`lock()`（阻塞）和 `unlock()`（解锁）。进入危险道路时，列车必须调用 `lock()`。一旦列车离开轨道，它就会调用 `unlock()`。所有其他列车在进入此路之前都必须等待，直到它被解锁。
 
 在 Java 中，临界代码部分用 `synchronized` 关键字标记。任何代码块都可以标记为 `synchronized`，但方法通常是这样标记的。在方法的某些部分上标记 `synchronized` 实际上是一个糟糕的编程示例。
 
@@ -4881,35 +4699,40 @@ Java 提供了一种保护程序中变量的机制。问题归结为两个线程
 
 那么，将方法标记为 `synchronized` 的意义是什么？每个类关联一个监视器。当调用 `synchronized` 方法时，它会检查监视器。如果 `Class` 已经被阻塞，调用程序将等待。这意味着在时间某一点，只有一个线程将处于临界块中。让我们看看它是如何实现的。
 
-#### 示例 11-7c. `trainSwitch` 类。
+#### 示例 11-7c. `trainSwitch` 类
 
 ```java
 class trainSwitch extends Thread {
-    protected boolean inUse=false;
+    protected boolean inUse = false;
+
     public synchronized void lock() {
         while (inUse) {
-            try wait();
-            catch (InterruptedException e);
+            try {
+                wait();
+            } catch (InterruptedException e) {
+            }
         }
         inUse = true;
     }
 
-    public synchronized void unlock() { 
+    public synchronized void unlock() {
         inUse = false;
         notify();
     }
 }
 ```
 
-`trainSwitch` 类有两个同步方法，`lock` 和 `unlock`，它们保护该类的 `inUse` 变量。我们想要确保在任何给定时刻只有一个线程在使用道器。道器的状态设置在一个布尔变量中。当列车使用道器时，`inUse` 被设置为 true。任何其他想使用道道的列车都必须等待直到布尔变量被重置为 false。
+`trainSwitch` 类有两个同步方法，`lock()` 和 `unlock()`，它们保护该类的 `inUse` 变量。我们想要确保在任何给定时刻只有一个线程在使用道器。道器的状态设置在一个布尔变量中。当列车使用道器时，`inUse` 被设置为 true。任何其他想使用道道的列车都必须等待直到布尔变量被重置为 false。
 
-在示例 11-7b 中使用了两个新方法 `wait` 和 `notify`。它们为了两个目标。
+在示例 11-7b 中使用了两个新方法 `wait()` 和 `notify()`。它们为了两个目标。
+
+
 
 它们的第一个任务是解决一个棘手的情况。如果在上面的示例中缺少 `wait` 语句会发生什么？阻塞程序将处于循环中并占用 `class` 的监视器。然后没有人能成功调用 `unlock` 方法，而该方法也需要监视器。
 
 使用 `wait` 和 `notify` 方法是为了解决这个问题。`wait` 方法让流等待某些事件。同时，监视器被释放。这允许你执行其他需要类监视器的程序。当控制从 `wait` 方法返回时，监视器也会恢复。`wait` 和 `notify` 方法不是 `Thread` 类的一部分。事实上，它们包含在 `java` 中。
 
-#### 示例 11-7d. 修正后的模型。
+#### 示例 11-7d. 修正后的模型
 
 ```java
 class train2 extends Thread {
@@ -4977,8 +4800,6 @@ train2@3 train1 safe train2 safe
 ### 信号量：保护其他公共资源
 
 在之前的示例中，我们使用监视器来保护变量。让我们在考虑任何通用资源之前扩展这个概念。我们想要保护任何被多个线程共享的资源系统。公共资源的一个例子是文件。两个线程同时写入同一个文件会产生垃圾；一个线程正在读取文件而另一个线程正在写入文件的情况也太危险了。我们需要某种方式来保护我们文件的完整性。
-
-
 
 为了保护文件，你可以应用类似于我们在上一个示例中保护铁道道器的概念。这种保护被称为 `exceptional`（互斥）阻塞。在某一时刻，可能只有一个流可以进行读取或修改操作。当我们处理文件时，尤其是信息库文件数据时，通常的读取次数多于写入次数。我们可以利用这一事实来优化代码。
 
@@ -5119,8 +4940,6 @@ Unlocking writeLock: 3
 
 但这如何影响 Java 编程呢？将行道上的人替换为流。假设我们有两个保护资源文件 1 和文件 2。假设为了完成任务线程需要这两个资源。第一个线程获取了文件 1。在同一时刻第二个流捕获了文件 2。第一个流现在尝试夺取文件 2，但未
 
-
-
 也许他的接收挂起了它的性能并开始等待。第二个流也尝试获取 `file1` 并开始等待。因此，我们有两个线程在等待它们永远无法获得的资源。由于没有线程可以同时获取完成工作所需的两个文件，它们将无限地等下去。这是一个经典的死锁局面。
 
 我们可以通过两种方式来处理死锁。如你所知，“防病胜于治疗”。我们必须尽一切努力避免这种情况的发生。我们需要设计我们的流，以便我们知道它们是如何获取竞争性资源的。让我们设计每个线程首先访问 `file1`。第一个线程将获取该文件，而第二个线程将等待。然后，第一个线程可以获取 `file2`，执行必要的操作并释放这两个资源。在这种情况下，决策变得简单了。
@@ -5159,17 +4978,16 @@ Unlocking writeLock: 3
 
 现在已经知道了构建 Java 包所需的，，可以使用不需要 Web 浏览器即可运行的应用程序。我们已经在第 7 章中为 applet 开发了图形用户界面（GUI）。现在让我们看看如何在独立的 Java 程序中创建相同的 GUI，以及如何在这些新程序中使用它们。
 
-
-
-
 让我们的独立应用程序像我们在第 8 章中创建的 applet 一样友好且直观，这并不困难。我们需要的只是在 `main` 方法中或其中一个方法中直接创建 frame 并调用它们即可。
 
 下面简化的程序使用了第 8 章中开发的 `frame2`。但 `Frame2` 并不位于 applet 中，而是我们独立应用程序 `sampleStand` 的一部分：
 
+
+
 ```java
 import java.awt.*; 
 import Frame2;
-class stand Alone {
+class standAlone {
     public static void main(String S[]) {
         Frame2 f2 = new Frame2();
         f2.show();
@@ -5177,19 +4995,19 @@ class stand Alone {
 }
 ```
 
-在第 7 章和第 8 章中，我们学习了抽象窗口工具包 (`AWT`）。你对 `AWT` 的了解已经足够编写一个独立的图形应用程序了。通过在 `Applet` 类中创建子类，我们可以从互联网获取图形和声音数据。遗憾的是，如果不自己实现 `main` 方法，就无法为我们的独立应用程序获取并播放声音片段。我们可以使用 `toolkit` 类从互联网获取图形数据。
+在第 7 章和第 8 章中，我们学习了抽象窗口工具包（`AWT`）。你对 `AWT` 的了解已经足够编写一个独立的图形应用程序了。通过在 `Applet` 类中创建子类，我们可以从互联网获取图形和声音数据。遗憾的是，如果不自己实现 `main` 方法，就无法为我们的独立应用程序获取并播放声音片段。我们可以使用 `Toolkit` 类从互联网获取图形数据。
 
-`Toolkit` 类是一个抽象类，它通常充当 `AWT` 与本地窗口系统之间的桥梁。该类中使用的方法可能对我们用，因为它们只在将 `AWT` 与特定平台链接时有效。然而，对重要的是该类定义了一个 `getImage` 方法，它的工作方式与我们已经习惯的方法完全相同。要从我们的独立应用程序获取图像，可以在任何子类 frame 中使用以下程序（这里 `U` 代表 `URL`）：
+`Toolkit` 类是一个抽象类，它通常充当 `AWT` 与本地窗口系统之间的桥梁。该类中使用的方法可能对我们用，因为它们只在将 `AWT` 与特定平台链接时有效。然而，重要的是该类定义了一个 `getImage` 方法，它的工作方式与我们已经习惯的方法完全相同。要从我们的独立应用程序获取图像，可以在任何子类 frame 中使用以下程序（这里 `U` 代表 `URL`）：
 
 ```java
 Toolkit T = getToolkit(); 
 Image I = T.getImage(U);
 ```
 
-现在，除了播放声音片段外，我们可以在独立应用程序中做 applet 能够做的一切事情。由于我们的 Java 应用程序不是不可靠的 applet，我们还可以引用本地文件系统。例如，你可以使用下载的 `getImage` 方法，通过传递描述文件路径的字符串 (`String`) 来直接从文件系统传输图形数据：
+现在，除了播放声音片段外，我们可以在独立应用程序中做 applet 能够做的一切事情。由于我们的 Java 应用程序不是不可靠的 applet，我们还可以引用本地文件系统。例如，你可以使用下载的 `getImage` 方法，通过传递描述文件路径的字符串（`String`）来直接从文件系统传输图形数据：
 
 ```java
-String S = myImage.gif;
+String S = "myImage.gif";
 Toolkit T = getToolkit();
 Image Internet = T.getImage(S);
 ```
@@ -5198,7 +5016,7 @@ Image Internet = T.getImage(S);
 
 `java.awt` 包中的 `FileDialog` 类实例化了一个允许用户浏览文件系统的对话框。该类对 applet 是关闭的；因为完全没有必要访问其被上传的宿主机的文件系统。但由于我们的独立应用程序足够可靠，可以安装在宿主机上，我们现在可以使用 `FileDialog` 类进行编程。它的方法和构造函数在表 12-1 中。
 
-### 表 12-1. FileDialog 类
+### 表 12-1. `FileDialog` 类
 
 | 项目 | 描述 |
 | :--- | :--- |
@@ -5211,15 +5029,15 @@ Image Internet = T.getImage(S);
 | `void setFile(String file)` | 在对话框图像开始前调用时，通过对话框默认设置文件。 |
 | `String getFile()` | 获取特定文件名。 |
 | `String getDirectory()` | 获取对话框目录。 |
-| `String paramString()` | 重写 `Dialog` 中的 `paramString` |
+| `String paramString()` | 重写 `Dialog` 中的 `paramString`。 |
 | `FilenameFilter setFilenameFilter()` | 设置文件名过滤器。 |
 | `FilenameFilter getFilenameFilter()` | 接收过滤器名称文件。 |
 
-使用 `FileDialog` 类非常简单，它的唯一工作是为用户提供一个标准的对话框，用于在特定平台上查看文件，如如图 12-1 所示。当此任务完成后，应用 `getFile` 方法获取文件名，并使用 `getDirectory` 方法获取文件路径。实际上，文件对话框并不直接接触文件系统；它只提供用户选择的内容。
+使用 `FileDialog` 类非常简单，它的唯一工作是为用户提供一个标准的对话框，用于在特定平台上查看文件，如图 12-1 所示。当此任务完成后，应用 `getFile` 方法获取文件名，并使用 `getDirectory` 方法获取文件路径。实际上，文件对话框并不直接接触文件系统；它只提供用户选择的内容。
 
 #### 图 12.1.
 
-对话框的外观和操作可以通过几种方式进行更改。当我们构建文件对话框时，必须为它设置一些标题。此外，我们还可以决定在对话框中是否需要一个“保存”按钮或一个“打开”按钮；为此，你需要在 `FileDialog(Frame parent, String title, int mode)` 构造函数中设置相应的模式。注意，这些更改是装饰性的，因为实际上 `FileDialog` 类并不尝试更改文件。显然，一种用户友好性差得多的解决方案是在 FileDialog.LOAD 中设置所需的模式，然后重写文件。由于这是默认的实现方式，如果我们真的想创建带有用户所更改的文件或目录，我们必须显式地在 `FileDialog.SAVE` 中设置所需的模式。将模式设置为 `FileDialog.SAVE` 将避免用户需要重写文件的麻烦。如果用户选择了一个已存在的文件，对话框将在其上创建一个警告对话框。
+对话框的外观和操作可以通过几种方式进行更改。当我们构建文件对话框时，必须为它设置一些标题。此外，我们还可以决定在对话框中是否需要一个“保存”按钮或一个“打开”按钮；为此，你需要在 `FileDialog(Frame parent, String title, int mode)` 构造函数中设置相应的模式。注意，这些更改是装饰性的，因为实际上 `FileDialog` 类并不尝试更改文件。显然，一种用户友好性差得多的解决方案是在 `FileDialog.LOAD` 中设置所需的模式，然后重写文件。由于这是默认的实现方式，如果我们真的想创建带有用户所更改的文件或目录，我们必须显式地在 `FileDialog.SAVE` 中设置所需的模式。将模式设置为 `FileDialog.SAVE` 将避免用户需要重写文件的麻烦。如果用户选择了一个已存在的文件，对话框将在其上创建一个警告对话框。
 
 ```java
 public String fileToWrite(Frame parent, String title) {
@@ -5258,11 +5076,7 @@ class FilenameFilterWrapper implements FilenameFilter {
 
 ## 访问文件系统
 
-正如我们刚刚看到的，文件对话框可以用于允许用户浏览文件系统。但那并不能帮助我们获取用户所选择文件的实际访问。为了做到这一点，必须利用 `java.io` 包中的两个类：`file` 和 `RandomAccessFile`。
-
-
-
-
+正如我们刚刚看到的，文件对话框可以用于允许用户浏览文件系统。但那并不能帮助我们获取用户所选择文件的实际访问。为了做到这一点，必须利用 `java.io` 包中的两个类：`File` 和 `RandomAccessFile`。
 
 请注意，这些类的名称并不完全反映了它们的本质。`File` 类是一个抽象，意味着既代表文件也代表目录。该类用于文件管理任务，例如检查给定文件是否存在、删除文件、创建新目录以及在目录结构中向上或向下导航。另一方面，`RandomAccessFile` 类用于实际读写文件。你可以将 `File` 类想象为海军，而将 `RandomAccessFile` 类想象为陆战队——前者是运输工具，而后者则在运输上执行具体工作。
 
@@ -5274,16 +5088,14 @@ class FilenameFilterWrapper implements FilenameFilter {
 
 | 变量 | 含义 | 在 UNIX 中的含义 | 在 Windows 95/NT 中的含义 |
 | :--- | :--- | :--- | :--- |
-| `String separator` | 系统的文件分隔符 | `/ \` | host |
-| `String pathSeparator` | 系统的文件路径分隔符 | `: ;` | host |
-| `char separatorChar` | 字符形式的文件分隔符 | `/ \` | |
-| `char pathSeparatorChar` | 字符形式的文件路径分隔符 | `: ;` | symbol |
+| `String separator` | 系统的文件分隔符 | `/` | `\` |
+| `String pathSeparator` | 系统的文件路径分隔符 | `:` | `;` |
+| `char separatorChar` | 字符形式的文件分隔符 | `/` | `\` |
+| `char pathSeparatorChar` | 字符形式的文件路径分隔符 | `:` | `;` |
 
 虽然可以使用符号表示，但更可靠的方法是表格顶部列出的 `String` 类型表示。上述的 `FileDialog` 类保证返回系统正确的表示。记住这些变量，可以使用表 12-3 中列出的构造函数创建 `File` 实例。如上所述，创建的 `File` 对象可能关联目录，也可能关联普通文件。
 
 ### 表 12-3. `File` 类构造函数
-
-### 构造函数描述
 
 | 构造函数 | 描述 |
 | :--- | :--- |
@@ -5295,14 +5107,12 @@ class FilenameFilterWrapper implements FilenameFilter {
 
 ### 表 12-4. `File` 类通用方法
 
-## 方法描述
-
 | 方法 | 描述 |
 | :--- | :--- |
 | `boolean exists()` | 如果文件或目录存在则返回 true。 |
 | `String getPath()` | 返回构建文件对象时的路径。 |
 | `boolean isAbsolute()` | 如果以绝对路径创建，则返回 true。 |
-| `String get()` | 返回绝对路径。 |
+| `String getAbsolutePath()` | 返回绝对路径。 |
 | `String getParent()` | 返回父目录的绝对路径；如果到达顶层结构或父目录不可用则返回 null。 |
 | `public boolean delete()` | 尝试删除文件或目录；成功时返回 true。 |
 | `public boolean renameTo(File dest)` | 尝试将文件或目录重命名为 `dest`；成功时返回 true。 |
@@ -5313,8 +5123,6 @@ class FilenameFilterWrapper implements FilenameFilter {
 
 ### 表 12-5. 适用于目录的 `File` 类方法
 
-## 方法描述
-
 | 方法 | 描述 |
 | :--- | :--- |
 | `public boolean mkdir()` | 尝试创建目录；成功返回 true。 |
@@ -5322,8 +5130,6 @@ class FilenameFilterWrapper implements FilenameFilter {
 | `public String[] list(FilenameFilter filter)` | 应用输入过滤器列出目录中的文件。 |
 
 ### 表 12-6. 适用于文件的 `File` 类方法
-
-## 方法描述
 
 | 方法 | 描述 |
 | :--- | :--- |
@@ -5334,36 +5140,28 @@ class FilenameFilterWrapper implements FilenameFilter {
 
 ## `RandomAccessFile` 类
 
-尽管将文件和目录合并到一个篮中的方法广为人知，但它们之间仍然存在一些区别。`RandomAccessFile` 类用于实际读写文件。你可以将 `File` 类想象为海军，而将 `RandomAccessFile` 类想象为陆战队——前者是运输工具，而后者在运输上执行具体工作。
+`RandomAccessFile` 类用于实际读写文件。你可以将 `File` 类想象为海军，而将 `RandomAccessFile` 类想象为陆战队——前者是运输工具，而后者在运输上执行具体工作。
 
-虽然可以使用符号表示，但更可靠的方法是表格顶部列出的 `String` 类型表示。上述的 `FileDialog` 类保证返回系统正确的表示。记住这些变量，可以使用表 12-3 中列出的构造函数创建 `File` 实例。如上所述，创建的 `File` 对象可能关联目录，也可能关联普通文件。
-
-`RandomAccessFile` 类允许你直接从文件读取数据到字符串变量中。最简单的方法是逐字节或逐行读取。处理文件的基本方法和构造函数见表 12-7。与 `File`类的所有方法一样，每个方法都会调用 `IOException`。
+`RandomAccessFile` 类允许你直接从文件读取数据到字符串变量中。最简单的方法是逐字节或逐行读取。处理文件的基本方法和构造函数见表 12-7。与 `File` 类的所有方法一样，每个方法都会抛出 `IOException`。
 
 ### 表 12-7. `RandomAccessFile` 类简单方法
 
-## 方法描述
-
-| 构造函数 | 描述 |
+| 构造函数/方法 | 描述 |
 | :--- | :--- |
-| `RandomAccessFile(String path, string mode)` | 根据路径和模式构造 `RandomAccessFile` 类；“r”只读，“rw”用于读写。 |
+| `RandomAccessFile(String path, String mode)` | 根据路径和模式构造 `RandomAccessFile` 类；“r”只读，“rw”用于读写。 |
 | `RandomAccessFile(File f, String mode)` | 从 `File` 对象根据模式构造 `RandomAccessFile` 类。 |
-| `void close()` | 文件。 |
-| `public long getFilePointer()` 返回文件指针的位置；距离文件开头的字节数。 |
+| `void close()` | 关闭文件。 |
+| `public long getFilePointer()` | 返回文件指针的位置；距离文件开头的字节数。 |
 | `public int read()` | 读取字节数据；如果到达文件结束，返回 -1。 |
-| `public String readLine()` | 从当前指针开始读取行，以文件末尾的符号 '\n' 结束。 |
+| `public String readLine()` | 从当前指针开始读取行，以文件末尾的符号 `\n` 结束。 |
 | `public int read(byte[] b)` | 读取文件到字节数组，返回读取的字节数。 |
 | `public int read(byte[] b, int shift, int len)` | 偏移文件指针并读取 len 个字节。 |
-| `public int skipBytes(int n)` 将文件指针向前偏移 n 字节，或跳到文件末尾。 |
-| `public void seek(long pos)` 将文件指针设置为距离文件开头 pos 字节处。 |
-| `public void write(int b)` 将 int b 写入文件，首先将其转换为字节。 |
-| `public void write(byte[] b)` 写入字节数组。 |
+| `public int skipBytes(int n)` | 将文件指针向前偏移 n 字节，或跳到文件末尾。 |
+| `public void seek(long pos)` | 将文件指针设置为距离文件开头 pos 字节处。 |
+| `public void write(int b)` | 将 int b 写入文件，首先将其转换为字节。 |
+| `public void write(byte[] b)` | 写入字节数组。 |
 
 # 机器依赖型方法
-
-
-
-
 
 首先，有必要澄清为什么你不能直接使用集成库 `C`。我们无法将某些库 `C` 集成到 applet 中并将此 applet 发到互联网，使其从客户端的库中获取所需的所有内容。如果存在这种可能性，我们早就会在这书中告诉大家了！
 
@@ -5373,9 +5171,11 @@ class FilenameFilterWrapper implements FilenameFilter {
 
 在编写个人应用程序时，使用 `DLL` 是理想的。因为 `C` 是一门极其流行的语言，通常发现你正准备要做的事情已经用 `C` 库实现了。得益于此，你不需要在 Java 中重写一切——只需引用 `DLL` 即可。
 
-Applet 程序员也可以使用 `DLL`，但程度比编写独立应用程序时要低。由于 `C` 语言不是平台无关的，`DLLs` 无法通过互联网传输；否则它们早晚会运行在无法满足其要求的平台。。此外，在使用 `DLL` 时存在与 applet 安全相关的问题，因为在 `C` 创建时，分布式计算机尚未提供安全信息。
+Applet 程序员也可以使用 `DLL`，但程度比编写独立应用程序时要低。由于 `C` 语言不是平台无关的，`DLLs` 无法通过互联网传输；否则它们早晚会运行在无法满足其要求的平台。此外，在使用 `DLL` 时存在与 applet 安全相关的问题，因为在 `C` 创建时，分布式计算机尚未提供安全信息。
 
 然而，某些支持 Java 的 Web 浏览器允许 applet 使用之前在客户端安装的任何库。这对于编写 applet 的程序员意味着什么？如果你在组织的内网中操作，你可以确保客户端安装了简单的 `C` 库，并确保它不包含病毒且不会被滥用。这样你就可以让 applet 执行一些你不允许所有 applet 执行的操作（例如访问文件系统）。
+
+
 
 如果压缩软件是你喜欢的玩具，你可以分发包含 `DLL` 的 CD，或者编写一个程序从互联网下载该软件。在检查 `DLL` 病毒后，可以将其安装，以便支持 Java 的 Web 浏览器找到它。你的库将不受底层 applet 模型的限制，同时从与支持 Java 的 Web 浏览器的连接中受益。例如，你可以使用 `DLL` 将你的表格程序直接与汇率服务器相关的 applet 链接。或者由于图形是通过你的 `DLL` 创建并访问的，你可以让网络游戏运行更快。这样你就可以将 Java 网络属性纯粹用于通信，而不是用于下载沉重的资源。
 
@@ -5426,10 +5226,6 @@ class Profile {
     public synchronized native void setAttrib(String key, String value) throws ProfileWriteAllowedException;
 }
 ```
-
-
-
-
 
 通常也适用于包含 Java 方法的类，尽管存在一些细微差别。它们主要与确保库已加载有关。在我们的示例中，这一点尤为重要。如果我们编写了一个包含我们类的 applet，并且它到达了一个没有该 DLL 的客户端，我们希望我们的 applet 能够恢复。为了这一点，我们在 `constructor`（构造函数）中上传 applet，并强制它抛出一个 `UnsatisfiedLinkError`。
 
@@ -5485,8 +5281,8 @@ javah -stubs LocalProfile
 | :--- | :--- |
 | `-o outputfile` | 将输出数据放入 `outputfile` 而不是默认文件。 |
 | `-d directory` | 将文件保存在 `directory` 中，而不是当前目录。 |
-| `-td temp directory` | |
-| `-classpath classpath` | 将临时文件存储在 `tempdirectory` 而不是特定的默认 `/temp`。在目录 `classpath` 中查找 API 扩展的 `.class` 文件，但不在 `/usr/local/java` 或环境变量 `CLASSPATH`（如果已设置）。 |
+| `-td temp directory` | 将临时文件存储在 `tempdirectory` 而不是特定的默认 `/temp`。 |
+| `-classpath classpath` | 在目录 `classpath` 中查找 API 扩展的 `.class` 文件，但不在 `/usr/local/java` 或环境变量 `CLASSPATH`（如果已设置）。 |
 | `-verbose` | 指定 Java 在屏幕上打印详细操作信息。 |
 
 我们现在准备好实际创建我们的动态链接库了。但在开始编写它的函数之前，我们需要定义一些格式。首先，我们需要为我们的 `.c` 文件命名。我们不能将其命名为 `LocalProfile.c`，因为 `javah -stubs` 已经创建了同名文件。名称是任意的，但为了避免混淆，我们将文件命名为 `profile.c`。下一步是制作我们的预处理器定义，如下所示：
@@ -5539,10 +5335,6 @@ external struct java_lang_string *LocalProfile_getAttrib(struct HLocalProfile*,s
 #endif
 ```
 
-
-
-
-
 第一个结构（`struct`）是 C 中对 Java 类的表示。正如你记得的，自定义方法的行为与其他方法相似，因此可以访问包含它们的类的私有成员。`ClassLocalProfile` 结构使得这成为可能。注意，该结构除了包含等效 Java 原生方法的参数外，还被传递给我们的所有函数。这确保了数据被妥善地隐藏，同时允许我们的 C 函数成为该类的真实元素。
 
 结构体之后是我们自定义方法的 C 函数定义。简单来说，编写一个 DLL 意味着定义这些函数。但为了实现这一点，你需要克服 Java 和 C 之间的差异：
@@ -5593,9 +5385,11 @@ long LocalProfile_getAttrib(struct HLocalProfile *this, HJava_lang_String *key) 
 
 为了真正实现其余函数，我们应该能够在 C 中访问来自 Java 的数组和行。这将在下一节中解释。
 
-### C 中的 Java 数组和行 
+### C 中的 Java 数组和行
 
 在我们的库中，我们经常需要数组和字符串，`java/include/*.h` 文件包含了处理它们的必要工具。让我们从字符串和 `LocalProfile_getAttrib` 函数开始。该函数将我们的配置文件视为一个哈希表。它会寻找形式为 `key=value` 的字符串，其中 `key` 是传递给我们的字符串。如果函数无法找到该键，它将返回 `null`。否则，它将返回紧跟 `=` 符号之后并在遇到第一个空格之前结束的字符串。
+
+
 
 为了做到这一点，之前需要请求描述我们 Java 字符串的符号数组。如果我们找到了目标值，它将需要从 `Hjava_lang_String` 结构中的符号数组翻译出来，运行时包装器会将其转换为 `String` 类型的值。执行此操作的函数描述在表 12-10 中，还有其他可用的函数。
 
@@ -5645,9 +5439,6 @@ long LocalProfile_getAttrib(struct HLocalProfile *this, HJava_lang_String *key) 
 | double[] | `HArrayOfDouble *` | `T_DOUBLE` |
 | Object | `HArrayOfObject *` | `T_CLASS` |
 
-
-
-
 当我们想要创建一个 Java 数组时，我们使用 `ArrayAlloc` 函数，它依赖于两个参数。第一个参数指定数组类型，描述见我们的第二列。第二个参数指定数组所需的尺寸。然后我们再次应用 `Togo` 外部宏，以真正应用于部分数据数组。下一章程序创建了一个十字节的数组，并为其分配了从 0 到 9 的值。你如何记住，Java 的 `byte` 在 `C` 中是一个字符，因此我们可以替换下面代码段中的 `byte` 符号：
 
 ```c
@@ -5659,7 +5450,7 @@ for (int i=0;i;i++) {
 
 现在我们可以开始编写 `LocalProfile_getPubKey()` 函数了。让我们使用环境变量 `APPLETPUBKEY` 来查找文件所在，并使用库函数 `stat` 获取大小。如果找不到文件，该函数将返回 `null`。
 
-示例 12-5。C 上的 Java 数组。
+**示例 12-5. C 上的 Java 数组。**
 
 ```c
 HArrayOfByte *LocalProfile_getPubKey(struct HLocalProfile *this) {
@@ -5691,7 +5482,7 @@ HArrayOfByte *LocalProfile_getPubKey(struct HLocalProfile *this) {
 
 在了解了体积表示以及如何处理简单类型之后，我们现在可以开始在库内部创建 Java 对象。这是编写 DLL 最混乱的部分，因为这是 Java 和 C 之间差异最显著的地方。可以分别使用表 12-12 和 12-13 中给出的结构和函数解决问题。
 
-### 表 12-12.Java 辅助结构
+### 表 12-12. Java 辅助结构
 
 #### 结构描述
 
@@ -5699,18 +5490,21 @@ HArrayOfByte *LocalProfile_getPubKey(struct HLocalProfile *this) {
 - `ClassClass`: 结构数据，包含关于 Java 类的信息。
 - `Signature`: 字符串 `c`，描述构造函数/方法具有什么类型的参数。
 
-### 表 12-13.Java 辅助函数
+### 表 12-13. Java 辅助函数
 
 #### 函数描述
 
-- `hobject *execute_java_constructor(ExecEnv *E, char *className,ClassClass *cb, char * signature`
-- `ClassClass *FindClass(ExecEnv, char *className,bool_t resolve)`
-- `long execute_java_static_method(ExecEnv *E, ClassClass *cb,char *methodName, char signature,...)`
-- `long execute_java_dynamic_method(ExecEnv *E, HObject *obj,char *methodName,char signature)`
+- `hobject *execute_java_constructor(ExecEnv *E, char *className, ClassClass *cb, char *signature)`
+- `ClassClass *FindClass(ExecEnv, char *className, bool_t resolve)`
+- `long execute_java_static_method(ExecEnv *E, ClassClass *cb, char *methodName, char signature, ...)`
+- `long execute_java_dynamic_method(ExecEnv *E, HObject *obj, char *methodName, char signature)`
 
 根据 `signature` 给定的参数创建 `className` 的实例。
+
 返回 Java 类 `className` 的表示 `C`。
+
 实现由 `cb` 描述的 Java 类静态方法 `methodName`。
+
 实现 Java 对象 `obj` 的动态方法。
 
 由此可见，在 Java 中非常简单的操作在 `C` 中需要大量工作。从表 12-13 可以看出，构造函数、静态方法和动态方法需要调用不同的函数。
@@ -5721,7 +5515,7 @@ HArrayOfByte *LocalProfile_getPubKey(struct HLocalProfile *this) {
 
 `Signature` 包含了表 12-13 中的某些键，还包含了包含参数的外部和内部括号。
 
-### 表 12-14.Java 签名键
+### 表 12-14. Java 签名键
 
 #### Java 键类型
 
@@ -5735,9 +5529,10 @@ HArrayOfByte *LocalProfile_getPubKey(struct HLocalProfile *this) {
 - `L*`: 任何 Java 对象，* 替换为类名
 
 签名语法如下：`(参数键)`
+
 例如，一个没有任何参数的方法返回 `V`。表 12-15 中是一些示例。
 
-### 表 12-15.签名示例
+### 表 12-15. 签名示例
 
 #### 构造函数/方法
 
@@ -5756,14 +5551,16 @@ HArrayOfByte *LocalProfile_getPubKey(struct HLocalProfile *this) {
 - `Class reverse(int)`: `I`
 - `Object reverse(String)`: `Ljava/lang/String;`
 - `Object reverse(int)`: `I`
+
 *(注：原文后续存在大量重复模式，此处已根据核心内容处理)*
 
-
-
 ```c
-long sample_strToInt(Hsample *this, java_lang_string *S) { ClassClass *cb;
-char sig[]="(Ljava/lang/String;)I"; cb=FindClass((ExecEnv *)NULL,"java/lang/String",TRUE); return (long)
-execute_java_static_method((ExecEnv *) NULL, "parseInt",sig,S);}
+long sample_strToInt(Hsample *this, java_lang_string *S) {
+    ClassClass *cb;
+    char sig[]="(Ljava/lang/String;)I";
+    cb=FindClass((ExecEnv *)NULL,"java/lang/String",TRUE);
+    return (long) execute_java_static_method((ExecEnv *) NULL, "parseInt",sig,S);
+}
 ```
 
 现在我们可以回到正在构建的库文件 DLL，并实现我们自己的 `favoriteColor` 方法。该方法返回一个 `Color` 对象，这意味着我们必须在 `LocalProfile_favoriteColor` 中创建它。我们将要使用的构造函数看起来如下：
@@ -5772,14 +5569,29 @@ execute_java_static_method((ExecEnv *) NULL, "parseInt",sig,S);}
 Color(int red, int green, int blue)
 ```
 
-示例 12-6。在 C 中构建 Java 对象。
+**示例 12-6. 在 C 中构建 Java 对象。**
 
 ```c
 struct Hjava_awt_Color * LocalProfile_favoriteColor(HLocalProfile *this) {
-Hjava_lang_String *RedColorParam; Hjava_lang_String *BlueColorParam; java_lang_string *GreenColorParam; long red; long green; long blue; char sig[]="(III)LHjava_awt_Color";
-char intSig[]="(LHjava_lang_String)I"; ClassClass *colorcb;
-ClassClass *Integercb;
-Colorcb=FindClass((ExecEnv *)NULL,"java/lang/Color",TRUE); Integercb=FindClass((ExecEnv *)NULL,"java/Integer",TRUE); RedColorParam=LocalProfile_getAttrib(this,makeJavaString("red",3)); BlueColorParam=LocalProfile_getAttrib(this,makeJavaString("blue",4)); GreenColorParam=LocalProfile_getAttrib(this,makeJavaString("green",5)); red=(long) execute_java_static_method((ExecEnv *) NULL, Integercb, "parseInt", intSig, RedColorParam); blue=(long) execute_java_static_method((ExecEnv *) NULL, Integercb, "parseInt", intSig, BlueColorParam); green=(long) execute_java_static_method((ExecEnv *) NULL, Integercb, "parseInt", intSig, GreenColorParam); return (struct Hjava_awt_Color*) execute_java_constructor((ExecEnv *) NULL, color, color cb, sig, red, green, blue);
+    Hjava_lang_String *RedColorParam;
+    Hjava_lang_String *BlueColorParam;
+    java_lang_string *GreenColorParam;
+    long red;
+    long green;
+    long blue;
+    char sig[]="(III)LHjava_awt_Color";
+    char intSig[]="(LHjava_lang_String)I";
+    ClassClass *colorcb;
+    ClassClass *Integercb;
+    Colorcb=FindClass((ExecEnv *)NULL,"java/lang/Color",TRUE);
+    Integercb=FindClass((ExecEnv *)NULL,"java/Integer",TRUE);
+    RedColorParam=LocalProfile_getAttrib(this,makeJavaString("red",3));
+    BlueColorParam=LocalProfile_getAttrib(this,makeJavaString("blue",4));
+    GreenColorParam=LocalProfile_getAttrib(this,makeJavaString("green",5));
+    red=(long) execute_java_static_method((ExecEnv *) NULL, Integercb, "parseInt", intSig, RedColorParam);
+    blue=(long) execute_java_static_method((ExecEnv *) NULL, Integercb, "parseInt", intSig, BlueColorParam);
+    green=(long) execute_java_static_method((ExecEnv *) NULL, Integercb, "parseInt", intSig, GreenColorParam);
+    return (struct Hjava_awt_Color*) execute_java_constructor((ExecEnv *) NULL, color, color cb, sig, red, green, blue);
 }
 ```
 
@@ -5797,11 +5609,15 @@ void SignalError(ExecEnv *e, char *ExceptionName, char *description);
 
 现在我们可以编写 `LocalProfile` 类的最后一个函数 `setAttrib`。该方法应该从配置文件读取“write”（写入）属性并检查是否允许写入。如果条目被禁用，该方法将抛出异常。
 
-示例 12-7。从 DLL 导出异常。
+**示例 12-7. 从 DLL 导出异常。**
 
 ```c
 void LocalProfile_setAttrib(struct HLocalProfile *this, Hjava_lang_String*key, Hjava_lang_String*value Hjava_lang_String *writeAllowed; writeAllowed=LocalProfile_getAttrib(this, makeJavaString("write",5));
-if (strcmp("yes",makeCString(writeAllowed))!=0) { SignalError(0, "profileWriteUnAllowedException", NULL); } else {writeToProfile(this,key,value);}
+if (strcmp("yes",makeCString(writeAllowed))!=0) {
+    SignalError(0, "profileWriteUnAllowedException", NULL);
+} else {
+    writeToProfile(this,key,value);
+}
 }
 ```
 
@@ -5833,23 +5649,22 @@ cc -G -I/usr/local/java/include -I/usr/local/java/include/solaris LocalProfile.c
 
 （注：原文中存在大量重复和错误段落，翻译已按要求整合核心逻辑。）
 
-
-
-
 ```java
 } catch (IOException e) {
     // mistake I/O in time connections
 }
 ```
 
+
+
 ## 表 13-1. `Socket` 类构造函数
 
 ### 构造函数描述
 
-| 构造函数 |  |
+| 构造函数 | 描述 |
 | :--- | :--- |
 | `Socket(String, int)` | 连接的主机名和端口。 |
-| `Socket(String, int, boolean)` | 主机名、端口和布尔指针 socket:：用于数据流 (true) 或数据报 (false)。 |
+| `Socket(String, int, boolean)` | 主机名、端口和布尔指针 socket：用于数据流 (true) 或数据报 (false)。 |
 | `Socket(InetAddress, int)` | 用于连接的 Internet 地址和端口。 |
 | `Socket(InetAddress, int, boolean)` | Internet 地址、端口和布尔 socket 指针：用于数据流 (true) 或数据报 (false)。 |
 
@@ -5863,7 +5678,7 @@ cc -G -I/usr/local/java/include -I/usr/local/java/include/solaris LocalProfile.c
 
 **建议**：给定的 socket 的 `InetAddress` 可以通过 `Socket` 类中定义的 `getInetAddress()` 方法来确定。如果你想在同一台机器上打开新连接，使用 `InetAddress` 而不是主机名可能会快一点，从而避免额外的 DNS 解析。
 
-![](img/image09303.jpeg)
+![](img/img09303.jpeg)
 
 你可能会惊讶为什么 `java.net` 包使用 `InetAddress` 类，而不是一个包含 IP 地址的 4 位字节数组。事实是，`InetAddress` 类额外提供了对 IP 地址操作的方法；例如，`getHostName` 方法在 `InetAddress` 类上执行反向 DNS 解析并返回主机名。`InetAddress` 不包含常用的构造函数，但它提供了两个静态函数：`getByName` 和 `getAllByName`，它们接收主机名 hosta 并返回与该主机相关的所有 `InetAddress`。
 
@@ -5888,7 +5703,7 @@ cc -G -I/usr/local/java/include -I/usr/local/java/include/solaris LocalProfile.c
 
 以下示例运行了一个简单的客户端。客户端连接到加载 applet 的所在主机上的时间服务器。时间服务器等待连接，报告当前时间并关闭连接。我们的客户端需要做的只是打开通信并读取数据。
 
-### 示例 13-1. 临时客户端。
+### 示例 13-1. 临时客户端
 
 ```java
 import java.applet.*;
@@ -5961,12 +5776,7 @@ public class TimeApplet extends applet {
 
 TCP/IP 协议也支持非绑定数据报的交付以及使用 UDP（用户数据报包，"用户数据报包”）的返回。UDP 数据报就像 TCP socket 一样，它们允许你使用 TCP/IP 协议与远程主机进行通信。与 TCP socket 实现逻辑连接不同，UDP 数据报不建立逻辑连接。如果 TCP socket 可以比作电话通话，那么 UDP 数据报就可以比作电报。UDP 数据报的交付是无法保证的，即使这种数据报被送达，也没有保证它是正确送达的。
 
-由于不可靠 UDP 大多数程序员在编写网络应用程序时
-
-
-
-
-倾向于使用 TCP 套接字。然而，如果你想为现有的 UDP 服务器（如 NFS 版本 2）编写 Java 客户端，可能会决定使用数据报。此外，数据报的服务头部 `header`（开销）占用的空间比 TCP 套接字更少，因为在发送或接收数据报时，不需要握手或流量控制机制。另外，UDP 数据报可以用于向客户端定期发送更新信息的 Java 服务器上。如果服务器不是为每个客户端建立 TCP 连接，而是直接发送 UDP 数据报，那么它的工作量会更少，相应的运行速度也会更快。
+由于不可靠 UDP 大多数程序员在编写网络应用程序时倾向于使用 TCP 套接字。然而，如果你想为现有的 UDP 服务器（如 NFS 版本 2）编写 Java 客户端，可能会决定使用数据报。此外，数据报的服务头部 `header`（开销）占用的空间比 TCP 套接字更少，因为在发送或接收数据报时，不需要握手或流量控制机制。另外，UDP 数据报可以用于向客户端定期发送更新信息的 Java 服务器上。如果服务器不是为每个客户端建立 TCP 连接，而是直接发送 UDP 数据报，那么它的工作量会更少，相应的运行速度也会更快。
 
 Java 中有两个与 UDP 数据报相关的类：`DatagramPacket` 和数据报套接字（datagram socket）。
 
@@ -5976,30 +5786,32 @@ Java 中有两个与 UDP 数据报相关的类：`DatagramPacket` 和数据报�
 
 #### 构造函数和方法描述
 
-`DatagramPacket(byte[], int, InetAddress, int)` 创建用于发送数据报的数据包。`byte` 内容数组被发送到由第二个整数和 `InetAddress` 指定的远程主机端口。第一个整数设置发送的字节总数。
-
-`InetAddress.getAddress()` 返回数据包的网地址。`int getPort()` 返回数据包端口。
-
-`byte[] getData()` 返回数据包。`int getLength()` 返回数据包长度。
+| 构造函数/方法 | 描述 |
+| :--- | :--- |
+| `DatagramPacket(byte[], int, InetAddress, int)` | 创建用于发送数据报的数据包。`byte` 内容数组被发送到由第二个整数和 `InetAddress` 指定的远程主机端口。第一个整数设置发送的字节总数。 |
+| `InetAddress getAddress()` | 返回数据包的网地址。 |
+| `int getPort()` | 返回数据包端口。 |
+| `byte[] getData()` | 返回数据包。 |
+| `int getLength()` | 返回数据包长度。 |
 
 当你构造 `DatagramPacket` 类时，你需要一个 `DatagramSocket` 来发送和接收数据报。这些套接字绑定到你计算机上的特定端口，就像 TCP 套接字一样。在 UNIX 上，小于 1024 的端口号预留给 root 用户。`DatagramSocket` 类的构造函数和方法见表 13-4。
 
-### 表 13-4. `datagram socket` 类的构造函数和方法
+### 表 13-4. `DatagramSocket` 类的构造函数和方法
 
 #### 构造函数和方法
 
-| 描述 |
+| 方法 | 描述 |
 | :--- | :--- |
 | `DatagramSocket()` | 在未指定的空闲端口上创建一个 UDP 套接字。 |
 | `DatagramSocket(int)` | 创建到指定端口的 UDP 套接字。 |
 | `receive(DatagramPacket)` | 等待接收数据报并将数据拷贝到特殊的 datagrampacket 中。 |
-| `send(datagramPacket)` | 发送 datagrampacket。 |
+| `send(DatagramPacket)` | 发送 datagrampacket。 |
 | `getLocalPort()` | 返回套接字绑定的本地端口号。 |
-| `close( )` | 关闭套接字。 |
+| `close()` | 关闭套接字。 |
 
 我们将使用这些类来实现 UDP 客户端。与 UDP 回显服务器连接，该服务器在大多数 UNIX 机器上位于端口 7。echo 回显服务器接收收到的每个 UDP 数据报并将其副本作为另一个 UDP 数据报返回到第一个数据报发送的地方。这里是我们的 echo 客户端文本程序。
 
-示例 13-2. Applet 数据报（datagrams）。
+### 示例 13-2. Applet 数据报
 
 ```java
 import java.applet.*;
@@ -6009,10 +5821,10 @@ import java.net.*;
 public class DatagramApplet extends applet {
     private InetAddress addr;
     private String message;
-    private text area output;
+    private TextArea output;
     public void init() {
         try {
-            String me = detCodeBase().getHost();
+            String me = getCodeBase().getHost();
             addr = InetAddress.getByName(me);
         } catch (Exception e) {
             handleException(e);
@@ -6028,7 +5840,7 @@ public class DatagramApplet extends applet {
         byte b[] = new byte[message.length()];
         message.getBytes(0,message.length(),b,0);
         try {
-            datagram socket ds = new datagram socket();
+            DatagramSocket ds = new DatagramSocket();
             DatagramPacket outPacket;
             outPacket = new DatagramPacket(b,b.length,addr,7);
             b = new byte[message.length()];
@@ -6058,13 +5870,13 @@ public class DatagramApplet extends applet {
 
 虽然数据报有时很有用，但由于它们缺乏服务头部，无法取代像 TCP 套接字那样支持可靠连接的网络机制。然而，正如我们之前看到的，Java 中执行的套接字与流（streams）密切相关。要学习如何有效地使用套接字，你需要学习如何使用流。
 
-# 流 (streams)
+# 流
 
-Java 管理输入和输出数据程序的 API 使用流（flows）。流实际上是一种将数据从程序传输到某些外部设备（例如文件或网络）的方法。在这一端你放入某些东西，它就会从另一端出来。主要类包括位于 `java.io` 中的 `InputStream` 和 `OutputStream`。在本节中，我们还将查看极大简化数据的高级类型。
+Java 管理输入和输出数据程序的 API 使用流。流实际上是一种将数据从程序传输到某些外部设备（例如文件或网络）的方法。在这一端你放入某些东西，它就会从另一端出来。主要类包括位于 `java.io` 中的 `InputStream` 和 `OutputStream`。在本节中，我们还将查看极大简化数据的高级类型。
 
 ## Images/0936.gif
 
-## 输入流 (Input streams)
+## 输入流
 
 #### 13.
 
@@ -6072,43 +5884,37 @@ Java 管理输入和输出数据程序的 API 使用流（flows）。流实际�
 
 ### 表 13-5. `InputStream` 类方法
 
-## 方法描述
-
-| 描述 |
-| :--- |
+| 方法 | 描述 |
+| :--- | :--- |
 | `int available()` | 返回不阻塞情况下可以读取的字节数。 |
 | `int read()` | 从流返回下一个字节。 |
 | `int read(byte[])` | 填充字节数组的所有空间并返回实际读取的数据量。 |
 | `int read(byte[],int,int)` | 填充字节数组的所有空间。第一个整数指定读取的起始偏移，第二个整数指定必须读取的最大字节数。 |
 | `long skip(long n)` | 跳过 n 个字节输入并返回实际跳过的数量。 |
-| `close( )` | 关闭流。 |
+| `close()` | 关闭流。 |
 | `int mark(int)` | 标记流当前的位置。整数参数表示在此标记之前可以读取的最小字节数。 |
 | `reset()` | 将流返回到标记的位置。 |
 | `boolean markSupported()` | 显示流是否支持标记和重置方法。 |
 
-## 输出流 (Weekend streams)
+## 输出流
 
-向流写入数据比接收输入简单得多。`OutputStream` 类包含了三个记录方法、`flush` 方法（将缓冲区中的所有输出数据写入流）以及一个关闭流的 close 方法。写入方法会锁定直到数据被记录。这些方法见表 13-6。
+
+
+向流写入数据比接收输入简单得多。`OutputStream` 类包含了三个记录方法、`flush()` 方法（将缓冲区中的所有输出数据写入流）以及一个关闭流的 `close()` 方法。写入方法会锁定直到数据被记录。这些方法见表 13-6。
 
 ### 表 13-6. `OutputStream` 类方法
 
-## 方法描述
-
-| 描述 |
-| :--- |
-| `close( )` | 关闭流。 |
+| 方法 | 描述 |
+| :--- | :--- |
+| `close()` | 关闭流。 |
 | `flush()` | 释放缓冲区中的所有数据。 |
 | `int write(int)` | 在流中写入一个字节。 |
 | `write(byte[])` | 在流中写入数组字节。 |
-| `write(byte[],int,int)` | 在流中记录子数组。第一个整数指定偏移量，第二个整数指定子数组的长度。 |
+| `write(byte[], int, int)` | 在流中记录子数组。第一个整数指定偏移量，第二个整数指定子数组的长度。 |
 
+通过使用 `OutputStream` 类，我们可以连接到需要输入数据的服务器。例如，这可以是一个运行在大多数 UNIX 计算机上的 Finger 服务器。连接建立后，客户端报告用户名，服务器返回关于该用户的信息。这里是简单的 Finger 客户端程序的文本。
 
-
-
-
-通过使用 `OutputStream` 类，我们可以连接到需要输入数据的服务器。例如，这可以是一个运行在大多数 UNIX 计算机上的 Finger 服务器。连接建立后，客户端报告用户名，服务器返回关于该用户的信息。这里是简单的 Finger 客户端 程序的文本。
-
-示例 13-3. Finger 客户端 applet。
+#### 示例 13-3. Finger 客户端 applet
 
 ```java
 import java.applet.*;
@@ -6117,10 +5923,10 @@ import java.net.*;
 import java.io.*;
 ```
 
-我们将不再使用 `drawString`，而是使用 `TextArea` 字段，因为 Finger 服务器通常会返回多行输出信息。为了简单起见，我们将我们请求信息的用户名作为参数传递给 Web 页面。由于这里使用了标准输出流，因此在发送之前，我们必须将字符串转换为字节数组，尽管在本章稍后的部分我们将讨论 `OutputStream` 类的子类，它们可以直接写入 `String` 类型的变量。字节 `EOL` 用于设置 Finger 服务器语法分析输出的行尾：
+我们将不再使用 `drawString()`，而是使用 `TextArea` 字段，因为 Finger 服务器通常会返回多行输出信息。为了简单起见，我们将我们请求信息的用户名作为参数传递给 Web 页面。由于这里使用了标准输出流，因此在发送之前，我们必须将字符串转换为字节数组，尽管在本章稍后的部分我们将讨论 `OutputStream` 类的子类，它们可以直接写入 `String` 类型的变量。字节 `EOL` 用于设置 Finger 服务器语法分析输出的行尾：
 
 ```java
-public class FingerApplet extends applet {
+public class FingerApplet extends Applet {
     private TextArea output;
     private byte user[];
     private byte EOL;
@@ -6143,7 +5949,7 @@ public class FingerApplet extends applet {
 }
 ```
 
-下面的程序部分与位于端口 79 的 `TimeClientApplet` - Finger 服务器几乎完全相同，并且需要 `OutputStream` 类以及 `InputStream` 类。连接建立后，被搜索的用户名将字节数组的形式发送。这里是另一个方法 `readText`，它将 `InputStream` 的内容复制到 `TextArea`：
+下面的程序部分与位于端口 79 的 `TimeClientApplet` - Finger 服务器几乎完全相同，并且需要 `OutputStream` 类以及 `InputStream` 类。连接建立后，被搜索的用户名将以字节数组的形式发送。这里是另一个方法 `readText()`，它将 `InputStream` 的内容复制到 `TextArea`：
 
 ```java
 public void start() {
@@ -6164,7 +5970,7 @@ public void start() {
 }
 ```
 
-我们现在准备好接收来自 Finger 服务器的数据了。为了存储每行数据，让我们使用一个字节数组。当遇到 EOL 字符或数组长度溢出（由 `TextArea` 字段中的列数指定）时，将字节数组复制到 `TextArea` 并创建一个新的空字节数组。这是处理未知数量数据的一种更复杂的方法，而第一个示例中的方法只是简单地询问上边界并创建了一个单个数组：
+我们现在准备好接收来自 Finger 服务器的数据了。为了存储每行数据，让我们使用一个字节数组。当遇到 `EOL` 字符或数组长度溢出（由 `TextArea` 字段中的列数指定）时，将字节数组复制到 `TextArea` 并创建一个新的空字节数组。这是处理未知数量数据的一种更复杂的方法，而第一个示例中的方法只是简单地询问上边界并创建了一个单个数组：
 
 ```java
 private void readText(InputStream in, TextArea text) {
@@ -6205,9 +6011,9 @@ public void stop() {
 
 ## 多样化的流
 
-`java.io` 包提供的不仅仅是 `InputStream` 和 `OutputStream`。这两个类在 API 中都包含多个子类，允许程序员在更高的层次上与线程交互，从而更容易解析和发送数据。表 13-7 简要介绍了这些子类。除非另有说明，每个输入流都有对应的输出流。
+`java.io` 包提供的不仅仅是 `InputStream` 和 `OutputStream`。这两个类在 API 中都包含多个子类，允许程序员在更高的层次上与流交互，从而更容易解析和发送数据。表 13-7 简要介绍了这些子类。除非另有说明，每个输入流都有对应的输出流。
 
-表 13-7. `InputStream` 类的子类
+### 表 13-7. `InputStream` 类的子类
 
 | 子类 | 描述 |
 | :--- | :--- |
@@ -6223,9 +6029,9 @@ public void stop() {
 
 ## 数据流
 
-在各种流中，最重要的两个是 `DataInputStream` 和 `DataOutputStream`，它们构建在普通的 `InputStream` 之上。这些流允许你直接从流中获取 Java 原始类型变量（如 int），而无需关心字节数组。使用 `DataInputStream` 我们可以简化 `readString` 方法。
+在各种流中，最重要的两个是 `DataInputStream` 和 `DataOutputStream`，它们构建在普通的 `InputStream` 之上。这些流允许你直接从流中获取 Java 原始类型变量（如 `int`），而无需关心字节数组。使用 `DataInputStream` 我们可以简化 `readString()` 方法。
 
-示例 13-4. 使用 `DataInputStream` 的 applet。
+#### 示例 13-4. 使用 `DataInputStream` 的 applet
 
 ```java
 private String readString(InputStream in) {
@@ -6240,9 +6046,9 @@ private String readString(InputStream in) {
 }
 ```
 
-表 13-8 列出了 `DataInputStream` 新的方法。所有这些方法在发生错误时都会抛出 `IOException`。`readFully` 方法在填充字节数组之前遇到 EOF 会发出 `java.io.EOFException`。这些方法与原始 `InputStream` 的 `read(byte[])` 和 `read(byte[],int,int)` 方法的区别在于，它们会阻塞直到所有数据可用或遇到 EOF。同样，`skipBytes` 方法会阻塞直到跳过所有请求字节。
+表 13-8 列出了 `DataInputStream` 新的方法。所有这些方法在发生错误时都会抛出 `IOException`。`readFully()` 方法在填充字节数组之前遇到 EOF 会发出 `java.io.EOFException`。这些方法与原始 `InputStream` 的 `read(byte[])` 和 `read(byte[], int, int)` 方法的区别在于，它们会阻塞直到所有数据可用或遇到 EOF。同样，`skipBytes()` 方法会阻塞直到跳过所有请求字节。
 
-表 13-8. `DataInputStream` 类的方法
+### 表 13-8. `DataInputStream` 类的方法
 
 | 方法 | 描述 |
 | :--- | :--- |
@@ -6257,20 +6063,17 @@ private String readString(InputStream in) {
 | `readFloat()` | 从浮点数读取数字（32 位）。 |
 | `readDouble()` | 从双精度浮点数读取数字（64 位）。 |
 
-
-
-
-`readLine()` 读取带有 `\r`、`\n`、`\r\n` 或 `EOF` 异常的一。`readUTF()` 以 `UTF` 格式读取行。
+`readLine()` 读取带有 `\r`、`\n`、`\r\n` 或 `EOF` 异常的一行。`readUTF()` 以 `UTF` 格式读取行。
 
 `readFully(byte[])` 将字节读入特殊的字节数组；阻塞直到数组填满。
 
-`readFully(byte[],int,int)` 将字节读入特殊数组 `bytes` 中；在填充子数组之前阻塞。
+`readFully(byte[], int, int)` 将字节读入特殊数组 `bytes` 中；在填充子数组之前阻塞。
 
 `skipBytes(int n)` 跳过 `n` 个字节；阻塞，直到未跳过所有字节。
 
 ![](img/image09307.jpeg)
 
-**建议**：在使用 `readByte` 及其配对的 `writeByte` 时，不需要将字节转换为网络字节，反之亦然。字节的写入和读取顺序与它们在 Java 虚拟机中的顺序完全一致。
+> **建议**：在使用 `readByte()` 及其配对的 `writeByte()` 时，不需要将字节转换为网络字节，反之亦然。字节的写入和读取顺序与它们在 Java 虚拟机中的顺序完全一致。
 
 ![](img/image09308.jpeg)
 
@@ -6278,19 +6081,25 @@ private String readString(InputStream in) {
 
 你可以直接将变量（字符串除外）写入流中，而无需预先将其转换为字节数组。表 13-9 列出了 `DataOutputStream` 类添加的新方法。
 
-表 13-9. `DataOutputStream` 类方法
+### 表 13-9. `DataOutputStream` 类方法
 
-## 方法描述
-
-`writeBoolean(boolean)` 写入布尔变量。`writeByte(int)` 写入一个字节（8 位）。`writeChar(int)` 写入一个字符（16 位）。`writeShort(short)` 写入短整数（16 位）。`writeInt(int)` 写入一个整数（32 位）。`writeLong(long)` 写入一个长整型（64 位）。
-
-`writeFloat(float)` 写入一个浮点数（32 位）。`writeDouble(double)` 写入一个双精度浮点数（64 位）。`writeBytes(String)` 以字节形式写入字符串。
-
-`writeChars(String)` 以符号形式写入字符串。`writeUTF(String)` 以 `UTF` 格式写入字符串。
+| 方法 | 描述 |
+| :--- | :--- |
+| `writeBoolean(boolean)` | 写入布尔变量。 |
+| `writeByte(int)` | 写入一个字节（8 位）。 |
+| `writeChar(int)` | 写入一个字符（16 位）。 |
+| `writeShort(short)` | 写入短整数（16 位）。 |
+| `writeInt(int)` | 写入一个整数（32 位）。 |
+| `writeLong(long)` | 写入一个长整型（64 位）。 |
+| `writeFloat(float)` | 写入一个浮点数（32 位）。 |
+| `writeDouble(double)` | 写入一个双精度浮点数（64 位）。 |
+| `writeBytes(String)` | 以字节形式写入字符串。 |
+| `writeChars(String)` | 以符号形式写入字符串。 |
+| `writeUTF(String)` | 以 `UTF` 格式写入字符串。 |
 
 请注意，`DataInputStream` 方法不会解析传入的文本来检测类似于 Java 简单类型的字符，`DataOutputStream` 方法也不会写入通过它们的变量的文本表示。这些方法按照变量在 Java 虚拟机内存中的表示直接向流读写变量。
 
-例如，当你调用 `readInt` 时，它从流中读取 32 位，然后返回与这些 32 位对应的整数。它不会解析文本数据字符串来寻找像整数的内容。同样，如果你向 `DataOutputStream` 的 `writeInt` 方法传递一个值不等于 10 的整数，它不会向流写入数字 "10"。它会写入一个 32 位的序列，该序列在被解释为整数时将产生值 10。如果你想解析文本语法来识别数字，你可以考虑处理字符串中的文本数据并利用 `StringTokenizer`，或者利用 `StreamTokenizer` 类，我们将在下一节讨论）。
+例如，当你调用 `readInt()` 时，它从流中读取 32 位，然后返回与这些 32 位对应的整数。它不会解析文本数据字符串来寻找像整数的内容。同样，如果你向 `DataOutputStream` 的 `writeInt()` 方法传递一个值等于 10 的整数，它不会向流写入数字 "10"。它会写入一个 32 位的序列，该序列在被解释为整数时将产生值 10。如果你想解析文本语法来识别数字，你可以考虑处理字符串中的文本数据并利用 `StringTokenizer`，或者利用 `StreamTokenizer` 类，我们将在下一节讨论。
 
 ## 解析文本流数据
 
@@ -6300,14 +6109,11 @@ private String readString(InputStream in) {
 
 该类区分五种标记：单词、数字、`EOL` 符号、`EOF` 符号和普通符号。例如，流包含以下数据：
 
-You are user nine of one hundred:
+> You are user nine of one hundred:
 
-`StreamTokenizer` 将从该流返回七个标记。"you"、are"、user" 和 "of" 被视为字符串"9" 和 "100" 被视为数字，而 ":" 将作为普通字符返回。
+`StreamTokenizer` 将从该流返回七个标记。"you"、"are"、"user" 和 "of" 被视为字符串，"9" 和 "100" 被视为数字，而 ":" 将作为普通字符返回。
 
-`StreamTokenizer` 类的工作方法是 `nextToken` 方法。它从流中读取下一个标记，并返回一个指示找到的标记类型的整数。如果标记分别是单词、数字、EOL 或 EOF，对应的整数将为 `TT_WORD`、`TT_NUMBER`、`TT_EOL` 或 `TT_EOF`。这些 `TT_*` 变量在 `StreamTokenizer` 类中定义为静态整数。如果标记是普通字符，该方法返回该符号的值。
-
-
-
+`StreamTokenizer` 类的工作方法是 `nextToken()` 方法。它从流中读取下一个标记，并返回一个指示找到的标记类型的整数。如果标记分别是单词、数字、EOL 或 EOF，对应的整数将为 `TT_WORD`、`TT_NUMBER`、`TT_EOL` 或 `TT_EOF`。这些 `TT_*` 变量在 `StreamTokenizer` 类中定义为静态整数。如果标记是普通字符，该方法返回该符号的值。
 
 `String toString()` 返回行格式格式的当前令牌。
 
@@ -6317,42 +6123,60 @@ You are user nine of one hundred:
 Sun Jan 21 19:15:01 1996
 ```
 
-我们可以让 `StreamTokenizer` 将此信息拆分为两行：一个包含 `day`（天）和 `month`（月）的行，以及另一个包含包含数字、小时、分钟、秒和年份的五个双精度值的行。由于我们在新程序中使用了 `Vector` 类，我们需要在程序开头添加 `"import.java.util.*"`。这里有改进后的方法 `start` 和一个新方法 `readTokens`。
+我们可以让 `StreamTokenizer` 将此信息拆分为两行：一个包含 `day`（天）和 `month`（月）的行，以及另一个包含包含数字、小时、分钟、秒和年份的五个双精度值的行。由于我们在新程序中使用了 `Vector` 类，我们需要在程序开头添加 `"import java.util.*"`。这里有改进后的方法 `start()` 和一个新方法 `readTokens()`。
 
-### 示例 13-5. 从服务器解析时间数据。
+#### 示例 13-5. 从服务器解析时间数据
 
 ```java
 public void start() {
-    Socket TimeSocket;  StreamTokenizer st;  try {
-    time socket  =  new Socket(getCodeBase().getHost(),13,true);  st  =  new StreamTokenizer(TimeSocket.getInputStream());
+    Socket TimeSocket;
+    StreamTokenizer st;
+    try {
+        TimeSocket = new Socket(getCodeBase().getHost(), 13, true);
+        st = new StreamTokenizer(TimeSocket.getInputStream());
     } catch (Exception e) {
-    error=e;  return;
+        error = e;
+        return;
     }
 }
 ```
 
-我们想要忽略时间服务器输出中的列，因此在解析时，我们将它们声明为空格。为了简化分析，我们编写了 `readTokens` 方法，该方法接收一个 `StringTokenizer` 类和一个包含 `String` 和 `Double` 值的 vector，尝试从流中选择这些类型的值。令牌在流中出现的顺序必须与它们在 vector 中出现的顺序相同，且仅由空格分隔。否则将发生异常。现在我们为来自 `topics` 的 vector 分配初始值，它包含了两行和五个 Double 值：
+我们想要忽略时间服务器输出中的冒号，因此在解析时，我们将它们声明为空格。为了简化分析，我们编写了 `readTokens()` 方法，该方法接收一个 `StreamTokenizer` 类和一个包含 `String` 和 `Double` 值的 vector，尝试从流中选择这些类型的值。令牌在流中出现的顺序必须与它们在 vector 中出现的顺序相同，且仅由空格分隔。否则将发生异常。现在我们为来自 `topics` 的 vector 分配初始值，它包含了两行和五个 Double 值：
+
+
 
 ```java
-st.whitespaceChars(':',':');  Vector tokens = new Vector(7);  tokens.addElement(new String());  tokens.addElement(new String());  tokens.addElement(new Double(0));  tokens.addElement(new Double(0));  tokens.addElement(new Double(0));  tokens.addElement(new Double(0));  tokens.addElement(new Double(0));  try {
+st.whitespaceChars(':',':');  
+Vector tokens = new Vector(7);  
+tokens.addElement(new String());  
+tokens.addElement(new String());  
+tokens.addElement(new Double(0));  
+tokens.addElement(new Double(0));  
+tokens.addElement(new Double(0));  
+tokens.addElement(new Double(0));  
+tokens.addElement(new Double(0));  
+try {
     readTokens(st, tokens);
 } catch (Exception e) {
-    error=e;  return;
+    error=e;  
+    return;
 }
 output = "The data is  "+tokens.elementAt(0)+", ";
-output =  output +  tokens.elementAt(1)+"  "+tokens.elementAt(2);  output =  output + ",  "+tokens.elementAt(6);
+output =  output +  tokens.elementAt(1)+"  "+tokens.elementAt(2);  
+output =  output + ",  "+tokens.elementAt(6);
 try {
     TimeSocket.close();
 } catch (Exception e) {}
 ```
 
-下面我们提供了一个读取令牌的新方法。它通过从流中读取令牌并设置 vector 中相应的元素来逐个传递元素。如果从流中读取的令牌类型与 `vector` 中定义的 `Object` 元素类型不匹配，或者 `vector` 包含了我们无法识别的 `Object` 类型，将抛出以下异常：
+下面我们提供了一个读取令牌的新方法。它通过从流中读取令牌并设置 `vector` 中相应的元素来逐个传递元素。如果从流中读取的令牌类型与 `vector` 中定义的 `Object` 元素类型不匹配，或者 `vector` 包含了我们无法识别的 `Object` 类型，将抛出以下异常：
 
 ```java
 private void readTokens(StreamTokenizer st, Vector v) throws Exception {
     int token;
     int i = 0;
-    Enumeration en = v.elements();  while (en.hasMoreElements()) {
+    Enumeration en = v.elements();  
+    while (en.hasMoreElements()) {
         // 此类型对象，我们需要的
         Object o = en.nextElement();
         // 从流中获取下一个令牌
@@ -6362,7 +6186,8 @@ private void readTokens(StreamTokenizer st, Vector v) throws Exception {
             // 如果令牌不是一个单词
             if (token!=st.TT_WORD) {
                 Exception e;
-                e = new Exception("Unexpected token type:  "+ token); throw e;
+                e = new Exception("Unexpected token type:  "+ token);  
+                throw e;
                 // 全部正常，填充 vector
             } else {
                 v.setElementAt(st.sval,i);
@@ -6372,25 +6197,31 @@ private void readTokens(StreamTokenizer st, Vector v) throws Exception {
             // 如果令牌不是数字
             if (token!=st.TT_NUMBER) {
                 Exception e;
-                e = new Exception("Unexpected token type:  "+ token); throw e;
+                e = new Exception("Unexpected token type:  "+ token);  
+                throw e;
                 // 全部正常，填充 vector
             } else {
-                Double d = new Double(st.nval);  v.setElementAt(d,i);
+                Double d = new Double(st.nval);  
+                v.setElementAt(d,i);
             }
         }
         // 如果类型是无效类型
         else {
-        } i++;
+        }  
+        i++;
     }
     Exception e;
     String type = o.getClass().getName();
-    e = new Exception("Cannot parse for  "+ type); throw e;
+    e = new Exception("Cannot parse for  "+ type);  
+    throw e;
 }
 ```
 
 ### 交互 InterApplet c 通道
 
-Java API 实现了不同流（线程）之间的数据流连接。这一属性可以用于在不创建僵化且复杂的方法系统的情况下，赋予线程通信的能力。你可以创建一对管道数据流，`PipedInputStream` 和 `PipedOutputStream`。任何写入 `PipedOutputStream` 的内容都会在 `PipedInputStream` 上接收。人们可以创建一对管道数据流，`PipedInputStream` 和 `PipedOutputStream`。任何写入 `PipedOutputStream` 的内容都会在 `PipedInputStream` 上接收。人们可以创建一对管道数据流，`PipedInputStream` 和 `PipedOutputStream`。任何写入 `PipedOutputStream` 的内容都会在 `PipedInputStream` 上接收。人们可以创建一对管道数据流，`PipedInputStream` 和 `PipedOutputStream`。任何写入 `PipedOutputStream` 的内容都会在 `PipedInputStream` 上接收。人们可以创建一对管道数据流，`PipedInputStream` 和 `PipedOutputStream`。任何写入 `PipedOutputStream` 的内容都会在 `PipedInputStream` 上接收。人们可以创建一对管道数据流，`PipedInputStream` 和 `PipedOutputStream`。任何写入 `PipedOutputStream` 的内容都会在 `PipedInputStream` 上接收。人们可以创建一对管道数据流，`PipedInputStream` 和 `PipedOutputStream`。任何写入 `PipedOutputStream` 的内容都会在 `PipedInputStream` 上接收。人们可以创建一对管道数据流，`PipedInputStream` 和 `PipedOutputStream`。任何写入 `PipedOutputStream` 的内容都会在 `PipedInputStream` 上接收。人们可以创建一对管道数据流，`PipedInputStream` 和 `PipedOutputStream`。任何写入 `PipedOutputStream` 的内容都会在 `PipedInputStream` 上接收。人们可以创建一对管道数据流，`PipedInputStream` 和 `PipedOutputStream`。任何写入 `PipedOutputStream` 的内容都会在 `PipedInputStream` 上接收。人们可以创建一对管道数据流，`PipedInputStream` 和 `PipedOutputStream`。任何写入 `PipedOutputStream` 的内容都会在 `PipedInputStream` 上接收。人们可以创建一对管道数据流，`PipedInputStream` 和 `PipedOutputStream`。任何写入 `PipedOutputStream` 的内容都会在 `PipedInputStream` 上接收。人们可以创建一对管道数据流，`PipedInputStream` 和 `PipedOutputStream`。任何写入 `PipedOutputStream` 的内容都会在 `PipedInputStream` 上接收。人们可以创建一对管道数据流，`PipedInputStream` 和 `PipedOutputStream`。任何写入 `PipedOutputStream` 的内容都会在 `PipedInputStream` 上接收。人们可以创建一对管道数据流，`PipedInputStream` 和 `PipedOutputStream`。任何写入 `PipedOutputStream` 的内容都会在 `PipedInputStream` 上接收。人们可以创建一对管道数据流，`PipedInputStream` 和 `PipedOutputStream`。任何写入 `PipedOutputStream` 的内容都会在 `PipedInputStream` 上接收。人们可以创建一对管道数据流，`PipedInputStream` 和 `PipedOutputStream`。任何写入 `PipedOutputStream` 的内容都会在 `PipedInputStream` 上接收。哈表允许多个 applet 之间的通信。`applet`，核心逻辑。
+Java API 实现了不同流（线程）之间的数据流连接。这一属性可以用于在不创建僵化且复杂的方法系统的情况下，赋予线程通信的能力。你可以创建一对管道数据流，`PipedInputStream` 和 `PipedOutputStream`。任何写入 `PipedOutputStream` 的内容都会在 `PipedInputStream` 上接收。
+
+哈表允许多个 applet 之间的通信。`applet`，核心逻辑。
 
 ```java
 class ListenApplet extends applet {
@@ -6416,10 +6247,6 @@ class ListenApplet extends applet {
 ```
 
 通过向该 `applet` 建立链接，你可以传递回 `OutputStream`。
-
-
-
-
 
 如果另一个 applet 已向流写入了数据，我们的 applet 将从流中读取数据，直到没有更多数据为止，将其转换为 `String` 并打印到 `TextArea` 中。如果你需要处理多个同步交互的 applet，最好将此方法放入一个单独的线程中。首先，我们将数据读取到一个长度为 `8` 的缓冲区中。当达到数组边界时，我们根据上一个数组长度的倍倍创建一个新数组。这种使用数组处理未知数量数据的 `a` 方法似乎比我们之前考虑过的要复杂。我们没有像之前的示例那样仅仅将数据拷贝到几个数组中，而是使用一个数组，但一旦它满了，我们就会将其长度翻倍：
 
@@ -6480,6 +6307,7 @@ public class MasterApplet extends applet {
         add(send);
         add(output);
     }
+}
 ```
 
 一旦用户点击提交（Submit）按钮，就会执行方法。我们找到想要对话的 applet，并将 `TextArea` 中的内容字段发送给它：
@@ -6536,10 +6364,6 @@ public void sendMessage(String s, ListenApplet a) throws IOException {
 
 使用 socket 和流进行网络通信的方法已经存在多年；它仍然是网络上通信最简单、最快的方法。URL 是近期添加到不断改进的网络通信标准中的。URL 提供了对所有需要识别的标识进行编码的能力。
 
-
-
-
-
 Java 包含了 `java.net.URL` 类，允许你处理由 Java 原生拥有的 URL。此外，Java 对协议类型有内置支持，并为程序员提供了为新协议创建自定义支持的机会。在第 5 章“工作中的 Applet”中，我们讨论了绝对 URL 和相对 URL 的构造结构。`URL` 类的四个构造函数见表 14-2。
 
 ### 表 14-2. `URL` 类的构造函数
@@ -6548,8 +6372,12 @@ Java 包含了 `java.net.URL` 类，允许你处理由 Java 原生拥有的 URL�
 | :--- | :--- |
 | `URL(String,string,int,String)` | 根据类型类型 `Protocol`、主机名 `hosta`、端口号 `port` 和目录位置创建绝对 URL。 |
 | `URL(String,String,String)` | 根据类型 `Protocol`、主机名 `hosta`、端口号和目录位置创建绝对 URL。该协议的端口号由默认值决定。 |
+
+
+
 | `URL(String)` | 从未解析的行字符串创建绝对 URL。 |
-| `URL(URL,String)` | 从未解析的 URL 字符串创建绝对 URL，包含相对于给定 `URL` 的目录。 |
+
+| `URL(URL, String)` | 从未解析的 URL 字符串创建绝对 URL，包含相对于给定 `URL` 的目录。 |
 
 Sun 仅为少数协议开发了 `URL` 支持——`DOC`、`FILE` 和 `HTTP`。在本章稍后的“与其他协议一起工作”部分中，我们将讨论如何为新的 `URL` 类协议创建自己的支持。`URL` 类的所有公共方法见表 14-3。
 
@@ -6564,16 +6392,16 @@ Sun 仅为少数协议开发了 `URL` 支持——`DOC`、`FILE` 和 `HTTP`。�
 | `String getProtocol()` | 返回协议类型。 |
 | `String getRef()` | 返回文件特定位置的链接。 |
 
-例如，`[`WWW.vmedia.com/indexhtml#middle`](http://WWW.vmedia.com/indexhtml#middle)` 包含 `index.html` 文件内指定位置的链接 `"middle"`。
+例如，`http://WWW.vmedia.com/index.html#middle` 包含 `index.html` 文件内指定位置的链接 `"middle"`。
 
-`sameFile(URL)` | 比较两个 URL 是否相等，忽略所有链接。 |
-`String toExternalForm()` | 打印完全准备好的 URL。 |
-`Object getContent()` | 获取给定 `URL` 的内容。 |
-`inputstream openStream()` | 从资源返回 `InputStream`。 |
-`openConnection()` | 为给定 `URL` 返回 `URLConnection`。 |
-`setURLStreamHandleFactory(URLStreamHandleFactory)` | 设置 `URLStreamHandleFactory`。 |
+| `boolean sameFile(URL)` | 比较两个 URL 是否相等，忽略所有链接。 |
+| `String toExternalForm()` | 打印完全准备好的 URL。 |
+| `Object getContent()` | 获取给定 `URL` 的内容。 |
+| `InputStream openStream()` | 从资源返回 `InputStream`。 |
+| `URLConnection openConnection()` | 为给定 `URL` 返回 `URLConnection`。 |
+| `void setURLStreamHandlerFactory(URLStreamHandlerFactory)` | 设置 `URLStreamHandlerFactory`。 |
 
-通过实现 `url` 类，我们希望访问它所指示的资源。`URL` 类为此目的提供了三个主要方法。最简单的是从 `URL` 获得的 `inputstream` 读取。这是通过 `openStream` 方法实现的：
+通过实现 `URL` 类，我们希望访问它所指示的资源。`URL` 类为此目的提供了三个主要方法。最简单的是从 `URL` 获得的 `InputStream` 读取。这是通过 `openStream` 方法实现的：
 
 ```java
 InputStream is;
@@ -6583,7 +6411,7 @@ try {
 } catch (IOException e) {}
 ```
 
-在这种情况下，URL 的使用与 socket 的区别不大。主要区别在于，当使用 URL 编程时，socket 通信会在指定的端口自动打开，并执行所有的握手协议和请求程序。例如，如果你正在从标准的 HTTP URL 请求流，`URL` 会在特定服务器的端口 `80` 上打开 socket，并针对特定的目录位置发出 `GET` 命令。`openStream` 返回的 `InputStream` 位于资源字节流的开头。下面是一个直接从 `URL` 的 `inputstream` 读取的简短示例：
+在这种情况下，URL 的使用与 socket 的区别不大。主要区别在于，当使用 URL 编程时，socket 通信会在指定的端口自动打开，并执行所有的握手协议和请求程序。例如，如果你正在从标准的 HTTP URL 请求流，`URL` 会在特定服务器的端口 `80` 上打开 socket，并针对特定的目录位置发出 `GET` 命令。`openStream` 返回的 `InputStream` 位于资源字节流的开头。下面是一个直接从 `URL` 的 `InputStream` 读取的简短示例：
 
 ```java
 URL myURL;
@@ -6591,7 +6419,7 @@ try {
     myURL = new URL(getCodeBase(), "/index.html");
 } catch (MalformedURLException e) {}
 try {
-    inputstream is = myURL.openStream();
+    InputStream is = myURL.openStream();
     int i = is.read();
     while (i != -1) {
         // 从流读取数据
@@ -6599,11 +6427,11 @@ try {
 } catch (IOException e) {}
 ```
 
-在这里，我们为 applet 的 Web 页面创建一个 `URL`，打开连接到该页面的 `InputStream`，并从 `inputstream` 读取 HTML 文件。
+在这里，我们为 applet 的 Web 页面创建一个 `URL`，打开连接到该页面的 `InputStream`，并从 `InputStream` 读取 HTML 文件。
 
 #### 获取内容
 
-`getContent` 方法是 `URL` 类的一个很好的属性，目前使用较少。该方法打开资源流的方式与 `openStream` 方法相同，但随后尝试确定流的 MIME 类型并将流转换为 Java 对象。通过数据流的 MIME 类型，`URL` 可以数据流传递给专门为处理该类型数据创建的方法。该方法必须提取封装在相应 Java 对象类型中的数据。例如，如果我们创建了一个指向 `GIF` 图像的 `URL`，`getContent` 方法必须理解流类型为 `"image/gif"`，并返回 `Image` 类的实例。`Image` 对象将包含 `GIF` 图像的。`getContent` 方法使用的精确机制将在本章后面的“MIME 类型和 ContentHandler”中进行解释。
+`getContent` 方法是 `URL` 类的一个很好的属性，目前使用较少。该方法打开资源流的方式与 `openStream` 方法相同，但随后尝试确定流的 MIME 类型并将流转换为 Java 对象。通过数据流的 MIME 类型，`URL` 可以将数据流传递给专门为处理该类型数据创建的方法。该方法必须提取封装在相应 Java 对象类型中的数据。例如，如果我们创建了一个指向 `GIF` 图像的 `URL`，`getContent` 方法必须理解流类型为 `"image/gif"`，并返回 `Image` 类的实例。`Image` 对象将包含 `GIF` 图像的数据。`getContent` 方法使用的精确机制将在本章后面的“MIME 类型和 ContentHandler”中进行解释。
 
 ```java
 URL myURL;
@@ -6624,29 +6452,23 @@ if (o instanceof Image) {
 
 某些协议除了访问网络资源外，还可以发布有关资源的信息，例如 MIME 类型或资源最后修改日期。`URLConnection` 类包含了访问这些数据所需的工具方法。
 
-
-
-
-
 `URLConnection` 类定义了许多常用方法，可以轻松访问位于给定 URL 的资源信息。这些方法在表 14-4 中给出。某些方法仅适用于 `HTTP URL`，在其他所有情况下将返回 `null` 或 `0`。
 
-表 14-4. `URLConnection` 类的信息性方法
+### 表 14-4. `URLConnection` 类的信息性方法
 
-## 方法描述
-
-| 方法 |  |
+| 方法 | 描述 |
 | :--- | :--- |
-| `getContentEncoding()` | 返回编码后的周末数据资源，如果未知则返回 `null`（例如 `base64`、`7bit`）。 |
-| `getContentLength()` | 返回资源以字节为单位的大小。 |
-| `getContentType()` | 返回资源的 MIME 类型（例如 `image/gif`）。 |
-| `getDate()` | 返回资源发送的日期。 |
-| `getExpiration()` | 返回资源的有效期限。 |
-| `getHeaderField(String)` | 返回与给定字符串名称匹配头部字段。 |
-| `getHeaderField(int)` | 返回与给定整数索引匹配头部字段。 |
-| `getHeaderFieldKey(int)` | 根据给定的索引返回头部字段名称。 |
-| `getHeaderFieldDate(String,long)` | 返回与给定字符串名称匹配的头部字段，且识别为日期。整数参数 `long` 作为默认头部字段，如果未被识别或未找到则使用。 |
-| `getHeaderFieldInt(String,int)` | 返回与给定行名称匹配的头部字段，且识别为整数。整数参数作为默认头部字段，如果未被识别或未找到则使用。 |
-| `getModifiedSince()` | 返回自某以来修改过的字段。 |
+| `String getContentEncoding()` | 返回编码后的资源数据，如果未知则返回 `null`（例如 `base64`、`7bit`）。 |
+| `int getContentLength()` | 返回资源以字节为单位的大小。 |
+| `String getContentType()` | 返回资源的 MIME 类型（例如 `image/gif`）。 |
+| `long getDate()` | 返回资源发送的日期。 |
+| `long getExpiration()` | 返回资源的有效期限。 |
+| `String getHeaderField(String)` | 返回与给定字符串名称匹配的头部字段。 |
+| `String getHeaderField(int)` | 返回与给定整数索引匹配的头部字段。 |
+| `String getHeaderFieldKey(int)` | 根据给定的索引返回头部字段名称。 |
+| `long getHeaderFieldDate(String, long)` | 返回与给给定字符串名称匹配的头部字段，且识别为日期。整数参数 `long` 作为默认头部字段，如果未被识别或未找到则使用。 |
+| `int getHeaderFieldInt(String, int)` | 返回与给定字符串名称匹配的头部字段，且识别为整数。整数参数作为默认头部字段，如果未被识别或未找到则使用。 |
+| `long getLastModified()` | 返回最后修改字段。 |
 
 ## HTTP 与 `URLConnection` 类
 
@@ -6665,7 +6487,7 @@ content-length: 4611
 </html>
 ```
 
-如果我们为给定示例中的 `index.html` 页面创建 `URLConnection`，方法 `getContentType` 将返回 "text/html"，而 `getContentLength` 方法将返回 "4611"。注意，使用 HTTP 确定这些值是非常容易的——服务器在 `HTTP` 头部中直接返回了它们。许多其他协议并不提供这些信息。
+如果我们为给定示例中的 `index.html` 页面创建 `URLConnection`，方法 `getContentType` 将返回 `"text/html"`，而 `getContentLength` 方法将返回 `4611`。注意，使用 HTTP 确定这些值是非常容易的——服务器在 `HTTP` 头部中直接返回了它们。许多其他协议并不提供这些信息。
 
 现在让我们回到 `URLConnection` 类方法的运行工具——`getContent` 方法。正当我们在 URL 上调用 `getContent` 方法时，该方法才真正开始工作。首先，`getContent` 方法尝试通过检查 HTTP 头部、流本身或文件扩展名来确定相关内容的类型。在决定使用哪种 MIME 类型时，`getContent` 方法会根据指定的 MIME 类型查询 `ContentHandler` 类，并传递给 `ContentHandler` 类。
 
@@ -6673,7 +6495,7 @@ content-length: 4611
 
 每个 MIME 类型都可以有自己的 `ContentHandler` 类。当我们在 URL 或 `URLConnection` 上调用 `getContent` 时，该 `ContentHandler` 类最终会处理资源数据。`ContentHandler` 类包含一个单一的 `getContent` 方法，该方法使用 `URLConnection` 作为参数，并返回一个与资源相关的对象。
 
-例如，MIME 类型为 "image/gif" 的资源最可能会通过 `getContent` 方法返回一个 `Image` 对象或 `Image` 的某些子类。根据 Java API 描述，`ContentHandler` 类是抽象的；`ContentHandler` 类的子类为各种 MIME 类型提供了实现。下面是一个适用于任何 "text/*" 并不复杂的 `ContentHandler`：
+例如，MIME 类型为 `"image/gif"` 的资源最可能会通过 `getContent` 方法返回一个 `Image` 对象或 `Image` 的某些子类。根据 Java API 描述，`ContentHandler` 类是抽象的；`ContentHandler` 类的子类为各种 MIME 类型提供了实现。下面是一个适用于任何 `"text/*"` 并不复杂的 `ContentHandler`：
 
 ```java
 import java.net.*;
@@ -6682,22 +6504,22 @@ import java.io.*;
 public class TextContentHandler extends ContentHandler {
     public Object getContent(URLConnection urlc) {
         try {
-            inputstream is;
+            InputStream is;
             is = urlc.getInputStream();
             DataInputStream ds;
             ds = new DataInputStream(is);
             int length;
             length = urlc.getContentLength();
-            if (length!=-1) {
+            if (length != -1) {
                 byte b[] = new byte[length];
                 ds.readFully(b);
-                String s = new string(b,0);
+                String s = new String(b, 0, length);
             } else {
                 // length unknown
                 String s = "";
                 int i = is.read();
-                while (i!=-1) {
-                    s = s+(char)i;
+                while (i != -1) {
+                    s = s + (char) i;
                     i = is.read();
                 }
             }
@@ -6710,14 +6532,14 @@ public class TextContentHandler extends ContentHandler {
 }
 ```
 
-`URLConnection` 如何选择适当的 `ContentHandler`？在调用 `getContent` 时，首先选择 `ContentHandler`。根据 Java 描述，`ContentHandler` 是一个接口。它包含一个单一的 `getContent` 方法，使用字符串作为参数并返回一个对象。如下：
+`URLConnection` 如何选择适当的 `ContentHandler`？在调用 `getContent` 时，首先选择 `ContentHandler`。根据 Java 描述，`ContentHandlerFactory` 是一个接口。它包含一个单一的 `createContentHandler` 方法，使用字符串作为参数并返回一个 `ContentHandler` 对象。如下：
 
 ```java
 import java.net.*;
 import java.io.*;
 
-public class MyContentHandler extends Object implements ContentHandlerFactory {
-    public ContentHandler createHandler(String type) {
+public class MyContentHandlerFactory implements ContentHandlerFactory {
+    public ContentHandler createContentHandler(String type) {
         if (type.startsWith("text")) {
             return new TextContentHandler();
         } else {
@@ -6729,7 +6551,7 @@ public class MyContentHandler extends Object implements ContentHandlerFactory {
 
 ## `ContentHandlerFactory` 类
 
-我们可以为 `URLConnection` 设置 `ContentHandlerFactory`。不幸的是，applet 不能设置此方法，因为它们没有使用。幸运的是，在处理 URL 时，我们可以使用 `ContentHandler` 和 `ContentHandlerFactory`。考虑以下 applet：
+我们可以为 `URLConnection` 设置 `ContentHandlerFactory`。不幸的是，applet 不能设置此方法，因为它们没有权限。幸运的是，在处理 URL 时，我们可以使用 `ContentHandler` 和 `ContentHandlerFactory`。考虑以下 applet：
 
 ```java
 import java.applet.*;
@@ -6737,17 +6559,17 @@ import java.net.*;
 import java.awt.*;
 import java.io.*;
 
-public class URLApplet extends applet {
+public class URLApplet extends Applet {
     private TextArea output;
     private ContentHandler handler;
 
     public void init() {
         handler = new TextContentHandler();
-        output = new TextArea(12,80);
+        output = new TextArea(12, 80);
         output.setEditable(false);
         add(output);
         show();
-        resize(500,250);
+        resize(500, 250);
     }
 
     public void start() {
@@ -6756,7 +6578,7 @@ public class URLApplet extends applet {
             URLConnection myUC = myURL.openConnection();
             myUC.connect();
             Object o = handler.getContent(myUC);
-            output.setText((String)o);
+            output.setText((String) o);
         } catch (Exception e) {
             handleException(e);
         }
@@ -6777,9 +6599,7 @@ public class URLApplet extends applet {
 
 ![image09312](img/image09312.gif)
 
-### 示例 14.1.
-
-示例 14-2. 使用 `ContentHandlerFactory` 的 applet。
+### 示例 14-2. 使用 `ContentHandlerFactory` 的 applet
 
 ```java
 import java.applet.*;
@@ -6789,22 +6609,20 @@ import java.io.*;
 
 import MyContentHandlerFactory;
 
-public class URLApplet extends applet {
+public class URLApplet extends Applet {
     private TextArea output;
     private ContentHandlerFactory factory;
 
     public void init() {
         factory = new MyContentHandlerFactory();
-        output = new TextArea(12,80);
+        output = new TextArea(12, 80);
         output.setEditable(false);
         add(output);
         show();
-        resize(500,250);
+        resize(500, 250);
     }
 }
 ```
-
-
 
 
 
@@ -6855,9 +6673,7 @@ try {
 
 你可以更改它们的一些默认值，之后所有新的 `URLConnection` 类将获得新值作为给定设置的初始默认值。这些设置的方法描述在表 14-5 中。
 
-表 14-5. `URLConnection` 类的设置
-
-## 方法描述
+### 表 14-5. `URLConnection` 类的设置
 
 | 方法 | 描述 |
 | :--- | :--- |
@@ -6874,14 +6690,12 @@ try {
 
 我们可以扩展 `URL` 类以处理非 Sun 和 Netscape 提供的其他协议。Java API 中描述的 `URLStreamHandler` 类用于 `URL` 打开 `URLConnection` 时。`URLStreamHandler` 任务类负责进入包含此资源的计算机必要套接字并执行所需的通信协议。与 `ContentHandler` 类一样，每个协议可能都有关联的 `URLStreamHandler` 类。`URLStreamHandler` 类的方法见于表 14-6。
 
-表 14-6. `URLStreamHandler` 类的方法
-
-## 方法描述
+### 表 14-6. `URLStreamHandler` 类的方法
 
 | 方法 | 描述 |
 | :--- | :--- |
-| `URLConnection openConnection(URL)` | |
-| `void parseURL(URL,String, int, int)` | 创建连接到 URL 的 `URLConnection`。对 URL 上的给定行产生分析。与 URL 在字符串中的起始和结束索引相关。 |
+| `URLConnection openConnection(URL)` | 创建连接到 URL 的 `URLConnection`。 |
+| `void parseURL(URL,String, int, int)` | 对 URL 上的给定行产生分析。与 URL 在字符串中的起始和结束索引相关。 |
 | `String toExternalForm(URL)` | 返回标准字符串表示的 `URL`。 |
 | `setURL(URL,String,String, int,string)` | 指定协议类型、主机、端口号、位置目录和指向 URL 的链接。 |
 
@@ -6890,10 +6704,6 @@ try {
 该行显示 `StreamHandler` 必须遵循的协议。
 
 虽然我们不允许在 Netscape Navigator 2.0 启动的小程序中为 URL 设置 `StreamHandlerFactory`。同样，这种限制的原因并不完全清楚，因为它阻止了程序员通过 FTP 或 HTTP-NG 等其他协议分发 Java 小程序。然而，可以使用直接的套接字编程创建一个通过其他协议通信的小程序，但你不能使用 Java API 中描述的 `url`。
-
-
-
-
 
 你可能并不完全理解这一章的编写目的，因为在目前最流行的 浏览器 Netscape Navigator 2.0 中运行 Java applet 时，大多数 `URL` 类的功能是不被允许或支持的。`URL` 类的意义在于，它们允许你在一个类中存储与特定资源通信所需的所有信息。它们创建所有的套接字，并执行通过 `HTTP` 检索资源所需的链接和标头解析。随着 `ContentHandler` 类的出现，它们可以将更复杂的资源（如视频文件或数据库文件）翻译成 Java 对象，资源搜索 URL 的易性使得使用 URL 比独立解码字节流要高效得多。也许 Netscape 最终会允许 applet 指定自己的线程和内容处理驱动程序。否则，显然将在完善支持 Java 程序的 Netscape Navigator 中，向默认的 `ContentHandler` 添加新的新的驱动程序。
 
@@ -6907,17 +6717,15 @@ try {
 
 ![](img/image09313.jpeg)
 
-在 Java 上开发服务器
+### 在 Java 上开发服务器
 
-创建你自己的服务器和协议定义服务器任务
-
-定义客户端-服务器交互构建 Java 服务器
-
-与套接字通信以及处理 I/O own 流处理多个连接
-
-以及多个用户 applet
-
-构建客户端通信
+* 创建你自己的服务器和协议
+* 定义服务器任务
+* 定义客户端-服务器交互
+* 构建 Java 服务器
+* 与套接字通信以及处理 I/O own 流
+* 处理多个连接以及多个用户 applet
+* 构建客户端通信
 
 到目前为止，书的这一部分的重点是在 applet 范式中编写网络客户端。现在，我们将向后退一小步，观察更广泛的话题，包括从万维网的角度来看系统客户端-服务器。
 
@@ -6936,7 +6744,7 @@ try {
 
 ![](img/image09314.jpeg)
 
-建议 本章中作为示例的代码段包含在随书附带的 CD-ROM 中。该光盘可供使用 Windows 95/NT 或 Macintosh 的读者；UNIX 用户应参考在线 Web 伴侣页面，该页面包含了本书的配套材料（地址 [`www.vmedia.com/java.html`](http://www.vmedia.com/java.html））。
+> **建议** 本章中作为示例的代码段包含在随书附带的 CD-ROM 中。该光盘可供使用 Windows 95/NT 或 Macintosh 的读者；UNIX 用户应参考在线 Web 伴侣页面，该页面包含了本书的配套材料（地址 [`www.vmedia.com/java.html`](http://www.vmedia.com/java.html)）。
 
 ![](img/image09315.jpeg)
 
@@ -6971,9 +6779,6 @@ try {
 
 ### 分发时间
 
-
-
-
 我们已经讨论过同时向客户端端口写入数据的必要性。虽然在目前无法完全实现这一点，但我们的任务是减少向所有客户端写入数据所需的时间，以便让他们产生“数据是同时传输”的印象。我们用于向已连接客户端写入数据的自由运行流可以赋予比从每个客户端读取数据的流更高的优先级。我们可以等待写入流完成，然后开始从已连接的客户端读取数据。另一个需要记在脑中的临时方面与从客户端到服务器的数据转发继有关。
 
 ### 连接结构
@@ -6994,11 +6799,13 @@ try {
 
 # Java 构建服务器
 
+
+
 在这里我们实现了上一节描述的协议。让我们从通信服务器的细节讨论开始，并以相应客户端通信的简要描述结束。图 15-1 所示的通信服务器与像 Java 应用程序启动的 applet 不同。applet 范式在本章的示例中作用不大，因为我们希望服务器有一个固定的位置，并且对它从哪里接收通信有最少的限制。注意，通信服务器完全包含在一个类中——`chatserver`。唯一的例外是我们要导入的 `FIFO` 类。
 
 ![](img/image09316.gif)
 
-#### 图 15.1。
+#### 图 15.1
 
 为了提高服务器的结构和性能，我们将广泛使用多线程属性。我们将为每个已连接的客户端创建一个单独线程，并启动其他三个线程：一个向每个已连接的客户写入数据的 `ServerWriter` 线程；一个基础流 `chatserver`，用于监听当新客户端尝试与服务器建立连接时的情况；以及一个用于清理连接的 `ConnectionWatcher` 线程。正如我们在“关系”部分讨论的那样，我们可能需要更多额外的线程，不要害怕使用它们！线程使得管理数据流和执行复杂交互变得容易，这在考虑程序文本时将会看到。确实，流为整个系统消息增加了额外的头部（开销），但通常，当连接数不是很大时，流消耗资源。
 
@@ -7006,24 +6813,22 @@ try {
 
 基础类是 `chatserver`，它是 `Thread` 的扩展。基础类实现了如何流，是因为我们必须运行监听套接字且不会停止其他操作。此线程为每个连接创建自己的线程，并传递再次创建的客户端套接字。
 
-示例 15-1a. 服务器通信程序。
+### 示例 15-1a. 服务器通信程序
 
 ```java
 import java.awt.*;
 import java.net.*;
 import java.io.*;
 import java.util.*;
-import FIFO
+import FIFO;
 
-public class chatserver extends Thread
-
-{
+public class chatserver extends Thread {
 
     public final int DEFAULT_PORT = 6001;
     protected int port;
 
     protected ServerSocket server_port;
-    protected thread group CurrentConnections;
+    protected ThreadGroup CurrentConnections;
     protected List connection_list;
 
     protected Vector connections;
@@ -7032,22 +6837,17 @@ public class chatserver extends Thread
 }
 ```
 
-
-
-
 ```java
-//  如果发生异常，通过错误消息退出
-
+// 如果发生异常，通过错误消息退出
 public static void fail(Exception e, String msg) {
     System.err.println(msg + ": " + e);
     System.exit(1);
 }
 
-//  我们为听听连接创建 ServerSocket。
-//  启动流程。
-
+// 我们为监听连接创建 ServerSocket。
+// 启动流程。
 public chatserver(int port) {
-    //  调用此流程
+    // 调用此流程
     super("server");
     if (port == 0) port = DEFAULT_PORT;
     this.port = port;
@@ -7056,28 +6856,29 @@ public chatserver(int port) {
     } catch (IOException e) {
         fail(e, "创建 server socket 时发生异常");
     }
+
+    // 为当前连接创建线程组
+    CurrentConnections = new ThreadGroup("Server Connections");
+
+    // 用于表示当前连接的 Frame
+    Frame f = new Frame("Server Status");
+    connection_list = new List();
+    f.add("Center", connection_list);
+    f.resize(400, 200);
+    f.show();
+
+    // 用于存储当前连接的 vector
+    connections = new Vector();
+
+    // 我们创建 ConnectionWatcher 流程，
+    // 它等待其他流的阻塞状态。
+    // 它会自动启动。
+    writer = new ServerWriter(this);
+    watcher = new ConnectionWatcher(this, writer);
+
+    // 服务器开始监听连接
+    this.start();
 }
-
-//  为当前连接创建线程组
-CurrentConnections = new ThreadGroup("Server Connections");
-
-//  用于表示当前连接的 Frame
-Frame f = new Frame("Server Status");
-connection_list = new List();
-f.add("Center", connection_list);
-f.resize(400, 200);
-f.show();
-
-//  用于存储当前连接的 vector
-connections = new Vector();
-
-//  我们创建 ConnectionWatcher 流程，
-//  它等待其他流的阻塞状态。
-//  它会自动启动。writer = new ServerWriter(this);
-watcher = new ConnectionWatcher(this, writer);
-
-//  服务器开始监听连接
-this.start();
 
 public void run() {
     try {
@@ -7085,7 +6886,7 @@ public void run() {
             Socket client_socket = server_port.accept();
             Connection c = new Connection(client_socket, CurrentConnections, 3, watcher, writer);
             // 避免并发访问
-            synchronized(connections) {
+            synchronized (connections) {
                 connections.addElement(c);
                 connection_list.addItem(c.getInfo());
             }
@@ -7095,10 +6896,10 @@ public void run() {
     }
 }
 
-//  启动服务器，监听特定端口
+// 启动服务器，监听特定端口
 public static void main(String[] args) {
     int port = 0;
-    if (args.length == one) {
+    if (args.length == 1) {
         try {
             port = Integer.parseInt(args[0]);
         } catch (NumberFormatException e) {
@@ -7109,18 +6910,18 @@ public static void main(String[] args) {
 }
 ```
 
-此时，我们的服务器已经启动，并在端口 6001 上上监听新连接。对于每个新连接，服务器会创建一个名为 `connections` 的流程，并向其传输相关参数。我们将新流程添加到 vector 中，该向量包含所有现有连接的流。
+此时，我们的服务器已经启动，并在端口 6001 上监听新连接。对于每个新连接，服务器会创建一个名为 `connections` 的流程，并向其传输相关参数。我们将新流程添加到 vector 中，该向量包含所有现有连接的流。
 
-该 vector 稍后用于检查链接状态。`SereWriter` 也使用它向已连接的客户端写入数据。新连接被添加到 `frame` 中显示的列表中。
+该 vector 稍后用于检查链接状态。`ServerWriter` 也使用它向已连接的客户端写入数据。新连接被添加到 `frame` 中显示的列表中。
 
 ### 来自帮助套接字的通信与来自流 I/O 的任务
 
 `Connection` 类是负责与客户端进行所有初始化操作的线程。该类将输出流驱动程序传递给 `ServerWriter` 类，因为我们意图让此流写入已连接客户端的数据。`Connection` 类通过附加相应的输入输出组件 `socket` 来初始化输入和输出流。此外，由于该线程是专门为此连接开始工作的线程，我们在该方法中获取初始用户名。我们通过 `getInfo` 方法将用户名传递给 `chatserver` 类。
 
-示例 15-1b. 程序服务器通信。
+### 示例 15-1b. 程序服务器通信
 
 ```java
-class connection extends Thread {
+class Connection extends Thread {
     static int numberOfConnections = 0;
     protected Socket client;
     protected ConnectionWatcher watcher;
@@ -7129,10 +6930,10 @@ class connection extends Thread {
     protected ServerWriter writer;
 
     public Connection(Socket client_socket, ThreadGroup CurrentConnections, int priority, ConnectionWatcher watcher, ServerWriter writer) {
-        //  分配流程名和房间组
+        // 分配流程名和房间组
         super(CurrentConnections, "Connection number" + numberOfConnections++);
         this.setPriority(priority);
-        //  请求优先级流
+        // 请求优先级流
         // 参数本地化
         client = client_socket;
         this.watcher = watcher;
@@ -7142,9 +6943,9 @@ class connection extends Thread {
             out = new PrintStream(client.getOutputStream());
             writer.OutputStreams.addElement(out);
         }
-        //  我们将流数据合并到输入和周末流数据
-        //  socket client 并将输出流添加到 vector，该向量包含所有
-        //  周末流数据，它使用了记录流程。
+        // 我们将流数据合并到输入和周末流数据
+        // socket client 并将输出流添加到 vector，该向量包含所有
+        // 周末流数据，它使用了记录流程。
         catch (IOException e) {
             try {
                 client.close();
@@ -7152,42 +6953,42 @@ class connection extends Thread {
             System.err.println("获取套接字流时发生异常: " + e);
             return;
         }
-        //  在性能上启动流程
+        // 在性能上启动流程
         this.start();
     }
 
-    //  method run 执行读取行的循环，直到
-    //  由于连接断开而停止工作
+    // method run 执行读取行的循环，直到
+    // 由于连接断开而停止工作
     public void run() {
-        string inline;
+        String inline;
         out.println("Welcome to Internet Turbo chat");
-        //  向客户端发送邀请
+        // 向客户端发送邀请
         try {
             // 在连接未断开之前执行循环
             while (true) {
-                //  读取行
+                // 读取行
                 inline = in.readLine();
                 if (inline == null) break;
-                //  如果为空空 - 连接断开
+                // 如果为空 - 连接断开
                 writer.outdata.push(inline);
-                //  保存字符串用于记录流程
-                synchronized(writer) {
+                // 保存字符串用于记录流程
+                synchronized (writer) {
                     writer.notify();
                 }
-                //  并调用记录流程。注意 synchronized() 应用于 Togo，
-                //  是为了防止两个连接同时调用记录流程，
-                //  这会导致自身形式的阻塞。
+                // 并调用记录流程。注意 synchronized() 应用于 Togo，
+                // 是为了防止两个连接同时调用记录流程，
+                // 这会导致自身形式的阻塞。
             }
         } catch (IOException e) {}
-        
-        //  当连接被中断时，我们产生清理并调用 watcher，
-        //  将连接从现有连接 vector 和列表中移除。
-        //  watcher，除了 Togo，清理输出流。
+
+        // 当连接被中断时，我们产生清理并调用 watcher，
+        // 将连接从现有连接 vector 和列表中移除。
+        // watcher，除了 Togo，清理输出流。
         finally {
             try {
                 client.close();
             } catch (IOException e2) {}
-            synchronized(watcher) {
+            synchronized (watcher) {
                 watcher.notify();
             }
         }
@@ -7209,49 +7010,43 @@ class connection extends Thread {
 ```java
 class ServerWriter extends Thread {
     chatserver server;
-    public Vector outputstreams;
+    public Vector OutputStreams;
     public FIFO outdata;
     private String outputline;
 
-    //  处理 OutputStreams 和 outdata
-    //  确保功能工作的通用；这允许直接访问
-    //  分别添加或清理输出流或数据消息。
+    // 处理 OutputStreams 和 outdata
+    // 确保功能工作的通用；这允许直接访问
+    // 分别添加或清理输出流或数据消息。
     public ServerWriter(chatserver s) {
         super("Server writer");
-        //  将此流程放入父线程组并给它命名
+        // 将此流程放入父线程组并给它命名
         server = s;
         OutputStreams = new Vector();
         outdata = new FIFO();
         this.start();
     }
-}
-```
 
-
-
-
-
-```java
-public synchronized void run() {
-    while (true) {
-        // 流进入无限循环，但它本身只有在
-        // 从帮助通知中再次给出条件预期时才会开始执行。
-        // 同样，我们在同步块中执行此操作，以锁定流并防止多次访问。
-        try {
-            this.wait();
-        } catch (InterruptedException e) {
-            System.out.println("捕获到 Inter 异常");
-        }
-        output line = outdata.pop();
-        // 我们在顶部的 FIFO outdata 中获取消息，通知方法必须在那里添加消息。
-        synchronized (server.connections) {
-            // 我们仍然应该锁定流观察者，
-            // 以免在程序工作完成之前尝试任何操作。
-            for (int i = 0; i < OutputStreams.size(); i++) {
-                PrintStream out;
-                out = (PrintStream)OutputStreams.elementAt(i);
-                out.println(outputline);
-                // 对输出流进行迭代并在每个输出流中打印消息。
+    public synchronized void run() {
+        while (true) {
+            // 流进入无限循环，但它本身只有在
+            // 从帮助通知中再次给出条件预期时才会开始执行。
+            // 同样，我们在同步块中执行此操作，以锁定流并防止多次访问。
+            try {
+                this.wait();
+            } catch (InterruptedException e) {
+                System.out.println("捕获到 Inter 异常");
+            }
+            outputline = outdata.pop();
+            // 我们在顶部的 FIFO outdata 中获取消息，通知方法必须在那里添加消息。
+            synchronized (server.connections) {
+                // 我们仍然应该锁定流观察者，
+                // 以免在程序工作完成之前尝试任何操作。
+                for (int i = 0; i < OutputStreams.size(); i++) {
+                    PrintStream out;
+                    out = (PrintStream) OutputStreams.elementAt(i);
+                    out.println(outputline);
+                    // 对输出流进行迭代并在每个输出流中打印消息。
+                }
             }
         }
     }
@@ -7260,7 +7055,9 @@ public synchronized void run() {
 
 父类承担了大量工作，每当有新客户端发送消息时它都会运行。此外，它还锁定了 `ConnectionWatcher` 线程：这样做是为了确保在工作结束之前的输出数据流不会从 `ServerWriter` 的向量 `OutputStreams` 中移除。当连接中断流时，`ConnectionWatcher` 会更改 `ServerWriter` 的向量 `OutputStreams`。
 
-示例 15-1d。服务器通信。
+### 示例 15-1d. 服务器通信
+
+
 
 ```java
 class ConnectionWatcher extends Thread {
@@ -7430,10 +7227,6 @@ class UserInfoFrame extends Frame {
 }
 ```
 
-
-
-
-
 ```java
 add("northern", new Label("Please enter your name and hit ENTER")); add("South", UserNameField);
 resize(300, one hundred); show();
@@ -7471,19 +7264,19 @@ public boolean keyDown(event evt, int key)
 
 交互式动画：广告 applet
 
-合约计划工作
+### 合约计划工作
 
-创建图像结构布局结构图像
+### 创建图像结构布局结构图像
 
-实现
+### 实现
 
-机会配置
+### 机会配置
 
-屏幕输出的基本类 创建器
+### 屏幕输出的基本类 创建器
 
-创建 ActionArea
+### 创建 ActionArea
 
-可能的改进
+### 可能的改进
 
 # 你从这一章中学到了什么
 
@@ -7514,9 +7307,7 @@ applet 的目的是在广告消息发送给 Web 用户时让网页变得活跃�
 
 关于如何实现快速加载、平滑动画和易用界面的问题涉及到 applet 作为消息传输工具的功能技术方面。现在我们需要考虑如何让 Web 设计师显示消息变得更简单。我们无法影响 Web 设计师对 applet 图形的选择，但我们可以采取这种方法，让图像在 applet 中更容易构建。
 
-`PARAM`
-`APPLET`
-`URL`
+`PARAM` `APPLET` `URL`
 
 # 计划工作
 
@@ -7526,18 +7317,17 @@ applet 的目的是在广告消息发送给 Web 用户时让网页变得活跃�
 
 我们已经知道如何处理图像的主要元素，知道如何让图片动画以及与鼠标交互。基本上，我们所做的一切都由这两个元素组成。当我们移动鼠标或点击图片时，我们会查看为给定图像描述的区域，如果鼠标在其中一个内部，则执行相应的的操作。
 
-
-
-
 下一个任务将是在定义的区域内，对移动或点击鼠标设置设置正确的响应。一种解决方案是在 `mouseMove` 和 `mouseDown` 方法中创建一系列 `if-then-else` 语句。我们可以在配置 applet 时，将来自 `regions` 的每一个项目以及相关的 `action` 加载到 `hash table` 中，并在每个 `mouse` 动作时查看该表。我们假设仅使用 `Polygon` 类进行区域描述，并将它们都放在一个名为 `areasTable` 的哈希表中。然后，`mouseDown` 方法可以如下所示管理点击 `mice` 区域：
+
+
 
 ```java
 public boolean mouseDown(Event evt, int x, int y) { 
-    Enumeration e=areasTable.keys();
+    Enumeration e = areasTable.keys();
     while (e.hasMoreElements()) {
-        Polygon p=e.getNextElement();
-        if (p.inside(x,y)) {
-            String S=(String)areasTable((Polygon(p));
+        Polygon p = e.getNextElement();
+        if (p.inside(x, y)) {
+            String S = (String) areasTable.get(p);
             if (S.equals("sound action")) {
                 // 发布声音
             }
@@ -7558,10 +7348,10 @@ public boolean mouseDown(Event evt, int x, int y) {
 
 ```java
 public boolean mouseDown(Event evt, int x, int y) { 
-    Enumeration e=aAreas.elements();
+    Enumeration e = aAreas.elements();
     while (e.hasMoreElements()) {
-        actionArea A=e.NextElement();
-        if (A.inside(x,y)) {
+        actionArea A = e.nextElement();
+        if (A.inside(x, y)) {
             A.doAction();
         }
     }
@@ -7578,13 +7368,13 @@ public boolean mouseDown(Event evt, int x, int y) {
 
 ![](img/image09320.gif)
 
-### 图 16.1.
+### 图 16.1
 
 现在让我们看看动画是如何构建到我们的方案中的。动画的概念与其他任何动画相同，只是我们不仅是在显示图片，还必须激活特定的 `actionImage` 对象。这里唯一的问题在于规模，即我们的层次结构必须运行并支持什么样的工作流。我们可以安全地排除 `Applet` applet 子类的考虑——`actionImageCanvas` 的整个重点是将项目与 applet 分离。从 `actionImageCanvas` 启动线程，如果我们以后想在同一个工作区内运行多个动画，将会产生复杂性。因此，剩下的就是指导 `actionImage` 类表的启动。图 16-1 显示了分配给我们系统各个类的哪些函数。
 
 **表 16-1. 功能类**
 
-| 类 | 功能子类类 |
+| 类 | 功能 |
 | :--- | :--- |
 | applet | 广播开发类 `actionImageCanvas`。 |
 | actionImageCanvas | 为 `actionImage` 类创建绘图表面。检查多个动画的范围和冲突。发送事件 `actionImage` 类。 |
@@ -7597,10 +7387,7 @@ public boolean mouseDown(Event evt, int x, int y) {
 
 重点包括规模，读取行，这让网页设计师在配置文件中读取，并使用它来创建我们基类的子类。我们希望以这种方式实现最高级别的配置机会。如果我们随后创建了子类 `ActionImageCanvas` 并为其添加了新功能，我希望网页设计师只需要通过学习几个需要在配置中设置的新参数就能利用这些功能。同时，我们需要尽可能防止网页设计师接触程序的内部复杂性。毕竟，这很大程度上是我们程序员的职责。
 
-
-
-
-如上所述，我们的系统将使用一种非常简单的编程语言来工作。首先，让我们考虑系统对这种语言提出的要求。我们需要能够确定 Web 设计师需要哪种类，但不要忘记，仅仅实例化一个类并不能让它变得可用运行。我们还需要一种方法向 `instance`  添加额外信息。例如，我们的 `actionArea` 类需要知道它们在图像中的位置。此外，`actionArea` 类的每个子类必须包含关于其自身 `action` 的信息。例如，`linkArea` 类应该知道从哪个 `page` 建立连接。因此，我们的语言必须能够向对象传递任意数量的配置信息。
+如上所述，我们的系统将使用一种非常简单的编程语言来工作。首先，让我们考虑系统对这种语言提出的要求。我们需要能够确定 Web 设计师需要哪种类，但不要忘记，仅仅实例化一个类并不能让它变得可用运行。我们还需要一种方法向 `instance` 添加额外信息。例如，我们的 `actionArea` 类需要知道它们在图像中的位置。此外，`actionArea` 类的每个子类必须包含关于其自身 `action` 的信息。例如，`linkArea` 类应该知道从哪个 `page` 建立连接。因此，我们的语言必须能够向对象传递任意数量的配置信息。
 
 此外，我们必须确保正在将信息传递给正确的对象。一个动画帧可能包含多个 `linkArea` 类，我们需要确保配置信息不会将一帧的 `linkArea` 类与另一帧的 `linkArea` 类相混淆。因此，我们必须能够区分配置信息，以便它们命中正确的位置。
 
@@ -7625,7 +7412,7 @@ public boolean mouseDown(Event evt, int x, int y) {
 </ShowDocArea>
 
 <SoundArea=SoundArea> sound=someSound.au area=10.10;10.20;20.20;20.10
-</SoondArea>
+</SoundArea>
 
 </ActionImage>
 ```
@@ -7663,7 +7450,7 @@ tags ActionImageAnimation...
 
 # 实现
 
-#### Rice. 16.2.
+#### 图 16.2
 
 完成设计后，我们可以开始编写程序了。从哪里开始？可以写 applet，实现所需的动画，然后修改我们的项目。但如果你考虑为了让我们的系统工作必须有多少不同的系统相互交互，发现最好的方法是从单独编写每个模块开始。这意味着在程序真正运行之前需要更多时间，但当它开始工作时，我们会发现自己更接近交付目标。
 
@@ -7683,7 +7470,7 @@ Interface Configurable {
 
 ![](img/image9322.gif)
 
-#### Rice. 16.3.
+#### 图 16.3
 
 现在我们可以完成 `Configurable` 接口的编程，以此完成项目的第一个真实程序。由于它是特定的，将其放入 `ventana.util` 包中：
 
@@ -7719,15 +7506,14 @@ public class Configure {
     }
 
     protected Configurable currentConfigurable() {
-        return (Configurable)Configurables.peek();
+        return (Configurable) Configurables.peek();
     }
 }
 ```
 
-
-
-
 # 以下方法会被 analyzer 调用
+
+
 
 ```java
 public void attach(String classname) throws NotConfigurableException, ConfigurationAttachmentException, ClassNotFoundException, instantiationException, IllegalAccessException {
@@ -7877,7 +7663,7 @@ public class ActionAnimApplet extends applet implements Configurable {
 
 
 
-
+## `ActionImageCanvas` 类的鼠标事件处理
 
 ```java
 public boolean mouseDown(Event evt, int x, int y) {
@@ -7924,8 +7710,11 @@ public boolean mouseUp(Event evt, int x, int y) {
     if (shouldRefresh) refreshCanvas();
     return true;
 }
+```
 
-// 可配置项实现
+## 可配置项实现
+
+```java
 public void setParent(Object o) {
     motherApplet = (ActionAnimApplet)o;
     setBackground(motherApplet.getBackground());
@@ -7976,7 +7765,11 @@ public String toString() {
         S = S + getAnim(i).toString();
     return S;
 }
+```
 
+## 动画控制方法
+
+```java
 // 此方法在画布中启动动画流；被 applet 调用
 protected void beginAction() {
     for (int i = 0; i < Anims.size(); i++)
@@ -8000,6 +7793,8 @@ public Dimension preferredSize() {
     return minimumSize();
 }
 ```
+
+## `BufferedImageGraphics` 类实现双缓冲
 
 我们再次允许层级结构中的下一个成员 `ActionImageAnimation` 多个实例。该类实际上负责绘制帧。为了实现双缓冲，我们将使用一个单独的 `BufferedImageGraphics` 类：
 
@@ -8101,8 +7896,6 @@ public class BufferedImageGraphics {
     }
 }
 ```
-
-
 
 
 
@@ -8234,6 +8027,8 @@ public class ActionImageAnimation implements configurable, runnable {
 ```
 
 我们只剩下两个基类需要编写。第一个是 `ActionImage` 类。在简单形式下，它按需获取图像并将事件传递给 `ActionImageArea` 类。如上述，`ActionImage` 可以被子类以在客户端创建 `Images`，并且，这种方式使其不依赖于网络数据传输速度：
+
+
 
 ```java
 package ventana.aia;
@@ -8381,10 +8176,6 @@ public class ActionArea implements Configurable {
 }
 ```
 
-
-
-
-
 ```java
 param = param.toLowerCase();
 if (param.equals("area")) {
@@ -8443,18 +8234,18 @@ public boolean mouseMove(int x, int y, Graphics g) {
 }
 
 public boolean mouseDown(int x, int y, Graphics g) {
-    motherApplet.showStatus("mouse down: " + x + "," + y);
-    return false;
+        motherApplet.showStatus("mouse down: " + x + "," + y);
+        return false;
 }
 
 public boolean mouseUp(int x, int y, Graphics g) {
-    motherApplet.showStatus("mouse up: " + x + "," + y);
-    return false;
+        motherApplet.showStatus("mouse up: " + x + "," + y);
+        return false;
 }
 
 public boolean mouseDrag(int x, int y, Graphics g) {
-    motherApplet.showStatus("mouse drag: " + x + "," + y);
-    return false;
+        motherApplet.showStatus("mouse drag: " + x + "," + y);
+        return false;
 }
 ```
 
@@ -8469,6 +8260,8 @@ public boolean mouseDrag(int x, int y, Graphics g) {
 得益于这种结构，我们的语言分析器只需要遍历一次文档。
 
 这里主要要求是将标签翻译成可以传递给对象的变量。除了这些，还需要几个例程，以提供比异常消息更友好的消息。使消息易懂的最佳方法是遵循行号。正如我们之前所说的，我们仍然需要注释和空行：
+
+
 
 ```java
 package ventana.aia;
@@ -8620,11 +8413,8 @@ public class AIAnimParser extends ConfFileParser {
     }
 }
 ```
+
 *(注：由于你提供的原始文本代码在后部分存在多处语法错误（如大括号不匹配、变量未定义等），为了符合“不翻译代码块”的原则，我完整保留了代码的逻辑结构，仅翻译了对应的英文说明部分。)*
-
-
-
-
 
 ```java
 System.out.println("\n\n***  Java's  error  message  *****");  System.out.println("(Non programmers should ignore)");  e.printStackTrace();
@@ -8688,84 +8478,89 @@ public boolean mouseMove(int x, int y,Graphics g) {  motherApplet.showStatus("Go
 
 现在让我们编写用于播放声音片段的 `ActionArea` 类：
 
+
+
 ```java
-package ventana.aia;  import java.applet.*;  import java.awt.*;  import java.util.*;  import java.net.*;  import ventana.util.*;
+package ventana.aia;
 
-public  class SoundActionArea extends ActionArea implements Configurable { audioclip sound;
+import java.applet.*;
+import java.awt.*;
+import java.util.*;
+import java.net.*;
+import ventana.util.*;
 
-public  void configureObject(String params, String value) throws ConfigurationInvalidParameterException, ConfigurationInvalidValueException  {
+public class SoundActionArea extends ActionArea implements Configurable {
+    AudioClip sound;
 
-param=param.toLowerCase(); if(param.equals("sound"))
+    public void configureObject(String params, String value) throws ConfigurationInvalidParameterException, ConfigurationInvalidValueException {
+        param = param.toLowerCase();
+        if (param.equals("sound")) {
+            parseSound(value);
+        }
+        super.configureObject(param, value);
+    }
 
-parseSound(value);  super.configureObject(param,value);}
+    public void parseSound(String value) throws ConfigurationInvalidValueException {
+        try {
+            URL u = new URL(value);
+            sound = motherApplet.getAudioClip(u);
+            if (sound == null) {
+                throw new ConfigurationInvalidValueException(value + " not a valid file");
+            }
+        } catch (MalformedURLException e) {
+            throw new ConfigurationInvalidValueException(value + " not a URL");
+        }
+    }
 
-public void parseSound(String value) throws ConfigurationInvalidValueException  {
+    public String toString() {
+        String s = "SoundActionArea\n";
+        s = s + sound.toString() + "\n";
+        return s;
+    }
 
-try  {
+    public void completeConfiguration() throws ConfigurationFailedException {
+        if (sound == null) {
+            throw new ConfigurationFailedException("no sound described");
+        }
+    }
 
-URL U=new URL(value);  sound=motherApplet.getAudioClip(U);  if  (sound==null)
-throw  new ConfigurationInvalidValueException(value+"  not  a
-
-valid file");
-}catch  (MalformedURLException e) {
-
-throw  new ConfigurationInvalidValueException(value+"  not  a  URL");}
-
-}
-
-public  String toString() {
-
-String  S="SoundActionArea\n";  S=S+sound.toString()+"\n";  return  S;}
-
-public  void completeConfiguration() throws ConfigurationFailedException  {
-
-if  (sound==null)
-throw  (new ConfigurationFailedException ("no  sound  described"));}
-
-public  boolean mouseMove(int x, int y,Graphics g) {  sound.play();
-
-return  supermouseMove(x,y,g);}
-
+    public boolean mouseMove(int x, int y, Graphics g) {
+        sound.play();
+        return super.mouseMove(x, y, g);
+    }
 }
 ```
 
 # 可能的改进
 
-得益于我们选择的 applet 结构，我们可以将其扩展到各个领域。最简单的方法是添加新的 `ActionArea`，你也可以可以在 `ActionImageAnimation` 类中创建子类，并添加新功能，例如更改图像或在工作区域支持背景图像。在不额外工作的情况下，我们可以在一个 applet 中获得多个工作区域副本并在工作区域内包含多个动画。
+得益于我们选择的 applet 结构，我们可以将其扩展到各个领域。最简单的方法是添加新的 `ActionArea`，你也可以在 `ActionImageAnimation` 类中创建子类，并添加新功能，例如更改图像或在工作区域支持背景图像。在不额外工作的情况下，我们可以在一个 applet 中获得多个工作区域副本并在工作区域内包含多个动画。
 
-## 第 17 章
+# 第 17 章：来自 CGI 的交互——Java 商店
 
-来自 CGI 的交互：Java 商店
+*   HTTP 请求
+*   商品住宿信息
+*   FIFO 类
+*   获取图像和描述
+*   用户操作处理
+*   读取配置数据和初始化
+*   整合一切
+*   将用户的选择传递给 Web 服务器
+*   处理 CGI 程序所采用的数据
+*   可能的改进
 
-HTTP 请求
+# 你从这些章节中学到了什么
 
-商品住宿信息 FIFO 类
+在本章中，我们将创建一个“Java 商店”applet，这是一个“购物车”程序，允许虚拟商店的游客查看并选择产品。以下是我们将讨论的问题：
 
-获取图像和描述 用户操作处理
-
-读取配置数据和初始化整合一切
-
-将用户的选择传递给 Web 服务器 处理 CGI 程序所采用的数据
-
-可能的改进
-
-# 你从这些章节中中学到了什么
-
-在本章中，我们将创建一个“Java 商店”applet，这是一个“购物车”程序，允许允许虚拟商店的游客查看并选择产品。以下是我们将讨论的问题：
-
-*   使用 `HTTP` 接收
-*   来自 `CGI` 的连接
+*   使用 `HTTP` 接收来自 `CGI` 的连接
 *   设计
 *   创建
 
+Java Applet 将允许用户通过菜单管理商店。菜单中的每一项将代表商店的新部门。嵌套菜单将允许将商店划分为子部门。例如，在“编程”部门下，可以有“Java 书籍”、“C++ 书籍”和“Visual Basic 书籍”等子部门。Java 商店将有一个“购物篮”。除了包含当前用户选择的列表外，此程序还允许用户从列表中删除产品。
 
+Java 商店还将包含参考菜单，用户可以向商店主发送带有提示的信件，或接收详细的订单信息。Java 商店由两个主面板组成：左面板包含当前商店部门的产品图像，右面板显示在左面板中选中的商品详细描述。
 
-
-Java Applet 将允许用户通过菜单管理商店。菜单中的每一项将代表商店的新部门。嵌套菜单将允许状态将商店划分为子部门。例如，在“编程”部门下，可以“Java 书籍”、“C++书籍”和“Visual Basic 书籍”等子部门。Java 商店将有一个“购物篮”。除了包含当前选择用户的列表外，此程序还允许用户从获取列表中删除产品。
-
-Java 商店还将包含参考菜单，用户可以向商店主发送带有提的信件，或接收详细的订单信息。Java 商店由两个主面板组成：左面板包含当前商店部门的产品图像，右面板显示在左面板中选中的商品详细描述。
-
-选择产品后，用户可以点击“结账（Check out of Store）”按钮，该获取将被添加到列表中，并通过 CGI 场景发送到 Web 服务器。这些信息可以封装为与现有基于 HTML 表单的交互数据相同的格式。这将允许我们调用同一个 CGI 程序。
+选择产品后，用户可以点击“结账”按钮，该选择将被添加到列表中，并通过 CGI 场景发送到 Web 服务器。这些信息可以封装为与现有基于 HTML 表单的交互数据相同的格式。这将允许我们调用同一个 CGI 程序。
 
 Java 商店的内部设备比上述外部界面更复杂。菜单是动态组织的——它们是根据永久位于 Web 服务器上的文件生成的。这允许您无需任何编程即可设置 Java 商店。商店人员可以通过修改文本文件来更换提供的产品、描述和部门结构。Java 商店读取这些文件并根据其指令形成用户界面。
 
@@ -8792,7 +8587,7 @@ Programming/
 Books on programming
 ```
 
-目录是商店的部门。目录内部将有一个`.idx` 文件，包含图像和描述文件的名称，以及用户选择此项时添加到购物车的唯一名称。如果名称以 "/" 结尾，则表示子菜单和相应的商店子部门。部门在物理上仍以目录表示；每个部门都包含自己的 `idx` 文件。这就是“Internet”部门的典型 `idx` 文件样式：
+目录是商店的部门。目录内部将有一个 `.idx` 文件，包含图像和描述文件的名称，以及用户选择此项时添加到购物车的唯一名称。如果名称以 `/` 结尾，则表示子菜单和相应的商店子部门。部门在物理上仍以目录表示；每个部门都包含自己的 `idx` 文件。这就是“Internet”部门的典型 `idx` 文件样式：
 
 ```
 webserver.gif webserver.txt
@@ -8801,7 +8596,7 @@ Java.gif Java.txt
 Programming on the Java for Internet
 ```
 
-使用这种目录结构，我们建立了一个易于遵循的严格组织。要进行精确更改，您只需确定应从哪个部门添加或删除哪个产品，进入相应的目录并更改其中的 `idx` 文件。批量更改将更耗时，但我们接受这种折协，因为小更改发生的频率比删除所有商店部门高。所有的 `idx` 文件在主 `Store` 类中搜索，而从 `store` 类发现的数据组成的用户界面将在 `StoreWindow` 类中生成。
+使用这种目录结构，我们建立了一个易于遵循的严格组织。要进行精确更改，您只需确定应从哪个部门添加或删除哪个产品，进入相应的目录并更改其中的 `idx` 文件。批量更改将更耗时，但我们接受这种折衷，因为小更改发生的频率比删除所有商店部门高。所有的 `idx` 文件在主 `Store` 类中搜索，而从 `store` 类发现的数据组成的用户界面将在 `StoreWindow` 类中生成。
 
 我们通过两个主要类实现 Java 商店。第一个类简单地称为 `Store`（商店）。该模块选择形成用户界面的数据。它还调用 `StoreWindow` 类。`StoreWindow` 是找到数据用户界面后显示的屏幕。`StoreWindow` 包含购物车、产品图像、商店菜单和产品描述。它还会调用其他方法。
 
@@ -8813,15 +8608,13 @@ Java 商店的内部设备比上述外部界面更复杂。菜单是动态组织
 
 ## 图 17.3
 
+让我们从辅助类开始我们的实现。当我们讨论高层的 `StoreWindow` 类时，你会发现这些类很容易适配于联合工作。
 
-
-让我们从辅助类开始我们的实现类。当我们讨论高层的 `StoreWindow` 类时，你会发现这些类很容易适配于联合工作。
-
-在开始编写 `StoreWindow` 类之前，我们将生成并测试每个辅助类。在每个模块的严谨验证上花费的额外时间将使我们能够快速且无意外地将组件组合在一起。在所示的 `rice.17-4` Java 商店中，买家看到的将如下：
+在开始编写 `StoreWindow` 类之前，我们将生成并测试每个辅助类。在每个模块的严谨验证上花费的额外时间将使我们能够快速且无意外地将组件组合在一起。在所示的 Java 商店中，买家看到的将如下：
 
 ![](img/image09327.gif)
 
-## HTTP 请求
+# HTTP 请求
 
 首先，我们需要接收商店安装数据的模块，以便我们形成产品面板和菜单。让我们使用 `HTTP` 请求来获取安装的 `.idx` 文件。我们将有两个通用类——一个用于发送 `GET` 请求，另一个用于与 Web 服务器上的 CGI 程序进行交互，即 `POST` 请求。`HTTPpost` 类将在下文中讨论。我们将会介绍 `HTTPget` 类的一个变体，以展示如何使用网络套接字与 Web 服务器进行通信。这两个类的完整源代码可以在随书附带的 CD-ROM（适用于 `Windows 95/NT` 和 Macintosh 用户）以及在线伴随网页（适用于 `UNIX` 用户）上找到。
 
@@ -8830,73 +8623,64 @@ Java 商店的内部设备比上述外部界面更复杂。菜单是动态组织
 ```java
 import java.net.*;
 import java.io.*;
-public class httppost {
-    String CGIresults="";
+
+public class HTTPpost {
+    String CGIresults = "";
 
     public HTTPpost(String URLline, String PostData) {
         String inputLine;
         String PostDataEncoded = "result=" + URLEncoder.encode(PostData);
-```
 
-我们设置 `HTTPpost` 选择两个参数——首先是字符串参数 `URLline`，它包含了我们想要在 Web 服务器上执行的 CGI 程序名称以及该程序的完整 URL。`PostData` 参数包含了我们要发送给 CGI 的数据。我们需要确保所有这些数据都以适当的格式发送到 Web 服务器，因此我们使用了标准的 `x-www-form-urlencoded` 配合 `URLEncoder.encoder` 方法。我们将此值分配给字符串 `"result"`。CGI 将看到此数据为 `"result=(PostData)"`，这意味着位于 `PostData` 中的 `"result"` 的值。在创建 CGI 程序时记住这一点很重要，因为我们将这对值提取出来进行处理。在下面的代码段中展示了连接到 Web 服务器：
+        try {
+            URL url = new URL(URLline);
+            URLConnection connection = url.openConnection();
+            PrintStream outStream = new PrintStream(connection.getOutputStream());
+            DataInputStream inStream;
 
-```java
-try {
-    URL url = new URL(urlline);
-    URLConnection connections = url.openConnection();
-    PrintStream outStream = new PrintStream(connection.getOutputStream());
-    DataInputStream instream;
-```
+            outStream.println(PostDataEncoded);
+            outStream.close();
 
-首先，我们使用参数 `urlline` 从 `url` 创建一个新实例。然后，我们使用 `url.connection` 方法返回的对象创建一个新的 `URLConnection` 实例。这为我们形成输入和输出流提供了基础。我们使用 `URLConnection` 作为实际连接的通道，为 CGI 程序的 `PostData` 输出创建一个 `PrintStream`。同样地，在下面我们从 `URLConnection` 实例创建一个 `inStream`，以便我们从 Web 服务器或 CGI 程序接收数据：
+            inStream = new DataInputStream(connection.getInputStream());
+            while (null != (inputLine = inStream.readLine())) {
+                CGIresults = CGIresults + inputLine + "\n";
+            }
 
-```java
-outStream.println(PostDataEncoded);
-outStream.close();
+            inStream.close();
+        } catch (MalformedURLException me) {
+            System.err.println("MalformedURLException: " + me);
+        } catch (IOException ioe) {
+            System.err.println("IOException: " + ioe);
+        }
+    }
 
-inStream = new DataInputStream(connection.getInputStream());
-while (null != (inputLine = inStream.readLine())) {
-    CGIresults = CGIresults + inputLine + "\n";
-}
-
-inStream.close();
-} catch (MalformedURLException me) {
-    System.err.println("MalformedURLException: " + me);
-} catch (IOException ioe) {
-    System.err.println("IOException: " + ioe);
+    public String results() {
+        return CGIresults;
+    }
 }
 ```
 
-我们现在已经准备好进入业务阶段。首先，我们将参数 `post data` 发送到 Web 服务器，它会传输其 CGI 程序。然后我们开始从 CGI 接收数据，直到缓冲区为空。这些数据存储在全局变量 `CGIresults` 中。我们应该捕获在创建新 `URL` 以及由 `URL.openConnection` 方法引起的所有异常。下面是我们调用的返回结果 `httppost` 的方法：
+我们设置 `HTTPpost` 接受两个参数——首先是字符串参数 `URLline`，它包含了我们想要在 Web 服务器上执行的 CGI 程序名称以及该程序的完整 URL。`PostData` 参数包含了我们要发送给 CGI 的数据。我们需要确保所有这些数据都以适当的格式发送到 Web 服务器，因此我们使用了标准的 `x-www-form-urlencoded` 配合 `URLEncoder.encode` 方法。我们将此值分配给字符串 `"result"`。CGI 将看到此数据为 `"result=(PostData)"`，这意味着位于 `PostData` 中的 `"result"` 的值。在创建 CGI 程序时记住这一点很重要，因为我们将这对值提取出来进行处理。
 
-```java
-public String results() {
-    return CGIresults;
-}
-```
+首先，我们使用参数 `URLline` 创建一个新的 `URL` 实例。然后，我们使用 `url.openConnection()` 方法返回的对象创建一个新的 `URLConnection` 实例。这为我们形成输入和输出流提供了基础。我们使用 `URLConnection` 作为实际连接的通道，为 CGI 程序的 `PostData` 输出创建一个 `PrintStream`。同样地，我们从 `URLConnection` 实例创建一个 `inStream`，以便我们从 Web 服务器或 CGI 程序接收数据。
+
+我们现在已经准备好进入业务阶段。首先，我们将参数 `PostData` 发送到 Web 服务器，它会传输给其 CGI 程序。然后我们开始从 CGI 接收数据，直到缓冲区为空。这些数据存储在全局变量 `CGIresults` 中。我们应该捕获在创建新 `URL` 以及由 `URL.openConnection` 方法引起的所有异常。
 
 `results` 方法简单地返回 CGI 的输出。它用于确保 CGI 程序接收了我们发送的数据并对其进行了正确处理。我们还可以使用此方法在我们的 applet 中向用户显示消息。此外，我们可以从 CGI 程序传回 URL，然后调用 `showDocument` 来强制 Web 浏览器显示页面。它可以用于发送包含“感谢您的购买”页面的 URL，或者一个告知错误的页面，或是任何类似的内容。
 
 ![](img/image09328.jpeg)
 
 ### 建议
+
 `HTTPget` 类不接受 `POST` 参数；相反，它需要 `QUERY LINE` 参数。它从 Web 服务器获取数据。我们想使用它来接收 HTML。由于 HTML 文件是纯文本，所以我们不需要担心标签。理论上，我们可以接收二进制数据，但这需要更改输入以读取字节。
 
 ![](img/image0329.jpeg)
 
-
-
-
-
 ```java
-return RECIEVEdata;
-
-}
-
+return RECEIVEdata;
 }
 ```
 
-## 商品安置信息
+# 商品安置信息
 
 `ProductImage` 类不仅存储了产品图像，还存储了标签和描述。该类扩展了 `Canvas` 类。因此，我们可以为其赋予含义，并让对象本身包含特定产品的数据。我们在 `ImagePanel` 类中使用它，是因为我们要向其中添加产品图像。通过创建指向特定 `ProductImage` 的链接，然后通过该链接引用描述和标签，就可以直接访问描述和标签。这种机制在 `StoreWindow` 类中实现，这样我们就不需要通过 `ImagePanel` 类来获取数据了。此外，我们还添加了 `height` 和 `width` 共享变量，允许 `ImagePanel` 为所有添加到特定 `ImagePanel` 的 `ProductImage` 正确地设置尺寸。让我们考虑一下 `ProductImage` 类：
 
@@ -8911,6 +8695,7 @@ public class ProductImage extends Canvas {
     public int width;
 
     public String description;
+
     public void setLabel(String s) {
         label = s;
     }
@@ -8922,25 +8707,25 @@ public class ProductImage extends Canvas {
             width = piece.getWidth(this);
         }
     }
-}
-```
 
-我们没有私有 `label`、`width`、`height` 和 `description`，但我们私有部分 `Image`。`setLabel` 和 `setImage` 方法通过各自的对象参数被调用，实例 `ProductImage` 将它们存储起来以供以后使用。描述通过直接引用 `ProductImage` 实例中的 `Description` 变量来设置。该对象基于 `Canvas` 类，因此我们可以直接将其添加到显示产品图像的面板中：
-
-```java
-public void paint(Graphics g) {
-    Rectangle r = bounds();
-    g.setColor(getBackground());
-    g.fillRect(0,0,r.width,r.height);
-    if (piece!=null) {
-        g.drawImage(piece,0,0,this);
+    public void paint(Graphics g) {
+        Rectangle r = bounds();
+        g.setColor(getBackground());
+        g.fillRect(0, 0, r.width, r.height);
+        if (piece != null) {
+            g.drawImage(piece, 0, 0, this);
+        }
     }
 }
 ```
 
-现在我们通过 `setImage` 方法将图像传输到 `ProductImage` 拷贝中，以便将其添加到显示商品图像的面板上
+我们没有将 `label`、`width`、`height` 和 `description` 设为私有，但将 `Image` 设为私有。`setLabel` 和 `setImage` 方法通过各自的对象参数被调用，实例 `ProductImage` 将它们存储起来以供以后使用。描述通过直接引用 `ProductImage` 实例中的 `description` 变量来设置。该对象基于 `Canvas` 类，因此我们可以直接将其添加到显示产品图像的面板中。
 
-## FIFO 类
+现在我们通过 `setImage` 方法将图像传输到 `ProductImage` 副本中，以便将其添加到显示商品图像的面板上。
+
+# FIFO 类
+
+
 
 `FIFO` 类是 API 中可用 `Vector` 类的扩展。`Vector` 是 `java.util` 包中的一个可扩展数组类。我们添加了一些方法来匹配 `FIFO` 数据结构。`FIFO` 用于用户界面的形成，这使得跟踪该界面的数据变得容易得多。我们可以按照特殊顺序将对象放入 `FIFO` 中，并使用相应的 `push` 和 `pop` 方法按相同的顺序将它们取出。我们还有一个 `isEmpty` 方法，用于检查列表是否为空：
 
@@ -8948,20 +8733,20 @@ public void paint(Graphics g) {
 import java.util.Vector;
 import java.util.*;
 
-public class FIFO extends vector {
+public class FIFO extends Vector {
     public String pop() {
-        String s="";
+        String s = "";
         // 获取第一个元素
         try {
-            s= (String)firstElement();
+            s = (String) firstElement();
         } catch (NoSuchElementException e) {
             System.out.println("FIFO EMPTY!!!!!");
-            s="";
+            s = "";
         }
         // 并删除第一个元素
         try {
             removeElement(s);
-        } catch(ArrayIndexOutOfBoundsException e) {
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("FIFO EMPTY!!!");
         }
         return s;
@@ -8991,7 +8776,7 @@ import java.net.*;
 import java.util.*;
 import java.io.*;
 import ProductImage;
-import FIFO
+import FIFO;
 import httpget;
 
 public class ImagePanel extends Panel {
@@ -9007,16 +8792,12 @@ public class ImagePanel extends Panel {
     private Image i;
     public String label;
     private httpget DescText;
+}
 ```
 
-注意，在此类中我们调用了 `MediaTracker`。它保证图像在执行 `ProductImage.setImage` 之前已经接收。如果带有尚未接收的图片执行执行会导致 `NullpointerException`。`Toolkit` 是必要的，这样就可以调用 `getImage`。
-
-
-
+注意，在此类中我们调用了 `MediaTracker`。它保证图像在执行 `ProductImage.setImage` 之前已经接收。如果带有尚未接收的图片执行执行会导致 `NullPointerException`。`Toolkit` 是必要的，这样就可以调用 `getImage`。
 
 现在我们已经从 Web 服务器获取了所需产品的所有数据，让我们把它们放在合适的位置吧。我们使用 `ProductImage` 类的实例来包含这些数据；在上面的代码段中，这被反复赋值给 `ImageCanvas` 的值。我们设置图像 ID，使用 `setImage` 方法查找上述图像，使用 `setLabel` 方法直接从课堂 `ProductImage` 类中的 `help` 变量 `Description` 安装标签和描述（全部通过 `ImageCanvas` 实现）。标签或名称是三元组中的最后一个成员，我们从 `FileList` FIFO 队列中针对特定项目推入它。我们使用 `height` 和 `product image width` 在将其添加到 `ImagePanel` 之前调整 `ImageCanvas` 的大小。最后，我们设置 `ImagePanel` 的完整大小，以便在 `StoreWindow` 类中使用。`ImagePanel` 实例代表不同部门的商店，已作为组组件直接添加到框架 `StoreWindow` 中。
-
----。
 
 ## 用户处理操作
 
@@ -9025,271 +8806,261 @@ public class ImagePanel extends Panel {
 ```java
 import java.awt.*;
 
-public class Basket extends panel {
+public class Basket extends Panel {
     private List ItemList;
     private Button Remove;
-    private button clear;
-    public button checkout;
+    private Button Clear;
+    public Button Checkout;
 
     public Basket(String name) {
-        label Basket Label = new Label(Name, Label.CENTER);
+        Label BasketLabel = new Label(name, Label.CENTER);
         GridBagConstraints Con = new GridBagConstraints();
         GridBagLayout gridBag = new GridBagLayout();
         ItemList = new List(5, false);
 
         Remove = new Button("Remove");
         Clear = new Button("Clear all items");
-        checkout = new Button("Check out of store");
+        Checkout = new Button("Check out of store");
         setLayout(gridBag);
 
         setFont(new Font("Helvetica", Font.PLAIN, 12));
-        setBackground(color.blue);
+        setBackground(Color.blue);
 
-        Con anchor = GridBagConstraints.CENTER;
+        Con.anchor = GridBagConstraints.CENTER;
         Con.fill = GridBagConstraints.NONE;
-        Con weighty  = 1.0;
+        Con.weighty = 1.0;
 
-        con.weightx=0.0;
+        Con.weightx = 0.0;
 
-        con.gridwidth = GridBagConstraints.REMAINDER;
+        Con.gridwidth = GridBagConstraints.REMAINDER;
         gridBag.setConstraints(BasketLabel, Con);
         add(BasketLabel);
 
         Con.fill = GridBagConstraints.BOTH;
-        con.gridheight=3;
-        Con.gridwidth=GridBagConstraints.RELATIVE;
-        Con weighty  = 1.0;
+        Con.gridheight = 3;
+        Con.gridwidth = GridBagConstraints.RELATIVE;
+        Con.weighty = 1.0;
 
-        con.weightx=3.0;
+        Con.weightx = 3.0;
         gridBag.setConstraints(ItemList, Con);
         add(ItemList);
 
-        Con.weightx=1.0;
-        Con weighty  = 0.0;
-        con.gridheight=1;
+        Con.weightx = 1.0;
+        Con.weighty = 0.0;
+        Con.gridheight = 1;
 
-        Con.gridwidth=GridBagConstraints.REMAINDER;
+        Con.gridwidth = GridBagConstraints.REMAINDER;
         Con.fill = GridBagConstraints.HORIZONTAL;
         gridBag.setConstraints(Remove, Con);
         add(Remove);
 
         gridBag.setConstraints(Clear, Con);
-        add(clear);
+        add(Clear);
         Con.fill = GridBagConstraints.BOTH;
         gridBag.setConstraints(Checkout, Con);
-        add(checkout);
+        add(Checkout);
     }
 }
 ```
 
-在这里我们实现了三个按钮和一个列表，但除了“结账”按钮外，对所有项都进行了私有处理（或使用 private 修饰符声明）。这样做是为了让父类 `StoreWindow` 类能够访问。处理其他按钮的函数位于 `Basket` 类本身。请注意，创建列表是为了允许选择一个副本。我们使用布局管理器 `GridLayout` 将 `ItemList` 设置为在面板上使用最大空间的模式。“结账”按钮移出了商店父类 `StoreWindow`：处理其他按钮的函数位于 `Basket` 类本身。请注意，创建列表是为了允许选择一个副本。我们使用布局管理器 `GridLayout` 将 `ItemList` 设置为在面板上使用最大空间的模式。“结结账”按钮移出了商店父类 `StoreWindow`：处理其他按钮的函数位于 `Basket` 类本身。请注意，创建列表是为了允许选择一个副本。我们使用布局管理器 `GridLayout` 将 `ItemList` 设置为在面板上使用最大空间的模式。“结结账”按钮移出了商店父类 `StoreWindow`：处理其他按钮的函数位于 `Basket` 类本身。请注意，创建列表是为了允许选择一个副本。我们使用布局管理器 `GridLayout` 将 `ItemList` 设置为在面板上使用最大空间的模式。“结结账”按钮移出了商店父类 `StoreWindow`：处理其他按钮的函数位于 `Basket` 类本身。请注意，创建列表是为了允许选择一个副本。我们使用布局管理器 `GridLayout` 将 `ItemList` 设置为在面板上使用最大空间的模式。“结结账”按钮移出了商店父类 `StoreWindow`：处理其他按钮的函数位于 `Basket` 类本身。请注意，创建列表是为了允许选择一个副本。我们使用布局管理器 `GridLayout` 将 `ItemList` 设置为在面板上使用最大空间的模式。“结结账”按钮移出了商店父类 `StoreWindow`：处理其他按钮的函数位于 `Basket` 类本身。请注意，创建列表是为了允许选择一个副本。我们使用布局管理器 `GridLayout` 将 `ItemList` 设置为在面板上使用最大空间的模式。“结结账”按钮移出了商店父类 `StoreWindow`：处理其他按钮的函数位于 `Basket` 类本身。请注意，创建列表是为了允许选择一个副本。我们使用布局管理器 `GridLayout` 将 `ItemList` 设置为在面板上使用最大空间的模式。“结结账”按钮移出了商店父类 `StoreWindow`：处理其他按钮的函数位于 `Basket` 类本身。请注意，创建列表是为了允许选择一个副本。我们使用布局管理器 `GridLayout` 将 `ItemList` 设置为在面板上使用最大空间的模式。“结结账”按钮移出了商店父类 `StoreWindow`：处理其他按钮的函数位于 `Basket` 类本身。请注意，创建列表是为了允许选择一个副本。我们使用布局管理器 `GridLayout` 将 `ItemList` 设置为在面板上使用最大空间的模式。“结结账”按钮移出了商店父类 `StoreWindow`：处理其他按钮的函数位于 `Basket` 类本身。请注意，创建列表是为了允许选择一个副本。我们使用布局管理器 `GridLayout` 将 `ItemList` 设置为在面板上使用最大空间的模式。“结结账”按钮移出了商店父类 `StoreWindow`：处理其他按钮的函数位于 `Basket` 类本身。请注意，创建列表是为了允许选择一个副本。我们使用布局管理器 `GridLayout` 将 `ItemList` 设置为在面板上使用最大空间的模式。“结结账”按钮移出了商店父类 `StoreWindow`：处理其他按钮的函数位于 `Basket` 类本身。请注意，创建列表是为了允许选择一个副本。我们使用布局管理器 `GridLayout` 将 `ItemList` 设置为在面板上使用最大空间的模式。“结结账”按钮移出了商店父类 `StoreWindow`：处理其他按钮的函数位于 `Basket` 类本身。
+在这里我们实现了三个按钮和一个列表，但除了“结账”按钮外，对所有项都进行了私有处理（或使用 `private` 修饰符声明）。这样做是为了让父类 `StoreWindow` 类能够访问。处理其他按钮的函数位于 `Basket` 类本身。请注意，创建列表是为了允许选择一个副本。我们使用布局管理器 `GridBagLayout` 将 `ItemList` 设置为在面板上使用最大空间的模式。“结账”按钮移出了商店父类 `StoreWindow`：处理其他按钮的函数位于 `Basket` 类本身。
 
-*(注：由于原文中存在大量重复段落，已根据“不要重复输出原文”的原则仅保留核心内容的翻译)*
 
-[content]
-现在我们已经从 Web 服务器获取了所需产品的所有数据，让我们把它们放在合适的位置吧。我们使用 `ProductImage` 类的实例来包含这些数据；在上面的代码段中，这被反复赋值给 `ImageCanvas` 的值。我们设置图像 ID，使用 `setImage` 方法查找上述图像，使用 `setLabel` 方法直接从课堂 `ProductImage` 类中的 `help` 变量 `Description` 安装标签和描述（全部通过 `ImageCanvas` 实现）。标签或名称是三元组中的最后一个成员，我们从 `FileList` FIFO 队列中针对特定项目推入它。我们使用 `height` 和 `product image width` 在将其添加到 `ImagePanel` 之前调整 `ImageCanvas` 的大小。最后，我们设置 `ImagePanel` 的完整大小，以便在 `StoreWindow` 类中使用。`ImagePanel` 实例代表不同部门的商店，已作为组组件直接添加到框架 `StoreWindow` 中。
-
-`Basket` 类是我们的“购物车”实现。除了用户选择购买的产品列表外，你还可以从购物车中移除物品。`Basket` 由四个主要元素组成：一个列表和三个按钮。它扩展了面板，使其可以直接添加到 `StoreWindow` 框架中。我们处理直接与此类内部列表工作的函数（“移除”和“清除所有”按钮项），并将“结账”按钮的点击事件传递到商店父类 `StoreWindow`：
 
 ```java
 import java.awt.*;
 
-public class Basket extends panel {
-    private List ItemList;
-    private Button Remove;
-    private button clear;
-    public button checkout;
+public class Basket extends Panel {
+    private List itemList;
+    private Button remove;
+    private Button clear;
+    public Button checkout;
 
     public Basket(String name) {
-        label Basket Label = new Label(Name, Label.CENTER);
-        GridBagConstraints Con = new GridBagConstraints();
+        Label basketLabel = new Label(name, Label.CENTER);
+        GridBagConstraints con = new GridBagConstraints();
         GridBagLayout gridBag = new GridBagLayout();
-        ItemList = new List(5, false);
+        itemList = new List(5, false);
 
-        Remove = new Button("Remove");
-        Clear = new Button("Clear all items");
+        remove = new Button("Remove");
+        clear = new Button("Clear all items");
         checkout = new Button("Check out of store");
         setLayout(gridBag);
 
         setFont(new Font("Helvetica", Font.PLAIN, 12));
-        setBackground(color.blue);
+        setBackground(Color.blue);
 
-        Con anchor = GridBagConstraints.CENTER;
-        Con.fill = GridBagConstraints.NONE;
-        Con weighty  = 1.0;
+        con.anchor = GridBagConstraints.CENTER;
+        con.fill = GridBagConstraints.NONE;
+        con.weighty = 1.0;
 
-        con.weightx=0.0;
+        con.weightx = 0.0;
 
         con.gridwidth = GridBagConstraints.REMAINDER;
-        gridBag.setConstraints(BasketLabel, Con);
-        add(BasketLabel);
+        gridBag.setConstraints(basketLabel, con);
+        add(basketLabel);
 
-        Con.fill = GridBagConstraints.BOTH;
-        con.gridheight=3;
-        Con.gridwidth=GridBagConstraints.RELATIVE;
-        Con weighty  = 1.0;
+        con.fill = GridBagConstraints.BOTH;
+        con.gridheight = 3;
+        con.gridwidth = GridBagConstraints.RELATIVE;
+        con.weighty = 1.0;
 
-        con.weightx=3.0;
-        gridBag.setConstraints(ItemList, Con);
-        add(ItemList);
+        con.weightx = 3.0;
+        gridBag.setConstraints(itemList, con);
+        add(itemList);
 
-        Con.weightx=1.0;
-        Con weighty  = 0.0;
-        con.gridheight=1;
+        con.weightx = 1.0;
+        con.weighty = 0.0;
+        con.gridheight = 1;
 
-        Con.gridwidth=GridBagConstraints.REMAINDER;
-        Con.fill = GridBagConstraints.HORIZONTAL;
-        gridBag.setConstraints(Remove, Con);
-        add(Remove);
+        con.gridwidth = GridBagConstraints.REMAINDER;
+        con.fill = GridBagConstraints.HORIZONTAL;
+        gridBag.setConstraints(remove, con);
+        add(remove);
 
-        gridBag.setConstraints(Clear, Con);
+        gridBag.setConstraints(clear, con);
         add(clear);
-        Con.fill = GridBagConstraints.BOTH;
-        gridBag.setConstraints(Checkout, Con);
+        con.fill = GridBagConstraints.BOTH;
+        gridBag.setConstraints(checkout, con);
         add(checkout);
     }
 }
 ```
 
-在这里我们实现了三个按钮和一个列表，但除了“结账”按钮外，对所有项都进行了私有处理（或使用 private 修饰符声明）。这样做是为了让父类 `StoreWindow` 类能够访问。处理其他按钮的函数位于 `Basket` 类本身。请注意，创建列表是为了允许选择一个副本。我们使用布局管理器 `GridLayout` 将 `ItemList` 设置为在面板上使用最大空间的模式。“结账”按钮移出了商店父类 `StoreWindow`：处理其他按钮的函数位于 `Basket` 类本身。请注意，创建列表是为了允许选择一个副本。我们使用布局管理器 `GridLayout` 将 `ItemList` 设置为在面板上使用最大空间的模式。“结账”按钮移出了商店父类 `StoreWindow`：处理其他按钮的函数位于 `Basket` 类本身。
-
-*(此处省略原文中重复出现的段落，以符合翻译要求)*
-
-处理其他按钮的函数位于 `Basket` 类本身。请注意，创建列表是为了允许选择一个副本。我们使用布局管理器 `GridLayout` 将 `ItemList` 设置为在面板上使用最大空间的模式。“结账”按钮移出了商店父类 `StoreWindow`：处理其他按钮的函数位于 `Basket` 类本身。
-
-*(注：由于原文中存在大量重复段落，已根据“不要重复输出原文”的原则仅保留核心内容的翻译)*
-
-
-
+在这里我们实现了三个按钮和一个列表，但除了“结账”按钮外，对所有项都进行了私有处理（或使用 `private` 修饰符声明）。这样做是为了让父类 `StoreWindow` 类能够访问。处理其他按钮的函数位于 `Basket` 类本身。请注意，创建列表是为了允许选择一个副本。我们使用布局管理器 `GridBagLayout` 将 `itemList` 设置为在面板上使用最大空间的模式。“结账”按钮移出了商店父类 `StoreWindow`。
 
 ```
 tree += "END:MENU\n";
 }
 ```
 
-我们从 `URL` applet 方法、`getDocumentBase.getHost` 和 `getDocumentBase.getPort` 开始，使用 `HTTPget` 类从 Web 服务器获取索引文件。现在一个 `Index HTTP HTTPget` 对象允许我们通过 `Results` 方法获取 `idx` 文件。反复调用 `httpget` 以获取不同的 `idx` 文件，直到所有文件都接收完毕。
+我们从 `URL` applet 方法、`getDocumentBase().getHost()` 和 `getDocumentBase().getPort()` 开始，使用 `HTTPget` 类从 Web 服务器获取索引文件。现在一个 `HTTPget` 对象允许我们通过 `getResults()` 方法获取 `idx` 文件。反复调用 `HTTPget` 以获取不同的 `idx` 文件，直到所有文件都接收完毕。
 
 然后，使用 `StringTokenizer` 按照字符 `newline`（`\n`）将接收到的 `idx` 文件拆分成若干部分，因为在结构化 `idx` 文件时，我们将数据放置在了不同的行中。现在，`idx` 文件可以包含四种元素之一：菜单或子菜单（这样我们就必须获取另一个 `idx-file`）、或者 `gif-file` 的名称、描述文件的名称或标识符。我们知道这些元素的顺序，因此必须寻找末尾的 `"/"` 来定义菜单或子菜单。如果是菜单或子菜单，我们使用目录的 `path` 调用 `ParseIndex`（该路径就是当前标记），并添加从 `idx` 文件下一行获取的标签，用 `"Menu:"` 标记将它们分隔。我们将所有这些内容添加到字符串变量 `tree` 中，并传递给 `StoreWindow`，随后它将分析这个预格式化的列表以形成用户界面。递归调用 `ParseIndex` 使用相同的 `ParseIndex` 方法但带有不同的参数来解析这些菜单。这种递归的使用避免了我们从引入控制点开始需要执行嵌套循环。
 
 如果标记不是目录（即不是菜单），那么它代表一个产品。我们添加标记（即标识元素）到 `tree` 中——`"GIF:"`、`"TXT:"` 和 `"NAME:"`。我们将为每个产品添加这三个部分，标签将允许我们调试 `idx-files` 或列表 `Tree` 构建过程中出现的问题。我们在每个 `idx` 文件内部循环，直到其处理完成，但在递归处理菜单和子菜单时，我们会进行多次分支。生成的变量字符串 `Tree` 看起来可能很混乱，但我们在 `StoreWindow` 上使用了类似的递归方法来形成用户界面，这种方法对于处理我们在此创建的非线性表单树形配置非常方便。
 
-当配置文件被解析并放入格式化的 `Tree` 列表时，我们创建一个新的 `StoreWindow`（`getDocumentBase`, `Tree`），并其传递当前的 `tree` 变量配置。我们还传递了基础 `URL`，以便我们可以从 Web 服务器获取相关商品的 `GIF` 文件和描述文件。
+当配置文件被解析并放入格式化的 `Tree` 列表时，我们创建一个新的 `StoreWindow`（`getDocumentBase()`, `Tree`），并传递当前的 `tree` 变量配置。我们还传递了基础 `URL`，以便我们可以从 Web 服务器获取相关商品的 `GIF` 文件和描述文件。
 
 ## 我们将它们整合在一起
 
 我们连接组件并为 `StoreWindow` 类添加高级功能。我们在 `Tree` 变量中存储了预格式化的配置数据，以及开始创建用户界面所需的所有类。我们首先设置合适的基础 `URL` 以从 Web 服务器接收图像和描述文件。之后，我们创建所需的屏幕元素，例如用于购物的篮以及基于管理器 `CardLayout` 的图像面板。随后，当我们构建用户界面和菜单时，我们将这些面板显示在屏幕上。
 
 ```java
-import java.awt.*; import java.net.URL; import java.util.*;
+import java.awt.*;
+import java.net.URL;
+import java.util.*;
 
-class StoreWindow extends frame { 
-    Panel ProductPicPanel;
+class StoreWindow extends Frame {
+    Panel productPicPanel;
     String params = "";
 
-    panel DescriptionPanel;
+    Panel descriptionPanel;
     String baseURL;
 
-    Panel MainPanel;
-    TextArea DescArea;
-    Basket shopping basket;
-    String NewPickMessage;
-    String CGI
+    Panel mainPanel;
+    TextArea descArea;
+    Basket shoppingBasket;
+    String newPickMessage;
+    String CGI;
 
-    public StoreWindow(URL BURL, String tree, String CGIprogram) { 
+    public StoreWindow(URL BURL, String tree, String CGIprogram) {
         this.CGI = CGIprogram;
 
         if (BURL.getPort() == -1) {
-            BaseURL = BURL.getProtocol() + "://" + BURL.getHost();
-        }
-        else {
-            BaseURL = BURL.getProtocol() + "://" + BURL.getHost() + ":" + BURL.getPort();
+            baseURL = BURL.getProtocol() + "://" + BURL.getHost();
+        } else {
+            baseURL = BURL.getProtocol() + "://" + BURL.getHost() + ":" + BURL.getPort();
         }
 
-        Shopping Basket = new Basket("Shopping basket");
+        shoppingBasket = new Basket("Shopping basket");
         setTitle("The JavaStore");
 
-        MainPanel = newPanel();
-        MainPanel.setLayout(new BorderLayout());
+        mainPanel = new Panel();
+        mainPanel.setLayout(new BorderLayout());
         setLayout(new BorderLayout());
 
-        DescArea = new TextArea(15, 30);
-        DescArea.setEditable(false);
-        DescArea.setBackground(Color.black);
-        DescArea.setForeground(Color.white);
-        DescArea.setFont(new Font("Helvetica", Font.PLAIN, 12));
+        descArea = new TextArea(15, 30);
+        descArea.setEditable(false);
+        descArea.setBackground(Color.black);
+        descArea.setForeground(Color.white);
+        descArea.setFont(new Font("Helvetica", Font.PLAIN, 12));
 
-        NewPickMessage = "点击书籍查看其描述\n 双击书籍将其加入您的购物篮\n 从商店菜单中选择查看更多书籍\n";
+        newPickMessage = "点击书籍查看其描述\n 双击书籍将其加入您的购物篮\n 从商店菜单中选择查看更多书籍\n";
 
-        MainPanel.add("North", DescArea);
-        MainPanel.add("South", ShoppingBasket);
-        menu bar bar = newBar();
-        ProductPicPanel = newPanel();
-        ProductPicPanel.setLayout(new CardLayout());
+        mainPanel.add("North", descArea);
+        mainPanel.add("South", shoppingBasket);
+        MenuBar bar = new MenuBar();
+        productPicPanel = new Panel();
+        productPicPanel.setLayout(new CardLayout());
+    }
+}
 ```
 
-上述代码基本上初始化了框架并创建了我们需要的某些 AWT 对象。我们为主区域和 `ProductPicPanel` 安装了布局管理器。我们对 `ProductPicPanel` 使用 `CardLayout`，是因为我们希望在菜单选择更改时更改显示的面板。我们添加了菜单栏和项目，稍后我们会添加菜单。接下来，我们调用 `BuildUI` 方法，该方法将负责构建菜单。
+上述代码基本上初始化了框架并创建了我们需要的某些 AWT 对象。我们为主区域和 `productPicPanel` 安装了布局管理器。我们对 `productPicPanel` 使用 `CardLayout`，是因为我们希望在菜单选择更改时更改显示的面板。我们添加了菜单栏和项目，稍后我们会添加菜单。接下来，我们调用 `BuildUI` 方法，该方法将负责构建菜单。
 
-
-
-
-
-事件处理器首先检查用户与菜单的交互。如果用户选择了新的菜单项或商店部门，我们将显示一个与该部门相对应的面板。这将切换你想要在文本区域 `DescArea` 中显示的命令消息。第二部分事件处理器检查从 `ShoppingBasket` 传递过来的“结账离开商店”按钮点击事件。我们获取商品列表、选定的用户，并调用其方法 `submitItemList`，该方法会触发 `CheckOutofFrame` 方法并发送位于 Web 服务器上的 CGI 程序。
+事件处理器首先检查用户与菜单的交互。如果用户选择了新的菜单项或商店部门，我们将显示一个与该部门相对应的面板。这将切换你想要在文本区域 `descArea` 中显示的命令消息。第二部分事件处理器检查从 `ShoppingBasket` 传递过来的“结账离开商店”按钮点击事件。我们获取商品列表、选定的用户，并调用其方法 `submitItemList()`，该方法会触发 `CheckOutofFrame()` 方法并发送位于 Web 服务器上的 CGI 程序。
 
 在用户完成这些操作后，他们不再需要留在商店里，因此我们关闭了窗口 `StoreWindow`。CGI 程序将处理数据。
 
 ```java
 private Menu BuildUI(String tree) {
-    FIFO PanelAdd = new FIFO();
-    Menu StoreMenu = new Menu("Store Menu");
-    StringTokenizer split tree = new StringTokenizer(Tree, "\n");
-    ParseTree(SplitTree, StoreMenu, "", panelAdd);
-    return StoreMenu;
+    FIFO panelAdd = new FIFO();
+    Menu storeMenu = new Menu("Store Menu");
+    StringTokenizer splitTree = new StringTokenizer(tree, "\n");
+    ParseTree(splitTree, storeMenu, "", panelAdd);
+    return storeMenu;
 } // the end StoreWindow
 
-private void ParseTree(StringTokenizer tree branch, Menu menuin, String PreviousToken, FIFO PanelAdd) {
-    StringTokenizer Leaf; Menu subMenu;
+private void ParseTree(StringTokenizer treeBranch, Menu menuIn, String previousToken, FIFO panelAdd) {
+    StringTokenizer leaf;
+    Menu subMenu;
     String next;
     // ImagePanel MenuPanel;
-    while (TreeBranch.hasMoreTokens()) {
-        Leaf = new StringTokenizer(TreeBranch.nextToken(), ":");
-        next = Leaf.nextToken();
+    while (treeBranch.hasMoreTokens()) {
+        leaf = new StringTokenizer(treeBranch.nextToken(), ":");
+        next = leaf.nextToken();
         // are looking for "Menu" And add new element in menu
-        if (!PreviousToken.equals("")) {
+        if (!previousToken.equals("")) {
             if (next.equalsIgnoreCase("Menu")) {
-                subMenu = new Menu(PreviousToken);
-                MenuIn.add(subMenu);
+                subMenu = new Menu(previousToken);
+                menuIn.add(subMenu);
                 // recursive treatment this new submenu
-                PreviousToken=""; MenuIn=subMenu;
+                previousToken = "";
+                menuIn = subMenu;
             } else {
             }
         }
-        MenuIn.add(PreviousToken); PanelAdd.push(PreviousToken);
+        menuIn.add(previousToken);
+        panelAdd.push(previousToken);
         // are looking for "Menu" And add new element in menu
         if (next.equalsIgnoreCase("Menu")) {
-            ParseTree(TreeBranch, menuin, Leaf.nextToken(), panelAdd);
+            ParseTree(treeBranch, menuIn, leaf.nextToken(), panelAdd);
         } else if (next.equalsIgnoreCase("GIF")) {
-            PanelAdd.push(Leaf.nextToken());
-            ParseTree(TreeBranch, menuin, "", panelAdd);
+            panelAdd.push(leaf.nextToken());
+            ParseTree(treeBranch, menuIn, "", panelAdd);
         } else if (next.equalsIgnoreCase("TXT")) {
-            PanelAdd.push(Leaf.nextToken());
-            ParseTree(TreeBranch, menuin, "", panelAdd);
+            panelAdd.push(leaf.nextToken());
+            ParseTree(treeBranch, menuIn, "", panelAdd);
         } else if (next.equalsIgnoreCase("NAME")) {
-            PanelAdd.push(Leaf.nextToken());
-            ParseTree(TreeBranch, menuin, "", panelAdd);
+            panelAdd.push(leaf.nextToken());
+            ParseTree(treeBranch, menuIn, "", panelAdd);
         } else if (next.equalsIgnoreCase("END")) {
-            if (!PanelAdd.empty()) {
-                String panelname=(String)PanelAdd.pop();
-                Leaf.nextToken();
-                <%-2>ProductPicPanel.add(PanelName, new ImagePanel(BaseURL, PanelAdd, PanelName));<%0>
+            if (!panelAdd.empty()) {
+                String panelName = (String) panelAdd.pop();
+                leaf.nextToken();
+                // ProductPicPanel.add(panelName, new ImagePanel(baseURL, panelAdd, panelName));
             }
         }
     }
 } // // the end StoreWindow
 ```
 
-`BuildUI` 方法实际上初始化了 `ParseTree` 方法。我们创建了一个新的 `FIFO` 对象和一个新菜单。然后我们使用 `StringTokenizer` 配合 `Tree`，通过换行符分隔标记符。`tree` 是我们在教室 Store 中根据数据配置创建的，从 Web 服务器接收的。
+`BuildUI` 方法实际上初始化了 `ParseTree` 方法。我们创建了一个新的 `FIFO` 对象和一个新菜单。然后我们使用 `StringTokenizer` 配合 `tree`，通过换行符分隔标记符。`tree` 是我们在教室 Store 中根据数据配置创建的，从 Web 服务器接收的。
 
 它之前经过了格式化且井然有序，因此递归方法 `ParseTree` 可以使用。`BuildUI` 方法中的大部分工作都是通过递归调用 `ParseTree` 方法正确完成的。
+
+
 
 正如我们所说，`ParseTree` 方法是递归工作的。当我们遇到新菜单时调用它。这允许我们在不使用嵌套循环的情况下处理嵌套菜单。我们带有以下参数调用 `ParseTree`：一个包含待处理树的 `StringTokenizer`；父级菜单；一个包含上一个标记的字符串；以及一个包含 `ImagePanel` 数据的 `FIFO` 列表，该列表必须根据这些配置数据形成。父菜单和上一个标记对于子菜单是必需的。通常，我们在 `ParseTree` 方法中遵循此路径：处理当前表格并获取下一个表格（它是上一个表格的标签），然后用树的剩余部分调用 `ParseTree`。当到达标记为 "END" 的结尾时停止解析树。在遍历树的过程中，我们将元素放入 `FIFO` 面板 `PanelAdd` 缓冲区中。这个 `FIFO` 被传递给 `ImagePanel`，它使用 `FIFO` 中的数据来选择图像和产品描述。
 
@@ -9302,24 +9073,25 @@ private void ParseTree(StringTokenizer tree branch, Menu menuin, String Previous
 图 17.5。
 
 ```java
-import java.awt.*; import httppost;
+import java.awt.*;
+import httppost;
 
-public class CheckOutFrame extends frame {
+public class CheckOutFrame extends Frame {
     TextField Name;
     TextField phone;
-    button Done;
+    Button Done;
     String ItemList;
     GridBagLayout gridbag = new GridBagLayout();
-    GridBagConstraints Con =new GridBagConstraints();
-    label Lname;
-    label Phone;
-    label message1;
-    label message2;
-    httppost CGIpost;
-    String CGI
+    GridBagConstraints Con = new GridBagConstraints();
+    Label Lname;
+    Label Phone;
+    Label message1;
+    Label message2;
+    HTTPpost CGIpost;
+    String CGI;
 
     public CheckOutFrame(String title, String ItemList, String CGI) {
-        super(Title);
+        super(title);
         this.ItemList = ItemList;
         this.CGI = CGI;
         setLayout(gridbag);
@@ -9327,22 +9099,16 @@ public class CheckOutFrame extends frame {
 
     public boolean action(Event evt, Object arg) {
         if ("Done".equals(arg)) {
-            "\n");
+            System.out.println(CGI);
+            CGIpost = new HTTPpost(CGI, "NAME: " + Name.getText() + "\nPHONE: " + Phone.getText() + "\nPURCHASES:\n" + ItemList);
+            System.out.println(CGIpost.results());
+            dispose();
+            return true;
         }
-        System.out.println(CGI);
-        CGIpost = new HTTPpost(CGI, "NAME: " + Name.getText() + "\nPHONE: " + Phone.getText() + "\nPURCHASES:\n" + ItemList);
-        System.out.println(CGIpost.results());
-        dispose();
-        return true;
-    }
         return false;
     }
 } // the end CheckOutFrame
 ```
-
-
-
-
 
 *   支持“拖放”界面。为了实现这一点，你需要为购买功能创建一个篮子图标，这样用户在选择一个要购买的商品时，可以将其移动到图标上，之后它将自动添加到篮中的商品列表中。
 *   额外的文本字段，用户可以在其中输入他们的地址，可能还包括信用卡号。这必须极其谨慎地进行，使用加密技术来保护用户信息。此功能将极大地方便订单处理，并消除商业代理请求这些信息的必要性。
@@ -9354,19 +9120,19 @@ public class CheckOutFrame extends frame {
 
 来自其他服务器或其他协议的交互：国际象棋客户端
 
-契约属性
+### 契约属性
 
-开发与执行
+### 开发与执行
 
-来自异步服务器的交互：创建棋盘
+### 来自异步服务器的交互：创建棋盘
 
-来自 CIS 的棋盘连接
+### 来自 CIS 的棋盘连接
 
-编写 Applet：可能的改进
+### 编写 Applet：可能的改进
 
-窗口登录
+### 窗口登录
 
-列出当前玩家
+### 列出当前玩家
 
 # 你从本章中学习了什么
 
@@ -9383,7 +9149,7 @@ public class CheckOutFrame extends frame {
 
 ![](img/image09332.gif)
 
-### 图 18.1.
+#### 图 18.1.
 
 CIS 根据 GNU 公用许可证条款免费分发；可以在 `ftp://chess.onenet.net/pub/chess/Unix` 找到。
 
@@ -9410,19 +9176,21 @@ CIS 根据 GNU 公用许可证条款免费分发；可以在 `ftp://chess.onenet
 第 13 章，你学会了如何使用套接字建立 Applet 与服务器之间的连接。然而，我们还没有触及异步连接。简单的服务器，例如，同步数据流——它总是等待命令输入才传输数据。有些服务器是异步的——它们可以在任何方便的时间发送数据。得益于此，我们可以确保无论 Applet 多么忙，来自网络的数据都能被接收。数据接收器以 String 形式从 InputStream 读取数据，并在 EOL 或 EOF 处分割字符串。让我们描述此接口：
 
 ```java
-package ventana.io
+package ventana.io;
+
 public interface Listener {
     void receiveInput(InputStreamHandler i, Object o);
 }
 ```
 
-该方法允许数据接收器——InputStreamHandler 类——通过 receiveInput 方法将读取的 String 值传递给另一个对象。Listener 能够接受任何对象，但在本例中我们只通过它传输 String 值。除了我们返回 InputStreamHandler 的引用外，当我们需要同时使用多个线程时，它大有 Utility：
+该方法允许数据接收器——`InputStreamHandler` 类——通过 `receiveInput` 方法将读取的 String 值传递给另一个对象。`Listener` 能够接受任何对象，但在本例中我们只通过它传输 String 值。除了我们返回 `InputStreamHandler` 的引用外，当我们需要同时使用多个线程时，它大有 Utility：
 
 ```java
-package ventana.io
+package ventana.io;
+
 import java.io.*;
 
-public class InputStreamHandler implements runnable {
+public class InputStreamHandler implements Runnable {
     private Thread engine;
     private DataInputStream in;
     private Listener client;
@@ -9430,7 +9198,7 @@ public class InputStreamHandler implements runnable {
     public InputStreamHandler(InputStream in, Listener client) {
         this.in = new DataInputStream(in);
         this.client = client;
-        engine = new thread(this);
+        engine = new Thread(this);
         engine.start();
     }
 
@@ -9469,9 +9237,6 @@ public class InputStreamHandler implements runnable {
 
 ## 创建棋盘
 
-
-
-
 构成棋盘的代码与与服务器交互的代码无关。因此，我们创建的棋盘同样可以很好地用于下棋，例如下国际跳棋。我们的棋盘非常简单——它由 8x8 的正方格组成，包含若干张图像，并对鼠标移动和点击做出响应。
 
 我们的棋盘是 `Canvas` 类的扩展，而 `Canvas` 又是抽象类 `Component` 的一种某种程度上可行的实现。我们决定不为棋盘使用 `Container` 类，原因有两个。首先，`Images` 类型的棋子不属于 `Component` 类，因此不能直接添加到 `Container` 对象中。其次，如果 `Container` 对象包含大量的 `Component` 对象，则针对 Microsoft Windows 的 Java API 现代实现将无法正常工作。
@@ -9480,15 +9245,15 @@ public class InputStreamHandler implements runnable {
 
 表 18-1 列出了 `ChessBoard` 类的通用方法。
 
-表 18-1. `ChessBoard` 类的通用方法
+### 表 18-1. `ChessBoard` 类的通用方法
 
-## 方法描述
-
-`setImage(Image, String)`：设置包含给定字符串和给定图像的方格，并重绘该方格。该行必须提交您自己的棋位标记字段，例如 "A1"。
-
-`endGame()`：结束棋类游戏。`setGenerateMoves(boolean)`：指示是否允许用户走子。
-
-`setOrientation`：棋盘的方向——白方在上（true）或白方在上（false）。`boolean getOrientation()`：返回当前棋盘的方向。
+| 方法 | 描述 |
+| :--- | :--- |
+| `setImage(Image, String)` | 设置包含给定字符串和给定图像的方格，并重绘该方格。该行必须提交您自己的棋位标记字段，例如 "A1"。 |
+| `endGame()` | 结束棋类游戏。 |
+| `setGenerateMoves(boolean)` | 指示是否允许用户走子。 |
+| `setOrientation(boolean)` | 棋盘的方向——白方在上（true）或白方在下（false）。 |
+| `boolean getOrientation()` | 返回当前棋盘的方向。 |
 
 `ChessBoard` 类包含一个二维数组 `images`。该数组用于处理和吃掉棋子的字段。
 
@@ -9506,23 +9271,23 @@ public class ChessBoard extends Canvas {
     private Image[][] squares;
     private boolean up = true;
     private boolean generate = false;
-    private point selected;
+    private Point selected;
 
-    private color dark;
-    private color light;
+    private Color dark;
+    private Color light;
 
     public ChessBoard() {
         squares = new Image[8][8];
-        dark = color.gray;
+        dark = Color.gray;
         light = Color.lightGray;
-        resize(320,320);
+        resize(320, 320);
         repaint();
     }
 
     // 方法 `endGame` 在比赛结束时调用。它将所有字段设为深，向用户显示游戏结束，然后重绘棋盘。最后它抑制用户继续走子的尝试：
     public void endGame() {
         dark = Color.darkGray;
-        light = Color.lightGray;
+        light = Color.gray;
         repaint();
     }
 
@@ -9542,11 +9307,11 @@ public class ChessBoard extends Canvas {
     private String getSquare(int x, int y) {
         char ary[] = new char[2];
         if (up) {
-            ary[0] = (char)('a'+x);
-            ary[1] = (char)('1'+(7-y));
+            ary[0] = (char) ('a' + x);
+            ary[1] = (char) ('1' + (7 - y));
         } else {
-            ary[0] = (char)('a'+(7-x));
-            ary[1] = (char)('1'+y);
+            ary[0] = (char) ('a' + (7 - x));
+            ary[1] = (char) ('1' + y);
         }
         return new String(ary);
     }
@@ -9557,27 +9322,29 @@ public class ChessBoard extends Canvas {
 
 `paintSquare` 方法负责绘制单个字段。通过给定的数组索引，它分别将字段涂成浅色或深色，如果该字段上有棋子，则绘制该棋子的图像。布尔参数指示是否绘制圆圈（表示字段）：
 
+
+
 ```java
 public void paintSquare(int x, int y, boolean b, Graphics g) {
-    if ((x%2==0 && y%2==0) || (x%2==1 && y%2==1)) {
+    if ((x % 2 == 0 && y % 2 == 0) || (x % 2 == 1 && y % 2 == 1)) {
         g.setColor(light);
     } else {
         g.setColor(dark);
     }
-    g.fillRect(x*40,y*40,40,40);
-    if (squares[x][y]!=null) {
-        g.drawImage(squares[x][y],x*40,y*40,this);
+    g.fillRect(x * 40, y * 40, 40, 40);
+    if (squares[x][y] != null) {
+        g.drawImage(squares[x][y], x * 40, y * 40, this);
     }
     if (b) {
         g.setColor(Color.red);
-        g.fillOval(x*40+15,y*40+15,10,10);
+        g.fillOval(x * 40 + 15, y * 40 + 15, 10, 10);
     }
 }
 
 public void paint(Graphics g) {
-    for (int y=0; y<8; y++) {
-        for (int x=0; x<8; x++) {
-            paintSquare(x,y,false,g);
+    for (int y = 0; y < 8; y++) {
+        for (int x = 0; x < 8; x++) {
+            paintSquare(x, y, false, g);
         }
     }
 }
@@ -9587,12 +9354,9 @@ public void paint(Graphics g) {
 
 我们将开发一个应用程序，它被用于实现 CIS 客户端，就像我们的棋盘一样，以及异步数据的接收器。以下是程序的文本，用于解析 CIS 输出并发布 CIS 指令。如果我们良好地设计了应用程序，这将是包含专门针对 CIS 程序的唯一章节。CIS 通过编号监控比赛，当他发送带有带有更新的棋盘的消息时，该消息中包含了编号部分。我们的主程序被设计为包含一组按游戏编号索引的棋盘。每个棋盘对应一个比赛，并位于自己的窗口中。
 
+不要仅仅显示剩余多少时间，让我们利用 Java 语言处理流（streams）的能力，让时钟为当前活跃的玩家计算秒。`Label` 类提供了一个输出文本的通用不可编辑字段。让我们在 `stopwatch` 类中扩展它，以接收 `label`，它将显示当前时间并在每秒时递减包含该值的变量。`StopWatch` 类的通用方法见表 18-2。
 
-
-
-不要仅仅显示剩余多少时间，让我们利用 Java 语言处理流（streams）的能力，让时钟为当前活跃的玩家计算秒。`Label` 类提供了一个输出文本的通用不可编辑字段。让我们在 `stop watch` 类（`stopwatch`）中扩展它，以接收 `label`，它将显示当前时间并在每秒时递减包含该值的变量。`StopWatch` 类的通用方法见表 18-2。
-
-### 表 18-2. 通用类 `stop watch` 的通用方法
+### 表 18-2. 通用类 `stopwatch` 的通用方法
 
 | 方法 | 描述 |
 | :--- | :--- |
@@ -9606,13 +9370,13 @@ public void paint(Graphics g) {
 ```java
 import java.awt.*;
 
-public class stopwatch extends label implements runnable {
+public class stopwatch extends Label implements Runnable {
     private Thread engine;
-    private int time=0;
+    private int time = 0;
 
     public stopwatch() {
         super();
-        engine = new thread(this);
+        engine = new Thread(this);
         engine.setPriority(3);
     }
 
@@ -9621,16 +9385,16 @@ public class stopwatch extends label implements runnable {
         set(i);
     }
 
-// set 方法用于设置秒钟上的剩余时间。它必须是同步的，因为不同的玩家对可能会尝试同时设置时间。如果 time 为负，则重置 label 以显示时间：
+    // set 方法用于设置秒钟上的剩余时间。它必须是同步的，因为不同的玩家对可能会尝试同时设置时间。如果 time 为负，则重置 label 以显示时间：
     public synchronized void set(int i) {
         time = i;
         if (time > 0) {
-            int min = time/60;
-            int sec = time%60;
+            int min = time / 60;
+            int sec = time % 60;
             if (sec > 9) {
-                setText(""+min+":"+sec);
+                setText("" + min + ":" + sec);
             } else {
-                setText(""+min+":0"+sec);
+                setText("" + min + ":0" + sec);
             }
         } else {
             setText("0:00");
@@ -9662,7 +9426,7 @@ public class stopwatch extends label implements runnable {
 
     public void run() {
         while (engine != null && engine.isAlive()) {
-            set(time-1);
+            set(time - 1);
             try {
                 engine.sleep(1000);
             } catch (InterruptedException e) {}
@@ -9697,8 +9461,8 @@ import PackerLayout;
 import java.awt.*;
 import java.util.*;
 
-public class ChessFrame extends label {
-    private ChessBoard;
+public class ChessFrame extends Label {
+    private ChessBoard board;
     private ChessClient parent;
     private String user;
     private Panel players;
@@ -9706,8 +9470,8 @@ public class ChessFrame extends label {
     private Panel blackPlayer;
     private Label whiteName;
     private Label blackName;
-    private stopWatch whiteTime;
-    private stopWatch blackTime;
+    private stopwatch whiteTime;
+    private stopwatch blackTime;
 
     // ChessFrame 包含了两个用于显示黑白棋盘的面板。
     // 这些面板显示了棋盘的状态。
@@ -9735,19 +9499,18 @@ public class ChessFrame extends label {
         blackName = new Label();
         add(blackName);
         
-        whiteTime = new stopWatch();
+        whiteTime = new stopwatch();
         add(whiteTime);
         
-        blackTime = new stopWatch();
+        blackTime = new stopwatch();
         add(blackTime);
 
         pack();
         setSize(size());
         show();
     }
+}
 ```
-
-
 
 以下是 `ChessFrame` 的核心实现：
 
@@ -9760,7 +9523,7 @@ public class ChessFrame extends label {
 // 框架只处理 WINDOWS_DESTROY 事件。
 // 其他事件将重定向到服务器。
 public boolean handleEvent(Event evt) {
-    if (evt.id == Event.WINDOWS_DESTROY) {
+    if (evt.id == Event.WINDOW_DESTROY) {
         dispose();
         return true;
     } else {
@@ -9780,15 +9543,12 @@ protected void flipPlayers() {
 }
 ```
 
-
-
-
 以下标记包含了玩家的名称。如果它们与标签中指示的玩家名称不匹配，我们假设 CIS 服务器知道自己在做什么。如果黑方的名称 `new player` 与我们的用户名相同，且类型变量不等于 `two`，我们就翻转 `board`（棋盘），使得 `black` 位于底部。变量 `type` 包含有关玩家在国际象棋游戏中的角色信息。如果它等于 `two`，意味着用户在训练模式下玩，即自己对自己。如果值 `variable` 等于 `one`，则意味着用户正在与真实对手对战，此时轮到他的回合。在任何情况下，我们需要为棋盘生成移动：
 
 ```java
-token = st.nextToken() // name player white
+token = st.nextToken(); // name player white
 
-if (!WhiteName.getText().equals(token)) { 
+if (!whiteName.getText().equals(token)) { 
     whiteName.setText(token);
 }
 
@@ -9796,7 +9556,7 @@ token = st.nextToken(); // name player black
 
 String type = st.nextToken();
 
-if (!BlackName.getText().equals(token)) { 
+if (!blackName.getText().equals(token)) { 
     blackName.setText(token);
     if (user.equals(token) && !type.equals("2")) { 
         board.setOrientation(false); 
@@ -9848,20 +9608,20 @@ if (whiteMove) {
 最后，我们继续解析剩余的标记。为了让棋盘的更新对用户来说是不可察的，我们在最后时刻进行操作。每行状态按逐字符顺序读取。如果读取到的下一个字符是连字符，则棋盘相应的方格不包含图片；否则，从父进程请求图片：
 
 ```java
-for (int i=0; i<8; i++) {
+for (int i = 0; i < 8; i++) {
     String line = lines[i]; 
     char[] ary = new char[8]; 
-    line.getChar(0, 8, ary, 0); 
-    for (int j=0; j<8; j++) {
-        char row = (char)('8'-i); 
-        char column = (char)('a'+j); 
+    line.getChars(0, 8, ary, 0); 
+    for (int j = 0; j < 8; j++) {
+        char row = (char)('8' - i); 
+        char column = (char)('a' + j); 
         Image piece;
-        if (ary[j]!='-') {
-            piece = parent.getPieceImage(""+ary[j]);
+        if (ary[j] != '-') {
+            piece = parent.getPieceImage("" + ary[j]);
         } else {
             piece = null;
         }
-        board.setImage(piece,""+column+row);
+        board.setImage(piece, "" + column + row);
     }
 }
 ```
@@ -9869,6 +9629,8 @@ for (int i=0; i<8; i++) {
 ## 编写 applet
 
 我们创建了一个独立的窗口，包含一个通用游戏面板和玩家所需的信息。现在我们可以开始编写自己的 applet 了。我们将从小开始，根据需要添加更多功能。applet 的首次实现必须能够连接到服务器并为玩家提供一个窗口，允许从列表中选择伙伴。一旦接收到包含 `<12>` 的行，applet 必须将其传递给 `ChessFrame` 类，并在需要时构造后者。此外，applet 向服务器发送游戏结束的信号并将此信息传输到 `ChessFrame`。这里是原始的 applet `ChessClient`：
+
+
 
 ```java
 import ChessFrame; 
@@ -9894,13 +9656,12 @@ public class ChessClient extends Applet implements Listener {
     private MediaTracker tracker;
     private Font fixed;
     private Font pretty;
+}
 ```
 
 在 `init` 过程中初始化 applet 时要的第一件事是为整个 applet 设置两种字体，`pretty` 和 `fixed`。
 
-
-
-当程序启动时，applet 会通过 socket 与服务器建立连接。对于一个 `InputStream` 对象，会创建一个相应的 `InputStreamHandler`。正如你记得的，这个类从输入流中读取行并使用 `receiveInput` 方法将它们传递出去。最后，生成一个哈希表用于存储 `ChessFrame` 对象。大多数用户倾向于一次只玩或看一局游戏，因此哈希表初始化为存储一个元素的元素的空间：
+当程序启动时，applet 会通过 socket 与服务器建立连接。对于一个 `InputStream` 对象，会创建一个相应的 `InputStreamHandler`。正如你记得的，这个类从输入流中读取行并使用 `receiveInput` 方法将它们传递出去。最后，生成一个哈希表用于存储 `ChessFrame` 对象。大多数用户倾向于一次只玩或看一局游戏，因此哈希表初始化为存储一个元素的空间：
 
 ```java
 public void start() {
@@ -10021,7 +9782,7 @@ public boolean action(Event evt, Object arg) {
   } else {
     return false;
   }
-
+}
 ```
 
 该国际象棋客户端显示了名称以及输入命令的字段。图 18-2 重现了国际象棋 applet 的图像。
@@ -10034,7 +9795,7 @@ Images/image0933
 
 ## 登录窗口
 
-决定将登录窗口设计为一个独立的窗口。当用户连接到服务器时，applet 会监控登录窗口。一旦登录窗口形成，登录程序就会开始。登录框由两个文本输入框（一个用于用户名，一个密码）和一个启动程序的按钮组成。作为登录窗口，可以使用标准的对话框，因为它具有模态属性。这意味着程序不会对与对话框无关的事件做出反应。遗憾的是，在编写时，Netscape Navigator 2.0 在 Solaris 上的实现有些缺陷，所以我们没有使用它。以下是 `userlogin` 类的源码：
+决定将登录窗口设计为一个独立的窗口。当用户连接到服务器时，applet 会监控登录窗口。一旦登录窗口形成，登录程序就会开始。登录框由两个文本输入框（一个用于用户名，一个密码）和一个启动程序的按钮组成。作为登录窗口，可以使用标准的对话框，因为它具有模态属性。这意味着程序不会对与对话框无关的事件做出反应。遗憾的是，在编写时，Netscape Navigator 2.0 在 Solaris 上的实现有些缺陷，所以我们没有使用它。以下是 `UserLogin` 类的源码：
 
 ```java
 import java.awt.*;
@@ -10047,9 +9808,6 @@ public class UserLogin extends frame {
   private Component target;
 }
 ```
-
-
-
 
 ```java
 password = new TextField(16);
@@ -10158,8 +9916,10 @@ public class PlayerFrame extends Frame {
 
 基础构造函数包含两个参数：`ChessClient` 和 `vector` 形式的玩家列表。我们为玩家名字构建了三个面板，为快棋评分构建了三个：
 
+
+
 ```java
-public PlayerFrame(ChessClient parent, vector v) {
+public PlayerFrame(ChessClient parent, Vector v) {
     super("Chess players");
     this.parent = parent;
     topplayers = new Panel();
@@ -10169,7 +9929,7 @@ public PlayerFrame(ChessClient parent, vector v) {
     lowplayers = new Panel();
     lowscores = new Panel();
     setLayout(new PackerLayout());
-    setBackground(color.gray);
+    setBackground(Color.gray);
     add("topplayers;side=left", topplayers);
     add("topscores;side=left", topscores);
     add("midplayers;side=left", midplayers);
@@ -10196,7 +9956,7 @@ void updatePlayerList(Vector v) {
     Enumeration e = playerList.elements();
     int count = 0;
     while (e.hasMoreElements()) {
-        Player p = (Player)e.nextElement();
+        Player p = (Player) e.nextElement();
         Button b = new Button(p.name);
         switch (count % 3) {
             case 0:
@@ -10214,85 +9974,88 @@ void updatePlayerList(Vector v) {
 }
 ```
 
+`Menu m = new Menu("Update Listing");`
+`whoRefresh = new MenuItem("Refresh Now");`
+`whoStopStart = new MenuItem("Start Updating");`
+`m.add(whoRefresh);`
+`m.add(whoStopStart);`
+`whobar.add(m);`
 
+`players = new PlayerFrame(this);`
+`players.setFont(fixed);`
+`players.setMenuBar(whobar);`
 
+`showhidePlayers = new Button("Show Players");`
+`add("showhideplayers;side=top", showhidePlayers);`
 
+如你所示，命令请求是用字符串 `"who an"` 初始。符号 `a` 表示我们想要获取一份当前空闲玩的玩家列表，而字符 `n` 表示我们希望列表以详细的形式呈现，这将有助于解析任务。此外，创建了一个新菜单并将其添加到 `PlayerFrame` 中。最后，在 applet 中创建并添加了一个新按钮来控制窗口。请在 `teams` 方法的开始处添加以下内容——它们创建了新的玩家列表：
 
-`Menu m = new Menu("Update Listing");` `whoRefresh = new MenuItem("Refresh Now");` `whoStopStart = new MenuItem("Start Updating");` `m.add(whoRefresh);`
-
-`m.add(whoStopStart);` `whobar.add(m);`
-
-`players = new PlayerFrame(this);` `players.setFont(fixed);` `players.setMenuBar(whobar);`
-
-`showhidePlayers = new Button("Show Players");` `add("showhideplayers;side=top", showhidePlayers);`
-
-如你所示，命令请求是用字符串 "who an" 初始。符号 `a` 表示我们想要获取一份当前空闲玩的玩家列表，而字符 `n` 表示我们希望列表以详细的形式呈现，这将有助于解析任务。此外，创建了一个新菜单并将其添加到 `PlayerFrame` 中。最后，在 applet 中创建并添加了一个新按钮来控制窗口。请在 `teams` 方法的开始处添加以下内容 -它们创建了新的玩家列表：
-
-`playerList = new Vector(32);` `player.updatePlayerList(playerList);`
+`playerList = new Vector(32);`
+`player.updatePlayerList(playerList);`
 
 在 `teams` 解析事件中添加了以下内容：
 
-```
-} else if (evt.target==whoRefresh) {
-  writeOutput(whoCommand+"\n");
-  playerList = new Vector(32);
-  waiting for who = true;
-  return true;
-} else if (evt.target==showhidePlayers) {
-  if (players.isShowing()) {
-    players.hide();
-    showhidePlayers.setLabel("Show players");
-  } else {
-    players.show();
-    showhidePlayers.setLabel("Hide players");
-  }
-  return true;
-} else if (evt.target==players) {
-  writeOutput((String)arg+"\n");
-  return true;
+```java
+} else if (evt.target == whoRefresh) {
+    writeOutput(whoCommand + "\n");
+    playerList = new Vector(32);
+    waitingForWho = true;
+    return true;
+} else if (evt.target == showhidePlayers) {
+    if (players.isShowing()) {
+        players.hide();
+        showhidePlayers.setLabel("Show players");
+    } else {
+        players.show();
+        showhidePlayers.setLabel("Hide players");
+    }
+    return true;
+} else if (evt.target == players) {
+    writeOutput((String) arg + "\n");
+    return true;
 }
 ```
 
-正如你记得，`PlayerFrame` 将 `MenuItem` 事件原封不动地传递给 applet。我们在这里拦截了用户更新列表的请求，向服务器发送命令并将 `waitingforwho` 变量设置为 `true`。此外，我们检查了按钮的状态，以控制玩家列表窗口的可见性。根据测试结果，`PlayerFrame` 的状态变化与其按钮上的标签变化方式一致。如果事件生成了 `PlayerFrame` 对象，则将正在进行的比赛查询传输到服务器。
+正如你记得，`PlayerFrame` 将 `MenuItem` 事件原封不动地传递给 applet。我们在这里拦截了用户更新列表的请求，向服务器发送命令并将 `waitingForWho` 变量设置为 `true`。此外，我们检查了按钮的状态，以控制玩家列表窗口的可见性。根据测试结果，`PlayerFrame` 的状态变化与其按钮上的标签变化方式一致。如果事件生成了 `PlayerFrame` 对象，则将正在进行的比赛查询传输到服务器。
 
-现在我们需要修改方法 `receiveInput`。这样，当变量被设置为 `true` `waiting for who` 时，它能够解析从服务器接收到的玩家列表。命令 "who an" 回复生成的 `List` 如下：
+现在我们需要修改方法 `receiveInput`。这样，当变量被设置为 `true` `waitingForWho` 时，它能够解析从服务器接收到的玩家列表。命令 `"who an"` 回复生成的 `List` 如下：
 
-| name stand win loss draw Blitz win loss draw idle |
-| MchessPre(C) | 2337 | twenty | 7 | 8 | 2474 |
-| jocelyn | 1970 | one | one |
-| StIdes | 1820 | five | five | one |
+| name | stand | win | loss | draw | Blitz | win | loss | draw | idle |
+|------|-------|-----|------|------|-------|-----|------|------|------|
+| MchessPre(C) | 2337 | twenty | 7 | 8 | 2474 | | | | |
+| jocelyn | 1970 | one | one | | | | | | |
+| StIdes | 1820 | five | five | one | | | | | |
 
 显示。
 
-在给定情况下，我们只对 `Name` 和 `Blitz` 字段感兴趣。列表由单词 "Name" 开始跟随 "Stand"。虚线字符串被忽略。列表的结束由单词 "Players" 定义。这里是 `receiveInput` 方法的新版本：
+在给定情况下，我们只对 `Name` 和 `Blitz` 字段感兴趣。列表由单词 `"Name"` 开始跟随 `"Stand"`。虚线字符串被忽略。列表的结束由单词 `"Players"` 定义。这里是 `receiveInput` 方法的新版本：
 
-```
+```java
 public void receiveInput(InputStreamHandler ish, Object o) {
-  String s = (String)o;
+    String s = (String) o;
 
-  if (s.trim().equals("") || s.trim().equals("fics%")) {
-    return;
-  }
-
-  if (s.trim().startsWith("<12>")) {
-    parseBoard(s.trim());
-  } else if (s.trim().startsWith("{Game")) {
-    StringTokenizer st = new StringTokenizer(s);
-    String token = st.nextToken();
-    //Game String number = st.nextToken(); //number
-    ChessFrame frame = (ChessFrame)games.get(number);
-    if (frame!=null) {
-      token = st.nextToken(); //player1 token = st.nextToken(); //vs. token = st.nextToken(); //player2) token = st.nextToken(); //loser
-      frame.endGame(token);
-      games.remove(number);
+    if (s.trim().equals("") || s.trim().equals("fics%")) {
+        return;
     }
-  }
+
+    if (s.trim().startsWith("<12>")) {
+        parseBoard(s.trim());
+    } else if (s.trim().startsWith("{Game")) {
+        StringTokenizer st = new StringTokenizer(s);
+        String token = st.nextToken();
+        // Game String number = st.nextToken(); // number
+        ChessFrame frame = (ChessFrame) games.get(number);
+        if (frame != null) {
+            token = st.nextToken(); // player1
+            token = st.nextToken(); // vs.
+            token = st.nextToken(); // player2
+            token = st.nextToken(); // loser
+            frame.endGame(token);
+            games.remove(number);
+        }
+    }
 }
 ```
-
-
-
-
 
 - 添加一个包含当前游戏列表的窗口，允许玩家像从玩家列表中选择对手一样，选择并观察感兴趣的游戏进程。
 
@@ -10300,7 +10063,7 @@ public void receiveInput(InputStreamHandler ish, Object o) {
 
 ![](img/image09336.jpeg)
 
-如何编写你自己的服务器：会议调度器
+## 如何编写你自己的服务器：会议调度器
 
 - 合约内容
 - 属性规划器
@@ -10317,7 +10080,7 @@ public void receiveInput(InputStreamHandler ish, Object o) {
 - 针对特定项目的模块 模块自定义接口
 - 可能的改进
 
-# 你将从本章中学学到什么
+## 你将从本章中学到什么
 
 在这里，我们使用 Java 创建了一个会议调度器（Meeting scheduler）。我们将详细考虑以下主题：
 
@@ -10328,25 +10091,25 @@ public void receiveInput(InputStreamHandler ish, Object o) {
 
 熟悉本手册最简单的方法是使用程序小组件浏览器，并运行附带书籍的光盘中的 `examples/ch19/ui.html`。这需要 `net` 输出有输出。如果你无法访问网络，则需要安装本地服务器。具体操作方法在本章的章节中详细描述，如“用户管理”和“如何安装你自己的服务器”。
 
-# 合约内容
+## 合约内容
 
 想象有一家小公司要求我们创建一个系统，为他们的员工安排会议。这些人大多数在为其他公司工作，但一旦这家公司获得稳定的收入，他们就不介意全职加入这家公司。他们都住在同一个地区，除了一个员工搬到了另一个国家。通过规划器的帮助，将为每位员工创建自己的日程，并缓解与海外员工的连接问题。该程序可以用任何语言编写，但必须运行在各种技术之上，因为小组成员很可能会秘密使用他们目前工作公司的设备。该系统的大多数用户将在不兼容的网络中工作，因此他们无法利用现有的商业规划器。
 
 使用 Internet 和 Java 语言可以简化任务。这样，我们只需要编写一个可以在不同平台上运行的程序。Internet 将让客户端以非常低廉的价格访问国际通信。公司邀请我们立即开始工作——他们希望两周后收到演示版本。
 
-# 属性规划器
+## 属性规划器
 
-会议规划器的主要任务是帮助人们组织时间。此外，它将通过计算小组所有成员工作的时间段，简化普通会议的安排。该程序是流行的调度软件的小实现，类似于 MeetingMaker 或 LotusNotes 附带的调度器。区别在于，我们的会议规划器将在 Internet 上运行。大多数规划器只运行在局域网（LAN）上，如 Novell。使用 Internet 将允许位于不同州界两侧的人员以同样简单的方式使用该程序，就像本地组用户操作那样的。
+会议规划器的主要任务是帮助人们组织时间。此外，它将通过计算小组所有成员工作的时间段，简化普通会议的安排。该程序是流行的调度软件的小实现，类似于 MeetingMaker 或 LotusNotes 附带的调度器。区别在于，我们的会议规划器将在 Internet 上运行。大多数规划器只运行在局域网（LAN）上，如 Novell。使用 Internet 将允许位于不同州界两侧的人员以同样简单的方式使用该程序，就像本地组用户操作那样。
 
 调度器的主要功能是它具有添加和取消预约的能力。因此，必须用 Java 语言创建一个服务器应用程序和一个客户端应用程序。本指南将主要涵盖在 Java 上创建服务器的问题。
 
-## 用户管理
+### 用户管理
 
 在深入研究服务器设计之前，你可能想先看看它是如何工作的。要尝试该程序，你首先需要访问服务器调度器。默认情况下，程序通过 Online Companion 页面访问服务器。通过选择 File 菜单中的 login 段落，你将登录系统。
 
 与该程序工作非常简单。启动程序并在屏幕上登录后，会出现你当天的日程。你可以查看它，跳转到其他日期，或者用其他日日的日程替换此日程。Add 按钮将允许你向日程表中添加额外项目。
 
-规划器的主要功能——规划他人的会议。以下给出了我们提议公司的员工列表。第一条目在 Bart 的名下，但你可以使用 Select User 命令选择不同的用户名：
+规划器的主要功能——规划他人的会议。以下给出了我们提议公司的员工列表。第一条目在 Bart 的名下，但你可以使用 `Select User` 命令选择不同的用户名：
 
 * Bart
 * Liza
@@ -10358,35 +10121,32 @@ public void receiveInput(InputStreamHandler ish, Object o) {
 
 如果你使用添加功能，你将报名参加此会议。如果你想开启其他人的，只需输入他们的名字。列表在括号中，且必须仅包含总列表中的名称。我们希望你在为他们的虚拟员工规划不同的疯狂会议时获得乐趣！
 
-# 如何安装你自己的服务器
+## 如何安装你自己的服务器
 
 设置自己的服务器并不困难，但有几点需要考虑。服务器程序是一个独立的应用程序。你需要将磁盘光盘上的程序重写到硬盘上。要安装服务器，需要：
 
-1. 创建目录（在示例中我们将其称为 "server"）。
+1. 创建目录（在示例中我们将其称为 `"server"`）。
 2. 从磁盘光盘将 `examples/ch19` 中的文件复制到目录中。
 3. 确保卷中的所有 `.dat` 和 `.idx` 文件可用。
 4. 运行服务器，输入命令 `java server`。
 
-之后，屏幕上应该出现一条消息，说明服务器正在等待连接（waiting for connection）。如果没有，可能是 sockets.server 出了问题。此服务器使用端口 `1666`。你应该配置你的系统以允许程序使用此端口。有关如何做的说明可以在你系统的参考 TCP/IP 服务章节中找到。
+之后，屏幕上应该出现一条消息，说明服务器正在等待连接（waiting for connection）。如果没有，可能是 `sockets.server` 出了问题。此服务器使用端口 `1666`。你应该配置你的系统以允许程序使用此端口。有关如何做的说明可以在你系统的参考 TCP/IP 服务章节中找到。
 
-# 项目
+## 项目
 
-大多数网络应用程序可以分为三个主要模块：接口、网络接口和特定特定模块。这种组织方式允许你复用此应用程序。在未来，新项目可能只使用单独的部分——例如网络接口——而不需要使用或理解剩余模块。随着时间的推移，你将开发出一组对象，从这些对象中，所有后续项目将更容易实现。
+大多数网络应用程序可以分为三个主要模块：接口、网络接口和特定模块。这种组织方式允许你复用此应用程序。在未来，新项目可能只使用单独的部分——例如网络接口——而不需要使用或理解剩余模块。随着时间的推移，你将开发出一组对象，从这些对象中，所有后续项目将更容易实现。
 
 为了让这些对象作为一个整体工作，它们之间必须有良好的连接。用户界面程序尤其要与 UI 交互，并传递所有其他相关程序组件的操作。假设在点击标记为 login 的按钮。
 
 UI 应该检测到按钮被按下，然后将操作传递给网络模块。
 
-## 模块网络接口
+### 模块网络接口
 
-与编写自己的协议相比，在 Internet 上通信是小菜一桩。使用 TCP/IP 时，我们不需要担心数据损坏或数据包超出范围等复杂的通信问题。当然，这不像剥橘子那么简单，但至少你开发了良好的项目，几乎可以忘记这些内部问题。
+与编写自己的协议相比，在 Internet 上通信是小菜一碟。使用 TCP/IP 时，我们不需要担心数据损坏或数据包超出范围等复杂的通信问题。当然，这不像剥橘子那么简单，但至少你开发了良好的项目，几乎可以忘记这些内部问题。
 
+在最底层，两台计算机之间的通信是 0 和 1 的序列——这种情况对工作调度器几乎没有帮助。通过将此位流结构化为已知的数据类型，我们可以极大地方便你创建调度器和解析数据的工作。Java 有一个专门的类用于这项工作。正如你记得的，在第 13 章“使用套接字和流处理网络”中，我们讨论了流 `DataInput` 和 `DataOutput`。现在这些流将变得非常有用。它们允许你在流中传输 Java 数据类型。服务器可以将 `integer` 放入流中，而客户端可以轻松地读取这个数字——无需任何转换或其他麻烦。唯一需要对某些数据结构达成共识。
 
-
-
-在最底层，两台计算机之间的通信是 0 和 1 的序列——这种情况对工作调度器几乎没有帮助。通过将此位流结构化为已知的数据类型，我们可以极大地方便你创建调度器和解析数据的工作。Java 有一个专门的类用于这项工作。正如你记得的，在第 13 节“使用套接字和流处理网络”中，我们讨论了流 `DataInput` 和 `dataoutput`。现在这些流将变得非常有用。它们允许你在流中传输 Java 数据类型。服务器可以将 `integer` 放入流中，而客户端可以轻松地读取这个数字——无需任何转换或其他麻烦。唯一需要对某些数据结构达成共识。
-
-我们为消息选择了一个非常简单的模型。每条消息将包含一个描述消息类型的字节，随后是一个变变长度的消息体。每种类型的消息将匹配相应的例程，能够进行数据分析。这种方案将简化创建多个消息的任务，而且会极大地简化这种解析工作。如果你曾经必须将位流转换为真实数据，你就能体会到它的便利了。
+我们为消息选择了一个非常简单的模型。每条消息将包含一个描述消息类型的字节，随后是一个变长的消息体。每种类型的消息将匹配相应的例程，能够进行数据分析。这种方案将简化创建多个消息的任务，而且会极大地简化这种解析工作。如果你曾经必须将位流转换为真实数据，你就能体会到它的便利了。
 
 这种方法最大限度地减少了网络流量。我们发送的字节越少，就越好。
 
@@ -10394,30 +10154,33 @@ UI 应该检测到按钮被按下，然后将操作传递给网络模块。
 
 网络模型就绪后，我们可以开始设计客户端和服务器。通常情况下，它们将包含额外的方法。当一侧发生消息时，另一方必须能够进行分析。我们可以让一切变得完美，并为每条消息创建一个限定文件来识别每个数据元素，并调用解析每条消息的子程序。这是一个好方法，但也有更简单的方法：为每条消息只写一个创建方法和一个解析方法。然而，如果同步性破坏，将会出现问题。生产者上传到线上的所有东西都必须被消费者接收。
 
-关于在网络上进行数据传输的问题，我们有一些关于服务器的特殊注释。在下一节中，我们将详细讨论 Internet  way 的创建。
+关于在网络上进行数据传输的问题，我们有一些关于服务器的特殊注释。在下一节中，我们将详细讨论 Internet 方式的创建。
 
-## 服务器
+### 服务器
+
 如果我现在要求你写一个简单的服务器，你可能会采用 Perl 语言方案，使用 `CGI`（通用网关接口），这是很长一段时间内此类请求的标准响应。如果我接着要求你让服务器足够快，你可能会用 C 语言写程序，同样使用 `CGI` 接口。
 
-`CGI` 是一种用于执行 Web 动态功能的协议。`CGI` 接收一些输入，处理它们并创建 `MIME`（多媒体互联网邮件）扩展）。这是一个强大的工具，但它也有自己的局限性。`CGI` 基于与网络浏览器的对话。网络浏览器理解 MIME 文档并显示它们，但到此结束。但如果你想获取数据，以某种方式处理它们然后显示出来呢？
+`CGI` 是一种用于执行 Web 动态功能的协议。`CGI` 接收一些输入，处理它们并创建 `MIME`（多媒体互联网邮件扩展）。这是一个强大的工具，但它也有自己的局限性。`CGI` 基于与网络浏览器的对话。网络浏览器理解 MIME 文档并显示它们，但到此结束。但如果你想获取数据，以某种方式处理它们然后显示出来呢？
 
-如果你用 Java 语言编写服务器，你将获得额外的机会，而在 Java 上启动客户端将把这些机会扩展到几乎无限。客户端可以处理入入数据并以方便的方式呈现。在这种情况下，不仅从服务器减轻了部分负载，而且为客户端提供了更多机会，结果数据表示的形式得到了改进。例如，用户将能够更改字体，系统能够根据显示器尺寸自定义显示数据。
+如果你用 Java 语言编写服务器，你将获得额外的机会，而在 Java 上启动客户端将把这些机会扩展到几乎无限。客户端可以处理输入数据并以方便的方式呈现。在这种情况下，不仅从服务器减轻了部分负载，而且为客户端提供了更多机会，结果数据表示的形式得到了改进。例如，用户将能够更改字体，系统能够根据显示器尺寸自定义显示数据。
 
-使用 Java 编写服务器取决于个人喜好，有优点也有缺点。一如既常，为了选择最合适的语言，你应该评估你想要得到什么。让我们看看在使用 Java 编写服务器时必须考虑的问题。
+使用 Java 编写服务器取决于个人喜好，有优点也有缺点。一如既往，为了选择最合适的语言，你应该评估你想要得到什么。让我们看看在使用 Java 编写服务器时必须考虑的问题。
 
-## 安全
-编写服务器程序涉及一些责任，因为服务器可能是你互联网装甲中最薄弱的一环。编写得糟糕的服务器程序可能会导致机器崩溃，或者更糟，数据丢失。关于互联网黑客的信息，特别是关于如何找到漏洞渗透服务器程序的信息，是公开的。编写服务器是为了传播信息或解决问题；要确保这些信息不是私私的，并且该任务不是破坏性的。
+### 安全
+
+编写服务器程序涉及一些责任，因为服务器可能是你互联网装甲中最薄弱的一环。编写得糟糕的服务器程序可能会导致机器崩溃，或者更糟，数据丢失。关于互联网黑客的信息，特别是关于如何找到漏洞渗透服务器程序的信息，是公开的。编写服务器是为了传播信息或解决问题；要确保这些信息不是私有的，并且该任务不是破坏性的。
 
 将 Java 作为编写服务器的语言在信息安全方面几乎是理想的，因为在创建 Java 时，考虑了信息的机密性。放置错误的指针不会导致你的系统开放并易受未经授权的人的攻击。重要的是，Java 应用程序的限制比 applet 少。特别是，它可以访问磁盘，所以你应该正确地询问，服务器被允许访问哪些内容。存在一条经验法则：
 
 - 仅允许服务器访问它需要的文件。
 
+
+
 确保互联网信息的安全是一个如此重要的课题，以至于可以就此写一整本书。事实上，已经出版了几本这样的书。对于对互联网安全问题感兴趣的人，推荐阅读 O'Reilly & Associates 出版的《Internet Firewall》。书《Web-server》（Ventana）在这一主题上也有很好的章节；此外，此类问题也涵盖在处理一般问题的出版物中。在用 Java 编写的程序中，漏洞出现的概率比 C 程序少，可能也比使用 Perl 脚本更少，但没有一种语言可以给出完全的保证。
 
 ## 问：速度与内存
-在 Java 上运行程序的执行速度通常与 Perl 语言方案相当。Perl 处理文本的能力更好，但在大多数操作上并不逊于 Java。即时编译 (JIT) 模块即将推出，用于将 Java 字节码程序转换为机器码；这些模块将使你的 Java 程序运行得更快。然而，速度不应是选择项目编程语言的决定性因素；只有在程序执行时间具有根本重要意义的情况下，它才成为决定因素。
-```
 
+在 Java 上运行程序的执行速度通常与 Perl 语言方案相当。Perl 处理文本的能力更好，但在大多数操作上并不逊于 Java。即时编译 (JIT) 模块即将推出，用于将 Java 字节码程序转换为机器码；这些模块将使你的 Java 程序运行得更快。然而，速度不应是选择项目编程语言的决定性因素；只有在程序执行时间具有根本重要意义的情况下，它才成为决定因素。
 
 服务器本身的设计非常简单。当套接连接建立时，会创建一个新的流来处理请求。该流使用一个名为 `schedule` 对象来响应客户端的请求。到此为止，我们已经拥有这一切。这一切都足够清晰且易于编程。关于该算法实现的具体问题，我们将在“实现：网络接口模块”章节中进行讨论。
 
@@ -10462,12 +10225,16 @@ UI 应该检测到按钮被按下，然后将操作传递给网络模块。
 
 ```java
 package ventana.scheduler;
+
 import java.io.*;
 import java.util.*;
 import ventana.util.*;
 import ventana.scheduler.*;
+
 public interface schedule {
+
     // 子程序支持
+
     public void add(scheduleStruct newSchedule) throws DuplicateException, IOException;
 
     /*Description:
@@ -10477,6 +10244,7 @@ public interface schedule {
     * ServerException - 无法连接服务器
     * IOException - 异常 I/O 错误
     */
+
     public void add(scheduleStruct newSchedule) throws DuplicateException, IOException;
 
     /*Description:
@@ -10486,6 +10254,7 @@ public interface schedule {
     * ServerException - 无法连接服务器
     * IOException - 异常 I/O 错误
     */
+
     public void del(ScheduleStruct del) throws NotFoundException, IOException;
 
     /*Description:
@@ -10495,6 +10264,7 @@ public interface schedule {
     * ServerException - 无法连接服务器
     * IOException - 异常 I/O 错误
     */
+
     public scheduleStruct find(Date date) throws NotFoundException, IOException;
 
     /*Description:
@@ -10504,16 +10274,16 @@ public interface schedule {
     * ServerException - 无法连接服务器
     * IOException - 异常 I/O 错误
     */
+
     public scheduleStruct[] findRange(Date start, Date end) throws IOException;
 
     /*Description:
     * 返回所有者的调度
     */
+
     public String getUser();
 }
 ```
-
-
 
 工作计划器从主窗口启动，除了菜单外，那里什么都没有。在菜单中，用户可以选择基本功能，如登录、打开计划和程序配置。若要选择其他功能，您需要进入子菜单。
 
@@ -10525,7 +10295,7 @@ public interface schedule {
 
 ![](img/image09340.gif)
 
-### 图 19.3。
+### 图 19.3
 
 其余的窗口很小，每个只包含一个功能。我们在这里没有介绍它们；你可以通过滚动应用程序自行查看。要记住，所有窗口都是独立的帧，这是一把双刃剑——它提供了更大的操作自由度，但需要更多的工作。在项目实现过程中，我们会把注意力放在一些细节上，这些细节在处理帧工作时是非常重要的。
 
@@ -10535,7 +10305,7 @@ public interface schedule {
 
 ![](img/image09341.gif)
 
-### 图 19.4。
+### 图 19.4
 
 设计好系统后，我们可以开始编写程序。在工作的这个阶段，可能需要修改项目（大多数时候不需要，但有时会发生）。因为现在你更好地学会了预测可能出现的困难，并获得了使用 Java 和面向对象项目的经验，你将犯更少的错误，你的整个项目也会变得更整洁。当任何人看到你的项目并说：“是的，这真是一个东西！”时，那种感觉异常愉快。
 
@@ -10557,60 +10327,91 @@ public interface schedule {
 
 ```java
 public class server {
+
     public static void main(String args[]) throws IOException {
-        ServerSocket session = new ServerSocket(1666,100);
+
+        ServerSocket session = new ServerSocket(1666, 100);
+
         handleRequests handler;
 
-        Hashtable users = new hashtable();
+        Hashtable users = new Hashtable();
+
         locks schedLocks = new locks();
 
         System.out.println("Waiting for connections");
-        while(true) {
+
+        while (true) {
+
             Socket socket = null;
+
             try {
+
                 socket = session.accept();
-            }
-            catch (SocketException e) {
+
+            } catch (SocketException e) {
+
                 // 通常是超时，重试
+
             }
+
             if (socket == null) {
+
                 continue;
+
             }
 
             System.out.println("Connection made");
+
             // 为通信创建一个单独线程
-            handler = new handleRequests(socket,users, schedLocks);
+
+            handler = new handleRequests(socket, users, schedLocks);
+
             // 非重入系统的设置
-            handler.setPriority(handler.getPriority() + one);
+
+            handler.setPriority(handler.getPriority() + 1);
+
             handler.start();
+
         }
+
     }
+
 }
 ```
 
 服务器使用名为 `ServerSocket` 的类。该类通过 `accept` 方法监听端口并建立连接。我们选择了端口 `1666` 并要求的等待时间为 `100` 毫秒。注意 `accept` 方法中的 `try` 块。如果在规定时间内没有建立连接，则会抛出 `SocketException`。在我们情况下，我们将继续执行步骤，直到连接建立为止。
 
-
-
 一旦建立连接，我们将创建一个新线程来处理请求。我们创建了一个 `handleRequest` 类来服务连接。由于它是 `Thread` 类的扩展，其主程序包含在 `run` 方法中。该方法的工作方式类似于 `dispatcher`。当 `package`（包）到达时，第一个字节用于定义 `package` 类型。然后调用适当的方法对数据包进行解析。就是这些了——除了分析和查询处理，你就大功完成了。`handleRequest` 类将对客户端请求执行所有操作：
 
 ```java
 class handleRequests extends Thread {
+
     DataInputStream in = null;
+
     DataOutputStream out = null;
+
     Socket socket = null;
 
-    String user=null;
+    String user = null;
+
     Hashtable users;
+
     locks schedLocks;
 
-    handleRequests(Sockets, Hashtable users, locks schedLocks) throws IOException {
+    handleRequests(Socket s, Hashtable users, locks schedLocks) throws IOException {
+
         socket = s;
+
         in = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
+
         out = new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
+
         this.users = users;
+
         this.schedLocks = schedLocks;
+
     }
+
 }
 ```
 
@@ -10632,34 +10433,52 @@ class handleRequests extends Thread {
 
 ```java
 public void run() {
+
     byte b;
-    boolean cont=true;
+
+    boolean cont = true;
+
     try {
+
         loginRequest();
-        while(cont) {
+
+        while (cont) {
+
             b = in.readByte();
-            switch(b) {
-                case packetTypes.login: login Parse(); break;
-                case packetTypes.logoff: cont=false; break;
-                case packetTypes.reqSchedule: reqSchedule(); break;
-                case packetTypes.addMeeting: addMeeting(); break;
-                default: System.out.println("Unknown type");
-            }
-        }
-        out.close();
-        in.close(); 
-        socket.close();
-    } catch (IOException ignore) {
-        System.out.println("IO exception, thread stopped"); 
-        stop();
-    } catch (Exception e) {
-        System.out.println("Unknown error, thread stopped"); 
-        e.printStackTrace();
-        stop();
-    } finally {
-        users.remove(user); 
-        schedLocks.unlock(user);
-    }
+
+            switch (b) {
+
+                case packetTypes.login:
+                    loginParse();
+                    break;
+
+                case packetTypes.logoff:
+                    cont = false;
+                    break;
+```
+
+
+
+```java
+case packetTypes.reqSchedule: reqSchedule(); break;
+case packetTypes.addMeeting: addMeeting(); break;
+default: System.out.println("Unknown type");
+}
+}
+out.close();
+in.close();
+socket.close();
+} catch (IOException ignore) {
+System.out.println("IO exception, thread stopped");
+stop();
+} catch (Exception e) {
+System.out.println("Unknown error, thread stopped");
+e.printStackTrace();
+stop();
+} finally {
+users.remove(user);
+schedLocks.unlock(user);
+}
 }
 ```
 
@@ -10729,14 +10548,11 @@ public void stop() {
 }
 ```
 
+`reqSchedule` 方法是服务器上最大的数据提供者。在获取临时的 `interval` 和 `name` 用户后，它将发送在此时间段内预约的所有会议数据。客户端使用此程序来填充本地的 `schedule` 对象。数据从 `help` 对象 `serverSchedule` 读取，然后以消息格式发送。
 
+为了让 `Togo` 发送此消息，需要知道 `length` 字段，以便指定 `analyzer` 它需要等待多少条记录。如果用户的日程非常忙，消息可能会变得过长。客户端的设计必须请求合理时间范围内的数据——例如，一天或可能是一周。我们没有设置最大跨度——只是发送可能不需要的大量数据并不妥当。
 
-
-`redSchedule` 方法是服务器上最大的数据提供者。在获取临时的 `interval` 和 `name` 用户后，它将发送在此时间段内预约的所有会议数据。客户端使用此程序来填充本地的 `schedule` 对象。数据从 `help` 对象 `serverSchedule` 读取，然后以消息格式发送。
-
-为了让 `Togo` 发送此消息，需要知道 `length` 字段，以便指定 `analyzer` 它需要等待多少条记录。如果用户的日程非常忙，消息可能会变得过长。客户端的设计必须请求合理时间范围内的数据——例如，一天或可能是一周。我们没有设置最大跨度——只是发送可能不需要的大量数据并不妥妥。
-
-接的一对子程序添加新会议。这可能是系统中最困难的任务之一。我们已经开发了一套良好的所需功能，尽管可能还有更多：
+接下来的一对子程序添加新会议。这可能是系统中最困难的任务之一。我们已经开发了一套良好的所需功能，尽管可能还有更多：
 
 ```java
 public void addNAK(String s) throws IOException {
@@ -10761,7 +10577,7 @@ public void scheduleChange(String s, Date start) throws IOException {
 
 `addNAK`、`addACK` 和 `scheduleChange` 是通知程序。`NAK`（负面确认）表示新预约未添加。它接收一个发送给用户的字符串。常见的错误是日期或时间错误，以及尝试在已经忙碌的时间填充。消息 `ACK`（已确认）由系统发出，表示新会议添加成功通过。
 
-当有人更改 `s` 时，`scheduleChange` 消息会发送给所有当前用户。在这种情况下，客户端查看该人的日程并决定是否有必要重新调度。客户端侧当前信息的可用性将帮助用户防止日程冲突。现在考虑程序添加 `addMeeting` 会议：
+当有人更改日程时，`scheduleChange` 消息会发送给所有当前用户。在这种情况下，客户端查看该人的日程并决定是否有必要重新调度。客户端侧当前信息的可用性将帮助用户防止日程冲突。现在考虑程序添加 `addMeeting` 会议：
 
 ```java
 public void addMeeting() throws IOException {
@@ -10781,7 +10597,6 @@ public void addMeeting() throws IOException {
         addNAK("Error converting start date");
         return;
     }
-
     line = in.readLine();
     try {
         ss.end = new Date(dateLine + " " + line);
@@ -10793,28 +10608,24 @@ public void addMeeting() throws IOException {
         addNAK("Error converting end date");
         return;
     }
-
     ss.desc = in.readLine();
     ss.attending = in.readLine();
     ss.descURL = in.readLine();
     // lexical analysis meetings, this text in brackets
-
     int pos;
     String st, st2;
-    handleRequestshr; Enumeration e;
+    handleRequests hr; Enumeration e;
     st = new String(ss.attending + ",");
     if (st == null) {
         addNAK("Attending field blank");
         return;
     }
-
     st = st.trim();
     while ((pos = st.indexOf(',')) != -1) {
         st2 = st.substring(0, pos);
         System.out.println("Attending: " + st2);
         st = st.substring(pos + 1);
         schedLocks.lock(st2);
-
         serverSchedule sched = new serverSchedule(st2);
         try {
             System.out.println("Adding: " + ss);
@@ -10822,7 +10633,6 @@ public void addMeeting() throws IOException {
         } catch(DuplicateException bad) {
             addNAK(st2 + " already scheduled");
         }
-
         schedLocks.unlock(st2);
         e = users.elements();
         while(e.hasMoreElements()) {
@@ -10838,12 +10648,6 @@ public void addMeeting() throws IOException {
 
 在分析和验证阶段，必须确保 `data` 的 `correctness`。
 
-`addMeeting` 方法可以分为三个部分：1) 解析与验证，2) 实际添加到数据库，以及 3) 通知。每当发生错误时，都会发送一个 `addNAK` 数据包。客户端必须告诉用户错误是什么。然后他们可以调整输入数据并再次发送包。
-
-`addMeeting`` 方法可以分为三个部分：1) 解析与验证，2) 实际添加到数据库，以及 3) 通知。每当发生错误时，都会发送一个 `addNAK` 数据包。客户端必须告诉用户错误是什么。然后他们可以调整输入数据并再次发送包。
-
-`addMeeting`` 方法可以分为三个部分：1) 解析与验证，2) 实际添加到数据库，以及 3) 通知。每当发生错误时，都会发送一个 `addNAK` 数据包。客户端必须告诉用户错误是什么。然后他们可以调整输入数据并再次发送包。
-
 ## 针对给定项目的特定模块
 
 客户端和服务器都以最符合它们共同利益的方式使用 `schedule` 接口。客户端运行某些数据保护——例如，数据存储在磁盘上。这意味着我们应该在网络上请求日程信息。
@@ -10854,12 +10658,9 @@ public void addMeeting() throws IOException {
 
 ```java
 public class clientSchedule implements schedule {
-    Hashtable memoryStore = new hashtable();
+    Hashtable memoryStore = new Hashtable();
 }
 ```
-
-
-
 
 `clientSchedule` 类实现了 `schedule` 接口。该类为我们之前描述的接口提供了程序。使用接口的便利之处在于大量的应用，如果你不喜欢给定的实现，可以编写自己的。你甚至可以提取程序中的某些片段来使用，并替换那些你不喜欢的部分：
 
@@ -10891,37 +10692,63 @@ public scheduleStruct find(Date date) throws NotFoundException {
 }
 ```
 
+
+
 `delete` 和 `find` 方法非常简单，几乎是不言自明的。对于返回的错误信息，再次使用了异常。两个哈希表方法（`get` 和 `remove`）都返回请求信息的引用值。如果未找到键值，则返回零。在这种情况下将生成未找到的异常。
 
-最后一个方法 - `findRange`。在这里让我们使用编号，这将有助于我们返回数据值。`findRange` 方法接收一个时间范围并返回该期间内的所有预约。由于哈希表不包含关于时间间隔的数据，你必须进行顺序搜索。但哈希表实现了 `numbering` 接口。这允许顺序查看哈希表。
+最后一个方法是 `findRange`。在这里让我们使用编号，这将有助于我们返回数据值。`findRange` 方法接收一个时间范围并返回该期间内的所有预约。由于哈希表不包含关于时间间隔的数据，你必须进行顺序搜索。但哈希表实现了 `numbering` 接口。这允许顺序查看哈希表。
 
 我们将查看两次表。在第一次查看时，我们将确定将返回的会议数量，在第二次查看时，填充结果数组。我们被迫这样做，是因为数组的至少一个维度的大小在创建时必须确定。注意，我们调用了两次哈希方法的元素。每次查看编号后，它都会被销毁。每次新的调用都需要重新创建编号。以下是 `findRange` 方法的程序：
 
 ```java
 public scheduleStruct[] findRange(Date start, Date end) throws IOException {
+
     Enumeration list = memoryStore.elements();
+
     scheduleStruct ss;
+
     int cnt = 0;
+
     // 认为元素数量
+
     while (list.hasMoreElements()) {
+
         ss = (scheduleStruct) list.nextElement();
+
         if (start.getTime() <= ss.start.getTime() && end.getTime() >= ss.end.getTime()) {
+
             cnt++;
+
         }
+
     }
+
     if (cnt < one) return null;
+
     scheduleStruct result[] = new scheduleStruct[cnt];
+
     // 再次销毁编号
+
     list = memoryStore.elements();
+
     // 创建结果数组
+
     cnt = 0;
+
     while (list.hasMoreElements()) {
+
         ss = (scheduleStruct) list.nextElement();
+
         if (start.getTime() <= ss.start.getTime() && end.getTime() >= ss.end.getTime()) {
+
             result[cnt++] = ss;
+
         }
+
     }
+
     return result;
+
 }
 ```
 
@@ -10933,75 +10760,111 @@ public scheduleStruct[] findRange(Date start, Date end) throws IOException {
 
 ```java
 public class serverSchedule implements schedule {
+
     IndexFile index;
+
     RandomAccessFile dataFile;
 
     public serverSchedule(String user) throws IOException {
+
         this.user = user;
+
         index = new IndexFile(user + ".idx", "rw", Size, Size);
+
         dataFile = new RandomAccessFile(user + ".dat", "rw");
+
     }
+
 }
 ```
 
-该类的构造函数包含一个标识用户的字符串。此行用于创建索引文件和数据文件名。注意此程序会返回 `IOException`。如果服务器没有写入文件的权限，就会发生这种情况 -你应该在程序中找到这个错误。对于数据存储，我们使用 `RandomAccessFile`。文件以读写模式（访问代码为 "rw"）根据用户名和 .dat 扩展名命名。是的，对于名为 maggie 的用户，数据文件将命名为 maggie.dat。接下来的部分在调度中添加预约：
+该类的构造函数包含一个标识用户的字符串。此行用于创建索引文件和数据文件名。注意此程序会返回 `IOException`。如果服务器没有写入文件的权限，就会发生这种情况 —— 你应该在程序中找到这个错误。对于数据存储，我们使用 `RandomAccessFile`。文件以读写模式（访问代码为 "rw"）根据用户名和 `.dat` 扩展名命名。是的，对于名为 maggie 的用户，数据文件将命名为 `maggie.dat`。接下来的部分在调度中添加预约：
 
 ```java
 public void add(scheduleStruct newSchedule) throws DuplicateException, IOException {
+
     String key;
+
     String data;
+
     long conv;
+
     long pos;
 
     dataFile.seek(dataFile.length());
+
     pos = dataFile.getFilePointer();
 
     dataFile.writeLong(newSchedule.start.getTime());
+
     dataFile.writeLong(newSchedule.end.getTime());
+
     dataFile.writeBytes(newSchedule.desc + "\n");
+
     dataFile.writeBytes(newSchedule.descURL + "\n");
+
     dataFile.writeBytes(newSchedule.minutesURL + "\n");
+
     dataFile.writeBytes(newSchedule.attending + "\n");
 
     conv = new Long(newSchedule.start.getTime());
+
     key = conv.toString();
+
     key = StringUtil.padStringLeft(key, ' ', Size);
+
     conv = new long(pos);
+
     data = conv.toString();
+
     data = StringUtil.padStringLeft(data, ' ', Size);
+
     index.addRecord(key, data);
+
 }
 ```
 
 `add` 方法必须将元素添加到数据文件并添加到索引文件中。
 
+### RandomAccessFile 与数据操作
 
+`RandomAccessFile` 位于 `DataOutput` 和 `DataInput` 过滤器之上，因此我们可以直接读写 Java 类型。如果能直接写入对象就太好了，但遗憾的是，并没有提供这种可能性。另一个重要的点是：我们使用了 `writeBytes` 方法。它以 8 位字节的形式写入数据。如果我们使用 `writeChars` 方法，那么每个字符将占用 16 位。`writeUTF` 方法将写入 16 位的 Unicode 字符。如果你打算使用 `readLine` 方法，则需要使用 `writeBytes`。目前不存在对应的可以读取 `writeChars` 输出的读取方法。
 
+另请注意，每行之后都有一个 `"\n"`。在接下来的内容，我们将使用 `readLine` 方法 —— 它将回车符识别为行结束符号。这允许设置变长度的字符串，从而节省空间并使得无需手动解析字符串。
 
-# RandomAccessFile 与数据操作
-
-`RandomAccessFile` 位于 `DataOutput` 和 `DataInput` 过滤器之上，因此我们可以直接读写 Java 类型。如果能直接写入对象就太好了，但遗憾的是，并没有提供这种可能性。另一个重要的点是：我们使用了 `writeBytes` 方法。它以 8 位字节的形式写入数据。如果我们使用 `writeChars` 方法，那么每个字符将占用 16 位。`writeUTF` 方法将将写入 16 位的 Unicode 字符。如果你打算使用 `readLine` 方法，则需要使用 `writeBytes`。目前不存在对应的可以读取 `writeChars` 输出的读取方法。
-
-另请注意，每行之后都有一个 `"\n"`。在接下来的内容，我们将使用 `readLine` 方法——它将回车符识别为行结束符号。这允许设置变长度的字符串，从而节省空间并使得无需手动解析字符串。
-
-`index` 文件包含两个元素：`values` `key` 和 `values` `data`。这两个元素具有固定长度。索引元素是开始日期，我们将其保留为 `long` 类型的值。为了方便读取索引文件，它以字符串形式存储。数据存储在数据文件的偏移位置处，并以字符串格式存储。如果我们想减小索引文件的大小，可以将这些值存储为 `long` 词，而不是字符串：
+`index` 文件包含两个元素：`key` 和 `data`。这两个元素具有固定长度。索引元素是开始日期，我们将其保留为 `long` 类型的值。为了方便读取索引文件，它以字符串形式存储。数据存储在数据文件的偏移位置处，并以字符串格式存储。如果我们想减小索引文件的大小，可以将这些值存储为 `long` 类型，而不是字符串：
 
 ```java
 public void del(scheduleStruct del)
+
 throws not found exception, IOException {
+
     Long conv;
+
     String key;
+
     String data;
+
     long pos;
+
     conv = new Long(del.start.getTime());
+
     key = conv.toString();
+
     key = StringUtil.padStringLeft(key, ' ', Size);
+
     data = index.findRecord(key);
+
     conv = new Long(data.trim());
+
     pos = conv.longValue();
+
     // 现在可以删除 pos 处的数据，
+
     // 但我们不会这样做
+
     index.delRecord(key);
+
 }
 ```
 
@@ -11009,40 +10872,61 @@ throws not found exception, IOException {
 
 ```java
 public scheduleStruct find(Date date)
+
 throws not found exception, IOException {
+
     scheduleStruct result;
+
     long pos;
+
     Long conv;
+
     String key;
+
     String data;
+
     conv = new Long(date.getTime());
+
     key = conv.toString();
+
     key = StringUtil.padStringLeft(key, ' ', Size);
+
     data = index.findRecord(key);
+
     conv = new Long(data.trim());
+
     pos = conv.longValue();
+
     return findPos(pos);
+
 }
 
 public scheduleStruct findPos(long pos) throws IOException {
+
     scheduleStruct result = new scheduleStruct();
+
     dataFile.seek(pos);
+
     result.start = new Date(dataFile.readLong());
+
     result.end = new Date(dataFile.readLong());
+
     result.desc = new String(dataFile.readLine());
+
     result.descURL = new String(dataFile.readLine());
+
     result.minutesURL = new String(dataFile.readLine());
+
     result.attending = new String(dataFile.readLine());
+
     return result;
+
 }
 ```
 
-此方法由两个子程序组成。第一个由 `schedule` 接口定义，它遍历 `index` 文件并在 `data` 文件中找到所需元素的位置。第二个子程序——`findPos`——用于从 `data` 文件中恢复数据。这里应用了 `readLine` 方法。我们查找相关位置并从 `data` 文件中读取每个字段。
+此方法由两个子程序组成。第一个由 `schedule` 接口定义，它遍历 `index` 文件并在 `data` 文件中找到所需元素的位置。第二个子程序 —— `findPos` —— 用于从 `data` 文件中恢复数据。这里应用了 `readLine` 方法。我们查找相关位置并从 `data` 文件中读取每个字段。
 
-
-
-
-第一个是 `WINDOW_DESTROY`。当用户在窗口管理器中选择销毁函数 `(destroy)` 时就会发生。系统的实际机制取决于特定版本的窗口管理器，但它通常允许用户销毁窗口。当这种情况发生时，剩下的就是我们优雅地退出了。调用该方法是为了清除帧 `release` 内存，这会 `free` 所有使用的系统资源，并从曾经需要此机制退出应用程序的系统中出来。
+第一个是 `WINDOW_DESTROY`。当用户在窗口管理器中选择销毁函数 `destroy` 时就会发生。系统的实际机制取决于特定版本的窗口管理器，但它通常允许用户销毁窗口。当这种情况发生时，剩下的就是我们优雅地退出了。调用该方法是为了清除帧 `release` 内存，这会 `free` 所有使用的系统资源，并从曾经需要此机制退出应用程序的系统中出来。
 
 另一个重要的事件与菜单相关的 `ACTION_EVENT`。为了弄清楚此事件发生在哪个 `MenuItem` 上，让我们使用 `instanceof` 运算符。由于我们只有一个菜单，所以很显然该事件就发生在那里。要找到按钮菜单的名称，我们可以查看 `evt.arg`。然后我们让该按钮调用 `subroutine` 来执行工作。
 
@@ -11052,45 +10936,83 @@ public scheduleStruct findPos(long pos) throws IOException {
 
 ```java
 public boolean handleEvent(Event evt) {
+
     if (evt.id == Event.WINDOW_MOVED) {
 
     }
+
     else if (evt.id == Event.WINDOW_DESTROY) {
+
         dispose();
+
     }
+
     else if (evt.id == Event.ACTION_EVENT) {
+
         if (evt.target instanceof MenuItem) {
+
             String st = (String)evt.arg;
+
             if (st.equals("Quit")) {
+
                 quit();
+
                 return true;
+
             }
+
             else if (st.equals("Login")) {
+
                 login();
+
                 return true;
+
             }
+
             else if (st.equals("Open Schedule")) {
+
                 open();
+
                 return true;
+
             }
+
             else if (st.equals("Server Name")) {
+
                 snFrame sname = new snFrame("Change sname");
+
                 sname.init();
+
                 sname.show();
+
                 return true;
+
             }
+
             else if (st.equals("User Name")) {
+
                 unFrame uname = new unFrame("User name", owner);
+
                 uname.init();
+
                 uname.show();
+
                 return true;
+
             }
+
             else
+
                 System.out.println("Menu: " + (string) evt.arg);
+
             return true;
+
         }
+
     }
+
     return false;
+
 }
 ```
 
@@ -11098,62 +11020,119 @@ public boolean handleEvent(Event evt) {
 
 ```java
 class acFrame extends frame {
+
     ui owner;
+
     panel datePanel = new Panel();
+
     panel timePanel = new Panel();
+
     label mdLabel = new Label("Meeting date");
+
     TextField mdField = new TextField(7);
+
     Label tsLabel = new Label("Time Start");
+
     TextField tsField = new TextField(4);
+
     Label endLabel = new Label("End");
+
     TextField endField = new TextField(4);
+
     panel dataPanel = new Panel();
+
     Panel labPanel = new Panel();
+
     panel fieldPanel = new Panel();
+
     label descLabel = new Label("Description");
+
     TextField descField = new TextField(40);
+
     label attendLabel = new Label("Attending");
+
     TextField attendField = new TextField(40);
+
     Label urlLabel = new Label("URL");
+
     TextField urlField = new TextField(40);
-    panel buttonPanel = new Panel();
-    Button schedButton = new Button("Schedule");
-    Button cancelButton = new Button("Cancel");
+```
 
-    public acFrame(String s, String user, ui owner) {
-        super(s);
-        this.owner = owner;
-    }
 
-    public void init() {
-        setLayout(new PackerLayout());
-        datePanel.setLayout(new PackerLayout());
-        timePanel.setLayout(new PackerLayout());
-        datePanel.add("mdLabel;side=left", mdLabel);
-        datePanel.add("mdField;side=left", mdField);
-        timePanel.add("tsLabel;side=left", tsLabel);
-        timePanel.add("tsField;side=left", tsField);
-        timePanel.add("endLabel;side=left", endLabel);
-        timePanel.add("endField;side=left", endField);
-        dataPanel.setLayout(new PackerLayout());
-        labPanel.setLayout(new PackerLayout());
-        fieldPanel.setLayout(new PackerLayout());
-        dataPanel.add("labPanel;side=left", labPanel);
-        dataPanel.add("fieldPanel;side=left", fieldPanel);
-        labPanel.add("descLabel;anchor=w;ipady=3", descLabel);
-        labPanel.add("attendLabel;anchor=w;ipady=3", attendLabel);
-        labPanel.add("urlLabel;anchor=w;ipady=3", urlLabel);
-        fieldPanel.add("descField", descField);
-        fieldPanel.add("attendField", attendField);
-        fieldPanel.add("urlField", urlField);
-        buttonPanel.setLayout(new PackerLayout());
-        buttonPanel.add("schedButton;side=left;padx=5", schedButton);
-        buttonPanel.add("cancelButton;side=left", cancelButton);
-        add("datePanel;anchor=w;pady=5", datePanel);
-        add("timePanel;anchor=w;pady=5", timePanel);
-        add("dataPanel;anchor=w;pady=5", dataPanel);
-        add("buttonPanel", buttonPanel);
-    }
+
+```java
+panel buttonPanel = new Panel();
+
+Button schedButton = new Button("Schedule");
+
+Button cancelButton = new Button("Cancel");
+
+public acFrame(String s, String user, ui owner) {
+
+    super(s);
+
+    this.owner = owner;
+
+}
+
+public void init() {
+
+    setLayout(new PackerLayout());
+
+    datePanel.setLayout(new PackerLayout());
+
+    timePanel.setLayout(new PackerLayout());
+
+    datePanel.add("mdLabel;side=left", mdLabel);
+
+    datePanel.add("mdField;side=left", mdField);
+
+    timePanel.add("tsLabel;side=left", tsLabel);
+
+    timePanel.add("tsField;side=left", tsField);
+
+    timePanel.add("endLabel;side=left", endLabel);
+
+    timePanel.add("endField;side=left", endField);
+
+    dataPanel.setLayout(new PackerLayout());
+
+    labPanel.setLayout(new PackerLayout());
+
+    fieldPanel.setLayout(new PackerLayout());
+
+    dataPanel.add("labPanel;side=left", labPanel);
+
+    dataPanel.add("fieldPanel;side=left", fieldPanel);
+
+    labPanel.add("descLabel;anchor=w;ipady=3", descLabel);
+
+    labPanel.add("attendLabel;anchor=w;ipady=3", attendLabel);
+
+    labPanel.add("urlLabel;anchor=w;ipady=3", urlLabel);
+
+    fieldPanel.add("descField", descField);
+
+    fieldPanel.add("attendField", attendField);
+
+    fieldPanel.add("urlField", urlField);
+
+    buttonPanel.setLayout(new PackerLayout());
+
+    buttonPanel.add("schedButton;side=left;padx=5", schedButton);
+
+    buttonPanel.add("cancelButton;side=left", cancelButton);
+
+    add("datePanel;anchor=w;pady=5", datePanel);
+
+    add("timePanel;anchor=w;pady=5", timePanel);
+
+    add("dataPanel;anchor=w;pady=5", dataPanel);
+
+    add("buttonPanel", buttonPanel);
+
+}
+
 }
 ```
 
@@ -11171,4 +11150,3 @@ class acFrame extends frame {
     * 通知用户他的日程已更改。
     * 关于重要会议或日期的警告（例如结婚纪念日）。
 * 允许安排资源的使用——例如会议室和音视频设备。
-

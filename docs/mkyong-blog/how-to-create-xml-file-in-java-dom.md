@@ -1,40 +1,42 @@
-# 如何用 Java 编写 XML 文件—(DOM 解析器)
+
+# 如何用 Java 编写 XML 文件——DOM 解析器
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/how-to-create-xml-file-in-java-dom/>
 
-本教程展示了如何使用 Java 内置的[DOM API](http://web.archive.org/web/20220626054141/https://docs.oracle.com/javase/tutorial/jaxp/dom/index.html)将数据写入 XML 文件。
+本教程展示了如何使用 Java 内置的 [DOM API](http://web.archive.org/web/20220626054141/https://docs.oracle.com/javase/tutorial/jaxp/dom/index.html) 将数据写入 XML 文件。
 
-目录
+## 目录
 
-*   [1。将 XML 写入文件](#write-xml-to-a-file)
-*   [2。漂亮的打印 XML](#pretty-print-xml)
-*   [3。编写 XML 元素、属性、注释 CDATA 等](#write-xml-elements-attributes-comments-cdata-etc)
-*   [4。DOM 常见问题解答](#dom-faqs)
-    *   [4.1 如何禁用 XML 声明？](#how-to-disable-the-xml-declaration)
-    *   [4.2 如何改变 XML 编码？](#how-to-change-the-xml-encoding)
-    *   4.3 如何美化 XML？
-    *   [4.4 如何隐藏 XML 声明`standalone="no"`？](#how-to-hide-the-xml-declaration-standaloneno)
-    *   [4.5 如何更改 XML 声明版本？](#how-to-change-the-xml-declaration-version)
-*   [5。下载源代码](#download-source-code)
-*   [6。参考文献](#references)
+- [1. 将 XML 写入文件](#write-xml-to-a-file)
+- [2. 漂亮地打印 XML](#pretty-print-xml)
+- [3. 编写 XML 元素、属性、注释、CDATA 等](#write-xml-elements-attributes-comments-cdata-etc)
+- [4. DOM 常见问题解答](#dom-faqs)
+  - [4.1 如何禁用 XML 声明？](#how-to-disable-the-xml-declaration)
+  - [4.2 如何改变 XML 编码？](#how-to-change-the-xml-encoding)
+  - 4.3 如何美化 XML？
+  - [4.4 如何隐藏 XML 声明 `standalone="no"`？](#how-to-hide-the-xml-declaration-standaloneno)
+  - [4.5 如何更改 XML 声明版本？](#how-to-change-the-xml-declaration-version)
+- [5. 下载源代码](#download-source-code)
+- [6. 参考文献](#references)
 
-*PS 用 Java 11 测试过*
+*PS：用 Java 11 测试过。*
 
 **读这个**
-[如何用 Java 读取 XML 文件——(DOM 解析器)](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/)
 
-## 1。将 XML 写入文件
+[如何用 Java 读取 XML 文件——DOM 解析器](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/)
 
-创建 XML 并将其写入文件的步骤。
+## 1. 将 XML 写入文件
 
-1.  创建一个`Document doc`。
-2.  创建 XML 元素、属性等。，并追加到`Document doc`。
-3.  创建一个`Transformer`来将`Document doc`写入一个`OutputStream`。
+创建 XML 并将其写入文件的步骤如下：
 
-WriteXmlDom1.java
+1. 创建一个 `Document doc`。
+2. 创建 XML 元素、属性等，并追加到 `Document doc`。
+3. 创建一个 `Transformer`，将 `Document doc` 写入 `OutputStream`。
+
+### WriteXmlDom1.java
 
 ```java
- package com.mkyong.xml.dom;
+package com.mkyong.xml.dom;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -88,61 +90,61 @@ public class WriteXmlDom1 {
         transformer.transform(source, result);
 
     }
-} 
+}
 ```
 
-输出
+### 输出
 
-Terminal
+#### Terminal
 
-```java
- <?xml version="1.0" encoding="UTF-8" standalone="no"?><company><staff>mkyong</staff></company> 
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><company><staff>mkyong</staff></company>
 ```
 
-## 2。漂亮的打印 XML
+## 2. 漂亮地打印 XML
 
-2.1 默认情况下，`Transformer`以紧凑格式输出 XML。
+默认情况下，`Transformer` 以紧凑格式输出 XML。
 
-Terminal
+### Terminal
 
-```java
- <?xml version="1.0" encoding="UTF-8" standalone="no"?><company><staff>mkyong</staff></company> 
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><company><staff>mkyong</staff></company>
 ```
 
-2.2 我们可以设置`Transformer`中的`OutputKeys.INDENT`来启用漂亮的打印格式。
+我们可以设置 `Transformer` 中的 `OutputKeys.INDENT` 来启用漂亮的打印格式：
 
 ```java
- TransformerFactory transformerFactory = TransformerFactory.newInstance();
-  Transformer transformer = transformerFactory.newTransformer();
+TransformerFactory transformerFactory = TransformerFactory.newInstance();
+Transformer transformer = transformerFactory.newTransformer();
 
-  // pretty print XML
-  transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+// pretty print XML
+transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 
-  DOMSource source = new DOMSource(doc);
-  StreamResult result = new StreamResult(output);
+DOMSource source = new DOMSource(doc);
+StreamResult result = new StreamResult(output);
 
-  transformer.transform(source, result); 
+transformer.transform(source, result);
 ```
 
-输出
+### 输出
 
-Terminal
+#### Terminal
 
-```java
- <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <company>
   <staff>mkyong</staff>
-</company> 
+</company>
 ```
 
-## 3。编写 XML 元素、属性、注释 CDATA 等
+## 3. 编写 XML 元素、属性、注释、CDATA 等
 
-下面的例子使用一个 DOM 解析器来创建 XML 并将其写入一个`OutputStream`。
+下面的例子使用 DOM 解析器来创建 XML，并将其写入 `OutputStream`。
 
-WriteXmlDom3.java
+### WriteXmlDom3.java
 
 ```java
- package com.mkyong.xml.dom;
+package com.mkyong.xml.dom;
 
 import org.w3c.dom.CDATASection;
 import org.w3c.dom.Comment;
@@ -261,15 +263,17 @@ public class WriteXmlDom3 {
       transformer.transform(source, result);
 
   }
-} 
+}
 ```
 
-输出
+### 输出
 
-Terminal
+#### Terminal
+
+
 
 ```java
- <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <company>
   <staff id="1001">
       <name>mkyong</name>
@@ -288,7 +292,7 @@ Terminal
           <![CDATA[a & b]]>
       </bio>
   </staff>
-</company> 
+</company>
 ```
 
 ## 4。DOM 常见问题解答
@@ -300,9 +304,9 @@ Terminal
 我们可以配置`OutputKeys.OMIT_XML_DECLARATION`来显示 XML 声明。
 
 ```java
- // hide the xml declaration
-  // hide <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-  transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes"); 
+// hide the xml declaration
+// hide <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
 ```
 
 ### 4.2 如何改变 XML 编码？
@@ -310,9 +314,9 @@ Terminal
 我们可以配置`OutputKeys.ENCODING`来改变 XML 编码。
 
 ```java
- // set xml encoding
-  // <?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
-  transformer.setOutputProperty(OutputKeys.ENCODING,"ISO-8859-1"); 
+// set xml encoding
+// <?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+transformer.setOutputProperty(OutputKeys.ENCODING, "ISO-8859-1");
 ```
 
 ### 4.3 如何美化 XML？
@@ -320,28 +324,28 @@ Terminal
 我们可以配置`OutputKeys.INDENT`来启用漂亮的打印 XML。
 
 ```java
- // pretty print
-  transformer.setOutputProperty(OutputKeys.INDENT, "yes"); 
+// pretty print
+transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 ```
 
-### 如何隐藏 XML 声明` standalone="no " `？
+### 4.4 如何隐藏 XML 声明`standalone="no"`？
 
 我们可以配置`document.setXmlStandalone(true)`来隐藏 XML 声明`standalone="no"`。
 
 ```java
- TransformerFactory transformerFactory = TransformerFactory.newInstance();
-  Transformer transformer = transformerFactory.newTransformer();
+TransformerFactory transformerFactory = TransformerFactory.newInstance();
+Transformer transformer = transformerFactory.newTransformer();
 
-  // pretty print
-  transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+// pretty print
+transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 
-  // hide the standalone="no"
-  doc.setXmlStandalone(true);
+// hide the standalone="no"
+doc.setXmlStandalone(true);
 
-  DOMSource source = new DOMSource(doc);
-  StreamResult result = new StreamResult(output);
+DOMSource source = new DOMSource(doc);
+StreamResult result = new StreamResult(output);
 
-  transformer.transform(source, result); 
+transformer.transform(source, result);
 ```
 
 ### 4.5 如何更改 XML 声明版本？
@@ -349,29 +353,29 @@ Terminal
 我们可以配置`document.setXmlVersion("version")`来改变 XML 声明版本。
 
 ```java
- // set xml version
-  // <?xml version="1.1" encoding="ISO-8859-1" standalone="no"?>
-  doc.setXmlVersion("1.1"); 
+// set xml version
+// <?xml version="1.1" encoding="ISO-8859-1" standalone="no"?>
+doc.setXmlVersion("1.1");
 ```
 
 ## 5。下载源代码
 
-$ git 克隆[https://github.com/mkyong/core-java](http://web.archive.org/web/20220626054141/https://github.com/mkyong/core-java)
+`$ git` 克隆[https://github.com/mkyong/core-java](http://web.archive.org/web/20220626054141/https://github.com/mkyong/core-java)
 
-$ cd java-xml
+`$ cd java-xml`
 
-$ CD src/main/Java/com/mkyong/XML/DOM/
+`$ CD src/main/Java/com/mkyong/XML/DOM/`
 
 ## 6。参考文献
 
-*   [维基百科–文档对象模型](http://web.archive.org/web/20220626054141/https://en.wikipedia.org/wiki/Document_Object_Model)
-*   [Oracle–用于 XML 处理的 Java API(JAXP)](http://web.archive.org/web/20220626054141/https://docs.oracle.com/javase/tutorial/jaxp/index.html)
-*   [Oracle–文档对象模型](http://web.archive.org/web/20220626054141/https://docs.oracle.com/javase/tutorial/jaxp/dom/index.html)
-*   [如何用 Java 编写 XML 文件—(JDOM)](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-create-xml-file-in-java-jdom-parser/)
-*   [如何用 Java 编写 XML 文件(StAX Writer)](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-write-xml-file-in-java-stax-writer/)
-*   [如何在 Java 中读取 XML 文件—(SAX 解析器)](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-read-xml-file-in-java-sax-parser/)
-*   [如何在 Java 中读取 XML 文件—(JDOM 解析器)](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-read-xml-file-in-java-jdom-example/)
-*   [如何在 Java 中读取 XML 文件—(DOM 解析器)](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/)
-*   [JAXB hello world 示例](http://web.archive.org/web/20220626054141/https://mkyong.com/java/jaxb-hello-world-example/)
+- [维基百科–文档对象模型](http://web.archive.org/web/20220626054141/https://en.wikipedia.org/wiki/Document_Object_Model)
+- [Oracle–用于 XML 处理的 Java API(JAXP)](http://web.archive.org/web/20220626054141/https://docs.oracle.com/javase/tutorial/jaxp/index.html)
+- [Oracle–文档对象模型](http://web.archive.org/web/20220626054141/https://docs.oracle.com/javase/tutorial/jaxp/dom/index.html)
+- [如何用 Java 编写 XML 文件—(JDOM)](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-create-xml-file-in-java-jdom-parser/)
+- [如何用 Java 编写 XML 文件(StAX Writer)](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-write-xml-file-in-java-stax-writer/)
+- [如何在 Java 中读取 XML 文件—(SAX 解析器)](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-read-xml-file-in-java-sax-parser/)
+- [如何在 Java 中读取 XML 文件—(JDOM 解析器)](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-read-xml-file-in-java-jdom-example/)
+- [如何在 Java 中读取 XML 文件—(DOM 解析器)](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/)
+- [JAXB hello world 示例](http://web.archive.org/web/20220626054141/https://mkyong.com/java/jaxb-hello-world-example/)
 
-<input type="hidden" id="mkyong-current-postId" value="4346">
+`<input type="hidden" id="mkyong-current-postId" value="4346">`

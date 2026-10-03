@@ -1,4 +1,5 @@
-# 反应式编程(第二部分)
+
+# 反应式编程（第二部分）
 
 > 原文：<https://medium.com/javarevisited/reactive-programming-part-2-43f73f43ee68?source=collection_archive---------0----------------------->
 
@@ -14,7 +15,7 @@
 
 图自 [https://spring.io](https://spring.io/reactive)
 
-在本教程中，我将讲解*“如何用*[*Spring web flux*](/javarevisited/7-best-webflux-and-reactive-spring-boot-courses-for-java-programmers-33b7c6fa8995)*和*[*MongoDB*](/javarevisited/10-free-online-courses-to-learn-mongodb-and-nosql-942609611664)*”*。
+在本教程中，我将讲解*“如何用 [Spring web flux](/javarevisited/7-best-webflux-and-reactive-spring-boot-courses-for-java-programmers-33b7c6fa8995) 和 [MongoDB](/javarevisited/10-free-online-courses-to-learn-mongodb-and-nosql-942609611664)”*。
 
 # 技术和工具
 
@@ -40,29 +41,29 @@ Solen Feyissa 在 [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=r
 
 ## 邮件文档模型
 
-这个模型有 6 个字段:id，from，to，cc，bcc，time 和 MailDocument 用于将数据保存到数据库中。
+这个模型有 6 个字段：`id`、`from`、`to`、`cc`、`bcc`、`time`，`MailDocument` 用于将数据保存到数据库中。
 
-MailDocument.java
+`MailDocument.java`
 
 ## 邮件存储库
 
-您可以使用 [Spring 数据项目](/javarevisited/5-best-spring-data-jpa-courses-for-java-developers-45e6438be3c9)轻松创建一个扩展 *ReactiveMongoRepository* 的接口。有了这个，就不需要实现这个接口了。
+您可以使用 [Spring 数据项目](/javarevisited/5-best-spring-data-jpa-courses-for-java-developers-45e6438be3c9)轻松创建一个扩展 `ReactiveMongoRepository` 的接口。有了这个，就不需要实现这个接口了。
 
-MailRepository.java
+`MailRepository.java`
 
-使用*ReactiveMongoRepository*而不是 *MongoRepository* 是很重要的，因为有了这个接口，我们提供了从表示到持久化的反应性。
+使用 `ReactiveMongoRepository` 而不是 `MongoRepository` 是很重要的，因为有了这个接口，我们提供了从表示到持久化的反应性。
 
 ## 邮件服务
 
-邮件服务有两个公共方法和五个私有方法。简单地说，这些方法提供发送带附件或不带附件的电子邮件。在 s [结束电子邮件](https://javarevisited.blogspot.com/2014/08/how-to-send-email-from-java-program-example.html)之后，电子邮件数据被保存到 MongoDB 数据库。
+邮件服务有两个公共方法和五个私有方法。简单地说，这些方法提供发送带附件或不带附件的电子邮件。在发送电子邮件之后，电子邮件数据被保存到 MongoDB 数据库。
 
-MailService.java
+`MailService.java`
 
 ## 邮件控制器
 
-*MailController.java*是一个[静止控制器](https://javarevisited.blogspot.com/2017/08/difference-between-restcontroller-and-controller-annotations-spring-mvc-rest.html)，它有两个`@PostMapping`。
+`MailController.java` 是一个[静止控制器](https://javarevisited.blogspot.com/2017/08/difference-between-restcontroller-and-controller-annotations-spring-mvc-rest.html)，它有两个 `@PostMapping`。
 
-MailController.java
+`MailController.java`
 
 ## 数据库配置
 
@@ -76,7 +77,7 @@ brew services start mongodb-community@4.2
 
 ![](img/87081f9e055cd8f3a635d7a3d90e8d11.png)
 
-要连接到 [MongoDB 数据库](/javarevisited/5-best-nosql-database-programmers-and-developers-can-learn-42a0bdfa9a12)，编辑*“application . properties”*文件中的设置，该文件是*“resources”*的一部分。以下配置就足够了。
+要连接到 [MongoDB 数据库](/javarevisited/5-best-nosql-database-programmers-and-developers-can-learn-42a0bdfa9a12)，编辑 `application.properties` 文件中的设置，该文件是 `resources` 的一部分。以下配置就足够了。
 
 ```
 #mongodb
@@ -99,15 +100,15 @@ spring.data.mongodb.database=test
 
 发送电子邮件
 
-您可以通过 Postman 中的**邮政**方法发送邮件到指定的电子邮件地址。首先要输入***Content-Type:application/JSON***header 键值对。第二，在 body 标签页中，你必须输入你想要以 [JSON 格式](https://javarevisited.blogspot.com/2022/03/3-examples-to-parse-json-in-java-using.html)保存数据库的邮件信息。
+您可以通过 Postman 中的 **POST** 方法发送邮件到指定的电子邮件地址。首先要输入 `Content-Type: application/json` 请求头键值对。第二，在 body 标签页中，你必须输入你想要以 [JSON 格式](https://javarevisited.blogspot.com/2022/03/3-examples-to-parse-json-in-java-using.html)保存数据库的邮件信息。
 
 [![](img/89bbe5b79df951d184f32d663d498691.png)](https://www.java67.com/2016/10/3-ways-to-convert-string-to-json-object-in-java.html)
 
 发送的电子邮件
 
-对了，还可以通过提供准确的 [JSON 对象](https://www.java67.com/2019/09/3-ways-to-ignore-null-fields-in-json-java-jackson.html)来测试其他 [**POST** 方法](https://javarevisited.blogspot.com/2016/10/difference-between-put-and-post-in-restful-web-service.html)。
+对了，还可以通过提供准确的 [JSON 对象](https://www.java67.com/2019/09/3-ways-to-ignore-null-fields-in-json-java-jackson.html)来测试其他 **POST** 方法。
 
-**注:**本教程重点介绍 Spring 数据、Spring WebFlux、MongoDB 和 REST API 的结合。项目中没有对对象字段的验证。
+**注：** 本教程重点介绍 Spring 数据、Spring WebFlux、MongoDB 和 REST API 的结合。项目中没有对对象字段的验证。
 
 # 资源
 

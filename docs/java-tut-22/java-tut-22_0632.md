@@ -1,3 +1,4 @@
+
 # 国际化域名
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/network/idn.html`](https://docs.oracle.com/javase/tutorial/i18n/network/idn.html)
@@ -9,7 +10,6 @@
 国际化域名的示例：
 
 +   `http://清华大学.cn`
-
 +   `http://www.транспорт.com`
 
 如果您点击这些链接，您会看到地址栏中表示的 Unicode 域名被替换为 ASCII 字符串。

@@ -1,30 +1,32 @@
+
 # 使用 Trie 和 DFS 映射和对 LeetCode 解
 
 > 原文：<https://medium.com/javarevisited/trie-and-dfs-d4c1924d72f6?source=collection_archive---------2----------------------->
 
-一个很好的问题可以通过使用 Trie、DFS 和哈希表来解决。
+一个很好的问题可以通过使用 `Trie`、`DFS` 和哈希表来解决。
 
 ## 677。映射求和对
 
-您需要设计一个允许您执行以下操作的地图:
+您需要设计一个允许您执行以下操作的地图：
 
-*   将字符串键映射到给定值。
-*   返回前缀等于给定字符串的关键字为的值的总和。
+- 将字符串键映射到给定值。
+- 返回前缀等于给定字符串的关键字为的值的总和。
 
-实现`MapSum`类:
+实现 `MapSum` 类：
 
-*   `MapSum()`初始化`MapSum`对象。
-*   `void insert(String key, int val)`将`key-val`对插入[地图](https://www.java67.com/2013/02/10-examples-of-hashmap-in-java-programming-tutorial.html)。如果`key`已经存在，原来的`key-value`对将被新的覆盖。
-*   `int sum(string prefix)`返回所有`key`以`prefix`开头的对的值之和。
+- `MapSum()` 初始化 `MapSum` 对象。
+- `void insert(String key, int val)` 将 `key-val` 对插入[地图](https://www.java67.com/2013/02/10-examples-of-hashmap-in-java-programming-tutorial.html)。如果 `key` 已经存在，原来的 `key-value` 对将被新的覆盖。
+- `int sum(string prefix)` 返回所有 `key` 以 `prefix` 开头的对的值之和。
 
-**例 1:**
+**例 1：**
 
 ```
 **Input**
 ["MapSum", "insert", "sum", "insert", "sum"]
 [[], ["apple", 3], ["ap"], ["app", 2], ["ap"]]
 **Output**
-[null, null, 3, null, 5]**Explanation**
+[null, null, 3, null, 5]
+**Explanation**
 MapSum mapSum = new MapSum();
 mapSum.insert("apple", 3);  
 mapSum.sum("ap");           // return 3 (apple = 3)
@@ -32,12 +34,12 @@ mapSum.insert("app", 2);
 mapSum.sum("ap");           // return 5 (apple + app = 3 + 2 = 5)
 ```
 
-**约束:**
+**约束：**
 
-*   `1 <= key.length, prefix.length <= 50`
-*   `key`和`prefix`仅由小写英文字母组成。
-*   `1 <= val <= 1000`
-*   最多`50`个电话会打给`insert`和`sum`。
+- `1 <= key.length, prefix.length <= 50`
+- `key` 和 `prefix` 仅由小写英文字母组成。
+- `1 <= val <= 1000`
+- 最多 `50` 个电话会打给 `insert` 和 `sum`。
 
 ## 参考码
 
@@ -187,4 +189,4 @@ public:
 
 ## 其他数据结构问题和资源
 
-  </javarevisited/top-10-free-data-structure-and-algorithms-courses-for-beginners-best-of-lot-ad807cc55f7a> 
+</javarevisited/top-10-free-data-structure-and-algorithms-courses-for-beginners-best-of-lot-ad807cc55f7a>

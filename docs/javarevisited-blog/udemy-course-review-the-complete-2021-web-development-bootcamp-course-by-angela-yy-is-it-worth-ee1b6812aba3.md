@@ -1,3 +1,4 @@
+
 # Angela Yu 完整的 2023 Web 开发 Bootcamp 课程值得吗？[综述]
 
 > 原文：<https://medium.com/javarevisited/udemy-course-review-the-complete-2021-web-development-bootcamp-course-by-angela-yy-is-it-worth-ee1b6812aba3?source=collection_archive---------0----------------------->
@@ -6,7 +7,7 @@
 
 [![](img/3d593c47b77e3e7eaab4ec299cc338b8.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-web-development-bootcamp%2F)
 
-大家好，如果你对 web 开发感兴趣，并希望加入 Udemy 上由 Angela Yu 开设的 2023 Web 开发训练营 课程，但不确定该课程是否适合你，那么你来对地方了。
+大家好，如果你对 web 开发感兴趣，并希望加入 Udemy 上由 Angela Yu 开设的 2023 Web 开发训练营课程，但不确定该课程是否适合你，那么你来对地方了。
 
 之前，我已经分享了[最适合初学者的 Web 开发课程](/better-programming/my-5-favorite-courses-to-learn-web-development-in-2019-a5e74167f8b2)以及一些[高级 Fullstack 课程](/javarevisited/top-10-online-courses-to-become-a-fullstack-web-developer-in-2020-d608a6b63232)，在这篇文章中，我将回顾 Udemy 上最受欢迎的 Web 开发课程。
 
@@ -38,25 +39,25 @@
 
 # 2.课程结构和内容质量
 
-这个庞大的课程包含超过 **53 个小时的视频内容**，目标是没有任何经验的初学者，需要开始学习并应用你将在现实生活中的网站或小企业中学到的东西。那么，让我们来探讨一下本课程的内容:
+这个庞大的课程包含超过 **53 个小时的视频内容**，目标是没有任何经验的初学者，需要开始学习并应用你将在现实生活中的网站或小企业中学到的东西。那么，让我们来探讨一下本课程的内容：
 
 ## 2.1.前端 web 开发
 
 创建网站或在线服务时，首先要做的是开发前端部分，以及网站将如何为访问者服务，为此，您可以通过学习 [HTML/CSS](https://www.java67.com/2020/08/5-best-online-courses-to-learn-html-5.html) 开发来开始本课程。
 
-HTML 是定义网站结构的语言，而 CSS 是定制网站的外观，比如颜色和文本大小等等。
+`HTML`是定义网站结构的语言，而`CSS`是定制网站的外观，比如颜色和文本大小等等。
 
 ## 2.2.JavaScript 简介
 
 创建网站的前端后，无论是使用 [HTML/CSS](/javarevisited/10-best-html-and-css-courses-for-beginners-in-2021-6757eec00032) 还是 [Bootstrap](https://javarevisited.blogspot.com/2020/07/top-5-courses-to-learn-bootstrap-in.html) 你都需要为你的网站添加一些交互性，这也是你在本节将要做的。
 
-JavaScript 是一种高级编程语言，它可以让你在网站上添加很多很棒的东西，创造更好的用户体验等等。
+`JavaScript`是一种高级编程语言，它可以让你在网站上添加很多很棒的东西，创造更好的用户体验等等。
 
 ## 2.3.后端 web 开发
 
 在开发了网站的整个前端之后，你必须创建它的后端，正如我之前所说的，当有人与你的服务进行交互时，这就是幕后的操作。
 
-出于这个原因，您将使用两个 javascript 框架来实现这个目标，这两个框架分别叫做 [Node.js](https://www.java67.com/2019/07/top-5-free-nodejs-courses-for-web-development.html) 和 [Express.js](https://www.java67.com/2020/06/top-5-courses-to-learn-mern-stack-for-web-development.html) 。您还将了解 API 以及如何将其他服务连接到您的网站，如添加支付或通过其他服务发送电子邮件。
+出于这个原因，您将使用两个 javascript 框架来实现这个目标，这两个框架分别叫做 [Node.js](https://www.java67.com/2019/07/top-5-free-nodejs-courses-for-web-development.html) 和 [Express.js](https://www.java67.com/2020/06/top-5-courses-to-learn-mern-stack-for-web-development.html) 。您还将了解`API`以及如何将其他服务连接到您的网站，如添加支付或通过其他服务发送电子邮件。
 
 ## 2.4.数据库技术
 
@@ -107,4 +108,4 @@ JavaScript 是一种高级编程语言，它可以让你在网站上添加很多
 
 **P. S. —** 如果你是 web 开发新手，正在寻找一个免费的在线培训课程来学习 web 开发，那么你也可以看看 Udemy 的这个[**Web Development By do:HTML/CSS From Scratch[FREE]**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fweb-development-learn-by-doing-html5-css3-from-scratch-introductory%2F)课程。这是完全免费的，你只需要一个 Udemy 帐户就可以加入这个课程。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fweb-development-learn-by-doing-html5-css3-from-scratch-introductory%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fweb-development-learn-by-doing-html5-css3-from-scratch-introductory%2F>

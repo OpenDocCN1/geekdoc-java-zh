@@ -1,22 +1,23 @@
+
 # 从 Docker 引擎 API 获取 Docker 容器
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/ops/docker-engine-api-container-info>
 
-## 1.概观
+## 1. 概观
 
 在本教程中，我们将看到如何使用 Docker 引擎 API 从容器内部访问 Docker 容器信息。
 
-## 2.设置
+## 2. 设置
 
 我们可以通过多种方式连接 Docker 引擎。我们将讨论 Linux 下最有用的，但是它们也适用于其他操作系统。
 
-然而，我们应该**非常小心**、**，因为启用远程访问会带来安全风险**。当容器可以访问引擎时，**它打破了与主机操作系统的隔离**。
+然而，我们应该**非常小心**，**因为启用远程访问会带来安全风险**。当容器可以访问引擎时，**它打破了与主机操作系统的隔离**。
 
 对于设置部分，我们将考虑我们对主机的完全控制。
 
-### 2.1.转发默认的 Unix 套接字
+### 2.1. 转发默认的 Unix 套接字
 
-默认情况下，Docker 引擎使用安装在主机操作系统上的`/var/run/docker.sock`下的 Unix 套接字:
+默认情况下，Docker 引擎使用安装在主机操作系统上的`/var/run/docker.sock`下的 Unix 套接字：
 
 ```java
 $ ss -xan | grep var
@@ -31,7 +32,7 @@ u_str LISTEN 0      4096                                      /var/run/docker.so
 
 使用这种方法，我们可以严格控制哪个容器可以访问 API。这就是 Docker CLI 在幕后的工作方式。
 
-让我们启动`alpine` Docker 容器，**使用`-v` 标志**挂载这个路径:
+让我们启动`alpine` Docker 容器，**使用`-v`标志**挂载这个路径：
 
 ```java
 $ docker run -it -v /var/run/docker.sock:/var/run/docker.sock alpine
@@ -39,7 +40,7 @@ $ docker run -it -v /var/run/docker.sock:/var/run/docker.sock alpine
 (alpine) $
 ```
 
-接下来，让我们在容器中安装一些实用程序:
+接下来，让我们在容器中安装一些实用程序：
 
 ```java
 (alpine) $ apk add curl && apk add jq
@@ -50,7 +51,7 @@ fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/community/x86_64/APKINDEX.tar.g
 ...
 ```
 
-现在让**使用带有`–unix-socket` 标志的`curl`** 和 [`Jq`](/web/20220727020703/https://www.baeldung.com/linux/jq-command-json) 来获取和过滤一些容器数据:
+现在让**使用带有`--unix-socket`标志的`curl`**和[`Jq`](/web/20220727020703/https://www.baeldung.com/linux/jq-command-json)来获取和过滤一些容器数据：
 
 ```java
 (alpine) $ curl -s --unix-socket /var/run/docker.sock http://dummy/containers/json | jq '.'
@@ -69,11 +70,11 @@ fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/community/x86_64/APKINDEX.tar.g
 ...
 ```
 
-这里，**我们在`/containers/json`** 端点上发出一个`GET` ，**得到当前运行的容器**。然后我们使用`jq`美化输出。
+这里，**我们在`/containers/json`**端点上发出一个`GET`，**得到当前运行的容器**。然后我们使用`jq`美化输出。
 
 稍后我们将讨论引擎 API 的细节。
 
-### 2.2.启用 TCP 远程访问
+### 2.2. 启用 TCP 远程访问
 
 我们还可以使用 TCP 套接字实现远程访问。
 
@@ -81,9 +82,9 @@ fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/community/x86_64/APKINDEX.tar.g
 
 我们将只讨论第一种设置，因为大多数步骤都是相似的。
 
-默认 Docker 设置包括一个桥接网络。这里是**，所有的集装箱都在这里连接，除非另有说明**。
+默认 Docker 设置包括一个桥接网络。这里是**所有的集装箱都在这里连接，除非另有说明**。
 
-因为我们希望只允许容器访问引擎 API，所以让我们首先确定它们的网络:
+因为我们希望只允许容器访问引擎 API，所以让我们首先确定它们的网络：
 
 ```java
 $ docker network ls
@@ -93,7 +94,7 @@ dfad5fbfc671        host                host                local
 1ee855939a2a        none                null                local 
 ```
 
-让我们来看看它的细节:
+让我们来看看它的细节：
 
 ```java
 $ docker network inspect a3b64ea758e1
@@ -118,7 +119,7 @@ $ docker network inspect a3b64ea758e1
 ...
 ```
 
-接下来，让我们看看 Docker 服务单元位于何处:
+接下来，让我们看看 Docker 服务单元位于何处：
 
 ```java
 $ systemctl status docker.service
@@ -131,7 +132,7 @@ docker.service - Docker Application Container Engine
              └─6452 docker-containerd --config /var/run/docker/containerd/containerd.toml --log-level warn 
 ```
 
-现在让我们来看看服务单元的定义:
+现在让我们来看看服务单元的定义：
 
 ```java
 $ cat /usr/lib/systemd/system/docker.service
@@ -150,9 +151,9 @@ ExecReload=/bin/kill -s HUP $MAINPID
 ...
 ```
 
-属性定义了由`systemd`(`dockerd`可执行文件)运行的命令。**我们将`-H` 标志传递给它，并指定相应的网络和端口在**上监听。
+属性定义了由`systemd`（`dockerd`可执行文件）运行的命令。**我们将`-H`标志传递给它，并指定相应的网络和端口在**上监听。
 
-我们可以直接修改这个服务单元(不推荐)，但是让我们使用`$DOCKER_OPTS` 变量(在`EnvironmentFile=/etc/sysconfig/docker`中定义):
+我们可以直接修改这个服务单元（不推荐），但是让我们使用`$DOCKER_OPTS`变量（在`EnvironmentFile=/etc/sysconfig/docker`中定义）：
 
 ```java
 $ cat /etc/sysconfig/docker 
@@ -166,7 +167,7 @@ $ cat /etc/sysconfig/docker
 DOCKER_OPTS="-H unix:///var/run/docker.sock -H tcp://172.17.0.1:2375"
 ```
 
-这里，**我们使用桥接网络的网关地址作为绑定地址**。**这对应于主机**上的`docker0`界面:
+这里，**我们使用桥接网络的网关地址作为绑定地址**。**这对应于主机**上的`docker0`界面：
 
 ```java
 $ ip address show dev docker0
@@ -181,7 +182,7 @@ $ ip address show dev docker0
 
 我们还启用了本地 Unix 套接字，以便 Docker CLI 仍然可以在主机上工作。
 
-我们还需要做一步。让我们**允许我们的容器包到达主机**:
+我们还需要做一步。让我们**允许我们的容器包到达主机**：
 
 ```java
 $ iptables -I INPUT -i docker0 -j ACCEPT
@@ -189,7 +190,7 @@ $ iptables -I INPUT -i docker0 -j ACCEPT
 
 这里，我们设置 Linux 防火墙接受所有通过`docker0`接口的包。
 
-现在，让我们重新启动 Docker 服务:
+现在，让我们重新启动 Docker 服务：
 
 ```java
 $ systemctl restart docker.service
@@ -202,7 +203,7 @@ $ systemctl status docker.service
              └─8137 docker-containerd --config /var/run/docker/containerd/containerd.toml --log-level wa
 ```
 
-让我们再次运行我们的`alpine` 容器:
+让我们再次运行我们的`alpine`容器：
 
 ```java
 (alpine) $ curl -s http://172.17.0.1:2375/containers/json | jq '.'
@@ -221,17 +222,17 @@ $ systemctl status docker.service
 ... 
 ```
 
-我们应该**意识到所有连接到桥接网络的容器都可以访问守护程序 API** 。
+我们应该**意识到所有连接到桥接网络的容器都可以访问守护程序 API**。
 
 此外，**我们的 TCP 连接没有加密**。
 
-## 3.坞站引擎 API
+## 3. Docker 引擎 API
 
 现在我们已经设置了远程访问，让我们来看看 API。
 
 我们将只探索几个有趣的选项，但我们可以随时查看[完整文档](https://web.archive.org/web/20220727020703/https://docs.docker.com/engine/api/latest)了解更多信息。
 
-让我们**获取一些关于我们的容器**的信息:
+让我们**获取一些关于我们的容器**的信息：
 
 ```java
 (alpine) $ curl -s http://172.17.0.1:2375/containers/"$(hostname)"/json | jq '.'
@@ -250,13 +251,13 @@ $ systemctl status docker.service
 
 在这种情况下，我们运行`hostname`命令来获取`container-id`。
 
-接下来，让我们**监听 Docker 守护进程**上的事件:
+接下来，让我们**监听 Docker 守护进程**上的事件：
 
 ```java
 (alpine) $ curl -s http://172.17.0.1:2375/events | jq '.'
 ```
 
-现在，在另一个终端中，让我们启动`hello-world` 容器:
+现在，在另一个终端中，让我们启动`hello-world`容器：
 
 ```java
 $ docker run hello-world
@@ -266,7 +267,7 @@ This message shows that your installation appears to be working correctly.
 ... 
 ```
 
-回到我们的`alpine` 容器，我们得到一系列事件:
+回到我们的`alpine`容器，我们得到一系列事件：
 
 ```java
 {
@@ -288,7 +289,7 @@ This message shows that your installation appears to be working correctly.
 
 到目前为止，我们一直在做非侵入性的事情。是时候改变一下了。
 
-让我们创建并启动一个容器。首先，我们定义它的清单:
+让我们创建并启动一个容器。首先，我们定义它的清单：
 
 ```java
 (alpine) $ cat > create.json << EOF
@@ -299,7 +300,7 @@ This message shows that your installation appears to be working correctly.
 EOF 
 ```
 
-现在让**使用清单**调用`/containers/create`端点:
+现在让**使用清单**调用`/containers/create`端点：
 
 ```java
 (alpine) $ curl -X POST -H "Content-Type: application/json" -d @create.json http://172.17.0.1:2375/containers/create
@@ -307,15 +308,17 @@ EOF
 {"Id":"f96a6360ad8e36271cc75a3cff05348761569cf2f089bbb30d826bd1e2d52f59","Warnings":[]}
 ```
 
-然后，我们使用 id 来启动容器:
+然后，我们使用 id 来启动容器：
 
 ```java
 (alpine) $ curl -X POST http://172.17.0.1:2375/containers/f96a6360ad8e36271cc75a3cff05348761569cf2f089bbb30d826bd1e2d52f59/start
 ```
 
-最后，我们可以浏览日志:
 
-```java
+
+最后，我们可以浏览日志：
+
+```
 (alpine) $ curl http://172.17.0.1:2375/containers/f96a6360ad8e36271cc75a3cff05348761569cf2f089bbb30d826bd1e2d52f59/logs?stdout=true --output -
 
 Hello from Docker!
@@ -326,23 +329,23 @@ KThis message shows that your installation appears to be working correctly.
 ...
 ```
 
-注意我们在每一行的开头都有一些奇怪的字符。这是因为传输日志的流被[复用](https://web.archive.org/web/20220727020703/https://docs.docker.com/engine/api/v1.40/#operation/ContainerAttach)以区分`stderr` 和`stdout`。
+注意我们在每一行的开头都有一些奇怪的字符。这是因为传输日志的流被[复用](https://web.archive.org/web/20220727020703/https://docs.docker.com/engine/api/v1.40/#operation/ContainerAttach)以区分`stderr`和`stdout`。
 
 因此，输出需要进一步处理。
 
-我们可以通过在创建容器时启用`TTY`选项来避免这种情况:
+我们可以通过在创建容器时启用`TTY`选项来避免这种情况：
 
-```java
+```
 (alpine) $ cat create.json
 
 {
-  "Tty":true,	
+  "Tty":true,
   "Image": "hello-world",
   "Cmd": ["/hello"]
 }
 ```
 
-## 4.结论
+## 4. 结论
 
 在本教程中，我们学习了如何使用 Docker 引擎远程 API。
 

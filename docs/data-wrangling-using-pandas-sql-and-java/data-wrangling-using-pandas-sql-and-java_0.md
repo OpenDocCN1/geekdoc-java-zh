@@ -1,17 +1,14 @@
-# Pandas, SQL 和 Java 数据清洗使用指南
 
-
+# Pandas、SQL 和 Java 数据清洗使用指南
 
 ![](img/9781683929048.jpg)
 
-
-
 O. Campesato. *Data Wrangling Using Pandas, SQL, and Java*.
-
 
 出版者承认并尊重公司、制造商和开发者为区分其产品而使用的所有标记。本书中提到的所有品牌名称和产品名称均为其各自公司的商标或服务标记。对服务标记或商标等的任何遗漏（任何形式）或误用均不视为侵犯他人财产的尝试。
 
 美国国会图书馆控制号：2022945211
+
 222324321 印刷于无酸纸
 
 出版者承认并尊重公司、制造商和开发者为区分其产品而使用的所有标记。本书中提到的所有品牌名称和产品名称均为其各自公司的商标或服务标记。对服务标记或商标等的任何遗漏（任何形式）或误用均不视为侵犯他人财产的尝试。
@@ -21,9 +18,6 @@ O. Campesato. *Data Wrangling Using Pandas, SQL, and Java*.
 ## 本书的价值主张是什么？
 
 本书介绍了 `Pandas` 的多种功能、如何在 `MySQL` 中创建数据库和表，以及处理许多数据任务。某些主题简要介绍有两个原因：首先，重要的是让你接触这些概念。在某些情况下，这些主题可能会激发你的兴趣，从而激励你自主学习；在其他情况下，你可能对简要介绍感到满意。其次，对书中涵盖的所有主题进行详尽处理将显著增加其体积，很少有人有时间阅读大部头。
-
-
-
 
 大多数代码示例都非常短（通常小于一页，有时甚至不到半页），如果需要，你可以轻松快速地将代码复制/粘贴到新的 Jupyter notebook 中。对于引用 CSV 文件的 Python 代码示例，你需要在相应的 Jupyter notebook 中添加额外的代码段来访问该 CSV 文件。此外，这些代码示例的运行速度很快，因此你不需要使用 Google Colaboratory 提供的免费 GPU。
 
@@ -59,13 +53,13 @@ O. Campesato. *Data Wrangling Using Pandas, SQL, and Java*.
 
 如果你是 Mac 用户，有三种方法可以实现。第一种方法是使用 `Finder` 导航到 `Applications > Utilities`，然后双击 `Utilities` 应用程序。接下来，如果你已经有一个可用的命令行，可以通过输入以下命令启动一个新的命令行：
 
-```
+```bash
 open /Applications/Utilities/Terminal.app
 ```
 
-Mac 用户的第二种方法是在已经可见的命令行中通过通过点击该命令行中的 `command+n`，在 MacBook 上打开一个新的命令行，你的 Mac 就会启动另一个命令行。
+Mac 用户的第二种方法是在已经可见的命令行中通过点击该命令行中的 `command+n`，在 MacBook 上打开一个新的命令行，你的 Mac 就会启动另一个命令行。
 
-如果你是 PC 用户，可以安装 `Cygwin`（开源：`[`cygwin.com/`](https://cygwin.com/)`），它可以模拟 `bash` 命令，或者使用其他工具包如 `MKS`（一种商业产品）。请阅读描述下载和安装过程的在线文档。注意，如果自定义别名定义在主启动文件（如 `.bash_login`）之外的文件中，则不会自动设置。
+如果你是 PC 用户，可以安装 `Cygwin`（开源：[`cygwin.com/`](https://cygwin.com/)），它可以模拟 `bash` 命令，或者使用其他工具包如 `MKS`（一种商业产品）。请阅读描述下载和安装过程的在线文档。注意，如果自定义别名定义在主启动文件（如 `.bash_login`）之外的文件中，则不会自动设置。
 
 ### 伴随文件
 
@@ -73,21 +67,19 @@ Mac 用户的第二种方法是在已经可见的命令行中通过通过点击�
 
 ### 完成这本书后的“下一步”是什么？
 
-这个问题的答案差异很大，主要因为答案很大程度上取决于你的目标。如果你主要对 `NLP` 感，你可以学习更高级的概念，例如 `attention`（注意力）、`transformers` 和与 `BERT` 相关模型。
+这个问题的答案差异很大，主要因为答案很大程度上取决于你的目标。如果你主要对 `NLP` 感兴趣，可以学习更高级的概念，例如 `attention`（注意力）、`transformers` 和与 `BERT` 相关模型。
 
 如果你主要对机器学习感兴趣，机器学习有一些子领域，如深度学习和强化学习（以及深度强化学习），可能会吸引你。幸运的是，有许多资源可用，你可以对这些资源进行互联网搜索。另一点是：你所学习的机器学习方面取决于你是谁。机器学习工程师、数据科学家、经理、学生或软件开发人员的需求都是不同的。
 
-# 第 1 章
-
-## Python 简介
+# 第 1 章 Python 简介
 
 本章包含了对 `Python` 的介绍，提供了关于用于安装 `Python` 模块的实用工具的信息、基础 `Python` 结构，以及如何在 `Python` 中处理某些数据类型的方法。
 
 本章的第一部分涵盖如何安装 `Python`、一些 `Python` 环境变量以及如何使用 `Python` 解释器。你将看到 `Python` 代码示例以及如何将 `Python` 代码保存到可以从命令行启动的文本文件中。本章的第二部分介绍了如何处理简单数据类型，如数字、分数和字符串。本章的最后部分讨论了异常以及如何在 `Python` 脚本中使用它们。
 
-注意 书中的 Python 脚本适用于 3。
+注意：书中的 Python 脚本适用于 3。
 
-### Python 工具
+## Python 工具
 
 `Anaconda` 发行版适用于 Windows、Linux 和 Mac：
 
@@ -95,18 +87,18 @@ Mac 用户的第二种方法是在已经可见的命令行中通过通过点击�
 
 `Anaconda` 非常适用于 `NumPy`（在第 3 章中讨论）和 `SciPy`（书中未讨论）。如果你是 Windows 用户，`Anaconda` 似乎是一个更好的替代方案。
 
-#### easy_install 和 pip
+### `easy_install` 和 `pip`
 
 在安装 Python 模块时，`easy_install` 和 `pip` 都非常好。每当你需要安装 `Python` 模块（书中有很多）时，使用 `easy_install` 或 `pip`，语法如下：
 
-```
+```bash
 easy_install <module-name>
 pip install <module-name>
 ```
 
-注意 基于 Python 的模块较于安装，而用 `C` 编写的模块通常更快，但在安装方面更困难。
+注意：基于 Python 的模块较于安装，而用 `C` 编写的模块通常更快，但在安装方面更困难。
 
-#### virtualenv
+### `virtualenv`
 
 `virtualenv` 工具允许你创建隔离的 Python 环境，其主页如下：
 
@@ -114,7 +106,7 @@ pip install <module-name>
 
 `virtualenv` 解决了为不同的应用程序保留正确的依赖和版本（间接权限）的问题。如果你是 Python 初学者，现在可能不需要 `virtualenv`，但请记住这个工具。
 
-#### IPython
+### `IPython`
 
 另一个实用工具是 `IPython`（获得过 Jolt 奖），其主页如下：
 
@@ -122,18 +114,14 @@ pip install <module-name>
 
 在命令行中输入 `ipython` 来调用 `IPython`：
 
-```
+```bash
 ipython
 ```
 
 上述命令显示如下输出：
 
-
-
-
-
 ```python
- Python 3.8.6 (default, Oct  8 2020, 14:06:32)
+Python 3.8.6 (default, Oct  8 2020, 14:06:32)
 输入 'copyright', 'credits' 或 'license' 获取更多信息
 IPython 7.18.1 -- 一个增强交互式 Python。输入 '?' 获取帮助。
 
@@ -142,8 +130,8 @@ In [1]:
 
 在提示符处输入问号（`?`），你将看到一些有用信息，其中部分如下：
 
-```python
- IPython -- 一个增强交互式 Python
+```text
+IPython -- 一个增强交互式 Python
 =========================================
 
 IPython 提供了标准 Python 解释器的完全兼容替代方案，具有方便的 shell 功能、特殊命令、命令历史机制和输出结果缓存。
@@ -172,42 +160,42 @@ IPython 提供了标准 Python 解释器的完全兼容替代方案，具有方�
 在下载任何内容之前，请在命令行 shell 中输入以下命令检查机器上是否已安装 Python（如果你有 Macbook 或 Linux 机器，很可能已经安装）：
 
 ```bash
- python -V
+python -V
 ```
 
 书中所使用的 Macbook 的输出如下：
 
-```python
- Python 3.8.6
+```text
+Python 3.8.6
 ```
 
-**注意** 在你的机器上安装 Python `3.8.6`（或尽可能接近此版本），以便你拥有与测试书中 Python 脚本时相同的 Python 版本。
+注意：在你的机器上安装 Python `3.8.6`（或尽可能接近此版本），以便你拥有与测试书中 Python 脚本时相同的 Python 版本。
 
 如果你需要在机器上安装 Python，请访问 Python 主页并选择“Downloads（下载）”链接，或直接访问此网站：
 
-*[`www.python.org/download/`](http://www.python.org/download/)*
+[`www.python.org/download/`](http://www.python.org/download/)
 
 此外，Windows 适用于 PythonWin，其主页如下：
 
-*[`www.cgl.ucsf.edu/Outreach/pc204/pythonwin.html`](http://www.cgl.ucsf.edu/Outreach/pc204/pythonwin.html)*
+[`www.cgl.ucsf.edu/Outreach/pc204/pythonwin.html`](http://www.cgl.ucsf.edu/Outreach/pc204/pythonwin.html)
 
 使用任何可以创建、编辑和保存 Python 脚本的文本编辑器，并将其保存为纯文本文件（不要使用 Microsoft Word）。
 
 在机器上安装并配置 Python 后，你就可以开始处理书中的 Python 脚本了。
 
-## 设置环境变量 PATH（仅限 Windows）
+## 设置环境变量 `PATH`（仅限 Windows）
 
 `PATH` 环境变量指定了一个目录列表，当你从命令行指定可执行程序时，系统会搜索这些目录。设置环境以便 Python 可执行文件在每个命令行 shell 中始终可用的良好指南是遵循此处的说明：
 
-*[`www.blog.pythonlibrary.org/2011/11/24/python-101-setting-up-python-on-windows/`](http://www.blog.pythonlibrary.org/2011/11/24/python-101-setting-up-python-on-windows/)*
+[`www.blog.pythonlibrary.org/2011/11/24/python-101-setting-up-python-on-windows/`](http://www.blog.pythonlibrary.org/2011/11/24/python-101-setting-up-python-on-windows/)
 
 ## 在你的机器上启动 Python
 
 有三种不同的启动 Python 的方法：
 
-*   使用 Python 交互式解释器。
-*   从命令行启动 Python 脚本。
-*   使用 IDE。
+- 使用 Python 交互式解释器。
+- 从命令行启动 Python 脚本。
+- 使用 IDE。
 
 下一节将向你展示如何从命令行启动 Python 解释器。在本章后面的部分，你将学习如何从命令行启动 Python 脚本以及关于 Python IDE 的知识。
 
@@ -218,13 +206,13 @@ IPython 提供了标准 Python 解释器的完全兼容替代方案，具有方�
 通过打开命令行 shell 并输入以下命令启动 Python 交互式解释器：
 
 ```bash
- python
+python
 ```
 
 你将看到以下提示符（或类似的内容）：
 
 ```python
- Python 3.8.6 (default, Oct  8 2020, 14:06:32)
+Python 3.8.6 (default, Oct  8 2020, 14:06:32)
 [Clang 12.0.0 (clang-1200.0.32.2)] on darwin
 输入 "help", "copyright", "credits" 或 "license" 获取更多信息。
 >>>
@@ -233,35 +221,35 @@ IPython 提供了标准 Python 解释器的完全兼容替代方案，具有方�
 现在在提示符处输入表达式 `2 + 7`：
 
 ```python
- >>> 2 + 7
+>>> 2 + 7
 ```
 
 Python 显示以下结果：
 
-```python
- 9
+```text
+9
 >>>
 ```
 
 按 `ctrl-d` 退出 Python shell。
 
-你可以通过在任何 Python 脚本前加上 `python` 单词从命令行启动它。例如，如果你有一个包含 Python 命令的 Python 脚本 `myscript.py`，如下如下启动脚本：
+你可以通过在任何 Python 脚本前加上 `python` 单词从命令行启动它。例如，如果你有一个包含 Python 命令的 Python 脚本 `myscript.py`，如下启动脚本：
 
 ```bash
- python myscript.py
+python myscript.py
 ```
 
 作为一个简单的示例，假设 Python 脚本 `myscript.py` 包含以下 Python 代码：
 
 ```python
- print('Hello World from Python')
+print('Hello World from Python')
 print('2 + 7 = ', 2+7)
 ```
 
 当你启动上述 Python 脚本时，将看到以下输出：
 
-```python
- Hello World from Python
+```text
+Hello World from Python
 2 + 7 =  9
 ```
 
@@ -269,20 +257,20 @@ print('2 + 7 = ', 2+7)
 
 Python 标识符是变量、函数、类、模块或其他 Python 对象的名称，有效的标识符遵循以下规则：
 
-*   以字母 A-Z 或 a-z 开始
-*   可以是下划线
-*   可以包含数字 0-9
-*   不能以数字开头
-*   不能是 Python 关键字
+- 以字母 A-Z 或 a-z 开始。
+- 可以是下划线。
+- 可以包含数字 0-9。
+- 不能以数字开头。
+- 不能是 Python 关键字。
 
 Python 是区分大小写的，因此 `Abc` 和 `abc` 是不同的标识符。
 
 ## 行、缩进和多行
 
-与其他语言（如 Java）不同，Python 使用缩进而不是大括号。缩进必须保持一致，如下：
+与其他语言（如 `Java`）不同，Python 使用缩进而不是大括号。缩进必须保持一致，如下：
 
 ```python
- if True:
+if True:
     print("ABC")
 else:
     print("DEF")
@@ -291,32 +279,32 @@ else:
 Python 中的多行语句可以使用反斜线（`\`）终止，如下：
 
 ```python
- total = x1 + \
-        x2 + \
-        x3
+total = x1 + \
+       x2 + \
+       x3
 ```
 
 你可以通过使用分号（`;`）分隔每个语句在一行指定多个语句，如下：
 
 ```python
- a=10; b=5; print(a); print(a+b)
+a=10; b=5; print(a); print(a+b)
 ```
 
 上述代码的输出为：
 
-```
+```text
 10
 15
 ```
 
-**注意** Python 不建议使用分号和延续符。
+注意：Python 不建议使用分号和延续符。
 
 ## 引号和注释
 
 Python 允许使用单引号（`'`）、双引号（`"`）、三引号（`'''` 或 `"""`）字符串字面量，只要它们在开头和结尾匹配。你可以使用三引号处理跨行的字符串。以下示例是合法的 Python 字符串：
 
 ```python
- word = 'word'
+word = 'word'
 line = "This is a sentence."
 para = """This is a paragraph. This paragraph contains
 more than one sentence."""
@@ -325,7 +313,7 @@ more than one sentence."""
 以字母 `r`（代表“raw”，原始）开头的字符串字面量将所有内容视为字符并“转义”元字符的意思，如下：
 
 ```python
- a1 = r'\n'
+a1 = r'\n'
 a2 = r'\r'
 a3 = r'\t'
 print('a1:',a1,'a2:',a2,'a3:',a3)
@@ -333,14 +321,14 @@ print('a1:',a1,'a2:',a2,'a3:',a3)
 
 上述代码块的输出如下：
 
-```
- a1: \n a2: \r a3: \t
+```text
+a1: \n a2: \r a3: \t
 ```
 
 你可以在双引号中嵌入单引号（反之亦然），以显示单引号或双引号。实现相同结果另一种方法是在单引号或双引号前加上反斜线（`\`）字符。以下代码块说明了这些技术：
 
 ```python
- b1 = "'"
+b1 = "'"
 b2 = '"'
 b3 = '\''
 b4 = "\""
@@ -350,38 +338,35 @@ print('b3:',b3,'b4:',b4)
 
 上述代码块的输出如下：
 
-```
- b1: ' b2: "
+```text
+b1: ' b2: "
 b3: ' b4: "
 ```
 
+不在字符串字面量中的哈希符号（`#`）是注释的字符。此外，`#` 之后到物理行尾的所有字符都是注释的一部分（并被 Python 解释器忽略）。考虑以下代码块：
 
-
-
-不在字符串字面量中的哈希符号（`#`）是注释注释的字符。此外，`#` 之后到物理行尾的所有字符都是注释的一部分（并被 Python 解释器忽略）。考虑以下代码块：
-
-```
- #!/usr/bin/python
+```python
+#!/usr/bin/python
 # First comment
 print("Hello, Python!")  # second comment
 ```
 
 这将产生以下结果：
 
-```
- Hello, Python!
+```text
+Hello, Python!
 ```
 
 注释可以位于语句或表达式后的同一行：
 
-```
- name = "Tom Jones" # This is also comment（这也是注释）
+```python
+name = "Tom Jones" # This is also comment（这也是注释）
 ```
 
 你可以像下面一样注释多行：
 
-```
- # This is comment one
+```python
+# This is comment one
 # This is comment two
 # This is comment three
 ```
@@ -390,7 +375,9 @@ Python 中的空行是指仅包含空白字符、注释或二者兼备的行。
 
 ## 将你的代码保存到模块中
 
-早些时候你已经了如何从命令行启动 Python 解释器并输入 Python 命令。然而，你在 Python 解释器中输入的所有内容仅对当前会话有效：如果你退出解释器并重新启动，你之前的定义将不再有效。幸运的是，Python 允许你将代码存储在文本文件中，这将在下一节中讨论。
+
+
+早些时候你已经了解了如何从命令行启动 Python 解释器并输入 Python 命令。然而，你在 Python 解释器中输入的所有内容仅对当前会话有效：如果你退出解释器并重新启动，你之前的定义将不再有效。幸运的是，Python 允许你将代码存储在文本文件中，这将在下一节中讨论。
 
 Python 中的 `module`（模块）是一个包含 Python 语句的文本文件。在上一节中，你看到了 Python 解释器如何允许你测试定义在当前会话有效的代码片段。如果你想保留代码片段和其他定义，请将它们放在文本文件中，以便你可以在 Python 解释器之外执行这些代码。
 
@@ -398,29 +385,29 @@ Python 中的最外层语句在模块被首次导入时会从上到下执行，�
 
 Python 模块可以直接从命令行运行，如下所示：
 
-```
- python first.py
+```python
+python first.py
 ```
 
 作为示例，将以下两个语句放在名为 `first.py` 的文本文件中：
 
-```
- x = 3
+```python
+x = 3
 print(x)
 ```
 
 输入以下命令：
 
-```
- Python first.py
+```bash
+Python first.py
 ```
 
 前一个命令的输出是 3，这与在 Python 解释器中执行前面的代码是一相同的。
 
 当直接运行 Python 模块时，特殊变量 `__name__` 被设置为 `__main__`。你经常会在 Python 模块中看到以下类型的代码：
 
-```
- if __name__ == '__main__':
+```python
+if __name__ == '__main__':
     # do something here（在这里做一些事情）
     print('Running directly')
 ```
@@ -431,14 +418,14 @@ print(x)
 
 Python 标准库提供了许多可以简化你的 Python 脚本的模块。标准库模块列表可以在网上找到：
 
-*[`www.python.org/doc/`](http://www.python.org/doc/)
+[`www.python.org/doc/`](http://www.python.org/doc/)
 
 一些重要的 Python 模块包括 `cgi`、`math`、`os`、`pickle`、`random`、`re`、`socket`、`sys`、`time` 和 `urllib`。
 
-书中的代码示例使用了 `math`、os、random、re、socket、sys、time 和 `urllib` 模块。你需要这些模块才能在代码中使用它们。例如，下面的代码块展示了如何导入四个标准 Python 模块：
+书中的代码示例使用了 `math`、`os`、`random`、`re`、`socket`、`sys`、`time` 和 `urllib` 模块。你需要这些模块才能在代码中使用它们。例如，下面的代码块展示了如何导入四个标准 Python 模块：
 
-```
- import datetime
+```python
+import datetime
 import re
 import sys
 import time
@@ -446,22 +433,22 @@ import time
 
 书中的代码示例导入了上述一个或多个模块，以及其他 Python 模块。
 
-## help() 和 dir() 函数
+## `help()` 和 `dir()` 函数
 
-在网上搜索 Python 相关主题通常会返回许多带有有用信息的链接。或者，你可以检查官方 Python 文档网站：*[docs.python.org](http://docs.python.org)*。
+在网上搜索 Python 相关主题通常会返回许多带有有用信息的链接。或者，你可以检查官方 Python 文档网站：[`docs.python.org`](http://docs.python.org)。
 
 此外，Python 提供了 `help()` 和 `dir()` 函数，可以从 Python 解释器访问。`help()` 函数显示文档字符串（docstrings），而 `dir()` 函数显示定义的符号。例如，如果你输入 `help(sys)`，将看到 `sys` 模块的文档，而 `dir(sys)` 则显示定义符号的列表。
 
 在 Python 解释器中输入以下命令来显示 Python 中与字符串的方法：
 
-```
- >>> dir(str)
+```python
+>>> dir(str)
 ```
 
 前面的命令生成了以下输出：
 
-```
- ['__add__', '__class__', '__contains__', '__delattr__', '__doc__',
+```python
+['__add__', '__class__', '__contains__', '__delattr__', '__doc__',
 '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__',
 '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__',
 '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__',
@@ -478,20 +465,20 @@ field_name_split', '_formatter_parser', 'capitalize', 'center', 'count',
 
 前面的列表为你提供了内置函数的汇总“转储”（包括一些在本文中讨论的函数）。虽然 `dir()` 没有列出内置函数和变量，但你可以从自动导入名为 `__builtin__` 的 `__builtins__` 模块获取这些信息：
 
-```
- >>> dir(__builtins__)
+```python
+>>> dir(__builtins__)
 ```
 
 下面的命令显示如何获取关于函数的更多信息：
 
-```
- help(str.lower)
+```python
+help(str.lower)
 ```
 
 输出如下：
 
-```
- Help on method_descriptor:
+```text
+Help on method_descriptor:
 
 lower(...) -> string
 
@@ -507,12 +494,12 @@ Python 执行某些编译检查，但大多数检查被推迟到代码执行。�
 
 作为一个简单的示例，考虑以下引用不存在函数 `DoesNotExist` 的 Python 函数 `myFunc`：
 
-```
- def myFunc(x):
+```python
+def myFunc(x):
     if x == 3:
         print(DoesNotExist(x))
     else:
-        print('x: ',x)
+        print('x: ', x)
 ```
 
 前面的代码只有在传入值 3 时才会失败。
@@ -527,70 +514,67 @@ Python 支持原始数据类型，如数字（整数、浮点数和指数数）�
 
 Python 提供了算术运算来处理数字，这种方式与其他编程语言相似。以下示例涉及整数的算术运算：
 
-```
- >>> 2+2
+```python
+>>> 2 + 2
 4
- >>> 4/3
+>>> 4 / 3
 1
- >>> 3*8
+>>> 3 * 8
 24
 ```
 
 下面的示例将数字赋值给两个变量并计算它们的积：
 
-```
- >>> x = 4
+```python
+>>> x = 4
 >>> y = 7
- >>> x * y
+>>> x * y
 28
 ```
 
-
-
-
 以下示例演示了涉及整数的算术运算：
 
-```
- >>> 2+2
+```python
+>>> 2 + 2
 4
->>> 4/3
+>>> 4 / 3
 1
->>> 3*8
+>>> 3 * 8
 24
 ```
 
-注意，两个整数之间的除法 (`/`) 实际上是截断法，只保留整数结果。下面的示例将一个浮点数转换为指数计数法：
+注意，两个整数之间的除法（`/`）实际上是截断法，只保留整数结果。下面的示例将一个浮点数转换为指数计数法：
 
-```
- >>> fnum = 0.00012345689000007
->>> "%.14e"%fnum
+```python
+>>> fnum = 0.00012345689000007
+>>> "%.14e" % fnum
 '1.23456890000070e-04'
 ```
 
 你可以使用 `int()` 函数和 `float()` 函数将字符串转换为数字：
 
-```
- word1 = "123"
+```python
+word1 = "123"
 word2 = "456.78"
 var1 = int(word1)
 var2 = float(word2)
-print("var1: ",var1," var2: ",var2)
+print("var1: ", var1, " var2: ", var2)
 ```
 
 上一个代码块的输出结果如下：
 
-```
- var1:  123  var2:  456.78
+```text
+var1:  123  var2:  456.78
 ```
 
 或者，你可以使用 `eval()` 函数：
 
-```
- word1 = "123"
+```python
+word1 = "123"
 word2 = "456.78"
 var1 = eval(word1)
 var2 = eval(word2)
-print("var1: ",var1," var2: ",var2)
+print("var1: ", var1, " var2: ", var2)
 ```
 
 如果你尝试转换一个不是有效整数或浮点数的字符串，Python 会抛出异常，因此建议将代码放置在 `try/except` 块中（本章稍后会进行讨论）。
@@ -599,76 +583,84 @@ print("var1: ",var1," var2: ",var2)
 
 Python 中的数字是 10 进制（默认），但你可以轻松地将数字转换为其他进制。例如，下面的代码块初始化变量 `x` 的值为 1234，然后分别以 2 进制、8 进制和 16 进制显示该数字：
 
-```
- >>> x = 1234
->>> bin(x) '0b10011010010'
->>> oct(x) '0o2322'
->>> hex(x) '0x4d2'
+```python
+>>> x = 1234
+>>> bin(x)
+'0b10011010010'
+>>> oct(x)
+'0o2322'
+>>> hex(x)
+'0x4d2'
 ```
 
 如果你想抑制 `0b`、`0o` 或 `0x` 前缀，请使用 `format()` 函数，如下所示：
 
-```
- >>> format(x, 'b') '10011010010'
->>> format(x, 'o') '2322'
->>> format(x, 'x') '4d2'
+```python
+>>> format(x, 'b')
+'10011010010'
+>>> format(x, 'o')
+'2322'
+>>> format(x, 'x')
+'4d2'
 ```
 
 负整数将用负号显示：
 
-```
- >>> x = -1234
->>> format(x, 'b') '-10011010010'
->>> format(x, 'x') '-4d2'
+```python
+>>> x = -1234
+>>> format(x, 'b')
+'-10011010010'
+>>> format(x, 'x')
+'-4d2'
 ```
 
-## chr() 函数
+## `chr()` 函数
 
 Python 的 `chr()` 函数接收一个正整数作为参数，并将其转换为对应的字母值（如果存在）。字母 A 到 Z 的十表示为 65 到 91（对应十六进制的 41 到 5b），小写字母 a 到 z 的十表示为 97 到 122（十六进制的 61 到 7b）。这是一个使用 `chr()` 函数打印大写字母 A 的示例：
 
-```
- >>> x=chr(65)
+```python
+>>> x = chr(65)
 >>> x
 'A'
 ```
 
 下面的代码块打印了一范围内整数的 ASCII 值：
 
-```
- result = ""
-for x in range(65,90):
-  print(x, chr(x))
-  result = result+chr(x)+' '
-print("result: ",result)
+```python
+result = ""
+for x in range(65, 90):
+    print(x, chr(x))
+    result = result + chr(x) + ' '
+print("result: ", result)
 ```
 
 你可以用以下行表示一个字符范围：
 
-```
- for x in range(65,90):
+```python
+for x in range(65, 90):
 ```
 
 然而，下面的等效代码段更加直观：
 
-```
- for x in range(ord('A'), ord('Z')):
+```python
+for x in range(ord('A'), ord('Z')):
 ```
 
-如果你想显示小写字母的结果，请将之前的范围从 (65,91) 更改为以下语句之一：
+如果你想显示小写字母的结果，请将之前的范围从（65,91）更改为以下语句之一：
 
-```
- for x in range(65,90):
+```python
+for x in range(65, 90):
 for x in range(ord('a'), ord('z')):
 ```
 
-## Python 中的 round() 函数
+## Python 中的 `round()` 函数
 
 Python 的 `round()` 函数允许你将小数值舍入到最近的精度：
 
-```
- >>> round(1.23, 1)
+```python
+>>> round(1.23, 1)
 1.2
->>> round(-3.42,1)
+>>> round(-3.42, 1)
 -3.4
 ```
 
@@ -676,13 +668,14 @@ Python 的 `round()` 函数允许你将小数值舍入到最近的精度：
 
 Python 允许你在打印小数时指定使用的精度位数，如下所示：
 
-```
- >>> x = 1.23456
+```python
+>>> x = 1.23456
 >>> format(x, '0.2f')
 '1.23'
 >>> format(x, '0.3f')
 '1.235'
->>> 'value is {:0.3f}'.format(x) 'value is 1.235'
+>>> 'value is {:0.3f}'.format(x)
+'value is 1.235'
 >>> from decimal import Decimal
 >>> a = Decimal('4.2')
 >>> b = Decimal('2.1')
@@ -700,9 +693,11 @@ True
 >>> format(x, '>10.1f')
 ' 1234.6'
 >>> # 左对齐
->>> format(x, '<10.1f') '1234.6 '
+>>> format(x, '<10.1f')
+'1234.6 '
 >>> # 中对对齐
->>> format(x, '¹⁰.1f') ' 1234.6 '
+>>> format(x, '¹⁰.1f')
+' 1234.6 '
 >>> # 包含分位符
 >>> format(x, ',')
 '1,234.56789'
@@ -714,22 +709,20 @@ True
 
 Python 支持 `Fraction()` 函数（定义在 `fractions` 模块中），它接受两个整数分别代表分数的分子和分母（分母不能为零）。这里展示了在 Python 中定义和操作分数的几个示例：
 
-```
- >>> fractions import Fraction
+```python
+>>> from fractions import Fraction
 >>> a = Fraction(5, 4)
 >>> b = Fraction(7, 16)
 >>> print(a + b)
 27/16
->>> print(a * b) 35/64
+>>> print(a * b)
+35/64
 ```
-
-
-
 
 然而，正如你可能预期的那样，当你尝试“减去”两个字符串时，会导致一个错误：
 
-```
- >>> 'a' - 'b'
+```text
+>>> 'a' - 'b'
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: unsupported operand type(s) for -: 'str' and 'str'
@@ -741,58 +734,58 @@ Python 中的 `try/except` 结构（在本章稍后的部分将讨论）能够�
 
 你可以使用 `lower()` 和 `upper()` 方法分别将字符串转换为小写和大大写，如下所示：
 
-```
- >>> 'Python'.lower()
+```python
+>>> 'Python'.lower()
 'python'
 >>> 'Python'.upper()
 'PYTHON'
 >>>
 ```
 
-`lower()` 和 `upper()` 方法对于对两个 ASCII 字符串进行不区分大小写的比较非常用用。列表 1.2 显示了 `Compare.py` 的内容，它使用 `lower()` 函数来比较两个 ASCII 字符串。
+`lower()` 和 `upper()` 方法对于对两个 ASCII 字符串进行不区分大小写的比较非常有用。列表 1.2 显示了 `Compare.py` 的内容，它使用 `lower()` 函数来比较两个 ASCII 字符串。
 
-### 列表 1.2: Compare.py
+### 列表 1.2：`Compare.py`
 
-```
- x = 'Abc'
+```python
+x = 'Abc'
 y = 'abc'
 
-if(x == y):
-  print('x and y: identical')
+if (x == y):
+    print('x and y: identical')
 elif (x.lower() == y.lower()):
-  print('x and y: case insensitive match')
+    print('x and y: case insensitive match')
 else:
-  print('x and y: different')
+    print('x and y: different')
 ```
 
-由于 `x` 包含混合大小写字母而 `y` 包含小写字母，列表 1.2](#ch01.xhtml_list1-2) 显示了如下输出：
+由于 `x` 包含混合大小写字母而 `y` 包含小写字母，列表 1.2 显示了如下输出：
 
-```
- x and y: different
+```text
+x and y: different
 ```
 
 ## 在 Python 中格式化字符串
 
 Python 提供了 `string.ljust()`、`string.rjust()` 和 `string.center()` 函数来对文本字符串进行定位，使其分别左对齐、右对齐和居中。正如你在上一节中看到的，Python 还提供了 `format()` 方法用于高级插值功能。现在在 Python 解释器中输入以下命令：
 
-```
- import string
+```python
+import string
 
 str1 = 'this is a string'
 print(string.ljust(str1, 10))
 print(string.rjust(str1, 40))
-print(string.center(str1,40))
+print(string.center(str1, 40))
 ```
 
 输出所示：
 
-```
- this is a string
+```text
+this is a string
             this is a string
             this is a string
 ```
 
-## 未初始化的变量和值 None
+## 未初始化的变量和值 `None`
 
 Python 区分未初始化的变量和 `None` 值。前者是一个未被赋值的变量，而 `None` 值是一个表示“无值”的值。集合和方法经常返回 `None` 值，你可以在条件逻辑中测试 `None` 值。
 
@@ -802,18 +795,20 @@ Python 区分未初始化的变量和 `None` 值。前者是一个未被赋值�
 
 Python 允许你使用数组符号提取字符串的子字符串（称为“切片”）。切片语法为 `start:stop:step`，其中 `start`、`stop` 和 `step` 值是指定起始值、结束值和增量值的整数。Python 切片的一个有趣之处在于你可以使用值 `-1`，它会从字符串的右侧而不是左侧操作。以下是字符串切片的示例：
 
-```
- text1 = "this is a string"
-print('First 7 characters:',text1[0:7])
-print('Characters 2-4:',text1[2:4])
-print('Right-most character:',text1[-1])
-print('Right-most 2 characters:',text1[-3:-1])
+```python
+text1 = "this is a string"
+print('First 7 characters:', text1[0:7])
+print('Characters 2-4:', text1[2:4])
+print('Right-most character:', text1[-1])
+print('Right-most 2 characters:', text1[-3:-1])
 ```
 
 上一个代码块的输出如下：
 
+
+
 ```
- First 7 characters: this is
+First 7 characters: this is
 Characters 2-4: is
 Right-most character: g
 Right-most 2 characters: in
@@ -827,10 +822,10 @@ Python 允许你检查字符串中的每个字符，然后测试该字符是数�
 
 列表 1.3 显示了 `CharTypes.py` 的内容，说明了如何判断字符串是否包含数字或字符。虽然我们还没有讨论 Python 中的 `if` 语句，但列表 1.3](#ch01.xhtml_list1-3) 中的示例非常直观。
 
-### 列表 1.3: CharTypes.py
+### 列表 1.3：CharTypes.py
 
-```
- str1 = "4"
+```python
+str1 = "4"
 str2 = "4234"
 str3 = "b"
 str4 = "abc"
@@ -857,8 +852,9 @@ print("capitalized first letter:",str5.title())
 列表 1.3](#ch01.xhtml_list1-3) 初始化了一些变量，紧接着是两个条件测试，使用 `isdigit()` 函数检查 `str1` 和 `str2` 是否为数字。列表 1.3](#ch01.xhtml_list1-3) 的后续部分检查 `str3`、`str4` 和 `str5` 是否为字母。（此处省略了原文中重复的描述性，已按要求清理）。
 
 列表 1.3](#ch01.xhtml_list1-3) 的输出如下：
+
 ```
- this is a digit: 4
+this is a digit: 4
 this is a digit: 4234
 this is alphabetic: b
 this is alphabetic: abc
@@ -870,10 +866,10 @@ capitalized first letter: A1b2c3
 
 Python 提供了搜索和替换字符串的方法。列表 1.4](#ch01.xhtml_list1-4) 显示了 `FindPos.py` 的内容，展示了如何使用 `find()` 函数搜索一个字符串。
 
-### 列表 1.4: FindPos.py
+### 列表 1.4：FindPos.py
 
-```
- item1 = 'abc'
+```python
+item1 = 'abc'
 item2 = 'Abc'
 text = 'This is a string'
 
@@ -884,7 +880,7 @@ print('pos1:', pos1)
 print('pos2:', pos2)
 ```
 
-`find()` 函数返回第一次匹配发生的索引；否则`find()` 返回 `-1`。列表 1.4](#ch01.xhtml_list1-4) 的输出为：
+`find()` 函数返回第一次匹配发生的索引；否则 `find()` 返回 `-1`。列表 1.4](#ch01.xhtml_list1-4) 的输出为：
 
 ```
 pos1: 12
@@ -893,18 +889,18 @@ pos2: -1
 
 除了 `find()` 方法，当你想要测试元素是否存在时，可以使用 `in` 运算符，如下所示：
 
-```
- >>> lst = [1,2]
+```python
+>>> lst = [1,2]
 >>> 1 in lst
 True
 ```
 
 列表 1.5](#ch01.xhtml_list1-5) 显示了 `Replace.py` 的内容，展示了如何用另一个字符串替换一个字符串。
 
-### 列表 1.5: Replace.py
+### 列表 1.5：Replace.py
 
-```
- text = 'This is a string'
+```python
+text = 'This is a string'
 text = text.replace('is a', 'was a')
 print(text)
 ```
@@ -919,10 +915,10 @@ This was a string
 
 Python 提供了 `strip()`、`lstrip()` 和 `rstrip()` 函数来移除文本字符串中的字符。列表 1.6](#ch01.xhtml_list1-6) 显示了 `Remove1.py` 的内容，展示了如何搜索字符串。
 
-### 列表 1.6: Remove1.py
+### 列表 1.6：Remove1.py
 
-```
- text = '   leading and trailing white space   '
+```python
+text = '   leading and trailing white space   '
 print('text1:','x',text,'y')
 
 text = text.lstrip()
@@ -932,14 +928,10 @@ text = text.rstrip()
 print('text3:','x',text,'y')
 ```
 
-
-
-
-
 如果你想移除文本字符串内部多余的空格，可以使用如上一节介绍的那样使用 `replace()` 函数。下面的示例演示了如何实现这一点，该示例还包含了用于正则表达式的 `re` 模块：
 
-```
- import re
+```python
+import re
 text = 'a    b'
 a = text.replace(' ', '')
 b = re.sub('\s+', ' ', text)
@@ -951,7 +943,7 @@ print(b)
 结果如下：
 
 ```
- ab
+ab
 a b
 ```
 
@@ -961,31 +953,31 @@ a b
 
 第一种技术是在打印结果之前，使用 `str()` 函数将每个对象的字符串表示进行拼接。例如，在 Python 中执行以下语句：
 
-```
- x = str(9)+str(0xff)+str(-3.1)
+```python
+x = str(9)+str(0xff)+str(-3.1)
 print('x: ',x)
 ```
 
 输出所示：
 
 ```
- x:  9255-3.1
+x:  9255-3.1
 ```
 
 前的一行包含了数字 `9` 和 `255`（它是十六进制数字 `0xff` 的十进制值）以及 `-3.1` 的拼接。
 
 顺带一提，你对模块和自定义类使用 `str()` 函数。这里有一个涉及 Python 内置模块 `sys` 的示例：
 
-```
- >>> import sys
+```python
+>>> import sys
 >>> print(str(sys))
 <module 'sys' (built-in)>
 ```
 
 下面的代码段演示了如何使用 `write()` 函数显示字符串：
 
-```
- import sys
+```python
+import sys
 write = sys.stdout.write
 write('123')
 write('123456789')
@@ -994,7 +986,7 @@ write('123456789')
 输出如下：
 
 ```
- 1233
+1233
 1234567899
 ```
 
@@ -1002,8 +994,8 @@ write('123456789')
 
 Python 提供了 `ljust()`、`rjust()` 和 `center()` 方法来对齐文本。`ljust()` 和 `rjust()` 函数分别对文本字符串进行左对齐和右对齐，而 `center()` 函数将将字符串居中。在代码块中显示了一个示例：
 
-```
- text = 'Hello World'
+```python
+text = 'Hello World'
 text.ljust(20)
 'Hello World '
 >>> text.rjust(20)
@@ -1012,10 +1004,10 @@ text.ljust(20)
 ' Hello World '
 ```
 
-你可以使用 Python 的 `format()` 函数来对齐文本。使用 `<`, `>`, 或 `^` 字符配合所需的宽度，分别对文本进行右对齐、左对齐和居中。下面的示例演示了你如何指定文本对齐方式：
+你可以使用 Python 的 `format()` 函数来对齐文本。使用 `<`、`>` 或 `^` 字符配合所需的宽度，分别对文本进行右对齐、左对齐和居中。下面的示例演示了你如何指定文本对齐方式：
 
-```
- >>> format(text, '>20')
+```python
+>>> format(text, '>20')
 '         Hello World'
 >>>
 >>> format(text, '<20')
@@ -1030,14 +1022,14 @@ text.ljust(20)
 
 Python 提供了一系列丰富的与日期相关的函数，这些函数在线上有文档：
 
-*[`docs.python.org/2/library/datetime.html`](http://docs.python.org/2/library/datetime.html)*
+[`docs.python.org/2/library/datetime.html`](http://docs.python.org/2/library/datetime.html)
 
 列表 1.7 显示了 Python 脚本 `Datetime2.py` 的内容，该脚本显示了各种日期相关值，例如当前日期和时间；星期、月份和年份；以及自纪元（epoch）以来的秒数时间。
 
-***列表 1.7: Datetime2.py***
+### 列表 1.7：Datetime2.py
 
-```
- import time
+```python
+import time
 import datetime
 
 print("Time in seconds since the epoch: %s" %time.time())
@@ -1053,12 +1045,12 @@ print("Day of the month : ", datetime.date.today().strftime("%d"))
 print("Day of week: ", datetime.date.today().strftime("%A"))
 ```
 
-列表 1.8 显示了执行 列表 1.7 中代码生成的输出。
+列表 1.8 显示了执行列表 1.7 中代码生成的输出。
 
-***列表 1.8: datetime2.out***
+### 列表 1.8：datetime2.out
 
 ```
- Time in seconds since the epoch: 1375144195.66
+Time in seconds since the epoch: 1375144195.66
 Current date and time:  2013-07-29 17:29:55.664164
 Or like this:  13-07-29-17-29
 Current year:  2013
@@ -1072,8 +1064,8 @@ Day of week:  Monday
 
 Python 还允许你对日期相关值进行算术计算，如下代码块所示：
 
-```
- >>> from datetime import timedelta
+```python
+>>> from datetime import timedelta
 >>> a = timedelta(days=2, hours=6)
 >>> b = timedelta(hours=4.5)
 >>> c = a + b
@@ -1085,10 +1077,10 @@ Python 还允许你对日期相关值进行算术计算，如下代码块所示�
 
 列表 1.7 显示了 Python 脚本 `Datetime2.py` 的内容，它显示了各种日期相关值，例如当前日期和时间；星期、月份和年份；以及自纪元以来的秒数时间。
 
-***列表 1.7: Datetime2.py***
+### 列表 1.7：Datetime2.py
 
-```
- import time
+```python
+import time
 import datetime
 
 print("Time in seconds since the epoch: %s" %time.time())
@@ -1104,12 +1096,12 @@ print("Day of the month : ", datetime.date.today().strftime("%d"))
 print("Day of week: ", datetime.date.today().strftime("%A"))
 ```
 
-列表 1.8 显示了执行 列表 1.7 中代码生成的输出。
+列表 1.8 显示了执行列表 1.7 中代码生成的输出。
 
-***列表 1.8: datetime2.out***
+### 列表 1.8：datetime2.out
 
 ```
- Time in seconds since the epoch: 1375144195.66
+Time in seconds since the epoch: 1375144195.66
 Current date and time:  2013-07-29 17:29:55.664164
 Or like this:  13-07-29-17-29
 Current year:  2013
@@ -1123,8 +1115,8 @@ Day of week:  Monday
 
 Python 还允许你对日期相关值进行算术计算，如下代码块所示：
 
-```
- >>> from datetime import timedelta
+```python
+>>> from datetime import timedelta
 >>> a = timedelta(days=2, hours=6)
 >>> b = timedelta(hours=4.5)
 >>> c = a + b
@@ -1136,8 +1128,8 @@ Python 还允许你对日期相关值进行算术计算，如下代码块所示�
 
 与 JavaScript 不同，你可以使用 `try/except` 块来处理异常。这里有一个示例：
 
-```
- try:
+```python
+try:
     x = 4
     y = 'abc'
 except TypeError:
@@ -1146,14 +1138,14 @@ except TypeError:
 
 前面的代码块更紧凑，但你不知道发生了哪种错误类型。Python 允许你定义自定义异常，但这个主题超出了本书的范围。
 
-如所示，前面的代码块指定了更细粒度的异常，随后是一个“通用的” except 块，用于处理执行期间发生的所有其他异常。
+如所示，前面的代码块指定了更细粒度的异常，随后是一个“通用的” `except` 块，用于处理执行期间发生的所有其他异常。
 
 列表 1.10 显示了 Python 脚本 `Exception1.py` 的内容，它演示了如何处理不同类型的异常，包含了由于文件缺失导致的异常。
 
-***列表 1.10: Exception1.py***
+### 列表 1.10：Exception1.py
 
-```
- import sys
+```python
+import sys
 
 try:
     f = open('myfile.txt')
@@ -1168,33 +1160,29 @@ except:
     raise
 ```
 
-
-
-
-
 Python 允许你通过 `input()` 函数（Python 2.x 使用 `raw_input()`）从命令行读取用户输入。通常，你会将用户输入赋值给变量，该变量将包含用户从键盘输入的所有字符。当用户按下 `<return>` 键时输入结束（该键包含在输入字符中）。Listing 1.11 显示了 `UserInput1.py` 的内容，它提示用户输入名称，然后使用插值显示响应。
 
-***列表 1.11: UserInput1.py***
+### 列表 1.11：UserInput1.py
 
-```
- userInput = input("Enter your name: ")
+```python
+userInput = input("Enter your name: ")
 print ("Hello %s, my name is Python" % userInput)
 ```
 
 Listing 1.11 的输出在此处（假设用户输入了单词 Dave）：
 
 ```
- Hello Dave, my name is Python
+Hello Dave, my name is Python
 ```
 
 Listing 1.11 中的 `print()` 语句通过 `%s` 使用字符串插值，它会替换 `%` 符号后的变量值。当你想要指定运行时确定的内容时，此功能显然非常有用。用户输入可能会导致异常（取决于你的代码执行的操作），因此包含异常处理代码是非常重要的。
 
 Listing 1.12 显示了 `UserInput2.py` 的内容，它提示用户输入字符串并在 `try/except` 块中尝试将字符串转换为数字。
 
-***列表 1.12: UserInput2.py***
+### 列表 1.12：UserInput2.py
 
-```
- userInput = input("Enter something: ")
+```python
+userInput = input("Enter something: ")
 
 try:
   x = 0 + eval(userInput)
@@ -1203,16 +1191,22 @@ except:
   print(userInput,'is a string')
 ```
 
-Listing 1.12 在将用户输入转换为数字的结果加上数字 `0`。如果转换成功，将显示一条包含用户输入的消息。如果转换失败，`except` 代码块将包含一个显示消息的 `print()` 语句。
 
-此代码示例使用了 `eval()` 函数，应该避免使用该函数，以防你的代码执行任意的（可能具有破坏性的）命令。
 
-Listing 1.13 显示了 `UserInput3.py` 的内容，它提示用户输入两个数字并在一对 `try/except` 块中尝试计算它们的和。
+## Listing 1.12
 
-***列表 1.13: UserInput3.py***
+在将用户输入转换为数字的结果加上数字`0`。如果转换成功，将显示一条包含用户输入的消息。如果转换失败，`except`代码块将包含一个显示消息的`print()`语句。
+
+此代码示例使用了`eval()`函数，应该避免使用该函数，以防你的代码执行任意的（可能具有破坏性的）命令。
+
+## Listing 1.13
+
+`UserInput3.py`的内容提示用户输入两个数字并在一对`try/except`块中尝试计算它们的和。
+
+**列表 1.13: UserInput3.py**
 
 ```
- sum = 0
+sum = 0
 
 msg = 'Enter a number:'
 val1 = input(msg)
@@ -1233,23 +1227,23 @@ except:
 print('The sum of',val1,'and',val2,'is',sum)
 ```
 
-Listing 1.13 包含两个 `try` 块，每个块后面都跟着一个 `except` 语句。第一个 `try` 块尝试将用户提供的第一个数字加到变量 `sum`，第二个 `try` 块尝试将第二个用户提供的数字加到之前输入的数字。
+Listing 1.13 包含两个`try`块，每个块后面都跟着一个`except`语句。第一个`try`块尝试将用户提供的第一个数字加到变量`sum`，第二个`try`块尝试将第二个用户提供的数字加到之前输入的数字。
 
-如果任一输入字符串不是有效数字，就会发生错误消息；如果两个都是有效数字，将显示一条包含输入数字及其和的消息。请务必阅读本章节前面提到的关于 `eval()` 函数的警告。
+如果任一输入字符串不是有效数字，就会发生错误消息；如果两个都是有效数字，将显示一条包含输入数字及其和的消息。请务必阅读本章节前面提到的关于`eval()`函数的警告。
 
-### 命令行参数
+## 命令行参数
 
-Python 提供了 `getopt` 模块来解析命令行选项和参数，而 `sys` 模块通过 `sys.argv` 访问任何命令行参数。这有两个作用：
+Python 提供了`getopt`模块来解析命令行选项和参数，而`sys`模块通过`sys.argv`访问任何命令行参数。这有两个作用：
 
-* `sys.argv` 是命令行参数的列表。
-* `len(sys.argv)` 是命令行参数的数量。
+- `sys.argv`是命令行参数的列表。
+- `len(sys.argv)`是命令行参数的数量。
 
-在这里，`sys.argv[0]` 是程序名，因此如果 Python 程序名为 `test.py`，它就匹配 `sys.argv[0]` 的值。
+在这里，`sys.argv[0]`是程序名，因此如果 Python 程序名为`test.py`，它就匹配`sys.argv[0]`的值。
 
-现在你可以在命令行上为 Python 程序提供输入值，而不是通过提示用户输入来提供输入值。例如，考虑此处所示脚本 `test.py`：
+现在你可以在命令行上为 Python 程序提供输入值，而不是通过提示用户输入来提供输入值。例如，考虑此处所示脚本`test.py`：
 
 ```
- #/usr/bin/python
+#!/usr/bin/python
 import sys
 print('Number of arguments:',len(sys.argv),'arguments')
 print('Argument List:', str(sys.argv))
@@ -1258,33 +1252,35 @@ print('Argument List:', str(sys.argv))
 如下所示运行上述脚本：
 
 ```
- python test.py arg1 arg2 arg3
+python test.py arg1 arg2 arg3
 ```
 
 这将产生以下结果：
 
 ```
- Number of arguments: 4 arguments.
+Number of arguments: 4 arguments.
 Argument List: ['test.py', 'arg1', 'arg2', 'arg3']
 ```
 
-从命令行指定输入值提供了有用的功能。例如，假设你有一个自定义的 Python 类，包含 `add` 和 `subtract` 方法来相加和相减一对数字。
+从命令行指定输入值提供了有用的功能。例如，假设你有一个自定义的 Python 类，包含`add`和`subtract`方法来相加和相减一对数字。
 
 你可以使用命令行参数指定对数字数字执行哪种方法，如下：
 
 ```
- python MyClass add 3 5
+python MyClass add 3 5
 python MyClass subtract 3 5
 ```
 
 此功能非常有用，因为你可以编程地执行 Python 类中的不同方法，这意味着你也可以为你的代码编写单元测试。
 
-Listing 1.14 显示了 `Hello.py` 的内容，向你展示了如何使用 `sys.argv`。
+## Listing 1.14
 
-***列表 1.14: Hello.py***
+`Hello.py`的内容向你展示了如何使用`sys.argv`。
+
+**列表 1.14: Hello.py**
 
 ```
- import sys
+import sys
 
 def main():
   if len(sys.argv) >= 2:
@@ -1298,43 +1294,43 @@ if __name__ == '__main__':
   main()
 ```
 
-Listing 1.14 使用条件逻辑确定是否执行 `main()`。
+Listing 1.14 使用条件逻辑确定是否执行`main()`。
 
-### 总结
+## 总结
 
-本章展示了如何通过 `input()` 函数（Python2.x 使用 `raw_input()`）从命令行读取用户输入。通常，你会将用户输入赋值给变量，该变量将包含用户从键盘输入的所有字符。当用户按下 `<return>` 键时输入结束（该键包含在输入字符中）。列表 1.11 显示了 `UserInput1.py` 的内容提示用户输入名称并使用插值显示响应。
+本章展示了如何通过`input()`函数（Python2.x 使用`raw_input()`）从命令行读取用户输入。通常，你会将用户输入赋值给变量，该变量将包含用户从键盘输入的所有字符。当用户按下`<return>`键时输入结束（该键包含在输入字符中）。列表 1.11 显示了`UserInput1.py`的内容提示用户输入名称并使用插值显示响应。
 
 Listing 1.11 的输出在此处（假设用户输入了单词 Dave）：
 
 ```
- Hello Dave, my name is Python
+Hello Dave, my name is Python
 ```
 
-Listing 1.11 中的 `print()` 语句通过 `%s` 使用字符串插值，它会替换 `%` 符号后的变量值。当你想要指定运行时确定的内容时，此功能显然非常有用。用户输入可能会导致异常（取决于你的代码执行的操作），因此包含异常处理代码是非常重要的。
+Listing 1.11 中的`print()`语句通过`%s`使用字符串插值，它会替换`%`符号后的变量值。当你想要指定运行时确定的内容时，此功能显然非常有用。用户输入可能会导致异常（取决于你的代码执行的操作），因此包含异常处理代码是非常重要的。
 
-Listing 1.12 显示了 `UserInput2.py` 的内容，它提示用户输入字符串并在 `try/except` 块中尝试将字符串转换为数字。
+Listing 1.12 显示了`UserInput2.py`的内容，它提示用户输入字符串并在`try/except`块中尝试将字符串转换为数字。
 
-Listing 1.12 在将用户输入转换为数字的结果加上数字 `0`。如果转换成功，将显示一条包含用户输入的消息。如果转换失败，`except` 代码块将包含一个显示消息的 `print()` 语句。
+Listing 1.12 在将用户输入转换为数字的结果加上数字`0`。如果转换成功，将显示一条包含用户输入的消息。如果转换失败，`except`代码块将包含一个显示消息的`print()`语句。
 
-此代码示例使用了 `eval()` 函数，应该避免使用该函数，以防你的代码执行任意的（可能具有破坏性的）命令。
+此代码示例使用了`eval()`函数，应该避免使用该函数，以防你的代码执行任意的（可能具有破坏性的）命令。
 
-Listing 1.13 显示了 `UserInput3.py` 的内容提示用户输入两个数字并在一对 `try/except` 块中尝试计算它们的和。
+Listing 1.13 显示了`UserInput3.py`的内容提示用户输入两个数字并在一对`try/except`块中尝试计算它们的和。
 
-Listing 1.13 包含两个 `try` 块，每个块后面都跟着一个一个 except` 语句。第一个 `try` 块尝试将用户提供的第一个数字加到变量 `sum`，第二个 `try` 块尝试将第二个用户提供的数字加到之前输入的数字。如果任一输入字符串不是有效数字，就会发生错误消息；如果两个都是有效数字，将显示一条包含输入数字及其和的消息。请务必阅读本章节前面提到的关于 `eval()` 函数的警告。
+Listing 1.13 包含两个`try`块，每个块后面都跟着一个`except`语句。第一个`try`块尝试将用户提供的第一个数字加到变量`sum`，第二个`try`块尝试将第二个用户提供的数字加到之前输入的数字。如果任一输入字符串不是有效数字，就会发生错误消息；如果两个都是有效数字，将显示一条包含输入数字及其和的消息。请务必阅读本章节前面提到的关于`eval()`函数的警告。
 
-### 命令行参数
+## 命令行参数
 
-Python 提供了 `getopt` 模块来解析命令行选项和参数，而 `sys` 模块通过 `sys.argv` 访问任何命令行参数。这有两个作用：
+Python 提供了`getopt`模块来解析命令行选项和参数，而`sys`模块通过`sys.argv`访问任何命令行参数。这有两个作用：
 
-* `sys.argv` 是命令行参数的列表。
-* `len(sys.argv)` 是命令行参数的数量。
+- `sys.argv`是命令行参数的列表。
+- `len(sys.argv)`是命令行参数的数量。
 
-在这里，`sys.argv[0]` 是程序名，因此如果 Python 程序名为 `test.py`，它就匹配 `sys.argv[0]` 的值。
+在这里，`sys.argv[0]`是程序名，因此如果 Python 程序名为`test.py`，它就匹配`sys.argv[0]`的值。
 
-现在你可以在命令行上为 Python 程序提供输入值，而不是通过提示用户输入来提供输入值。例如，考虑此处所示脚本 `test.py`：
+现在你可以在命令行上为 Python 程序提供输入值，而不是通过提示用户输入来提供输入值。例如，考虑此处所示脚本`test.py`：
 
 ```
- #!/usr/bin/python
+#!/usr/bin/python
 import sys
 print('Number of arguments:',len(sys.argv),'arguments')
 print('Argument List:', str(sys.argv))
@@ -1343,31 +1339,31 @@ print('Argument List:', str(sys.argv))
 如下所示运行上述脚本：
 
 ```
- python test.py arg1 arg2 arg3
+python test.py arg1 arg2 arg3
 ```
 
 这将产生以下结果：
 
 ```
- Number of arguments: 4 arguments.
+Number of arguments: 4 arguments.
 Argument List: ['test.py', 'arg1', 'arg2', 'arg3']
 ```
 
-从命令行指定输入值提供了有用的功能。例如，假设你有一个自定义的 Python 类，包含 `add` 和 `subtract` 方法来相加和相减一对数字。
+从命令行指定输入值提供了有用的功能。例如，假设你有一个自定义的 Python 类，包含`add`和`subtract`方法来相加和相减一对数字。
 
 你可以使用命令行参数指定对数字数字执行哪种方法，如下：
 
 ```
- python MyClass add 3 5
+python MyClass add 3 5
 python MyClass subtract 3 5
 ```
 
 此功能非常有用，因为你可以编程地执行 Python 类中的不同方法，这意味着你也可以为你的代码编写单元测试。
 
-Listing 1.14 显示了 `Hello.py` 的内容，向你展示了如何使用 `sys.argv`。
+Listing 1.14 显示了`Hello.py`的内容，向你展示了如何使用`sys.argv`。
 
 ```
- import sys
+import sys
 
 def main():
   if len(sys.argv) >= 2:
@@ -1380,10 +1376,6 @@ def main():
 if __name__ == '__main__':
   main()
 ```
-
-
-
-
 
 在一个理想的世界里，所有数据集都处于完好状态，没有极值、缺失值或错误值。每个特征值都被正确捕获，没有任何混淆可能。此外，由于存在“通用标准”（它定义了所有可能的数据 set 的正确格式和可接受值），因此不需要日期格式、货币值或语言之间进行任何转换。
 
@@ -1391,92 +1383,89 @@ if __name__ == '__main__':
 
 事实上，即使在机器学习模型部署到生产环境后，数据清洗的任务也并不意味着已经完成。例如，一个每天收集数 TB 或 PB 级数据的在线系统可能包含对模型性能产生不利影响的偏斜值。这些不利影响可以通过与生产模型相关的指标的变化揭示出来。
 
-#### **什么是数据漂移？**
+### 什么是数据漂移？
 
-数据的价值基于其准确性、相关性和年龄。`data drift` 指的是相关性降低的数据：在某些情况下，这种现象随着时间的推移而发生；而在其他情况下，是因为应用程序中与特征相关的变化导致某些数据不再具有相关性。
+数据的价值基于其准确性、相关性和年龄。`data drift`指的是相关性降低的数据：在某些情况下，这种现象随着时间的推移而发生；而在其他情况下，是因为应用程序中与特征相关的变化导致某些数据不再具有相关性。
 
-例如，由于各种因素（如不同类型客户的画像），2010 年的在线购买模式可能没有 2020 年的数据那样相关。另一个例子涉及手机库存：停产型号在类系统中的价值会降低。可能有多个因素影响特定数据集中的 `data drift`。
+例如，由于各种因素（如不同类型客户的画像），2010 年的在线购买模式可能没有 2020 年的数据那样相关。另一个例子涉及手机库存：停产型号在类系统中的价值会降低。可能有多个因素影响特定数据集中的`data drift`。
 
-处理数据漂移的两种技术是 `domain classifier`（领域分类器）和 `black-box shift detector`（黑盒偏移检测器），在网上都有讨论：
+处理数据漂移的两种技术是`domain classifier`（领域分类器）和`black-box shift detector`（黑盒偏移检测器），在网上都有讨论：
 
 [`blog.dataiku.com/towards-reliable-mlops-with-drift-detectors`](https://blog.dataiku.com/towards-reliable-mlops-with-drift-detectors)
 
-`data drift` 是三种漂移类型之一，所有类型都列在这里：
+`data drift`是三种漂移类型之一，所有类型都列在这里：
 
-*   概念漂移（Concept Drift）
-*   数据漂移（Data Drift）
-*   上游数据变化（Upstream Data Changes）
+- 概念漂移（Concept Drift）
+- 数据漂移（Data Drift）
+- 上游数据变化（Upstream Data Changes）
 
 请进行在线查找以获取更多关于这些漂移类型的信息。
 
-### **什么是数据集？**
+### 什么是数据集？
 
-简单来说，`dataset` 数据源（如文本文件），包含数据的行和列。每一行通常被称为 `data point`（数据点），每一列被称为 `feature`（特征）。`dataset` 可以有多种形式：CSV（逗号分隔值）、TSV（制表符分隔值）、Excel 表格、RDMBS 中的表格、NoSQL 数据库中的文档、Web 服务的输出等。正如你所看到的，人们需要分析 `dataset` 以确定哪些特征是最重要的，哪些特征可以安全地忽略，以便使用定的 `dataset` 训练模型。
+简单来说，`dataset`数据源（如文本文件），包含数据的行和列。每一行通常被称为`data point`（数据点），每一列被称为`feature`（特征）。`dataset`可以有多种形式：CSV（逗号分隔值）、TSV（制表符分隔值）、Excel 表格、RDMBS 中的表格、NoSQL 数据库中的文档、Web 服务的输出等。正如你所看到的，人们需要分析`dataset`以确定哪些特征是最重要的，哪些特征可以安全地忽略，以便使用定的`dataset`训练模型。
 
-`dataset` 的规模从非常小（几个特征和 100 行）到非常大（超过 1000 个特征和超过 100 万行）。如果你不熟悉问题领域，可能很难确定大型数据集中最重要的特征。在这种情况下，你可能需要一位领域专家，他们理解理解特征的重要性、特征之间的相互依赖关系（如果有）以及特征的数据值是否有效。
+`dataset`的规模从非常小（几个特征和 100 行）到非常大（超过 1000 个特征和超过 100 万行）。如果你不熟悉问题领域，可能很难确定大型数据集中最重要的特征。在这种情况下，你可能需要一位领域专家，他们理解理解特征的重要性、特征之间的相互依赖关系（如果有）以及特征的数据值是否有效。
 
-此外，还有算法（称为 `dimensionality reduction algorithms`，降维算法）可以帮助你确定最重要的特征，例如 `PCA`（主成分分析），这超出了本书的范围。
+此外，还有算法（称为`dimensionality reduction algorithms`，降维算法）可以帮助你确定最重要的特征，例如`PCA`（主成分分析），这超出了本书的范围。
 
-#### **数据预处理**
+### 数据预处理
 
-数据预处理是验证 `dataset` 内容的初始步骤，涉及对缺失和错误数据值做出决策：
+数据预处理是验证`dataset`内容的初始步骤，涉及对缺失和错误数据值做出决策：
 
-*   处理缺失值
-*   清洗“噪声”文本数据
-*   移除 HTML 标签
-*   移除表情符号
-*   处理 Emoji/表情符号
-*   过滤数据
-*   分组数据
-*   处理货币和日期格式
+- 处理缺失值
+- 清洗“噪声”文本数据
+- 移除 HTML 标签
+- 移除表情符号
+- 处理 Emoji/表情符号
+- 过滤数据
+- 分组数据
+- 处理货币和日期格式
 
-数据清洗是数据整理（data wrangling）的子集，涉及移除不需要的数据和处理缺失数据。对于文本数据，你可能需要移除 HTML 标签、标点符号等。对于数值数据，字母可能与数值数据混合。然而，具有数值特征的 `dataset` 可能存在错误值或缺失值（后文将讨论）。此外，计算特征值的最小值、最大值、平均值、中位数标准差显然仅适用于数值。
+数据清洗是数据整理（data wrangling）的子集，涉及移除不需要的数据和处理缺失数据。对于文本数据，你可能需要移除 HTML 标签、标点符号等。对于数值数据，字母可能与数值数据混合。然而，具有数值特征的`dataset`可能存在错误值或缺失值（后文将讨论）。此外，计算特征值的最小值、最大值、平均值、中位数标准差显然仅适用于数值。
 
-在预处理步骤完成后，会执行 `data wrangling`，即将数据转换为新格式。例如，你可能需要将来自多个源的数据合并到单个 `dataset`。在这种情况下，你可能需要在不同的测量单位（如日期格式和货币值）之间进行转换，以便以一致的方式在 `dataset` 中表示数据。
+在预处理步骤完成后，会执行`data wrangling`，即将数据转换为新格式。例如，你可能需要将来自多个源的数据合并到单个`dataset`。在这种情况下，你可能需要在不同的测量单位（如日期格式和货币值）之间进行转换，以便以一致的方式在`dataset`中表示数据。
 
-货币和日期值是 `i18n`（国际化）的一部分；`L10n`（本地化）针对特定的国家、语言或地区。硬编码值（如文本字符串）可以存储在通常称为 `resource bundle`（资源包）的文件中，其中每个字符串通过代码引用。每种语言都有自己的资源包。
+货币和日期值是`i18n`（国际化）的一部分；`L10n`（本地化）针对特定的国家、语言或地区。硬编码值（如文本字符串）可以存储在通常称为`resource bundle`（资源包）的文件中，其中每个字符串通过代码引用。每种语言都有自己的资源包。
 
-### **数据类型**
+### 数据类型
 
 如果你写过计算机程序，那么你就知道许多编程语言存在显式数据类型，例如 C、C++、Java 和 TypeScript。某些编程语言（如 JavaScript 和 awk）不需要用显式类型初始化变量：变量的类型通过隐式类型系统动态推断（即一个不直接暴露给开发者的系统）。
 
 在机器学习中，数据集可以包含不同类型的特征，例如以下一种或多种组合：
 
-*   数值数据（整数/浮点，以及离散/连续）
-*   字符/分类数据（不同语言）
-*   日期相关数据（不同格式）
-*   货币数据（不同格式）
-*   二进制数据（是/否，0/1 等）
-*   名义数据（多个不相关的值）
-*   序数据（多个相关的值）
+- 数值数据（整数/浮点，以及离散/连续）
+- 字符/分类数据（不同语言）
+- 日期相关数据（不同格式）
+- 货币数据（不同格式）
+- 二进制数据（是/否，0/1 等）
+- 名义数据（多个不相关的值）
+- 序数据（多个相关的值）
 
 考虑一个包含房地产数据的数据集，它可能有 30 列（甚至更多），通常具有以下特征：
 
-*   房屋的卧室数量：数值值和离散值
-*   平方英尺：数值值和（可能的）连续值
-*   城市名称：字符数据
-*   建造日期：日期值
-*   售价：货币值且可能为连续值
-*   “待售”状态：二进制数据（“是”或“否”）
+- 房屋的卧室数量：数值值和离散值
+- 平方英尺：数值值和（可能的）连续值
+- 城市名称：字符数据
+- 建造日期：日期值
+- 售价：货币值且可能为连续值
+- “待售”状态：二进制数据（“是”或“否”）
 
 年度季节是名义数据的一个例子：尽管许多国家有四个季节，但有些国家只有两个不同的季节。然而，季节可以与不同的温度范围相关（夏季与冬季）。员工薪资等级是序数据的例子：1=初级，2=一年经验，等等。另一个名义数据的例子是颜色集合，例如 {红、绿、蓝}。
 
 分类数据将在本章稍后部分进行详细讨论。
 
-
-
-
 如果你幸运地继承了一个完完的数据集，那么数据清洗任务（后文将讨论）将大大简化：事实上，你可能不需要对该数据集进行任何`data cleaning`。然而，如果你需要创建一个结合了多个数据集的数据集，而这些数据集包含不同日期和货币格式，那么你就需要将它们转换为通用格式。
 
-如果你需要训练一个包含分类数据特征的模型，那么你就需要将这些分类数据转换为数值数据。例如，泰坦尼克号（Titanic）数据集包含一个名为“性别”的特征，其值可能是男性或女性。正如你将在本章稍后部分看到的，`Pandas` 可以非常简单地将男性“映射”到 `0`，将女性“映射”到 `1`。
+如果你需要训练一个包含分类数据特征的模型，那么你就需要将这些分类数据转换为数值数据。例如，泰坦尼克号（Titanic）数据集包含一个名为“性别”的特征，其值可能是男性或女性。正如你将在本章稍后部分看到的，`Pandas`可以非常简单地将男性“映射”到`0`，将女性“映射”到`1`。
 
 ### 离散数据与连续数据
 
-`Discrete data`（离散数据）是一组可以计数的数值，而`continuous data`（连续数据）必须通过测量。离散数据可以合理地放入下拉列表中，但做出这种判断并没有精确的数值。某人可能认为一个包含`500` 个值的列表是离散的，而另一个人可能认为它是连续的。例如，加拿大省份列表和美国州立列表是离散数据值，但世界国家数量（约`200`个）或世界语言数量（超过`7,000`种）也是如此吗？
+`Discrete data`（离散数据）是一组可以计数的数值，而`continuous data`（连续数据）必须通过测量。离散数据可以合理地放入下拉列表中，但做出这种判断并没有精确的数值。某人可能认为一个包含`500`个值的列表是离散的，而另一个人可能认为它是连续的。例如，加拿大省份列表和美国州立列表是离散数据值，但世界国家数量（约`200`个）或世界语言数量（超过`7,000`种）也是如此吗？
 
 温度、湿度和气压的数值被认为是连续的。货币也被视为连续的，尽管在两个连续值之间存在可衡量的差异。美国货币的最小单位是 1 美分，即美元的`1/100th`（基于会计的测量使用“密”，即美元的`1/1,000th`）。
 
-连续数据类型可能存在细微的差异。例如，一个身高为 `200` 厘米的人是身高为 `100` 厘米的人的两倍（同样，`100` 公斤的人与 `50` 公斤的人也是如此）。但温度不同：`80` 度华氏温度的热度不是 `40` 度华氏温度的两倍。
+连续数据类型可能存在细微的差异。例如，一个身高为`200`厘米的人是身高为`100`厘米的人的两倍（同样，`100`公斤的人与`50`公斤的人也是如此）。但温度不同：`80`度华氏温度的热度不是`40`度华氏温度的两倍。
 
 此外，“连续”一词在数学中的含义并不一定与机器学习中的“连续”相同。在数学中，一个连续变量（假设在二维欧几里得平面上）可以具有不可计数的无限个值。然而，数据集中一个特征如果拥有比能“合理”显示在下拉列表中数量更多的值，它就会被视为连续变量。
 
@@ -1486,9 +1475,11 @@ if __name__ == '__main__':
 
 `binning`（分箱）的概念是指将一组值划分为多个区间，然后将同一区间内的所有数字视为具有相同的值。
 
-作为一个简单的例子，假设数据集中的一个特征包含人的年龄。取值范围大约在 `0` 到 `120` 之间，我们可以将其“分箱”为 `12` 个等距区间，每个区间包含 `10` 个值：`0` 到 `9`、`10` 到 `19`、`20` 到 `29` 等，以此此类推。
+作为一个简单的例子，假设数据集中的一个特征包含人的年龄。取值范围大约在`0`到`120`之间，我们可以将其“分箱”为`12`个等距区间，每个区间包含`10`个值：`0`到`9`、`10`到`19`、`20`到`29`等，以此此类推。
 
-然而，如上所述划分人的年龄可能会出现问题。假设 A 人、B 人和 C 人的年龄分别为 `29`、`30` 和 `39`。那么 A 人和 B 人之间可能比 B 人和 C 人之间更相似，但由于年龄划分的方式，B 被归类为比接近 A 更接近 C。事实上，分箱可能会增加第一类错误（假阳性）和第二类错误（假阴性），正如在在下面的博客文章讨论的那样（以及一些分箱的替代方案）：
+然而，如上所述划分人的年龄可能会出现问题。假设 A 人、B 人和 C 人的年龄分别为`29`、`30`和`39`。那么 A 人和 B 人之间可能比 B 人和 C 人之间更相似，但由于年龄划分的方式，B 被归类为比接近 A 更接近 C。事实上，分箱可能会增加第一类错误（假阳性）和第二类错误（假阴性），正如在下面的博客文章讨论的那样（以及一些分箱的替代方案）：
+
+
 
 https://medium.com/@peterflom/why-binning-continuous-data-is-almost-always-a-mistake-ad0b3a1d141f
 
@@ -1496,18 +1487,16 @@ https://medium.com/@peterflom/why-binning-continuous-data-is-almost-always-a-mis
 
 ### 通过归一化缩放数值数据
 
-数值范围可能会差异很大，需要注意的是，它们通常需要被缩放到一个较小的范围，例如 `[–1,1]` 或 `[0,1]` 范围内的值，你可以分别通过 `tanh` 函数或 `sigmoid` 函数来实现。
+数值范围可能会差异很大，需要注意的是，它们通常需要被缩放到一个较小的范围，例如 `[-1,1]` 或 `[0,1]` 范围内的值，你可以分别通过 `tanh` 函数或 `sigmoid` 函数来实现。
 
 例如，以米为单位测量人的身高涉及 `0.50` 米到 `2.5` 米之间的范围（在绝大多数情况下），而以厘米为单位测量身高则范围在 `50` 厘米到 `250` 厘米之间：这两个单位之间的差异是 100 倍。人以公斤为单位的体重通常在 `5` 公斤到 `200` 公斤之间变化。
-
-
 
 因此，`{-1, 0, 1}` 的标准化结果为 `{-1/0.816, 0/0.816, 1/0.816}`，这实际上等于值集合 `{-1.2254, 0, 1.2254}`。
 
 另一个例子，假设随机变量 `X` 的值为 `{-6, 0, 6}`。那么 `mu` 和 `sigma` 的计算如下：
 
-```
- mu       = (SUM xi)/n = (-6 + 0 + 6)/3 = 0
+```text
+mu       = (SUM xi)/n = (-6 + 0 + 6)/3 = 0
 
 variance = [SUM (xi- mu)²]/n
          = [(-6-0)² + (0-0)² + (6-0)²]/3
@@ -1527,8 +1516,8 @@ sigma    = sqrt(24) = 4.899 (近似值)
 
 *鲁棒标准化*技术是标准化的变体，它根据值的子集来计算平均值 `mu` 和标准差 `sigma`。具体而言，仅使用第 25 分位数和 75 分位数之间的值，这忽略了可能包含离群值的第一和第四四位数。让我们定义以下变量：
 
-```
- X25 = 第 25 分位数
+```text
+X25 = 第 25 分位数
 X75 = 第 75 分位数
 XM = {Xi} 值的平均值
 XR = 鲁棒标准化
@@ -1536,8 +1525,8 @@ XR = 鲁棒标准化
 
 然后根据以下公式计算 `XR`：
 
-```
- XR = (Xi - XM)/(X75 - X25)
+```text
+XR = (Xi - XM)/(X75 - X25)
 ```
 
 前面的技术也被称为 `IQR`，它是*四分位间距*（interquartile range）的缩写，你可以在这里查看一个计算示例：
@@ -1550,8 +1539,8 @@ XR = 鲁棒标准化
 
 接下来，检查类别列的内容，是否存在不一致的拼写或错误。一个很好的例子是性别类别，它可能由以下值的组合：
 
-```
- male
+```text
+male
 Male
 female
 Female
@@ -1577,8 +1566,8 @@ F
 
 另一种技术称为独热编码（one-hot encoding），它将每个值转换为*向量*（如果需要复习可以查看维基百科）。因此，`{Male, Female}` 可以表示为 `[1,0]` 和 `[0,1]`。如果你熟悉矩阵，你会发现性别的向量构成了一个 2x2 矩阵，而颜色 `{R,G,B}` 将构成一个 3x3 矩阵，如下：
 
-```
- [1,0,0]
+```text
+[1,0,0]
 [0,1,0]
 [0,0,1]
 ```
@@ -1598,10 +1587,7 @@ F
 3. 为剩余的类别值分配“OTHER”（其他）。
 4. 删除类别值属于那 5% 的行。
 
-
-
-
-```
+```text
 MM/DD/YY
 MM/DD/YYYY
 DD/MM/YY
@@ -1632,13 +1618,13 @@ YYMMDD
 
 虽然保留还是删除离群值由你做决定，但有一些技术可以帮助你检测数据集中的离群值。以下是技术的短列表，以及简要描述和更多信息的链接：
 
-*   修剪 (trimming)
-*   缩尾处理 (winsorizing)
-*   最小协方差行列 (minimum covariance determinant)
-*   局部离群值因子 (local outlier factor)
-*   Huber 和岭回归 (Huber and Ridge regressions)
-*   孤立森林（基于树的算法）
-*   单类 SVM (one-class SVM)
+- 修剪 (trimming)
+- 缩尾处理 (winsorizing)
+- 最小协方差行列 (minimum covariance determinant)
+- 局部离群值因子 (local outlier factor)
+- `Huber` 和岭回归 (Huber and Ridge regressions)
+- 孤立森林（基于树的算法）
+- 单类 `SVM` (one-class SVM)
 
 也许 `trimming` 是简单的技术（删除离群值之外），它涉及移除特征位于顶部 5% 或底部 5% 范围的行。对数据进行 `缩尾` 是修剪的改进：将顶部 5% 范围的值设置为第 95 分位数的最大值，并将底部 5% 范围的值设置为第 5 分位的最小值。
 
@@ -1658,15 +1644,12 @@ YYMMDD
 
 [`scikit-learn.org/stable/auto_examples/linear_model/plot_theilsen.html`](https://scikit-learn.org/stable/auto_examples/linear_model/plot_theilsen.html)
 
+Listing 2.2 的改进之处在于，你可以指定一组值并从中计算上限和下限范围值，而新的代码块以粗体形式显示。
 
-
-
-Listing 2.2 的改进之处在于，你可以指定一组值并从中计算上限和下限范围值，而新的代码块以**粗体**形式显示。
-
-列表 2.2: numpy_outliers2.py
+列表 2.2: `numpy_outliers2.py`
 
 ```python
- import numpy as np
+import numpy as np
 
 arr1 = np.array([2,5,7,9,9,40])
 print("values:",arr1)
@@ -1693,8 +1676,8 @@ for multiplier in multipliers:
 
 Listing 2.2 包含了一块新代码，它将变量 `multipliers` 初始化为数值值数组，用于寻找离群值。尽管你在真实数据集上可能会使用 `2.0` 或更大的值，但这一范围数字可以让你对检测离群值有更好的感。运行 Listing 2.2 中的代码，你将看到以下输出：
 
-```
- values: [2  5  7  9  9  40]
+```text
+values: [2  5  7  9  9  40]
 data_mean: 12.0
 data_std: 12.754084313139327
 
@@ -1740,38 +1723,41 @@ Identified outliers: 0
 outliers: []
 ```
 
-### 使用 PANDAS 寻找离群值
+### 使用 `PANDAS` 寻找离群值
 
-虽然我们在第三章中讨论了 Pandas，但本节的代码仅涉及非常简单的 Pandas 数据框、`mean()` 方法和 `std()` 方法。
+虽然我们在第三章中讨论了 `Pandas`，但本节的代码仅涉及非常简单的 `Pandas` 数据框、`mean()` 方法和 `std()` 方法。
 
-Listing 2.3 显示了 `pandas_outliers1.py` 的内容，说明了如何使用 Pandas 在数字数组中寻找离群值。
+Listing 2.3 显示了 `pandas_outliers1.py` 的内容，说明了如何使用 `Pandas` 在数字数组中寻找离群值。
 
-列表 2.3: pandas_outliers1.py
+列表 2.3: `pandas_outliers1.py`
+
+
 
 ```python
- import pandas as pd
+import pandas as pd
 
-df = pd.DataFrame([2,5,7,9,9,40])
+df = pd.DataFrame([2, 5, 7, 9, 9, 40])
 df.columns = ["data"]
 
-data_mean = df['data'].mean()
-data_std  = df['data'].std()
-print("data_mean:",data_mean)
-print("data_std:" ,data_std)
+data_mean = df["data"].mean()
+data_std = df["data"].std()
+print("data_mean:", data_mean)
+print("data_std:", data_std)
 print()
 
 multiplier = 1.5
 cut_off = data_std * multiplier
 lower, upper = data_mean - cut_off, data_mean + cut_off
-print("lower cutoff:",lower)
-print("upper cutoff:",upper)
+print("lower cutoff:", lower)
+print("upper cutoff:", upper)
 print()
-outliers = [x for x in df['data'] if x < lower or x > upper]
-print('Identified outliers: %d' % len(outliers))
-print("outliers:",outliers)
+
+outliers = [x for x in df["data"] if x < lower or x > upper]
+print("Identified outliers: %d" % len(outliers))
+print("outliers:", outliers)
 ```
 
-Listing 2.3 首先定义了一个 Pandas 数据框，然后计算这些数字的平均值标准差。下一块代码根据 `cut_off` 变量初始化了两个代表上限和下限的数字。数据框中位于下限左侧或上限右侧的任何数字都被视为离群值。Listing 2.3 的最后部分初始化了离群值变量 `outliers`，并打印了这些值。运行 Listing 2.3 中的代码，你将看到：
+Listing 2.3 首先定义了一个 Pandas 数据框，然后计算这些数字的平均值标准差。下一块代码根据`cut_off`变量初始化了两个代表上限和下限的数字。数据框中位于下限左侧或上限右侧的任何数字都被视为离群值。Listing 2.3 的最后部分初始化了离群值变量`outliers`，并打印了这些值。运行 Listing 2.3 中的代码，你将看到：
 
 ```
  values: [2  5  7  9  9  40]
@@ -1785,36 +1771,36 @@ Identified outliers: 1
 outliers: [40]
 ```
 
-之前的代码硬编码的值来计算上限和下限范围。Listing 2.2 的改进之处在于你可以指定一组值并从中计算上限和下限范围值，而新的代码块以**粗体**形式显示。列表 2.4: pandas_outliers.py
+之前的代码硬编码的值来计算上限和下限范围。Listing 2.2 的改进之处在于你可以指定一组值并从中计算上限和下限范围值，而新的代码块以粗体形式显示。列表 2.4: `pandas_outliers.py`
 
 ```python
- import pandas as pd
+import pandas as pd
 
-df = pd.DataFrame([2,5,7,9,9,40])
-df = pd.DataFrame([2,5,7,8,42])
-df = pd.DataFrame([2,5,7,8,42,492])
+df = pd.DataFrame([2, 5, 7, 9, 9, 40])
+df = pd.DataFrame([2, 5, 7, 8, 42])
+df = pd.DataFrame([2, 5, 7, 8, 42, 492])
 df.columns = ["data"]
 print("=> data values:")
-print(df['data'])
-data_mean = df['data'].mean()
-data_std  = df['data'].std()
-print("=> data_mean:",data_mean)
-print("=> data_std:",data_std)
+print(df["data"])
+data_mean = df["data"].mean()
+data_std = df["data"].std()
+print("=> data_mean:", data_mean)
+print("=> data_std:", data_std)
 
-multipliers = [0.5,1.0,1.5,2.0,2.5,3.0]
+multipliers = [0.5, 1.0, 1.5, 2.0, 2.5, 3.0]
 for multiplier in multipliers:
-  cut_off = data_std * multiplier
-  lower, upper = data_mean - cut_off, data_mean + cut_off
-  print("=> multiplier: ",multiplier)
-  print("lower cutoff:",lower)
-  print("upper cutoff:",upper)
+    cut_off = data_std * multiplier
+    lower, upper = data_mean - cut_off, data_mean + cut_off
+    print("=> multiplier: ", multiplier)
+    print("lower cutoff:", lower)
+    print("upper cutoff:", upper)
 
-  outliers = [x for x in df['data'] if x < lower or x > upper]
-  print('Identified outliers: %d' % len(outliers))
-  print("outliers:",outliers)
+    outliers = [x for x in df["data"] if x < lower or x > upper]
+    print("Identified outliers: %d" % len(outliers))
+    print("outliers:", outliers)
 ```
 
-Listing 2.4 包含了一块新代码，它将变量 `multipliers` 初始化为数值值数组，用于寻找离群值。尽管你在真实数据集上可能会使用 `2.0` 或更大的值，但这一范围数字可以让你对检测离群值有更好的感。运行 Listing 2.4 中的代码，你将看到以下输出：
+Listing 2.4 包含了一块新代码，它将变量`multipliers`初始化为数值数组，用于寻找离群值。尽管你在真实数据集上可能会使用`2.0`或更大的值，但这一范围数字可以让你对检测离群值有更好的感。运行 Listing 2.4 中的代码，你将看到以下输出：
 
 ```
  => data values:
@@ -1869,21 +1855,21 @@ outliers: []
 
 一组数字的 z-score 是通过标准化这些数字计算的，这涉及到从每个数字中减去它们的平均值，然后除以标准差。尽管你可以手动执行这些步骤，但 SciPy 库简化了涉及的步骤。如果有需要，可以通过以下命令安装此包：
 
-```
+```bash
 pip3 install scipy
 ```
 
-Listing 2.5 显示了 `outliers_zscores.py` 的内容，说明了如何在一个数字数组中寻找离群值。正如你所看到的，这个代码示例依赖于 NumPy、Pandas 和 SciPy 的便利方法。
+Listing 2.5 显示了`outliers_zscores.py`的内容，说明了如何在一个数字数组中寻找离群值。正如你所看到的，这个代码示例依赖于 NumPy、Pandas 和 SciPy 的便利方法。
 
-列表 2.5: outliers_zscores.py
+列表 2.5: `outliers_zscores.py`
 
 ```python
- import numpy as np
+import numpy as np
 import pandas as pd
 from scipy import stats
 
-arr1 = np.array([2,5,7,9,9,40])
-print("values:",arr1)
+arr1 = np.array([2, 5, 7, 9, 9, 40])
+print("values:", arr1)
 
 df = pd.DataFrame(arr1)
 
@@ -1902,15 +1888,11 @@ print(zscores[np.where(zscores < lower)])
 print()
 ```
 
-
-
-
-
-```
+```python
 zscores = np.abs(stats.zscore(df))
 ```
 
-下一段代码初始化了变量 `upper` 和 `lower`。小于 `lower` 值或大于 `upper` 值的 z-score 被视为离群值，并会显示这些值。运行列表 2.3 中的代码，你将看到以下输出：
+下一段代码初始化了变量`upper`和`lower`。小于`lower`值或大于`upper`值的 z-score 被视为离群值，并会显示这些值。运行列表 2.3 中的代码，你将看到以下输出：
 
 ```
  values: [2  5  7  9  9  40]
@@ -1931,14 +1913,14 @@ z scores:
 
 ### 使用 SKLEAR 寻找离群值（可选）
 
-本节是可选的，因为代码涉及 `sklearn.covariance` 中的 `EllipticEnvelope` 类，而我们在书中并未介绍该类。然而，阅读这些代码并将其与之前的寻找离群值代码示例进行对比仍然是有值的。
+本节是可选的，因为代码涉及`sklearn.covariance`中的`EllipticEnvelope`类，而我们在书中并未介绍该类。然而，阅读这些代码并将其与之前的寻找离群值代码示例进行对比仍然是有值的。
 
-列表 2.6 显示了 `elliptic_envelope_outliers.py` 的内容，展示了如何使用 `Pandas` 在数字数组中寻找离群值。
+列表 2.6 显示了`elliptic_envelope_outliers.py`的内容，展示了如何使用`Pandas`在数字数组中寻找离群值。
 
-列表 2.6：elliptic_envelope_outliers.py
+列表 2.6：`elliptic_envelope_outliers.py`
 
 ```python
- # pip3 install scikit-learn as sklearn
+# pip3 install scikit-learn as sklearn
 from sklearn.covariance import EllipticEnvelope
 import numpy as np
 
@@ -1951,6 +1933,7 @@ print()
 # 实例化并拟合估计器:
 envelope = EllipticEnvelope(random_state=0)
 envelope.fit(Xdata)
+
 # 创建测试集:
 test = np.array([0, 2, 4, 6, 8, 10, 15, 20, 25, 30]).reshape(-1, 1)
 print("test values:")
@@ -1962,9 +1945,9 @@ print("envelope.predict(test):")
 print(envelope.predict(test))
 ```
 
-列表 2.6 从几个导入语句开始，然后将变量 `Xdata` 初始化为来自高斯分布的随机数列向量。下一段代码片段将变量 `envelope` 初始化为 `Sklearn` 中 `EllipticEnvelope` 的实例（这将决定 `Xdata` 中是否存在离群值），然后对 `Xdata` 中的数据值进行训练。
+列表 2.6 从几个导入语句开始，然后将变量`Xdata`初始化为来自高斯分布的随机数列向量。下一段代码片段将变量`envelope`初始化为`Sklearn`中`EllipticEnvelope`的实例（这将决定`Xdata`中是否存在离群值），然后对`Xdata`中的数据值进行训练。
 
-列表 2.6 的后续部分将变量 `test` 初始化为列向量，类似于 `Xdata` 的初始化方式。列表 2.6 的最后一部分部分对变量 `test` 中的值进行预测并显示结果：值 -1 表示为离群值。运行列表 2.6 中的代码，你将看到以下输出：
+列表 2.6 的后续部分将变量`test`初始化为列向量，类似于`Xdata`的初始化方式。列表 2.6 的最后一部分对变量`test`中的值进行预测并显示结果：值 `-1` 表示为离群值。运行列表 2.6 中的代码，你将看到以下输出：
 
 ```
  Xdata values:
@@ -2023,11 +2006,7 @@ envelope.predict(test):
 
 当允许最小值为正数时，你可能想用均值代替 0，但在处理不平衡数据集时要加小心。
 
-
-
-
-
-# SMOTE (合成少数类过采样技术)
+# SMOTE（合成少数类过采样技术）
 
 `Random resampling`通过对数据空间进行重采样来平衡类别分布。`random undersampling`技术从数据集中移除属于多数类的样本，涉及以下内容：
 
@@ -2041,11 +2020,11 @@ envelope.predict(test):
 
 `Random oversampling`从少数类中生成新样本：这种技术通过复制少数类的示例来实现。
 
-另一个可以考虑的选项是 `scikit-learn-contrib` 项目中的 `imbalanced-learn` Python 包。该项目为表现出类不平衡的数据集提供了各种重采样技术。更多细节可以在网上查找到：
+另一个可以考虑的选项是`scikit-learn-contrib`项目中的`imbalanced-learn` Python 包。该项目为表现出类不平衡的数据集提供了各种重采样技术。更多细节可以在网上查找到：
 
 [https://github.com/scikit-learn-contrib/imbalanced-learn]
 
-另一个著名的技术被称为 `SMOTE`，它涉及数据增强（即合成新的数据样本）。`SMOTE` 最初通过 `kNN` 算法开发（也有其他可选方案），它是处理不平衡类别的有效技术。下一节将详细讨论 `SMOTE`。
+另一个著名的技术被称为`SMOTE`，它涉及数据增强（即合成新的数据样本）。`SMOTE`最初通过`kNN`算法开发（也有其他可选方案），它是处理不平衡类别的有效技术。下一节将详细讨论`SMOTE`。
 
 ## 什么是 SMOTE？
 
@@ -2055,24 +2034,24 @@ envelope.predict(test):
 * 步骤 2：在特征空间的样本之间画一条直线。
 * 步骤 3：在该直线的某一点上绘制新样本。
 
-`SMOTE` 算法更详细的解释如下：
+`SMOTE`算法更详细的解释如下：
 
 * 从少数类中随机选择样本“a”。
-* 为该示例找到 `k` 个最近邻。
+* 为该示例找到`k`个最近邻。
 * 从这些最近邻中随机选择一个邻居“b”。
-* 创建一条连接“a”和“b”的直线 `L`。
-* 在直线 `L` 上随机选择一个或多个点“c”。
+* 创建一条连接“a”和“b”的直线`L`。
+* 在直线`L`上随机选择一个或多个点“c”。
 
-如有需要，你可以对其他的 (`k–1`) 个最近邻重复此过程，以使合成值更均匀地分布在各个最近邻之间。
+如有需要，你可以对其他的（`k–1`）个最近邻重复此过程，以使合成值更均匀地分布在各个最近邻之间。
 
 ### SMOTE 扩展
 
-最初的 `SMOTE` 算法基于 `kNN` 分类算法，该算法已通过各种方式进行了扩展，例如将 `kNN` 替换为 `SVM`。`SMOTE` 扩展列表如下：
+最初的`SMOTE`算法基于`kNN`分类算法，该算法已通过各种方式进行了扩展，例如将`kNN`替换为`SVM`。`SMOTE`扩展列表如下：
 
 * 选择性合成样本生成
-* `Borderline-SMOTE` (`kNN`)
-* `Borderline-SMOTE` (`SVM`)
-* 自适应合成采样 (ADASYN)
+* `Borderline-SMOTE`（`kNN`）
+* `Borderline-SMOTE`（`SVM`）
+* 自适应合成采样（ADASYN）
 
 可以在网上搜索这些算法的更多细节，并访问以下 URL：
 
@@ -2082,11 +2061,11 @@ envelope.predict(test):
 
 本节从机器学习的角度介绍，但偏置和方差的概念在机器学习之外也高度相关，因此阅读本节以及上一节可能仍然是有值的。
 
-机器学习中的 `Bias`（偏置）可能是由于学习算法中的错误假设导致的误差。高偏置可能会导致算法漏掉特征与目标输出之间的相关关系（欠拟合）。预测偏差可能由于“噪声”数据、不完整的特征集或有偏的训练样本而产生。
+机器学习中的`Bias`（偏置）可能是由于学习算法中的错误假设导致的误差。高偏置可能会导致算法漏掉特征与目标输出之间的相关关系（欠拟合）。预测偏差可能由于“噪声”数据、不完整的特征集或有偏的训练样本而产生。
 
 由于偏差引起的误差是模型的预期（或平均）预测值与你想预测的正确值之间的差异。重复多次模型构建过程，每次收集新数据并进行分析以生成新模型。生成的模型具有一系列预测值，因为底层数据集具有程度的随机性。偏置衡量了这些模型的预测值偏离正确值的程度。
 
-机器学习中的 `Variance`（方差）是与平均值的平方偏差的期望值。高方差会导致算法对训练数据中的随机噪声建模而非预期的输出（过拟合）。此外，向模型添加参数会增加其复杂性，增加方差并降低偏置。
+机器学习中的`Variance`（方差）是与平均值的平方偏差的期望值。高方差会导致算法对训练数据中的随机噪声建模而非预期的输出（过拟合）。此外，向模型添加参数会增加其复杂性，增加方差并降低偏置。
 
 **要记住：处理偏差和方差涉及处理欠拟合和过拟合。**
 
@@ -2102,18 +2081,18 @@ envelope.predict(test):
 
 除了上一节讨论的偏差-方差权衡外，还有几种类型的偏差：
 
-* 可用性偏差 (availability bias)
-* 确认偏差 (confirmation bias)
-* 虚假因果 (false causality)
-* 沉没成本谬误 (sunk cost fallacy)
-* 生存者偏差 (survivorship bias)
+* 可用性偏差（availability bias）
+* 确认偏差（confirmation bias）
+
+
+
+- 虚假因果（false causality）
+- 沉没成本谬误（sunk cost fallacy）
+- 生存者偏差（survivorship bias）
 
 `availability bias` 类似于根据例外制定“规则”。例如，吸烟和癌症之间存在已知联系，但存在例外。如果你发现某人每天抽三包烟并持续四十年后依然健康，你能断定吸烟不会导致癌症吗？
 
 `confirmation bias` 指人们倾向于关注证实其信念的数据，同时忽略与信念相矛盾的数据。
-
-
-
 
 `虚假因果`（False causality）是指当你错误地断言某一事件的发生导致另一个事件的发生时。最著名的例子之一涉及夏季纽约冰淇淋消费量与暴力犯罪之间的关系。由于夏天更多人吃冰淇淋，所以这“导致”了更多暴力犯罪，这是一种虚假因果关系。其他因素（如温度升高）可能与犯罪的增加有关。然而，区分相关性和因果关系至关重要：后者的联系比前者强得多，而且建立因果关系而非相关性也困难得多。
 
@@ -2144,11 +2123,11 @@ envelope.predict(test):
 
 ### 什么是 ANOVA？
 
-`ANOVA` 是方差分析（analysis of variance）的缩写，它尝试分析从总体中提取的样本平均值之间的差异。`ANOVA` 允许你测试多个平均值是否相等。更重要的是，`ANOVA` 可以帮助减少第一类错误（假阳性）和第二类错误（假阴性）。例如，假设 A 人被诊断为患有癌症，而 B 人被诊断为健康，且这两个诊断都是错误的。那么 A 人的结果是假阳性，而 B 人的结果是假阴性。通常情况下，假阳性测试结果*远比*假阴性测试结果要好。
+`ANOVA` 是方差分析（analysis of variance）的缩写，它尝试分析从总体中提取的样本平均值之间的差异。`ANOVA` 允许你测试多个平均值是否相等。更重要的是，`ANOVA` 可以帮助减少第一类错误（假阳性）和第二类错误（假阴性）。例如，假设 A 人被诊断为患有癌症，而 B 人被诊断为健康，且这两个诊断都是错误的。那么 A 人的结果是假阳性，而 B 人的结果是假阴性。通常情况下，假阳性测试结果远比假阴性测试结果要好。
 
 `ANOVA` 涉及实验设计和假设检验，这可以在各种情况下产生有意义的结果。例如，假设一个数据集包含一个可以划分为若干合理同质组的特征。接下来，分析每组的方差并进行比较，目标是确定给定特征值的不同方差来源。有关关于 `ANOVA` 的更多信息，请访问以下链接：
 
-*https://en.wikipedia.org/wiki/Analysis_of_variance*
+<https://en.wikipedia.org/wiki/Analysis_of_variance>
 
 ### 总结
 
@@ -2162,7 +2141,7 @@ envelope.predict(test):
 
 本章介绍了 `Pandas` 库，并包含了若干说明有用 `Pandas` 特性的代码示例。每个节的标题都清楚地指示了其内容，因此你可以轻松扫描本章，找到对你来说是新内容的章节。这种方法将帮助你在阅读本章内容时高效利用时间。
 
-本章的第一部分包含 `Pandas` 的简要介绍，随后是说明如何定义 `Pandas` DataFrame 以及显示其属性的代码示例。请注意，本章专门介绍 DataFrame。有一个代码块说明了如何定义 `Pandas Series`，如果你想了解更多关于这种 `Pandas Series` 的信息，可以在网上进行搜索。
+本章的第一部分包含 `Pandas` 的简要介绍，随后是说明如何定义 `Pandas` DataFrame 以及显示其属性的代码示例。请注意，本章专门介绍 `DataFrame`。有一个代码块说明了如何定义 `Pandas Series`，如果你想了解更多关于这种 `Pandas Series` 的信息，可以在网上进行搜索。
 
 本章的第二部分讨论了你可以创建的各种类型 DataFrame，例如数值型和布尔型 DataFrame。此外，你还将看到使用 `NumPy` 函数和随机数创建 DataFrame 的示例。你也将看到在 Python 字典和 JSON 数据之间进行转换的示例，以及如何从 JSON 数据创建 `Pandas` DataFrame。
 
@@ -2170,49 +2149,47 @@ envelope.predict(test):
 
 `Pandas` 是一个与其他 Python 库（如 `NumPy` 和 `Matplotlib`）兼容的 Python 库。打开命令行并调用以下适用于 Python 3.x 的命令来安装 `Pandas`：
 
-```
+```bash
 pip3 install pandas
 ```
 
-
-
-
 简单来说，Pandas 数据框（data frame）是一个二维数据结构，用行和列来考虑这种数据结构会非常方便。数据框可以被标记（包括行和列），且列可以包含不同的数据类型。数据集源可以是数据文件、数据库表或 Web 服务。Pandas 数据框的特征包括：
 
-*   数据框方法
-*   数据框统计信息
-*   分组、透视和重塑
-*   处理缺失数据
-*   合并数据框
+- 数据框方法
+- 数据框统计信息
+- 分组、透视和重塑
+- 处理缺失数据
+- 合并数据框
 
 ## 数据框与数据清洗任务
 
 你需要执行的特定任务取决于数据集的结构和内容。通常，你将执行一个包含以下步骤的工作流（不一定总是按此顺序），所有步骤都可以通过 Pandas 数据框完成：
 
-*   将数据读入数据框
-*   显示数据框顶部数据
-*   显示列的数据类型
-*   显示非缺失值
-*   将 NA 替换为某个值
-*   遍历列
-*   每列的统计信息
-*   查找缺失值
-*   缺失值总数
-*   缺失值百分比
-*   排序表格值
-*   打印摘要信息
-*   查找缺失值大于 50% 的列
-*   重命名列
+- 将数据读入数据框
+- 显示数据框顶部数据
+- 显示列的数据类型
+- 显示非缺失值
+- 将 NA 替换为某个值
+- 遍历列
+- 每列的统计信息
+- 查找缺失值
+- 缺失值总数
+- 缺失值百分比
+- 排序表格值
+- 打印摘要信息
+- 查找缺失值大于 50% 的列
+- 重命名列
 
 ## PandasAS 数据框示例
 
 Listing 3.1 显示了 `pandas_df.py` 的内容，说明了如何定义几个 Pandas 数据框并显示它们的内容。
 
-***代码列表 3.1: pandas_df.py***
+**代码列表 3.1：`pandas_df.py`**
 
-```
- import pandas as pd
+```python
+import pandas as pd
 import numpy as np
+
 myvector1 = np.array([1,2,3,4,5])
 print("myvector1:")
 print(myvector1)
@@ -2246,8 +2223,8 @@ print()
 
 Listing 3.1 从 Pandas 和 NumPy 的标准导入语句开始，接着定义了两个一维 NumPy 数组和一个二维 NumPy 数组。NumPy 的语法对你来说应该熟悉（网上有很多基础教程）。每个 NumPy 变量后面都跟着对应的 Pandas 数据框 `mydf1`、`mydf2` 和 `mydf3`。运行 Listing 3.1 中的代码。你将看到以下输出，并可以将 NumPy 数组与 Pandas 数据框进行对比：
 
-```
- myvector1:
+```text
+myvector1:
 [1 2 3 4 5]
 
 mydf1:
@@ -2260,6 +2237,7 @@ mydf1:
 
 myvector2:
 [1 2 3 4 5]
+
 mydf2:
    0
 0  1
@@ -2282,8 +2260,8 @@ mydf3:
 
 相比之下，以下代码块说明了如何定义一个 Pandas Series：
 
-```
- names = pd.Series(['SF', 'San Jose', 'Sacramento'])
+```python
+names = pd.Series(['SF', 'San Jose', 'Sacramento'])
 sizes = pd.Series([852469, 1015785, 485199])
 df = pd.DataFrame({ 'Cities': names, 'Size': sizes })
 print(df)
@@ -2291,8 +2269,8 @@ print(df)
 
 使用上述代码（以及所需的导入语句）创建一个 Python 文件。当你运行该代码时，你将看到以下输出：
 
-```
- City name    sizes
+```text
+City name    sizes
 0          SF   852469
 1    San Jose  1015785
 2  Sacramento   485199
@@ -2302,10 +2280,10 @@ print(df)
 
 Listing 3.2 显示了 `pandas_df_describe.py` 的内容，说明了如何定义一个包含 3×3 整数 NumPy 数组的 Pandas 数据框，其中数据框的行和列都已标记。还显示了数据框的其他方面。
 
-***代码列表 3.2: pandas_df_describe.py***
+**代码列表 3.2：`pandas_df_describe.py`**
 
-```
- import numpy as np
+```python
+import numpy as np
 import pandas as pd
 
 myarray = np.array([[10,30,20], [50,40,60],[1000,2000,3000]])
@@ -2340,12 +2318,12 @@ print(mydf.describe())
 
 Listing 3.2 以两个标准导入语句开始，随后是 3x3 的数字数组 `myarray`。`rownames` 和 `colnames` 分别为数据框 `mydf` 的行和列命名，该数据框通过指定的 `myarray` 初始化。输出的第一个部分需要一个 `print()` 语句（只需显示 `mydf` 的内容）。第二部分通过调用任何数据框通用的 `describe()` 方法生成。`describe()` 方法非常有用：你将看到各种列统计信息，如平均值、标准差、最小值和最大值，以及 25、50 和 75 分位数。Listing 3.2 的输出如下：
 
-```
- contents of df:
+```text
+contents of df:
          January  February  March
-apples        10        30        20
-oranges       50        40        60
-beer        1000      2000      3000
+apples        10        30      20
+oranges       50        40      60
+beer        1000      2000    3000
 
 contents of January:
 apples       10
@@ -2376,10 +2354,10 @@ Description:
 count       3.000000   3.000000   3.000000
 mean      353.333333  690.000000  1026.666667
 std       560.386711  1134.504297  1709.073823
-min        10.000000   30.000000   20.000000
-25%       30.000000   35.000000   40.000000
-50%       50.000000   40.000000   60.000000
-75%      525.000000  1020.000000  1530.000000
+min        10.000000   30.000000    20.000000
+25%        30.000000   35.000000    40.000000
+50%        50.000000   40.000000    60.000000
+75%       525.000000  1020.000000  1530.000000
 mark      1000.000000  2000.000000  3000.000000
 ```
 
@@ -2387,10 +2365,10 @@ mark      1000.000000  2000.000000  3000.000000
 
 Pandas 支持对数据框进行布尔操作，例如逻辑或、逻辑与以及对数据框的逻辑取反。Listing 3.3 显示了 `pandas_boolean_df.py` 的内容，说明了如何定义一个行和列均为布尔值的数据框。
 
-***代码列表 3.3: pandas_boolean_df.py***
+**代码列表 3.3：`pandas_boolean_df.py`**
 
-```
- import pandas as pd
+```python
+import pandas as pd
 
 df1 = pd.DataFrame({'a': [1, 0, 1], 'b': [0, 1, 1] }, dtype=bool)
 df2 = pd.DataFrame({'a': [0, 1, 1], 'b': [1, 1, 0] }, dtype=bool)
@@ -2407,17 +2385,19 @@ print(df1 ^ df2)
 
 Listing 3.3 初始化了数据框 `df1` 和 `df2`，然后计算 `df1 & df2`、`df1 | df2` 和 `df1 ^ df2`，分别代表 `df1` 和 `df2` 的逻辑与、逻辑或和逻辑取反。运行 Listing 3.3 中代码的输出如下：
 
-```
- df1 & df2:
+```text
+df1 & df2:
        a      b
 0  False  False
 1  False   True
 2   True  False
+
 df1 | df2:
       a     b
 0  True  True
 1  True  True
 2  True  True
+
 df1 ^ df2:
        a      b
 0   True   True
@@ -2431,8 +2411,8 @@ df1 ^ df2:
 
 例如，以下代码片段定义了 Pandas 数据框 `df1`，然后显示了 `df1` 的转置：
 
-```
- df1 = pd.DataFrame({'a': [1, 0, 1], 'b': [0, 1, 1] }, dtype=int)
+```python
+df1 = pd.DataFrame({'a': [1, 0, 1], 'b': [0, 1, 1] }, dtype=int)
 
 print("df1.T:")
 print(df1.T)
@@ -2440,20 +2420,19 @@ print(df1.T)
 
 输出如下：
 
-```
- df1.T:
+```text
+df1.T:
    0  1  2
 a  1  0  1
 b  0  1  1
 ```
 
-
-
-
 以下代码片段定义了 Pandas 数据帧 `df1` 和 `df2`，然后显示了它们的和：
 
-```
- df1 = pd.DataFrame({'a' : [1, 0, 1], 'b' : [0, 1, 1] }, dtype=int)
+
+
+```python
+df1 = pd.DataFrame({'a' : [1, 0, 1], 'b' : [0, 1, 1] }, dtype=int)
 df2 = pd.DataFrame({'a' : [3, 3, 3], 'b' : [5, 5, 5] }, dtype=int)
 
 print("df1 + df2:")
@@ -2462,22 +2441,22 @@ print(df1 + df2)
 
 输出如下：
 
-```
- df1 + df2:
+```text
+df1 + df2:
    a  b
 0  4  5
 1  3  6
 2  4  6
 ```
 
-## PANDAS 数据帧与随机数
+## Pandas 数据帧与随机数
 
-Listing 3.4 显示了 `pandas_random_df.py` 的内容，该展示了如何创建一个包含随机数的 Pandas 数据帧。
+Listing 3.4 显示了 `pandas_random_df.py` 的内容，该示例展示了如何创建一个包含随机数的 Pandas 数据帧。
 
-***列表 3.4: pandas_random_df.py***
+**列表 3.4：`pandas_random_df.py`**
 
-```
- import pandas as pd
+```python
+import pandas as pd
 import numpy as np
 
 df = pd.DataFrame(np.random.randint(1, 5, size=(5, 2)), columns=['a','b'])
@@ -2489,8 +2468,8 @@ print(df)
 
 Listing 3.4 定义了 Pandas 数据帧 `df`，它包含 5 行 2 列，其中包含 1 到 5 之间的随机整数。注意 `df` 的列标记为“a”和“b”。此外，接下来的代码片段添加了两行，分别由两列数字的和和平均值组成。Listing 3.4 的输出如下：
 
-```
- a    b
+```text
+a    b
 0      1.0  2.0
 1      1.0  1.0
 2      4.0  3.0
@@ -2500,12 +2479,12 @@ sum   10.0  9.0
 mean   2.0  1.8
 ```
 
-Listing 3.5 显示了 `pandas_combine_df.py` 的内容，该展示了如何基于两个 NumPy 数字数组定义一个 Pandas 数据帧。
+Listing 3.5 显示了 `pandas_combine_df.py` 的内容，该示例展示了如何基于两个 NumPy 数字数组定义一个 Pandas 数据帧。
 
-***列表 3.5: pandas_combine_df.py***
+**列表 3.5：`pandas_combine_df.py`**
 
-```
- import pandas as pd
+```python
+import pandas as pd
 import numpy as np
 
 df = pd.DataFrame({'foo1' : np.random.randn(5),
@@ -2521,10 +2500,10 @@ print("contents of foo2:")
 print(df.foo2)
 ```
 
-Listing 3.5 定义了 Pandas 数据帧 `df`，它包含 5 行 2 列（标记为 foo1 和 foo2），包含 0 到 5 之间的随机实数。Listing 3.5 的后续部分显示了 `df` 和 `foo1` 的内容。Listing 3.5 的输出如下：
+Listing 3.5 定义了 Pandas 数据帧 `df`，它包含 5 行 2 列（标记为 `foo1` 和 `foo2`），包含 0 到 5 之间的随机实数。Listing 3.5 的后续部分显示了 `df` 和 `foo1` 的内容。Listing 3.5 的输出如下：
 
-```
- contents of df:
+```text
+contents of df:
        foo1      foo2
 0  0.274680 _0.848669
 1 _0.399771 _0.814679
@@ -2553,10 +2532,10 @@ Name: foo2, dtype: float64
 
 Listing 3.6 显示了 `sometext.tsv` 的内容，其中包含已标记的数据（垃圾邮件或正常邮件），这些数据用在 Listing 3.7 中显示的代码示例。
 
-***列表 3.6: sometext.tsv***
+**列表 3.6：`sometext.tsv`**
 
-```
- type    text
+```text
+type    text
 ham     I'm telling the truth
 spam    What a deal such a deal!
 spam    Free vacation for your family
@@ -2569,12 +2548,12 @@ spam    You might have won the prize
 ham     Everyone is in good health
 ```
 
-Listing 3.7 显示了 `cat2numeric.py` 的内容，该展示了如何将文本字段转换为相应的数值字段。
+Listing 3.7 显示了 `cat2numeric.py` 的内容，该示例展示了如何将文本字段转换为相应的数值字段。
 
-***列表 3.7: cat2numeric.py***
+**列表 3.7：`cat2numeric.py`**
 
-```
- import pandas as pd
+```python
+import pandas as pd
 import numpy as np
 
 df = pd.read_csv('sometext.tsv', delimiter='\t')
@@ -2589,16 +2568,16 @@ print("=> First rows (after):")
 print(df.head())
 ```
 
-Listing 3.7 使用 `sometext.tsv` 文件的内容初始化数据帧 `df`，然后通过调用 `head(5)` 显示前五行。Listing 3.7 中的代码片段调用 `map()` 方法将 `type` 列中的 `ham` 替换为 0，将 `spam` 替换为 1，所示：
+Listing 3.7 使用 `sometext.tsv` 文件的内容初始化数据帧 `df`，然后通过调用 `head(5)` 显示前五行。Listing 3.7 中的代码片段调用 `map()` 方法将 `type` 列中的 `ham` 替换为 0，将 `spam` 替换为 1，如下所示：
 
-```
+```python
 df['type'] = df['type'].map({'ham':0, 'spam':1})
 ```
 
 Listing 3.7 再次调用 `head()` 方法来显示重命名列内容的数据集的前五行。运行 Listing 3.7 中的代码，你将看到以下输出：
 
-```
- => First rows (before):
+```text
+=> First rows (before):
    type                           text
 0   ham          I'm telling the truth
 1  spam      What a deal such a deal!
@@ -2611,15 +2590,15 @@ Listing 3.7 再次调用 `head()` 方法来显示重命名列内容的数据集�
 1     1      What a deal such a deal!
 2     1  Free vacation for your family
 3     0        Thank you for your help
-4     1        Spring break next week!
+4     1  Spring break next week!
 ```
 
 另一个示例，Listing 3.8 显示了 `shirts.csv` 的内容，Listing 3.9 显示了 `shirts.py` 的内容，展示了将分类数据转换为数值数据的四种技术。
 
-***列表 3.8: shirts.csv***
+**列表 3.8：`shirts.csv`**
 
-```
- type,ssize
+```csv
+type,ssize
 shirt,xxlarge
 shirt,xxlarge
 shirt,xlarge
@@ -2632,10 +2611,10 @@ shirt,xsmall
 shirt,xsmall
 ```
 
-***列表 3.9: shirts.py***
+**列表 3.9：`shirts.py`**
 
-```
- import pandas as pd
+```python
+import pandas as pd
 
 shirts = pd.read_csv("shirts.csv")
 print("shirts before:")
@@ -2673,36 +2652,32 @@ print(shirts)
 
 Listing 3.9 以一个包含六条语句的代码块开始，使用与字符串的直接比较来进行数值替换。例如，以下代码片段将字符串 `xxlarge` 的所有出现处替换为值 4：
 
-```
- shirts.loc[shirts['ssize']=='xxlarge','size'] = 4
-```
-
-第二个代码块由六条语句组成，使用 `replace()` 方法执行相同的更新，其示例所示：
-
-```
- shirts['ssize'].replace('xxlarge', 4, inplace=True)
+```python
+shirts.loc[shirts['ssize']=='xxlarge','size'] = 4
 ```
 
-第三个代码块由单个语句组成，使用 `apply()` 方法执行相同的更新，所示：
+第二个代码块由六条语句组成，使用 `replace()` 方法执行相同的更新，示例如下：
 
-```
- shirts['ssize'] = shirts['ssize'].apply({'xxlarge':4, 'xlarge':4, 'large':3, 'medium':2, 'small':1, 'xsmall':1}.get)
-```
-
-第四个代码块由四条语句组成，使用正则表达式执行相同的更新，其示例所示：
-
-```
- shirts['ssize'] = shirts['ssize'].replace(regex='xlarge', value=4)
+```python
+shirts['ssize'].replace('xxlarge', 4, inplace=True)
 ```
 
+第三个代码块由单个语句组成，使用 `apply()` 方法执行相同的更新，如下所示：
 
-
-
-
-由于之前的代码段同时匹配 xxlarge 和 xlarge，因此我们只需要四条语句而不是六条语句。如果您不熟悉正则表达式，可以阅读有关此主题的在线教程。运行代码列表 3.9 中的代码，您将看到以下输出：
-
+```python
+shirts['ssize'] = shirts['ssize'].apply({'xxlarge':4, 'xlarge':4, 'large':3, 'medium':2, 'small':1, 'xsmall':1}.get)
 ```
- shirts before
+
+第四个代码块由四条语句组成，使用正则表达式执行相同的更新，示例如下：
+
+```python
+shirts['ssize'] = shirts['ssize'].replace(regex='xlarge', value=4)
+```
+
+由于之前的代码段同时匹配 `xxlarge` 和 `xlarge`，因此我们只需要四条语句而不是六条语句。如果您不熟悉正则表达式，可以阅读有关此主题的在线教程。运行列表 3.9 中的代码，您将看到以下输出：
+
+```text
+shirts before
      type     size
 0   shirt  xxlarge
 1   shirt  xxlarge
@@ -2733,14 +2708,14 @@ shirts after:
 11  shirt     1
 ```
 
-### 在 PANDAS 中合并与拆分列
+### 在 Pandas 中合并与拆分列
 
 列表 3.10 显示了 `employees.csv` 的内容，列表 3.11 显示了 `emp_merge_split.py` 的内容，它展示了如何合并和拆分 CSV 文件的列。
 
-***列表 3.10: employees.csv***
+**列表 3.10：`employees.csv`**
 
-```
- name,year,month
+```csv
+name,year,month
 Jane-Smith,2015,Aug
 Dave-Smith,2020,Jan
 Jane-Jones,2018,Dec
@@ -2750,10 +2725,10 @@ Mark-Aster,,Oct
 Jane-Jones,NaN,Jun
 ```
 
-***列表 3.11: emp_merge_split.py***
+**列表 3.11：`emp_merge_split.py`**
 
-```
- import pandas as pd
+```python
+import pandas as pd
 
 emps = pd.read_csv("employees.csv")
 print("emps:")
@@ -2775,27 +2750,29 @@ print(emps)
 print()
 ```
 
-列表 3.11 使用 CSV 文件 `employees.csv` 的内容初始化帧 `df`，然后显示数据帧的内容。接的一对代码段调用 `astype()` 方法将 `year` 和 `month` 列的内容转换为字符串。
+列表 3.11 使用 CSV 文件 `employees.csv` 的内容初始化帧 `df`，然后显示数据帧的内容。接下来的一对代码段调用 `astype()` 方法，将 `year` 和 `month` 列的内容转换为字符串。
 
-列表 3.11 中的下一段代码使用 `split()` 方法，将 `name` 列拆分为 `fname` 和 `lname` 列，这两个列分别包含每位员工名字的姓和名：
+列表 3.11 中的下一段代码使用 `split()` 方法，将 `name` 列拆分为 `fname` 和 `lname` 列，这两列分别包含每位员工名字的姓和名：
 
-```
- emps['fname'],emps['lname'] = emps['name'].str.split("-",1).str
-```
-
-接下来的代码段将 `year` 和 `month` 字符串的内容用“#”字符连接，创建一个名为 `hdate1` 的新列，所示：
-
-```
- emps['hdate1'] = emps['year'].astype(str)+"#"+emps['month'].astype(str)
+```python
+emps['fname'],emps['lname'] = emps['name'].str.split("-",1).str
 ```
 
-最后一段代码段将 `year` 和 `month` 字符串的内容用"-"连接，创建一个名为 `hdate2` 的新列，所示：
+接下来的代码段将 `year` 和 `month` 字符串的内容用“#”字符连接，创建一个名为 `hdate1` 的新列，如下所示：
 
+```python
+emps['hdate1'] = emps['year'].astype(str)+"#"+emps['month'].astype(str)
 ```
- emps['hdate2'] = emps[['year','month']].agg('-'.join, axis=1)
+
+最后一段代码将 `year` 和 `month` 字符串的内容用“-”连接，创建一个名为 `hdate2` 的新列，如下所示：
+
+```python
+emps['hdate2'] = emps[['year','month']].agg('-'.join, axis=1)
 ```
 
 运行列表 3.11 中的代码，您将看到以下输出：
+
+
 
 ```
  emps:
@@ -2835,7 +2812,7 @@ will be deprecated in future releases.
 
 Pandas 支持 `concat()` 方法来合并数据帧。列表 3.12 显示 `concat_frames.py` 的内容，展示了如何合并两个数据帧。
 
-***列表 3.12: concat_frames.py***
+**列表 3.12: `concat_frames.py`**
 
 ```
  import pandas as pd
@@ -2869,7 +2846,7 @@ print(df)
 
 作为一个简单的示例，假设我们有一家按季度记录收支的公司。我们要计算每个季度的盈亏以及总盈亏。列表 3.13 显示 `pandas_quarterly_df1.py` 的内容，展示了如何定义一个包含收入相关值的 Pandas 帧。
 
-***列表 3.13: pandas_quarterly_df1.py***
+**列表 3.13: `pandas_quarterly_df1.py`**
 
 ```
  import pandas as pd
@@ -2925,7 +2902,7 @@ Name: Revenue, dtype: int64
 
 列表 3.14 显示了 CSV 文件 `weather_data.csv` 的内容，列表 3.15 显示了 `weather_data.py` 的内容，展示了如何读取文件 `weather_data.csv`。
 
-***列表 3.14: weather_data.py***
+**列表 3.14: `weather_data.py`**
 
 ```
  day,temperature,windspeed,event
@@ -2937,12 +2914,9 @@ Name: Revenue, dtype: int64
 7/6/2018,51,32,Sunny
 ```
 
-***列表 3.15: weather_data.py***
+**列表 3.15: `weather_data.py`**
+
 （注：此处根据原文逻辑，列表 3.14 与 3.15 的内容在示例描述中已对应，此处已按要求翻译标题与结构）
-
-
-
-
 
 ```python
  import pandas as pd
@@ -3005,7 +2979,7 @@ Index(['day', 'temperature', 'windspeed', 'event'], dtype='object')
 
 列表 3.16 显示了 CSV 文件 `people.csv` 的内容，列表 3.17 显示了 `people_pandas.py` 的内容，该文件演示了如何定义一个读取 CSV 文件并处理数据的 Pandas 数据框。
 
-***列表 3.16: people.csv***
+**列表 3.16: `people.csv`**
 
 ```
  fname,lname,age,gender,country
@@ -3017,7 +2991,7 @@ sara,stein,34,f,germany
 eddy,bower,35,m,spain
 ```
 
-***列表 3.17: people_pandas.py***
+**列表 3.17: `people_pandas.py`**
 
 ```python
  import pandas as pd
@@ -3072,10 +3046,6 @@ age over 33:
 5  eddy  bower  35      m      spain
 ```
 
-
-
-
-
 接下来，初始化 Pandas 数据框 `df2`，使用 `df1` 中 `age` 属性至少为 45 的行子集。在此代码段中，当你指定包含嵌入空格的属性时，需要使用反引号。运行 Listing 3.20 中的代码，你将看到以下输出：
 
 ```
@@ -3090,7 +3060,7 @@ age over 33:
 
 Listing 3.21 显示了 `pandas_schema2.py` 的内容，说明了如何根据某些条件逻辑从 CSV 文件中读取子集。
 
-***列表 3.21: pandas_schema2.py***
+**列表 3.21: `pandas_schema2.py`**
 
 ```
  import pandas as pd
@@ -3123,7 +3093,7 @@ Listing 3.21 通过为 Pandas 数据框 `df2` 中的行指定指定复合条件�
 
 Listing 3.22 显示了 `write_people_xlsx.py` 的内容，说明了如何从 CSV 文件中读取数据，然后用这些数据创建 Excel 表格。
 
-***列表 3.22: write_people_xlsx.py***
+**列表 3.22: `write_people_xlsx.py`**
 
 ```
  import pandas as pd
@@ -3135,23 +3105,25 @@ df1.to_excel("people.xlsx")
 #df1.to_excel("people.xlsx", sheet_name='Sheet_name_1')
 ```
 
-Listing 3.22 使用 CSV 文件 `people.csv` 的内容初始化 Pandas 数据框 `df1`，然后调用 `to_excel()` 方法将数据框的内容保存到 Excel 表格 `people.xlsx` 中。Listing 3.23 显示了 `read_people_xlsx.py` 的内容，说明了如何从 Excel 表格 `people.xlsx` 中读取数据并用该数据创建 Pandas 数据框。
 
-***列表 23: read_people_xlsx.py***
 
-```
- import pandas as pd
+Listing 3.22 使用 CSV 文件`people.csv`的内容初始化 Pandas 数据框`df1`，然后调用`to_excel()`方法将数据框的内容保存到 Excel 表格`people.xlsx`中。Listing 3.23 显示了`read_people_xlsx.py`的内容，说明了如何从 Excel 表格`people.xlsx`中读取数据并用该数据创建 Pandas 数据框。
+
+**列表 23：`read_people_xlsx.py`**
+
+```python
+import pandas as pd
 
 df = pd.read_excel("people.xlsx")
 print("Contents of Excel spreadsheet:")
 print(df)
 ```
 
-Listing 3.23 操作非常直观：通过 Pandas 函数 `read_excel()` 使用表格 `people.xlsx` 的内容（其内容与 `people.csv` 相同）初始化 Pandas 数据框 `df`。Listing 3.23 的输出如下：
+Listing 3.23 操作非常直观：通过 Pandas 函数`read_excel()`使用表格`people.xlsx`的内容（其内容与`people.csv`相同）初始化 Pandas 数据框`df`。Listing 3.23 的输出如下：
 
-```
- df1:
-   Unnamed: 0 fname  lname  age gender  country
+```text
+df1:
+  Unnamed: 0 fname  lname  age gender  country
 0           john  smith   30      usa
 1           jane  smith   31      france
 2           jack  jones   32      france
@@ -3164,21 +3136,25 @@ Listing 3.23 操作非常直观：通过 Pandas 函数 `read_excel()` 使用表�
 
 有时，你需要对从 Excel 表格读取到 Pandas 数据框的值进行额外控制，就像处理 CSV 文件一样。使用此代码段跳过 Excel 表格的头部和页脚：
 
-```
- df = pd.read_excel("myfile.xls",header=1,footer="")
+```python
+df = pd.read_excel("myfile.xls", header=1, footer="")
 ```
 
 ### 在数据框中选择、添加和删除列
 
 本节包含短代码块，说明了如何对数据框进行类似于对字典的操作。例如，获取、设置和删除列的实现与类似的 Python 字典操作具有相同的语法，如下所示：
 
-```
-df = pd.DataFrame.from_dict(dict([('A',[1,2,3]),('B',[4,5,6])]), orient='index', columns=['one', 'two'])
+```python
+df = pd.DataFrame.from_dict(
+    dict([('A', [1, 2, 3]), ('B', [4, 5, 6])]),
+    orient='index',
+    columns=['one', 'two']
+)
 ```
 
 在数据框中添加新列：
 
-```
+```python
 df['C'] = [7, 8, 9]
 ```
 
@@ -3218,13 +3194,13 @@ df.columns
 df[['one', 'two']]
 ```
 
-使用 `iloc` 按位置选择：
+使用`iloc`按位置选择：
 
 ```python
 df.iloc[:, 0]
 ```
 
-使用 `loc` 按标签选择：
+使用`loc`按标签选择：
 
 ```python
 df.loc[:, 'one']
@@ -3242,37 +3218,37 @@ df[df['one'] > 1]
 df[(df['one'] > 1) & (df['two'] < 30)]
 ```
 
-使用 `query` 方法过滤：
+使用`query`方法过滤：
 
 ```python
 df.query('one > 1 and two < 30')
 ```
 
-使用 `apply` 方法操作：
+使用`apply`方法操作：
 
 ```python
 df.apply(lambda x: x * 2)
 ```
 
-使用 `map` 映射值：
+使用`map`映射值：
 
 ```python
 df['one'].map({1: 'a', 2: 'b', 3: 'c'})
 ```
 
-使用 `replace` 替换值：
+使用`replace`替换值：
 
 ```python
 df['one'].replace({1: 'a', 2: 'b', 3: 'c'})
 ```
 
-使用 `fillna` 处理缺失值：
+使用`fillna`处理缺失值：
 
 ```python
 df['one'].fillna(0)
 ```
 
-使用 `dropna` 删除缺失值行：
+使用`dropna`删除缺失值行：
 
 ```python
 df.dropna(subset=['one'])
@@ -3338,25 +3314,21 @@ pd.merge(df1, df2, on='key')
 df.pivot_table(values='one', index='two', aggfunc='mean')
 ```
 
+Listing 3.24 使用内置 Iris 数据集的内容初始化变量`df`。接着，变量`columns`被列名初始化，数据框`iris_df`根据`df.data`的内容进行初始化，该内容包含了 Iris 数据集的实际数据。此外，`iris_df.columns`使用变量`columns`的内容初始化。
 
+Listing 3.24 的后续部分显示数据框`iris_df`的形状（shape），紧接着是`iris_df`数据框的`zscore`，该值通过减去平均值然后除以标准差计算得出（对每行执行）。
 
+Listing 3.24 的最后两个部分显示`zscore`在区间`[0.01, 2.5]`之外的离群值（如果有）。运行 Listing 3.24 中的代码，你将看到以下输出：
 
-
-Listing 3.24 使用内置 Iris 数据集的内容初始化变量 `df`。接着，变量 `columns` 被列名初始化，数据框 `iris_df` 根据 `df.data` 的内容进行初始化，该内容包含了 Iris 数据集的实际数据。此外，`iris_df.columns` 使用变量 `columns` 的内容初始化。
-
-Listing 3.24 的后续部分显示数据框 `iris_df` 的形状（shape），紧接着是 `iris_df` 数据框的 `zscore`，该值通过减去平均值然后除以标准差计算得出（对每行执行）。
-
-Listing 3.24 的最后两个部分显示 `zscore` 在区间 `[0.01, 2.5]` 之外的离群值（如果有）。运行 Listing 3.24 中的代码，你将看到以下输出：
-
-```
- => iris_df.shape: (150, 4)
-   sepal length (cm)  sepal width (cm)  petal length (cm)  petal width (cm)
-   0          5.1          3.5          1.4          0.2
-   1          4.9          3.0          1.4          0.2
-   2          4.7          3.2          1.3          0.2
-   3          4.6          3.1          1.5          0.2
-   4          5.0          3.6          1.4          0.2
- z scores for iris:
+```text
+=> iris_df.shape: (150, 4)
+  sepal length (cm)  sepal width (cm)  petal length (cm)  petal width (cm)
+  0          5.1          3.5          1.4          0.2
+  1          4.9          3.0          1.4          0.2
+  2          4.7          3.2          1.3          0.2
+  3          4.6          3.1          1.5          0.2
+  4          5.0          3.6          1.4          0.2
+z scores for iris:
 z.shape: (150, 4)
 
 => upper outliers:
@@ -3370,27 +3342,27 @@ z.shape: (150, 4)
    95         5.7          3.0               4.2               1.2
 ```
 
-### PANDAS 数据框与简单统计数据
+### Pandas 数据框与简单统计数据
 
-Listing 3.25 显示了 `housing_stats.py` 的内容，说明了如何从 Pandas 数据框中的数据收集基本统计信息。
+Listing 3.25 显示了`housing_stats.py`的内容，说明了如何从 Pandas 数据框中的数据收集基本统计信息。
 
-***LISTING 3.25: housing_stats.py***
+**Listing 3.25：`housing_stats.py`**
 
-```
- import pandas as pd
+```python
+import pandas as pd
 
 df = pd.read_csv("Housing.csv")
 
 minimum_bdrms = df["bedrooms"].min()
-median_bdrms  = df["bedrooms"].median()
+median_bdrms = df["bedrooms"].median()
 maximum_bdrms = df["bedrooms"].max()
 
-print("minimum # of bedrooms:",minimum_bdrms)
-print("median  # of bedrooms:",median_bdrms)
-print("maximum # of bedrooms:",maximum_bdrms)
+print("minimum # of bedrooms:", minimum_bdrms)
+print("median  # of bedrooms:", median_bdrms)
+print("maximum # of bedrooms:", maximum_bdrms)
 print("")
 
-print("median values:",df.median().values)
+print("median values:", df.median().values)
 print("")
 
 prices = df["price"]
@@ -3399,7 +3371,7 @@ print(prices.head())
 print("")
 
 median_price = df["price"].median()
-print("median price:",median_price)
+print("median price:", median_price)
 print("")
 
 corr_matrix = df.corr()
@@ -3407,25 +3379,25 @@ print("correlation matrix:")
 print(corr_matrix["price"].sort_values(ascending=False))
 ```
 
-Listing 3.25 使用 CSV 文件 `housing.csv` 的内容初始化 Pandas 数据框 `df`。接下来的三个变量分别初始化为卧室数量的、中位数和最大，然后显示这些值。
+Listing 3.25 使用 CSV 文件`housing.csv`的内容初始化 Pandas 数据框`df`。接下来的三个变量分别初始化为卧室数量的、中位数和最大，然后显示这些值。
 
-Listing 3.25 的下一部分使用 Pandas 数据框 `df` 中 `prices` 列的内容初始化变量 `prices`。接着，通过 `prices.head()` 语句打印前五行，然后是 `prices` 的中位数值。
+Listing 3.25 的下一部分使用 Pandas 数据框`df`中`prices`列的内容初始化变量`prices`。接着，通过`prices.head()`语句打印前五行，然后是`prices`的中位数值。
 
-Listing 3.25 的最后部分使用 Pandas 数据框 `df` 的相关矩阵内容初始化变量 `corr_matrix`，然后显示其内容。Listing 3.25 的输出在此：
+Listing 3.25 的最后部分使用 Pandas 数据框`df`的相关矩阵内容初始化变量`corr_matrix`，然后显示其内容。Listing 3.25 的输出在此：
 
-```
- Apples
+```text
+Apples
 10
 ```
 
-### 在 PANDAS 中查找重复行
+### 在 Pandas 中查找重复行
 
-Listing 3.26 显示了 `duplicates.csv` 的内容，Listing 3.27](#ch03.xhtml_list3-27) 显示了 `duplicates.py` 的内容，说明了如何在 Pandas 数据框中查找重复行。
+Listing 3.26 显示了`duplicates.csv`的内容，Listing 3.27 显示了`duplicates.py`的内容，说明了如何在 Pandas 数据框中查找重复行。
 
-***LISTING 3.26: duplicates.csv***
+**Listing 3.26：`duplicates.csv`**
 
-```
- fname,lname,level,dept,state
+```csv
+fname,lname,level,dept,state
 Jane,Smith,Senior,Sales,California
 Dave,Smith,Senior,Devel,California
 Jane,Jones,Year1,Mrktg,Illinois
@@ -3436,10 +3408,10 @@ Mark,Aster,Year3,Dev,Florida
 Jane,Jones,Year1,Mrktg
 ```
 
-***LISTING 3.27: duplicates.py***
+**Listing 3.27：`duplicates.py`**
 
-```
- import pandas as pd
+```python
+import pandas as pd
 
 df = pd.read_csv("duplicates.csv")
 print("Contents of data frame:")
@@ -3457,13 +3429,13 @@ print(df3)
 print()
 
 print("Duplicate name and level:")
-df3 = df.duplicated(subset=['fname','level'])
+df3 = df.duplicated(subset=['fname', 'level'])
 print(df3)
 ```
 
-Listing 3.27 使用 CSV 文件 `duplicates.csv` 的内容初始化数据框 `df`，然后显示数据框的内容。Listing 3.27 的后续部分通过调用 `duplicated()` 方法显示重复行，而 Listing 3.27](#ch03.xhtml_list3-27) 的后续部分仅显示 `fname`。Listing 3.27 的最后部分显示 `fname` 以及 `level` 信息。运行 Listing 3.27 中的代码，你将看到以下输出：
+Listing 3.27 使用 CSV 文件`duplicates.csv`的内容初始化数据框`df`，然后显示数据框的内容。Listing 3.27 的后续部分通过调用`duplicated()`方法显示重复行，而 Listing 3.27 的后续部分仅显示`fname`。Listing 3.27 的最后部分显示`fname`以及`level`信息。运行 Listing 3.27 中的代码，你将看到以下输出：
 
-```
+```text
 Contents of data frame:
   fname  lname   level    dept       state
 0  Jane  Smith  Senior   Sales  California
@@ -3502,12 +3474,12 @@ Duplicate name and level:
 dtype: bool
 ```
 
-Listing 3.28 显示了 `drop_duplicates.py` 的内容，说明了如何在 Pandas 数据框中删除重复行。
+Listing 3.28 显示了`drop_duplicates.py`的内容，说明了如何在 Pandas 数据框中删除重复行。
 
-***LISTING 3.28: drop_duplicates.py***
+**Listing 3.28：`drop_duplicates.py`**
 
-```
- import pandas as pd
+```python
+import pandas as pd
 
 df = pd.read_csv("duplicates.csv")
 print("Contents of data frame:")
@@ -3519,7 +3491,7 @@ print("Duplicate first names:")
 print(fname_filtered)
 print()
 
-fname_lname_filtered = df.drop_duplicates(['fname','lname'])
+fname_lname_filtered = df.drop_duplicates(['fname', 'lname'])
 print("Duplicate first and last names:")
 print(fname_lname_filtered)
 print()
@@ -3527,10 +3499,8 @@ print()
 
 
 
-
-
-```
- data frame 的内容：
+```text
+data frame 的内容：
   fname  lname   level    dept       state
 0  Jane  Smith  Senior   Sales  California
 1  Dave  Smith  Senior   Devel  California
@@ -3563,8 +3533,8 @@ Listing 3.29 显示了 `employees2.csv` 的内容，Listing 3.30 显示了 `miss
 
 ### 列表 3.29：employees2.csv
 
-```
- name,year,month
+```csv
+name,year,month
 Jane-Smith,2015,Aug
 Jane-Smith,2015,Aug
 Dave-Smith,2020,
@@ -3578,8 +3548,8 @@ Jane-Jones,NaN,Jun
 
 ### 列表 3.30：missing_values.py
 
-```
- import pandas as pd
+```python
+import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -3589,9 +3559,9 @@ print("=> contents of CSV file:")
 print(df)
 print()
 
-#NA:  Not Available (Pandas)
-#NaN: Not a Number (Pandas)
-#NB:  NumPy uses np.nan() to check for NaN values
+# NA:  Not Available (Pandas)
+# NaN: Not a Number (Pandas)
+# NB:  NumPy uses np.nan() to check for NaN values
 
 df = pd.read_csv("employees2.csv")
 
@@ -3618,17 +3588,17 @@ print()
 nan_null = df.isnull().sum().sum()
 miss_values = df.isnull().any().sum()
 
-print("=> count of NaN/MISSING values:",nan_null)
-print("=> count of MISSING values:",miss_values)
-print("=> count of NaN values:",nan_null-miss_values)
+print("=> count of NaN/MISSING values:", nan_null)
+print("=> count of MISSING values:", miss_values)
+print("=> count of NaN values:", nan_null - miss_values)
 ```
 
 Listing 3.30 使用 CSV 文件 `employees2.csv` 的内容初始化数据框 `df`，然后显示数据框的内容。Listing 3.30 的后续部分显示了任何行或列中出现的空值数量。Listing 3.30 的后续部分显示了具有空值的字段以及字段名称。
 
 Listing 3.30 的后续部分显示了重复行的数量，随后是重复的行号。运行 Listing 3.30 中的代码，你将看到以下输出：
 
-```
- => contents of CSV file:
+```text
+=> contents of CSV file:
          name    year month
 0  Jane-Smith  2015.0   Aug
 1  Jane-Smith  2015.0   Aug
@@ -3673,15 +3643,15 @@ dtype: int64
 
 本节展示了如何替换 `nan_iris.csv` 数据集中的缺失值，如下：
 
-* 复制 Iris 数据集的表头和前 50 行
-* 随机选择的行和列
+- 复制 Iris 数据集的表头和前 50 行
+- 随机选择的行和列
 
 为了方便起见，`iris.csv` 数据集和 `nan_iris.csv` 数据集包含在书中（见前言）。Listing 3.32 显示了 `nan_iris.csv` 的初始部分，而 Listing 3.33 显示了 `missingdata.py` 的内容，展示了如何将 NaN 值替换为有意义的值。
 
 ### 列表 3.32：nan_iris.csv
 
-```
- SepalLength,SepalWidth,PetalLength,PetalWidth,Name
+```csv
+SepalLength,SepalWidth,PetalLength,PetalWidth,Name
 5.1,3.5,1.4,0.2,setosa
 4.9,3.0,1.4,0.2,setosa
 4.7,3.2,1.3,0.2,setosa
@@ -3732,8 +3702,8 @@ dtype: int64
 
 ### 列表 3.33：missingdatairis.py
 
-```
- import pandas as pd
+```python
+import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -3771,12 +3741,8 @@ print("=> Third range from 10:")
 print(data.iloc[20:])
 ```
 
-
-
-
-
-```
- => 数据集列详情：
+```text
+=> 数据集列详情：
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 50 entries, 0 to 49
 Data columns (total 5 columns):
@@ -3795,7 +3761,7 @@ None
 SepalLength    11
 SepalWidth      1
 PetalLength     4
-PetalWidth      2
+PetalWidth     2
 Name            4
 dtype: int64
 
@@ -3811,7 +3777,7 @@ dtype: int64
 SepalLength    5.002564
 SepalWidth     3.422449
 PetalLength    1.467391
-PetalWidth    0.237500
+PetalWidth     0.237500
 dtype: float64
 
 => 从 40 到 45 的第二个范围：
@@ -3821,79 +3787,64 @@ dtype: float64
 42     4.400000    3.422449     1.467391      0.2375          NaN
 43     5.000000    3.500000     1.467391      0.2375  Iris-setosa
 44     5.100000    3.800000     1.900000      0.4000  Iris-setosa
+
 => 从 40 到 45 的第三个范围：
     SepalLength  SepalWidth  PetalLength  PetalWidth         Name
 40     5.002564    3.500000     1.300000      0.3000  Iris-setosa
 41     4.500000    2.300000     1.300000      0.3000  Iris-setosa
-42     4.400000    3.422449     1.467391      0.2375      UNKNOWN
-43     5.000000    3.500000     1.467391      0.2375  Iris-setosa
-44     5.100000    3.800000     1.900000      0.4000  Iris-setosa
-```
+42     4.400000    3.422449    1.467391      0.2375      UNKNOWN
+43     5.000000    3.500000    1.467391      0.2375  Iris-setosa
+44     5.100000    3.800000    1.900000      0.4000  Iris-setosa
 ```
 
-### 在 Pandas 中对 DataFrame 排序
+## 在 Pandas 中对 DataFrame 排序
 
 列表 3.34 显示了 `sort_df.py` 的内容，它说明了如何对 Pandas DataFrame 的行进行排序。
 
-列表 3.34: sort_df.py
+### 列表 3.34：sort_df.py
 
 ```python
- import pandas as pd
+import pandas as pd
 
 df = pd.read_csv("duplicates.csv")
+
 print("Contents of data frame:")
 print(df)
 print()
 
 df.sort_values(by=['fname'], inplace=True)
+
 print("Sorted (ascending) by first name:")
 print(df)
 print()
 
-df.sort_values(by=['fname'], inplace=True,ascending=False)
+df.sort_values(by=['fname'], inplace=True, ascending=False)
+
 print("Sorted (descending) by first name:")
 print(df)
-print()
 
+print()
+```
+
+
+
+```python
 df.sort_values(by=['fname','lname'], inplace=True)
+
 print("Sorted (ascending) by first name and last name:")
+
 print(df)
+
 print()
 ```
 
-列表 3.34 使用 CSV 文件 `duplicates.csv` 的内容初始化 DataFrame `df`，然后显示该 DataFrame 的内容。列表 3.34 的后续部分显示了根据名字升序排列的行，下一个代码块显示了根据名字降序排列的行。列表 3.34 的最后一个代码块显示了根据名字和姓氏升序排列的行。运行 列表 3.34 中的代码：
+列表 3.34 使用 CSV 文件 `duplicates.csv` 的内容初始化 DataFrame `df`，然后显示该 DataFrame 的内容。列表 3.34 的后续部分显示了根据名字升序排列的行，下一个代码块显示了根据名字降序排列的行。列表 3.34 的最后一个代码块显示了根据名字和姓氏升序排列的行。运行列表 3.34 中的代码：
 
-列表 3.34 of data frame:
-```
- Contents of data frame:
-```
-    SepalLength  SepalWidth  PetalLength  PetalWidth         Name
-40          NaN         3.5          1.3         0.3  Iris-setosa
-41          4.5         2.3          1.3         0.3  Iris-setosa
-42          4.4         NaN          NaN         NaN          NaN
-43          5.0         3.5          NaN         NaN  Iris-setosa
-44          5.1         3.8          1.9         0.4  Iris-setosa
-```
-Sorted (ascending) by first name:
-```
-    SepalLength  SepalWidth  PetalLength  PetalWidth         Name
-40          NaN         3.5          1.3         0.3  Iris-setosa
-41          4.5         2.3          1.3         0.3  Iris-setosa
-42          4.4         NaN          NaN         NaN          NaN
-43          5.0         3.5          NaN         NaN  Iris-setosa
-44          5.1         3.8          1.9         0.4  Iris-setosa
-```
-Sorted (descending) by first name:
-```
-    SepalLength  SepalWidth  PetalLength  PetalWidth         Name
-44          5.1         3.8          1.9         0.4  Iris-setosa
-43          5.0         3.5          NaN         NaN  Iris-setosa
-42          4.4         NaN          NaN         NaN          NaN
-41          4.5         2.3          1.3         0.3  Iris-setosa
-40          NaN         3.5          1.3         0.3  Iris-setosa
-```
-Sorted (ascending) by first name and last name:
-```
+### 列表 3.34：DataFrame 数据
+
+```text
+Contents of data frame:
+
     SepalLength  SepalWidth  PetalLength  PetalWidth         Name
 40          NaN         3.5          1.3         0.3  Iris-setosa
 41          4.5         2.3          1.3         0.3  Iris-setosa
@@ -3902,14 +3853,47 @@ Sorted (ascending) by first name and last name:
 44          5.1         3.8          1.9         0.4  Iris-setosa
 ```
 
-### 在 Pandas 中使用 GROUPBY
+#### 按名字升序排列
+
+```text
+    SepalLength  SepalWidth  PetalLength  PetalWidth         Name
+40          NaN         3.5          1.3         0.3  Iris-setosa
+41          4.5         2.3          1.3         0.3  Iris-setosa
+42          4.4         NaN          NaN         NaN          NaN
+43          5.0         3.5          NaN         NaN  Iris-setosa
+44          5.1         3.8          1.9         0.4  Iris-setosa
+```
+
+#### 按名字降序排列
+
+```text
+    SepalLength  SepalWidth  PetalLength  PetalWidth         Name
+44          5.1         3.8          1.9         0.4  Iris-setosa
+43          5.0         3.5          NaN         NaN  Iris-setosa
+42          4.4         NaN          NaN         NaN          NaN
+41          4.5         2.3          1.3         0.3  Iris-setosa
+40          NaN         3.5          1.3         0.3  Iris-setosa
+```
+
+#### 按名字和姓氏升序排列
+
+```text
+    SepalLength  SepalWidth  PetalLength  PetalWidth         Name
+40          NaN         3.5          1.3         0.3  Iris-setosa
+41          4.5         2.3          1.3         0.3  Iris-setosa
+42          4.4         NaN          NaN         NaN          NaN
+43          5.0         3.5          NaN         NaN  Iris-setosa
+44          5.1         3.8          1.9         0.4  Iris-setosa
+```
+
+### 在 Pandas 中使用 `GROUPBY`
 
 列表 3.35 显示了 `groupby1.py` 的内容，它说明了如何调用 `groupby()` 方法计算特征的总和。
 
-列表 3.35: groupby1.py
+#### 列表 3.35：`groupby1.py`
 
 ```python
- import pandas as pd
+import pandas as pd
 
 # colors and weights:
 data = {'color':['red','blue','red','blue'],
@@ -3940,9 +3924,9 @@ print(df2)
 print()
 ```
 
-列表 3.35 定义了包含颜色和权值的变量 `data`，然后使用 `data` 初始化 DataFrame `df1`。接两个代码块定义了 `red_filter` 和 `blue_filter` 来匹配颜色分别为红色和蓝色的行，然后打印了这些行。列表 3.35 的后续部分定义了两个过滤器 `red_avg` 和 `blue_avg`，分别计算红色值和蓝色权值的平均值。列表 3.35 的最后一个代码块定义了带有颜色列和权重列的 DataFrame `df2`，后者包含了红色值和蓝色权值的平均值。运行 列表 3.35 中的代码，你将看到以下输出：
+列表 3.35 定义了包含颜色和权值的变量 `data`，然后使用 `data` 初始化 DataFrame `df1`。接两个代码块定义了 `red_filter` 和 `blue_filter` 来匹配颜色分别为红色和蓝色的行，然后打印了这些行。列表 3.35 的后续部分定义了两个过滤器 `red_avg` 和 `blue_avg`，分别计算红色值和蓝色权值的平均值。列表 3.35 的最后一个代码块定义了带有颜色列和权重列的 DataFrame `df2`，后者包含了红色值和蓝色权值的平均值。运行列表 3.35 中的代码，你将看到以下输出：
 
-```
+```text
 df1:
   color  weight
 0   red      40
@@ -3973,14 +3957,10 @@ df2:
 1   red  53.333333333333336
 ```
 
-### 使用 TITANIC.CSV 数据集进行聚合操作
-
-
-
-
+### 使用 `TITANIC.CSV` 数据集进行聚合操作
 
 ```python
- import pandas as pd
+import pandas as pd
 
 #Loading titanic.csv in Seaborn:
 #df = sns.load_dataset('titanic')
@@ -4028,8 +4008,8 @@ Listing 3.36 使用 CSV 文件 `titanic.csv` 的内容初始化数据框 `df`。
 
 在删除缺失值的行后，最后一个代码块以与 `result2` 完全相同的方式初始化变量 `result3`。在 Listing 3.36 中运行代码。输出所示：
 
-```
- => Grouped by deck:
+```text
+=> Grouped by deck:
      embark_town
            count nunique size
 deck
@@ -4082,16 +4062,16 @@ age
 80      1       1    1
 ```
 
-### 在 PANDAS 中使用 APPLY() 和 MAPAPPLY()
+### 在 Pandas 中使用 `APPLY()` 和 `MAPAPPLY()`
 
 在本章较些部分，你看到了 Pandas `apply()` 方法的一个示例，用于修改 CSV 文件 `shirts.csv` 中特征的分类值。本节包含了更多 `apply()` 方法的示例，以及 `mapappy()` 方法的示例。
 
-Listing 3.37 显示了 `apply1.py` 的内容，它说明了如何调用 Pandas `apply()` 方法来计算一组值的和。
+列表 3.37 显示了 `apply1.py` 的内容，它说明了如何调用 Pandas `apply()` 方法来计算一组值的和。
 
-***LISTING 3.37: apply1.py***
+#### 列表 3.37：`apply1.py`
 
 ```python
- import pandas as pd
+import pandas as pd
 
 df = pd.DataFrame({'X1': [1,2,3], 'X2': [10,20,30]})
 
@@ -4110,8 +4090,8 @@ print(df1)
 
 Listing 3.37 使用带有 `X1` 和 `X2` 列的数据框初始化 `df`，其中 `X2` 的值是 `X1` 的 10 倍。接下来，Python 函数 `cube()` 返回其立方。Listing 3.36 通过调用 `apply()` 函数并指定用户定义的函数 `cube()` 来定义变量 `df1`，然后打印 `df` 以及 `df1`。在 Listing 3.37 中运行代码，你将看到输出：
 
-```
- initial data frame:
+```text
+initial data frame:
    X1  X2
 0   1  10
 1   2  20
@@ -4123,12 +4103,12 @@ cubed values:
 2   27000
 ```
 
-Listing 3.38 显示了 `apply2.py` 的内容，它说明了如何调用 Pandas `apply()` 方法来计算一组值的和。
+列表 3.38 显示了 `apply2.py` 的内容，它说明了如何调用 Pandas `apply()` 方法来计算一组值的和。
 
-***LISTING 3.38: apply2.py***
+#### 列表 3.38：`apply2.py`
 
 ```python
- import pandas as pd
+import pandas as pd
 import numpy as np
 
 df = pd.DataFrame({'X1': [10,20,30], 'X2': [50,60,70]})
@@ -4144,9 +4124,9 @@ print("add values (axis=1):")
 print(df2)
 ```
 
-Listing 3.38 是 Listing 3.37 的变体：变量 `df1` 和 `df2` 分别包含数据框 `df` 的列和和行。在 Listing 3.38 中运行代码，你将看到以下输出：
+列表 3.38 是列表 3.37 的变体：变量 `df1` 和 `df2` 分别包含数据框 `df` 的列和和行。在列表 3.38 中运行代码，你将看到以下输出：
 
-```
+```text
  X1  X2
 0  10  50
 1  20  60
@@ -4162,12 +4142,15 @@ add values (axis=1):
 dtype: int64
 ```
 
-Listing 3.39 显示了 `mapapply1.py` 的内容，它说明了如何调用 Pandas `mapapply()` 方法计算一组值的平方根。
+列表 3.39 显示了 `mapapply1.py` 的内容，它说明了如何调用 Pandas `mapapply()` 方法计算一组值的平方根。
 
-***LISTING 3.39: mapapply1.py***
+#### 列表 3.39：`mapapply1.py`
+
+
+
 
 ```python
- import pandas as pd
+import pandas as pd
 import math
 
 df = pd.DataFrame({'X1': [1,2,3], 'X2': [10,20,30]})
@@ -4182,7 +4165,7 @@ print(df1)
 Listing 3.39 是 Listing 3.37 的另一种变体：在这种情况下，变量 `df1` 是通过在变量 `df` 上调用 `applymap()` 函数定义的，该函数反过来引用了（但没有执行）`math.sqrt()` 函数。接下来，`print()` 语句显示 `df` 的内容，随后是 `print()` 语句显示 `df1` 的内容：此时调用内置的 `math.sqrt()` 函数计算 `df` 中值的平方根。在 Listing 3.39 中运行代码，你将看到以下输出：
 
 ```
- initial data frame:
+initial data frame:
    X1  X2
 0   1  10
 1   2  20
@@ -4197,10 +4180,10 @@ square root values:
 
 Listing 3.40 显示了 `mapapply2.py` 的内容，它说明了如何调用 Pandas `mapapply()` 方法将字符串转换为小写和大大写。
 
-***LISTING 3.40: mapapply2.py***
+**LISTING 3.40: mapapply2.py**
 
 ```python
- import pandas as pd
+import pandas as pd
 
 df = pd.DataFrame({'fname': ['Jane'], 'lname': ['Smith']},
                   {'fname': ['Dave'], 'lname': ['Jones']})
@@ -4217,12 +4200,8 @@ print(df2)
 
 Listing 3.40 使用两个姓名对初始化变量 `df`，然后通过在变量 `df` 上调用 `applymap()` 方法定义变量 `df1` 和 `df2`。变量 `df1` 将其输入值转换为小写，而变量 `df2` 将其输入值转换为大写。在 Listing 3.40 中运行代码，你将看到以下输出：
 
-
-
-
-
 ```
- initial data frame:
+initial data frame:
       fname  lname
 fname  Jane  Smith
 lname  Jane  Smith
@@ -4238,251 +4217,246 @@ fname  JANE  SMITH
 lname  JANE  SMITH
 ```
 
-### **PANDAS 中实用的单行命令**
+## Pandas 中实用的单行命令
 
-本节包含了 Pandas 中各种实用的单行命令（其中一些你已经在本章中见过），这些命令对你来说非常有用：
+本节包含了 Pandas 中各种实用的单行命令（其中一些你已经在本章中见过），这些命令对你来说非常有用。
 
 列出数据框的列名：
 
-```
- df.columns
+```python
+df.columns
 ```
 
 从数据框中删除缺失数据：
 
-```
- df.dropna(axis=0, how='any')
+```python
+df.dropna(axis=0, how='any')
 ```
 
 删除一个不必要的列：
 
-```
- my_dataset = my_dataset.drop(["url"],axis=1)
+```python
+my_dataset = my_dataset.drop(["url"], axis=1)
 ```
 
 删除只有一个单一值的列，或者缺失值超过其 50% 的列：
 
-```
- dataset = dataset.dropna(thresh=half_count,axis=1)
+```python
+dataset = dataset.dropna(thresh=half_count, axis=1)
 ```
 
 替换数据框中的缺失数据：
 
-```
- df.replace(to_replace=None, value=None)
+```python
+df.replace(to_replace=None, value=None)
 ```
 
 检查数据框中的 NAN（空值）：
 
-```
- pd.isnull(object)
+```python
+pd.isnull(object)
 ```
 
 删除数据框中的一个特征：
 
-```
- df.drop('feature_variable_name', axis=1)
+```python
+df.drop('feature_variable_name', axis=1)
 ```
 
 将数据框中的对象类型转换为浮点数：
 
-```
- pd.to_numeric(df["feature_name"], errors='coerce')
+```python
+pd.to_numeric(df["feature_name"], errors='coerce')
 ```
 
 将数据框中的数据转换为 NumPy 数组：
 
-```
- df.as_matrix()
+```python
+df.as_matrix()
 ```
 
-显示数据框的前 n 行：
+显示数据框的前 `n` 行：
 
-```
- df.head(n)
+```python
+df.head(n)
 ```
 
 通过特征名获取数据框中的数据：
 
-```
- df.loc[feature_name]
-```
-
-对数据框应用函数，例如将数据框中“height”列的所有值乘以 3：
-
-```
- df["height"].apply(lambda height: 3 * height)
+```python
+df.loc[feature_name]
 ```
 
-或者
+对数据框应用函数，例如将数据框中 `height` 列的所有值乘以 3：
 
+```python
+df["height"].apply(lambda height: 3 * height)
 ```
- def multiply(x):
 
+或者：
+
+```python
+def multiply(x):
     return x * 3
 
 df["height"].apply(multiply)
 ```
 
-将数据框的第四列重命名为 height：
+将数据框的第四列重命名为 `height`：
 
-```
- df.rename(columns = {df.columns[3]:'height'}, inplace=True)
-```
-
-获取数据框中第一列的唯一条：
-
-```
- df["first"].unique()
+```python
+df.rename(columns={df.columns[3]: 'height'}, inplace=True)
 ```
 
-从现有数据框创建一个包含 first 和 last 列的数据框：
+获取数据框中第一列的唯一条目：
 
+```python
+df["first"].unique()
 ```
- new_df = df[["first", "last"]]
+
+从现有数据框创建一个包含 `first` 和 `last` 列的数据框：
+
+```python
+new_df = df[["first", "last"]]
 ```
 
 对数据框中的数据排序：
 
-```
- df.sort_values(ascending = False)
-```
-
-过滤名为 size 的数据列，仅显示等于 7 的值：
-
-```
- df[df["size"] == 7]
+```python
+df.sort_values(ascending=False)
 ```
 
-选择数据框中 height 列的第一行：
+过滤名为 `size` 的数据列，仅显示等于 7 的值：
 
+```python
+df[df["size"] == 7]
 ```
- df.loc([0], ['height'])
+
+选择数据框中 `height` 列的第一行：
+
+```python
+df.loc([0], ['height'])
 ```
 
-### **处理基于 JSON 的数据**
+## 处理基于 JSON 的数据
 
-一个 JSON 对象由用冒号分隔的“名/值对”表示的数据，以及用逗号分隔的数据对象组成。对象在大括号 {} 内部指定，而对象数组用方括号 [] 表示。请注意，字符值类型的数据元素位于一对双引号 "" 之中（但数值型数据不需要引号）。
+一个 JSON 对象由用冒号分隔的“名/值对”表示的数据，以及用逗号分隔的数据对象组成。对象在大括号 `{}` 内部指定，而对象数组用方括号 `[]` 表示。请注意，字符值类型的数据元素位于一对双引号 `""` 之中（但数值型数据不需要引号）。
 
 这里是一个 JSON 对象的简单示例：
 
-```
- { "fname":"Jane", "lname":"Smith", "age":33, "city":"SF" }
+```json
+{ "fname":"Jane", "lname":"Smith", "age":33, "city":"SF" }
 ```
 
 这是一个 JSON 对象数组的简单示例（注意外层包裹的方括号）：
 
-```
- [
-{ "fname":"Jane", "lname":"Smith", "age":33, "city":"SF" },
-{ "fname":"John", "lname":"Jones", "age":34, "city":"LA" },
-{ "fname":"Dave", "lname":"Stone", "age":35, "city":"NY" },
+```json
+[
+  { "fname":"Jane", "lname":"Smith", "age":33, "city":"SF" },
+  { "fname":"John", "lname":"Jones", "age":34, "city":"LA" },
+  { "fname":"Dave", "lname":"Stone", "age":35, "city":"NY" }
 ]
 ```
 
-#### **Python 字典与 JSON**
+### Python 字典与 JSON
 
 `json` 库允许你在 Python 中处理基于 JSON 的数据。
 
 列表 3.41 显示了 `dict2json.py` 的内容，说明了如何将 Python 字典转换为 JSON 字符串。
 
-***列表 3.41: dict2json.py***
+**列表 3.41: `dict2json.py`**
 
-```
- import json
+```python
+import json
 
 dict1 = {}
 dict1["fname"] = "Jane"
 dict1["lname"] = "Smith"
-dict1["age"]   = 33
-dict1["city"]  = "SF"
+dict1["age"] = 33
+dict1["city"] = "SF"
 
 print("Python dictionary to JSON data:")
-print("dict1:",dict1)
+print("dict1:", dict1)
 json1 = json.dumps(dict1, ensure_ascii=False)
-print("json1:",json1)
+print("json1:", json1)
 print("")
 
 # convert JSON string to Python dictionary:
 json2 = '{"fname":"Dave", "lname":"Stone", "age":35, "city":"NY"}'
 dict2 = json.loads(json2)
 print("JSON data to Python dictionary:")
-print("json2:",json2)
-print("dict2:",dict2)
+print("json2:", json2)
+print("dict2:", dict2)
 ```
 
-列表 3.41 调用了 `json.dumps()` 函数来执行从 Python 字典到 JSON 字符串的转换。运行 列表 3.41 中的代码，你将看到以下输出：
+列表 3.41 调用了 `json.dumps()` 函数来执行从 Python 字典到 JSON 字符串的转换。运行列表 3.41 中的代码，你将看到以下输出：
 
-```
- Python dictionary to JSON data:
+```text
+Python dictionary to JSON data:
 dict1: {'fname': 'Jane', 'lname': 'Smith', 'age': 33, 'city': 'SF'}
 json1: {"fname": "Jane", "lname": "Smith", "age": 33, "city": "SF"}
 ```
 
-#### **Python 字典和 JSON**
+### Python 字典和 JSON
 
 `json` 库允许你在 Python 中处理基于 JSON 的数据。
 
 列表 3.41 显示了 `dict2json.py` 的内容，说明了如何将 Python 字典转换为 JSON 字符串。
 
-***列表 3.41: dict2json.py***
+**列表 3.41: `dict2json.py`**
 
-```
- import json
+```python
+import json
 
 dict1 = {}
 dict1["fname"] = "Jane"
 dict1["lname"] = "Smith"
-dict1["age"]   = 33
-dict1["city"]  = "SF"
+dict1["age"] = 33
+dict1["city"] = "SF"
 
 print("Python dictionary to JSON data:")
-print("dict1:",dict1)
+print("dict1:", dict1)
 json1 = json.dumps(dict1, ensure_ascii=False)
-print("json1:",json1)
+print("json1:", json1)
 print("")
 
 # convert JSON string to Python dictionary:
 json2 = '{"fname":"Dave", "lname":"Stone", "age":35, "city":"NY"}'
 dict2 = json.loads(json2)
 print("JSON data to Python dictionary:")
-print("json2:",json2)
-print("dict2:",dict2)
+print("json2:", json2)
+print("dict2:", dict2)
 ```
 
-列表 3.41 调用了 `json.dumps()` 函数来执行从 Python 字典到 JSON 字符串的转换。运行 列表 3.41 中的代码，你将看到以下输出：
+列表 3.41 调用了 `json.dumps()` 函数来执行从 Python 字典到 JSON 字符串的转换。运行列表 3.41 中的代码，你将看到以下输出：
 
-```
- Python dictionary to JSON data:
+```text
+Python dictionary to JSON data:
 dict1: {'fname': 'Jane', 'lname': 'Smith', 'age': 33, 'city': 'SF'}
 json1: {"fname": "Jane", "lname": "Smith", "age": 33, "city": "SF"}
 ```
 
-### **总结**
+## 总结
 
 本章介绍了如何使用 Pandas 创建带标签的数据框并显示数据框的元数据。然后，你学习了如何从各种数据源创建数据框，例如随机数和硬编码的数据值。
 
 你还学习了读取 Excel 表格并对这些数据进行数值计算，例如数值列的最小值、平均值最大值。随后，你看到了如何从存储在 CSV 文件中的数据创建数据框。此外，你还学习了如何根据数据框中的数据生成散点图。
 
-最后，你对 JSON 进行了简单介绍，并并将 Python 字典转换为 JSON 数据（反之亦然）的示例。
+最后，你对 JSON 进行了简单介绍，并将 Python 字典转换为 JSON 数据（反之亦然）的示例。
 
 # 第 4 章
 
 ## RDBMS 与 SQL
 
-本章将向你介绍 RDBMS、各种 SQL 概念以及对 MySQL 的快速介绍。MySQL 是一个健的 RDBMS，可以从 Oracle 网站免费下载。此外，你在本章中关于 MySQL 学到的几乎所有内容都适用于其他 RDBMS，例如 PostgreSQL 和 Oracle。
+本章将向你介绍 RDBMS、各种 SQL 概念以及对 MySQL 的快速介绍。MySQL 是一个健壮的 RDBMS，可以从 Oracle 网站免费下载。此外，你在本章中关于 MySQL 学到的几乎所有内容都适用于其他 RDBMS，例如 PostgreSQL 和 Oracle。
 
 本章描述了一个假设的网站，该网站允许用户注册以购买各种工具（如锤子和扳手）。虽然本节没有代码，但你将了解到所需的表、它们之间的关系以及这些表的结构。
 
-### **什么是 RDBMS？**
-
-
-
-
+### 什么是 RDBMS？
 
 关系数据库管理系统（RDBMS）将数据存储在表中，表中包含带有标记的属性（非正式地有时称为 `列`），这些属性具有特定的数据类型。RDBMS 的示例包括 `MySQL`、`Oracle` 和 `IBM DB2`。虽然关系数据库通常为数据存储提供良好的解决方案，但在某些情况下，速度和扩展性可能会成为问题。NoSQL 数据库（如 `MongoDB`）在扩展性方面可能更为合适。
 
-## RDBMS 中的表之间存在什么关系？
+### RDBMS 中的表之间存在什么关系？
 
 虽然 RDBMS 可以只包含一个表，但它通常包含多个表，这些表之间可以存在各种类型的关联。例如，当你在食品商店购买各种物品时，你的收据由一个订单组成，该订单包含一个或多个“行项目”（line items），每个行项目都指明了你购买的特定商品的详情。这被称为订单（存储在 `purchase_orders` 表中）与你购买的每个商品的行项目（存储在 `line_items` 表中）之间的 `一对多` 关系。
 
@@ -4492,30 +4466,30 @@ json1: {"fname": "Jane", "lname": "Smith", "age": 33, "city": "SF"}
 
 除了表定义，数据库还经常包含索引、主键和外键，这些有助于在表中搜索数据，并将特定表中的某行与另一个表中逻辑上相关的行（或多行）“连接”起来。例如，如果我们在 `purchase_orders` 表中有一个某个特定订单的 `id` 值，我们可以在 `line_items` 表中找到所有包含相同订单 `id` 的行项目（即被购买的物品）。
 
-## RDBMS 的特性
+### RDBMS 的特性
 
 RDBMS 提供了一种方便的数据存储方式，通常与某种类型的应用程序相关。例如，稍后你将看到一个四表 RDBMS 的细节，它用于跟踪通过 Web 应用程序购买的工具。从高层次的角度来看，RDBMS 具有以下特性：
 
-* 数据库包含一个或多个表
-* 数据存储在表中
-* 数据记录具有相同的结构
-* 适用于垂直扩展
-* 支持 ACID（下文将解释）
+- 数据库包含一个或多个表。
+- 数据存储在表中。
+- 数据记录具有相同的结构。
+- 适用于垂直扩展。
+- 支持 ACID（下文将解释）。
 
 另一个有用的概念是 `逻辑模式`（logical schema），它由 RDBMS 中的表及其关系（以及索引、视图、触发器等）的集合组成。该模式用于生成物理模式，它包含了创建指定表及其关系所需的所有 `SQL` 语句。
 
-## 什么是 ACID？
+### 什么是 ACID？
 
 ACID 是原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）和持久性（Durability）的缩写，指的是 RDBMS 事务的属性。
 
-* `Atomicity`（原子性）意味着每个事务要么成功、要么失败，因此如果事务失败，系统将回滚到之前的状态。
-* `Consistency`（一致性）意味着成功的事务始终会导致有效的数据库状态。
-* `Isolation`（隔离性）意味着并发或串行执行事务将产生一致的结果。
-* `Durability`（持久性）意味着已提交的事务将保持在相同状态。
+- `Atomicity`（原子性）意味着每个事务要么成功、要么失败，因此如果事务失败，系统将回滚到之前的状态。
+- `Consistency`（一致性）意味着成功的事务始终会导致有效的数据库状态。
+- `Isolation`（隔离性）意味着并发或串行执行事务将产生一致的结果。
+- `Durability`（持久性）意味着已提交的事务将保持在相同状态。
 
 RDBMS 支持 ACID，而 NoSQL 数据库通常不支持 ACID。
 
-## 我们在什么时候需要 RDBMS？
+### 我们在什么时候需要 RDBMS？
 
 简短的回答是，当我们需要存储一个或多个已发生事件记录时，RDBMS 非常有用，这可能涉及简单的物品购买，也涉及复杂的跨表财务事务。
 
@@ -4525,44 +4499,44 @@ RDBMS 允许你定义一组包含数据行的表，其中每行包含一个或�
 
 现在考虑两个银行账户之间的资金转账场景：你需要从储蓄账户转账 $100 元到支票账户。该过程涉及两个步骤：
 
-1. 扣除（减去）储蓄账户 $100 元
-2. 存入（增加）储蓄账户 $100 元
+1. 扣除（减去）储蓄账户 $100 元。
+2. 存入（增加）储蓄账户 $100 元。
 
-然而，如果在步骤 1 之后、步骤 2 完成 之前发生系统故障，你就丢失了 $100 元。显然，步骤 1 和步骤 2 必须被视为一个 `原子事务`，这意味着只有当两个步骤都成功完成后，事务才成功。如果事务失败，事务将“回滚”，以便系统恢复到两个账户之间转账之前的状态。
+然而，如果在步骤 1 之后、步骤 2 完成之前发生系统故障，你就丢失了 $100 元。显然，步骤 1 和步骤 2 必须被视为一个 `原子事务`，这意味着只有当两个步骤都成功完成后，事务才成功。如果事务失败，事务将“回滚”，以便系统恢复到两个账户之间转账之前的状态。
 
 正如你在本章早期学到的，RDBMS 支持 ACID，这确保了之前的事务（即账户之间的资金转账）被视为一个原子事务。
 
 虽然原子事务是金融系统的基础，但它们对于其他系统可能没有那么关键。例如，上一个例子涉及在创建新事件时在 `events` 表中插入一个新行。如果此过程失败，解决方案可能包括在系统重新在线时再次注册事件。
 
-## 规范化的重要性
+### 规范化的重要性
 
 本节介绍了规范化的概念；在线文章提供了有关规范范式的更详细信息。将此主题分为两个章节中的两个部分将有助于理解规范化。
 
 作为一个起点，考虑一个存储在时间段内（如一天、一周或其他时间段）房间温度记录的 RDBMS。我们只需要一个 `device_temperature` 表，其中每行都包含特定时间房间的温度。在 IoT（物联网）的情况下，温度是在常规的时间间隔内（如每分钟或每小时）记录的。
 
+
+
+
 如果你只需要跟踪一个房间，`device_temperature` 表可能足够了。但是，如果你需要跟踪房间内的多个设备，那么创建一个名为 `device_details` 的第二个表会很方便，该表包含每个设备的属性，如 `device_id`、`device_name`、`device_year`、`device_price` 和 `device_warranty`。
-
-
-
 
 然而，我们需要将来自 `device_temperature` 表的某行信息连接到其在 `device_details` 表中的关联行。双表连接非常简单：`device_details` 表中的每行都包含一个 `device_id`，它能唯一标识该行。此外，在 `device_temperature` 表中，任何引用该设备的行都会出现相同的 `device_id`。
 
-上述的双表结构是数据库`normalization`（范式/规范化）的一个极简示例，它减少了数据库表中的数据冗余，但有时会以执行某些类型 `SQL` 语句（例如包含 `JOIN` 关键字的语句）时性能变慢为代价。
+上述的双表结构是数据库 `normalization`（范式/规范化）的一个极简示例，它减少了数据库表中的数据冗余，但有时会以执行某些类型 `SQL` 语句（例如包含 `JOIN` 关键字的语句）时性能变慢为代价。
 
-如果你是数据库`normalization` 概念的新手，可能会认为规范化增加了复杂性并降低了性能，而没有提供实际收益。虽然这种考虑是合理的，但这种权是值得的。
+如果你是数据库 `normalization` 概念的新手，可能会认为规范化增加了复杂性并降低了性能，而没有提供实际收益。虽然这种考虑是合理的，但这种权衡是值得的。
 
 为了说服你接受规范化的价值，假设 `purchase_orders` 表中的每条记录都包含完成购买客户的所有细节。结果是我们可以消除 `customers` 表。然而，如果我们以后需要更新特定客户的地址，就需要更新 `purchase_orders` 表中所有包含该客户的行。相比之下，如果我们维护一个 `customers` 表，那么更新客户地址只需更改 `customers` 表中的单行即可。
 
 规范化使我们能够避免数据重复，从而在必须更新信息（如客户地址）时，有一个单一的“事实之源”。从另一个角度来看，数据重复意味着相同的数据出现在两个（或可能更多）位置，如果更新没有应用到所有这些位置，数据库数据将处于不一致状态。取决于应用程序的性质，数据不一致的后果可能从微小到灾难性不等。
 
-始终记住这一点：每当你需要更新位于两个不同位置的相同数据时，你就会增加数据不一致的风险，这会对数据性产生不利影响。
+始终记住这一点：每当你需要更新位于两个不同位置的相同数据时，你就会增加数据不一致的风险，这会对数据完整性产生不利影响。
 
 作为另一个例子，假设一个网站在线销售小部件：至少，关联数据库需要以下四张表：
 
-* `customer_details`
-* `purchase_orders`
-* `po_line_items`
-* `item_desc`
+- `customer_details`
+- `purchase_orders`
+- `po_line_items`
+- `item_desc`
 
 上述场景将在下一节中进行更详细探讨，该节将指定上述每个表的属性。
 
@@ -4570,9 +4544,9 @@ RDBMS 允许你定义一组包含数据行的表，其中每行包含一个或�
 
 作为一个介绍性示例，假设 `[www.mytools.com]` 销售家用或建筑工具（细节并不重要）。为了简单起见，让我们假定上述 URL 有一个实际的网页，且该网页包含以下部分：
 
-* 新用户注册
-* 现有用户登录
-* 用于选择购买物品（及数量）的输入字段
+- 新用户注册
+- 现有用户登录
+- 用于选择购买物品（及数量）的输入字段
 
 例如，注册用户 John Smith 想要购买一把锤子、两把螺丝刀和三把扳手。网页需要为用户提供按类型（例如锤子、螺丝刀和扳手）搜索产品的能力，然后显示匹配的产品列表。列表中的每个产品还应包含一个 `SKU`，这是一种行业标准的产品标记机制（就像识别书籍的 `ISBNs` 一样）。
 
@@ -4581,11 +4555,17 @@ RDBMS 允许你定义一组包含数据行的表，其中每行包含一个或�
 让我们描述一个“用例”，该用例包含了将代表现有客户 John Smith（其客户 ID 为 1000）执行的步骤序列，他想要购买 1 把锤子、2 把螺丝刀和 3 把扳手：
 
 > 步骤 1：客户 John Smith（`cust_id` 为 1000）发起一次新购买。
+>
 > 步骤 2：创建一个新的购买订单，`po_id` 值为 12500。
+>
 > 步骤 3：John Smith 选择了 1 把锤子、2 把螺丝刀和 3 把扳手。
+>
 > 步骤 4：屏幕上显示关联价格 20.00、16.00 和 30.00。
+>
 > 步骤 5：显示小计金额，为 66.00。
+>
 > 步骤 6：显示税费 6.60（税率为 10%）。
+>
 > 步骤 7：显示总费用 72.60。
 
 步骤 8 将允许 John Smith 移除某个物品、增加/减少每个所选物品的数量、删除物品或取消购买订单。步骤 9 将允许 John Smith 进行支付。再次，为了简单起见，我们假设步骤 8 和步骤 9 是可用的。
@@ -4596,7 +4576,7 @@ RDBMS 允许你定义一组包含数据行的表，其中每行包含一个或�
 
 如果你能视觉化上一节中描述的用例，你可能看到我们需要一张表来存储特定客户的信息，另一张表来存储购买订单（以某种方式与关联的客户链接），一张包含所购物品详情和数量的表（通常称为“行项目”），以及一张包含每个工具信息的表（包含名称和价格）。因此，我们网站的 RDBMS 需要以下表：
 
-```
+```text
 customers
 purchase_orders
 line_items
@@ -4605,11 +4585,11 @@ item_desc
 
 接下来的章节将描述上述表的内容及其之间的关系。
 
-#### customers 表
+#### `customers` 表
 
 虽然指定 `customers` 表属性有多种方法，你需要足够的信息来唯一标识表中的每个客户。类比，除了 `cust_id` 外，向某人寄信封需要以下信息：
 
-```
+```text
 cust_id
 first_name
 last_name
@@ -4621,13 +4601,13 @@ zip_code
 
 我们将使用上述列表中的属性创建 `customers` 表。注意，`cust_id` 属性被称为键，因为它能唯一标识每个客户。虽然我们不会讨论键在 `RDBMS` 中的作用，但显然我们需要一种唯一标识客户的机制。
 
-每我们需要引用特定客户的详情时，我们将使用 `cust_id` 的关联值从 `customers` 表的对应行中检索详情。
+每当我们需要引用特定客户的详情时，我们将使用 `cust_id` 的关联值从 `customers` 表的对应行中检索详情。
 
 上述段落描述了 `RDBMS` 中关联表 `T1` 和 `T2` 的本质：`T1` 中的键作为属性值存储在 `T2` 中。如果我们需要访问表 `T3` 中的关联信息，我们将 `T2` 中的键作为属性值存储在 `T3` 中。
 
 注意，生产系统中的 `customers` 表会包含其他属性，如下：
 
-```
+```text
 title（先生、女士、小姐等）
 shipping_address
 cell_phone
@@ -4637,7 +4617,7 @@ cell_phone
 
 为了使此表更具体，假设以下信息属于客户 John Smith，他被分配了 `cust_id` 1000：
 
-```
+```text
 cust_id: 1000
 first_name: John
 last_name: Smith
@@ -4647,12 +4627,9 @@ state: California
 zip_code: 95959
 ```
 
-
-
-
 每当 John Smith 进行新购买时，我们都会使用 `cust_id` 值 1000 在 `purchase_order` 表中为该客户创建新的一行。
 
-### purchase_orders 表
+### `purchase_orders` 表
 
 当客户访问网站时，我们需要创建一个购买订单，并将其作为新行插入到 `purchase_orders` 表中。虽然你可能倾向于将所有客户的详细信息都放在新行中，但我们将通过关联的 `cust_id` 来识别客户，并改用该值。
 
@@ -4664,7 +4641,7 @@ zip_code: 95959
 
 虽然定义一组合适的属性有多种方法，但让我们使用以下属性集用于 `purchase_orders` 表：
 
-```
+```text
 po_id
 cust_id
 purchase_date
@@ -4674,24 +4651,24 @@ purchase_date
 
 那么 John Smith 在 `purchase_orders` 中的新行看起来如下所示：
 
-```
+```text
 po_id: 12500
 cust_id: 1000
 purchase_date: 12-01-2021
 ```
 
-### line_items 表
+### `line_items` 表
 
 作为一个例子，假设客户 John Smith 在他最近的购买订单中请求了 1 把锤子、2 把螺丝刀和 3 把扳手。这些购买物品中的每一个项目都需要 `line_items` 表中对应一行，且该行：
 
-* 由 `line_id` 值识别
-* 指定每个所购物品的数量
-* 包含 `purchase_orders` 表中关联的 `po_id` 值
-* 包含 `item_desc` 表中关联的 `item_id` 值
+- 由 `line_id` 值识别
+- 指定每个所购物品的数量
+- 包含 `purchase_orders` 表中关联的 `po_id` 值
+- 包含 `item_desc` 表中关联的 `item_id` 值
 
 为了简单起见，我们将值 5001、5002 和 5003 分配给 `line_items` 表中三个新行的 `line_id` 属性，这三行分别代表当前购买订单中的锤子、螺丝刀和扳手物品。一个 `line_item` 行可能如下：
 
-```
+```text
 po_id: 12500
 line_id: 5001
 item_id: 100 <= 我们很快会讨论这个
@@ -4701,13 +4678,13 @@ item_tax:  2.00
 item_subtotal: 22.00
 ```
 
-注意，在前面的 `line_item` 中没有 `cust_id`：这是因为采用了自上而下的数据检索方法。具体来说，我们从一个特定的 `cust_id` 开始，用它来在 `purchase_orders` 表中查找属于该 `cust_id` 的购买订单列表，并且对于 `purchase_orders` 表中的每一个购买订单，我们在 `line_items` 表中搜索关联的行项目项目。此外，我们可以对 `cust_id` 值列表中的每个客户重复上述操作步骤。
+注意，在前面的 `line_item` 中没有 `cust_id`：这是因为采用了自上而下的数据检索方法。具体来说，我们从一个特定的 `cust_id` 开始，用它来在 `purchase_orders` 表中查找属于该 `cust_id` 的购买订单列表，并且对于 `purchase_orders` 表中的每一个购买订单，我们在 `line_items` 表中搜索关联的行项目。此外，我们可以对 `cust_id` 值列表中的每个客户重复上述操作步骤。
 
 回到之前的 `line_item` 细节：我们需要通过 `item_desc` 表中关联的标识符来引用每个购买的物品。再次，我们将任意地为锤子、螺丝刀和扳手物品分别分配 100、200 和 300 的 `item_id` 值。在你的应用程序中，实际值无疑会有所不同，因此数字 100、200 和 300 并没有特殊的意义。
 
 `line_items` 表中的这三行（它们属于同一个购买订单）看起来如下所示（我们稍后会查看相应的 SQL 语句）：
 
-```
+```text
 po_id: 12500
 line_id: 5001
 item_id: 100
@@ -4733,34 +4710,35 @@ item_tax:    3.00
 item_subtotal: 33.00
 ```
 
-### item_desc 表
+### `item_desc` 表
 
 回想一下，`customers` 表包含每个客户的信息，每当客户在网站创建账户时都会创建一个新行。类似的，`item_desc` 表包含了每个物品（产品）的信息。`item_desc` 表的更新比 `customers` 表频繁，在以下情况：
 
-* 新工具上架
-* 现有工具不再售卖
+- 新工具上架
+- 现有工具不再售卖
 
 因此，`item_desc` 表包含了客户可以购买的所有工具。至少，它是“真理来源”：
 
-```
+```sql
 SELECT *
 FROM item_desc;
 ```
-+---------+-------------+-------+
+
 | item_id | item_desc   | price |
-| 100 | hammer      | 20.00 |
+|---:|:---|---:|
+| 100 | hammer | 20.00 |
 | 200 | screwdriver | 8.00 |
-| 300 | wrench      | 10.00 |
+| 300 | wrench | 10.00 |
 
 还有一个重要的细节需要讨论：如果某个物品不再售卖，我们可以简单地删除它的行吗？答案是“否”，因为我们需要它来生成报告。因此，添加一个名为 `AVAILABLE`（或类似的）属性包含 1 或 0，以指示产品是否可用。结果，涉及该表的某些 SQL 查询也将考虑这一点。
 
-### 什么是 SQL
+## 什么是 SQL
 
 结构化查询语言（SQL）用于管理表中的数据。事实上，SQL 是用于处理结构化数据库的标准语言。在高级术语中，用于检索数据的 SQL 语句通常涉及以下内容：
 
-* 你想要的数据 (`SELECT`)
-* 数据所在的表 (`FROM`)
-* 数据的任何条件 (`WHERE`)
+- 你想要的数据（`SELECT`）
+- 数据所在的表（`FROM`）
+- 数据的任何条件（`WHERE`）
 
 例如，假设有一个 `friends` 表包含 `lname` 和 `fname` 属性（分别是姓和名），用于表示一组朋友，且该表中的每一行都包含关于一个朋友的信息。在第 2 章中，我们讨论了如何创建数据库表以及如何向表中填充数据，但现在我们只需假设这些任务已经完成。那么，检索 `friends` 表中人员姓和名的 SQL 语句如下：
 
@@ -4779,18 +4757,14 @@ WHERE height < 180;
 
 SQL 提供了大量的关键字，允许你指定从多个表中检索数据的复杂查询。上述两个 SQL 语句都称为 DML 语句，它是 SQL 语句的四个类别之一：
 
-* DCL（数据控制语言）
-* DDL（数据定义语言）
-* DQL（数据查询语言）
-* DML（数据操作语言）
+- DCL（数据控制语言）
+- DDL（数据定义语言）
+- DQL（数据查询语言）
+- DML（数据操作语言）
 
 接下来的章节将为上述列表中的每项提供更多信息。
 
-
-
-
-
-# DCL, DDL, DQL, DML, 和 TCL
+# DCL、DDL、DQL、DML 和 TCL
 
 数据控制语言（DCL）指的是任何包含 `GRANT` 或 `REVOKE` 关键字的 SQL 语句。这两个关键字都会影响对特定用户授予或撤销的权限。
 
@@ -4800,7 +4774,7 @@ SQL 提供了大量的关键字，允许你指定从多个表中检索数据的�
 
 数据操作语言（DML）指的是对数据库中的一个或多个表执行查询的 SQL 语句。这些 SQL 语句包含 `INSERT`、`UPDATE`、`DELETE`、`MERGE`、`CALL`、`EXPLAIN PLAN` 或 `LOCK TABLE` 中的任何关键字。在大多数情况下，这些关键字会修改一个或多个表中现有数据的值。
 
-事务控制语言（TCL）包括 `COMMIT`、`ROLLBACK`、`SAVEPOINT` 或 `SET TRANSACTION` 关键字，这些都是本书书中未讨论的高级概念。
+事务控制语言（TCL）包括 `COMMIT`、`ROLLBACK`、`SAVEPOINT` 或 `SET TRANSACTION` 关键字，这些都是本书中未讨论的高级概念。
 
 # SQL 权限
 
@@ -4829,6 +4803,8 @@ MySQL [mytools]> SeLeCt Version();
 +-----------+
 | 8.0.21    |
 +-----------+
+| 8.0.21    |
++-----------+
 1 row in set (0.000 sec)
 ```
 
@@ -4844,8 +4820,8 @@ MySQL [mytools]> SeLeCt Version();
 
 通常情况下，你有时会使用 `CREATE` 关键字创建数据库，但更多时候是使用它来创建表、视图和索引。然而，以下列表包含了你可以通过 `CREATE` 语句创建的所有对象：
 
-```
- DATABASE
+```text
+DATABASE
 EVENT
 FUNCTION
 INDEX
@@ -4855,6 +4831,8 @@ TRIGGER
 USER
 VIEW
 ```
+
+
 
 本文仅讨论了特定数据库的示例，而在线文章则深入探讨了上述列表中其他主题。
 
@@ -4877,16 +4855,12 @@ MariaDB 是 MySQL 的一个分支，它具有许多 MySQL 的特性。MariaDB �
 
 # 安装 MySQL
 
-MariaDB 是 MySQL 的一个分支，它具有许多 MySQL 的特性。在长度在创建表时声明的固定长度。  MySQL  。
+MariaDB 是 MySQL 的一个分支，它具有许多 MySQL 的特性。在长度在创建表时声明的固定长度。MySQL。
 
 你可以通过以下命令安装 MySQL：
 
 ```bash
-$ mysql
-
-
-
- -p
+$ mysql -p
 ```
 
 # MySQL 中的数据类型
@@ -4922,7 +4896,7 @@ $ mysql
 之前的项目列表包含各种字符串类型，后者已被提取并放在下面的单独列表中以便你使用：
 
 ```
- BLOB
+BLOB
 CHAR
 ENUM
 SET
@@ -4933,7 +4907,7 @@ VARCHAR
 `ENUM` 数据类型是字符串对象，指定了一组预定义值，可以在创建表时使用：
 
 ```sql
- CREATE TABLE PIZZA(name ENUM('Small', 'Medium','Large'));
+CREATE TABLE PIZZA(name ENUM('Small', 'Medium','Large'));
 Query OK, 0 rows affected (0.021 sec)
 
 DESC pizza;
@@ -4944,10 +4918,6 @@ DESC pizza;
 +-------+--------------------------------+------+-----+---------+-------+
 1 row in set (0.004 sec)
 ```
-
-
-
-
 
 # BLOB 和 TEXT 数据类型
 
@@ -4975,10 +4945,10 @@ LONGTEXT
 
 你可以对 MySQL 数据库执行若干操作，如下所示：
 
-* 创建数据库
-* 导出数据库
-* 丢数据库
-* 重命名数据库
+- 创建数据库
+- 导出数据库
+- 丢数据库
+- 重命名数据库
 
 你将在接下来的小节中看到如何执行上述每个列表项的示例。
 
@@ -5119,9 +5089,9 @@ mysqldump -u username -p"password" -R minimal > minimal.sql
 
 虽然你现在有一个空的数据库，但了解如何重命名数据库仍然很好（旧版本的 MySQL 提供了 `RENAME DATABASE` 命令来重命名数据库；然而，新版本的 MySQL 删除了此功能以避免安全风险）。幸运的是，你可以通过涉及多个 MySQL 工具的三个步骤来重命名 `OLDDB`（你需要替换为要重命的数据库）为 `NEWDB`（替换为实际数据库名称）：
 
-* 创建 `OLDDB` 的导出副本。
-* 创建名为 `NEWDB` 的新数据库。
-* 将数据从 `OLDDB` 导入到 `NEWDB`。
+- 创建 `OLDDB` 的导出副本。
+- 创建名为 `NEWDB` 的新数据库。
+- 将数据从 `OLDDB` 导入到 `NEWDB`。
 
 调用以下命令执行步骤 1：
 
@@ -5153,7 +5123,7 @@ Database changed
 `INFORMATION_SCHEMA` 表允许你检索有关给定列的信息。
 
 ```
- TABLE_SCHEMA
+TABLE_SCHEMA
 TABLE_NAME
 COLUMN_NAME
 ORDINAL_POSITION
@@ -5183,23 +5153,19 @@ MySQL [mytools]> desc weather;
 6 rows in set (0.001 sec)
 ```
 
-我们可以通过以下 查询 查询获取有关 `weather` 表列的更多信息：
-
-
-
-
+我们可以通过以下查询获取有关 `weather` 表列的更多信息：
 
 ```
- SELECT COLUMN_NAME, DATA_TYPE, IS_NULLABLE, COLUMN_DEFAULT
+SELECT COLUMN_NAME, DATA_TYPE, IS_NULLABLE, COLUMN_DEFAULT
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = 'weather'
 AND table_schema = 'mytools';
 ```
 
-上述 查询 查询生成以下输出：
+上述查询生成以下输出：
 
 ```
- +-------------+-----------+-------------+----------------+
++-------------+-----------+-------------+----------------+
 | COLUMN_NAME | DATA_TYPE | IS_NULLABLE | COLUMN_DEFAULT |
 +-------------+-----------+-------------+----------------+
 | city        | char      | YES         | NULL           |
@@ -5214,10 +5180,12 @@ AND table_schema = 'mytools';
 
 ### PROCESSLIST 表
 
+
+
 `PROCESSLIST` 表包含有关 SQL 语句状态的信息。当你想要查看表上表级或行级锁的状态时，这些信息非常有用。以下 SQL 语句展示了该表内容的一个示例：
 
 ```
- MySQL [mytools]> show processlist;
+MySQL [mytools]> show processlist;
 +----+-----------------+-----------+---------+---------+--------+------------------------+------------------+
 | Id | User            | Host      | db      | Command | Time   | State                  | Info             |
 +----+-----------------+-----------+---------+---------+--------+------------------------+------------------+
@@ -5231,19 +5199,19 @@ AND table_schema = 'mytools';
 
 正如你预期的，SQL 语句有多种格式样式，你可以浏览它们以确定哪种样式最吸引你。以下链接是一个在线 SQL 格式化工具：
 
-https://codebeautify.org/sqlformatter
+<https://codebeautify.org/sqlformatter>
 
 以下链接包含 18 个 SQL 格式化工具，其中一些是付费的，另一些是免费的：
 
-https://www.sqlshack.com/sql-formatter-tools/
+<https://www.sqlshack.com/sql-formatter-tools/>
 
 以下链接包含 SQL 格式化规范列表（即：它不是关于格式化工具的）：
 
-https://opendatascience.com/best-practices-sql-formatting
+<https://opendatascience.com/best-practices-sql-formatting>
 
-在一个已经建立了 SQL 格式化规则的环境中工作，将该样式与上述链接中 SQL 格式化工具的样式进行对比可能会意思。
+在一个已经建立了 SQL 格式化规则的环境中工作，将该样式与上述链接中 SQL 格式化工具的样式进行对比可能会有意思。
 
-如果你是一个独立学习的 SQL 初学者，在通过此本书学习更多 SQL 语句的过程中，探索这些链接也是值得的。随着你对编写 SQL 语句知识的增加，你会在博客文章遇到各种样式，这意味着你也会注意到这些博客采用了哪些规范来格式化 SQL 语句。
+如果你是一个独立学习的 SQL 初学者，在通过此书学习更多 SQL 语句的过程中，探索这些链接也是值得的。随着你对编写 SQL 语句知识的增加，你会在博客文章中遇到各种样式，这意味着你也会注意到这些博客采用了哪些规范来格式化 SQL 语句。
 
 ### 总结
 
@@ -5253,11 +5221,9 @@ https://opendatascience.com/best-practices-sql-formatting
 
 接下来，你学习了一个包含四表的数据库的结构，该数据库通过 Web 页面跟踪客户对工具的购买情况。你还看到了哪些表具有一对多的关系，以便你可以找到属于特定购买订单的所有行项目。
 
-此外，你还对 SQL 进行了简要介绍并了一些基本的 SQL 查询示例。你还学习了可以分类为 DCL、DDL、DQL 或 DML 的各种类型的 SQL 语句。
+此外，你还对 SQL 进行了简要介绍并了解了一些基本的 SQL 查询示例。你还学习了可以分类为 DCL、DDL、DQL 或 DML 的各种类型的 SQL 语句。
 
-# 第 5 章
-
-## JAVA、JSON 和 XML
+# 第 5 章：Java、JSON 和 XML
 
 本章适用于任何需要使用 Java 访问存储在 MySQL 表中的数据的人。虽然本章对所有其他用户来说可能是可选的，但如果你预计未来某个时刻会涉及到 Java 和 MySQL 工作，即使你只是好奇用于管理 MySQL 数据库中数据的 Java 代码，浏览其内容也是值得关注的。
 
@@ -5271,41 +5237,38 @@ https://opendatascience.com/best-practices-sql-formatting
 
 第三节包含了允许你处理基于 XML 数据的 Java 代码示例。你将学习如何为 XML 数据创建表，如何将 XML 数据插入到该表中，然后如何获取这些数据，所有操作都由 Java 代码完成。
 
-### 使用 Java 操作 MySQL
+## 使用 Java 操作 MySQL
 
 用于 MySQL（以及其他数据库）的 Java 代码需要一个包含连接数据库和执行 SQL 语句相关类的 `JAR` 文件。设置步骤包括为你的电脑下载 Java、下载 `JDBC` 驱动文件以及更新 `CLASSPATH` 环境变量。
 
-#### 执行设置步骤
+### 执行设置步骤
 
 用于 Java 与数据库通信的 `JAR` 文件被称为 `JDBC` 驱动程序，适用于 MySQL 的 `JAR` 文件可以在此处下载：
 
-https://dev.mysql.com/downloads/connector/j/
+<https://dev.mysql.com/downloads/connector/j/>
 
-步骤 1：下载、解压缩适用于你平台的驱动文件，并将 `JAR` 文件 `mysql-connector-java-8.0.24.jar` 放置在方便的位置。注意，该 `JAR` 文件位于解压缩驱动文件的一个子目录下。
+**步骤 1：**下载、解压缩适用于你平台的驱动文件，并将 `JAR` 文件 `mysql-connector-java-8.0.24.jar` 放置在方便的位置。注意，该 `JAR` 文件位于解压缩驱动文件的一个子目录下。
 
-步骤 2：更新 `CLASSPATH` 环境变量，如下所示：
+**步骤 2：**更新 `CLASSPATH` 环境变量，如下所示：
 
 ```bash
 export CLASSPATH=$CLASSPATH:.:mysql-connector-java-8.0.24.jar:
 ```
 
+如果 `JAR` 文件和编译后的 Java 类位于同一个目录，则前面的代码段可以正常工作。
 
-
-
-如果 JAR 文件和编译后的 Java 类位于同一个目录，则前面的代码段可以正常工作。
-
-建议：如果你熟悉基础 shell 脚本，可以将前面的 export 代码段放置在一个 shell 脚本中，每需要设置 `CLASSPATH` 环境变量时通过 source（“dot”）命令来加载该脚本。
+建议：如果你熟悉基础 shell 脚本，可以将前面的 `export` 代码段放置在一个 shell 脚本中，每需要设置 `CLASSPATH` 环境变量时通过 `source`（“dot”）命令来加载该脚本。
 
 ## 在 Java 中创建 MySQL 数据库
 
-本节包含用于创建 mytools 数据库的 Java 代码示例。如果你已经导入了 mytools 数据库，请修改列表 5.1 中 `URL` 变量的值以指定不同的数据库。访问 MySQL 数据库的 Java 代码示例中需要更新的变量限于 `URL`、`USER` 和 `PASS`。
+本节包含用于创建 `mytools` 数据库的 Java 代码示例。如果你已经导入了 `mytools` 数据库，请修改列表 5.1 中 `URL` 变量的值以指定不同的数据库。访问 MySQL 数据库的 Java 代码示例中需要更新的变量限于 `URL`、`USER` 和 `PASS`。
 
 列表 5.1 显示了 Java 文件 `CreateDataBase.java` 的内容，该文件演示了如何在 Java 中创建 MySQL 数据库。
 
-***列表 5.1：CreateDataBase.java***
+**列表 5.1：`CreateDataBase.java`**
 
-```
- import java.sql.Connection;
+```java
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -5336,44 +5299,44 @@ public class CreateDataBase
 }
 ```
 
-列表 5.1 以几个 import 语句开始，指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASSPATH` 环境变量中（否则代码将无法成功编译）。
+列表 5.1 以几个 `import` 语句开始，指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASSPATH` 环境变量中（否则代码将无法成功编译）。
 
-下部分代码初始化了字符串变量 `URL`、`USER` 和 `PASS`。将 mytools 替换为你自己的数据库（现有数据库或新数据库），并为 `PASS` 指定正确的值。
+下部分代码初始化了字符串变量 `URL`、`USER` 和 `PASS`。将 `mytools` 替换为你自己的数据库（现有数据库或新数据库），并为 `PASS` 指定正确的值。
 
-列表 5.1 的后续部分是 `main()` 方法，它包含一个 try/catch 块，在其中建立了数据库连接，并将字符串变量 `sql` 初始化为创建 mytools 数据库的 SQL 语句。如果数据库创建成功，则会打印消息；如果发生错误，则 `catch()` 块将显示描述所遇错误的的堆栈跟踪。运行列表 5.1 中的代码，你将看到以下输出：
+列表 5.1 的后续部分是 `main()` 方法，它包含一个 `try/catch` 块，在其中建立了数据库连接，并将字符串变量 `sql` 初始化为创建 `mytools` 数据库的 SQL 语句。如果数据库创建成功，则会打印消息；如果发生错误，则 `catch()` 块将显示描述所遇错误的堆栈跟踪。运行列表 5.1 中的代码，你将看到以下输出：
 
-```
- Database created
-```
-
-如果 mytools 数据库已经存在，或者你多次运行列表 5.1，你将看到以下输出：
-
-```
- java.sql.SQLException: Can't create database 'mytools'; database exists
+```text
+Database created
 ```
 
-在这种种情况下，你有两个选择：
+如果 `mytools` 数据库已经存在，或者你多次运行列表 5.1，你将看到以下输出：
+
+```text
+java.sql.SQLException: Can't create database 'mytools'; database exists
+```
+
+在这种情况下，你有两个选择：
 
 1. 手动删除数据库。
 2. 在 Java 中执行 SQL 语句来删除数据库。
 
-你可以通过在列表 5.1 中创建数据库的代码块*之前*插入以下 Java 代码段来执行选项 #2：
+你可以通过在列表 5.1 中创建数据库的代码块**之前**插入以下 Java 代码段来执行选项 #2：
 
-```
- String drop1 = "DROP DATABASE IF EXISTS mytools";
+```java
+String drop1 = "DROP DATABASE IF EXISTS mytools";
 stmt.executeUpdate(drop1);
 ```
 
-注意：在删除此数据库之前，确保已将 mytools 数据库导出到 SQL 文件。
+注意：在删除此数据库之前，确保已将 `mytools` 数据库导出到 SQL 文件。
 
 ## 在 Java 中创建 MySQL 表
 
 列表 5.2 显示了文件 `CreateTable.java` 的内容，该文件演示了如何在 Java 中创建 MySQL 表。
 
-***列表 5.2：CreateTable.java***
+**列表 5.2：`CreateTable.java`**
 
-```
- // downloaded JAR file contains the following Java classes:
+```java
+// downloaded JAR file contains the following Java classes:
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -5419,26 +5382,29 @@ public class CreateTable
 }
 ```
 
-列表 5.2 以几个 import 语句开始，指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASSPATH` 环境变量中（否则代码将无法成功编译）。
+列表 5.2 以几个 `import` 语句开始，指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASSPATH` 环境变量中（否则代码将无法成功编译）。
 
-下部分代码初始化了字符串变量 `URL`、`USER` 和 `PASS`。你需要将 mytools 替换为你自己的数据库（现有数据库或新数据库），并为 `PASS` 指定正确的值。
+下部分代码初始化了字符串变量 `URL`、`USER` 和 `PASS`。你需要将 `mytools` 替换为你自己的数据库（现有数据库或新数据库），并为 `PASS` 指定正确的值。
 
-列表 5.2 的后续部分是 `main()` 方法，它包含一个 try/catch 块，在其中建立了数据库连接，并将字符串变量 `sql1` 初始化为删除 friends 表的 SQL 语句。第三步将字符串变量 `sql2` 初始化为创建 friends 表的 SQL 语句。
+列表 5.2 的后续部分是 `main()` 方法，它包含一个 `try/catch` 块，在其中建立了数据库连接，并将字符串变量 `sql1` 初始化为删除 `friends` 表的 SQL 语句。第三步将字符串变量 `sql2` 初始化为创建 `friends` 表的 SQL 语句。
 
 第四步执行字符串变量 `sql1` 和 `sql2` 中的 SQL 代码。如果发生错误，则 `catch()` 块将显示描述所遇错误的堆栈跟踪。运行列表 5.2 中的代码，你将看到以下输出：
 
-```
- Created table FRIENDS in database
+```text
+Created table FRIENDS in database
 ```
 
 注意，JDBC JAR 文件中的旧版本代码需要显式关闭数据库连接，而这一步现在是自动完成的。
 
 ## 在 Java 中向 MySQL 表插入数据
 
-列表 5.3 显示了文件 `InsertData.java` 的内容，该文件演示了如何向上一节创建的 friends 表中插入数据。
+列表 5.3 显示了文件 `InsertData.java` 的内容，该文件演示了如何向上一节创建的 `friends` 表中插入数据。
 
 
 
+## 在 Java 中向 MySQL 表插入数据
+
+`Listing 5.3` 显示了 `InsertData.java` 文件的内容，该文件说明了如何通过 Java 向 MySQL 表插入数据。
 
 ```java
  // 下载的 JAR 文件包含以下 Java 类：
@@ -5492,13 +5458,13 @@ public class InsertData
 }
 ```
 
-Listing 5.3 以几个 import 语句开头，指定了包含 `java.sql` 类的 JAR 文件中的 Java 类，该 JAR 文件也包含在 `CLASSPATH` 环境变量中（否则代码将无法成功编译）。
+`Listing 5.3` 以几个 `import` 语句开头，指定了包含 `java.sql` 类的 JAR 文件中的 Java 类，该 JAR 文件也包含在 `CLASSPATH` 环境变量中（否则代码将无法成功编译）。
 
 下段代码初始化了字符串变量 `URL`、`USER` 和 `PASS`。你必须将 `mytools` 替换为你自己的数据库（现有数据库或新数据库），并为 `PASS` 指定正确的值。
 
-Listing 5.2 的下半部分是 `main()` 方法，它包含一个 try/catch 块，在该块中建立了数据库连接，并将字符串变量 `del1` 初始化为用于删除 friends 表中行的 SQL 语句。
+`Listing 5.2` 的下半部分是 `main()` 方法，它包含一个 `try/catch` 块，在该块中建立了数据库连接，并将字符串变量 `del1` 初始化为用于删除 `friends` 表中行的 SQL 语句。
 
-下一步使用一个用于向 friends 表中插入行数据的 SQL 语句来初始化字符串变量 `sql`。此步骤使用不同的数据值又执行了两次。运行 Listing 5.3 中的代码，你将看到以下输出（Java 代码执行了三次）：
+下一步使用一个用于向 `friends` 表中插入行数据的 SQL 语句来初始化字符串变量 `sql`。此步骤使用不同的数据值又执行了两次。运行 `Listing 5.3` 中的代码，你将看到以下输出（Java 代码执行了三次）：
 
 ```
  java InsertData
@@ -5511,11 +5477,11 @@ java InsertData
 Inserted 3 records into FRIENDS table...
 ```
 
-### 在 JAVA 中删除数据和删除 MySQL 表
+## 在 Java 中删除数据和删除 MySQL 表
 
-Listing 5.4 显示了 `DeleteData.java` 文件的内容，该文件说明了如何通过 Java 从表中删除数据以及如何通过 Java 删除表。
+`Listing 5.4` 显示了 `DeleteData.java` 文件的内容，该文件说明了如何通过 Java 从表中删除数据以及如何通过 Java 删除表。
 
-***LISTING 5.4: DeleteDataDrop.java***
+**LISTING 5.4: DeleteDataDrop.java**
 
 ```java
  // 下载的 JAR 文件包含以下 Java 类：
@@ -5567,13 +5533,13 @@ public class DeleteDataDrop
 }
 ```
 
-Listing 5.4 以几个 import 语句开头，指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASSPATH` 环境变量中（否则代码将无法成功编译）。
+`Listing 5.4` 以几个 `import` 语句开头，指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASSPATH` 环境变量中（否则代码将无法成功编译）。
 
 下段代码初始化了字符串变量 `URL`、`USER` 和 `PASS`。你必须将 `mytools` 替换为你自己的数据库（现有数据库或新数据库），并为 `PASS` 指定正确的值。
 
-Listing 5.4 的下半部分是 `main()` 方法，它包含一个 try/catch 块，在该块中建立了数据库连接，并将字符串变量 `del1` 初始化为删除 id 值等于 100 的 friends 表行的 SQL 语句。下一个代码块使用用于删除 friends 表中*所有*行的 SQL 语句初始化字符串变量 `del2`。
+`Listing 5.4` 的下半部分是 `main()` 方法，它包含一个 `try/catch` 块，在该块中建立了数据库连接，并将字符串变量 `del1` 初始化为删除 `id` 值等于 100 的 `friends` 表行的 SQL 语句。下一个代码块使用用于删除 `friends` 表中*所有*行的 SQL 语句初始化字符串变量 `del2`。
 
-下一段代码块使用用于清空 friends 表的 SQL 语句初始化字符串变量 `del3`。最后，最后一段代码块使用用于删除 friends 表的 SQL 语句初始化字符串变量 `del4`。运行 Listing 5.4 中的代码，你将看到以下输出：
+下一段代码块使用用于清空 `friends` 表的 SQL 语句初始化字符串变量 `del3`。最后，最后一段代码块使用用于删除 `friends` 表的 SQL 语句初始化字符串变量 `del4`。运行 `Listing 5.4` 中的代码，你将看到以下输出：
 
 ```
  Deleting one row from FRIENDS
@@ -5582,13 +5548,9 @@ Truncating table FRIENDS
 Dropping table FRIENDS
 ```
 
-### 在 JAVA 中从 MySQL 表查询数据
+## 在 Java 中从 MySQL 表查询数据
 
-Listing 5.5 显示了 `SelectData.java` 文件的内容，该文件说明了如何通过 Java 从 friends 表查询数据。
-
-
-
-
+`Listing 5.5` 显示了 `SelectData.java` 文件的内容，该文件说明了如何通过 Java 从 `friends` 表查询数据。
 
 ```java
  // the downloaded JAR file contains the following Java classes:
@@ -5649,13 +5611,13 @@ public class SelectData
 }
 ```
 
-Listing 5.5 包含几个导入语句，指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASSPATH` 环境变量中（否则代码将无法成功编译）。
+`Listing 5.5` 包含几个导入语句，指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASSPATH` 环境变量中（否则代码将无法成功编译）。
 
 下部分代码初始化了字符串变量 `URL`、`USER` 和 `PASS`。你必须将 `mytools` 替换为你自己的数据库（现有数据库或新数据库），并为 `PASS` 指定正确的值。
 
-Listing 5.2 的接下来的部分是 `main()` 方法，它包含一个 `try/catch` 块，在该块中建立了数据库连接，并将字符串变量 `del1` 初始化为用于删除 friends 表中行的 SQL 语句。下一步使用用于向 friends 表插入一行数据的 SQL 语句初始化了字符串变量 `sql`。此步骤使用不同的数据值又多多执行了两次。
+`Listing 5.2` 的接下来的部分是 `main()` 方法，它包含一个 `try/catch` 块，在该块中建立了数据库连接，并将字符串变量 `del1` 初始化为用于删除 `friends` 表中行的 SQL 语句。下一步使用用于向 `friends` 表插入一行数据的 SQL 语句初始化了字符串变量 `sql`。此步骤使用不同的数据值又多多执行了两次。
 
-运行 Listing 5.5 中的代码，你将看到以下输出（Java 代码执行了三次）：
+运行 `Listing 5.5` 中的代码，你将看到以下输出（Java 代码执行了三次）：
 
 ```
  Selecting one row from FRIENDS table
@@ -5667,14 +5629,16 @@ id: 200, fname: Dave, lname: Smith, height: 160
 id: 300, fname: Jack, lname: Stone, height: 180
 ```
 
-### 在 Java 中更新 MySQL 表中的数据
+## 在 Java 中更新 MySQL 表中的数据
 
-Listing 5.6 显示了文件 `UpdateData.java` 的内容，说明了如何通过 Java 更新 friends 表中的数据。
+`Listing 5.6` 显示了文件 `UpdateData.java` 的内容，说明了如何通过 Java 更新 `friends` 表中的数据。
 
-***Listing 5.6: UpdateData.java***
+**Listing 5.6: UpdateData.java**
+
+
 
 ```java
- // the downloaded JAR file contains the following Java classes:
+// the downloaded JAR file contains the following Java classes:
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -5706,22 +5670,22 @@ public class InsertData
 }
 ```
 
-Listing 5.6 开头包含几个导入语句，指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASSPATH` 环境变量中。
+`Listing 5.6` 开头包含几个导入语句，指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASSPATH` 环境变量中。
 
 下一部分代码初始化了字符串变量 `URL`、`USER` 和 `PASS`。你必须将 `mytools` 替换为你自己的数据库（现有数据库或新数据库），并为 `PASS` 指定正确的值。
 
-Listing 5.2 的接下来的部分是 `main()` 方法，它包含一个 `try/catch` 块，在该块中建立了数据库连接，并将字符串变量 `del1` 初始化为用于删除 friends 表中行的 SQL 语句。下一步使用用于向 friends 表插入一行数据的 SQL 语句初始化了字符串变量 `sql`。此步骤使用不同的数据值又多执行了两次。
+`Listing 5.2` 的接下来的部分是 `main()` 方法，它包含一个 `try/catch` 块，在该块中建立了数据库连接，并将字符串变量 `del1` 初始化为用于删除 friends 表中行的 SQL 语句。下一步使用用于向 friends 表插入一行数据的 SQL 语句初始化了字符串变量 `sql`。此步骤使用不同的数据值又多执行了两次。
 
-运行 Listing 5.5 中的代码，你将看到以下输出（Java 代码执行了三次）：
-
-```
- Updated last name for row with id = 100
-```
-
-运行 SelectData 代码以确认更新的数据：
+运行 `Listing 5.5` 中的代码，你将看到以下输出（Java 代码执行了三次）：
 
 ```
- Selecting one row from FRIENDS table
+Updated last name for row with id = 100
+```
+
+运行 `SelectData` 代码以确认更新的数据：
+
+```
+Selecting one row from FRIENDS table
 id: 100, fname: Jane, lname: Jones, height: 170
 
 Selecting all rows from FRIENDS table
@@ -5736,23 +5700,23 @@ id: 300, fname: Jack, lname: Stone, height: 180
 
 简单来说，JSON 数据由键值对组成，其示例如下：
 
-```
- {"fname":"Dave", "lname":"Stone", "age":35, "city":"NY"}
+```json
+{"fname":"Dave", "lname":"Stone", "age":35, "city":"NY"}
 ```
 
 使用数组（即方括号）来指定一组 JSON 字符串，其示例如下：
 
-```
- [
-{"fname":"Jane", "lname":"Smith", "age":30, "city":"NY"}
-{"fname":"Dave", "lname":"Stone", "age":35, "city":"NY"}
+```json
+[
+  {"fname":"Jane", "lname":"Smith", "age":30, "city":"NY"}
+  {"fname":"Dave", "lname":"Stone", "age":35, "city":"NY"}
 ]
 ```
 
-Listing 5.7 显示了文件 `json_table.sql` 的内容，说明了如何直接在 SQL 中创建基于 JSON 的 MySQL 表。
+`Listing 5.7` 显示了文件 `json_table.sql` 的内容，说明了如何直接在 SQL 中创建基于 JSON 的 MySQL 表。
 
 ```sql
- drop table if exists json1;
+drop table if exists json1;
 CREATE TABLE json1 ( id integer, data json);
 INSERT INTO json1 VALUES(100,'{"fname": "Jane", "lname": "Jones"}');
 INSERT INTO json1 VALUES(200,'{"fname": "Dave", "lname": "Smith"}');
@@ -5761,16 +5725,12 @@ INSERT INTO json1 VALUES(300,'{"fname": "Jack", "lname": "Stone"}');
 
 ### 在 Java 中从 MySQL 表中查询 JSON 数据
 
-本节包含一个从包含 JSON 数据的 MySQL 表中查询数据的 Java 代码示例。如果你尚未这样做，请确保你已经在 Listing 5.7 中创建了 MySQL 表 `json1` 并向该表填充了 JSON 数据。
+本节包含一个从包含 JSON 数据的 MySQL 表中查询数据的 Java 代码示例。如果你尚未这样做，请确保你已经在 `Listing 5.7` 中创建了 MySQL 表 `json1` 并向该表填充了 JSON 数据。
 
-Listing 5.8 显示了文件 `SelectJSONTable.java` 的内容，说明了如何从包含 JSON 数据的 MySQL 表中查询数据。
+`Listing 5.8` 显示了文件 `SelectJSONTable.java` 的内容，说明了如何从包含 JSON 数据的 MySQL 表中查询数据。
 
-
-
-
-
-```
- // 下载的 JAR 文件包含以下 Java 类：
+```java
+// 下载的 JAR 文件包含以下 Java 类：
 importimport java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -5819,16 +5779,16 @@ public class SelectSONData
 
 下一步初始化了变量 `preparedStatement`，其 `execute()` 方法在随后的代码段中作为初始化步骤调用。接下来，变量 `rs` 初始化为调用变量 `preparedStatement` 的 `executeQuery()` 方法返回的结果集。随后，执行一个循环来获取 `data` 属性的内容并打印其值，如下所示：
 
-```
- while (rs.next()) {
+```java
+while (rs.next()) {
    System.out.println(rs.getString("data"));
 }
 ```
 
 运行 `Listing 5.8` 中的代码，你将看到以下输出：
 
-```
- {"fname": "Jane", "lname": "Jones"}
+```json
+{"fname": "Jane", "lname": "Jones"}
 {"fname": "Dave", "lname": "Smith"}
 {"fname": "Jack", "lname": "Stone"}
 ```
@@ -5837,20 +5797,20 @@ public class SelectSONData
 
 在数据库中处理 XML 有多种方法，此处列出了其中一些方法（本章仅探讨了第一种方案）：
 
-*   将 XML 读取为字符串并通过 SAX 或 DOM 进行解析。
-*   使用 `CLOB` 数据类型处理 XML 文档。
-*   使用 `JAXB`（Java 和 XML 绑定）。
-*   使用 `ORM`（对象关系映射）。
-*   使用原生 XML 数据库。
+- 将 XML 读取为字符串并通过 SAX 或 DOM 进行解析。
+- 使用 `CLOB` 数据类型处理 XML 文档。
+- 使用 `JAXB`（Java 和 XML 绑定）。
+- 使用 `ORM`（对象关系映射）。
+- 使用原生 XML 数据库。
 
 本章的后续部分包含 Java 代码示例，这些示例从存储为文件的 XML 文档内容创建字符串，然后将这些字符串插入 MySQL 表的字符列中。另一个 Java 代码示例检索每个基于 XML 的字符串，然后解析这些字符串以创建 XML 文档。
 
 通常情况下，涉及 MySQL、XML 文档和 Java 的典型操作如下：
 
-*   将 XML 文档插入 MySQL 表
-*   在 MySQL 表中读取 XML 文档
-*   从 MySQL 表中删除 XML 文档
-*   在 MySQL 表中更新 XML 文档
+- 将 XML 文档插入 MySQL 表
+- 在 MySQL 表中读取 XML 文档
+- 从 MySQL 表中删除 XML 文档
+- 在 MySQL 表中更新 XML 文档
 
 然而，Java 前述的 CRUD 操作需要对文档对象模型（`DOM`）有更深入的理解，这是一个基于树的结构，包含了 XML 文档中的所有数据（和元数据）。类比，每你在浏览器会话中导航到一个 HTML 页面时，该 HTML 页的内容在内存中也被表示为 `DOM` 结构。如果你真的想深入研究 `DOM` 结构的细节，可以在线上搜索更多信息。
 
@@ -5858,14 +5818,14 @@ public class SelectSONData
 
 简单来说，基于 XML 的数据由角括号内的文本组成，这些文本指定了标签名称。这是一个简单的示例：
 
-```
- <fname>Dave</fname>
+```xml
+<fname>Dave</fname>
 ```
 
 以下代码段展示了如何指定一个包含多个标签的 XML 标签（缩进是可选的，便于阅读）：
 
-```
- <person>
+```xml
+<person>
   <fname>Dave</fname>
   <fname>Smith</fname>
 </person>
@@ -5873,10 +5833,10 @@ public class SelectSONData
 
 尽管你可以指定任意深度的嵌套 XML 标签，但本章中的 XML 文档仅嵌套了一层。事实上，`Listing 5.9` 显示了 XML 文档 `friends.xml` 的内容。
 
-**列表 5.9：friends.xml**
+**列表 5.9：`friends.xml`**
 
-```
- <?xml version="1.0"?>
+```xml
+<?xml version="1.0"?>
 <friends>
   <friend>
     <fname>Jane</fname>
@@ -5902,15 +5862,15 @@ public class SelectSONData
 
 XML Schema 是一个指定 XML 结构的基于 XML 的文档。例如，让我们创建一个 XML Schema，约束“friend”文档具有以下结构：
 
-*   一个名字 (`fname` 标签)
-*   零或多个中间名 (`mname` 标签)
-*   一个姓 (`lname` 标签)
-*   一个高度 (`height` 标签)
+- 一个名字（`fname` 标签）
+- 零或多个中间名（`mname` 标签）
+- 一个姓（`lname` 标签）
+- 一个高度（`height` 标签）
 
 如你所见，以下 XML 片段符合上述结构（一个名字、零中间名、一个姓、一个高度）：
 
-```
- <friend>
+```xml
+<friend>
   <fname>Jane</fname>
   <lname>Jones</lname>
   <height>170</height>
@@ -5919,8 +5879,8 @@ XML Schema 是一个指定 XML 结构的基于 XML 的文档。例如，让我�
 
 以下 XML 片段符合之前的结构（一个名字、两个中间名、一个姓、一个高度）：
 
-```
- <friend>
+```xml
+<friend>
   <fname>Billy</fname>
   <mname>Bob</mname>
   <mname>James</mname>
@@ -5929,10 +5889,10 @@ XML Schema 是一个指定 XML 结构的基于 XML 的文档。例如，让我�
 </friend>
 ```
 
-然而，以下 XML 片段不符合之前的结构，因为存在**粗体显示**的标签：
+然而，以下 XML 片段不符合之前的结构，因为存在粗体显示的标签：
 
-```
- <friend>
+```xml
+<friend>
   <title>Mr</title>
   <fname>Billy</fname>
   <lname>Callaway</lname>
@@ -5946,24 +5906,22 @@ XML Schema 是一个指定 XML 结构的基于 XML 的文档。例如，让我�
 
 下一步是验证动态构造的 XML 文档是否符合 XML Schema，之后可以将 XML 文档发送到另一个应用程序进行额外的处理步骤。如有必要，可以创建一个多次执行上述序列的执行流水线。如果在验证步骤期间发生错误，则可以分析该步骤中的 XML 文档以找到错误原因，然后解决错误。
 
-
-
-
-
-XML 文档可能非常巨大，其相关的 XML Schema（架构）可能具有非常复杂的结构。例如，XBRL 定义了一个用于业务报告文档的 XML 架构。此外，XML 是一个广广泛的话题，有整本书专门讲解 XML。如果你想熟悉 XML 丰富的功能，可以进行在线搜索。
+XML 文档可能非常巨大，其相关的 XML Schema（架构）可能具有非常复杂的结构。例如，XBRL 定义了一个用于业务报告文档的 XML 架构。此外，XML 是一个广泛的话题，有整本书专门讲解 XML。如果你想熟悉 XML 丰富的功能，可以进行在线搜索。
 
 现在你已经对 XML 有了初步了解，让我们来看看如何创建一个 MySQL 表来存储 XML 数据，这将在下一节中进行解释。
 
 ## 在 Java 中创建用于 XML 数据的 MySQL 表
 
-本节包含一个 Java 代码示例，用于创建一个包含基于 XML 数据的 MySQL 表。MySQL 表中也可以指定 XML 数据类型；但本节中的数据库表使用了你在之前章节的 SQL 语句中过的属性。
+本节包含一个 Java 代码示例，用于创建一个包含基于 XML 数据的 MySQL 表。MySQL 表中也可以指定 XML 数据类型；但本节中的数据库表使用了你在之前章节的 SQL 语句中使用过的属性。
 
-Listing 5.10 显示了 `CreateTableForXMLData.java` 的内容，该程序创建一个填充来自 XML 文档数据的 MySQL 表。
+`Listing 5.10` 显示了 `CreateTableForXMLData.java` 的内容，该程序创建一个填充来自 XML 文档数据的 MySQL 表。
 
-### 列表 5.10: CreateTableForXMLData.java
+### 列表 5.10：`CreateTableForXMLData.java`
 
-```
- import java.io.File;
+
+
+```java
+import java.io.File;
 import java.io.IOException;
 
 import java.sql.Connection;
@@ -6029,21 +5987,21 @@ public class CreateTableForXMLData
 }
 ```
 
-Listing 5.10 从几个 import 语句开始，这些语句指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASSPATH` 环境变量中（否则代码将无法成功编译）。
+Listing 5.10 从几个 `import` 语句开始，这些语句指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASSPATH` 环境变量中（否则代码将无法成功编译）。
 
 下部分代码初始化了字符串变量 `URL`、`USER` 和 `PASS`。你必须将 `mytools` 替换为你自己的数据库（现有数据库或新数据库），并为 `PASS` 指定正确的值。
 
-Listing 5.10 的后续部分是 `main()` 方法，它包含一个 try/catch 块，在其中通过数据库连接初始化变量 `conn`。下一个代码片段执行了被称为“方法链”的操作。这种技术消除了对中间变量的需求。在这种情况下，连续调用两个方法来删除 friends 表，如下：
+Listing 5.10 的后续部分是 `main()` 方法，它包含一个 `try/catch` 块，在其中通过数据库连接初始化变量 `conn`。下一个代码片段执行了被称为“方法链”的操作。这种技术消除了对中间变量的需求。在这种情况下，连续调用两个方法来删除 `friends` 表，如下：
 
-```
- conn.createStatement()
-    .execute("DROP TABLE IF EXISTS friends");
+```java
+conn.createStatement()
+   .execute("DROP TABLE IF EXISTS friends");
 ```
 
-接下来的代码片段也使用方法链来定义 friends 表的结构，然后执行 SQL 语句实际创建此表。运行 Listing 5.10 中的代码，你将看到以下输出（代码运行了两次）：
+接下来的代码片段也使用方法链来定义 `friends` 表的结构，然后执行 SQL 语句实际创建此表。运行 Listing 5.10 中的代码，你将看到以下输出（代码运行了两次）：
 
-```
- DROPPED TABLE friends
+```text
+DROPPED TABLE friends
 
 CREATED TABLE friends
 ```
@@ -6052,10 +6010,10 @@ CREATED TABLE friends
 
 本节向你展示如何在不进行数据库连接的情况下读取 XML 文档的内容。Listing 5.11 显示了文件 `ReadXMLDocument.java` 的内容，说明了如何读取 XML 文档 `friends.xml` 的内容。
 
-### 列表 5.11: ReadXMLDocument.java
+### 列表 5.11：ReadXMLDocument.java
 
-```
- import java.io.File;
+```java
+import java.io.File;
 import java.io.IOException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -6093,22 +6051,22 @@ public class ReadXMLDocument
 }
 ```
 
-Listing 5.11 从几个 import 语句开始，这些语句指定了操作 XML 文档所需的 Java 类。Listing 5.11 的后续部分是 `main()` 方法，它初始化字符串 `fileName`，然后用 `friends.xml` 文档的内容初始化变量 `file`。
+Listing 5.11 从几个 `import` 语句开始，这些语句指定了操作 XML 文档所需的 Java 类。Listing 5.11 的后续部分是 `main()` 方法，它初始化字符串 `fileName`，然后用 `friends.xml` 文档的内容初始化变量 `file`。
 
-注意，代码*并没有*显示 XML 文档的内容：它的目的仅仅是说明如何创建内存结构。运行 Listing 5.11 中的代码，你将看到以下输出：
+注意，代码**并没有**显示 XML 文档的内容：它的目的仅仅是说明如何创建内存结构。运行 Listing 5.11 中的代码，你将看到以下输出：
 
-```
- Reading XML file friends.xml
+```text
+Reading XML file friends.xml
 ```
 
 ## 在 Java 中作为字符串读取 XML 文档
 
 Listing 5.12 显示了文件 `ReadXMLAsString.java` 的内容，说明了如何在 Java 中将 XML 文档读取为字符串。
 
-### 列表 5.12: ReadXMLAsString.java
+### 列表 5.12：ReadXMLAsString.java
 
-```
- import java.io.File;
+```java
+import java.io.File;
 import java.lang.Exception;
 import java.util.Scanner;
 
@@ -6143,22 +6101,18 @@ public class ReadXMLAsString
 }
 ```
 
-
-
-
-
 Listing 5.12 包含几个导入语句，用于将 XML 文档的内容作为简单文件读取：不需要任何 DOM 相关的结构。Listing 5.12 的后续部分定义了 `readXMLFile()` 方法，该方法包含一个 `try/catch` 块用于从文件系统读取文件。核心思想是用文件 `friends.xml` 的内容初始化变量 `scanner`。接部分代码是一个循环，它逐行遍历文件，并将每行附加到字符串变量 `contents`（在代码早早已初始化），所示：
 
-```
- while(scanner.hasNext()) {
+```java
+while(scanner.hasNext()) {
   contents += scanner.next();
 }
 ```
 
 Listing 5.12 的最后部分是 `main()` 方法，它将变量 `filename` 初始化为 `friends.xml`，然后用 `readXMLFile()` 方法返回的字符串初始化变量 `xmlString`。运行 Listing 5.12 中的代码，你将看到以下输出：
 
-```
- Reading XML file friends.xml
+```text
+Reading XML file friends.xml
 File contains: <?xml version="1.0"?><friends>  <friend>    <fname>Jane</
 fname>    <lname>Jones</lname>    <height>170</height>  </friend>  
 <friend>    <fname>Dave</fname>    <lname>Smith</lname>    <height>160</
@@ -6166,24 +6120,26 @@ height>  </friend>  <friend>    <fname>Jack</fname>    <lname>Stone</
 lname>    <height>180</height>  </friend></friends>
 ```
 
-### **在 Java 中向 MySQL 表插入 XML 数据**
+## 在 Java 中向 MySQL 表插入 XML 数据
 
 本节包含一个 Java 代码示例，将 XML 文档读取到字符串，然后将该字符串插入 MySQL 表中。如果你还没有这样做，请确保你已经在 Listing 5.13 中创建了 MySQL 表 `friends2`。
 
-**LISTING 5.13: create_xml_string_table.sql**
+### Listing 5.13：create_xml_string_table.sql
 
 ```sql
- DROP TABLE IF EXISTS FRIENDS2;
+DROP TABLE IF EXISTS FRIENDS2;
 CREATE TABLE FRIENDS2(id INTEGER not NULL, xml_str VARCHAR(1000),
 PRIMARY KEY (id))
 ```
 
 Listing 5.14 显示了文件 `InsertXMLString.java` 的内容，它说明了如何将基于 XML 的数据插入 MySQL 表。
 
-**LISTING 5.14: InsertXMLString.java**
+### Listing 5.14：InsertXMLString.java
 
-```
- // 下载的 JAR 文件包含以下 Java 类：
+
+
+```java
+// 下载的 JAR 文件包含以下 Java 类：
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -6266,12 +6222,8 @@ public class InsertXMLString
 }
 ```
 
-
-
-
-
-```
- // 下载的 JAR 文件包含以下 Java 类：
+```java
+// 下载的 JAR 文件包含以下 Java 类：
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -6317,14 +6269,14 @@ public class SelectXMLData
 }
 ```
 
-Listing 5.15 包含几个 import 语句，指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASSPATH` 环境变量中（否则代码将无法成功编译）。
+`Listing 5.15` 包含几个 `import` 语句，指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASSPATH` 环境变量中（否则代码将无法成功编译）。
 
 下部分代码初始化了字符串变量 `URL`、`USER` 和 `PASS`。你必须将 `mytools` 替换为你自己的数据库（现有数据库或新数据库），并为 `PASS` 指定正确的值。
 
-Listing 5.15 的下一次部分是 `main()` 方法，它包含一个 `try/catch` 块，在其中建立了数据库连接，并将字符串变量 `query` 初始化为用于选择 `friends2` 表中行的 SQL 语句。下部分代码基本上与 Listing 5.5 中的代码相同，用于遍历结果集并显示 `xml_str` 属性的内容。运行 Listing 5.15 中的代码，你将看到以下输出：
+`Listing 5.15` 的下一次部分是 `main()` 方法，它包含一个 `try/catch` 块，在其中建立了数据库连接，并将字符串变量 `query` 初始化为用于选择 `friends2` 表中行的 SQL 语句。下部分代码基本上与 `Listing 5.5` 中的代码相同，用于遍历结果集并显示 `xml_str` 属性的内容。运行 `Listing 5.15` 中的代码，你将看到以下输出：
 
 ```
- XML String:
+XML String:
 <?xml version="1.0"?><friends>  <friend>    <fname>Jane</fname>    
 <lname>Jones</lname>    <height>170</height>  </friend>  <friend>    
 <fname>Dave</fname>    <lname>Smith</lname>    <height>160</height>  
@@ -6336,14 +6288,14 @@ Listing 5.15 的下一次部分是 `main()` 方法，它包含一个 `try/catch`
 
 ### 在 Java 中从 MySQL 表中解析基于 XML 的字符串数据
 
-本节包含一个 Java 代码示例，该示例从包含 XML 数据的 MySQL 表中选择数据。如果你还没有这样做，请确保已在 Listing 5.13 中创建了 MySQL 表 `friends2` 并向表中填充了数据。
+本节包含一个 Java 代码示例，该示例从包含 XML 数据的 MySQL 表中选择数据。如果你还没有这样做，请确保已在 `Listing 5.13` 中创建了 MySQL 表 `friends2` 并向表中填充了数据。
 
-Listing 5.16 显示了 `ParseXMLStringInTable.java` 的内容，说明了如何从 MySQL 表中选择基于 XML 的数据字符串，然后根据每个字符串的内容创建 XML 文档。
+`Listing 5.16` 显示了 `ParseXMLStringInTable.java` 的内容，说明了如何从 MySQL 表中选择基于 XML 的数据字符串，然后根据每个字符串的内容创建 XML 文档。
 
-***列表 5.16: ParseXMLStringInTable.java***
+*列表 5.16: `ParseXMLStringInTable.java`*
 
-```
- import java.io.StringReader;
+```java
+import java.io.StringReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -6434,45 +6386,44 @@ public class ParseXMLStringInTable
 
 ### 使用 XML 架构
 
-在本章的早些部分中，你看到了一些结合 MySQL 管理基于 XML 文档的 Java 代码示例。尽管我们指定了一个包含多个 <friend> 元素的 XML 文档，但我们并没有对 XML 元素的内容进行约束。
-
-
-
+在本章的早些部分中，你看到了一些结合 MySQL 管理基于 XML 文档的 Java 代码示例。尽管我们指定了一个包含多个 `<friend>` 元素的 XML 文档，但我们并没有对 XML 元素的内容进行约束。
 
 然而，`XML Schemas` 对 XML 文档中元素的允许结构提供了严格控制，例如不仅指定它们的类型，还指定它们出现的频率以及在 XML 元素中的顺序。
 
 例如，我们可以通过以下代码段定义一个 `firstname` 元素，其类型为字符串：
 
 ```xml
- <xs:element name="firstname" type="xs:string"/>
+<xs:element name="firstname" type="xs:string"/>
 ```
 
 我们可以定义一个 `friend` 元素，它包含两个字符串类型的元素 `fname` 和 `lname`，以及一个名为 `height` 的数值元素，如下所示：
 
 ```xml
- <?xml version="1.0"?>
+<?xml version="1.0"?>
 <xs:element name="friend">
   <xs:complexType>
     <xs:sequence>
-      <xs:element name="fname"  type="xs:string"/>
-      <xs:element name="lname"  type="xs:string"/>
+      <xs:element name="fname" type="xs:string"/>
+      <xs:element name="lname" type="xs:string"/>
       <xs:element name="height" type="xs:decimal"/>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
 ```
 
+
+
 我们可以修改前面的代码块来指定一个可选的中间名，它最多可以出现三次：
 
 ```xml
- <?xml version="1.0"?>
+<?xml version="1.0"?>
 <xs:element name="friend">
   <xs:complexType>
     <xs:sequence>
-     <xs:element name="fname"  type="xs:string"/>
-     <xs:element name="mname" type="xs:string" minOccurs="0" maxOccurs="3"/>
-     <xs:element name="lname"  type="xs:string"/>
-     <xs:element name="height" type="xs:decimal"/>
+      <xs:element name="fname" type="xs:string"/>
+      <xs:element name="mname" type="xs:string" minOccurs="0" maxOccurs="3"/>
+      <xs:element name="lname" type="xs:string"/>
+      <xs:element name="height" type="xs:decimal"/>
     </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -6481,7 +6432,7 @@ public class ParseXMLStringInTable
 如果你想指定一个出现任意次数的可选中间名元素，请使用以下代码段：
 
 ```xml
- <xs:element name="mname"  type="xs:string" minOccurs="0" maxOccurs="3"/>
+<xs:element name="mname" type="xs:string" minOccurs="0" maxOccurs="3"/>
 ```
 
 `XML Schemas` 有许多功能，包括 XML 元素引用其他 XML 元素的能力，你甚至可以将 XML 元素指定为抽象的（面向对象编程中的含义）。请在线搜索更多关于 `XML Schemas` 的信息。
@@ -6498,7 +6449,7 @@ public class ParseXMLStringInTable
 
 ## 数据清洗任务
 
-本章讨论了涉及包含各种类型数据的数据集的清洗任务，例如日期、电话号码和货币，这些都有不同的格式。此外，本章中的许多代码示例引用了书中之前章节中讨论的技术。本章自然地过渡到 第 7 章，该章节讨论了各种代码示例中的数据清洗。
+本章讨论了涉及包含各种类型数据的数据集的清洗任务，例如日期、电话号码和货币，这些都有不同的格式。此外，本章中的许多代码示例引用了书中之前章节中讨论的技术。本章自然地过渡到第 7 章，该章节讨论了各种代码示例中的数据清洗。
 
 本章的第一部分简要描述了数据清洗，随后是针对 `MySQL` 数据库表中数据的清洗任务示例。具体来说，你将看到如何将 `NULL` 值替换为 `0`，如何用平均值替换 `NULL` 值，如何用单个值替换多个值，如何处理不匹配的属性值，以及如何将字符串转换为日期值。
 
@@ -6512,7 +6463,7 @@ public class ParseXMLStringInTable
 
 ### 什么是数据清洗？
 
-数据清洗（Data cleaning），也称为数据净化，是确保数据集的内容完整、正确且通常没有重复的任务。因此，数据清洗的重点是单个文件，而不是合并或转换来自两个或多个文件的数据。数据清洗通常在任何数据转换之前进行。在某些情况下，数据清洗也必须在数据转换之后进行
+数据清洗（Data cleaning），也称为数据净化，是确保数据集的内容完整、正确且通常没有重复的任务。因此，数据清洗的重点是单个文件，而不是合并或转换来自两个或多个文件的数据。数据清洗通常在任何数据转换之前进行。在某些情况下，数据清洗也必须在数据转换之后进行。
 
 例如，假设一个 CSV 文件包含员工相关数据，一个 `MySQL` 表也包含员工相关数据，且都已清理了不一致之处并删除了重复。然而，在将表数据导出到与第一个 CSV 文件合并的 CSV 文件后，可能会出现必须删除的重复项。
 
@@ -6526,34 +6477,30 @@ public class ParseXMLStringInTable
 
 此外，如果两个 CSV 文件包含不同的日期格式，并且你需要创建一个基于日期列的单个 CSV 文件，那么将存在转换过程，可以是以下之一：
 
-* 将第一种日期格式转换为第二种日期格式
-* 将第二种日期格式转换为第一种日期格式
-* 将两种格式转换为第三种格式
+- 将第一种日期格式转换为第二种日期格式
+- 将第二种日期格式转换为第一种日期格式
+- 将两种格式转换为第三种格式
 
 在财务数据的情况下，你可能还会遇到不同的货币，这涉及到货币对之间的汇率。由于货币汇率会波动，你需要决定用于数据的数据汇率，这可以是以下之一：
 
-* CSV 文件生成日期期间的汇率
-* 当前货币汇率
-* 其他某种机制
+- CSV 文件生成日期期间的汇率
+- 当前货币汇率
+- 其他某种机制
 
 #### 个人称谓的数据清洗
 
-
-
-
-
 有时候，“暴力破解”方案也是最简单的方案，特别是在涉及字符串时。例如，一个人的头衔可能有无数种拼写方式，涉及许多讨厌的细微差异，因此，知道如何以一种简单、直观且易于扩展额外用例的方法来执行此任务是有好的。例如，在查看下面的解决方案之前，考虑你将如何将以下列表中的每个字符串替换为前缀“Mr,”、“Ms,”或“Mrs”：
 
-```
- Titles = ['mr.','MR','MR.','mister','Mister','Ms','Ms.', 'Mr', 'Mr.','mr',
+```python
+Titles = ['mr.','MR','MR.','mister','Mister','Ms','Ms.', 'Mr', 'Mr.','mr',
 'MS','MS.','ms','ms.','Mis','miss','miss.','Mrs','Mrs.','mrs','mrs.',
 'Madam','madam','ma"am']
 ```
 
 虽然可以使用 `if/else` 代码块的条件逻辑来解决此任务，但这种方法涉及冗长的代码块。一个更简单易的解决方案是使用 `in` 关键字，所示：
 
-```
- mr_dict={}
+```python
+mr_dict={}
 ms_dict={}
 mrs_dict={}
 
@@ -6579,8 +6526,8 @@ print("Mrs dictionary:",mrs_dict)
 
 运行上述代码块，你将看到以下输出：
 
-```
- Mr dictionary:  {'Mr': 'Mr', 'Mr.': 'Mr', 'mr': 'Mr', 'mr.': 'Mr', 'MR': 'Mr', 'MR.': 'Mr', 'mister': 'Mr', 'Mister': 'Mr'}
+```text
+Mr dictionary:  {'Mr': 'Mr', 'Mr.': 'Mr', 'mr': 'Mr', 'mr.': 'Mr', 'MR': 'Mr', 'MR.': 'Mr', 'mister': 'Mr', 'Mister': 'Mr'}
 
 Ms dictionary:  {'Ms': 'Ms', 'Ms.': 'Ms', 'MS': 'Ms', 'MS.': 'Ms', 'ms': 'Ms', 'ms.': 'Ms', 'Mis': 'Ms', 'miss': 'Ms', 'miss.': 'Ms'}
 
@@ -6589,9 +6536,9 @@ Mrs dictionary: {'Mrs': 'Mrs', 'Mrs.': 'Mrs', 'mrs': 'Mrs', 'mrs.': 'Mrs', 'Mada
 
 这里提供的解决方案非常易于维护、调试和扩展，因为唯一的变化是在适当的位置添加新字符串。此外，给出的解决方案不需要任何额外的循环或正则表达式。如果你需要一个新类别，例如“Sir,”，定义 Python 字典 `sir_dict`，然后添加新的代码段，所示：
 
-```
- if title in ['Sir','sir','Sire','sire','Yessir','yessir']:
-sir_dict[title] = "Sir"
+```python
+if title in ['Sir','sir','Sire','sire','Yessir','yessir']:
+  sir_dict[title] = "Sir"
 ```
 
 ## SQL 中的数据清洗
@@ -6600,18 +6547,18 @@ sir_dict[title] = "Sir"
 
 然而，本节说明了如何执行以下影响数据库表属性的数据清洗任务：
 
-* 将 `NULL` 替换为 `0`
-* 将 `NULL` 替换为平均值
-* 将多个值合并为单个值
-* 处理数据类型不匹配
-* 将字符串日期转换为日期格式
+- 将 `NULL` 替换为 `0`
+- 将 `NULL` 替换为平均值
+- 将多个值合并为单个值
+- 处理数据类型不匹配
+- 将字符串日期转换为日期格式
 
 ### 将 NULL 替换为 0
 
 此任务非常直观，你可以使用以下 SQL 语句之一执行：
 
-```
- SELECT ISNULL(column_name, 0) FROM table_name
+```sql
+SELECT ISNULL(column_name, 0) FROM table_name
 OR
 SELECT COALESCE(column_name, 0) FROM table_name
 ```
@@ -6620,10 +6567,10 @@ SELECT COALESCE(column_name, 0) FROM table_name
 
 此任务涉及两个步骤：首先找到数据库表中某列的非 `NULL` 值的平均值，然后用第一步中找到的值更新该列中的 `NULL` 值。列举 6.1 显示了 SQL 文件 `replace_null_values.sql` 的内容，该文件执行了这一对步骤。
 
-***LISTING 6.1: replace_null_values.sql***
+**LISTING 6.1: replace_null_values.sql**
 
-```
- USE mytools;
+```sql
+USE mytools;
 DROP TABLE IF EXISTS temperatures;
 CREATE TABLE temperatures (temper INT, city CHAR(20));
 
@@ -6651,27 +6598,27 @@ where ISNULL(city);
 SELECT * FROM temperatures;
 ```
 
-列举 6.1 创建了 `temperatures` 表并填充了若干行，然后用 `temper` 属性的平均值初始化变量 `@avg1`。运行 列举 6.1 你将看到以下输出：
+列举 6.1 创建了 `temperatures` 表并填充了若干行，然后用 `temper` 属性的平均值初始化变量 `@avg1`。运行列举 6.1 你将看到以下输出：
 
-```
- +--------+------+
-| temper | city   |
+```text
 +--------+------+
-|     78 | sf     |
-|    NULL | sf     |
-|     42 | NULL   |
-|    NULL | ny     |
- +--------+------+
+| temper | city |
++--------+------+
+|     78 | sf   |
+|   NULL | sf   |
+|     42 | NULL |
+|   NULL | ny   |
++--------+------+
 ```
 
 ### 将多个值合并为单个值
 
 合并多个值的示例是将纽约州的多个字符串（例如 `new_york`、`NewYork`、`NY` 和 `New_York`）替换为 `NY`。列举 6.2 显示了 SQL 文件 `reduce_values.sql` 的内容。
 
-***LISTING 6.2: reduce_values.sql***
+**LISTING 6.2: reduce_values.sql**
 
-```
- use mytools;
+```sql
+USE mytools;
 DROP TABLE IF EXISTS mytable;
 CREATE TABLE mytable (str_date CHAR(15), state CHAR(20), reply CHAR(10));
 
@@ -6693,12 +6640,8 @@ set reply = 'N' where substr(reply,1,1) != 'Y';
 SELECT * FROM mytable;
 ```
 
-
-
-
-
-```
- +----------+----------+-------+
+```text
++----------+----------+-------+
 | str_date | state    | reply |
 +----------+----------+-------+
 | 20210915 | New York | Yes   |
@@ -6741,8 +6684,10 @@ Rows matched: 2  Changed: 2  Warnings: 0
 
 #### 列表项 6.3: type_mismatch.sql
 
-```
- USE mytools;
+
+
+```sql
+USE mytools;
 DROP TABLE IF EXISTS emp_details;
 CREATE TABLE emp_details (emp_id CHAR(15), city CHAR(20), state CHAR(20));
 
@@ -6760,16 +6705,16 @@ WHERE emp.emp_id = det.emp_id;
 --WHERE emp.emp_id = cast(det.emp_id as INT);
 ```
 
-[列表项 6.3] 创建并填充了 `emp_details` 表，随后是一个涉及 `emp` 和 `emp_details` 表的 SQL `JOIN` 语句。尽管在 `emp` 和 `emp_details` 表中，`emp_id` 表分别被定义为 `INT` 类型和 `CHAR` 类型，但代码按预期工作。然而，在 MySQL 的早期版本中，你需要使用内置的 `CAST()` 函数将 `CHAR` 值转换为 `INT` 值（反反之），如被注释的代码片段所示：
+[列表项 6.3] 创建并填充了 `emp_details` 表，随后是一个涉及 `emp` 和 `emp_details` 表的 SQL `JOIN` 语句。尽管在 `emp` 和 `emp_details` 表中，`emp_id` 表分别被定义为 `INT` 类型和 `CHAR` 类型，但代码按预期工作。然而，在 MySQL 的早期版本中，你需要使用内置的 `CAST()` 函数将 `CHAR` 值转换为 `INT` 值（反之），如被注释的代码片段所示：
 
-```
- --WHERE emp.emp_id = cast(det.emp_id as INT);
+```sql
+--WHERE emp.emp_id = cast(det.emp_id as INT);
 ```
 
-运行 [列表项 6.3] 中的代码，你将看到以下输出：
+运行[列表项 6.3]中的代码，你将看到以下输出：
 
-```
- +--------+------------+---------------+
+```text
++--------+------------+---------------+
 | emp_id | city       | state         |
 +--------+------------+---------------+
 | 1000   | Chicago    | Illinois      |
@@ -6791,12 +6736,12 @@ WHERE emp.emp_id = det.emp_id;
 
 ### 将字符串转换为日期值
 
-[列表项 6.4] 显示了 `str_to_date.sql` 的内容，它说明了如何根据另一个包含日期字符串的字符串属性来填充日期属性值。
+[列表项 6.4]显示了 `str_to_date.sql` 的内容，它说明了如何根据另一个包含日期字符串的字符串属性来填充日期属性值。
 
-#### 列表项 6.4: str_to_date.sql
+#### 列表项 6.4：str_to_date.sql
 
-```
- use mytools;
+```sql
+use mytools;
 DROP TABLE IF EXISTS mytable;
 CREATE TABLE mytable (str_date CHAR(15), state CHAR(20));
 
@@ -6822,10 +6767,10 @@ ALTER TABLE mytable
 DROP str_date;
 ```
 
-[列表项 6.4] 创建并填充了 `mytable` 表，并显示了表的内容。剩余语句解释如下：第一个语句添加了 `real_date` 列；第二个语句通过 `DATE()` 函数填充它；第三个语句是可选的：如果你想这样做，可以删除 `str_date`。运行 [列表项 6.4] 中的代码，你将看到以下输出：
+[列表项 6.4]创建并填充了 `mytable` 表，并显示了表的内容。剩余语句解释如下：第一个语句添加了 `real_date` 列；第二个语句通过 `DATE()` 函数填充它；第三个语句是可选的：如果你想这样做，可以删除 `str_date`。运行[列表项 6.4]中的代码，你将看到以下输出：
 
-```
- +----------+----------+-------+
+```text
++----------+----------+-------+
 | str_date | state    | reply |
 +----------+----------+-------+
 | 20210915 | New York | Yes   |
@@ -6862,54 +6807,50 @@ Rows matched: 2  Changed: 2  Warnings: 0
 4 rows in set (0.001 sec)
 ```
 
-
-
-
-
 本节未提供本节代码示例之外的关于 `sed` 的详细信息。然而，在阅读完代码（它是一行单行命令）后，你可能会理解如何将该代码片段调整为你自己的需求（即：如何指定不同的分隔符）。
 
 列表 6.5 显示了 `delimiter1.txt` 的内容，列表 6.6 显示了 `delimiter1.sh` 的内容，它将所有分隔符替换为逗号（“，”）。
 
-**列表 6.5: delimiter1.txt**
+**列表 6.5：delimiter1.txt**
 
-```
- 1000|Jane:Edwards^Sales
+```text
+1000|Jane:Edwards^Sales
 2000|Tom:Smith^Development
 3000|Dave:Del Ray^Marketing
 ```
 
-**列表 6.6: delimiter1.sh**
+**列表 6.6：delimiter1.sh**
 
-```
- cat delimiter1.txt | sed -e 's/:/,/' -e 's/|/,/' -e 's/\^/,/'
+```sh
+cat delimiter1.txt | sed -e 's/:/,/' -e 's/|/,/' -e 's/\^/,/'
 ```
 
-列表 6.6 以 `cat` 命令实用工具开头，该工具将文件 `delimiter1.txt` 的内容发送到“标准输出”（默认在屏幕上）。然而，在这个示例中，由于管道符号（`|`），由于此命令的输出变成了 `sed` 命令的输入。
+列表 6.6 以 `cat` 命令实用工具开头，该工具将文件 `delimiter1.txt` 的内容发送到“标准输出”（默认在屏幕上）。然而，在这个示例中，由于管道符号（`|`），此命令的输出变成了 `sed` 命令的输入。
 
 `sed` 命令由三个部分组成，全部通过 `-e` 选项连接。你可以将 `-e` 理解为指示 `sed` 命令“还有更多处理需要完成”。在这个示例中，出现了三次 `-e`，这意味着 `sed` 将执行三个操作。
 
 第一个代码片段是 `'s/:/,/'`，它的含义是“将每个分号替换为逗号”。该操作的结果被传递给下一个代码片段 `'s/|/,/'`。这个代码片段的意思是“将每个管道符替换为逗号”。该操作的结果被传递给下一个代码片段，即 `'s/\^*/,/'`。这个代码片段的意思是“将每个脱字符符号（“^”）替换为逗号”。该操作的结果被发送到标准输出，标准输出可以被重定向到另一个文本文件。运行列表 6.6 中的代码，你将看到以下输出：
 
-```
- 1000,Jane,Edwards,Sales
+```text
+1000,Jane,Edwards,Sales
 2000,Tom,Smith,Development
 3000,Dave,Del Ray,Marketing
 ```
 
-有三点需要注意。首先，第三个片段包含一个反斜杠，因为脱字符符号（“^”）是一个元字符，所以我们需要对该字符进行“转义”。其他元字符（如“$”和“.”）也是如此。
+有三点需要注意：
 
-其次，你可以针对文本文件中遇到的每一个新的作为字段分隔符的分隔符，轻松地扩展 `sed` 命令：只需为每个新分隔符遵循你在列表 6.6 中看到的模式即可。
+1. 首先，第三个片段包含一个反斜杠，因为脱字符符号（“^”）是一个元字符，所以我们需要对该字符进行“转义”。其他元字符（如“$”和“.”）也是如此。
+2. 其次，你可以针对文本文件中遇到的每一个新的作为字段分隔符的分隔符，轻松地扩展 `sed` 命令：只需为每个新分隔符遵循你在列表 6.6 中看到的模式即可。
+3. 第三，通过运行以下命令，将 `delimiter1.sh` 的输出重定向到文本文件 `delimiter2.txt`：
 
-第三，通过运行以下命令，将 `delimiter1.sh` 的输出重定向到文本文件 `delimiter2.txt`：
-
-```
- ./delimiter1.sh > delimiter2.txt
+```sh
+./delimiter1.sh > delimiter2.txt
 ```
 
 如果在上一个代码片段中发生错误，请确保通过调用以下命令使 `delimiter1.sh` 具有执行权限：
 
-```
- chmod 755 delimiter1.sh
+```sh
+chmod 755 delimiter1.sh
 ```
 
 到此，涉及 `sed` 命令行实用工具的示例结束，它是一个处理文本文件的非常强大的工具。
@@ -6918,20 +6859,20 @@ Rows matched: 2  Changed: 2  Warnings: 0
 
 本节向你展示如何使用 `awk` 命令行实用工具用 NaN 值“填充”CSV 文件中的行，以便使所有记录具有相同的列数。
 
-列表 6.7 显示了 `variable_columns.csv` 的内容，列表 6.8 显示了 `variable_columns.sh` 的内容，它使用 `awk` 实用来填充 CSV 文件中的列数。
+列表 6.7 显示了 `variable_columns.csv` 的内容，列表 6.8 显示了 `variable_columns.sh` 的内容，它使用 `awk` 实用工具来填充 CSV 文件中的列数。
 
-**列表 6.7: variable_columns.csv**
+**列表 6.7：variable_columns.csv**
 
-```
- 10,20,30
+```csv
+10,20,30
 10,20,30,40
 10,20,30,40,50,60
 ```
 
-**列表 6.8: variable_columns.sh**
+**列表 6.8：variable_columns.sh**
 
-```
- filename="variable_columns.csv"
+```sh
+filename="variable_columns.csv"
 
 cat $filename | awk -F"," '
 BEGIN { colCount = 6 }
@@ -6949,101 +6890,79 @@ BEGIN { colCount = 6 }
 
 下一块代码显示当前行的内容，随后是一个循环，打印一个逗号分隔的 NaN 值列表，以确保输出行包含 6 列。例如，如果一行有四列，那么 `NaN` 将打印两次。循环后的 `print()` 语句确保输入文件的下一行从新行开始，而不是在当前输出行。运行列表 6.8 中的代码，你将看到以下输出：
 
-```
- 10,20,30,NaN,NaN,NaN
+```text
+10,20,30,NaN,NaN,NaN
 10,20,30,40,NaN,NaN
 10,20,30,40,50,60
 ```
 
 列表 6.8 的一个局限性是必须在 `BEGIN` 块中指定最大列数。列表 6.9 通过扫描整个文件来确定列限制。
 
-**列表 6.9: variable_columns.sh**
+**列表 6.9：variable_columns.sh**
 
-```
- filename="variable_columns.csv"
+```sh
+filename="variable_columns.csv"
 
 cat $filename | awk -F"," '
 BEGIN { colCount = 0 }
 
-  
-
-
-      Count = =
-
-
-  
-
-
-  
-(
- line < ARGV[1]) {
-    colCount = split(line,data)
-    if(maxCount < <(()) {
-
-max
-Count = =(data)
-    }
+while (getline line < ARGV[1]) {
+  colCount = split(line, data)
+  if (maxCount < length(data)) {
+    maxCount = length(data)
   }
 }
 {
-  # 打印当前行:
+  # 打印当前行：
   printf("%s", $0)
 
-  # 如果需要填充 NaN:
-  for(i=NF; i<maxCount;; i {
-
-printfprintfNaNNaN
-
-  
-
-   ""
-
-
-
-
-
-
-
-
-
-
-  ....ch0....list6669) ` `filename``` CSV CSV CSV CSV。下一个片段是一个 `awk` 脚本，它包含一个 `while` 循环来处理行。列表 6.9 与列表 6.8 相同，在需要时用 NaN 填充行。运行列表 6.9 中的代码，你将看到以下输出：
-
+  # 如果需要填充 NaN：
+  for(i=NF; i<maxCount; i++) {
+    printf(",NaN")
+  }
+  print ""
+}
+'
 ```
- 10,20,30,NaN,NaN,NaN
+
+列表 6.9 初始化变量 `filename` 为该代码示例的 CSV 文件名。下一个片段是一个 `awk` 脚本，它包含一个 `while` 循环来处理行。列表 6.9 与列表 6.8 相同，在需要时用 NaN 填充行。运行列表 6.9 中的代码，你将看到以下输出：
+
+```text
+10,20,30,NaN,NaN,NaN
 10,20,30,40,NaN,NaN
 10,20,30,40,50,60
 ```
 
-### 截断 CSV 文件中的
+### 截断 CSV 文件中的行
 
-上一节向你展示了如何使用 `awk` 命令行实用工具用 NaN 字符串填充 CSV 文件中的，而本节向你展示如何截断 CSV 文件中的行，只显示列数最少的列。
+上一节向你展示了如何使用 `awk` 命令行实用工具用 NaN 字符串填充 CSV 文件中的行，而本节向你展示如何截断 CSV 文件中的行，只显示列数最少的列。
 
-列表 6.10 显示了 `variable_columns3.sh` 的内容，它使用 `awk` 实用显示 CSV 文件中的列子集。
+列表 6.10 显示了 `variable_columns3.sh` 的内容，它使用 `awk` 实用工具显示 CSV 文件中的列子集。
 
-**列表 6.10: variable_columns3.sh**
+**列表 6.10：variable_columns3.sh**
 
-```
- filename="variable_columns.csv"
+```sh
+filename="variable_columns.csv"
 
 cat $filename | awk -F"," '
 BEGIN {
-  colCount = 0; minColCount = 9999
+  colCount = 0
+  minColCount = 9999
 
   ###############################################
   # minColCount = 最短行的字段数
   ###############################################
   while(getline line < ARGV[1]) {
-    colCount = split(line,data)
+    colCount = split(line, data)
     if(minColCount > length(data)) {
        minColCount = length(data)
     }
   }
 }
 {
-  # 对每行输入执行:
+  # 对每行输入执行：
   for(j=1; j<=minColCount; j++) {
-     printf("%s,$j)
+     printf("%s,$j")
   }
   print ""
 }
@@ -7052,14 +6971,10 @@ BEGIN {
 
 列表 6.10 与列表 6.9 非常相似。在初始化变量 `filename` 为该代码示例的 CSV 文件名后，`awk` 脚本从 CSV 文件中找到列数最少的列的列数。变量 `minColCount` 在 `BEGIN` 块中初始化为 9999，当该循环完成后，它的值将是输入行的最小列数。
 
+列表 6.9 的后续部分是一个循环，用于打印输入文件中每行的前 `minColCount` 列。运行列表 6.10 中的代码，你将看到以下输出：
 
-
-
-
-Listing 6.9 的后续部分是一个循环，用于打印输入文件中每行的前 `minColCount` 列。运行 Listing 6.10 中的代码，你将看到以下输出：
-
-```
- 10,20,
+```text
+10,20,
 10,20,
 10,20,
 10,20,
@@ -7068,17 +6983,17 @@ Listing 6.9 的后续部分是一个循环，用于打印输入文件中每行�
 
 ## 使用 AWK 工具生成具有固定列数的行
 
-本节中的代码示例包含一个 `awk` 脚本，该脚本处理一个以空格分隔的输入字符串 CSV 文件，并生成所有行都具有相同列数的输出（最后一行可能除外）。Listing 6.11 显示了 `FixedFieldCount1.sh` 的内容，该内容说明了如何使用 `awk` 工具将一个字符串拆分为包含三个字符串的行。
+本节中的代码示例包含一个 `awk` 脚本，该脚本处理一个以空格分隔的输入字符串 CSV 文件，并生成所有行都具有相同列数的输出（最后一行可能除外）。列表 6.11 显示了 `FixedFieldCount1.sh` 的内容，该内容说明了如何使用 `awk` 工具将一个字符串拆分为包含三个字符串的行。
 
-***LISTING 6.11: FixedFieldCount1.sh***
+***列表 6.11：FixedFieldCount1.sh***
 
-```
- echo "=> pairs of letters:"
+```sh
+echo "=> pairs of letters:"
 echo "aa bb cc dd ee ff gg hh"
 echo
 
 echo "=> split on multiple lines:"
-echo "aa bb cc dd ee ff gg hh"| awk '
+echo "aa bb cc dd ee ff gg hh" | awk '
 BEGIN { colCount = 3 }
 {
   for(i=1; i<=NF; i++) {
@@ -7090,9 +7005,11 @@ BEGIN { colCount = 3 }
 '
 ```
 
-Listing 6.11 显示了一个字符串的内容，然后将该字符串作为 `awk` 命令的输入。Listing 6.11 的主体部分是一个从 1 迭代到 `NF` 的循环，其中 `NF` 是输入行中的字段数，在本例中，它等于 8。每个字段的值由 `$i` 表示：`$1` 是第一个字段，`$2` 是第二个字段，依此类推。注意 `$0` 是整个输入行的内容（在下一个代码示例中使用）。
 
-接下来，如果 `i` 的值（即字段的位置，而不是字段的内容）是 3 的倍数，则代码将打印换行符。运行 Listing 6.11 中的代码，你将看到以下输出：
+
+Listing 6.11 显示了一个字符串的内容，然后将该字符串作为`awk`命令的输入。Listing 6.11 的主体部分是一个从 1 迭代到`NF`的循环，其中`NF`是输入行中的字段数，在本例中，它等于 8。每个字段的值由`$i`表示：`$1`是第一个字段，`$2`是第二个字段，依此类推。注意`$0`是整个输入行的内容（在下一个代码示例中使用）。
+
+接下来，如果`i`的值（即字段的位置，而不是字段的内容）是 3 的倍数，则代码将打印换行符。运行 Listing 6.11 中的代码，你将看到以下输出：
 
 ```
  => pairs of letters:
@@ -7104,7 +7021,7 @@ dd ee ff
 gg hh
 ```
 
-Listing 6.12 显示了 `employees.txt` 的内容，Listing 6.13 显示了 `FixedFieldCount2.sh` 的内容，说明了如何确保所有行具有相同的列数。
+Listing 6.12 显示了`employees.txt`的内容，Listing 6.13 显示了`FixedFieldCount2.sh`的内容，说明了如何确保所有行具有相同的列数。
 
 ***LISTING 6.12: employees.txt***
 
@@ -7130,7 +7047,7 @@ BEGIN { colCount = 3 }
 '
 ```
 
-注意 Listing 6.13 中的代码与 Listing 6.11 中的代码几乎相同。图中显示的代码从 `employees.txt` 的内容中删除了 `\n` 字符。如果你需要，请运行以下代码片段：
+注意 Listing 6.13 中的代码与 Listing 6.11 中的代码几乎相同。图中显示的代码从`employees.txt`的内容中删除了`\n`字符。如果你需要，请运行以下代码片段：
 
 ```
  cat employees.txt | awk -F":" '{printf("%s", $0)}
@@ -7145,11 +7062,11 @@ dave:smith:NY:
 sara:white:CHI:
 ```
 
-我们现在将 Listing 6.9 中的任务简化到与 Listing 6.7 相同，这就是为什么我们有相同的 `awk` 代码块的原因。
+我们现在将 Listing 6.9 中的任务简化到与 Listing 6.7 相同，这就是为什么我们有相同的`awk`代码块的原因。
 
 ## 转换电话号码
 
-Listing 6.14 显示了 `phone_numbers.txt` 的内容，其中包含不同格式的（主要是虚拟的）电话号码。
+Listing 6.14 显示了`phone_numbers.txt`的内容，其中包含不同格式的（主要是虚拟的）电话号码。
 
 ***LISTING 6.14: phone_numbers.txt***
 
@@ -7207,7 +7124,7 @@ Listing 6.14 显示了 `phone_numbers.txt` 的内容，其中包含不同格式�
  • dddd: 星期全称                (ex: Saturday)
 ```
 
-Listing 6.16 显示了 `dates.txt` 的内容，其中包含了各种格式的虚构日期，**粗体**字符串格式无效。
+Listing 6.16 显示了`dates.txt`的内容，其中包含了各种格式的虚构日期，粗体字符串格式无效。
 
 ***LISTING 6.16: dates.txt***
 
@@ -7222,11 +7139,7 @@ Listing 6.16 显示了 `dates.txt` 的内容，其中包含了各种格式的虚
 3/5/21Z
 ```
 
-
-
-
-
-Listing 6.17 显示了 `dates.sh` 的内容，它展示了如何从 Listing 6.16 中的日期移除非数字字符，使其具有相同的格式。
+Listing 6.17 显示了`dates.sh`的内容，它展示了如何从 Listing 6.16 中的日期移除非数字字符，使其具有相同的格式。
 
 ***Listing 6.17: dates.sh***
 
@@ -7279,20 +7192,20 @@ Listing 6.17 显示了 `dates.sh` 的内容，它展示了如何从 Listing 6.16
 '
 ```
 
-Listing 6.17 包含的代码如果你不熟悉正则表达式可能会可能会望而生畏。让我们尝试揭开代码的神秘面，从代表任何单个数字的正则表达式 `[0-9]` 开始。`^[0-9]\/` 中开头的脱字符符号 `^` 表示数字必须出现在最左侧（即第一个）位置。此外，正则表达式 `^[0-9]\/` 表示单数字后必须紧跟一个 `/`。需要反斜杠 `\` 来“转义”元字符 `/`。这意味着它将被视为一个普通字符而不是元字符。例如，字符串 `3/` 匹配该正则表达式，但字符串 `03/`、`B3/` 和 `AB/` 都不匹配。
+Listing 6.17 包含的代码如果你不熟悉正则表达式可能会可能会望而生畏。让我们尝试揭开代码的神秘面，从代表任何单个数字的正则表达式`[0-9]`开始。`^[0-9]\/`中开头的脱字符符号`^`表示数字必须出现在最左侧（即第一个）位置。此外，正则表达式`^[0-9]\/`表示单数字后必须紧跟一个`/`。需要反斜杠`\`来“转义”元字符`/`。这意味着它将被视为一个普通字符而不是元字符。例如，字符串`3/`匹配该正则表达式，但字符串`03/`、`B3/`和`AB/`都不匹配。
 
-现在让我们查看正则表达式 `^[0-9][0-9]\/`，它代表任何以两个数字开头并接 `/` 字符的字符串。因此，字符串 `03/` 匹配该正则表达式，但字符串 `3/`、`B3/` 和 `AB/` 都不匹配。
+现在让我们查看正则表达式`^[0-9][0-9]\/`，它代表任何以两个数字开头并接`/`字符的字符串。因此，字符串`03/`匹配该正则表达式，但字符串`3/`、`B3/`和`AB/`都不匹配。
 
-接下来，正则表达式 `^[0-9][0-9]\/[0-9][0-9]` 代表任何以两个数字开头、后面是 `/` 字符、又是两个数字的字符串。因此，字符串 `03/15` 匹配该正则表达式，但字符串 `3/5`、`03/5` 和 `3/15` 都不匹配。
+接下来，正则表达式`^[0-9][0-9]\/[0-9][0-9]`代表任何以两个数字开头、后面是`/`字符、又是两个数字的字符串。因此，字符串`03/15`匹配该正则表达式，但字符串`3/5`、`03/5`和`3/15`都不匹配。
 
-最后，正则表达式 `^[0-9][0-9]\/[0-9][0-9]\/[0-9][0-9][0-9][0-9]$` 匹配符合以下条件的字符串：
+最后，正则表达式`^[0-9][0-9]\/[0-9][0-9]\/[0-9][0-9][0-9][0-9]$`匹配符合以下条件的字符串：
 
-*   以两个数字开头
-*   后面跟着一个 `/`
-*   后面是两个数字
-*   后面又是另一个 `/`
-*   最后是四个数字
-*   且没有额外的字符
+- 以两个数字开头
+- 后面跟着一个`/`
+- 后面是两个数字
+- 后面又是另一个`/`
+- 最后是四个数字
+- 且没有额外的字符
 
 Listing 6.17 包含了匹配包含“短”月份、日期和年份的正则表达式。运行 Listing 6.17 中的代码，你将看到以下输出：
 
@@ -7307,7 +7220,7 @@ Listing 6.17 包含了匹配包含“短”月份、日期和年份的正则表�
 => $0: 3/5/21 MM/DD/YYYY: 03-05-2021
 ```
 
-为什么前面的几行（加粗显示的部分）尽管在年份的正则表达式中出现了 `$` 却被显示为有效？遗憾的是，后两个正则表达式出现在提取日期的正则表达式之后，Listing 6.18 显示了 `dates2.sh` 的内容，它检测无效日期，使用了数字的简写符号，并删除了多余的 print 语句。
+为什么前面的几行（加粗显示的部分）尽管在年份的正则表达式中出现了`$`却被显示为有效？遗憾的是，后两个正则表达式出现在提取日期的正则表达式之后，Listing 6.18 显示了`dates2.sh`的内容，它检测无效日期，使用了数字的简写符号，并删除了多余的`print`语句。
 
 ***Listing 6.18: dates2.sh***
 
@@ -7382,7 +7295,7 @@ $0:    3/5/21Z => 03-15-2021
 
 ### 转换字母日期格式
 
-本节向你展示如何将日期格式转换为 DD-MON-YYYY 的常用格式。Listing 6.19 显示了 `dates2.txt` 的内容，其中包含各种格式的日期，加粗字符串的格式无效。
+本节向你展示如何将日期格式转换为 DD-MON-YYYY 的常用格式。Listing 6.19 显示了`dates2.txt`的内容，其中包含各种格式的日期，加粗字符串的格式无效。
 
 ***Listing 6.19: dates2.txt***
 
@@ -7401,10 +7314,8 @@ $0:    3/5/21Z => 03-15-2021
 
 
 
-
-
 ```bash
- cat dates2.txt  | tr -s ' ' |sed -e 's/- /-/g' -e 's/ /-/g' |awk -F"-" '
+cat dates2.txt | tr -s ' ' | sed -e 's/- /-/g' -e 's/ /-/g' | awk -F"-" '
 BEGIN {
    months["JAN"] = "JAN"
    months["FEB"] = "FEB"
@@ -7476,7 +7387,7 @@ BEGIN {
 
 `awk` 脚本的主部分与 `Listing 6.27` 中的内容相似，用于检测各种日期格式，并为每行输入初始化 `day`、`month`（三字母值）和 `year`。运行 `Listing 6.20` 中的代码，你将看到以下输出：
 
-```
+```text
  04-SEP-2022 => SEP-04-2020
  04-SEP-2022 => SEP-04-2020
    04-SEP-22 => SEP-04-2022
@@ -7496,7 +7407,7 @@ Invalid month:  JNN-06-2022
 
 为了确保这一点，字符串 `3/15/22 5:44` 是有效日期，当代码检查日期字段的有效性时，前面的字符串会如下被修改：
 
-```
+```text
  3/15/22 5:44
 03/15/22 5:44
 03/15/2022 5:44
@@ -7509,9 +7420,9 @@ Invalid month:  JNN-06-2022
 
 `Listing 6.21` 显示了包含日期的 `dates-times.txt` 内容，`Listing 6.22` 向你展示了 `date-times-padded.sh` 的，这是一个基于 `awk` 的 shell 脚本，用于处理 `Listing 6.21` 中的日期。
 
-***LISTING 6.21: dates-times.txt***
+**LISTING 6.21: dates-times.txt**
 
-```
+```text
  2/30/2020 15:05:44
 2/30/2020 15:05:44
 3/15/22 15:5:44
@@ -7524,12 +7435,8 @@ Invalid month:  JNN-06-2022
 
 注意 `Listing 6.21` 中的第一行和最后一行是无效的：第一行包含月份值 30，这对于任何年份都是无效的，而最后一行包含无效的小时值。
 
-
-
-
-
-```
- cat date-times.txt | awk -F"/" '
+```bash
+cat date-times.txt | awk -F"/" '
 function check_leap_year(year) {
   #########################################
   # 如果满足以下条件，则为闰年：
@@ -7717,310 +7624,282 @@ BEGIN {
 '
 ```
 
-运行 列表 6.22 中的代码，你将看到以下输出：
+运行列表 `6.22` 中的代码，你将看到以下输出：
 
-```
- => #1 PROCESSING: 2/30/2020 15:05:44
+
+
+```text
+=> #1 PROCESSING: 2/30/2020 15:05:44
 *** 闰年超出范围: 2/30/2020 15:05:44
 ----------------
 
- => #2 PROCESSING: 3/15/22 15:5:44
+=> #2 PROCESSING: 3/15/22 15:5:44
 => VALID DAY/TIME FORMAT:  3/15/22 15:5:44
 ----------------
 
- => #3 PROCESSING: 4/29/23 15:5:44
+=> #3 PROCESSING: 4/29/23 15:5:44
 *** 平年超出范围: 4/29/23 15:5:4
 ----------------
 
- => #4 PROCESSING: 5/16/24 5:05:44
+=> #4 PROCESSING: 5/16/24 5:05:44
 => VALID DAY/TIME FORMAT:  5/16/24 5:05:44
 ----------------
 
- => #5 PROCESSING: 6/17/25 5:5:44
+=> #5 PROCESSING: 6/17/25 5:5:44
 => VALID DAY/TIME FORMAT:  6/17/25 5:5:44
 ----------------
 
- => #6 PROCESSING: 7/18/26 5:5:4
+=> #6 PROCESSING: 7/18/26 5:5:4
 => VALID DAY/TIME FORMAT:  7/18/26 5:5:4
 ```
-```
 
+`Listing 6.22` 显示了 `add_country_codes.sh` 的内容，展示了如何增加一组国家的三位国际前缀。请注意，在本节之后你将不需要这段代码示例。将其包含在此处是为了向你展示如何使用 `awk` 工具轻松地操作 CSV 文件中的数值值。如果有需要，你可以轻松地调整此代码以处理其他 CSV 文件。
 
-
-
-Listing 6.22 显示了 `add_country_codes.sh` 的内容，展示了如何增加一组国家的三位国际前缀。请注意，在本节之后你将不需要这段代码示例。将其包含在此处是为了向你展示如何使用 `awk` 工具轻松地操作 CSV 文件中的数值值。如果有需要，你可以轻松地调整此代码以处理其他 CSV 文件。
-
-**Listing 6.22: add_country_codes.sh**
+**Listing 6.22: `add_country_codes.sh`**
 
 ```bash
 FILE="country_codes.csv"
 
 echo "=> display code and country:"
+
 awk -F"," '
+
 BEGIN { code = 10000; incr = 10000 }
+
 {
+
    printf("%s,%s,%d\n", $1, $2, code)
+
    code += incr
+
 }
+
 ' < $FILE
+
 echo "-----------------"
+
 echo
 
 echo "=> increment country code:"
+
 awk -F"," '
+
 BEGIN { code = 1000; incr = 1000 }
+
 {
+
    printf("%d,%s\n", $1 + code, $2)
+
    code += incr
+
 }
+
 ' < $FILE
 ```
 
-Listing 6.22 初始化变量 `FILE`，其名称为包含若干国家代码和缩缩的 CSV 文件名。接下来，一个 `awk` 脚本包含一个 `BEGIN` 部分，其中包含一个循环，为每个国家代码加 10000。例如，以下两个代码段显示了输入行“之前”和“之后”的内容：
+`Listing 6.22` 初始化变量 `FILE`，其名称为包含若干国家代码和缩写的 CSV 文件名。接下来，一个 `awk` 脚本包含一个 `BEGIN` 部分，其中包含一个循环，为每个国家代码加 10000。例如，以下两个代码段显示了输入行“之前”和“之后”的内容：
 
-```
+```text
 001,usa,10000
+
 1001,usa
 ```
 
-运行 Listing 6.22 中的代码，你将看到以下输出：
+运行 `Listing 6.22` 中的代码，你将看到以下输出：
 
-```
- => display code and country:
+```text
+=> display code and country:
+
 001,usa,10000
+
 033,france,20000
+
 034,spain,30000
+
 039,italy,40000
+
 044,uk,50000
+
 049,germany,60000
+
 052,mexico,70000
+
 081,japan,80000
+
 -----------------
 
 => increment country code:
+
 1001,usa
+
 2033,france
+
 2034,spain
+
 4039,italy
+
 5044,uk
+
 6049,germany
+
 7052,mexico
+
 8081,japan
 ```
 
-Listing 6.23 显示了 `countries_cities.csv` 的内容，每行包含一个国家以及该国家的城市列表。
+`Listing 6.23` 显示了 `countries_cities.csv` 的内容，每行包含一个国家以及该国家的城市列表。
 
-**Listing 6.23: countries_cities.csv**
+**Listing 6.23: `countries_cities.csv`**
 
-```
+```text
 italy,firenze,milano,roma,venezia
+
 france,antibe,nice,paris,st_jeannet
+
 germany,berlin,frankfurt
+
 spain,barcelona,madrid
+
 england,liverpool,london,manchester
+
 mexico,mexico_city,tijuana
 ```
 
-Listing 6.24 显示了 `split_countries_cities.sh` 的内容，展示了如何显示 `countries_cities.csv` 中每个国家的城市列表。
+`Listing 6.24` 显示了 `split_countries_cities.sh` 的内容，展示了如何显示 `countries_cities.csv` 中每个国家的城市列表。
 
-**Listing 6.24: split_countries_codes.sh**
+**Listing 6.24: `split_countries_codes.sh`**
 
 ```bash
 FILE="countries_cities.csv"
 
 awk -F"," '
+
 {
+
    printf("=> CITIES in %s:\n",$1)
+
    for(i=2; i<=NF; i++) {
+
         printf("%s\n", $i)
+
    }
+
 }
+
 ' < $FILE
 ```
 
-Listing 6.24 初始化变量 `FILE`，其名称为包含若干国家代码和缩写的 CSV 文件。接下来，一个 `awk` 脚本包含一个循环，显示 CSV 文件 `countries_cities.csv` 中列出的每个城市的缩写。运行 Listing 6.24 中的代码，你将看到以下输出：
+`Listing 6.24` 初始化变量 `FILE`，其名称为包含若干国家代码和缩写的 CSV 文件。接下来，一个 `awk` 脚本包含一个循环，显示 CSV 文件 `countries_cities.csv` 中列出的每个城市的缩写。运行 `Listing 6.24` 中的代码，你将看到以下输出：
 
-```
- => display code and country:
+```text
+=> display code and country:
+
 => CITIES in italy:
+
 firenze
+
 milano
+
 roma
+
 venezia
+
 => CITIES in france:
+
 antibe
+
 nice
+
 paris
+
 st_jeannet
+
 => CITIES in germany:
+
 berlin
+
 frankfurt
+
 => CITIES in spain:
+
 barcelona
+
 madrid
+
 => CITIES in england:
+
 liverpool
+
 london
+
 manchester
+
 => CITIES in mexico:
+
 mexico_city
+
 tijuana
 ```
 
-Listing 6.25 显示了 `countries_cities2.csv` 的内容，每行包含一个国家以及该国家的城市列表。
+`Listing 6.25` 显示了 `countries_cities2.csv` 的内容，每行包含一个国家以及该国家的城市列表。
 
-**Listing 6.25: countries_cities2.csv**
+**Listing 6.25: `countries_cities2.csv`**
 
-```
+```text
 italy,firenze,milano,roma,venezia
+
 france,antibe,nice,paris,st_jeannet
+
 germany,berlin,frankfurt
+
 spain,barcelona,madrid
+
 england,liverpool,london,manchester
+
 mexico,mexico_city,tijuana
+
 usa,chicago,illinois,denver,colorado,seattle,washington,vancouver,washington
 ```
 
-Listing 6.26 显示了 `split_countries_cities.sh` 的内容，展示了如何显示 `countries_cities2.csv` 中每个国家的城市列表。
+`Listing 6.26` 显示了 `split_countries_cities.sh` 的内容，展示了如何显示 `countries_cities2.csv` 中每个国家的城市列表。
 
-**Listing 6.26: split_countries_codes.sh**
+**Listing 6.26: `split_countries_codes.sh`**
 
 ```bash
 FILE="countries_cities2.csv"
 
 awk -F"," '
+
 BEGIN { incr = 1000 }
+
 {
+
    if($1 ~ /usa/) {
+
      printf("=> CITIES in %s:\n",$1)
+
      for(i=2; i<=NF; i++) {
+
           printf("%s\n", $i)
+
      }
+
    } else {
+
      printf("=> CITIES in %s:\n",$1)
+
      for(i=2; i<=NF; i++) {
+
           printf("%s\n", $i)
+
      }
+
    }
+
 }' $FILE
 ```
 
-
-
-...[/content]` 之间是空的，我无法进行翻译。请提供需要翻译的英文文本，我将立即按照你的要求完成处理。
-
-如果你是希望翻译示例中的内容，请参考下文：
-
-[content]
-[在 R 中清洗和准备营销数据以用于机器学习或分析-prior-machine-learning-or-analysis-ec1a12079f1](https://towardsdatascience.com/cleaning-and-preparing-marketing-data-in-r-prior-to-machine-learning-or-analysis-ec1a12079f1)
-
-列表 6.27 显示了 `convert_marketing.sh` 的内容，代码中的注释指示了你如何执行各种数据清洗步骤。
-
-### 列表 6.27：convert_marketing.sh
-
-```
- # Kaggle dataset: https://www.kaggle.com/fehmifratpolat/marketing-report
-
-# step 1: 提取第 1、3、4 和 7 字段：
-cat mark1.csv |awk -F";" '{print $1 ":" $3 ":" $4 ":" $7}' >mark2.csv
-
-# step 2: 将 "Not tracked" 替换为 "direct"：
-# peri-Co-od;salesChannel;platformcode;marketingInvestment
-# date;channel;platformcode;;spend
-cat mark2.csv |awk -F":" '
-{
-   $3 = tolower($3)
-
-   if($3 ~ /Not tracked/) {
-      $3 = "direct"
-   } else if($3 ~ /unpaid/) {
-      $3 = "organic"
-   } else if($3 ~ /Silverpop/) {
-      $3 = "email"
-   }
-
-   if($4 ~ /,/) {
-      split($4,arr1,",")
-      $4 = arr1[1] "." arr1[2]
-   }
-   print $1 ":" $2 ":" $3 ":" $4
-}
-' >mark3.csv
-
-# step 3: 将 YYYYDDMM 转换为 YYYY-MM-YY 格式：
-cat mark3.csv |awk -F":" '
-{
-   year  = substr($1,1,4)
-   day   = substr($1,5,2)
-   month = substr($1,7,2)
-
-   printf("%s-%s-%s:%s:%s:%s\n",year,month,day,$2,$3,$4)
-}
-' >mark4.csv
-
-# step 4: 根据 $1+$2+$3 计算小计：
-cat mark4.csv |awk -F":" '
-{
-   fields=$1FS$2FS$3;subtotals[fields] += $4
-}
-# step 5: 显示小计值：
-END{
-   total = 0
-   for (i in subtotals) {
-     printf("Subtotal for %44s => %-8d\n", i, subtotals[i])
-     total += subtotals[i]
-   }
-   printf("TOTAL REVENUE: => %44d\n",total)
-}
-' >mark5.csv
-```
-
-虽然没有必要将代码分成五个 awk 脚本，但这样做更容易跟进代码，此外，你还可以访问中间文件，以便检查其内容。
-
-列表 6.27 从步骤 1 开始，从 CSV 文件 `mark1.csv` 中提取第 1、3、4 和 7 字段，并将输出重定向到 CSV 文件 `mark2.csv`，如下所示：
-
-```
- cat mark1.csv |awk -F";" '{print $1 ":" $3 ":" $4 ":" $7}' >mark2.csv
-```
-
-列表 6.27 中的步骤 2 将 `$3` 中的字符串“Not tracked” 替换为“direct”，将字符串“unpaid” 替换为“organic”，并将字符串“Silverpop” 替换为字符串 `email`。此外，$4` 中出现的 `,` 被替换为 `.`，然后打印出包含 `$3` 和 `$4` 修改内容的新字符串。每行输出都重定向到 CSV 文件 `mark3.csv`。
-
-列表 6.27 中的步骤 3 将 YYYYDDMM 日期转换为 YYYY-MM-YY 格式，如下所示，随后输出重定向到 CSV 文件 `mark4.csv`：
-
-```
- year  = substr($1,1,4)
-day   = substr($1,5,2)
-month = substr($1,7,2)
-printf("%s-%s-%s:%s:%s:%s\n",year,month,day,$2,$3,$4)
-```
-
-列表 6.27 中的步骤 4 可能是此代码示例中最感兴趣的代码片段。前三个字段通过默认字段分隔符连接后，构成了数组 `subtotals` 的索引。每当这种组合在 `mark4.csv` 中出现一次时，`subtotals` 数组中对应的条目就会根据 `$4` 的值增加，如下所示：
-
-```
- fields=$1FS$2FS$3;subtotals[fields] += $4
-```
-
-在完成 awk 脚本的主体执行后，`END` 块（标记为步骤 5）将显示 `subtotals` 数组中的值以及总计，如下所示：
-
-```
- total = 0
-for (i in subtotals) {
-  printf("Subtotal for %44s => %-8d\n", i, subtotals[i])
-  total += subtotals[i]
-}
-```
-
-在前面的代码执行完成后，输出被重定向到 CSV 文件 `mark5.csv`。
-
-启动列表 6.27 生成一组中间文件和一个名为 `mark5.csv` 的最终文件。如果你想查看列表 6.27 生成的 `mark1.csv` 等中间文件的前五行，执行包含以下内容的 shell 脚本：
-
-```
- for f in 'ls mark*csv'
-do
-  echo "file: $f"
-  head -5 $f
-done
-```
+...
 
 
 
@@ -8034,8 +7913,8 @@ done
 
 除了上述链接中列出的步骤外，数据清洗还涉及以下任务（在第 7 章的代码示例中执行）：
 
-*   将数据集从一种格式转换为另一种格式（`convert`）
-*   从现有数据集的列子集中创建新数据集（`extract`）
+- 将数据集从一种格式转换为另一种格式（`convert`）
+- 从现有数据集的列子集中创建新数据集（`extract`）
 
 正如你看到的，前面的步骤区分了“将数据转换为不同格式”与“从多个数据提取数据以创建新数据集”。如果只执行第一步（即没有提取步骤），那么转换过程可以被视为数据清洗任务。
 
@@ -8049,15 +7928,15 @@ done
 
 然而，如果两个 CSV 文件包含不同的日期格式，你需要根据日期列创建一个单一的 CSV 文件，那么将会存在某种转换过程，可以是以下之一：
 
-*   将第一种日期格式转换为第二天日期格式
-*   将第二种日期格式转换为第一种日期格式
-*   将两种日期格式都转换为第三种日期格式
+- 将第一种日期格式转换为第二天日期格式
+- 将第二种日期格式转换为第一种日期格式
+- 将两种日期格式都转换为第三种日期格式
 
 在财务数据的情况下，你可能还会遇到不同的货币，这涉及一对货币之间的汇率。由于货币汇率会波动，你需要决定为数据使用何种汇率，该汇率可以是：
 
-*   CSV 文件生成期间的汇率
-*   当前的货币汇率
-*   其他某种机制
+- CSV 文件生成期间的汇率
+- 当前的货币汇率
+- 其他某种机制
 
 此外，你可能还需要将 CSV 文件转换为 XML 文档，其中后者可能需要符合 XML Schema，并且可能还需要符合 XBRL，这是业务报告目的的要求：
 
@@ -8065,10 +7944,10 @@ done
 
 正如前面提到的，数据转换可以涉及两个或多个数据源，以创建另一个属性符合所需格式的另一个数据源。以下是仅使用两个数据源 A 和 B 进行数据转换的四种场景，其中来自 A 和 B 的数据合并以创建数据源 C，其中 A、B 和 C 可以具有不同的文件格式：
 
-*   A 中的所有属性和 B 中的所有属性
-*   A 中的所有属性和 B 中的所有属性
-*   A 中的属性子集和 B 中的所有属性
-*   A 中的属性子集和 B 中的属性子集
+- A 中的所有属性和 B 中的所有属性
+- A 中的所有属性和 B 中的所有属性
+- A 中的属性子集和 B 中的所有属性
+- A 中的属性子集和 B 中的属性子集
 
 在数据库术语中，数据转换类似于执行一个带有 `JOIN` 子句的涉及两个或多个数据库表 `SELECT` 的 SQL 语句。此类 SQL 语句通常涉及每个数据库表的列子集，这对应于选择数据源中特征的子集。
 
@@ -8118,7 +7997,7 @@ id,fname,lname
 vaughn#"
 ```
 
-### Pandas 方案 (1)
+### Pandas 方案（1）
 
 列表 7.2 显示了 `pandas_multi_line.py` 的内容，它重新格式化 `multi_line.csv` 的内容，使每个记录占据一行。
 
@@ -8128,57 +8007,68 @@ vaughn#"
 import pandas as pd
 
 filename = 'multi_line.csv'
+
 data = pd.read_csv(filename)
+
 print("data:")
+
 print(data)
 ```
 
-运行 列表 7.2 中的代码，你将看到以下输出：
+运行列表 7.2 中的代码，你将看到以下输出：
 
-```
+```text
 data:
+
    id   fname         lname
+
 0   1   donna       rhymes?
+
 1   2    dave        jones$
+
 2   3    john   van jones.#
+
 3   4  stevie  ray
+
 vaughn#
+
 4   5   ralph      emerson#
 ```
-
-
-
 
 如你所示，之前的输出包含多个元字符。如果有需要，你可以创建一个单行的 `sed` 命令，将这些元字符替换为你选择的任意一个元字符。请查看第 6 章中涉及 `sed` 命令的类似任务。
 
 请注意，列表 7.2 的输出并不是一个真正的 CSV 文件。然而，我们可以生成一个 CSV 文件，如下一节所示。
 
-### Pandas 解决方案 (2)
+### Pandas 解决方案（2）
 
 列表 7.3 显示了 `pandas_multi_line2.py` 的内容，该文件对 `multi_line.csv` 的内容进行了重新格式，使得每条记录占据一行，并将数据保存为 CSV 文件。
 
 ***列表 7.3: pandas_multi_line2.py***
 
-```
- import sys
+```python
+import sys
 
 import pandas as pd
 
 filename = 'multi_line.csv'
+
 data = pd.read_csv(filename)
 
 # 从数据中移除 "\n" 字符：
+
 columns=["id","fname","lname"]
+
 data2 = data[columns].replace('\\n',' ', regex=True)
 
 # 保存到 CSV 文件：
+
 data2.to_csv("multi_line2.csv",index=False)
 ```
 
 列表 7.3 从一个导入语句开始，然后初始化变量 `filename`，赋值为此代码示例的 CSV 文件名。接下来的片段填充了 Pandas 数据帧 `data`，然后用不包含换行符的 `data` 内容初始化了 Pandas 数据帧 `data2`。最后一段代码将 `data2` 保存到 CSV 文件 `multi_line2.csv`。运行列表 7.3 中的代码，你将看到一个新文件 `multi_line2.csv`，其内容显示在此处：
 
-```
- id,fname,lname
+```csv
+id,fname,lname
 1,donna,rhymes?
 2,dave,jones$
 3,john,van jones.#
@@ -8190,33 +8080,36 @@ data2.to_csv("multi_line2.csv",index=False)
 
 ### CSV 解决方案
 
-如果你还没有安装，请使用此命令安装 CSV Python ：
+如果你还没有安装，请使用此命令安装 CSV Python：
 
-```
- pip3 install csv
+```bash
+pip3 install csv
 ```
 
 列表 7.4 显示了 `csv_multi_line.py` 的内容，该文件对 `multi_line.csv` 的内容进行了重新格式，使得每条记录占据一行。
 
 ***列表 7.4: csv_multi_line.py***
 
-```
- import csv
+```python
+import csv
 
 filename = 'multi_line.csv'
 
 with open(filename, newline='', encoding='utf-8') as f:
-  data = csv.reader(f, delimiter=',', quotechar='"',
-                    quoting=csv.QUOTE_MINIMAL)
-
+  data = csv.reader(
+    f,
+    delimiter=',',
+    quotechar='"',
+    quoting=csv.QUOTE_MINIMAL
+  )
   for line in data:
-    print("line:",line)
+    print("line:", line)
 ```
 
 列表 7.4 从一个导入语句开始，然后初始化变量 `filename`，赋值为此代码示例的 CSV 文件名。接下来的片段打开 CSV 文件并用其内容初始化 Pandas 数据帧 `data`（注：此处原文为 Pandas data frame，实际为 reader）。最后代码块包含一个循环，遍历数据帧的每一行并打印其内容。运行列表 7.4 中的代码，你将看到以下输出：
 
-```
- line: ['id', 'fname', 'lname']
+```text
+line: ['id', 'fname', 'lname']
 line: ['1', 'donna', 'rhymes?']
 line: ['2', 'dave', 'jones$']
 line: ['3', 'john', 'van jones.#']
@@ -8232,17 +8125,23 @@ line: ['5', 'ralph', 'emerson#']
 
 ***列表 7.5: multi_line_records.csv***
 
-```
- nancy jones
+```text
+nancy jones
+
 marketing dept
+
 san francisco
 
 dave smith
+
 sales dept
+
 chicago
 
 steve anderson
+
 marketing dept
+
 seattle
 ```
 
@@ -8250,8 +8149,9 @@ seattle
 
 ***列表 7.6: multi_line_records.sh***
 
-```
- # 记录由空行分隔。
+```bash
+# 记录由空行分隔。
+
 input_file="multi_line_records.csv"
 
 awk '
@@ -8264,8 +8164,8 @@ BEGIN { RS = "" ; FS = "\n" }
 
 列表 7.6 首先初始化变量 `input_file`，赋值为此代码示例的 CSV 文件名。列表 7.6 的后续部分包含一个 `awk` 脚本，它将每个输入以逗号分隔的形式打印，可以重定向到 CSV 文件。运行列表 7.6 中的代码，你将看到：
 
-```
- nancy jones,marketing dept,san francisco
+```text
+nancy jones,marketing dept,san francisco
 dave smith,sales dept,chicago
 steve anderson,marketing dept,seattle
 ```
@@ -8280,8 +8180,8 @@ steve anderson,marketing dept,seattle
 
 ***列表 7.7: multi_line3.csv***
 
-```
- id,fname,lname
+```csv
+id,fname,lname
 1,
 donna,
 rhymes?
@@ -8294,13 +8194,11 @@ vaughn#"
 
 ***列表 7.8: split_quotes.sh***
 
-
-
-
-
 ```bash
- # Records are separated by blank lines
+# Records are separated by blank lines
+
 # PART 1: create a single string
+
 interfile1="temp_single_line1.csv"
 interfile2="temp_single_line2.csv"
 interfile3="temp_single_line3.csv"
@@ -8323,7 +8221,9 @@ BEGIN { count = 1; colCount = 3 }
 }' > $interfile1
 
 # id,fname,lname,1,donna,rhymes?,2,dave,"jones$",3,john,van jones.#,4,stevie,"ray,vaughn#",5,ralph,emerson#,
+
 # PART 2: replace patterns like "abc,def" with "abcZdef"
+
 cat $interfile1 | awk -F"," '
 {
   for(i=1; i<=NF; i++) {
@@ -8333,9 +8233,10 @@ cat $interfile1 | awk -F"," '
        printf("%s,",$i)
     }
   }
-}
-' > $interfile2
+}' > $interfile2
+
 # PART 3: ensure that each line contains three fields
+
 cat $interfile2 | awk -F',' '
 BEGIN { start_quote = 0; end_quote = 0; quote = 0; colCount = 3 }
 {
@@ -8359,20 +8260,31 @@ BEGIN { start_quote = 0; end_quote = 0; quote = 0; colCount = 3 }
           }
         }
      }
-
      if( quote == 0) {
        if(i % colCount == 0) {
          print ""
        }
-     } else {
-       if(start_quote == 1 && end_quote == 1) {
-         quote = 0
-         start_quote = 0
-         end_quote = 0
-       }
-     }
+```
+
+
+
+```bash
+} else {
+
+  if(start_quote == 1 && end_quote == 1) {
+
+    quote = 0
+
+    start_quote = 0
+
+    end_quote = 0
+
   }
+
 }
+
+}
+
 ' > $interfile3
 
 cat $interfile3 | sed -e 's/Z/,/' -e '/^,,/d' -e 's/,$//'
@@ -8383,11 +8295,16 @@ cat $interfile3 | sed -e 's/Z/,/' -e '/^,,/d' -e 's/,$//'
 接下来，`Listing 7.8` 包含（“PART 1”）一个带有 `BEGIN` 的 `awk` 脚本，它打印每行输入，然后执行以下条件逻辑。如果输入行*不是*以“，”结尾，则打印一个“，”。否则，如果输入行*不是*以数字开头且 `count` 的值是 3 的倍数，则打印一个“，”，如下所示：
 
 ```bash
- if( $0 !~ /^[0-9]/ ) {
+if( $0 !~ /^[0-9]/ ) {
+
   if( count % colCount == 0) {
+
     printf(",")
+
   }
+
   count += 1
+
 }
 ```
 
@@ -8398,23 +8315,24 @@ cat $interfile3 | sed -e 's/Z/,/' -e '/^,,/d' -e 's/,$//'
 前面的逻辑通过在字段分别包含起始引号和结束引号时将变量 `start_quote` 和 `end_quote` 设置为值 `1` 来检测嵌套的“，”。执行上述判断的代码涉及检查当前字段与*下一个*字段的内容，如下所示：
 
 ```bash
- if( $i ~ /^"/ && $(i+1) ~ /"$/ ) {
+if( $i ~ /^"/ && $(i+1) ~ /"$/ ) {
 ```
 
 你可以看到，前面的代码段检查字段 `i` 是否*起始*于引号（"）以及字段 `(i+1)` 是否*结束*于引号（"），在这种情况下将打印字母 `Z`。
 
 `Listing 7.8` 的下部分（“PART 3”）是一个 `awk` 脚本，其目的是打印包含三个字段的输出行。不包含引号的字段或包含平衡引号的字段将直接打印。其他字段将检查起始引号和结束引号。每当循环变量 `i` 是 3 的倍数时，就会打印换行符，并重置*旨在*让你离开舒适圈的变量 `start_quote` 和 `end_quote`。
 
-### 项目概述
+## 项目概述
 
 （注：此处调整了原文逻辑顺序的标题标题）
+
 `Listing 7.8` 初始化了三个变量，格式为 `temp_single_linex.csv` 的 CSV 文件名，其中 `x` 被替换为 `1`、`2` 和 `3`，同时初始化变量 `csv_file` 为 CSV 文件 `multi_line3.csv`。
 
 接下来，`Listing 7.8` 包含（“PART 1”）一个带有 `BEGIN` 的 `awk` 脚本，它打印每行输入，然后执行以下条件逻辑。如果输入行*不是*以“，”结尾，则打印一个“，”。否则，如果输入行*不是*以数字开头且 `count` 的值是 3 的倍数，则打印一个“，”，如下所示：
 
 你可以看到，前面的代码块让人想起了第 `6` 章中 shell 脚本 `delimiter1.sh` 的逻辑。
 
-### 为什么要做这个项目？
+## 为什么要做这个项目？
 
 `Listing 7.8` 的下部分（“PART 2”）是另一个 `awk` 脚本，其目的是将嵌套的“，”替换为字母 `Z`。字母 `Z` 的选择是任意的，你可以将其替换为 CSV 文件中未出现的其他字符或字符串。
 
@@ -8422,42 +8340,41 @@ cat $interfile3 | sed -e 's/Z/,/' -e '/^,,/d' -e 's/,$//'
 
 `Listing 7.8` 的下部分（“PART 3”）是一个 `awk` 脚本，其目的是打印包含三个字段的输出行。不包含引号的字段或包含平衡引号的字段将直接打印。其他字段将检查起始引号和结束引号。每当循环变量 `i` 是 3 的倍数时，就会打印换行符，并重置*旨在*让你离开舒适圈的变量 `start_quote` 和 `end_quote`。
 
-### 项目任务
+## 项目任务
 
 此项目需要多个 CSV 文件来维护国家、城市、场馆和日期等信息。部分任务包括：
 
--   步骤 1：填充国家和国际代码 CSV 文件
--   步骤 2：填充每个国家的城市列表 CSV 文件
--   步骤 3：根据国家代码生成城市代码
--   步骤 4：生成填充 MySQL 中 city_code 表的 SQL 文件
--   步骤 5：将乐队相关信息转换为 CSV 文件
--   步骤 6：将乐队相关信息转换为 CSV 文件
--   步骤 7：生成活动日历（COE）CSV 文件
+- 步骤 1：填充国家和国际代码 CSV 文件
+- 步骤 2：填充每个国家的城市列表 CSV 文件
+- 步骤 3：根据国家代码生成城市代码
+- 步骤 4：生成填充 MySQL 中 `city_code` 表的 SQL 文件
+- 步骤 5：将乐队相关信息转换为 CSV 文件
+- 步骤 6：将乐队相关信息转换为 CSV 文件
+- 步骤 7：生成活动日历（COE）CSV 文件
 
 执行上述每个任务的代码示例如下：
 
--   步骤 1：手动操作
--   步骤 2：手动操作
--   步骤 3：`construct_city_codes.py` (Python)
--   步骤 4：`city_codes_sql.sh` (awk 脚本)
--   步骤 5：`BandsToCSV.java` (Java 程序)
-
-
-
-
-
-- 步骤 6：`generate_coe.py` (Python)
-- 步骤 7：`generate_project.sh` (shell 脚本)
+- 步骤 1：手动操作
+- 步骤 2：手动操作
+- 步骤 3：`construct_city_codes.py`（Python）
+- 步骤 4：`city_codes_sql.sh`（awk 脚本）
+- 步骤 5：`BandsToCSV.java`（Java 程序）
+- 步骤 6：`generate_coe.py`（Python）
+- 步骤 7：`generate_project.sh`（shell 脚本）
 
 在某些情况下，执行给定任务有多个代码示例。例如，步骤 5 也可以通过 Python 文件 `bands_to_csv.py` 完成。
 
 在前面的每个步骤以及手动执行的步骤中都会生成示例数据或代码片段：
 
-```
- • 001,usa
+```text
+• 001,usa
+
 • 039,100,firenze
+
 • france,antibe,nice,paris,st_jeannet
+
 • INSERT INTO city_codes VALUES ( 039,100,firenze );
+
 • 100,The Data Wranglers,Dave Pallai
 ```
 
@@ -8467,10 +8384,10 @@ cat $interfile3 | sed -e 's/Z/,/' -e '/^,,/d' -e 's/,$//'
 
 在为国家生成唯一 ID 的各种方法中，一种简单的方法是根据每个国家的国际电话前缀来识别它，这些前缀是唯一的。在项目中，`country_codes.csv` 是通过在线查找包含此类链接手动创建的。例如，列表 7.9 显示了 `country_codes.csv` 的内容，包含了该项目的国家名称及其对应的国际代码。
 
-列表 7.9：country_codes.csv
+**列表 7.9：`country_codes.csv`**
 
-```
- 001,usa
+```csv
+001,usa
 033,france
 034,spain
 039,italy
@@ -8484,10 +8401,10 @@ cat $interfile3 | sed -e 's/Z/,/' -e '/^,,/d' -e 's/,$//'
 
 列表 7.10 显示了 `countries_cities.csv` 的内容，包含国家名称和属于这些国家的城市列表。
 
-列表 7.10：countries_cities.csv
+**列表 7.10：`countries_cities.csv`**
 
-```
- italy,firenze,milano,roma,venezia
+```csv
+italy,firenze,milano,roma,venezia
 france,antibe,nice,paris,st_jeannet
 germany,berlin,frankfurt
 spain,barcelona,madrid
@@ -8499,133 +8416,215 @@ mexico,mexico_city,tijuana
 
 列表 7.11 显示了 `construct_city_codes.sh` 的内容，说明了如何为属于给定国家的每个城市生成唯一代码。
 
-列表 7.11：construct_city_codes.sh
+**列表 7.11：`construct_city_codes.sh`**
 
-```
- FILE1="country_codes.csv"
+```bash
+FILE1="country_codes.csv"
+
 FILE2="countries_cities.csv"
+
 rm -f city_codes.csv
 
 awk -F"," '
+
 BEGIN {
+
    FS=","; OUT_FILE="city_codes.csv";
+
    prev_name = ""; city_name = "";
+
    start_code=100; curr_code = 100;
+
    city_code = ""; incr_code = 100
 
    printf("=> BEGIN-PROCESSING: %s\n",ARGV[1])
+
    while(getline line < ARGV[1]){
+
      #format: country-code,country-name
+
      split(line,data)
+
      code = data[1]
+
      country = data[2]
+
      #printf("code: %s country: %s\n",code,country)
+
      country_code[country] = code
+
      code_country[code] = country
+
    }
+
    close(ARGV[1])
+
 }
+
 ##########################################
+
 # 读取 countries_cities.csv 中的每行
+
 ### 将每行拆分为城市列表
+
 ### 生成城市代码包含：
+
 # country_code, curr_code, city_name
+
 # countries_cities.csv 中的示例行：
+
 # italy,firenze,milano,roma,venezia
+
 ##########################################
+
 {
+
    #sample: italy,firenze,milano,roma,venezia
+
    split($0,data)
+
    code    = data[1]
+
    country = data[2]
 
    #printf(" code = %s country = %s\n", code, country)
+
    #printf("=> CHECK CODE FOR: %s x\n", country_code[code])
 
    if(country_code[country] == "") {
+
       printf("=> MAIN-CITIES in %s:\n",$0)
+
       curr_code = start_code
+
       for(i=2; i<=NF; i++) {
+
          city_code = country_code[$1] "_" curr_code "_" i
+
          printf("=> constructed city_code:%s\n",city_code)
+
          print city_code >> OUT_FILE
+
          curr_code += incr_code
+
       }
 
       if(prev_name == "") {
+
         city_name = $1
+
       } else {
+
         if(prev_name != $1) {
+
           # 处理不同的国家：
+
           prev_name = city_name
+
           city_name = $1
+
           curr_code = start_code
+
         }
+
       }
 
       if(city_code == 0) city_code = start_code
+
    } else {
+
       #printf("=> SKIPPING INVALID LINE: %s\n",$0)
+
    }
+
 } $FILE1 $FILE2
+
+'
 ```
 
-列表 7.11 使用 CSV 文件 `country_codes.csv` 和 `countries_cities.csv` 的名称初始化 `FILE1` 和 `FILE2`，随后是一个初始化多个字符串和数值变量的 `awk` 脚本。接下来，列表 7.11 包含一个 `awk` 脚本，其 `BEGIN` 块包含一个循环，读取 `country_codes.csv` 文件的内容（国家名称和相关的三位代码）。这些值对用于填充 `country_code` 和 `code_country` 字典。`country_code` 的键是国家名称，值三位代码，而 `code_country` 的键值反相反。下一块代码是 `awk` 脚本的主执行块，它涉及条件逻辑和一个大的块。设置条件逻辑的原因是 `awk` 无论是否在 `BEGIN` 块中处理过，都会处理结尾指定的两个输入文件。由于 `awk` 的性质，列表 7.11 两次处理 `FILE1`：一次在 `BEGIN` 块中，另是在主执行块中（这是 `awk` 的特性还是功能？）。因此，主块中的代码必须跳过 `FILE1` 中的行，并仅处理 `FILE2` 中的行。跳过 `FILE1` 的方法非常简单：`FILE1` 中的行格式为 `country_code,country`（例如 `001,usa`），并且代码 `001` 在 `country_code` 字典中不存在。因此，只有 CSV 文件 `FILE2` 中的行满足此条件：
+列表 7.11 使用 CSV 文件 `country_codes.csv` 和 `countries_cities.csv` 的名称初始化 `FILE1` 和 `FILE2`，随后是一个初始化多个字符串和数值变量的 `awk` 脚本。接下来，列表 7.11 包含一个 `awk` 脚本，其 `BEGIN` 块包含一个循环，读取 `country_codes.csv` 文件的内容（国家名称和相关的三位代码）。这些值对用于填充 `country_code` 和 `code_country` 字典。`country_code` 的键是国家名称，值三位代码，而 `code_country` 的键值相反。
 
-```
+下一块代码是 `awk` 脚本的主执行块，它涉及条件逻辑和一个大的块。设置条件逻辑的原因是 `awk` 无论是否在 `BEGIN` 块中处理过，都会处理结尾指定的两个输入文件。由于 `awk` 的性质，列表 7.11 两次处理 `FILE1`：一次在 `BEGIN` 块中，另一次在主执行块中（这是 `awk` 的特性还是功能？）。因此，主块中的代码必须跳过 `FILE1` 中的行，并仅处理 `FILE2` 中的行。
+
+跳过 `FILE1` 的方法非常简单：`FILE1` 中的行格式为 `country_code,country`（例如 `001,usa`），并且代码 `001` 在 `country_code` 字典中不存在。因此，只有 CSV 文件 `FILE2` 中的行满足此条件：
+
+```awk
 country_code[country] == ""
 ```
 
 此 `if` 语句内部的代码包含一个循环，为 `FILE2` 中每行列出的每个城市构建 `city_code`。核心思想是，每个城市的 `city_code` 是通过拼接其国家代码、基于 `curr_code` 值生成的数字以及城市本身构建的。例如，接下来的行指定了意大利（其国家代码为 `039`）以及四个城市：
 
-```
+```text
 firenze,milano,roma,venezia
 ```
 
 因此，前一行中意大利每个城市的 `city_code` 如下：
 
-```
+```text
 039_100_firenze
 039_200_milano
 039_300_roma
 039_400_venezia
 ```
 
-运行 列表 7.11 中的代码，你将看到以下输出：
+运行列表 7.11 中的代码，你将看到以下输出：
 
-```
- => BEGIN-PROCESSING: country_codes.csv
+```text
+=> BEGIN-PROCESSING: country_codes.csv
+
 => MAIN-CITIES in italy,firenze,milano,roma,venezia:
+
 => constructed city_code:039_100_firenze
+
 => constructed city_code:039_200_milano
+
 => constructed city_code:039_300_roma
+
 => constructed city_code:039_400_venezia
+
 => MAIN-CITIES in france,antibe,nice,paris,st_jeannet:
+
 => constructed city_code:033_100_antibe
+
 => constructed city_code:033_200_nice
+
 => constructed city_code:033_300_paris
+
 => constructed city_code:033_400_st_jeannet
+
 => MAIN-CITIES in germany,berlin,frankfurt:
+
 => constructed city_code:049_100_berlin
+
 => constructed city_code:049_200_frankfurt
+
 => MAIN-CITIES in spain,barcelona,madrid:
+
 => constructed city_code:034_100_barcelona
+
 => constructed city_code:034_200_madrid
+
 => MAIN-CITIES in uk,liverpool,london,manchester:
+
 => constructed city_code:044_100_liverpool
+
 => constructed city_code:044_200_london
+
 => constructed city_code:044_300_manchester
+
 => MAIN-CITIES in mexico,mexico_city,tijuana:
+
 => constructed city_code:052_100_mexico_city
+
 => constructed city_code:052_200_tijuana
 ```
 
-列表 7.12 显示了由 列表 7.11 代码生成的 `city_codes.csv` 内容。
+列表 7.12 显示了由列表 7.11 代码生成的 `city_codes.csv` 内容。
 
-列表 7.12：city_codes.csv
+**列表 7.12：`city_codes.csv`**
 
-```
- 039_100_firenze
+```text
+039_100_firenze
 039_200_milano
 039_300_roma
 039_400_venezia
@@ -8644,51 +8643,75 @@ firenze,milano,roma,venezia
 052_200_tijuana
 ```
 
-
-
-
-
-# 从国家代码生成城市代码：PYTHON
+# 从国家代码生成城市代码：Python
 
 Listing 7.13 显示了 `construct_city_codes2.py` 的内容，它展示了如何为给定国家下的每个城市生成唯一代码。
 
-### 列表 7.13: construct_city_codes2.py
+### 列表 7.13：`construct_city_codes2.py`
 
 ```python
- import csv
+import csv
 
 FILE1="country_codes.csv"
-FILE2="countries_cities.csv"
+```
 
-OUTFILE1="python_city_codes.txt"
-OUTFILE2="python_city_codes.csv"
-OUTFILE3="python_city_codes.sql"
 
-prev_name  = ""
-city_name  = ""
-curr_name  = ""
-start_code = 100
-curr_code  = 100
-city_code1 = ""
-city_code2 = ""
-incr_code  = 100
-code_country = {}
-country_code = {}
 
-# STEP 1: 读取带有代码和国家值的文件：
+`FILE2="countries_cities.csv"`
+
+`OUTFILE1="python_city_codes.txt"`
+
+`OUTFILE2="python_city_codes.csv"`
+
+`OUTFILE3="python_city_codes.sql"`
+
+`prev_name = ""`
+
+`city_name = ""`
+
+`curr_name = ""`
+
+`start_code = 100`
+
+`curr_code = 100`
+
+`city_code1 = ""`
+
+`city_code2 = ""`
+
+`incr_code = 100`
+
+`code_country = {}`
+
+`country_code = {}`
+
+# STEP 1: 读取带有代码和国家值的文件
+
+```
 print("=> BEGIN-PROCESSING:",FILE1)
+
 with open(FILE1, mode ='r')as file:
+
   # 读取 CSV 文件
+
   csvFile = csv.reader(file)
 
   # 显示 CSV 文件的内容
-  for line in csvFile:
-    code    = line[0]
-    country = line[1]
-    country_code[country] = code
-    code_country[code] = country
 
-# STEP 2: 读取国家和城市文件：
+  for line in csvFile:
+
+    code    = line[0]
+
+    country = line[1]
+
+    country_code[country] = code
+
+    code_country[code] = country
+```
+
+# STEP 2: 读取国家和城市文件
+
+```
 ##########################################
 # 读取 countries_cities.csv 中的每一行
 ### 将每行分割为城市列表
@@ -8699,81 +8722,117 @@ with open(FILE1, mode ='r')as file:
 ##########################################
 
 print("=> BEGIN-PROCESSING:",FILE2)
-#sample: italy,firenze,milano,roma,venezia
 
+#sample: italy,firenze,milano,roma,venezia
 with open(FILE2, mode ='r')as file:
+
   # 读取 CSV 文件
+
   csvFile = csv.reader(file)
 
   # 打开两个输出文件：
+
   # 创建 txt_writer1:
+
   txt_writer1 = open(OUTFILE1,'w')
 
   # 创建 csv_writer2:
+
   csv_writer2 = open(OUTFILE2,'w')
 
   # 创建 sql_writer3:
+
   sql_writer3 = open(OUTFILE3,'w')
 
   for line in csvFile:
+
     country = line[0]
+
     code = country_code[country]
+
     #print("full line:",line)
+
     #print(" code = ",code," country = ",country)
 
     #print("=> MAIN-CITIES in:",line)
+
     curr_code = start_code
+
     column_count = len(line)
+
     for i in range(2,column_count):
+
       city_code1 = str(code) + "_" +
+
                    str(curr_code) + "_" + str(line[i])
 
       city_code2 = str(code) + "," +
+
                    str(curr_code) + "," + str(line[i])
+
       print("=> constructed city_code1:",city_code1)
 
       # 根据城市代码生成 SQL 语句：
+
       sql_stmt = 'INSERT INTO city_codes VALUES ('
+
       sql_stmt += str(code)+','+str(curr_code)+',"'+line[i]+'");\n'
 
       # 将 SQL 语句写入 SQL 文件：
+
       sql_writer3.write(sql_stmt)
 
       # 将城市代码写入 CSV 文件：
+
       txt_writer1.write(city_code1+"\n")
+
       #curr_code += incr_code
 
       # 将城市代码写入 TXT 文件：
+
       csv_writer2.write(city_code2+"\n")
+
       curr_code += incr_code
 
     if(curr_name == None):
-      curr_name = line[1]
-    else:
-      if(curr_name != line[1]):
-        # 处理不同的国家：
-        prev_name = curr_name
-        curr_name = line[1]
-        curr_code = start_code
-    if(city_code1 == ""): city_code1 = start_code
-    if(city_code2 == ""): city_code2 = start_code
 
-# STEP 3: 关闭 city_code 文件：
+      curr_name = line[1]
+
+    else:
+
+      if(curr_name != line[1]):
+
+        # 处理不同的国家：
+
+        prev_name = curr_name
+
+        curr_name = line[1]
+
+        curr_code = start_code
+
+    if(city_code1 == ""): city_code1 = start_code
+
+    if(city_code2 == ""): city_code2 = start_code
+```
+
+# STEP 3: 关闭 city_code 文件
+
+```
 #city_code_file.close()
 ```
 
-Listing 7.13 包含了 Listing 7.11 的 Python 版本，后者包含一个基于 awk 的 shell 脚本，用于生成城市代码。由于你对 shell 编程的熟悉程度可能低于 Python，Listing 7.11 包含了代码的详细说明，而 Python 代码则省略了详细说明。由于逻辑流是相同的，主要的区别在于特定语言的语法，你可以逐行进行比较。如果你运行 Listing 7.13 中的代码，你将看到与 Listing 7.12 基本上完全相同的输出。
+`Listing 7.13` 包含了 `Listing 7.11` 的 Python 版本，后者包含一个基于 `awk` 的 shell 脚本，用于生成城市代码。由于你对 shell 编程的熟悉程度可能低于 Python，`Listing 7.11` 包含了代码的详细说明，而 Python 代码则省略了详细说明。由于逻辑流是相同的，主要的区别在于特定语言的语法，你可以逐行进行比较。如果你运行 `Listing 7.13` 中的代码，你将看到与 `Listing 7.12` 基本上完全相同的输出。
 
-Listing 7.13 和 Listing 7.12 之间有一个显著的区别。Listing 7.13 中**加粗显示**的代码片段用于生成 SQL 语句。
+`Listing 7.13` 和 `Listing 7.12` 之间有一个显著的区别。`Listing 7.13` 中加粗显示的代码片段用于生成 SQL 语句。
 
 # 为乐队成员生成 CSV 文件（JAVA）
 
-Listing 7.16 显示了 `bands.xml` 的内容，Listing 7.17 显示了 `BandsToCSV.java` 的内容，展示了如何将 XML 文件转换为 CSV 文件。
+`Listing 7.16` 显示了 `bands.xml` 的内容，`Listing 7.17` 显示了 `BandsToCSV.java` 的内容，展示了如何将 XML 文件转换为 CSV 文件。
 
 ### 列表 7.16: bands.xml
 
 ```xml
- <bands>
+<bands>
   <band>
     <band_id>
       100
@@ -8810,12 +8869,8 @@ Listing 7.16 显示了 `bands.xml` 的内容，Listing 7.17 显示了 `BandsToCS
 
 ### 列表 7.17: BandsToCSV.java
 
-
-
-
-
-```
- import csv
+```java
+import csv
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -8860,7 +8915,6 @@ public class BandsToCSV
                       doc.getDocumentElement().getNodeName());
 
          NodeList bandList = doc.getElementsByTagName("band");
-
          for (int idx = 0; idx < bandList.getLength(); idx++) {
             Node node = bandList.item(idx);
             if (node.getNodeType() == Node.ELEMENT_NODE) {
@@ -8877,7 +8931,6 @@ public class BandsToCSV
                String band_name =
                          element.getElementsByTagName("band_name")
                                 .item(0).getTextContent();
-
                band_name = band_name.trim();
                band_name = band_name.replaceAll("\\n", "");
                System.out.println("band_name = "+band_name);
@@ -8885,7 +8938,6 @@ public class BandsToCSV
                // 6) the band members:
                NodeList memberList =
                           element.getElementsByTagName("band_member");
-
                for (int idx2=0; idx2<memberList.getLength(); idx2++)
                {
                   Node memberNode = memberList.item(idx2);
@@ -8894,10 +8946,8 @@ public class BandsToCSV
                      Element element2 = (Element) memberNode;
                      System.out.println("Current Element: " +
                        memberNode.getNodeName());
-
                      String band_member =
                        memberList.item(idx2).getTextContent();
-
                      //band_member = band_member.replaceAll("\\s", "");
                      band_member = band_member.trim();
                      band_member = band_member.replaceAll("\\n", "");
@@ -8919,7 +8969,9 @@ public class BandsToCSV
 }
 ```
 
-Listing 7.17 从多个导入 开始，然后定义了 Java 类 `BandsToCSV`，该类包含一个 `main()` 方法，并分为六部分。第一部分创建文件对象 `outfile`，第二部分创建 `FileWriter` 对象 `csvWriter`。
+
+
+`Listing 7.17` 从多个导入开始，然后定义了 Java 类 `BandsToCSV`，该类包含一个 `main()` 方法，并分为六部分。第一部分创建文件对象 `outfile`，第二部分创建 `FileWriter` 对象 `csvWriter`。
 
 第三部分是最长的部分，同时也包含了第四和第五部分。第三部分的开头包含一个 `try/catch` 块，在其中构建了一个 `Document` 对象 `doc`，它是 XML 文档的根节点，包含了关于乐队的信息。
 
@@ -8927,191 +8979,261 @@ Listing 7.17 从多个导入 开始，然后定义了 Java 类 `BandsToCSV`，�
 
 此时执行第五部分，它提取当前节点中 `band_name` 的值，接着是第六部分，第 6 部分由一个 `for` 循环组成，用于从当前节点中提取所有其他与乐队相关的信息。注意，第 6 部分中的循环包含条件逻辑：如果当前元素是 `ELEMENT_NODE` 类型，则对变量 `band_member` 的内容进行修剪以删除空格。
 
-我们现在到了第 7 部分，这是 Listing 7.17 中的最后部分，也是以下以 CSV 格式写入乐队信息的代码片段所在的位置：
+我们现在到了第 7 部分，这是 `Listing 7.17` 中的最后部分，也是以下以 CSV 格式写入乐队信息的代码片段所在的位置：
 
-```
+```java
 csvWriter.write(band_id+","+
                                      band_name+","+
                                      band_member+"\n");
 ```
 
-运行 Listing 7.17 中的代码，你将看到以下输出：
+运行 `Listing 7.17` 中的代码，你将看到以下输出：
 
-```
+```text
 ROOT: bands
+
 band_id = 100
+
 band_name = The Data Wranglers
+
 Current Element: band_member
+
 band_member = Dave Pallai
+
 Current Element: band_member
+
 band_member = Jennifer Blaney
+
 Current Element: band_member
+
 band_member = Raymond Reddington
+
 band_id = 200
+
 band_name = The Data Cleaners
+
 Current Element: band_member
+
 band_member = Scary Joe
+
 Current Element: band_member
+
 band_member = The Smoother
 ```
 
-Listing 7.18 显示了由 Listing 7.17 中的 Java 代码生成的 CSV 文件 `bandmembers.csv` 的内容。
+`Listing 7.18` 显示了由 `Listing 7.17` 中的 Java 代码生成的 CSV 文件 `bandmembers.csv` 的内容。
 
-***LISTING 7.18: bandmembers.csv***
+### Listing 7.18：`bandmembers.csv`
 
-```
+```csv
 100,The Data Wranglers,Dave Pallai
+
 100,The Data Wranglers,Jennifer Blaney
+
 100,The Data Wranglers,Raymond Reddington
+
 200,The Data Cleaners,Scary Joe
+
 200,The Data Cleaners,The Smoother
 ```
 
-### **使用 Python 为乐队成员生成 CSV 文件**
+## 使用 Python 为乐队成员生成 CSV 文件
 
-Listing 7.19 显示了 `BandsToCSV.java` 的内容，它演示了如何从 XML 文档 `bandmembers.csv` 生成文本文件以及 CSV 文件。
+`Listing 7.19` 显示了 `BandsToCSV.java` 的内容，它演示了如何从 XML 文档 `bandmembers.csv` 生成文本文件以及 CSV 文件。
 
-***LISTING 7.19: bands_to_csv.py***
-
-
-
-
+### Listing 7.19：`bands_to_csv.py`
 
 ```python
- from xml.etree import cElementTree as ET
+from xml.etree import cElementTree as ET
 
-INFILE1="bands.xml"
-OUTFILE1="python_bandmembers.txt"
-OUTFILE2="python_bandmembers.csv"
+INFILE1 = "bands.xml"
+
+OUTFILE1 = "python_bandmembers.txt"
+
+OUTFILE2 = "python_bandmembers.csv"
 
 # create txt_writer1:
-txt_writer1 = open(OUTFILE1,'w')
+txt_writer1 = open(OUTFILE1, 'w')
 
 # create csv_writer2:
-csv_writer2 = open(OUTFILE2,'w')
+csv_writer2 = open(OUTFILE2, 'w')
 
-band_id      = ""
-band_name    = ""
-band_member  = ""
+band_id = ""
+
+band_name = ""
+
+band_member = ""
 
 xml_data = ET.parse(INFILE1).getroot()
+
 for band in xml_data.iter('band'):
-  for child in band:
-    #print("child: ",child)
-    print("name: ",child.tag)
-    name = child.tag
+    for child in band:
+        # print("child: ", child)
 
-    if(name == "band_id"):
-      band_id = child.text
-      band_id = band_id.strip()
-      print("band_id =     ", band_id)
-    elif(name == "band_name"):
-      band_name = child.text
-      band_name = band_name.strip()
-      print("band_name =   ", band_name)
-    elif(name == "band_member"):
-      band_member = child.text
-      band_member = band_member.strip()
-      print("band_member = ", band_member)
+        print("name: ", child.tag)
 
-      #the_member = child.text
-      #the_member = the_member.strip()
-      #print("the_member = ",the_member)
+        name = child.tag
 
-    if(band_id != "" and band_name != "" and band_member != ""):
-      line1 = str(band_id) + "_" + band_name + "_" + band_member
-      line2 = str(band_id) + "," + band_name + "," + band_member
-      print("=> constructed line1:",line1)
-      print("=> constructed line2:",line2)
+        if name == "band_id":
+            band_id = child.text
 
-      # write line to CSV file:
-      txt_writer1.write(line1+"\n")
+            band_id = band_id.strip()
 
-      # write line to TXT file:
-      csv_writer2.write(line2+"\n")
+            print("band_id =     ", band_id)
 
-      #band_id      = ""
-      #band_name    = ""
-      band_member  = ""
+        elif name == "band_name":
+            band_name = child.text
+
+            band_name = band_name.strip()
+
+            print("band_name =   ", band_name)
+
+        elif name == "band_member":
+            band_member = child.text
+
+            band_member = band_member.strip()
+
+            print("band_member = ", band_member)
+
+            # the_member = child.text
+            # the_member = the_member.strip()
+            # print("the_member = ", the_member)
+
+        if band_id != "" and band_name != "" and band_member != "":
+            line1 = str(band_id) + "_" + band_name + "_" + band_member
+
+            line2 = str(band_id) + "," + band_name + "," + band_member
+
+            print("=> constructed line1:", line1)
+
+            print("=> constructed line2:", line2)
+
+            # write line to CSV file:
+            txt_writer1.write(line1 + "\n")
+
+            # write line to TXT file:
+            csv_writer2.write(line2 + "\n")
+
+            # band_id = ""
+            # band_name = ""
+
+            band_member = ""
 ```
 
 列表 7.19 首先为现有文件初始化一些变量，为输出文件初始化变量，然后将变量 `xml_data` 初始化为 `bands.xml` 文件的根节点，该文件包含与乐队的信息，如下：
 
 ```python
- xml_data = ET.parse(INFILE1).getroot()
+xml_data = ET.parse(INFILE1).getroot()
 ```
 
 列表 7.19 的下一部分是一个嵌套循环，它遍历 `band` 元素，对于每个乐队，还有另一个循环来遍历当前乐队的元素。接下来，条件逻辑检查是否存在任何 `band_id`、`band_name` 和 `band_member` 节点，并初始化相应变量的值。
 
 最后的 `if` 语句检查这三个变量是否已填充了值，如果是，则构建一个基于 CSV 的输出行并写入 CSV 文件；同样地，还会构建并写入另一个基于文本的输出行到关联文本文件中。运行列表 7.19 中的代码，你将看到以下输出：
 
-```
- name:  band_id
-band_id =      100
-name:  band_name
-band_name =    The Data Wranglers
-name:  band_member
-band_member =  Dave Pallai
-=> constructed line1: 100_The Data Wranglers_Dave Pallai
-=> constructed line2: 100,The Data Wranglers,Dave Pallai
-name:  band_member
-band_member =  Jennifer Blaney
-=> constructed line1: 100_The Data Wranglers_Jennifer Blaney
-=> constructed line2: 100,The Data Wranglers,Jennifer Blaney
+```text
 name:  band_id
-band_id =      200
+
+band_id =      100
+
 name:  band_name
+
+band_name =    The Data Wranglers
+
+name:  band_member
+
+band_member =  Dave Pallai
+
+=> constructed line1: 100_The Data Wranglers_Dave Pallai
+
+=> constructed line2: 100,The Data Wranglers,Dave Pallai
+
+name:  band_member
+
+band_member =  Jennifer Blaney
+
+=> constructed line1: 100_The Data Wranglers_Jennifer Blaney
+
+=> constructed line2: 100,The Data Wranglers,Jennifer Blaney
+
+name:  band_id
+
+band_id =      200
+
+name:  band_name
+
 band_name =    The Data Cleaners
+
 name:  band_member
+
 band_member =  Raymond Reddington
+
 => constructed line1: 200_The Data Cleaners,Raymond Reddington
+
 => constructed line2: 200,The Data Cleaners,Raymond Reddington
+
 name:  band_member
+
 band_member =  Scary Joe
+
 => constructed line1: 200_The Data Cleaners,Scary Joe
+
 => constructed line2: 200,The Data Cleaners,Scary Joe
+
 name:  band_member
+
 band_member =  The Smoother
+
 => constructed line1: 200_The Data Cleaners,The Smoother
+
 => constructed line2: 200,The Data Cleaners,The Smoother
 ```
 
 同样检查列表 7.19 所在的目录，你会看到两个新文件：
 
-```
+```text
 python_bandmembers.txt
 python_bandmembers.csv
 ```
 
-### 生成日程 (COE)
+## 生成日程（COE）
 
-列表 7.20 显示 CSV 文件 `concert_dates.csv` 的内容，它包含一个活动日程：额外的详细信息存储在项目中创建的其他 CSV 文件中
+列表 7.20 显示 CSV 文件 `concert_dates.csv` 的内容，它包含一个活动日程：额外的详细信息存储在项目中创建的其他 CSV 文件中。
 
-***列表 7.20: concert_dates.csv***
+### 列表 7.20：`concert_dates.csv`
 
-```
- 100,039,vicenza,01/05/22
+```csv
+100,039,vicenza,01/05/22
+
 100,039,vicenza,01/05/22,50
+
 100,033,paris,01/15/22,80
+
 100,044,london,02/02/22,70
+
 100,049,berlin,02/09/22,75
+
 100,081,tokyo,02/19/22,100
+
 200,039,vicenza,01/08/22,50
+
 200,033,paris,01/18/22,70
+
 200,044,london,02/05/22,60
+
 200,049,berlin,02/13/22,80
+
 200,081,tokyo,02/27/22,100
 ```
 
 列表 7.20 中的每一行都包含以下格式的细节：
 
-```
+```text
 band_code,country_code,date,price
 ```
 
 目标 CSV `concert_coe.csv` 将增强 `concert_dates.csv` 的内容，使得每行包含以下格式的信息：
 
-```
+```text
 band_code,band_name,country_name,date,price
 ```
 
@@ -9119,76 +9241,117 @@ band_code,band_name,country_name,date,price
 
 列表 7.21 显示了 `generate_coe.py` 的内容，展示了如何通过两个额外的列增强 CSV 文件 `concert_dates.csv` 来生成 CSV 文件 `concert_coe.csv`。
 
-***列表 7.21: generate_coe.py***
+### 列表 7.21：`generate_coe.py`
 
 ```python
- import pandas as pd
+import pandas as pd
+
 import numpy as np
 
 # 1) 读取输入文件 concert_dates.csv
 # Header 行: band_code,country_code,date,price
 # 示例行: 100,039,vicenza,01/05/22,50
-concert_dates_file="concert_dates.csv"
+
+concert_dates_file = "concert_dates.csv"
 
 # 2) 读取 python_bandmembers.csv（乐队名称和成员）
 # 示例行: 100_The Data Wranglers_Dave Pallai
-band_members_file="python_bandmembers.csv"
+
+band_members_file = "python_bandmembers.csv"
 
 # 3) 读取 country_codes.csv（国家和代码）
 # 示例行: 039,italy
-cc_codes_file="country_codes.csv"
+
+cc_codes_file = "country_codes.csv"
 
 # 4) 创建输出文件 calendar_coe.csv:
 # Header 行: band_code,band_name,country_code,country_name,date,price
 # 示例行: The Data Wranglers,italy,vicenza,01/05/22,50
-outfile1="calendar_coe.csv"
+
+outfile1 = "calendar_coe.csv"
 
 # 5) 填充三个 dataframe:
+
 concert1_df = pd.read_csv(concert_dates_file)
+
 band2_df = pd.read_csv(band_members_file)
-cc3_df  = pd.read_csv(cc_codes_file)
+
+cc3_df = pd.read_csv(cc_codes_file)
 
 # 6) 添加列标签:
 # 现有行: 100,039,vicenza,01/05/22,50
-concert1_df.columns = ['band_code','country_code','City','Concert Date','Tickets (USD)']
-band2_df.columns = ['band_code','band_name','band_members']
-cc3_df.columns   = ['country_code','country_name']
+
+concert1_df.columns = [
+    'band_code',
+    'country_code',
+    'City',
+    'Concert Date',
+    'Tickets (USD)'
+]
+
+band2_df.columns = [
+    'band_code',
+    'band_name',
+    'band_members'
+]
+
+cc3_df.columns = [
+    'country_code',
+    'country_name'
+]
 
 # 7) 提取唯一乐队代码和名称数组:
+
 bands_unique_codes = band2_df.band_code.unique()
+
 bands_unique_names = band2_df.band_name.unique()
 
 # 8) 从唯一乐队代码和名称创建字典:
+
 bands_codes_names_dict = {}
-for code, name in zip(bands_unique_codes,bands_unique_names):
-  bands_codes_names_dict[code] = name
+
+for code, name in zip(bands_unique_codes, bands_unique_names):
+    bands_codes_names_dict[code] = name
 
 # 9) 插入列 "Band Name":
-concert1_df['Band Name'] = concert1_df['band_code'].map(bands_codes_names_dict)
+
+concert1_df['Band Name'] = concert1_df['band_code'].map(
+    bands_codes_names_dict
+)
 
 # 10) 从唯一国家代码和名称创建字典:
+
 country_code_to_name_dict = {}
+
 for index, row in cc3_df.iterrows():
-  country_code   = row['country_code']
-  country_name   = row['country_name']
-  country_code_to_name_dict[country_code] = country_name
+    country_code = row['country_code']
+
+    country_name = row['country_name']
+
+    country_code_to_name_dict[country_code] = country_name
 
 # 11) 插入列 "Country":
-concert1_df['Country'] = concert1_df['country_code'].map(country_code_to_name_dict)
+
+concert1_df['Country'] = concert1_df['country_code'].map(
+    country_code_to_name_dict
+)
 
 # 12) 删除乐队代码和国家代码:
+
 del concert1_df['band_code']
+
 del concert1_df['country_code']
 
 print("*** Concert Details ***")
+
 print(concert1_df)
+
 print()
 
 # 13) 将会详情保存到 CSV 文件:
+
 concert1_df.to_csv(outfile1, index=False)
 ```
-
-
 
 
 
@@ -9205,16 +9368,26 @@ Listing 7.21 的后续部分提取了唯一的乐队代码（band codes）及其
 最后，显示数据框 `concert1_df` 的内容，然后数据框的内容保存为 CSV 文件。运行 Listing 7.21 中的代码，你将看到以下输出：
 
 ```
- *** Concert Details ***
+*** Concert Details ***
+
       City Concert Date  Tickets (USD)           Band Name  Country
+
 0    paris   01/15/2022             80  The Data Wranglers   france
+
 1   london   02/02/2022             70  The Data Wranglers       uk
+
 2   berlin   02/09/2022             75  The Data Wranglers  germany
+
 3    tokyo   02/19/2022            100  The Data Wranglers    japan
+
 4  vicenza   01/08/2022             50   The Data Cleaners    italy
+
 5    paris   01/18/2022             70   The Data Cleaners   france
+
 6   london   02/05/2022             60   The Data Cleaners       uk
+
 7   berlin   02/13/2022             80   The Data Cleaners  germany
+
 8    tokyo   02/27/2022            100   The Data Cleaners    japan
 ```
 
@@ -9225,103 +9398,179 @@ Listing 7.22 显示了 `generate_project.sh` 的内容，该脚本自动化了�
 ***列表 7.22: generate_project.sh***
 
 ```
- echo "Assigning code to countries..."
+echo "Assigning code to countries..."
+
 #=> manual process
 
 echo "Assigning code to cities..."
+
 python3 construct_city_codes.py
+
 #=> generates city_codes.csv
 
 echo "Generate SQL for city codes..."
+
 ./city_codes_sql.sh
+
 #=> generates city_codes.sql
 
 echo "Converting personnel (XLSX) to CSV..."
+
 python3 save_xlsx_to_csv.py
+
 #=> generates personnel.csv
 
 echo "Converting bands_list (XML) to CSV..."
+
 # via Java:
+
 java BandsToCSV
+
 # via Python:
+
 #python3 bands_to_csv.py
+
 #=> generates bandmembers.csv
 
 echo "Generating CSV calendar of events (COE)..."
+
 python3 generate_coe.py
+
 #=> generates complete calendar
 
 #echo "Generating SQL script for COE..."
+
 #exercise
 
 #echo "Inserting COE into MySQL..."
+
 #exercise
 ```
 
 Listing 7.22 包含了本章之前讨论过的各种可执行文件，它们按顺序调用，以自动按正确顺序执行任务。运行 Listing 7.22 中的代码，你将看到以下输出：
 
 ```
- Assigning code to countries...
+Assigning code to countries...
+
 Assigning code to cities...
+
 => BEGIN-PROCESSING: country_codes.csv
+
 => BEGIN-PROCESSING: countries_cities.csv
+
 => constructed city_code1: 039_100_milano
+
 => constructed city_code1: 039_200_roma
+
 => constructed city_code1: 039_300_venezia
+
 => constructed city_code1: 033_100_nice
+
 => constructed city_code1: 033_200_paris
+
 => constructed city_code1: 033_300_st_jeannet
+
 => constructed city_code1: 049_100_frankfurt
+
 => constructed city_code1: 034_100_madrid
+
 => constructed city_code1: 044_100_london
+
 => constructed city_code1: 044_200_manchester
+
 => constructed city_code1: 052_100_tijuana
+
 Generate SQL for city codes...
+
 Contents of df1:
+
    Unnamed: 0 fname  lname                       Role gender  country
+
 0           0  john  smith               VP gender  country
+
 1           1  jane  smith                   Sales      f
+
 2           2  jack  jones          Coordinator      m
+
 3           3  dave  stone              Planner      m
+
 4           4  sara  stein          Director Relations      f
+
 5           5  eddy  bower      Directory of Security      m
+
 Contents of df1 after drop:
+
   fname  lname                       Role gender  country
+
 0  john  smith               VP
+
 1  jane  smith                   Sales      f
-2  jack  jones          Coordinator      m
-3  dave  stone              Planner      m
-4  sara  stein          Director Relations      f
-5  eddy  bower      Directory of Security      m
+
+2   jack  jones          Coordinator      m
+
+3   dave  stone              Planner      m
+
+4   sara  stein          Director Relations      f
+
+5   eddy  bower      Directory of Security      m
+
 Saving data frame to CSV file
+
 Converting bands_list (XML) to CSV...
+
 ROOT: bands
+
 band_id = 100
+
 band_name = The Data Wranglers
+
 Current Element: band_member
+
 band_member = Dave Pallai
+
 Current Element: band_member
+
 band_member = Jennifer Blaney
+
 band_id = 200
+
 band_name = The Data Cleaners
+
 Current Element: band_member
+
 band_member = Raymond Reddington
+
 Current Element: band_member
+
 band_member = Scary Joe
+
 Current Element: band_member
+
 band_member = The Smoother
+
 Generating CSV calendar of events (COE)...
+
 *** Concert Details ***
+
       City Concert Date  Tickets (USD)           Band Name  Country
+
 0    paris   01/15/2022             80  The Data Wranglers   france
+
 1   london   02/02/2022             70  The Data Wranglers       uk
+
 2   berlin   02/09/2022             75  The Data Wranglers  germany
+
 3    tokyo   02/19/2022            100  The Data Wranglers    japan
+
 4  vicenza   01/08/2022             50   The Data Cleaners    italy
-5    paris   01/18/2022             70   The Data Cleaners   france
-6   london   02/05/2022             60   The Data Cleaners       uk
-7   berlin   02/13/2022             80   The Data Cleaners  germany
-8    tokyo   02/27/2022            100   The Data Cleaners    japan
+
+5    paris   01/18/2022             70  The Data Cleaners   france
+
+6   london   02/05/2022             60  The Data Cleaners       uk
+
+7   berlin   02/13/2022             80  The Data Cleaners  germany
+
+8    tokyo   02/27/2022            100  The Data Cleaners    japan
 ```
 
 #### 项目后续说明
@@ -9332,12 +9581,9 @@ Generating CSV calendar of events (COE)...
 
 其次，本项目试图在代码复杂性和代码可读性之间取得平衡（即避免不必要的复杂度）。请记住，本项目涉及的是一个（尽管是人为设计的）几乎没有数据清洗要求的小数据集。相比之下，现实世界的项目可能涉及耗时且极其枯燥的数据清洗任务，这会让本项目显得微不足道。尽管如此，希望你可以利用本章以及上一章中的数据清洗代码示例来完成其他任务。
 
-
-
-
 第三，本项目向你展示了如何使用基于 `awk` 的 shell 脚本、`Python`、`Pandas` 和 `Java` 将文件转换为不同的格式。此外，你还学习了如何使用这些技术从现有文件生成新文件。事实上，在小数据集上进行转换可能已经让你意识到，当你处理比本项目大数百或数千倍的数据集时，需要预期什么样的复杂性。
 
-第四，你可能注意到 列表 7.21 并没有使用在本章早期创建的所有 CSV 文件，例如由 `Python` 脚本 `construct_city_codes.py` 创建的 CSV 文件 `python_city_codes.csv`。原因有两点：其是为了确保 列表 7.21 只有一页代码，而且这让你能够修改某些 CSV 文件的结构，从而可能导致需要包含 `python_city_codes.csv` 文件。这些语句对于调试和理解代码块的作用非常有帮助。然而，过多的 `print()` 语句会导致细节过载，因此在你理解了特定块后，如果需要，可以考虑再次注释掉这些语句。此外，你可以将某些输出复制/粘贴到相关的代码块中。
+第四，你可能注意到列表 7.21 并没有使用在本章早期创建的所有 CSV 文件，例如由 `Python` 脚本 `construct_city_codes.py` 创建的 CSV 文件 `python_city_codes.csv`。原因有两点：其是为了确保列表 7.21 只有一页代码，而且这让你能够修改某些 CSV 文件的结构，从而可能导致需要包含 `python_city_codes.csv` 文件。这些语句对于调试和理解代码块的作用非常有帮助。然而，过多的 `print()` 语句会导致细节过载，因此在你理解了特定块后，如果需要，可以考虑再次注释掉这些语句。此外，你可以将某些输出复制/粘贴到相关的代码块中。
 
 ### 总结
 
@@ -9355,88 +9601,110 @@ Generating CSV calendar of events (COE)...
 
 ## awk 命令
 
-`awk` (Aho, Weinberger, and Kernighan) 命令具有类 C 语法，你可以使用这个工具对数字和文本字符串执行复杂操作。顺便提一下，还有 `gawk` 命令（即 GNU `awk`）以及 `nawk` 命令（即“新” `awk`，书中未讨论这两个命令）。`nawk` 的优势之一是它允许你从外部设置内部变量的值。
+`awk`（Aho、Weinberger 和 Kernighan）命令具有类 C 语法，你可以使用这个工具对数字和文本字符串执行复杂操作。顺便提一下，还有 `gawk` 命令（即 GNU `awk`）以及 `nawk` 命令（即“新” `awk`，书中未讨论这两个命令）。`nawk` 的优势之一是它允许你从外部设置内部变量的值。
 
-#### 控制 awk 的内置变量
+### 控制 awk 的内置变量
 
-`awk` 命令提供了你可以从默认值更改的变量，用以控制 `awk` 执行操作的方式。此类变量（及其默认值）的 `FS` (" ")、`RS` ("\n")、`OFS` (" ")、`ORS` ("\n")、`SUBSEP` 和 `IGNORECASE`。变量 `FS` 和 `RS` 指定字段分隔符和记录分隔符，而变量 `OFS` 和 `ORS` 分别指定输出字段分隔符和输出记录分隔符。
+`awk` 命令提供了你可以从默认值更改的变量，用以控制 `awk` 执行操作的方式。此类变量（及其默认值）的 `FS`（`" "`）、`RS`（`"\n"`）、`OFS`（`" "`）、`ORS`（`"\n"`）、`SUBSEP` 和 `IGNORECASE`。变量 `FS` 和 `RS` 指定字段分隔符和记录分隔符，而变量 `OFS` 和 `ORS` 分别指定输出字段分隔符和输出记录分隔符。
 
 你可以将字段分隔符视为我们之前在其他命令中使用的分隔符/IFS。记录分隔符的行为类似于 `sed` 处理单行的方式；例如，`sed` 可以匹配或删除一个范围的行，而不是匹配或删除符合正则表达式的内容（而默认 `awk` 记录分隔符是换行符，因此默认情况下 `awk` 和 `sed` 具有相似的操控和引用文本文件中行的能力）。
 
 作为一个简单的示例，你可以通过更改 `ORS`（从默认的一个换行符改为两个换行符）在文件的每行之后打印一个空行，如下所示：
 
-```
+```bash
 cat columns.txt | awk 'BEGIN { ORS ="n\n" } ; { print $0 }'
-```其他内置变量包括 `FILENAME`（`awk` 正在读取的文件名）、`FNR`（当前文件中的记录数）、`NF`（当前输入记录的字段数）以及 `NR`（自程序执行以来 `awk` 处理的输入记录数）。
+```
+
+其他内置变量包括 `FILENAME`（`awk` 正在读取的文件名）、`FNR`（当前文件中的记录数）、`NF`（当前输入记录的字段数）以及 `NR`（自程序执行以来 `awk` 处理的输入记录数）。
 
 查阅在线文档获取有关 `awk` 命令这些（以及其他）参数的更多信息。
 
-awk 命令是如何工作的？
+### awk 命令是如何工作的？
 
 `awk` 命令逐条记录读取输入文件（默认情况下，一个记录是一行）。如果记录匹配模式，则执行动作（否则不执行任何动作）。如果没有给出搜索模式，则 `awk` 会对输入的每条记录执行给定的动作。如果没有给出动作，默认行为是打印所有匹配给定模式的记录。最后，不带任何动作的空括号 `{}` 什么都不做（即程序不会执行默认的打印操作）。注意，动作中的每条语句应用分号隔开。
 
 为了让上述段落更易理解，这里有一些涉及文本字符串和 `awk` 命令的简单示例（结果显示在每个代码段之后）。`-F` 切换将字段分隔符设置为其随后的内容，在本例中是空格。切换通常会为需要在 `BEGIN{}` 块内部使用命令的动作提供快捷方式：
 
+```bash
+x="a b c d e"
 
+echo $x | awk -F" " '{print $1}'
 
-
-
-```
- x="a b c d e"
-echo $x |awk -F" " '{print $1}'
 a
-echo $x |awk -F" " 'a{print NF}'
+
+echo $x | awk -F" " 'a{print NF}'
+
 5
-echo $x |awk -F" " '{print $0}'
+
+echo $x | awk -F" " '{print $0}'
+
 a b c d e
-echo $x |awk -F" " '{print $3, $1}'
+```
+
+
+
+```bash
+echo $x | awk -F" " '{print $3, $1}'
+```
+
+```text
 c a
 ```
 
-让我们将 `FS`（记录分隔符）更改为空字符串以计算字符串的长度，这次使用 `BEGIN{}` 语法：
+让我们将`FS`（记录分隔符）更改为空字符串以计算字符串的长度，这次使用`BEGIN{}`语法：
 
+```bash
+echo "abc" | awk 'BEGIN { FS = "" } ; { print NF }'
 ```
- echo "abc" | awk 'BEGIN { FS = "" } ; { print NF }'
+
+```text
 3
 ```
 
-以下示例展示了将 `test.txt` 指定为 `awk` 命令输入文件的几种等效方法：
+以下示例展示了将`test.txt`指定为`awk`命令输入文件的几种等效方法：
 
-```
- awk < test.txt '{ print $1 }'
+```bash
+awk < test.txt '{ print $1 }'
+
 awk '{ print $1 }' < test.txt
+
 awk '{ print $1 }' test.txt
 ```
 
-这里显示了另一种方法（正如我们之前讨论的，这可能是无效的，所以只有当 `cat` 能以某种方式增加价值时才这样做）：
+这里显示了另一种方法（正如我们之前讨论的，这可能是无效的，所以只有当`cat`能以某种方式增加价值时才这样做）：
 
+```bash
+cat test.txt | awk '{ print $1 }'
 ```
- cat test.txt | awk '{ print $1 }'
-```
 
-这个用四种方式完成相同任务的简单示例应该说明了为什么对任何复杂的 `awk` 调用进行注释几乎总是一个好主意。下一个查看你代码的人可能不知道或不记得你正在使用的语法。
+这个用四种方式完成相同任务的简单示例应该说明了为什么对任何复杂的`awk`调用进行注释几乎总是一个好主意。下一个查看你代码的人可能不知道或不记得你正在使用的语法。
 
-## 使用 printf() 语句对齐文本
+## 使用`printf()`语句对齐文本
 
-由于 `awk` 是单个命令内部的编程语言，它也有自己的通过 `printf()` 语句产生格式化输出的方法。
+由于`awk`是单个命令内部的编程语言，它也有自己的通过`printf()`语句产生格式化输出的方法。
 
-列表 A.1 显示了 `columns2.txt` 的内容，列表 A.2 显示了 脚本 `AlignColumns1.sh` 的内容，该脚本向你展示了如何对齐文本列。
+列表 A.1 显示了`columns2.txt`的内容，列表 A.2 显示了脚本`AlignColumns1.sh`的内容，该脚本向你展示了如何对齐文本列。
 
-**列表 A.1：columns2.txt**
+**列表 A.1：`columns2.txt`**
 
-```
- one two
+```text
+one two
+
 three four
+
 one two three four
+
 five six
+
 one two three
+
 four five
 ```
 
-**列表 A.2：AlignColumns1.sh**
+**列表 A.2：`AlignColumns1.sh`**
 
-```
- awk '
+```bash
+awk '
 {
    # 在 10 字符列上左对齐 $1
    # 在 10 字符列上右对齐 $2
@@ -9447,27 +9715,32 @@ four five
 ' columns2.txt
 ```
 
-列表 A.2 包含一个 `printf()` 语句，显示文件 `columns2.txt` 中每行的前四个字段，每个字段的宽度为 10 个字符。
+列表 A.2 包含一个`printf()`语句，显示文件`columns2.txt`中每行的前四个字段，每个字段的宽度为 10 个字符。
 
 运行列表 A.2 中的代码输出如下：
 
-```
- one        *        two*          *         *
+```text
+one        *        two*          *         *
+
 three      *       four*          *         *
+
 one        *        two*     three*     four*
+
 five       *        six*          *         *
+
 one        *        two*     three*         *
+
 four       *        five*         *         *
 ```
 
-请记住 `printf` 是相当强大的，因此它有自己的语法，这超出了本附录的范围。在网上搜索可以找到手册页以及关于“如何使用 `printf()` 执行 X”的讨论。
+请记住`printf`是相当强大的，因此它有自己的语法，这超出了本附录的范围。在网上搜索可以找到手册页以及关于“如何使用`printf()`执行 X”的讨论。
 
 ## 条件逻辑与控制语句
 
-与其他编程语言一样，`awk` 提供对条件逻辑（`if/else`）和控制语句（`for/while` 循环）的支持。`awk` 是不创建、安装并将自定义 shell 脚本添加到路径的情况下，将条件逻辑放入管道命令流的唯一方法。以下代码块展示了如何使用 `if/else` 逻辑：
+与其他编程语言一样，`awk`提供对条件逻辑（`if/else`）和控制语句（`for/while`循环）的支持。`awk`是不创建、安装并将自定义 shell 脚本添加到路径的情况下，将条件逻辑放入管道命令流的唯一方法。以下代码块展示了如何使用`if/else`逻辑：
 
-```
- echo "" | awk '
+```bash
+echo "" | awk '
 BEGIN { x = 10 }
 {
   if (x % 2 == 0) {
@@ -9480,14 +9753,14 @@ BEGIN { x = 10 }
 '
 ```
 
-前面的代码块将变量 `x` 初始化为值 10，如果 `x` 能被 2 整除，则打印“x is even”，否则打印“x is odd”。
+前面的代码块将变量`x`初始化为值 10，如果`x`能被 2 整除，则打印“x is even”，否则打印“x is odd”。
 
-### while 语句
+### `while`语句
 
-以下代码块说明了如何在 `awk` 中使用 `while` 循环：
+以下代码块说明了如何在`awk`中使用`while`循环：
 
-```
- echo "" | awk '
+```bash
+echo "" | awk '
 {
   x = 0
   while(x < 4) {
@@ -9500,20 +9773,19 @@ BEGIN { x = 10 }
 
 前面的代码块生成了以下输出：
 
-```
- x:0
+```text
+x:0
 x:1
 x:2
 x:3
 ```
 
-以下代码块说明了如何在 `awk` 中使用 `do while` 循环：
+以下代码块说明了如何在`awk`中使用`do while`循环：
 
-```
- echo "" | awk '
+```bash
+echo "" | awk '
 {
   x = 0
-
   do {
     print "x:",x
     x = x + 1
@@ -9524,45 +9796,42 @@ x:3
 
 前面的代码块生成了以下输出：
 
-```
- x:0
+```text
+x:0
 x:1
 x:2
 x:3
 ```
 
-### awk 中的 for 循环
+### `awk`中的`for`循环
 
-列表 A.3 显示了 `Loop.sh` 的内容，它说明了如何在循环中打印数字列表。注意 `i++` 是 `awk`（以及大多数 C 派生语言）中编写“I=I+1”的另一种方式。
+列表 A.3 显示了`Loop.sh`的内容，它说明了如何在循环中打印数字列表。注意`i++`是`awk`（以及大多数 C 派生语言）中编写“I=I+1”的另一种方式。
 
-**列表 A.3：Loop.sh**
+**列表 A.3：`Loop.sh`**
 
-```
+```awk
 for (i=0; i<5; i++) {
   print i
 }
 ```
 
+解释：这里的`%s`是`printf()`的记录分隔符语法，其其后的结束引号意味着记录分隔符为空字段""”。我们`awk`的默认记录分隔符是`\n`（换行符），因此`printf()`语句删除了所有的换行符。空行将完全消失，因为它们只包含换行符，所以结果是任何实际文本将合并在一起，中间没有任何间隔符。
 
+如果我们在`%s`和结束引号之间添加一个空格，那么每个字符块之间将有一个空格，并且每个换行都会额外多出一个空格。注意下面的注释是如何提高代码片段理解性的：
 
-
-解释：这里的 `%s` 是 `printf()` 的记录分隔符语法，其其后的结束引号意味着记录分隔符为空字段""”。我们 `awk` 的默认记录分隔符是 `\n`（换行符），因此 `printf()` 语句删除了所有的换行符。空行将完全消失，因为它们只包含换行符，所以结果是任何实际文本将合并在一起，中间没有任何间隔符。
-
-如果我们在 `%s` 和结束引号之间添加一个空格，那么每个字符块之间将有一个空格，并且每个换行都会额外多出一个空格。注意下面的注释是如何提高代码片段理解性的：
-
-```
+```bash
 # 通过移除换行符将所有文本合并为单行
 awk '{printf("%s", $0)}' test4.txt
 ```
 
 ## 在文件中合并行组
 
-Listing A.8 显示了 `digits.txt` 的内容，Listing A.9 显示了 `digits.sh` 的内容，它“合并”了文件 `digits.txt` 中连续的三行文本。
+Listing A.8 显示了`digits.txt`的内容，Listing A.9 显示了`digits.sh`的内容，它“合并”了文件`digits.txt`中连续的三行文本。
 
-**列表 A.8: digits.txt**
+**列表 A.8：`digits.txt`**
 
-```
- 1
+```text
+1
 2
 3
 4
@@ -9573,42 +9842,47 @@ Listing A.8 显示了 `digits.txt` 的内容，Listing A.9 显示了 `digits.sh`
 9
 ```
 
-**列表 A.9: digits.sh**
+**列表 A.9：`digits.sh`**
 
-```
- awk -F" " '{
+```bash
+awk -F" " '{
   printf("%d",$0)
   if(NR % 3 == 0) { printf("\n") }
 }' digits.txt
 ```
 
-Listing A.9 将连续的三行文本打印在同一行上，之后打印一个换行符。这实现了“合并”每三行连续文本的效果。运行 `digits.sh` 的输出在此：
+Listing A.9 将连续的三行文本打印在同一行上，之后打印一个换行符。这实现了“合并”每三行连续文本的效果。运行`digits.sh`的输出在此：
 
-```
- 123
+```text
+123
 456
 789
 ```
 
 ## 在文件中合并交替行
 
-Listing A.10 显示了 `columns2.txt` 的内容，Listing A.11 显示了 `JoinLines.sh` 的内容，它“合并”了文件 `columns2.txt` 中连续的两行文本。
+Listing A.10 显示了`columns2.txt`的内容，Listing A.11 显示了`JoinLines.sh`的内容，它“合并”了文件`columns2.txt`中连续的两行文本。
 
-**列表 A.10: columns2.txt**
+**列表 A.10：`columns2.txt`**
 
-```
- one two
+```text
+one two
+
 three four
+
 one two three four
+
 five six
+
 one two three
+
 four five
 ```
 
-**列表 A.11: JoinLines.sh**
+**列表 A.11：`JoinLines.sh`**
 
-```
- awk '
+```bash
+awk '
 {
    printf("%s",$0)
    if( $1 !~ /one/) { print " " }
@@ -9618,8 +9892,8 @@ four five
 
 运行 Listing A.11 的输出在此：
 
-```
- one two three four
+```text
+one two three four
 one two three four five six
 one two two four five
 ```
@@ -9628,10 +9902,10 @@ one two two four five
 
 要合并每对行而不是基于模式匹配合并，请使用 Listing A.12 中的修改代码。
 
-**列表 A.12: JoinLines2.sh**
+**列表 A.12：`JoinLines2.sh`**
 
-```
- awk '
+```bash
+awk '
 BEGIN { count = 0 }
 {
    printf("%s",$0)
@@ -9639,24 +9913,24 @@ BEGIN { count = 0 }
 } columns2.txt
 ```
 
-另一种“合并”连续行的方法显示在 Listing A.13 中，其中输入文件和输出文件指的是你可以填充数据的文件。这是另一个 `awk` 命令的示例，如果在没有注释的程序中遇到它，它可能会是一个谜题。它执行的操作与 Listing A.12 完全相同，但由于语法更紧凑，它的目的并不那么直观。
+另一种“合并”连续行的方法显示在 Listing A.13 中，其中输入文件和输出文件指的是你可以填充数据的文件。这是另一个`awk`命令的示例，如果在没有注释的程序中遇到它，它可能会是一个谜题。它执行的操作与 Listing A.12 完全相同，但由于语法更紧凑，它的目的并不那么直观。
 
-**列表 A.13: JoinLines2.sh**
+**列表 A.13：`JoinLines2.sh`**
 
-```
- inputfile="linepairs.csv"
+```bash
+inputfile="linepairs.csv"
 outputfile="linepairsjoined.csv"
 awk ' NR%2 {printf "%s,", $0; next;}1' < $inputfile > $outputfile
 ```
 
 ## 使用元字符和字符集进行匹配
 
-如果我们可以匹配简单模式，也可以匹配正则表达式。Listing A.14 显示了 `Patterns1.sh` 的内容，它使用元字符来匹配文件 `columns2.txt` 中文本行的开头和结尾。
+如果我们可以匹配简单模式，也可以匹配正则表达式。Listing A.14 显示了`Patterns1.sh`的内容，它使用元字符来匹配文件`columns2.txt`中文本行的开头和结尾。
 
-**列表 A.14: Patterns1.sh**
+**列表 A.14：`Patterns1.sh`**
 
-```
- awk '
+```bash
+awk '
    /^f/    { print $1 }
    /two $/ { print $1 }
 ' columns2.txt
@@ -9664,29 +9938,29 @@ awk ' NR%2 {printf "%s,", $0; next;}1' < $inputfile > $outputfile
 
 运行 Listing A.14 的输出在此：
 
-```
- one
+```text
+one
 four
 ```
 
-Listing A.15 显示了 `RemoveColumns.txt` 的内容，其行包含不同数量的列。
+Listing A.15 显示了`RemoveColumns.txt`的内容，其行包含不同数量的列。
 
-**列表 A.15: columns3.txt**
+**列表 A.15：`columns3.txt`**
 
-```
- 123 one two
+```text
+123 one two
 456 three four
 one two three four
 five 123 six
 one two three five
 ```
 
-Listing A.16 显示了 `MatchAlpha.sh` 的内容，它匹配以字母开文本以及第二列包含数字字符串的行。
+Listing A.16 显示了`MatchAlpha.sh`的内容，它匹配以字母开文本以及第二列包含数字字符串的行。
 
-**列表 A.16: MatchAlpha.sh**
+**列表 A.16：`MatchAlpha.sh`**
 
-```
- awk '
+```bash
+awk '
 {
    if($0 ~ /^[a-z]/) print $0
    if($0 ~ /[0-9]/) print $0
@@ -9695,76 +9969,72 @@ Listing A.16 显示了 `MatchAlpha.sh` 的内容，它匹配以字母开文本�
 
 Listing A.16 的输出在此：
 
-```
- 123 one two
+```text
+123 one two
 one two three four
 ```
 
 ## 使用条件逻辑打印行
 
-Listing A.17 显示了 `products.txt` 的内容，它包含三列信息。
+Listing A.17 显示了`products.txt`的内容，它包含三列信息。
 
-**列表 A.17: products.txt**
+**列表 A.17：`products.txt`**
 
-```
- MobilePhone 400  new
+```text
+MobilePhone 400  new
 Tablet      300  used
 MobilePhone 100  used
 ```
 
-以下代码片段打印 `products.txt` 中第二列大于 300 的行：
+以下代码片段打印`products.txt`中第二列大于 300 的行：
 
-```
- awk '$2 > 300' products.txt
-```
-
-上述代码片段的输出是：
-
-```
- MobilePhone 400  new
-```
-
-以下代码片段打印 `products.txt` 中 product 等于 new 的行：
-
-```
- awk '($3 == "new")' products.txt
+```bash
+awk '$2 > 300' products.txt
 ```
 
 上述代码片段的输出是：
 
+```text
+MobilePhone 400  new
 ```
- MobilePhone 400  new
+
+以下代码片段打印`products.txt`中 product 等于 new 的行：
+
+```bash
+awk '($3 == "new")' products.txt
+```
+
+上述代码片段的输出是：
+
+```text
+MobilePhone 400  new
 Tablet      300  new
 ```
 
-以下代码片段打印 `products.txt` 中第二列等于 300 的行的第一列和第三列：
+以下代码片段打印`products.txt`中第二列等于 300 的行的第一列和第三列：
 
-```
- awk ' $2 == 300 { print $1, $3 }' products.txt
-```
-
-上述代码片段的输出是：
-
-
-
-以下代码片段打印 `products.txt` 中以字符串 `Tablet` 开头的文本行的第一列和第三列：
-
-```
- awk '/^Tablet/ { print $1, $3 }' products.txt
+```bash
+awk ' $2 == 300 { print $1, $3 }' products.txt
 ```
 
 上述代码片段的输出是：
 
+以下代码片段打印`products.txt`中以字符串`Tablet`开头的文本行的第一列和第三列：
 
+```bash
+awk '/^Tablet/ { print $1, $3 }' products.txt
+```
+
+上述代码片段的输出是：
 
 ## 使用 AWK 分割文件名
 
-Listing A.18 显示了 `SplitFilename2.sh` 的内容，它了如何分割包含 `.` 字符的文件名以增加文件名某个部分的数值。注意，此代码仅适用于预期语法的文件名。
+Listing A.18 显示了`SplitFilename2.sh`的内容，它了如何分割包含`.`字符的文件名以增加文件名某个部分的数值。注意，此代码仅适用于预期语法的文件名。
 
-**列表 A.18: SplitFilename2.sh**
+**列表 A.18：`SplitFilename2.sh`**
 
-```
- echo "05.20.144q.az.1.zip" | awk -F"."
+```bash
+echo "05.20.144q.az.1.zip" | awk -F"."
 {
   f5=$5 + 1
   printf("%s.%s.%s.%s.%s",$1,$2,$3,$4,$f5)
@@ -9773,27 +10043,27 @@ Listing A.18 显示了 `SplitFilename2.sh` 的内容，它了如何分割包含 
 
 Listing A.18 的输出在此：
 
-```
- 05.20.144q.az.2.zip
+```text
+05.20.144q.az.2.zip
 ```
 
 ## 处理后缀算运算符
 
-Listing A.19 显示了 `mixednumbers.txt` 的内容，它包含了后缀运算符，这些运算符指向负（或正）符号出现在列值末尾而不是数字开头的数字。
+Listing A.19 显示了`mixednumbers.txt`的内容，它包含了后缀运算符，这些运算符指向负（或正）符号出现在列值末尾而不是数字开头的数字。
 
-**列表 A.19: mixednumbers.txt**
+**列表 A.19：`mixednumbers.txt`**
 
-```
- 324.000-|10|983.000-
+```text
+324.000-|10|983.000-
 453.000-|30|298.000-
 783.000-|20|347.000-
 ```
 
-Listing A.20 显示了 `AddSubtract1.sh` 的内容，它演示了如何相加 Listing A.19 中的数字行。
+Listing A.20 显示了`AddSubtract1.sh`的内容，它演示了如何相加 Listing A.19 中的数字行。
 
-**列表 A.20: AddSubtract1.sh**
+**列表 A.20：`AddSubtract1.sh`**
 
-```
+```bash
 myFile="mixednumbers.txt"
 
 awk -F"|" '
@@ -9824,25 +10094,23 @@ END { print "Total: ",total }
 
 Listing A.20 的输出在此。在阅读后面的解释之前，尝试弄清楚代码在执行什么：
 
-```
- f1: -324 f2: 10 f3: -983 line: -1297
+```text
+f1: -324 f2: 10 f3: -983 line: -1297
 f1: -453 f2: 30 f3: -298 line: -721
 f1: -783 f2: 20 f3: -347 line: -1110
 Total:  -3128
 ```
 
-
-
-代码假设我们知道文件的格式。`split()` 函数将每个字段记录转换为长度为 2 的向量：第一个位置是数字，第二个位置为空值或连字符，然后将第一个位置的数字捕获到变量中。`if` 语句检查原始字段是否包含连字符（`-`）。如果存在，则将数值变量变为负数，然后计算该行中值之和。
+代码假设我们知道文件的格式。`split()`函数将每个字段记录转换为长度为 2 的向量：第一个位置是数字，第二个位置为空值或连字符，然后将第一个位置的数字捕获到变量中。`if`语句检查原始字段是否包含连字符（`-`）。如果存在，则将数值变量变为负数，然后计算该行中值之和。
 
 ## AWK 中的数值函数
 
-`int(x)` 函数返回数字的整数部分。如果该数字不是整数，它将处于两个整数之间。在两个可能的整数中，函数将返回靠近 0 的那。这与舍入函数不同，舍入函数会选择更接近的整数。
+`int(x)`函数返回数字的整数部分。如果该数字不是整数，它将处于两个整数之间。在两个可能的整数中，函数将返回靠近 0 的那。这与舍入函数不同，舍入函数会选择更接近的整数。
 
-例如，`int(3)` 是 `3`，`int(3.9)` 是 `3`，`int(-3.9)` 是 `-3`，`int(-3)` 也是 `-3`。`awk` 命令中 `int(x)` 函数的一个示例如下：
+例如，`int(3)`是`3`，`int(3.9)`是`3`，`int(-3.9)`是`-3`，`int(-3)`也是`-3`。`awk`命令中`int(x)`函数的一个示例如下：
 
 ```awk
- awk 'BEGIN {
+awk 'BEGIN {
    print int(3.534);
    print int(4);
    print int(-5.223);
@@ -9852,17 +10120,17 @@ Total:  -3128
 
 输出如下：
 
-```
- 3
+```text
+3
 4
 -5
 -5
 ```
 
-`exp(x)` 函数给出 `x` 的指数，或者如果 `x` 超出范围则报告错误。`x` 可能的取值范围取决于你机器的浮点表示。
+`exp(x)`函数给出`x`的指数，或者如果`x`超出范围则报告错误。`x`可能的取值范围取决于你机器的浮点表示。
 
 ```awk
- awk 'BEGIN{
+awk 'BEGIN{
    print exp(123434346);
    print exp(0);
    print exp(-12);
@@ -9871,16 +10139,16 @@ Total:  -3128
 
 输出如下：
 
-```
- inf
+```text
+inf
 1
 6.14421e-06
 ```
 
-`log(x)` 函数在 `x` 为正数时给出 `x` 的自然对数；否则报告错误（输出中的 `inf` 表示无穷大，`nan` 表示“非数字”）。
+`log(x)`函数在`x`为正数时给出`x`的自然对数；否则报告错误（输出中的`inf`表示无穷大，`nan`表示“非数字”）。
 
 ```awk
- awk 'BEGIN{
+awk 'BEGIN{
   print log(12);
   print log(0);
   print log(1);
@@ -9890,17 +10158,17 @@ Total:  -3128
 
 输出如下：
 
-```
- 2.48491
+```text
+2.48491
 -inf
 0
 nan
 ```
 
-`sin(x)` 函数给出 `x` 的正弦，`cos(x)` 给出 `x` 的余弦，其中 `x` 为弧度：
+`sin(x)`函数给出`x`的正弦，`cos(x)`给出`x`的余弦，其中`x`为弧度：
 
 ```awk
- awk 'BEGIN {
+awk 'BEGIN {
    print cos(90);
    print cos(45);
 }'
@@ -9908,174 +10176,173 @@ nan
 
 输出如下：
 
-```
- -0.448074
+```text
+-0.448074
 0.525322
 ```
 
-`rand()` 函数给你一个随机数。`rand()` 的值在 `0` 和 `1` 之间均匀分布：该值永远不会是 `0` 也永远不会是 `1`。
 
-通常，你想要随机整数。这里有一个自定义函数，可以获取小于 `n` 的随机非负整数：
+
+`rand()`函数给你一个随机数。`rand()`的值在`0`和`1`之间均匀分布：该值永远不会是`0`也永远不会是`1`。
+
+通常，你想要随机整数。这里有一个自定义函数，可以获取小于`n`的随机非负整数：
 
 ```awk
- function randint(n) {
-     return int(n * rand())
+function randint(n) {
+    return int(n * rand())
 }
 ```
 
-乘积生成一个大于 `0` 且 `n` 的随机实数。然后我们将其转换为 `0` 到 `n - 1` 之间的整数（使用 `int`）。
+乘积生成一个大于`0`且`n`的随机实数。然后我们将其转换为`0`到`n - 1`之间的整数（使用`int`）。
 
-这是一个使用类似函数产生 `1` 到 `n` 之间随机整数的示例：
+这是一个使用类似函数产生`1`到`n`之间随机整数的示例：
 
 ```awk
- awk '
+awk '
 # 模拟掷骰子的函数。
 function roll(n) { return 1 + int(rand() * n) }
+
 # 掷 3 个六面骰子并打印总点数。
 {
-      printf("%d points\n", roll(6)+roll(6)+roll(6))
+    printf("%d points\n", roll(6)+roll(6)+roll(6))
 }'
 ```
 
-注意 `rand()` 每次调用 `awk` 时都会从同一个点（或“种子”）开始生成数字。因此，程序每次启动时都会产生相同的结果。如果你希望程序在每次使用时执行不同的操作，你必须将种子更改为每次运行都不同的值。
+注意`rand()`每次调用`awk`时都会从同一个点（或“种子”）开始生成数字。因此，程序每次启动时都会产生相同的结果。如果你希望程序在每次使用时执行不同的操作，你必须将种子更改为每次运行都不同的值。
 
-使用 `srand(x)` 函数将生成随机数的起始点（或种子）设置为值 `x`。每个种子值都会导致一个特定的“随机”数序列。因此，如果你第二次将种子设置为相同的值，你将再次获得相同的“随机”数序列。如果你省略了参数 `x`（如 `srand()`），则使用当前的日期和时间作为种子。这就是获取真正不可预测的随机数的方法。`srand()` 的返回值是上一个种子。这使得跟踪种子以便一致地重现随机数序列变得容易。
+使用`srand(x)`函数将生成随机数的起始点（或种子）设置为值`x`。每个种子值都会导致一个特定的“随机”数序列。因此，如果你第二次将种子设置为相同的值，你将再次获得相同的“随机”数序列。如果你省略了参数`x`（如`srand()`），则使用当前的日期和时间作为种子。这就是获取真正不可预测的随机数的方法。`srand()`的返回值是上一个种子。这使得跟踪种子以便一致地重现随机数序列变得容易。
 
-`time()` 函数（并非所有 `awk` 版本都包含）返回自 1970 年 1 月 1 日以来的当前秒数`ctime()` 函数（并非所有 `awk` 版本都包含）返回当前日期。`sqrt(x)` 函数给出 `x` 的平方根。如果 `x` 为负数，它会报告错误。
+`time()`函数（并非所有`awk`版本都包含）返回自1970年1月1日以来的当前秒数。`ctime()`函数（并非所有`awk`版本都包含）返回当前日期。`sqrt(x)`函数给出`x`的平方根。如果`x`为负数，它会报告错误。
 
 ## 单行 AWK 命令
 
-代码假设我们知道文件的格式。`split()` 函数将每个字段记录转换为长度为 2 的向量：第一个位置是数字，第二个位置为空值或连字符，然后将第一个位置的数字捕获到变量中。`if` 语句检查原始字段是否包含连字符（`-`）。如果存在，则将数值变量变为负数，然后计算该行中值之和。
+代码假设我们知道文件的格式。`split()`函数将每个字段记录转换为长度为2的向量：第一个位置是数字，第二个位置为空值或连字符，然后将第一个位置的数字捕获到变量中。`if`语句检查原始字段是否包含连字符（`-`）。如果存在，则将数值变量变为负数，然后计算该行中值之和。
 
 ## 有用的 AWK 脚本
 
-代码假设我们知道文件的格式。`split()` 函数将每个字段记录转换为长度为 2 的向量：第一个位置是数字，第二个位置为空值或连字符，然后将第一个位置的数字捕获到变量中。`if` 语句检查原始字段是否包含连字符（`-`）。如果存在，则将数值变量变为负数，然后计算该行中值之和。
+代码假设我们知道文件的格式。`split()`函数将每个字段记录转换为长度为2的向量：第一个位置是数字，第二个位置为空值或连字符，然后将第一个位置的数字捕获到变量中。`if`语句检查原始字段是否包含连字符（`-`）。如果存在，则将数值变量变为负数，然后计算该行中值之和。
 
 ## 在 AWK 中打印单词
 
 ## 在特定行中统计字符串出现次数
 
-等待，我注意到“需要排版的文本”部分提供的文本实际上是示例和指令的混合。我将按照规则格式化（需要排版的文本）代码块中的**实际文本**。
-
-代码假设我们知道文件的格式。`split()` 函数将每个字段记录转换为长度为 2 的向量：第一个位置是数字，第二个位置为空值或连字符，然后将第一个位置的数字捕获到变量中。`if` 语句检查原始字段是否包含连字符（`-`）。如果存在，则将数值变量变为负数，然后计算该行中值之和。
+代码假设我们知道文件的格式。`split()`函数将每个字段记录转换为长度为2的向量：第一个位置是数字，第二个位置为空值或连字符，然后将第一个位置的数字捕获到变量中。`if`语句检查原始字段是否包含连字符（`-`）。如果存在，则将数值变量变为负数，然后计算该行中值之和。
 
 ### AWK 中的数值函数
 
-`int(x)` 函数返回数字的整数部分。如果该数字不是整数，它将处于两个整数之间。在两个可能的整数中，函数将返回靠近 0 的那。这与舍入函数不同，舍入函数会选择更接近的整数。
+`int(x)`函数返回数字的整数部分。如果该数字不是整数，它将处于两个整数之间。在两个可能的整数中，函数将返回靠近0的那一个。这与舍入函数不同，舍入函数会选择更接近的整数。
 
-例如，`int(3)` 是 `3`，`int(3.9)` 是 `3`，`int(-3.9)` 是 `-3`，`int(-3)` 也是 `-3`。`awk` 命令中 `int(x)` 函数的一个示例如下：
+例如，`int(3)`是`3`，`int(3.9)`是`3`，`int(-3.9)`是`-3`，`int(-3)`也是`-3`。`awk`命令中`int(x)`函数的一个示例如下：
 
 ```awk
- awk 'BEGIN {
-   print int(3.534);
-   print int(4);
-   print int(-5.223);
-   print int(-5);
+awk 'BEGIN {
+    print int(3.534);
+    print int(4);
+    print int(-5.223);
+    print int(-5);
 }'
 ```
 
 输出如下：
 
-```
- 3
+```text
+3
 4
 -5
 -5
 ```
 
-`exp(x)` 函数给出 `x` 的指数，或者如果 `x` 超出范围则报告错误。`x` 可能的取值范围取决于你机器的浮点表示。
+`exp(x)`函数给出`x`的指数，或者如果`x`超出范围则报告错误。`x`可能的取值范围取决于你机器的浮点表示。
 
 ```awk
- awk 'BEGIN{
-   print exp(123434346);
-   print exp(0);
-   print exp(-12);
+awk 'BEGIN{
+    print exp(123434346);
+    print exp(0);
+    print exp(-12);
 }'
 ```
 
 输出如下：
 
-```
- inf
+```text
+inf
 1
 6.14421e-06
 ```
 
-`log(x)` 函数在 `x` 为正数时给出 `x` 的自然对数；否则报告错误（输出中的 `inf` 表示无穷大，`nan` 表示“非数字”）。
+`log(x)`函数在`x`为正数时给出`x`的自然对数；否则报告错误（输出中的`inf`表示无穷大，`nan`表示“非数字”）。
 
 ```awk
- awk 'BEGIN{
-  print log(12);
-  print log(0);
-  print log(1);
-  print log(-1);
+awk 'BEGIN{
+    print log(12);
+    print log(0);
+    print log(1);
+    print log(-1);
 }'
 ```
 
 输出如下：
 
-```
- 2.48491
+```text
+2.48491
 -inf
 0
 nan
 ```
 
-`sin(x)` 函数给出 `x` 的正弦，`cos(x)` 给出 `x` 的余弦，其中 `x` 为弧度：
+`sin(x)`函数给出`x`的正弦，`cos(x)`给出`x`的余弦，其中`x`为弧度：
 
 ```awk
- awk 'BEGIN {
-   print cos(90);
-   print cos(45);
+awk 'BEGIN {
+    print cos(90);
+    print cos(45);
 }'
 ```
 
 输出如下：
 
-```
- -0.448074
+```text
+-0.448074
 0.525322
 ```
 
-`rand()` 函数给你一个随机数。`rand()` 的值在 `0` 和 `1` 之间均匀分布：该值永远不会是 `0` 也永远不会是 `1`。
+`rand()`函数给你一个随机数。`rand()`的值在`0`和`1`之间均匀分布：该值永远不会是`0`也永远不会是`1`。
 
-通常，你想要随机整数。这里有一个自定义函数，可以获取小于 `n` 的随机非负整数：
+通常，你想要随机整数。这里有一个自定义函数，可以获取小于`n`的随机非负整数：
 
 ```awk
- function randint(n) {
-     return int(n * rand())
+function randint(n) {
+    return int(n * rand())
 }
 ```
 
-乘积生成一个大于 `0` 且 `n` 的随机实数。然后我们将其转换为 `0` 到 `n - 1` 之间的整数（使用 `int`）。
+乘积生成一个大于`0`且`n`的随机实数。然后我们将其转换为`0`到`n - 1`之间的整数（使用`int`）。
 
-这是一个使用类似函数产生 `1` 到 `n` 之间随机整数的示例：
+这是一个使用类似函数产生`1`到`n`之间随机整数的示例：
 
 ```awk
- awk '
+awk '
 # 模拟掷骰子的函数。
 function roll(n) { return 1 + int(rand() * n) }
+
 # 掷 3 个六面骰子并打印总点数。
 {
-      printf("%d points\n", roll(6)+roll(6)+roll(6))
+    printf("%d points\n", roll(6)+roll(6)+roll(6))
 }'
 ```
 
-注意 `rand()` 每次调用 `awk` 时都会从同一个点（或“种子”）开始生成数字。因此，程序每次启动时都会产生相同的结果。如果你希望程序在每次使用时执行不同的操作，你必须将种子更改为每次运行都不同的值。
+注意`rand()`每次调用`awk`时都会从同一个点（或“种子”）开始生成数字。因此，程序每次启动时都会产生相同的结果。如果你希望程序在每次使用时执行不同的操作，你必须将种子更改为每次运行都不同的值。
 
-使用 `srand(x)` 函数将生成随机数的起始点（或种子）设置为值 `x`。每个种子值都会导致一个特定的“随机”数序列。因此，如果你第二次将种子设置为相同的值，你将再次获得相同的“随机”数序列。如果你省略了参数 `x`（如 `srand()`），则使用当前的日期和时间作为种子。这就是获取真正不可预测的随机数的方法。`srand()` 的返回值是上一个种子。这使得跟踪种子以便一致地重现随机数序列变得容易。
+使用`srand(x)`函数将生成随机数的起始点（或种子）设置为值`x`。每个种子值都会导致一个特定的“随机”数序列。因此，如果你第二次将种子设置为相同的值，你将再次获得相同的“随机”数序列。如果你省略了参数`x`（如`srand()`），则使用当前的日期和时间作为种子。这就是获取真正不可预测的随机数的方法。`srand()`的返回值是上一个种子。这使得跟踪种子以便一致地重现随机数序列变得容易。
 
-`time()` 函数（并非所有 `awk` 版本都包含）返回自 1970 年 1 月 1 日以来的秒数`ctime()` 函数（并非所有 `awk` 版本都包含）返回当前日期。`sqrt(x)` 函数给出 `x` 的平方根。如果 `x` 为负数，它会报告错误。
+`time()`函数（并非所有`awk`版本都包含）返回自1970年1月1日以来的秒数。`ctime()`函数（并非所有`awk`版本都包含）返回当前日期。`sqrt(x)`函数给出`x`的平方根。如果`x`为负数，它会报告错误。
 
+`Listing A.23`和`Listing A.24`分别显示了`data1.csv`和`data2.csv`的内容，`Listing A.25`显示了`checkrows.sh`的内容，该脚本说明了统计第2、5、7行第3列中字符串“past”出现次数的方法。
 
+### 代码列表 A.23：data1.csv
 
-
-Listing A.23 和 Listing A.24 分别显示了 `data1.csv` 和 `data2.csv` 的内容，Listing A.25 显示了 `checkrows.sh` 的内容，该脚本说明了统计第 2、5、7 行第 3 列中字符串“past”出现次数的方法。
-
-### 代码列表 A.23: data1.csv
-
-```
- in,the,past,or,the,present
+```text
+in,the,past,or,the,present
 for,the,past,or,the,present
 in,the,past,or,the,present
 for,the,paste,or,the,future
@@ -10085,10 +10352,10 @@ in,the,past,or,the,present
 completely,unrelated,line2
 ```
 
-### 代码列表 A.24: data2.csv
+### 代码列表 A.24：data2.csv
 
-```
- in,the,past,or,the,present
+```text
+in,the,past,or,the,present
 completely,unrelated,line1
 for,the,past,or,the,present
 completely,unrelated,line2
@@ -10098,106 +10365,107 @@ in,the,past,or,the,present
 completely,unrelated,line3
 ```
 
-### 代码列表 A.25: checkrows.sh
+### 代码列表 A.25：checkrows.sh
 
-```
- files="'ls data*.csv| tr '\n' ' ''"
+```sh
+files="'ls data*.csv| tr '\n' ' ''"
+
 echo "List of files: $files"
 
 awk -F"," '
 ( FNR==2 || FNR==5 || FNR==7 ) {
     if ( $3 ~ "past" ) { count++ }
 }
+
 END {
     printf "past: matched %d times (INEXACT) ", count
     printf "in field 3 in lines 2/5/7\n"
 }' data*.csv
 ```
 
-由于以下代码段的存在，Listing A.25 的是在第 2、5、7 列中查找字符串 past 的出现情况：
+由于以下代码段的存在，`Listing A.25`是在第2、5、7列中查找字符串`past`的出现情况：
 
-```
- ( FNR==2 || FNR==5 || FNR==7 ) {
+```awk
+( FNR==2 || FNR==5 || FNR==7 ) {
     if ( $3 ~ "past" ) { count++ }
 }
 ```
 
-如果发生匹配，则 `count` 的值加 1。`END` 块报告了第 2、5、7 列中找到字符串 past 的次数。注意，诸如 paste 和 pasted 等字符串也会匹配字符串 past。Listing A.25 的输出如下：
+如果发生匹配，则`count`的值加1。`END`块报告了第2、5、7列中找到字符串`past`的次数。注意，诸如`paste`和`pasted`等字符串也会匹配字符串`past`。`Listing A.25`的输出如下：
 
-```
- List of files: data1.csv data2.csv
+```text
+List of files: data1.csv data2.csv
+
 past: matched 5 times (INEXACT) in field 3 in lines 2/5/7
 ```
 
-shell 脚本 `checkrows2.sh` 将 `checkrows.sh` 中的术语 `$3 ~ "past"` 替换为 `$3 == "past"` 以检查精确匹配，这产生了以下输出：
+shell脚本`checkrows2.sh`将`checkrows.sh`中的术语`$3 ~ "past"`替换为`$3 == "past"`以检查精确匹配，这产生了以下输出：
 
-```
- List of files: data1.csv data2.csv
+```text
+List of files: data1.csv data2.csv
+
 past: matched 4 times (EXACT) in field 3 in lines 2/5/7
 ```
 
 ### 在固定列数中打印字符串
 
-Listing A.26 显示了 `FixedFieldCount1.sh` 的内容，它说明了如何使用 `awk` 命令打印文本字符串中的单词。
+`Listing A.26`显示了`FixedFieldCount1.sh`的内容，它说明了如何使用`awk`命令打印文本字符串中的单词。
 
-### 代码列表 A.26: FixedFieldCount1.sh
+### 代码列表 A.26：FixedFieldCount1.sh
 
-```
- echo "aa bb cc dd ee ff gg hh"| awk '
+```sh
+echo "aa bb cc dd ee ff gg hh" | awk '
 BEGIN { colCount = 3 }
 {
-
-  for(i=1; i<=NF; i++) {
-     printf("%s ", $i)
-     if(i % colCount == 0) {
-        print " "
-     }
-  }
-}
-'
+    for(i=1; i<=NF; i++) {
+        printf("%s ", $i)
+        if(i % colCount == 0) {
+            print " "
+        }
+    }
+}'
 ```
 
-Listing A.26 的输出如下：
+`Listing A.26`的输出如下：
 
-```
- aa bb cc
+```text
+aa bb cc
 dd ee ff
 gg hh
 ```
 
 ### 在固定列数中打印数据集
 
-Listing A.27 显示了 `VariableColumns.txt` 的内容，其文本行包含不同数量的列。
+`Listing A.27`显示了`VariableColumns.txt`的内容，其文本行包含不同数量的列。
 
-### 代码列表 A.27: VariableColumns.txt
+### 代码列表 A.27：VariableColumns.txt
 
-```
- this is line one
+```text
+this is line one
 this is line number one
 this is the third and final line
 ```
 
-Listing A.28 显示了 `Fields3.sh` 的内容，它说明了如何使用 `awk` 命令打印文本字符串中的单词。
+`Listing A.28`显示了`Fields3.sh`的内容，它说明了如何使用`awk`命令打印文本字符串中的单词。
 
-### 代码列表 A.28: Fields3.sh
+### 代码列表 A.28：Fields3.sh
 
-```
- awk '{printf("%s ", $0)}' | awk '
+```sh
+awk '{printf("%s ", $0)}' | awk '
 BEGIN { columnCount = 3 }
 {
-  for(i=1; i<=NF; i++) {
-     printf("%s ", $i)
-     if( i % columnCount == 0 )
-       print " "
-  }
-}
-' VariableColumns.txt
+    for(i=1; i<=NF; i++) {
+        printf("%s ", $i)
+        if( i % columnCount == 0 )
+            print " "
+    }
+}' VariableColumns.txt
 ```
 
-Listing A.28 的输出如下：
+`Listing A.28`的输出如下：
 
-```
- this is line
+```text
+this is line
 one this is
 line number one
 this is the
@@ -10207,49 +10475,53 @@ line
 
 ### 对齐数据集中的列
 
-如果你已经阅读了前面的两个示例，那么本节中的代码示例很容易理解：你将看到内容正确的数据列，但它们被放置在不同的行中（因此未对齐）。Listing A.29 显示了带有未对齐值的 `mixed-data.csv`。此外，Listing A.28 中的第一行和最后一行是空行，它们将被本节的 shell 脚本移除。
+如果你已经阅读了前面的两个示例，那么本节中的代码示例很容易理解：你将看到内容正确的数据列，但它们被放置在不同的行中（因此未对齐）。`Listing A.29`显示了带有未对齐值的`mixed-data.csv`。此外，`Listing A.28`中的第一行和最后一行是空行，它们将被本节的shell脚本移除。
 
-### 代码列表 A.29: mixed-data.csv
+### 代码列表 A.29：mixed-data.csv
 
-```
- Sara, Jones, 1000, CA, Sally, Smith, 2000, IL,
+```text
+Sara, Jones, 1000, CA, Sally, Smith, 2000, IL,
 Dave, Jones, 3000, FL, John, Jones,
 4000, CA,
 Dave, Jones, 5000, NY, Mike,
 Jones, 6000, NY, Tony, Jones, 7000
 ```
 
-Listing A.30 显示了 `mixed-data.sh` 的内容，说明了如何对齐 Listing A.29 中的数据集。
+`Listing A.30`显示了`mixed-data.sh`的内容，说明了如何对齐`Listing A.29`中的数据集。
 
-### 代码列表 A.30: mixed-data.sh
+### 代码列表 A.30：mixed-data.sh
 
-```
- #-------------------------
+```sh
+#-------------------------
 # 1) 删除空行
 # 2) 删除换行符
 # 3) 每 8 个字段后打印一个 LF
 # 4) 删除每行末尾的逗号
 #-------------------------
+
 inputfile="mixed-data.csv"
 
-grep -v "^$" $inputfile |awk -F"," '{printf("%s",$0)} | awk '
+grep -v "^$" $inputfile | awk -F"," '{printf("%s",$0)}' | awk '
 BEGIN { columnCount = 4 }
 {
-   for(i=1; i<=NF; i++) {
-     printf("%s ", $i)
-     if( i % columnCount == 0) { ++currRow }
-     if(currRow > 0 && currRow % rowCount == 0) {currRow = 0; print ""}
-   }
+    for(i=1; i<=NF; i++) {
+        printf("%s ", $i)
+        if( i % columnCount == 0) { ++currRow }
+        if(currRow > 0 && currRow % rowCount == 0) {
+            currRow = 0
+            print ""
+        }
+    }
 }' > temp-columns
 
-# 4) 删除输出末尾的逗号:
+# 4) 删除输出末尾的逗号：
 cat temp-columns | sed 's/, $//' | sed 's/ $//' > $output
 ```
 
-Listing A.30 首先使用 `grep` 命令（关于 `grep` 有在线教程）删除空行，然后使用 `awk` 命令将数据集的行转换为单行文本。第二个 `awk` 命令在 `BEGIN` 块中将 `columnCount` 变量初始化为 `4`，随后是一个遍历输入字段的循环。在同一行输出四个字段后，会打印一个换行符，其效果是将输入数据集对齐为由四列组成的数据集。Listing A.30 的输出如下：
+`Listing A.30`首先使用`grep`命令（关于`grep`有在线教程）删除空行，然后使用`awk`命令将数据集的行转换为单行文本。第二个`awk`命令在`BEGIN`块中将`columnCount`变量初始化为`4`，随后是一个遍历输入字段的循环。在同一行输出四个字段后，会打印一个换行符，其效果是将输入数据集对齐为由四列组成的数据集。`Listing A.30`的输出如下：
 
-```
- Sara, Jones, 1000, CA
+```text
+Sara, Jones, 1000, CA
 Sally, Smith, 2000, IL
 Dave, Jones, 3000, FL
 John, Jones, 4000, CA
@@ -10260,293 +10532,399 @@ Tony, Jones, 7000
 
 ### 对齐数据集中的列和多行
 
-前面的部分展示了如何重新对齐数据集使每行包含相同数量的列并代表单条记录。本节的代码示例说明了如何对齐内容正确的列，并在新数据集的每行放置两条记录。Listing A.31 显示了带有未对齐值的 `mixed-data2.csv`，随后 Listing A.32 显示了格式正确的 `aligned-data2.csv` 内容。
+前面的部分展示了如何重新对齐数据集使每行包含相同数量的列并代表单条记录。本节的代码示例说明了如何对齐内容正确的列，并在新数据集的每行放置两条记录。`Listing A.31`显示了带有未对齐值的`mixed-data2.csv`，随后`Listing A.32`显示了格式正确的`aligned-data2.csv`内容。
 
-### 代码列表 A.31: mixed-data2.csv
+### 代码列表 A.31：mixed-data2.csv
 
-```
- Sara, Jones, 1000, CA, Sally, Smith, 2000, IL,
+```text
+Sara, Jones, 1000, CA, Sally, Smith, 2000, IL,
 Dave, Jones, 3000, FL, John, Jones,
 4000, CA,
 Dave, Jones, 5000, NY, Mike,
 Jones, 6000, NY, Tony, Jones, 7000, WA
 ```
 
-### 代码列表 A.32: aligned-data2.csv
+### 代码列表 A.32：aligned-data2.csv
 
-```
- Sara, Jones, 1000, CA, Sally, Smith, 2000, IL
+```text
+Sara, Jones, 1000, CA, Sally, Smith, 2000, IL
 Dave, Jones, 3000, FL, John, Jones, 4000, CA
 Dave, Jones, 5000, NY, Mike, Jones, 6000, NY
 Tony, Jones, 7000, WA
 ```
 
-Listing A.33 显示了 `mixed-data2.sh` 的内容，说明了如何对齐 Listing A.31 中的数据集。
+`Listing A.33`显示了`mixed-data2.sh`的内容，说明了如何对齐`Listing A.31`中的数据集。
 
-### 代码列表 A.33: mixed-data2.sh
+### 代码列表 A.33：mixed-data2.sh
 
-```
- #-----------------------------------------
+```sh
+#-----------------------------------------
 # 1) 删除空行
 # 2) 删除换行符
 # 3) 每 8 个字段后打印一个 LF
+```
+
+
+
 # 4) 删除每行末尾的逗号
+
+```bash
 #-----------------------------------------
+
 inputfile="mixed-data2.txt"
+
 outputfile="aligned-data2.txt"
 
-grep -v "^$" $inputfile |awk -F"," '{printf("%s",$0)}' | awk '
+grep -v "^$" $inputfile | awk -F"," '{printf("%s",$0)}' | awk '
+
 BEGIN { columnCount = 4; rowCount = 2; currRow = 0 }
+
 {
+
    for(i=1; i<=NF; i++) {
+
      printf("%s ", $i)
+
      if( i % columnCount == 0) { ++currRow }
+
      if(currRow > 0 && currRow % rowCount == 0) {currRow = 0; print ""}
+
    }
+
 }' > temp-columns
 
 # 4) 删除输出末尾的逗号:
+
 cat temp-columns | sed 's/, $//' | sed 's/ $//' > $output
 ```
 
+`Listing A.33` 与 `Listing A.30` 非常相似。其核心思想是在处理完一对“正常”记录后打印一个换行符，这是通过 `Listing A.33` 中加粗显示的代码实现的。
 
+现在，你可以通过将 `rowCount` 变量的初始值更改为任何正整数，非常轻松地扩展 `Listing A.33` 的泛性，且代码在不进行任何进一步修改的情况下即可运行。例如，如果你将 `rowCount` 初始化为值 5，那么新数据集中的每一行（最后一行输出行可能可能除外）都将包含 5 条“正常”数据记录。
 
+## 从文本文件中删除列
 
-Listing A.33 与 Listing A.30 非常相似。其核心思想是在处理完一对“正常”记录后打印一个换行符，这是通过 Listing A.33 中**加粗显示**的代码实现的。
+`Listing A.34` 显示了 `VariableColumns.txt` 的内容，其中文本行包含不同数量的列。
 
-现在，你可以通过将 `rowCount` 变量的初始值更改为任何正整数，非常轻松地扩展 Listing A.33 的泛性，且代码在不进行任何进一步修改的情况下即可运行。例如，如果你将 `rowCount` 初始化为值 5，那么新数据集中的每一行（最后一行输出行可能可能除外）都将包含 5 条“正常”数据记录。
+### Listing A.34：VariableColumns.txt
 
-### 从文本文件中删除列
+```text
+this is line one
 
-Listing A.34 显示了 `VariableColumns.txt` 的内容，其中文本行包含不同数量的列。
-
-LISTING A.34: VariableColumns.txt
-```
- this is line one
 this is line number one
+
 this is the third and final line
 ```
 
-Listing A.35 显示了 `RemoveColumn.sh` 的内容，该脚本从文本文件中删除第一列。
+`Listing A.35` 显示了 `RemoveColumn.sh` 的内容，该脚本从文本文件中删除第一列。
 
-LISTING A.35: RemoveColumn.sh
-```
- awk '{ for (i=2; i<=NF; i++) printf "%s ", $i; printf "\n"; }' VariableColumns.txt
+### Listing A.35：RemoveColumn.sh
+
+```bash
+awk '{ for (i=2; i<=NF; i++) printf "%s ", $i; printf "\n"; }' VariableColumns.txt
 ```
 
 循环位于 2 和 `NF` 之间，遍历除第一个字段外的所有此外，`printf` 显式地添加了换行。上述代码段的输出如下：
 
-```
- is line one
+```text
+is line one
+
 is line number one
+
 is the third and final line
 ```
 
-### 数据集中对齐行的子集
+## 数据集中对齐行的子集
 
-Listing A.35 展示了如何对数据集的行进行对齐，本部分的代码示例说明了如何提取现有列的子集和行的子集。Listing A.36 显示了目标数据集 `sub-rows-cols.txt` 的内容，该文件包含 `aligned-data.txt` 中每个偶数行的两列。
+`Listing A.35` 展示了如何对数据集的行进行对齐，本部分的代码示例说明了如何提取现有列的子集和行的子集。`Listing A.36` 显示了目标数据集 `sub-rows-cols.txt` 的内容，该文件包含 `aligned-data.txt` 中每个偶数行的两列。
 
-LISTING A.36: sub-rows-cols.txt
-```
- Sara, 1000
+### Listing A.36：sub-rows-cols.txt
+
+```text
+Sara, 1000
+
 Dave, 3000
+
 Dave, 5000
+
 Tony, 7000
 ```
 
-Listing A.37 显示了 `sub-rows-cols.sh` 的内容，说明了如何生成 Listing A.36 中的数据集。大部分代码与 Listing A.33 相同，新代码已**加粗显示**。
+`Listing A.37` 显示了 `sub-rows-cols.sh` 的内容，说明了如何生成 `Listing A.36` 中的数据集。大部分代码与 `Listing A.33` 相同，新代码已加粗显示。
 
-LISTING A.37: sub-rows-cols.sh
-```
- #-----------------------------------------
+### Listing A.37：sub-rows-cols.sh
+
+```bash
+#-----------------------------------------
+
 # 1) 删除空行
+
 # 2) 删除换行符
+
 # 3) 在每四个字段后打印一个 LF
+
 # 4) 删除每行的末尾逗号
+
 #-----------------------------------------
 
 inputfile="mixed-data.txt"
 
-grep -v "^$" $inputfile |awk -F"," '{printf("%s",$0)}' | awk '
+grep -v "^$" $inputfile | awk -F"," '{printf("%s",$0)}' | awk '
+
 BEGIN { columnCount = 4 }
+
 {
+
    for(i=1; i<=NF; i++) {
+
      printf("%s ", $i)
+
      if( i % columnCount  == 0) { print "" }
+
    }
+
 }' > temp-columns
 
 # 4) 删除输出末尾的逗号：
+
 cat temp-columns | sed 's/, $//' | sed 's/$//' > temp-columns2
 
 cat temp-columns2 | awk '
+
 BEGIN { rowCount = 2; currRow = 0 }
+
 {
+
    if(currRow % rowCount == 0) { print $1, $3 }
+
    ++currRow
+
 }' > temp-columns3
 
 cat temp-columns3 | sed 's/,$//' | sed 's/ $//' > $outputfile
 ```
 
-Listing A.37 包含一个新的代码块，将步骤 #4 的输出重定向到临时文件 `temp-columns2`，其内容由 Listing A.37 最后部分的另一个 `awk` 命令处理。请注意，该 `awk` 命令包含一个 `BEGIN` 块，将变量 `rowCount` 和 `currRow` 分别初始化为 2 和 0。
+`Listing A.37` 包含一个新的代码块，将步骤 #4 的输出重定向到临时文件 `temp-columns2`，其内容由 `Listing A.37` 最后部分的另一个 `awk` 命令处理。请注意，该 `awk` 命令包含一个 `BEGIN` 块，将变量 `rowCount` 和 `currRow` 分别初始化为 2 和 0。
 
 主块在当前行号为偶数时打印当前行的第 1 列和第 3 列，然后增加 `currRow` 的值。该 `awk` 命令的输出重定向到另一个临时文件，作为最后一个代码片段的输入，该片段使用 `cat` 命令和两次 `sed` 命令来删除末尾的“，”和末尾的空格，如下：
 
+```bash
+cat temp-columns3 | sed 's/,$//' | sed 's/ $//' > $outputfile
 ```
- cat temp-columns3 | sed 's/,$//' | sed 's/ $//' > $outputfile
-```
 
-还有其他方法可以实现 Listing A.37 中的功能，主要目的是展示组合各种 bash 命令的技术。
+还有其他方法可以实现 `Listing A.37` 中的功能，主要目的是展示组合各种 bash 命令的技术。
 
-### 数据集中词频统计
+## 数据集中词频统计
 
-Listing A.38 显示了 `WordCounts1.sh` 的内容，说明了如何统计文件中单词的频率。
+`Listing A.38` 显示了 `WordCounts1.sh` 的内容，说明了如何统计文件中单词的频率。
 
-LISTING A.38: WordCounts1.sh
-```
- awk '
+### Listing A.38：WordCounts1.sh
+
+```awk
+awk '
+
 # 打印单词频率
+
 {
+
     for (i = 1; i <= NF; i++)
+
         freq[$i]++
+
 }
+
 END {
+
     for (word in freq)
+
         printf "%s\t%d", word, freq[word]
+
 }
+
 ' columns2.txt
 ```
 
-Listing A.38 包含一段处理 `columns2.txt` 行代码。每遇到一个单词（一行），代码就会增加该单词在哈表 `freq` 中的出现次数。`END` 块包含一个 `for` 循环，显示 `columns2.txt` 中每个单词的次数。
+`Listing A.38` 包含一段处理 `columns2.txt` 行代码。每遇到一个单词（一行），代码就会增加该单词在哈表 `freq` 中的出现次数。`END` 块包含一个 `for` 循环，显示 `columns2.txt` 中每个单词的次数。
 
-Listing A.38 的输出如下：
+`Listing A.38` 的输出如下：
 
-```
- two        3
+```text
+two        3
+
 one        3
+
 three      3
+
 six        1
+
 five       2
 ```
 
-Listing A.39 显示了 `WordCounts2.sh` 的内容，执行不区分大小写的单词统计。
+`Listing A.39` 显示了 `WordCounts2.sh` 的内容，执行不区分大小写的单词统计。
 
-LISTING A.39: WordCounts2.sh
-```
- awk '
+### Listing A.39：WordCounts2.sh
+
+```awk
+awk '
+
 {
+
     # 将全部转为小写
+
     $0 = tolower($0)
 
     # 删除标点符号
+
    gsub(/[^alnum:][:space:]]/, "", $0)
 
     for(i=1; i<=NF; i++) {
+
        freq[$i]++
+
     }
+
 }
+
 END {
+
     for(word in freq) {
+
        printf "%s\t%d", word, freq[word]
+
     }
+
 }
+
 ' columns4.txt
 ```
 
-Listing A.39 的代码与 Listing A.38 几乎相同，增加了以下将每行输入转换为小字母的代码段：
+`Listing A.39` 的代码与 `Listing A.38` 几乎相同，增加了以下将每行输入转换为小字母的代码段：
 
-```
- $0 = tolower($0)
+```awk
+$0 = tolower($0)
 ```
 
-Listing A.40 显示了 `columns.txt` 的内容。
+`Listing A.40` 显示了 `columns.txt` 的内容。
 
-LISTING A.40: columns.txt
-```
- 123 ONE TWO
+### Listing A.40：columns.txt
+
+```text
+123 ONE TWO
+
 456 three four
+
 ONE TWO FOUR
+
 five 123 six
+
 one two three
+
 four five
 ```
 
-运行 Listing A.39 使用 `columns.txt` 的输出如下：
+运行 `Listing A.39` 使用 `columns.txt` 的输出如下：
 
-```
- 456	1
+```text
+456	1
+
 two	3
+
 one	3
+
 three	3
+
 six	1
+
 five	2
 ```
 
-### 在数据集中仅显示“纯”单词
+## 在数据集中仅显示“纯”单词
 
-为了简单起见，让我们使用文本字符串，这样我们可以在得到解决方案的过程中查看中间结果。Listing A.41 显示了 `onlywords.sh` 的内容，它包含了三个 `awk` 命令，分别显示文本字符串中的单词、整数和字母字符串。
+为了简单起见，让我们使用文本字符串，这样我们可以在得到解决方案的过程中查看中间结果。`Listing A.41` 显示了 `onlywords.sh` 的内容，它包含了三个 `awk` 命令，分别显示文本字符串中的单词、整数和字母字符串。
 
-LISTING A.41: onlywords.sh
-```
- x="ghi abc Ghi 123 #def5 123z"
+### Listing A.41：onlywords.sh
+
+```bash
+x="ghi abc Ghi 123 #def5 123z"
 
 echo "Only words:"
-echo $x |tr -s ' '\n' | awk -F" "
+
+echo $x | tr -s ' ' '\n' | awk -F" "
+
 {
+
   if($0 ~ /^[a-zA-Z]+$/) { print $0 }
+
 }
+
 ' | sort | uniq
 
 echo "Only integers:"
-echo $x |tr -s ' '\n' | awk -F" "
+
+echo $x | tr -s ' ' '\n' | awk -F" "
+
 {
+
   if($0 ~ /^[0-9]+$/) { print $0 }
+
 }
+
 ' | sort | uniq
 
 echo "Only alphanumeric words:"
-echo $x |tr -s ' '\n' | awk -F" "
+
+echo $x | tr -s ' ' '\n' | awk -F" "
+
 {
+
   if($0 ~ /^[0-9a-zA-Z]+$/) { print $0 }
+
 }
+
 ' | sort | uniq
 ```
 
-Listing A.41 初始化变量 `x`：
+`Listing A.41` 初始化变量 `x`：
 
-```
- x="ghi abc Ghi 123 #def5 123z"
+```bash
+x="ghi abc Ghi 123 #def5 123z"
 ```
 
 下一步是将 `x` 拆分为单词：
 
-```
- echo $x |tr -s ' ' '\n'
+```bash
+echo $x | tr -s ' ' '\n'
 ```
 
 输出如下：
 
-```
- ghi
+```text
+ghi
+
 abc
+
 Ghi
+
 123
+
 #def5
+
 123z
 ```
 
 第三步是调用 `awk` 并检查匹配正则表达式 `^[a-zA-Z]+` 的单词，该正则匹配任何由一个或多个大写/小写字母组成的字符串（不包含其他任何字符）：
 
-```
- if($0 ~ /^[a-zA-Z]+$/) { print $0 }
+```awk
+if($0 ~ /^[a-zA-Z]+$/) { print $0 }
 ```
 
 输出如下：
 
-```
- ghi
+```text
+ghi
+
 abc
+
 Ghi
 ```
 
@@ -10554,24 +10932,29 @@ Ghi
 
 第二个 `awk` 命令使用正则表达式 `^[0-9]+` 来检查整数，第三个 `awk` 命令使用正则表达式 `^[0-9a-zA-Z]+` 来检查字母数字单词。
 
+```text
+Only words:
 
-
-
-
-```
- Only words:
 Ghi
+
 abc
+
 ghi
 
 Only integers:
+
 123
 
 Only alphanumeric words:
+
 123
+
 123z
+
 Ghi
+
 abc
+
 ghi
 ```
 
@@ -10579,151 +10962,211 @@ ghi
 
 ## 在 AWK 中处理多行记录
 
-Listing A.42 显示了 `employee.txt` 的内容，Listing A.43 显示了 `Employees.sh` 内容，展示了如何合并文件中的文本行。
+`Listing A.42` 显示了 `employee.txt` 的内容，`Listing A.43` 显示了 `Employees.sh` 内容，展示了如何合并文件中的文本行。
 
-### 列表 A.42: employees.txt
+### 列表 A.42：employees.txt
 
-```
- Name:  Jane Edwards
+```text
+Name:  Jane Edwards
+
 EmpId: 12345
+
 Address: 123 Main Street Chicago Illinois
 
 Name:  John Smith
+
 EmpId: 23456
+
 Address: 432 Lombard Avenue SF California
 ```
 
-### 列表 A.43: employees.sh
+### 列表 A.43：employees.sh
 
-```
- inputfile="employees.txt"
+```bash
+inputfile="employees.txt"
+
 outputfile="employees2.txt"
 
 awk '
+
 {
+
   if($0 ~ /^Name:/) {
+
     x = substr($0,8) ","
+
     next
+
   }
 
   if( $0 ~ /^Empid:/) {
+
    #skip the Empid data row
+
    #x = x substr($0,7) ","
+
     next
+
   }
 
   if($0 ~ /^Address:/) {
+
     x = x substr($0,9)
+
     print x
+
   }
+
 }
+
 ' < $inputfile > $outputfile
 ```
 
-运行 Listing A.43 中的代码后的输出如下：
+运行 `Listing A.43` 中的代码后的输出如下：
 
-```
- Jane Edwards, 123 Main Street Chicago Illinois
+```text
+Jane Edwards, 123 Main Street Chicago Illinois
+
 John Smith, 432 Lombard Avenue SF California
 ```
 
-现在，你已经看到了大量的 awk 代码片段和包含 `awk` 命令的 shell 脚本，这些内容展示了可以在文件和数据集上执行的各种任务，你已经准备好学习一些用例了。下一节（第一个用例）将向你如何将多个字段分隔符替换为单个分隔符，第二个用例将向你如何处理日期字符串。
+现在，你已经看到了大量的 `awk` 代码片段和包含 `awk` 命令的 shell 脚本，这些内容展示了可以在文件和数据集上执行的各种任务，你已经准备好学习一些用例了。下一节（第一个用例）将向你如何将多个字段分隔符替换为单个分隔符，第二个用例将向你如何处理日期字符串。
 
-### 一个简单的用例
+## 一个简单的用例
 
 本节中的代码示例向你展示了如何使用 `awk` 命令分割数据集行中的逗号分隔字段，其中字段可以包含任意深度的嵌套引号。
 
-Listing A.44 显示了文件 `quotes3.csv` 的内容，该文件包含一个“，”分隔符和多个带引号字段。
+`Listing A.44` 显示了文件 `quotes3.csv` 的内容，该文件包含一个“，”分隔符和多个带引号字段。
 
-### 列表 A.44: quotes3.csv
+### 列表 A.44：quotes3.csv
 
-```
- field5,field4,field3,"field2,foo,bar",field1,field6,field7,"fieldZ"
+```csv
+field5,field4,field3,"field2,foo,bar",field1,field6,field7,"fieldZ"
+
 fname1,"fname2,other,stuff",fname3,"fname4,foo,bar",fname5
+
 "lname1,a,b","lname2,c,d","lname3,e,f","lname4,foo,bar",lname5
 ```
 
-Listing A.45 显示了文件 `delim1.sh` 的内容，它展示了如何将 `delim1.csv` 中的分隔符替换为“，”字符。
+`Listing A.45` 显示了文件 `delim1.sh` 的内容，它展示了如何将 `delim1.csv` 中的分隔符替换为“，”字符。
 
-### 列表 A.45 delim1.sh
+### 列表 A.45：delim1.sh
 
-```
- # #inputfile="quotes1.csv"
+```bash
+# #inputfile="quotes1.csv"
+
 #inputfile="quotes2.csv"
+
 inputfile="quotes3.csv"
-grep -v "^$" $inputfile |  awk '
+
+grep -v "^$" $inputfile | awk '
+
 {
+
    print "LINE #" NR ": " $0
+
    printf ("-------------------------\n")
+
    for (i = 0; ++i <= NF;)
+
      printf "field #%d : %s\n", i, $i
+
    printf ("\n")
+
 }' FPAT='([^,]+)|("[^"]+")' < $inputfile
 ```
 
-运行 Listing A.44 中的 shell 脚本后的输出如下：
+运行 `Listing A.44` 中的 shell 脚本后的输出如下：
 
-```
- LINE #1: field5,field4,field3,"field2,foo,bar",field1,field6,field7,
+```text
+LINE #1: field5,field4,field3,"field2,foo,bar",field1,field6,field7,
 "fieldZ"
+
 -------------------------
+
 field #1 : field5
+
 field #2 : field4
+
 field #3 : field3
+
 field #4 : "field2,foo,bar"
+
 field #5 : field1
+
 field #6 : field6
+
 field #7 : field7
+
 field #8 : "fieldZ"
 
 LINE #2: fname1,"fname2,other,stuff",fname3,"fname4,foo,bar",fname5
+
 -------------------------
+
 field #1 : fname1
+
 field #2 : "fname2,other,stuff"
+
 field #3 : fname3
+
 field #4 : "fname4,foo,bar"
+
 field #5 : fname5
 
 LINE #3: "lname1,a,b","lname2,c,d","lname3,e,f","lname4,foo,bar",lname5
+
 -------------------------
+
 field #1 : "lname1,a,b"
+
 field #2 : "lname2,c,d"
+
 field #3 : "lname3,e,f"
+
 field #4 : "lname4,foo,bar"
+
 field #5 : lname5
 
 LINE #4: "Outer1 "Inner "Inner "Inner C" B" A" Outer1","XYZ1,c,d","XYZ2lname3,e,f"
+
 -------------------------
+
 field #1 : "Outer1 "Inner "Inner "Inner C" B" A" Outer1"
+
 field #2 : "XYZ1,c,d"
+
 field #3 : "XYZ2lname3,e,f"
 
 LINE #5:
+
 -------------------------
 ```
 
-你可以看到，本节中的任务可以通过 `awk` 命令轻松解决。
+
+
+你可以看到，本节中的任务可以通过`awk`命令轻松解决。
 
 ### 另一个用例
 
-本节中的代码示例向你展示了如何使用 `awk` 命令重新格式化数据集中的日期字段并更改新集中字段的顺序。例如，给定原始数据集中的输入：
+本节中的代码示例向你展示了如何使用`awk`命令重新格式化数据集中的日期字段并更改新集中字段的顺序。例如，给定原始数据集中的输入：
 
 ```
- Jane,Smith,20140805234658
+Jane,Smith,20140805234658
 ```
 
 输出集中重新格式化的行格式如下：
 
 ```
- 2014-08-05 23:46:58,Jane,Smith
+2014-08-05 23:46:58,Jane,Smith
 ```
 
-Listing A.46 显示了文件 `dates.csv` 的内容，它包含一个“，”分隔符三个字段。
+Listing A.46 显示了文件`dates.csv`的内容，它包含一个“，”分隔符三个字段。
 
 ### 列表 A.46 dates.csv
 
-```
- Jane,Smith,20140805234658
+```text
+Jane,Smith,20140805234658
 Jack,Jones,20170805234652
 Dave,Stone,20160805234655
 John,Smith,20130805234646
@@ -10732,12 +11175,12 @@ Thad,Smith,20150805234637
 Jack,Pruit,20160805234638
 ```
 
-Listing A.47 显示了 `stringdate2.sh` 的内容，它将日期转换为新格式并将其移动到第一个字段。
+Listing A.47 显示了`stringdate2.sh`的内容，它将日期转换为新格式并将其移动到第一个字段。
 
-### 列表 A.47: stringdate2.sh
+### 列表 A.47：stringdate2.sh
 
-```
- inputfile="dates2.csv"
+```bash
+inputfile="dates2.csv"
 outputfile="formatteddates2.csv"
 
 rm -f $outputfile; touch $outputfile
@@ -10759,7 +11202,7 @@ done
 新数据集的内容为：
 
 ```
- 2014-08-05 23:46:58,Jane,Smith
+2014-08-05 23:46:58,Jane,Smith
 2017-08-05 23:46:52,Jack,Jones
 2016-08-05 23:46:55,Dave,Stone
 2013-08-05 23:46:46,John,Smith
@@ -10770,11 +11213,11 @@ done
 
 ### 总结
 
-本附录介绍了 `awk` 命令，它本质上是将整个编程语言封装进单个 Unix 命令中。
+本附录介绍了`awk`命令，它本质上是将整个编程语言封装进单个 Unix 命令中。
 
-我们探索了 `awk` 中的一些内置变量以及条件逻辑、`while` 循环和 `for` 循环，以便操作数据集中的行和列。然后你看到了如何删除数据集中的行并合并行，以及如何将文件内容作为单行文本。
+我们探索了`awk`中的一些内置变量以及条件逻辑、`while`循环和`for`循环，以便操作数据集中的行和列。然后你看到了如何删除数据集中的行并合并行，以及如何将文件内容作为单行文本。
 
-接下来，你学习了如何在 `awk` 命令中使用元字符和字符集。你学习了如何在包含数字数据的文件中执行数值计算（如加、减、乘、除），以及 `awk` 中可用的一些数值函数。
+接下来，你学习了如何在`awk`命令中使用元字符和字符集。你学习了如何在包含数字数据的文件中执行数值计算（如加、减、乘、除），以及`awk`中可用的一些数值函数。
 
 此外，你还看到了如何对齐数据集中的列、删除列、从数据集中选择子集并处理数据集中的多行记录。最后，你看到了涉及结构化数据集中嵌套引号和日期格式的简单用例。
 
@@ -10782,247 +11225,235 @@ done
 
 ## 索引
 
-**A**
+### A
 
-Aho, Weinberger, and Kernighan (awk) 命令
+Aho, Weinberger, and Kernighan (`awk`) 命令
 
-内置变量, 224
+- 内置变量，224
+- 条件逻辑和控制语句
+  - `if/else` 逻辑，226
+  - `for` 循环，227–228
+  - `while` 循环，227
+- 条件逻辑，打印行，233–234
+- 字符串出现次数，240–241
 
-条件逻辑和控制语句
+#### 数据集
 
-if/else 逻辑, 226
+- 对齐列和多行，244–245
+- 对齐列，243–244
+- 词频率，247–248
+- 删除交替行，229
+- 显示纯单词，248–250
+- 合并行，229–232
+- 对齐列行子集，246–247
 
-for loop, 227–228
+- 固定列数
+  - 打印数据集，242–243
+  - 打印字符串，242
+- 元字符和字符集，232–233
+- 多行记录，250–251
+- 数值函数，236–238
 
-while loop, 227
+### 索引（Index）
 
-条件逻辑，打印行, 233–234
+- 单行命令，238
+- 后置操作符，234–235
+- `printf()` 语句，225–226
+- 打印文本字符串中的单词，240
+- 从文本文件中删除列，245
+- 基于`awk`的短脚本，239–240
+- 切分文件名，234
+- 使用用例，251–254
+- 工作原理，224–225
 
-字符串出现次数, 240–241
+### 方差分析（ANOVA），53–54
 
-数据集
+- 异常，38–39
+- 原子性、一致性、隔离性和持久性（ACID），104
+- 可用性偏差，52
 
-对齐列和多行在, 244–245
+### B
 
-对齐列在, 243–244
+- 黑盒偏移检测器，30
 
-词频率, 247–248
+### C
 
-删除交替行, 229
+- 确认偏误，52
+- 连续型数据类型，33
+- 分箱（binning），概念，33
 
-显示纯单词, 248–250
+### D
 
-合并行, 229–232
+#### 数据库操作，MySQL
 
-对齐列行子集, 246–247
+- 创建（create），117–118
+- 删除（drop），118
+- 导出（export），118–119
+- 重命名（rename），119–120
 
-固定列数
+#### 数据清洗
 
-打印数据集, 242–243
+- `awk` 命令行工具，162–163
+- 转换字母日期格式，173–175
+- 转换数值日期格式，169–172
+- 转换电话号码，167–168
+- 国家、城市和区号，181–186
+- 日期和时间格式，175–180
+- 描述，151–152
+- 在 Kaggle 数据集上，186–189
+- 个人头衔，152–154
+- 固定列的行生成，164–166
+- `sed` 命令行工具，160–161
 
-打印字符串, 242
+#### 在 SQL 中
 
-元字符和字符集, 232–233
+- 将字符串转换为日期值，158–160
+- 处理数据类型不匹配，157–158
+- 将多个值替换为单个值，156–157
+- 将`NULL`替换为 0，154
+- 将`NULL`替换为平均值，154–156
+- 截断 CSV 文件中的行，163–164
 
-多行记录, 250–251
+- 数据控制语言（DCL），112
+- 数据定义语言（DDL），112
+- 数据漂移，30
+- 数据框（Data frames），56
+- 布尔操作，60–61
+- `concat()` 方法，68–69
+- 数据清洗任务，56
+- 数据处理，69–70
+- 删除重复行，83–84
+- 查找重复行，81–83
+- 查找缺失值，84–86
+- `housing_stats.py`，80–81
+- `missingdatairis.py`，87–89
+- `nan_iris.csv`，86–87
+- `pandas_df_describe.py`，58–60
+- `pandas_df.py`，56–58
+- 随机数，62–63
+- `read_csv()` 函数，70–76
+- 从 Excel 表格读取，76–77
+- 选择、添加和删除列，77–79
+- `sort_df.py`，89–90
+- `transpose` 函数，61–62
 
-数值函数, 236–238
+- 数据操作语言（DML），113
+- 数据查询语言（DQL），112
+- 数据集，30
+- 异常，38–39
 
+#### `awk` 命令
 
+- 在多行中对齐列，244–245
+- 对齐列，243–244
+- 词频率计数，247–248
+- 删除交替行，229
+- 显示纯单词，248–250
+- 合并行，229–232
+- 列对齐子集，246–247
 
+#### 偏差-方差权衡（bias-variance trade-off）
 
-## 索引
+- 有偏差统计，51
+- 偏差类型，52–53
 
- (Index)
+#### 分类数据
 
-- 单行命令, 238
-- 后置操作符, 234–235
-- `printf()` 语句, 225–226
-- 打印文本字符串中的单词, 240
-- 从文本文件中删除列, 245
-- 基于 awk 的短脚本, 239–240
-- 切分文件名, 234
-- 使用用例, 251–254
-- 工作原理, 224–225
+- 处理数据值，36
+- 映射到数值值，36–37
 
-## 方差分析 (ANOVA), 53–54
+#### 分类器
 
-- 异常, 38–39
-- 原子性、一致性、隔离性和持久性 (ACID), 104
-- 可用性偏差, 52
+- ANOVA，53–54
+- `LIME`，53
 
-## B
+#### 数据预处理
 
-- 黑盒偏移检测器, 30
+- 货币，38
+- 日期，38
+- 离散数据 vs. 连续数据，32–33
+- 不平衡数据集，49–50
+- 缺失值，48–49
+- 离群值，38
+- 检测/移除，39–40
+- 使用 NumPy，40–42
+- 使用 Pandas，42–45
+- 使用 Sklearn，46–48
+- z-score 计算，45–46
 
-## C
+#### 数值数据缩放
 
-- 确认偏误, 52
-- 连续型数据类型, 33
-- 分箱 (binning), 概念, 33
+- 通过归一化，34
+- 通过鲁棒标准化，35–36
+- 通过标准化，34–35
 
-## D
+#### 数据类型
 
-### 数据库操作, MySQL
-- 创建 (create), 117–118
-- 删除 (drop), 118
-- 导出 (export), 118–119
-- 重命名 (rename), 119–120
+- 数据漂移，30
+- 离散，32–33
+- Python，10
+- MySQL，115
+- BLOB 和 TEXT，116
+- CHAR 和 VARCHAR，115
+- FLOAT 和 DOUBLE，116
+- 基于字符串的，116
 
-### 数据清洗
-- `awk` 命令行工具, 162–163
-- 转换字母日期格式, 173–175
-- 转换数值日期格式, 169–172
-- 转换电话号码, 167–168
-- 国家、城市和区号, 181–186
-- 日期和时间格式, 175–180
-- 描述, 151–152
-- 在 Kaggle 数据集上, 186–189
-- 个人头衔, 152–154
-- 固定列的行生成, 164–166
-- `sed` 命令行工具, 160–161
+#### 数据整理（Data wrangling）
 
-### 在 SQL 中
-- 将字符串转换为日期值, 158–160
-- 处理数据类型不匹配, 157–158
-- 将多个值替换为单个值, 156–157
-- 将 `NULL` 替换为 0, 154
-- 将 `NULL` 替换为平均值, 154–156
-- 截断 CSV 文件中的行, 163–164
-
-- 数据控制语言 (DCL), 112
-- 数据定义语言 (DDL), 112
-- 数据漂移, 30
-- 数据框 (Data frames), 56
-- 布尔操作, 60–61
-- `concat()` 方法, 68–69
-- 数据清洗任务, 56
-- 数据处理, 69–70
-- 删除重复行, 83–84
-- 查找重复行, 81–83
-- 查找缺失值, 84–86
-- `housing_stats.py`, 80–81
-- `missingdatairis.py`, 87–89
-- `nan_iris.csv`, 86–87
-- `pandas_df_describe.py`, 58–60
-- `pandas_df.py`, 56–58
-- 随机数, 62–63
-- `read_csv()` 函数, 70–76
-- 从 Excel 表格读取, 76–77
-- 选择、添加和删除列, 77–79
-- `sort_df.py`, 89–90
-- `transpose` 函数, 61–62
-
-- 数据操作语言 (DML), 113
-- 数据查询语言 (DQL), 112
-- 数据集, 30
-- 异常, 38–39
-- `awk` 命令
-- 在多行中对齐列, 244–245
-- 对齐列中, 243–244
-- 词频率计数, 247–248
-- 删除交替行, 229
-- 显示纯单词, 248–250
-- 合并行, 229–232
-- 列对齐子集, 246–247
-
-- 偏差-方差权衡 (bias-variance trade-off)
-- 有偏差统计, 51
-- 偏差类型, 52–53
-
-- 分类数据
-- 处理数据值, 36
-- 映射到数值值, 36–37
-
-- 分类器
-- ANOVA, 53–54
-- `LIME`, 53
-- 货币, 38
-- 数据预处理, 31
-- 日期, 38
-- 离散数据 vs. 连续数据, 32–33
-- 不平衡数据集, 49–50
-- 缺失值, 48–49
-- 离群值, 38
-- 检测/移除, 39–40
-- 使用 NumPy, 40–42
-- 使用 Pandas, 42–45
-- 使用 Sklearn, 46–48
-- z-score 计算, 45–46
-
-### 数值数据缩放
-- 通过归一化, 34
-- 通过鲁棒标准化, 35–36
-- 通过标准化, 34–35
-
-### 数据类型
-- 数据漂移, 30
-- 离散, 32–33
-- Python, 10
-- MySQL, 115
-- BLOB 和 TEXT, 116
-- CHAR 和 VARCHAR, 115
-- FLOAT 和 DOUBLE, 116
-- 基于字符串的, 116
-
-### 数据整理 (Data wrangling), 31
-- 事件日历, 215–218
-- `construct_city_codes2.py`, 206–208
-- `construct_city_codes.sh`, 202–205
-- 文件, 209–213
-- Python, 213–215
-- 和 `awk` 命令, 196–197
-- `csv_line.py`, 195–196
-- `csv`, 194–195
-- `pandas_line.py`, 194–195
-- 数据, 192–193
-- 转换, 191–192
-- 描述, 191–192
-- cities.csv, 190–191
-- country.csv, 190–191
-- 引号的, 220
-- 字段, 197–200
-- 跟进, 220
-- 脚本, 220
-- 行, 220–221
-- 统计数据, 197–200
-- 离散数据类型, 32–33
-- SQL 表, 197–200
-- 插入, 127–129
-- 删除, 129–130
-- 表, 126–127
-- 创建, 124–126
-- 数据库, 124–126
-- 数据, 138–140
-- XML, 138–140
-- XML, 142–144
-- 字符串, 141–142
-- JSON, 133–135
-- 表, 146–148
-- 字符串, 141–142
-- XML, 140–141
-- XML, 140–141
-- 离散数据类型, 32–33
-- SQL 表, 197–200
-- 插入, 127–129
-- 删除, 129–130
-- 表, 126–127
-- 创建, 124–126
-- 数据库, 124–126
-- 数据, 138–140
-- XML, 138–140
-- XML, 142–144
-- 字符串, 141–142
-- JSON, 133–135
-- 表, 146–148
-- 字符串, 141–142
-
-
-
+- 事件日历，215–218
+- `construct_city_codes2.py`，206–208
+- `construct_city_codes.sh`，202–205
+- 文件，209–213
+- Python，213–215
+- 和`awk`命令，196–197
+- `csv_line.py`，195–196
+- `csv`，194–195
+- `pandas_line.py`，194–195
+- 数据，192–193
+- 转换，191–192
+- 描述，191–192
+- `cities.csv`，190–191
+- `country.csv`，190–191
+- 引号，220
+- 字段，197–200
+- 跟进，220
+- 脚本，220
+- 行，220–221
+- 统计数据，197–200
+- 离散数据类型，32–33
+- SQL 表，197–200
+- 插入，127–129
+- 删除，129–130
+- 表，126–127
+- 创建，124–126
+- 数据库，124–126
+- 数据，138–140
+- XML，138–140
+- XML，142–144
+- 字符串，141–142
+- JSON，133–135
+- 表，146–148
+- 字符串，141–142
+- XML，140–141
+- XML，140–141
+- 离散数据类型，32–33
+- SQL 表，197–200
+- 插入，127–129
+- 删除，129–130
+- 表，126–127
+- 创建，124–126
+- 数据库，124–126
+- 数据，138–140
+- XML，138–140
+- XML，142–144
+- 字符串，141–142
+- JSON，133–135
+- 表，146–148
+- 字符串，141–142
 
 ## 选择数据，130–132
 
-## `SelectXMLData.jav`, 145–146
+## `SelectXMLData.jav`，145–146
 
 ## 设置步骤，124
 
@@ -11034,136 +11465,152 @@ while loop, 227
 
 ## PROCESSLIST 表，121
 
-## N
-### 规范化，34
+### N
 
-## O
-### One 热编码技术，37
-### 离群值，38
-### 检测/删除，39–40
-### 使用 NumPy，40–42
-### 使用 Pandas，42–45, 79–80
-### 使用 Sklearn，46–48
-### z-score 计算，45–46
+#### 规范化，34
 
-## P
-### Pandas
-### 使用 titanic.csv 进行聚合操作，92–94
-### `apply()` 和 `mapappy()` 方法，94–97
-### 分类到数值数据转换，63–67
-### 数据框 (data frames)，56
-### 布尔操作，60–61
-### `concat()` 方法，68–69
-### 数据清洗任务，56
-### 数据处理，69–70
-### 掉重复行，83–84
-### 查找重复行，81–83
-### 查找缺失值，84–86
-### `housing_stats.py`,80–81
-### `missingdatairis.py`,87–89
-### `nan_iris.csv`,86–87
-### `pandas_df_describe.py`,58–60
-### `pandas_df.py`,56–58
-### 使用随机数，62–63
-### `read_csv()` 函数，70–76
-### 从 Excel 表格读取，76–77
-### 选择、添加和删除列，77–79
-### `sort_df.py`,89–90
-### 转置函数，61–62
-### `groupby()` 方法，90–92
-### 安装，55
+### O
 
-### JSON 对象
-### `dict2json.py`,99–100
-### `pd_python_json.py`,100–101
-### 合并与拆列，67–68
-### 单行命令，97–99
-### 离群值，79–80
+#### One 热编码技术，37
 
-### Python
-### 整数的算术运算，10–13
-### 命令行参数，26–27
-### 编译时检查，9–10
-### 日期相关函数，22–23
-### `easy_install` 和 `pip`,1
-### 异常处理，23–24
-### `Fraction()` 函数，13–14
-### 处理用户输入，24–26
-### `help()` 和 `dir()` 函数，8–9
-### 标识符，5
-### 安装，3
-### 交互式解释器，`IPython`,2
-### 行与缩进，5–6
-### 多行语句，5
-### `PATH` 变量，3
-### 原始数据类型，10
-### 引号与注释，7–7
-### 运行时检查，9–10
-### 标准库模块，8
-### 将代码写入文件，7–8
-### 字符串，15–17
-### `replace()` 函数，20
-### 搜索与替换，18–19
-### 切片与拼接，17–18
-### `strip()`、`lstrip()` 和 `rstrip()`，19–20
-### 文本对齐，21
-### `write()` 函数，20
-### Unicode 和 UTF-8，14
-### 未初始化变量和 `None`，17
-### `virtualenv`,2
+#### 离群值
 
-## R
-### 过采样，50
-### 重采样，50
-### 欠采样，50
+- 检测/删除，39–40
+- 使用 NumPy，40–42
+- 使用 Pandas，42–45，79–80
+- 使用 Sklearn，46–48
+- z-score 计算，45–46
 
-## 关系型数据库系统 (RDBMS)
-### ACID，104
-### 原子性事务，105
-### 特性，104
-### 描述，103
-### 逻辑模式，104
-### 资金转账场景，105
-### 需要，105
-### 规范化，105–106
-### 一多关系，103–104
-### 自引用表，104
-### SQL，111–114
+### P
 
-### 用例场景
-### 客户表，108–109
-### `item_desc` 表，111
-### `line_items` 表，109–111
-### `purchase_orders` 表，109
-### 网页页面，107
-### 资源包，31
-### 鲁棒标准化技术，35–36
+#### Pandas
 
-## S
-### SMOTE (合成少数类过采样技术)算法，48, 50–51, 152
-### 扩展，51
-### 不平衡数据集，49–50
-### 标准化技术，34–35
-### 结构化查询语言 (SQL)，111–112
-### `CREATE` 关键字，114
-### DCL 和 DDL，112
-### DQL、DML 和 TCL，112–113
-### 格式样式，122
-### 对象权限，113
-### 语句，113
-### 系统权限，113
-### 沉没成本，52–53
-### 幸存者偏差，53
+- 使用`titanic.csv`进行聚合操作，92–94
+- `apply()` 和`mapappy()`方法，94–97
+- 分类到数值数据转换，63–67
+- 数据框（data frames），56
+- 布尔操作，60–61
+- `concat()` 方法，68–69
+- 数据清洗任务，56
+- 数据处理，69–70
+- 掉重复行，83–84
+- 查找重复行，81–83
+- 查找缺失值，84–86
+- `housing_stats.py`，80–81
+- `missingdatairis.py`，87–89
+- `nan_iris.csv`，86–87
+- `pandas_df_describe.py`，58–60
+- `pandas_df.py`，56–58
+- 使用随机数，62–63
+- `read_csv()` 函数，70–76
+- 从 Excel 表格读取，76–77
+- 选择、添加和删除列，77–79
+- `sort_df.py`，89–90
+- 转置函数，61–62
+- `groupby()` 方法，90–92
+- 安装，55
 
-## T
-### 事务控制语言 (TCL),113
-### 修剪技术，39
+#### JSON 对象
 
-## W
-### 缩尾处理 (Winsorizing)，39
+- `dict2json.py`，99–100
+- `pd_python_json.py`，100–101
+- 合并与拆列，67–68
+- 单行命令，97–99
+- 离群值，79–80
 
-## X
-### XML
-### 描述，136
-### 模式，137–138, 148–146
+#### Python
 
+- 整数的算术运算，10–13
+- 命令行参数，26–27
+- 编译时检查，9–10
+- 日期相关函数，22–23
+- `easy_install` 和`pip`，1
+- 异常处理，23–24
+- `Fraction()` 函数，13–14
+- 处理用户输入，24–26
+- `help()` 和`dir()`函数，8–9
+- 标识符，5
+- 安装，3
+- 交互式解释器，`IPython`，2
+- 行与缩进，5–6
+- 多行语句，5
+- `PATH` 变量，3
+- 原始数据类型，10
+- 引号与注释，7–7
+- 运行时检查，9–10
+- 标准库模块，8
+- 将代码写入文件，7–8
+- 字符串，15–17
+- `replace()` 函数，20
+- 搜索与替换，18–19
+- 切片与拼接，17–18
+- `strip()`、`lstrip()` 和`rstrip()`，19–20
+- 文本对齐，21
+- `write()` 函数，20
+- Unicode 和 UTF-8，14
+- 未初始化变量和`None`，17
+- `virtualenv`，2
+
+### R
+
+- 过采样，50
+- 重采样，50
+- 欠采样，50
+
+### 关系型数据库系统（RDBMS）
+
+- ACID，104
+- 原子性事务，105
+- 特性，104
+- 描述，103
+- 逻辑模式，104
+- 资金转账场景，105
+- 需要，105
+- 规范化，105–106
+- 一多关系，103–104
+- 自引用表，104
+- SQL，111–114
+
+#### 用例场景
+
+- 客户表，108–109
+- `item_desc` 表，111
+- `line_items` 表，109–111
+- `purchase_orders` 表，109
+- 网页页面，107
+
+- 资源包，31
+- 鲁棒标准化技术，35–36
+
+### S
+
+- SMOTE（合成少数类过采样技术）算法，48，50–51，152
+- 扩展，51
+- 不平衡数据集，49–50
+- 标准化技术，34–35
+- 结构化查询语言（SQL），111–112
+- `CREATE` 关键字，114
+- DCL 和 DDL，112
+- DQL、DML 和 TCL，112–113
+- 格式样式，122
+- 对象权限，113
+- 语句，113
+- 系统权限，113
+- 沉没成本，52–53
+- 幸存者偏差，53
+
+### T
+
+- 事务控制语言（TCL），113
+- 修剪技术，39
+
+### W
+
+- 缩尾处理（Winsorizing），39
+
+### X
+
+#### XML
+
+- 描述，136
+- 模式，137–138，148–146

@@ -1,3 +1,4 @@
+
 # 你好世界！
 
 > 原文：<https://medium.com/javarevisited/hello-world-22b5c25fe0c3?source=collection_archive---------3----------------------->
@@ -8,7 +9,7 @@
 
 打印不同 Hello worlds 的集合
 
-产出:
+产出：
 
 ![](img/07d2ec56586e804f3486765065e7d3a9.png)
 
@@ -18,7 +19,7 @@
 
 ![](img/7a8e8c5005e77ef462aca529d58c2757.png)
 
-*我是由*[*Eclipse Foundation*](https://projects.eclipse.org/projects/technology.collections)*管理的*[*Eclipse Collections*](https://github.com/eclipse/eclipse-collections)*OSS 项目的创建者和提交者。Eclipse Collections 为* [*投稿*](https://github.com/eclipse/eclipse-collections/blob/master/CONTRIBUTING.md) *打开。*
+*我是由* [*Eclipse Foundation*](https://projects.eclipse.org/projects/technology.collections) *管理的* [*Eclipse Collections*](https://github.com/eclipse/eclipse-collections) *OSS 项目的创建者和提交者。Eclipse Collections 为* [*投稿*](https://github.com/eclipse/eclipse-collections/blob/master/CONTRIBUTING.md) *打开。*
 
 ## 您可能喜欢的其他 Java 文章
 

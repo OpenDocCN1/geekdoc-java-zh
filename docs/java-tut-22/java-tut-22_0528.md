@@ -1,3 +1,4 @@
+
 # 对象排序
 
 > 原文：[`docs.oracle.com/javase/tutorial/collections/interfaces/order.html`](https://docs.oracle.com/javase/tutorial/collections/interfaces/order.html)
@@ -6,10 +7,9 @@
 
 ```java
 Collections.sort(l);
-
 ```
 
-如果`List`包含`String`元素，则将按字母顺序对其进行排序。如果包含`Date`元素，则将按时间顺序对其进行排序。这是如何发生的呢？`String`和`Date`都实现了[`Comparable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html)`接口。`Comparable`实现为一个类提供了*自然排序*，允许该类的对象自动排序。下表总结了一些更重要的实现`Comparable`接口的 Java 平台类。
+如果`List`包含`String`元素，则将按字母顺序对其进行排序。如果包含`Date`元素，则将按时间顺序对其进行排序。这是如何发生的呢？`String`和`Date`都实现了[`Comparable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html)接口。`Comparable`实现为一个类提供了*自然排序*，允许该类的对象自动排序。下表总结了一些更重要的实现`Comparable`接口的 Java 平台类。
 
 **实现 Comparable 接口的类**
 
@@ -42,7 +42,6 @@ Collections.sort(l);
 public interface Comparable<T> {
     public int compareTo(T o);
 }
-
 ```
 
 `compareTo`方法比较接收对象与指定对象，并根据接收对象是小于、等于还是大于指定对象返回负整数、0 或正整数。如果指定对象无法与接收对象比较，则该方法会抛出`ClassCastException`。
@@ -77,7 +76,7 @@ public class Name implements Comparable<Name> {
     }
 
     public String toString() {
-	return firstName + " " + lastName;
+        return firstName + " " + lastName;
     }
 
     public int compareTo(Name n) {
@@ -85,20 +84,15 @@ public class Name implements Comparable<Name> {
         return (lastCmp != 0 ? lastCmp : firstName.compareTo(n.firstName));
     }
 }
-
 ```
 
 为了保持前面的示例简洁，该类有一定的限制：它不支持中间名，要求同时有名和姓，而且在任何方面都没有国际化。尽管如此，它阐明了以下重要点：
 
-+   `Name` 对象是*不可变的*。其他条件相同的情况下，不可变类型是最好的选择，特别是对于将用作 `Set` 中的元素或 `Map` 中的键的对象。如果在集合中修改它们的元素或键，这些集合将会中断。
-
-+   构造函数检查其参数是否为 `null`。这确保所有的 `Name` 对象都是格式良好的，以便其他方法永远不会抛出 `NullPointerException`。
-
-+   `hashCode` 方法被重新定义。这对于重新定义 `equals` 方法的任何类都是必不可少的。（相等的对象必须具有相等的哈希码。）
-
-+   `equals` 方法在指定对象为 `null` 或不合适类型时返回 `false`。`compareTo` 方法在这些情况下会抛出运行时异常。这两种行为都是各自方法的一般契约所要求的。
-
-+   `toString` 方法已被重新定义，以便以人类可读的形式打印 `Name`。这总是一个好主意，特别是对于将要放入集合中的对象。各种集合类型的 `toString` 方法依赖于它们的元素、键和值的 `toString` 方法。
+- `Name` 对象是*不可变的*。其他条件相同的情况下，不可变类型是最好的选择，特别是对于将用作 `Set` 中的元素或 `Map` 中的键的对象。如果在集合中修改它们的元素或键，这些集合将会中断。
+- 构造函数检查其参数是否为 `null`。这确保所有的 `Name` 对象都是格式良好的，以便其他方法永远不会抛出 `NullPointerException`。
+- `hashCode` 方法被重新定义。这对于重新定义 `equals` 方法的任何类都是必不可少的。（相等的对象必须具有相等的哈希码。）
+- `equals` 方法在指定对象为 `null` 或不合适类型时返回 `false`。`compareTo` 方法在这些情况下会抛出运行时异常。这两种行为都是各自方法的一般契约所要求的。
+- `toString` 方法已被重新定义，以便以人类可读的形式打印 `Name`。这总是一个好主意，特别是对于将要放入集合中的对象。各种集合类型的 `toString` 方法依赖于它们的元素、键和值的 `toString` 方法。
 
 由于本节是关于元素排序的，让我们再谈一下 `Name` 的 `compareTo` 方法。它实现了标准的名称排序算法，其中姓氏优先于名字。这正是你在自然排序中想要的。如果自然排序是不自然的，那将会非常令人困惑！
 
@@ -123,27 +117,24 @@ public class NameSort {
         System.out.println(names);
     }
 }
-
 ```
 
 如果你运行这个程序，这是它打印的内容。
 
 ```java
 [Karl Ng, Tom Rich, Jeff Smith, John Smith]
-
 ```
 
 `compareTo`方法的行为有四个限制，我们现在不会详细讨论，因为它们相当技术性和乏味，并且最好留在 API 文档中。所有实现`Comparable`的类都必须遵守这些限制，因此如果您正在编写实现它的类，请阅读`Comparable`的文档。尝试对违反这些限制的对象列表进行排序会导致未定义的行为。从技术上讲，这些限制确保自然排序是实现它的类的对象上的*全序*；这是确保排序是明确定义的必要条件。
 
 ## 比较器
 
-如果您想按照除自然排序之外的顺序对一些对象进行排序怎么办？或者如果您想对一些不实现`Comparable`接口的对象进行排序怎么办？要做到这两点，您需要提供一个[`Comparator`](https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html)  一个封装排序的对象。与`Comparable`接口一样，`Comparator`接口由一个方法组成。
+如果您想按照除自然排序之外的顺序对一些对象进行排序怎么办？或者如果您想对一些不实现`Comparable`接口的对象进行排序怎么办？要做到这两点，您需要提供一个[`Comparator`](https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html) — 一个封装排序的对象。与`Comparable`接口一样，`Comparator`接口由一个方法组成。
 
 ```java
 public interface Comparator<T> {
     int compare(T o1, T o2);
 }
-
 ```
 
 `compare`方法比较其两个参数，根据第一个参数是否小于、等于或大于第二个参数返回负整数、0 或正整数。如果任一参数的类型对于`Comparator`不合适，则`compare`方法会抛出`ClassCastException`。
@@ -159,7 +150,6 @@ public class Employee implements Comparable<Employee> {
     public Date hireDate() { ... }
        ...
 }
-
 ```
 
 假设`Employee`实例的自然排序是根据员工姓名（如前面的示例中定义的）的`Name`排序。不幸的是，老板要求按资历顺序列出员工名单。这意味着我们需要做一些工作，但不多。以下程序将生成所需的列表。
@@ -183,7 +173,6 @@ public class EmpSort {
         System.out.println(e);
     }
 }
-
 ```
 
 程序中的`Comparator`相当简单。它依赖于应用于`hireDate`访问器方法返回的值的`Date`的自然排序。请注意，`Comparator`将其第二个参数的入职日期传递给其第一个参数，而不是反过来。原因是最近入职的员工资历最低；按照入职日期排序会将列表按照逆资历顺序排列。有时人们用来实现这种效果的另一种技术是保持参数顺序，但对比较结果取反。
@@ -191,14 +180,12 @@ public class EmpSort {
 ```java
 // Don't do this!!
 return -r1.hireDate().compareTo(r2.hireDate());
-
 ```
 
 你应该始终使用前一种技术而不是后一种，因为后一种不能保证有效。原因是`compareTo`方法如果其参数小于调用它的对象，则可以返回任何负的`int`。有一个负的`int`在取反后仍然是负的，尽管这看起来很奇怪。
 
 ```java
 -Integer.MIN_VALUE == Integer.MIN_VALUE
-
 ```
 
 前面程序中的`Comparator`用于对`List`进行排序很好，但它有一个缺陷：它不能用于对已排序的集合（如`TreeSet`）进行排序，因为它生成的排序与`equals`不兼容。这意味着这个`Comparator`将把`equals`方法不认为相等的对象等同起来。特别是，任何在同一天入职的两名员工将被视为相等。当你对`List`进行排序时，这并不重要；但当你使用`Comparator`对已排序的集合进行排序时，这是致命的。如果你使用这个`Comparator`将多名在同一天入职的员工插入`TreeSet`，只有第一个会被添加到集合中；第二个将被视为重复元素并被忽略。
@@ -217,14 +204,12 @@ static final Comparator<Employee> SENIORITY_ORDER =
                (e1.number() == e2.number() ? 0 : 1));
     }
 };
-
 ```
 
 最后一点：你可能会想要用更简单的方式替换`Comparator`中的最后一个`return`语句：
 
 ```java
 return e1.number() - e2.number();
-
 ```
 
 不要这样做，除非你*绝对确定*没有人会有负的员工编号！这个技巧通常不起作用，因为有符号整数类型不足以表示任意两个有符号整数的差值。如果`i`是一个很大的正整数，而`j`是一个很大的负整数，`i - j`会溢出并返回一个负整数。所得到的`comparator`违反了我们一直谈论的四个技术限制之一（传递性），并产生可怕的、微妙的错误。这不仅仅是理论上的担忧；人们会因此受到伤害。

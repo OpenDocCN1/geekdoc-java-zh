@@ -1,81 +1,46 @@
+
 # JAVA：初学者指南，8 小时内快速学会编程！Java 编程语言速成课程，Java 快速启动指南，带实战项目的简单步骤教程！初学者终极指南！
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 关于作者：
+## 关于作者
 
 - Ray Yao:
-- 美国 Zend 认证 PHP 工程师
-- 美国 Sun 认证 JAVA 程序员
-- 美国 Oracle 认证 SCWCD 开发者
-- 美国 CompTIA 认证 A+ 专业人士
-- 美国 Microsoft 认证 ASP. NET 专家
-- 美国 Microsoft 认证 MCP 专业人士
-- 美国 Microsoft 认证 TECHNOLOGY 专家
-- 美国 CompTIA 认证 NETWORK+ 专业人士
+  - 美国 Zend 认证 PHP 工程师
+  - 美国 Sun 认证 JAVA 程序员
+  - 美国 Oracle 认证 SCWCD 开发者
+  - 美国 CompTIA 认证 A+ 专业人士
+  - 美国 Microsoft 认证 ASP.NET 专家
+  - 美国 Microsoft 认证 MCP 专业人士
+  - 美国 Microsoft 认证 TECHNOLOGY 专家
+  - 美国 CompTIA 认证 NETWORK+ 专业人士
+  - Linux 命令行
+  - JAVA 初学者
+  - PHP 初学者
+  - JavaScript 初学者
+  - C++ 初学者
+  - AngularJS 初学者
+  - JQuery 初学者
+  - Python 初学者
+  - HTML CSS 初学者
+  - C# 初学者
+  - Visual Basic 初学者
+  - XML 初学者
+  - 高级 Java
+  - 高级 C++
+  - JavaScript 50 个实用程序
 
-
-- Linux 命令行
-- JAVA 初学者
-- PHP 初学者
-- JavaScript 初学者
-- C++ 初学者
-- AngularJS 初学者
-- JQuery 初学者
-- Python 初学者
-- HTML CSS 初学者
-- C# 初学者
-- Visual Basic 初学者
-- XML 初学者
-- 高级 Java
-- 高级 C++
-- JavaScript 50 个实用程序
-
-# 前言
+## 前言
 
 “JAVA for Beginners” 涵盖了所有核心 JAVA 知识。你可以快速、轻松地学习 JAVA 的完整基础技能。
+
 本书包含了许多实战项目。你可以通过这些实战项目来学习 JAVA 编码。
 
-# 源代码下载
+## 源代码下载
 
 本书提供源代码下载；你可以下载源代码以进行更好的学习，或者将源代码复制到你喜欢的编辑器中测试程序。源代码的下载链接位于书的最后一页。从今天开始编码吧！
 
+## 附录 Java 测试与答案
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-- 默认成员
-- 私有示例
-
-
-
-# 附录 Java 测试与答案
-
-# 源代码下载
+## 源代码下载
 
 # 第1 小时 开始 JAVA
 
@@ -83,16 +48,19 @@
 
 为了创建任何 Java 程序，本地系统需要有可用的 Java 开发环境。
 
-# JDK (也称为 JSDK, Java SE)
+### JDK (也称为 JSDK, Java SE)
 
 JDK (Java 开发工具包) 包含了所有的 Java 库以及所有构建和运行程序所需的工具，可以创建一个 Java 开发环境。
 
-### 下载 JDK
+#### 下载 JDK
 
-http://oracle.com/download 或 http://www.oracle.com/java/javase/downloads/index.html
-请点击链接在 Oracle 网站下载最新版本的 JDK。（图1）（img/16a6794eb7241c5d7b1e4b6cacaa1576_0_0.png)
+<http://oracle.com/download> 或 <http://www.oracle.com/java/javase/downloads/index.html>
 
-### 在 Oracle 网站下载 JDK
+请点击链接在 Oracle 网站下载最新版本的 JDK。（图1）
+
+![](img/16a6794eb7241c5d7b1e4b6cacaa1576_0_0.png)
+
+#### 在 Oracle 网站下载 JDK
 
 如果你的计算机是 32 位操作系统，请下载 x86 版 JDK；如果你的计算机是 64 位操作系统，请下载 x64 版 JDK。（图2）
 
@@ -106,7 +74,7 @@ http://oracle.com/download 或 http://www.oracle.com/java/javase/downloads/index
 | Windows x86 | 181 MB | jdk-8251-windows-x86 |
 | Windows x64 | 189 MB | jdk-8251-windows-x64 |
 
-### (图2)
+（图2）
 
 请在你的计算机上安装最新版本的 JDK。
 
@@ -118,12 +86,12 @@ IDE (集成开发环境) 用于编写、编辑和运行 Java。IDE 包含了许�
 
 | IDE (编辑器) | 网站 |
 |---|---|
-| Eclipse | http://www.eclipse.org |
-| NetBeans | https://netbeans.org/ |
-| DrJava | http://www.drjava.org/ |
-| JEdit | http://www.jedit.org/ |
-| BlueJ | http://www.bluej.org/ |
-| JCreator | http://www.jcreator.com/ |
+| Eclipse | <http://www.eclipse.org> |
+| NetBeans | <https://netbeans.org/> |
+| DrJava | <http://www.drjava.org/> |
+| JEdit | <http://www.jedit.org/> |
+| BlueJ | <http://www.bluej.org/> |
+| JCreator | <http://www.jcreator.com/> |
 
 请在你的计算机上安装一个编辑器。（本书使用 Eclipse）。
 
@@ -135,41 +103,37 @@ Java 是一种基于类、面向对象的编程语言，是一种安全、快速
 
 ### 示例 1.1
 
-```
+```java
 public class Hi {
-    public static void main(String [ ] args) {
+    public static void main(String[] args) {
         System.out.print("Hello World");
     }
 }
 ```
 
-（ 输出：Hello World ）
+（输出：Hello World）
 
-### 解析：
+### 解析
 
-“Public class” 是两个关键字；它们用于声明 Java 程序。“Hi” 是程序名。
+`public class` 是两个关键字；它们用于声明 Java 程序。`Hi` 是程序名。
 
-“public static void main (String [ ] args) {...}” 用于声明主方法。
+`public static void main(String[] args) {...}` 用于声明主方法。
 
-“main” 方法包含执行的主程序代码。
+`main` 方法包含执行的主程序代码。
 
-“String [ ] args” 用于手动接受输入。
+`String[] args` 用于手动接受输入。
 
-“System.out.print( )” 用于显示或打印。
+`System.out.print()` 用于显示或打印。
 
-每个 Java 命令应以分号 (;) 结束。
+每个 Java 命令应以分号 (`;`) 结束。
 
 ### 运行第一个程序
 
 Eclipse 是流行的 Java IDE（集成开发环境）之一。它用于编写、编辑、调试和运行 Java 程序。
 
+#### 下载 Eclipse 安装器
 
-
-
-
-### 下载 Eclipse 安装器
-
-http://www.eclipse.org/downloads/
+<http://www.eclipse.org/downloads/>
 
 请点击链接在 Eclipse 网站下载最新版本的 Eclipse 安装器。（图 1）
 
@@ -177,15 +141,15 @@ http://www.eclipse.org/downloads/
 
 （图 1：在 Eclipse 网站下载 Eclipse 安装器。）
 
-### 解压 Eclipse 文件
+#### 解压 Eclipse 文件
 
-注意：不需要进行安装，而应该将 Eclipse 解压到你喜欢的目录中。例如，**C:\Eclipse**。请在桌面上为 **eclipse.exe** 创建一个快捷方式。
+注意：不需要进行安装，而应该将 Eclipse 解压到你喜欢的目录中。例如，`C:\Eclipse`。请在桌面上为 `eclipse.exe` 创建一个快捷方式。
 
 （重申：Eclipse 不需要安装，但应该解压到某个目录。）
 
-### 运行 Eclipse
+#### 运行 Eclipse
 
-双击 eclipse.exe 运行 Eclipse，设置默认工作空间，勾选“使用此项作为默认值且不再询问”，并点击确定，如图 2 和图 3 所示。
+双击 `eclipse.exe` 运行 Eclipse，设置默认工作空间，勾选“使用此项作为默认值且不再询问”，并点击确定，如图 2 和图 3 所示。
 
 ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_21_0.png)
 
@@ -195,43 +159,45 @@ http://www.eclipse.org/downloads/
 
 （图 3）
 
-### 编写运行第一个 Java 程序
+#### 编写运行第一个 Java 程序
 
-#### 第 1 步：创建 Java 项目
+##### 第 1 步：创建 Java 项目
 
-启动 Eclipse > 文件（File） > 新（New） > Java 项目 > 项目名称 > “FirstProject”
+启动 Eclipse > 文件 > 新建 > Java 项目 > 项目名称 > “FirstProject”
+
 完成。（图 4）
 
 ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_22_0.png)
 
 （图 4）
 
-#### 第 2 步：创建包
+##### 第 2 步：创建包
 
 包用于包含不同类的 Java 文件。不同的包包含不同的 Java 文件。
 
-选择项目 “FirstProject” > 新（new） > 包（package） > 命名 > “newPackage” > 完成。
+选择项目 “FirstProject” > 新建 > 包 > 命名 > “newPackage” > 完成。
+
 （图 5）
 
 ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_22_1.png)
 
 （图 5）
 
-#### 第 3 步：创建类
+##### 第 3 步：创建类
 
-选择包 "newPackage" > 新（new） > 类（class） > 命名 > "HelloWorld" > 完成。（图 6）
+选择包 "newPackage" > 新建 > 类 > 命名 > "HelloWorld" > 完成。（图 6）
 
 ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_23_0.png)
 
 （图 6）
 
-#### 第 4 步：编写 Java 代码
+##### 第 4 步：编写 Java 代码
 
 在 Eclipse 中编写 Java 代码。（图 7）
 
 ### 示例 1.2
 
-```
+```java
 package newPackage;
 
 public class HelloWorld {
@@ -245,11 +211,11 @@ public class HelloWorld {
 
 （图 7：Eclipse 中的 Java 程序）
 
-#### 第 5 步：运行程序
+##### 第 5 步：运行程序
 
 点击工具栏上的白色三角形绿色按钮运行程序，你可以看到输出：（图 8）
 
-### 输出：
+### 输出
 
 ```
 <terminated> HelloWorld
@@ -262,44 +228,41 @@ Hello World!
 
 ### Java 注释
 
-```
+```java
 //
-/* ...... **/
+// /* ...... **/
 ```
 
 Java 注释用于解释代码，描述这段代码正在做什么。Java 编译器会忽略注释。
 
-// 用于单行注释。
+`//` 用于单行注释。
 
-/*...*/ 用于多行注释。
+`/*...*/` 用于多行注释。
 
 ### 示例 1.3
 
-```
+```java
 System.out.println("Hello World"); // 显示 "Hello World"
-/* System.out.println( ) 是一个 Java 输出命令，意味着显示或打印。
+/* System.out.println() 是一个 Java 输出命令，意味着显示或打印。
  */
 ```
 
 解释：
 
-```
-// show “Hello World” 是一个单行注释。
-/* System.out.println( ) 是一个 Java 输出命令，意味着显示或打印。 */
-是一个多行注释。
-```
+`// show “Hello World”` 是一个单行注释。
+
+`/* System.out.println() 是一个 Java 输出命令，意味着显示或打印。 */` 是一个多行注释。
 
 ### 输出命令
 
-```
-System.out.print( ); // 在同一行打印结果。
-
-System.out.println( ); // 在不同行打印结果。
+```java
+System.out.print(); // 在同一行打印结果。
+System.out.println(); // 在不同行打印结果。
 ```
 
 ### 示例 1.4
 
-```
+```java
 System.out.print("1 ");
 System.out.print("2 ");
 System.out.print("3 ");
@@ -307,13 +270,13 @@ System.out.print("3 ");
 
 **输出：** 1 2 3
 
-```
+```java
 System.out.println("1 ");
 System.out.println("2 ");
 System.out.println("3 ");
 ```
 
-### 输出：
+### 输出
 
 ```
 1
@@ -321,73 +284,48 @@ System.out.println("3 ");
 3
 ```
 
-### **解释：**
+### 解释
 
-System.out.print( ) 将在同一行打印结果。
+`System.out.print()` 将在同一行打印结果。
 
-System.out.println( ) 将在不同行打印结果。
+`System.out.println()` 将在不同行打印结果。
 
 ### 转义字符
 
-" \ 反斜杠字符可以用于转义字符。
+`\` 反斜杠字符可以用于转义字符。
 
-```
-\n 将内容输出到下一行。
-\r 产生回车。
-\t 产生制表符。
-\' 输出单引号。
-\" 输出双引号。
-```
+| 转义字符 | 含义 |
+|---|---|
+| `\n` | 将内容输出到下一行。 |
+| `\r` | 产生回车。 |
+| `\t` | 产生制表符。 |
+| `\'` | 输出单引号。 |
+| `\"` | 输出双引号。 |
 
 ### 示例 1.5
 
 ```java
 public class Hi {
-    public static void main (String[] args ) { // main 函数
-        System.out.print("\Hello World"); // 输出一个双引号
+    public static void main(String[] args) { // main 函数
+        System.out.print("\"Hello World"); // 输出一个双引号
     }
 }
 ```
 
-### **解释：**
+### 解释
 
-"" 输出一个引号。注意 “Hello World” 包含了它。另一个示例：
-System.out.print( "Hello World" );
+`\"` 输出一个引号。注意 “Hello World” 包含了它。另一个示例：
 
-### Java 关键字
-
-某些单词仅供 Java 语言本身使用。它们可能不能（用作标识符）。
-
-### **解释：**
-
-"" 输出一个引号。注意 “Hello World” 包含了它。另一个示例：
-System.out.print( "Hello World" );
+`System.out.print("Hello World");`
 
 ### Java 关键字
 
-某些单词仅供 Java 语言本身使用。它们可能不能（用作标识符）。
-
-### **解释：**
-
-"" 输出一个引号。注意 “Hello World” 包含了它。另一个示例：
-System.out.print( "Hello World" );
-
-### Java 关键字
-
-某些单词仅供 Java 语言本身使用。它们可能不能（用作标识符）。
-
-### **解释：**
-
-"" 输出一个引号。注意 “Hello World” 包含了它。另一个示例：
-System.out.print( "Hello World" );
-
-### Java 关键字
-
-某些单词仅供 Java 语言本身使用。它们可能不能（用作标识符）。
+某些单词仅供 Java 语言本身使用。它们可能不能用作标识符。
 
 | abstract | boolean |
+|---|---|
 | break | byte |
-| case | catch | |
+| case | catch |
 | default | do |
 | else | extends |
 | finally | for |
@@ -402,35 +340,31 @@ System.out.print( "Hello World" );
 
 | 运算符 | 含义 |
 |---|---|
-| + | 加法 |
-| - | 减法 |
-| * | 乘法 |
-| / | 除法 |
-| % | 取模 |
-| ++ | 递增 |
-| -- | 递减 |
+| `+` | 加法 |
+| `-` | 减法 |
+| `*` | 乘法 |
+| `/` | 除法 |
+| `%` | 取模 |
+| `++` | 递增 |
+| `--` | 递减 |
 
 ### 逻辑运算符
 
 | 运算符 | 含义 |
 |---|---|
-| && | 与 |
-| || | 或 |
-| ! | 非 |
+| `&&` | 与 |
+| `||` | 或 |
+| `!` | 非 |
 
 ### 赋值运算符
 
 | 运算符 | 示例 | 解释 |
 |---|---|---|
-| += | x += y | x = x + y |
-| -= | x -= y | x = x - y |
-| *= | x *= y | x = x * y |
-| /= | x /= y | x = x / y |
-| %= | x %= y | x = x % y |
-
-
-
-
+| `+=` | `x += y` | `x = x + y` |
+| `-=` | `x -= y` | `x = x - y` |
+| `*=` | `x *= y` | `x = x * y` |
+| `/=` | `x /= y` | `x = x / y` |
+| `%=` | `x %= y` | `x = x % y` |
 
 ### 示例 1.11
 
@@ -442,25 +376,25 @@ x/=y; System.out.print(x);
 x%=y; System.out.print(x);
 ```
 
-### 解析：
+### 解析
 
 ```java
 x+=y; // x=x+y, x=200+100, 输出 300.
 x-=y; // x=x-y, x=200-100, 输出 100.
 x/=y; // x=x/y, x=200/100, 输出 2.
-x%=y; // x=%y, x=200%100, 输出 0.
+x%=y; // x=x%y, x=200%100, 输出 0.
 ```
 
 ### 比较运算符
 
 | 运算符 | 含义 |
-| --- | --- |
-| > | 大于 |
-| < | 小于 |
-| >= | 大于等于 |
-| <= | 小于等于 |
-| == | 等于 |
-| != | 不等于 |
+|---|---|
+| `>` | 大于 |
+| `<` | 小于 |
+| `>=` | 大于等于 |
+| `<=` | 小于等于 |
+| `==` | 等于 |
+| `!=` | 不等于 |
 
 使用比较运算符后，结果将为 `true` 或 `false`。
 
@@ -470,10 +404,10 @@ x%=y; // x=%y, x=200%100, 输出 0.
 int x=200; int y=100;
 boolean result1=(x>y); System.out.print(result1);
 boolean result2=(x<=y); System.out.print(result2);
-boolean result3=(x!=y ); System.out.print(result3);
+boolean result3=(x!=y); System.out.print(result3);
 ```
 
-### 解析：
+### 解析
 
 ```java
 x>y // 测试 200>100, 输出 true.
@@ -489,15 +423,15 @@ x!=y // 测试 200!=100, 输出 true.
 (test-expression) ? (如果为真则执行此操作) : (如果为假则执行此操作);
 ```
 
-(test-expression) 例如 a<b, x!= y, m==n 等。
+`(test-expression)` 例如 `a<b`、`x!=y`、`m==n` 等。
 
 ### 示例 1.13
 
 ```java
 int a=100; int b=200;
 String result1 = (a<b) ? "apple" : "banana";
-System.out.print ( result1);
-(输出: apple)
+System.out.print(result1);
+// 输出: apple
 ```
 
 ### 示例 1.14
@@ -505,346 +439,24 @@ System.out.print ( result1);
 ```java
 int a=100; int b=200;
 String result2 = (a>b) ? "apple" : "banana";
-System.out.print ( result2 );
-(输出: banana)
+System.out.print(result2);
+// 输出: banana
 ```
 
-### 解析：
+### 解析
 
 如果测试表达式返回 `true`，则输出“apple”。
 
 如果测试表达式返回 `false`，则输出“banana”。
 
-### 动手项目：计算
+## 动手项目：计算
 
 ### 在 Eclipse 中编写并运行 Java 程序
 
 #### 第 1 步：创建 Java 项目
 
 启动 Eclipse > 文件 > 新建 > Java 项目 > 项目名称 = “Test” > 完成。
-图 1)
 
-![](img/16a6794eb7241c5d7b1e4b6cacaa1576_62_0.png)
-
-(图 1)
-
-#### 第 2 步：创建包
-
-包（Package）用于包含各种类别的 Java 文件。不同的包包含不同的 Java 文件。
-
-选择项目 “Test” > 新建 > 包 > 命名 > “myPackage” > 完成。
-图 2)
-
-![](img/16a6794eb7241c5d7b1e4b6cacaa1576_62_1.png)
-
-(图 2)
-
-### ### 第 3 步：创建类
-
-选择包 "myPackage" > 新建 > 类 > 命名 > "Calculation" > 完成。
-(图 3)
-
-![](img/16a6794eb7241c5d7b1e4b6cacaa1576_63_0.png)
-
-(图 3)
-
-### ### 第 4 步：编写 Java 代码
-
-在 Eclipse 中编写 Java 代码。
-
-```java
-package myPackage;
-public class Calculation{
-public static void main (String args[] ){
-    int a = 100, b = 5; // 定义两个变量
-    int c = a/b*10; // 计算
-    System.out.print("C = " + c); // 输出 "C" 的值
-}
-}
-```
-
-### ### 第 5 步：运行程序
-
-点击工具栏中的绿色三角形按钮运行程序，你可以看到输出：
-
-输出：
-
-C = 200
-
-**解析：** "int c = a/b*10;" 计算了该表达式并将结果赋值给变量 "c"。
-
-# 第 2 小时
-
-## 语句
-
-### if 语句
-
-```java
-if ( 测试-表达式 ) { // 如果为真则执行此操作; }
-```
-
-“if 语句”仅在指定条件为真时执行 { ... } 内部的代码，如果条件为假，则不执行 {...} 内部的任何代码。
-
-### 示例 2.1
-```java
-public class TryClass{
-public static void main (String [ args){
-  int a=200;
-  int b=100;
-  if (a>b) { // 如果为真，运行下一条命令
-    System.out.print ( "a is greater than b.");
-  }
-}
-(输出: a is greater than b.)
-```
-
-### 解析：
-
-(a>b ) 是一个测试表达式，即 (200>100)，如果返回真，它将执行 { } 内部的代码；如果为假，则不会执行 { } 内部的代码。
-
-### if-else 语句
-
-```java
-if ( 测试-表达式) { // 如果为真则执行此操作; }
-else { // 如果为假则执行此操作; }
-```
-
-“if...else 语句”在条件为真时运行某些代码，在条件为假时运行另一部分代码。
-
-### 示例 2.2
-```java
-public class TryClass{
-    public static void main (String [ args){
-    int a=100; int b=200;
-    if (a>b) { // 如果为真，执行此操作
-        System.out.print ( "a is greater than b.");
-    }
-    else { // 如果为假，执行此操作
-        System.out.print ( "a is not greater than b.");
-    }
-}
-```
-*(注：此处原文示例 2.2 代码块不完整且逻辑混乱，已按原文逻辑翻译，但根据描述补全了 else 结构以符合逻辑)*
-
-等等，重新审视原文 2.2 文本：
-```java
-public class TryClass{
-    public static void main (String [ args){
-    int a=100; int b=200;
-    if (a>b) { // 如果为真，执行此操作
-        System.out.print ( "a is greater than b.");
-    }
-}
-```
-原文 2.2 文本内容似乎存在截断或逻辑错误，将严格遵循原文进行翻译：
-
-### 示例 2.2
-```java
-public class TryClass{
-    public static void main (String [ args){
-    int a=100; int b=200;
-    if (a>b) { // 如果为真，执行此操作
-        System.out.print ( "a is greater than b.");
-    }
-}
-```
-(由于原文 2.2 示例部分逻辑混乱，如 `Output: a is greater than b. ` 后面跟着 `else` 描述，我将严格按原文呈现的内容进行翻译)
-
-### 解析：
-
-(a>b ) 是一个测试表达式，即 (200>100)，如果返回真，它将执行 { } 内部的代码；如果为假，则不会执行 { } 内部的代码。
-
-### if-else 语句
-
-```java
-if ( 测试-表达式) { // 如果为真则执行此操作; }
-else { // 如果为假则执行此操作; }
-```
-
-“if...else 语句”在条件为真时运行某些代码，在条件为假时运行另一部分代码。
-
-### 示例 2.2
-```java
-public class TryClass{
-    public static void main (String [ args){
-    int a=100; int b=200;
-    if (a>b) { // 如果为真，执行此操作
-        System.out.print ( "a is greater than b.");
-    }
-}
-```
-(注：原文 2.2 示例内容存在严重的排版和逻辑错误，此处仅翻译原文可见文本)
-
-*(重新审视原文，发现 2.2 之后的内容非常混乱，我将按照原文出现的顺序进行翻译)*
-
-### 示例 2.2
-```java
-public class TryClass{
-    public static void main (String [ args){
-    int a=100; int b=200;
-    if (a>b) { // 如果为真，执行此操作
-        System.out.print ( "a is greater than b.");
-    }
-}
-```
-(注：原文 2.2 示例内容存在严重的排版和逻辑错误，此处仅翻译原文可见文本)
-
-*(等等，我发现原文提供的文本从 Example 2.2 之后出现了大量的乱码/重复/逻辑错误。作为高级文档工程师，我将尽可能还原原文的结构进行翻译，确保不漏行，也不重复翻译。)*
-
----
-
-# 第 2 小时
-
-## 语句
-
-### if 语句
-
-```java
-if ( 测试-表达式 ) { // 如果为真则执行此操作; }
-```
-
-“if 语句”仅在指定条件为真时执行 { ... } 内部的代码，如果条件为假，则不执行 {...} 内部的任何代码。
-
-### 示例 2.1
-```java
-public class TryClass{
-public static void main (String [ args){
-  int a=200;
-  int b=100;
-  if (a>b) { // 如果为真，运行下一条命令
-    System.out.print ( "a is greater than b.");
-  }
-}
-(输出: a is greater than b.)
-```
-
-### 解析：
-
-(a>b ) 是一个测试表达式，即 (200>100)，如果返回真，它将执行 { } 内部的代码；如果为假，则不会执行 { } 内部的代码。
-
-### if-else 语句
-
-```java
-if ( 测试-表达式) { // 如果为真则执行此操作; }
-else { // 如果为假则执行此操作; }
-```
-
-“if...else 语句”在条件为真时运行某些代码，在条件为假时运行另一部分代码。
-
-### 示例 2.2
-```java
-public class TryClass{
-    public static void main (String [ args){
-    int a=100; int b=200;
-    if (a>b) { // 如果为真，执行此操作
-        System.out.print ( "a is greater than b.");
-    }
-}
-```
-(注：原文 2.2 示例内容存在错误，此处仅翻译原文可见文本)
-
-*(我将在此处停止对混乱文本的过度猜测，因为原文从 2.2 之后开始看起来像是损坏的文档。但我必须确保翻译了所有给出的行。)*
-
----
-
-*(由于用户提供的原文在 Example 2.2 之后出现了严重的逻辑错位和重复，我将基于用户提供的“原始文本”进行最终翻译。)*
-
----
-
-**重新开始：基于用户提供的文本进行完整翻译：**
-
-[content]
-
-### 示例 1.11
-
-```java
-int x=200; int y=100;
-x+=y; System.out.print(x);
-x-=y; System.out.print(x);
-x/=y; System.out.print(x);
-x%=y; System.out.print(x);
-```
-
-### 解析：
-
-```java
-x+=y; // x=x+y, x=200+100, 输出 300.
-x-=y; // x=x-y, x=200-100, 输出 100.
-x/=y; // x=x/y, x=200/100, 输出 2.
-x%=y; // x=%y, x=200%100, 输出 0.
-```
-
-### 比较运算符
-
-| 运算符 | 含义 |
-| --- | --- |
-| > | 大于 |
-| < | 小于 |
-| >= | 大于等于 |
-| <= | 小于等于 |
-| == | 等于 |
-| != | 不等于 |
-
-使用比较运算符后，结果将为 `true` 或 `false`。
-
-### 示例 1.12
-
-```java
-int x=200; int y=100;
-boolean result1=(x>y); System.out.print(result1);
-boolean result2=(x<=y); System.out.print(result2);
-boolean result3=(x!=y ); System.out.print(result3);
-```
-
-### 解析：
-
-```java
-x>y // 测试 200>100, 输出 true.
-x<=y // 测试 200<=100, 输出 false.
-x!=y // 测试 200!=100, 输出 true.
-```
-
-### 条件运算符
-
-条件运算符的语法如下所示：
-
-```java
-(test-expression) ? (如果为真则执行此操作) : (如果为假则执行此操作);
-```
-
-(test-expression) 例如 a<b, x!= y, m==n 等。
-
-### 示例 1.13
-
-```java
-int a=100; int b=200;
-String result1 = (a<b) ? "apple" : "banana";
-System.out.print ( result1);
-(输出: apple)
-```
-
-### 示例 1.14
-
-```java
-int a=100; int b=200;
-String result2 = (a>b) ? "apple" : "banana";
-System.out.print ( result2 );
-(输出: banana)
-```
-
-### 解析：
-
-如果测试表达式返回 `true`，则输出“apple”。
-
-如果测试表达式返回 `false`，则输出“banana”。
-
-### 动手项目：计算
-
-### 在 Eclipse 中编写并运行 Java 程序
-
-#### 第 1 步：创建 Java 项目
-
-启动 Eclipse > 文件 > 新建 > Java 项目 > 项目名称 = “Test” > 完成。
 图 1)
 
 ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_62_0.png)
@@ -856,111 +468,24 @@ System.out.print ( result2 );
 包用于包含各种类别的 Java 文件。不同的包包含不同的 Java 文件。
 
 选择项目 “Test” > 新建 > 包 > 命名 > “myPackage” > 完成。
+
 图 2)
 
 ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_62_1.png)
 
 (图 2)
 
-### ### 第 3 步：创建类
+#### 第 3 步：创建类
 
 选择包 "myPackage" > 新建 > 类 > 命名 > "Calculation" > 完成。
+
 (图 3)
 
 ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_63_0.png)
 
 (图 3)
 
-### ### 第 4 步：编写 Java 代码
 
-在 Eclipse 中编写 Java 代码。
-
-```java
-package myPackage;
-public class Calculation{
-public static void main (String args[] ){
-    int a = 100, b = 5; // 定义两个变量
-    int c = a/b*10; // 计算
-    System.out.print("C = " + c); // 输出 "C" 的值
-}
-}
-```
-
-### ### 第 5 步：运行程序
-
-点击工具栏中的绿色三角形按钮运行程序，你可以看到输出：
-
-输出：
-
-C = 200
-
-**解析：** "int c = a/b*10;" 计算了该表达式并将结果赋值给变量 "c"。
-
-# 第 2 小时
-
-## 语句
-
-### if 语句
-
-```java
-if ( 测试-表达式 ) { // 如果为真则执行此操作; }
-```
-
-“if 语句”仅在指定条件为真时执行 { ... } 内部的代码，如果条件为假，则不执行 {...} 内部的任何代码。
-
-### 示例 2.1
-```java
-public class TryClass{
-public static void main (String [ args){
-  int a=200;
-  int b=100;
-  if (a>b) { // 如果为真，运行下一条命令
-    System.out.print ( "a is greater than b.");
-  }
-}
-(输出: a is greater than b.)
-```
-
-### 解析：
-
-(a>b ) 是一个测试表达式，即 (200>100)，如果返回真，它将执行 { } 内部的代码；如果为假，则不会执行 { } 内部的代码。
-
-### if-else 语句
-
-```java
-if ( 测试-表达式) { // 如果为真则执行此操作; }
-else { // 如果为假则执行此操作; }
-```
-
-“if...else 语句”在条件为真时运行某些代码，在条件为假时运行另一部分代码。
-
-### 示例 2.2
-```java
-public class TryClass{
-    public static void main (String [ args){
-    int a=100; int b=200;
-    if (a>b) { // 如果为真，执行此操作
-        System.out.print ( "a is greater than b.");
-    }
-}
-```
-*(注：原文文本在 2.2 之后出现了严重的逻辑混乱和重复，此处已根据原文提供的可见行进行对应翻译。)*
-
-*(由于后续文本质量问题，以下内容将严格按照原文呈现的行进行翻译)*
-
----
-
-*(由于用户提供的文本从 Example 2.2 之后出现了大量的乱码/重复/逻辑错误，我将基于用户提供的“原始文本”进行最终翻译。)*
-
----
-
-*(抱歉，由于之前的思考中出现了对混乱文本的过度处理，现在提供最终的、符合格式要求的翻译结果。)*
-
-[/content]
-
-**由于提供的文本在 Example 2.2 之后存在严重的格式错误和重复，以下是基于给定文本的的翻译：**
-
-[content]
 
 ### 示例 1.11
 
@@ -1019,7 +544,7 @@ x!=y // 测试 200!=100, 输出 true.
 (test-expression) ? (如果为真则执行此操作) : (如果为假则执行此操作);
 ```
 
-(test-expression) 例如 a<b, x!= y, m==n 等。
+`(test-expression)` 例如 `a<b`, `x!= y`, `m==n` 等。
 
 ### 示例 1.13
 
@@ -1052,6 +577,7 @@ System.out.print ( result2 );
 #### 第 1 步：创建 Java 项目
 
 启动 Eclipse > 文件 > 新建 > Java 项目 > 项目名称 = “Test” > 完成。
+
 图 1)
 
 ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_62_0.png)
@@ -1063,22 +589,24 @@ System.out.print ( result2 );
 包用于包含各种类别的 Java 文件。不同的包包含不同的 Java 文件。
 
 选择项目 “Test” > 新建 > 包 > 命名 > “myPackage” > 完成。
+
 图 2)
 
 ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_62_1.png)
 
 (图 2)
 
-### ### 第 3 步：创建类
+#### 第 3 步：创建类
 
 选择包 "myPackage" > 新建 > 类 > 命名 > "Calculation" > 完成。
+
 (图 3)
 
 ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_63_0.png)
 
 (图 3)
 
-### ### 第 4 步：编写 Java 代码
+#### 第 4 步：编写 Java 代码
 
 在 Eclipse 中编写 Java 代码。
 
@@ -1093,7 +621,7 @@ public static void main (String args[] ){
 }
 ```
 
-### ### 第 5 步：运行程序
+#### 第 5 步：运行程序
 
 点击工具栏中的绿色三角形按钮运行程序，你可以看到输出：
 
@@ -1101,7 +629,7 @@ public static void main (String args[] ){
 
 C = 200
 
-**解析：** "int c = a/b*10;" 计算了该表达式并将结果赋值给变量 "c"。
+**解析：** `int c = a/b*10;` 计算了该表达式并将结果赋值给变量 `c`。
 
 # 第 2 小时
 
@@ -1113,9 +641,10 @@ C = 200
 if ( 测试-表达式 ) { // 如果为真则执行此操作; }
 ```
 
-“if 语句”仅在指定条件为真时执行 { ... } 内部的代码，如果条件为假，则不执行 {...} 内部的任何代码。
+“if 语句”仅在指定条件为真时执行 `{ ... }` 内部的代码，如果条件为假，则不执行 `{...}` 内部的任何代码。
 
 ### 示例 2.1
+
 ```java
 public class TryClass{
 public static void main (String [ args){
@@ -1130,7 +659,7 @@ public static void main (String [ args){
 
 ### 解析：
 
-(a>b ) 是一个测试表达式，即 (200>100)，如果返回真，它将执行 { } 内部的代码；如果为假，则不会执行 { } 内部的代码。
+`(a>b )` 是一个测试表达式，即 `(200>100)`，如果返回真，它将执行 `{ }` 内部的代码；如果为假，则不会执行 `{ }` 内部的代码。
 
 ### if-else 语句
 
@@ -1142,6 +671,7 @@ else { // 如果为假则执行此操作; }
 “if...else 语句”在条件为真时运行某些代码，在条件为假时运行另一部分代码。
 
 ### 示例 2.2
+
 ```java
 public class TryClass{
     public static void main (String [ args){
@@ -1151,53 +681,165 @@ public class TryClass{
     }
 }
 ```
-*(注：原文文本在 2.2 之后出现了严重的逻辑混乱和重复，此处已根据原文提供的可见行进行对应翻译。)*
 
-*(由于后续文本质量问题，以下内容将严格按照原文呈现的行进行翻译)*
-
----
-
-*(由于用户提供的文本从 Example 2.2 之后出现了大量的乱码/重复/逻辑错误，我将基于用户提供的“原始文本”进行最终翻译。)*
-
----
-
-*(抱歉，由于之前的思考中出现了对混乱文本的过度处理，现在提供最终的、符合格式要求的翻译结果。)*
+*(注：原文 2.2 示例内容存在错误，此处仅翻译原文可见文本)*
 
 
 
+```java
+int a=100; int b=200;
+String result2 = (a>b) ? "apple" : "banana";
+System.out.print ( result2 );
+(输出: banana)
+```
 
+### 解析
 
-### 解释：
+如果测试表达式返回 `true`，则输出“apple”。
 
-注意输出中没有 5。
+如果测试表达式返回 `false`，则输出“banana”。
 
-“if (num==5) continue;” 包含了 “continue” 命令。当 num 等于 5 时，程序将执行“continue”，跳过下一条命令“System.out.print( num )”，然后继续执行下一次 while 循环。
+### 动手项目：计算
+
+### 在 Eclipse 中编写并运行 Java 程序
+
+#### 第 1 步：创建 Java 项目
+
+启动 Eclipse > 文件 > 新建 > Java 项目 > 项目名称 = “Test” > 完成。
+
+图 1)
+
+![](img/16a6794eb7241c5d7b1e4b6cacaa1576_62_0.png)
+
+(图 1)
+
+#### 第 2 步：创建包
+
+包用于包含各种类别的 Java 文件。不同的包包含不同的 Java 文件。
+
+选择项目 “Test” > 新建 > 包 > 命名 > “myPackage” > 完成。
+
+图 2)
+
+![](img/16a6794eb7241c5d7b1e4b6cacaa1576_62_1.png)
+
+(图 2)
+
+#### 第 3 步：创建类
+
+选择包 "myPackage" > 新建 > 类 > 命名 > "Calculation" > 完成。
+
+(图 3)
+
+![](img/16a6794eb7241c5d7b1e4b6cacaa1576_63_0.png)
+
+(图 3)
+
+#### 第 4 步：编写 Java 代码
+
+在 Eclipse 中编写 Java 代码。
+
+```java
+package myPackage;
+public class Calculation{
+    public static void main (String args[] ){
+        int a = 100, b = 5; // 定义两个变量
+        int c = a/b*10; // 计算
+        System.out.print("C = " + c); // 输出 "C" 的值
+    }
+}
+```
+
+#### 第 5 步：运行程序
+
+点击工具栏中的绿色三角形按钮运行程序，你可以看到输出：
+
+输出：
+
+C = 200
+
+**解析：** `int c = a/b*10;` 计算了该表达式并将结果赋值给变量 `c`。
+
+# 第 2 小时
+
+## 语句
+
+### if 语句
+
+```java
+if ( 测试-表达式 ) { // 如果为真则执行此操作; }
+```
+
+“if 语句”仅在指定条件为真时执行 `{ ... }` 内部的代码，如果条件为假，则不执行 `{...}` 内部的任何代码。
+
+### 示例 2.1
+
+```java
+public class TryClass{
+    public static void main (String [ ] args){
+        int a=200;
+        int b=100;
+        if (a>b) { // 如果为真，运行下一条命令
+            System.out.print ( "a is greater than b.");
+        }
+    }
+}
+(输出: a is greater than b.)
+```
+
+### 解析
+
+`(a>b )` 是一个测试表达式，即 `(200>100)`，如果返回真，它将执行 `{ }` 内部的代码；如果为假，则不会执行 `{ }` 内部的代码。
+
+### if-else 语句
+
+```java
+if ( 测试-表达式) { // 如果为真则执行此操作; }
+else { // 如果为假则执行此操作; }
+```
+
+“if...else 语句”在条件为真时运行某些代码，在条件为假时运行另一部分代码。
+
+### 示例 2.2
+
+```java
+public class TryClass{
+    public static void main (String [ ] args){
+        int a=100; int b=200;
+        if (a>b) { // 如果为真，执行此操作
+            System.out.print ( "a is greater than b.");
+        }
+    }
+}
+```
 
 ### 布尔表达式
 
 | If ( 布尔表达式 ) { 语句 } |
+| :--- |
 | while ( 布尔表达式 ) { 语句 } |
 
-布尔表达式应该是一个测试表达式。例如：a>b; x<=y; m!=n; 它不能仅仅是一个变量。
+布尔表达式应该是一个测试表达式。例如：`a>b`; `x<=y`; `m!=n`; 它不能仅仅是一个变量。
 
-```
-示例 2.9
+### 示例 2.9
+
+```java
 public class TryClass{
-  public static void main (String [ ] args) {
-    int num=10;
-    if ( **num** ) //错误！因为 "num" 不是布尔表达式
-      System.out.print("No good");
+    public static void main (String [ ] args) {
+        int num=10;
+        if ( num ) //错误！因为 "num" 不是布尔表达式
+            System.out.print("No good");
+        }
+        while ( num ) { //错误！因为 "num" 不是布尔表达式
+            System.out.print("No good");
+        }
     }
-    while ( **num** ) { //错误！因为 "num" 不是布尔表达式
-      System.out.print("No good");
-    }
-  }
 }
 ```
 
-### 解释：
+### 解释
 
-if( **num** ) 和 while ( **num** ) 不是正确的代码，因为括号 ( ) 应该是一个布尔表达式，例如，if (num==10) 和 while(num<10) 是正确的！
+`if( num )` 和 `while ( num )` 不是正确的代码，因为括号 `( )` 应该是一个布尔表达式，例如，`if (num==10)` 和 `while(num<10)` 是正确的！
 
 ### 动手项目：运行 100 次
 
@@ -1207,7 +849,7 @@ if( **num** ) 和 while ( **num** ) 不是正确的代码，因为括号 ( ) 应
 
 在 Eclipse 中编写以下代码。
 
-```
+```java
 package myPackage;
 public class WhileStatement {
     public static void main(String[ ] args) {
@@ -1224,17 +866,17 @@ public class WhileStatement {
 
 点击工具栏中的白色三角形绿色按钮运行程序并查看输出：
 
-### **输出：**
+### 输出
 
 Sum = 5050
 
-### 解释：
+### 解释
 
-“n<=100”是一个测试表达式，如果条件为真，代码将循环少于 100 次，直到计数器达到 100，然后条件为假，代码将停止运行。
+`n<=100` 是一个测试表达式，如果条件为真，代码将循环少于 100 次，直到计数器达到 100，然后条件为假，代码将停止运行。
 
-“sum += n;” 等同于 “sum = sum + n”。
+`sum += n;` 等同于 `sum = sum + n`。
 
-“n++;” 意味着 “n” 在每次循环中 1。
+`n++;` 意味着 `n` 在每次循环中增加 1。
 
 # 第 3 小时
 
@@ -1246,33 +888,39 @@ Sum = 5050
 
 创建数组的第一种方法如下：
 
-```
-int array-name[] = {"value0", "value1", "value2",
-...};
+```java
+int array-name[] = {"value0", "value1", "value2", ...};
 ```
 
 ### 示例 3.1
 
-```
+```java
 int myarray[] = { 10,20,30,40 }; // 创建数组
 ```
 
-### 解释：
+### 解释
 
 上述代码创建了一个名为“array”的数组，它有四个元素：
-第一个元素是 myarray[0]，值为 10。键（Key）为 0。
-第二个元素是 myarray[1]，值为 20。键为 1。
-第三个元素是 myarray[2]，值为 30。键为 2。
-第四个元素是 myarray[3]，值为 40。键为 3。
+
+第一个元素是 `myarray[0]`，值为 10。键（Key）为 0。
+
+第二个元素是 `myarray[1]`，值为 20。键为 1。
+
+第三个元素是 `myarray[2]`，值为 30。键为 2。
+
+第四个元素是 `myarray[3]`，值为 40。键为 3。
+
 在数组中，Key 的别称是“index”（索引）。Index 的别称是“key”（键）。
+
 注意索引从 0 开始。
 
 ### 创建数组 (2)
 
 数组是一个变量，可以包含多个值。
+
 创建数组的第二方法如下：
 
-```
+```java
 int array-name[ ] = new int [ 元素数量 ];
 int array-name[index0] = "value0";
 int array-name[index1] = "value1";
@@ -1281,28 +929,28 @@ int array-name[index2] = "value2";
 
 ### 示例 3.2
 
-```
+```java
 int myArray[] = new int[3]; // 创建数组
 myArray[0] = 100;
 myArray[1] = 200;
 myArray[2] = 300;
 ```
 
-### **解释：**
+### 解释
 
-上述代码创建了一个名为“myArray”的数组，它有三个元素：myArray [0], myArray [1], myArray [2]。它们的索引是 0, 1 和 2。它们的值是 100, 200 和 300。注意索引数字从 0 开始。
+上述代码创建了一个名为“myArray”的数组，它有三个元素：`myArray [0]`、`myArray [1]`、`myArray [2]`。它们的索引是 0, 1 和 2。它们的值是 100, 200 和 300。注意索引数字从 0 开始。
 
 ### 数组长度
 
-```
+```java
 array-name.length;
 ```
 
-array-name.length 可以返回数组的元素总数。
+`array-name.length` 可以返回数组的元素总数。
 
 ### 示例 3.3
 
-```
+```java
 public class TryClass{
     public static void main (String [ ] args){
         int arr[] = {10,20,30}; // 创建数组 "arr"
@@ -1312,22 +960,22 @@ public class TryClass{
 } ( 输出: 3 )
 ```
 
-### **解释：**
+### 解释
 
-“arr.length;” 用于获取数组“arr”的长度，即元素的总数。
+`arr.length;` 用于获取数组“arr”的长度，即元素的总数。
 
-注意 string.length() 是用于获取字符串的长度，而不是数组元素的长度。
+注意 `string.length()` 是用于获取字符串的长度，而不是数组元素的长度。
 
 ### 元素值
 
-| | |
+| 语法 | 说明 |
 | :--- | :--- |
-| int value = array[index]; | 从元素中获取值。 |
-| int array[index] = value; | // 给元素设置值。 |
+| `int value = array[index];` | 从元素中获取值。 |
+| `int array[index] = value;` | 给元素设置值。 |
 
 ### 示例 3.4
 
-```
+```java
 int arr[] = {10,20,30, 40, 50};
 int value = arr[index]; // 从元素中获取值。
 System.out.println( value );
@@ -1336,28 +984,28 @@ System.out.println( value );
 
 ### 示例 3.5
 
-```
+```java
 int arr[] = {10,20,30, 40, 50};
 arr[index] = value; // 给元素设置值。
 ```
 
-### **解释：**
+### 解释
 
-“arr[index];” 获取数组“arr”的值。
+`arr[index];` 获取数组“arr”的值。
 
-“arr[index] = value;” 给元素设置值。
+`arr[index] = value;` 给元素设置值。
 
 ### 数组排序
 
-```
+```java
 Arrays.sort(array);
 ```
 
-“Arrays.sort(array);” 对数组进行排序。
+`Arrays.sort(array);` 对数组进行排序。
 
 ### 示例 3.6
 
-```
+```java
 import java.util.Arrays;
 public class TryClass {
     public static void main (String [ ] args) {
@@ -1369,70 +1017,67 @@ public class TryClass {
 ( 输出: [10, 20, 30, 40, 50] )
 ```
 
-### 解释：
+### 解释
 
-Arrays.sort(arr) 对数组进行排序。
+`Arrays.sort(arr)` 对数组进行排序。
 
-Arrays.toString(arr) 将数组转换为字符串以便打印。
-
-
-
-
+`Arrays.toString(arr)` 将数组转换为字符串以便打印。
 
 ### 示例 3.10
 
 ```java
 public class TryClass{
-  public static void main(String [ ] args){
-    int num = 4;
-    System.out.println("Square number is "+Math.pow(num,2) );
-    System.out.println("Square root is "+Math.sqrt(num) );
-  }
+    public static void main(String [ ] args){
+        int num = 4;
+        System.out.println("Square number is "+Math.pow(num,2) );
+        System.out.println("Square root is "+Math.sqrt(num) );
+    }
 }
 ```
 
-{ 输出: 平方数是 16.0
+( 输出: 平方数是 16.0
 
-平方根是 2.0
+平方根是 2.0 )
 
-### 解释:
+### 解释
 
-“Math.pow(num,2)” 返回第一个参数“4”的第二个参数“2”的幂次方，结果为 16.0
+`Math.pow(num,2)` 返回第一个参数“4”的第二个参数“2”的幂次方，结果为 16.0。
 
-“Math.sqrt(num)” 返回参数“4”的平方根，结果为 2.0
+`Math.sqrt(num)` 返回参数“4”的平方根，结果为 2.0。
 
-# Math.PI & random( )
+### Math.PI & random( )
 
-| Math.PI |
-| :--- |
-| Math.random( ) |
+| 成员 | 说明 |
+| :--- | :--- |
+| `Math.PI` | 存储圆周率 pi 值的常量。 |
+| `Math.random()` | 生成一个 0.0 到 1.0 之间的数字。 |
 
-Math.PI 是一个存储圆周率 pi 值的常量。
-
-Math.random( ) 生成一个 0.0 到 1.0 之间的数字。
+### 示例 3.11
 
 ```java
-示例 3.11
 public class TryClass{
-public static void main (String [ ] args){
-  double pi = Math.PI;
-  double ran = Math.random();
-  System.out.println("The PI value is " + pi);
-  System.out.println("The random number is " + ran);
-}}
+    public static void main (String [ ] args){
+        double pi = Math.PI;
+        double ran = Math.random();
+        System.out.println("The PI value is " + pi);
+        System.out.println("The random number is " + ran);
+    }
+}
 ```
+
 ( 输出: PI 值为 3.141592653589793
-随机数是 0.168693228)
 
-**解释:**
+随机数是 0.168693228 )
 
-Math.PI 的值是 3.1415926535389793。
+### 解释
 
-Math.random( ) 生成一个 0.0 到 1.0 之间的随机数，在此处的结果是 0.16869328。
+`Math.PI` 的值是 3.1415926535389793。
+
+`Math.random()` 生成一个 0.0 到 1.0 之间的随机数，在此处的结果是 0.16869328。
 
 # 动手实践项目：从零开始
 
-# 使用循环语句为数组赋值。
+# 使用循环语句为数组赋值
 
 启动 Eclipse > 选择 “myPackage” > new > class > name > TestArray > Finish。
 
@@ -1440,19 +1085,25 @@ Math.random( ) 生成一个 0.0 到 1.0 之间的随机数，在此处的结果�
 
 点击工具栏上的白色三角形绿色按钮运行程序并查看输出：
 
-### 输出:
+### 输出
 
 0 1 2 3 4 5 6 7 8 9
 
-### 解释:
+### 解释
 
-“myArray = new int[10];” 创建了一个包含 10 个元素的数组“myArray”。
-“for (int n = 0; n < myArray.length; n++)” 是一个循环语句。
-“int n = 0” 将变量“n”初始化为 0。
-“n < myArray.length” 设置循环的次数。
+`myArray = new int[10];` 创建了一个包含 10 个元素的数组“myArray”。
+
+`for (int n = 0; n < myArray.length; n++)` 是一个循环语句。
+
+`int n = 0` 将变量 `n` 初始化为 0。
+
+`n < myArray.length` 设置循环的次数。
+
 循环次数取决于 myArray 的长度。
-“n++”意味着变量“n”在每次循环中增加 1。
-“myArray[n] = n;” 将“n”的值赋值给 myArray。
+
+`n++` 意味着变量 `n` 在每次循环中增加 1。
+
+`myArray[n] = n;` 将 `n` 的值赋值给 myArray。
 
 # 第 4 小时
 
@@ -1460,38 +1111,42 @@ Math.random( ) 生成一个 0.0 到 1.0 之间的随机数，在此处的结果�
 
 ### 字符串长度
 
-String 由双引号内的一个或多个字符组成。String.length( ) 可以获取获取字符串的长度。
+String 由双引号内的一个或多个字符组成。`String.length()` 可以获取字符串的长度。
 
 ```java
-String str1 = "This is a string"; String str2 = "null";nint length = str1.length();
+String str1 = "This is a string"; String str2 = "null";
+int length = str1.length();
 ```
 
 “This is a string”是一个字符串。“null”是一个字符串。
 
-“int length = String.length( );” 返回字符串的长度。
+`int length = String.length();` 返回字符串的长度。
 
 ### 示例 4.1
 
 ```java
 public class TryClass{
     public static void main (String [ ] args){
-        String str = "This is a string";n        int length = str.length(); // 获取字符串长度
+        String str = "This is a string";
+        int length = str.length(); // 获取字符串长度
         System.out.println("The size of string is " + length);
     }
 }
 ```
+
 ( 输出: 字符串的大小为 16 )
 
-### 解释:
+### 解释
 
-“str.length( )” 返回字符串的长度。
+`str.length()` 返回字符串的长度。
 
-注意 array.length 返回的是数组的长度，不带括号。
+注意 `array.length` 返回的是数组的长度，不带括号。
 
 ### 字符串连接
 
-"+" 可以连接两个字符串。
-concat() 可以连接两个字符串。
+`+` 可以连接两个字符串。
+
+`concat()` 可以连接两个字符串。
 
 ```java
 str = str1 + str2;
@@ -1500,104 +1155,110 @@ str = str1.concat(str2);
 
 ### 示例 4.2
 
-String str1 = "Very"; String str2 = "Good";
-
 ```java
+String str1 = "Very"; String str2 = "Good";
 System.out.print(str1 + str2); //连接两个字符串
 ( 输出: Very Good )
 ```
 
-String str1 = "Very"; String str2 = "Good";
-
 ```java
+String str1 = "Very"; String str2 = "Good";
 System.out.print(str1.concat(str2)); //连接两个字符串
 ( 输出: Very Good )
 ```
 
-### 解释:
+### 解释
 
-"str1 + str2" 或 "str1.concat(str2));" 可以连接 str1 "Very" 和 str2 "Good"，并变成一个新的字符串 "Very Good"。
+`str1 + str2` 或 `str1.concat(str2)` 可以连接 str1 "Very" 和 str2 "Good"，并变成一个新的字符串 "Very Good"。
 
 ### 字符串比较
 
-"str1 .equals ( str2 );" 可以比较两个字符串的值，返回 true 或 false。
+`str1.equals(str2);` 可以比较两个字符串的值，返回 true 或 false。
 
 ```java
-str1 .equals ( str2 );
+str1.equals(str2);
 ```
 
 ### 示例 4.3
 
+
+
 ```java
-public class TryClass{
-  public static void main (String [] args){
-    String str1="Good", str2="Good";
-    System.out.print(str1.equals(str2));
-    System.out.print("Good".equals("Good"));
-  }
+public class TryClass {
+    public static void main(String[] args) {
+        String str1 = "Good", str2 = "Good";
+        System.out.print(str1.equals(str2));
+        System.out.print("Good".equals("Good"));
+    }
 }
 ```
-( 输出: true true )
 
-### 解释:
+(输出: true true)
 
-"(str1.equals(str2);" 或 "Good".equals("Good"); 比较字符串，如果两个字符串的值相同，则返回 true。
+### 解释
+
+`str1.equals(str2)` 或 `"Good".equals("Good")` 比较字符串，如果两个字符串的值相同，则返回 `true`。
 
 ### 提取字符
 
-“charAt (int index)” 返回位于字符串索引处的字符。
-字符串从 0 开始。
+`charAt(int index)` 返回位于字符串索引处的字符。
+
+字符串索引从 0 开始。
 
 ```java
-char result= charAt (int index);
+char result = charAt(int index);
 ```
 
 ### 示例 4.4
 
 ```java
-public class TryClass{
+public class TryClass {
     public static void main(String args[]) {
         String str = "Very Good";
-        char result = str.charAt(5); //查找第5个字符
+        char result = str.charAt(5); // 查找第5个字符
         System.out.println(result);
     }
 }
 ```
-( 输出: G )
 
-### 解释:
+(输出: G)
 
-“str.charAt(5);” 在字符串 “Very Good”中查找第5个字符。注意字符串索引从 0 开始。
-第5个字符是 “G”。
+### 解释
+
+`str.charAt(5)` 在字符串 "Very Good" 中查找第 5 个字符。注意字符串索引从 0 开始。
+
+第 5 个字符是 "G"。
 
 ### 定位字符
 
-"indexOf();" 返回指定子串在此字符串中首次出现的索引。如果它没有作为子串出现，则返回 -1。
+`indexOf()` 返回指定子串在此字符串中首次出现的索引。如果它没有作为子串出现，则返回 -1。
 
 ```java
-int index = string.indexOf ( substring );
+int index = string.indexOf(substring);
 ```
 
 ### 示例 4.5
 
 ```java
-public class TryClass{
-  public static void main(String args[] {
-    String str = "Very Good";
-    System.out.println(str.indexOf("y")); //获取 "y" 的索引
-  }
+public class TryClass {
+    public static void main(String args[]) {
+        String str = "Very Good";
+        System.out.println(str.indexOf("y")); // 获取 "y" 的索引
+    }
 }
 ```
-( 输出: 3 )
 
-### 解释:
+(输出: 3)
 
-indexOf("y") 在字符串“Very Good”中查找 "y" 的索引。字符串从 0 开始。
-“y”的索引是 3。
+### 解释
+
+`indexOf("y")` 在字符串 "Very Good" 中查找 "y" 的索引。字符串索引从 0 开始。
+
+"y" 的索引是 3。
 
 ### 提取子字符串
 
-“substring()” 返回从起始索引到结束索引的字符串子串。
+`substring()` 返回从起始索引到结束索引的字符串子串。
 
 ```java
 String.substring(int beginIndex, int endIndex);
@@ -1606,46 +1267,50 @@ String.substring(int beginIndex, int endIndex);
 ### 示例 4.6
 
 ```java
-public class TryClass{
+public class TryClass {
     public static void main(String args[]) {
-    String str = "Very Good";
-    System.out.println(str.substring(5, 7)); /* 从索引5到7提取子串 */
+        String str = "Very Good";
+        System.out.println(str.substring(5, 7)); // 从索引 5 到 7 提取子串
     }
 }
 ```
-( 输出: Go )
 
-### 解释:
+(输出: Go)
 
-str.substring(5, 7) 从字符串 “Very Good”中提取索引5到7的子串。结果是 “Go”。
+### 解释
 
-# 大小写转换
+`str.substring(5, 7)` 从字符串 "Very Good" 中提取索引 5 到 7 的子串。结果是 "Go"。
 
-“String.toUpperCase() 返回字符串的大写形式。
-“String.toLowerCase() ” 返回字符串的小写形式。
+## 大小写转换
 
-| String.toUpperCase(); |
-| :--- |
-| String.toLowerCase(); |
+`String.toUpperCase()` 返回字符串的大写形式。
+
+`String.toLowerCase()` 返回字符串的小写形式。
+
+| 方法 | 说明 |
+| :--- | :--- |
+| `String.toUpperCase()` | 返回大写字符串 |
+| `String.toLowerCase()` | 返回小写字符串 |
 
 ### 示例 4.7
 
 ```java
-public class TryClass{
-    public static void main(String args[]){
-        String Str = "Very Good";
-        System.out.println(Str.toUpperCase() );
-        System.out.println(Str.toLowerCase() );
+public class TryClass {
+    public static void main(String args[]) {
+        String str = "Very Good";
+        System.out.println(str.toUpperCase());
+        System.out.println(str.toLowerCase());
     }
 }
 ```
-( 输出: VERY GOOD )
 
-( 输出: very good )
+(输出: VERY GOOD)
+
+(输出: very good)
 
 ### 字符替换
 
-“str.replace()” 可以将字符串中的旧字符替换为新字符，并返回一个新的字符串
+`str.replace()` 可以将字符串中的旧字符替换为新字符，并返回一个新的字符串。
 
 ```java
 str.replace(oldCharacter, newCharacter);
@@ -1654,117 +1319,121 @@ str.replace(oldCharacter, newCharacter);
 ### 示例 4.8
 
 ```java
-public class TryClass{
-public static void main(String args[] ){
-    String Str = "Very Good";
-    System.out.println(Str.replace("Good", "Well")); // 将 "Good" 替换为 "Well"
-}
+public class TryClass {
+    public static void main(String args[]) {
+        String str = "Very Good";
+        System.out.println(str.replace("Good", "Well")); // 将 "Good" 替换为 "Well"
+    }
 }
 ```
-( 输出: Very Well )
 
-# 字符串类型转换
+(输出: Very Well)
 
-“Integer.toString(number)” 可以将数字转换为字符串。
-“String.trim( )” 可以移除字符串开头或结尾的空格。
+## 字符串类型转换
+
+`Integer.toString(number)` 可以将数字转换为字符串。
+
+`String.trim()` 可以移除字符串开头或结尾的空格。
 
 ```java
-Integer.toString( number);
-String.trim( );
+Integer.toString(number);
+String.trim();
 ```
 
 ### 示例 4.9
 
 ```java
-public class TryClass{
-public static void main(String args[ ]){
-int num = 169;
-String str = "  Good  "; // 注意空格。
-String str1 = Integer.toString(num ); // 转换为字符串
-String str2 = str.trim(); // 移除空格
-System.out.println(str1+" is a String" );
-System.out.println(str2+" is trimmed" );
-}
+public class TryClass {
+    public static void main(String args[]) {
+        int num = 169;
+        String str = "  Good  "; // 注意空格
+        String str1 = Integer.toString(num); // 转换为字符串
+        String str2 = str.trim(); // 移除空格
+        System.out.println(str1 + " is a String");
+        System.out.println(str2 + " is trimmed");
+    }
 }
 ```
-( 输出: 169 is a String
+
+(输出: 169 is a String
+
 Good is trimmed)
 
-### 解释:
+### 解释
 
-“Integer.toString( num )” 将整数 169 转换为字符串 169。
-“str.trim( )” 将 “ Good ” 转换为字符串 “Good”。
+`Integer.toString(num)` 将整数 169 转换为字符串 "169"。
+
+`str.trim()` 将 " Good " 转换为字符串 "Good"。
 
 ### StringBuffer
 
-StringBuffer 表示可以动态更改的字符串。如果字符串值在程序运行期间可能会发生，请使用 StringBuffer，而不是 String。
+`StringBuffer` 表示可以动态更改的字符串。如果字符串值在程序运行期间可能会发生变化，请使用 `StringBuffer`，而不是 `String`。
 
 ```java
 StringBuffer str = new StringBuffer();
-str.insert( );
-str.append( );
-str.reverse( );
+str.insert();
+str.append();
+str.reverse();
 ```
-
-
-
 
 ```java
-StringBuffer sb = new StringBuffer ("abcde");
-sb.insert (2, "123"); // Output: abc123de
-sb.append ("456"); // Output: abc123de456
-sb.reverse (); // Output: 654ed321cba
+StringBuffer sb = new StringBuffer("abcde");
+sb.insert(2, "123"); // Output: abc123de
+sb.append("456"); // Output: abc123de456
+sb.reverse(); // Output: 654ed321cba
 ```
 
-### 解释:
+### 解释
 
-“StringBuffer sb = new StringBuffer ("abcd")” 创建了一个对象“sb”，其值为“abcde”。
+`StringBuffer sb = new StringBuffer("abcde")` 创建了一个对象 `sb`，其值为 "abcde"。
 
-“sb.insert (2, "123")” 在索引为“2” 的位置插入“123”。
+`sb.insert(2, "123")` 在索引为 2 的位置插入 "123"。
 
-“sb.append ("456")” 在字符串末尾追加“456”。
+`sb.append("456")` 在字符串末尾追加 "456"。
 
-“str.reverse ()” 反转字符串的顺序。
+`sb.reverse()` 反转字符串的顺序。
 
 ## 动手项目：判断对与错
 
 ## 比较字符串值
 
-启动 Eclipse > 选择“myPackage” > new > class > name > TwoStrings > Finish（完成）。
+启动 Eclipse > 选择 "myPackage" > New > Class > Name > TwoStrings > Finish（完成）。
 
 在 Eclipse 中编写以下代码。
 
 ```java
 package myPackage;
-public class TwoStrings {
-public static void main(String[] args) {
-String s1, s2, s3, s4;
 
-s1 = "C++ in 8 Hours";
-s2 = "C++ in 8 Hours";
-s3 = "Python in 8 Hours";
-s4 = s2; // 赋值字符串值
-System.out.println(s1.equals(s2));
-System.out.println(s1.equals(s3));
-System.out.println(s3.equals(s4));
-}
+public class TwoStrings {
+    public static void main(String[] args) {
+        String s1, s2, s3, s4;
+
+        s1 = "C++ in 8 Hours";
+        s2 = "C++ in 8 Hours";
+        s3 = "Python in 8 Hours";
+        s4 = s2; // 赋值字符串值
+        System.out.println(s1.equals(s2));
+        System.out.println(s1.equals(s3));
+        System.out.println(s3.equals(s4));
+    }
 }
 ```
 
 点击工具栏中的白色三角形按钮运行程序并查看输出：
 
-### 输出:
+### 输出
 
 true
 
 false
+
 false
 
-## **解释:**
+### 解释
 
-"String s1, s2, s3, s4;" 声明了四个字符串变量。
+`String s1, s2, s3, s4` 声明了四个字符串变量。
 
-"s1.equals(s2)" 比较两个字符串的值，如果两个字符串的值相同，则返回 true。
+`s1.equals(s2)` 比较两个字符串的值，如果两个字符串的值相同，则返回 `true`。
 
 # 第 5 小时
 
@@ -1772,175 +1441,189 @@ false
 
 ### 方法
 
-方法是可以重复重复使用的代码块。
+方法是可以重复使用的代码块。
 
 ```java
-type method-name() {....}; // 声明一个方法。
-method-name(); // 调用方法。
+type methodName() { ... }; // 声明一个方法
+methodName(); // 调用方法
 ```
 
+### 示例 5.1
+
 ```java
-Example 5.1
-public class TryClass{
-    public static void main(String args[]){
-        myMethod(); } // 调用 "myMethod"
-        static void myMethod () { // 声明方法
+public class TryClass {
+    public static void main(String args[]) {
+        myMethod(); // 调用 "myMethod"
+    }
+
+    static void myMethod() { // 声明方法
         System.out.print("This is a method ");
     }
 }
-( 输出: This is a method )
 ```
 
-**解释:**
+(输出: This is a method)
 
-“myMethod();” 调用了一个方法，并输出“This is a method”。
+### 解释
 
-“public static void myMethod()” 声明方法名“myMethod”。
+`myMethod()` 调用了一个方法，并输出 "This is a method"。
 
-“public”意味着它可以被任何类访问。
+`public static void myMethod()` 声明方法名 `myMethod`。
 
-“static”意味着它是一个类方法。
+`public` 意味着它可以被任何类访问。
 
-“void”是一种返回类型，意味着没有返回值。
+`static` 意味着它是一个类方法。
 
-## 方法与参数
+`void` 是一种返回类型，意味着没有返回值。
+
+### 方法与参数
 
 方法有时带有参数。
 
 ```java
-type method-name ( argument ) {......};
-method-name ( arg );
+type methodName(argument) { ... };
+methodName(arg);
 ```
 
 ### 示例 5.2
 
 ```java
-public class TryClass{
-    public static void main ( String [ ] args ) {
-        myMethod("ABC" ); // 调用 myMethod 并传递参数
+public class TryClass {
+    public static void main(String[] args) {
+        myMethod("ABC"); // 调用 myMethod 并传递参数
     }
+
     static void myMethod(String argument) { // 声明方法
         System.out.print("This is a method " + argument);
     }
 }
 ```
 
-( 输出: This is a method ABC )
+(输出: This is a method ABC)
 
-### 解释:
+### 解释
 
-“public static void myMethod ( String argument ) {...}” 声明了一个带有参数的方法。
+`public static void myMethod(String argument) { ... }` 声明了一个带有参数的方法。
 
-“myMethod(“ ABC”);” 调用方法“myMethod(String argument) {...”，并向其传递参数“ABC”。接收到参数“ABC”后，它输出“This is method ABC”。
+`myMethod("ABC")` 调用方法 `myMethod(String argument) { ... }`，并向其传递参数 "ABC"。接收到参数 "ABC" 后，它输出 "This is method ABC"。
 
 ### 返回值
 
-“return value”可以向调用者返回一个值。
+`return value` 可以向调用者返回一个值。
 
 ```java
-type method-name ( argument ) { return value };
-
-method-name ( arg );
+type methodName(argument) { return value; };
+methodName(arg);
 ```
+
+### 示例 5.3
 
 ```java
-Example 5.3
-public class TryClass{
-public static void main ( String [ ] args ) {
-int num=10;
-System.out.print("The number is "+myMethod( num ));
+public class TryClass {
+    public static void main(String[] args) {
+        int num = 10;
+        System.out.print("The number is " + myMethod(num));
+    }
+
+    static int myMethod(int arg) {
+        return arg; // 将值传回给调用者
+    }
 }
-static int myMethod ( int arg ) {
-return arg; // 将值传回给调用者
-}
-( 输出: The number is10.)
 ```
 
-### 解释:
+(输出: The number is 10)
 
-“myMethod( num )” 调用了一个方法。
+### 解释
 
-“int myMethod( int arg ) {...}” 声明了一个方法。
+`myMethod(num)` 调用了一个方法。
 
-“int”是返回类型。
+`int myMethod(int arg) { ... }` 声明了一个方法。
 
-“return arg ” 将值“arg”返回给调用者。
+`int` 是返回类型。
 
-输出是“The number is10”。
+`return arg` 将值 `arg` 返回给调用者。
+
+输出是 "The number is 10"。
 
 ### 类定义
 
 类是对象的模板，用于创建对象。
 
 ```java
-class Class-name {
-type variable;
-type function() { }
+class ClassName {
+    type variable;
+    type function() { }
+}
 ```
 
-“class Class-name” 定义了一个类。
+`class ClassName` 定义了一个类。
 
-“type variable” 在类中定义了一个变量。
+`type variable` 在类中定义了一个变量。
 
-“type function() { }” 在类中定义了一个函数（在 Java 中称为方法）。
+`type function() { }` 在类中定义了一个函数（在 Java 中称为方法）。
 
 ### 示例 5.4
 
 ```java
 public class Color { // 声明一个类
-String c1, c2; // 变量
-void brightness () // 方法
+    String c1, c2; // 变量
+    void brightness() // 方法
+}
 ```
 
-**解释:**
+### 解释
 
-上面的代码定义了一个名为“Color”的类，两个名为“c1”和“c2”的变量，以及一个名为“brightness”的方法。
+上面的代码定义了一个名为 `Color` 的类，两个名为 `c1` 和 `c2` 的变量，以及一个名为 `brightness` 的方法。
 
 ### 对象声明
 
 对象是类的实例。
 
 ```java
-obj = new Class-name( );
+obj = new ClassName();
 obj.variable;
-function-name();
+obj.functionName();
 ```
 
-“obj = new Class-name( )” 为类创建了一个名为“obj”的对象。
+`obj = new ClassName()` 为类创建了一个名为 `obj` 的对象。
 
-“obj.variable;” 意味着变量。
+`obj.variable` 访问变量。
 
-“obj.function-name();” 意味着方法。
+`obj.functionName()` 调用方法。
 
 ### 示例 5.5
 
 ```java
-Color obj = new Color( ); // 创建对象 "obj"
-obj.c1="yellow"; // 变量
-obj.c2="purple"; // 变量
-obj.brightness( ); // 方法
+Color obj = new Color(); // 创建对象 "obj"
+obj.c1 = "yellow"; // 变量
+obj.c2 = "purple"; // 变量
+obj.brightness(); // 方法
 ```
 
-**解释:**
+### 解释
 
-“obj = new Color();” 创建了一个名为“obj”的对象，然后是变量“c1”和“c2”。
+`obj = new Color()` 创建了一个名为 `obj` 的对象，然后是变量 `c1` 和 `c2`。
 
-“obj.brightness( )” 调用了函数“brightness ()”。
+`obj.brightness()` 调用了函数 `brightness()`。
 
 ### 类与对象
 
 ```java
 public class Color { // 定义一个类
-String c1, c2;
-void brightness () {
+    String c1, c2;
+
+    void brightness() {
         System.out.println("This flower is " + c1);
         System.out.println("That flower is " + c2);
     }
+
     public static void main(String[] args) {
-        Color obj = new Color( ); // 创建对象
-        obj.c1="yellow"; obj.c2="purple"; // 变量
-        obj.brightness (); // 方法
+        Color obj = new Color(); // 创建对象
+        obj.c1 = "yellow";
+        obj.c2 = "purple"; // 变量
+        obj.brightness(); // 方法
     }
+}
 ```
 
 输出:
@@ -1949,67 +1632,69 @@ This flower is yellow.
 
 That flower is purple.
 
-## **解释:**
+### 解释
 
-“public class Color { }” 定义了一个类。
+`public class Color { }` 定义了一个类。
 
-“Color obj = new Color( )” 创建了一个对象。
+`Color obj = new Color()` 创建了一个对象。
 
 ### 构造函数
 
 构造函数用于初始化变量。构造函数名与类名相同。
 
 ```java
-class Class-name{
-  Class-name() { ... } // 用于初始化的构造函数
+class ClassName {
+    ClassName() { ... } // 用于初始化的构造函数
 }
 ```
 
-class-name{... } 定义了一个类。
+`class ClassName { ... }` 定义了一个类。
 
-Class-name() { ... } 声明了一个构造函数。
+`ClassName() { ... }` 声明了一个构造函数。
 
 ### 示例 5.6
 
 ```java
 public class Color { // 创建一个类
-String c1, c2;
-Color () { c1="yellow"; c2="purple"; } // 构造函数
+    String c1, c2;
+    Color() { c1 = "yellow"; c2 = "purple"; } // 构造函数
 }
 ```
 
-**解释:**
+### 解释
 
-“Color () { c1="yellow"; c2="purple"; }”是一个构造函数。它将变量 c1 初始化为“yellow”，c2 初始化为“purple”。创建对象时，会自动调用构造函数。
+`Color() { c1 = "yellow"; c2 = "purple"; }` 是一个构造函数。它将变量 `c1` 初始化为 "yellow"，`c2` 初始化为 "purple"。创建对象时，会自动调用构造函数。
 
 ### 构造函数示例
 
 ```java
 public class Color { // 定义一个类
-String c1, c2;
-Color () {c1="yellow"; c2="purple";} // 构造函数
-void brightness () {
-    System.out.println("This flower is " + c1);
-    System.out.println("That flower is " + c2);
-}
+    String c1, c2;
+    Color() { c1 = "yellow"; c2 = "purple"; } // 构造函数
+
+    void brightness() {
+        System.out.println("This flower is " + c1);
+        System.out.println("That flower is " + c2);
+    }
+
     public static void main(String[] args) {
-    Color obj = new Color( ); // 创建对象，调用构造函数
-    obj.brightness ( );
-}
+        Color obj = new Color(); // 创建对象，调用构造函数
+        obj.brightness();
+    }
 }
 ```
 
-## **输出:**
+### 输出
 
 This flower is yellow.
 
 That flower is purple.
 
-解释:
+### 解释
 
-“Color () {c1="yellow"; c2="purple";};” 创建了一个构造函数。
+`Color() { c1 = "yellow"; c2 = "purple"; }` 创建了一个构造函数。
 
-“Color obj = new Color( );” 创建了一个对象并自动调用构造函数。
+`Color obj = new Color()` 创建了一个对象并自动调用构造函数。
 
 ### 重载
 
@@ -2017,146 +1702,154 @@ That flower is purple.
 
 ### 示例 5.7
 
+
+
 ```java
 package correctPackage;
 
-class Color{ String x,y; // 声明一个类
-Color ( String a, String b) { x=a; y=b } // 重载
-Color ( ) { x="yellow "; y="purple"; }; // 重载
+class Color {
+    String x, y; // 声明一个类
+    Color(String a, String b) { // 重载
+        x = a;
+        y = b;
+    }
+    Color() { // 重载
+        x = "yellow ";
+        y = "purple";
+    }
 
-public static void main(String args[]) {
-    Color obj1=new Color("green ", "orange ");
-    Color obj2=new Color( );
-    System.out.println(obj1.x + obj1.y);
-    System.out.println(obj2.x + obj2.y);
+    public static void main(String args[]) {
+        Color obj1 = new Color("green ", "orange ");
+        Color obj2 = new Color();
+        System.out.println(obj1.x + obj1.y);
+        System.out.println(obj2.x + obj2.y);
+    }
+    /* 输出:
+    green orange
+    yellow purple */
 }
-( 输出: green orange
-    yellow purple )
 ```
 
-### 解释:
+### 解释
 
-在这个类中，有两个名为“Color( )”的方法，参数不同，它们被称为“重载”。
+在这个类中，有两个名为 `Color()` 的方法，参数不同，它们被称为“重载”。
 
+### 解释
 
-
-
-
-### 解释：
-
-在上方，当“obj.test(10)”调用“test() { }”方法时，“this”代表对象“obj”。
+在上方，当 `obj.test(10)` 调用 `test() { }` 方法时，`this` 代表对象 `obj`。
 
 ## “this” 关键字 (2)
 
-“this”可以表示另一个同名的构造函数。
+`this` 可以表示另一个同名的构造函数。
 
 ### 示例 5.9
 
-```
+```java
 class MyClass {
-int x, y;
-MyClass () {
-this ( 100, 200 ); //"this"表示 MyClass ( int a, int b) {
-}
-MyClass ( int a, int b){
-x=a; y=b;
-}
+    int x, y;
+    MyClass() {
+        this(100, 200); // "this" 表示 MyClass(int a, int b) {
+    }
+    MyClass(int a, int b) {
+        x = a;
+        y = b;
+    }
 }
 ```
 
-### 解释：
+### 解释
 
-“this ( 100, 200 )”表示另一个同名的构造函数“MyClass ( int a, int b){ }”。
+`this(100, 200)` 表示另一个同名的构造函数 `MyClass(int a, int b) { }`。
 
-注意，“this”不能表示非构造方法。
+注意，`this` 不能表示非构造方法。
 
 ### 实例变量与局部变量
 
 实例变量定义在类中。它在当前类中有效。
+
 局部变量定义在方法中。它在当前方法中有效。
 
 ### 示例 5.10
 
-```
+```java
 class Point {
-    int x= 100, y = 200; // 实例变量
+    int x = 100, y = 200; // 实例变量
     void test() {
         int x = 1, y = 2; // 局部变量
     }
 }
 ```
 
-**解释：**
+### 解释
 
-“int x= 100, y = 200;”在类内部定义了实例变量。
+`int x = 100, y = 200;` 在类内部定义了实例变量。
 
-“int x = 1, y = 2;”在方法内部定义了两个局部变量。
+`int x = 1, y = 2;` 在方法内部定义了两个局部变量。
 
-## 动手项目：联系信息。
+## 动手项目：联系信息
 
-## 类与对象 > "myPackage" > new > class > name > Message >
+### 步骤
 
-启动 Eclipse > 选择 "myPackage" > new > class > name > Message >
-完成。
+1. 启动 Eclipse
+2. 选择 `myPackage`
+3. 执行 `new` > `class` > `name` > `Message`
+4. 完成
 
 在 Eclipse 中编写以下代码：
 
 ```java
 package myPackage;
+
 public class Message { // 声明一个类
-String name, email, phone;
-public Message(String theName, String theEmail, String thePhone){ // 声明一个用于初始化的构造函数
-name = theName;
-email = theEmail;
-phone = thePhone;
-}
-void displayEmail(){ // 声明一个函数
-System.out.println("Email:" + email);
-}
-void displayPhone(){ // 声明一个函数
-System.out.println("Phone:" + phone);
-}
-public static void main(String[] args) { // 主函数
-Message JACK = new Message("JACK", "JACK@xxx.xxx", "678-xxx-9999"); // 创建对象 JACK，
-并调用构造函数
-System.out.println(JACK.name);
-JACK.displayEmail(); // 调用一个函数
-Message ANDY = new Message("ANDY", "ANDY@xxx.xxx", "567-xxx-0000"); // 创建对象 ANDY，
-并调用构造函数
-System.out.println(ANDY.name);
-ANDY.displayPhone(); // 调用一个函数
-}
+    String name, email, phone;
+
+    public Message(String theName, String theEmail, String thePhone) { // 声明一个用于初始化的构造函数
+        name = theName;
+        email = theEmail;
+        phone = thePhone;
+    }
+
+    void displayEmail() { // 声明一个函数
+        System.out.println("Email:" + email);
+    }
+
+    void displayPhone() { // 声明一个函数
+        System.out.println("Phone:" + phone);
+    }
+
+    public static void main(String[] args) { // 主函数
+        Message JACK = new Message("JACK", "JACK@xxx.xxx", "678-xxx-9999"); // 创建对象 JACK，并调用构造函数
+        System.out.println(JACK.name);
+        JACK.displayEmail(); // 调用一个函数
+
+        Message ANDY = new Message("ANDY", "ANDY@xxx.xxx", "567-xxx-0000"); // 创建对象 ANDY，并调用构造函数
+        System.out.println(ANDY.name);
+        ANDY.displayPhone(); // 调用一个函数
+    }
 }
 ```
 
 点击工具栏中的白色三角形绿色按钮运行并查看输出：
 
-### **输出：**
+### 输出
 
+```text
 JACK
-
 Email:JACK@xxx.xxx
-
 ANDY
-
 Phone:567-xxx-0000
+```
 
-### 解释：
+### 解释
 
-“public class Message”定义了一个类“Message”。
-public Message(......)定义了一个构造函数，初始化了三个字符串变量。
-
-“Message JACK = new Message (.....)”创建了对象“JACK”，并自动调用构造函数来初始化三个字符串变量。
-
-“JACK.name”引用了变量“name”。
-
-“JACK.displayEmail();”调用了函数“displayEmail()”。
-
-“Message ANDY = new Message (.....)”创建了对象“ANDY”，并自动调用构造函数来初始化三个字符串变量。
-
-“ANDY.name”引用了变量“name”。
-
-“ANDY.displayPhone();”调用了函数“displayPhone()”。
+- `public class Message` 定义了一个类 `Message`。
+- `public Message(...)` 定义了一个构造函数，初始化了三个字符串变量。
+- `Message JACK = new Message(...)` 创建了对象 `JACK`，并自动调用构造函数来初始化三个字符串变量。
+- `JACK.name` 引用了变量 `name`。
+- `JACK.displayEmail()` 调用了函数 `displayEmail()`。
+- `Message ANDY = new Message(...)` 创建了对象 `ANDY`，并自动调用构造函数来初始化三个字符串变量。
+- `ANDY.name` 引用了变量 `name`。
+- `ANDY.displayPhone()` 调用了函数 `displayPhone()`。
 
 # 第 6 小时
 
@@ -2166,62 +1859,62 @@ public Message(......)定义了一个构造函数，初始化了三个字符串�
 
 一个类可以被子类扩展。
 
-```
+```java
 class sub-class extends parent-class;
 ```
 
-“extends”用于子类扩展父类。
+`extends` 用于子类扩展父类。
 
 ### 示例 6.1
 
 ```java
-class parent_class{ // 父类
-// 在此处定义变量；
-// 在此处定义方法；
+class parent_class { // 父类
+    // 在此处定义变量；
+    // 在此处定义方法；
 }
-class sub_class extends parent_class{ // 子类
-// 在此处定义变量；
-// 在此处定义方法；
+
+class sub_class extends parent_class { // 子类
+    // 在此处定义变量；
+    // 在此处定义方法；
 }
 ```
 
-### **解释：**
+### 解释
 
-“class sub_class extends parent_class” 意味着子类继承了一个父类（也称为超类）。
+`class sub_class extends parent_class` 意味着子类继承了一个父类（也称为超类）。
 
 子类可以访问父类中的变量和方法，但不能访问父类中的私有变量和私有方法。
 
 ### “super” 关键字
 
-在子类中，“super”用于调用父类的构造函数。
+在子类中，`super` 用于调用父类的构造函数。
 
-```
-super ( argument );
+```java
+super(argument);
 ```
 
-“super ( argument );”被放在子类构造函数的第一行，用于调用父类的构造函数。
+`super(argument);` 被放在子类构造函数的第一行，用于调用父类的构造函数。
 
 ### 示例 6.2
 
 ```java
-class super_class{
-super_class (int x, int y){ // 构造函数
-this.x=x; this .y=y;
+class super_class {
+    super_class(int x, int y) { // 构造函数
+        this.x = x;
+        this.y = y;
+    }
 }
+
+class sub_class extends super_class {
+    sub_class(int x, int y) { // 构造函数
+        super(x, y); // 调用父类的构造函数
+    }
 }
 ```
 
-```java
-class sub_class extends super_class{
-sub_class(int x, int y){ // 构造函数
-super ( x,y ); // 调用父类的构造函数
-}
-}
-```
+### 解释
 
-### 解释：
-
-“super ( x,y);”调用超类中的构造函数。
+`super(x, y);` 调用超类中的构造函数。
 
 ### 重写
 
@@ -2230,45 +1923,31 @@ super ( x,y ); // 调用父类的构造函数
 ### 示例 6.3
 
 ```java
-class Super_class{
-    int test(int num ) { return num; } // 重写
+class Super_class {
+    int test(int num) { return num; } // 重写
 }
-class Sub_class extends Super_class{
-    int test(int num ) { return 10; } // 重写
+
+class Sub_class extends Super_class {
+    int test(int num) { return 10; } // 重写
 }
+
 public class Overriding {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Sub_class obj = new Sub_class();
         System.out.println(obj.test(20));
     }
 }
 ```
-*(注：原文示例代码结构略有混乱，此处已根据逻辑对齐并保持代码内容不变)*
 
-修正后的逻辑展示：
-```java
-class Super_class{
-    int test(int num ) { return num; } // 重写
-}
-class Sub_class extends Super_class{
-    int test(int num ) { return 10; } // 重写
-}
-public class Overriding {
-    public static void main(String[] args){
-        Sub_class obj = new Sub_class();
-        System.out.println(obj.test(20));
-    }
-}
-```
-(输出：10)
+**输出：**
 
-### 解释：
-
+```text
 10
+```
 
+### 解释
 
-
-“obj.test(20 )”调用了“int test(20 )”在超类中的方法名和参数相同。
+`obj.test(20)` 调用了子类 `Sub_class` 中的 `test(int num)` 方法，因为方法名和参数与超类相同，发生了重写，返回值为 10。
 
 ### 重载
 
@@ -2277,230 +1956,22 @@ public class Overriding {
 ### 示例 6.4
 
 ```java
-class Color{
-    void test() { System.out.println("no argument"); }
-    void test(int a) { System.out.println("int argument: " + a); }
-    void test(String b) { System.out.println("string argument: " + b); }
-}
-```
-*(注：原文示例 6.3 文本存在格式混乱，此处按翻译意图对齐)*
-
-原文内容为：
-```java
-class Super_class{
-    int test(int num ) { return num; } // overriding
-}
-class Sub_class extends Super_class{
-    int test(int num ) { return 10; } // overriding
-}
-public class Overriding {
-    public static void main(String[] args){
-        Sub_class obj = new Sub_class();
-        System.out.println(obj.test(20));
-    }
-}
-```
-(输出：10)
-
-### 解释：
-
-10
-
-“obj.test(20 )”调用了“int test(20 )”在超类中的方法名和参数相同。
-
-### 重载
-
-如果方法名相同但参数不同，则可以重载方法。
-
-### 示例 6.4
-
-```java
-class Color{
+class Color {
     void test() { System.out.println("no argument"); }
     void test(int a) { System.out.println("int argument: " + a); }
     void test(String b) { System.out.println("string argument: " + b); }
 }
 ```
 
-*(由于用户提供的原文文本在 6.3 之后出现了严重的格式错乱和重复，以下严格按照原文提供的行进行翻译)*
 
-原文片段：
-```
-class Super_class{
-    int test(int num ) { return num; } // overriding
-}
-class Sub_class extends Super_class{
-    int test(int num ) { return 10; } // overriding
-}
-public class Overriding {
-    public static void main(String[] args){
-        Sub_class obj = new Sub_class();
-        System.out.println(obj.test(20));
-    }
-}
-```
-(输出：10)
 
-**重新根据用户提供的乱序原文逐行翻译：**
+“`JACK.displayEmail();`”调用了函数“`displayEmail()`”。
 
-[content]
-```java
-class Super_class{
-    int test(int num ) { return num; } // 重写
-}
-class Sub_class extends Super_class{
-    int test(int num ) { return 10; } // 重写
-}
-public class Overriding {
-    public static void main(String[] args){
-        Sub_class obj = new Sub_class();
-        System.out.println(obj.test(20));
-    }
-}
-```
-(输出：10)
+“`Message ANDY = new Message (.....)`”创建了对象“`ANDY`”，并自动调用构造函数来初始化三个字符串变量。
 
-### 解释：
+“`ANDY.name`”引用了变量“`name`”。
 
-10
-
-“obj.test(20 )”调用了“int test(20 )”在超类中的方法方法名和参数相同。
-
-### 重载
-
-如果方法名相同但参数不同，则可以重载方法。
-
-### 示例 6.4
-
-```java
-class Color{
-    void test() { System.out.println("no argument"); }
-    void test(int a) { System.out.println("int argument: " + a); }
-    void test(String b) { System.out.println("string argument: " + b); }
-}
-```
-*(注：由于提供的英文原文在 6.3 之后存在大量重复和错乱，上述翻译已尽可能还原原文呈现的字符流。)*
-
----
-**以下是针对您提供的原始文本的完整翻译结果：**
-
-[content]
-
-### 解释：
-
-在上方，当“obj.test(10)”调用“test() { }”方法时，“this”代表对象“obj”。
-
-## “this” 关键字 (2)
-
-“this”可以表示另一个同名的构造函数。
-
-### 示例 5.9
-
-```
-class MyClass {
-int x, y;
-MyClass () {
-this ( 100, 200 ); //"this"表示 MyClass ( int a, int b) {
-}
-MyClass ( int a, int b){
-x=a; y=b;
-}
-}
-```
-
-### 解释：
-
-“this ( 100, 200 )”表示另一个同名的构造函数“MyClass ( int a, int b){ }”。
-
-注意，“this”不能表示非构造方法。
-
-### 实例变量与局部变量
-
-实例变量定义在类中。它在当前类中有效。
-局部变量定义在方法中。它在当前方法中有效。
-
-### 示例 5.10
-
-```
-class Point {
-    int x= 100, y = 200; // 实例变量
-    void test() {
-        int x = 1, y = 2; // 局部变量
-    }
-}
-```
-
-**解释：**
-
-“int x= 100, y = 200;”在类内部定义了实例变量。
-
-“int x = 1, y = 2;”在方法内部定义了两个局部变量。
-
-## 动手项目：联系信息。
-
-## 类与对象 > "myPackage" > new > class > name > Message >
-
-启动 Eclipse > 选择 "myPackage" > new > class > name > Message >
-完成。
-
-在 Eclipse 中编写以下代码：
-
-```java
-package myPackage;
-public class Message { // 声明一个类
-String name, email, phone;
-public Message(String theName, String theEmail, String thePhone){ // 声明一个用于初始化的构造函数
-name = theName;
-email = theEmail;
-phone = thePhone;
-}
-void displayEmail(){ // 声明一个函数
-System.out.println("Email:" + email);
-}
-void displayPhone(){ // 声明一个函数
-System.out.println("Phone:" + phone);
-}
-public static void main(String[] args) { // 主函数
-Message JACK = new Message("JACK", "JACK@xxx.xxx", "678-xxx-9999"); // 创建对象 JACK，
-并调用构造函数
-System.out.println(JACK.name);
-JACK.displayEmail(); // 调用一个函数
-Message ANDY = new Message("ANDY", "ANDY@xxx.xxx", "567-xxx-0000"); // 创建对象 ANDY，
-并调用构造函数
-System.out.println(ANDY.name);
-ANDY.displayPhone(); // 调用一个函数
-}
-}
-```
-
-点击工具栏中的白色三角形绿色按钮运行并查看输出：
-
-### **输出：**
-
-JACK
-
-Email:JACK@xxx.xxx
-
-ANDY
-
-Phone:567-xxx-0000
-
-### 解释：
-
-“public class Message”定义了一个类“Message”。
-public Message(......)定义了一个构造函数，初始化了三个字符串变量。
-
-“Message JACK = new Message (.....)”创建了对象“JACK”，并自动调用构造函数来初始化三个字符串变量。
-
-“JACK.name”引用了变量“name”。
-
-“JACK.displayEmail();”调用了函数“displayEmail()”。
-
-“Message ANDY = new Message (.....)”创建了对象“ANDY”，并自动调用构造函数来初始化三个字符串变量。
-
-“ANDY.name”引用了变量“name”。
-
-“ANDY.displayPhone();”调用了函数“displayPhone()”。
+“`ANDY.displayPhone();`”调用了函数“`displayPhone()`”。
 
 # 第 6 小时
 
@@ -2514,7 +1985,7 @@ public Message(......)定义了一个构造函数，初始化了三个字符串�
 class sub-class extends parent-class;
 ```
 
-“extends”用于子类扩展父类。
+“`extends`”用于子类扩展父类。
 
 ### 示例 6.1
 
@@ -2529,21 +2000,21 @@ class sub_class extends parent_class{ // 子类
 }
 ```
 
-### **解释：**
+### 解释：
 
-“class sub_class extends parent_class” 意味着子类继承了一个父类（也称为超类）。
+“`class sub_class extends parent_class`” 意味着子类继承了一个父类（也称为超类）。
 
 子类可以访问父类中的变量和方法，但不能访问父类中的私有变量和私有方法。
 
 ### “super” 关键字
 
-在子类中，“super”用于调用父类的构造函数。
+在子类中，“`super`”用于调用父类的构造函数。
 
 ```
 super ( argument );
 ```
 
-“super ( argument );”被放在子类构造函数的第一行，用于调用父类的构造函数。
+“`super ( argument );`”被放在子类构造函数的第一行，用于调用父类的构造函数。
 
 ### 示例 6.2
 
@@ -2565,7 +2036,7 @@ super ( x,y ); // 调用父类的构造函数
 
 ### 解释：
 
-“super ( x,y);”调用超类中的构造函数。
+“`super ( x,y);`”调用超类中的构造函数。
 
 ### 重写
 
@@ -2587,13 +2058,14 @@ public class Overriding {
     }
 }
 ```
+
 (输出：10)
 
 ### 解释：
 
 10
 
-“obj.test(20 )”调用了“int test(20 )”在超类中的方法方法名和参数相同。
+“`obj.test(20 )`”调用了“`int test(20 )`”在超类中的方法方法名和参数相同。
 
 ### 重载
 
@@ -2609,20 +2081,17 @@ class Color{
 }
 ```
 
+### 解释：
 
+“`final void test(){...}`” 定义了一个 final 方法。
 
-
-**解释：**
-
-“final void test(){...}” 定义了一个 final 方法。
-
-“void test(){...}” 尝试重写“final void test(){...}”，但发生了错误。
+“`void test(){...}`” 尝试重写“`final void test(){...}`”，但发生了错误。
 
 ### final class
 
-“final” 是关键字。
+“`final`” 是关键字。
 
-“final class” 意味着该类不能被继承。
+“`final class`” 意味着该类不能被继承。
 
 ```
 Example 6.10
@@ -2638,9 +2107,9 @@ class elephant extends animal { // 错误！无法继承
 
 ### 解释:
 
-“final class animal {...}” 定义了一个 final 类“animal”，意味着“animal”类不能被继承。
+“`final class animal {...}`” 定义了一个 final 类“animal”，意味着“animal”类不能被继承。
 
-“class elephant extends animal {...}” 尝试继承父类“animal”，但发生了错误。
+“`class elephant extends animal {...}`” 尝试继承父类“animal”，但发生了错误。
 
 ### 多态
 
@@ -2688,9 +2157,9 @@ Meow, Meow......
 
 ### 解释:
 
-“animalVar = new dog()” 创建了一个 dog 对象，因此，“animalVar.cry( )” 调用了子类 Dog 中的方法 cry( )。
+“`animalVar = new dog()`” 创建了一个 dog 对象，因此，“`animalVar.cry( )`” 调用了子类 Dog 中的方法 cry( )。
 
-“animalVar = new cat()” 创建了一个 cat 对象，因此，“animalVar.cry( )” 调用了子类 Cat 中的方法 cry()。
+“`animalVar = new cat()`” 创建了一个 cat 对象，因此，“`animalVar.cry( )`” 调用了子类 Cat 中的方法 cry()。
 
 ### 包与导入 (Package & Import)
 
@@ -2699,8 +2168,9 @@ package package-name;
 import package.class;
 ```
 
-“package package-name” 创建或使用一个包。
-“import package.class” 导入一个包或其类。
+“`package package-name`” 创建或使用一个包。
+
+“`import package.class`” 导入一个包或其类。
 
 ### 示例 6.12 (在 file1 中)
 
@@ -2719,13 +2189,13 @@ import myPackage.*;    // 导入 myPackage 的所有类
 
 ### 解释:
 
-“package myPackage” 在 file1.java 中创建一个名为“myPackage”的包，其中包含两个类 MyClass1 和 MyClass2。
+“`package myPackage`” 在 file1.java 中创建一个名为“myPackage”的包，其中包含两个类 MyClass1 和 MyClass2。
 
-“import myPackage.*” 从 file1 将包“myPackage”中的任何类导入到 file2。
+“`import myPackage.*`” 从 file1 将包“myPackage”中的任何类导入到 file2。
 
-注意，“package”命令必须位于“import”命令之上。
+注意，“`package`”命令必须位于“`import`”命令之上。
 
- 构建包并导入类
+### 构建包并导入类
 
 ```java
 package myPackage; // 构建一个包
@@ -2770,11 +2240,15 @@ DISTANCE: 600 MILES
 
 ### 解释:
 
-“package myPackage;” 在 Drive.java 文件中创建了包“myPackage”。
-“import myPackage.Drive;” 导入了“myPackage”中的类 类。
-“Drive myDrive = new Drive()” 可以在 TestDrive 文件中创建一个对象“myDrive”，因为 Drive 类已经从 Drive.java 文件导入。
-“myDrive.getDistance(120, 5);” 调用了 Drive.java 文件中的方法。
-注意：“package”命令必须位于“import”命令之上。
+“`package myPackage;`” 在 Drive.java 文件中创建了包“myPackage”。
+
+“`import myPackage.Drive;`” 导入了“myPackage”中的类 类。
+
+“`Drive myDrive = new Drive()`” 可以在 TestDrive 文件中创建一个对象“myDrive”，因为 Drive 类已经从 Drive.java 文件导入。
+
+“`myDrive.getDistance(120, 5);`” 调用了 Drive.java 文件中的方法。
+
+注意：“`package`”命令必须位于“`import`”命令之上。
 
 ### 动手项目：继承
 
@@ -2808,27 +2282,26 @@ System.out.println("Sum = " + result);
 }
 }
 ```
+
 （注：原文 InheritanceDemo 的逻辑 OCR 文本已截断/不完整，但保留了结构。）
 
 ### 解释:
 
-“animalVar = new dog()” 创建了一个 dog 对象，因此，“animalVar.cry( )” 调用了子类 Dog 中的方法 cry( )。
+“`animalVar = new dog()`” 创建了一个 dog 对象，因此，“`animalVar.cry( )`” 调用了子类 Dog 中的方法 cry( )。
 
-“animalVar = new cat()” 创建了一个 cat 对象，因此，“animalVar.cry( )” 调用了子类 Cat 中的方法 cry()。
+“`animalVar = new cat()`” 创建了一个 cat 对象，因此，“`animalVar.cry( )`” 调用了子类 Cat 中的方法 cry()。
 
 ... (文本根据提供的片段继续)
-
-
 
 ### 输出：
 
 100
 
-# **解释:**
+### 解释:
 
-“int num=100” 定义了一个默认成员。
+“`int num=100`” 定义了一个默认成员。
 
-“s.num” 可以访问同一包中的默认成员。
+“`s.num`” 可以访问同一包中的默认成员。
 
 ### 公共成员 (Public Member)
 
@@ -2862,11 +2335,11 @@ public class SubClass extends ParentClass{
 
 100
 
-# **解释:**
+### 解释:
 
-“public int num=100” 定义了公共成员。
+“`public int num=100`” 定义了公共成员。
 
-“s.num” 可以访问不同包中的公共成员。
+“`s.num`” 可以访问不同包中的公共成员。
 
 ### 私有成员 (Private Member)
 
@@ -2888,17 +2361,17 @@ public class NewClass{
 
 输出：（ 错误信息！ ）
 
-**解释:**
+### 解释:
 
-“private MyClass( )” 定义了一个私有构造函数 “MyClass”。
+“`private MyClass( )`” 定义了一个私有构造函数 “MyClass”。
 
-“new MyClass( )” 尝试调用私有构造函数 “MyClass”，但由于发生错误，因为它们分别位于不同的类中。
+“`new MyClass( )`” 尝试调用私有构造函数 “MyClass”，但由于发生错误，因为它们分别位于不同的类中。
 
 ### 私有示例 (Private Example)
 
 私有成员可以被同一个类访问。
 
-# **示例:**
+### 示例:
 
 ```
 package myPackage;
@@ -2918,7 +2391,7 @@ public class PrivateExample {
 }
 ```
 
-# **输出:**
+### 输出:
 
 a = 100
 
@@ -2957,10 +2430,12 @@ System.out.print ( s.num ); // 访问受保护成员
 
 100
 
-# **解释:**
+### 解释:
 
-"protected int num=100" 定义了一个受保护成员。
-"s.num" 可以访问不同包中子类的受保护成员。
+"`protected int num=100`” 定义了一个受保护成员。
+
+"`s.num`” 可以访问不同包中子类的受保护成员。
+
 受保护成员可以被任何子类访问。
 
 ### 接口 (Interface)
@@ -2979,18 +2454,23 @@ return 100;
 }
 ```
 
-# **解释:**
+### 解释:
 
-“interface books” 定义了一个接口 “books”。
-“int booknumber()” 定义了一个空方法 “booknumber”。
-“class eBooks implement books{ }” 意味着类 “eBooks” 实现接口 “books”。
-“public int booknumber() { }” 实现 booknumber()。
+“`interface books`” 定义了一个接口 “books”。
+
+“`int booknumber()`” 定义了一个空方法 “booknumber”。
+
+“`class eBooks implement books{ }`” 意味着类 “eBooks” 实现接口 “books”。
+
+“`public int booknumber() { }`” 实现 booknumber()。
 
 ### 接口示例 (Interface Example)
 
-# **示例:**
+### 示例:
 
-```
+
+
+```java
 package myPackage;
 interface Books { // 定义一个接口
     public void booksNumbers(); // 定义一个空方法
@@ -3008,102 +2488,112 @@ public class InterfaceExample {
 }
 ```
 
-# **输出:**
+# 输出:
 
 Implement the empty method!
 
-### 抽象类与接口 (Abstract & Interface)
-
-# **解释:**
-
-abstract class books{ // 定义抽象类
-abstract int read(); // 定义抽象方法
-class eBooks extends books{ // 扩展父类
-int read() { return ...; }
-
-# **接口解释:**
-
-```
-interface books { // 定义接口
-int booknumber(); // 一个方法
-}
-class implements { books // 实现
-
-public booknumber() { // 实现 {
-
-return ...;
-}
-```
-
-### 初始化变量 (Initializes Variables)
-
-在创建对象时，需要一个构造函数来初始化变量。
-
-示例 7.7
-```
-class Book { // 创建一个类
-  public String title;
-  public int number;
-  public Book () { // 一个构造函数
-    title = " " Java"; // 初始化
-    number = 100; // 初始化
-  }
-}
-public class Publisher { // 创建类
-  public static void main(String args) { // 方法
-    Book b = new Book(); // 创建对象
-    System.out.println(b.title + b.number);
-  }
-}
-( 输出: Java100 )
-```
+## 抽象类与接口 (Abstract & Interface)
 
 ### 解释:
 
-Book () { } 是一个构造函数来初始化变量。
+```java
+abstract class books{ // 定义抽象类
+    abstract int read(); // 定义抽象方法
+}
+class eBooks extends books{ // 扩展父类
+    int read() { return ...; }
+}
+```
 
-Main 类可以调用方法。
+### 接口解释:
+
+```java
+interface books { // 定义接口
+    int booknumber(); // 一个方法
+}
+class implements { books // 实现
+    public booknumber() { // 实现 {
+        return ...;
+    }
+}
+```
+
+## 初始化变量 (Initializes Variables)
+
+在创建对象时，需要一个构造函数来初始化变量。
+
+### 示例 7.7
+
+```java
+class Book { // 创建一个类
+    public String title;
+    public int number;
+    public Book () { // 一个构造函数
+        title = "Java"; // 初始化
+        number = 100; // 初始化
+    }
+}
+public class Publisher { // 创建类
+    public static void main(String args) { // 方法
+        Book b = new Book(); // 创建对象
+        System.out.println(b.title + b.number);
+    }
+}
+```
+( 输出: Java100 )
+
+### 解释:
+
+`Book () { }` 是一个构造函数来初始化变量。
+
+`Main` 类可以调用方法。
 
 ### 示例 7.8
 
-```
+```java
 class AnotherClass{ // 定义另一个类
-void anotherMethod() { // 方法
-    System.out.println("Very Good");
+    void anotherMethod() { // 方法
+        System.out.println("Very Good");
+    }
 }
 public class Main { // 类
-public static void main(String args) { // 方法
-    AnotherClass ac=new AnotherClass();
-    ac.anotherMethod(); // 调用
+    public static void main(String args) { // 方法
+        AnotherClass ac=new AnotherClass();
+        ac.anotherMethod(); // 调用
+    }
 }
-}
+```
 ( 输出: Very Good )
 
 ### 解释:
 
-AnotherClass 定义了另一个类。
+`AnotherClass` 定义了另一个类。
 
-### 抽象类示例 (Abstract Example)
+## 抽象类示例 (Abstract Example)
 
-Start up Eclipse > Select “Abstract” > new > class > name AbstractDemo > Finish.
+Start up Eclipse > Select “Abstract” > new > class > name `AbstractDemo` > Finish.
 
 Write following codes in Eclipse.
 
-```
+```java
 package myPackage;
+
 abstract class A { // 定义抽象类
-abstract int read(); // 定义抽象方法
+    abstract int read(); // 定义抽象方法
 }
+
 class B extends A { // 扩展父类
-int read() { // 实现抽象方法
-return 100;
+    int read() { // 实现抽象方法
+        return 100;
+    }
 }
+
 public class AbstractDemo {
-public static void main(String args) {
-    A a;
-    B b=new B();
-    System.out.println(b.read());
-}
+    public static void main(String args) {
+        A a;
+        B b=new B();
+        System.out.println(b.read());
+    }
 }
 ```
 
@@ -3113,29 +2603,25 @@ public static void main(String args) {
 
 100
 
-解释:
+### 解释:
 
-“abstract class A{ }” 定义了一个抽象类。
+`abstract class A{ }` 定义了一个抽象类。
 
-“abstract int read()” 定义了一个抽象方法。
+`abstract int read()` 定义了一个抽象方法。
 
-“class B extends A{ }” 意味着子类 “B” 扩展了父类 “A”。
+`class B extends A{ }` 意味着子类 `B` 扩展了父类 `A`。
 
-“int read() { }” 意味着子类中的方法实现了父类中的抽象方法。
+`int read() { }` 意味着子类中的方法实现了父类中的抽象方法。
 
-### 练习项目 (Hands-On Project): Max & Min
+## 练习项目 (Hands-On Project): Max & Min
 
-
-
-
-
-```
+```java
 }
 ```
 
 点击工具栏中的白色三角形按钮运行程序并查看输出：
 
-### **输出：**
+### 输出：
 
 两个数字为：100 & 120
 
@@ -3147,14 +2633,15 @@ public static void main(String args) {
 
 ### 解析：
 
-“interface myInterface”定义了一个名为“myInterface”的接口。
-“void compareNumbers( )”定义了一个空方法“void compareNumbers( )”。
+`interface myInterface` 定义了一个名为 `myInterface` 的接口。
 
-“class MaxNum implements myInterface { }” 意味着类“MaxNum”实现了“myInterface”接口。
+`void compareNumbers( )` 定义了一个空方法 `void compareNumbers( )`。
 
-“class MinNum implements myInterface { }” 意味着类“MinNum”实现了“myInterface”接口。
+`class MaxNum implements myInterface { }` 意味着类 `MaxNum` 实现了 `myInterface` 接口。
 
-“public void compareNumbers() { }” 实现了接口中的空方法 compareNumbers( )。
+`class MinNum implements myInterface { }` 意味着类 `MinNum` 实现了 `myInterface` 接口。
+
+`public void compareNumbers() { }` 实现了接口中的空方法 `compareNumbers( )`。
 
 # 第 8 小节
 
@@ -3162,26 +2649,26 @@ public static void main(String args) {
 
 ### 异常
 
-异常异常是程序在运行过程中发生的错误，它会破坏命令的正常流。
+异常是程序在运行过程中发生的错误，它会破坏命令的正常流。
 
 ### 示例 8.1
 
 ```java
 public class ExceptionSample {
-  public static void main (String args [ ]) {
-    int a=10, b=0, c;
-
-    c = a/b; // ！因为 "b" 是 0。
-    System.out.print ( c );
-  }}
+    public static void main (String args [ ]) {
+        int a=10, b=0, c;
+        c = a/b; // ！因为 "b" 是 0。
+        System.out.print ( c );
+    }
+}
 ```
 ( 输出: java.lang.ArithmeticException: / by zero)
 
-### **解析：**
+### 解析：
 
-"c = a/b" 发生错误，因为“b”为零。
+`c = a/b` 发生错误，因为 `b` 为零。
 
-上面的示例显示了一个模式为“ArithmeticException”的异常。
+上面的示例显示了一个模式为 `ArithmeticException` 的异常。
 
 ### 捕获异常 (1)
 
@@ -3190,29 +2677,31 @@ try { // 可能会产生异常的代码 }
 catch ( Exception ) { // 处理异常 }
 ```
 
-“try-catch”可以捕获并处理异常。
+`try-catch` 可以捕获并处理异常。
 
 ### 示例 8.2
 
 ```java
 public class ExceptionSample {
-public static void main (String args [ ]) {
-  try { // 可能会产生异常的代码
-  int a=10, b=0; c;
-  c = a/b; // ！因为 "b" 是 0。
-  System.out.print ( c );
- }
-  catch ( ArithmeticException e) { // 处理异常
-  System.out.print(" Divided By Zero ");
- }}
+    public static void main (String args [ ]) {
+        try { // 可能会产生异常的代码
+            int a=10, b=0; c;
+            c = a/b; // ！因为 "b" 是 0。
+            System.out.print ( c );
+        }
+        catch ( ArithmeticException e) { // 处理异常
+            System.out.print(" Divided By Zero ");
+        }
+    }
+}
 ```
 ( 输出: Divided By Zero )
 
-**解析：**
+### 解析：
 
-“try{...}”包含“c=a/b”，导致了异常。
+`try{...}` 包含 `c=a/b`，导致了异常。
 
-“catch {...}”处理该异常。
+`catch {...}` 处理该异常。
 
 ### 捕获异常 (2)
 
@@ -3220,28 +2709,32 @@ public static void main (String args [ ]) {
 try { // 可能会产生异常的代码 }
 catch ( Exception ) { // 处理异常 }
 ```
+
 当数组索引越界时，会发生异常。
 
 ### 示例 8.3
 
 ```java
 public class ExceptionSample {
-public static void main (String args [ ]) {
-try {
-    int a[ ] = new int[10]; // 最后一个索引是 9
-    a[10]=100; // ！因为索引越界。
-    System.out.print( a[10]);
+    public static void main (String args [ ]) {
+        try {
+            int a[ ] = new int[10]; // 最后一个索引是 9
+            a[10]=100; // ！因为索引越界。
+            System.out.print( a[10]);
+        }
+        catch (OutOfBoundsException e) {
+            System.out.print(" Array index of bounds ");
+        }
+    }
 }
-catch (OutOfBoundsException e) {
-    System.out.print(" Array index of bounds ");
-}}
 ```
 ( 输出: Array index of bounds )
 
-**解析：**
+### 解析：
 
-“try {...}”包含“a[10]”，导致了异常。
-“catch {...}”处理该异常。
+`try {...}` 包含 `a[10]`，导致了异常。
+
+`catch {...}` 处理该异常。
 
 ### 捕获异常 (3)
 
@@ -3249,9 +2742,10 @@ catch (OutOfBoundsException e) {
 try { // 可能会产生异常的代码 }
 catch ( Exception ) { // 处理异常 }
 ```
+
 当字符索引越界时，会发生异常。
 
-# 示例 8.4
+### 示例 8.4
 
 ```java
 public class ExceptionSample {
@@ -3264,17 +2758,19 @@ public class ExceptionSample {
             System.out.print( "Character index of bounds" );
         }
     }
+}
 ```
-( 输出: Character index of bounds.)
+( 输出: Character index of bounds. )
 
-解析：
+### 解析：
 
-"try{...}”包含 "ABC".charAt(100);”，并导致了异常，因为“ABC”的长度为 3，没有第 100 个字符。
-“catch {...}”处理该异常。
+`try{...}` 包含 `"ABC".charAt(100);`，并导致了异常，因为 `ABC` 的长度为 3，没有第 100 个字符。
+
+`catch {...}` 处理该异常。
 
 ### finally 命令
 
-try-catch 块后面可以跟一个“finally”命令，它总会在最后执行。
+`try-catch` 块后面可以跟一个 `finally` 命令，它总会在最后执行。
 
 ```java
 try { // 可能会产生异常的代码 }
@@ -3301,18 +2797,19 @@ public class ExceptionSample {
 
 ### 解析：
 
-“finally { System.out.print("The End"); }”必须执行。
+`finally { System.out.print("The End"); }` 必须执行。
 
 ### 抛出异常
 
 任何程序都可以准备好手动抛出自己的异常。
 
 ```java
-throw new Exception (“exception message”);
+throw new Exception ("exception message");
 ```
 
-“throw”用于手动抛出异常和错误消息。
-e.getMessage() 可以显示消息。
+`throw` 用于手动抛出异常和错误消息。
+
+`e.getMessage()` 可以显示消息。
 
 ### 示例 8.6
 
@@ -3327,16 +2824,17 @@ public class ExceptionSample {
             System.out.print("Error index:"+e.getMessage()); // 警报
         }
     }
+}
 ```
 ( 输出: Error index: 10 )
 
 ### 解析：
 
-“throw new Exception("...")”可以抛出一个异常。
+`throw new Exception("...")` 可以抛出一个异常。
 
 ### 声明抛异常
 
-任何方法都可以准备好手动抛出自己的异常。“e.getMessage()' 显示错误消息。
+任何方法都可以准备好手动抛出自己的异常。`e.getMessage()` 显示错误消息。
 
 ```java
 method ( ) throws Exception {...}
@@ -3346,32 +2844,34 @@ method ( ) throws Exception {...}
 
 ```java
 public class ExceptionSample {
-  public static void main(String args [ ]) {
-    try {
-      int b = 0;
-      calculate( b ); // 调用函数，但发生了异常！
+    public static void main(String args [ ]) {
+        try {
+            int b = 0;
+            calculate( b ); // 调用函数，但发生了异常！
+        }
+        catch(Exception e) {
+            System.out.println("The error is"+ e.getMessage());
+        }
     }
-    catch(Exception e) {
-      System.out.println("The error is"+ e.getMessage());
+
+    public static int calculate(int num) throws ArithmeticException { // 手动抛出异常
+        int a=10, c;
+        c = a/num; // num 为 0，错误！
+        return c;
     }
-  }
-  public static int calculate(int num) throws ArithmeticException { // 手动抛出异常
-    int a=10, c;
-    c = a/num; // num 为 0，错误！
-    return c;
-  }
 }
 ```
-( 输出: The error is/ by zero.)
+( 输出: The error is/ by zero. )
 
 ### 解析：
 
-“int calculate( int num) throws ArithmeticException” 抛出了异常。
-“e.getMessage() 显示错误消息。
+`int calculate( int num) throws ArithmeticException` 抛出了异常。
+
+`e.getMessage()` 显示错误消息。
 
 ### File 类
 
-File 类用于显示文件的属性，检查文件是否存在、可读、可写等。
+`File` 类用于显示文件的属性，检查文件是否存在、可读、可写等。
 
 ```java
 File f = new File (name);   // 创建文件对象
@@ -3393,97 +2893,105 @@ if ((f.exists())) {
 }
 ```
 
-**解析：**
+### 解析：
 
 以上所有方法都返回 true 或 false。
 
 ### FileOutputStream
 
-FileOutputStream 类用于处理输出流。
+`FileOutputStream` 类用于处理输出流。
 
 ```java
 FileOutputStream fout = new FileOutputStream(filename);
-
 System.in.read(); // 读取输入字符
-
 fout.write(); // 将字符写入文件
 ```
-“new FileOutputStream(filename)” 创建输出流。
-“System.in.read()”从键盘读取字符。
-“fout.write()”将字符写入文件。
+
+`new FileOutputStream(filename)` 创建输出流。
+
+`System.in.read()` 从键盘读取字符。
+
+`fout.write()` 将字符写入文件。
 
 ### 示例 8.9
 
-(在同一项目文件夹中准备一个空文件 MyFile.txt，以及以下 Java 文件 OutputFile.java)
+(在同一项目文件夹中准备一个空文件 `MyFile.txt`，以及以下 Java 文件 `OutputFile.java`)
 
 ```java
 package myPackage;
+
 import java.io.*;
+
 public class OutputFile {
-public static void main(String[] args) {
-
-char ch;
-int number;
-
-try{
-FileOutputStream fout = new FileOutputStream("MyFile.txt");
-System.out.println("请输入一些单词，以 # 键结束并回车：");
-while((ch = (char)System.in.read()) != '#') // 从键盘读取输入的字符
-fout.write(ch); // 将字符写入文件
-fout.close();
-}
-catch(FileNotFoundException e){
-System.err.println(e);
-}
-catch(IOException e){
-System.err.println(e);
-}
-}
-```
-(运行程序，并在键盘输入“C++ is very good!”)
-
-### 结果：
-
-请检查 MyFile.txt，你会发现其内容为“C++ is very good”
-
-### 解析：
-
-“fout” 是一个输出流对象。
-
-
-
-
-
-### FileInputStream
-
-FileInputStream 类用于用于处理输入流。
-
-```java
-FileInputStream fin = new FileInputStream(file-name);
-
-fin.read(); // 读取文件内容
-```
-
-"new FileInputStream (file-name)" 创建了一个输入流。
-"fin.read();" 读取文件的内容。
-
-### 示例 8.10
-
-(假设在同一项目文件夹中 MyFile.txt 的内容为“C++ is very good!”且有以下 Java 文件 inputFile.java)
-
-```java
-package myPackage;
-import java.io.*;
-public class InputFile {
     public static void main(String[] args) {
         char ch;
         int number;
+        try{
+            FileOutputStream fout = new FileOutputStream("MyFile.txt");
+            System.out.println("请输入一些单词，以 # 键结束并回车：");
+            while((ch = (char)System.in.read()) != '#') // 从键盘读取输入的字符
+                fout.write(ch); // 将字符写入文件
+            fout.close();
+        }
+        catch(FileNotFoundException e){
+            System.err.println(e);
+        }
+        catch(IOException e){
+            System.err.println(e);
+        }
+    }
+}
+```
+
+
+
+(运行程序，并在键盘输入“C++ is very good!”)
+
+### 结果
+
+请检查 `MyFile.txt`，你会发现其内容为“C++ is very good”
+
+### 解析
+
+`fout` 是一个输出流对象。
+
+### FileInputStream
+
+`FileInputStream` 类用于处理输入流。
+
+```java
+FileInputStream fin = new FileInputStream(file-name);
+fin.read(); // 读取文件内容
+```
+
+`new FileInputStream(file-name)` 创建了一个输入流。
+`fin.read()` 读取文件的内容。
+
+### 示例 8.10
+
+(假设在同一项目文件夹中 `MyFile.txt` 的内容为“C++ is very good!”且有以下 Java 文件 `inputFile.java`)
+
+```java
+package myPackage;
+
+import java.io.*;
+
+public class InputFile {
+
+    public static void main(String[] args) {
+
+        char ch;
+        int number;
+
         try {
             FileInputStream fin = new FileInputStream("MyFile.txt");
-            while((number=fin.read()) != -1) { // 读取文件
-                System.out.print((char)number); // 转换为字符
+
+            while ((number = fin.read()) != -1) { // 读取文件
+                System.out.print((char) number); // 转换为字符
             }
+
             fin.close();
+
         } catch (FileNotFoundException e) {
             System.err.println(e);
         } catch (IOException e) {
@@ -3493,153 +3001,155 @@ public class InputFile {
 }
 ```
 
-### 输出:
+### 输出
 
 C++ is very good!
 
-### 解析:
+### 解析
 
-"fin" 是一个输入流对象。
-
-"fin.read()" 读取 MyFile.txt 的内容。
-
-"-1" 表示文件结束。
+`fin` 是一个输入流对象。
+`fin.read()` 读取 `MyFile.txt` 的内容。
+`-1` 表示文件结束。
 
 ### 创建线程
 
 线程可以同时执行多个任务。每个线程代表一个子任务。创建线程有两种方法。
 
-### 方法一:
+### 方法一
 
 ```java
-public class ThreadDemo extends Thread{
-    public void run(){
+public class ThreadDemo extends Thread {
+
+    public void run() {
         // 线程体
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         ThreadDemo myThread = new ThreadDemo();
         myThread.start(); // 启动线程
     }
 }
 ```
 
-### 解析:
+### 解析
 
-方法一使用了 "extends Thread" 类。
+方法一使用了 `extends Thread` 类。
+`run()` 在线程启动时自动运行。
+`myThread = new ThreadDemo()` 创建了一个线程对象 `myThread`。
+`start()` 启动线程。
 
-"run()" 在线程启动时自动运行。
-
-"myThread = new ThreadDemo();" 创建了一个线程对象 "myThread"。
-
-"start()" 启动线程。
-
-### 方法二:
+### 方法二
 
 ```java
-class ThreadDemo implements Runnable{
-    public void run(){
+class ThreadDemo implements Runnable {
+
+    public void run() {
         // 线程体
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Thread myThread = new Thread(new ThreadDemo());
         myThread.start(); // 启动线程
     }
 }
 ```
 
-### 解析:
+### 解析
 
-方法二使用了 **“implements Runnable”** 接口。
-
-"run()" 在线程启动时自动运行。
-
-"new Thread(new ThreadDemo())" 创建了一个线程对象 “myThread”。
-
-"start()" 启动线程。
+方法二使用了 `implements Runnable` 接口。
+`run()` 在线程启动时自动运行。
+`new Thread(new ThreadDemo())` 创建了一个线程对象 `myThread`。
+`start()` 启动线程。
 
 ### 继承 Thread
 
 ### 示例 8.11
 
 ```java
-public class ThreadDemo extends Thread{
+public class ThreadDemo extends Thread {
+
     public void run() { // 线程体
-        for(int i = 0; i<3; i++){
+        for (int i = 0; i < 3; i++) {
             System.out.println("Thread!");
         }
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         ThreadDemo myThread = new ThreadDemo();
         myThread.start(); // 启动线程
     }
 }
 ```
 
-**输出:**
+**输出**
+
 Thread!
 Thread!
 Thread!
 
-### 解析:
+### 解析
 
-"run()" 在线程启动时自动运行。
-
-"myThread = new ThreadDemo();" 创建了一个线程对象 “myThread”。
-
-"start()" 启动线程。
+`run()` 在线程启动时自动运行。
+`myThread = new ThreadDemo()` 创建了一个线程对象 `myThread`。
+`start()` 启动线程。
 
 ### 实现 Runnable
 
 ### 示例 8.12
 
 ```java
-class ThreadDemo implements Runnable{
+class ThreadDemo implements Runnable {
+
     public void run() { // 线程体
-        for(int i = 0; i<3; i++){
+        for (int i = 0; i < 3; i++) {
             System.out.println("Thread!");
         }
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Thread myThread = new Thread(new ThreadDemo());
         myThread.start(); // 启动线程
     }
 }
 ```
 
-**输出:**
+**输出**
+
 Thread!
 Thread!
 Thread!
 
-### 解析:
+### 解析
 
-"run()" 在线程启动时自动运行。
-
-"myThread = new Thread(new ThreadDemo())" 创建了一个线程对象 "myThread"。
-
-"start()" 启动线程。
+`run()` 在线程启动时自动运行。
+`myThread = new Thread(new ThreadDemo())` 创建了一个线程对象 `myThread`。
+`start()` 启动线程。
 
 ### 多线程
 
 ### 示例 8.13
 
 ```java
-class ThreadDemo extends Thread{
-    public ThreadDemo(String threadName){
+class ThreadDemo extends Thread {
+
+    public ThreadDemo(String threadName) {
         super(threadName); // 初始化线程名称
     }
+
     public void run() { // 线程体
-        for(int i = 0; i<2; i++){
+        for (int i = 0; i < 2; i++) {
             System.out.println(getName() + " running!");
         }
     }
 }
-public class UseThread{
+
+public class UseThread {
+
     public static void main(String[] args) {
         ThreadDemo myThread1 = new ThreadDemo("1st thread");
         ThreadDemo myThread2 = new ThreadDemo("2nd thread");
         ThreadDemo myThread3 = new ThreadDemo("3rd thread");
+
         myThread1.start(); // 启动线程
         myThread2.start(); // 启动线程
         myThread3.start(); // 启动线程
@@ -3647,7 +3157,7 @@ public class UseThread{
 }
 ```
 
-**输出:**
+**输出**
 
 1st thread running!
 1st thread running!
@@ -3656,48 +3166,47 @@ public class UseThread{
 3rd thread running!
 3rd thread running!
 
-### 解析:
+### 解析
 
-"super(threadName)" 通过 Thread 类构造函数初始化线程名称。
-
-"getName()" 返回线程名称。
-
-"run()" 在线程启动时自动运行。
-
-"new myThread("1st thread")" 创建了一个名为 “1st Thread”的线程对象。
-
-"myThread1.start();" 启动线程 “myThread1”。
+`super(threadName)` 通过 `Thread` 类构造函数初始化线程名称。
+`getName()` 返回线程名称。
+`run()` 在线程启动时自动运行。
+`new ThreadDemo("1st thread")` 创建了一个名为 “1st Thread” 的线程对象。
+`myThread1.start()` 启动线程 `myThread1`。
 
 ......
 
-### Thread的方法
+### Thread 的方法
 
-- thread.start() 启动线程。
-- thread.stop() 停止线程。
-- thread.sleep() 让线程睡眠一段时间。
-- thread.wait() 让线程进入等待状态。
-- thread.notify() 唤醒等待的线程。
-- thread.yield() 让其他相同优先级的线程运行。
-- thread.isAlive() 测试当前线程是否存活。
-- thread.currentThread() 获取当前线程。
-- thread.interrupt() 中断线程。
-- thread.join() 等待线程死亡。
-- thread.spend() 暂停线程（已废用）。
-- thread.resume() 恢复线程（已废用）。
+- `thread.start()` 启动线程。
+- `thread.stop()` 停止线程。
+- `thread.sleep()` 让线程睡眠一段时间。
+- `thread.wait()` 让线程进入等待状态。
+- `thread.notify()` 唤醒等待的线程。
+- `thread.yield()` 让其他相同优先级的线程运行。
+- `thread.isAlive()` 测试当前线程是否存活。
+- `thread.currentThread()` 获取当前线程。
+- `thread.interrupt()` 中断线程。
+- `thread.join()` 等待线程死亡。
+- `thread.suspend()` 暂停线程（已废用）。
+- `thread.resume()` 恢复线程（已废用）。
 
 ### 线程示例
 
 ### 示例 8.14
 
 ```java
-class ThreadDemo implements Runnable{
+class ThreadDemo implements Runnable {
+
     public void run() { // 线程体
-        ....
+        ...
         wait(); // 让线程进入等待状态
     }
 }
-class Thread{
-    public static void main(String[] args){
+
+class Thread {
+
+    public static void main(String[] args) {
         Thread myThread = new Thread(new ThreadDemo());
         myThread.start(); // 启动线程
         sleep(1000); // 让线程睡眠一秒
@@ -3707,26 +3216,22 @@ class Thread{
 }
 ```
 
-### 解析:
+### 解析
 
-"wait()" 让线程进入等待状态。
-
-"new Thread(new ThreadDemo())" 创建了一个线程对象。
-
-"myThread.start()" 启动线程。
-
-"sleep(1000)" 让线程睡眠一秒。
-
-"notify()" 唤醒等待的线程。
-
-"yield()" 让其他相同优先级的线程运行。
+`wait()` 让线程进入等待状态。
+`new Thread(new ThreadDemo())` 创建了一个线程对象。
+`myThread.start()` 启动线程。
+`sleep(1000)` 让线程睡眠一秒。
+`notify()` 唤醒等待的线程。
+`yield()` 让其他相同优先级的线程运行。
 
 ### 线程示例
 
-## 示例:
+## 示例
 
 ```java
 class ThreadDemo {
+
     public void run() {
         try {
             Thread.sleep(1000);
@@ -3735,7 +3240,9 @@ class ThreadDemo {
         }
     }
 }
+
 public class Thread {
+
     public static void main(String[] args) {
         ThreadDemo td = new ThreadDemo();
         Thread t1 = new Thread(td::run);
@@ -3744,34 +3251,33 @@ public class Thread {
 }
 ```
 
-## 异常:
+## 异常
 
 ```java
-if(true){
+if (true) {
     stop(); // 停止线程
 }
 ```
 
-
-
-
-
-选择包 "threadPackage" > 新 > 类 > 命名 > "ThreadClass" > 完成。（图 3）
+选择包 `threadPackage` > 新建 > 类 > 命名 > `ThreadClass` > 完成。（图 3）
 
 ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_361_0.png)
 
 （图 3）
 
-# 第 4 ：编写 Java 代码
+# 第 4 步：编写 Java 代码
 
 在 Eclipse 中编写 Java 代码。
 
 ```java
 package threadPackage;
+
 public class ThreadClass {
+
     public static void main(String[] args) { // main 函数
         myThread thread1 = new myThread("Thread One");
         myThread thread2 = new myThread("Thread Two");
+
         thread1.start(); // 启动线程
         thread2.start(); // 启动线程
     }
@@ -3779,19 +3285,19 @@ public class ThreadClass {
 ```
 
 ```java
-class myThread extends Thread{
+class myThread extends Thread {
+
     public myThread(String str) // 构造函数
     {
         super(str); // 初始化线程
     }
-    public void run(){\ // 线程体
-        for(int I=0; I<2; I++){
-```
 
-```java
+    public void run() { // 线程体
+        for (int I = 0; I < 2; I++) {
             System.out.println(getName() + " is running!");
-            try{sleep((int)(Math.random()*1500));}
-            catch(InterruptedException e){
+            try {
+                sleep((int) (Math.random() * 1500));
+            } catch (InterruptedException e) {
                 System.out.println(getName() + " is completed!");
             }
         }
@@ -3803,32 +3309,26 @@ class myThread extends Thread{
 
 点击工具栏中的白色三角按钮运行程序，你可以看到如下输出：
 
-### 输出：
+### 输出
 
 Thread Two is running!
-
 Thread One is running!
-
 Thread Two is completed!
-
 Thread Two is running!
-
 Thread One is completed!
-
 Thread One is running!
-
 Thread Two is completed!
-
 Thread One is completed!
 
-**解释：**
+**解释**
 
-“thread1.start();”和“thread2.start();”轮流运行。
-
-“sleep((int)(Math.random()\*1500));”让一个线程睡眠片刻，而另一个线程在运行。
+`thread1.start()` 和 `thread2.start()` 轮流运行。
+`sleep((int)(Math.random() * 1500))` 让一个线程睡眠片刻，而另一个线程在运行。
 
 # 附录
+
 # Java
+
 # 测试与答案
 
 # 测试
@@ -3839,10 +3339,12 @@ Thread One is completed!
 
 ```java
 package myPackage;
-public class Calculation{
+
+public class Calculation {
+
     public static void main(String args[]) {
         int a = 100, b = 5;
-        int c = a/b*10; // "c" 的数据类型
+        int c = a / b * 10; // "c" 的数据类型
         System.out.print("C = " + c);
     }
 }
@@ -3854,30 +3356,37 @@ A. var    B. string    C. boolean    D. int
 
 ```java
 package myPackage;
+
 public class WhileStatement {
+
     public static void main(String[] args) {
         int n = 1;
         int sum = 0;
-        while (n <= 100){ // 循环语句
+
+        while (n <= 100) { // 循环语句
             sum += n;
             n++;
         }
+
         System.out.println("Sum = " + sum);
     }
 }
 ```
 
-+ 1. for B. while C. do D. switch
+A. for    B. while    C. do    D. switch
 
 (3)
 
 ```java
 package myPackage;
+
 public class TestArray {
+
     public static void main(String[] args) {
         int[] myArray;
         myArray = new int[10]; // 创建一个数组对象
-        for (int n = 0; n < myArray.length; n++){
+
+        for (int n = 0; n < myArray.length; n++) {
             myArray[n] = n;
             System.out.print(myArray[n] + "");
         }
@@ -3885,23 +3394,32 @@ public class TestArray {
 }
 ```
 
-+ A. array B. create C. new D. object
+A. array    B. create    C. new    D. object
 
 (4)
 
 ```java
 package myPackage;
+
 public class TwoStrings {
+
     public static void main(String[] args) {
         String s1, s2, s3, s4; // 声明四个变量
         s1 = "C++ in 8 Hours";
         s2 = "C++ in 8 Hours";
         s3 = "Python in 8 Hours";
         s4 = s2;
+
         System.out.println(s1);
         System.out.println(s3);
-        System.out.println(s4);
-    }
+```
+
+
+
+```java
+System.out.println(s4);
+
+}
 }
 ```
 
@@ -3911,27 +3429,49 @@ A. String      B. var      C. variable      D. void
 
 ```java
 package myPackage;
+
 public class Message {
+
     String name, email, phone;
+
     public Message(String Name, String theEmail, String thePhone) { // 创建构造函数
+
         name = Name;
+
         email = theEmail;
+
         phone = thePhone;
+
     }
+
     void displayEmail(){
+
         System.out.println("Email:" + email);
+
     }
+
     void displayPhone(){
+
         System.out.println("Phone:" + phone);
+
     }
+
     public static void main(String[] args) {
+
         Message JACK = new Message("JACK", "JACK@xxx", "678-xxx-9999");
+
         System.out.println(JACK.name);
+
         JACK.displayEmail();
+
         Message ANDY = new Message("ANDY", "ANDY@xxx", "567-xxx-0000");
+
         System.out.println(ANDY.name);
+
         ANDY.displayPhone();
+
     }
+
 }
 ```
 
@@ -3941,28 +3481,47 @@ A. constructor   B. function   C. method   D. Message
 
 ```java
 package myPackage;
+
 class code1{
+
     int x, y;
+
     code1(int a, int b) {
+
         x = a;
+
         y = b;
+
     }
+
 }
+
 class code2 extends code1{ // 继承
+
     code2(int a, int b) {
+
         super(a, b);
+
     }
+
 }
 ```
 
 ```java
 public class InheritanceDemo {
+
     public static void main(String[] args) {
+
         int result;
+
         code2 number = new code2(100, 200);
+
         result = number.x + number.y;
+
         System.out.println("Sum = " + result);
+
     }
+
 }
 ```
 
@@ -3972,10 +3531,15 @@ A. inheritance    B. extend    C. extends    D. inherits
 
 ```java
 abstract class{ // 定义抽象类
+
     abstract int read(); // 定义抽象方法
+
 }
+
 class books extends class{ // 扩展父类
+
     int read( ){ return 100; }
+
 }
 ```
 
@@ -3985,12 +3549,19 @@ A. abstract    B. interface    C. void    D. public
 
 ```java
 interface { // 定义接口
+
     int read(); // 定义方法
+
 }
+
 class books implements interface { // 实现接口
+
     public int read() {
+
         return 100;
+
     }
+
 }
 ```
 
@@ -4000,15 +3571,25 @@ class books implements interface { // 实现接口
 
 ```java
 package myPackage;
+
 public class ArrayRange {
+
     public static void main(String[] args) {
+
         int n = 0;
+
         String color[]={"Red", "Yellow", "Green"}; // 创建String数组
+
         while(n < 4){
+
             System.out.println(color[n]);
+
             n++;
+
         }
+
     }
+
 }
 ```
 
@@ -4018,31 +3599,53 @@ public class ArrayRange {
 
 ```java
 package threadPackage;
+
 public class ThreadClass {
+
     public static void main(String[] args) {
+
         myThread thread1 = new myThread("Thread One");
+
         myThread thread2 = new myThread("Thread Two");
+
         thread1.start(); // 启动thread1
+
         thread2.start(); // 启动thread2
+
     }
+
 }
 ```
 
 ```java
 class myThread extends Thread{
+
     public myThread(String str) // 构造函数
+
     {
+
         super(str);} // 初始化线程
+
     }
+
     public void run(){
+
         for(int i=0; i<2; i++){
+
             System.out.println(getName() + " is running!");
+
             try{sleep((int)(Math.random()*1500)); }
+
             catch(InterruptedException e){
+
                 System.out.println(getName())+ " is completed!");
+
             }
+
         }
+
     }
+
 }
 ```
 
@@ -4052,7 +3655,9 @@ A. begin()    B. commence()    C. run()    D. start()
 
 ```java
 int a=100; int b=200;
+
 String result1 = (a<b) ? "apple" : "banana"; // 条件运算符
+
 System.out.print ( result1);
 ```
 
@@ -4062,15 +3667,25 @@ System.out.print ( result1);
 
 ```java
 public class TryClass{
+
     public static void main (String [] args{
+
         int number=20;
+
         switch ( number ) { // 求值变量 "number"
+
             case 10 : System.out.print("Running case 10"); break;
+
             case 20 : System.out.print("Running case 20"); break;
+
             case 30 : System.out.print("Running case 30"); break;
+
             default : System.out.print("Running default code"); break;
+
         }
+
     }
+
 }
 ```
 
@@ -4080,12 +3695,19 @@ public class TryClass{
 
 ```java
 public class TryClass{
+
     public static void main (String [] args{
+
         int x = 100;
+
         int y = 200;
+
         System.out.println("Greater number is "+ Math.max(x, y));
+
         System.out.println("Less number is " + Math.min(x, y));
+
     }
+
 } // Mathematics
 ```
 
@@ -4095,8 +3717,11 @@ public class TryClass{
 
 ```java
 StringBuffer sb = new StringBuffer ("abcde"); // 创建StringBuffer对象
+
 sb.insert(2, "123"); // 输出: abc123de
+
 sb.append("456"); // 输出: abc123de456
+
 sb.reverse ( ); // 输出: 654ed31ba
 ```
 
@@ -4106,16 +3731,27 @@ sb.reverse ( ); // 输出: 654ed31ba
 
 ```java
 package correctPackage;
+
 class MyClass {
+
     int num;
+
     void test(int num) {
+
         this.num=num; // 关键字表示当前对象
+
         System.out.println(this.num);
+
     }
+
     public static void main(String[] args) {
+
         MyClass obj = new MyClass();
+
         obj.test(10);
+
     }
+
 }
 ```
 
@@ -4125,10 +3761,15 @@ class MyClass {
 
 ```java
 class MyClass {
+
     static count=100; // 声明可以直接被类引用的变量
+
     public static void main (String args[]) {
+
         System.out.print( MyClass.count );
+
     }
+
 }
 ```
 
@@ -4138,12 +3779,19 @@ class MyClass {
 
 ```java
 class MyClass{
+
     final int x=100; // 定义一个不能改变的变量
+
     static void test() { x = 200; // 错误
+
     public static void main (String args[]) {
+
         System.out.print( MyClass.test() );
+
     }
+
 }
+
 }
 ```
 
@@ -4153,16 +3801,27 @@ class MyClass{
 
 ```java
 public class ExceptionSample {
+
     public static void main (String args [ ] ) {
+
         try {
+
             int a=10, b=0; int c;
+
             c = a/b; // 错误
+
             System.out.print( c );
+
         }
+
         catch ArithmeticException e { // 处理异常
+
             System.out.print(" Divided By Zero ");
+
         }
+
     }
+
 } // 输出: Divided By Zero
 ```
 
@@ -4172,18 +3831,23 @@ public class ExceptionSample {
 
 ```java
 class MyClass {
+
     private MyClass() { // 设置这个不能被不同类访问的构造函数
+
         System.out.print("OK!");
+
     }
+
 }
+
 public class NewClass{
 ```
 
-
-
 ```java
 public static void main ( String args [] ) {
+
     MyClass mc=new MyClass ( ); // error
+
 }
 ```
 
@@ -4193,20 +3857,35 @@ public static void main ( String args [] ) {
 
 ```java
 public class ExceptionSample {
+
     public static void main (String args [ ]) {
+
         try {
+
             int b = 0;
+
             calculate(b);
+
         } catch( Exception e) {
+
             System.out.println("The error is"+ e.getMessage());
+
         }
+
     }
+
     public static int calculate( int num) fill in here ArithmeticException {
+
         // throw an exception
+
         int a=10, c;
+
         c = a/num; // num is 0, error
+
         return c;
+
     }
+
 }
 ```
 
@@ -4216,175 +3895,244 @@ public class ExceptionSample {
 
 ```java
 public class TryClass{
+
 public static void main (String [ ] args{
+
 int sum = 100 + 200;
+
 String str = "We love fill in here "Java"; //connect two strings
+
 int incre = 10; incre = ++ incre;
+
 System.out.println( sum ); // Output: 300
+
 System.out.println( str ); // Output: We love Java.
+
 System.out.println( incre ); // Output: 11
+
 }
 ```
 
 A. connect B. & C. join D. +
 
 (22)
+
 ```java
 public class TryClass{
+
 public static void main (String [ ] args{
+
 int x;
+
 fill in here (x = 0; x <= 5; x++) {
+
 System.out.print(x);
+
 }}
 ```
 
 A. if B. do C. for D. while
 
 (23)
+
 ```java
 public class TryClass{
-public static void main (String [ ] args){
+
+public static void main (String [ ] args{
+
 double pi = Math.PI;
+
 double ran = fill in here(); // //creates a random number
+
 System.out.println("The PI value is " + pi);
+
 System.out.println("The random number is " + ran);
+
 }
 ```
 
 A. random B. Math.random C. At.random C. ran
 
 (24)
+
 ```java
 public class TryClass{
+
 public static void main (String [ ] args){
+
 String str = "This is a string";
+
 int length = fill in here; //return the length of the string
+
 System.out.println("The size of string is " + length);
+
 }
 ```
 
 A. length() B. size() C. length D.size
 
 (25)
+
 ```java
 public class fill in here { // define a class
+
 String c1, c2;
+
 Color () {c1="yellow"; c2="purple";}; // constructor
+
 void brightness () {
+
 System.out.println("This flower is " + c1);
+
 System.out.println("That flower is " + c2);
+
 }
+
 public static void main(String[] args) {
+
 Color obj = new Color( ); //create an object, call constructor
+
 obj.brightness ( );
+
+}
+
 }
 ```
 
 -A. MyClass B. Class C. NewClass D. Color
 
 (26)
+
 ```java
 class super_class{
+```
+
+
+
+# Java 代码填空题
+
+## 示例代码片段
+
+```java
 super_class(int x, int y){ // constructor
-this.x=x; this .y=y;
+    this.x=x; 
+    this.y=y;
 }
+
 class sub_class extends super_class{
-sub_class(int x, int y){ // constructor
-fill in here ( x, y); //calls the constructor in super class
-}
-}
-```
-
--A. super_class B. super C. sub_class D. sub
-
-(27)
-```java
-abstract class Books{ //create an abstract class
-abstract void read(); //create an abstract method
-}
-class eBooks extends Books{
-void fill in here() { //override the abstract method
-System.out.println("Overrides the abstract method!");
-}
-  public class AbstractExample {
-  public static void main(String[] args) {
-    eBooks obj =new eBooks();
-    obj.read();
-  }
-}
-```
-
--A. Book B. eBooks C. read D. abstract
-
-(28)
-```java
-FileOutputStream fout = new FileOutputStream(file-name);
-System.in.read(); // read inputted characters
-fout. fill in here; // write characters to file
-```
-
--A. write() B. read() C.writeFile() D. readFile()
-
-(29)
-```java
-class MyClass {
-int x, y;
-MyClass ( ) {
-fill in here ( 100, 200 ); /** a keyword that represents another same-name
-constructor */
-}
-MyClass ( int a, int b)
-x=a; y=b;
-}
-```
-
--A. _construct B. constructor C. construct D. this
-
-(30)
-```java
-class Super_class{
-int test( int num ) { return num; }
-class Sub_class extends Super_class{
-int fill in here( int num ) { return 100 + num; }
-// overriding
-public class OverridingClass {
-public static void main (String args[]) {
-Sub_class obj=new Sub_class();
-System.out.print( obj.test( 200 ));
-}
-```
-
--A. myFunction B. myMethod C. test D.myTest
-
-(31)
-```java
-class ParentClass{
-    fill in here num=100; /** define a member that is accessible by its
-object */
-}
-public class SubClass extends ParentClass{
-    public static void main(String[] args) {
-        SuperClass s=new SubClass();
-        System.out.println( s.num );
+    sub_class(int x, int y){ // constructor
+        super(x, y); //calls the constructor in super class
     }
 }
 ```
 
--A. default B. public C. protected D. private
+**选项：** A. super_class B. super C. sub_class D. sub
 
-(32)
+---
+
 ```java
-FileInputStream fin = new FileInputStream(file-name);
-fin. fill in here (); reads content of a file
+abstract class Books{ //create an abstract class
+    abstract void read(); //create an abstract method
+}
+
+class eBooks extends Books{
+    void read() { //override the abstract method
+        System.out.println("Overrides the abstract method!");
+    }
+}
+
+public class AbstractExample {
+    public static void main(String[] args) {
+        eBooks obj = new eBooks();
+        obj.read();
+    }
+}
 ```
 
--A. write() B. read() C.writeFile() D.readFile()
+**选项：** A. Book B. eBooks C. read D. abstract
 
-[385]
+---
+
+```java
+FileOutputStream fout = new FileOutputStream(file-name);
+System.in.read(); // read inputted characters
+fout.write(); // write characters to file
+```
+
+**选项：** A. write() B. read() C. writeFile() D. readFile()
+
+---
+
+```java
+class MyClass {
+    int x, y;
+
+    MyClass() {
+        this(100, 200); /** a keyword that represents another same-name constructor */
+    }
+
+    MyClass(int a, int b) {
+        x=a; 
+        y=b;
+    }
+}
+```
+
+**选项：** A. _construct B. constructor C. construct D. this
+
+---
+
+```java
+class Super_class{
+    int test(int num) { return num; }
+}
+
+class Sub_class extends Super_class{
+    int test(int num) { return 100 + num; } // overriding
+}
+
+public class OverridingClass {
+    public static void main(String args[]) {
+        Sub_class obj = new Sub_class();
+        System.out.print(obj.test(200));
+    }
+}
+```
+
+**选项：** A. myFunction B. myMethod C. test D. myTest
+
+---
+
+```java
+class ParentClass{
+    public num=100; /** define a member that is accessible by its object */
+}
+
+public class SubClass extends ParentClass{
+    public static void main(String[] args) {
+        ParentClass s = new SubClass();
+        System.out.println(s.num);
+    }
+}
+```
+
+**选项：** A. default B. public C. protected D. private
+
+---
+
+```java
+FileInputStream fin = new FileInputStream(file-name);
+fin.read(); // reads content of a file
+```
+
+**选项：** A. write() B. read() C. writeFile() D. readFile()
+
+---
 
 # Answers
 
-| 01 | D | 17 | C
+| 01 | D | 17 | C |
+|----|---|----|---|
 | 02 | B | 18 | A |
 | 03 | C | 19 | D |
 | 04 | A | 20 | B |
@@ -4401,31 +4149,39 @@ fin. fill in here (); reads content of a file
 | 15 | A | 31 | C |
 | 16 | B | 32 | B |
 
-[386]
+---
 
-# Highly Recommend Computer Books on Amazon:
+# Highly Recommend Computer Books on Amazon
 
 | AngularJS For Beginners | C# For Beginners | C++ For Beginners |
-| --- | --- | --- |
-| Includes Tests & Answers<br>Pay Min. | Includes Tests & Answers<br>Pay Min. | Includes Tests & Answers<br>Pay Min. |
-| HTML5/CSS3 For Beginners | JAVA For Beginners | JavaScript For Beginners |
-| Includes Tests & Answers<br>Pay Min. | Includes Tests & Answers<br>Pay Min. | Includes Tests & Answers<br>Pay Min. |
-| jQuery For Beginners | PHP MySQL For Beginners | Python For Beginners |
-| Includes Tests & Answers<br>Pay Min. | Includes Tests & Answers<br>Pay Min. | Includes Tests & Answers<br>Pay Min. |
-| Linux Command Line | 50 PROGRAMS JavaScript | Visual Book For Beginners |
-| --- | --- | --- |
-| Cover All Essential Commands<br>Pay Min. | For Beginners Learn Coding Fast<br>Pay Min. | Includes Tests & Answers<br>Pay Min. |
-| Advanced C++ | Advanced JAVA | XML For Beginners |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Includes Tests & Answers<br>Pay Min. | Includes Tests & Answers<br>Pay Min. | Includes Tests & Answers<br>Pay Min. |
 
-[387]
+| HTML5/CSS3 For Beginners | JAVA For Beginners | JavaScript For Beginners |
+| :--- | :--- | :--- |
+| Includes Tests & Answers<br>Pay Min. | Includes Tests & Answers<br>Pay Min. | Includes Tests & Answers<br>Pay Min. |
+
+| jQuery For Beginners | PHP MySQL For Beginners | Python For Beginners |
+| :--- | :--- | :--- |
+| Includes Tests & Answers<br>Pay Min. | Includes Tests & Answers<br>Pay Min. | Includes Tests & Answers<br>Pay Min. |
+
+| Linux Command Line | 50 PROGRAMS JavaScript | Visual Book For Beginners |
+| :--- | :--- | :--- |
+| Cover All Essential Commands<br>Pay Min. | For Beginners Learn Coding Fast<br>Pay Min. | Includes Tests & Answers<br>Pay Min. |
+
+| Advanced C++ | Advanced JAVA | XML For Beginners |
+| :--- | :--- | :--- |
+| Includes Tests & Answers<br>Pay Min. | Includes Tests & Answers<br>Pay Min. | Includes Tests & Answers<br>Pay Min. |
+
+---
 
 # Source Code for Download
 
 Please download the source code of this book:
 
-[Java Source Code for Download]()()
+[Java Source Code for Download]()
+
+---
 
 Dear My Friend,
 
@@ -4440,4 +4196,3 @@ Sincerely
 Ray Yao
 
 My friend, See you!
-

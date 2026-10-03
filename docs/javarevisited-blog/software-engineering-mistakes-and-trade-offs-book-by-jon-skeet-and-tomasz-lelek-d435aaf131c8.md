@@ -1,3 +1,4 @@
+
 # Jon Skeet 和 Tomasz Lelek 的《软件工程错误和权衡》一书
 
 > 原文：<https://medium.com/javarevisited/software-engineering-mistakes-and-trade-offs-book-by-jon-skeet-and-tomasz-lelek-d435aaf131c8?source=collection_archive---------2----------------------->
@@ -10,7 +11,7 @@
 
 是的，你猜对了？我说的是[软件工程错误和权衡](https://www.manning.com/books/software-mistakes-and-tradeoffs?a_aid=javarevisited)。托马斯·勒莱克和乔恩·斯基特关于曼宁出版。
 
-Tomasz Lelek 和 Jon Skeet 写了一本书，讲述了参与交付软件的每个人的工作，其中充满了权衡。
+`Tomasz Lelek`和`Jon Skeet`写了一本书，讲述了参与交付软件的每个人的工作，其中充满了权衡。
 
 我们中的许多人都在有限的时间、预算和有限的知识下工作。因此，今天关于我们正在创建的软件的决定将对未来产生影响。
 
@@ -28,7 +29,7 @@ Tomasz Lelek 和 Jon Skeet 写了一本书，讲述了参与交付软件的每�
 
 此时，托马斯认为这是一个与世界分享知识的绝佳时机。这就是这本书的想法是如何诞生的。
 
-作者希望分享他们从各种软件系统中获得的经验教训:单片、微服务、大数据处理、库等等。
+作者希望分享他们从各种软件系统中获得的经验教训：单片、微服务、大数据处理、库等等。
 
 *这本书将讲述现实生产系统中的决策、权衡和错误，并试图深入分析它们*。通过展示这些模式、错误和教训，作者希望拓宽你的背景，让你拥有更好的工具。当你需要在日常工作中做出这些决定时，这些知识将会帮助你。
 
@@ -40,20 +41,28 @@ Tomasz Lelek 和 Jon Skeet 写了一本书，讲述了参与交付软件的每�
 
 每个解决方案都有利弊，他们会分析这些利弊。每种解决方案都会有其利弊，由您来决定哪一种最适合您的环境。
 
-本书包含 13 章——每一章都聚焦于您在生产系统中可能遇到的实际问题。它试图分析各种背景下的每一种情况，并考虑所有的权衡。它还展示了一些不明显的错误，这些错误可能会从各种角度(不仅仅是正确性)严重影响您的系统。
+本书包含 13 章——每一章都聚焦于您在生产系统中可能遇到的实际问题。它试图分析各种背景下的每一种情况，并考虑所有的权衡。它还展示了一些不明显的错误，这些错误可能会从各种角度（不仅仅是正确性）严重影响您的系统。
 
-*   本书涉及的一些主题有:
+*   本书涉及的一些主题有：
+
 *   为什么代码复制并不总是坏事？代码复制与灵活性。
+
 *   [Java 异常](https://www.java67.com/2019/06/top-25-java-exception-interview-questions-answers.html)与其他处理代码错误的模式
-*   如何优化代码:过早优化与优化热路径—影响代码性能的决策
+
+*   如何优化代码：过早优化与优化热路径—影响代码性能的决策
+
 *   有效处理日期/时间数据
+
 *   如何为你的项目选择一个合适的第三方库？
+
 *   了解如何利用数据局部性设计您的大数据处理
+
 *   分布式系统中如何处理交付语义？
+
 *   对您的 API 和数据进行版本控制，使您的系统保持兼容性
 
 还有很多。有关所有涵盖主题的列表，请查看目录。
 
-总的来说，这是一门通过学习错误和权衡来学习你的[软件开发技能](https://dev.to/javinpaul/11-essential-skills-software-developers-should-learn-in-2020-1bio)的伟大课程。如果你对作者有任何意见或反馈，请在这里分享。这将是高度赞赏！如果决定购买，可以使用*七五折代码:* ***jrlelek35***
+总的来说，这是一门通过学习错误和权衡来学习你的[软件开发技能](https://dev.to/javinpaul/11-essential-skills-software-developers-should-learn-in-2020-1bio)的伟大课程。如果你对作者有任何意见或反馈，请在这里分享。这将是高度赞赏！如果决定购买，可以使用*七五折代码*：***jrlelek35***
 
-<https://www.manning.com/books/software-mistakes-and-tradeoffs?a_aid=javarevisited> 
+<https://www.manning.com/books/software-mistakes-and-tradeoffs?a_aid=javarevisited>

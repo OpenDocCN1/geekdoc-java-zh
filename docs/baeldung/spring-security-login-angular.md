@@ -1,21 +1,22 @@
+
 # 带角度的 Spring 安全登录页面
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-security-login-angular>
 
-## 1。概述
+## 1. 概述
 
-在本教程中，我们将使用 Spring Security 和创建一个**登录页面**
+在本教程中，我们将使用 Spring Security 和创建一个**登录页面**：
 
-*   安古斯
-*   角度 2、4、5 和 6
+- AngularJS
+- Angular 2、4、5 和 6
 
 我们在这里将要讨论的示例应用程序由一个与 REST 服务通信的客户端应用程序组成，它通过基本的 HTTP 身份验证进行保护。
 
-## 2。Spring 安全配置
+## 2. Spring 安全配置
 
-首先，让我们用 Spring Security 和基本 Auth 设置 REST API:
+首先，让我们用 Spring Security 和基本 Auth 设置 REST API：
 
-这是它的配置方式:
+这是它的配置方式：
 
 ```java
 @Configuration
@@ -47,7 +48,7 @@ public class BasicAuthConfiguration
 }
 ```
 
-现在让我们创建端点。我们的 REST 服务将有两个——一个用于登录，另一个用于获取用户数据:
+现在让我们创建端点。我们的 REST 服务将有两个——一个用于登录，另一个用于获取用户数据：
 
 ```java
 @RestController
@@ -72,34 +73,34 @@ public class UserController {
 
 同样，如果您对实现 OAuth2 服务器进行授权感兴趣，也可以查看我们的另一个关于 [Spring Security OAuth2](/web/20220924195726/https://www.baeldung.com/sso-spring-security-oauth2) 的教程。
 
-## 3。设置角度客户端
+## 3. 设置 Angular 客户端
 
-现在我们已经创建了 REST 服务，让我们用不同版本的 Angular 客户机来设置登录页面。
+现在我们已经创建了 REST 服务，让我们用不同版本的 Angular 客户端来设置登录页面。
 
 我们将在这里看到的例子使用`npm`进行依赖管理，使用`nodejs`运行应用程序。
 
-Angular 使用单页面架构，其中所有子组件(在我们的例子中是登录和主页组件)都被注入到一个公共的父 DOM 中。
+Angular 使用单页面架构，其中所有子组件（在我们的例子中是登录和主页组件）都被注入到一个公共的父 DOM 中。
 
 与使用 JavaScript 的 AngularJS 不同，Angular version 2 以后使用 TypeScript 作为其主要语言。因此，应用程序还需要某些支持文件，这些文件是它正常工作所必需的。
 
 由于 Angular 的增量增强，每个版本所需的文件都不同。
 
-让我们熟悉一下其中的每一项:
+让我们熟悉一下其中的每一项：
 
-*   `systemjs.config.js`–系统配置(版本 2)
-*   `package.json`–节点模块依赖性(版本 2 及以上)
-*   `tsconfig.json`–根级打字稿配置(版本 2 及以上)
-*   `tsconfig.app.json`–应用程序级类型脚本配置(版本 4 及以上)
-*   cli`.json`–角度 CLI 配置(版本 4 和 5)
-*   `angular.json`–角度 CLI 配置(版本 6 及以上)
+- `systemjs.config.js` – 系统配置（版本 2）
+- `package.json` – 节点模块依赖性（版本 2 及以上）
+- `tsconfig.json` – 根级 TypeScript 配置（版本 2 及以上）
+- `tsconfig.app.json` – 应用程序级 TypeScript 配置（版本 4 及以上）
+- `.angular-cli.json` – Angular CLI 配置（版本 4 和 5）
+- `angular.json` – Angular CLI 配置（版本 6 及以上）
 
-## 4。登录页面
+## 4. 登录页面
 
-### 4.1。使用角尺
+### 4.1. 使用 AngularJS
 
-让我们创建`index.html`文件，并向其中添加相关的依赖项:
+让我们创建`index.html`文件，并向其中添加相关的依赖项：
 
-```java
+```html
 <html ng-app="app">
 <body>
     <div ng-view></div>
@@ -116,9 +117,9 @@ Angular 使用单页面架构，其中所有子组件(在我们的例子中是�
 
 因为这是一个单页面应用程序，所以所有子组件都将基于路由逻辑添加到具有`ng-view`属性的 div 元素中。
 
-现在让我们创建定义 URL 到组件映射的`app.js`:
+现在让我们创建定义 URL 到组件映射的`app.js`：
 
-```java
+```javascript
 (function () {
     'use strict';
 
@@ -162,11 +163,11 @@ Angular 使用单页面架构，其中所有子组件(在我们的例子中是�
 })();
 ```
 
-登录组件由两个文件组成，`login.controller.js`和`login.view.html.`
+登录组件由两个文件组成，`login.controller.js`和`login.view.html`。
 
-我们来看第一个:
+我们来看第一个：
 
-```java
+```html
 <h2>Login</h2>
 <form name="form" ng-submit="vm.login()" role="form">
     <div>
@@ -190,9 +191,9 @@ Angular 使用单页面架构，其中所有子组件(在我们的例子中是�
 </form>
 ```
 
-第二个是:
+第二个是：
 
-```java
+```javascript
 (function () {
     'use strict';
     angular
@@ -241,17 +242,17 @@ Angular 使用单页面架构，其中所有子组件(在我们的例子中是�
 
 控制器将通过传递用户名和密码来调用 REST 服务。身份验证成功后，它将对用户名和密码进行编码，并将编码后的令牌存储在会话存储中以备将来使用。
 
-与登录组件类似，主页组件也由两个文件组成，`home.view.html` **:**
+与登录组件类似，主页组件也由两个文件组成，`home.view.html`：
 
-```java
+```html
 <h1>Hi {{vm.user}}!</h1>
 <p>You're logged in!!</p>
 <p><a href="#!/login" class="btn btn-primary" ng-click="logout()">Logout</a></p>
 ```
 
-而`home.controller.js:`
+而`home.controller.js`：
 
-```java
+```javascript
 (function () {
     'use strict';
     angular
@@ -286,23 +287,25 @@ Angular 使用单页面架构，其中所有子组件(在我们的例子中是�
 
 家庭控制器将通过传递`Authorization`报头来请求用户数据。只有当令牌有效时，我们的 REST 服务才会返回用户数据。
 
-现在让我们安装`http-server`来运行 Angular 应用程序:
+现在让我们安装`http-server`来运行 Angular 应用程序：
 
-```java
+```bash
 npm install http-server --save
 ```
 
-安装完成后，我们可以在命令提示符下打开项目根文件夹并执行命令:
+安装完成后，我们可以在命令提示符下打开项目根文件夹并执行命令：
 
-```java
+```bash
 http-server -o
 ```
 
-### 4.2。使用角度版本 2、4、5
+### 4.2. 使用 Angular 版本 2、4、5
 
-版本 2 中的`index.html`与 AngularJS 版本略有不同:
+版本 2 中的`index.html`与 AngularJS 版本略有不同：
 
-```java
+
+
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -322,13 +325,13 @@ http-server -o
 </html>
 ```
 
-`main.ts`是应用程序的主入口点。它引导应用程序模块，因此浏览器加载登录页面:
+`main.ts`是应用程序的主入口点。它引导应用程序模块，因此浏览器加载登录页面：
 
 ```java
 platformBrowserDynamic().bootstrapModule(AppModule);
 ```
 
-`app.routing.ts`负责应用程序路由:
+`app.routing.ts`负责应用程序路由：
 
 ```java
 const appRoutes: Routes = [
@@ -340,7 +343,7 @@ const appRoutes: Routes = [
 export const routing = RouterModule.forRoot(appRoutes);
 ```
 
-`app.module.ts`声明组件并导入相关模块:
+`app.module.ts`声明组件并导入相关模块：
 
 ```java
 @NgModule({
@@ -361,7 +364,7 @@ export const routing = RouterModule.forRoot(appRoutes);
 export class AppModule { }
 ```
 
-因为我们正在创建一个单页面应用程序，所以让我们创建一个根组件，将所有子组件添加到其中:
+因为我们正在创建一个单页面应用程序，所以让我们创建一个根组件，将所有子组件添加到其中：
 
 ```java
 @Component({
@@ -374,7 +377,7 @@ export class AppComponent { }
 
 `app.component.html`将只有一个`<router-outlet>`标签。Angular 使用此标签作为其位置路由机制。
 
-现在让我们在`login.component.ts:`中创建登录组件及其相应的模板
+现在让我们在`login.component.ts`中创建登录组件及其相应的模板：
 
 ```java
 @Component({
@@ -415,7 +418,7 @@ export class LoginComponent implements OnInit {
 }
 ```
 
-最后，我们来看看`login.component.html`:
+最后，我们来看看`login.component.html`：
 
 ```java
 <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
@@ -441,13 +444,13 @@ export class LoginComponent implements OnInit {
 </form>
 ```
 
-### 4.3。使用角度 6
+## 4.3 使用 Angular 6
 
 Angular team 在版本 6 中做了一些增强。由于这些变化，我们的示例与其他版本相比也会有一些不同。关于版本 6，我们的例子中唯一的变化是在服务调用部分。
 
-**代替`HttpModule`，版本 6 从** **`@angular/common/http.`** 导入`HttpClientModule`
+代替`HttpModule`，版本 6 从`@angular/common/http`导入`HttpClientModule`。
 
-服务调用部分也将与旧版本略有不同:
+服务调用部分也将与旧版本略有不同：
 
 ```java
 this.http.post<Observable<boolean>>(url, {
@@ -466,7 +469,7 @@ this.http.post<Observable<boolean>>(url, {
 });
 ```
 
-## 5。结论
+## 5 结论
 
 我们已经学习了如何用 Angular 实现一个 Spring 安全登录页面。从版本 4 开始，我们可以利用 Angular CLI 项目来简化开发和测试。
 

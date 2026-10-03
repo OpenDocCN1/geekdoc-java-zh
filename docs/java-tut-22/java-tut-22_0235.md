@@ -1,3 +1,4 @@
+
 # 命令行 I/O 对象
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/environment/cl.html`](https://docs.oracle.com/javase/tutorial/essential/environment/cl.html)

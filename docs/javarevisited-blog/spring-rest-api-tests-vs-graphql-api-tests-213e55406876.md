@@ -1,3 +1,4 @@
+
 # Spring Rest API 测试与 GraphQL API 测试
 
 > 原文：<https://medium.com/javarevisited/spring-rest-api-tests-vs-graphql-api-tests-213e55406876?source=collection_archive---------1----------------------->

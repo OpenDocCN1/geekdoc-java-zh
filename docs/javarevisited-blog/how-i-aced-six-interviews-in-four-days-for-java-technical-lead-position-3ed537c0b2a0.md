@@ -1,3 +1,4 @@
+
 # 我是如何在四天内通过六次面试获得 Java 技术主管职位的
 
 > 原文：<https://medium.com/javarevisited/how-i-aced-six-interviews-in-four-days-for-java-technical-lead-position-3ed537c0b2a0?source=collection_archive---------0----------------------->

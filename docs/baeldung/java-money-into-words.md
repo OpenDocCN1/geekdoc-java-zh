@@ -1,16 +1,17 @@
+
 # 用文字显示金额
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-money-into-words>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将看到如何在 Java 中将货币金额转换成单词表示。
 
 我们还将通过一个外部库—[Tradukisto](https://web.archive.org/web/20221126234556/https://github.com/allegro/tradukisto)来看看定制实现是什么样子的。
 
-## 2。实施
+## 2. 实施
 
-先从我们自己的实现说起。**第一步是用以下元素声明两个`String`数组**:
+先从我们自己的实现说起。**第一步是用以下元素声明两个`String`数组**：
 
 ```java
 public static String[] ones = { 
@@ -36,14 +37,14 @@ public static String[] tens = {
 };
 ```
 
-当我们收到一个输入时，我们需要处理无效值(零和负值)。**一旦收到有效的输入，我们就可以将美元和美分的数量提取到变量中:**
+当我们收到一个输入时，我们需要处理无效值（零和负值）。**一旦收到有效的输入，我们就可以将美元和美分的数量提取到变量中**：
 
 ```java
- long dollars = (long) money;
- long cents = Math.round((money - dollars) * 100);
+long dollars = (long) money;
+long cents = Math.round((money - dollars) * 100);
 ```
 
-如果给定的数字小于 20，那么我们将根据索引从数组中获取适当的`ones'` 元素:
+如果给定的数字小于 20，那么我们将根据索引从数组中获取适当的`ones`元素：
 
 ```java
 if (n < 20) {
@@ -51,7 +52,7 @@ if (n < 20) {
 }
 ```
 
-我们将对小于 100 的数字使用类似的方法，但是现在我们也必须使用`tens` 数组:
+我们将对小于 100 的数字使用类似的方法，但是现在我们也必须使用`tens`数组：
 
 ```java
 if (n < 100) {
@@ -63,7 +64,7 @@ if (n < 100) {
 
 对于小于 1000 的数字，我们也是这样做的。
 
-接下来，我们使用递归调用来处理小于一百万的数字，如下所示:
+接下来，我们使用递归调用来处理小于一百万的数字，如下所示：
 
 ```java
 if (n < 1_000_000) {
@@ -74,10 +75,10 @@ if (n < 1_000_000) {
 
 同样的方法也用于小于 10 亿的数字，以此类推。
 
-下面是可以调用来完成此转换的主要方法:
+下面是可以调用来完成此转换的主要方法：
 
 ```java
- public static String getMoneyIntoWords(double money) {
+public static String getMoneyIntoWords(double money) {
     long dollars = (long) money;
     long cents = Math.round((money - dollars) * 100);
     if (money == 0D) {
@@ -103,7 +104,7 @@ if (n < 1_000_000) {
 }
 ```
 
-让我们测试我们的代码，以确保它正常工作:
+让我们测试我们的代码，以确保它正常工作：
 
 ```java
 @Test
@@ -137,7 +138,7 @@ public void whenThirtyMillionDollarsGiven_thenReturnWords() {
 }
 ```
 
-让我们也测试一些边缘情况，并确保我们也涵盖了它们:
+让我们也测试一些边缘情况，并确保我们也涵盖了它们：
 
 ```java
 @Test
@@ -157,14 +158,14 @@ public void whenNoDollarsAndOneCent_thenReturnCentSingular() {
     assertEquals(
       "one cent", 
       NumberWordConverter.getMoneyIntoWords(0.01));
-} 
+}
 ```
 
-## 3。使用库
+## 3. 使用库
 
 现在我们已经实现了自己的算法，让我们通过使用现有的库来进行这种转换。
 
-[`Tradukisto`](https://web.archive.org/web/20221126234556/https://github.com/allegro/tradukisto) 是 Java 8+的一个库，可以帮助我们将数字转换成它们的文字表示。首先，我们需要将它导入到我们的项目中(这个库的最新版本可以在[这里](https://web.archive.org/web/20221126234556/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22pl.allegro.finance%22%20AND%20a%3A%22tradukisto%22)找到):
+[`Tradukisto`](https://web.archive.org/web/20221126234556/https://github.com/allegro/tradukisto)是 Java 8+的一个库，可以帮助我们将数字转换成它们的文字表示。首先，我们需要将它导入到我们的项目中（这个库的最新版本可以在[这里](https://web.archive.org/web/20221126234556/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22pl.allegro.finance%22%20AND%20a%3A%22tradukisto%22)找到）：
 
 ```java
 <dependency>
@@ -174,7 +175,7 @@ public void whenNoDollarsAndOneCent_thenReturnCentSingular() {
 </dependency>
 ```
 
-我们现在可以使用`MoneyConverters`的`asWords()`方法来完成这个转换:
+我们现在可以使用`MoneyConverters`的`asWords()`方法来完成这个转换：
 
 ```java
 public String getMoneyIntoWords(String input) {
@@ -183,7 +184,7 @@ public String getMoneyIntoWords(String input) {
 }
 ```
 
-让我们用一个简单的测试用例来测试这个方法:
+让我们用一个简单的测试用例来测试这个方法：
 
 ```java
 @Test
@@ -194,11 +195,11 @@ public void whenGivenDollarsAndCents_thenReturnWordsVersionTwo() {
 }
 ```
 
-我们也可以使用 [ICU4J](https://web.archive.org/web/20221126234556/http://site.icu-project.org/home) 库来实现这一点，但是这个库很大，并且附带了许多其他特性，这超出了本文的范围。
+我们也可以使用[ICU4J](https://web.archive.org/web/20221126234556/http://site.icu-project.org/home)库来实现这一点，但是这个库很大，并且附带了许多其他特性，这超出了本文的范围。
 
 但是，如果需要 Unicode 和全球化支持，请查看一下。
 
-## 4。结论
+## 4. 结论
 
 在这篇简短的文章中，我们看到了两种将一笔钱转换成文字的方法。
 

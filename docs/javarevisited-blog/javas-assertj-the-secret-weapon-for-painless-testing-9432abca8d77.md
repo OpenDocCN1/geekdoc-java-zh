@@ -1,4 +1,5 @@
-# Java 的 AssertJ:无痛测试的秘密武器
+
+# Java 的 AssertJ：无痛测试的秘密武器
 
 > 原文：<https://medium.com/javarevisited/javas-assertj-the-secret-weapon-for-painless-testing-9432abca8d77?source=collection_archive---------0----------------------->
 

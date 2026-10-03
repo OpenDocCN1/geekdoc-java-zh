@@ -1,25 +1,22 @@
+
 # JAVA 编程示例：初学者编程指南
 
-
-
 ![](img/rsrcZA.jpg)
-
-
-
-
-
 
 ## 打印 'Hello world' 的 Java 程序
 
 ### 语法
+
 ```
 javac HelloWorld.java
 ```
 
 ### 执行/运行 Java 程序
+
 当你编译了 Java 程序，如果编译成功，你就可以运行该 Java 程序来生成输出。
 
 ### 程序
+
 ```java
 public class HelloWorld{
     public static void main(String []args){
@@ -30,14 +27,17 @@ public class HelloWorld{
 ```
 
 ### 输出
+
 ```
 Hello World!
 ```
 
 ## 在 Java 中打印不同类型的值
-我们将在此程序中声明并描述一些不同类型的变量，然后使用 `System.out.println()` 方法打印它们。
+
+我们将在此程序中声明并描述一些不同类型的变量，然后使用`System.out.println()`方法打印它们。
 
 ### 程序
+
 ```java
 class j2{
     public static void main(String args[]) {
@@ -62,6 +62,7 @@ class j2{
 ```
 
 ### 输出
+
 ```
 Value of num: 100
 Value of b: 1.234
@@ -70,9 +71,11 @@ Value of s: Hello Java
 ```
 
 ## 在 Java 中读取并打印整数值
-在这里我们将学习如何从用户获取整数输入并将其打印到屏幕上。为了获取整数输入，我们使用 `Scanner` 类，为此我们必须在 Java 程序中包含 `java.util.*` 包。
+
+在这里我们将学习如何从用户获取整数输入并将其打印到屏幕上。为了获取整数输入，我们使用`Scanner`类，为此我们必须在 Java 程序中包含`java.util.*`包。
 
 ### 程序
+
 ```java
 import java.util.*;
 class j3{
@@ -89,15 +92,18 @@ class j3{
 ```
 
 ### 输出
+
 ```
 Enter value of a :120
 Value of a:120
 ```
 
 ## 计算总和和平均值的 Java 程序
+
 给出两个整数（输入），我们需要计算它们的总和和平均值。
 
 ### 程序
+
 ```java
 // 在 Java 中寻找两个数字的总和和平均值
 import java.util.*;
@@ -119,6 +125,7 @@ public class Numbers {
 ```
 
 ### 输出
+
 ```
 Enter first number : 100
 Enter second number : 200
@@ -127,10 +134,13 @@ Average : 150.0
 ```
 
 ## 打印圣诞树的 Java 程序
+
 示例：
+
 *****************************************************************************************************************************************
 
 ### 程序
+
 ```java
 public class ChristmasTree{
     public static final int SEGMENTS = 4;
@@ -173,15 +183,23 @@ public class ChristmasTree{
 ```
 
 ## 计算所有数字之和的 Java 程序
+
 提供一个数字，使用 Java 程序找到它的数字之和。
+
 示例 1：
+
 输入：852
+
 输出：15
+
 示例 2：
+
 输入：25688
+
 输出：35
 
 ### 程序
+
 ```java
 import java.util.Scanner;
 class AddDigits{
@@ -205,6 +223,7 @@ class AddDigits{
 ```
 
 ### 输出
+
 ```
 First run:
 Enter the Number : 582
@@ -215,15 +234,23 @@ Sum of Digits of 25688 is : 35
 ```
 
 ## 计算复利的 Java 程序
+
 给定本金、利率和时间，使用 Java 程序计算复利。
+
 示例：
+
 Principal : 5000
+
 Rate : 5
+
 Time : 33
+
 Amount : 5788.125000001
+
 Compound Interest : 788.125000009
 
 ### 程序
+
 ```java
 import java.util.Scanner;
 class CompoundInterest{
@@ -251,6 +278,7 @@ class CompoundInterest{
 ```
 
 ### 输出
+
 ```
 First run:
 Principal : 5000
@@ -267,9 +295,11 @@ Compound Interest : 14883.19999999997
 ```
 
 ## 寻找最大数字的 Java 程序
+
 程序从键盘读取（三个整数），并选择最大的数字。
 
 ### 程序
+
 ```java
 // 在三个数字中寻找最大数字的 Java 程序。
 import java.util.*;
@@ -296,12 +326,14 @@ class LargestFrom3{
 ```
 
 ### 输出
+
 ```
 Compile : javac LargestFrom3.java
 Run : java LargestFrom3
 ```
 
 ### 输出
+
 ```
 Enter first number:45
 Enter second number:56
@@ -310,9 +342,11 @@ Largest Number is : 67
 ```
 
 ## 运行一个应用程序
-使用 Java 程序打开应用程序（Notepad, Calculator）。我们使用 `Runtime.getRuntime()` 和 `exec()` 方法来打开。
+
+使用 Java 程序打开应用程序（Notepad, Calculator）。我们使用`Runtime.getRuntime()`和`exec()`方法来打开。
 
 ### 程序
+
 ```java
 // 运行应用程序的程序。
 import java.util.*;
@@ -332,14 +366,17 @@ class OpenNotepad{
 ```
 
 ### 输出
+
 ```
 Notepad and Calculator will be opened.
 ```
 
 ## 斐波那契数列
+
 斐波那契数列是一个每一项都是前两项之和的数列。
 
 ### 程序
+
 ```java
 /* 打印斐波那契数列的程序。*/
 import java.util.*;
@@ -363,13 +400,22 @@ class Fibonacci {
 ```
 
 ### 输出
+
 ```
 Enter the length of fibonacci series :10
 fibonacci :0 1 2 3 5 8 13 21 34 55 
 ```
 
 ## 使用 for 循环打印 1 到 N 的数字
+
 ### 程序
+
+
+
+## 使用 `for` 循环打印 1 到 N 的数字
+
+### 程序
+
 ```java
 import java.util.Scanner;
 class Print_1_To_N_UsingFor{
@@ -388,13 +434,16 @@ class Print_1_To_N_UsingFor{
 ```
 
 ### 输出
+
 ```
 Enter the value n :15
 Numbers are :12345678910111213415
 ```
 
-## 使用 while 循环打印 1 到 N 的数字
+## 使用 `while` 循环打印 1 到 N 的数字
+
 ### 程序
+
 ```java
 import java.util.Scanner;
 class Print_1_To_N_UsingWhile{
@@ -417,15 +466,18 @@ class Print_1_To_N_UsingWhile{
 ```
 
 ### 输出
+
 ```
 Enter the value n :15
 Numbers are :12345678910111213415
 ```
 
 ## 一维数组和二维数组的加法
+
 在 JAVA 程序中有两个程序：两个一维数组加法，两个二维数组加法。
 
 ### 1) 二维数组的加法
+
 ```java
 class AddTwoArray{
     public static void main(String[] args) {
@@ -443,7 +495,9 @@ class AddTwoArray{
     }
 }
 ```
+
 ### 输出
+
 ```
 Enter sum of 0index 7
 Enter sum of 1index 9
@@ -453,6 +507,7 @@ Enter sum of 4index 15
 ```
 
 ### 2) 两个二维数组的加法
+
 ```java
 class AddTwoArrayOf2DClass{
     public static void main(String[] args){
@@ -472,7 +527,9 @@ class AddTwoArrayOf2DClass{
     }
 }
 ```
+
 ### 输出
+
 ```
 sum of 0index0 8
 sum of 0index1 10
@@ -483,13 +540,21 @@ sum of 1index2 18
 ```
 
 ## 逐行读取文件的 Java 程序
-给定一个文件，使用 Java 程序逐行读取其内容。我们使用名为 "B.txt" 的文件，该文件位于 "F:" 盘，因此文件路径为 "F:\B.txt,"，文件内容为：
+
+给定一个文件，使用 Java 程序逐行读取其内容。我们使用名为`"B.txt"`的文件，该文件位于`"F:"`盘，因此文件路径为`"F:\B.txt,"`，文件内容为：
+
+```
 line 1
+
 line 2
+
 line 3
+
 line 4
+```
 
 ### 程序
+
 ```java
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -520,6 +585,7 @@ class ReadLineByLine{
 ```
 
 ### 输出
+
 ```
 Enter the file name:F:/B.txt
 The file data is :line 1
@@ -529,6 +595,8 @@ The file data is :line 4
 ```
 
 ## 获取当前系统日期和时间的 Java 程序
+
+```java
 //系统日期和时间程序
 import java.util.Date;
 class GetDateTime{
@@ -546,14 +614,17 @@ class GetDateTime{
 ```
 
 ### 输出
+
 ```
 14/8/20Thu Aug 14 21:29:07 GMT 202021:29:7
 ```
 
 ## 计算圆面积的 Java 程序
+
 此程序读取圆半径并计算圆面积。
 
 ### 程序
+
 ```java
 import java.util.Scanner;
 public class AreaCircle {
@@ -571,15 +642,18 @@ public class AreaCircle {
 ```
 
 ### 输出
+
 ```
 Enter the Radius of Circle :12.5
 Area of Circle :490.625
 ```
 
 ## 十进制转二进制的 Java 程序
+
 给定一个整数（Decimal），使用 Java 程序将其转换为二进制。
 
 ### 程序
+
 ```java
 import java.util.Scanner;
 class DecimalToBinary{
@@ -603,8 +677,8 @@ class DecimalToBinary{
 ```
 
 ### 输出
+
 ```
 Enter Decimal Number :30
 Conversion of decimal is :11110
 ```
-

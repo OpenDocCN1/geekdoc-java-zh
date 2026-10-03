@@ -1,76 +1,17 @@
-# Java：初学者零基础指南指南
 
-
-
-
-
-![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_0_0.png)
-
-
-
-
-***
-
-![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_1_0.png)
-
-
-
-
-
-
-
-
-
-![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_2_0.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# AWT 复选框组
-
-# 接口
-
-# 结论
-
-## 关于作者
-
-## 致谢
-
-# 引言
-
-Java 既是一个平台也是一种语言。作为一种平台，我们拥有 Java 运行时（JRE）。作为一种语言，它是高级的、健壮的面向对象的语言。该语言由 Sun 公司于 1995 年开发。由于 Java 是面向对象的语言，因此它将一切视为对象。Java 程序通过两个步骤来产生结果：第一步是编译，生成字节码。字节码与平台无关，可以在任何机器上运行。编译完成后，字节码通过执行步骤来产生结果。Java 被认为是一门易懂的语言。如果你熟悉面向对象编程，将易于理解 Java。Java 提供了一项安全功能，允许开发者创建安全且无病毒的系统。公钥加密技术用于确保系统。
-
-开启 Java 之旅
+# Java：初学者零基础指南
 
 ## 什么是 Java？
 
-Java 既是一个平台也是一种语言。作为一种平台，我们拥有 Java 运行时（JRE）。作为一种语言，它是高级的、健壮的面向对象的语言。该语言由 Sun 公司于 1995 年开发。由于 Java 是面向对象的语言，因此它将一切视为对象。Java 程序通过两个步骤来产生结果：第一步是编译，生成字节码。字节码与平台无关，可以在任何机器上运行。编译完成后，字节码通过执行步骤来产生结果。Java 被认为是一门易懂的语言。如果你熟悉面向对象编程，将易于理解 Java。Java 提供了一项安全功能，允许开发者创建安全且无病毒的系统。公钥加密技术用于
+Java 既是一个平台也是一种语言。作为一种平台，我们拥有 Java 运行时（JRE）。作为一种语言，它是高级的、健壮的面向对象的语言。该语言由 Sun 公司于 1995 年开发。由于 Java 是面向对象的语言，因此它将一切视为对象。Java 程序通过两个步骤来产生结果：第一步是编译，生成字节码。字节码与平台无关，可以在任何机器上运行。编译完成后，字节码通过执行步骤来产生结果。Java 被认为是一门易懂的语言。如果你熟悉面向对象编程，将易于理解 Java。Java 提供了一项安全功能，允许开发者创建安全且无病毒的系统。公钥加密技术用于确保系统。
+
+## 开启 Java 之旅
 
 为了编写和运行 Java 程序，你需要 Java 编译器和如记事本之类的文本编辑器。要获取 Java 编译器，你需要在电脑上安装 Java 开发工具包（JDK）。安装完成后，你的电脑将拥有 Java 编译器。现在你有了 Java 编译器，你需要一个文本编辑器。你可以使用基础或高级文本编辑器。高级编辑器的示例包括 NetBeans 和 Eclipse。
 
 ## 第一个 Java 程序
 
-我们需要创建一个 Hello World Java 示例。为此，请打开你的文本
-
-
-使用如 Notepad 等编辑器创建一个新文件。将此文件命名为 Hello.java。标记你保存此文件的目录。在文件中添加以下 Java 代码并保存：
+我们需要创建一个 Hello World Java 示例。为此，请打开你的文本编辑器创建一个新文件。将此文件命名为 `Hello.java`。标记你保存此文件的目录。在文件中添加以下 Java 代码并保存：
 
 ```java
 public class Hello {
@@ -78,7 +19,7 @@ public class Hello {
      * 代码将打印 'Hello World'
      */
 
-    public static void main(String [args]) {
+    public static void main(String[] args) {
         System.out.println("Hello World"); // 打印 Hello World
     }
 }
@@ -87,13 +28,18 @@ public class Hello {
 一旦你保存了上述代码，打开你操作系统的终端并导航到你保存该文件的目录。
 
 在终端中运行以下命令：
-javac Hello.java
 
-上述命令应该生成一个 **Hello.class** 文件。这是一个包含 Java 字节码的文件，它是与平台无关。你可以通过检查相同目录下是否存在该文件来确认这一点。我们所做的是在该文件上调用了 Java 编译器 (javac) 来编译该文件中包含的 Java 代码。
+```bash
+javac Hello.java
+```
+
+上述命令应该生成一个 `Hello.class` 文件。这是一个包含 Java 字节码的文件，它是与平台无关的。你可以通过检查相同目录下是否存在该文件来确认这一点。我们所做的是在该文件上调用了 Java 编译器 (`javac`) 来编译该文件中包含的 Java 代码。
 
 现在代码已经编译且没有错误，我们可以执行它。只需在同一个终端中运行以下命令即可：
 
+```bash
 java Hello
+```
 
 上述命令应该在终端上返回如下所示的结果：
 
@@ -105,14 +51,15 @@ Hello World
 C:\Users\admin>
 ```
 
-上述显示代码返回了 **Hello World** 作为输出。
+上述显示代码返回了 `Hello World` 作为输出。
+
 考虑下面我从代码中提取的这一行：
 
 ```java
 public class Hello {
 ```
 
-我们在上述行代码中正在做的是创建一个名为 **Hello** 的类。类名中的 **H** 已经大写了；因此，每当我们引用该类时，都必须大写。Java 是一门对大小写敏感的语言。`public` 是一个访问修饰符，将该类声明为公有，这意味着它可以被同一包内的其他类进行访问。左大括号 `{` 标记了类体的开始，要关闭它，我们必须使用右大括号 `}`。
+我们在上述行代码中正在做的是创建一个名为 `Hello` 的类。类名中的 `H` 已经大写了；因此，每当我们引用该类时，都必须大写。Java 是一门对大小写敏感的语言。`public` 是一个访问修饰符，将该类声明为公有，这意味着它可以被同一包内的其他类进行访问。左大括号 `{` 标记了类体的开始，要关闭它，我们必须使用右大括号 `}`。
 
 考虑从代码中提取的以下后续章节：
 
@@ -128,27 +75,29 @@ public class Hello {
 
 Java 编译器对注释不做任何操作，但它会跳过它们。注释提高了代码的可读性。它们被用于解释各行代码的作用。
 
-请注意，文件被命名为 Hello.java，而类被命名为 Hello。如果这两者不匹配，将会产生一个错误。当你想要从操作系统的终端运行 Java 代码时，这种情况应该是始终如此。
+请注意，文件被命名为 `Hello.java`，而类被命名为 `Hello`。如果这两者不匹配，将会产生一个错误。当你想要从操作系统的终端运行 Java 代码时，这种情况应该是始终如此。
 
 这里是从代码中提取的另一行代码：
 
 ```java
-public static void main(String args[]) {
+public static void main(String[] args) {
 ```
 
-上述内容称为 main 方法。没有 main 方法，任何 Java 程序都无法运行或执行。这里是从代码中提取的另一行代码：
+上述内容称为 `main` 方法。没有 `main` 方法，任何 Java 程序都无法运行或执行。
+
+这里是从代码中提取的另一行代码：
 
 ```java
 System.out.println("Hello World");
 ```
 
-我们调用了一个名为 `println` 的方法来帮助我们将传递的文本打印到显示屏。你还注意到我们使用了两个右大括号 `}`。第一个关闭 main 方法，而第二个关闭类。
+我们调用了一个名为 `println()` 的方法来帮助我们将传递的文本打印到显示屏。你还注意到我们使用了两个右大括号 `}`。第一个关闭 `main` 方法，而第二个关闭类。
 
-# 2-Java 类与对象
+# Java 类与对象
 
 正如我们所说的，Java 是一门面向对象的编程语言。这意味着它可以支持面向对象编程范式的各种概念。
 
-在 Java 中，对象以状态和行为为特征。一个对象的例子是狗。描述它的特征的一些状态包括名称、颜色和品种。描述它的特征的一些行为包括进、吠叫和摇尾巴。对象是类的实例。
+在 Java 中，对象以状态和行为为特征。一个对象的例子是狗。描述它的特征的一些状态包括名称、颜色和品种。描述它的特征的一些行为包括进食、吠叫和摇尾巴。对象是类的实例。
 
 类是一个模板或蓝图，描述了该类型的任何对象应该支持的状态和行为。这里有一个类的示例：
 
@@ -159,17 +108,17 @@ public class Dog {
     String color;
 
     void eating() {
-}
+    }
 
     void barking() {
-}
+    }
 
     void sleeping() {
-}
+    }
 }
 ```
 
-在上面的示例中，我们定义了一个名为 Dog 的类。类内部定义了三个变量，分别是名称、品种和颜色。这些是 Dog类的属性。我们还为该类定义了3 个方法，即 `eating()`、`barking()` 和 `sleeping()`。我们可以在类内部定义许多方法。
+在上面的示例中，我们定义了一个名为 `Dog` 的类。类内部定义了三个变量，分别是名称、品种和颜色。这些是 `Dog` 类的属性。我们还为该类定义了 3 个方法，即 `eating()`、`barking()` 和 `sleeping()`。我们可以在类内部定义许多方法。
 
 ## 构造函数
 
@@ -182,7 +131,7 @@ public class Dog {
 ```java
 public class Dog {
     public Dog() {
-}
+    }
 
     public Dog(String breed) {
         // 一个带有一个参数 breed 的构造函数。
@@ -196,9 +145,9 @@ public class Dog {
 
 类的目的是提供一个模板或蓝图，我们从之创建对象。这意味着对象是从类创建的。在 Java 中，对象是通过 `new` 关键字创建的。创建 Java 对象时应遵循以下步骤：
 
-- 1. 声明-这应该涉及声明
-- 2. 实例化-使用 `new` 关键字
-- 3. 初始化-遵循类定义
+1.  **声明** - 这应该涉及声明对象引用。
+2.  **实例化** - 使用 `new` 关键字。
+3.  **初始化** - 遵循类定义（调用构造函数）。
 
 这里有一个显示此点的示例：
 
@@ -218,9 +167,8 @@ public class Dog {
     }
 }
 ```
-*(注：此处示例代码在原文中不完整，翻译根据逻辑补全或保持了结构)*
 
-# 3-Java 中的变量
+# Java 中的变量
 
 **变量**可以被视为一个在程序生命周期持有值的容器。每个变量都有特定的数据类型，规定了它可以持有的值。使用 Java 变量有两个步骤：**变量声明**和**变量初始化**。
 
@@ -230,50 +178,29 @@ public class Dog {
 
 ```java
 int a, x, p;
-```
-
-```java
 float pi;
-```
-
-```java
 double p;
-```
-
-```java
 char c;
 ```
 
-int、float、double 和 char 是数据类型，指定了每个变量应该持有的值。要在同一行声明多个变量，用逗号（,）分隔，如第一个示例所示。变量声明应分号（;)结束。
+`int`、`float`、`double` 和 `char` 是数据类型，指定了每个变量应该持有的值。要在同一行声明多个变量，用逗号（,）分隔，如第一个示例所示。变量声明应以分号（;）结束。
 
 ## 变量初始化
 
 变量初始化涉及给它赋值有效值。赋值给变量的值取决于变量所属的数据类型。以下是有效变量初始化的示例：
 
 ```java
-pi=3.14f;
-```
-
-```java
-a=10.1276871;
-```
-
-```java
-c='s';
+pi = 3.14f;
+a = 10.1276871;
+c = 's';
 ```
 
 变量的声明和初始化可以同时完成，如下所示：
 
 ```java
-int a=1, x=4, p=5;
-```
-
-```java
-float pi=3.14f;
-```
-
-```java
-double p=15.23d;
+int a = 1, x = 4, p = 5;
+float pi = 3.14f;
+double p = 15.23d;
 ```
 
 ## 访问变量与方法
@@ -286,33 +213,13 @@ myDog.name = "Buddy";
 System.out.println(myDog.name);
 ```
 
-变量的示例：
-
-```
-pi=3.14f;
-```
-a=10.1276871;
-
-```
-c='s';
-```
-
-方法的示例：
-
-```
-double p=15.23d;
-```
-
-
-
-
 ## 变量类型
 
 Java 支持三种变量类型：
 
-- 1. 局部变量
-- 2. 静态变量
-- 3. 实例变量
+1.  局部变量
+2.  静态变量
+3.  实例变量
 
 ### 局部变量
 
@@ -320,7 +227,7 @@ Java 支持三种变量类型：
 
 ### 实例变量
 
-这些是在没有使用 `STATIC` 关键字的情况下定义的变量。这些变量特定于某个对象。
+这些是在没有使用 `static` 关键字的情况下定义的变量。这些变量特定于某个对象。
 
 ### 静态变量
 
@@ -328,104 +235,165 @@ Java 支持三种变量类型：
 
 以下示例展示了不同的 Java 变量：
 
-```
+```java
 class VariablesExample {
-    int p = 1; //一个实例变量
-    static int q = 5; //一个静态变量
+    int p = 1; // 一个实例变量
+    static int q = 5; // 一个静态变量
     void methodExample() {
-        int r = 10; //一个局部变量
+        int r = 10; // 一个局部变量
     }
 }
 ```
 
-变量 **integer q** 是一个静态变量，因为它使用 **static 关键字** 定义的。变量 **int r** 在 **methodExample** 方法内部声明，因此它是一个局部变量。它只能在该方法内部被访问。
+变量 `q` 是一个静态变量，因为它使用 `static` 关键字定义的。变量 `r` 在 `methodExample()` 方法内部声明，因此它是一个局部变量。它只能在该方法内部被访问。
 
-# 4-Java 数据类型
+# Java 数据类型
 
 在 Java 中，数据类型可以是基本类型，也可以是非基本类型。
 
 ## 基本数据类型
 
-这些是 Java 提供的预定义数据类型。它们共有 **8** 种，包括 **byte, short, long, char, int, float, Boolean** 和 **double** 数据类型。
+这些是 Java 提供的预定义数据类型。它们共有 **8** 种，包括 `byte`、`short`、`long`、`char`、`int`、`float`、`boolean` 和 `double` 数据类型。
 
 现在让我们讨论 Java 中的各种基本数据类型：
 
-### Boolean
+### boolean
 
 这种数据类型只存储两个值：**true**（真）和 **false**（假）。它被用于仅跟踪**真/假条件**的简单语句。它只指定了一个位的信息，但我们无法精确地定义它的大小。
 
-### Byte
+### byte
 
 它的默认值为 **0**，最小值为 **-128 (-2^7)**。由于它比整数小 4 倍，它有助于在大型数组中节省空间。
 
-### Short
+### short
 
-它的默认值为 **0**，取值范围在 **-32,768** 到 32,767 之间。它也可以像 byte 数据类型一样用于节省空间。
+它的默认值为 **0**，取值范围在 **-32,768** 到 **32,767** 之间。它也可以像 `byte` 数据类型一样用于节省空间。
 
-### Int
+### int
 
-它的默认值为 0，取值范围在 -2,147,483,648 到 2,147,483,647 之间。它的最小值为 -2,147,483,648，最大值为 2,147,483,647。
+它的默认值为 0，取值范围在 **-2,147,483,648** 到 **2,147,483,647** 之间。它的最小值为 -2,147,483,648，最大值为 2,147,483,647。
 
-### Long
+### long
 
-这种数据类型的默认值也是 0，取值范围在 -9,223,372,036,854,775,808 到 9,223,372,036,854,775,807 之间。它的最小值为 -9,223,372,036,854,775,808，最大值为 9,223,372,036,854,775,807。当你想要获得比 int 数据类型提供的范围更广的值时，它是最好的数据类型。
+这种数据类型的默认值也是 0，取值范围在 **-9,223,372,036,854,775,808** 到 **9,223,372,036,854,775,807** 之间。它的最小值为 -9,223,372,036,854,775,808，最大值为 9,223,372,036,854,775,807。当你想要获得比 `int` 数据类型提供的范围更广的值时，它是最好的数据类型。
 
-### Float
+### float
 
-这种数据类型具有无限范围的值。与使用 double 相比，它可以帮助你节省空间。避免使用这种数据类型处理货币等精确数值。它的默认值为 0.0F。
+这种数据类型具有无限范围的值。与使用 `double` 相比，它可以帮助你节省空间。避免使用这种数据类型处理货币等精确数值。它的默认值为 `0.0f`。
 
-### Double
+### double
 
-这种数据类型的默认值为 0.0d，并且具有无限范围的值。它被用于表示带有小数部分的值，就像 float 数据类型一样。避免将其用于货币等高精度数值。
+这种数据类型的默认值为 `0.0d`，并且具有无限范围的值。它被用于表示带有小数部分的值，就像 `float` 数据类型一样。避免将其用于货币等高精度数值。
 
-### Char
+### char
 
 这种数据类型用于存储字符。
 
-### 非基本数据类型
+## 非基本数据类型
 
-这些是通过使用定义的类构造函数定义的。它们帮助程序员访问对象。它们包括 Strings（字符串）和数组。
+这些是通过使用定义的类构造函数定义的。它们帮助程序员访问对象。它们包括 `String`（字符串）和数组。
 
 下面的示例展示了变量的使用：
 
 ```java
-public class AddVariables{
+public class AddVariables {
     public static void main(String[] args) {
-        int p=10;
-        int q=22;
-        int r=p+q;
+        int p = 10;
+        int q = 22;
+        int r = p + q;
         System.out.println(r);
     }
 }
 ```
 
-我们定义了三个整数变量 p、q 和 r。p 和 q 的值已经初始化，而 r 的值是前两个变量之和。然后我们调用了 println 函数来打印 r 的值。它应该打印 32，即 10 和 22 相加的结果。如下所示：
-
-32
+我们定义了三个整数变量 `p`、`q` 和 `r`。`p` 和 `q` 的值已经初始化，而 `r` 的值是前两个变量之和。然后我们调用了 `println()` 函数来打印 `r` 的值。它应该打印 `32`，即 `10` 和 `22` 相加的结果。
 
 # 类型转换和类型转换
 
-特定类型的变量可以获得另一种类型的值。当一个容量较小的变量被赋值一个容量较大的变量时，称为类型转换。
+特定类型的变量可以获得另一种类型的值。当一个容量较小的变量被赋值一个容量较大的变量时，称为类型转换（隐式转换/自动类型提升）。
 
 示例：
 
 ```java
 double p;
-int q=6;
-p= (double)q;
+int q = 6;
+p = (double) q;
 ```
 
-类型转换（Typecasting）当一个容量较大的变量被赋值另一个容量较小的变量时。
+类型转换——当一个容量较大的变量被赋值另一个容量较小的变量时（强制类型转换）。
 
 示例：
 
 ```java
-double p=G;
+double p = 6.5;
 int q;
-q=(int) p;
+q = (int) p;
 ```
 
-**(int) 被称为类型转换运算符。** 如果不指定，你将得到错误。类型转换示例：
+`(int)` 被称为类型转换运算符。如果不指定，你将得到错误。
+
+类型转换示例：
+
+```java
+public class TypecastingExample {
+    public static void main(String[] args) {
+        float p = 19.7f;
+        // int q = p; // 编译错误
+        int q = (int) p;
+        System.out.println(p);
+        System.out.println(q);
+    }
+}
+```
+
+代码执行后返回以下内容：
+
+```
+19.7
+19
+```
+
+# 数组
+
+在 Java 中，数组是用来存储固定大小同类型元素的容器。
+
+## 声明、实例化和初始化数组
+
+```java
+int[] myArray = new int[5]; // 声明并实例化长度为5的int数组
+int[] myArray2 = {1, 2, 3, 4, 5}; // 声明并初始化
+```
+
+## 访问数组元素
+
+```java
+int firstElement = myArray2[0]; // 访问第一个元素
+myArray2[1] = 10; // 修改第二个元素
+```
+
+## 多维数组
+
+```java
+int[][] matrix = new int[3][3]; // 3x3 的二维数组
+```
+
+## 数组工具类 `Arrays`
+
+`java.util.Arrays` 类提供了操作数组的静态方法，如 `sort()`、`binarySearch()`、`equals()`、`fill()`、`toString()` 等。
+
+```java
+import java.util.Arrays;
+
+public class ArrayExample {
+    public static void main(String[] args) {
+        int[] arr = {3, 1, 2};
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr)); // [1, 2, 3]
+    }
+}
+```
+
+
 
 ```java
 public class TypecastingExample{
@@ -441,126 +409,40 @@ public class TypecastingExample{
 
 代码执行后返回以下内容：
 
+```
 19.7
 19
-
-# 5-数组
-
-在 Java 中，一个特定类型的变量可以获得另一种类型的值。类型转换当一个容量较小的变量被赋值一个容量较大的变量时。（*注：此处原文 Type Conversion 与 Typecasting 描述有重叠，已根据语境翻译*）
-
-示例：
-
-```java
-double p;
-int q=6;
-p= (double)q;
 ```
 
-类型转换（Typecasting）当一个容量较大的变量被赋值另一个容量较小的变量时。
-
-示例：
-
-```java
-double p=G;
-int q;
-q=(int) p;
-```
-
-**(int) 被称为类型转换运算符。** 如果不指定，你将得到错误。类型转换示例：
-
-```java
-public class TypecastingExample{
-    public static void main(String[] args){
-        float p=19.7f;
-        //int q=p/a 编译错误
-        int q=(int)p;
-        System.out.println(p);
-        System.out.println(q);
-    }
-}
-```
-
-代码执行后返回以下内容：
-
-19.7
-19
-
-## 数组
-
-在 Java 中，一个特定类型的变量可以获得另一种类型的值。（*注：此处原文 Type Conversion 与 Typecasting 描述有重叠，已根据语境翻译*）
-
-示例：
-
-```java
-double p;
-int q=6;
-p= (double)q;
-```
-
-类型转换（Typecasting）当一个容量较大的变量被赋值另一个容量较小的变量时。
-
-示例：
-
-```java
-double p=G;
-int q;
-q=(int) p;
-```
-
-**(int) 被称为类型转换运算符。** 如果不指定，你将得到错误。类型转换示例：
-
-```java
-public class TypecastingExample{
-    public static void main(String[] args){
-        float p=19.7f;
-        //int q=p/a 编译错误
-        int q=(int)p;
-        System.out.println(p);
-        System.out.println(q);
-    }
-}
-```
-
-代码执行后返回以下内容：
-
-19.7
-19
-
-## 数组
-
-（注：由于原文文本存在大量重复和逻辑混乱，以上翻译已严格遵循“不漏掉行”且“不重复输出”的原则，对重复段落进行了合并处理。以下为原文中剩余逻辑部分的翻译）
-
-## 数组
-
-（此处为原文重复，已按要求跳过）
+# 数组
 
 ### Boolean
 
-这种数据类型只存储两个值：**true**和**false**。它被用于仅跟踪**真/假条件**的简单语句。它只指定了一个位的信息，但我们无法精确地定义它的大小。
+这种数据类型只存储两个值：`true`和`false`。它被用于仅跟踪**真/假条件**的简单语句。它只指定了一个位的信息，但我们无法精确地定义它的大小。
 
 ### Byte
 
-它的默认值为 **0**，最小值为 **-128 (-2^7)**。由于它比整数小 4 倍，它有助于在大型数组中节省空间。
+它的默认值为 `0`，最小值为 `-128 (-2^7)`。由于它比整数小 4 倍，它有助于在大型数组中节省空间。
 
 ### Short
 
-它的默认值为 **0**，取值范围在 **-32,768** 到 32,767 之间。它也可以像 byte 数据类型一样用于节省空间。
+它的默认值为 `0`，取值范围在 `-32,768` 到 `32,767` 之间。它也可以像 `byte` 数据类型一样用于节省空间。
 
 ### Int
 
-它的默认值为 0，取值范围在 -2,147,483,648 到 2,147,483,647 之间。它的最小值为 -2,147,483,648，最大值为 2,147,483,647。
+它的默认值为 `0`，取值范围在 `-2,147,483,648` 到 `2,147,483,647` 之间。它的最小值为 `-2,147,483,648`，最大值为 `2,147,483,647`。
 
 ### Long
 
-这种数据类型的默认值也是 0，取值范围在 -9,223,372,036,854,775,808 到 9,223,372,036,854,775,807 之间。它的最小值为 -9,223,372,036,854,775,808，最大值为 9,223,372,036,854,775,807。当你想要获得比 int 数据类型提供的范围更广的值时，它是最好的数据类型。
+这种数据类型的默认值也是 `0`，取值范围在 `-9,223,372,036,854,775,808` 到 `9,223,372,036,854,775,807` 之间。它的最小值为 `-9,223,372,036,854,775,808`，最大值为 `9,223,372,036,854,775,807`。当你想要获得比 `int` 数据类型提供的范围更广的值时，它是最好的数据类型。
 
 ### Float
 
-这种数据类型具有无限范围的值。与使用 double 相比，它可以帮助你节省空间。避免使用这种数据类型处理货币等精确数值。它的默认值为 0.0F。
+这种数据类型具有无限范围的值。与使用 `double` 相比，它可以帮助你节省空间。避免使用这种数据类型处理货币等精确数值。它的默认值为 `0.0F`。
 
 ### Double
 
-这种数据类型的默认值为 0.0d，并且具有无限范围的值。它被用于表示带有小数部分的值，就像 float 数据类型一样。避免将其用于货币等高精度数值。
+这种数据类型的默认值为 `0.0d`，并且具有无限范围的值。它被用于表示带有小数部分的值，就像 `float` 数据类型一样。避免将其用于货币等高精度数值。
 
 ### Char
 
@@ -568,7 +450,7 @@ public class TypecastingExample{
 
 ### 非基本数据类型
 
-这些是通过使用定义的类构造函数定义的。它们帮助程序员访问对象。它们包括 Strings 和数组。
+这些是通过使用定义的类构造函数定义的。它们帮助程序员访问对象。它们包括 `Strings` 和数组。
 
 下面的示例展示了变量的使用：
 
@@ -583,9 +465,11 @@ public class AddVariables{
 }
 ```
 
-我们定义了三个整数变量 p、q 和 r。p 和 q 的值已经初始化，而 r 的值是前两个变量之和。然后我们调用了 println 函数来打印 r 的值。它应该打印 32，即 10 和 22 相加的结果。如下所示：
+我们定义了三个整数变量 `p`、`q` 和 `r`。`p` 和 `q` 的值已经初始化，而 `r` 的值是前两个变量之和。然后我们调用了 `println` 函数来打印 `r` 的值。它应该打印 `32`，即 `10` 和 `22` 相加的结果。如下所示：
 
+```
 32
+```
 
 # 类型转换和类型转换
 
@@ -609,7 +493,7 @@ int q;
 q=(int) p;
 ```
 
-**(int) 被称为类型转换运算符。** 如果不指定，你将得到错误。类型转换示例：
+`(int)` 被称为类型转换运算符。如果不指定，你将得到错误。类型转换示例：
 
 ```java
 public class TypecastingExample{
@@ -625,20 +509,18 @@ public class TypecastingExample{
 
 代码执行后返回以下内容：
 
+```
 19.7
 19
-
-## 数组
-
-（注：原文后续内容大量重复，此处根据指令不重复输出，仅保留核心逻辑部分翻译）
+```
 
 # 6-Java 运算符
 
-运算符是用于执行操作的符号。例如，+ 符号用于算术运算。Java 支持不同的运算符：
+运算符是用于执行操作的符号。例如，`+` 符号用于算术运算。Java 支持不同的运算符：
 
 ## 一元运算符
 
-这是接受一个操作数的运算符。它们增加/减少一个值。它们包括 **++ (增)** 和 **-- (减)**。
+这是接受一个操作数的运算符。它们增加/减少一个值。它们包括 `++` (增) 和 `--` (减)。
 
 示例：
 
@@ -656,10 +538,12 @@ public class JavaUnaryOperator{
 
 程序打印：
 
+```
 1
 2
 1
 0
+```
 
 ## 算术运算符
 
@@ -691,18 +575,17 @@ public class ArithmeticOperators{
 6
 ```
 
-p++ 意味着在执行增加之前读取 p 的值；因此我们得到的 p 的值为 0。如果是 ++p，那么我们作为 p 的第一个值得到 1。你可以尝试一下。
-
+`p++` 意味着在执行增加之前读取 `p` 的值；因此我们得到的 `p` 的值为 `0`。如果是 `++p`，那么我们作为 `p` 的第一个值得到 `1`。你可以尝试一下。
 
 除。
 
 ## 逻辑运算符
 
-这些运算符与布尔值一起使用。它们有助于在循环和条件语句中评估条件。它们包括 ||、&&、!。假设我们有两个布尔变量 a1 和 a2，适用于以下条件：
+这些运算符与布尔值一起使用。它们有助于在循环和条件语句中评估条件。它们包括 `||`、`&&`、`!`。假设我们有两个布尔变量 `a1` 和 `a2`，适用于以下条件：
 
-- 如果 a1 和 a2 都为 true，则 a1&&a2 返回 true，否则 false。
-- 如果 a1 和 a2 都为 false，则 a1||a2 返回 false，否则返回 true。
-- !a1 将返回 a1 的取反值。
+- 如果 `a1` 和 `a2` 都为 `true`，则 `a1&&a2` 返回 `true`，否则 `false`。
+- 如果 `a1` 和 `a2` 都为 `false`，则 `a1||a2` 返回 `false`，否则返回 `true`。
+- `!a1` 将返回 `a1` 的取反值。
 
 示例：
 
@@ -721,21 +604,23 @@ public class Java.LogicalOperator {
 
 程序执行后将返回以下内容：
 
-> p && q: false
-> p || q: true
-> !(p && q): true
+```
+p && q: false
+p || q: true
+!(p && q): true
+```
 
-变量 p 的值已设置为 true，而变量 q 的值已设置为 false。在第一情况下，我们使用了 && 运算符，因此 true 和 false 返回 false。在第二情况下，我们使用了 || 运算符，因此 true 或 false 得到 true。在最后情况下，我们对 && 操作的结果进行了取反。
+变量 `p` 的值已设置为 `true`，而变量 `q` 的值已设置为 `false`。在第一情况下，我们使用了 `&&` 运算符，因此 `true` 和 `false` 返回 `false`。在第二情况下，我们使用了 `||` 运算符，因此 `true` 或 `false` 得到 `true`。在最后情况下，我们对 `&&` 操作的结果进行了取反。
 
 ## 比较运算符
 
-Java 支持 6 种比较运算符：==, !=, <, >, >=, <=：
+Java 支持 6 种比较运算符：`==`、`!=`、`<`、`>`、`>=`、`<=`：
 
-- 如果左右两边相等，则 == 返回 true。
-- 如果运算符的左右两边不相等，则 != 返回 true。
-- 如果左侧大于右侧，则 > 返回 true。
-- 如果左侧小于右侧，则 < 返回 true。
-- 如果左侧大于或等于右侧，则 >= 返回 true。
+- 如果左右两边相等，则 `==` 返回 `true`。
+- 如果运算符的左右两边不相等，则 `!=` 返回 `true`。
+- 如果左侧大于右侧，则 `>` 返回 `true`。
+- 如果左侧小于右侧，则 `<` 返回 `true`。
+- 如果左侧大于或等于右侧，则 `>=` 返回 `true`。
 
 示例：
 
@@ -762,25 +647,25 @@ public class RelationalOperator {
         System.out.println("p is greater than q");
     }
     else{
-        System.out.println('p isn't greater than q');
+        System.out.println("p isn't greater than q");
     }
 
     if (p >= q) {
-      System.out.println('p is equal to or greater than q');
+      System.out.println("p is equal to or greater than q");
     } else {
-      System.out.println('p is less than q');
+      System.out.println("p is less than q");
     }
 
     if (p < q) {
-      System.out.println('p is less than q');
+      System.out.println("p is less than q");
     } else {
-      System.out.println('p isn't less than q');
+      System.out.println("p isn't less than q");
     }
 
     if (p <= q) {
-      System.out.println('p is equal to or less than q');
+      System.out.println("p is equal to or less than q");
     } else {
-      System.out.println('p is greater than q');
+      System.out.println("p is greater than q");
     }
     }
 }
@@ -797,13 +682,13 @@ p is less than q
 p is equal to or less than q
 ```
 
-我们使用了各种比较运算符来比较变量 **p** 和 **q** 的值。
+我们使用了各种比较运算符来比较变量 `p` 和 `q` 的值。
 
-## 7 种决策语句
+# 7 种决策语句
 
 在 Java 中，决策有助于帮助我们测试条件并根据条件的结果运行语句。让我们讨论一下决策语句：
 
-### if 语句
+## if 语句
 
 该语句包含一个**布尔表达式**和**语句（多个）**。其语法如下：
 
@@ -830,11 +715,13 @@ public class JavaIfStatement {
 
 代码执行后将返回以下结果：
 
-# The value of x is below 10
+```
+The value of x is below 10
+```
 
-我们声明了一个名为 x 的变量并将其初始化为 5。在 if 条件中，我们正在检查该变量的值是否低于 10。由于这是真的，该条件下方的语句已被执行。
+我们声明了一个名为 `x` 的变量并将其初始化为 `5`。在 `if` 条件中，我们正在检查该变量的值是否低于 `10`。由于这是真的，该条件下方的语句已被执行。
 
-### if...else 语句
+## if...else 语句
 
 该语句将“if”与“else”结合，后者指定了表达式为假时运行的语句。语法：
 
@@ -847,6 +734,7 @@ if(A_boolean_expression) {
 ```
 
 示例：
+
 ```java
 public class JavaIfElseStatement {
     public static void main(String args[]) {
@@ -880,11 +768,13 @@ public class JavaIfElseStatement {
 
 代码返回以下执行结果：
 
-# The value of x is above 5
+```
+The value of x is above 5
+```
 
-变量 x 的值已设置为 10。在 if 条件中，我们正在检查此值是否低于 5。测试结果为假，因此将执行 else 部分。
+变量 `x` 的值已设置为 `10`。在 `if` 条件中，我们正在检查此值是否低于 `5`。测试结果为假，因此将执行 `else` 部分。
 
-### if...else if 语句
+## if...else if 语句
 
 如果你有多个条件需要测试，请使用此语句。语法：
 
@@ -901,6 +791,7 @@ if(A_boolean_expression a) {
 ```
 
 示例：
+
 ```java
 public class JavaIfElseStatement {
     public static void main(String[] args) {
@@ -921,9 +812,11 @@ public class JavaIfElseStatement {
 
 代码执行后给出结果：
 
+```
 value of x is 15
+```
 
-变量 x 的值初始化为 15，因此 15 的测试条件为真。
+变量 `x` 的值初始化为 `15`，因此 `15` 的测试条件为真。
 
 这里另一个示例：
 
@@ -949,11 +842,13 @@ public class JavaIfStatement {
 
 代码返回：
 
+```
 You scored B grade
+```
 
-### 嵌套 if
+## 嵌套 if
 
-if...else 语句可以嵌套，这意味着你可以在另一个语句内部使用 if，或者在另一个 if...else 内部使用 if...else。
+`if...else` 语句可以嵌套，这意味着你可以在另一个语句内部使用 `if`，或者在另一个 `if...else` 内部使用 `if...else`。
 
 嵌套语法所示：
 
@@ -968,14 +863,16 @@ if(A_boolean_expression a) {
 
 示例：
 
+
+
 ```java
 public class NestingExample {
     public static void main(String[] args[]) {
-        int age=32;
-        int weight=77;
+        int age = 32;
+        int weight = 77;
 
-        if(age>=18){
-            if(weight>=55){
+        if (age >= 18) {
+            if (weight >= 55) {
                 System.out.println("You can donate blood.");
             }
         }
@@ -987,7 +884,7 @@ public class NestingExample {
 
 You can donate blood.
 
-如果第一个条件为真，则测试第二个条件。在我们的情况下这是是真的；因此执行了 println 语句。
+如果第一个条件为真，则测试第二个条件。在我们的情况下这是真的；因此执行了 `println` 语句。
 
 ## switch 语句
 
@@ -995,24 +892,22 @@ You can donate blood.
 
 使用了以下语法：
 
-
-
 ```java
-switch(an_expression) {
+switch (an_expression) {
   case value:
     // Statement(s)
-    break; //optional
+    break; // optional
 
   case value:
     // Statement(s)
-    break; //optional
+    break; // optional
 
-  default : //Optional
+  default: // Optional
     // Statement(s)
 }
 ```
 
-switch 一旦遇到 `break` 语句就会结束。执行流将跳转到下一行。然而，请注意，并没有强制要求每个 case 都添加 `break`。`default` 分句可以加到 switch 的末尾，如果没有任何 case 为真，则将执行它。
+`switch` 一旦遇到 `break` 语句就会结束。执行流将跳转到下一行。然而，请注意，并没有强制要求每个 case 都添加 `break`。`default` 分句可以加到 `switch` 的末尾，如果没有任何 case 为真，则将执行它。
 
 示例：
 
@@ -1021,7 +916,7 @@ public class SwitchExample {
   public static void main(String[] args) {
     char your_grade = 'A';
 
-    switch(your_grade) {
+    switch (your_grade) {
       case 'A':
         System.out.println("That is Excellent!");
         break;
@@ -1040,26 +935,22 @@ public class SwitchExample {
       default:
         System.out.println("Unknown grade");
     }
+    System.out.println("You scored " + your_grade);
   }
-}
-```
-
-```java
-System.out.println("You scored " + your_grade);
-}
 }
 ```
 
 代码返回如下结果：
 
 > That is Excellent!
+>
 > You scored A
 
-针对等级 **A** 的 **case** 测试结果为 **true**，因此产生了上述输出。
+针对等级 `A` 的 `case` 测试结果为 `true`，因此产生了上述输出。
 
-最后一个 **println** 语句无论等级的值值如何，都将在所有情况下执行。
+最后一个 `println` 语句无论等级的值如何，都将在所有情况下执行。
 
-# 8-Java 循环 (Loops)
+# 8-Java 循环
 
 Java 循环帮助我们重复性地执行某些任务。循环按顺序执行语句。首先运行第一个，然后是第二个，依此类推。让我们讨论一下 Java 支持的各种类型的循环：
 
@@ -1068,17 +959,17 @@ Java 循环帮助我们重复性地执行某些任务。循环按顺序执行语
 只要条件测试结果为真，循环就会运行。一旦条件变为假，执行将立即停止。语法：
 
 ```java
-for(initialization; loop_condition ; Increment/decrement_part)
+for (initialization; loop_condition; increment/decrement_part)
   the_statement(s);
 ```
 
-初始化（initialization）定义了循环条件的初始值。循环条件（loop_condition）指定了循环运行必须始终为真的条件。循环增/减部分（loop_increment/decrement_part）定义了在每次迭代后初始化值增加或减少的量。示例：
+初始化（`initialization`）定义了循环条件的初始值。循环条件（`loop_condition`）指定了循环运行必须始终为真的条件。循环增/减部分（`increment/decrement_part`）定义了在每次迭代后初始化值增加或减少的量。示例：
 
 ```java
 public class LoopExample {
-    public static void main(String args[]){
-        for(int p=0; p<10; p++){
-            System.out.println("The value of p now is: "+p);
+    public static void main(String args[]) {
+        for (int p = 0; p < 10; p++) {
+            System.out.println("The value of p now is: " + p);
         }
     }
 }
@@ -1097,17 +988,17 @@ The value of p now is: 7
 The value of p now is: 8
 The value of p now is: 9
 
-输出显示循环返回了变量 p 从 **0** 到 **9** 的值。当循环将 **9** 增加得到 **10** 时，它会发现这违反了循环条件 **p<10**，因此执行将立即停止。
+输出显示循环返回了变量 `p` 从 `0` 到 `9` 的值。当循环将 `9` 增加得到 `10` 时，它会发现这违反了循环条件 `p < 10`，因此执行将立即停止。
 
 ## while 循环
 
-只要指定的条件为 **true**（真），该循环就会执行语句。首先测试条件，如果为真，则执行**循环语句**。如果条件变为 **false**（假），**控制流**将跳转去执行循环之后的语句。建议您在循环中添加一个增/减操作和一个**测试**条件，以便循环在条件变为假时停止执行。否则，循环可能会无限运行。
+只要指定的条件为 `true`（真），该循环就会执行语句。首先测试条件，如果为真，则执行**循环语句**。如果条件变为 `false`（假），**控制流**将跳转去执行循环之后的语句。建议您在循环中添加一个增/减操作和一个**测试**条件，以便循环在条件变为假时停止执行。否则，循环可能会无限运行。
 
 语法：
 
 ```java
-while(A_boolean_expression) {
-// Statement(s)
+while (A_boolean_expression) {
+  // Statement(s)
 }
 ```
 
@@ -1119,7 +1010,7 @@ public class JavaLoopExample {
     public static void main(String[] args) {
         int p = 5;
 
-        while(p < 12) {
+        while (p < 12) {
             System.out.print("The value of p is: " + p);
             p++;
             System.out.print("\n");
@@ -1138,18 +1029,18 @@ public class JavaLoopExample {
 | The value of p is: 10 |
 | The value of p is: 11 |
 
-程序打印了 **p** 从 **5** 到 **11** 的值。变量的初始值为 **5**。**测试**条件检查该值是否**小于 12**，结果为 **true**。这意味着循环将运行。当到达 **11** 时，它将检查并发现 **p** 的值为 **12**。循环的执行立即停止，因为继续执行将违反该条件。
+程序打印了 `p` 从 `5` 到 `11` 的值。变量的初始值为 `5`。**测试**条件检查该值是否**小于 12**，结果为 `true`。这意味着循环将运行。当到达 `11` 时，它将检查并发现 `p` 的值为 `12`。循环的执行立即停止，因为继续执行将违反该条件。
 
 ## do...while 循环
 
-这与 while 循环密切相关。在 **while 循环** 条件中，执行是在体之前完成的。在 while 循环中，体可能永远不会执行，但在 do...while 循环中，循环体必须执行一次。
+这与 `while` 循环密切相关。在 **while 循环** 条件中，执行是在体之前完成的。在 `while` 循环中，体可能永远不会执行，但在 `do...while` 循环中，循环体必须执行一次。
 
 语法：
 
 ```java
 do {
- Statement or statements;
-} while(loop_condition);
+  Statement or statements;
+} while (loop_condition);
 ```
 
 示例：
@@ -1164,12 +1055,12 @@ public class JavaWhileLoop {
             System.out.print("The value of p is: " + p);
             p++;
             System.out.print("\n");
-        } while(p < 12);
+        } while (p < 12);
     }
 }
 ```
 
-代码将像之前的循环一样打印从 5 到 11 的 p 的值。这是因为条件为真，5 小于 12。假设我们将条件设为假，如所示将 p 的值初始化为20：
+代码将像之前的循环一样打印从 5 到 11 的 `p` 的值。这是因为条件为真，5 小于 12。假设我们将条件设为假，如所示将 `p` 的值初始化为 20：
 
 ```java
 public class JavaDoWhileLoop {
@@ -1181,7 +1072,7 @@ public class JavaDoWhileLoop {
             System.out.print("The value of p is: " + p);
             p++;
             System.out.print("\n");
-        } while(p < 12);
+        } while (p < 12);
     }
 }
 ```
@@ -1192,9 +1083,50 @@ The value of p is: 20
 
 ## break 语句
 
-switch 语句在达到 break 语句后就会结束。执行流将跳转到下一行。然而，注意并没有义务为每个 case 都添加 break。default 分句可以加到 switch 的末尾，如果没有任何 case 为真，则将执行它。
+`switch` 语句在达到 `break` 语句后就会结束。执行流将跳转到下一行。然而，注意并没有强制要求为每个 case 都添加 `break`。`default` 分句可以加到 `switch` 的末尾，如果没有任何 case 为真，则将执行它。
 
 示例：
+
+```java
+public class SwitchExample {
+  public static void main(String[] args) {
+    char your_grade = 'A';
+
+    switch (your_grade) {
+      case 'A':
+        System.out.println("That is Excellent!");
+        break;
+      case 'B':
+        System.out.println("That is Good!");
+        break;
+      case 'C':
+        System.out.println("That is Fair!");
+        break;
+      case 'D':
+        System.out.println("That is Poor!");
+        break;
+      case 'F':
+        System.out.println("You Failed!");
+        break;
+      default:
+        System.out.println("Unknown grade");
+    }
+    System.out.println("You scored " + your_grade);
+  }
+}
+```
+
+代码返回如下结果：
+
+> That is Excellent!
+>
+> You scored A
+
+针对等级 `A` 的 `case` 测试结果为 `true`，因此产生了上述输出。
+
+最后一个 `println` 语句无论等级的值如何，都将在所有情况下执行。
+
+
 
 ```java
 public class SwitchExample {
@@ -1233,195 +1165,16 @@ System.out.println("You scored " + your_grade);
 代码返回如下结果：
 
 > That is Excellent!
+>
 > You scored A
 
-针对等级 **A** 的 **case** 测试结果为 **true**，因此产生了上述输出。
+针对等级 `A` 的 `case` 测试结果为 `true`，因此产生了上述输出。
 
-最后一个 **println** 语句无论等级的值如何，都将在所有情况下执行。
-
-# 8-Java 循环 (Loops)
-
-Java 循环帮助我们重复性地执行某些任务。循环按顺序执行语句。首先运行第一个，然后是第二个，依此类推。让我们讨论一下 Java 支持的各种类型的循环：
-
-## for 循环
-
-只要条件测试结果为真，循环就会运行。一旦条件变为假，执行将立即停止。语法：
-
-```java
-for(initialization; loop_condition ; Increment/decrement_part)
-  the_statement(s);
-```
-
-初始化（initialization）定义了循环条件的初始值。循环条件（loop_condition）指定了循环运行必须始终为真的条件。循环增/减部分（loop_increment/decrement_part）定义了在每次迭代后初始化值增加或减少的量。示例：
-
-```java
-public class LoopExample {
-    public static void main(String args[]){
-        for(int p=0; p<10; p++){
-            System.out.println("The value of p now is: "+p);
-        }
-    }
-}
-```
-
-程序返回的输出如下：
-
-The value of p now is: 0
-The value of p now is: 1
-The value of p now is: 2
-The value of p now is: 3
-The value of p now is: 4
-The value of p now is: 5
-The value of p now is: 6
-The value of p now is: 7
-The value of p now is: 8
-The value of p now is: 9
-
-输出显示循环返回了变量 p 从 **0** 到 **9** 的值。当循环将 **9** 增加得到 **10** 时，它会发现这违反了循环条件 **p<10**，因此执行将立即停止。
-
-## while 循环
-
-只要指定的条件为 **true**（真），该循环就会执行语句。首先测试条件，如果为真，则执行**循环语句**。如果条件变为 **false**（假），**控制流**将跳转去执行循环之后的语句。建议您在循环中添加一个增/减操作和一个**测试**条件，以便循环在条件变为假时停止执行。否则，循环可能会无限运行。
-
-语法：
-
-```java
-while(A_boolean_expression) {
-// Statement(s)
-}
-```
-
-示例：
-
-```java
-public class JavaLoopExample {
-
-    public static void main(String[] args) {
-        int p = 5;
-
-        while(p < 12) {
-            System.out.print("The value of p is: " + p);
-            p++;
-            System.out.print("\n");
-        }
-    }
-}
-```
-
-代码打印以下结果：
-
-| The value of p is: 5 |
-| The value of p is: 6 |
-| The value of p is: 7 |
-| The value of p is: 8 |
-| The value of p is: 9 |
-| The value of p is: 10 |
-| The value of p is: 11 |
-
-程序打印了 **p** 从 **5** 到 **11** 的值。变量的初始值为 **5**。**测试**条件检查该值是否**小于 12**，结果为 **true**。这意味着循环将运行。当到达 **11** 时，它将检查并发现 **p** 的值为 **12**。循环的执行立即停止，因为继续执行将违反该条件。
-
-## do...while 循环
-
-这与 while 循环密切相关。在 **while 循环** 条件中，执行是在体之前完成的。在 while 循环中，体可能永远不会执行，但在 do...while 循环中，循环体必须执行一次。
-
-语法：
-
-```java
-do {
- Statement or statements;
-} while(loop_condition);
-```
-
-示例：
-
-```java
-public class JavaWhileLoop {
-
-    public static void main(String[] args) {
-        int p = 5;
-
-        do {
-            System.out.print("The value of p is: " + p);
-            p++;
-            System.out.print("\n");
-        } while(p < 12);
-    }
-}
-```
-
-代码将像之前的循环一样打印从 5 到 11 的 p 的值。这是因为条件为真，5 小于 12。假设我们将条件设为假，如所示将 p 的值初始化为20：
-
-```java
-public class JavaDoWhileLoop {
-
-    public static void main(String[] args) {
-        int p = 20;
-
-        do {
-            System.out.print("The value of p is: " + p);
-            p++;
-            System.out.print("\n");
-        } while(p < 12);
-    }
-}
-```
-
-运行上述程序后，你将获得以下输出：
-
-The value of p is: 20
+最后一个 `println` 语句无论等级的值如何，都将在所有情况下执行。
 
 ## break 语句
 
-switch 语句在达到 break 语句后就会结束。执行流将跳转到下一行。然而，注意并没有强制要求为每个 case 都添加 break。default 分句可以加到 switch 的末尾，如果没有任何 case 为真，则将执行它。
-
-示例：
-
-```java
-public class SwitchExample {
-  public static void main(String[] args) {
-    char your_grade = 'A';
-
-    switch(your_grade) {
-      case 'A':
-        System.out.println("That is Excellent!");
-        break;
-      case 'B':
-        System.out.println("That is Good!");
-        break;
-      case 'C':
-        System.out.println("That is Fair!");
-        break;
-      case 'D':
-        System.out.println("That is Poor!");
-        break;
-      case 'F':
-        System.out.println("You Failed!");
-        break;
-      default:
-        System.out.println("Unknown grade");
-    }
-  }
-}
-```
-
-```java
-System.out.println("You scored " + your_grade);
-}
-}
-```
-
-代码返回如下结果：
-
-> That is Excellent!
-> You scored A
-
-针对等级 **A** 的 **case** 测试结果为 **true**，因此产生了上述输出。
-
-最后一个 **println** 语句无论等级的值如何，都将在所有情况下执行。
-
-## break 语句 
-
-break 语句用于跳出循环。
+`break` 语句用于跳出循环。
 
 示例：
 
@@ -1448,7 +1201,7 @@ public class BreakExample {
 
 ## continue 语句
 
-continue 语句用于跳过当前迭代的剩余部分。
+`continue` 语句用于跳过当前迭代的剩余部分。
 
 示例：
 
@@ -1479,7 +1232,7 @@ public class ContinueExample {
 
 ## return 语句
 
-return 语句从方法返回值并退出方法。
+`return` 语句从方法返回值并退出方法。
 
 示例：
 
@@ -1500,11 +1253,7 @@ public class ReturnExample {
 
 8
 
-
-
-
-
-```
+```java
 for(int p=1;p<=3;p++) {
     for(int q=1;q<=3;q++) {
         if(p==2 && q==2) {
@@ -1528,13 +1277,13 @@ for(int p=1;p<=3;p++) {
 
 # 9-Java 方法
 
-在 Java 中，**方法**（methods）用于将一组语句组合在一起，以执行相同的功能。函数的一个很好的例子是 **System.out.println**。该方法是 Java 内置的。当你调用上述方法时，在终端上获得结果之前，会执行多条语句。我们可以在 Java 中定义自己的方法。让我们讨论一下如何在 Java 中使用方法：
+在 Java 中，`方法`（methods）用于将一组语句组合在一起，以执行相同的功能。函数的一个很好的例子是 `System.out.println`。该方法是 Java 内置的。当你调用上述方法时，在终端上获得结果之前，会执行多条语句。我们可以在 Java 中定义自己的方法。让我们讨论一下如何在 Java 中使用方法：
 
 ## 创建方法
 
 要创建 Java 方法，你应该使用以下语法：
 
-```
+```java
 public static int method_Name(int x, int y) {
   // 方法体
 }
@@ -1542,17 +1291,17 @@ public static int method_Name(int x, int y) {
 
 以下是对上述语法的描述：
 
-- **public static-** 一个用于定义方法访问权限的修符。
-- **int-** 方法的返回类型。
-- **method_Name-** 方法名。
-- **x, y-** 形式参数。
-- **int x, int y-** 参数列表。
+- `public static` - 一个用于定义方法访问权限的修饰符。
+- `int` - 方法的返回类型。
+- `method_Name` - 方法名。
+- `x, y` - 形式参数。
+- `int x, int y` - 参数列表。
 
 方法的定义由方法头和方法体组成。
 
 以下语法最准确地描述了这一点：
 
-```
+```java
 modifier return_Type method_Name (Parameter List) {
 // 方法体
 }
@@ -1560,11 +1309,11 @@ modifier return_Type method_Name (Parameter List) {
 
 以下是对上述语法的描述：
 
-- modifier – 定义方法的访问类型，它是可选的。
-- returnType – 方法可能会返回一个值。
-- method_Name – 方法名。方法签名包含了方法名和参数列表。
-- Parameter List – 这是方法参数的列表，包含了该方法的参数的类型、顺序和数量。方法可以没有参数，因此这些是可选的。
-- method body – 此方法体定义了方法将对语句执行什么操作。
+- `modifier` – 定义方法的访问类型，它是可选的。
+- `returnType` – 方法可能会返回一个值。
+- `method_Name` – 方法名。方法签名包含了方法名和参数列表。
+- `Parameter List` – 这是方法参数的列表，包含了该方法的参数的类型、顺序和数量。方法可以没有参数，因此这些是可选的。
+- `method body` – 此方法体定义了方法将对语句执行什么操作。
 
 这里是一个 Java 方法的示例：
 
@@ -1573,20 +1322,20 @@ modifier return_Type method_Name (Parameter List) {
 public static int minimumFunction(int p, int q) {
     int min;
     if (p > q)
-    min = q;
+        min = q;
     else
-    min = p;
+        min = p;
     return min;
 }
 ```
 
-在上面的示例中，我们定义了一个名为 minimumFunction 的方法。该函数接受两个整数数据类型的参数。该方法应该比较你传递给它的两个整数值，并返回最小值。
+在上面的示例中，我们定义了一个名为 `minimumFunction` 的方法。该函数接受两个整数数据类型的参数。该方法应该比较你传递给它的两个整数值，并返回最小值。
 
 代码在执行后将打印以下内容：
 
 ## 最小值是 10
 
-我们使用了 **minimumFunction**，它检查并返回两个数字中的最小值。在上面的示例中，我们向它传递了值 **10** 和 **13**。它返回了 **10**，因为它是最小值。
+我们使用了 `minimumFunction`，它检查并返回两个数字中的最小值。在上面的示例中，我们向它传递了值 `10` 和 `13`。它返回了 `10`，因为它是最小值。
 
 ## void 关键字
 
@@ -1613,7 +1362,7 @@ public class VoidKeywordExample {
 
 > 政府将资助你的大学费
 
-正如你所注意到的，我们没有使用 **return** 关键字。
+正如你所注意到的，我们没有使用 `return` 关键字。
 
 ## return 关键字
 
@@ -1664,7 +1413,7 @@ public class StaticExample {
 }
 ```
 
-## 继承 (继承)
+## 继承
 
 继承允许一个类继承另一个类的属性和方法。这实现了代码复用。
 
@@ -1753,7 +1502,7 @@ class Circle extends Shape {
 
 ## Exception (异常)
 
-异常是程序执行过程中发生的意外事件。Java 使用 try-catch 块来处理异常。
+异常是程序执行过程中发生的意外事件。Java 使用 `try-catch` 块来处理异常。
 
 ```java
 public class ExceptionExample {
@@ -1767,11 +1516,11 @@ public class ExceptionExample {
 }
 ```
 
-引用类的成员，如变量、方法和构造函数。当方法或构造函数中的局部变量与实例变量同同时，它可以帮助区分局部变量和实例变量。
+引用类的成员，如变量、方法和构造函数。当方法或构造函数中的局部变量与实例变量同名时，它可以帮助区分局部变量和实例变量。
 
 以下示例展示了如何使用 `this` 关键字：
 
-```
+```java
 class Person {
   int age;
   Person(int age) {
@@ -1782,74 +1531,53 @@ class Person {
 
 让我们展示如何使用 `this` 关键字来访问类的各种成员：
 
-```
+```java
 public class This_Class {
   // 一个实例变量 x
   int x = 10;
-```
 
-```
-This_Class() {
-  System.out.println("Demonstrating the use of this keyword in Java");
-}
-```
+  This_Class() {
+    System.out.println("Demonstrating the use of this keyword in Java");
+  }
 
-```
-This_Class(int x) {
-  // 调用默认构造函数
-  this();
-}
-```
+  This_Class(int x) {
+    // 调用默认构造函数
+    this();
+    // 将局部变量 num 赋值给实例变量 x
+    this.x = x;
+  }
 
-```
-// 将局部变量 num 赋值给实例变量 x
-this.x = x;
-```
+  public void salute() {
+    System.out.println("Welcome to Java Programming");
+  }
 
-```
-public void salute() {
-  System.out.println("Welcome to Java Programming");
-}
-```
+  public void print() {
+    // 局部变量 x
+    int x = 20;
 
-```
-public void print() {
-  // 局部变量 x
-  int x = 20;
-```
+    // 打印局部变量
+    System.out.println("value of local variable num is :"+x);
 
-```
-// 打印局部变量
-System.out.println("value of local variable num is :"+x);
-```
+    // 打印实例变量
+    System.out.println("The instance variable x has a value of :"+this.x);
 
-```
-// 打印实例变量
-System.out.println("The instance variable x has a value of :"+this.x);
-```
+    // 调用类的 salute 方法
+    this.salute();
+  }
 
-```
-// 调用类的 salute 方法
-```
+  public static void main(String[] args) {
+    // 实例化类
+    This_Class object1 = new This_Class();
 
-```
-this.salute();
-}
-```
+    // 调用 print 方法
+    object1.print();
 
-```
-public static void main(String[] args) {
-// 实例化类
-This_Class object1 = new This_Class();
+    // 通过参数化构造函数将新变量传递给 x
+    This_Class object2 = new This_Class(30);
 
-// 调用 print 方法
-object1.print();
-
-// 通过参数化构造函数将新变量传递给 x
-This_Class object2 = new This_Class(30);
-
-// 再次调用 print 方法
-object2.print();
+    // 再次调用 print 方法
+    object2.print();
+  }
 }
 ```
 
@@ -1866,7 +1594,7 @@ Welcome to Java Programming
 
 # 可变长度参数
 
-Java 允许向方法传递数量数量的参数，但这些参数必须是相同类型。
+Java 允许向方法传递数量不定的参数，但这些参数必须是相同类型。
 
 可以通过在方法中声明参数来实现，如下：
 
@@ -1878,7 +1606,9 @@ type_Name... parameter_Name
 
 下文是一个示例：
 
-```
+
+
+```java
 public class VariableArguments {
     public static void main(String[] args) {
         // 调用带可变参数的方法
@@ -1903,6 +1633,7 @@ public class VariableArguments {
 该代码执行后返回的结果如下：
 
 > The maximum value is 87.0
+
 The maximum value is 31.0
 
 # 方法重写
@@ -1911,7 +1642,7 @@ The maximum value is 31.0
 
 示例：
 
-```
+```java
 class Mammal {
     public void run() {
     }
@@ -1924,7 +1655,6 @@ class Dog extends Mammal {
     }
 }
 ```
-
 
 ```java
 static int x=0
@@ -1979,7 +1709,7 @@ Commision for Developer is:20000
 
 Java 中有不同类型的继承。让我们讨论一下：
 
-## 单继承继承
+## 单继承
 
 在这里，一个类继承自另一个类。之前提供的 `Worker` 和 `DBA` 类就是这种类型的示例。
 
@@ -2006,6 +1736,7 @@ public static void main(String args[]){
 代码执行后将返回以下结果：
 
 Moowing...
+
 Running...
 
 在上面的示例中，`run()` 方法在 `Mammal` 类中定义，而 `moow()` 方法在继承 `Mammal` 类的 `Cow` 类中定义。在 `JavaInheritance` 类中，我们创建了 `Cow` 类的实例并命名为 `cw`。然后我们使用这个实例访问了定义在不同类中的两个方法。
@@ -2044,7 +1775,9 @@ public static void main(String[] args){
 该代码将返回以下结果：
 
 Moowing...
+
 Eating...
+
 Running...
 
 `run()` 方法在 `Mammal` 类中定义，`moow()` 方法在继承 `Mammal` 类的 `Cow` 类中定义。`eat()` 方法在继承 `Cow` 类的 `BabyCow` 类中定义。在 `InheritanceTest` 类中，我们创建了 `BabyCow` 类的实例 `bc`。该实例被用于访问各种属性。我们可以使用 `BabyCow` 类的实例访问定义在 `Cow` 和 `Mammal` 类中的方法。
@@ -2100,10 +1833,6 @@ public class John extends Student {
   void register() {
 ```
 
-
-
-
-
 ```java
 System.out.println("John is going for registration");
 }
@@ -2118,6 +1847,7 @@ public static void main(String[] args) {
 代码执行后将返回如下结果：
 
 John is going for registration
+
 Done
 
 抽象类并不一定需要包含抽象方法。你无法实例化抽象类。这就是为什么我们实例化了 John 类，因为它从一个抽象类中继承了一个方法。
@@ -2275,6 +2005,9 @@ public class Workers{
 ```
 
 你可以向同一个包添加一个带有此代码的新文件：
+
+
+
 ```java
 public class TestWorkers {
     public static void main(String[] args){
@@ -2294,8 +2027,6 @@ C:\Users\admin>java TestWorkers
 Joel
 C:\Users\admin>
 ```
-
-
 
 （括号）。
 
@@ -2325,7 +2056,7 @@ public interface Prado extends Toyotas {
 }
 ```
 
-我们定义了 Toyotas 接口。其他的 Harrier 和 Prado 扩展了 Toyotas 接口。Prado 接口有四个方法，但其中两个方法是从 Toyotas 接口继承而来的。你可以通过使用 `()` 隔开多个接口来继承多个接口。
+我们定义了 `Toyotas` 接口。其他的 `Harrier` 和 `Prado` 扩展了 `Toyotas` 接口。`Prado` 接口有四个方法，但其中两个方法是从 `Toyotas` 接口继承而来的。你可以通过使用 `,` 隔开多个接口来继承多个接口。
 
 示例：
 
@@ -2351,7 +2082,7 @@ class Cuboid implements ObjectInterface{
     }
 }
 public class InterfaceTest{
-    public static void main(String[] args[]){
+    public static void main(String[] args){
         ObjectInterface ob=new Cuboid();
         ob.drawObject();
         System.out.println(ObjectInterface.cubeObject(3));
@@ -2370,13 +2101,13 @@ interface Message{
 }
 ```
 
-ShortMessage 接口被定义在 Message 接口内部，使其成为嵌套接口。
+`ShortMessage` 接口被定义在 `Message` 接口内部，使其成为嵌套接口。
 
 # 14-包 (Packages)
 
 包是将相关的接口和类组合在一起的核心。分组是根据功能决定的。通过包，我们可以对类进行分组并轻松找到需要的类，以避免冲突。建议你创建一个包，然后使用它来分组相关的类、接口等。通过包，可以轻松访问在同一个包的类和接口中定义的变量和方法。
 
-Java 包可以是用户定义的或内置的。内置 Java 包的示例包括 lang、awt、java、javafx、net、io、swing、util、sql 等。要使用这些包，请使用 `import` 语句使其在你的类中可用。要创建包，使用 `package` 关键字然后创建包名。
+Java 包可以是用户定义的或内置的。内置 Java 包的示例包括 `lang`、`awt`、`java`、`javafx`、`net`、`io`、`swing`、`util`、`sql` 等。要使用这些包，请使用 `import` 语句使其在你的类中可用。要创建包，使用 `package` 关键字然后创建包名。
 
 示例：
 
@@ -2405,7 +2136,7 @@ interface Mammals {
 }
 ```
 
-我们创建了一个名为 animal 的包，其中包含一个名为 Mammals 的接口。现在我们可以在 animal 包中实现该接口：
+我们创建了一个名为 `animal` 的包，其中包含一个名为 `Mammals` 的接口。现在我们可以在 `animal` 包中实现该接口：
 
 ```java
 package animal;
@@ -2480,7 +2211,7 @@ public class HelloClass{
 }
 ```
 
-我们在名为 **hellopackage** 的包中定义了一个名为 **HelloClass** 的类，并将其保存在文件 *HelloClass.java* 中。我们有这个类：
+我们在名为 `hellopackage` 的包中定义了一个名为 `HelloClass` 的类，并将其保存在文件 `HelloClass.java` 中。我们有这个类：
 
 ```java
 package studentspackage;
@@ -2492,7 +2223,11 @@ class HelloStudentsClass{
 }
 ```
 
-第二个程序一旦执行将生成一个错误。我们实例化了类 **HelloClass** 来获取实例 **hello**。我们使用该实例来访问在 **HelloClass** 中定义的 **message()** 方法。我们在名为 **hellopackage** 的包中定义了一个名为 **HelloClass** 的类，并将其保存在文件 *HelloClass.java* 中。我们有这个类：
+第二个程序一旦执行将生成一个错误。我们实例化了类 `HelloClass` 来获取实例 `hello`。我们使用该实例来访问在 `HelloClass` 中定义的 `message()` 方法。
+
+
+
+我们在名为 `hellopackage` 的包中定义了一个名为 `HelloClass` 的类，并将其保存在文件 `HelloClass.java` 中。我们有这个类：
 
 ```java
 package studentspackage;
@@ -2504,192 +2239,13 @@ class HelloStudentsClass{
 }
 ```
 
-第二个程序一旦执行将生成一个错误。我们实例化了类 **HelloClass** 来获取实例 **hello**。我们使用该实例来访问在 **HelloClass** 中定义的 **message()** 方法。我们在名为 **hellopackage** 的包中定义了一个名为 **HelloClass** 的类，并将其保存在文件 *HelloClass.java* 中。我们有这个类：
-
-```java
-package studentspackage;
-class HelloStudentsClass{
-    public static void main(String args[]){
-        HelloClass hello = new HelloClass();
-        hello.message();
-    }
-}
-```
-
-第二个程序一旦执行将生成一个错误。我们实例化了类 **HelloClass** 来获取实例 **hello**。我们使用该实例来访问在 **HelloClass** 中定义的 **message()** 方法。我们在名为 **hellopackage** 的包中定义了一个名为 **HelloClass** 的类，并将其保存在文件 *HelloClass.java* 中。我们有这个类：
-
-```java
-package studentspackage;
-class HelloStudentsClass{
-    public static void main(String args[]){
-        HelloClass hello = new HelloClass();
-        hello.message();
-    }
-}
-```
-
-（注：我们在名为 **hellopackage** 的包中定义了一个名为 **HelloClass** 的类，并将其保存在文件 *HelloClass.java* 中。我们有这个类：
-
-```java
-package studentspackage;
-class HelloStudentsClass{
-    public static void main(String args[]){
-        HelloClass hello = new HelloClass();
-        hello.message();
-    }
-}
-```
-
-（注：由于原文中存在大量重复段落，翻译时已根据“不要重复输出原文”的原则进行了去重处理，确保逻辑连贯。）
-
----
-
-*由于提供的原文文本存在大量完全的重复段落，以下是基于原文逻辑的梳理后的翻译译文：*
-
-[content]
-实例化类 **HelloClass** 以获取实例 **hello**。我们使用该实例来访问 **message()** 方法。我们在名为 **hellopackage** 的包中定义了一个名为 **HelloClass** 的类，并将其保存在文件 *HelloClass.java* 中。我们有这个类：
-
-```java
-package studentspackage;
-class HelloStudentsClass{
-    public static void main(String args[]){
-        HelloClass hello = new HelloClass();
-        hello.message();
-    }
-}
-```
-
-第二个程序一旦执行将生成一个错误。我们实例化了类 **HelloClass** 来获取实例 **hello**。我们使用该实例来访问 **message()** 方法。我们在名为 **hellopackage** 的包中定义了一个名为 **HelloClass** 的类，并将其保存在文件 *HelloClass.java* 中。我们有这个类：
-
-```java
-package studentspackage;
-class HelloStudentsClass{
-    public static void main(String args[]){
-        HelloClass hello = new HelloClass();
-        hello.message();
-    }
-}
-```
-
-第二个程序一旦执行将生成一个错误。我们实例化了类 **HelloClass** 来获取实例 **hello**。我们使用该实例来访问 **message()** 方法。我们在名为 **hellopackage** 的包中定义了一个名为 **HelloClass** 的类，并将其保存在文件 *HelloClass.java* 中。我们有这个类：
-
-```java
-package studentspackage;
-class HelloStudentsClass{
-    public static void main(String args[]){
-        HelloClass hello = new HelloClass();
-        hello.message();
-    }
-}
-```
-
-（注：由于原文文本在后部分出现了多次完全重复的段落，为了遵循“不要重复输出原文”的要求，此处译文仅保留了核心逻辑部分的去重翻译。）
-
-**抱歉，由于您提供的待翻译文本包含大量完全重复的区块（例如 HelloClass 示例重复了 5 次以上），为了符合文档工程师的专业标准并遵守“不要重复输出原文”的指令，我在最终译文中进行了逻辑去重处理。以下是精简后的完整翻译：**
-
----
-
-**[修正：由于原文内容严重重复，以下提供经过去重后的高质量翻译版本]**
-
-[content]
-（括号）。
-
-示例：
-
-（此处代码块保持不变）
-（此处此处代码块保持不变）
-
-我们定义了 Toyotas 接口。其他的 Harrier 和 Prado 扩展了 Toyotas 接口。Prado 接口有四个方法，但其中两个方法是从 Toyotas 接口继承而来的。你可以通过使用 `()` 隔开多个接口来继承多个接口。
-
-示例：
-
-```
-public interface Harrier extends Toyotas, Cars
-```
-
-Java 不支持多重继承，然而，我们可以通过接口来实现。
-
-这是另一个接口示例：
-
-（此处代码块保持不变）
-（此处代码块保持不变）
-
-嵌套接口是在我们在另一个接口内部添加的接口。示例：
-
-```java
-interface Message{
-    void printMessage();
-    interface ShortMessage{
-        void message();
-    }
-}
-```
-
-ShortMessage 接口被定义在 Message 接口内部，使其成为嵌套接口。
-
-# 14-包 (Packages)
-
-包是将相关的接口和类组合在一起的核心。分组是根据功能决定的。通过包，我们可以对类进行分组并轻松找到需要的类，以避免冲突。建议你创建一个包，然后使用它来分组相关的类、接口等。通过包，可以轻松访问在同一个包的类和接口中定义的变量和方法。
-
-Java 包可以是用户定义的或内置的。内置 Java 包的示例包括 lang、awt、java、javafx、net、io、swing、util、sql 等。要使用这些包，请使用 `import` 语句使其在你的类中可用。要创建包，使用 `package` 关键字然后创建包名。
-
-示例：
-
-（此处代码块保持不变）
-
-执行上述代码将返回以下输出：
-
-My first package
-
-包的定义语句始终以分号（`;`）结尾。当我们创建包时，应该使用小写字母作为名称，以避免与接口/类名冲突。
-
-另一个示例：
-
-（此处代码块保持不变）
-
-我们创建了一个名为 animal 的包，其中包含一个名为 Mammals 的接口。现在我们可以在 animal 包中实现该接口：
-
-（此处代码块保持不变）
-
-该代码将返回以下结果：
-
-```
-Cows run
-Cows eat
-```
-
-如果我们不使用包，这两个者可以合并为一个：
-
-（此处代码块保持不变）
-（此处代码块保持不变）
-
-## Import 关键字 (Import Keyword)
-
-你可以访问特定包之外的包。使用 `import` 关键字是实现此点的可能之一。访问同一个包中的类时不需要使用包。在使用 `packagename.classname` 语法导入类后，只有导入类中的方法是可访问的。
-
-示例：
-
-（此处代码块保持不变）
-
-我们在名为 **hellopackage** 的包中定义了一个名为 **HelloClass** 的类，并将其保存在文件 *HelloClass.java* 中。我们有这个类：
-
-```java
-package studentspackage;
-class HelloStudentsClass{
-    public static void main(String args[]){
-        HelloClass hello = new HelloClass();
-        hello.message();
-    }
-}
-```
-
-第二个程序一旦执行将生成一个错误。我们实例化了类 **HelloClass** 来获取实例 **hello**。我们使用该实例来访问 **message()** 方法。我们在名为 **hellopackage** 的包中定义了一个名为 **HelloClass** 的类，并将其保存在文件 *HelloClass.java* 中。我们有这个类：
+第二个程序一旦执行将生成一个错误。我们实例化了类 `HelloClass` 来获取实例 `hello`。我们使用该实例来访问 `message()` 方法。我们在名为 `hellopackage` 的包中定义了一个名为 `HelloClass` 的类，并将其保存在文件 `HelloClass.java` 中。我们有这个类：
 
 （此处省略后续重复内容的翻译，以保持文档简洁性）
 
 # 15-Java Applets
 
-Applets 是运行在网络浏览器上的 Java 程序。Applet 作为一个全功能完整的应用程序运行，因为它带有完整的 Java API。applet 类继承自 java.applet.Applet。Applets 没有 main 方法，因此它们不会调用 main()。相反，它们嵌入在 HTML 页面中。当打开带有 applet 的 HTML 页面时，其代码会被下载到本地机器。JVM（Java 虚拟机）是查看 applet 必须的。
+Applets 是运行在网络浏览器上的 Java 程序。Applet 作为一个全功能完整的应用程序运行，因为它带有完整的 Java API。applet 类继承自 `java.applet.Applet`。Applets 没有 `main` 方法，因此它们不会调用 `main()`。相反，它们嵌入在 HTML 页面中。当打开带有 applet 的 HTML 页面时，其代码会被下载到本地机器。JVM（Java 虚拟机）是查看 applet 必须的。
 
 Applets 在客户端处理；因此与其他应用程序相比，它们能给用户提供快速响应。
 
@@ -2697,17 +2253,16 @@ Applets 在客户端处理；因此与其他应用程序相比，它们能给用
 
 Applets 经过以下步骤：
 
-- **初始化-** init() 方法初始化 applet。
-- **启动-** start() 方法启动 applet。
-- **绘制-** 在调用 paint() 方法后执行。
-- **停止-** 我们调用 stop() 方法停止 applet。
-- **销毁-** 通过调用 destroy() 方法销毁 applet。
-
-
+- **初始化** - `init()` 方法初始化 applet。
+- **启动** - `start()` 方法启动 applet。
+- **绘制** - 在调用 `paint()` 方法后执行。
+- **停止** - 我们调用 `stop()` 方法停止 applet。
+- **销毁** - 通过调用 `destroy()` 方法销毁 applet。
 
 Applet 通过 HTML 查看。
 
 示例：
+
 在文本编辑器中创建一个名为 `FirstApplet.java` 的新文件，并为其添加以下代码：
 
 ```java
@@ -2744,7 +2299,7 @@ public class FirstApplet extends Applet{
 <applet code="FirstApplet.class" width="320" height="320">
 ```
 
-我们链接的是 `FirstApplet.class` 而不是 `FirstApplet.java`。这意味着 Java 代码应该先编译以生成 .class 文件，然后 HTML 代码才能识别它。
+我们链接的是 `FirstApplet.class` 而不是 `FirstApplet.java`。这意味着 Java 代码应该先编译以生成 `.class` 文件，然后 HTML 代码才能识别它。
 
 打开 OS 终端，导航到文件所在位置。运行此命令编译 Java 代码：
 
@@ -2757,7 +2312,6 @@ public class FirstApplet extends Applet{
 窗口应该会显示一个带有 OurFirstApplet! 文本的弹出窗口。那就是 Applet。
 
 ```
-
 C:\Users\admin>javac FirstApplet.java
 C:\Users\admin>appletviewer mycode.html
 ```
@@ -2822,7 +2376,9 @@ public class Mypaint extends Applet
 ```
 
 编译 `MyPaint.java`，然后运行 `mycode2.html`。如下所示：
+
 `javac MyPaint.java`
+
 `appletviewer mycode.html`
 
 这应该会给你输出：
@@ -2936,7 +2492,7 @@ public class AnimationExample extends Applet {
 </html>
 ```
 
-编译 .java 类然后运行 .html 文件。确保在 .java 类中指定了正确的图像并将其保持在文件的同一目录下。运行代码后它会移动。
+编译 `.java` 类然后运行 `.html` 文件。确保在 `.java` 类中指定了正确的图像并将其保持在文件的同一目录下。运行代码后它会移动。
 
 ## Applet 事件
 
@@ -2988,174 +2544,227 @@ public class AppletEventExample implements ActionListener {
 </html>
 ```
 
-通过命令 `javac AppletEventExample.java` 编译你的 Java 代码，然后通过 `appletviewer myapplet.html` 调用 .html 文件。以下 applet 窗口将会弹出：
-
-
+通过命令 `javac AppletEventExample.java` 编译你的 Java 代码，然后通过 `appletviewer myapplet.html` 调用 `.html` 文件。以下 applet 窗口将会弹出：
 
 ![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_105_0.png)
 
-点击“Click”按钮。一条新消息将被到*textfield*中，如下所示：
+点击“Click”按钮。一条新消息将被到 `textfield` 中，如下所示：
 
 ![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_105_1.png)
 
 ## Applet 参数
 
-HTML 文件的信息可以作为 applet 的参数。这些参数可以通过 Applet 类的 **getParameter()** 方法获取。示例：
+HTML 文件的信息可以作为 applet 的参数。这些参数可以通过 Applet 类的 `getParameter()` 方法获取。示例：
 
-创建一个新文件，**AppletParameters.java**。添加此代码：
+创建一个新文件 `AppletParameters.java`。添加此代码：
 
-```
+```java
 import java.awt.Graphics;
 import java.applet.Applet;
-```
 
 public class AppletParametersExample extends Applet{
-public void paint(Graphics g){
-  String st=getParameter("message");
-  g.drawString(st,50,50);
-}
+
+    public void paint(Graphics g){
+
+        String st=getParameter("message");
+
+        g.drawString(st,50,50);
+
+    }
+
 }
 ```
 
-为 HTML 代码创建一个新文件，**appletcode.html:**
+为 HTML 代码创建一个新文件 `appletcode.html`：
 
-```
+```html
 <html>
+
 <body>
+
 <applet code="AppletParameters.class" width="350" height="350">
+
 <param name="message" value="Applet Parameters">
+
 </applet>
+
 </body>
+
 </html>
 ```
 
-在上述 HTML 代码中，**param name** 的值必须与 Java 类中传递给 **getParameter()** 的参数值完全匹配。
 
-现在，通过 javac **AppletParametersExample.java** 命令编译你的 Java 代码将生成 **AppletParametersExample.class** 文件。通过 **appletviewer appletcode.html** 调用 html 代码。
+
+在上述 HTML 代码中，`param name` 的值必须与 Java 类中传递给 `getParameter()` 的参数值完全匹配。
+
+现在，通过 `javac AppletParametersExample.java` 命令编译你的 Java 代码将生成 `AppletParametersExample.class` 文件。通过 `appletviewer appletcode.html` 调用 html 代码。
 
 随后你将得到所示的窗口：
 
 ![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_106_0.png)
 
-此文本是在 HTML 代码中 **param name** 的 value 属性中指定的。
+此文本是在 HTML 代码中 `param name` 的 value 属性中指定的。
 
 # 16-Java 输入/输出
 
-java.io 包包含了许多我们可以用来执行输入/输出任务的类。Java 中的输入/输出概念是通过使用流（streams）来实现的。流由 java.io 包提供，并支持不同类型的数据，包括局部变量、对象、基本数据类型等。
+`java.io` 包包含了许多我们可以用来执行输入/输出任务的类。Java 中的输入/输出概念是通过使用流（streams）来实现的。流由 `java.io` 包提供，并支持不同类型的数据，包括局部变量、对象、基本数据类型等。
 
 流简单来说就是数据的序列。有两种类型的流：
 
-- InputStream – 用于从源读取数据。
-- OutputStream – 用于向目标地写入数据。
+- `InputStream` – 用于从源读取数据。
+- `OutputStream` – 用于向目标地写入数据。
 
 ## 字节流
 
-Java 流由字节组成。Java 字节流执行 8 位字节的输入/输出操作。有几个类与字节流相关，但最常用的是 FileInputStream 和 OutputStream。让我们使用一个示例来演示如何使用这两个类：
+Java 流由字节组成。Java 字节流执行 8 位字节的输入/输出操作。有几个类与字节流相关，但最常用的是 `FileInputStream` 和 `OutputStream`。让我们使用一个示例来演示如何使用这两个类：
 
-```
+```java
 import java.io.*;
+
 public class CopyingFiles {
 
     public static void main(String[] args) throws IOException {
+
         FileInputStream inp = null;
-```
+        FileOutputStream outp = null;
 
-```
-FileOutputStream outp = null;
+        try {
 
-try {
-  inp = new FileInputStream("colleagues.txt");
-  outp = new FileOutputStream("output.txt");
+            inp = new FileInputStream("colleagues.txt");
+            outp = new FileOutputStream("output.txt");
 
-  int ch;
-  while ((ch = inp.read()) != -1) {
-    outp.write(ch);
-  }
-} finally {
-  if (inp != null) {
-    inp.close();
-  }
-  if (outp != null) {
-    outp.close();
-  }
+            int ch;
+
+            while ((ch = inp.read()) != -1) {
+
+                outp.write(ch);
+
+            }
+
+        } finally {
+
+            if (inp != null) {
+
+                inp.close();
+
+            }
+
+            if (outp != null) {
+
+                outp.close();
+
+            }
+
+        }
+
+    }
+
 }
-}
 ```
 
-该代码将读取 colleagues.txt 文件的内容并将其复制到名为 output.txt 的新文件中。注意，后者将自动创建，并且内容会被复制进去。
+该代码将读取 `colleagues.txt` 文件的内容并将其复制到名为 `output.txt` 的新文件中。注意，后者将自动创建，并且内容会被复制进去。
 
 ## 字符流
 
-字符流用于执行 16 位 Unicode 的输入和输出操作。有许多类与字符流相关。最流行的是 FileReader 和 FileWriter。内部，FileReader 使用了 FileInputStream 和 FileOutputStream，但它们之间的主要区别是 FileReader 每次读取两个字节，而 FileWriter 每次写入两个字节。让我们使用这两个类来重写我们之前的示例：
+字符流用于执行 16 位 Unicode 的输入和输出操作。有许多类与字符流相关。最流行的是 `FileReader` 和 `FileWriter`。内部，`FileReader` 使用了 `FileInputStream` 和 `FileOutputStream`，但它们之间的主要区别是 `FileReader` 每次读取两个字节，而 `FileWriter` 每次写入两个字节。让我们使用这两个类来重写我们之前的示例：
 
-```
+```java
 import java.io.*;
+
 public class CopyingFiles {
 
-public static void main(String[] args) throws IOException {
-  FileReader in = null;
+    public static void main(String[] args) throws IOException {
+
+        FileReader in = null;
+        FileWriter outp = null;
+
+        try {
+
+            in = new FileReader("colleagues.txt");
+            outp = new FileWriter("output.txt");
+
+            int ch;
+
+            while ((ch = in.read()) != -1) {
+
+                outp.write(ch);
+
+            }
+
+        } finally {
+
+            if (in != null) {
+
+                in.close();
+
+            }
+
+            if (outp != null) {
+
+                outp.close();
+
+            }
+
+        }
+
+    }
+
+}
 ```
 
-```
-FileWriter outp = null;
-
-try {
-  inp = new FileReader("colleagues.txt");
-  outp = new FileWriter("output.txt");
-
-  int ch;
-  while ((ch = inp.read()) != -1) {
-    outp.write(ch);
-  }
-} finally {
-  if (inp != null) {
-    inp.close();
-  }
-  if (outp != null) {
-    outp.close();
-  }
-}
-}
-}
-```
-
-当你编译并运行代码时，它会将文件 **colleagues.txt** 的内容复制到名为 **output.txt** 的新文件中。
+当你编译并运行代码时，它会将文件 `colleagues.txt` 的内容复制到名为 `output.txt` 的新文件中。
 
 ## 标准流
 
 在每种编程语言中，都提供了一种方式，用户可以通过键盘输入输入，输入显示在计算机屏幕上。我们有三个标准流可以用于此目的：
 
-- **标准输入 (Standard Input)** – 用于通过键盘向用户程序提供数据，并作为标准输入流。它使用 **System.in** 表示。
-- 标准输出 (Standard Output) – 用于通过计算机屏幕输出用户程序产生的数据，并作为标准输出流。它使用 **System.out** 表示。
-- **标准错误 (Standard Error)** - 用于通过计算机屏幕输出用户程序生成的错误数据，并作为标准错误流。它使用 **System.err** 表示。
+- **标准输入 (Standard Input)** – 用于通过键盘向用户程序提供数据，并作为标准输入流。它使用 `System.in` 表示。
+- **标准输出 (Standard Output)** – 用于通过计算机屏幕输出用户程序产生的数据，并作为标准输出流。它使用 `System.out` 表示。
+- **标准错误 (Standard Error)** - 用于通过计算机屏幕输出用户程序生成的错误数据，并作为标准错误流。它使用 `System.err` 表示。
 
 考虑下面给出的示例：
 
-```
+```java
 import java.io.*;
+
 public class ReadConsole {
 
-public static void main(String[] args) throws IOException {
-    InputStreamReader inp = null;
+    public static void main(String[] args) throws IOException {
 
-    try {
-        inp = new InputStreamReader(System.in);
-        System.out.println("Enter 'q' to quit.");
-        char ch;
-        do {
-            ch = (char) inp.read();
-            System.out.print(ch);
-        } while (ch != 'q');
-    } finally {
-        if (inp != null) {
-            inp.close();
+        InputStreamReader inp = null;
+
+        try {
+
+            inp = new InputStreamReader(System.in);
+
+            System.out.println("Enter 'q' to quit.");
+
+            char ch;
+
+            do {
+
+                ch = (char) inp.read();
+
+                System.out.print(ch);
+
+            } while (ch != 'q');
+
+        } finally {
+
+            if (inp != null) {
+
+                inp.close();
+
+            }
+
         }
+
     }
-}
+
 }
 ```
 
-从命令行编译并执行代码。在出现提示时，输入字母 **'q'** 然后按下 **enter** 键。看看发生了什么。
+从命令行编译并执行代码。在出现提示时，输入字母 `'q'` 然后按下 `enter` 键。看看发生了什么。
 
 ```
 C:\Users\admin>javac ReadFromConsole.java
@@ -3165,7 +2774,7 @@ q
 C:\Users\admin>
 ```
 
-你会注意到一旦你按下字母 **'q'** 然后按下 **enter** 键，程序就会退出。
+你会注意到一旦你按下字母 `'q'` 然后按下 `enter` 键，程序就会退出。
 
 你可以再次运行代码并在回车键后继续输入字母。如下所示：
 
@@ -3179,57 +2788,69 @@ C:\Users\admin>
 
 ## 写文件
 
-我们使用 InputStream 从源读取数据，使用 OutputStream 向目标写入数据。读写文件最重要的流是 FileInputStream 和 OutputStream。
+我们使用 `InputStream` 从源读取数据，使用 `OutputStream` 向目标写入数据。读写文件最重要的流是 `FileInputStream` 和 `OutputStream`。
 
-InputStream 帮助我们从文件读取数据。我们可以通过使用 new 关键字创建对象，并访问广泛的构造函数。考虑下面的示例：
+`InputStream` 帮助我们从文件读取数据。我们可以通过使用 `new` 关键字创建对象，并访问广泛的构造函数。考虑下面的示例：
 
-InputStream f = new FileInputStream("java/names");
+`InputStream f = new FileInputStream("java/names");`
 
 在上述示例中，构造函数接受文件名作为字符串来创建文件的输入对象。考虑下一个示例：
 
-```
+```java
 File f = new File("java/names");
 InputStream f = new FileInputStream(f);
 ```
 
-在上述情况下，我们有一个接受文件对象的构造函数，用于创建读取文件的**输入流**。我们首先使用了 **File()** 方法创建一个文件对象。
+在上述情况下，我们有一个接受文件对象的构造函数，用于创建读取文件的**输入流**。我们首先使用了 `File()` 方法创建一个文件对象。
 
-我们使用 FileOutputStream 用于创建文件并向其中写入一些数据。如果在打开之前没有找到文件，流将创建一个文件。
+我们使用 `FileOutputStream` 用于创建文件并向其中写入一些数据。如果在打开之前没有找到文件，流将创建一个文件。
 
-有两个构造函数，我们可以用于创建 **FileOutputStream** 对象。
+有两个构造函数，我们可以用于创建 `FileOutputStream` 对象。
 
 **第一个**构造函数的使用如下所示：
 
-```
-OutputStream f = new FileOutputStream("java/names")
-```
+`OutputStream f = new FileOutputStream("java/names")`
 
 给定的构造函数接受文件名作为字符串创建写入文件的输入流对象。
 
 **第二个**构造函数的使用如下所示：
 
-```
+```java
 File f = new File("java/names");
 OutputStream f = new FileOutputStream(f);
 ```
 
-上述构造函数接受文件对象以创建一个用于写入文件的输出流对象。我们首先调用了 **File()** 方法来创建一个文件对象。以下示例展示了如何使用它们：
+上述构造函数接受文件对象以创建一个用于写入文件的输出流对象。我们首先调用了 `File()` 方法来创建一个文件对象。以下示例展示了如何使用它们：
 
-```
+```java
 import java.io.*;
+
 public class FileStreamExample {
 
     public static void main(String args[]) {
 
-```
+        try {
 
+            byte bWrite[] = {3};
 
+            // 创建文件输出流
+            FileOutputStream fos = new FileOutputStream("myfile.txt");
 
+            // 写入字节数组
+            fos.write(bWrite);
 
+            // 关闭流
+            fos.close();
 
-```java
-try {
-    byte bWrite[] = {3
+        } catch (IOException e) {
+
+            e.printStackTrace();
+
+        }
+
+    }
+
+}
 ```
 
 编译并运行该代码。它将生成一个名为 `myfile.txt` 的文件并将指定的数字写入该文件。请注意，这些数字将使用二进制格式写入。你在屏幕上看到的输出也是二进制格式的。
@@ -3246,29 +2867,47 @@ Java 中有几个类可以帮助我们理解导航的概念。
 import java.io.File;
 
 public class FileExample {
+
     public static void main(String[] args) {
+
         File f = null;
+
         String[] sstrs = {"file1.txt","file2.txt"};
+
         try {
+
             // 遍历字符串数组中的每个字符串
+
             for(String s:sstrs) {
+
                 // 创建新文件
+
                 f = new File(s);
 
                 // 检查是否为可执行文件
+
                 boolean bool = f.canExecute();
 
                 // 获取绝对路径
+
                 String a = f.getAbsolutePath();
 
                 // 返回绝对路径
+
                 System.out.println(" executable: "+ bool);
+
             }
+
         } catch (Exception ex) {
+
             // 当发生 I/O 错误时
+
             ex.printStackTrace();
+
         }
+
     }
+
 }
 ```
 
@@ -3278,39 +2917,55 @@ public class FileExample {
 
 这是一个继承自 `InputStream` 类的 Java 类。我们用它来读取字符流。该类还带有许多构造函数，我们可以用于创建创建所需的对象。以下是该类提供的构造函数：
 
-- **FileReader(File file)-** 这是一个用于在提供要读取的文件时创建新读取器的构造函数。
-- **FileReader(Descriptor fd)-** 这是一个用于在提供要读取的文件描述符（FileDescriptor）时创建新 `FileReader` 的构造函数。
-- **FileReader(String fileName) -** 这是一个用于在提供要读取的文件名时创建新 `FileReader` 的构造函数。
+- `FileReader(File file)` - 这是一个用于在提供要读取的文件时创建新读取器的构造函数。
+- `FileReader(Descriptor fd)` - 这是一个用于在提供要读取的文件描述符（`FileDescriptor`）时创建新 `FileReader` 的构造函数。
+- `FileReader(String fileName)` - 这是一个用于在提供要读取的文件名时创建新 `FileReader` 的构造函数。
 
 下面的示例展示了如何使用该类：
 
 ```java
 import java.io.*;
+
 public class ReadExample {
+
     public static void main(String[] args) throws IOException {
+
         File f = new File("hello.txt");
 
         // 创建文件
+
         f.createNewFile();
 
         // 创建一个 FileWriter 对象
+
         FileWriter wr = new FileWriter(f);
 
         // 将内容写入文件
+
         wr.write('\nA Java\n great\n example!\n');
+
         wr.flush();
+
         wr.close();
 
         // 创建一个 FileReader 对象
+
         FileReader fr = new FileReader(f);
+
         char [] ch = new char[50];
+
         fr.read(ch); // 将内容读到数组
 
         for(char c : ch) {
+
             System.out.print(c); // 打印字符
+
         }
+
         fr.close();
+
     }
+
 }
 ```
 
@@ -3329,46 +2984,57 @@ C:\Users\admin>
 
 这是一个继承自 `OutputStream` 类的 Java 类。当我们需要写入字符流时，使用该类。该类带有许多可以用于创建对象的构造函数。它们包括：
 
-- **FileWriter(File file)-** 这是一个在提供 File 对象时创建 `FileWriter` 的构造函数。
-- **FileWriter(File file, boolean append)-** 这是一个在提供 File 对象并提供一个布尔值（显示是否追加现有数据）时创建 `FileWriter` 的构造函数。
-- **FileWriter(FileDescriptor fd)-** 这是一个创建与给定文件描述符关联的 `FileWriter` 的构造函数。
-- **FileWriter(String fileName)-** 此构造函数在提供文件名时创建 `FileWriter`。
-- **FileWriter(String fileName, boolean append)-** 此构造函数在提供文件名并提供一个布尔值（显示是否追加写入的数据）时创建 `FileWriter`。
+- `FileWriter(File file)` - 这是一个在提供 `File` 对象时创建 `FileWriter` 的构造函数。
+- `FileWriter(File file, boolean append)` - 这是一个在提供 `File` 对象并提供一个布尔值（显示是否追加现有数据）时创建 `FileWriter` 的构造函数。
+- `FileWriter(FileDescriptor fd)` - 这是一个创建与给定文件描述符关联的 `FileWriter` 的构造函数。
+- `FileWriter(String fileName)` - 此构造函数在提供文件名时创建 `FileWriter`。
+- `FileWriter(String fileName, boolean append)` - 此构造函数在提供文件名并提供一个布尔值（显示是否追加写入的数据）时创建 `FileWriter`。
 
 这里有一个示例如，展示了如何使用这个 Java 类的用法：
 
 ```java
 import java.io.*;
+
 public class FileReadExample {
 
     public static void main(String args[]) throws IOException {
+
         File f = new File("hello.txt");
 
         // 创建文件
+
         f.createNewFile();
+
+        // 创建一个 FileWriter 对象
+
+        FileWriter wr = new FileWriter(f);
+
+        // 将内容写入文件
+
+        wr.write("nJava\ngreat\nexample\n");
+
+        wr.flush();
+
+        wr.close();
+
+        // 创建一个 FileReader
+
+        FileReader fr = new FileReader(f);
+
+        char[] ch = new char[50];
+
+        fr.read(ch); // 将内容读到数组
+
+        for(char c : ch) {
+
+            System.out.print(c); // 打印字符
+
+            fr.close();
+
+        }
+
     }
-}
-```
 
-```java
-// 创建一个 FileWriter 对象
-FileWriter wr = new FileWriter(f);
-
-// 将内容写入文件
-wr.write("nJava\ngreat\nexample\n");
-wr.flush();
-wr.close();
-```
-
-```java
-// 创建一个 FileReader
-FileReader fr = new FileReader(f);
-char[] ch = new char[50];
-fr.read(ch); // 将内容读到数组
-
-for(char c : ch) {
-    System.out.print(c); // 打印字符
-    fr.close();
 }
 ```
 
@@ -3378,31 +3044,49 @@ for(char c : ch) {
 
 ```java
 import java.io.File;
+
 public class ReadDirectory {
 
     public static void main(String[] args) {
+
         File f = null;
+
         String[] paths;
 
         try {
+
             // 创建一个新的文件对象
+
             f = new File("/tmp");
 
             // 获取文件列表数组
+
             paths = f.list();
 
             // 遍历路径数组中的每一项
+
             for(String path:paths) {
+
                 // 输出文件名
+
                 System.out.println(path);
+
             }
+
         } catch (Exception ex) {
+
             // 当发生任何错误时
+
             ex.printStackTrace();
+
         }
+
     }
+
 }
 ```
+
+
 
 ## 异常处理
 
@@ -3427,7 +3111,7 @@ public class ExceptionExample {
 该代码在编译时将产生以下异常：
 
 ```
-C:\Users\admin>javaExceptionExample.java
+C:\Users\admin>java ExceptionExample.java
 ExceptionExample.java:8: error: unexpected exception FileNotFoundException; must be caught or declared to be thrown
 FileReader fr = new FileReader(f);
 error
@@ -3449,18 +3133,15 @@ public class ArrayException {
 
 在上面的示例中，我们创建了一个包含 4 个元素的数组，但我们正尝试访问索引为 6 的元素。这将引发 `ArrayIndexOutOfBoundsException` 异常。
 
-错误和异常之间存在区别。错误是发生的问题，且超出了程序员或用户的控制。错误通常是被忽略的代码，因为你对它们无为力。一个很好的例子是发生在栈溢出（stack overflow）之后的的错误。错误在编译期间会被忽略。
-
-
-
+错误和异常之间存在区别。错误是发生的问题，且超出了程序员或用户的控制。错误通常是被忽略的代码，因为你对它们无能为力。一个很好的例子是发生在栈溢出（stack overflow）之后的错误。错误在编译期间会被忽略。
 
 在 Java 中捕获异常，我们结合使用了 `try` 和 `catch` 关键字。将可能产生错误的代码用 `try/catch` 块包起来。放在 `try/catch` 块中的代码被称为受保护代码。以下是该语句的语法：
 
-```
+```java
 try {
-  // the protected code
+    // the protected code
 } catch (ExceptionName ex1) {
-  // the catch block
+    // the catch block
 }
 ```
 
@@ -3472,15 +3153,15 @@ try {
 import java.io.*;
 
 public class ArrayException {
-  public static void main(String[] args) {
-    try {
-      int x[] = new int[3];
-      System.out.println("Access element four : " + x[4]);
-    } catch (ArrayIndexOutOfBoundsException ex) {
-      System.out.println("Exception thrown : " + ex);
+    public static void main(String[] args) {
+        try {
+            int x[] = new int[3];
+            System.out.println("Access element four : " + x[4]);
+        } catch (ArrayIndexOutOfBoundsException ex) {
+            System.out.println("Exception thrown : " + ex);
+        }
+        System.out.println("Outside the block");
     }
-    System.out.println("Outside the block");
-  }
 }
 ```
 
@@ -3497,45 +3178,46 @@ Outside the block
 
 ```java
 try {
-  // the protected code
+    // the protected code
 } catch (ExceptionType1 ex1) {
-  // A Catch block
+    // A Catch block
 } catch (ExceptionType2 ex2) {
-  // A Catch block
+    // A Catch block
 } catch (ExceptionType3 ex3) {
-  // A Catch block
+    // A Catch block
 }
 ```
 
-在上面的语法中，我们创建了三个 `catch` 块和一个 `try` 块。然而，对于单个 `try` 块可以使用任意数量的 `catch` 块。当受保护代码中发生异常时，它将抛抛给第一个 `catch` 块。如果异常的数据类型与 `ExceptionType` 匹配，则会在那里被捕获。如果没有发生这种情况，异常将抛给第二个 `catch` 块。这将一直持续到代码中所有的 `catch` 块。如果异常未被捕获，方法将停止执行。
+在上面的语法中，我们创建了三个 `catch` 块和一个 `try` 块。然而，对于单个 `try` 块可以使用任意数量的 `catch` 块。当受保护代码中发生异常时，它将抛给第一个 `catch` 块。如果异常的数据类型与 `ExceptionType` 匹配，则会在那里被捕获。如果没有发生这种情况，异常将抛给第二个 `catch` 块。这将一直持续到代码中所有的 `catch` 块。如果异常未被捕获，方法将停止执行。
 
 以下是一个显示如何使用多个 `catch` 语句的代码示例：
 
 ```java
 try {
-  f = new FileInputStream(file_Name);
-  x = (byte) f.read();
+    f = new FileInputStream(file_Name);
+    x = (byte) f.read();
 } catch (IOException io) {
-  io.printStackTrace();
-  return -1;
-} catch (FileNotFoundException ex) // Not valid! {
-  ex.printStackTrace();
-  return -1;
+    io.printStackTrace();
+    return -1;
+} catch (FileNotFoundException ex) { // Not valid!
+    ex.printStackTrace();
+    return -1;
 }
 ```
 
 ## Throw/Throws 关键字
 
-对于不处理受检异常的方法，必须通过使用 **throws 关键字** 进行声明。该关键字应该添加到方法签的末尾。
+对于不处理受检异常的方法，必须通过使用 `throws` 关键字进行声明。该关键字应该添加到方法签的末尾。
 
 可以使用 `throw` 关键字抛出异常，该异常可以是新实例化的，也可以是你刚刚捕获的异常。
 
-了解并标记 **throw 关键字** 和 **throws 关键字**之间的区别是非常重要的。我们使用 **throws 关键字** 来推迟已受检异常的处理，而 **throw 关键字** 用于显式地调用异常。
+了解并标记 `throw` 关键字和 `throws` 关键字之间的区别是非常重要的。我们使用 `throws` 关键字来推迟已受检异常的处理，而 `throw` 关键字用于显式地调用异常。
 
 这是一个示例：
 
 ```java
 import java.io.*;
+
 public class ExceptionTest {
     public void save(double val) throws RemoteException {
         // Implement the method
@@ -3545,12 +3227,13 @@ public class ExceptionTest {
 }
 ```
 
-在上面的示例中，我们有一个 `save()` 方法，它声明了它 **throws a RemoteException**。一个方法可以声明它将 **throw** 许多异常，此时你应该使用逗号 (,) 来分隔这些异常。
+在上面的示例中，我们有一个 `save()` 方法，它声明了它 `throws a RemoteException`。一个方法可以声明它将 `throw` 许多异常，此时你应该使用逗号 (,) 来分隔这些异常。
 
 考虑下面的示例，它展示了如何实现这一点：
 
 ```java
 import java.io.*;
+
 public class ExceptionTest {
     public void save(double val) throws RemoteException, InadequateFundsException {
         // Implement the method
@@ -3561,18 +3244,18 @@ public class ExceptionTest {
 
 ## Finally 语句
 
-**finally** 块位于 `try` 或 `catch` 块之后。无论是否发生异常，此块始终会被执行。`finally` 语句为你提供了一种运行清理类型语句的好方法，这些语句无论你的受保护代码内部发生了什么，都需要执行。它应该被添加到 **catch 块** 的末尾，如下语法所示：
+`finally` 块位于 `try` 或 `catch` 块之后。无论是否发生异常，此块始终会被执行。`finally` 语句为你提供了一种运行清理类型语句的好方法，这些语句无论你的受保护代码内部发生了什么，都需要执行。它应该被添加到 `catch` 块的末尾，如下语法所示：
 
 ```java
 try {
- //The protected code
+    // The protected code
 } catch (Exception1 ex1) {
- // A Catch block
+    // A Catch block
 } catch (ExceptionType2 ex2) {
 } catch (ExceptionType3 ex3) {
- // A Catch block
+    // A Catch block
 } finally {
- // The finally block to always execute.
+    // The finally block to always execute.
 }
 ```
 
@@ -3580,17 +3263,18 @@ try {
 
 ```java
 public class ExceptionTest {
- public static void main(String[] args[]) {
- int x[] = new int[3];
- try {
- System.out.println("Access element four :" + x[4]);
-} catch (ArrayIndexOutOfBoundsException ex) {
- System.out.println("Exception thrown :" + ex);
-} finally {
- x[0] = 10;
- System.out.println("Element at index 0 is :" + x[0]);
- System.out.println("The finally statement has been executed");
-}
+    public static void main(String[] args[]) {
+        int x[] = new int[3];
+        try {
+            System.out.println("Access element four :" + x[4]);
+        } catch (ArrayIndexOutOfBoundsException ex) {
+            System.out.println("Exception thrown :" + ex);
+        } finally {
+            x[0] = 10;
+            System.out.println("Element at index 0 is :" + x[0]);
+            System.out.println("The finally statement has been executed");
+        }
+    }
 }
 ```
 
@@ -3627,18 +3311,15 @@ import java.io.*;
 public class InadequateFundsException extends Exception {
     private double deposit;
 
-public InadequateFundsException(double deposit) {
-    this.deposit = deposit;
-}
+    public InadequateFundsException(double deposit) {
+        this.deposit = deposit;
+    }
 
-public double getDeposit() {
-    return deposit;
-}
+    public double getDeposit() {
+        return deposit;
+    }
 }
 ```
-
-
-
 
 ```java
 public class AccountCheck {
@@ -3654,7 +3335,7 @@ public class AccountCheck {
     }
 
     public void withdraw(double deposit) throws InadequateFundsException {
-        if(deposit <= account_balance) {
+        if (deposit <= account_balance) {
             account_balance = deposit;
         } else {
             double needs = deposit - account_balance;
@@ -3676,17 +3357,16 @@ public class AccountCheck {
 
 ```java
 public class BankExample {
-    public static void main(String [] args) {
+    public static void main(String[] args) {
         AccountCheck c = new AccountCheck(101);
         System.out.println("Depositing $1000...");
         c.save(1000.00);
-
         try {
             System.out.println("\nWithdrawing $200...");
             c.withdraw(200.00);
             System.out.println("\nWithdrawing $1100...");
             c.withdraw(1100.00);
-        } catch (inadequateFundsException ex) {
+        } catch (InadequateFundsException ex) {
             System.out.println("Sorry, your account is short $" + ex.getDeposit());
             ex.printStackTrace();
         }
@@ -3698,21 +3378,21 @@ public class BankExample {
 
 # 18-Java AWT
 
-AWT 代表抽象窗口工具包（Abstract Window kit），它是我们用于在 Java 中开发基于窗口或 GUI 应用程序的 API。Java AWT 的组件是平台无关的，这意味着这些组件根据操作系统进行显示。该 API 是重量级的（heavyweight），意味着它的组件使用了操作系统的资源。
+AWT 代表抽象窗口工具包（Abstract Window Toolkit），它是我们用于在 Java 中开发基于窗口或 GUI 应用程序的 API。Java AWT 的组件是平台无关的，这意味着这些组件根据操作系统进行显示。该 API 是重量级的（heavyweight），意味着它的组件使用了操作系统的资源。
 
 `java.awt` 包包含许多用于 AWT API 的类，如 `TextField`、`Label`、`CheckBox`、`TextArea`、`Choice` 和 `List`。让我们讨论其中一些重要的组件：
 
-- Container（容器）-这是一种能够容纳文本字段、标签、按钮、文本区域等组件的 AWT 组件。它由 `Frame`、`Panel` 和 `Dialog` 等类扩展。
-- Window（窗口）-这是一个没有菜单栏和边框的容器。要创建一个窗口，请使用 `dialog`、`frame` 或另一个 `window`。
-- Panel（面板）-这是一个没有菜单栏和标题栏的容器。你可以向它添加文本字段和按钮等其他组件。
-- Frame（帧）-这是一个带有标题栏的容器，并可能有菜单栏。你可以向它添加文本字段和按钮等其他组件。
+- **Container（容器）**：这是一种能够容纳文本字段、标签、按钮、文本区域等组件的 AWT 组件。它由 `Frame`、`Panel` 和 `Dialog` 等类扩展。
+- **Window（窗口）**：这是一个没有菜单栏和边框的容器。要创建一个窗口，请使用 `dialog`、`frame` 或另一个 `window`。
+- **Panel（面板）**：这是一个没有菜单栏和标题栏的容器。你可以向它添加文本字段和按钮等其他组件。
+- **Frame（帧）**：这是一个带有标题栏的容器，并可能有菜单栏。你可以向它添加文本字段和按钮等其他组件。
 
 该类带有不同的方法，最重要的包括以下：
 
-- `public void add(Component c)`-此方法向组件中添加组件。
-- `public void setState(int width, int height)`-此方法设置组件的尺寸，包括宽度和高度。
-- `public void setLayout(LayoutManager m)`-此方法定义组件的布局管理器。
-- `public void setVisible(boolean status)`-这是我们用来更改组件可见性的方法。它的默认设置为 `false`。
+- `public void add(Component c)`：此方法向组件中添加组件。
+- `public void setSize(int width, int height)`：此方法设置组件的尺寸，包括宽度和高度。
+- `public void setLayout(LayoutManager m)`：此方法定义组件的布局管理器。
+- `public void setVisible(boolean status)`：这是我们用来更改组件可见性的方法。它的默认设置为 `false`。
 
 我们需要创建一个 AWT 帧。为此我们需要一个帧。有两种方式可以创建：
 
@@ -3723,18 +3403,29 @@ AWT 代表抽象窗口工具包（Abstract Window kit），它是我们用于在
 
 ```java
 import java.awt.*;
+
 public class MyGui extends Frame {
     MyGui() {
-        Button btn=new Button("click Here");
-        btn.setBounds(30,100,80,30);//设置按钮位置
-        add(btn);//将按钮添加到帧中
-        setSize(300,300);//设置帧的大小，宽度300，高度300
-        setLayout(null);//不使用布局管理器
-        setVisible(true);//使帧可见，默认情况下它是不可见的
+        Button btn = new Button("click Here");
     }
-    public static void main(String[] args[]) {
-        MyGui mg=new MyGui();
-    }
+}
+```
+
+
+
+## AWT 示例代码
+
+```java
+btn.setBounds(30, 100, 80, 30); // 设置按钮位置
+add(btn); // 将按钮添加到帧中
+setSize(300, 300); // 设置帧的大小，宽度300，高度300
+setLayout(null); // 不使用布局管理器
+setVisible(true); // 使帧可见，默认情况下它是不可见的
+}
+
+public static void main(String[] args[]) {
+    MyGui mg = new MyGui();
+}
 }
 ```
 
@@ -3748,18 +3439,20 @@ public class MyGui extends Frame {
 
 ```java
 import java.awt.*;
+
 public class MyGui {
     MyGui() {
-        Frame fr=new Frame();
-        Button btn=new Button("click Here");
-        btn.setBounds(30,50,80,30);
+        Frame fr = new Frame();
+        Button btn = new Button("click Here");
+        btn.setBounds(30, 50, 80, 30);
         fr.add(btn);
-        fr.setSize(300,300);
+        fr.setSize(300, 300);
         fr.setLayout(null);
         fr.setVisible(true);
     }
+
     public static void main(String[] args[]) {
-        MyGui mg=new MyGui();
+        MyGui mg = new MyGui();
     }
 }
 ```
@@ -3770,28 +3463,32 @@ public class MyGui {
 
 ## 处理事件
 
-事件指的是对象的 own改变。`java.awtevent` 提供了许多处理事件的类。要处理事件，必须在组件上注册监听器。事件示例包括鼠标点击、按键等。要处理事件，你需要创建一个实现监听器接口的类并在组件上注册。这是我们的第一个示例：
+事件指的是对象状态的改变。`java.awt.event` 提供了许多处理事件的类。要处理事件，必须在组件上注册监听器。事件示例包括鼠标点击、按键等。要处理事件，你需要创建一个实现监听器接口的类并在组件上注册。这是我们的第一个示例：
 
 ```java
 import java.awt.*;
 import java.awt.event.*;
+
 class MyGui extends Frame implements ActionListener {
     TextField txt;
+
     MyGui() {
         txt = new TextField();
-        txt.setBounds(60,50,170,20);
-        Button btn=new Button("click Here");
-        btn.setBounds(100,120,80,30);
+        txt.setBounds(60, 50, 170, 20);
+        Button btn = new Button("click Here");
+        btn.setBounds(100, 120, 80, 30);
         add(txt);
         add(btn);
-        setSize(300,300);
+        setSize(300, 300);
         setLayout(null);
         setVisible(true);
         btn.addActionListener(this);
     }
+
     public void actionPerformed(ActionEvent ev) {
         txt.setText("This is a message");
     }
+
     public static void main(String[] args[]) {
         new MyGui();
     }
@@ -3803,16 +3500,18 @@ class MyGui extends Frame implements ActionListener {
 ```java
 import java.awt.*;
 import java.awt.event.*;
+
 class MyGui extends Frame {
     TextField txt;
+
     MyGui() {
         txt = new TextField();
-        txt.setBounds(60,50,170,20);
-        Button btn=new Button("click Here");
-        btn.setBounds(50,120,80,30);
+        txt.setBounds(60, 50, 170, 20);
+        Button btn = new Button("click Here");
+        btn.setBounds(50, 120, 80, 30);
         add(txt);
         add(btn);
-        setSize(300,300);
+        setSize(300, 300);
         setLayout(null);
         setVisible(true);
         btn.addActionListener(new ActionListener() {
@@ -3821,13 +3520,12 @@ class MyGui extends Frame {
             }
         });
     }
+
     public static void main(String[] args[]) {
         new MyGui();
     }
 }
 ```
-
-
 
 ```java
 txtf.setText("This is a message");
@@ -3835,32 +3533,33 @@ txtf.setText("This is a message");
 );
 add(btn);
 add(txtf);
-setSize(300,200);
+setSize(300, 200);
 setLayout(null);
 setVisible(true);
 }
-public static void main(String[] args){
-new MyEvent3();
+public static void main(String[] args) {
+    new MyEvent3();
 }
 }
 ```
 
 ## AWT 按钮
 
-我们使用 `Button` 类创建一个带有标签的按钮，这可以在任何平台上实现。也可以添加动作（Action），以便按钮在被点击时执行某些操作。以下显示了如何使用该类来创建一个按钮：
+我们使用 `Button` 类创建一个带有标签的按钮，这可以在任何平台上实现。也可以添加动作，以便按钮在被点击时执行某些操作。以下显示了如何使用该类来创建一个按钮：
 
 ```java
 import java.awt.*;
+
 public class MyButton {
-public static void main(String[] args) {
-Frame fr=new Frame("My Button");
-Button btn=new Button("Click Here");
-btn.setBounds(50,100,80,30);
-fr.add(btn);
-fr.setSize(300,400);
-fr.setLayout(null);
-fr.setVisible(true);
-}
+    public static void main(String[] args) {
+        Frame fr = new Frame("My Button");
+        Button btn = new Button("Click Here");
+        btn.setBounds(50, 100, 80, 30);
+        fr.add(btn);
+        fr.setSize(300, 400);
+        fr.setLayout(null);
+        fr.setVisible(true);
+    }
 }
 ```
 
@@ -3873,24 +3572,25 @@ fr.setVisible(true);
 ```java
 import java.awt.*;
 import java.awt.event.*;
+
 public class MyButton {
-public static void main(String[] args) {
-    Frame fr=new Frame("My Button");
-    final TextField txtf=new TextField();
-    txtf.setBounds(50,50,150,20);
-    Button btn=new Button("Click Here");
-    btn.setBounds(50,100,60,30);
-    btn.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent ev) {
-            txtf.setText("This is a message");
-        }
-    });
-fr.add(btn);
-fr.add(txtf);
-fr.setSize(400,400);
-fr.setLayout(null);
-fr.setVisible(true);
-}
+    public static void main(String[] args) {
+        Frame fr = new Frame("My Button");
+        final TextField txtf = new TextField();
+        txtf.setBounds(50, 50, 150, 20);
+        Button btn = new Button("Click Here");
+        btn.setBounds(50, 100, 60, 30);
+        btn.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ev) {
+                txtf.setText("This is a message");
+            }
+        });
+        fr.add(btn);
+        fr.add(txtf);
+        fr.setSize(400, 400);
+        fr.setLayout(null);
+        fr.setVisible(true);
+    }
 }
 ```
 
@@ -3900,20 +3600,21 @@ fr.setVisible(true);
 
 ## AWT 标签
 
-标签（Label）对象为我们提供了一种向容器添加文本的方法。我们使用它来显示一行只读的文本。应用程序可以编辑此文本，但用户可能无法直接更改。以下示例显示了如何在 Java 中创建标签：
+标签（`Label`）对象为我们提供了一种向容器添加文本的方法。我们使用它来显示一行只读的文本。应用程序可以编辑此文本，但用户可能无法直接更改。以下示例显示了如何在 Java 中创建标签：
 
 ```java
 import java.awt.*;
+
 class MyLabel {
-    public static void main(String args[]){
-        Frame fr=new Frame("My Label");
-        Label lab1=new Label("Label 1");
-        lab1.setBounds(50,100,100,30);
-        Label lab2=new Label("Label 2");
-        lab2.setBounds(50,150,100,30);
+    public static void main(String args[]) {
+        Frame fr = new Frame("My Label");
+        Label lab1 = new Label("Label 1");
+        lab1.setBounds(50, 100, 100, 30);
+        Label lab2 = new Label("Label 2");
+        lab2.setBounds(50, 150, 100, 30);
         fr.add(lab1);
         fr.add(lab2);
-        fr.setSize(400,400);
+        fr.setSize(400, 400);
         fr.setLayout(null);
         fr.setVisible(true);
     }
@@ -3929,37 +3630,41 @@ class MyLabel {
 ```java
 import java.awt.*;
 import java.awt.event.*;
+
 public class MyLabel extends Frame implements ActionListener {
-TextField txtf;
-Label lbl;
-Button btn;
-MyLabel2(){
-    txtf=new TextField();
-    txtf.setBounds(50,50,150,20);
-    lbl=new Label();
-    lab.setBounds(50,100,250,20);
-    btn=new Button("Find IP");
-    btn.setBounds(50,150,60,30);
-    btn.addActionListener(this);
-    add(btn);
-    add(txtf);
-    add(lbl);
-    setSize(400,400);
-    setLayout(null);
-    setVisible(true);
-}
-public void actionPerformed(ActionEvent ev) { 
-    try{
-        String host=txtf.getText();
-        String ip=java.net.Inet.getHostByName(host).getHostAddress();
-        lab.setText("IP of host is "+ip);
-    }catch(Exception ex) {
-        System.out.println(ex);
+    TextField txtf;
+    Label lbl;
+    Button btn;
+
+    MyLabel() {
+        txtf = new TextField();
+        txtf.setBounds(50, 50, 150, 20);
+        lbl = new Label();
+        lbl.setBounds(50, 100, 250, 20);
+        btn = new Button("Find IP");
+        btn.setBounds(50, 150, 60, 30);
+        btn.addActionListener(this);
+        add(btn);
+        add(txtf);
+        add(lbl);
+        setSize(400, 400);
+        setLayout(null);
+        setVisible(true);
     }
-}
-public static void main(String[] args) {
-    new MyLabel();
-}
+
+    public void actionPerformed(ActionEvent ev) {
+        try {
+            String host = txtf.getText();
+            String ip = java.net.InetAddress.getByName(host).getHostAddress();
+            lbl.setText("IP of host is " + ip);
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+    }
+
+    public static void main(String[] args) {
+        new MyLabel();
+    }
 }
 ```
 
@@ -3969,25 +3674,26 @@ public static void main(String[] args) {
 
 ## AWT 文本字段
 
-这是一个允许单行文本的组件，且文本是可编辑的。它继承自 *TextComponent* 类。
+这是一个允许单行文本的组件，且文本是可编辑的。它继承自 `TextComponent` 类。
 
 可以如下所示创建它：
 
 ```java
 import java.awt.*;
+
 class MyTextField {
-public static void main(String args[]) {
-    Frame fr=new Frame("My TextField");
-    TextField txtf1,txtf2;
-    txtf1=new TextField("Welcome to Java");
-    txtf1.setBounds(50,100,200,30);
-    txtf2=new TextField("Java is a great Language");
-    txtf2.setBounds(50,150,200,30);
-    fr.add(txtf1);
-    fr.add(txtf2);
-    fr.setSize(400,400);
-    fr.setVisible(true);
-}
+    public static void main(String args[]) {
+        Frame fr = new Frame("My TextField");
+        TextField txtf1, txtf2;
+        txtf1 = new TextField("Welcome to Java");
+        txtf1.setBounds(50, 100, 200, 30);
+        txtf2 = new TextField("Java is a great Language");
+        txtf2.setBounds(50, 150, 200, 30);
+        fr.add(txtf1);
+        fr.add(txtf2);
+        fr.setSize(400, 400);
+        fr.setVisible(true);
+    }
 }
 ```
 
@@ -3995,78 +3701,77 @@ public static void main(String args[]) {
 
 ![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_143_0.png)
 
-我们创建了两个带有文本的文本字段。尝试一下，你会发现这些文本字段是可以编辑的。我们可以为 textField 添加动作监听器。让我们通过示例来演示这一点：
+我们创建了两个带有文本的文本字段。尝试一下，你会发现这些文本字段是可以编辑的。我们可以为 `TextField` 添加动作监听器。让我们通过示例来演示这一点：
 
 ```java
 import java.awt.*;
 import java.awt.event.*;
+
 public class MyTextField {
-TextField txtf1,txtf2,txtf3;
-Button btn1,btn2;
-MyTextField2(){
-    txtf1=new TextField();
-    txtf1.setBounds(50,50,150,20);
-    txtf2=new TextField();
-    txtf2.setBounds(50,100,150,20);
-    txtf3=new TextField();
-    txtf3.setBounds(50,150,150,20);
-    btn1=new Button("+");
-    btn1.setBounds(50,200,50,30);
-    btn2=new Button("*");
-    btn2.setBounds(100,200,50,30);
-    btn1.addActionListener(this);
-    btn2.addActionListener(this);
-    add(txtf1);
-    add(txtf2);
-    add(txtf3);
-    add(btn1);
-    add(btn2);
-    setLayout(null);
-    setVisible(true);
-}
-public void actionPerformed(ActionEvent ev){
-    int s1=Integer.parseInt(txtf1.getText());
-    int s2=Integer.parseInt(txtf2.getText());
-    if(ev.getSource()==btn1){
-        txtf3.setText(String.valueOf(s1+s2));
+    TextField txtf1, txtf2, txtf3;
+    Button btn1, btn2;
+
+    MyTextField() {
+        txtf1 = new TextField();
+        txtf1.setBounds(50, 50, 150, 20);
+        txtf2 = new TextField();
+        txtf2.setBounds(50, 100, 150, 20);
+        txtf3 = new TextField();
+        txtf3.setBounds(50, 150, 150, 20);
+        btn1 = new Button("+");
+        btn1.setBounds(50, 200, 50, 30);
+        btn2 = new Button("*");
+        btn2.setBounds(100, 200, 50, 30);
+        btn1.addActionListener(this);
+        btn2.addActionListener(this);
+        add(txtf1);
+        add(txtf2);
+        add(txtf3);
+        add(btn1);
+        add(btn2);
+        setLayout(null);
+        setVisible(true);
     }
-    if(ev.getSource()==btn2){
-        txtf3.setText(String.valueOf(s1*s2));
+
+    public void actionPerformed(ActionEvent ev) {
+        int s1 = Integer.parseInt(txtf1.getText());
+        int s2 = Integer.parseInt(txtf2.getText());
+        if (ev.getSource() == btn1) {
+            txtf3.setText(String.valueOf(s1 + s2));
+        }
+        if (ev.getSource() == btn2) {
+            txtf3.setText(String.valueOf(s1 * s2));
+        }
     }
-}
-public static void main(String[] args){
-    new MyTextField2();
-}
+
+    public static void main(String[] args) {
+        new MyTextField();
+    }
 }
 ```
-*(注：由于提供的原文文本在 TextField 之后存在逻辑断层和重复，此处翻译已根据 AWT 常见代码结构进行了对齐处理，以确保逻辑连贯)*
 
----
-**由于您提供的待翻译文本在 AWT TextField 之后出现了大量的乱码或重复的文本块，我已根据上下文逻辑翻译了核心功能部分。**
+## AWT 复选框
 
-
-
-
-点击后，其状态将根据当前状态切换为开启或关闭。
-以下是一个示例：
+点击后，其状态将根据当前状态切换为开启或关闭。以下是一个示例：
 
 ```java
 import java.awt.*;
+
 public class MyCheckbox {
     Frame fr = new Frame("My Checkbox");
     Checkbox cb1 = new Checkbox("Yes");
-    cb1.setBounds(100,100,50,50);
+    cb1.setBounds(100, 100, 50, 50);
     Checkbox cb2 = new Checkbox("No", true);
-    cb2.setBounds(100,150,50,50);
+    cb2.setBounds(100, 150, 50, 50);
     fr.add(cb1);
     fr.add(cb2);
-    fr.setSize(450,450);
+    fr.setSize(450, 450);
     fr.setLayout(null);
     fr.setVisible(true);
-    }
-    public static void main(String args[]) {
+}
+
+public static void main(String args[]) {
     new MyCheckbox();
-    }
 }
 ```
 
@@ -4081,62 +3786,34 @@ MyCheckbox2() {
     Frame fr = new Frame("My Checkbox");
     final Label lab = new Label();
     lab.setAlignment(Label.CENTER);
-    lab.setSize(400,100);
-    Checkbox cb1 = new Checkbox("yes");
-cb1.setBounds(100,100,50,50);
-    Checkbox cb2 = new Checkbox("No");
-    cb2.setBounds(100,150,50,50);
-    fr.add(cb1);
-    fr.add(cb2);
-    fr.add(lab);
-    cb1.addItemListener(new ItemListener() {
-        public void itemChanged(ItemEvent ev) {
-            lab.setText("Yes Checkbox: " + (ev.getStateChange()==1? "checked":"unchecked"));
-        }
-    });
-    cb2.addItemListener(new ItemListener() {
-        public void itemChanged(ItemEvent ev) {
-            lab.setText("No Checkbox: " + (ev.getStateChange()==1? "checked":"unchecked"));
-        }
-    });
-    fr.setSize(400,400);
-    fr.setLayout(null);
-    fr.setVisible(true);
-    public static void main(String[] args) {
-    new MyCheckbox2();
-    }
-}
+    lab.setSize(400, 100);
 ```
 
-运行代码，你将得到一个带有 Yes 和 No 复选框的界面。
 
-尝试勾选和取消勾选不同的文本框，查看你在标签上获得的文本：
 
-![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_151_0.png)
-
-## AWT CheckboxGroup
+# AWT CheckboxGroup
 
 我们通常创建一个 `CheckboxGroup` 类的对象，来帮助我们把许多复选框分组在一起。它继承自 `Object` 类。每组应该只有一个复选框处于“开启”状态，而组中的其他复选框则处于“关闭”状态。以下是一个示例：
 
 ```java
 import java.awt.*;
-public class MyCheckboxGroup
-{
-    Frame fr = new Frame('My Checkbox');
+
+public class MyCheckboxGroup {
+    Frame fr = new Frame("My Checkbox");
     CheckboxGroup cg = new CheckboxGroup();
     Checkbox cb1 = new Checkbox("yes", cg, false);
-    cb1.setBounds(100,100, 50,50);
+    cb1.setBounds(100, 100, 50, 50);
     Checkbox cb2 = new Checkbox("No", cg, true);
-    cb2.setBounds(100,150, 50,50);
+    cb2.setBounds(100, 150, 50, 50);
     fr.add(cb1);
     fr.add(cb2);
-    fr.setSize(400,400);
+    fr.setSize(400, 400);
     fr.setLayout(null);
     fr.setVisible(true);
-    }
-    public static void main(String args[]) {
+}
+
+public static void main(String args[]) {
     new MyCheckboxGroup();
-    }
 }
 ```
 
@@ -4149,21 +3826,22 @@ public class MyCheckboxGroup
 ```java
 import java.awt.*;
 import java.awt.event.*;
+
 public class MyCheckbox2 {
     MyCheckbox2() {
         Frame fr = new Frame("CheckboxGroup");
         final Label lab = new Label();
         lab.setAlignment(Label.CENTER);
-        lab.setSize(400,100);
+        lab.setSize(400, 100);
         CheckboxGroup cg = new CheckboxGroup();
         Checkbox cb1 = new Checkbox("yes", cg, false);
-        cb1.setBounds(100,100,50,50);
+        cb1.setBounds(100, 100, 50, 50);
         Checkbox cb2 = new Checkbox("No", cg, false);
-        cb2.setBounds(100,150,50,50);
+        cb2.setBounds(100, 150, 50, 50);
         fr.add(cb1);
         fr.add(cb2);
         fr.add(lab);
-        fr.setSize(400,400);
+        fr.setSize(400, 400);
         fr.setLayout(null);
         fr.setVisible(true);
         cb1.addItemListener(new ItemListener() {
@@ -4177,8 +3855,9 @@ public class MyCheckbox2 {
             }
         });
     }
+
     public static void main(String[] args[]) {
-    new MyCheckbox2();
+        new MyCheckbox2();
     }
 }
 ```
@@ -4189,23 +3868,24 @@ public class MyCheckbox2 {
 
 我们成功地向复选框组添加了一个 `ItemListener`。
 
-## AWT Menu and MenuItem
+# AWT Menu and MenuItem
 
 这些用于向菜单中添加菜单和菜单项。可以通过一个示例来解释：
 
 ```java
 import java.awt.*;
-class MyMenu{
-    MyMenu(){
-        Frame fr=new Frame("Menu and MenuItem");
-        MenuBar mnb=new MenuBar();
-        Menu mnu=new Menu("File");
-        Menu smn=new Menu("Save");
-        MenuItem i1=new MenuItem("New");
-        MenuItem i2=new MenuItem("Copy");
-        MenuItem i3=new MenuItem("Cut");
-        MenuItem i4=new MenuItem("Save");
-        MenuItem i5=new MenuItem("Save As");
+
+class MyMenu {
+    MyMenu() {
+        Frame fr = new Frame("Menu and MenuItem");
+        MenuBar mnb = new MenuBar();
+        Menu mnu = new Menu("File");
+        Menu smn = new Menu("Save");
+        MenuItem i1 = new MenuItem("New");
+        MenuItem i2 = new MenuItem("Copy");
+        MenuItem i3 = new MenuItem("Cut");
+        MenuItem i4 = new MenuItem("Save");
+        MenuItem i5 = new MenuItem("Save As");
         mnu.add(i1);
         mnu.add(i2);
         mnu.add(i3);
@@ -4214,48 +3894,50 @@ class MyMenu{
         mnb.add(mnu);
         mnb.add(smn);
         fr.setMenuBar(mnb);
-        fr.setSize(400,400);
+        fr.setSize(400, 400);
         fr.setLayout(null);
         fr.setVisible(true);
     }
+
     public static void main(String args[]) {
-    new MyMenu();
+        new MyMenu();
     }
 }
 ```
 
 运行代码你将得到一个窗口。点击窗口左上角的 File 菜单。你会在下面看到几个菜单项。点击 Save 选项以及添加到它的子菜单：
 
-img/ea1f2ffaf9eb812ac57c6338a9bb324a_155_0.png)
+![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_155_0.png)
 
-## KeyListener Interface
+# KeyListener Interface
 
 在你更改键的状态后，`KeyListener` 将收到通知。通知是针对 `KeyEvent` 进行的。你可以在 `java.awt.event` 包中找到 `KeyListener` 监听器。
 
 `KeyListener` 接口有三个重要的方法，包括：
 
-- public abstract void keyPressed(KeyEvent ev);
-- public abstract void keyReleased(KeyEvent ev);
-- public abstract void keyTyped(KeyEvent ev);
+- `public abstract void keyPressed(KeyEvent ev);`
+- `public abstract void keyReleased(KeyEvent ev);`
+- `public abstract void keyTyped(KeyEvent ev);`
 
 考虑给出的示例：
 
 ```java
 import java.awt.*;
 import java.awt.event.*;
+
 public class MyKeyListener implements KeyListener {
     Label lab;
     TextArea area;
-    MyKeyListener() {
-        lab=new Label();
-        lab.setBounds(20,50,100,20);
-        area=new TextArea();
-        area.setBounds(20,80,300,300);
-        area.addKeyListener(this);
 
+    MyKeyListener() {
+        lab = new Label();
+        lab.setBounds(20, 50, 100, 20);
+        area = new TextArea();
+        area.setBounds(20, 80, 300, 300);
+        area.addKeyListener(this);
         add(lab);
         add(area);
-        setSize(400,400);
+        setSize(400, 400);
         setLayout(null);
         setVisible(true);
     }
@@ -4263,15 +3945,17 @@ public class MyKeyListener implements KeyListener {
     public void keyPressed(KeyEvent ev) {
         lab.setText("Key Pressed!");
     }
+
     public void keyReleased(KeyEvent ev) {
         lab.setText("Key Released!");
     }
+
     public void keyTyped(KeyEvent ev) {
         lab.setText("Key Typed!");
     }
 
     public static void main(String[] args) {
-    new MyKeyListener();
+        new MyKeyListener();
     }
 }
 ```
@@ -4280,19 +3964,15 @@ public class MyKeyListener implements KeyListener {
 
 ![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_157_0.png)
 
-## Conclusion
+# Conclusion
 
 本书到此结束。Java 是一种编程语言。它作为广泛使用的编程语言之一非常流行。使用 Java 可以实现很多功能。它非常适合开发桌面应用程序，通常称为独立应用程序。它可以嵌入网页中。学习 Java 很容易，特别是如果你有面向对象的编程背景。Java 支持面向对象等特性。编写 Java 代码需要编译器。这告诉你 Java 是编译的，而不是解释的。编译器在安装 JDK（Java 开发包）后会自动安装。
 
-## 关于作者
+# 关于作者
 
-Daniel Bell 出于纽约布朗克斯。九岁岁时，他跟随父亲 Guy Bell 搬到了法国尼斯。他于 2012 年在尼斯大学获得计算机科学博士学位。Daniel 目前正在进行数据管理方面的研究，重点是大数据和数据共享相关主题，如概率数据、数据定价、并行数据处理和数据安全。他利用休息时间编写关于计算机编程和数据科学的书籍，帮助编程初学者轻松编程。他住在巴黎附近的 Chatillon。
+Daniel Bell 出生于纽约布朗克斯。九岁时，他跟随父亲 Guy Bell 搬到了法国尼斯。他于 2012 年在尼斯大学获得计算机科学博士学位。Daniel 目前正在进行数据管理方面的研究，重点是大数据和数据共享相关主题，如概率数据、数据定价、并行数据处理和数据安全。他利用休息时间编写关于计算机编程和数据科学的书籍，帮助编程初学者轻松编程。他住在巴黎附近的 Chatillon。
 
-
-
-
-
-## 致谢
+# 致谢
 
 首先，我要诚挚地感谢我的家人，我的妻子 Genevieve 和儿子 Adan 在我日常生活中提供的持续支持，感谢他们的耐心、动力和热情。除了家人，我还要感谢我的朋友和同事们：Jule Villepreux 教授、Hugo D. 和 James Rivera 博士，感谢他们的鼓励、富有见解的评论以及挑战性的问题。我感谢我的实验室伙伴们：Gang Yu、Ting Fan、Djibrilla Diallo 和 Juan Sanchez，感谢那些发发启发性的讨论，感谢我们在截止日期前并肩作战的那些不眠夜晚，以及我们度过的所有愉快时光。最后但同样重要的是，我要感谢我的父母 Guy Bell 和 Ezra Bell，感谢他们给了我生命并在我一生中给予我精神上的支持。
 

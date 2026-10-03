@@ -1,3 +1,4 @@
+
 # 捕获或指定要求
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/exceptions/catchOrDeclare.html`](https://docs.oracle.com/javase/tutorial/essential/exceptions/catchOrDeclare.html)
@@ -5,7 +6,6 @@
 有效的 Java 编程语言代码必须遵守*捕获或指定要求*。这意味着可能引发某些异常的代码必须被以下之一包围：
 
 +   一个捕获异常的`try`语句。`try`必须提供异常处理程序，如 Catching and Handling Exceptions 中所述。
-
 +   指定可能引发异常的方法。该方法必须提供列出异常的`throws`子句，如 Specifying the Exceptions Thrown by a Method 中所述。
 
 未遵守捕获或指定要求的代码将无法编译。

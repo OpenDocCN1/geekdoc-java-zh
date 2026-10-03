@@ -1,8 +1,9 @@
+
 # 第 26 天—最大和子数组
 
 > 原文：<https://medium.com/javarevisited/100-days-challenge-to-cracking-the-coding-interview-fb3f955012e4?source=collection_archive---------0----------------------->
 
-## **亚马逊 100 天**
+## 亚马逊 100 天
 
 [![](img/d4c44993b31d4793b58857a01d03ff8e.png)](https://medium.com/javarevisited/20-array-coding-problems-and-questions-from-programming-interviews-869b475b9121)
 

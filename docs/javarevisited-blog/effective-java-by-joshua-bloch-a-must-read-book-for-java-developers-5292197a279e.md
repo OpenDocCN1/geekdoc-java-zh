@@ -1,3 +1,4 @@
+
 # Joshua Bloch 的《有效的 Java》——Java 开发人员的必读之书
 
 > 原文：<https://medium.com/javarevisited/effective-java-by-joshua-bloch-a-must-read-book-for-java-developers-5292197a279e?source=collection_archive---------0----------------------->
@@ -6,35 +7,35 @@
 
 [![](img/c332a49ee850571086a3ba4eb7789413.png)](https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997/?tag=javamysqlanta-20)
 
-大家好，如果你学过 Java 编程，那么你可能听说过 **Effective Java** ，这是一本最值得推荐给 Java 程序员的书。
+大家好，如果你学过 Java 编程，那么你可能听说过 **Effective Java**，这是一本最值得推荐给 Java 程序员的书。
 
 这是我认为每个 Java 开发人员都想读的书之一，因为它不会教你语法，而是教你如何以及何时使用一个特定的特性。
 
-在 Effective Java 第一版和第二版取得巨大成功之后，几年前发布了第三版。经过来自世界各地的 Java 程序员 10 年的漫长等待，可能是这个星球上最受欢迎的 Java 书籍的更新版本终于发布了，我要谈谈这个新版本的有效 Java，我指的是 [**有效 Java 第三版**](https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997/?tag=javamysqlanta-20)
+在 Effective Java 第一版和第二版取得巨大成功之后，几年前发布了第三版。经过来自世界各地的 Java 程序员 10 年的漫长等待，可能是这个星球上最受欢迎的 Java 书籍的更新版本终于发布了，我要谈谈这个新版本的有效 Java，我指的是 [**有效 Java 第三版**](https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997/?tag=javamysqlanta-20)。
 
-并分享我的想法，为什么它是全世界每个 Java 开发人员的必读之书。这个新版本涵盖了 JDK 7、8 和 9 中引入的特性和范例。Joshua Bloch 也做了很好的工作，更新了大部分项目，使它们与新版本相关。除此之外，还有一个全新的章节来解释 Java 8 特性的最佳实践。我知道你不需要任何理由来阅读这本书，因为它非常受欢迎，被广泛接受。*许多使用 Java 的初创公司，尤其是在印度*，也向新的 Java 开发人员分发这本书，通过避免错误和低质量的 Java 代码节省了大量资金。正如我之前告诉你的，我已经在 10 月份预订了这本书，并在几天前收到了我的副本。不过，我已经读完了大部分内容，主要是我的 Kindle 上较新的内容，电子书([Effective Java Kindle Edition](https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997/?tag=javamysqlanta-20))自出版以来就可以在 Kindle 上看到。
+并分享我的想法，为什么它是全世界每个 Java 开发人员的必读之书。这个新版本涵盖了 JDK 7、8 和 9 中引入的特性和范例。Joshua Bloch 也做了很好的工作，更新了大部分项目，使它们与新版本相关。除此之外，还有一个全新的章节来解释 Java 8 特性的最佳实践。我知道你不需要任何理由来阅读这本书，因为它非常受欢迎，被广泛接受。*许多使用 Java 的初创公司，尤其是在印度*，也向新的 Java 开发人员分发这本书，通过避免错误和低质量的 Java 代码节省了大量资金。正如我之前告诉你的，我已经在 10 月份预订了这本书，并在几天前收到了我的副本。不过，我已经读完了大部分内容，主要是我的 Kindle 上较新的内容，电子书（[Effective Java Kindle Edition](https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997/?tag=javamysqlanta-20)）自出版以来就可以在 Kindle 上看到。
 
-<https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997/?tag=javamysqlanta-20>  
+<https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997/?tag=javamysqlanta-20>
 
 我非常喜欢它，尽管我确实了解 Java 8 lambdas、streams，以及它们在多大程度上帮助你用 Java 编写干净的代码，但 Josh 的建议帮助我填补了一些空白。
 
-他关于 Java 9 模块的章节(第 15 项)也很好地介绍了这个 JDK 9 的基本特性，但并没有涵盖所有的内容。如果你想学习 JDK 9 特性，我建议你最好去 Udemy 上看看 Tim Buchalaka 的 [**完整 Java 大师班**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F) 课程。
+他关于 Java 9 模块的章节（第 15 项）也很好地介绍了这个 JDK 9 的基本特性，但并没有涵盖所有的内容。如果你想学习 JDK 9 特性，我建议你最好去 Udemy 上看看 Tim Buchalaka 的 [**完整 Java 大师班**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F) 课程。
 
-<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F>  
+<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F>
 
 # 有效 Java 第三版的新特性
 
-正如我告诉你的，这本书的新版本涵盖了 JDK 7，8 和 9 的变化和特点，这就是为什么它也有一些全新的项目。下面是一些来自 [Effective Java 3](https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997/?tag=javamysqlanta-20) 的新条目，值得一提:
+正如我告诉你的，这本书的新版本涵盖了 JDK 7、8 和 9 的变化和特点，这就是为什么它也有一些全新的项目。下面是一些来自 [Effective Java 3](https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997/?tag=javamysqlanta-20) 的新条目，值得一提：
 
 *   函数接口、lambda 表达式、方法引用和流
 *   try-with 资源语句
 *   接口中的默认和静态方法
 *   类型推断，包括泛型类型的菱形运算符
-*   `@SafeVarargs`注解
-*   新的库特性，比如可选的接口、java.time 和集合的便利工厂方法
+*   `@SafeVarargs` 注解
+*   新的库特性，比如可选的接口、`java.time` 和集合的便利工厂方法
 *   Java 9 模块上的第 15 项
 
-在有效的 Java 第二版中，条目的数量也从 70+增加到了 90。如果你读过以前的版本，并且有点着急，我建议你从新的项目开始。
+在有效的 Java 第二版中，条目的数量也从 70+ 增加到了 90。如果你读过以前的版本，并且有点着急，我建议你从新的项目开始。
 
 在书的开头有一个漂亮的表格，它会给你一个不错的新条目列表，以及它们涵盖的 Java 7、8 或 9 的特性。
 
@@ -50,14 +51,14 @@
 
 我通常是逐项阅读，而且大多是在上下班途中。我从较新的项目开始，然后查看了第一页上建议的几个项目，它们对应于 JDK 7、8 和 9 中的新功能。
 
-与以前的版本一样，项目按以下主题分组:
+与以前的版本一样，项目按以下主题分组：
 
 1.  创建和销毁对象
 2.  所有对象通用的方法
 3.  类和接口
 4.  [仿制药](https://www.java67.com/2019/07/top-50-java-generics-and-collection-interview-questions.html)
 5.  [列举和注释](http://www.java67.com/2012/10/java-enum-concepts-and-fundamentals.html)
-6.  [兰姆达斯和溪流](/javarevisited/8-best-lambdas-stream-and-functional-programming-courses-for-java-developers-3d1836a97a1d)(项目 42–48)
+6.  [兰姆达斯和溪流](/javarevisited/8-best-lambdas-stream-and-functional-programming-courses-for-java-developers-3d1836a97a1d)（项目 42–48）
 7.  方法
 8.  通用编程
 9.  [异常情况](https://javarevisited.blogspot.com/2013/06/10-java-exception-and-error-interview-questions-answers-programming.html#axzz5zeL8gFVC)
@@ -73,9 +74,12 @@
 正如我告诉你的，你可能不需要任何有效的 Java 第三版的审查来阅读这本书。标题本身就足够开始了，如果你像我一样是一个热情的 Java 程序员，我打赌你现在已经读过了。但是，如果你还没有读过，那么现在就开始读吧，在今年成为一名更好的 Java 程序员。
 
 **进一步学习**
+
 [完整的 Java Masterclass](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F)
-[数据结构和算法:深度学习使用 Java](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fdata-structures-and-algorithms-deep-dive-using-java%2F)
-[Java 基础知识:Java 语言](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fjava-fundamentals-language)
+
+[数据结构和算法：深度学习使用 Java](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fdata-structures-and-algorithms-deep-dive-using-java%2F)
+
+[Java 基础知识：Java 语言](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fjava-fundamentals-language)
 
 其他 **Java 文章**你可能喜欢探究
 
@@ -92,6 +96,6 @@
 
 感谢你阅读这篇文章，如果你喜欢这本书，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
 
-**P. S.** —如果找不到平装版，就不要等了。只需购买 [**有效的 Java 电子书**](https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997/?tag=javamysqlanta-20) ，在手机或平板上阅读即可。这本书的格式非常好，你会得到和阅读平装书一样的体验
+**P. S.** —如果找不到平装版，就不要等了。只需购买 [**有效的 Java 电子书**](https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997/?tag=javamysqlanta-20) ，在手机或平板上阅读即可。这本书的格式非常好，你会得到和阅读平装书一样的体验。
 
-<https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997/?tag=javamysqlanta-20> 
+<https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997/?tag=javamysqlanta-20>

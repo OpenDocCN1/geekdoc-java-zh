@@ -1,4 +1,5 @@
-# 使用 RowId 对象
+
+# 使用 `RowId` 对象
 
 > 原文：[`docs.oracle.com/javase/tutorial/jdbc/basics/sqlrowid.html`](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqlrowid.html)
 
@@ -8,22 +9,19 @@
 
 下面涵盖了以下主题：
 
-+   检索 RowId 对象
++   检索 `RowId` 对象
++   使用 `RowId` 对象
++   `RowId` 有效期
 
-+   使用 RowId 对象
-
-+   RowId 有效期
-
-## 检索 RowId 对象
+## 检索 `RowId` 对象
 
 通过调用接口`ResultSet`和`CallableStatement`中定义的 getter 方法检索`java.sql.RowId`对象。返回的`RowId`对象是一个不可变对象，您可以将其用作后续引用的唯一标识符。以下是调用`ResultSet.getRowId`方法的示例：
 
 ```java
 java.sql.RowId rowId_1 = rs.getRowId(1);
-
 ```
 
-## 使用 RowId 对象
+## 使用 `RowId` 对象
 
 您可以将`RowId`对象设置为参数传递给参数化的`PreparedStatement`对象：
 
@@ -34,7 +32,6 @@ PreparedStatement ps = conn.prepareStatement(
     "(ID, AUTHOR, TITLE, ISBN) " +
     "VALUES (?, ?, ?, ?)");
 ps.setRowId(1, rowId_1);
-
 ```
 
 您还可以在可更新的`ResultSet`对象中使用特定的`RowId`对象更新列：
@@ -43,12 +40,11 @@ ps.setRowId(1, rowId_1);
 ResultSet rs = ...
 rs.next();
 rs.updateRowId(1, rowId_1);
-
 ```
 
 `RowId`对象的值通常在数据源之间不可移植，并且在分别使用`PreparedStatement`和`ResultSet`对象的设置或更新方法时应被视为特定于数据源。因此，不建议从连接到一个数据源的`ResultSet`对象获取`RowId`对象，然后尝试在连接到不同数据源的不相关`ResultSet`对象中使用相同的`RowId`对象。
 
-## RowId 有效期
+## `RowId` 有效期
 
 只要识别的行未被删除，`RowId`对象就有效，并且`RowId`对象的生命周期在数据源为`RowId`指定的生命周期范围内。
 
@@ -89,5 +85,4 @@ public static void rowIdLifetime(Connection conn)
             break;
     }
 }
-
 ```

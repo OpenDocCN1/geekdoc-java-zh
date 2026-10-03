@@ -1,3 +1,4 @@
+
 # GraphQL 请求验证的 Spring
 
 > 原文：<https://medium.com/javarevisited/spring-for-graphql-request-validation-8972f03e56e4?source=collection_archive---------2----------------------->

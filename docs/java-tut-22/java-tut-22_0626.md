@@ -1,3 +1,4 @@
+
 # 转换非 Unicode 文本
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/text/convertintro.html`](https://docs.oracle.com/javase/tutorial/i18n/text/convertintro.html)
@@ -10,7 +11,6 @@
 String str = "\u00F6";
 char c = '\u00F6';
 Character letter = new Character('\u00F6');
-
 ```
 
 世界各地的系统使用各种字符编码。目前，很少有这些编码符合 Unicode 标准。因为您的程序期望字符为 Unicode 格式，所以从系统获取的文本数据必须转换为 Unicode 格式，反之亦然。当文本文件的编码与 Java 虚拟机的默认文件编码匹配时，文本数据会自动转换为 Unicode 格式。您可以通过创建一个`OutputStreamWriter`并询问其规范名称来确定默认文件编码：
@@ -18,7 +18,6 @@ Character letter = new Character('\u00F6');
 ```java
 OutputStreamWriter out = new OutputStreamWriter(new ByteArrayOutputStream());
 System.out.println(out.getEncoding());
-
 ```
 
 如果默认文件编码与您要处理的文本数据的编码不同，则必须自行进行转换。当处理来自其他国家或计算平台的文本时，您可能需要这样做。

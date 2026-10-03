@@ -1,3 +1,4 @@
+
 # JUnit 5 条件测试示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/junit5/junit-5-conditional-test-examples/>
@@ -8,14 +9,14 @@
 
 *用 JUnit 5.5.2 测试的 PS*
 
-## 1.操作系统
+## 1. 操作系统
 
 1.1 通过`@EnabledOnOs`和`@DisabledOnOs`注释基于特定操作系统启用或禁用测试。
 
-OperatingSystemTest.java
+`OperatingSystemTest.java`
 
 ```java
- package com.mkyong.conditional;
+package com.mkyong.conditional;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.DisabledOnOs;
@@ -48,21 +49,21 @@ public class OperatingSystemTest {
         System.out.println("Do not run this on Windows, AIX, Solaris or MAC!");
     }
 
-} 
+}
 ```
 
-输出–使用 Windows 操作系统进行测试。
+输出——使用 Windows 操作系统进行测试。
 
 ![output](img/5fac36190a2d6fc285e90fe7acfc0b5a.png)
 
-## 2.Java 运行时环境
+## 2. Java 运行时环境
 
-2.1 通过`@EnabledOnJre`和`@DisabledOnJre`注释基于特定的 Java 运行时环境(JRE)启用或禁用测试。
+2.1 通过`@EnabledOnJre`和`@DisabledOnJre`注释基于特定的 Java 运行时环境（JRE）启用或禁用测试。
 
-JreTest.java
+`JreTest.java`
 
 ```java
- package com.mkyong.conditional;
+package com.mkyong.conditional;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.DisabledOnJre;
@@ -89,21 +90,21 @@ public class JreTest {
         System.out.println("Do not run this on Java 9");
     }
 
-} 
+}
 ```
 
-输出–用 Java 13 测试
+输出——用 Java 13 测试
 
 ![output](img/0856130100e9423e407ff87872602bc4.png)
 
-## 3.系统属性
+## 3. 系统属性
 
 3.1 通过`@EnabledIfSystemProperty`和`@DisabledIfSystemProperty`注释，根据 JVM 系统属性中`named`的值启用或禁用测试。
 
-SystemPropertyTest.java
+`SystemPropertyTest.java`
 
 ```java
- package com.mkyong.conditional;
+package com.mkyong.conditional;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.DisabledIfSystemProperty;
@@ -131,19 +132,19 @@ public class SystemPropertyTest {
         properties.forEach((k, v) -> System.out.println(k + ":" + v));
     }
 
-} 
+}
 ```
 
-阅读此–[如何用 Java 打印所有系统属性](http://web.archive.org/web/20221212193803/https://www.mkyong.com/java/how-to-list-all-system-properties-key-and-value-in-java/)
+阅读此——[如何用 Java 打印所有系统属性](http://web.archive.org/web/20221212193803/https://www.mkyong.com/java/how-to-list-all-system-properties-key-and-value-in-java/)
 
-## 4.环境变量
+## 4. 环境变量
 
 4.1 通过`@EnabledIfEnvironmentVariable`和`@DisabledIfEnvironmentVariable`注释，根据环境属性中`named`的值启用或禁用测试。
 
-EnvVariableTest.java
+`EnvVariableTest.java`
 
 ```java
- package com.mkyong.conditional;
+package com.mkyong.conditional;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariable;
@@ -177,19 +178,19 @@ public class EnvVariableTest {
         env.forEach((k, v) -> System.out.println(k + ":" + v));
     }
 
-} 
+}
 ```
 
 ## 下载源代码
 
-$ git clone [https://github.com/mkyong/junit-examples](http://web.archive.org/web/20221212193803/https://github.com/mkyong/junit-examples)
+```
+$ git clone https://github.com/mkyong/junit-examples
 $ cd junit5-examples
 $ check src/test/java/com/mkyong/conditional/*.java
+```
 
 # 参考
 
-*   [JUnit 5 条件测试执行](http://web.archive.org/web/20221212193803/https://junit.org/junit5/docs/current/user-guide/#writing-tests-conditional-execution)
-*   [Java–如何显示所有系统属性](/web/20221212193803/https://mkyong.com/java/how-to-list-all-system-properties-key-and-value-in-java/)
-*   [Java–如何显示所有环境变量](/web/20221212193803/https://mkyong.com/java/java-how-to-display-all-environment-variable/)
-
-<input type="hidden" id="mkyong-current-postId" value="15235">
+* [JUnit 5 条件测试执行](http://web.archive.org/web/20221212193803/https://junit.org/junit5/docs/current/user-guide/#writing-tests-conditional-execution)
+* [Java——如何显示所有系统属性](/web/20221212193803/https://mkyong.com/java/how-to-list-all-system-properties-key-and-value-in-java/)
+* [Java——如何显示所有环境变量](/web/20221212193803/https://mkyong.com/java/java-how-to-display-all-environment-variable/)

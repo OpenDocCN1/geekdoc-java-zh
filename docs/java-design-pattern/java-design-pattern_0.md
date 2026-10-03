@@ -1,44 +1,41 @@
+
 # Java 设计模式
 
-
-
-![](img/image_rsrc27V.jpg)
-
-
 在书中，你将学习带有图解的解释以及运行实验，并展示成功执行实验后的输出。提供分步说明的现成解决方案。
-
-
 
 ## 引言
 
 设计模式独立于编程语言，它们用于解决常见的面向对象设计问题。设计模式代表一种思想，而不是具体的实现。通过使用设计模式，我们可以使代码更具活性、可重用性和可维护性。Java 本身也遵循设计模式。
 
-在 Java Java 中，主要有三种设计模式，它们进一步被分为子部分：
+在 Java 中，主要有三种设计模式，它们进一步被分为子部分：
 
-**创建型设计模式**
+### 创建型设计模式
+
 1. `工厂模式`
 2. `抽象工厂模式`
 3. `单例模式`
 4. `原型模式`
 5. `构建器模式`
 
-**结构型设计模式**
+### 结构型设计模式
+
 1. `适配器模式`
 2. `桥接模式`
 3. `组合模式`
 4. `装饰器模式`
 5. `外观模式`
-6. `享重量模式`
+6. `享元模式`
 7. `代理模式`
 
-**行为型设计模式**
+### 行为型设计模式
+
 1. `责任链模式`
 2. `命令模式`
 3. `解释器模式`
 4. `迭代器模式`
 5. `调停者模式`
-6. `备忘模式`
-7. `观察模式`
+6. `备忘录模式`
+7. `观察者模式`
 8. `状态模式`
 9. `策略模式`
 10. `模板方法模式`
@@ -52,32 +49,35 @@
 
 设计模式独立于编程语言，它们用于解决常见的面向对象设计问题。设计模式代表一种思想，而不是具体的实现。通过使用设计模式，我们可以使代码更具活性、可重用性和可维护性。Java 本身也遵循设计模式。
 
-在 Java Java 中，主要有三种设计模式，它们进一步被分为子部分：
+在 Java 中，主要有三种设计模式，它们进一步被分为子部分：
 
-**创建型设计模式**
+### 创建型设计模式
+
 1. `工厂模式`
 2. `抽象工厂模式`
 3. `单例模式`
 4. `原型模式`
 5. `构建器模式`
 
-**结构型设计模式**
+### 结构型设计模式
+
 1. `适配器模式`
 2. `桥接模式`
 3. `组合模式`
 4. `装饰器模式`
 5. `外观模式`
-6. `享重量模式`
+6. `享元模式`
 7. `代理模式`
 
-**行为型设计模式**
+### 行为型设计模式
+
 1. `责任链模式`
 2. `命令模式`
 3. `解释器模式`
 4. `迭代器模式`
 5. `调停者模式`
-6. `备忘模式`
-7. `观察模式`
+6. `备忘录模式`
+7. `观察者模式`
 8. `状态模式`
 9. `策略模式`
 10. `模板方法模式`
@@ -169,6 +169,7 @@ public class Main {
 上面的代码生成以下结果：
 
 输出：
+
 ```
 Inside Circle
 Inside Rectangle
@@ -177,16 +178,13 @@ Inside Square
 
 ### 抽象工厂模式
 
-抽象工厂模式是另一种创建型模式。抽象工厂模式也被称为工厂的工厂，拥有一个创建其他工厂的工厂。使用抽象工厂模式时，我们首先使用超工厂创建工厂，然后使用创建的工厂来创建对象。
+抽象工厂模式是另一种创建型模式。抽象工厂模式也被称为工厂的工厂，拥有一个创建其他工厂的工厂。使用抽象工厂模式时，我们首先使用超级工厂创建工厂，然后使用创建的工厂来创建对象。
 
-实验 - 2
-
-
-
+#### 实验 - 2
 
 以下代码展示了如何使用抽象工厂模式。
 
-我们将创建形状（shapes）和 `Printers`（打印机）。对于形状，我们将有 `circle`（圆形）、`rectangle`（矩形）和 `square`（正方形）。对于打印机，我们将有 `paper Printer`（纸质打印）、`Web Printer`（网络打印）和 `screen Printer`（屏幕打印）。
+我们将创建形状和 `Printers`。对于形状，我们将有 `circle`、`rectangle` 和 `square`。对于打印机，我们将有 `paper Printer`、`Web Printer` 和 `screen Printer`。
 
 对于形状，我们将创建一个 `Shape` 接口，如下：
 
@@ -224,8 +222,9 @@ class Circle implements Shape {
 之后，我们为 `Printers` 创建一个接口。
 
 `Printer.java`
+
 ```java
-interface Printer{
+interface Printer {
     void print();
 }
 ```
@@ -253,7 +252,7 @@ class ScreenPrinter implements Printer {
 }
 ```
 
-最后，我们创建一个抽象类来获取获取 `Printer` 和 `Shape` 对象的工厂。
+最后，我们创建一个抽象类来获取 `Printer` 和 `Shape` 对象的工厂。
 
 ```java
 abstract class AbstractFactory {
@@ -268,14 +267,14 @@ abstract class AbstractFactory {
 class ShapeFactory extends AbstractFactory {
     @Override
     public Shape getShape(String shapeType) {
-        if(shapeType == null){
+        if (shapeType == null) {
             return null;
-        } 
-        if(shapeType.equalsIgnoreCase("CIRCLE")){
+        }
+        if (shapeType.equalsIgnoreCase("CIRCLE")) {
             return new Circle();
-        } else if(shapeType.equalsIgnoreCase("RECTANGLE")){
+        } else if (shapeType.equalsIgnoreCase("RECTANGLE")) {
             return new Rectangle();
-        } else if(shapeType.equalsIgnoreCase("SQUARE")){
+        } else if (shapeType.equalsIgnoreCase("SQUARE")) {
             return new Square();
         }
         return null;
@@ -292,14 +291,14 @@ class PrinterFactory extends AbstractFactory {
     }
     @Override
     Printer getPrinter(String type) {
-        if(type == null){
+        if (type == null) {
             return null;
-        } 
-        if(type.equalsIgnoreCase("paper")){
+        }
+        if (type.equalsIgnoreCase("paper")) {
             return new PaperPrinter();
-        } else if(type.equalsIgnoreCase("web")){
+        } else if (type.equalsIgnoreCase("web")) {
             return new WebPrinter();
-        } else if(type.equalsIgnoreCase("Screen")){
+        } else if (type.equalsIgnoreCase("Screen")) {
             return new ScreenPrinter();
         }
         return null;
@@ -312,11 +311,11 @@ class PrinterFactory extends AbstractFactory {
 ```java
 class FactoryProducer {
     public static AbstractFactory getFactory(String choice) {
-        if(choice.equalsIgnoreCase("SHAPE")){
+        if (choice.equalsIgnoreCase("SHAPE")) {
             return new ShapeFactory();
-        } else if(choice.equalsIgnoreCase("Printer")){
+        } else if (choice.equalsIgnoreCase("Printer")) {
             return new PrinterFactory();
-        } 
+        }
         return null;
     }
 }
@@ -327,22 +326,22 @@ class FactoryProducer {
 ```java
 public class Main {
     public static void main(String[] args) {
-        //获取形状工厂
-        AbstractFactory shapeFactory= FactoryProducer.getFactory("SHAPE");
-        //获取一个 Shape 对象
+        // 获取形状工厂
+        AbstractFactory shapeFactory = FactoryProducer.getFactory("SHAPE");
+        // 获取一个 Shape 对象
         Shape shape1 = shapeFactory.getShape("CIRCLE");
-        //调用 Shape 的 draw 方法
+        // 调用 Shape 的 draw 方法
         shape1.draw();
-        //获取一个 Shape Rectangle 对象
+        // 获取一个 Shape Rectangle 对象
         Shape shape2 = shapeFactory.getShape("RECTANGLE");
-        //调用 Shape Rectangle 的 draw 方法
+        // 调用 Shape Rectangle 的 draw 方法
         shape2.draw();
-        //获取一个 Shape Square 对象
+        // 获取一个 Shape Square 对象
         Shape shape3 = shapeFactory.getShape("SQUARE");
-        //调用 Shape Square 的 draw 方法
+        // 调用 Shape Square 的 draw 方法
         shape3.draw();
-        //获取打印机工厂
-        AbstractFactory printerFactory= FactoryProducer.getFactory("printer");
+        // 获取打印机工厂
+        AbstractFactory printerFactory = FactoryProducer.getFactory("printer");
         Printer printer1 = printerFactory.getPrinter("Paper");
         printer1.print();
         Printer printer2 = printerFactory.getPrinter("Web");
@@ -356,9 +355,10 @@ public class Main {
 上述代码生成了以下结果。
 
 输出
+
 ![](img/image_rsrc27X.jpg)
 
-### 3. 单例模式
+### 单例模式
 
 单例模式是一种创建模式。
 
@@ -366,7 +366,7 @@ public class Main {
 
 该类确保只有一个对象被创建。
 
-该类提供了一种访问其唯一对象对象的方法。
+该类提供了一种访问其唯一对象的方法。
 
 例如，在设计用户界面时，我们可能只有一个主应用程序窗口。我们可以使用单例模式来确保 `MainApplicationWindow` 对象只有一个实例。
 
@@ -381,6 +381,7 @@ public class Main {
 `Main` 是我们的演示类，将使用 `MainWindow` 类来获取 `MainWindow` 对象。
 
 `MainWindow.java`
+
 ```java
 class MainWindow {
     private static MainWindow instance;
@@ -407,21 +408,29 @@ class Main {
 ```
 
 输出
-Hello World!
 
-### 4. 原型模式
+```
+Hello World!
+```
+
+### 原型模式
 
 原型模式是一种创建模式。
 
+
+
+# 原型模式
+
 原型模式通过克隆现有对象来创建新对象。
 
-原型模式允许在不初始化类创建对象。
+原型模式允许在不初始化类的情况下创建对象。
 
-Lab – 4
+## Lab – 4
 
 以下代码展示了如何使用原型模式。
 
-`Shape.java`
+### `Shape.java`
+
 ```java
 abstract class Shape implements Cloneable {
     abstract void draw();
@@ -480,7 +489,7 @@ public class Main {
 }
 ```
 
-
+# 构建器模式
 
 构建器模式用于使用简单对象来创建复杂的对象。它通过从小而简单的对象逐步构建出较大的对象。
 
@@ -492,9 +501,9 @@ public class Main {
 
 我们可以使用构建器模式来隐藏创建窗口的实现细节。
 
-#### Lab – 5
+## Lab – 5
 
-`MainWindow.java`
+### `MainWindow.java`
 
 ```java
 class Menu {}
@@ -538,17 +547,17 @@ public class Main {
 }
 ```
 
-## 第 3 章：结构设计模式
+# 第 3 章：结构设计模式
 
 1. 适配器模式
 2. 桥接模式
 3. 组合模式
 4. 装饰器模式
-5.  Fac 器模式
-6. 权重模式
+5. 外观模式
+6. 享元模式
 7. 代理模式
 
-### 1. 适配器模式
+## 1. 适配器模式
 
 我们在现实生活中经常使用`适配器`。例如，我们使用内存卡适配器来连接内存卡和电脑，因为电脑只支持一种类型的内存卡，而我们的卡与电脑不兼容。
 
@@ -558,7 +567,7 @@ public class Main {
 
 通过使用适配器模式，我们可以统一这两个不兼容的接口。
 
-#### Lab – 6
+### Lab – 6
 
 首先，我们创建一个`Player` 接口来播放任何类型的媒体文件。
 
@@ -623,7 +632,7 @@ public class Main {
 
 ![](img/image_rsrc280.jpg)
 
-### 2. 桥接模式
+## 2. 桥接模式
 
 桥接模式将定义与它的实现解耦。它是一种结构模式。
 
@@ -631,7 +640,7 @@ public class Main {
 
 两种类型的类都可以被修改，而不会影响对方。
 
-#### Lab – 7
+### Lab – 7
 
 ```java
 interface Printer {
@@ -693,7 +702,7 @@ public class Main {
 
 ![](img/image_rsrc281.jpg)
 
-### 3. 组合模式
+## 3. 组合模式
 
 组合模式是一种结构模式，因为它创建了对象组的树形结构。
 
@@ -703,11 +712,11 @@ public class Main {
 
 在组合模式中，我们创建一个包含其自身对象的类。
 
-#### Lab – 8
+### Lab – 8
 
 以下代码使用`Employee` 类来演示组合模式。
 
-`Employee.java`
+### `Employee.java`
 
 ```java
 import java.util.ArrayList;
@@ -770,7 +779,7 @@ public class Main {
 }
 ```
 
-### 4. 装饰器模式
+## 4. 装饰器模式
 
 装饰器模式在不改变原有结构的情况下，为现有对象添加新功能。
 
@@ -778,8 +787,7 @@ public class Main {
 
 装饰器模式创建一个装饰器类来包装原始类，并提供额外的功能。
 
-#### Lab – 9
-
+### Lab – 9
 
 
 
@@ -1029,11 +1037,12 @@ public class Main {
     }
 }
 ```
+
 *(注：由于原文提供的代码中 `AndCriteria` 和 `OrCriteria` 的实现不完整，我根据上下文逻辑补全了代码结构以确保翻译后的文档自洽，但严格遵循了翻译格式要求)*
 
 **修正：** 重新审视提供的文本，原文中 `AndCriteria` 和 `OrCriteria` 部分确实是断缺的。作为高级文档工程师，我应严格按照原文内容进行翻译，不擅自补全。**以下是基于原文文本的准确翻译：**
 
-[content]
+
 
 ```java
 interface Printer {
@@ -1237,13 +1246,12 @@ class AndCriteria implements Criteria {
     }
 }
 ```
+
 *(注：原文提供的文本在此处截断，翻译已在原文结束处停止)*
-
-
 
 当使用责任链模式时，通常每个接收者都包含指向另一个接收者的引用。
 
-如果一个对象无法处理请求，它会将该请求传递给下一个接收者，以此此类推。
+如果一个对象无法处理请求，它会将该请求传递给下一个接收者，以此类推。
 
 ## 实验 – 13
 
@@ -1319,50 +1327,65 @@ public class Main {
 
 #### 实验 – 14
 
+
+
 ```java
 import java.util.ArrayList;
 import java.util.List;
+
 interface Command {
     void execute();
 }
+
 class MouseCursor {
     private int x = 10;
     private int y = 10;
+
     public void move() {
-        System.out.println("Old Position:"+x +":"+y);
+        System.out.println("Old Position:" + x + ":" + y);
         x++;
         y++;
-        System.out.println("New Position:"+x +":"+y);
+        System.out.println("New Position:" + x + ":" + y);
     }
+
     public void reset() {
         System.out.println("reset");
         x = 10;
         y = 10;
     }
 }
+
 class MoveCursor implements Command {
     private MouseCursor abcStock;
+
     public MoveCursor(MouseCursor abcStock) {
         this.abcStock = abcStock;
     }
+
     public void execute() {
         abcStock.move();
     }
 }
+
 class ResetCursor implements Command {
     private MouseCursor abcStock;
+
     public ResetCursor(MouseCursor abcStock) {
         this.abcStock = abcStock;
     }
+
     public void execute() {
         abcStock.reset();
     }
 }
+
 class MouseCommands {
     private List<Command> orderList = new ArrayList<Command>();
+
     public void takeOrder(Command order) {
         orderList.add(order);
     }
+
     public void placeOrders() {
         for (Command order : orderList) {
             order.execute();
@@ -1370,12 +1393,13 @@ class MouseCommands {
         orderList.clear();
     }
 }
+
 public class Main {
     public static void main(String[] args) {
         MouseCursor cursor = new MouseCursor();
         MoveCursor moveCursor = new MoveCursor(cursor);
         ResetCursor resetCursor = new ResetCursor(cursor);
-        MouseCommands commands= new MouseCommands();
+        MouseCommands commands = new MouseCommands();
         commands.takeOrder(moveCursor);
         commands.takeOrder(resetCursor);
         commands.placeOrders();
@@ -1401,11 +1425,14 @@ public class Main {
 interface Expression {
     boolean evaluate(String context);
 }
+
 class IsInExpression implements Expression {
     private String data;
+
     public IsInExpression(String data) {
         this.data = data;
     }
+
     @Override
     public boolean evaluate(String context) {
         if (context.contains(data)) {
@@ -1414,30 +1441,37 @@ class IsInExpression implements Expression {
         return false;
     }
 }
+
 class OrExpression implements Expression {
     private Expression expr1 = null;
     private Expression expr2 = null;
+
     public OrExpression(Expression expr1, Expression expr2) {
         this.expr1 = expr1;
         this.expr2 = expr2;
     }
+
     @Override
     public boolean evaluate(String context) {
         return expr1.evaluate(context) && expr2.evaluate(context);
     }
 }
+
 class AndExpression implements Expression {
     private Expression expr1 = null;
     private Expression expr2 = null;
+
     public AndExpression(Expression expr1, Expression expr2) {
         this.expr1 = expr1;
         this.expr2 = expr2;
     }
+
     @Override
     public boolean evaluate(String context) {
         return expr1.evaluate(context) && expr2.evaluate(context);
     }
 }
+
 public class Main {
     public static void main(String[] args) {
         Expression select = new IsInExpression("Select");
@@ -1473,34 +1507,40 @@ interface Iterator {
     boolean hasNext();
     Object next();
 }
+
 class LetterBag {
     String names[] = {"R", "J", "L"};
+
     public Iterator getIterator() {
         return new NameIterator();
     }
+
     class NameIterator implements Iterator {
         int index;
+
         @Override
         public boolean hasNext() {
-            if(index < names.length){
+            if (index < names.length) {
                 return true;
             }
             return false;
         }
+
         @Override
         public Object next() {
-            if(this.hasNext()){
+            if (this.hasNext()) {
                 return names[index++];
             }
             return null;
         }
     }
 }
+
 public class Main {
     public static void main(String[] args) {
         LetterBag bag = new LetterBag();
-        for(Iterator iter = bag.getIterator(); iter.hasNext();){
-            String name = (String)iter.next();
+        for (Iterator iter = bag.getIterator(); iter.hasNext(); ) {
+            String name = (String) iter.next();
             System.out.println("Name : " + name);
         }
     }
@@ -1526,27 +1566,33 @@ public class Main {
 ```java
 class Printer {
     public static void showMessage(Machine user, String message) {
-        System.out.println(new java.util.Date().toString() + " [" + user.getName() +"]: " + message);
+        System.out.println(new java.util.Date().toString() + " [" + user.getName() + "]: " + message);
     }
 }
+
 class Machine {
     private String name;
+
     public Machine(String name) {
         this.name = name;
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public void sendMessage(String message) {
-        Printer.showMessage(this,message);
+        Printer.showMessage(this, message);
     }
 }
+
 class Main {
     public static void main(String[] args) {
-        Machine m1= new Machine("M1");
+        Machine m1 = new Machine("M1");
         Machine m2 = new Machine("M2");
         m1.sendMessage("Rebooting");
         m2.sendMessage("Computing");
@@ -1564,10 +1610,7 @@ class Main {
 
 在空对象模式中，我们通常创建一个抽象类来指定各种操作。
 
-
-
-
-Null Object 对象和具体类都会继承这个抽象类。
+`Null Object` 对象和具体类都会继承这个抽象类。
 
 `Null Object` 类仅提供空逻辑。
 
@@ -1576,7 +1619,9 @@ Null Object 对象和具体类都会继承这个抽象类。
 ```java
 abstract class AbstractEmployee {
     protected String name;
+
     public abstract boolean isNull();
+
     public abstract String getName();
 }
 
@@ -1584,10 +1629,12 @@ class Programmer extends AbstractEmployee {
     public Programmer(String name) {
         this.name = name;
     }
+
     @Override
     public String getName() {
         return name;
     }
+
     @Override
     public boolean isNull() {
         return false;
@@ -1599,6 +1646,7 @@ class NullCustomer extends AbstractEmployee {
     public String getName() {
         return "Not Available";
     }
+
     @Override
     public boolean isNull() {
         return true;
@@ -1607,6 +1655,7 @@ class NullCustomer extends AbstractEmployee {
 
 class EmployeeFactory {
     public static final String[] names = {"Rob", "Joe", "Jack"};
+
     public static AbstractEmployee getCustomer(String name) {
         for (int i = 0; i < names.length; i++) {
             if (names[i].equalsIgnoreCase(name)) {
@@ -1634,6 +1683,7 @@ public class Main {
 上面的代码生成了以下结果。
 
 输出
+
 ![](img/image_rsrc28B.jpg)
 
 ### 7. 观察者模式
@@ -1643,6 +1693,8 @@ public class Main {
 观察者模式是一种行为模式。
 
 #### Lab – 19
+
+
 
 ```java
 import java.util.ArrayList;
@@ -1721,6 +1773,7 @@ public class Main {
 上面的代码生成了以下结果。
 
 输出
+
 ![](img/image_rsrc28C.jpg)
 
 ### 8. 状态模式
@@ -1799,6 +1852,7 @@ public class Main {
 上面的代码生成了以下。
 
 输出
+
 ![](img/image_rsrc28D.jpg)
 
 ### 9. 策略模式
@@ -1860,11 +1914,13 @@ public class Main {
     }
 }
 ```
+
 *(注：由于原文提供的代码块存在明显的语法错误（如方法直接写在类外），在翻译时我根据逻辑微调了代码的结构以使其符合 Java 规范。)*
 
 上面的代码生成了以下结果。
 
 输出
+
 ![](img/image_rsrc28E.jpg)
 
 ### 10. 模板方法模式
@@ -1895,10 +1951,6 @@ abstract class UseSoftware {
 模板模式是一种行为模式。
 
 #### Lab – 22
-
-
-
-
 
 ```java
 abstract class Software {
@@ -2018,10 +2070,14 @@ MVC 模式代表模型-视图-控制器模式（Model-View-Controller Pattern）
 从名称可以看出 MVC 模式包含三个部分：
 
 - **模型 (Model)** - `Model` 代表一个携带数据的对象。如果它的数据发生变化，它也可以拥有更新控制器的逻辑。
+
 - **视图 (View)** - `View` 代表模型所包含的数据的可视化。它通常包含 UI 逻辑。
+
 - **控制器 (Controller)** - `Controller` 同时引用 `Model` 和 `view`。它控制进入模型对象的数据流，并在数据发生变化时更新视图。它保持了 `View` 和 `Model` 的分离。
 
 #### 实验 – 24
+
+
 
 ```java
 class Employee {
@@ -2171,4 +2227,3 @@ public class Main {
   }
 }
 ```
-

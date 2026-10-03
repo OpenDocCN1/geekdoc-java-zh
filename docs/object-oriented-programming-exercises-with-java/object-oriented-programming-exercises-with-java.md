@@ -1,17 +1,5 @@
+
 # Java 面向对象编程练习
-
-
-
-
-
-
-![](img/1f98a1391ec8e96d0767f489f1aceed7_0_0.png)
-
-
-
-
-
-
 
 ## 1. 电影
 
@@ -103,7 +91,7 @@ public void setDirector(String _director) {
 }
 ```
 
-### 列表 1-3: Movie.java
+列表 1-3: Movie.java
 
 在构造函数和 setter 方法中，我们确实对输入值进行一些检查，例如验证年份值是否大于 1900 年。我们将此类功能留给以后的项目，届时我们将引入与用户的交互。
 
@@ -235,9 +223,9 @@ public class Patient {
 
 列表 2-2: Patient.java
 
-这里有两个值得提到的点：首先，`Patient` 对象持有对 `Clinic` 对象的引用。`Clinic` 对象独立于 `Patient` 对象存在，因为多个患者可能属于同一个诊所。这是聚合（Aggregation）的一个示例：我们保留了指向外部对象的引用。
+这里有两个值得提到的点：首先，`Patient` 对象持有对 `Clinic` 对象的引用。`Clinic` 对象独立于 `Patient` 对象存在，因为多个患者可能属于同一个诊所。这是聚合的一个示例：我们保留了指向外部对象的引用。
 
-聚合的反面是组合（Composition）：当一个对象包含其他对象时。这就是 `Measurement` 列表的情况。为患者采集的温度与患者紧密相连，离开患者没有任何意义。如果患者对象被删除，删除温度信息也是可以的。
+聚合的反面是组合：当一个对象包含其他对象时。这就是 `Measurement` 列表的情况。为患者采集的温度与患者紧密相连，离开患者没有任何意义。如果患者对象被删除，删除温度信息也是可以的。
 
 让我们先定义简单的 `Measurement` 类：
 
@@ -272,14 +260,13 @@ public class Measurement {
 
 列表 2-3: Measurement.java
 
-
-
 ```java
 public Measurement(double _temp, Date _date){
     temp = _temp;
     date = (_date != null ? (Date)_date.clone() : null);
 }
 ```
+
 列表 2-4：示例代码
 
 当我们不确定传递给方法的对象是否会在代码的其他部分被修改时，防御性编程是非常重要的。如果这些对象在某个时间点被修改了，我们将得到出乎意料的结果。为了简单起见，我们将信任我们的对象，并在后续示例不再不再防御性编程，但你明白这个意思。
@@ -305,6 +292,7 @@ public Patient(){
 }
 }
 ```
+
 列表 2-5：Patient.java
 
 然后，我们有了 `Clinic` 的 setter 方法以及两个用于插入 `Measurement` 的方法：
@@ -321,6 +309,7 @@ public void insertMeasurement(double _temp, LocalDateTime _date) {
     pm.add(m);
 }
 ```
+
 列表 2-6：Patient.java
 
 接下来，我们实现 `toString()` 方法，以及获取记录最高温度和患者年龄的方法：
@@ -340,9 +329,12 @@ public String toString() {
     return "Patient{" +
     "name="
 ```
+
 列表 2-7：Patient.java
 
 最后，在 `main()` 方法中，我们定义了许多诊所、患者和测量数据。注意我们如何在一处更改手术诊所主任的名称。此外，我们可以通过分配不同 `Clinic` 对象的引用将患者移动到另一个诊所：
+
+
 
 ```java
 import java.time.LocalDateTime;
@@ -376,23 +368,24 @@ public class Hospital {
     }
 }
 ```
-列表 2-8：Hospital.java
+
+列表 2-8：`Hospital.java`
 
 你可以在 GitHub 上找到此项目：
 
 https://github.com/htset/java_oop_exercises/tree/master/Hospital/src
 
-## 3. 包裹运输 (Package Shipping)
+## 3. 包裹运输
 
 让我们创建一个类层次结构，模拟快递公司提供的不同类型的包裹。共有三种包裹，具有不同的费用和交付时间：
 
-- 基础包裹（Base package）：每公斤 5 欧元，5 天送达。如果包裹重量超过 10 公斤，则需要额外一天。
-- 高级包裹（Advanced package）：每公斤 6 欧元，额外收 2 欧元。包裹 2 天后交付。
-- 隔夜包裹（Overnight package）：第二天送达，每公斤 10 欧元。
+- 基础包裹：每公斤 5 欧元，5 天送达。如果包裹重量超过 10 公斤，则需要额外一天。
+- 高级包裹：每公斤 6 欧元，额外收 2 欧元。包裹 2 天后交付。
+- 隔夜包裹：第二天送达，每公斤 10 欧元。
 
-在 `main` 方法中，我们应该能够在同一个数组中插入各种包裹。最后，我们应该打印出所有的包裹。
+在 `main()` 方法中，我们应该能够在同一个数组中插入各种包裹。最后，我们应该打印出所有的包裹。
 
-### 建议解决方案 (Proposed Solution)
+### 建议解决方案
 
 首先，我们创建一个抽象类作为包裹层次结构的根：
 
@@ -412,7 +405,8 @@ public abstract class Package {
     public abstract LocalDate deliveryTime();
 }
 ```
-列表 3-1：Package.java
+
+列表 3-1：`Package.java`
 
 `BasePackage` 类实现了简单的版本，关于包裹的运输逻辑：
 
@@ -438,7 +432,8 @@ public class BasePackage extends Package {
     }
 }
 ```
-列表 3-2：BasePackage.java
+
+列表 3-2：`BasePackage.java`
 
 `AdvancedPackage` 类在方法的实现上有所不同，两个方法：
 
@@ -461,7 +456,8 @@ public class AdvancedPackage extends Package {
     }
 }
 ```
-列表 3-3：AdvancedPackage.java
+
+列表 3-3：`AdvancedPackage.java`
 
 同样，我们实现了 `OvernightPackage`：
 
@@ -484,7 +480,8 @@ public class OvernightPackage extends Package {
     }
 }
 ```
-列表 3-4：OvernightPackage.java
+
+列表 3-4：`OvernightPackage.java`
 
 常量包含在一个名为 `Constants` 的特殊类中：
 
@@ -500,7 +497,8 @@ class Constants {
     public static final int OVERNIGHT_DAYS = 1;
 }
 ```
-列表 3-5：Constants.java
+
+列表 3-5：`Constants.java`
 
 多态的重要性可以在 `main()` 方法中体现：
 
@@ -524,12 +522,10 @@ public class Main {
     }
 }
 ```
-列表 3-6：Main.java
 
-在这里，我们定义了一个包含 `Package` 对象的数组（也可以是 `ArrayList`）。这意味着我们也可以使用该数组来包含派自 `Package` 的对象的引用，例如 `BasePackage`。这样，我们能够存储不同类型的对象
+列表 3-6：`Main.java`
 
-
-（父类）存入同一个数组，并对它们进行统一处理。
+在这里，我们定义了一个包含 `Package` 对象的数组（也可以是 `ArrayList`）。这意味着我们也可以使用该数组来包含派自 `Package` 的对象的引用，例如 `BasePackage`。这样，我们能够存储不同类型的对象（父类）存入同一个数组，并对它们进行统一处理。
 
 同样注意我们如何找到所指向对象的类型：
 
@@ -537,9 +533,9 @@ public class Main {
 p.getClass()
 ```
 
-当 p 引用一个 `BasePackage` 对象时，结果将是 `class BasePackage`。
+当 `p` 引用一个 `BasePackage` 对象时，结果将是 `class BasePackage`。
 
-你可以在 GitHub 上找到此项目项目：
+你可以在 GitHub 上找到此项目：
 
 https://github.com/htset/java_oop_exercises/tree/master/PackageShipping/src
 
@@ -551,6 +547,7 @@ https://github.com/htset/java_oop_exercises/tree/master/PackageShipping/src
 - 文件持久化：包裹应该保存到单个文件中。此外，当应用程序启动时，应该从文件中加载包裹。
 
 ### 建议的解决方案
+
 首先，让我们看看 `main()` 方法现在是什么样子：
 
 ```java
@@ -573,7 +570,7 @@ public class Main {
 }
 ```
 
-### 4-1: Main.java
+### 列表 4-1：`Main.java`
 
 在这里，我们定义了一个 `ArrayList`，它包含对 `Package` 对象（及其派生类）的引用。我们还定义了一个名为 `UIService` 的新类来处理与用户的交互。我们将 `ArrayList` 传递给 `UIService` 类的构造函数，并继续从文本加载包裹。然后，`menu()` 方法处理与用户的所有交互。
 
@@ -596,7 +593,7 @@ public class UIService {
 }
 ```
 
-### 4-2: UIService.java
+### 列表 4-2：`UIService.java`
 
 在类的构造函数中，我们存储了对 Package 列表的引用；我们将在将在后续方法中使用它。
 
@@ -614,37 +611,38 @@ public void menu() throws IOException {
         System.out.println("4 View all packages ");
         System.out.println("0 Exit ");
         option = in.nextInt();
-    } 
-    in.nextLine();
+        in.nextLine();
 
-    switch (option) {
-        case 1:
-            addPackage();
-            break;
-        case 2:
-            searchPackage();
-            break;
-        case 3:
-            deletePackage();
-            break;
-        case 4:
-            listPackages();
-            break;
-        case 0:
-            break;
-        default:
-            System.out.println("Please type again:");
-            break;
-    }
+        switch (option) {
+            case 1:
+                addPackage();
+                break;
+            case 2:
+                searchPackage();
+                break;
+            case 3:
+                deletePackage();
+                break;
+            case 4:
+                listPackages();
+                break;
+            case 0:
+                break;
+            default:
+                System.out.println("Please type again:");
+                break;
+        }
     } while (option != 0);
 }
 ```
 
-### 4-3: UIService.java
+### 列表 4-3：`UIService.java`
 
 关于使用 `Scanner` 类读取的一个注意事项，当我们混合使用 `nextLine()` 和 `nextInt()`（或通用的 `nextXXX()`）时：当我们使用 `nextInt()` 从控制台读取一个整数时，末尾的行不会被读取，并将作为流中的下一个字符存在。如果我们之后使用 `nextLine()`（例如读取一整行），换行符将被读取，该方法将在不读取任何文本的情况下返回。为了解决这个问题，我们在 `nextInt()` 之后调用 `nextLine()`（或任何类似的方法），以便将换行符从流中取出。
 
 接下来，`addPackage()` 方法从用户处获取包裹信息，创建所选类型的 `Package` 并将其插入列表：
+
+
 
 ```java
 private void addPackage() throws IOException {
@@ -810,19 +808,21 @@ public void loadFromFile() throws IOException {
 
 ### 每个包裹的条目格式如下（此处为 AdvancedPackage ）:
 
+```
 Advanced Package
+
 John Doe
+
 1 Main str. Boston
 
-
-
-
-
 ### 11.3
-2022/12/27
---
 
-注意条目之间是用两个连字符（--）分隔的，在条目的第一行我们可以获取包的类型。
+2022/12/27
+
+--
+```
+
+注意条目之间是用两个连字符（`--`）分隔的，在条目的第一行我们可以获取包的类型。
 
 处理完这些后，我们可以继续定义 `Package` 类：
 
@@ -849,23 +849,18 @@ public abstract class Package {
     }
 
     public String getRecipient() {
-```
+        return recipient;
+    }
 
-Listing 4-10: 文本文件
+    public abstract String toString();
 
-```java
-return recipient;
-}
+    public abstract String serialize();
 
-public abstract String toString();
+    public abstract void deserialize(String s);
 
-public abstract String serialize();
+    public abstract double calculateCost();
 
-public abstract void deserialize(String s);
-
-public abstract double calculateCost();
-
-public abstract LocalDateTime calculateDeliveryTime();
+    public abstract LocalDateTime calculateDeliveryTime();
 }
 ```
 
@@ -883,9 +878,7 @@ public class BasePackage extends Package {
         LocalDate _shipmentDate) {
         super(_recipient, _address, _weight, _shipmentDate);
     }
-```
 
-```java
     public BasePackage() {
         super();
     }
@@ -919,18 +912,13 @@ public class BasePackage extends Package {
         StringBuilder str = new StringBuilder();
         str.append("Base Package\n");
         str.append(recipient + "\n");
-```
-
-```java
         str.append(address + "\n");
         str.append(weight + "\n");
         str.append(shipmentDate + "\n");
         str.append("-" + "\n");
         return str.toString();
     }
-```
 
-```java
     public void deserialize(String s) {
       String[] lines = s.split("\\R");
       String package_type;
@@ -940,6 +928,7 @@ public class BasePackage extends Package {
       weight = Double.parseDouble(lines[3]);
       shipmentDate = LocalDate.parse(lines[4]);
     }
+}
 ```
 
 List 4-12: BasePackage.java
@@ -953,14 +942,19 @@ import java.time.LocalDate;
 public class AdvancedPackage extends Package {
 ```
 
+
+
+## 代码清单 4-13：AdvancedPackage.java
+
 ```java
+public class AdvancedPackage extends Package {
     public AdvancedPackage(String _recipient, String _address, double _weight,
         LocalDate _shipmentDate) {
-    super(_recipient, _address, _weight, _shipmentDate);
+        super(_recipient, _address, _weight, _shipmentDate);
     }
 
     public AdvancedPackage() {
-    super();
+        super();
     }
 
     public double calculateCost() {
@@ -987,9 +981,6 @@ public class AdvancedPackage extends Package {
     }
 
     public String serialize() {
-```
-
-```java
         StringBuilder str = new StringBuilder();
         str.append("Advanced Package\n");
         str.append(recipient + "\n");
@@ -999,21 +990,20 @@ public class AdvancedPackage extends Package {
         str.append("-" + "\n");
         return str.toString();
     }
-```
 
-```java
     public void deserialize(String s) {
-      String[] lines = s.split("\\R");
-      String package_type;
+        String[] lines = s.split("\\R");
+        String package_type;
 
-      recipient = lines[1];
-      address = lines[2];
-      weight = Double.parseDouble(lines[3]);
-      shipmentDate = LocalDate.parse(lines[4]);
+        recipient = lines[1];
+        address = lines[2];
+        weight = Double.parseDouble(lines[3]);
+        shipmentDate = LocalDate.parse(lines[4]);
     }
+}
 ```
 
-Listing 4-13: AdvancedPackage.java
+## 代码清单 4-14：OvernightPackage.java
 
 ```java
 import java.time.LocalDate;
@@ -1021,28 +1011,22 @@ import java.time.LocalDate;
 public class OvernightPackage extends Package {
     public OvernightPackage(String _recipient, String _address, double _weight,
         LocalDate _shipmentDate) {
-    super(_recipient, _address, _weight, _shipmentDate);
+        super(_recipient, _address, _weight, _shipmentDate);
     }
 
     public OvernightPackage() {
-    super();
+        super();
     }
-```
 
-```java
     public double calculateCost() {
         return Constants.ADVANCED_PACKAGE_COST_FACTOR *
         weight;
     }
-```
 
-```java
     public LocalDate calculateDeliveryTime() {
         return shipmentDate.plusDays(Constants.ADVANCED_PACKAGE_DAYS);
     }
-```
 
-```java
     public String toString() {
         StringBuilder str = new StringBuilder();
         str.append("\n-Overnight Package-");
@@ -1056,9 +1040,7 @@ public class OvernightPackage extends Package {
         str.append("\n---------------------");
         return str.toString();
     }
-```
 
-```java
     public String serialize() {
         StringBuilder str = new StringBuilder();
         str.append("Overnight Package\n");
@@ -1069,24 +1051,22 @@ public class OvernightPackage extends Package {
         str.append("-" + "\n");
         return str.toString();
     }
-```
 
-```java
     public void deserialize(String s) {
-      String[] lines = s.split("\\R");
-      String package_type;
+        String[] lines = s.split("\\R");
+        String package_type;
 
-      recipient = lines[1];
-      address = lines[2];
-      weight = Double.parseDouble(lines[3]);
-      shipmentDate = LocalDate.parse(lines[4]);
+        recipient = lines[1];
+        address = lines[2];
+        weight = Double.parseDouble(lines[3]);
+        shipmentDate = LocalDate.parse(lines[4]);
     }
+}
 ```
-
-Listing 4-14: OvernightPackage.java
 
 你可以在 GitHub 上找到这个项目：
-https://github.com/htset/java_exercises/tree/master/PackageShipping/src
+
+`https://github.com/htset/java_exercises/tree/master/PackageShipping/src`
 
 ## 5. 带 GUI 的快递
 
@@ -1099,14 +1079,19 @@ https://github.com/htset/java_exercises/tree/master/PackageShipping/src
 
 在之前的快递练习版本中，控制台 UI 类既处理与用户的交互，也处理了文件的数据存储。在这里，我们将文件处理功能封装在一个新类中，命名为 `PersistenceService`：
 
+## 代码清单 5-1：PersistenceService.java
+
 ```java
 import java.io.*;
 import java.util.List;
+
 public class PersistenceService {
     private List<Package> packages;
+
     public PersistenceService(List<Package> _packages) {
         packages = _packages;
     }
+
     public void saveToFile() throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter("packages.txt"));
         for (Package p : packages) {
@@ -1114,6 +1099,7 @@ public class PersistenceService {
         }
         writer.close();
     }
+
     public void loadFromFile() throws IOException {
         packages.clear();
         File file = new File("packages.txt");
@@ -1125,40 +1111,37 @@ public class PersistenceService {
         String package_str = "";
         while ((line = reader.readLine()) != null) {
             if (line.indexOf("---") == 0) {
-```
-
-
-
-
-```java
-package p;
-if (package_str.indexOf("Base Package") == 0) {
-  p = new BasePackage();
-  p.deserialize(package_str);
-  packages.add(p);
-} else if (package_str.indexOf("Advanced Package") == 0) {
-  p = new AdvancedPackage();
-  p.deserialize(package_str);
-  packages.add(p);
-} else if (package_str.indexOf("Overnight Package") == 0) {
-  p = new OvernightPackage();
-  p.deserialize(package_str);
-  packages.add(p);
-} else {
-  System.out.println("error loading packages. Exiting..");
-  System.exit(0);
-}
-package_str = "";
-} else {
-  package_str += line + "\n";
+                Package p;
+                if (package_str.indexOf("Base Package") == 0) {
+                    p = new BasePackage();
+                    p.deserialize(package_str);
+                    packages.add(p);
+                } else if (package_str.indexOf("Advanced Package") == 0) {
+                    p = new AdvancedPackage();
+                    p.deserialize(package_str);
+                    packages.add(p);
+                } else if (package_str.indexOf("Overnight Package") == 0) {
+                    p = new OvernightPackage();
+                    p.deserialize(package_str);
+                    packages.add(p);
+                } else {
+                    System.out.println("error loading packages. Exiting..");
+                    System.exit(0);
+                }
+                package_str = "";
+            } else {
+                package_str += line + "\n";
+            }
+        }
+    }
 }
 ```
-
-列表 5-1：PersistenceService.java
 
 `PersistenceService` 类接收包列表作为输入参数，并在 `loadFromFile()` 方法中填充它。相反，它在 `saveToFile()` 方法将所有内容存储在同一个文件中。
 
 包列表在主类（Main）中定义，其引用被传递给其他类：
+
+## 代码清单 5-2：Main.java
 
 ```java
 import java.io.IOException;
@@ -1168,7 +1151,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             ArrayList<Package> list = new ArrayList<>();
-            PersistenceService ps = new PersistenceService();
+            PersistenceService ps = new PersistenceService(list);
             ps.loadFromFile();
             PackagesTable pt = new PackagesTable(ps, list);
         } catch (IOException ioe) {
@@ -1180,9 +1163,9 @@ public class Main {
 }
 ```
 
-列表 5-2：Main.java
-
 接下来，我们创建 `PackagesTable` 类，它向用户展示一个包含目前为止所有包裹运输的网格：
+
+## 代码清单 5-3：PackagesTable.java
 
 ```java
 import javax.swing.*;
@@ -1233,13 +1216,14 @@ public class PackagesTable extends JFrame implements ActionListener {
         model.populateModel();
         ((AbstractTableModel) model).fireTableDataChanged();
     }
-    //
 }
 ```
 
-列表 5-3：PackageTable.java
-
 `PackageTable` 类继承自 Swing 的 `JFrame` 类，包含一个 `JTable` 和一个 `JButton` 对象。为了处理 `JTable` 数据，我们定义了一个表格模型（Table Model）类。该类定义在 `PackageTable` 类内部：
+
+
+
+## PackageTableModel 类
 
 ```java
 class PackageTableModel extends AbstractTableModel {
@@ -1305,9 +1289,11 @@ class PackageTableModel extends AbstractTableModel {
 }
 ```
 
-列表 5-4：PackageTable.java
+**列表 5-4：PackageTable.java**
 
 表格模型定义了表头并遍历包裹。当点击 `JButton` 时，会显示一个表单供用户填写详情。以下是 `PackageForm` 的代码：
+
+## PackageForm 类
 
 ```java
 import javax.swing.*;
@@ -1410,19 +1396,13 @@ public class PackageForm extends JDialog implements ActionListener {
 }
 ```
 
-
-
-
-}
-this.dispose();
-}
-```
-
-### 列表 5-5: PackageForm.java
+**列表 5-5：PackageForm.java**
 
 当点击按钮时，`actionPerformed()` 方法会从文本框读取用户输入，并使用它创建一个新的 `Package` 对象并添加到包列表中。包的类型取决于包下拉列表中的选择。
 
-最后，模态框会自动关闭，控制权返回到 `PackageTable` 类（`actionPerformed()` 方法），我们在那里使用新数据重新填充表格模型（Table Model）：
+最后，模态框会自动关闭，控制权返回到 `PackageTable` 类（`actionPerformed()` 方法），我们在那里使用新数据重新填充表格模型：
+
+**列表 5-6：PackageTable.java**
 
 ```java
 public void actionPerformed(ActionEvent e) {
@@ -1432,201 +1412,283 @@ public void actionPerformed(ActionEvent e) {
 }
 ```
 
-### 列表 5-6: PackageTable.java
+## Package 基类
 
 为了完整性，我们将包含其他类，从基类 `Package` 开始：
+
+**列表 5-7：Package.java**
 
 ```java
 import java.time.LocalDate;
 
 public abstract class Package {
-protected String recipient;
-protected String address;
-protected double weight;
-```
+    protected String recipient;
+    protected String address;
+    protected double weight;
+    protected LocalDate shipmentDate;
 
-```
-protected LocalDate shipmentDate;
+    public Package(String _recipient, String _address, double _weight,
+        LocalDate _shipmentDate) {
+        recipient = _recipient;
+        address = _address;
+        weight = _weight;
+        shipmentDate = _shipmentDate;
+    }
 
-public Package(String _recipient, String _address, double _weight,
-    LocalDate _shipmentDate) {
-    recipient = _recipient;
-    address = _address;
-    weight = _weight;
-    shipmentDate = _shipmentDate;
-}
+    public Package() {
+        recipient = "";
+        address = "";
+        weight = 0;
+    }
 
-public Package() {
-    recipient = "";
-    address = "";
-    weight = 0;
-}
+    public String getRecipient() {
+        return recipient;
+    }
 
-public String getRecipient() {
-    return recipient;
-}
+    public String getAddress() {
+        return address;
+    }
 
-public String getAddress() {
-    return address;
-}
+    public double getWeight() {
+        return weight;
+    }
 
-public double getWeight() {
-    return weight;
-}
+    public LocalDate getShipmentDate() {
+        return shipmentDate;
+    }
 
-public LocalDate getShipmentDate() {
-    return shipmentDate;
-}
-
-public abstract String toString();
-```
-
-```
-public abstract String serialize();
-
-public abstract void deserialize(String s);
-
-public abstract double calculateCost();
-
-public abstract LocalDate calculateDeliveryTime();
+    public abstract String toString();
+    public abstract String serialize();
+    public abstract void deserialize(String s);
+    public abstract double calculateCost();
+    public abstract LocalDate calculateDeliveryTime();
 }
 ```
 
-Listing 5-7: Package.java
+## BasePackage 类
 
-### 这里是派生的 java.time.LocalDate;
+**列表 5-8：BasePackage.java**
 
 ```java
 import java.time.LocalDate;
+
 public class BasePackage extends Package {
-    public BasePackage(String _recipient
+    public BasePackage(String _recipient, String _address,
+        double _weight, LocalDate _shipmentDate) {
+        super(_recipient, _address, _weight, _shipmentDate);
+    }
+
+    public BasePackage() {
+        super();
+    }
+
+    public double calculateCost() {
+        return Constants.BASE_PACKAGE_COST_FACTOR * weight;
+    }
+
+    public LocalDate calculateDeliveryTime() {
+        return shipmentDate.plusDays(Constants.BASE_PACKAGE_DAYS);
+    }
+
+    public String toString() {
+        StringBuilder str = new StringBuilder();
+        str.append("\nBase Package--");
+        str.append("\nRecipient: " + recipient);
+        str.append("\nAddress: " + address);
+        str.append("\nWeight: " + weight);
+        str.append("\nShipment date: " + shipmentDate);
+        str.append("\nExpected delivery date: " + calculateDeliveryTime());
+        str.append("\nCost: " + calculateCost());
+        str.append("\n---------------------");
+        return str.toString();
+    }
+
+    public String serialize() {
+        StringBuilder str = new StringBuilder();
+        str.append("BasePackage|");
+        str.append(recipient + "|");
+        str.append(address + "|");
+        str.append(weight + "|");
+        str.append(shipmentDate);
+        return str.toString();
+    }
+
+    public void deserialize(String s) {
+        String[] parts = s.split("\\|");
+        recipient = parts[1];
+        address = parts[2];
+        weight = Double.parseDouble(parts[3]);
+        shipmentDate = LocalDate.parse(parts[4]);
+    }
+}
 ```
 
-```
-str.append("\nRecipient: " + recipient);
-str.append("\nAddress: " + address);
-str.append("\nWeight: " + weight);
-str.append("\nshipment date:" + shipmentDate);
-str.append("\nExpected delivery date:" + 
-calculateDeliveryTime());
-str.append("\nCost: " + calculateCost());
-str.append("\n---------------------");
-```
-
-Listing 5-8: BasePackage.java
+## AdvancedPackage 类
 
 ```java
 import java.time.LocalDate;
+
 public class AdvancedPackage extends Package {
-  public AdvancedPackage(String _recipient, String _address,
-  double _weight,
+    public AdvancedPackage(String _recipient, String _address,
+        double _weight, LocalDate _shipmentDate) {
+        super(_recipient, _address, _weight, _shipmentDate);
+    }
+
+    public AdvancedPackage() {
+        super();
+    }
+
+    public double calculateCost() {
+        return Constants.ADVANCED_PACKAGE_COST_FACTOR * weight + Constants.ADVANCED_PACKAGE_COST_SUPPL;
+    }
+
+    public LocalDate calculateDeliveryTime() {
+        return shipmentDate.plusDays(Constants.ADVANCED_PACKAGE_DAYS);
+    }
+
+    public String toString() {
+        StringBuilder str = new StringBuilder();
+        str.append("\nAdvanced Package--");
+        str.append("\nRecipient: " + recipient);
+        str.append("\nAddress: " + address);
+        str.append("\nWeight: " + weight);
+        str.append("\nShipment date: " + shipmentDate);
+        str.append("\nExpected delivery date: " + calculateDeliveryTime());
+        str.append("\nCost: " + calculateCost());
+        str.append("\n---------------------");
+        return str.toString();
+    }
+
+    public String serialize() {
+        StringBuilder str = new StringBuilder();
+        str.append("AdvancedPackage|");
+        str.append(recipient + "|");
+        str.append(address + "|");
+        str.append(weight + "|");
+        str.append(shipmentDate);
+        return str.toString();
+    }
+
+    public void deserialize(String s) {
+        String[] parts = s.split("\\|");
+        recipient = parts[1];
+        address = parts[2];
+        weight = Double.parseDouble(parts[3]);
+        shipmentDate = LocalDate.parse(parts[4]);
+    }
+}
 ```
 
-```
-LocalDate _shipmentDate) {
-  super(_recipient, _address, _weight, _shipmentDate);
-}
-public AdvancedPackage() {
-  super();
-}
-public double calculateCost() {
-  return Constants.ADVANCED_PACKAGE_COST_FACTOR * weight + Constants.ADVANCED_PACKAGE_COST_SUPPL;
-}
-public LocalDate calculateDeliveryTime() {
-  return shipmentDate.plusDays(Constants.ADVANCED_PACKAGE_DAYS);
-}
-public String toString() {
-  StringBuilder str = new StringBuilder();
-str.append("\nAdvanced Package--");
-str.append("\nRecipient: " + recipient);
-str.append("\nAddress: " + address);
-str.append("\nWeight: " + weight);
-str.append("\nShipment date:" + shipmentDate);
+
+
+## 代码示例
+
+```java
 str.append("\nExpected delivery date:" + calculateDeliveryTime());
-str.append("\nCost:" + calculateCost());
-str.append("\n--------------------\n");
-  return str.toString();
-}
-public String serialize() {
-  StringBuilder str = new StringBuilder();
-str.append("Advanced Package\n");
-str.append(recipient + "\n");
-str.append(address + "\n");
-str.append(weight + "\n");
-str.append(shipmentDate + "\n");
-str.append("--" + "\n");
-```
 
-```
+str.append("\nCost:" + calculateCost());
+
+str.append("\n--------------------\n");
+
 return str.toString();
 }
+
+public String serialize() {
+
+  StringBuilder str = new StringBuilder();
+
+  str.append("Advanced Package\n");
+
+  str.append(recipient + "\n");
+
+  str.append(address + "\n");
+
+  str.append(weight + "\n");
+
+  str.append(shipmentDate + "\n");
+
+  str.append("--" + "\n");
+
+  return str.toString();
+}
+
 public void deserialize(String s) {
-String[] lines = s.split("\\R");
-String package_type;
-recipient = lines[1];
-address = lines[2];
-weight = Double.parseDouble(lines[3]);
-shipmentDate = LocalDate.parse(lines[4]);
+
+  String[] lines = s.split("\\R");
+
+  String package_type;
+
+  recipient = lines[1];
+
+  address = lines[2];
+
+  weight = Double.parseDouble(lines[3]);
+
+  shipmentDate = LocalDate.parse(lines[4]);
 }
 ```
 
-**列表 5-9:** AdvancePackage.java
+**列表 5-9:** `AdvancePackage.java`
 
 ```java
 import java.time.LocalDate;
+
 public class OvernightPackage extends Package {
-public OvernightPackage(String _recipient, String _address,
-double _weight,
-    LocalDate _shipmentDate) {
+
+  public OvernightPackage(String _recipient, String _address,
+      double _weight,
+      LocalDate _shipmentDate) {
     super(_recipient, _address, _weight, _shipmentDate);
-}
-public OvernightPackage() {
+  }
+
+  public OvernightPackage() {
     super();
+  }
+
+  public double calculateCost() {
+    return Constants.OVERNIGHT_PACKAGE_COST_FACTOR * weight;
+  }
+
+  public LocalDate calculateDeliveryTime() {
+    return shipmentDate.plusDays(Constants.OVERNIGHT_PACKAGE_DAYS);
+  }
+
+  public String toString() {
+    StringBuilder str = new StringBuilder();
+    str.append("\n-Overnight Package--");
+    str.append("\nRecipient: " + recipient);
+    str.append("\nAddress: " + address);
+    str.append("\nWeight: " + weight);
+    str.append("\nShipment date:" + shipmentDate);
+    str.append("\nExpected delivery date:" + calculateDeliveryTime());
+    str.append("\nCost:" + calculateCost());
+    str.append("\n--------------------");
+    return str.toString();
+  }
+
+  public String serialize() {
+    StringBuilder str = new StringBuilder();
+    str.append("Advanced Package\n");
+    str.append(recipient + "\n");
+    str.append(address + "\n");
+    str.append(weight + "\n");
+    str.append(shipmentDate + "\n");
+    str.append("--" + "\n");
+    return str.toString();
+  }
+
+  public void deserialize(String s) {
+    String[] lines = s.split("\\R");
+    String package_type;
+    recipient = lines[1];
+    address = lines[2];
+    weight = Double.parseDouble(lines[3]);
+    shipmentDate = LocalDate.parse(lines[4]);
+  }
 }
-public double calculateCost() {
-    return Constants.OVERNIGHT_PACKAGE_COST_FACTOR *
-weight;
-}
-public LocalDate calculateDeliveryTime() {
-    return
-shipmentDate.plusDays(Constants.OVERNIGHT_PACKAGE_DAYS);
-}
-public String toString() {
-  StringBuilder str = new StringBuilder();
-str.append("\n-Overnight Package--");
-str.append("\nRecipient: " + recipient);
 ```
 
-```
-str.append("\nAddress: " + address);
-str.append("\nWeight: " + weight);
-str.append("\nShipment date:" + shipmentDate);
-str.append("\nExpected delivery date:" + 
-calculateDeliveryTime());
-str.append("\nCost:" + calculateCost());
-str.append("\n--------------------");
-  return str.toString();
-}
-public String serialize() {
-  StringBuilder str = new StringBuilder();
-str.append("Advanced Package\n");
-str.append(recipient + "\n");
-str.append(address + "\n");
-str.append(weight + "\n");
-str.append(shipmentDate + "\n");
-str.append("--" + "\n");
-}
-public void deserialize(String s) {
-String[] lines = s.split("\\R");
-String package_type;
-recipient = lines[1];
-address = lines[2];
-weight = Double.parseDouble(lines[3]);
-shipmentDate = LocalDate.parse(lines[4]);
-}
-```
-
-Listing 5-10: OvernightPackage.java
+**Listing 5-10:** `OvernightPackage.java`
 
 ```java
 public class Constants {
@@ -1638,9 +1700,7 @@ public class Constants {
 }
 ```
 
-Listing 5-11: Constants.java
-
-
+**Listing 5-11:** `Constants.java`
 
 ```java
 public double calculateCost() {
@@ -1657,16 +1717,15 @@ public String toString() {
     buffer.append("\nCoverage: " + coverage);
     buffer.append("\nCar Age: " + carAge);
     buffer.append("\nYearly cost: " + calculateCost());
-
     return buffer.toString();
 }
 ```
 
-列表 6-3: AutoInsurance.java
+**列表 6-3:** `AutoInsurance.java`
 
 按照要求，我们还需要创建一个方法，接收一个保险对象（无论是人寿险还是车险）并将其保存到文本文件中。
 
-我们可以编写两个独立的方法来执行此任务，为种对象类型编写一个。然而，我们可以利用多态性只写一个方法。我们将该方法（静态的）放在 Main 类中：
+我们可以编写两个独立的方法来执行此任务，为每种对象类型编写一个。然而，我们可以利用多态性只写一个方法。我们将该方法（静态的）放在 `Main` 类中：
 
 ```java
 import java.io.FileWriter;
@@ -1674,26 +1733,22 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class Main {
-
     static void saveInsurance(Insurance insurance) throws IOException {
         PrintWriter output = new PrintWriter(new FileWriter("insurance.txt", true), true);
         output.println(insurance.toString());
-
         // 无法编译
-        //output.println(insurance.getCarAge())
-        if(insurance.getClass().toString().equals("class AutoInsurance"))
-            output.println(">>>Car age: " + ((AutoInsurance)insurance).getCarAge());
-
+        // output.println(insurance.getCarAge())
+        if (insurance.getClass().toString().equals("class AutoInsurance"))
+            output.println(">>>Car age: " + ((AutoInsurance) insurance).getCarAge());
         output.close();
     }
 
-    public static void main(String[] args[]) {
+    public static void main(String[] args) {
         try {
             AutoInsurance i1 = new AutoInsurance("John Doe", 30, 15000, 2);
             System.out.println(i1.toString());
             LifeInsurance i2 = new LifeInsurance("John Doe", 30, 1000000);
             System.out.println(i2.toString());
-
             saveInsurance(i1);
             saveInsurance(i2);
         } catch (IOException ioe) {
@@ -1703,14 +1758,14 @@ public class Main {
 }
 ```
 
-列表 6-4: Main.java
+**列表 6-4:** `Main.java`
 
-该方法接收 Insurance 引用作为输入。通过多态，它会调用相应的 `toString()` 方法，并且每次获取不同的字符串。
+该方法接收 `Insurance` 引用作为输入。通过多态，它会调用相应的 `toString()` 方法，并且每次获取不同的字符串。
 
-多态性也有其局限性。注意，我们只能访问在基类（Insurance）中定义的参数和方法。因此，我们无法调用仅在 AutoInsurance 类中定义的 `getCarAge()` 方法。如果我们需要执行该操作，必须将引用强制转换为 `AutoInsurance` 的引用，如下所示：
+多态性也有其局限性。注意，我们只能访问在基类（`Insurance`）中定义的参数和方法。因此，我们无法调用仅在 `AutoInsurance` 类中定义的 `getCarAge()` 方法。如果我们需要执行该操作，必须将引用强制转换为 `AutoInsurance` 的引用，如下所示：
 
 ```java
-if(insurance.getClass().toString().equals("AutoInsurance"))
+if (insurance.getClass().toString().equals("AutoInsurance"))
 ```
 
 你可以在 GitHub 上找到此项目：
@@ -1722,12 +1777,12 @@ https://github.com/htset/java_oop_exercises/tree/master/Insurance/src
 
 我们需要管理以下信息：
 
-公寓（Apartments）：
+**公寓（Apartments）：**
 - 地址
 - 容量（最大入住人数）
 - 每日价格
 
-预订（Reservations）：
+**预订（Reservations）：**
 - 预订人的姓名和姓氏
 - 开始日期
 - 持续时间
@@ -1746,7 +1801,7 @@ https://github.com/htset/java_oop_exercises/tree/master/Insurance/src
 
 ### 建议的解决方案
 
-我们从定义数据库表开始。本次练习我们将使用 MySQL，因为它对于初级程序员来说，具有最直观的 API API。
+我们从定义数据库表开始。本次练习我们将使用 MySQL，因为它对于初级程序员来说，具有最直观的 API。
 
 以下是创建表的 SQL 语句：
 
@@ -1781,18 +1836,15 @@ CREATE TABLE `persons` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ```
 
-
-
-
-
 ```java
 "\surname=" + surname +
 "nbirthYear=" + birthYear;
 }
 ```
-列表 7-4: Person.java
 
-应用程序的 main 方法也非常简单，因为工作被委托给了 `UIService` 和 `PersistenceService` 类处理：
+**列表 7-4:** `Person.java`
+
+应用程序的 `main` 方法也非常简单，因为工作被委托给了 `UIService` 和 `PersistenceService` 类处理：
 
 ```java
 public static void main(String args[]) {
@@ -1802,7 +1854,7 @@ public static void main(String args[]) {
 }
 ```
 
-列表 7-5: Main.java
+**列表 7-5:** `Main.java`
 
 现在，让我们来看一些有趣的内容。首先定义处理与用户交互的 `UIService` 类：
 
@@ -1823,7 +1875,7 @@ public UIService(PersistenceService _ps) {
 }
 ```
 
-列表 7-6: UIService.java
+**列表 7-6:** `UIService.java`
 
 注意在 `UIService` 类内部，我们保留了对 `PersistenceService` 对象的引用。该引用是在 `UIService` 构造函数中提供的。
 
@@ -1842,32 +1894,28 @@ public void menu() {
         System.out.print("Enter your selection:");
         option = in.nextInt();
         in.nextLine();
-    }
 
-    switch (option) {
-        case 1:
-            addReservation();
-            break;
-        case 2:
-            searchReservation();
-            break;
-        case 3:
-            listReservations();
-            break;
-        case 0:
-    }}
-```
-
-```java
-break;
-default:
-  System.out.print("Please enter selection again:");
-  break;
-} while (option != 0);
+        switch (option) {
+            case 1:
+                addReservation();
+                break;
+            case 2:
+                searchReservation();
+                break;
+            case 3:
+                listReservations();
+                break;
+            case 0:
+                break;
+            default:
+                System.out.print("Please enter selection again:");
+                break;
+        }
+    } while (option != 0);
 }
 ```
 
-列表 7-7: UIService 操作
+**列表 7-7:** `UIService` 操作
 
 ### 当用户按下 1 时，调用 `addReservation()` 方法：
 
@@ -1877,25 +1925,32 @@ private void addReservation() {
   int option;
   String name, surname, startDateStr;
   int duration, day, month, year;
+```
 
-  System.out.print("Name: ");
-  name = in.nextLine();
 
-  System.out.print("Surname: ");
-  surname = in.nextLine();
 
-  System.out.print("Start date (YYYY-MM-DD): ");
-  startDateStr = in.nextLine();
-  LocalDate date = LocalDate.parse(startDateStr);
+## 代码示例：用户输入与公寓选择
 
-  System.out.print("Duration: ");
-  duration = in.nextInt();
-  in.nextLine();
+```java
+System.out.print("Name: ");
+name = in.nextLine();
 
-  System.out.println("Available apartments: ");
-  ArrayList<Apartment> apartments = ps.getApartments();
-  int i = 1;
-}
+System.out.print("Surname: ");
+surname = in.nextLine();
+
+System.out.print("Start date (YYYY-MM-DD): ");
+startDateStr = in.nextLine();
+
+LocalDate date = LocalDate.parse(startDateStr);
+
+System.out.print("Duration: ");
+duration = in.nextInt();
+in.nextLine();
+
+System.out.println("Available apartments: ");
+ArrayList<Apartment> apartments = ps.getApartments();
+
+int i = 1;
 ```
 
 ```java
@@ -1903,77 +1958,65 @@ for (Apartment a : apartments) {
     System.out.println("Apartment no." + (i++) + ":");
     System.out.println(a);
 }
+
 System.out.print("Press 0 to cancel): ");
 option = in.nextInt();
 in.nextLine();
 
 if (option > 0 && option <= apartments.size()) {
     Reservation res = new Reservation(0, name, surname,
-    startDate, duration,
-    apartments.get(option - 1).getPrice());
+        startDate, duration,
+        apartments.get(option - 1).getPrice());
     addPersons(res);
     ps.insertReservation(res);
 }
 ```
 
-列表 7-8: UIService.java
+列表 7-8: `UIService.java`
 
-用户输入所需的预订开始日期和持续时间后，系统会向一个可用公寓列表。通常情况下，我们会搜索这些日期内的空闲公寓，但为了简单起见，我们获取数据库中的所有公寓。
-公寓列表是通过使用 `PersistenceService` 对象（`getAvailableApartments()` 方法）获取的。选择公寓后，用户会被提示插入所有入住该公寓的人。这是通过 `addPersons()` 方法（`UIService` 类内部的一个私有方法）完成的：
+用户输入所需的预订开始日期和持续时间后，系统会显示一个可用公寓列表。通常情况下，我们会搜索这些日期内的空闲公寓，但为了简单起见，我们获取数据库中的所有公寓。公寓列表是通过使用 `PersistenceService` 对象（`getAvailableApartments()` 方法）获取的。选择公寓后，用户会被提示插入所有入住该公寓的人。这是通过 `addPersons()` 方法（`UIService` 类内部的一个私有方法）完成的：
 
 ```java
 private void addPersons(Reservation resv) {
-```
+    Scanner in = new Scanner(System.in);
+    String name, surname, selection;
+    int birthYear;
 
-```java
-Scanner in = new Scanner(System.in);
-String name, surname, selection;
-int birthYear;
-```
+    System.out.println("Give the persons:");
+    do {
+        System.out.print("Name: ");
+        name = in.nextLine();
+        System.out.print("Surname: ");
+        surname = in.nextLine();
+        System.out.print("Birth Year: ");
+        birthYear = in.nextInt();
+        in.nextLine();
 
-```java
-System.out.println("Give the persons:");
-do {
-  System.out.print("Name: ");
-  name = in.nextLine();
-  System.out.print("Surname: ");
-  surname = in.nextLine();
-  System.out.print("Birth Year: ");
-  birthYear = in.nextInt();
-  in.nextLine();
+        resv.addPerson(new Person(0, name, surname, birthYear));
+
+        System.out.print("Add another person? (y/n): ");
+        selection = in.nextLine();
+    } while (!selection.equals("n") && !selection.equals("N"));
 }
 ```
 
-```java
-resv.addPerson(new Person(0, name, surname, birthYear));
-```
+列表 7-9: `UIService.java`
 
-```java
-System.out.print("Add another person? (y/n): ");
-selection = in.nextLine();
-} while (!selection.equals("n") && !selection.equals("N"));
-```
-
-列表 7-9: UIService.java
-
-### 最后，`UIService` 中有两个方法
+### `UIService` 中的两个查询方法
 
 ```java
 private void searchReservation() {
-  Scanner in = new Scanner(System.in);
-  String surname;
-  System.out.print("Enter surname (also partial): ");
-  surname = in.nextLine();
-  ArrayList<Reservation> reservations =
-  ps.getReservationsBySurname(surname);
-```java
-for (Reservation r : reservations) {
-  System.out.println(r);
-}
-}
-```
+    Scanner in = new Scanner(System.in);
+    String surname;
+    System.out.print("Enter surname (also partial): ");
+    surname = in.nextLine();
+    ArrayList<Reservation> reservations = ps.getReservationsBySurname(surname);
 
-```java
+    for (Reservation r : reservations) {
+        System.out.println(r);
+    }
+}
+
 private void listReservations() {
     ArrayList<Reservation> reservations = ps.getAllReservations();
     for (Reservation r : reservations) {
@@ -1982,7 +2025,9 @@ private void listReservations() {
 }
 ```
 
-列表 7-10: UIService.java
+列表 7-10: `UIService.java`
+
+## `PersistenceService` 类
 
 现在我们转向 `PersistenceService` 类。这是处理数据库连接的类：
 
@@ -1991,52 +2036,51 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class PersistenceService {
-
     private Connection connection = null;
     private PreparedStatement preparedStatement = null;
     private ResultSet resultSet = null;
+}
+```
 
-列表 7-11: PersistenceService.java
+列表 7-11: `PersistenceService.java`
 
 我们将数据库功能放在这个类中。注意其他类使用这个类。在构造函数中，我们创建连接对象：
 
 ```java
 public PersistenceService() {
-  try {
-    connection = DriverManager.getConnection("jdbc:mysql://localhost/test?user=root&password=1234");
-
-    connection.setAutoCommit(false);
-  } catch (SQLException e) {
-    System.out.println("Could not connect to database.");
-    System.exit(1);
-  }
-
+    try {
+        connection = DriverManager.getConnection("jdbc:mysql://localhost/test?user=root&password=1234");
+        connection.setAutoCommit(false);
+    } catch (SQLException e) {
+        System.out.println("Could not connect to database.");
+        System.exit(1);
+    }
+}
 ```
 
-列表 7-12: PersistenceService.java
+列表 7-12: `PersistenceService.java`
 
-所有的数据库操作都执行在 `try-catch` 块中。注意我们禁用了自动提交。这意味着我们需要提交更改才能生效。`getApartments()` 方法获取所有公寓：
+所有的数据库操作都执行在 `try-catch` 块中。注意我们禁用了自动提交。这意味着我们需要提交更改才能生效。`getAvailableApartments()` 方法获取所有公寓：
 
 ```java
 public ArrayList<Apartment> getAvailableApartments() {
-  ArrayList<Apartment> result = new ArrayList<>();
-  try {
-    preparedStatement = connection.prepareStatement("SELECT * from Apartments");
-    resultSet = preparedStatement.executeQuery();
-
-    while (resultSet.next()) {
-      result.add(new Apartment(resultSet.getInt("id"),
-      resultSet.getString("address"),
-      resultSet.getInt("capacity"),
-      resultSet.getDouble("price")));
+    ArrayList<Apartment> result = new ArrayList<>();
+    try {
+        preparedStatement = connection.prepareStatement("SELECT * from Apartments");
+        resultSet = preparedStatement.executeQuery();
+        while (resultSet.next()) {
+            result.add(new Apartment(resultSet.getInt("id"),
+                resultSet.getString("address"),
+                resultSet.getInt("capacity"),
+                resultSet.getDouble("price")));
+        }
+    } catch (SQLException e) {
+        System.out.println("Database error. Exiting..");
+        e.printStackTrace();
+        close();
+        System.exit(1);
     }
-  } catch (SQLException e) {
-    System.out.println("Database error. Exiting..");
-    e.printStackTrace();
-    close();
-    System.exit(1);
-  }
-  return result;
+    return result;
 }
 ```
 
@@ -2044,68 +2088,70 @@ public ArrayList<Apartment> getAvailableApartments() {
 
 ```java
 public ArrayList<Reservation> getAllReservations() {
-  ArrayList<Reservation> result = new ArrayList<>();
-  try {
-    preparedStatement = connection.prepareStatement("SELECT * from Reservations");
-    resultSet = preparedStatement.executeQuery();
-
-    while (resultSet.next()) {
-      int day, month, year;
-      Reservation res = new Reservation(resultSet.getInt("id"),
-      resultSet.getString("name"),
-      resultSet.getString("surname"),
-      resultSet.getDate("start_date").toLocalDate(),
-      resultSet.getInt("duration"),
-      resultSet.getDouble("cost"));
-
-      PreparedStatement newStatement = connection
-      .prepareStatement("SELECT * from Persons where reservation_id=?");
-      newStatement.setInt(1, res.getInt("id"));
-
-      ResultSet newRes = newStatement.executeQuery();
-      while (newRes.next()) {
-        res.addPerson(new Person(newRes.getInt("id"),
-        newRes.getString("name"),
-        newRes.getString("surname"),
-        newRes.getInt("birth_year")));
-      }
-      result.add(res);
-      newRes.close();
-      newStatement.close();
+    ArrayList<Reservation> result = new ArrayList<>();
+    try {
+        preparedStatement = connection.prepareStatement("SELECT * from Reservations");
+        resultSet = preparedStatement.executeQuery();
+        while (resultSet.next()) {
+            Reservation res = new Reservation(resultSet.getInt("id"),
+                resultSet.getString("name"),
+                resultSet.getString("surname"),
+                resultSet.getDate("start_date").toLocalDate(),
+                resultSet.getInt("duration"),
+                resultSet.getDouble("cost"));
+            PreparedStatement newStatement = connection
+                .prepareStatement("SELECT * from Persons where reservation_id=?");
+            newStatement.setInt(1, res.getId());
+            ResultSet newRes = newStatement.executeQuery();
+            while (newRes.next()) {
+                res.addPerson(new Person(newRes.getInt("id"),
+                    newRes.getString("name"),
+                    newRes.getString("surname"),
+                    newRes.getInt("birth_year")));
+            }
+            result.add(res);
+            newRes.close();
+            newStatement.close();
+        }
+    } catch (SQLException e) {
+        System.out.println("Database error. Exiting..");
+        e.printStackTrace();
+        close();
+        System.exit(1);
     }
-  } catch (SQLException e) {
-    System.out.println("Database error. Exiting..");
-    e.printStackTrace();
-    close();
-    System.exit(1);
-  }
-  return result;
+    return result;
 }
 ```
 
-列表 7-13: PersistenceService.java
+列表 7-13: `PersistenceService.java`
 
 `getReservationsBySurname` 方法返回特定姓氏的预订列表：
 
-
 ```java
-while (res.next()) {
-    result.add(new Reservation(res.getInt("id"),
-    res.getString("name"),
-    res.getString("surname"),
-    res.getDate("start_date").toDate(),
-    res.getInt("duration"),
-    res.getDouble("cost")));
+public ArrayList<Reservation> getReservationsBySurname(String surname) {
+    ArrayList<Reservation> result = new ArrayList<>();
+    try {
+        preparedStatement = connection.prepareStatement("SELECT * from Reservations WHERE surname LIKE ?");
+        preparedStatement.setString(1, "%" + surname + "%");
+        ResultSet res = preparedStatement.executeQuery();
+        while (res.next()) {
+            result.add(new Reservation(res.getInt("id"),
+                res.getString("name"),
+                res.getString("surname"),
+                res.getDate("start_date").toLocalDate(),
+                res.getInt("duration"),
+                res.getDouble("cost")));
+        }
+    } catch (SQLException e) {
+        System.out.println("Database error. Exiting..");
+        e.printStackTrace();
+        System.exit(1);
+    }
+    return result;
 }
-} catch (SQLException e) {
-    System.out.println("Database error. Exiting..");
-    e.printStackTrace();
-    System.exit(1);
-}
-return result;
 ```
 
-7-15: PersistenceService.java
+列表 7-15: `PersistenceService.java`
 
 我们还有一个方法用于在数据库中插入新的预订（以及相应的人）：
 
@@ -2113,47 +2159,46 @@ return result;
 public void insertReservation(Reservation res) {
     try {
         preparedStatement = connection
-            .prepareStatement("insert into Reservations(name, surname, start_date, duration, cost) values(?, ?, ?, ?)",
+            .prepareStatement("insert into Reservations(name, surname, start_date, duration, cost) values(?, ?, ?, ?, ?)",
                 Statement.RETURN_GENERATED_KEYS);
-
         preparedStatement.setString(1, res.getName());
         preparedStatement.setString(2, res.getSurname());
         preparedStatement.setDate(3, Date.valueOf(res.getStartDate()));
         preparedStatement.setInt(4, res.getDuration());
         preparedStatement.setDouble(5, res.getCost());
+
+        preparedStatement.executeUpdate();
+        int lastInsertedId = 0;
+        ResultSet rs = preparedStatement.getGeneratedKeys();
+        if (rs.next()) {
+            lastInsertedId = rs.getInt(1);
+        }
+
+        ArrayList<Person> persons = res.getPersons();
+        PreparedStatement newStatement = connection
+            .prepareStatement("insert into Persons(name, surname, birth_year, reservation_id) values(?, ?, ?, ?)");
+        for (Person p : persons) {
+            newStatement.setString(1, p.getName());
+            newStatement.setString(2, p.getSurname());
+            newStatement.setInt(3, p.getBirthYear());
+            newStatement.setInt(4, lastInsertedId);
+            newStatement.executeUpdate();
+        }
+
+        connection.commit();
+        newStatement.close();
+    } catch (SQLException e) {
+        System.out.println("Database error. Exiting..");
+        e.printStackTrace();
+        close();
+        System.exit(1);
+    }
+}
 ```
 
-```java
-preparedStatement.executeUpdate();
-int lastInsertedId = 0;
-ResultSet rs = preparedStatement.getGeneratedKeys();
-if (rs.next()) {
-    lastInsertedId = rs.getInt(1);
-}
+列表 7-16: `PersistenceService.java` 在 `Reservations` 表中插入新行。
 
-ArrayList<Person> persons = res.getPersons();
-PreparedStatement newStatement = connection.
-prepareStatement("insert into Persons(name, surname, birth_year, reservation_id) values(?, ?, ?, ?)");
-for (Person p : persons) {
-    newStatement.setString(1, p.getName());
-    newStatement.setString(2, p.getSurname());
-    newStatement.setInt(3, p.getBirthYear());
-    newStatement.setInt(4, lastInsertedId);
-    newStatement.executeUpdate();
-}
-connection.commit();
-newStatement.close();
-} catch (SQLException e) {
-    System.out.println("Database error. Exiting..");
-    e.printStackTrace();
-    close();
-    System.exit(1);
-}
-```
-
-列表 7-16: PersistenceService.java 在 Reservations 表中插入新行。
-
-在 `insertReservation()` 中，我们首先在 Reservations 表中插入一条新行。预订的 `id` 字段是由数据库自动创建的，因为我们在创建表时已将其定义为 `AUTO_INCREMENT`。
+在 `insertReservation()` 中，我们首先在 `Reservations` 表中插入一条新行。预订的 `id` 字段是由数据库自动创建的，因为我们在创建表时已将其定义为 `AUTO_INCREMENT`。
 
 在成功插入行后，我们获取新生成的预订 ID，因为我们需要在每一条新的人员行中使用（在 `reservation_id` 字段中）它。
 
@@ -2163,24 +2208,26 @@ newStatement.close();
 
 ```java
 private void close() {
-  try {
-    if (resultSet != null) {
-      resultSet.close();
+    try {
+        if (resultSet != null) {
+            resultSet.close();
+        }
+        if (preparedStatement != null) {
+            preparedStatement.close();
+        }
+        if (connection != null) {
+            connection.close();
+        }
+    } catch (Exception e) {
+        System.out.println("Error: Could not close connection");
+        e.printStackTrace();
     }
-    if (preparedStatement != null) {
-      preparedStatement.close();
-    }
-    if (connection != null) {
-      connection.close();
-    }
-  } catch (Exception e) {
-    System.out.println("Error: Could not close connection");
-    e.printStackTrace();
-  }
 }
 ```
 
-列表 7-17: PersistenceService.java
+
+
+列表 7-17: `PersistenceService.java`
 
 你可以在 GitHub 上找到此项目：
 
@@ -2230,7 +2277,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
   @JsonSubTypes.Type(value = Apartment.class, name = "Apartment"),
   @JsonSubTypes.Type(value = Store.class, name = "Store"),
   @JsonSubTypes.Type(value = Plot.class, name = "Plot")
-}})
+})
 public abstract class Property {
     protected int id;
     protected int surface;
@@ -2273,7 +2320,7 @@ public abstract class Property {
 }
 ```
 
-列表 8-1: Property.java
+列表 8-1: `Property.java`
 
 注意 `Property` 定义了一个抽象方法 `calculateTax()`。这意味着它不能被实例化。派生类必须实现该方法。`Property` 类包含了所有物业类型通用的 `surface` 参数。它还包含一个定义的 `Address` 对象：
 
@@ -2338,7 +2385,7 @@ class Address {
 }
 ```
 
-列表 8-2: Address.java
+列表 8-2: `Address.java`
 
 接下来，我们添加 `Apartment` 类：
 
@@ -2379,7 +2426,7 @@ public class Apartment extends Property {
 }
 ```
 
-列表 8-3: Apartment.java
+列表 8-3: `Apartment.java`
 
 现在，我们添加 `Store` 类。该类增加了 `commerciality` 参数，用于衡量该区域对商业的盈利程度：
 
@@ -2420,38 +2467,7 @@ public class Store extends Property {
 }
 ```
 
-
-
-
-```java
-public String toString() {
-    return "Store{" +
-        "commerciality=" + commerciality +
-        ", id=" + id +
-        ", surface=" + surface +
-        ", address=" + address +
-    "}";
-}
-```
-
-```java
-public double calculateTax() {
-    return (2.5 * surface + 20 * commerciality + 100);
-}
-```
-
-```java
-public int getCommerciality() {
-    return commerciality;
-}
-```
-
-```java
-public void setCommerciality(int commerciality) {
-    this.commerciality = commerciality;
-}
-```
-列表 8-4: Store.java
+列表 8-4: `Store.java`
 
 继承自 `Property` 的第三类是 `Plot`。该类模拟了可以耕的土地，或者位于城市内部（这使得它们更有利润）：
 
@@ -2462,50 +2478,49 @@ public class Plot extends Property {
 
     public Plot(int id, int surface, Address address, boolean withinCityLimits, boolean cultivated) {
         super(id, surface, address);
-```
+        this.withinCityLimits = withinCityLimits;
+        this.cultivated = cultivated;
+    }
 
-```java
-this.withinCityLimits = withinCityLimits;
-this.cultivated = cultivated;
-}
+    public Plot() {
+        super();
+    }
 
-public Plot() {
-  super();
-}
+    @Override
+    public String toString() {
+        return "Plot(" +
+            "withinCityLimits=" + withinCityLimits +
+            ", cultivated=" + cultivated +
+            ", id=" + id +
+            ", surface=" + surface +
+            ", address=" + address +
+            ")";
+    }
 
-@Override
-public String toString() {
-  return "Plot(" +
-    "withinCityLimits=" + withinCityLimits +
-    ", cultivated=" + cultivated +
-    ", id=" + id +
-    ", surface=" + surface +
-    ", address=" + address +
-    + ")";
-}
+    public double calculateTax() {
+        return (0.3 * surface + 100 * (cultivated ? 1 : 0)
+            + 200 * (withinCityLimits ? 1 : 0));
+    }
 
-public double calculateTax() {
-  return (0.3 * surface + 100 * (cultivated ? 1 : 0)
-    + 200 * (withinCityLimits ? 1 : 0));
-}
+    public boolean isWithinCityLimits() {
+        return withinCityLimits;
+    }
 
-public boolean isWithinCityLimits() {
-  return withinCityLimits;
-}
+    public void setWithinCityLimits(boolean withinCityLimits) {
+        this.withinCityLimits = withinCityLimits;
+    }
 
-public void setWithinCityLimits(boolean withinCityLimits) {
-  this.withinCityLimits = withinCityLimits;
-}
+    public boolean isCultivated() {
+        return cultivated;
+    }
 
-public boolean isCultivated() {
-  return cultivated;
-}
-
-public void setCultivated(boolean cultivated) {
-    this.cultivated = cultivated;
+    public void setCultivated(boolean cultivated) {
+        this.cultivated = cultivated;
+    }
 }
 ```
-列表 8-5: Plot.java
+
+列表 8-5: `Plot.java`
 
 现在我们已经定义了核心类，让我们转向周围的服务。`main()` 方法非常简单：
 
@@ -2520,13 +2535,14 @@ public class Main {
     }
 }
 ```
-列表 8-6: Main.java
+
+列表 8-6: `Main.java`
 
 我们在这里做的重要事情是为以下每个类都创建一个对象：
 
-- UIService：与用户交互（基于控制台）
-- StatisticsService：提供统计数据
-- PersistenceService：数据存储
+- `UIService`：与用户交互（基于控制台）
+- `StatisticsService`：提供统计数据
+- `PersistenceService`：数据存储
 
 `PersistenceService` 是一个接口，`UIService` 应该使用它来处理从数据库或文件中保存、删除和搜索数据：
 
@@ -2539,7 +2555,8 @@ public interface PersistenceService {
     ArrayList<TaxDeclaration> getTaxDeclarations(String vat, int year);
 }
 ```
-列表 8-7: PersistenceService.java
+
+列表 8-7: `PersistenceService.java`
 
 该接口定义了三个方法，用于插入、删除和搜索数据。`UIService` 将使用这三个方法与数据存储交互。`UIService` 与底层存储是分离的；存储可以是数据库或文件（或其他内容）。它取决于我们决定在 `UIService` 构造函数中传递什么种对象（`DBService` 或 `FileService`）。上面的代码片段是我们考虑到使用 `DBService` 对象设计的，让我们先看看 `UIService` 如何工作：
 
@@ -2555,10 +2572,13 @@ public class UIService {
         this.ps = ps;
         this.ss = ss;
     }
-...
+    ...
 }
 ```
-列表 8-8: UIService.java
+
+
+
+## 列表 8-8: UIService.java
 
 `UIService` 类只有两个公共方法：构造函数和 `menu()` 方法：
 
@@ -2577,11 +2597,9 @@ public void menu() {
         System.out.println("11: Get total tax");
         System.out.println("12: Get Tax Declaration with highest tax");
         System.out.println("0: exit");
-
         System.out.print("Your choice: ");
         sel = in.nextInt();
         in.nextLine();
-
         switch (sel) {
             case 1:
                 create();
@@ -2605,7 +2623,8 @@ public void menu() {
     } while (sel != 0);
 }
 ```
-列表 8-9: UIService.java
+
+## 列表 8-9: UIService.java
 
 注意我们在构造函数中存储对 `PersistenceService` 和 `StatisticsService` 对象的引用。此外，注意 `menu()` 方法中的循环。
 
@@ -2616,7 +2635,6 @@ private void create() {
     Scanner in = new Scanner(System.in);
     String sel = "y";
     TaxDeclaration tax = enterDetails();
-
     System.out.println("Now enter properties:");
     while (sel.equals("y")) {
         Property p = enterProperty();
@@ -2626,11 +2644,9 @@ private void create() {
         } else {
             System.out.println("No property added");
         }
-
         System.out.println("Would you like to add another? (y/n)");
         sel = in.nextLine();
     }
-
     System.out.println("Tax created!");
 }
 
@@ -2638,14 +2654,11 @@ private void remove() {
     Scanner in = new Scanner(System.in);
     String search_vat;
     int submissionYear;
-
     System.out.print("Enter VAT number for search: ");
     search_vat = in.nextLine();
     System.out.print("Enter year: ");
     submissionYear = in.nextInt();
-
     ArrayList<TaxDeclaration> td = ps.getTaxDeclarations(search_vat, submissionYear);
-
     if (td.size() > 0) {
         System.out.println("Found Tax Declaration:");
         for (TaxDeclaration d : td) {
@@ -2653,7 +2666,6 @@ private void remove() {
         }
         System.out.println("Delete Tax Declaration? (y/n) ");
         sel = in.nextLine();
-
         if (sel.equals("y")) {
             ps.removeTaxDeclaration(td.get(0));
             System.out.println("Tax deleted");
@@ -2669,7 +2681,6 @@ private TaxDeclaration enterDetails() {
     Scanner in = new Scanner(System.in);
     String name, surname, tel;
     int year;
-
     System.out.print("Name: ");
     name = in.nextLine();
     System.out.print("Surname: ");
@@ -2680,7 +2691,6 @@ private TaxDeclaration enterDetails() {
     tel = in.nextLine();
     System.out.print("Fiscal Year: ");
     year = in.nextInt();
-
     return new TaxDeclaration(name, surname, vat, tel, year);
 }
 
@@ -2689,7 +2699,6 @@ private Property enterProperty() {
     String sel, inside, cultivated;
     Address address;
     int surface, floor, commerciality;
-
     System.out.println("Type of property? (1: Plot, 2: Store) ");
     sel = in.nextLine();
     if (sel.equals("1")) {
@@ -2723,18 +2732,12 @@ private Address enterAddress() {
     zip = in.nextLine();
     System.out.println("\nCity: ");
     city = in.nextLine();
-
     return new Address(street, number, zip, city);
 }
 ```
 
-
-
-
-
 ```java
-System.out.print("Select 1 for Apartment, 2 for Store, 3 for
-Plot, any other to abort: ");
+System.out.print("Select 1 for Apartment, 2 for Store, 3 for Plot, any other to abort: ");
 sel = in.nextLine();
 ```
 
@@ -2776,7 +2779,7 @@ switch (sel) {
 }
 ```
 
-Listing 8-11: UIService.java
+## 列表 8-11: UIService.java
 
 ### StatisticsService 类提供了检索有关税收申报统计信息的接口：
 
@@ -2800,7 +2803,6 @@ public class StatisticsService {
 
     public TaxDeclaration getHighestDeclaration() {
         ArrayList<TaxDeclaration> declarations = ps.getTaxDeclarations("", 0);
-
         if (declarations.size() > 0) {
             TaxDeclaration max = declarations.get(0);
             double highestTax = 0;
@@ -2813,14 +2815,13 @@ public class StatisticsService {
             return max;
         } else
             return null;
-        }
     }
 }
 ```
 
-List 8-12: StatisticsService.java
+## 列表 8-12: StatisticsService.java
 
-注意 StatisticsService 类如何使用实现 PersistenceService 定义接口的对象的引用。
+注意 `StatisticsService` 类如何使用实现 `PersistenceService` 定义接口的对象的引用。
 
 现在，让我们看看如何使用 MySQL 数据库来存储税收申报的数据。首先，我们必须在 Tax 数据库中创建表：
 
@@ -2842,11 +2843,11 @@ CREATE TABLE `apartments` (
 `id` int NOT NULL AUTO_INCREMENT,
 `surface` int DEFAULT NULL,
 `floor` int DEFAULT NULL,
-`taxDeclarationId` int DEFAULT NULL,
-PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT
-CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ```
+
+
+
+## 数据库表结构
 
 ```sql
 CREATE TABLE `plots` (
@@ -2882,7 +2883,9 @@ CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 Listing 8-13: SQL 代码
 
-接下来，我们定义实现 PersistenceService 的 DBService 类。
+## DBService 类实现
+
+接下来，我们定义实现 `PersistenceService` 的 `DBService` 类。
 
 ```java
 import java.sql.*;
@@ -2900,13 +2903,16 @@ public class DBService implements PersistenceService {
         } catch (SQLException e) {
             System.out.println("Could not connect to database");
             System.exit(0);
+        }
+    }
+}
 ```
 
 Listing 8-14: DBService.java
 
-注意 StatisticsService 类如何使用实现 PersistenceService 定义接口的对象引用。
+注意 `StatisticsService` 类如何使用实现 `PersistenceService` 定义接口的对象引用。
 
-现在，让我们看看如何使用 MySQL 数据库来存储税收申报的数据。getTaxDeclarations() 方法在数据库中搜索：
+现在，让我们看看如何使用 MySQL 数据库来存储税收申报的数据。`getTaxDeclarations()` 方法在数据库中搜索：
 
 ```java
 public ArrayList<TaxDeclaration> getTaxDeclarations(String vat, int year) {
@@ -2916,7 +2922,6 @@ public ArrayList<TaxDeclaration> getTaxDeclarations(String vat, int year) {
         preparedStatement.setString(1, vat);
         preparedStatement.setInt(2, year);
         resultSet = preparedStatement.executeQuery();
-
         while (resultSet.next()) {
             TaxDeclaration td = new TaxDeclaration(
                 resultSet.getInt("id"),
@@ -2933,8 +2938,9 @@ public ArrayList<TaxDeclaration> getTaxDeclarations(String vat, int year) {
     }
     return result;
 }
-... (后续代码因输入文本截断未翻译)
+```
 
+... (后续代码因输入文本截断未翻译)
 
 ```java
 newRes.getInt("id"),
@@ -2946,15 +2952,14 @@ newRes.getInt("commerciality");
 ```java
 td.addSprite(st);
 } else {
-System.out.println("error");
-System.exit(0);
+    System.out.println("error");
+    System.exit(0);
 }
 ```
 
 ```java
 newStatement = connection
-.prepareStatement("SELECT * from Plots where
-tDeclarationId = ?");
+    .prepareStatement("SELECT * from Plots where tDeclarationId = ?");
 ```
 
 ```java
@@ -2964,28 +2969,27 @@ newRes = newStatement.executeQuery();
 
 ```java
 while (newRes.next()) {
-PreparedStatement newStatement2 = connection
-.prepareStatement("SELECT * from Addresses where
-propertyId = ?");
+    PreparedStatement newStatement2 = connection
+        .prepareStatement("SELECT * from Addresses where propertyId = ?");
 ```
 
 ```java
-newStatement2.setInt(1, newRes.getInt("id"),
+newStatement2.setInt(1, newRes.getInt("id"));
 ResultSet newRes2 = newStatement2.executeQuery();
 ```
 
 ```java
 if (newRes2.next()) {
-Address addr = new Address(
-newRes2.getString("street"),
-newRes2.getString("number"),
-newRes2.getString("zip"),
-newRes2.getString("city"));
+    Address addr = new Address(
+        newRes2.getString("street"),
+        newRes2.getString("number"),
+        newRes2.getString("zip"),
+        newRes2.getString("city"));
 ```
 
 ```java
 Plot pl = new Plot(
-newRes.getInt("id"),
+    newRes.getInt("id"),
 ```
 
 ```java
@@ -2993,19 +2997,18 @@ newRes.getInt("surface"),
 addr,
 newRes.getBoolean("cultivated"),
 newRes.getBoolean("withinCityLimits");
-
 td.addProperty(pl);
 } else {
-System.out.println("error");
-System.exit(0);
+    System.out.println("error");
+    System.exit(0);
 }
 }
 result.add(td);
 } catch (SQLException e) {
-System.out.println("Database error. Exiting.");
-e.printStackTrace();
-close();
-System.exit(0);
+    System.out.println("Database error. Exiting.");
+    e.printStackTrace();
+    close();
+    System.exit(0);
 }
 return result;
 }
@@ -3013,290 +3016,240 @@ return result;
 
 Listing 8-15: DBService.java
 
-### 方法 insertTaxDeclaration() 在数据库中插入一条新声明：
+### 方法 `insertTaxDeclaration()` 在数据库中插入一条新声明
 
 ```java
 public void insertTaxDeclaration(TaxDeclaration td) {
-try {
-preparedStatement = connection
-.prepareStatement("insert into TaxDeclarations(name,
-surname, vat, phone, submissionYear) values(?, ?, ?, ?, ?)",
-Statement.RETURN_GENERATED_KEYS);
-
-preparedStatement.setString(1, td.getName());
-preparedStatement.setString(2, td.getSurname());
-```
-
-```java
-preparedStatement.setString(3, td.getVat());
-preparedStatement.setString(4, td.getPhone());
-preparedStatement.setInt(5, td.getSubmissionYear());
-
-preparedStatement.executeUpdate();
-```
-
-```java
-int lastInsertedId = 0;
-ResultSet rs = preparedStatement.getGeneratedKeys();
-if (rs.next()) {
-    lastInsertedId = rs.getInt(1);
-}
-```
-
-```java
-ArrayList<Property> properties = td.getProperties();
-for (Property p : properties) {
-    if (p instanceof Apartment) {
-        Apartment temp = (Apartment) p;
-        PreparedStatement newStatement = connection
-            .prepareStatement("insert into Apartments(surface, floor, taxDeclarationId) values(?, ?, ?)",
+    try {
+        preparedStatement = connection
+            .prepareStatement("insert into TaxDeclarations(name, surname, vat, phone, submissionYear) values(?, ?, ?, ?, ?)",
             Statement.RETURN_GENERATED_KEYS);
-```
 
-```java
-newStatement.setInt(1, temp.getSurface());
-newStatement.setInt(2, temp.getFloor());
-newStatement.setInt(3, lastInsertedId);
-newStatement.executeUpdate();
-```
+        preparedStatement.setString(1, td.getName());
+        preparedStatement.setString(2, td.getSurname());
+        preparedStatement.setString(3, td.getVat());
+        preparedStatement.setString(4, td.getPhone());
+        preparedStatement.setInt(5, td.getSubmissionYear());
 
-```java
-int lastInsertPropertyId = 0;
-ResultSet rs1 = newStatement1.getGeneratedKeys();
-if (rs1.next()) {
-    lastInsertPropertyId = rs1.getInt(1);
+        preparedStatement.executeUpdate();
+
+        int lastInsertedId = 0;
+        ResultSet rs = preparedStatement.getGeneratedKeys();
+        if (rs.next()) {
+            lastInsertedId = rs.getInt(1);
+        }
+
+        ArrayList<Property> properties = td.getProperties();
+        for (Property p : properties) {
+            if (p instanceof Apartment) {
+                Apartment temp = (Apartment) p;
+                PreparedStatement newStatement = connection
+                    .prepareStatement("insert into Apartments(surface, floor, taxDeclarationId) values(?, ?, ?)",
+                    Statement.RETURN_GENERATED_KEYS);
+
+                newStatement.setInt(1, temp.getSurface());
+                newStatement.setInt(2, temp.getFloor());
+                newStatement.setInt(3, lastInsertedId);
+                newStatement.executeUpdate();
+
+                int lastInsertPropertyId = 0;
+                ResultSet rs1 = newStatement.getGeneratedKeys();
+                if (rs1.next()) {
+                    lastInsertPropertyId = rs1.getInt(1);
+                }
+
+                PreparedStatement newStatement1 = connection
+                    .prepareStatement("insert into Addresses(street, number, zip, city, propertyId) values(?, ?, ?, ?)");
+
+                newStatement1.setString(1, temp.getAddress().getStreet());
+                newStatement1.setString(2, temp.getAddress().getNumber());
+                newStatement1.setString(3, temp.getAddress().getZip());
+                newStatement1.setString(4, temp.getAddress().getCity());
+                newStatement1.setInt(5, lastInsertPropertyId);
+                newStatement1.executeUpdate();
+            } else if (p instanceof Store) {
+                Store temp = (Store) p;
+                PreparedStatement newStatement = connection
+                    .prepareStatement("insert into Stores(surface, commerciality, taxDeclarationId) values(?, ?, ?)",
+                    Statement.RETURN_GENERATED_KEYS);
+
+                newStatement.setInt(1, temp.getSurface());
+                newStatement.setInt(2, temp.getCommerciality());
+                newStatement.setInt(3, lastInsertedId);
+                newStatement.executeUpdate();
+
+                int lastInsertPropertyId = 0;
+                ResultSet rs1 = newStatement.getGeneratedKeys();
+                if (rs1.next()) {
+                    lastInsertPropertyId = rs1.getInt(1);
+                }
+
+                PreparedStatement newStatement1 = connection
+                    .prepareStatement("insert into Addresses(street, number, zip, city, propertyId) values(?, ?, ?, ?)");
+
+                newStatement1.setString(1, temp.getAddress().getStreet());
+                newStatement1.setString(2, temp.getAddress().getNumber());
+                newStatement1.setString(3, temp.getAddress().getZip());
+                newStatement1.setString(4, temp.getAddress().getCity());
+                newStatement1.setInt(5, lastInsertPropertyId);
+                newStatement1.executeUpdate();
+            }
+            if (p instanceof Plot) {
+                Plot temp = (Plot) p;
+                PreparedStatement newStatement = connection
+                    .prepareStatement("insert into Plots(surface, cultivated, withinCityLimits, taxDeclarationId) values(?, ?, ?, ?)",
+                    Statement.RETURN_GENERATED_KEYS);
+
+                newStatement.setInt(1, temp.getSurface());
+                newStatement.setInt(2, temp.isCultivated() ? 1 : 0);
+                newStatement.setInt(3, temp.isWithinCityLimits() ? 1 : 0);
+                newStatement.setInt(4, lastInsertedId);
+                newStatement.executeUpdate();
+
+                int lastInsertPropertyId = 0;
+                ResultSet rs = newStatement.getGeneratedKeys();
+                if (rs.next()) {
+                    lastInsertPropertyId = rs.getInt(1);
+                }
+
+                PreparedStatement newStatement1 = connection
+                    .prepareStatement("insert into Addresses(street, number, zip, city, propertyId) values(?, ?, ?, ?)");
+            }
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
 }
 ```
 
-```java
-PreparedStatement newStatement1 = connection
-    .prepareStatement("insert into Addresses(street, number, zip, city, propertyId) values(?, ?, ?, ?)");
-```
+
 
 ```java
-newStatement1.setString(1,
-temp.getAddress().getStreet());
+newStatement1.setString(1, temp.getAddress().getStreet());
 newStatement1.setString(2, temp.getAddress().getZip());
 newStatement1.setString(3, temp.getAddress().getZip());
 newStatement1.setString(4, temp.getAddress().getCity());
 newStatement1.setInt(5, lastInsertPropertyId);
 newStatement1.executeUpdate();
-```
-
-```java
-} else if (p instanceof Store) {
-Store temp = p;
-PreparedStatement newStatement = connection
-.prepareStatement("insert into Stores(surface,
-mercially, taxDeclarationId) values(?, ?, ?)"
-, Statement.RETURN_GENERATED_KEYS);
-```
-
-```java
-newStatement.setInt(1, temp.getSurface());
-newStatement.setInt(2, temp.getCommerciality());
-newStatement.setInt(3, lastInsertedId);
-newStatement.executeUpdate();
-```
-
-```java
-int lastInsertPropertyId = 0;
-ResultSet rs1 = newStatement.getGeneratedKeys();
-if (rs1.next()) {
-lastInsertPropertyId = rs1.getInt(1);
-}
-```
-
-```java
-PreparedStatement newStatement1 = connection
-.prepareStatement("insert into Addresses(street,
-number, zip, city, property) values(?, ?, ?, ?)");
-```
-
-```java
-newStatement1.setString(1,
-temp.getAddress().getStreet());
-newStatement1.setString(2, temp.getAddress().getZip());
-newStatement1.setString(3, temp.getAddress().getZip());
-newStatement1.setString(4, temp.getAddress().getCity());
-newStatement1.setInt(5, lastInsertPropertyId);
-newStatement1.executeUpdate();
-```
-
-```java
-}
-if (p instanceof Plot) {
-  Plot temp = (Plot) p;
-```
-
-```java
-PreparedStatement newStatement = connection
-.prepareStatement("insert into Plots(surface, cultivated,withinCityLimits, taxDeclarationId) values(?, ?, ?, ?)",
-Statement.RETURN_GENERATED_KEYS);
-```
-
-```java
-newStatement.setInt(1, temp.getSurface());
-newStatement.setInt(2, temp.isCultivated());
-newStatement.setInt(3, temp.isWithinCityLimits());
-newStatement.setInt(4, lastInsertedId);
-newStatement.executeUpdate();
-```
-
-```java
-int lastInsertPropertyId = 0;
-ResultSet rs = newStatement.getGeneratedKeys();
-if (rs.next()) {
-lastInsertPropertyId = rs.getInt(1);
-}
-```
-
-```java
-PreparedStatement newStatement1 = connection
-    .prepareStatement("insert into Addresses(street,
-number, zip, city, propertyId) values(?, ?, ?, ?)");
-```
-
-```java
-newStatement1.setString(1,
-temp.getAddress().getStreet());
-newStatement1.setString(2, temp.getAddress().getZip());
-newStatement1.setString(3, temp.getAddress().getZip());
-newStatement1.setString(4, temp.getAddress().getCity());
-newStatement1.setInt(5, lastInsertPropertyId);
-newStatement1.executeUpdate();
-```
-
-```java
-}
-}
 ```
 
 Listing 8-16: DBService.java
 
-### 方法 removeTaxDeclaration() 从数据库中删除一条声明（以及与之关联的属性和地址）：
+### 方法 `removeTaxDeclaration()` 从数据库中删除一条声明（以及与之关联的属性和地址）
 
 ```java
 public void removeTaxDeclaration(TaxDeclaration td) {
-try {
-  preparedStatement = connection
-  .prepareStatement("delete from TaxDeclarations where id = ?");
+    try {
+        preparedStatement = connection
+            .prepareStatement("delete from TaxDeclarations where id = ?");
 
-  preparedStatement.setInt(1, td.getId());
-  preparedStatement.executeUpdate();
+        preparedStatement.setInt(1, td.getId());
+        preparedStatement.executeUpdate();
 
-  preparedStatement = connection
-  .prepareStatement("delete from Apartments where taxDeclarationId = ?");
+        preparedStatement = connection
+            .prepareStatement("delete from Apartments where taxDeclarationId = ?");
 
-  preparedStatement.setInt(1, td.getId());
-  preparedStatement.executeUpdate();
+        preparedStatement.setInt(1, td.getId());
+        preparedStatement.executeUpdate();
 
-  preparedStatement = connection
-  .prepareStatement("delete from Stores where taxDeclarationId = ?");
+        preparedStatement = connection
+            .prepareStatement("delete from Stores where taxDeclarationId = ?");
 
-  preparedStatement.setInt(1, td.getId());
-  preparedStatement.executeUpdate();
+        preparedStatement.setInt(1, td.getId());
+        preparedStatement.executeUpdate();
 
-  preparedStatement = connection
-  .prepareStatement("delete from Plots where taxDeclarationId = ?");
+        preparedStatement = connection
+            .prepareStatement("delete from Plots where taxDeclarationId = ?");
 
-  preparedStatement.setInt(1, td.getId());
-  preparedStatement.executeUpdate();
+        preparedStatement.setInt(1, td.getId());
+        preparedStatement.executeUpdate();
 
-  preparedStatement = connection
-  .prepareStatement("delete from Addresses where propertyId IN (select id from Apartments where taxDeclarationId = ?) or select id from Stores where taxDeclarationId = ? or select id from Plots where taxDeclarationId = ?)");
+        preparedStatement = connection
+            .prepareStatement("delete from Addresses where propertyId IN (select id from Apartments where taxDeclarationId = ?) or select id from Stores where taxDeclarationId = ? or select id from Plots where taxDeclarationId = ?)");
 
-  preparedStatement.setInt(1, td.getId());
-  preparedStatement.setInt(2, td.getId());
-  preparedStatement.setInt(3, td.getId());
-  preparedStatement.executeUpdate();
+        preparedStatement.setInt(1, td.getId());
+        preparedStatement.setInt(2, td.getId());
+        preparedStatement.setInt(3, td.getId());
+        preparedStatement.executeUpdate();
 
-  connection.commit();
-} catch (SQLException e) {
-  try {
-    connection.rollback();
-  } catch (SQLException se) {
-    System.out.println("Database error. Exiting.");
-    e.printStackTrace();
-    System.exit(0);
-  }
-  System.out.println("Database error. Exiting.");
-  e.printStackTrace();
-  close();
-  System.exit(0);
-}
+        connection.commit();
+    } catch (SQLException e) {
+        try {
+            connection.rollback();
+        } catch (SQLException se) {
+            System.out.println("Database error. Exiting.");
+            e.printStackTrace();
+            System.exit(0);
+        }
+        System.out.println("Database error. Exiting.");
+        e.printStackTrace();
+        close();
+        System.exit(0);
+    }
 }
 ```
 
 Listing 8-17: DBService.java
 
-### 接下来，我们定义 FileService 类，用于将数据存储在文本文件中：
+### 接下来，我们定义 `FileService` 类，用于将数据存储在文本文件中
 
+```java
 import com.fasterxmlxml.jackson.core.type.Reference;
 import com.fasterxmlxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxmlxml.jackson.databind.ObjectMapper;
 import com.fasterxmlxml.jackson.databind.ObjectReader;
 import com.fasterxmlxml.jackson.databind.ObjectWriter;
-
 import java.io.*;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class FileService implements PersistenceService {
+    ArrayList<TaxDeclaration> declarations;
+    String filename;
 
-ArrayList<TaxDeclaration> declarations;
-String filename;
-
-public FileService(String filename) {
-
-
-
-```java
-this.filename = filename;
-this.declarations = new ArrayList<>();
-loadFromFile();
-}
-...
+    public FileService(String filename) {
+        this.filename = filename;
+        this.declarations = new ArrayList<>();
+        loadFromFile();
+    }
+    ...
 }
 ```
 
-Listing 18-18: FileService.java
+Listing 8-18: FileService.java
 
-注意，在 FileService 类的构造函数中，我们打开了一个文本文件并加载了其中包含的所有数据。
+注意，在 `FileService` 类的构造函数中，我们打开了一个文本文件并加载了其中包含的所有数据。
 
 `loadFromFile()` 方法是类中的私有方法，它将数据从文本文件加载到 `TaxDeclaration` 对象列表中：
 
 ```java
 private void loadFromFile() {
-try {
-  File file = new File(filename);
-  if (!file.exists()) {
-    file.createNewFile();
-  }
+    try {
+        File file = new File(filename);
+        if (!file.exists()) {
+            file.createNewFile();
+        }
 
-  if (file.length() > 0) {
-    ObjectMapper objectMapper = new ObjectMapper();
-    ObjectReader reader = objectMapper
-      .readerFor(new TypeReference<ArrayList<TaxDeclaration>>() {
-    });
-    declarations = reader.readValue(Paths.get(filename).toFile());
-  } else {
-    declarations = new ArrayList<>();
-  }
-} catch (IOException e) {
-  System.out.println("Problem reading from file. Exiting...");
-}
-```
-
-```java
-e.printStackTrace();
-System.exit(0);
+        if (file.length() > 0) {
+            ObjectMapper objectMapper = new ObjectMapper();
+            ObjectReader reader = objectMapper
+                .readerFor(new TypeReference<ArrayList<TaxDeclaration>>() {
+            });
+            declarations = reader.readValue(Paths.get(filename).toFile());
+        } else {
+            declarations = new ArrayList<>();
+        }
+    } catch (IOException e) {
+        System.out.println("Problem reading from file. Exiting...");
+        e.printStackTrace();
+        System.exit(0);
+    }
 }
 ```
 
 Listing 8-19: FileService.java
 
-在 FileService 中，我们使用 Jackson 库以 JSON 格式存储数据。Jackson 让我们能够通过一个简单的方法调用将整个 `ArrayList<Object>` 转换为 JSON 格式。注意 Jackson 的 `ObjectMapper` 对象如何为我们提供 `StreamReader`，它可以一次将 JSON 数组解析为 `ArrayList<TaxDeclaration>` 对象（通过 `readValue()`）。
+在 `FileService` 中，我们使用 Jackson 库以 JSON 格式存储数据。Jackson 让我们能够通过一个简单的方法调用将整个 `ArrayList<Object>` 转换为 JSON 格式。注意 Jackson 的 `ObjectMapper` 对象如何为我们提供 `StreamReader`，它可以一次将 JSON 数组解析为 `ArrayList<TaxDeclaration>` 对象（通过 `readValue()`）。
 
 Jackson 同样允许我们将 `ArrayList<TaxDeclaration>` 对象转换为 JSON 数组。我们在 `saveToFile()` 中使用了它：
 
@@ -3305,7 +3258,7 @@ private void saveToFile() {
     ObjectMapper mapper = new ObjectMapper();
     ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
     try {
-        writer.writeValue(new File(filename, declarations));
+        writer.writeValue(new File(filename), declarations);
     } catch (IOException e) {
         System.out.println("Problem writing to file. Exiting...");
         e.printStackTrace();
@@ -3327,10 +3280,10 @@ import com.fasterxml.xml.jackson.annotation.JsonTypeInfo;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY)
-@JsonSubTypes(
-  @JsonSubTypes.Type(value = Apartment.class, name = "Apartment"),
-  @JsonSubTypes.Type(value = Store.class, name = "Store"),
-  @JsonSubTypes.Type(value = Plot.class, name = "Plot")
+@JsonSubTypes({
+    @JsonSubTypes.Type(value = Apartment.class, name = "Apartment"),
+    @JsonSubTypes.Type(value = Store.class, name = "Store"),
+    @JsonSubTypes.Type(value = Plot.class, name = "Plot")
 })
 public abstract class Property {
 ```
@@ -3356,32 +3309,29 @@ Listing 8-21: Property.java
 
 Listing 8-22: JSON text
 
-当 JSON 字符串被 Jackson 解析时，@type` 属性被用于确定这个对象的类型。
+当 JSON 字符串被 Jackson 解析时，`@type` 属性被用于确定这个对象的类型。
 
 要在我们的项目中使用 Jackson，我们必须在项目中包含以下三个 JAR 包：
 
-- jackson-core
-- jackson-annotations
-- jackson-databind
+- `jackson-core`
+- `jackson-annotations`
+- `jackson-databind`
 
 让我们看看这里实现的 `PersistenceService` 接口。首先是 `getTaxDeclarations()` 方法：
 
 ```java
-public Array<TaxDeclaration> getTaxDeclarations(String vat,
-int submissionYear)
-{
+public ArrayList<TaxDeclaration> getTaxDeclarations(String vat, int submissionYear) {
     if (vat.trim().equals("") && submissionYear == 0)
         return declarations;
-    }
 
     ArrayList<TaxDeclaration> ret = new ArrayList<>();
     for (TaxDeclaration td : declarations) {
         if (!vat.equals("")) {
             if (submissionYear != 0) {
-                if (td.getVt().equals(vat) && td.getSubmissionYear() == submissionYear)
+                if (td.getVat().equals(vat) && td.getSubmissionYear() == submissionYear)
                     ret.add(td);
             } else {
-                if (td.getVt().equals(vat))
+                if (td.getVat().equals(vat))
                     ret.add(td);
             }
         } else {
@@ -3493,6 +3443,8 @@ Listing 9-4: EntityType.java
 
 每个 `Entity` 可以向特定的 `Direction` 移动：
 
+
+
 ```java
 public enum Direction {
     Up, Right, Down, Left
@@ -3506,33 +3458,27 @@ Listing 9-5: Direction.java
 ```java
 import java.util.Objects;
 public class Pair {
-public int x;
-public int y;
-public Pair(int x, int y) {
-this.x = x;
-```
-
-
-
-
-
-```java
-this.y = y;
-}
-public Pair() {
-    this.x = 0;
-    this.y = 0;
-}
-@Override
-public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-    Pair pair = (Pair) o;
-    return x == pair.x && y == pair.y;
-}
-@Override
-public int hashCode() {
-    return Objects.hash(x, y);
+    public int x;
+    public int y;
+    public Pair(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+    public Pair() {
+        this.x = 0;
+        this.y = 0;
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pair pair = (Pair) o;
+        return x == pair.x && y == pair.y;
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y);
+    }
 }
 ```
 
@@ -3566,7 +3512,7 @@ public Game() {
     player = new Entity[4];
     pointsLeft = 0;
     for (int i = 0; i < 32; i++) {
-        String line = Chart.charAt(i);
+        String line = Chart.chart[i];
         for (int j = 0; j < 28; j++) {
             map[i][j] = new Block();
             map[i][j].entity = null;
@@ -3575,8 +3521,8 @@ public Game() {
                 pointsLeft++;
             } else if (line.charAt(j) == '*') {
                 map[i][j].type = BlockType.Wall;
-                if (line.charAt(j) == ' ')
-                    map[i][j].type = BlockType.Empty;
+            } else if (line.charAt(j) == ' ') {
+                map[i][j].type = BlockType.Empty;
             }
         }
     }
@@ -3818,11 +3764,9 @@ public void paintComponent(Graphics graphics) {
 
 绘图逻辑简单；我们遍历游戏地图，并用不同的颜色绘制各种组件（实体、墙和走廊）。
 
-
-
-
-
 ### 现在，让我们来看 PacMan 类定义：
+
+
 
 ```java
 import java.util.ArrayList;
@@ -3836,28 +3780,28 @@ public class PacMan extends Entity {
     }
 
     public void play() {
-    ArrayList<Pair> candidateBlocks = new ArrayList<>();
+        ArrayList<Pair> candidateBlocks = new ArrayList<>();
         for (int i = x - 1; i <= x + 1; i++) {
             for (int j = y - 1; j <= y + 1; j++) {
                 if (i >= 0 && i < game.sizeX
                     && j >= 0 && j < game.sizeY
                     && !(i == x && j == y)
                     && game.map[i][j].type != BlockType.Wall) {
-                candidateBlocks.add(new Pair(i, j));
+                    candidateBlocks.add(new Pair(i, j));
                 }
             }
         }
 
-        if (direction == Direction.Up)
+        if (direction == Direction.Up
             && candidateBlocks.contains(new Pair(x - 1, y))) {
             move(x - 1, y);
-        } else if (direction == Direction.Right)
+        } else if (direction == Direction.Right
             && candidateBlocks.contains(new Pair(x, y + 1))) {
             move(x, y + 1);
-        } else if (direction == Direction.Down)
+        } else if (direction == Direction.Down
             && candidateBlocks.contains(new Pair(x + 1, y))) {
             move(x + 1, y);
-        } else if (direction == Direction.Left)
+        } else if (direction == Direction.Left
             && candidateBlocks.contains(new Pair(x, y - 1))) {
             move(x, y - 1);
         }
@@ -3866,15 +3810,15 @@ public class PacMan extends Entity {
     game.pacmanLocation.x = x;
     game.pacmanLocation.y = y;
     if (game.map[x][y].type == BlockType.Point) {
-      game.map[x][y].type = BlockType.Empty;
-      game.pointsLeft--;
-      if (game.pointsLeft == 0)
-        game.gameActive = false;
+        game.map[x][y].type = BlockType.Empty;
+        game.pointsLeft--;
+        if (game.pointsLeft == 0)
+            game.gameActive = false;
     }
 }
 ```
 
-列表 9-18: PacMan.java
+### 列表 9-18: PacMan.java
 
 重要的内容在于 `play()` 方法的实现。首先，我们找到所有 PacMan 可以移动的相邻方格（实际上不是墙），并将它们放入一个候选方格列表中。
 
@@ -3908,7 +3852,7 @@ public class Ghost extends Entity {
                         candidateBlocks.add(new Pair(i, j));
                         distanceToPacman.add(
                             Double.valueOf(
-                                Math.sqrt(Math.pow(i - game.pacmanLocation.x,
+                                Math.sqrt(Math.pow(i - game.pacmanLocation.x, 2)
                                 + Math.pow(j - game.pacmanLocation.y, 2))))
                         );
                     }
@@ -3942,7 +3886,7 @@ public class Ghost extends Entity {
 }
 ```
 
-列表 9-19: Ghost.java
+### 列表 9-19: Ghost.java
 
 在 `play()` 方法中，我们再次寻找移动的候选方格。此外，我们计算了每个候选位置到 PacMan 实体的直线距离数组。
 
@@ -3955,4 +3899,3 @@ public class Ghost extends Entity {
 你可以在 GitHub 上找到这个项目：
 
 https://github.com/htset/java_oop_exercises/tree/master/PacMan/src
-

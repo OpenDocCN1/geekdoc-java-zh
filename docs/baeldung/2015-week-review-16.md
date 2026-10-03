@@ -1,3 +1,4 @@
+
 # Baeldung 每周评论 16
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/2015-week-review-16>
@@ -24,11 +25,11 @@
 
 #### [> >使用 Apache Kafka 进行集成，数据处理管道使用 Spring](https://web.archive.org/web/20220122021229/https://spring.io/blog/2015/04/15/using-apache-kafka-for-integration-and-data-processing-pipelines-with-spring)
 
-对于 Kafka 以及 Spring Integration 和 Spring XD 来说，这都是一个很好的起点。
+对于 `Kafka` 以及 `Spring Integration` 和 `Spring XD` 来说，这都是一个很好的起点。
 
 也值得一读:
 
-*   #### [> >弹簧状态机 1。0 .0 .货币供应量发布](https://web.archive.org/web/20220122021229/https://spring.io/blog/2015/04/14/spring-statemachine-1-0-0-m1-released)T3
+*   #### [> >弹簧状态机 1。0 .0 .货币供应量发布](https://web.archive.org/web/20220122021229/https://spring.io/blog/2015/04/14/spring-statemachine-1-0-0-m1-released)
 
 *   #### [> > We analyzed 60,678 libraries on Github-here are the first 100](https://web.archive.org/web/20220122021229/http://blog.takipi.com/we-analyzed-60678-libraries-on-github-here-are-the-top-100/)
 
@@ -53,6 +54,7 @@
 *   #### [> > Apache Tomcat went out](https://web.archive.org/web/20220122021229/https://mail-archives.apache.org/mod_mbox/www-announce/201504.mbox/%3CCAFmzfTXANBA4PnyH-RyG4U%3D9kzV0WLZYd0Du41DkxNN2sNKWiw%40mail.gmail.com%3E)
 
     on 7.0.61.
+
 *   #### [> > Don't worry, 2.4.1](https://web.archive.org/web/20220122021229/https://raw.githubusercontent.com/jayway/rest-assured/master/changelog.txt)
 
 ## 2。技术

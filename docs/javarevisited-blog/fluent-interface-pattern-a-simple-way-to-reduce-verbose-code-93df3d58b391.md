@@ -1,3 +1,4 @@
+
 # 流畅的界面模式——减少冗长代码的简单方法
 
 > 原文：<https://medium.com/javarevisited/fluent-interface-pattern-a-simple-way-to-reduce-verbose-code-93df3d58b391?source=collection_archive---------2----------------------->
@@ -6,7 +7,7 @@
 
 有数以千计的模式，你应该知道其中的一些。有关于模式的大课程和书籍。在这篇文章中，我们将谈论流畅的界面模式。是如此简单，使代码更加清晰，所以我忍不住不给你看。
 
-我们经常有代码创建这样的对象:
+我们经常有代码创建这样的对象：
 
 ```
 public Person generatePerson() {
@@ -21,7 +22,7 @@ public Person generatePerson() {
 }
 ```
 
-**经典映射。**我们正在初始化一个对象，然后我们把一些数据放入 setters，然后我们返回这个对象。这是`Person` 物体的样子:
+**经典映射。**我们正在初始化一个对象，然后我们把一些数据放入 setters，然后我们返回这个对象。这是`Person`物体的样子:
 
 ```
 class Person {
@@ -115,7 +116,7 @@ public Person generatePerson() {
 }
 ```
 
-看看我们删除了多少冗长的代码。流程是这样的:我们首先创建一个新的 Person 对象——它返回一个新的对象。然后我们说——这个新物体**。setFirstName** 。然后 **setFirstName** 方法设置名字，然后返回同一个对象( **this** )。然后我们可以做**。上面的 setLastName** 等等。我们可以像这样链接这些方法。
+看看我们删除了多少冗长的代码。流程是这样的:我们首先创建一个新的 `Person` 对象——它返回一个新的对象。然后我们说——这个新物体**`setFirstName`**。然后 **`setFirstName`** 方法设置名字，然后返回同一个对象( **`this`** )。然后我们可以做**`setLastName`** 等等。我们可以像这样链接这些方法。
 
 快速提示:如果您正在手工编写 getters 和 setters 停止这样做！所有现代的 ide 都有一个简单的方法来生成它们。 [IntelliJ](/javarevisited/7-best-courses-to-learn-intellij-idea-for-beginners-and-experienced-java-programmers-2e9aa9bb0c05) 甚至有一个生成*“流畅界面”设置器的选项。*
 
@@ -124,9 +125,13 @@ public Person generatePerson() {
 如果你喜欢这篇文章，你会喜欢我们的课程:
 
 *   46 场讲座
+
 *   3 小时的内容
+
 *   做一个真实的项目来测试你的知识
+
 *   27 个可下载资源
+
 *   30 天退款保证
 
 你可以在这里报名参加课程— [干净代码:在 7 天内暴涨你的编程生涯](https://rebrand.ly/spcc-fluent)

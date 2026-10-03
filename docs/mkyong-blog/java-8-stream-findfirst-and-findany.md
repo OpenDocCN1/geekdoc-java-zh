@@ -1,17 +1,18 @@
-# Java 8 流 findFirst()和 findAny()
+
+# Java 8 流 `findFirst()` 和 `findAny()`
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java8/java-8-stream-findfirst-and-findany/>
 
-在 Java 8 流中，`findFirst()`返回流中的第一个元素，而`findAny()`返回流中的任何元素。
+在 Java 8 流中，`findFirst()` 返回流中的第一个元素，而 `findAny()` 返回流中的任何元素。
 
-## 1.findFirst()
+## 1. `findFirst()`
 
 1.1 从整数流中找到第一个元素。
 
-Java8FindFirstExample1.java
+`Java8FindFirstExample1.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -42,22 +43,22 @@ public class Java8FindFirstExample1 {
         }
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- 1
-2 
+1
+2
 ```
 
 1.2 从字符串流中找到不等于“node”的第一个元素。
 
-Java8FindFirstExample2.java
+`Java8FindFirstExample2.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -81,23 +82,23 @@ public class Java8FindFirstExample2 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- java 
+java
 ```
 
-## 2\. findAny()
+## 2. `findAny()`
 
-2.1 从整数流中找出任意元素。如果我们运行下面的程序，大多数情况下，结果是 2，看起来`findAny()`总是返回第一个元素？但是，**不能保证**能做到这一点，`findAny()`可以从流中返回任何元素。
+2.1 从整数流中找出任意元素。如果我们运行下面的程序，大多数情况下，结果是 2，看起来 `findAny()` 总是返回第一个元素？但是，**不能保证**能做到这一点，`findAny()` 可以从流中返回任何元素。
 
-Java8FindAnyExample1.java
+`Java8FindAnyExample1.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -117,20 +118,18 @@ public class Java8FindAnyExample1 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- 2 // no guaranteed 
+2 // no guaranteed
 ```
 
 ## 参考
 
-*   [Java 8 流过滤器示例](/web/20221205123008/https://mkyong.com/java8/java-8-streams-filter-examples/)
-*   [Java 8 Stream JavaDoc](http://web.archive.org/web/20221205123008/https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)
-*   [stream . findfirst()JavaDoc](http://web.archive.org/web/20221205123008/https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#findFirst--)
-*   [Stream.findAny() JavaDoc](http://web.archive.org/web/20221205123008/https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#findAny--)
-
-<input type="hidden" id="mkyong-current-postId" value="15387">
+* [Java 8 流过滤器示例](/web/20221205123008/https://mkyong.com/java8/java-8-streams-filter-examples/)
+* [Java 8 Stream JavaDoc](http://web.archive.org/web/20221205123008/https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)
+* [`Stream.findFirst()` JavaDoc](http://web.archive.org/web/20221205123008/https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#findFirst--)
+* [`Stream.findAny()` JavaDoc](http://web.archive.org/web/20221205123008/https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#findAny--)

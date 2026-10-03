@@ -1,3 +1,4 @@
+
 # 5 分钟内完成串行化器/解串行化器
 
 > 原文：<https://medium.com/javarevisited/serializers-de-serializers-in-5-mins-2f8e7d70d516?source=collection_archive---------2----------------------->
@@ -12,19 +13,19 @@
 
 在本文中，我们将了解什么是[序列化和反序列化](https://www.java67.com/2016/01/what-is-default-serialization-in-java.html)，以及我们如何使用现有的序列化程序来定制实现。
 
-# 什么是**序列化/反序列化？**
+## 什么是序列化/反序列化？
 
 **序列化**是一种将对象状态转换成字节流的机制。创建的字节流是独立于平台的。因此，在一个平台上序列化的对象可以在另一个平台上反序列化。**反序列化**顾名思义是序列化过程的反义词。每当我们想要获取/使用存储的数据时，为了使数据可供人类使用，我们需要将字节流反序列化为对象。反序列化是使用字节流在内存中重新创建实际对象的过程。这种机制用于持久化对象。
 
 [![](img/aee5b05cb6f8e1ff4572d2f2622dfbda.png)](https://www.java67.com/2021/04/java-serialization-tutorial-example-.html)
 
-# **为什么我们需要序列化/反序列化？**
+## 为什么我们需要序列化/反序列化？
 
 几乎所有现代语言都使用对象来存储和处理任何形式的数据。这些只是人类可以理解的数据形式。每当我们想要发送/存储这些对象时，我们需要将这些对象转换成字节流。
 
 这就是序列化发挥作用的地方，它有助于将对象转换成字节流。现在，因为我们正在将对象转换为字节流，所以当我们从网络接收对象时，我们需要进行相反的操作。这就是反串行化器发挥作用的地方，它将字节流转换成语言对象。
 
-# **为什么要定制串行器/反串行器？**
+## 为什么要定制串行器/反串行器？
 
 有许多流行的序列化器和反序列化器库，如 [Jackson](https://www.java67.com/2019/09/3-ways-to-ignore-null-fields-in-json-java-jackson.html) 、 [GSON](https://javarevisited.blogspot.com/2022/03/3-examples-to-parse-json-in-java-using.html) 等。大多数时候，序列化器的实现足以满足需求。
 
@@ -34,7 +35,7 @@
 
 [![](img/f80c6283116d50aa0c7eac3cc55339ce.png)](https://javarevisited.blogspot.com/2014/12/how-to-read-write-json-string-to-file.html)
 
-## 步骤 1:为数据创建模型类
+### 步骤 1:为数据创建模型类
 
 下面是 person 模式类，它将在我们的应用程序中充当 Person 数据的占位符。在下面的代码中，我们还提到了用于 Person 模型类的序列化器/反序列化器。
 
@@ -53,9 +54,9 @@ public class Person {
 }
 ```
 
-## 步骤 2:自定义序列化程序/反序列化程序
+### 步骤 2:自定义序列化程序/反序列化程序
 
-**序列化程序:**下面是 CustomSerializer 的实现。该序列化程序会将 person 对象转换为 Employee
+**序列化程序:**下面是 `CustomSerializer` 的实现。该序列化程序会将 person 对象转换为 Employee。
 
 ```
 public class CustomSerializer extends StdSerializer<Person> {
@@ -78,7 +79,7 @@ public class CustomSerializer extends StdSerializer<Person> {
 }
 ```
 
-**2。反序列化器:**下面是 CustomDeserializer 的实现。这将把传入的 Employee 对象转换成 Person 对象。
+**2. 反序列化器:**下面是 `CustomDeserializer` 的实现。这将把传入的 Employee 对象转换成 Person 对象。
 
 ```
 public class CustomDeserializer extends StdDeserializer<Person> {
@@ -92,7 +93,7 @@ public class CustomDeserializer extends StdDeserializer<Person> {
     @Override
     public Person deserialize(JsonParser p, DeserializationContext ctxt) throws IOException, JacksonException {
         JsonNode node=p.getCodec().readTree(p);
-        Person person=Person.*builder*()
+        Person person=Person.builder()
                 .id(node.get("Emp Id").asInt())
                 .firstName(node.get("Emp Name").asText().split(" ")[0])
                 .lastName(node.get("Emp Name").asText().split(" ")[1])
@@ -103,9 +104,9 @@ public class CustomDeserializer extends StdDeserializer<Person> {
 }
 ```
 
-## 步骤 3:注册自定义序列化程序/反序列化程序
+### 步骤 3:注册自定义序列化程序/反序列化程序
 
-[Spring Boot](/javarevisited/10-free-spring-boot-tutorials-and-courses-for-java-developers-53dfe084587e) 使用 **Jackson 的 ObjectMapper 库**来序列化/反序列化传入/传出的对象。为了让对象映射器使用我们的自定义实现，我们需要向[对象映射器](https://javarevisited.blogspot.com/2018/02/how-to-parse-json-with-date-field-in-java-jackson-example.html)注册我们的自定义实现。为了完成这项任务，ObjectMapper 提供了 SimpleModule 类来注册所有的序列化程序/反序列化程序。
+[Spring Boot](/javarevisited/10-free-spring-boot-tutorials-and-courses-for-java-developers-53dfe084587e) 使用 **Jackson 的 ObjectMapper 库**来序列化/反序列化传入/传出的对象。为了让对象映射器使用我们的自定义实现，我们需要向[对象映射器](https://javarevisited.blogspot.com/2018/02/how-to-parse-json-with-date-field-in-java-jackson-example.html)注册我们的自定义实现。为了完成这项任务，`ObjectMapper` 提供了 `SimpleModule` 类来注册所有的序列化程序/反序列化程序。
 
 ```
 @Configuration
@@ -124,9 +125,9 @@ public class SerializationConfig {
 }
 ```
 
-**步骤 4:示例:**
+### 步骤 4:示例
 
-1.  **序列化:**当我们将对象发送到网络时，将在内部调用 Jackson 序列化程序将对象序列化到流中。如果对象的类型与注册的序列化程序匹配，它将自动使用序列化程序的自定义实现。因此，在发送时，Person 对象将被转换为 Employee 对象。
+1. **序列化:**当我们将对象发送到网络时，将在内部调用 Jackson 序列化程序将对象序列化到流中。如果对象的类型与注册的序列化程序匹配，它将自动使用序列化程序的自定义实现。因此，在发送时，Person 对象将被转换为 Employee 对象。
 
 ```
 @RestController
@@ -136,7 +137,7 @@ public class PersonController {
 
     @GetMapping
     public Person getPerson(){
-        Person person=Person.*builder*()
+        Person person=Person.builder()
                 .id(1)
                 .firstName("Jhon")
                 .lastName("Doe")
@@ -148,13 +149,13 @@ public class PersonController {
 
     @PostMapping
     public void savePerson(@RequestBody Person person){
-        System.*out*.println("*");
-        System.*out*.println("*");
-        System.*out*.println("*");
-        System.*out*.println(person);
-        System.*out*.println("*");
-        System.*out*.println("*");
-        System.*out*.println("*");
+        System.out.println("*");
+        System.out.println("*");
+        System.out.println("*");
+        System.out.println(person);
+        System.out.println("*");
+        System.out.println("*");
+        System.out.println("*");
     }
 
 }
@@ -164,7 +165,7 @@ public class PersonController {
 
 输出:getPerson
 
-2 **。反序列化:**当我们通过网络接收对象时，它将是流格式的，为了使这个对象可读， [Spring Boot](/javarevisited/top-5-books-to-learn-spring-boot-and-microservices-for-experienced-java-developers-499a9d921d18?source=---------25------------------) 将使用 JacksonDeserializer 将传入的流反序列化为对象，如果传入的流与注册的反序列化器匹配，Jackson 将使用同样的方法将流反序列化为对象。
+2. **反序列化:**当我们通过网络接收对象时，它将是流格式的，为了使这个对象可读， [Spring Boot](/javarevisited/top-5-books-to-learn-spring-boot-and-microservices-for-experienced-java-developers-499a9d921d18?source=---------25------------------) 将使用 JacksonDeserializer 将传入的流反序列化为对象，如果传入的流与注册的反序列化器匹配，Jackson 将使用同样的方法将流反序列化为对象。
 
 [![](img/23ca48a38545e2bce311c31420c03726.png)](https://www.java67.com/2021/02/spring-boot-actuator-interview-questions-answers-java.html)
 
@@ -174,7 +175,7 @@ public class PersonController {
 
 输出:保存人
 
-# 摘要
+## 摘要
 
 在上面的文章中，我们研究了什么是序列化/反序列化，序列化/反序列化的需求是什么，以及如何实现序列化器/反序列化器。我们还研究了如何实现一个定制的序列化器/反序列化器，将 Person 对象转换为 Employee 对象。
 

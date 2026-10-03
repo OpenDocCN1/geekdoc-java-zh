@@ -1,3 +1,4 @@
+
 # 我需要 Hadoop 才能成为优秀的数据科学家吗？
 
 > 原文：<https://medium.com/javarevisited/do-i-need-hadoop-to-be-a-good-data-scientist-a98a4f3fc7da?source=collection_archive---------0----------------------->
@@ -12,7 +13,7 @@
 
 目前，数据正以指数速度增长。对处理大量数据的需求很大。负责处理大量数据的一种技术是 Hadoop。以下是 Hadoop 的确切含义
 
-# Hadoop 是什么？
+## Hadoop 是什么？
 
 Apache Hadoop 是一种开源软件，它有助于计算机网络解决需要大量数据集和计算能力的问题。Hadoop 是高度可扩展的，旨在适应从单个服务器到数千台机器的集群的计算。虽然 Hadoop 是用 [Java](https://javarevisited.blogspot.com/2018/05/top-5-java-courses-for-beginners-to-learn-online.html) 编写的，但是你可以使用多种语言在 Hadoop 中编程，比如 [Python](https://hackernoon.com/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec) 、 [C++](https://hackernoon.com/top-5-free-c-courses-to-learn-programming-in-2019-d27352277da0) 、Perl、 [Ruby](http://www.java67.com/2018/02/5-free-ruby-and-rails-courses-to-learn-online.html) 等。
 
@@ -30,7 +31,7 @@ Apache Hadoop 是一种开源软件，它有助于计算机网络解决需要大
 
 要了解 Hadoop 的一切，你必须查看最新的 [Hadoop 教程系列](https://data-flair.training/blogs/hadoop-tutorials-home/)。
 
-# 面向数据科学的 Hadoop
+## 面向数据科学的 Hadoop
 
 *数据科学家需要 Hadoop 吗？*
 
@@ -48,7 +49,7 @@ Hadoop 的主要功能是[大数据](https://javarevisited.blogspot.com/2017/12/
 
 再者，作为数据科学家， [**机器学习的知识是必须的**](https://data-flair.training/blogs/machine-learning-tutorial/) 。机器学习算法在更大的数据集上表现得更好。因此，大数据成为训练机器学习算法的理想选择。因此，为了理解数据科学的错综复杂，大数据知识是必须的。
 
-# Hadoop —迈向数据科学的第一步
+## Hadoop —迈向数据科学的第一步
 
 ![](img/10d96f253b0e069a148d3a7fa8ce6f38.png)
 
@@ -70,7 +71,7 @@ Hadoop 是流行的大数据平台之一，最广泛地用于涉及大规模数�
 
 数据科学家需要包容所有与数据相关的操作。因此，拥有大数据和 T2 Hadoop 的专业知识将允许你开发一个全面的架构来分析海量数据。
 
-# 为什么选择 Hadoop？
+## 为什么选择 Hadoop？
 
 Hadoop:大数据的可扩展解决方案
 
@@ -80,7 +81,7 @@ Hadoop 生态系统因其可靠性和可扩展性而备受赞誉。随着信息�
 
 **水平扩展** —在水平扩展中，我们向分布式软件系统添加更多的节点或系统。与垂直可伸缩性增加容量的方法不同，我们可以在不停止系统的情况下添加更多的机器。这消除了停机问题，并在横向扩展时提供了最高的效率。这也使得多台机器并行工作。
 
-# Hadoop 剖析
+## Hadoop 剖析
 
 Hadoop 的一些主要组件是
 
@@ -93,37 +94,37 @@ Hadoop 的一些主要组件是
 
 要深入了解 Hadoop，请参考 DataFlair 的 [Hadoop 生态系统](https://data-flair.training/blogs/hadoop-ecosystem/)博客。
 
-# Hadoop 的使用对数据科学家的影响
+## Hadoop 的使用对数据科学家的影响
 
 [![](img/06ffdc3fb5449ee9da09fc7e9a64a6ed.png)](https://javarevisited.blogspot.com/2018/03/top-5-data-science-and-machine-learning-online-courses-to-learn-online.html)
 
 在过去几年中，Hadoop 越来越多地被用于在行业中实施数据科学工具。随着大数据和数据科学的吸收，行业已经能够充分利用数据科学。Hadoop 对数据科学家的影响主要体现在四个方面
 
-## 1.使用大规模数据集探索数据
+### 1.使用大规模数据集探索数据
 
 数据科学家需要处理大量数据。以前，数据科学家只能在本地机器上存储他们的数据集。然而，随着数据的增加和分析大数据的海量需求，Hadoop 提供了一个探索性数据分析的环境。
 
 使用 Hadoop，您可以编写 MapReduce 作业、HIVE 或 PIG 脚本，并在 Hadoop 上直接启动它，以获取完整数据集的结果。
 
-## 2.预处理大规模数据
+### 2.预处理大规模数据
 
 数据科学角色需要大部分数据预处理，包括数据获取、转换、清理和特征提取。这个步骤是将原始数据转换成标准化特征向量所必需的。
 
 Hadoop 使大规模数据预处理成为数据科学家的一项简单任务。它提供了像 MapReduce、 [PIG](https://data-flair.training/blogs/apache-pig-tutorial-introduction-guide/) 和 Hive 这样的工具来高效地处理大规模数据。
 
-## 3.增强数据灵活性
+### 3.增强数据灵活性
 
 与需要严格模式结构的传统数据库系统相反，Hadoop 为其用户提供了灵活的模式。这种灵活的模式或“读取模式”消除了每当需要新字段时重新设计模式的需要。
 
-## 4.促进大规模数据挖掘
+### 4.促进大规模数据挖掘
 
 事实证明，使用更大的数据集，机器学习算法可以训练得更好，并提供更好的结果。像聚类、异常值检测、产品推荐器这样的技术提供了广泛的统计技术。
 
 传统上，机器学习工程师必须处理有限的数据量，这最终导致他们的模型性能低下。然而，在提供线性可扩展存储的 Hadoop 生态系统的帮助下，您可以以原始格式存储所有数据。
 
-# 马克斯&斯潘塞案例研究
+## 马克斯&斯潘塞案例研究
 
-# 马克&斯潘塞—使用大数据分析客户行为
+### 马克&斯潘塞—使用大数据分析客户行为
 
 马克&斯潘塞是一家大型跨国零售公司。它采用 Hadoop 来深入了解客户行为。它仔细检查来自多个来源的数据，从而全面了解消费者行为。M&S 管理数据的有效使用，以掌握客户的见解。
 
@@ -135,15 +136,20 @@ Hadoop 使大规模数据预处理成为数据科学家的一项简单任务。�
 
 是时候开始向行业专家学习 Hadoop 了。选择[最佳 Hadoop 培训](https://data-flair.training/big-data-hadoop/)并为数据科学多升级一项技能。
 
-# 摘要
+## 摘要
 
 最后，我们得出结论，对于数据科学，Hadoop 是必不可少的。由于其可扩展性和容错性，它被广泛用于存储海量数据。它还通过 Pig 和 Hive 等工具促进了全面的分析平台。此外，Hadoop 已经发展成为一个全面的数据科学平台。马克&斯潘塞这样的公司正在使用 Hadoop 来分析客户购买模式和库存管理，这也是一个补充。
 
 这篇文章有用吗？请通过评论分享您的反馈。这将有助于我们为您发布更多这样有趣的内容。
 
 **进修:** [R for Data Science](https://data-flair.training/blogs/using-r-for-data-science/)
+
 [SAS for Data Science](https://data-flair.training/blogs/sas-for-data-science/)
+
 [Data Science—Master SQL](https://data-flair.training/blogs/master-sql-for-data-science/)
+
 [终极动手 Hadoop](https://www.udemy.com/the-ultimate-hands-on-hadoop-tame-your-big-data/?ranMID=39197&ranEAID=JVFxdTr9V80&ranSiteID=JVFxdTr9V80-lI3PNRK2.VUtcWLY0IekWw&LSNPUBID=JVFxdTr9V80)
+
 [前 5 名课程学习 Hadoop](https://hackernoon.com/top-5-hadoop-courses-for-big-data-professionals-best-of-lot-7998f593d138?source=extreme_sidebar---------0-2--------------------)
+
 [前 5 名免费课程学习大数据、Spark、Hadoop](http://www.java67.com/2018/05/top-5-free-big-data-courses-to-learn-Hadoop-Apache-Spark.html)

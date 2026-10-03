@@ -1,22 +1,23 @@
-# Java 中的 LinkedHashMap 指南
+
+# Java 中的 `LinkedHashMap` 指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-linked-hashmap>
 
-## 1。概述
+## 1. 概述
 
-在本文中，我们将探讨`LinkedHashMap`类的内部实现。 `LinkedHashMap`是`Map`接口的通用实现。
+在本文中，我们将探讨`LinkedHashMap`类的内部实现。`LinkedHashMap`是`Map`接口的通用实现。
 
 这个特殊的实现是`HashMap`的子类，因此共享了 [`HashMap`实现](/web/20221129002012/https://www.baeldung.com/java-hashmap)的核心构件。因此，强烈建议在继续阅读本文之前先温习一下。
 
-## 2。`LinkedHashMap`vs`HashMap`
+## 2. `LinkedHashMap` vs `HashMap`
 
-`LinkedHashMap`级在大多数方面与`HashMap`非常相似。然而，链接散列映射基于散列表和链表来增强散列映射的功能。
+`LinkedHashMap`类在大多数方面与`HashMap`非常相似。然而，链接散列映射基于散列表和链表来增强散列映射的功能。
 
 除了默认大小为 16 的底层数组之外，它还维护一个贯穿其所有条目的双向链表。
 
 为了保持元素的顺序，链接散列表通过添加指向下一个和上一个条目的指针来修改`HashMap`的`Map.Entry`类:
 
-```java
+```
 static class Entry<K,V> extends HashMap.Node<K,V> {
     Entry<K,V> before, after;
     Entry(int hash, K key, V value, Node<K,V> next) {
@@ -25,15 +26,15 @@ static class Entry<K,V> extends HashMap.Node<K,V> {
 }
 ```
 
-注意，`Entry`类只是添加了两个指针；`before`和`after`，这使得它能够将自己挂钩到链表。除此之外，它使用 HashMap 的`Entry`类实现。
+注意，`Entry`类只是添加了两个指针；`before`和`after`，这使得它能够将自己挂钩到链表。除此之外，它使用`HashMap`的`Entry`类实现。
 
 最后，记住这个链表定义了迭代的顺序，默认情况下是元素的插入顺序(insertion-order)。
 
-## 3。插入顺序`LinkedHashMap`
+## 3. 插入顺序 `LinkedHashMap`
 
 让我们来看一个链接散列映射实例，它根据条目插入映射的方式对条目进行排序。它还保证在地图的整个生命周期中保持这种顺序:
 
-```java
+```
 @Test
 public void givenLinkedHashMap_whenGetsOrderedKeyset_thenCorrect() {
     LinkedHashMap<Integer, String> map = new LinkedHashMap<>();
@@ -60,11 +61,11 @@ public void givenLinkedHashMap_whenGetsOrderedKeyset_thenCorrect() {
 
 如果将键重新插入到地图中，插入顺序不受影响。
 
-## 4。`LinkedHashMap`访问顺序
+## 4. `LinkedHashMap` 访问顺序
 
 `LinkedHashMap`提供了一个特殊的构造函数，使我们能够在自定义负载系数(LF)和初始容量中指定一个不同的排序机制/策略，称为访问顺序:
 
-```java
+```
 LinkedHashMap<Integer, String> map = new LinkedHashMap<>(16, .75f, true);
 ```
 
@@ -74,7 +75,7 @@ LinkedHashMap<Integer, String> map = new LinkedHashMap<>(16, .75f, true);
 
 因此，使用这种地图构建最近最少使用的(LRU)缓存非常简单实用。成功的`put`或`get`操作导致对条目的访问:
 
-```java
+```
 @Test
 public void givenLinkedHashMap_whenAccessOrderWorks_thenCorrect() {
     LinkedHashMap<Integer, String> map 
@@ -113,7 +114,7 @@ public void givenLinkedHashMap_whenAccessOrderWorks_thenCorrect() {
 
 为了在实践中看到这一点，让我们创建我们自己的链接散列映射类，唯一的目的是通过扩展`LinkedHashMap`:
 
-```java
+```
 public class MyLinkedHashMap<K, V> extends LinkedHashMap<K, V> {
 
     private static final int MAX_ENTRIES = 5;
@@ -133,7 +134,7 @@ public class MyLinkedHashMap<K, V> extends LinkedHashMap<K, V> {
 
 我们上面的覆盖将允许地图增长到 5 个条目的最大大小。当大小超过该值时，将插入每个新条目，代价是丢失映射中最老的条目，即最后访问时间在所有其他条目之前的条目:
 
-```java
+```
 @Test
 public void givenLinkedHashMap_whenRemovesEldestEntry_thenCorrect() {
     LinkedHashMap<Integer, String> map
@@ -159,7 +160,7 @@ public void givenLinkedHashMap_whenRemovesEldestEntry_thenCorrect() {
 
 请注意，当我们向地图中添加新条目时，键集开头的最旧条目是如何不断减少的。
 
-## 5。性能考虑因素
+## 5. 性能考虑因素
 
 就像`HashMap`，`LinkedHashMap`在常量时间内执行基本的`Map`操作:添加、删除和包含，只要散列函数是维数合适的。它还接受空键和空值。
 
@@ -171,19 +172,19 @@ public void givenLinkedHashMap_whenRemovesEldestEntry_thenCorrect() {
 
 负载系数和初始容量的精确定义见`HashMap`。然而，请注意，**选择过高的初始容量值对`LinkedHashMap`的惩罚没有对`HashMap`** 的惩罚严重，因为这个类的迭代时间不受容量的影响。
 
-## 6。并发性
+## 6. 并发性
 
 就像`HashMap`，`LinkedHashMap`实现是不同步的。因此，如果你要从多个线程中访问它，并且这些线程中至少有一个可能从结构上改变它，那么它必须是外部同步的。
 
 最好在创建时这样做:
 
-```java
+```
 Map m = Collections.synchronizedMap(new LinkedHashMap());
 ```
 
 与`HashMap`的区别在于需要什么样的结构修改。**在访问有序的链接散列图中，仅仅调用`get` API 就会导致结构修改**。除此之外，还有像`put`和`remove`这样的操作。
 
-## 7。结论
+## 7. 结论
 
 在本文中，我们探讨了 Java `LinkedHashMap`类作为`Map`接口最重要的实现之一的用法。我们也已经探索了它的内部工作方式与它的超类`HashMap`的区别。
 

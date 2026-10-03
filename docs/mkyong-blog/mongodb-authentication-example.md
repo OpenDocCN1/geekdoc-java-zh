@@ -1,34 +1,36 @@
+
 # MongoDB 身份验证示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/mongodb/mongodb-authentication-example/>
 
-本指南向您展示了如何在 MongoDB 中启用身份验证。默认情况下，身份验证是禁用的。要配置它，您必须首先向“admin”数据库添加一个用户。
+本指南向您展示了如何在 MongoDB 中启用身份验证。默认情况下，身份验证是禁用的。要配置它，您必须首先向 `admin` 数据库添加一个用户。
 
-```java
- > show dbs
+```
+> show dbs
 admin  #add single user to this database
 testdb 
 ```
 
-**Note**
-Users with normal access in “admin” database, HAVE read and write access to all the other databases. Users with read only access to the “admin” database HAVE only read to all databases.
+**注意**
 
-这个例子使用的是 MongoDB 版本 2.2.3
+在 `admin` 数据库中具有普通访问权限的用户，对所有其他数据库拥有读写权限。对 `admin` 数据库仅有只读访问权限的用户，对所有数据库仅有只读权限。
+
+这个例子使用的是 MongoDB 版本 2.2.3。
 
 ## 认证示例
 
-查看完整的示例，将“admin”用户添加到 admin 数据库，将普通用户添加到“testdb”数据库，以及如何执行身份验证。
+查看完整的示例，将 `admin` 用户添加到 `admin` 数据库，将普通用户添加到 `testdb` 数据库，以及如何执行身份验证。
 
-Terminal 1 – Start MongoDB in secure mode, authentication is required.
+**终端 1** – 以安全模式启动 MongoDB，需要身份验证。
 
-```java
- $mongo --auth 
+```
+$mongo --auth 
 ```
 
-Terminal 2 – MongoDB client, see comment “#” for self-explanatory
+**终端 2** – MongoDB 客户端，参见注释 `#` 以了解说明。
 
-```java
- $ mongo
+```
+$ mongo
 MongoDB shell version: 2.2.3
 connecting to: test
 > use admin             		#1\. connect to the "admin" database.
@@ -76,16 +78,9 @@ user
 
 完成了。
 
- ## 参考
+## 参考
 
-1.  [MongoDB:安全实践和管理](http://web.archive.org/web/20190308183427/http://docs.mongodb.org/manual/administration/security/)
-2.  [Java MongoDB 认证示例](http://web.archive.org/web/20190308183427/http://www.mkyong.com/mongodb/java-authentication-access-to-mongodb/)
+1. [MongoDB:安全实践和管理](http://web.archive.org/web/20190308183427/http://docs.mongodb.org/manual/administration/security/)
+2. [Java MongoDB 认证示例](http://web.archive.org/web/20190308183427/http://www.mkyong.com/mongodb/java-authentication-access-to-mongodb/)
 
 [authentication](http://web.archive.org/web/20190308183427/http://www.mkyong.com/tag/authentication/) [mongodb](http://web.archive.org/web/20190308183427/http://www.mkyong.com/tag/mongodb/)![](img/3b5f2c09681d48e0e2627a3077bcae0e.png) (function (i,d,s,o,m,r,c,l,w,q,y,h,g) { var e=d.getElementById(r);if(e===null){ var t = d.createElement(o); t.src = g; t.id = r; t.setAttribute(m, s);t.async = 1;var n=d.getElementsByTagName(o)[0];n.parentNode.insertBefore(t, n); var dt=new Date().getTime(); try{i[l][w+y](h,i[l][q+y](h)+'&amp;'+dt);}catch(er){i[h]=dt;} } else if(typeof i[c]!=='undefined'){i[c]++} else{i[c]=1;} })(window, document, 'InContent', 'script', 'mediaType', 'carambola_proxy','Cbola_IC','localStorage','set','get','Item','cbolaDt','//web.archive.org/web/20190308183427/http://route.carambo.la/inimage/getlayer?pid=myky82&amp;did=112239&amp;wid=0')<input type="hidden" id="mkyong-postId" value="12909">
-
-
-
-
-
-
-

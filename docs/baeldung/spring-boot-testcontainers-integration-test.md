@@ -1,38 +1,39 @@
+
 # 使用 Spring Boot 和 Testcontainers 进行数据库集成测试
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-boot-testcontainers-integration-test>
 
-## 1。概述
+## 1. 概述
 
 Spring Data JPA 提供了一种简单的方法来创建数据库查询，并使用嵌入式 H2 数据库测试它们。
 
-但是在某些情况下，**在真实数据库上测试更有利可图，**尤其是当我们使用依赖于提供者的查询时。
+但是在某些情况下，在真实数据库上测试更有利可图，尤其是当我们使用依赖于提供者的查询时。
 
-在本教程中，我们将演示**如何使用 [Testcontainers](/web/20220926190100/https://www.baeldung.com/docker-test-containers) 对 Spring Data JPA 和 PostgreSQL 数据库进行集成测试。**
+在本教程中，我们将演示如何使用 [Testcontainers](/web/20220926190100/https://www.baeldung.com/docker-test-containers) 对 Spring Data JPA 和 PostgreSQL 数据库进行集成测试。
 
 在之前的教程中，我们主要使用`@Query`注释创建了一些数据库[查询，现在我们将对其进行测试。](/web/20220926190100/https://www.baeldung.com/spring-data-jpa-query)
 
-## 2。配置
+## 2. 配置
 
-为了在我们的测试中使用 PostgreSQL 数据库，**我们必须添加具有`test`范围**的 [Testcontainers 依赖关系](https://web.archive.org/web/20220926190100/https://search.maven.org/classic/#search%7Cga%7C1%7Cg%3A%22org.testcontainers%22%20AND%20a%3A%22postgresql%22):
+为了在我们的测试中使用 PostgreSQL 数据库，我们必须添加具有`test`范围的 [Testcontainers 依赖关系](https://web.archive.org/web/20220926190100/https://search.maven.org/classic/#search%7Cga%7C1%7Cg%3A%22org.testcontainers%22%20AND%20a%3A%22postgresql%22):
 
-```java
+```xml
 <dependency>
     <groupId>org.testcontainers</groupId>
     <artifactId>postgresql</artifactId>
     <version>1.17.3</version>
     <scope>test</scope>
-</dependency> 
+</dependency>
 ```
 
 让我们在测试资源目录下创建一个`application.properties`文件，在这个文件中，我们指示 Spring 使用正确的驱动程序类，并在每次测试运行时创建方案:
 
-```java
+```properties
 spring.datasource.driver-class-name=org.testcontainers.jdbc.ContainerDatabaseDriver
 spring.jpa.hibernate.ddl-auto=create
 ```
 
-## 3。单一测试用途
+## 3. 单一测试用途
 
 要开始在单个测试类中使用 PostgreSQL 实例，我们必须首先创建一个容器定义，然后使用它的参数来建立连接:
 
@@ -61,7 +62,7 @@ public class UserRepositoryTCIntegrationTest extends UserRepositoryCommonIntegra
 }
 ```
 
-在上面的例子中，在执行测试方法之前，我们使用 JUnit 的`@ClassRule`来建立一个数据库容器**。我们还创建了一个实现`ApplicationContextInitializer.`的静态内部类。最后一步，我们将 `@ContextConfiguration`注释应用到我们的测试类，并将初始化器类作为参数。**
+在上面的例子中，在执行测试方法之前，我们使用 JUnit 的`@ClassRule`来建立一个数据库容器。我们还创建了一个实现`ApplicationContextInitializer`的静态内部类。最后一步，我们将`@ContextConfiguration`注释应用到我们的测试类，并将初始化器类作为参数。
 
 通过执行这三个动作，我们可以在发布 Spring 上下文之前设置连接属性。
 
@@ -122,23 +123,23 @@ Caused by: org.postgresql.util.PSQLException: ERROR: column "u" of relation "use
 int updateUserSetStatusForNameNative(Integer status, String name);
 ```
 
-这一次两个测试都成功完成。在这个例子中，**我们使用 Testcontainers 来识别原生查询的一个问题，否则这个问题会在切换到生产中的真实数据库后暴露出来。**我们还应该注意到，使用`JPQL`查询通常更安全，因为 Spring 会根据所使用的数据库提供者正确地翻译它们。
+这一次两个测试都成功完成。在这个例子中，我们使用 Testcontainers 来识别原生查询的一个问题，否则这个问题会在切换到生产中的真实数据库后暴露出来。我们还应该注意到，使用`JPQL`查询通常更安全，因为 Spring 会根据所使用的数据库提供者正确地翻译它们。
 
-### 3.1.每个测试一个数据库，带配置
+### 3.1. 每个测试一个数据库，带配置
 
 到目前为止，在运行测试类中的所有测试之前，我们已经使用 JUnit 4 规则启动了一个数据库实例。最终，这种方法将在每个测试类之前创建一个数据库实例，并在运行每个类中的所有测试之后拆除它。
 
 这种方法在测试实例之间建立了最大的隔离。此外，多次启动数据库的开销会降低测试速度。
 
-除了 JUnit 4 规则方法，**我们可以[修改 JDBC URL](https://web.archive.org/web/20220926190100/https://www.testcontainers.org/modules/databases/jdbc/) 并指示 Testcontainers 为每个测试类**创建一个数据库实例。这种方法不需要我们在测试中编写一些基础设施代码就可以工作。
+除了 JUnit 4 规则方法，我们可以[修改 JDBC URL](https://web.archive.org/web/20220926190100/https://www.testcontainers.org/modules/databases/jdbc/) 并指示 Testcontainers 为每个测试类创建一个数据库实例。这种方法不需要我们在测试中编写一些基础设施代码就可以工作。
 
 例如，为了重写上面的例子，我们所要做的就是将它添加到我们的`application.properties`:
 
-```java
+```properties
 spring.datasource.url=jdbc:tc:postgresql:11.1:///integration-tests-db
 ```
 
-`“tc:”` 将使 Testcontainers 实例化数据库实例，而无需任何代码更改。因此，我们的测试类将会非常简单:
+`"tc:"` 将使 Testcontainers 实例化数据库实例，而无需任何代码更改。因此，我们的测试类将会非常简单:
 
 ```java
 @RunWith(SpringRunner.class)
@@ -155,7 +156,7 @@ public class UserRepositoryTCJdbcLiveTest extends UserRepositoryCommon {
 
 如果我们每个测试类有一个数据库实例，这种方法是首选。
 
-## 4。共享数据库实例
+## 4. 共享数据库实例
 
 在前面的段落中，我们描述了如何在一个单独的测试中使用 Testcontainers。在实际场景中，由于启动时间相对较长，我们希望在多个测试中重用同一个数据库容器。
 
@@ -196,7 +197,7 @@ public class BaeldungPostgresqlContainer extends PostgreSQLContainer<BaeldungPos
 
 我们现在可以将它们放在我们的`application.properties` 文件中:
 
-```java
+```properties
 spring.datasource.url=${DB_URL}
 spring.datasource.username=${DB_USERNAME}
 spring.datasource.password=${DB_PASSWORD}
@@ -216,11 +217,11 @@ public class UserRepositoryTCAutoIntegrationTest {
 }
 ```
 
-和前面的例子一样，我们对保存容器定义的字段应用了`the @ClassRule` 注释。这样，在创建 Spring 上下文之前,`DataSource`连接属性就被填充了正确的值。
+和前面的例子一样，我们对保存容器定义的字段应用了`@ClassRule`注释。这样，在创建 Spring 上下文之前,`DataSource`连接属性就被填充了正确的值。
 
-**我们现在可以使用同一个数据库实例**实现多个测试，只需定义一个用我们的`BaeldungPostgresqlContainer`实用程序类实例化的`@ClassRule`注释字段。
+我们现在可以使用同一个数据库实例实现多个测试，只需定义一个用我们的`BaeldungPostgresqlContainer`实用程序类实例化的`@ClassRule`注释字段。
 
-## 5。结论
+## 5. 结论
 
 在本文中，我们展示了使用 Testcontainers 在真实数据库实例上执行测试的方法。
 

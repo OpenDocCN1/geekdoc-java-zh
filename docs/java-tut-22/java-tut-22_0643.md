@@ -1,3 +1,4 @@
+
 # 教程：开始使用图形
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/basic2d/index.html`](https://docs.oracle.com/javase/tutorial/2d/basic2d/index.html)
@@ -7,7 +8,6 @@ Java 2D API 强大而复杂。然而，Java 2D API 的绝大多数用途利用�
 [`Graphics`](https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics.html)类的大多数方法可以分为两个基本组：
 
 +   绘制和填充方法，使您能够渲染基本形状、文本和图像
-
 +   设置属性的方法，影响绘制和填充的外观
 
 诸如`setFont`和`setColor`之类的方法定义了如何渲染绘制和填充方法。
@@ -22,7 +22,6 @@ Java 2D API 强大而复杂。然而，Java 2D API 的绝大多数用途利用�
 
     ```java
     g.drawString("Hello", 10, 10);
-
     ```
 
 +   `drawImage` – 用于绘制图像
@@ -32,20 +31,17 @@ Java 2D API 强大而复杂。然而，Java 2D API 的绝大多数用途利用�
                 0, 0, width, height,
                 0, 0, imageWidth, imageHeight,
                 null);                    
-
     ```
 
 +   `drawLine`，`drawArc`，`drawRect`，`drawOval`，`drawPolygon` – 用于绘制几何形状
 
     ```java
     g2.draw(new Line2D.Double(0, 0, 30, 40));
-
     ```
 
 根据您当前的需求，您可以根据以下标准在`Graphics`类中选择几种方法之一：
 
 +   无论您想要在指定位置以原始大小渲染图像还是将其缩放以适应给定矩形
-
 +   无论您喜欢用颜色填充图像的透明区域还是保持其透明
 
 填充方法适用于几何形状，包括`fillArc`，`fillRect`，`fillOval`，`fillPolygon`。
@@ -92,7 +88,6 @@ if (img1 != null) {
                  img1.getHeight(null), null);
 } 
 ...
-
 ```
 
 `setFont` 和 `drawString` 方法渲染温度和天气状况。
@@ -117,7 +112,6 @@ int xTextCond = rX-(int)boundsCond.getX();
 int yTextCond = rY-(int)boundsCond.getY()
                    + (int)boundsTemp.getHeight();
 g.drawString(condStr, xTextCond, yTextCond);
-
 ```
 
 `fillRect` 方法允许您绘制一个填充了指定颜色的矩形。
@@ -138,7 +132,6 @@ int rY = (size.height-hText)/2;
 g.setColor(Color.LIGHT_GRAY);
 g2.fillRect(rX, rY, wText, hText);
 ...
-
 ```
 
 尝试修改 `WeatherWizard` 演示以更改图形内容。例如，使用 `fillRoundRect` 方法代替 `fillRect` 或在 `setFont` 方法中应用另一个字体大小。在 `WeatherWizard.java` 文件中找到此小程序的完整代码。演示还需要以下图像：`weather-cloud.png`, `weather-rain.png`, `weather-snow.png` 和 `weather-sun.png`，这些图像位于 `images` 目录中。

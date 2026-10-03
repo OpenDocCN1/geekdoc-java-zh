@@ -1,3 +1,4 @@
+
 # 网络接口参数
 
 > 原文：[`docs.oracle.com/javase/tutorial/networking/nifs/parameters.html`](https://docs.oracle.com/javase/tutorial/networking/nifs/parameters.html)
@@ -6,11 +7,9 @@
 
 你可以使用`isUP()`方法来发现网络接口是否处于“up”（即运行）状态。以下方法指示网络接口类型：
 
-+   `isLoopback()`指示网络接口是否为环回接口。
-
-+   `isPointToPoint()`指示接口是否为点对点接口。
-
-+   `isVirtual()`指示接口是否为虚拟接口。
++ `isLoopback()`指示网络接口是否为环回接口。
++ `isPointToPoint()`指示接口是否为点对点接口。
++ `isVirtual()`指示接口是否为虚拟接口。
 
 `supportsMulticast()`方法指示网络接口是否支持多播。`getHardwareAddress()`方法在可用时返回网络接口的物理硬件地址，通常称为 MAC 地址。`getMTU()`方法返回最大传输单元（MTU），即最大数据包大小。
 
@@ -50,7 +49,6 @@ public class ListNetsEx {
         out.printf("\n");
      }
 }  
-
 ```
 
 以下是示例程序的输出样本：
@@ -79,5 +77,4 @@ Supports multicast? false
 Virtual? false
 Hardware address: null
 MTU: 8232
-
 ```

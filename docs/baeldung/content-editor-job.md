@@ -1,3 +1,4 @@
+
 # Java 技术编辑(兼职)(未开放)
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/content-editor-job>
@@ -6,23 +7,23 @@
 
 ### 描述
 
-We're looking for a new **part-time technical editor** to join the Java editorial team. The role involves working with authors, **reviewing their new article drafts,** and providing helpful feedback. The goal is to make sure that the article hits a high level of quality before it gets published. More specifically – articles should match [the Baeldung formatting, code, and style guidelines](/web/20221208143856/https://www.baeldung.com/contribution-guidelines#guidelines). **Beyond formatting and style**, articles should be code-focused, clean, and easy to understand. Sometimes an article is almost there, but not quite – and the author needs to be guided towards a better solution or a better way of explaining some technical concepts.
+我们正在寻找一位新的**兼职技术编辑**加入 Java 编辑团队。该职位需要与作者合作，**审阅他们的新文章草稿**，并提供有价值的反馈。目标是确保文章在发布前达到高质量标准。具体来说，文章应符合 [Baeldung 的格式、代码和风格指南](/web/20221208143856/https://www.baeldung.com/contribution-guidelines#guidelines)。**除了格式和风格之外**，文章还应以代码为核心，干净且易于理解。有时一篇文章已经接近完美，但还差一点——这时需要引导作者找到更好的解决方案或更好的方式来解释某些技术概念。
 
 ### 合适的人选？
 
-First – **you need to be a developer yourself**, working or actively involved in the Java and Spring ecosystem. All of these articles are code-centric, so being in the trenches and able to code is instrumental. Any experience with Scala, Kotlin, or Linux is a plus as well. Second – and it almost goes without saying – you should have an excellent command of the English language.
+首先——**你自己必须是开发者**，正在从事或积极参与 Java 和 Spring 生态系统的开发工作。所有这些文章都以代码为核心，因此深入一线并具备编码能力至关重要。有 Scala、Kotlin 或 Linux 经验者优先考虑。其次——几乎不言而喻——你需要具备出色的英语能力。
 
 ### 预算和时间承诺
 
-You're going to be **working with 6-7 authors** to help them with their articles (you can choose to work with fewer or more authors depending on your availability). An article usually takes about two rounds of review until it's ready to go. All of this usually takes about 30 to 45 minutes of work for a small to a medium article and can take 60 minutes for larger writeups. The budget for each article is based on your editor level and the number of words. Here are some typical budgets used by editors:
+你将**与 6-7 位作者合作**，帮助他们完成文章（你可以根据自己的时间安排选择与更少或更多的作者合作）。一篇文章通常需要大约两轮审阅才能完成准备。对于小型到中型文章，这通常需要 30 到 45 分钟的工作量，较大的文章可能需要 60 分钟。每篇文章的预算基于你的编辑级别和字数。以下是编辑常用的一些预算示例：
 
 *   第九级–975 个单词–59 美元
 *   第九级–1175 个单词–63 美元
 *   第 13 级–975 个单词–65 美元
 *   第 13 级–1175 个单词–69 美元
 
-Your level is determined by internal metrics such as response time and feedback from the senior editors, and the max level is 20\. **The average earning is around 600$/month.**
+你的级别由内部指标决定，例如响应时间和高级编辑的反馈，最高级别为 20 级。**平均收入约为每月 600 美元。**
 
-### 应用
+### 申请
 
-If you're interested in applying, please send a message to `[[email protected]](/web/20221208143856/https://www.baeldung.com/cdn-cgi/l/email-protection)` with your details and a link to your LinkedIn profile.
+如果你有兴趣申请，请发送消息至 `[[email protected]](/web/20221208143856/https://www.baeldung.com/cdn-cgi/l/email-protection)`，附上你的详细信息和你 LinkedIn 个人资料的链接。

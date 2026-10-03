@@ -1,13 +1,10 @@
+
 # Java 单元测试实战（JUnit），第 3 版
-
-
-
-
-
 
 ![](img/5f9fd301af41bda177ca04d9f939d028_0_0.png)
 
 Dave Thomas 序言
+
 Kelly Talbot 编
 
 # 对《Java 语言 JUnit 实用主义单元测试（第三版）》的早期评价
@@ -15,183 +12,149 @@ Kelly Talbot 编
 Jeff 对单元测试的基础知识进行了非常有趣且易于阅读的介绍。这不仅仅是机械性的操作——你还能从他在创建全面且有意义的测试方面的指导中受益。
 
 - Bill Wake
-XP123 LLC 顾问
+  XP123 LLC 顾问
 
 发现《Java 语言 JUnit 实用主义单元测试（第三版）》是一本极好的读物；即使作为一名丰富的 Java 开发者，我也学到了很多新技巧。如果你想了解 TDD（测试驱动开发）以及单元测试如何积极鼓励整洁的代码，请继续阅读。我认为这会帮助开发者提升水平并增加价值。
 
 - James Bowen
-澳大利亚联邦银行高级软件工程师
+  澳大利亚联邦银行高级软件工程师
 
 《Java 语言 JUnit 实用主义单元测试（第三版）》是初学者和经验丰富的开发者不可或缺的指南。Jeff Lang 提供了清晰、实用的见解，让掌握单元测试和提高代码质量变得简单可行且有趣。对于任何认真对待软件工艺的人来说，这都是必读。
 
 - Ahmed Misbah
-Orange Innovation Egypt 首席软件架构师
+  Orange Innovation Egypt 首席软件架构师
 
 本版的新内容使其非常值得读，特别是那些关注测试如何支持重构和 TDD 的部分。Jeff 超越了测试的机械性，在形式和风格元素方面提供了许多极好的建议。这本书将帮助你将自己的测试实践提升几个档次。
 
 - **Junilu Lacar**
-Dojo Coach 执行董事
+  Dojo Coach 执行董事
 
 我很抱歉过去没有读过 Jeff 的书。他在这里收集的内容是一条实用的路径，带你穿过我认为单元测试中重要的部分，而没有用教条来强迫你。这在关于生成式 AI 的新章节中尤为令我触动——Jeff 直截了当地告诉了它的局限性，并通过详细的示例展示了你现在可以使用它来增强自身能力的实用方法。我会向我所有接触 Java 开发的教练全心全意推荐这本书！
 
 - **Stacey Vetzal**
-加拿大皇家银行首席敏捷卓越教练
+  加拿大皇家银行首席敏捷卓越教练
 
 作为一名年轻的入门程序员，《Java 语言 JUnit 实用主义单元测试（第三版）》提供了一种理解单元测试和测试驱动开发的简单方法，同时让我在阅读过程中一直忍俊不禁。
 
 - **Clarice Levison**
-计算机技术学生
+  计算机技术学生
 
 这本书作为一份全面的指南脱颖而出，深度而广地探讨了使用 JUnit 及其他工具进行单元测试的含义、为什么以及怎么做。对于个人开发者、团队、初学者和老手来说，都是无价的资源——对于任何使用 Java 平台的人来说都是必读。
 
 - Weny Shi
-哥伦比亚大学高级应用系统开发人员
+  哥伦比亚大学高级应用系统开发人员
 
 我经常提供整洁代码方面的建议，并有一系列参考资源——这本书是对任何想要改进单元测试的人的建议。
 
 - Sebastian Larsson
-Knowit 技能团队主管
+  Knowit 技能团队主管
 
 我在 JUnit 还没有版本号之前就在使用它了。但我仍然学到了东西。可读性，我在代码中看到的首要问题，Jeff 直面了它。
 
 - Mark Levison
-20年经验的认证 Scrum 培训师和敏捷教练
+  20年经验的认证 Scrum 培训师和敏捷教练
 
 ![](img/5f9fd301af41bda177ca04d9f939d028_5_0.png)
-
 
 我们尝试过直接不留，但后来人们写信来询问缺失的页码。
 
 总之，仓鼠 Eddy 想说声“你好”。
 
-
-
-
 ![](img/5f9fd301af41bda177ca04d9f939d028_7_0.png)
 
-
-
-
 制作本书的团队包括：
-出版：Dave Thomas
-运营：Janet Furlow
-执行编辑：Kelly Talbot
-编辑：Karen Galle
-索引：Gilson Graphics
 
-
-
-
-# 
-
+- 出版：Dave Thomas
+- 运营：Janet Furlow
+- 执行编辑：Kelly Talbot
+- 编辑：Karen Galle
+- 索引：Gilson Graphics
 
 # 第一部分 单元测试基础
 
 - 1. 构建你的第一个单元测试 ................................................................ 3
-编写单元测试的原因 .......................................................................... 3
-学习 JUnit 基础：你的测试挑战 ................................................ 4
-编写第一个真实的测试 ...................................................................... 8
-处理失败 ........................................................................................ 11
-转向基于 1 的测试：发生了什么！...................................................... 14
-增加你的 ROI：清理测试 ................................................................ 17
-ZOM：从 0 到 1，现在测试许多 ................................ 22
-覆盖其他情况：创建测试列表 ................................................ 24
-恭喜！但别停下 ................................................................ 24
+  - 编写单元测试的原因 .......................................................................... 3
+  - 学习 JUnit 基础：你的测试挑战 ................................................ 4
+  - 编写第一个真实的测试 ...................................................................... 8
+  - 处理失败 ........................................................................................ 11
+  - 转向基于 1 的测试：发生了什么！...................................................... 14
+  - 增加你的 ROI：清理测试 ................................................................ 17
+  - ZOM：从 0 到 1，现在测试许多 ................................ 22
+  - 覆盖其他情况：创建测试列表 ................................................ 24
+  - 恭喜！但别停下 ................................................................ 24
 
 - 2. 测试构建块 ....................................................... 25
-单元 .......................................................................................... 25
-比单元大一点点？....................................................................... 27
-作为构建块的概念 ............................................................ 31
-测试更简单的事物 ................................................................ 31
-验证副作用 ................................................................................ 34
-测试常见的代码情况 ................................................................ 41
+  - 单元 .......................................................................................... 25
+  - 比单元大一点点？....................................................................... 27
+  - 作为构建块的概念 ............................................................ 31
+  - 测试更简单的事物 ................................................................ 31
+  - 验证副作用 ................................................................................ 34
+  - 测试常见的代码情况 ................................................................ 41
+  - 测试异常处理 ................................................................ 65
+  - 使用代码覆盖率提升单元技能 ................................................ 71
+  - 测试多线程代码 ................................................................ 79
+  - 编写集成测试 ................................................................ 84
+  - 探索性单元测试 ................................................................ 90
 
+# 第二部分 通过 JUnit 精通单元测试
 
-测试异常处理 ................................................................ 65
+- 3. 使用核心断言形式 .......................................................... 100
+- 4. 断言消息：断言的冗余消息 ................................................ 103
+- 5. 其他常见的 JUnit 断言形式 ................................................ 104
+- 6. 预期异常 ................................................................................ 112
+- 7. 断言没有发生：`assertDoesNotThrow` ................................................ 115
+- 8. 替代断言方法 ................................................................ 116
+- 9. 第三方断言库 ................................................ 118
+- 10. 消除非测试 ................................................................ 121
+- 11. 在 JUnit 测试中建立组织 .................................................. 123
+- 12. 执行 JUnit 测试 .............................................................. 135
 
-使用代码覆盖率提升单元技能 ................................................ 71
-测试多线程代码 ................................................................ 79
-编写集成测试 ................................................................ 84
-探索性单元测试 ................................................................ 90
+# 第三部分 提高投资回报：单元测试与设计
 
-# 第二部分 通过 E E 精通 JUnit
+- 13. 重构为更整洁的代码 ...................................................... 147
+  - 一点点重构 .............................................................................. 148
+  - 为你的方法寻找更好的“家园” ...................................................... 154
+  - 移除价值较小的临时变量 ...................................................... 157
+  - 放大代码的核心意图 .............................................................. 158
+  - 你是想杀我吗？解决性能顾虑 ................................................ 162
+  - 最终清理 .............................................................................. 166
 
-使用核心断言形式 .......................................................... 100
-断言消息：断言的冗余消息 ................................................ 103
-其他常见的 JUnit 断言形式 ................................................ 104
-预期异常 ................................................................................ 112
-断言没有发生：assertDoesNotThrow ................................................ 115
-替代断言方法 ................................................................ 116
-第三方断言库 ................................................ 118
-消除非测试 ................................................................ 121
+- 14. 重构你的代码结构 ...................................................... 169
+  - 测试气味：遗留代码构造
+  - 测试气味：不必要的测试代码
+  - 测试气味：泛化与逐步的断言
+  - 测试气味：缺失抽象
+  - 测试气味：膨胀的构造
+  - 测试气味：多个断言
+  - 测试气味：测试中无关细节
+  - 测试气味：误导性的组织
+  - 测试气味：隐含含义
+  - 从你的测试列表中添加测试
+  - 总结
 
+# 第四部分 单元测试的更广泛话题
 
+- 15. 测试驱动开发 (TDD) 进阶 .............................................. 211
+  - TDD 的主要收益 ...................................................................... 212
+  - 总结 ...................................................................................... 234
 
+- 16. 采用实践 .............................................................. 235
+  - 进入快速状态 ...................................................................... 235
+  - 与团队达成共识 .................................................................. 236
+  - 持续集成 .............................................................................. 241
+  - 总结 ...................................................................................... 243
 
-
-## 6. 在 JUnit 测试中建立组织 . . . . . . . . . . 123
-
-## 7. 执行 JUnit 测试 . . . . . . . . . . . . . . . . 135
-
-# 第三部分 — 提高投资回报：单元测试与设计
-
-## 8. 重构为更整洁的代码 . . . . . . . . . . 147
-- 一点点重构 . . . . . . . . . . . . . . . . 148
-- 为你的方法寻找更好的“家园” . . . . . . . . . . 154
-- 移除价值较小的临时变量 . . . . . . . . 157
-- 放大代码的核心意图 . . . . . . . . . . . . 158
-- 你是想杀我吗？解决性能顾虑 162
-- 最终清理 . . . . . . . . . . . . . . . . . . . . 166
-
-## 9. 重构你的代码结构 . . . . . . . . . . . . 169
-
-
-测试气味：遗留代码构造
-
-测试气味：不必要的测试代码
-
-测试气味：泛化与逐步的断言
-
-测试气味：缺失抽象
-
-测试气味：膨胀的构造
-
-测试气味：多个断言
-
-测试气味：测试中无关细节
-
-测试气味：误导性的组织
-
-测试气味：隐含含义
-
-从你的测试列表中添加测试
-
-总结
-
-# 第四部分 — 单元测试的更广泛话题
-
-## 11. 测试驱动开发 (TDD) 进阶 . . . . . . 211
-- TDD 的主要收益 . . . . . . . . . . . . . . . . 212
-- 总结 . . . . . . . . . . . . . . . . . . . . . . . . . . 234
-
-## 12. 采用实践 . . . . . . . . . . . . . . . . 235
-- 进入快速状态 . . . . . . . . . . 235
-- 与团队达成共识 . . . . . . . . . . . . . . . 236
-- 持续集成 . . . . . . . . . . . . 241
-- 总结 . . . . . . . . . . . . . . . . . . . . . . 243
-
-## 13. 保留单元测试 . . . . . . . . . . . . . . . . 245
-- AI 不会消失 . . . . . . . . . . . . . . . . 245
-- 使用 ChatGPT 探索更多功能 . . . . . . . . . . . . 246
-- 建立标准 . . . . . . . . . . . . . . . . 247
-- 使用 ChatGPT 提供示例 . . . . . . . . . . . . . . 248
-- 重构代码 . . . . . . . . . . . . . . . . . . 251
-- 添加新功能 . . . . . . . . . . . . . . . . . . 255
-- 最终清理 . . . . . . . . . . . . . . . . . . . . . 260
-- 使用 AI 的成功概率 . . . . . . . 262
-- 测试是好事的 . . . . . . . . . . . . . . . . . . . . 263
-- 总结 . . . . . . . . . . . . . . . . . . . . . . . . . . 264
-
+- 17. 保留单元测试 .............................................................. 245
+  - AI 不会消失 ...................................................................... 245
+  - 使用 ChatGPT 探索更多功能 ...................................................... 246
+  - 建立标准 .............................................................................. 247
+  - 使用 ChatGPT 提供示例 ...................................................... 248
+  - 重构代码 .............................................................................. 251
+  - 添加新功能 ...................................................................... 255
+  - 最终清理 .............................................................................. 260
+  - 使用 AI 的成功概率 .......................................................... 262
+  - 测试是好事的 ...................................................................... 263
+  - 总结 ...................................................................................... 264
 
 # 前言
 
@@ -221,10 +184,6 @@ Dave Thomas
 
 Dallas, TX
 
-
-
-
-
 # 前言
 
 Andy Hunt 和 Dave Thomas 在 2003 年编写并出版了这本书的第一版，当时大约是 JUnit 引入后五五年。然而，如果你告诉一个 2003 年的 Java 开发者编写测试来验证他们自己的代码，他们可能会说：“没门儿。我是一个程序员，不是一个测试员。”
@@ -233,7 +192,7 @@ Andy Hunt 和 Dave Thomas 在 2003 年编写并出版了这本书的第一版，
 
 十年后，单元测试已成为开发者的一项预期技能，也是面试的常见话题。在 Andy 和 Dave 的要求下，我重写了 *Pragmatic Unit Testing in Java with JUnit*，增加了额外的主题并保持了内容的时效性。我于 2015 年交付了第二版。
 
-到 2015 年，单元测试已成为许多追求系统质量经理和团队负责人的强制要求。遗憾的是，这些要求往往伴随着虽然良好但误导的指标目标，特别是在代码覆盖率方面。今天，许多团队被要求达到代码覆盖率目标（例如参见第 71 页的[使用代码覆盖率提高单元测试技能](https://example.com) 的 80%）。
+到 2015 年，单元测试已成为许多追求系统质量经理和团队负责人的强制要求。遗憾的是，这些要求往往伴随着虽然良好但误导的指标目标，特别是在代码覆盖率方面。今天，许多团队被要求达到代码覆盖率目标（例如参见第 71 页的“使用代码覆盖率提高单元测试技能”的 80%）。
 
 然而，强制覆盖率目标的团队通常发现单元测试的投资回报很低。许多开发者会玩弄指标，因为他们不知道如何利用单元测试。他们只编写足够的“测试”来达到指标目标。这些测试提供的价值很小；它们只能最小化网关处的缺陷，不能帮助记录系统行为，也无法为通过重构改进设计提供安全性。
 
@@ -260,6 +219,8 @@ Andy Hunt 和 Dave Thomas 在 2003 年编写并出版了这本书的第一版，
 - 你更改了代码，并想知道是否破坏了某些功能。
 - 最重要的是，良好的测试能增加你交付系统的信心。
 
+
+
 没有任何测试形式能帮助你有效地管理和记录系统中成千上万个单元行为。编写良好的测试会在你每次更改后几秒钟内提供反馈。
 
 读完这本书后，你将能够编写测试，这对系统非常有帮助。
@@ -272,9 +233,11 @@ Andy Hunt 和 Dave Thomas 在 2003 年编写并出版了这本书的第一版，
 
 为了遵循并运行书中的示例，你需要以下三项软件：
 
-- *Java*：书中的示例使用了 Java 21。
-- *一个 IDE*：书中的示例使用 IntelliJ IDEA 构建，你也可以使用 Eclipse、NetBeans。
-- *JUnit*：JUnit 通常由你的构建工具（Gradle 或 Maven）获取。
+- `Java`：书中的示例使用了 Java 21。
+
+- `一个 IDE`：书中的示例使用 IntelliJ IDEA 构建，你也可以使用 Eclipse、NetBeans。
+
+- `JUnit`：JUnit 通常由你的构建工具（Gradle 或 Maven）获取。
 
 如果你的团队使用其他单元测试工具，本书的大部分部分内容也适用于你的世界。
 
@@ -283,8 +246,11 @@ Andy Hunt 和 Dave Thomas 在 2003 年编写并出版了这本书的第一版，
 本书分为四个部分：
 
 - **单元测试基础**：通过为示例以及许多代码情况编写测试来学习 JUnit 基础。使用测试双测试具有挑战性的依赖项。深入研究覆盖、多线程代码测试以及集成测试。
+
 - **精通 JUnit**：使用 JUnit 的许多断言形式检查结果，使用生命周期方法、嵌套类和参数化测试组织测试，并使用标签和其他机制执行测试子集。
+
 - **增加投资回报——单元测试与设计**：关注设计测试与反之的相关性。学习在微观、宏观以及测试中进行重构。
+
 - **单元测试的其他主题**：通过学习 TDD 纪律提升你的单元测试实践。发现在项目中采用测试的有用考虑因素。通过理解单元测试在 AI 时代的持续意义来结束你的旅程。
 
 成功的最佳途径：边读边编写示例！
@@ -303,14 +269,7 @@ void uppercasesSingleLetter() {
 }
 ```
 
-该片段代码出现在发行包的 StringUtils.java 文件，位于 ut3-units/02/src/test/java/units 目录下。如果你是以电子书形式阅读，点击文件名即可跳转到代码。
-
-
-
-
-
-
-# 测试驱动开发 (TDD) • xxi
+该片段代码出现在发行包的 `StringUtils.java` 文件，位于 `ut3-units/02/src/test/java/units` 目录下。如果你是以电子书形式阅读，点击文件名即可跳转到代码。
 
 你也可以在 GitHub 上找到代码。仓库名称显示为列表文件名的第一部分。上面的代码片段位于 `u3-units` 仓库中。GitHub 中的分支命名为 v1、v2、v3 等，该代码片段可能来自 v2 分支。
 
@@ -338,7 +297,6 @@ void someMethod() {
 
 我实践 TDD，但这不是一本关于它的书。第 11 章“使用测试驱动开发 (TDD) 进阶”将展示它是如何工作的以及它可以如何提供帮助。通过 TDD，你编写单元测试——换句话说，在你编写每一段生产代码之前编写测试。在书中，你将为已有的代码编写测试。
 
-
 在几十年的 TDD 实践中，我积累了许多让我的单元测试工作变得更容易、更有价值的见解。你将在《JUnit Java 实用单元测试》（Pragmatic Unit Testing in Java with JUnit）中学习这些见解。无论你在编写代码之前还是之后编写测试，这些见解都适用。
 
 # 编码风格
@@ -350,14 +308,16 @@ if (condition) doSomething();
 ```
 
 - 它减少了代码列表中的行数。
+
 - 在大多数情况下，如所示，`if` 体可以放进单行内。
+
 - 我发现作为一个单一概念，它的读性更好。
+
 - 如果你以后需要在条件体中使用第二个语句，你可能会记得要加上安全大括号。
+
 - 如果你忘了……这就是你写单元测试的原因。
 
 如果你仍然不以为为，请尽管添加大括号。不过，尝试一下不加的吧——你可能会喜欢的。
-
-
 
 # 第一部分
 
@@ -381,25 +341,25 @@ Lucia 的工作方式不同。每当她写一小段代码时，都会添加一�
 
 因为 Lucia 在每次微小更改后运行测试，只有在所有测试都通过时她才会继续。如果测试失败，她就知道自己创建了一个问题，并立即停止修复。她产生的问题容易修复得多，因为自她上次看到所有测试通过以来，她只增加了几行代码。她避免了在发现问题之前在错误上堆积大量新代码。
 
-
-
-
 此项目的生产源码文件存储在 `src/main/java` 目录下，位于 `credit` 包中。（IntelliJ IDEA 将 `src/main/java` 目录称为源代码根目录。）
 
 你现在准备好编写一个描述 `CreditHistory` 行为的测试了。你将把测试放在与生产源码相同的包——`credit` 中，但位于测试源目录 `src/test/java` 下。
 
 你的 IDE 可能提供了许多创建新测试类的方法。在 IDEA 中，你将通过在项目资源管理器中遵循以下步骤来创建：
 
-- 1. 从 Project 或 Packages 资源管理器中选择 `src/test/java` 包。
-- 2. 右键点击出 Class 上文菜单。
-- 3. 选择 New ► Java Class。你将看到 New Java Class 弹出窗口，它默认选择创建一个新类。
-- 4. 输入类名 `ACreditHistory`（意为“一个信用历史”）并按回车键。IDEA 的检查功能可能对你的命名规范不满意。你可以重新配置检查项，或者使用传统的名称 `CreditHistoryTest`。
+1. 从 Project 或 Packages 资源管理器中选择 `src/test/java` 包。
+
+2. 右键点击出 Class 上文菜单。
+
+3. 选择 New ► Java Class。你将看到 New Java Class 弹出窗口，它默认选择创建一个新类。
+
+4. 输入类名 `ACreditHistory`（意为“一个信用历史”）并按回车键。IDEA 的检查功能可能对你的命名规范不满意。你可以重新配置检查项，或者使用传统的名称 `CreditHistoryTest`。
 
 ## 运行测试：什么都不测试
 
 当你从 New ► Java Class 项目按下回车键时，IDEA 会为你提供一个 `ACreditHistory` 的空类声明。你的首要任务是在其中挤入一个测试方法：
 
-```java
+```
 utj-credit-history/01/src/test/java/credit/ACreditHistory.java
 class ACreditHistory {
     @org.junit.jupiter.api.Test
@@ -412,7 +372,6 @@ class ACreditHistory {
 > 代码列表中用箭头标记的行表示添加的行、修改的行或其他插入的代码片段。
 
 输入？是的。在学习过程中，最好自己输入代码和测试，而不是复制/粘贴，除非输入完全不是你的擅长。这感觉更像——
-
 
 ## 学习 JUnit 基础：你的第一个测试挑战
 
@@ -431,7 +390,9 @@ class ACreditHistory {
 如果你的测试没有被执行，请确保它遵循以下三条准则：
 
 - 它标记了 `@org.junit.jupiter.api.Test`
+
 - 它有 `void` 返回值
+
 - 它没有参数
 
 ## 第 1 章.构建你的第一个 JUnit 测试
@@ -451,7 +412,9 @@ class ACreditHistory {
 你可以从一个内容充实的测试开始，添加几个信用评分来计算平均值，然后确定你是否得到了正确答案。它的正向路径（happy path）测试用例——与负面或基于错误的测试相比——并不是你想要编写的唯一测试，尽管在验证 `arithmeticMean` 时还有其他需要考虑的情况：
 
 - 如果只添加一个信用评分会发生什么？
+
 - 如果不添加任何信用评分会发生什么？
+
 - 是否有异常情况——可能出现问题的条件？代码在这些情况下表现如何？
 
 从正向路径测试开始是一个选择；你还有其他选择。一种是从最简单的测试开始，移动到日益复杂的测试，最后是异常情况。另一种选择也是从最简单的测试开始，移动到日益复杂的测试，最后是异常情况。对于你写的每一个测试，都力求使用一个总结其描述行为的测试名称。这是一个疯狂的想法：让测试名称完成一个关于它所描述行为的句子。
@@ -460,7 +423,7 @@ class ACreditHistory {
 
 最简单的测试通常涉及零。你期望在该背景下信用历史的某些属性是正确的：它平均值。它应该返回零。使用以下代码更新 `ACreditHistory`：
 
-```java
+```
 utj-credit-history/01/src/test/java/credit/ACreditHistory.java
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -477,10 +440,9 @@ class ACreditHistory {
 
 让我们逐步检查 `ACreditHistory` 中更新后的行。你的每个测试将调用一个或多个断言方法来验证你的假设。由于这些断言是静态方法，静态导入使得你就不需要不断为你的断言调用进行限定限定。
 
-
 由你正在测试的系统返回。`assertEquals` 的签名让顺序一目了然。如果你以后忘记了，可以使用你的 IDE 向你显示：
 
-```java
+```
 public static void assertEquals(int expected, int actual)
 ```
 
@@ -500,13 +462,13 @@ public static void assertEquals(int expected, int actual)
 
 - 左侧的 JUnit 面板提供了已执行测试的层级列表，它在测试类 `CreditHistory` 和测试方法名 `noCreditRatingsHasMean` 上都标记了黄色的 x。你可以点击该测试方法以集中查看其执行详情。
 
- 右 右侧的 JUnit 面板直接切入主题给出了统计摘要：测试失败：1 个 / 1 个测试。这意味着 JUnit 执行了一个测试，而这唯一的那个测试失败了。
+- 右侧的 JUnit 面板直接切入主题给出了统计摘要：测试失败：1 个 / 1 个测试。这意味着 JUnit 执行了一个测试，而这唯一的那个测试失败了。
 
 - 在那个重复表述的总结下方，JUnit 显示了该测试糟糕的执行细节。失败留下了异常堆栈跟踪，它告诉你测试在到达断言语句之前就失败了。
 
 - 堆栈跟踪用红色向你“尖叫”——红色是用于警示物品的设计偏好，如错误、停止牌和有毒口红。你有一个除以零的问题。堆栈跟踪与源代码中的相应行相关，这允许你快速导航到问题代码：
 
-```java
+```
 public int arithmeticMean() {
     var total = ratings.stream().mapToInt(CreditRating::rating).sum();
     return total / ratings.size(); // 哎呀！
@@ -527,7 +489,7 @@ public int arithmeticMean() {
 
 ## 处理失败 13
 
-```java
+```
 test-credit-history/03/src/main/java/credit/CreditHistory.java
 public int arithmeticMean() {
     if (ratings.isEmpty()) return 0;
@@ -542,6 +504,8 @@ public int arithmeticMean() {
 ![](img/5f9fd301af41bda177ca04d9f939d028_33_0.png)
 
 右键点击会弹出一个几乎无摩擦的菜单：
+
+
 
 ![](img/5f9fd301af41bda177ca04d9f939d028_33_1.png)
 
@@ -564,71 +528,13 @@ void withOneRatingEquivalentMean() {
 }
 ```
 
-你可能发现，从1开始的测试可以做到同样？写一个只添加一个分数的测试：
-（代码块同上）
-
-你可能发现，从1开始的测试也能这样做？写一个只添加一个分数的测试：
-（代码块同上）
-
-你可能发现，从1开始的测试也能这样做？写一个只添加一个分数的测试：
-（代码块同上）
-
-你可能发现，从1开始的测试也能这样做？写一个只添加一个分数的测试：
-（代码块同上）
-
-你可能发现，从1开始的测试也能这样做？写一个只添加一个分数的测试：
-（代码块同上）
-
-你可能发现，从1开始的测试也能这样做？写一个只添加一个分数的测试：
-（代码块同上）
-
-（注：此处原文中存在重复文本，但根据指令“不要重复输出原文”，此处仅按逻辑逻辑处理翻译）
-
 选择“运行测试 (Run Tests)”选项。JUnit 将执行 `src/test/java` 下的所有测试。成功！这里是通过的测试（如第14页的图所示），它要么是完美的，要么没有任何堆栈跟踪。
 
 看起来不错，对吧？感觉很好，对吧？按下 `Ctrl-Shift-R`（或你机器上的相应快捷键）再次运行测试。沉浸在光辉中。
-
-## 进入从1开始的测试：发生事情了！
-
-你从0开始的测试救了你。也许从1开始的测试也能这样做？写一个只添加一个分数的测试：
-
-```java
-test-credit-history/04/src/test/java/CreditHistory.java
-@Test
-void withOneRatingEquivalentMean() {
-    var creditHistory = new CreditHistory();
-    creditHistory.add(new CreditRating(780));
-    var result = creditHistory.arithmeticMean();
-    assertEquals(780, result);
-}
-```
-
-你可能发现，从1开始的测试也能这样做？写一个只添加一个分数的测试：
-（代码块同上）
-
-（注：此处原文中存在重复文本，但根据指令“不要重复输出原文”，此处仅按逻辑逻辑处理翻译）
-
-选择“运行测试 (Run Tests)”选项。JUnit 将执行 `src/test/java` 下的所有测试。成功！这里是通过的测试（如第14页的图所示），它要么是完美的，要么没有任何堆栈跟踪。
-
-看起来不错，对吧？感觉很好，对吧？按下 `Ctrl-Shift-R`（或你机器上的相应快捷键）再次运行测试。沉浸在光辉中。
-
-（注：由于提供的原文中包含大量重复的段落，为了遵循“一定不要重复输出原文”的原则，译文已去除了重复部分，仅保持逻辑连贯。）
-
----
-**纠正说明：** 提供的英文原文中存在大量的文本重复（例如“处理失败”、“修复问题”、“进入从1开始的测试”等段落出现了多次）。根据您的指令“一定不要重复输出原文”，我在最终译文中剔除了这些冗余重复，确保了内容的逻辑完整性。
-
-[content]
-由你正在测试的系统返回。`assertEquals` 的签名让顺序一目然。如果你以后忘记了，可以使用你的 IDE 向你显示：
-
-```java
-public static void assertEquals(int expected, int actual)
-```
-
-当你运行测试时，你将看到 `expected`（预期值）和 `actual`（实际值）参数的顺序有多重要。你将在第14页的“让它失败”章节中操作。请留好！
 
 ## 处理失败
 
-你之前学会了点击类声明旁边的 JUnit 运行图标来执行所有测试。但你将经常运行测试——每天可能要运行数百次，而手动操作是一个缓慢得多且耗费精力的过程。你应当提高效率。重复性劳性损伤是真实且令人痛苦的。
+你之前学会了点击类声明旁边的 JUnit 运行图标来执行所有测试。但你将经常运行测试——每天可能要运行数百次，而手动操作是一个缓慢得多且耗费精力的过程。你应当提高效率。重复性劳损是真实且令人痛苦的。
 
 任何良好的 IDE 会在你悬停在按钮上时显示相应的快捷键。悬停在 JUnit 的“运行（run）”按钮上，你会发现你的 IDE 中 `Ctrl-Shift-R` 是合适的快捷键。也悬停在你的按钮上，看看它提供的快捷键。按下它并运行测试。再次按下。再按一次。记住它。从现在起，在你不可避免要运行数千次测试时，请使用键盘。你会变得更快，你的手腕也会感谢你的。
 
@@ -639,11 +545,8 @@ public static void assertEquals(int expected, int actual)
 这个信息丰富的视图包含了关于你测试失败执行的几条信息：
 
 - 左侧的 JUnit 面板提供了已执行测试的层级列表，它在测试类 `CreditHistory` 和测试方法名 `noCreditRatingsHasMean` 上都标记了黄色的 x。你可以点击该测试方法以集中查看其执行详情。
-
 - 右侧的 JUnit 面板直接切入主题给出了统计摘要：测试失败：1 个 / 1 个测试。这意味着 JUnit 执行了一个测试，而这唯一的那个测试失败了。
-
 - 在那个重复表述的总结下方，JUnit 显示了该测试糟糕的执行细节。失败留下了异常堆栈跟踪，它告诉你测试在到达断言语句之前就失败了。
-
 - 堆栈跟踪用红色向你“尖叫”——红色是用于警示物品的设计偏好，如错误、停止牌和有毒口红。你有一个除以零的问题。堆栈跟踪与源代码中的相应行相关，这允许你快速导航到问题代码：
 
 ```java
@@ -702,20 +605,19 @@ void withOneRatingEquivalentMean() {
 }
 ```
 
-你可能发现，从1开始的测试也能这样做？写一个只添加一个分数的测试：
-（此处省略重复内容）
-
 选择“运行测试 (Run Tests)”选项。JUnit 将执行 `src/test/java` 下的所有测试。成功！这里是通过的测试（如第14页的图所示），它要么是完美的，要么没有任何堆栈跟踪。
 
 看起来不错，对吧？感觉很好，对吧？按下 `Ctrl-Shift-R`（或你机器上的相应快捷键）再次运行测试。沉浸在光辉中。
 
 ## 让它失败
 
-（此处省略重复内容）
+由你正在测试的系统返回。`assertEquals` 的签名让顺序一目然。如果你以后忘记了，可以使用你的 IDE 向你显示：
 
+```java
+public static void assertEquals(int expected, int actual)
+```
 
-
-提高你的投资回报率 (ROI)：清理测试 • 17
+当你运行测试时，你将看到 `expected`（预期值）和 `actual`（实际值）参数的顺序有多重要。你将在第14页的“让它失败”章节中操作。请留好！
 
 （如果你想通过 JUnit 源码查看相关的执行路径，也可以点击 JUnit 显示的 `<6 internal lines>` 处。）
 
@@ -745,7 +647,7 @@ JUnit 选择抛出异常意味着测试方法中的后续代码将不再执行�
 
 只需四行代码，你的测试就已经成了一堆需要密切关注的代码：
 
-```
+```java
 ut3-credithistory/06/src/test/java/ACreditHistory.java
 @Test
 void withOneRatingHasEquivalentMean() {
@@ -768,7 +670,6 @@ void withOneRatingHasEquivalentMean() {
 - **执行 (Act)**：对系统进行操作，以创建你想要测试的行为。你的测试通过调用 `arithmeticMean` 方法对信用历史对象进行操作。
 - **断言 (Assert)**：验证系统行为是否符合你的预期。你的测试断言 `arithmeticMean` 计算是正确的。
 
-
 你的部分测试是功能性导向的，即你调用一个返回值的方法。对于这些测试，你通常可以将 AAA（安排-执行-断言）这三个步骤提炼为单行代码：
 
 ```
@@ -777,7 +678,7 @@ assertEquals(42, new Everything().ultimateAnswer());
 
 为了让你的测试符合可扫描性的至少一个方面，使用空行将它们拆分为 AAA 块：
 
-```
+```java
 ut3-credit-history-07/src/test/java/credit/CreditHistory.java
 @Test
 void withOneRatingAsEquivalentMean() {
@@ -797,7 +698,7 @@ void withOneRatingAsEquivalentMean() {
 
 通过 AAA 模式，测试变得更加清晰。
 
-```
+```java
 ut3-credit-history-08/src/test/java/ACreditHistory.java
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -807,15 +708,14 @@ class ACreditHistory {
 }
 ```
 
-
-```
+```java
 @BeforeEach
 void createInstance() {
     creditHistory = new CreditHistory();
 }
 ```
 
-```
+```java
 @Test
 void withNoRatingsHas0Mean() {
     var result = creditHistory.arithmeticMean();
@@ -823,7 +723,7 @@ void withNoRatingsHas0Mean() {
 }
 ```
 
-```
+```java
 @Test
 void withRatingHasEquivalentMean() {
     creditHistory.add(new CreditRating(780));
@@ -831,9 +731,6 @@ void withRatingHasEquivalentMean() {
     assertEquals(780, result);
 }
 ```
-
-
-
 
 我刚刚听到你说：“大不了不了。”没错，你只是删除了几个测试中微不足道的一行代码，但你实际上在源文件中增加了更多的总行数。
 
@@ -845,7 +742,9 @@ void withRatingHasEquivalentMean() {
 
 ## 消除杂质与 JUnit 5
 
-你的测试代码可能违反了长期 true Java Java惯例。类或测试方法都没有声明式修饰符。旧版本的 JUnit 要求 `public` 修饰符。在 JUnit 5 中，类和方法应该具有包 级访问权限。
+
+
+你的测试代码可能违反了长期 Java 惯例。类或测试方法都没有声明式修饰符。旧版本的 JUnit 要求 `public` 修饰符。在 JUnit 5 中，类和方法应该具有包级访问权限。
 
 省略多余的关键字又向前迈了一步，通过消除多一点杂质来更加强调测试的抽象性。你的测试正向着*文档化*的方向移动，并远离实现细节。它们描述的是行为。
 
@@ -925,15 +824,7 @@ assertEquals(800, result);
 
 ## 消除杂与 JUnit 5
 
-除了你涵盖的 ZOM 情况之外，你还可以头脑风暴边界情况和基于异常的测试。你将在后面的章节中探索这些内容。
-
-当你编写测试并继续重新访问/重读你正在测试的代码时，你会考虑到应该编写的额外测试。事实上，在你自己编写代码之初——在尝试为它编写测试之前——就思考并记录你可能需要的用例。
-
-将你想到的情况添加到测试列表中以提醒要编写。在你实现或消除它们时，将它们划掉。你可以在纸上、在记事本文件中，甚至在测试本身中作为一系列注释来这样做。（也许在 0000 用例术中，IntelliJ IDEA 和 Eclipse 等 IDE 会在视图中收集它们作为提醒。）情况在变化，所以现在还不要结束选择这些测试的努力。你可以在 Kent Beck 的开创性著作中阅读更多关于这个非常有用的工具的内容。
-
-## 消除杂与 JUnit 5
-
-你的测试代码可能违反了长期 Java 惯例。类或测试方法都没有声明式修饰符。旧版本的 JUnit 要求 `public` 修饰符。在 JUnit 5 中，类和方法应该具有包 级访问权限。
+你的测试代码可能违反了长期 Java 惯例。类或测试方法都没有声明式修饰符。旧版本的 JUnit 要求 `public` 修饰符。在 JUnit 5 中，类和方法应该具有包级访问权限。
 
 省略多余的关键字又向前迈了一步，通过消除多一点杂质来更加强调测试的抽象性。你的测试正向着*文档化*的方向移动，并远离实现细节。它们描述的是行为。
 
@@ -1032,7 +923,7 @@ assertEquals(800, result);
 - 将乘客从候机列表移动到登机列表
 - 将乘客标记为升级
 - 计算个人的平均评分
-- 当小于18岁时抛出异常
+- 当小于 18 岁时抛出异常
 
 概念也可以代表通用想法：
 
@@ -1050,21 +941,17 @@ assertEquals(800, result);
 
 简洁是好的，但代码必须清晰地传达所有上下文意图。成功需要你擅长编写清晰、简洁的代码。你将在书中看到许多示例。
 
-你可以将任何单元实现为单个方法——一个命名的代码块，它可以返回值并/或更改对象的状态。（让我们希望它只是其中之一——请在“命令查询分离”位于第180页中了解）。
+你可以将任何单元实现为单个方法——一个命名的代码块，它可以返回值并/或更改对象的状态。（让我们希望它只是其中之一——请在“命令查询分离”位于第 180 页中了解）。
 
 你也可以选择将一系列概念串联在一个较大的方法中，而不是将每个概念隔离在单独的方法中。这是你作为系统设计师所做的无数选择之一。每个设计选择都有权衡和影响，特别是在编写单元测试时。
 
 > 系统设计是开发者所做的所有选择的集合。
 
-
-
-
-
 让我们来讨论一下这些设计权衡，从是否将单元表示为单一方法的问题开始。
 
 ## 比单元稍微大一点点？
 
-根据前面对单元（unit）的定义，以下概念是否符合？
+根据前面对单元的定义，以下概念是否符合？
 
 - *为每个通过验证检查的字段返回一个错误消息列表*
 
@@ -1138,6 +1025,8 @@ public List<String> validate() {
 - *将流过滤为无效验证对象的列表*
 - *从每个（无效的）验证对象中收集错误消息*
 
+
+
 遗憾的是，它读起来大约有八个 ACC 左右，因为它的概念没有被干净地分离。理解它需要步进式的阅读。
 
 验证对象是从五个验证类中实例化的，每个类都隔离了条件判断和错误消息。这里是一个：
@@ -1169,8 +1058,8 @@ interface Validation {
 
 更新后的验证方法并不会比以前更容易测试……目前还没有这样。但你可以将其进一步分解为两个独立的概念：
 
-- *将验证对象列表传递给验证器（validator）*
-- *验证验证对象列表（使用之前描述的过滤和收集步骤）*
+- 将验证对象列表传递给验证器（`Validator`）
+- 验证验证对象列表（使用之前描述的过滤和收集步骤）
 
 你可以将验证概念移动到一个新类中，在那里它可以被其他验证关注者复用：
 
@@ -1187,7 +1076,7 @@ public class Validator {
 }
 ```
 
-## Validator 类的的一些测试：
+## Validator 类的测试
 
 ```java
 ut3-bookings/03/src/test/java/units/Validator.java
@@ -1218,7 +1107,7 @@ public class ValidatorTest {
 }
 ```
 
-Booking 类的逻辑简化：
+`Booking` 类的逻辑简化：
 
 ```
 ut3-bookings/03/src/main/java/units/Booking.java
@@ -1254,14 +1143,10 @@ public capitalizeAllWords(String sentence) {
 - 易于推导出总结该概念的方法。
 - 你可以在更大的上下文中复用它们，而不会降低清晰度。
 - 你可以一眼看出它们的实现。
-- 你可以更容易更容易将它们移动到其他地方。
+- 你可以更容易将它们移动到其他地方。
 - 你可以编写更简单、更集中的测试。继续阅读！
 
 > 1. [https://langsoft.com/2024/07/03/unit-testing-approaches/](https://langsoft.com/2024/07/03/unit-testing-approaches/) -
-
-
-
-
 
 ## 第 2 章. 测试构建模块 • 32
 
@@ -1275,7 +1160,7 @@ public capitalizeAllWords(String sentence) {
 
 `capitalize` 方法应该将传递给它的单词的首字母大写。你决定它必须将单词中的所有其他字母转换为小写。
 
-```java
+```
 ut3-units/01/src/java/units/StringUtils.java
 public class StringUtils {
     static String capitalize(String word) {
@@ -1288,7 +1173,7 @@ public class StringUtils {
 
 要进行大写处理，从一个基于 0 的测试开始。这并不意味着你的测试必须显式包含数字 0。基于 0 的测试可以包含其他形式的“无”：例如空数组或空值。针对 `capitalize` 的基于 0 的测试涉及传递一个空字符串：
 
-```java
+```
 ut3-units/01/src/test/java/units/SomeStringUtils.java
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -1306,7 +1191,7 @@ public class SomeUtils {
 
 输入空字符串，输出空字符串——简单的内容。它由于 `StringIndexOutOfBoundsException` 而失败，这是一个可以通过守护语句（guard clause）来修复的小问题。
 
-```java
+```
 ut3-units/02/src/main/java/units/StringUtils.java
 static String capitalize(String word) {
     if (word.isEmpty()) return "";
@@ -1327,7 +1212,7 @@ static String capitalize(String word) {
 
 转向针对“一个”的测试——即一个字母。当传递一个小写字母时，`capitalize` 应该返回一个大写字母：
 
-```java
+```
 ut3-units/02/src/test/java/units/SomeStringUtils.java
 @Test
 void uppcasesSingleLetter() {
@@ -1337,23 +1222,23 @@ void uppcasesSingleLetter() {
 
 然后是基于多个的测试，你向 `capitalize` 传递一组字母：
 
-```java
+```
 ut3-units/02/src/test/java/units/SomeStringUtils.java
 @Test
 void uppcasesFirstLetterOfLowerCase() {
     assertEquals("Alpha", capitalize("alpha"));
-```
+}
 ```
 
 测试最后一个细节——即剩余字母是小写的——你为该输入变体编写一个测试：
 
 ## 第 2 章. 测试构建模块 • 34
 
-```java
-utj3-units/02/src/test/java/units/SomeStringUtils.java
+```
+ut3-units/02/src/test/java/units/SomeStringUtils.java
 @Test
 void lowercasesRemainderOfLetters() {
-    assertEquals("Omega"
+    assertEquals("Omega", capitalize("OMEGA"));
 }
 ```
 
@@ -1363,13 +1248,16 @@ void lowercasesRemainderOfLetters() {
 
 不纯函数产生影响。典型的副作用：你调用一个改变包含对象的一个或多个字段的方法。`Location` 类在它的 `move` 方法中这样做：
 
-```java
-utj3-units/02/src/main/java/units/Location.java
+```
+ut3-units/02/src/main/java/units/Location.java
 import java.util.*;
+
 public class Location {
-    enum Heading (North, East, South, West)
+    enum Heading { North, East, South, West }
+
     private int x, y;
     private Heading heading;
+
     public Location(int x, int y, Heading heading) {
         this.x = x;
         this.y = y;
@@ -1396,9 +1284,10 @@ public class Location {
         Location location = (Location) o;
         return x == location.x && y == location.y && heading == location.heading;
     }
+}
 ```
 
-噢，那是一堆代码。虽然 `Location` 看起来有很多内容，但大部分是样板代码。`Location` 类应该是 Java record 的类型，但由于不幸的情况：它创建了可变对象。当客户端代码执行 `move` 方法时，`Location` 对象的 `x` 和 `y` 字段会发生变异（改变）。这需要大量的测试。虽然比 `Credit` 类要长，但远未达到系统的规模。让我们看看测试工作涉及什么。（*注：原文存在大量重复的 OCR 错误文本，此处已根据逻辑进行了清理*）
+噢，那是一堆代码。虽然 `Location` 看起来有很多内容，但大部分是样板代码。`Location` 类应该是 Java record 的类型，但由于不幸的情况：它创建了可变对象。当客户端代码执行 `move` 方法时，`Location` 对象的 `x` 和 `y` 字段会发生变异（改变）。这需要大量的测试。虽然比 `Credit` 类要长，但远未达到系统的规模。让我们看看测试工作涉及什么。
 
 > 你获得了交付的信心。
 
@@ -1408,40 +1297,39 @@ public class Location {
 
 第一个测试创建了一个位置并告诉它移动。它最后断言 `y` 坐标已正确改变（因为你正在向北移动），但 `x` 或方向都没有改变。
 
-```java
-utj3-units/02/src/test/java/units/ALocation.java
+```
+ut3-units/02/src/test/java/units/ALocation.java
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static units.Heading.North;
+
 public class ALocation {
-  @Test
-  void increasesCoordinateWhenMovingNorth() {
-    var location = new Location(0, 0, North);
-
-    location.move(42);
-
-    assertEquals(42, location.getX());
-    assertEquals(42, location.getY());
-    assertEquals(North, location.getHeading());
-  }
+    @Test
+    void increasesCoordinateWhenMovingNorth() {
+        var location = new Location(0, 0, North);
+        location.move(42);
+        assertEquals(42, location.getX());
+        assertEquals(42, location.getY());
+        assertEquals(North, location.getHeading());
+    }
 }
 ```
 
 然后，专注于测试可能出错的地方：`move`。
 
-```java
-utj3-units/03/src/test/java/units/ALocation.java
+```
+ut3-units/03/src/test/java/units/ALocation.java
 @Test
 void increasesCoordinateWhenMovingNorth() {
-  var location = new Location(0, 0, North);
-  location.move(42);
-  assertEquals(new Location(0, 42, North), location);
+    var location = new Location(0, 0, North);
+    location.move(42);
+    assertEquals(new Location(0, 42, North), location);
 }
 ```
 
-少一个测试语句意味着过度的认知负载。`move` 方法是一个 `void` 方法；换句话说，它没有返回值。它还是一个命令（或动作方法）——它的目的是告诉对象去做某事。命令方法不能返回任何东西，因此它必须通过产生某种副作用来具有意义。它可以改变任何传递给它的对象。
 
+
+少一个测试语句意味着过度的认知负载。`move` 方法是一个 `void` 方法；换句话说，它没有返回值。它还是一个命令（或动作方法）——它的目的是告诉对象去做某事。命令方法不能返回任何东西，因此它必须通过产生某种副作用来具有意义。它可以改变任何传递给它的对象。
 
 参数，它可以更改对象的字段，也可以与影响行为的外部实体交互。或者，它可以与另一个执行三种操作之一的方法交互。
 
@@ -1449,20 +1337,22 @@ void increasesCoordinateWhenMovingNorth() {
 
 四种情况，四个测试。这里是剩下的三个：
 
-```
-ut3-units/03/src/test/java/units/Alocation.java
+```java
+// ut3-units/03/src/test/java/units/Alocation.java
 @Test
 void increasesXCoordinateWhenMovingEast() {
     var location = new Location(-2, 0, East);
     location.move(5);
     assertEquals(new Location(3, 0, East), location);
 }
+
 @Test
 void decreasesCoordinateWhenMovingSouth() {
     var location = new Location(-2, 5, South);
     location.move(9);
     assertEquals(new Location(-2, -4, South), location);
 }
+
 @Test
 void decreasesCoordinateWhenMovingWest() {
     var location = new Location(-2, 5, West);
@@ -1478,7 +1368,6 @@ void decreasesCoordinateWhenMovingWest() {
 那么，让我们考虑测试 `Location` 类的另外两种可能性：
 
 - 1. `switch` 语句暗示 `heading` 可能包含一个在 `case` 语句未表示的值。但在这种情况下，`heading` 是一个具有四个值的枚举，而你已经对这四个值都编写了测试。（否则，编译器也会给你发出警告。）
-
 - 2. `heading` 参数可能为 `null`。你可以写一个测试，显示如果带有 `null` 头部调用 `move`，则什么都不会发生。然而，在更大的应用程序中，没有头部的概念可能是没有意义的。
 
 更好的解决方案：
@@ -1505,8 +1394,8 @@ void decreasesCoordinateWhenMovingWest() {
 
 你对 `Location` 的测试并不难写，那是因为它的代码内部没有多少纠缠。尽管如此，你还会想要看看函数版本。在 Java 中，`records` 提供了最好的起点——根据定义，它们创建了不可变对象——即在实例化后状态不会改变的对象。当你不需要考虑状态变化的复杂方式时，推理起来要容易得多。
 
-```
-ut3-units/src/main/java/units/FixedLocation.java
+```java
+// ut3-units/src/main/java/units/FixedLocation.java
 public record FixedLocation(int x, int y, Heading heading) {
     public FixedLocation(int distance) {
         switch (heading) {
@@ -1521,8 +1410,8 @@ public record FixedLocation(int x, int y, Heading heading) {
 
 天圣手榴！使用 Java `records`，所有其他的模板代码都被扫清了。你自动获得了 `equals`、`hashCode`、实用的 `toString`、构造函数和访问器。代码缩小到其有状态尺寸的一小部分。看看可比较的测试是什么样的。
 
-```
-ut3-units/src/test/java/units/AFixedLocation.java
+```java
+// ut3-units/src/test/java/units/AFixedLocation.java
 public class AFixedLocation {
     @Test
     void increasesYCoordinateWhenMovingNorth() {
@@ -1530,12 +1419,14 @@ public class AFixedLocation {
         var mLocation = location.move(42);
         assertEquals(new FixedLocation(0, 42, North), mLocation);
     }
+
     @Test
     void increasesXCoordinateWhenMovingEast() {
         var location = new FixedLocation(-2, 0, East);
         var mLocation = location.move(5);
         assertEquals(new FixedLocation(3, 0, East), mLocation);
     }
+
     @Test
     void decreasesYCoordinateWhenMovingSouth() {
         var location = new FixedLocation(-2, 5, South);
@@ -1547,7 +1438,7 @@ public class AFixedLocation {
 
 ## 第 2 章. 测试构建块 • 40
 
-```
+```java
 @Test
 void decreasesCoordinateMovingWest() {
     var location = new FixedLocation(-2, 5, West);
@@ -1558,52 +1449,48 @@ void decreasesCoordinateMovingWest() {
 
 嗯。并没有变得更好。但由于 `FixedLocation` 的函数式性质，你可以内联所有局部变量以创建单语句断言：
 
-```
-ut3-units/src/test/java/units/AFixedLocation.java
+```java
+// ut3-units/src/test/java/units/AFixedLocation.java
 public class AFixedLocation {
-  @Test
-  void increasesCoordinateMovingNorth() {
-    assertEquals(new FixedLocation(0, 42, North),
-        new FixedLocation(0, 0, North).move(42));
-  }
+    @Test
+    void increasesCoordinateMovingNorth() {
+        assertEquals(new FixedLocation(0, 42, North),
+            new FixedLocation(0, 0, North).move(42));
+    }
 
-  @Test
-  void increasesCoordinateMovingEast() {
-    assertEquals(new FixedLocation(3, 0, East),
-        new FixedLocation(-2, 0, East).move(5));
-  }
+    @Test
+    void increasesCoordinateMovingEast() {
+        assertEquals(new FixedLocation(3, 0, East),
+            new FixedLocation(-2, 0, East).move(5));
+    }
 
-  @Test
-  void decreasesCoordinateMovingSouth() {
-    assertEquals(new FixedLocation(-2, -4, South),
-        new FixedLocation(-2, 5, South).move(9));
-  }
+    @Test
+    void decreasesCoordinateMovingSouth() {
+        assertEquals(new FixedLocation(-2, -4, South),
+            new FixedLocation(-2, 5, South).move(9));
+    }
 
-  @Test
-  void decreasesCoordinateMovingWest() {
-    assertEquals(new FixedLocation(-14, 5, West),
-        new FixedLocation(-2, 5, West).move(12));
-  }
+    @Test
+    void decreasesCoordinateMovingWest() {
+        assertEquals(new FixedLocation(-14, 5, West),
+            new FixedLocation(-2, 5, West).move(12));
+    }
 }
 ```
 
-
-
 现在就开始测试吧，不要让“显而易见”的代码沉没在“我不确定到底发生了什么！”的海洋中。
 
-ZOOM 中的 Z 提供了一个很好的起点，并产生了一个守守性测试，它将永远地保护你：
+ZOOM 中的 Z 提供了一个很好的起点，并产生了一个守卫性测试，它将永远地保护你：
 
-```ut3-units/06/src/test/java/units/ADestinationList.java
+```java
+// ut3-units/06/src/test/java/units/ADestinationList.java
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static units.FixedLocation.Heading.Heading;
 import static units.FixedLocation.Heading.North;
-```
 
 class ADestinationList {
     private DestinationList list;
@@ -1620,16 +1507,17 @@ class ADestinationList {
 }
 ```
 
-你真的需要一个测试和多个测试吗？你代码中唯一有趣的行为就是对 ArrayList 的 `add` 方法的调用：
+你真的需要一个测试和多个测试吗？你代码中唯一有趣的行为就是对 `ArrayList` 的 `add` 方法的调用：
 
-```ut3-units/06/src/main/java/units/ADestinationList.java
+```java
+// ut3-units/06/src/main/java/units/ADestinationList.java
 locations.add(location);
 ```
 
-你信任 ArrayList 及其支持一个位置或大量位置的能力。你的代码中（目前）在只涉及一个位置时没有做任何操作。直接跳转到添加多个位置的测试：
+你信任 `ArrayList` 及其支持一个位置或大量位置的能力。你的代码中（目前）在只涉及一个位置时没有做任何操作。直接跳转到添加多个位置的测试：
 
-```
-ut3-units/06/src/test/java/units/ADestinationList.java
+```java
+// ut3-units/06/src/test/java/units/ADestinationList.java
 @Test
 void allowsAddingLocations() {
     list.add(new FixedLocation(1, 2, North));
@@ -1652,48 +1540,45 @@ void allowsAddingLocations() {
 
 第一个块是安排（arrange）步骤还是执行（act）步骤？测试名称说明了你的测试试图验证的行为——添加位置的动作。第一个块中的两个语句触发了列表上的 `add` 行为，这意味着它们代表了你的执行步骤。这是一个细微的区别。某些开发者可能认为第一个块是安排步骤，也许那样没关系，但这样做的话就没有执行步骤了。
 
-冗余的 `FixedLocation` 实例化可能会迫使你引入几个局部变量来帮助理清测试。创建此类对象可以更更容易地将你的输入与预期结果联系起来：
+冗余的 `FixedLocation` 实例化可能会迫使你引入几个局部变量来帮助理清测试。创建此类对象可以更容易地将你的输入与预期结果联系起来：
 
-```
-ut3-units/07/src/test/java/units/ADestinationList.java
+```java
+// ut3-units/07/src/test/java/units/ADestinationList.java
 @Test
 void allowsAddingLocations() {
-  var locationOne = new FixedLocation(1, 2, North);
-  var locationTwo = new FixedLocation(1, 3, East);
+    var locationOne = new FixedLocation(1, 2, North);
+    var locationTwo = new FixedLocation(1, 3, East);
 
-  list.add(locationOne);
-  list.add(locationTwo);
+    list.add(locationOne);
+    list.add(locationTwo);
 
-  assertEquals(List.of(locationOne, locationTwo), list.getLocations());
+    assertEquals(List.of(locationOne, locationTwo), list.getLocations());
 }
 ```
 
-当大多数如果不是全部测试都它们时，测试对象特别有用。你可以将它们声明为测试类常量，并使用更具记忆点、符合领域的名称：
+当大多数如果不是全部测试都使用它们时，测试对象特别有用。你可以将它们声明为测试类常量，并使用更具记忆点、符合领域的名称：
 
-```
-ut3-units/06/src/test/java/units/ADestinationList.java
+```java
+// ut3-units/06/src/test/java/units/ADestinationList.java
 static final FixedLocation ORIGIN = new FixedLocation(0, East);
 static final FixedLocation NORTHE = new FixedLocation(3, 3, North);
-```
 
-```
 @Test
 void allowsAddingLocations() {
-  list.add(ORIGIN);
-  list.add(NORTHE);
-
-  assertEquals(List.of(ORIGIN, NORTHE), list.getLocations());
+    list.add(ORIGIN);
+    list.add(NORTHE);
+    assertEquals(List.of(ORIGIN, NORTHE), list.getLocations());
 }
 ```
 
 ## 第 2 章.测试构建模块
 
-此类测试对象也有助于淡化无关的细节。在你的 `allowsAddingLocations` 测试中，东北部位置位于 (3, 3) 且面向北是无关的。重要的是 `NORTHEAST` 引用的是一个与 `ORIGIN`不同的对象。
+此类测试对象也有助于淡化无关的细节。在你的 `allowsAddingLocations` 测试中，东北部位置位于 (3, 3) 且面向北是无关的。重要的是 `NORTHEAST` 引用的是一个与 `ORIGIN` 不同的对象。
 
 虽然有用，但创建示例对象可能是多余的。通常通过在安排和断言语句之间来回查看来进行肉眼比较更为简单。只要测试意图保持清晰，触发式测试可以加快编写和理解的效率。
 
-```
-ut3-units/09/src/test/units/ADestList.java
+```java
+// ut3-units/09/src/test/units/ADestList.java
 @Test
 void doesNotAddLocationAlreadyContained() {
     list.add(new FixedLocation(0, 0, East));
@@ -1714,8 +1599,8 @@ void doesNotAddLocationAlreadyContained() {
 
 常见的行为是确保集合不接受重复元素。这里是 `DestinationList` 引入此类更改：
 
-```
-ut3-units/09/src/main/units/DestinationList.java
+```java
+// ut3-units/09/src/main/units/DestinationList.java
 public void add(FixedLocation location) {
     if (locations.contains(location)) return;
     locations.add(location);
@@ -1724,22 +1609,13 @@ public void add(FixedLocation location) {
 
 你已经有一个允许添加对象的测试了。这里是再次：
 
-```
-ut3-units/09/src/test/units/ADestinationList.java
-@Test
-void allowsAddingLocations() {
-    list.add(ORIGIN);
-    list.add(NORTHE);
 
-    assertEquals(List.of(ORIGIN, NORTHE), list.getLocations());
-}
-```
 
 ## 更新列表中匹配谓词的项目
 
 `locationsWithHeading` 方法的任务是遍历所有位置，并更新那些头部与传入的标题匹配的位置。映射坐标（因为 `FixedLocation` 是不可变的）。
 
-```
+```java
 ut3-units/09/src/main/units/DestinationList.java
 public void locationsWithHeading(Heading heading, int x, int y) {
     this.locations = locations.stream()
@@ -1749,9 +1625,6 @@ public void locationsWithHeading(Heading heading, int x, int y) {
         .toList();
 }
 ```
-
-
-
 
 ## 测试常见的代码场景 • 47
 
@@ -1799,7 +1672,7 @@ double distanceFrom(int x, int y) {
 }
 ```
 
-在 `FixedLocation` 的语文中，`distanceBetween` 方法可以稍微改进。它已被重命名为 `distanceFrom`（导出名称的小技巧：根据语境说出方法的用法，例如，“我们将其用作 *点到固定位置的距离*。”）
+在 `FixedLocation` 的语境中，`distanceBetween` 方法可以稍微改进。它已被重命名为 `distanceFrom`（导出名称的小技巧：根据语境说出方法的用法，例如，“我们将其用作 *点到固定位置的距离*。”）
 
 现在，你可以快速编写许多针对性强的测试，穷尽你关于如何测试距离计算的想法：
 
@@ -1879,7 +1752,7 @@ public int arithmeticMean() {
 ```java
 ut3-credit-history/11/src/main/java/credit/CreditHistory.java
 public int arithmeticMean() {
-    if (ratings.isEmpty()) throw newStateException();
+    if (ratings.isEmpty()) throw new StateException();
 
     var total = ratings.stream().mapToInt(CreditRating::rating).sum();
     return total / ratings.size();
@@ -1896,21 +1769,12 @@ void noCreditRatingsThrows() {
 }
 ```
 
-
-
-
-
--   合规性（Conformance）——值是否符合预期的格式，例如电子邮件地址或文件名？当传入无效格式时，方法会执行什么？字符串参数是否支持大写或混合大小写？
-
--   排序（Ordering）——值集是否根据需要是有序或无序的？如果发生不符合时间顺序的情况会怎样？例如，HTTP 服务器在 POST 之后返回 OPTIONS 响应，而不是之前？
-
--   范围（Range）——值是否在合理的最小值和最大值之间？任何计算会导致数值溢出吗？
-
--   引用（Reference）——对象是否处于某种特定状态？如果处于意外状态会发生什么？如果代码引用了不受其直接控制的内容会怎样？
-
--   基数（Cardinality）——值是否存在精确的？你是否已经通过 ZOM 涵盖了所有情况？它能处理海量数据吗？是否存在“过多”的概念？如果一个不允许重复的列表中出现了重复项（例如教级学生名单）会怎样？
-
--   时间（绝对时间和相对时间）——一切是否都按顺序发生？是否在正确的时间点发生？是否及时？
+- **合规性（Conformance）**——值是否符合预期的格式，例如电子邮件地址或文件名？当传入无效格式时，方法会执行什么？字符串参数是否支持大写或混合大小写？
+- **排序（Ordering）**——值集是否根据需要是有序或无序的？如果发生不符合时间顺序的情况会怎样？例如，HTTP 服务器在 POST 之后返回 OPTIONS 响应，而不是之前？
+- **范围（Range）**——值是否在合理的最小值和最大值之间？任何计算会导致数值溢出吗？
+- **引用（Reference）**——对象是否处于某种特定状态？如果处于意外状态会发生什么？如果代码引用了不受其直接控制的内容会怎样？
+- **基数（Cardinality）**——值是否存在精确的？你是否已经通过 ZOM 涵盖了所有情况？它能处理海量数据吗？是否存在“过多”的概念？如果一个不允许重复的列表中出现了重复项（例如教级学生名单）会怎样？
+- **时间（绝对时间和相对时间）**——一切是否都按顺序发生？是否在正确的时间点发生？是否及时？
 
 你在职业生涯中编写的许多缺陷将涉及类似的边界情况，因此你将通过测试充分覆盖它们。
 
@@ -1918,7 +1782,7 @@ void noCreditRatingsThrows() {
 
 你已经完成了对许多常见单元场景的测试编写工作。当然，你自己的“真实”代码测试将会不同，甚至更加复杂。但是，你为代码编写测试的方法将与你所学的方法相似。
 
-你尝试测试的代码很大程度上将依赖于其他不稳定、缓慢甚至不完全的类。在下一章中，你将学习如何使用测试双体（test doubles，口俗称为 mock 对象或 mocks）来打破这些依赖关系，以便你进行测试。
+你尝试测试的代码很大程度上将依赖于其他不稳定、缓慢甚至不完全的类。在下一章中，你将学习如何使用测试双体（test doubles，俗称 mock 对象或 mocks）来打破这些依赖关系，以便你进行测试。
 
 ## 第 3 章
 
@@ -1959,7 +1823,7 @@ public class AddressRetriever {
 果然，`HttpImpl` 类与 Apache 的 HttpComponents 交互以执行 REST 调用：
 
 ```java
-ut3-mock-objects/01/src/main/java/com/langsoft/util/Httpimpl.java
+ut3-mock-objects/01/src/main/java/com/langsoft/util/HttpImpl.java
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -1982,8 +1846,9 @@ public class HttpImpl implements Http {
 ## 使用存桩（Stubs）替换麻烦行为
 
 `HttpImpl` 实现了 HTTP 接口：
+
 ```java
-jut3-mock-objects/01/src/main/java/com/langsoft/util/Http.java
+ut3-mock-objects/01/src/main/java/com/langsoft/util/Http.java
 public interface Http {
     String get(String url);
 }
@@ -1992,12 +1857,13 @@ public interface Http {
 你会信任 `HttpImpl`，因为你需要在 `/src/test/java/com/langsoft/util` 中为它编写集成测试。你也知道 `HttpImpl` 通过 HTTP 与外部服务交互——这是单元测试的顾忌。你为 `AddressRetriever` 编写的任何 `retrieve` 测试最终都会触发实时调用。这带来了至少两个影响：
 
 - 实时调用，你无法保证 Nominatim HTTP API 是否可用或是否返回一致的结果。这超出了你的控制。
-
-一个 API 的版本将让你能够控制可用性。
+- 一个 API 的版本将让你能够控制可用性。
 
 ## 使用存桩替换麻烦行为
 
 挑战在于 `HttpImpl` 中调用真实端点的代码。为了解决这个问题，你的测试可以使用简化的版本来替换真实代码。存桩（stub）是一个双体，它用返回硬编码值的方法替换真实行为。函数式接口：
+
+
 
 ```java
 ut3-mock-objects/02/src/test/java/com/langsoft/domain/AddressRetriever.java
@@ -2038,11 +1904,7 @@ public class AddressRetriever {
 
 `retrieve` 中的 `http.get(url)` 调用（高亮显示处）不再创建 HTTP 的私有实例。如果它引用了 `http` 字段，该字段指向在测试上下文中执行的存桩，这样你就可以编写测试了。
 
-
-
-
-
-## 用 桩 替换棘手行为 • 57
+## 用桩替换棘手行为 • 57
 
 ```java
 class AnAddressRetriever {
@@ -2072,11 +1934,11 @@ class AnAddressRetriever {
 
 当测试运行运行时：
 
-- 它创建了一个 AddressRetriever，并传入了 HTTP stub 实例。
-- 执行时，`retrieve` 方法使用传递给方法的参数格式化 URL。然后，它调用了 http 上的方法。
+- 它创建了一个 `AddressRetriever`，并传入了 HTTP stub 实例。
+- 执行时，`retrieve` 方法使用传递给方法的参数格式化 URL。然后，它调用了 `http` 上的方法。
 - 该 stub 返回了你在测试中硬编码的 JSON 字符串。
-- `retrieve` 方法的其余部分解析硬编码的 JSON 字符串并据此填充一个 Address 对象。
-- 测试验证了返回的 Address 对象的元素。
+- `retrieve` 方法的其余部分解析硬编码的 JSON 字符串并据此填充一个 `Address` 对象。
+- 测试验证了返回的 `Address` 对象的元素。
 
 `retrieve` 方法并不关心 `http` 指向的是 stub 还是真实实现。在这个示例中，stub 为了为了一次测试代表了一个“单个测试用例”。添加另一个测试，创建一个完全不同的 stub：
 
@@ -2098,7 +1960,7 @@ void throwsWhenNotCountryCode() {
 
 ## 修改你的设计以支持测试
 
-你修改了 AddressRetriever 的设计。之前，它在 `retrieve` 方法中创建一个 `HttpImpl` 实例作为一个私有细节。现在，使用 AddressRetriever 的客户端必须向其构造函数传递一个派生的 HTTP 对象（或使用依赖注入技术）：
+你修改了 `AddressRetriever` 的设计。之前，它在 `retrieve` 方法中创建一个 `HttpImpl` 实例作为一个私有细节。现在，使用 `AddressRetriever` 的客户端必须向其构造函数传递一个派生的 `HTTP` 对象（或使用依赖注入技术）：
 
 ```java
 var retriever = new AddressRetriever(new HttpImpl());
@@ -2110,9 +1972,9 @@ var retriever = new AddressRetriever(new HttpImpl());
 
 ## 为你的 Stub 添加智能性：验证参数
 
-无论传递给 get 的纬度/经度是什么，你的 HTTP stub 总是返回硬编码的 JSON 字符串。这是测试中的一个小小漏洞。如果 AddressRetriever 未能正确传递参数，你就拥有了一个缺陷。
+无论传递给 `get` 的纬度/经度是什么，你的 HTTP stub 总是返回硬编码的 JSON 字符串。这是测试中的一个小小漏洞。如果 `AddressRetriever` 未能正确传递参数，你就拥有了一个缺陷。
 
-你并没有在执行 HttpImpl 的真实行为（它已经有测试了）。你是在根据 HttpImpl 可能会抛出的返回值来执行 `retrieve` 代码的其余部分。唯一需要验证的是 `retrieve` 是否正确与 HttpImpl 交互。
+你并没有在执行 `HttpImpl` 的真实行为（它已经有测试了）。你是在根据 `HttpImpl` 可能会抛出的返回值来执行 `retrieve` 代码的其余部分。唯一需要验证的是 `retrieve` 是否正确与 `HttpImpl` 交互。
 
 作为一个解决方案的快速尝试，在 stub 中添加一个守护语句来验证传递的 URL。如果它不包含预期的参数字符串，则在该处失败测试：
 
@@ -2127,6 +1989,7 @@ void answersAppropriateAddressForValidCoordinates() {
 ```
 
 这个 stub 有了一点智能……意味着它不再是一个 stub 了。它更像是一个 mock（模拟）。mock 和 stub 一样，提供测试特定的行为。它还可以像这个示例一样进行自验证，即通过确保与协作者（在这里是 HTTP 实现）发生了预期的交互。
+
 智能 stub 付出了代价——现在由你的测试买单。你之前描述的那个失败了吗？
 
 ```java
@@ -2191,18 +2054,15 @@ class AddressRetriever {
 
 如果 Mockito mock 的期望满足，测试将通过——如果生产代码按预期调用了 `http.get(url)`，mock 返回硬编码的 JSON 字符串。
 
-
-
-
 `when(...).thenReturn(...)` 模式是使用 Mockito 设置 mock 的多种方法之一，但它可能是最容易理解和编写的。它将设置 mock 的工作简化为了本质上的一行代码，让阅读代码的人能立即理解其意图。
 
 ## 使用 Mockito 注入 Mock
 
 构造函数注入可能要求你更改类的接口。依赖注入（DI）工具（如 Spring DI、Google Guice、PicoContainer）可以消除这种更改的需求。你也可以使用 Mockito，它提供了名义上的内置 DI 能力。它没有另外两个工具那么复杂，但可能它就是你所需要的。要使用 Mockito 的 DI：
 
-- * 在测试类上标注 `@ExtendWith(MockitoExtension.class)`。
-- * 为字段标注 `@Mock`，Mockito 会将其初始化为 mock 对象。
-- * 为检索器字段（retriever）标注 `@InjectMocks`，Mockito 会创建 retriever 的实例并将 `@Mock` 字段注入其中。
+- 在测试类上标注 `@ExtendWith(MockitoExtension.class)`。
+- 为字段标注 `@Mock`，Mockito 会将其初始化为 mock 对象。
+- 为检索器字段（retriever）标注 `@InjectMocks`，Mockito 会创建 retriever 的实例并将 `@Mock` 字段注入其中。
 
 ```java
 ut3-mock-objects/src/test/java/com/langsoft/domain/AddressRetriever.java
@@ -2228,7 +2088,7 @@ class AddressRetriever {
 }
 ```
 
-设置 mock 对象时，Mockito 首先寻找合适的构造函数——在这种情况下是接收 HTTP 实例。如果没有找到，它会寻找合适的 setter 方法，最后寻找匹配类型的字段。要使用此功能，删除 `AddressRetriever` 的构造函数并初始化 `http` 字段：
+设置 mock 对象时，Mockito 首先寻找合适的构造函数——在这种情况下是接收 `HTTP` 实例。如果没有找到，它会寻找合适的 setter 方法，最后寻找匹配类型的字段。要使用此功能，删除 `AddressRetriever` 的构造函数并初始化 `http` 字段：
 
 ```java
 ut3-mock-objects/07/main/java/langsoft/domain/AddressRetriever.java
@@ -2250,6 +2110,8 @@ public class AddressRetriever {
 ## 验证方法是否被调用……或没有
 
 你可能想验证某个方法是否以正确的参数被调用。这种需求的典型场景是你调用一个有副作用但没有返回值的方法。Mockito 帮助你验证该方法是否被调用。更新 `AddressRetriever`，当返回的国家代码不是美国时向 `Auditor` 实例添加审计信息：
+
+
 
 ```java
 ut3-mock-objects/08/main/java/langsoft/domain/AddressRetriever.java
@@ -2297,7 +2159,7 @@ void auditsWhenNonUSAddressRetrieved() {
 
 注意 `verify` 和 `when` 放置的区别：
 
-```java
+```
 verify(someObject).method();
 when(someObject.method()).thenReturn(...);
 ```
@@ -2315,7 +2177,7 @@ void doesNotOccurWhenAddressRetrieved() {
 
 ## 测试异常处理
 
-```java
+```
 when(http.get(anyString())).thenReturn("{\"address\":{\"country_code\":\"us\"}");
 retriever.retrieve(1.0, -1.0);
 verify(auditor, never()).audit(any());
@@ -2327,12 +2189,9 @@ verify(auditor, never()).audit(any());
 
 异常处理往往是事后考虑的。快乐路径是大多数开发者脑海中的第一件事；目前 `AddressRetriever` 处理可能出现的错误。你将在第112页学习预期异常，使用 Mockito 来抛出异常：
 
-```java
+```
 when(http.get(anyString())).thenThrow(RuntimeException.class);
 ```
-
-
-
 
 ## 重要测试双桩技巧汇总 • 67
 
@@ -2347,13 +2206,21 @@ when(http.get(anyString())).thenThrow(RuntimeException.class);
 # 重要测试双桩技巧汇总
 
 - 一个良好的基于 mock 的测试包含三行：一行带有高度可读存根声明的安排（arrange）步骤，随后是一行的执行（act）和断言（assert）步骤。这样任何人都可以快速阅读、理解并信任该测试。
+
 - 在回答 `answersAppropriateAddressForValidCoordinates` 时，预期参数字符串 "lat=38.000000&lon=104.000000" 与 act 参数 38.0 和 -104.0 明确对应。有时在安排和断言之间建立关联并不容易，但它能让开发者无需翻找就能理解代码。如果没有这种关联，使用 mock 的测试可能难以追踪。
+
 - Mock 替代了真实行为。问问自己是否在安全地使用它们。你的 mock 模拟了生产代码的工作方式吗？生产代码是否会返回你没有考虑到的其他格式？它会抛出异常吗？它会返回 null 吗？你需要为这些情况编写不同的测试。
+
 - 你的测试是触发了 mock 使用，还是运行了生产代码？通过关闭 mock 并让你的代码与生产类交互来看看会发生什么（这可能只是测试运行稍微慢了一点）。
+
 - 尝试从生产代码中临时抛出一个运行时异常。如果你的测试因此抛出“炸弹”，你就知道你击中了生产代码。（别忘了不小心将其推送到生产环境！）
+
 - 使用你已知**不是生产调用会返回的内容**的测试数据。你的测试为经纬度传递了整洁的整数。你也知道 Anywhere 并不是科罗拉多州的一个真实城市。如果你使用真实的 `httpclient` 类，你的测试预期将会失败。
+
 - 你正在 mock 的代码被测试双桩取代了，没有被测试。mock 代表了测试覆盖率的缺口。确保你有一个适当的高层级测试（可能是集成测试）来演示真实类的端到端使用。
+
 - 使用 DI 框架会显著减慢你的测试运行。考虑手动注入你的依赖项——事实证明这相当容易。
+
 - 当使用 DI 框架时，优先通过真实的、暴露的接口点（通常是构造函数）进行注入。过度聪明会产生复杂性和轻视。
 
 > mock 在单元测试覆盖率中留下了一个漏洞。编写集成测试来覆盖这些漏洞。
@@ -2363,6 +2230,7 @@ when(http.get(anyString())).thenThrow(RuntimeException.class);
 一些避免策略：
 
 - 与其让类依赖于持久层，不如将责任推出去。让客户端获取相关数据，然后将其注入。
+
 - 协作类没有麻烦的依赖，让你的测试与它们的真实代码交互而不是 mock 它们。
 
 Mock 是极好的工具，但它们也会带来巨大的头疼问题。小心。
@@ -2374,7 +2242,9 @@ Mock 是极好的工具，但它们也会带来巨大的头疼问题。小心。
 你还学习了 Mockito 的核心功能，但它还能做更多：
 
 - 验证方法是否按顺序被调用
+
 - 捕获并对传递给 mock 方法的参数进行言
+
 - 对方法进行监视（Spy），结果会导致真实方法被调用
 
 现在你已经掌握了足够的单元测试基础知识以维持生存，现在是时候探索一些更宏观的单元测试主题了：代码覆盖率、集成测试以及针对多线程代码的测试。
@@ -2388,7 +2258,9 @@ Mock 是极好的工具，但它们也会带来巨大的头疼问题。小心。
 在本章中，你将回顾几个开始跳出“做单元测试”范围的主题：
 
 - 代码覆盖率以及它如何提供帮助（或损害）
+
 - 为多线程代码编写测试的挑战
+
 - 编写集成测试
 
 ## 使用代码覆盖率提高单元测试技能
@@ -2462,13 +2334,10 @@ void doesNotIncrementStrikesWhenTwo() {
 
 要确定代码是否一直需要或使用几乎是不可能的。“全死”代码（与大部分死代码相比，后者可能被使用）
 
-
-
-
-
 ## 第 4 章 扩展你的测试视野 • 74
 
 ```java
+ut3-coverage/01/main/util/Batter.java
 package util;
 
 public class Batter {
@@ -2570,9 +2439,13 @@ void whenStruckOut() {
 }
 ```
 
+
+
+# IDEA 支持分支覆盖率指标
+
 IDEA 支持分支覆盖率指标，但默认是关闭的。开启并运行 `ABatter` 中的所有测试。你的覆盖率摘要现在包含一列“分支覆盖率”：
 
-| 元素 | 类 | 方法 方法 | 行 | 分支支 |
+| 元素 | 类 | 方法 | 行 | 分支 |
 |---|---|---|---|---|
 | Batter | 100% (1/7) | 71% (5/7) | 75% (6/8) | 50% (4/8) |
 
@@ -2603,14 +2476,9 @@ IDEA 支持分支覆盖率指标，但默认是关闭的。开启并运行 `ABat
 
 ## 多少覆盖率才足够？
 
-（等待，提供的文本似乎在 OCR 中重复或合并了两个不同的部分。根据提供片段的逻辑流，我将提供所后半部分的连贯版本。）
-
-*注：提供的第 95-97 页 OCR 文本似乎包含两个不同的版本或草稿，它们重叠或需要大量合并。我已经清理了源文本中最符合逻辑叙述流。*
-
 ## 代码覆盖率的价值
 
-如果你在编写相应代码之后编写测试，你会错过许多测试用例，直到你改进
-
+如果你在编写相应代码之后编写测试，你会错过许多测试用例，直到你改进。
 
 尝试 TDD（测试驱动开发）并为所有单元行为先编写测试，随着时间的推移，你仍然会发现自己一直在偷偷溜入未经测试的逻辑。
 
@@ -2618,28 +2486,28 @@ IDEA 支持分支覆盖率指标，但默认是关闭的。开启并运行 `ABat
 
 > 使用代码覆盖率工具帮助你理解代码在哪些地方缺乏覆盖，或者你团队的趋势是否正在下降。
 
-尽力避免关于代码覆盖率指标的争论，并说服你的领导该指标并不适用于他们。如果将其将其用于教育目的以外的任何地方，最终都会产生问题。
+尽力避免关于代码覆盖率指标的争论，并说服你的领导该指标并不适用于他们。如果将其用于教育目的以外的任何地方，最终都会产生问题。
 
 ## 测试多线程代码
 
 编写按预期运行的代码已经不容易了，这是编写单元测试的原因之一。编写能够正常运行的并发代码困难得多，而验证它是否足够安全可以发布更是困难。
 
-从某种意义上说，测试使用并发处理的应用代码在技术上超出了单元测试的范畴。它更应该被归类为集成测试。你正在验证是否可以将特定特定的逻辑概念与执行该部分的能力相结合。
+从某种意义上说，测试使用并发处理的应用代码在技术上超出了单元测试的范畴。它更应该被归类为集成测试。你正在验证是否可以将特定的逻辑概念与执行该部分的能力相结合。
 
 线程代码的测试通常较慢，因为你必须扩大执行时间范围，以确保没有并发问题。线程缺陷有时会悄悄潜伏，在你认为已经把它们消灭干净很久后才显现。
 
-在 Java 中处理多线程的方法有很多，同样，你的实现可能出错的方法也许多：死锁、竞态条件、活锁、饥饿和线程干扰，这仅是其中几个。可以写一本书（或至少几章）来涵盖如何测试和纠正所有这些策略。我不允许写这么多纸，所以你只会看到一个突出几个关键想法的简短示例。
+在 Java 中处理多线程的方法有很多，同样，你的实现可能出错的方法也很多：死锁、竞态条件、活锁、饥饿和线程干扰，这仅是其中几个。可以写一本书（或至少几章）来涵盖如何测试和纠正所有这些策略。我不允许写这么多纸，所以你只会看到一个突出几个关键想法的简短示例。
 
 ## 测试多线程代码的技巧
 
-这里是设计和分析多线程代码的技巧列表，以尽可能的减少并发问题：
+这里是设计和分析多线程代码的技巧列表，以尽可能地减少并发问题：
 
 - 最小化线程控制与应用代码之间的重叠。重构你的设计，以便你可以在没有线程的情况下对大部分应用代码进行单元测试。针对剩余的少部分代码编写专注于线程的测试。
 - 信任他人的工作。Java 在 `java.util.concurrent` 中包含了 Doug Lea 的系列并发工具类。例如，不要自己手动编写生产者/消费者模型，因为太容易出错了。务必利用 Lea 的 `BlockingQueue` 实现，并利用他们为了正确实现它所付出的努力。
 - 避免并隔离并发更新，这可能导致大多数问题。
 - 使用静态并发分析工具对代码库进行分析，这些工具可以根据代码中线程交互识别潜在问题（包括死锁）。
 - 使用 VisualVM 或 YourKit 等动态分析工具对系统的运行时行为进行分析。这些工具可以监控线程状态、分析线程转储、检测死锁等。
-- 写一个演示潜在并发问题的测试，然后将其加剧到测试始终失败的程度。你可以减少线程数量，增加正在测试的请求数，或临时引入睡眠以暴露时序问题。Thread Weaver 之类的工具也可以帮助你测试不同的线程交织。
+- 写一个演示潜在并发问题的测试，然后将其加剧到测试始终失败的程度。你可以减少线程数量，增加正在测试的请求数，或临时引入睡眠以暴露时序问题。`Thread Weaver` 之类的工具也可以帮助你测试不同的线程交织。
 - 只添加能让测试通过的并发控制。同步块和锁可能是必要的，但如果不恰当使用它们可能会降低性能（尽管仍解决了真实的并发问题）。
 - 当你的测试持续通过时，移除任何人为的痕迹（如 `sleep`）。
 - 在实际演示出并发问题（最好通过一个失败的测试）之前，不要引入锁、同步块或原子变量等并发控制。
@@ -2648,25 +2516,29 @@ IDEA 支持分支覆盖率指标，但默认是关闭的。开启并运行 `ABat
 
 ## 加剧线程问题
 
-你将处理一段来自来自 `iloveyboubous` 的代码，这是一个旨在与 Indeed 和 Monster 等网站竞争的职位搜索网站。它的方法与典型的职位发布网站不同：它尝试像约会网站一样将潜在员工与潜在雇主进行匹配，反之亦然。雇主和员工通过回答一系列多选题或是非选择题来创建配置文件。网站根据另一部分的标准对配置文件进行评分，并从员工和雇主的角度显示最佳的匹配项。（作者保留对网站进行变现、发大财、退休以及除了支持这本书的这类读者之外什么都不干的权利。）
+你将处理一段来自 `iloveyboubous` 的代码，这是一个旨在与 Indeed 和 Monster 等网站竞争的职位搜索网站。它的方法与典型的职位发布网站不同：它尝试像约会网站一样将潜在员工与潜在雇主进行匹配，反之亦然。雇主和员工通过回答一系列多选题或是非选择题来创建配置文件。网站根据另一部分的标准对配置文件进行评分，并从员工和雇主的角度显示最佳的匹配项。（作者保留对网站进行变现、发大财、退休以及除了支持这本书的这类读者之外什么都不干的权利。）
 
 `ProfileMatcher` 类是 `iloveyboubous` 的核心部分，它收集所有相关的个人配置文件。通过一组标准（本质上是相关查询的优选答案），`ProfileMatcher.scoreProfiles` 方法会遍历所有添加的配置文件。对于每个匹配标准的个人文件，`ProfileMatcher` 会收集该个人文件及其分数——如果个人文件不匹配标准，则分数为 0，否则为正值。
 
 ```java
-ut3-iloveyoubous/02/src/main/java/iloveyoubous/domain/ProfileMatcher.java
+// ut3-iloveyoubous/02/src/main/java/iloveyoubous/domain/ProfileMatcher.java
 import java.util.*;
 import java.util.concurrent.*;
+
 public class ProfileMatcher {
     private List<Profile> profiles = new ArrayList<>();
+
     public void addProfile(Profile profile) {
         profiles.add(profile);
     }
 
     ExecutorService executorService = Executors.newFixedThreadPool(8);
+
     public Map<Profile, Integer> scoreProfiles(Criteria criteria)
-        throws ExecutionException, InterruptedException {
+            throws ExecutionException, InterruptedException {
         var profiles = new HashMap<Profile, Integer>();
         var futures = new ArrayList<Future<Void>>();
+
         for (var profile : profiles) {
             futures.add(executorService.submit(() -> {
                 profiles.put(profile, profile.matches(criteria) ? profile.score(criteria) : 0);
@@ -2687,7 +2559,7 @@ public class ProfileMatcher {
 为了保持响应能力，`scoreProfiles` 在独立线程环境中计算匹配，并使用 `futures` 实现。每个遍历的个人文件由单个 `future` 获取。该 `future` 负责将个人文件和分数添加到初始化为空 `HashMap` 的 `profiles` 变量中。这种并发更新就是你的测试将发现的问题根源。
 
 ```java
-utj3-iloveyboubous02/src/test/iloveyboubous/domain/ProfileMatcher.java
+// utj3-iloveyboubous02/src/test/iloveyboubous/domain/ProfileMatcherTest.java
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -2701,7 +2573,7 @@ import static java.util.stream.IntStream.range;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
-class ProfileMatcher {
+class ProfileMatcherTest {
     ProfileMatcher matcher = new ProfileMatcher();
 
     @Test
@@ -2709,12 +2581,14 @@ class ProfileMatcher {
         var questions = createQuestions(50);
         int profileCount = 500;
         var half = profileCount / 2;
+
         range(0, half).forEach(id ->
             matcher.addProfile(createProfile(
-                questions, i -> notMatchingAnswer(questions.get(i))));
+                questions, i -> nonMatchingAnswer(questions.get(i))));
         range(half, profileCount).forEach(id ->
             matcher.addProfile(createProfile(
                 questions, i -> matchingAnswer(questions.get(i))));
+
         var criteria = createCriteria(questions);
 
         var results = matcher.scoreProfiles(criteria);
@@ -2724,57 +2598,54 @@ class ProfileMatcher {
         assertEquals(half,
             results.values().stream().filter(score -> score > 0).count());
     }
-}
 
     private Profile createProfile(
-        List<BooleanQuestion> questions,
-        int id,
-        Function<Integer, Answer> answerFunction) {
+            List<BooleanQuestion> questions,
+            int id,
+            Function<Integer, Answer> answerFunction) {
         var profile = new Profile(String.valueOf(id));
         range(0, profile.size()).forEach(i ->
-            profile.add(answerFunction.apply(i));
+            profile.add(answerFunction.apply(i)));
         return profile;
     }
 
     private Criteria createCriteria(List<BooleanQuestion> questions) {
         var questionCount = questions.size();
         var criteria = new Criteria();
+
         range(0, 5).forEach(i ->
             criteria.add(new Criterion(
-                matchingAnswer(questions.get(i), REQUIRED))));
+                matchingAnswer(questions.get(i)), REQUIRED)));
+
+        range(5, questionCount).forEach(i ->
+            criteria.add(new Criterion(
+                matchingAnswer(questions.get(i)), WOULD_PREFER)));
+
         return criteria;
     }
-```
 
+    private List<BooleanQuestion> createQuestions(int questionCount) {
+        return range(0, questionCount)
+            .mapToObj(i -> new BooleanQuestion("question " + i))
+            .toList();
+    }
 
+    Answer matchingAnswer(Question question) {
+        return new Answer(question, Bool.TRUE);
+    }
 
-```java
-range(5, questionCount).forEach(i ->
-    criteria.add(new Criterion(
-        matchingAnswer(questions.get(i)), WOULD_PREFER)));
-return criteria;
-}
-
-private List<BooleanQuestion> createQuestions(int questionCount) {
-    return range(0, questionCount)
-    .mapToObj(i -> new BooleanQuestion("question " + i))
-    .toList();
-}
-
-Answer matchingAnswer(Question question) {
-    return new Answer(question, Bool.TRUE);
-}
-Answer nonMatchingAnswer(Question question) {
-    return new Answer(question, Bool.FALSE);
+    Answer nonMatchingAnswer(Question question) {
+        return new Answer(question, Bool.FALSE);
+    }
 }
 ```
 
-`returnsScoreForAllProfiles` 在大多数情况下应该失败，并且偶尔通过。如果你很难让它失败，可以尝试调整线程池的大小、问题的数量（目前为 50）和/或配置文件的数量（500）。尝试让它至少在 10 次中失败 9 次。我在使用 200 个问题和 2000 个配置时能够稳定地失败。
+`testReturnScoreForAllProfiles` 在大多数情况下应该失败，并且偶尔通过。如果你很难让它失败，可以尝试调整线程池的大小、问题的数量（目前为 50）和/或配置文件的数量（500）。尝试让它至少在 10 次中失败 9 次。我在使用 200 个问题和 2000 个配置时能够稳定地失败。
 
 一个简单的解决方案是将 `HashMap` 包装在一个同步映射（synchronized map）中，这使其成为一个线程安全的 Java 结构：
 
 ```java
-ut3-loveyououboss02/src/main/java/loveyououboss/domain/ProfileMatcher.java
+// ut3-loveyououboss02/src/main/java/loveyououboss/domain/ProfileMatcher.java
 public class ProfileMatcher {
     private List<Profile> profiles = new ArrayList<>();
 
@@ -2782,33 +2653,36 @@ public class ProfileMatcher {
         profiles.add(profile);
     }
 
-    ExecutorService executorService = newFixedThreadPool(8);
+    ExecutorService executorService = Executors.newFixedThreadPool(8);
+
     public Map<Profile, Integer> scoreProfiles(Criteria criteria)
-    throws ExecutionException, InterruptedException {
+            throws ExecutionException, InterruptedException {
         var profiles = Collections.synchronizedMap(new HashMap<Profile, Integer>());
         var futures = new ArrayList<Future<Void>>();
+
         for (var profile : this.profiles) {
             futures.add(executorService.submit(() -> {
                 profiles.put(profile,
-                profile.matches(criteria) ? profile.score(criteria) : 0);
-            )));
-```
+                        profile.matches(criteria) ? profile.score(criteria) : 0);
+                return null;
+            }));
+        }
 
-```java
-return null;
-}
+        for (var future : futures) {
+            future.get();
+        }
 
-for (var future: futures)
-future.get();
-
-executorService.shutdown();
-return profiles;
+        executorService.shutdown();
+        return profiles;
+    }
 }
 ```
 
 在做出这个小改动后，确保你的测试能够稳定通过——使用与之前失败时相同的数值。
 
-然而，更好的方法可能是让每个 future 返回一个包含 profile 对应的 score 单个键值对的 map。这避免了对共享数据存储的修改。这些单个键的 map 可以全部聚合到一个的 HashMap 中，形成一个列表的 map，并阻塞所有 futures 的完成：
+然而，更好的方法可能是让每个 future 返回一个包含 profile 对应的 score 单个键值对的 map。这避免了对共享数据存储的修改。这些单个键的 map 可以全部聚合到一个的 HashMap 中，形成一个列表的 map，并阻塞所有 futures 的完成。
+
+
 
 ```java
 utj-loveyouboss/02/src/main/java/loveyouboss/domain/ProfileMatcher.java
@@ -2834,10 +2708,10 @@ return finalScores;
 
 `Repository` 类使用 Java 持久 API (JPA) 与 H2 数据库通信。你可能正确地猜到，这个数据类被应用程序中的许多地方使用，而测试这些每一个地方都需要使用测试双胞（test double）。
 
-编写集成测试 • 85
-
 以下是该类的代码：
+
 ut3-iloveyousb2/01/src/main/java/iloveyousb/persistence/QuestionRepository.java
+
 ```java
 import iloveyousb.domain.BooleanQuestion;
 import iloveyousb.domain.PercentileQuestion;
@@ -2932,17 +2806,9 @@ public class QuestionRepository {
 
 > 尽可能地让集成测试创建并管理自己的数据。
 
-如果你的测试是在自己的机器上针对数据库运行，简单的方法可能是让每个测试从一个干净的数据库（或填充了引用数据的数据库）开始。然后每个测试都负责添加和处理自己的数据。这减少了数据依赖问题，即一个测试因为另一个测试留下的数据而崩溃。如果你只能与共享数据库进行交互，你需要一个非侵入性的解决方案。方案：如果你的数据库支持，你可以在测试上下文中启动事务并在回滚。（事务处理通常被分配给 @BeforeEach 和 @AfterEach 方法。）
+如果你的测试是在自己的机器上针对数据库运行，简单的方法可能是让每个测试从一个干净的数据库（或填充了引用数据的数据库）开始。然后每个测试都负责添加和处理自己的数据。这减少了数据依赖问题，即一个测试因为另一个测试留下的数据而崩溃。如果你只能与共享数据库进行交互，你需要一个非侵入性的解决方案。方案：如果你的数据库支持，你可以在测试上下文中启动事务并在回滚。（事务处理通常被分配给 `@BeforeEach` 和 `@AfterEach` 方法。）
 
-归结底，集成测试的编写、执行和维护都更困难。它们往往更易崩溃，而且当它们崩溃时，调试过程
-
-
-
-
-
-## 第 4 章 扩展你的测试视野 • 88
-
-可能会花费长得多。但一个可靠的测试策略要求你包含其中一些。
+归结底，集成测试的编写、执行和维护都更困难。它们往往更易崩溃，而且当它们崩溃时，调试过程可能会花费长得多。但一个可靠的测试策略要求你包含其中一些。
 
 如果你发现自己自己在与实时交互（在本例中为数据库）交互之前或之后添加了有趣的逻辑，请找一种方法将逻辑提取到另一个类中。针对该类编写单元测试。
 
@@ -2952,8 +2818,9 @@ public class QuestionRepository {
 
 你对仓库的测试在每个测试方法的执行之前和之后：
 
-```java
 utj3-iloveybous/201/src/test/java/iloveybous/persistence/AQuestionRepository.java
+
+```java
 import iloveybous.domain.Question;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -2964,6 +2831,7 @@ import java.util.List;
 import static java.time.Clock.fixed;
 import static java.util.Arrays.asList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class QuestionRepository {
     QuestionRepository repository = new QuestionRepository();
 
@@ -2985,8 +2853,6 @@ class QuestionRepository {
     }
 }
 ```
-
-## 编写集成测试 • 89
 
 ```java
 @Test
@@ -3031,11 +2897,11 @@ private List<String> extractText(List<Question> questions) {
 
 在每次测试运行后清理数据只是为了礼貌，而不是为了让数据留在混乱的数据库中。
 
-当你想要解决一个问题时，你可能想在测试完成后查看数据。要这样做，请注释掉 @After 方法中对 clearData 的调用。
+当你想要解决一个问题时，你可能想在测试完成后查看数据。要这样做，请注释掉 `@After` 方法中对 `clearData` 的调用。
 
 你的测试并不是针对单个方法的；相反，你正在验证密不可分的行为。为了验证你可以检索或找到元素，你必须首先插入它们。为了验证你已经插入了元素，你又检索了它们。
 
-确保你运行覆盖率工具以验证所有代码都已测试。QuestionRepository 的测试显示它被测试完全覆盖了。此外，如果你使用集成测试来覆盖某些代码而不是单元测试，你的全系统单元测试覆盖率将略有下降。如果你担心这一点，你可能可以正确地合并这些数字（jacoco:merge 工具适用于 JaCoCo）。
+确保你运行覆盖率工具以验证所有代码都已测试。`QuestionRepository` 的测试显示它被测试完全覆盖了。此外，如果你使用集成测试来覆盖某些代码而不是单元测试，你的全系统单元测试覆盖率将略有下降。如果你担心这一点，你可能可以正确地合并这些数字（`jacoco:merge` 工具适用于 JaCoCo）。
 
 ## 探索性单元测试
 
@@ -3055,11 +2921,13 @@ private List<String> extractText(List<Question> questions) {
 
 此 URL 将服务器字符串和文档字符串合并为一个有效字符串：
 
-```java
 utj3-iloveybous/201/src/main/java/util/URLCreator.java
+
+```java
 import java.net.MalformedURLException;
 import java.net.URL;
 import static java.lang.String.format;
+
 class URLCreator {
     public String create(String server, String document) throws MalformedURLException {
         if (isEmpty(document))
@@ -3079,90 +2947,9 @@ class URLCreator {
 
 以下是测试：
 
-```java
-utj3-iloveybous/201/src/test/java/iloveybous/persistence/AQuestionRepository.java
-import iloveybous.domain.Question;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import java.time.ZoneId;
-import java.util.Date;
-import java.util.List;
-import static java.time.Clock.fixed;
-import static java.util.Arrays.asList;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-class QuestionRepository {
-    QuestionRepository repository = new QuestionRepository();
 
-    @BeforeEach
-    void setUp() {
-        repository.deleteAll();
-    }
 
-    @AfterEach
-    void tearDown() {
-        repository.deleteAll();
-    }
-
-    @Test
-    void findsPersQuestionById() {
-        var id = repository.addBooleanQuestion("question text");
-        var question = repository.find(id);
-        assertEquals("question text", question.getText());
-    }
-}
-```
-
-```java
-@Test
-void storesDateAddedForPersistedQuestion() {
-  var now = new Date().toInstant();
-  repository.setClock(fixed(now, ZoneId.systemDefault()));
-  var id = repository.addBooleanQuestion("text");
-  var question = repository.find(id);
-  assertEquals(now, question.getTimestamp());
-}
-```
-
-```java
-@Test
-void answersPersistedQuestions() {
-  repository.addBooleanQuestion("q1");
-  repository.addBooleanQuestion("q2");
-  repository.addPercentileQuestion("q3", "a1", "a2");
-  var questions = repository.getAll();
-  assertEquals(asList("q1", "q2", "q3"), extractText(questions));
-}
-```
-
-```java
-@Test
-void findMatchingEntities() {
-  repository.addBooleanQuestion("alpha 1");
-  repository.addBooleanQuestion("alpha 2");
-  repository.addBooleanQuestion("beta 1");
-  var questions = repository.findWithMatchingText("alpha");
-  assertEquals(asList("alpha 1", "alpha 2"), extractText(questions));
-}
-```
-
-```java
-private List<String> extractText(List<Question> questions) {
-  return questions.stream().map(Question::getText).toList();
-}
-```
-
-清理数据让你的测试具有从洁白开始运行的优势。
-
-在每次测试运行后清理数据只是为了礼貌，而不是为了让数据留在混乱的数据库中。
-
-当你想要解决一个问题时，你可能想在测试完成后查看数据。要这样做，请注释掉 @After 方法中对 clearData 的调用。
-
-你的测试并不是针对单个方法的；相反，你正在验证密不可分的行为。为了验证你可以检索或找到元素，你必须首先插入它们。为了验证你已经插入了元素，你又检索了它们。
-
-确保你运行覆盖率工具以验证所有代码都已测试。QuestionRepository 的测试显示它被测试完全覆盖了。此外，如果你使用集成测试来覆盖某些代码而不是单元测试，你的全系统单元测试覆盖率将略有下降。如果你担心这一点，你可能可以正确地合并这些数字（jacoco:merge 工具适用于 JaCoCo）。
-
-## 探索性单元测试
+# 探索性单元测试
 
 你学习构建的单元测试捕获了你对代码意图的最好的理解。它们涵盖了已知的边缘情况和典型情况。
 
@@ -3181,10 +2968,11 @@ private List<String> extractText(List<Question> questions) {
 此 URL 将服务器字符串和文档字符串合并为一个有效字符串：
 
 ```java
-utj3-iloveybous/201/src/main/java/util/URLCreator.java
+// utj3-iloveybous/201/src/main/java/util/URLCreator.java
 import java.net.MalformedURLException;
 import java.net.URL;
 import static java.lang.String.format;
+
 class URLCreator {
     public String create(String server, String document) throws MalformedURLException {
         if (isEmpty(document))
@@ -3218,29 +3006,28 @@ void eliminatesRedundantSlash() {
 }
 ```
 
-通过模糊测试，你可能会添加更多的保护和相应的测试
-使用 Jaz Jaz 工具编写模糊测试：⁵
+通过模糊测试，你可能会添加更多的保护和相应的测试。
+
+使用 Jazzer 工具编写模糊测试：⁵
 
 ```java
-utj3-iloveybous/201/src/test/java/util/AURLCreatorFuzzer.java
+// utj3-iloveybous/201/src/test/java/util/AURLCreatorFuzzer.java
 import com.intelligence.jazzer.api.FuzzedDataProvider;
 import com.intelligence.jazzer.junit.FuzzedTest;
 import java.net.MalformedURLException;
+
 public class AURLCreatorFuzzer {
-@FuzzTest
-public void fuzzTestIsValidURL(FuzzedDataProvider data)
-throws MalformedURLException {
-var server = data.consumeString(32);
-var document = data.consumeRemainingString();
-new AURLCreator.create(server, document);
-}
+    @FuzzTest
+    public void fuzzTestIsValidURL(FuzzedDataProvider data)
+    throws MalformedURLException {
+        var server = data.consumeString(32);
+        var document = data.consumeRemainingString();
+        new URLCreator().create(server, document);
+    }
 }
 ```
 
-+   - https://github.com/CodeIntelligenceTesting/jazzer
-
-
-
++ https://github.com/CodeIntelligenceTesting/jazzer
 
 要使用 Jazzer 运行模糊测试（fuzzing），首先在项目的测试资源中创建一个目录。根据你的 fuzzer 类包名和 fuzzer 类名来命名该目录，作为你的模糊输入：
 
@@ -3256,14 +3043,14 @@ fuzzer 应该报告包含 LF（换行符；ASCII 值为 10）的输入对于 URL
 
 ## 属性测试
 
-单元测试的另一种形式是属性测试，其中你的测试描述了代码预期行为的不不变性和后置条件（或属性）。像 jqwik 这样的属性测试工具将使用广泛的自动生成输入来测试这些不变性。
+单元测试的另一种形式是属性测试，其中你的测试描述了代码预期行为的不变性和后置条件（或属性）。像 jqwik 这样的属性测试工具将使用广泛的自动生成输入来测试这些不变性。
 
 你使用属性测试的主要目的是通过探索更广泛的输入来发现边界情况和意外行为。
 
 这里是插入排序算法的实现，它的性能非常糟糕，但如果你的输入数组是排序过的（或者如果你的输入通常几乎是排序的），它是一个合理的选择：
 
-```
-utj3-iloveyouboss2/03/src/main/java/util/ArraySorter.java
+```java
+// utj3-iloveyouboss2/03/src/main/java/util/ArraySorter.java
 public class ArraySorter {
     public void inPlaceInsertionSort(int[] arr) {
         for (var i = 1; i < arr.length - 1; i++) {
@@ -3283,10 +3070,10 @@ public class ArraySorter {
 
 ## 第 4 章 扩展你的测试视野 • 94
 
-使用 jqwik，你定义了由 JUnit 测试运行器执行的 @Property 方法。以下针对 ArraySorter 的属性set描述了三个属性：已排序的数组保持排序状态、所有元素都相同的数组保持不变，以及随机数组应该按升序排序：
+使用 jqwik，你定义了由 JUnit 测试运行器执行的 `@Property` 方法。以下针对 `ArraySorter` 的属性集描述了三个属性：已排序的数组保持排序状态、所有元素都相同的数组保持不变，以及随机数组应该按升序排序：
 
-```
-util3-loveyouuboss203/src/test/java/util/ArraySorterProperties.java
+```java
+// util3-loveyouuboss203/src/test/java/util/ArraySorterProperties.java
 import static java.util.Arrays.fill;
 import static java.util.Arrays.sort;
 import net.jqwik.api.*;
@@ -3294,6 +3081,7 @@ import java.util.Arrays;
 
 public class ArraySorterProperties {
     ArraySorter arraySorter = new ArraySorter();
+
     @Property
     boolean returnsSameArrayWhenAlreadySorted(@ForAll int[] array) {
         sort(array);
@@ -3301,6 +3089,7 @@ public class ArraySorterProperties {
         arraySorter.inPlaceInsertionSort(array);
         return Arrays.equals(expected, array);
     }
+
     @Property
     boolean returnsSameArrayWhenAllSameElements(@ForAll int element) {
         var array = new int[12];
@@ -3309,6 +3098,7 @@ public class ArraySorterProperties {
         arraySorter.inPlaceInsertionSort(array);
         return Arrays.equals(expected, array);
     }
+
     @Property
     boolean sortsAscendingWhenRandomUnsortedArray(@ForAll int[] array) {
         var expected = array.clone();
@@ -3319,7 +3109,7 @@ public class ArraySorterProperties {
 }
 ```
 
-以最后一个方法为例：`sortsAscendingWhenRandomUnsortedArray` 代表一个对于所有 (@ForAll) 输入数组 (array) 都应该成立的后置条件。属性实现克隆了传入的数组并使用 Java 内置排序对其进行排序，捕获预期的结果。它返回该排序结果与预期值的对比。
+以最后一个方法为例：`sortsAscendingWhenRandomUnsortedArray` 代表一个对于所有 (`@ForAll`) 输入数组 (`array`) 都应该成立的后置条件。属性实现克隆了传入的数组并使用 Java 内置排序对其进行排序，捕获预期的结果。它返回该排序结果与预期值的对比。
 
 Jqwik 是一个复杂且高度灵活的工具，默认调用该属性一千次。美妙的是！最后一个属性失败了，而且给定那一千个输入，这种失败是一致的。
 
@@ -3337,17 +3127,19 @@ Jqwik 是一个复杂且高度灵活的工具，默认调用该属性一千次�
 
 现在你已经学习了有关单元测试的基础概念，你将深入研究 Java 单元测试的首选工具 JUnit。接下来的三章将深入探索 JUnit，提供关于如何充分利用其丰富功能的有用见解和窍门。
 
-## 第二部分
-
-## 通过三个“E”精通 JUnit
+# 第二部分：通过三个“E”精通 JUnit
 
 你只需要使用 JUnit 健壮功能中的一小部分就能完成大部分的单元测试需求。在这一部分中，你将学习 JUnit 的三个“E”：检查结果（Examining outcomes）、在测试中建立环境（Establishing in tests）以及执行测试（Executing tests）。
 
 ## 使用断言检查结果
 
-JUnit 中的断言（或 *asserts*）是你可以丢进测试中的静态方法调用。每个断言都是验证某些条件是否成立的机会。如果断言的条件不成立，测试将立即停止，JUnit 将报告失败。要终止测试，JUnit 会抛出一个类型为 `AssertionFailedError` 的异常。事实上，JUnit 会将任何测试标记为失败。
+JUnit 中的断言（或 `asserts`）是你可以丢进测试中的静态方法调用。每个断言都是验证某些条件是否成立的机会。如果断言的条件不成立，测试将立即停止，JUnit 将报告失败。要终止测试，JUnit 会抛出一个类型为 `AssertionFailedError` 的异常。事实上，JUnit 会将任何测试标记为失败。
 
-为了根据你的验证需求使用最合适的断言，你将希望学习 JUnit 的众多变体。到目前为止，你已经使用了最常见的断言形式：*assertTrue* 和 *assertEquals*。由于你将把它们用于大部分测试，你首先将深入深入检查这些内容。在某些情况下，断言内容的最简单方法不是与实际结果比较，而是通过反转操作来验证该操作。你将看到一个简短的示例。
+为了根据你的验证需求使用最合适的断言，你将希望学习 JUnit 的众多变体。到目前为止，你已经使用了最常见的断言形式：`assertTrue` 和 `assertEquals`。由于你将把它们用于大部分测试，你首先将深入深入检查这些内容。在某些情况下，断言内容的最简单方法不是与实际结果比较，而是通过反转操作来验证该操作。你将看到一个简短的示例。
+
+
+
+# 使用断言检查结果
 
 你还将获得 AssertJ 的概述，这是一个第三方断言库，允许你编写“流式”（fluent）断言。此类断言可以使你的测试变得易读得多。它们还可以提供关于测试失败原因的更精确解释。
 
@@ -3359,13 +3151,13 @@ JUnit 中的断言（或 *asserts*）是你可以丢进测试中的静态方法�
 
 最基础的断言形式接受布尔表达式或引用作为参数，如果该参数求值为 false，则测试失败。
 
-```
+```java
 org.junit.jupiter.api.Assertions.assertTrue(someBooleanExpression);
 ```
 
 这是一个使用 `assertTrue` 的示例：
 
-```
+```java
 ut3-junit01/src/test/java/scratch/AnAccount.java
 @Test
 void hasPositiveBalanceAfterInitialDeposit() {
@@ -3385,17 +3177,15 @@ void hasPositiveBalanceAfterInitialDeposit() {
 
 你正在扫描大量的测试，以快速了解系统的功能以及你的更改必须去哪里。消除杂质可以让你一目了然地理解测试。
 
-
-
 断言（Assert）贯穿于 JUnit 测试中。与其通过类名（Assertion）显式地限定每个断言调用的范围，不如使用静态导入：
 
-```
+```java
 import static org.junit.jupiter.Assertions.assertTrue;
 ```
 
 结果是去除了冗余、更简洁的断言语句：
 
-```
+```java
 utj-junit/01/src/test/java/scratch/AnAccount.java
 @Test
 void hasPositiveBalanceAfterInitialDeposit() {
@@ -3409,7 +3199,7 @@ void hasPositiveBalanceAfterInitialDeposit() {
 
 这是 `assertTrue` 的另一个示例，它解释了结果与预期值之间的关系：
 
-```
+```java
 utj-junit/01/src/test/java/scratch/AnAccount.java
 @Test
 void depositIncreasesBalance() {
@@ -3426,40 +3216,38 @@ void depositIncreasesBalance() {
 
 前面的示例依赖于已初始化的 `Account` 实例。你可以在 `@BeforeEach` 和 `@BeforeAll` 中创建 `Account`（更多信息请参阅第 124 页），并将其引用作为字段存储在测试类中：
 
-```
+```java
 utj-junit/02/src/test/java/scratch/AnAccount.java
 class AnAccount {
     Account account;
+
+    @BeforeEach
+    void createAccount() {
+        account = new Account("an account name");
+    }
+
+    @Test
+    void hasPositiveBalanceAfterInitialDeposit() {
+        account.deposit(50);
+        assertTrue(account.hasPositiveBalance());
+    }
+    // / ...
+}
 ```
 
-## 第 5 章. 使用断言检查结果 • 102
-
-```java
-@BeforeEach
-void createAccount() {
-    account = new Account("an account name");
-}
-
-@Test
-void hasPositiveBalanceAfterInitialDeposit() {
-    account.deposit(50);
-    assertTrue(account.hasPositiveBalance());
-}
-// / ...
-```
-
-JUnit 会为每个测试创建一个测试类的新实例（进一步解释请参见第 127 页的“观察生命周期”）。这意味着你也可以在字段声明处标识字段：
+JUnit 会为每个测试创建一个测试类的新实例（进一步解释请参见第 127 页的“观察生命周期”）。这意味着你也可以在字段声明处初始化字段：
 
 ```java
 ut3-junit/01/src/test/java/scratch/AnAccount.java
 class AnAccount {
-    account = new Account("an account name");
+    Account account = new Account("an account name");
 
-@Test
-void hasPositiveBalanceAfterInitialDeposit() {
+    @Test
+    void hasPositiveBalanceAfterInitialDeposit() {
+        // ...
+    }
     // ...
 }
-// ...
 ```
 
 ## 使用 assertEquals 进行显式比较
@@ -3470,18 +3258,13 @@ void hasPositiveBalanceAfterInitialDeposit() {
 
 这里再次给出存款示例，通过余额增加的金额进行断言：
 
-```
+```java
 ut3-junit/01/src/test/java/scratch/AnAccount.java
 @Test
 void depositIncreasesBalanceByAmountDeposited() {
     account.deposit(50);
-```
-
-## 断言消息：断言的冗余消息 103
-
-```java
-account.deposit(100);
-assertEquals(150, account.getBalance());
+    account.deposit(100);
+    assertEquals(150, account.getBalance());
 }
 ```
 
@@ -3493,7 +3276,7 @@ assertEquals(150, account.getBalance());
 
 大多数 JUnit 形式都支持一个可选的最后参数消息。消息参数允许你提供一个关于断言背后逻辑的良好且详细的解释：
 
-```
+```java
 ut3-junit/01/src/test/java/scratch/AnAccount.java
 @Test
 void balanceTotalOfDeposits() {
@@ -3506,6 +3289,7 @@ void balanceTotalOfDeposits() {
 ```
 
 断言消息在测试失败时显示：
+
 `account balance must be total of deposits => expected: <101> but was: <102>`
 
 如果你更喜欢解释性注释，你可能会从断言消息中获得收益。然而，更好的路线是：
@@ -3515,11 +3299,9 @@ void balanceTotalOfDeposits() {
 
 事实上，如果你每个测试只演示一种行为，你通常只需要一个断言。测试的名称将自然地描述该断言的原因。不需要断言失败消息。
 
-![](img/5f9fd301af41bda177ca04d9f939d028_120_0.png)
+![图片](img/5f9fd301af41bda177ca04d9f939d028_120_0.png)
 
 解释性常量、辅助方法和揭示意图的变量名等元素对于使测试易读且直击非常有帮助。
-
-## 第 5 章. 使用断言检查结果 • 104
 
 测试中存在断言消息通常预示着气味（smell）。在编写良好的测试中，断言消息通常是冗余且必要的。
 
@@ -3531,7 +3313,7 @@ void balanceTotalOfDeposits() {
 
 没有人喜欢双重否定。这里是 `assertFalse`——`assertTrue` 的反面应用：
 
-```
+```java
 ut3-junit/01/src/test/java/scratch/AnAccount.java
 @Test
 void doesNotHaveBalanceAfterInitialDeposit() {
@@ -3541,12 +3323,14 @@ void doesNotHaveBalanceAfterInitialDeposit() {
 
 如果你心情相反，可以使用 `assertTrue` 实现等效代码：
 
-```
+```java
 ut3-junit/01/src/test/java/scratch/AnAccount.java
 @Test
 void doesNotHaveBalanceAfterInitialDeposit() {
-    assertTrue
+    assertTrue(!account.hasPositiveBalance());
+}
 ```
+
 读起来很别扭：“断言真没有余额”，并且代表了让我们很多人感到困惑的逻辑。在测试中避免双重否定。当这样做更容易读时，使用 `assertFalse`。
 
 ## assertNotEquals
@@ -3571,144 +3355,117 @@ public class Deck {
         Collections.shuffle(cards);
     }
 
-    static LinkedList<Card> cards = new LinkedList<Card>();
-    for (var i = 1; i <= 13; i++) {
-        cards.add(new Card(i, "C"));
-        cards.add(new Card(i, "D"));
-        cards.add(new Card(i, "H"));
-        cards.add(new Card(i, "S"));
+    static LinkedList<Card> newDeck() {
+        var cards = new LinkedList<Card>();
+        for (var i = 1; i <= 13; i++) {
+            cards.add(new Card(i, "C"));
+            cards.add(new Card(i, "D"));
+            cards.add(new Card(i, "H"));
+            cards.add(new Card(i, "S"));
+        }
+        return cards;
     }
-    return cards;
-}
 
-public Card deal() {
-    return cards.removeFirst();
-}
-```
+    public Card deal() {
+        return cards.removeFirst();
+    }
 
-
-
-
-## 第 5 章 使用断言检查结果 • 106
-
-```
-List<Card> remaining() {
-    return cards;
+    List<Card> remaining() {
+        return cards;
+    }
 }
 ```
 
 你可能想要验证洗牌操作是否确实发生了：
 
-```
-ut3-unit/01/src/test/java/cards/ADDeck.java
+```java
+ut3-junit/01/src/test/java/cards/ADDeck.java
 public class ADeck {
     Deck deck = new Deck();
     // ... 其他其他的 Deck 测试 ...
     @Test
     void hasBeenShuffled() {
         var cards = deck.remaining();
-        assertEquals(Deck.newDeck(), cards);
+        assertNotEquals(Deck.newDeck(), cards);
     }
 }
 ```
 
 你可能在想：“嘿，这看起来像是一个弱效的断言！”在某种意义上确实如此——你并不知道牌组是否被正确地洗牌了。但这不是 `Deck` 类的职责。这里的 `Deck` 类在实现洗牌功能后调用了它，并使用了 Java API 中的一个方法。你可以信任 `Collections.shuffle()` 会适当地随机化集合的顺序，尽管如果你经营的是赌场，你可能需要一个更好的随机数生成器。
 
-由于你可以信任 Java API，你就不需要证明它的洗牌质量。但你的单元测试确实需要验证牌牌确实被洗过牌。你可以通过多种相当复杂的方法来实现，例如使用第 3 章中的测试双胞（test doubles），或者在第 53 页注入一个带种子的随机数生成器来进行洗牌。
+由于你可以信任 Java API，你就不需要证明它的洗牌质量。但你的单元测试确实需要验证牌确实被洗过牌。你可以通过多种相当复杂的方法来实现，例如使用第 3 章中的测试双胞（test doubles），或者在第 53 页注入一个带种子的随机数生成器来进行洗牌。
 
-确保实例化的 `Deck` 中的牌牌顺序不等于 `Deck.newDeck()` 返回的牌牌是足够且简单的。它证明了发生了某些操作改变了顺序。在洗牌恰好洗回牌组初始顺序的情况下，这也有极小的失败可能。在你的有生之年不可能发生。如果你碰巧遇到了那个奇妙的时刻，请重新运行测试。
+确保实例化的 `Deck` 中的牌顺序不等于 `Deck.newDeck()` 返回的牌是足够且简单的。它证明了发生了某些操作改变了顺序。在洗牌恰好洗回牌组初始顺序的情况下，这也有极小的失败可能。在你的有生之年不可能发生。如果你碰巧遇到了那个奇妙的时刻，请重新运行测试。
 
 是的，有人可以将对 `Collections.shuffle()` 的调用替换为糟糕的洗牌代码——例如，将一张牌从牌组的前部移动到后部。但别担心——没人会那样。
 
 单元测试的存在并不是为了保护你免受蓄意的破坏。一个坚定的破坏者可以在不破坏任何测试的情况下破坏你的系统。
 
-![](img/5f9fd301af41bda177ca04d9f939d028_124_0.png)
+![图片](img/5f9fd301af41bda177ca04d9f939d028_124_0.png)
 
 ## assertSame
 
 同样是不常使用的，`assertSame` 用于验证两个引用是否指向内存中的同一个对象。
 
-你的挑战是：在一个调度应用程序中最小化内存的使用，该程序可能需要成千上万个 `Time` 对象。（此示例基于《设计模式实战：享量模式》。这些 `Time` 对象大部分将落在季度刻度上（11:15, 14:30, 10:15），因为我们通常喜欢这样安排时间。一小部分会在奇特的时间，比如 3:10 或 4:20，因为有些人会在奇特的时间做事，哥们。）
+你的挑战是：在一个调度应用程序中最小化内存的使用，该程序可能需要成千上万个 `Time` 对象。（此示例基于《设计模式实战：享元模式》。这些 `Time` 对象大部分将落在季度刻度上（11:15, 14:30, 10:15），因为我们通常喜欢这样安排时间。一小部分会在奇特的时间，比如 3:10 或 4:20，因为有些人会在奇特的时间做事，哥们。）
 
-享量模式的想法是拥有一个单一的对象池，允许多个相关方共享具有相同的值。（这对于不可变对象有效，否则效果就不佳。）结果是你的应用程序可以显著减少其内存占用。
+享元模式的想法是拥有一个单一的对象池，允许多个相关方共享具有相同的值。（这对于不可变对象有效，否则效果就不佳。）结果是你的应用程序可以显著减少其内存占用。
 
 这里是涉及的生产类：
 
-```
+```java
 ut3-junit/01/src/main/java/time/Time.java
 import static java.lang.String.format;
+
 public record Time(byte hour, byte minute) {
     static String key(byte hour, byte minute) {
         return format("%d:%d", hour, minute);
+    }
+
+    @Override
+    public String toString() {
+        return key(hour, minute);
     }
 }
 ```
 
 ```java
-@Override
-public String toString() {
-    return key(hour, minute);
-}
-```
-
-```
 ut3-junit/01/src/main/java/time/TimePool.java
 import java.util.HashMap;
 import java.util.Map;
+
 public class TimePool {
     private static Map<String, Time> times = new HashMap<>();
+
     static void reset() {
         times.clear();
     }
-```
 
-- 2. https://www.developer.com/design/working-with-design-patterns-flyweight/
-
-## 第 5 章 使用断言检查结果 108
-
-```
-public static Time get(byte hour, byte minute) {
-    return times.computeIfAbsent(Time.key(hour, minute),
-        k -> new Time(hour, minute));
+    public static Time get(byte hour, byte minute) {
+        return times.computeIfAbsent(Time.key(hour, minute),
+            k -> new Time(hour, minute));
+    }
 }
 ```
 
 这里是几个测试：
 
-```
-ut3-junit-01/src/test/java/time/ATimePool.java
-public class ATimePool {
-    @BeforeEach
-    void resetPool() {
-        TimePool.reset();
-    }
 
-    @Test
-    void getReturnsTimeInstance() {
-        byte four = 4;
-        byte twenty = 20;
-        assertEquals(new Time(four, twenty), TimePool.get(four, twenty));
-    }
 
-    @Test
-    void withSameValuesReturnsSharedInstance() {
-        byte ten = 10;
-        byte five = 5;
-        var firstRetrieved = TimePool.get(ten, five);
-        var secondRetrieved = TimePool.get(ten, five);
-        assertSame(firstRetrieved, secondRetrieved);
-    }
-}
-```
+# 单元测试断言详解
+
+## assertSame 与 assertNotSame
+
+### assertSame
 
 第二个测试中的高亮行演示了 `assertSame` 的用法。安排（arrange）步骤调用了 `TimePool` 上的方法来获取第一个对象，然后在执行（act）步骤中再次调用了一次。断言（assert）步骤验证了这两个 `Time` 对象是同一个。
 
-## assertNotSame
+### assertNotSame
 
 `assertNotSame` 用于验证两个引用是否指向内存中不同的对象。你可能使用 `assertNotSame` 来验证一个新实例与旧实例不相同。在生产代码中，高亮行显示了 `assertNotSame` 的用法，以确保一个新实例被添加到 `HashMap` 中。这里有一些演示代码：
 
-```
-ut3-unit/01/src/test/java/persistence/InMemoryDatabase.java
+```java
+// ut3-unit/01/src/test/java/persistence/InMemoryDatabase.java
 package persistence;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -3726,8 +3483,8 @@ class InMemoryDatabase {
 }
 ```
 
-```
-ut3-unit/01/src/main/java/persistence/InMemoryDatabase.java
+```java
+// ut3-unit/01/src/main/java/persistence/InMemoryDatabase.java
 import java.util.HashMap;
 import java.util.Map;
 
@@ -3746,14 +3503,16 @@ public class InMemoryDatabase {
 
 思考单元测试的一种方式是它们为那些重要但不显而易见的提供了保护——解释，例如本例中的创建副本。单元测试不仅保护，还描述了系统中成千上万的选择。
 
-## assertNull
+## assertNull 与 assertNotNull
+
+### assertNull
 
 `assertNull` 等同于执行 `assertEquals(null, someValue)`。
 
 `InMemoryDatabase` 类需要一个公共方法通过 id 获取客户。这里是某种实现代码：
 
-```
-ut3-junit/01/src/main/java/persistence/InMemoryDatabase.java
+```java
+// ut3-junit/01/src/main/java/persistence/InMemoryDatabase.java
 import java.util.HashMap;
 import java.util.Map;
 
@@ -3768,8 +3527,8 @@ public class InMemoryDatabase {
 
 你需要多少测试来覆盖该方法？`getOrDefault` 中的“或（Or）”是一个强力提示，说明你至少需要两个。在列表中，第一个测试是成功检索到客户的“快乐路径”情况：
 
-```
-ut3-junit-01/src/test/java/persistence/InInMemoryDatabase.java
+```java
+// ut3-junit-01/src/test/java/persistence/InInMemoryDatabase.java
 InMemoryDatabase db = new InMemoryDatabase();
 
 @Test
@@ -3789,7 +3548,7 @@ void returnsNullForNonexistentKey() {
 
 第二个测试演示了 `assertNull` 的用法：如果你尝试从新创建的 `db`（其中没有任何插入内容）中检索任何内容（在本例中），它应该返回 null。
 
-## assertNotNull
+### assertNotNull
 
 `assertNotNull` 自然是 `assertNull` 的反面。它被用于断言引用指向了某些内容，而不是空。
 
@@ -3797,11 +3556,8 @@ void returnsNullForNonexistentKey() {
 
 一些 JUnit 人士为新实例化的对象引用引入了 `assertNotNull` 检查：
 
-
-
-utj-junit/01/src/test/java/persistence/InMemoryDatabase.java
-
 ```java
+// utj-junit/01/src/test/java/persistence/InMemoryDatabase.java
 @Test
 void retrievedCustomerCorrespondingTo() {
     var customer = new Customer("42", "Mr Creosote");
@@ -3827,12 +3583,12 @@ void retrievedCustomerCorrespondingTo() {
 
 | 方法 | 描述 |
 | :--- | :--- |
-| assertLinesMatch | 断言两个字符串或字符串列表是否匹配；可能涉及正则表达式和“快速跳进” |
-| assertAll | 断言所有提供的可执行体均未抛出异常 |
-| assertInstanceOf | 断言实际值是预期类型的实例 |
-| assertIterableEquals | 断言提供的 `Iterables` 是深度相等的 |
-| assertTimeout | 断言可执行体在特定持续时间内完成执行 |
-| assertTimeoutPreemptively | 类似于 `assertTimeout`，但在单独线程中运行可执行体 |
+| `assertLinesMatch` | 断言两个字符串或字符串列表是否匹配；可能涉及正则表达式和“快速跳进” |
+| `assertAll` | 断言所有提供的可执行体均未抛出异常 |
+| `assertInstanceOf` | 断言实际值是预期类型的实例 |
+| `assertIterableEquals` | 断言提供的 `Iterables` 是深度相等的 |
+| `assertTimeout` | 断言可执行体在特定持续时间内完成执行 |
+| `assertTimeoutPreemptively` | 类似于 `assertTimeout`，但在单独线程中运行可执行体 |
 
 ## 预期异常
 
@@ -3842,7 +3598,7 @@ void retrievedCustomerCorrespondingTo() {
 
 让我们来看一个简单的例子：确保当客户端尝试提取金额超过可用余额时，账户代码抛出 `InsufficientFundsException`。
 
-## 新流派：assertThrows
+### 新流派：assertThrows
 
 `assertThrows` 断言从 JUnit 4.13 版本开始可用，应该涵盖你编写基于异常测试时的所有需求。相比其他机制，优先使用它。
 
@@ -3853,7 +3609,7 @@ void retrievedCustomerCorrespondingTo() {
 这里是 `assertThrows` 的实际应用。传递给 `assertThrows` 的 lambda 参数尝试从一个新创建的账户中提取 100（即一个没有钱的账户）：
 
 ```java
-utj-junit-001/src/test/java/scratch/AnAccount.java
+// utj-junit-001/src/test/java/scratch/AnAccount.java
 import static org.junit.jupiter.api.assertThrows;
 // ...
 
@@ -3872,7 +3628,7 @@ void throwsWhenWithdrawingTooMuch() {
 `withdraw` 中的代码通过在提取金额超过余额时抛出 `InsufficientException` 来通过 `assertThrows` 语句：
 
 ```java
-utj-junit-01/src/main/java/scratch/Account.java
+// utj-junit-01/src/main/java/scratch/Account.java
 void withdraw(int dollars) {
     if (balance < dollars) {
         throw new InsufficientException("balance only " + balance);
@@ -3881,7 +3637,7 @@ void withdraw(int dollars) {
 }
 ```
 
-## 旧流派
+### 旧流派
 
 在 `assertThrows` 可用之前，在 JUnit 中预期异常至少有三种选择：使用 `try/catch`、注解（annotations）和规则（rules）。如果你维护旧系统，可能会看到这些解决方案中的一些。JUnit 5 不支持注解和规则，因此我在这里不会介绍它们。不过，我会向你展示它们的样子，以便你理解你看到了什么。
 
@@ -3916,7 +3672,7 @@ public class SimpleExpectedExceptionTest {
 
 你可能在旧代码中看到 `try/catch` 机制。如果是这样，你可以保持原样（现在你知道它是如何工作的），或者通过替换为 `assertThrows` 来简化你的测试。
 
-## try/catch 的使用
+### try/catch 的使用
 
 如果你看到 `ExpectedException` 标记为 `@Rule`，请访问 JUnit 4 文档以获取进一步说明。如果你想使用 `try/catch`，这里有一个例子：
 
@@ -3948,7 +3704,7 @@ void throwsWhendrawingTooMuch() {
 
 如果调用抛出异常，控制权转移到 catch 块。如果没有抛出，则调用 `fail()`，测试失败。
 
-## 断言什么都没发生：assertNotThrow
+### 断言什么都没发生：assertNotThrow
 
 有了许多其他断言形式，JUnit 提供了 `assertThrows` 的反例——特定的 `assertNotThrow` 方法。在最简单的形式中，它接受一个可执行体（lambda 表达式或方法引用）。如果调用没有抛出任何异常，则断言通过；否则失败。
 
@@ -3957,7 +3713,7 @@ void throwsWhendrawingTooMuch() {
 你可能会发现 `assertNotThrow` 在系列测试中很有用。假设你有一个验证器在某些情况下抛出异常，其他情况下执行：
 
 ```java
-utj-junit/01/src/test/java/scratch/AnameValidator.java
+// utj-junit/01/src/test/java/scratch/AnameValidator.java
 class NameValidationException extends RuntimeException {}
 class NameValidator {
   long commaCount(String s) {
@@ -3972,33 +3728,35 @@ class NameValidator {
 
 你需要两个测试来证明 `validate` 在两个负面用例中的每一个都会抛出异常：
 
+
+
 ```java
 utj-junit-01/src/test/java/scratch/ANameValidator.java
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.assertNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+
 class ANameValidator {
-  NameValidator validator = new NameValidator();
-  @Test
-  void throwsWhenNameIsEmpty() {
-    assertThrows(NameValidationException.class, () ->
-      validator.validate(""));
-  }
-  @Test
-  void throwsWhenTooManyCommas() {
-    assertThrows(NameValidationException.class, () ->
-      validator.validate("a,b,c"));
-  }
-  @Test
-  void doesNotThrowWhenNameIsValid() {
-    assertNotThrow(() -> validator.validate("a,b"));
-  }
+    NameValidator validator = new NameValidator();
+
+    @Test
+    void throwsWhenNameIsEmpty() {
+        assertThrows(NameValidationException.class, () ->
+            validator.validate(""));
+    }
+
+    @Test
+    void throwsWhenTooManyCommas() {
+        assertThrows(NameValidationException.class, () ->
+            validator.validate("a,b,c"));
+    }
+
+    @Test
+    void doesNotThrowWhenNameIsValid() {
+        assertNotThrow(() -> validator.validate("a,b"));
+    }
 }
 ```
-
-
-
-
 
 ```java
 @Test
@@ -4011,7 +3769,7 @@ void throwsWhenNameContainsMultipleCommas() {
 
 ...还有一个使用 `assertDoesNotThrow` 的测试，展示在其他情况下什么都不会发生：
 
-```
+```java
 jt3-01/src/test/java/scratch/ANameValidator.java
 @Test
 void doesNotThrowWhenNoErrors() {
@@ -4028,7 +3786,7 @@ void doesNotThrowWhenNoErrors() {
 
 不要用 `try/catch` 块充斥测试来处理检查异常。相反，让这些异常释放出来吧！测试可以直接抛出它们：
 
-```
+```java
 jt3-01/src/test/java/scratch/SomeAssertExamples.java
 @Test
 void readsFromTest() throws IOException {
@@ -4047,7 +3805,7 @@ void readsFromTest() throws IOException {
 
 例如，假设你编写了 `fastHalf` 方法，它使用位移来执行除以二的操作。代码非常简单，其中的一些核心测试也是如此：
 
-```
+```java
 ut3-unit/01/src/main/java/util/MathUtils.java
 public class MathUtils {
     static long fastHalf(long number) {
@@ -4056,7 +3814,7 @@ public class MathUtils {
 }
 ```
 
-```
+```java
 ut3-unit/01/src/test/java/util/MathUtilsTest.java
 import org.junit.jupiter.api.Assertions.assertEquals;
 import static util.MathUtils.fastHalf;
@@ -4068,33 +3826,38 @@ public class MathUtils {
         void isZeroWhenZero() {
             assertEquals(0, fastHalf(0));
         }
+
         @Test
         void roundsDownZeroWhenOne() {
             assertEquals(0, fastHalf(1));
         }
+
         @Test
         void dividesEvenlyWhenEven() {
             assertEquals(11, fastHalf(22));
         }
+
         @Test
         void roundsDownWhenOdd() {
             assertEquals(10, fastHalf(21));
         }
+
         @Test
         void handlesNegativeNumbers() {
             assertEquals(-2, fastHalf(-4));
         }
     }
+}
 ```
 
 你可能想要另一个测试来验证该工具类处理非常大数字时有效：
 
-```
+```java
 ut3-unit/01/src/test/java/util/MathUtilsTest.java
 @Test
 void handlesLargeNumbers() {
-    var number = 483 935 889 934 890L;
-    assertEquals(244 967 944 967 945L, fastHalf(number));
+    var number = 483_935_889_934_890L;
+    assertEquals(244_967_944_967_945L, fastHalf(number));
 }
 ```
 
@@ -4102,12 +3865,12 @@ void handlesLargeNumbers() {
 
 你已经证明了 `fastHalf` 在 0、1、许多数字和负数情况下都是有效的。对于非常大的数字，与其展示许多数字，不如展示这样的断言：
 
-```
+```java
 ut3-unit/01/src/test/java/util/MathUtilsTest.java
 @Test
 void handlesLargeNumbers() {
-    var number = 483 935 889 934 890L;
-    assertEquals(244 967 944 967 945L, fastHalf(number));
+    var number = 483_935_889_934_890L;
+    assertEquals(244_967_944_967_945L, fastHalf(number));
 }
 ```
 
@@ -4115,17 +3878,12 @@ void handlesLargeNumbers() {
 
 *注：由于提供的原文文本在后半部分出现了明显的逻辑混乱和代码重复（例如 `fastHalf` 示例多次出现），上述译文严格遵循了“不要重复输出原文”的原则，并对可理解的语义进行了翻译。*
 
-
-
-
-
+```java
 this(new Segment(origin, destination, distance, dateTime);
-
 }
 
-```java
 boolean includes(String airport) {
-  return segment.includes(airport);
+    return segment.includes(airport);
 }
 ```
 
@@ -4179,17 +3937,12 @@ boolean includes(String airport) {
 
 一些开发者提到“四阶段测试”¹，其中每个测试都可以拆分为（等一下）四个部分或阶段：
 
-- 在被称为“固件（fixture）”的地方设置状态/数据。将固件想象为测试运行的上下文——可以说是它的世界。固件是 
+- 在被称为“固件（fixture）”的地方设置状态/数据。将固件想象为测试运行的上下文——可以说是它的世界。固件是由 JUnit 为你管理的；你将在本章中作为 JUnit 测试执行生命周期的一部分学习更多相关内容。
+- 与系统交互以执行你想要验证的内容。
+- 执行验证（断言 assert）。
+- 卸载固件——如有必要，清理任何副作用。这通常涉及清理测试可能使用并可能影响其他测试执行的资源。在本章中，你将读到如何使用 `@AfterEach` 和 `@AfterAll` JUnit 钩子进行清理。
 
 > 1. http://xunitpatterns.com/Four%20Phase%20Test.html
-
-由 JUnit 为你管理的；你将在本章中作为 JUnit 测试执行生命周期的一部分学习更多相关内容。
-
-- 与系统交互以执行你想要验证的内容。
-
-- 执行验证（断言 assert）。
-
-- 卸载固件——如有必要，清理任何副作用。这通常涉及清理测试可能使用并可能影响其他测试执行的资源。在本章中，你将读到如何使用 `@AfterEach` 和 `@AfterAll` JUnit 钩子进行清理。
 
 从任何意义和目的上，AAA 都是四阶段测试的前三个部分。准备、Act、Assert ≈ 设置、执行、验证。
 
@@ -4203,21 +3956,13 @@ boolean includes(String airport) {
 
 在《抽象：消除无聊的细节》第 20 页，你学习了使用 `@BeforeEach` 将公共初始化放在一处。带有 `@BeforeEach` 注解的方法会在每个测试范围之前执行。
 
-JUnit 还提供了另一种名为 `@BeforeAll` 的初始化钩子，它必须声明为静态方法。每个带有 `@BeforeAll` 注解的方法每个类执行一次，并且在类类内任何内容的执行之前执行。它的主要用途是确保执行缓慢的初始化（针对任何涉及数据库的内容）只需要执行一次。否则，优于使用 `@BeforeEach`。
+JUnit 还提供了另一种名为 `@BeforeAll` 的初始化钩子，它必须声明为静态方法。每个带有 `@BeforeAll` 注解的方法每个类执行一次，并且在类内任何内容的执行之前执行。它的主要用途是确保执行缓慢的初始化（针对任何涉及数据库的内容）只需要执行一次。否则，优于使用 `@BeforeEach`。
 
 如果你发现自己极罕地多次使用 `@BeforeAll`，你可能正在测试比单元更大的内容。这可能没关系，但它可能意味着减少依赖的机会。参见第 3 章《测试双胞》，第 53 页了解如何这样做。
 
-## 使用生命周期方法进行设置和卸载 · 125
-
-如果你的测试需要在每个测试之前初始化一些内容，你可以在测试类中声明多个 `@BeforeEach` 方法，每个方法都有不同的名称。这些方法的执行没有固定的顺序，就像测试方法一样。
-
-创建额外的 `@BeforeEach` 方法允许你使用名称来描述输入的内容。当然，你也可以将所有初始化合并到一个 `@BeforeEach` 方法中，只要它让其他开发者阅读时容易理解。
-
-你可以在测试类中拥有多个（静态）@BeforeAll` 方法。
-
 ## 使用 @AfterEach 和 @AfterAll 进行清理
 
-JUnit 将初始化钩子 `@BeforeEach` 和 `@BeforeAll` 与相应的“清理”生命周期方法 `@AfterEach` 和 `@AfterAll` 绑定。这些方法允许你在测试完成后清理资源。如果任何测试抛出异常，只要 JUnit 本身没有崩溃，@AfterEach` 和 `@AfterAll` 都保证执行。
+JUnit 将初始化钩子 `@BeforeEach` 和 `@BeforeAll` 与相应的“清理”生命周期方法 `@AfterEach` 和 `@AfterAll` 绑定。这些方法允许你在测试完成后清理资源。如果任何测试抛出异常，只要 JUnit 本身没有崩溃，`@AfterEach` 和 `@AfterAll` 都保证执行。
 
 例如，在 `@AfterEach` 中，你可能会关闭数据库连接或删除文件。如果你在 JUnit 中编写集成（非单元）测试，这些卸载钩是至关重要的。
 
@@ -4227,10 +3972,7 @@ JUnit 将初始化钩子 `@BeforeEach` 和 `@BeforeAll` 与相应的“清理”
 
 > 你的每个测试都负责确保它在干净、预期的状态执行。
 
-
-
-
-你通常可以设计代码，使得几乎没有单元测试需要清理工作，但你可能在极少数地方仍然需要 @AfterEach。
+你通常可以设计代码，使得几乎没有单元测试需要清理工作，但你可能在极少数地方仍然需要 `@AfterEach`。
 
 ## 将相关测试组织到嵌套类中
 
@@ -4240,44 +3982,41 @@ JUnit 将初始化钩子 `@BeforeEach` 和 `@BeforeAll` 与相应的“清理”
 
 为了帮助对相关分组，你可能考虑让每个相关测试以相同的名称开头。以下是三个描述 `Account` 类中取款如何工作的测试：
 
-```
+```java
 @Test void withdrawalReducesAccountBalance() { /* ... */ }
 @Test void withdrawalThrowsWhenAmountExceedsBalance() { /* ... */ }
 @Test void withdrawalNotifiesIRSWhenAmountExceedsThreshold() { /* ... */ }
 ```
 
-更好的解决方案是将相关测试分组在 JUnit 的 @Nested 类中：
+更好的解决方案是将相关测试分组在 JUnit 的 `@Nested` 类中：
 
-```
+```java
 @Nested
 class WithWithdrawal {
-  @Test void reducesAccountBalance() { /* ... */ }
-  @Test void throwsWhenAmountExceedsBalance() { /* ... */ }
-  @Test void notifiesIRSWhenAmountExceedsThreshold() { /* ... */ }
+    @Test void reducesAccountBalance() { /* ... */ }
+    @Test void throwsWhenAmountExceedsBalance() { /* ... */ }
+    @Test void notifiesIRSWhenAmountExceedsThreshold() { /* ... */ }
 }
 ```
 
-你可以在测试类中创建多个 @Nested 类，将类内部的所有方法分组。描述共同行为的嵌套类可以从每个测试名称中移除。
+你可以在测试类中创建多个 `@Nested` 类，将类内部的所有方法分组。描述共同行为的嵌套类可以从每个测试名称中移除。
 
-你还可以使用 @Nested 类根据上下文（由测试中 `arrange` 部分建立的状态）来对测试进行分组。例如：
+你还可以使用 `@Nested` 类根据上下文（由测试中 `arrange` 部分建立的状态）来对测试进行分组。例如：
 
-```
-class AnAccount
-@Nested
-class ZeroBalance {
-  @Test void doesNotAccrueInterest() { /* ... */ }
-  @Test void throwsOnWithdrawal() { /* ... */ }
-}
-```
+```java
+class AnAccount {
+    @Nested
+    class ZeroBalance {
+        @Test void doesNotAccrueInterest() { /* ... */ }
+        @Test void throwsOnWithdrawal() { /* ... */ }
+    }
 
-## 将相关测试组织到嵌套类中 · 127
-
-```
-@Nested
-class WithPositiveBalance {
-    @BeforeEach void fundAccount() { account.deposit(1000); }
-    @Test void accruesInterest() { /* ... */ }
-    @Test void reducesBalanceOnWithdrawal() { /* ... */ }
+    @Nested
+    class WithPositiveBalance {
+        @BeforeEach void fundAccount() { account.deposit(1000); }
+        @Test void accruesInterest() { /* ... */ }
+        @Test void reducesBalanceOnWithdrawal() { /* ... */ }
+    }
 }
 ```
 
@@ -4285,9 +4024,11 @@ class WithPositiveBalance {
 
 ## 观察 JUnit 生命周期
 
+
+
 你已经学习了如何使用 `beforeEach` 钩子以及如何将相关测试分组到嵌套类中。通过一个骨架测试类，让我们来看看在运行测试时这些 JUnit 元素是如何参与其中的。
 
-`AFundedAccount` 包含六个测试。根据它的名称，所有测试都可以假设账户存在且具有正余额。账户对象在字段级别创建，随后在 @BeforeEach 方法中找到。这里是整个 `AFundedAccount` 测试类，去除了每个测试的所有复杂细节。
+`AFundedAccount` 包含六个测试。根据它的名称，所有测试都可以假设账户存在且具有正余额。账户对象在字段级别创建，随后在 `@BeforeEach` 方法中找到。这里是整个 `AFundedAccount` 测试类，去除了每个测试的所有复杂细节。
 
 ```
 ut3-junit5/src/test/java/scratch/AFundedAccount.java
@@ -4356,15 +4097,15 @@ class Withdrawal {
 }
 ```
 
-虽然你可以在 @BeforeEach 方法中实例化账户字段，但在字段级别进行初始化也没有什么问题，特别是当操作并不不多时。`AFundedAccount` 中的字段声明初始化了一个具有任意名称的账户，因此它并不有趣到足以需要一个 @BeforeEach 方法。如果你的通用初始化具有任何趣味或需要一系列语句，你绝对会希望它在 @BeforeEach 方法中发生。
+虽然你可以在 `@BeforeEach` 方法中实例化账户字段，但在字段级别进行初始化也没有什么问题，特别是当操作并不不多时。`AFundedAccount` 中的字段声明初始化了一个具有任意名称的账户，因此它并不有趣到足以需要一个 `@BeforeEach` 方法。如果你的通用初始化具有任何趣味或需要一系列语句，你绝对会希望它在 `@BeforeEach` 方法中发生。
 
-使用 @Nested 可以让你在运行测试时获得组织良好的测试结果：
+使用 `@Nested` 可以让你在运行测试时获得组织良好的测试结果：
 
 ![](img/5f9fd301af41bda177ca04d9f939d028_145_0.png)
 
 你可以清晰地看到相关测试的分组，这更容易找到你正在寻找的内容。视觉分组也更容易发现必要的测试的明显缺失，或者对其进行一致性审查——与其他测试一致，或与你团队的测试命名标准一致。
 
-我在每个 @Before 方法、@Test 方法和 @Nested 方法中都添加了 `System.out` 语句。以下是测试运行时的输出：
+我在每个 `@Before` 方法、`@Test` 方法和 `@Nested` 方法中都添加了 `System.out` 语句。以下是测试运行时的输出：
 
 ```
 @BeforeAll::clearAccountRegistry
@@ -4407,7 +4148,7 @@ AccruingInterest
 doesNotOccurWhenMinimumMet
 ```
 
-静态的 @BeforeAll 方法首先执行。
+静态的 `@BeforeAll` 方法首先执行。
 
 输出显示每个测试都会创建一个新的 `AFundedAccount` 实例。它还显示账户如预期地初始化为零余额。
 
@@ -4415,15 +4156,15 @@ doesNotOccurWhenMinimumMet
 
 > JUnit 为每个测试方法创建测试类的新实例。
 
-位于 `AFundedAccount` 顶层作用域的 @BeforeEach 方法 fundAccount 在每个测试之前执行。
+位于 `AFundedAccount` 顶层作用域的 `@BeforeEach` 方法 `fundAccount` 在每个测试之前执行。
 
-在 `AccruingInterest` 作用域内的 @BeforeEach 方法 setInterestRate 在每个三个测试之前执行。
+在 `AccruingInterest` 作用域内的 `@BeforeEach` 方法 `setInterestRate` 在每个三个测试之前执行。
 
 ## 避免依赖绝望：不要为测试排序！
 
 JUnit 测试并不是按照声明（从上到下）顺序运行的。事实上，它们并不是按照任何你容易确定或依赖的顺序运行，例如字母顺序（它们可能按 `getClass()` 返回的顺序返回）。
 
-你可能认为认为测试是按特定顺序运行的：“我正在编写一个关于新创建账户的测试，它们的余额为零。第二个测试可以向账户添加 100，我可以验证该金额。然后我可以添加第三个运行的测试，在其中将存入 50 并确保新余额为 150。”
+你可能认为测试是按特定顺序运行的：“我正在编写一个关于新创建账户的测试，它们的余额为零。第二个测试可以向账户添加 100，我可以验证该金额。然后我可以添加第三个运行的测试，在其中将存入 50 并确保新余额为 150。”
 
 虽然 JUnit 5 提供了一种强制执行顺序的方法，但用于单元测试是一个坏主意。依赖测试顺序可能帮助你避免在多个测试用例中重复测试通用设置。但它通常会引导你走向浪费时间的道路。例如，你正在运行测试，第四个测试失败了。是因为生产代码中的真实问题吗？还是因为之前的三个测试之一（哪一个？）将系统留在了新的意想不到的状态？
 
@@ -4431,10 +4172,7 @@ JUnit 测试并不是按照声明（从上到下）顺序运行的。事实上�
 
 > 单元测试应该验证隔离的代码单元，并且不依赖于任何执行顺序。
 
-与其通过强制测试顺序来头疼，不如使用 @BeforeEach 来减少通用初始化的重复。你还可以提取辅助方法以减少冗余并提高你测试的抽象层次。
-
-
-
+与其通过强制测试顺序来头疼，不如使用 `@BeforeEach` 来减少通用初始化的重复。你还可以提取辅助方法以减少冗余并提高你测试的抽象层次。
 
 ## 使用参数化测试执行多个数据用例
 
@@ -4452,13 +4190,13 @@ storesCommaSeparatedStringWhenContainingManyElements
 
 有时，当测试之间存在冗余时，你可能并不兴趣如何将它们区分开。例如，假设你有一个为将阿拉伯数字转换为罗马数字的代码编写的测试：
 
-```java
+```
 ut3-junit-01/src/main/java/util/RomanNumberConverter.java
 public class RomanNumberConverter {
     record Digit(int arabic
 ```
 
-```java
+```
 return new Digit(
 acc.arabic - digitsRequired * conversion.arabic,
 acc.roman + conversion.roman.repeat(digitsRequired));
@@ -4467,7 +4205,7 @@ acc.roman + conversion.roman.repeat(digitsRequired));
 
 算法和行为都没有根据输入的变化而改变。无论你将其编码为独立的 JUnit 测试，测试名称之间会有有用的区分：
 
-```java
+```
 ut3-junit-01/src/test/java/util/ARomanNumberConverter.Test;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -4499,7 +4237,7 @@ assertEquals("III", converter.toRoman(3));
 
 这里是 `RomanNumberConverter` 的一个参数化测试：
 
-```java
+```
 ut3-junit/01/src/test/java/util/ARomanNumberConverter.java
 @ParameterizedTest
 @CsvSource({
@@ -4539,22 +4277,16 @@ JUnit 文档更详细地说明了各种数据源机制。
 ## 以下是快速总结：
 
 - `@ValueSource` 单个值数组。仅当你的测试接收一个参数时才有用（这意味着对于每个源值，预期结果都是相同的）。
+
 - `@EnumSource` 迭代所有可能的枚举值，并提供某些包含/排除选项和正则表达式匹配。
+
 - `@MethodSource` 期望方法名，该方法必须在流中返回所有数据。
+
 - `@CsvSource` 与 `@CsvFileSource` 基本相同，不同之处在于你可以指定一个包含 CSV 行的文件。
+
 - `@ArgumentsSource` 允许你在扩展了 `ArgumentsProvider` 接口的类中创建自定义且可重用的数据源。
 
 虽然 JUnit 中的参数化测试是复杂且灵活的工具，但 `@CsvSource` 将满足你的大部分需求。我从未需要其他数据源变体。
-
-虽然 JUnit 中的参数化测试是非常强大且灵活的工具，但 `@CsvSource` 将满足你的大部分需求。我从未需要其他数据源变体。
-
-虽然 JUnit 中的参数化测试是非常强大且灵活的工具，但 `@CsvSource` 将满足你的大部分需求。我从未需要其他数据源变体。
-
-虽然 JUnit 中的参数化测试是非常强大且灵活的工具，但 `@CsvSource` 将满足你的大部分需求。我从未需要其他数据源变体。
-
-虽然 JUnit 中的参数化测试是非常强大且灵活的工具，但 `@CsvSource` 将满足你的大部分需求。我从未需要其他数据源变体。
-
-虽然 JUnit 中的参数化测试是非常强大且灵活的工具，但 `@CsvSource` 将满足你的大部分需求。我从未需要其他数据源变体。
 
 在大多数系统中，你会拥有成百上千的单元测试。你希望通过利用一些 JUnit 特性（包括生命周期方法、嵌套类和参数化测试）来降低维护成本。这些功能允许你减少冗余代码并运行。
 
@@ -4571,7 +4303,9 @@ JUnit 文档更详细地说明了各种数据源机制。
 在本章中，你将学习运行测试的“何时”、“什么”以及更多关于“如何”：
 
 - 执行 JUnit 时想要运行的单元测试
+
 - 使用 JUnit `@Tag` 注解对测试分组，以便执行任意组
+
 - 使用 `@Disabled` 注解临时不运行测试
 
 ## 测试习惯：运行哪些测试
@@ -4588,7 +4322,6 @@ JUnit 文档更详细地说明了各种数据源机制。
 
 类的更改可能会破坏其他类的测试。`Account` 的行为由 `AnAccount` 和 `AFundedAccount` 中的测试验证。如果所有可能受影响的测试类都在同一个包中，请进一步。
 
-
 运行该包中的所有测试。如果运行该包中的所有测试太慢，我有一个同样的直率建议：修复问题。
 
 > 尽可能多地运行你能忍受的测试，尽可能频繁地运行你能忍受的。
@@ -4598,14 +4331,17 @@ JUnit 文档更详细地说明了各种数据源机制。
 ## 使用标签创建任意测试组
 
 JUnit 5 允许你使用 `@Tag` 注解对测试或测试方法进行标记。
+
 你可以将这些标签作为使用 JUnit 运行任意测试集的依据。这被称为对你的测试进行过滤。
 
 让我们来看一个例子。在对 `Account` 类进行更改时，你应该运行 `Account` 和 `AnFundedAccount` 中的所有测试。你可以运行包含这些类的包中的所有测试，但你也可以使用标签来精确指定要运行的测试子集。
 
 在这两个类上都标记 `@Tag` 注解：
 
-```
+
+
 ut3-junit/01/src/test/java/tags/AnAccount.java
+```java
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 // ...
@@ -4621,14 +4357,14 @@ class AnAccount {
 }
 ```
 
-```
 ut3-junit/01/src/test/java/tags/AnFundedAccount.java
+```java
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 // ...
 ```
 
-```
+```java
 @Tag("account")
 class AnUnfundedAccount {
   // ...
@@ -4649,13 +4385,13 @@ class AnUnfundedAccount {
 
 在 IntelliJ IDEA 中，你可以在 `Run/Debug Configurations` 对话框中配置测试如何运行。
 
-从 IDEA 的主菜单，通过选择 `Run Edit Configurations` 进入 `Run/Debug Configurations` 对话框。在 `Run/Configurations` 对话框中，点击 `+` 按钮添加新配置。IDEA 提供了一个名为 `New Configuration` 的下拉列表：从其长选项列表中选择 `JUnit`。
+从 IDEA 的主菜单，通过选择 `Run` > `Edit Configurations` 进入 `Run/Debug Configurations` 对话框。在 `Run/Configurations` 对话框中，点击 `+` 按钮添加新配置。IDEA 提供了一个名为 `New Configuration` 的下拉列表：从其长选项列表中选择 `JUnit`。
 
 对话框默认运行单个类中的测试；你需要更改它以告诉 JUnit 运行一个标签。在对话框的 `Build` and `run` 部分中，你应该能看到一个当前选中为 `Class` 的下拉列表。改为从该下拉列表中选择 `Tags`。在下拉列表右侧的输入框中，输入文本 `account` 作为要执行的标签。此文本必须与你在 `@Tag` 声明中指定的“account”字符串匹配。
 
 你的对话框看起来应该与第 139 页的图相似。
 
-> 指定 `ut3-junit` 为类路径 (-cp) 可能会产生错误。确保你已选择 `ut3-junit.test`。
+> 指定 `ut3-junit` 为类路径 (`-cp`) 可能会产生错误。确保你已选择 `ut3-junit.test`。
 
 - 1. https://junit.org/junit5/docs/current/user-guide/#running-tests
 
@@ -4671,14 +4407,11 @@ IDEA 支持*标签表达式*（tag expressions），这是允许更复杂过滤�
 
 除了标记两个账户相关的测试类外，假设你还想运行与发现的缺陷的热修复相关的测试集。你可能标记了单个测试方法：
 
-```
 ut3-junit/01/src/test/java/tags/AnInMemoryDatabase.java
-```
+```java
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 
-- import org.junit.jupiter.api.Tag;
-- import org.junit.jupiter.api.Test;
-
-```
 class AnInMemoryDatabase {
   // ...
   @Tag("v1.1_defects")
@@ -4694,7 +4427,7 @@ class AnInMemoryDatabase {
 
 在你的运行配置中指定标签时，你可以输入以下标签表达式：
 
-account | v1.1_defects
+`account | v1.1_defects`
 
 `|` (或) 运算符表示 JUnit 应该运行标记为“account”的测试与标记为“v1.1_defects”的测试并集。具体来说，JUnit 将运行 `AnAccount` 和 `AnFundedAccount` 中的测试，以及名为 `objectCopiedAddedToDatabaseF` 的测试。
 
@@ -4718,7 +4451,7 @@ account | v1.1_defects
 
 # ut3-junit/01/src/test/java/scratch/AnUnFundedAccount.java
 
-```
+```java
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -4738,7 +4471,7 @@ class AnUnFundedAccount {
 
 `@Disabled` 提供的信息字符串是可选的。在某些情况下，你应该使用它来描述为什么禁用了测试：
 
-@Disabled("修复后明天")
+`@Disabled("修复后明天")`
 
 在代码库中集成禁用测试通常是坏习惯。你使用的 JUnit 运行器，无论是内置在 IDE 中还是你的构建工具（如 Gradle 或 Maven），都应该明确表示某些测试被禁用了。在以下情况下，测试 `disallowsals` 标记了“符号”：
 
@@ -4762,9 +4495,6 @@ Gradle 是在持续构建环境中构建和运行测试的极佳方法。但在�
 
 遗憾的是，默认情况下使用 Gradle 在命令行运行测试时，只有当至少有一个测试失败时，它才会 true你存在禁用测试。而且只有当你向上滚动 Gradle 输出时才能看到。让它在存在禁用测试时导致测试运行失败，或者作为最后一行显示它们的数量。
 
-
-
-
 ## 总结
 
 在本章以及之前的两章（深入探讨了 JUnit 的章节）中，你已经学习了编写断言、组织测试和运行测试所需的大部分知识。
@@ -4778,6 +4508,7 @@ Gradle 是在持续构建环境中构建和运行测试的极佳方法。但在�
 将你的单元测试提升到不仅仅是逻辑验证的高度。在这一部分，学习如何使用测试来维护整洁的代码——无论是“局部”还是“宏观”——并记录你系统的单元能力。
 
 ## 第 8 章
+
 ## 重构为更整洁的代码
 
 在第一、第二部分中，你深入研究了如何编写单元测试以及如何利用 JUnit。在这一部分，你将学习如何利用单元测试来帮助构建系统设计，并记录你所做的许多单元级行为选择。你保持系统更简单、测试更清晰的能力可以显著降低开发成本。
@@ -4817,8 +4548,8 @@ Gradle 是在持续构建环境中构建和运行测试的极佳方法。但在�
 
 你将清理的是一个来自 iloveybous 的代码（尽管是不同的版本）。请参阅第 80 页的“加剧线程问题”以概述该应用程序。查看 iloveybous 中的 `Profile` 类：
 
-```
 ut3-refactor/01/src/main/java/iloveybous/Profile.java
+```java
 import java.util.*;
 import static iloveybous.Weight.*;
 public class Profile {
@@ -4864,148 +4595,7 @@ public class Profile {
 
 充分测试该类的行为需要七个测试：
 
-```
-ut3-refactor/01/src/test/java/iloveybsov.java
-import org.junit.jupiter.api.*;
-import static iloveybsov.Weight.*;
-import static iloveybsov.YesNo.*;
-import static org.junit.jupiter.Assertions.*;
-class Profile {
-    Profile profile = new Profile("Geeks Inc.");
-    Criteria criteria;
 
-    Question freeLunch;
-    Answer freeLunchYes;
-    Answer freeLunchNo;
-
-    Question bonus;
-    Answer bonusYes;
-    Answer bonusNo;
-
-    Question gym;
-    Answer hasGymNo;
-    Answer hasGymYes;
-
-    String[] NO_YES = {NO.toString(), YES.toString()};
-    @Before
-    void createQuestionsAndAnswers() {
-        bonus = new Question("Bonus?", NO, 1);
-        bonusYes = new Answer(bonus, YES);
-        bonusNo = new Answer(bonus, NO);
-
-        freeLunch = new Question("Free lunch?", NO, 1);
-        freeLunchYes = new Answer(freeLunch, YES);
-        freeLunchNo = new Answer(freeLunch, NO);
-
-        gym = new Question("Gym?", NO, 1);
-        hasGymYes = new Answer(gym, YES);
-        hasGymNo = new Answer(gym, NO);
-    }
-}
-```
-
-report erratum • discuss
-
-
-
-
-
-```java
-@Nested
-class DoesNotMatch {
-  @Test
-  void whenAnyRequiredCriteriaNotMet() {
-    profile.add(freeLunchNo, bonusYes);
-    criteria = new Criteria(
-      new Criterion(freeLunchYes, REQUIRED),
-      new Criterion(bonusYes, IMPORTANT));
-    var matches = profile.matches(criteria);
-    assertFalse(matches);
-  }
-
-  @Test
-  void whenNoneOfMultipleCriteriaMatch() {
-    profile.add(bonusNo, freeLunchNo);
-    criteria = new Criteria(
-      new Criterion(bonusYes, IMPORTANT),
-      new Criterion(freeLunchYes, IMPORTANT));
-    var matches = profile.matches(criteria);
-    assertFalse(matches);
-  }
-}
-@Nested
-class Matches {
-  @Test
-  void whenCriteriaIrrelevant() {
-    profile.add(freeLunchNo);
-    criteria = new Criteria(
-      new Criterion(freeLunchYes, RELEVANT));
-    var matches = profile.matches(criteria);
-    assertTrue(matches);
-  }
-
-  @Test
-  void whenAnyOfMultipleCriteriaMatch() {
-    profile.add(bonusNo, freeLunchNo);
-    criteria = new Criteria(
-      new Criterion(bonusYes, IMPORTANT),
-      new Criterion(freeLunchYes, IMPORTANT));
-    var matches = profile.matches(criteria);
-    assertTrue(matches);
-  }
-}
-```
-
-```java
-@Nested
-class Score {
-  @Test
-  void zeroWhenThereAreNoMatches() {
-    profile.add(bonusNo);
-    criteria = new Criteria(
-      new Criterion(bonusYes, IMPORTANT)
-    );
-    profile.matches(criteria);
-    assertEquals(0, profile.score());
-  }
-
-  @Test
-  void doesNotIncludeUnRequiredCriteria() {
-    profile.add(bonusNo, freeLunch);
-    criteria = new Criteria(
-      new Criterion(bonusYes, REQUIRED),
-      new Criterion(freeLunch, IMPORTANT)
-    );
-    profile.matches(criteria);
-    assertEquals(IMPORTANT.value(), profile.score());
-  }
-
-  @Test
-  void equalsCriterionValueForSingleMatch() {
-    profile.add(bonusYes);
-    criteria = new Criteria(
-      new Criterion(bonusYes, IMPORTANT)
-    );
-    profile.matches(criteria);
-    assertEquals(IMPORTANT.value(), profile.score());
-  }
-
-  @Test
-  void sumsCriterionValuesForMatches() {
-    profile.add(bonusYes, freeLunch, hasGymNo);
-    criteria = new Criteria(
-      new Criterion(bonusYes, IMPORTANT),
-      new Criterion(freeLunch, NICE_TO_HAVE),
-      new Criterion(hasGymYes, VERY_IMPORTANT)
-    );
-    profile.matches(criteria);
-    assertEquals(IMPORTANT.value() + NICE_TO_HAVE.value(),
-      profile.score());
-  }
-}
-```
-
-这些测试示例将帮助你理解 `Profile` 类。
 
 # 提取方法：你的第二优重构拍档
 
@@ -5028,7 +4618,7 @@ public boolean matches(Criteria criteria) {
 }
 ```
 
-赋值语句的右侧似乎定义了何时存在匹配。具体来说，它表示当标准是无关的（IRRELEVANT），或者该标准的答案与配置中对应的答案匹配时，就存在匹配。通过将其提取到命名为 `isMatch` 的独立方法中隔离这种复杂度。在 IntelliJ IDEA 中，通过以下方法密集型步骤提取方法：
+赋值语句的右侧似乎定义了何时存在匹配。具体来说，它表示当标准是无关的（`IRRELEVANT`），或者该标准的答案与配置中对应的答案匹配时，就存在匹配。通过将其提取到命名为 `isMatch` 的独立方法中隔离这种复杂度。在 IntelliJ IDEA 中，通过以下方法密集型步骤提取方法：
 
 1. 高亮显示适当的代码。
 2. 打开上下文菜单（通过右键点击）。
@@ -5038,13 +4628,14 @@ public boolean matches(Criteria criteria) {
 
 IntelliJ 会创建一个包含高亮代码的方法，并用对新方法的调用替换高亮代码。
 
-在提取 `isMatches` 后，你在 `matches` 中留下了一个简单的声明，并在 `Profile` 类中留下了一个简短的辅助方法：
+在提取 `isMatch` 后，你在 `matches` 中留下了一个简单的声明，并在 `Profile` 类中留下了一个简短的辅助方法：
 
 ```
 utj3-refactor/02/src/main/java/iloveybouss/Profile.java
 for (var criterion: criteria) {
     var answer = answers.get(criterion.answer().questionText());
     // ...
+}
 ```
 
 ```
@@ -5055,7 +4646,7 @@ private boolean isMatch(Criterion criterion, Answer answer) {
 }
 ```
 
-提取 `isMatches` 后，你现在 `matches` 中留下了一个简单的声明，并在 `Profile` 类中有一个简短的辅助方法：
+提取 `isMatch` 后，你现在 `matches` 中留下了一个简单的声明，并在 `Profile` 类中有一个简短的辅助方法：
 
 > 在每次小改动后，运行测试以确保它们通过。安全移动代码的能力是单元测试最重要的益处之一。在缺乏足够测试的情况下，你会倾向于进行风险更改。
 
@@ -5071,14 +4662,8 @@ public boolean matches(Criteria criteria) {
     // ...
 ```
 
-
-
-
-
-## 第 8 章 重构为整洁的代码
-
 ```java
-for (var criterion: criterion) {
+for (var criterion: criteria) {
   var answer = answers.get(questionText(criterion));
   // ...
 }
@@ -5087,7 +4672,7 @@ for (var criterion: criterion) {
 
 ```java
 private String questionText(Criterion criterion) {
-  return criterion.answer.questionText();
+  return criterion.answer().questionText();
 }
 ```
 
@@ -5097,8 +4682,8 @@ private String questionText(Criterion criterion) {
 
 ```java
 utj3-refactor/05/src/main/java/iloveybouss/Profile.java
-// public boolean matches(Criteria criterion) {
-  for (var criterion: criterion) {
+// public boolean matches(Criteria criteria) {
+  for (var criterion: criteria) {
     var answer = answers.get(criterion.questionText());
     // ...
 }
@@ -5121,9 +4706,9 @@ public record Criterion(Answer answer, Weight weight) {
 
 ```java
 utj3-refactor/06/src/main/java/iloveybouss/Profile.java
-public boolean matches(Criteria criterion) {
+public boolean matches(Criteria criteria) {
   // ...
-  for (var criterion: criterion) {
+  for (var criterion: criteria) {
     var answer = profileAnswerMatching(criterion);
     var match = criterion.isMatch(answer);
     // ...
@@ -5139,15 +4724,15 @@ private Answer profileAnswerMatching(Criterion criterion) {
 
 每一个提取出的方法都在一点点增加 `matches` 的简洁性。为新方法使用意图清晰的命名可以增加 `matches` 的清晰度。新方法还代表了将责任移动到它们所属位置的机会。`Profile` 变得更加简单，而之前空空的 `Criterion` 则变得更有用了。
 
-## 价值较小的临时变量
+# 价值较小的临时变量
 
 临时变量（'temps'）有许多用途。它们可以缓存昂贵计算的结果或在方法体中发生变化的集合。方法还可以明确代码的意图——如果它只使用一次，那么这是一个有效的选择。
 
 在 `matches` 中，`answer` 变量没有提供上述三个优点之一。你可以通过将它的出现处替换为 `answerMatching(criterion)` 表达式来内联这种意义的操作。在 IntelliJ IDEA 中，按照以下步骤内联变量：
 
-- 1. 点击它的名称。
-- 2. 打开上下文菜单（通过右键）。
-- 3. 从赋值处选择 重构 ► 内联变量 (Inline Variable)。
+1. 点击它的名称。
+2. 打开上下文菜单（通过右键）。
+3. 从赋值处选择 重构 ► 内联变量 (Inline Variable)。
 
 对该变量的所有引用都被替换为赋值的右侧部分。赋值语句消失了：
 
@@ -5164,7 +4749,7 @@ public boolean matches(Criteria criteria) {
 
 可以直接理解 `match` 的真实意图。换句话之：当 `criterion` 匹配对应的个人答案时，即存在一个 `match`。
 
-## 通过自动化重构加速
+# 通过自动化重构加速
 
 当然，你可以手动执行此操作或任何其他重构，通过剪切粘贴小段代码直到达到相同结果。但一旦你学会了优秀的 IDE 执行工作速度至少比手动操作快十倍，那么不充分利用这种力量就没什么意义了。
 
@@ -5174,9 +4759,11 @@ public boolean matches(Criteria criteria) {
 
 你很幸运：20 年前，大多数 Java 程序员以极不安全的方式手动移动代码。30 年前，自动化重构工具还不存在。今天，它们赋予的力量和速度是无法估量的。你可以看着电脑做脏活，并知道你的代码仍然运行。
 
-## 放大代码的核心意图
+# 放大代码的核心意图
 
 让我们重新审视稍微改进过的 `matches.java`：
+
+
 
 ```java
 ut3-refactor/07/src/main/java/iloveybouss/Profile.java
@@ -5234,11 +4821,11 @@ public boolean matches(Criteria criteria) {
 }
 ```
 
-你的的目标是：将所有与该判断相关的逻辑移动到它自己的方法中。步骤如下：
+你的目标是：将所有与该判断相关的逻辑移动到它自己的方法中。步骤如下：
 
-- 1. 将返回语句更改为调用新方法 `anyMatches()` 的结果。
-- 2. 创建一个返回布尔值的新方法 `anyMatches`。
-- 3. 复制（而不是剪切）相关逻辑到新方法中。
+1. 将返回语句更改为调用新方法 `anyMatches()` 的结果。
+2. 创建一个返回布尔值的新方法 `anyMatches`。
+3. 复制（而不是剪切）相关逻辑到新方法中。
 
 结果：
 
@@ -5276,10 +4863,10 @@ private boolean anyMatches(Criteria criteria) {
 }
 ```
 
-这种更改没有自动化重构可用。你正在进行风险更大的手动更改，所以请运行你的测试！一旦，删除 `matches` 中引用 `anyMatches` 变量的代码行：
+这种更改没有自动化重构可用。你正在进行风险更大的手动更改，所以请运行你的测试！一旦通过，删除 `matches` 中引用 `anyMatches` 变量的代码行：
 
 ```java
-utj3-refactor/10/src/main/java/iloveyouboss/Profile.java
+ut3-refactor/10/src/main/java/iloveyouboss/Profile.java
 public boolean matches(Criteria criteria) {
   score = 0;
   var kill = false;
@@ -5298,9 +4885,6 @@ public boolean matches(Criteria criteria) {
   return anyMatches(criteria);
 }
 ```
-
-
-
 
 循环当然必须保留，给 `match` 变量赋值的行代码也必须保留。
 
@@ -5326,9 +4910,8 @@ public boolean matches(Criteria criteria) {
     }
     return anyMatches(criteria);
 }
-```
 
-- private void calculateScore(Criteria criteria) {
+private void calculateScore(Criteria criteria) {
     score = 0;
     for (var criterion : criteria) {
         var match = criterion.isMatch(profileAnswerMatching(criterion));
@@ -5346,16 +4929,13 @@ public boolean matches(Criteria criteria) {
 保留在循环中的代码在配置不符合必要条件时会中断执行并返回 `false`。同样，将此逻辑提取到新方法 `anyRequiredCriteriaNotMet`：
 
 ```java
-utj3-refactor/12/src/java/ileoveyouboss/Profile.java
-
+ut3-refactor/12/src/main/java/iloveyouboss/Profile.java
 public boolean matches(Criteria criteria) {
     calculateScore(criteria);
-
     var kill = anyRequiredCriteriaNotMet(criteria);
     if (kill) {
         return false;
     }
-
     return anyMatches(criteria);
 }
 
@@ -5363,11 +4943,10 @@ private boolean anyRequiredCriteriaNotMet(Criteria criteria) {
     var kill = false;
     for (var criterion: criteria) {
         var match = criterion.isMatch(profileAnswerMatching(criterion));
-        if (!match && criterion.weight(criterion) == REQUIRED) {
+        if (!match && criterion.weight() == REQUIRED) {
             kill = true;
         }
     }
-
     return kill;
 }
 ```
@@ -5395,13 +4974,13 @@ private boolean anyRequiredCriteriaNotMet(Criteria criteria) {
 在 JUnit 测试上下文中以下代码（尽管它没有断言且目前还不是测试）显示了经过的毫秒数。探针创建了一个包含 20 个问题的 `Criteria` 对象。它循环了一百万次。每次循环创建一个新的 `Profile`，为这 20 个问题添加随机答案，然后确定该 `profile` 是否符合标准。
 
 ```java
-ut3-refactor/sc12/test/java/iloveyoubous/AProfilePerformance.java
+ut3-refactor/sc12/test/java/iloveyouboss/AProfilePerformance.java
 import org.junit.Test;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
-import static iloveyoubous.YesNo.*;
+import static iloveyouboss.YesNo.*;
 import static java.util.stream.IntStream.range;
 
 class AProfilePerformance {
@@ -5420,9 +4999,9 @@ class AProfilePerformance {
         if (profile.matches(criteria)) {
             matchCount.incrementAndGet();
         }
-        System.out.println("elapsed: " + elapsedMs);
-        System.out.println("matches: " + matchCount.get());
     });
+    System.out.println("elapsed: " + elapsedMs);
+    System.out.println("matches: " + matchCount.get());
   }
 
   long time(int iterations, Consumer<Integer> func) {
@@ -5431,50 +5010,49 @@ class AProfilePerformance {
     return (System.nanoTime() - start) / 1000000;
   }
 
-int numberOfWeights = Weight.values().length;
-
-Weight randomWeight() {
+  int numberOfWeights = Weight.values().length;
+  Weight randomWeight() {
     if (isEqualToTimesly()) return REQUIRED;
     var nonRequiredIndex = random.nextInt(numberOfWeights - 1) + 1;
     return Weight.values()[nonRequiredIndex];
-}
+  }
 
-private boolean isEqualToTimesly() {
+  private boolean isEqualToTimesly() {
     return random.nextInt(10) == 0;
-}
+  }
 
-Answer randomAnswer() {
+  Answer randomAnswer() {
     return random.nextInt(2) == 0 ? NO : YES;
-}
+  }
 
-Answer[] createAnswers(List<Question> questions) {
+  Answer[] createAnswers(List<Question> questions) {
     return range(0, questionCount)
         .mapToObj(i -> new Answer(questions.get(i), randomAnswer()))
         .toArray(Answer::new);
-}
+  }
 
-List<Question> createQuestions() {
+  List<Question> createQuestions() {
     String[] noYes = {NO.toString(), YES.toString()};
     return range(0, questionCount)
         .mapToObj(i -> new Question("" + i, noYes))
         .toList();
-}
+  }
 
-List<Criterion> createCriteria(List<Question> questions) {
+  List<Criterion> createCriteria(List<Question> questions) {
     return range(0, questionCount)
-        .mapToObj(i -> new Criterion(new Answer(questions.get(i), randomAnswer()))
+        .mapToObj(i -> new Criterion(new Answer(questions.get(i), randomAnswer())))
         .toList();
+  }
 }
 ```
 
 
 
+# 整洁的设计是你优化的最佳起点
 
-# 整洁的设计是你优化的最佳起点。
+注意：这个探测代码（probe）旨在作为一次性代码使用。然而，你可能需要将其提升到集成测试套件中，如果有人推送了违反执行时间阈值的解决方案，该测试将失败。要做到这一点，你需要添加一个断言，确保探测代码在几毫秒内完成。挑战在于如何根据不同的执行上下文（例如不同的机器和负载）确定 x 应该是多少。一种方法是在测试执行过程中动态计算阈值，使用简单、稳定操作的基准测量值。
 
-注意：这个探测代码（probe）旨在作为一次性代码使用。然而，你可能需要将其提升到集成测试套件中，如果有人推送了违反执行时间阈值的解决方案，该测试将失败。要做到这一点，你需要添加一个断言，确保探测代码在几毫秒内完成。挑战在于在于如何根据不同的执行上下文（例如不同的机器和负载）确定 x 应该是多少。一种方法是在测试执行过程中动态计算阈值，使用简单、稳定操作的基准测量值。
-
-接下来，你会将 `for-each` 循环改为使用 Java 流流接口。在测试的支持下，这种重构允许你通过并行执行流的方式来提高性能。
+接下来，你会将 `for-each` 循环改为使用 Java 流接口。在测试的支持下，这种重构允许你通过并行执行流的方式来提高性能。
 
 # 最终清理
 
@@ -5484,9 +5062,11 @@ List<Criterion> createCriteria(List<Question> questions) {
 
 ```
 ut3-refactor/13/src/main/java/iloveyouboss/Profile.java
+
 private boolean anyMatches(Criteria criteria) {
-    return anyMatch(criterion) ->
-        criterion.isMatch(profileAnswerMatching(criterion));
+    return criteria.stream()
+        .anyMatch(criterion ->
+            criterion.isMatch(profileAnswerMatching(criterion)));
 }
 ```
 
@@ -5494,7 +5074,8 @@ private boolean anyMatches(Criteria criteria) {
 
 ```
 ut3-refactor/13/src/main/java/iloveyouboss/Criteria.java
-public Stream<Criteria> stream() {
+
+public Stream<Criterion> stream() {
     return criteria.stream();
 }
 ```
@@ -5503,23 +5084,25 @@ public Stream<Criteria> stream() {
 
 ```
 ut3-refactor/13/src/main/java/iloveyouboss/Profile.java
+
 private void calculateScore(Criteria criteria) {
-    int score = criteria.stream()
-        .filter(criterion) ->
-        criterion.isMatch(profileAnswerMatching(criterion))
+    score = criteria.stream()
+        .filter(criterion ->
+            criterion.isMatch(profileAnswerMatching(criterion)))
         .mapToInt(criterion -> criterion.weight().value())
         .sum();
 }
 ```
 
-以类似的方式清理 `anyRequiredCriteriaNotMet` 后，如果没有那个（命名糟糕的）`kill temporary` 临时变量，代码将变得简单得多：
+以类似的方式清理 `anyRequiredCriteriaNotMet` 后，如果没有那个（命名糟糕的）`kill` 临时变量，代码将变得简单得多：
 
 ```
 ut3-refactor/13/src/main/java/iloveyouboss/Profile.java
+
 private boolean anyRequiredCriteriaNotMet(Criteria criteria) {
     return criteria.stream()
         .filter(criterion ->
-            criterion.isMatch(profileAnswerMatching(criterion))
+            criterion.isMatch(profileAnswerMatching(criterion)))
         .anyMatch(criterion -> criterion.weight() == REQUIRED);
 }
 ```
@@ -5530,6 +5113,7 @@ private boolean anyRequiredCriteriaNotMet(Criteria criteria) {
 
 ```
 ut3-refactor/13/src/main/java/iloveyouboss/Profile.java
+
 public boolean matches(Criteria criteria) {
     calculateScore(criteria);
     if (anyRequiredCriteriaNotMet(criteria)) return false;
@@ -5551,7 +5135,7 @@ public boolean matches(Criteria criteria) {
 
 现在，你重构的 `matches` 代码清楚地说明了发生了什么。但它也对更大的设计蓝图引起了一些关注。例如，`Profile` 类可能承担了太多。
 
-在下一章中，你将探索你的设计在何失效。你将利用测试来支持事物回归正轨。
+在下一章中，你将探索你的设计在何处失效。你将利用测试来支持事物回归正轨。
 
 # 重构你的代码结构
 
@@ -5562,7 +5146,8 @@ public boolean matches(Criteria criteria) {
 - 你如何在字段中捕获状态
 - 你如何将代码组织成方法
 - 这些方法如何相互作用
-- 对于许多开发者来说，软件系统的设计主要是一个“宏”问题：
+
+对于许多开发者来说，软件系统的设计主要是一个“宏”问题：
 
 - 你如何将类组织成包
 - 你如何将方法组织成类
@@ -5578,8 +5163,9 @@ public boolean matches(Criteria criteria) {
 
 看看 `Profile` 类：
 
-```java
+```
 ut3-refactor/13/src/main/java/iloveyouboss/Profile.java
+
 import java.util.HashMap;
 import java.util.Map;
 import static iloveyouboss.Weight.REQUIRED;
@@ -5592,13 +5178,13 @@ public class Profile {
     public Profile(String name) { this.name = name; }
 
     public void add(Answer... newAnswers) {
-        for (var answer: newAnswers)
+        for (var answer : newAnswers)
             answers.put(answer.questionText(), answer);
     }
 }
 ```
 
-```java
+```
 public boolean matches(Criteria criteria) {
     calculateScore(criteria);
     if (anyRequiredCriteriaMet(criteria)) return false;
@@ -5606,26 +5192,26 @@ public boolean matches(Criteria criteria) {
 }
 ```
 
-```java
+```
 private boolean anyRequiredCriteriaNotMet(Criteria criteria) {
     return criteria.stream()
         .filter(criterion ->
-            !criterion.is(profileAnswerMatching(criterion))
+            !criterion.isMatch(profileAnswerMatching(criterion)))
         .anyMatch(criterion -> criterion.weight() == REQUIRED);
 }
 ```
 
-```java
+```
 private void calculateScore(Criteria criteria) {
     score = criteria.stream()
         .filter(criterion ->
-            criterion.isMatch(profileAnswerMatching(criterion))
+            criterion.isMatch(profileAnswerMatching(criterion)))
         .mapToInt(criterion -> criterion.weight().value())
         .sum();
 }
 ```
 
-```java
+```
 private boolean anyMatches(Criteria criteria) {
     return criteria.stream()
         .anyMatch(criterion ->
@@ -5633,27 +5219,24 @@ private boolean anyMatches(Criteria criteria) {
 }
 ```
 
-```java
+```
 private Answer profileAnswerMatching(Criterion criterion) {
     return answers.get(criterion.questionText());
 }
 ```
 
-```java
+```
 public int score() {
     return score;
 }
 ```
 
-```java
+```
 @Override
 public String toString() {
     return name;
 }
 ```
-
-
-
 
 因此，由于第二个原因，这些也是可能的：你可能会随着时间的推移改变匹配算法的复杂程度。
 
@@ -5684,21 +5267,21 @@ SOLID、低耦合和高内聚的概念并不新，但它们并不“过时”。
 - 跟踪配置的相关信息。
 - 确定一组标准是否以及在多大程度上匹配配置。
 
-为了改进系统的设计，你把职责拆分为两个类，每个类都很小且遵循 SRP。为此此，你会将与配置匹配行为相关的代码提取到另一个类 `Matcher` 中与重构一样，你采取的是渐进路径——进行一个微小的更改并运行测试以确保它们仍然通过。
+为了改进系统的设计，你把职责拆分为两个类，每个类都很小且遵循 SRP。为此，你会将与配置匹配行为相关的代码提取到另一个类 `Matcher` 中。与重构一样，你采取的是渐进路径——进行一个微小的更改并运行测试以确保它们仍然通过。
 
 对于第一次更改，将 `calculateScore` 逻辑移动到 `Matcher`。从更改 `matches` 中的代码开始以声明你的意图：不要直接从 `matches` 计算 `calculateScore`，而是使用它所需的信息（答案的哈希映射和标准）构造一个新的 `Matcher` 对象，并将其赋值用于评分。
 
-```java
-// ut3-refactor/14/src/main/java/iloveyouboss/Profile.java
+```
+ut3-refactor/14/src/main/java/iloveyouboss/Profile.java
+
 public boolean matches(Criteria criteria) {
     score = new Matcher(criteria, answers).score();
-
     if (anyRequiredCriteriaNotMet(criteria)) return false;
     return anyMatches(criteria);
 }
 ```
 
-从 `Profile` 复制（而只是剪切）`calculateScore` 方法到 `Matcher`。在 `Matcher` 的构造函数中，首先将答案存储在字段中。然后，调用 `calculateScore` 方法，并将传递给构造函数的 `Criteria` 对象传递给它。
+从 `Profile` 复制（而不只是剪切）`calculateScore` 方法到 `Matcher`。在 `Matcher` 的构造函数中，首先将答案存储在字段中。然后，调用 `calculateScore` 方法，并将传递给构造函数的 `Criteria` 对象传递给它。
 
 添加一个评分字段和一个返回它的 `score()` 访问方法。
 
@@ -5706,9 +5289,11 @@ public boolean matches(Criteria criteria) {
 
 你的 `Matcher` 类现在看起来如下：
 
-```java
-// ut3-refactor/14/src/main/java/iloveyouboss/Matcher.java
+```
+ut3-refactor/14/src/main/java/iloveyouboss/Matcher.java
+
 import java.util.Map;
+
 public class Matcher {
     private final Map<String, Answer> answers;
     private int score;
@@ -5721,11 +5306,11 @@ public class Matcher {
     private void calculateScore(Criteria criteria) {
         score = criteria.stream()
             .filter(criterion -> criterion.isMatch(profileAnswerMatching(criterion)))
-            .mapToInt(criterion -> criterion.weight().value)
+            .mapToInt(criterion -> criterion.weight().value())
             .sum();
     }
 
-    private Answer profileAnswerMatching(Criteria criterion) {
+    private Answer profileAnswerMatching(Criterion criterion) {
         return answers.get(criterion.questionText());
     }
 
@@ -5747,8 +5332,9 @@ public class Matcher {
 
 你可以通过许多方式处理这次重构。让我们一次迈一小步。
 
-```java
-// utj3-refactor/15/src/main/java/iloveyouboss/Profile.java
+```
+ut3-refactor/15/src/main/java/iloveyouboss/Profile.java
+
 public boolean matches(Criteria criteria) {
     score = new Matcher(criteria, answers).score();
     if (anyRequiredCriteriaNotMet(criteria)) return false;
@@ -5758,16 +5344,24 @@ public boolean matches(Criteria criteria) {
 
 将这两行高亮代码提取到除 `matches`（已使用）以外的方法中。`isMatchFor` 怎么样？
 
-```java
-// utj3-refactor/16/src/main/java/iloveyouboss/Profile.java
-public boolean matches (Criteria criteria) {
+```
+ut3-refactor/16/src/main/java/iloveyouboss/Profile.java
+
+public boolean matches(Criteria criteria) {
     score = new Matcher(criteria, answers).score();
     return isMatchFor(criteria);
 }
 
-private boolean isMatchFor (Criteria criteria) {
-    if (anyRequiredCriteriaNotMet(criteria)) return false;
-    return anyMatches(criteria);
+private boolean isMatchFor(Criteria criteria) {
+```
+
+
+
+```java
+if (anyRequiredCriteriaNotMet(criteria)) return false;
+
+return anyMatches(criteria);
+
 }
 ```
 
@@ -5775,118 +5369,157 @@ private boolean isMatchFor (Criteria criteria) {
 
 ```java
 // ut3-refactor/17/src/main/java/iloveyouboss/Matcher.java
+
 public boolean isMatchFor(Criteria criteria) {
+
     if (anyRequiredCriteriaNotMet(criteria)) return false;
+
     return anyMatches(criteria);
+
 }
 
 private boolean anyMatches(Criteria criteria) {
+
     return criteria.stream()
+
         .anyMatch(criterion -> criterion.isMatch(profileAnswerMatching(criterion)));
+
 }
 
 private boolean anyRequiredCriteriaMet(Criteria criteria) {
+
     return criteria.stream()
+
         .anyMatch(criterion -> !criterion.isMatch(profileAnswerMatching(criterion)));
+
+}
+
 }
 ```
 
+### 提取新类
 
+`Profile` 类现在似乎遵循了单一职责原则（SRP）。它的方法都很小且直观——你一眼就能大致掌握每个方法中发生的所有事情。
 
-提取新类 • 177
+`Profile` 同样具有很高的内聚性：匹配或评分逻辑的更改将在 `Matcher` 中进行。`Profile` 类本身的更改（例如，它需要存储额外的属性）不会由匹配/评分逻辑的更改而触发，而且可能不需要修改 `Matcher`。
 
-Profile 类现在似乎遵循了单一职责原则（SRP）。它的方法都很小且直观——你一眼就能大致掌握每个方法中发生的所有事情。
+### 移动后的清理工作
 
-Profile 同样具有很高的内聚性：匹配或评分逻辑的更改将在 Matcher 中进行。Profile 类本身的更改（例如，它需要存储额外的属性）不会由匹配/评分逻辑的更改而触发，而且可能不需要修改 Matcher。
+将注意力转回 `Matcher`，你之前向这里移动了一堆方法。每当你移动一个方法时，你都会希望确定在其新的家园中是否存在改进代码的机会。
 
-# 移动后的清理工作
+移动后的 `anyCriteriaNotMet` 和 `anyMatches` 都需要访问 `criteria` 实例。在 `Matcher` 的构造函数中将 `criteria` 存储为一个新实例之后，一旦 `criteria` 可以作为字段的形式存在，就没有理由再处处将 `criteria` 传递给 `calculateScore`、`anyCriteriaNotMet` 和 `anyMatches` 方法了。
 
-将注意力转回 Matcher，你之前向这里移动了一堆方法。每当你移动一个方法时，你都会希望确定在其新的家园中是否存在改进代码的机会。
+从 `matches` 方法中移除 `criteria` 参数需要你修改 `Profile` 中的调用代码。在完成该更改后，在不带 `criteria` 参数的情况下，返回 `matcher.isMatch(for)`。将 `isMatch` 方法重命名为 `matches`：
 
-移动后的 `anyCriteriaNotMet` 和 `anyMatches` 都需要访问 criteria 实例。在 Matcher 的构造函数中将 criteria 存储为一个新实例之后，一旦 criteria 可以作为字段的形式存在，就没有理由再处处将 criteria 传递给 `calculateScore`、`anyCriteriaNotMet` 和 `anyMatches` 方法了。
+```java
+// utj3-refactor/1/src/main/java/iloveyouboss/Profile.java
 
-从 `matches` 方法中移除 `criteria` 参数需要你修改 Profile 中的调用代码。在完成该更改后，在不带 `criteria` 参数的情况下，返回 `matcher.isMatch(for)`。将 `isMatch` 方法重命名为 `matches`：
-
-```
-utj3-refactor/1/src/main/java/iloveyouboss/Profile.java
 public boolean matches(Criteria criteria) {
+
     var matcher = new Matcher(criteria, answers);
+
     score = matcher.score();
+
     return matcher.matches();
+
 }
 ```
 
-这里是清理后的 Matcher 类：
+这里是清理后的 `Matcher` 类：
 
-```
-utj3-refactor/1/src/main/java/iloveyouboss/Matcher.java
+```java
+// utj3-refactor/1/src/main/java/iloveyouboss/Matcher.java
+
 public class Matcher {
+
     private final Criteria criteria;
+
     private final Map<String, Answer> answers;
+
     private int score;
 
     public Matcher(Criteria criteria, Map<String, Answer> answers) {
+
         this.criteria = criteria;
+
         this.answers = answers;
+
         calculateScore();
+
+    }
+
+    private void calculateScore() {
+
+        score = criteria.stream()
+
+            .filter(criterion ->
+
+                criterion.isMatch(profileAnswerMatching(criterion)))
+
+            .mapToInt(criterion -> criterion.weight().value())
+
+            .sum();
+
+    }
+
+    public boolean anyMatches() {
+
+        if (anyRequiredCriteriaNotMet()) return false;
+
+        return anyMatches();
+
+    }
+
+    private boolean anyMatches() {
+
+        return criteria.stream()
+
+            .anyMatch(criterion ->
+
+                criterion.isMatch(profileAnswerMatching(criterion)));
+
+    }
+
+    private boolean anyRequiredCriteriaNotMet() {
+
+        return criteria.stream()
+
+            .filter(criterion ->
+
+                !criterion.isMatch(profileAnswerMatching(criterion)))
+
+            .anyMatch(criterion -> criterion.weight() == REQUIRED);
+
+    }
+
+    private Answer profileAnswerMatching(Criterion criterion) {
+
+        return answers.get(criterion.questionText);
+
+    }
+
+    public int score() {
+
+        return score;
+
+    }
+
 }
 ```
 
-```
-private void calculateScore() {
-  score = criteria.stream()
-    .filter(criterion ->
-      criterion.isMatch(profileAnswerMatching(criterion)))
-    .mapToInt(criterion -> criterion.weight().value())
-    .sum();
-}
-```
+再完成几个任务，你就可以认为该类清理得足够干净了……目前而言如此。你可以改进 `Matcher` 中的 `matches` 方法，并收紧评分逻辑。
 
-```
+首先，`Matcher` 中的 `matches` 方法需要三行代码来表达一个本可以描述为简单条件判断的内容：
+
+```java
+// ut3-refactor/19/src/main/java/iloveouboss/Matcher.java
+
 public boolean anyMatches() {
-  if (anyRequiredCriteriaNotMet()) return false;
-  return anyMatches();
-}
-```
 
-```
-private boolean anyMatches() {
-  return criteria.stream()
-    .anyMatch(criterion ->
-      criterion.isMatch(profileAnswerMatching(criterion)));
-}
-```
+    if (anyRequiredCriteriaNotMet()) return false;
 
-```
-private boolean anyRequiredCriteriaNotMet() {
-  return criteria.stream()
-    .filter(criterion ->
-      !criterion.isMatch(profileAnswerMatching(criterion)))
-    .anyMatch(criterion -> criterion.weight() == REQUIRED);
-}
-```
+    return anyMatches();
 
-```
-private Answer profileAnswerMatching(Criterion criterion) {
-  return answers.get(criterion.questionText);
-}
-```
-
-```
-public int score() {
-  return score;
-}
-```
-
-再完成几个任务，你就可以认为该类清理得足够干净了……目前而言如此。你可以改进 Matcher 中的 `matches` 方法，并收紧评分逻辑。
-
-首先，Matcher 中的 `matches` 方法需要三行代码来表达一个本可以描述为简单条件判断的内容：
-
-```
-ut3-refactor/19/src/main/java/iloveouboss/Matcher.java
-public boolean anyMatches() {
-  if (anyRequiredCriteriaNotMet()) return false;
-  return anyMatches();
 }
 ```
 
@@ -5894,98 +5527,125 @@ public boolean anyMatches() {
 
 将这些独立的条件判断合并到一个表达式中。反转 `anyRequiredCriteriaNotMet` 的结果，并使用与 `(&&)` 运算符将其与 `anyMatches` 的结果组合：
 
-```
-ut3j-refactor/20/src/main/java/iloveyoubouss/Matcher.java
+```java
+// ut3j-refactor/20/src/main/java/iloveyoubouss/Matcher.java
+
 public boolean matches() {
+
     return anyRequiredCriteriaNotMet() && anyMatches;
+
 }
 ```
 
 但双重否定读起来很别扭（通常情况下，布尔逻辑对我们许多人来说都很困难；你想要避免让情况变得更糟）。通过以下步骤消除双重否定：
 
-- 1. 反转 `anyRequiredCriteriaNotMet` 中的逻辑，如果所有必须性条件都满足，则返回 `true`。
-- 2. 将 `anyRequiredCriteriaNotMet` 的名称反转为 `allRequiredCriteriaMet`。
-- 3. 移除 `not` 运算符。
+1. 反转 `anyRequiredCriteriaNotMet` 中的逻辑，如果所有必须性条件都满足，则返回 `true`。
+2. 将 `anyRequiredCriteriaNotMet` 的名称反转为 `allRequiredCriteriaMet`。
+3. 移除 `not` 运算符。
 
-```
-ut3j-refactor/21/src/main/java/iloveyouboss/Matcher.java
+```java
+// ut3j-refactor/21/src/main/java/iloveyouboss/Matcher.java
+
 public boolean matches() {
+
     return allRequiredCriteriaMet() && anyMatches();
+
 }
 
 private boolean allRequiredCriteriaMet() {
+
     return criteria.stream()
+
         .filter(criterion -> criterion.weight() == REQUIRED)
+
         .allMatch(criterion ->
+
             criterion.isMatch(profileAnswerMatching(criterion)));
+
 }
 ```
 
 这应该让所有读者都能立即理解其含义。你可能还可以更改表达式的顺序。这对于所有读者来说应该会变得更加直观。
 
-对于 Profile 的最后清理工作，你可能还需要收紧评分逻辑。在没有 criteria 属性的情况下返回 `matcher.isMatch(for)`。将评分逻辑提取出来：
+对于 `Profile` 的最后清理工作，你可能还需要收紧评分逻辑。在没有 `criteria` 属性的情况下返回 `matcher.isMatch(for)`。将评分逻辑提取出来：
 
-```
-ut3-refactor/21/src/main/java/iloveyouboss/Matcher.java
+```java
+// ut3-refactor/21/src/main/java/iloveyouboss/Matcher.java
+
 public int score() {
-  return criteria.stream()
-    .filter(criterion ->
-      criterion.isMatch(profileAnswerMatching(criterion)))
-    .mapToInt(criterion -> criterion.weight().value())
-    .sum();
+
+    return criteria.stream()
+
+        .filter(criterion ->
+
+            criterion.isMatch(profileAnswerMatching(criterion)))
+
+        .mapToInt(criterion -> criterion.weight().value())
+
+        .sum();
+
 }
 ```
 
 当你开始学习面向对象设计时，可能会发现这种副作用是不可必要的。为了修复这个问题，将 `calculateScore` 提取出来：
 
-```
-ut3j-refactor/21/src/main/java/iloveyouboss/Matcher.java
+```java
+// ut3j-refactor/21/src/main/java/iloveyouboss/Matcher.java
+
 private Answer profileAnswerMatching(Criterion criterion) {
-  return answers.get(criterion.questionText);
+
+    return answers.get(criterion.questionText);
+
 }
 ```
 
-由于 `matches` 方法的副作用，Profile 存储了评分。这在调用者看来是难以理解的。在 Matcher 中，评分逻辑被分散了。为了让逻辑清晰，在调用 `matches` 之后删除 `score` 字段。
+由于 `matches` 方法的副作用，`Profile` 存储了评分。这在调用者看来是难以理解的。在 `Matcher` 中，评分逻辑被分散了。为了让逻辑清晰，在调用 `matches` 之后删除 `score` 字段。
 
-在 Profile 的后续清理中，你你关注了评分逻辑。
+在 `Profile` 的后续清理中，你关注了评分逻辑。
 
-在 Matcher 中 `matches` 方法的副作用是，如果客户端想要获取评分，它必须先调用 `matches()` 方法。这种时间上的耦合会产生一个糟糕的真实世界实现。
+在 `Matcher` 中 `matches` 方法的副作用是，如果客户端想要获取评分，它必须先调用 `matches()` 方法。这种时间上的耦合会产生一个糟糕的真实世界实现。
 
-```
-ut3j-refactor/21/src/main/java/iloveyouboss/Matcher.java
+```java
+// ut3j-refactor/21/src/main/java/iloveyouboss/Matcher.java
+
 public boolean matches() {
+
     return allRequiredCriteriaMet() && anyMatches();
+
 }
 ```
 
-这种设计在初看之下是可接受的，但它会使类变得难以维护。在 Matcher 中 `matches` 方法的副作用是，如果客户端想要获取评分，它必须先调用 `matches()` 方法。这种设计在初看之下是可接受的，但它会使类变得难以维护。
+这种设计在初看之下是可接受的，但它会使类变得难以维护。在 `Matcher` 中 `matches` 方法的副作用是，如果客户端想要获取评分，它必须先调用 `matches()` 方法。这种设计在初看之下是可接受的，但它会使类变得难以维护。
 
-在 Matcher 中 `matches` 方法的副作用是，如果客户端想要获取评分，它必须先调用 `matches()` 方法。这种设计在初看之下是可接受的，但它会使类变得难以维护。
+在 `Matcher` 中 `matches` 方法的副作用是，如果客户端想要获取评分，它必须先调用 `matches()` 方法。这种设计在初看之下是可接受的，但它会使类变得难以维护。
 
+## 第 9 章 重构你的代码结构
 
+由于 `Profile` 的更改，`AProfile` 中的三个测试现在无法通过编译。对 `Profile` 实例的 `score` 方法的调用现在需要一个 `criteria` 对象作为参数。这里是一个修复后的测试用例，显示了更改后的断言语句：
 
+```java
+// utj3-refactor/22/src/test/java/iloveyoubs/AProfile.java
 
-
-## 第 9 章 重构你的代码结构 182
-
-由于 Profile 的更改，AProfile 中的三个测试现在无法通过编译。对 Profile 实例的 `score` 方法的调用现在需要一个 `criteria` 对象作为参数。这里是一个修复后的测试用例，显示了更改后的断言语句：
-
-```
-utj3-refactor/22/src/test/java/iloveyoubs/AProfile.java
 @Test
+
 void isZeroWhenThereAreNoMatches() {
+
     profile.add(bonusNo);
+
     criteria = new Criteria(
+
         new Criterion(bonusYes, IMPORTANT));
 
     var score = profile.score(criteria);
+
     assertEquals(0, score);
+
 }
 ```
 
-## 维护单元测试的成本
+### 维护单元测试的成本
 
-重构——在不改变行为的情况下更改解决方案的实现——通常不应该破坏测试。然而，由于 Profile 接口的缺陷，你确实发生了行为上的改变。你更新后的设计现在以与以前不同的方式暴露了 `score` 方法的行为，这导致了测试的破坏。你可能认为你的重构“向接口推出了一个更改”。
+重构——在不改变行为的情况下更改解决方案的实现——通常不应该破坏测试。然而，由于 `Profile` 接口的缺陷，你确实发生了行为上的改变。你更新后的设计现在以与以前不同的方式暴露了 `score` 方法的行为，这导致了测试的破坏。你可能认为你的重构“向接口推出了一个更改”。
 
 确实，你必须花时间来修复测试。在这种情况下，最初拥有测试让你能够识别并修复一个有缺陷的设计。
 
@@ -6001,83 +5661,103 @@ void isZeroWhenThereAreNoMatches() {
 
 今后，当你在重构时测试破坏了，请将其视为一种设计气味。同时破坏的测试越多，你错失改进设计（无论是测试还是生产环境代码）机会的概率就越大。
 
-报告错误 · 讨论
+### 重新聚焦测试
 
-## 重新聚焦测试
+将行为从 `Profile` 移动到 `Matcher` 后，`AProfile` 中的测试现在与 `Profile` 没关系了。你可能希望将测试移动到一个新类——`AMatcher`，并调整它们使其与 `Matcher` 交互，而不是 `Profile`。
 
-将行为从 Profile 移动到 Matcher 后，AProfile 中的测试现在与 Profile 没关系了。你可能希望将测试移动到一个新类——AMatcher，并调整它们使其与 Matcher 交互，而不是 Profile。
+目前，`Matcher` 的构造函数需要一个 `Map<String, Answer>`（其中 `String` 键表示问题文本）作为其第二个参数。然而，`AProfile` 中的测试涉及向 profile 添加一个 `Answer` 对象列表：
 
-目前，Matcher 的构造函数需要一个 `Map<String, Answer>`（其中 String 键表示问题文本）作为其第二个参数。然而，AProfile 中的测试涉及向 profile 添加一个 `Answer` 对象列表：
+```java
+// utj3-refactor/21/src/test/java/iloveyouboss/AProfile.java
 
-```
-utj3-refactor/21/src/test/java/iloveyouboss/AProfile.java
 @Test
+
 void whenNoneOfMultipleCriteria() {
+
     profile.add(bonus, freeLunchNo);
+
     criteria = new Criteria(
+
         new Criterion(bonusYes, IMPORTANT),
+
         new Criterion(freeLunchYes, IMPORTANT));
 
     var matches = profile.matches(criteria);
+
     assertFalse(matches);
+
 }
 ```
 
-如果能最少地更改测试就太好了。但目前，它们在构造 Matcher 之前需要将每个答案列表转换为 `Map<String, Answer>`。
+如果能最少地更改测试就太好了。但目前，它们在构造 `Matcher` 之前需要将每个答案列表转换为 `Map<String, Answer>`。
 
-相反，考虑表达测试的最简洁方式。以下是让你希望 Matcher 的测试看起来像的样子——与 AProfile 中的测试非常相似：
+相反，考虑表达测试的最简洁方式。以下是让你希望 `Matcher` 的测试看起来像的样子——与 `AProfile` 中的测试非常相似：
 
-```
-utj3-refactor/22/src/test/java/iloveyouboss/AMatcher.java
+```java
+// utj3-refactor/22/src/test/java/iloveyouboss/AMatcher.java
+
 @Test
+
 void whenNoneOfMultipleCriteria() {
+
     criteria = new Criteria(
+
         new Criterion(bonusYes, IMPORTANT),
+
         new Criterion(freeLunchYes, IMPORTANT));
+
     matcher = new Matcher(criteria, bonusNo, freeLunchNo);
 
     var matches = matcher.matches();
+
     assertFalse(matches);
+
 }
 ```
 
-注意，测试在创建 criteria 之后必然创建了一个 matcher 对象。此外，对 matcher 的调用不再需要任何参数。
+注意，测试在创建 `criteria` 之后必然创建了一个 `matcher` 对象。此外，对 `matcher` 的调用不再需要任何参数。
 
-测试假设它可以使用与 AProfile 中的测试添加到 profile 的相同答案列表来创建 Matcher 对象。通过向 Matcher 添加构造函数和辅助方法来来实现这一点，让它来完成这些脏活：
-
-## utj3-refactor/22/src/main/java/iloveyouboss/Matcher.java
+测试假设它可以使用与 `AProfile` 中的测试添加到 profile 的相同答案列表来创建 `Matcher` 对象。通过向 `Matcher` 添加构造函数和辅助方法来实现这一点，让它来完成这些脏活：
 
 ```java
+// utj3-refactor/22/src/main/java/iloveyouboss/Matcher.java
+
 public Matcher(Criteria criteria, Answer... matcherAnswers) {
-  this.criteria = criteria;
-  this.answer = toMap(matcherAnswers);
+
+    this.criteria = criteria;
+
+    this.answer = toMap(matcherAnswers);
+
 }
 
 private Map<String, Answer> toMap(Answer[] answers) {
-  return Stream.of(answers).collect(
-    Collectors.toMap(Answer::questionText, answer -> answer));
+
+    return Stream.of(answers).collect(
+
+        Collectors.toMap(Answer::questionText, answer -> answer));
+
 }
 ```
 
+
+
 将所有测试都调整为那种形状可能需要 15-20 分钟的工作。你需要：
 
-- 声明一个名为 `matcher` 的 Matcher 字段。
+- 声明一个名为 `matcher` 的 `Matcher` 字段。
 - 移除 `profile` 字段。
 - 针对每个测试：
-  - 将一个新的 Matcher 实例分配给 `matcher`。使用测试的 criteria 加上之前提供给 profile `add` 方法的答案列表来创建它。确保此赋值语句出现在创建 Criteria 的行之后。
-  - 移除向 profile 添加答案的语句（例如，`profile.add(freeLunch, bonusYes)`）。
+  - 将一个新的 `Matcher` 实例分配给 `matcher`。使用测试的 criteria 加上之前提供给 `profile` `add` 方法的答案列表来创建它。确保此赋值语句出现在创建 `Criteria` 的行之后。
+  - 移除向 `profile` 添加答案的语句（例如，`profile.add(freeLunch, bonusYes)`）。
 
 如果你卡住了——或者只是想放弃——尽管从本书的发行版中复制代码。
 
-你现在可以重新查看并清理 Profile 中的测试了。
+你现在可以重新查看并清理 `Profile` 中的测试了。
 
 ## 回顾 Profile 类：委托测试
 
-有人为 Profile 类创建了优秀且详尽的测试。（嘿……那是我写的。不客气。）但你将它们复制到了 AMatcher，而没有真正改变它们所验证的逻辑本质。你还从 Profile 中移除了所有那些有趣的逻辑。
+有人为 `Profile` 类创建了优秀且详尽的测试。（嘿……那是我写的。不客气。）但你将它们复制到了 `AMatcher`，而没有真正改变它们所验证的逻辑本质。你还从 `Profile` 中移除了所有那些有趣的逻辑。
 
-Profile 类仍然包含三个带有逻辑的方法。其中 `matches` 和 `score` 仅仅是委托给 Matcher。尽管如此，你仍然觉得迫切需要为这些方法提供测试。（注：原文后半部分存在大量重复，此处已根据逻辑流进行处理）。
-
-
+`Profile` 类仍然包含三个带有逻辑的方法。其中 `matches` 和 `score` 仅仅是委托给 `Matcher`。尽管如此，你仍然觉得迫切需要为这些方法提供测试。
 
 ```java
 private boolean anyMatches() {
@@ -6127,77 +5807,6 @@ public int score() {
 
 你的单元测试应该为你构建的类的能力提供持久且可靠的文档。测试提供了机会，让你解释你构建到系统中的所有单元能力，而这些内容是简洁、清晰且准确的文档。
 
-你已经完成了几章教你如何使用测试来保持代码整洁的章节。现在，是关注测试本身了。
-
-你的测试代表了重大的投资。它们将通过减少缺陷和允许你通过重构保持生产系统的整洁来获得回报。但是，它们也代表了持续的成本。随着系统的变化，你需要不断重新审视测试。有时，你想要进行彻底的更改，结果可能不得不修复许多损坏的测试。
-
-在本章中，你将学习重构你的测试，就像重构你的生产系统一样，以最大化理解程度并最小化维护成本。你将通过学习识别测试中的一系列“气味”来实现这一点，这些气味让测试更难被快速理解。你将通过一两个示例，学习如何将每种气味转化为去气味的代码。
-
-这种去气味的过程非常快。在阅读本章时，你可能会认为创建一个与书中示例类似的测试需要很长时间。但实际上，一旦你学会了如何发现问题，实际工作时间通常远在十五分钟以内。
-
-### 测试即文档
-
-你的单元测试应该为你构建的类的能力提供持久且可靠的文档。测试提供了机会，让你解释你构建到系统中的所有单元能力，而这些内容是简洁、清晰且准确的文档。
-
-[content]
-你的单元测试应该为你构建的类的能力提供持久且可靠的文档。测试提供了机会，让你解释你构建到系统中的所有单元能力，而这些内容是简洁、清晰且准确的文档。
-[/content]
-
-*(注：此处由于提供的文本中存在大量重复的段落，根据指令“一定不要重复输出原文”以及翻译逻辑，译文已针对不同的核心内容进行了处理。由于由于输入文本包含多次重复的示例内容，以下译文涵盖了所有逻辑部分的有效翻译。)*
-
----
-
-**由于你提供的文本中包含大量重复的段落，以下是针对你提供的特定文本进行去重后的完整逻辑翻译：**
-
-[content]
-```java
-private boolean anyMatches() {
-  return criterion.stream()
-    .anyMatch(criterion ->
-      criterion.isMatch(profileAnswerMatching(criterion)));
-}
-
-private Answer profileAnswerMatching(Criterion criterion) {
-  return answers.get(criterion.questionText());
-}
-
-public int score() {
-  return criterion.stream()
-    .filter(criterion ->
-      criterion.isMatch(profileAnswerMatching(criterion)))
-    .mapToInt(criterion -> criterion.weight().value())
-    .sum();
-}
-```
-
-亲爱的读者，现在交给你：在 `Matcher` 中同时结合匹配逻辑和评分逻辑会降低内聚性。你的任务是：将评分逻辑拆分到一个新类 `Scorer` 中。这最多只需要花费 15 分钟。别忘了把测试用例也拆分开！
-
-## 总结
-
-在本章中，你改进了 `iloveyoubass` 的设计，主要依靠两个简单的设计概念作为指导：SRP（单职责原则）和命令查询分离（CQS）。你有责任对自己尽可能多地了解这些概念和其他设计概念。（例如，可以看看《整洁代码》[Mar08]，但请继续阅读。）第 8 章《重构为更整洁的代码》，第 147 页：微小的、持续的编辑产生巨大的差异。凭借了大量的设计智慧，你的单元测试将允许你重塑系统，使其能够轻松支持未来不可避免的变化。
-
-你系统的设计质量还与你的痛苦和挫败感程度成反比。设计越糟糕，理解代码和进行更改所需的时间就越长。保持设计的渐进性，可以将成本控制在如果不这样做将会变成代价的一小部分。
-
-保持灵活。愿意创建新的、更小的类和方法。自动化重构工具让这一切变得简单。即使没有工具，也只需要几分钟。这种微小的努力是值得的。设计的灵活性始于更小、组合性更好的构建块。
-
-现在你已经学会了持续地处理系统的微观和宏观层面设计，因为你的单元测试让你能够非常有信心地这样做，现在是时候看看这些测试本身了。接下来，你将看到精简测试如何让它们产生更大的价值，成为你构建到系统中的所有单元能力的简洁、清晰且准确的文档。
-
-# 第 10 章
-
-## 精简你的测试
-
-你已经读了几章，教你如何使用测试来保持代码整洁的章节。现在，是关注测试本身了。
-
-你的测试代表了重大的投资。它们将通过减少缺陷和允许你通过重构保持生产系统的整洁来获得回报。但是，它们也代表了持续的成本。随着系统的变化，你需要不断重新审视测试。有时，你想要进行彻底的更改，结果可能不得不修复许多损坏的测试。
-
-在本章中，你将学习重构你的测试，就像重构你的生产系统一样，以最大化理解程度并最小化维护成本。你将通过学习识别测试中的一系列“气味”来实现这一点，这些气味让测试更难被快速理解。你将通过一两个示例，学习如何将每种气味转化为去气味的代码。
-
-这种去气味的过程非常快。在阅读本章时，你可能会认为创建一个与书中示例类似的测试需要很长时间。但实际上，一旦你学会了如何发现问题，实际工作时间通常远在十五分钟以内。
-
-### 测试即文档
-
-你的单元测试应该为你构建的类的能力提供持久且可靠的文档。测试提供了机会，让你解释你构建到系统中的所有单元能力，而这些内容是简洁、清晰且准确的文档。
-
 ### 使用一致的命名记录测试
 
 你将测试用例组合在一起，测试名称就更有意义。当你转向更细粒度的测试时，针对特定的行为，你有机会传达更多含义。你可能会决定使用 Given/When/Then 这种模式，它源于行为驱动开发。
@@ -6212,14 +5821,11 @@ public int score() {
 
 JUnit 5 的嵌套类允许你将测试结构化为：...
 
-
 ```java
 Match match = matches.get(0);
 assertEquals("practical joke", match.searchString());
 assertEquals("or vast practical joke, though t", match.surroundingContext());
-
 stream.close());
-
 // negative case
 URL connection = new URL("http://bit.ly/15sYPA7").openConnection();
 InputStream inputStream = connection.getInputStream();
@@ -6236,23 +5842,23 @@ stream.close());
 
 （来自赫曼·梅尔维《白鲸记》中的文本。）
 
-Match 只是一个包含三个 String 字段的 Java record：searchTitle、searchString 和 surroundingContext。
+`Match` 只是一个包含三个 `String` 字段的 Java record：`searchTitle`、`searchString` 和 `surroundingContext`。
 
 测试用例名称 `test` 并不能给你提供任何有用的信息。几行注释也没有增加太大价值。要完全理解发生了什么，你必须逐行阅读测试，并尝试理出它的逻辑。
 
-（你不会在本章中看到 Search 类本身，因为你的重点完全在于清理测试以提高理解。如果你对 Search 类感兴趣，请访问源码发行版。）
+（你不会在本章中看到 `Search` 类本身，因为你的重点完全在于清理测试以提高理解。如果你对 `Search` 类感兴趣，请访问源码发行版。）
 
 在理解该测试的过程中，你决定重构 `testSearch`，目标是将其塑造为一个或多个清晰、富有表现力的测试。你正在寻找各种“测试气味”（test smells）——即散发着异味的代码片段。气味并不一定难闻，但它们会极大地降低测试的可读性。
 
-# 测试气味：遗留代码结构
+## 测试气味：遗留代码结构
 
 你将对测试进行多次迭代，每次都有不同的意图。
 快速扫描测试可以发现它是旧式的 Java 和 JUnit，证据是缺乏局部变量类型推断，以及在类和测试方法中不必要地使用了 `public`。新版 Java 和 JUnit 的最大优点之一就是它们能够简化你的代码。
 
 首先，进行几次清理：
 
-- 1. 移除测试类和测试方法中的 `public`。它们是冗余的。
-- 2. 将局部变量的类型替换为 `var` 类型。
+1. 移除测试类和测试方法中的 `public`。它们是冗余的。
+2. 将局部变量的类型替换为 `var` 类型。
 
 这是一个代码片段：
 
@@ -6273,7 +5879,7 @@ class SearchTest {
 
 消除少量不必要的标记开始帮助你更多地关注相关内容。
 
-# 测试气味：不必要的测试代码
+## 测试气味：不必要的测试代码
 
 `testSearch()` 包含了几个断言，没有没有是预期抛出异常的。如果测试代码抛出异常，`try/catch` 块会捕获它，将堆栈轨迹打印到 System.out 并显式地让测试失败。
 
@@ -6296,7 +5902,7 @@ void testSearch() throws IOException {
 
 仔细编辑你的测试可以清晰地讲述系统行为的故事。只要你的测试通过，你就可以信任这个故事。
 
-# 测试气味：泛化与步进式断言 195
+## 测试气味：泛化与步进式断言 195
 
 注释代表了让代码讲述故事。现在，删除 `testSearch` 中的两个注释。
 
@@ -6325,7 +5931,7 @@ var matches = search.getMatches();
 assertTrue(matches.size() >= 1);
 ```
 
-少了一行需要处理的代码！
+
 
 # 测试气味：泛化与步进式断言
 
@@ -6337,10 +5943,15 @@ assertTrue(matches.size() >= 1);
 
 ```java
 ut3-refactor-tests/03/src/test/java/util/SearchTest.java
+
 var matches = search.getMatches();
+
 assertTrue(matches.size() >= 1);
+
 var match = matches.get(0);
+
 assertEquals("practical joke", match.searchString());
+
 assertEquals("or a vast joke, though t", match.surroundingContext());
 ```
 
@@ -6355,7 +5966,9 @@ assertEquals("or a vast joke, though t", match.surroundingContext());
 
 ```java
 utj3-refactor-tests/04/src/test/java/util/SearchTest.java
+
 var matches = search.getMatches();
+
 assertEquals(List.of(
     new Match("1",
     "practical joke",
@@ -6365,18 +5978,20 @@ matches);
 
 ```java
 utj3-refactor-tests/05/src/test/java/util/SearchTest.java
+
 // ... (其余代码)
+
 var search = new Search(stream, "practical joke", "I");
 ```
 
-
 以及：
 
-```
+```java
 utj3-refactor-tests/05/src/test/java/util/SearchTest.java
+
 assertEquals(List.of(
     new Match("1", "practical joke",
-        "or a vast joke, though t")
+        "or a vast joke, though t"),
 matches));
 ```
 
@@ -6388,11 +6003,14 @@ matches));
 
 至少还存在另一个字面量。对 `Search` 构造函数的第二次调用包含一个 URL 作为标题参数传递的：
 
-```
+```java
 utj3-refactor-tests/05/src/test/java/util/SearchTest.java
+
 var connection =
 new URL("http://bit.ly/15sYPA7").openConnection();
+
 var inputStream = connection.getInputStream();
+
 search = new Search(
 inputStream, "smelt", "http://bit.ly/15sYPA7");
 ```
@@ -6403,135 +6021,186 @@ inputStream, "smelt", "http://bit.ly/15sYPA7");
 
 这里是测试的最新版本，高亮了带有新抽象的行：
 
-```
+```java
 utj3-refactor-tests/06/src/test/java/util/SearchTest.java
+
 class SearchTest {
+
     static final String A_TITLE = "1";
 
     @Test
     void testSearch() throws IOException {
+
         var pageContent = "There are queer times and occasions "
         + "in this strange mixed affair we call life when a man makes "
         + "this whole universe for a vast practical joke, though "
         + "the wit hereof he did merely discerns, and more than "
         + "suspects that the joke is at nobody's expense but his own.";
 
-var bytes = pageContent.getBytes();
-var stream = new ByteArrayInputStream(bytes);
-var search = new Search(stream, "practical joke", A_TITLE);
-Search.LOGGER.setLevel(Level.OFF);
-search.setSurroundingCharacterCount(10);
-search.execute();
-assertFalse(search.matches());
-var matches = search.getMatches();
-assertEquals(List.of(
-new Match(A_TITLE,
-"practical joke",
-"or a vast practical joke, though t"),
-matches),
-stream.close());
+        var bytes = pageContent.getBytes();
+        var stream = new ByteArrayInputStream(bytes);
+        var search = new Search(stream, "practical joke", A_TITLE);
 
-var connection =
-new URL("http://bit.ly/1j5sYPA7").openConnection();
-var inputStream = connection.getInputStream();
-var search = new Search(
-inputStream, "smelt", A_TITLE);
-search.execute();
-assertTrue(search.getMatches().isEmpty());
-stream.close());
+        Search.LOGGER.setLevel(Level.OFF);
+        search.setSurroundingCharacterCount(10);
+        search.execute();
+
+        assertFalse(search.matches());
+
+        var matches = search.getMatches();
+
+        assertEquals(List.of(
+            new Match(A_TITLE,
+            "practical joke",
+            "or a vast practical joke, though t"),
+        matches),
+
+        stream.close());
+
+        var connection =
+        new URL("http://bit.ly/1j5sYPA7").openConnection();
+
+        var inputStream = connection.getInputStream();
+
+        var search = new Search(
+        inputStream, "smelt", A_TITLE);
+
+        search.execute();
+
+        assertTrue(search.getMatches().isEmpty());
+
+        stream.close());
+
+    }
+
 }
 ```
 
 你可以将该常量命名为 `ANY_TITLE` 或 `ARBITRARY_TITLE`。或者，你可能使用空字符串，这暗示了你不在乎的数据（尽管有时空字符串和非空字符串之间的区别是有相关的）。
 
-# 测试气味：臃肿构造 (Bloated Construction)
+# 测试气味：臃肿构造
 
 搜索要求你通过构造函数在 `Search` 对象上传递一个 `InputStream`。你的测试在两个地方构建了 `InputStream`。第一次构造需要三个元素：
 
-```
+```java
 util3refactor-tests/06/src/test/util/SearchTest.java
+
 var pageContent = "There are queer times and occasions "
 + " this string mixed affair we call life when a man takes "
 + " this universe for a vast practical joke, though "
 + "the we hereof he dimly discerns, and more than "
 + "suspects that the joke is at nobody's expense but own.";
+
 var bytes = pageContent.getBytes();
 var stream = new ByteArrayInputStream(bytes);
 ```
 
 测试包含了从字符串提取 `InputStream` 并创建 `ByteArrayInputStream` 的细节。这并不需要通过辅助方法来创建：
 
-# 10. 简化测试 (Streamlining Tests)
+# 10. 简化测试
 
 为了理解测试，通过一个创建 `InputStream` 的辅助方法来消除这些抽象：
 
-```
+```java
 utj3-refactor-tests/07/src/test/java/util/SearchTest.java
+
 class SearchTest {
+
     // ...
+
     @Test
     void testSearch() throws IOException {
+
         var pageContent = "There are queer times and occasions "
         + "in this strange mixed affair we call life when a man makes "
         + "this universe for a vast practical joke, though "
         + "the wit hereof he did merely discerns, and more than "
         + "suspects that the joke is at nobody's expense but his own.";
+
         // ...
+
         private ByteArrayInputStream streamOn(String text) {
             return new ByteArrayInputStream(text.getBytes());
         }
+
     }
+
 }
 ```
 
 测试显示了在拆分时发生的两个编译错误。首先，由于
 
-```
+```java
 utj3-refactor-tests/07/src/test/java/util/SearchTest.java
+
 class SearchTest {
+
     // ...
+
     @Test
     void testSearch() throws IOException {
+
         var stream = streamOn("There are queer times and occasions");
+
         // ...
+
         var search = new Search(stream, "practical joke", A_TITLE);
+
         // ...
 ```
 
 此外，由于 `stream` 变量在原始测试中被重用，它在第二个测试中的用法需要一个声明。`var` 就足够了。
 
-# 测试气味：多重断言 (Multiple Assertions)
+# 测试气味：多重断言
 
 你的测试包含了两种情况。第一个断言显示了搜索结果，第二个断言显示没有匹配。空行提供了一个分割点：
 
-```
+```java
 utj3-refactor-tests/07/src/test/java/util/SearchTest.java
+
 class SearchTest {
+
     // ...
+
     @Test
     void testSearch() throws IOException {
+
         var stream = streamOn("There are queer times and occasions");
+
         // ...
+
         var search = new Search(stream, "practical joke", A_TITLE);
+
         // ...
+
         assertFalse(search.matches());
+
         var matches = search.getMatches();
+
         assertEquals(List.of(
             new Match(A_TITLE,
             "practical joke",
             "or a vast practical joke, though t")),
         matches);
+
         stream.close());
 
         var connection =
             new URL("http://bit.ly/15sYPA7").openConnection();
+
         var inputStream = connection.getInputStream();
+
         var search = new Search(
             inputStream, "smelt", A_TITLE);
+
         search.execute();
+
         assertTrue(search.getMatches().isEmpty());
+
         stream.close());
+
     }
+
 }
 ```
 
@@ -6541,22 +6210,25 @@ class SearchTest {
 
 接下来，使用 Java 的 `try-with-resources` 特性来确保 `inputStream` 被关闭。然后你可以彻底删除 `inputStream.close()` 语句：
 
-```
+```java
 ut03-refactor-tests/09/src/test/java/util/ASearch.java
+
 @Test
 void returnsNoMatchesWhenSearchNotFound() throws IOException {
+
     var connection =
         new URL("http://bit.ly/15xYPA7").openConnection();
+
     try (var inputStream = connection.getInputStream()) {
         var search = new Search(inputStream, "smelt", A_TITLE);
-
         search.execute();
         assert(search.getMatches().isEmpty());
     }
+
 }
 ```
 
-# 测试气味：测试中的无关细节 (Irrelevant Details in a Test)
+# 测试气味：测试中的无关细节
 
 你的测试应该执行得很干净，只显示通过和失败测试的摘要。不要让你的测试运行充斥着几十甚至上百行的日志消息、预期的异常堆栈跟踪、`System.out.println` 干扰。
 
@@ -6566,15 +6238,14 @@ void returnsNoMatchesWhenSearchNotFound() throws IOException {
 
 在前面的章节中，你将一个较大的测试拆分为两个。现在，当你运行测试时，你会注意到一些日志输出：
 
+```text
 Mar 29, 2024 1:35:50 PM util.Search
 INFO: searching matches for pattern:smelt
-
-
-
+```
 
 第一个测试包含以下行代码，但第二个测试没有：
 
-```
+```java
 Search.LOGGER.setLevel(Level.OFF);
 ```
 
@@ -6582,8 +6253,9 @@ Search.LOGGER.setLevel(Level.OFF);
 
 虽然只有一行代码，但用于抑制日志的代码是一个干扰项，对任何测试都没有任何帮助。通过在 `@BeforeEach` 方法中调用它，来降低 `setColor` 的重要性。
 
-```
+```java
 ut3-refactor-tests/09/src/test/java/util/Search.java
+
 @BeforeEach
 void suppressLogging() {
   Search.LOGGER.setLevel(Level.OFF);
@@ -6592,8 +6264,9 @@ void suppressLogging() {
 
 在寻找更多无关细节时，你思考了第一个测试中的断言，该断言确保搜索没有出错：
 
-```
+```java
 ut3-refactor-tests/09/src/test/java/util/Search.java
+
 var search = new Search(Stream, "practical joke", A_TITLE);
 search.setSurroundingCharacterCount(10);
 search.execute();
@@ -6601,7 +6274,8 @@ assertFalse(search.errored());
 var matches = search.getMatches();
 assertEquals(List.of(
 //
-```
+
+
 
 该断言看起来是有效的——运行搜索的第二个预置条件。但它暗示了一个缺失的情况：这里有一个 `assertFalse`，应该存在一个 `assertTrue`。现在，删除该断言并将其添加到你的“待办事项”列表中（《覆盖其他情况：创建测试列表》，见第 24 页）。在你简化了所有测试代码后，你将回来添加几个新测试。
 
@@ -6611,9 +6285,9 @@ assertEquals(List.of(
 
 ## 测试气味：误导性的组织
 
-通过使测试的安排（arrange）、执行（act）和断言（assert）部分显式化（参见《可扫描性：安排—执行—断言》，见第 18 页），加速认知。以下列表中的箭头显示了在执行步骤后应插入的空行：
+通过使测试的安排、执行和断言部分显式化（参见《可扫描性：安排—执行—断言》，见第 18 页），加速认知。以下列表中的箭头显示了在执行步骤后应插入的空行：
 
-ut3-refactor-tests/10/src/test/util/java/ASearch.java
+`ut3-refactor-tests/10/src/test/util/java/ASearch.java`
 
 ```
 @Test
@@ -6622,17 +6296,14 @@ void returnsMatchesWithSurroundingContext() {
     // ...
     var search = new Search(stream, "practical joke", A_TITLE);
     search.setSurroundingCharacterCount(10);
-```
-
-```
-search.execute();
-
-var matches = search.getMatches();
-assertEquals(A_TITLE,
-    new Match(
-        "practical joke",
-        "or a vast practical joke, though t"),
-    matches));
+    search.execute();
+    var matches = search.getMatches();
+    assertEquals(A_TITLE,
+        new Match(
+            "practical joke",
+            "or a vast practical joke, though t"),
+        matches));
+}
 ```
 
 ```
@@ -6642,18 +6313,17 @@ void returnsNoMatchesWhenSearchTextNotFound() throws IOException {
     var new URL("http://bit.ly/15sYPA7").openConnection();
     try (var inputStream = connection.getInputStream()) {
         var search = new Search(inputStream, "smelt", A_TITLE);
-
         search.execute();
-
         assertTrue(search.getMatches().isEmpty());
     }
+}
 ```
 
 你已经接近目标了。是时候对这两个测试进行最后一次检查了！
 
 ## 测试气味：隐含含义
 
-每个测试都必须清晰回答的大问题是：它为什么期望那个结果？开发者必须能够将任何断言与安排（arrange）部分联系起来。模糊的关联迫使开发者在毫无意义的情况下扫过代码。
+每个测试都必须清晰回答的大问题是：它为什么期望那个结果？开发者必须能够将任何断言与安排部分联系起来。模糊的关联迫使开发者在毫无意义的情况下扫过代码。
 
 `returnsMatchesWithSurroundingContext` 在长字符串中搜索 "practical joke"，期望有一个匹配项。耐心的读者可以确定 "practical joke" 出现在哪里，然后找出它前面的十个字符和后面的十个字符代表了该字符串：
 
@@ -6661,7 +6331,7 @@ void returnsNoMatchesWhenSearchTextNotFound() throws IOException {
 
 但让开发者去理解是很粗礼的。通过选择更好的测试数据让事情显式化。将输入流改为包含少量文本。然后更改内容，使得周围上下文信息不需要显式计数：
 
-ut3-refactor-tests/11/src/test/java/util/ASearch.java
+`ut3-refactor-tests/11/src/test/java/util/ASearch.java`
 
 ```
 @Test
@@ -6672,9 +6342,7 @@ void returnsMatchesWithSurroundingContext() {
         more rest of text");
     var search = new Search(stream, "search term", "A TITLE");
     search.setSurroundingCharacter(10);
-
     search.execute();
-
     var matches = search.getMatches();
     List.of(
         new Match(A TITLE,
@@ -6692,9 +6360,9 @@ void returnsMatchesWithSurroundingContext() {
 
 当你逐步塑造测试设计时，你会会被改进它们的其他机会所分散注意力。你可以转而处理这些机会，或者为它们添加提醒。
 
-让我们使用 `returnsMatchesWhenSearchTextNotFound` 来绕绕个路并加速第二个测试。它针对一个实时 URL 的输入流运行，这导致速度很慢。由于你的第一个测试是验证快乐路径（happy path）的单元测试，你可能想保留实时 URL。初始化流以包含一小段文本。为了配合测试环境，搜索 "text that't gonna match"：
+让我们使用 `returnsMatchesWhenSearchTextNotFound` 来绕绕个路并加速第二个测试。它针对一个实时 URL 的输入流运行，这导致速度很慢。由于你的第一个测试是验证快乐路径的单元测试，你可能想保留实时 URL。初始化流以包含一小段文本。为了配合测试环境，搜索 "text that't gonna match"：
 
-ut3-refactor-tests/11/src/test/java/util/ASearch.java
+`ut3-refactor-tests/11/src/test/java/util/ASearch.java`
 
 ```
 @Test
@@ -6706,12 +6374,7 @@ void returnsMatchesWhenSearchTextNotFound() {
 }
 ```
 
-
-
-
-# 第四部分
-
-# 单元测试的扩展主题
+# 第四部分 单元测试的扩展主题
 
 编写测试只是更广泛体验的一部分。请在各种现代且相关的语境下探索单元测试：测试驱动开发 (TDD)、项目团队以及 AI 驱动的开发。
 
@@ -6765,7 +6428,7 @@ TDD 是一个三部分的循环：
 
 对于你的练习，你将测试驱动一个小型投资组合管理器。你的需求也将由你的产品负责人 Madhu 分批地向你展示。想象每一组需求之前都没有被考虑过。你的任务是为生产环境所需的每个增量交付解决方案。
 
-你想要确保自己能够无限地接纳新的需求包。为了满足持续的需求，在让每个新测试通过后（作为 TDD清理步骤的一部分），你的重点将是提炼解决方案以采用最简单的设计。你将追求简洁、清晰且聚合的代码。
+你想要确保自己能够无限地接纳新的需求包。为了满足持续的需求，在让每个新测试通过后（作为 TDD 清理步骤的一部分），你的重点将是提炼解决方案以采用最简单的设计。你将追求简洁、清晰且聚合的代码。
 
 每个新的 TDD 循环都从选择下一个要实现的行为开始。为了构建解决方案的过程尽可能顺畅，你将寻找一个从当前解决方案产生最小增量的行为。
 
@@ -6775,26 +6438,18 @@ TDD 是一个三部分的循环：
 
 对于第一批需求，你的任务是交付投资组合非常基础的要素。
 
-你将能够为投资组合进行购买。目前，购买涉及一个股票代码（例如 SONO (Sonos) 或 AAPL (Apple））以及一个价格。
+你将能够为投资组合进行购买。目前，购买涉及一个股票代码（例如 SONO (Sonos) 或 AAPL (Apple)）以及一个价格。
 
-![](img/59fd301af41bda17ca04d9f93d028_227_0.png)
+如果你需要保留一个布尔状态，布尔字段将出乎意料地解决问题。在购买时，更新 `Portfolio` 以反映该投资组合不再为空。
 
-
-
-
-# 第 11 章 采用测试驱动开发 (TDD) 推进 • 216
-
-如果你需要保留一个布尔状态，布尔字段将出乎意料地解决问题。在购买时，更新 Portfolio 以反映该投资组合不再为空。
+`utj-tdd/04/src/main/java/app/Portfolio.java`
 
 ```
-utj-tdd/04/src/main/java/app/Portfolio.java
 public class Portfolio {
     private boolean isEmpty = true;
-
     public boolean isEmpty() {
         return isEmpty;
     }
-
     public void purchase(String symbol, int shares) {
         isEmpty = false;
     }
@@ -6803,21 +6458,19 @@ public class Portfolio {
 
 你的测试也需要关爱。它们不再那么简洁；到目前为止编写的代码只是初始化了一个 `Portfolio` 对象——这是必要的操作，但从意义上来说，它对任何一个测试都没有增加任何额外价值。你可以在 `@BeforeEach` 方法中进行公共初始化。
 
+`utj-tdd/05/src/test/java/app/Portfolio.java`
+
 ```
-utj-tdd/05/src/test/java/app/Portfolio.java
 public class APortfolio {
     Portfolio portfolio;
-
     @BeforeEach
     void create() {
         portfolio = new Portfolio();
     }
-
     @Test
     void isEmptyWhenCreated() {
         assertTrue(portfolio.isEmpty());
     }
-
     @Test
     void isNotEmptyAfterPurchase() {
         portfolio.purchase("AAPL", 1);
@@ -6830,14 +6483,13 @@ public class APortfolio {
 
 现在请提交你的代码。从今以后，你将不会再收到任何提醒。每当你通过一个测试，并花一点精力清理结果时，就提交一次。你会很感激能够回溯到上一个代码增量的。
 
-报告错误 • 讨论
-
-# 增量 1：延迟复杂性 · 217
+## 增量 1：延迟复杂性
 
 本批次要处理的两个功能之一是投资组合大小的概念，以及……是的，你说得对，一个从 0 开始的测试。
 
+`ut-tdd/06/src/test/java/app/Portfolio.java`
+
 ```
-ut-tdd/06/src/test/java/app/Portfolio.java
 @Test
 void hasSizeWhenCreated() {
     assertEquals(0, portfolio.size());
@@ -6846,8 +6498,9 @@ void hasSizeWhenCreated() {
 
 为了让这段代码通过编译但不通过测试，请让 `size` 返回 -1。在观察失败后，硬编码一个 0 以使其通过：
 
+`ut-tdd/07/src/main/java/app/Portfolio.java`
+
 ```
-ut-tdd/07/src/main/java/app/Portfolio.java
 public int size() {
     return 0;
 }
@@ -6859,8 +6512,9 @@ public int size() {
 
 下一个测试——进行一次购买并让投资组合的大小为 1：
 
+`ut-tdd/08/src/test/java/app/Portfolio.java`
+
 ```
-ut-tdd/08/src/test/java/app/Portfolio.java
 @Test
 void hasSizeOnPurchase() {
     portfolio.purchase("AAPL", 1);
@@ -6870,8 +6524,9 @@ void hasSizeOnPurchase() {
 
 思考一下。你能用当前的数据结构（一个布尔值）解决这个问题吗？或者你可以：
 
+`ut-tdd/09/src/main/java/app/Portfolio.java`
+
 ```
-ut-tdd/09/src/main/java/app/Portfolio.java
 public int size() {
     return isEmpty() ? 0 : 1;
 }
@@ -6885,8 +6540,9 @@ public int size() {
 
 准备好进行真正的计算了吗？下一个测试的需求超过了双状态解决方案的支持：
 
+`ut3-tdd/11/src/test/java/app/APort.java`
+
 ```
-ut3-tdd/11/src/test/java/app/APort.java
 @Test
 void incrementsSizeWithEachPurchaseDifferentSymbol() {
     portfolio.purchase("AAPL", 1);
@@ -6899,21 +6555,19 @@ void incrementsSizeWithEachPurchaseDifferentSymbol() {
 
 引入一个名为 `size` 的 `int` 字段，初始化为 0 并在购买时递增：
 
+`ut3-tdd/11/src/main/java/app/Portfolio.java`
+
 ```
-ut3-tdd/11/src/main/java/app/Portfolio.java
 public class Portfolio {
     private boolean isEmpty = true;
     private int size = 0;
-
     public boolean isEmpty() {
         return isEmpty;
     }
-
     public void purchase(String symbol, int shares) {
         isEmpty = false;
         size++;
     }
-
     public int size() {
         return size;
     }
@@ -6924,33 +6578,23 @@ public class Portfolio {
 
 一旦你证明了向 `int` 的泛化是有效的，你可以利用重构步骤来清除旧的、有限的行为：
 
+`utj3-tdd/122/src/main/java/app/Portfolio.java`
+
 ```
-utj3-tdd/122/src/main/java/app/Portfolio.java
 public class Portfolio {
     private int size = 0;
-
     public boolean isEmpty() {
         return size == 0;
     }
-
     public void purchase(String symbol, int shares) {
         size++;
     }
-
     public int size() {
-        return size;
-    }
-}
 ```
 
-微小的代码命名并支持一项新计划。微小的代码确保了代码区域整洁且易于导航。
-
-你可能在想，这似乎是实现三行代码的一种迂路方法。
 
 
-
-
-增量 2：实现的泛化 • 221
+# 增量 2：实现的泛化
 
 那么……发布吧！你已经构建了对投资组合大小和空状态的支持。它没有多余的、推测性的变动部分，而且你所请求的解决方案一样简单。它通过了六个简单单元测试的完全测试。
 
@@ -6960,6 +6604,7 @@ Madhu 给你的第一批需求只有一项：跟踪给定符号所拥有的股�
 
 ```java
 ut3-tdd/src/test/java/app/Portfolio.java
+
 @Test
 void returnsSharesGivenSymbol() {
     portfolio.purchase("AAPL", 42);
@@ -6971,6 +6616,7 @@ void returnsSharesGivenSymbol() {
 
 ```java
 ut3-tdd/src/main/java/app/Portfolio.java
+
 public class Portfolio {
     private Set<String> symbols = new HashSet<String>();
     private int shares;
@@ -6989,6 +6635,7 @@ public class Portfolio {
 
 ```java
 ut3-tdd/src/test/java/app/Portfolio.java
+
 @Test
 void separatesSharesBySymbol() {
     portfolio.purchase("SONO", 42);
@@ -6997,10 +6644,11 @@ void separatesSharesBySymbol() {
 }
 ```
 
-“是时候了，对吧？”你问道。是的，你终于可以引入 HashMap 了……如果你觉得有必要的话。解决这个问题还有其他方法，但目前 HashMap 是最直接的。
+“是时候了，对吧？”你问道。是的，你终于可以引入 `HashMap` 了……如果你觉得有必要的话。解决这个问题还有其他方法，但目前 `HashMap` 是最直接的。
 
 ```java
 ut3-tdd/20/19/src/main/java/app/Portfolio.java
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -7010,20 +6658,16 @@ public class Portfolio {
     private Map<String, Integer> purchases = new HashMap<>();
     private Set<String> symbols = new HashSet<String>();
     private int shares;
-
     public boolean isEmpty() {
         return purchases.isEmpty();
     }
-
     public void purchase(String symbol, int shares) {
         symbols.add(symbol);
         this.purchases.put(symbol, shares);
     }
-
     public int size() {
         return purchases.size();
     }
-
     public int sharesOf(String symbol) {
         return purchases.get(symbol);
     }
@@ -7034,24 +6678,21 @@ public class Portfolio {
 
 ```java
 ut3-tdd/20/19/src/main/java/app/Portfolio.java
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class Portfolio {
     private Map<String, Integer> purchases = new HashMap<>();
-
     public boolean isEmpty() {
         return purchases.isEmpty();
     }
-
     public void purchase(String symbol, int shares) {
         purchases.put(symbol, shares);
     }
-
     public int size() {
         return purchases.size();
     }
-
     public int sharesOf(String symbol) {
         return purchases.get(symbol);
     }
@@ -7062,6 +6703,7 @@ public class Portfolio {
 
 ```java
 ut3-tdd/21/src/test/java/app/Portfolio.java
+
 @Test
 void returns0SharesForSymbolNotPurchased() {
     assertEquals(0, portfolio.sharesOf("SONO"));
@@ -7072,9 +6714,9 @@ void returns0SharesForSymbolNotPurchased() {
 
 ```java
 ut3-tdd/22/src/main/java/app/Portfolio.java
+
 public int sharesOf(String symbol) {
     if (!purchases.containsKey(symbol)) return 0;
-
     return purchases.get(symbol);
 }
 ```
@@ -7083,6 +6725,7 @@ public int sharesOf(String symbol) {
 
 ```java
 ut3-tdd/23/src/main/java/app/Portfolio.java
+
 public int sharesOf(String symbol) {
     return purchases.getOrDefault(symbol, 0);
 }
@@ -7092,6 +6735,7 @@ public int sharesOf(String symbol) {
 
 ```java
 ut3-tdd/24/src/test/java/app/Portfolio.java
+
 @Test
 void accumulatesSharesOfSymbolPurchase() {
     portfolio.purchase("SONO", 42);
@@ -7104,42 +6748,17 @@ void accumulatesSharesOfSymbolPurchase() {
 
 ```java
 ut3-tdd/24/src/main/java/app/Portfolio.java
-public void purchase(String symbol, int shares) {
-    purchases.put(symbol, shares); // 注意：此处逻辑应为累加
-}
-``` (抱歉，原文提供的代码片段似乎在这里有断层或重复，我根据上下文翻译如下)
 
-```java
--   ut3-tdd/24/src/main/java/app/Portfolio.java
 public void purchase(String symbol, int shares) {
     purchases.put(symbol, shares);
 }
 ```
-(修正：根据原文逻辑意图，此处应处理累加，但我严格遵循翻译要求)
 
-等等，重新审视原文最后几行：
-```java
-ut3-tdd/24/src/main/java/app/Portfolio.java
-public void purchase(String symbol, int shares) {
-    purchases.put(symbol, shares);
-}
-```
-(原文在此处似乎存在逻辑混乱或重复的错误，我将按照原文文本内容进行对应翻译)
 
-通过快速的重构和一点 Java 知识，你可以将这两行简化为一行：
+
+# 第 11 章 采用测试驱动开发 (TDD) 推进
 
 ```java
-ut3-tdd/23/src/main/java/app/Portfolio.java
-public int sharesOf(String symbol) {
-    return purchases.getOrDefault(symbol, 0);
-}
-```
-
-接下来——确保投资组合返回所有对同一符号购买的总股数：
-
-```java
-ut3-tdd/24/src/test/java/app/Portfolio.java
-@Test
 void accumulatesSharesOfSymbolPurchase() {
     portfolio.purchase("SONO", 42);
     portfolio.purchase("SONO", 100);
@@ -7150,189 +6769,20 @@ void accumulatesSharesOfSymbolPurchase() {
 你只需要对现有的代码行进行微小的修改：
 
 ```java
-ut3-tdd/24/src/main/java/app/Portfolio.java
+// ut3-tdd/24/src/main/java/app/Portfolio.java
 public void purchase(String symbol, int shares) {
     purchases.put(symbol, shares);
 }
 ```
-(注：原文后续部分似乎出现了文本重复和逻辑错位，我将基于提供的原始字符串进行逐行翻译)
-
----
-*由于提供的原文在后半部分出现了严重的逻辑重复和文本混乱（例如多次 Increment 2 的跳跃和代码块重复），我将严格按照你提供的文本流进行翻译，确保不遗漏。*
-
-[content]
-增量 2：实现的泛化 • 221
-
-那么……发布吧！你已经构建了对投资组合大小和空状态的支持。它没有多余的、推测性的变动部分，而且你所请求的解决方案一样简单。它通过了六个简单单元测试的完全测试。
-
-## 增量2：实现的泛化
-
-Madhu 给你的第一批需求只有一项：跟踪给定符号所拥有的股票数量。一个用例路径（happy path）测试用例：
 
 ```java
-ut3-tdd/src/test/java/app/Portfolio.java
-@Test
-void returnsSharesGivenSymbol() {
-    portfolio.purchase("AAPL", 42);
-    assertEquals(42, portfolio.sharesOf("AAPL"));
-}
-```
-
-针对特定时间点的测试代表了你所做的假设集合。目前，你假设只会发生一次购买。因此，你可以使用单个离散字段来跟踪股数：
-
-```java
-ut3-tdd/src/main/java/app/Portfolio.java
-public class Portfolio {
-    private Set<String> symbols = new HashSet<String>();
-    private int shares;
-    // ...
-    public void purchase(String symbol, int shares) {
-        symbols.add(symbol);
-        this.shares = shares;
-    }
-    public int sharesOf(String symbol) {
-        return shares;
-    }
-}
-```
-
-你知道使用单个字段无法处理不同符号的多次购买。这让你知道你编写的下一个测试——涉及多次购买——肯定会失败，从而让你保持在 TDD 循环中：
-
-```java
-ut3-tdd/src/test/java/app/Portfolio.java
-@Test
-void separatesSharesBySymbol() {
-    portfolio.purchase("SONO", 42);
-    portfolio.purchase("AAPL", 1);
-    assertEquals(42, portfolio.sharesOf("SONO"));
-}
-```
-
-“是时候了，对吧？”你问道。是的，你终于可以引入 HashMap 了……如果你觉得有必要的话。解决这个问题还有其他方法，但目前 HashMap 是最直接的。
-
-```java
-ut3-tdd/20/19/src/main/java/app/Portfolio.java
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-
-public class Portfolio {
-    private Map<String, Integer> purchases = new HashMap<>();
-    private Set<String> symbols = new HashSet<String>();
-    private int shares;
-
-    public boolean isEmpty() {
-        return purchases.isEmpty();
-    }
-
-    public void purchase(String symbol, int shares) {
-        symbols.add(symbol);
-        this.purchases.put(symbol, shares);
-    }
-
-    public int size() {
-        return purchases.size();
-    }
-
-    public int sharesOf(String symbol) {
-        return purchases.get(symbol);
-    }
-}
-```
-
-一旦你所需的键值数据结构和支持代码就绪，你可以创建一个类来简化符号字段和股数字段的使用：
-
-```java
-ut3-tdd/20/19/src/main/java/app/Portfolio.java
-import java.util.HashMap;
-import java.util.Map;
-
-public class Portfolio {
-    private Map<String, Integer> purchases = new HashMap<>();
-
-    public boolean isEmpty() {
-        return purchases.isEmpty();
-    }
-
-    public void purchase(String symbol, int shares) {
-        purchases.put(symbol, shares);
-    }
-
-    public int size() {
-        return purchases.size();
-    }
-
-    public int sharesOf(String symbol) {
-        return purchases.get(symbol);
-    }
-}
-```
-
-哎呀！你忘了从 0 开始索引的测试。良好的习惯需要时间来养成，即使是已形成的习惯也可能暂时忘记。
-
-```java
-ut3-tdd/21/src/test/java/app/Portfolio.java
-@Test
-void returns0SharesForSymbolNotPurchased() {
-    assertEquals(0, portfolio.sharesOf("SONO"));
-}
-```
-
-失败的测试需要一行生产代码代码，即 `sharesOf` 方法中的一个守卫语句：
-
-```java
-ut3-tdd/22/src/main/java/app/Portfolio.java
-public int sharesOf(String symbol) {
-    if (!purchases.containsKey(symbol)) return 0;
-
-    return purchases.get(symbol);
-}
-```
-
-通过快速的重构和一点 Java 知识，你可以将这两行简化为一行：
-
-```java
-ut3-tdd/23/src/main/java/app/Portfolio.java
-public int sharesOf(String symbol) {
-    return purchases.getOrDefault(symbol, 0);
-}
-```
-
-接下来——确保投资组合返回所有对同一符号购买的总股数：
-
-```java
-ut3-tdd/24/src/test/java/app/Portfolio.java
-@Test
-void accumulatesSharesOfSymbolPurchase() {
-    portfolio.purchase("SONO", 42);
-    portfolio.purchase("SONO", 100);
-    assertEquals(142, portfolio.sharesOf("SONO"));
-}
-```
-
-你只需要对现有的代码行进行微小的修改：
-
-```java
-ut3-tdd/24/src/main/java/app/Portfolio.java
-public void purchase(String symbol, int shares) {
-    purchases.put(symbol, shares);
-}
-```
-(注：由于提供的原文后半部分存在重复和逻辑混乱，此处翻译基于您提供的文本流)
-
-
-
-
-# 第 11 章 采用测试驱动开发 (TDD) 推进 • 226
-
-```
-utj3-tdd/30/src/main/java/app/Portfolio.java
+// utj3-tdd/30/src/main/java/app/Portfolio.java
 public void sell(String symbol, int shares) {
     abortOnOversell(symbol, shares);
     updateShares(symbol, -shares);
 }
-    private void abortOnOversell(String symbol, int shares) {
+
+private void abortOnOversell(String symbol, int shares) {
     if (sharesOf(symbol) < shares) {
         throw new InvalidTransactionException();
     }
@@ -7341,8 +6791,8 @@ public void sell(String symbol, int shares) {
 
 现在该处理特殊情况了：当某个股票都被卖出时，确保组合的大小会缩小：
 
-```
-utj3-tdd/30/src/test/java/app/Portfolio.java
+```java
+// utj3-tdd/30/src/test/java/app/Portfolio.java
 @Test
 void reducesSizeWhenLiquidatingSymbol() {
     portfolio.purchase("AAPL", 50);
@@ -7353,8 +6803,8 @@ void reducesSizeWhenLiquidatingSymbol() {
 
 测试如预期般失败了。你的解决方案是：
 
-```
-utj3-tdd/30/src/main/java/app/Portfolio.java
+```java
+// utj3-tdd/30/src/main/java/app/Portfolio.java
 public void sell(String symbol, int shares) {
     abortOnOversell(symbol, shares);
     updateShares(symbol, -shares);
@@ -7362,109 +6812,112 @@ public void sell(String symbol, int shares) {
 }
 ```
 
-# 增量 4：引入测试双形
+## 增量 4：引入测试双形
 
-对于最后一个增量，Madhu 告诉你需要为每次购买或卖出捕并保存时间戳。他指出后续需求将需要这些信息。目前的需求如下：
+对于最后一个增量，Madhu 告诉你需要为每次购买或卖出捕获并保存时间戳。他指出后续需求将需要这些信息。目前的需求如下：
 
 - 提供最后一次交易（购买或卖出）的详细信息，包括时间戳。
-- 生成所有交易的列表，并按时间时间倒序排列。
-
-# 增量 4：引入测试双形 • 227
+- 生成所有交易的列表，并按时间倒序排列。
 
 你选择从最后一次交易开始。在忘记之前，你先放置一个零索引测试：
 
-```
-utj-tdd/td31/src/test/java/app/APortfolio.java
+```java
+// utj-tdd/td31/src/test/java/app/APortfolio.java
 @Test
 void returnsNullWhenNoPreviousTransactionMade() {
     assertNull(portfolio.lastTransaction());
 }
 ```
 
-下一个测试是针对最后一次交易的一索引测试，它将要求你能够验证交易创建时的时间戳。时间是一个不断变化的量。如果生产代码缓存了交易发生的瞬间，我们如何知道预期什么样的时间戳呢？
+下一个测试是针对最后一次交易的索引测试，它将要求你能够验证交易创建时的时间戳。时间是一个不断变化的量。如果生产代码缓存了交易发生的瞬间，我们如何知道预期什么样的时间戳呢？
 
-你的解决方案使用了一个测试双形[参见第 3 章“使用测试双形”，见第 53 页]，Java 类 `java.time.Clock` 正为此目的。你使用了 Clock 类上的静态方法 `fixed`，或者一个 `java.time.Instant` 对象。该对象就像现实世界中的坏钟，固定在一个点。随后的每次时间查询都会返回你提供给它的测试瞬间。
+你的解决方案使用了一个测试双形（参见第 3 章“使用测试双形”，见第 53 页），`java.time.Clock` 类正为此目的。你使用了 `Clock` 类上的静态方法 `fixed`，或者一个 `java.time.Instant` 对象。该对象就像现实世界中的坏钟，固定在一个点。随后的每次时间查询都会返回你提供给它的测试瞬间。
 
-在创建一个带有固定瞬间的 Clock 对象后，测试通过 setter 方法将其注入组合中：
+在创建一个带有固定瞬间的 `Clock` 对象后，测试通过 setter 方法将其注入组合中：
 
-```
-utj-tdd/td31/src/test/java/app/APortfolio.java
+```java
+// utj-tdd/td31/src/test/java/app/APortfolio.java
 @Nested
 class LastTransaction {
     Instant now = Instant.now();
+
     @BeforeEach
     void injectFixedClock() {
-        Clock clock = Clock.fixed(now, Zone.systemDefault());
+        Clock clock = Clock.fixed(now, ZoneId.systemDefault());
         portfolio.setClock(clock);
     }
 
     @Test
     void returnsLastTransactionAfterPurchase() {
         portfolio.purchase("SONO", 20);
-        assertEquals(portfolio.lastTransaction(), 20, new Transaction("SONO", 20, BUY, now));
+        assertEquals(portfolio.lastTransaction(),
+            new Transaction("SONO", 20, BUY, now));
     }
 }
 ```
 
-Portfolio 类将其时钟字段初始化为工作中的（生产）时钟。在生产环境中运行时，时钟返回实际的时间瞬间。在单元测试上下文中运行时，生产时钟会被注入的“坏钟”覆盖。Portfolio 代码不知道也不在乎它在什么上下文中执行。
+`Portfolio` 类将其时钟字段初始化为工作中的（生产）时钟。在生产环境中运行时，时钟返回实际的时间瞬间。在单元测试上下文中运行时，生产时钟会被注入的“坏钟”覆盖。`Portfolio` 代码不知道也不在乎它在什么上下文中执行。
 
 下面的代码列表引入了时钟以及跟踪“最后一次交易”对象的能力：
 
-```
-utj3-tdd/31/src/java/app/Portfolio.java
+```java
+// utj3-tdd/31/src/java/app/Portfolio.java
 import java.time.Clock;
 import static app.TransactionType.BUY;
 import static java.lang.Math.abs;
-// /
+
 public class Portfolio {
     private Transaction lastTransaction;
     private Clock clock = Clock.systemUTC();
-    // /
+
     public void purchase(String symbol, int shares) {
         updateShares(symbol, shares);
     }
+
     private void updateShares(String symbol, int shares) {
-        lastTransaction = 
-            new Transaction(symbol, abs(shares), BUY, clock.instant(symbol) + shares);
+        lastTransaction = new Transaction(symbol, abs(shares), BUY, clock.instant());
+        purchases.put(symbol, sharesOf(symbol) + shares);
     }
-    // /
-    public void setclock(Clock clock) {
+
+    public void setClock(Clock clock) {
         this.clock = clock;
     }
+
     public Transaction lastTransaction() {
         return lastTransaction;
     }
 }
 ```
 
-这里是 TransactionType 和 Transaction 类型的声明：
+这里是 `TransactionType` 和 `Transaction` 类型的声明：
 
-```
-utj3-tdd/31/src/java/app/TransactionType.java
+```java
+// utj3-tdd/31/src/java/app/TransactionType.java
 public enum TransactionType {
     BUY, SELL;
 }
 ```
 
-```
-utj3-tdd/31/src/main/app/Transaction.java
+```java
+// utj3-tdd/31/src/main/app/Transaction.java
 import java.time.Instant;
+
 public record Transaction(
     String symbol, int shares, TransactionType type, Instant now
-)
+) {}
 ```
 
-在在上一个示例中，你提取了 sell 和 purchase 方法之间的冗余部分，创建了一个新方法 `updateShares`。这是更好的设计选择，至少出于以下几个原因：
+在上一个示例中，你提取了 `sell` 和 `purchase` 方法之间的冗余部分，创建了一个新方法 `updateShares`。这是更好的设计选择，至少出于以下几个原因：
 
 - 它提高了抽象层次，从而提高了代码的可理解性。
-- 它增加了解决方案的简洁性，减少了未来理解 sell 和 update 的成本。
+- 它增加了解决方案的简洁性，减少了未来理解 `sell` 和 `update` 的成本。
 
-在此处，共享方法允许你将 Transaction 的创建隔离在单个方法中。
+在此处，共享方法允许你将 `Transaction` 的创建隔离在单个方法中。
 
 你添加了第二个测试，以便在卖出交易中能够正确设置交易类型：
 
-```
-ut3-tdd-32/src/test/java/APortfolio.java
+```java
+// ut3-tdd-32/src/test/java/APortfolio.java
 @Test
 void returnsLastTransactionAfterSale() {
     portfolio.purchase("SONO", 200);
@@ -7474,8 +6927,8 @@ void returnsLastTransactionAfterSale() {
 }
 ```
 
-```
-ut3-tdd-32/src/main/app/APortfolio.java
+```java
+// ut3-tdd-32/src/main/app/APortfolio.java
 public void purchase(String symbol, int shares) {
     updateShares(symbol, shares, BUY);
 }
@@ -7487,19 +6940,19 @@ public void sell(String symbol, int shares) {
 }
 
 private void updateShares(String symbol, int shares, TransactionType type) {
-    lastTransaction =
-        new Transaction(symbol, abs(shares), type, clock.instant());
+    lastTransaction = new Transaction(symbol, abs(shares), type, clock.instant());
     purchases.put(symbol, sharesOf(symbol) + shares);
 }
 ```
 
 接下来处理历史记录：
 
-```
-ut3-tdd/32/src/test/java/APortfolio.java
+```java
+// ut3-tdd/32/src/test/java/APortfolio.java
 @Nested
 class TransactionHistory {
     Instant now = Instant.now();
+
     @BeforeEach
     void injectedClock() {
         Clock clock = Clock.fixed(now, ZoneId.systemDefault());
@@ -7510,22 +6963,18 @@ class TransactionHistory {
     void returnsEmptyListNoTransactions() {
         assertTrue(portfolio.transactions().isEmpty());
     }
-}
-```
 
-# 第 11 章 采用测试驱动开发 (TDD) 推进 • 230
-
-```
-void returnsListOfChronologically() {
-    portfolio.purchase("A", 1);
-    portfolio.purchase("B", 2);
-    portfolio.purchase("C", 3);
-
-    assertEquals(portfolio.transactions(), List.of(
-        new Transaction("C", 3, BUY, now),
-        new Transaction("B", 2, BUY, now),
-        new Transaction("A", 1, BUY, now)
-    ));
+    @Test
+    void returnsListOfChronologically() {
+        portfolio.purchase("A", 1);
+        portfolio.purchase("B", 2);
+        portfolio.purchase("C", 3);
+        assertEquals(portfolio.transactions(), List.of(
+            new Transaction("C", 3, BUY, now),
+            new Transaction("B", 2, BUY, now),
+            new Transaction("A", 1, BUY, now)
+        ));
+    }
 }
 ```
 
@@ -7533,21 +6982,18 @@ void returnsListOfChronologically() {
 
 实现代码：
 
-```
-utj3-tdd/33/src/main/java/app/Portfolio.java
+```java
+// utj3-tdd/33/src/main/java/app/Portfolio.java
 import java.time.Clock;
 import java.util.LinkedList;
 import java.util.List;
-// ...
+
 public class Portfolio {
     private Transaction lastTransaction;
-    private List transactions = new LinkedList();
-    // ...
-    private void updateShares(String symbol,
-        int shares,
-        TransactionType type) {
-        lastTransaction =
-            new Transaction(symbol, abs(shares), type, clock.instant());
+    private List<Transaction> transactions = new LinkedList<>();
+
+    private void updateShares(String symbol, int shares, TransactionType type) {
+        lastTransaction = new Transaction(symbol, abs(shares), type, clock.instant());
         transactions.addFirst(lastTransaction);
         purchases.put(symbol, sharesOf(symbol) + shares);
     }
@@ -7559,31 +7005,27 @@ public class Portfolio {
     public List<Transaction> transactions() {
         return transactions;
     }
-    // ...
+}
 ```
 
-你不再需要 `lastTransaction` 字段，因为你可以从交易列表中提取最近的交易。你需要修改 `updateShares` 和 `lastTransaction` 方法。完成后完成后移除该字段。
+你不再需要 `lastTransaction` 字段，因为你可以从交易列表中提取最近的交易。你需要修改 `updateShares` 和 `lastTransaction` 方法。完成后移除该字段。
 
+## 测试驱动开发 vs. 测试后开发
 
-
-
-
-## 测试驱动开发 vs. 测试后开发 231
-
-```
-utj3-tdd/34/src/main/java/app/Portfolio.java
-private void updateShares(String symbol,
-    int shares,
-    TransactionType type) {
-    var transaction =
-    new Transaction(symbol, abs(shares), type, clock.instant());
+```java
+// utj3-tdd/34/src/main/java/app/Portfolio.java
+private void updateShares(String symbol, int shares, TransactionType type) {
+    var transaction = new Transaction(symbol, abs(shares), type, clock.instant());
     transactions.addFirst(transaction);
     purchases.put(symbol, sharesOf(symbol) + shares);
 }
+
 public Transaction lastTransaction() {
     return transactions.peekFirst();
 }
 ```
+
+
 
 此时，你可能会认为这种方案设计是有缺陷的。它使用了不同的数据结构来管理信息，而这些信息可以用一个结构来表示。如果你认为关于投资组合的所有查询都可以从它计算出来，那么在 `purchases` HashMap 中捕获的信息本质上是一种优化的计算。
 
@@ -7599,7 +7041,7 @@ TDD 围绕着“测试-代码-重构”的简单循环。“显著减少缺陷�
 
 - 对单元行为正确性的高度信心
 - 能够持续保持高质量的设计
--能够安全且无恐惧地引入新更改的能力
+- 能够安全且无恐惧地引入新更改的能力
 - 对所有意图行为提供清晰、可信赖的文档
 
 结果是你的更改成本可能会大幅降低。
@@ -7646,24 +7088,21 @@ TDD 周期很短。如果没有本章示例中伴随的所有闲话，每个测�
 
 单元测试不是免费的，”Joe 说，“我们要在两周内交付。”Lucia 回答 Joe，“我们落后了，只需要发布。”没有测试地写出代码只能让我们加速一段时间——可能只是几天。不可避免地，我们会遇到糟糕的调试会议。最糟糕的是它创建了将永远付出代价的遗留代码。抱歉，丢弃单元测试是不值得的。
 
-
-
-
-与团队达成共识 · 237
+### 与团队达成共识 · 237
 
 这里有一份短且不完整的单元测试实践列表，用于进行标准化：
 
-- 开发者在提交代码（check-in）之前应该运行哪些测试
+- 开发者在提交代码（`check-in`）之前应该运行哪些测试
 - 如何命名类和测试方法
 - 使用 JUnit 的断言还是像 AssertJ 这样的断言库
 - 是否使用 AAA 模式（安排、执行、断言）
 - 优先使用哪种 Mock 工具（模拟工具）
-- 是否在测试运行期间禁止控制台输出（console output）（请务必这样做）
+- 是否在测试运行期间禁止控制台输出（`console output`）（请务必这样做）
 - 如何在单元测试集中识别并抑制慢速测试
 
 你的团队应该快速采纳并遵守这些大多数标准。某些标准需要持续的警惕，例如从测试运行中消除控制台输出。你可能可以通过自动化解决方案来确保人们遵守；否则，你可能会发现自己在不断地催促同事。你可能还会发现，某些标准并不值得投入精力。
 
-# 通过事后审查（Post Fact Reviews）提高质量
+## 通过事后审查（Post Fact Reviews）提高质量
 
 为了确保每个人都遵守标准，你的团队必须通过某种形式的代码审查施加集体压力。团队在代码和单元测试上的投入非常昂贵，不允许个人对代码库随心所欲。
 
@@ -7671,16 +7110,16 @@ TDD 周期很短。如果没有本章示例中伴随的所有闲话，每个测�
 
 PR 流程已成为许多组织的首选标准。虽然它看起来很高效，但 PR 流程是所有审查机制中效率最低的。这是因为它是灵活性最低的——它试图通过尽量减少面对面的真人互动来简化审查。
 
-你可以启动审查会议，让单元测试的编写者向团队中的其他成员征求反馈。事后审查的范围很大，从非正式的代码走读（code walkthroughs）到 Fagan 检查（Fagan inspections），后者旨在简化和标准化审查过程。
+你可以启动审查会议，让单元测试的编写者向团队中的其他成员征求反馈。事后审查的范围很大，从非正式的代码走读（`code walkthroughs`）到 Fagan 检查（`Fagan inspections`），后者旨在简化和标准化审查过程。
 
 在使用 Fagan 检查时，创建文档（通常是代码）的人负责邀请审查人员，这与做 PR 时非常相似。典型的会议通常在几天后举行，这为审查人员留出了查看更改的时间。在会议之前，审查人员会记录缺陷并根据严重程度进行分类。
 
 1. https://medium.com/pragmatic-programmers/pr-shift-left-please-part-one-b0f8bb79ef2b
 2. http://en.wikipedia.org/wiki/Fagan_inspection
 
-# 第 12 章 采用团队实践
+### 第 12 章 采用团队实践
 
-检查会议的设计初衷是快速进行。只描述最严重的问题，且讨论仅限于澄清。在会议期间，严禁对任何问题进行“提供解决方案（solutioning）”。
+检查会议的设计初衷是快速进行。只描述最严重的问题，且讨论仅限于澄清。在会议期间，严禁对任何问题进行“提供解决方案（`solutioning`）”。
 
 文档编写者带走所有问题列表（包括不严重的问题），并根据情况进行修复。如果需要，可以举行后续会议来讨论解决方案。
 
@@ -7696,13 +7135,13 @@ PR 流程、Fagan 检查以及代码走读等都是事后行为——它们在�
 
 简而言之，事后审查太晚了，而且可能不值其投入所需的时间。换句话说，做工作、审查它、重构它、再次审查它是一个低效的过程。
 
-# 通过结对编程（Pair Programming）进行主动审查
+## 通过结对编程（Pair Programming）进行主动审查
 
 良好的审查流程应该让团队在任何人尝试实现某个设计之前，审查并拒绝糟糕的设计。在 20 世纪 90 年代，软件开发很大程度上是由前期设计流程驱动的。团队通常会将项目的 30% 或更多投入到推测性设计中。在这些设计完成之前，开发工作不会开始。设计基于极其详尽的需求，被捕获为包含大量设计和模型的厚重文档。这在少数情况下是有效的。
 
-重型前期设计（Heavy-front design）对我们大多数人来说并不适用，因为它无法适应那无处不在的“变化”。此外，无论前期的投入有多少，推测性设计往往是不够的或完全不起作用。
+重型前期设计（`Heavy-front design`）对我们大多数人来说并不适用，因为它无法适应那无处不在的“变化”。此外，无论前期的投入有多少，推测性设计往往是不够的或完全不起作用。
 
-结对编程（或 pairing）的意图是通过面对面交流来提高质量。通过结对，程序员们并肩工作（或者远程面对面），在整个开发会话中都处于活跃状态。这种方式结对是一种主动形式的审查——参与者在开发过程中相互帮助遵守标准和单元测试实践。
+结对编程（或 `pairing`）的意图是通过面对面交流来提高质量。通过结对，程序员们并肩工作（或者远程面对面），在整个开发会话中都处于活跃状态。这种方式结对是一种主动形式的审查——参与者在开发过程中相互帮助遵守标准和单元测试实践。
 
 结对编程在软件开发领域引起了许多争议，然而，这种做法让许多人想出脑门。即使执行得当，结对也会产生一些成本。有些人发现它具有高度互动性。结对交换是有价值的。在任务完成之前，新成员替换其中一人。在短一段时间（可能只是几分钟）后，驱动者将控制权让给另一个结对成员。一个拥有绝妙想法的驱动者必须放弃座位，以引导下一个驱动者理解其思路。
 
@@ -7710,7 +7149,7 @@ PR 流程、Fagan 检查以及代码走读等都是事后行为——它们在�
 
 消失或被极大简化。由于所有人都在房间里，你能更早地发现问题，推导出一个所有人都能接受的更好设计，达成团队编码标准，你现在就可以可以使用所有可用的专业知识，并且编写你需要编写的所有测试。
 
-最重要的一点（对我来说最不），结集编程会议（mob sessions）通常非常有趣，我经常觉得我们完成的工作要多得多。
+最重要的一点（对我来说最不），结集编程会议（`mob sessions`）通常非常有趣，我经常觉得我们完成的工作要多得多。
 
 如果你选择练习结集编程或结对编程，你最终仍会产生一些个人工作产出。请确保对这些工作使用事后评审流程。
 
@@ -7742,7 +7181,7 @@ CI 是实践持续部署（CD）的基础，在其中，每次成功的构建都
 
 相比之下，来自不先进团队的开发者会将他们的更改推迟到功能完成。他们通常会在一天、几天、有时是几周的时间内在代码分支上进行更改。随后必须集成的新代码量可能是巨大的，极有可能与现有代码发生冲突。
 
-开发者可能会花费数小时甚至几天的时间管理精细的合并过程以集成一个长寿分支。这种噩梦的正确技术术语是“合并地狱”（merge hell）。噩梦的持续时间往往随着分支的增长而增加。
+开发者可能会花费数小时甚至几天的时间管理精细的合并过程以集成一个长寿分支。这种噩梦的正确技术术语是“合并地狱”（`merge hell`）。噩梦的持续时间往往随着分支的增长而增加。
 
 更好的沟通和分工有助于减少冲突和合并地狱。但也请考虑结集编程（参见第 240 页关于结集编程的活动评审）。
 
@@ -7770,13 +7209,13 @@ CI 过程培养了针对昂贵代码的健康同伴压力。开发者会很快�
 
 在单元测试方面，你和你的团队必须保持一致。如果这对你的团队来说是新事物，需要时间来采纳并内化为一种有益的习惯。如果这是一项现有实践，你的团队做法可能需要改进。
 
-在本章中，你学习了从实现和过程两个角度建立团队层面的单元测试标准。你还学习了有助于确保质量的活动评审机制——特别是结集编程和结对编程。最后，你发现了 CI 在单元测试中扮演的关键作用。
+在本章中，你学习了从实现和过程两个角度建立团队层面的单元测试标准。你还学习了有助于确保质量的活动评审机制——特别是结集编程和结对编程。最后，你发现了 CI 在单元测试中扮演的关键角色。
 
 上上次：时代变化万变。AI 已经显著进入了软件开发领域。与之前的尝试（有人还记得 Prolog 和 4GL 吗？）不同，AI 不仅对软件开发，还对我们许多人的日常生活产生了巨大影响。AI 的改进正在加速，它不太消失。
 
 是的，在 AI 时代，单元测试仍然非常重要。继续阅读了解。
 
-## 第13 章：通过单元测试让 AI 诚实
+## 第 13 章：通过单元测试让 AI 诚实
 
 你已经学习了编写单元测试可以获得的许多益处：当然还有更少的缺陷，但可靠的文档、通过重构保持代码清洁的能力，以及信心的极大增加。
 
@@ -7790,11 +7229,7 @@ AI 可以生成代码，这对软件开发行业产生了日益巨大的影响�
 
 ChatGPT 可能会犯错。请检查重要信息。
 
-我经常看到当 LLM（大语言模型）向现有代码库添加新功能时发生失败，例如。你将探索如何
-
-
-
-帮助你的 LLM 更好地完成本章中的挑战。但如果任其自生自灭，随着 LLM 添加新的增量功能，它就越有可能破坏现有的功能。
+我经常看到当 LLM（大语言模型）向现有代码库添加新功能时发生失败，例如。你将探索如何帮助你的 LLM 更好地完成本章中的挑战。但如果任其自生自灭，随着 LLM 添加新的增量功能，它就越有可能破坏现有的功能。
 
 > 不要信任任何 AI 生成的代码是正确的。
 
@@ -7852,37 +7287,39 @@ ChatGPT 确认了该请求：
 
 然而，回想前面提到的像 ChatGPT 这样的 LLM 的局限性。它们有时会出错……就像你和我一样。你必须检查。
 
-
-
-
 ```java
+```
+
+
+
 private static String extractInitial(String name) {
   return name.charAt(0) + ".";
 }
-```
 
 # 让你的 LLM 整理它的表现
 
-LLM 的解决方案通过了测试，其实并不坏，但还有一些需要解决的细节。首先，它没有包含包名，这迫使我只能只它的它的部分解决方案，而不是对生成的代码进行完整的复制并替换，后者速度更快。（我想象在不久的将来，与 IDE 的集成会好得多，事实上，我自己就在编写这样一个插件。）
+LLM 的解决方案通过了测试，其实并不坏，但还有一些需要解决的细节。首先，它没有包含包名，这迫使我只能采用它的部分解决方案，而不是对生成的代码进行完整的复制并替换，后者速度更快。（我想象在不久的将来，与 IDE 的集成会好得多，事实上，我自己就在编写这样一个插件。）
 
-以下是我告诉 LLM 添加包名并平滑上述细节的提示词（prompt）：
+以下是我告诉 LLM 添加包名并平滑上述细节的提示词：
 
-你：代码应该存放在名为 `util` 的 Java 包中。
-
-Jeff-Java 标准规定，你应该避免在方法中使用临时变量，但 `normalizeName` 有三个测试是应该消除的。
-
-不要在测试名称中包含该单词；它是冗余的。
-
-不要在实现类中使用静态方法。对于生成的代码，优先考虑使用实例方法。
-
-在适当的地方更新 Jeff-Java 标准，以解决后续代码的这些问题。
+> 你：代码应该存放在名为 `util` 的 Java 包中。
+>
+> Jeff-Java 标准规定，你应该避免在方法中使用临时变量，但 `normalizeName` 有三个测试是应该消除的。
+>
+> 不要在测试名称中包含该单词；它是冗余的。
+>
+> 不要在实现类中使用静态方法。对于生成的代码，优先考虑使用实例方法。
+>
+> 在适当的地方更新 Jeff-Java 标准，以解决后续代码的这些问题。
 
 ChatGPT 交付得很好：
 
 ```java
 utj3-ai/02/src/test/java/util/NameNormalizerTest.java
+
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class NameNormalizerTest {
   private final NameNormalizer normalizer = new NameNormalizer();
 
@@ -7898,28 +7335,26 @@ public class NameNormalizerTest {
 }
 ```
 
-# 第 13 章.用单元测试保持代码诚实 • 252
+# 第 13 章. 用单元测试保持代码诚实 • 252
 
 ```java
 @Test
 public void multipleMiddleNames() {
-    assertEquals("Jackson, Samuel L.",
-    normalizer.normalizeName("Samuel Leroy Jackson"));
-    assertEquals("Martin, George R. R.",
-    normalizer.normalizeName("George Raymond Richard Martin"));
+    assertEquals("Jackson, Samuel L.", normalizer.normalizeName("Samuel Leroy Jackson"));
+    assertEquals("Martin, George R. R.", normalizer.normalizeName("George Raymond Richard Martin"));
 }
 ```
 
 ```java
 @Test
 public void longName() {
-    assertEquals("Hackley, Emma A. S.",
-    normalizer.normalizeName("Emma Azalia Smith Hackley"));
+    assertEquals("Hackley, Emma A. S.", normalizer.normalizeName("Emma Azalia Smith Hackley"));
 }
 ```
 
 ```java
 utj3-ai2/src/main/java/util/NameNormalizer.java
+
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
@@ -7929,22 +7364,20 @@ public class NameNormalizer {
         if (nameParts.length == 1) {
             return name;
         }
-
-        return formatLastName(nameParts[0],
-        nameParts[nameParts.length - 1],
-        Arrays.copyOfRange(
-        nameParts, 1, nameParts.length - 1));
+        return formatLastName(nameParts[0], nameParts[nameParts.length - 1], Arrays.copyOfRange(nameParts, 1, nameParts.length - 1));
     }
-    private String formatLastName(String lastName, String firstName, String middleInitials) {
-        var middleInitials = Arrays.stream(middleInitials)
+
+    private String formatLastName(String lastName, String firstName, String[] middleInitials) {
+        var middleInitialsStr = Arrays.stream(middleInitials)
             .map(this::extractInitial)
             .collect(Collectors.joining(" "));
-        if (middleInitials.isEmpty()) {
+        if (middleInitialsStr.isEmpty()) {
             return String.format("%s, %s", lastName, firstName);
         } else {
-            return String.format("%s, %s %s", lastName, firstName, middleInitials);
+            return String.format("%s, %s %s", lastName, firstName, middleInitialsStr);
         }
     }
+
     private String extractInitial(String name) {
         return name.charAt(0) + ".";
     }
@@ -7955,24 +7388,26 @@ public class NameNormalizer {
 
 我不喜欢它的几个选择，但发现代码相当易读，而且几乎已经足够了。我立即提出了意见：
 
-# 让你的 LLM 整理它的表现 ● 253
+# 让你的 LLM 整理它的表现 • 253
 
-你：`formatFirstName` 的参数应该先提取到新函数中，可能分别命名为 `firstName`、`middleNames` 和 `lastNames`。
-
-更新 Jeff-Java 标准，规定如果赋值的右侧涉及任何“特定于实现的细节”（即任何可能需要解释的内容），在内联（inline）之前应该先提取到特定的函数中。
+> 你：`formatLastName` 的参数应该先提取到新函数中，可能分别命名为 `firstName`、`middleNames` 和 `lastNames`。
+>
+> 更新 Jeff-Java 标准，规定如果赋值的右侧涉及任何“特定于实现的细节”（即任何可能需要解释的内容），在内联之前应该先提取到特定的函数中。
 
 现在我们对上号了！ChatGPT 听取得不错。
 
 ```java
-ut3-ai-03/src/main/java/util/NameNormalizer.java
+utj3-ai-03/src/main/java/util/NameNormalizer.java
+
 import java.util.Arrays;
 import java.util.stream.Collectors;
+
 public class NameNormalizer {
     public String normalizeName(String name) {
         var nameParts = name.split(" ");
 ```
 
-# 第 13 章.用单元测试保持代码诚实 • 254
+# 第 13 章. 用单元测试保持代码诚实 • 254
 
 代码已经到了我可以轻松推断出具体内容的程度。只需要花一点时间就能理解任何方法，并相信它如其所言。
 
@@ -7987,10 +7422,6 @@ ChatGPT 表现得很好：
 
 *(注：由于原始文本存在大量重复和 OCR 错误，此处译文根据核心逻辑进行了合并处理。)*
 
-
-
-
-
 # 添加新功能：后缀 • 257
 
 `testNameWithSuffix` 和 `nullInput`，由于我决定 `normalizeName` 的输入永远不会为 null，因此忽略了 `nullInput`。
@@ -8001,61 +7432,55 @@ ChatGPT 确实看到了我遗漏的测试用例的需求！失败的测试并没
 
 我考虑了我对迭代 ZOM 的了解（参见第 22 页的《ZOM: Zero and One Done, Now Testing Many》），并给 ChatGPT 给出了一组一二三的示例。
 
-你：*尝试按照以下更改重试。*
-
-修改代码和测试以支持后缀。后缀出现在名字末尾逗号之后。
-
-示例
-
-```
-input: Madonna, Esq.
-output: Madonna, Esq.
-```
-
-```
-input: John Doe, Sr.
-output: Doe, John, Sr.
-```
-
-```
-input: Martin Luther King, Jr.
-output: Martin Luther King, Martin L., Jr.
-```
-
-确保你使用 Jeff-Java 标准。最重要的是，找到一种让后缀代码与 `NameNormalizer` 中尽可能多的现有代码隔离的方法。
-
-不要包含空名字任何内容。
+> 你：*尝试按照以下更改重试。*
+>
+> 修改代码和测试以支持后缀。后缀出现在名字末尾逗号之后。
+>
+> 示例
+>
+> ```
+> input: Madonna, Esq.
+> output: Madonna, Esq.
+> ```
+>
+> ```
+> input: John Doe, Sr.
+> output: Doe, John, Sr.
+> ```
+>
+> ```
+> input: Martin Luther King, Jr.
+> output: King, Martin L., Jr.
+> ```
+>
+> 确保你使用 Jeff-Java 标准。最重要的是，找到一种让后缀代码与 `NameNormalizer` 中尽可能多的现有代码隔离的方法。
+>
+> 不要包含空名字任何内容。
 
 初看之下，结果看起来很不错：
 
-```
-utj3-al/06/src/test/java/util/NameNormalizerTest.java
+```java
+utj3-ai/06/src/test/java/util/NameNormalizerTest.java
+
 @Test
 public void testNameWithSuffix() {
-    assertEquals("King, Martin L., Jr.",
-        normalize.normalizeName("Martin Luther King, Jr."));
-    assertEquals("Doe, John, Sr.",
-        normalize.normalizeName("John Doe, Sr."));
+    assertEquals("King, Martin L., Jr.", normalizer.normalizeName("Martin Luther King, Jr."));
+    assertEquals("Doe, John, Sr.", normalizer.normalizeName("John Doe, Sr."));
 }
-```
 
-报告错误 • 讨论
-
-# 第 13 章. 用单元测试保持 AI 诚实 • 258
-
-```
 @Test
 public void singleNameWithSuffix() {
-    assertEquals("Madonna, Esq.",
-    normalizer.normalizeName("Madonna, Esq."));
+    assertEquals("Madonna, Esq.", normalizer.normalizeName("Madonna, Esq."));
 }
 ```
 
-```
-utj3-ai/06/src/main/java/Util/NameNormalizer.java
-public class Name {
+```java
+utj3-ai/06/src/main/java/util/NameNormalizer.java
+
+public class NameNormalizer {
     private String[] nameParts;
     private String suffix = "";
+
     public String normalizeName(String name) {
         extractSuffix(name);
         if (nameParts.length == 1 && suffix.isEmpty()) {
@@ -8063,16 +7488,18 @@ public class Name {
         }
         return lastName + firstName() + suffix;
     }
+
     private void extractSuffix(String name) {
         if (name.contains(",")) {
             var parts = name.split(", ", 2);
-            this.nameParts = parts[0].split(",");
+            this.nameParts = parts[0].split(" ");
             this.suffix = " " + parts[1];
         } else {
             this.nameParts = name.split(" ");
         }
     }
     // ...
+}
 ```
 
 AI 的解决方案很笨拙。`extractSuffix` 方法提取了后缀，但它也向 `nameParts` 中设置了值，使得逻辑变得难以理解。更好的解决方案是包含一个名为 `extractSuffix` 的纯函数，它只做一件事——给定一个名字，返回后缀或空字符串。
@@ -8094,18 +7521,20 @@ AI 的解决方案很笨拙。`extractSuffix` 方法提取了后缀，但它也�
 
 我顺着懒惰的流程走（如果它坏了，我为什么要修复它？）ChatGPT 的效果让我变得懒惰，但也许这是一种“好的懒惰”。
 
-你：预期：Madonna, Esq.
-实际：Madonna, Madonna, Esq.
-
-看看你是否能修复这个问题。
+> 你：预期：Madonna, Esq.
+> 实际：Madonna, Madonna, Esq.
+>
+> 看看你是否能修复这个问题。
 
 LLM 清楚正在发生什么以及如何修复：
-CHAT-GPT：基于 Madonna 的测试用例失败的原因是，即使在后缀之前只有一个名字部分，归一化逻辑也是这样应用的，导致了名字的重复。要修复这个问题，我们需要调整逻辑，以正确处理只有一个名字部分的情况（即没有名和姓，但可能有一个后缀）。
+
+> CHAT-GPT：基于 Madonna 的测试用例失败的原因是，即使在后缀之前只有一个名字部分，归一化逻辑也是这样应用的，导致了名字的重复。要修复这个问题，我们需要调整逻辑，以正确处理只有一个名字部分的情况（即没有名和姓，但可能有一个后缀）。
 
 修复方案提供了以下测试：
 
-```
+```java
 utj-ai/07/src/main/java/util/NameNormalizer.java
+
 public String normalizeName(String name) {
     extractSuffix(name);
     // 处理只有一个名字且没有中间名但提供后缀的情况
@@ -8124,7 +7553,7 @@ public String normalizeName(String name) {
 
 此时我有点不开心。我发给 ChatGPT 的信息并不清晰。
 
-你：撤销上一次更改。它内联了像这样的辅助函数。显示之前的版本。
+> 你：撤销上一次更改。它内联了像这样的辅助函数。显示之前的版本。
 
 幸运的是，ChatGPT 只撤销了内联。它保留了将 `extractSuffix` 转换为函数式的方法。
 
@@ -8134,14 +7563,11 @@ public String normalizeName(String name) {
 
 （注：此处原文包含大量重复的 OCR 错误和乱码，已根据指令要求进行清理并翻译核心逻辑）
 
-
-
-
-
 # ChatGPT 完成了任务：
 
 ```java
 utj3-ai/10/src/main/java/util/NameNormalizer.java
+
 private record ExtractedNameParts(String[] nameParts, String suffix) {
     public String normalizeName(String name) {
         var extractedNameParts = extractSuffix(name);
@@ -8152,6 +7578,7 @@ private record ExtractedNameParts(String[] nameParts, String suffix) {
         }
         return formatLastNameFirst() + suffix;
     }
+
     private ExtractedNameParts extractSuffix(String name) {
         if (name.contains(",")) {
             var parts = name.split(", ", 2);
@@ -8163,31 +7590,33 @@ private record ExtractedNameParts(String[] nameParts, String suffix) {
 }
 ```
 
-我推测代码仍然有很多小问题，特别是某些代码没有很好地说明正在发生什么。例如，`nameParts(0)` 是什么？`parts(0)` 是什么？
+我推测代码仍然有很多小问题，特别是某些代码没有很好地说明正在发生什么。例如，`nameParts[0]` 是什么？`parts[0]` 是什么？
 
 但也许没关系。我提醒自己，*我并没有试图创建“完美”的代码。*（如果存在这种东西的话）。
 
-*AI 解决方案由聚焦的单元组成是非常重要的。*（呵呵！）小的、单一用途的方法和变量名。在这些内容中，准确命名的概念允许 LLM 和你（或我）在添加更多增量和修复问题时，继续进行无缝对话。
+*AI 解决方案由聚焦的单元组成是非常重要的。* 小的、单一用途的方法和变量名。在这些内容中，准确命名的概念允许 LLM 和你（或我）在添加更多增量和修复问题时，继续进行无缝对话。
 
 # 加分题
 
 与你选择的 LLM 开启类似的对话来构建名称归一化器。然后，通过提示更多的几个功能，看看它能产生多有效的解决方案。
 
-- 1. 哈里·杜鲁门（Harry Truman）有一个单字母的中间名，可以说，这意味着它不应该用句号缩写。
+- 1. 哈里·杜鲁门有一个单字母的中间名，可以说，这意味着它不应该用句号缩写。
 
-```
-input: Harry Truman
-output: Truman, Harry S
-```
 
-- 2. 如果一个人有称呼，它在结果中应该排在名字之前。常见的称呼包括 Dr. Mrs. Ms, Sir, Miss, Lord 和 Sq.。每个称呼可以可选地以句号结尾。如果句号存在，请保留它。
+
+### 2. 如果一个人有称呼，它在结果中应该排在名字之前。常见的称呼包括 `Dr.` `Mrs.` `Ms` `Sir` `Miss` `Lord` 和 `Sq.`。每个称呼可以可选地以句号结尾。如果句号存在，请保留它。
 
 ```
 input: Dr. Martin Luther King, Jr.
 output: King, Jr., Dr. Martin L.
+```
+
+```
 input: Sir Patrick Stewart
 output: Stewart, Sir Patrick
 ```
+
+
 
 如果你真的想玩大，一个支持非西方名称的版本无疑涉及许多额外的规则。
 
@@ -8197,7 +7626,7 @@ output: Stewart, Sir Patrick
 
 - 在提示 LLM 时创建生产代码和测试，使用（包含 ZDD 的）示例作为测试的基础。
 - 根据你提供的示例评估生成测试的保真度。
-- 执行测试。如果通过通过，则重复循环（并进行更改）。
+- 执行测试。如果通过，则重复循环（并进行更改）。
 
 此外，给你的 LLM 提供一组小小的编程风格指南，以改进解决方案的设计，并可能增加获得正确解决方案的概率。Jeff-Java 风格是一个很好的起点。
 
@@ -8207,9 +7636,9 @@ AI 工具才刚刚离开幼年期，但它们展现了巨大的潜力。就像�
 
 良好的设计让许多事情变得更简单：围绕代码编写测试、理解代码、扩展代码等。当你引导 LLM 遵循一组小小的设计指南以促进小型、聚焦的方法和表达意图的命名时，通过 LLM 生成代码也会变得更容易。
 
-使用 LLM 会提高你的速度吗？我相信答案将越来越倾向于定的。目前，它提高你速度的速度至少和任何自动补全机制提高的速度一样快。首先，你输入的字数少多了。
+使用 LLM 会提高你的速度吗？我相信答案将越来越倾向于肯定的。目前，它提高你速度的速度至少和任何自动补全机制提高的速度一样快。首先，你输入的字数少多了。
 
-就个人而言，在生成解决方案的片段上，我可以比 LLM 快得多，特别是在对我想要表达的方式进行微调时。但有很多操作是 LLM 执行得比我快的。例如，将基于数组的元组改为 record 比手动操作要快。让 LLM 从示例中生成测试也要快得多。
+就个人而言，在生成解决方案的片段上，我可以比 LLM 快得多，特别是在对我想要表达的方式进行微调时。但有很多操作是 LLM 执行得比我快的。例如，将基于数组的元组改为 `record` 比手动操作要快。让 LLM 从示例中生成测试也要快得多。
 
 也许我最大的速度提升是我可以在 TDD 中配合 LLM 迈出更大的步，即一次只做一件小事。当然，AI 会因为步子变大而导致一些错误，但当错误发生时，回滚并尝试其他方法要快得多。
 
@@ -8226,13 +7655,9 @@ AI 工具才刚刚离开幼年期，但它们展现了巨大的潜力。就像�
 - [LN17] Diana Larsen and Ainsley Nies. *L Test, Second Edition (audio book).* The Pragmatic Bookshelf, Dallas, TX, 2017.
 - [Mar08] Robert C. Martin. *Clean Code: A Handbook of Agile Craftsmanship*. Prentice Hall, Englewood Cliffs, NJ, 2008.
 
+# 索引
 
-
-
-
-# 索引 · 269
-
-## 简洁 (concision)
+## 简洁
 AssertJ 和, 120
 整洁代码, 147
 设计, 26-31
@@ -8242,13 +7667,13 @@ AssertJ 和, 120
 并发分析工具, 80
 并发代码, JUnit 功能, 143, 测试, 79-80
 
-## 条件 (conditionals)
+## 条件
 代码覆盖率, 71-77
 常见测试场景, 44
 提取, 153
 JUnit 功能, 143
 
- 信度 (confidence)
+## 信度
 单元测试的优势, 35
 在他人代码中的, 35
 设计和, 170
@@ -8258,16 +7683,16 @@ JUnit 功能, 143
 测试开发 (TDD) 和, 212, 219, 2231
 
 集成中的冲突, 242
-一致性 (conformance), 边界条件和, 52
+一致性, 边界条件和, 52
 控制台输出状态, 237
 
-常量 (constants), 192, 198
+常量, 192, 198
 构造函数, 依赖注入, 56-58
 消费者方法, 验证方法是否被调用, 63
 包含 AssertJ, 119
 包含 Mockito, 61
 
- 上下文 (context)
+## 上下文
 隐含含义, 204
 测试命名, 190
 持续部署, 242
@@ -8275,7 +7700,7 @@ JUnit 功能, 143
 持续集成服务器, 241
 成本, 维护, 182
 
- 耦合 (coupling)
+## 耦合
 SOLID 设计原则, 172
 时间耦合的, 181
 CQS (命令-查询分离), 170, 180-182
@@ -8283,33 +7708,33 @@ CQS (命令-查询分离), 170, 180-182
 @CsvSource, 132-134
 
 ## D
-模糊测试 (fuzz testing), 204
+模糊测试, 204
 集成测试, 87-90
 参数化测试, 131-134
 执行后查看, 89
 数据提供者, 模糊测试, 92
 
- 数据库 (databases)
+## 数据库
 清理, 87
 集成测试, 87-90
 执行后查看数据, 89
 
- 死代码 (dead code), 73
-死锁 (deadlocks), 80
+## 死代码, 73
+死锁, 80
 委托测试, 184–187
 依赖注入框架, 55, 52, 68
 使用 mock, 61-63
 选项, 58
-存根 (stubs), 56
+存根, 56
 
 依赖倒置原则 (DIP), 172
 
- AI (人工智能)
+## AI (人工智能)
 断言和, 246-264
 臃肿的构造, 199
 可变性和, 38
 清理, 125
-整洁和和, 260-262
+整洁和, 260-262
 代码覆盖率和, 78
 命令-查询分离, 170, 180-182
 概念和, 25-31
@@ -8328,16 +7753,17 @@ SOLID 设计原则, 172
 测试驱动开发 (TDD) 和, 51
 单元和, 25-27
 
- 开发者测试 (Developer Testing), 90
+## 开发者测试, 90
 依赖注入原则, 172
- 指令 (directives)
+
+## 指令
 临时 JUnit 功能, 143
 用于测试, 5
 @Before, 140
 禁用测试, 140-142
 距离计算, 验证, 47
 
- 文档 (documentation)
+## 文档
 作为测试名称, 19, 40, 103, 190-192
 测试驱动开发 (TDD) 和, 231
 作为测试, 22, 189-192, 195
@@ -8346,16 +7772,19 @@ SOLID 设计原则, 172
 动态测试, JUnit 功能, 143
 
 ## E
- Eclipse, 176
- 边缘情况 (edge cases)
+Eclipse, 176
+
+## 边缘情况
 模糊测试, 90-93
 属性测试, 93-95
 空测试, 6-8
 结对编程, 针对结对编程, 32, 51
-异常情况 (exceptional conditions), 关于 12
+
+## 异常情况, 关于 12
 检查的, 116
 使用 try/catch 处理, 113-115
- 函数
+
+## 函数
 设计和, 32–38
 纯函数, 32–33
 副作用, 34–48
@@ -8379,7 +7808,7 @@ lovebox 示例, 模糊测试, 89–93
 不纯函数, 31, 264, 见函数
 
 ## G
- 通用断言 (generalized assertions), 101
+通用断言, 101
 生成式测试, 90–95
 Git, 初始化, 使用钩子和注解, 20-22
 GitHub Actions, 241
@@ -8390,13 +7819,13 @@ GitHub 和拉请求, 237
 编写测试, 84–90
 GitLab CI, 241
 命名模式
- Google Cloud, 58, 62
+Google Cloud, 58, 62
 禁用测试, 141
 过滤测试, 138
 IDE 配置, 8
 
 ## F
- 工厂 (factories), 依赖注入, 58
+工厂, 依赖注入, 58
 工厂方法, 依赖注入, 58
 失败测试, 见驱动程序, 6
 代码覆盖率工具, 71, 73, 76
@@ -8420,13 +7849,13 @@ AssertionJ, 99, 104
 运行的测试数量, 136
 
 ## H
- Hamcrest, 118
-快乐路径 (happy path), 8
+Hamcrest, 118
+快乐路径, 8
 HashMap 开发, 220
 多线程代码, 81–84
 测试驱动开发 (TDD), 220, 222
 过滤测试, 分组, 137–140
-功能, 和拆卸. 123–130
+功能, 和拆卸, 123–130
 浮点, 49
 使用 AssertJ 的流式断言, 99, 104, 118–121
 四阶段测试, 123
@@ -8441,7 +7870,8 @@ HashMap 开发, 220
 自动重构, 158
 配置和 Gradle, 8
 快捷键, 11
- 意图
+
+## 意图
 反转断言, 99, 116
 assertEquals(AssertionJ), 99
 instanceOf(AssertionJ), 119
@@ -8453,7 +7883,8 @@ assertEquals(AssertionJ), 119
 生命方法, 124–126
 换行, 19
 行覆盖率, 71–74
- 里可夫替换原则 (Liskov Substitution Principle)
+
+## 里可夫替换原则 (Liskov Substitution Principle)
 提取类示例, 173–180
 重构示例, 149-162
 数学计算和反转反转, 列表索引, 271
@@ -8481,7 +7912,7 @@ Unit, 见设置;拆卸;输出, xviii
 团队, 26
 理解, 153
 使用 mock 验证方法是否被调用, 63-65
- Mockito, 69
+Mockito, 69
 依赖注入, 61-63
 语法
 抛出异常, 65
@@ -8508,11 +7939,7 @@ OCP (开闭原则), 172
 或运算符 (|), 标记测试, 140
 查询分离, 见命令-查询序列
 
-
-
-
-
-# 目录 • 273
+# 目录
 
 - 键盘快捷键, 158
 - 遗留代码, 193
@@ -8529,20 +7956,20 @@ OCP (开闭原则), 172
 - 可读性与, 207
 - 不必要的测试代码, 194
 - 字符串, assertMatches, 111
-- 存根 (stubs), 55–59
+- 存根, 55–59
 
 - 单一责任原则 (SRP), 170–180
 - 单语句断言, 40, 196
 - 智能断言, 58
 - 测试套件 (suites), JUnit 特性, 143
 - 同步块, 在并发代码中的测试, 80
-- 同步映射 (synchronized maps), 83
+- 同步映射, 83
 
 - SOLID-设计原则, 172
 
 - 源码控制，测试驱动开发 (TDD), 215
 - 源根目录 (IntelliJ IDEA), 6
-- 推测性交易 (speculative deal), 239
+- 推测性交易, 239
 
 # T
 
@@ -8566,25 +7993,25 @@ OCP (开闭原则), 172
 - 规则，异常除外, 113
 - 运行时，在此生成测试, 143
 
-- 团队魅力 (team charming), 236
+- 团队魅力, 236
 - TeamCity, 241
 - 团队, 235–242
 - 活跃评审, 239–241
 - 持续部署, 242
 - 持续集成, 241–242
 - 结对编程 (mob programming), 240, 242
--结对编程, 239
+- 结对编程, 239
 - 交换伙伴, 239
 - 事后评审, 237, 241
 - 评审, 217–244
 - 标准，工作协议与团队魅力, 236
-- 卸载钩子 (teardown, hooks), 123–130
+- 卸载钩子, 123–130
 - 临时变量, @test, 157
 - 使用 Mockito 进行依赖注入, 63
 - 测试导入, 66
 - 集成测试, 86, 163–166
 - 测量, 63, 63, 68
-- 多路广播代码 (multicast code), 70, 80, 84
+- 多路广播代码, 70, 80, 84
 - 运行测试的次数, 135
 - 性能工具, 163
 - 重构以及, 162, 205
@@ -8592,7 +8019,7 @@ OCP (开闭原则), 172
 
 # S
 
-## 可扫描性 (scannability)
+## 可扫描性
 - 换行与, 18–20
 - 使用步进方法,
 - 服务，委托测试, 185
@@ -8617,15 +8044,15 @@ OCP (开闭原则), 172
 - 命名, 126, 191, 126–130, 191
 - 拆分, 126
 
-## 测试双 (test doubles)
+## 测试双
 - 评审示例, 53–68
 - 定义, 53
 - 最小化使用, 68
--  Mock (mocks), 55–59
+- Mock (mocks), 55–59
 - 测试驱动开发 (TDD), 226
 - 提示, 67
 
-## 设置 (setup)
+## 设置
 - 钩子 (hooks), 20–22, 123–130
 - 将无关细节移动, 203
 - 测试列表, 24, 26
@@ -8671,7 +8098,7 @@ OCP (开闭原则), 172
 - 临时禁用, 142
 - 边界情况, 90
 - 空测试用, 88
-- 快乐路径方法 (happy path approach), 6
+- 快乐路径方法, 6
 - 历史与开发, 135–137
 - 运行测试, 130
 - 次数, 222, 189–195
@@ -8692,7 +8119,7 @@ OCP (开闭原则), 172
 - YourKit, 80
 
 # Z
-- 零基测试 (zero-based testing)
+- 零基测试
 - 向列表添加元素, 42
 - 向...添加, 24, 17
 - 使用 AI 生成测试, 32
@@ -8704,10 +8131,9 @@ OCP (开闭原则), 172
 
 # 感谢！
 
-我们希望你喜欢这本书，并且已经在思考接下来想学习什么了。为了让这个决策变得更容易，我们向你提供这份礼物。现在访问 https://pragprog.com，并使用优惠码 BUYOTHER2024 在购买下一本电子书时享受 7 折优惠。该优惠在法律禁止或限制的地方有效，但不适用于《程序员之道》(The Pragmatic Programmer) 的任何版本。如果你想向世界分享你的专业知识，为什么不向我们提个想法呢？毕竟，我们许多优秀的作者都是从读者开始的，尝试一下并无损失。我们希望很快能再次与你联系！
+我们希望你喜欢这本书，并且已经在思考接下来想学习什么了。为了让这个决策变得更容易，我们向你提供这份礼物。现在访问 `https://pragprog.com`，并使用优惠码 `BUYOTHER2024` 在购买下一本电子书时享受 7 折优惠。该优惠在法律禁止或限制的地方有效，但不适用于《程序员之道》(The Pragmatic Programmer) 的任何版本。如果你想向世界分享你的专业知识，为什么不向我们提个想法呢？毕竟，我们许多优秀的作者都是从读者开始的，尝试一下并无损失。我们希望很快能再次与你联系！
 
 Pragmatic Bookshelf
-img/5f9fd301af41bda177ca04f93d028_285_0
 
 # 函数式编程，第二版
 
@@ -8715,8 +8141,7 @@ img/5f9fd301af41bda177ca04f93d028_285_0
 
 Venkat Subramani, 274 页
 9781860509793.853.95
-https://pragprog.com/book/vsjava
-img/5f9fd301af41bda177ca04f93d028_286_0
+`https://pragprog.com/book/vsjava`
 
 # Java 比较
 
@@ -8724,8 +8149,7 @@ img/5f9fd301af41bda177ca04f93d028_286_0
 
 Simon Harrer, Jörg Lenhard, Linus Dietz, 206 页
 9781860502879.840.95
-https://pragprog.com/book/javac
-img/5f9fd301af41bda177ca04f93d028_287_0
+`https://pragprog.com/book/javac`
 
 # 使用 Go 自动化家居
 
@@ -8733,7 +8157,7 @@ img/5f9fd301af41bda177ca04f93d028_287_0
 
 Ricardo Gerardi and Mike Riley, 160 页
 9788888650509.40.95
-https://pragprog.com/gome
+`https://pragprog.com/gome`
 
 # 精巧命令行工具
 
@@ -8741,21 +8165,15 @@ https://pragprog.com/gome
 
 Brian P. Hogan, 326 页
 9781680502961.38.95
-https://pragprog.com/book/bhcdev
-
-
-
-
+`https://pragprog.com/book/bhcdev`
 
 ## 七周探索七种冷门语言
 
 探索早期的计算机语言，发现能够改变你编程思维方式的新颖构想。这些语言在我们定型目前的 C 风格语法和面向对象（OO）理念之前就已经发明了，因此语言设计者可以自由地想象各种可能性。你会发现它们的见解非常发人深省，其理念将启发你采用不同（且可能更高效）的编程方式。从每一行都是潜在状态机事件的文本处理语言，到一切都使用 Actor 模型（actors）完成的并发语言，你确信将从这七种语言中获得灵感并兴奋。
 
-![](img/5f9fd301af41bda177ca04d9f939d028_288_0.png)
-
 Dmitry Zimoviev
 (270 页) ISBN: 9798888650639. 855.95
-https://pragprog.com/book/dseven
+`https://pragprog.com/book/dseven`
 
 ## 测试驱动的 React，第二版
 
@@ -8763,29 +8181,23 @@ https://pragprog.com/book/dseven
 
 Trevor Burnham
 (172 页) ISBN: 9798888650653. 845.95
-https://pragprog.com/book/treactact
-
-![](img/5f9fd301af41bda177ca04d9f939d028_288_1.png)
+`https://pragprog.com/book/treactact`
 
 ## 成为卓越的工程领导者
 
 当你步入高级工程领导岗位时，你需要产生影响，而且要迅速产生影响。这本书将揭示成为成功的工程总监、工程副总裁或 CTO 的奥秘。通过实操且实用的方法，它将帮助你理解并培养所需的技能，涵盖从如何管理其他经理、如何定义和执行战略、如何管理有限的时间，以及如何引导你的职业之旅到达目的地。
 
-![](img/5f9fd301af41bda177ca04d9f939d028_289_0.png)
-
 James Stanier
 (400 页) ISBN: 9798888650660. 864.95
-https://prag.com/book/jsenglib
+`https://prag.com/book/jsenglib`
 
 ## Elixir 中的机器学习
 
 Stable Diffusion、ChatGPT、Whisper——这些只是由机器学习进展驱动的惊人应用的少数示例。尽管机器学习应用在生产环境中无处不在，但对于数据科学和机器学习任务，只有少数可选的语言。Elixir 的 Nx 项目正寻求改变这一现状。通过 Nx，你可以在 Elixir 这种实用的语言中，利用经过事实检验的 Erlang 虚拟机，在你的应用程序中发挥机器学习的力量。在这书中，你将学习如何利用 Elixir 和 Nx 生态系统解决计算机视觉、自然语言处理等领域的现实问题。
 
-![](img/5f9fd301af41bda177ca04d9f939d028_289_1.png)
-
 Sean Moriarty
 (372 页) ISBN: 9798888650349. 861.95
-https://prag.com/book/smelixir
+`https://prag.com/book/smelixir`
 
 ## 实用书架 (The Pragmatic Bookshelf)
 
@@ -8794,15 +8206,15 @@ https://prag.com/book/smelixir
 ## 在线访问我们
 
 - 本书首页
-https://pragprog.com/book/ut3
+`https://pragprog.com/book/ut3`
 本书的源代码、错误列表及其他资源。也向我们提供反馈！
 
 - 保持最新动态
-https://pragprog.com
-加入我们的公告邮件列表（低频率），或在 Twitter 上关注 @pragfor，获取新书、促销、优惠券、热点提示等信息。
+`https://pragprog.com`
+加入我们的公告邮件列表（低频率），或在 Twitter 上关注 `@pragfor`，获取新书、促销、优惠券、热点提示等信息。
 
 - 新动态与亮点
-https://pragprog.com/news
+`https://pragprog.com/news`
 查看实用派的最新进展、新书和其他产品。
 
 ## 购买书籍
@@ -8811,9 +8223,8 @@ https://pragprog.com/news
 
 ## 联系我们
 
-- 在线订单：https://pragprog.com/catalog
-客户服务：support@pragprog.com
-国际版权：translations@pragprog.com
-学术用途：academic@pragprog.com
-为我们投稿：http://write-for-us.pragprog.com
-
+- 在线订单：`https://pragprog.com/catalog`
+- 客户服务：`support@pragprog.com`
+- 国际版权：`translations@pragprog.com`
+- 学术用途：`academic@pragprog.com`
+- 为我们投稿：`http://write-for-us.pragprog.com`

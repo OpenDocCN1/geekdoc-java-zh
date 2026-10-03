@@ -1,3 +1,4 @@
+
 # Java 程序员本周应该阅读的 8 篇文章
 
 > 原文：<https://medium.com/javarevisited/8-articles-java-programmer-should-read-this-week-2b5da1848720?source=collection_archive---------0----------------------->
@@ -22,7 +23,7 @@
 
 这是我的文章，我强烈推荐大家阅读和分享，不仅仅是因为这是我的文章，而是因为这个主题。它涵盖了一些关键的面向对象设计原则，以及[固体原则](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fsolid-principles-object-oriented-design-architecture%2F)，这就是为什么我称它们为**固体++** 。了解这些设计原则是编写更好代码的关键，这当然是每个程序员都想做的。
 
-<https://hackernoon.com/10-oop-design-principles-every-programmer-should-know-f187436caf65>  
+<https://hackernoon.com/10-oop-design-principles-every-programmer-should-know-f187436caf65>
 
 看完这篇文章，如果你觉得有动力，想了解更多，可以查看 Udemy 上的 [**软件架构基础知识&Java 中的设计模式**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fbasics-of-software-architecture-design-in-java%2F) 课程进一步学习。
 
@@ -30,33 +31,33 @@
 
 集装箱是面向未来的，这是肯定的。它们不仅使开发和部署变得更容易，而且消除了设置环境的许多麻烦，本文将教您如何设置 Java 开发环境，以便在 Docker 这样的容器中运行 Spring Boot 应用程序。
 
-</@brunoborges/java-dev-environments-with-containers-66d6797b2753>  
+</@brunoborges/java-dev-environments-with-containers-66d6797b2753>
 
 如果你有兴趣从 Java 开发人员的角度了解更多关于 Docker 的知识，我也建议你看看 Udemy 上我最喜欢的导师之一约翰·汤姆森的[**Docker for Java Developers**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fdocker-for-java-developers%2F)。
 
 ## HashMap 如何在 Java 内部工作:Arpit Mandliya 的调试方法
 
-HashMap 是一个重要的话题，了解它是如何工作的不仅能帮助你更好地使用它，还能在 Java 面试中表现出色，因为这也是一个流行的问题。
+`HashMap` 是一个重要的话题，了解它是如何工作的不仅能帮助你更好地使用它，还能在 Java 面试中表现出色，因为这也是一个流行的问题。
 
-</javarevisited/how-hashmap-works-internally-in-java-a-debug-approach-286c9f3945b2>  
+</javarevisited/how-hashmap-works-internally-in-java-a-debug-approach-286c9f3945b2>
 
 ## 唐纳德·拉布复制代码
 
 没有什么比代码复制更让我烦恼的了。每次我发现代码库中有重复的地方，我都会感到难以忍受的痒。消除瘙痒的唯一方法是找到一种合适的方法来消除重复。这些实际上是作者自己的话，因为我不能说得更好了，所以我在这里引用了他的话。
 
-</@donraab/code-duplication-1e1f759a7fe3>  
+</@donraab/code-duplication-1e1f759a7fe3>
 
 ## Spring Boot 和春天云的微服务。从配置服务器到 OAuth2 服务器(没有内存的东西)——第三部分，作者[马库斯·赫特·达·科雷吉奥](https://medium.com/u/5cfb26e8714b?source=post_page-----2b5da1848720--------------------------------)
 
 这是 Marcus 分享如何使用 [Spring Boot](http://www.java67.com/2018/06/5-best-courses-to-learn-spring-boot-in.html) 和 [Spring Cloud](https://javarevisited.blogspot.com/2018/04/top-5-spring-cloud-courses-for-java.html) 开发微服务的系列文章的第三部分，前两部分已经在我们的第一期 Java 每周访问中进行了介绍，受到了许多 Java 开发人员的赞赏。如果你对[微服务](https://javarevisited.blogspot.com/2018/02/top-5-spring-microservices-courses-with-spring-boot-and-spring-cloud.html)感兴趣，这是一本很好的读物。
 
-<https://itnext.io/microservices-with-spring-boot-and-spring-cloud-441e3dabc67d>  
+<https://itnext.io/microservices-with-spring-boot-and-spring-cloud-441e3dabc67d>
 
 ## KUBERNETES:一步一步与弹簧靴，码头工人和 GKE 由[纳尔马达](https://medium.com/u/3f7baca08fd9?source=post_page-----2b5da1848720--------------------------------)
 
 库伯内特。我相信你已经听过很多次了。但是你真的知道那是什么吗？如果答案是一个大大的“不”，那就继续读这篇文章吧。这篇文章写得很好，考虑把它提交给我们的出版物 javarestived:-)我们很高兴欢迎你加入我们的社区。
 
-</@phantomgrin/kubernetes-step-by-step-with-spring-boot-docker-gke-35e9481f6d5f>  
+</@phantomgrin/kubernetes-step-by-step-with-spring-boot-docker-gke-35e9481f6d5f>
 
 ## 由 [Dayan](https://medium.com/u/ac5cdc4852f9?source=post_page-----2b5da1848720--------------------------------) 开发的 Kubernetes 上的 java web 系统示例
 
@@ -64,7 +65,7 @@ HashMap 是一个重要的话题，了解它是如何工作的不仅能帮助你
 
 干得好，Dayan，这篇好文章，考虑把它提交给我们的出版物 javarestived:-)我们很高兴欢迎你加入我们的社区。
 
-</@dayan888/sample-java-web-system-on-kubernetes-e52069390916>  
+</@dayan888/sample-java-web-system-on-kubernetes-e52069390916>
 
 如果你们想了解更多关于库伯内特的知识，这里有一些库伯内特的课程[f**REE**](https://javarevisited.blogspot.com/2019/01/top-5-free-kubernetes-courses-for-DevOps-Engineer.html)**供你们探索。**
 
@@ -72,7 +73,7 @@ HashMap 是一个重要的话题，了解它是如何工作的不仅能帮助你
 
 **Spring Security 5 为[Spring web flux’](/javarevisited/7-best-webflux-and-reactive-spring-boot-courses-for-java-programmers-33b7c6fa8995)s 非阻塞 [*WebClient*](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-webclient.html) 类提供 OAuth2 支持。在这里，您将了解如何配置 *WebClient* 来访问 *OAuth2* 受保护的 REST 资源。**
 
-**</@asce4s/oauth2-with-spring-webclient-761d16f89cdd>  
+**</@asce4s/oauth2-with-spring-webclient-761d16f89cdd>
 
 并且，如果你想了解更多关于 OAuth2 的知识，Eugen 的 [**REST with Spring 认证类**](http://courses.baeldung.com/p/rest-with-spring-the-certification-class?affcode=22136_bkwjs9xa) 是另一个很棒的去处，它也涵盖了很多有用的 Spring 5.0 特性。
 

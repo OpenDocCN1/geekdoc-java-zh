@@ -1,34 +1,35 @@
+
 # Spring Batch + Quartz 调度器示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring-batch/spring-batch-and-quartz-scheduler-example/>
 
 在本教程中，我们将向您展示如何使用 Quartz 调度程序框架来调度每 10 秒运行一次 Spring 批处理作业。
 
-使用的工具和库
+使用的工具和库：
 
-1.  maven3
-2.  Eclipse 4.2
-3.  JDK 1.6
-4.  弹簧芯 3.2.2 .释放
-5.  春季批次 2.2.0 .发布
-6.  石英
+1. `maven3`
+2. `Eclipse 4.2`
+3. `JDK 1.6`
+4. `spring-core 3.2.2.RELEASE`
+5. `spring-batch 2.2.0.RELEASE`
+6. `quartz`
 
-这种关系如下所示:
+这种关系如下所示：
 
 ```java
- Spring Batch <--> Spring QuartzJobBean <--> Quartz Frameworks 
+Spring Batch <--> Spring QuartzJobBean <--> Quartz Frameworks
 ```
 
-is 充当 Spring batch 和 Quartz 框架之间的桥梁。
+`Spring QuartzJobBean` 充当 Spring Batch 和 Quartz 框架之间的桥梁。
 
-## 1.项目相关性
+## 1. 项目相关性
 
-Spring 需要`spring-context-support`来支持 Quartz 调度器。
+Spring 需要 `spring-context-support` 来支持 Quartz 调度器。
 
-pom.xml
+`pom.xml`：
 
 ```java
- <project ...
+<project ...
   <properties>
 	<jdk.version>1.6</jdk.version>
 	<spring.version>3.2.2.RELEASE</spring.version>
@@ -72,20 +73,20 @@ pom.xml
 	</dependency>
 
   </dependencies>
-</project> 
+</project>
 ```
 
- ## 2.春季批处理作业
+## 2. 春季批处理作业
 
-通过自定义编写器读取 csv 文件并打印内容的批处理作业。需要强调的几点:
+通过自定义编写器读取 CSV 文件并打印内容的批处理作业。需要强调的几点：
 
-1.配置`JobRegistryBeanPostProcessor` bean，它向`JobRegistry`注册`Job`bean，这样`QuartzJobBean`就可以通过`JobRegister` (JobLocator)获得`Job` bean。
-2。`JobLauncherDetails`延长`QuartzJobBean`，作为弹簧片和石英之间的桥梁。
+1. 配置 `JobRegistryBeanPostProcessor` Bean，它向 `JobRegistry` 注册 `Job` Bean，这样 `QuartzJobBean` 就可以通过 `JobRegister`（`JobLocator`）获得 `Job` Bean。
+2. `JobLauncherDetails` 继承 `QuartzJobBean`，作为 Spring Batch 和 Quartz 之间的桥梁。
 
-job-quartz.xml
+`job-quartz.xml`：
 
 ```java
- <beans 
+<beans 
 	xmlns:batch="http://www.springframework.org/schema/batch" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/batch
@@ -179,17 +180,17 @@ job-quartz.xml
 	</property>
   </bean>
 
-</beans> 
+</beans>
 ```
 
- ## 3.QuartzJobBean 示例
+## 3. QuartzJobBean 示例
 
-这个类是从[Spring batch sample Github repository](http://web.archive.org/web/20190309052916/https://github.com/SpringSource/spring-batch/blob/master/spring-batch-samples/src/main/java/org/springframework/batch/sample/quartz/JobLauncherDetails.java)复制来的，做了一点小小的改动，就是在每次作业运行时通过传递一个`new Date()`来运行已完成的作业。
+这个类是从 [Spring Batch Sample Github repository](http://web.archive.org/web/20190309052916/https://github.com/SpringSource/spring-batch/blob/master/spring-batch-samples/src/main/java/org/springframework/batch/sample/quartz/JobLauncherDetails.java) 复制来的，做了一点小小的改动，就是在每次作业运行时通过传递一个 `new Date()` 来运行已完成的作业。
 
-JobLauncherDetails.java
+`JobLauncherDetails.java`：
 
 ```java
- package com.mkyong.quartz;
+package com.mkyong.quartz;
 
 import java.util.Date;
 import java.util.Map;
@@ -264,17 +265,19 @@ public class JobLauncherDetails extends QuartzJobBean {
 
   }
 
-} 
+}
 ```
 
-## 4.运行它
+## 4. 运行它
 
-加载 Spring 应用程序上下文，Quartz 调度程序将每 10 秒运行一次“reportJob”。
+加载 Spring 应用程序上下文，Quartz 调度程序将每 10 秒运行一次 `reportJob`。
 
-App.java
+`App.java`
+
+
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -288,7 +291,7 @@ public class App {
 	ApplicationContext context = new ClassPathXmlApplicationContext(springConfig);
 
   }
-} 
+}
 ```
 
 ## 下载源代码
@@ -297,17 +300,10 @@ Download it – [SpringBatch-Quartz-Scheduler-Example.zip](http://web.archive.or
 
 ## 参考
 
-1.  [Quartz–企业作业调度器](http://web.archive.org/web/20190309052916/http://quartz-scheduler.org/)
-2.  [Spring 3 + Quartz 1.8.6 调度器示例](http://web.archive.org/web/20190309052916/http://www.mkyong.com/spring/spring-quartz-scheduler-example/)
-3.  [QuartzJobBean 示例](http://web.archive.org/web/20190309052916/https://github.com/SpringSource/spring-batch/blob/master/spring-batch-samples/src/main/java/org/springframework/batch/sample/quartz/JobLauncherDetails.java)
-4.  Wiki : Cron
-5.  [Spring Batch+Spring task scheduler 示例](http://web.archive.org/web/20190309052916/http://www.mkyong.com/spring-batch/spring-batch-and-spring-taskscheduler-example/)
+1. [Quartz–企业作业调度器](http://web.archive.org/web/20190309052916/http://quartz-scheduler.org/)
+2. [Spring 3 + Quartz 1.8.6 调度器示例](http://web.archive.org/web/20190309052916/http://www.mkyong.com/spring/spring-quartz-scheduler-example/)
+3. [QuartzJobBean 示例](http://web.archive.org/web/20190309052916/https://github.com/SpringSource/spring-batch/blob/master/spring-batch-samples/src/main/java/org/springframework/batch/sample/quartz/JobLauncherDetails.java)
+4. Wiki : Cron
+5. [Spring Batch+Spring task scheduler 示例](http://web.archive.org/web/20190309052916/http://www.mkyong.com/spring-batch/spring-batch-and-spring-taskscheduler-example/)
 
 [quartz](http://web.archive.org/web/20190309052916/http://www.mkyong.com/tag/quartz/) [scheduler](http://web.archive.org/web/20190309052916/http://www.mkyong.com/tag/scheduler/) [spring batch](http://web.archive.org/web/20190309052916/http://www.mkyong.com/tag/spring-batch/)
-
-
-
-
-
-
-

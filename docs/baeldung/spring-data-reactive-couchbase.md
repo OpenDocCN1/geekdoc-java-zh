@@ -1,16 +1,15 @@
+
 # 带有 Couchbase 的 Spring 数据反应库
 
-> 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-data-reactive-couchbase>
+## 1. 概观
 
-## 1.概观
+在本教程中，我们将学习如何使用 Spring 数据库在 Couchbase 上以一种反应式的方式配置和实现数据库操作。
 
-在本教程中，我们将学习如何使用 Spring 数据库在 [Couchbase 上以一种反应式的方式配置和实现数据库操作。](/web/20220626081955/https://www.baeldung.com/spring-data-couchbase)
+我们将讲述`ReactiveCrudRepository`和`ReactiveSortingRepository`的基本用法。此外，我们将使用`AbstractReactiveCouchbaseConfiguration`配置我们的测试应用程序。
 
-我们将讲述`ReactiveCrudRepository `和`ReactiveSortingRepository`的基本用法。此外，我们将使用`AbstractReactiveCouchbaseConfiguration`配置我们的测试应用程序。
+## 2. Maven 依赖性
 
-## 2.Maven 依赖性
-
-首先，让我们添加必要的依赖项:
+首先，让我们添加必要的依赖项：
 
 ```java
 <dependency>
@@ -23,15 +22,15 @@
 </dependency>
 ```
 
-spring-boot-starter-data-couchbase-reactive 依赖关系包含了我们使用 reactive API 在 couch base 上操作所需的一切。
+`spring-boot-starter-data-couchbase-reactive`依赖关系包含了我们使用 reactive API 在 Couchbase 上操作所需的一切。
 
-我们还将包括使用 Project Reactor API 的 [reactor-core](https://web.archive.org/web/20220626081955/https://search.maven.org/search?q=g:io.projectreactor%20AND%20a:reactor-core) 依赖项。
+我们还将包括使用 Project Reactor API 的`reactor-core`依赖项。
 
-## 3.配置
+## 3. 配置
 
 接下来，让我们定义 Couchbase 和我们的应用程序之间的连接设置。
 
-让我们首先创建一个保存我们属性的类:
+让我们首先创建一个保存我们属性的类：
 
 ```java
 @Configuration
@@ -57,7 +56,7 @@ public class CouchbaseProperties {
 }
 ```
 
-为了使用响应式支持，我们应该创建扩展`AbstractReactiveCouchbaseConfiguration`的配置类:
+为了使用响应式支持，我们应该创建扩展`AbstractReactiveCouchbaseConfiguration`的配置类：
 
 ```java
 @Configuration
@@ -99,11 +98,11 @@ public class ReactiveCouchbaseConfiguration extends AbstractReactiveCouchbaseCon
 
 此外，为了传递 Couchbase 连接端口，我们已经覆盖了`couchbaseEnvironment()`。
 
-## 4.仓库
+## 4. 仓库
 
-在本节中，我们将学习如何创建和使用反应式存储库。**默认情况下，“所有”[视图](https://web.archive.org/web/20220626081955/https://docs.couchbase.com/server/6.0/learn/views/views-intro.html)支持大多数 CRUD 操作。定制的存储库方法由 [N1QL](/web/20220626081955/https://www.baeldung.com/n1ql-couchbase) 提供支持。**如果集群不支持 N1QL，初始化时会抛出`UnsupportedCouchbaseFeatureException`。
+在本节中，我们将学习如何创建和使用反应式存储库。**默认情况下，所有视图支持大多数 CRUD 操作。定制的存储库方法由 N1QL 提供支持。**如果集群不支持 N1QL，初始化时会抛出`UnsupportedCouchbaseFeatureException`。
 
-首先，让我们创建我们的存储库将使用的 POJO 类:
+首先，让我们创建我们的存储库将使用的 POJO 类：
 
 ```java
 @Document
@@ -115,9 +114,9 @@ public class Person {
 }
 ```
 
-### 4.1.基于视图的知识库
+### 4.1. 基于视图的知识库
 
-现在，我们将为`Person`创建一个存储库:
+现在，我们将为`Person`创建一个存储库：
 
 ```java
 @Repository
@@ -130,7 +129,7 @@ public interface ViewPersonRepository extends ReactiveCrudRepository<Person, UUI
 
 存储库扩展了`ReactiveCrudRepository`接口，以便使用 Reactor API 与 Couchbase 交互。
 
-此外，我们可以添加一个定制方法，并使用`@View`注释使其基于视图:
+此外，我们可以添加一个定制方法，并使用`@View`注释使其基于视图：
 
 ```java
 @View(designDocument = ViewPersonRepository.DESIGN_DOCUMENT)
@@ -139,7 +138,7 @@ Flux<Person> findByFirstName(String firstName);
 
 默认情况下，查询将查找名为`byFirstName`的视图。如果我们想提供一个定制的视图名称，我们必须使用`viewName`参数。
 
-最后，让我们在测试订阅者的帮助下创建一个简单的 CRUD 测试:
+最后，让我们在测试订阅者的帮助下创建一个简单的 CRUD 测试：
 
 ```java
 @Test
@@ -166,9 +165,9 @@ public void shouldSavePerson_findById_thenDeleteIt() {
 }
 ```
 
-### 4.2.N1QL/基于视图的存储库
+### 4.2. N1QL/基于视图的存储库
 
-现在，我们将为使用 N1QL 查询的`Person`创建反应式存储库:
+现在，我们将为使用 N1QL 查询的`Person`创建反应式存储库：
 
 ```java
 @Repository
@@ -180,7 +179,7 @@ public interface N1QLPersonRepository extends ReactiveCrudRepository<Person, UUI
 
 为了使用 Reactor API，存储库扩展了`ReactiveCrudRepository`。此外，我们添加了一个定制的`findAllByFirstName`方法，它创建 N1QL 支持的查询。
 
-之后，让我们添加对`findAllByFirstName`方法的测试:
+之后，让我们添加对`findAllByFirstName`方法的测试：
 
 ```java
 @Test
@@ -204,7 +203,7 @@ public void shouldFindAll_byLastName() {
 }
 ```
 
-此外，我们将创建一个存储库，允许我们使用排序抽象来检索人员:
+此外，我们将创建一个存储库，允许我们使用排序抽象来检索人员：
 
 ```java
 @Repository
@@ -213,7 +212,7 @@ public interface N1QLSortingPersonRepository extends ReactiveSortingRepository<P
 }
 ```
 
-最后，让我们编写一个测试来检查数据是否真正排序了:
+最后，让我们编写一个测试来检查数据是否真正排序了：
 
 ```java
 @Test
@@ -242,8 +241,8 @@ public void shouldFindAll_sortedByFirstName() {
 }
 ```
 
-## 5.结论
+## 5. 结论
 
 在本文中，我们学习了如何通过 Couchbase 和 Spring Data Reactive framework 使用反应式编程来使用存储库。
 
-和往常一样，这些例子的代码可以在 Github 的[上找到。](https://web.archive.org/web/20220626081955/https://github.com/eugenp/tutorials/tree/master/spring-5-reactive-modules/spring-5-data-reactive)
+和往常一样，这些例子的代码可以在 Github 上找到。

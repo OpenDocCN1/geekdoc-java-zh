@@ -1,4 +1,5 @@
-# 如何在本地运行 spring-data 和 GCP 数据存储的测试。
+
+# 如何在本地运行 spring-data 和 GCP 数据存储的测试
 
 > 原文：<https://medium.com/javarevisited/local-testing-with-spring-data-and-gcp-datastore-8e1015b571fa?source=collection_archive---------2----------------------->
 
@@ -12,4 +13,4 @@
 
 ## 先决条件
 
-*   Java 11(它可以轻松地…
+*   Java 11（它可以轻松地…

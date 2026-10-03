@@ -1,3 +1,4 @@
+
 # 与安全管理器的关系
 
 > 原文：[`docs.oracle.com/javase/tutorial/jaxp/properties/security.html`](https://docs.oracle.com/javase/tutorial/jaxp/properties/security.html)

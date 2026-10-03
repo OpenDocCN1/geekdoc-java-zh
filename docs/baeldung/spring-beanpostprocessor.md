@@ -1,10 +1,11 @@
-# 弹簧豆后处理器
+
+### 弹簧豆后处理器
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-beanpostprocessor>
 
-## 1.概观
+#### 1. 概观
 
-所以，在其他一些教程中，我们已经谈到了 [`BeanPostProcessor`](https://web.archive.org/web/20220627171921/https://www.baeldung.com/spring-annotation-bean-pre-processor) 。在本教程中，我们将使用 Guava 的`EventBus`在真实世界的例子中使用它们。
+在其他一些教程中，我们已经谈到了 [`BeanPostProcessor`](https://web.archive.org/web/20220627171921/https://www.baeldung.com/spring-annotation-bean-pre-processor) 。在本教程中，我们将使用 Guava 的`EventBus`在真实世界的例子中使用它们。
 
 **Spring 的`BeanPostProcessor`给了我们 Spring bean 生命周期的钩子来修改它的配置。**
 
@@ -12,9 +13,9 @@
 
 在本教程中，我们将看一个这些类集成了 Guava 的`EventBus`的具体例子。
 
-## 2.设置
+#### 2. 设置
 
-首先，我们需要设置我们的环境。让我们将春天[上下文](https://web.archive.org/web/20220627171921/https://search.maven.org/search?q=g:org.springframework%20AND%20a:spring-context)，春天[表达式](https://web.archive.org/web/20220627171921/https://search.maven.org/search?q=g:org.springframework%20AND%20a:spring-expression)，以及[番石榴](https://web.archive.org/web/20220627171921/https://search.maven.org/search?q=g:com.google.guava%20AND%20a:guava)依赖项添加到我们的`pom.xml`:
+首先，我们需要设置我们的环境。让我们将 spring [context](https://web.archive.org/web/20220627171921/https://search.maven.org/search?q=g:org.springframework%20AND%20a:spring-context)、spring [expression](https://web.archive.org/web/20220627171921/https://search.maven.org/search?q=g:org.springframework%20AND%20a:spring-expression) 以及 [guava](https://web.archive.org/web/20220627171921/https://search.maven.org/search?q=g:com.google.guava%20AND%20a:guava) 依赖项添加到我们的`pom.xml`：
 
 ```java
 <dependency>
@@ -36,7 +37,7 @@
 
 接下来，我们来讨论一下我们的目标。
 
-## 3.目标和实施
+#### 3. 目标和实施
 
 对于我们的第一个目标，我们希望**利用 Guava 的`EventBus`在系统的各个方面异步传递消息**。
 
@@ -46,9 +47,9 @@
 
 我们的实现将包括 Guava 的`EventBus`的包装类、自定义标记注释、`BeanPostProcessor`、模型对象和从`EventBus`接收股票交易事件的 bean。此外，我们将创建一个测试用例来验证所需的功能。
 
-### 3.1.`EventBus`包装纸
+##### 3.1. `EventBus`包装纸
 
-为了使用，我们将定义一个`EventBus`包装器来提供一些静态方法，以便为将由`BeanPostProcessor`使用的事件注册和注销 beans:
+为了使用，我们将定义一个`EventBus`包装器来提供一些静态方法，以便为将由`BeanPostProcessor`使用的事件注册和注销 beans：
 
 ```java
 public final class GlobalEventBus {
@@ -84,9 +85,9 @@ public final class GlobalEventBus {
 
 这段代码提供了静态方法来访问`GlobalEventBus`和底层`EventBus`，以及注册和注销事件和发布事件。它还有一个 SpEL 表达式，在我们的自定义注释中用作默认表达式，以定义我们想要使用哪个`EventBus`。
 
-### 3.2.自定义标记注释
+##### 3.2. 自定义标记注释
 
-接下来，让我们定义一个定制的标记注释，它将被`BeanPostProcessor`用来识别 beans 以自动注册/取消注册事件:
+接下来，让我们定义一个定制的标记注释，它将被`BeanPostProcessor`用来识别 beans 以自动注册/取消注册事件：
 
 ```java
 @Retention(RetentionPolicy.RUNTIME)
@@ -97,9 +98,9 @@ public @interface Subscriber {
 }
 ```
 
-### 3.3.`BeanPostProcessor`
+##### 3.3. `BeanPostProcessor`
 
-现在，我们将定义`BeanPostProcessor`，它将检查每个 bean 的`Subscriber`注释。这个类也是一个`DestructionAwareBeanPostProcessor,` ，它是一个 Spring 接口，为`BeanPostProcessor`添加了一个销毁前回调。如果注释存在，我们将在 bean 初始化时用注释的 SpEL 表达式标识的`EventBus`注册它，并在 bean 销毁时注销它:
+现在，我们将定义`BeanPostProcessor`，它将检查每个 bean 的`Subscriber`注释。这个类也是一个`DestructionAwareBeanPostProcessor`，它是一个 Spring 接口，为`BeanPostProcessor`添加了一个销毁前回调。如果注释存在，我们将在 bean 初始化时用注释的 SpEL 表达式标识的`EventBus`注册它，并在 bean 销毁时注销它：
 
 ```java
 public class GuavaEventBusBeanPostProcessor
@@ -140,7 +141,7 @@ public class GuavaEventBusBeanPostProcessor
 
 上面的代码获取每个 bean 并通过下面定义的`process`方法运行它。它在 bean 初始化之后、销毁之前对其进行处理。默认情况下，`requiresDestruction`方法返回 true，我们在这里保持这种行为，因为我们在`postProcessBeforeDestruction`回调中检查了`@Subscriber`注释的存在。
 
-现在让我们来看看`process`方法:
+现在让我们来看看`process`方法：
 
 ```java
 private void process(Object bean, BiConsumer<EventBus, Object> consumer, String action) {
@@ -169,9 +170,9 @@ private void process(Object bean, BiConsumer<EventBus, Object> consumer, String 
 }
 ```
 
-这段代码检查名为`Subscriber`的自定义标记注释是否存在，如果存在，则从其`value`属性中读取 SpEL 表达式。然后，表达式被计算为一个对象。如果它是`EventBus,`的实例，我们将`BiConsumer`函数参数应用于 bean。`BiConsumer`用于注册和注销`EventBus`中的 bean。
+这段代码检查名为`Subscriber`的自定义标记注释是否存在，如果存在，则从其`value`属性中读取 SpEL 表达式。然后，表达式被计算为一个对象。如果它是`EventBus`的实例，我们将`BiConsumer`函数参数应用于 bean。`BiConsumer`用于注册和注销`EventBus`中的 bean。
 
-方法`getTargetObject`的实现如下:
+方法`getTargetObject`的实现如下：
 
 ```java
 private Object getTargetObject(Object proxy) throws BeansException {
@@ -186,9 +187,9 @@ private Object getTargetObject(Object proxy) throws BeansException {
 }
 ```
 
-### 3.4.`StockTrade`模型对象
+##### 3.4. `StockTrade`模型对象
 
-接下来，让我们定义我们的`StockTrade`模型对象:
+接下来，让我们定义我们的`StockTrade`模型对象：
 
 ```java
 public class StockTrade {
@@ -202,9 +203,9 @@ public class StockTrade {
 }
 ```
 
-### 3.5.`StockTradePublisher`事件接收者
+##### 3.5. `StockTradePublisher`事件接收者
 
-然后，让我们定义一个监听器类来通知我们收到了一个交易，这样我们就可以编写我们的测试了:
+然后，让我们定义一个监听器类来通知我们收到了一个交易，这样我们就可以编写我们的测试了：
 
 ```java
 @FunctionalInterface
@@ -213,7 +214,7 @@ public interface StockTradeListener {
 }
 ```
 
-最后，我们将为新的`StockTrade`事件定义一个接收器:
+最后，我们将为新的`StockTrade`事件定义一个接收器：
 
 ```java
 @Subscriber
@@ -250,9 +251,15 @@ public class StockTradePublisher {
 
 `@AllowConcurrentEvents`注释允许并发调用这个方法。一旦我们收到交易，我们做任何我们想要的处理，然后通知任何听众。
 
-### 3.6.测试
+##### 3.6. 测试
 
-现在让我们用一个集成测试来结束我们的编码，以验证`BeanPostProcessor`工作正常。首先，我们需要一个 Spring 上下文:
+现在让我们用一个集成测试来结束我们的编码，以验证`BeanPostProcessor`工作正常。首先，我们需要一个 Spring 上下文：
+
+```java
+// Test context setup code would go here
+```
+
+
 
 ```java
 @Configuration
@@ -275,7 +282,7 @@ public class PostProcessorConfiguration {
 }
 ```
 
-现在我们可以实现我们的测试了:
+现在我们可以实现我们的测试了：
 
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -313,8 +320,8 @@ public class StockTradeIntegrationTest {
 
 上面的测试代码生成一个股票交易，并将其发送到`GlobalEventBus`。我们最多等待两秒钟，等待操作完成并被通知交易已被`stockTradePublisher`收到。此外，我们确认收到的交易在运输过程中没有被修改。
 
-## 4.结论
+## 4. 结论
 
-总之，Spring 的`BeanPostProcessor`允许我们**定制 bean 本身**，为我们提供了一种自动化 bean 操作的方法，否则我们必须手动完成。
+总之，Spring 的`BeanPostProcessor`允许我们定制 bean 本身，为我们提供了一种自动化 bean 操作的方法，否则我们必须手动完成。
 
 和往常一样，源代码可以在 GitHub 上找到[。](https://web.archive.org/web/20220627171921/https://github.com/eugenp/tutorials/tree/master/spring-core-4)

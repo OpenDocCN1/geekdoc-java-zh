@@ -1,3 +1,4 @@
+
 # 访问 Cookies
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/doingMoreWithRIA/accessingCookies.html`](https://docs.oracle.com/javase/tutorial/deployment/doingMoreWithRIA/accessingCookies.html)
@@ -38,7 +39,6 @@ public void getCookieUsingCookieHandler() {
         e.printStackTrace();
     }
 }  
-
 ```
 
 [`CookieManager`](https://docs.oracle.com/javase/8/docs/api/java/net/CookieManager.html)类是管理 Cookie 的主要入口点。创建`CookieManager`类的实例，并设置其[`CookiePolicy`](https://docs.oracle.com/javase/8/docs/api/java/net/CookiePolicy.html)。将此`CookieManager`类的实例设置为默认的[`CookieHandler`](https://docs.oracle.com/javase/8/docs/api/java/net/CookieHandler.html)。
@@ -72,7 +72,6 @@ public void setCookieUsingCookieHandler() {
         e.printStackTrace();
     }
 }
-
 ```
 
 如检索 Cookies 所示，[`CookieManager`](https://docs.oracle.com/javase/8/docs/api/java/net/CookieManager.html)类是管理 Cookie 的主要入口点。创建`CookieManager`类的实例，并将该实例设置为默认的[`CookieHandler`](https://docs.oracle.com/javase/8/docs/api/java/net/CookieHandler.html)。

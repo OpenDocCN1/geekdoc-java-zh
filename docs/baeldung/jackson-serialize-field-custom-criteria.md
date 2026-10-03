@@ -1,8 +1,9 @@
+
 # 仅序列化符合 Jackson 自定义标准的字段
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/jackson-serialize-field-custom-criteria>
 
-## 1。概述
+## 1. 概述
 
 本教程将说明如何使用 Jackson 来序列化一个满足特定自定义标准的字段。
 
@@ -10,9 +11,9 @@
 
 如果你想更深入地了解和学习其他很酷的事情，你可以用杰克逊 2 号来做——直接去[杰克逊的主要教程](/web/20221129010951/https://www.baeldung.com/jackson "The Jackson JSON Guide")。
 
-## 2。使用杰克逊过滤器控制序列化过程
+## 2. 使用杰克逊过滤器控制序列化过程
 
-首先，我们需要在我们的实体上定义过滤器，使用`@JsonFilter`注释:
+首先，我们需要在我们的实体上定义过滤器，使用`@JsonFilter`注释：
 
 ```java
 @JsonFilter("myFilter")
@@ -33,7 +34,7 @@ public class MyDto {
 }
 ```
 
-然后，我们需要定义我们的定制`PropertyFilter`:
+然后，我们需要定义我们的定制`PropertyFilter`：
 
 ```java
 PropertyFilter theFilter = new SimpleBeanPropertyFilter() {
@@ -67,7 +68,7 @@ PropertyFilter theFilter = new SimpleBeanPropertyFilter() {
 
 该过滤器包含基于其值决定`intValue`字段是否将被**序列化或不被**序列化的实际逻辑。
 
-接下来，我们将这个过滤器挂接到`ObjectMapper`中，并序列化一个实体:
+接下来，我们将这个过滤器挂接到`ObjectMapper`中，并序列化一个实体：
 
 ```java
 FilterProvider filters = new SimpleFilterProvider().addFilter("myFilter", theFilter);
@@ -78,19 +79,19 @@ ObjectMapper mapper = new ObjectMapper();
 String dtoAsString = mapper.writer(filters).writeValueAsString(dtoObject);
 ```
 
-最后，我们可以检查`intValue`字段确实是**的一部分，而不是被编组的 JSON 输出**的一部分:
+最后，我们可以检查`intValue`字段确实是**的一部分，而不是被编组的 JSON 输出**的一部分：
 
 ```java
 assertThat(dtoAsString, not(containsString("intValue")));
 ```
 
-## 3。有条件地跳过对象
+## 3. 有条件地跳过对象
 
-现在，让我们讨论如何在基于属性**值**序列化时跳过对象。我们将跳过属性`hidden`为`true`的所有对象:
+现在，让我们讨论如何在基于属性**值**序列化时跳过对象。我们将跳过属性`hidden`为`true`的所有对象：
 
-### 3.1。隐藏类
+### 3.1. 隐藏类
 
-首先，我们来看看我们的`Hidable`界面:
+首先，我们来看看我们的`Hidable`界面：
 
 ```java
 @JsonIgnoreProperties("hidden")
@@ -99,9 +100,9 @@ public interface Hidable {
 }
 ```
 
-我们有两个简单的类来实现这个接口`Person`、`Address`:
+我们有两个简单的类来实现这个接口`Person`、`Address`：
 
-`Person`类别:
+`Person`类别：
 
 ```java
 public class Person implements Hidable {
@@ -111,7 +112,7 @@ public class Person implements Hidable {
 }
 ```
 
-和`Address`类:
+和`Address`类：
 
 ```java
 public class Address implements Hidable {
@@ -121,11 +122,11 @@ public class Address implements Hidable {
 }
 ```
 
-注意:我们使用了`@JsonIgnoreProperties(“hidden”)`来确保`hidden`属性本身不包含在 JSON 中
+注意：我们使用了`@JsonIgnoreProperties("hidden")`来确保`hidden`属性本身不包含在 JSON 中。
 
-### 3.2。自定义串行器
+### 3.2. 自定义串行器
 
-接下来——这是我们的自定义序列化程序:
+接下来——这是我们的自定义序列化程序：
 
 ```java
 public class HidableSerializer extends JsonSerializer<Hidable> {
@@ -151,14 +152,14 @@ public class HidableSerializer extends JsonSerializer<Hidable> {
 }
 ```
 
-请注意:
+请注意：
 
-*   当对象不会被跳过时，我们将序列化委托给默认的注入序列化程序。
-*   我们覆盖了方法`isEmpty()`——以确保在隐藏对象是属性的情况下，属性名也被排除在 JSON 之外。
+- 当对象不会被跳过时，我们将序列化委托给默认的注入序列化程序。
+- 我们覆盖了方法`isEmpty()`——以确保在隐藏对象是属性的情况下，属性名也被排除在 JSON 之外。
 
-### 3.3。使用`BeanSerializerModifier`
+### 3.3. 使用`BeanSerializerModifier`
 
-最后，我们将需要使用`BeanSerializerModifier`在我们的自定义`HidableSerializer`中注入默认的序列化程序，如下所示:
+最后，我们将需要使用`BeanSerializerModifier`在我们的自定义`HidableSerializer`中注入默认的序列化程序，如下所示：
 
 ```java
 ObjectMapper mapper = new ObjectMapper();
@@ -181,9 +182,9 @@ mapper.registerModule(new SimpleModule() {
 });
 ```
 
-### 3.4。样本输出
+### 3.4. 样本输出
 
-下面是一个简单的序列化示例:
+下面是一个简单的序列化示例：
 
 ```java
 Address ad1 = new Address("tokyo", "jp", true);
@@ -196,7 +197,7 @@ Person p3 = new Person("adam", ad3, false);
 System.out.println(mapper.writeValueAsString(Arrays.asList(p1, p2, p3)));
 ```
 
-输出是:
+输出是：
 
 ```java
 [
@@ -213,11 +214,11 @@ System.out.println(mapper.writeValueAsString(Arrays.asList(p1, p2, p3)));
 ]
 ```
 
-### 3.5。测试
+### 3.5. 测试
 
-最后，这里有几个测试案例:
+最后，这里有几个测试案例：
 
-第一种情况，**无所隐瞒**:
+第一种情况，**无所隐瞒**：
 
 ```java
 @Test
@@ -233,7 +234,7 @@ public void whenNotHidden_thenCorrect() throws JsonProcessingException {
 }
 ```
 
-接下来，**只有地址被隐藏**:
+接下来，**只有地址被隐藏**：
 
 ```java
 @Test
@@ -249,7 +250,7 @@ public void whenAddressHidden_thenCorrect() throws JsonProcessingException {
 }
 ```
 
-现在，**整个人被隐藏起来**:
+现在，**整个人被隐藏起来**：
 
 ```java
 @Test
@@ -262,7 +263,7 @@ public void whenAllHidden_thenCorrect() throws JsonProcessingException {
 }
 ```
 
-## 4。结论
+## 4. 结论
 
 这种类型的高级过滤非常强大，在用 Jackson 序列化复杂对象时，允许非常灵活地定制 json。
 

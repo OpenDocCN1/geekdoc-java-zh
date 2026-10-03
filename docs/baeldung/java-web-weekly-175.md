@@ -1,3 +1,4 @@
+
 # Java 网络周刊，第 175 期
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-web-weekly-175>
@@ -6,7 +7,7 @@
 
 **开始了……**
 
-## 1。Spring 和 Java
+## 1. Spring 和 Java
 
 #### [> > IBM 和红帽对 Java 模块投“不”票【竖锯】](https://web.archive.org/web/20220626074958/https://www.infoq.com/news/2017/05/no-jigsaw)【infoq.com】
 
@@ -72,7 +73,7 @@ Hibernate 关联映射实用综合指南。
 
 *   #### [>莫克托 2.8.24 出局](https://web.archive.org/web/20220626074958/https://github.com/mockito/mockito/blob/release/2.x/doc/release-notes/official.md#2824-2017-05-01)【github . com】T5
 
-## 2。技术
+## 2. 技术
 
 #### [> >简单的查询字符串，它呢？](https://web.archive.org/web/20220626074958/http://in.relation.to/2017/04/27/simple-query-string-what-about-it/)
 
@@ -94,7 +95,7 @@ Hibernate 关联映射实用综合指南。
 
 *   #### [> > Output of a truly random process](https://web.archive.org/web/20220626074958/https://horicky.blogspot.com/2017/04/an-output-of-truly-random-process.html) [horicky.blogspot.com]
 
-## 3。沉思
+## 3. 沉思
 
 #### [> >开发者霸权:软件开发者应该运行软件开发的疯狂想法](https://web.archive.org/web/20220626074958/http://www.daedtech.com/developer-hegemony-the-crazy-idea-that-software-developers-should-run-software-development/)【daedtech.com】
 
@@ -118,7 +119,7 @@ Hibernate 关联映射实用综合指南。
 
 *   [**> >更快、更高、更强:产业数字化如何重新定义价值创造**](https://web.archive.org/web/20220626074958/http://www.allthingsdistributed.com/2017/05/industry-digitalization-value-creation.html)【allthingsdistributed.com】
 
-## 4。漫画
+## 4. 漫画
 
 本周我最喜欢的迪尔伯特。
 
@@ -128,8 +129,8 @@ Hibernate 关联映射实用综合指南。
 
 #### 我可以给你倒杯水吗？【dilbert.com】
 
-## 5。本周精选
+## 5. 本周精选
 
 埃里克的书终于在本周出版了。如果你对我们的行业、行业的运行方式以及未来十年的发展方向感兴趣，请不要错过这个:
 
-#### [> >埃里克·迪特里希的开发者霸权](https://web.archive.org/web/20220626074958/http://www.daedtech.com/book/)【daedtech.com
+#### [> >埃里克·迪特里希的开发者霸权](https://web.archive.org/web/20220626074958/http://www.daedtech.com/book/)【daedtech.com】

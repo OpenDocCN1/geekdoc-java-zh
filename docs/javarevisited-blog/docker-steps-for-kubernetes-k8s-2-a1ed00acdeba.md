@@ -1,3 +1,4 @@
+
 # Kubernetes (K8s#2)的停靠步骤
 
 > 原文：<https://medium.com/javarevisited/docker-steps-for-kubernetes-k8s-2-a1ed00acdeba?source=collection_archive---------3----------------------->

@@ -1,3 +1,4 @@
+
 # 如何用 Java 实现 Facade 设计模式？
 
 > 原文：<https://medium.com/javarevisited/how-to-implement-facade-design-pattern-using-java-3901e21219a4?source=collection_archive---------0----------------------->
@@ -6,7 +7,7 @@
 
 你好👋是洛汗·卡达姆😊
 
-也许你是编码新手👩‍💻或者编程，也许有经验👴或者，你们所有的前端或后端开发人员可能都曾遇到过作为原则或概念的设计模式这个词。设计模式是编写代码或开发应用程序的一种方式或方法。在本文中，我们试图回答一些问题什么是设计模式？为什么要实现设计模式？如何实现一个设计模式( **Facade** )？
+也许你是编码新手👩‍💻或者编程，也许有经验👴或者，你们所有的前端或后端开发人员可能都曾遇到过作为原则或概念的设计模式这个词。设计模式是编写代码或开发应用程序的一种方式或方法。在本文中，我们试图回答一些问题什么是设计模式？为什么要实现设计模式？如何实现一个设计模式（**Facade**）？
 
 [![](img/def70437b35b17f508625ff99adb20ff.png)](https://www.java67.com/2012/09/top-10-java-design-pattern-interview-question-answer.html)
 
@@ -45,12 +46,15 @@
 Facade 设计模式是结构化设计模式家族的一部分，它为库、框架或任何其他复杂的类集提供了一个简化的接口。现实生活中的一个例子是，**假设你经营一家大型快递公司，作为经理，你只需输入包裹信息，即包裹尺寸和重量，让代码决定最佳运输方式。例如，输入屏幕充当其后面处理的表面或正面**。这就是门面设计模式在现实生活中的工作方式。
 
 **定义:**
+
 外观设计模式是一种结构设计模式**，它为一个库、一个框架或者任何其他复杂的类集合*提供了一个简化的接口。***
 
 **2 →为什么要实施 Facade 设计模式？**
 
-1.  立面允许我们遵循设计原则(**立体**)。
+1.  立面允许我们遵循设计原则（**立体**）。
+
 2.  它促进了将代码从子系统的复杂性中分离出来。
+
 3.  它允许我们在不影响现有代码结构的情况下引入新代码，如**即插即用模式**
 
 **3 →如何实现立面设计模式？**
@@ -63,7 +67,7 @@ Facade 设计模式是结构化设计模式家族的一部分，它为库、框�
 
 [![](img/c391aefc2498c8bcdac8734f5f48c095.png)](https://javarevisited.blogspot.com/2018/02/top-5-java-design-pattern-courses-for-developers.html)
 
-PackageInfo.class
+`PackageInfo.class`
 
 **第二步→有哪些不同的发货方式？**
 
@@ -73,25 +77,25 @@ PackageInfo.class
 
 包裹递送
 
-我们已经创建了由 PackageDelivery 接口实现的子类。
+我们已经创建了由 `PackageDelivery` 接口实现的子类。
 
 **1→自行车送货🏍**
 
 [![](img/f9034f7d64afe50b008b1291750464d7.png)](https://javarevisited.blogspot.com/2019/03/5-courses-programmers-can-join-to-learn.html)
 
-DeliveryByBicycle.class
+`DeliveryByBicycle.class`
 
 **2→汽车交货**🚗
 
 [![](img/4fdffd5069436a3e029d775f7e96ee4e.png)](https://javarevisited.blogspot.com/2018/02/5-must-read-books-to-become-software-architect-solution.html)
 
-DeliveryByCar.class
+`DeliveryByCar.class`
 
 **3→卡车运输**🚚
 
 [![](img/e8670d31861dea3a0d1db9dc47eb2703.png)](https://www.java67.com/2020/11/top-5-course-to-learn-design-patterns-javascript.html)
 
-DeliveryByTruck.class
+`DeliveryByTruck.class`
 
 交付管理器类来管理运输模式。
 
@@ -109,7 +113,7 @@ DeliveryByTruck.class
 
 **步骤 4→门面模式的输出是什么？**
 
-下面的控制台输出有助于理解管理器(Facade 类)是如何根据包裹信息选择运输方式的
+下面的控制台输出有助于理解管理器（Facade 类）是如何根据包裹信息选择运输方式的
 
 [![](img/c2860941ed4e92190314e359fcbd8518.png)](https://medium.com/javarevisited/7-best-books-to-learn-design-patterns-for-java-programmers-5627b93eefdb?source=---------15------------------)
 
@@ -117,7 +121,7 @@ DeliveryByTruck.class
 
 [Github 上的****](https://github.com/Rohan2596)
 
-**<https://github.com/Rohan2596/Design-pattern-examples/tree/pattern/facade>  
+<https://github.com/Rohan2596/Design-pattern-examples/tree/pattern/facade>
 
 ## ⚡Conclusion:-
 

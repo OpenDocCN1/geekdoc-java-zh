@@ -1,3 +1,4 @@
+
 # 如何在 Java 中创建一个不可变的列表、集合和映射？
 
 > 原文：<https://medium.com/javarevisited/how-to-create-an-immutable-list-list-and-map-in-java-5ac1254c128?source=collection_archive---------0----------------------->
@@ -15,7 +16,7 @@
 它允许你在一行中创建一个列表、集合和一个值映射，就像你在 [Kotlin](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html) 、 [Scala](http://javarevisited.blogspot.sg/2018/01/10-reasons-to-learn-scala-programming.html#axzz550Ppgfxg) 或 [Groovy](http://javarevisited.blogspot.sg/2016/09/10-basic-differences-between-java-and-groovy-programming.html#axzz560Mbbw3w) 中所做的一样:
 
 ```
-**List<String> list = List.of("Java", "Kotlin", "Groovy");**
+List<String> list = List.of("Java", "Kotlin", "Groovy");
 ```
 
 但是唯一的问题是你可以创建一个不可修改的或者**不可修改的列表、集合或者映射。**
@@ -26,7 +27,7 @@
 
 顺便说一句，如果你不熟悉 Java 9 和最近版本中添加的新 API 变化，那么我建议你先学习一门全面的最新 Java 课程，比如 Udemy 上的 [**完整的 Java MasterClass**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F) 。
 
-<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F>  
+<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F>
 
 它涵盖了 Java 开发人员的所有重要主题，并定期更新到最新的 Java 版本。它也很便宜，你可以在一年四季的几次 Udemy flash 销售中只花 10 美元就能买到。
 
@@ -35,14 +36,19 @@
 这与您在 JDK 6 或 7 中创建的[不可修改列表](http://javarevisited.blogspot.sg/2012/07/create-read-only-list-map-set-example-java.html#axzz55lrMRnNC)相同，如下所示:
 
 ```
-**List<String> listOfString = new List<>();****listOfString.add("Java");****listOfString.add("Kotlin");****listOfString.add("Groovy");****listOfString.add("Scala");****listOfString = Collections.unmodifiableList(listOfString);**
+List<String> listOfString = new List<>();
+listOfString.add("Java");
+listOfString.add("Kotlin");
+listOfString.add("Groovy");
+listOfString.add("Scala");
+listOfString = Collections.unmodifiableList(listOfString);
 ```
 
 由`unmodifiableList()`方法返回的列表也不支持 add、remove 或 set 操作，如果你调用它们，就会抛出一个`UnsupportedOperationException`。
 
 两个代码片段之间的唯一区别是，以前，创建一个不可变的集合需要 6 行以上的代码，比如不可变的列表、集合或映射，但是现在只需要一行代码就可以完成。
 
-List 接口上也有几个重载版本的`List.of()`可用，比如允许你创建 1-10 个元素的不可变列表和一个[可变参数方法](http://javarevisited.blogspot.sg/2011/09/variable-argument-in-java5-varargs.html#axzz560Mbbw3w)，它允许你创建任意数量元素的列表。
+`List`接口上也有几个重载版本的`List.of()`可用，比如允许你创建 1-10 个元素的不可变列表和一个[可变参数方法](http://javarevisited.blogspot.sg/2011/09/variable-argument-in-java5-varargs.html#axzz560Mbbw3w)，它允许你创建任意数量元素的列表。
 
 对于`Set.of()`和`Map.of()`方法也是如此。下面是一个在 Java 9 中创建不可变集合的例子:
 
@@ -50,7 +56,7 @@ List 接口上也有几个重载版本的`List.of()`可用，比如允许你创�
 Set<Integer> primes = Set.of(2,3,5,7);
 ```
 
-您可以看到，只用一行代码就可以创建一个不可变的集合。类似地，为了创建不可变的地图，JDK 9 提供了两种方法— `Map.of(K k1, V v1)`和`Map.ofEntries()`。通过使用这两个，您可以创建一个不可变条目的映射(参见 Sander Mak 的[Java 9 中的新特性](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fjava-9-whats-new))来了解更多这方面的内容。
+您可以看到，只用一行代码就可以创建一个不可变的集合。类似地，为了创建不可变的地图，JDK 9 提供了两种方法— `Map.of(K k1, V v1)`和`Map.ofEntries()`。通过使用这两个，您可以创建一个不可变条目的映射(参见 Sander Mak 的[Java 9 中的新特性](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fjava-9-whats-new)来了解更多这方面的内容)。
 
 [![](img/af8c88d835e30f28ee98dccb37c0c2b8.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=562016.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fwhats-new-in-java-9%2F)
 
@@ -77,19 +83,31 @@ Set<Integer> primes = Set.of(2,3,5,7);
 如果您迫不及待，请查看 Java 9 中的新特性[——模块和更多](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=562016.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fwhats-new-in-java-9%2F) ，它很好地概述了 JDK 9 的所有特性。
 
 其他**文章你可能喜欢**探索
+
 [完整的 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
+
 [Java 和 Web 开发者应该学习的 10 件事](http://javarevisited.blogspot.sg/2017/12/10-things-java-programmers-should-learn.html#axzz53ENLS1RB)
+
 [Java 开发者应该知道的 10 个测试工具](http://javarevisited.blogspot.sg/2018/01/10-unit-testing-and-integration-tools-for-java-programmers.html)
+
 [5 个框架 Java 开发者应该学习的 5 门课程](http://javarevisited.blogspot.sg/2018/04/top-5-java-frameworks-to-learn-in-2018_27.html)
+
 [学习 Java 中的大数据和 Apache Spark](http://javarevisited.blogspot.sg/2017/12/top-5-courses-to-learn-big-data-and.html)
+
 [10 门课程学习 DevOps for Java 开发者](https://javarevisited.blogspot.com/2018/09/10-devops-courses-for-experienced-java-developers.html)
+
 [10 本书](http://www.java67.com/2018/02/10-books-java-developers-should-read-in.html)
+
 [Java 开发人员在日常工作中使用的 10 个工具](http://javarevisited.blogspot.sg/2017/03/10-tools-used-by-java-programming-Developers.html#axzz55lrMRnNC)
+
 [成为更好的 Java 开发人员的 10 个技巧](https://javarevisited.blogspot.com/2018/05/10-tips-to-become-better-java-developer.html)
+
 [10 个框架全栈 Java 开发人员应该学习的](/javarevisited/top-10-frameworks-full-stack-java-developers-can-learn-in-2020-5995021401e5)
+
 [我最喜欢的免费课程学习 Spring framework](/javarevisited/top-10-free-courses-to-learn-spring-framework-for-java-developers-639db9348d25)
+
 [Java 开发人员的 10 门高级 Spring Boot 课程](/javarevisited/10-advanced-spring-boot-courses-for-experienced-java-developers-5e57606816bd?source=collection_home---4------0-----------------------)
 
 感谢阅读这篇文章！如果你喜欢这篇文章，那么请分享给你的朋友和同事。此外，如果您有任何问题或反馈，请在下面的评论中留言！
 
-</javarevisited/top-5-java-online-courses-for-beginners-best-of-lot-1e1e240a758>  </javarevisited/these-are-the-highest-paying-tech-jobs-programmers-can-aim-to-increase-their-pay-c59e1eeb6904>  </javarevisited/top-10-free-courses-to-learn-maven-jenkins-and-docker-for-java-developers-51fa7a1e66f6> 
+</javarevisited/top-5-java-online-courses-for-beginners-best-of-lot-1e1e240a758>  </javarevisited/these-are-the-highest-paying-tech-jobs-programmers-can-aim-to-increase-their-pay-c59e1eeb6904>  </javarevisited/top-10-free-courses-to-learn-maven-jenkins-and-docker-for-java-developers-51fa7a1e66f6>

@@ -1,4 +1,6 @@
-# 用@Async 怎么样？
+
+
+# 用`@Async`怎么样？
 
 > 原文：<https://medium.com/javarevisited/how-about-using-async-c0ae1cb7b5fd?source=collection_archive---------0----------------------->
 
@@ -6,35 +8,35 @@
 
 [![](img/85c440516637a7a250b5f8e1dc62af9f.png)](https://javarevisited.blogspot.com/2021/12/what-is-springboottest-annotation-in.html)
 
-首先，官方文件就在这里【https://spring.io/guides/gs/async-method/ 
+首先，官方文件就在这里：<https://spring.io/guides/gs/async-method/>
 
 在这个例子中，我使用了 Spring Boot 2.7.1 和 Java 11。
 
-有时我们可以在程序内部做一些动作，而不必等到程序结束。在这种情况下，您可以使用注释@Async。
+有时我们可以在程序内部做一些动作，而不必等到程序结束。在这种情况下，您可以使用注释`@Async`。
 
-**当你把@Async 放在一个方法上，这意味着这个方法将在一个单独的线程中执行，调用者不会等待这个叫做**的方法完成。
+当你把`@Async`放在一个方法上，这意味着这个方法将在一个单独的线程中执行，调用者不会等待这个叫做的方法完成。
 
 ## 给我看看代码
 
 我们如何实现这一点？
 
-这边走:
+这边走：
 
 ```
-**@EnableAsync**
+@EnableAsync
 @SpringBootApplication
 public class DemoApplication {
 
    public static void main(String[] args) {
-      SpringApplication.*run*(DemoApplication.class, args);
+      SpringApplication.run(DemoApplication.class, args);
    }
 
 }
 ```
 
-`@EnableAsyn`显示 [Spring](/javarevisited/top-10-free-courses-to-learn-spring-framework-for-java-developers-639db9348d25) 存在一些@Async 注释的方法。如果需要，您可以创建一个配置类。
+`@EnableAsync`显示 [Spring](/javarevisited/top-10-free-courses-to-learn-spring-framework-for-java-developers-639db9348d25) 存在一些`@Async`注释的方法。如果需要，您可以创建一个配置类。
 
-现在我们可以编写这样的代码:
+现在我们可以编写这样的代码：
 
 ```
 import org.springframework.scheduling.annotation.Async;
@@ -49,8 +51,8 @@ public class ExampleService {
     @Async
     public void execute() {
         try {
-            Thread.*sleep*(10000);
-            System.*out*.println(LocalDateTime.*now*() + " | test finished");
+            Thread.sleep(10000);
+            System.out.println(LocalDateTime.now() + " | test finished");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -59,7 +61,7 @@ public class ExampleService {
 }
 ```
 
-我们称这个方法为:
+我们称这个方法为：
 
 ```
 import org.springframework.web.bind.annotation.GetMapping;
@@ -77,30 +79,30 @@ public class TestController {
     @GetMapping("test-async")
     public String test(){
         exampleService.execute();
-        System.*out*.println("executing final of request before the method execute()");
+        System.out.println("executing final of request before the method execute()");
         return "ok";
     }
 
 }
 ```
 
-在[http://localhost:8080/async-test](http://localhost:8080/async-test)上查看 GET 请求的结果
+在`http://localhost:8080/async-test`上查看 GET 请求的结果
 
 [![](img/7ac901ed741014c585fd2c37de2b8090.png)](https://javarevisited.blogspot.com/2022/02/how-to-fix-autowired-no-qualifying-bean.html)
 
 “在方法执行之前执行最终请求”向我们展示了控制器方法没有等到控制器方法完成。
 
-一个有趣的用例:
+一个有趣的用例：
 
-*   [在请求期间发送电子邮件](https://www.java67.com/2018/01/4-examples-to-send-email-with.html),无需等待流程终止
+*   [在请求期间发送电子邮件](https://www.java67.com/2018/01/4-examples-to-send-email-with.html)，无需等待流程终止
 
 ## 深入
 
 **异步结果类**
 
-在我的例子中，我创建了一个 void 方法，但是如果你必须处理一些结果，你可以使用 AsyncResult 类并对返回做一些事情。
+在我的例子中，我创建了一个 void 方法，但是如果你必须处理一些结果，你可以使用`AsyncResult`类并对返回做一些事情。
 
-我将修改这段代码并登录[控制器类](https://javarevisited.blogspot.com/2022/05/how-to-return-json-xml-or-thymeleaf-.html)返回方法 *execute()。*
+我将修改这段代码并登录[控制器类](https://javarevisited.blogspot.com/2022/05/how-to-return-json-xml-or-thymeleaf-.html)返回方法`execute()`。
 
 ```
 import java.time.LocalDateTime;
@@ -112,9 +114,9 @@ public class ExampleService {
     @Async
     public Future<String> execute() {
         try {
-            Thread.*sleep*(10000);
-            var response = new AsyncResult<String>(LocalDateTime.*now*() + " | test finished");
-            System.*out*.println(response.get());
+            Thread.sleep(10000);
+            var response = new AsyncResult<String>(LocalDateTime.now() + " | test finished");
+            System.out.println(response.get());
             return response;
         } catch (Exception e) {
             e.printStackTrace();
@@ -125,9 +127,9 @@ public class ExampleService {
 }
 ```
 
-AsyncResult 实现接口 Future，菱形可以是任何对象。
+`AsyncResult`实现接口`Future`，菱形可以是任何对象。
 
-控制器类别:
+控制器类别：
 
 ```
 import org.springframework.web.bind.annotation.GetMapping;
@@ -149,9 +151,9 @@ public class TestController {
         try {
             var response = exampleService.execute();
             if(response.isDone()){
-                System.*out*.println("method execute finished");
+                System.out.println("method execute finished");
             } else {
-                System.*out*.println(LocalDateTime.*now*() + " method execute not finished");
+                System.out.println(LocalDateTime.now() + " method execute not finished");
             }
             return "ok";
         } catch (Exception e) {
@@ -162,15 +164,15 @@ public class TestController {
 }
 ```
 
-结果是:
+结果是：
 
 [![](img/4f32998b95ec8e05f9070e991c29e1d2.png)](https://javarevisited.blogspot.com/2022/05/how-to-validate-incoming-payload-on-spring-.html)
 
-响应是在方法 *execute()* 完成之前发送的。
+响应是在方法`execute()`完成之前发送的。
 
 ## 异常处理
 
-首先，我编写了一个实现 AsyncUncaughtExceptionHandler 的类:
+首先，我编写了一个实现`AsyncUncaughtExceptionHandler`的类：
 
 ```
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
@@ -180,14 +182,14 @@ public class AsyncExceptionHandler implements AsyncUncaughtExceptionHandler {
 
     @Override
     public void handleUncaughtException(Throwable throwable, Method method, Object... obj) {
-        System.*out*.println("Message from exception - " + throwable.getMessage());
-        System.*out*.println("Method name " + method.getName());
+        System.out.println("Message from exception - " + throwable.getMessage());
+        System.out.println("Method name " + method.getName());
     }
 
 }
 ```
 
-其次，我创建了一个配置类，并将注释`@EnableAsync`移动到这个类中，如下所示:
+其次，我创建了一个配置类，并将注释`@EnableAsync`移动到这个类中，如下所示：
 
 ```
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
@@ -207,19 +209,19 @@ public class AsyncConfig implements AsyncConfigurer {
 }
 ```
 
-注意，这里我注册了 AsyncExceptionHandler。
+注意，这里我注册了`AsyncExceptionHandler`。
 
-然后我用一个有目的的例外做了另一个方法:
+然后我用一个有目的的例外做了另一个方法：
 
 ```
 @Async
 public void executeWithException() throws Exception{
-    Thread.*sleep*(10000);
+    Thread.sleep(10000);
     throw new Exception("Some exception");
 }
 ```
 
-最后是[控制器](https://javarevisited.blogspot.com/2017/11/difference-between-component-service.html):
+最后是[控制器](https://javarevisited.blogspot.com/2017/11/difference-between-component-service.html)：
 
 ```
 @GetMapping("test-async2")
@@ -229,10 +231,11 @@ public String test2() throws Exception {
 }
 ```
 
-结果是:
+结果是：
 
 [![](img/c9af2e17b72df786d26c9d1b2b1d14d4.png)](https://www.java67.com/2021/10/3-ways-to-send-different-content-types.html)
 
-代码在这里:[https://github.com/mmarcosab/async-example](https://github.com/mmarcosab/async-example)
+代码在这里：<https://github.com/mmarcosab/async-example>
 
-</javarevisited/21-spring-mvc-rest-interview-questions-answers-for-beginners-and-experienced-developers-21ad3d4c9b82>  </javarevisited/13-topics-you-should-prepare-for-your-next-spring-boot-interview-5f2993a04ff5>  </javarevisited/top-10-rest-interview-questions-for-java-and-spring-developers-1611e3b78029> 
+</javarevisited/21-spring-mvc-rest-interview-questions-answers-for-beginners-and-experienced-developers-21ad3d4c9b82>  </javarevisited/13-topics-you-should-prepare-for-your-next-spring-boot-interview-5f2993a04ff5>  </javarevisited/top-10-rest-interview-questions-for-java-and-spring-developers-1611e3b78029>
+

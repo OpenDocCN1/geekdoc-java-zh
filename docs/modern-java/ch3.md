@@ -1,9 +1,8 @@
+
 # Java 8 Nashorn 教程
 
-> 原文：[Java 8 Nashorn Tutorial](http://winterbe.com/posts/2014/04/05/java8-nashorn-tutorial/) 
-
-> 译者：[飞龙](https://github.com/wizardforcel)  
-
+> 原文：[Java 8 Nashorn Tutorial](http://winterbe.com/posts/2014/04/05/java8-nashorn-tutorial/)
+> 译者：[飞龙](https://github.com/wizardforcel)
 > 协议：[CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 这个教程中，你会通过简单易懂的代码示例，来了解Nashorn JavaScript引擎。Nashorn JavaScript引擎是Java SE 8 的一部分，并且和其它独立的引擎例如[Google V8](https://code.google.com/p/v8/)（用于Google Chrome和[Node.js](http://nodejs.org/)的引擎）互相竞争。Nashorn通过在JVM上，以原生方式运行动态的JavaScript代码来扩展Java的功能。
@@ -199,7 +198,7 @@ function Person(firstName, lastName) {
 }
 ```
 
-JavaScript方法`getFullName`可以通过`callMember()`在`ScriptObjectMirror `上调用。
+JavaScript方法`getFullName`可以通过`callMember()`在`ScriptObjectMirror`上调用。
 
 ```java
 static void fun4(ScriptObjectMirror person) {
@@ -331,6 +330,8 @@ new Thread(function() {
 ```
 
 ### 参数重载
+
+
 
 方法和函数可以通过点运算符或方括号运算符来调用：
 

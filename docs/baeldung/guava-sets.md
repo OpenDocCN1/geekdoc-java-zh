@@ -1,20 +1,21 @@
+
 # 番石榴–套装
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/guava-sets>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将举例说明如何最有效地利用 Guava 来处理 Java 集合。
 
-让我们从非常简单的开始，**创建一个没有新操作符的`HashSet`** ，使用番石榴:
+让我们从非常简单的开始，**创建一个没有新操作符的`HashSet`**，使用番石榴：
 
 ```java
 Set<String> aNewSet = Sets.newHashSet();
 ```
 
-## 2。集合的并集
+## 2. 集合的并集
 
-首先，让我们看看如何使用简单的 API 对集合进行联合运算:
+首先，让我们看看如何使用简单的 API 对集合进行联合运算：
 
 ```java
 @Test
@@ -27,9 +28,9 @@ public void whenCalculatingUnionOfSets_thenCorrect() {
 }
 ```
 
-## 3。集合的笛卡尔积
+## 3. 集合的笛卡尔积
 
-我们还可以使用`Sets.cartesianProduct()`得到两个集合的乘积**，如下例所示:**
+我们还可以使用`Sets.cartesianProduct()`得到两个集合的乘积**，如下例所示：
 
 ```java
 @Test
@@ -50,11 +51,11 @@ public void whenCalculatingCartesianProductOfSets_thenCorrect() {
 }
 ```
 
-请注意–为了能够方便地测试结果，我们使用`Function`和`Joiner`将复杂的`Set<List<Character>>`结构转换为更易于管理的`Iterable<String>`。
+请注意——为了能够方便地测试结果，我们使用`Function`和`Joiner`将复杂的`Set<List<Character>>`结构转换为更易于管理的`Iterable<String>`。
 
-## 4。`Sets`十字路口
+## 4. `Sets`十字路口
 
-接下来，让我们看看如何使用`Sets.intersection()` API 得到两个集合的交集**:**
+接下来，让我们看看如何使用`Sets.intersection()` API 得到两个集合的交集**：
 
 ```java
 @Test
@@ -67,9 +68,9 @@ public void whenCalculatingSetIntersection_thenCorrect() {
 }
 ```
 
-## 5.集合的对称差
+## 5. 集合的对称差
 
-现在，让我们来看看两个集合的对称差异——包含在集合 1 或集合 2 中但不同时包含在两个集合中的所有元素:
+现在，让我们来看看两个集合的对称差异——包含在集合 1 或集合 2 中但不同时包含在两个集合中的所有元素：
 
 ```java
 @Test
@@ -82,11 +83,11 @@ public void whenCalculatingSetSymmetricDifference_thenCorrect() {
 }
 ```
 
-## 6。电源设置
+## 6. 电源设置
 
 现在，让我们看看如何计算幂集，即该集合的所有可能子集的集合。
 
-在下面的例子中，我们使用`Sets.powerSet()`来计算给定字符集的幂集:
+在下面的例子中，我们使用`Sets.powerSet()`来计算给定字符集的幂集：
 
 ```java
 @Test
@@ -104,11 +105,11 @@ public void whenCalculatingPowerSet_thenCorrect() {
 }
 ```
 
-## 7。`ContiguousSet`
+## 7. `ContiguousSet`
 
 接下来——让我们看看一组排序的连续值——`ContiguousSet`。
 
-在下面的例子中，我们将一组整数[10，11，…，30]放入一个`ContiguousSet`:
+在下面的例子中，我们将一组整数[10，11，…，30]放入一个`ContiguousSet`：
 
 ```java
 @Test
@@ -124,13 +125,13 @@ public void whenCreatingRangeOfIntegersSet_thenCreated() {
 }
 ```
 
-这种类型的数据结构当然是你可以在普通 Java 中用一个`TreeSet`-但是**如果你需要用这种方式表示你的数据，这种特殊类型的集合的语义更好用**。
+这种类型的数据结构当然是你可以在普通 Java 中用一个`TreeSet`——但是**如果你需要用这种方式表示你的数据，这种特殊类型的集合的语义更好用**。
 
-## 8。`RangeSet`
+## 8. `RangeSet`
 
 现在，让我们来看看`RangeSet`。我们可以使用`RangeSet`来保存断开的和非空的范围。
 
-在以下示例中，当从两个不相连的范围开始，然后我们将它们连接成一个大范围时:
+在以下示例中，当从两个不相连的范围开始，然后我们将它们连接成一个大范围时：
 
 ```java
 @Test
@@ -147,17 +148,17 @@ public void whenUsingRangeSet_thenCorrect() {
 }
 ```
 
-让我们来详细回顾一下这个例子:
+让我们来详细回顾一下这个例子：
 
-*   首先，我们插入两个不相连的范围:`[1, 10]`和`[12, 15]`
-*   接下来，我们添加第三个范围来连接现有的 2: `[10, 12]`
-*   最后，我们验证了`RangeSet`是否足够聪明，能够看出 3 个范围现在是一个大范围，并将它们合并成:`[1, 15]`
+*   首先，我们插入两个不相连的范围：`[1, 10]`和`[12, 15]`
+*   接下来，我们添加第三个范围来连接现有的 2：`[10, 12]`
+*   最后，我们验证了`RangeSet`是否足够聪明，能够看出 3 个范围现在是一个大范围，并将它们合并成：`[1, 15]`
 
-## 9。`MultiSet`
+## 9. `MultiSet`
 
-接下来，我们来讨论如何使用`Multiset`。与普通集合相反， **a `Multiset`支持添加重复元素——它将重复元素计为出现次数**。
+接下来，我们来讨论如何使用`Multiset`。与普通集合相反，**a `Multiset`支持添加重复元素——它将重复元素计为出现次数**。
 
-在下面的例子中，我们通过一些简单的多集逻辑:
+在下面的例子中，我们通过一些简单的多集逻辑：
 
 ```java
 @Test
@@ -177,11 +178,11 @@ public void whenInsertDuplicatesInMultiSet_thenInserted() {
 }
 ```
 
-## 10。获取前 N 个元素中的一个`MultiSet`
+## 10. 获取前 N 个元素中的一个`MultiSet`
 
 现在，让我们来看一个更复杂、更有用的使用`MultiSet`的例子。我们将得到集合中出现次数最多的 N 个元素——基本上是最常见的元素。
 
-在下面的例子中，我们使用`Multisets.copyHighCountFirst()`对`Multiset`中的元素进行排序:
+在下面的例子中，我们使用`Multisets.copyHighCountFirst()`对`Multiset`中的元素进行排序：
 
 ```java
 @Test
@@ -199,8 +200,8 @@ public void whenGetTopOcurringElementsWithMultiSet_thenCorrect() {
 }
 ```
 
-## 11。结论
+## 11. 结论
 
-在这个快速教程中，我们讨论了使用番石榴库处理集合的**的最常见和最有用的用例。**
+在这个快速教程中，我们讨论了使用番石榴库处理集合的**最常见和最有用的用例**。
 
 所有这些示例和代码片段的实现可以在[我的番石榴 github 项目](https://web.archive.org/web/20221113112047/https://github.com/eugenp/tutorials/tree/master/guava-modules/guava-collections-set "The Github Project with the impl of all examples using Guava Collections") 中找到——这是一个基于 Eclipse 的项目，所以它应该很容易导入和运行。

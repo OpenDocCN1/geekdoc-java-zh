@@ -1,20 +1,21 @@
+
 # 在 Docker 容器上安装多个卷
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/ops/docker-mounting-multiple-volumes>
 
-## 1.概观
+## 1. 概观
 
 Docker 有多种选项来持久化和共享正在运行的容器的数据。然而，我们可能需要一个以上的文件存储来运行容器，例如，创建备份或授予不同的访问权限。或者对于同一个容器，我们可能需要添加命名卷并将它们绑定到特定路径。
 
 在本教程中，我们将了解如何在一个容器上挂载多个卷。我们将看到一些命令行和 Docker Compose 的例子。
 
-## 2.Docker 容器上的多个安装
+## 2. Docker 容器上的多个安装
 
 Docker 使用[存储](https://web.archive.org/web/20221006124104/https://docs.docker.com/storage/)来保存数据，所以如果容器重启，我们不会丢失信息。此外，如果我们想要在集群环境中共享数据，数据持久性将是相关的。
 
 **我们将使用[卷](https://web.archive.org/web/20221006124104/https://docs.docker.com/storage/volumes/)和[绑定挂载](https://web.archive.org/web/20221006124104/https://docs.docker.com/storage/bind-mounts/)来创建一些示例，以突出最常见的开发用例。**
 
-### 2.1.使用多个卷
+### 2.1. 使用多个卷
 
 首先，让我们[创建](https://web.archive.org/web/20221006124104/https://docs.docker.com/engine/reference/commandline/volume_create/)两个不同命名的卷:
 
@@ -76,9 +77,9 @@ docker run -d \
   web-app:latest
 ```
 
-**结果与`-v`选项相同。然而，除了更清晰之外，`–mount` 是我们在[群集](https://web.archive.org/web/20221006124104/https://docs.docker.com/engine/swarm/)模式下使用带有[服务](https://web.archive.org/web/20221006124104/https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/)的卷的唯一方式。**
+**结果与`-v`选项相同。然而，除了更清晰之外，`--mount` 是我们在[群集](https://web.archive.org/web/20221006124104/https://docs.docker.com/engine/swarm/)模式下使用带有[服务](https://web.archive.org/web/20221006124104/https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/)的卷的唯一方式。**
 
-因此，如果我们想为有多个挂载的 web 应用程序创建一个[服务](https://web.archive.org/web/20221006124104/https://docs.docker.com/engine/reference/commandline/service/)，我们需要使用`–mount`选项:
+因此，如果我们想为有多个挂载的 web 应用程序创建一个[服务](https://web.archive.org/web/20221006124104/https://docs.docker.com/engine/reference/commandline/service/)，我们需要使用`--mount`选项:
 
 ```java
 docker service create --name web-app-service \
@@ -113,7 +114,7 @@ docker service inspect web-app-service
 ]
 ```
 
-### 2.2.使用卷和绑定装载
+### 2.2. 使用卷和绑定装载
 
 我们可能还想在装载到主机中的特定文件夹或文件时使用卷。
 
@@ -153,7 +154,7 @@ docker run -d \
 ]
 ```
 
-### 2.3.使用多个绑定装载
+### 2.3. 使用多个绑定装载
 
 类似地，我们可以使用多个绑定挂载，例如，当我们使用本地 AWS 模拟器 [Localstack](https://web.archive.org/web/20221006124104/https://docs.localstack.cloud/get-started/) 时。
 
@@ -176,11 +177,11 @@ docker run --name localstack -d \
 ]
 ```
 
-## 3.复合坞站
+## 3. Docker Compose
 
 让我们来看一个更紧凑的方法，用 [Docker Compose](/web/20221006124104/https://www.baeldung.com/ops/docker-compose) 实现多个挂载。
 
-### 3.1.使用多个卷
+### 3.1. 使用多个卷
 
 首先，让我们从两卷开始，如我们的 YAML 模板所示:
 
@@ -202,7 +203,7 @@ volumes:
     driver: local
 ```
 
-一旦我们定义了前面创建的卷，我们就可以在服务中以`named-volume:container-path.`的形式添加挂载
+一旦我们定义了前面创建的卷，我们就可以在服务中以`named-volume:container-path`的形式添加挂载。
 
 [长语法](https://web.archive.org/web/20221006124104/https://docs.docker.com/compose/compose-file/#volumes)也可用于 Docker Compose，例如:
 
@@ -213,7 +214,7 @@ volumes:
     target: /container-path
 ```
 
-### 3.2.使用卷和绑定装载
+### 3.2. 使用卷和绑定装载
 
 同样，这里有一个使用 MySQL 服务的例子:
 
@@ -235,7 +236,7 @@ volumes:
     driver: local
 ```
 
-### 3.3.使用多个绑定装载
+### 3.3. 使用多个绑定装载
 
 最后，让我们将之前的 Localstack 示例转换为 Docker Compose:
 
@@ -257,7 +258,7 @@ services:
       - '/var/run/docker.sock:/var/run/docker.sock'
 ```
 
-## 4.结论
+## 4. 结论
 
 在本文中，我们已经看到了如何使用 Docker 创建多个挂载。
 

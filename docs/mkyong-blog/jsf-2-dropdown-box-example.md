@@ -1,11 +1,12 @@
+
 # JSF 2 下拉框示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jsf2/jsf-2-dropdown-box-example/>
 
-在 JSF， **< h:selectOneMenu / >** 标签用于呈现一个下拉框——HTML 选择元素，属性为“ **size=1** ”。
+在 JSF 中，`<h:selectOneMenu />`标签用于呈现一个下拉框——HTML 选择元素，属性为`size=1`。
 
 ```java
- //JSF...
+//JSF...
 <h:selectOneMenu value="#{user.favCoffee1}">
    	<f:selectItem itemValue="Cream Latte" itemLabel="Coffee3 - Cream Latte" />
    	<f:selectItem itemValue="Extreme Mocha" itemLabel="Coffee3 - Extreme Mocha" />
@@ -20,20 +21,20 @@
 </select> 
 ```
 
-## h:选择一个菜单示例
+## `h:selectOneMenu`示例
 
-一个 JSF 2.0 的例子，展示了使用" **h:selectOneMenu** "标签来呈现一个下拉框，并以 3 种不同的方式填充数据:
+一个 JSF 2.0 的例子，展示了使用`h:selectOneMenu`标签来呈现一个下拉框，并以 3 种不同的方式填充数据：
 
-1.  “**f:selecti item**标签中的硬核值。
-2.  用 Map 生成值，并将其放入“**f:selecti items**标签中。
-3.  用一个对象数组生成值，放入“ **f:selectItems** ”标签，然后用“ **var** 属性表示值。
+1. `f:selectItem`标签中的硬核值。
+2. 用`Map`生成值，并将其放入`f:selectItems`标签中。
+3. 用一个对象数组生成值，放入`f:selectItems`标签，然后用`var`属性表示值。
 
- ## 1.支撑豆
+## 1. 支撑豆
 
 用于保存和生成下拉框值数据的后备 bean。
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.io.Serializable;
 import java.util.LinkedHashMap;
@@ -122,12 +123,12 @@ public class UserBean implements Serializable{
 } 
 ```
 
- ## 2.JSF·佩奇
+## 2. JSF 页面
 
-演示“ **h:selectOneMenu** ”标签使用的 JSF 页面。
+演示`h:selectOneMenu`标签使用的 JSF 页面。
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html    
@@ -171,10 +172,10 @@ public class UserBean implements Serializable{
 </html> 
 ```
 
-result.xhtml…
+`result.xhtml`…
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html    
@@ -197,20 +198,20 @@ result.xhtml…
 </html> 
 ```
 
-## 3.演示
+## 3. 演示
 
 ![jsf2-dropdown-example-1](img/a74494921e4e7341a1c2589e84b38e70.png "jsf2-dropdown-example-1")
 
-单击“提交”按钮时，链接到“result.xhtml”页面并显示已提交的下拉框值。
+单击“提交”按钮时，链接到`result.xhtml`页面并显示已提交的下拉框值。
 
 ![f2-dropdown-example-2](img/86013f5c53d76c3831f1bca6f391d8a3.png "jsf2-dropdown-example-2")
 
 ## 如何预选下拉框值？
 
-如果“**f:selecti items**”标签的值与“ **h:selectOneMenu** 标签的“值”匹配，则选择该标签的值。在上面的示例中，如果您将“favCoffee1”属性设置为“Extreme Mocha”:
+如果`f:selectItems`标签的值与`h:selectOneMenu`标签的`value`匹配，则选择该标签的值。在上面的示例中，如果您将`favCoffee1`属性设置为`Extreme Mocha`：
 
 ```java
- @ManagedBean(name="user")
+@ManagedBean(name="user")
 @SessionScoped
 public class UserBean{
 
@@ -219,7 +220,7 @@ public class UserBean{
 	//... 
 ```
 
-“favCoffee1”下拉框，值“极端摩卡”被默认选中。
+`favCoffee1`下拉框，值“极端摩卡”被默认选中。
 
 ## 下载源代码
 
@@ -227,13 +228,6 @@ Download It – [JSF-2-Dropdown-Box-Example.zip](http://web.archive.org/web/2019
 
 #### 参考
 
-1.  [JSF < h:选择一个菜单/ > JavaDoc](http://web.archive.org/web/20190303045449/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/h/selectOneMenu.html)
+1. [JSF `<h:selectOneMenu />` JavaDoc](http://web.archive.org/web/20190303045449/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/h/selectOneMenu.html)
 
 [下拉菜单](http://web.archive.org/web/20190303045449/http://www.mkyong.com/tag/dropdown/)[JSF 2](http://web.archive.org/web/20190303045449/http://www.mkyong.com/tag/jsf2/)
-
-
-
-
-
-
-

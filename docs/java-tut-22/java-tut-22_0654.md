@@ -1,3 +1,4 @@
+
 # 使用渲染提示显示抗锯齿文本
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/text/renderinghints.html`](https://docs.oracle.com/javase/tutorial/2d/text/renderinghints.html)
@@ -8,7 +9,6 @@ Java 2D 文本渲染可能受*渲染提示*的影响。
 
 ```java
 Graphics.drawString(String s, int x, int y);
-
 ```
 
 通常，该方法会使用纯色绘制文本字符串中的每个字形，而该字形中的每个“开启”像素都会设置为该颜色。这种绘制方式产生了最高对比度的文本，但有时会出现锯齿状（锯齿状）边缘。
@@ -21,7 +21,6 @@ Graphics.drawString(String s, int x, int y);
 graphics2D.setRenderingHint(
         RenderingHints.KEY_TEXT_ANTIALIASING,
         RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
-
 ```
 
 以下图示说明了抗锯齿功能。
@@ -34,7 +33,6 @@ graphics2D.setRenderingHint(
 graphics2D.setRenderingHint(
         RenderingHints.KEY_TEXT_ANTIALIASING,
         RenderingHints.VALUE_TEXT_ANTIALIAS_GASP);
-
 ```
 
 这种方法会自动使用字体本身的信息来决定是使用抗锯齿还是使用纯色。
@@ -45,31 +43,20 @@ LCD 显示器具有 Java 2D API 可以利用的属性，以产生不像典型抗
 graphics2D.setRenderingHint(
         RenderingHints.KEY_TEXT_ANTIALIASING,
         RenderingHints.VALUE_TEXT_ANTIALIAS_LCD_HRGB);
-
 ```
 
 下面所示的代码示例说明了抗锯齿功能的顺序：
 
-1.  抗锯齿已关闭。
+1. 抗锯齿已关闭。
+2. 抗锯齿已开启。
+3. 使用`TEXT_ANTIALIAS_GASP`提示进行抗锯齿。
 
-1.  抗锯齿已开启。
+   **注意：** 因此，GASP 表指定仅在这些大小上使用提示，而不是“平滑”。因此，在许多情况下，结果文本显示等同于`VALUE_TEXT_ANTIALIAS_OFF`。
 
-1.  使用`TEXT_ANTIALIAS_GASP`提示进行抗锯齿。
-
-    * * *
-
-    **注意：** 因此，GASP 表指定仅在这些大小上使用提示，而不是“平滑”。因此，在许多情况下，结果文本显示等同于`VALUE_TEXT_ANTIALIAS_OFF`。
-
-    * * *
-
-1.  使用`TEXT_ANTIALIAS_LCD_HRGB`提示进行抗锯齿。
+4. 使用`TEXT_ANTIALIAS_LCD_HRGB`提示进行抗锯齿。
 
 <applet code="AntialiasedText" archive="examples/lib/AntialiasedTextApplet.jar" alt="AntialiasedText applet" width="300" height="180"><param name="permissions" value="sandbox"></applet>
 
-* * *
-
 **注意：** 如果看不到 applet 运行，请至少安装[Java SE Development Kit (JDK) 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html)版本。
-
-* * *
 
 此 applet 的完整代码在`AntialiasedText.java`中。

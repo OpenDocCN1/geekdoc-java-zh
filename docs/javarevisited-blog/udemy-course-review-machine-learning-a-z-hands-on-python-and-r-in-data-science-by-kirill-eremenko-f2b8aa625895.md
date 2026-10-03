@@ -1,3 +1,4 @@
+
 # 回顾 Udemy 上的数据科学课程中的机器学习 A-Z 动手 Python 和 R 值得吗？
 
 > 原文：<https://medium.com/javarevisited/udemy-course-review-machine-learning-a-z-hands-on-python-and-r-in-data-science-by-kirill-eremenko-f2b8aa625895?source=collection_archive---------0----------------------->
@@ -46,38 +47,49 @@ Kirill 是学习[数据科学](/javarevisited/my-favorite-data-science-and-machi
 
 好的方面是，在深入到课程的实践部分之前，讲师从机器学习的介绍和其他一些关键的机器学习概念开始。
 
-**2.1。数据预处理**
-在将机器学习算法应用到你的数据之前，第一步是将数据预处理成正确的格式，这一节就是全部。您将看到如何使用两种语言[python](https://javarevisited.blogspot.com/2019/09/5-websites-to-learn-python-for-free.html)n 和 [R](/javarevisited/10-best-r-programming-courses-for-data-science-and-statistics-8f84ebec4974) 来预处理数据。
+### 2.1. 数据预处理
 
-**2.2。回归**
-对数据进行预处理后的下一步是对数据应用一些机器学习算法。本节向您展示六种不同的[机器学习算法](/javarevisited/5-machine-learning-algorithms-every-data-scientists-should-learn-de467fd2e444)，如简单线性回归、支持向量机、随机森林等等，并评估这些算法的性能。
+在将机器学习算法应用到你的数据之前，第一步是将数据预处理成正确的格式，这一节就是全部。您将看到如何使用两种语言`python`和`R`来预处理数据。
 
-**2.3。分类**
-机器学习回归算法是用来预测连续数据的，但是预测类别呢？嗯，这就是你在这一节将学到的一些算法，如逻辑回归，核 SVM，以及更多，每种算法的优点和缺点的细节。
+### 2.2. 回归
 
-**2.4。聚类**
+对数据进行预处理后的下一步是对数据应用一些机器学习算法。本节向您展示六种不同的机器学习算法，如简单线性回归、支持向量机、随机森林等等，并评估这些算法的性能。
 
-**2.5。关联规则学习**
+### 2.3. 分类
+
+机器学习回归算法是用来预测连续数据的，但是预测类别呢？嗯，这就是你在这一节将学到的一些算法，如逻辑回归、核 SVM，以及更多，每种算法的优点和缺点的细节。
+
+### 2.4. 聚类
+
+### 2.5. 关联规则学习
+
 这一节将教你一种用来寻找各种项目之间关系的技术，称为关联规则学习。它通常更多地用于推荐系统中。
 
-**2.6。强化学习**
-简而言之，强化学习是机器学习的一个子集，其中计算机可以做出一系列决策。这一节还将向您展示如何使用 [Python](/javarevisited/10-best-python-certification-courses-from-coursera-4576890eb6b3) 和 [R](/javarevisited/top-5-free-courses-to-learn-r-programming-for-data-science-and-statistics-in-2020-305bf1c6f24e) 来执行这一操作。
+### 2.6. 强化学习
 
-**2.7。自然语言处理是机器学习的一个子集，计算机可以处理文本，如翻译、语音识别等。本节将向您介绍 [NLP 库](/javarevisited/10-best-nlp-natural-language-processing-with-python-courses-for-beginners-bfe526c6b0b2)以及如何在 [python](/swlh/5-free-python-courses-for-beginners-to-learn-online-e1ca90687caf) 和 r。**
+简而言之，强化学习是机器学习的一个子集，其中计算机可以做出一系列决策。这一节还将向您展示如何使用`Python`和`R`来执行这一操作。
 
-**2.8。深度学习**深度学习的力量来了，你可以创建神经网络来处理和处理这些大量的数据。
+### 2.7. 自然语言处理
 
-**2.9。降维**
+自然语言处理是机器学习的一个子集，计算机可以处理文本，如翻译、语音识别等。本节将向您介绍 NLP 库以及如何在`python`和`R`中使用它们。
+
+### 2.8. 深度学习
+
+深度学习的力量来了，你可以创建神经网络来处理和处理这些大量的数据。
+
+### 2.9. 降维
+
 这项技术用于将你的数据从高维空间降维或转换到低维空间，因为变量越少，越容易绘制和比较。
 
-**2.10。模型选择&助推**
-在你学会了所有的[机器学习](/javarevisited/10-free-machine-learning-courses-for-beginners-181f83b4c816)和[深度学习](/javarevisited/10-free-deep-learning-courses-for-beginners-37b5de61f8dc)技术和算法之后，你可能会对我的问题或项目需要使用哪一个感到困惑。这一节将教你应该为你的模型或数据使用什么算法和技术。
+### 2.10. 模型选择与提升
+
+在你学会了所有的机器学习和深度学习技术和算法之后，你可能会对我的问题或项目需要使用哪一个感到困惑。这一节将教你应该为你的模型或数据使用什么算法和技术。
 
 ## 3.人物评论
 
 课程拿到了 70 多万的学生报名，很疯狂，各行业 Udemy 平台很少有课程拿到这个报名数，证明了这个节目的成功和质量。
 
-**这里是加入本课程的链接**—[—**机器学习 A-Z —数据科学中的动手 Python 和 R**—](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmachinelearning%2F)
+**这里是加入本课程的链接**—[**机器学习 A-Z —数据科学中的动手 Python 和 R**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmachinelearning%2F)
 
 [![](img/11b601997252cd866b29355fee922642.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmachinelearning%2F)
 
@@ -85,11 +97,11 @@ image_credit — Udemy
 
 这就是基里尔·叶列缅科和他的 SuperDataScience 团队在 Udemy 上对机器学习 A-Z:数据科学课程中的 Python 和 R 的实践的**综述。**
 
-这是最好的机器学习在线课程之一。它很全面(44 小时的内容)但很吸引人，很实用但很详细，最重要的是，它信息量很大。基里尔·叶列缅科的教学风格使这成为一门使用 Python 和 r 学习机器学习的完整课程
+这是最好的机器学习在线课程之一。它很全面(44 小时的内容)但很吸引人，很实用但很详细，最重要的是，它信息量很大。基里尔·叶列缅科的教学风格使这成为一门使用 Python 和 R 学习机器学习的完整课程。
 
 你将学到真正令人惊讶的东西，这将使你在这个行业中变得专业，我甚至无法提到你将在这个课程中探索的所有东西，所以这是你成为机器学习工程师的机会。
 
-如果你是认真的 [*学习 Python*](/javarevisited/10-best-python-certification-courses-from-coursera-4576890eb6b3) *和* [*机器学习*](/javarevisited/10-free-machine-learning-courses-for-beginners-181f83b4c816) *深入学习*，这里有一些更多的免费和付费资源供进一步学习
+如果你是认真的 [*学习 Python*](/javarevisited/10-best-python-certification-courses-from-coursera-4576890eb6b3) *和* [*机器学习*](/javarevisited/10-free-machine-learning-courses-for-beginners-181f83b4c816) *深入学习*，这里有一些更多的免费和付费资源供进一步学习：
 
 *   [面向数据科学和机器学习的 8 大 Python 库](https://javarevisited.blogspot.com/2018/10/top-8-python-libraries-for-data-science-machine-learning.html)
 *   [2023 年学习 Python 的 10 个理由](https://javarevisited.blogspot.com/2018/05/10-reasons-to-learn-python-programming.html)
@@ -110,8 +122,10 @@ image_credit — Udemy
 
 如果你有任何问题或反馈，请留言，如果你有我应该加入或阅读的机器学习课程或书籍，请随时与我们分享。
 
+
+
 **P. S. —** 如果你是 Coursera 课程的粉丝，想知道加入哪门 Coursera 课程来从零开始学习机器学习，那么我强烈推荐你加入华盛顿大学提供的 [**机器学习专业化**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fmachine-learning) 。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fmachine-learning>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fmachine-learning>
 
 这是一个很好的掌握机器学习基础知识的课程集。超过 410 万人加入了这个计划，详细学习机器学习概念。

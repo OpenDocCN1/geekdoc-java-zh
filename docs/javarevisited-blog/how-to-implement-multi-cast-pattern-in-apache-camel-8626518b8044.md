@@ -1,3 +1,4 @@
+
 # 如何在 Apache Camel 中实现多播模式？
 
 > 原文：<https://medium.com/javarevisited/how-to-implement-multi-cast-pattern-in-apache-camel-8626518b8044?source=collection_archive---------1----------------------->
@@ -28,10 +29,10 @@ Apache Camel 支持 Bean 绑定以及与 CDI、 [Spring](https://camel.apache.or
 
 让我们试着列出 Apache Camel 的一些用例
 
-1.  为**企业集成模式(EIP)** 提供支持
-2.  Apache Camel 是独立的，可以作为库嵌入到 Spring Boot、Quarkus、应用服务器和云中。Camel 子项目致力于简化您的工作。
-3.  **挤满了组件**:挤满了数百个组件，用于访问数据库、消息队列、API 或天底下的任何东西。帮助你融入一切。
-4.  **支持超过 50 种数据格式** :- Camel 支持大约 50 种数据格式，允许翻译多种格式的消息，并得到金融、电信、医疗保健等行业标准格式的支持。
+1. 为**企业集成模式(EIP)** 提供支持
+2. Apache Camel 是独立的，可以作为库嵌入到 Spring Boot、Quarkus、应用服务器和云中。Camel 子项目致力于简化您的工作。
+3. **挤满了组件**:挤满了数百个组件，用于访问数据库、消息队列、API 或天底下的任何东西。帮助你融入一切。
+4. **支持超过 50 种数据格式** :- Camel 支持大约 50 种数据格式，允许翻译多种格式的消息，并得到金融、电信、医疗保健等行业标准格式的支持。
 
 ## ⚡如何在 Apache Camel 中实现多播模式？
 
@@ -43,15 +44,13 @@ Apache Camel 多播模式借用了相同的术语，它同时将消息路由到�
 
 从下面的链接查看关于**多播模式的更多信息**
 
-  
-
 在直接进入实现之前，不要忘记看看如何使用 Apache Camel 编写第一条路线？从下面的链接
 
-<https://rohankadam965.medium.com/apache-camel-how-to-write-first-route-7f7767c86c2a>  
+<https://rohankadam965.medium.com/apache-camel-how-to-write-first-route-7f7767c86c2a>
 
 ## 步骤 1:如何使用 Spring Initializr 创建项目？
 
-<https://start.spring.io/>  
+<https://start.spring.io/>
 
 ## 步骤 2:项目中包括哪些依赖项？
 
@@ -97,10 +96,13 @@ public class MultiCastPatternRoute extends RouteBuilder {
 
 ## 🖐Conclusion:-
 
-在本文中，我们试图理解 Apache Camel 中的多点传送模式。多播是一种企业集成模式(EIP ),是向多个目的地传输相同消息时广泛使用的设计模式。我们也试图了解一些关于阿帕奇骆驼的事情。请分享和喜欢💕如果你觉得文章有用。在媒体上关注我，在推特上关注我，关注我，关注我，关注我，关注我，关注我，关注我，关注我
+在本文中，我们试图理解 Apache Camel 中的多点传送模式。多播是一种企业集成模式(EIP ),是向多个目的地传输相同消息时广泛使用的设计模式。我们也试图了解一些关于阿帕奇骆驼的事情。请分享和喜欢💕如果你觉得文章有用。在媒体上关注我，在推特上关注我，关注我，关注我，关注我，关注我，关注我，关注我
 
 ## ⚡Bibliography
 
-<https://camel.apache.org/>  </javarevisited/how-to-implement-exception-handling-using-apache-camel-26faad831e8f>  </javarevisited/how-to-consume-public-api-using-apache-camel-70f7382959ab>  ![](img/8952bc045d848312bfba126ae001248a.png)
+<https://camel.apache.org/>
+</javarevisited/how-to-implement-exception-handling-using-apache-camel-26faad831e8f>
+</javarevisited/how-to-consume-public-api-using-apache-camel-70f7382959ab>
+![](img/8952bc045d848312bfba126ae001248a.png)
 
 谢谢观众们— [罗汉·拉温德拉·卡达姆](https://medium.com/u/a1b33b7cda75?source=post_page-----8626518b8044--------------------------------)

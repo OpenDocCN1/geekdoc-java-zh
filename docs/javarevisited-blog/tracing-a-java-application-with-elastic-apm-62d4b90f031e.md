@@ -1,3 +1,4 @@
+
 # 用弹性 APM 跟踪 Java 应用程序
 
 > 原文：<https://medium.com/javarevisited/tracing-a-java-application-with-elastic-apm-62d4b90f031e?source=collection_archive---------0----------------------->
@@ -44,10 +45,11 @@ Java 应用程序存储学生的详细信息，如 Id、姓名、年龄。如果
 
 该应用程序有两个端点:
 
-*   /学生:获取、发布、上传、删除
-*   /school/_count:查找学生人数。
+*   `/students`:获取、发布、上传、删除
 
-注意:您可以使用 VS 代码或 [IntelliJ](/javarevisited/7-best-courses-to-learn-intellij-idea-for-beginners-and-experienced-java-programmers-2e9aa9bb0c05?source=---------16------------------) 来添加代码。无论哪种方式，项目的根目录下都有一个 *pom.xml* 。
+*   `/school/_count`:查找学生人数。
+
+注意:您可以使用 VS 代码或 [IntelliJ](/javarevisited/7-best-courses-to-learn-intellij-idea-for-beginners-and-experienced-java-programmers-2e9aa9bb0c05?source=---------16------------------) 来添加代码。无论哪种方式，项目的根目录下都有一个 `pom.xml` 。
 
 ## 创建 APM 部署:
 
@@ -59,7 +61,7 @@ Java 应用程序存储学生的详细信息，如 Id、姓名、年龄。如果
 
 [![](img/4f05c27d0855ae001d5324daa6db42c8.png)](https://www.java67.com/2020/12/5-free-cloud-computing-courses-for-beginners.html)
 
-选择任意云厂商，最好是最新版本的 Elastic Stack，点击`Create deployment`。或者，您可以选择单击`Customize`通过添加额外的硬件层(热层、冷层)来进行部署。
+选择任意云厂商，最好是最新版本的 Elastic Stack，点击 `Create deployment` 。或者，您可以选择单击 `Customize` 通过添加额外的硬件层(热层、冷层)来进行部署。
 
 创建部署后，您需要复制 APM 服务器 URL 和秘密令牌。
 
@@ -68,6 +70,7 @@ Java 应用程序存储学生的详细信息，如 Id、姓名、年龄。如果
 部署的左侧菜单
 
 *   单击左侧菜单中的 APM 链接，如上图所示。
+
 *   我们将需要 APM 服务器的 URL，秘密令牌。
 
 ![](img/8ee171d424d979d8620c1f2fd962815e.png)
@@ -75,14 +78,14 @@ Java 应用程序存储学生的详细信息，如 Id、姓名、年龄。如果
 ## 克隆存储库:
 
 ```
-git clone [https://github.com/aravindputrevu/javalin-student.git](https://github.com/aravindputrevu/javalin-student.git)
+git clone https://github.com/aravindputrevu/javalin-student.git
 ```
 
 ![](img/23f3409780bc3f045464a605c4dcf133.png)
 
-克隆完成后，请注意 resources 文件夹下的文件。添加 APM 服务器 URL，从控制台复制到`server_urls`和`secret_token.`的秘密令牌
+克隆完成后，请注意 `resources` 文件夹下的文件。添加 APM 服务器 URL，从控制台复制到 `server_urls` 和 `secret_token` 的秘密令牌。
 
-**elasticapm.properties**
+`elasticapm.properties`
 
 ```
 service_name=javalin
@@ -115,30 +118,33 @@ secret_token=
 </dependencies>
 ```
 
-执行`mvn clean`、`mvn install`在`target`文件夹下生成`jar`。
+执行 `mvn clean` 、 `mvn install` 在 `target` 文件夹下生成 `jar` 。
 
-**注意:**你需要在你的机器上安装`[maven](/javarevisited/6-best-maven-courses-for-beginners-in-2020-23ea3cba89)` </javarevisited/6-best-maven-courses-for-beginners-in-2020-23ea3cba89>(而 java dev 的笔记本电脑上没有`ant``maven``[gradle](/javarevisited/5-best-gradle-courses-and-books-to-learn-in-2021-93f49ce8ff8e)`)！😉)
+**注意:**你需要在你的机器上安装 `[maven](/javarevisited/6-best-maven-courses-for-beginners-in-2020-23ea3cba89)` </javarevisited/6-best-maven-courses-for-beginners-in-2020-23ea3cba89>(而 java dev 的笔记本电脑上没有 `ant` `maven` `[gradle](/javarevisited/5-best-gradle-courses-and-books-to-learn-in-2021-93f49ce8ff8e)` )！😉)
 
 启动应用程序:`java -jar target/javalin-student-1.0-snapshot.jar`
 
-您可以使用 REST 客户端如`[Postman](/javarevisited/7-best-courses-to-learn-postman-tool-for-web-service-and-api-testing-f225c138fa5a?source=---------13------------------)` </javarevisited/7-best-courses-to-learn-postman-tool-for-web-service-and-api-testing-f225c138fa5a?source=---------13------------------>或命令行工具如`[cURL](https://javarevisited.blogspot.com/2017/03/10-examples-of-curl-command-in-unix-and-Linux.html)` <https://javarevisited.blogspot.com/2017/03/10-examples-of-curl-command-in-unix-and-Linux.html>来检查应用程序端点。
+您可以使用 REST 客户端如 `[Postman](/javarevisited/7-best-courses-to-learn-postman-tool-for-web-service-and-api-testing-f225c138fa5a?source=---------13------------------)` </javarevisited/7-best-courses-to-learn-postman-tool-for-web-service-and-api-testing-f225c138fa5a?source=---------13------------------>或命令行工具如 `[cURL](https://javarevisited.blogspot.com/2017/03/10-examples-of-curl-command-in-unix-and-Linux.html)` <https://javarevisited.blogspot.com/2017/03/10-examples-of-curl-command-in-unix-and-Linux.html>来检查应用程序端点。
 
 **创建:**
 
 ```
-$ curl -X POST -H "Content-Type: application/json" [http://localhost:8080/students](http://localhost:8080/students) -d '{ "id": "003","name": "Javalin","age": 15}'$ curl -X POST -H "Content-Type: application/json" [http://localhost:8080/students](http://localhost:8080/students) -d '{ "id": "005","name": "Micronaut","age": 12}'$ curl -X POST -H "Content-Type: application/json" [http://localhost:8080/students](http://localhost:8080/students) -d '{ "id": "001","name": "Quarkus","age": 16}'
+$ curl -X POST -H "Content-Type: application/json" http://localhost:8080/students -d '{ "id": "003","name": "Javalin","age": 15}'
+$ curl -X POST -H "Content-Type: application/json" http://localhost:8080/students -d '{ "id": "005","name": "Micronaut","age": 12}'
+$ curl -X POST -H "Content-Type: application/json" http://localhost:8080/students -d '{ "id": "001","name": "Quarkus","age": 16}'
 ```
 
 **改为:**
 
 ```
-$ curl -X GET [http://localhost:8080/students](http://localhost:8080/students)$ curl -X GET http://localhost:8080/students/003
+$ curl -X GET http://localhost:8080/students
+$ curl -X GET http://localhost:8080/students/003
 ```
 
 **更新:**
 
 ```
-$ curl -X PATCH -H "Content-Type: application/json" [http://localhost:8080/students](http://localhost:8080/students) -d '{ "id": "001","name": "Quarkus","age": 32}' #updating age
+$ curl -X PATCH -H "Content-Type: application/json" http://localhost:8080/students -d '{ "id": "001","name": "Quarkus","age": 32}' #updating age
 ```
 
 **删除:**
@@ -159,13 +165,15 @@ $ curl -X GET http://locahost:8080/school/_count
 
 有三种方法可以设置代理:
 
-1.  使用`-javaagent`标志。
-2.  使用`apm-agent-attach-standalone.jar` — Beta
+1.  使用 `-javaagent` 标志。
+
+2.  使用 `apm-agent-attach-standalone.jar` — Beta
+
 3.  使用编程连接。—贝塔
 
-我们将使用选项 1，`javaagent`方法。
+我们将使用选项 1，`javaagent` 方法。
 
-您需要启动带有`javaagent`标志的应用程序，如下例所示。
+您需要启动带有 `javaagent` 标志的应用程序，如下例所示。
 
 ```
 $ java -javaagent:elastic-apm-agent-1.22.0.jar -jar target/javalin-student-1.0-SNAPSHOT.jar
@@ -179,11 +187,11 @@ $ java -javaagent:elastic-apm-agent-1.22.0.jar -jar target/javalin-student-1.0-S
 
 ![](img/454cc41d00758a8caeac2aebed859507.png)
 
-您可以使用相关性观察特定字段的较慢性能和错误率。它使用弹性搜索的`significant terms`集合来提供这些信息。
+您可以使用相关性观察特定字段的较慢性能和错误率。它使用弹性搜索的 `significant terms` 集合来提供这些信息。
 
 ![](img/6002e88f6d2ff0fd954a3aaab3561f88.png)
 
-不是这个。您可以创建特定的阈值、延迟警报、从错误面板中查找错误、使用`@CaptureSpan`注释为特定方法创建跨度。
+不是这个。您可以创建特定的阈值、延迟警报、从错误面板中查找错误、使用 `@CaptureSpan` 注释为特定方法创建跨度。
 
 除此之外，您可以启用日志关联来查找属于特定跟踪的日志，反之亦然。Elastic 提供了 [ECS 日志库](https://www.elastic.co/guide/en/ecs-logging/java/current/setup.html)来从您的应用程序进行结构化日志记录，并将其直接导入到 Elasticsearch。
 
@@ -194,8 +202,11 @@ $ java -javaagent:elastic-apm-agent-1.22.0.jar -jar target/javalin-student-1.0-S
 ## 资源:
 
 *   [APM 快速入门培训](https://www.elastic.co/training/apm-quick-start)
+
 *   [弹性公共 APM 页面](https://github.com/elastic/apm)
+
 *   [APM 服务器源代码](https://github.com/elastic/apm-server)
+
 *   [Java 代理源代码](https://github.com/elastic/apm-agent-java)
 
 ## 关于 Elasticsearch 的更多问题？

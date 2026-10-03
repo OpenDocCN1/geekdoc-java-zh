@@ -1,3 +1,4 @@
+
 # 简单的 XML API
 
 > 原文：[`docs.oracle.com/javase/tutorial/jaxp/intro/simple.html`](https://docs.oracle.com/javase/tutorial/jaxp/intro/simple.html)
@@ -48,7 +49,7 @@ SAX 解析 API 的基本概述如图 1-1 所示。要启动该过程，需要使
 
 ## SAX 包
 
-SAX 解析器在下表中列出的包中定义。 
+SAX 解析器在下表中列出的包中定义。
 
 表 SAX 包
 

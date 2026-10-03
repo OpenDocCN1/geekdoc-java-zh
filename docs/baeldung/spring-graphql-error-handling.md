@@ -1,3 +1,4 @@
+
 # 用 Spring Boot 处理 GraphQL 中的错误
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-graphql-error-handling>
@@ -12,11 +13,11 @@
 
 **响应图的关键组成部分是`errors`、`data`和`extensions`。**
 
-响应中的`errors `部分描述了请求操作期间的任何故障。如果没有错误发生，`errors `组件不能出现在响应中。在下一节中，我们将研究规范中描述的不同种类的错误。
+响应中的`errors`部分描述了请求操作期间的任何故障。如果没有错误发生，`errors`组件不能出现在响应中。在下一节中，我们将研究规范中描述的不同种类的错误。
 
-`data `部分描述了成功执行所请求操作的结果。如果操作是查询，则该组件是查询根操作类型的对象。另一方面，如果操作是一个变异，那么这个组件就是变异根操作类型的一个对象。
+`data`部分描述了成功执行所请求操作的结果。如果操作是查询，则该组件是查询根操作类型的对象。另一方面，如果操作是一个变异，那么这个组件就是变异根操作类型的一个对象。
 
-如果请求的操作甚至在执行之前就由于信息缺失、验证错误或语法错误而失败，那么`data `组件就不能出现在响应中。如果在操作执行过程中操作失败，结果不成功，那么`data`组件必须是`null`。
+如果请求的操作甚至在执行之前就由于信息缺失、验证错误或语法错误而失败，那么`data`组件就不能出现在响应中。如果在操作执行过程中操作失败，结果不成功，那么`data`组件必须是`null`。
 
 响应映射可能包含一个名为`extensions`的附加组件，它是一个映射对象。该组件便于实现者在响应中提供他们认为合适的其他定制内容。因此，对其内容格式没有额外的限制。
 
@@ -66,7 +67,7 @@ mutation {
 
 ## 3.符合 GraphQL 规范的错误响应组件
 
-响应中的`errors` 部分是一个非空的错误列表，每个错误都是一个映射。
+响应中的`errors`部分是一个非空的错误列表，每个错误都是一个映射。
 
 ### 3.1.请求错误
 
@@ -115,7 +116,7 @@ query {
 
 **字段错误，顾名思义，可能是由于未能将值强制转换为预期类型，或者是在特定字段的值解析过程中出现内部错误。**表示在执行所请求的操作过程中出现现场错误。
 
-如果出现字段错误，请求操作的**继续执行并返回部分结果**，这意味着响应的`data `部分必须与`errors `部分中的所有字段错误一起出现。
+如果出现字段错误，请求操作的**继续执行并返回部分结果**，这意味着响应的`data`部分必须与`errors`部分中的所有字段错误一起出现。
 
 让我们看另一个例子:
 
@@ -176,7 +177,7 @@ query {
 
 正如我们前面看到的，响应中的`errors`是一个或多个错误的集合。**而且，每个错误都必须包含一个描述失败原因的关键字`message`，这样客户端开发人员就可以做出必要的更正来避免错误。**
 
-**每个错误还可能包含一个名为`locations`** 的键，它是一个位置列表，指向所请求的 GraphQL 文档中与错误相关的一行。每个位置都是一个带有键的映射:分别是行和列，提供了相关元素的行号和开始列号。
+**每个错误还可能包含一个名为`locations`**的键，它是一个位置列表，指向所请求的 GraphQL 文档中与错误相关的一行。每个位置都是一个带有键的映射:分别是行和列，提供了相关元素的行号和开始列号。
 
 **可能是错误一部分的另一个键称为`path`。**它提供了从根元素到响应中有错误的特定元素的值列表。如果字段值是列表，则`path`值可以是表示错误元素的字段名称或索引的字符串。如果错误与具有别名的字段有关，那么`path`中的值应该是别名。
 
@@ -190,13 +191,13 @@ query {
 
 类似地，如果列表字段包含不可空的类型，并且一个或多个列表元素返回`null`，则整个列表解析为`null`。此外，如果包含列表字段的父字段不可为空，则错误处理会一直传播，直到到达可为空的父字段或根元素。
 
-出于任何原因，**如果在解析过程中同一字段出现多个错误，那么对于该字段，我们必须在`errors`** 中只添加一个字段错误。
+出于任何原因，**如果在解析过程中同一字段出现多个错误，那么对于该字段，我们必须在`errors`**中只添加一个字段错误。
 
 ## 4.Spring Boot GraphQL 图书馆
 
-我们的 Spring Boot 应用程序示例使用了`[graphql-spring-boot-starter](https://web.archive.org/web/20220602150241/https://search.maven.org/search?q=g:com.graphql-java%20AND%20a:graphql-spring-boot-starter) `模块，它引入了`graphql-java-servlet`和`graphql-java`。
+我们的 Spring Boot 应用程序示例使用了`graphql-spring-boot-starter`模块，它引入了`graphql-java-servlet`和`graphql-java`。
 
-我们还使用了 [`graphql-java-tools`](https://web.archive.org/web/20220602150241/https://search.maven.org/search?q=g:com.graphql-java%20AND%20a:graphql-java-tools) 模块，这有助于将 GraphQL 模式映射到现有的 Java 对象，对于单元测试，我们使用了 [`graphql-spring-boot-starter-test`](https://web.archive.org/web/20220602150241/https://search.maven.org/search?q=g:com.graphql-java%20AND%20a:graphql-spring-boot-starter-test) :
+我们还使用了 `graphql-java-tools` 模块，这有助于将 GraphQL 模式映射到现有的 Java 对象，对于单元测试，我们使用了`graphql-spring-boot-starter-test` :
 
 ```java
 <dependency>
@@ -229,9 +230,9 @@ query {
 
 在我们的 Spring Boot 应用程序示例中，我们将根据位置或 VIN(车辆识别号)变异或查询车辆。通过这个例子，我们将看到实现错误处理的不同方法。
 
-`graphql-java-servlet `模块提供了一个名为`GraphQLErrorHandler. `的接口，我们可以提供它的实现。
+`graphql-java-servlet`模块提供了一个名为`GraphQLErrorHandler`的接口。我们可以提供它的实现。
 
-**在下面的小节中，我们将看到`graphql-java-servlet`模块如何使用来自`graphql-java `模块的组件来处理异常或错误。**
+**在下面的小节中，我们将看到`graphql-java-servlet`模块如何使用来自`graphql-java`模块的组件来处理异常或错误。**
 
 ### 5.1.带有标准异常的 GraphQL 响应
 
@@ -262,15 +263,15 @@ public class InvalidInputException extends RuntimeException {
 
 在上面的错误响应中，我们可以看到它不包含错误的任何细节。
 
-默认情况下，**任何自定义异常都由`SimpleDataFetcherExceptionHandler `类**处理[。它将原始异常连同源位置和执行路径(如果存在的话)包装到另一个名为`ExceptionWhileDataFetching.` 的异常中，然后将错误添加到`errors`集合中。反过来，`ExceptionWhileDataFetching`实现了`GraphQLError `接口。](https://web.archive.org/web/20220602150241/https://www.graphql-java.com/documentation/execution#exceptions-while-fetching-data)
+默认情况下，**任何自定义异常都由`SimpleDataFetcherExceptionHandler`类**处理。它将原始异常连同源位置和执行路径(如果存在的话)包装到另一个名为`ExceptionWhileDataFetching`的异常中，然后将错误添加到`errors`集合中。反过来，`ExceptionWhileDataFetching`实现了`GraphQLError`接口。
 
-在`SimpleDataFetcherExceptionHandler `处理程序之后，**另一个名为`DefaultGraphQLErrorHandler`的处理程序处理错误集合**。它将所有类型为`GraphQLError`的异常隔离为客户端错误。但是除此之外，它还为所有其他非客户端错误创建一个`GenericGraphQLError`异常(如果存在的话)。
+在`SimpleDataFetcherExceptionHandler`处理程序之后，**另一个名为`DefaultGraphQLErrorHandler`的处理程序处理错误集合**。它将所有类型为`GraphQLError`的异常隔离为客户端错误。但是除此之外，它还为所有其他非客户端错误创建一个`GenericGraphQLError`异常(如果存在的话)。
 
-在上面的例子中，`InvalidInputException`不是客户端错误，因为它只扩展了`RuntimeException`而没有实现`GraphQLError`。因此，`DefaultGraphQLErrorHandler `处理程序创建了一个`GenericGraphQLError`异常，代表带有内部服务器错误消息的`InvalidInputException`。
+在上面的例子中，`InvalidInputException`不是客户端错误，因为它只扩展了`RuntimeException`而没有实现`GraphQLError`。因此，`DefaultGraphQLErrorHandler`处理程序创建了一个`GenericGraphQLError`异常，代表带有内部服务器错误消息的`InvalidInputException`。
 
 ### 5.2.类型`GraphQLError`异常的 GraphQL 响应
 
-现在让我们看看如果我们实现我们的定制异常，响应会是什么样子，因为`GraphQLError. ``GraphQLError`是一个接口，它允许我们通过实现`getExtensions()`方法来提供关于错误的更多信息。
+现在让我们看看如果我们实现我们的定制异常，响应会是什么样子，因为`GraphQLError`。`GraphQLError`是一个接口，它允许我们通过实现`getExtensions()`方法来提供关于错误的更多信息。
 
 让我们实现我们的自定义异常:
 
@@ -311,6 +312,8 @@ public class AbstractGraphQLException extends RuntimeException implements GraphQ
 }
 ```
 
+
+
 ```java
 public class VehicleAlreadyPresentException extends AbstractGraphQLException {
 
@@ -326,7 +329,7 @@ public class VehicleAlreadyPresentException extends AbstractGraphQLException {
 
 正如我们在上面的代码片段中看到的，我们已经为`getLocations()`和`getErrorType()`方法返回了`null`，因为默认包装异常`ExceptionWhileDataFetching`只调用了我们自定义包装异常的`getMesssage()`和`getExtensions()`方法。
 
-正如我们在前面章节中看到的，`SimpleDataFetcherExceptionHandler`类处理数据获取错误。**让我们看看`graphql-java`库如何帮助我们设置`path`、`locations`和错误`type`。**
+正如我们在前面章节中看到的，`SimpleDataFetcherExceptionHandler`类处理数据获取错误。让我们看看`graphql-java`库如何帮助我们设置`path`、`locations`和错误`type`。
 
 下面的代码片段显示了 GraphQL 引擎执行使用`DataFetcherExceptionHandlerParameters`类来设置错误字段的位置和路径。这些值作为构造函数参数传递给`ExceptionWhileDataFetching`:
 
@@ -344,7 +347,7 @@ public void accept(DataFetcherExceptionHandlerParameters handlerParameters) {
 ...
 ```
 
-让我们来看一个来自`ExceptionWhileDataFetching` 类的片段。在这里，我们可以看到错误类型是`DataFetchingException`:
+让我们来看一个来自`ExceptionWhileDataFetching`类的片段。在这里，我们可以看到错误类型是`DataFetchingException`:
 
 ```java
 ...
@@ -365,10 +368,10 @@ public ErrorType getErrorType() {
 ...
 ```
 
-## 6.结论
+## 6. 结论
 
 在本教程中，我们学习了不同类型的 GraphQL 错误。我们还研究了如何根据规范格式化 GraphQL 错误。后来，我们在 Spring Boot 应用程序中实现了错误处理。
 
-请注意， [Spring](https://web.archive.org/web/20220602150241/https://docs.spring.io/spring-graphql/docs/1.0.0-M5/reference/html/) 团队与 [GraphQL Java](https://web.archive.org/web/20220602150241/https://www.graphql-java.com/) 团队合作，正在用 GraphQL 为 Spring Boot 开发一个新的库`spring-boot-starter-graphql`。它仍然处于里程碑式的发布阶段，还没有正式发布。
+请注意，[Spring](https://web.archive.org/web/20220602150241/https://docs.spring.io/spring-graphql/docs/1.0.0-M5/reference/html/)团队与[GraphQL Java](https://web.archive.org/web/20220602150241/https://www.graphql-java.com/)团队合作，正在用 GraphQL 为 Spring Boot 开发一个新的库`spring-boot-starter-graphql`。它仍然处于里程碑式的发布阶段，还没有正式发布。
 
 和往常一样，完整的源代码可以在 GitHub 上找到[。](https://web.archive.org/web/20220602150241/https://github.com/eugenp/tutorials/tree/master/graphql/graphql-error-handling)

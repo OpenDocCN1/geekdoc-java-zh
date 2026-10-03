@@ -1,19 +1,7 @@
-# 硬核学习 Java 面对象编程
 
+# 硬核学习 Java 面向对象编程
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+## 致谢
 
 感谢上帝，他赐予我创造的能力。
 
@@ -23,7 +11,7 @@
 
 感谢耶稣，他每天教我恩典与谦卑。愿我每一天都更加依靠他。
 
-### 前言：在做中学习
+## 前言：在做中学习
 
 二十多年来，我一直在教初学者如何编程。超过 2000 名学生上过我的课程，离开时已经学会了如何编写运行良好的简单程序。有些人只学会了一点点，而另一些人在短短几年内获得了惊人的技能。
 
@@ -37,7 +25,7 @@
 
 “最好的学习方式就是实践。” – P.R. Halmos
 
-### 引言：面向对象的 Java
+## 引言：面向对象的 Java
 
 Java 是一种面向对象的编程语言。我的第一本书涵盖了 Java 语言的所有基础语法，但避开了所有面向对象的部分。这本书涵盖了其余部分。
 
@@ -45,123 +33,26 @@ Java 是一种面向对象的编程语言。我的第一本书涵盖了 Java 语
 
 如果你在尝试跟随练习 1 中的代码时迷路了，那么你应该回去先读一本更简单的书，然后再尝试这一本。
 
-### 你将学到
+## 你将学到
 
-*   如何安装 Java 编译器和文本编辑器
-*   如何与 Java 对象一起工作并创建你自己的类
-*   字段和实例变量
-*   方法和参数
-*   构造函数
-*   引用变量 vs 基本类型
-*   泛型和强制转换
-*   继承
-*   接口
-*   抽象类和方法
-*   包
-*   如何创建 JAR 文件
-*   JavaFX 中的图形用户界面
-*   GUI 中的鼠标和键盘输入
-*   测试与效率
-*   算法复杂度和大 O 符号
-*   ArrayList
-*   排序
-
-以及更多！
-
-在最后一章中，你将编写一个流行的跳棋游戏的图形版本，并能够将其打包发送给他人。
-
-书中的所有示例都可以在 Java 1.8 或更高版本中运行。如果你省略最后几个关于 JavaFX 的章节，大部分代码可以在 Java 1.6 或更高版本中运行。
-
-### 你将不会学到
-
-*   如何在终端中编译和运行 Java 程序
-*   Java 的基础知识
-*   如何制作 Android 应用
-*   不同“版本”的 Java 细节
-*   Javascript
-
-### 创建、编译与运行
-
-如果你以前写过一些 Java 但但一直使用 IDE，那么你应该学习如何在简单的文本编辑器中编写代码，以及如何从终端编译你的代码。我的第一书中有一专门关于此主题的[整个章节](https://learnjavathehardway.org/book/ex01.html)，可以免费在线阅读，如果你需要，请先完成该部分。
-
-### 无基础
-
-如果你还不知道如何在 Java 中创建变量以及编写 if 语句、循环和函数，那么你应该在尝试阅读这本书之前先学习这些内容。
-
-### 无 Android
-
-Android 应用非常复杂，如果你是初学者，一个应用远超你的能力范围。
-
-### 无特定版本
-
-除了最后几章，我将不会涵盖任何最近添加到 Java 中的新特性。如果你在意这些差异，那么这本书不适合你。
-
-### 无 Javascript
-
-“Javascript”是一门编程语言的名字，而“Java”也是一种编程语言的名字。这两种语言之间毫无关系。
-
-[/[/content]
-
-
-
-
-
-
-
-## 目录
-## 指南
-1.  开始阅读
-## 致谢
-感谢上帝，他赐予我创造的能力。
-
-感谢 Deanna，在我都不确定是否能完成时，她相信我能做到。
-
-感谢数百位购买我第一本书的人；没有你们，这第二本书将不存在！
-
-感谢耶稣，他每天教我恩典与谦卑。愿我每一天都更加依靠他。
-
-### 前言：在做中学习
-
-二十多年来，我一直在教初学者如何编程。超过 2000 名学生上过我的课程，离开时已经学会了如何编写运行良好的简单程序。有些人只学会了一点点，而另一些人在短短几年内获得了惊人的技能。
-
-我有许多出色的学生，但我的大多数学生都是没有经验、对编程没有特殊天赋的普通孩子。这本书是像他们这样的普通人写的。
-
-大多数编程书籍和在线教程是由那些具有极高天赋但对真实初学者缺乏经验的人编写的。他们的书往往涵盖了太多内容且速度过快，并且高估了真正初学者的理解能力。
-
-如果你有丰富的经验或极高的天赋，你可以从几乎任何来源学习编程。我有时会看到这样的评论：“我教我 9 岁的女儿编程，她在六周后就做出了她的第一个 Android 应用！”如果你是天才儿童，那么这本书不是为你写的。
-
-我也开始相信，编写大量的小程序是不可替代的。所以这就是你在这本书中要做的。你将输入小型程序并运行它们。
-
-“最好的学习方式就是实践。” – P.R. Halmos
-
-### 引言：面向对象的 Java
-
-Java 是一种面向对象的编程语言。我的第一本书涵盖了 Java 语言的所有基础语法，但避开了所有面向对象的部分。这本书涵盖了其余部分。
-
-如果你以前从未用任何语言编写过程序，这本书可能不适合你。在读完这本书之前，你需要对类似的语言具有一定的经验。如果你已经了解 Java 或其他语言（如 C、C++、C# 或 Javascript）的基础知识，那么你就没问题。如果你只熟悉 Python 或 Ruby 这样完全不同的语言，那么你需要追赶一下。
-
-如果你在尝试跟随练习 1 中的代码时迷路了，那么你应该回去先读一本更简单的书，然后再尝试这一本。
-
-### 你将学到
-
-*   如何安装 Java 编译器和文本编辑器
-*   如何与 Java 对象一起工作并创建你自己的类
-*   字段和实例变量
-*   方法和参数
-*   构造函数
-*   引用变量 vs 基本类型
-*   泛型和强制转换
-*   继承
-*   接口
-*   抽象类和方法
-*   包
-*   如何创建 JAR 文件
-*   JavaFX 中的图形用户界面
-*   GUI 中的鼠标和键盘输入
-*   测试与效率
-*   算法复杂度和大 O 符号
-*   ArrayList
-*   排序
+* 如何安装 Java 编译器和文本编辑器
+* 如何与 Java 对象一起工作并创建你自己的类
+* 字段和实例变量
+* 方法和参数
+* 构造函数
+* 引用变量 vs 基本类型
+* 泛型和强制转换
+* 继承
+* 接口
+* 抽象类和方法
+* 包
+* 如何创建 JAR 文件
+* JavaFX 中的图形用户界面
+* GUI 中的鼠标和键盘输入
+* 测试与效率
+* 算法复杂度和大 O 符号
+* ArrayList
+* 排序
 
 以及更多！
 
@@ -169,35 +60,35 @@ Java 是一种面向对象的编程语言。我的第一本书涵盖了 Java 语
 
 书中的所有示例都可以在 Java 1.8 或更高版本中运行。如果你省略最后几个关于 JavaFX 的章节，大部分代码可以在 Java 1.6 或更高版本中运行。
 
-### 你将不会学到
+## 你将不会学到
 
-*   如何在终端中编译和运行 Java 程序
-*   Java 的基础知识
-*   如何制作 Android 应用
-*   不同“版本”的 Java 细节
-*   Javascript
+* 如何在终端中编译和运行 Java 程序
+* Java 的基础知识
+* 如何制作 Android 应用
+* 不同“版本”的 Java 细节
+* Javascript
 
-### 创建、编译与运行
+## 创建、编译与运行
 
-如果你以前写过一些 Java 但但一直使用 IDE，那么你应该学习如何在简单的文本编辑器中编写代码，以及如何从终端编译你的代码。我的第一书中有一专门关于此主题的[整个章节](https://learnjavathehardway.org/book/ex01.html)，可以免费在线阅读，如果你需要，请先完成该部分。
+如果你以前写过一些 Java 但一直使用 IDE，那么你应该学习如何在简单的文本编辑器中编写代码，以及如何从终端编译你的代码。我的第一本书中有一专门关于此主题的[整个章节](https://learnjavathehardway.org/book/ex01.html)，可以免费在线阅读，如果你需要，请先完成该部分。
 
-### 无基础
+## 无基础
 
 如果你还不知道如何在 Java 中创建变量以及编写 if 语句、循环和函数，那么你应该在尝试阅读这本书之前先学习这些内容。
 
-### 无 Android
+## 无 Android
 
 Android 应用非常复杂，如果你是初学者，一个应用远超你的能力范围。
 
-### 无特定版本
+## 无特定版本
 
 除了最后几章，我将不会涵盖任何最近添加到 Java 中的新特性。如果你在意这些差异，那么这本书不适合你。
 
-### 无 Javascript
+## 无 Javascript
 
 “Javascript”是一门编程语言的名字，而“Java”也是一种编程语言的名字。这两种语言之间毫无关系。
 
-### 许可证
+## 许可证
 
 本书的某些章节可免费在线阅读，但未经许可不得为他人制作。
 
@@ -213,19 +104,15 @@ Android 应用非常复杂，如果你是初学者，一个应用远超你的能
 
 无论你使用什么类型的系统，你都要做三件事：
 
-1.  安装一个用于编写代码良好的文本编辑器。
-2.  弄清楚如何打开终端窗口以便输入命令。
-3.  安装 JDK。
+1. 安装一个用于编写代码良好的文本编辑器。
+2. 弄清楚如何打开终端窗口以便输入命令。
+3. 安装 JDK。
 
-    而且在 Windows 上，你还需要做第四件事：
+而且在 Windows 上，你还需要做第四件事：
 
-4.  将 JDK 添加到系统 PATH。
+4. 将 JDK 添加到系统 PATH。
 
 （JDK 命令在 Apple 电脑和 Linux 计算机会自动添加到 PATH。）
-
-
-
-
 
 我在下方提供了针对 Windows 的说明，然后是 Mac OS，最后是 Linux。请直接跳转到你偏好的操作系统部分。
 
@@ -235,7 +122,7 @@ Android 应用非常复杂，如果你是初学者，一个应用远超你的能
 
 1. 使用网络浏览器访问 [notepad-plus-plus.org](http://notepad-plus-plus.org/)，下载最新版本的 `Notepad++` 文本编辑器并安装。执行此操作不需要管理员权限。
 
-2. 一旦安装了 `Notepad++`，我总是会运行它并关闭“自动完成（Auto-Completion）”，因为它对初学者没有好处。（对我个人来说也很烦人）。打开“设置（Settings）”菜单并选择“首选项（Preferences）”。然后点击左侧列表中间部分的“自动完成（Auto-Completion）”。最后取消勾选“每次输入时启用自动完成（Enable auto-completion on each input）”旁边的复框，然后点击“关闭（Close）”按钮。
+2. 一旦安装了 `Notepad++`，我总是会运行它并关闭“自动完成（Auto-Completion）”，因为它对初学者没有好处。（对我个人来说也很烦人）。打开“设置（Settings）”菜单并选择“首选项（Preferences）”。然后点击左侧列表中间部分的“自动完成（Auto-Completion）”。最后取消勾选“每次输入时启用自动完成（Enable auto-completion on each input）”旁边的复选框，然后点击“关闭（Close）”按钮。
 
 3. 最后在 `Notepad++` 运行时，右键点击 Windows 任务栏上的 `Notepad++` 按钮，点击“将此程序固定到任务栏（Pin this program to taskbar）”。这将方便以后在编程时启动 `Notepad++`。
 
@@ -249,9 +136,10 @@ Android 应用非常复杂，如果你是初学者，一个应用远超你的能
 
 4. 在 `Powershell/Terminal` 窗口中，输入
 
-``````
+```
 javac
-```````
+```
+
 你可能会看到一行红色的错误信息，内容类似于“The term ‘javac’ is not recognized as the name of a cmdlet....”
 
 这意味着 JDK 没有安装并添加到 `PATH` 中，这正是我们目前预期的结果。
@@ -268,7 +156,7 @@ javac
 
    你*不需要*下载“Demos and Samples（演示与示例）”。
 
-4. 下载完成后，运行 `jdk-8u102-windows-i586.exe` 进行安装。在你第一次点击“Next >）”后，你会看到一个显示 `Install to: C:\Program Files (x86)\Java\jdk1.8.0_102\` 或类似内容的屏幕。请记下这个位置；你很快就会需要它。
+4. 下载完成后，运行 `jdk-8u102-windows-i586.exe` 进行安装。在你第一次点击“Next >”后，你会看到一个显示 `Install to: C:\Program Files (x86)\Java\jdk1.8.0_102\` 或类似内容的屏幕。请记下这个位置；你很快就会需要它。
 
 5. 只需一直点击“Next（下一步）”直到全部完成。除非你*真的*知道自己在做什么，否则最好的办法可能就是让安装程序按它的意图运行。
 
@@ -280,9 +168,9 @@ javac
 
 3. 一旦 `JDK` 安装完成且你知道了该位置，打开你的终端窗口（PowerShell）。在 `PowerShell` 中，输入以下内容：
 
-``````
+```
 <<(code/set-environ-var-8u102.txt)
-```````
+```
 
 不过请将其写在同一行。即：
 
@@ -310,7 +198,7 @@ javac
 
 你应该能看到类似 `javac 1.8.0_102` 的响应。
 
-1. 在提示符后输入 `java -version`。
+3. 在提示符后输入 `java -version`。
 
 你应该能看到类似 `java version "1.8.0_102"` 的响应。
 
@@ -324,63 +212,55 @@ javac
 
 你应该创建一个新文件夹来存放你的代码。完成这本书后，你将会有至少 100 个新文件。
 
-
-
-
-
 > 如果你想操作得高级一点，就不需要使用鼠标切换回终端；你只需要在 Windows 或 Linux 上按下 `Alt + Tab`，或者在 Mac 上按下 `Command + Tab` 即可切换应用程序。
-
-> 
-
+>
 > 按住 `Alt` 键不要松开。然后按下并释放一次 `Tab` 键。在继续按住 `Alt` 键的同时，多次按下 `Tab` 直到选中你的终端窗口，然后松开 `Alt` 键完成切换。
-
-> 
-
+>
 > 如果你只是快速按下 `Alt+Tab` 并立即松开两个键，它通常会带你回到上一个应用程序。我*经常*这样做。当我在文本编辑器中时，按下 `Alt+Tab` 返回终端，当我在终端完成工作后，我再次按下 `Alt+Tab` 回到文本编辑器。一旦习惯了，这非常快。
 
-你应该直接跳到本章的底部阅读“给初者的警告”，否则，你已经完成了设置，并准备好在 Windows 上开始练习 01 了！干得好。
+你应该直接跳到本章的底部阅读“给初学者的警告”，否则，你已经完成了设置，并准备好在 Windows 上开始练习 01 了！干得好。
 
-| � |
+## Mac OS X
 
-### Mac OS X
+### 安装一个好用的文本编辑器 (TextWrangler)
 
-#### 安装一个好用的文本编辑器 (TextWrangler)
+1. 使用浏览器访问 [barebones.com](http://www.barebones.com/products/textwrangler/)。下载 TextWrangler 版本 `5.0` 或更高版本的磁盘映像。
 
-1.  使用浏览器访问 [barebones.com](http://www.barebones.com/products/textwrangler/)。下载 TextWrangler 版本 `5.0` 或更高版本的磁盘映像。
+2. 运行磁盘映像，然后打开“应用程序”（Applications）文件夹，并按照指示将图标拖到其中。你可能需要管理员用户名和密码进行验证。
 
-2.  运行磁盘映像，然后打开“应用程序”（Applications）文件夹，并按照指示将图标拖到其中。你可能需要管理员用户名和密码进行验证。
+3. 安装完成后，启动 TextWrangler，如果它没有自动出现在 Dock 栏中，请手动将它添加。
 
-3.  安装完成后，启动 TextWrangler，如果它没有自动出现在 Dock 栏中，请手动将它添加。
+### 打开终端窗口 (Terminal)
 
-#### 打开终端窗口 (Terminal)
+1. 最小化 TextWrangler 并切换到 Finder。使用搜索（Spotlight）开始搜索“terminal”。这会打开一个小的 bash 终端。
 
-1.  最小化 TextWrangler 并切换到 Finder。使用搜索（Spotlight）开始搜索“terminal”。这会打开一个小的 bash 终端。
+2. 同样将你的 `Terminal` 放入 Dock 栏中。
 
-2.  同样将你的 `Terminal` 放入 Dock 栏中。
+3. 在 `Terminal` 窗口中，输入
 
-3.  在 `Terminal` 窗口中，输入
+
 
 ```bash
 javac
 ```
 
-你可能会收到一个错误提示，告诉 `javac` 是一个未知命令。（欢迎通过邮件给我发送错误信息的截图，我可以更新这一段内容。）
+你可能会收到一个错误提示，告诉`javac`是一个未知命令。（欢迎通过邮件给我发送错误信息的截图，我可以更新这一段内容。）
 
 这仅仅意味着尚未安装 JDK，这正是我们预期的结果。
 
 ## 安装 Java 开发工具包 (JDK)
 
-1.  使用浏览器访问 [Oracle 的 Java SE 下载页面](http://www.oracle.com/technetwork/java/javase/downloads/index.html)。
+1. 使用浏览器访问 [Oracle 的 Java SE 下载页面](http://www.oracle.com/technetwork/java/javase/downloads/index.html)。
 
-2.  点击页面左侧上方巨大的“Java”按钮来下载 Java Platform (JDK) `8u102`。点击这将带你进入标题为“Java SE Development Kit 8 Downloads”的另一个页面。
+2. 点击页面左侧上方巨大的“Java”按钮来下载 Java Platform (JDK) `8u102`。点击这将带你进入标题为“Java SE Development Kit 8 Downloads”的另一个页面。
 
-3.  在该页面，你必须接受许可协议，然后选择列表中间的“Mac OS X x64”版本。下载版本 `8u102` 或更高版本的文件。
+3. 在该页面，你必须接受许可协议，然后选择列表中间的“Mac OS X x64”版本。下载版本`8u102`或更高版本的文件。
 
-    你*不需要*下载“Demos and Samples”（演示与示例）。
+   你*不需要*下载“Demos and Samples”（演示与示例）。
 
-4.  下载完成后，运行 `jdk-8u102-macosx-x64.dmg` 进行安装。
+4. 下载完成后，运行`jdk-8u102-macosx-x64.dmg`进行安装。
 
-5.  一直点击“Next”（下一步）直到完成。除非你*真的*知道自己在做什么，否则最好就让安装程序按照它的意愿运行。
+5. 一直点击“Next”（下一步）直到完成。除非你*真的*知道自己在做什么，否则最好就让安装程序按照它的意愿运行。
 
 ## 将 JDK 添加到 PATH
 
@@ -388,15 +268,15 @@ javac
 
 ## 确保 JDK 安装正确
 
-1.  再次启动 `Terminal`。
+1. 再次启动`Terminal`。
 
-2.  在提示符处输入 `javac -version`。
+2. 在提示符处输入`javac -version`。
 
-你应该看到类似 `javac 1.8.0_102` 的响应。
+你应该看到类似`javac 1.8.0_102`的响应。
 
-1.  在提示符处输入 `java -version`。
+1. 在提示符处输入`java -version`。
 
-你应该看到类似 `java version "1.8.0_102"` 的响应。
+你应该看到类似`java version "1.8.0_102"`的响应。
 
 确保它们报告的是相同的版本号！如果不是，你可能安装了两个不同的（不兼容的）Java 版本，在完成本书书中的练习时会遇到困难。
 
@@ -410,11 +290,11 @@ javac
 
 你应该创建一个新文件夹来存放所有的代码。读完这本书后，你将会有至少 100 个新文件，把它们放在一个地方会更好。
 
-输入 `ls` 然后按回车。（那个“L”是“list”的第一个字母。）此命令将*列出*当前文件夹/目录的内容。
+输入`ls`然后按回车。（那个“L”是“list”的第一个字母。）此命令将*列出*当前文件夹/目录的内容。
 
-`cd` 命令意味着“切换目录”，它将带你*进入*“Documents”（文档）文件夹，以便未来的命令在该处生效。
+`cd`命令意味着“切换目录”，它将带你*进入*“Documents”（文档）文件夹，以便未来的命令在该处生效。
 
-注意，你的提示符会改变，显示你现在位于一个新文件夹内部。例如，当我第一次打开 `Terminal` 时，我的提示符是
+注意，你的提示符会改变，显示你现在位于一个新文件夹内部。例如，当我第一次打开`Terminal`时，我的提示符是
 
 `localhost:~ mitchell$`
 
@@ -422,85 +302,116 @@ javac
 
 `localhost:Documents mitchell$`
 
-
-
-
 2. 在“视图”（View）选项卡中，勾选“显示行号”（Display line numbers）。
+
 3. 确保“启用自动换行”（Enable text wrapping）旁边没有勾选。
-4. 切换到“编辑器”（Editor）选项卡，并将 `Tab width:` 更改为 4。
+
+4. 切换到“编辑器”（Editor）选项卡，并将`Tab width:`更改为 4。
+
 5. 勾选“启用自动缩进”（Enable automatic indentation）。
 
-## 打开终端窗口 (Terminal) 
+## 打开终端窗口 (Terminal)
 
-1. 最小化你的文本编辑器，在启动器 Dash 栏中搜索“Terminal”。其他 Linux 发行版可能将其称为“GNOME Terminal”、“Konsole” 或“xterm”。其中任何一个都应该可以使用。
+1. 最小化你的文本编辑器，在启动器 Dash 栏中搜索“Terminal”。其他 Linux 发行版可能将其称为“GNOME Terminal”、“Konsole”或“xterm”。其中任何一个都应该可以使用。
+
 2. 同样将终端锁定到启动器栏上。
+
 3. 在终端窗口中，输入
+
 ```bash
 javac
 ```
+
 你应该会收到一条错误信息，显示“The program `javac` can be found in the following packages”，后面跟着一个软件包列表。
+
 这仅意味着没有安装 JDK，这正是我们预期的。
 
 ## 安装 Java 开发工具包 (JDK)
 
 1. Linux 的优点之一是包管理器。如果你愿意，可以手动安装 Oracle 的“标准”版本 Java，但我总是直接使用 OpenJDK 版本：
+
 ```bash
 sudo apt-get openjdk
 ```
+
 基本上就这样了。书中的所有内容使用 OpenJDK 都能正常运行。（事实上，我每天大部分工作都使用 Linux，而书中的练习实际上是使用 OpenJDK 编写和测试的！）
+
 然而，如果你坚持要像 Windows 和 Mac 用户那样安装某些特定版本，你可以从 [Oracle 的 Java SE 下载页面](http://www.oracle.com/technetwork/java/javase/downloads/index.html) 下载。
+
 不过，安装过程需要你自行负责。说真的，请直接使用你包管理器提供的版本即可。
 
 ## 将 JDK 添加到 PATH
 
 你可以跳过这部分，因为在 Linux 计算机上这已经为你完成了。不过，为了让更改生效，你可能需要关闭并重新打开终端。
+
 然而，在我的电脑上，运行任何 Java 工具都会在终端窗口打印出一条烦人的信息：
 
 > `Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar`
 
-这是因为 Eclipse 在没有这个 JAR 文件的情况下无法正常工作。但我们不会使用 Eclipse，而且这条信息很困扰我，所以你需要在名为 `.profile` 的隐藏文件末尾添加一行。（文件名以点/句号开头，所以它是隐藏的。）
+这是因为 Eclipse 在没有这个 JAR 文件的情况下无法正常工作。但我们不会使用 Eclipse，而且这条信息很困扰我，所以你需要在名为`.profile`的隐藏文件末尾添加一行。（文件名以点/句号开头，所以它是隐藏的。）
 
 1. 启动你的文本编辑器。点击“打开”（Open）。
+
 2. 确保你处于“主目录”（Home）下。
+
 3. 在“打开”窗口的任何地方点击右键，勾选“显示隐藏文件”（Show Hidden Files）。
-4. 打开名为 `.profile` 的文件。
+
+4. 打开名为`.profile`的文件。
+
 5. 在文件底部添加以下行：
 
 ```
 unset JAVA_TOOL_OPTIONS
 ```
+
 保存文件并关闭。你可能想再次点击“打开”并取消“显示隐藏文件”的勾选。
 
 ## 确保 JDK 安装正确
 
 1. 再次启动终端。
-2. 在提示符处输入 `javac -version`。
-你应该看到类似 `javac 1.8.0_91` 的响应。
-1. 在提示符处输入 `java -version`。
-你应该能看到类似 `openjdk version "1.8.0_91"` 的响应。
+
+2. 在提示符处输入`javac -version`。
+
+你应该看到类似`javac 1.8.0_91`的响应。
+
+1. 在提示符处输入`java -version`。
+
+你应该能看到类似`openjdk version "1.8.0_91"`的响应。
+
 确保它们报告的是相同的版本号！如果不是，你可能安装了两个不同的（不兼容的）Java 版本，这将导致你在完成书中练习时遇到困难。
+
 如果版本号不匹配，请卸载所有与 Java、JDK、JRE 相关的程序。如果安装了 Eclipse，也将其删除。删除所有与 Java 相关的内容并重新开始。
+
 然而，如果两个命令都成功运行且没有任何错误，版本号也匹配，那么恭喜你！让这一切运行起来相当困难，你可能已经具备完成书中剩余内容的要素！
+
 不过先不要进入下一个练习！我们应该习惯使用命令行进行导航，因为这将是你运行在书中编写的程序的方式。
 
 ## 命令行 (终端) 导航
 
 你应该创建一个新文件夹来存放所有的代码。读完这本书后，你将会有至少 100 个新文件，如果它们都在同一个地方会更好。
-输入 `ls` 然后按回车键。（那是“list”的字母“L”）。此命令将列出当前文件夹/目录的内容。
-`cd` 命令意味着“更改目录”，它将带你进入“Documents”（文档）文件夹，以便未来的命令在该处生效。
+
+输入`ls`然后按回车键。（那是“list”的字母“L”）。此命令将列出当前文件夹/目录的内容。
+
+`cd`命令意味着“更改目录”，它将带你进入“Documents”（文档）文件夹，以便未来的命令在该处生效。
+
 注意，你的提示符会变化，显示你现在位于新文件夹内部。例如，当我第一次打开终端时，我的提示符是
+
 `mitchell@localhost:~$`
+
 一旦我进入“Documents”目录，提示符就会变为
+
 `mitchell@localhost:~/Documents$`
-进入后，你应该再次输入 `ls` 来查看你的 Documents 目录内容。现在我们准备好创建文件夹了。
-`mkdir` 意味着“创建目录”，它将在当前位置创建一个新文件夹。此后输入 `ls` 应该会看到新目录已经在那里了。你可以根据喜给文件夹起一个除“javahard2”以外的名字。每台电脑只需要创建一次这个文件夹。
-进入 `javahard2` 文件夹。之后，输入 `ls`。
+
+进入后，你应该再次输入`ls`来查看你的 Documents 目录内容。现在我们准备好创建文件夹了。
+
+`mkdir`意味着“创建目录”，它将在当前位置创建一个新文件夹。此后输入`ls`应该会看到新目录已经在那里了。你可以根据喜给文件夹起一个除“javahard2”以外的名字。每台电脑只需要创建一次这个文件夹。
+
+进入`javahard2`文件夹。之后，输入`ls`。
+
 ```bash
 cd javahard2
 ls
 ```
-
-
 
 其他的只会只会让你困惑，所以请坚持计划。
 
@@ -510,11 +421,11 @@ ls
 
 在本章中，我们将观察 Java 在创建和操作对象时使用的一些常用模式，我还会简要回顾如何从命令提示符或终端窗口编译并执行 Java 程序。
 
-将以下代码输入到名为 `WorkingWithObjects.java` 的单个文件中，并将其放入你可以从终端窗口访问的文件夹中。
+将以下代码输入到名为`WorkingWithObjects.java`的单个文件中，并将其放入你可以从终端窗口访问的文件夹中。
 
-如果其中某些内容让你感到陌生，不要担心。我们只是在观察模式，细节在这个作业中并不那么重要。特别是，你可能从未用过 `ArrayList` 或 `Random`，这完全没关系。
+如果其中某些内容让你感到陌生，不要担心。我们只是在观察模式，细节在这个作业中并不那么重要。特别是，你可能从未用过`ArrayList`或`Random`，这完全没关系。
 
-如果你觉得这段代码*极其*难以理解，那么你可能遇到了问题。也许你不知道什么是 `if` 语句，或者 `System.out.println`，或者你从未用过 `for` 循环。在这种情况下，这本书对你来说可能太难了。你应该回去先读一本更简单的书，等当你对 Java 基础非常熟悉后再回到这里。
+如果你觉得这段代码*极其*难以理解，那么你可能遇到了问题。也许你不知道什么是`if`语句，或者`System.out.println`，或者你从未用过`for`循环。在这种情况下，这本书对你来说可能太难了。你应该回去先读一本更简单的书，等当你对 Java 基础非常熟悉后再回到这里。
 
 无论如何，输入下面的代码，然后我会提醒你如何从终端编译它。记住，对于这些练习你不应该使用任何 IDE。还要记住不要输入每行前面的行号；那些数字是为了方便以后讨论代码。
 
@@ -560,42 +471,39 @@ public class WorkingWithObjects {
 
 `WorkingWithObjects.java`
 
-一旦你输入了代码，我假设你已经将 `WorkingWithObjects.java` 文件保存到了名为 `javahard2` 的文件夹中。如果你将其保存到了不同的文件夹，请替换下面的名称。
+一旦你输入了代码，我假设你已经将`WorkingWithObjects.java`文件保存到了名为`javahard2`的文件夹中。如果你将其保存到了不同的文件夹，请替换下面的名称。
 
-打开终端窗口并进入到 `javahard2` 文件夹：
+打开终端窗口并进入到`javahard2`文件夹：
 
-（如果你在使用没有 PowerShell 的非常老旧的 Windows 版本，那么你必须输入 `dir`。不过其他人都可以输入 `ls`。）
+（如果你在使用没有 PowerShell 的非常老旧的 Windows 版本，那么你必须输入`dir`。不过其他人都可以输入`ls`。）
 
 希望你会看到一个包含内容的输出列表：
 
-这意味着你处于正确的路径。然后，你将使用 Java 编译器（称为 `javac`）来编译该文件：
+这意味着你处于正确的路径。然后，你将使用 Java 编译器（称为`javac`）来编译该文件：
 
-如果此命令给出关于 `javac` 本身的错误，那么你跳过了练习 0！回去确保 JDK 已安装并在 `PATH` 路径中，然后回来！
+如果此命令给出关于`javac`本身的错误，那么你跳过了练习 0！回去确保 JDK 已安装并在`PATH`路径中，然后回来！
 
 假设你注意细节并按照我告诉你的那样操作，此命令将运行几秒钟，然后终端将再次显示提示符，而不显示其他任何内容。
 
-然而，如果你犯了错误，你将看到一些错误。如果你有任何错误消息，修复它们，然后`save` 你的代码，回到终端再次编译。
+然而，如果你犯了错误，你将看到一些错误。如果你有任何错误消息，修复它们，然后`save`你的代码，回到终端再次编译。
 
 最终你应该能够成功，它将会在没有任何错误也没有任何消息的情况下完成编译。执行目录列表操作，你应该看到字节码文件出现在代码旁边的文件夹中：
 
-现在我们已经成功创建了字节码文件，可以通过运行名为 `java` 的 Java 虚拟机（JVM）程序来运行（或“执行”）它：
+现在我们已经成功创建了字节码文件，可以通过运行名为`java`的 Java 虚拟机（JVM）程序来运行（或“执行”）它：
 
 ### 你应该看到的内容
 
 好了，既然*那个*已经运行了，让我们谈谈在这个练习中看到的一些模式。
 
-第 1 行导入了一个“库”。`java.io.File` 包含了名为 `File` 的对象/类的定义。一旦导入了它，我们就可以在代码中创建 `File` 对象并调用这些对象内部定义的方法。
+第 1 行导入了一个“库”。`java.io.File`包含了名为`File`的对象/类的定义。一旦导入了它，我们就可以在代码中创建`File`对象并调用这些对象内部定义的方法。
 
 接三行导入了另外三个库，每个库都定义了一个对象。某些编程语言将这些导入的内容称为“模块”而不是库。
-
-
-
 
 在上一章中，我们从 Java 的“标准库”中导入了一些对象：这些由语言创建者预构建的类和方法的集合。
 
 在本章中，我们将创建自己的对象，每个对象将包含一个方法。
 
-请输入以下代码并使其通过编译。将其保存在你的 `javahard2` 文件夹中，命名为 `OldMacDonald.java`。
+请输入以下代码并使其通过编译。将其保存在你的`javahard2`文件夹中，命名为`OldMacDonald.java`。
 
 ```
  1 class Cow {
@@ -638,19 +546,21 @@ public class WorkingWithObjects {
 
 ### 你应该看到什么
 
-第 1-5 行定义了一个名为 `Cow` 的对象。`Cow` 类的定义包含了名为 `moo()` 的方法定义。注意第 2 行写的是 `public void moo()`，而不是 `public static void moo()`。除了 `main()` 之外，你将不再频繁使用 `static` 关键字了。
+第 1-5 行定义了一个名为`Cow`的对象。`Cow`类的定义包含了名为`moo()`的方法定义。注意第 2 行写的是`public void moo()`，而不是`public static void moo()`。除了`main()`之外，你将不再频繁使用`static`关键字了。
 
-第 7 到第 11 行定义了一个名为 `Pig` 的类，包含一个 `oink()` 方法。第 13 到 17 行定义了一个名为 `Duck` 的类，它包含一个 `quack()` 方法。
+第 7 到第 11 行定义了一个名为`Pig`的类，包含一个`oink()`方法。第 13 到 17 行定义了一个名为`Duck`的类，它包含一个`quack()`方法。
 
-第 19 到 34 行定义了与 Java 文件名匹配的类。注意在该文件中，`OldMacDonald` 类前面带有 `public` 关键字，但其他任何类都没有。在 Java 中，每个文件只能有一个公共类，且该公有类的名称必须与文件名匹配。
+第 19 到 34 行定义了与 Java 文件名匹配的类。注意在该文件中，`OldMacDonald`类前面带有`public`关键字，但其他任何类都没有。在 Java 中，每个文件只能有一个公共类，且该公有类的名称必须与文件名匹配。
 
-该类包含 `main()` 方法，这是 Java 虚拟机执行文件时开始运行的地方。`OldMacDonald` 类列在文件中其他类之后，但如果类的顺序不同，运行效果也是那样的。
+该类包含`main()`方法，这是 Java 虚拟机执行文件时开始运行的地方。`OldMacDonald`类列在文件中其他类之后，但如果类的顺序不同，运行效果也是那样的。
 
-当我们运行这个程序时，执行从 `main()` 方法的第一行开始。文件中的任何其他代码只有在从 `main()` 内部调用时才会执行。
+当我们运行这个程序时，执行从`main()`方法的第一行开始。文件中的任何其他代码只有在从`main()`内部调用时才会执行。
 
-第 22 和 23 行实例化两个 `Cow` 对象。分别调用 `moo()` 方法。这会导致执行跳转到第 3 行，运行方法内部的 `println()` 语句，然后返回下方。
+第 22 和 23 行实例化两个`Cow`对象。分别调用`moo()`方法。这会导致执行跳转到第 3 行，运行方法内部的`println()`语句，然后返回下方。
 
-在第 27 行，我们创建了一个 `Pig` 对象的实例，然后调用了两次它的 `oink()` 方法。在第 31 行，我们实例化了一个 `Duck` 对象并在下一行调用了它的唯一方法。
+在第 27 行，我们创建了一个`Pig`对象的实例，然后调用了两次它的`oink()`方法。在第 31 行，我们实例化了一个`Duck`对象并在下一行调用了它的唯一方法。
+
+
 
 然后在第 33 行，我们遇到了 `main()` 方法的右大括号，这通常意味着程序的结束。
 
@@ -701,9 +611,6 @@ public class WorkingWithObjects {
 ```
 
 `OldMacDriver.java`
-
-
-
 
 到目前为止，我们只查看了对象内部的方法。但大多数对象内部也包含变量，这些变量被称为“字段”（有时称为“实例变量”）。
 
@@ -769,8 +676,11 @@ public class WorkingWithObjects {
 我创建了一个执行四件事的小程序：
 
 1. 允许人类输入消息。
+
 2. 反转消息中字符的顺序。
+
 3. 对每个单词进行“驼峰命名”（Camel-case）。也就是说，将“Hello how are you” 转换为“HelloHowAreYou”。
+
 4. 显示结果。
 
 首先，这是一个使用 Java 尽可能允许的简单单体风格的程序。除非你真的想写，否则不需要输入这个程序。
@@ -790,14 +700,14 @@ public class WorkingWithObjects {
  12         String rev = "";
  13         for ( int i=msg.length()-1; i>=0; i-- )
  14             rev += msg.substring(i,i+1);
- 15 
+15 
  16         // camel-case it
  17         String lower = rev.toLowerCase();
  18         String[] words = lower.split(" ");
  19         String result = "";
  20         for ( String w : words )
  21             result += w.substring(0,1).toUpperCase() + w.substring(1);
- 22 
+22 
  23         // display it
  24         System.out.println(result);
  25     }
@@ -827,14 +737,14 @@ public class WorkingWithObjects {
  12         String rev = "";
  13         for ( int i=msg.length()-1; i>=0; i-- )
  14             rev += msg.substring(i,i+1);
- 15 
+15 
  16         // camel-case it
  17         String lower = rev.toLowerCase();
  18         String[] words = lower.split(" ");
  19         String result = "";
  20         for ( String w : words )
  21             result += w.substring(0,1).toUpperCase() + w.substring(1);
- 22 
+22 
  23         // display it
  24         System.out.println(result);
  25     }
@@ -851,7 +761,7 @@ public class WorkingWithObjects {
 
 第 15 行是 `camelCase` 函数调用，第 29-36 行是函数定义。注意在第 29 行我们可以自由将参数命名为 `s` 而不必担心程序的其他部分。
 
-*main() 中的变量真的叫 `s` 吗？* 不重要。
+`main()` 中的变量真的叫 `s` 吗？*不重要。
 
 *其他函数使用变量 `s` 吗？* 不重要。
 
@@ -876,7 +786,7 @@ public class WorkingWithObjects {
  12         String rev = "";
  13         for ( int i=s.length()-1; i>=0; i-- )
  14             rev += s.substring(i,i+1);
- 15 
+15 
  16         return rev;
  17     }
  18 
@@ -885,14 +795,11 @@ public class WorkingWithObjects {
  21         String result = "";
  22         for ( String w : words )
  23             result += w.substring(0,1).toUpperCase() + w.substring(1);
- 24 
+24 
  25         return result;
  26     }
  27 }
 ```
-
-
-
 
 ## StringFunFunctionalShort.java
 
@@ -948,26 +855,28 @@ public class WorkingWithObjects {
 
 所以，这里是驱动程序的代码。这个也输入。
 
+
+
 ```java
- 1 import java.util.Scanner;
- 2 
- 3 public class StringFunOODriver {
- 4     public static void main( String[] args ) {
- 5         Scanner keyboard = new Scanner(System.in);
- 6 
- 7         // input it
- 8         System.out.print("Enter a message: ");
- 9         String msg = keyboard.nextLine();
-10 
-11         StringFunObject sfo = new StringFunObject();
-12         sfo.setMessage(msg);
-13         sfo.reverse();
-14         sfo.camelCase();
-15 
-16         // display it
-17         System.out.println( sfo.getMessage() );
-18     }
-19 }
+import java.util.Scanner;
+
+public class StringFunOODriver {
+    public static void main( String[] args ) {
+        Scanner keyboard = new Scanner(System.in);
+
+        // input it
+        System.out.print("Enter a message: ");
+        String msg = keyboard.nextLine();
+
+        StringFunObject sfo = new StringFunObject();
+        sfo.setMessage(msg);
+        sfo.reverse();
+        sfo.camelCase();
+
+        // display it
+        System.out.println( sfo.getMessage() );
+    }
+}
 ```
 
 ### StringFunOODriver.java
@@ -978,13 +887,13 @@ public class WorkingWithObjects {
 
 这是非常典型的面向对象代码。第 11 行声明并实例化了一个对象。第 12 行调用该对象的 `setMessage()` 方法，并将消息作为参数传递进去。然后接下来的几次变化发生在对象*内部*：消息被反转，然后消息被转换为驼峰命名法。
 
-最后在驱动程序的第 17 行，我们调用该对象的 `getMessage()` 方法，它向我们返回修改后的 String 用于打印。
+最后在驱动程序的第 17 行，我们调用该对象的 `getMessage()` 方法，它向我们返回修改后的 `String` 用于打印。
 
 也许你不喜欢面向对象的风格。也许你认为单体版本更好，或者也许认为函数式版本更好。
 
 你知道吗？我同意你的观点。面向对象编程并不非常适合这种微型程序。当程序规模很大且复杂时（例如 10,000 行代码或更多），OOP 的效果最好。
 
-每当*我* 写一个程序来帮助自己自动化某些烦人的事情时，如果代码只有 500 行或更少，我几乎不会用面向对象的风格编写。
+每当*我*写一个程序来帮助自己自动化某些烦人的事情时，如果代码只有 500 行或更少，我几乎不会用面向对象的风格编写。
 
 如果代码只有 10-50 行，我会用单体风格编写。如果在 50-500 行，我会使用函数；如果比这大得多，我将开始使用面向对象风格。
 
@@ -997,47 +906,44 @@ public class WorkingWithObjects {
 在这个练习中，我们将更深入地观察拥有字段的对象。这里是对象的源码：
 
 ```java
- 1 public class Repeater {
- 2 
-3     String phrase;
- 4     int repeats;
- 5 
-6     public void setValues( String p, int r ) {
- 7         phrase = p;
- 8         repeats = r;
- 9     }
-10 
-11     public String getRepeatedPhrase() {
-12         String result = "";
-13         for ( int i=0; i<repeats; i++ )
-14             result += phrase;
-15         return result;
-16     }
-17 }
+public class Repeater {
+
+    String phrase;
+    int repeats;
+
+    public void setValues( String p, int r ) {
+        phrase = p;
+        repeats = r;
+    }
+
+    public String getRepeatedPhrase() {
+        String result = "";
+        for ( int i=0; i<repeats; i++ )
+            result += phrase;
+        return result;
+    }
+}
 ```
 
-Repeater.java
+`Repeater.java`
 
-这个类有两个字段，一个名为 `phrase` 的 String 和一个名为 `repeats` 的 int。记住，如果我们在驱动中实例化多个版本，每个实例将拥有自己的。
+这个类有两个字段，一个名为 `phrase` 的 `String` 和一个名为 `repeats` 的 `int`。记住，如果我们在驱动中实例化多个版本，每个实例将拥有自己的。
 
 > “实例变量”是定义在类中但在方法之外的变量。“字段”只是类成员的通用名称。它们的意思几乎相同，所以我交替使用。
 
 以防你没从上一个练习中记得，这些属于整个类。
 
-第 6-9 行实现了一个名为 `setValues()` 的方法。它从外部世界接收两个值：一个称为 `p` 的 String 和一个称为 `r` 的整数。
+第 6-9 行实现了一个名为 `setValues()` 的方法。它从外部世界接收两个值：一个称为 `p` 的 `String` 和一个称为 `r` 的整数。
 
 在第 7 行，我们将 `p` 的值拷贝存储到实例变量 `phrase` 中，在下一行我们将 `r` 的值存储到 `repeats` 中。在第 9 行之后，参数变量 `p` 和 `r` 就消失了；这些名字在方法之外没有任何意义。这个方法是 `void`，所以它不向外部世界返回任何值。
 
-第 11 到 16 行包含了名为 `getRepeatedPhrase()` 方法的实现，它构建并返回一个 String 值的拷贝。
+第 11 到 16 行包含了名为 `getRepeatedPhrase()` 方法的实现，它构建并返回一个 `String` 值的拷贝。
 
-在第 12 行，我们从一个新 String `result` 开始，它被初始化为“空字符串”（我们称之为一个没有字符的 String 值）。
+在第 12 行，我们从一个新 `String` `result` 开始，它被初始化为“空字符串”（我们称之为一个没有字符的 `String` 值）。
 
 第 13 行设置了一个 `for` 循环，它将执行循环体 `repeats` 次。也就是说，如果 `repeats` 的值是 `4`，循环将运行四次。循环中没有大括号，所以循环的主体只有单行：`result += phrase;`，这会将 `phrase` 值的拷贝添加到 `result` 中现有内容的末尾。
 
 当循环结束，`result` 现在包含了多个 `phrase` 的拷贝。
-
-
-
 
 最后，在第 15 行，本地变量 `result` 中的 `String` 副本被返回到外部世界。该方法返回一个 `String`，这就是为什么方法的第一行写的是 `public String getRepeatedPhrase()` 而不是 `public void getRepeatedPhrase()`。
 
@@ -1045,23 +951,23 @@ Repeater.java
 
 好了，这里是驱动代码：
 
-```
- 1 import java.util.Scanner;
- 2 
- 3 public class PhraseRepeaterDriver {
- 4     public static void main( String[] args ) {
- 5         Scanner keyboard = new Scanner(System.in);
- 6 
- 7         System.out.print("Enter a message: ");
- 8         String msg = keyboard.nextLine();
- 9         System.out.print("Number of times: ");
-10         int n = keyboard.nextInt();
-11 
-12         PhraseRepeater pr = new PhraseRepeater();
- 13         pr.setValues(msg, n);
- 14         System.out.println( pr.getRepeatedPhrase() );
- 15     }
- 16 }
+```java
+import java.util.Scanner;
+
+public class PhraseRepeaterDriver {
+    public static void main( String[] args ) {
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.print("Enter a message: ");
+        String msg = keyboard.nextLine();
+        System.out.print("Number of times: ");
+        int n = keyboard.nextInt();
+
+        PhraseRepeater pr = new PhraseRepeater();
+        pr.setValues(msg, n);
+        System.out.println( pr.getRepeatedPhrase() );
+    }
+}
 ```
 
 `PhraseRepeaterDriver.java`
@@ -1090,27 +996,27 @@ Repeater.java
 
 但在驱动程序中……哦，你将会看到的。
 
-```
- 1 public class SquareRootFinder {
- 2 
- 3     double n;
- 4     int iterations;
- 5 
- 6     public void setNumber( double number ) {
- 7         n = number;
- 8         iterations = 7;
- 9         if ( n < 10 )
-10             iterations++;
- 11     }
- 12 
-13     public double getRoot() {
- 14         double x = n/4;
- 15         for ( int i=0; i<iterations; i++ ) {
- 16             x = (x+(n/x))/2.0;
- 17         }
- 18         return x;
- 19     }
- 20 }
+```java
+public class SquareRootFinder {
+
+    double n;
+    int iterations;
+
+    public void setNumber( double number ) {
+        n = number;
+        iterations = 7;
+        if ( n < 10 )
+            iterations++;
+    }
+
+    public double getRoot() {
+        double x = n/4;
+        for ( int i=0; i<iterations; i++ ) {
+            x = (x+(n/x))/2.0;
+        }
+        return x;
+    }
+}
 ```
 
 `SquareRootFinder.java`
@@ -1121,27 +1027,27 @@ Repeater.java
 
 继续输入驱动代码，然后我们继续这个思路。
 
-```
- 1 import java.util.Scanner;
- 2 
- 3 public class SquareRootDriver {
- 4     public static void main( String[] args ) {
- 5         Scanner keyboard = new Scanner(System.in);
- 6         double n;
- 7 
- 8         SquareRootFinder sqrt = new SquareRootFinder();
- 9 
-10         do {
- 11             System.out.print("Enter a number (or <=0 to quit): ");
- 12             n = keyboard.nextDouble();
- 13 
- 14             if ( n > 0 ) {
- 15                 sqrt.setNumber(n);
- 16                 System.out.println( sqrt.getRoot() );
- 17             }
- 18         } while ( n > 0 );
- 19     }
- 20 }
+```java
+import java.util.Scanner;
+
+public class SquareRootDriver {
+    public static void main( String[] args ) {
+        Scanner keyboard = new Scanner(System.in);
+        double n;
+
+        SquareRootFinder sqrt = new SquareRootFinder();
+
+        do {
+            System.out.print("Enter a number (or <=0 to quit): ");
+            n = keyboard.nextDouble();
+
+            if ( n > 0 ) {
+                sqrt.setNumber(n);
+                System.out.println( sqrt.getRoot() );
+            }
+        } while ( n > 0 );
+    }
+}
 ```
 
 `SquareRootDriver.java`
@@ -1154,35 +1060,34 @@ Repeater.java
 
 那么，创建类的人是如何知道 `iterations` 是正确的？我测试过。测试了很多。不是只了几个数字，而是：
 
-```
- 1 public class SquareRootTester {
- 2     public static void main( String[] args ) {
- 3         SquareRootFinder sqrt = new SquareRootFinder();
- 4 
- 5         double max = 0, maxN = 0;
- 6         double fakeroot, realroot, diff;
- 7 
- 8         System.out.print("Testing algorithm... ");
- 9         for ( double n = 0; n<=2000; n += 0.01 ) {
- 10             sqrt.setNumber(n);
- 11             fakeroot = sqrt.getRoot();
- 12             realroot = Math.sqrt(n);
- 13             diff = Math.abs( fakeroot - realroot );
- 14             if ( diff > max ) {
- 15                 max = diff;
- 16                 maxN = n;
- 17             }
- 18         }
- 19 
- 20         if ( max > 0.000001 ) {
- 21             System.out.println("FAIL");
- 22             System.out.println("Worst difference was " + max + " for " + maxN );
- 23         }
- 24         else
- 25             System.out.println("PASS");
- 26     }
- 27 }
-  28 }
+```java
+public class SquareRootTester {
+    public static void main( String[] args ) {
+        SquareRootFinder sqrt = new SquareRootFinder();
+
+        double max = 0, maxN = 0;
+        double fakeroot, realroot, diff;
+
+        System.out.print("Testing algorithm... ");
+        for ( double n = 0; n<=2000; n += 0.01 ) {
+            sqrt.setNumber(n);
+            fakeroot = sqrt.getRoot();
+            realroot = Math.sqrt(n);
+            diff = Math.abs( fakeroot - realroot );
+            if ( diff > max ) {
+                max = diff;
+                maxN = n;
+            }
+        }
+
+        if ( max > 0.000001 ) {
+            System.out.println("FAIL");
+            System.out.println("Worst difference was " + max + " for " + maxN );
+        }
+        else
+            System.out.println("PASS");
+    }
+}
 ```
 
 `SquareRootTester.java`
@@ -1190,9 +1095,6 @@ Repeater.java
 ### 如果运行测试程序你会看到什么
 
 在我的测试程序中，我将 `getRoot()` 方法的输出与 Java 内置的 `Math.sqrt()` 计算的真实平方根进行比较。我测试了从 0 到 2000 的每一个数字，步长为 0.01。对于每个数字，我找到“我的”平方根与真实平方根之间的绝对差，如果最大差异大于 0.000001，那么我会抛出一个错误。
-
-
-
 
 反复运行此程序允许我测试不同的内容。变量 `x` 是我对平方根的初始估计；我最初将 `x` 设置为 `n`，但随着 `n` 变大，这开始变得不准确。将 `x` 起于 `n/2` 更好，但这样对于非常小的 `n` 值就会不准确。
 
@@ -1210,29 +1112,31 @@ Repeater.java
 
 在上一个练习中，我们查看了极端测试以及封装如何使这一切成为可能。在这一次，我们将看到在字段和方法上可以进行的一些权衡。
 
-```
- 1 public class SphereCalc {
- 2     double radius;
- 3 
- 4     public void setRadius( double r ) {
- 5         radius = r;
- 6     }
- 7 
- 8     public double getRadius() {
- 9         return radius;
-10     }
- 11 
- 12     public double getSurfaceArea() {
- 13         return 4*Math.PI*radius*radius;
- 14     }
- 15 
- 16     public double getVolume() {
- 17         return 4*Math.PI*Math.pow(radius,3) / 3.0;
- 18     }
- 19 }
+```java
+public class SphereCalc {
+    double radius;
+
+    public void setRadius( double r ) {
+        radius = r;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public double getSurfaceArea() {
+        return 4*Math.PI*radius*radius;
+    }
+
+    public double getVolume() {
+        return 4*Math.PI*Math.pow(radius,3) / 3.0;
+    }
+}
 ```
 
 `SphereCalc.java`
+
+
 
 这个对象与最近几个练习中的非常相似。这次有一个实例变量、一个变器方法（`setRadius()`）和三个访问器方法。（球的表面积为 ![ 4 \pi r² ](img/leanpub_equation_1.png)，球的体积为 ![ \frac{4}{3} \pi r³ ](img/leanpub_equation_2.png)。）
 
@@ -1276,8 +1180,6 @@ Repeater.java
 ### 你应该看到什么
 
 这显然是一个测试器，而不仅仅是一个简单的驱动程序；我有通过或失败的测试。编写这些内容相当烦人，但我想向你们展示这个思路，而不让它变得太疯狂，所以我不得不用我的计算器配合几个测试用例来查看结果应该是怎样的。在未来的练习中，我们将看到一种处理很多测试更好的方法。
-
-
 
 现在，它看起来可能没那么坏了。它可能就像测试器中的第 16 行一样。与其写：
 
@@ -1415,9 +1317,6 @@ StringFunObject sfo = new StringFunObject(msg);
 
 所以这里有一个针对 `SphereCalc4` 的测试器示例，它使得在不增加任何额外代码的情况下添加额外的测试变得容易得多！
 
-
-
-
 这段代码使用双精度浮数数组来存储预期的输入和输出，且每个数组中的顺序相同，因此 `areas[0]` 存储半径 `inputs[0]` 的预期面积输出，而 `volumes[0]` 存储对应的预期体积。这样使用的数组被称为“并行”数组。
 
 这不是实现此功能的**绝对**最佳方法，但目前已经足够了。我们将在书的后面部分看到更好的测试技术。
@@ -1483,7 +1382,7 @@ StringFunObject sfo = new StringFunObject(msg);
  58 }
 ```
 
-BetterTesting.java
+`BetterTesting.java`
 
 ### 你应该看到的内容
 
@@ -1497,22 +1396,21 @@ double[] volumes = { 523.598775598, 4.18879E-3,  150.532553589, // 等
 
 在第 28 行，我们只创建了一个单一的 `SphereCalc4` 对象，每次都会被重用。然后遍历数组中的每个值进行循环。注意：如果你不小心让数组的长度不同，那么这段代码可能会崩溃。这就是并行数组的问题之一。
 
-在第 30 到 36 行中，我们提取出预期的半径、面积和体积，并将它们放入命名良好但易于输入的变量中，然后告诉对象 `使用` 那个半径并从对象中获取计算出的面积和体积。因此，`a` 是预期的面积，而 `A` 是根据我们的对象得到的实际面积。
 
-然后我们可以直接使用之前的 `isNear()` 函数配合 `if` 语句，检查我们得到的结果是否符合预期。每通过一次“PASS”，我们就增加变量的值，但懒得打印任何内容。如果发生失败，我们会打印一条错误消息。
+
+在第 30 到 36 行中，我们提取出预期的半径、面积和体积，并将它们放入命名良好但易于输入的变量中，然后告诉对象`使用`那个半径并从对象中获取计算出的面积和体积。因此，`a`是预期的面积，而`A`是根据我们的对象得到的实际面积。
+
+然后我们可以直接使用之前的`isNear()`函数配合`if`语句，检查我们得到的结果是否符合预期。每通过一次“PASS”，我们就增加变量的值，但懒得打印任何内容。如果发生失败，我们会打印一条错误消息。
 
 循环结束后，“通过”的次数应该是输入数量的两倍，所以我们检查这一点，如果一切正常，就打印一条总结消息。
 
 还不错，对吧？增加更多的测试用就像添加更多用例一样简单。
 
-
-
-
-这个（无聊的）`Rectangle` 类有两个私有字段。（在将来，我可能不会费心去写“私有字段”这些字；称它们为“字段”基本上就意味着它们是私有的。这是 Java 程序员通常的办事方式。我本应该为它们编写 getter 和 setter，但这个练习侧重于构造函数，所以我把它们省略了。）
+这个（无聊的）`Rectangle`类有两个私有字段。（在将来，我可能不会费心去写“私有字段”这些字；称它们为“字段”基本上就意味着它们是私有的。这是 Java 程序员通常的办事方式。我本应该为它们编写 getter 和 setter，但这个练习侧重于构造函数，所以我把它们省略了。）
 
 有两个构造函数。关于构造函数，有三点你需要记住：
 
-1. 它们的名称与类相同（在本例中为 `Rectangle`）。
+1. 它们的名称与类相同（在本例中为`Rectangle`）。
 2. 它们没有返回类型——甚至连“void”都没有。
 3. 它们的“工作”是确保所有必要的设置都已完成。这意味着初始化所有的实例变量，但有时也会发生其他事情。
 
@@ -1537,13 +1435,13 @@ double[] volumes = { 523.598775598, 4.18879E-3,  150.532553589, // 等
 
 现在我们的字段是私有的，而且我们现在有了构造函数，我们可以在驱动程序中仅用一行代码就完成这一切。这在第 7 行所示。
 
-第 7 行发生的第一件事是等号的左侧。编译器创建一个 `Rectangle` 对象并将其命名为 `r`。起初，它里面没有任何对象。
+第 7 行发生的第一件事是等号的左侧。编译器创建一个`Rectangle`对象并将其命名为`r`。起初，它里面没有任何对象。
 
-然后执行等号的右侧：它调用了参数构造函数，并将 `10` 和 `5` 作为参数传入。由于 `10` 在前，一个副本会被放入第一个参数（`int` 类型 `l`）中。然后，`5` 的副本被传递给第二个参数（名为 `w` 的 `int`）。
+然后执行等号的右侧：它调用了参数构造函数，并将`10`和`5`作为参数传入。由于`10`在前，一个副本会被放入第一个参数（`int`类型`l`）中。然后，`5`的副本被传递给第二个参数（名为`w`的`int`）。
 
-在第 9 行之前的后台秘密时刻，我们的 `Rectangle` 对象实际上在内存中被实例化了。然后通过第 9 行和第 10 行，构造函数将参数中的值复制到实例变量中。
+在第 9 行之前的后台秘密时刻，我们的`Rectangle`对象实际上在内存中被实例化了。然后通过第 9 行和第 10 行，构造函数将参数中的值复制到实例变量中。
 
-一旦构造函数在第 11 行结束，后台还会发生另一件事，这在普通方法中`不会发生`：一个 `Rectangle` 对象的引用被返回给驱动程序。（我们将在稍后的练习中学习更多内容。）
+一旦构造函数在第 11 行结束，后台还会发生另一件事，这在普通方法中`不会发生`：一个`Rectangle`对象的引用被返回给驱动程序。（我们将在稍后的练习中学习更多内容。）
 
 这让我们回到了驱动程序的第 7 行，此时右侧刚刚完成。所以最后执行了该行的“等号”部分；从构造函数返回的（（对象的）引用被存储在左侧的变量（`r`）中。
 
@@ -1591,7 +1489,7 @@ double[] volumes = { 523.598775598, 4.18879E-3,  150.532553589, // 等
 
 `Dog.java`
 
-这个对象希望非常直观。几个字段，两个构造函数（一个默认构造函数和一个带参数的构造函数），大量的 getter，以及一个返回适合打印的漂亮 `String` 的“get everything”方法。
+这个对象希望非常直观。几个字段，两个构造函数（一个默认构造函数和一个带参数的构造函数），大量的 getter，以及一个返回适合打印的漂亮`String`的“get everything”方法。
 
 唯一“奇怪”的地方在第 7 行：默认构造函数存在但是空的。在那些大括号之间没有代码！
 
@@ -1607,26 +1505,26 @@ double[] volumes = { 523.598775598, 4.18879E-3,  150.532553589, // 等
  7         System.out.println(a.getEverything());
  8         System.out.println(pal.getName() + " is a " + pal.getBreed() + ".");
  9         System.out.println(spike.getName() + " is a " + spike.getBreed() + ".");
- 10 
- 11         System.out.println(pal.getEverything());
- 12         System.out.println(spike.getEverything());
- 13     }
+10 
+11         System.out.println(pal.getEverything());
+12         System.out.println(spike.getEverything());
+13     }
 14 }
 ```
 
 `DogDriver.java`
 
-驱动程序在 5 和 6 行创建了两个 `Dog` 对象并在 8 到 11 行调用了各种方法。
+驱动程序在 5 和 6 行创建了两个`Dog`对象并在 8 到 11 行调用了各种方法。
 
 我认为，有趣的行是 3 和 12。
 
-第 3 行使用默认构造函数实例化了一个 `Dog` 对象。然后第 12 行调用了一个返回所有字段值的方法。这可以编译，但这些字段是什么时候初始化的呢？！
+第 3 行使用默认构造函数实例化了一个`Dog`对象。然后第 12 行调用了一个返回所有字段值的方法。这可以编译，但这些字段是什么时候初始化的呢？！
 
 那么使用了什么值呢？
 
 答案是 Java 字段有默认值。（而且`只有`字段如此。Java 中其他类型的变量`没有`默认值，这就是为什么如果你在初始化变量之前使用它，编译器会报错。）
 
-`int` 类型的字段默认值为 `0`。`double` 默认值为 `0.0`。`boolean` 的默认值为 `false`。任何对象都认为 `null`，这个引用意味着“此对象尚未指向任何内容”。`String` 是对象，所以在这种情况下，*name* 和 *breed* 字段都被设置为 `null`。
+`int`类型的字段默认值为`0`。`double`默认值为`0.0`。`boolean`的默认值为`false`。任何对象都认为`null`，这个引用意味着“此对象尚未指向任何内容”。`String`是对象，所以在这种情况下，*name*和*breed*字段都被设置为`null`。
 
 始终显式地为所有字段赋值是一个好主意，但知道如果你忘记了，Java 会填充合理的默认值是很好的。
 
@@ -1634,10 +1532,7 @@ double[] volumes = { 523.598775598, 4.18879E-3,  150.532553589, // 等
 
 今天的练习希望有点趣。没有多少新概念，希望它们不要太复杂。
 
-我们将查看对象拥有的名为 `this` 的内置引用变量，以及所有对象继承的名为 `toString()` 的内置方法。在编写这些代码之前，你可能想回顾一下上练习（`Dog.java`）中的 `getEverything()` 方法，并查看练习 4 中 `TVActorDriver.java` 中的字段。
-
-
-
+我们将查看对象拥有的名为`this`的内置引用变量，以及所有对象继承的名为`toString()`的内置方法。在编写这些代码之前，你可能想回顾一下上练习（`Dog.java`）中的`getEverything()`方法，并查看练习 4 中`TVActorDriver.java`中的字段。
 
 ```java
 public class Tweet {
@@ -1693,9 +1588,9 @@ public class Tweet {
 
 `Tweet.java`
 
-Twitter 是一家允许人们在网上发布非常短的消息以供他人阅读的公司。这些短消息被称为“推文”（tweets），并限制在 140 个字符以内。然而，让 Twitter 运行的代码复杂得多！在上面的代码中，我定义了一个 Java 版本的 `Tweet` 对象，它包含了 Twitter 定义的实际“推文”中存在的`部分`字段。（如果你想查看其余字段，需要浏览 [Twitter API 概览](https://dev.twitter.com/overview/api/tweets)。请注意 Twitter 是用 Ruby 和 Scala 编写的，而不是 Java，因此某些变量类型并不完全相同。）
+Twitter 是一家允许人们在网上发布非常短的消息以供他人阅读的公司。这些短消息被称为“推文”（tweets），并限制在 140 个字符以内。然而，让 Twitter 运行的代码复杂得多！在上面的代码中，我定义了一个 Java 版本的`Tweet`对象，它包含了 Twitter 定义的实际“推文”中存在的`部分`字段。（如果你想查看其余字段，需要浏览 [Twitter API 概览](https://dev.twitter.com/overview/api/tweets)。请注意 Twitter 是用 Ruby 和 Scala 编写的，而不是 Java，因此某些变量类型并不完全相同。）
 
-这个对象中无聊的新点是，返回一个适合打印的直观字符串的方法被称为 `toString()` 而不是 `getEverything()`。这样做是有原因的，我们很快就会看到。
+这个对象中无聊的新点是，返回一个适合打印的直观字符串的方法被称为`toString()`而不是`getEverything()`。这样做是有原因的，我们很快就会看到。
 
 不过，你会在第 13 行发现一些奇怪的地方。
 
@@ -1703,9 +1598,9 @@ Twitter 是一家允许人们在网上发布非常短的消息以供他人阅读
 
 因为参数的名称与字段的名称相同，它们“遮蔽”（shadow）了这些字段。这意味着参数的名称隐藏了字段的名称，因为它们定义在更靠近第 13 行的位置。
 
-但 Java 给了我们一种访问被遮蔽字段的方法，即使用 `this` 关键字。在 Java 中，`this` 始终包含指向你所处对象的引用。（如果这让你有点困惑也没关系。我们稍会讨论更多关于引用的内容。）
+但 Java 给了我们一种访问被遮蔽字段的方法，即使用`this`关键字。在 Java 中，`this`始终包含指向你所处对象的引用。（如果这让你有点困惑也没关系。我们稍会讨论更多关于引用的内容。）
 
-所以，`this.created_at` 指属于整个当前对象的名为 `created_at` 的变量。而在该范围内——第 12 行到第 19 行——变量 `created_at` 指的是参数而不是字段。
+所以，`this.created_at`指属于整个当前对象的名为`created_at`的变量。而在该范围内——第 12 行到第 19 行——变量`created_at`指的是参数而不是字段。
 
 ```java
 this.created_at = created_at;
@@ -1715,11 +1610,11 @@ this.created_at = created_at;
 
 第 14 行到第 19 行做了相同的事情。它们将参数值的拷贝存储到同名的字段中。
 
-注意，在 `toString()` 方法中没有任何参数。因此，在此范围内唯一名为 `retweet_count` 的变量是字段。所以在第 25 行，我可以像在之前的练习中做的那样，直接通过名称访问它。
+注意，在`toString()`方法中没有任何参数。因此，在此范围内唯一名为`retweet_count`的变量是字段。所以在第 25 行，我可以像在之前的练习中做的那样，直接通过名称访问它。
 
-然而，使用 `this.` 访问字段（如第 28 行所示）是`总是`合法的。有些程序员总是这样做。我通常只在需要时才这样做。
+然而，使用`this.`访问字段（如第 28 行所示）是`总是`合法的。有些程序员总是这样做。我通常只在需要时才这样做。
 
-`toString()` 方法从第 23 行的一个名为 `out` 的空字符串开始，然后使用 `if` 语句逐部分构建它。到方法的结束时，我们得到了一个四行长的字符串，并它被返回给 `main()` 进行打印。
+`toString()`方法从第 23 行的一个名为`out`的空字符串开始，然后使用`if`语句逐部分构建它。到方法的结束时，我们得到了一个四行长的字符串，并它被返回给`main()`进行打印。
 
 ```java
 public class TweetDriver {
@@ -1739,9 +1634,9 @@ public class TweetDriver {
 
 ### 你应该看到的内容
 
-最后让我们谈谈为什么这个方法被称为 `toString()` 而不是其他名字。正如你在驱动程序的第 9 行所看到的，当你打印 `toString()` 方法返回的字符串时，一切运行得非常完美。
+最后让我们谈谈为什么这个方法被称为`toString()`而不是其他名字。正如你在驱动程序的第 9 行所看到的，当你打印`toString()`方法返回的字符串时，一切运行得非常完美。
 
-然而，在第 11 行，我们正尝试打印整个对象本身！通常这会显示一串杂乱的字母，但由于我们的对象定义了一个名为 `toString()` 的公共方法，Java 编译器将打印 `toString()` 返回的内容，而不是对象本身。
+然而，在第 11 行，我们正尝试打印整个对象本身！通常这会显示一串杂乱的字母，但由于我们的对象定义了一个名为`toString()`的公共方法，Java 编译器将打印`toString()`返回的内容，而不是对象本身。
 
 这非常有用！
 
@@ -1750,8 +1645,6 @@ public class TweetDriver {
 ## 练习 15：井井井战（Noughts and Crosses）/ 极端测试
 
 这个练习的代码相当长！这是因为你现在已经掌握了足够编写有趣事情的知识。我们要编写的第一个是一个用于玩儿童游戏“井井井”（Noughts and Crosses）的对象，它也被称为“井字棋”（Tic Tac Toe）。
-
-
 
 
 
@@ -1857,38 +1750,39 @@ public class NoughtsCrossesObject
 }
 ```
 
-### NoughtsCrossesObject.java
+## NoughtsCrossesObject.java
 
-第一个实例变量（称为 `board` 的那个）是一个 `String` 类型的二维数组。这意味着数组中包含许多按行和列排列的字符串。
+第一个实例变量（称为`board`的那个）是一个`String`类型的二维数组。这意味着数组中包含许多按行和列排列的字符串。
 
-有一个构造函数，用于实例化一个三行三列的二维数组，将 `turns` 设置为零，然后使用嵌套循环在每个位置放入一个空白格。
+有一个构造函数，用于实例化一个三行三列的二维数组，将`turns`设置为零，然后使用嵌套循环在每个位置放入一个空白格。
 
-`isWinner()` 方法在 `p` 获胜时返回 `true`，在玩家未获胜时返回 `false`。它通过一个名为 `winCheck()` 的“辅助方法”来完成任务。注意 `winCheck()` 是一个 `private` 方法，这意味着我们可以在对象内部调用它，但不能在驱动程序的其他地方调用它。
+`isWinner()`方法在`p`获胜时返回`true`，在玩家未获胜时返回`false`。它通过一个名为`winCheck()`的“辅助方法”来完成任务。注意`winCheck()`是一个`private`方法，这意味着我们可以在对象内部调用它，但不能在驱动程序的其他地方调用它。
 
-`winCheck()` 检查行 `a` 和列 `b` 是否包含与行 `c` 和列 `d` 相同的字母。然后它确认 `[a,b]` 中的字母也与 `[e,f]` 中的字母相同。如果所有条件都成立，则该方法返回一个 `true` 值。
+`winCheck()`检查行`a`和列`b`是否包含与行`c`和列`d`相同的字母。然后它确认`[a,b]`中的字母也与`[e,f]`中的字母相同。如果所有条件都成立，则该方法返回一个`true`值。
 
-`isFull()` 在棋盘上所有格子都被使用时返回 `true`。你可以像所示那样使用 `if` 语句和 `else` 语句来实现，也可以使用被注释掉的那单行代码来实现。
+`isFull()`在棋盘上所有格子都被使用时返回`true`。你可以像所示那样使用`if`语句和`else`语句来实现，也可以使用被注释掉的那单行代码来实现。
 
-`isCat()` 在棋盘填满但任何玩家都没有获胜时返回 `true`。
+`isCat()`在棋盘填满但任何玩家都没有获胜时返回`true`。
 
-`isValid()` 在行值和列值都在范围内时返回 `true`。
+`isValid()`在行值和列值都在范围内时返回`true`。
 
-`numTurns()` 返回回合数。
+`numTurns()`返回回合数。
 
-`playerAt()` 返回指定行 `r` 和列 `c` 处的玩家，否则返回 `@`。
+`playerAt()`返回指定行`r`和列`c`处的玩家，否则返回`@`。
 
-`isTaken()` 如果指定位置已被占用则返回 `false`，否则返回 `true`。
+`isTaken()`如果指定位置已被占用则返回`false`，否则返回`true`。
 
-`toString()` 返回棋盘的格式化输出字符串。
+`toString()`返回棋盘的格式化输出字符串。
 
 // 修改/变器方法
-`playMove()` 将玩家 `p` 放在 `[r][c]` 处，并将回合数加 1。
 
-### NoughtsCrossesGame.java
+`playMove()`将玩家`p`放在`[r][c]`处，并将回合数加 1。
+
+## NoughtsCrossesGame.java
 
 你可以看到在第 8 行实例化了我们的对象，然后可以使用提供的所有方法来游戏。
 
-第 12 行打印 `ttt` 对象，这会调用 `toString()` 方法。该方法会返回棋盘的状态。
+第 12 行打印`ttt`对象，这会调用`toString()`方法。该方法会返回棋盘的状态。
 
 第 14 行和第 15 行允许人类输入行和列。你可以通过在提示处输入两个数字来实现。
 
@@ -1945,20 +1839,19 @@ public class NoughtsCrossGame {
 }
 ```
 
-### 你应该看到的
+## 你应该看到的
 
 噢，额，什么？
 
-
-
-
-所以，我犯了一个错误。在对象的某个地方。如果所有代码都在 `main()` 函数中，这将会很难追踪。幸运的是，由于它是一个可以逐个调用的对象，我们可以对其进行自动化测试！
+所以，我犯了一个错误。在对象的某个地方。如果所有代码都在`main()`函数中，这将会很难追踪。幸运的是，由于它是一个可以逐个调用的对象，我们可以对其进行自动化测试！
 
 以下是我几年前写的一个测试器，用来让我的学生找到他们井井棋程序中的 Bug。我并不打算解释它，甚至不建议你手动输入一遍。直接下载或复制我提供的文件即可。
 
 我可以告诉你，这个测试器会运行所有可能存在的井井棋游戏，并且每次都检查棋盘的状态。如果我们测试的对象报告的结果与测试器预期的结果不符，它就会报错。
 
 如果这个测试器通过了你的代码，那么你的代码极可能没有 Bug。这是一个很不错的事实。
+
+
 
 ```java
  1 // 最初编写于 2007-09-19
@@ -2089,9 +1982,6 @@ public class NoughtsCrossGame {
  }
 ```
 
-
-
-
 ```java
  1 import java.util.ArrayList;
  2 
@@ -2170,11 +2060,13 @@ public class NoughtsCrossGame {
 76 }
 ```
 
-ArrayListIntro.java
+`ArrayListIntro.java`
 
 这里只有一个文件！你可以直接编译并运行它！
 
 首先（第 5 行），我们实例化了一个 `ArrayList` 对象。这是一个 `String` 类型的 `ArrayList`，这正是尖括号的作用所在。你可以为任何类型的对象创建 `ArrayList`。`ArrayList` 初始是空的。
+
+
 
 `ArrayList` 拥有一个 `size()` 方法，可以告诉你其中当前存储了多少项。请注意，这与它的容量（capacity）无关：它们会随着添加和删除项目而增长或收缩。
 
@@ -2188,7 +2080,7 @@ ArrayListIntro.java
 
 如果你只向 `add()` 方法提供一个值，它会将新值放在末尾，并在需要时调整大小。但如果你还向 `add()` 方法传递一个槽位编号，它将把新值放在你指定的槽位中，并将所有值向右（向更大的槽位）移动以腾出空间。我们在第 19 行执行了此操作，查看输出应该能清楚列表中其他值发生了什么。
 
-### 你应该看到的内容
+## 你应该看到的内容
 
 `ArrayList` 还拥有一个 `indexOf()` 方法，它会查找你传递的值并返回首次找到它的槽位编号。如果没有找到，它将返回 `-1` 而不是槽位编号。
 
@@ -2200,12 +2092,9 @@ ArrayListIntro.java
 
 在第 44 行到 47 行，我的意图是从大到小地删除值，这样在处理过程中槽位编号就不会发生变化。
 
-
-
-
 这本书是 H.G. 威尔斯的《莫尔陶博士岛》。这本书于 1896 年首次出版，版权现已过期；它现在属于公有领域，并由优秀的古特登堡计划（Project Gutenberg）在线托管。
 
-### 你应该看到什么
+## 你应该看到什么
 
 关于这个练习没什么好说的。它是 `ArrayList` 的一个相当标准的用法。这只是对 `ArrayList` 的额外练习，以及关于对象的使用。
 
@@ -2241,7 +2130,7 @@ ArrayListIntro.java
 19 }
 ```
 
-`PrimitivesInMemory.java` 
+`PrimitivesInMemory.java`
 
 ### 你应该看到什么
 
@@ -2276,7 +2165,6 @@ Java 中所有这些数值类型类型都是“带符号”的，这意味着第
 以下是 Java 中其他整数类型的细节。
 
 | type | bits | 最小值 | 最大值 |
-
 | --- | --- | --- | --- |
 | `byte` | 8 bits | -128 | 127 |
 | `short` | 16 bits | -32768 | 32767 |
@@ -2293,11 +2181,7 @@ Java 中的字符串不是原始数据类型，所以值 `"Gosling"` 并没有�
 
 原始变量类型直接将变量的值存储在变量的内存位置中。引用变量将值存储在其他地方，而引用变量的内存位置则持有那个“其他地方”的位置。
 
-
-
-
-
-```
+```java
  1 import java.util.Scanner;
  2 import java.util.ArrayList;
  3 
@@ -2354,7 +2238,7 @@ Java 中的字符串不是原始数据类型，所以值 `"Gosling"` 并没有�
 
 大多数编程语言都会在一个名为“符号表”的大列表里跟踪程序中的所有变量。让我们来看程序的一个一小片段。
 
-```
+```java
 int x;
 int y = 5;
 double z = 1;
@@ -2386,7 +2270,7 @@ String s;
 
 让我们给这两个变量赋值。
 
-```
+```java
 x = 12;
 s = "hello";
 ```
@@ -2404,9 +2288,6 @@ s = "hello";
 | --- | --- | --- | --- | --- | --- |
 | ?????? | 5 | | 1 | | ?????? |
 
-
-
-
 输出的最后一行是你看到 `String` 对象数组时显示的内容。
 
 嗯，我想对于这个练习来说这足够了！我们将在未来的练习中更多地讨论对象、引用和原始值之间的这种区别。
@@ -2421,70 +2302,72 @@ s = "hello";
 
 现在我可以告诉你们一个秘密：`ArrayLists` `only` 可以持有引用。在代码中输入，然后我们来讨论细节。
 
-```
- 1 import java.util.ArrayList;
- 2 
- 3 public class ListsOfPrimitives {
- 4     public static void main(String[] args) {
- 5         ArrayList<String> hats = new ArrayList<String>();
- 6 
- 7         hats.add("fez");
- 8         hats.add("bowler");
- 9         hats.add("beanie");
-10         hats.add("western");
-11         hats.add("fedora");
-12 
-13         System.out.println( hats );
-14 
-15         String jumble = "";
-16         for ( String s : hats ) {
-17             jumble += s;
-18         }
-19         System.out.println("All together now: " + jumble);
-20 
-21         // ArrayList<int> bins = new ArrayList<int>();
-22         ArrayList<Integer> bins = new ArrayList<Integer>();
-23 
-24         bins.add(new Integer(1));
-25         bins.add(new Integer(3));
-26         bins.add(new Integer(3));
-27         bins.add(new Integer(1));
-28 
-29         bins.add(1);
-30         bins.add(4);
-31         bins.add(6);
-32         bins.add(4);
-33         bins.add(1);
-34 
-35         System.out.println( bins );
-36 
-37         int total = 0;
-38         for ( Integer N : bins ) {
-39             int n = N.intValue();
-40             total += n;
-41         }
-42         System.out.println("The total is " + total);
-43 
-44         total = 0;
-45         for ( int n : bins ) {
-46             total += n;
-47         }
-48         System.out.println("The total is still " + total);
-49 
-50         ArrayList<Character> letters = new ArrayList<Character>();
-51         letters.add('z'); // auto-boxes char
-53 
-54         ArrayList<Double> weights = new ArrayList<Double>();
-55         weights.add(0.14); // auto-boxes double
-56 
-57         ArrayList<Boolean> dealt = new ArrayList<Boolean>();
-58         while ( dealt.size() < 52 )
-59             dealt.add(false); // auto-boxes boolean
-60     }
-61 }
+
+
+```java
+import java.util.ArrayList;
+
+public class ListsOfPrimitives {
+    public static void main(String[] args) {
+        ArrayList<String> hats = new ArrayList<String>();
+
+        hats.add("fez");
+        hats.add("bowler");
+        hats.add("beanie");
+        hats.add("western");
+        hats.add("fedora");
+
+        System.out.println( hats );
+
+        String jumble = "";
+        for ( String s : hats ) {
+            jumble += s;
+        }
+        System.out.println("All together now: " + jumble);
+
+        // ArrayList<int> bins = new ArrayList<int>();
+        ArrayList<Integer> bins = new ArrayList<Integer>();
+
+        bins.add(new Integer(1));
+        bins.add(new Integer(3));
+        bins.add(new Integer(3));
+        bins.add(new Integer(1));
+
+        bins.add(1);
+        bins.add(4);
+        bins.add(6);
+        bins.add(4);
+        bins.add(1);
+
+        System.out.println( bins );
+
+        int total = 0;
+        for ( Integer N : bins ) {
+            int n = N.intValue();
+            total += n;
+        }
+        System.out.println("The total is " + total);
+
+        total = 0;
+        for ( int n : bins ) {
+            total += n;
+        }
+        System.out.println("The total is still " + total);
+
+        ArrayList<Character> letters = new ArrayList<Character>();
+        letters.add('z'); // auto-boxes char
+
+        ArrayList<Double> weights = new ArrayList<Double>();
+        weights.add(0.14); // auto-boxes double
+
+        ArrayList<Boolean> dealt = new ArrayList<Boolean>();
+        while ( dealt.size() < 52 )
+            dealt.add(false); // auto-boxes boolean
+    }
+}
 ```
 
-ListsOfPrimitives.java
+`ListsOfPrimitives.java`
 
 ### 你应该看到的
 
@@ -2530,43 +2413,43 @@ Java 花了很大努力来隐藏 `Strings` 有时是引用的事实，这样你�
 
 现在我可以告诉你们一个秘密：`ArrayLists` `only` 可以持有引用。在代码中输入，然后我们来讨论细节。
 
-```
- 1 import java.util.ArrayList;
- 2 
- 3 public class GenericsVsCasts {
- 4 
- 5     @SuppressWarnings("unchecked")
- 6     public static void main(String[] args) {
- 7         ArrayList objarr = new ArrayList();
- 8 
- 9         objarr.add("one");
-10         objarr.add("two");
-11 
-12         Object aa = objarr.get(0);
-13         Object bb = objarr.get(1);
-14 
-15         // String qq = objarr.get(0); // won't work
-16         // String rr = objarr.get(1); // won't work
-17 
-18         String ss = (String)objarr.get(0);
-19         String tt = (String)objarr.get(1);
-20 
-21         System.out.println(objarr);
-22 
-23         // ---------------------------------------
-24         Integer i = new Integer(123);
-25         objarr.add(i);
-26 
-27         System.out.println(objarr); // ["one", "two", 123] !!!
-28 
-29         // String uu = (String)objarr.get(2); // runtime ClassCastException
-30 
-31         // strarr.add(i); // won't compile
-32     }
-33 }
+```java
+import java.util.ArrayList;
+
+public class GenericsVsCasts {
+
+    @SuppressWarnings("unchecked")
+    public static void main(String[] args) {
+        ArrayList objarr = new ArrayList();
+
+        objarr.add("one");
+        objarr.add("two");
+
+        Object aa = objarr.get(0);
+        Object bb = objarr.get(1);
+
+        // String qq = objarr.get(0); // won't work
+        // String rr = objarr.get(1); // won't work
+
+        String ss = (String)objarr.get(0);
+        String tt = (String)objarr.get(1);
+
+        System.out.println(objarr);
+
+        // ---------------------------------------
+        Integer i = new Integer(123);
+        objarr.add(i);
+
+        System.out.println(objarr); // ["one", "two", 123] !!!
+
+        // String uu = (String)objarr.get(2); // runtime ClassCastException
+
+        // strarr.add(i); // won't compile
+    }
+}
 ```
 
-GenericsVsCasts.java
+`GenericsVsCasts.java`
 
 第 5 行是一个被称为“annotation”（注解）。在这种情况下，它是告诉编译器不要显示关于该类 `main()` 方法中“未检查或不安全操作”的警告。如果没有这个注解，代码也可以编译，但这个警告让我很困扰。
 
@@ -2581,8 +2464,6 @@ GenericsVsCasts.java
 泛型允许你创建一个对象类型是可变的结构。
 
 我应该先解释一下 `Object` 是什么。在 Java 中，*每一个*对象都继承自一个名为 `Object` 的特殊类。
-
-
 
 我们将在稍后的练习中详细讨论继承，但基本思想是：Java 中*所有*不是基本类型的类型都是一个 Object（对象）。
 
@@ -2662,27 +2543,25 @@ GenericsVsCasts.java
 
 此外！由于 String 是 Object，第 33 行和第 34 行也运行正常。变量 `a` 可以持有指向*任何* Object 的引用，包括从 `ArrayList` 中获取的 String 引用。
 
-
-
 …合并成一个大文件。我选择这些小说是因为它们很长，得益于优秀的 [古腾登堡计划](https://www.gutenberg.org/) 很容易获得，而且——最重要的是——它们现在都属于公有领域。
 
 使用不同的源材料，你可能会得到略有不同的结果。
 
 我已经回到了创建对象和驱动程序，所以你仍然输入以下文件以使程序运行。
 
-```
- 1 import java.io.FileInputStream;
- 2 
- 3 public class IBeforeEDriver {
- 4     public static void main( String[] args ) throws Exception {
- 5         FileInputStream file = new FileInputStream("datafiles/en-sample.txt");
- 6         IBeforeEChecker check = new IBeforeEChecker( file );
- 7         System.out.println( check.getWordCount() + " ie/ei words found." );
- 8         System.out.print( "\t" + check.getMatches() + " match the rule, " );
- 9         System.out.print( check.getExceptions() + " do not: " );
-10         System.out.println(100.0*check.getMatches()/check.getWordCount() + "%");
-11     }
-12 }
+```java
+import java.io.FileInputStream;
+
+public class IBeforeEDriver {
+    public static void main( String[] args ) throws Exception {
+        FileInputStream file = new FileInputStream("datafiles/en-sample.txt");
+        IBeforeEChecker check = new IBeforeEChecker( file );
+        System.out.println( check.getWordCount() + " ie/ei words found." );
+        System.out.print( "\t" + check.getMatches() + " match the rule, " );
+        System.out.print( check.getExceptions() + " do not: " );
+        System.out.println(100.0*check.getMatches()/check.getWordCount() + "%");
+    }
+}
 ```
 
 `IBeforeEDriver.java`
@@ -2693,68 +2572,70 @@ GenericsVsCasts.java
 
 现在让我们来谈谈代码是如何工作的，以及为什么它要这样安排。
 
-我想驱动程序部分应该很清楚了。我决定驱动程序必须通过构造函数传入一个 `InputStream` 对象，因为你可以从本地文本文件（使用 `FileInputStream`）或从 URL（使用 `java.net.URL` 的 `openStream()` 方法）获取 `InputStream` 对象。
 
-这样一来，`IBeforeEChecker` 对象就不需要知道或关心数据从哪里来了。这使得该对象更具通用性，也更容易让他人使用。在设计对象时，你需要考虑这些事情。
 
-驱动程序在运行器的第 6 行实例化了一个 `IBeforeEChecker` 对象。我希望这个过程快速完成，这样对象在调用真正需要这些信息的方法之前，就不会花费时间去计算统计数据。
+我想驱动程序部分应该很清楚了。我决定驱动程序必须通过构造函数传入一个`InputStream`对象，因为你可以从本地文本文件（使用`FileInputStream`）或从 URL（使用`java.net.URL`的`openStream()`方法）获取`InputStream`对象。
 
-另外注意，这个驱动程序调用了两次 `getWordCount()`。它调用了两次 `getMatches()`，并调用了一次 `getExceptions()`。当我写这个对象时，我不确定所有方法是否被调用，还是只有少数几个，而且不知道方法会以什么顺序被调用。
+这样一来，`IBeforeEChecker`对象就不需要知道或关心数据从哪里来了。这使得该对象更具通用性，也更容易让他人使用。在设计对象时，你需要考虑这些事情。
+
+驱动程序在运行器的第 6 行实例化了一个`IBeforeEChecker`对象。我希望这个过程快速完成，这样对象在调用真正需要这些信息的方法之前，就不会花费时间去计算统计数据。
+
+另外注意，这个驱动程序调用了两次`getWordCount()`。它调用了两次`getMatches()`，并调用了一次`getExceptions()`。当我写这个对象时，我不确定所有方法是否被调用，还是只有少数几个，而且不知道方法会以什么顺序被调用。
 
 这就是我创建这个对象的目标：
 
-* `IBeforeEChecker` 对象在被需要之前不应该做大量工作。
-* 它不应该重复工作。任何计算都应该只发生一次。
-* 驱动程序不需要知道调用某个神奇的“执行工作”函数；这应该在对象内部处理。
-* 无论以什么顺序调用方法，方法都应该返回正确的值。
-* 即使只调用了其中一个方法，方法也应该返回正确的值。
-* 多次调用方法不应该导致工作重复。
+- `IBeforeEChecker`对象在被需要之前不应该做大量工作。
+- 它不应该重复工作。任何计算都应该只发生一次。
+- 驱动程序不需要知道调用某个神奇的“执行工作”函数；这应该在对象内部处理。
+- 无论以什么顺序调用方法，方法都应该返回正确的值。
+- 即使只调用了其中一个方法，方法也应该返回正确的值。
+- 多次调用方法不应该导致工作重复。
 
-考虑到这些点，让我们回到 `IBeforeEChecker` 对象的代码。
+考虑到这些点，让我们回到`IBeforeEChecker`对象的代码。
 
 我们用四个私有变量开始对象；这些是实例变量/字段，在类中的每个方法中都可以访问。
 
-`source` 字段持有从对象用户处传入的 `InputStream` 对象的引用。稍后，我们将一个 `Scanner` 对象连接到这个 `InputStream` 以读取所有单词。
+`source`字段持有从对象用户处传入的`InputStream`对象的引用。稍后，我们将一个`Scanner`对象连接到这个`InputStream`以读取所有单词。
 
-`matchCount` 字段将存储符合“I before E”规则的单词数。它初始为零，因为我们还没有进行任何计算。
+`matchCount`字段将存储符合“I before E”规则的单词数。它初始为零，因为我们还没有进行任何计算。
 
-`computed` 字段是一个布尔值，在我们实际读取所有单词并进行计算之前，它将一直为 `false`。这个变量让我们不会重复执行工作。
+`computed`字段是一个布尔值，在我们实际读取所有单词并进行计算之前，它将一直为`false`。这个变量让我们不会重复执行工作。
 
-最后，`wordList` 是一个 `ArrayList` 的引用。我们所有的实例变量都在构造函数内部（12 到 15 行）赋予了合适的初始值，这始终是一个好主意。
+最后，`wordList`是一个`ArrayList`的引用。我们所有的实例变量都在构造函数内部（12 到 15 行）赋予了合适的初始值，这始终是一个好主意。
 
 ### 私有辅助方法
 
-从第 18 行开始，我们定义了一个 `private` 方法！`fitsRule()` 将是一个“辅助方法”，我们用它来让代码更容易易读和理解，但由于它是私有的，驱动程序无法直接调用它。只有我们可以在编写其他方法时才能调用它。
+从第 18 行开始，我们定义了一个`private`方法！`fitsRule()`将是一个“辅助方法”，我们用它来让代码更容易易读和理解，但由于它是私有的，驱动程序无法直接调用它。只有我们可以在编写其他方法时才能调用它。
 
-`fitsRule()` 接收一个 `String` 参数，如果该单词包含“ie”但不包含“cie”，或者它包含“cei”，则返回 `true`。
+`fitsRule()`接收一个`String`参数，如果该单词包含“ie”但不包含“cie”，或者它包含“cei”，则返回`true`。
 
-从第 28 行开始，我们定义了第二个名为 `doCalculations()` 的私有辅助方法。这个名字很笨蛋，但很合适。
+从第 28 行开始，我们定义了第二个名为`doCalculations()`的私有辅助方法。这个名字很笨蛋，但很合适。
 
-这个辅助方法将 `Scanner` 附加到用户给我们的 `InputStream` 上，然后一个单词接一个单词地扫描。对于每个单词，我们检查是否包含字母“ie”或“ei”。如果是，它就会添加到 `ArrayList` 中。（但只添加一次！添加重复单词会偏斜统计数据。）
+这个辅助方法将`Scanner`附加到用户给我们的`InputStream`上，然后一个单词接一个单词地扫描。对于每个单词，我们检查是否包含字母“ie”或“ei”。如果是，它就会添加到`ArrayList`中。（但只添加一次！添加重复单词会偏斜统计数据。）
 
-读取完所有单词后，我们从 `InputStream` 关闭/断开 `Scanner`。
+读取完所有单词后，我们从`InputStream`关闭/断开`Scanner`。
 
-然后，对于 `wordList` 中的每个 ie/ei 单词，我们使用另一个辅助方法查看该单词是否符合拼写规则。如果是，我们就增加计数器。
+然后，对于`wordList`中的每个 ie/ei 单词，我们使用另一个辅助方法查看该单词是否符合拼写规则。如果是，我们就增加计数器。
 
-最后，我们将 `computed` 字段更改为 `true`。我们很快就会发现这很重要。
+最后，我们将`computed`字段更改为`true`。我们很快就会发现这很重要。
 
 ### 公共方法
 
-我们的第一个公共方法是 `getMatches()`，它返回符合拼写规则的单词数量。返回 `matchCount`，但只有在计算完成后才有效。
+我们的第一个公共方法是`getMatches()`，它返回符合拼写规则的单词数量。返回`matchCount`，但只有在计算完成后才有效。
 
-所以，我们检查 `computed` 变量。如果不是 true，说明还没有运行计算方法。
+所以，我们检查`computed`变量。如果不是 true，说明还没有运行计算方法。
 
-`getExceptions()` 非常类似。我们不知道这些方法会以什么顺序被调用，所以这个方法也需要检查 `computed` 字段。一旦确定工作已完成，我们就执行一个小技巧。
+`getExceptions()`非常类似。我们不知道这些方法会以什么顺序被调用，所以这个方法也需要检查`computed`字段。一旦确定工作已完成，我们就执行一个小技巧。
 
-调用 `getWordCount()` 方法获取 ie/ei 单词的总数，然后减去匹配数以得到异常数。并返回结果。
+调用`getWordCount()`方法获取 ie/ei 单词的总数，然后减去匹配数以得到异常数。并返回结果。
 
-还有一个名为 `getList()` 的公共方法，它返回指向 `ArrayList` 的引用。驱动程序代码目前没有使用这个方法，但在我写对象时，我觉得可能有人想要获取这个列表。
+还有一个名为`getList()`的公共方法，它返回指向`ArrayList`的引用。驱动程序代码目前没有使用这个方法，但在我写对象时，我觉得可能有人想要获取这个列表。
 
-我认为再次强调：所有的实例变量都是 `private`，所以用户无法访问它们。如果我为对象编写 javadoc 文档，私有变量甚至不会被提到。另外，私有方法只是为了方便我。使用这个对象的人不知道它们，也不需要处理它们。构造函数和公共方法就是他们需要的。
+我认为再次强调：所有的实例变量都是`private`，所以用户无法访问它们。如果我为对象编写 javadoc 文档，私有变量甚至不会被提到。另外，私有方法只是为了方便我。使用这个对象的人不知道它们，也不需要处理它们。构造函数和公共方法就是他们需要的。
 
-练习 23：使用泛型编写趣味类
+## 练习 23：使用泛型编写趣味类
 
-几个练习前，我们查看了 Java 泛型如何允许我们使用 `ArrayList`，而不需要每次从中取出值时进行强制转换。
+几个练习前，我们查看了 Java 泛型如何允许我们使用`ArrayList`，而不需要每次从中取出值时进行强制转换。
 
 所以这次我们将看到如何在创建的类中使用泛型。这个练习有四个文件。前两个你可能应该跳过输入，你需要复制我的，因为驱动程序预期它们存在。
 
@@ -2786,19 +2667,15 @@ GenericsVsCasts.java
 
 `PointSwapperInt.java`
 
-
-
-
-
-我不确定为什么会有人想要这样的东西，但让我们假设由于某种原因，你想要一个表示点（比如 `x` 和 `y`）的类，并且你想要能够轻松交换 `x` 和 `y` 的位置。
+我不确定为什么会有人想要这样的东西，但让我们假设由于某种原因，你想要一个表示点（比如`x`和`y`）的类，并且你想要能够轻松交换`x`和`y`的位置。
 
 我也不清楚；就按我的思路吧。
 
 所以首先，我们决定这两个值应该是整数。因此，我们的私有实例变量/字段是整数。构造函数接收两个整数作为参数。
 
-我们有一个 `swap()` 方法，方法内部的临时变量也是整数。
+我们有一个`swap()`方法，方法内部的临时变量也是整数。
 
-我们的 `getFirst()` 方法返回一个整数。`getLast()` 也返回一个整数。
+我们的`getFirst()`方法返回一个整数。`getLast()`也返回一个整数。
 
 这些之所以是整数并没有什么特别的理由；它们之所以是整数是因为我们的点是由整数组成的。
 
@@ -2823,14 +2700,14 @@ GenericsVsCasts.java
  16     public double getLast()  { return b; }
  17 
  18     public String toString() {
- 19         return "(" + a + ", " + b + ")";
- 20     }
+19         return "(" + a + ", " + b + ")";
+20     }
  21 }
 ```
 
 `PointSwapperDouble.java`
 
-注意代码有多相似！除了所有的整数都变成了 `double`。当唯一的区别是点的坐标类型时，必须复制这么多代码，真是遗憾。
+注意代码有多相似！除了所有的整数都变成了`double`。当唯一的区别是点的坐标类型时，必须复制这么多代码，真是遗憾。
 
 所以这就是泛型大显身场的地方。这里相同代码的示例，但将类型变成了泛型。
 
@@ -2853,16 +2730,16 @@ GenericsVsCasts.java
  16     public Type getLast()  { return b; }
  17 
  18     public String toString() {
- 19         return "(" + a + ", " + b + ")";
- 20     }
+19         return "(" + a + ", " + b + ")";
+20     }
  21 }
 ```
 
 `PointSwapper.java`
 
-注意在 `public class` 之后之后有一个包含单词的角括号。我选择在里面放入“Type”，但它只是一个标识符。你可以在那里放入任何内容，只要保持一致，它就能工作。（不过大多数 Java 程序员更倾向于用大写字母开头。）使用 `<T>` 非常常见，`<E>`（代表“element”）也是如此。
+注意在`public class`之后之后有一个包含单词的角括号。我选择在里面放入“Type”，但它只是一个标识符。你可以在那里放入任何内容，只要保持一致，它就能工作。（不过大多数 Java 程序员更倾向于用大写字母开头。）使用`<T>`非常常见，`<E>`（代表“element”）也是如此。
 
-你会发现，每当我该说 `int` 或 `double` 的地方，我只需要放入类型参数（也称为“类型变量”）的名字：`Type`。简单！
+你会发现，每当我该说`int`或`double`的地方，我只需要放入类型参数（也称为“类型变量”）的名字：`Type`。简单！
 
 好，这里是运行所有三个对象的驱动程序。
 
@@ -2876,7 +2753,7 @@ GenericsVsCasts.java
  7         System.out.println( "after: " + pi );
  8         pi.swap();
  9         System.out.println( "after after: " + pi );
-10 
+ 10 
  11         PointSwapperDouble pd = new PointSwapperDouble(1.1, 4.4);
  12 
 13         System.out.println( "\nbefore: " + pd );
@@ -2904,110 +2781,107 @@ GenericsVsCasts.java
 
 `PointSwapper.java`
 
-驱动程序的前几行创建了一个 `PointSwapperInt` 对象并测试它。然后实例化了一个 `PointSwapperDouble` 对象。乐趣从第 19 行创建 `PointSwapper<Integer>` 和 `PointSwapper<Double>`
+驱动程序的前几行创建了一个`PointSwapperInt`对象并测试它。然后实例化了一个`PointSwapperDouble`对象。乐趣从第 19 行创建`PointSwapper<Integer>`和`PointSwapper<Double>`
 
 ### 你应该看到的
 
-遗憾的是，泛型在 Java 中的用法不像在其他语言中那样简单。在这个练习中，我们将编写一个像 Java 内置 `ArrayList` 一样工作的类。
+遗憾的是，泛型在 Java 中的用法不像在其他语言中那样简单。在这个练习中，我们将编写一个像 Java 内置`ArrayList`一样工作的类。
 
 ## 练习 24：编写一个实用的类
 
+
+
 ```java
- 1 class HardArrayList<E> {
- 2     private E[] arr;
- 3     private int used;
- 4 
- 5     @SuppressWarnings("unchecked")
- 6     public HardArrayList() {
- 7         used = 0;
- 8         arr = (E[])new Object[10];
- 9     }
-10 
-11     public int size() {
-12         return used;
-13     }
- 14 
-15     public boolean add(E obj) {
-16         if ( used == arr.length )
-17             grow();
-18         }
-19         arr[used] = obj;
-20         used++;
-21         return true;
-22     }
- 23 
-24     public void add(int index, E obj) {
-25         if ( used == arr.length )
-26             grow();
-27         // move the values to make space
-28         for ( int i=used; i>index; i-- )
-29             arr[i] = arr[i-1];
-30         arr[index] = obj;
-31         used++;
-32     }
- 33 
-34     public E get(int index) {
-35         if ( index < used ) {
-36             return arr[index];
-37         }
-38         return null;
-39     }
- 40 
-41     public E set(int index, E obj) {
-42         if ( index < used ) {
-43             E old = arr[index]; // set() returns old value
-44             arr[index] = obj;
-45             return old;
-46         }
-47         return null;
-48     }
- 49 
-50     public E remove(int index) {
-51         if ( index < used ) {
-52             E temp = arr[index];
-53             // slide everything back one slot
-54             for ( int i=index; i<used; i++ )
-55                 arr[i] = arr[i+1];
-56             used--;
-57             return temp;
-58         }
-59         return null;
-60     }
- 61 
-62     public boolean contains(E obj) {
-63         for ( int i=0; i<used; i++ )
-64             if ( arr[i].equals(obj) )
-65                 return true;
-66         return false;
-67     }
- 68 
-69     public String toString() {
-70         String out = "";
-71         if ( used > 0 )
-72             out += arr[0];
-73         for ( int i=1; i<used; i++ )
-74             out += ", " + arr[i];
-75         return "[" + out + "]";
-76     }
- 77 
-78     private void grow() {
-79         int newCapacity = 1 + 2*arr.length;
-80         @SuppressWarnings("unchecked")
-81         // E[] arr2 = new E[newCapacity]; // "error: generic array creation" :(
-82         E[] arr2 = (E[])new Object[newCapacity];
-83         for ( int i=0; i<arr.length; i++ )
-84             arr2[i] = arr[i];
-85         // move the reference so that arr now refers to the new larger array
-86         arr = arr2;
-87     }
- 88 
- 89 }
+class HardArrayList<E> {
+    private E[] arr;
+    private int used;
+
+    @SuppressWarnings("unchecked")
+    public HardArrayList() {
+        used = 0;
+        arr = (E[])new Object[10];
+    }
+
+    public int size() {
+        return used;
+    }
+
+    public boolean add(E obj) {
+        if ( used == arr.length )
+            grow();
+        arr[used] = obj;
+        used++;
+        return true;
+    }
+
+    public void add(int index, E obj) {
+        if ( used == arr.length )
+            grow();
+        // move the values to make space
+        for ( int i=used; i>index; i-- )
+            arr[i] = arr[i-1];
+        arr[index] = obj;
+        used++;
+    }
+
+    public E get(int index) {
+        if ( index < used ) {
+            return arr[index];
+        }
+        return null;
+    }
+
+    public E set(int index, E obj) {
+        if ( index < used ) {
+            E old = arr[index]; // set() returns old value
+            arr[index] = obj;
+            return old;
+        }
+        return null;
+    }
+
+    public E remove(int index) {
+        if ( index < used ) {
+            E temp = arr[index];
+            // slide everything back one slot
+            for ( int i=index; i<used; i++ )
+                arr[i] = arr[i+1];
+            used--;
+            return temp;
+        }
+        return null;
+    }
+
+    public boolean contains(E obj) {
+        for ( int i=0; i<used; i++ )
+            if ( arr[i].equals(obj) )
+                return true;
+        return false;
+    }
+
+    public String toString() {
+        String out = "";
+        if ( used > 0 )
+            out += arr[0];
+        for ( int i=1; i<used; i++ )
+            out += ", " + arr[i];
+        return "[" + out + "]";
+    }
+
+    private void grow() {
+        int newCapacity = 1 + 2*arr.length;
+        @SuppressWarnings("unchecked")
+        // E[] arr2 = new E[newCapacity]; // "error: generic array creation" :(
+        E[] arr2 = (E[])new Object[newCapacity];
+        for ( int i=0; i<arr.length; i++ )
+            arr2[i] = arr[i];
+        // move the reference so that arr now refers to the new larger array
+        arr = arr2;
+    }
+}
 ```
 
 `HardArrayList.java`
-
-
-
 
 你会注意到，我*几乎*可以直接在类名后面加上 `<E>`，然后在所有我本该放置 `Integer` 或 `Double` 的地方都改为 `E`。
 
@@ -3017,57 +2891,57 @@ GenericsVsCasts.java
 
 在我开始详细解释这些方法之前，这里是驱动程序，它对 `ListsOfPrimitives.java` 进行了修改，改为使用这个 `ArrayList` 类，而不是 Java 标准库中的那个。
 
-```
- 1 public class JavaHardArrayListDriver {
- 2     public static void main(String[] args) {
- 3         JavaHardArrayList<String> hats = new JavaHardArrayList<>();
- 4 
- 5         hats.add("fez");
- 6         hats.add("bowler");
- 7         hats.add("beanie");
- 8         hats.add("western");
- 9         hats.add("fedora");
-10 
- 11         System.out.println( hats );
- 12 
- 13         String jumble = "";
- 14         for ( int i=0; i<hats.size(); i++ ) {
- 15             jumble += hats.get(i);
- 16         }
- 17         System.out.println("All together now: " + jumble);
- 18 
- 19         JavaHardArrayList<Integer> bins = new JavaHardArrayList<>();
- 20 
- 21         bins.add(new Integer(1));
- 22         bins.add(new Integer(3));
- 23         bins.add(new Integer(3));
- 24         bins.add(new Integer(1));
- 25 
- 26         bins.add(1);
- 27         bins.add(4);
- 28         bins.add(6);
- 29         bins.add(4);
- 30         bins.add(1);
- 31 
- 32         System.out.println( bins );
- 33 
- 34         int total = 0;
- 35         for ( int i=0; i<bins.size(); i++ ) {
- 36             total += bins.get(i);
- 37         }
- 38         System.out.println("The total is " + total);
- 39 
- 40         JavaHardArrayList<Character> letters = new JavaHardArrayList<>();
- 41         letters.add('z'); // auto-boxes char
- 42 
- 43         JavaHardArrayList<Double> weights = new JavaHardArrayList<>();
- 44         weights.add(0.14); // auto-boxes double
- 45 
- 46         JavaHardArrayList<Boolean> dealt = new JavaHardArrayList<>();
- 47         while ( dealt.size() < 52 )
- 49             dealt.add(false); // auto-boxes boolean
- 49     }
- 50 }
+```java
+public class JavaHardArrayListDriver {
+    public static void main(String[] args) {
+        JavaHardArrayList<String> hats = new JavaHardArrayList<>();
+
+        hats.add("fez");
+        hats.add("bowler");
+        hats.add("beanie");
+        hats.add("western");
+        hats.add("fedora");
+
+        System.out.println( hats );
+
+        String jumble = "";
+        for ( int i=0; i<hats.size(); i++ ) {
+            jumble += hats.get(i);
+        }
+        System.out.println("All together now: " + jumble);
+
+        JavaHardArrayList<Integer> bins = new JavaHardArrayList<>();
+
+        bins.add(new Integer(1));
+        bins.add(new Integer(3));
+        bins.add(new Integer(3));
+        bins.add(new Integer(1));
+
+        bins.add(1);
+        bins.add(4);
+        bins.add(6);
+        bins.add(4);
+        bins.add(1);
+
+        System.out.println( bins );
+
+        int total = 0;
+        for ( int i=0; i<bins.size(); i++ ) {
+            total += bins.get(i);
+        }
+        System.out.println("The total is " + total);
+
+        JavaHardArrayList<Character> letters = new JavaHardArrayList<>();
+        letters.add('z'); // auto-boxes char
+
+        JavaHardArrayList<Double> weights = new JavaHardArrayList<>();
+        weights.add(0.14); // auto-boxes double
+
+        JavaHardArrayList<Boolean> dealt = new JavaHardArrayList<>();
+        while ( dealt.size() < 52 )
+            dealt.add(false); // auto-boxes boolean
+    }
+}
 ```
 
 `JavaHardArrayListDriver.java`
@@ -3130,8 +3004,6 @@ ArrayList（实际上所有的 List）都有两个 `add()` 方法。第一个在
 
 （我可能应该检查一下新的 *index* 是否超过了列表当前的大小。哎！我会在学习练习中让你做这一点。）
 
-
-
 `get()` 方法要简单得多；它只需要返回指定 `index` 处的值。我们检查请求的索引是否“越界”，然后返回该值。
 
 如果请求的索引*确实*越界了，那么目前什么都不会返回，而是执行 `return null`。如果我能更酷炫一点，我本该想个办法来像真正的 `ArrayList` 类那样抛出一个“IndexOutOfBounds”异常。但这段代码已经足够复杂了。
@@ -3185,7 +3057,11 @@ symbol table
 stack
 
 | 17400100 | …096 | …092 | …088 | …084 |
+
+
+
 | --- | --- | --- | --- | --- |
+
 | @2b8 | 10 | 14 |  | @4c0 |
 
 这是那行看起来非常无聊的关键代码：
@@ -3194,17 +3070,17 @@ stack
 arr = arr2;
 ```
 
-你看到了吗？！我们刚刚把 `arr2` 的浅拷贝值——它的引用——复制到了 *arr* 中，**覆盖**了它之前的值！所以现在栈看起来变成了这样：
+你看到了吗？！我们刚刚把 `arr2` 的浅拷贝值——它的引用——复制到了 `arr` 中，**覆盖**了它之前的值！所以现在栈看起来变成了这样：
 
 stack
 
 | 17400100 | …096 | …092 | …088 | …084 |
+
 | --- | --- | --- | --- | --- |
+
 | *@4c0* | 10 | 14 |  | @4c0 |
 
-此时，`arr` 和 `arr2` 都持有了**同一个**引用：指向那个大数组的引用！在 `grow()` 方法运行后，它的局部变量（*newCapacity* 和 *arr2*）离开了作用范围，它们的条目也会被从栈中移除。
-
-
+此时，`arr` 和 `arr2` 都持有了**同一个**引用：指向那个大数组的引用！在 `grow()` 方法运行后，它的局部变量（`newCapacity` 和 `arr2`）离开了作用范围，它们的条目也会被从栈中移除。
 
 ```
 public class ThingySorter<E extends Comparable<E>> {
@@ -3265,7 +3141,7 @@ public class ThingySorter<E extends Comparable<E>> {
 }
 ```
 
-ThingySorter.java
+`ThingySorter.java`
 
 嗯。看第一行。
 
@@ -3332,9 +3208,6 @@ public class ThingySorterDriver {
 }
 ```
 
-
-
-
 `exchangeSort()` 方法非常简单直接。我们让 `i` 从数组开头移动到末尾，然后 `j` 从 `i` 之后的位置开始也移动到末尾。如果位置 `i` 处的值大于位置 `j` 处的值，说明顺序乱了，应该交换位置。完成。
 
 你应该注意到，这些是 `嵌套` 循环，而且每个循环都会计数到末尾。这意味着如果 `N` 是数组中元素的数量，那么两个循环内部的 `if` 语句会被检查大约 `N`x`N` 次，或者说 `N²` 次。
@@ -3390,9 +3263,6 @@ arr
 
 我们稍后会详细讨论它的影响，但首先……
 
-
-
-
 二次时间意味着，如果你将数组中的数值数量翻倍，你必须进行的比较次数就会增加四倍（2x2）。如果你将数组的长度增加三倍，工作量就会增加 9 倍（3x3）。依此类推。
 
 快速排序在每次遍历中都会将元素分为两个“半部分”，因此比较次数次数实际上更接近 `N x log2(N)`。由于几乎所有的算法复杂度分析都使用以 2 为底的对数，我们将其称为 `O(n log n)`（“N log N 数量级”）。这通常被称为“对数线性时间”，这是你在排序数值时能达到的极限。
@@ -3406,13 +3276,21 @@ arr
 ### Big O
 
 | Big O | 名称 | 示例 |
+
 | --- | --- | --- |
+
 | `O(1)` | 常数 | 查找数组的第一个元素 |
+
 | `O(log n)` | 对数 | 对排序后的数组进行二分查找 |
+
 | `O(n)` | 线性 | 累加数组中的所有值 |
+
 | `O(n log n)` | 对数线性 | 快速排序 |
+
 | `O(n²)` | 二次 | 交换排序、冒排序 |
+
 | `O(2^n)` | 指数 | 递归斐波那契数列 |
+
 | `O(n!)` | 阶乘 | 暴力破解旅行商人问题 |
 
 说明一下：常数时间意味着“无论输入有多大，花费的时间都是相同的”。
@@ -3423,7 +3301,9 @@ arr
 
 而且在好几个练习中的第一次，你只需要输入一个文件！
 
-```
+
+
+```java
  1 import java.util.Arrays;
  2 import java.util.Random;
  3 import java.util.Scanner;
@@ -3518,12 +3398,9 @@ arr
 
 ### SortingSpeeds.java
 
-在本次练习中，我们将观察处理大量原生类型与大量对象 之间的相对速度。
+在本次练习中，我们将观察处理大量原生类型与大量对象之间的相对速度。
 
 而且在好几个练习中的第一次，你只需要输入一个文件！
-
-
-
 
 内部第一个块是另一个循环，它从 0 到 999 随机选取 20,000 个数字，并将副本存储到每个数组中。
 
@@ -3545,7 +3422,7 @@ arr
 
 真正更高效的是使用更好的算法，并且不需要你自己去写代码！
 
-Java 标准库提供的内置排序方法是 O(n log n)（也称为对数线性）排序。对于基本类型 `int`，[文档说](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#sort-java.lang.Object:A-)它使用了一种“稳定的、自适应的、迭代归并排序，当输入数组部分有序时，它需要的比较次数远少于 n lg(n)，当输入数组随机随机排序时，它提供传统归并排序的性能……[它] 改自 Tim Peters 的 Python 列表排序（TimSort）。”
+Java 标准库提供的内置排序方法是 O(n log n)（也称为对数线性）排序。对于基本类型 `int`，[文档说](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#sort-java.lang.Object-A-)它使用了一种“稳定的、自适应的、迭代归并排序，当输入数组部分有序时，它需要的比较次数远少于 n lg(n)，当输入数组随机随机排序时，它提供传统归并排序的性能……[它] 改自 Tim Peters 的 Python 列表排序（TimSort）。”
 
 你知道我最喜欢使用标准库排序的哪一点吗？它只需要一行代码，而且我不需要调试！而且它使用的算法比我写的要高效得多。
 
@@ -3554,11 +3431,17 @@ Java 标准库提供的内置排序方法是 O(n log n)（也称为对数线性�
 #### 米切尔先生编写高效代码的技巧
 
 1. 不要担心效率。反正，你对什么是高效的判断可能是错误的。
+
 2. 写出代码。不要担心它是否高效。
+
 3. 让代码运行起来。（调试它。）
+
 4. 确保代码执行了它应该执行的功能。（测试它。）
+
 5. 现在既然它运行正常了，这代码够快了吗？如果是，你就完成了！
+
 6. 如果太慢了，对代码进行“性能分析（profile）”，看看哪些部分慢。
+
 7. 修复慢的部分。回到步骤 4。
 
 让正确的代码运行得更快，比让一个“优化过”但损坏的代码运行起来要容易得多。
@@ -3598,9 +3481,9 @@ public class Fish {
 }
 ```
 
-FishDriver.java
+### FishDriver.java
 
-驱动程序有一个鱼的名称数组，这样我就不需要重复编写相同的代码。还有一个 `ArrayList` 用于存储对 Fish 的引用。我从遍历每个名称开始……
+驱动程序有一个鱼的名称数组，这样我就不需要重复编写相同的代码。还有一个 `ArrayList` 用于存储对 `Fish` 的引用。我从遍历每个名称开始……
 
 ```java
 public class FishDriver {
@@ -3634,22 +3517,19 @@ public class FishDriver {
 
 这就是为什么在 `Fish` 类的构造函数中有一个 `count++`。*count* 在第 4 行初始化为 `0`，因此每当创建一个新的 `Fish` 时，该 Fish 都会对共享计数器加 1，然后将自己的 `id` 字段设置为相同的数字。
 
-
-
-
 `numCreated()` 方法可以声明为 `static`，因为它`仅`尝试访问 `static` 变量。静态方法只能访问静态变量。这是因为即使在`没有`实例化该类的对象时，静态方法和静态变量也已经存在。
 
 普通的（非静态）方法可以访问两种变量，静态或非静态的。
 
 即使在没有创建 `Fish` 对象时，静态方法 `numCreated()` 也存在，你可以像我们在驱动程序第 21 行那样调用它：
 
-```
+```java
 int fishCount = Fish.numCreated();
 ```
 
 注意你直接使用了类名。从类的实例（instance）调用静态方法也是合法的（虽然很奇怪）：
 
-```
+```java
 Fish omari = new Fish("Sticks");
 int count = omari.numCreated();
 ```
@@ -3658,7 +3538,7 @@ int count = omari.numCreated();
 
 我们并不`需要`将 `numCreated()` 方法定义为 `static`。仅仅因为它只访问静态变量并不意味着它`必须`是静态的。如果我们没有把它变成静态，那么：
 
-```
+```java
 int fc = Fish.numCreated();
 ```
 
@@ -3670,44 +3550,48 @@ int fc = Fish.numCreated();
 
 既然你已经知道了静态方法和静态变量，我将指出 Java 中的几个。你在之前的练习中已经用过很多它们了！
 
+
+
+# 静态方法
+
 ```java
- 1 public class StaticMethods {
- 2     public static void main( String[] args ) {
- 3         System.out.println( "println() is a static method!" );
- 4 
- 5         System.out.print("You don't need to instantiate a Math ");
- 6         System.out.println("to call the random() method; it's static!");
- 7         double a = Math.random();
- 8         double b = Math.random();
- 9 
-10         // Math class
-11         System.out.println( Math.PI );
-12         System.out.println( Math.abs(-9) ); // 绝对值
-13         System.out.println( Math.sqrt(2) ); // 平方根
-14         System.out.println( Math.min(a, b) + " is smaller." );
-15         System.out.println( Math.max(a, b) + " is larger." );
-16         System.out.println( Math.pow(a, b) ); // a 的 b 次方
-17         double x = Math.PI * 0.5;
-18         System.out.println( Math.sin(x) );
-19         System.out.println( Math.cos(x) );
-20         System.out.println( Math.tan(x) );
-21 
-22         // String class
-23         String digits = String.valueOf( Math.E ); // valueOf() 是静态的
-24         int num = Math.min(17, digits.length());
-25         String mitchell = digits.substring(0,num); // substring() 不是静态的
-26         System.out.println("Mr. Mitchell has " + mitchell + " memorized.");
-27 
-28         // Integer class
-29         System.out.println("ints take up " + Integer.SIZE + " bits.");
-30         System.out.println("\tSmallest possible int: " + Integer.MIN_VALUE);
-31         System.out.println("\t Largest possible int: " + Integer.MAX_VALUE);
-32         int model = Integer.parseInt("1070");
-33         model += 10;
-34         System.out.println( String.valueOf(model) );
-35         System.out.println( ""+model );
-36     }
-37 }
+public class StaticMethods {
+    public static void main( String[] args ) {
+        System.out.println( "println() is a static method!" );
+
+        System.out.print("You don't need to instantiate a Math ");
+        System.out.println("to call the random() method; it's static!");
+        double a = Math.random();
+        double b = Math.random();
+
+        // Math class
+        System.out.println( Math.PI );
+        System.out.println( Math.abs(-9) ); // 绝对值
+        System.out.println( Math.sqrt(2) ); // 平方根
+        System.out.println( Math.min(a, b) + " is smaller." );
+        System.out.println( Math.max(a, b) + " is larger." );
+        System.out.println( Math.pow(a, b) ); // a 的 b 次方
+        double x = Math.PI * 0.5;
+        System.out.println( Math.sin(x) );
+        System.out.println( Math.cos(x) );
+        System.out.println( Math.tan(x) );
+
+        // String class
+        String digits = String.valueOf( Math.E ); // valueOf() 是静态的
+        int num = Math.min(17, digits.length());
+        String mitchell = digits.substring(0,num); // substring() 不是静态的
+        System.out.println("Mr. Mitchell has " + mitchell + " memorized.");
+
+        // Integer class
+        System.out.println("ints take up " + Integer.SIZE + " bits.");
+        System.out.println("\tSmallest possible int: " + Integer.MIN_VALUE);
+        System.out.println("\t Largest possible int: " + Integer.MAX_VALUE);
+        int model = Integer.parseInt("1070");
+        model += 10;
+        System.out.println( String.valueOf(model) );
+        System.out.println( ""+model );
+    }
+}
 ```
 
 `PopularStaticMethods.java`
@@ -3728,13 +3612,13 @@ Java 有一个名为 `Math` 的内置类。它位于 `java.lang` 包中，这意
 
 你现在终于掌握了足够的知识来理解该定义中的所有内容：
 
-变量名为 `PI`。它是一个 `double`，因为它是一个数字并且需要小数。它是 `final` 的，所以它已经有一个值且不能被改变。该变量是 `public` 的，这意味着可以从 `Math` 类外部直接访问。它是 `static` 的，这意味着它有一个属于整个类的副本，`并且`你不需要创建一个 `Math` 对象的实例就可以访问它。
+变量名为 `PI`。它是一个 `double`，因为它是一个数字并且需要小数。它是 `final` 的，所以它已经有一个值且不能被改变。该变量是 `public` 的，这意味着可以从 `Math` 类外部直接访问。它是 `static` 的，这意味着它有一个属于整个类的副本，并且你不需要创建一个 `Math` 对象的实例就可以访问它。
 
 呼。
 
-这就是为什么阅读 Java 文档对初学者来说非常困难。单行代码中就包含了`极多`信息，而且每个词都有重要意义并且
+这就是为什么阅读 Java 文档对初学者来说非常困难。单行代码中就包含了极多信息，而且每个词都有重要意义。
 
-### 你应该看到的
+## 你应该看到的
 
 `Math` 类中的每一个方法都是静态的，因此永远不需要实例化 `Math` 对象。
 
@@ -3742,7 +3626,7 @@ Java 有一个名为 `Math` 的内置类。它位于 `java.lang` 包中，这意
 
 `Integer` 类还包含几个实用的方法。`Integer.MAX_VALUE` 是溢出发生前 `int` 能够存储的最大值。再大 1 就会溢出。
 
-`图形` 程序往往`仅`能够接收 `String` 类型的输入。如果你要求用户输入年龄，当他们输入时，它以 `String` 形式进来。`Integer` 是溢出发生前 `int` 能够存储的最大值。再大 1 就会溢出。
+图形程序往往仅能够接收 `String` 类型的输入。如果你要求用户输入年龄，当他们输入时，它以 `String` 形式进来。`Integer` 是溢出发生前 `int` 能够存储的最大值。再大 1 就会溢出。
 
 另一个非常有用的方法是 `parseInt()`，它是 `valueOf()` 的反操作。如果你给它一个只包含数字的 `String`，它将返回一个具有相同值的 `int`。
 
@@ -3750,10 +3634,7 @@ Java 有一个名为 `Math` 的内置类。它位于 `java.lang` 包中，这意
 
 `String` 类也有几个静态方法。`substring()` 不是静态的，因为它需要有一个值来生成子字符串。
 
-
-
-
-```
+```java
 import static java.lang.Math.*;
 import static java.lang.System.out;
 
@@ -3781,19 +3662,19 @@ public class ImportingStatic {
 
 你可以说 `sqrt` 的标识符位于默认的全局“命名空间”中。如果你还记得之前练习中的符号表，那么命名空间基本上就是你在写第一行自己的代码之前，就已经在符号表中的变量列表。
 
-在其他语言中，一旦你导入了 `Math` 库，**那么** `sqrt` 就会进入命名空间中。但如果你没有导入 `Math` 库，你仍然可以在程序中使用该名称。（不确定你为什么要这么做，但是……）
+在其他语言中，一旦你导入了 `Math` 库，那么 `sqrt` 就会进入命名空间中。但如果你没有导入 `Math` 库，你仍然可以在程序中使用该名称。（不确定你为什么要这么做，但是……）
 
 Java 采用了一种我喜欢的折中方案。`Math` 库始终是“被导入”的，但函数名不会弄乱全局命名空间。我不需要担心是否可以创建一个名为 `min` 的变量，因为尽管 `Math` 库是可用的，但所有静态方法都安全地封装在内部。如果我需要它们，必须写成 `Math.min()`。
 
 但如果我正在创建一个真正的数学密集型程序呢？我真的必须写成：
 
-```
+```java
 a = Math.sqrt( Math.pow(b, 2) + Math.pow(c, 2) - 2*b*c * Math.cos(A) );
 ```
 
 天哪，不用！Java 允许你写一行代码，意思是“将所有静态方法和变量导入到当前命名空间”。
 
-```
+```java
 import static java.lang.Math.*;
 ```
 
@@ -3801,27 +3682,27 @@ import static java.lang.Math.*;
 
 在导入这些静态项后，你现在可以直接写：
 
-```
+```java
 a = sqrt( pow(b, 2) + pow(c, 2) - 2*b*c * cos(A) );
 ```
 
 这看起来好多了！
 
-### 你应该看到的内容
+## 你应该看到的内容
 
 看，它真的有效！
 
 `System` 类包含一个名为“out”的静态成员，它是一个带有我们常用的 `println` 方法的 `PrintStream` 对象！
 
-所以你可以如所示*仅*导入这一个对象，允许我们写：
+所以你可以如所示仅导入这一个对象，允许我们写：
 
-```
+```java
 out.println( "No System needed!" );
 ```
 
 向命名空间中导入大量的静态项被认为是不良风格，所以请谨慎使用。
 
-在学习练习之前还有一件事。你注意到程序末尾不寻常的输出了吗？也许没有注意到，但*我*预期 ![\pi](img/leanpub_equation_5.png) 的 `sin` 和 `tan` 应该是 0，而不是 1.2246 x 10![^{-16}](img/leanpub_equation_6.png)!
+在学习练习之前还有一件事。你注意到程序末尾不寻常的输出了吗？也许没有注意到，但我预期 `pi` 的 `sin` 和 `tan` 应该是 0，而不是 `1.2246 x 10^-16`！
 
 这是在计算机上处理浮点数时的常见问题。不仅 Java 如此；即使是专业的数值计算环境 `MATLAB` 给出的答案也是 `1.2246E-16`！我不知道你对高中数学记得如何，但 `1.22E-16` 是一个非常接近零的极小数：
 
@@ -3831,7 +3712,7 @@ out.println( "No System needed!" );
 
 也就是说，不要写：
 
-```
+```java
 double a = 0;
 double b = sin(PI);
 if ( a == b ) {
@@ -3841,7 +3722,7 @@ if ( a == b ) {
 
 ……因为 `if` 语句几乎永远为真。相反，请检查两个值是否“足够接近”：
 
-```
+```java
 double a = 0;
 double b = sin(PI);
 double error = 1.0E14;
@@ -3854,7 +3735,7 @@ if ( abs(a-b) < error ) {
 
 好了，这个练习就够了。我们在下一个练习中查看参数传递！
 
-## 练习 30：作为参数的引用
+# 练习 30：作为参数的引用
 
 在本次练习中，我们将回顾引用，并观察将引用变量作为参数传递给方法时产生。
 
@@ -3906,28 +3787,24 @@ public class ReferenceParameters {
     }
 }
 ```
-（注：原文中的代码块是行号和碎片逻辑的混合；我根据描述将其重构为清晰的 Java 结构以保持语义清晰。）
 
-ReferenceParameters.java
+`ReferenceParameters.java`
 
-所以 *a* 是一个拥有 7 个槽位的数组（编号 0 到 6）。`Arrays.fill(a, 2)` 将 `2` 填充所有槽位。
+所以 `a` 是一个拥有 7 个槽位的数组（编号 0 到 6）。`Arrays.fill(a, 2)` 将 `2` 填充所有槽位。
 
-接下来 *b* 也是一个数组。我们使用了初始化列表，所以它已经有了值，且 *b* 的长度为 `5`（索引 0 到 4）。
+接下来 `b` 也是一个数组。我们使用了初始化列表，所以它已经有了值，且 `b` 的长度为 `5`（索引 0 到 4）。
 
-然后在第 10 行，我们用 *b* 的引用覆盖了 *a*。那个只全是 2 的数组消失了；*a* 和 *b* 现在引用同一个五元素数组。显示 *a* 证实了这一点。
+然后在第 10 行，我们用 `b` 的引用覆盖了 `a`。那个只全是 2 的数组消失了；`a` 和 `b` 现在引用同一个五元素数组。显示 `a` 证实了这一点。
 
-在下一个小代码块中我们创建了第三个数组。*c* 的长度是 *a* 的两倍（所以是 10 个槽位，0-9）。我们使用传统的 `for` 循环将 *a* 的所有值拷贝到 *c* 中，因此 *c* 的前五个槽位有了数字 1-5。（其余部分仍然是零，因为那是 Java 数组默认填充的内容。）
+在下一个小代码块中我们创建了第三个数组。`c` 的长度是 `a` 的两倍（所以是 10 个槽位，0-9）。我们使用传统的 `for` 循环将 `a` 的所有值拷贝到 `c` 中，因此 `c` 的前五个槽位有了数字 1-5。（其余部分仍然是零，因为那是 Java 数组默认填充的内容。）
 
-接着在第 17 行我们再次覆盖了 *a*，这次是拷贝了 *c* 的引用。
+接着在第 17 行我们再次覆盖了 `a`，这次是拷贝了 `c` 的引用。
 
-这很酷，因为我们好像直接让 *a* 变大了。它以前有 5 个槽位，里面是 1-5，现在它拥有相同的内容但更大的容量！引用不同，但谁会在乎呢？嗯……我们会在乎。你很快就会发现。
-
-
-
+这很酷，因为我们好像直接让 `a` 变大了。它以前有 5 个槽位，里面是 1-5，现在它拥有相同的内容但更大的容量！引用不同，但谁会在乎呢？嗯……我们会在乎。你很快就会发现。
 
 从第 20 行开始，我们打印出引用以便跟踪它。请记住，虽然 Java 中的数组是对象（也是 `Object` 类型），但它们的 `toString()` 方法并没有什么好用的内容，因此尝试打印数组只会显示一些奇怪的符号，后面跟着一个内存引用。（首先开头有一个 `[` 表示它是一个数组，然后大写的 `I` 表示它是一个基本类型 `int` 数组，接着是一个 `@` 符号，最后是十六进制的引用/内存地址（也称为 16 进制）。）
 
-### 你应该看到的
+## 你应该看到的
 
 留意内存引用值的值。我们在第 20 行打印了 `a` 的当前地址，然后在接下的一行打印了它的内容。然后，我们将 `a` 引用的副本传递给静态方法 `squareValues()`。
 
@@ -3951,6 +3828,8 @@ ReferenceParameters.java
 
 > 某些编程语言具有这样一种概念：传入参数可以被函数或方法修改。在这些语言（如 C++）中，你可以指定参数是否可以被更改。
 
+
+
 > Java 没有这些。Java 中的**所有**参数都是按值传递（pass-by-copy）。如果参数是一个对象，它会创建引用的副本。如果参数是基本类型，它会创建值的副本。但它始终是一个副本。在 Java 中没有办法规避这一点，这有时虽然不方便，但在大多数情况下让 Java 程序更容易调试且编写起来更安全。
 
 好了，最后一个示例。我们打印 `a` 的引用（以防你万一忘了它是什么），然后将其副本传递给静态方法 `chopArray2()`。
@@ -3971,7 +3850,7 @@ a = chopArray2(a);
 
 这是一个细微的区别，但非常重要。
 
-总之，这个练习就够了。在下一次练习中，我们将讨论这一切对 String 对象产生什么影响。
+总之，这个练习就够了。在下一次练习中，我们将讨论这一切对 `String` 对象产生什么影响。
 
 ## 练习 31：Java 字符串是不可变的
 
@@ -4003,30 +3882,27 @@ a = chopArray2(a);
  17 }
 ```
 
-ImmutableStrings.java
+`ImmutableStrings.java`
 
-所以我们在这里从 ArrayList 开始，因为 ArrayList 是*可变的*。看修改有多简单？它有一个叫 `add()` 的方法，通过添加元素来更改对象。添加元素时，`size()` 发生变化。还有一个叫 `clear()` 的方法，它将列表重置为空状态。
+所以我们在这里从 `ArrayList` 开始，因为 `ArrayList` 是*可变的*。看修改有多简单？它有一个叫 `add()` 的方法，通过添加元素来更改对象。添加元素时，`size()` 发生变化。还有一个叫 `clear()` 的方法，它将列表重置为空状态。
 
-ArrayList 方法 `size()`、`get()`、`isEmpty()` 和 `indexOf()` 是访问器方法（accessor methods），因为它们报告对象的属性但不改变任何内容。
+`ArrayList` 方法 `size()`、`get()`、`isEmpty()` 和 `indexOf()` 是访问器方法（accessor methods），因为它们报告对象的属性但不改变任何内容。
 
-ArrayList 方法 `add()`、`clear()` 和 `set()` 是变异方法（mutator methods），因为它们改变了列表的状态。
+`ArrayList` 方法 `add()`、`clear()` 和 `set()` 是变异方法（mutator methods），因为它们改变了列表的状态。
 
 （在某些编程语言中，访问器方法和变异方法被称为“getter”和“setter”。）
 
-在 Java 中，字符串是不可变的，因为 `String` 类*没有任何变异方法*。String 类只有访问器方法。
+在 Java 中，字符串是不可变的，因为 `String` 类*没有任何变异方法*。`String` 类只有访问器方法。
 
 ### 你应该看到的
 
 让我们看一个具体的例子。`substring()` 是一个字符串方法，它通过返回字符串对象的较短版本来报告。
 
-如果变量 *word* 包含 `"impossible"`，那么 `word.substring(2)` **返回**从字符位置 2 到结尾的字符串（"possible"`）。但 *word* 所指向的字符串对象不受影响。
+如果变量 `word` 包含 `"impossible"`，那么 `word.substring(2)` **返回**从字符位置 2 到结尾的字符串（`"possible"`）。但 `word` 所指向的字符串对象不受影响。
 
 在代码中，我们调用了 `substring()` 方法，它*返回*了一个较短的字符串，而我们没有对给出的结果做任何操作。
 
-所以 *word* 所指向的对象无法被改变；它是不可变的。但我们可以改变该变量**指向**的对象！
-
-
-
+所以 `word` 所指向的对象无法被改变；它是不可变的。但我们可以改变该变量**指向**的对象！
 
 `String` 变量 `w` 包含指向 `"workaround"` 的引用。如果我们写下
 
@@ -4113,7 +3989,9 @@ Java 特意这样工作的。Java 是一种对象语言，你可能记得面向�
 面向对象编程有三个主要特征：
 
 *   多态
+
 *   继承
+
 *   封装
 
 出于某种原因，我总是用“PIE”这个助记词来记住它们。面向对象的饼里有三块！
@@ -4151,62 +4029,48 @@ Java 特意这样工作的。Java 是一种对象语言，你可能记得面向�
 20     public String toString() { return "Rect[" + length + "x" + width + "]"; }
 21 }
 ```
+
 `Rect.java`
 
-所以这是一个矩形类。注意它有两个字段：*length* 和 *width*，它它没有变异方法（有时被称为 setters），所以 `Rect` 对象是不可变的。
-
-*(Note: The provided text contained multiple repetitive loops and self-correction notes regarding Exercise 33. Following the instruction to avoid duplicate output and translate the content, the core logic remains.)*
-
-*(Wait, the user's text for Exercise 33 is actually different. I will use the text provided in the prompt section.)*
+所以这是一个矩形类。注意它有两个字段：`length` 和 `width`，它没有变异方法（有时被称为 setters），所以 `Rect` 对象是不可变的。
 
 ```
- 1 public class Rect {
- 2     private double length, width;
- 3 
- 4     public Rect() {
- 5         length = width = 0;
- 6     }
+ 1 public class Square extends Rect {
+ 2     public Square( double side ) {
+ 3         super(side, side);
+ 4     }
+ 5 
+ 6     public String toString() {
+ 7         return "Square[" + getLength() + "x" + getWidth() + "]";
+ 8     }
+ 9 }
+```
+
+`Square.java`
+
+`Square` 类使用关键字 `extends` 来继承 `Rect` 类。这意味着 `Square` 自动获得 `Rect` 的所有字段和方法。`Square` 类添加了一个构造函数和一个覆盖的 `toString()` 方法。
+
+```
+ 1 public class BasicInheritance {
+ 2     public static void main( String[] args ) {
+ 3         Rect rect1 = new Rect(4,5);
+ 4         System.out.println(rect1);
+ 5         System.out.println("\tArea: " + rect1.getArea());
+ 6         System.out.println("\tPerimeter: " + rect1.getPerimeter());
  7 
- 8     public Rect( double length, double width ) {
- 9         this.length = length;
-10         this.width = width;
-11     }
+ 8         Square sq1 = new Square(3);
+ 9         System.out.println("\n"+sq1);
+10         System.out.println("\tArea: " + sq1.getArea());
+11         System.out.println("\tPerimeter: " + sq1.getPerimeter());
 12 
-13     public double getLength() { return length; }
-14     public double getWidth() { return width; }
-15 
-16     public double getArea() { return length*width; }
-17 
-18     public double getPerimeter() { return 2*(length + width); }
-19 
-20     public String toString() { return "Rect[" + length + "x" + width + "]"; }
-21 }
-```
-
-
-
-
-```java
-public class BasicInheritance {
-     public static void main( String[] args ) {
-         Rect rect1 = new Rect(4,5);
-         System.out.println(rect1);
-         System.out.println("\tArea: " + rect1.getArea());
-         System.out.println("\tPerimeter: " + rect1.getPerimeter());
-
-         Square sq1 = new Square(3);
-         System.out.println("\n"+sq1);
-         System.out.println("\tArea: " + sq1.getArea());
-         System.out.println("\tPerimeter: " + sq1.getPerimeter());
-
-         Rect r = new Rect();
-         Rect s = new Square(2);
-         System.out.println("\n" + r + ", and " + s);
-
-         r = s;
-         System.out.println("\nHere is my rectangle: " + r);
-     }
- }
+13         Rect r = new Rect();
+14         Rect s = new Square(2);
+15         System.out.println("\n" + r + ", and " + s);
+16 
+17         r = s;
+18         System.out.println("\nHere is my rectangle: " + r);
+19     }
+20 }
 ```
 
 `BasicInheritance.java`
@@ -4229,7 +4093,7 @@ public class BasicInheritance {
 r = s;
 ```
 
-…将引用从 `s` 复制到 `r` 中。这样可以吗？当然可以，因为 `r` 能够持有一个 `Rect` 的引用，而 `s` 持有一个 `Square` 的引用，而且*每一个 Square 都是一个 Rect*。类型为 `Square` 的对象*也是*一个类型为 `Rect` 的对象，只是多了一些额外的内容。
+…将引用从 `s` 复制到 `r` 中。这样可以吗？当然可以，因为 `r` 能够持有一个 `Rect` 的引用，而 `s` 持有一个 `Square` 的引用，而且*每一个 `Square` 都是一个 `Rect`*。类型为 `Square` 的对象*也是*一个类型为 `Rect` 的对象，只是多了一些额外的内容。
 
 你可以看到 Java 甚至足够智能到调用合适的 `toString()` 方法。尽管 `r` 指向矩形，但它调用的是方形版本的 `toString()` 方法，因为引用另一端的对象实际上是一个正方形。
 
@@ -4240,6 +4104,8 @@ r = s;
 在上一章中，我把问题简化得太过了。我说子类“会自动获得[父类的]字段的副本”。这种说法是正确的！但子类可能无法*访问*那些继承来的字段！
 
 实际上，可能无法访问。在这个练习中还有一个新关键字：`protected`。
+
+
 
 ```java
 public class FieldInheritance {
@@ -4301,11 +4167,11 @@ public class FieldInheritanceSub extends FieldInheritance {
 
 `FieldInheritanceSub.java`
 
-这个子类 `extends`（继承）之前的类，这意味着它继承了所有字段和方法的副本（但没有继承构造函数）。因此 `FieldInheritanceSub`*确实*拥有 `first` 和 `last` 的副本。
+这个子类 `extends`（继承）之前的类，这意味着它继承了所有字段和方法的副本（但没有继承构造函数）。因此 `FieldInheritanceSub` *确实*拥有 `first` 和 `last` 的副本。
 
 但看看那个 `test()` 方法。注意到代码中有一行被注释掉了吗？那是故意为之。
 
-子类*确实有*字段 `first` 的副本。但它无法直接访问它。为什么？因为该字段是 `private` 的。私有字段*只能*在同一个类中访问。此。。
+子类*确实有*字段 `first` 的副本。但它无法直接访问它。为什么？因为该字段是 `private` 的。私有字段*只能*在同一个类中访问。此。
 
 其他任何类无法触碰私有数据成员，*包括*子类。
 
@@ -4390,10 +4256,6 @@ public class GamePiece {
 }
 ```
 
-
-
-
-
 这是放置在游戏棋盘上的部分的所谓“基类”。所有字段都设置为 `protected`，因为我们预期其他类会继承自这个类！
 
 每个棋子都有一个指向所在棋盘的引用，并跟踪其在网格中的行和列。由于我们只是在终端屏幕上绘图，每个棋子都存储一个符号。有一些方法允许棋子将其添加到棋盘或从棋盘中移除。这些代码在我们稍后使用后就会意义。
@@ -4442,7 +4304,7 @@ public class GameBoard {
 }
 ```
 
-GameBoard.java
+`GameBoard.java`
 
 这是游戏棋盘！它包含一个 `GamePiece` 对象的二维数组（严格来说，它包含的是一个指向对象数组的引用）。它有将棋子添加到棋盘、移除它们等方法。注意，如果他们想用一个棋子覆盖另一个棋子，我们是允许的；这在某些游戏中是可以接受的！我们只需要检查他们是否因为将棋子放在边界之外而导致程序崩溃。
 
@@ -4508,13 +4370,9 @@ public class GameTestTicTac {
 }
 ```
 
-GameTestTicTac.java
+`GameTestTicTac.java`
 
 尽管 `GamePiece` 和 `GameBoard` 应该应该是基类，但我们仍然可以使用它们来制作游戏。
-
-
-
-
 
 所以 `whichOne` 变量告诉我们下一个创建的 `TicTacPiece` 应该是“X”还是“O”。构造函数调用了 `super()` 并传入 `r`、`c` 以及这两个字母中的一个，具体取决于目前为止制作了多少个棋子。如果是偶数（`whichOne%2 == 0`），我们就向父类构造函数传递“X”。
 
@@ -4526,61 +4384,65 @@ GameTestTicTac.java
 
 好了，现在创建一个专门为井字棋设计的棋盘。
 
-```
- 1 public class TicTacBoard extends GameBoard {
- 2     private int numTurns;
- 3 
- 4     public TicTacBoard() {
- 5         super(3,3);
- 6         numTurns = 0;
- 7     }
- 8 
- 9     @Override
-10     public boolean canAdd( int r, int c ) {
- 11         return super.canAdd(r,c) && g[r][c] == null;
- 12     }
- 13 
- 14     @Override
-15     public void add( GamePiece a, int r, int c ) {
- 16         if ( canAdd(r,c) ) {
- 17             super.add(a, r, c);
- 18             numTurns++;
- 19         }
- 20     }
- 21 
- 22     public String currentPlayer() {
- 23         return numTurns%2 == 0 ? "X" : "O";
- 24     }
- 25 
- 26     public boolean isWinner() {
- 27         return isWinner("X") || isWinner("O");
- 28     }
- 29 
- 30     public boolean isOver() {
- 31         return isWinner() || numTurns == 9;
- 32     }
- 33 
- 34     public boolean isWinner( String p ) {
- 35         if ( winCheck(p, 0,0, 0,1, 0,2) ) return true;
- 36         if ( winCheck(p, 1,0, 1,1, 1,2) ) return true;
- 37         if ( winCheck(p, 2,0, 2,1, 2,2) ) return true;
- 38         if ( winCheck(p, 0,0, 1,0, 2,0) ) return true;
- 39         if ( winCheck(p, 0,1, 1,1, 2,1) ) return true;
- 40         if ( winCheck(p, 0,2, 1,2, 2,2) ) return true;
- 41         if ( winCheck(p, 0,0, 1,1, 2,2) ) return true;
- 42         if ( winCheck(p, 2,0, 1,1, 0,2) ) return true;
- 43         return false;
- 44     }
- 45 
- 46     private boolean winCheck(String p, int a,int b, int c,int d, int e,int f) {
- 47         if ( g[a][b] == null || g[c][d] == null || g[e][f] == null )
- 48             return false;
- 49         String A = g[a][b].getSymbol();
- 50         String B = g[c][d].getSymbol();
- 51         String C = g[e][f].getSymbol();
- 52         return ( p.equals(A) && A.equals(B) && B.equals(C) );
- 53     }
- 54 }
+
+
+# `TicTacBoard` 类
+
+```java
+public class TicTacBoard extends GameBoard {
+    private int numTurns;
+
+    public TicTacBoard() {
+        super(3,3);
+        numTurns = 0;
+    }
+
+    @Override
+    public boolean canAdd( int r, int c ) {
+        return super.canAdd(r,c) && g[r][c] == null;
+    }
+
+    @Override
+    public void add( GamePiece a, int r, int c ) {
+        if ( canAdd(r,c) ) {
+            super.add(a, r, c);
+            numTurns++;
+        }
+    }
+
+    public String currentPlayer() {
+        return numTurns%2 == 0 ? "X" : "O";
+    }
+
+    public boolean isWinner() {
+        return isWinner("X") || isWinner("O");
+    }
+
+    public boolean isOver() {
+        return isWinner() || numTurns == 9;
+    }
+
+    public boolean isWinner( String p ) {
+        if ( winCheck(p, 0,0, 0,1, 0,2) ) return true;
+        if ( winCheck(p, 1,0, 1,1, 1,2) ) return true;
+        if ( winCheck(p, 2,0, 2,1, 2,2) ) return true;
+        if ( winCheck(p, 0,0, 1,0, 2,0) ) return true;
+        if ( winCheck(p, 0,1, 1,1, 2,1) ) return true;
+        if ( winCheck(p, 0,2, 1,2, 2,2) ) return true;
+        if ( winCheck(p, 0,0, 1,1, 2,2) ) return true;
+        if ( winCheck(p, 2,0, 1,1, 0,2) ) return true;
+        return false;
+    }
+
+    private boolean winCheck(String p, int a,int b, int c,int d, int e,int f) {
+        if ( g[a][b] == null || g[c][d] == null || g[e][f] == null )
+            return false;
+        String A = g[a][b].getSymbol();
+        String B = g[c][d].getSymbol();
+        String C = g[e][f].getSymbol();
+        return ( p.equals(A) && A.equals(B) && B.equals(C) );
+    }
+}
 ```
 
 `TicTacBoard.java`
@@ -4599,49 +4461,48 @@ Eclipse *强制要求*使用此注解。虽然我不使用 Eclipse 且不向初�
 
 好了，现在创建一个专门为井字棋设计的棋盘。
 
+# `BreakthroughPiece` 类
 
+```java
+public class BreakthroughPiece extends GamePiece {
+    private int rowDir;
 
+    public BreakthroughPiece( int r, int c, boolean isWhite ) {
+        super(r, c, isWhite ? "W" : "B");
+        if ( isWhite )
+            this.rowDir = -1;
+        else
+            this.rowDir = +1;
+    }
 
-```
- 1 public class BreakthroughPiece extends GamePiece {
- 2     private int rowDir;
- 3 
- 4     public BreakthroughPiece( int r, int c, boolean isWhite ) {
- 5         super(r, c, isWhite ? "W" : "B");
- 6         if ( isWhite )
- 7             this.rowDir = -1;
- 8         else
- 9             this.rowDir = +1;
-10     }
- 11 
-12     public boolean canMove( int colDir ) {
- 13         int newRow = r+rowDir, newCol = c+colDir;
- 14 
-15         // 不能移动出边界。
- 16         if ( ! board.canAdd(newRow, newCol) )
- 17             return false;
- 18 
-19         // "棋子可以向前或斜向移动移动格，
- 20//    如果目标位置是空的。"
- 21         if ( board.get(newRow, newCol) == null )
- 22             return true;
- 23 
- 24         BreakthroughBoard bb = (BreakthroughBoard)board;
- 25         // 只能斜向向前捕捉对方棋子。
- 26         if ( colDir != 0 && bb.get(newRow, newCol).rowDir != this.rowDir )
- 27             return true;
- 28 
- 29         return false;
- 30     }
- 31 
- 32     public void move( int colDir ) {
- 33         if ( ! canMove(colDir) )
- 34             return;
- 35         ((BreakthroughBoard)board).movePiece(r, c, r+rowDir, c+colDir);
- 36         r += rowDir;
- 37         c += colDir;
- 38     }
- 39 }
+    public boolean canMove( int colDir ) {
+        int newRow = r+rowDir, newCol = c+colDir;
+
+        // 不能移动出边界。
+        if ( ! board.canAdd(newRow, newCol) )
+            return false;
+
+        // "棋子可以向前或斜向移动移动格，
+        // 如果目标位置是空的。"
+        if ( board.get(newRow, newCol) == null )
+            return true;
+
+        BreakthroughBoard bb = (BreakthroughBoard)board;
+        // 只能斜向向前捕捉对方棋子。
+        if ( colDir != 0 && bb.get(newRow, newCol).rowDir != this.rowDir )
+            return true;
+
+        return false;
+    }
+
+    public void move( int colDir ) {
+        if ( ! canMove(colDir) )
+            return;
+        ((BreakthroughBoard)board).movePiece(r, c, r+rowDir, c+colDir);
+        r += rowDir;
+        c += colDir;
+    }
+}
 ```
 
 `BreakthroughPiece.java` 类 `extends` 了上一个练习中的 `GamePiece` 对象，因此它继承了所有的字段和方法（构造函数除外）。
@@ -4656,13 +4517,13 @@ Eclipse *强制要求*使用此注解。虽然我不使用 Eclipse 且不向初�
 
 如果该位置目前没有任何棋子，那么移动到那里是可以的。
 
-假设那里*确实有*一个棋子（否则我们已经返回了 `true`，不会执行到方法的这么深了），那么如果我们正在进行斜向移动（`colDir` 不为 `0`）*且*那里的棋子颜色与我们不同（它的 `rowDir` 与我们的的 `rowDir` 不同），那么移动到那里也是可以的。
+假设那里*确实*有（否则我们已经返回了 `true`，不会执行到方法的这么深了），那么如果我们正在进行斜向移动（`colDir` 不为 `0`）*且*那里的棋子颜色与我们不同（它的 `rowDir` 与我们的的 `rowDir` 不同），那么移动到那里也是可以的。
 
 呼。
 
 如果你坚持过了这里，可能对类型转换感到好奇：
 
-```
+```java
 BreakthroughBoard bb = (BreakthroughBoard)board;
 ```
 
@@ -4676,81 +4537,82 @@ BreakthroughBoard bb = (BreakthroughBoard)board;
 
 好了，现在让我们来看看 `BreakthroughBoard` 的差异！
 
-```
- 1 public class BreakthroughBoard extends GameBoard {
- 2     public BreakthroughBoard() {
- 3         super(8,8);
- 4         for ( int c=0; c<8; c++ ) {
- 5             createPieceAt(0,c,false);
- 6             createPieceAt(1,c,false);
- 7             createPieceAt(6,c,true);
- 8             createPieceAt(7,c,true);
- 9         }
-10     }
- 11 
-12     @Override
- 13     public BreakthroughPiece get( int r, int c ) {
- 14         return (BreakthroughBoard)super.get(r,c);
- 15     }
- 16 
- 17     public void createPieceAt( int r, int c, boolean isWhite ) {
- 18         BreakthroughPiece piece = new BreakthroughPiece(r,c,isWhite);
- 19         board.add(r,c,piece);
- 20     }
- 21 
- 22     public void movePiece( int r, int c, int newRow, int newCol ) {
- 23         board.remove(r,c);
- 24         board.add(newRow,newCol);
- 25     }
- 26 
- 27     public boolean isWinner( String symbol ) {
- 28         int targetRow = symbol.equals("W") ? 0 : 7;
- 29         for ( int c=0; c<8; c++ ) {
- 30             if ( board.get(targetRow,c) != null ) {
- 31                 return true;
- 32             }
- 33         }
- 34         return false;
- 35     }
- 36 
- 37     @Override
- 38     public String toString() {
- 39         String out = "";
- 40         for ( int r=0; r<board.length; r++ ) {
- 41             out += "\t" + (board.length-r) + " ";
- 42             for ( int c=0; c<board[0].length; c++ ) {
- 43                 if ( board.get(r,c) == null ) {
- 44                     out += ".";
- 45                 else
- 46                     out += board.get(r,c).getSymbol();
- 47             }
- 48             out += "\n";
- 49         }
- 50         return out;
- 51     }
- 52 }
-```
-*(注：提示中的代码块包含行号，且与文本描述不符；已根据提供的逻辑进行了格式化）*
-
-
-
-
+# `BreakthroughBoard` 类
 
 ```java
- 1 public class BreakthroughTest {
- 2     public static void main( String[] args ) {
- 3         BreakthroughBoard board = new BreakthroughBoard();
- 4 
- 5         board.get(6,3).move(0);
- 6         board.createPieceAt(4,4,false);
- 7         board.createPieceAt(4,2,true);
- 8 
- 9         System.out.println("\n"+board);
-10         System.out.println( "Can move left: " + board.get(5,3).canMove(-1) );
-11         System.out.println( "Can move straight: " + board.get(5,3).canMove(0) );
-12         System.out.println( "Can move right: " + board.get(5,3).canMove(1) );
-13     }
- 14 }
+public class BreakthroughBoard extends GameBoard {
+    public BreakthroughBoard() {
+        super(8,8);
+        for ( int c=0; c<8; c++ ) {
+            createPieceAt(0,c,false);
+            createPieceAt(1,c,false);
+            createPieceAt(6,c,true);
+            createPieceAt(7,c,true);
+        }
+    }
+
+    @Override
+    public BreakthroughPiece get( int r, int c ) {
+        return (BreakthroughBoard)super.get(r,c);
+    }
+
+    public void createPieceAt( int r, int c, boolean isWhite ) {
+        BreakthroughPiece piece = new BreakthroughPiece(r,c,isWhite);
+        board.add(r,c,piece);
+    }
+
+    public void movePiece( int r, int c, int newRow, int newCol ) {
+        board.remove(r,c);
+        board.add(newRow,newCol);
+    }
+
+    public boolean isWinner( String symbol ) {
+        int targetRow = symbol.equals("W") ? 0 : 7;
+        for ( int c=0; c<8; c++ ) {
+            if ( board.get(targetRow,c) != null ) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        String out = "";
+        for ( int r=0; r<board.length; r++ ) {
+            out += "\t" + (board.length-r) + " ";
+            for ( int c=0; c<board[0].length; c++ ) {
+                if ( board.get(r,c) == null ) {
+                    out += ".";
+                else
+                    out += board.get(r,c).getSymbol();
+            }
+            out += "\n";
+        }
+        return out;
+    }
+}
+```
+
+*(注：提示中的代码块包含行号，且与文本描述不符；已根据提供的逻辑进行了格式化）*
+
+# `BreakthroughTest` 类
+
+```java
+public class BreakthroughTest {
+    public static void main( String[] args ) {
+        BreakthroughBoard board = new BreakthroughBoard();
+
+        board.get(6,3).move(0);
+        board.createPieceAt(4,4,false);
+        board.createPieceAt(4,2,true);
+
+        System.out.println("\n"+board);
+        System.out.println( "Can move left: " + board.get(5,3).canMove(-1) );
+        System.out.println( "Can move straight: " + board.get(5,3).canMove(0) );
+        System.out.println( "Can move right: " + board.get(5,3).canMove(1) );
+    }
+}
 ```
 
 `BreakthroughTest.java`
@@ -4759,67 +4621,69 @@ BreakthroughBoard bb = (BreakthroughBoard)board;
 
 除非你想，否则不需要输入它。不过，它对于寻找 bug 很有帮助！
 
+
+
 ```java
- 1 import java.util.Scanner;
- 2 import static java.lang.System.out;
- 3 
- 4 public class BreakthroughGame {
- 5     public static void main( String[] args ) {
- 6         BreakthroughBoard board = new BreakthroughBoard();
- 7         Scanner kb = new Scanner(System.in);
- 8         String col;
- 9         int row, r, c, colDir;
-10         String player = "W";
- 11         boolean goLeft, goForward, goRight;
- 12 
-13         do {
-14             out.println("\n"+board);
-15             out.print("'"+ player +"", your turn: ");
-16             col = kb.next();
-17             row = kb.nextInt();
-18 
-19             r = 8-row;
-20             c = col.charAt(0) - 'A';
- 21 
-22             BreakthroughPiece pick = board.get(r,c);
-23             if ( pick == null || ! pick.getSymbol().equals(player) ) {
-24                 out.println("\nThere's no piece you can move there. Try again.");
-25                 continue;
-26             }
- 27 
-28             goLeft = pick.canMove(-1);
-29             goForward = pick.canMove(0);
-30             goRight = pick.canMove(1);
-31             if ( !goLeft && !goForward && !goRight ) {
-32                 out.println("\nThat piece has no legal moves. Try again.");
-33                 continue;
-34             }
- 35 
-36             out.println();
-37             do {
-38                 if ( goLeft )
-39                     out.println("1) Move forward diagonally to the left.");
-40                 if ( goForward )
-41                     out.println("2) Move forward straight ahead.");
-42                 if ( goRight )
-43                     out.println("3) Move forward diagonally to the right.");
-44                 out.print("\nWhich move? ");
-45                 colDir = kb.nextInt();
-46                 if ( ! pick.canMove(colDir-2) )
-47                     out.println("\nThat wasn't one of the options. Try again.");
-48             } while ( ! pick.canMove(colDir-2) );
- 49 
-50             pick.move(colDir-2);
-51             player = player.equals("W") ? "B" : "W";
- 52 
-53         } while ( !board.isOver() );
- 54 
-55         if ( board.isWinner("W") )
-56             out.println("Player \"W\" wins!");
-57         else
-58             out.println("Player \"B\" wins!");
-59     }
- 60 }
+import java.util.Scanner;
+import static java.lang.System.out;
+
+public class BreakthroughGame {
+    public static void main( String[] args ) {
+        BreakthroughBoard board = new BreakthroughBoard();
+        Scanner kb = new Scanner(System.in);
+        String col;
+        int row, r, c, colDir;
+        String player = "W";
+        boolean goLeft, goForward, goRight;
+
+        do {
+            out.println("\n"+board);
+            out.print("'"+ player +"", your turn: ");
+            col = kb.next();
+            row = kb.nextInt();
+
+            r = 8-row;
+            c = col.charAt(0) - 'A';
+
+            BreakthroughPiece pick = board.get(r,c);
+            if ( pick == null || ! pick.getSymbol().equals(player) ) {
+                out.println("\nThere's no piece you can move there. Try again.");
+                continue;
+            }
+
+            goLeft = pick.canMove(-1);
+            goForward = pick.canMove(0);
+            goRight = pick.canMove(1);
+            if ( !goLeft && !goForward && !goRight ) {
+                out.println("\nThat piece has no legal moves. Try again.");
+                continue;
+            }
+
+            out.println();
+            do {
+                if ( goLeft )
+                    out.println("1) Move forward diagonally to the left.");
+                if ( goForward )
+                    out.println("2) Move forward straight ahead.");
+                if ( goRight )
+                    out.println("3) Move forward diagonally to the right.");
+                out.print("\nWhich move? ");
+                colDir = kb.nextInt();
+                if ( ! pick.canMove(colDir-2) )
+                    out.println("\nThat wasn't one of the options. Try again.");
+            } while ( ! pick.canMove(colDir-2) );
+
+            pick.move(colDir-2);
+            player = player.equals("W") ? "B" : "W";
+
+        } while ( !board.isOver() );
+
+        if ( board.isWinner("W") )
+            out.println("Player \"W\" wins!");
+        else
+            out.println("Player \"B\" wins!");
+    }
+}
 ```
 
 `BreakthroughGame.java`
@@ -4843,31 +4707,31 @@ BreakthroughBoard bb = (BreakthroughBoard)board;
 `Dude` 类继承自 `Object`。因此，在这个对象中，我们正在重写从 `Object` 类继承而的 `equals()` 和 `toString()` 版本。
 
 ```java
- 1 public class Dude {
- 2     private int age;
- 3     private String name;
- 4 
- 5     public Dude(String name, int age) {
- 6         this.name = name;
- 7         this.age = age;
- 8     }
- 9 
-10     @Override
-11     public boolean equals(Object obj) {
-12         Dude other = (Dude)obj;
-13         return ( this.age == other.age && this.name.equals(other.name) );
-14     }
- 15 
-16     @Override
-17     public String toString() {
-18         return name + "|" + age;
-19     }
- 20 }
+public class Dude {
+    private int age;
+    private String name;
+
+    public Dude(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Dude other = (Dude)obj;
+        return ( this.age == other.age && this.name.equals(other.name) );
+    }
+
+    @Override
+    public String toString() {
+        return name + "|" + age;
+    }
+}
 ```
 
 重写 `equals()` 时有一个小复杂之处。该方法期望一个 `Object` 类型的参数，而不是 `Dude` 类型。因此，假设他们传入的是一个 `Dude` 对象，我们将 `Object` 类型的引用强制转换回 `Dude` 类型，如下：
 
-```
+```java
 Dude other = (Dude)obj;
 ```
 
@@ -4878,9 +4742,6 @@ Dude a = new Dude("Dynamite", "Bamford");
 String s = "fuse";
 if ( a.equals(s) ) // 爆炸
 ```
-
-
-
 
 这会导致程序崩溃，而不是仅仅返回 `false`。这不太好。我们应该换一种方式编写 `equals()` 来检查这一点：
 
@@ -4911,43 +4772,43 @@ else
 这种写法的效果完全一样，但我更喜欢我这种写法。
 
 ```java
- 1 public class DudeDriver {
- 2     public static void main( String[] args ) {
- 3         Dude one = new Dude("Mitch", 39);
- 4         Dude two = new Dude("Mitch", 39);
- 5         Dude three = one;
- 6         Dude four = new Dude("Curly", 71);
- 7 
- 8         if ( one.equals(two) )
- 9             System.out.println(one + " equals " + two);
-10         else
-11             System.out.println(one + " does not equal " + two);
-12 
-13         if ( one.equals(three) )
-14             System.out.println(one + " equals " + three);
-15         else
-16             System.out.println(one + " does not equal " + three);
-17 
-18         if ( one.equals(four) )
-19             System.out.println(one + " equals " + four);
-20         else
-21             System.out.println(one + " does not equal " + four);
-22 
-23         System.out.println();
-24         if ( one == two )
-25             System.out.println(one + " == " + two);
-26         else
-27             System.out.println(one + " != " + two);
-28 
-29         if ( one == three )
-30             System.out.println(one + " == " + three);
-31         else
-32             System.out.println(one + " != " + three);
-33     }
-34 }
+public class DudeDriver {
+    public static void main( String[] args ) {
+        Dude one = new Dude("Mitch", 39);
+        Dude two = new Dude("Mitch", 39);
+        Dude three = one;
+        Dude four = new Dude("Curly", 71);
+
+        if ( one.equals(two) )
+            System.out.println(one + " equals " + two);
+        else
+            System.out.println(one + " does not equal " + two);
+
+        if ( one.equals(three) )
+            System.out.println(one + " equals " + three);
+        else
+            System.out.println(one + " does not equal " + three);
+
+        if ( one.equals(four) )
+            System.out.println(one + " equals " + four);
+        else
+            System.out.println(one + " does not equal " + four);
+
+        System.out.println();
+        if ( one == two )
+            System.out.println(one + " == " + two);
+        else
+            System.out.println(one + " != " + two);
+
+        if ( one == three )
+            System.out.println(one + " == " + three);
+        else
+            System.out.println(one + " != " + three);
+    }
+}
 ```
 
-DudeDriver.java
+`DudeDriver.java`
 
 驱动程序创建了一些 `Dude` 对象并对它们进行比较。`Dude one` 和 `Dude two` 是“等效”对象：它们是具有相同字段值的两个对象。`Dude one` 和 `Dude three` 是指向同一个对象的两个引用。
 
@@ -4964,47 +4825,42 @@ DudeDriver.java
 接口就像一份合同；它是对实现某些方法的承诺。让我们从一个小例子开始。注意它以 `public interface` 而不是 `public class` 开始。
 
 ```java
-1 public interface ArbitraryInterface {
-2     public double getNumber();
-3     public void doSomething(int n);
-4 }
+public interface ArbitraryInterface {
+    public double getNumber();
+    public void doSomething(int n);
+}
 ```
 
-ArbitraryInterface.java
+`ArbitraryInterface.java`
 
 没有缺失的代码，就是这样！选择实现 `ArbitraryInterface` 的类承诺拥有两个公共方法：一个称为 `getNumber()`，另一个称为 `doSomething()`。第一个方法*必须*不能有参数并且必须返回一个 `double` 以履行合同。第二个方法必须有一个整数参数并且不返回任何内容。（尽管这个整数参数不一定非叫 *n*。）
 
 现在这里有一个成功*实现*了该接口的类：
 
 ```java
- 1 public class InterfacePleaser implements ArbitraryInterface {
- 2     public double getNumber() {
- 3         return 4;
- 4     }
- 5 
- 6     public void doSomething(int n) {
- 7         n = Math.abs(n);
- 8         for ( int i=1; i<=n; i++ ) {
- 9             System.out.println(i);
-10         }
-11     }
-12 
-13     public int doSomethingElse(int x) {
-14         return x*x;
-15     }
-16 }
+public class InterfacePleaser implements ArbitraryInterface {
+    public double getNumber() {
+        return 4;
+    }
+
+    public void doSomething(int n) {
+        n = Math.abs(n);
+        for ( int i=1; i<=n; i++ ) {
+            System.out.println(i);
+        }
+    }
+
+    public int doSomethingElse(int x) {
+        return x*x;
+    }
+}
 ```
 
-InterfacePleaser.java
+`InterfacePleaser.java`
 
 这个类`实现`了 `ArbitraryInterface` 接口。它必须拥有这两个方法，而它确实拥有！注意接口并不关心这些方法**做什么**。它们只需要存在即可。
 
 在这个例中，我决定从要求的 `getNumber()` 中始终返回 `4`。接口并不关心这些方法**做什么**。它们只需要存在即可。
-
-（注：原文中存在大量重复的段落，此处已按要求仅翻译核心逻辑内容）
-
-
-
 
 在本次练习中，我将尝试展示实现接口是多么*有用*的。我保证，在练习结束时，我们一定能理解这一点！
 
@@ -5012,7 +4868,7 @@ Java 中内置了一个名为 `Comparable` 的接口。（它位于 `java.lang` 
 
 它看起来像这样：
 
-```
+```java
 public interface Comparable {
     public int compareTo(Object o);
 }
@@ -5021,6 +4877,10 @@ public interface Comparable {
 它非常简单。为了变得是“可比较的”，一个类只需要实现一个方法：`compareTo()`。如果该类“小于”参数，该方法*应该*返回一个负数；如果在某些意义上相等，则返回 `0`；如果它“大于”参数，则返回一个正数。
 
 当然，它所*必须*做的就是接受一个 `Object` 参数并返回任何整数，但如果你愿意配合的话，它会变得有用得多。
+
+
+
+# Buddy 类
 
 ```
  1 public class Buddy implements Comparable {
@@ -5037,27 +4897,29 @@ public interface Comparable {
  12         return ( this.age == other.age && this.name.equals(other.name) );
  13     }
  14 
- 15     public int compareTo(Object obj) {
- 16         Buddy other = (Buddy)obj;
- 17         if ( this.name.equals(other.name) )
- 18             return (this.age - other.age);
- 19         else
- 20             return this.name.compareTo(other.name);
- 21     }
- 22 
- 23     public String toString() { return name + "-" + age; }
- 24 }
+15     public int compareTo(Object obj) {
+16         Buddy other = (Buddy)obj;
+17         if ( this.name.equals(other.name) )
+18             return (this.age - other.age);
+19         else
+20             return this.name.compareTo(other.name);
+21     }
+22 
+23     public String toString() { return name + "-" + age; }
+24 }
 ```
 
-Buddy.java
+`Buddy.java`
 
 这是一个实现了 `Comparable` 接口的简单小类。（同时也重写了默认的 `equals()` 方法。）
 
 记住，传入的是一个 `Object`，而不是特定的 `Buddy`，所以我们必须对其进行类型转换。
 
-如果名字相同，我们返回年龄之间的*差值*，如果 `this` 大于 `other`，结果将是一个正数；如果相同则为零；如果 `this` 小于 `other`，则为一个负数。
+如果名字相同，我们返回年龄之间的差值，如果 `this` 大于 `other`，结果将是一个正数；如果相同则为零；如果 `this` 小于 `other`，则为一个负数。
 
 如果名字不同，我们就耍了弊，直接返回 `String` 类 `compareTo()` 方法提供的相同数字。
+
+# BuddyTester 类
 
 ```
  1 import java.io.File;
@@ -5075,36 +4937,36 @@ Buddy.java
  13             String name2  = in.next();
  14             int    age2   = in.nextInt();
  15             int    wanted = in.nextInt();
- 16 
- 17             total++;
- 18             int got = test(name1,age1 , name2,age2);
- 19             if ( got == wanted )
- 20                 correct++;
- 21             else {
- 22                 System.out.print("\t" + name1 + "-" + age1 + " compared with ");
- 23                 System.out.print(name2 + "-" + age2 + " should have given ");
- 24                 System.out.println(wanted + ", but I got " + got + " instead.");
- 25             }
- 26         }
- 27         in.close();
- 28         System.out.println(correct + " out of " + total + " tests passed.");
- 29 
- 30     }
- 31 
- 32     public static int test( String n1,int a1, String n2,int a2 ) {
- 33         Buddy one = new Buddy(n1, a1);
- 34         Buddy two = new Buddy(n2, a2);
- 35         int num = one.compareTo(two);
- 36         if ( num == 0 )
- 37             return 0;
- 38         return (num / Math.abs(num));
- 39     }
- 40 }
+16 
+17             total++;
+18             int got = test(name1,age1 , name2,age2);
+19             if ( got == wanted )
+20                 correct++;
+21             else {
+22                 System.out.print("\t" + name1 + "-" + age1 + " compared with ");
+23                 System.out.print(name2 + "-" + age2 + " should have given ");
+24                 System.out.println(wanted + ", but I got " + got + " instead.");
+25             }
+26         }
+27         in.close();
+28         System.out.println(correct + " out of " + total + " tests passed.");
+29 
+30     }
+31 
+32     public static int test( String n1,int a1, String n2,int a2 ) {
+33         Buddy one = new Buddy(n1, a1);
+34         Buddy two = new Buddy(n2, a2);
+35         int num = one.compareTo(two);
+36         if ( num == 0 )
+37             return 0;
+38         return (num / Math.abs(num));
+39     }
+40 }
 ```
 
-BuddyTester.java
+`BuddyTester.java`
 
-该类通过一系列测试用例测试了我们对 `compareTo()` 的实现。'buddytests.txt'` 文件包含许多名字和年龄的组合*以及*比较的预期输出。
+该类通过一系列测试用例测试了我们对 `compareTo()` 的实现。`buddytests.txt` 文件包含许多名字和年龄的组合以及比较的预期输出。
 
 例如，文件的前两行看起来如下：
 
@@ -5113,13 +4975,13 @@ Bob     30    Bob     30   0
 Alice   25    Bob     30  -1
 ```
 
-所以，如果我们将一个名为“Bob”、年龄为 30 的 `Buddy` 与*另一个*名字和年龄都相同的 `Buddy` 进行比较，我们期望 `compareTo()` 告诉我们 `0`。
+所以，如果我们将一个名为“Bob”、年龄为 30 的 `Buddy` 与另一个名字和年龄都相同的 `Buddy` 进行比较，我们期望 `compareTo()` 告诉我们 `0`。
 
 如果我们把一个名为“Alice”、年龄为 25 的 `Buddy` 与一个名为“Bob”、年龄为 30 的对象进行比较，我们期望返回一个负数，因为“Alice”在“Bob”之前。
 
 静态方法 `test()` 为我们完成了这项工作。它创建了两个 `Buddy` 对象并调用了 `compareTo()`。
 
-### 你所看到的
+## 你所看到的
 
 `Guy` 类与 `Buddy` 类几乎完全相同，不同在于它 `implements Comparable<Guy>`。这意味着编译器将确保我们只尝试用一个 `Guy` 对象与另一个进行 `compareTo()`。
 
@@ -5129,7 +4991,7 @@ public interface Comparable<T> {
 }
 ```
 
-现在，`Comparable` 有了泛型参数，这使得写起来变得*稍微*容易了一点。
+现在，`Comparable` 有了泛型参数，这使得写起来变得稍微容易了一点。
 
 ```
  1 public class Guy implements Comparable<Guy> {
@@ -5145,25 +5007,25 @@ public interface Comparable<T> {
  11         Guy other = (Guy)obj;
  12         return ( this.age == other.age && this.name.equals(other.name) );
  13     }
- 14 
- 15     public int compareTo(Guy obj) {
- 16         if ( this.name.equals(other.name) )
- 17             return (this.age - other.age);
- 18         else
- 19             return this.name.compareTo(other.name);
- 20     }
- 21 
- 22     public String toString() { return name + "-" + age; }
- 23 }
+14 
+15     public int compareTo(Guy obj) {
+16         if ( this.name.equals(other.name) )
+17             return (this.age - other.age);
+18         else
+19             return this.name.compareTo(other.name);
+20     }
+21 
+22     public String toString() { return name + "-" + age; }
+23 }
 ```
 
-Guy.java
+`Guy.java`
 
-无论如何，我答应过给你*有用*的东西。
+无论如何，我答应过给你有用的东西。
 
-Java 中有一个名为 `Collections` 的工具类。它有很多静态方法，其中一个方法可以对 ArrayList 中的值进行排序。这非常方便。编写排序很麻烦，你可能还记得。
+Java 中有一个名为 `Collections` 的工具类。它有很多静态方法，其中一个方法可以对 `ArrayList` 中的值进行排序。这非常方便。编写排序很麻烦，你可能还记得。
 
-然而，只有一个问题。ArrayList 只持有对象的引用，而 Java 中并不是所有对象都可以比较。一个 `Scanner` 对象“小于”另一个 `Scanner` 对象有意义吗？`Math` 类呢？一个 `Math` 对象可以“大于”另一个吗？
+然而，只有一个问题。`ArrayList` 只持有对象的引用，而 Java 中并不是所有对象都可以比较。一个 `Scanner` 对象“小于”另一个 `Scanner` 对象有意义吗？`Math` 类呢？一个 `Math` 对象可以“大于”另一个吗？
 
 所以 `Collections.sort()` 的定义大致如下：
 
@@ -5171,12 +5033,9 @@ Java 中有一个名为 `Collections` 的工具类。它有很多静态方法，
 public static void sort( List<Comparable> list )
 ```
 
-（它实际上*不是*是这样定义的，如果你勇敢且好奇，可以去查查。）
+（它实际上不是这样定义的，如果你勇敢且好奇，可以去查查。）
 
-这意味着 `Collections.sort()` 可以对任何持有*可比较*对象引用的 ArrayList 进行排序。所以如果 ArrayList 只持有实现了 `Comparable` 接口对象的引用，那么它就可以使用对象的 `compareTo()` 方法对该 ArrayList 进行排序。很酷对吧？
-
-
-
+这意味着 `Collections.sort()` 可以对任何持有可比较对象引用的 `ArrayList` 进行排序。所以如果 `ArrayList` 只持有实现了 `Comparable` 接口对象的引用，那么它就可以使用对象的 `compareTo()` 方法对该 `ArrayList` 进行排序。很酷对吧？
 
 ```
  1 import java.util.Scanner;
@@ -5221,9 +5080,9 @@ public static void sort( List<Comparable> list )
 40 }
 ```
 
-## GuyDriver.java
+## `GuyDriver.java`
 
-该程序根据数据文件中每行的第一部分创建 `Guy` 对象，并将所有唯一的对象对象添加到包含 `Guy` 对象的 `ArrayList` 中。
+该程序根据数据文件中每行的第一部分创建 `Guy` 对象，并将所有唯一的对象添加到包含 `Guy` 对象的 `ArrayList` 中。
 
 然后，它使用 `Collections.sort()` 对它们进行排序，并显示结果。
 
@@ -5241,7 +5100,7 @@ Java 有相当多的内置接口。当你编写实现了这些其中一个接口
 
 我们将在下一次练习中查看另一个流行的 Java 接口。
 
-## 练习 40：List 和 Map
+# 练习 40：List 和 Map
 
 在本次练习中，我们将查看两个非常常见的标准 Java 接口。其中一个你在整本书中一直在使用！
 
@@ -5252,9 +5111,11 @@ Java 有相当多的内置接口。当你编写实现了这些其中一个接口
 
 特别注意“所有已知实现类”（All Known Implementing Classes）列表。
 
-List 是一个存储带索引的对象的对象。Map 是一个将键映射到值的对象。（在其他编程语言中，“map”被称为字典或哈希表。）
+`List` 是一个存储带索引的对象的对象。`Map` 是一个将键映射到值的对象。（在其他编程语言中，“map”被称为字典或哈希表。）
 
 在这段代码中，我正在使用 map 来存储单词在长段英语文本中出现的次数。键是单词，而“值”是用于保存计数的 `Integer` 对象。
+
+
 
 ```
  1 import java.util.Scanner;
@@ -5320,7 +5181,7 @@ List 是一个存储带索引的对象的对象。Map 是一个将键映射到�
 61 }
 ```
 
-ListAndMap.java
+`ListAndMap.java`
 
 `Map` 对象被定义为将 `Strings` 映射到 `Integers`。尽管这有点傻，但我随机将 `wordCounts` 实例化为 `TreeMap` 或 `HashMap`，因为这并不重要！
 
@@ -5337,10 +5198,6 @@ Map<String, Integer> wordCounts = new Map<>();
 ```
 
 你*必须*选择一个实现，但只要你坚持使用接口定义的方法，你以后就可以更改主意，而你只需要修改一行代码。
-
-
-
-
 
 在 `do-while` 循环中，我还使用了一种被称为“循环半”（loop-and-a-half）的奇技：我无限循环，然后在单个条件为真时 `break`。如果没有这项技术，我需要编写类似这样的代码：
 
@@ -5520,8 +5377,6 @@ Java 内置了许多接口，每个接口都有多个实现。在编写 Java 程
 就像我们之前处理 NoughtsAndCrosses 一样，我们将创建一个包含游戏大部分规则的对象。
 
 在在这里寻找 `assert` 关键字；它是新的！
-
-
 
 
 
@@ -5718,27 +5573,28 @@ public abstract class AbstractDoor {
 ```
 
 ### DropGameConsole.java
-这是一个非常简单的终端版本游戏。所有有趣的代码都位于 `DropGameHelper` 中。
+
+这是一个非常简单的终端版本游戏。所有有趣的代码都位于`DropGameHelper`中。
 
 #### 你应该
-我们在学习图形后会回顾 `DropGameHelper`。那时我们将制作它的图形化版本！
+
+我们在学习图形后会回顾`DropGameHelper`。那时我们将制作它的图形化版本！
 
 ### 练习 3：抽象类和最终方法
+
 面向对象编程中我们还没有过的两个主要概念：抽象类和包。
 
 抽象类是继承类和实现接口之间的折中方案，结合了后者的特征。
 
 #### AbstractDoor.java
-*AbstractDoor* 是一个抽象类。如果一个类是 `abstract`，它就不能被实例化。你必须继承它并实例化子类。
 
+`AbstractDoor`是一个抽象类。如果一个类是`abstract`，它就不能被实例化。你必须继承它并实例化子类。
 
+`soundProofing()`方法是抽象的，因此没有实现，只有一个方法定义。这类似于接口中的方法：子类被要求提供具体的实现。
 
+我还决定将`toString()`方法设为`final`。（这与抽象类或抽象方法无关；我只是想在这一章提到它。）
 
-`soundProofing()` 方法是抽象的，因此没有实现，只有一个方法定义。这类似于接口中的方法：子类被要求提供具体的实现。
-
-我还决定将 `toString()` 方法设为 `final`。（这与抽象类或抽象方法无关；我只是想在这一章提到它。）
-
-`final` 方法在某种程度上是抽象方法的相反。抽象方法*必须*在扩展此类的类中实现；而 `final` 方法*不能*在子类中被重写。
+`final`方法在某种程度上是抽象方法的相反。抽象方法*必须*在扩展此类的类中实现；而`final`方法*不能*在子类中被重写。
 
 这里是一个没有正确处理的子类示例。
 
@@ -5756,9 +5612,9 @@ public abstract class AbstractDoor {
 
 `BadDoor.java`
 
-`BadDoor` 类有两个问题。首先：它扩展了一个抽象类，但*未能*为抽象方法 `soundProofing()` 提供实现。编译器会报错。
+`BadDoor`类有两个问题。首先：它扩展了一个抽象类，但*未能*为抽象方法`soundProofing()`提供实现。编译器会报错。
 
-其次，它尝试重写 `toString()` 方法，尽管该方法在父类中被标记为 `final`。编译器也会报错。
+其次，它尝试重写`toString()`方法，尽管该方法在父类中被标记为`final`。编译器也会报错。
 
 现在让我们来看一个正确处理的类。
 
@@ -5778,7 +5634,7 @@ public abstract class AbstractDoor {
 
 `GoodDoor.java`
 
-`GoodDoor` 类一切做得都是正确的。它实现了抽象方法，并且尝试重写任何 final 方法。这是一个很好的门。
+`GoodDoor`类一切做得都是正确的。它实现了抽象方法，并且尝试重写任何`final`方法。这是一个很好的门。
 
 ```
  1 public class DoorDriver {
@@ -5808,27 +5664,29 @@ public abstract class AbstractDoor {
 AbstractDoor d4 = new GoodDoor(true);
 ```
 
-变量 `d4` 保存任意 `AbstractDoor` 对象的引用。由于 `GoodDoor` 类 `extends` `AbstractDoor`，因此任何 `GoodDoor` 对象*也是*一个 `AbstractDoor` 对象。因此 `d4` 可以持有它的引用，就像对待普通的非抽象父类一样。
+变量`d4`保存任意`AbstractDoor`对象的引用。由于`GoodDoor`类`extends` `AbstractDoor`，因此任何`GoodDoor`对象*也是*一个`AbstractDoor`对象。因此`d4`可以持有它的引用，就像对待普通的非抽象父类一样。
 
 ### 你应该看到的
 
-Java 拥有接口，因此抽象方法和抽象类并没有被频繁使用。一些旧语言（如 C++）没有类似接口的东西，因此所有内容都通过抽象类来处理。它们会创建一个所谓的“纯”抽象类，其中*所有*方法都是抽象的，而 Java 程序员可能会在这里使用接口。
+Java拥有接口，因此抽象方法和抽象类并没有被频繁使用。一些旧语言（如C++）没有类似接口的东西，因此所有内容都通过抽象类来处理。它们会创建一个所谓的“纯”抽象类，其中*所有*方法都是抽象的，而Java程序员可能会在这里使用接口。
 
-Oracle 的[关于抽象方法的 Java 教程](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html) 提供了更多细节，但通常如果你“想在几个密切相关的类之间共享代码”，你会使用抽象类；而当你“预计互不相关的类会实现你的接口”时，你会使用接口。
+Oracle的[关于抽象方法的Java教程](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)提供了更多细节，但通常如果你“想在几个密切相关的类之间共享代码”，你会使用抽象类；而当你“预计互不相关的类会实现你的接口”时，你会使用接口。
 
 ## 练习 44：包 (Packages)
 
 当我们探索此书中的最后一个主要的面向对象概念时，让我们回顾面向对象编程。
 
-面向对象编程是为了为你提供工具，使得*大型*程序没有 bug 并且容易以复杂的方式组合在一起。我们不会只把 100,000 行代码放在一个函数里，而是将代码拆分成方法。
 
-我们不会仅仅将*所有*变量堆在一起以便让每行代码都能访问它们；我们会显式地将它们作为参数传递给方法。并不是每个值都会从方法中*出来*——只有我们返回的值。
+
+面向对象编程是为了给你提供工具，使得大型程序没有 bug 并且容易以复杂的方式组合在一起。我们不会只把 100,000 行代码放在一个函数里，而是将代码拆分成方法。
+
+我们不会仅仅将所有变量堆在一起以便让每行代码都能访问它们；我们会显式地将它们作为参数传递给方法。并不是每个值都会从方法中出来——只有我们返回的值。
 
 我们将相关的方法分组为较大的块，称为 `class`（类），并带有一些共享变量（字段）。
 
-最后，我们将相关的*类*分组为更大的块，称为 `package`（包）。
+最后，我们将相关的类分组为更大的块，称为 `package`（包）。
 
-你从一开始就在*使用*包了，只是还没有编写过自己的。考虑这个导入语句：
+你从一开始就在使用包了，只是还没有编写过自己的。考虑这个导入语句：
 
 ```
 import java.util.ArrayList;
@@ -5837,8 +5695,6 @@ import java.util.ArrayList;
 `ArrayList` 类包含在一个名为“util”的 `package` 中。这就是它的含义。Java 中的包是可选的，但几乎所有大型项目都会使用它们。
 
 在我们开始编写代码之前，在你的代码文件夹内部创建一个新文件夹/目录。将新文件夹名为 `zoo`。你可以通过 `mkdir zoo` 执行此。然后通过 `cd zoo` 进入该目录。输入以下代码：
-
-
 
 我们将根据上一个练习中编写的文件创建一个 JAR 文件，但你可以为任何 Java 类创建 JAR 文件，即使它没有使用包（packages）。
 
@@ -5876,7 +5732,7 @@ manifest.txt
 
 （它只有一行，但最后必须有一个换行符，所以在在保存之前至少按一次回车键。）
 
-所以如果你想像这样提供自己的清单文件，jar 命令看起来应该是这样：
+所以如果你想像这样提供自己的清单文件，`jar` 命令看起来应该是这样：
 
 还有一个细节：我们先列出 JAR 文件名，后列出清单或入口点，因为 `f` 选项列在 `m` 选项之前。我们也可以这样做：
 
@@ -5935,7 +5791,7 @@ public class SimpleWindow extends Application {
 
 SimpleWindow.java
 
-假设你安装了 1.8  JDK，此程序应该可以正常编译和运行。如果你使用的是较旧版本的 Java，你必须研究如何安装 JavaFX。
+假设你安装了 1.8 JDK，此程序应该可以正常编译和运行。如果你使用的是较旧版本的 Java，你必须研究如何安装 JavaFX。
 
 如果你像我一样在 Linux 上使用 OpenJDK 版本的 Java，你需要单独安装 JavaFX：
 
@@ -5955,9 +5811,6 @@ Linux SimpleWindow 截图
 
 自 1995 年 Java 的第一个版本以来就有 GUI 库。最初他们使用 AWT（抽象窗口工具包）。它比没有要好，但存在一些问题。
 
-
-
-
 随后，在 1998 年 Java 1.2 版本发布时，引入了一个名为“Swing”的新型 GUI 库。这比 AWT 好得多，但仍然不够完美。
 
 Oracle 提供的最新、最强大的 GUI 库是 JavaFX，它首次出现在 2011 年底的 Java 1.7 版本中。不过，它曾经是一个独立的下载包。
@@ -5970,7 +5823,7 @@ Oracle 提供的最新、最强大的 GUI 库是 JavaFX，它首次出现在 201
 
 每个 JavaFX 应用程序都从 `javafx.application.Application` 的子类开始。名为 `start()` 的方法是程序开始的地方，并且是必须的。JavaFX 会创建一个名为“Stage”（阶段）的基本窗口，并将它的引用传递给 `start()` 方法。
 
-在 `Stage` 对象内部有一个 `Scene`场景）对象。`Scene` 是窗口中所有其他内容的容器。在场景内部是一个复杂得多的链式（树或图）结构，被称为“scene graph（场景图）”。这个程序有一个极其简单的场景图：只有一个名为“root”（根）的节点。
+在 `Stage` 对象内部有一个 `Scene`（场景）对象。`Scene` 是窗口中所有其他内容的容器。在场景内部是一个复杂得多的链式（树或图）结构，被称为“scene graph（场景图）”。这个程序有一个极其简单的场景图：只有一个名为“root”（根）的节点。
 
 每个场景图都必须有一个根节点。在这次练习中，我只是使用了一个名为 `Group` 的容器节点，但组内部什么都没有。
 
@@ -5982,15 +5835,15 @@ Oracle 提供的最新、最强大的 GUI 库是 JavaFX，它首次出现在 201
 
 JavaFX 程序并不非要有 `main()` 方法。你可以使用名为“JavaFX Packager tool”的工具来创建它们。但如果你打算像这样从终端运行它们，你需要一个 `main()` 方法，而它需要做的就是调用 `launch()`，这是一个继承自 `Application` 的静态方法。
 
-这个窗口非常简单，但它有标题也有大小。你可以移动窗口、改变它的 own、最小化它等。
+这个窗口非常简单，但它有标题也有大小。你可以移动窗口、改变它的大小、最小化它等。
 
-更重要的是，这是所有 JavaFX 应用程序都将拥的基础“外壳”。如果你不真正理解所有这些代码的作用或它是如何运行的，也没关系，因为在每一个程序中它几乎都是一样的。
+更重要的是，这是所有 JavaFX 应用程序都将拥有的基础“外壳”。如果你不真正理解所有这些代码的作用或它是如何运行的，也没关系，因为在每一个程序中它几乎都是一样的。
 
-（唯一的真实区别在于我们为场景图的根节点选择了了种种容器。）
+（唯一的真实区别在于我们为场景图的根节点选择了不同的容器。）
 
 ## 练习 47：交互式窗口
 
-在这次练习中，我们将观察一个实际上能*执行某些操作*的更复杂的 GUI 窗口。它将有一个可以输入文本的文本框和一个按钮。当你点击按钮时，它将在终端中显示该文本。
+在这次练习中，我们将观察一个实际上能执行某些操作的更复杂的 GUI 窗口。它将有一个可以输入文本的文本框和一个按钮。当你点击按钮时，它将在终端中显示该文本。
 
 提前对开头所有的 import 语句表示歉意。我们的学习终于到了一个阶段，此时可能开始使用一个真正的集成开发环境 (IDE) 来为你自动完成某些 import 会更有意义。（如果你打算走那条路，我建议只用 Netbeans IDE 的 Java SE 包。）
 
@@ -6051,6 +5904,7 @@ import javafx.scene.layout.*;
 41     }
 42 }
 ```
+
 `MessengerWindow.java`
 
 就像上一次一样，这个应用程序有一个阶段、一个场景，以及至少一个作为场景图根节点的节点。在这种情况下，根节点将是 `GridPane`，这使得按行和列排列组件变得简单。
@@ -6067,20 +5921,19 @@ Linux 截图
 
 > JavaFX 有许多内置控件，包括复选框、日期选择器、进度条和对话框。它们中的大多数位于 `javafx.scene.control`，但那些弹出整个新“窗口”的在技术上是独立的阶段，因此——例如 `FileChooser` 位于 `javafx.stage` 而不是这里。
 
-
-
-
 编译后如果你查看代码文件夹，你会发现除了 `MessengerWindow.class` 之外，还有一个名为 `MessengerWindow$1.class` 的字节码文件。那就是匿名类的字节码！
 
 不管如何，`EventHandler` 接口只有一个我们需要实现的单一方法。它被称为 `handle()`。在这种情况下，我们只需要调用 `TextField` 对象的 `getText()` 方法，并打印出它给我们的 `String` 即可。
 
-`start()` 方法中的其余代码是让 `GridPane` 看起来像我们所想要的那样。我们希望面板面板内的控件在水平和垂直方向上都居中，因此我们在 `GridPane` 对象上调用了 `setAlignment()`。我们还希望控件之间有 20 像素的垂直间距。
+`start()` 方法中的其余代码是让 `GridPane` 看起来像我们所想要的那样。我们希望面板内的控件在水平和垂直方向上都居中，因此我们在 `GridPane` 对象上调用了 `setAlignment()`。我们还希望控件之间有 20 像素的垂直间距。
 
 然后，我们将 `TextField` 对象添加到网格的第 0 列第 0 行，并将 `Button` 添加到网格的第 0 列第 1 行。
 
 最后，我们要求根节点将按钮对象的水平对齐方式设置为居中。（否则，按钮将左对齐。）
 
 然后，就像之前一样，我们设置了窗口的标题，将包含我们场景图的场景（scene）附加到舞台（stage）上，并让它可见。
+
+
 
 图形程序很快就会变得复杂，这就是为什么我不带初学者做这些的。在下一个练习中，我将向你展示另一种在 JavaFX 中设置用户界面的方法。
 
@@ -6090,7 +5943,7 @@ Linux 截图
 
 所以，和大多数图形库一样，JavaFX 包含了一种在独立的文本文件中描述用户界面布局的方法，该文件可以手动创建或使用工具创建。当应用程序运行时，它会加载该文件来设置它的界面。
 
-Java 使用 XML 标记语言为此，并将其变体称为 FXML。这里有一个与之前的练习非常的程序，但使用 FXML 而不是 Java 代码来设置界面。
+Java 使用 XML 标记语言为此，并将其变体称为 FXML。这里有一个与之前的练习非常相似的程序，但使用 FXML 而不是 Java 代码来设置界面。
 
 ```java
  1 import javafx.application.Application;
@@ -6103,17 +5956,17 @@ Java 使用 XML 标记语言为此，并将其变体称为 FXML。这里有一�
  8     @Override
  9     public void start(Stage stage) throws Exception {
 10         Parent root = FXMLLoader.load(getClass().getResource("messenger.fxml"));
- 11         Scene scene = new Scene(root, 300, 200);
- 12 
- 13         stage.setTitle("Messenger FXML");
- 14         stage.setScene(scene);
- 15         stage.show();
- 16     }
- 17 
- 18     public static void main( String[] args ) {
- 19         launch(args);
- 20     }
- 21 }
+11         Scene scene = new Scene(root, 300, 200);
+12 
+13         stage.setTitle("Messenger FXML");
+14         stage.setScene(scene);
+15         stage.show();
+16     }
+17 
+18     public static void main( String[] args ) {
+19         launch(args);
+20     }
+21 }
 ```
 
 主类比以前简单得多，因为整个场景图是从一个 FXML 文件加载的！老实说，这段代码没什么内容。
@@ -6129,14 +5982,14 @@ Java 使用 XML 标记语言为此，并将其变体称为 FXML。这里有一�
  8 
  9     @FXML protected void handleButtonClickOrWhatever(ActionEvent event) {
 10         Alert alert = new Alert(Alert.AlertType.INFORMATION, tf.getText());
- 11         alert.showAndWait();
- 12     }
- 13 }
+11         alert.showAndWait();
+12     }
+13 }
 ```
 
-嗯，我们不能再使用匿名类了，所以这里有一个持有在点击 `Button` 时运行的方法类。`@FXML` 注解标记了你想要在 FXML 文件引用的变量或方法。
+嗯，我们不能再使用匿名类了，所以这里有一个持有在点击 `Button` 时运行的方法的类。`@FXML` 注解标记了你想要在 FXML 文件引用的变量或方法。
 
-注意，这个类可以是任何类；它*并不需要*实现 `EventHandler` 接口。而且由于我们没有为接口实现特定的方法，所以我们的处理器方法可以命名为任何我们。
+注意，这个类可以是任何类；它*并不需要*实现 `EventHandler` 接口。而且由于我们没有为接口实现特定的方法，所以我们的处理器方法可以命名为任何我们想要的名字。
 
 如果我们有十个按钮，我们可以把所有十个处理器方法都放在同一个类中。我们甚至可以把它们放在原始类中，但稍微分开一点会更整洁。
 
@@ -6151,22 +6004,19 @@ Java 使用 XML 标记语言为此，并将其变体称为 FXML。这里有一�
  8     xmlns:fx="http://javafx.com/fxml" alignment="center" vgap="20">
  9 
 10     <TextField fx:id="tf"
- 11         text="Graphics the FXML Way!"
- 12         GridPane.columnIndex="0" GridPane.rowIndex="0"/>
- 13 
- 14     <Button text="Print Message"
- 15         GridPane.columnIndex="0" GridPane.rowIndex="1"
- 16         GridPane.halignment="CENTER"
- 17         onAction="#handleButtonClickOrWhatever"/>
- 18 </GridPane>
+11         text="Graphics the FXML Way!"
+12         GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+13 
+14     <Button text="Print Message"
+15         GridPane.columnIndex="0" GridPane.rowIndex="1"
+16         GridPane.halignment="CENTER"
+17         onAction="#handleButtonClickOrWhatever"/>
+18 </GridPane>
 ```
 
 这是我们的 FXML 文件。我把它命名为 `messenger.fxml`，但你可以称它为任何名字，只要名称与我们在 `start()` 方法开头加载的名称匹配即可。
 
-
-
-
-你 `can` 使用 Java 来制作视频游戏。事实上，Minecraft（史上最畅销的独立视频游戏之一）就是用 Java 编写的。游戏通常需要对屏幕上绘制的内容及其绘制时机有非常详尽的控制，因此它们倾向于直接使用一个“画布（canvas）”并手动完成所有操作。
+你`可以`使用 Java 来制作视频游戏。事实上，Minecraft（史上最畅销的独立视频游戏之一）就是用 Java 编写的。游戏通常需要对屏幕上绘制的内容及其绘制时机有非常详尽的控制，因此它们倾向于直接使用一个“画布（canvas）”并手动完成所有操作。
 
 因此，接下来的几个练习将介绍如何在 JavaFX 程序中画布上进行绘制。
 
@@ -6202,7 +6052,7 @@ Java 使用 XML 标记语言为此，并将其变体称为 FXML。这里有一�
 29         double x = canvas.getWidth() / 2;
 30         double y = canvas.getHeight() / 2;
 31         gc.fillText("This message is at (" + x + "," + y + ")", x, y);
-33 
+32 
 33         root.getChildren().add(canvas);
 34 
 35         stage.setTitle("Canvas Basics");
@@ -6216,9 +6066,9 @@ Java 使用 XML 标记语言为此，并将其变体称为 FXML。这里有一�
 43 }
 ```
 
-CanvasBasics.java
+`CanvasBasics.java`
 
-在 `start()` 方法的最开始处，我们做了一点 `little`不同的事情。我们没有告诉 `Scene` 窗口有多大，而是告诉 `Canvas` 对象应该是多大，然后让 `Scene` 自动调整大小以适应 `Canvas`。
+在 `start()` 方法的最开始处，我们做了一点`小`不同的事情。我们没有告诉 `Scene` 窗口有多大，而是告诉 `Canvas` 对象应该是多大，然后让 `Scene` 自动调整大小以适应 `Canvas`。
 
 此外，我们没有使用 `GridPane`，而是回到了仅使用一个无聊的 `Group` 作为场景图的根。事实上，场景图中除了根节点和 `canvas` 之外，什么内容都没有。
 
@@ -6226,11 +6076,11 @@ CanvasBasics.java
 
 ![Linux screenshot of CanvasBasics](img/CanvasBasics-linux.png)
 
-CanvasBasics 的 Linux 截图
+`CanvasBasics` 的 Linux 截图
 
 `Canvas` 是我们进行绘制的，但 `GraphicsContext` 对象包含了其中所有的方法。（这与其它编程语言的处理方式类似。）
 
-所以我们告诉 `GraphicsContext`，每当它在画布上绘制线条描边时，都使用绿色（`setStroke()`）。同样，每当它在画布上填充形状时，它 `也` `also` 使用绿色（`setFill()`）。
+所以我们告诉 `GraphicsContext`，每当它在画布上绘制线条描边时，都使用绿色（`setStroke()`）。同样，每当它在画布上填充形状时，它`也`使用绿色（`setFill()`）。
 
 我们首先在画布上绘制一个仅有轮廓（描边）的矩形：距离左侧 50 像素，距离顶部 20 像素，宽度为 100 像素，高度为 200 像素。
 
@@ -6248,9 +6098,6 @@ CanvasBasics 的 Linux 截图
 
 这可能不是世界上最有趣的图形程序，但你将理解 `GraphicsContext` 对象是如何绘制到 `Canvas` 上的。
 
-
-
-
 然后我们创建第二个匿名类来创建一个匿名的 `AnimationTimer` 对象，并对其调用 `start()` 方法。`AnimationTimer` 每秒大约会调用其 `handle()` 方法 60 次。（参数 `now` 包含一个不断递增的纳秒数，这有助于确定`精确`距离上一次调用 `handle()` 已经过去了多久。这对于复杂程序中的平滑动画是必要的。）
 
 处理器用当前颜色绘制一个矩形，并在屏幕上显示当前消息。然而，在多次调用 `handle()` 方法之间，画布`并没有`被清除，因此我们必须通过用白色矩形覆盖它来手动“擦除”之前的消息。否则，当消息变化时，它将覆盖之前的消息并导致无法阅读。
@@ -6259,7 +6106,7 @@ CanvasBasics 的 Linux 截图
 
 ![Linux screenshot of MouseDemo](img/MouseDemo-linux.png)
 
-MouseDemo 的 Linux 截图
+`MouseDemo` 的 Linux 截图
 
 对于程序来说，这种设计很奇怪，但它展示了编写游戏的一种非常常见的方式：使用一个每秒运行多次的主游戏循环。
 
@@ -6282,27 +6129,27 @@ MouseDemo 的 Linux 截图
 10 
 11 public class TrafficLight extends Application {
 12     @Override
- 13     public void start(Stage stage) {
+13     public void start(Stage stage) {
 14         Group root = new Group();
- 15         Scene scene = new Scene(root, 300, 600);
+15         Scene scene = new Scene(root, 300, 600);
 16 
 17         Label label = new Label("Click on one of the circles!");
 18         label.relocate(20, 10);
 19 
 20         Circle circle1 = new Circle(150, 140, 75);
- 21         circle1.setFill(Color.RED);
- 22         Circle circle2 = new Circle(150, 310, 75);
- 23         circle2.setFill(Color.YELLOW);
- 24         Circle circle3 = new Circle(150, 480, 75);
- 25         circle3.setFill(Color.web("#008000"));
+21         circle1.setFill(Color.RED);
+22         Circle circle2 = new Circle(150, 310, 75);
+23         circle2.setFill(Color.YELLOW);
+24         Circle circle3 = new Circle(150, 480, 75);
+25         circle3.setFill(Color.web("#008000"));
 26 
 27         scene.addEventHandler(MouseEvent.MOUSE_CLICKED,
 28                 new EventHandler<MouseEvent>() {
 29             @Override
 30             public void handle(MouseEvent t) {
 31                 if ( circle1.contains(t.getX(), t.getY()) )
-33                     label.setText("You clicked on the red circle!");
-34                 else if ( circle2.contains(t.getX(), t.getY()) )
+32                     label.setText("You clicked on the red circle!");
+33                 else if ( circle2.contains(t.getX(), t.getY()) )
 34                     label.setText("You clicked on the yellow circle!");
 35                 else if ( circle3.contains(t.getX(), t.getY()) )
 36                     label.setText("You clicked on the green circle!");
@@ -6324,31 +6171,29 @@ MouseDemo 的 Linux 截图
 
 `TrafficLight.java`
 
-在之前的练习中，我们使用 `GridPanel` 作为场景图的根节点。我们只需要告诉它将控件放在哪一行、哪一列，它就会管理所有东西的位置。
+在之前的练习中，我们使用 `GridPane` 作为场景图的根节点。我们只需要告诉它将控件放在哪一行、哪一列，它就会管理所有东西的位置。
 
 这次我们只使用通用的 `Group` 节点作为根节点，因此我们将手动指定该组内所有元素的位置。
 
 `Label` 对象只显示文本。与 `TextField` 不同，文本不能由用户编辑，但我们仍然可以更改。标签默认将自己放置在 `(0, 0)` 点处，因此我们手动将其移动到从 `(10,20)` 开始。
 
-然后我们创建三个 `Circle` 对象，指定每个圆的中心点和半径，然后告诉每个 `Circle` 对象用什么颜色填充自己。
 
-对于第三个圆，我们本可以直接使用 `Color.GREEN`，但我想演示一下 JavaFX 也允许你使用类似 Web 的十六进制值设置颜色。
 
-然后，我们向 `Scene` 对象添加了一个匿名类来处理鼠标点击。与之前的练习不同，我们实际上是想知道他们点击了`哪里`，因此我们将调用 `MouseEvent` 参数的 `getX()` 和 `getY()` 方法。
+然后我们创建三个`Circle`对象，指定每个圆的中心点和半径，然后告诉每个`Circle`对象用什么颜色填充自己。
 
-JavaFX `Circle` 对象非常方便，因为你只需要使用内置的 `contains()` 方法询问它们某个点是否在内部即可。所以，如果点击在第一个圆内，我们会更新标签文本以说明。如果点击没有在`任何`圆内，我们只需更改标签显示他们点击的位置。
+对于第三个圆，我们本可以直接使用`Color.GREEN`，但我想演示一下 JavaFX 也允许你使用类似 Web 的十六进制值设置颜色。
 
-最后，我们使用方便的 `addAll()` 方法将标签和我们的三个圆添加到场景图中。（我们也可以调用四次 `add()`。）
+然后，我们向`Scene`对象添加了一个匿名类来处理鼠标点击。与之前的练习不同，我们实际上是想知道他们点击了`哪里`，因此我们将调用`MouseEvent`参数的`getX()`和`getY()`方法。
+
+JavaFX`Circle`对象非常方便，因为你只需要使用内置的`contains()`方法询问它们某个点是否在内部即可。所以，如果点击在第一个圆内，我们会更新标签文本以说明。如果点击没有在`任何`圆内，我们只需更改标签显示他们点击的位置。
+
+最后，我们使用方便的`addAll()`方法将标签和我们的三个圆添加到场景图中。（我们也可以调用四次`add()`。）
 
 ## 练习 52：动画
 
-在本次练习中，我们仍然使用场景图在事物发生变化时自动重绘的能力，但我们现在回到使用 `AnimationTimer` 来让物体在没有用户输入的情况下移动起来。
+在本次练习中，我们仍然使用场景图在事物发生变化时自动重绘的能力，但我们现在回到使用`AnimationTimer`来让物体在没有用户输入的情况下移动起来。
 
 我们将让一个 Logo 在屏幕上“弹跳”。
-
-
-
-
 
 ```java
 import javafx.animation.AnimationTimer;
@@ -6430,27 +6275,27 @@ public class BouncingLogo extends Application {
 
 `BouncingLogo.java`
 
-我们使用两个变量 `x` 和 `y` 来跟踪图像的位置。变量 `dx` (delta-x) 将用于跟踪图像 x 值在每一帧中的变化量，`dy` 也是如此，但针对的是 y 值。虽然可以使用角度和速度来代替，但那样你就得接触三角函数了，这对我的高中生们来说很麻烦。
+我们使用两个变量`x`和`y`来跟踪图像的位置。变量`dx` (delta-x) 将用于跟踪图像 x 值在每一帧中的变化量，`dy` 也是如此，但针对的是 y 值。虽然可以使用角度和速度来代替，但那样你就得接触三角函数了，这对我的高中生们来说很麻烦。
 
-由于这些变量将由我们的匿名内部类修改，因此我们必须将它们变为实例变量，而不仅仅是 `start()` 方法内部的局部变量。
+由于这些变量将由我们的匿名内部类修改，因此我们必须将它们变为实例变量，而不仅仅是`start()`方法内部的局部变量。
 
-我们从 `datafiles` 文件夹中的文件加载一张图像，并创建一个 `Image` 对象。然后，我们将 `Image` 封装在 `ImageView` 对象中，这是一个可以添加到场景图中的节点。（你可以使用 `GraphicsContext` 的 `drawImage()` 方法直接在 `Canvas` 上绘制 `Image` 对象，但除非它们在 `ImageView` 中，否则你不能直接将 `Image` 对象添加到场景图中。）我们还创建了一个同样大小的 `Rectangle` 对象，绘制在图像下方。
+我们从`datafiles`文件夹中的文件加载一张图像，并创建一个`Image`对象。然后，我们将`Image`封装在`ImageView`对象中，这是一个可以添加到场景图中的节点。（你可以使用`GraphicsContext`的`drawImage()`方法直接在`Canvas`上绘制`Image`对象，但除非它们在`ImageView`中，否则你不能直接将`Image`对象添加到场景图中。）我们还创建了一个同样大小的`Rectangle`对象，绘制在图像下方。
 
 因此，图像（以及下方的矩形）从屏幕中心稍右的位置开始，每帧向右移动 5 像素 (`dx`) 向移动 5 像素 (`dy`)。
 
-我们在 `Scene` 中添加了一个 `KeyEvent` 处理器来手动处理按键按下。当按下按键时，如果按键是空格键，我们就切换 `flashing` 变量的值。（稍后我们会看到这个变量的作用。）
+我们在`Scene`中添加了一个`KeyEvent`处理器来手动处理按键按下。当按下按键时，如果按键是空格键，我们就切换`flashing`变量的值。（稍后我们会看到这个变量的作用。）
 
-然后，我们将 `Rectangle` 添加到场景图中，*然后*添加 `ImageView` 节点。按照这个顺序添加会将 `Rectangle` 画在底部，并将 `Image` 画在 `Rectangle` 之上。接着我们显示窗口。
+然后，我们将`Rectangle`添加到场景图中，*然后*添加`ImageView`节点。按照这个顺序添加会将`Rectangle`画在底部，并将`Image`画在`Rectangle`之上。接着我们显示窗口。
 
-`AnimationTimer` 的匿名类稍微复杂一些。在每一帧中，我们将 `dx` 和 `dy` 加到图像的位置上。
+`AnimationTimer`的匿名类稍微复杂一些。在每一帧中，我们将`dx`和`dy`加到图像的位置上。
 
-然后，如果 `x` 的新值小于 0，或者比图像宽度更靠近墙壁，说明我们“撞”到了左墙或右墙。因此，我们改变 `dx` 的符号（也就是说，如果它原来是 `5`，现在就是 `-5`，反之亦然）。这将使图像在帧向另一个方向移动。
+然后，如果`x`的新值小于 0，或者比图像宽度更靠近墙壁，说明我们“撞”到了左墙或右墙。因此，我们改变`dx`的符号（也就是说，如果它原来是`5`，现在就是`-5`，反之亦然）。这将使图像在帧向另一个方向移动。
 
-同样，如果 `y` 的新值超出边界，我们就改变 `dy` 来垂直反弹。
+同样，如果`y`的新值超出边界，我们就改变`dy`来垂直反弹。
 
-如果 `flashing` 变量为 `true`，我们为新色的红、绿、蓝分量选取 0 到 1 之间的随机值，然后告诉矩形使用该新颜色进行填充。这每帧都会发生，所以图像下方的矩形会烦人地闪烁，直到再次按下空格键。
+如果`flashing`变量为`true`，我们为新色的红、绿、蓝分量选取 0 到 1 之间的随机值，然后告诉矩形使用该新颜色进行填充。这每帧都会发生，所以图像下方的矩形会烦人地闪烁，直到再次按下空格键。
 
-最后，我们 `relocate()` `ImageView` 和 `Rectangle` 对象到这个新位置，这会修改场景图并触发屏幕的重绘。
+最后，我们`relocate()` `ImageView`和`Rectangle`对象到这个新位置，这会修改场景图并触发屏幕的重绘。
 
 ### 你应该看到的
 
@@ -6470,10 +6315,6 @@ if ( t.getCode() == KeyCode.RIGHT )
 ```
 
 这种方法*确实*有效。但结果会很卡顿，而且他们无法一直按住键！所以让我们来看看效果更好的方法。
-
-
-
-
 
 ```java
 import javafx.animation.AnimationTimer;
@@ -6572,33 +6413,37 @@ public class Plotter extends Application {
 
 ### Plotter.java
 
-我们正在使用四个布尔值来跟踪用户的意图移动。如果他们想向上，那么 `up` 就为 `true`。如果他们不想向上，那么 `up` 应该为 `false`。
+我们正在使用四个布尔值来跟踪用户的意图移动。如果他们想向上，那么`up`就为`true`。如果他们不想向上，那么`up`应该为`false`。
 
 你应该知道，如果你在文字处理文档中输入字母“q”，会发生三个独立的按键事件：
 
-*   对于字母“Q”，由于会发生一个 `KEY_PRESSED` 事件。
-*   对于字母“q”，会发生一个 `KEY_TYPED` 事件。
-*   当他们松开“Q”键时，会发生一次 `KEY_RELEASED` 事件。
+*   对于字母“Q”，由于会发生一个`KEY_PRESSED`事件。
 
-`KEY_PRESSED` 和 `KEY_RELEASED` 是非常底层的事件，适用于任何按键，包括像 `SHIFT` 和 `F1` 这样的修饰键。`KEY_TYPED` 是高层事件，只有在输入实际字符时才会触发。例如，当我想要输入大写的“Q”时，会生成五个 `KeyEvents`：
+*   对于字母“q”，会发生一个`KEY_TYPED`事件。
 
-1.  `SHIFT` 的 `KEY_PRESSED`
-2.  `Q` 的 `KEY_PRESSED`
-3.  “Q” 的 `KEY_TYPED`
-4.  `Q` 的 `KEY_RELEASED`
-5.  `SHIFT` 的 `KEY_RELEASED`
+*   当他们松开“Q”键时，会发生一次`KEY_RELEASED`事件。
+
+`KEY_PRESSED`和`KEY_RELEASED`是非常底层的事件，适用于任何按键，包括像`SHIFT`和`F1`这样的修饰键。`KEY_TYPED`是高层事件，只有在输入实际字符时才会触发。例如，当我想要输入大写的“Q”时，会生成五个`KeyEvents`：
+
+
+
+1. `SHIFT` 的 `KEY_PRESSED`
+2. `Q` 的 `KEY_PRESSED`
+3. “Q” 的 `KEY_TYPED`
+4. `Q` 的 `KEY_RELEASED`
+5. `SHIFT` 的 `KEY_RELEASED`
 
 注意，在 `KEY_PRESSED` 或 `KEY_RELEASED` 事件中，大写的“Q”和小写的“q”之间没有区别。它们都只是“Q”。
 
 此外，如果你长按按键，操作系统的按键重复功能会在一秒后启动，你将获得多个 `KEY_TYPED` 事件。
 
-所以我们是这样处理的：如果向上箭头被 `PRESSEDSED`，我们将相应的布尔变量设为 `true`。然后，当向上箭头稍后被 `RELEASED` 时，我们将变量改回 `false`。
+所以我们是这样处理的：如果向上箭头被 `PRESSED`，我们将相应的布尔变量设为 `true`。然后，当向上箭头稍后被 `RELEASED` 时，我们将变量改回 `false`。
 
 这样一来，我们就不必处理键盘重复的问题了，而且他们可以同时按住多个键，且一切都能正常运行。
 
 然后，`AnimationTimer` 处理器完全不需要关心按键。如果 `up` 的布尔变量为 `true`，就向上移动。
 
-我使用了一些 `else if` 语句来确保 `up` 优先于 `down`，`left` 优先于 `right`，但你可以移除它们，直接将这四个都变成 `if` 语句，它们仍然可以工作。如果他们同时按住 UP 和 DOWN，它们会互相抵消。
+我使用了一些 `else if` 语句来确保 `up` 优先于 `down`，`left` 优先于 `right`，但你可以移除它们，直接将这四个都变成 `if` 语句，它们仍然可以工作。如果他们同时按住 `UP` 和 `DOWN`，它们会互相抵消。
 
 ### 你应该看到的
 
@@ -6606,7 +6451,7 @@ public class Plotter extends Application {
 
 Plotter Linux 截图
 
-我想我应该补充一下，你只在 PRESSED 和 RELEASED 事件中使用 `getCode()`。如果你实际上想检查 `KEY_TYPED` 事件，你将需要调用 `getCharacter()` 来获取他们实际输入的字符串。
+我想我应该补充一下，你只在 `PRESSED` 和 `RELEASED` 事件中使用 `getCode()`。如果你实际上想检查 `KEY_TYPED` 事件，你将需要调用 `getCharacter()` 来获取他们实际输入的字符串。
 
 关于图形的新内容就到这里了。在接下来的两个练习中，我们将所有内容整合在一起，为你在之前的练习中制作的两个游戏制作图形界面！
 
@@ -6615,10 +6460,6 @@ Plotter Linux 截图
 在早期的练习 15 中，我们创建了 `NoughtsCrossesObject`，这是一个包含井字游戏所有有趣部分方法的对象。这个练习需要那些代码，所以如果你还没有输入它们（并修复它们！），现在应该去做了。
 
 在这个练习中，我们将为这个游戏制作一个简单的图形界面，这样我们就可以使用鼠标了！
-
-
-
-
 
 ```java
 import javafx.animation.AnimationTimer;
@@ -6772,7 +6613,7 @@ public class NoughtsCrossesGUI extends Application {
 
 这里的挑战在于，鼠标点击取决于游戏处于什么状态，这会有不同的含义。一种（良好的）方法是创建多个 `Scene` 对象，每个对象都有自己的 `MouseEvent` 处理程序，并在游戏变化时切换。
 
-我没有这样做，而是选择了不那么完美的“变量和 if 语句”方法。当点击时，如果游戏结束，我们会更改变量使游戏不再结束，并通过创建一个新的 `NoughtsCrossesObject` 来重置棋盘。
+我没有这样做，而是选择了不那么完美的“变量和 `if` 语句”方法。当点击时，如果游戏结束，我们会更改变量使游戏不再结束，并通过创建一个新的 `NoughtsCrossesObject` 来重置棋盘。
 
 如果在游戏未启动时点击，我们只需将状态设置为 `started` 并 `return` 出。
 
@@ -6794,9 +6635,7 @@ public class NoughtsCrossesGUI extends Application {
 
 ## 练习 55：图形化掉子游戏
 
-在最后一个练习中，我们将为几个练习前创建的 `DropGameHelper` 创建一个图形界面。你需要确保 `DropGameHelper.java` 与你为练习编写的代码在同一个文件夹中，此外 `DropGamePiece.java`、`Location.java` 以及辅助接口 `Locatable.java` 和 `Translatable.java`！
-
-
+在最后一个练习中，我们将为几个练习前创建的 `DropGameHelper` 创建一个图形界面。你需要确保 `DropGameHelper.java` 与你为练习编写的代码在同一个文件夹中，此外还有 `DropGamePiece.java`、`Location.java` 以及辅助接口 `Locatable.java` 和 `Translatable.java`！
 
 
 
@@ -6955,7 +6794,7 @@ public class DropGameGUI extends Application {
 player = (player%2) + 1;
 ```
 
-`%` 运算符是模运算；它找到 *player* 除以 2 的余数。如果 *player* 是 1，余数为 1……加 1 是 2。如果 *player* 是 2，余数是 0……加 1 是 1。我本可以使用三元运算符，但我想趁着这个练习还不晚向你们展示一个新技巧！
+`%` 运算符是模运算；它找到 `player` 除以 2 的余数。如果 `player` 是 1，余数为 1……加 1 是 2。如果 `player` 是 2，余数是 0……加 1 是 1。我本可以使用三元运算符，但我想趁着这个练习还不晚向你们展示一个新技巧！
 
 为了从数组中提取 `Location` 对象，我们使用：
 
@@ -6979,9 +6818,6 @@ game.playerAt( new Location(r,c) )
 
 你做到了！
 
-
-
-
 如果你完成了所有的练习，通过了学习训练（Study Drills）并理解了自己在做什么，那么恭喜你！Java 对于初学者来说并不是一门容易的语言，所以给自己鼓鼓掌吧。
 
 你现在已经掌握了 Java 面向对象编程的基础，更重要的是，你有了大量阅读代码、理解代码和修复 Bug 的经验。这些都是程序员重要的工具。凭借了这些技能，你应该能够拿起几乎任何编程书籍并游刃有余。
@@ -6991,6 +6827,7 @@ game.playerAt( new Location(r,c) )
 我的大多数真实学生在完成作业后，通常又练习和学习了四五，才在行业内获得工作。目前，你在两个主要方面存在短板：
 
 * 你需要更多的练习，尤其是编写自己的程序。
+
 * 你不熟悉标准库。
 
 ### 你还不标准库
@@ -7006,6 +6843,7 @@ game.playerAt( new Location(r,c) )
 中的作业，我强烈建议你去完成它们。（不过，这些作业并不很面向对象。）
 
 * `CodingBat` (`java`) - 短小且有针对性的练习题。这些对于准备计算机科学高级位分（AP）考试的学生来说是极佳的练习。
+
 * `Project Euler` - 一系列具有挑战性的数学/计算机编程问题，解决这些问题不仅需要数学洞察力。虽然数学会帮助你找到优雅且高效的方法，但解决大多数问题仍然需要计算机和编程技能。
 
 非常感谢你使用我的书开启你的编程之旅。请在推特上关注 @grahammitchell 并使用标签 #LJtHW 让我知道！

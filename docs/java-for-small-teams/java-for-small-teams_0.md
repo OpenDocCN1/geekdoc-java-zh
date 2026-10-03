@@ -1,31 +1,29 @@
+
 # 小团队的 Java
-
-
 
 ![](img/cover.jpg)
 
 ## 介绍
 
-## 这本书是什么？
+### 这本书是什么？
+
 这本书旨在尝试描述良好的代码是什么样子的，以及实现它的实践。它并不是唯一的标准答案，而是许多有效方案中的一种观点。
 
 所以为什么要写这本书？它的独特之处在于具有以下特点：
+
 - 易于分发
 - 开放并欢迎更新
 - 简洁
 - 针对性强
 
 我们对你以及你工作环境有一些假设：
-- 我们假设你正在编写 Java 代码。
+
+- 我们假设你正在编写 `Java` 代码。
 - 我们假设你的团队经验各异（既有专家也有学者）。
 - 我们假设你在业务背景下编写代码。
 - 我们假设你的代码在多年后仍然有效。
 
 书中的建议在某些背景下是有效的，而在另一些情况下可能是糟糕的。如果你对书中的内容有异议，请告知我们，以便改进。最后，我们编写的代码并非完美。有时我们会继承自己的错误，有时也会继承别人的错误。
-
-
-
-
 
 我们看到的经验丰富的程序员会犯的最常见错误之一，就是盲目地只考虑一或两个因素（通常是那些带有响亮缩写词的因素），而不考虑其他因素。
 
@@ -39,33 +37,33 @@
 
 建议是为了拯救我们免于自身的失误。
 
-## 关于 Java 版本的说明
+### 关于 Java 版本的说明
 
 本文旨在适用于 `Java 7`、`8` 和 `9`，但很大程度上也适用于 `Java 5` 和 `6`。
 
 在最近的 Java 版本之间存在差异的地方，我们将指出它们。如果你不幸地正在使用早期版本的 `Java`，你必须自己发现它与 `Java 7` 的任何差异。
 
-## 许可证
+### 许可证
 
 本作品版权所有 `NCR`，但可以根据知识产权 署名-相同共享许可协议 v4.0 的条款与他人阅读和共享。
 
-## 作者
+### 作者
 
 本文由 [Henry Coles](https://twitter.com/0hjc) 和众多贡献者撰写。
 
-### 贡献者
+#### 贡献者
 
-* Francesco Burato
-* Gary Duprex
-* Grant Forrester
-* Kevin Grant
-* Keir Lawson
-* Marco Di Paola
-* Gordon Rogers
-* Herve Saint-Amand
-* Ewan Summers
+- Francesco Burato
+- Gary Duprex
+- Grant Forrester
+- Kevin Grant
+- Keir Lawson
+- Marco Di Paola
+- Gordon Rogers
+- Herve Saint-Amand
+- Ewan Summers
 
-## 封面
+### 封面
 
 封面由 Peter Berry 根据 1885 年的文本《Nouveau dictionnaire encyclopédique universel illustré》中长嘴沙鹬的木刻画制作。
 
@@ -99,27 +97,27 @@
 
 虽然来自 IDE 的反馈快速且方便，但它也有一些缺点。
 
-* 它可能根据 IDE 的配置在不同的机器上有所不同
-* 它通常是非二元化的（即不是简单的通过/失败）
-* 它可能会被忽略/忽视
-* 对速度的预期限制了它所能实现的内容
+- 它可能根据 IDE 的配置在不同的机器上有所不同
+- 它通常是非二元化的（即不是简单的通过/失败）
+- 它可能会被忽略/忽视
+- 对速度的预期限制了它所能实现的内容
 
 由于这些原因，你应该避免纯粹以 IDE 为中心的工作流。在通过构建文件运行测试之前，开发者不应认为代码是完成的。
 
 ### 快速反馈
 
-### 构建文件是真理
+#### 构建文件是真理
 
 构建脚本提供的反馈没有 IDE 那么即时，因为必须被显式地触发。
 
 然而，构建脚本的反馈有两个主要优势：
 
-* 它在所有机器上都是可重复的
-* 在 `CI` 服务器的帮助下，你可以确保它不被忽略
+- 它在所有机器上都是可重复的
+- 在 `CI` 服务器的帮助下，你可以确保它不被忽略
 
 因为构建脚本的较慢反馈是可以接受的，可以从这里运行更大规模的静态和动态分析。这通常包括对即时反馈的重复。
 
-### 本地可运行测试
+#### 本地可运行测试
 
 在编译器和静态分析之后，下一最快的反馈层级是测试套件。
 
@@ -127,8 +125,8 @@
 
 由于它们通常在编译之后或提交/推送代码之前立即运行，Martin Fowler 将这些测试称为：
 
-* 编译套件 (The compile suite)
-* 提交套件 (The commit suite)
+- 编译套件 (The compile suite)
+- 提交套件 (The commit suite)
 
 在 `Maven` 中，这些自然映射到 `test` 和 `integration-test` 阶段。
 
@@ -150,8 +148,6 @@
 
 ### 慢反馈
 
-### 慢反馈
-
 编译套件和提交套件都应该在 `CI` 服务器上运行，通常由向仓库的提交/推送触发。
 
 除了编译套件和提交套件之外，还应该创建其他套件。
@@ -170,12 +166,9 @@
 
 ### 在讨论测试时统一语言
 
-### 测试金字塔
+#### 测试金字塔
 
 遗憾的是，测试语言被过度加载了，不同的社区用相同的名称指代不同的内容。
-
-
-
 
 测试金字塔是一个广为人知的关于应该如何进行测试的图表。
 
@@ -193,17 +186,17 @@
 
 “集成测试”的可能含义甚至更多。
 
-### 单元测试 (Unit Tests)
+#### 单元测试 (Unit Tests)
 
 Java 社区现在广泛使用一种相当严谨的单元测试定义。我们建议你和你的团队使用这个定义。
 
 要成为单元测试，测试必须满足：
 
-* 快速（毫秒或更短）
-* 隔离（仅测试一个单元）
-* 可重复（能够在任何机器上运行数百万次并获得相同的结果）
-* 自我验证（通过通过或失败）
-* 及时（先编写测试）
+- 快速（毫秒或更短）
+- 隔离（仅测试一个单元）
+- 可重复（能够在任何机器上运行数百万次并获得相同的结果）
+- 自我验证（通过通过或失败）
+- 及时（先编写测试）
 
 注意：虽然先写测试通常是一个非常好的主意，但只要测试符合其他标准，无论何时何时的，它仍然是一个单元测试。
 
@@ -219,11 +212,11 @@ Java 社区现在广泛使用一种相当严谨的单元测试定义。我们建
 
 如果我们选择编写一个同时测试两个（或更多）`units` 的测试，只要它符合其他标准，它仍然属于编译套件。
 
-### 系统测试 (System Tests)
+#### 系统测试 (System Tests)
 
 系统测试的定义也相当明确。它们是对整个系统进行测试——即在真实环境中运行你所有的代码以及这些代码与其交互的所有外部代码。
 
-### 集成测试 (Integration Tests)
+#### 集成测试 (Integration Tests)
 
 集成测试更难定义。它们占据了所有不符合单元测试或系统测试定义的巨大空间。
 
@@ -259,9 +252,9 @@ Java 社区现在广泛使用一种相当严谨的单元测试定义。我们建
 
 代码覆盖率很容易衡量。测试的其他理想的（或极不理想的）属性并不容易衡量，例如：
 
-* 测试是有意义的吗？
-* 测试是否易于阅读和理解？
-* 测试是否与特定的实现紧密绑定？
+- 测试是有意义的吗？
+- 测试是否易于阅读和理解？
+- 测试是否与特定的实现紧密绑定？
 
 最后一点尤为重要。
 
@@ -295,21 +288,19 @@ Java 社区现在广泛使用一种相当严谨的单元测试定义。我们建
 
 优先选择那些允许生成功能与非生成功能之间清晰分离的生成器，但在将任何生成器引入项目之前，请确保你理解你正在做的权衡。
 
-## 细节
+### 细节
 
 代码生成器可以分为三大类：
 
-* 样板生成器（向现有类中插入代码，例如由 IDE 自动生成的方法）。
-* 生成存入版本控制并进行修改的脚架生成器。
-* 从模型生成新类的生成器。生成的代码通常不提交到版本控制中。
-
-
+- 样板生成器（向现有类中插入代码，例如由 IDE 自动生成的方法）。
+- 生成存入版本控制并进行修改的脚架生成器。
+- 从模型生成新类的生成器。生成的代码通常不提交到版本控制中。
 
 我们建议尽量少使用第一种类型，或者根本不使用。这在“如何实现 Hashcode 和 Equals”中会有进一步的讨论。
 
 从模型（如 schema 或语法法）生成代码是一种很有用的方法，只要是生成的代码不被修改并且被单独打包。如果将生成的代码和未生成的代码打包在同一个模块中，那么可能会开始产生**摩擦力**（见下文）。
 
-### 编译时注解处理器
+#### 编译时注解处理器
 
 JSR 269 引入了一个在构建时处理注解的标准框架。现在有多个工具使用 JSR 269 来生成代码。
 
@@ -317,13 +308,13 @@ JSR 269 引入了一个在构建时处理注解的标准框架。现在有多个
 
 有些工具（如项目 Lombok）会更新带注解的类本身，添加额外的行为。这可能会增加**意外性**和**摩擦力**，我们在下文中讨论了这些问题。
 
-### 缺点
+#### 缺点
 
 代码生成器显然有很多优点，那么为什么它们不是总是合理的呢？
 
 它们引起的主要问题是`意外性`和`摩擦力`。
 
-#### 意外性
+##### 意外性
 
 如果你在编译或运行时生成代码，你就不再是在用 Java 编程了。
 
@@ -343,7 +334,7 @@ JSR 269 引入了一个在构建时处理注解的标准框架。现在有多个
 
 当系统发生意料之外的情况时，你发现自己在问“这会不会是因为代码生成器的原因？”，并且每次都不得不消除这种可能性，那么你就为项目引入了非常真实的成本。
 
-#### 摩擦力
+##### 摩擦力
 
 使用编译时生成器的代码在 IDE 中无法整洁地导入，除非 IDE 了解如何运行该生成器。即使系统有 IDE 的支持，也可能需要安装插件、设置配置选项等。
 
@@ -355,7 +346,7 @@ JSR 269 引入了一个在构建时处理注解的标准框架。现在有多个
 
 运行时生成器通常不会引入太多摩擦力，尽管有时在 IDE 中运行测试时，如果没有 `javaagents` 可能会遇到问题。
 
-### 权衡
+#### 权衡
 
 以上就是这些问题。
 
@@ -367,13 +358,13 @@ JSR 269 引入了一个在构建时处理注解的标准框架。现在有多个
 
 ### 优化可读性而非性能
 
-### 总结
+#### 总结
 
 不要过早地优化你的代码。
 
 相反，专注于让代码变得简单且易懂。
 
-## 细节
+#### 细节
 
 许多新程序员担心他们编写的每个方法的性能，避免编写他们认为效率下的代码，并采用一种试图减少对象分配、方法调用、赋值或其他他们认为会有成本的因素的风格。
 
@@ -387,30 +378,30 @@ JSR 269 引入了一个在构建时处理注解的标准框架。现在有多个
 
 ### 优先使用可读代码而非注释
 
-### 优先使用可读代码而非注释
-
-### 总结
+#### 总结
 
 仅使用注释来解释代码本身无法解释的内容。
 
 当你正要写注释时，先想想是否有办法更改代码，使其在没有注释的情况下也能被理解。
 
-## 细节
+#### 细节
 
 出自 Robert C. Martin 的《整洁代码》。
+
+
 
 “没有什么比一个位置恰当的注释更有帮助了。没有什么比轻率的、教条式的注释更能让模块变得混乱。没有什么比一个陈旧、破旧的传播谎言和虚信息的注释更具破坏性了。”
 
 注释应该仅用于解释无法通过重构来自我解释的代码背后的意图。
 
-*糟糕*
+**糟糕**
 
-```
+```java
 // 检查员工是否符合全额福利条件
-if ((employee.flags & HOURLY_FLAG) &&(employee.age > 65))
+if ((employee.flags & HOURLY_FLAG) && (employee.age > 65))
 ```
 
-*更好*
+**更好**
 
 ```java
 if (employee.isEligibleForFullBenefits())
@@ -420,16 +411,16 @@ if (employee.isEligibleForFullBenefits())
 
 这意味着你写的任何注释应该提供“为什么”，而不是“是什么”或“如何做”。
 
-*糟糕*
+**糟糕**
 
-```
+```java
 // 确保端口大于或等于 1024
 if (port < 1024) {
   throw new InvalidPortError(port);
 }
 ```
 
-*更好*
+**更好**
 
 ```java
 // 1024 以下的端口（特权端口或已知端口）
@@ -439,7 +430,7 @@ if (port < 1024) {
 }
 ```
 
-*更好*
+**更好**
 
 ```java
 if (requiresRootPrivileges(port)) {
@@ -473,13 +464,12 @@ private boolean requiresRootPrivileges(int port) {
 
 ### 总结
 
-
-
 Javadoc 可以帮助文档化代码，但通常有更好的方法。在决定编写它之前，请仔细考虑。
 
 ### Javadoc 详情
 
 ### Javadoc 的优点
+
 对于那些无法访问源码必须使用你代码的外部团队来说，Javadoc 是无价的。
 
 所有外部使用的代码其公共方法都应该 javadoc。
@@ -487,6 +477,7 @@ Javadoc 可以帮助文档化代码，但通常有更好的方法。在决定编
 确保所有此类 javadoc 都集中在方法*做了什么*，而不是它是*怎么做的*。
 
 ### Javadoc 的缺点
+
 Javadoc 重复了本该从代码本身就能清晰看出的信息，并且会带来持续的维护成本。
 
 如果它没有与代码同步更新，就会产生误导性。
@@ -495,14 +486,14 @@ Javadoc 重复了本该从代码本身就能清晰看出的信息，并且会带
 
 ## 记住 KISS 和 YAGNI
 
-## 记住 KISS 和 YAGNI
-
 ### 总结
+
 保持你的设计尽可能简单。
 
 只创建你现在需要的功能——而不是你认为未来可能需要的功能。
 
 ### 详情
+
 KISS（保持简单，愚蠢蛋）和 YAGNI（你并不需要它）缩写词提供了良好的建议，在编码时值得记住。
 
 KISS 建议我们保持代码和设计尽可能简单。
@@ -546,16 +537,18 @@ KISS 建议我们保持代码和设计尽可能简单。
 ### 偏好组合而非继承
 
 ### 总结
+
 组合通常会导致更灵活的设计。
 
 首先考虑使用组合，只有当组合看起来不合适时，才退而求助于继承。
 
 ### 详情
+
 组合意味着通过将其他东西组合在一起来构建。继承意味着通过创建子类来扩展现有类的行为以构建构建。
 
 举一个极简的例子——如果要求一个类要接受并存储 `String` 值，一些初学 Java 的程序员会按照如下方式使用继承：
 
-```
+```java
 class InheritanceAbuse extends ArrayList<String> {
 
   public void performBusinessLogic(int i) {
@@ -567,7 +560,7 @@ class InheritanceAbuse extends ArrayList<String> {
 
 相同的功能可以使用组合来实现。
 
-```
+```java
 class UsesComposition {
 
   private final List<String> values = new ArrayList<String>();
@@ -588,15 +581,17 @@ class UsesComposition {
 有几个重叠的解释，我们将从最抽象的开始，然后转向更实用的解释。
 
 ### 继承是强关系
+
 继承用于建模 IS-A（是一个）关系——即，我们是在说我们的 `InheritanceAbuse` 类是一个 `ArrayList`，并且应该能够将其传递给任何接受 `ArrayList` 的代码片段。
 
-组合创建了 HAS-A（有一个）关系；这是一种较弱的关系，我们**代码中应该总是倾向于较弱的关系。
+组合创建了 HAS-A（有一个）关系；这是一种较弱的关系，我们**代码中应该总是倾向于较弱的关系**。
 
 因此，偏好组合而非继承只是“倾向于类与类之间弱关系”这一更通用建议的一个特定实例。
 
 当存在 IS-A 关系时，使用继承是有意义的，但纯粹为了重用代码并不是合适的机制。
 
 ### 继承破坏了封装
+
 继承实现未能封装一个实现细节——即我们把东西存储在 `ArrayList` 中。
 
 我们类的接口包含了来自 `ArrayList` 的各种方法，例如：
@@ -612,14 +607,16 @@ class UsesComposition {
 如果我们从 `ArrayList` 切换到其他列表实现，这对客户端是可见的。即使没有调用 `ArrayList` 的特定方法，之前编译的代码现在可能会崩溃。
 
 ### 我们只能这样做一次
+
 Java 不支持多继承，所以我们只能选择一个要扩展的东西。如果我们的类还需要存储 `Integer`，那么继承甚至不是选项，我们必须使用组合。
 
 在单继承语言中，组合天生更灵活。
 
 ### 组合有助于测试
+
 这与我们的简单示例无关，但测试通过组合连接的类如何交互是非常而易举的。使用继承时则困难得多。
 
-```
+```java
 class UntestableClass extends SomeDependency {
   public void performBusinessLogic(int i) {
     // 使用 SomeDependency 的方法操作
@@ -627,7 +624,7 @@ class UntestableClass extends SomeDependency {
 }
 ```
 
-```
+```java
 class MyClass {
   private final SomeDependency dependency;
 
@@ -644,19 +641,18 @@ class MyClass {
 向 `MyClass` 注入 mock 很容易。存在技巧可以为了单元测试隔离 `UntestableClass` 与 `SomeDependency`，但要复杂得多。
 
 ### 继承是静态的
+
 继承在编译时设置了具体类之间的固定关系。通过组合，可以在运行时切换不同的具体类。
 
 再次，组合天生更灵活。
 
 ### 接口继承
+
 偏好组合而非继承的建议指的是*实现继承*（即扩展类）。上述讨论的缺点并不适用于*接口继承*（即实现接口）。
 
 事实上，你通常必须做的设计选择是在实现继承与组合与接口继承的结合之间进行。
 
 在这些情况下，建议仍然是倾向于使用组合的方法。
-
-
-
 
 例如，著名的基于组合的装饰器模式：
 
@@ -711,7 +707,7 @@ class InheritanceUpperCaseDecorator extends ConcreteProcessor {
 
 遗憾的是，第二点完全是主观的。
 
-# 保持 性 (Keep It Solid)
+# 保持 SOLID
 
 ## 保持 SOLID
 
@@ -719,11 +715,11 @@ class InheritanceUpperCaseDecorator extends ConcreteProcessor {
 
 SOLID 缩写为你应该遵循的设计提供了指导。
 
-* **S**单一职责原则 (Single Responsibility Principle)
-* **O**开闭原则 (Open Closed Principle)
-* **L**里可替换原则 (Liskov Substitution Principle)
-* **I**接口隔离原则 (Interface Segregation Principle)
-* **D**依赖倒转原则 (Dependency Inversion Principle)
+* **S** 单一职责原则 (Single Responsibility Principle)
+* **O** 开闭原则 (Open Closed Principle)
+* **L** 里可替换原则 (Liskov Substitution Principle)
+* **I** 接口隔离原则 (Interface Segregation Principle)
+* **D** 依赖倒转原则 (Dependency Inversion Principle)
 
 ## 细节
 
@@ -770,7 +766,7 @@ SOLID 缩写为你应该遵循的设计提供了指导。
 
 你违反这一原则的一个迹象，是代码中存在包循环。
 
-# 保持代码简洁 (Keep Your Code Dry)
+# 保持代码 DRY
 
 ## 保持代码 DRY
 
@@ -786,7 +782,7 @@ SOLID 缩写为你应该遵循的设计提供了指导。
 
 这样既更容易读也更容易维护，因为如果逻辑需要更改，只需要在一个地方进行更改即可。
 
-*糟糕的写法*
+**糟糕的写法**
 
 ```java
 class Foo {
@@ -807,7 +803,7 @@ class Foo {
 }
 ```
 
-*更好的做法*
+**更好的做法**
 
 ```java
 class Foo {
@@ -868,6 +864,8 @@ public void doSomethingSimilar(List<Widget> widgets) {
 
 **不太好**
 
+
+
 ```java
 public void doSomething(List<Widget> widgets) {
   doThings(widgets, false);
@@ -906,7 +904,7 @@ interface WidgetAction {
 
 那么我们可以这样使用：
 
-**更好的做法**
+### 更好的做法
 
 ```java
 public void doSomething(List<Widget> widgets) {
@@ -948,10 +946,6 @@ private void doThings(List<Widget> widgets, WidgetAction action ) {
 
 Java 7 的版本由于匿名内部类的样板代码显得非常繁琐。
 
-
-
-
-
 毫无争议地，对于像这样非常简单的情况，布尔标志可能更理想；但如果我们将 `performSideEffect` 和 `performDifferentSideEffect` 方法中的逻辑提取到实现 `WidgetAction` 的顶层类中，那么策略模式就会变得非常有吸引力。
 
 在 Java 8 中，毋庸疑问，即使在最简单的情况下，策略模式也是更优的。
@@ -978,7 +972,7 @@ private void doThings(List<Widget> widgets, Consumer<Widget> action ) {
 }
 ```
 
-我们不需要引入自己的接口 -内置的 `Consumer<T>` 就足够了。如果 `doThings` 方法是公开的，或者 `performSideEffect` 中的逻辑复杂到需要提取到顶层类中，那么我们应该考虑引入一个。
+我们不需要引入自己的接口 —— 内置的 `Consumer<T>` 就足够了。如果 `doThings` 方法是公开的，或者 `performSideEffect` 中的逻辑复杂到需要提取到顶层类中，那么我们应该考虑引入一个。
 
 循环也可以转换为流水线操作。
 
@@ -1007,13 +1001,13 @@ private void doThings(List<Widget> widgets, Consumer<Widget> action ) {
 
 如果你能通过包含后果和添加抽象来使你的决策变得可逆转，那么这种未来的变化将不再重要。
 
-例如 - 如果你引入了一个第三方库并在整个代码中引用它，那么你就推高了逆转使用该库这一决策的成本。如果你将其限制在单个位置并为它创建一个接口，那么逆转该决策的成本就很低。
+例如 —— 如果你引入了一个第三方库并在整个代码中引用它，那么你就推高了逆转使用该库这一决策的成本。如果你将其限制在单个位置并为它创建一个接口，那么逆转该决策的成本就很低。
 
-但不要忘记 KISS 和 YAGNI - 如果你的抽象使设计复杂化，那么最好不要使用。
+但不要忘记 KISS 和 YAGNI —— 如果你的抽象使设计复杂化，那么最好不要使用。
 
 # 显式化依赖关系
 
-### 使依赖关系显式化并可见
+## 使依赖关系显式化并可见
 
 ### 总结
 
@@ -1031,19 +1025,19 @@ private void doThings(List<Widget> widgets, Consumer<Widget> action ) {
 
 可见性较低的是存储在字段中的那些，但取决于这些字段如何填充，依赖关系仍然可以被发现。
 
-#### 构造函数注入
+### 构造函数注入
 
 构造函数依赖注入在单个位置清晰地通信了对象的依赖关系，并确保对象只在有效状态下创建。它允许将字段标记为 `final`，以便其生命周期是明确。
 
 这是注入依赖的唯一方式。
 
-#### setter 注入
+### setter 注入
 
 setter 注入增加了对象可能处于的状态的数量。其中许多状态是无效的。
 
 如果使用 setter 注入，类可以在半初始化的状态下构造。什么才构成完全初始化的状态只能通过检查代码来确定。
 
-**糟糕**
+#### 糟糕
 
 ```java
 public class Foo() {
@@ -1061,7 +1055,7 @@ public class Foo() {
 
 在这里，如果构造 `Foo` 时没有调用 `setBar`，将会抛出 `NullPointerException`。
 
-**更好**
+#### 更好
 
 ```java
 public class Foo() {
@@ -1079,7 +1073,7 @@ public class Foo() {
 
 在这里，很清楚我们必须提供一个 `Bar`，因为没有它我们无法构造该类。
 
-#### 字段注解
+### 字段注解
 
 虽然字段上的注解看起来很方便，但意味着依赖关系在公共 API 中不可见。它们还将将你的类构造与理解这些注解的框架绑定，并防止字段被标记为 `final`。
 
@@ -1087,7 +1081,7 @@ public class Foo() {
 
 如果你正在使用如 `Spring` 之类的依赖注入框架，要么将对象的构造移动到配置类中，要么将注解的使用限制在构造函数上。这两种方法都允许你的类被正常构造，并确保所有依赖都是可见的。
 
-#### 隐藏依赖关系
+### 隐藏依赖关系
 
 任何不是通过构造函数或方法参数注入类中的东西都是隐藏依赖关系。
 
@@ -1095,9 +1089,9 @@ public class Foo() {
 
 它们通过 `Singletons`、`ThreadLocals`、静态方法调用或简单地调用 `new` 引入。
 
-**糟糕**
+#### 糟糕
 
-```
+```java
 public class HiddenDependencies {
   public void doThings() {
     Connection connection = Database.getInstance().getConnection();
@@ -1109,7 +1103,7 @@ public class HiddenDependencies {
 
 在这里，我们必须在调用下方代码的 `doThings` 方法之前确保 `Database` 类处于有效状态，但如果不遍遍每一行代码，我们无法知道这一点。
 
-**更好**
+#### 更好
 
 ```java
 public class HiddenDependencies {
@@ -1131,7 +1125,7 @@ public class HiddenDependencies {
 
 根据定义，隐藏依赖关系很难发现，但它们还有第二个问题——它们也很难替换。
 
-#### 缝隙（Seams）
+### 缝隙
 
 缝隙是 Michael Feathers 在《Legacy Code》（Working Effectively with legacy code）中引入的概念。
 
@@ -1141,9 +1135,9 @@ public class HiddenDependencies {
 
 在 `HiddenDependencies` 的原始版本中，如果我们想 `Database` 替换为 mock 或 stub，只有当单例提供了某种方法来修改它的实例时我们才能这样做。
 
-**不是好的方法**
+#### 不是好的方法
 
-```
+```java
 public class Database implements IDatabase {
   private static IDatabase instance = new Database();
 
@@ -1166,7 +1160,7 @@ public class Database implements IDatabase {
 
 ### 总结
 
-尽可能创建不可更改的对象——特别是当这些对象是长寿或可全局访问时。
+尽可能创建不可更改的对象 —— 特别是当这些对象是长寿或可全局访问时。
 
 ## 细节
 
@@ -1179,10 +1173,6 @@ public class Database implements IDatabase {
 如果一个对象逃离了方法，它可能会被代码中的多个位置访问。
 
 我们必须首先假设发生在这些对象上的任何事情都会发生。只有通过检查整个程序，才能确认某些情况不会发生。
-
-
-
-
 
 不可变对象可能发生的情况要比可变对象少得多。通过限制长生命周期对象的行为，我们让事情变得更简单了。我们需要考虑的可能性也随之减少。
 
@@ -1243,7 +1233,7 @@ public class Foo {
 
 即使我们的程序运行正常，我们也需要做额外的工作来理解它是如何运行的。
 
-`setId` 可以在对象创建后的任何点被调用。因此，我们只能通过查找所有对 `setId` 的调用来理解数据如何在程序中流动的——可能有几处，也可能只有一个。我们发现这一点的唯一就是检查整个程序。
+`setId` 可以在对象创建后的任何点被调用。因此，我们只能通过查找所有对 `setId` 的调用来理解数据如何在程序中流动的 —— 可能有几处，也可能只有一个。我们发现这一点的唯一就是检查整个程序。
 
 ## 不可变对象
 
@@ -1303,6 +1293,8 @@ public final class Foo {
 
 这种模式起初对某些 Java 程序员来说很奇怪，但这种编程模型与熟悉的 `String` 类的工作原理相似。
 
+
+
 ```java
 @Immutable
 public final class Bar {
@@ -1326,13 +1318,13 @@ public final class Bar {
 }
 ```
 
-通过调用 `withAString` 和 `withAnInt` 可以获得带有新值的 `Bar` 实例。
+通过调用 `withAString()` 和 `withAnInt()` 可以获得带有新值的 `Bar` 实例。
 
 JSR305 的 `javax.annotation.CheckReturnValue` 使静态分析工具如 [Error Prone](https://github.com/google/error-prone) 在发生错误时（如下所示代码所示）发出警告。
 
 ```java
 public Bar doThings(Bar bar) {
-  if(someLogic()) {
+  if (someLogic()) {
     bar.withAnInt(42);
   }
   return bar;
@@ -1341,7 +1333,7 @@ public Bar doThings(Bar bar) {
 
 ```java
 public Bar doThings(Bar bar) {
-  if(someLogic()) {
+  if (someLogic()) {
     bar.withAnInt(42);
   }
   return bar;
@@ -1376,9 +1368,6 @@ public class Foo {
 其他框架（如 Hibernate）只能与提供默认构造函数的类一起使用。虽然它们可以配置为直接设置字段而不需要 setter，但这产生的问题比解决的问题多。
 
 如果你受限于一个需要可变性的框架，那么在与该框架交互时，你将使用可变对象。
-
-
-
 
 虽然一致性具有价值，但也存在代价。
 
@@ -1431,7 +1420,7 @@ class Example {
 
 ### 使用空格而非制表符
 
-制表符（Tabs）的显示可能取决于编辑器的配置。这将导致不同的程序员在根据编辑器设置调整文件时，产生频繁的重新格式化。使用空格可以避免这个问题。
+制表符的显示可能取决于编辑器的配置。这将导致不同的程序员在根据编辑器设置调整文件时，产生频繁的重新格式化。使用空格可以避免这个问题。
 
 在某些语言中（例如代码压缩工具兴起之前的 JavaScript），制表符具有曾具有优势，因为与使用多个空格相比，它们减小源代码文件的大小。对于 Java 来说，源代码文件的大小增大无关。
 
@@ -1482,13 +1471,13 @@ public class Layout {
   }
 
   public void api2() {
-    if(...) {
+    if (...) {
       doBar();
     }
   }
 
   private void doFoo() {
-    while(...) {
+    while (...) {
       handleA();
       handleB();
     }
@@ -1509,7 +1498,7 @@ public class Layout {
 }
 ```
 
-字段（Fields）应该始终放在类的顶部，位于任何方法之前。
+字段应始终放在类的顶部，位于任何方法之前。
 
 ## 保持方法短而简单
 
@@ -1525,11 +1514,9 @@ public class Layout {
 
 作为指南，方法长度通常不应超过 `7` 行。这不是一条硬性规定——只是一个关于何时对方法的大小感到不适的指南。
 
-衡量方法大小的另一种方法是看通过它的可能路径有多少。方法的“圈复杂度”（Cyclomatic complexity）提供了这种衡量——它会随着条件逻辑数量和循环数量的增加而增加。
+衡量方法大小的另一种方法是看通过它的可能路径有多少。方法的“圈复杂度”提供了这种衡量——它会随着条件逻辑数量和循环数量的增加而增加。
 
 作为指南，方法通常不应该有。
-
-
 
 上述任何更改都不会改变我们程序的结构，甚至不会影响方法的签名。它们在减少代码行数和降低复杂性的同时，仍然提高了可读性。
 
@@ -1537,7 +1524,7 @@ public class Layout {
 
 很难猜测这个模型在我们构思的示例中可能是什么样的，但这种条件逻辑很可能可以用多态来代替。
 
-```
+```java
 enum ADomainConcept {
   AAA(true),
   ABA(true),
@@ -1551,13 +1538,11 @@ enum ADomainConcept {
     this.isFnardy = isFnardy;
   }
 
-  boolean  isFnardy() {
+  boolean isFnardy() {
     return isFnardy;
   }
 }
 ```
-
-```]
 
 # 使用适当的语言特性
 
@@ -1583,10 +1568,10 @@ enum ADomainConcept {
 
 尝试限制你或客户端编写以下内容的次数：
 
-```
- if ( != null ) {
+```java
+if ( != null ) {
     ...
-  }
+}
 ```
 
 ## 细节
@@ -1608,11 +1593,11 @@ enum ADomainConcept {
 ### 类型安全的 null（即 Optional）
 类型安全的 null 模式在大多数函数式编程语言中都很常见，在那里它们被被称为 Maybe、Option 或 Optional。Java 8 终于添加了 Optional 类型，但早期版本可以通过 Guava 和其他库获得实现。
 
-这是一个简单的模式。`Optional` 基本上只是一个可以容纳一个或零个值的盒子。你可以检查盒子是否为空（使用 `isPresent`）并通过 `get` 方法获取其值。
+这是一个简单的模式。`Optional` 基本上只是一个可以容纳一个或零个值的盒子。你可以检查盒子是否为空（使用 `isPresent()`）并通过 `get()` 方法获取其值。
 
 每当公共方法可能作为正常程序流的一部分而不返回任何值时，都应该使用 `Optional`。
 
-如果你在空的 `Optional` 上调用 `get`，它将抛出 `NoSuchElementException`。
+如果你在空的 `Optional` 上调用 `get()`，它将抛出 `NoSuchElementException`。
 
 相对于直接使用 null，Optional 提供了什么可能并不显而易见。有几点重要的区别。
 
@@ -1620,9 +1605,9 @@ enum ADomainConcept {
 
 同样重要的是，如果你知道返回 `Person` 的方法总是返回值而永远不返回 null。
 
-最后，使用 Optional 的优方法不是调用 `get` 方法或显式检查它是否包含值。相反，包含或不包含在 Optional 中的值可以通过各种方法安全地映射、消费和过滤。
+最后，使用 Optional 的优方法不是调用 `get()` 方法或显式检查它是否包含值。相反，包含或不包含在 Optional 中的值可以通过各种方法安全地映射、消费和过滤。
 
-在最简单的情况下，可能的 `Optional` 可以通过调用带有默认值的 `orElse` 方法来访问。
+在最简单的情况下，可能的 `Optional` 可以通过调用带有默认值的 `orElse()` 方法来访问。
 
 提到，使用 Optional 的最佳位置是方法的返回类型。它们通常不应该作为字段持有（使用空对象模式）或传递给公共方法（提供不需要参数的重载版本）。
 
@@ -1633,7 +1618,7 @@ enum ADomainConcept {
 ### 契约设计
 我们希望控制的所有代码都能忽略 null 的存在（除非它与迫使我们考虑它的第三方代码交互）。
 
-`Objects.requireNonNull` 可用于添加运行时断言，确保传递给方法的不是 null。
+`Objects.requireNonNull()` 可用于添加运行时断言，确保传递给方法的不是 null。
 
 由于核心代码通常假设不会传递 null，因此通过测试记录这种行为的价值有限；断言具有价值，因为它们确保错误发生在发生错误的地方附近。
 
@@ -1649,14 +1634,10 @@ JSR-305 提供了注解，可以声明哪里是可以接受 null 的。尽管 JS
 </dependency>
 ```
 
-它们被多个静态分析工具支持，包括 :-
+它们被多个静态分析工具支持，包括：
 
-
-
-
-
-*   [Findbugs](http://findbugs.sourceforge.net/)
-*   [Error Prone](http://errorprone.info/)
+* [Findbugs](http://findbugs.sourceforge.net/)
+* [Error Prone](http://errorprone.info/)
 
 可以配置这些工具，当我们在不预期的参数上传递了 `null` 时，中断构建。
 
@@ -1666,7 +1647,7 @@ JSR-305 提供了注解，可以声明哪里是可以接受 null 的。尽管 JS
 
 ```java
 @javax.annotation.ParametersAreNonnullByDefault
-package com.example.somepackage ;
+package com.example.somepackage;
 ```
 
 遗憾的是，子包不会继承父包的注解，因此每个包都必须创建一个 `package-info.java` 文件。
@@ -1675,7 +1656,7 @@ package com.example.somepackage ;
 
 # 广泛使用 Final
 
-## 广泛使用 Final 
+## 广泛使用 Final
 
 ### 总结
 考虑将任何不改变的变量或参数设置为 `final`。
@@ -1708,8 +1689,11 @@ package com.example.somepackage ;
 **糟糕的**
 ```java
 public class Foo {
+
   private final String a;
+
   private final Integer b;
+
   private final Float c;
 
   public Foo(String value) {
@@ -1727,8 +1711,13 @@ public class Foo {
   public Foo(Float value) {
     this.a = "";
     this.b = 42;
-    this.c = Objects.requireNonNull(value);
-  }
+```
+
+
+
+```java
+this.c = Objects.requireNonNull(value);
+}
 }
 ```
 
@@ -1739,29 +1728,44 @@ public class Foo {
 幸运的是，我们已经将所有字段设为 `final`，因此这会导致编译错误。如果该类是可变的，我们将在运行时发现一个 bug。
 
 **更好的**
+
 ```java
 public class Foo {
+
   private final String a;
+
   private final Integer b;
+
   private final Float c;
 
   private Foo(String a, Integer b, Float c) {
+
     this.a = Objects.requireNonNull(a);
+
     this.b = Objects.requireNonNull(b);
+
     this.c = Objects.requireNonNull(c);
+
   }
 
   public Foo(String value) {
+
     this(value, 42, 1.0f);
+
   }
 
   public Foo(Integer value) {
+
     this("", value, 1.0f);
+
   }
 
   public Foo(Float value) {
+
     this("", 42, value);
+
   }
+
 }
 ```
 
@@ -1773,8 +1777,6 @@ public class Foo {
 
 ## 避免检查型异常
 
-## 避免检查型异常
-
 ### 总结
 除非在抛出检查型异常时有明确的可采取措施，否则不要声明检查型异常。
 
@@ -1783,7 +1785,7 @@ public class Foo {
 
 这意味着它们不应该用于正常的控制流。
 
-检查型异常会膨肿并复杂代码。你应该避免将它们添加到你的 API 中，除非调用者总可以采取明确的行动来从错误场景中恢复。
+检查型异常会膨胀并复杂代码。你应该避免将它们添加到你的 API 中，除非调用者总可以采取明确的行动来从错误场景中恢复。
 
 这种情况出奇地少见。
 
@@ -1793,9 +1795,13 @@ public class Foo {
 
 ```java
 try {
+
   myObject.methodThrowingException();
+
 } catch (SomeCheckedException e) {
+
   throw new RuntimeException(e);
+
 }
 ```
 
@@ -1803,9 +1809,13 @@ try {
 
 ```java
 try {
+
   myObject.methodThrowingException();
+
 } catch (Exception e) {
+
   throw Throwables.propagate(e);
+
 }
 ```
 
@@ -1813,12 +1823,9 @@ try {
 
 ## 具体细节
 
-## 具体细节
 本节提供了关于各种 Java 特性和陷阱的特定建议。
 
 本节涵盖的大部分内容可以通过 FindBugs、PMD、Checkstyle 和 Sonar 等工具自动化。
-
-## 如何实现 hashCode 和 equals
 
 ## 如何实现 hashCode 和 equals
 
@@ -1847,9 +1854,6 @@ try {
 
 一个讨厌的灰色地带是那些生产代码不需要比较相等性、但测试代码需要的类。这里的困境在于，是为了纯粹的测试而实现这些方法，还是让测试代码通过自定义的相等性检查变得复杂。
 
-
-
-
 当然，这里没有标准答案；我们建议在回退到提供自定义 `equals` 方法之前，首先尝试 `compare-it-in-the` 测试方法。
 
 通过使用如 `AssertJ` 或 `Hamcrest` 等库实现自定义断言，可以干净地共享自定义的相等性检查。
@@ -1858,79 +1862,101 @@ try {
 
 ```java
 @Override public boolean equals(Object o) {
+
   throw new AssertionError(); // 方法永远不会被调用
+
 }
 ```
 
 这似乎是一个好主意，但遗憾的是，它会混淆大多数静态分析工具。权衡之下，它产生的问题可能比解决的问题更多。
 
-## 使用 IDE 自动生成
-
+### 使用 IDE 自动生成
 大多数 IDE 都提供某种自动生成 `hashCode` 和 `equals` 方法的方法。这是一个很容易实现的方法，但生成的方法（取决于 IDE 及其设置）通常很丑陋且复杂，如下所示由 `Eclipse` 生成的方法：
 
 ```java
- @Override
-  public int hashCode() {
-    final int prime = 31;
-    int result = 1;
-    result = prime * result + ((field1 == null) ? 0 : field1.hashCode());
-    result = prime * result + ((field2 == null) ? 0 : field2.hashCode());
-    return result;
-  }
+@Override
+public int hashCode() {
+
+  final int prime = 31;
+
+  int result = 1;
+
+  result = prime * result + ((field1 == null) ? 0 : field1.hashCode());
+
+  result = prime * result + ((field2 == null) ? 0 : field2.hashCode());
+
+  return result;
+
+}
 ```
 
 ```java
- @Override
-  public boolean equals(Object obj) {
-    if (this == obj)
-      return true;
-    if (obj == null)
-      return false;
-    if (getClass() != obj.getClass())
-      return false;
-   MyClass  other = (MyClass) obj;
-    if (field1 == null) {
-      if (other.field1 != null)
-        return false;
-    } else if (!field1.equals(other.field1))
-      return false;
-    if (field2 == null) {
-      if (other.field2 != null)
-        return false;
-    } else if (!field2.equals(other.field2))
-      return false;
+@Override
+public boolean equals(Object obj) {
+
+  if (this == obj)
     return true;
-  }
+
+  if (obj == null)
+    return false;
+
+  if (getClass() != obj.getClass())
+    return false;
+
+  MyClass other = (MyClass) obj;
+
+  if (field1 == null) {
+    if (other.field1 != null)
+      return false;
+  } else if (!field1.equals(other.field1))
+    return false;
+
+  if (field2 == null) {
+    if (other.field2 != null)
+      return false;
+  } else if (!field2.equals(other.field2))
+    return false;
+
+  return true;
+
+}
 ```
 
 除非你的 IDE 可以配置为生成整洁的方法（下文所述），否则我们通常不建议这种方法。随着时间的推移，手动编辑这些代码很容易引入 bug。
 
-## 手写整洁的方法
-
+### 手写整洁的方法
 Java 7 引入了 `java.util.Objects` 类，使得实现 `hashCode` 变得非常简单。Guava 提供了类似的 `com.google.common.base.Objects` 类，可以与早版本的 Java 使用。
 
 ```java
- @Override
-  public int hashCode() {
-    return Objects.hash(field1, field2);
-  }
+@Override
+public int hashCode() {
+
+  return Objects.hash(field1, field2);
+
+}
 ```
 
 `Objects` 类也稍微简化了 `equals` 的实现，将大部分空检查推到了 `Objects.equals` 方法中。
 
 ```java
- @Override
-  public boolean equals(Object obj) {
-    if (this == obj) // <- 性能优化
-      return true;
-    if (obj == null)
-      return false;
-    if (getClass() != obj.getClass()) // <- 参见关于继承的注释
-      return false;
-    MyClass other = (MyClass) obj;
-    return Objects.equals(field1, other.field1) &&
-        Objects.equals(field2, other.field2);
-  }
+@Override
+public boolean equals(Object obj) {
+
+  if (this == obj) // <- 性能优化
+    return true;
+
+  if (obj == null)
+    return false;
+
+  if (getClass() != obj.getClass()) // <- 参见关于继承的注释
+    return false;
+
+  MyClass other = (MyClass) obj;
+
+  return Objects.equals(field1, other.field1) &&
+      Objects.equals(field2, other.field2);
+
+}
 ```
 
 第一个 `if` 语句逻辑上并不是必须的，可以安全地省略；然而，它可能会提供性能优势。
@@ -1940,18 +1966,24 @@ Java 7 引入了 `java.util.Objects` 类，使得实现 `hashCode` 变得非常�
 上面的示例使用 `getClass` 来检查对象是否为相同类型。另一种方法是使用 `instanceof`，如下：
 
 ```java
- @Override
-  public boolean equals(Object obj) {
-    if (this == obj)
-      return true;
-    if (obj == null)
-      return false;
-    if (!(obj instanceof MyClass)) // <- 与 instanceof 
-      return false;
-    MyClass other = (MyClass) obj;
-    return Objects.equals(field1, other.field1) &&
-        Objects.equals(field2, other.field2);
-  }
+@Override
+public boolean equals(Object obj) {
+
+  if (this == obj)
+    return true;
+
+  if (obj == null)
+    return false;
+
+  if (!(obj instanceof MyClass)) // <- 与 instanceof 
+    return false;
+
+  MyClass other = (MyClass) obj;
+
+  return Objects.equals(field1, other.field1) &&
+      Objects.equals(field2, other.field2);
+
+}
 ```
 
 这会导致行为上的差异——将 `MyClass` 的实例与其子类比较时，使用 `instanceof` 会返回 `true`，而使用 `getClass` 则会返回 `false`。
@@ -1962,9 +1994,11 @@ Java 7 引入了 `java.util.Objects` 类，使得实现 `hashCode` 变得非常�
 
 ```java
 MyClass a = new MyClass();
+
 ExtendsMyClassWithCustomEqual b = new ExtendsMyClassWithCustomEqual();
 
 a.equals(b) // true
+
 b.equals(a) // false, 违反了对称性
 ```
 
@@ -1977,27 +2011,29 @@ b.equals(a) // false, 违反了对称性
 如果你认为在某些情况下将子类视为等同于父类是合理的，请使用 `instanceof` 但要确保 `equals` 方法设为 `final`。
 
 ### Commons EqualsBuilder 和 HashCodeBuilder
-
 Apache commons 的 `hashcode` 和 `equals` 曾经是生成这些方法的流行方式。我们不建议在新代码中使用它们，因为它们实现的大部分功能现在已由 `java.util.Objects` 或 Guava 的对应类提供。
 
 这些类确实提供了单行反射实现的选项：
 
 ```java
 public boolean equals(Object obj) {
+
   return EqualsBuilder.reflectionEquals(this, obj);
+
 }
 ```
 
 ```java
 public int hashCode() {
+
   return HashCodeBuilder.reflectionHashCode(this);
+
 }
 ```
 
 这些实现的简洁性很有吸引力，但它们的性能明显逊于其他方法。良好的性能测试和定期的性能分析（Profiling）可以帮助判断性能差的方法会导致瓶颈。如果你有信心可以检测到这种影响，那么将这些方法作为占位实现可能是一个合理的方法。但通常情况下我们建议避免使用它们。
 
 ## 代码生成器
-
 许多项目可以在构建时自动生成值对象。其中两个较著名的：
 
 *   [Google auto](https://github.com/google/auto/tree/master/value)
@@ -2005,8 +2041,7 @@ public int hashCode() {
 
 但还有许多其他可用工具。
 
-#### Google Auto
-
+### Google Auto
 Google *Auto* 会为带有 `@AutoValue` 注解的抽象类创建一个*显而易见*的子类实现。该实现将包含功能的 `hashcode` 和 `equals` 方法。
 
 ```java
@@ -2014,72 +2049,98 @@ import com.google.auto.value.AutoValue;
 
 @AutoValue
 abstract class Animal {
+
   static Animal create(String name, int numberOfLegs) {
+
     return new AutoValue_Animal(name, numberOfLegs);
+
   }
 
   Animal() {}
 
   abstract String name();
+
   abstract int numberOfLegs();
+
 }
 ```
 
 这显然比手动编写完整的 `Animal` 类要容易得多，但也存在缺点。问题在“仔细考虑代码生成器”中有所讨论，它们被分为“摩擦”和“意外”。在这里，Google Auto 引入了一些“摩擦”，因为在生成器运行产生 `AutoValue_Animal` 类之前，上述代码在 IDE 中是无法编译的。存在一些“意外”。由于它是值对象，Animal 通常应该实现为 `final` 类——但我们被迫将其变为抽象类。*Auto* 团队建议你添加一个包私有构造函数，以防止创建其他子类。
 
-
-
 与普通的 Java 不同，访问器（accessors）的声明顺序很重要，因为生成器使用它来定义构造函数参数的顺序。因此，重新排序访问器可能会引入意想不到的 Bug。
 
-## Lombok
-
+### Lombok
 Lombok 还可以（以及其他功能）生成值对象的完整实现。它与 Google auto 采取不同的方法。
 
 假设有如下注解的类：
 
-```
+```java
 @Value
 public class ValueExample {
+
   String name;
+
   @NonFinal int age;
+
   double score;
+
 }
 ```
 
 它会在构建时修改该类，产生类似于所示的实现：
 
-```
+```java
 public final class ValueExample {
+
   private final String name;
+
   private int age;
+
   private final double score;
 
   public ValueExample(String name, int age, double score) {
+
     this.name = name;
+
     this.age = age;
+
     this.score = score;
+
    }
 
   public String getName() {
+
     return this.name;
+
   }
 
   public int getAge() {
+
     return this.age;
+
   }
 
   public double getScore() {
+
     return this.score;
+
   }
 
   public boolean equals(Object o) {
+
    // valid implementation of equality based on all fields
+
   }
 
   public int hashCode() {
+
    // valid hashcode implementation based on all fields
+
   }
+}
 ```
+
+
 
 Google `Value` 要求程序员为类提供有效的公共 API，而 `Lombok` 则根据其内部状态的描述来创建公共 API。该描述是有效的 Java 语法，但在被 `Lombok` 解释时具有不同的含义。
 
@@ -2107,25 +2168,35 @@ Google `Value` 要求程序员为类提供有效的公共 API，而 `Lombok` 则
 
 **糟糕示例**
 
-```
+```java
 public String foo(String currentStatus) {
+
   if ( someLogic() ) {
+
     currentStatus  = "FOO";
+
   }
+
   return currentStatus;
+
 }
 ```
 
 **更好示例**
 
-```
+```java
 public String foo(final String currentStatus) {
+
   String desiredStatus = currentStatus;
+
   if ( someLogic() ) {
+
     desiredStatus = "FOO";
+
   }
 
   return desiredStatus ;
+
 }
 ```
 
@@ -2142,34 +2213,49 @@ public String foo(final String currentStatus) {
 
 **糟糕示例**
 
-```
+```java
 public void foo(String value) {
+
     String calculatedValue;
+
     if (someCondition()) {
+
         calculatedValue = calculateStr(value);
+
         doSomethingWithValue(calculatedValue);
+
     }
+
 }
 ```
 
 **更好示例**
 
-```
+```java
 public void foo(String value) {
+
     if (someCondition()) {
+
         String calculatedValue = calculateStr(value);
+
         doSomethingWithValue(calculatedValue);
+
     }
+
 }
 ```
 
 **极好示例**
 
-```
+```java
 public void foo(String value) {
+
     if (someCondition()) {
+
         doSomethingWithValue(calculateStr(value));
+
     }
+
 }
 ```
 
@@ -2187,30 +2273,47 @@ Java 5 引入的 `for each` 循环避免了索引 `for` 循环潜在的越一错
 
 **糟糕示例**
 
-```
+```java
  public List<String> selectValues(List<Integer> someIntegers) {
+
     List<String> filteredStrings = new ArrayList<String>();
+
     for (int i = 0; i != someIntegers.size(); i++) {
+
       Integer value = someIntegers.get(i);
+
       if (value > 20) {
+
         filteredStrings.add(value.toString());
+
       }
+
     }
+
     return filteredStrings;
+
   }
 ```
 
 **好一点示例**
 
-```
+```java
  public List<String> selectValues(List<Integer> someIntegers) {
+
     List<String> filteredStrings = new ArrayList<String>();
+
     for (Integer value : someIntegers) {
+
       if (value > 20) {
+
         filteredStrings.add(value.toString());
+
       }
+
     }
+
     return filteredStrings;
+
   }
 ```
 
@@ -2226,58 +2329,79 @@ filter 和 map 突出了代码想要实现的目标。这在命令式实现中�
 
 **糟糕示例**
 
-```
+```java
  public List<String> selectValues(List<Integer> someIntegers) {
+
     List<String> filteredStrings = new ArrayList<String>();
+
     for (Integer value : someIntegers) {
+
       if (value > 20) {
+
         filteredStrings.add(value.toString());
+
       }
+
     }
+
     return filteredStrings;
+
   }
 ```
 
 **更好 (Java 8)**
 
-```
+```java
  public List<String> selectValues(List<Integer> someIntegers) {
+
     return someIntegers.stream()
+
         .filter(i -> i > 20)
+
         .map(i -> i.toString())
+
         .collect(Collectors.toList());
+
   }
 ```
 
 **更好 (Java 7 使用 Guava)**
 
-```
+```java
  public List<String> selectValues(List<Integer> someIntegers) {
+
     return FluentIterable
+
     .from(someIntegers)
+
     .filter(greaterThan(20))
+
     .transform(Functions.toStringFunction())
+
     .toList();
+
   }
 
   private static Predicate<Integer> greaterThan(final int limit) {
+
     return new Predicate<Integer>() {
+
       @Override
+
       public boolean apply(Integer input) {
+
         return input > limit;
+
       }
+
     };
+
   }
 ```
 
 注意，尽管 Java 7 版本需要更多的代码行（形式为匿名内部类的样板代码），但 `selectValues` 方法的逻辑更加清晰。如果 `Predicate` 或映射函数所需的逻辑在多个处需要，那么将其移动到公共位置很容易。这在命令式版本中较难实现。
 
-
-
-
 另外请注意，创建 `Predicate` 的方法已改为静态（static）。在返回匿名类时，尽可能这样做是一个好主意，可以防止长生命实例导致父类无法被垃圾回收。虽然在这个实例中 `Predicate` 只是短命的，但在所有情况下教条式地应用 `static` 可以避免思考的开销。
-
-## 避免使用史前时代的 API
 
 ## 避免使用史前时代的 API
 
@@ -2298,8 +2422,6 @@ Java 已经存在 20 多多年。为了保持向后兼容，它堆积了各种�
 *   `java.util.Enumeration` - 请用 `Iterator` 或 `Iterable` 代替
 
 这些替代品（`Enumeration` 除外）与原始类的区别在于它们不同同步。如果你认为你需要同步集合，请去安静的地方重新思考一下。
-
-## 注意强制转换和泛型警告
 
 ## 注意强制转换和泛型警告
 
@@ -2335,11 +2457,15 @@ Java 的类型系统是为了帮助我们的——它在编译时捕捉错误并
 
 例如：
 
-```
+```java
 List list = numberList();
+
 for (Object each : list) {
+
   Integer i = (Integer) each;
+
   // do things with integers
+
 }
 ```
 
@@ -2351,8 +2477,9 @@ List is a raw type. References to generic type List<E> should be parameterized
 
 同样，对于错误的代码，例如：
 
-```
+```java
 List l = new ArrayList<Number>();
+
 List<String> ls = l;
 ```
 
@@ -2366,10 +2493,13 @@ The expression of type List needs unchecked conversion to conform to List<String
 
 在这种情况下，移除强制转换和警告是非常直接的：
 
-```
+```java
 List<Integer> list = numberList();
+
 for (Integer each : list) {
+
    // do things with each
+
 }
 ```
 
@@ -2379,17 +2509,25 @@ for (Integer each : list) {
 
 例如：
 
-```
+```java
 List<Widget> widgets = getWidgets();
+
 List results = process(widgets);
 
 for (Object each : results) {
+
   if (each instanceof String) {
+
     // handle failure using data from string
+
   } else {
+
     EnhancedWidget widget = (EnhancedWidget) each;
+
     widget.doSomething();
+
   }
+
 }
 ```
 
@@ -2397,14 +2535,15 @@ for (Object each : results) {
 
 在这里，无关的类型被放在了集合中。
 
-
-
-
 ```java
 public void fnord(int i) {
+
   if (i == 1) {
+
     performSideEffect();
+
   }
+
 }
 ```
 
@@ -2412,9 +2551,13 @@ public void fnord(int i) {
 
 ```java
 public void fnord(int i) {
+
   if (i == VALID) {
+
     performSideEffect();
+
   }
+
 }
 ```
 
@@ -2422,9 +2565,13 @@ public void fnord(int i) {
 
 ```java
 public void fnord(int i) {
+
   if (i == ONE) {
+
     performSideEffect();
+
   }
+
 }
 ```
 
@@ -2434,9 +2581,13 @@ public void fnord(int i) {
 
 ```java
 public void fnord(FnordStatus status) {
+
   if (status == FnordStatus.VALID) {
+
     performSideEffect();
+
   }
+
 }
 ```
 
@@ -2454,8 +2605,6 @@ public void fnord(FnordStatus status) {
 
 ## 不要使用 Assert 关键字
 
-## 不要使用 Assert 关键字
-
 ### 总结
 断言（Assertions）是一种实用的编码技术，可以提供许多益处，但在大多数情况下，使用第三方库来实现它们比使用 `assert` 关键字更好。
 
@@ -2468,8 +2617,6 @@ public void fnord(FnordStatus status) {
 
 # 避免使用 Float 和 Double
 
-## 避免 Float 和 Double
-
 ### 总结
 避免使用单精度浮点数和双精度浮点数（基本类型及其包装类）。
 
@@ -2478,93 +2625,112 @@ float 和 double 引入了四舍入和比较问题的雷区。虽然对于某些
 
 核心问题是，浮点数无法表示许多数字（例如 `0.1`）。这导致了简单的测试用例可能无法到的意外结果：
 
-```
+```java
  double balance = 2.00;
-    double transationCost = 0.10;
-    int numberTransactions = 6;
 
-    System.out.printf("After %s transactions balance is %s"
-                    , numberTransactions
-                    , balance - (transationCost * numberTransactions));
-    // 结果为 After 6 transactions balance is 1.4 :-)
+    double transationCost = 0.10;
+
+    int numberTransactions = 6;
+```
+
+
+
+# 浮点数精度问题与解决方案
+
+## 问题演示
+
+```java
+double balance = 2.00;
+double transationCost = 0.10;
+int numberTransactions = 6;
+
+System.out.printf("After %s transactions balance is %s"
+        , numberTransactions
+        , balance - (transationCost * numberTransactions));
+
+// 结果为 After 6 transactions balance is 1.4 :-)
 ```
 
 但是
 
-```
- double balance = 2.00;
-    double transationCost = 0.10;
-    int numberTransactions = 7;
+```java
+double balance = 2.00;
+double transationCost = 0.10;
+int numberTransactions = 7;
 
-    System.out.printf("After %s transactions balance is %s"
-                     , numberTransactions
-                     , balance - (transationCost * numberTransactions));
-    // 结果为 After 7 transactions balance is 1.2999999999999998 :-(
+System.out.printf("After %s transactions balance is %s"
+        , numberTransactions
+        , balance - (transationCost * numberTransactions));
+
+// 结果为 After 7 transactions balance is 1.2999999999999998 :-(
 ```
 
-在这种情况下，简单的解决方案是将浮点数替换为整数值（即以分而不是美元为单位跟踪余额）。在无法用整数替换 float 的情况下，可以将代码重写为使用 `BigDecimal`：
+在这种情况下，简单的解决方案是将浮点数替换为整数值（即以分而不是美元为单位跟踪余额）。在无法用整数替换 `float` 的情况下，可以将代码重写为使用 `BigDecimal`：
 
 ```java
- BigDecimal balance = new BigDecimal("2.00");
-    BigDecimal transationCost = new BigDecimal("0.10");
+BigDecimal balance = new BigDecimal("2.00");
+BigDecimal transationCost = new BigDecimal("0.10");
+BigDecimal numberTransactions = BigDecimal.valueOf(7);
 
-    BigDecimal numberTransactions = BigDecimal.valueOf(7);
+System.out.printf("After %s transactions balance is %s"
+        , numberTransactions
+        , balance.subtract(transationCost.multiply(numberTransactions)));
 
-    System.out.printf("After %s transactions balance is %s"
-                     , numberTransactions
-                     , balance.subtract(transationCost.multiply(numberTransactions)));
-
-   // 结果为 After 7 transactions balance is 1.30 :-)
+// 结果为 After 7 transactions balance is 1.30 :-)
 ```
 
-注意，虽然 `BigDecimal` 可以从 float 构造，但这会将我们回到原点：
+注意，虽然 `BigDecimal` 可以从 `float` 构造，但这会将我们回到原点：
 
 ```java
- BigDecimal balance = new BigDecimal("2.00");
-    BigDecimal transationCost = new BigDecimal(0.10); // <- 使用 float 构造
+BigDecimal balance = new BigDecimal("2.00");
+BigDecimal transationCost = new BigDecimal(0.10); // <- 使用 float 构造
+BigDecimal numberTransactions = BigDecimal.valueOf(7);
 
-    BigDecimal numberTransactions = BigDecimal.valueOf(7);
+System.out.printf("After %s transactions balance is %s"
+        , numberTransactions
+        , balance.subtract(transationCost.multiply(numberTransactions)));
 
-    System.out.printf("After %s transactions balance is %s"
-                     , numberTransactions
-                     , balance.subtract(transationCost.multiply(numberTransactions)));
-
-   // 结果为 After 7 transactions
-   // balance 为 1.2999999999999998
+// 结果为 After 7 transactions
+// balance 为 1.2999999999999998
 ```
 
-### 什么时候使用 float 和 double
-float 和 double 显然不是全坏的，否则它们不太可能包含在 Java 语言中。对于性能敏感的领域，如机器学习、物理引擎、科学应用等，原始类型相比 `BigDecimal` 有性能优势。在这些领域，性能收益可能远大于额外风险。使用 `BigDecimal` 的代码通常也更加冗长和笨拙。如果你在一个可以接受浮点类型不精度的领域工作，你可能更喜欢它们带来的简洁代码，但请确保你在做出这种选择时充分了解其中的陷阱。
+## 什么时候使用 float 和 double
 
-## 不要使用反射
+`float` 和 `double` 显然不是全坏的，否则它们不太可能包含在 Java 语言中。对于性能敏感的领域，如机器学习、物理引擎、科学应用等，原始类型相比 `BigDecimal` 有性能优势。在这些领域，性能收益可能远大于额外风险。使用 `BigDecimal` 的代码通常也更加冗长和笨拙。如果你在一个可以接受浮点类型不精度的领域工作，你可能更喜欢它们带来的简洁代码，但请确保你在做出这种选择时充分了解其中的陷阱。
 
-## 不要使用反射
+# 不要使用反射
 
-### 总结
+## 总结
+
 不要在代码中使用反射（即使用 `java.lang.reflect` 包中的任何内容）。
 
-### 详细说明
+## 详细说明
+
 反射是一个强大的工具；它允许 Java 实现某些原本无法实现或需要大量模板代码的功能。但是，虽然它在创建框架或库时有时有用，但它不太可能是解决我们在普通的服务器端代码中遇到的问题的好方法。
 
 那么为什么我们要避免使用 Java 提供的强大工具呢？反射有三个主要缺点：
 
-#### 丢失编译时安全性
+### 丢失编译时安全性
+
 反射将错误从编译时移动到运行时——这是一个坏事。编译器是我们防御缺陷的第一道防线，类型系统是我们记录代码的最有效的工具之一。我们不应该轻易抛弃这些。
 
-#### 丢失重构安全性
+### 丢失重构安全性
+
 重构和代码分析工具对反射是盲目的。尽管它们可能会尝试考虑这一点，但反射为程序行为带来的额外可能性，意味着工具无法再提供其已理解程序的严谨保证。在存在反射的情况下，原本安全的重构可能会改变程序，分析工具可能会报告错误的结果。
 
-#### 增加代码理解难度
-正如反射让自动化工具更难理解代码，它也让人类更难理解代码。反射引入了惊喜。“这个方法从未被调用过，我可以安全地删除它。* 哦，反射。
+### 增加代码理解难度
 
-*由于我知道是在哪里调用的，我可以安全地更改这个私有方法的行为。* 哦，反射。
+正如反射让自动化工具更难理解代码，它也让人类更难理解代码。反射引入了惊喜。
 
+> “这个方法从未被调用过，我可以安全地删除它。” * 哦，反射。
+>
+> “由于我知道是在哪里调用的，我可以安全地更改这个私有方法的行为。” * 哦，反射。
 
-
+# 使用 JDK 工具函数
 
 JDK 包含许多工具函数，可以使用它们来替代更冗长的代码。
 
-### 详情
+## 详情
 
 正如在“优化可读性而非性能”中讨论的，我们应该倾向于使用简单代码而不是我们认为可能更高效的复杂代码（除非我们通过性能分析和性能测试证明了更复杂的代码具有实际收益）。
 
@@ -2578,19 +2744,19 @@ JDK 中散布着许多小函数，它们不仅比通常用于替换的代码更�
 
 当你需要将数组转换为固定大小的列表时。
 
-```
-List ss = Arrays.asList("1”, “2");
+```java
+List<String> ss = Arrays.asList("1", "2");
 ```
 
 这比常见的替代方案更整洁、更高效，例如：
 
-```
-List ss = new ArrayList<>(); ss.add(“1”); ss.add(“2”);
+```java
+List<String> ss = new ArrayList<>(); ss.add("1"); ss.add("2");
 ```
 
-`asList` 返回的列表实现是专门的，可能比 `ArrayList` 消耗更内存。
+`asList` 返回的列表实现是专门的，可能比 `ArrayList` 消耗更少内存。
 
-请注意，通过此方法创建的列表不是完全不可变的。它们是固定大小的，如果你尝试添加或删除成员，将抛出 `java.lang.UnsupportedOperation` 异常，但修改 `set` 等修改方法将成功。
+请注意，通过此方法创建的列表不是完全不可变的。它们是固定大小的，如果你尝试添加或删除成员，将抛出 `java.lang.UnsupportedOperationException` 异常，但 `set` 等修改方法将成功。
 
 如果你在使用 Java 9，`List.of` 方法提供了更优的替代方案。
 
@@ -2617,23 +2783,23 @@ List ss = new ArrayList<>(); ss.add(“1”); ss.add(“2”);
 
 形式如下：
 
-```
+```java
 Boolean b = Boolean.valueOf(true);
 ```
 
 这比主观上更丑的写法效率更高：
 
-```
+```java
 Boolean b = new Boolean(true);
 ```
 
-`valueOf` 将返回两个固定 Boolean 实例之一，而调用构造函数始终会分配一个新对象。
+`valueOf` 将返回两个固定 `Boolean` 实例之一，而调用构造函数始终会分配一个新对象。
 
-对于 `Integers` 也是如此，`valueOf` 将为 -128 到 127 之间的值返回共享实例。
+对于 `Integer` 也是如此，`valueOf` 将为 -128 到 127 之间的值返回共享实例。
 
 `Long.valueOf` 同样会从缓存中返回对象。
 
-Oracle JDK 目前没有在调用 `valueOf` 时对 Floats 或 Doubles 使用缓存。因此，在浮点数上使用 `valueOf` 替代 `new` 可能没有优势，但也没有劣势。
+Oracle JDK 目前没有在调用 `valueOf` 时对 `Float` 或 `Double` 使用缓存。因此，在浮点数上使用 `valueOf` 替代 `new` 可能没有优势，但也没有劣势。
 
 `valueOf` 方法的重载版本从字符串构造它们所需的类型。如果你需要从字符串创建装箱后的原始类型，这是实现方法。
 
@@ -2641,13 +2807,13 @@ Oracle JDK 目前没有在调用 `valueOf` 时对 Floats 或 Doubles 使用缓�
 
 所以：
 
-```
+```java
 Boolean b = true;
 ```
 
 和
 
-```
+```java
 Boolean b = Boolean.valueOf(true);
 ```
 
@@ -2659,35 +2825,35 @@ Boolean b = Boolean.valueOf(true);
 
 与 `valueOf` 类似，`parseXXX` 方法将字符串转换为原始类型，在这种情况下原始类型没有被装箱。
 
-```
-float f = Float.parseFloat(“1.2”);
+```java
+float f = Float.parseFloat("1.2");
 ```
 
 这完全符合方法名所述的作用，与常见的替代方案相比：
 
-```
-float f = new Float(“1.2”);
+```java
+float f = new Float("1.2");
 ```
 
 它避免了 `Float` 对象的构造和解箱。
 
-对于 Boolean、Double、Integer 以及其他原始类型也存在类似的方法。
+对于 `Boolean`、`Double`、`Integer` 以及其他原始类型也存在类似的方法。
 
 ## isEmpty
 
 一种常见的拙劣惯用法是通过检查大小来检查 `Collection` 是否为空：
 
-```
-if ( list.size() == 0 ) {
-  // 执行一些事情
+```java
+if (list.size() == 0) {
+    // 执行一些事情
 }
 ```
 
 更清晰、更简洁的是：
 
-```
-if ( list.isEmpty() ) {
-  // 执行一些事情
+```java
+if (list.isEmpty()) {
+    // 执行一些事情
 }
 ```
 
@@ -2701,7 +2867,7 @@ Java 9 为 `List`、`Set` 和 `Map` 接口添加了静态工厂方法 `of`。
 
 这些允许我们整洁地构建集合，例如：
 
-```
+```java
 List.of(1, 2, 3);
 Set.of(42);
 ```
@@ -2721,8 +2887,6 @@ Set.of(42);
 正如该节所讨论的，保持分层策略是重要的，要有许多快速运行的单元测试和少量的集成和系统测试。精确的比例会根据项目而异。
 
 虽然在所有层次编写测试都是重要的，但本节主要关注单元测试，因为这些是我们编写得最多。
-
-## 编写规范而非测试
 
 ## 编写规范而非测试
 
@@ -2747,11 +2911,7 @@ Set.of(42);
 * 文档代码的行为
 * 为代码的设计提供信息
 
-
-
-
-
-它描述了某物 `must` 需要做什么，而对其对其如何实现做任何假设。它允许存在多种实现。如果一个规范与某种实现绑定，那么它就是`over-specified`（过度规格），并且在实现发生变化时必须之更改。
+它描述了某物 `must` 需要做什么，而不对其如何实现做任何假设。它允许存在多种实现。如果一个规范与某种实现绑定，那么它就是 `over-specified`（过度规格），并且在实现发生变化时必须更改。
 
 所以这就是我们必须的目标——我们代码的可执行规范。
 
@@ -2765,7 +2925,7 @@ Set.of(42);
 
 首先编写一个测试并运行它，确保它是失败的。
 
-接下来编写恰少的代码来让该测试通过（不要多写）。
+接下来编写恰好少的代码来让该测试通过（不要多写）。
 
 花一点时间看看是否有合理的重构可以改进代码，然后编写下一个测试并继续循环。
 
@@ -2781,11 +2941,11 @@ Set.of(42);
 1. 先编写规范
 2. 以非常微小的步骤移动
 
-这两个实践单独单独都是很好的主意，即使它们不结合在一起。
+这两个实践单独都是很好的主意，即使它们不结合在一起。
 
 如果我们先编写规范，但以较大的步骤移动（可能是因为我们认为自己知道实现应该是什么样的），我们将实现第一个优势——即保证我们编写的代码是可以被测试的。
 
-我们这指什么意思？
+我们指什么意思？
 
 如果代码在编写时没有考虑测试，那么很难为它编写一个符合我们对 `unit`（单元）测试定义的测试。
 
@@ -2808,7 +2968,7 @@ Set.of(42);
 
 尽管如此，如果你对正在工作的技术和领域有良好的理解，如果你想为质量优化，`TDD` 通常是最好的方法。
 
-如果你你不熟悉自己的领域或技术，你可能会发现先编写规范很困难。
+如果你不熟悉自己的领域或技术，你可能会发现先编写规范很困难。
 
 这个问题的经典解决方案是首先通过产生一个丢弃的 spike（实验）来获得理解。
 
@@ -2834,8 +2994,6 @@ Spike 只是一些快速粗糙的代码，用于探索你可能如何解决问�
 
 ## 思考单元而不是方法
 
-## 思考单元而不是方法
-
 单元测试描述的每个行为通常应该与整个 `unit` 相关，而不是单个方法的职责。
 
 ### 什么是单元（Unit）？
@@ -2846,42 +3004,44 @@ Spike 只是一些快速粗糙的代码，用于探索你可能如何解决问�
 
 如果我们尝试为 `java.util.Stack` 的 `push` 方法编写单元测试，我们可能会得到类似下面的内容：
 
-```
+```java
 @Test
 public void testPush() {
-   Stack<String> testee = new Stack<String>();
-   testee.push("foo");
-   assertThat(testee.pop()).isEqualTo("foo");
-};
+    Stack<String> testee = new Stack<String>();
+    testee.push("foo");
+    assertThat(testee.pop()).isEqualTo("foo");
+}
 ```
 
 现在让我们测试 `pop` 方法：
 
-```
+```java
 @Test
 public void testPop() {
-   Stack<String> testee = new Stack<String>();
-   testee.push("foo");
-   assertThat(testee.pop()).isEqualTo("foo");
-};
+    Stack<String> testee = new Stack<String>();
+    testee.push("foo");
+    assertThat(testee.pop()).isEqualTo("foo");
+}
 ```
 
 噢。这看起来很眼熟。
 
-我们遇到的问题是定义的定义的 `unit` 太小了。
+我们遇到的问题是定义的 `unit` 太小了。
 
 如果我们开始将 `java.util.Stack` 视为我们的 `unit`，那么测试变得简单许多：
 
-```
+```java
 @Test
 public void shouldRetrieveInOrderAdded() {
-  Stack<String> testee = new Stack<String>();
-  testee.push("a");
-  testee.push("b");
-  assertThat(testee.pop()).isEqualTo("b");
-  assertThat(testee.pop()).isEqualTo("a");
+    Stack<String> testee = new Stack<String>();
+    testee.push("a");
+    testee.push("b");
+    assertThat(testee.pop()).isEqualTo("b");
+    assertThat(testee.pop()).isEqualTo("a");
 }
 ```
+
+
 
 我们写了一个测试，它不是试图描述方法做什么，而是描述整个类的行为。
 
@@ -2899,29 +3059,37 @@ public void shouldRetrieveInOrderAdded() {
 
 如果我们在没有任何测试的情况下继承下面的代码，我们会为它写什么测试？
 
-```
+```java
 public class ThingaMeBob {
 
   private final Iterable<MatchingBinaryOperator> actions;
 
   ThingaMeBob() {
+
     actions = Arrays.asList(new Addition(), new Subtraction());
+
   }
 
   public int process(String s, int a, int b) {
+
     for (MatchingBinaryOperator each : actions) {
+
       if (each.match(s)) {
+
         return each.apply(a,b);
+
       }
+
     }
 
     throw new RuntimeException();
+
   }
 
 }
-
 ```
 
+```java
 class Addition implements MatchingBinaryOperator {
   public boolean match(String s) {
     return "add".equals(s);
@@ -2940,9 +3108,6 @@ class Subtraction implements MatchingBinaryOperator {
   }
 }
 ```
-
-
-
 
 我们可以为 `Addition` 和 `Subtraction` 类编写测试：
 
@@ -3125,8 +3290,6 @@ Kevlin Henney 将 `should` 比作自行车的辅助轮——一种我们在学�
 
 这不是硬性规定——有时在不引用接口的情况下，很难或无法描述有意义的行为。
 
-
-
 那么我们应该如何选择这些示例呢？
 
 一种方法是查看被测组件的可能输入。
@@ -3167,16 +3330,16 @@ Kevlin Henney 将 `should` 比作自行车的辅助轮——一种我们在学�
 测试中的多个断言（assertions）可能是测试正在测试多一件事的指标。应该对多个断言保持怀疑，但它们并不一定是问题，例如：
 
 ```java
- @Test
-  public void shouldReturnItemsInOrderTheyWereAdded() {
-     ArrayDeque<String> testee = new ArrayDeque<String>();
+@Test
+public void shouldReturnItemsInOrderTheyWereAdded() {
+   ArrayDeque<String> testee = new ArrayDeque<String>();
 
-     testee.add("foo");
-     testee.add("bar");
+   testee.add("foo");
+   testee.add("bar");
 
-     assertEquals("foo",testee.pop());
-     assertEquals("bar",testee.pop());
-  }
+   assertEquals("foo",testee.pop());
+   assertEquals("bar",testee.pop());
+}
 ```
 
 这个测试只测试了一个关注点，但使用了多个断言来实现。
@@ -3216,37 +3379,37 @@ Kevlin Henney 将 `should` 比作自行车的辅助轮——一种我们在学�
 **Bad**
 
 ```java
- @Test
-  public void shouldRetrieveValuesInOrderTheyAreAdded() {
+@Test
+public void shouldRetrieveValuesInOrderTheyAreAdded() {
 
-    // given
-    Stack<String> testee = new Stack<String>();
-    String expectedFirstValue = "a";
-    String expectedSecondValue = "b";
+  // given
+  Stack<String> testee = new Stack<String>();
+  String expectedFirstValue = "a";
+  String expectedSecondValue = "b";
 
-    // when
-    testee.push(expectedFirstValue);
-    testee.push(expectedSecondValue);
-    String actualFirstValue = testee.pop();
-    String actualSecondValue = testee.pop();
+  // when
+  testee.push(expectedFirstValue);
+  testee.push(expectedSecondValue);
+  String actualFirstValue = testee.pop();
+  String actualSecondValue = testee.pop();
 
-    // then
-    assertThat(actualFirstValue).isEqualTo(secondValue);
-    assertThat(actualSecondValue).isEqualTo(firstValue);
-  }
+  // then
+  assertThat(actualFirstValue).isEqualTo(secondValue);
+  assertThat(actualSecondValue).isEqualTo(firstValue);
+}
 ```
 
 **Better**
 
 ```java
- @Test
-  public void shouldRetrieveValuesInOrderTheyAreAdded() {
-    Stack<String> testee = new Stack<String>();
-    testee.push("a");
-    testee.push("b");
-    assertThat(testee.pop()).isEqualTo("b");
-    assertThat(testee.pop()).isEqualTo("a");
-  }
+@Test
+public void shouldRetrieveValuesInOrderTheyAreAdded() {
+  Stack<String> testee = new Stack<String>();
+  testee.push("a");
+  testee.push("b");
+  assertThat(testee.pop()).isEqualTo("b");
+  assertThat(testee.pop()).isEqualTo("a");
+}
 ```
 
 ### 测试变量命名遵循标准的 TEA 命名约定
@@ -3278,87 +3441,86 @@ Kevlin Henney 将 `should` 比作自行车的辅助轮——一种我们在学�
 **Bad**
 
 ```java
- @Test
-  public void shouldXXX() {
-    MyClass testee = new MyClass();
-    assertThat(testee.process(0, "", 3))
-      .isEqualTo(Status.FAIL);
-  }
+@Test
+public void shouldXXX() {
+  MyClass testee = new MyClass();
+  assertThat(testee.process(0, "", 3))
+    .isEqualTo(Status.FAIL);
+}
 ```
 
 这个版本如何？
 
 **Better**
 
+
+
 ```java
- @Test
-  public void shouldXXX() {
+@Test
+public void shouldXXX() {
     int invalidValue = 3;
     MyClass testee = new MyClass();
     assertThat(testee.process(anInt(), aString(), invalidValue))
       .isEqualTo(Status.FAIL);
-  }
+}
 ```
 
 虽然我们需要额外的上下文来理解为什么 `3` 是一个无效值，但应该清楚 `process()` 方法的前两个参数对于我们所指定的行为是不重要的。
 
-为什么下方的 testee 返回枚举 `CONTINUE` 很重要？
+为什么下方的 `testee` 返回枚举 `CONTINUE` 很重要？
 
 **Bad**
 
-
-
-
-```
- @Test
-  public void shouldXXX() {
+```java
+@Test
+public void shouldXXX() {
     assertThat(testee.process()).isEqualTo(CONTINUE);
-  }
+}
 ```
 
 如果我们通过查看该类的其余部分，可能会发现：
 
-```
- @Before
-  public void setup() {
-     MyClass testee = new MyClass();
-     testee.setDefaultProcessState(CONTINUE);
-  }
+```java
+@Before
+public void setup() {
+    MyClass testee = new MyClass();
+    testee.setDefaultProcessState(CONTINUE);
+}
 ```
 
 其他测试可能不需要关心默认状态是什么，但这个测试需要了，因此我们应该这样写：
 
 **更好**
 
-```
- @Test
-  public void shouldXXX() {
+```java
+@Test
+public void shouldXXX() {
     testee.setDefaultProcessState(CONTINUE);
     assertThat(testee.process()).isEqualTo(CONTINUE);
-  }
+}
 ```
 
-当我们开始处理更复杂的领域对象时，要将重要的值与那些“为了构造有效对象但对我们的测试没有特别兴趣”的值分离来变得越来越困难。幸运的是，我们可以使用构建器模式（builder pattern）来减轻这种痛苦、减少重复，并保持测试的可读性。
+当我们开始处理更复杂的领域对象时，要将重要的值与那些“为了构造有效对象但对我们的测试没有特别兴趣”的值分离来变得越来越困难。幸运的是，我们可以使用构建器模式（`Builder` pattern）来减轻这种痛苦、减少重复，并保持测试的可读性。
 
-### 有意义地为值值
+### 有意义地命名值
 
 如果一个值具有重要意义，请让这种意义变得清晰，例如：
 
-```
- Foo testee = new Foo(PERFORM_VALIDATION);
+```java
+Foo testee = new Foo(PERFORM_VALIDATION);
 ```
 
 而不是：
 
-```
- Foo testee = new Foo(true);
+```java
+Foo testee = new Foo(true);
 ```
 
 ### 编写 DAMP 测试代码
 
 正如我们所见，为了突出某个值对测试是重要的，我们需要将它保留在使用它的测试方法中。这可能会引入我们在普通代码中可能无法接受的重复——但测试代码略有不同。
 
-复制和粘贴代码在测试代码和生产代码中都是糟糕的——代码越多，越难阅读，而且如果某个关注点在整个测试中被复制，它的改变将导致“散弹式修改”（shotgun surgery）。
+复制和粘贴代码在测试代码和生产代码中都是糟糕的——代码越多，越难阅读，而且如果某个关注点在整个测试中被复制，它的改变将导致“散弹式修改”（`shotgun surgery`）。
 
 因此，在测试代码中通常应该避免重复。
 
@@ -3376,19 +3538,17 @@ Kevlin Henney 将 `should` 比作自行车的辅助轮——一种我们在学�
 
 糟糕的
 
-```
+```java
 assertTrue("Expected 2 but got " + actual, actual == 2);
 ```
 
 好的
 
-```
+```java
 assertEquals(2, actual);
 ```
 
 内置断言的功能相当有限。替代性的断言库（如 AssertJ）提供了更丰富的功能，并产生更可读性的代码。
-
-## 理解如何使用 Mocks 和 Stubs
 
 ## 理解如何使用 Mocks 和 Stubs
 
@@ -3402,27 +3562,27 @@ assertEquals(2, actual);
 
 管理代码比工作代码更难测试，因为我们需要做一个选择——我们是尝试通过基于状态的测试从输出推断它的行为，还是使用**基于交互的测试（interaction based testing）**？
 
-在基于交互的测试中，我们检查对象之间是否以预期的方式通信。为了做到这一点，我们需要以某种方式窃听对话。这通过使用充充真实对象的对象来实现。
+在基于交互的测试中，我们检查对象之间是否以预期的方式通信。为了做到这一点，我们需要以某种方式窃听对话。这通过使用充当真实对象的对象来实现。
 
-通常这些对象是使用 Mock 框架（mocking framework）创建的。
+通常这些对象是使用 Mock 框架（`mocking framework`）创建的。
 
 ### Mock 框架
 
 虽然通常将由 Mock 框架创建的所有对象称为 mocks，但这是不准确的。
 
-这些对象一个更准确的通用术语是 `测试双胞（test double）`。
+这些对象一个更准确的通用术语是 `测试替身（test double）`。
 
 它们可以根据行为细分：
 
-*   哑对象（Dummy object）——需要存在以满足类型签名，但从未被实际使用
-*   存根（Stub）——必须存在并可能提供间接输入
-*   Mock 对象（Mock）——验证预期的交互是否发生
-*   假实现（Fake）——像真实的东西但更轻量——例如内存数据库
-*   间谍（Spy）——记录其与其他对象交互的对象
+*   **哑对象（Dummy object）**——需要存在以满足类型签名，但从未被实际使用
+*   **存根（Stub）**——必须存在并可能提供间接输入
+*   **Mock 对象（Mock）**——验证预期的交互是否发生
+*   **假实现（Fake）**——像真实的东西但更轻量——例如内存数据库
+*   **间谍（Spy）**——记录其与其他对象交互的对象
 
 在这些对象中，只有 stubs、mocks 和 spies 可能是由 Mock 框架创建的。
 
-稍后我们会谈到 spies，但大多数测试双在概念上可以被视为 stub 或 mock。
+稍后我们会谈到 spies，但大多数测试替身在概念上可以被视为 stub 或 mock。
 
 它们之间重要的区别是，mock 拥有一个预期，如果该预期没有被满足将会导致测试失败。也就是说，如果没有在 mock 上调用预期的方法，测试将失败。
 
@@ -3432,23 +3592,23 @@ stub 并不在乎是否被调用——它的作用仅仅是提供值。
 
 例如，使用 JMock 时，我们会写道：
 
-```
- Mockery context = new Mockery();
+```java
+Mockery context = new Mockery();
 
-  // given / arrange
-  Subscriber subscriber = context.mock(Subscriber.class);
-  Publisher publisher = new Publisher();
-  publisher.add(subscriber);
+// given / arrange
+Subscriber subscriber = context.mock(Subscriber.class);
+Publisher publisher = new Publisher();
+publisher.add(subscriber);
 
-  final String message = "message";
+final String message = "message";
 
-  // then / assert . . . 但我们还没有写 when
-  context.checking(new Expectations() {{
+// then / assert . . . 但我们还没有写 when
+context.checking(new Expectations() {{
     oneOf (subscriber).receive(message);
-  }});
+}});
 
-  // when / act
-  publisher.publish(message);
+// when / act
+publisher.publish(message);
 ```
 
 Spy 优雅地解决了这个问题。
@@ -3459,22 +3619,18 @@ Spy 记录它们与其他对象的交互。在实践中，这意味着 spy 默�
 
 例如，使用 Mockito：
 
+```java
+// given
+Subscriber subscriber = Mockito.mock(Subscriber.class);
+Publisher publisher = new Publisher();
+publisher.add(subscriber);
+
+// when
+publisher.publish(message);
+
+// then
+Mockito.verify(subscriber).receive(message);
 ```
- // given
-  Subscriber subscriber = Mockito.mock(Subscriber.class);
-  Publisher publisher = new Publisher();
-  publisher.add(subscriber);
-
-  // when
-  publisher.publish(message);
-
-  // then
-  Mockito.verify(subscriber).receive(message);
-```
-
-
-
-
 
 根据定义，基于状态的测试永远不会 mock（严格意义上的 mock），但它们可以使用存根（stubs）来提供间接值。
 
@@ -3482,7 +3638,7 @@ Spy 记录它们与其他对象的交互。在实践中，这意味着 spy 默�
 
 **不要这样做。**
 
-mock 框架应该仅用于将我们的测试与具有行为的对象隔离开。如果你有难以构造的值，请考虑使用测试数据构建模式（test data builder pattern）。
+mock 框架应该仅用于将我们的测试与具有行为的对象隔离开。如果你有难以构造的值，请考虑使用测试数据构建模式（`test data builder pattern`）。
 
 ## 在状态测试和交互测试之间进行选择
 
@@ -3524,10 +3680,10 @@ mock 框架应该仅用于将我们的测试与具有行为的对象隔离开。
 
 在实践中，这意味着单元测试不能：
 
-* 从数据库读取或写入
-* 执行网络 IO
-* 写入磁盘
-* 修改静态状态
+*   从数据库读取或写入
+*   执行网络 IO
+*   写入磁盘
+*   修改静态状态
 
 如果你的测试执行了上述任何操作，那么它就不是一个 `unit` 单元测试。这并不是说你的测试没有价值。
 
@@ -3535,9 +3691,9 @@ mock 框架应该仅用于将我们的测试与具有行为的对象隔离开。
 
 在大多数情况下，单元测试以下内容的价值很：
 
-* 生成的代码
-* 日志记录
-* `唯一`关注点是与其他系统集成的代码
+*   生成的代码
+*   日志记录
+*   `唯一`关注点是与其他系统集成的代码
 
 具有纯集成关注点的代码典型示例是 `DAO`。
 
@@ -3546,8 +3702,6 @@ mock 框架应该仅用于将我们的测试与具有行为的对象隔离开。
 对于`显式地`指定非常简单的样板代码（如 `get/set` 方法）的行为也几乎没有意义。在没有测试的情况下，预期行为是清晰的，它们的实际行为应该由在使用这些代码时测试更复杂逻辑的其他测试来验证。如果代码覆盖率表明这些方法没有被其他测试执行，也许你可以删除它们？
 
 不进行单元测试的代码应该始终进行集成测试的。
-
-## 测试常见问题解答
 
 ## 测试常见问题解答
 
@@ -3595,7 +3749,7 @@ Java 7 没有为此目的提供开箱即用的类，所以你需要自己实现�
 
 这对于原生的 `JUnit 4` 测试不是要求的，但如果你使用自定义运行器（runner），你可能需要这样做。
 
- 错误 (Errors) 和失败 (Failures) 的区别是什么？
+### 错误 (Errors) 和失败 (Failures) 的区别是什么？
 
 你应该尝试设计测试在逻辑错误时产生 `failures`。你的测试应该只在发生意外情况时产生错误。
 
@@ -3619,45 +3773,42 @@ public void shouldThrowFooExceptionWhenFeelsLikeIt
 ```java
 @Test
 public void shouldThrowFooExceptionWhenFeelsLikeIt() {
-  try {
-    testee.doStuff();
-    fail("Expected an exception");
-  } catch (FooException expectedException) {
-    assertThat(expectedException.getMessage(), is("felt like it"));
-  }
+    try {
+        testee.doStuff();
+        fail("Expected an exception");
+    } catch (FooException expectedException) {
+        assertThat(expectedException.getMessage(), is("felt like it"));
+    }
 }
 ```
 
-
-
-
-这种方法易于遵循，但有些冗嗦。如果你不对代码进行测试驱动，很容易忘记包含对 `fail()` 的调用。
+这种方法易于遵循，但有些冗长。如果你不对代码进行测试驱动，很容易忘记包含对 `fail()` 的调用。
 
 `JUnit` 现在提供了一种以 `'ExpectedException'` 方法规则形式存在的替代解决方案。这允许进行更细粒度的异常检查：
 
-```
+```java
 @Rule
-public ExpectedException thrown= ExpectedException.none();
+public ExpectedException thrown = ExpectedException.none();
 
 @Test
 public void foo() throws IOException {
-  thrown.expect(FooException.class);
-  thrown.expectMessage("felt like it");
+    thrown.expect(FooException.class);
+    thrown.expectMessage("felt like it");
 
-  testee.doStuff();
+    testee.doStuff();
 }
 ```
 
 这种方法更加简洁，但通过将 `then` 部分移动到方法的开头，破坏了测试常用的 `given/when/then` 流程。
 
-对于 Java 8，`AssertJ` 提供了了一些自定义断言，可以在不破坏这种流程的情况下使用。
+对于 Java 8，`AssertJ` 提供了一些自定义断言，可以在不破坏这种流程的情况下使用。
 
 ```java
 @Test
 public void testException() {
-  assertThatThrownBy(() -> { testee.doStuff(); })
-   .isInstanceOf(Exception.class)
-   .hasMessageContaining("felt like it");
+    assertThatThrownBy(() -> { testee.doStuff(); })
+        .isInstanceOf(Exception.class)
+        .hasMessageContaining("felt like it");
 }
 ```
 
@@ -3678,11 +3829,13 @@ public void testException() {
 
 第一种方法产生的测试与实现的耦合度较低，但每个子类的测试之间会存在重复。
 
-第二种方法避免了重复，但它与实现紧相关，并且可能很脆弱。
+第二种方法避免了重复，但它与实现紧密相关，并且可能很脆弱。
 
 ### 我如何测试 Hashcode 和 Equals？
 
 测试 `hashcode` 和 `equals` 可能非常繁琐且耗时，这让人考虑到考虑到代码可能是自动生成的，这种时间投入是否值得的。
+
+
 
 `Equals verifier` 项目提供了一个很好的（部分）解决方案：
 
@@ -3690,11 +3843,11 @@ public void testException() {
 
 它通过单行易于编写的测试检查类是否符合 `hashcode-equals` 合约：
 
-```
- @Test
-  public void shouldObeyHashCodeEqualsContract() {
-    EqualsVerifier.forClass(MyValue.class).verify();
-  }
+```java
+@Test
+public void shouldObeyHashCodeEqualsContract() {
+  EqualsVerifier.forClass(MyValue.class).verify();
+}
 ```
 
 然而，它在检查合约方面做得非常彻底 - 包括它如何与继承相互作用。要让一个非 `final` 类符合合约并不是易事的。
@@ -3703,30 +3856,28 @@ public void testException() {
 
 对于一个应该根据其所有字段被认为等等的类的常见场景，可以在单次测试中检查该行为：
 
-```
- @Test
-  public void shouldObeyHashCodeEqualsContract() {
-    EqualsVerifier.forClass(MyValue.class).allFieldsShouldBeUsed().verify();
-  }
+```java
+@Test
+public void shouldObeyHashCodeEqualsContract() {
+  EqualsVerifier.forClass(MyValue.class).allFieldsShouldBeUsed().verify();
+}
 ```
 
 这可能在 `EqualsVerifier` 的未来版本中成为默认行为，但在 `1.7.5` 中必须特地指定。
 
 # 错误的建议
 
-# 错误的建议
-
 一些真正糟糕的想法通常作为“最佳实践”流传。在这一节中，我们提供了示例并解释了为什么应该忽略它们。
 
-# 单出口点规则
+## 单出口点规则
 
-## 错误的建议 - 单出口点规则
+### 错误的建议 - 单出口点规则
 
 某些编码标准强制所有方法都应该有一个出口点。
 
 这样做是有害的，特别是当它由静态分析强制执行时。
 
-## 细节
+### 细节
 
 单出口点是一个具有悠久历史的想法，可以追溯到大量使用 `goto` 和面条式代码的时代。
 
@@ -3755,7 +3906,6 @@ public class Example {
 
     return retVal;
   }
-
 }
 ```
 
@@ -3806,7 +3956,7 @@ public int oneAssignment(int x) {
     }
 
     return retVal;
-  }
+}
 ```
 
 我们已经解决了之前发现的问题。我们只对 `retVal` 赋值一次，并且当没有条件都不匹配时赋值了什么是清楚的。
@@ -3824,7 +3974,7 @@ public int expression(int x) {
     return  x == 10 ? -value
         : x > 0  ? value + x
         : 0;
-  }
+}
 ```
 
 这个这个版本比多出口版本更清晰吗？这是有争议的，最终取决于个人喜好。
@@ -3835,26 +3985,24 @@ public int expression(int x) {
 
 如果你个人偏好是 `?` 运算符版本，这仍然不能说明单出口点规则是你应该尝试普遍适用的规则。最可能的结果是你会推使人们写出像我们方法早期那个臃肿的代码。
 
-
-
 在循环中避免字符串拼接是合理的。如果循环执行次数在合理范围内，使用 `StringBuilder` 可能会更高效，因为可以避免字符串的分配。
 
 在大多数情况下，性能差异可能并不显著，但生成的代码在可读性上并没有明显下降——因此这是一种没有代价的过早优化。
 
 让我们看看当在没有循环的情况下应用这条建议会发生什么：
 
-```
- public String buffer(String s, int i) {
-    StringBuilder sb = new StringBuilder();
-    sb.append("Foo");
-    sb.append(s);
-    sb.append(i);
-    return sb.toString();
-  }
+```java
+public String buffer(String s, int i) {
+  StringBuilder sb = new StringBuilder();
+  sb.append("Foo");
+  sb.append(s);
+  sb.append(i);
+  return sb.toString();
+}
 
-  public String concat(String s, int i) {
-    return "Foo" + s + i;
-  }
+public String concat(String s, int i) {
+  return "Foo" + s + i;
+}
 ```
 
 `concat` 版本要清晰得多。
@@ -3864,26 +4012,26 @@ public int expression(int x) {
 Eclipse 编译器为 `concat` 生成了以下字节码：
 
 ```
- NEW java/lang/StringBuilder
-    DUP
-    LDC "Foo"
-    INVOKESPECIAL java/lang/StringBuilder.<init> (Ljava/lang/String;)V
-    ALOAD 1
-    INVOKEVIRTUAL java/lang/StringBuilder.append /
-       (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    ILOAD 2
-    INVOKEVIRTUAL java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;
-    INVOKEVIRTUAL java/lang/StringBuilder.toString ()Ljava/lang/String;
-    ARETURN
+NEW java/lang/StringBuilder
+   DUP
+   LDC "Foo"
+   INVOKESPECIAL java/lang/StringBuilder.<init> (Ljava/lang/String;)V
+   ALOAD 1
+   INVOKEVIRTUAL java/lang/StringBuilder.append /
+      (Ljava/lang/String;)Ljava/lang/StringBuilder;
+   ILOAD 2
+   INVOKEVIRTUAL java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;
+   INVOKEVIRTUAL java/lang/StringBuilder.toString ()Ljava/lang/String;
+   ARETURN
 ```
 
 编译器在后台创建了一个 `StringBuilder` 来处理拼接，因此我们更简单、更洁的代码生成的字节码与冗长的选项完全相同。
 
 代码中循环的存在可能会阻止编译器执行这种优化，但没有分支的代码每次都会被优化。尽管可能存在不支持这种优化的编译器，但你不太可能会使用它们。
 
-# 匈牙利命名 (Hungarian Notation)
+## 匈牙利命名 (Hungarian Notation)
 
-## 错误的建议 - 匈牙利命名
+### 错误的建议 - 匈牙利命名
 
 匈牙利命名及类似方案的想法是在变量名中反映其类型、作用域或其他属性。
 

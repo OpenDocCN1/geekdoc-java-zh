@@ -1,3 +1,4 @@
+
 # 设置 LDAP 操作的超时时间
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/newstuff/readtimeout.html`](https://docs.oracle.com/javase/tutorial/jndi/newstuff/readtimeout.html)
@@ -40,7 +41,7 @@ try {
 
 ```
 
-由于服务器甚至未响应 LDAP 绑定请求，当创建 InitialDirContext 时，上述程序打印下面的堆栈跟踪。客户端在等待服务器响应时超时。
+由于服务器甚至未响应 LDAP 绑定请求，当创建 `InitialDirContext` 时，上述程序打印下面的堆栈跟踪。客户端在等待服务器响应时超时。
 
 ```java
 Server: Connection accepted

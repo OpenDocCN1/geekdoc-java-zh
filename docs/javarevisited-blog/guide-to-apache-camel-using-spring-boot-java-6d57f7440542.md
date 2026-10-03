@@ -1,3 +1,4 @@
+
 # 使用 Spring Boot + Java 的 Apache Camel 指南
 
 > 原文：<https://medium.com/javarevisited/guide-to-apache-camel-using-spring-boot-java-6d57f7440542?source=collection_archive---------0----------------------->

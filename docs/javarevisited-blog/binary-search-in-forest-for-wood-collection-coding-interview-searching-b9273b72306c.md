@@ -1,3 +1,4 @@
+
 # 二分搜索法在森林中采集木材|编码采访|搜索
 
 > 原文：<https://medium.com/javarevisited/binary-search-in-forest-for-wood-collection-coding-interview-searching-b9273b72306c?source=collection_archive---------0----------------------->

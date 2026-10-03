@@ -1,3 +1,4 @@
+
 # 布局管理器的可视化指南
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/layout/visual.html`](https://docs.oracle.com/javase/tutorial/uiswing/layout/visual.html)
@@ -5,28 +6,17 @@
 有几个 AWT 和 Swing 类提供了用于一般用途的布局管理器：
 
 +   `BorderLayout`
-
 +   `BoxLayout`
-
 +   `CardLayout`
-
 +   `FlowLayout`
-
 +   `GridBagLayout`
-
 +   `GridLayout`
-
 +   `GroupLayout`
-
 +   `SpringLayout`
 
 本节展示了使用这些布局管理器的示例 GUI，并告诉您在哪里找到每个布局管理器的操作说明页面。您可以在操作说明页面和示例索引中找到运行示例的链接。
 
-* * *
-
 **注意：** 本课程涵盖了手动编写布局代码，这可能具有挑战性。如果您对学习布局管理的所有细节不感兴趣，您可能更喜欢使用`GroupLayout`布局管理器结合构建工具来布局您的 GUI。其中一个构建工具是 NetBeans IDE。否则，如果您想手动编写代码并且不想使用`GroupLayout`，那么推荐使用`GridBagLayout`作为下一个最灵活和强大的布局管理器。
-
-* * *
 
 如果您有兴趣使用 JavaFX 创建 GUI，请参阅[JavaFX 中的布局](https://docs.oracle.com/javase/8/javafx/layout-tutorial/index.html)。
 
@@ -34,13 +24,13 @@
 
 ![使用 BorderLayout 的 GUI 的图片](img/ad6ae2877c21489c23de688be50fa24d.png)
 
-每个内容窗格都初始化为使用`BorderLayout`。（正如使用顶级容器中解释的，内容窗格是所有框架、小程序和对话框中的主要容器。）`BorderLayout` 将组件放在最多五个区域：顶部、底部、左侧、右侧和中心。所有额外的空间都放在中心区域。使用 JToolBar 创建的工具栏必须在`BorderLayout`容器内创建，如果您希望能够将工具栏从其起始位置拖放到其他位置。更多细节，请参阅如何使用 BorderLayout。
+每个内容窗格都初始化为使用`BorderLayout`。（正如使用顶级容器中解释的，内容窗格是所有框架、小程序和对话框中的主要容器。）`BorderLayout`将组件放在最多五个区域：顶部、底部、左侧、右侧和中心。所有额外的空间都放在中心区域。使用`JToolBar`创建的工具栏必须在`BorderLayout`容器内创建，如果您希望能够将工具栏从其起始位置拖放到其他位置。更多细节，请参阅如何使用 BorderLayout。
 
 ## BoxLayout
 
 ![使用 BoxLayout 的 GUI 的图片](img/8e510cc5e929290b39de89731eb49bb4.png)
 
-`BoxLayout` 类将组件放在单行或单列中。它尊重组件的请求的最大尺寸，并且还允许您对齐组件。更多细节，请参阅如何使用 BoxLayout。
+`BoxLayout`类将组件放在单行或单列中。它尊重组件的请求的最大尺寸，并且还允许您对齐组件。更多细节，请参阅如何使用 BoxLayout。
 
 ## CardLayout
 

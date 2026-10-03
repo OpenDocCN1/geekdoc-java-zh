@@ -1,22 +1,23 @@
+
 # Java–将字符串转换成 XML
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/java-convert-string-to-xml/>
 
 本文展示了如何使用 DOM parser 和 JDOM2 parser 在 Java 中将字符串转换成 XML 文档，并将 XML 文档转换回字符串。
 
-*   [1。将字符串转换为 XML (DOM 解析器)](#convert-string-to-xml-dom-parser)
-*   [2。将字符串转换为 XML (JDOM2 解析器)](#convert-string-to-xml-jdom2-parser)
-*   [3。下载源代码](#download-source-code)
-*   [4。参考文献](#references)
+- [1. 将字符串转换为 XML (DOM 解析器)](#convert-string-to-xml-dom-parser)
+- [2. 将字符串转换为 XML (JDOM2 解析器)](#convert-string-to-xml-jdom2-parser)
+- [3. 下载源代码](#download-source-code)
+- [4. 参考文献](#references)
 
-## 1。将字符串转换为 XML (DOM 解析器)
+## 1. 将字符串转换为 XML (DOM 解析器)
 
 这个例子展示了如何使用 DOM 解析器将字符串转换成 XML 文档，然后再转换成字符串。
 
-ConvertStringToXmlDom.java
+`ConvertStringToXmlDom.java`
 
 ```java
- package com.mkyong.xml.tips;
+package com.mkyong.xml.tips;
 
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
@@ -104,15 +105,15 @@ public class ConvertStringToXmlDom {
 
     }
 
-} 
+}
 ```
 
 输出
 
-Terminal
+`Terminal`
 
 ```java
- <?xml version="1.0" encoding="utf-8" standalone="no"?><company>
+<?xml version="1.0" encoding="utf-8" standalone="no"?><company>
     <staff id="1001">
         <name>mkyong</name>
         <role>support</role>
@@ -126,27 +127,27 @@ Terminal
         <salary currency="EUR">8000</salary>
         <bio><![CDATA[a & b]]></bio>
     </staff>
-</company> 
+</company>
 ```
 
-## 2。将字符串转换为 XML (JDOM2 解析器)
+## 2. 将字符串转换为 XML (JDOM2 解析器)
 
 这个例子展示了如何使用 JDOM2 解析器将字符串转换成 XML 文档，然后再转换回字符串。
 
-pom.xml
+`pom.xml`
 
 ```java
- <dependency>
+<dependency>
     <groupId>org.jdom</groupId>
     <artifactId>jdom2</artifactId>
     <version>2.0.6</version>
-  </dependency> 
+</dependency>
 ```
 
-ConvertStringToXmlJDom2.java
+`ConvertStringToXmlJDom2.java`
 
 ```java
- package com.mkyong.xml.tips;
+package com.mkyong.xml.tips;
 
 import org.jdom2.Document;
 import org.jdom2.JDOMException;
@@ -224,46 +225,51 @@ public class ConvertStringToXmlJDom2 {
 
     }
 
-} 
+}
 ```
 
 输出
 
-Terminal
+`Terminal`
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
-  <company>
+<?xml version="1.0" encoding="UTF-8"?>
+<company>
     <staff id="1001">
-      <name>mkyong</name>
-      <role>support</role>
-      <salary currency="USD">5000</salary>
-      <!-- for special characters like < &, need CDATA -->
-      <bio><![CDATA[HTML tag <code>testing</code>]]></bio>
+        <name>mkyong</name>
+        <role>support</role>
+        <salary currency="USD">5000</salary>
+        <!-- for special characters like < &, need CDATA -->
+        <bio><![CDATA[HTML tag <code>testing</code>]]></bio>
     </staff>
     <staff id="1002">
-      <name>yflow</name>
-      <role>admin</role>
-      <salary currency="EUR">8000</salary>
-      <bio><![CDATA[a & b]]></bio>
+        <name>yflow</name>
+        <role>admin</role>
+        <salary currency="EUR">8000</salary>
+        <bio><![CDATA[a & b]]></bio>
     </staff>
-  </company> 
+</company>
 ```
 
-## 3。下载源代码
+## 3. 下载源代码
 
-$ git 克隆[https://github.com/mkyong/core-java](http://web.archive.org/web/20221230032525/https://github.com/mkyong/core-java)
-
+```bash
+$ git clone https://github.com/mkyong/core-java
 $ cd java-xml
+$ cd src/main/java/com/mkyong/xml/tips/
+```
 
-$ CD src/main/Java/com/mkyong/XML/tips/
+## 4. 参考文献
 
-## 4。参考文献
+- [Oracle–文档对象模型](http://web.archive.org/web/20221230032525/https://docs.oracle.com/javase/tutorial/jaxp/dom/index.html)
+- [如何在 Java 中读取 XML 文件—(SAX 解析器)](http://web.archive.org/web/20221230032525/https://mkyong.com/java/how-to-read-xml-file-in-java-sax-parser/)
+- [如何在 Java 中读取 XML 文件—(JDOM 解析器)](http://web.archive.org/web/20221230032525/https://mkyong.com/java/how-to-read-xml-file-in-java-jdom-example/)
+- [JAXB hello world 示例](http://web.archive.org/web/20221230032525/https://mkyong.com/java/jaxb-hello-world-example/)
 
-*   [Oracle–文档对象模型](http://web.archive.org/web/20221230032525/https://docs.oracle.com/javase/tutorial/jaxp/dom/index.html)
-*   [如何在 Java 中读取 XML 文件—(SAX 解析器)](http://web.archive.org/web/20221230032525/https://mkyong.com/java/how-to-read-xml-file-in-java-sax-parser/)
-*   [如何在 Java 中读取 XML 文件—(JDOM 解析器)](http://web.archive.org/web/20221230032525/https://mkyong.com/java/how-to-read-xml-file-in-java-jdom-example/)
-*   [JAXB hello world 示例](http://web.archive.org/web/20221230032525/https://mkyong.com/java/jaxb-hello-world-example/)
+
+
 *   [如何在 Java 中读取 XML 文件—(DOM 解析器)](http://web.archive.org/web/20221230032525/https://mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/)
 
+```
 <input type="hidden" id="mkyong-current-postId" value="17162">
+```

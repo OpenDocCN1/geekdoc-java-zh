@@ -1,8 +1,9 @@
+
 # 第 25 天— K 对不同的鞋
 
 > 原文：<https://medium.com/javarevisited/100-days-challenge-to-cracking-the-coding-interview-3a979e8fec6e?source=collection_archive---------0----------------------->
 
-## **亚马逊 100 天**
+## 亚马逊 100 天
 
 [**100 天到亚马逊—第 25 天— k 不同对**](https://leetcode.com/problems/k-diff-pairs-in-an-array/)
 

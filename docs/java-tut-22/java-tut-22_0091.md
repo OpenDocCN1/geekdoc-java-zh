@@ -1,3 +1,4 @@
+
 # 多态性
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html`](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html)
@@ -12,7 +13,6 @@ public void printDescription(){
         + " with a cadence of " + this.cadence +
         " and travelling at a speed of " + this.speed + ". ");
 }
-
 ```
 
 要在 Java 语言中演示多态特性，请使用`MountainBike`和`RoadBike`类扩展`Bicycle`类。对于`MountainBike`，添加一个`suspension`字段，这是一个`String`值，指示自行车是否有前减震器，`Front`。或者，自行车有前后减震器，`Dual`。
@@ -47,8 +47,7 @@ public class MountainBike extends Bicycle {
         System.out.println("The " + "MountainBike has a" +
             getSuspension() + " suspension.");
     }
-} 
-
+}
 ```
 
 请注意覆盖的`printDescription`方法。除了之前提供的信息外，输出还包括有关悬架的额外数据。
@@ -84,7 +83,6 @@ public class RoadBike extends Bicycle{
             " MM tires.");
     }
 }
-
 ```
 
 请注意，`printDescription`方法再次被覆盖。这次，显示了有关轮胎宽度的信息。
@@ -107,7 +105,6 @@ public class TestBikes {
     bike03.printDescription();
   }
 }
-
 ```
 
 以下是测试程序的输出：
@@ -120,7 +117,6 @@ The MountainBike has a Dual suspension.
 
 Bike is in gear 8 with a cadence of 40 and travelling at a speed of 20\. 
 The RoadBike has 23 MM tires.
-
 ```
 
 Java 虚拟机（JVM）调用与每个变量引用的对象相对应的方法。它不调用变量类型定义的方法。这种行为称为*虚拟方法调用*，展示了 Java 语言中重要的多态性特性的一个方面。

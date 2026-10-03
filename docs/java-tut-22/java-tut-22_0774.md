@@ -1,18 +1,19 @@
+
 # 介绍 XSL、XSLT 和 XPath
 
 > 原文：[`docs.oracle.com/javase/tutorial/jaxp/xslt/intro.html`](https://docs.oracle.com/javase/tutorial/jaxp/xslt/intro.html)
 
 可扩展样式表语言（XSL）有三个主要子组件：
 
-XSL-FO
+**XSL-FO**
 
 格式化对象标准。迄今为止最大的子组件，此标准提供了描述字体大小、页面布局和对象呈现的机制。此子组件不包含在 JAXP 中，也不包含在本教程中。
 
-XSLT
+**XSLT**
 
 这是一种转换语言，允许您定义从 XML 到其他格式的转换。例如，您可以使用 XSLT 生成 HTML 或不同的 XML 结构。您甚至可以使用它生成纯文本或将信息放入其他文档格式中。（正如您将在从任意数据结构生成 XML 中看到的，一个聪明的应用程序可以利用它来操作非 XML 数据）。
 
-XPath
+**XPath**
 
 归根结底，XSLT 是一种语言，让您指定在遇到特定元素时要执行的操作。但是，要为 XML 数据结构的不同部分编写程序，您需要在任何给定时间指定您正在讨论的结构部分。XPath 就是这种规范语言。它是一种寻址机制，允许您指定到元素的路径，以便例如，可以区分`<article><title>`和`<person><title>`。通过这种方式，您可以为不同的`<title>`元素描述不同类型的翻译。
 
@@ -40,4 +41,4 @@ XPath
 
 ## XSLT 示例程序
 
-与本教程中的其他课程不同，本课程中使用的示例程序未包含在 JAXP 1.4.2 参考实现提供的*install-dir*`/jaxp-1_4_2-`*release-date*`/samples`目录中。但是您可以`在此处下载 XSLT 示例的 ZIP 文件`。
+与本教程中的其他课程不同，本课程中使用的示例程序未包含在 JAXP 1.4.2 参考实现提供的*install-dir*`/jaxp-1_4_2-`*release-date*`/samples`目录中。但是您可以[在此处下载 XSLT 示例的 ZIP 文件](https://docs.oracle.com/javase/tutorial/jaxp/xslt/transXML.html)。

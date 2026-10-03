@@ -1,12 +1,11 @@
-# Java 和 Spring GraphQL 
 
-
+# Java 和 Spring GraphQL
 
 ![](img/cover.png)
 
 1. 标题页
-2. 封面
 
+2. 封面
 
 # 序言
 
@@ -20,7 +19,7 @@
 
 起初只有我一个人，但不久后我就收到了第一个修复拼写错误的 PR。今天，超过 [200 人](https://github.com/graphql-java/graphql-java/graphs/contributors) 为 GraphQL Java 做出了贡献，没有他们，就没有 GraphQL Java。诚挚地感谢你们所有人。
 
-特别感谢 [Brad Baker](https://github.com/bbakerman)，他已经担任了六多年的共同维护者。他对 GraphQL Java 的贡献和影响怎么强调都不为。这既是他的项目，也是我的项目。
+特别感谢 [Brad Baker](https://github.com/bbakerman)，他已经担任了六年多的共同维护者。他对 GraphQL Java 的贡献和影响怎么强调都不为过。这既是他的项目，也是我的项目。
 
 最重要的是，我想感谢我的妻子 Elli 的所有支持：没有她，就没有今天的这本书。
 
@@ -38,7 +37,7 @@
 
 GraphQL Java 是 GraphQL 的主流 Java 实现，为 Twitter、AirBnB、Netflix、Atlassian 以及许多公司的服务提供支持。读完本书后，你将通过 Spring for GraphQL 使用相同的引擎。
 
-在本书中，你将学习关键的 GraphQL 概念，并结合我们运行大规模生产环境 GraphQL 服务的实践建议。读完本书后，你将对 Spring for GraphQL 和 GraphQL Java 引擎有深入的知识，因此你会有信心运行生产就的 GraphQL 服务。
+在本书中，你将学习关键的 GraphQL 概念，并结合我们运行大规模生产环境 GraphQL 服务的实践建议。读完本书后，你将对 Spring for GraphQL 和 GraphQL Java 引擎有深入的知识，因此你会有信心运行生产就绪的 GraphQL 服务。
 
 本书适合构建第一个生产环境 GraphQL 服务的初学者。书中后期还有针对中级读者的高级主题。
 
@@ -48,7 +47,7 @@ GraphQL Java 是 GraphQL 的主流 Java 实现，为 Twitter、AirBnB、Netflix�
 
 如果你对本书有反馈或意见，请通过邮件 book-feedback@graphql-java.com 联系我们。
 
-我们深心希望你喜欢这本书。
+我们衷心希望你喜欢这本书。
 
 特别感谢我们的评审员提供的极佳反馈。感谢来自 Spring for GraphQL 团队的 Rossen Stoyanchev 和 Brian Clozel，我们的技术评审员 Doug Warren，以及评审员 Brad Baker、Antoine Boyer、Felipe Reis、Stephan Behnke 和 Josh Long。感谢我们的封面设计师 Mike Riethmuller。
 
@@ -74,7 +73,7 @@ Spring Start
 
 对于这个初始示例，我们将从高层概述概念，以便我们能够快速获得一个可以交互的运行服务。在接下来的章节中，我们将更详细地解释这些概念。
 
-让我们从创建一个 GraphQL 模式开始，它是 API 的静态描述。在“resources”下创建一个新的“graphql”子目录。将以下内容粘贴到新文件 `src/main/resources/graphql/schema.graphqls` 中。
+让我们从创建一个 GraphQL 模式开始，它是 API 的静态描述。在 `resources` 下创建一个新的 `graphql` 子目录。将以下内容粘贴到新文件 `src/main/resources/graphql/schema.graphqls` 中。
 
 ```
 type Query {
@@ -88,10 +87,6 @@ type Pet {
 ```
 
 这个用于宠物的 GraphQL 模式使用模式定义语言（SDL）格式编写。它定义了一个 GraphQL 查询类型，包含一个 `pets` 字段，它返回一个宠物列表。每个宠物都有 `name` 和 `color`，这两个字段都是字符串属性。在模式章节中，我们将深入讨论 GraphQL 模式元素。
-
-
-
-
 
 在 `myservice.service` 包中添加一个 `Pet` 记录类（record class）。
 
@@ -125,13 +120,13 @@ class PetsController {
 }
 ```
 
-这就是我们所需的所有代码了：一个模式文件、一个记录类和一个 GraphQL 控制器！`@QueryMapping` 控制器注解将 `pets` 方法注册为 `DataFetcher`，将模式中的 `pets` 字段连接到数据（在此例中为内存中的列表）。我们将在 DataFetchers 章节 中详细解释如何连接你的模式和数据。
+这就是我们所需的所有代码了：一个模式文件、一个记录类和一个 GraphQL 控制器！`@QueryMapping` 控制器注解将 `pets` 方法注册为 `DataFetcher`，将模式中的 `pets` 字段连接到数据（在此例中为内存中的列表）。我们将在 DataFetchers 章节中详细解释如何连接你的模式和数据。
 
 为了添加一个可视化前端来探索我们的 API，可以通过在 `src/main/resources` 的 `application.properties` 文件中添加 `spring.graphql.graphiql.enabled=true` 来启用内置的 [GraphiQL](https://github.com/graphql/graphiql) 交互操场。GraphiQL 是一个小型 Web 应用，用于从浏览器交互式地探索 GraphQL API。将其想象为 GraphQL 的 REPL（读取-评估-打印循环）工具。
 
-重启你的服务。如果成功，你应该会看到日志条 `GraphQL endpoint HTTP POST /graphql`。然后访问 `http://localhost:8080/graphiql` 打开 GraphiQL。
+重启你的服务。如果成功，你应该会看到日志条目 `GraphQL endpoint HTTP POST /graphql`。然后访问 `http://localhost:8080/graphiql` 打开 GraphiQL。
 
-如果你的服务没有正常启动，请双击检查模式文件 `schema.graphqls` 是否存储在 `resources` 内部的 `graphql` 子文件夹中。
+如果你的服务没有正常启动，请仔细检查模式文件 `schema.graphqls` 是否存储在 `resources` 内部的 `graphql` 子文件夹中。
 
 让我们尝试第一次查询。在 GraphiQL 操场的左侧输入以下内容：
 
@@ -144,7 +139,7 @@ query myPets {
 }
 ```
 
-然后点击播放按钮（带有三角形图标的粉按钮）发送查询，如截图“GraphiQL request and response”所示。
+然后点击播放按钮（带有三角形图标的粉色按钮）发送查询，如截图“GraphiQL request and response”所示。
 
 ![GraphiQL request and response](img/file1.png)
 
@@ -160,19 +155,22 @@ GraphiQL 请求与响应
 
 GraphiQL Documentation Explorer
 
-然后点击 pets 的根 `Query`，然后点击 `Pet` 查看其属性（`name` 和 `color`），如截图“GraphiQL Pet documentation”所示。
+然后点击 `pets` 的根 `Query`，然后点击 `Pet` 查看其属性（`name` 和 `color`），如截图“GraphiQL Pet documentation”所示。
 
 ![GraphiQL Pet documentation](img/file3.png)
 
 GraphiQL Pet documentation
 
-恭喜你完成了你的第一个 Spring for GraphQL 服务！在本章中，我们讨论了非常高层次的概念。在本书的剩余部分，我们将详细详细讨论每个概念。稍后在 Building a GraphQL service 章节 中，我们将使用更多功能扩展此服务。
+恭喜你完成了你的第一个 Spring for GraphQL 服务！在本章中，我们讨论了非常高层次的概念。在本书的剩余部分，我们将详细讨论每个概念。稍后在 Building a GraphQL service 章节中，我们将使用更多功能扩展此服务。
 
 快速回顾一下我们所做的：
 
 *   通过 `https://start.spring.io` 使用 WebFlux 创建了一个新的 GraphQL 服务
+
 *   添加了 SDL 格式的 GraphQL 模式文件
+
 *   实现了一个返回 `Pet` 数据列表的 GraphQL 控制器
+
 *   执行了一个 GraphQL 查询
 
 ## 什么是 GraphQL？
@@ -217,28 +215,25 @@ query myPets {
 }
 ```
 
-
-
-
 GraphQL API 是一种静态类型的 API。“类型化”意味着 GraphQL API 包含了对消费者可以使用 API 进行哪些操作的清晰描述。API 不会频繁更改。当 API 发生变化时，通常涉及到服务的重新部署。
 
 例如，上述查询所使用的 API 看起来如下：
 
 ```graphql
-[](#cb9-1)# 这是一个注释
-[](#cb9-2)
-[](#cb9-3)# 这是根对象，因为它命名为 Query
-[](#cb9-4)type Query { 
-[](#cb9-5)    # 一个名为 "pets" 的字段，返回 Pet 列表
-[](#cb9-6)    pets: [Pet] 
-[](#cb9-7)}
-[](#cb9-8)
-[](#cb9-9)# 一个名为 Pet 的对象
-[](#cb9-10)type Pet { 
-[](#cb9-11)    # 类型为 String 的名为 "name" 的字段
-[](#cb9-12)    name: String 
-[](#cb9-13)    color: String
-[](#cb9-14)}
+# 这是一个注释
+
+# 这是根对象，因为它命名为 Query
+type Query { 
+    # 一个名为 "pets" 的字段，返回 Pet 列表
+    pets: [Pet] 
+}
+
+# 一个名为 Pet 的对象
+type Pet { 
+    # 类型为 String 的名为 "name" 的字段
+    name: String 
+    color: String
+}
 ```
 
 这种语法被称为 Schema 定义语言 (SDL)，而 GraphQL API 的结构被称为 schema（模式）。每个 GraphQL API 都有一个 schema，用 SDL 语法清晰地描述 API。目前理解 GraphQL API 的最佳方式是将其看作一个包含字段列表的类型列表。
@@ -246,33 +241,33 @@ GraphQL API 是一种静态类型的 API。“类型化”意味着 GraphQL API 
 每个 GraphQL API 都提供了特殊的字段，允许你查询 API 内部的 schema。这一功能被称为内省（introspection）。例如，对于每个 GraphQL API 的一个有效查询如下：
 
 ```graphql
-[](#cb10-1)query myIntrospection {
-[](#cb10-2)    __schema {
-[](#cb10-3)        types {
-[](#cb10-4)            name
-[](#cb10-5)        }
-[](#cb10-6)    }
-[](#cb10-7)}
+query myIntrospection {
+    __schema {
+        types {
+            name
+        }
+    }
+}
 ```
 
-对于我们上的 API，它将返回：
+对于我们上面的 API，它将返回：
 
 ```json
-[](#cb11-1){
-[](#cb11-2)  "__schema": {
-[](#cb11-3)    "types": 
-[      {
-[](#cb11-5)        "name": "Query"
-[](#cb11-6)      },
-[](#cb11-7)      {
-[](#cb11-8)        "name": "Pet"
-[](#cb11-9)      }
-[](#cb11-10)    ]
-[](#cb11-11)  }
-[](#cb11-12)}
+{
+  "__schema": {
+    "types": [
+      {
+        "name": "Query"
+      },
+      {
+        "name": "Pet"
+      }
+    ]
+  }
+}
 ```
 
-如你所示，特殊字段 `__schema` 以 `__` 开头，这这是一个内省字段，而不是普通字段。
+如你所示，特殊字段 `__schema` 以 `__` 开头，这是一个内省字段，而不是普通字段。
 
 ## GraphQL 是一种 API 技术
 
@@ -280,12 +275,16 @@ GraphQL API 是一种静态类型的 API。“类型化”意味着 GraphQL API 
 
 ## GraphQL 的简史
 
+
+
 GraphQL 的官方诞生生日是 2012 年 2 月 29 日，当时它是 Facebook 内部的一个提案，名为 [SuperGraph](https://twitter.com/leeb/status/1498759168689598464?s=20&t=817z2q0x1_x2En8xxH5X8w)。
 
 它是将 Facebook iOS 客户端重写为原生应用工作的一部分，旨在解决团队在传统的 REST 类 API 中遇到的多个问题，正如共同创始人 Lee Byron 在这段 10 分钟的视频主旨演讲中描述的 [GraphQL 简史](https://www.youtube.com/watch?v=VjHWkBr3tjI) 中描述的：
 
 *   网络慢：获取所需数据需要多次协调的往返交互。
+
 *   脆弱的客户端/服务器关系：服务器 API 的变化很容易破坏应用程序，且文档往往过时。
+
 *   代码和流程繁琐：必要的服务更改通常会阻塞客户端开发。
 
 GraphQL 通过前一节概述的特性解决了这些问题：查询语言允许客户端精确指定它们想要的内容，灵活且独立于服务器进行开发，而静态类型系统使得客户端/服务器关系变得更加稳定。
@@ -312,9 +311,6 @@ GraphQL 开源后不久，GraphQL Java](https://github.com/graphql-java/graphql-
 
 Spring for GraphQL 旨在成为 GraphQL Java 到 Spring 的一种不带主见的集成，专注于全面且广泛的支持。它应该是 Spring GraphQL 解决方案的基础性构建块。另一个关键设计决策是直接使用 GraphQL Java 本身，在 Spring 和 GraphQL Java 之间没有抽象或额外的层。
 
-
-
-
 Spring for GraphQL 包含两个部分：一个是与 GraphQL Java 的实际 [Spring Framework 集成](https://docs.spring.io/spring-graphql/docs/current/reference/html/)，另一个在此基础上的针对 GraphQL 的 [Spring Boot Starter](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#web.graphql)。在本书中，我们将构建使用 Spring Boot 开发的服务，并利用 Spring Boot GraphQL Starter 的优势。
 
 我们将在 GraphQL Java 和 Spring 的世界之间不断切换，但理解哪一个层贡献了哪部分通常非常重要，以便充分利用 Spring for GraphQL 的功能。这对于排查故障尤为有价值。在整本书中，我们会清楚地说明何时我们是在讨论 Spring for GraphQL 概念，何时我们是在直接讨论 GraphQL Java 概念。
@@ -338,13 +334,17 @@ Spring for GraphQL 包含两个部分：一个是与 GraphQL Java 的实际 [Spr
 从图“Three layers”从下到上依次是：
 
 * `GraphQL Specification` (规范)：以一种与技术无关的方式定义什么是 GraphQL 以及一个 GraphQL 服务需要实现什么。
+
 * `GraphQL Java`：为 Java 实现 GraphQL 规范。
+
 * `Spring for GraphQL`：将 GraphQL Java 与 Spring 集成。
 
 我们也可以将其看作抽象的层级结构，从底部的低观点（less opinionated）到顶部的具体化：
 
 * `spec` 是最抽象的，因为它适用于 GraphQL 的所有实现，不仅仅是 Java。它只是一个文本文档，而不是运行的软件。例如，它描述了什么是 GraphQL 变异（mutation），而不描述其实现的的细节。
+
 * `GraphQL Java` 实现 `spec` 并实际上提供了运行的软件。它没有绑定到任何特定的框架（如 Spring），也不处理任何传输层的细节。
+
 * `Spring for GraphQL`：利用 `GraphQL Java` 提供一个用于构建 GraphQL 服务的全面框架，包括传输层细节。
 
 从 Java 的实际角度来看，可以将 `GraphQL Java` 和 `spec` 视为等同的。`GraphQL Java` 没有提供 `spec` 之外的主要功能，而 `spec` 也没有定义任何在 Java 中未表示的内容，它们是一一一对应的关系。因此，我们不会脱离 `GraphQL Java` 独立讨论 `spec`，我们可以默认假设 `GraphQL Java` 中的功能已在 `spec` 中定义。
@@ -421,7 +421,9 @@ Spring for GraphQL 中的响应是 `GraphQlResponse`，其中 `WebGraphQlRespons
 我们可以大致将通过 HTTP 执行 GraphQL 请求的实际过程分为如下：
 
 1. 首先，请求被反序列化并处理（Spring）。
+
 2. 我们调用 GraphQL Java，这涉及获取数据（GraphQL Java）。
+
 3. 然后我们创建并序列化响应（Spring）。
 
 第一步完全由 Spring 完成工作，也可能涉及身份验证等方面。然后 Spring 调用 GraphQL Java，一旦完成，响应将再次由 Spring 处理并发送给客户端。
@@ -450,9 +452,6 @@ class PetsController {
 }
 ```
 
-
-
-
 `@QueryMapping` 注解将此方法注册为 `Query` 类型中 `pets` 字段的 `DataFetcher`，将该方法与同名字段连接起来。我们将在 DataFetchers 章节 中详细解释 Spring for GraphQL 的模式映射注解。
 
 创建和序列化响应的最后一步由 Spring for GraphQL 处理。
@@ -468,7 +467,9 @@ class PetsController {
 如“Concept relations”图所示：
 
 - SDL 定义了模式（schema）
+
 - 请求包含查询语言格式的文本
+
 - 请求的执行使用模式 和 `DataFetchers` 来产生响应
 
 ## GraphQL Java
@@ -476,9 +477,13 @@ class PetsController {
 GraphQL Java 的主要类如“GraphQL Java classes”图所示：
 
 - `graphql.GraphQL`：通常每个服务只有一个实例。用于启动 GraphQL Java 执行。
+
 - `graphql.ExecutionInput`：GraphQL Java 请求。
+
 - `graphql.ExecutionResult`：GraphQL Java 响应。
+
 - `graphql.schema.GraphQLSchema`：GraphQL API 的描述以及执行它所需的逻辑。
+
 - `graphql.schema.DataFetcher`：每个服务都需要实现的 Java 接口。你的 GraphQL 服务将通过 Spring for GraphQL 的模式映射注解实现 `DataFetchers`。
 
 ![GraphQL Java classes](img/file7.png)
@@ -490,36 +495,46 @@ GraphQL Java classes
 Spring for GraphQL 的主要类如下（所有类名均以 `org.springframework.graphql` 开头，缩写为 `o.s.g`）：
 
 - `o.s.g.server.webflux.GraphQlHttpHandler`：WebFlux 处理器。创建 `WebGraphQlRequest` 并调用 `WebGraphQlHandler`。
+
 - `o.s.g.server.webmvc.GraphQlHttpHandler`：Spring MVC 处理器。创建 `WebGraphQlRequest` 并调用 `WebGraphQlHandler`。
+
 - `o.s.g.server.WebGraphQlRequest`：通过 HTTP 或 WebSocket 的 请求。
+
 - `o.s.g.server.WebGraphQlResponse`：通过 HTTP 或 WebSocket 的 GraphQL 响应。
+
 - `o.s.g.server.WebGraphQlHandler`：处理通过 HTTP 或 WebSocket 的 GraphQL 请求。
+
 - `o.s.g.server.WebGraphQlInterceptor`：拦截 `WebGraphQlRequest` 和 `WebGraphQlResponse` 的钩子。
+
 - `o.s.g.graphql.ExecutionGraphQlService`：负责调用 GraphQL Java 的实际服务。
 
 一个请求通过 Spring for GraphQL 中的三个主要类，每个类都有其独特的职责，如“Spring for GraphQL classes”图所示：
 
 1. 通用 HTTP 请求调用 `GraphQlHttpHandler`，它将请求转换为 `WebGraphQlRequest`。
+
 2. `WebGraphQlHandler` 接收 `WebGraphQlRequest` 并调用 `ExecutionGraphQlService` 执行请求。
+
 3. `ExecutionGraphQlService` 最终调用 GraphQL Java。
+
+
 
 ![Spring for GraphQL classes](img/file8.png)
 
-Spring for GraphQL classes
+# Spring for GraphQL classes
 
 在日常使用中，这些步骤中最相关的是第二步，因为 `WebGraphQlHandler` 提供了通过 `WebGraphQlInterceptor` 拦截任何请求和响应的能力。
 
-关于大小写的简要说明。你可能注意到类名中字母“Q”和“L”的大小写情况各不相同。在所有 Spring for GraphQL 类中，“Q”始终大大写，“l”始终是小写，以与 Spring 的命名规范保持一致。在 GraphQL Java 中，名称通常包含大写的“Q”和“L”。如果没有遵循此约定，我们会在相关的代码示例指出。
+关于大小写的简要说明。你可能注意到类名中字母“Q”和“L”的大小写情况各不相同。在所有 Spring for GraphQL 类中，“Q”始终大写，“L”始终是小写，以与 Spring 的命名规范保持一致。在 GraphQL Java 中，名称通常包含大写的“Q”和“L”。如果没有遵循此约定，我们会在相关的代码示例中指出。
 
 本章从高层次介绍了最基本的概念。在本书中，我们将详细讨论所有这些主题。
 
-### Schema
+## Schema
 
 GraphQL API 的模式是 API 的静态描述。模式描述了 API 消费者可以请求的内容，可以使用模式定义语言（SDL）格式表示（也称为“SDL 语法”或“SDL 记法”）。
 
-在底层，Spring for GraphQL 使用 GraphQL Java 的 `GraphQLSchema` 表示一个可执行的模式，然后用它来创建一个 `GraphQL` 对象。它是一个“可执行”的模式，因为它包含了执行请求所需的所有逻辑，以及面向消费者的 API 描述。在本章中，我们将重点关注 API 描述。在 DataFetchers 章节 中，我们将讨论此 API 描述是如何连接到执行逻辑的。
+在底层，Spring for GraphQL 使用 GraphQL Java 的 `GraphQLSchema` 表示一个可执行的模式，然后用它来创建一个 `GraphQL` 对象。它是一个“可执行”的模式，因为它包含了执行请求所需的所有逻辑，以及面向消费者的 API 描述。在本章中，我们将重点关注 API 描述。在 DataFetchers 章节中，我们将讨论此 API 描述是如何连接到执行逻辑的。
 
-## 模式优先 (Schema-first)
+## 模式优先（Schema-first）
 
 “模式优先”是指 GraphQL 模式的设计应该独立完成，而不应该从其他内容生成或推断出来。模式不应该从数据库模式、Java 领域类或 REST API 生成。
 
@@ -541,7 +556,7 @@ GraphQL Java 中的模式表示为 `GraphQLSchema` 实例，它是 `GraphQLSchem
 
 ## GraphQL 类型
 
-模式中最重要的元素是类型。GraphQL 系统中有八种类型：Object、Interface、Union、Enum、Scalar、InputObject、List 和 NonNull。前六种是“命名类型”，因为每个类型在整个模式中都有唯一的名称，而 List 和 NonNull 是“包装类型”，因为它们包装了命名类型，正如我们之后将看到的。
+模式中最重要的元素是类型。GraphQL 系统中有八种类型：`Object`、`Interface`、`Union`、`Enum`、`Scalar`、`InputObject`、`List` 和 `NonNull`。前六种是“命名类型”，因为每个类型在整个模式中都有唯一的名称，而 `List` 和 `NonNull` 是“包装类型”，因为它们包装了命名类型，正如我们之后将看到的。
 
 另一种类型分类区分了输入类型和输出类型。输出类型是描述结果的类型，而输入类型用于描述 GraphQL 请求的输入数据。我们将在关于 GraphQL 查询语言的下一章节详细介绍请求。
 
@@ -555,18 +570,15 @@ GraphQL Java 中的模式表示为 `GraphQLSchema` 实例，它是 `GraphQLSchem
 
 在 GraphQL Java 中，字段通过 `GraphQLFieldDefinition` 实例表示对象和接口字段，通过 `GraphQLInputObjectField` 表示输入对象。
 
-## 标量 (Scalar)
+## 标量（Scalar）
 
-标量是描述某些允许值的原始类型。例如，`Boolean` 标量意味着值可以是 `true` 或 `false`，`Int` 可以 -2³¹ 到 2³¹ 之间的任何数字，`String` 可以任何字符串字面量。标量的名称在整个模式中必须唯一。
+标量是描述某些允许值的原始类型。例如，`Boolean` 标量意味着值可以是 `true` 或 `false`，`Int` 可以是 -2³¹ 到 2³¹ 之间的任何数字，`String` 可以是任何字符串字面量。标量的名称在整个模式中必须唯一。
 
 GraphQL 自带五个标量：`String`、`Int`、`Float`、`Boolean` 和 `ID`。此外，每个 GraphQL 服务都可以定义自己的自定义标量。
 
-
-
-
 在 SDL 中，自定义标量需要显式声明，而内置标量可以在无需任何声明的情况下直接使用。
 
-```
+```graphql
 """
 一个表示不带时区的自定义日期标量。
 注意这个自定义标量必须显式声明。
@@ -581,15 +593,15 @@ type Pet {
 }
 ```
 
-内置的 `@specifiedBy` 指令链接到自定义标量的规范 URL。我们将在指令章节 中更详细地讨论这一点。`@specifiedBy` 指令是可选的，但强烈建议使用。
+内置的 `@specifiedBy` 指令链接到自定义标量的规范 URL。我们将在指令章节中更详细地讨论这一点。`@specifiedBy` 指令是可选的，但强烈建议使用。
 
-## 枚举 (Enum)
+## 枚举（Enum）
 
 枚举类型描述了一组可能的值的列表。它可以作为输入类型或输出类型。枚举和标量是 GraphQL 类型系统的原始类型。枚举名称在整个 schema 中必须是唯一的。
 
 以下是在 SDL 中声明枚举的方法：
 
-```
+```graphql
 enum PetKind {
     CAT, DOG, BIRD
 }
@@ -606,7 +618,7 @@ type Query {
 
 或者，枚举也可以通过每个值占一行的方式进行声明。这是因为逗号 `,` 被视为空白字符并被忽略。
 
-```
+```graphql
 enum PetKind {
     CAT
     DOG
@@ -616,13 +628,13 @@ enum PetKind {
 
 在 GraphQL Java 中，枚举由 `GraphQLEnumType` 实例表示。
 
-## 对象 (Object)
+## 对象（Object）
 
-GraphQL 对象类型通过字段列表来描述数据的特定形状。它在整个 schema 中有一个唯一的名称。每个字段都有一个特定的类型，该类型必须是输出类型。每个字段都有一有一个可选的参数列表。允许递归引用。
+GraphQL 对象类型通过字段列表来描述数据的特定形状。它在整个 schema 中有一个唯一的名称。每个字段都有一个特定的类型，该类型必须是输出类型。每个字段都有一个可选的参数列表。允许递归引用。
 
 对象类型在 SDL 中通过 `type` 声明。
 
-```
+```graphql
 type Pet {
     name: String
     color: String
@@ -641,13 +653,13 @@ type Query {
 
 在 GraphQL Java 中，对象类型由 `GraphQLObjectType` 实例表示，并用 `GraphQLFieldDefinition` 定义其字段。
 
-## 输入对象 (Input object)
+## 输入对象（Input object）
 
 输入对象类型描述了一组输入字段，每个字段都有一个输入类型。输入对象的名称在整个 schema 中必须是唯一的。
 
 在 SDL 中，输入对象通过 `input` 声明。
 
-```
+```graphql
 input PetFilter {
     minAge: Int
     maxAge: Int
@@ -663,17 +675,13 @@ type Query {
 }
 ```
 
-## 接口 (Interface)
+## 接口（Interface）
 
 与对象类似，接口通过字段列表描述数据的特定形状并具有名称。与对象不同，接口可以被另一个接口或对象实现。实现接口的接口或对象必须包含接口中定义的相同字段。从这个意义上说，接口用于描述一种抽象形状，该形状可以由不同的对象来实现。
 
 与对象类似，每个字段都有一个可选的参数列表。每个参数都有名称和类型，该类型必须是输入类型。
 
-SDL 中的接口声明为 `interface`。其他接口或对象的实现通过 `implements` 后面跟接口名称来指定。
-
-
-
-
+SDL 中的接口声明为 `interface`。其他接口或对象的实现通过 `implements` 后跟接口名称来指定。
 
 ```graphql
 type Query {
@@ -698,7 +706,7 @@ type Query {
 
 ## 带描述的文档
 
-文档是 GraphQL 的一项强大功能。字段和类型的等 GraphQL 定义描述嵌入在模式中，与其定义在一起。这些描述通过内省（introspection）可用，并用于生成交互式文档。
+文档是 GraphQL 的一项强大功能。字段和类型等 GraphQL 定义描述嵌入在模式中，与其定义在一起。这些描述通过内省（introspection）可用，并用于生成交互式文档。
 
 几乎每个 SDL 元素都可以拥有 [Markdown](https://commonmark.org/) 格式的描述作为文档。描述可以是引号 `"` 包裹的字符串字面量，也可以包裹在三引号 `"""` 中的块字符串，用于带有换行符或额外 Markdown 的多行文档。
 
@@ -730,7 +738,7 @@ GraphiQL 中的文档
 
 ## 注释
 
-注释以哈希符号 `#` 开始，行行的所有内容都被视为注释的一部分。例如：
+注释以哈希符号 `#` 开始，行的所有内容都被视为注释的一部分。例如：
 
 ```graphql
 type Query {
@@ -745,36 +753,36 @@ type Query {
 
 注意，注释与描述有很大区别。描述用于构建模式的文档，这些文档通过内省可用。注释像空白字符一样被忽略，且不用于文档。
 
-在本章中，我们讨论了描述 API 结构的模式元素。在 DataFetchers 章节 中，我们将讨论此 API 如何连接到执行请求的逻辑。在讨论 DataFetchers 之前，让我们先讨论 GraphQL 查询语言。
+在本章中，我们讨论了描述 API 结构的模式元素。在 DataFetchers 章节中，我们将讨论此 API 如何连接到执行请求的逻辑。在讨论 DataFetchers 之前，让我们先讨论 GraphQL 查询语言。
 
 ## GraphQL 查询语言
 
 GraphQL 查询语言是一种领域特定语言（DSL），它允许消费者定义他们想要的操作。
 
-请注意，“查询语言”这一短语包含了查询（queries）、变变（mutations）和订阅（subscriptions），我们将在本章中讨论。
+请注意，“查询语言”这一短语包含了查询（queries）、变更（mutations）和订阅（subscriptions），我们将在本章中讨论。
 
-查询语言语法与 GraphQL 模式密切相关。GraphQL 模式定义了查询语言中哪些查询、变变或订阅是有效的。在下面的查询语言示例中，假设有一个相应的 GraphQL 模式使得该查询语言有效。
+查询语言语法与 GraphQL 模式密切相关。GraphQL 模式定义了查询语言中哪些查询、变更或订阅是有效的。在下面的查询语言示例中，假设有一个相应的 GraphQL 模式使得该查询语言有效。
 
 ## 字面量
 
 查询语言包含几个镜像模式输入类型的字面量。
 
-*   `String` 字面量写为 `"String literal"`，用双引号包裹。
-*   `Boolean` 字面量为 `true` 或 `false`。
-*   `Int` 字面量写为 `123`。
-*   `Float` 字面量写为 `123.45`。
-*   无值的字面量（Null）写为 `null`。
-*   列表字面量写为 `["one list element", "another list element"]`，用方括号包裹。
-*   枚举值写为 `ENUM_VALUE`。
-*   输入对象字面量写为 `{ someField: "value", anotherOne: { fieldInField: 123 } }`。它们代表无序键列表，用花括号包裹。
+- `String` 字面量写为 `"String literal"`，用双引号包裹。
+- `Boolean` 字面量为 `true` 或 `false`。
+- `Int` 字面量写为 `123`。
+- `Float` 字面量写为 `123.45`。
+- 无值的字面量（Null）写为 `null`。
+- 列表字面量写为 `["one list element", "another list element"]`，用方括号包裹。
+- 枚举值写为 `ENUM_VALUE`。
+- 输入对象字面量写为 `{ someField: "value", anotherOne: { fieldInField: 123 } }`。它们代表无序键列表，用花括号包裹。
 
 ## 操作
 
 GraphQL 中有三种操作：
 
-*   `query`，只读获取
-*   `mutation`，写入后进行获取
-*   `subscription`，长连接请求，用于响应事件并获取数据
+- `query`，只读获取。
+- `mutation`，写入后进行获取。
+- `subscription`，长连接请求，用于响应事件并获取数据。
 
 在 GraphQL 模式中，这些操作被建模为根操作类型。
 
@@ -866,11 +874,11 @@ query invalid {
 }
 ```
 
-## 变变操作
+## 变更操作
 
-变更操作是一个写入后进行获取。变变应该产生副作用，通常意味着更改（或“变异”）某些数据。
+变更操作是一个写入后进行获取。变更应该产生副作用，通常意味着更改（或“变异”）某些数据。
 
-使用 `mutation` 关键字声明变更操作，后跟变变的名称：
+使用 `mutation` 关键字声明变更操作，后跟变更的名称：
 
 ```graphql
 mutation myMutation {
@@ -879,9 +887,6 @@ mutation myMutation {
 ```
 
 变更操作的每个根字段必须是模式中 `Mutation` 对象类型的字段。根据 GraphQL 规范，只有变更操作的根字段可以产生副作用。
-
-
-
 
 变更操作中根字段的子选择在语义上与查询等同。在实践中，让变更返回部分已更改的数据很有用。例如，在更新 `User` 的名称后，在响应中接收新更改的 `User` 是很有用的。
 
@@ -917,7 +922,7 @@ mutation changeUserName {
 }
 ```
 
-如果变更操作中有两个或多个根字段，它们将将按照 GraphQL 规范的要求按顺序执行。
+如果变更操作中有两个或多个根字段，它们将按照 GraphQL 规范的要求按顺序执行。
 
 ```graphql
 mutation mutationWithTwoRootFields {
@@ -925,6 +930,8 @@ mutation mutationWithTwoRootFields {
     second: changeName(name: "Brad")
 }
 ```
+
+
 
 在这个示例中，用户的最终名称将始终是“Brad”，因为字段总是按顺序执行的。第二次更改名称为“Brad”将总是最后执行。
 
@@ -945,15 +952,15 @@ subscription newMessage {
 }
 ```
 
-订阅只能包含正好一个根字段，例如 `newEmail`。这与可以包含许多根字段的查询和变更操作不同。
+订阅只能包含正好一个根字段，例如`newEmail`。这与可以包含许多根字段的查询和变更操作不同。
 
 订阅的执行以及传输层对请求的处理与查询和变更有显著不同。这仅仅是因为响应特定事件的长连接订阅请求，比简单的查询（或变更）请求、执行和响应过程要复杂得多。我们将在订阅章节中进一步讨论。
 
 ## 参数
 
-字段可以拥有参数，其类型在 schema 中定义。参数可以是可选的，也可以是强制的。正如 Schema 章节 中过的，如果参数是非空的（用 `!` 表示）且没有默认值（用 `=` 声明），则该参数是强制的。
+字段可以拥有参数，其类型在 schema 中定义。参数可以是可选的，也可以是强制的。正如 Schema 章节中过的，如果参数是非空的（用`!`表示）且没有默认值（用`=`声明），则该参数是强制的。
 
-例如，定义了一个具有强制 `id` 参数的 `pet` 字段的 schema：
+例如，定义了一个具有强制`id`参数的`pet`字段的 schema：
 
 ```graphql
 type Query {
@@ -965,7 +972,7 @@ type Pet {
 }
 ```
 
-在查询中，这是使用字符串字面量“123”作为 `id` 值来请求 `pet`：
+在查询中，这是使用字符串字面量“123”作为`id`值来请求`pet`：
 
 ```graphql
 query petSearch {
@@ -975,7 +982,7 @@ query petSearch {
 }
 ```
 
-参数可以是任何字面量，包括 `null`，只要它符合 schema。例如，这里有一个输入对象字面量的查询。
+参数可以是任何字面量，包括`null`，只要它符合 schema。例如，这里有一个输入对象字面量的查询。
 
 ```graphql
 query petAgeSearch {
@@ -985,7 +992,7 @@ query petAgeSearch {
 }
 ```
 
-操作中的参数类型必须与其对应的 schema 定义。如果 schema 要求 `Int` 参数值，而我们在查询中提供了 `Boolean`，则错误的参数会导致验证错误。
+操作中的参数类型必须与其对应的 schema 定义。如果 schema 要求`Int`参数值，而我们在查询中提供了`Boolean`，则错误的参数会导致验证错误。
 
 ## 片段
 
@@ -1005,7 +1012,7 @@ fragment <FragmentName> on <TypeCondition> {
 ...<FragmentName>
 ```
 
-例如，让我们定义一个 `personDetails` 片段，以复用 `Person` 的重复字段。在 `petOwners` 查询中使用该片段。
+例如，让我们定义一个`personDetails`片段，以复用`Person`的重复字段。在`petOwners`查询中使用该片段。
 
 ```graphql
 fragment personDetails on Person {
@@ -1025,11 +1032,11 @@ query petOwners {
 }
 ```
 
-在这个示例中，我们使用了两次 `personDetails`，分别用于 `owner` 和 `previousOwner` 字段。
+在这个示例中，我们使用了两次`personDetails`，分别用于`owner`和`previousOwner`字段。
 
 ## 内联片段
 
-内联片段（Inline fragments）是带有类型条件的字段选择。内联片段用于根据类型查询不同的字段。你可以将它们认为依赖于字段类型的 `switch` 语句。
+内联片段（Inline fragments）是带有类型条件的字段选择。内联片段用于根据类型查询不同的字段。你可以将它们认为依赖于字段类型的`switch`语句。
 
 内联片段与片段不同，因为它们是内联声明的，而不是在操作外部。与片段不同，内联片段没有名称，且无法复用。
 
@@ -1063,7 +1070,7 @@ type Cat implements Pet {
 }
 ```
 
-我们可以编写内联片段来查询 `Dog` 结果的 `doesBark` 字段以及 `Cat` 结果的 `doesMeow` 字段。
+我们可以编写内联片段来查询`Dog`结果的`doesBark`字段以及`Cat`结果的`doesMeow`字段。
 
 ```graphql
 query allThePets {
@@ -1078,11 +1085,11 @@ query allThePets {
 }
 ```
 
-根据 `Pet` 类型，我们选择了不同的字段。对于 `Dog` 我们只感兴趣 `doesBark`，而对于 `Cat` 我们只感兴趣 `doesMeow`。
+根据`Pet`类型，我们选择了不同的字段。对于`Dog`我们只感兴趣`doesBark`，而对于`Cat`我们只感兴趣`doesMeow`。
 
-实现接口的类型可能会添加并非所有实现都具备的字段。例如，`doesBark` 字段只出现在 `Dog` 类型中。必须使用片段或内联片段来查询跨实现无法保证的字段。
+实现接口的类型可能会添加并非所有实现都具备的字段。例如，`doesBark`字段只出现在`Dog`类型中。必须使用片段或内联片段来查询跨实现无法保证的字段。
 
-作为反例，下面的查询是无效的，因为 `Pet` 接口中没有 `doesBark` 字段。
+作为反例，下面的查询是无效的，因为`Pet`接口中没有`doesBark`字段。
 
 ```graphql
 query invalid {
@@ -1114,11 +1121,7 @@ type IceCream {
 }
 ```
 
-对 `dinner` 的查询必须包含片段或内联片段，因为联合类型本身不定义任何字段。
-
-
-
-
+对`dinner`的查询必须包含片段或内联片段，因为联合类型本身不定义任何字段。
 
 ```graphql
 query healthyDinner {
@@ -1135,7 +1138,7 @@ query healthyDinner {
 }
 ```
 
-以下查询是无效的，因为联合类型 `Food` 没有定义任何字段。
+以下查询是无效的，因为联合类型`Food`没有定义任何字段。
 
 ```graphql
 query invalid {
@@ -1152,9 +1155,9 @@ query invalid {
 
 操作可以声明变量，作为整个操作的输入。
 
-要声明变量，请在操作名称之后定义它们。变量名以 `$` 开头，后紧跟类型。变量可以使用感叹号 `!` 标记为非空，类似于字段或指令的参数。
+要声明变量，请在操作名称之后定义它们。变量名以`$`开头，后紧跟类型。变量可以使用感叹号`!`标记为非空，类似于字段或指令的参数。
 
-例如，变量 `petId` 的类型为 `ID`，并且它是非空的。
+例如，变量`petId`的类型为`ID`，并且它是非空的。
 
 ```graphql
 query findPet($petId: ID!) {
@@ -1164,7 +1167,7 @@ query findPet($petId: ID!) {
 }
 ```
 
-可以提供默认值，定义在等号 `=` 之后。
+可以提供默认值，定义在等号`=`之后。
 
 ```graphql
 query findPet2($petId: ID! = "12345DefaultId") {
@@ -1184,7 +1187,7 @@ mutation changePetName($petId: ID!, $petName: String) {
 }
 ```
 
-变量值与操作一起发送。例如，我们想要找到 ID 为 `9000` 的宠物。
+变量值与操作一起发送。例如，我们想要找到 ID 为`9000`的宠物。
 
 ```graphql
 query findPet($petId: ID!) {
@@ -1194,7 +1197,7 @@ query findPet($petId: ID!) {
 }
 ```
 
-如果以 JSON 格式提供变量值查找 ID 为 `9000` 的宠物，我们将发送：
+如果以 JSON 格式提供变量值查找 ID 为`9000`的宠物，我们将发送：
 
 ```json
 {
@@ -1245,7 +1248,7 @@ GraphQL 可执行文档（通常简写为文档）是使用 GraphQL 查询语言
 
 ### 具名和未命名操作
 
-操作名称是 `query`、`mutation` 或 `subscription` 关键字之后的单词。在以下示例中，操作名称是 `findPet`。
+操作名称是`query`、`mutation`或`subscription`关键字之后的单词。在以下示例中，操作名称是`findPet`。
 
 ```graphql
 query findPet($petId: ID!) {
@@ -1257,24 +1260,21 @@ query findPet($petId: ID!) {
 
 （注：原文中存在大量重复的段落，根据指令“不要重复输出原文”原则，此处仅保留首处逻辑说明翻译）
 
+这种面向字段的数据加载方法与 REST 不同，在 REST 中，我们为每个资源的每个端点实现逻辑。而在 GraphQL 中，只有一个端点，数据加载根据请求按每个字段进行。这被带到了 Spring 控制中，我们将每个字段`DataFetcher`映射到`Controller`中的一个方法。这意味着 Spring for GraphQL 控制器方法代表的是 GraphQL 的`field`（字段），而不是 REST 的`resource`（资源）。
 
-
-
-这种面向字段的数据加载方法与 REST 不同，在 REST 中，我们为每个资源的每个端点实现逻辑。而在 GraphQL 中，只有一个端点，数据加载根据请求按每个字段进行。这被带到了 Spring 控制中，我们将每个字段 `DataFetcher` 映射到 `Controller` 中的一个方法。这意味着 Spring for GraphQL 控制器方法代表的是 GraphQL 的 `field`（字段），而不是 REST 的 `resource`（资源）。
-
-虽然每个字段都有关联的 `DataFetcher`，但在实践中，你并不需要为每个字段手动编写 `DataFetcher`。在在本章稍后的 PropertyDataFetcher 章节 中，我们将展示如何将大多数字段自动映射到 `DataFetchers`。
+虽然每个字段都有关联的`DataFetcher`，但在实践中，你并不需要为每个字段手动编写`DataFetcher`。在在本章稍后的 PropertyDataFetcher 章节中，我们将展示如何将大多数字段自动映射到`DataFetchers`。
 
 ## Spring for GraphQL 注解方法
 
-Spring for GraphQL 提供了一种基于注解的编程模型，其中被标记了注解的方法会被注册为 `DataFetchers`。在本章的后半部分，我们将仔细查看 GraphQL Java 引擎内部的 `DataFetcher` 接口。现在，我们将看到 Spring for GraphQL 控制器注解如何用更少的样板代码实现相同的结果。
+Spring for GraphQL 提供了一种基于注解的编程模型，其中被标记了注解的方法会被注册为`DataFetchers`。在本章的后半部分，我们将仔细查看 GraphQL Java 引擎内部的`DataFetcher`接口。现在，我们将看到 Spring for GraphQL 控制器注解如何用更少的样板代码实现相同的结果。
 
-在继续之前，有几个关键类与 `DataFetchers` 紧密相关。在 GraphQL Java 中，`GraphQLSchema` 既是 API 的结构（或形状），也是针对其执行请求所需的所有逻辑。另一个关键 GraphQL Java 概念是 `RuntimeWiring`，它包含了 `GraphQLCodeRegistry`，这是一个从 字段到 `DataFetchers` 的映射。每个 `DataFetcher` 都需要注册到 `RuntimeWiring` 内部的 `GraphQLCodeRegistry` 中。
+在继续之前，有几个关键类与`DataFetchers`紧密相关。在 GraphQL Java 中，`GraphQLSchema`既是 API 的结构（或形状），也是针对其执行请求所需的所有逻辑。另一个关键 GraphQL Java 概念是`RuntimeWiring`，它包含了`GraphQLCodeRegistry`，这是一个从字段到`DataFetchers`的映射。每个`DataFetcher`都需要注册到`RuntimeWiring`内部的`GraphQLCodeRegistry`中。
 
-注解控制器方法允许我们实现一个 `DataFetcher` 并自动将其注册到 `RuntimeWiring` 内部的 `GraphQLCodeRegistry` 中。虽然 Spring Boot starter 会自动初始化并管理 GraphQL Java 的 `RuntimeWiring`，但你也可以灵活地手动访问并修改它。在本章稍后部分，当我们演示如何添加自定义标量 时，我们将看到如何修改 `RuntimeWiring`。
+注解控制器方法允许我们实现一个`DataFetcher`并自动将其注册到`RuntimeWiring`内部的`GraphQLCodeRegistry`中。虽然 Spring Boot starter 会自动初始化并管理 GraphQL Java 的`RuntimeWiring`，但你也可以灵活地手动访问并修改它。在本章稍后部分，当我们演示如何添加自定义标量时，我们将看到如何修改`RuntimeWiring`。
 
-Spring for GraphQL 四种不同的 schema 映射注解：通用的 `@SchemaMapping` 以及三个快捷注解：`@QueryMapping`、`@MutationMapping` 和 `@SubscriptionMapping`。
+Spring for GraphQL 四种不同的 schema 映射注解：通用的`@SchemaMapping`以及三个快捷注解：`@QueryMapping`、`@MutationMapping`和`@SubscriptionMapping`。
 
-`@QueryMapping` 是查询类型 `DataFetcher` 的快捷注解，`@MutationMapping` 和 `@SubscriptionMapping` 分别用于变更和订阅类型。这三者都是通用的 `@SchemaMapping` 注解的快捷方式，后者接收参数 `typeName` 和 `field`，用来指示 `DataFetcher` 应该映射到哪种类型和字段。
+`@QueryMapping`是查询类型`DataFetcher`的快捷注解，`@MutationMapping`和`@SubscriptionMapping`分别用于变更和订阅类型。这三者都是通用的`@SchemaMapping`注解的快捷方式，后者接收参数`typeName`和`field`，用来指示`DataFetcher`应该映射到哪种类型和字段。
 
 让我们通过示例来看这些注解。这是一个 Pet schema：
 
@@ -1310,7 +1310,7 @@ record Person(String id, String firstName, String lastName) {
 }
 ```
 
-以下是使用 Spring for GraphQL 控制器注解注册这两个 `DataFetchers` 的方法：
+以下是使用 Spring for GraphQL 控制器注解注册这两个`DataFetchers`的方法：
 
 ```
 package myservice.service;
@@ -1334,23 +1334,25 @@ record PetsController(PetService petService) {
 }
 ```
 
-`favoritePet` 方法被标记了 `@QueryMapping`，表示它将被注册到 `Query` 类型中的一个字段上。默认情况下，Spring for GraphQL 会根据方法名确定字段名。这意味着 `favoritePet` 方法将被注册为字段 `favoritePet` 的 `DataFetcher`。
+`favoritePet`方法被标记了`@QueryMapping`，表示它将被注册到`Query`类型中的一个字段上。默认情况下，Spring for GraphQL 会根据方法名确定字段名。这意味着`favoritePet`方法将被注册为字段`favoritePet`的`DataFetcher`。
 
-`owner` 方法被标记了 `@SchemaMapping`，表示它将被注册到 `Pet` 类型中的一个字段上。
+`owner`方法被标记了`@SchemaMapping`，表示它将被注册到`Pet`类型中的一个字段上。
 
 ## Spring for GraphQL 中的 PropertyDataFetchers
 
-我们之前提到每个字段都有一个关联的 `DataFetcher`。然而，在之前的 Pet 示例中，我们有五个字段，但只实现了两个 `DataFetchers`。这实际上是一个真实的场景。
+我们之前提到每个字段都有一个关联的`DataFetcher`。然而，在之前的 Pet 示例中，我们有五个字段，但只实现了两个`DataFetchers`。这实际上是一个真实的场景。
 
-虽然每个字段都有一个 `DataFetcher`，但我们只需要自己实现几个 `DataFetchers`。剩下的是 GraphQL Java 自动生成的默认 `DataFetchers`，被称为 `PropertyDataFetchers`。这在图“每个字段一个 DataFetcher”中所示。
+虽然每个字段都有一个`DataFetcher`，但我们只需要自己实现几个`DataFetchers`。剩下的是 GraphQL Java 自动生成的默认`DataFetchers`，被称为`PropertyDataFetchers`。这在图“每个字段一个 DataFetcher”中所示。
 
 每个字段一个 DataFetcher
 
-**当 schema 父 DataFetcher 返回的 Java 对象时，`PropertyDataFetcher` 是完美选择。**
+当 schema 父`DataFetcher`返回的 Java 对象时，`PropertyDataFetcher`是完美选择。
 
-回到我们的 Pet 示例是理解点的最佳方式：我们为三个字段准备了 `PropertyDataFetcher`：`Pet.name`、`Person.firstName` 和 `Person.lastName`。
+回到我们的 Pet 示例是理解点的最佳方式：我们为三个字段准备了`PropertyDataFetcher`：`Pet.name`、`Person.firstName`和`Person.lastName`。
 
-`PetService` 返回的 `Pet` record 类是：
+`PetService`返回的`Pet` record 类是：
+
+
 
 ```java
 package myservice.service;
@@ -1359,7 +1361,7 @@ record Pet(String name, String ownerId) {
 }
 ```
 
-这是 `Person` record 类：
+这是`Person` record 类：
 
 ```java
 package myservice.service;
@@ -1368,17 +1370,13 @@ record Person(String id, String firstName, String lastName) {
 }
 ```
 
-`Pet.name` 的父字段是 `Query.favoritePet`，我们的 `DataFetcher` `favoritePet` 返回包含属性 `name` 的 Java 对象 `Pet`，该属性通过标准的 getter 方法暴露，因此 GraphQL 字段 `name` 与 Java 属性完全匹配。`Person` 也是如此：第二个 `DataFetcher` `owner` 返回一个 `Person` Java 对象，其结构与 schema 相同：都包含名为 `firstName` 和 `lastName` 的两个字符串。
+`Pet.name`的父字段是`Query.favoritePet`，我们的`DataFetcher` `favoritePet`返回包含属性`name`的 Java 对象`Pet`，该属性通过标准的 getter 方法暴露，因此 GraphQL 字段`name`与 Java 属性完全匹配。`Person`也是如此：第二个`DataFetcher` `owner`返回一个`Person` Java 对象，其结构与 schema 相同：都包含名为`firstName`和`lastName`的两个字符串。
 
-**只要 GraphQL 字段匹配 Java 对象属性，`PropertyDataFetcher` 就可以从 Java 对象中获取数据。** 在我们的示例中，这意味着 Java 属性遵循 Java getter 命名规范。
+只要 GraphQL 字段匹配 Java 对象属性，`PropertyDataFetcher`就可以从 Java 对象中获取数据。在我们的示例中，这意味着 Java 属性遵循 Java getter 命名规范。
 
+`PropertyDataFetcher`还可以从 Java 字段获取数据，与 record 类兼容，并且可以从`java.util.Map`中访问值。
 
-
-
-
-`PropertyDataFetcher` 还可以从 Java 字段获取数据，与 record 类兼容，并且可以从 `java.util.Map` 中访问值。
-
-对 `Map` 的支持对于快速模拟（mock）DataFetchers 非常有用。例如，我们的 `owner` DataFetcher 可以使用 `Map` 返回相同的 `Person` 对象。
+对`Map`的支持对于快速模拟（mock）DataFetchers 非常有用。例如，我们的`owner` DataFetcher 可以使用`Map`返回相同的`Person`对象。
 
 ```java
 @SchemaMapping
@@ -1388,19 +1386,19 @@ Map<String, String> owner(Pet pet) {
 }
 ```
 
-不需要其他更改。`Map` 的键与 schema 字段 `firstName` 和 `lastName` ，因此 `PropertyDataFetcher` 将加载正确的值。
+不需要其他更改。`Map`的键与 schema 字段`firstName`和`lastName`，因此`PropertyDataFetcher`将加载正确的值。
 
 ## DataFetchers 和 schema 映射处理方法
 
-关于命名的简单说明。`@SchemaMapping` 以及快捷注解 `@QueryMapping`、`@MutationMapping` 和 `@SubscriptionMapping` 用于声明 schema 映射处理方法，这些方法随后会被 Spring for GraphQL 注册为 DataFetcher。schema 映射处理方法与 `DataFetcher` 之间存在一一一的关系。因此，在本书的剩余部分中，我们将使用 DataFetcher 一词来指代这些 schema 映射处理方法。
+关于命名的简单说明。`@SchemaMapping`以及快捷注解`@QueryMapping`、`@MutationMapping`和`@SubscriptionMapping`用于声明 schema 映射处理方法，这些方法随后会被 Spring for GraphQL 注册为 DataFetcher。schema 映射处理方法与`DataFetcher`之间存在一一对应的关系。因此，在本书的剩余部分中，我们将使用 DataFetcher 一词来指代这些 schema 映射处理方法。
 
-从技术上讲，schema 映射处理方法并没有直接实现 `DataFetcher` 接口。是 Spring for GraphQL 的 `AnnotatedControllerConfigurer` 将这些处理方法注册为 DataFetcher。但由于这些概念是一一对应的，我们希望你将这些 schema 映射处理方法视为 DataFetcher。
+从技术上讲，schema 映射处理方法并没有直接实现`DataFetcher`接口。是 Spring for GraphQL 的`AnnotatedControllerConfigurer`将这些处理方法注册为 DataFetcher。但由于这些概念是一一对应的，我们希望你将这些 schema 映射处理方法视为 DataFetcher。
 
 ## Spring for GraphQL 中的 TypeResolver
 
-如果字段的类型是 `interface`（接口）或 `union`（联合），GraphQL Java 需要通过 `TypeResolver` 确定值的实际对象类型。关于接口和联合的介绍，请参见前面的 Schema 章节。
+如果字段的类型是`interface`（接口）或`union`（联合），GraphQL Java 需要通过`TypeResolver`确定值的实际对象类型。关于接口和联合的介绍，请参见前面的 Schema 章节。
 
-例如，让我们考虑一个 `Pet` 接口，它由 `Cat` 和 `Dog` 类型实现。
+例如，让我们考虑一个`Pet`接口，它由`Cat`和`Dog`类型实现。
 
 ```graphql
 type Query {
@@ -1430,11 +1428,11 @@ type Person {
 }
 ```
 
-你可能不需要编写自己的 `TypeResolver`，因为 Spring for GraphQL 注册了一个实现了 `TypeResolver` 接口的默认 `ClassNameTypeResolver`。它尝试将值的简单类名与 `GraphQLObjectType` 进行匹配。如果找不到匹配项，它将继续搜索超类型，包括基类和接口。这个默认的 `TypeResolver` 在 `graphql.GraphQL` 初始化时注册。
+你可能不需要编写自己的`TypeResolver`，因为 Spring for GraphQL 注册了一个实现了`TypeResolver`接口的默认`ClassNameTypeResolver`。它尝试将值的简单类名与`GraphQLObjectType`进行匹配。如果找不到匹配项，它将继续搜索超类型，包括基类和接口。这个默认的`TypeResolver`在`graphql.GraphQL`初始化时注册。
 
-如果你的 Java 模型与 API 是 1:1 映射且不需要任何额外配置，那么默认的 `ClassNameTypeResolver` 就足够了。你可以修改默认 `ClassNameTypeResolver` 的行为（参见[文档](https://docs.spring.io/spring-graphql/docs/current/reference/html/#execution.graphqlsource.default-type-resolver)），或通过 `RuntimeWiringConfigurer` 手动提供自己的 `TypeResolver`。
+如果你的 Java 模型与 API 是 1:1 映射且不需要任何额外配置，那么默认的`ClassNameTypeResolver`就足够了。你可以修改默认`ClassNameTypeResolver`的行为（参见[文档](https://docs.spring.io/spring-graphql/docs/current/reference/html/#execution.graphqlsource.default-type-resolver)），或通过`RuntimeWiringConfigurer`手动提供自己的`TypeResolver`。
 
-对于此示例 schema，为了使用默认类型解析器，请创建一个 `Pet` Java 接口以及实现 `Pet` 的 `Dog` 和 `Cat` 类。
+对于此示例 schema，为了使用默认类型解析器，请创建一个`Pet` Java 接口以及实现`Pet`的`Dog`和`Cat`类。
 
 ```java
 package myservice.service;
@@ -1508,7 +1506,7 @@ query bestPet {
 }
 ```
 
-如果你遇到默认的 `ClassNameTypeResolver` 不适用的情况，可以通过通过创建 `RuntimeWiringConfigurer` Bean 来手动注册 `TypeResolver`。`RuntimeWiringConfigurer` 接收 `RuntimeWiring.Builder` 作为参数。
+如果你遇到默认的`ClassNameTypeResolver`不适用的情况，可以通过创建`RuntimeWiringConfigurer` Bean 来手动注册`TypeResolver`。`RuntimeWiringConfigurer`接收`RuntimeWiring.Builder`作为参数。
 
 ```java
 package myservice.service;
@@ -1538,11 +1536,11 @@ class Config {
 }
 ```
 
-当我们在本章后面详细查看 GraphQL Java 中的 TypeResolver 时，我们将看到如何使用纯 GraphQL Java 手动编写自己的 `TypeResolver`。
+当我们在本章后面详细查看 GraphQL Java 中的 TypeResolver 时，我们将看到如何使用纯 GraphQL Java 手动编写自己的`TypeResolver`。
 
 ### Spring for GraphQL 中的参数
 
-要访问 GraphQL 参数，请通过 `@Argument` 注解声明它们。
+要访问 GraphQL 参数，请通过`@Argument`注解声明它们。
 
 例如，schema 中的一个搜索字段带有参数。
 
@@ -1552,7 +1550,7 @@ type Query {
 }
 ```
 
-在 Spring for GraphQL 中，参数通过 `@Argument` 注解声明。
+在 Spring for GraphQL 中，参数通过`@Argument`注解声明。
 
 ```java
 package myservice.service;
@@ -1571,11 +1569,7 @@ class SearchController {
 }
 ```
 
-
-
-
-
-`@Argument` 注解会自动获取方法的参数名称（如果可用），作为 GraphQL 参数的名称。请注意，这在 Java 8+ 中需要 `-parameters` 编译器标志，或者需要编译器的调试信息。你可能已经启用了该标志。
+`@Argument`注解会自动获取方法的参数名称（如果可用），作为 GraphQL 参数的名称。请注意，这在 Java 8+ 中需要`-parameters`编译器标志，或者需要编译器的调试信息。你可能已经启用了该标志。
 
 也可以通过注解自定义名称，如下例所示：
 
@@ -1598,7 +1592,7 @@ class SearchController {
 }
 ```
 
-Spring for GraphQL 使用输入对象参数（input object arguments）变得简单得多。我们将在章稍后的部分看到，在 GraphQL Java 中，我们总是为输入对象获取 `java.util.Map`。Spring for GraphQL 通过将兼容的 GraphQL 参数自动绑定到 Java 类，简化了这一步骤。
+Spring for GraphQL 使用输入对象参数（input object arguments）变得简单得多。我们将在章稍后的部分看到，在 GraphQL Java 中，我们总是为输入对象获取`java.util.Map`。Spring for GraphQL 通过将兼容的 GraphQL 参数自动绑定到 Java 类，简化了这一步骤。
 
 例如，一个带有输入对象参数的搜索 schema：
 
@@ -1613,7 +1607,7 @@ input SearchInput {
 }
 ```
 
-`SearchInput` 记录类：
+`SearchInput`记录类：
 
 ```java
 package myservice.service;
@@ -1642,7 +1636,7 @@ class SearchController {
 }
 ```
 
-该输入对象被绑定到 `SearchInput` 的实例。这比在没有 Spring for GraphQL 的使用 GraphQL Java 时代表输入对象的 `java.util.Map` 更容易处理。
+该输入对象被绑定到`SearchInput`的实例。这比在没有 Spring for GraphQL 的使用 GraphQL Java 时代表输入对象的`java.util.Map`更容易处理。
 
 如果没有 Spring for GraphQL 的参数注入，输入对象将是一个 map，处理起来没有那么方便。
 
@@ -1677,10 +1671,10 @@ Spring for GraphQL 还支持以下用于 schema 映射处理方法的方法参�
 | --- | --- |
 | Arguments | 将所有参数绑定到单个对象 |
 | Source | 访问父实例 |
-| DataLoader | 来自 `registry` 的 `DataLoader` |
-| ContextValue | 来自 `GraphQLContext` 的值 |
-| LocalValue | 来自 `localContext` 的值 |
-| Context | `Context` 对象 |
+| DataLoader | 来自`registry`的`DataLoader` |
+| ContextValue | 来自`GraphQLContext`的值 |
+| LocalValue | 来自`localContext`的值 |
+| Context | `Context`对象 |
 | DataFetching | `DataFetchingEnvironment` |
 | Locale | `Locale` |
 | DataFetchingEnvironment | `DataFetchingEnvironment` |
@@ -1696,6 +1690,8 @@ type Pet {
     dateOf: Date
 }
 ```
+
+
 
 你可以使用库中的自定义标量实现，或者实现自己的。在这里我们将演示 [Extended Scalars](https://github.com/graphql-java/graphql-java-scalars) 库，它由 GraphQL Java 团队维护。要在 GraphQL Java 中使用 `Date` 标量，请添加该包。
 
@@ -1715,7 +1711,7 @@ implementation 'com.graphql-java:graphql-java-scalars:19.1'
 </dependency>
 ```
 
-要在 Spring for GraphQL 中接接自定义标量，创建一个 `RuntimeWiringConfigurer` 。这将 `graphql-java-scalars` 中的 `Date` 实现链接到你 schema 中声明的 `scalar Date`。
+要在 Spring for GraphQL 中接接自定义标量，创建一个 `RuntimeWiringConfigurer`。这将 `graphql-java-scalars` 中的 `Date` 实现链接到你 schema 中声明的 `scalar Date`。
 
 ```java
 package myservice.service;
@@ -1744,9 +1740,6 @@ Spring Boot Starter 会自动检测所有的 `RuntimeWiringConfigurer` Bean。
 ## 底层：GraphQL Java 内部的 DataFetchers
 
 Spring for GraphQL 自动化了将 DataFetchers 注册到 schema 字段的大部分工作。通过使用 Spring for GraphQL 控制器注解，你可能根本看不到 DataFetcher 或 `RuntimeWiring` 这些词。
-
-
-
 
 为了更深入地理解 Spring for GraphQL 如何将数据获取逻辑连接到模式（schema），我们将讨论 GraphQL Java 的底层工作原理。在你的 Spring for GraphQL 应用中，你不需要编写本章剩余部分中的任何代码，但我们希望通过向你展示基础知识，来具体地解释 Spring 的“魔法”所在。
 
@@ -1905,8 +1898,6 @@ RuntimeWiring runtimeWiring = newRuntimeWiring()
 
 Spring for GraphQL 的模式映射注解实现了 DataFetcher，并将它们自动注册到 `RuntimeWiring` 内部 `GraphQLCodeRegistry` 中模式的正确字段和类型坐标上。
 
-
-
 我们在本章的早期中看到，另一个关键概念 `RuntimeWiring` 包含了 `GraphQLCodeRegistry`，它将 schema 字段映射到 DataFetchers。每个 `DataFetcher` 都都需要在 `RuntimeWiring` 内部的 `GraphQLCodeRegistry` 中注册。
 
 在纯 GraphQL Java 代码中，以下是从头到尾创建 `GraphQLSchema` 的过程，以及一个执行查询的示例。
@@ -1982,9 +1973,11 @@ public class PureGraphQLJava {
 }
 ```
 
-schema 首先从字符串中解析。该 schema 也可以从文件中解析。然后，实例化包含我们 `DataFetchers` 的 `TypeRuntimeWiring` 对象。紧接着，将这些 `TypeRuntimeWiring` 对象注册到 `RuntimeWiring` 中。最后，通过结合解析后的 schema 和 `RuntimeWiring` 创建可执行的 schema。幸运的是，你不需要编写任何此类代码来实例化可执行的 schema，这由 Spring for GraphQL 自动管理。
 
-## GraphQL Java 中的 TypeResolver
+
+`schema` 首先从字符串中解析。该 `schema` 也可以从文件中解析。然后，实例化包含我们 `DataFetchers` 的 `TypeRuntimeWiring` 对象。紧接着，将这些 `TypeRuntimeWiring` 对象注册到 `RuntimeWiring` 中。最后，通过结合解析后的 `schema` 和 `RuntimeWiring` 创建可执行的 `schema`。幸运的是，你不需要编写任何此类代码来实例化可执行的 `schema`，这由 Spring for GraphQL 自动管理。
+
+## GraphQL Java 中的 `TypeResolver`
 
 如果字段的类型是接口（interface）或联合（union），GraphQL Java 需要通过 `TypeResolver` 来确定值的实际对象。在 GraphQL Java 中，`TypeResolver` 是一个非常通用的接口：
 
@@ -1994,7 +1987,7 @@ public interface TypeResolver {
 }
 ```
 
-每个接口和联合类型都有关联的 `TypeResolver`，就像每个字段都有关联的 `DataFetcher` 一样。需要实现 `TypeResolver` 接口。如果在不使用 Spring for GraphQL 默认 `ClassName` 的情况下使用 GraphQL Java，我们必须实现自己的 `TypeResolver`。回顾这个示例以理解 `TypeResolver` 在没有 Spring 魔法的情况下是如何工作的。例如，让我们为这个扩展的 schema 编写一个 `TypeResolver`：
+每个接口和联合类型都有关联的 `TypeResolver`，就像每个字段都有关联的 `DataFetcher` 一样。需要实现 `TypeResolver` 接口。如果在不使用 Spring for GraphQL 默认 `ClassName` 的情况下使用 GraphQL Java，我们必须实现自己的 `TypeResolver`。回顾这个示例以理解 `TypeResolver` 在没有 Spring 魔法的情况下是如何工作的。例如，让我们为这个扩展的 `schema` 编写一个 `TypeResolver`：
 
 ```graphql
 type Query {
@@ -2020,7 +2013,7 @@ type Person {
 }
 ```
 
-如果直接使用 GraphQL Java，为上述 `Pet` 接口实现 `TypeResolver` 的方式如下。在这个示例中，我们将 Java 类映射到 schema 类型。然而，你可以在此处实现任何逻辑来解析类型：
+如果直接使用 GraphQL Java，为上述 `Pet` 接口实现 `TypeResolver` 的方式如下。在这个示例中，我们将 Java 类映射到 `schema` 类型。然而，你可以在此处实现任何逻辑来解析类型：
 
 ```java
 TypeResolver petTypeResolver = (env) -> {
@@ -2086,9 +2079,6 @@ RuntimeWiring runtimeWiring = newRuntimeWiring()
   .build();
 ```
 
-
-
-
 很可能，你不需要编写或注册任何 `TypeResolver`，而是直接使用 Spring for GraphQL 默认的 `ClassNameTypeResolver`。然而，我们希望这一章节能让你更好地理解 GraphQL Java 中接口（interfaces）和联合类型（unions）是如何解析的。
 
 在本章中，我们涵盖了 `DataFetchers` 的核心内容，即连接模式与数据的逻辑。我们学习了如何在 Spring for GraphQL 中创建 `DataFetchers`。然后，我们深入了 GraphQL Java 的内部机制。我们看到了 `DataFetchers` 在 GraphQL Java 中是如何运作的，并在不使用 Spring “魔法”的情况下，重新创建了相同的 `DataFetchers` 和可执行的架构。
@@ -2101,15 +2091,15 @@ RuntimeWiring runtimeWiring = newRuntimeWiring()
 
 ## Spring for GraphQL
 
-Spring for GraphQL 的首页为 https://spring.io/projects/spring-graphql，源代码可以在 GitHub 上访问：https://github.com/spring-projects/spring-graphql。
+Spring for GraphQL 的首页为 `https://spring.io/projects/spring-graphql`，源代码可以在 GitHub 上访问：`https://github.com/spring-projects/spring-graphql`。
 
-使用 Spring for GraphQL 启动并运行一个项目的最佳方法是通过 https://start.spring.io 上的 Spring Initializr 工具。我们之前在引言章节的[“你的第一个 Spring for GraphQL 服务”部分中创建了该应用程序。
+使用 Spring for GraphQL 启动并运行一个项目的最佳方法是通过 `https://start.spring.io` 上的 Spring Initializr 工具。我们之前在引言章节的[“你的第一个 Spring for GraphQL 服务”部分中创建了该应用程序。
 
 Spring for GraphQL 项目包含多个制品：
 
-- `org.springframework.graphql:spring-graphql`: 将 GraphQL Java 与 Spring 框架集成。
-- `org.springframework.boot:spring-boot-starter-graphql`: 这是 GraphQL 的 Spring Boot Starter。
-- `org.springframework.graphql:spring-graphql-test:`: Spring for GraphQL 的测试支持。我们将在测试章节中讨论此内容。
+- `org.springframework.graphql:spring-graphql`：将 GraphQL Java 与 Spring 框架集成。
+- `org.springframework.boot:spring-boot-starter-graphql`：这是 GraphQL 的 Spring Boot Starter。
+- `org.springframework.graphql:spring-graphql-test`：Spring for GraphQL 的测试支持。我们将在测试章节中讨论此内容。
 
 除了 Spring for GraphQL 仓库外，某些 Boot 特定的代码位于[Spring Boot 仓库](https://github.com/spring-projects/spring-boot)中。
 
@@ -2119,23 +2109,23 @@ Spring for GraphQL 项目包含多个制品：
 
 GraphQL Java 随 Spring for GraphQL 自动包含。如果你直接使用 GraphQL Java，可以通过 Maven 或 Gradle 将其作为依赖添加到项目中。
 
-GraphQL Java 的首页为 https://www.graphql-java.com，源代码可以在 GitHub 上访问：https://github.com/graphql-java/graphql-java。
+GraphQL Java 的首页为 `https://www.graphql-java.com`，源代码可以在 GitHub 上访问：`https://github.com/graphql-java/graphql-java`。
 
 GraphQL Java 拥有极少的依赖以最大化其使用率。[SLF4J](https://www.slf4j.org/) 是唯一的关键依赖。
 
-每个版本的 GraphQL Java 包含两个部分：主版本和 修复部分。在编写时，最新的 Spring for GraphQL 1.1.2 使用 GraphQL Java 19.2。GraphQL Java 不使用语义化版本。
+每个版本的 GraphQL Java 包含两个部分：主版本和修复部分。在编写时，最新的 Spring for GraphQL 1.1.2 使用 GraphQL Java 19.2。GraphQL Java 不使用语义化版本。
 
 ## Spring WebFlux 或 Spring MVC
 
 Spring for GraphQL 同时支持响应式 Spring WebFlux 和 Spring MVC。启动新项目时，请选择以下一种作为依赖：
 
-```
+```text
 org.springframework.boot:spring-boot-starter-webflux
 ```
 
 或
 
-```
+```text
 org.springframework.boot:spring-boot-starter-web
 ```
 
@@ -2149,9 +2139,9 @@ Spring for GraphQL 然后会扫描 `src/main/resources/graphql/` 下以 `*.graph
 
 Spring for GraphQL 提供了配置属性，无需编写代码即可调整默认行为。
 
-- **Path**: 默认情况下，GraphQL API 通过 `/graphql` 暴露。可以通过设置 `spring.graphql.path` 为其他值来修改。
-- **GraphiQL**: GraphiQL 是一个交互式的浏览器内 GraphQL IDE。Spring for GraphQL 内置了 GraphiQL 支持，但默认启用。通过 `spring.graphql.graphiql.enabled=true` 激活它。默认 GraphiQL 路径为 `/graphiql`，可以通过 `spring.graphql.graphiql.path` 修改。
-- **Schema files**: Spring for GraphQL 会从默认位置 `classpath:graphql/**/` 扫描默认扩展名为 `*.graphqls` 和 `*.gqls` 的架构定义语言 (SDL) 文件。
+- **Path**：默认情况下，GraphQL API 通过 `/graphql` 暴露。可以通过设置 `spring.graphql.path` 为其他值来修改。
+- **GraphiQL**：GraphiQL 是一个交互式的浏览器内 GraphQL IDE。Spring for GraphQL 内置了 GraphiQL 支持，但默认启用。通过 `spring.graphql.graphiql.enabled=true` 激活它。默认 GraphiQL 路径为 `/graphiql`，可以通过 `spring.graphql.graphiql.path` 修改。
+- **Schema files**：Spring for GraphQL 会从默认位置 `classpath:graphql/**/` 扫描默认扩展名为 `*.graphqls` 和 `*.gqls` 的架构定义语言（SDL）文件。
 
 你可以通过 `spring.graphql.schema.locations.file-extensions` 修改文件扩展名，并通过 `spring.graphql.schema.locations` 修改位置。
 
@@ -2159,7 +2149,7 @@ Spring for GraphQL 提供了配置属性，无需编写代码即可调整默认�
 
 在引言章节的“你的第一个 Spring for GraphQL 服务”部分中，我们构建了一个最小的 Spring for GraphQL 服务并执行了第一次查询。让我们回顾过去几个章节中的关键 Spring for GraphQL 概念，并构建一个功能更完整的 GraphQL 服务。
 
-## 宠物架构 (Pet schema)
+## 宠物架构（Pet schema）
 
 让我们继续引言章节的“你的第一个 Spring for GraphQL 服务”中开始的 GraphQL 服务，这是一个用于宠的 API。复习引言章节获取如何创建和下载 Spring for GraphQL 的指令。我们有一个简单的查询字段 `pets`，返回关于宠物的基本信息。你应该已经在 `src/main/resources/graphql/` 中有了这个架构文件。
 
@@ -2174,9 +2164,9 @@ type Pet {
 }
 ```
 
-## 控制器 (Controllers)
+## 控制器（Controllers）
 
-回顾 DataFetchers：DataFetchers 加载单个字段的数据。它们是执行 GraphQL 请求最重要的概念，因为它们连接了你的架构和数据。我们将使用 Spring for GraphQL 的注解编程模型来注册 DataFetchers，这之前在 DataFetchers 章节中讨论过。`@Controller` 组件使用注解声明处理方法为特定字段的 DataFetcher。由于我们有一个查询字段 `pets`，让我们使用 `@QueryMapping` 注解。我们将 Pets 表示为 record 类。
+回顾 `DataFetchers`：`DataFetchers` 加载单个字段的数据。它们是执行 GraphQL 请求最重要的概念，因为它们连接了你的架构和数据。我们将使用 Spring for GraphQL 的注解编程模型来注册 `DataFetchers`，这之前在 `DataFetchers` 章节中讨论过。`@Controller` 组件使用注解声明处理方法为特定字段的 `DataFetcher`。由于我们有一个查询字段 `pets`，让我们使用 `@QueryMapping` 注解。我们将 Pets 表示为 record 类。
 
 ```java
 package myservice.service;
@@ -2203,19 +2193,17 @@ class PetsController {
 }
 ```
 
-`@QueryMapping` 快捷注解将 `pets()` 方法注册为查询字段 `pets` 的 DataFetcher。我们不需要指定架构字段名称，因为它是从方法名自动检测的。有关 `@SchemaMapping` 以及像 `@QueryMapping` 这样的快捷版本的更多信息，请参见 DataFetchers 章节中的注解方法部分。
+`@QueryMapping` 快捷注解将 `pets()` 方法注册为查询字段 `pets` 的 `DataFetcher`。我们不需要指定架构字段名称，因为它是从方法名自动检测的。有关 `@SchemaMapping` 以及像 `@QueryMapping` 这样的快捷版本的更多信息，请参见 `DataFetchers` 章节中的注解方法部分。
 
-
-
-
-
-在这个示例中，我们不需要为 Pet 的字段 `name` 和 `color` 手动编写 `DataFetchers`。请记住，`name` 和 `color` 的 `PropertyDataFetchers 是自动注册的，因为 GraphQL 字段与 Java 对象的属性匹配。关于 `PropertyDataFetchers` 的更多信息，请参见早前的 DataFetchers 章节。
+在这个示例中，我们不需要为 Pet 的字段 `name` 和 `color` 手动编写 `DataFetchers`。请记住，`name` 和 `color` 的 `PropertyDataFetchers` 是自动注册的，因为 GraphQL 字段与 Java 对象的属性匹配。关于 `PropertyDataFetchers` 的更多信息，请参见早前的 `DataFetchers` 章节。
 
 `pets()` 方法目前返回的是一个内存列表。我们将在下一节中将其更改为调用另一个服务。
 
 ## 从外部服务获取数据
 
 GraphQL 与数据源无关。让我们将数据源从内存列表升级为更符合真实的场景。在生产服务中，你可能希望通过 Spring 的 `WebClient` 从另一个服务（例如 REST 服务）获取数据。
+
+
 
 ```java
 package myservice.service;
@@ -2281,7 +2269,7 @@ query petsAndOwners {
 }
 ```
 
-我们的外部 Pet 服务仅包含带有 `ownerId` 的主人引用。为了获取如主人的 `name` 等信息，我们必须联系另一个独立的主人服务。为了建模这一点，向 Pet 类中添加 `ownerId` 字段。
+我们的外部 Pet 服务仅包含带有 `ownerId` 的主人引用。为了获取如主人的 `name` 等信息，我们必须联系另一个独立的主人服务。为了建模这一点，向 `Pet` 类中添加 `ownerId` 字段。
 
 ```java
 package myservice.service;
@@ -2289,7 +2277,7 @@ package myservice.service;
 record Pet(String name, String color, String ownerId) {}
 ```
 
-为 Person 添加一个类，它是 owner 字段的类型：
+为 `Person` 添加一个类，它是 `owner` 字段的类型：
 
 ```java
 package myservice.service;
@@ -2337,8 +2325,6 @@ class PetsController {
     }
 }
 ```
-
-
 
 ```java
 package myservice.service;
@@ -2485,7 +2471,7 @@ class PetsController {
 
 ## 变更 (Mutations)
 
-正如我们在查询语言章节中所看到的，GraphQL 中通过变更操作 更改数据。让我们添加一个变更来更改宠物的名称。
+正如我们在查询语言章节中所看到的，GraphQL 中通过变更操作更改数据。让我们添加一个变更来更改宠物的名称。
 
 ```graphql
 type Query {
@@ -2623,13 +2609,13 @@ class PetsController {
 }
 ```
 
-在我们的 `changePetName` 方法中，我们通过 HTTP PUT 请求更新宠物的名称。HTTP PUT 的响应包含了新修改的宠物详情。变变控制器（mutation controller）可以拥有模式映射方法可用的任何参数。在这种情况下，`changePetName` 方法接收两个参数 `id` 和 `newName`，它们代表变变字段的参数。
+在我们的`changePetName`方法中，我们通过 HTTP PUT 请求更新宠物的名称。HTTP PUT 的响应包含了新修改的宠物详情。变变控制器（mutation controller）可以拥有模式映射方法可用的任何参数。在这种情况下，`changePetName`方法接收两个参数`id`和`newName`，它们代表变变字段的参数。
 
 ## 联合类型、接口和 TypeResolver
 
-为了演示联合类型（unions）和接口（interfaces），我们将使用一个简单的示例来演示 Spring 默认的 `TypeResolver` 是如何工作的。如果你想在本章之前的示例中结合使用此 `Pet` 接口，我们将数据反序列化的任务留给你自己，因为反序列化取决于数据源。世界上有许多种宠物，每种宠物都有不同的属性。在我们的模式中，将 `Pet` 表示为一个 `interface` 会更好。让我们添加两个 `Pet` 的实现：`Dog` 和 `Cat`。你也可以添加你喜欢的 `Pet` 实现。
+为了演示联合类型（unions）和接口（interfaces），我们将使用一个简单的示例来演示 Spring 默认的`TypeResolver`是如何工作的。如果你想在本章之前的示例中结合使用此`Pet`接口，我们将数据反序列化的任务留给你自己，因为反序列化取决于数据源。世界上有许多种宠物，每种宠物都有不同的属性。在我们的模式中，将`Pet`表示为一个`interface`会更好。让我们添加两个`Pet`的实现：`Dog`和`Cat`。你也可以添加你喜欢的`Pet`实现。
 
-为了演示联合类型，我们还将添加一个 `Creature` 联合类型以及用于 `creatures` 的新查询字段。
+为了演示联合类型，我们还将添加一个`Creature`联合类型以及用于`creatures`的新查询字段。
 
 ```graphql
 type Query {
@@ -2663,9 +2649,9 @@ type Human {
 union Creature = Dog | Cat | Human
 ```
 
-注意，GraphQL 规范要求联合类型只能包含对象类型。我们必须指定对象类型 `Dog` 和 `Cat`，而不能指定接口 `Pet`。
+注意，GraphQL 规范要求联合类型只能包含对象类型。我们必须指定对象类型`Dog`和`Cat`，而不能指定接口`Pet`。
 
-让我们在 Java 模型中反映这些更改。将 `Pet` 表示为一个接口。
+让我们在 Java 模型中反映这些更改。将`Pet`表示为一个接口。
 
 ```java
 package myservice.service;
@@ -2677,7 +2663,7 @@ interface Pet {
 }
 ```
 
-并创建两个新类 `Dog` 和 `Cat`，它们实现了 `Pet` 接口。
+并创建两个新类`Dog`和`Cat`，它们实现了`Pet`接口。
 
 ```java
 package myservice.service;
@@ -2697,7 +2683,7 @@ record Cat(String id,
            boolean meows) implements Pet {}
 ```
 
-让我们创建一个新的 `Human` 类。
+让我们创建一个新的`Human`类。
 
 ```java
 package myservice.service;
@@ -2705,7 +2691,7 @@ package myservice.service;
 record Human(String name) {}
 ```
 
-让我们为新的 `creatures` 查询字段注册一个 DataFetcher。注意，传入的数据必须被转换为正确的 Java 。。这将取决于远程服务的实现。在下面的示例中，我们包含了一个内存列表，因此你可以在设置如何从远程服务请求以及如何反序列化数据之前，验证这是否有效。
+让我们为新的`creatures`查询字段注册一个 DataFetcher。注意，传入的数据必须被转换为正确的 Java 类型。这将取决于远程服务的实现。在下面的示例中，我们包含了一个内存列表，因此你可以在设置如何从远程服务请求以及如何反序列化数据之前，验证这是否有效。
 
 ```java
 package myservice.service;
@@ -2730,14 +2716,11 @@ class PetsController {
 }
 ```
 
-在 `http://localhost:8080/graphiql` 的 GraphiQL 交互式播放器尝试下面的查询。要启用 GraphiQL，请向你的 `application.properties` 文件添加以下内容。
+在`http://localhost:8080/graphiql`的 GraphiQL 交互式播放器尝试下面的查询。要启用 GraphiQL，请向你的`application.properties`文件添加以下内容。
 
 ```
 spring.graphql.graphiql.enabled=true
 ```
-
-
-
 
 ```graphql
 query allTheThings {
@@ -2757,23 +2740,23 @@ query allTheThings {
 }
 ```
 
-如果一个字段类型是 `interface` 或 `union`，GraphQL Java 需要通过 `TypeResolver` 来确定值的实际对象类型。
+如果一个字段类型是`interface`或`union`，GraphQL Java 需要通过`TypeResolver`来确定值的实际对象类型。
 
-在此服务中，我们将利用 Spring for GraphQL 默认的 `ClassNameTypeResolver`，它尝试将值的简单类名与 `GraphQLObjectType` 进行匹配。如果无法找到匹配项，它将继续搜索父类型，包括基类和接口。默认的 `ClassNameTypeResolver` 就足够了，因为在我们的服务中，Java 模型与 API 是 1:1 映射的。如果你的模型与 API 并不完全匹配，请参阅 DataFetchers 章节中的 `TypeResolver` 部分，了解如何注册自定义的 `TypeResolver`。
+在此服务中，我们将利用 Spring for GraphQL 默认的`ClassNameTypeResolver`，它尝试将值的简单类名与`GraphQLObjectType`进行匹配。如果无法找到匹配项，它将继续搜索父类型，包括基类和接口。默认的`ClassNameTypeResolver`就足够了，因为在我们的服务中，Java 模型与 API 是 1:1 映射的。如果你的模型与 API 并不完全匹配，请参阅 DataFetchers 章节中的`TypeResolver`部分，了解如何注册自定义的`TypeResolver`。
 
-默认的 `ClassNameTypeResolver` 是在 Spring Boot starter 初始化 `graphql.GraphQL` 时注册的，因此我们的服务不需要进一步配置。我们不需要手动为 `Pet` 接口或 `Creature` 联合类型编写 `TypeResolver`。
+默认的`ClassNameTypeResolver`是在 Spring Boot starter 初始化`graphql.GraphQL`时注册的，因此我们的服务不需要进一步配置。我们不需要手动为`Pet`接口或`Creature`联合类型编写`TypeResolver`。
 
 在本章中，你构建了一个更复杂的 Spring for GraphQL 应用，利用了我们在前面章节中讨论过的概念。
 
-如果你还没有，请通过向 `application.properties` 文件添加以下内容来启用 GraphiQL 交互式环境。
+如果你还没有，请通过向`application.properties`文件添加以下内容来启用 GraphiQL 交互式环境。
 
 ```
 spring.graphql.graphiql.enabled=true
 ```
 
-启动你的服务并导航到 `http://localhost:8080/graphiql` 的 GraphiQL 交互式环境。尝试各种查询和变更，并验证你的代码端端端端。
+启动你的服务并导航到`http://localhost:8080/graphiql`的 GraphiQL 交互式环境。尝试各种查询和变更，并验证你的代码端端端端。
 
-在随后的章节中，我们将讨论更专门的话题，例如模式设计和 GraphQL 错误。在书后期，我们将涵盖更高级的主题，包括对 GraphQL Java 引擎 `execution` 的深度解析。
+在随后的章节中，我们将讨论更专门的话题，例如模式设计和 GraphQL 错误。在书后期，我们将涵盖更高级的主题，包括对 GraphQL Java 引擎`execution`的深度解析。
 
 # Subscriptions
 
@@ -2797,7 +2780,7 @@ subscription myOrders {
 }
 ```
 
-首先，客户端请求一个 `newOrderCreated` 订阅，然后在 10 秒后接收到第一个响应。
+首先，客户端请求一个`newOrderCreated`订阅，然后在 10 秒后接收到第一个响应。
 
 ```json
 {
@@ -2833,7 +2816,7 @@ subscription myOrders {
 
 让我们使用 Spring for GraphQL 实现订阅。
 
-通过 `https://start.spring.io/` 使用 Spring Initializr 从一个新的 Spring for GraphQL 项目开始，就像我们在引言章节的“你的第一个 Spring for GraphQL 服务”部分所的那样。选择 Spring for GraphQL 作为依赖，并选择 Spring Web 或 Spring Reactive Web 作为依赖。在接下来的示例中，我们将使用 Spring Reactive Web，它包含了 Spring WebFlux。如果你倾向于使用 WebMVC 而非 WebFlux 来使用订阅，请添加 `org.springframework.boot:spring-boot-starter-websocket` 作为依赖，并通过移除 `Mono` 和 `Flux` 来调整示例。
+通过`https://start.spring.io/`使用 Spring Initializr 从一个新的 Spring for GraphQL 项目开始，就像我们在引言章节的“你的第一个 Spring for GraphQL 服务”部分所的那样。选择 Spring for GraphQL 作为依赖，并选择 Spring Web 或 Spring Reactive Web 作为依赖。在接下来的示例中，我们将使用 Spring Reactive Web，它包含了 Spring WebFlux。如果你倾向于使用 WebMVC 而非 WebFlux 来使用订阅，请添加`org.springframework.boot:spring-boot-starter-websocket`作为依赖，并通过移除`Mono`和`Flux`来调整示例。
 
 新模式：
 
@@ -2851,7 +2834,7 @@ type Subscription {
 }
 ```
 
-在控制器中，添加带注解的方法 `hello`。该方法带有 `@SubscriptionMapping` 注解，这会将该 DataFetcher 注册到订阅字段。
+在控制器中，添加带注解的方法`hello`。该方法带有`@SubscriptionMapping`注解，这会将该 DataFetcher 注册到订阅字段。
 
 ```java
 package service;
@@ -2874,7 +2857,7 @@ class HelloController {
 }
 ```
 
-由于订阅的结果是数据流，Reactor 的 `Flux` 是一个完美的抽象。在我们的示例中，我们发布了三次数据：“Hello 0”、“Hello 1”到“Hello 2”，每次都有一秒的延迟。
+由于订阅的结果是数据流，Reactor 的`Flux`是一个完美的抽象。在我们的示例中，我们发布了三次数据：“Hello 0”、“Hello 1”到“Hello 2”，每次都有一秒的延迟。
 
 为了启用订阅，我们必须添加一个新的 Spring 配置属性，设置我们想要暴露订阅的路径。
 
@@ -2888,7 +2871,7 @@ spring.graphql.websocket.path=/graphql
 spring.graphql.graphiql.enabled=true
 ```
 
-让我们测试我们的订阅。启动服务并在 `http://localhost:8080/graphiql` 打开 GraphiQL 环境。
+让我们测试我们的订阅。启动服务并在`http://localhost:8080/graphiql`打开 GraphiQL 环境。
 
 在环境中，执行一个新的订阅。点击播放按钮执行，你应该能看到像截图“Subscription request”所示的响应。
 
@@ -2897,6 +2880,8 @@ subscription myFirstSubscription {
     hello
 }
 ```
+
+
 
 然后我们将看到响应每秒变化一次，从“Hello 0”到“Hello 1”再到“Hello 2”，如截图“Hello 2”所示。
 
@@ -2913,10 +2898,6 @@ subscription myFirstSubscription {
   ]
 }
 ```
-
-
-
-
 
 请双倍检查你是否已经在配置文件中启用了 WebSocket 路径。
 
@@ -2935,15 +2916,15 @@ Spring for GraphQL 负责将传输层的 WebSocket 协议桥接到此 `Publisher
 GraphQL 规范要求订阅请求始终包含**恰一个根字段**，这与查询和变更不同。例如，下面的订阅是无效的，因为它有多个根字段。
 
 ```
-[](#cb150-1)# 无效
-[](#cb150-2)subscription tooManyRoots {
-[](#cb150-3)    newCats {
-[](#cb150-4)        name
-[](#cb150-5)    }
-[](#cb150-6)    newDogs {
-[](#cb150-7)        name
-[](#cb150-8)    }
-[](#cb150-9)}
+# 无效
+subscription tooManyRoots {
+    newCats {
+        name
+    }
+    newDogs {
+        name
+    }
+}
 ```
 
 此外，我们每个请求只能订阅一个订阅。
@@ -2951,15 +2932,15 @@ GraphQL 规范要求订阅请求始终包含**恰一个根字段**，这与查�
 我们执行根字段下方的所有子选择，就像执行查询或变更一样。让我们回到在本章之前的订单示例中。
 
 ```
-[](#cb151-1)subscription myOrders {
-[](#cb151-2)    newOrderCreated {
-[](#cb151-3)        id
-[](#cb151-4)        createdTime
-[](#cb151-5)        customer {
-[](#cb151-6)            name
-[](#cb151-7)        }
-[](#cb151-8)    }
-[](#cb151-9)}
+subscription myOrders {
+    newOrderCreated {
+        id
+        createdTime
+        customer {
+            name
+        }
+    }
+}
 ```
 
 `newOrderCreated` 的 `DataFetcher` 返回一个 `Publisher`。从它发射的每个新事件都会启动针对子选择的普通查询执行，并将事件有效负载作为源对象。
@@ -3017,13 +2998,13 @@ Spring for GraphQL 为我们自动处理 URL。当我们打开 `http://localhost
 GraphQL 请求最重要的元素是查询、操作名称和变量。通过 HTTP 的每个 GraphQL 请求都是 POST，编码为 `application/json`，正体如下：
 
 ```
-[](#cb154-1){
-[](#cb154-2)  "query": "<document>",
-[](#cb154-3)  "variables": {
-[](#cb154-4)    <variables>
-[](#cb154-5)  },
-[](#cb154-6)  "operationName": "<operationName>"
-[](#cb154-7)}
+{
+  "query": "<document>",
+  "variables": {
+    <variables>
+  },
+  "operationName": "<operationName>"
+}
 ```
 
 目标是执行恰一个 GraphQL 操作。HTTP 端点总是相同的，通常以 `/graphql` 结尾。
@@ -3039,19 +3020,15 @@ GraphQL 请求最重要的元素是查询、操作名称和变量。通过 HTTP 
 在 GraphQL Java 级别，GraphQL 请求由 `graphql.ExecutionInput` 实例表示。以下是重要的字段：
 
 ```
-[](#cb155-1)public class ExecutionInput {
-[](#cb155-2)  private final String query;
-[](#cb155-3)  private final String operationName;
-[](#cb155-4)  private final RawVariables rawVariables;
-[](#cb155-5)  // 以及更多字段
-[](#cb155-6)}
+public class ExecutionInput {
+  private final String query;
+  private final String operationName;
+  private final RawVariables rawVariables;
+  // 以及更多字段
+}
 ```
 
 `query` 代表 JSON 对象中的 “query” 键，`operationName` 代表 “operationName” 键。`rawVariables` 代表 JSON 对象中的变量 Map。“raw”一词反映了变量尚未进行转换。我们将在执行章节中讨论变量转换。
-
-
-
-
 
 请注意，传输相关的问题是在 Spring for GraphQL 级别进行管理的。GraphQL Java 的 `ExecutionInput` 没有指定任何传输协议。该类中最重要的字段对应于我们之前看到的请求体中的 JSON 对象。
 
@@ -3097,6 +3074,7 @@ public interface ExecutionResult {
 这种模型的挑战在于，现在分析响应需要两个步骤：
 
 1. 检查 HTTP 状态码
+
 2. 如果状态码是 `200 OK`，则检查响应中的任何 GraphQL 错误
 
 对于具有 REST API 经验的开发者来说，这是一个陷阱。要确定请求是否成功，请记住同时检查 HTTP 状态码和响应的 `errors` 键。
@@ -3169,8 +3147,6 @@ class MyInterceptor implements WebGraphQlInterceptor {
 ```
 
 另一个用例是根据请求头更改执行。在这个例子中，客户端需要发送特殊的测试标志“beta-features”来请求尚未稳定的测试字段。在拦截器中，如果存在此“beta-features”头，我们将其添加到 `GraphQLContext` 中，以便稍后执行时访问此信息。我们将在 DataFetchers 深度章节中更详细介绍 GraphQLContext。
-
-
 
 
 
@@ -3280,7 +3256,9 @@ GraphQL 错误大致分为两类：`request`（请求）错误和 `field`（字�
 请求错误在执行开始之前产生。换句话说，响应不包含 `data` 键。例如，如缺少右大括号 `}` 的语法错误。某些请求错误包括：
 
 - 解析错误，包括 GraphQL 语法
+
 - 文档中的验证错误
+
 - 变量的输入值
 
 例如，此请求是无效的：
@@ -3325,10 +3303,6 @@ query missing {
     doesNotExist
 }
 ```
-
-
-
-
 
 ```json
 {
@@ -3449,15 +3423,16 @@ class PetsController {
 
 我们的示例说明字段错误不会导致整个请求失败，`data` 键是存在的。注意，`errors` 存在当且仅当出现一个或多个字段错误时。如果没有错误，`errors` 条目将不存在。如果响应中的 `data` 条目不存在，则 `errors` 条目必须存在。例如，当存在 `errors` 时，`data` 为 `null`。`data` 键在存在 `errors` 时为 `null`。
 
-
-
-
 此外，Spring for GraphQL 增加了几个实用的错误分类，它们也实现了 `graphql.ErrorClassification` 接口。
 
 - `BAD_REQUEST`
+
 - `UNAUTHORIZED`
+
 - `FORBIDDEN`
+
 - `NOT_FOUND`
+
 - `INTERNAL_ERROR`
 
 如果异常未被解析，默认情况下它将被归类为 `INTERNAL_ERROR`，并带有一个包含类别名称和 `executionId` 的通用消息。你可以通过 `DataFetcherExceptionResolverAdapter` 对此进行自定义，我们将在本章稍后部分讨论。
@@ -3485,6 +3460,8 @@ GraphQL Java 提供的错误分类也用于 Spring for GraphQL。例如，一个
 然而，如果你想自定义异常解析，可以注册 `DataFetcherExceptionResolver`。Spring for GraphQL 使得注册自定义异常解析器变得非常简单，我们将在下一节关于自定义异常解析的章节中演示。
 
 即使你没有显式地将 Spring WebFlux 作为你 GraphQL 服务的依赖，Spring for GraphQL 内部也使用了 `Mono` 等 Reactor 类型。Spring for GraphQL 使用 `reactor-core` 作为依赖。请注意，虽然 Spring for GraphQL 内部使用了 Reactor，但你不需要在你的服务代码中使用 Reactor 类型。如果你对 `Mono` 和 `Flux` 等词不熟悉，可以跳过对 Spring for GraphQL 内部 Reactor 类型的讨论。
+
+
 
 每个注册的异常解析器将一个接一个地调用，直到其中一个返回 GraphQL 错误列表（列表可以为空）。如果异常解析器返回的 `Mono` 空完成且没有发射列表，则异常将保持未解析状态，我们将调用下一个异常解析器。
 
@@ -3526,8 +3503,6 @@ Spring Boot 启动器在实例化 `GraphQlSource` 的过程中会自动检测 `D
 
 创建 `graphql.GraphQLError` 新实例的推荐方法是通过 `graphql.GraphqlErrorBuilder`。请注意名称中略有大小写差异。此构建器比直接实现 `graphql.GraphQLError` 接口要方便得多。如示例所示，使用接收 `DataFetchingEnvironment` 的工厂方法。
 
-
-
 如果你在使用没有配合 Spring for GraphQL 的 GraphQL Java，请注意 GraphQL Java 中的处理器是不同的。GraphQL Java 使用 `SimpleDataFetcherExceptionHandler` 实现。该处理器会创建一个分类为 `ErrorType.DataFetchingException` 的 `ExceptionWhileDataFetching` 错误。
 
 ## 使用 `DataFetcherResult` 返回数据和错误
@@ -3536,7 +3511,7 @@ Spring Boot 启动器在实例化 `GraphQlSource` 的过程中会自动检测 `D
 
 例如，我们有一组宠物，但在执行期间并非所有宠物都可用。让我们来看一个简单的 Pet 模式（Schema）。
 
-```
+```graphql
 type Query {
     myPets: [Pet]
 }
@@ -3609,10 +3584,11 @@ GraphQL 与我们可能用于获取查询数据的数据库模式或 REST API �
 
 在 GraphQL API 中，只有一个 URL 和一个模式，该模式会随着增量变化而增长。例如，我们可能只从一个简单的 `User` 开始。
 
-```
+```graphql
 type Query {
     user(id: ID!): User
 }
+
 type User {
     id: ID
     name: String
@@ -3621,15 +3597,17 @@ type User {
 
 然后我们可能会更改模式以包含用户的地址信息，如下：
 
-```
+```graphql
 type Query {
     user(id: ID!): User
 }
+
 type User {
     id: ID
     name: String
     address: Address
 }
+
 type Address {
     street: String
     city: String
@@ -3639,14 +3617,16 @@ type Address {
 
 这种模式更改使我们的 API 更加丰富，客户端可以通过在查询选择字段中包含地址来决定是否使用新功能。当更改属于破坏性变更（breaking change）时，演进模式会更具挑战性。例如，如果我们认为当前的 `name: String` 不够用，我们就会引入一个更好的 `UserName` 对象，并包含 `legalName` 和 `preferredName` 等字段。
 
-```
+```graphql
 type Query {
     user(id: ID!): User
 }
+
 type User {
     id: ID
     name: UserName
 }
+
 type UserName {
     legalName: String
     preferredName: String
@@ -3655,7 +3635,7 @@ type UserName {
 
 然而，这种模式更改会破坏所有正在使用 `name` 的现有客户端，如下查询所示：
 
-```query
+```graphql
 query broken {
     user(id: "123") {
         name
@@ -3674,15 +3654,17 @@ query broken {
 
 让我们在 `User` 示例中演示如何管理这种破坏性变更。首先，我们为 `userName` 添加一个新字段，同时保留现有的 `User` 字段。
 
-```
+```graphql
 type Query {
     user(id: ID!): User
 }
+
 type User {
     id: ID
     name: String
     userName: UserName
 }
+
 type UserName {
     legalName: String
     preferredName: String
@@ -3691,23 +3673,23 @@ type UserName {
 
 然后我们使用内置的 `@deprecated` 指令弃用旧字段。注意，指令出现在其修饰的声明之后（例如 `name`）。
 
-```
+```graphql
 type Query {
     user(id: ID!): User
 }
+
 type User {
     id: ID
     name: String
     @deprecated(reason: "Use richer alternative `userName`.")
     userName: UserName
 }
+
 type UserName {
     legalName: String
     preferredName: String
 }
 ```
-
-
 
 下一步具有非常具体的针对性。根据客户端 API 的类型以及任何服务保证，我们可能会监控其使用情况，并直到无人使用该字段。或者我们可能简单地给所有客户端留一段迁移时间（例如 6 个月），或者将两者结合。
 
@@ -3860,7 +3842,7 @@ type Query {
 }
 ```
 
-对比
+对比：
 
 ```graphql
 type Query {
@@ -3875,7 +3857,11 @@ type Query {
 
 Schema 设计中最常被误解的话题之一是字段的可空性。在开始学习 GraphQL 时，字段默认是可空的，这让很多人感到困惑，导致学者将所有字段都设为不可空。
 
-在 GraphQL 中，几乎所有字段都应该是可空的，以便结果返回更多数据。让我们通过示例详细查看 GraphQL 如何处理 `null` 数据。考虑这种情况：一个字段被标记为不可空，但在执行期间数据为 `null`。Schema 保证了字段永远不会为空，因此 GraphQL 无法返回 `null`。相反，在可能的情况下会将父节点设置为 `null`。如果原始字段的父节点也是不可空的，那么在可能的情况下将父节点的父节点设置为 `null`，以此此类推。错误通过父字段的层级结构传递，直到某个字段可以被设置为 `null`。
+
+
+在 GraphQL 中，几乎所有字段都应该是可空的，以便结果返回更多数据。让我们通过示例详细查看 GraphQL 如何处理 `null` 数据。
+
+考虑这种情况：一个字段被标记为不可空，但在执行期间数据为 `null`。Schema 保证了字段永远不会为空，因此 GraphQL 无法返回 `null`。相反，在可能的情况下会将父节点设置为 `null`。如果原始字段的父节点也是不可空的，那么在可能的情况下将父节点的父节点设置为 `null`，以此类推。错误通过父字段的层级结构传递，直到某个字段可以被设置为 `null`。
 
 让我们通过一个具体的示例逐步演示 `null` 结果的处理：
 
@@ -3897,7 +3883,7 @@ type C {
 }
 ```
 
-如果字段 `d` 在执行此查询时为 `null`，
+如果字段 `d` 在执行此查询时为 `null`：
 
 ```graphql
 query myQuery {
@@ -3916,7 +3902,7 @@ query myQuery {
 ```json
 {
   "data": {
-    "a" : {
+    "a": {
       "b": null
     }
   }
@@ -3925,26 +3911,23 @@ query myQuery {
 
 `d` 是 `null`，但标记为不可空。因此，我们尝试将父节点 `c` 设置为 `null`。但 `c` 也是不可空的，因此我们尝试并成功将 `b` 设置为 `null`。
 
-如果我们修改 Schema 使字段 `b: B!` 也为空，我们将得到如下结果。
+如果我们修改 Schema，使字段 `b: B!` 也为空，我们将得到如下结果：
 
 ```json
 {
   "data": {
-    "a" : null
+    "a": null
   }
 }
 ```
 
-最后，如果我们将字段 `a` 改为 `a: A!`，那么我们将得到所有都被设置为 `null` 的结果。
+最后，如果我们将字段 `a` 改为 `a: A!`，那么我们将得到所有都被设置为 `null` 的结果：
 
 ```json
 {
   "data": null
 }
 ```
-
-
-
 
 如果错误一直向上传递，我们将所有内容都设置为 `null`，甚至会丢失其他根字段的结果。让我们来看一个更现实的例子。
 
@@ -3978,7 +3961,7 @@ query petAndHuman {
 }
 ```
 
-如果 `pet` 字段加载失败，但 `human` 字段加载成功，我们最终仍然无法获得数据。
+如果 `pet` 字段加载失败，但 `human` 字段加载成功，我们最终仍然无法获得数据：
 
 ```json
 {
@@ -3988,7 +3971,9 @@ query petAndHuman {
 
 这是因为我们把 `pet` 标记为非空，错误会向上传播并抹除所有结果。
 
-现在既然我们已经理解了 GraphQL 如何处理非空，我们可以重新表述将一个字段声明为非空的意义是：“一个非空字段至关重要，以至于没有它，所有其他字段都意义不大”。
+现在既然我们已经理解了 GraphQL 如何处理非空，我们可以重新表述将一个字段声明为非空的意义：
+
+> 一个非空字段至关重要，以至于没有它，所有其他字段都意义不大。
 
 最基本的例子是 `id` 字段。通常，如果 `id` 的获取失败，我们就无法保证其他任何事情，因此应该将其设为非空。
 
@@ -4013,7 +3998,7 @@ type User {
 }
 ```
 
-以这种方式思考非空性一个有趣的结论是：根字段应该总是可空的。
+以这种方式思考非空性，一个有趣的结论是：根字段应该总是可空的。
 
 关于可空性的一个常见错误是基于当前的实现进行争论。例如：
 
@@ -4033,7 +4018,9 @@ type Customer {
 }
 ```
 
-也许这个 Schema 看起来很好，因为我们将所有当前订单都存储在一个数据库中，如果我们能加载订单，那么也会同时加载客户。但现在想象一下，我们将来可能会更改架构，决定引入订单服务和独立的客户服务。突然我们面临了这样一种情况：可以加载订单但无法加载客户，导致错误向上传播时整个 `Order` 变为 `null`。
+也许这个 Schema 看起来很好，因为我们将所有当前订单都存储在一个数据库中。如果我们能加载订单，那么也会同时加载客户。
+
+但现在想象一下，我们将来可能会更改架构，决定引入订单服务和独立的客户服务。突然我们面临了这样一种情况：可以加载订单但无法加载客户，导致错误向上传播时整个 `Order` 变为 `null`。
 
 如果我们再次从“哪些字段是至关重要的”角度来看 `customer`，就会发现非空也不是一个好的选择。其他的订单数据（我们在示例中未显示的）即使在无法加载客户时可能仍然具有价值。
 
@@ -4049,13 +4036,13 @@ type Query {
 
 总结一下关于非空字段的建议：
 
-*   根字段始终是可空的
-*   如 `id` 或 `key` 等关键字段是非空的
-*   列表内部的元素是非空的
-*   所有其他字段都应该是可空的
-*   可空字段和参数：默认情况下应该是可空的
+- 根字段始终是可空的。
+- 如 `id` 或 `key` 等关键字段是非空的。
+- 列表内部的元素是非空的。
+- 所有其他字段都应该是可空的。
+- 可空字段和参数默认情况下应该是可空的。
 
-非空字段至关重要，以至于没有它，所有其他字段都意义不大。用户。分成两个输入要好得多。
+非空字段至关重要，以至于没有它，所有其他字段都意义不大。用户分成两个输入要好得多。
 
 ```graphql
 type Query {
@@ -4101,19 +4088,17 @@ input OrderInput {
 
 ## 使用 Relay 游标连接规范进行列表分页
 
-GraphQL 最常见的分页方法来自 [Relay 游标连接规范](https://relay.dev/graphql/connections.htm)，并已成为 GraphQL Schema 处理大型列表的事实标准。Relay 连接规范是“基于游标的分页”，这意味着请求是相对于“游标”的整个列表的切片。该游标标识了我们从整个列表开始切片的位置。然后我们选取另一个游标并再次进行切片。我们可以向后或向前的切片。注意的是，我们不能跳过任何元素，必须请求相对于游标的新的切片。
+GraphQL 最常见的分页方法来自 [Relay 游标连接规范](https://relay.dev/graphql/connections.htm)，并已成为 GraphQL Schema 处理大型列表的事实标准。
+
+Relay 连接规范是“基于游标的分页”，这意味着请求是相对于“游标”的整个列表的切片。该游标标识了我们从整个列表开始切片的位置。然后我们选取另一个游标并再次进行切片。我们可以向后或向前切片。注意的是，我们不能跳过任何元素，必须请求相对于游标的新切片。
 
 ### Schema
 
 这是一个实现 Relay 连接规范的 Pet Schema 示例。在遍历示例查询之后，我们将进入该规范的更多细节。
 
-
-
-
-
-```
+```graphql
 type Query {
-    pets(first: Int, after: String, last: Int, before: String): 
+    pets(first: Int, after: String, last: Int, before: String):
         PetConnection
 }
 
@@ -4142,9 +4127,9 @@ type Pet {
 
 ### 查询与响应
 
-这是如何使用实现 Relay 连接规范的架构来查询前 2 只宠物。
+这是如何使用实现 Relay 连接规范的架构来查询前 2 只宠物：
 
-```
+```graphql
 query myPets {
     pets(first: 2) {
         edges {
@@ -4167,25 +4152,26 @@ query myPets {
 
 查询的下一层是我们的连接字段，`edges` 和 `pageInfo`。
 
-边边（edge）是对我们想要迭代的实际实体的封装，在本例中，是一个代表 `Pet` 的节点（node）。查询中的 `name` 是 `Pet` 的名称字段。边边还提供了如 `cursor` 等元数据。
+边（edge）是对我们想要迭代的实际实体的封装，在本例中，是一个代表 `Pet` 的节点（node）。查询中的 `name` 是 `Pet` 的名称字段。边还提供了如 `cursor` 等元数据。
 
 在 `edges` 同级层上，我们还查询了 `pageInfo` 以获取有关结果的通用信息，以便我们可以在列表中向前或向后移动。
 
-查询的响应示例如下。
+查询的响应示例如下：
 
-```
+```json
 {
   "pets": {
     "edges": [
       {
-      "cursor": "ABCD123",
-      "node": {
-        "name": "Luna"
+        "cursor": "ABCD123",
+        "node": {
+          "name": "Luna"
+        }
       },
       {
-      "cursor": "XYZ789",
-      "node": {
-        "name": "Skipper"
+        "cursor": "XYZ789",
+        "node": {
+          "name": "Skipper"
         }
       }
     ],
@@ -4205,7 +4191,7 @@ query myPets {
 
 若要请求“Skipper”（游标为“XYZ789”）之后的后 10 只宠物，我们需要这样查询：
 
-```
+```graphql
 query morePets {
     pets(first: 10, after: "XYZ789") {
         edges {
@@ -4226,7 +4212,7 @@ query morePets {
 
 我们也可以向后移动，请求“Skipper”（游标为“XYZ789”）之前的一只宠物：
 
-```
+```graphql
 query previousPet {
     pets(last: 1, before: "XYZ789") {
         edges {
@@ -4249,11 +4235,11 @@ query previousPet {
 
 我们之前已经介绍了如何作为客户端使用分页。现在，让我们仔细查看如何在架构中对分页进行建模。
 
-#### 连接 (Connection)
+#### 连接（Connection）
 
 连接代表一页数据（`edges`），并带有启用进一步页面请求的额外元数据（`pageInfo`）。分页意味着我们不是返回列表，而是返回一个名为 `<Entity>Connection` 的连接对象，例如我们示例中的 `PetConnection`。
 
-```
+```graphql
 type Query {
     pets(
         first: Int,
@@ -4264,13 +4250,13 @@ type Query {
 }
 ```
 
-正如我们在上一个查询所示，`first` 和 `last` 的类型为 `Int`，因为它们代表我们想要请求的对象数量。`after` 和 `before` 的类型为 `String`，因为它们是标识元素列表中位置的游标。
+正如我们在上一个查询中所示，`first` 和 `last` 的类型为 `Int`，因为它们代表我们想要请求的对象数量。`after` 和 `before` 的类型为 `String`，因为它们是标识元素列表中位置的游标。
 
 注意，如果你不想支持双方向的分页，可以选择只支持 `first/after` 或 `last/before`。
 
 你还可以添加更多参数来过滤元素，例如使用 `namePattern` 来按名称过滤宠物：
 
-```
+```graphql
 type Query {
     pets(
         first: Int,
@@ -4282,35 +4268,35 @@ type Query {
 }
 ```
 
-`<Entity>Connection` 类型必须至少包含 `edges` 和 `pageInfo` 字段。
+`<Entity>Connection` 类型必须至少包含 `edges` 和 `pageInfo` 字段：
 
-```
+```graphql
 type PetConnection {
     edges: [PetEdge]
     pageInfo: PageInfo!
 }
 ```
 
-边（edge）是一个包含元素数据和额外元数据的封装。边类型命名为 `<Entity>Edge`。在示例中，我们感兴趣的是 `Pet` 的页面，因此将此类型称为 `PetEdge`。分页元数据始终称为 `PageInfo`， 并在所有边之间共享。
+边（edge）是一个包含元素数据和额外元数据的封装。边类型命名为 `<Entity>Edge`。在示例中，我们感兴趣的是 `Pet` 的页面，因此将此类型称为 `PetEdge`。分页元数据始终称为 `PageInfo`，并在所有边之间共享。
 
 我们可以向连接类型添加更多字段。例如，连接类型可以包含一个 `totalCount` 字段。但请注意，添加 `totalCount` 可能会出现问题，因为当底层架构发生变化时可能很难支持。
 
-#### 边 (Edges)
+#### 边（Edges）
 
-连接的 `edges` 代表一页数据。边是一个包含数据元素（例如 `Pet`）和元数据的封装对象。它的命名格式为 `<Entity>Edge`。它必须包含两个字段：当前元素的 `cursor` 和命名为 `node` 的实际元素。可以性添加额外的字段。
+连接的 `edges` 代表一页数据。边是一个包含数据元素（例如 `Pet`）和元数据的封装对象。它的命名格式为 `<Entity>Edge`。它必须包含两个字段：当前元素的 `cursor` 和命名为 `node` 的实际元素。可以添加额外的字段。
 
-```
+```graphql
 type PetEdge {
     cursor: String!
     node: Pet!
 }
 ```
 
-#### 页信息 (PageInfo)
+#### 页信息（PageInfo）
 
 `PageInfo` 类型包含查询中请求的所有 `edges` 的分页元数据。它必须包含以下字段：
 
-```
+```graphql
 type PageInfo {
     startCursor: String
     endCursor: String
@@ -4325,9 +4311,9 @@ type PageInfo {
 
 你可能在之前的示例中注意到，我们在 `node` 字段中的每个元素都有一个 `cursor` 字段，同时在 `PageInfo` 类型中也有 `cursor` 信息的总结。如果你只对整个页面的游标信息感兴趣，而不是每个单独元素，可以使用快捷方式来简化查询。
 
-你可以在连接类型上直接添加一个 `nodes` 字段。
+你可以在连接类型上直接添加一个 `nodes` 字段：
 
-```
+```graphql
 type PetConnection {
     edges: [PetEdge]
     nodes: [Pet] # 可选快捷方式
@@ -4335,76 +4321,75 @@ type PetConnection {
 }
 ```
 
-
-
-
-
 这允许我们直接通过 `nodes` 查询宠物数据，而不是通过 `edges`。我们获取的是页面的 `startCursor` 和 `endCursor`，而不是像我们在初始分页响应示例中那样为每只宠物获取 `cursor`。
 
-```
-[](#cb220-1)query shortcut {
-[](#cb220-2)    pets(first: 2) {
-[](#cb220-3)        nodes {
-[](#cb220-4)            name
-[](#cb220-5)        }
-[](#cb220-6)        pageInfo {
-[](#cb220-7)            startCursor
-[](#cb220-8)            endCursor
-[](#cb220-9)            hasNextPage
-[](#cb220-10)            hasPreviousPage
-[](#cb220-11)        }
-[](#cb220-12)    }
-[](#cb220-13)}
+```graphql
+query shortcut {
+    pets(first: 2) {
+        nodes {
+            name
+        }
+        pageInfo {
+            startCursor
+            endCursor
+            hasNextPage
+            hasPreviousPage
+        }
+    }
+}
 ```
 
 将上述查询与本节中的初始分页示例进行比较，后者之所以更长是因为它通过 `edges` 字段使用 `nodes` 查询宠物数据。
 
-```
-[](#cb221-1)query myPets {
-[](#cb221-2)    pets(first: 2) {
-[](#cb221-3)        edges {
-[](#cb221-4)            cursor
-[](#cb221-5)            node {
-[](#cb221-6)                name
-[](#cb221-7)            }
-[](#cb221-8)        }
-[](#cb221-9)        pageInfo {
-[](#cb221-10)            startCursor
-[](#cb221-11)            endCursor
-[](#cb221-12)            hasNextPage
-[](#cb221-13)            hasPreviousPage
-[](#cb221-14)        }
-[](#cb221-15)    }
-[](#cb221-16)}
+
+
+
+```graphql
+query myPets {
+    pets(first: 2) {
+        edges {
+            cursor
+            node {
+                name
+            }
+        }
+        pageInfo {
+            startCursor
+            endCursor
+            hasNextPage
+            hasPreviousPage
+        }
+    }
+}
 ```
 
 ## 预期错误
 
-在 GraphQL 错误章节 中，我们讨论了出现在 GraphQL 响应中的错误，这些错误通常源于不可预的问题（例如数据库无法访问或 Bug），但它们并不适用于 `expected`（预期内）错误。预期错误是客户端想要特殊处理的情况。在本节中，我们将演示管理预期错误的最佳实践。
+在 GraphQL 错误章节中，我们讨论了出现在 GraphQL 响应中的错误。这些错误通常源于不可预的问题（例如数据库无法访问或 Bug），但它们并不适用于 `expected`（预期内）错误。预期错误是客户端想要特殊处理的情况。在本节中，我们将演示管理预期错误的最佳实践。
 
 一些典型的预期错误示例：
 
-*   支付详情无效
-*   新用户尝试使用已存在的电子邮件地址注册
-*   某个臭名不可靠的外部系统不可用
+- 支付详情无效
+- 新用户尝试使用已存在的电子邮件地址注册
+- 某个臭名不可靠的外部系统不可用
 
 如果客户端想要对这些情况做出反应，GraphQL 错误并不是理想选择，因为它们存在于正常响应数据之外且没有类型。
 
-例如，一个支付详情错误的错误可能如下所示。
+例如，一个支付详情错误的错误可能如下所示：
 
-```
-[](#cb222-1){
-[](#cb222-2)  "data": {
-[](#cb222-3)     "makePayment": null
-[](#cb222-4)  },
-[](#cb222-5)  "errors": {
-[    "message": "Payment failed",
-[](#cb222-7)    "extensions": {
-[](#cb222-8)      "classification": "PAYMENT_ERROR",
-[](#cb222-9)      "details": "Invalid credit card"
-[](#cb222-10)    }
-[](#cb222-11)  }]
-[](#cb222-12)}
+```json
+{
+  "data": {
+    "makePayment": null
+  },
+  "errors": [{
+    "message": "Payment failed",
+    "extensions": {
+      "classification": "PAYMENT_ERROR",
+      "details": "Invalid credit card"
+    }
+  }]
+}
 ```
 
 客户端现在必须解析 `message`，并且可能还要查看 `extensions`，而后者是无类型的且可以包含任何数据。
@@ -4413,51 +4398,46 @@ type PetConnection {
 
 GraphQL 错误的这些局限性导致了在 Schema 中建模预期错误的想法。这使其成为类型化 API 合约的一部分，并允许客户端更安全地处理它们。我们必须付出的代价是稍微复杂的 Schema，正如我们在下一个示例中所示。
 
-示例：
+### 示例
 
-```
-[](#cb223-1)type Mutation {
-[](#cb223-2)    makePayment(input: MakePaymentInput!): MakePaymentPayload
-[](#cb223-3)}
+```graphql
+type Mutation {
+    makePayment(input: MakePaymentInput!): MakePaymentPayload
+}
 
-[](#cb223-4)
 type MakePaymentPayload {
-[](#cb223-6)    payment: Payment
-[](#cb223-7)    error: MakePaymentError
-[](#cb223-8)}
+    payment: Payment
+    error: MakePaymentError
+}
 
-[](#cb223-9)
 enum MakePaymentError {
-[](#cb223-11)    CC_INVALID,
-[](#cb223-12)    PAYMENT_SYSTEM_UNAVAILABLE
-[](#cb223-13)}
+    CC_INVALID
+    PAYMENT_SYSTEM_UNAVAILABLE
+}
 ```
 
 这把支付错误引入了响应类型中，它出现在 GraphQL 响应的 `data` 部分。注意这些错误不再出现在 GraphQL 响应的 `errors` 部分中。
 
-```
-[](#cb224-1){
-[](#cb224-2)  "data": {
-[](#cb224-3)    "makePayment": {
-[](#cb224-4)      "payment": null,
-[](#cb224-5)      "error": "CC_INVALID"
+```json
+{
+  "data": {
+    "makePayment": {
+      "payment": null,
+      "error": "CC_INVALID"
     }
-[](#cb224-7)  }
+  }
+}
 ```
 
 对于变更，`Payload` 类型是放置错误的自然位置。对于查询，我们可以使用 `union`。
 
+```graphql
+type Query {
+    pet(id: ID!): PetLookup
+}
+
+union PetLookup = Pet | MakePaymentError
 ```
-[](#cb225-1)type Query {
-[](#cb225-2)    pet(id: ID!): PetLookup
-[](#cb225-3)}
-
-[](#cb225-4)union PetLookup = Pet | MakePaymentError
-```
-
-
-
-
 
 ```java
 package myservice.service;
@@ -4521,15 +4501,15 @@ DataFetcher df = (env) -> {
 }
 ```
 
-### 本地上下文 (Local context)
+### 本地上下文（Local context）
 
-我们也可以设置本地上下文，它只为子 DataFetchers 提供数据，而不是更改全局上下文。
+我们也可以设置本地上下文，它只为子 `DataFetcher` 提供数据，而不是更改全局上下文。
 
-一个 GraphQL 请求是一个字段树，每个字段都有一个关联的 `DataFetcher`。子 DataFetchers 只有在当前 `DataFetcher` 完成后才会被调用。我们将在[Execution]章节中详细详细讨论字段树的概念。因此，我们可以确保设置在本地上下文中信息仅对子 DataFetchers 可用。
+一个 GraphQL 请求是一个字段树，每个字段都有一个关联的 `DataFetcher`。子 `DataFetcher` 只有在当前 `DataFetcher` 完成后才会被调用。我们将在 [Execution] 章节中详细讨论字段树的概念。因此，我们可以确保设置在本地上下文中的信息仅对子 `DataFetcher` 可用。
 
-我们可以通过返回一个新的 `DataFetcherResult` 来设置本地上下文，其中 `localContext` 不为空。我们在[Errors]章节中讨论过如何使用 `DataFetcherResult` 返回数据和错误。现在我们将展示如何使用它来设置本地上下文。
+我们可以通过返回一个新的 `DataFetcherResult` 来设置本地上下文，其中 `localContext` 不为空。我们在 [Errors] 章节中讨论过如何使用 `DataFetcherResult` 返回数据和错误。现在我们将展示如何使用它来设置本地上下文。
 
-例如，我们有关于客户及其订单的如下模式。
+例如，我们有关于客户及其订单的如下模式：
 
 ```graphql
 type Query {
@@ -4564,10 +4544,10 @@ query customerDetails {
 }
 ```
 
-或者
+或者：
 
 ```graphql
-query orderDetails { 
+query orderDetails {
     order {
         customer {
             contact {
@@ -4578,20 +4558,23 @@ query orderDetails {
 }
 ```
 
-添加以下 Java 类。
+添加以下 Java 类：
 
 ```java
 package myservice.service;
+
 record Order(String id, String customerId) {}
 ```
 
 ```java
 package myservice.service;
+
 record Customer(String id, String contactId) {}
 ```
 
 ```java
 package myservice.service;
+
 record Person(String name) {}
 ```
 
@@ -4643,7 +4626,7 @@ record OrderController(OrderService orderService,
   @SchemaMapping
   Person contact(Customer customer, DataFetchingEnvironment env) {
     GraphQLContext localContext = env.getLocalContext();
-    if (localContext != null 
+    if (localContext != null
       && localContext.get("personForContact") instanceof Person) {
       return localContext.get("personForContact");
     }
@@ -4657,14 +4640,11 @@ record OrderController(OrderService orderService,
 }
 ```
 
-
-
-
 在这个示例中，`Person` 并不保证一定会在本地上下文中设置。如果查询仅针对 `customer` 详情而没有 `order`，则本地上下文中将没有 `personForContact`。由于我们无法确定 `personForContact` 是否在本地上下文中，我们必须通过 `DataFetchingEnvironment` 访问本地的 `GraphQLContext`，然后检查 `personForContact` 键下是否设置了 `Person`。
 
 如果你确定本地上下文中始终包含某个特定键，可以向模式映射方法传递一个参数，并使用 `@LocalContextValue` 进行注解。在示例中，我们无法使用此注解，因为每当 `personForContact` 未设置时都会抛出运行时异常。
 
-在纯 GraphQL Java 中，本地上下文也是通过 `Query.order` DataFetcher 中的 `DataFetcherResult` 设置的。如果使用不带 Spring for GraphQL 的 GraphQL Java，插入到本地上下文中的对象可以是任何类型，而不必是 `GraphQLContext` 的实例。
+在纯 GraphQL Java 中，本地上下文也是通过 `Query.order` `DataFetcher` 中的 `DataFetcherResult` 设置的。如果使用不带 Spring for GraphQL 的 GraphQL Java，插入到本地上下文中的对象可以是任何类型，而不必是 `GraphQLContext` 的实例。
 
 ```java
 // DataFetcher for Query.order
@@ -4680,7 +4660,10 @@ DataFetcher<DataFetcherResult<Order>> orderDf = (env) -> {
 };
 ```
 
-然后 `Customer.contact` 的 DataFetcher 可以利用本地上下文中预加载的 `Person`（如果可用）。如果 `Person` 不可用，则将向 `Person` 服务发送请求。
+然后 `Customer.contact` 的 `DataFetcher` 可以利用本地上下文中预加载的 `Person`（如果可用）。如果 `Person` 不可用，则将向 `Person` 服务发送请求。
+
+
+
 
 ```java
 // DataFetcher for Customer.contact
@@ -4695,19 +4678,19 @@ DataFetcher<Person> contactDf = (env) -> {
 };
 ```
 
-## DataFetcher 实现模式
+## `DataFetcher` 实现模式
 
-在实现 DataFetcher 时，有几点需要考虑：
+在实现 `DataFetcher` 时，有几点需要考虑：
 
-* 它是否涉及 I/O？（例如，对另一个服务的 `HTTP` 调用）
-* 它是否是计算密集型的？
-* 它 应该是响应式的（reactive）还是不是？
+- 它是否涉及 I/O？（例如，对另一个服务的 `HTTP` 调用）
+- 它是否是计算密集型的？
+- 它应该是响应式的（reactive）还是不是？
 
-我们将讨论这三种模式以及何时使用它们。由于接下来的几个示例演示了 DataFetcher 模式，我们将展示代码片段而不是完整的 Spring for GraphQL 控制器。
+我们将讨论这三种模式以及何时使用它们。由于接下来的几个示例演示了 `DataFetcher` 模式，我们将展示代码片段而不是完整的 Spring for GraphQL 控制器。
 
-### 非响应式 DataFetcher
+### 非响应式 `DataFetcher`
 
-非响应式的 DataFetcher 可以包含阻塞的 I/O 或计算工作。无论工作的类型如何，其结构都是相同的。
+非响应式的 `DataFetcher` 可以包含阻塞的 I/O 或计算工作。无论工作的类型如何，其结构都是相同的。
 
 ```java
 @Controller
@@ -4719,7 +4702,7 @@ record ThingController(DoSomeThing service) {
 }
 ```
 
-或者在纯 GraphQL Java 中实现相同的 DataFetcher：
+或者在纯 GraphQL Java 中实现相同的 `DataFetcher`：
 
 ```java
 DoSomeThing service;
@@ -4734,7 +4717,7 @@ DataFetcher<MyType> myField = (env) -> {
 
 ### 封装阻塞 I/O
 
-如果 DataFetcher 涉及阻塞 I/O，我们可以将阻塞调用调度到另一个线程。
+如果 `DataFetcher` 涉及阻塞 I/O，我们可以将阻塞调用调度到另一个线程。
 
 在纯 GraphQL Java 中，它看起来像这样：
 
@@ -4753,7 +4736,7 @@ DataFetcher<CompletableFuture<MyType>> df = (env) -> {
 
 ### 响应式 I/O
 
-响应式 DataFetcher 通常涉及使用库如 `WebClient`。代价是代码不再像“普通”Java 代码那样易于阅读、编写和调试。
+响应式 `DataFetcher` 通常涉及使用库如 `WebClient`。代价是代码不再像“普通”Java 代码那样易于阅读、编写和调试。
 
 ```java
 ReactiveClient client;
@@ -4791,24 +4774,21 @@ DataFetcher<CompletableFuture<MyType>> df = (env) -> {
 };
 ```
 
-这个 DataFetcher 返回一个 `CompletableFuture`，但它实际上通过 `RestTemplate` HTTP 客户端执行了一个阻塞调用。主要的权衡是在扩展性或复杂的代码之间。在负载下，响应式服务比非响应式服务更稳定、更可预测。如果你将运行一个需要非常稳定的高负载服务，我们的建议是响应式的。
-
-
-
+这个 `DataFetcher` 返回一个 `CompletableFuture`，但它实际上通过 `RestTemplate` HTTP 客户端执行了一个阻塞调用。主要的权衡是在扩展性或复杂的代码之间。在负载下，响应式服务比非响应式服务更稳定、更可预测。如果你将运行一个需要非常稳定的高负载服务，我们的建议是响应式的。
 
 # Spring for GraphQL 的 Reactor 支持
 
-Spring WebFlux 是一个基于 [Reactor](https://projectreactor.io/docs/core/release/reference/index.html#intro-reactive) 的异步非阻塞框架。你可以结合 Spring WebFlux 和 Spring for GraphQL 来构建 Reactor DataFetchers。
+Spring WebFlux 是一个基于 [Reactor](https://projectreactor.io/docs/core/release/reference/index.html#intro-reactive) 的异步非阻塞框架。你可以结合 Spring WebFlux 和 Spring for GraphQL 来构建 Reactor `DataFetcher`。
 
-Spring for GraphQL 支持将 Reactor 类型 `Mono` 和 `Flux` 作为返回值，这使得能够编写响应式的 DataFetchers。如果 `Mono` 和 `Flux` 对你来说是全新的，请参阅 [Reactor 文档](https://projectreactor.io/docs/core/release/reference/index.html#core-features)。
+Spring for GraphQL 支持将 Reactor 类型 `Mono` 和 `Flux` 作为返回值，这使得能够编写响应式的 `DataFetcher`。如果 `Mono` 和 `Flux` 对你来说是全新的，请参阅 [Reactor 文档](https://projectreactor.io/docs/core/release/reference/index.html#core-features)。
 
-我们建议在 Spring for GraphQL 中使用 Reactor 类型 `Mono` 和 `Flux` 而不是 Java 的 `CompletableFuture`，以便利用 Reactor 上上下文（context）。不过，仍然返回 `CompletableFuture` 值。
+我们建议在 Spring for GraphQL 中使用 Reactor 类型 `Mono` 和 `Flux` 而不是 Java 的 `CompletableFuture`，以便利用 Reactor 上下文（context）。不过，仍然返回 `CompletableFuture` 值。
 
-要使用 Spring WebFlux，请包含 `org.springframework.boot:spring-boot-starter-webflux` 依赖项。我们之前在构建 GraphQL 服务章节 中已经介绍过如何使用 Spring WebFlux。
+要使用 Spring WebFlux，请包含 `org.springframework.boot:spring-boot-starter-webflux` 依赖项。我们之前在构建 GraphQL 服务章节中已经介绍过如何使用 Spring WebFlux。
 
-使用 Reactor 不需要额外的代码或配置。只需编写一个返回 Reactor  DataFetcher 即可。例如：
+使用 Reactor 不需要额外的代码或配置。只需编写一个返回 Reactor 类型的 `DataFetcher` 即可。例如：
 
-```
+```java
 @SchemaMapping(type = "Foo", field = "bar")
 Mono<String> bar() {
   ...
@@ -4820,13 +4800,13 @@ Flux<String> bar() {
 }
 ```
 
-要查看更多返回 Reactor 类型的 DataFetcher 示例，请参见构建 GraphQL 服务章节中的示例。
+要查看更多返回 Reactor 类型的 `DataFetcher` 示例，请参见构建 GraphQL 服务章节中的示例。
 
-在使用 GraphQL Java 使用 Reactor 时的一个挑战是，GraphQL Java 本身是基于 `CompletableFuture` 的。Spring for GraphQL 管理 Reactor 类型与 `CompletableFuture` 之间的转换。为了防止在与 `CompletableFuture` 之间转换时丢失 [Reactor Context](https://projectreactor.io/docs/core/release/reference/#context)，Spring for GraphQL 在不同的 DataFetcher 调用之间保存并恢复 Reactor 上下。
+在使用 GraphQL Java 使用 Reactor 时的一个挑战是，GraphQL Java 本身是基于 `CompletableFuture` 的。Spring for GraphQL 管理 Reactor 类型与 `CompletableFuture` 之间的转换。为了防止在与 `CompletableFuture` 之间转换时丢失 [Reactor Context](https://projectreactor.io/docs/core/release/reference/#context)，Spring for GraphQL 在不同的 `DataFetcher` 调用之间保存并恢复 Reactor 上下文。
 
-例如，如果我们想通过 Reactor 上下传递日志前缀：
+例如，如果我们想通过 Reactor 上下文传递日志前缀：
 
-```
+```java
 package myservice.service;
 
 import org.springframework.graphql.server.WebGraphQlInterceptor;
@@ -4851,9 +4831,9 @@ class WebInterceptor implements WebGraphQlInterceptor {
 
 关于 `WebGraphQlInterceptor` 的更多细节，请参阅请求章节中的拦截请求部分。
 
-每个 DataFetcher 以及 DataFetcher 调用的任何其他代码都可以访问该前缀。
+每个 `DataFetcher` 以及 `DataFetcher` 调用的任何其他代码都可以访问该前缀。
 
-```
+```java
 @QueryMapping
 Mono<String> foo() {
   return Mono.deferContextual(contextView -> {
@@ -4863,7 +4843,7 @@ Mono<String> foo() {
 }
 ```
 
-在本章中我们涵盖了关于 DataFetcher 的更多高级细节，包括如何使用全局和局部上下文以及响应式模式。我们还讨论了如何在 Spring for GraphQL 中使用 Reactor 类型。
+在本章中我们涵盖了关于 `DataFetcher` 的更多高级细节，包括如何使用全局和局部上下文以及响应式模式。我们还讨论了如何在 Spring for GraphQL 中使用 Reactor 类型。
 
 # 指令（Directives）
 
@@ -4889,16 +4869,12 @@ GraphQL 规范将 `@deprecated` 定义为模式指令：
 directive @deprecated(reason: String) on FIELD_DEFINITION | ARGUMENT_DEFINITION | INPUT_FIELD_DEFINITION | INTERFACE | ENUM_VALUE | OBJECT_DEFINITION | SCALAR_DEFINITION | UNION_DEFINITION
 ```
 
-
-
-
-
 为了更有实用性，`@skip` 和 `@include` 应该与变量结合，而不是硬编码布尔值。例如，我们可以根据变量值包含一个实验性字段：
 
-```
-[](#cb256-1)query myQuery($someTest: Boolean!) {
-[](#cb256-2)    experimentalField @include(if: $someTest)
-[](#cb256-3)}
+```graphql
+query myQuery($someTest: Boolean!) {
+    experimentalField @include(if: $someTest)
+}
 ```
 
 ### `@deprecated`
@@ -4907,26 +4883,26 @@ directive @deprecated(reason: String) on FIELD_DEFINITION | ARGUMENT_DEFINITION 
 
 由于 `@deprecated` 是一个内置指令，你不应该在自己的模式中声明它。为了说明 `@deprecated` 的用法，以下是它的定义方式：
 
-```
-[](#cb257-1)directive @deprecated(reason: String = "No longer supported") 
-[](#cb257-2)  on FIELD_DEFINITION | ARGUMENT_DEFINITION | INPUT_FIELD_DEFINITION 
-[](#cb257-3)    | ENUM_VALUE
+```graphql
+directive @deprecated(reason: String = "No longer supported") 
+  on FIELD_DEFINITION | ARGUMENT_DEFINITION | INPUT_FIELD_DEFINITION 
+    | ENUM_VALUE
 ```
 
 你可以可选地提供一个弃用原因 `reason`，它将出现在自动生成的文档和工具中。默认的 `reason` 是“No longer supported”。
 
 这是一个在模式中将字段和枚举标记为已用的示例：
 
-```
-[](#cb258-1)type Query {
-[](#cb258-2)    search: String @deprecated(reason: "Too slow, please use searchFast")
-[](#cb258-3)    searchFast: String
-[](#cb258-4)}
-[](#cb258-5)
-[](#cb258-6)enum Format {
-[](#cb258-7)    LEGACY @deprecated(reason: "Legacy format")
-[](#cb258-8)    NEW
-[](#cb258-9)}
+```graphql
+type Query {
+    search: String @deprecated(reason: "Too slow, please use searchFast")
+    searchFast: String
+}
+
+enum Format {
+    LEGACY @deprecated(reason: "Legacy format")
+    NEW
+}
 ```
 
 `@deprecated` 指令用于自动生成文档。例如，如上述模式在 GraphiQL 的文档页签中的显示方式所示。点击页面左上角的书籍图标，如截图“Deprecated documentation in GraphiQL”所示。
@@ -4939,10 +4915,10 @@ GraphiQL 中的弃用文档
 
 `@specifiedBy` 允许我们提供一个标量规范 URL 来描述自定义标量类型的行为。
 
-自定义标量 是 GraphQL 的一项强大功能，允许扩展类型系统。在 GraphQL 规范最初，自定义标量只能通过名称在模式中定义。例如：
+自定义标量是 GraphQL 的一项强大功能，允许扩展类型系统。在 GraphQL 规范最初，自定义标量只能通过名称在模式中定义。例如：
 
-```
-[](#cb259-1)scalar DateTime
+```graphql
+scalar DateTime
 ```
 
 这仍然是在模式中定义自定义标量的有效方式。然而，仅凭模式中的名称不足以解释自定义标量的行为。例如，`DateTime` 的实现可能跨服务有所异，但它们可能都包含相同名称 `DateTime` 的模式元素。引入 `@specifiedBy` 指令是为了提供一种清晰记录自定义标量行为的方法。提供的 URL 应链接到包含数据格式、序列化和转换规则的规范。有关详情和规范模板，请参见 [GraphQL Scalars 项目](https://scalars.graphql.org/)。
@@ -4951,15 +4927,15 @@ GraphiQL 中的弃用文档
 
 由于 `@specifiedBy` 是一个内置指令，你不应该在自己的模式中声明它。为了说明 `@specifiedBy` 的用法，以下是它的定义方式：
 
-```
-[](#cb260-1)directive @specifiedBy(url: String!) on SCALAR
+```graphql
+directive @specifiedBy(url: String!) on SCALAR
 ```
 
 这是一个 `DateTime` 标量的示例：
 
-```
-[](#cb261-1)scalar DateTime @specifiedBy(url: 
-[](#cb261-2)    "https://scalars.graphql.org/andimarek/date-time")
+```graphql
+scalar DateTime @specifiedBy(url: 
+    "https://scalars.graphql.org/andimarek/date-time")
 ```
 
 通过 [GraphQL Scalars](https://scalars.graphql.org/) 项目，你可以创建自己的自定义标量规范并将其托管在 GraphQL Foundation 的 `scalars.graphql.org` 域名上，如上一个示例中的链接 URL。你也可以阅读并链接到其他贡献的规范。更多信息请参见 [GraphQL Scalars](https://scalars.graphql.org/) 项目。
@@ -4974,60 +4950,69 @@ GraphiQL 中的弃用文档
 
 让我们来看一些示例。让我们创建一个 `@important` 指令。该指令只能在字段定义上使用，使其成为一个模式指令：
 
-```
-[](#cb262-1)# 无参数，且只能在字段定义上使用
-[](#cb262-2)directive @important on FIELD_DEFINITION
+```graphql
+# 无参数，且只能在字段定义上使用
+directive @important on FIELD_DEFINITION
 ```
 
 我们新的 `@important` 指令可以用来指示某些模式字段是重要的。
 
-```
-[](#cb263-1)type Query {
-[](#cb263-2)    hello: String @important # 指令的使用
-[](#cb263-3)}
+
+
+```graphql
+type Query {
+    hello: String @important # 指令的使用
+}
 ```
 
-我们定义的 `@important` 指令为仅允许在字段定义上使用。为了使该模式有效，我们可以通过 `|` 分隔为指令定义添加另一个位置。
+我们定义的`@important`指令为仅允许在字段定义上使用。为了使该模式有效，我们可以通过`|`分隔为指令定义添加另一个位置。
 
-```
-[](#cb262-2)directive @important on FIELD_DEFINITION | OBJECT
+```graphql
+directive @important on FIELD_DEFINITION | OBJECT
 ```
 
 现在它是有效的：
 
-```
-[](#cb263-1)type Query {
-[](#cb263-2)    hello: String @important # 指令的使用
-[](#cb263-3)}
+```graphql
+type Query {
+    hello: String @important # 指令的使用
+}
 ```
 
-在我们实现自定义行为之前，所有自定义模式和操作指令都不会产生任何影响。模式指令和操作指令之间的区别在于允许的位置列表。这里有一个包含所有十一位置的模式指令 `@foo` 示例。
+在我们实现自定义行为之前，所有自定义模式和操作指令都不会产生任何影响。模式指令和操作指令之间的区别在于允许的位置列表。这里有一个包含所有十一位置的模式指令`@foo`示例。
 
-```
-directive @foo on SCHEMA | SCALAR | OBJECT | 
+```graphql
+directive @foo on SCHEMA | SCALAR | OBJECT |
 FIELD_DEFINITION | ARGUMENT_DEFINITION | INTERFACE | UNION | ENUM | ENUM_VALUE | INPUT_OBJECT | INPUT_FIELD_DEFINITION
+
 schema {
     query: Query
 }
+
 CustomScalar @foo
+
 type Query @foo {
     hello(
-        arg: SomeInput @ foo # 参数
+        arg: SomeInput @foo # 参数
     ): String @foo # 字段定义
 }
-```
-``` @foo {
+
+schema @foo {
     hello: String
 }
+
 type SomeImplementation implements SomeInterface {
     hello: String
 }
+
 union SomeUnion = SomeImplementation @foo
+
 enum SomeEnum @foo {
     ENUM_VALUE @foo # 枚举值
 }
+
 input SomeInput @foo {
-  inputField: String @foo # 输入字段
+    inputField: String @foo # 输入字段
 }
 ```
 
@@ -5035,11 +5020,7 @@ input SomeInput @foo {
 
 ### 定义操作指令
 
-让我们定义一个操作指令 `@cache`，它可以用于操作字段。请注意，下例中的 `FIELD` 指的是操作字段，而上一个模式指令示例中使用的 `FIELD_DEFINITION` 指的是模式字段。
-
-
-
-
+让我们定义一个操作指令`@cache`，它可以用于操作字段。请注意，下例中的`FIELD`指的是操作字段，而上一个模式指令示例中使用的`FIELD_DEFINITION`指的是模式字段。
 
 ```graphql
 # 只能用在 GraphQL 文档的字段上
@@ -5055,7 +5036,7 @@ type Pet {
 }
 ```
 
-我们只能在包含操作的 GraphQL 文档的字段上使用 `@cache` 指令。
+我们只能在包含操作的 GraphQL 文档的字段上使用`@cache`指令。
 
 ```graphql
 query myPet {
@@ -5066,14 +5047,14 @@ query myPet {
 }
 ```
 
-指令也可以包含参数。让我们添加一个 `maxAge` 参数，其默认值为 1000。
+指令也可以包含参数。让我们添加一个`maxAge`参数，其默认值为 1000。
 
 ```graphql
 # 带有默认值的参数
 directive @cache(maxAge: Int = 1000) on FIELD
 ```
 
-在 GraphQL 文档中，我们可以使用更新后的 `@cache` 指令来指定 `maxAge` 值：
+在 GraphQL 文档中，我们可以使用更新后的`@cache`指令来指定`maxAge`值：
 
 ```graphql
 query myPet {
@@ -5084,25 +5065,24 @@ query myPet {
 }
 ```
 
-在实现新的自定义行为之前，所有自定义架构指令和操作指令都不会产生任何影响。例如，在上面的操作中 `lastTimeOutside` 带有 `@cache` 指令，它的行为与没有该指令完全相同，直到我们实现了某些新逻辑。我们将在本章稍后演示指令行为的实现。你不需要为内置指令定义行为，它们都有定义明确的效果，并由每个 GraphQL 实现所共同实现。
+在实现新的自定义行为之前，所有自定义架构指令和操作指令都不会产生任何影响。例如，在上面的操作中，`lastTimeOutside`带有`@cache`指令，它的行为与没有该指令完全相同，直到我们实现了某些新逻辑。我们将在本章稍后演示指令行为的实现。你不需要为内置指令定义行为，它们都有定义明确的效果，并由每个 GraphQL 实现所共同实现。
 
 架构指令和操作指令的区别在于允许位置的列表。以下是一个在包含操作的 GraphQL 文档中列出的所有八种可能位置的操作指令：
 
 ```graphql
-type @foo on QUERY | MUTATION | SUBSCRIPTION |
+directive @foo on QUERY | MUTATION | SUBSCRIPTION |
   FIELD | FRAGMENT_DEFINITION | FRAGMENT_SPREAD |
   INLINE_FRAGMENT | VARIABLE_DEFINITION
 
 query someQuery(
     $var: String @foo # 变量定义
-    ) @foo # 查询
-    {
-        field @foo  # 字段
-        ... on Query @foo { # 内联片段
-            field
-        }
-        ...someFragment @foo # 片段扩展
+) @foo { # 查询
+    field @foo # 字段
+    ... on Query @foo { # 内联片段
+        field
     }
+    ...someFragment @foo # 片段扩展
+}
 
 fragment someFragment @foo { # 片段
     field
@@ -5121,9 +5101,9 @@ subscription someSubscription @foo { # 订阅
 
 ## 可重复指令
 
-我们可以将架构和操作指令定义为 `repeatable`（可重复），允许它在同一位置被多次使用。如果指令定义中没有包含 `repeatable`，则该指令默认为不可重复的。
+我们可以将架构和操作指令定义为`repeatable`（可重复），允许它在同一位置被多次使用。如果指令定义中没有包含`repeatable`，则该指令默认为不可重复的。
 
-例如，一个可重复的架构指令 `@owner`：
+例如，一个可重复的架构指令`@owner`：
 
 ```graphql
 directive @owner(name: String!) repeatable on FIELD_DEFINITION
@@ -5142,7 +5122,7 @@ type Query {
 
 ### 使用架构指令更改执行逻辑
 
-让我们为新的 `@important` 指令实现逻辑，该指令指示哪些架构字段是重要的，以及其重要的原因。它的定义如下：
+让我们为新的`@important`指令实现逻辑，该指令指示哪些架构字段是重要的，以及其重要的原因。它的定义如下：
 
 ```graphql
 directive @important(reason: String!) on FIELD_DEFINITION
@@ -5156,7 +5136,7 @@ type Query {
 }
 ```
 
-为了解释架构定义和用法是如何表示的，我们将通过 Java 来说明。在实践中，我们经常在 DataFetcher 中使用架构指令。例如，在 Spring DataFetcher 中，我们可以这样使用 `@important` 指令来更改处理重要字段的方式：
+为了解释架构定义和用法是如何表示的，我们将通过 Java 来说明。在实践中，我们经常在 `DataFetcher` 中使用架构指令。例如，在 Spring DataFetcher 中，我们可以这样使用`@important`指令来更改处理重要字段的方式：
 
 ```java
 package myservice.service;
@@ -5172,7 +5152,7 @@ class GreetingController {
   @QueryMapping
   String hello(DataFetchingEnvironment env) {
     FieldDefinition fieldDefinition = env.getFieldDefinition();
-    AppliedDirective important = 
+    AppliedDirective important =
       fieldDefinition.getAppliedDirective("important");
     if (important != null) {
       return handleImportantFieldsDifferently(env);
@@ -5184,31 +5164,27 @@ class GreetingController {
 
 ### 使用架构指令进行验证
 
-指令也可以用于验证。例如，用于参数的 `@size` 架构指令，用于强制执行最小数量。
+指令也可以用于验证。例如，用于参数的`@size`架构指令，用于强制执行最小数量。
 
 ```graphql
-directive @size(min : Int = 0) on ARGUMENT_DEFINITION
+directive @size(min: Int = 0) on ARGUMENT_DEFINITION
 ```
 
+它可以被应用于参数定义，以验证输入中是否有足够的`Application`：
 
-
-
-
-它可以被应用于参数定义，以验证输入中是否有足够的 `Application`：
-
-```
+```graphql
 type Query {
-    hired(applications : [Application!] @size(min : 3)) : [Boolean]
+    hired(applications: [Application!] @size(min: 3)): [Boolean]
 }
 ```
 
 验证是一个非常有用且被频繁请求的想法，因此有一个针对 GraphQL Java 的[扩展验证库](https://github.com/graphql-java/graphql-java-extended-validation)，该库由 GraphQL Java 团队维护。
 
-要使用 `graphql-java-extended-validation` 库中的验证指令，请添加该包。
+要使用`graphql-java-extended-validation`库中的验证指令，请添加该包。
 
-对于 Gradle，在你的 `build.gradle` 文件中添加以下内容：
+对于 Gradle，在你的`build.gradle`文件中添加以下内容：
 
-```
+```gradle
 implementation 'com.graphql-java:graphql-java-extended-validation:19.1'
 ```
 
@@ -5224,7 +5200,7 @@ implementation 'com.graphql-java:graphql-java-extended-validation:19.1'
 
 注意：主版本号对应于主 GraphQL Java 版本的链接主版本。在编写本文时，Spring for GraphQL 1.1.2 的最新版本使用了 GraphQL Java 19。
 
-要在 Spring for GraphQL 中接线这些验证指令，请创建一个 `RuntimeWiringConfigurer` bean。这将添加来自 `graphql-java-extended-validation` 的一组默认指令实现。你应该在你的 schema 中单独为你的服务定义这些指令。
+要在 Spring for GraphQL 中接线这些验证指令，请创建一个`RuntimeWiringConfigurer` bean。这将添加来自`graphql-java-extended-validation`的一组默认指令实现。你应该在你的 schema 中单独为你的服务定义这些指令。
 
 ```java
 @Configuration
@@ -5232,26 +5208,28 @@ class GraphQlConfig {
     @Bean
     RuntimeWiringConfigurer runtimeWiringConfigurer() {
         // 添加库中所有的默认验证规则
-        ValidationRules possibleRules 
-            = ValidationRules.newValidationRules().build();
+        ValidationRules possibleRules =
+            ValidationRules.newValidationRules().build();
+
         // ValidationSchemaWiring 使用了 SchemaDirectiveWiring
-        ValidationSchemaWiring validationDirectiveWiring 
-            = new ValidationSchemaWiring(possibleRules);
+        ValidationSchemaWiring validationDirectiveWiring =
+            new ValidationSchemaWiring(possibleRules);
+
         return wiringBuilder -> wiringBuilder
-                .directiveWiring(validationDirectiveWiring);
+            .directiveWiring(validationDirectiveWiring);
     }
 }
 ```
 
-Spring Boot starter 会自动检测所有的 `RuntimeWiringConfigurer` bean。
+Spring Boot starter 会自动检测所有的`RuntimeWiringConfigurer` bean。
 
-### 使用 schema 指添加元数据
+### 使用 schema 指令添加元数据
 
 schema 指令另一个非常常见的用例是提供元数据，这些数据不会改变执行，仅与 schema 本身相关。
 
-例如，我们在大型团队中工作，并通过 `@owner` 指令来记录某些类型的所有者：
+例如，我们在大型团队中工作，并通过`@owner`指令来记录某些类型的所有者：
 
-```
+```graphql
 directive @owner(name: String) on OBJECT
 
 type User @owner(name: "Antoine") {
@@ -5269,42 +5247,45 @@ type Payment @owner(name: "Stephan") {
 
 使用指令的一个显著优势是能够程序化地处理它们。例如，我们可以创建一个自动报告，显示哪些类型由谁所有。这个所有权报告示例更像是一个脚本，而不是 Spring for GraphQL 服务的一部分。因此，我们将在纯 GraphQL Java 中演示这个示例。
 
-GraphQL Java 提供了程序化访问 schema 元素的工具。在纯 GraphQL Java 代码中，我们可以使用 `SchemaTraverser` 类配合 `GraphQLTypeVisitor` 将所有者映射到类型。在这个示例中，我们将访问 `GraphQLObjectType`。GraphQL Java 中有许多更多选项和钩子可以自定义访问器。
+GraphQL Java 提供了程序化访问 schema 元素的工具。在纯 GraphQL Java 代码中，我们可以使用`SchemaTraverser`类配合`GraphQLTypeVisitor`将所有者映射到类型。在这个示例中，我们将访问`GraphQLObjectType`。GraphQL Java 中有许多更多选项和钩子可以自定义访问器。
 
 ```java
 GraphQLSchema schema = ...;
-Map<String, List<GraphQLObjectType>> ownerToTypes
-  = new LinkedHashMap<>();
+Map<String, List<GraphQLObjectType>> ownerToTypes =
+  new LinkedHashMap<>();
 
 SchemaTraverser schemaTraverser = new SchemaTraverser();
+
 schemaTraverser.depthFirstFullSchema(new GraphQLTypeVisitorStub() {
   @Override
   public TraversalControl visitGraphQLObjectType(
     GraphQLObjectType objectType,
     TraverserContext<GraphQLSchemaElement> context
   ) {
-    GraphQLAppliedDirective directive
-      = objectType.getAppliedDirective("owner");
+    GraphQLAppliedDirective directive =
+      objectType.getAppliedDirective("owner");
+
     if (directive != null) {
       String owner = directive.getArgument("name").getValue();
       ownerToTypes.putIfAbsent(owner, new ArrayList<>());
       ownerToTypes.get(owner).add(objectType);
     }
+
     return TraversalControl.CONTINUE;
   }
 }, schema);
 ```
 
-我们访问 schema 中的每一个 `GraphQLObjectType`，并检查每个对象类型的所有者。然后我们组装一个所有者到对象类型列表的映射。
+我们访问 schema 中的每一个`GraphQLObjectType`，并检查每个对象类型的所有者。然后我们组装一个所有者到对象类型列表的映射。
 
-这个 `@owner` 示例更像是一个脚本，而不是 Spring for GraphQL 服务中的核心功能。然而，如果你想在 Spring for GraphQL 中遍历 schema，可以通过 `GraphQlSource.builder` 配合 `builder.schemaResources(..).typeVisitors(..)` 注册 `graphql.schema.GraphQLTypeVisitor`。
+这个`@owner`示例更像是一个脚本，而不是 Spring for GraphQL 服务中的核心功能。然而，如果你想在 Spring for GraphQL 中遍历 schema，可以通过`GraphQlSource.builder`配合`builder.schemaResources(..).typeVisitors(..)`注册`graphql.schema.GraphQLTypeVisitor`。
 
-更进一步，我们甚至可以使用 schema 指令更改全局的 `GraphQLSchema`。例如，我们可以根据指令自动为每个字段添加后缀。
+更进一步，我们甚至可以使用 schema 指令更改全局的`GraphQLSchema`。例如，我们可以根据指令自动为每个字段添加后缀。
 
-```
+```graphql
 directive @suffix(name: String) on OBJECT
 
-type Dog @suffix(name:"__bark") {
+type Dog @suffix(name: "__bark") {
     name: String
 }
 
@@ -5313,7 +5294,9 @@ type Cat @suffix(name: "__meow") {
 }
 ```
 
-在纯 GraphQL Java 中，我们可以 schema 转换器和类型访问器。
+在纯 GraphQL Java 中，我们可以使用 schema 转换器和类型访问器。
+
+
 
 ```java
 GraphQLSchema newSchema = SchemaTransformer.transformSchema(
@@ -5342,21 +5325,17 @@ GraphQLSchema newSchema = SchemaTransformer.transformSchema(
 });
 ```
 
-我们正在使用 `SchemaTransformer` 类在遍历 schema 时更改它。`SchemaTransformer` 利用了与上一个示例中使用的 `SchemaTraverser` 相同的 `GraphQLTypeVisitor`。
+我们正在使用`SchemaTransformer`类在遍历 schema 时更改它。`SchemaTransformer`利用了与上一个示例中使用的`SchemaTraverser`相同的`GraphQLTypeVisitor`。
 
-要在 Spring for GraphQL 中使用相同的 schema 转换示例，请通过 `GraphQlSource.Builder` 配合 `builder.schemaResources(..).typeVisitorsToTransformSchema(..)` 注册 `graphql.schema.GraphQLTypeVisitor`。
+要在 Spring for GraphQL 中使用相同的 schema 转换示例，请通过`GraphQlSource.Builder`配合`builder.schemaResources(..).typeVisitorsToTransformSchema(..)`注册`graphql.schema.GraphQLTypeVisitor`。
 
-
-
-
-
-需要注意的是：如你从代码示例所示，转换 schema 并非易事。请不要在 schema 转换过程中无意中创建无效 schema。要查看更复杂的示例，请参考 GraphQL Java 中的 `graphql.util.Anonymizer`。这是一个工具，帮助 GraphQL Java 的用户对其 schema 进行匿名化，以便在报告问题或向维护团队提出改进时提供真实的示例。
+需要注意的是：如你从代码示例所示，转换 schema 并非易事。请不要在 schema 转换过程中无意中创建无效 schema。要查看更复杂的示例，请参考 GraphQL Java 中的`graphql.util.Anonymizer`。这是一个工具，帮助 GraphQL Java 的用户对其 schema 进行匿名化，以便在报告问题或向维护团队提出改进时提供真实的示例。
 
 ## 实现操作指令的逻辑
 
 操作指令（Operation directives）用于 GraphQL 操作。请注意，这个概念通常也被称为“查询”（query）指令，尽管这种类型的指令可以使用于三种操作：查询（queries）、变变（mutations）和订阅（subscriptions）。
 
-让我们来实现一个 `@cache` 操作指令的逻辑：
+让我们来实现一个`@cache`操作指令的逻辑：
 
 ```
 directive @cache(maxAge: Int) on FIELD
@@ -5364,7 +5343,7 @@ directive @cache(maxAge: Int) on FIELD
 
 这是一个操作指令，允许客户端指定缓存条目的时效性。这是一个可以改变执行行为的操作指令示例。
 
-例如，客户端指定 `hello` 缓存条目的不能超过 500 ms，否则我们将重新获取这些条目。
+例如，客户端指定`hello`缓存条目的不能超过 500 ms，否则我们将重新获取这些条目。
 
 ```graphql
 query caching {
@@ -5372,11 +5351,11 @@ query caching {
 }
 ```
 
-在 GraphQL Java 中，操作指令的定义表示为 `GraphQLDirective`s。操作指令的使用表示为 `QueryAppliedDirective`s。注意，这里的“query”一词具有误导性，因为它实际上指的是适用于任何三种 GraphQL 操作（查询、变变或订阅）的指令。操作指令仍然通常地被称为“query”指令，因此有了该类名。
+在 GraphQL Java 中，操作指令的定义表示为`GraphQLDirective`s。操作指令的使用表示为`QueryAppliedDirective`s。注意，这里的“query”一词具有误导性，因为它实际上指的是适用于任何三种 GraphQL 操作（查询、变变或订阅）的指令。操作指令仍然通常地被称为“query”指令，因此有了该类名。
 
-为了解释操作指令的定义和用法在代码中是如何表示的，我们将通过使用纯 GraphQL Java 的示例代码进行演示。然后，我们将通过 Spring for GraphQL 中 `@cache` 的实现来结束本节。
+为了解释操作指令的定义和用法在代码中是如何表示的，我们将通过使用纯 GraphQL Java 的示例代码进行演示。然后，我们将通过 Spring for GraphQL 中`@cache`的实现来结束本节。
 
-在纯 GraphQL Java 中，我们可以通过 `GraphQLSchema` 实例（在本例中称为 `schema`）访问 schema 中操作指令的定义。我们可以访问操作指令的名称、参数、位置以及它是否可重复。
+在纯 GraphQL Java 中，我们可以通过`GraphQLSchema`实例（在本例中称为`schema`）访问 schema 中操作指令的定义。我们可以访问操作指令的名称、参数、位置以及它是否可重复。
 
 ```java
 GraphQLSchema schema = ...;
@@ -5388,9 +5367,9 @@ EnumSet<Introspection.DirectiveLocation> directiveLocations
         = cacheDirective.validLocations();
 ```
 
-操作指令的使用在 GraphQL Java 中表示为 `QueryAppliedDirective` 实例，而提供的参数值表示为 `QueryAppliedDirectiveArgument`。
+操作指令的使用在 GraphQL Java 中表示为`QueryAppliedDirective`实例，而提供的参数值表示为`QueryAppliedDirectiveArgument`。
 
-我们可以在执行期间通过 `DataFetchingEnvironment` 中的 `getQueryDirectives()` 访问操作指令的使用。例如：
+我们可以在执行期间通过`DataFetchingEnvironment`中的`getQueryDirectives()`访问操作指令的使用。例如：
 
 ```java
 package myservice.service;
@@ -5438,11 +5417,11 @@ class GreetingController {
 
 ## 初始化执行对象
 
-在执行任何 GraphQL 请求之前，Spring for GraphQL 必须理解 schema。为了实现这一点，Spring for GraphQL 初始化一个 `GraphQL` 实例，该实例包含了 schema 和执行策略。
+在执行任何 GraphQL 请求之前，Spring for GraphQL 必须理解 schema。为了实现这一点，Spring for GraphQL 初始化一个`GraphQL`实例，该实例包含了 schema 和执行策略。
 
-作为 `GraphQL` 初始化过程的一部分，Spring for GraphQL 会加载 schema 文件、暴露相关属性、检测 `RuntimeConfigurer` bean 等。通常，对于所有请求只会初始化一个 `GraphQL` 实例。
+作为`GraphQL`初始化过程的一部分，Spring for GraphQL 会加载 schema 文件、暴露相关属性、检测`RuntimeConfigurer`bean 等。通常，对于所有请求只会初始化一个`GraphQL`实例。
 
-当 Spring for GraphQL 初始化 `GraphQL` 的时候，如果你有任何想要更改的内容，可以通过 `GraphQlSource` [契约](https://docs.spring.io/spring-graphql/docs/current/reference/html#execution.source) 进行访问和修改。例如，要添加自定义的执行 ID，创建一个 `GraphQlSourceCustomizer` bean：
+当 Spring for GraphQL 初始化`GraphQL`的时候，如果你有任何想要更改的内容，可以通过`GraphQlSource`[契约](https://docs.spring.io/spring-graphql/docs/current/reference/html#execution.source)进行访问和修改。例如，要添加自定义的执行 ID，创建一个`GraphQlSourceCustomizer`bean：
 
 ```java
 package myservice.service;
@@ -5466,13 +5445,9 @@ class GraphQlConfig {
 }
 ```
 
-注意，自定义 `GraphQlSource` 是完全可选的。Spring for GraphQL 已经初始化了足够的内容以便在无需额外自定义配置的情况下启动请求。
+注意，自定义`GraphQlSource`是完全可选的。Spring for GraphQL 已经初始化了足够的内容以便在无需额外自定义配置的情况下启动请求。
 
-如果你在使用没有 Spring for GraphQL 的 GraphQL Java，这就是手动初始化 `graphql.GraphQL` 对象的方法。
-
-
-
-
+如果你在使用没有 Spring for GraphQL 的 GraphQL Java，这就是手动初始化`graphql.GraphQL`对象的方法。
 
 ```
 String sdl = "type Query { foo: String }"; // Your schema here
@@ -5494,13 +5469,13 @@ GraphQL graphQL = GraphQL.newGraphQL(schema).build();
 
 在请求与响应章节中，我们讨论了 Spring for GraphQL 如何处理 HTTP 上的请求和响应。在本章中，我们将关注接收请求后的执行步骤。这些执行步骤发生在 GraphQL Java 引擎内部。
 
-回想一下请求与响应章节，Spring for GraphQL 会自动处理 HTTP 协议。GraphQL 请求是一个编码为 `application/json` 的 HTTP POST 请求。
+回想一下请求与响应章节，Spring for GraphQL 会自动处理 HTTP 协议。GraphQL 请求是一个编码为`application/json`的 HTTP POST 请求。
 
-对于每个收到的 HTTP 请求，Spring for GraphQL 会自动创建一个 GraphQL Java 的 `ExecutionInput` 实例。回想一下请求与响应章节，`ExecutionInput` 是代表 GraphQL 请求的 GraphQL Java 对象，不包含传输层的问题。在 Spring for GraphQL 内部，这一过程发生在 `DefaultExecutionGraphQlService` 中。可以使用自定义的 `ExecutionGraphQlService` 实现来替换它。
+对于每个收到的 HTTP 请求，Spring for GraphQL 会自动创建一个 GraphQL Java 的`ExecutionInput`实例。回想一下请求与响应章节，`ExecutionInput`是代表 GraphQL 请求的 GraphQL Java 对象，不包含传输层的问题。在 Spring for GraphQL 内部，这一过程发生在`DefaultExecutionGraphQlService`中。可以使用自定义的`ExecutionGraphQlService`实现来替换它。
 
-随后，控制权将交给 GraphQL Java，它会执行由 `ExecutionInput` 实例表示的 GraphQL 请求。执行完成后，将返回一个包含响应数据和/或错误的 `ExecutionResult` 实例。GraphQL Java 引擎在 `ExecutionInput` 和 `ExecutionResult` 之间发生的情况是本章剩余部分的重点。
+随后，控制权将交给 GraphQL Java，它会执行由`ExecutionInput`实例表示的 GraphQL 请求。执行完成后，将返回一个包含响应数据和/或错误的`ExecutionResult`实例。GraphQL Java 引擎在`ExecutionInput`和`ExecutionResult`之间发生的情况是本章剩余部分的重点。
 
-如果你在没有 Spring for GraphQL 的情况下使用 GraphQL Java，这是手动创建 `ExecutionInput` 并执行请求的方法：
+如果你在没有 Spring for GraphQL 的情况下使用 GraphQL Java，这是手动创建`ExecutionInput`并执行请求的方法：
 
 ```
 GraphQL graphQL = GraphQL.newGraphQL(schema).build();
@@ -5517,23 +5492,26 @@ ExecutionResult result = graphQL.execute(request);
 在 GraphQL Java 中，执行包括以下步骤：
 
 1. 从请求中解析“query”（文档）值为 GraphQL 文档
+
 2. 验证文档
+
 3. 强制转换变量（coercing variables）
+
 4. 获取数据
 
-这些是在 GraphQL Java 引擎接收到 `ExecutionInput` 请求到返回带有数据和/或错误的 `ExecutionResult` 实例之间所经历的步骤。
+这些是在 GraphQL Java 引擎接收到`ExecutionInput`请求到返回带有数据和/或错误的`ExecutionResult`实例之间所经历的步骤。
 
 ### 解析与验证
 
-回想一下请求与响应章节，GraphQL 请求中的“query”实际上是一个 GraphQL 文档，它可能包含一个或多个操作。此“query”值被插入到 GraphQL Java 的 `ExecutionInput` 实例中，该实例代表一个 GraphQL 请求。
+回想一下请求与响应章节，GraphQL 请求中的“query”实际上是一个 GraphQL 文档，它可能包含一个或多个操作。此“query”值被插入到 GraphQL Java 的`ExecutionInput`实例中，该实例代表一个 GraphQL 请求。
 
-第一步是从 `ExecutionInput` 中解析“query”（文档）值并对其进行验证。如果文档包含无效语法，解析将立即失败。否则，如果文档在语法上是有效的，则将根据 schema 进行验证。
+第一步是从`ExecutionInput`中解析“query”（文档）值并对其进行验证。如果文档包含无效语法，解析将立即失败。否则，如果文档在语法上是有效的，则将根据 schema 进行验证。
 
 ### 强制转换变量
 
-请参查询语言章节以了解 GraphQL 变量的概述，并在请求与响应章节中查看变量如何在 HTTP 请求中发送。
+请参考试验语言章节以了解 GraphQL 变量的概述，并在请求与响应章节中查看变量如何在 HTTP 请求中发送。
 
-如果请求包含变量，则需要对它们进行“强制转换”。`coercing` 过程将请求中提供的变量值转换为内部表示，并验证变量。例如：
+如果请求包含变量，则需要对它们进行“强制转换”。`coercing`过程将请求中提供的变量值转换为内部表示，并验证变量。例如：
 
 ```
 query myQuery($name: String) {
@@ -5541,7 +5519,7 @@ query myQuery($name: String) {
 }
 ```
 
-此查询包含一个类型为 `String` 的变量 `$name`。如果请求现在包含以下变量，变量强制转换将失败，因为我们预期 `name` 是单个 `String`，而不是 `String` 列表。
+此查询包含一个类型为`String`的变量`$name`。如果请求现在包含以下变量，变量强制转换将失败，因为我们预期`name`是单个`String`，而不是`String`列表。
 
 ```
 {
@@ -5553,11 +5531,13 @@ query myQuery($name: String) {
 
 最后一步是执行的核心：GraphQL Java 获取满足请求所需的数据。
 
-正如 DataFetchers 章节详细描述的，GraphQL Java 中的 `DataFetcher` 是一个加载特定特定字段数据的泛型函数。Spring for GraphQL 通过 `@SchemaMapping` 控制器注解以及如 `@QueryMapping` 等快捷注解实现了 DataFetchers。
+正如 DataFetchers 章节详细描述的，GraphQL Java 中的`DataFetcher`是一个加载特定特定字段数据的泛型函数。Spring for GraphQL 通过`@SchemaMapping`控制器注解以及如`@QueryMapping`等快捷注解实现了 DataFetchers。
 
-schema 中的每个字段都分配了一个 `DataFetcher`。与 GraphQL 请求中的字段关联的 DataFetchers 将被 GraphQL Java 调用以获取数据。
+schema 中的每个字段都分配了一个`DataFetcher`。与 GraphQL 请求中的字段关联的 DataFetchers 将被 GraphQL Java 调用以获取数据。
 
-即使在生成了 `PropertyDataFetchers` 后，字段也可能意外地未映射到任何 `DataFetcher`。这可能是由于忘记了 `@SchemaMapping` 注解或缺少 Java 属性。遗忘的 `DataFetcher` 将被视为返回 `null` 结果的 `DataFetcher`。由于你通常不想忘记任何 DataFetcher，即将到来的 [Spring for GraphQL 1.2 版本](https://spring.io/blog/2023/03/21/spring-for-graphql-1-2-0-m1-released) 将启动时添加 schema 映射检查。
+
+
+即使在生成了 `PropertyDataFetchers` 后，字段也可能意外地未映射到任何 `DataFetcher`。这可能是由于忘记了 `@SchemaMapping` 注解或缺少 Java 属性。遗忘的 `DataFetcher` 将被视为返回 `null` 结果的 `DataFetcher`。由于你通常不想忘记任何 `DataFetcher`，即将到来的 [Spring for GraphQL 1.2 版本](https://spring.io/blog/2023/03/21/spring-for-graphql-1-2-0-m1-released) 将启动时添加 schema 映射检查。
 
 让我们更仔细地观察示例 schema 和查询，这将有助于我们理解整体执行算法。
 
@@ -5603,18 +5583,15 @@ query myDogs {
 }
 ```
 
-GraphQL Java 将每个 GraphQL 操作解释为字段树。每个字段都有一个关联的 DataFetcher。因此，将操作描述为 DataFetcher 闭包（匿名函数）也是同样有效的。
+GraphQL Java 将每个 GraphQL 操作解释为字段树。每个字段都有一个关联的 `DataFetcher`。因此，将操作描述为 `DataFetcher` 闭包（匿名函数）也是同样有效的。
 
 ![字段树](img/file15.png)
 
 字段树
 
-如“字段树”图所示，此查询有三层，`dogs` 是唯一的根字段。GraphQL Java 广度优先遍历查询，并在访问每个字段时调用相应的 DataFetcher。一旦字段的 DataFetcher 成功返回数据，我们就会调用其每个子元素的 DataFetcher。因此，第一个调用的 DataFetcher 是 `/dogs`，随后是 `/dogs/name`、`/dogs/owner`、`/dogs/friends` 和 `/dogs/details`。
+如“字段树”图所示，此查询有三层，`dogs` 是唯一的根字段。GraphQL Java 广度优先遍历查询，并在访问每个字段时调用相应的 `DataFetcher`。一旦字段的 `DataFetcher` 成功返回数据，我们就会调用其每个子元素的 `DataFetcher`。因此，第一个调用的 `DataFetcher` 是 `/dogs`，随后是 `/dogs/name`、`/dogs/owner`、`/dogs/friends` 和 `/dogs/details`。
 
 一个关键细节是，如果可能，GraphQL Java 会并行获取字段的子字段。
-
-
-
 
 总结来说，执行过程是对字段的广度遍历，当每个字段的 `DataFetcher` 完成时，该字段完成完成。在可能，我们会并行执行字段的子。
 
@@ -5639,7 +5616,7 @@ for (DataFetcher df: childrenDFs) {
 }
 ```
 
-一个关键问题是，DataFetcher 在当前线程中执行了多少工作？如果当前线程没有执行工作或只做了极少量的工作，那么 GraphQL Java 本身就能以最高效率运行。如果 `DataFetcher` 使用了当前线程（通过计算或等待某些 I/O 返回），就会阻塞 GraphQL Java 本身，导致其无法调用另一个 `DataFetcher`。
+一个关键问题是，`DataFetcher` 在当前线程中执行了多少工作？如果当前线程没有执行工作或只做了极少量的工作，那么 GraphQL Java 本身就能以最高效率运行。如果 `DataFetcher` 使用了当前线程（通过计算或等待某些 I/O 返回），就会阻塞 GraphQL Java 本身，导致其无法调用另一个 `DataFetcher`。
 
 这里有几个 `DataFetcher` 示例来说说明。注意，在 Spring for GraphQL 中，通过标记了 `@SchemaMapping` 的控制器方法来实现这些 `DataFetchers` 是等效的。
 
@@ -5717,7 +5694,7 @@ DataFetcher df = (env) -> {
 
 ### TypeResolver
 
-如果字段类型是接口（interface）或联合类型（union），GraphQL Java 需要通过 `TypeResolver` 确定值的实际对象类型。参见 DataFetchers 章节关于 `TypeResolver` 的介绍以及如何在 Spring for GraphQL 和 GraphQL Java 中使用它们。本节侧重于 `TypeResolver` 的执行。
+如果字段类型是接口（interface）或联合类型（union），GraphQL Java 需要通过 `TypeResolver` 确定值的实际对象类型。参见 `DataFetchers` 章节关于 `TypeResolver` 的介绍以及如何在 Spring for GraphQL 和 GraphQL Java 中使用它们。本节侧重于 `TypeResolver` 的执行。
 
 在我们的架构中，有一个 `Pet` 接口：
 
@@ -5786,11 +5763,7 @@ query getUsersAndOrders {
 }
 ```
 
-变更的 `DataFetcher` 是串行调用的。变更字段 `addOrder` 的 `DataFetcher` 在 `deleteUser` 完成后才被调用。同样，`changeUser` 的 `DataFetcher` 在 `addOrder` 完成后才被调用。对比查询的行为，在查询中我们并行调用所有三个字段（`searchUsers`、`userById` 和 `allOrders`）的 DataFetchers。
-
-
-
-
+变更的 `DataFetcher` 是串行调用的。变更字段 `addOrder` 的 `DataFetcher` 在 `deleteUser` 完成后才被调用。同样，`changeUser` 的 `DataFetcher` 在 `addOrder` 完成后才被调用。对比查询的行为，在查询中我们并行调用所有三个字段（`searchUsers`、`userById` 和 `allOrders`）的 `DataFetchers`。
 
 这是查询（queries）和变异（mutations）在执行上的唯一区别。我们将变异实现为 `DataFetcher`，但在使用 GraphQL Java 时有一条规则需要遵循：变异 `DataFetcher` 可能会有副作用，而查询则不能，尽管 GraphQL Java 并没有强制执行这一点。
 
@@ -5865,6 +5838,8 @@ class MyGraphQLConfiguration {
 
 让我们写一个自定义探测器，用来测量执行 GraphQL 请求所花费的时间。这是从 GraphQL 执行开始到请求完成之间的时间。
 
+
+
 ```java
 package myservice.service;
 
@@ -5901,13 +5876,13 @@ class LogTimeInstrumentation extends SimpleInstrumentation {
 }
 ```
 
-让我们梳一下这个探测器。在 `beginExecution` 钩子中，我们返回一个带有 `onDispatched` 和 `onCompleted` 方法的 `InstrumentationContext<ExecutionResult>`。它们在执行开始和结束时被调用。我们保存开始时间，并在执行完成后记录差值。
+让我们梳一下这个探测器。在`beginExecution`钩子中，我们返回一个带有`onDispatched`和`onCompleted`方法的`InstrumentationContext<ExecutionResult>`。它们在执行开始和结束时被调用。我们保存开始时间，并在执行完成后记录差值。
 
-Spring for GraphQL 会自动检测并注册该探测。除了为此探测器添加 `@Component` 注解外，不需要进一步配置。
+Spring for GraphQL 会自动检测并注册该探测。除了为此探测器添加`@Component`注解外，不需要进一步配置。
 
-在编写时，最新的 Spring for GraphQL 使用的是 GraphQL Java 19.x。在 Spring for GraphQL 1.2 中将使用 GraphQL Java 20.x，它引入了改进的 `PerformantInstrumentation` 类。它的设计旨在提高性能并减少对象分配。
+在编写时，最新的 Spring for GraphQL 使用的是 GraphQL Java 19.x。在 Spring for GraphQL 1.2 中将使用 GraphQL Java 20.x，它引入了改进的`PerformantInstrumentation`类。它的设计旨在提高性能并减少对象分配。
 
-如果你使用的是纯 GraphQL Java，则必须手动将探测传递给 `GraphQL` 构建器。
+如果你使用的是纯 GraphQL Java，则必须手动将探测传递给`GraphQL`构建器。
 
 ```java
 GraphQLSchema schema = ...;
@@ -5918,7 +5893,7 @@ GraphQL graphQL = GraphQL.newGraphQL(schema)
 
 ## `InstrumentationContext`
 
-`InstrumentationContext` 是特定步骤结束时会被调用的对象。`InstrumentationContext` 由 `beginExecution` 等步骤方法返回。
+`InstrumentationContext`是特定步骤结束时会被调用的对象。`InstrumentationContext`由`beginExecution`等步骤方法返回。
 
 在 GraphQL Java 中，它被表示为一个简单的接口。
 
@@ -5942,22 +5917,19 @@ public interface InstrumentationContext<T> {
 }
 ```
 
+“dispatching”（调度）和“completion”（完成）的使用反映了 GraphQL Java 内部基于`CompleteableFuture`实现的响应式方式。会先创建一个`CompleteableFuture`，然后在稍后将其完成。一旦创建了关联的`CompleteableFuture`，引擎就会调用`onDispatched`方法。当关联的`CompletableFuture`完成时，引擎会调用`onCompleted`方法。
 
-
-
-“dispatching”（调度）和“completion”（完成）的使用反映了 GraphQL Java 内部基于 `CompleteableFuture` 实现的响应式方式。会先创建一个 `CompleteableFuture`，然后在稍后将其完成。一旦创建了关联的 `CompleteableFuture`，引擎就会调用 `onDispatched` 方法。当关联的 `CompletableFuture` 完成时，引擎会调用 `onCompleted` 方法。
-
-`InstrumentationContext` 是一个泛接口，在之前的 `LogTime` 示例中，我们为 `ExecutionResult` 返回了一个 `InstrumentationContext`。
+`InstrumentationContext`是一个泛接口，在之前的`LogTime`示例中，我们为`ExecutionResult`返回了一个`InstrumentationContext`。
 
 ## `InstrumentationState`
 
 让我们讨论一下在拦截中如何管理状态。
 
-我们通常只有一个 `graphql.GraphQL` 实例，它在所有请求中被复用。拦截器是为每个 `graphql.GraphQL` 实例注册的。那么我们如何为每个请求维护不同的拦截器状态呢？如何管理需要在多个钩子之间进行协调的复杂拦截器的状态？
+我们通常只有一个`graphql.GraphQL`实例，它在所有请求中被复用。拦截器是为每个`graphql.GraphQL`实例注册的。那么我们如何为每个请求维护不同的拦截器状态呢？如何管理需要在多个钩子之间进行协调的复杂拦截器的状态？
 
-状态管理通过 `createState` 方法实现，该方法每个请求调用一次并返回一个 `InstrumentationState`。`InstrumentationState` 是一个 Java 接口，代表任何类型的状态。该状态作为参数传递到每个钩子中，并且状态可以在每个请求的多个钩子之间进行追踪。
+状态管理通过`createState`方法实现，该方法每个请求调用一次并返回一个`InstrumentationState`。`InstrumentationState`是一个 Java 接口，代表任何类型的状态。该状态作为参数传递到每个钩子中，并且状态可以在每个请求的多个钩子之间进行追踪。
 
-让我们通过一个更复杂的拦截器来实际操作。`FieldCountInstrumentation` 统计一个请求中执行的字段数量。
+让我们通过一个更复杂的拦截器来实际操作。`FieldCountInstrumentation`统计一个请求中执行的字段数量。
 
 ```java
 package myservice.service;
@@ -6024,9 +5996,6 @@ class FieldCountInstrumentation
 }
 ```
 
-
-
-
 在本章中，我们将讨论 DataLoader，这是 GraphQL Java 用于对数据请求进行批处理和缓存的库。我们将讨论常见的 n+1 问题以及如何使用 DataLoader 的批处理功能来解决它。我们还将讨论 DataLoader 的缓存功能如何让数据请求更高效。
 
 我们将演示如何在 Spring for GraphQL 中使用 DataLoader。然后，我们将详细查看 DataLoader 在 GraphQL Java 中是如何运作的。
@@ -6035,7 +6004,7 @@ class FieldCountInstrumentation
 
 n+1 问题是指检索对象的相关实体时效率低下，这可能导致严重的性能问题。在为 schema 实现 DataFetchers 时，这是一个常见问题。请注意，这是一个在 SQL 等其他场景中也会发生的通用问题，并不是 GraphQL Java 或 GraphQL 特有的。
 
-让我们用一个关于人及其 {实朋友的简单示例来解释 n+1 问题。
+让我们用一个关于人及其{实朋友的简单示例来解释 n+1 问题。
 
 ```graphql
 type Query {
@@ -6060,7 +6029,7 @@ query importantPeople {
 }
 ```
 
-让我们在 Spring for GraphQL 中注册两个 DataFetchers，分别负责加载 `people` 及其它们的 `bestFriend`。
+让我们在 Spring for GraphQL 中注册两个 DataFetchers，分别负责加载`people`及其它们的`bestFriend`。
 
 ```java
 package myservice.service;
@@ -6098,7 +6067,7 @@ record PersonController(PersonService personService) {
 
 解决方案不再是为每个人进行一次服务调用，而是一次性加载所有人的好朋友。好朋友的加载是延迟的，因此它们可以一起加载。无论有多少人，这都会将服务调用次数从 n+1 减少到两次。
 
-n+1 问题非常常见，因此解决方案已内置在 GraphQL Java 中并可以在 Spring for GraphQL 中通过控制器注解 `@BatchMapping` 访问。解决方案使用了 [java-dataloader](https://github.com/graphql-java/java-dataloader) 库，该库由 GraphQL Java 团队维护。该库是 JS 库 [DataLoader](https://github.com/graphql/dataloader) 的移植。请注意，在本书我们将 Java 库简称为“DataLoader”，并在讨论 JS DataLoader 时明确说明。
+n+1 问题非常常见，因此解决方案已内置在 GraphQL Java 中并可以在 Spring for GraphQL 中通过控制器注解`@BatchMapping`访问。解决方案使用了 [java-dataloader](https://github.com/graphql-java/java-dataloader) 库，该库由 GraphQL Java 团队维护。该库是 JS 库 [DataLoader](https://github.com/graphql/dataloader) 的移植。请注意，在本书我们将 Java 库简称为“DataLoader”，并在讨论 JS DataLoader 时明确说明。
 
 在 Spring for GraphQL 中实现这一解决方案只需要很小的更改。
 
@@ -6128,15 +6097,18 @@ record PersonController(PersonService personService) {
   }
 }
 ```
+
 （注：源文件中提供的代码块被元数据严重干扰；我已根据文中提供的上下文对其进行了清理，以反映逻辑上的 Java 实现）。
 
 ## DataLoader 概述
 
 DataLoader 是 GraphQL Java 用于批处理和缓存请求的库。批处理解决了 n+1 问题，而缓存让数据请求更高效。该库也由 GraphQL Java 团队维护。
 
-有两个关键概念。`DataLoader` 实例在概念上是一个延迟加载实体的层，通过某些键进行标识。分发（dispatch）的时机由 GraphQL Java 管理。该库被称为“DataLoader”。为了区分这两者，我们用“class”或“instance”来指代它。
+有两个关键概念。`DataLoader`实例在概念上是一个延迟加载实体的层，通过某些键进行标识。分发（dispatch）的时机由 GraphQL Java 管理。该库被称为“DataLoader”。为了区分这两者，我们用“class”或“instance”来指代它。
 
-有趣的是，DataLoader 并不是 GraphQL 特有的，也不是 GraphQL 规范的一部分。为了更好地理解 DataLoader 的工作原理，我们将通过多个示例。由于 DataLoader 不是 GraphQL 特有的，让我们从一个不包含任何 GraphQL 概念的简单示例开始。
+
+
+有趣的是，`DataLoader` 并不是 GraphQL 特有的，也不是 GraphQL 规范的一部分。为了更好地理解 `DataLoader` 的工作原理，我们将通过多个示例。由于 `DataLoader` 不是 GraphQL 特有的，让我们从一个不包含任何 GraphQL 概念的简单示例开始。
 
 ```java
 // Setup
@@ -6158,9 +6130,6 @@ User user1 = user1CF.get();
 User user2 = user2CF.get();
 ```
 
-
-
-
 然后我们通过 `DataLoaderFactory` 创建一个新的 `DataLoader` 实例，并提供 `BatchLoader`。我们的 `DataLoader` 参数类型为 `Integer` 和 `User`，这表示我们有一个从 `Integer` 值到 `User` 的映射。`DataLoader` 的核心思想是我们有一个键（在此例中为 `Integer`）映射到一个实体（`User`）。这意味着我们可以根据给定的键加载实体。
 
 到此设置完成，然后我们就可以开始使用 `DataLoader.load` 了。我们会立即返回这两个调用的 `CompletableFuture`，但请注意，此时尚未发生任何实际加载。
@@ -6175,9 +6144,9 @@ User user2 = user2CF.get();
 
 ## DataLoader 与 GraphQL Java
 
-让我们结合 GraphQL 概念来过一遍 `DataLoader` 示例。我们将使用纯 GraphQL Java 来展示这个示例，以便在没有 Spring 自动化魔力的情况下解释 DataLoader。你不需要编写这些代码，因为 Spring for GraphQL 的 `@BatchMapping` 控制器注解已经消除了大部分此类模板代码。
+让我们结合 GraphQL 概念来过一遍 `DataLoader` 示例。我们将使用纯 GraphQL Java 来展示这个示例，以便在没有 Spring 自动化魔力的情况下解释 `DataLoader`。你不需要编写这些代码，因为 Spring for GraphQL 的 `@BatchMapping` 控制器注解已经消除了大部分此类模板代码。
 
-继续我们关于人及其最好朋友的示例。这是 DataLoader 在纯 GraphQL Java 中与 `bestFriend` DataFetcher 协同工作的方式。
+继续我们关于人及其最好朋友的示例。这是 `DataLoader` 在纯 GraphQL Java 中与 `bestFriend` DataFetcher 协同工作的方式。
 
 ```java
 import graphql.ExecutionInput;
@@ -6289,8 +6258,6 @@ Person `DataLoader` 已经注册到 `bestFriend` DataFetcher 中。
 
 强调一下，在这个纯 GraphQL Java 代码中并没有显式的“分发”（dispatch）操作。这是因为 GraphQL Java 在 `DataLoaderDispatcherInstrumentation` 的帮助下知道何时进行分发，该拦截器会自动添加到 `GraphQL` 实例中。
 
-
-
 在 Spring for GraphQL 中，单一的中心 `BatchLoaderRegistry` 暴露了工厂方法和构建器，用于创建和注册 `BatchLoader`。Spring Boot starter 声明了一个 `BatchLoaderRegistry` bean，它可以被注入到示例中的控制器等组件中。Spring for GraphQL 会将 `DataLoader` 实例注入到 `DataFetcher` 中。
 
 ```java
@@ -6347,6 +6314,8 @@ class PersonController {
 
 在我们的示例中，`bestFriend` DataFetcher 直接委托给 `DataLoader`。这允许我们像在本章之前看到的那样通过使用 `@BatchMapping` 注解进一步减少代码。
 
+
+
 ```java
 package myservice.service;
 
@@ -6376,8 +6345,6 @@ class PersonController {
 }
 ```
 
-
-
 `DataFetchers` 是实现 Spring for GraphQL 服务的核心概念，因为它们是模式（schema）和数据之间的桥。编写 `DataFetchers` 的主要指南是它们应该是非常轻量化的（thin），并将实际工作委托给下层的代码层。`DataFetcher` 的唯一目的应该是处理 GraphQL 特有的方面。例如：读取和验证输入、映射返回数据、处理异常并将其转换为错误。
 
 通过有意识地将 `DataFetchers` 设计得轻量化，它们也变得更容易编写单元测试。
@@ -6402,7 +6369,7 @@ query greeting {
 }
 ```
 
-以及一个通过 `@QueryMapping` 控制器注解注册的简单 `DataFetcher`。
+以及一个通过 `@QueryMapping` 控制器注解注册的简单 `DataFetcher`：
 
 ```java
 package myservice.service;
@@ -6453,10 +6420,10 @@ class GreetingControllerTest {
 
 `GraphQlTester` 是 Spring for GraphQL 中帮助我们进行测试的主要类。`GraphQlTester` 是一个包含几个内部接口的 Java 接口，它提供了丰富的 API 来执行请求和验证响应。针对不同类型的测试有许多种实现：
 
-* `HttpGraphQlTester` 用于基于 HTTP 的测试，利用了 `WebTestClient`
-* `WebGraphQlTester` 用于测试 `WebGraphQlHandler`
-* `ExecutionGraphQlServiceTester` 用于测试 `ExecutionGraphQlService`
-* `WebSocketGraphQlTester` 用于测试 WebSocket 请求
+- `HttpGraphQlTester` 用于基于 HTTP 的测试，利用了 `WebTestClient`。
+- `WebGraphQlTester` 用于测试 `WebGraphQlHandler`。
+- `ExecutionGraphQlServiceTester` 用于测试 `ExecutionGraphQlService`。
+- `WebSocketGraphQlTester` 用于测试 WebSocket 请求。
 
 这些不同的类通常只用于创建 `GraphQlTester` 实例。在代码中使用，我们只引用 `GraphQlTester`。
 
@@ -6507,7 +6474,7 @@ class GreetingControllerTest {
 
 `GraphQlTester.Request` 指定了请求的细节（操作名称、变量），然后 `GraphQlTester.Request.execute` 返回一个 `GraphQlTester.Response`。
 
-### `GraphQlTester.Response`, `path`, `entity`, `entityList`
+### `GraphQlTester.Response`、`path`、`entity`、`entityList`
 
 `GraphQlTester.Response` 继承了 `Traversable`，这是一个简单的接口：
 
@@ -6519,12 +6486,9 @@ interface Traversable {
 
 我们可以配合 `path` 使用任何 [JsonPath]。在我们的 Hello World 示例中，我们使用了路径 `"hello"`。在本章稍后更复杂的 Pets 示例中，我们将看到如何从 Pets 列表中选择名称。
 
+你可以通过提供路径并返回一个 `GraphQlTester.Path` 来遍历 GraphQL 响应，它本身再次是一个 `Traversable`。`Path` 有多种不同的方法来断言或转换 GraphQL 响应的当前部分。我们可以将其转换为 `entity` 或 `entityList`，然后进行进一步断言。
 
-
-
-你可以通过提供路径并返回一个 `GraphQlTester.Path` 来遍历 GraphQL 响应，它本身再次是一个 `Traversable`。`Path` 有多种不同的方法来断言或转换 GraphQL 响应的当前部分。我们可以将其转换为 `entity` 或 `entityList` 然后进行进一步断言。
-
-例如，`Pet` 可以被转换为 `entity` 然后进行进一步断言。例如，一个非常基本的喜爱的宠物 Schema：
+例如，`Pet` 可以被转换为 `entity`，然后进行进一步断言。例如，一个非常基本的喜爱的宠物 Schema：
 
 ```graphql
 type Query {
@@ -6572,7 +6536,7 @@ Pet favoritePet = graphQlTester
         .path("favoritePet")
         .entity(Pet.class)
         .get()
-        // 在此处编写你的断言
+// 在此处编写你的断言
 ```
 
 请参阅本章节后面更复杂的 Pets 示例，了解在返回 `Pets` 列表时如何使用 `entityList`。
@@ -6594,11 +6558,11 @@ graphQlTester
   .isEqualTo("Hello, world!");
 ```
 
-为了过滤掉特定错误，我们可以使用 `errors().filter(error -> ...).verify()` 来从测试中排除错误。要验证是否存在某个错误，可以使用 `.errors().expect(error -> ...).verify()`。
+为了过滤掉特定错误，我们可以使用 `errors().filter(error -> ...) .verify()` 来从测试中排除错误。要验证是否存在某个错误，可以使用 `.errors().expect(error -> ...).verify()`。
 
 ## 测试不同的层
 
-正如本书开的 Spring for GraphQL 概述 所示，Spring for GraphQL 有三个关键类：`GraphQlHttpHandler`、`WebGraphQlHandler` 和 `ExecutionGraphQlService`。我们还可以测试 HTTP 传输层。
+正如本书开头的 Spring for GraphQL 概述所示，Spring for GraphQL 有三个关键类：`GraphQlHttpHandler`、`WebGraphQlHandler` 和 `ExecutionGraphQlService`。我们还可以测试 HTTP 传输层。
 
 回顾一下，请求会通过 Spring for GraphQL 中的三个主要类，每个类都有不同的职责，如图“Spring for GraphQL classes”所示：
 
@@ -6612,10 +6576,10 @@ Spring for GraphQL classes
 
 我们可以测试这些不同的层：
 
-* 跨 HTTP 的端到端：创建一个完全独立的进程并通过 HTTP 进行测试
-* 应用测试：在同一进程中进行测试，不包含完整的 HTTP 层，包含一个客户端
-* 服务端测试（不带客户端）：从 `WebGraphQlHandler` 开始
-* 服务端测试（不带客户端）：从 `ExecutionGraphQlService` 开始
+- 跨 HTTP 的端到端：创建一个完全独立的进程并通过 HTTP 进行测试。
+- 应用测试：在同一进程中进行测试，不包含完整的 HTTP 层，包含一个客户端。
+- 服务端测试（不带客户端）：从 `WebGraphQlHandler` 开始。
+- 服务端测试（不带客户端）：从 `ExecutionGraphQlService` 开始。
 
 注意，接下来的几节重点关注包含传输的 HTTP 测试。对于 WebSocket 测试，请参阅本章节后半部分的订阅测试部分。
 
@@ -6653,6 +6617,8 @@ class E2ETest {
 
 为了在没有 HTTP 层的情况下测试整个服务，我们可以在同一个 Java 虚拟机 (JVM) 中启动整个应用程序。使用 `@AutoConfigureGraphQlTester` 注解来自动配置 `GraphQlTester`。
 
+
+
 ```java
 package myservice.service;
 
@@ -6681,11 +6647,7 @@ class MockTest {
 }
 ```
 
-此测试仅验证应用程序 内部 JVM 内部的请求。它与之前的端到端测试不同，因为此测试中的请求没有通过 HTTP 传输层。
-
-
-
-
+此测试仅验证应用程序内部 JVM 内部的请求。它与之前的端到端测试不同，因为此测试中的请求没有通过 HTTP 传输层。
 
 ```java
 package myservice.service;
@@ -6881,10 +6843,6 @@ type Subscription {
 }
 ```
 
-
-
-
-
 ```java
 package myservice.service;
 
@@ -6974,35 +6932,35 @@ class SubscriptionTest {
 
 默认的 WebFlux 服务器是 Netty，意味着我们使用了 `ReactorNettyWebSocketClient`。
 
-我们使用 `WebSocketGraphQlTester` 来测试不同的层。
 
-我们通过提供 URL 和 WebSocket 客户端来创建一个 `WebSocketGraphQlTester`。默认的 WebFlux 服务器是 Netty，意味着我们使用了 `ReactorNettyWebSocketClient`。
 
-在这种情况下，我们使用 `StepVerifier` 来测试 `Flux`。
+我们使用`WebSocketGraphQlTester`来测试不同的层。
 
-我们使用 `WebSocketGraphQlTester` 来测试不同的层。
+我们通过提供 URL 和 WebSocket 客户端来创建一个`WebSocketGraphQlTester`。默认的 WebFlux 服务器是 Netty，意味着我们使用了`ReactorNettyWebSocketClient`。
 
-### 保护 Spring for GraphQL 服务
+在这种情况下，我们使用`StepVerifier`来测试`Flux`。
 
-我们使用 `WebSocketGraphQlTester` 来测试不同的层。
+## 保护 Spring for GraphQL 服务
 
-我们通过提供 URL 和 WebSocket 客户端来创建一个 `WebSocketGraphQlTester`。默认的 WebFlux 服务器是 Netty，意味着我们使用了 `ReactorNettyWebSocketClient`。
+我们使用`WebSocketGraphQlTester`来测试不同的层。
 
-在这种情况下，我们使用 `StepVerifier` 来测试 `Flux`。
+我们通过提供 URL 和 WebSocket 客户端来创建一个`WebSocketGraphQlTester`。默认的 WebFlux 服务器是 Netty，意味着我们使用了`ReactorNettyWebSocketClient`。
 
-默认的 WebFlux 服务器是 Netty，意味着我们使用了 `ReactorNettyWebSocketClient`。
+在这种情况下，我们使用`StepVerifier`来测试`Flux`。
 
-我们使用 `WebSocketGraphQlTester` 来测试不同的层。
+默认的 WebFlux 服务器是 Netty，意味着我们使用了`ReactorNettyWebSocketClient`。
 
-我们通过提供 URL 和 WebSocket 客户端来创建一个 `WebSocketGraphQlTester`。默认的 WebFlux 服务器是 Netty，意味着我们使用了 `ReactorNettyWebSocketClient`。
+我们使用`WebSocketGraphQlTester`来测试不同的层。
 
-在这种情况下，我们使用 `StepVerifier` 来测试 `Flux`。
+我们通过提供 URL 和 WebSocket 客户端来创建一个`WebSocketGraphQlTester`。默认的 WebFlux 服务器是 Netty，意味着我们使用了`ReactorNettyWebSocketClient`。
 
-我们使用 `WebSocketGraphQlTester` 来测试不同的层。
+在这种情况下，我们使用`StepVerifier`来测试`Flux`。
+
+我们使用`WebSocketGraphQlTester`来测试不同的层。
 
 ### 安全
 
-我们使用 `StepVerifier` 来测试 `Flux`。
+我们使用`StepVerifier`来测试`Flux`。
 
 由于 GraphQL 规范没有规定任何身份验证或授权逻辑，Spring 也没有提供这些功能。在本章中，我们将重点关注使用 Spring Security 来保护你的服务。
 
@@ -7037,7 +6995,7 @@ type DeleteOrderPayload {
 }
 ```
 
-让我们实现一个非常简单的 Java 类 `OrderService`，用于加载和更改存储在内存中的订单。
+让我们实现一个非常简单的 Java 类`OrderService`，用于加载和更改存储在内存中的订单。
 
 ```java
 package myservice.service;
@@ -7046,11 +7004,8 @@ record Order(String id, String details, String owner) {
 }
 ```
 
+## 订单服务
 
-
-
-
-# 订单服务
 ```java
 package myservice.service;
 
@@ -7090,7 +7045,7 @@ class OrderService {
 }
 ```
 
-这个简单的 Java 类包含了我们想要的基础功能方面：`getOrdersByOwner` 返回提供所有者的订单列表，而 `deleteOrder` 用于删除订单。
+这个简单的 Java 类包含了我们想要的基础功能方面：`getOrdersByOwner`返回提供所有者的订单列表，而`deleteOrder`用于删除订单。
 
 我们的身份验证将使用 session cookies，并且我们要求每个请求都必须拥有有效的 session。这意味着在请求执行开始之前，我们需要确保我们有一个有效的 session，否则我们将返回 HTTP 401 状态码。
 
@@ -7100,7 +7055,7 @@ class OrderService {
 
 `org.springframework.boot:spring-boot-starter-security`
 
-然后创建以下 `Config` 类。
+然后创建以下`Config`类。
 
 ```java
 package myservice.service;
@@ -7150,14 +7105,20 @@ class Config {
 }
 ```
 
-## 安全配置详情
-`Config` 类执行了以下操作：
-- **表单登录 (Form Login)**：配置表单登录，并在成功后重定向到 `/graphql`。
-- **CSRF**：出于演示目的已禁用。
-- **授权 (Authorization)**：要求所有交换经过身份验证。
-- **用户详情 (User Details)**：定义了两个模拟用户：`Luna`（角色 `USER`）和 `Andi`（角色 `ADMIN`）。
+### 安全配置详情
 
-## GraphQL Controller
+`Config`类执行了以下操作：
+
+- **表单登录 (Form Login)**：配置表单登录，并在成功后重定向到`/graphql`。
+
+- **CSRF**：出于演示目的已禁用。
+
+- **授权 (Authorization)**：要求所有交换经过身份验证。
+
+- **用户详情 (User Details)**：定义了两个模拟用户：`Luna`（角色`USER`）和`Andi`（角色`ADMIN`）。
+
+### GraphQL Controller
+
 这是实现授权的第一部分。我们使用当前用户来过滤返回的订单。我们只返回他们的订单。
 
 ```java
@@ -7177,9 +7138,6 @@ record OrderController(OrderService orderService) {
   }
 }
 ```
-
-
-
 
 ```java
 package myservice.service;
@@ -7218,9 +7176,9 @@ record OrderController(OrderService orderService) {
 }
 ```
 
-我们再次使用了注入的 `Principal`，但这次我们用它验证当前用户是否拥有正确的角色，而不是过滤订单。如果用户未授权，我们将抛出一个 `AccessDeniedException`。
+我们再次使用了注入的`Principal`，但这次我们用它验证当前用户是否拥有正确的角色，而不是过滤订单。如果用户未授权，我们将抛出一个`AccessDeniedException`。
 
-我们可以通过在 `/login` 以“Luna”身份登录（密码为“password”）来手动测试此服务，并通过 GraphiQL 玩具查询所有订单，如截图“Luna’s orders”所示。
+我们可以通过在`/login`以“Luna”身份登录（密码为“password”）来手动测试此服务，并通过 GraphiQL 玩具查询所有订单，如截图“Luna’s orders”所示。
 
 ```graphql
 query lunaOrders {
@@ -7248,21 +7206,23 @@ mutation lunaUnauthorized {
 
 Luna is unauthorized to delete orders
 
-在我们通过 `/logout` 退出并以“Andi”身份登录（密码为“password”）后，我们就可以删除订单。
+在我们通过`/logout`退出并以“Andi”身份登录（密码为“password”）后，我们就可以删除订单。
 
-需要注意的是，使用已登录用户进行未授权删除订单的操作**不会**导致 HTTP 错误。HTTP 响应的状态码为 `200`，其中包含一个 GraphQL 错误。
+需要注意的是，使用已登录用户进行未授权删除订单的操作**不会**导致 HTTP 错误。HTTP 响应的状态码为`200`，其中包含一个 GraphQL 错误。
 
 ## Spring for GraphQL 对安全的支持
 
-在存储订单的示例中，我们看到了 Spring for GraphQL 支持 Spring Security 的一个特性：我们可以将 `java.security.Principal` 声明为注解方法的输入（这包括 `@BatchMapping`）。
+在存储订单的示例中，我们看到了 Spring for GraphQL 支持 Spring Security 的一个特性：我们可以将`java.security.Principal`声明为注解方法的输入（这包括`@BatchMapping`）。
 
-Spring for GraphQL 自动注册一个 `ReactiveSecurityDataFetcherExceptionResolver`（或 WebMVC 的 `SecurityDataFetcherExceptionResolver`）来处理 `AuthenticationException` 和 `AccessDeniedException`。`AuthenticationException` 和 `AccessDeniedException` 分别导致错误类型为 `UNAUTHORIZED` 和 `FORBIDDEN` 的 GraphQL 错误。
+Spring for GraphQL 自动注册一个`ReactiveSecurityDataFetcherExceptionResolver`（或 WebMVC 的`SecurityDataFetcherExceptionResolver`）来处理`AuthenticationException`和`AccessDeniedException`。`AuthenticationException`和`AccessDeniedException`分别导致错误类型为`UNAUTHORIZED`和`FORBIDDEN`的 GraphQL 错误。
 
 ## 方法安全
 
-我们上面的存储订单示例中存在的一个问题是执行授权检查的位置。它们直接发生在每个 DataFetcher 内部。这并不好。更好且推荐的方法是保护 `OrderService` 本身，这样无论哪个 DataFetcher 使用它，它都是安全的。
+我们上面的存储订单示例中存在的一个问题是执行授权检查的位置。它们直接发生在每个 DataFetcher 内部。这并不好。更好且推荐的方法是保护`OrderService`本身，这样无论哪个 DataFetcher 使用它，它都是安全的。
 
-Spring Security 提供了方法级注解以以声明的方式进行授权。由于 Spring for GraphQL 集成了 Spring Security，我们可以使用这些注解来重构 `OrderService`。
+Spring Security 提供了方法级注解以以声明的方式进行授权。由于 Spring for GraphQL 集成了 Spring Security，我们可以使用这些注解来重构`OrderService`。
+
+
 
 ```java
 @PreAuthorize("hasRole('ADMIN')")
@@ -7271,9 +7231,9 @@ Mono<Boolean> deleteOrder(String orderId) {
 }
 ```
 
-为了让 `PreAuthorize` 在 WebFlux 服务中生效，带注解的方法必须返回 `Mono` 或 `Flux`。因此，我们需要将返回值封装在 `Mono` 中。
+为了让`PreAuthorize`在 WebFlux 服务中生效，带注解的方法必须返回`Mono`或`Flux`。因此，我们需要将返回值封装在`Mono`中。
 
-我们还将 `getOrdersByOwner` 重构为 `getOrdersForCurrentUser`，并使用 `ReactiveSecurityContextHolder` 来获取当前登录的用户。
+我们还将`getOrdersByOwner`重构为`getOrdersForCurrentUser`，并使用`ReactiveSecurityContextHolder`来获取当前登录的用户。
 
 ```java
 Mono<List<Order>> getOrdersForCurrentUser() {
@@ -7288,13 +7248,9 @@ Mono<List<Order>> getOrdersForCurrentUser() {
 }
 ```
 
-我们需要将返回类型更改为 `Mono`，因为 `ReactiveSecurityContextHolder` 本身是响应式的。最后，我们需要在 `Config` 类中添加 `@EnableReactiveMethodSecurity` 来启用这些注解。
+我们需要将返回类型更改为`Mono`，因为`ReactiveSecurityContextHolder`本身是响应式的。最后，我们需要在`Config`类中添加`@EnableReactiveMethodSecurity`来启用这些注解。
 
-整合以上内容，这里是 `Config`、`Controller` 和 `OrderService` 的完整源代码。
-
-
-
-
+整合以上内容，这里是`Config`、`Controller`和`OrderService`的完整源代码。
 
 ```java
 package myservice.service;
@@ -7437,9 +7393,9 @@ class OrderService {
 }
 ```
 
-注意，所有的授权逻辑现在都包含在 `OrderService` 中。
+注意，所有的授权逻辑现在都包含在`OrderService`中。
 
-除了 `@PreAuthorize`，Spring Security 还提供了 `@PostAuthorize`、`@PreFilter` 和 `@PostFilter` 用于在方法调用前后执行授权。
+除了`@PreAuthorize`，Spring Security 还提供了`@PostAuthorize`、`@PreFilter`和`@PostFilter`用于在方法调用前后执行授权。
 
 ## 测试认证
 
@@ -7488,14 +7444,13 @@ class AuthE2ETest {
 }
 ```
 
+在此端到端测试中，我们拒绝了一个带有`302 Found`结果的 GraphQL 请求，并重定向到另一个页面（登录页面）。根据服务的不同，我们可以断言另一个 HTTP 状态码，例如`401 Unauthorized`。
 
-
-
-在此端到端测试中，我们拒绝了一个带有 `302 Found` 结果的 GraphQL 请求，并重定向到另一个页面（登录页面）。根据服务的不同，我们可以断言另一个 HTTP 状态码，例如 `401 Unauthorized`。
-
-如果你只想测试 GraphQL 层，而不是整个服务的端到端测试，可以使用 `WebGraphQlTester`。
+如果你只想测试 GraphQL 层，而不是整个服务的端到端测试，可以使用`WebGraphQlTester`。
 
 让我们测试我们是否为已身份验证的用户返回了正确的订单。
+
+
 
 ```java
 package myservice.service;
@@ -7560,7 +7515,7 @@ class WebGraphQlTest {
 }
 ```
 
-我们注册了一个新的 `WebInterceptor` 并创建了已身份验证的用户，因为 Spring Security 依赖于 `SecurityContext`，而它本身存储在 Reactor 上下文中。在测试本身中，我们验证了没有返回错误，然后检查响应中的订单 ID。这些订单 ID 之前在 `OrderService` 中定义。
+我们注册了一个新的`WebInterceptor`并创建了已身份验证的用户，因为 Spring Security 依赖于`SecurityContext`，而它本身存储在 Reactor 上下文中。在测试本身中，我们验证了没有返回错误，然后检查响应中的订单 ID。这些订单 ID 之前在`OrderService`中定义。
 
 在同一个类中，我们还可以测试未授权的用户是否无法删除订单。
 
@@ -7582,21 +7537,21 @@ class WebGraphQlTest {
   }
 ```
 
-注意此测试验证的是 GraphQL 错误，而不是 HTTP 状态码，因为整个 HTTP 响应是 `200`。我们验证了消息和路径是否符合我们的预期。
+注意此测试验证的是 GraphQL 错误，而不是 HTTP 状态码，因为整个 HTTP 响应是`200`。我们验证了消息和路径是否符合我们的预期。
 
 在本章中我们涵盖了如何利用 Spring for GraphQL 有用的 Spring Security 集成来保护 GraphQL 服务。
 
 # Java 客户端
 
-Spring for GraphQL 自带了一个客户端 `GraphQlClient`，用于通过 HTTP 或 WebSocket 发送 GraphQL 请求。
+Spring for GraphQL 自带了一个客户端`GraphQlClient`，用于通过 HTTP 或 WebSocket 发送 GraphQL 请求。
 
-`HttpGraphQlClient` 用于查询和变变，通过 HTTP 执行 GraphQL 请求。`WebSocketGraphQlClient` 用于订阅，通过共享的 WebSocket 连接执行 GraphQL 请求。
+`HttpGraphQlClient`用于查询和变变，通过 HTTP 执行 GraphQL 请求。`WebSocketGraphQlClient`用于订阅，通过共享的 WebSocket 连接执行 GraphQL 请求。
 
-我们与基础 Java 接口 `GraphQlClient` 交互。我们使用 `HttpGraphQlClient` 和 `WebSocketGraphQlClient` 创建实现 `GraphQlClient` 接口的特定实例。这种设计与我们之前在测试章节中讨论过的 `GraphQlTester` 类似。
+我们与基础 Java 接口`GraphQlClient`交互。我们使用`HttpGraphQlClient`和`WebSocketGraphQlClient`创建实现`GraphQlClient`接口的特定实例。这种设计与我们之前在测试章节中讨论过的`GraphQlTester`类似。
 
 ## HTTP 客户端
 
-HTTP GraphQL 客户端基本上是 `WebClient` 的封装，因此在创建 `HttpGraphQlClient` 时我们需要提供一个 `WebClient`。
+HTTP GraphQL 客户端基本上是`WebClient`的封装，因此在创建`HttpGraphQlClient`时我们需要提供一个`WebClient`。
 
 ```java
 package myservice.service;
@@ -7626,7 +7581,7 @@ HttpGraphQlClient graphQlClient = HttpGraphQlClient
   .build();
 ```
 
-我们还可以提供其他设置，如 `url`。
+我们还可以提供其他设置，如`url`。
 
 ```java
 HttpGraphQlClient graphQlClient = HttpGraphQlClient
@@ -7646,13 +7601,9 @@ HttpGraphQlClient newClient = graphQlClient
 
 ## WebSocket 客户端
 
-`WebSocketGraphQlClient` 底使用 `WebSocketClient`。在创建新的 `WebSocketGraphQlClient` 时，我们需要提供一个 `WebSocketClient`。注意 `WebSocketClient` 是一个抽象，提供了 Reactor Netty、Tomcat [以及其他](https://docs.spring.org/spring-framework/docs/current/reference/html/web-reactive.html#webflux-websocket-client) 的实现。
+`WebSocketGraphQlClient`底使用`WebSocketClient`。在创建新的`WebSocketGraphQlClient`时，我们需要提供一个`WebSocketClient`。注意`WebSocketClient`是一个抽象，提供了 Reactor Netty、Tomcat [以及其他](https://docs.spring.org/spring-framework/docs/current/reference/html/web-reactive.html#webflux-websocket-client) 的实现。
 
 这是一个使用基于 Netty 实现的示例。
-
-
-
-
 
 ```java
 import org.springframework.graphql.client.WebSocketGraphQlClient;
@@ -7666,7 +7617,7 @@ WebSocketGraphQlClient graphQlClient = WebSocketGraphQlClient
   .build();
 ```
 
-注意，在 WebSocket 客户端中，我们通过构建 `builder(url, client)` 提供 URL，而在 HTTP 客户端中，它是通过构建 `url` 设置的。
+注意，在 WebSocket 客户端中，我们通过构建`builder(url, client)`提供 URL，而在 HTTP 客户端中，它是通过构建`url`设置的。
 
 一旦创建，我们就无法更改任何 WebSocket 客户端设置。对于不同的设置，我们需要变异客户端并再次使用构建方法。
 
@@ -7679,9 +7630,9 @@ WebSocketGraphQlClient newClient = graphQlClient
 
 ## GraphQlClient
 
-在创建 HTTP 或 WebSocket 客户端实例后，我们才能使用 `GraphQlClient`。在以下示例中，`graphQlClient` 可以是 HTTP 客户端，也可以是 WebSocket 客户端。
+在创建 HTTP 或 WebSocket 客户端实例后，我们才能使用`GraphQlClient`。在以下示例中，`graphQlClient`可以是 HTTP 客户端，也可以是 WebSocket 客户端。
 
-使用 `document` 或 `documentName` 来定义请求操作，然后我们可以 `retrieve` 响应的特定部分。注意，这在设计上与 `GraphQlTester` 相似。
+使用`document`或`documentName`来定义请求操作，然后我们可以`retrieve`响应的特定部分。注意，这在设计上与`GraphQlTester`相似。
 
 ```java
 Mono<List<Pet>> pets = graphQlClient
@@ -7690,7 +7641,7 @@ Mono<List<Pet>> pets = graphQlClient
   .toEntityList(Pet.class);
 ```
 
-如果我们有订阅请求，我们使用 `retrieveSubscription` 来获取 `Flux` 而不是 `Mono`。
+如果我们有订阅请求，我们使用`retrieveSubscription`来获取`Flux`而不是`Mono`。
 
 ```java
 Flux<Pet> pets = graphQlClient
@@ -7699,7 +7650,7 @@ Flux<Pet> pets = graphQlClient
   .toEntity(Pet.class);
 ```
 
-作为 `retrieve` 的替代方案，可以使用 `execute` 和 `executeSubscription` 分别返回 `Mono<ClientGraphQlResponse>` 或 `Flux<ClientGraphQlResponse>`。`ClientGraphQlResponse` 允许访问完整的 GraphQL 响应，包括 GraphQL 错误。
+作为`retrieve`的替代方案，可以使用`execute`和`executeSubscription`分别返回`Mono<ClientGraphQlResponse>`或`Flux<ClientGraphQlResponse>`。`ClientGraphQlResponse`允许访问完整的 GraphQL 响应，包括 GraphQL 错误。
 
 ```java
 Mono<List<Pet>> pets = graphQlClient
@@ -7711,5 +7662,4 @@ Mono<List<Pet>> pets = graphQlClient
   });
 ```
 
-在本章中，我们涵盖了 Spring for GraphQL 内置的 `GraphQlClient`，用于通过 HTTP 或 WebSocket 发送 GraphQL 请求。
-
+在本章中，我们涵盖了 Spring for GraphQL 内置的`GraphQlClient`，用于通过 HTTP 或 WebSocket 发送 GraphQL 请求。

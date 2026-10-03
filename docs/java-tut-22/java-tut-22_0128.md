@@ -1,3 +1,4 @@
+
 # 通配符和子类型
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/generics/subtyping.html`](https://docs.oracle.com/javase/tutorial/java/generics/subtyping.html)
@@ -9,7 +10,6 @@
 ```java
 class A { /* ... */ }
 class B extends A { /* ... */ }
-
 ```
 
 编写以下代码是合理的：
@@ -17,7 +17,6 @@ class B extends A { /* ... */ }
 ```java
 B b = new B();
 A a = b;
-
 ```
 
 此示例显示了常规类的继承遵循子类型规则：如果`B`扩展`A`，则类`B`是类`A`的子类型。这个规则不适用于泛型类型：
@@ -25,7 +24,6 @@ A a = b;
 ```java
 List<B> lb = new ArrayList<>();
 List<A> la = lb;   // compile-time error
-
 ```
 
 鉴于`Integer`是`Number`的子类型，那么`List<Integer>`和`List<Number>`之间的关系是什么？
@@ -39,7 +37,6 @@ List<A> la = lb;   // compile-time error
 ```java
 List<? extends Integer> intList = new ArrayList<>();
 List<? extends Number>  numList = intList;  // OK. List<? extends Integer> is a subtype of List<? extends Number>
-
 ```
 
 因为`Integer`是`Number`的子类型，而`numList`是`Number`对象的列表，现在`intList`（`Integer`对象的列表）和`numList`之间存在关系。以下图表显示了使用上下界通配符声明的几个`List`类之间的关系。

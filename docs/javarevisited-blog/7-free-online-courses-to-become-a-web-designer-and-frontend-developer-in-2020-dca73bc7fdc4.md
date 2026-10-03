@@ -1,3 +1,4 @@
+
 # 2023 年前端 Web 开发人员的 7 门最佳免费在线课程
 
 > 原文：<https://medium.com/javarevisited/7-free-online-courses-to-become-a-web-designer-and-frontend-developer-in-2020-dca73bc7fdc4?source=collection_archive---------0----------------------->
@@ -8,7 +9,7 @@
 
 由 [WebFactory 有限公司](https://unsplash.com/@webfactoryltd?utm_source=medium&utm_medium=referral)在 [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral) 上拍摄的照片
 
-大家好，我已经在这个博客上分享了很多关于各种技术和编程语言的免费在线课程和书籍，如 [Python](http://www.java67.com/2018/02/5-free-python-online-courses-for-beginners.html) ， [Java](http://javarevisited.blogspot.sg/2017/11/top-5-free-java-courses-for-beginners.html#axzz5B6EWE6M7) ， [C++](http://www.java67.com/2018/02/5-free-cpp-courses-to-learn-programming.html) ， [JavaScript](http://www.java67.com/2015/12/best-websites-to-learn-javascript-online.html) ， [PHP](http://www.java67.com/2018/02/5-free-php-and-mysql-courses-for-web-developers.html) ， [React](http://www.java67.com/2018/02/5-free-react-courses-for-web-developers.html) ， [Angular](http://www.java67.com/2018/01/top-5-free-angular-js-online-courses-for-web-developers.html) ， [Spring](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html) ，今天我带来了一些非常棒的免费课程来学习 web 基础知识
+大家好，我已经在这个博客上分享了很多关于各种技术和编程语言的免费在线课程和书籍，如 [Python](http://www.java67.com/2018/02/5-free-python-online-courses-for-beginners.html) ， [Java](http://javarevisited.blogspot.sg/2017/11/top-5-free-java-courses-for-beginners.html#axzz5B6EWE6M7) ， [C++](http://www.java67.com/2018/02/5-free-cpp-courses-to-learn-programming.html) ， [JavaScript](http://www.java67.com/2015/12/best-websites-to-learn-javascript-online.html) ， [PHP](http://www.java67.com/2018/02/5-free-php-and-mysql-courses-for-web-developers.html) ， [React](http://www.java67.com/2018/02/5-free-react-courses-for-web-developers.html) ， [Angular](http://www.java67.com/2018/01/top-5-free-angular-js-online-courses-for-web-developers.html) ， [Spring](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html) ，今天我带来了一些非常棒的免费课程来学习 web 基础知识。
 
 在这个创业时代，网络开发是程序员的一项基本技能。作为一个程序员或者软件开发人员，你应该知道如何创建一个网站，如何创建一个属于你自己的手机 app。
 
@@ -62,12 +63,10 @@
 
 本课程分为 4 个重要板块:
 
-1 .)HTML 部分
-2
-。)CSS 节
-3。)代码挑战决赛
-
-4。)课程项目
+1. HTML 部分
+2. CSS 节
+3. 代码挑战决赛
+4. 课程项目
 
 可以看到课程的结构非常好。前两节将从头到尾教你 [HTML 5](https://javarevisited.blogspot.com/2019/05/top-5-html-5-and-css-3-courses-for-web-developers.html) 和 [CSS 3](https://dev.to/javinpaul/these-are-the-best-free-courses-to-learn-html-and-css-for-frontend-developers-2g8g) ，第三节和第四节将测试你在前两节学到的知识。
 
@@ -91,31 +90,29 @@
 
 如果刚开始从零开始学习 web 开发，学习老版本是没有意义的。通过学习更新版本，你一定会获得更好的性能，并创建更好的应用程序。当你寻找一份网络开发工作时，这也会有所帮助，因为公司显然更喜欢拥有最新最棒的网络技术知识的候选人。
 
+
+
 **这里是免费加入本课程的链接**——[掌握 HTML5 的基础知识& CSS3:初学 Web 开发](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fmaster-the-basics-of-html5-css3-beginner-web-development%2F)
 
 [![](img/95895b1fdb5db316360f1596b7d2803c.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fmaster-the-basics-of-html5-css3-beginner-web-development%2F)
 
-## 6.Web 开发人员的 Web 设计:创建漂亮的网站！
+## 6. Web 开发人员的 Web 设计:创建漂亮的网站！
 
 这是在 1 小时内学习网页设计的最好的免费资源之一，包括 25 个简单易用的规则和指南以及大量惊人的网页设计资源！
 
 由 Jonas Schmedtmann 创建，他是我最喜欢的 [JavaScript Bootcamp](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-javascript-course%2F) 和 [HTML 5 和 CSS Bootcamp](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdesign-and-develop-a-killer-website-with-html5-and-css3%2F) 课程的作者。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-javascript-course%2F>  <https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdesign-and-develop-a-killer-website-with-html5-and-css3%2F>  
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-javascript-course%2F>  
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdesign-and-develop-a-killer-website-with-html5-and-css3%2F>
 
 在本课程中，您将学习以下内容:
 
-如何让文本看起来专业
-
-如何正确运用色彩的力量
-
-如何获得和使用令人惊叹的图像、字体和图标来制作您的网站
-
-如何使用空白和视觉层次创建布局
-
-如何激励自己学习更多关于网页设计的知识
-
-如何使用 8 种简单易用的技巧让你的网站转化得更好
+- 如何让文本看起来专业
+- 如何正确运用色彩的力量
+- 如何获得和使用令人惊叹的图像、字体和图标来制作您的网站
+- 如何使用空白和视觉层次创建布局
+- 如何激励自己学习更多关于网页设计的知识
+- 如何使用 8 种简单易用的技巧让你的网站转化得更好
 
 最棒的是，Jonas Schmedtmann 还提供有用的网页设计资源，帮助您开始下一个网页设计项目！加入这个免费课程后，您还可以立即免费获得课程《HTML5 和 CSS3 Web 设计和开发的电子书最佳资源》。
 
@@ -123,19 +120,19 @@
 
 [![](img/e3d5fa5d3daf981b7c92afe54cda108a.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fweb-design-secrets%2F)
 
-## 7.[面向所有人的网页设计:网页开发基础&编码专门化](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fweb-design)
+## 7. [面向所有人的网页设计:网页开发基础&编码专门化](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fweb-design)
 
 这是 Coursera 提供的免费资源，用于学习 Web 开发和编码的基础知识。这个专业包括如何编写语法正确的 HTML5 和 CSS3，以及如何用 JavaScript 创建交互式 web 体验。
 
 由@Colleen Van Let 创建，这是一个学习基本技能的很好的集合。这是由密歇根大学提供的，顺便说一句，如果你完成了课程，你将获得一个证书，该课程是免费学习的，但你需要支付认证费用。
 
-这个专业有 5 门课程可以免费旁听
+这个专业有 5 门课程可以免费旁听:
 
-1.  [**HTML 5 简介**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fhtml)
-2.  [T5【CSS3】简介 ](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fintrocss)
-3.  [**与 JavaScript 的交互性**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fjavascript)
-4.  [**高级造型与响应式设计**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fresponsivedesign)
-5.  [**网页设计为大家压轴戏**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fweb-design-project)
+1. [**HTML 5 简介**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fhtml)
+2. [**CSS3 简介**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fintrocss)
+3. [**与 JavaScript 的交互性**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fjavascript)
+4. [**高级造型与响应式设计**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fresponsivedesign)
+5. [**网页设计为大家压轴戏**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fweb-design-project)
 
 作为 Coursera 专业化的一部分，你还将建立一个专业质量的网页作品集，展示你作为一名网页开发者的成长和你的无障碍网页设计知识。
 
@@ -143,29 +140,29 @@
 
 [![](img/5e7020ee25fadb95c1c53134e5d9c56b.png)](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fweb-design)
 
-如果你觉得 Coursera 的课程有用，因为它们是由知名公司如谷歌、IBM、亚马逊和世界上最好的大学创建的，我建议你加入 Coursera 的订阅计划<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
+如果你觉得 Coursera 的课程有用，因为它们是由知名公司如谷歌、IBM、亚马逊和世界上最好的大学创建的，我建议你加入 Coursera 的订阅计划 <https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
-**这种单一订阅让你可以无限制地访问他们最受欢迎的**课程**、**专业化**、**职业证书**和**指导项目**。它每年花费大约 399 美元，但是它完全物有所值，因为你可以获得无限的证书。**
+**这种单一订阅让你可以无限制地访问他们最受欢迎的课程、专业化、职业证书和指导项目。它每年花费大约 399 美元，但是它完全物有所值，因为你可以获得无限的证书。**
 
-**<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
 以上是关于免费使用 HTML 和 CSS 学习 web 开发的一些最好的课程。即使你知道 HTML 和 CSS，这些免费资源也是更新知识和填补空白的好方法。Web 开发是一项重要的技能，而在创业时代，我认为每个程序员都应该知道如何自己创建一个网站或移动 app。
 
-其他**免费编程和网页开发**课程
+**其他免费编程和网页开发课程**
 
-1.  [完整的 Web 开发者路线图](/hackernoon/the-2019-web-developer-roadmap-ab89ac3c380e)
-2.  [面向 Web 开发人员的 15 门 Docker、Kubernetes 和 AWS 课程](/javarevisited/top-15-online-courses-to-learn-docker-kubernetes-and-aws-for-fullstack-developers-and-devops-d8cc4f16e773)
-3.  [Web 开发人员可以学习的 10 个 JavaScript 框架](/javarevisited/10-of-the-most-popular-javascript-frameworks-libraries-for-web-development-in-2019-a2c8cea68094)
-4.  [学习 Web 开发的前 5 门课程](/better-programming/my-5-favorite-courses-to-learn-web-development-in-2019-a5e74167f8b2)
-5.  [我最喜欢的学习 HTML 和 CSS 的免费课程](/javarevisited/5-free-html-and-css-courses-to-learn-front-end-web-development-online-8b04517c6ecb?source=collection_home---4------0-----------------------)
-6.  [2023 年学习打字稿的 10 门免费课程](/javarevisited/top-10-free-typescript-courses-to-learn-online-best-of-lot-44bce9da41d1)
-7.  [2023 年学习 JavaScript 的 12 门免费课程](/javarevisited/12-free-courses-to-learn-javascript-and-es6-for-beginners-and-experienced-developers-aa35874c9a32)
-8.  [完整的 React.js 开发者路线图](/javarevisited/the-2019-react-js-developer-roadmap-9a8e290b8a56)
-9.  [2023 年学习棱角分明的 10 本书和课程](/javarevisited/top-10-angular-books-and-courses-for-beginners-and-experienced-web-developers-best-of-lot-9a2dae87f04c)
-10.  [7 门免费课程，帮助网页设计师学习自举](/javarevisited/7-free-courses-to-learn-bootstrap-for-web-designers-and-developers-5135215648f1)
+1. [完整的 Web 开发者路线图](/hackernoon/the-2019-web-developer-roadmap-ab89ac3c380e)
+2. [面向 Web 开发人员的 15 门 Docker、Kubernetes 和 AWS 课程](/javarevisited/top-15-online-courses-to-learn-docker-kubernetes-and-aws-for-fullstack-developers-and-devops-d8cc4f16e773)
+3. [Web 开发人员可以学习的 10 个 JavaScript 框架](/javarevisited/10-of-the-most-popular-javascript-frameworks-libraries-for-web-development-in-2019-a2c8cea68094)
+4. [学习 Web 开发的前 5 门课程](/better-programming/my-5-favorite-courses-to-learn-web-development-in-2019-a5e74167f8b2)
+5. [我最喜欢的学习 HTML 和 CSS 的免费课程](/javarevisited/5-free-html-and-css-courses-to-learn-front-end-web-development-online-8b04517c6ecb?source=collection_home---4------0-----------------------)
+6. [2023 年学习打字稿的 10 门免费课程](/javarevisited/top-10-free-typescript-courses-to-learn-online-best-of-lot-44bce9da41d1)
+7. [2023 年学习 JavaScript 的 12 门免费课程](/javarevisited/12-free-courses-to-learn-javascript-and-es6-for-beginners-and-experienced-developers-aa35874c9a32)
+8. [完整的 React.js 开发者路线图](/javarevisited/the-2019-react-js-developer-roadmap-9a8e290b8a56)
+9. [2023 年学习棱角分明的 10 本书和课程](/javarevisited/top-10-angular-books-and-courses-for-beginners-and-experienced-web-developers-best-of-lot-9a2dae87f04c)
+10. [7 门免费课程，帮助网页设计师学习自举](/javarevisited/7-free-courses-to-learn-bootstrap-for-web-designers-and-developers-5135215648f1)
 
 感谢阅读这篇文章。如果你喜欢这些免费的网页开发课程，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
 
-**【p . s .】**——如果你能花几块钱上一门优秀的课程，那么我建议你只要看看 Colt_Steele 的[**Web Developer boot camp**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fthe-web-developer-bootcamp%2F)。从零开始学习 Web 开发的最佳课程之一。
+**【p . s .】**——如果你能花几块钱上一门优秀的课程，那么我建议你只要看看 Colt_Steele 的 [**Web Developer boot camp**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fthe-web-developer-bootcamp%2F)。从零开始学习 Web 开发的最佳课程之一。
 
-<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fthe-web-developer-bootcamp%2F> **
+<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fthe-web-developer-bootcamp%2F>

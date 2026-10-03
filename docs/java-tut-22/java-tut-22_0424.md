@@ -1,3 +1,4 @@
+
 # 如何打印表格
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/misc/printtable.html`](https://docs.oracle.com/javase/tutorial/uiswing/misc/printtable.html)
@@ -22,7 +23,6 @@ try {
     /* Printing failed, report to the user */
     ...
 }
-
 ```
 
 当你无参数调用`print`方法时，会显示一个打印对话框，然后以`FIT_WIDTH`模式交互式打印你的表格，没有页眉或页脚。下面的代码示例显示了带有完整参数集的`print`方法签名。
@@ -35,7 +35,6 @@ boolean complete = table.print(JTable.PrintMode printMode,
                                PrintRequestAttributeSet attr,
                                boolean interactive,
                                PrintService service);
-
 ```
 
 当你调用`print`方法并传入所有参数时，你明确选择了打印特性，如打印模式、页眉和页脚文本、打印属性、目标打印服务，以及是否显示打印对话框，以及是否交互式或非交互式打印。要决定哪些参数最适合你的需求，请参阅下面可用特性的描述。
@@ -43,13 +42,9 @@ boolean complete = table.print(JTable.PrintMode printMode,
 `JTable`打印 API 提供以下特性：
 
 +   交互式或非交互式打印
-
 +   显示打印对话框
-
 +   向打印布局添加页眉或页脚（或两者）
-
 +   选择打印模式
-
 +   自动布局和分页
 
 ## 交互式或非交互式打印
@@ -67,13 +62,9 @@ boolean complete = table.print(JTable.PrintMode printMode,
 您可以显示一个标准的打印对话框，允许用户执行以下操作：
 
 +   选择打印机
-
 +   指定打印份数
-
 +   更改打印属性
-
 +   在开始打印之前取消打印
-
 +   开始打印
 
 ![打印对话框的屏幕截图](img/0703b9859a695aec96693d04ca4c7133.png)
@@ -82,7 +73,7 @@ boolean complete = table.print(JTable.PrintMode printMode,
 
 ## 向打印布局添加页眉或页脚（或两者）
 
-头部和页脚由[`MessageFormat`](https://docs.oracle.com/javase/8/docs/api/java/text/MessageFormat.html)参数提供。这些参数允许对头部和页脚进行本地化。阅读[`MessageFormat`](https://docs.oracle.com/javase/8/docs/api/java/text/MessageFormat.html)类的文档，因为一些字符，如单引号，是特殊的，需要避免使用。头部和页脚都居中。您可以使用{0}插入页码。
+头部和页脚由[`MessageFormat`](https://docs.oracle.com/javase/8/docs/api/java/text/MessageFormat.html)参数提供。这些参数允许对头部和页脚进行本地化。阅读[`MessageFormat`](https://docs.oracle.com/javase/8/docs/api/java/text/MessageFormat.html)类的文档，因为一些字符，如单引号，是特殊的，需要避免使用。头部和页脚都居中。您可以使用`{0}`插入页码。
 
 `MessageFormat footer = new MessageFormat("第 - {0} 页");`
 
@@ -93,14 +84,13 @@ boolean complete = table.print(JTable.PrintMode printMode,
 打印模式负责缩放输出并将其分布在页面上。您可以以以下一种模式之一打印表格：
 
 +   `PrintMode.NORMAL`
-
 +   `PrintMode.FIT_WIDTH`
 
 在`NORMAL`模式下，表格以其当前大小打印。如果列不适合一页，它们将根据表的`ComponentOrientation`跨越额外的页面。在`FIT_WIDTH`模式下，如果需要，表格的大小会更小，以便在每页上容纳所有列。请注意，宽度和高度都会按比例缩放，以提供相同纵横比的输出。在两种模式下，行会按顺序跨越多个页面，每页尽可能多的行。
 
 ## 自动布局和分页
 
-使用`JTable`打印 API，您无需关心布局和分页。您只需为`print`方法指定适当的参数，如打印模式和页脚文本格式（如果您想在页脚插入页码）。如前所示，您可以通过在提供给`MessageFormat`页脚参数的字符串中包含`"{0}"`来在页脚中指定页码。在打印输出中，{0}将被当前页码替换。
+使用`JTable`打印 API，您无需关心布局和分页。您只需为`print`方法指定适当的参数，如打印模式和页脚文本格式（如果您想在页脚插入页码）。如前所示，您可以通过在提供给`MessageFormat`页脚参数的字符串中包含`"{0}"`来在页脚中指定页码。在打印输出中，`{0}`将被当前页码替换。
 
 ## 表打印示例
 
@@ -108,25 +98,23 @@ boolean complete = table.print(JTable.PrintMode printMode,
 
 ![TablePrintDemo1 的屏幕截图](img/bc5cf48d8f76c23940099833a847dd78.png)
 
-* * *
-
 **试试这个：**
 
-1.  单击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 TablePrintDemo1（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 TablePrintDemo1 应用程序](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TablePrintDemo1Project/TablePrintDemo1.jnlp)
+1.  单击"启动"按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 TablePrintDemo1（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 TablePrintDemo1 应用程序](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TablePrintDemo1Project/TablePrintDemo1.jnlp)
 
-1.  应用程序窗口底部的每个复选框都有工具提示。将光标悬停在复选框上以查找其目的。
+2.  应用程序窗口底部的每个复选框都有工具提示。将光标悬停在复选框上以查找其目的。
 
-1.  在“页眉”或“页脚”复选框中编辑文本，或两者都提供不同的页眉或页脚。
+3.  在"页眉"或"页脚"复选框中编辑文本，或两者都提供不同的页眉或页脚。
 
-1.  取消选中“页眉”或“页脚”复选框，或两者都关闭页眉或页脚。
+4.  取消选中"页眉"或"页脚"复选框，或两者都关闭页眉或页脚。
 
-1.  取消选中“显示打印对话框”复选框以关闭打印对话框。
+5.  取消选中"显示打印对话框"复选框以关闭打印对话框。
 
-1.  取消选中“适应打印页面宽度”复选框以选择在`NORMAL`模式下打印。
+6.  取消选中"适应打印页面宽度"复选框以选择在`NORMAL`模式下打印。
 
-1.  取消选中“交互式（显示状态对话框）”复选框以关闭打印对话框。
+7.  取消选中"交互式（显示状态对话框）"复选框以关闭打印对话框。
 
-1.  单击“打印”按钮，根据所选选项打印表格。
+8.  单击"打印"按钮，根据所选选项打印表格。
 
 每当 Web 启动的应用程序尝试打印时，Java Web Start 会弹出一个安全对话框，询问用户是否允许打印。要继续打印，用户必须接受请求。
 
@@ -136,7 +124,6 @@ boolean complete = table.print(JTable.PrintMode printMode,
 boolean complete = gradesTable.print(mode, header, footer,
                                      showPrintDialog, null,
                                      interactive, null);
-
 ```
 
 `print`方法返回的值然后用于显示成功消息或用户取消打印的消息。
@@ -147,9 +134,7 @@ boolean complete = gradesTable.print(mode, header, footer,
 
 ![TablePrintDemo1 示例的打印输出](img/TablePrintDemo1_out.png)
 
-*此图已经缩小以适应页面。
-
-点击图片查看其原始大小。
+*此图已经缩小以适应页面。点击图片查看其原始大小。*
 
 ### TablePrintDemo2 示例
 
@@ -162,46 +147,42 @@ TablePrintDemo2 示例基于先前的演示，并具有相同的界面。唯一�
 `JComponent`类中定义的[`isPaintingForPrint`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html#isPaintingForPrint--)方法允许我们自定义打印内容与屏幕上看到的内容之间的差异。从`TablePrintDemo2.java`中提取的自定义单元格渲染器的代码如下。此代码根据`isPaintingForPrint`方法返回的值选择要使用的图像。
 
 ```java
-    /**
-     * A custom cell renderer that extends TablePrinteDemo1's renderer, to instead
-     * use clearer black and white versions of the icons when printing.
-     */
-    protected static class BWPassedColumnRenderer extends PassedColumnRenderer {
-            public Component getTableCellRendererComponent(JTable table,
-                                                           Object value,
-                                                           boolean isSelected,
-                                                           boolean hasFocus,
-                                                           int row,
-                                                           int column) {
+/**
+ * A custom cell renderer that extends TablePrinteDemo1's renderer, to instead
+ * use clearer black and white versions of the icons when printing.
+ */
+protected static class BWPassedColumnRenderer extends PassedColumnRenderer {
+    public Component getTableCellRendererComponent(JTable table,
+                                                   Object value,
+                                                   boolean isSelected,
+                                                   boolean hasFocus,
+                                                   int row,
+                                                   int column) {
+        super.getTableCellRendererComponent(table, value, isSelected,
+                                            hasFocus, row, column);
 
-            super.getTableCellRendererComponent(table, value, isSelected,
-                                                hasFocus, row, column);
+        /* if we're currently printing, use the black and white icons */
+        if (table.isPaintingForPrint()) {
+            boolean status = (Boolean)value;
+            setIcon(status ? passedIconBW : failedIconBW);
+        } /* otherwise, the superclass (colored) icons are used */
 
-            /* if we're currently printing, use the black and white icons */
-            if (table.isPaintingForPrint()) {
-                boolean status = (Boolean)value;
-                setIcon(status ? passedIconBW : failedIconBW);
-            } /* otherwise, the superclass (colored) icons are used */
-
-            return this;
-        }
+        return this;
     }
-
+}
 ```
 
 这是以`FIT_WIDTH`模式打印的 TablePrintDemo2 的结果图片。
 
 ![TablePrintDemo2 示例的打印输出](img/TablePrintDemo2_out.png)
 
-*此图已经缩小以适应页面。
-
-点击图片查看其原始大小。
+*此图已经缩小以适应页面。点击图片查看其原始大小。*
 
 ### TablePrintDemo3 示例
 
 TablePrintDemo3 示例基于前两个演示。此示例展示了如何通过包装默认的`Printable`对象并添加额外装饰来提供自定义的`Printable`实现。这个演示具有类似的界面，但是头部和底部的复选框被禁用，因为自定义的可打印对象将提供自己的页眉和页脚。
 
-点击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 TablePrintDemo3（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。
+点击"启动"按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 TablePrintDemo3（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。
 
 ![启动 TablePrintDemo3 应用程序](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TablePrintDemo3Project/TablePrintDemo3.jnlp)
 
@@ -209,11 +190,11 @@ TablePrintDemo3 示例基于前两个演示。此示例展示了如何通过包�
 
 ![TablePrintDemo3 示例的打印输出](img/TablePrintDemo3_out.png)
 
-*此图已经缩小以适应页面。
-
-点击图片查看其原始大小。
+*此图已经缩小以适应页面。点击图片查看其原始大小。*
 
 此程序的完整代码可以在`TablePrintDemo3.java`中找到。在此演示中，使用了`JTable`类的自定义子类`FancyPrintingJTable`。这个`FancyPrintingJTable`类重写了`getPrintable`方法，以返回一个自定义可打印对象，该对象用自己的装饰、页眉和页脚包装默认可打印对象。这里是`getPrintable`方法的实现。
+
+
 
 ```java
 public Printable getPrintable(PrintMode printMode,
@@ -228,7 +209,6 @@ public Printable getPrintable(PrintMode printMode,
      /* Return a fancy printable that wraps the default */
      return new FancyPrintable(delegate);
 }
-
 ```
 
 `FancyPrintable`类负责将默认可打印对象包装成另一个可打印对象，并设置剪贴板图像。当实例化此类的一个实例时，它会加载组装剪贴板图像所需的图像，计算剪贴板图像所需的区域，计算表格的缩小区域，将表格打印到较小区域，并组装并打印剪贴板图像。
@@ -247,19 +227,8 @@ public Printable getPrintable(PrintMode printMode,
 
 | 方法 | 目的 |
 | --- | --- |
-
-| [boolean print()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#print--) [boolean print(printMode)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#print-javax.swing.JTable.PrintMode-)
-
-[boolean print(printMode, MessageFormat, MessageFormat)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#print-javax.swing.JTable.PrintMode-java.text.MessageFormat-java.text.MessageFormat-) 
-
-[boolean print(printMode, MessageFormat, MessageFormat, boolean, PrintRequestAttributeSet, boolean)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#print-javax.swing.JTable.PrintMode-java.text.MessageFormat-java.text.MessageFormat-boolean-javax.print.attribute.PrintRequestAttributeSet-boolean-)
-
-[boolean print(printMode, MessageFormat, MessageFormat, boolean, PrintRequestAttributeSet, boolean, PrintService)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#print-javax.swing.JTable.PrintMode-java.text.MessageFormat-java.text.MessageFormat-boolean-javax.print.attribute.PrintRequestAttributeSet-boolean-javax.print.PrintService-) | 在没有参数的情况下调用时，显示打印对话框，然后以`FIT_WIDTH`模式交互式打印此表格，不包含页眉或页脚文本。如果用户继续打印，则返回`true`，如果用户取消打印，则返回`false`。在使用完整参数集调用时，根据指定的参数打印此表格。第一个参数指定打印模式。两个`MessageFormat`参数指定页眉和页脚文本。第一个布尔参数定义是否显示打印对话框。另一个布尔参数指定是否交互式打印。使用另外两个参数可以指定打印属性和打印服务。
-
-每当省略`PrintService`参数时，将使用默认打印机。
-
+| [boolean print()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#print--) [boolean print(printMode)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#print-javax.swing.JTable.PrintMode-) [boolean print(printMode, MessageFormat, MessageFormat)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#print-javax.swing.JTable.PrintMode-java.text.MessageFormat-java.text.MessageFormat-) [boolean print(printMode, MessageFormat, MessageFormat, boolean, PrintRequestAttributeSet, boolean)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#print-javax.swing.JTable.PrintMode-java.text.MessageFormat-java.text.MessageFormat-boolean-javax.print.attribute.PrintRequestAttributeSet-boolean-) [boolean print(printMode, MessageFormat, MessageFormat, boolean, PrintRequestAttributeSet, boolean, PrintService)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#print-javax.swing.JTable.PrintMode-java.text.MessageFormat-java.text.MessageFormat-boolean-javax.print.attribute.PrintRequestAttributeSet-boolean-javax.print.PrintService-) | 在没有参数的情况下调用时，显示打印对话框，然后以`FIT_WIDTH`模式交互式打印此表格，不包含页眉或页脚文本。如果用户继续打印，则返回`true`，如果用户取消打印，则返回`false`。在使用完整参数集调用时，根据指定的参数打印此表格。第一个参数指定打印模式。两个`MessageFormat`参数指定页眉和页脚文本。第一个布尔参数定义是否显示打印对话框。另一个布尔参数指定是否交互式打印。使用另外两个参数可以指定打印属性和打印服务。每当省略`PrintService`参数时，将使用默认打印机。 |
 | [Printable getPrintable(PrintMode, MessageFormat, MessageFormat)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JTable.html#getPrintable-javax.swing.JTable.PrintMode-java.text.MessageFormat-java.text.MessageFormat-) | 返回用于打印表格的`Printable`。重写此方法以获取自定义的`Printable`对象。您可以将一个`Printable`对象包装到另一个中以获得各种布局。 |
-| --- | --- |
 
 ## 使用表格打印的示例
 
@@ -269,5 +238,5 @@ public Printable getPrintable(PrintMode printMode,
 | --- | --- | --- |
 | `TablePrintDemo` | 如何使用表格 | 展示了表格打印的基本功能，如显示打印对话框，然后以`FIT_WIDTH`模式交互式打印，并将页码作为页眉。 |
 | `TablePrintDemo1` | 本页面 | 展示了表格打印的基础知识，并提供了丰富的图形用户界面。允许用户指定页眉或页脚文本，选择打印模式，打开或关闭打印对话框，并选择交互式或非交互式打印。 |
-| `TablePrintDemo2` | 本页面 | 基于 TablePrintDemo1，这个示例具有相同的界面。这个演示展示了如何自定义表格，使打印结果与屏幕上显示的表格看起来不同。 |
+| `TablePrintDemo2` | 本页面 | 基于`TablePrintDemo1`，这个示例具有相同的界面。这个演示展示了如何自定义表格，使打印结果与屏幕上显示的表格看起来不同。 |
 | `TablePrintDemo3` | 本页面 | 这个演示展示了高级表格打印功能，例如将默认的可打印表格包装成另一个可打印表格，以获得不同的布局。 |

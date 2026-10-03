@@ -1,3 +1,4 @@
+
 # 2023 年八大新技术趋势
 
 > 原文：<https://medium.com/javarevisited/top-8-new-technology-trends-for-2023-e5aef4e046bb?source=collection_archive---------4----------------------->

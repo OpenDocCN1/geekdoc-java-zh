@@ -1,3 +1,4 @@
+
 # 用 Spring 实现策略模式
 
 > 原文：<https://medium.com/javarevisited/implementing-the-strategy-pattern-with-spring-de2bad3abc2f?source=collection_archive---------1----------------------->

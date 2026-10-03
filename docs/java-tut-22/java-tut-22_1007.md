@@ -1,3 +1,4 @@
+
 # 简单
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/ldap/simple.html`](https://docs.oracle.com/javase/tutorial/jndi/ldap/simple.html)
@@ -21,7 +22,5 @@ LDAP v2 和 v3 都支持简单身份验证。
 设置为主体的密码（例如，`"mysecret"`）。它的类型为`java.lang.String`，`char`数组（`char[]`）或`byte`数组（`byte[]`）。如果密码是`java.lang.String`或`char`数组，则在传输到服务器时使用 UTF-8 进行编码以供 LDAP v3 使用，使用 ISO-Latin-1 供 LDAP v2 使用。如果密码是`byte[]`，则按原样传输到服务器。
 
 查看本节中早期的示例，演示如何使用简单身份验证。
-
-* * *
 
 **注意：** 如果您向`Context.SECURITY_CREDENTIALS`环境属性提供空字符串、空的`byte`/`char`数组或`null`，则身份验证机制将是`"none"`。这是因为 LDAP 要求简单身份验证的密码不能为空。如果未提供密码，则协议会自动将身份验证转换为`"none"`。

@@ -1,3 +1,4 @@
+
 # Java–删除文件
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/how-to-delete-a-file-in-java>
@@ -60,7 +61,7 @@ public void givenUsingCommonsIo_whenDeletingAFileV1_thenCorrect() throws IOExcep
 }
 ```
 
-注意，我们仍然可以通过简单地检查 delete 方法的返回值来确定操作是否成功。
+注意，我们仍然可以通过简单地检查`delete`方法的返回值来确定操作是否成功。
 
 现在——如果我们想抛出一个异常:
 

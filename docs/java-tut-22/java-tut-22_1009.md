@@ -1,3 +1,4 @@
+
 # Digest-MD5
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/ldap/digest.html`](https://docs.oracle.com/javase/tutorial/jndi/ldap/digest.html)
@@ -38,7 +39,6 @@ env.put(Context.SECURITY_CREDENTIALS, "mysecret");
 DirContext ctx = new InitialDirContext(env);
 
 // ... do something useful with ctx
-
 ```
 
 * * *
@@ -66,7 +66,6 @@ env.put(Context.SECURITY_PRINCIPAL,
         "dn:cn=C. User, ou=NewHires, o=JNDITutorial");
 env.put(Context.SECURITY_CREDENTIALS, "mysecret");
 env.put("java.naming.security.sasl.realm", "JNDITutorial");
-
 ```
 
 如果您需要使用[隐私保护](https://docs.oracle.com/javase/jndi/tutorial/ldap/security/digest.html)和其他 SASL 属性，请参阅 JNDI 教程。

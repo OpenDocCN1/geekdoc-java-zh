@@ -1,3 +1,4 @@
+
 # 在反应式 Java 中要避免的五个错误
 
 > 原文：<https://medium.com/javarevisited/five-mistakes-to-avoid-in-reactive-java-786927ffd2f6?source=collection_archive---------1----------------------->
@@ -10,4 +11,4 @@
 
 反应式 Java 已经存在了将近十年，但是我仍然看到有人在为它而奋斗，甚至更糟的是，滥用它。所以我想我应该记下我不想在拉取请求中看到的东西。
 
-## 1.阻塞
+## 1. 阻塞

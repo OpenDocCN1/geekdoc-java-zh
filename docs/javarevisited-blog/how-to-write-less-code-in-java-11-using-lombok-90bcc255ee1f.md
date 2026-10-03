@@ -1,3 +1,4 @@
+
 # 如何用 Lombok 在 Java 11 中少写代码
 
 > 原文：<https://medium.com/javarevisited/how-to-write-less-code-in-java-11-using-lombok-90bcc255ee1f?source=collection_archive---------0----------------------->

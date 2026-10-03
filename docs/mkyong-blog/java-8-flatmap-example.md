@@ -1,24 +1,25 @@
+
 # Java 8 平面图示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java8/java-8-flatmap-example/>
 
-本文解释了 Java 8 [Stream.flatMap](http://web.archive.org/web/20220202084822/https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#flatMap-java.util.function.Function-) 以及如何使用它。
+本文解释了 Java 8 `Stream.flatMap` 以及如何使用它。
 
-主题
+## 主题
 
-1.  [什么是平面图？](#what-is-flatmap)
-2.  [为什么要平一条小溪？](#why-flat-a-stream)
-3.  [flatMap 示例–查找一套图书。](#flatmap-example---find-all-books)
-4.  [平面图示例–订单和行项目。](#flatmap-example---order-and-lineitems)
-5.  [平面图示例–按空格分割线条。](#flatmap-example---splits-the-line-by-spaces)
-6.  [平面图和原始类型](flatmap-and-primitive-type)
+1. [什么是平面图？](#what-is-flatmap)
+2. [为什么要平一条小溪？](#why-flat-a-stream)
+3. [flatMap 示例–查找一套图书。](#flatmap-example---find-all-books)
+4. [平面图示例–订单和行项目。](#flatmap-example---order-and-lineitems)
+5. [平面图示例–按空格分割线条。](#flatmap-example---splits-the-line-by-spaces)
+6. [平面图和原始类型](#flatmap-and-primitive-type)
 
-## 1。什么是 flatMap()？
+## 1. 什么是 `flatMap()`？
 
 1.1 回顾以下结构。它由 2 级流或 2d 阵列组成。
 
 ```java
- # Stream<String[]>
+# Stream<String[]>
 # Stream<Stream<String>>
 # String[][]
 
@@ -26,112 +27,86 @@
   [1, 2],
   [3, 4],
   [5, 6]
-] 
+]
 ```
 
-在 Java 8 中，我们可以使用`flatMap`将上述两个级别的流转换为一个流级别，或将 2d 数组转换为 1d 数组。
+在 Java 8 中，我们可以使用 `flatMap` 将上述两个级别的流转换为一个流级别，或将 2d 数组转换为 1d 数组。
 
 ```java
- # Stream<String>
+# Stream<String>
 # String[]
 
-[1, 2, 3, 4, 5, 6] 
+[1, 2, 3, 4, 5, 6]
 ```
 
-## 2。为什么要平溪？
+## 2. 为什么要平溪？
 
-2.1 处理包含一个以上级别的流很有挑战性，例如`Stream<String[]>`或`Stream<List<LineItem>>`或`Stream<Stream<String>>`。我们将两个级别的流合并成一个级别，像`Stream<String>`或`Stream<LineItem>`，这样我们就可以轻松地循环流并处理它。
+2.1 处理包含一个以上级别的流很有挑战性，例如 `Stream<String[]>` 或 `Stream<List<LineItem>>` 或 `Stream<Stream<String>>`。我们将两个级别的流合并成一个级别，像 `Stream<String>` 或 `Stream<LineItem>`，这样我们就可以轻松地循环流并处理它。
 
-查看以下示例，在流上应用`flatMap`之前和之后。
+查看以下示例，在流上应用 `flatMap` 之前和之后。
 
-2.2 下面是一个 2d 数组，我们可以用`Arrays.stream`或者`Stream.of`将其转换成一个流，它产生一个`String[]`或者`Stream<String[]>`的流。
+2.2 下面是一个 2d 数组，我们可以用 `Arrays.stream` 或者 `Stream.of` 将其转换成一个流，它产生一个 `String[]` 或者 `Stream<String[]>` 的流。
 
 ```java
- String[][] array = new String[][]{{"a", "b"}, {"c", "d"}, {"e", "f"}};
+String[][] array = new String[][]{{"a", "b"}, {"c", "d"}, {"e", "f"}};
 
-  // array to a stream
-  Stream<String[]> stream1 = Arrays.stream(array);
+// array to a stream
+Stream<String[]> stream1 = Arrays.stream(array);
 
-  // same result
-  Stream<String[]> stream2 = Stream.of(array); 
+// same result
+Stream<String[]> stream2 = Stream.of(array);
 ```
 
 或者像这样。
 
 ```java
- [
+[
   [a, b],
   [c, d],
   [e, f]
-] 
+]
 ```
 
-2.3 这里是需求，我们要过滤掉`a`，打印出所有的字符。
+2.3 这里是需求，我们要过滤掉 `a`，打印出所有的字符。
 
-首先，我们直接试试`Stream#filter`。但是，下面的程序什么都不会打印出来，这是因为`Stream#filter`里面的`x`是一个`String[]`，而不是一个`String`；条件将始终保持为假，流将什么也不收集。
+首先，我们直接试试 `Stream#filter`。但是，下面的程序什么都不会打印出来，这是因为 `Stream#filter` 里面的 `x` 是一个 `String[]`，而不是一个 `String`；条件将始终保持为假，流将什么也不收集。
 
 ```java
- String[][] array = new String[][]{{"a", "b"}, {"c", "d"}, {"e", "f"}};
+String[][] array = new String[][]{{"a", "b"}, {"c", "d"}, {"e", "f"}};
 
-  // convert array to a stream
-  Stream<String[]> stream1 = Arrays.stream(array);
+// convert array to a stream
+Stream<String[]> stream1 = Arrays.stream(array);
 
-  List<String[]> result = stream1
-      .filter(x -> !x.equals("a"))      // x is a String[], not String!
-      .collect(Collectors.toList());
+List<String[]> result = stream1
+    .filter(x -> !x.equals("a"))      // x is a String[], not String!
+    .collect(Collectors.toList());
 
-  System.out.println(result.size());    // 0
+System.out.println(result.size());    // 0
 
-  result.forEach(System.out::println);  // print nothing? 
+result.forEach(System.out::println);  // print nothing?
 ```
 
-好了，这一次，我们重构 filter 方法来处理`String[]`。
+好了，这一次，我们重构 filter 方法来处理 `String[]`。
 
 ```java
- String[][] array = new String[][]{{"a", "b"}, {"c", "d"}, {"e", "f"}};
+String[][] array = new String[][]{{"a", "b"}, {"c", "d"}, {"e", "f"}};
 
-  // array to a stream
-  Stream<String[]> stream1 = Arrays.stream(array);
+// array to a stream
+Stream<String[]> stream1 = Arrays.stream(array);
 
-  // x is a String[]
-  List<String[]> result = stream1
-          .filter(x -> {
-              for(String s : x){      // really?
-                  if(s.equals("a")){
-                      return false;
-                  }
-              }
-              return true;
-          }).collect(Collectors.toList());
+// x is a String[]
+List<String[]> result = stream1
+        .filter(x -> {
+            for(String s : x){      // really?
+                if(s.equals("a")){
+                    return false;
+                }
+            }
+            return true;
+        }).collect(Collectors.toList());
 
-  // print array
-  result.forEach(x -> System.out.println(Arrays.toString(x))); 
-```
-
-输出
-
-Terminal
-
-```java
- [c, d]
-[e, f] 
-```
-
-在上面的例子中，`Stream#filter`将过滤掉整个`[a, b]`，但是我们只想过滤掉字符`a`
-
-下面的 3.4 是最终版本，我们先组合数组，然后是过滤器。在 Java 中，要把一个 2d 数组转换成 1d 数组，我们可以循环 2d 数组，把所有的元素放到一个新数组中；或者我们可以用 Java 8 `flatMap`把 2d 数组扁平化成 1d 数组，或者从`Stream<String[]>`到`Stream<String>`。
-
-```java
- String[][] array = new String[][]{{"a", "b"}, {"c", "d"}, {"e", "f"}};
-
-  // Java 8
-  String[] result = Stream.of(array)  // Stream<String[]>
-          .flatMap(Stream::of)        // Stream<String>
-          .toArray(String[]::new);    // [a, b, c, d, e, f]
-
-  for (String s : result) {
-      System.out.println(s);
-  } 
+// print array
+result.forEach(x -> System.out.println(Arrays.toString(x)));
 ```
 
 输出
@@ -139,25 +114,51 @@ Terminal
 Terminal
 
 ```java
- a
+[c, d]
+[e, f]
+```
+
+在上面的例子中，`Stream#filter` 将过滤掉整个 `[a, b]`，但是我们只想过滤掉字符 `a`。
+
+下面的 3.4 是最终版本，我们先组合数组，然后是过滤器。在 Java 中，要把一个 2d 数组转换成 1d 数组，我们可以循环 2d 数组，把所有的元素放到一个新数组中；或者我们可以用 Java 8 `flatMap` 把 2d 数组扁平化成 1d 数组，或者从 `Stream<String[]>` 到 `Stream<String>`。
+
+```java
+String[][] array = new String[][]{{"a", "b"}, {"c", "d"}, {"e", "f"}};
+
+// Java 8
+String[] result = Stream.of(array)  // Stream<String[]>
+        .flatMap(Stream::of)        // Stream<String>
+        .toArray(String[]::new);    // [a, b, c, d, e, f]
+
+for (String s : result) {
+    System.out.println(s);
+}
+```
+
+输出
+
+Terminal
+
+```java
+a
 b
 c
 d
 e
-f 
+f
 ```
 
-现在，我们可以很容易地过滤掉`a`；让我们看看最终版本。
+现在，我们可以很容易地过滤掉 `a`；让我们看看最终版本。
 
 ```java
- String[][] array = new String[][]{{"a", "b"}, {"c", "d"}, {"e", "f"}};
+String[][] array = new String[][]{{"a", "b"}, {"c", "d"}, {"e", "f"}};
 
-  List<String> collect = Stream.of(array)     // Stream<String[]>
-          .flatMap(Stream::of)                // Stream<String>
-          .filter(x -> !"a".equals(x))        // filter out the a
-          .collect(Collectors.toList());      // return a List
+List<String> collect = Stream.of(array)     // Stream<String[]>
+        .flatMap(Stream::of)                // Stream<String>
+        .filter(x -> !"a".equals(x))        // filter out the a
+        .collect(Collectors.toList());      // return a List
 
-  collect.forEach(System.out::println); 
+collect.forEach(System.out::println);
 ```
 
 输出
@@ -165,32 +166,32 @@ f
 Terminal
 
 ```java
- b
+b
 c
 d
 e
-f 
+f
 ```
 
-我想指出的是，处理多于一个级别的流是具有挑战性的，令人困惑，并且容易出错，我们可以使用这个`Stream#flatMap`将 2 个级别的流展平为一个级别的流。
+我想指出的是，处理多于一个级别的流是具有挑战性的，令人困惑，并且容易出错，我们可以使用这个 `Stream#flatMap` 将 2 个级别的流展平为一个级别的流。
 
 ```java
- Stream<String[]>      -> flatMap ->	Stream<String>
+Stream<String[]>      -> flatMap ->	Stream<String>
 Stream<Set<String>>   -> flatMap ->	Stream<String>
 Stream<List<String>>  -> flatMap ->	Stream<String>
-Stream<List<Object>>  -> flatMap ->	Stream<Object> 
+Stream<List<Object>>  -> flatMap ->	Stream<Object>
 ```
 
-## 3。平面图示例-查找所有书籍。
+## 3. 平面图示例-查找所有书籍。
 
-这个例子使用`.stream()`将一个`List`转换成一个对象流，每个对象包含一套书，我们可以使用`flatMap`产生一个包含所有对象中所有书的流。
+这个例子使用 `.stream()` 将一个 `List` 转换成一个对象流，每个对象包含一套书，我们可以使用 `flatMap` 产生一个包含所有对象中所有书的流。
 
-最后，我们还过滤掉包含单词`python`的书，并收集一个`Set`来移除重复的书。
+最后，我们还过滤掉包含单词 `python` 的书，并收集一个 `Set` 来移除重复的书。
 
-Developer.java
+`Developer.java`
 
 ```java
- package com.mkyong.java8.stream.flatmap;
+package com.mkyong.java8.stream.flatmap;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -209,13 +210,13 @@ public class Developer {
         }
         this.book.add(book);
     }
-} 
+}
 ```
 
-FlatMapExample1.java
+`FlatMapExample1.java`
 
 ```java
- package com.mkyong.java8.stream.flatmap;
+package com.mkyong.java8.stream.flatmap;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -257,7 +258,7 @@ public class FlatMapExample1 {
 
     }
 
-} 
+}
 ```
 
 输出
@@ -265,31 +266,43 @@ public class FlatMapExample1 {
 Terminal
 
 ```java
- Spring Boot in Action
+Spring Boot in Action
 Effective Java (3nd Edition)
-Java 8 in Action 
+Java 8 in Action
 ```
 
-`map`是可选的。
+`map` 是可选的。
 
 ```java
- Set<String> collect2 = list.stream()
+Set<String> collect2 = list.stream()
                     //.map(x -> x.getBook())
                     .flatMap(x -> x.getBook().stream())                 //  Stream<String>
                     .filter(x -> !x.toLowerCase().contains("python"))   //  filter python book
-                    .collect(Collectors.toSet()); 
+                    .collect(Collectors.toSet());
 ```
 
-## 4。平面图示例–订单和行项目
+## 4. 平面图示例–订单和行项目
 
-这个例子类似于官方的 [flatMap JavaDoc](http://web.archive.org/web/20220202084822/https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#flatMap-java.util.function.Function-) 例子。
+这个例子类似于官方的 `flatMap` JavaDoc 例子。
 
-`orders`是一个购买订单流，每个购买订单包含一组行项目，然后我们可以使用`flatMap`产生一个包含所有订单中所有行项目的流或`Stream<LineItem>`。此外，我们还添加了一个`reduce`操作来合计行项目的总金额。
+`orders` 是一个购买订单流，每个购买订单包含一组行项目，然后我们可以使用 `flatMap` 产生一个包含所有订单中所有行项目的流或 `Stream<LineItem>`。此外，我们还添加了一个 `reduce` 操作来合计行项目的总金额。
 
-FlatMapExample2.java
+`FlatMapExample2.java`
+
+
+
+# Java 8 Stream flatMap 示例
+
+## 1. 概述
+
+本文通过示例介绍 Java 8 中 `Stream.flatMap()` 方法的使用。
+
+## 2. 平面图示例 – 订单与行项目
+
+`FlatMapExample2.java`
 
 ```java
- package com.mkyong.java8.stream.flatmap;
+package com.mkyong.java8.stream.flatmap;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
@@ -346,13 +359,13 @@ public class FlatMapExample2 {
         return Arrays.asList(order1, order2, order3);
 
     }
-} 
+}
 ```
 
-Order.java
+`Order.java`
 
 ```java
- public class Order {
+public class Order {
 
     private Integer id;
     private String invoice;
@@ -360,13 +373,13 @@ Order.java
     private BigDecimal total;
 
     // getter, setters, constructor
-} 
+}
 ```
 
-LineItem.java
+`LineItem.java`
 
 ```java
- public class LineItem {
+public class LineItem {
 
     private Integer id;
     private String item;
@@ -375,7 +388,7 @@ LineItem.java
     private BigDecimal total;
 
     // getter, setters, constructor
-} 
+}
 ```
 
 输出
@@ -383,32 +396,32 @@ LineItem.java
 Terminal
 
 ```java
- 3194.20
-3194.20 
+3194.20
+3194.20
 ```
 
-## 5。平面图示例–用空格分割线条
+## 3. 平面图示例 – 用空格分割线条
 
 这个例子读取了一个文本文件，用空格分割了一行，并显示了单词的总数。
 
 一个文本文件。
 
-c:\\test\\test.txt
+`c:\test\test.txt`
 
 ```java
- hello world Java
+hello world Java
 hello world Python
 hello world Node JS
 hello world Rust
-hello world Flutter 
+hello world Flutter
 ```
 
 阅读评论，不言自明。
 
-FlatMapExample3.java
+`FlatMapExample3.java`
 
 ```java
- package com.mkyong.java8.stream.flatmap;
+package com.mkyong.java8.stream.flatmap;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -440,7 +453,7 @@ public class FlatMapExample3 {
 
         System.out.println(noOfWords);  // 16
     }
-} 
+}
 ```
 
 输出
@@ -448,19 +461,19 @@ public class FlatMapExample3 {
 Terminal
 
 ```java
- 16 
+16
 ```
 
-## 6。平面图和原始类型
+## 4. 平面图和原始类型
 
 对于原始类型，如`int`、`long`、`double`等。Java 8 流也提供相关的`flatMapTo{primative type}`来扁平化原语类型的流；概念是一样的。
 
-`flatMapToInt`->-`IntStream`
+`flatMapToInt` -> `IntStream`
 
-FlatMapExample4.java
+`FlatMapExample4.java`
 
 ```java
- package com.mkyong.java8.stream.flatmap;
+package com.mkyong.java8.stream.flatmap;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;
@@ -481,7 +494,7 @@ public class FlatMapExample4 {
         intStream.forEach(x -> System.out.println(x));
 
     }
-} 
+}
 ```
 
 输出
@@ -489,39 +502,38 @@ public class FlatMapExample4 {
 Terminal
 
 ```java
- 1
+1
 2
 3
 4
 5
-6 
+6
 ```
 
-`flatMapToLong`->-`LongStream`
+`flatMapToLong` -> `LongStream`
 
 ```java
- long[] array = {1, 2, 3, 4, 5, 6};
+long[] array = {1, 2, 3, 4, 5, 6};
 
-  Stream<long[]> longArray = Stream.of(array);
+Stream<long[]> longArray = Stream.of(array);
 
-  LongStream longStream = longArray.flatMapToLong(x -> Arrays.stream(x));
+LongStream longStream = longArray.flatMapToLong(x -> Arrays.stream(x));
 
-  System.out.println(longStream.count()); 
+System.out.println(longStream.count());
 ```
 
-## 下载源代码
+## 5. 下载源代码
 
-$ git 克隆[https://github.com/mkyong/core-java](http://web.archive.org/web/20220202084822/https://github.com/mkyong/core-java)
-
+```bash
+$ git clone https://github.com/mkyong/core-java
 $ cd java8
+```
 
-## 参考文献
+## 6. 参考文献
 
-*   [Stream.flatMap JavaDoc](http://web.archive.org/web/20220202084822/https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#flatMap-java.util.function.Function-)
-*   [地图()平面地图()之间的差异](http://web.archive.org/web/20220202084822/https://stackoverflow.com/questions/26684562/whats-the-difference-between-map-and-flatmap-methods-in-java-8)
-*   [Java–如何连接数组](/web/20220202084822/https://mkyong.com/java/java-how-to-join-arrays/)
-*   [Java 8–如何打印数组](/web/20220202084822/https://mkyong.com/java/java-how-to-print-an-array/)
-*   [Java 8–收集器分组和映射示例](/web/20220202084822/https://mkyong.com/java8/java-8-collectors-groupingby-and-mapping-example/)
-*   [Java 8 Stream.reduce()示例](/web/20220202084822/https://mkyong.com/java8/java-8-stream-reduce-examples/)
-
-<input type="hidden" id="mkyong-current-postId" value="13973">
+* [Stream.flatMap JavaDoc](http://web.archive.org/web/20220202084822/https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#flatMap-java.util.function.Function-)
+* [地图()平面地图()之间的差异](http://web.archive.org/web/20220202084822/https://stackoverflow.com/questions/26684562/whats-the-difference-between-map-and-flatmap-methods-in-java-8)
+* [Java – 如何连接数组](/web/20220202084822/https://mkyong.com/java/java-how-to-join-arrays/)
+* [Java 8 – 如何打印数组](/web/20220202084822/https://mkyong.com/java/java-how-to-print-an-array/)
+* [Java 8 – 收集器分组和映射示例](/web/20220202084822/https://mkyong.com/java8/java-8-collectors-groupingby-and-mapping-example/)
+* [Java 8 Stream.reduce()示例](/web/20220202084822/https://mkyong.com/java8/java-8-stream-reduce-examples/)

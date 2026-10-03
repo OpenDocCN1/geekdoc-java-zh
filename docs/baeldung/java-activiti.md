@@ -1,22 +1,23 @@
+
 # Java 活动指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-activiti>
 
 ## 1。概述
 
-Activiti API 是一个工作流和业务流程管理系统。我们可以在其中定义一个流程，执行它，并使用 API 提供的服务以不同的方式操作它。它需要 JDK 7+。
+`Activiti` API 是一个工作流和业务流程管理系统。我们可以在其中定义一个流程，执行它，并使用 API 提供的服务以不同的方式操作它。它需要 `JDK 7+`。
 
 使用 API 的开发可以在任何 IDE 中完成，但是要使用 [Activiti Designer](https://web.archive.org/web/20220627092156/https://www.activiti.org/userguide/index.html?_ga=2.55182893.76071610.1499064413-1368418377.1499064413#eclipseDesignerInstallation) ，我们需要 Eclipse。
 
-我们可以使用 BPMN 2.0 标准在 it 中定义一个流程。还有一种不太流行的方法——使用 Java 类，如`StartEvent`、`EndEvent`、`UserTask`、`SequenceFlow`等。
+我们可以使用 `BPMN 2.0` 标准在 it 中定义一个流程。还有一种不太流行的方法——使用 Java 类，如`StartEvent`、`EndEvent`、`UserTask`、`SequenceFlow`等。
 
 如果我们想要运行一个流程或访问任何服务，我们需要创建一个`ProcessEngineConfiguration`。
 
-我们可以通过某些方式使用`ProcessEngineConfiguration,` 得到`ProcessEngine`，这我们将在本文中进一步讨论`.`通过*T5`ProcessEngine`我们可以执行工作流和 BPMN 操作。*
+我们可以通过某些方式使用`ProcessEngineConfiguration,` 得到`ProcessEngine`，这我们将在本文中进一步讨论。通过`ProcessEngine`我们可以执行工作流和 `BPMN` 操作。
 
 ## 2。Maven 依赖关系
 
-要使用这个 API，我们需要包含 Activiti 依赖项:
+要使用这个 API，我们需要包含 Activiti 依赖项：
 
 ```java
 <dependency>
@@ -27,7 +28,7 @@ Activiti API 是一个工作流和业务流程管理系统。我们可以在其�
 
 ## 3。创造一个`ProcessEngine`
 
-在 Activiti 中，`ProcessEngine`通常使用 XML 文件`activiti.cfg.xml`进行配置。此配置文件的一个示例是:
+在 Activiti 中，`ProcessEngine`通常使用 XML 文件`activiti.cfg.xml`进行配置。此配置文件的一个示例是：
 
 ```java
 <beans >
@@ -43,17 +44,17 @@ Activiti API 是一个工作流和业务流程管理系统。我们可以在其�
 </beans> 
 ```
 
-现在我们可以使用`ProcessEngines`类获得`ProcessEngine`:
+现在我们可以使用`ProcessEngines`类获得`ProcessEngine`：
 
 ```java
 ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
 ```
 
-该语句将在类路径中查找一个`activiti.cfg.` xml 文件，并根据文件中的配置构造一个`ProcessEngine` 。
+该语句将在类路径中查找一个`activiti.cfg.` xml 文件，并根据文件中的配置构造一个`ProcessEngine`。
 
 配置文件的示例代码显示它只是一个基于 Spring 的配置。但是，这并不意味着我们只能在 Spring 环境中使用 Activiti。Spring 的功能只是在内部用来创建`ProcessEngine`。
 
-让我们编写一个 JUnit 测试用例，它将使用上面显示的配置文件创建`ProcessEngine`:
+让我们编写一个 JUnit 测试用例，它将使用上面显示的配置文件创建`ProcessEngine`：
 
 ```java
 @Test
@@ -88,7 +89,7 @@ public void givenXMLConfig_whenGetDefault_thenGotProcessEngine() {
 
 一旦我们开始运行一个过程定义，它可以被称为一个过程
 
-**一个`ProcessInstance`是一个`ProcessDefinition.`T3 的一次执行**
+**一个`ProcessInstance`是一个`ProcessDefinition`的一次执行。**
 
 **一个`StartEvent`与每一个业务流程相关联。它指示流程的入口点。**同样，有一个`EndEvent`表示过程结束。我们可以定义这些事件的条件。
 
@@ -102,24 +103,31 @@ public void givenXMLConfig_whenGetDefault_thenGotProcessEngine() {
 
 ### 4.2。服务
 
-我们将简要讨论 Activiti 提供的服务:
+我们将简要讨论 Activiti 提供的服务：
 
-*   帮助我们操纵过程定义的部署。该服务处理与过程定义相关的静态数据
-*   `**RuntimeService**`管理`ProcessInstances`(当前运行的进程)以及进程变量
-*   `**TaskService**`跟踪`UserTasks`。需要用户手动执行的`Tasks`是 Activiti API 的核心。我们可以创建一个任务，声明并完成一个任务，操纵任务的受托人，等等。使用此服务
-*   `**FormService**`是一项可选服务。该 API 可以在没有它的情况下使用，并且不会牺牲它的任何特性。它用于定义流程中的开始表单和任务表单。
-*   `**IdentityService**`管理着`Users`和`Groups`
-*   跟踪 Activiti 引擎的历史。我们也可以设置不同的历史水平。
-*   `**ManagementService**`与元数据相关，在创建应用程序时通常不需要
-*   帮助我们在不重新部署的情况下更改流程中的任何内容
+*   `RepositoryService`：帮助我们操纵过程定义的部署。该服务处理与过程定义相关的静态数据
+
+*   `RuntimeService`：管理`ProcessInstances`(当前运行的进程)以及进程变量。
+
+*   `TaskService`：跟踪`UserTasks`。需要用户手动执行的`Tasks`是 Activiti API 的核心。我们可以创建一个任务，声明并完成一个任务，操纵任务的受托人，等等。使用此服务
+
+*   `FormService`：是一项可选服务。该 API 可以在没有它的情况下使用，并且不会牺牲它的任何特性。它用于定义流程中的开始表单和任务表单。
+
+*   `IdentityService`：管理着`Users`和`Groups`。
+
+*   `HistoryService`：跟踪 Activiti 引擎的历史。我们也可以设置不同的历史水平。
+
+*   `ManagementService`：与元数据相关，在创建应用程序时通常不需要。
+
+*   `DynamicBpmnService`：帮助我们在不重新部署的情况下更改流程中的任何内容。
 
 ## 5。使用 Activiti 服务
 
-为了了解我们如何处理不同的服务并运行流程，让我们以“员工休假请求”的流程为例:
+为了了解我们如何处理不同的服务并运行流程，让我们以“员工休假请求”的流程为例：
 
 [![vacation request process](img/f7075f4a9a1f83c5e3bf3231d19c45e2.png)](/web/20220627092156/https://www.baeldung.com/wp-content/uploads/2017/07/vacation-request-process.png)
 
-此流程的 BPMN 2.0 文件`VacationRequest.bpmn20.xml`将启动事件定义为:
+此流程的 BPMN 2.0 文件`VacationRequest.bpmn20.xml`将启动事件定义为：
 
 ```java
 <startEvent id="startEvent" name="request" 
@@ -136,7 +144,7 @@ public void givenXMLConfig_whenGetDefault_thenGotProcessEngine() {
 </startEvent> 
 ```
 
-类似地，分配给用户组“管理”的第一个用户任务将如下所示:
+类似地，分配给用户组“管理”的第一个用户任务将如下所示：
 
 ```java
 <userTask id="handle_vacation_request" name=
@@ -157,7 +165,7 @@ public void givenXMLConfig_whenGetDefault_thenGotProcessEngine() {
 </userTask>
 ```
 
-使用`ServiceTask,`,我们需要定义要执行的代码。我们有这段 Java 类代码:
+使用`ServiceTask,`，我们需要定义要执行的代码。我们有这段 Java 类代码：
 
 ```java
 <serviceTask id="send-email-confirmation" name="Send email confirmation" 
@@ -166,7 +174,7 @@ public void givenXMLConfig_whenGetDefault_thenGotProcessEngine() {
 </serviceTask>
 ```
 
-条件流将通过在`“sequenceFlow”:`中添加`“conditionExpression”`标签来显示
+条件流将通过在`sequenceFlow`中添加`conditionExpression`标签来显示：
 
 ```java
 <sequenceFlow id="flow3" name="approved" 
@@ -184,13 +192,13 @@ public void givenXMLConfig_whenGetDefault_thenGotProcessEngine() {
 
 如果获得批准，将定义一个服务任务来发送确认电子邮件。如果未被批准，员工可以选择修改并重新发送请求，或者什么也不做。
 
-服务任务提供了一些要执行的代码(这里是一个 Java 类)。我们已经上了`SendEmailServiceTask.java.` 课
+服务任务提供了一些要执行的代码(这里是一个 Java 类)。我们已经上了`SendEmailServiceTask.java`课。
 
-这些类型的类应该扩展`JavaDelegate.` 并且，我们需要覆盖它的`execute()`方法，这将在流程执行到这一步时执行。
+这些类型的类应该扩展`JavaDelegate`。并且，我们需要覆盖它的`execute()`方法，这将在流程执行到这一步时执行。
 
 ### 5.1。部署流程
 
-为了让 Activiti 引擎知道我们的流程，我们需要部署流程。我们可以使用`RepositoryService.` 以编程的方式实现它。让我们编写一个 JUnit 测试来展示这一点:
+为了让 Activiti 引擎知道我们的流程，我们需要部署流程。我们可以使用`RepositoryService`以编程的方式实现它。让我们编写一个 JUnit 测试来展示这一点：
 
 ```java
 @Test 
@@ -220,9 +228,11 @@ public void givenBPMN_whenDeployProcess_thenDeployed() {
 
 与`ProcessInstances`相关的所有细节都可以通过`RuntimeService`访问。
 
-在我们的例子中，在开始事件中，我们需要传递假期天数、开始日期和原因。我们将使用流程变量，并在创建`ProcessInstance.` 时传递它们
+在我们的例子中，在开始事件中，我们需要传递假期天数、开始日期和原因。我们将使用流程变量，并在创建`ProcessInstance`时传递它们。
 
-让我们编写一个 JUnit 测试用例来获得更好的想法:
+让我们编写一个 JUnit 测试用例来获得更好的想法：
+
+
 
 ```java
 @Test
@@ -246,15 +256,15 @@ public void givenDeployedProcess_whenStartProcessInstance_thenRunning() {
 
 启动流程实例有多种方式。在这里，我们使用了过程的关键。在启动流程实例之后，我们可以通过查询`RuntimeService`来获得关于它的信息。
 
-### 5.3。完成任务
+### 5.3 完成任务
 
-当我们的流程实例开始运行时，第一步是一个用户任务，分配给用户组`“management”.`
+当我们的流程实例开始运行时，第一步是一个用户任务，分配给用户组`“management”`。
 
 用户可能有一个收件箱，其中有他们要完成的任务列表。现在，如果我们想继续流程执行，用户需要完成这个任务。对于 Activiti Engine 来说，叫做“完成任务”。
 
-我们可以查询`TaskService,` 来获取任务对象，然后完成它。
+我们可以查询`TaskService`来获取任务对象，然后完成它。
 
-我们需要为此编写的代码如下所示:
+我们需要为此编写的代码如下所示：
 
 ```java
 @Test 
@@ -280,11 +290,11 @@ public void givenProcessInstance_whenCompleteTask_thenGotNextTask() {
 
 在此之后，流程引擎将继续下一步。这里，下一步询问员工是否要重新发送休假请求。
 
-所以，我们的`ProcessInstance`现在正在等待这个`UserTask,` ，它的名字是【T2 请求】。
+所以，我们的`ProcessInstance`现在正在等待这个`UserTask`，它的名字是【T2 请求】。
 
-### 5.4。暂停和激活进程
+### 5.4 暂停和激活进程
 
-我们可以暂停一个`ProcessDefinition`和一个`ProcessInstance`。如果我们挂起了一个`ProcessDefinition,` ，我们就不能在它挂起的时候创建它的实例。我们可以使用`RepositoryService:`来完成这项工作
+我们可以暂停一个`ProcessDefinition`和一个`ProcessInstance`。如果我们挂起了一个`ProcessDefinition`，我们就不能在它挂起的时候创建它的实例。我们可以使用`RepositoryService`来完成这项工作：
 
 ```java
 @Test(expected = ActivitiException.class)
@@ -297,12 +307,12 @@ public void givenDeployedProcess_whenSuspend_thenNoProcessInstance() {
 
 要再次激活它，我们只需要调用其中一个`repositoryService.activateProcessDefinitionXXX`方法。
 
-类似地，我们可以使用`RuntimeService.` 来暂停`ProcessInstance,`
+类似地，我们可以使用`RuntimeService`来暂停`ProcessInstance`。
 
-## 6。结论
+## 6 结论
 
-在本文中，我们看到了如何在 Java 中使用 Activiti。我们创建了一个示例文件`ProcessEngineCofiguration` ，它帮助我们创建`ProcessEngine`。
+在本文中，我们看到了如何在 Java 中使用 Activiti。我们创建了一个示例文件`ProcessEngineCofiguration`，它帮助我们创建`ProcessEngine`。
 
 使用它，我们可以访问 API 提供的各种服务。这些服务帮助我们管理和跟踪`ProcessDefinitions`、`ProcessInstances`、`UserTasks`等。
 
-和往常一样，我们在文章中看到的示例代码位于 GitHub 上的[。](https://web.archive.org/web/20220627092156/https://github.com/eugenp/tutorials/tree/master/spring-activiti)
+和往常一样，我们在文章中看到的示例代码位于 GitHub 上的[链接](https://web.archive.org/web/20220627092156/https://github.com/eugenp/tutorials/tree/master/spring-activiti)。

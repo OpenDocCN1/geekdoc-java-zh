@@ -1,4 +1,5 @@
-# 复合设计模式— Java
+
+# 复合设计模式 — Java
 
 > 原文：<https://medium.com/javarevisited/composite-design-pattern-java-9cd0964d3b12?source=collection_archive---------1----------------------->
 
@@ -24,7 +25,7 @@
 
 那么实现将具有相同的行为，但是它们之间有一些层次结构。
 
-这些实现的唯一区别是使用了 *addParent()* 和 *addChild()* 来创建层次结构，就像我们可以看到下面的例子和它将产生的输出一样。
+这些实现的唯一区别是使用了`addParent()`和`addChild()`来创建层次结构，就像我们可以看到下面的例子和它将产生的输出一样。
 
 ```
 ==============================

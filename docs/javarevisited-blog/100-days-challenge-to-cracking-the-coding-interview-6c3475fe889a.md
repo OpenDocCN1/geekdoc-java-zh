@@ -1,8 +1,9 @@
+
 # 第 10 天—洪水填充
 
 > 原文：<https://medium.com/javarevisited/100-days-challenge-to-cracking-the-coding-interview-6c3475fe889a?source=collection_archive---------1----------------------->
 
-## **亚马逊 100 天**
+## 亚马逊 100 天
 
 [**100 天到亚马逊—**](https://leetcode.com/problems/flood-fill/) **第 10 天—洪水泛滥**
 

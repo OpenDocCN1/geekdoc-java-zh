@@ -1,3 +1,4 @@
+
 # 教程：学习 Java 语言
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/index.html`](https://docs.oracle.com/javase/tutorial/java/index.html)

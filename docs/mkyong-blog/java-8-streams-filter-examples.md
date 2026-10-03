@@ -1,17 +1,18 @@
+
 # Java 8 流过滤器示例
 
-> 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/tutorials/java-8-tutorials/java8/java-8-streams-filter-examples/>
+> 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/tutorials/java8/java-8-streams-filter-examples/>
 
-在本教程中，我们将向您展示几个 Java 8 示例来演示流`filter()`、`collect()`、`findAny()`和`orElse()`的使用
+在本教程中，我们将向您展示几个 Java 8 示例来演示流`filter()`、`collect()`、`findAny()`和`orElse()`的使用。
 
-## 1.流过滤器()和收集()
+## 1. 流`filter()`和`collect()`
 
-Java 8 之前，这样过滤一个`List`:
+Java 8 之前，这样过滤一个`List`：
 
-BeforeJava8.java
+`BeforeJava8.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -39,22 +40,22 @@ public class BeforeJava8 {
         return result;
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- spring
-node 
+spring
+node
 ```
 
 1.2 Java 8 中的等价例子，`stream.filter()`过滤一个`List`，`collect()`将一个流转换成一个`List`。
 
-NowJava8.java
+`NowJava8.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -74,22 +75,22 @@ public class NowJava8 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- spring
-node 
+spring
+node
 ```
 
-## 2.Streams filter()、findAny()和 orElse()
+## 2. 流`filter()`、`findAny()`和`orElse()`
 
-Person.java
+`Person.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 public class Person {
 
@@ -102,15 +103,15 @@ public class Person {
     }
 
     //gettersm setters, toString
-} 
+}
 ```
 
-2.1 在 Java 8 之前，你通过名字得到一个`Person`，像这样:
+2.1 在 Java 8 之前，你通过名字得到一个`Person`，像这样：
 
-BeforeJava8.java
+`BeforeJava8.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -140,21 +141,21 @@ public class BeforeJava8 {
         }
         return result;
     }
-} 
+}
 ```
 
 输出
 
 ```java
- Person{name='jack', age=20} 
+Person{name='jack', age=20}
 ```
 
-2.2 Java 8 中的等价例子，使用`stream.filter()`过滤一个`List`，使用`.findAny().orElse (null)`返回一个有条件的对象。
+2.2 Java 8 中的等价例子，使用`stream.filter()`过滤一个`List`，使用`.findAny().orElse(null)`返回一个有条件的对象。
 
-NowJava8.java
+`NowJava8.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -185,22 +186,22 @@ public class NowJava8 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- Person{name='jack', age=20}
-null 
+Person{name='jack', age=20}
+null
 ```
 
 2.3 适用于多种情况。
 
-NowJava8.java
+`NowJava8.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -236,22 +237,22 @@ public class NowJava8 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- result 1 :Person{name='jack', age=20}
-result 2 :Person{name='jack', age=20} 
+result 1 :Person{name='jack', age=20}
+result 2 :Person{name='jack', age=20}
 ```
 
-## 3.流过滤器()和映射()
+## 3. 流`filter()`和`map()`
 
-NowJava8.java
+`NowJava8.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -283,28 +284,31 @@ public class NowJava8 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- name : jack
+name : jack
 
 mkyong
 jack
-lawrence 
+lawrence
 ```
 
-**Note**
-Highly recommend this Streams tutorial – [Processing Data with Java SE 8 Streams](http://web.archive.org/web/20220310233017/http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)
+**注意**
+
+强烈推荐这个流教程 – [Processing Data with Java SE 8 Streams](http://web.archive.org/web/20220310233017/http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)
 
 ## 参考
 
-1.  [Java 8 循环推理在我这里](http://web.archive.org/web/20220310233017/https://stackoverflow.com/questions/26422166/java-8-cyclic-inference-in-my-case)
-2.  [Java 8 解释:使用过滤器、映射、流和 Foreach 将 Lambdas 应用于 Java 集合！](http://web.archive.org/web/20220310233017/http://zeroturnaround.com/rebellabs/java-8-explained-applying-lambdas-to-java-collections/)
-3.  [Java 8 forEach 示例](http://web.archive.org/web/20220310233017/http://www.mkyong.com/java8/java-8-foreach-examples/)
-4.  [Java 8 流:多重过滤器与复杂条件](http://web.archive.org/web/20220310233017/https://stackoverflow.com/questions/24054773/java-8-streams-multiple-filters-vs-complex-condition)
-5.  [用 Java SE 8 流处理数据](http://web.archive.org/web/20220310233017/http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)
+1. [Java 8 循环推理在我这里](http://web.archive.org/web/20220310233017/https://stackoverflow.com/questions/26422166/java-8-cyclic-inference-in-my-case)
 
-<input type="hidden" id="mkyong-current-postId" value="13951">
+2. [Java 8 解释：使用过滤器、映射、流和 Foreach 将 Lambdas 应用于 Java 集合！](http://web.archive.org/web/20220310233017/http://zeroturnaround.com/rebellabs/java-8-explained-applying-lambdas-to-java-collections/)
+
+3. [Java 8 forEach 示例](http://web.archive.org/web/20220310233017/http://www.mkyong.com/java8/java-8-foreach-examples/)
+
+4. [Java 8 流：多重过滤器与复杂条件](http://web.archive.org/web/20220310233017/https://stackoverflow.com/questions/24054773/java-8-streams-multiple-filters-vs-complex-condition)
+
+5. [用 Java SE 8 流处理数据](http://web.archive.org/web/20220310233017/http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)

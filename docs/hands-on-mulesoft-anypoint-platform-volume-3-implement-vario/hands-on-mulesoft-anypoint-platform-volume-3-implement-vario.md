@@ -1,27 +1,11 @@
+
 # MuleSoft Anypoint Platform 实用指南卷 3：实现包括数据库、文件、SOAP、电子邮件在内的多种连接器
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 献给
+## 献给
 
 Rathi Shravanti Shashank
 
-# 关于作者
+## 关于作者
 
 Nanda Nachimuthu 毕业于泰米尔纳德邦农业大学（泰米尔纳德邦哥姆拜伊尔），并在印度理工学院拉格普尔获得了 Java 和互联网计算领域的高级文凭。他还在德里印度国际贸易学院完成了高级文凭，该学院专门从事国际业务战略。此外，他还是计算机科学领域的 WHRPC 荣誉博士。
 
@@ -31,9 +15,9 @@ Nanda Nachimuthu 毕业于泰米尔纳德邦农业大学（泰米尔纳德邦哥
 
 他是一些社交平台的创始人，并拥有旗下的几个商标。
 
-目前，他专注于像 MuleSoft 这样的集成技术平台，他认为数字营销和机器间通信（M2M）在未来有广阔的前。
+目前，他专注于像 MuleSoft 这样的集成技术平台，他认为数字营销和机器间通信（M2M）在未来有广阔的前景。
 
-# 关于评审员
+## 关于评审员
 
 Vinoth Kumar 在 IT 行业拥有24多年的经验，是一位专攻云、AI/ML、机器人、区块链、SOA 和 Web 技术的企业架构师。他是 IBM 认证的 Websphere 集成开发人员，为 IBM、Oracle 和 Mule SOA 平台产品提供解决方案。Vinoth Kumar 在云迁移、企业应用集成、使用人工智能/机器学习进行数据分析以及使用 Web3、以太坊和 Hyperledger 的区块链解决方案方面拥有经验。凭借他在云、物联网、人工智能机器人领域的丰富经验，他专注于构建智能工厂的工业4.0 框架。
 
@@ -45,7 +29,7 @@ Arul ChristhruRaj Alphonse 是一位集成架构师、顾问和集成开发人�
 
 在空闲时间，他喜欢烹饪、看电视节目和去很棒的地方旅行！
 
-# 致谢
+## 致谢
 
 尽管我也拥有深厚的技术背景，并且从 MuleSoft 成立之初就在其中，但当 API 驱动的连接性范式转移开始时，我发现很难跟上整个平台架构的使命和愿景。我也曾努力理解 MuleSoft 团队未来的实现方法。
 
@@ -61,7 +45,7 @@ Arul ChristhruRaj Alphonse 是一位集成架构师、顾问和集成开发人�
 
 再次感谢各位 Muleys！
 
-# 前言
+## 前言
 
 在我看来，对于一个新兴的技术或业务候选人来说，要获得参与高级系统集成场景的机会并不容易。想象一个财务集成场景，销售发票等信息在 SAP 和 Financial Force 等 SaaS 系统之间流动。对于许多新人来说，获得机会处理这些应用程序设置是非常困难或实际上是不可能的。特别是当大多数基于云的 SaaS 应用都是安全部署、授权并基于社区的。
 
@@ -74,31 +58,20 @@ Arul ChristhruRaj Alphonse 是一位集成架构师、顾问和集成开发人�
 在书中十章中，你将学习到：
 
 - 第一章应用 API 详情、MuleSoft 连接器、通过 Anypoint 平台提供的连接器、将连接器添加到项目。
-- 第二章 Apache Netbeans、Derby、数据库连接器、数据库操作、DDL、缓存、按表行
-- 第三章文件连接器模块、文件连接器配置、文件读取组件、文件写入组件、文件列表组件、文件属性、删除组件、移动组件、复制组件、创建目录组件、重命名组件、新或更新的文件
+- 第二章 Apache Netbeans、Derby、数据库连接器、数据库操作、DDL、缓存、按表行。
+- 第三章文件连接器模块、文件连接器配置、文件读取组件、文件写入组件、文件列表组件、文件属性、删除组件、移动组件、复制组件、创建目录组件、重命名组件、新或更新的文件。
 - 第四章基础 Web 项目、服务器设置、从 Anypoint Studio 获取 Netbeans 响应、HTML5 应用、Netbeans Web 服务、Web 服务项目、WSDL、Web 服务组件、调用 WSDL、输入参数、调用 Web 服务、多个 Web 服务操作。
-- 第五章电子邮件 SMTP、启用 SMTP 启动 TLS、Gmail 设置中的低安全性选项、文件附件、启用 IMAP 和 POP3 访问、SMTP IMAP 和 POP3 配置、Mozilla
+- 第五章电子邮件 SMTP、启用 SMTP 启动 TLS、Gmail 设置中的低安全性选项、文件附件、启用 IMAP 和 POP3 访问、SMTP IMAP 和 POP3 配置、Mozilla ThunderBird 配置，SSL IMAP 和 POP3 设置，非 SSL IMAP 和 POP3 设置，IMAP 实战。
+- 第 6 章 VM 队列、发布与消费组件、监听器，以及消费与监听。
+- 第 7 章 ApacheMQ、ActiveMQ Web 界面、队列创建、ApacheMQ 连接器、发布与消费组件，以及监听器组件。
+- 第 8 章 脚本引擎与 Groovy。
+- 第 9 章 RabbitMQ 安装、启用管理插件、RabbitMQ Web 管理界面、AMQP 连接器，以及发布与监听器组件。
+- 第 10 章 SFTP 连接器。
+- 第 11 章 LDAP 连接器、LDAP 操作、ApacheDS、通过 LDAP Studio 建立新的 LDAP 连接、身份验证详情、Anypoint Studio LDAP 连接器、LDAP 目录对象详情、LDAP 查找组件、Apache DS LDAP 目录详情。
+- 第 12 章 Java 程序的静态方法、Java 程序的公共方法以及 new 和 invoke 组件。
+- 第 13 章 ObjectStore 连接器，基础知识与 DB 缓存场景。
 
-
-ThunderBird 配置，SSL IMAP 和 POP3 设置，非 SSL IMAP 和 POP3 设置，IMAP 实战。
-
-第 6 章 VM 队列、发布与消费组件、监听器，以及消费与监听。
-
-第 7 章 ApacheMQ、ActiveMQ Web 界面、队列创建、ApacheMQ 连接器、发布与消费组件，以及监听器组件。
-
-第 8 章 脚本引擎与 Groovy
-
-第 9 章 RabbitMQ 安装、启用管理插件、RabbitMQ Web 管理界面、AMQP 连接器，以及发布与监听器组件。
-
-第 10 章 SFTP 连接器
-
-第 11 章 LDAP 连接器、LDAP 操作、ApacheDS、通过 LDAP Studio 建立新的 LDAP 连接、身份验证详情、Anypoint Studio LDAP 连接器、LDAP 目录对象详情、LDAP 查找组件、Apache DS LDAP 目录详情
-
-第 12 章 Java 程序的静态方法、Java 程序的公共方法以及 new 和 invoke 组件。
-
-第 13 章 ObjectStore 连接器，基础知识与 DB 缓存场景
-
-# 代码包与彩色图片
+## 代码包与彩色图片
 
 请点击链接下载书籍的**代码包**和**彩色图片**：
 
@@ -108,7 +81,7 @@ https://rebrand.ly/6ca4e1
 
 我们从丰富的书籍和视频目录中提供代码包，欢迎此处查看！
 
-# 勘误
+## 勘误
 
 我们对 BPB Publications 的工作感到非常自豪，并遵循最佳实践以确保内容的准确性，为订阅者提供极致的阅读体验。我们的读者是我们的镜子，我们利用他们的反馈来反映并改进出版过程中可能出现的人为错误（如果有）。为了让我们保持质量并帮助我们联系可能因意外错误而遇到困难的读者，请通过邮件联系我们：
 
@@ -120,50 +93,33 @@ BPB Publications 全体非常感谢您的支持、建议和反馈。
 
 在处，您还可以阅读免费技术文章集，订阅一系列免费新闻邮件，并获取 BPB 书籍和 eBook 的专属折扣和优惠。
 
+如果您在互联网上发现我们作品任何形式的非法盗版，如果您能提供位置地址或网站名称，我们将不胜感激。请通过 business@bpbonline.com 联系我们并提供材料链接。
 
-如果您在互联网上发现我们作品任何形式的非法盗版，如果您能提供位置地址或网站名称，我们将不胜感激。请通过 business@bpbononline.com 联系我们并提供材料链接。
-
-# 如果您成为作者
+## 如果您成为作者
 
 如果您在某个领域拥有专长，并且对编写或为书籍贡献感兴趣，请访问。我们已经与成千上万像您这样的开发者和技术专家合作，帮助他们与全球技术社区分享见解。您可以提交通用申请、申请我们正在招募作者的特定热门话题，或提交自己的想法。
-
 
 请留下评价。在您阅读并使用此书后，为什么不在购买的网站上留评价呢？潜在读者可以查看并参考您的中立意见做出购买决策。BPB 可以了解您对我们产品的看法，我们的作者也可以看到您对书的反馈。谢谢！
 
 欲了解更多关于 BPB 的信息，请访问
 
-
-
-
-
-
 - 结论
 - 需探索的关键术语
-
 - 注意要点
-
-
 - 注意要点
-
 - 结构
 - 注意要点
-
 - 目标
 - 结论
 - 需探索的关键术语
-
 - 执行 Groovy、Python 和 Ruby 脚本
 - 注意要点
-
 - 注意要点
-
 - 注意重点
-
+- 需探索的关键术语
 - 需探索的关键术语
 
-- 需探索的关键术语
-
-# 索引
+## 索引
 
 # MuleSoft 连接器简介
 
@@ -184,15 +140,16 @@ RAML 和 Anypoint Studio 概念
 学习本单元后，你将能够：
 
 Mock 项目需求采集
+
 端点设计
+
 SaaS 应用 API
+
 基础连接器概念
 
 ## 简介
 
 在学习了卷 1 和卷 2 之后，我们现在到了卷 3。接下来的页面将讨论我们在卷 1 和卷 2 中涵盖的内容，以及卷 3 的意图。卷 3 主要处理应用程序连接器，如数据库、文件、电子邮件等。通过这些连接器，开发者可以访问企业系统并处理安全数据。让我们来看看这些概念。
-
-
 
 业务环境以理解完整的业务生态系统。
 
@@ -229,7 +186,7 @@ SaaS 应用 API
 
 | 服务 | 描述 |
 |---|---|
-| Absence_Management |缺勤管理 Web 服务包含暴露缺勤相关数据的操作，包括 Workday 人力资本管理业务服务中的包含、覆盖以及请假请求。 |
+| Absence_Management | 缺勤管理 Web 服务包含暴露缺勤相关数据的操作，包括 Workday 人力资本管理业务服务中的包含、覆盖以及请假请求。 |
 | Academic_Advising | 用于检索与学术咨询相关的对象的 Web 服务，例如学生学术要求。 |
 | Academic_Foundation | 用于创建、编辑和检索学生系统跨模块使用的基础对象的公共 Web 服务。 |
 | Admissions | 用于创建、编辑和检索与录取相关的对象的 Web 服务，例如申请人。 |
@@ -240,7 +197,7 @@ SaaS 应用 API
 
 尝试使用应用程序名称搜索其他 API 文档；例如，搜索 API
 
-## API 文档 - SAP Help 
+## API 文档 - SAP Help
 
 ### 目录
 
@@ -294,33 +251,44 @@ SaaS 应用 API
 - 财务细节——输入数据——所以是 post 方法
 
 https://mybank.com/homeloan/approve/verify
+
 https://mybank.com/homeloan/approve/creditscore
+
 https://mybank.com/homeloan/coreapis/creditscorelogic
+
 https://mybank.com/homeloan/approve/loanlimit
+
 https://mybank.com/homeloan/coreapis/loanlimitAPI
+
 https://mybank.com/homeloan/disbursal/banks
+
 https://mybank.com/homeloan/disbursal/release
+
 https://mybank.com/homeloan/repayment/checkhistory
+
 https://mybank.com/homeloan/collection/bucket
+
 https://mybank.com/homeloan/legal/action
+
 https://mybank.com/homeloan/settlement/agreement
-https://mybank.com/homeloan/closure/closed
-https://mybank.com/customer/financial
+
+
+
+`https://mybank.com/homeloan/closure/closed`
+
+`https://mybank.com/customer/financial`
 
 但我们的目标不是进入 RAML 规范的设计部分，而是希望更多地集中在连接器的配置上。
 
 例如，个人详情可能从 CRM 系统中存储和检索，财务信息将存储在金融系统中，以此此类推。我们可能还需要调用各种 API 进行信用分计算和贷款额度。有了这些理解，让我们继续探索 MuleSoft 提供的实时连接器。
 
-访问 https://docs.mulesoft.com/connectors/_ 页面探索 MuleSoft 提供的多种现成连接器。
+访问`https://docs.mulesoft.com/connectors/_`页面探索 MuleSoft 提供的多种现成连接器。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_38_0.png)
 
 图 1.5：MuleSoft 连接器
 
 打开 Anypoint Studio，创建一个示例项目，在 Mule Palette 中，你可以看到已添加的默认模块以及适用于项目的其他可用模块。你可以从特色模块列表中将所需的模块拖入你的项目中。
-
-
-
 
 以下截图显示我们已经添加了等连接器。
 
@@ -338,9 +306,9 @@ https://mybank.com/customer/financial
 
 登录你的 Anypoint Platform，可以找到如图所示 Assets 选项，点击它即可浏览 MuleSoft 提供的所有资产；你可以通过选择 Connectors 选项过滤资产。
 
-# 图 1.10：通过 Anypoint Platform  MuleSoft 提供的连接器
+### 图 1.10：通过 Anypoint Platform MuleSoft 提供的连接器
 
-访问 https://docs.mulesoft.com/anypoint-platform/anypoint-connector 了解更多关于自定义连接器的知识；这在目前并不是强制性的。
+访问`https://docs.mulesoft.com/anypoint-platform/anypoint-connector`了解更多关于自定义连接器的知识；这在目前并不是强制性的。
 
 ## Anypoint 连接器开发
 
@@ -376,7 +344,7 @@ https://mybank.com/customer/financial
 
 在本章中，我们将涵盖以下主题：
 
-- 数据库 (DB) 设置和 DB 连接属性
+- 数据库（DB）设置和 DB 连接属性
 - 下载 Apache Derby
 - 理解数据库
 - 向项目添加数据库模块
@@ -449,95 +417,98 @@ https://mybank.com/customer/financial
 
 ## 下载 Apache NetBeans 12.0
 
-* Apache NetBeans 12.0 于 2020 年 6 月 4 日发布。查看 Apache NetBeans 12.0 Features 获取完整功能列表。
-* Apache NetBeans 12.0 可从你最近的镜像站点下载。
-* 二进制文件：netbeans-12.0-bin.zip (SHA-512, PGP ASC)
-* 源码：netbeans-12.0-source.zip (SHA-512, PGP ASC)
-* 安装程序：
-* ApacheNetBeans-12.0-bin-windows-x64.exe (SHA-512, PGP ASC)
-* ApacheNetBeans-12.0-bin-linux-x64.sh (SHA-512, PGP ASC)
-* ApacheNetBeans-12.0-macos.dmg (SHA-512, PGP ASC)
-* 此版本的 Javadoc 位于：https://bits.netbeans.org/12.0/javadoc
+- Apache NetBeans 12.0 于 2020 年 6 月 4 日发布。查看 Apache NetBeans 12.0 Features 获取完整功能列表。
+- Apache NetBeans 12.0 可从你最近的镜像站点下载。
+- 二进制文件：`netbeans-12.0-bin.zip`（SHA-512, PGP ASC）
+- 源码：`netbeans-12.0-source.zip`（SHA-512, PGP ASC）
+- 安装程序：
+  - `ApacheNetBeans-12.0-bin-windows-x64.exe`（SHA-512, PGP ASC）
+  - `ApacheNetBeans-12.0-bin-linux-x64.sh`（SHA-512, PGP ASC）
+  - `ApacheNetBeans-12.0-macos.dmg`（SHA-512, PGP ASC）
+- 此版本的 Javadoc 位于：`https://bits.netbeans.org/12.0/javadoc`
 
-> 官方上，使用 PGP 签名（.asc 文件）验证下载文件的完整性是非常关重要的。PGP 签名应与包含用于签名的 PGP 密钥的 KEYS 文件进行匹配。Apache NetBeans 也可以在 Linux 上作为自包含的 snap 包安装。
+> 官方上，使用 PGP 签名（`.asc` 文件）验证下载文件的完整性是非常关重要的。PGP 签名应与包含用于签名的 PGP 密钥的 KEYS 文件进行匹配。Apache NetBeans 也可以在 Linux 上作为自包含的 snap 包安装。
 
+`Product NetBeans IDE 8.2 (Build 201610071157)`
 
+NetBeans IDE 已更新至版本 NetBeans 8.2 Patch 2。
 
+`1.8.0_181; Java HotSpot(TM) 64-Bit Server VM 25.181-b13`
 
+`Java (TM) SE Runtime Environment 1.8.0_181-b13`
 
-Product NetBeans IDE 8.2 (Build 201610071157)
+`Windows 10 version 10.0 running on amd64; Cp1252; en_IN (nb)`
 
-NetBeans IDE 已更新至版本 NetBeans 8.2 Patch 2
+用户路径：`C:\Users\Admin\AppData\Roaming\NetBeans\8.2`
 
-1.8.0_181; Java HotSpot(TM) 64-Bit Server VM 25.181-b13
-
-Java (TM) SE Runtime Environment 1.8.0_181-b13
-
-Windows 10 version 10.0 running on amd64; Cp1252; en_IN (nb)
-
-用户路径 C:\Users\Admin\AppData\Roaming\NetBeans\8.2
-
-缓存 C:\Users\Admin\AppData\Local\NetBeans\Cache\8.2
+缓存：`C:\Users\Admin\AppData\Local\NetBeans\Cache\8.2`
 
 ## 理解 Derby_database
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_58_0.png)
-图 2.2: 理解 Derby 数据库
+
+图 2.2：理解 Derby 数据库
 
 现在进入“服务”（Services）选项卡，如图所示，并检查你的 NetBeans 安装中是否预装了任何 Derby。
 
 如果没有，你可以单独安装并提供 Derby 的安装路径。
 
-完成后，你将看到 Derby DB 运行在 localhost:1527 上，并有一个名为 sample 的默认模式（schema），其中预置了带有示例数据的表。
+完成后，你将看到 Derby DB 运行在`localhost:1527`上，并有一个名为`sample`的默认模式（schema），其中预置了带有示例数据的表。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_59_0.png)
+
 创建一个新的 MuleSoft 项目并进入“调色板”（Palette）检查可用的 DB 连接器。
 
 点击位于核心（core）和收藏（favorite）按钮上方的“添加模块”（Add modules）按钮。你可以在其中看到所有可用的收藏模块和数据库模块。
 
-将其拖入你的模块面板，你会看到调色板和项目中添加了一个名为 database 的模块。
+将其拖入你的模块面板，你会看到调色板和项目中添加了一个名为`database`的模块。
 
 你可以看到所有与 DB 相关的操作，如插入（insert）、查询（select）、更新（update）等。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_60_0.png)
+
 创建一个带有基本参数的调度器（scheduler），并在旁边拖入一个 Select 组件。
 
 在 Select 组件属性中，你可以看到一个用于输入要执行的查询的文本区域；提供如下内容：
 
-```
+```sql
 SELECT * FROM APP.CUSTOMER FETCH FIRST 1000 ROWS ONLY
 ```
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_61_0.png)
-### 图 2.5: 配置 Derby 数据库属性
+
+### 图 2.5：配置 Derby 数据库属性
 
 点击连接配置添加按钮查看之前的数据库配置对话框，并提供以下值：
 
-url="jdbc:derby://localhost:1527/sample" driverClassName="org.apache.derby.jdbc.ClientDriver" user="app" password="app"
+`url="jdbc:derby://localhost:1527/sample" driverClassName="org.apache.derby.jdbc.ClientDriver" user="app" password="app"`
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_62_0.png)
-### 图 2.6: 检查本地系统的 Derby DB 安装
+
+### 图 2.6：检查本地系统的 Derby DB 安装
 
 还有最后一步是为项目设置提供所需的 JDBC 驱动程序。检查你的文件系统，如图所示，以了解我们的 Derby Client jar 文件的位置。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_63_0.png)
+
 即使你找不到 derby client jar，也可以在网上搜索并下载到本地文件夹，然后提供它。
 
 在数据库配置对话框中，进入“常规”（general）选项卡，选择所需的库，配置并选择本地文件选项提供此 Derby client jar 文件。
 
 在点击“测试连接”按钮检查 DB 可用性之前，我们可能需要验证 DB 是否正在运行。
 
-### 图 2.8: 通过 NetBeans 检查 Derby 表
+### 图 2.8：通过 NetBeans 检查 Derby 表
 
-进入 NetBeans -> services -> databases -> jdbc_derby_localhost，然后右键点击选择“连接”（connect）选项。
+进入`NetBeans -> services -> databases -> jdbc_derby_localhost`，然后右键点击选择“连接”（connect）选项。
 
 一旦连接，你就可以看到该模式中的所有可用示例表。
 
-右键点击 customers 表并选择“查看”（view），你可以在右侧面板看到带有所有可用数据的表结构，现在你的数据库已启动且窗口正在运行。
+右键点击`customers`表并选择“查看”（view），你可以在右侧面板看到带有所有可用数据的表结构，现在你的数据库已启动且窗口正在运行。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_64_0.png)
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_65_0.png)
+
 回到 Anypoint Studio 并点击“测试连接”按钮，你会发现连接已建立。
 
 ## 理解 MuleSoft 连接器配置和基础 DB 操作
@@ -545,11 +516,12 @@ url="jdbc:derby://localhost:1527/sample" driverClassName="org.apache.derby.jdbc.
 让我们尝试理解连接器是如何设计以从相应应用程序获取连接的，并从一个基础的 DB 操作开始。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_66_0.png)
-图 2.10: 检查配置 XML 条目
+
+图 2.10：检查配置 XML 条目
 
 检查配置 XML 文件，你可以看到上述条目。
 
-```
+```xml
 name="dbSelectFlow" doc:id="c1560de2-3f36-422a-8aa3-4409fec31be"
 doc:name="Scheduler" doc:id="1b146f79-443c-4e57-8f14-8b7a7f8baad"
 frequency="10"/>
@@ -557,20 +529,22 @@ SELECT * FROM APP.CUSTOMER FETCH FIRST 1000 ROWS
 ```
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_67_0.png)
-### 图 2.11: 包含转换组件
+
+### 图 2.11：包含转换组件
 
 引入转换组件以 JSON 格式读取结果，如图所示：
 
-doc:name="Transform Message" doc:id="1f286513-6beb-4f47-a585-82326e8a7a"
+`doc:name="Transform Message" doc:id="1f286513-6beb-4f47-a585-82326e8a7a"`
 
-```
+```dw
 2.0
 output application/json
 payload
 ```
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7)
-### 图 2.12: 运行项目并在控制台检查值
+
+### 图 2.12：运行项目并在控制台检查值
 
 确保你已设置好调度器、select 组件和日志记录（logger），运行项目并如所示查看结果。
 
@@ -579,32 +553,36 @@ payload
 在理解连接器配置后，让我们重新查看可用的连接器以及如何浏览。我们还可以尝试检查操作和连接器配置。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_69_0.png)
-### 图 2.13: 理解其他模块
+
+### 图 2.13：理解其他模块
 
 浏览多个模块并添加到项目，将操作拖入流（flows）以理解它们是如何设计的。检查你的项目结构和 POM 文件。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_70_0.png)
+
 点击交换浏览默认未提供的模块。你需要提供 Anypoint 凭据。
 
-### 图 2.15: 选择并下载模块
+### 图 2.15：选择并下载模块
 
 你可以看到连接器状态，如图所示。
 
-### 图 2.16: 检查项目中已添加的模块
+### 图 2.16：检查项目中已添加的模块
 
 从之前的屏幕选择文件，为了测试目的添加了 Salesforce、Workday 等连接器，并在项目资源管理器中找到这些依赖。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_72_0.png)
-### 图 2.17: 检查已添加的模块
+
+### 图 2.17：检查已添加的模块
 
 你可以选择模块将其添加到画布，并检查该组件的属性。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_73_0.png)
-### 图 2.18: 检查详情
+
+### 图 2.18：检查详情
 
 必须提供 Access Token 与应用程序建立连接。这些连接参数在其他应用之间有所不同。
 
-```
+```xml
 <scheduler doc:name="Scheduler" doc:id="78be7e4c-724c-4a9b-a119-bd0a471964">
   <strategy frequency="10" timeUnit="SECONDS"/>
 </scheduler>
@@ -620,13 +598,18 @@ payload]]></ee:set-payload>
 </ee:transform>
 <logger level="INFO" name="Logger" doc:id="ad8ce11-ccf0-4e47-9272-81f47b44d34" message="${payload}"/>
 ```
-### 图 2.19: 配置 XML
+
+### 图 2.19：配置 XML
 
 查看你的配置文件。此选择是使用动态调度器完成的。
 
-向 SQL 查询传递动态参数并迭代结果
+## 向 SQL 查询传递动态参数并迭代结果
 
 我们需要使用查询参数或 POST 方法将值传递给流，因此让我们此流转换为 HTTP 监听器。
+
+
+
+以下是一个 MuleSoft 配置文件的示例，展示了如何配置数据库连接、HTTP 监听器以及相关的数据流处理：
 
 ```
 <dbconfig name="Database_Config" docname="Database_Config" docid="d0938818-e513-4a76-9253-b8da064294d7">
@@ -655,17 +638,14 @@ payload]]></ee:set-payload>
   </db:sets>
 </dbconfig>
 ```
-### 图 2.20: HTTP 监听器的配置 XML
 
-我们引入了一个端口号为 8085 的 HTTP 监听器，端点为 DB。
+### 图 2.20：HTTP 监听器的配置 XML
 
-此外我们只获取两个值，如城市和电子邮件。
+我们引入了一个端口号为 `8085` 的 HTTP 监听器，端点为 `DB`。
+
+此外，我们只获取两个值，如城市和电子邮件。
 
 运行此项目并从 Postman 调用端点。
-
-
-
-
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_76_0.png)
 
@@ -677,19 +657,19 @@ payload]]></ee:set-payload>
 
 ### 图 2.22：向 SQL 脚本发布动态参数
 
-下一个重要要求是从 HTTP 调用动态地将 `where` 条件值值传递到 MuleSoft 工作流中。
+下一个重要要求是从 HTTP 调用动态地将 `where` 条件值传递到 MuleSoft 工作流中。
 
 上一个屏幕显示了如何为 SQL 查询分配动态值。
 
-在输入参数中，我们必须按照如下方式定义 payload 变量和查询变量赋值：
+在输入参数中，我们必须按照如下方式定义 `payload` 变量和查询变量赋值：
 
 > * FROM APP.CUSTOMER where customer_id=:payload_id
 
-### #[{{'payload_id' : payload.id/db}}]
+### `#{{'payload_id' : payload.id/db}}`
 
 | POST | http://localhost:8081/ | 预请求脚本 | 测试 | 设置 |
 |---|---|---|---|---|
-| 参数 | 授权 | 请求头 (9) | 主体 | | |
+| 参数 | 授权 | 请求头 (9) | 主体 | |
 | 无 | form-data | x-www-form-urlencoded | 原始 | 二进制 | GraphQL JSON |
 
 ```json
@@ -718,7 +698,7 @@ Pretty Raw Preview Visualize JSON
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_79_0.png)
 
-你也可以为从 `select` 查询中获取的每个 payload 引入 "for-each-scope"，并可以如图所示遍历每一行：
+你也可以为从 `select` 查询中获取的每个 `payload` 引入 `for-each-scope`，并可以如图所示遍历每一行：
 
 ```xml
 <dbconfig name="Database_Config" docname="DatabaseConfig" id="cd91018-e13d-4a76-9fb3-0bd6d4d2e947">
@@ -748,25 +728,25 @@ Pretty Raw Preview Visualize JSON
 
 图 2.26：使用 for each 迭代记录的配置文件
 
-图中 for-each 组件的完整配置文件
+图中 `for-each` 组件的完整配置文件。
 
 ## 深入 cache scope 的实现
 
-在我们之前的卷册中，我们没有讨论过 cache scope（缓存范围），因为可以使用单个 array list 来理解 cache scope，或者通过适当的 DB 调用来更好地理解它。此外，在实际场景中，cache scope 将紧密依赖 object store（对象存储）组件。因此，结合实时数据库示例来理解缓存行为更好。
+在我们之前的卷册中，我们没有讨论过 `cache scope`（缓存范围），因为可以使用单个 `array list` 来理解 `cache scope`，或者通过适当的 DB 调用来更好地理解它。此外，在实际场景中，`cache scope` 将紧密依赖 `object store`（对象存储）组件。因此，结合实时数据库示例来理解缓存行为更好。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_81_0.png)
 
 图 2.27：创建缓存策略
 
-现在让我们通过指定 payload id 为要缓存的键来创建一个缓存策略。
+现在让我们通过指定 `payload id` 为要缓存的键来创建一个缓存策略。
 
-当给出一个键表达式时，缓存机制将为所有具有相同 payload id 的查询直接从数据库获取值。让我们将此缓存策略分配到我们的 `select` 工作流中。
+当给出一个键表达式时，缓存机制将为所有具有相同 `payload id` 的查询直接从数据库获取值。让我们将此缓存策略分配到我们的 `select` 工作流中。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_82_0.png)
 
 图 2.28：参考缓存策略后的完成工作流
 
-现在，在之前的画布中，你可以看到 cache 内部有两个 logger 组件和一个 `select` 语句。这意味着如果你第一次传递 payload id，它将在 cache 内部处理，且控制台中看不到 logger 输出。而如果你再次使用相同的 payload id 再次调用 `select` 查询，查询将不会通过访问数据库来执行；相反，值将从缓存中打印。你可以参考以下截图来检查缓存操作：
+现在，在之前的画布中，你可以看到 `cache` 内部有两个 `logger` 组件和一个 `select` 语句。这意味着如果你第一次传递 `payload id`，它将在 `cache` 内部处理，且控制台中看不到 `logger` 输出。而如果你再次使用相同的 `payload id` 再次调用 `select` 查询，查询将不会通过访问数据库来执行；相反，值将从缓存中打印。你可以参考以下截图来检查缓存操作：
 
 ```
 INFO 2021-03-09 12:25:43,119 [MuleRuntime.uber:01:cachingStrategy-7693046] [processor: dbcacheFlow/processors/0]
@@ -774,7 +754,9 @@ INFO 2021-03-09 12:25:43,269 [MuleRuntime.uber:01:cachingStrategy-7693046] [proc
 ```
 
 2021-03-09 12:25:43,119 [MuleRuntime.uber:01:cachingStrategy-7693046] [processor: dbcacheFlow/processors/0]
+
 2021-03-09 12:25:43,269 [MuleRuntime.uber:01:cachingStrategy-7693046] [processor: dbcacheFlow/processors/0]
+
 （注：此处根据上下文逻辑对日志内容进行了对齐并保持格式一致）
 
 **图 2.23：通过发布动态值的 PostMan 调用**
@@ -783,39 +765,39 @@ INFO 2021-03-09 12:25:43,269 [MuleRuntime.uber:01:cachingStrategy-7693046] [proc
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_89_0.png)
 
- 图 2.24：设置动态值后的 Config XML 文件
+图 2.24：设置动态值后的 Config XML 文件
 
 为 SQL 脚本设置动态值的完整配置文件如图所示。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_79_0.png)
 
-你也可以为从 `select` 查询中获取的每个 payload 引入 "for-each-scope"，并可以如图所示遍历每一行：
+你也可以为从 `select` 查询中获取的每个 `payload` 引入 `for-each-scope`，并可以如图所示遍历每一行：
 
 （代码块保持不变）
 
 图 2.26：使用 for each 迭代记录的配置文件
 
-图中 for-each 组件的完整配置文件
+图中 `for-each` 组件的完整配置文件
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_81_0.png)
 
 图 2.27：创建缓存策略
 
-现在让我们通过指定 payload id 为要缓存的键来创建一个缓存策略。
+现在让我们通过指定 `payload id` 为要缓存的键来创建一个缓存策略。
 
-当给出一个键表达式时，缓存机制将为所有具有相同 payload id 的查询直接从数据库获取值。让我们将此缓存策略分配到我们的 `select` 工作流中。
+当给出一个键表达式时，缓存机制将为所有具有相同 `payload id` 的查询直接从数据库获取值。让我们将此缓存策略分配到我们的 `select` 工作流中。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_82_0.png)
 
 图 2.28：参考缓存策略后的完成工作流
 
-现在，在之前的画布中，你可以看到 cache 内部有两个 logger 组件和一个 `select` 语句。这意味着如果你第一次传递 payload id，它将在 cache 内部处理，且控制台中看不到 logger 输出。而如果你再次使用相同的 payload id 再次调用 `select` 查询，查询将不会通过访问数据库来执行；相反，值将从缓存中打印。你可以参考以下截图来检查缓存操作：
+现在，在之前的画布中，你可以看到 `cache` 内部有两个 `logger` 组件和一个 `select` 语句。这意味着如果你第一次传递 `payload id`，它将在 `cache` 内部处理，且控制台中看不到 `logger` 输出。而如果你再次使用相同的 `payload id` 再次调用 `select` 查询，查询将不会通过访问数据库来执行；相反，值将从缓存中打印。你可以参考以下截图来检查缓存操作：
 
 （代码块保持不变）
 
 **图 2.29：缓存范围的作用**
 
-在之前的屏幕图中，你可以看到对于每一个重复的 payload id；数据库都会被调用，因为我们使了特定的缓存失效。请记住，缓存设计并未此结束；我们还有与 ObjectStore 组件配合的更复杂的缓存功能，很快就会探讨。
+在之前的屏幕图中，你可以看到对于每一个重复的 `payload id`；数据库都会被调用，因为我们使用了特定的缓存失效。请记住，缓存设计并未此结束；我们还有与 `ObjectStore` 组件配合的更复杂的缓存功能，很快就会探讨。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_89_0.png)
 
@@ -827,7 +809,7 @@ INFO 2021-03-09 12:25:43,269 [MuleRuntime.uber:01:cachingStrategy-7693046] [proc
 
 图 2.31：检查失效缓存结果
 
-在之前的截图中，你可以看到对于每一个重复的 payload id；数据库都会被调用，因为我们使了特定的缓存失效。
+在之前的截图中，你可以看到对于每一个重复的 `payload id`；数据库都会被调用，因为我们使用了特定的缓存失效。
 
 ## 数据库操作，如插入、更新、DDL、脚本和存储过程
 
@@ -839,13 +821,9 @@ INFO 2021-03-09 12:25:43,269 [MuleRuntime.uber:01:cachingStrategy-7693046] [proc
 
 让我们从 NetBeans IDE 插入一行。你可以找到加号按钮，使用表单对话插入记录。你可以输入你选择的值并点击 Show
 
-
-
-
-
 ### 图 2.23：从 NetBeans IDE 中获取插入脚本
 
-添加条目所需的插入脚本将如插所示所示。
+添加条目所需的插入脚本将如插图所示。
 
 你可以复制 SQL 脚本并添加一些示例行进行检查。
 
@@ -899,7 +877,7 @@ Drive, 'P.O. Box 456', 'Atlanta', 'FL', '555-555-0175', '555-555-0176',
 
 同样，来到 Anypoint Studio 画布并引入一个更新组件。
 
-按照之前的说明，提供连接详情检查连通性，并提供你在 NetBeans 中使用的相同的更新语句，如如下所示：
+按照之前的说明，提供连接详情检查连通性，并提供你在 NetBeans 中使用的相同的更新语句，如下所示：
 
 ```
 UPDATE CUSTOMER
@@ -907,13 +885,15 @@ SET DISCOUNT_CODE = 'L'
 WHERE CUSTOMER_ID = 88888
 ```
 
+
+
 运行项目后，你将获得一个成功消息。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_92_0.png)
 
 **图 2.38：NetBeans IDE 中的 DDL 数据定义语言执行**
 
-DDL 用于定义创建和修改表及其他核心功能的命令。
+`DDL` 用于定义创建和修改表及其他核心功能的命令。
 
 为了测试目的，你尝试使用 `create table` DDL 在 Derby 中创建一个表。
 
@@ -927,7 +907,7 @@ DDL 用于定义创建和修改表及其他核心功能的命令。
 
 **图 2.39：通过 MuleFlow 执行 DDL**
 
-回到 Studio 画布并引入已执行的 DDL 组件，提供所需的连接详情，并通过提供 DDL 命令再创建一个表，如下所示：
+回到 Studio 画布并引入已执行的 `DDL` 组件，提供所需的连接详情，并通过提供 `DDL` 命令再创建一个表，如下所示：
 
 ```
 CREATE TABLE Employees (
@@ -944,7 +924,7 @@ City varchar(255));
 
 图 2.40：执行脚本示例
 
-在 resources 目录下，根目录创建一个名为的文件。
+在 `resources` 目录下，根目录创建一个名为的文件。
 
 脚本内容示例如下所示。
 
@@ -977,19 +957,15 @@ www.smallbill.example.com', NULL)
 
 插入脚本视图
 
-
-
-
-
 ## 表格行监听器 (On table row listener)
 
-On-table-row监听器用于监听表格并在插入新行时触发处理流程。
+`On-table-row` 监听器用于监听表格并在插入新行时触发处理流程。
 
-要实现这一点，请创建一个名为 map 的简单表，并创建一个名为 map_id 的主键。
+要实现这一点，请创建一个名为 `map` 的简单表，并创建一个名为 `map_id` 的主键。
 
-将 map_id 列设置为水线列（watermark column），并完成相关配置的配置。
+将 `map_id` 列设置为水线列（watermark column），并完成相关配置的配置。
 
-现在，我们已经有一个批量插入行的流程，修改脚本以将批量行插入到 map 表中。
+现在，我们已经有一个批量插入行的流程，修改脚本以将批量行插入到 `map` 表中。
 
 你可以运行项目，现在就可以看到表格行监听器正在运行。
 
@@ -1021,39 +997,63 @@ essor: ************New record identified by OnTableRowListener
 ## 注意事项
 
 - 从 MuleSoft 创建多个表并执行数据库操作。
+
 - 理解一对一、一对多等关系类型，并将它们应用到你的项目中。
 
 ## 待探索的关键术语
 
 - Apache NetBeans
+
 - Derby 数据库
+
 - Derby client jar
+
 - 插入脚本 (Insert script)
+
 - 更新语句 (Update statement)
+
 - DDL 数据定义语言
+
 - 执行脚本 (Execute script)
+
 - 存储过程 (Stored procedure)
+
 - 批量插入数据 (Inserting bulk data)
+
 - 批量更新数据 (Updating bulk data)
+
 - 批量删除记录 (Deleting bulk records)
+
 - 批量插入 (Bulk insertion)
-- OnTableRow监听器
+
+- OnTableRow 监听器
 
 ## 结构
 
 在本章中，我们将讨论以下主题：
 
 - 为项目添加文件连接器模块
+
 - 文件连接器配置
+
 - 文件读取组件
+
 - 文件写入组件
+
 - 文件列表组件
+
 - 在调试模式下检查可用文件属性
+
 - 删除组件
+
 - 移动组件
+
 - 复制组件
+
 - 创建目录组件
+
 - 重命名组件
+
 - 新文件或更新文件时触发
 
 ## 目标
@@ -1061,7 +1061,9 @@ essor: ************New record identified by OnTableRowListener
 学习本章后，你将能够：
 
 - 处理文件相关操作
+
 - 将文件操作与调度器及数据库结合
+
 - 设计并创建基于文件的 MuleSoft 流程
 
 ## 介绍
@@ -1078,11 +1080,11 @@ MuleSoft 文件连接器非常简单，它涵盖了所有文件相关操作，�
 
 图 3.2：文件连接器配置
 
-指定要读取的文件，并在日志记录器（logger）中使用 payload 作为消息来查看文件内容。
+指定要读取的文件，并在日志记录器（logger）中使用 `payload` 作为消息来查看文件内容。
 
 图 3.3：使用文件读取组件
 
-指定要写入的文件，在 content 字段中提供内容。
+指定要写入的文件，在 `content` 字段中提供内容。
 
 图 3.4：使用文件写入组件
 
@@ -1090,9 +1092,7 @@ MuleSoft 文件连接器非常简单，它涵盖了所有文件相关操作，�
 
 写入模式有三个选项：覆盖（overwrite）——将删除所有之前的内容；追加（append）——将添加到之前的内容；以及新建（create new）——将创建一个新文件。
 
-### 图 3.5：使用文件组件
-
-等等，文本写的是 图 3.5：使用文件列表组件
+### 图 3.5：使用文件列表组件
 
 列表组件（List component）将提供特定特定目录下所有可用文件的数组。先前的匹配器（matchers）是不言自明的。你必须熟悉 Java 中的正则表达式才能有效地使用这些匹配器。
 
@@ -1149,10 +1149,6 @@ Choice =
 
 当目录获得新文件或工作文件被修改时，可以使用新文件或更新文件组件触发新流程。一旦我们处理了文件，我们可以将文件移动到存档目录，也可以根据后处理操作配置从源位置删除文件。
 
-
-
-
-
 ## 结论
 
 在本章中，我们涵盖了所有文件相关的连接器操作；请尝试不同业务场景的所有示例。在下一章中，我们将探索 SOAP 连接器。
@@ -1160,22 +1156,35 @@ Choice =
 ## 记忆要点
 
 - 尝试理解 Java 的正则表达式并实现文件规则。
+
 - 尝试读取和写入不同类型的文件，如 Excel 和 JSON。
-- 尝试使用数据库 特性；例如，读取脚本文件并执行批量插入。
+
+- 尝试使用数据库特性；例如，读取脚本文件并执行批量插入。
 
 ## 待探索的关键术语
 
 - 文件连接器模块
+
 - 文件连接器配置
+
 - 文件读取组件
+
 - 文件写入组件
+
 - 文件列表组件
+
 - 文件属性
+
 - 删除组件
+
 - 移动组件
+
 - 复制组件
+
 - 创建目录组件
+
 - 重命名组件
+
 - 当有新或更新文件时
 
 ## SOAP WebService 连接器
@@ -1185,35 +1194,61 @@ Choice =
 在本章中，我们将讨论以下主题：
 
 - Web 应用程序的基础是什么
+
 - 在 NetBeans 中创建新项目
+
 - 选择基础 Web 应用程序项目
+
 - 项目名称和位置
+
 - 服务器设置
+
 - 默认索引页
+
 - 在浏览器中运行索引页
+
 - 在 PostMan 中检查响应
+
 - 从 Anypoint Studio 获取 NetBeans 响应
+
 - 使用 NetBeans 创建 HTML5 应用
+
 - 运行 HTML 5 应用
 
 ## 探索应用
 
 - Web 服务的基础
+
 - 从 NetBeans 创建 Web 服务
+
 - 探索 Web 服务项目
+
 - 运行 Web 服务
+
 - 探索 WSDL
+
 - WebServices 和 MuleSoft
+
 - 使用 Web 服务消费者组件
+
 - 探索 WSDL
+
 - 在无输入参数的情况下调用 WSDL
+
 - 向 WebServices 提交输入参数
+
 - 通过 PostMan 获取响应
+
 - 调用本地开发的 NetBeans Web 服务
+
 - 通过转换器组件向 Web 服务发送值
+
 - 在 PostMan 中检查 Web 服务响应
+
 - 调用托管在  上的 Web 服务
+
 - 检查可用的多个 Web 服务操作
+
 - 转换组件设置
 
 ## 目标
@@ -1221,7 +1256,9 @@ Choice =
 学习本章后，你将能够：
 
 - 区分 SOAP 和 REST Web 服务
+
 - 使用 NetBeans IDE 了解 SOAP 的基础
+
 - 通过 MuleSoft SOAP Web 连接器调用 SOAP Web 服务
 
 ## 引言
@@ -1282,15 +1319,17 @@ Web 服务无非是通过 RESTful 和 SOAP 等标准协议在 Web 上提供特�
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_141_0.png)
 
-图 4.9：从 Anypoint Studio 获取 NetBeans 响应
+
+
+# 图 4.9：从 Anypoint Studio 获取 NetBeans 响应
 
 同样，在 Anypoint Studio 中创建一个项目，你可以通过 HTTP 请求组件调用在 NetBeans 中运行的 Web 服务并在 PostMan 中显示负载。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_142_0.png)
 
-图 4.10：使用 NetBeans 创建 HTML5 应用
+# 图 4.10：使用 NetBeans 创建 HTML5 应用
 
-图 4.11：运行 HTML 5 应用
+# 图 4.11：运行 HTML 5 应用
 
 ## 探索应用
 
@@ -1332,43 +1371,43 @@ Web 服务无非是通过 RESTful 和 SOAP 等标准协议在 Web 上提供特�
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_134_0.png)
 
-图 4.1：在 NetBeans 中创建新项目
+# 图 4.1：在 NetBeans 中创建新项目
 
 进入 NetBeans 并创建一个新项目。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_135_0.png)
 
-图 4.2：选择基础 Web 应用程序项目
+# 图 4.2：选择基础 Web 应用程序项目
 
 在“Choose Project”（选择项目）对话框中，选择 Java Web 类别并选择“Web Application”（Web 应用程序）项目，然后点击
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_136_0.png)
 
-**图 4-3：**项目名称和位置
+# 图 4-3：项目名称和位置
 
 如前面的截图所示，提供项目名称、位置和文件夹：
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_137_0.png)
 
-图 4.4：服务器设置
+# 图 4.4：服务器设置
 
-在**Server setting**（服务器设置）中，对话框选择了服务器为 **GlassFish** 并提供了一个上下文路径。
+在`Server setting`（服务器设置）中，对话框选择了服务器为 `GlassFish` 并提供了一个上下文路径。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_138_0.png)
 
-图 4.5：框架选择界面
+# 图 4.5：框架选择界面
 
-你可以选择 Spring Web MVC 作为你的框架。
+你可以选择 `Spring Web MVC` 作为你的框架。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_138_1.png)
 
-图 4.6：默认索引页
+# 图 4.6：默认索引页
 
 现在，你应该能看到一个 Web 项目正在创建，并且显示了默认索引页。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_139_0.png)
 
-图 4.7：在浏览器中运行索引页
+# 图 4.7：在浏览器中运行索引页
 
 右键点击项目并运行（run），查看部署了 Web 应用程序的 Web 服务器，并默认调用索引文件。
 
@@ -1378,15 +1417,15 @@ Web 服务无非是通过 RESTful 和 SOAP 等标准协议在 Web 上提供特�
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_141_0.png)
 
-图 4.9：从 Anypoint Studio 获取 NetBeans 响应
+# 图 4.9：从 Anypoint Studio 获取 NetBeans 响应
 
 同样，在 Anypoint Studio 中创建一个项目，你可以通过 HTTP 请求组件调用在 NetBeans 中运行的 Web 服务并在 PostMan 中显示负载。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_142_0.png)
 
-图 4.10：使用 NetBeans 创建 HTML5 应用
+# 图 4.10：使用 NetBeans 创建 HTML5 应用
 
-图 4.11：运行 HTML 5 应用
+# 图 4.11：运行 HTML 5 应用
 
 ## 探索应用
 
@@ -1428,43 +1467,43 @@ Web 服务无非是通过 RESTful 和 SOAP 等标准协议在 Web 上提供特�
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_134_0.png)
 
-图 4.1：在 NetBeans 中创建新项目
+# 图 4.1：在 NetBeans 中创建新项目
 
 进入 NetBeans 并创建一个新项目。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_135_0.png)
 
-图 4.2：选择基础 Web 应用程序项目
+# 图 4.2：选择基础 Web 应用程序项目
 
 在“Choose Project”（选择项目）对话框中，选择 Java Web 类别并选择“Web Application”（Web 应用程序）项目，然后点击
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_136_0.png)
 
-**图 4-3：**项目名称和位置
+# 图 4-3：项目名称和位置
 
 如前面的截图所示，提供项目名称、位置和文件夹：
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_137_0.png)
 
-图 4.4：服务器设置
+# 图 4.4：服务器设置
 
-在**Server setting**（服务器设置）中，对话框选择了服务器为 **GlassFish** 并提供了一个上下文路径。
+在`Server setting`（服务器设置）中，对话框选择了服务器为 `GlassFish` 并提供了一个上下文路径。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_138_0.png)
 
-图 4.5：框架选择界面
+# 图 4.5：框架选择界面
 
-你可以选择 Spring Web MVC 作为你的框架。
+你可以选择 `Spring Web MVC` 作为你的框架。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_138_1.png)
 
-图 4.6：默认索引页
+# 图 4.6：默认索引页
 
 现在，你应该能看到一个 Web 项目正在创建，并且显示了默认索引页。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_139_0.png)
 
-图 4.7：在浏览器中运行索引页
+# 图 4.7：在浏览器中运行索引页
 
 右键点击项目并运行（run），查看部署了 Web 应用程序的 Web 服务器，并默认调用索引文件。
 
@@ -1474,15 +1513,15 @@ Web 服务无非是通过 RESTful 和 SOAP 等标准协议在 Web 上提供特�
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_141_0.png)
 
-图 4.9：从 Anypoint Studio 获取 NetBeans 响应
+# 图 4.9：从 Anypoint Studio 获取 NetBeans 响应
 
 同样，在 Anypoint Studio 中创建一个项目，你可以通过 HTTP 请求组件调用在 NetBeans 中运行的 Web 服务并在 PostMan 中显示负载。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_142_0.png)
 
-图 4.10：使用 NetBeans 创建 HTML5 应用
+# 图 4.10：使用 NetBeans 创建 HTML5 应用
 
-图 4.11：运行 HTML 5 应用
+# 图 4.11：运行 HTML 5 应用
 
 ## 探索应用
 
@@ -1524,43 +1563,43 @@ Web 服务无非是通过 RESTful 和 SOAP 等标准协议在 Web 上提供特�
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_134_0.png)
 
-图 4.1：在 NetBeans 中创建新项目
+# 图 4.1：在 NetBeans 中创建新项目
 
 进入 NetBeans 并创建一个新项目。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_135_0.png)
 
-图 4.2：选择基础 Web 应用程序项目
+# 图 4.2：选择基础 Web 应用程序项目
 
 在“Choose Project”（选择项目）对话框中，选择 Java Web 类别并选择“Web Application”（Web 应用程序）项目，然后点击
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_136_0.png)
 
-**图 4-3：**项目名称和位置
+# 图 4-3：项目名称和位置
 
 如前面的截图所示，提供项目名称、位置和文件夹：
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_137_0.png)
 
-图 4.4：服务器设置
+# 图 4.4：服务器设置
 
-在**Server setting**（服务器设置）中，对话框选择了服务器为 **GlassFish** 并提供了一个上下文路径。
+在`Server setting`（服务器设置）中，对话框选择了服务器为 `GlassFish` 并提供了一个上下文路径。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_138_0.png)
 
-图 4.5：框架选择界面
+# 图 4.5：框架选择界面
 
-你可以选择 Spring Web MVC 作为你的框架。
+你可以选择 `Spring Web MVC` 作为你的框架。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_138_1.png)
 
-图 4.6：默认索引页
+# 图 4.6：默认索引页
 
 现在，你应该能看到一个 Web 项目正在创建，并且显示了默认索引页。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_139_0.png)
 
-图 4.7：在浏览器中运行索引页
+# 图 4.7：在浏览器中运行索引页
 
 右键点击项目并运行（run），查看部署了 Web 应用程序的 Web 服务器，并默认调用索引文件。
 
@@ -1570,155 +1609,57 @@ Web 服务无非是通过 RESTful 和 SOAP 等标准协议在 Web 上提供特�
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_141_0.png)
 
-图 4.9：从 Anypoint Studio 获取 NetBeans 响应
 
-同样，在 Anypoint Studio 中创建一个项目，你可以通过 HTTP 请求组件调用在 NetBeans 中运行的 Web 服务并在 PostMan 中显示负载。
+
+图 4.9：从 `Anypoint Studio` 获取 `NetBeans` 响应
+
+同样，在 `Anypoint Studio` 中创建一个项目，你可以通过 `HTTP` 请求组件调用在 `NetBeans` 中运行的 `Web` 服务并在 `PostMan` 中显示负载。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_142_0.png)
 
-图 4.10：使用 NetBeans 创建 HTML5 应用
+图 4.10：使用 `NetBeans` 创建 `HTML5` 应用
 
-图 4.11：运行 HTML 5 应用
+图 4.11：运行 `HTML 5` 应用
 
 ## 探索应用
 
-- Web 服务的基础
-- 从 NetBeans 创建 Web 服务
-- 探索 Web 服务项目
-- 运行 Web 服务
-- 探索 WSDL
-- WebServices 和 MuleSoft
-- 使用 Web 服务消费者组件
-- 探索 WSDL
-- 在无输入参数的情况下调用 WSDL
-- 向 WebServices 提交输入参数
-- 通过 PostMan 获取响应
-- 调用本地开发的 NetBeans Web 服务
-- 通过转换器组件向 Web 服务发送值
-- 在 PostMan 中检查 Web 服务响应
-- 调用托管在 Internet 上的 Web 服务
-- 检查可用的多个 Web 服务操作
+- `Web` 服务的基础
+- 从 `NetBeans` 创建 `Web` 服务
+- 探索 `Web` 服务项目
+- 运行 `Web` 服务
+- 探索 `WSDL`
+- `WebServices` 和 `MuleSoft`
+- 使用 `Web` 服务消费者组件
+- 探索 `WSDL`
+- 在无输入参数的情况下调用 `WSDL`
+- 向 `WebServices` 提交输入参数
+- 通过 `PostMan` 获取响应
+- 调用本地开发的 `NetBeans` `Web` 服务
+- 通过转换器组件向 `Web` 服务发送值
+- 在 `PostMan` 中检查 `Web` 服务响应
+- 调用托管在 `Internet` 上的 `Web` 服务
+- 检查可用的多个 `Web` 服务操作
 - 转换组件设置
 
 ## 目标
 
 学习本章后，你将能够：
 
-- 区分 SOAP 和 REST Web 服务
-- 使用 NetBeans IDE 了解 SOAP 的基础
-- 通过 MuleSoft SOAP Web 连接器调用 SOAP Web 服务
-
-## 引言
-
-如果你学习过第 1 卷和第 2 卷，你对 RESTful API 服务有了相当的了解。现在我们将介绍另一种 Web 服务模型，即简单对象访问协议（Simple Object Access Protocol），它用于通过 Web 服务调用进行复杂对象的传输。
-
-Web 服务无非是通过 RESTful 和 SOAP 等标准协议在 Web 上提供特定功能的服务；在这里，REST 被用作一种架构模式而不是像 SOAP 那样的协议；因此，它变得轻量级并且可以通过简单的 URL/URIs 轻松访问。而 SOAP 本身是一种协议，它需要一个符合 XML 格式的 Web 服务接口。
-
-## SOAP Web 服务基础
-
-首先，让我们使用 NetBeans 创建一些 Web 项目并理解 SOAP Web 服务的知识。
-
-![](img/b37db39e68b5c0bef5ff8f878466ecb7_134_0.png)
-
-图 4.1：在 NetBeans 中创建新项目
-
-进入 NetBeans 并创建一个新项目。
-
-![](img/b37db39e68b5c0bef5ff8f878466ecb7_135_0.png)
-
-图 4.2：选择基础 Web 应用程序项目
-
-在“Choose Project”（选择项目）对话框中，选择 Java Web 类别并选择“Web Application”（Web 应用程序）项目，然后点击
-
-![](img/b37db39e68b5c0bef5ff8f878466ecb7_136_0.png)
-
-**图 4-3：**项目名称和位置
-
-如前面的截图所示，提供项目名称、位置和文件夹：
-
-![](img/b37db39e68b5c0bef5ff8f878466ecb7_137_0.png)
-
-图 4.4：服务器设置
-
-在**Server setting**（服务器设置）中，对话框选择了服务器为 **GlassFish** 并提供了一个上下文路径。
-
-![](img/b37db39e68b5c0bef5ff8f878466ecb7_138_0.png)
-
-图 4.5：框架选择界面
-
-你可以选择 Spring Web MVC 作为你的框架。
-
-![](img/b37db39e68b5c0bef5ff8f878466ecb7_138_1.png)
-
-图 4.6：默认索引页
-
-现在，你应该能看到一个 Web 项目正在创建，并且显示了默认索引页。
-
-![](img/b37db39e68b5c0bef5ff8f878466ecb7_139_0.png)
-
-图 4.7：在浏览器中运行索引页
-
-右键点击项目并运行（run），查看部署了 Web 应用程序的 Web 服务器，并默认调用索引文件。
-
-![](img/b37db39e68b5c0bef5ff8f878466ecb7_140_0.png)
-
-你可以在 PostMan 中使用相同的 URL 并检查响应。
-
-![](img/b37db39e68b5c0bef5ff8f878466ecb7_141_0.png)
-
-图 4.9：从 Anypoint Studio 获取 NetBeans 响应
-
-同样，在 Anypoint Studio 中创建一个项目，你可以通过 HTTP 请求组件调用在 NetBeans 中运行的 Web 服务并在 PostMan 中显示负载。
-
-![](img/b37db39e68b5c0bef5ff8f878466ecb7_142_0.png)
-
-图 4.10：使用 NetBeans 创建 HTML5 应用
-
-图 4.11：运行 HTML 5 应用
-
-## 探索应用
-
-- Web 服务的基础
-- 从 NetBeans 创建 Web 服务
-- 探索 Web 服务项目
-- 运行 Web 服务
-- 探索 WSDL
-- WebServices 和 MuleSoft
-- 使用 Web 服务消费者组件
-- 探索 WSDL
-- 在无输入参数的情况下调用 WSDL
-- 向 WebServices 提交输入参数
-- 通过 PostMan 获取响应
-- 调用本地开发的 NetBeans Web 服务
-- 通过转换器组件向 Web 服务发送值
-- 在 PostMan 中检查 Web 服务响应
-- 调用托管在 Internet 上的 Web 服务
-- 检查可用的多个 Web 服务操作
-- 转换组件设置
-
-## 目标
-
-学习本章后，你将能够：
-
-- 区分 SOAP 和 REST Web 服务
-- 使用 NetBeans IDE 了解 SOAP 的基础
-- 通过 MuleSoft SOAP Web 连接器调用 SOAP Web 服务
-
-
-
-
+- 区分 `SOAP` 和 `REST` `Web` 服务
+- 使用 `NetBeans IDE` 了解 `SOAP` 的基础
+- 通过 `MuleSoft SOAP Web` 连接器调用 `SOAP Web` 服务
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_148_0.png)
 
-**图 4-17：** 使用 Web 服务消费者组件
+图 4-17：使用 `Web` 服务消费者组件
 
-创建一个简单的调度器项目并引入 Web 服务消费者组件。
+创建一个简单的调度器项目并引入 `Web` 服务消费者组件。
 
-让我们尝试调用一个可用于测试的 SOAP Web 服务。我们首先需要提供 WSDL 位置，在 WSDL 位置字段中填入以下 WSDL 地址。
+让我们尝试调用一个可用于测试的 `SOAP Web` 服务。我们首先需要提供 `WSDL` 位置，在 `WSDL` 位置字段中填入以下 `WSDL` 地址。
 
-http://learnwebsservices.com/services/hello?WSDL
+`http://learnwebsservices.com/services/hello?WSDL`
 
-你可以看到地址（Address）被自动填充了，这意味着 Web 服务消费者组件可以从 WSDL 动态地获取这些值。
+你可以看到地址（`Address`）被自动填充了，这意味着 `Web` 服务消费者组件可以从 `WSDL` 动态地获取这些值。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_149_0.png)
 
@@ -1746,25 +1687,25 @@ http://learnwebsservices.com/services/hello?WSDL
 </xs:complexType>
 ```
 
-图 4.18：探索 WSDL
+图 4.18：探索 `WSDL`
 
-探索 WSDL，它可以通过以下路径访问。
+探索 `WSDL`，它可以通过以下路径访问。
 
-http://learnwebservices.com/wsdl.html
+`http://learnwebservices.com/wsdl.html`
 
-你可以看到 Web 服务的点以及输入和输出参数。
+你可以看到 `Web` 服务的点以及输入和输出参数。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_150_0.png)
 
-### 图 4.19：在没有输入参数的情况下调用 WSDL
+### 图 4.19：在没有输入参数的情况下调用 `WSDL`
 
-如果你按原样调用 SOAP Web 服务，将收到一个错误消息，显示没有输入参数的 hello 服务不存在，因此我们需要向 SOAP Web 服务传递所需的参数。
+如果你按原样调用 `SOAP Web` 服务，将收到一个错误消息，显示没有输入参数的 `hello` 服务不存在，因此我们需要向 `SOAP Web` 服务传递所需的参数。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_151_0.png)
 
-### 图 4.20：向 Web 服务提交输入参数
+### 图 4.20：向 `Web` 服务提交输入参数
 
-需要为 SOAP Web 服务提供以下转换代码作为输入：
+需要为 `SOAP Web` 服务提供以下转换代码作为输入：
 
 ```dw
 %dw 2.0
@@ -1788,87 +1729,91 @@ nso#Name: "James"
 }
 ```
 
- 图 4.21：通过 PostMan 获取响应
+图 4.21：通过 `PostMan` 获取响应
 
-现在你可以看到 Web 服务正在连同你的输入参数返回响应。
+现在你可以看到 `Web` 服务正在连同你的输入参数返回响应。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_153_0.png)
 
-**图 4.22：** 调用本地开发的 NetBeans Web 服务
+图 4.22：调用本地开发的 `NetBeans` `Web` 服务
 
-现在，你已经知道如何调用 SOAP Web 服务以及如何传递输入参数了。
+现在，你已经知道如何调用 `SOAP Web` 服务以及如何传递输入参数了。
 
-让我们调用在 NetBeans IDE 中运行的本地计算器 Web 服务。
+让我们调用在 `NetBeans IDE` 中运行的本地计算器 `Web` 服务。
 
-在 WSDL 位置字段中提供 `localhost 8080 calculatorapp calculatorwservice wsdl` 地址。
+在 `WSDL` 位置字段中提供 `localhost 8080 calculatorapp calculatorwservice wsdl` 地址。
 
 你可以看到服务和端口地址已自动填充。
 
-![](img/b37db39e68b5c0bef5ff8f878466ecb7_154_0.png) 
+![](img/b37db39e68b5c0bef5ff8f878466ecb7_154_0.png)
 
-> 图 4.23：通过转换器发送值到 Web 服务
+> 图 4.23：通过转换器发送值到 `Web` 服务
 
 如上一个截图所示，传递输入参数。
 
 ![](img/b37db39e_155_0.png)
 
-### 图 4.24：在 PostMan 中检查 Web 服务响应
+### 图 4.24：在 `PostMan` 中检查 `Web` 服务响应
 
-你必须能够在 PostMan 中看到响应，这样我们成功地从本地环境调用了 SOAP Web 服务。
+你必须能够在 `PostMan` 中看到响应，这样我们成功地从本地环境调用了 `SOAP Web` 服务。
 
 ![](img/b37db39e_156_0.png)
 
-让我们尝试从 “dneonline” 站点调用另一个模拟 Web 服务。
+让我们尝试从 `dneonline` 站点调用另一个模拟 `Web` 服务。
 
-此 WSDL 有一个或多个操作。
+此 `WSDL` 有一个或多个操作。
 
-![](img/b37db39e_157_0.png) **图 4.26：** 检查用的 Web 服务操作
+![](img/b37db39e_157_0.png)
+
+图 4.26：检查用的 `Web` 服务操作
 
 在完成连接器配置后，你可以在属性中检查可用的操作。如上一个截图所示。选择你的操作。
 
-![](img/b37db39e_158_0.png) # 图 4.27：转换器设置
+![](img/b37db39e_158_0.png)
 
-如上一个截图所示提供输入参数并调用 Web 服务。
+### 图 4.27：转换器设置
+
+如上一个截图所示提供输入参数并调用 `Web` 服务。
 
 ## 结论
 
-在本章中，我们学习了 Web 应用的基础知识；我们使用 NetBeans 从零开始开发了一些 Web 应用和 Web 服务。我们连接了公共 SOAP Web 服务以及本地开发的 SOAP Web 服务，并能够通过 MuleSoft 服务进行调用。在接下来的章节中，我们将探索电子邮件连接器。
+在本章中，我们学习了 `Web` 应用的基础知识；我们使用 `NetBeans` 从零开始开发了一些 `Web` 应用和 `Web` 服务。我们连接了公共 `SOAP Web` 服务以及本地开发的 `SOAP Web` 服务，并能够通过 `MuleSoft` 服务进行调用。在接下来的章节中，我们将探索电子邮件连接器。
 
 ## 注意事项
 
-- 尝试调用更多模拟 SOAP Web 服务。
-- 详细了解 WSDL 元素。
+- 尝试调用更多模拟 `SOAP Web` 服务。
+- 详细了解 `WSDL` 元素。
 
 ## 探索的关键术语
 
-- 选择基础 Web 应用项目
+- 选择基础 `Web` 应用项目
 - 服务器设置
-- 从 Anypoint Studio 获取 NetBeans 响应
-- HTML5 应用
-- 从 NetBeans 获取 Web 服务
-- Web 服务项目
-- WSDL
-- Web 服务消费者组件
-- 调用 WSDL
+- 从 `Anypoint Studio` 获取 `NetBeans` 响应
+- `HTML5` 应用
+- 从 `NetBeans` 获取 `Web` 服务
+- `Web` 服务项目
+- `WSDL`
+- `Web` 服务消费者组件
+- 调用 `WSDL`
 - 输入参数
-- 调用 Web 服务
-- 多 Web 服务操作
+- 调用 `Web` 服务
+- 多 `Web` 服务操作
 
 ## 结构
 
 在本章中，我们将讨论以下主题：
 
 - 为测试目的创建一个电子邮件账户
-- 电子邮件 SMTP 设置
-- 启用电子邮件 SMTP StartTLS
+- 电子邮件 `SMTP` 设置
+- 启用电子邮件 `SMTP StartTLS`
 - 电子邮件字段
-- Gmail 设置中开启低安全性选项
+- `Gmail` 设置中开启低安全性选项
 - 附件
-- 启用 IMAP 和 POP3 访问
-- SMTP IMAP 和 POP3 配置
-- Mozilla Thunderbird 配置
-- SSL IMAP 和 POP3 设置
-- 非 SSL IMAP 和 POP3 设置
+- 启用 `IMAP` 和 `POP3` 访问
+- `SMTP IMAP` 和 `POP3` 配置
+- `Mozilla Thunderbird` 配置
+- `SSL IMAP` 和 `POP3` 设置
+- 非 `SSL IMAP` 和 `POP3` 设置
 
 ## IMAP 应用
 
@@ -1876,39 +1821,40 @@ nso#Name: "James"
 
 学习本章后，你将能够：
 
-- 使用 MuleSoft 连接器发送电子邮件
-- 使用 IMAP 和 POP3 协议
+- 使用 `MuleSoft` 连接器发送电子邮件
+- 使用 `IMAP` 和 `POP3` 协议
 - 发送附件
 
 ## 引言
 
-在完成任何流程后发送电子邮件是不可避免的。电子邮件可能包含敏感信息。在本章中，让我们看看如何使用 MuleSoft 连接器。
+在完成任何流程后发送电子邮件是不可避免的。电子邮件可能包含敏感信息。在本章中，让我们看看如何使用 `MuleSoft` 连接器。
 
 ## 电子邮件连接器用法
 
-让我们逐一查看涉及的步骤。通过 Gmail 等免费服务器发送电子邮件。如图 5.1 所示，为测试目的创建一个电子邮件账户。
+让我们逐一查看涉及的步骤。通过 `Gmail` 等免费服务器发送电子邮件。如图 5.1 所示，为测试目的创建一个电子邮件账户。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_168_0)
 
 | 名字 | 姓 |
 | --- | --- |
-| mulesofttest | mulesoft |
+| `mulesofttest` | `mulesoft` |
 | 用户名 | |
-| mulesofttest | @gmail.com |
-
+| `mulesofttest` | `@gmail.com` |
 | 密码 | 确认 |
 | --- | --- |
-| Mypass#123 | Mypass!@123 |
+| `Mypass#123` | `Mypass!@123` |
 
 请选择更强的密码。尝试字母和符号的组合。
 
-**图 5.1：** 为测试目的创建一个电子邮件账户
+图 5.1：为测试目的创建一个电子邮件账户
 
-我们已经为测试目的创建了上述电子邮件 ID。
+我们已经为测试目的创建了上述电子邮件 `ID`。
 
-![](img/b37db39e68b5c0bef5ff8f878466ecb7_169_0.png)# 图 5.2：电子邮件设置
+![](img/b37db39e68b5c0bef5ff8f878466ecb7_169_0.png)
 
-然后在 Anypoint Studio 中创建一个 EMailDemo Mule 项目。创建一个监听触发器并添加发送电子邮件组件。
+### 图 5.2：电子邮件设置
+
+然后在 `Anypoint Studio` 中创建一个 `EMailDemo` `Mule` 项目。创建一个监听触发器并添加发送电子邮件组件。
 
 在连接器配置中，你必须提供以下值：
 
@@ -1918,7 +1864,7 @@ name="Email_SMTP"
 
 ## Email SMTP
 
-通过 SMTP（简单邮件传输协议）执行的操作配置。
+通过 `SMTP`（简单邮件传输协议）执行的操作配置。
 
 ```
 name="Email_SMTP"
@@ -1928,11 +1874,13 @@ password="Mypass!@123"
 port="587"
 ```
 
-![](img/b37db39e68b5c0bef5ff8f878466ecb7_170_0.png)# 图 5.3：启用电子邮件 SMTP StartTLS
+![](img/b37db39e68b5c0bef5ff8f878466ecb7_170_0.png)
 
-现在，如图所示进入高级（Advanced）选项卡，使用属性编辑选项添加新的电子邮件属性并将值设置为
+### 图 5.3：启用电子邮件 `SMTP StartTLS`
 
-最终的配置 XML 如下：
+现在，如图所示进入高级（`Advanced`）选项卡，使用属性编辑选项添加新的电子邮件属性并将值设置为
+
+最终的配置 `XML` 如下：
 
 ```xml
 name="Email_SMTP" doc:name="Email SMTP" doc:id="a6ae9968-5a6c-4104-aec7-" >
@@ -1941,7 +1889,9 @@ password="Mypass!@123" port="587">
 >key="mail.smtp.starttls.enable" value="true" /
 ```
 
-![](img/b37db39e68b5c0bef5ff8f878466ecb7_171_0.png)# 图 5.4：电子邮件字段
+![](img/b37db39e68b5c0bef5ff8f878466ecb7_171_0.png)
+
+### 图 5.4：电子邮件字段
 
 让我们设置发送电子邮件所需的值。如图所示设置以下值：
 
@@ -1949,28 +1899,25 @@ password="Mypass!@123" port="587">
 doc:name="Send"
 ```
 
+`config-ref="Email_SMTP"`
 
+`fromAddress="mulesoftemailtest@gmail.com"`
 
+`subject="FROM ANYPOINT STUDIO"`
 
+`email:to-address value="mulesoftanypoint@gmail.com" />`
 
-config-ref="Email_SMTP"
-
-fromAddress="mulesoftemailtest@gmail.com"
-
-subject="FROM ANYPOINT STUDIO"
-
-email:to-address value="mulesoftanypoint@gmail.com" />
->MAIL]]>
+`>MAIL]]>`
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_172_0.png)
 
-图 5.5：在 Gmail 设置中开启“低安全性”选项
+图 5.5：在 `Gmail` 设置中开启“低安全性”选项
 
-项目现在已准备就绪，只需完成最后一步：在 Gmail 设置中开启“低安全性的应用访问”。
+项目现在已准备就绪，只需完成最后一步：在 `Gmail` 设置中开启“低安全性的应用访问”。
 
-进入 Gmail 设置，点击“安全（Security）”选项并开启“低安全性的应用”。
+进入 `Gmail` 设置，点击“安全（`Security`）”选项并开启“低安全性的应用”。
 
-现在，你已经完全准备好使用 Anypoint Studio 电子邮件连接器发送电子邮件了。
+现在，你已经完全准备好使用 `Anypoint Studio` 电子邮件连接器发送电子邮件了。
 
 运行项目，并检查目标邮箱的收件箱和源邮箱的发送邮件箱。
 
@@ -1980,15 +1927,16 @@ email:to-address value="mulesoftanypoint@gmail.com" />
 
 图 5.6：文件附件
 
-指定要读取的文件，并在日志记录器（logger）中使用 `payload` 作为消息以查看文件内容。
+指定要读取的文件，并在日志记录器（`logger`）中使用 `payload` 作为消息以查看文件内容。
 
 ## 设置
 
-通用 标签 收件箱 账户和导入过滤器以及屏蔽地址 转发和 POP/IMAP 插件
+通用 标签 收件箱 账户和导入过滤器以及屏蔽地址 转发和 `POP/IMAP` 插件
 
 聊天和会议 高级 离线 主题
 
 转发：
+
 了解更多
 
 ```
@@ -1997,27 +1945,28 @@ email:to-address value="mulesoftanypoint@gmail.com" />
 
 提示：你也可以通过创建过滤器来只转发部分邮件！
 
-POP 下载：
+`POP` 下载：
+
 了解更多
 
-+ 1. 状态：POP 已禁用
-   - 为所有邮件启用 POP
-   - 为从现在起收到的邮件启用 POP
-
-+ 2. 当使用 POP 访问邮件时，在收件箱中保留 Gmail 副本
-  3. 配置你的电子邮件客户端（例如 Outlook、Eudora、Netscape Mail）
++ 1. 状态：`POP` 已禁用
+   - 为所有邮件启用 `POP`
+   - 为从现在起收到的邮件启用 `POP`
++ 2. 当使用 `POP` 访问邮件时，在收件箱中保留 `Gmail` 副本
+  3. 配置你的电子邮件客户端（例如 `Outlook`、`Eudora`、`Netscape Mail`）
   配置说明
 
-IMAP 访问：
-（使用 IMAP 从其他客户端访问 Gmail）
+`IMAP` 访问：
 
-+   状态：IMAP 已启用
-   - 启用 IMAP
-   - 禁用 IMAP
+（使用 `IMAP` 从其他客户端访问 `Gmail`）
+
++ 状态：`IMAP` 已启用
+   - 启用 `IMAP`
+   - 禁用 `IMAP`
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_174_0.png)
 
-让我们尝试 Gmail 设置中“转发和 POP/IMAP”部分提供的 POP 和 IMAP。
+让我们尝试 `Gmail` 设置中“转发和 `POP/IMAP`”部分提供的 `POP` 和 `IMAP`。
 
 默认情况下，这些必须先禁用再启用，如图所示：
 
@@ -2051,36 +2000,40 @@ password="Mypass@123" port="995">
 </email:pop3-config>
 ```
 
-图 5.8：SMTP、IMAP 和 POP3 配置
+图 5.8：`SMTP`、`IMAP` 和 `POP3` 配置
 
-你的 SMTP、POP3 和 IMAP 配置已完成。
+你的 `SMTP`、`POP3` 和 `IMAP` 配置已完成。
 
-但如果你尝试使用 POP 和 IMAP，将会收到错误信息，因为 POP 和 IMAP 是用于读取特定文件夹中的邮件的，你可以根据关键字删除邮件或将邮件转发到其他邮箱。这意味着你需要 SMTP 来传输简单邮件并管理整个邮箱箱。像 Gmail 这样的公共邮件服务器不允许你使用 POP 和 IMAP。
+但如果你尝试使用 `POP` 和 `IMAP`，将会收到错误信息，因为 `POP` 和 `IMAP` 是用于读取特定文件夹中的邮件的，你可以根据关键字删除邮件或将邮件转发到其他邮箱。这意味着你需要 `SMTP` 来传输简单邮件并管理整个邮箱箱。像 `Gmail` 这样的公共邮件服务器不允许你使用 `POP` 和 `IMAP`。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_176_0.png)
 
-图 5.9：Mozilla Thunderbird 配置
+图 5.9：`Mozilla Thunderbird` 配置
 
-因此，为了使用 POP 和 IMAP，你需要具有所有 POP 和 IMAP 管理权限的私有邮件服务器。在这里，我们使用私有邮件服务器来完成 IMAP 和 POP 功能测试。当我们尝试设置 Thunderbird 私有账户时，它们提到了入站和出站协议。
+因此，为了使用 `POP` 和 `IMAP`，你需要具有所有 `POP` 和 `IMAP` 管理权限的私有邮件服务器。在这里，我们使用私有邮件服务器来完成 `IMAP` 和 `POP` 功能测试。当我们尝试设置 `Thunderbird` 私有账户时，它们提到了入站和出站协议。
 
-| SSL/TLS 设置（推荐） |
+| `SSL/TLS` 设置（推荐） |
 |--- |
-| 用户名：nanda.nachimuthu@mithunna.com |
+| 用户名：`nanda.nachimuthu@mithunna.com` |
 | 密码：使用电子邮件账户密码 |
-| 入站服务器：sg3plcpn0224.prod.sin3.secureserver.net IMAP端口：993 POP3端口：995 |
-| 出站服务器：sg3plcpn0224.prod.sin3.secureserver.net SMTP端口：465 |
-| IMAP、POP3 和 SMTP 需要身份验证 |
+| 入站服务器：`sg3plcpn0224.prod.sin3.secureserver.net` `IMAP`端口：`993` `POP3`端口：`995` |
+| 出站服务器：`sg3plcpn0224.prod.sin3.secureserver.net` `SMTP`端口：`465` |
+| `IMAP`、`POP3` 和 `SMTP` 需要身份验证 |
 
-图 5.10：SSL IMAP 和 POP3 设置
+图 5.10：`SSL IMAP` 和 `POP3` 设置
 
-在电子邮件设置中，你可以看到针对 SMTP、IMAP 和 POP 推荐的 SSL/TLS 设置。
+在电子邮件设置中，你可以看到针对 `SMTP`、`IMAP` 和 `POP` 推荐的 `SSL/TLS` 设置。
 
-| 非 SSL 设置（不推荐） |
+| 非 `SSL` 设置（不推荐） |
 |--- |
-| 用户名：nanda.nachimuthu@mithunna.com |
+
+
+
+| 用户名：`nanda.nachimuthu@mithunna.com` |
+|---|
 | 密码：使用电子邮件账户密码 |
-| 入站服务器：sg3plcpn0224.prod.sin3.secureserver.net IMAP端口：993 POP3端口：995 |
-| 出站服务器：sg3plcpn0224.prod.sin3.secureserver.net SMTP端口：465 |
+| 入站服务器：`sg3plcpn0224.prod.sin3.secureserver.net`，IMAP 端口：`993`，POP3 端口：`995` |
+| 出站服务器：`sg3plcpn0224.prod.sin3.secureserver.net`，SMTP 端口：`465` |
 | IMAP、POP3 和 SMTP 需要身份验证 |
 
 图 5.11：SSL IMAP 和 POP3 设置
@@ -2096,52 +2049,61 @@ password="Mypass@123" port="995">
 在电子邮件设置中，你可以看到针对 SMTP、IMAP 和 POP 推荐的 SSL/TLS 设置。
 
 | 非 SSL 设置（不推荐） |
-|--- |
-| 用户名：nanda.nachimuthu@mithunna.com |
+|---|
+| 用户名：`nanda.nachimuthu@mithunna.com` |
 | 密码：使用电子邮件账户密码 |
-| 入站服务器：sg3plcpn0224.prod.sin3.secureserver.net IMAP端口：993 POP3端口：995 |
-| 出站服务器：sg3plcpn0224.prod.sin3.secureserver.net SMTP端口：465 |
+| 入站服务器：`sg3plcpn0224.prod.sin3.secureserver.net`，IMAP 端口：`993`，POP3 端口：`995` |
+| 出站服务器：`sg3plcpn0224.prod.sin3.secureserver.net`，SMTP 端口：`465` |
 | IMAP、POP3 和 SMTP 需要身份验证 |
 
 图 5.13：非 IMAP 设置
 
 ## 结论
+
 在本章中，我们探索了诸如发送电子邮件等电邮操作。在接下来的章节中，我们将学习 VM 队列。
 
 ## 注意点
+
 尝试获取你的私有邮件服务器。
 
 ## 待探索的关键术语
-*   邮件 SMTP
-*   邮件 SMTP
-*   Gmail 设置中的“低安全性”选项
-*   文件附件
-*   IMAP 和 POP3 访问
-*   SMTP IMAP 和 POP3 配置
-*   Mozilla Thunderbird 配置
-*   SSL IMAP 和 POP3 设置
-*   非 IMAP 设置
-*   IMAP 应用
+
+- 邮件 SMTP
+- 邮件 SMTP
+- Gmail 设置中的“低安全性”选项
+- 文件附件
+- IMAP 和 POP3 访问
+- SMTP、IMAP 和 POP3 配置
+- Mozilla Thunderbird 配置
+- SSL IMAP 和 POP3 设置
+- 非 IMAP 设置
+- IMAP 应用
 
 ## 结构
+
 在本章中，我们将讨论以下主题：
-*   VM 队列配置
-*   集成发布和消费组件
-*   检查日志结果以理解发布-消费模式
-*   更改消费者后检查发布-消费模式
-*   在同一队列中引入监听器
-*   从不同的发布者进行消费和监听
+
+- VM 队列配置
+- 集成发布和消费组件
+- 检查日志结果以理解发布-消费模式
+- 更改消费者后检查发布-消费模式
+- 在同一队列中引入监听器
+- 从不同的发布者进行消费和监听
 
 ## 目标
+
 学习本单元后，你将学习虚拟队列配置以及如何使用它们。
 
 ## 简介
+
 **虚拟机队列（Virtual Machine Queue）**为开发者提供了存储数据的方法，可以通过引用队列详情在 MuleSoft 流的任何地方使用数据。让我们看看涉及的步骤。
 
 ## 开始实现 VM 队列
-让我们通过配置 VM 并使用发布和消费器为 MuleSoft 项目实现 VM 队列。步骤如下：
+
+让我们通过配置 VM 并使用发布和消费者为 MuleSoft 项目实现 VM 队列。步骤如下：
 
 ### VM 配置
+
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_187_0.png)
 
 图 6.1：VM 队列配置
@@ -2152,18 +2114,14 @@ password="Mypass@123" port="995">
 
 输入新的队列名称，瞬态（transient）是队列类型的默认选项；保持默认即可。
 
-最大堆积消息数可以是 100。
+最大堆积消息数可以是 `100`。
 
-```
+```xml
 name="VM_Config" doc:name="VM Config" doc:id="78001dfe-41d7-43c2-9fod-7f6c6fb6do6" />
 queueName="test" maxOutstandingMessages="100" />
 queueName="test1" maxOutstandingMessages="100" />
 queueName="test2" maxOutstandingMessages="100" />
 ```
-
-
-
-
 
 ### 图 6.2：集成发布者和消费者组件
 
@@ -2193,7 +2151,7 @@ queueName="test2" doc:name="Consume" doc:id="0oc45548-2a05-451b-bc44-a717866d02f
 level="INFO" doc:name="Logger" doc:id="995d745-b277-4269-9bfb8-ab871910d97e" message="#['consumed---- ++ payload']"/>
 ```
 
-```
+```text
 ore.internal.processor.LoggerMessageProcessor: published---625.50990123441
 ore.internal.processor.LoggerMessageProcessor: published---734.18852456111
 ore.internal.processor.LoggerMessageProcessor: consumed---625.685586742664
@@ -2247,6 +2205,7 @@ ActiveMQ 是一个流行的 Java 消息服务器。在 ActiveMQ 中，可以创�
 ## 目标
 
 学习本单元后，你将能够：
+
 - 在本地机器安装 ApacheMQ
 - 创建队列和主题
 - 通过 MuleSoft 发布和消费
@@ -2254,6 +2213,7 @@ ActiveMQ 是一个流行的 Java 消息服务器。在 ActiveMQ 中，可以创�
 ## 结构
 
 在本章中，我们将讨论：
+
 - 下载 ApacheMQ
 - 检查 ApacheMQ 安装情况
 - 检查创建的队列
@@ -2271,10 +2231,6 @@ ActiveMQ 是一个流行的 Java 消息服务器。在 ActiveMQ 中，可以创�
 
 本章学习了 VM 连接器。在接下来的章节中，我们将学习 JMS。
 
-
-
-
-
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_205_0.png)
 
 ### 图 7.4：队列创建
@@ -2285,7 +2241,7 @@ ActiveMQ 是一个流行的 Java 消息服务器。在 ActiveMQ 中，可以创�
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_206_0.png)
 
-图 7.5：检查已创建的队列
+### 图 7.5：检查已创建的队列
 
 创建所需的队列名称并进行检查。
 
@@ -2298,14 +2254,14 @@ ActiveMQ 是一个流行的 Java 消息服务器。在 ActiveMQ 中，可以创�
 ## 主题
 
 | 名称 | 消费者数量 | 入队消息数 | Mer |
-|---|---|---|--|
+|---|---:|---:|---:|
 | ActiveMQ.Advisory.MasterBroker | 0 | 1 | 0 |
 | ActiveMQ.Advisory.Queue | 0 | 3 | 0 |
 | ActiveMQ.Advisory.Topic | 0 | 2 | 0 |
 | topic1 | 0 | 0 | 0 |
 | topic2 | 0 | 0 | 0 |
 
-图 7.6：检查已创建的主题
+### 图 7.6：检查已创建的主题
 
 创建一个主题题名称并进行检查。
 
@@ -2323,21 +2279,23 @@ ActiveMQ 是一个流行的 Java 消息服务器。在 ActiveMQ 中，可以创�
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_209_0.png)
 
-**图 7.8：使用发布和消费组件**
+### 图 7.8：使用发布和消费组件
 
 在发布组件的终点中，指定你在 ActiveMQ Web 控制台中创建的队列名称。
 
 终点类型必须是队列。
 
-在消息正文中，提供函数值为 * 1789"; 这将为你生成随机数。
+在消息正文中，提供函数值为 `* 1789"`；这将为你生成随机数。
 
-在发布组件旁边添加一个 **Consumer** 组件，然后选择 **JMS_config** 和队列。
+在发布组件旁边添加一个 `Consumer` 组件，然后选择 `JMS_config` 和队列。
 
-接下来添加一个 **Logger** 并使用负载（有效负载）作为消息。
+接下来添加一个 `Logger` 并使用负载（有效负载）作为消息。
 
 现在，你可以运行项目了。
 
-```
+
+
+```text
 .core.internal.processor.LoggerMessageProcessor: ****message consumed****751.882116405329
 .core.internal.processor.LoggerMessageProcessor: ****message consumed****650.139860500953
 .core.internal.processor.LoggerMessageProcessor: ****message consumed****102.735542452181
@@ -2368,16 +2326,19 @@ ActiveMQ 是一个流行的 Java 消息服务器。在 ActiveMQ 中，可以创�
 .core.internal.processor.LoggerMessageProcessor: ****message consumed****1181.9834885095
 .core.internal.processor.LoggerMessageProcessor: ****message consumed****82.479416354
 .core.internal.processor.LoggerMessageProcessor: ****message consumed****188.7711235609
+```
 
 ### 图 7.9：发布和消费的结果
 
-发布到队列的每条消息，消费者都会消费，日志记录会在控制台中打印，如图所示![](img/b37db39e68b5c0bef5ff8f878466ecb7_211_png)
+发布到队列的每条消息，消费者都会消费，日志记录会在控制台中打印，如图所示。
+
+![](img/b37db39e68b5c0bef5ff8f878466ecb7_211_png)
 
 ### 图 7.10：监听器
 
-在同一画布中，引入一个 On Message 监听器，并在结尾提供队列名称作为发布者并传递消息到项目，监听器将记录发布的消息。
+在同一画布中，引入一个 `On Message` 监听器，并在结尾提供队列名称作为发布者并传递消息到项目，监听器将记录发布的消息。
 
-```
+```text
 .core.internal.processor.LoggerMessageProcessor: ****message arrived****659.6884160532
 .core.internal.processor.LoggerMessageProcessor: ****message consumed****514.4501442319
 .core.internal.processor.LoggerMessageProcessor: ****message arrived****
@@ -2398,7 +2359,7 @@ ActiveMQ 是一个流行的 Java 消息服务器。在 ActiveMQ 中，可以创�
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_212_0.png)
 
-这是引入 On Message 组件的结果；在监听新消息后，过程可以是任何形式。
+这是引入 `On Message` 组件的结果；在监听新消息后，过程可以是任何形式。
 
 ### 图 7.12：监听器和消费者的组合
 
@@ -2408,18 +2369,21 @@ ActiveMQ 是一个流行的 Java 消息服务器。在 ActiveMQ 中，可以创�
 
 ```xml
 <flow name="JMS_Config" doc:name="JMS Config" doc:id="31fc8b44-7156-4ab1-aff30-fo436530f16" username="admin" password="admin" clientID="127.0.0.1:8161"/>
+
 </flow>
+
 <flow name="jmsFlow" doc:id="7bcaceee7-b823-4876-847a-7bod9902b632" doc:name="Scheduler" doc:id="2016c222-d8d7-46c3-9314-f61bo0811c4f7">
+
     <set value="#[random() * 2000]" doc:name="Set Payload" doc:id="f76718d5-4200-45a0-72d9d51a1910"/>
+
     <publish doc:id="f3701dc-6a60-4be-97a9-1d2f99cff90" config-ref="JMS_Config" destination="queue1"/>
+
     <consume doc:id="aade19c4-3965-4fb-ba24-4fsea24cdf2" config-ref="JMS_Config" destination="queue1"/>
+
     <logger level="INFO" doc:id="626f7f70-f7a3-4a07-94e5-e6c6c851cba8" message="#['*****message consumed*****'] ++ payload"/>
+
 </flow>
 ```
-
-
-
-
 
 ## 需要记住的点
 
@@ -2427,10 +2391,10 @@ ActiveMQ 是一个流行的 Java 消息服务器。在 ActiveMQ 中，可以创�
 
 ## 需要探索的关键术语
 
-- ApacheMQ
-- ActiveMQ Web 界面
+- `ApacheMQ`
+- `ActiveMQ Web 界面`
 - 队列创建
-- ApacheMQ 连接器
+- `ApacheMQ` 连接器
 - 发布和消费组件
 - 监听器组件
 
@@ -2459,31 +2423,45 @@ ActiveMQ 是一个流行的 Java 消息服务器。在 ActiveMQ 中，可以创�
 
 ## 安装并运行 RabbitMQ
 
-```
+```text
 C:\Windows\System32\cmd.exe - rabbitmq-server
+
 Microsoft Windows [Version 10.0.19045]
+
 (C)2015 Microsoft Corporation. All rights reserved.
+
 C:\Program Files\RabbitMQ\Server\rabbitmq-server-3.8.14\bin\rabbitmq-plugins enable rabbitmq_management
+
 (enabled all plugins for rabbit@DESKTOP-9U7EE0:)
+
 The following plugins have been configured:
+
 rabbitmq_management
+
 rabbitmq_agent
+
 rabbitmq_web_dispatch
+
 -configuration to rabbit@DESKTOP-9U7EE0:
+
 Plugin configuration unchanged.
+
 C:\Program Files\RabbitMQ\Server\rabbitmq-server-3.8.14\bin\rabbitmq-plugins
+
 Configuring logger redirection
+
 11:21:36.770 (warning) Using RABBITMQ_ADVANCED_CONFIG_FILE: C:/Users/Admin/AppData/Roaming/RabbitMQ/advanced.config
 ```
 
 **图 8.1：** RabbitMQ 安装、启用管理插件及运行
 
-下载 rabbitmq_server-3.8.14 二进制文件并将文件解压到本地目录。
+下载 `rabbitmq_server-3.8.14` 二进制文件并将文件解压到本地目录。
 
-进入 sbin 目录并执行以下命令。
+进入 `sbin` 目录并执行以下命令。
 
-```
+```bash
 rabbitmq-plugins enable rabbitmq_management
+
 rabbitmq-server
 ```
 
@@ -2491,15 +2469,15 @@ rabbitmq-server
 
 # 访问 RabbitMQ Web 管理界面
 
-访问以下 URL。并分别使用 guest、guest 作为用户名和密码。
+访问以下 URL，并分别使用 `guest`、`guest` 作为用户名和密码。
 
-http://localhost:15672/
+`http://localhost:15672/`
 
 你可以访问 RabbitMQ 管理控制台，如图所示：
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_223_0.png)
 
-图 8.2: 访问 RabbitMQ Web 管理界面
+图 8.2：访问 RabbitMQ Web 管理界面
 
 ## 将 AMQP 与 MuleSoft 连接
 
@@ -2511,50 +2489,57 @@ http://localhost:15672/
 
 打开连接器配置，并如图所示提供服务器、用户名和密码详情。
 
-你在配置 XML 文件中的连接器配置必须看起来如下。
+你在配置 XML 文件中的连接器配置必须看起来如下：
 
-```
-name="AMQP_Config" docname="AMQP Config" doc:id="5c39b16-81a6-41d7-a293-fe470971e2c7" 
+```xml
+name="AMQP_Config" docname="AMQP Config" doc:id="5c39b16-81a6-41d7-a293-fe470971e2c7"
 host="localhost" username="guest" password="guest" />
 ```
 
 ## AMQP Config
 
-AmqpConnector 的基础配置
+`AmqpConnector` 的基础配置。
 
 | 通用 | 消费者 | 发布者 | 服务质量 | 高级 | 备注 | 帮助 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 名称: AMQP_Config | | | | | | |
+| 名称：AMQP_Config | | | | | | |
 
 | 通用 | 套接字配置 | TLS | 高级 | 连接 | | |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 主机: localhost | | | | | | |
-| 端口: / | | | | | | |
+| 主机：localhost | | | | | | |
+| 端口：/ | | | | | | |
 
-| 虚拟主机: | | | | | | | |
-| 用户名: guest | | | | | | | |
-| 密码: guest [显示密码] | | | | | | | |
-| - 使用 tls | | | | | | | |
-| - 使用 snii | | | | | | | |
-| 心跳超时: 60 | | | | | | | |
-| 备用地址: 无 | | | | | | | |
+| 虚拟主机： | | | | | | | |
+| 用户名：guest | | | | | | | |
+| 密码：guest [显示密码] | | | | | | | |
+| - 使用 TLS | | | | | | | |
+| - 使用 SNII | | | | | | | |
+| 心跳超时：60 | | | | | | | |
+| 备用地址：无 | | | | | | | |
 | 通用 | 测试连接... OK 取消 | | | | | | |
 
-图 8.3: AMQP 连接器配置
+图 8.3：AMQP 连接器配置
 
 # 发布和消费消息
 
 在调度器的第一个流中创建一个发布组件，提供队列详情并将负载（payload）传递给队列。完成后，你的配置文件流将如下：
 
-```
+```xml
 doc-name="Publish" doc:id="91e07840-3249-4efa-8da6-c02116855826"
-config-ref="AMQP_Config" exchangeName="amq.topic">
+```
+
+
+
+`config-ref="AMQP_Config"` `exchangeName="amq.topic"`
+
+```
 {
   signment_number: randomInt(10000),
   items: "Cosmetics"
 }
-priority="3"
 ```
+
+`priority="3"`
 
 现在引入一个 AMQP 监听器（listener）并将其指向发布的队列。这样你的 AMQP 监听器配置 XML 将如下：
 
@@ -2620,10 +2605,6 @@ org.mule.runtime.core.internal.processor.LoggerProcessor: message {
 ## 总结
 
 在本章中，我们安装、运行并测试了 RabbitMQ AMQP 消息代理。我们将 AMQP 服务器与我们的 MuleSoft AMQP 服务器连接起来，并从服务器发布和消费了消息。在接下来的章节中，我们将学习脚本引擎连接器，以便从 MuleSoft 脚本连接器连接并执行 Groovy 和 Python 等脚本程序。
-
-
-
-
 
 ## 目标
 
@@ -2763,10 +2744,10 @@ doc:name="Listener" doc:id="05452d74-b3be-402a-be3c-4bb9da5287b2" config-ref="HT
 
 在为 Groovy、Python 和 Ruby 创建另外三个不同的流后，你的脚本将像这样。现在调用所有引擎并触发以下端点并在浏览器和控制台中检查结果。结果显示在：
 
-- http://localhost:8081/groovy
-- http://localhost:8081/nashorn
-- http://localhost:8081/jyton
-- http://localhost:8081/ruby
+- `http://localhost:8081/groovy`
+- `http://localhost:8081/nashorn`
+- `http://localhost:8081/jyton`
+- `http://localhost:8081/ruby`
 
 ```
 ****From GROOVY SCRIPTING ENGINE******
@@ -2777,11 +2758,9 @@ INFO 2021-05-09 21:13:18,245 [http-03 SelectorRunner] org.mule.service.impl.util
 ***From RUBY SCRIPTING ENGINE***
 ```
 
-图 9.6: 调用所有 ECMA Groovy、Python 和 Ruby 脚本的结果
 
 
-
-
+图 9.6：调用所有 ECMA Groovy、Python 和 Ruby 脚本的结果
 
 ## 结论
 
@@ -2795,7 +2774,7 @@ INFO 2021-05-09 21:13:18,245 [http-03 SelectorRunner] org.mule.service.impl.util
 
 ## 待探索的关键术语
 
-- 脚本引擎 
+- 脚本引擎
 - Groovy
 - ECMA 脚本
 - Python
@@ -2809,13 +2788,14 @@ INFO 2021-05-09 21:13:18,245 [http-03 SelectorRunner] org.mule.service.impl.util
 
 ## 引言
 
-在 MuleSoft 连接器中，使用 File、FTP 和 SFTP 连接器执行的操作是相同的。因此，在本章中，我们将仅连接到一个基于 Web 的 SFTP 演示服务器，以确保 SFTP 连接已建立。在此之前，FTP 和 SFTP 的区别在于，出于安全考虑，**安全文件传输协议（Secured File Transfer Protocol）**使用了一种名为 SSH 的机制。市场上有很多开源的 SFTP 服务器，目前我们的目标不是深入研究 SFTP 概念，因此让我们快速查看使用 SFTP 连接器涉及的步骤。这意味着在工作中，您将获得所有的 SFTP 服务器详情、用户名和密码，这样您可以简单地建立连接并使用我们在 [第 3 章，File] 中过的过的文件相关操作。
+在 MuleSoft 连接器中，使用 File、FTP 和 SFTP 连接器执行的操作是相同的。因此，在本章中，我们将仅连接到一个基于 Web 的 SFTP 演示服务器，以确保 SFTP 连接已建立。在此之前，FTP 和 SFTP 的区别在于，出于安全考虑，**安全文件传输协议（Secured File Transfer Protocol）**使用了一种名为 SSH 的机制。市场上有很多开源的 SFTP 服务器，目前我们的目标不是深入研究 SFTP 概念，因此让我们快速查看使用 SFTP 连接器涉及的步骤。这意味着在工作中，您将获得所有的 SFTP 服务器详情、用户名和密码，这样您可以简单地建立连接并使用我们在第 3 章 File 中过的过的文件相关操作。
 
 ## SFTP 连接器
 
 让我们通过一些实际示例开始探索安全文件传输协议。
 
 ### SFTP 配置
+
 默认配置
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_252_0.png)
@@ -2838,9 +2818,9 @@ INFO 2021-05-09 21:13:18,245 [http-03 SelectorRunner] org.mule.service.impl.util
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_254_0.png)
 
-# 图 10.2：SFTP MuleSoft 流
+图 10.2：SFTP MuleSoft 流
 
-在输入 SFTP 连接器详情后，在路径字段中提供 readme.txt 演示文件。
+在输入 SFTP 连接器详情后，在路径字段中提供 `readme.txt` 演示文件。
 
 您完成后的流看起来如下：
 
@@ -2850,6 +2830,7 @@ INFO 2021-05-09 21:13:18,245 [http-03 SelectorRunner] org.mule.service.impl.util
 <logger level="INFO" docname="Logger" message="#[payload]"/>
 ```
 
+```
 INFO 2021-04-25 14:49:56,983 [FullRuntime]:u.ber.071: [ssss]ssssFlow-BLOCKING @i56d570a] [processor: sssflow/processors/1]: event:
 org.module.runtime.core.internal.processor.LoggerMessageProcessor: Welcome,
 
@@ -2871,8 +2852,9 @@ org.module.runtime.core.internal.processor.LoggerMessageProcessor: Welcome,
 如需反馈和支持，请联系 support@reex.cz
 
 感谢！
+```
 
-### 图 10.3：运行中的 SFTP
+图 10.3：运行中的 SFTP
 
 在运行项目并触发端点时，您可以看到 SFTP 服务器获取了文件，且内容打印在控制台中。
 
@@ -2939,7 +2921,7 @@ MuleSoft 自带了可在 Anypoint Exchange 获取的默认 LDAP 连接器。让�
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_264_0.png)
 
-### 图 11.2：检查 LDAP 操作
+图 11.2：检查 LDAP 操作
 
 向模块添加 LDAP 连接器后，您可以进一步探索从 MuleFlow 触发的操作。
 
@@ -2953,7 +2935,7 @@ MuleSoft 自带了可在 Anypoint Exchange 获取的默认 LDAP 连接器。让�
 
 选择所需的安装包并将其解压到本地文件夹。
 
-在命令行提示符中使用 **apacheds** 命令，如图所示。
+在命令行提示符中使用 `apacheds` 命令，如图所示。
 
 您可以看到默认的 ApacheDS 实例已启动，如之前的截图所示。
 
@@ -2963,34 +2945,31 @@ MuleSoft 自带了可在 Anypoint Exchange 获取的默认 LDAP 连接器。让�
 
 同样，访问 https://directory.apache.org/studio/downloads.html 并下载 ApacheDS Studio。
 
-
-
-
-主机名必须为 localhost，端口必须为 10389。
+主机名必须为 `localhost`，端口必须为 `10389`。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_267_0.png)
 
-**图 11.5：** 提供验证详情
+图 11.5：提供验证详情
 
 你必须按照如下方式提供验证详情。
 
-**BindDN** 或 **Bind secret**
+`BindDN` 或 `Bind secret`
 
 你可以检查验证并获取成功消息。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_268_0.png)
 
-# 图 11.6：已建立到 LDAP studio 的 LDAP 连接
+图 11.6：已建立到 LDAP studio 的 LDAP 连接
 
 验证成功后，ApacheDS studio 允许访问所有目录信息。
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_269_0.png)
 
-**图 11.7：**向 Anypoint studio LDAP 连接器提供 LDAP 服务器详情
+图 11.7：向 Anypoint studio LDAP 连接器提供 LDAP 服务器详情
 
 从调色板（Palette）中拖放 LDAP LookUp 元素并提供 LDAP 连接器配置。
 
-authPassword="secret" url="ldap://localhost:10389" />
+`authPassword="secret" url="ldap://localhost:10389" />`
 
 测试连接并点击
 
@@ -3000,14 +2979,23 @@ authPassword="secret" url="ldap://localhost:10389" />
 
 ```xml
 <xml version="1.0" encoding="UTF-8"?>
+
 <mule xmlns="http://www.mulesoft.org/schema/ldap" xmlns:doc="http://www.mulesoft.org/schema/core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:configuration="http://www.mulesoft.org/schema/ldap" xsi:schemaLocation="http://www.mulesoft.org/schema/ldap http://www.mulesoft.org/schema/ldap/current/ldap.xsd">
+
 <config name="LDAP Configuration" doc:id="6d73d049-b6e8-416b-b87d-c733acf54c5">
+
 <flow name="ldapLookup" doc:id="53bc684a-92e4-4af7-b911-da3368804c7">
+
 <scheduler name="scheduler" doc:id="a5e66470-9954-47f6-b899-266558299002" />
+
 </scheduler>
+
 <ldap:lookup docname="lookup" doc:id="d7f5c9c3-b7f1-456d-a568-22f752c1c2a" config-ref="LDAP Configuration" d="uid=admin,ou=system" />
+
 <logger level="INFO" name="logger" doc:id="627098a4-80c5-4981-9771-efc75231c2ca message="#[payload]" />
+
 </flow>
+
 </mule>
 ```
 
@@ -3017,35 +3005,65 @@ authPassword="secret" url="ldap://localhost:10389" />
 
 ```
 Mule Server 4.1.0 (Terminated 14 May 2021 11:13:17 AM)
+
 ni: Connection to http://localhost:10389/ldap-Directory-objectClass=[top, person, organizational] closed.
+
 ni: TLS has been set to null after connection closed
+
 error: (id=[localhost],assertion=000083df03fc7,e2)
+
 ni: Bounded to ldap://localhost:10389 with simple authentication as uid=admin,ou=system
+
 ni: Connection to http://localhost:10389/ldap-Directory-objectClass=[top, person, organizational] closed.
+
 ni: TLS has been set to null after connection closed
+
 error: (id=[localhost],assertion=000083df03fc7,e2)
+
 ni: Bounded to ldap://localhost:10389 with simple authentication as uid=admin,ou=system
+
 ni: Connection to http://localhost:10389/ldap-Directory-objectClass=[top, person, organizational] closed.
+
 ni: TLS has been set to null after connection closed
+
 error: (id=[localhost],assertion=000083df03fc7,e2)
+
 ni: Bounded to ldap://localhost:10389 with simple authentication as uid=admin,ou=system
+
 ni: TLS has been set to null after connection closed
+
 ni: Bounded to ldap://localhost:10389 with simple authentication as uid=admin,ou=system closed.
+
 ni: Connection to http://localhost:10389/ldap-Directory-objectClass=[top, person, organizational] closed.
+
 ni: TLS has been set to null after connection closed
+
 error: (id=[localhost],assertion=000083df03fc7,e2)
+
 ni: Bounded to ldap://localhost:10389 with simple authentication as uid=admin,ou=system
+
 ni: Connection to http://localhost:10389/ldap-Directory-objectClass=[top, person, organizational] closed.
+
 ni: TLS has been set to null after connection closed
+
 error: (id=[localhost],assertion=000083df03fc7,e2)
+
 ni: Bounded to ldap://localhost:10389 with simple authentication as uid=admin,ou=system
+
 ni: Connection to http://localhost:10389/ldap-Directory-objectClass=[top, person, organizational] closed.
+
 ni: TLS has been set to null after connection closed
+
 error: (id=[localhost],assertion=000083df03fc7,e2)
+
 ni: Bounded to ldap://localhost:10389 with simple authentication as uid=admin,ou=system
+
 ni: TLS has been set to null after connection closed
+
 ni: Bounded to ldap://localhost:10389 with simple authentication as uid=admin,ou=system closed.
 ```
+
+
 
 # 图 11.20：从 MuleFlow 获取 Apache DS LDAP 目录详情
 
@@ -3055,33 +3073,33 @@ ni: Bounded to ldap://localhost:10389 with simple authentication as uid=admin,ou
 
 完整的代码如下供参考：
 
-```
-name="LDAP_Configuration" doc:name="LDAP Configuration"
+```xml
+<ldap:config name="LDAP_Configuration" doc:name="LDAP Configuration"
 doc:id="dfd73b40-06b8-45b7-baoc-c873ac9af5ac" >
-AuthDn="uid=admin,ou=system" password="secret"
-url="ldap://localhost:10389" />
+  <ldap:connection AuthDn="uid=admin,ou=system" password="secret"
+  url="ldap://localhost:10389" />
+</ldap:config>
 ```
 
-```
-name="IdapFlow" doc:id="2b8c6484-9244-471c-a1d7-oc943060d47c"
-doc:name="Scheduler" doc:id="41ee6487-9954-4706-bf89-
-026655029502" >
-/>
+```xml
+<flow name="IdapFlow" doc:id="2b8c6484-9244-471c-a1d7-oc943060d47c">
+  <scheduler doc:name="Scheduler" doc:id="41ee6487-9954-4706-bf89-026655029502" />
+</flow>
 ```
 
-```
-<ldap:lookup docname="lookup" doc:id="d7f5c9c3-b7f1-456d-a568-22f752c1c2a" config-ref="LDAP Configuration" d="uid=admin,ou=system" />
-authPassword="secret" url="ldap://localhost:10389" />
+```xml
+<ldap:lookup doc:name="lookup" doc:id="d7f5c9c3-b7f1-456d-a568-22f752c1c2a" config-ref="LDAP Configuration" d="uid=admin,ou=system" />
+<ldap:connection authPassword="secret" url="ldap://localhost:10389" />
 ```
 
 ## 结论
 
-在本章中，我们学习了 ApacheDS 并将其集成到 ApacheDS。我们通过 LDAP 连接器 测试了基本操作，并取得了结果。在接下来的章节中，我们可以学习更多关于 Java 连接。
+在本章中，我们学习了 ApacheDS 并将其集成到 ApacheDS。我们通过 LDAP 连接器测试了基本操作，并取得了结果。在接下来的章节中，我们可以学习更多关于 Java 连接。
 
 ## 注意事项
 
 - 尝试理解开源和专有的 LDAP 服务器。
-- 研究用于实际目的 LDAP 操作。
+- 研究用于实际目的的 LDAP 操作。
 
 ## 关键术语探索
 
@@ -3101,8 +3119,8 @@ authPassword="secret" url="ldap://localhost:10389" />
 在本章中，我们将讨论以下主题：
 
 - 调用 Java 程序的静态方法
-- 使用 invoke-static 调用非静态方法
-- 使用 new 调用公有方法
+- 使用 `invoke-static` 调用非静态方法
+- 使用 `new` 调用公有方法
 
 ## 目标
 
@@ -3119,18 +3137,19 @@ authPassword="secret" url="ldap://localhost:10389" />
 
 让我们通过调用带有静态和非静态方法的 Java 程序的步骤；尝试在本地机器上重复这些过程。
 
-首先，
-
-创建一个带有 HTTP 监听器的 Mule 项目，并向你的项目添加 Java 模块。你可以看到 invoke-static、new 和 invoke 等可用操作。
+首先，创建一个带有 HTTP 监听器的 Mule 项目，并向你的项目添加 Java 模块。你可以看到 `invoke-static`、`new` 和 `invoke` 等可用操作。
 
 在项目文件夹中，按照如下代码段所示创建一个 Java 程序：
 
 ```java
 package com.invokestaticjavamethod;
+
 public class InvokeStaticDemo {
+
   // TODO 自动生成的构造函数存根
-  
+
   public int getResult(int num1, int num2) // 声明非静态方法
+  {
     int result = num1 + num2;
     return result;
   }
@@ -3138,12 +3157,6 @@ public class InvokeStaticDemo {
   public void sayHello() {
     System.out.println("HELLO MULESOFT");
   }
-}
-```
-
-
-```
-}
 }
 ```
 
@@ -3159,19 +3172,18 @@ public class InvokeStaticDemo {
 
 ## 变量与方法
 
-- attributes (HttpRequestAttributes) org.mule.utils
-- Invoke static static
-- correlationId "d8b4bc00-9682-11eb-b72c-34de61a1"
-- description "No public static method found wi"
-- detailedDescription "No public static method f"
-- type (UnmodifiableRandomAccessList) size = =
-- errors (UnmodifiableRandomAccessList) size = =
-- exception (NoSuchMethodModuleException) t =
+- `attributes (HttpRequestAttributes) org.mule.utils`
+- `Invoke static static`
+- `correlationId "d8b4bc00-9682-11eb-b72c-34de61a1"`
+- `description "No public static method found wi"`
+- `detailedDescription "No public static method f"`
+- `type (UnmodifiableRandomAccessList) size = =`
+- `errors (UnmodifiableRandomAccessList) size = =`
+- `exception (NoSuchMethodModuleException) t =`
 
 > "No public static Method with signature 'getResult(int,int)'
-Class.invokest 中没有声明公共静态方法。
-公共实例方法声明为 {getResult(int,int), watt(long),
-hashCode(), getClassName(), notify(Object), notifyAll(Object)"
+> `Class.invokest` 中没有声明公共静态方法。
+> 公共实例方法声明为 `{getResult(int,int), watt(long), hashCode(), getClassName(), notify(Object), notifyAll(Object)"`
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_282_0.png)
 
@@ -3187,28 +3199,26 @@ INFO 2021-04-08 21:25:
 * default
 ```
 
-图 12.2：对 Java程序的非静态方法使用 invoke static
+图 12.2：对 Java 程序的非静态方法使用 `invoke static`
 
 在同一个程序中，我们有一个非静态方法，我们需要创建一个实例来调用该方法，操作方法如下：
 
-- 使用 New 组件并指定类名。
-- 使用 invoke 组件来调用该方法。
+- 使用 `New` 组件并指定类名。
+- 使用 `invoke` 组件来调用该方法。
 
 在接下来的图中你可以看到我们已成功调用了非静态方法。以下是代码参考：
 
-```
-doc:name="New"
-class="com.invokestaticjavamethod.InvokeStaticDemo"
-constructor="InvokeStaticDemo()" target="a"/>
+```xml
+<new doc:name="New" class="com.invokestaticjavamethod.InvokeStaticDemo" constructor="InvokeStaticDemo()" target="a"/>
 ```
 
-```
-doc:name="Invoke" class="com.invokestaticjavamethod.InvokeStaticDemo" method="sayHello()" instance="#[vars.a]" >
+```xml
+<invoke doc:name="Invoke" class="com.invokestaticjavamethod.InvokeStaticDemo" method="sayHello()" instance="#[vars.a]" />
 ```
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_283_0.png)
 
-图 12.3：使用 new 和 invoke 组件调用 Java 程序的公共方法
+图 12.3：使用 `new` 和 `invoke` 组件调用 Java 程序的公共方法
 
 ## 结论
 
@@ -3224,7 +3234,11 @@ doc:name="Invoke" class="com.invokestaticjavamethod.InvokeStaticDemo" method="sa
 
 - Java 程序的静态方法
 - Java 程序的公共方法
-- New 和 invoke 组件
+- `New` 和 `invoke` 组件
+
+# 第13 章
+
+## 对象存储
 
 ## 结构
 
@@ -3253,7 +3267,7 @@ doc:name="Invoke" class="com.invokestaticjavamethod.InvokeStaticDemo" method="sa
 让我们看看对象存储模块提供的集成方面和操作。
 
 - 创建 HTTP listener 端节点并向项目添加对象存储模块。
-- 引入 store 组件并在对象存储连接器中提供前面的细节。
+- 引入 `store` 组件并在对象存储连接器中提供前面的细节。
 
 在下面的配置中，如图所示，我们配置了 100 条记录，有效期为一天。
 
@@ -3263,12 +3277,12 @@ doc:name="Invoke" class="com.invokestaticjavamethod.InvokeStaticDemo" method="sa
 
 持久（persistent）复选框用于表示对象存储条目的本地驱动器存储；取消选中将导致内存存储，这意味着存储的数据在重启后将不可用。
 
-```
-name="BankLoan_HTTP_Listener_config" doc:name="HTTP Listener config" > host="o.o.o.o" port="8081" />
+```xml
+<http:listener-config name="BankLoan_HTTP_Listener_config" doc:name="HTTP Listener config" host="o.o.o.o" port="8081" />
 ```
 
-```
-name="BankLoanStore doc:name="Object store" entryTtl="1" entryTtlUnit="DAYS" maxEntries="50" />
+```xml
+<os:object-store name="BankLoanStore" doc:name="Object store" entryTtl="1" entryTtlUnit="DAYS" maxEntries="50" />
 ```
 
 一旦完成配置，如图所示提供键（Key）和值（Value）
@@ -3279,94 +3293,103 @@ name="BankLoanStore doc:name="Object store" entryTtl="1" entryTtlUnit="DAYS" max
 
 监听配置将产生如下 URL：
 
-```
-name="loanStoreFlow" >
-doc:name="Listener" config-ref="BankLoan_HTTP_Listener_config"
-path="store"/
-doc:name="BankLoanStore" key="#[attributes.queryParams.loanID"
-objectStore="Object_store">
+```xml
+<flow name="loanStoreFlow" >
+  <http:listener doc:name="Listener" config-ref="BankLoan_HTTP_Listener_config" path="store"/>
+  <os:store doc:name="BankLoanStore" key="#[attributes.queryParams.loanID]" objectStore="Object_store"/>
+</flow>
 ```
 
-创建一个名为 loanRetrieval 的新流，并带有一个路径的 http listener，从对象存储模块引入 Retrieve 组件，如图所示。key 可以是
+创建一个名为 `loanRetrieval` 的新流，并带有一个路径的 http listener，从对象存储模块引入 `Retrieve` 组件，如图所示。key 可以是：
 
-```
-name="loanRetrieveFlow" 
-doc:name="Listener" config-ref="BankLoan_HTTP_Listener_config"
-path="retrieve"/ 
-doc:name="Retrieve" key="#[attributes.queryParams.loanID]"
-objectStore="BankLoanStore"/> 
-doc:name="Transform Message" > 
->2.0
-output application/json
----
-payload
-]]>
-value="#[payload]" doc:name="Set Payload" /
+```xml
+<flow name="loanRetrieveFlow">
+  <http:listener doc:name="Listener" config-ref="BankLoan_HTTP_Listener_config" path="retrieve"/>
+  <os:retrieve doc:name="Retrieve" key="#[attributes.queryParams.loanID]" objectStore="BankLoanStore"/>
+  <ee:transform doc:name="Transform Message">
+    <ee:message>
+      <ee:set-payload><![CDATA[
+        %dw 2.0
+        output application/json
+        ---
+        payload
+      ]]></ee:set-payload>
+    </ee:message>
+  </ee:transform>
+  <set-payload value="#[payload]" doc:name="Set Payload" />
+</flow>
 ```
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_293_0.png)
 
 ### 图 13.3：从对象存储获取值的操作
 
-创建 allLoanFlow，添加 Retrieve all 组件并选择相应的对象存储，如图所示
+创建 `allLoanFlow`，添加 `Retrieve all` 组件并选择相应的对象存储，如图所示：
 
-```
-name="allLoanFlow" >
-doc:name="Listener" config-ref="BankLoan_HTTP_Listener_config"
-path="retrieval"/>
-doc:name="Retrieve all" objectStore="BankLoanStore"/>
-doc:name="Transform Message" >
->2.0
-output application/json
----
-payload
-]]>
-value="#[payload]" doc:name="Set Payload" /
+```xml
+<flow name="allLoanFlow" >
+  <http:listener doc:name="Listener" config-ref="BankLoan_HTTP_Listener_config" path="retrieval"/>
+  <os:retrieve-all doc:name="Retrieve all" objectStore="BankLoanStore"/>
+  <ee:transform doc:name="Transform Message">
+    <ee:message>
+      <ee:set-payload><![CDATA[
+        %dw 2.0
+        output application/json
+        ---
+        payload
+      ]]></ee:set-payload>
+    </ee:message>
+  </ee:transform>
+  <set-payload value="#[payload]" doc:name="Set Payload" />
+</flow>
 ```
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_294_0.png)
 
 ### 图 13.4：从对象存储获取所有值的操作
 
-创建 LoanRemoveFlow，添加路径为 remove，并添加 Remove 组件并选择相应的对象存储，如图所示
+创建 `loanRemoveFlow`，添加路径为 `remove`，并添加 `Remove` 组件并选择相应的对象存储，如图所示：
 
-```
-name="loanRemoveFlow" >
-doc:name="Listener" config-ref="BankLoan_HTTP_Listener_config"
-path="remove"/
-doc:name="Remove" key="#[attributes.queryParams.loanID]"
-objectStore="BankLoanStore/"
+```xml
+<flow name="loanRemoveFlow" >
+  <http:listener doc:name="Listener" config-ref="BankLoan_HTTP_Listener_config" path="remove"/>
+  <os:remove doc:name="Remove" key="#[attributes.queryParams.loanID]" objectStore="BankLoanStore"/>
+</flow>
 ```
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_295_0.png)
 
 ### 图 13.5：从对象存储中移除特定值
 
-
-
 ```xml
-value="#[payload]" doc:name="Set Payload" //>
+<set-payload value="#[payload]" doc:name="Set Payload" />
 ```
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_296_0.png)
 
 ### 图 13.6：从对象存储中获取所有键
 
-创建一个路径名称为 `contains` 的 `loanContainsFlow`，添加 `contains` 组件并选择相应的对象存储，如如图所示。键可以是：
+创建一个路径名称为 `contains` 的 `loanContainsFlow`，添加 `contains` 组件并选择相应的对象存储，如图所示。键可以是：
 
 ```xml
-<flow name="loanContainsFlow" doc:name="Listener" config-ref="BankLoan_HTTP_Listener_config" path="contains" />
-<transform doc:name="Contains" key="#[attributes.queryParams.loanID]" objectStore="BankLoanStore" />
-<transform doc:name="Transform Message">
-2.0
-output application/json
----
-payload
-</transform>
+<flow name="loanContainsFlow">
+  <http:listener doc:name="Listener" config-ref="BankLoan_HTTP_Listener_config" path="contains" />
+  <os:contains doc:name="Contains" key="#[attributes.queryParams.loanID]" objectStore="BankLoanStore" />
+  <ee:transform doc:name="Transform Message">
+    <ee:message>
+      <ee:set-payload><![CDATA[
+        %dw 2.0
+        output application/json
+        ---
+        payload
+      ]]></ee:set-payload>
+    </ee:message>
+  </ee:transform>
+</flow>
 ```
 
 ```xml
-#[payload] doc:name="Set Payload" />
+<set-payload value="#[payload]" doc:name="Set Payload" />
 ```
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_297_0.png)
@@ -3376,9 +3399,13 @@ payload
 创建一个路径名称为 `clear` 的 `clearLoansFlow`，添加 `Clear` 组件并选择相应的对象存储，如图所示：
 
 ```xml
-<flow name="clearLoansFlow" doc:name="Listener" config-ref="BankLoan_HTTP_Listener_config" path="clear"/>
-<clear doc:name="Clear" objectStore="BankLoanStore"/>
+<flow name="clearLoansFlow">
+  <http:listener doc:name="Listener" config-ref="BankLoan_HTTP_Listener_config" path="clear"/>
+  <os:clear doc:name="Clear" objectStore="BankLoanStore"/>
+</flow>
 ```
+
+
 
 ![](img/b37db39e68b5c0bef5ff8f878466ecb7_298_0.png)
 
@@ -3390,19 +3417,19 @@ payload
 
 访问以下 URL：
 
-- http://localhost:8081/store?loanID=1234&&loanStatus=Success
-- http://localhost:8081/store?loanID=1235&&loanStatus=Pending
-- http://localhost:8081/store?loanID=1236&&loanStatus=Success
-- http://localhost:8081/store?loanID=1237&&loanStatus=Processing
-- http://localhost:8081/store?loanID=1238&&loanStatus=Rejected
+- `http://localhost:8081/store?loanID=1234&&loanStatus=Success`
+- `http://localhost:8081/store?loanID=1235&&loanStatus=Pending`
+- `http://localhost:8081/store?loanID=1236&&loanStatus=Success`
+- `http://localhost:8081/store?loanID=1237&&loanStatus=Processing`
+- `http://localhost:8081/store?loanID=1238&&loanStatus=Rejected`
 
 这些键和值将被添加到对象存储中。
 
-- http://localhost:8081/retrieve?loanID=1234. — 获取贷款 ID 的状态。
-- http://localhost:8081/retrieveall. — 获取所有键和值。
-- http://localhost:8081/remove?loanID=1238. — 移除键 1238。
-- http://localhost:8081/contains?loanID=1236. — 你将得到 yes 或 no。
-- http://localhost:8081/clear. — 移除对象存储中的所有值。
+- `http://localhost:8081/retrieve?loanID=1234` — 获取贷款 ID 的状态。
+- `http://localhost:8081/retrieveall` — 获取所有键和值。
+- `http://localhost:8081/remove?loanID=1238` — 移除键 1238。
+- `http://localhost:8081/contains?loanID=1236` — 你将得到 yes 或 no。
+- `http://localhost:8081/clear` — 移除对象存储中的所有值。
 
 ## 结论
 
@@ -3422,7 +3449,6 @@ payload
 - 存储
 - 获取
 - 获取全部
-- 
 - 所有键
 - 清除对象存储
 
@@ -3547,9 +3573,3 @@ payload
 
 - Web 服务：61，创建，从 NetBeans 67，项目，探索 68，运行 68
 - WSDL，探索：69, WSDL，无输入参数调用：71
-
-
-
-```json
-{}
-```

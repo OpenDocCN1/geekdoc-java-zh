@@ -1,10 +1,11 @@
+
 # JUnit 5 参数化测试
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/junit5/junit-5-parameterized-tests/>
 
 ![junit 5 param test](img/b7a34705a5a0ca2be46f97355957415a.png)
 
-本文向您展示了如何使用不同的参数多次运行一个测试，即所谓的“参数化测试”，让我们来看看以下为测试提供参数的方法:
+本文向您展示了如何使用不同的参数多次运行一个测试，即所谓的“参数化测试”，让我们来看看以下为测试提供参数的方法：
 
 *   `@ValueSource`
 *   `@EnumSource`
@@ -15,35 +16,35 @@
 
 我们需要`junit-jupiter-params`来支持参数化测试。
 
-pom.xml
+`pom.xml`
 
 ```java
- <dependency>
-		<groupId>org.junit.jupiter</groupId>
-		<artifactId>junit-jupiter-engine</artifactId>
-		<version>5.5.2</version>
-		<scope>test</scope>
-	</dependency>
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-engine</artifactId>
+    <version>5.5.2</version>
+    <scope>test</scope>
+</dependency>
 
-	<!-- Parameterized Tests -->
-	<dependency>
-		<groupId>org.junit.jupiter</groupId>
-		<artifactId>junit-jupiter-params</artifactId>
-		<version>5.5.2</version>
-		<scope>test</scope>
-	</dependency> 
+<!-- Parameterized Tests -->
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-params</artifactId>
+    <version>5.5.2</version>
+    <scope>test</scope>
+</dependency>
 ```
 
 *用 JUnit 5.5.2 测试的 PS*
 
-## 1.@ValueSource
+## 1. `@ValueSource`
 
 1.1 为单参数测试。
 
-ValueSourceTest.java
+`ValueSourceTest.java`
 
 ```java
- package com.mkyong.params;
+package com.mkyong.params;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -70,20 +71,19 @@ public class ValueSourceTest {
     void test_string_arrays_custom_name(String arg) {
         assertTrue(arg.length() > 1);
     }
-
-} 
+}
 ```
 
 输出
 
 ![output](img/93bd41ba51113fa8fd7d3a0a96d960de.png)
 
-1.2 我们可以通过`@EmptySource`、`@NullSource`或`@NullAndEmptySource`将空值或 null 值传递到测试中(从 JUnit 5.4 开始)。让我们看下面的例子来测试一个`isEmpty()`方法。
+1.2 我们可以通过`@EmptySource`、`@NullSource`或`@NullAndEmptySource`将空值或 null 值传递到测试中（从 JUnit 5.4 开始）。让我们看下面的例子来测试一个`isEmpty()`方法。
 
-ValueSourceEmptyTest.java
+`ValueSourceEmptyTest.java`
 
 ```java
- package com.mkyong.params;
+package com.mkyong.params;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EmptySource;
@@ -99,7 +99,7 @@ public class ValueSourceEmptyTest {
         return (input == null || input.length() == 0);
     }
 
-	// run 3 times, 1 for empty, 1 for null, 1 for ""
+    // run 3 times, 1 for empty, 1 for null, 1 for ""
     @ParameterizedTest(name = "#{index} - isEmpty()? {0}")
     @EmptySource
     @NullSource
@@ -114,22 +114,21 @@ public class ValueSourceEmptyTest {
     void test_is_empty_false(String arg) {
         assertFalse(isEmpty(arg));
     }
-
-} 
+}
 ```
 
 输出
 
 ![output](img/a32c186a6990fbbddba635d17acdc448.png)
 
-## 2.@EnumSource
+## 2. `@EnumSource`
 
 2.1 运行以`Enum`为参数的测试。
 
-EnumSourceTest.java
+`EnumSourceTest.java`
 
 ```java
- package com.mkyong.params;
+package com.mkyong.params;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
@@ -165,17 +164,16 @@ public class EnumSourceTest {
         EnumSet<Size> excludeSmallSize = EnumSet.range(Size.M, Size.XXXL);
         assertTrue(excludeSmallSize.contains(size));
     }
-
-} 
+}
 ```
 
-输出。
+输出
 
 ```java
- $ java -jar junit-platform-console-standalone-1.5.2.jar 
-	-cp "target/test-classes/" 
-	--select-class com.mkyong.params.EnumSourceTest 
-	--disable-ansi-colors
+$ java -jar junit-platform-console-standalone-1.5.2.jar 
+    -cp "target/test-classes/" 
+    --select-class com.mkyong.params.EnumSourceTest 
+    --disable-ansi-colors
 
 +-- JUnit Jupiter [OK]
 | '-- EnumSourceTest [OK]
@@ -199,17 +197,17 @@ public class EnumSourceTest {
 |     +-- [3] XL [OK]
 |     +-- [4] XXL [OK]
 |     '-- [5] XXXL [OK]
-'-- JUnit Vintage [OK] 
+'-- JUnit Vintage [OK]
 ```
 
-## 3.@MethodSource
+## 3. `@MethodSource`
 
 3.1 运行使用静态`method`生成参数的测试。
 
-MethodSourceTest.java
+`MethodSourceTest.java`
 
 ```java
- package com.mkyong.params;
+package com.mkyong.params;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -243,14 +241,13 @@ public class MethodSourceTest {
     static IntStream rangeProvider() {
         return IntStream.range(0, 10);
     }
-
-} 
+}
 ```
 
 输出
 
 ```java
- +-- JUnit Jupiter [OK]
++-- JUnit Jupiter [OK]
 | '-- MethodSourceTest [OK]
 |   +-- test_method_int(int) [OK]
 |   | +-- #1 - Test with Int : 0 [OK]
@@ -266,15 +263,15 @@ public class MethodSourceTest {
 |   '-- test_method_string(String) [OK]
 |     +-- #1 - Test with String : java [OK]
 |     '-- #2 - Test with String : rust [OK]
-'-- JUnit Vintage [OK] 
+'-- JUnit Vintage [OK]
 ```
 
 3.2 多重论证
 
-MethodSourceMultiTest.java
+`MethodSourceMultiTest.java`
 
 ```java
- package com.mkyong.params;
+package com.mkyong.params;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -303,29 +300,36 @@ public class MethodSourceMultiTest {
                 arguments("lemon", 2, Arrays.asList("x", "y"))
         );
     }
-
-} 
+}
 ```
 
 输出
 
 ```java
- +-- JUnit Jupiter [OK]
++-- JUnit Jupiter [OK]
 | '-- MethodSourceMultiTest [OK]
 |   '-- test_method_multi(String, int, List) [OK]
 |     +-- [1] abc, 3, [a, b, c] [OK]
 |     '-- [2] lemon, 2, [x, y] [OK]
-'-- JUnit Vintage [OK] 
+'-- JUnit Vintage [OK]
 ```
 
-## 4.@CsvSource
+## 4. `@CsvSource`
 
-4.1 运行以逗号分隔值(csv)作为参数的测试。
+4.1 运行以逗号分隔值（csv）作为参数的测试。
 
-CsvSourceTest.java
+`CsvSourceTest.java`
+
+
+
+# JUnit 5 参数化测试示例
+
+## 1. `@CsvSource`
+
+以下示例演示了如何使用`@CsvSource`注解将逗号分隔值（CSV）作为参数传递给测试方法。
 
 ```java
- package com.mkyong.params;
+package com.mkyong.params;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -344,25 +348,27 @@ public class CsvSourceTest {
         assertEquals(length, str.length());
     }
 
-} 
+}
 ```
 
-## 5.@CsvFileSource
+## 2. `@CsvFileSource`
 
-5.1 从文件中导入逗号分隔值(csv)作为参数。
+### 2.1 从文件导入参数
 
-src/test/resources/simple.csv
+从文件中导入逗号分隔值（CSV）作为参数。
+
+文件路径：`src/test/resources/simple.csv`
 
 ```java
- java,      4
+java,      4
 clojure,   7
-python,    6 
+python,    6
 ```
 
-CsvFileSourceTest.java
+测试类：`CsvFileSourceTest.java`
 
 ```java
- package com.mkyong.params;
+package com.mkyong.params;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -371,35 +377,35 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CsvFileSourceTest {
 
-	// Skip the first line
+    // Skip the first line
     @ParameterizedTest
     @CsvFileSource(resources = "/simple.csv", numLinesToSkip = 1)
     void test_csv_file(String str, int length) {
         assertEquals(length, str.length());
     }
 
-} 
+}
 ```
 
-输出
+输出结果：
 
 ```java
- +-- JUnit Jupiter [OK]
++-- JUnit Jupiter [OK]
 | '-- CsvFileSourceTest [OK]
 |   '-- test_csv_file(String, int) [OK]
 |     +-- [1] clojure, 7 [OK]
 |     '-- [2] python, 6 [OK]
-'-- JUnit Vintage [OK] 
+'-- JUnit Vintage [OK]
 ```
 
-## 6.@ArgumentsSource
+## 3. `@ArgumentsSource`
 
-6.1 创建可重用的参数提供程序。
+### 3.1 创建可重用的参数提供程序
 
-CustomArgumentsProvider.java
+自定义参数提供程序类：`CustomArgumentsProvider.java`
 
 ```java
- package com.mkyong.params;
+package com.mkyong.params;
 
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.provider.Arguments;
@@ -411,16 +417,16 @@ public class CustomArgumentsProvider implements ArgumentsProvider {
 
     @Override
     public Stream<? extends Arguments> 
-		provideArguments(ExtensionContext extensionContext) throws Exception {
+        provideArguments(ExtensionContext extensionContext) throws Exception {
         return Stream.of("java", "rust", "kotlin").map(Arguments::of);
     }
-} 
+}
 ```
 
-ArgumentsSourceTest.java
+测试类：`ArgumentsSourceTest.java`
 
 ```java
- package com.mkyong.params;
+package com.mkyong.params;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
@@ -435,18 +441,18 @@ public class ArgumentsSourceTest {
         assertNotNull(arg);
     }
 
-} 
+}
 ```
 
 ## 下载源代码
 
-$ git clone [https://github.com/mkyong/junit-examples](http://web.archive.org/web/20221206155213/https://github.com/mkyong/junit-examples)
+```bash
+$ git clone https://github.com/mkyong/junit-examples
 $ cd junit5-examples
 $ check src/test/java/com/mkyong/params/*.java
+```
 
 ## 参考
 
-*   [JUnit 5 参数化测试](http://web.archive.org/web/20221206155213/https://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests)
-*   [Maven 标准目录布局](http://web.archive.org/web/20221206155213/https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
-
-<input type="hidden" id="mkyong-current-postId" value="15259">
+- [JUnit 5 参数化测试](http://web.archive.org/web/20221206155213/https://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests)
+- [Maven 标准目录布局](http://web.archive.org/web/20221206155213/https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)

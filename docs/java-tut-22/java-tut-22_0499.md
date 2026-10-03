@@ -1,3 +1,4 @@
+
 # 如何编写属性更改侦听器
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/events/propertychangelistener.html`](https://docs.oracle.com/javase/tutorial/uiswing/events/propertychangelistener.html)
@@ -36,23 +37,21 @@ public FocusManagerListener implements PropertyChangeListener {
     }
     ...
 }
-
 ```
 
-第二种注册属性更改监听器的方法使用了方法 `addPropertyChangeListener(String, PropertyChangeListener)`。`String` 参数是属性的名称。使用这种方法意味着只有在特定属性发生更改时才会收到通知。例如，如果你像这样注册了一个属性更改监听器：
+第二种注册属性更改监听器的方法使用了方法`addPropertyChangeListener(String, PropertyChangeListener)`。`String`参数是属性的名称。使用这种方法意味着只有在特定属性发生更改时才会收到通知。例如，如果你像这样注册了一个属性更改监听器：
 
 ```java
 aComponent.addPropertyChangeListener("font",
                                      new FontListener());
-
 ```
 
-`FontListener` 只有在组件的 *font* 属性值更改时才会收到通知。它 *不会* 在 *transferHandler*、*opaque*、*border* 或任何其他属性值更改时收到通知。
+`FontListener`只有在组件的*font*属性值更改时才会收到通知。它*不会*在*transferHandler*、*opaque*、*border*或任何其他属性值更改时收到通知。
 
-以下示例展示了如何使用 `addPropertyChangeListener` 的两个参数版本在格式化文本字段的 *value* 属性上注册属性更改监听器：
+以下示例展示了如何使用`addPropertyChangeListener`的两个参数版本在格式化文本字段的*value*属性上注册属性更改监听器：
 
 ```java
-*//...where initialization occurs:*
+//...where initialization occurs:*
 double amount;
 JFormattedTextField amountField;
 ...
@@ -66,10 +65,9 @@ class FormattedTextFieldListener implements PropertyChangeListener {
             amount = ((Number)amountField.getValue()).doubleValue();
             ...
         }
-        *...//re-compute payment and update field...*
+        //...//re-compute payment and update field...*
     }
 }
-
 ```
 
 ## 属性更改监听器 API
@@ -83,13 +81,13 @@ class FormattedTextFieldListener implements PropertyChangeListener {
 
 PropertyChangeListener 接口
 
-*因为 `PropertyChangeListener` 只有一个方法，所以没有相应的适配器类。*
+*因为`PropertyChangeListener`只有一个方法，所以没有相应的适配器类。*
 
 | 方法 | 目的 |
 | --- | --- |
 | [propertyChange(PropertyChangeEvent)](https://docs.oracle.com/javase/8/docs/api/java/beans/PropertyChangeListener.html#propertyChange-java.beans.PropertyChangeEvent-) | 当被监听的 bean 更改绑定属性时调用。 |
 
-`PropertyChangeEvent` 类
+`PropertyChangeEvent`类
 
 | 方法 | 目的 |
 | --- | --- |
@@ -103,7 +101,7 @@ PropertyChangeListener 接口
 
 | 示例 | 描述位置 | 备注 |
 | --- | --- | --- |
-| `FormattedTextFieldDemo` | 如何使用格式化文本字段 | 在多个格式化文本字段上注册了属性更改监听器，以跟踪 *value* 属性的更改。 |
+| `FormattedTextFieldDemo` | 如何使用格式化文本字段 | 在多个格式化文本字段上注册了属性更改监听器，以跟踪*value*属性的更改。 |
 | `DialogDemo` | 如何创建对话框 | `CustomDialog`类在选项面板上注册属性更改监听器，以监听*value*和*inputValue*属性的变化。 |
 | `FileChooserDemo2` | 如何使用文件选择器 | `ImagePreview`类在文件选择器上注册属性更改监听器，以监听*directoryChanged*和*selectedFileChanged*属性的变化。 |
 | `TrackFocusDemo` | 如何使用焦点子系统 | 在键盘焦点管理器上注册属性更改监听器以跟踪*focusOwner*属性的变化。 |

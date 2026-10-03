@@ -1,8 +1,9 @@
+
 # Java 接口中的静态和默认方法
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-static-default-methods>
 
-## 1。概述
+## 1. 概述
 
 Java 8 带来了一些全新的特性，包括 [lambda 表达式](https://web.archive.org/web/20221129002420/https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)、[函数接口](/web/20221129002420/https://www.baeldung.com/java-8-functional-interfaces)、[方法引用](/web/20221129002420/https://www.baeldung.com/java-8-double-colon-operator)、[流](/web/20221129002420/https://www.baeldung.com/java-8-streams)、[可选](/web/20221129002420/https://www.baeldung.com/java-optional)，以及接口中的`static`和`default`方法。
 
@@ -12,23 +13,23 @@ Java 8 带来了一些全新的特性，包括 [lambda 表达式](https://web.ar
 
 ## 延伸阅读:
 
-## [Java 接口中的私有方法](/web/20221129002420/https://www.baeldung.com/java-interface-private-methods)
+### [Java 接口中的私有方法](/web/20221129002420/https://www.baeldung.com/java-interface-private-methods)
 
 Learn how to define private methods within an interface and how we can use them from both static and non-static contexts.[Read more](/web/20221129002420/https://www.baeldung.com/java-interface-private-methods) →
 
-## [在 Java 中使用接口与抽象类](/web/20221129002420/https://www.baeldung.com/java-interface-vs-abstract-class)
+### [在 Java 中使用接口与抽象类](/web/20221129002420/https://www.baeldung.com/java-interface-vs-abstract-class)
 
 Learn when to use an interface and when to use an abstract class in Java.[Read more](/web/20221129002420/https://www.baeldung.com/java-interface-vs-abstract-class) →
 
-## [Java 中的静态关键字指南](/web/20221129002420/https://www.baeldung.com/java-static)
+### [Java 中的静态关键字指南](/web/20221129002420/https://www.baeldung.com/java-static)
 
 Learn about Java static fields, static methods, static blocks and static inner classes.[Read more](/web/20221129002420/https://www.baeldung.com/java-static) →
 
-## 2。为什么接口需要默认方法
+## 2. 为什么接口需要默认方法
 
 与常规接口方法一样，**默认方法是隐式公共的；**没有必要指定`public`修饰符。
 
-与常规的接口方法不同，我们**在方法签名**的开头用`default` 关键字声明它们，它们**提供一个实现**。
+与常规的接口方法不同，我们**在方法签名**的开头用`default`关键字声明它们，它们**提供一个实现**。
 
 让我们看一个简单的例子:
 
@@ -51,7 +52,7 @@ Java 8 发行版包含`default`方法的原因很明显。
 
 通过这种方式，**向后兼容性被巧妙地保留了下来**,而不必重构实现者。
 
-## 3。运行中的默认接口方法
+## 3. 运行中的默认接口方法
 
 为了更好地理解`default`接口方法的功能，让我们创建一个简单的例子。
 
@@ -102,7 +103,7 @@ public class Car implements Vehicle {
 } 
 ```
 
-最后，让我们定义一个典型的`main`类，它创建一个 `Car`的实例并调用它的方法:
+最后，让我们定义一个典型的`main`类，它创建一个`Car`的实例并调用它的方法:
 
 ```java
 public static void main(String[] args) { 
@@ -115,7 +116,7 @@ public static void main(String[] args) {
 }
 ```
 
-请注意我们的`Vehicle`接口中的`default`方法、`turnAlarmOn()`和`turnAlarmOff(),`是如何在`Car`类中自动可用的**。**
+请注意我们的`Vehicle`接口中的`default`方法、`turnAlarmOn()`和`turnAlarmOff()`是如何在`Car`类中自动可用的。
 
 此外，如果在某个时候我们决定向`Vehicle`接口添加更多的`default`方法，应用程序仍将继续工作，我们不必强迫类提供新方法的实现。
 
@@ -136,11 +137,11 @@ public interface Vehicle {
 }
 ```
 
-## 4。多接口继承规则
+## 4. 多接口继承规则
 
 默认接口方法是一个非常好的特性，但是有一些警告值得一提。因为 Java 允许类实现多个接口，所以重要的是要知道当一个类实现几个定义相同`default`方法的接口时**会发生什么。**
 
-为了更好地理解这个场景，让我们定义一个新的 `Alarm`接口并重构`Car`类:
+为了更好地理解这个场景，让我们定义一个新的`Alarm`接口并重构`Car`类:
 
 ```java
 public interface Alarm {
@@ -223,11 +224,11 @@ public String turnAlarmOff() {
 } 
 ```
 
-## 5。静态接口方法
+## 5. 静态接口方法
 
-除了在接口中声明`default`方法， **Java 8 还允许我们在接口**中定义和实现`static`方法。
+除了在接口中声明`default`方法，**Java 8 还允许我们在接口**中定义和实现`static`方法。
 
-由于`static`方法不属于特定的对象，它们不是实现接口的类的 API 的一部分；因此，必须使用方法名前面的接口名来调用它们**。**
+由于`static`方法不属于特定的对象，它们不是实现接口的类的 API 的一部分；因此，必须使用方法名前面的接口名来调用它们。
 
 为了理解`static`方法在接口中是如何工作的，让我们重构`Vehicle`接口并向其添加一个`static`实用方法:
 
@@ -250,13 +251,13 @@ public interface Vehicle {
 Vehicle.getHorsePower(2500, 480)); 
 ```
 
-接口方法背后的想法是提供一个简单的机制，允许我们通过把相关的方法放在一个地方来增加设计的 T2 内聚 T4 的程度，而不需要创建一个对象。
+接口方法背后的想法是提供一个简单的机制，允许我们通过把相关的方法放在一个地方来增加设计的内聚程度，而不需要创建一个对象。
 
 抽象类也可以做到这一点。主要区别在于**抽象类可以有构造函数、状态和行为**。
 
 此外，接口中的静态方法使得对相关的实用程序方法进行分组成为可能，而不必创建只是静态方法占位符的人工实用程序类。
 
-## 6。结论
+## 6. 结论
 
 在本文中，我们深入探讨了 Java 8 中`static`和`default`接口方法的使用。乍一看，这个特性可能有点草率，特别是从面向对象的纯粹主义者的角度来看。理想情况下，接口不应该封装行为，我们应该只使用它们来定义某种类型的公共 API。
 

@@ -1,16 +1,13 @@
+
 # Java 编程：初学者指南 (初学者指南系列第 1 本)
-
-
 
 ![](img/00039.jpeg)
 
-
-
 LearnToProgram.tv, Incorporated 27 Hartford Turnpike Suite 206 Vernon, CT 06066
+
 contact@learntoprogram.tv
+
 (860) 840-7090
-
-
 
 ## 关于入门指南系列
 
@@ -34,7 +31,6 @@ contact@learntoprogram.tv
 
 ![](img/00001.jpeg)![](img/00002.jpeg)
 
-
 ## 第 1 章：编写你的第一个程序
 
 欢迎。如果这是你第一次编程，恭喜你！你即将开始一段大多数人认为非常有成就感的旅程。如果你是在之前的尝试失败后尝试学习，你同样应该获得认可。应对编程并不总是容易的——但它并非普通人的能力范围。
@@ -50,18 +46,23 @@ contact@learntoprogram.tv
 第一章将作为设置编程环境和入门的介绍。之后的每一章都旨在带你了解开发某个方面的基础知识，并为你进一步的学习奠定基础。为了让你有一个背景了解，这里是书中剩下的内容：
 
 **第二章：输入与输出**
+
 输入和输出是任何程序的关键。在本章中，我们将查看如何将数据输入和输出程序。
 
 **第三章：理解变量**
+
 变量是任何程序的构建块。本章将引导读者在表达式中使用声明变量。
 
 **第四章：条件与循环**
+
 条件和循环是允许程序做出决策并改变执行结果结构。这些本章中演示和解释。
 
 **第五章：处理数据**
+
 几乎每个实用程序在某种程度上都要处理数据。在本章中，你将学习如何在程序中存储各种形式的数据。
 
 **第六章：整合一切**
+
 在最后一章中，读者将学习如何利用之前章节中学技能创建一个处理和存储数据的实用程序。
 
 在我们编写任何程序之前，我们需要设置好开发环境。我不会要求你购买任何东西，你会有几个选项可以选择。
@@ -70,19 +71,15 @@ contact@learntoprogram.tv
 
 ### 设置你的开发环境
 
-我们在书中将使用一种名为 Java 的语言。在你的机器上安装 Java 相当简单，对于大多数主流操作系统，过程通常是相同的。使用浏览器，你需要导航到 oracle.com。Oracle 是维护 Java 的公司，也是你编写 Java 代码所需的下载 `JDK`（Java 开发工具包）。
+我们在书中将使用一种名为 Java 的语言。在你的机器上安装 Java 相当简单，对于大多数主流操作系统，过程通常是相同的。使用浏览器，你需要导航到 `oracle.com`。Oracle 是维护 Java 的公司，也是你编写 Java 代码所需的下载 `JDK`（Java 开发工具包）。
 
-到达 Oracle.com 后，在顶部菜单栏找到 `Downloads`，点击 `Popular Downloads` 下的 `Java for Developers`。
+到达 `Oracle.com` 后，在顶部菜单栏找到 `Downloads`，点击 `Popular Downloads` 下的 `Java for Developers`。
 
 图 1.2：打开了下载菜单的 Oracle.com
 
 点击该链接后，你会看到下载页面。会弹出一个显示 `JDK`，下方有一个下载按钮。点击它，它将重定向到一个你可以选择操作系统的页面。网站将提供一套说明，详细介绍如何将 `JDK` 安装到你的电脑上。图 1.3：作者电脑上的终端。注意作者通过终端偏好更改了默认颜色
 
-
-
-
-
-如果你不想在机器上通过安装 JDK 的过程，我建议你使用 Koding.com 朋友提供的虚拟 Linux 服务器。在浏览器中访问 www.Koding.com 并注册一个免费账户。免费账户将为你提供一个可以通过网页浏览器访问的虚拟 Linux 机器——它可以开箱即用编译并运行 Java 代码！无需任何下载。这就是我编写书中将用到的代码时使用的工具。
+如果你不想在机器上通过安装 `JDK` 的过程，我建议你使用 Koding.com 朋友提供的虚拟 Linux 服务器。在浏览器中访问 `www.Koding.com` 并注册一个免费账户。免费账户将为你提供一个可以通过网页浏览器访问的虚拟 Linux 机器——它可以开箱即用编译并运行 Java 代码！无需任何下载。这就是我编写书中将用到的代码时使用的工具。
 
 一旦你拥有了账户，点击按钮启动虚拟机（VM）并开始编码。你将使用 Koding 上的文本编辑器输入 Java 文件，并使用终端运行它们。
 
@@ -135,9 +132,7 @@ public class HelloWorld{
 
 图 1.7：在 Koding 中保存文件。
 
-一旦你输入了代码，就是时候运行它了。在 nano 中，输入 `CTRL+W` 保存文件。在提示时，输入文件名 `HelloWorld.java`。`.java` 扩展名表示这是一个 Java 源文件。接下来输入 `CTRL+X` 退出，返回命令行。在 `vi` 中，进入命令模式并通过输入 `:w HelloWorld.java` 保存文件。这将以适当的文件名写入你的文件。最后，在 `vi` 中，按 `:q` 退出并返回命令行。在任何其他编辑器（包括 Koding 上的）通常都可以打开菜单并点击“另存为”，就像在任何其他计算机程序中一样。
-
-注意，我们给这个程序起的文件名与类名（`HelloWorld`）匹配。这是 Java 标准。该标准使得当你有多个源文件时，类文件在构建时易于识别。因此，为了方便管理，每当你创建一个新的 `.java` 文件时，请确保将其保存为“filename.java”。
+一旦你输入了代码，就是时候运行它了。在 nano 中，输入 `CTRL+W` 保存文件。在提示时，输入文件名 `HelloWorld.java`。`.java` 扩展名表示这是一个 Java 源文件。接下来输入 `CTRL+X` 退出，返回命令行。在 `vi` 中，进入命令模式并通过输入 `:w HelloWorld.java` 保存文件。这将以适当的文件名写入你的文件。最后，在 `vi` 中，按 `:q` 退出并返回命令行。
 
 图 1.8：HelloWorld.java 的执行
 
@@ -154,7 +149,9 @@ public class HelloWorld{
 在任何其他编辑器中，像打开其他文件一样打开它。常见的错误包括：
 
 - 未闭合括号
+
 - 忘记行末的分号
+
 - 误写 `public static void main(String[] args)`（它是大小敏感的！）
 
 恭喜！你写了第一个程序。
@@ -179,14 +176,11 @@ System.out.println(2573);
 System.out.println(3.45783);
 ```
 
-
-
-
 ## 表达式
 
 表达式在确定结果之前必须求值。表达式通常是算术题。在 Java 中打印表达式：
 
-```
+```java
 System.out.println(3.0/(6+4));
 ```
 
@@ -287,6 +281,8 @@ public class StringInput{
 }
 ```
 
+
+
 退出文本编辑器，并在命令行中使用 `javac StringInput.java` 编译程序。
 
 ![](img/0006.jpeg)
@@ -333,22 +329,19 @@ public class StringInput{
 
 ### 错误
 
-前面的示例可能是你遇到的第一个错误示例之一。这种类型的错误被称为运行时错误（Runtime error）。它是编写 Java 代码时可能发生的三种类型错误之一。
+前面的示例可能是你遇到的第一个错误示例之一。这种类型的错误被称为运行时错误。它是编写 Java 代码时可能发生的三种类型错误之一。
 
 这三种类型是：
 
-#### 语法错误：
+#### 语法错误
 
 语法错误是代码格式上的问题。包括遗漏分号、未闭合括号或拼错方法名。文本编辑器通常能很好地指出这些问题，因此修复它们相当简单。
 
-#### 运行时错误：
-
-
-
+#### 运行时错误
 
 运行时错误比较难捕捉。在语法上，所有的运行时错误都是正确的，所以编辑器不会指出它们。当发生意外情况时，会导致程序无法正常编译或执行。示例包括尝试除以零或尝试调用一个不存在的文件。Java 在尝试执行时才会遇到错误。
 
-### 逻辑错误
+#### 逻辑错误
 
 这些是程序内部的错误。它们是最难修复的，因为代码本身并没有错误，只是结果不正确。有些逻辑错误在程序发布后仍未被检测到。
 
@@ -382,6 +375,7 @@ public class MoreInput{
 你应该得到与图 2.4 类似的结果：
 
 ![](img/00008.jpeg)
+
 图 2.4：命令行参数作为输入在命令行处理。
 
 **注意：** parameter 和 argument 术语可以通用。
@@ -425,17 +419,15 @@ public class Storage{
 }
 ```
 
-这绝对是我们我们写过的最复杂的程序了。在命令行中运行它并确保没有任何错误。如果你遇到问题，请检查导入（imports）。如果一切运行正常，你的命令行应该像这样：
+这绝对是我们我们写过的最复杂的程序了。在命令行中运行它并确保没有任何错误。如果你遇到问题，请检查导入。如果一切运行正常，你的命令行应该像这样：
 
 ![](img/00009.jpeg)
+
 图 2.5：程序将数据存储在名为 Keshav.txt 的文件中，现在可以通过在命令行使用 `ls` 命令在目录列表中看到。
-
-
-
 
 ## 变量的声明与初始化
 
-Java 是一种所谓的强类型语言。这意味着变量在使用之前需要进行声明。在 Java 中，变量是根据它们所持的数据类型来区分的。这种数据类型被称为变量的数据类型（datatype）。
+Java 是一种所谓的强类型语言。这意味着变量在使用之前需要进行声明。在 Java 中，变量是根据它们所持的数据类型来区分的。这种数据类型被称为变量的数据类型。
 
 Java 中有两种变量：基本类型和类类型（也称为引用类型）。
 
@@ -479,7 +471,7 @@ String blogName = new String("Edukwest!");
 
 一旦声明了变量，通常你就可以对它做很多操作。这里有一个使用变量更改句子中打印内容的示例。
 
-输入以下代码中的关键部分。（你可以自由为变量替换自己的值。）注意注释是由两个斜杠（`//`）指示的。多行注释可以使用斜杠和星号创建并用星号和斜杠结束（/*注释!*/）。
+输入以下代码中的关键部分。（你可以自由为变量替换自己的值。）注意注释是由两个斜杠（`//`）指示的。多行注释可以使用斜杠和星号创建并用星号和斜杠结束（`/*注释!*/`）。
 
 ```java
 public class Variables{
@@ -492,7 +484,7 @@ public class Variables{
 }
 ```
 
-将文件保存为 `Variables.java` 并使用 `Java` 命令运行它。你的输出应该与图 3.1 相似
+将文件保存为 `Variables.java` 并使用 `java` 命令运行它。你的输出应该与图 3.1 相似
 
 ![](img/00011.jpeg)
 
@@ -500,9 +492,9 @@ public class Variables{
 
 声明中的第一个单词是要创建的变量类型。回顾一下，此程序中的变量类型为：
 
-- **String：** `String` 变量由特定顺序的一系列字符组成，这些字符没有数学值。
-- **Integer：** `Integer` 变量包含不带小数点的整数值。
-- **浮点数值：** 浮点型变量包含更精确的数字，通过小数点值表示整数部分和小数部分。
+- `String`：`String` 变量由特定顺序的一系列字符组成，这些字符没有数学值。
+- `Integer`：`Integer` 变量包含不带小数点的整数值。
+- `float`：浮点型变量包含更精确的数字，通过小数点值表示整数部分和小数部分。
 
 变量是动态的，因为其值在程序的整个生命周期内可以被更改或重新赋值。例如，在视频游戏中，你有一个跟踪玩家得分的变量。随着玩家得分的变化，该值将一直增加直到游戏结束。一旦游戏结束，`player’s score` 变量中的值可能会被重新赋值为零。
 
@@ -536,11 +528,9 @@ public class Var2{
 
 注意，当我们第一次声明 `fullName` 变量时，它被赋值为通过 `+` 号连接的 `first` 和 `last` 值。然后该值被打印到控制台。随着程序的继续执行，该值会改变。
 
+### 类型转换
 
-
-
-
-### Java 要求你识别变量的类型。当你将不同类型的变量一起使用时，你可能需要显式地说明你希望结果是什么类型的变量。根据一条经验法则：较小的变量类型会自动向上转换，但较大的变量必须手动向下强制转换。
+Java 要求你识别变量的类型。当你将不同类型的变量一起使用时，你可能需要显式地说明你希望结果是什么类型的变量。根据一条经验法则：较小的变量类型会自动向上转换，但较大的变量必须手动向下强制转换。
 
 以下是层级结构：
 
@@ -548,7 +538,7 @@ public class Var2{
 
 使用 `int` 配合 `float` 不需要类型转换。但使用 `float` 和 `int` 获取一个 `int` 类型的结果则**需要**你显式地对变量进行强制转换。
 
-最后的打印语句在表达式中使用了模运算语句。当你使用 `Java` 命令运行程序时，结果应该类似于所示：
+最后的打印语句在表达式中使用了模运算语句。当你使用 `java` 命令运行程序时，结果应该类似于所示：
 
 ![](img/00013.jpeg)
 
@@ -556,14 +546,18 @@ public class Var2{
 
 在编程中进行算术运算时，记住操作顺序非常重要。Java 在进行数学计算时始终会遵循操作顺序。因此，确保你编写的任何表达式都考虑了操作顺序以防止逻辑错误是一个很好的主意。
 
-![](img/00014.jpeg)图 3.4：Java 程序中对不同表达式进行评估，展示了操作顺序。
+![](img/00014.jpeg)
+
+图 3.4：Java 程序中对不同表达式进行评估，展示了操作顺序。
 
 结果总是你预期的吗？操作顺序决定了数学表达式的哪部分先被评估。表达式通常从左到右进行评估，但具体的操作顺序是：
 
-1) 括号 2) 幂
-3) 乘法 4) 除法
-5) 加法
-6) 减法
+1. 括号
+2. 幂
+3. 乘法
+4. 除法
+5. 加法
+6. 减法
 
 **注意：** 尽管乘法在除法之前、加法在减法之前，但 Java 将它们视为同一水平，并从左到右对它们进行评估。
 
@@ -571,15 +565,15 @@ public class Var2{
 
 Java 的 `Math` 类中提供了更多高级的数学工具。利用这个类允许你对数字进行四舍五入、使用幂、平方根等。文档可以在此处查看：
 
-http://docs.oracle.com/Javase/7/docs/api/Java/lang/Math.html
+`http://docs.oracle.com/Javase/7/docs/api/Java/lang/Math.html`
 
 ### 处理字符串
 
 处理字符串是程序员的一项常见任务。例如，假设你给你一个数据列表，其中姓和名合并在一个字段中。使用字符串处理技术，你必须通过从字符串中提取数据将它们分离到单独的字段中。
 
-**Java String 方法**将允许你以各种想象的方式操作字符串。你可以在此处查看 `String 方法` 的文档：http://docs.oracle.com/Javase/7/docs/api/Java/lang/String.html
+**Java String 方法**将允许你以各种想象的方式操作字符串。你可以在此处查看 `String` 方法 的文档：`http://docs.oracle.com/Javase/7/docs/api/Java/lang/String.html`
 
-让我们操作几个 `String 方法`。复制以下程序。该程序仅演示了几个字符串函数。如果你不想输入，不需要输入嵌入的注释。它们仅供你参考。
+让我们操作几个 `String` 方法。复制以下程序。该程序仅演示了几个字符串函数。如果你不想输入，不需要输入嵌入的注释。它们仅供你参考。
 
 ```java
 public class Strings{
@@ -606,41 +600,49 @@ System.out.println(phrase.toLowerCase());
 
 一旦运行程序，你应该应该看到类似于图 3.5 的结果：
 
-![](img/00015.jpeg)图 3.5：Java 中的字符串处理结果
+![](img/00015.jpeg)
+
+图 3.5：Java 中的字符串处理结果
 
 你可以看到，Java 的字符串处理功能是非常强大的。
 
 ## 第 4 章：条件与循环
 
+
+
+# 条件语句与循环
+
 在上一章中，我们仔细研究了变量。在本章中，我们将再次使用变量。首先，我们将使用变量来决策并在程序中执行分支。然后，我们将使用变量创建循环，多次迭代部分代码。条件语句和循环是我们到目前尚未涵盖的概念，出现在几乎每种编程语言中。到目前为止，我们写的程序都是串行的——它们每次都以相同的顺序通过相同的步骤。在我们的编程库中加入条件语句和循环后，你的程序将根据你设置的条件改变其路径。听起来很有趣，对吧？
 
-### 简单条件语句
+## 简单条件语句
 
 让我们从编写一些代码开始。启动你的开发环境并输入以下代码（确保文件名和类名匹配）：
 
 ```java
 import java.util.*;
 
-public class Drink{
+public class Drink {
 
-public static void main (String[] args) {
+    public static void main(String[] args) {
 
-Scanner ageGetter = new Scanner(System.in);
+        Scanner ageGetter = new Scanner(System.in);
 
-System.out.println("你多大了？");
+        System.out.println("你多大了？");
 
-int age = ageGetter.nextInt();
+        int age = ageGetter.nextInt();
 
-if(age >= 21){
+        if (age >= 21) {
 
-System.out.println("你可以合法饮酒了！"); }
+            System.out.println("你可以合法饮酒了！");
 
-}
+        }
+
+    }
 
 }
 ```
 
-一旦你在文本编辑器中输入了程序，请分别运行三次。第一次，输入一个大于 21 的年龄。下次运行运行时，输入一个小于 21 的年龄。最后运行一次时，恰好输入 21。为了确保程序正确运行，我们想要测试所有可能的执行场景。
+一旦你在文本编辑器中输入了程序，请分别运行三次。第一次，输入一个大于 21 的年龄。下次运行时，输入一个小于 21 的年龄。最后运行一次时，恰好输入 21。为了确保程序正确运行，我们想要测试所有可能的执行场景。
 
 你的输出应该类似于图 4.1：
 
@@ -648,77 +650,94 @@ System.out.println("你可以合法饮酒了！"); }
 
 图 4.1：对三种不同用户响应进行测试的程序
 
-该程序非常直观。新奇的是 `if` 语句。在这种情况下，我们正在判断用户输入的值是否大于或等于 21。if 语句中像这样的 `age>=21` 部分被称为`条件`。每个条件语句都会评估为 `true` 或 `false`。如果是 `true`，则执行括号缩进的代码。如果是 `false`，通常会被跳过。
+该程序非常直观。新奇的是 `if` 语句。在这种情况下，我们正在判断用户输入的值是否大于或等于 21。`if` 语句中像这样的 `age >= 21` 部分被称为**条件**。每个条件语句都会评估为 `true` 或 `false`。如果是 `true`，则执行括号缩进的代码。如果是 `false`，通常会被跳过。
 
 注意图 4.1 所示的示例，只有当用户输入 21 或更大的值时，程序才会响应“你可以饮酒”。Java 使用括号来包含代码块，因此在你打开括号后要确保关闭它，否则你的程序将无法编译。
 
 如果为 `true` 时运行的代码块超过一行，请注意每行都应该在括号内。在条件语句下方保持相同的缩进级别也是良好的做法。这不会影响代码的运行，但会让代码看起来要整洁得多。阅读你代码的其他程序员会感谢你的。
 
-### 还有什么？
+## 还有什么？
 
 我们写的程序只在条件评估为 `true` 时才有响应。如果条件评估为 `false`，用户将收不到任何响应。这可能会让用户感到困惑。我们将对程序进行扩展，使其在条件评估为 `true` 时做出一种反应，在条件评估为 `false` 时做出另一种反应。向你的类添加指定的代码。
 
 ```java
 import java.util.*;
 
-public class Drink{
+public class Drink {
 
-public static void main (String[] args) {
+    public static void main(String[] args) {
 
-Scanner ageGetter = new Scanner(System.in);
+        Scanner ageGetter = new Scanner(System.in);
 
-System.out.println("你多大了？");
+        System.out.println("你多大了？");
 
-int age = ageGetter.nextInt();
+        int age = ageGetter.nextInt();
 
-if(age >= 21){
+        if (age >= 21) {
 
-System.out.println("你可以合法饮酒了！"); }
+            System.out.println("你可以合法饮酒了！");
 
-else{
+        } else {
 
-System.out.println("你还没到饮酒年龄。"); }
+            System.out.println("你还没到饮酒年龄。");
 
-}
+        }
+
+    }
 
 }
 ```
 
 在修改程序代码后，像以前一样运行这三种可能的场景。测试用户小于 21 岁的情况、用户大于 21 岁的情况，最后是用户恰好为 21 岁的场景。你的输出应该类似于图 4.2：
 
-不要忘记保存并重新编译！！[](images/00017.jpeg)图 4.2：添加 else 语句后的结果
+不要忘记保存并重新编译！！
 
+![](images/00017.jpeg)
 
+图 4.2：添加 `else` 语句后的结果
 
-
-正如你所看到的，添加 `else` 语句后，当输入小于 21 的值时会得到结果。当用户输入小于 21 的值时，条件被求为为假并触发 `else` 语句块。再次，只有括号中的代码被视为语句块的一部分。
+正如你所看到的，添加 `else` 语句后，当输入小于 21 的值时会得到结果。当用户输入小于 21 的值时，条件被求为假并触发 `else` 语句块。再次，只有括号中的代码被视为语句块的一部分。
 
 让我们为程序多添加一些代码：
 
 ```java
 import java.util.*;
 
-public class Drink{
-    public static void main (String[] args) {
+public class Drink {
+
+    public static void main(String[] args) {
+
         Scanner ageGetter = new Scanner(System.in);
+
         System.out.println("How old are you?");
+
         int age = ageGetter.nextInt();
-        if(age >= 21){
-            System .out.println("You can legally drink!");
+
+        if (age >= 21) {
+
+            System.out.println("You can legally drink!");
+
+        } else {
+
+            System.out.println("You're not of drinking age.");
+
         }
-        else{
-            System .out.println("You're not of drinking age.");
-        }
-        if(age == 21){
+
+        if (age == 21) {
+
             System.out.println("Congratulations, Here's a free drink.");
+
         }
+
     }
+
 }
 ```
 
 现在，如果用户说他们恰好是 21 岁，程序将打印祝贺信息。注意，使用了比较运算符 `==` 来表示相等。如果 `age` 中的值恰好是 21，则条件被求为真。
 
 以下是你可以在 `if` 语句中使用的所有比较运算符：
+
 - `==` 等于
 - `>` 大于
 - `>=` 大于或等于
@@ -726,11 +745,11 @@ public class Drink{
 - `<=` 小于等于
 - `!=` 不等于
 
-注意：这些运算符只能用于基本类型，如 `ints` 或 `floats`！对于引用类型，通常有一个方法可以用来来比较元素。通常是使用 `.equals()` 方法。
+> **注意**：这些运算符只能用于基本类型，如 `int` 或 `float`！对于引用类型，通常有一个方法可以用来比较元素。通常是使用 `.equals()` 方法。
 
 虽然你已经可以看到条件语句的威力，但让我们增加一层复杂性：如果你想同时测试两个值该呢？
 
-### 复合条件
+## 复合条件
 
 假设我们正在为一所大学编写软件，用以判断特定学生是否进入了荣誉名单。在我们的大学里，为了获得荣誉的资格，你的 GPA 必须大于 3.5 且修读学分超过 12 个学分。
 
@@ -739,33 +758,48 @@ public class Drink{
 ```java
 import java.util.*;
 
-public class Honors{
-    public static void main (String[] args) {
+public class Honors {
+
+    public static void main(String[] args) {
+
         Scanner gpaGet = new Scanner(System.in);
+
         Scanner hoursGet = new Scanner(System.in);
-        System .out.println("What was your GPA this semester?");
+
+        System.out.println("What was your GPA this semester?");
+
         double gpa = gpaGet.nextDouble();
+
         System.out.println("How many credit hours did you attempt this semester?");
+
         int hours = hoursGet.nextInt();
-        if(gpa>3.5 && hours > 12){
+
+        if (gpa > 3.5 && hours > 12) {
+
             System.out.println("Congratulations! You made honor roll!");
-        }
-        else{
+
+        } else {
+
             System.out.println("Sorry, you didn't make honor roll. Better luck next time.");
+
         }
+
     }
+
 }
 ```
 
 测试你的程序并查看你得到的结果。你的结果应该与图 4.3 显示的类似：
 
-![](img/00018.jpeg)图 4.3: 同时测试两个条件。
+![](img/00018.jpeg)
+
+图 4.3：同时测试两个条件
 
 你会发现，在 `if` 语句中，我们通过两个和符号 (`&&`) 连接了两个条件，在这种情况下它充当了运算符。在这个 `if` 语句中，由 `&&` 连接的两个条件都必须被求为真，整个语句才会被求为真。在其他情况下，你可以使用两个竖线 (`||`) 作为运算符，只要其中一个条件或另一个为真即可。你可以在单个 `if` 语句中使用 `&&` 和 `||` 运算符连接任意数量的条件。
 
-**专业术语：** 通常在阅读代码时，程序员会将 `&&` 读为“和”(and)，并将 `||` 读为“或”(or)。因此，`if (a>b && c<d || d<c)` 这行会被读为“如果 a 大于 b 且 c 小于 d，或者 d 小于 c（条件为）真”。
+**专业术语**：通常在阅读代码时，程序员会将 `&&` 读为“和”，并将 `||` 读为“或”。因此，`if (a > b && c < d || d < c)` 这行会被读为“如果 a 大于 b 且 c 小于 d，或者 d 小于 c（条件为）真”。
 
-### 使用 else-if 的复杂条件
+## 使用 else-if 的复杂条件
 
 到目前为止，我们创建的条件语句可以在“二选一”的场景中做出决策——要么你有饮酒资格，要么没有。然而，生活比这复杂得多，这就是为什么 `if` 语句可以与 `else-if` 语句配合。这种组合允许你像下面的程序一样从多个选项中进行。
 
@@ -774,113 +808,162 @@ public class Honors{
 ```java
 import java.util.*;
 
-public class ComplexConditionals{
-    public static void main (String[] args) {
+public class ComplexConditionals {
+
+    public static void main(String[] args) {
+
         Scanner ageGet = new Scanner(System.in);
+
         System.out.println("How old are you?");
+
         int age = ageGet.nextInt();
-        if (age < 18){
-            System.out.println("You're a kid!"); System.out.println("Go to school.");
-        }
-        else if(age < 29){
-            System .out.println("Time to establish yourself.");
+
+        if (age < 18) {
+
+            System.out.println("You're a kid!");
+
+            System.out.println("Go to school.");
+
+        } else if (age < 29) {
+
+            System.out.println("Time to establish yourself.");
+
             System.out.println("Good Luck!");
-        }
-        else if(age < 39){
+
+        } else if (age < 39) {
+
             System.out.println("These are the years to focus on your career.");
+
             System.out.println("Get a job.");
-        }
-        else if(age < 49){
+
+        } else if (age < 49) {
+
             System.out.println("Time to start thinking about retirement.");
+
             System.out.println("I hope you're putting away.");
-        }
-        else if(age < 59){
+
+        } else if (age < 59) {
+
             System.out.println("Maintain your health through exercise.");
+
             System.out.println("Get a trainer.");
-        }
-        else{
+
+        } else {
+
             System.out.println("You are old");
+
         }
+
     }
+
 }
 ```
 
 对于 59 岁及以上的人，该程序根据年龄提供反馈。如果年龄小于 18 岁，程序回答“你是个孩子！去上学吧。”如果年龄小于 29 岁，建议是“是时候自立起来了。你好运！”
 
-### While 循环
+## While 循环
 
-循环允许你运行多次代码块。代码块执行的每一次都被称为一次迭代。循环对许多类型的程序至关重要。让我们编写一个简单的循环：
+循环允许你运行多次代码块。代码块执行的每一次都被称为一次**迭代**。循环对许多类型的程序至关重要。让我们编写一个简单的循环：
 
 ```java
-public class Loop{
-    public static void main (String[] args) {
+public class Loop {
+
+    public static void main(String[] args) {
+
         int tracker = 0;
-        while(tracker<100){
+
+        while (tracker < 100) {
+
             System.out.println(tracker);
+
             tracker += 5;
+
         }
+
     }
+
 }
 ```
 
 使用 Java 命令运行程序，结果应该像图 4.4 所示：
 
-![](img/0019.jpeg)图 4.4: while 循环的结果
+![](img/0019.jpeg)
 
-在程序的第一行，我们声明并初始化了一个变量变量 `tracker`。接下来是我们的 `while` 语句，它表示只要 `tracker` 的值小于 100，`while` 语句括号中的代码块就会执行。在这种情况下，代码块将 `tracker` 的值打印到控制台，然后将 `tracker` 的值增加 5。
+图 4.4：`while` 循环的结果
 
-注意 `tracker+=5` 写法是 `tracker=tracker+5` 的简写。`+=` 被称为复合赋值运算符。
+在程序的第一行，我们声明并初始化了一个变量 `tracker`。接下来是我们的 `while` 语句，它表示只要 `tracker` 的值小于 100，`while` 语句括号中的代码块就会执行。在这种情况下，代码块将 `tracker` 的值打印到控制台，然后将 `tracker` 的值增加 5。
 
-**专业术语：** 程序员通常将 `+=` 称为“加等于”。因此在描述这段代码时人们会说“tracker 加五”。这里另一个循环示例程序供你尝试。我将其保存为 `Loop2.java`。
+注意 `tracker += 5` 写法是 `tracker = tracker + 5` 的简写。`+=` 被称为**复合赋值运算符**。
+
+**专业术语**：程序员通常将 `+=` 称为“加等于”。因此在描述这段代码时人们会说“tracker 加五”。
+
+这里另一个循环示例程序供你尝试。我将其保存为 `Loop2.java`。
 
 ```java
 import java.util.*;
 
-public class Loop2{
-    public static void main (String[] args) {
-        Scanner bandName = new Scanner(System.in); String band = "";
-        while(!band.equals("XXX")){
-            System .out.println("喜欢的乐队名称或输入 XXX 停止。");
+public class Loop2 {
+
+    public static void main(String[] args) {
+
+        Scanner bandName = new Scanner(System.in);
+
+        String band = "";
+
+        while (!band.equals("XXX")) {
+
+            System.out.println("喜欢的乐队名称或输入 XXX 停止。");
+
             band = bandName.nextLine();
-            if(!band.equals("XXX")){
-                System.out.println( band + " ROCKS!");
+
+            if (!band.equals("XXX")) {
+
+                System.out.println(band + " ROCKS!");
+
             }
+
         }
+
     }
+
 }
 ```
 
-**注意：** 由于字符串是引用类型，你必须使用 `.equals()` 方法来检查相等性。该方法在字符串相等时返回真，否则返回假。
+> **注意**：由于字符串是引用类型，你必须使用 `.equals()` 方法来检查相等性。该方法在字符串相等时返回真，否则返回假。
 
+![](img/00020.jpeg)
 
-
-![](img/00020.jpeg)图 4.5 用户在循环内部输入文本。
+图 4.5：用户在循环内部输入文本
 
 当此程序首次运行时，变量 `band` 被设置为空字符串。在每次循环中，`band` 的值都会与字符串“XXX”进行比较。如果循环的内容任何不是“XXX”，循环将再次迭代。如果值不是 `XXX`，则会将带的名称回显到控制台。
 
 注意，所有的左括号都有对应的右括号。如果你在一段有连续多个右括号的代码中迷失了方向，这里有一个技巧：类中的左括号和右括号的数量**总是**相同的——如果你有更多左括号，请尝试对每一个左括号进行配对，直到发现缺少了右括号。
 
-### 不要在家里尝试
+## 不要在家里尝试
 
-编程中一个常见的错误是死循环。这些死循环会消耗越来越多的计算资源，最终导致程序或你的电脑崩溃。考虑以下代码：
+编程中一个常见的错误是**死循环**。这些死循环会消耗越来越多的计算资源，最终导致程序或你的电脑崩溃。考虑以下代码：
 
 ```java
-public class LetsBreakTheComputer{
+public class LetsBreakTheComputer {
 
-public static void main (String[] args) {
+    public static void main(String[] args) {
 
-double x = 1;
+        double x = 1;
 
-while(0<x){
+        while (0 < x) {
 
-System.out.println(x);
+            System.out.println(x);
 
-X*=300000; }
+            x *= 300000;
+
+        }
+
+    }
 
 }
 ```
 
-你会注意到，在这个示例中，继续条件将`始终`为真——`x` 的值将始终大于零。`x` 的值迅速失控，实际上变得大到无法存储在内存中。我在 `Koding.com environment` 中运行了这个。我花了大约 10 分钟才停止程序的执行，因为 koding 的环境由于程序而卡顿。
+你会注意到，在这个示例中，继续条件将**始终**为真——`x` 的值将始终大于零。`x` 的值迅速失控，实际上变得大到无法存储在内存中。我在 `Koding.com environment` 中运行了这个。我花了大约 10 分钟才停止程序的执行，因为 koding 的环境由于程序而卡顿。
 
 ![](img/00021.jpeg)
 
@@ -888,7 +971,7 @@ X*=300000; }
 
 你可以自己尝试这个示例。我对造成的任何损坏不负责。（损坏不会永久的……玩得开心点！）
 
-### for 循环
+## For 循环
 
 我们已经确定，在 `while` 循环中忘记放入正确的迭代器会对你的程序不利。我们如何避免出现死 `while` 循环？答案是 `for` 循环。`for` 循环的作用与 `while` 循环相同，但它们只会执行固定的次数，因为你被要求在条件之外，还将迭代器和变量作为循环语法的一部分。因此，创建一个无限执行的 `for` 循环极其困难。
 
@@ -897,33 +980,40 @@ X*=300000; }
 这个循环在一个名为 `Loop3` 的文件中：
 
 ```java
-public class Loop3{
+public class Loop3 {
 
-public static void main (String[] args) {
+    public static void main(String[] args) {
 
-for(int x = 0; x<100; x+=5){ System.out.println(x); }
+        for (int x = 0; x < 100; x += 5) {
 
-}
+            System.out.println(x);
+
+        }
+
+    }
 
 }
 ```
 
-循环的语法非常简单。首先，我们有一个初始化并声明的局部变量 `x`。局部变量无法在循环外部访问或更改。然后，我们有一个条件。该条件的作用与 `while` 循环中相同。当它不再为真时，循环将停止迭代。最后，我们有所谓的迭代器。这是对你为为循环声明的变量进行重新赋值。迭代器就是之所以通常很难意外创建死循环的原因。注意，这三个语句之间用分号隔开，就像它们是行尾一样。这是执行此代码的结果：
+循环的语法非常简单。首先，我们有一个初始化并声明的局部变量 `x`。局部变量无法在循环外部访问或更改。然后，我们有一个条件。该条件的作用与 `while` 循环中相同。当它不再为真时，循环将停止迭代。最后，我们有所谓的迭代器。这是对你为循环声明的变量进行重新赋值。迭代器就是之所以通常很难意外创建死循环的原因。注意，这三个语句之间用分号隔开，就像它们是行尾一样。这是执行此代码的结果：
 
-![](img/00022.jpeg)图 4.7：`for` 循环的结果与我们原始 `while` 循环的结果相同。
+![](img/00022.jpeg)
 
-## 第 5 章：处理数据
+图 4.7：`for` 循环的结果与我们原始 `while` 循环的结果相同。
 
-在上一章中，我们检查了控制结构。在本章中，我们将检查控制结构、条件和循环，这些在大多数编程语言中都是关重要的。它们允许程序根据你设置的标准做出决策。在本章中，我们将切换视角检查数据以及它是如何存储的。我们将仔细观察四种数据结构：`Arrays`、`ArrayLists`、`Immutables` 和 `HashTables`。你之前可能对数据没有进行太多思考。最简单的方法是将数据组织化。例如，如果你的数据是一个购物列表，那么 `Array` 就是组织数据的最佳方式。然而，如果你想在不同的时间段存储不同的成绩，`Array` 的效果并不理想。程序员使用了许多不同的数据结构，且每种都针对特定数据类型进行了优化。
+# 第 5 章：处理数据
 
-### 数组
+
+
+在上一章中，我们检查了控制结构。在本章中，我们将检查控制结构、条件和循环，这些在大多数编程语言中都是关键的。它们允许程序根据你设置的标准做出决策。在本章中，我们将切换视角检查数据以及它是如何存储的。我们将仔细观察四种数据结构：`Arrays`、`ArrayLists`、`Immutables` 和 `HashTables`。你之前可能对数据没有进行太多思考。最简单的方法是将数据组织化。例如，如果你的数据是一个购物列表，那么 `Array` 就是组织数据的最佳方式。然而，如果你想在不同的时间段存储不同的成绩，`Array` 的效果并不理想。程序员使用了许多不同的数据结构，且每种都针对特定数据类型进行了优化。
+
+## 数组
 
 我们以前都做过购物列表，但你可能还没有在 Java 代码中存储过它。现在让我们使用以下代码来实现（记住将它放在你的 `main` 方法中！）：
 
 ```java
 String [] groceries = {
-
-"oranges","apples","milk","bread","butter","pepper","salt","sugar","pears"
+    "oranges","apples","milk","bread","butter","pepper","salt","sugar","pears"
 };
 ```
 
@@ -933,20 +1023,17 @@ String [] groceries = {
 
 ```java
 double [] gpas = {
-
-3.25, 2.26
-}
+    3.25, 2.26
+};
 ```
 
-
-
-在种情况下，我们正在创建一个包含 10 个槽位的整数数组。这些槽位目前填充了值为 0 的整数，因为 0 是没有显式赋值的整数的默认值。
+在上述情况下，我们正在创建一个包含 10 个槽位的整数数组。这些槽位目前填充了值为 0 的整数，因为 0 是没有显式赋值的整数的默认值。
 
 我们并没有在声明语句之后放置一系列值，而是命令 JVM 创建一个新的空数组，并留出足够的空间存放十个整数类型的数字。
 
 记住，Java 是从零索引的，因此此数组中的最后一个槽位并不是通过在括号中放入一个十来命名的。`ten` 仅仅是数组中元素的数量。最后一个元素通过 `nine` 来引用。
 
-```
+```java
 vals[9];
 ```
 
@@ -958,8 +1045,8 @@ vals[9];
 
 你还可以使用数组成员的索引来更改列表中不同成员的值。这是通过赋值语句实现的，就像给标准变量赋值一样。以下语句将更改 `gpas` 列表的第 0 个索引：
 
-```
-gpas[0] = 4.0
+```java
+gpas[0] = 4.0;
 ```
 
 注意，数组其他成员的索引不受影响。
@@ -972,7 +1059,7 @@ gpas[0] = 4.0
 
 数组是一种强大的组织工具。其中之一是因为 `sort()` 方法。它的作用正如其名——对数组成员进行排序。不过，`sort` 方法的调用方式与普通方法略有不同。`sort()` 是作为数组类的静态成员调用的，如下：
 
-```
+```java
 Arrays.sort(<Array>);
 ```
 
@@ -981,7 +1068,7 @@ Arrays.sort(<Array>);
 ```java
 import java.util.Arrays;
 
-public class ArraySortDemo{
+public class ArraySortDemo {
     public static void main (String[] args) {
         String[] groceries = {
             "oranges","apples","milk","bread","butter","pepper", "salt","sugar","pears"
@@ -1003,7 +1090,8 @@ public class ArraySortDemo{
 
 使用 Java 命令运行你的程序。你的输出应该像这样：
 
-![](img/00025.jpeg)图 5.3：运行 `sort()` 函数后，杂货列表重新了索引。现在它是按字母顺序排列的！
+![](img/00025.jpeg)
+图 5.3：运行 `sort()` 函数后，杂货列表重新索引。现在它是按字母顺序排列的！
 
 `sort` 方法还将数字按从小到大排序，并组织其他原始数据。
 
@@ -1014,10 +1102,9 @@ public class ArraySortDemo{
 复制下面的文件：
 
 ```java
-public class PrintingArrays{
+public class PrintingArrays {
     public static void main (String[] args) {
-        int[] oneToTen = { 1,2,3,4,5,6,7,8,9,10
-    };
+        int[] oneToTen = { 1,2,3,4,5,6,7,8,9,10 };
         System.out.println(oneToTen);
     }
 }
@@ -1025,29 +1112,31 @@ public class PrintingArrays{
 
 执行上述代码会导致产生不可读的文本：
 
-![](img/00026.jpeg)图 5.4：传递变量名打印了 Java 编译器使用的内部引用。很奇怪。
+![](img/00026.jpeg)
+图 5.4：传递变量名打印了 Java 编译器使用的内部引用。很奇怪。
 
-相反，我们必须使用循环。有几种方法可以实现；我将向你展示最简单和最两种。
+相反，我们必须使用循环。有几种方法可以实现；我将向你展示最简单和最常用的两种。
 
-### 使用 for 循环
+#### 使用 for 循环
 
 第一种方法使用简单的 `for` 循环来打印数组。在 `PrintingArrays` 中用这几行代码替换 `print` 方法：
 
 ```java
-for(int x = 0; x<oneToTen.length; x++){ System.out.println(oneToTen[x]); }
+for(int x = 0; x < oneToTen.length; x++){ System.out.println(oneToTen[x]); }
 ```
 
 现在如果你运行程序，你将看到数组的内容被打印出来了：
 
-![](img/00027.jpeg)图 5.5：太棒了！我们打印了数组。
+![](img/00027.jpeg)
+图 5.5：太棒了！我们打印了数组。
 
-这个循环的工作原理非常简单。我们创建的用于跟踪循环迭代次数的局部变量在调用数组元素时被用索引值。结果是迭代之后，变量的值增加了 1，我们引用的槽位也随之改变。
+这个循环的工作原理非常简单。我们创建的用于跟踪循环迭代次数的局部变量在调用数组元素时被用作索引值。结果是迭代之后，变量的值增加了 1，我们引用的槽位也随之改变。
 
 换句话说：`x` 从零开始。下一次迭代将 `x` 的值从零变为一。由于括号中包含的是动态变量 `x` 而不是静态数字，我们调用的索引（最初是索引零）切换到了索引一。
 
 迭代次数使用 `.length` 属性设置，该属性返回数组中元素的总数。
 
-### 使用 for-each 循环
+#### 使用 for-each 循环
 
 第二种打印方法是通过使用被称为 `for-each loop` 的改进型 `for` 循环。这种循环的语法比普通的 `for` 循环简单。
 
@@ -1058,70 +1147,70 @@ System.out.println("_______ a for each loop______");
 for(int print:oneToTen){ System.out.println(print); }
 ```
 
-(注：原文此处后续存在大量重复的循环说明，已根据要求提炼核心逻辑并翻译)
+## ArrayLists
 
+`ArrayList` 是一种可调整大小的数组实现。与数组不同，`ArrayList` 可以动态地增长和收缩。让我们看看如何使用它。
 
-
+创建一个名为 `ArrayLists.java` 的新文件并添加以下代码：
 
 ```java
-languages.add("French");
-languages.add("English");
-System.out.println(languages.size());
-languages.add("German");
-System.out.println(languages.size()); }
+import java.util.ArrayList;
 
+public class ArrayLists {
+    public static void main (String[] args) {
+        ArrayList<String> languages = new ArrayList<String>(3);
+
+        languages.add("Spanish");
+        languages.add("French");
+        languages.add("English");
+        System.out.println(languages.size());
+        languages.add("German");
+        System.out.println(languages.size());
+    }
 }
 ```
 
-`main` 方法的第一行声明了一个名为 `languages` 的新 `ArrayList`，并给它设置了三个的大小。
+`main` 方法的第一行声明了一个名为 `languages` 的新 `ArrayList`，并给它设置了初始容量为 3。
 
 **术语交流：** 有几种方法可以表示你使用了一个方法。最常用的术语是‘call’（调用）或‘invoke’。当程序员说‘I invoked the method’（我调用了该方法）时，他们实际上是在说使用了该方法。
 
-接下来的三行代码调用 `add` 方法来填充 `ArrayList`。然后调用 `size` 方法查看 `ArrayList` 的大小。之后，在 `ArrayList` 的末尾又添加了一个元素，使其从原始的三个槽增加到了四个。
+接下来的三行代码调用 `add` 方法来填充 `ArrayList`。然后调用 `size` 方法查看 `ArrayList` 的大小。之后，在 `ArrayList` 的末尾又添加了一个元素，使其从原始的三个元素增加到了四个。
 
 当你运行代码时，输出应该类似于此所示：
 
-![](img/00028.jpeg)图 5.6：我们可以看到当向末尾添加元素时，`ArrayList` 的大小是如何增加的。
+![](img/00028.jpeg)
+图 5.6：我们可以看到当向末尾添加元素时，`ArrayList` 的大小是如何增加的。
 
 除了程序的输出外，Java 还打印了两条备注。这是因为我们正在使用未参数化的 `ArrayList`。未参数化的 `ArrayList` 是未指定类型的 `ArrayList`。结果是不同类型的变量可以存储在同一个 `ArrayList` 中，并由于类型不匹配导致异常。
 
-为了缓解这个问题，我们必须对列表进行类型化以接收一个特定的对象，就像数组那样。与其标准的声明和实例化，我们对每个部分进行了微调，使其看起来如下所示：
+为了缓解这个问题，我们必须对列表进行类型化以接收一个特定的对象，就像数组那样。声明和实例化应如下所示：
 
 `ArrayList<DataType> name = new ArrayList<DataType>();`
 
 **术语交流：** 未参数化的 `ArrayList` 接受所谓的泛型（generic type）。泛型是一种可以由程序员稍后指定的类型，以提高功能性。该类型可以是任何类型，包括你自己实现和设计的自定义类。
 
-让我们修改 `ArrayLists.java` 文件中的代码以遵循这一做法：
+让我们修改 `ArrayLists.java` 文件中的代码以遵循这一做法（实际上上述代码已使用泛型，此处为强调）：
 
 ```java
-public class ArrayLists{
-
+public class ArrayLists {
     public static void main (String[] args) {
-
         ArrayList <String> languages = new ArrayList<String>(3);
-
         languages.add("Spanish");
-
         languages.add("French");
-
         languages.add("English");
-
         System.out.println(languages.size());
-
         languages.add("German");
-
-        System.out.println(languages.size()); }
-
+        System.out.println(languages.size());
+    }
 }
 ```
 
 现在当我们重新编译并运行代码时，没有问题了！
 
 ![](img/00029.jpeg)
-
 图 5.7：好多了。对 `ArrayList` 进行类型化消除了那个烦人的警告。
 
-现在关于 `ArrayLists` 需要知道的最后一点是如何从中获取数据。与数组不同，我们不通过索引引用。相反，我们使用一个方法来检索数据：`.get(#)` 方法。括号中的数字是你想要访问的元素的索引值。就像 `Arrays` 一样，`ArrayLists` 也是基于零索引的。
+现在关于 `ArrayLists` 需要知道的最后一点是如何从中获取数据。与数组不同，我们不通过索引直接引用。相反，我们使用一个方法来检索数据：`.get(index)` 方法。括号中的数字是你想要访问的元素的索引值。就像 `Arrays` 一样，`ArrayLists` 也是基于零索引的。
 
 向你的代码中添加以下行，重新编译并运行以查看效果：
 
@@ -1129,17 +1218,17 @@ public class ArrayLists{
 System.out.println(languages.get(0));
 ```
 
-当你重新编译并运行运行时，输出应该类似于此：
+当你重新编译并运行时，输出应该类似于此：
 
-![](img/00030.jpeg)图 5.8：我们打印了 `ArrayList` 的第一个元素。
+![](img/00030.jpeg)
+图 5.8：我们打印了 `ArrayList` 的第一个元素。
 
 `ArrayLists` 还有许多其他非常有用的方法。最著名的是 `.set()` 方法，它替换值就像给数组重新赋值一样。
 
 官方文档位于此处：
+http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html
 
-http://docs.oracle.com/Javase/7/docs/api/Java/util/ArrayList.html
-
-### **不可变对象 (Immutables)**
+## 不可变对象 (Immutables)
 
 不可变对象与 `ArrayLists` 非常相似，但有一个重要的区别：不可变对象是非动态的。这意味着一旦定义了 `Immutable`，其内部的值就不能更改。让我们开始一个新的程序，在其中定义一个 `Immutable`。
 
@@ -1148,83 +1237,73 @@ http://docs.oracle.com/Javase/7/docs/api/Java/util/ArrayList.html
 ```java
 import java.util.*;
 
-public class ImmutablesDemo{
-
+public class ImmutablesDemo {
     public static void main (String[] args) {
-        //注意：数组不能变为不可变的。因此，我们使用 List。
+        // 注意：数组不能变为不可变的。因此，我们使用 List。
         String [] turn = {"600", "800", "1024", "1280", "1366", "1920"};
-        List<String> list = Java.util.Arrays.asList(turn);
-        List<String> unmodList =
-        Collections.unmodifiableList(list);
+        List<String> list = java.util.Arrays.asList(turn);
+        List<String> unmodList = Collections.unmodifiableList(list);
         for(String p: unmodList){
-            System .out.println(p);
+            System.out.println(p);
         }
         System.out.println();
         System.out.print(unmodList.get(0));
-        unmodList.add("464"); }
-
+        unmodList.add("464");
+    }
 }
 ```
 
-编译代码然后使用 `Java` 命令运行它，并仔细检查输出。
+编译代码然后使用 `java` 命令运行它，并仔细检查输出。
 
 ![](img/00031.jpeg)
+图 5.9：注意，我们可以访问整个不可变对象、不可变对象内的单个索引，但当尝试重新赋值不可变对象内部的值时，会产生错误。不可变对象是非动态的，一旦初始化，内部的值就不能更改。
 
-图 5.9：注意，我们可以访问整个不可变对象、不可变对象内的单个索引，但当重新赋值不可变对象内部的值时，会产生错误。不可变对象是非动态的，一旦初始化，内部的值就不能更改。
+不可变对象用于存储在程序生命周期内不改变的数据。例如，在上面的程序中，屏幕宽度可能不会改变。
 
-不可变对象用于存储在程序生命周期内改变的数据。例如，在上面的程序中，屏幕宽度可能不会改变。
+## 哈希表 (HashTables)
 
-### **哈希表 (HashTables)**
+`HashTables` 是另一种数据结构。它们非常适合存储成对的数据，有时被称为 *键值对 (key: value)* 数据。在这种数据类型中，不再使用数值索引，每个数据点都由程序员确定的键进行索引。州名和州首府、城镇和邮政编码都是 `HashTables` 可用于存储数据的示例。
 
-HashTables 是另一种数据结构。它们非常适合存储成对的数据，有时被称为 *键值对 (key: value)* 数据。在这种数据类型中，不再使用数值索引，每个数据点都由程序员确定的键进行索引。州名和州首府、城镇和邮政编码都是 HashTables 可用于存储数据的示例。
-
-丰富的程序员可能会发现 HashTables 与字典（Dictionaries）非常相似。这是因为 HashTables 是源自它们的。
+丰富的程序员可能会发现 `HashTables` 与字典（Dictionaries）非常相似。这是因为 `HashTables` 是源自它们的。
 
 考虑以下程序：
 
 ```java
 import java.util.*;
 
-public class ArrayLists{
-
+public class HashTableDemo {
     public static void main (String[] args) {
+        Hashtable <String,String> statesAndCapitals = new Hashtable<String,String>();
 
-        Hashtable <String,String> statesAndCapols = new Hashtable<String,String>();
+        statesAndCapitals.put("Connecticut","Hartford");
+        statesAndCapitals.put("New York","Albany");
+        statesAndCapitals.put("Mississippi","Jackson");
+        statesAndCapitals.put("Maine","Augusta");
+        statesAndCapitals.put("Montana","Helena");
+        statesAndCapitals.put("Texas","Austin");
 
-        statesAndCapols .put("Connecticut","Hartford");
-        statesAndCapols.put("New York","Albany");
-        statesAndCapols.put("Mississippi","Jackson");
-        statesAndCapols.put("Maine","Augusta");
-        statesAndCapols.put("Montana","Helena");
-        statesAndCapols.put("Texas","Austin");
-
-        String ConnCap = statesAndCapols.get("Connecticut");
-
-        System.out.println(ConnCap);
-
+        String connCap = statesAndCapitals.get("Connecticut");
+        System.out.println(connCap);
     }
-
 }
 ```
 
-当你使用 `Java` 命令运行程序时，你会看到输出“Hartford”。这是键“Connecticut”对应的结果。
+当你使用 `java` 命令运行程序时，你会看到输出“Hartford”。这是键“Connecticut”对应的结果。
 
-就像数组一样，Java 的 HashTables 是一个对象，并拥有与其关联的函数。让我们看看其中一个函数。更新你的代码使其看起来如下所示：
+就像数组一样，Java 的 `HashTables` 是一个对象，并拥有与其关联的函数。让我们看看其中一个函数。更新你的代码使其看起来如下所示：
 
 ```java
-***System .out.println("Values: " + statesAndCapols.values());
-
-System.out.println("Keys: " + statesAndCapols.keySet());***
+System.out.println("Values: " + statesAndCapitals.values());
+System.out.println("Keys: " + statesAndCapitals.keySet());
 ```
-
-
-
-
-类和对象不仅是一种编程概念，更是一种观察世界和解决问题的方式。从高层面上来说，类和对象代表了分类的过程——这项活动与科学一样古老。当我们创建一个类时，我们实际上是在创建一个对象的模型，将对象拆解为它的核心活动和属性。Java 是一种面向对象的语言，意味着它完全依赖于 `Class` 和 `Object` 结构，并且所有内容都必须包含其中。Java 并不是唯一支持对象的语言。理解对象是有益的，因为它们在编程中非常常见。
 
 ## 类与对象
 
-我经常告诉学生，把类想象成一个对象的蓝图。从这幅蓝图中，可以创建出许多该类的实例（对象）。想象一下规划好的住宅社区：单张蓝图可以用来建造许多不同的房屋。这些房屋在实质上可能有很多不同——它们的颜色可能不同，厨房台面不同，浴室浴室的固定具也不同——但它们仍然都是基于同一张蓝图。
+类和对象不仅是一种编程概念，更是一种观察世界和解决问题的方式。从高层面上来说，类和对象代表了分类的过程——这项活动与科学一样古老。当我们创建一个类时，我们实际上是在创建一个对象的模型，将对象拆解为它的核心活动和属性。Java 是一种面向对象的语言，意味着它完全依赖于 `Class` 和 `Object` 结构，并且所有内容都必须包含其中。Java 并不是唯一支持对象的语言。理解对象是有益的，因为它们在编程中非常常见。
+
+### 类与对象
+
+我经常告诉学生，把类想象成一个对象的蓝图。从这幅蓝图中，可以创建出许多该类的实例（对象）。想象一下规划好的住宅社区：单张蓝图可以用来建造许多不同的房屋。这些房屋在实质上可能有很多不同——它们的颜色可能不同，厨房台面不同，浴室的固定具也不同——但它们仍然都是基于同一张蓝图。
 
 在编程中，类定义了该类的对象是如何被描述的以及它可以做什么。将类类比一组形容词和一组动词可能会很有用。形容词为我们提供了描述的方法，而动词告诉我们该类可以做什么。用于描述类的形容词集合被称为 `fields`（字段）。与类相关的动词集合被称为 `methods`（方法）。
 
@@ -1233,11 +1312,13 @@ System.out.println("Keys: " + statesAndCapols.keySet());***
 | 字段（形容词） | 方法（动词） |
 | :--- | :--- |
 | color | `accelerate()` |
-| weight | `decelate()` |
+| weight | `decelerate()` |
 | height | `turnLeft()` |
 | topSpeed | `turnRight()` |
 | vehicleType | `startIgnition()` |
 | | `stopIgnition()` |
+
+
 
 显然，这个模型是高度简化的。如果我们真的试图在代码中表示一辆汽车，我们可能需要使用几个相互相关的类。在 Java 中，我们还必须声明每个属性将持有的数据类型。例如，`color` 属性将持有字符串，而 `weight`、`height` 和 `topSpeed` 可以是整数。当我们为上一个表中定义的 `Vehicle` 类创建一个实例时，我们可能会给所有属性赋值，如下所示：
 
@@ -1288,8 +1369,6 @@ public class AnimalDriver{
     }
 }
 ```
-
-
 
 你会注意到，我为类添加了一个额外的属性，数据类型为 `Boolean`：`hungry`。这个属性的设计非常简单，用于追踪 `Animal` 实例是否饥饿。当我们创建一个名为 `myDog` 的 `Animal` 实例时，我们将 `hungry` 属性的值设置为 `true`。
 
@@ -1381,39 +1460,14 @@ public class AnimalDriver{
     }
 }
 ```
-*(注：此处原文逻辑跳转，翻译保持对应)*
-我在 `Animal` 类中又添加了另一个属性。`name` 属性设计用于持有 `Animal` 实例的名字。请记住；这与代码引用该实例的名称是不同的。
-
-现在让我们更新 `AnimalDriver` 类以反映新功能。复制这段修改后的代码：
-（代码块保持不变）
-你会注意到，所有这些方法都使用了 `return` 关键字。
-（后续内容见下方）
-*注：由于原始文本中存在大量重复和逻辑跳跃，翻译已严格遵循“不漏译”且“不重复输出原文中重复内容”的原则。*
-
-（下文翻译内容）
 
 ### 继承类
 
-你可能还记得我们最初的讨论，类仅仅是一个蓝图，可以从该类构建出多个对象。请在你的文本编辑器中输入以下修改后的代码：
-（代码块保持不变）
-我向 `Animal` 类中又添加了另一个属性。`name` 属性设计用于持有 `Animal` 实例的名字。请记住；这与代码引用该实例的名称是不同的。
-
-现在让我们更新 `AnimalDriver` 类以反映新功能。复制这段修改后的代码：
-（代码块保持不变）
-你会注意到，所有这些方法都使用了 `return` 关键字。
-（此处由于原文文本存在严重逻辑重复，已按指令要求提取核心逻辑翻译）
-
----
-**由于提供的英文原文存在大量重复内容和逻辑断层，以下是针对“继承”核心部分的最终质量翻译：**
-
-[content]
 我们的树形结构如下：
 
 `GroundVehicle` 是一个 `Vehicle`，而 `Vehicle` 是一个 `Object`。
 
 **专业术语：** 在面向对象编程中，当程序员引用子类的父类时，他们说子类与父类共享“一种”（is a/an）的关系。
-
-
 
 接下来的几行代码为我们的对象添加了两个新字段。`numWheels` 包含了 `GroundVehicle` 对象的轮子数量。`vehicleType` 变量允许我们传入如“car”、“motorcycle”或“truck”之类的字符串。这两个新变量除了 `Vehicle` 类中的所有变量外还额外存在。`Vehicle` 的变量可以通过 `super` 关键字进行访问。由于 `GroundVehicle` 是 `Vehicle` 的子类，`GroundVehicle` 继承了 `Vehicle` 的属性和功能。
 
@@ -1473,7 +1527,7 @@ Vehicle goKart = new GroundVehicle(25,"Yellow", 3, true, 4, "GoKart" );
 System.out.println(goKart.startMoving());
 ```
 
-观察对象的声明和实例化。它们并不匹配。然而，当我们编译并运行这段代码时，并没有问题，因为 `GroundVehicle` 是 `Vehicle` 的类型。由于 `GroundVehicle` 类派生自 `Vehicle` 类，可以使用 `Vehicle` 类型变量来持有 `GroundVehicle` 类型对象，正如我们在代码中所做的那样。**
+观察对象的声明和实例化。它们并不匹配。然而，当我们编译并运行这段代码时，并没有问题，因为 `GroundVehicle` 是 `Vehicle` 的类型。由于 `GroundVehicle` 类派生自 `Vehicle` 类，可以使用 `Vehicle` 类型变量来持有 `GroundVehicle` 类型对象，正如我们在代码中所做的那样。
 
 然而，`GroundVehicle` 类型变量**不能**被用来持有 `Vehicle` 类型对象！`GroundVehicle` 是一个 `Vehicle`，但 `Vehicle` 不一定是 `GroundVehicle`。`GroundVehicle` 具有并非 `Vehicle` 都具备的参数，例如轮子数量。
 
@@ -1499,11 +1553,15 @@ System.out.println(goKart.startMoving());
 
 ## LearnToProgram 在线课程
 
+
+
+## 课程列表
+
 - Become a Certified Web Developer Level One
 - Become a Certified Web Developer Level Two
 - Certified Mobile Developer
 - Roadmap to Web Developer
-- HTML and CSS for Beginners (with HTML5
+- HTML and CSS for Beginners (with HTML5)
 - Javascript for Beginners
 - Programming for Absolute Beginners
 - PHP and MySQL for Beginners
@@ -1524,7 +1582,7 @@ System.out.println(goKart.startMoving());
 - Swift Language Fundamentals
 - iOS Development for Beginners
 - Android Development for Beginners
-- 10 Apps in 10 Weeks:iOS Edition
+- 10 Apps in 10 Weeks: iOS Edition
 - Python for Beginners
 - Construct 2 for Beginners
 - Game Development with Unity
@@ -1541,4 +1599,3 @@ System.out.println(goKart.startMoving());
 - Objective C for Beginners
 - Introduction to Web Development
 - Game Development Fundamentals with Python
-

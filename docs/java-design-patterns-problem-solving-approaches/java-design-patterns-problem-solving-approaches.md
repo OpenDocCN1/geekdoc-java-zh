@@ -1,88 +1,57 @@
+
 # Java 设计模式：问题解决方法
 
-
-
-
-
-
-
-
-
-
-# 关于教程
+## 关于教程
 
 设计模式代表了丰富的面向对象软件开发者所使用的最佳实践。设计模式是软件开发者在软件开发过程中面临的通用问题的解决方案。这些解决方案是许多软件开发者在相当长的时间内通过反复尝试获得的。
 
 本教程将引导你通过使用 Java 的逐步方法和示例来学习设计模式概念。
 
-# 目标读者
+## 目标读者
 
 本参考资料是为经验开发者准备的，旨在为开发过程中遇到的某些问题提供最佳解决方案，并让无经验的开发者以简单、快速的方式学习软件设计。
 
-# 先决条件
+## 先决条件
 
 在开始学习本教程之前，我们假设你已经熟悉 Java 编程的基本概念。
-
-
-
-
-
-![](img/6426660228f292f87ed477d27e961d81_1_0.png)
-
-
-- 实现............................................................................................... 38
-
-
-![](img/6426660228f292f87ed477d27e961d81_3_0.png)
-
-
-![](img/6426660228f292f87ed477d27e961d81_4_0.png)
-
-
-
-
-
 
 ## 1. 设计模式概述
 
 设计模式代表了丰富的面向对象软件开发人员所使用的最佳实践。设计模式是软件开发人员在软件开发过程中面临的通用问题的解决方案。这些解决方案是许多软件开发人员在相当长的时间内通过试错获得的。
 
-## 什么是四人帮 (GOF)？
+### 什么是四人帮 (GOF)？
 
-1994年，四位作者 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides 出版了一本名为**《设计模式：可用面向对象软件的要素》**的书书，这本书开启了软件开发中设计模式的概念。
+1994年，四位作者 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides 出版了一本名为**《设计模式：可用面向对象软件的要素》**的书，这本书开启了软件开发中设计模式的概念。
 
 这些作者被统称为**四人帮（GOF）**。根据这些作者的观点，设计模式主要基于以下面向对象的设计原则：
 
 - 面向接口编程而非面向实现
 - 优先使用对象组合优于继承
 
-## 设计模式的使用
+### 设计模式的使用
 
 设计模式在软件开发中有两个主要用途。
 
-## 开发人员的通用平台
+#### 开发人员的通用平台
 
 设计模式提供了标准的术语，并针对特定的场景。例如，单例设计模式表示使用单个对象，因此所有熟悉单例设计的开发人员都会使用单对象，并可以相互告诉对方程序遵循了单例模式。
 
-## 最佳实践
+#### 最佳实践
 
 设计模式经过了长时间的演变，它们为软件开发过程中遇到的某些问题提供了最佳解决方案。学习这些模式可以帮助缺乏经验的开发人员以简单、快速的方式学习软件设计。
 
-## 设计模式的类型
+### 设计模式的类型
 
-根据设计模式参考书**《设计模式：可用面向对象软件的要素》**，有23种设计模式，它们可以
+根据设计模式参考书**《设计模式：可用面向对象软件的要素》**，有23种设计模式，它们可以被分为三类：创建型、结构型和行为型模式。
 
-![](img/6426660228f292f87ed477d27e961d81_6_0.png)
-
-被分为三类：创建型、结构型和行为型模式。
 我们还将讨论设计模式的类别：J2EE 设计模式。
 
 | 序号 | 模式与描述 |
 | :--- | :--- |
-| 1 | 创建模式：这些设计模式提供了一种创建对象的方法，同时隐藏了创建逻辑，而不是直接使用 `new` 运算符实例化对象。这为程序决定为特定用例需要创建哪些对象提供了更大的灵活性。 |
-| 2 | 结构模式：这些设计模式涉及类和对象的组合。继承的概念被用于组合接口并定义了组合对象的方式以获取新的功能。 |
-| 3 | 行为模式：这些设计模式专门关注对象之间的通信。 |
-| 4 | J2EE 模式：这些设计模式专门关注表示层。这些模式由 Sun Java Center 识别。 |
+| 1 | **创建模式**：这些设计模式提供了一种创建对象的方法，同时隐藏了创建逻辑，而不是直接使用 `new` 运算符实例化对象。这为程序决定为特定用例需要创建哪些对象提供了更大的灵活性。 |
+| 2 | **结构模式**：这些设计模式涉及类和对象的组合。继承的概念被用于组合接口并定义了组合对象的方式以获取新的功能。 |
+| 3 | **行为模式**：这些设计模式专门关注对象之间的通信。 |
+| 4 | **J2EE 模式**：这些设计模式专门关注表示层。这些模式由 Sun Java Center 识别。 |
 
 ## 2. 工厂模式
 
@@ -94,82 +63,73 @@
 
 我们将创建一个 `Shape` 接口和实现 `Shape` 接口的具体类。下一步是定义一个工厂类 `ShapeFactory`。
 
-我们的演示类 `FactoryBeanDemo` 将使用 `ShapeFactory` 来获取 `Shape` 对象。它将把信息（CIRCLE / RECTANGLE / SQUARE）传递给 `ShapeFactory` 以获取它所需的对象类型。
+我们的演示类 `FactoryPatternDemo` 将使用 `ShapeFactory` 来获取 `Shape` 对象。它将把信息（CIRCLE / RECTANGLE / SQUARE）传递给 `ShapeFactory` 以获取它所需的对象类型。
 
-![](img/6426660228f292f87ed477d27e961d81_8_0.png)
+#### 第 1 步：创建一个接口
 
-### 第 1 步
-
-创建一个接口。
-
-Shape.java
+**Shape.java**
 
 ```java
 public interface Shape {
     void draw();
 }
 ```
-```
 
-### 第 2 步
+#### 第 2 步：创建相同接口的具体类
 
-创建相同接口的具体类。
-
-### Rectangle.java
+**Rectangle.java**
 
 ```java
 public class Rectangle implements Shape {
 
-  @Override
-  public void draw() {
-    System.out.println("Inside Rectangle::draw() method.");
-  }
+    @Override
+    public void draw() {
+        System.out.println("Inside Rectangle::draw() method.");
+    }
 }
 ```
 
-### Square.java
+**Square.java**
 
 ```java
 public class Square implements Shape {
 
-  @Override
-  public void draw() {
-    System.out.println("Inside Square::draw() method.");
-  }
+    @Override
+    public void draw() {
+        System.out.println("Inside Square::draw() method.");
+    }
 }
 ```
 
-### Circle.java
+**Circle.java**
 
 ```java
 public class Circle implements Shape {
 
-  @Override
-  public void draw() {
-    System.out.println("Inside Circle::draw() method.");
-  }
+    @Override
+    public void draw() {
+        System.out.println("Inside Circle::draw() method.");
+    }
 }
 ```
 
-### 第 3 步
+#### 第 3 步：创建一个工厂，根据给定信息生成具体类对象
 
-创建一个工厂，根据给定信息生成具体类对象。
-
-### ShapeFactory.java
+**ShapeFactory.java**
 
 ```java
 public class ShapeFactory {
 
-    //使用 getShape 方法获取类型为 shape 的对象
-    public Shape getShape(String shapeType){
-        if(shapeType == null){
+    // 使用 getShape 方法获取类型为 shape 的对象
+    public Shape getShape(String shapeType) {
+        if (shapeType == null) {
             return null;
         }
-        if(shapeType.equalsIgnoreCase("CIRCLE"))
+        if (shapeType.equalsIgnoreCase("CIRCLE")) {
             return new Circle();
-        } else if(shapeType.equalsIgnoreCase("RECTANGLE"))
+        } else if (shapeType.equalsIgnoreCase("RECTANGLE")) {
             return new Rectangle();
-        } else if(shapeType.equalsIgnoreCase("SQUARE"))
+        } else if (shapeType.equalsIgnoreCase("SQUARE")) {
             return new Square();
         }
         return null;
@@ -177,11 +137,9 @@ public class ShapeFactory {
 }
 ```
 
-### 第 4 步
+#### 第 4 步：通过传递类型信息使用工厂获取具体类对象
 
-通过传递类型信息使用工厂获取具体类对象。
-
-### FactoryPatternDemo.java
+**FactoryPatternDemo.java**
 
 ```java
 public class FactoryPatternDemo {
@@ -201,19 +159,31 @@ public class FactoryPatternDemo {
 }
 ```
 
-### 第 5 步
+#### 第 5 步：验证输出
 
-验证输出。
+```
+Inside Circle::draw() method
+Inside Rectangle::draw() method
+Inside Square::draw() method
+```
 
-| Inside Circle::draw() method |
-| Inside Rectangle::draw() method |
-| Inside Square::draw() method |
+## 3. 抽象工厂模式
 
+### 实现
 
+#### 第 1 步：创建 Color 接口
 
+**Color.java**
 
+```java
+public interface Color {
+    void fill();
+}
+```
 
-### Red.java
+#### 第 2 步：创建实现 Color 接口的具体类
+
+**Red.java**
 
 ```java
 public class Red implements Color {
@@ -225,7 +195,7 @@ public class Red implements Color {
 }
 ```
 
-### Green.java
+**Green.java**
 
 ```java
 public class Green implements Color {
@@ -237,7 +207,7 @@ public class Green implements Color {
 }
 ```
 
-### Blue.java
+**Blue.java**
 
 ```java
 public class Blue implements Color {
@@ -249,39 +219,78 @@ public class Blue implements Color {
 }
 ```
 
-### Step 5
+#### 第 3 步：创建 Shape 接口（同工厂模式）
 
-创建一个抽象类来获取 Color 和 Shape 对象的工厂。
+**Shape.java**
 
-### AbstractFactory.java
+```java
+public interface Shape {
+    void draw();
+}
+```
+
+#### 第 4 步：创建实现 Shape 接口的具体类（同工厂模式）
+
+**Rectangle.java**
+
+```java
+public class Rectangle implements Shape {
+
+    @Override
+    public void draw() {
+        System.out.println("Inside Rectangle::draw() method.");
+    }
+}
+```
+
+**Square.java**
+
+```java
+public class Square implements Shape {
+
+    @Override
+    public void draw() {
+        System.out.println("Inside Square::draw() method.");
+    }
+}
+```
+
+**Circle.java**
+
+```java
+public class Circle implements Shape {
+
+    @Override
+    public void draw() {
+        System.out.println("Inside Circle::draw() method.");
+    }
+}
+```
+
+#### 第 5 步：创建一个抽象类来获取 Color 和 Shape 对象的工厂
+
+**AbstractFactory.java**
 
 ```java
 public abstract class AbstractFactory {
     abstract Color getColor(String color);
-```
-
-![](img/6426660228f292f87ed477d27e961d81_15_0.png)
-
-```java
-abstract Shape getShape(String shape);
+    abstract Shape getShape(String shape);
 }
 ```
 
-### 第 6 步
+#### 第 6 步：创建扩展 AbstractFactory 的工厂类，根据给定信息生成具体类的对象
 
-创建扩展 AbstractFactory 的工厂类，根据给定信息生成具体类的对象。
-
-### ShapeFactory.java
+**ShapeFactory.java**
 
 ```java
 public class ShapeFactory extends AbstractFactory {
 
     @Override
     public Shape getShape(String shapeType) {
-        if(shapeType == null) {
+        if (shapeType == null) {
             return null;
         }
-        if(shapeType.equalsIgnoreCase("CIRCLE")) {
+        if (shapeType.equalsIgnoreCase("CIRCLE")) {
             return new Circle();
         } else if (shapeType.equalsIgnoreCase("RECTANGLE")) {
             return new Rectangle();
@@ -298,26 +307,26 @@ public class ShapeFactory extends AbstractFactory {
 }
 ```
 
-### ColorFactory.java
+**ColorFactory.java**
 
 ```java
 public class ColorFactory extends AbstractFactory {
 
     @Override
-    public Shape getShape(String shapeType){
+    public Shape getShape(String shapeType) {
         return null;
     }
 
     @Override
     Color getColor(String color) {
-        if(color == null){
+        if (color == null) {
             return null;
         }
-        if(color.equalsIgnoreCase("RED")){
+        if (color.equalsIgnoreCase("RED")) {
             return new Red();
-        } else if(color.equalsIgnoreCase("GREEN")){
+        } else if (color.equalsIgnoreCase("GREEN")) {
             return new Green();
-        } else if(color.equalsIgnoreCase("BLUE")){
+        } else if (color.equalsIgnoreCase("BLUE")) {
             return new Blue();
         }
         return null;
@@ -325,19 +334,17 @@ public class ColorFactory extends AbstractFactory {
 }
 ```
 
-### 第 7 步
+#### 第 7 步：创建一个工厂生成器/生产者类，通过传递 Shape 或 Color 等信息来获取工厂
 
-创建一个工厂生成器/生产者类，通过传递 Shape 或 Color 等信息来获取工厂。
-
-### FactoryProducer.java
+**FactoryProducer.java**
 
 ```java
 public class FactoryProducer {
 
     public static AbstractFactory getFactory(String choice) {
-        if(choice.equalsIgnoreCase("SHAPE")){
+        if (choice.equalsIgnoreCase("SHAPE")) {
             return new ShapeFactory();
-        } else if(choice.equalsIgnoreCase("COLOR")){
+        } else if (choice.equalsIgnoreCase("COLOR")) {
             return new ColorFactory();
         }
         return null;
@@ -345,36 +352,29 @@ public class FactoryProducer {
 }
 ```
 
-![](img/6426660228f292f87ed477d27e961d81_17_0.png)
+#### 第 8 步：使用 FactoryProducer 获取 AbstractFactory，以便通过传递类型等信息获取具体类的工厂
 
-### 第 8 步
-
-使用 FactoryProducer 获取 AbstractFactory，以便通过传递类型等信息获取具体类的工厂。
-
-### AbstractFactoryPatternDemo.java
+**AbstractFactoryPatternDemo.java**
 
 ```java
 public class AbstractFactoryPatternDemo {
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         // 获取形状工厂
         AbstractFactory shapeFactory = FactoryProducer.getFactory("SHAPE");
 
         // 获取一个 Shape Circle 对象
         Shape shape1 = shapeFactory.getShape("CIRCLE");
-
         // 调用 Shape Circle 的 draw 方法
         shape1.draw();
 
         // 获取一个 Shape Rectangle 对象
         Shape shape2 = shapeFactory.getShape("RECTANGLE");
-
         // 调用 Shape Rectangle 的 draw 方法
         shape2.draw();
 
         // 获取一个 Shape Square 对象
         Shape shape3 = shapeFactory.getShape("SQUARE");
-
         // 调用 Shape Square 的 draw 方法
         shape3.draw();
 
@@ -383,24 +383,23 @@ public class AbstractFactoryPatternDemo {
 
         // 获取一个 Red 对象
         Color color1 = colorFactory.getColor("RED");
-
         // 调用 Red 的 fill 方法
         color1.fill();
 
         // 获取一个 Green 对象
         Color color2 = colorFactory.getColor("GREEN");
-
         // 调用 Green 的 fill 方法
         color2.fill();
 
         // 获取一个 Blue 对象
         Color color3 = colorFactory.getColor("BLUE");
-
         // 调用 Blue 的 fill 方法
         color3.fill();
     }
 }
 ```
+
+
 
 ### 第 9 步
 
@@ -421,37 +420,43 @@ public class AbstractFactoryPatternDemo {
 
 我们考虑了一个快餐店的业务案例，典型的餐可以是汉堡和冷饮料。汉堡可以是素汉堡或鸡肉汉堡，并用纸包装。冷饮料可以是可乐或百事，并装在瓶子里。
 
-我们将创建一个 Item 接口来表示汉堡和冷饮料等食品项目，并实现 Item 接口的具体类，以及一个 Packing 接口来表示食品包装，因为汉堡包装在纸里，冷饮料装在瓶子里。
+我们将创建一个 `Item` 接口来表示汉堡和冷饮料等食品项目，并实现 `Item` 接口的具体类，以及一个 `Packing` 接口来表示食品包装，因为汉堡包装在纸里，冷饮料装在瓶子里。
 
-然后我们创建一个拥有 Item 列表的 Meal 类，以及一个 MealBuilder，通过组合 Item 来构建不同类型的 Meal 对象。BuilderPatternDemo 我们的演示类将使用 MealBuilder 来构建 Meal。
+然后我们创建一个拥有 `Item` 列表的 `Meal` 类，以及一个 `MealBuilder`，通过组合 `Item` 来构建不同类型的 `Meal` 对象。`BuilderPatternDemo` 我们的演示类将使用 `MealBuilder` 来构建 `Meal`。
 
 ### 第 1 步
 
-创建一个表示食品项目和包装的 Item 接口。
+创建一个表示食品项目和包装的 `Item` 接口。
 
-### Item.java
+#### Item.java
 
 ```java
 public interface Item {
+
     public String name();
+
     public Packing packing();
+
     public float price();
+
 }
 ```
 
-### Packing.java
+#### Packing.java
 
 ```java
 public interface Packing {
+
     public String pack();
+
 }
 ```
 
 ### 第 2 步
 
-创建实现 Packing 接口的具体类。
+创建实现 `Packing` 接口的具体类。
 
-### Wrapper.java
+#### Wrapper.java
 
 ```java
 public class Wrapper implements Packing {
@@ -460,10 +465,11 @@ public class Wrapper implements Packing {
     public String pack() {
         return "Wrapper";
     }
+
 }
 ```
 
-### Bottle.java
+#### Bottle.java
 
 ```java
 public class Bottle implements Packing {
@@ -472,14 +478,15 @@ public class Bottle implements Packing {
     public String pack() {
         return "Bottle";
     }
+
 }
 ```
 
 ### 第 3 步
 
-创建实现 item 接口的抽象类，提供默认功能。
+创建实现 `Item` 接口的抽象类，提供默认功能。
 
-### Burger.java
+#### Burger.java
 
 ```java
 public abstract class Burger implements Item {
@@ -490,18 +497,12 @@ public abstract class Burger implements Item {
     }
 
     @Override
-```
+    public abstract float price();
 
-
-
-
-
-```java
-public abstract float price();
 }
 ```
 
-### ColdDrink.java
+#### ColdDrink.java
 
 ```java
 public abstract class ColdDrink implements Item {
@@ -513,14 +514,15 @@ public abstract class ColdDrink implements Item {
 
     @Override
     public abstract float price();
+
 }
 ```
 
-### 第 4 
+### 第 4 步
 
-创建继承 Burger 和 ColdDrink 类的具体类
+创建继承 `Burger` 和 `ColdDrink` 类的具体类。
 
-### VegBurger.java
+#### VegBurger.java
 
 ```java
 public class VegBurger extends Burger {
@@ -534,74 +536,80 @@ public class VegBurger extends Burger {
     public String name() {
         return "Veg Burger";
     }
+
 }
 ```
 
 ![](img/6426660228f292f87ed477d27e961d81_26_0.png)
 
-### ChickenBurger.java
+#### ChickenBurger.java
 
 ```java
 public class ChickenBurger extends Burger {
-  @Override
-  public float price() {
-    return 50.5f;
-  }
 
-  @Override
-  public String name() {
-    return "Chicken Burger";
-  }
+    @Override
+    public float price() {
+        return 50.5f;
+    }
+
+    @Override
+    public String name() {
+        return "Chicken Burger";
+    }
+
 }
 ```
 
-### Coke.java
+#### Coke.java
 
 ```java
 public class Coke extends ColdDrink {
 
-  @Override
-  public float price() {
-    return 30.0f;
-  }
+    @Override
+    public float price() {
+        return 30.0f;
+    }
 
-  @Override
-  public String name() {
-    return "Coke";
-  }
+    @Override
+    public String name() {
+        return "Coke";
+    }
+
 }
 ```
 
-### Pepsi.java
+#### Pepsi.java
 
 ```java
 public class Pepsi extends ColdDrink {
 
-  @Override
-  public float price() {
-    return 35.0f;
-  }
+    @Override
+    public float price() {
+        return 35.0f;
+    }
 
-  @Override
-  public String name() {
-    return "Pepsi";
-  }
+    @Override
+    public String name() {
+        return "Pepsi";
+    }
+
 }
 ```
 
 ![](img/6426660228f292f87ed477d27e961d81_27_0.png)
 
-### 第 5 
+### 第 5 步
 
-创建一个包含上述定义的 Item 对象的 Meal 类。
+创建一个包含上述定义的 `Item` 对象的 `Meal` 类。
 
-### Meal.java
+#### Meal.java
 
 ```java
 import java.util.ArrayList;
 import java.util.List;
 
 public class Meal {
+
     private List<Item> items = new ArrayList<Item>();
 
     public void addItem(Item item) {
@@ -618,21 +626,22 @@ public class Meal {
 
     public void showItems() {
         for (Item item : items) {
-            System.out.print("Item : "+item.name());
-            System.out.print(", Packing : "+item.packing().pack());
-            System.out.println(", Price : "+item.price());
+            System.out.print("Item : " + item.name());
+            System.out.print(", Packing : " + item.packing().pack());
+            System.out.println(", Price : " + item.price());
         }
     }
+
 }
 ```
 
 ![](img/6426660228f292f87ed477d27e961d81_28_0.png)
 
-### 第 6 
+### 第 6 步
 
-创建一个 MealBuilder 类，该实际的构建器类负责创建 Meal 对象。
+创建一个 `MealBuilder` 类，该实际的构建器类负责创建 `Meal` 对象。
 
-### MealBuilder.java
+#### MealBuilder.java
 
 ```java
 public class MealBuilder {
@@ -650,34 +659,37 @@ public class MealBuilder {
         meal.addItem(new Pepsi());
         return meal;
     }
+
 }
 ```
 
-### 第 7 
+### 第 7 步
 
-BuilderPatternDemo 使用 MealBuilder 来演示构建器模式。
+`BuilderPatternDemo` 使用 `MealBuilder` 来演示构建器模式。
 
-### BuilderPatternDemo.java
+#### BuilderPatternDemo.java
 
 ```java
 public class BuilderPatternDemo {
+
     public static void main(String[] args) {
         MealBuilder mealBuilder = new MealBuilder();
 
         Meal vegMeal = mealBuilder.prepareVegMeal();
         System.out.println("Veg Meal");
         vegMeal.showItems();
-        System.out.println("Total Cost: " +vegMeal.getCost());
+        System.out.println("Total Cost: " + vegMeal.getCost());
 
         Meal nonVegMeal = mealBuilder.prepareNonVegMeal();
         System.out.println("\nNon-Veg Meal");
         nonVegMeal.showItems();
-        System.out.println("Total Cost: " +nonVegMeal.getCost());
+        System.out.println("Total Cost: " + nonVegMeal.getCost());
     }
+
 }
 ```
 
-### 第 8 
+### 第 8 步
 
 验证输出。
 
@@ -692,15 +704,15 @@ public class BuilderPatternDemo {
 
 ## 6. 原型模式 (PROTOTYPE PATTERN)
 
-原型模式指的是考虑到性能的情况下复制对象。这种设计模式属于创建模式，因为它提供了创建对象的最佳方式。该模式涉及实现一个原型接口，告诉如何克隆当前对象。例如，直接创建一个对象是昂贵的。我们可以缓存对象，并在需要时返回其克隆。ShapeCache 类被定义为在 Hashtable 中存储对象并在请求时返回。PrototypeDemo 将使用 ShapeCache 类来创建 Shape 对象。
+原型模式指的是考虑到性能的情况下复制对象。这种设计模式属于创建模式，因为它提供了创建对象的最佳方式。该模式涉及实现一个原型接口，告诉如何克隆当前对象。例如，直接创建一个对象是昂贵的。我们可以缓存对象，并在需要时返回其克隆。`ShapeCache` 类被定义为在 `Hashtable` 中存储对象并在请求时返回。`PrototypeDemo` 将使用 `ShapeCache` 类来创建 `Shape` 对象。
 
 ![](img/6426660228f292f87ed477d27e961d81_31_0.png)
 
-### 第 1 
+### 第 1 步
 
-创建一个实现 Cloneable 的抽象类。
+创建一个实现 `Cloneable` 的抽象类。
 
-### Shape.java
+#### Shape.java
 
 ```java
 public abstract class Shape implements Cloneable {
@@ -726,19 +738,20 @@ public abstract class Shape implements Cloneable {
         Object clone = null;
         try {
             clone = super.clone();
-        } catch (CloneNotException e) {
+        } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
         return clone;
     }
+
 }
 ```
 
-### 第 2 
+### 第 2 步
 
 创建上述类的具体类。
 
-### Rectangle.java
+#### Rectangle.java
 
 ```java
 public class Rectangle extends Shape {
@@ -751,10 +764,11 @@ public class Rectangle extends Shape {
     public void draw() {
         System.out.println("Inside Rectangle::draw.");
     }
+
 }
 ```
 
-### Square.java
+#### Square.java
 
 ```java
 public class Square extends Shape {
@@ -767,10 +781,11 @@ public class Square extends Shape {
     public void draw() {
         System.out.println("Inside Square::draw.");
     }
+
 }
 ```
 
-### Circle.java
+#### Circle.java
 
 ```java
 public class Circle extends Shape {
@@ -783,16 +798,17 @@ public class Circle extends Shape {
     public void draw() {
         System.out.println("Inside Circle::draw.");
     }
+
 }
 ```
 
 ![](img/6426660228f292f87ed477d27e961d81_33_0.png)
 
-### 第 3 
+### 第 3 步
 
-创建一个类从数据库获取具体类并将它们存储在 Hashtable 中。
+创建一个类从数据库获取具体类并将它们存储在 `Hashtable` 中。
 
-### ShapeCache.java
+#### ShapeCache.java
 
 ```java
 import java.util.Hashtable;
@@ -809,30 +825,33 @@ public class ShapeCache {
     // 为每个形状运行数据库查询并创建形状
     // shapeMap.put(shapeKey, shape);
     // 例如，我们正在添加三个形状
+
     public static void loadCache() {
         Circle circle = new Circle();
         circle.setId("1");
-        shapeMap.put(circle.getId(),circle);
+        shapeMap.put(circle.getId(), circle);
 
         Square square = new Square();
         square.setId("2");
-        shapeMap.put(square.getId(),square);
+        shapeMap.put(square.getId(), square);
 
         Rectangle rectangle = new Rectangle();
         rectangle.setId("3");
-        shapeMap.put(rectangle.getId(),rectangle);
+        shapeMap.put(rectangle.getId(), rectangle);
     }
+
 }
 ```
 
-### 第 4
+### 第 4 步
 
-PrototypePatternDemo 使用 ShapeCache 类获取存储在 Hashtable 中的形状克隆。
+`PrototypePatternDemo` 使用 `ShapeCache` 类获取存储在 `Hashtable` 中的形状克隆。
 
-### PrototypePatternDemo.java
+#### PrototypePatternDemo.java
 
 ```java
 public class PrototypePatternDemo {
+
     public static void main(String[] args) {
         ShapeCache.loadCache();
 
@@ -845,20 +864,11 @@ public class PrototypePatternDemo {
         Shape clonedShape3 = (Shape) ShapeCache.getShape("3");
         System.out.println("Shape : " + clonedShape3.getType());
     }
+
 }
 ```
 
-### 第 5
 
-验证输出。
-
-```
-Shape : Circle
-Shape : Square
-Shape : Rectangle
-```
-
-![](img/6426660228f292f87ed477d27e961d81_35_0.png)
 
 ## 7. 适配器模式 (ADAPTER PATTERN)
 
@@ -868,50 +878,37 @@ Shape : Rectangle
 
 ### 实现
 
-我们有一个 MediaPlayer 接口和一个实现 MediaPlayer 接口的具体类 AudioPlayer。AudioPlayer 默认播放 mp3 格式的音频文件。
+我们有一个 `MediaPlayer` 接口和一个实现 `MediaPlayer` 接口的具体类 `AudioPlayer`。`AudioPlayer` 默认播放 mp3 格式的音频文件。
 
-我们还有另一个接口 AdvancedMediaPlayer 和实现 AdvancedMediaPlayer 接口的具体类。这些类可以播放 vlc 和 mp4 格式的文件。
+我们还有另一个接口 `AdvancedMediaPlayer` 和实现 `AdvancedMediaPlayer` 接口的具体类。这些类可以播放 vlc 和 mp4 格式的文件。
 
-我们想让 AudioPlayer 也能播放其他格式。为了实现这一点，我们创建了一个实现 MediaPlayer 接口的适配器类 MediaAdapter，它使用 AdvancedMediaPlayer 对象播放所需的格式。
+我们想让 `AudioPlayer` 也能播放其他格式。为了实现这一点，我们创建了一个实现 `MediaPlayer` 接口的适配器类 `MediaAdapter`，它使用 `AdvancedMediaPlayer` 对象播放所需的格式。
 
+### 第 1 步：为 MediaPlayer 和 Advanced Media Player 创建接口
 
-
-
-
-![](img/6426660228f292f87ed477d27e961d81_38_0.png)
-
-### 第 1 步
-
-为 MediaPlayer 和 Advanced Media Player 创建接口。
-
-### MediaPlayer.java
+#### MediaPlayer.java
 
 ```java
 public interface MediaPlayer {
-
     public void play(String audioType, String fileName);
 }
 ```
 
-### AdvancedMediaPlayer.java
+#### AdvancedMediaPlayer.java
 
 ```java
 public interface AdvancedMediaPlayer {
-
     public void playVlc(String fileName);
-
     public void playMp4(String fileName);
 }
 ```
 
-### 第 2 
+### 第 2 步：创建实现 AdvancedMediaPlayer 接口的具体类
 
-创建实现 AdvancedMediaPlayer 接口的具体类。
-
-### VlcPlayer.java
+#### VlcPlayer.java
 
 ```java
-public class VlcPlayer implements AdvancedMediaPlayer{
+public class VlcPlayer implements AdvancedMediaPlayer {
     @Override
     public void playVlc(String fileName) {
         System.out.println("Playing vlc file. Name: " + fileName);
@@ -919,64 +916,57 @@ public class VlcPlayer implements AdvancedMediaPlayer{
 
     @Override
     public void playMp4(String fileName) {
-        //do nothing
+        // do nothing
     }
 }
 ```
 
-### Mp4Player.java
+#### Mp4Player.java
 
 ```java
 public class Mp4Player implements AdvancedMediaPlayer {
     @Override
     public void playVlc(String fileName) {
-        //do nothing
+        // do nothing
     }
 
     @Override
     public void playMp4(String fileName) {
-        System.out.println("Playing mp4 file. Name: "+ + fileName);
+        System.out.println("Playing mp4 file. Name: " + fileName);
     }
 }
 ```
 
-### 第 3 步
+### 第 3 步：创建实现 MediaPlayer 接口的适配器类
 
-创建实现 MediaPlayer 接口的适配器类。
-
-### MediaAdapter.java
+#### MediaAdapter.java
 
 ```java
 public class MediaAdapter implements MediaPlayer {
-
     AdvancedMediaPlayer advancedMusicPlayer;
 
-    public MediaAdapter(String audioType){
-        if(audioType.equalsIgnoreCase("vlc")) {
+    public MediaAdapter(String audioType) {
+        if (audioType.equalsIgnoreCase("vlc")) {
             advancedMusicPlayer = new VlcPlayer();
-        } else if (audioType.equalsIgnoreCase("mp4")){
+        } else if (audioType.equalsIgnoreCase("mp4")) {
             advancedMusicPlayer = new Mp4Player();
         }
     }
 
     @Override
     public void play(String audioType, String fileName) {
-        if(audioType.equalsIgnoreCase("vlc")){
+        if (audioType.equalsIgnoreCase("vlc")) {
             advancedMusicPlayer.playVlc(fileName);
-        }else if(audioType.equalsIgnoreCase("mp4")){
+        } else if (audioType.equalsIgnoreCase("mp4")) {
             advancedMusicPlayer.playMp4(fileName);
         }
     }
 }
 ```
 
-![](img/6426660228f292f87ed477d27e961d81_39_0.png)
+### 第 4 步：创建实现 MediaPlayer 接口的具体类
 
-### 第 4 步
-
-创建实现 MediaPlayer 接口的具体类。
-
-### AudioPlayer.java
+#### AudioPlayer.java
 
 ```java
 public class AudioPlayer implements MediaPlayer {
@@ -984,29 +974,24 @@ public class AudioPlayer implements MediaPlayer {
 
     @Override
     public void play(String audioType, String fileName) {
-        //内置播放 mp3 音乐文件的支持
-        if(audioType.equalsIgnoreCase("mp3")){
+        // 内置播放 mp3 音乐文件的支持
+        if (audioType.equalsIgnoreCase("mp3")) {
             System.out.println("Playing mp3 file. Name: " + fileName);
         }
-        //mediaAdapter 提供了对其他文件格式的支持
-        else if(audioType.equalsIgnoreCase("vlc") || audioType.equalsIgnoreCase("mp4")){
+        // mediaAdapter 提供了对其他文件格式的支持
+        else if (audioType.equalsIgnoreCase("vlc") || audioType.equalsIgnoreCase("mp4")) {
             mediaAdapter = new MediaAdapter(audioType);
             mediaAdapter.play(audioType, fileName);
-        }
-        else{
+        } else {
             System.out.println("Invalid media. " + audioType + " format not supported");
         }
     }
 }
 ```
 
-![](img/6426660228f292f87ed477d27e961d81_40_0.png)
+### 第 5 步：使用 AudioPlayer 播放不同类型的音频格式
 
-### 第 5 步
-
-使用 AudioPlayer 播放不同类型的音频格式。
-
-### AdapterPatternDemo.java
+#### AdapterPatternDemo.java
 
 ```java
 public class AdapterPatternDemo {
@@ -1021,37 +1006,28 @@ public class AdapterPatternDemo {
 }
 ```
 
-### 第 6 步
-
-验证输出。
+### 第 6 步：验证输出
 
 | 输出 |
 | :--- |
 | Playing mp3 file. Name: beyond the horizon.mp3 |
 | Playing mp4 file. Name: alone.mp4 |
+| Playing vlc file. Name: far far away.vlc |
+| Invalid media. avi format not supported |
 
-![](img/6426660228f292f87ed477d27e961d81_41_0.png)
-
-```
-Playing vlc file. Name: far far away.vlc
-Invalid media. avi format not supported
-```
+---
 
 ## 8. 桥接模式 (BRIDGE PATTERN)
 
-当我们需要将抽象与其实现解耦，以便两者独立变化时，可以使用桥接模式。这种设计模式属于结构模式，因为它通过在它们之间提供桥接来解耦实现类和抽象类。该模式涉及一个充当桥接的接口，使得具体类的功能与实现类独立。两类类都可以在结构上进行更改而不而不影响彼此。我们通过以下示例来演示桥接模式，在该示例中，可以使用相同的抽象类但不同的实现类绘制不同颜色的圆。
+当我们需要将抽象与其实现解耦，以便两者独立变化时，可以使用桥接模式。这种设计模式属于结构模式，因为它通过在它们之间提供桥接来解耦实现类和抽象类。该模式涉及一个充当桥接的接口，使得具体类的功能与实现类独立。两类类都可以在结构上进行更改而不影响彼此。我们通过以下示例来演示桥接模式，在该示例中，可以使用相同的抽象类但不同的实现类绘制不同颜色的圆。
 
 ### 实现
 
-我们有一个作为实现者的 DrawAPI 接口，以及实现 DrawAPI 的具体类 RedCircle 和 GreenCircle。Shape 是一个抽象类，它将使用 DrawAPI 的对象。我们的演示类 BridgePatternDemo 将使用 Shape 来绘制出不同颜色的圆。
+我们有一个作为实现者的 `DrawAPI` 接口，以及实现 `DrawAPI` 的具体类 `RedCircle` 和 `GreenCircle`。`Shape` 是一个抽象类，它将使用 `DrawAPI` 的对象。我们的演示类 `BridgePatternDemo` 将使用 `Shape` 来绘制出不同颜色的圆。
 
-![](img/6426660228f292f87ed477d27e961d81_43_0.png)
+### 第 1 步：创建实现者接口
 
-### 第 1 步
-
-创建实现者接口。
-
-### DrawAPI.java
+#### DrawAPI.java
 
 ```java
 public interface DrawAPI {
@@ -1059,11 +1035,9 @@ public interface DrawAPI {
 }
 ```
 
-### 第 2 
+### 第 2 步：创建实现 DrawAPI 接口的具体实现类
 
-创建实现 DrawAPI 接口的具体实现类。
-
-### RedCircle.java
+#### RedCircle.java
 
 ```java
 public class RedCircle implements DrawAPI {
@@ -1074,7 +1048,7 @@ public class RedCircle implements DrawAPI {
 }
 ```
 
-### GreenCircle.java
+#### GreenCircle.java
 
 ```java
 public class GreenCircle implements DrawAPI {
@@ -1085,33 +1059,31 @@ public class GreenCircle implements DrawAPI {
 }
 ```
 
-### 第 3 步
+### 第 3 步：使用 DrawAPI 接口创建一个抽象类
 
-使用 DrawAPI 接口创建一个抽象类。
-
-### Shape.java
+#### Shape.java
 
 ```java
 public abstract class Shape {
     protected DrawAPI drawAPI;
-    protected Shape(DrawAPI drawAPI){
+
+    protected Shape(DrawAPI drawAPI) {
         this.drawAPI = drawAPI;
     }
+
     public abstract void draw();
 }
 ```
 
-### 第 4 步
+### 第 4 步：创建实现 Shape 接口的具体类
 
-创建实现 Shape 接口的具体类。
-
-### Circle.java
+#### Circle.java
 
 ```java
 public class Circle extends Shape {
     private int radius;
 
-    public Circle(int radius, DrawAPI drawAPI){
+    public Circle(int radius, DrawAPI drawAPI) {
         super(drawAPI);
         this.radius = radius;
     }
@@ -1123,11 +1095,9 @@ public class Circle extends Shape {
 }
 ```
 
-### 第 5 步
+### 第 5 步：使用 Shape 和 DrawAPI 类绘制不同颜色的圆
 
-使用 Shape 和 DrawAPI 类绘制不同颜色的圆。
-
-### BridgePatternDemo.java
+#### BridgePatternDemo.java
 
 ```java
 public class BridgePatternDemo {
@@ -1141,16 +1111,14 @@ public class BridgePatternDemo {
 }
 ```
 
-![](img/6426660228f292f87ed477d27e961d81_45_0.png)
-
-### 第 6 步
-
-验证输出。
+### 第 6 步：验证输出
 
 | 输出 |
 | :--- |
 | Drawing red circle with radius: 10 |
 | Drawing green circle with radius: 15 |
+
+---
 
 ## 9. 过滤模式 (FILTER PATTERN)
 
@@ -1158,24 +1126,19 @@ public class BridgePatternDemo {
 
 ### 实现
 
-我们将创建一个 Person 对象、Criteria 接口以及实现该接口的具体类来过滤 Person 对象列表。我们的演示类 CriteriaPatternDemo 根据各种条件及其组合来过滤 Person 对象列表。
+我们将创建一个 `Person` 对象、`Criteria` 接口以及实现该接口的具体类来过滤 `Person` 对象列表。我们的演示类 `CriteriaPatternDemo` 根据各种条件及其组合来过滤 `Person` 对象列表。
 
-![](img/6426660228f292f87ed477d27e961d81_47_0.png)
+### 第 1 步：创建一个应用规则的类
 
-### 第 1 步
-
-创建一个应用规则的类。
-
-### Person.java
+#### Person.java
 
 ```java
 public class Person {
-
     private String name;
     private String gender;
     private String maritalStatus;
 
-    public Person(String name, String gender, String maritalStatus){
+    public Person(String name, String gender, String maritalStatus) {
         this.name = name;
         this.gender = gender;
         this.maritalStatus = maritalStatus;
@@ -1195,11 +1158,9 @@ public class Person {
 }
 ```
 
-### 第 2 步
+### 第 2 步：为 Criteria 创建接口
 
-为 Criteria 创建接口。
-
-### Criteria.java
+#### Criteria.java
 
 ```java
 import java.util.List;
@@ -1209,35 +1170,74 @@ public interface Criteria {
 }
 ```
 
+### 第 3 步：实现 Criteria 接口的具体类
 
-
-
-
-### 第 3 
-
-实现 `Criteria` 接口的具体类。
-
-### CriteriaMale.java
-
-### CriteriaFemale.java
-
-![](img/6426660228f292f87ed477d27e961d81_49_0.png)
+#### CriteriaMale.java
 
 ```java
-}
-return femalePersons();
+import java.util.ArrayList;
+import java.util.List;
+
+public class CriteriaMale implements Criteria {
+    @Override
+    public List<Person> meetCriteria(List<Person> persons) {
+        List<Person> malePersons = new ArrayList<>();
+        for (Person person : persons) {
+            if (person.getGender().equalsIgnoreCase("MALE")) {
+                malePersons.add(person);
+            }
+        }
+        return malePersons;
+    }
 }
 ```
 
-### CriteriaSingle.java
+#### CriteriaFemale.java
 
-### AndCriteria.java
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class CriteriaFemale implements Criteria {
+    @Override
+    public List<Person> meetCriteria(List<Person> persons) {
+        List<Person> femalePersons = new ArrayList<>();
+        for (Person person : persons) {
+            if (person.getGender().equalsIgnoreCase("FEMALE")) {
+                femalePersons.add(person);
+            }
+        }
+        return femalePersons;
+    }
+}
+```
+
+#### CriteriaSingle.java
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class CriteriaSingle implements Criteria {
+    @Override
+    public List<Person> meetCriteria(List<Person> persons) {
+        List<Person> singlePersons = new ArrayList<>();
+        for (Person person : persons) {
+            if (person.getMaritalStatus().equalsIgnoreCase("SINGLE")) {
+                singlePersons.add(person);
+            }
+        }
+        return singlePersons;
+    }
+}
+```
+
+#### AndCriteria.java
 
 ```java
 import java.util.List;
 
 public class AndCriteria implements Criteria {
-
     private Criteria criteria;
     private Criteria otherCriteria;
 
@@ -1245,21 +1245,118 @@ public class AndCriteria implements Criteria {
         this.criteria = criteria;
         this.otherCriteria = otherCriteria;
     }
+
+    @Override
+    public List<Person> meetCriteria(List<Person> persons) {
+        List<Person> firstCriteriaPersons = criteria.meetCriteria(persons);
+        return otherCriteria.meetCriteria(firstCriteriaPersons);
+    }
+}
 ```
 
-![](img/6426660228f292f87ed477d27e961d81_50_0.png)
+#### OrCriteria.java
 
 ```java
-}
+import java.util.List;
 
-@Override
-public List<Person> meetCriteria(List<Person> persons) {
-    List<Person> firstCriteriaPersons = criteria.meetCriteria(persons);
-    return otherCriteria.meetCriteria(firstCriteriaPersons);
+public class OrCriteria implements Criteria {
+    private Criteria criteria;
+    private Criteria otherCriteria;
+
+    public OrCriteria(Criteria criteria, Criteria otherCriteria) {
+        this.criteria = criteria;
+        this.otherCriteria = otherCriteria;
+    }
+
+    @Override
+    public List<Person> meetCriteria(List<Person> persons) {
+        List<Person> firstCriteriaItems = criteria.meetCriteria(persons);
+        List<Person> otherCriteriaItems = otherCriteria.meetCriteria(persons);
+
+        for (Person person : otherCriteriaItems) {
+            if (!firstCriteriaItems.contains(person)) {
+                firstCriteriaItems.add(person);
+            }
+        }
+        return firstCriteriaItems;
+    }
 }
 ```
 
-### OrCriteria.java
+### 第 4 步：使用 Criteria 模式过滤 Person 对象列表
+
+#### CriteriaPatternDemo.java
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class CriteriaPatternDemo {
+    public static void main(String[] args) {
+        List<Person> persons = new ArrayList<>();
+
+        persons.add(new Person("Robert", "Male", "Single"));
+        persons.add(new Person("John", "Male", "Married"));
+        persons.add(new Person("Laura", "Female", "Married"));
+        persons.add(new Person("Diana", "Female", "Single"));
+        persons.add(new Person("Mike", "Male", "Single"));
+        persons.add(new Person("Bobby", "Male", "Single"));
+
+        Criteria male = new CriteriaMale();
+        Criteria female = new CriteriaFemale();
+        Criteria single = new CriteriaSingle();
+        Criteria singleMale = new AndCriteria(single, male);
+        Criteria singleOrFemale = new OrCriteria(single, female);
+
+        System.out.println("Males: ");
+        printPersons(male.meetCriteria(persons));
+
+        System.out.println("\nFemales: ");
+        printPersons(female.meetCriteria(persons));
+
+        System.out.println("\nSingle Males: ");
+        printPersons(singleMale.meetCriteria(persons));
+
+        System.out.println("\nSingle Or Females: ");
+        printPersons(singleOrFemale.meetCriteria(persons));
+    }
+
+    public static void printPersons(List<Person> persons) {
+        for (Person person : persons) {
+            System.out.println("Person : [ Name : " + person.getName()
+                    + ", Gender : " + person.getGender()
+                    + ", Marital Status : " + person.getMaritalStatus() + " ]");
+        }
+    }
+}
+```
+
+### 第 5 步：验证输出
+
+| 输出 |
+| :--- |
+| Males: |
+| Person : [ Name : Robert, Gender : Male, Marital Status : Single ] |
+| Person : [ Name : John, Gender : Male, Marital Status : Married ] |
+| Person : [ Name : Mike, Gender : Male, Marital Status : Single ] |
+| Person : [ Name : Bobby, Gender : Male, Marital Status : Single ] |
+| Females: |
+| Person : [ Name : Laura, Gender : Female, Marital Status : Married ] |
+| Person : [ Name : Diana, Gender : Female, Marital Status : Single ] |
+| Single Males: |
+| Person : [ Name : Robert, Gender : Male, Marital Status : Single ] |
+| Person : [ Name : Mike, Gender : Male, Marital Status : Single ] |
+| Person : [ Name : Bobby, Gender : Male, Marital Status : Single ] |
+| Single Or Females: |
+| Person : [ Name : Robert, Gender : Male, Marital Status : Single ] |
+| Person : [ Name : Diana, Gender : Female, Marital Status : Single ] |
+| Person : [ Name : Mike, Gender : Male, Marital Status : Single ] |
+| Person : [ Name : Bobby, Gender : Male, Marital Status : Single ] |
+| Person : [ Name : Laura, Gender : Female, Marital Status : Married ] |
+
+
+
+## OrCriteria.java
 
 ```java
 import java.util.List;
@@ -1280,7 +1377,7 @@ public class OrCriteria implements Criteria {
         List<Person> otherCriteriaItems = otherCriteria.meetCriteria(persons);
 
         for (Person person : otherCriteriaItems) {
-            if(!firstCriteriaItems.contains(person)){
+            if (!firstCriteriaItems.contains(person)) {
                 firstCriteriaItems.add(person);
             }
         }
@@ -1289,59 +1386,52 @@ public class OrCriteria implements Criteria {
 }
 ```
 
-### 第 4 
-
-使用不同的 `Criteria` 及其组合来过滤人员。
+### 第 4 步：使用不同的 `Criteria` 及其组合来过滤人员
 
 ### CriteriaPatternDemo.java
 
 ```java
 public class CriteriaPatternDemo {
+
     public static void main(String[] args) {
         List<Person> persons = new ArrayList<Person>();
+        persons.add(new Person("Robert", "Male", "Single"));
+        // ... 其他人员添加代码省略
+    }
 
-        persons.add(new Person("Robert"
-}
-public static void printPersons(List<Person> persons) {
-    for (Person person : persons) {
-        System.out.println("Person : [ Name : " + person.getName()
-            +", Gender : " + person.getGender()
-            +", Marital Status : " + person.getMaritalStatus() +
-            +" ]");
+    public static void printPersons(List<Person> persons) {
+        for (Person person : persons) {
+            System.out.println("Person : [ Name : " + person.getName()
+                    + ", Gender : " + person.getGender()
+                    + ", Marital Status : " + person.getMaritalStatus() + " ]");
+        }
     }
 }
-{}
 ```
 
-### 第 5 
+### 第 5 步：验证输出
 
-验证输出。
-
-男性：
-
+**男性：**
 - Person : [ Name : Robert, Gender : Male, Marital Status : Single ]
 - Person : [ Name : John, Gender : Male, Marital Status : Married ]
 - Person : [ Name : Mike, Gender : Male, Marital Status : Single ]
 - Person : [ Name : Bobby, Gender : Male, Marital Status : Single ]
 
-女性：
-
+**女性：**
 - Person : [ Name : Laura, Gender : Female, Marital Status : Married ]
 - Person : [ Name : Diana, Gender : Female, Marital Status : Single ]
 
-单身男性：
-
+**单身男性：**
 - Person : [ Name : Robert, Gender : Male, Marital Status : Single ]
 - Person : [ Name : Mike, Gender : Male, Marital Status : Single ]
 - Person : [ Name : Bobby, Gender : Male, Marital Status : Single ]
 
-单身或女性：
-
+**单身或女性：**
 - Person : [ Name : Robert, Gender : Male, Marital Status : Single ]
 - Person : [ Name : Diana, Gender : Female, Marital Status : Single ]
 - Person : [ Name : Mike, Gender : Male, Marital Status : Single ]
 
-![](img/6426660228f292f87ed477d27e961d81_53_0.png)
+![输出结果](img/6426660228f292f87ed477d27e961d81_53_0.png)
 
 ## 10. 组合模式 (COMPOSITE PATTERN)
 
@@ -1355,11 +1445,9 @@ public static void printPersons(List<Person> persons) {
 
 我们有一个 `Employee` 类，它作为组合模式的参与者类。我们的演示类 `CompositePatternDemo` 将使用 `Employee` 类来添加层级结构并打印所有员工。
 
-![](img/6426660228f292f87ed477d27e961d81_55_0.png)
+![类图](img/6426660228f292f87ed477d27e961d81_55_0.png)
 
-### 第 1 
-
-创建一个包含 `Employee` 对象列表的 `Employee` 类。
+### 第 1 步：创建一个包含 `Employee` 对象列表的 `Employee` 类
 
 ### Employee.java
 
@@ -1368,6 +1456,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Employee {
+
     private String name;
     private String dept;
     private int salary;
@@ -1392,20 +1481,20 @@ public class Employee {
         return subordinates;
     }
 
+    @Override
     public String toString() {
-        return "Employee : [ Name : " + name + ", Dept : " + dept + ", Salary : " + salary + ]";
+        return "Employee : [ Name : " + name + ", Dept : " + dept + ", Salary : " + salary + " ]";
     }
 }
 ```
 
-### 第 2 
-
-使用 `Employee` 类创建并打印层级。
+### 第 2 步：使用 `Employee` 类创建并打印层级
 
 ### CompositePatternDemo.java
 
 ```java
 public class CompositePatternDemo {
+
     public static void main(String[] args) {
         Employee CEO = new Employee("John", "CEO", 30000);
         Employee headSales = new Employee("Robert", "Sales", 20000);
@@ -1434,9 +1523,7 @@ public class CompositePatternDemo {
 }
 ```
 
-### 第 3 
-
-验证输出。
+### 第 3 步：验证输出
 
 | Name | Dept | Salary |
 | :--- | :--- | :--- |
@@ -1454,9 +1541,7 @@ public class CompositePatternDemo {
 
 我们将创建一个 `Shape` 接口和实现 `Shape` 接口的具体类。我们将创建一个实现 `Shape` 接口的抽象装饰器类，并将 `Shape` 对象作为其实例变量。
 
-### 第 1 
-
-创建一个接口。
+### 第 1 步：创建一个接口
 
 ### Shape.java
 
@@ -1466,9 +1551,7 @@ public interface Shape {
 }
 ```
 
-### 第 2 
-
-创建实现相同接口的具体类。
+### 第 2 步：创建实现相同接口的具体类
 
 ### Rectangle.java
 
@@ -1492,43 +1575,28 @@ public class Circle implements Shape {
 }
 ```
 
-### 第 3 
-
-创建一个实现 `Shape` 接口的抽象装饰器类。
+### 第 3 步：创建一个实现 `Shape` 接口的抽象装饰器类
 
 ### ShapeDecorator.java
 
 ```java
 public abstract class ShapeDecorator implements Shape {
-    protected Shape tempShape;
+    protected Shape decoratedShape;
 
-    public ShapeDecorator(Shape shapeShape) {
-        tempShape = shapeShape;
+    public ShapeDecorator(Shape decoratedShape) {
+        this.decoratedShape = decoratedShape;
+    }
+
+    @Override
+    public void draw() {
+        decoratedShape.draw();
     }
 }
 ```
 
+### 第 4 步：创建一个继承 `ShapeDecorator` 类的具体装饰器类
 
-
-
-
-```java
-protected Shape decoratedShape;
-
-public ShapeDecorator(Shape decoratedShape){
-    this.decoratedShape = decoratedShape;
-}
-
-public void draw(){
-    decoratedShape.draw();
-}
-```
-
-### 第 4 步
-
-创建一个继承 ShapeDecorator 类的具体装饰器类。
-
-RedShapeDecorator.java
+### RedShapeDecorator.java
 
 ```java
 public class RedShapeDecorator extends ShapeDecorator {
@@ -1543,27 +1611,24 @@ public class RedShapeDecorator extends ShapeDecorator {
         setRedBorder(decoratedShape);
     }
 
-    private void setRedBorder(Shape decoratedShape){
+    private void setRedBorder(Shape decoratedShape) {
         System.out.println("Border Color: Red");
     }
 }
 ```
 
-### 第 5 步
+### 第 5 步：使用 `RedShapeDecorator` 来装饰 `Shape` 对象
 
-使用 RedShapeDecorator 来装饰 Shape 对象。
-
-DecoratorPatternDemo.java
+### DecoratorPatternDemo.java
 
 ```java
 public class DecoratorPatternDemo {
+
     public static void main(String[] args) {
-
         Shape circle = new Circle();
-
         Shape redCircle = new RedShapeDecorator(new Circle());
-
         Shape redRectangle = new RedShapeDecorator(new Rectangle());
+
         System.out.println("Circle with normal border");
         circle.draw();
 
@@ -1576,25 +1641,20 @@ public class DecoratorPatternDemo {
 }
 ```
 
-### 第 6 步
-
-验证输出。
+### 第 6 步：验证输出
 
 ```
 Circle with normal border
 Shape: Circle
-
 Circle of red border
 Shape: Circle
 Border Color: Red
-
 Rectangle of red border
-```
-
-![](img/6426660228f292f87ed477d27e961d81_62_0.png)
-
 Shape: Rectangle
 Border Color: Red
+```
+
+![输出结果](img/6426660228f292f87ed477d27e961d81_62_0.png)
 
 ## 12. 外观模式 (FACADE PATTERN)
 
@@ -1604,17 +1664,15 @@ Border Color: Red
 
 ### 实现
 
-我们将创建一个 Shape 接口以及实现该接口的具体类。下一步将定义一个外观类 ShapeMaker。
+我们将创建一个 `Shape` 接口以及实现该接口的具体类。下一步将定义一个外观类 `ShapeMaker`。
 
-ShapeMaker 使用具体类来将调用委托给这些类。我们的演示类 DecoratorPatternDemo 将使用 ShapeMaker 类来显示结果。
+`ShapeMaker` 使用具体类来将调用委托给这些类。我们的演示类 `FacadePatternDemo` 将使用 `ShapeMaker` 类来显示结果。
 
-![](img/6426660228f292f87ed477d27e961d81_64_0.png)
+![类图](img/6426660228f292f87ed477d27e961d81_64_0.png)
 
-### 第 1 步
+### 第 1 步：创建一个接口
 
-创建一个接口。
-
-Shape.java
+### Shape.java
 
 ```java
 public interface Shape {
@@ -1622,21 +1680,33 @@ public interface Shape {
 }
 ```
 
-### 第 2 步
-
-创建实现相同接口的具体类。
+### 第 2 步：创建实现相同接口的具体类
 
 ### Rectangle.java
 
 ```java
 public class Rectangle implements Shape {
-
-  @Override
-  public void draw() {
-    System.out.println("Rectangle::draw()");
-  }
+    @Override
+    public void draw() {
+        System.out.println("Rectangle::draw()");
+    }
 }
 ```
+
+### Square.java
+
+```java
+public class Square implements Shape {
+    @Override
+    public void draw() {
+        System.out.println("Square::draw()");
+    }
+}
+```
+
+
+
+## 外观模式
 
 ### Square.java
 
@@ -1664,14 +1734,13 @@ public class Circle implements Shape {
 
 ![](img/6426660228f292f87ed477d27e961d81_65_0.png)
 
-### 第 3 步
-
-创建一个外观类。
+### 第 3 步：创建一个外观类
 
 ### ShapeMaker.java
 
 ```java
 public class ShapeMaker {
+
     private Shape circle;
     private Shape rectangle;
     private Shape square;
@@ -1696,14 +1765,13 @@ public class ShapeMaker {
 }
 ```
 
-### 第 4 步
-
-使用外观绘制各种类型的形状。
+### 第 4 步：使用外观绘制各种类型的形状
 
 ### FacadePatternDemo.java
 
 ```java
 public class FacadePatternDemo {
+
     public static void main(String[] args) {
         ShapeMaker shapeMaker = new ShapeMaker();
         shapeMaker.drawCircle();
@@ -1715,31 +1783,27 @@ public class FacadePatternDemo {
 
 ![](img/6426660228f292f87ed477d27e961d81_66_0.png)
 
-### 第 5 步
-
-验证输出。
+### 第 5 步：验证输出
 
 | Circle::draw() |
 | Rectangle::draw() |
 | Square::draw() |
 
-## 13. 享重量模式 (FLYWEIGHT PATTERN)
+## 13. 享元模式
 
-享重量模式主要用于通过减少创建的对象数量来降低内存占用并提高性能。这种设计属于结构模式，因为它提供了减少对象数量的方法从而改进应用程序的对象结构。
+享元模式主要用于通过减少创建的对象数量来降低内存占用并提高性能。这种设计属于结构模式，因为它提供了减少对象数量的方法从而改进应用程序的对象结构。
 
-享重量模式尝试通过存储已有的类型对象来重用它们，并在未找到匹配对象时创建新对象。我们将通过绘制 20 个不同位置的圆来演示这种模式，但只会创建 5 个对象。由于只有 5 种颜色可用，因此使用了属性。
+享元模式尝试通过存储已有的类型对象来重用它们，并在未找到匹配对象时创建新对象。我们将通过绘制 20 个不同位置的圆来演示这种模式，但只会创建 5 个对象。由于只有 5 种颜色可用，因此使用了属性。
 
 ### 实现
 
-我们将创建一个 Shape 接口以及实现该接口的具体类 Circle。下一步将定义一个工厂类 ShapeFactory。
+我们将创建一个 `Shape` 接口以及实现该接口的具体类 `Circle`。下一步将定义一个工厂类 `ShapeFactory`。
 
-ShapeFactory 拥有一个以颜色为键的 HashMap。当请求 ShapeFactory 创建特定颜色的圆时，它会检查 HashMap 中的对象。如果找到，则返回该对象；否则创建一个新对象存储在 map 中供以后使用并返回给客户端。我们的演示类 FlyweightDemo 将使用 ShapeFactory 传递信息（红/绿/蓝）来获取所需的颜色圆。
+`ShapeFactory` 拥有一个以颜色为键的 `HashMap`。当请求 `ShapeFactory` 创建特定颜色的圆时，它会检查 `HashMap` 中的对象。如果找到，则返回该对象；否则创建一个新对象存储在 map 中供以后使用并返回给客户端。我们的演示类 `FlyweightDemo` 将使用 `ShapeFactory` 传递信息（红/绿/蓝）来获取所需的颜色圆。
 
 ![](img/6426660228f292f87ed477d27e961d81_68_0.png)
 
-### 第 1 步
-
-创建一个接口。
+### 第 1 步：创建一个接口
 
 ### Shape.java
 
@@ -1749,14 +1813,13 @@ public interface Shape {
 }
 ```
 
-### 第 2 步
-
-实现相同接口的具体类。
+### 第 2 步：实现相同接口的具体类
 
 ### Circle.java
 
 ```java
 public class Circle implements Shape {
+
     private String color;
     private int x;
     private int y;
@@ -1784,9 +1847,7 @@ public class Circle implements Shape {
 }
 ```
 
-### 第 3 步
-
-创建一个根据给定信息生成具体类的工厂。
+### 第 3 步：创建一个根据给定信息生成具体类的工厂
 
 ### ShapeFactory.java
 
@@ -1794,11 +1855,12 @@ public class Circle implements Shape {
 import java.util.HashMap;
 
 public class ShapeFactory {
+
     private static final HashMap<String, Shape> circleMap = new HashMap<>();
 
     public static Shape getCircle(String color) {
-        Circle circle = (Circle)circleMap.get(color);
-        if(circle == null) {
+        Circle circle = (Circle) circleMap.get(color);
+        if (circle == null) {
             circle = new Circle(color);
             circleMap.put(color, circle);
             System.out.println("Creating circle of color : " + color);
@@ -1810,43 +1872,42 @@ public class ShapeFactory {
 
 ![](img/6426660228f292f87ed477d27e961d81_70_0.png)
 
-### 第 4 步
-
-通过传递颜色信息使用工厂获取具体类对象。
+### 第 4 步：通过传递颜色信息使用工厂获取具体类对象
 
 ### FlyweightDemo.java
 
 ```java
 public class FlyweightDemo {
-    private static final String colors[] = { "Red", "Green", "Blue", "Black" };
-    public static void main(String[] args) {
 
-        for(int i=0; i < 20; i++) {
-            Circle circle = (Circle)ShapeFactory.getCircle(getRandomColor());
+    private static final String colors[] = { "Red", "Green", "Blue", "Black" };
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 20; i++) {
+            Circle circle = (Circle) ShapeFactory.getCircle(getRandomColor());
             circle.setX(getRandomX());
             circle.setY(getRandomY());
             circle.setRadius(100);
             circle.draw();
         }
     }
+
     private static String getRandomColor() {
-        return colors[(int)(Math.random()*colors.length)];
+        return colors[(int) (Math.random() * colors.length)];
     }
 
     private static int getRandomX() {
-        return (int)(Math.random()*100);
+        return (int) (Math.random() * 100);
     }
 
     private static int getRandomY() {
-        return (int)(Math.random()*100);
+        return (int) (Math.random() * 100);
     }
 }
 ```
 
-### 第 5 步
+### 第 5 步：验证输出
 
-验证输出。
-
+```
 Creating circle of color : Black
 Circle: Draw() [Color : Black, x : 36, y : 71, radius : 100]
 Creating circle of color : Green
@@ -1875,17 +1936,16 @@ Creating circle of color : Green
 Circle: Draw() [Color : Green, x : 64, y : 89, radius : 100]
 Creating circle of color : Blue
 Circle: Draw() [Color : Blue, x : 3, y : 91, radius : 100]
+```
 
 ![](img/6426660228f292f87ed477d27e961d81_72_0.png)
-
-
-
-
 
 ```
 Circle: Draw() [Color : Red, x : 76, y :82, radius :100]
 Circle: Draw() [Color : Blue, x : 95, y :82, radius :100]
 ```
+
+## 14. 代理模式
 
 在代理模式中，一个类代表另一个类的功能。这种设计模式属于结构型模式。
 
@@ -1899,11 +1959,9 @@ Circle: Draw() [Color : Blue, x : 95, y :82, radius :100]
 
 ![](img/6426660228f292f87ed477d27e961d81_74_0.png)
 
-### 步骤 1
+### 步骤 1：创建一个接口
 
-创建一个接口。
-
-Image.java
+### Image.java
 
 ```java
 public interface Image {
@@ -1911,9 +1969,7 @@ public interface Image {
 }
 ```
 
-### 步骤 2
-
-创建实现相同接口的具体类。
+### 步骤 2：创建实现相同接口的具体类
 
 ### RealImage.java
 
@@ -1922,7 +1978,7 @@ public class RealImage implements Image {
 
     private String fileName;
 
-    public RealImage(String fileName){
+    public RealImage(String fileName) {
         this.fileName = fileName;
         loadFromDisk(fileName);
     }
@@ -1932,7 +1988,7 @@ public class RealImage implements Image {
         System.out.println("Displaying " + fileName);
     }
 
-    private void loadFromDisk(String fileName){
+    private void loadFromDisk(String fileName) {
         System.out.println("Loading " + fileName);
     }
 }
@@ -1941,18 +1997,18 @@ public class RealImage implements Image {
 ### ProxyImage.java
 
 ```java
-public class ProxyImage implements Image{
+public class ProxyImage implements Image {
 
     private RealImage realImage;
     private String fileName;
 
-    public ProxyImage(String fileName){
+    public ProxyImage(String fileName) {
         this.fileName = fileName;
     }
 
     @Override
     public void display() {
-        if(realImage == null){
+        if (realImage == null) {
             realImage = new RealImage(fileName);
         }
         realImage.display();
@@ -1960,15 +2016,11 @@ public class ProxyImage implements Image{
 }
 ```
 
-### 步骤 3
-
-在需要时使用 `ProxyImage` 获取 `RealImage` 类的对象。
+### 步骤 3：在需要时使用 `ProxyImage` 获取 `RealImage` 类的对象
 
 ### ProxyPatternDemo.java
 
-### 步骤 4
-
-验证输出。
+### 步骤 4：验证输出
 
 | Loading test_10mb.jpg |
 | :--- |
@@ -1979,7 +2031,7 @@ public class ProxyImage implements Image{
 
 ## 15. 责任链模式
 
-顾如名，责任链模式为请求创建接收者对象的链。该模式根据请求类型将请求的发送者和接收者解耦。这种模式属于行为模式。
+顾名思义，责任链模式为请求创建接收者对象的链。该模式根据请求类型将请求的发送者和接收者解耦。这种模式属于行为模式。
 
 在这种模式中，通常每个接收者都包含对另一个接收者的引用。如果一个对象无法处理请求，它会将相同的请求传递给下一个接收者，依此类推。
 
@@ -2005,11 +2057,31 @@ public class ProxyImage implements Image{
 | +logMessage() : void | +logMessage() : void | +logMessage() : void |
 | -write() : void | -write() : void | -write() : void |
 
-### Step 1
+### 步骤 1：创建一个抽象日志类
 
-创建一个抽象日志类。
+### AbstractLogger.java
 
-AbstractLogger.java
+```java
+public abstract class AbstractLogger {
+
+    public static int INFO = 1;
+    public static int DEBUG = 2;
+    public static int ERROR = 3;
+
+    protected int level;
+    protected AbstractLogger nextLogger;
+}
+```
+
+
+
+## 16. 责任链模式 (CHAIN OF RESPONSIBILITY PATTERN)
+
+### 实现
+
+我们将创建一个抽象类 `AbstractLogger`，它包含日志记录级别和下一个日志记录器的引用。然后创建三个继承自 `AbstractLogger` 的具体类，分别用于控制台、错误和文件日志记录。
+
+### AbstractLogger.java
 
 ```java
 public abstract class AbstractLogger {
@@ -2018,16 +2090,18 @@ public abstract class AbstractLogger {
     public static int ERROR = 3;
 
     protected int level;
+
+    // next element in chain or responsibility
     protected AbstractLogger nextLogger;
 
-    public void setNextLogger(AbstractLogger nextLogger){
+    public void setNextLogger(AbstractLogger nextLogger) {
         this.nextLogger = nextLogger;
     }
 
-    public void logMessage(int level, String message){
-        if(level <= this.level){
+    public void logMessage(int level, String message) {
+        if (level <= this.level) {
             write(message);
-        } else if(nextLogger != null){
+        } else if (nextLogger != null) {
             nextLogger.logMessage(level, message);
         }
     }
@@ -2044,8 +2118,7 @@ public abstract class AbstractLogger {
 
 ```java
 public class ConsoleLogger extends AbstractLogger {
-
-    public ConsoleLogger(int level){
+    public ConsoleLogger(int level) {
         this.level = level;
     }
 
@@ -2060,8 +2133,7 @@ public class ConsoleLogger extends AbstractLogger {
 
 ```java
 public class ErrorLogger extends AbstractLogger {
-
-    public ErrorLogger(int level){
+    public ErrorLogger(int level) {
         this.level = level;
     }
 
@@ -2076,8 +2148,7 @@ public class ErrorLogger extends AbstractLogger {
 
 ```java
 public class FileLogger extends AbstractLogger {
-
-    public FileLogger(int level){
+    public FileLogger(int level) {
         this.level = level;
     }
 
@@ -2096,11 +2167,10 @@ public class FileLogger extends AbstractLogger {
 
 ```java
 public class ChainPatternDemo {
-
     private static AbstractLogger getChainOfNeighbors() {
-        AbstractLogger errorLogger = new ErrorLogger(ERROR);
-        AbstractLogger fileLogger = new FileLogger(DEBUG);
-        AbstractLogger consoleLogger = new ConsoleLogger(INFO);
+        AbstractLogger errorLogger = new ErrorLogger(AbstractLogger.ERROR);
+        AbstractLogger fileLogger = new FileLogger(AbstractLogger.DEBUG);
+        AbstractLogger consoleLogger = new ConsoleLogger(AbstractLogger.INFO);
 
         errorLogger.setNextLogger(fileLogger);
         fileLogger.setNextLogger(consoleLogger);
@@ -2118,16 +2188,50 @@ public class ChainPatternDemo {
 }
 ```
 
+## 17. 命令模式 (COMMAND PATTERN)
 
+### 实现
 
+我们将创建一个 `Order` 接口，然后创建实现了 `Order` 接口的实体类 `BuyStock` 和 `SellStock`。`Broker` 类作为命令调用者，接收并执行命令。
+
+### Order.java
 
 ```java
-public BuyStockStock(Stock abcStock) {
-    this.abcStock = abcStock;
+public interface Order {
+    void execute();
 }
+```
 
-public void execute() {
-    abcStock.buy();
+### Stock.java
+
+```java
+public class Stock {
+    private String name = "ABC";
+    private int quantity = 10;
+
+    public void buy() {
+        System.out.println("Stock [ Name: " + name + ", Quantity: " + quantity + " ] bought");
+    }
+
+    public void sell() {
+        System.out.println("Stock [ Name: " + name + ", Quantity: " + quantity + " ] sold");
+    }
+}
+```
+
+### BuyStock.java
+
+```java
+public class BuyStock implements Order {
+    private Stock abcStock;
+
+    public BuyStock(Stock abcStock) {
+        this.abcStock = abcStock;
+    }
+
+    public void execute() {
+        abcStock.buy();
+    }
 }
 ```
 
@@ -2163,23 +2267,19 @@ public class Broker {
     public void takeOrder(Order order) {
         orderList.add(order);
     }
-```
 
-![](img/6426660228f292f87ed477d27e961d81_84_0.png)
-
-```java
-}
-public void placeOrders(){
-    for (Order order : orderList) {
-        order.execute();
+    public void placeOrders() {
+        for (Order order : orderList) {
+            order.execute();
+        }
+        orderList.clear();
     }
-    orderList.clear();
 }
 ```
 
 ### Step 5
 
-使用 Broker 类来接收并执行命令。
+使用 `Broker` 类来接收并执行命令。
 
 ### CommandPatternDemo.java
 
@@ -2205,13 +2305,10 @@ public class CommandPatternDemo {
 验证输出。
 
 | 已购买股票 [ 名称: ABC, 数量: 10 ] |
+| :--- |
 | 已卖出股票 [ 名称: ABC, 数量: 10 ] |
 
-![](img/6426660228f292f87ed477d27e961d81_85_0.png)
-
-80
-
-## 17. 解释器模式 (INTERPRETER PATTERN)
+## 18. 解释器模式 (INTERPRETER PATTERN)
 
 解释器模式提供了一种评估语言语法或表达式的方法。这种模式属于行为模式。该模式涉及实现一个表达式接口，用于解释特定的上下文。该模式用于 SQL 解析、符号处理引擎等领域。
 
@@ -2221,13 +2318,11 @@ public class CommandPatternDemo {
 
 `InterpreterPatternDemo` 是我们的演示类，它将通过使用 `Expression` 类来创建规则并演示表达式的解析。
 
-![](img/6426660228f292f87ed477d27e961d81_86_0.png)
-
 ### Step 1
 
 创建一个表达式接口。
 
-Expression.java
+### Expression.java
 
 ```java
 public interface Expression {
@@ -2239,20 +2334,19 @@ public interface Expression {
 
 创建实现上述接口的具体类。
 
-TerminalExpression.java
+### TerminalExpression.java
 
 ```java
 public class TerminalExpression implements Expression {
-
     private String data;
 
-    public TerminalExpression(String data){
+    public TerminalExpression(String data) {
         this.data = data;
     }
 
     @Override
     public boolean interpret(String context) {
-        if(context.contains(data)){
+        if (context.contains(data)) {
             return true;
         }
         return false;
@@ -2260,27 +2354,22 @@ public class TerminalExpression implements Expression {
 }
 ```
 
-OrExpression.java
+### OrExpression.java
 
 ```java
 public class OrExpression implements Expression {
-
     private Expression expr1 = null;
     private Expression expr2 = null;
-```
 
-![](img/6426660228f292f87ed477d27e961d81_87_0.png)
+    public OrExpression(Expression expr1, Expression expr2) {
+        this.expr1 = expr1;
+        this.expr2 = expr2;
+    }
 
-```java
-public OrExpression(Expression expr1, Expression expr2) {
-    this.expr1 = expr1;
-    this.expr2 = expr2;
-}
-
-@Override
-public boolean interpret(String context) {
-    return expr1.interpret(context) || expr2.interpret(context);
-}
+    @Override
+    public boolean interpret(String context) {
+        return expr1.interpret(context) || expr2.interpret(context);
+    }
 }
 ```
 
@@ -2311,16 +2400,15 @@ public class AndExpression implements Expression {
 
 ```java
 public class InterpreterPatternDemo {
-
     // 规则：Robert 和 John 是男性
-    public static Expression getMaleExpression(){
+    public static Expression getMaleExpression() {
         Expression robert = new TerminalExpression("Robert");
         Expression john = new TerminalExpression("John");
         return new OrExpression(robert, john);
     }
 
     // 规则：Julie 是已婚女性
-    public static Expression getMarriedWomanExpression(){
+    public static Expression getMarriedWomanExpression() {
         Expression julie = new TerminalExpression("Julie");
         Expression married = new TerminalExpression("Married");
         return new AndExpression(julie, married);
@@ -2345,7 +2433,7 @@ is male? true
 is married woman? true
 ```
 
-## 18. 迭代器模式 (ITERATOR PATTERN)
+## 19. 迭代器模式 (ITERATOR PATTERN)
 
 迭代器模式是一种用于访问集合元素而不暴露其内部表示的设计模式。它属于行为模式。
 
@@ -2353,13 +2441,11 @@ is married woman? true
 
 我们将创建一个 `Iterator` 接口以及实现该接口的具体类来访问集合。`IteratorPatternDemo` 是我们的演示类，将使用 `NameRepository` 来打印名称。
 
-![](img/6426660228f292f87ed477d27e961d81_90.png)
-
 ### Step 1
 
 创建接口。
 
-Iterator.java
+### Iterator.java
 
 ```java
 public interface Iterator {
@@ -2368,17 +2454,17 @@ public interface Iterator {
 }
 ```
 
-### Step 2
-
-创建实现上述接口的具体类。该类有一个内部类 `NameIterator`。
-
-Container.java
+### Container.java
 
 ```java
 public interface Container {
     public Iterator getIterator();
 }
 ```
+
+### Step 2
+
+创建实现上述接口的具体类。该类有一个内部类 `NameIterator`。
 
 ### NameRepository.java
 
@@ -2396,7 +2482,7 @@ public class NameRepository implements Container {
 
         @Override
         public boolean hasNext() {
-            if(index < names.length) {
+            if (index < names.length) {
                 return true;
             }
             return false;
@@ -2404,7 +2490,7 @@ public class NameRepository implements Container {
 
         @Override
         public Object next() {
-            if(hasNext()) {
+            if (hasNext()) {
                 return names[index++];
             }
             return null;
@@ -2417,31 +2503,17 @@ public class NameRepository implements Container {
 
 使用 `NameRepository` 获取迭代器并打印名称。
 
-IteratorPatternDemo.java
+### IteratorPatternDemo.java
 
 ```java
 public class IteratorPatternDemo {
-  public static void main(String[] args) {
-    NameRepository namesRepository = new NameRepository();
-
-    for(Iterator iter = namesRepository.getIterator();iter.hasNext();){
-      String name = (String)iter.next();
-      System.out.println("Name : " + name);
+    public static void main(String[] args) {
+        NameRepository namesRepository = new NameRepository();
     }
-  }
 }
 ```
 
-### Step 4
 
-验证输出。
-
-```
-Name : Robert
-Name : John
-Name : Julie
-Name : Lora
-```
 
 ## 19. 中介者模式 (MEDIATOR PATTERN)
 
@@ -2455,41 +2527,30 @@ Name : Lora
 
 | MediatorPatternDemo | User | ChatRoom |
 | :--- | :--- | :--- |
-| +main() : void | -name : String
-+User() : void
-+getName() : void
-+setName() : void
-+sendMessage() : void | | +showMessage() : void |
+| +main() : void | -name : String<br>+User() : void<br>+getName() : void<br>+setName() : void<br>+sendMessage() : void | +showMessage() : void |
 
-### Step 1
+### Step 1: 创建中介类
 
-创建中介类。
-
-### ChatRoom.java
+#### ChatRoom.java
 
 ```java
 import java.util.Date;
 
 public class ChatRoom {
-    public static void showMessage(User user, String message){
-        System.out.println(new Date().toString())
-        + " [" + user.getName() + "] : " + message);
+
+    public static void showMessage(User user, String message) {
+        System.out.println(new Date().toString() + " [" + user.getName() + "] : " + message);
     }
 }
 ```
 
+### Step 2: 创建用户类
 
-
-
-
-### 第 2 
-
-创建用户类。
-
-### User.java
+#### User.java
 
 ```java
 public class User {
+
     private String name;
 
     public String getName() {
@@ -2500,47 +2561,39 @@ public class User {
         this.name = name;
     }
 
-    public User(String name){
+    public User(String name) {
         this.name = name;
     }
 
-    public void sendMessage(String message){
-        ChatRoom.showMessage(this,message);
+    public void sendMessage(String message) {
+        ChatRoom.showMessage(this, message);
     }
 }
 ```
 
-### 第 3 
+### Step 3: 使用中介者对象显示它们之间的通信
 
-使用中介者对象显示它们之间的通信。
-
-### MediatorPatternDemo.java
+#### MediatorPatternDemo.java
 
 ```java
 public class MediatorPatternDemo {
+
     public static void main(String[] args) {
         User robert = new User("Robert");
         User john = new User("John");
 
         robert.sendMessage("Hi John!");
+        john.sendMessage("Hello! Robert!");
     }
 }
 ```
 
-![](img/6426660228f292f87ed477d27e961d81_94_0.png)
-
-```java
-john.sendMessage("Hello! Robert!");
-}
-}
-```
-
-### 第 4 
-
-验证输出。
+### Step 4: 验证输出
 
 | Thu Jan 31 16:05:46 IST 2013 [Robert] : Hi! John! |
 | Thu Jan 31 16:05:46 IST 2013 [John] : Hello! Robert! |
+
+---
 
 ## 20. 备忘模式 (MEMENTO PATTERN)
 
@@ -2548,73 +2601,67 @@ john.sendMessage("Hello! Robert!");
 
 ### 实现
 
-备忘模式使用了三个参与者类。Memento（备备）包含要恢复的对象的状态。Originator（源源）创建并将状态存储在 Memento 对象中，而 Caretaker（ care维护者）负责从 Memento 恢复对象状态。我们需要创建 Memento、Originator 和 CareTaker 类。
+备忘模式使用了三个参与者类。`Memento`（备忘）包含要恢复的对象的状态。`Originator`（发起人）创建并将状态存储在 `Memento` 对象中，而 `Caretaker`（管理者）负责从 `Memento` 恢复对象状态。我们需要创建 `Memento`、`Originator` 和 `CareTaker` 类。
 
-我们的演示类 MediatorPatternDemo 将使用 CareTaker 和 Originator 对象来展示对象状态的恢复。
+我们的演示类 `MementoPatternDemo` 将使用 `CareTaker` 和 `Originator` 对象来展示对象状态的恢复。
 
-![](img/6426660228f292f87ed477d27e961d81_96_0.png)
+### Step 1: 创建 Memento 类
 
-### 第 1 
-
-创建 Memento 类。
-
-### Memento.java
+#### Memento.java
 
 ```java
 public class Memento {
-    private String state;
-```
 
-```java
-public Memento(String state){
-    this.state = state;
-}
-
-public String getState(){
-    return state;
-}
-```
-
-### 第 2 
-
-创建 Originator 类。
-
-### Originator.java
-
-```java
-public class Originator {
     private String state;
 
-    public void setState(String state){
+    public Memento(String state) {
         this.state = state;
     }
 
-    public String getState(){
+    public String getState() {
+        return state;
+    }
+}
+```
+
+### Step 2: 创建 Originator 类
+
+#### Originator.java
+
+```java
+public class Originator {
+
+    private String state;
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getState() {
         return state;
     }
 
-    public Memento saveStateToMemento(Memento memento){
+    public Memento saveStateToMemento() {
         return new Memento(state);
     }
 
-    public void getStateFromMemento(Memento memento){
+    public void getStateFromMemento(Memento memento) {
         state = memento.getState();
     }
 }
 ```
 
-### 第 3 
+### Step 3: 创建 CareTaker 类
 
-创建 CareTaker 类。
-
-### CareTaker.java
+#### CareTaker.java
 
 ```java
 import java.util.ArrayList;
 import java.util.List;
 
 public class CareTaker {
-    private List<Memento> mementoList = new ArrayList<Memento>();
+
+    private List<Memento> mementoList = new ArrayList<>();
 
     public void add(Memento state) {
         mementoList.add(state);
@@ -2626,43 +2673,42 @@ public class CareTaker {
 }
 ```
 
-### 第 4 
+### Step 4: 使用 CareTaker 和 Originator 对象
 
-使用 CareTaker 和 Originator 对象。
-
-### MementoPatternDemo.java
+#### MementoPatternDemo.java
 
 ```java
 public class MementoPatternDemo {
+
     public static void main(String[] args) {
         Originator originator = new Originator();
         CareTaker careTaker = new CareTaker();
+
         originator.setState("State #1");
         originator.setState("State #2");
         careTaker.add(originator.saveStateToMemento());
+
         originator.setState("State #3");
         careTaker.add(originator.saveStateToMemento());
+
         originator.setState("State #4");
-```
 
-```java
-System.out.println("Current State: " + originator.getState());
-
-originator.getStateFromMemento(careTaker.get(0));
-System.out.println("First saved State: " + originator.getState());
-originator.getStateFromMemento(careTaker.get(1));
-System.out.println("Second saved State: " + originator.getState());
-}
+        System.out.println("Current State: " + originator.getState());
+        originator.getStateFromMemento(careTaker.get(0));
+        System.out.println("First saved State: " + originator.getState());
+        originator.getStateFromMemento(careTaker.get(1));
+        System.out.println("Second saved State: " + originator.getState());
+    }
 }
 ```
 
-### 第 5 
-
-验证输出。
+### Step 5: 验证输出
 
 | Current State: State #4 |
 | First saved State: State #2 |
 | Second saved State: State #3 |
+
+---
 
 ## 21. 观察者模式 (OBSERVER PATTERN)
 
@@ -2670,24 +2716,21 @@ System.out.println("Second saved State: " + originator.getState());
 
 ### 实现
 
-观察者模式使用了三个参与者类：Subject（主体）、Observer（观察者）和 Client（客户端）。Subject 是具有方法可以向客户端对象添加或移除观察者的对象。我们创建了一个抽象类 Observer 和一个继承 Observer 类的具体类 Subject。
+观察者模式使用了三个参与者类：`Subject`（主体）、`Observer`（观察者）和 `Client`（客户端）。`Subject` 是具有方法可以向客户端对象添加或移除观察者的对象。我们创建了一个抽象类 `Observer` 和一个具体类 `Subject`。
 
-我们的演示类 ObserverPatternDemo 将使用 Subject 和具体类对象来展示观察者模式的作用。
+我们的演示类 `ObserverPatternDemo` 将使用 `Subject` 和具体观察者对象来展示观察者模式的作用。
 
-![](img/6426660228f292f87ed477d27e961d81_100.png)
+### Step 1: 创建 Subject 类
 
-### 第 1 
-
-创建 Subject 类。
-
-### Subject.java
+#### Subject.java
 
 ```java
 import java.util.ArrayList;
 import java.util.List;
 
 public class Subject {
-    List<Observer> observers = new ArrayList<>();
+
+    private List<Observer> observers = new ArrayList<>();
     private int state;
 
     public void attach(Observer observer) {
@@ -2714,26 +2757,24 @@ public class Subject {
 }
 ```
 
-### 第 2 
+### Step 2: 创建 Observer 类
 
-创建 Observer 类。
-
-### Observer.java
+#### Observer.java
 
 ```java
 public abstract class Observer {
+
     public abstract void update(int state);
 }
 ```
 
-### 第 3 
+### Step 3: 创建具体的观察者类
 
-创建具体的观察者类。
-
-# BinaryObserver.java
+#### BinaryObserver.java
 
 ```java
 public class BinaryObserver extends Observer {
+
     @Override
     public void update(int state) {
         System.out.println("Binary state: " + Integer.toBinaryString(state));
@@ -2741,10 +2782,11 @@ public class BinaryObserver extends Observer {
 }
 ```
 
-# OctalObserver.java
+#### OctalObserver.java
 
 ```java
 public class OctalObserver extends Observer {
+
     @Override
     public void update(int state) {
         System.out.println("Octal state: " + Integer.toOctalString(state));
@@ -2752,10 +2794,11 @@ public class OctalObserver extends Observer {
 }
 ```
 
-# HexaObserver.java
+#### HexaObserver.java
 
 ```java
 public class HexaObserver extends Observer {
+
     @Override
     public void update(int state) {
         System.out.println("Hex state: " + Integer.toHexString(state));
@@ -2763,14 +2806,13 @@ public class HexaObserver extends Observer {
 }
 ```
 
-### 第 4 
+### Step 4: 使用 Subject 和观察者对象
 
-使用 Subject 和观察者对象。
-
-# ObserverPatternDemo.java
+#### ObserverPatternDemo.java
 
 ```java
 public class ObserverPatternDemo {
+
     public static void main(String[] args) {
         Subject subject = new Subject();
 
@@ -2791,41 +2833,40 @@ public class ObserverPatternDemo {
 }
 ```
 
+---
 
+## 22. 状态模式 (STATE PATTERN)
 
+### Step 3: 创建上下文类（Context）
 
-### 第 3 
-
-创建上下文类（Context）。
-
-Context.java
+#### Context.java
 
 ```java
 public class Context {
+
     private State state;
 
-    public Context(){
+    public Context() {
         state = null;
     }
 
-    public void setState(State state){
+    public void setState(State state) {
         this.state = state;
     }
 
-    public State getState(){
+    public State getState() {
         return state;
     }
 }
 ```
 
-### 第 4 
+### Step 4: 使用 Context 观察 State 改变时行为的变化
 
-使用 Context 观察 State 改变时行为的变化。
-
-StatePatternDemo.java
+#### StatePatternDemo.java
 
 ```java
 public class StatePatternDemo {
+
     public static void main(String[] args) {
         Context context = new Context();
 
@@ -2842,9 +2883,9 @@ public class StatePatternDemo {
 }
 ```
 
-### 第 5 
 
-验证输出。
+
+### 第 5 步：验证输出
 
 | 玩家处于开始状态 |
 | :--- |
@@ -2854,7 +2895,7 @@ public class StatePatternDemo {
 
 ## 23. 空对象模式 (NULL OBJECT PATTERN)
 
-空对象模式用一个空对象替换对 NULL 对象的检查。与其对空值进行 if 判断，空对象反映了一种“什么都不做”的关系。这种空对象也可以在数据不可用时提供默认行为。
+空对象模式用一个空对象替换对 `NULL` 对象的检查。与其对空值进行 `if` 判断，空对象反映了一种“什么都不做”的关系。这种空对象也可以在数据不可用时提供默认行为。
 
 在对象模式中，我们创建一个抽象类，并指定要执行的各种操作；具体类继承该类，而空对象类则提供该类的无实现，并将用于检查空值。
 
@@ -2866,28 +2907,29 @@ public class StatePatternDemo {
 
 ![](img/6426660228f292f87ed477d27e961d81_109_0.png)
 
-### 第 1 
+### 第 1 步：创建一个抽象类
 
-创建一个抽象类。
-
-### AbstractCustomer.java
+#### AbstractCustomer.java
 
 ```java
 public abstract class AbstractCustomer {
+
     protected String name;
+
     public abstract boolean isNil();
+
     public abstract String getName();
+
 }
 ```
 
-### 第 2 
+### 第 2 步：创建继承上述类的具体类
 
-创建继承上述类的具体类。
-
-# RealCustomer.java
+#### RealCustomer.java
 
 ```java
 public class RealCustomer extends AbstractCustomer {
+
     public RealCustomer(String name) {
         this.name = name;
     }
@@ -2904,15 +2946,11 @@ public class RealCustomer extends AbstractCustomer {
 }
 ```
 
-### NullCustomer.java
+#### NullCustomer.java
 
 ```java
 public class NullCustomer extends AbstractCustomer {
-```
 
-![](img/6426660228f292f87ed477d27e961d81_110_0.png)
-
-```java
     @Override
     public String getName() {
         return "Not Available in Customer Database"; // 客户数据库中不可用
@@ -2925,11 +2963,9 @@ public class NullCustomer extends AbstractCustomer {
 }
 ```
 
-### 第 3 
+### 第 3 步：创建 CustomerFactory 类
 
-创建 CustomerFactory 类。
-
-# CustomerFactory.java
+#### CustomerFactory.java
 
 ```java
 public class CustomerFactory {
@@ -2947,18 +2983,16 @@ public class CustomerFactory {
 }
 ```
 
-### 第 4 
+### 第 4 步：使用 `CustomerFactory` 根据传入的客户名称获取 `RealCustomer` 或 `NullCustomer` 对象
 
-使用 `CustomerFactory` 根据传入的客户名称获取 `RealCustomer` 或 `NullCustomer` 对象。
-
-# NullPatternDemo.java
+#### NullPatternDemo.java
 
 ![](img/6426660228f292f87ed477d27e961d81_111_0.png)
 
 ```java
 public class NullPatternDemo {
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         AbstractCustomer customer1 = CustomerFactory.getCustomer("Rob");
         AbstractCustomer customer2 = CustomerFactory.getCustomer("Bob");
         AbstractCustomer customer3 = CustomerFactory.getCustomer("Julie");
@@ -2973,9 +3007,7 @@ public class NullPatternDemo {
 }
 ```
 
-### 第 5 
-
-验证输出。
+### 第 5 步：验证输出
 
 | 客户 |
 | :--- |
@@ -2992,17 +3024,15 @@ public class NullPatternDemo {
 
 ### 实现
 
-我们将创建一个定义操作的 `Strategy` 接口，以及实现该接口的具体策略类。Context 是一个使用 Strategy 的类。
+我们将创建一个定义操作的 `Strategy` 接口，以及实现该接口的具体策略类。`Context` 是一个使用 `Strategy` 的类。
 
-我们的演示类 `StrategyPatternDemo` 将使用 Context 和策略对象来演示根据其部署或使用的策略，Context 行为的变化。
+我们的演示类 `StrategyPatternDemo` 将使用 `Context` 和策略对象来演示根据其部署或使用的策略，`Context` 行为的变化。
 
 ![](img/6426660228f292f87ed477d27e961d81_113_0.png)
 
-### 第 1 
+### 第 1 步：创建一个接口
 
-创建一个接口。
-
-Strategy.java
+#### Strategy.java
 
 ```java
 public interface Strategy {
@@ -3010,14 +3040,13 @@ public interface Strategy {
 }
 ```
 
-### 第 2 
+### 第 2 步：创建实现相同接口的具体类
 
-创建实现相同接口的具体类。
-
-### OperationAdd.java
+#### OperationAdd.java
 
 ```java
-public class OperationAdd implements Strategy{
+public class OperationAdd implements Strategy {
+
     @Override
     public int doOperation(int num1, int num2) {
         return num1 + num2;
@@ -3025,10 +3054,11 @@ public class OperationAdd implements Strategy{
 }
 ```
 
-### OperationSubstract.java
+#### OperationSubtract.java
 
 ```java
-public class OperationSubstract implements Strategy{
+public class OperationSubtract implements Strategy {
+
     @Override
     public int doOperation(int num1, int num2) {
         return num1 - num2;
@@ -3036,10 +3066,11 @@ public class OperationSubstract implements Strategy{
 }
 ```
 
-### OperationMultiply.java
+#### OperationMultiply.java
 
 ```java
-public class OperationMultiply implements Strategy{
+public class OperationMultiply implements Strategy {
+
     @Override
     public int doOperation(int num1, int num2) {
         return num1 * num2;
@@ -3047,36 +3078,34 @@ public class OperationMultiply implements Strategy{
 }
 ```
 
-### 第 3 
-
-创建 Context 类。
+### 第 3 步：创建 Context 类
 
 ![](img/6426660228f292f87ed477d27e961d81_114_0.png)
 
-### Context.java
+#### Context.java
 
 ```java
 public class Context {
+
     private Strategy strategy;
 
-    public Context(Strategy strategy){
+    public Context(Strategy strategy) {
         this.strategy = strategy;
     }
 
-    public int executeStrategy(int num1, int num2){
+    public int executeStrategy(int num1, int num2) {
         return strategy.doOperation(num1, num2);
     }
 }
 ```
 
-### 第 4 
+### 第 4 步：使用 Context 观察策略改变时行为的变化
 
-使用 Context 观察策略改变时行为的变化。
-
-### StrategyPatternDemo.java
+#### StrategyPatternDemo.java
 
 ```java
 public class StrategyPatternDemo {
+
     public static void main(String[] args) {
         Context context = new Context(new OperationAdd());
         System.out.println("10 + 5 = " + context.executeStrategy(10, 5));
@@ -3090,9 +3119,7 @@ public class StrategyPatternDemo {
 }
 ```
 
-### 第 5 
-
-验证输出。
+### 第 5 步：验证输出
 
 ![](img/6426660228f292f87ed477d27e961d81_115_0.png)
 
@@ -3102,137 +3129,113 @@ public class StrategyPatternDemo {
 10 * 5 = 50
 ```
 
-# 25. 模板方法模式 (TEMPLATE PATTERN)
+## 25. 模板方法模式 (TEMPLATE PATTERN)
 
 在模板模式中，抽象类定义了执行其方法的方式。子类可以根据需要重写方法实现，但调用方式由抽象类定义的保持一致。该模式属于行为分类。
 
 ### 实现
 
-我们将创建一个定义操作的 `Game` 抽象类，并将模板方法设置为 `final` 以防被重写。Cricket 和 Football 是继承 Game 并重写其方法的具体类。
+我们将创建一个定义操作的 `Game` 抽象类，并将模板方法设置为 `final` 以防被重写。`Cricket` 和 `Football` 是继承 `Game` 并重写其方法的具体类。
 
-我们的演示类 `TemplateDemo` 将使用 `Game` 来演示模板模式的使用。
+我们的演示类 `TemplatePatternDemo` 将使用 `Game` 来演示模板模式的使用。
 
 ![](img/6426660228f292f87ed477d27e961d81_117_0.png)
 
-### 第 1 
+### 第 1 步：创建一个模板方法为 final 的抽象类
 
-创建一个模板方法为 final 的抽象类。
+#### Game.java
 
 ```java
 public abstract class Game {
+
     abstract void initialize();
+
     abstract void startPlay();
+
     abstract void endPlay();
 
-    //模板方法
-    public final void play(){
-
-        //初始化游戏
+    // 模板方法
+    public final void play() {
+        // 初始化游戏
         initialize();
-
-        //开始游戏
+        // 开始游戏
         startPlay();
-
         // 结束游戏
         endPlay();
     }
 }
 ```
 
-### 第 2 
+### 第 2 步：创建继承上述类的具体类
 
-创建继承上述类的具体类。
-
-### Cricket.java
+#### Cricket.java
 
 ```java
 public class Cricket extends Game {
 
     @Override
-    void endPlay() {
-        System.out.println("Cricket Game Finished!");
-    }
-
-    @Override
     void initialize() {
         System.out.println("Cricket Game Initialized! Start playing.");
     }
-}
-```
 
-![](img/6426660228f292f87ed477d27e961d81_118_0.png)
+    @Override
+    void startPlay() {
+        System.out.println("Cricket Game Started. Enjoy the game!");
+    }
 
-### 第 3 
-
-创建演示类。
-
-```java
-public class TemplateDemo {
-    public static void main(String[] args) {
-        Game game = new Cricket();
-        game.play();
+    @Override
+    void endPlay() {
+        System.out.println("Cricket Game Finished!");
     }
 }
 ```
 
-
-
-```
-}
-
-@Override
-void startPlay() {
-    System.out.println("Cricket Game Started. Enjoy the game!");
-}
-
-```
-
-### Football.java
+#### Football.java
 
 ```java
 public class Football extends Game {
 
-@Override
-void endPlay() {
-    System.out.println("Football Game Finished!");
-}
+    @Override
+    void initialize() {
+        System.out.println("Football Game Initialized! Start playing.");
+    }
 
-@Override
-void initialize() {
-    System.out.println("Football Game Initialized! Start playing.");
-}
+    @Override
+    void startPlay() {
+        System.out.println("Football Game Started. Enjoy the game!");
+    }
 
-@Override
-void startPlay() {
-    System.out.println("Football Game Started. Enjoy the game!");
+    @Override
+    void endPlay() {
+        System.out.println("Football Game Finished!");
+    }
 }
-
 ```
 
-### Step 3
+### 第 3 步：使用 Game 的模板方法 `play()` 来演示一种定义的游戏方式
 
-使用 Game 的模板方法 `play()` 来演示一种定义的游戏方式。
-
-### TemplatePatternDemo.java
+#### TemplatePatternDemo.java
 
 ![](img/6426660228f292f87ed477d27e961d81_119_0.png)
 
 ```java
 public class TemplatePatternDemo {
+
     public static void main(String[] args) {
         Game game = new Cricket();
         game.play();
+
         System.out.println();
+
         game = new Football();
         game.play();
     }
 }
 ```
 
-### Step 4
+### 第 4 步：验证输出
 
-验证输出。
-
+```
 Cricket Game Initialized! Start playing.
 Cricket Game Started. Enjoy the game!
 Cricket Game Finished!
@@ -3240,19 +3243,20 @@ Cricket Game Finished!
 Football Game Initialized! Start playing.
 Football Game Started. Enjoy the game!
 Football Game Finished!
+```
 
-# 26. 访问者模式
+## 26. 访问者模式 (VISITOR PATTERN)
 
 在访问者模式中，我们使用一个访问者类来改变元素类的执行算法。通过这种方式，元素的执行算法可以随着访问者的改变而变化。该模式属于行为模式分类。根据该模式，元素对象需要接受访问者对象，以便访问者对象处理在元素对象上的操作。
 
 ### 实现
 
-我们将创建一个定义 `accept` 操作的 `ComputerPart` 接口。Keyboard、Mouse、Monitor 和 Computer 是实现 `ComputerPart` 接口的具体类。我们将定义另一个接口 `ComputerPartVisitor`，它定义访问者类的操作。Computer 使用具体的访问者来执行相应的动作。
+我们将创建一个定义 `accept` 操作的 `ComputerPart` 接口。`Keyboard`、`Mouse`、`Monitor` 和 `Computer` 是实现 `ComputerPart` 接口的具体类。我们将定义另一个接口 `ComputerPartVisitor`，它定义访问者类的操作。`Computer` 使用具体的访问者来执行相应的动作。
 
 我们的演示类 `VisitorPatternDemo` 将使用 `Computer` 和 `ComputerPartVisitor` 类来演示访问者模式的使用。
 
-```interface
-<<interface>
+```text
+<<interface>>
 ComputerPartVisitor
 +visit(Computer) : void
 +visit(Mouse) : void
@@ -3260,7 +3264,7 @@ ComputerPartVisitor
 +visit(Monitor) : void
 ```
 
-```interface
+```text
 ComputerPartDisplayVisitor
 +visit(Computer) : void
 +visit(Mouse) : void
@@ -3268,10 +3272,12 @@ ComputerPartDisplayVisitor
 +visit(Monitor) : void
 ```
 
-```
+```text
 VisitorPatternDemo
 +main() : void
 ```
+
+
 
 ![](img/6426660228f292f87ed477d27e961d81_121_0.png)
 
@@ -3332,7 +3338,6 @@ public class Mouse implements ComputerPart {
 
 ```java
 public class Computer implements ComputerPart {
-
     ComputerPart[] parts;
 
     public Computer() {
@@ -3357,7 +3362,7 @@ public class Computer implements ComputerPart {
 
 ```java
 public interface ComputerPartVisitor {
-    public void visit(ComputerPart computer);
+    public void visit(Computer computer);
     public void visit(Mouse mouse);
     public void visit(Keyboard keyboard);
     public void visit(Monitor monitor);
@@ -3368,11 +3373,10 @@ public interface ComputerPartVisitor {
 
 创建实现上述类的具体访问者。
 
-# ComputerPartDisplayVisitor.java
+### ComputerPartDisplayVisitor.java
 
 ```java
 public class ComputerPartDisplayVisitor implements ComputerPartVisitor {
-
     @Override
     public void visit(Computer computer) {
         System.out.println("Displaying Computer.");
@@ -3425,15 +3429,12 @@ public class VisitorPatternDemo {
 
 验证输出。
 
+```
 Display Computer.
 Displaying Mouse.
 Displaying Keyboard.
 Displaying Monitor.
 ```
-
-
-
-
 
 ### 第 5 
 
@@ -3484,7 +3485,6 @@ public interface BusinessService {
 
 ```java
 public class EJBService implements BusinessService {
-
     @Override
     public void doProcessing() {
         System.out.println("Processing task by invoking EJB Service");
@@ -3492,16 +3492,10 @@ public class EJBService implements BusinessService {
 }
 ```
 
-```java
-}
-}
-```
-
 ### JMSService.java
 
 ```java
 public class JMSService implements BusinessService {
-
     @Override
     public void doProcessing() {
         System.out.println("Processing task by invoking JMS Service");
@@ -3518,7 +3512,7 @@ public class JMSService implements BusinessService {
 ```java
 public class BusinessLookup {
     public BusinessService getBusinessService(String serviceType) {
-        if(serviceType.equalsIgnoreCase("EJB")){
+        if (serviceType.equalsIgnoreCase("EJB")) {
             return new EJBService();
         } else {
             return new JMSService();
@@ -3538,20 +3532,19 @@ public class BusinessDelegate {
     private BusinessLookup lookupService = new BusinessLookup();
     private BusinessService businessService;
     private String serviceType;
+
+    public void setServiceType(String serviceType) {
+        this.serviceType = serviceType;
+    }
+
+    public void doTask() {
+        businessService = lookupService.getBusinessService(serviceType);
+        businessService.doProcessing();
+    }
+}
 ```
 
 ![](img/6426660228f292f87ed477d27e961d81_133_0.png)
-
-```java
-public void setServiceType(String serviceType){
-    this.serviceType = serviceType;
-}
-
-public void doTask(){
-    businessService = lookupService.getBusinessService(serviceType);
-    businessService.doProcessing();
-}
-```
 
 ### Step 5
 
@@ -3561,14 +3554,13 @@ public void doTask(){
 
 ```java
 public class Client {
-
     BusinessDelegate businessService;
 
-    public Client(BusinessDelegate businessService){
+    public Client(BusinessDelegate businessService) {
         this.businessService = businessService;
     }
 
-    public void doTask(){
+    public void doTask() {
         businessService.doTask();
     }
 }
@@ -3584,7 +3576,6 @@ public class Client {
 
 ```java
 public static void main(String[] args) {
-
     BusinessDelegate businessDelegate = new BusinessDelegate();
     businessDelegate.setServiceType("EJB");
 
@@ -3692,6 +3683,8 @@ public class CoarseGrainedObject {
 
 ### CompositeEntity.java
 
+
+
 ```java
 public class CompositeEntity {
     CoarseGrainedObject cgo = new CoarseGrainedObject();
@@ -3756,7 +3749,7 @@ public class CompositeEntityPatternDemo {
 
 ### 实现
 
-我们将创建一个作为模型对象或值对象的 Student。`StudentDao` 是数据访问对象接口，`StudentDaoImpl` 是实现该接口的具体类。我们的演示类 `DaoPatternDemo` 将使用 `StudentDao` 来演示数据访问对象模式的使用。
+我们将创建一个作为模型对象或值对象的 `Student`。`StudentDao` 是数据访问对象接口，`StudentDaoImpl` 是实现该接口的具体类。我们的演示类 `DaoPatternDemo` 将使用 `StudentDao` 来演示数据访问对象模式的使用。
 
 ### Student.java
 
@@ -3855,15 +3848,11 @@ public class DaoPatternDemo {
 }
 ```
 
-
-
-
-
 ### 第1步
 
 创建值对象 (Value Object)。
 
-Student.java
+### Student.java
 
 ```java
 public class Student {
@@ -3973,17 +3962,17 @@ public class DaoPatternDemo {
 
         // 打印所有学生
         for (Student student : studentDao.getAllStudents()) {
-            System.out.println("Student: [RollNo : " + student.getRollNo()
-            
-            // 更新学生
-            Student student = studentDao.getAllStudents().get(0);
-            student.setName("Michael");
-            studentDao.updateStudent(student);
-
-            // 获取学生
-            studentDao.getStudent(0);
-            System.out.println("Student: [RollNo : " + "\n" + student.getRollNo() + ", Name : " + student.getName() + "]");
+            System.out.println("Student: [RollNo : " + student.getRollNo() + ", Name : " + student.getName() + "]");
         }
+
+        // 更新学生
+        Student student = studentDao.getAllStudents().get(0);
+        student.setName("Michael");
+        studentDao.updateStudent(student);
+
+        // 获取学生
+        studentDao.getStudent(0);
+        System.out.println("Student: [RollNo : " + student.getRollNo() + ", Name : " + student.getName() + "]");
     }
 }
 ```
@@ -3995,7 +3984,7 @@ public class DaoPatternDemo {
 | Student: [RollNo : 0, Name : Robert ] |
 | Student: [RollNo : 1, Name : John ] |
 | Student: Roll No 0, updated in the database |
-| Student: [RollNo : 0, Name : Michael |
+| Student: [RollNo : 0, Name : Michael ] |
 
 ---
 
@@ -4009,9 +3998,9 @@ public class DaoPatternDemo {
 
 ### 实现
 
-我们将创建一个 FrontController 和 Dispatcher 分别充当前端和分发器。HomeView 和 StudentView 代表请求到达前端控制器的各种视图。
+我们将创建一个 `FrontController` 和 `Dispatcher` 分别充当前端和分发器。`HomeView` 和 `StudentView` 代表请求到达前端控制器的各种视图。
 
-FrontControllerPatternDemo 是我们的演示类，将使用 FrontController 来演示前端控制器设计模式。
+`FrontControllerPatternDemo` 是我们的演示类，将使用 `FrontController` 来演示前端控制器设计模式。
 
 ![](img/6426660228f292f87ed477d27e961d81_146_0.png)
 
@@ -4062,7 +4051,6 @@ public class Dispatcher {
         }
     }
 }
-}
 ```
 
 ![](img/6426660228f292f87ed477d27e961d81_147_0.png)
@@ -4070,6 +4058,8 @@ public class Dispatcher {
 ### 第3步
 
 创建 FrontController.java
+
+
 
 ```java
 public class FrontController {
@@ -4104,7 +4094,7 @@ public class FrontController {
 
 ### 第4步
 
-使用 FrontController 演示前端控制器模式。
+使用 `FrontController` 演示前端控制器模式。
 
 CameraControllerDemo.java
 
@@ -4143,9 +4133,9 @@ public class ControllerPatternDemo {
 
 ### 实现
 
-我们将创建一个 FilterChain、FilterManager、Target 和 Client 作为各种实体。AuthenticationFilter 和 DebugFilter 代表具体的过滤器。
+我们将创建一个 `FilterChain`、`FilterManager`、`Target` 和 `Client` 作为各种实体。`AuthenticationFilter` 和 `DebugFilter` 代表具体的过滤器。
 
-InterceptingFilterDemo 是我们的演示类，将使用 Client 来演示拦截过滤器模式。
+`InterceptingFilterDemo` 是我们的演示类，将使用 `Client` 来演示拦截过滤器模式。
 
 ![](img/6426660228f292f87ed477d27e961d81_151_0.png)
 
@@ -4153,7 +4143,7 @@ InterceptingFilterDemo 是我们的演示类，将使用 Client 来演示拦截�
 
 创建过滤器接口。
 
-### Filter.java
+Filter.java
 
 ```java
 public interface Filter {
@@ -4165,7 +4155,7 @@ public interface Filter {
 
 创建具体的过滤器。
 
-### AuthenticationFilter.java
+AuthenticationFilter.java
 
 ```java
 public class AuthenticationFilter implements Filter {
@@ -4175,7 +4165,7 @@ public class AuthenticationFilter implements Filter {
 }
 ```
 
-### DebugFilter.java
+DebugFilter.java
 
 ```java
 public class DebugFilter implements Filter {
@@ -4189,7 +4179,7 @@ public class DebugFilter implements Filter {
 
 创建目标。
 
-### Target.java
+Target.java
 
 ```java
 public class Target {
@@ -4203,7 +4193,7 @@ public class Target {
 
 创建过滤器链。
 
-### FilterChain.java
+FilterChain.java
 
 ```java
 import java.util.ArrayList;
@@ -4228,7 +4218,7 @@ public class FilterChain {
 
 ### 第5步
 
-使用 Client 演示过滤器模式。
+使用 `Client` 演示过滤器模式。
 
 InterceptingFilterDemo.java
 
@@ -4258,8 +4248,6 @@ public class InterceptingFilterDemo {
 | request log: STUDENT |
 | Executing request: STUDENT |
 
-
-
 ```java
 public void execute(String request){
     for (Filter filter : filters) {
@@ -4273,7 +4261,7 @@ public void setTarget(Target target){
 }
 ```
 
-### 第 5 
+### 第 5 步
 
 创建过滤器管理器。
 
@@ -4298,7 +4286,7 @@ public class FilterManager {
 }
 ```
 
-### 第 6 
+### 第 6 步
 
 创建客户端。
 
@@ -4318,7 +4306,7 @@ public class Client {
 }
 ```
 
-### 第 7 
+### 第 7 步
 
 使用客户端来演示拦截器设计模式。
 
@@ -4333,14 +4321,14 @@ public class InterceptingFilterDemo {
 
         Client client = new Client();
         client.setFilterManager(filterManager);
-        client.setRequest("HOME");
+        client.sendRequest("HOME");
     }
 }
 ```
 
 ![](img/6426660228f292f87ed477d27e961d81_154_0.png)
 
-### 第 8 
+### 第 8 步
 
 验证输出。
 
@@ -4358,15 +4346,15 @@ Executing request: HOME
 - **Context / Initial Context (上下文)**：用于查找的 JNDI 上下文。
 - **Service Locator (服务定位器)**：通过 JNDI 获取服务的单一接触点。
 - **Cache (缓存)**：用于存储服务以供复用。
-- **Client (客户端)**：通过 ServiceLocator 调用服务的对象。
+- **Client (客户端)**：通过 `ServiceLocator` 调用服务的对象。
 
 ### 实现
 
-我们将创建 *ServiceLocator*、*InitialContext*、*Cache* 和 *Service* 来表示实体。*Service1* 和 *Service2* 代表具体的服务。*ServiceLocatorPatternDemo* 类在这里作为客户端，并将使用 *ServiceLocator* 来演示服务定位器设计模式。
+我们将创建 `ServiceLocator`、`InitialContext`、`Cache` 和 `Service` 来表示实体。`Service1` 和 `Service2` 代表具体的服务。`ServiceLocatorPatternDemo` 类在这里作为客户端，并将使用 `ServiceLocator` 来演示服务定位器设计模式。
 
 ![](img/6426660228f292f87ed477d27e961d81_157_0.png)
 
-### 第 1 
+### 第 1 步
 
 创建服务接口。
 
@@ -4379,7 +4367,7 @@ public interface Service {
 }
 ```
 
-### 第 2 
+### 第 2 步
 
 创建具体服务。
 
@@ -4413,9 +4401,9 @@ public class Service2 implements Service {
 }
 ```
 
-### 第 3 
+### 第 3 步
 
-为 JNDI 查找创建 InitialContext。
+为 JNDI 查找创建 `InitialContext`。
 
 ```java
 public class InitialContext {
@@ -4434,7 +4422,7 @@ public class InitialContext {
 
 ![](img/6426660228f292f87ed477d27e961d81_158_0.png)
 
-### 第 4 
+### 第 4 步
 
 创建缓存。
 
@@ -4445,7 +4433,7 @@ public class Cache {
 
 ![](img/6426660228f292f87ed477d27e961d81_159_0.png)
 
-### 第 5 
+### 第 5 步
 
 创建服务定位器。
 
@@ -4464,7 +4452,7 @@ public class ServiceLocator {
 }
 ```
 
-### 第 6 
+### 第 6 步
 
 使用客户端演示服务定位器设计模式。
 
@@ -4482,7 +4470,7 @@ public class Client {
 }
 ```
 
-### 第 7 
+### 第 7 步
 
 验证输出。
 
@@ -4494,21 +4482,22 @@ Executing request: HOME
 
 ## 34. 传输对象模式 (TRANSFER OBJECT PATTERN)
 
-当我们想要在网络上传递多个属性时，使用了传输对象模式。传输对象也被值对象（Value Object）。对于客户端而言，传输对象是只读的。它没有任何行为。它是序列化的。以下是该设计模式的实体：
+当我们想要在网络上传递多个属性时，使用了传输对象模式。传输对象也被称为值对象（Value Object）。对于客户端而言，传输对象是只读的。它没有任何行为。它是序列化的。以下是该设计模式的实体：
 
 - **Business Object (业务对象)**：填充传输对象。
 - **Transfer Object (传输对象)**：具有 getter/setter 方法简单 POJO。
+
+
+
 - **Client (客户端)**：向业务对象请求或发送传输对象。
 
-*TransferObjectPatternDemo* 类在这里作为客户端，并将使用 StudentBO 和 Student 来演示传输对象设计模式。
+`TransferObjectPatternDemo` 类在这里作为客户端，并将使用 `StudentBO` 和 `StudentVO` 来演示传输对象设计模式。
 
 ![](img/6426660228f292f87ed477d27e961d81_162_0.png)
 
-### 第 1 
+### 第 1 步：创建传输对象
 
-创建传输对象。
-
-StudentVO.java
+`StudentVO.java`
 
 ```java
 public class StudentVO {
@@ -4538,11 +4527,9 @@ public class StudentVO {
 }
 ```
 
-### 第 2 
+### 第 2 步：创建业务对象
 
-创建业务对象。
-
-StudentBO.java
+`StudentBO.java`
 
 ```java
 import java.util.ArrayList;
@@ -4574,24 +4561,18 @@ public class StudentBO {
     public StudentVO getStudent(int rollNo) {
         return students.get(rollNo);
     }
+
+    public void updateStudent(StudentVO student) {
+        students.get(student.getRollNo()).setName(student.getName());
+        System.out.println("Student: Roll No " \
+        + student.getRollNo() + ", updated in the database");
+    }
 }
 ```
 
+### 第 3 步：使用 StudentBO 来演示传输对象模式
 
-
-```java
-public void updateStudent(StudentVO student) {
-    students.get(student.getRollNo()).setName(student.getName());
-    System.out.println("Student: Roll No " \
-    + student.getRollNo() + ", updated in the database");
-}
-```
-
-### 第 3 
-
-使用 StudentBO 来演示传输对象模式（Transfer Object Design Pattern）。
-
-### TransferObjectPatternDemo.java
+`TransferObjectPatternDemo.java`
 
 ```java
 public class TransferObjectPatternDemo {
@@ -4617,12 +4598,9 @@ public class TransferObjectPatternDemo {
 }
 ```
 
-### 第 4 
-
-验证输出结果。
+### 第 4 步：验证输出结果
 
 | Student: [RollNo : 0, Name : Robert ] |
 | Student: [RollNo : 1, Name : John ] |
 | Student: [Roll No 0, updated in the database |
 | Student: [RollNo : 0, Name : Michael ] |
-

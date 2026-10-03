@@ -1,3 +1,4 @@
+
 # 如何嵌套 Spring Boot 应用程序
 
 > 原文：<https://medium.com/javarevisited/how-to-nest-spring-boot-applications-b922b43d08fe?source=collection_archive---------3----------------------->
@@ -8,4 +9,4 @@
 
 照片由 [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral) 上的 [Clément Hélardot](https://unsplash.com/@clemhlrdt?utm_source=medium&utm_medium=referral) 拍摄
 
-我参与的一个项目需要通过在 pom.xml 中配置一个依赖项来创建一个 [Spring Boot](https://spring.io/projects/spring-boot) 应用程序，以便在另一个应用程序中使用
+我参与的一个项目需要通过在`pom.xml`中配置一个依赖项来创建一个 [Spring Boot](https://spring.io/projects/spring-boot) 应用程序，以便在另一个应用程序中使用。

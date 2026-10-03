@@ -1,11 +1,11 @@
+
 # 定义一个小程序子类
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/applet/subclass.html`](https://docs.oracle.com/javase/tutorial/deployment/applet/subclass.html)
 
-每个 Java 小程序都必须定义`Applet`或`JApplet`类的子类。在 Hello World 小程序中，这个子类被称为`HelloWorld`。以下是``HelloWorld``类的源代码。
+每个 Java 小程序都必须定义`Applet`或`JApplet`类的子类。在 Hello World 小程序中，这个子类被称为`HelloWorld`。以下是`HelloWorld`类的源代码。
 
 ```java
-
 import javax.swing.JApplet;
 import javax.swing.SwingUtilities;
 import javax.swing.JLabel;
@@ -26,7 +26,6 @@ public class HelloWorld extends JApplet {
         }
     }
 }
-
 ```
 
 Java applets inherit significant functionality from the `Applet` or `JApplet` class, including the capabilities to communicate with the browser and present a graphical user interface (GUI) to the user.

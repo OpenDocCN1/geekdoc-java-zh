@@ -1,3 +1,4 @@
+
 # 欢迎来到 Javarevisited
 
 > 原文：<https://medium.com/javarevisited/welcome-to-javarevisited-ac37b41d8a0e?source=collection_archive---------0----------------------->
@@ -20,10 +21,10 @@
 
 它变得很长，所以我只是用本周 Java 访问的一些有趣的文章来结束这篇文章:
 
-1.  [**学习 Java 要避免的 10 个致命错误**](/javarevisited/10-deadly-mistakes-to-avoid-when-learning-java-aead894e64f4)
-2.  [**Spring Boot 和微服务的演变**](/javarevisited/evolution-of-spring-boot-and-microservices-4d1109b5a4d3)
-3.  [**Java 8 面试问答**](/javarevisited/java-8-interview-questions-and-answers-java2blog-9ae2c1fc06cc)
-4.  [**本周 Java 开发者应该阅读的 10 篇文章**](/javarevisited/10-articles-java-developers-should-read-this-week-7648edd18a22)
+1. [**学习 Java 要避免的 10 个致命错误**](/javarevisited/10-deadly-mistakes-to-avoid-when-learning-java-aead894e64f4)
+2. [**Spring Boot 和微服务的演变**](/javarevisited/evolution-of-spring-boot-and-microservices-4d1109b5a4d3)
+3. [**Java 8 面试问答**](/javarevisited/java-8-interview-questions-and-answers-java2blog-9ae2c1fc06cc)
+4. [**本周 Java 开发者应该阅读的 10 篇文章**](/javarevisited/10-articles-java-developers-should-read-this-week-7648edd18a22)
 
 我在考虑制作这份每周一次的时事通讯，但是不管你是喜欢两周一次、每月一次还是每周一次，我都愿意倾听你的想法。
 

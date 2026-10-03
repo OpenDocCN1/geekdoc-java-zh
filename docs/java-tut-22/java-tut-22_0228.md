@@ -1,3 +1,4 @@
+
 # 课程：平台环境
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/environment/index.html`](https://docs.oracle.com/javase/tutorial/essential/environment/index.html)

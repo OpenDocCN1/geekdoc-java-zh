@@ -1,3 +1,4 @@
+
 # SpringOne TLV 世界巡回赛旅行报告
 
 > 原文：<https://medium.com/javarevisited/springone-tlv-world-tour-trip-report-90419bce55c4?source=collection_archive---------4----------------------->
@@ -18,12 +19,12 @@
 
 ![](img/aa5646c0b9e5035c2cbbf0c2281a05e2.png)
 
-Spring Framework 6 是框架的重新对齐。Juergen 精心挑选作品，注重春季版本的保守性和与以往版本的兼容性。Spring Framework 5.3.x 在很大程度上基于 JDK 8。它耦合到了 [Java EE](/javarevisited/top-7-online-courses-to-learn-java-ee-jakarta-ee-in-2020-216c1a5eea99) 和旧的 javax 名称空间。它在 2024 年之前一直受到开源支持，这意味着我们需要制定迁移计划…
+Spring Framework 6 是框架的重新对齐。Juergen 精心挑选作品，注重春季版本的保守性和与以往版本的兼容性。Spring Framework 5.3.x 在很大程度上基于 JDK 8。它耦合到了 [Java EE](/javarevisited/top-7-online-courses-to-learn-java-ee-jakarta-ee-in-2020-216c1a5eea99) 和旧的 `javax` 名称空间。它在 2024 年之前一直受到开源支持，这意味着我们需要制定迁移计划…
 
 Spring Framework 6.x 做了一些改变:
 
 *   JDK 17 岁以上
-*   Jakarta EE 而不是 Java EE 和 javax 名称空间
+*   Jakarta EE 而不是 Java EE 和 `javax` 名称空间
 *   AOT 支持
 *   虚拟线程(织机)
 
@@ -53,7 +54,7 @@ Project Loom 是 JDK 19 中的一个预览版特性，支持 Java 线程的高�
 
 观众要求看图像的大小，图像的大小是原始图像的一半。演示很好，但我过去曾在 Spring Boot 上使用过 GraalVM，所以对我来说并不陌生。我询问了他们对 GraalVM 原生映像的接受度和关注度。许多开发人员都在等待 Spring Boot 迁移到 GraalVM，我很好奇他们是否已经在 Spring Initializer 统计中看到了这一点。我想知道 Spring 的人是否看到了大量的兴趣。达肖恩说，如果不是因为 GraalVM，他不会去旅行。但他邀请我稍后再谈。我最终和于尔根通了话，得到了我“想要”的答案。
 
-之后他指着 https://calendar.spring.io/，我没注意到(或者忘记了)。11 月份的发行规模令人惊讶。
+之后他指着 `https://calendar.spring.io/`，我没注意到(或者忘记了)。11 月份的发行规模令人惊讶。
 
 # Cora Iberkleid —使用 Spring Cloud Gateway 保护您的微服务
 
@@ -77,11 +78,11 @@ Cora 展示了 YAML 的路由配置和到 web 服务的加权路由。然后，�
 
 在很多情况下，我们可能想要运行不受信任的代码。有很多方法可以做到这一点，正如【Syer 博士所说，WebAssembly 是最好的方法之一。虽然浏览器支持托管 WebAssembly，但谈话的重点是关于服务器端托管。
 
-WebAssembly 是一个多语言环境，这使得它在某些情况下非常有吸引力。你可以在 MDN 的 Mozilla 游乐场直接体验 WASM。在演讲中，他讨论了可以用来生成 WASM 的各种编译器，从 C 编译器到汇编脚本等等。参见[https://github.com/dsyer/hello-as](https://github.com/dsyer/hello-as)
+WebAssembly 是一个多语言环境，这使得它在某些情况下非常有吸引力。你可以在 MDN 的 Mozilla 游乐场直接体验 WASM。在演讲中，他讨论了可以用来生成 WASM 的各种编译器，从 C 编译器到汇编脚本等等。参见`https://github.com/dsyer/hello-as`
 
-他提供了一个有趣的链接，链接到一个在爪哇冲洗 WASM 的项目:[https://github.com/kawamuray/wasmtime-java](https://github.com/kawamuray/wasmtime-java)。
+他提供了一个有趣的链接，链接到一个在爪哇冲洗 WASM 的项目:`https://github.com/kawamuray/wasmtime-java`。
 
-与 WASM 交换数据似乎很痛苦，有点像是来回通信和复制数据的倒退。他提供了两个有趣的链接:[https://github.com/dsyer/spring-wasm-demo·https://github.com/dsyer/async-wasm](https://github.com/dsyer/spring-wasm-demo)
+与 WASM 交换数据似乎很痛苦，有点像是来回通信和复制数据的倒退。他提供了两个有趣的链接:`https://github.com/dsyer/spring-wasm-demo` 和 `https://github.com/dsyer/async-wasm`
 
 演讲结束后，我有时间和 Syer 博士聊了一会儿，他人非常好。我的根本问题是，我从来没有“得到”WASM。怎么比在沙盒里运行 Java 好？他提到的两个用例是在嵌入式和边缘计算中运行不受信任的代码。作为一个在 Sun/Oracle 移动和嵌入式部门工作的人，这有点刺痛。我明白为什么这是我们所处的位置，但是我们有 JVM 在非常受限的环境中运行，具有 MVM 和 for Java 功能。它仍然存在，只是没有获得 WASM 正在获得的牵引力。
 

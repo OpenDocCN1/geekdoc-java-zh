@@ -1,99 +1,100 @@
-# Spring Boot +春季数据 JPA + Oracle 示例
+
+# Spring Boot + Spring Data JPA + Oracle 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-boot-spring-data-jpa-oracle-example/>
 
-在本文中，我们将向您展示如何创建一个 Spring Boot+Spring Data JPA+Oracle+hikari CP 连接池示例。
+在本文中，我们将向您展示如何创建一个 Spring Boot + Spring Data JPA + Oracle + HikariCP 连接池示例。
 
-本文中使用的工具:
+本文中使用的工具：
 
-1.  Spring Boot 1.5.1 .版本
-2.  春季数据 1.13.0 .发布
-3.  休眠 5
-4.  Oracle 数据库 11g 快速版
-5.  Oracle JDBC 驱动程序 ojdbc7.jar
-6.  HikariCP 2.6
-7.  专家
-8.  Java 8
+1. Spring Boot 1.5.1.RELEASE
+2. Spring Data 1.13.0.RELEASE
+3. Hibernate 5
+4. Oracle 数据库 11g 快速版
+5. Oracle JDBC 驱动程序 `ojdbc7.jar`
+6. HikariCP 2.6
+7. Maven
+8. Java 8
 
-## 1.项目结构
+## 1. 项目结构
 
 一个标准的 Maven 项目结构。
 
 ![](img/a453e834d08cd6e67b625412de38da4a.png)
 
-## 2.项目依赖性
+## 2. 项目依赖性
 
-声明`spring-boot-starter-data-jpa`，它抓取 Spring 数据，Hibernate 和 JPA 相关的东西。
+声明`spring-boot-starter-data-jpa`，它抓取 Spring Data、Hibernate 和 JPA 相关的东西。
 
-pom.xml
+`pom.xml`
 
 ```java
- <project 
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-  http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+ http://maven.apache.org/maven-v4_0_0.xsd">
+   <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.mkyong</groupId>
-    <artifactId>spring-boot-jpa-oracle-example</artifactId>
-    <packaging>jar</packaging>
-    <version>1.0</version>
+   <groupId>com.mkyong</groupId>
+   <artifactId>spring-boot-jpa-oracle-example</artifactId>
+   <packaging>jar</packaging>
+   <version>1.0</version>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.1.RELEASE</version>
-    </parent>
+   <parent>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-parent</artifactId>
+       <version>1.5.1.RELEASE</version>
+   </parent>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
+   <properties>
+       <java.version>1.8</java.version>
+   </properties>
 
-    <dependencies>
+   <dependencies>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
+       <dependency>
+           <groupId>org.springframework.boot</groupId>
+           <artifactId>spring-boot-starter</artifactId>
+       </dependency>
 
-        <!-- Spring data JPA, default tomcat pool, exclude it -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.tomcat</groupId>
-                    <artifactId>tomcat-jdbc</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+       <!-- Spring data JPA, default tomcat pool, exclude it -->
+       <dependency>
+           <groupId>org.springframework.boot</groupId>
+           <artifactId>spring-boot-starter-data-jpa</artifactId>
+           <exclusions>
+               <exclusion>
+                   <groupId>org.apache.tomcat</groupId>
+                   <artifactId>tomcat-jdbc</artifactId>
+               </exclusion>
+           </exclusions>
+       </dependency>
 
-        <!-- Oracle JDBC driver -->
-        <dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc7</artifactId>
-            <version>12.1.0</version>
-        </dependency>
+       <!-- Oracle JDBC driver -->
+       <dependency>
+           <groupId>com.oracle</groupId>
+           <artifactId>ojdbc7</artifactId>
+           <version>12.1.0</version>
+       </dependency>
 
-        <!-- HikariCP connection pool -->
-        <dependency>
-            <groupId>com.zaxxer</groupId>
-            <artifactId>HikariCP</artifactId>
-            <version>2.6.0</version>
-        </dependency>
+       <!-- HikariCP connection pool -->
+       <dependency>
+           <groupId>com.zaxxer</groupId>
+           <artifactId>HikariCP</artifactId>
+           <version>2.6.0</version>
+       </dependency>
 
-    </dependencies>
+   </dependencies>
 
-    <build>
-        <plugins>
-            <!-- Package as an executable jar/war -->
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
+   <build>
+       <plugins>
+           <!-- Package as an executable jar/war -->
+           <plugin>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-maven-plugin</artifactId>
+           </plugin>
 
-        </plugins>
-    </build>
+       </plugins>
+   </build>
 
 </project> 
 ```
@@ -103,7 +104,7 @@ pom.xml
 Terminal
 
 ```java
- $ mvn dependency:tree
+$ mvn dependency:tree
 [INFO] ------------------------------------------------------------------------
 [INFO] Building spring-boot-jpa-oracle-example 1.0
 [INFO] ------------------------------------------------------------------------
@@ -153,17 +154,18 @@ Terminal
 [INFO] ------------------------------------------------------------------------ 
 ```
 
-**Note**
-Read this – [Maven Install Oracle JDBC driver](http://web.archive.org/web/20220930231922/https://www.mkyong.com/maven/how-to-add-oracle-jdbc-driver-in-your-maven-local-repository/)
+**注意**
 
-## 3.Java 持久性 API–JPA
+阅读此内容 – [Maven 安装 Oracle JDBC 驱动程序](http://web.archive.org/web/20220930231922/https://www.mkyong.com/maven/how-to-add-oracle-jdbc-driver-in-your-maven-local-repository/)
+
+## 3. Java 持久性 API – JPA
 
 3.1 客户模型。添加 JPA 注释，并使用“sequence”来生成自动增加的主 ID。
 
-Customer.java
+`Customer.java`
 
 ```java
- package com.mkyong.model;
+package com.mkyong.model;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -172,30 +174,30 @@ import java.util.Date;
 public class Customer {
 
 	// "customer_seq" is Oracle sequence name.
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CUST_SEQ")
-    @SequenceGenerator(sequenceName = "customer_seq", allocationSize = 1, name = "CUST_SEQ")
-    Long id;
+   @Id
+   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CUST_SEQ")
+   @SequenceGenerator(sequenceName = "customer_seq", allocationSize = 1, name = "CUST_SEQ")
+   Long id;
 
-    String name;
+   String name;
 
 	String email;
 
-    @Column(name = "CREATED_DATE")
-    Date date;
+   @Column(name = "CREATED_DATE")
+   Date date;
 
-    //getters and setters, contructors
+   //getters and setters, contructors
 } 
 ```
 
-## 4.配置+数据库初始化
+## 4. 配置 + 数据库初始化
 
 4.1 配置 Oracle 数据源、HikariCP 设置并显示 Hibernate 查询。
 
-application.properties
+`application.properties`
 
 ```java
- spring.main.banner-mode=off
+spring.main.banner-mode=off
 
 # create and drop tables and sequences, loads import.sql
 spring.jpa.hibernate.ddl-auto=create-drop
@@ -221,25 +223,28 @@ logging.level.=error
 
 4.2 如果在类路径中找到了`import.sql`，Hibernate 会自动加载。
 
-import.sql
+`import.sql`
 
 ```java
- INSERT INTO "CUSTOMER" (ID, NAME, EMAIL, CREATED_DATE) VALUES(1, 'mkyong','111@yahoo.com', TO_DATE('2017-02-11', 'yyyy-mm-dd'));
+INSERT INTO "CUSTOMER" (ID, NAME, EMAIL, CREATED_DATE) VALUES(1, 'mkyong','111@yahoo.com', TO_DATE('2017-02-11', 'yyyy-mm-dd'));
 INSERT INTO "CUSTOMER" (ID, NAME, EMAIL, CREATED_DATE) VALUES(2, 'yflow','222@yahoo.com', TO_DATE('2017-02-12', 'yyyy-mm-dd'));
 INSERT INTO "CUSTOMER" (ID, NAME, EMAIL, CREATED_DATE) VALUES(3, 'zilap','333@yahoo.com', TO_DATE('2017-02-13', 'yyyy-mm-dd')); 
 ```
 
-**Note**
+**注意**
+
+
+
 Read this – [Spring Database initialization](http://web.archive.org/web/20220930231922/https://docs.spring.io/spring-boot/docs/current/reference/html/howto-database-initialization.html)
 
-## 5.@仓库
+## 5. 仓库
 
-5.1 创建接口并扩展 Spring 数据`CrudRepository`
+### 5.1 创建接口并扩展 Spring 数据 `CrudRepository`
 
-CustomerRepository.java
+`CustomerRepository.java`
 
 ```java
- package com.mkyong.dao;
+package com.mkyong.dao;
 
 import com.mkyong.model.Customer;
 import org.springframework.data.jpa.repository.Query;
@@ -256,22 +261,23 @@ public interface CustomerRepository extends CrudRepository<Customer, Long> {
 
     List<Customer> findByDate(Date date);
 
-	// custom query example and return a stream
+    // custom query example and return a stream
     @Query("select c from Customer c where c.email = :email")
     Stream<Customer> findByEmailReturnStream(@Param("email") String email);
 
-} 
+}
 ```
 
-**Note**
-No need implementation, Spring data will create the common implementation by field name, like findByfieldName (). Read this [working with Spring Data Repositories](http://web.archive.org/web/20220930231922/https://docs.spring.io/spring-data/data-commons/docs/current/reference/html/#repositories)
+**注意**
 
-## 6.Spring Boot 起动器
+无需实现，Spring 数据会根据字段名创建通用实现，例如`findByfieldName()`。阅读此文档：[working with Spring Data Repositories](http://web.archive.org/web/20220930231922/https://docs.spring.io/spring-data/data-commons/docs/current/reference/html/#repositories)
 
-Application.java
+## 6. Spring Boot 启动器
+
+`Application.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.mkyong.dao.CustomerRepository;
 import com.mkyong.model.Customer;
@@ -334,17 +340,17 @@ public class Application implements CommandLineRunner {
         exit(0);
     }
 
-} 
+}
 ```
 
-## 8.演示
+## 8. 演示
 
-运行它，阅读控制台不言自明。
+运行它，阅读控制台输出即可理解。
 
-Terminal
+终端输出：
 
 ```java
- 2017-02-22 12:36:49 DEBUG org.hibernate.SQL - drop table customer cascade constraints
+2017-02-22 12:36:49 DEBUG org.hibernate.SQL - drop table customer cascade constraints
 2017-02-22 12:36:49 ERROR o.h.tool.hbm2ddl.SchemaExport - HHH000389: Unsuccessful: drop table customer cascade constraints
 2017-02-22 12:36:49 ERROR o.h.tool.hbm2ddl.SchemaExport - ORA-00942: table or view does not exist
 
@@ -377,22 +383,20 @@ Done!
 2017-02-22 12:36:50 DEBUG org.hibernate.SQL - drop table customer cascade constraints
 2017-02-22 12:36:50 DEBUG org.hibernate.SQL - drop sequence customer_seq
 
-Process finished with exit code 0 
+Process finished with exit code 0
 ```
 
 ## 下载源代码
 
-Download – [spring-boot-jpa-oracle-example.zip](http://web.archive.org/web/20220930231922/http://www.mkyong.com/wp-content/uploads/2017/02/spring-boot-jpa-oracle-example.zip) (6 KB)
+下载 – [spring-boot-jpa-oracle-example.zip](http://web.archive.org/web/20220930231922/http://www.mkyong.com/wp-content/uploads/2017/02/spring-boot-jpa-oracle-example.zip) (6 KB)
 
 ## 参考
 
-1.  [Maven 安装甲骨文 JDBC 驱动](http://web.archive.org/web/20220930231922/https://www.mkyong.com/maven/how-to-add-oracle-jdbc-driver-in-your-maven-local-repository/)
-2.  [使用 JPA 初始化数据库](http://web.archive.org/web/20220930231922/https://docs.spring.io/spring-boot/docs/current/reference/html/howto-database-initialization.html)
-3.  [弹簧靴 ddl 自动发电机](http://web.archive.org/web/20220930231922/https://stackoverflow.com/questions/21113154/spring-boot-ddl-auto-generator)
-4.  [Spring 数据共享——参考文档](http://web.archive.org/web/20220930231922/https://docs.spring.io/spring-data/data-commons/docs/current/reference/html/)
-5.  [使用 JPA 访问数据](http://web.archive.org/web/20220930231922/https://spring.io/guides/gs/accessing-data-jpa/)
-6.  [TopLink JPA:如何配置主键生成](http://web.archive.org/web/20220930231922/http://www.oracle.com/technetwork/middleware/ias/id-generation-083058.html)
-7.  [Oracle / PLSQL:序列(自动编号)](http://web.archive.org/web/20220930231922/https://www.techonthenet.com/oracle/sequences.php)
-8.  [Spring Boot JDBC + Oracle 数据库+ Commons DBCP2 示例](http://web.archive.org/web/20220930231922/http://www.mkyong.com/spring-boot/spring-boot-jdbc-oracle-database-commons-dbcp2-example/)
-
-<input type="hidden" id="mkyong-current-postId" value="14457">
+1. [Maven 安装甲骨文 JDBC 驱动](http://web.archive.org/web/20220930231922/https://www.mkyong.com/maven/how-to-add-oracle-jdbc-driver-in-your-maven-local-repository/)
+2. [使用 JPA 初始化数据库](http://web.archive.org/web/20220930231922/https://docs.spring.io/spring-boot/docs/current/reference/html/howto-database-initialization.html)
+3. [弹簧靴 ddl 自动发电机](http://web.archive.org/web/20220930231922/https://stackoverflow.com/questions/21113154/spring-boot-ddl-auto-generator)
+4. [Spring 数据共享——参考文档](http://web.archive.org/web/20220930231922/https://docs.spring.io/spring-data/data-commons/docs/current/reference/html/)
+5. [使用 JPA 访问数据](http://web.archive.org/web/20220930231922/https://spring.io/guides/gs/accessing-data-jpa/)
+6. [TopLink JPA:如何配置主键生成](http://web.archive.org/web/20220930231922/http://www.oracle.com/technetwork/middleware/ias/id-generation-083058.html)
+7. [Oracle / PLSQL:序列(自动编号)](http://web.archive.org/web/20220930231922/https://www.techonthenet.com/oracle/sequences.php)
+8. [Spring Boot JDBC + Oracle 数据库+ Commons DBCP2 示例](http://web.archive.org/web/20220930231922/http://www.mkyong.com/spring-boot/spring-boot-jdbc-oracle-database-commons-dbcp2-example/)

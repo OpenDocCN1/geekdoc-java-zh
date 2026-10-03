@@ -1,3 +1,4 @@
+
 # 缓冲流
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/io/buffers.html`](https://docs.oracle.com/javase/tutorial/essential/io/buffers.html)
@@ -11,7 +12,6 @@
 ```java
 inputStream = new BufferedReader(new FileReader("xanadu.txt"));
 outputStream = new BufferedWriter(new FileWriter("characteroutput.txt"));
-
 ```
 
 有四个缓冲流类用于包装非缓冲流：[`BufferedInputStream`](https://docs.oracle.com/javase/8/docs/api/java/io/BufferedInputStream.html)和[`BufferedOutputStream`](https://docs.oracle.com/javase/8/docs/api/java/io/BufferedOutputStream.html)创建缓冲字节流，而[`BufferedReader`](https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html)和[`BufferedWriter`](https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWriter.html)创建缓冲字符流。

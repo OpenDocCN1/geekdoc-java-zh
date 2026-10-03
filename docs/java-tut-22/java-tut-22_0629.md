@@ -1,3 +1,4 @@
+
 # 规范化文本
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/text/normalizerapi.html`](https://docs.oracle.com/javase/tutorial/i18n/text/normalizerapi.html)
@@ -9,11 +10,8 @@
 根据[Unicode 标准附录＃15](http://www.unicode.org/reports/tr15/)，规范化器的 API 支持[`java.text.Normalizer.Form`](https://docs.oracle.com/javase/8/docs/api/java/text/Normalizer.Form.html)中定义的以下四种 Unicode 文本规范化形式：
 
 +   规范化形式 D（NFD）：规范分解
-
 +   规范化形式 C（NFC）：规范分解，然后规范组合
-
 +   规范化形式 KD（NFKD）：兼容性分解
-
 +   规范化形式 KC（NFKC）：兼容性分解，然后规范组合
 
 让我们看看拉丁小写字母"o"带分音符号如何通过使用这些规范化形式进行规范化：
@@ -30,7 +28,6 @@
 
 ```java
 normalized_string = Normalizer.normalize(target_chars, Normalizer.Form.NFD);
-
 ```
 
 此外，规范化方法会将重音符号重新排列为正确的规范顺序，因此您无需担心自行重新排列重音符号。

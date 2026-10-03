@@ -1,12 +1,12 @@
+
 # Unicode 支持
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/regex/unicode.html`](https://docs.oracle.com/javase/tutorial/essential/regex/unicode.html)
 
 从 JDK 7 版本开始，正则表达式模式匹配已扩展功能以支持 Unicode 6.0。
 
-+   匹配特定代码点
-
-+   Unicode 字符属性
+- 匹配特定代码点
+- Unicode 字符属性
 
 ## 匹配特定代码点
 
@@ -16,7 +16,6 @@
 
 ```java
 String hexPattern = "\x{" + Integer.toHexString(codePoint) + "}";
-
 ```
 
 ## Unicode 字符属性

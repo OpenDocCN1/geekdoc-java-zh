@@ -1,3 +1,4 @@
+
 # 🎉新课程！！—Azure AI 基础认证 AI-900 考试模拟测试！！🎉
 
 > 原文：<https://medium.com/javarevisited/new-course-azure-ai-fundamental-certification-ai-900-exam-practice-test-c7983b2ca9cc?source=collection_archive---------1----------------------->
@@ -10,7 +11,7 @@ Azure 基础 AI-900 模拟测试
 
 大家好，
 
-我很兴奋地宣布我的新课程，一个针对 [***AI-900 练习* Azure AI 基础考试**](https://www.udemy.com/course/ai-900-azure-ai-fundamentals-exam-practice-test-new/?couponCode=LAUNCH) 的练习考试。
+我很兴奋地宣布我的新课程，一个针对 [**AI-900 练习 Azure AI 基础考试**](https://www.udemy.com/course/ai-900-azure-ai-fundamentals-exam-practice-test-new/?couponCode=LAUNCH) 的练习考试。
 
 这是我今年的第二个 Udemy 课程，在成功通过 [Java 基础考试【1z 0–811】](https://www.udemy.com/course/java-foundations-exam-1z0-811-practice-tests-new/?couponCode=5DAYSLAUNCH)考试后，我想专注于 Azure 认证，我想到了 AI-900，因为它非常容易通过，是进入人工智能和 Azure 云的一个很好的入门级认证。
 
@@ -32,7 +33,7 @@ Azure AI Fundamentals 也可以用来准备其他 Azure 基于角色的认证，
 
 - 318 个问题
 
--详细解释
+- 详细解释
 
 这是给你们所有人的 9.9 美元的优惠券，在接下来的 5 天内有效。代码— **启动**
 
@@ -44,14 +45,22 @@ Azure 基础 AI-900 模拟测试
 
 如果你喜欢我的课程，这里有我在 Udemy 上的其他模拟测试课程的链接。
 
-*   [VMware 春季专业测试](https://www.udemy.com/course/spring-professional-practice-test-questions-vmware-edu-certification/?couponCode=BESTPRICEJAN2021)
-*   [Java SE 11 开发者认证实践测试](https://www.udemy.com/course/java-se-11-certification-exam-1z0-819-practice-tests/?couponCode=JAN2022LAUNCH)
-*   [Java SE 8 程序员 II 认证考试](https://www.udemy.com/course/new-java-se8-programmer-certification-ocpjp-1z0-809-exam-practice-test/?couponCode=JAN2022LAUNCH)
-*   [DP-900 Azure 数据基础考试](https://www.udemy.com/course/dp-900-azure-data-fundamntals-exam-mock-test-practice-questions/?couponCode=JAN2022LAUNCH)
-*   [Java EE 7 应用开发者考试测试](https://www.udemy.com/course/java-ee-application-developer-exam-practice-tests/?couponCode=JAN2022LAUNCH)
-*   [AZ-900 Azure 基础考试测试](https://www.udemy.com/course/az-900-practice-test-azure-fundamentls-certification-exam/?couponCode=JAN2022LAUNCH)
-*   [ACP-100 JIRA 行政考试模拟测试](https://www.udemy.com/course/acp-100-jira-server-administrator-exam-practice-tests-quizes/?couponCode=JAN2022LAUNCH)
-*   [AZ-300 Azure Technologies 架构师实践测试](https://www.udemy.com/course/az-303-microsoft-azure-architect-technologies-practice-tests/?couponCode=JAN2022LAUNCH)
-*   Java Lambda Udemy 课程
+* [VMware 春季专业测试](https://www.udemy.com/course/spring-professional-practice-test-questions-vmware-edu-certification/?couponCode=BESTPRICEJAN2021)
+
+* [Java SE 11 开发者认证实践测试](https://www.udemy.com/course/java-se-11-certification-exam-1z0-819-practice-tests/?couponCode=JAN2022LAUNCH)
+
+* [Java SE 8 程序员 II 认证考试](https://www.udemy.com/course/new-java-se8-programmer-certification-ocpjp-1z0-809-exam-practice-test/?couponCode=JAN2022LAUNCH)
+
+* [DP-900 Azure 数据基础考试](https://www.udemy.com/course/dp-900-azure-data-fundamntals-exam-mock-test-practice-questions/?couponCode=JAN2022LAUNCH)
+
+* [Java EE 7 应用开发者考试测试](https://www.udemy.com/course/java-ee-application-developer-exam-practice-tests/?couponCode=JAN2022LAUNCH)
+
+* [AZ-900 Azure 基础考试测试](https://www.udemy.com/course/az-900-practice-test-azure-fundamentls-certification-exam/?couponCode=JAN2022LAUNCH)
+
+* [ACP-100 JIRA 行政考试模拟测试](https://www.udemy.com/course/acp-100-jira-server-administrator-exam-practice-tests-quizes/?couponCode=JAN2022LAUNCH)
+
+* [AZ-300 Azure Technologies 架构师实践测试](https://www.udemy.com/course/az-303-microsoft-azure-architect-technologies-practice-tests/?couponCode=JAN2022LAUNCH)
+
+* Java Lambda Udemy 课程
 
 祝您 2022 年的认证之旅一切顺利。请务必在启动优惠券到期前参加本课程，它在从今天起的 4 天内有效。

@@ -1,17 +1,18 @@
+
 # Java–流已经被操作或关闭
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java8/java-stream-has-already-been-operated-upon-or-closed/>
 
 在 Java 8 中，[流](http://web.archive.org/web/20221221112126/https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html)不能被重用，一旦被消耗或使用，该流将被关闭。
 
-## 1.示例–流已关闭！
+## 1. 示例–流已关闭！
 
 回顾下面的例子，它会抛出一个`IllegalStateException`，说“stream closed”。
 
-TestJava8.java
+`TestJava8.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.Arrays;
 import java.util.stream.Stream;
@@ -32,7 +33,7 @@ public class TestJava8 {
 
     }
 
-} 
+}
 ```
 
 输出
@@ -49,17 +50,17 @@ java.lang.IllegalStateException: stream has already been operated upon or closed
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
-	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) 
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
 ```
 
-## 2.示例–重用流
+## 2. 示例–重用流
 
-不管出于什么原因，你真的想重用一个流，尝试下面的`Supplier`解决方案:
+不管出于什么原因，你真的想重用一个流，尝试下面的`Supplier`解决方案：
 
-TestJava8.java
+`TestJava8.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.function.Supplier;
 import java.util.stream.Stream;
@@ -81,7 +82,7 @@ public class TestJava8 {
 
     }
 
-} 
+}
 ```
 
 输出
@@ -93,17 +94,15 @@ c
 d
 e
 1
-
 ```
 
 每个`get()`将返回一个新的流。
 
-**Why?**
-May I know why you need to reuse a stream, for testing?
+**为什么？**
+
+我可以知道你为什么需要重用一个流吗？是为了测试吗？
 
 ## 参考
 
-1.  [供应商 JavaDoc](http://web.archive.org/web/20221221112126/https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html)
-2.  [流摘要 JavaDoc](http://web.archive.org/web/20221221112126/https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html)
-
-<input type="hidden" id="mkyong-current-postId" value="13971">
+1. [供应商 JavaDoc](http://web.archive.org/web/20221221112126/https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html)
+2. [流摘要 JavaDoc](http://web.archive.org/web/20221221112126/https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html)

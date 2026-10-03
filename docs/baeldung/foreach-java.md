@@ -1,8 +1,9 @@
+
 # Java 8 forEach 指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/foreach-java>
 
-## 1。概述
+## 1. 概述
 
 Java 8 中引入的`forEach`循环为程序员提供了一种新的、简洁而有趣的方法来迭代集合。
 
@@ -10,21 +11,21 @@ Java 8 中引入的`forEach`循环为程序员提供了一种新的、简洁而�
 
 如果你需要温习一些 Java 8 概念，我们的文章集可以帮到你。
 
-## 延伸阅读:
+## 延伸阅读
 
-## 【Collection.stream()的区别。forEach()和 Collection.forEach()
+### `Collection.stream().forEach()`和`Collection.forEach()`的区别
 
-A quick and practical overview of the difference between Collection.stream().forEach() and Collection.forEach().[Read more](/web/20220925220222/https://www.baeldung.com/java-collection-stream-foreach) →
+A quick and practical overview of the difference between `Collection.stream().forEach()` and `Collection.forEach()`.[Read more](/web/20220925220222/https://www.baeldung.com/java-collection-stream-foreach) →
 
-## [如何从 Java 流中断 forEach](/web/20220925220222/https://www.baeldung.com/java-break-stream-foreach)
+### 如何从 Java 流中断 `forEach`
 
-Java Streams are often a good replacement for loops. Where loops provide the break keyword, we have do something a little different to stop a Stream.[Read more](/web/20220925220222/https://www.baeldung.com/java-break-stream-foreach) →
+Java Streams are often a good replacement for loops. Where loops provide the `break` keyword, we have do something a little different to stop a Stream.[Read more](/web/20220925220222/https://www.baeldung.com/java-break-stream-foreach) →
 
-## [Java 8 Stream API 教程](/web/20220925220222/https://www.baeldung.com/java-8-streams)
+### Java 8 Stream API 教程
 
 The article is an example-heavy introduction of the possibilities and operations offered by the Java 8 Stream API.[Read more](/web/20220925220222/https://www.baeldung.com/java-8-streams) →
 
-## 2。`forEach` 基础知识
+## 2. `forEach` 基础知识
 
 在 Java 中，`Collection`接口将`Iterable`作为它的超级接口。从 Java 8 开始，这个接口有了一个新的 API:
 
@@ -52,9 +53,9 @@ names.forEach(name -> {
 });
 ```
 
-## 3。使用`forEach`方法
+## 3. 使用`forEach`方法
 
-我们使用`forEach` 迭代一个集合，并对每个元素执行特定的操作。**要执行的动作包含在实现`Consumer`接口的类中，并作为参数传递给`forEach `。**
+我们使用`forEach` 迭代一个集合，并对每个元素执行特定的操作。**要执行的动作包含在实现`Consumer`接口的类中，并作为参数传递给`forEach`。**
 
 `Consumer`接口是[一个函数接口](/web/20220925220222/https://www.baeldung.com/java-8-functional-interfaces)(一个具有单一抽象方法的接口)。它接受输入，不返回任何结果。
 
@@ -77,7 +78,7 @@ Consumer<String> printConsumer = new Consumer<String>() {
 };
 ```
 
-可以作为参数传递给`forEach` :
+可以作为参数传递给`forEach`:
 
 ```java
 names.forEach(printConsumer);
@@ -87,7 +88,7 @@ names.forEach(printConsumer);
 
 让我们看看使用`forEach`方法的三种最流行的方式。
 
-### 3.1。匿名`Consumer` 实施
+### 3.1. 匿名`Consumer` 实施
 
 我们可以使用匿名类实例化`Consumer`接口的实现，然后将其作为参数应用于`forEach`方法:
 
@@ -104,11 +105,11 @@ names.forEach(printConsumer);
 
 尽管 Lambda 表达式现在是标准的，也是一种更简单的方法，但了解如何实现`Consumer`接口仍然是值得的。
 
-### 3.2。λ表达式
+### 3.2. Lambda 表达式
 
 Java 8 函数接口的主要好处是我们可以使用 Lambda 表达式来实例化它们，避免使用庞大的匿名类实现。
 
-由于 `Consumer`接口是一个函数接口，我们可以用 Lambda 来表示:
+由于`Consumer`接口是一个函数接口，我们可以用 Lambda 来表示:
 
 ```java
 (argument) -> { //body }
@@ -130,7 +131,7 @@ names.forEach(name -> System.out.println(name));
 
 Lambdas 确实有一个非常真实的学习曲线，所以如果你刚刚开始，这篇文章将介绍一些使用新语言特性的良好实践。
 
-### 3.3。方法参考
+### 3.3. 方法参考
 
 我们可以使用方法引用语法来代替普通的 Lambda 语法，其中已经存在一个方法来对类执行操作:
 
@@ -138,11 +139,11 @@ Lambdas 确实有一个非常真实的学习曲线，所以如果你刚刚开始
 names.forEach(System.out::println);
 ```
 
-## 4.使用`forEach`
+## 4. 使用`forEach`
 
-### 4.1.迭代一个集合
+### 4.1. 迭代一个集合
 
-**任何`Collection` — `list`、 `set`、 `queue` 等类型的可重复项。—使用`forEach.`** 的语法相同
+**任何`Collection` — `list`、`set`、`queue` 等类型的可重复项 — 使用`forEach`的语法相同。**
 
 因此，如我们所见，我们可以这样迭代列表元素:
 
@@ -168,11 +169,11 @@ Queue<String> namesQueue = new ArrayDeque<>(Arrays.asList("Larry", "Steve", "Jam
 namesQueue.forEach(System.out::println);
 ```
 
-### 4.2.使用地图的`forEach`迭代地图
+### 4.2. 使用`Map`的`forEach`迭代`Map`
 
-地图不是`Iterable`，但它们确实**提供了自己的`forEach `变体，接受一个** `**BiConsumer**` **。**
+`Map`不是`Iterable`，但它们确实**提供了自己的`forEach`变体，接受一个`BiConsumer`。**
 
-Java 8 引入了一个`BiConsumer`来代替 Iterable 的`forEach`中的`Consumer`，这样就可以同时对`Map`的键和值执行一个动作。
+Java 8 引入了一个`BiConsumer`来代替`Iterable`的`forEach`中的`Consumer`，这样就可以同时对`Map`的键和值执行一个动作。
 
 让我们用这些条目创建一个`Map`:
 
@@ -183,7 +184,7 @@ namesMap.put(2, "Steve");
 namesMap.put(3, "James");
 ```
 
-接下来，让我们使用 Map 的`forEach`迭代`namesMap`:
+接下来，让我们使用`Map`的`forEach`迭代`namesMap`:
 
 ```java
 namesMap.forEach((key, value) -> System.out.println(key + " " + value));
@@ -195,24 +196,24 @@ namesMap.forEach((key, value) -> System.out.println(key + " " + value));
 (key, value) -> System.out.println(key + " " + value)
 ```
 
-### 4.3.通过迭代 `entrySet`来迭代一个`Map`
+### 4.3. 通过迭代`entrySet`来迭代一个`Map`
 
-我们还可以使用 Iterable 的`forEach`来迭代`Map `的`EntrySet `。
+我们还可以使用`Iterable`的`forEach`来迭代`Map`的`EntrySet`。
 
-由于**的条目被存储在一个叫做`EntrySet,`的`Set`中，我们可以使用一个`forEach`T5 来迭代:**
+由于**的条目被存储在一个叫做`EntrySet`的`Set`中，我们可以使用一个`forEach`来迭代:**
 
 ```java
 namesMap.entrySet().forEach(entry -> System.out.println(
   entry.getKey() + " " + entry.getValue()));
 ```
 
-## 5。Foreach vs For-Loop
+## 5. `forEach` vs `for-loop`
 
 从简单的角度来看，这两个循环提供了相同的功能:遍历集合中的元素。
 
 **它们之间的主要区别在于它们是不同的迭代器。增强的`for-loop`是一个外部迭代器，而新的`forEach`方法是内部的。**
 
-### 5.1。内部迭代器— `forEach`
+### 5.1. 内部迭代器 — `forEach`
 
 这种类型的迭代器在后台管理迭代，让程序员编写代码来处理集合中的元素。
 
@@ -224,13 +225,13 @@ namesMap.entrySet().forEach(entry -> System.out.println(
 names.forEach(name -> System.out.println(name));
 ```
 
-在上面的`forEach` 方法中，我们可以看到提供的参数是一个 lambda 表达式。这意味着该方法只需要知道**要做什么**，所有的迭代工作将由内部处理。
+在上面的`forEach`方法中，我们可以看到提供的参数是一个 lambda 表达式。这意味着该方法只需要知道**要做什么**，所有的迭代工作将由内部处理。
 
-### 5.2。外部迭代器— `for-loop`
+### 5.2. 外部迭代器 — `for-loop`
 
 外部迭代器混合了**什么**和**如何**完成循环。
 
-`Enumerations`、`Iterators` 和增强的`for-loop`都是外部迭代器(还记得方法`iterator()`、`next()`或者`hasNext()`？).在所有这些迭代器中，我们的工作是指定如何执行迭代。
+`Enumerations`、`Iterators` 和增强的`for-loop`都是外部迭代器(还记得方法`iterator()`、`next()`或者`hasNext()`吗？).在所有这些迭代器中，我们的工作是指定如何执行迭代。
 
 考虑这个熟悉的循环:
 
@@ -240,11 +241,11 @@ for (String name : names) {
 }
 ```
 
-尽管我们在遍历列表时没有显式地调用`hasNext()`或`next()` 方法，但是使这种迭代工作的底层代码使用了这些方法。这意味着这些操作的复杂性对程序员来说是隐藏的，但它仍然存在。
+尽管我们在遍历列表时没有显式地调用`hasNext()`或`next()`方法，但是使这种迭代工作的底层代码使用了这些方法。这意味着这些操作的复杂性对程序员来说是隐藏的，但它仍然存在。
 
 与集合自己进行迭代的内部迭代器相反，这里我们需要外部代码从集合中取出每个元素。
 
-## 6。 **结论**
+## 6. 结论
 
 在本文中，我们展示了`forEach`循环比普通的`for-loop`循环更方便。
 

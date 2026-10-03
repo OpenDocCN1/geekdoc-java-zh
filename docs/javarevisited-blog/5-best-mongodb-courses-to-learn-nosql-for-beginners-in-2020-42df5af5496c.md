@@ -1,3 +1,4 @@
+
 # 2023 年 6 门适合初学者学习的最佳 MongoDB 在线课程
 
 > 原文：<https://medium.com/javarevisited/5-best-mongodb-courses-to-learn-nosql-for-beginners-in-2020-42df5af5496c?source=collection_archive---------2----------------------->
@@ -99,6 +100,7 @@
 所有 Academy 3T 课程都是免费的，不需要注册。
 
 下面是开始 MongoDB 101 课程的链接: [MongoDB 101](https://studio3t.com/academy/lessons/introduction-to-mongodb/)
+
 下面是开始 MongoDB 201 课程的链接: [MongoDB 201](https://studio3t.com/academy/lessons/mongodb-crud-operations/)
 
 <https://studio3t.com/academy/lessons/mongodb-crud-operations/>  <https://studio3t.com/academy/lessons/introduction-to-mongodb/>  
@@ -115,27 +117,31 @@
 
 的用户管理系统简而言之，这是一门理想的课程，适合希望学习使用 MongoDB 进行 NoSQL 数据库设计的 DBA 以及希望学习和开发 MongoDB 的开发人员
 
+
+
 **这里是加入本课程的链接**——[从零开始学习 MongoDB:领先 NoSQL 数据库](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=634352.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Flearn-mongodb-leading-nosql-database-from-scratch%2F)
 
 [![](img/60ee718ba5e4b89932f4cc86a86e2486.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=634352.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Flearn-mongodb-leading-nosql-database-from-scratch%2F)
 
-以上是开发人员和 DBA 学习 MongoDB 的一些最佳课程。正如我所说，这是最受欢迎的 NoSQL 数据库之一，如果你有兴趣去 NoSQL，那么 MongoDB 是一个很好的开始。这些课程大部分都是实践性的，你不仅会学习理论，还会获得一些 MongoDB
+以上是开发人员和 `DBA` 学习 `MongoDB` 的一些最佳课程。正如我所说，这是最受欢迎的 `NoSQL` 数据库之一，如果你有兴趣去 `NoSQL`，那么 `MongoDB` 是一个很好的开始。这些课程大部分都是实践性的，你不仅会学习理论，还会获得一些 `MongoDB` 实践经验。
 
-其他**在线编程资源**你可能会喜欢
-[2023 devo PS 程序员路线图](https://javarevisited.blogspot.com/2018/09/the-2018-devops-roadmap-your-guide-to-become-DevOps-Engineer.html)
-[10 框架 Java 和 Web 开发人员应该学习的](https://javarevisited.blogspot.com/2018/01/10-frameworks-java-and-web-developers-should-learn.html)
-[学习数据库和 SQL 的前 5 门课程](https://javarevisited.blogspot.com/2018/05/top-5-sql-and-database-courses-to-learn-online.html)
-[2023 React JS 开发人员路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
- <http://www.java67.com/2018/08/top-10-free-java-courses-for-beginners-experienced-developers.html> [2023 年学习 Scala 的 5 门免费课程](https://javarevisited.blogspot.com/2019/01/5-free-scala-programming-courses-for-java-programmers-learn-online.html)
-[2023 年学习 Maven 和 Jenkins 的 5 门免费课程](http://www.java67.com/2018/02/6-free-maven-and-jenkins-online-courses-for-java-developers.html)
-[10 个框架和库全栈开发者应该学习的](https://javarevisited.blogspot.com/2019/01/10-web-development-frameworks-fullstack-developer-should-learn.html)
-[2023 年学习 Docker 的 10 门免费课程](http://www.java67.com/2018/02/5-free-docker-courses-for-java-and-DevOps-engineers.html)
-[2023 年学习 React JS 的前 5 门课程](https://javarevisited.blogspot.com/2018/08/top-5-react-js-and-redux-courses-to-learn-online.html)
-[5 个面向 Java 开发者的 Android 在线培训课程](https://javarevisited.blogspot.com/2017/12/top-5-android-online-training-courses-for-Java-developers.html) [2023 年加入的 13 门免费 JavaScript 课程](/javarevisited/12-free-courses-to-learn-javascript-and-es6-for-beginners-and-experienced-developers-aa35874c9a32)
-[2023 年可以加入的 10 门免费 TypeScript 课程](/javarevisited/top-10-free-typescript-courses-to-learn-online-best-of-lot-44bce9da41d1)
+其他**在线编程资源**你可能会喜欢：
 
-感谢您阅读本文。如果你喜欢这些 MongoDB 课程，请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
+- [2023 devo PS 程序员路线图](https://javarevisited.blogspot.com/2018/09/the-2018-devops-roadmap-your-guide-to-become-DevOps-Engineer.html)
+- [10 框架 Java 和 Web 开发人员应该学习的](https://javarevisited.blogspot.com/2018/01/10-frameworks-java-and-web-developers-should-learn.html)
+- [学习数据库和 SQL 的前 5 门课程](https://javarevisited.blogspot.com/2018/05/top-5-sql-and-database-courses-to-learn-online.html)
+- [2023 React JS 开发人员路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
+- [2023 年学习 Scala 的 5 门免费课程](https://javarevisited.blogspot.com/2019/01/5-free-scala-programming-courses-for-java-programmers-learn-online.html)
+- [2023 年学习 Maven 和 Jenkins 的 5 门免费课程](http://www.java67.com/2018/02/6-free-maven-and-jenkins-online-courses-for-java-developers.html)
+- [10 个框架和库全栈开发者应该学习的](https://javarevisited.blogspot.com/2019/01/10-web-development-frameworks-fullstack-developer-should-learn.html)
+- [2023 年学习 Docker 的 10 门免费课程](http://www.java67.com/2018/02/5-free-docker-courses-for-java-and-DevOps-engineers.html)
+- [2023 年学习 React JS 的前 5 门课程](https://javarevisited.blogspot.com/2018/08/top-5-react-js-and-redux-courses-to-learn-online.html)
+- [5 个面向 Java 开发者的 Android 在线培训课程](https://javarevisited.blogspot.com/2017/12/top-5-android-online-training-courses-for-Java-developers.html)
+- [2023 年加入的 13 门免费 JavaScript 课程](/javarevisited/12-free-courses-to-learn-javascript-and-es6-for-beginners-and-experienced-developers-aa35874c9a32)
+- [2023 年可以加入的 10 门免费 TypeScript 课程](/javarevisited/top-10-free-typescript-courses-to-learn-online-best-of-lot-44bce9da41d1)
 
-如果你正在寻找一个免费的 MongoDB 课程来开始你的 NoSQL 之旅，那么你也可以在 Udemy 上查看这个免费的[**MongoDB Essentials——了解 MongoDB**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmongodb-essentials%2F) 课程的基础知识。这个课程是完全免费的，你只需要一个 Udemy 帐户就可以加入这个课程。
+感谢您阅读本文。如果你喜欢这些 `MongoDB` 课程，请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmongodb-essentials%2F> 
+如果你正在寻找一个免费的 `MongoDB` 课程来开始你的 `NoSQL` 之旅，那么你也可以在 `Udemy` 上查看这个免费的[**MongoDB Essentials——了解 MongoDB**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmongodb-essentials%2F) 课程的基础知识。这个课程是完全免费的，你只需要一个 `Udemy` 帐户就可以加入这个课程。
+
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmongodb-essentials%2F>

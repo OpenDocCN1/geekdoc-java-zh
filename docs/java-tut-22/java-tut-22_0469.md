@@ -1,3 +1,4 @@
+
 # 演示 - LocationSensitiveDemo
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/dnd/locsensitivedemo.html`](https://docs.oracle.com/javase/tutorial/uiswing/dnd/locsensitivedemo.html)
@@ -12,23 +13,23 @@
 
 **试试这个：**
 
-1.  单击启动按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行`LocationSensitiveDemo`（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 ListDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/LocationSensitiveDemoProject/LocationSensitiveDemo.jnlp)
+1. 单击启动按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行`LocationSensitiveDemo`（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 ListDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/LocationSensitiveDemoProject/LocationSensitiveDemo.jnlp)
 
-1.  通过在文本字段中"String 0"上按下并将鼠标移动一小段距离来启动拖动。拖动到树中并向下移动。当你将鼠标悬停在大多数节点上时，拖动接受性会通过鼠标指针和节点高亮显示来指示。将文本放到"colors"节点上。新项目将成为该节点的子节点，并成为列出的颜色的同级节点。
+2. 通过在文本字段中"String 0"上按下并将鼠标移动一小段距离来启动拖动。拖动到树中并向下移动。当你将鼠标悬停在大多数节点上时，拖动接受性会通过鼠标指针和节点高亮显示来指示。将文本放到"colors"节点上。新项目将成为该节点的子节点，并成为列出的颜色的同级节点。
 
-1.  将"String 1"从文本字段拖动到树中。尝试将其放在"names"节点上。当你拖动到该节点或其子节点时，Swing 不会提供任何拖放位置反馈，也不会接受数据。
+3. 将"String 1"从文本字段拖动到树中。尝试将其放在"names"节点上。当你拖动到该节点或其子节点时，Swing 不会提供任何拖放位置反馈，也不会接受数据。
 
-1.  将"Show drop location"下拉框更改为"Always"。
+4. 将"Show drop location"下拉框更改为"Always"。
 
-1.  重复步骤 1 和 2。现在拖放位置将显示在"names"节点，但你无法将数据放入该区域。
+5. 重复步骤 1 和 2。现在拖放位置将显示在"names"节点，但你无法将数据放入该区域。
 
-1.  将"Show drop location"下拉框更改为"Never"。
+6. 将"Show drop location"下拉框更改为"Never"。
 
-1.  重复步骤 1 和 2。拖放位置将不会显示在树的任何部分，尽管你仍然可以将数据放入除了"names"之外的节点。
+7. 重复步骤 1 和 2。拖放位置将不会显示在树的任何部分，尽管你仍然可以将数据放入除了"names"之外的节点。
 
 * * *
 
-``LocationSensitiveDemo``的`canImport`方法如下所示：
+`LocationSensitiveDemo`的`canImport`方法如下所示：
 
 ```java
 public boolean canImport(TransferHandler.TransferSupport info) {
@@ -62,7 +63,6 @@ public boolean canImport(TransferHandler.TransferSupport info) {
 
     return true;
 }
-
 ```
 
 第一个显示为粗体的代码片段修改了拖放位置反馈机制。如果是"Always"，则始终显示拖放位置。如果是"Never"，则永远不显示拖放位置。否则，应用默认行为。

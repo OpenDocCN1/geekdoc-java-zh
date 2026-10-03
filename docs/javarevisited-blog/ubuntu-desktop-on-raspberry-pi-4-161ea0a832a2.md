@@ -1,4 +1,5 @@
-# Raspberry Pi 4 上的 Ubuntu desktop 可能是使用 Visual Studio 代码开发 Java 的完美 PC。
+
+# Raspberry Pi 4 上的 Ubuntu desktop 可能是使用 Visual Studio 代码开发 Java 的完美 PC
 
 > 原文：<https://medium.com/javarevisited/ubuntu-desktop-on-raspberry-pi-4-161ea0a832a2?source=collection_archive---------1----------------------->
 

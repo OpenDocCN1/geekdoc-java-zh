@@ -1,3 +1,4 @@
+
 # DDTJ 生成的第一个模拟单元测试—构建 DDTJ 第 9 天
 
 > 原文：<https://medium.com/javarevisited/first-mocked-unit-test-generated-by-ddtj-building-ddtj-day-9-df16fc66acf4?source=collection_archive---------1----------------------->
@@ -6,11 +7,11 @@
 
 昨天[我遇到了一些阻碍](https://dev.to/codenameone/build-issues-code-generation-and-depth-vs-breadth-first-building-ddtj-day-8-2242)，但是我很高兴地告诉大家，这些都已经过去了。我们终于有了历史上第一个由 DDT 生成的测试！
 
-我想宣布胜利，但前面的路还很长，结果在这一点上“令人印象深刻”。我们已经生成了代码，但是它仍然不能马上编译，至少对于 POJOs 来说，它没有注入模拟(尽管它创建了模拟)。我认为这些都是可以克服的问题，我们可以向前迈进。
+我想宣布胜利，但前面的路还很长，结果在这一点上“令人印象深刻”。我们已经生成了代码，但是它仍然不能马上编译，至少对于 POJOs 来说，它没有注入模拟（尽管它创建了模拟）。我认为这些都是可以克服的问题，我们可以向前迈进。
 
 但是我有点超前了。让我们来谈谈代码现在发生了什么…或者至少在[当前的 PR](https://github.com/ddtj/ddtj/pull/8) 中，它仍然在等待更多的测试覆盖。
 
-现在我正在运行一个超级简单的应用程序:
+现在我正在运行一个超级简单的应用程序：
 
 ```
 public class BasicApp {
@@ -24,7 +25,7 @@ public class BasicApp {
 }
 ```
 
-它调用:
+它调用：
 
 ```
 public class BasicDependency {
@@ -35,19 +36,19 @@ public class BasicDependency {
 }
 ```
 
-为了对此生成测试，我使用了以下过程:
+为了对此生成测试，我使用了以下过程：
 
-# 运行后端服务器
+## 运行后端服务器
 
-服务器进程从应用程序收集执行数据:
+服务器进程从应用程序收集执行数据：
 
 ```
 java -jar target/Backend-0.0.5-SNAPSHOT.jar
 ```
 
-# 运行应用程序
+## 运行应用程序
 
-下一步是让服务器运行/调试应用程序。这用类似下面的内容替换了标准的 java 命令行:
+下一步是让服务器运行/调试应用程序。这用类似下面的内容替换了标准的 `java` 命令行：
 
 ```
 java -jar target/CLI-0.0.5-SNAPSHOT-shaded.jar -run dev.ddtj.backend.testdata.BasicApp -classpath Backend/target/test-classes
@@ -55,15 +56,15 @@ java -jar target/CLI-0.0.5-SNAPSHOT-shaded.jar -run dev.ddtj.backend.testdata.Ba
 
 注意，这个命令是异步的，因为它运行在后端服务器上下文中。
 
-# 找到并生成测试
+## 找到并生成测试
 
-首先，我们需要列出我们要插装的类:
+首先，我们需要列出我们要插装的类：
 
 ```
 java -jar target/CLI-0.0.5-SNAPSHOT-shaded.jar -c
 ```
 
-它打印出:
+它打印出：
 
 ```
 Class Name                                                  | Method Count    | Execution Count
@@ -72,13 +73,13 @@ dev.ddtj.backend.testdata.BasicDependency                   | 1               | 
 dev.ddtj.backend.testdata.BasicApp                          | 2               | 2
 ```
 
-接下来，我们需要查看我们可以在特定类中测试的方法:
+接下来，我们需要查看我们可以在特定类中测试的方法：
 
 ```
 java -jar target/CLI-0.0.5-SNAPSHOT-shaded.jar -m dev.ddtj.backend.testdata.BasicApp
 ```
 
-它打印出:
+它打印出：
 
 ```
 Method Name                                                 | Total Execution
@@ -87,13 +88,13 @@ main([Ljava/lang/String;)V                                  | 1
 run()V                                                      | 1
 ```
 
-现在我们需要找到可用的测试。当我们有一个测试时，它似乎是多余的，但当我们有更多测试时，它是有意义的:
+现在我们需要找到可用的测试。当我们有一个测试时，它似乎是多余的，但当我们有更多测试时，它是有意义的：
 
 ```
 java -jar target/CLI-0.0.5-SNAPSHOT-shaded.jar -t "dev.ddtj.backend.testdata.BasicApp.run()V"
 ```
 
-打印输出:
+打印输出：
 
 ```
 Test ID                                 | Test Hour of the Day
@@ -101,13 +102,13 @@ Test ID                                 | Test Hour of the Day
 JuZlJX5ERAKXZQR8CpYgiA--7               | Thu Dec 30 08:31:25 IST 2021
 ```
 
-我们现在可以根据这些结果生成一个测试:
+我们现在可以根据这些结果生成一个测试：
 
 ```
 java -jar target/CLI-0.0.5-SNAPSHOT-shaded.jar -g "dev.ddtj.backend.testdata.BasicApp,run()V,JuZlJX5ERAKXZQR8CpYgiA--7"
 ```
 
-它打印出:
+它打印出：
 
 ```
 /**
@@ -131,19 +132,19 @@ class BasicAppTests {
 }
 ```
 
-# 什么不起作用？
+## 什么不起作用？
 
 上面的代码有几个问题。首先，我们不检测被检查的异常，所以这段代码不能编译。
 
-作为一个短期的解决方法，我在测试方法中添加了一个“[throws Exception”](https://javarevisited.blogspot.com/2012/02/difference-between-throw-and-throws-in.html)。这确保了它能正确编译，并如预期的那样失败。
+作为一个短期的解决方法，我在测试方法中添加了一个`throws Exception`。这确保了它能正确编译，并如预期的那样失败。
 
 更大的问题是模拟没有正确绑定。我预料到了这一点，因为我没有为此编写代码，而且技术上也没有办法绑定这个模拟。我希望在“真实世界”的代码上进行测试时，这将更加合理。
 
 代码没有使用`@Mock`或`@InjectMocks`注释。我认为这是我可以改进的地方。我希望有多种风格的测试生成来支持各种个人品味。
 
-因为没有调用 mock，所以测试会失败，但是我添加了“宽松的”()调用作为短期解决方法，这样我们就可以继续了。
+因为没有调用 mock，所以测试会失败，但是我添加了“宽松的”`lenient()`调用作为短期解决方法，这样我们就可以继续了。
 
-# 什么在起作用？
+## 什么在起作用？
 
 我很高兴它正确地生成了模拟代码并实现了模拟。
 
@@ -153,12 +154,13 @@ class BasicAppTests {
 
 我想下周我会在我的事后博客文章中更详细地讨论这个问题。我想我需要一些时间来看看一切是如何结合在一起的。
 
-# 明天
+## 明天
 
-现在我面临着两大挑战:
+现在我面临着两大挑战：
 
-1.  合并 PR——这很难，尤其是测试我写的所有代码
-2.  根据用例进行扩展和改进
+1. 合并 PR——这很难，尤其是测试我写的所有代码
+
+2. 根据用例进行扩展和改进
 
 在这个阶段，我很高兴我完成了基本目标。但是，我想建立一个适当的 MVP，所以我希望我可以得到一个现实世界的应用程序运行。我认为像网络界面这样的蓝天计划要等到这个阶段之后。
 

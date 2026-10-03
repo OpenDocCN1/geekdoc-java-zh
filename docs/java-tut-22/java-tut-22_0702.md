@@ -1,3 +1,4 @@
+
 # 方法
 
 > 原文：[`docs.oracle.com/javase/tutorial/javabeans/writing/methods.html`](https://docs.oracle.com/javase/tutorial/javabeans/writing/methods.html)

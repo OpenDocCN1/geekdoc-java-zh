@@ -1,3 +1,4 @@
+
 # 创建包含合同的 JAR 文件
 
 > 原文：[`docs.oracle.com/javase/tutorial/security/toolfilex/step1.html`](https://docs.oracle.com/javase/tutorial/security/toolfilex/step1.html)
@@ -8,7 +9,6 @@
 
 ```java
 jar cvf Contract.jar contract
-
 ```
 
 这个命令创建一个名为`Contract.jar`的 JAR 文件，并将`contract`文件放入其中。

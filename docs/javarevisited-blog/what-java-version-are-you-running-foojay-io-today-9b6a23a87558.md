@@ -1,3 +1,4 @@
+
 # 您运行的是什么 Java 版本？
 
 > 原文：<https://medium.com/javarevisited/what-java-version-are-you-running-foojay-io-today-9b6a23a87558?source=collection_archive---------2----------------------->
@@ -8,9 +9,9 @@
 
 让我们来看看…
 
-# 在终端中读取 Java 版本
+## 在终端中读取 Java 版本
 
-找到已安装版本的最简单方法可能是使用`java -version`终端命令:
+找到已安装版本的最简单方法可能是使用`java -version`终端命令：
 
 ```
 $ java -version
@@ -19,13 +20,13 @@ OpenJDK Runtime Environment Zulu19.28+81-CA (build 19+36)
 OpenJDK 64-Bit Server VM Zulu19.28+81-CA (build 19+36, mixed mode, sharing)
 ```
 
-# 检查安装目录中的版本文件
+## 检查安装目录中的版本文件
 
 上面的输出来自于`java`可执行文件从其安装目录下的文件中读取的信息。
 
 让我们探索一下我们能在那里找到什么。
 
-在我的机器上，当我使用 [SDKMAN](https://sdkman.io/) 在不同的 Java 版本之间切换时，我所有的版本都存储在这里:
+在我的机器上，当我使用 [SDKMAN](https://sdkman.io/) 在不同的 Java 版本之间切换时，我所有的版本都存储在这里：
 
 ```
 $ ls -l /Users/frankdelporte/.sdkman/candidates/java/
@@ -60,9 +61,9 @@ OS_ARCH="aarch64"
 SOURCE="git:f4b2b4c5882e"
 ```
 
-# 使用 showSettings 获取更多信息
+## 使用 showSettings 获取更多信息
 
-2010 年，OpenJDK 中增加了一个实验标志(用`X`表示)，以提供更多的配置信息:`-XshowSettings`。
+2010 年，OpenJDK 中增加了一个实验标志（用`X`表示），以提供更多的配置信息：`-XshowSettings`。
 
 ![](img/f153d96dfbf7ba786f6036bb631101e6.png)
 
@@ -70,7 +71,7 @@ SOURCE="git:f4b2b4c5882e"
 
 调用这个标志的最干净的方法是添加`-version`，否则您将得到很长的 Java 手动输出，因为没有发现要执行的应用程序代码。
 
-# 读取系统属性
+### 读取系统属性
 
 通过使用`-XshowSettings:properties`标志，显示了各种属性的长列表。
 
@@ -138,27 +139,39 @@ OpenJDK Runtime Environment Zulu19.28+81-CA (build 19+36)
 OpenJDK 64-Bit Server VM Zulu19.28+81-CA (build 19+36, mixed mode, sharing)
 ```
 
-如果你曾经遇到过不支持的 [Java 版本 59](http://www.java67.com/2016/06/unsupported-majorminor-version-520-in-java-eclipse-linux.html) (类似)的问题，你现在也会明白这个值是在哪里定义的，就在这个列表中的`java.class.version`。
+如果你曾经遇到过不支持的 [Java 版本 59](http://www.java67.com/2016/06/unsupported-majorminor-version-520-in-java-eclipse-linux.html)（类似）的问题，你现在也会明白这个值是在哪里定义的，就在这个列表中的`java.class.version`。
 
 它是 Java 用来定义版本的内部编号。
 
-*   Java 版本>类版本
+*   Java 版本 > 类版本
+
 *   8 > 52
+
 *   9 > 53
+
 *   10 > 54
+
 *   11 > 55
+
 *   12 > 56
+
 *   13 > 57
+
 *   14 > 58
+
 *   15 > 59
+
 *   16 > 60
+
 *   17 > 61
+
 *   18 > 62
+
 *   19 > 63
 
-# 读取区域设置信息
+### 读取区域设置信息
 
-如果你还不知道，我住在比利时，使用英语作为我的计算机语言，正如你在使用`-XshowSettings:locale`旗时看到的:
+如果你还不知道，我住在比利时，使用英语作为我的计算机语言，正如你在使用`-XshowSettings:locale`旗时看到的：
 
 ```
 $ java -XshowSettings:locale -version
@@ -178,7 +191,7 @@ OpenJDK Runtime Environment Zulu19.28+81-CA (build 19+36)
 OpenJDK 64-Bit Server VM Zulu19.28+81-CA (build 19+36, mixed mode, sharing)
 ```
 
-# 读取虚拟机设置
+### 读取虚拟机设置
 
 使用`-XshowSettings:vm`标志，显示了一些关于 [Java 虚拟机的信息。](https://javarevisited.blogspot.com/2011/12/jre-jvm-jdk-jit-in-java-programming.html)
 
@@ -204,11 +217,11 @@ OpenJDK Runtime Environment Zulu19.28+81-CA (build 19+36)
 OpenJDK 64-Bit Server VM Zulu19.28+81-CA (build 19+36, mixed mode, sharing)
 ```
 
-# 同时阅读
+### 同时阅读
 
 如果您想在一次调用中获得上述所有信息，请使用`-XshowSettings:all`标志。
 
-# 结论
+## 结论
 
 在`java -version`旁边，我们也可以使用`java -XshowSettings:all -version`来获得更多关于我们的 Java 环境的信息。
 

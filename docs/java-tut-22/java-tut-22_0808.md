@@ -1,3 +1,4 @@
+
 # 设计远程接口
 
 > 原文：[`docs.oracle.com/javase/tutorial/rmi/designing.html`](https://docs.oracle.com/javase/tutorial/rmi/designing.html)
@@ -8,7 +9,7 @@
 
 每个接口包含一个方法。计算引擎的远程接口`Compute`允许任务提交到引擎。客户端接口`Task`定义了计算引擎如何执行提交的任务。
 
-``compute.Compute``接口定义了远程访问部分，即计算引擎本身。这里是`Compute`接口的源代码：
+`compute.Compute`接口定义了远程访问部分，即计算引擎本身。这里是`Compute`接口的源代码：
 
 ```java
 package compute;
@@ -19,14 +20,13 @@ import java.rmi.RemoteException;
 public interface Compute extends Remote {
     <T> T executeTask(Task<T> t) throws RemoteException;
 }
-
 ```
 
 通过扩展接口`java.rmi.Remote`，`Compute`接口将自身标识为一个可以从另一个 Java 虚拟机中调用其方法的接口。实现这个接口的任何对象都可以是一个远程对象。
 
 作为远程接口的成员，`executeTask`方法是一个远程方法。因此，该方法必须被定义为能够抛出`java.rmi.RemoteException`的方法。这个异常是由 RMI 系统从远程方法调用中抛出的，用于指示通信失败或协议错误。`RemoteException`是一个受检异常，因此任何调用远程方法的代码都需要通过捕获它或在其`throws`子句中声明来处理这个异常。
 
-计算引擎所需的第二个接口是`Task`接口，它是`Compute`接口中`executeTask`方法的参数类型。``compute.Task``接口定义了计算引擎和需要执行的工作之间的接口，提供了开始工作的方式。这里是`Task`接口的源代码：
+计算引擎所需的第二个接口是`Task`接口，它是`Compute`接口中`executeTask`方法的参数类型。`compute.Task`接口定义了计算引擎和需要执行的工作之间的接口，提供了开始工作的方式。这里是`Task`接口的源代码：
 
 ```java
 package compute;
@@ -34,7 +34,6 @@ package compute;
 public interface Task<T> {
     T execute();
 }
-
 ```
 
 `Task`接口定义了一个方法`execute`，该方法没有参数，也不会抛出异常。因为该接口没有扩展`Remote`，所以在该接口中的方法不需要在`throws`子句中列出`java.rmi.RemoteException`。

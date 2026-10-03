@@ -1,3 +1,4 @@
+
 # 运行示例程序
 
 > 原文：[`docs.oracle.com/javase/tutorial/rmi/running.html`](https://docs.oracle.com/javase/tutorial/rmi/running.html)
@@ -10,7 +11,6 @@
 grant codeBase "file:/home/ann/src/" {
     permission java.security.AllPermission;
 };
-
 ```
 
 这是一个用于客户端程序的示例策略文件。
@@ -19,7 +19,6 @@ grant codeBase "file:/home/ann/src/" {
 grant codeBase "file:/home/jones/src/" {
     permission java.security.AllPermission;
 };
-
 ```
 
 对于这两个示例策略文件，所有权限都授予程序本地类路径中的类，因为本地应用程序代码是受信任的，但不授予从其他位置下载的代码任何权限。因此，计算引擎服务器限制其执行的任务（其代码未知是否受信任且可能具有敌意）执行需要安全权限的任何操作。示例客户端的`Pi`任务不需要任何权限来执行。
@@ -36,14 +35,12 @@ grant codeBase "file:/home/jones/src/" {
 
 ```java
 start rmiregistry
-
 ```
 
 **Solaris 操作系统或 Linux**：
 
 ```java
 rmiregistry &
-
 ```
 
 默认情况下，注册表在端口 1099 上运行。要在不同端口上启动注册表，请在命令行上指定端口号。不要忘记取消设置`CLASSPATH`环境变量。
@@ -52,19 +49,17 @@ rmiregistry &
 
 ```java
 start rmiregistry 2001
-
 ```
 
 **Solaris 操作系统或 Linux**：
 
 ```java
 rmiregistry 2001 &
-
 ```
 
 一旦注册表启动，你可以启动服务器。你需要确保`compute.jar`文件和远程对象实现类都在你的类路径中。当你启动计算引擎时，你需要使用`java.rmi.server.codebase`属性指定服务器类的网络访问位置。在这个例子中，要提供下载的服务器端类是`Compute`和`Task`接口，在用户`ann`的`public_html\classes`目录中的`compute.jar`文件中可用。计算引擎服务器在主机`mycomputer`上启动，与注册表启动的主机相同。
 
-**Microsoft Windows**:
+**Microsoft Windows**：
 
 ```java
 java -cp c:\home\ann\src;c:\home\ann\public_html\classes\compute.jar
@@ -72,10 +67,9 @@ java -cp c:\home\ann\src;c:\home\ann\public_html\classes\compute.jar
      -Djava.rmi.server.hostname=mycomputer.example.com
      -Djava.security.policy=server.policy
         engine.ComputeEngine
-
 ```
 
-**Solaris OS 或 Linux**:
+**Solaris OS 或 Linux**：
 
 ```java
 java -cp /home/ann/src:/home/ann/public_html/classes/compute.jar
@@ -83,7 +77,6 @@ java -cp /home/ann/src:/home/ann/public_html/classes/compute.jar
      -Djava.rmi.server.hostname=mycomputer.example.com
      -Djava.security.policy=server.policy
         engine.ComputeEngine
-
 ```
 
 上述`java`命令定义了以下系统属性：
@@ -106,26 +99,22 @@ java -cp /home/ann/src:/home/ann/public_html/classes/compute.jar
 
 在另一台主机上启动客户端（例如名为`mysecondcomputer`的主机）如下：
 
-* * *
-
-**Microsoft Windows**:
+**Microsoft Windows**：
 
 ```java
 java -cp c:\home\jones\src;c:\home\jones\public_html\classes\compute.jar
      -Djava.rmi.server.codebase=file:/c:/home/jones/public_html/classes/
      -Djava.security.policy=client.policy
         client.ComputePi mycomputer.example.com 45
-
 ```
 
-**Solaris OS 或 Linux**:
+**Solaris OS 或 Linux**：
 
 ```java
 java -cp /home/jones/src:/home/jones/public_html/classes/compute.jar
      -Djava.rmi.server.codebase=http://mysecondcomputer/~jones/classes/
      -Djava.security.policy=client.policy
         client.ComputePi mycomputer.example.com 45
-
 ```
 
 注意，类路径是在命令行上设置的，以便解释器可以找到客户端类和包含接口的 JAR 文件。还要注意，`java.rmi.server.codebase`属性的值，指定一个目录层次结构，以斜杠结尾。
@@ -134,7 +123,6 @@ java -cp /home/jones/src:/home/jones/public_html/classes/compute.jar
 
 ```java
 3.141592653589793238462643383279502884197169399
-
 ```
 
 以下图示说明了在程序执行期间`rmiregistry`、`ComputeEngine`服务器和`ComputePi`客户端获取类的位置。

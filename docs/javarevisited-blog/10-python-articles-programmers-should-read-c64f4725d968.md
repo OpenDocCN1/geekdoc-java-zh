@@ -1,3 +1,4 @@
+
 # 您应该阅读的 10 篇 Python 文章和教程
 
 > 原文：<https://medium.com/javarevisited/10-python-articles-programmers-should-read-c64f4725d968?source=collection_archive---------0----------------------->
@@ -14,7 +15,7 @@
 
 如果你不相信为什么 Java 开发人员应该学习 Python，我建议你先阅读我的文章— [学习 Python 的 10 个理由](https://javarevisited.blogspot.com/2018/05/10-reasons-to-learn-python-programming.html)。
 
-<https://javarevisited.blogspot.com/2018/05/10-reasons-to-learn-python-programming.html>  
+<https://javarevisited.blogspot.com/2018/05/10-reasons-to-learn-python-programming.html>
 
 无论如何，这是我列出的一些有用的 Python 文章，你可以在这个周末阅读—
 
@@ -22,69 +23,69 @@
 
 如果你刚刚开始学习 Python 或者想在今年学习 Python，那么你应该首先阅读这篇文章。它为初学者和中级开发人员提供了一些最好的 Python 课程、教程和认证。
 
-  
-
 顺便说一句，如果你想学习 Python 并且在这里寻找一些推荐，那么我建议你加入 Udemy 网站上何塞·波尔蒂利亚的 [**完整的 Python 训练营:从零到英雄**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcomplete-python-bootcamp%2F)
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcomplete-python-bootcamp%2F>  
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcomplete-python-bootcamp%2F>
 
 此外，如果你需要一个互动的教程兼课程，那么 Codecademy 上的 [**Python 3 课程**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=44188&murl=https%3A%2F%2Fwww.codecademy.com%2Flearn%2Flearn-python-3&LSNSUBSITE=TEST) 也是一个很好的选择，它包含 25 个多小时的互动学习材料、测验和评估测试。顺便说一句，如果我买这两门课中的任何一门，我也会得到报酬。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=44188&murl=https%3A%2F%2Fwww.codecademy.com%2Flearn%2Flearn-python-3&LSNSUBSITE=TEST>  
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=44188&murl=https%3A%2F%2Fwww.codecademy.com%2Flearn%2Flearn-python-3&LSNSUBSITE=TEST>
 
 # Python 在网飞由[网飞科技博客](https://medium.com/u/c3aeaf49d8a4?source=post_page-----c64f4725d968--------------------------------)
 
 我相信你已经听说过网飞，很有可能你甚至已经看过几个节目。如果你是一名程序员，想知道 Python 在网飞是如何使用的，这篇文章将会给你一些启示，这是一篇周末阅读的完美文章。
 
-</netflix-techblog/python-at-netflix-bba45dae649e>  
+</netflix-techblog/python-at-netflix-bba45dae649e>
 
 # Parul Pandey 用 Python 加速数据分析的 10 个简单技巧
 
 Python 编程语言是一种分析数据的神奇工具，但如果你知道一些简单的技巧，它会更好。本文将教您如何使用 Python 轻松进行数据分析。
 
-<https://towardsdatascience.com/10-simple-hacks-to-speed-up-your-data-analysis-in-python-ec18c6396e6b>  
+<https://towardsdatascience.com/10-simple-hacks-to-speed-up-your-data-analysis-in-python-ec18c6396e6b>
 
 # 36 个令人惊叹的 Python 开源项目由 [Mybridge](https://medium.com/u/68abb2e6c9bb?source=post_page-----c64f4725d968--------------------------------)
 
 参与 Python 开源项目不仅是提高 Python 编程技能的好方法，也是树立权威的好方法。如果你想投稿，这里有一些很棒的 Python 开放课程项目。
 
-<https://medium.mybridge.co/36-amazing-python-open-source-projects-v-2019-2fe058d79450>  
+<https://medium.mybridge.co/36-amazing-python-open-source-projects-v-2019-2fe058d79450>
 
 # 朱庇特实验室:朱庇特笔记本的进化
 
 本文很好地概述了 JupyterLab，Jupyter Notebook 的下一代，Python 程序员最流行的 IDE 之一。
 
-<https://towardsdatascience.com/jupyter-lab-evolution-of-the-jupyter-notebook-5297cacde6b>  
+<https://towardsdatascience.com/jupyter-lab-evolution-of-the-jupyter-notebook-5297cacde6b>
 
 # 用 Python 到底能做什么？以下是 Python 的 3 个主要应用。由 [YK 杉](https://medium.com/u/539e9e1c30df?source=post_page-----c64f4725d968--------------------------------)
 
 如果你仍然对学习 Python 犹豫不决，不确定你能用 Python 做什么，那么这篇文章将会消除你的疑虑。
 
-</free-code-camp/what-can-you-do-with-python-the-3-main-applications-518db9a68a78>  
+</free-code-camp/what-can-you-do-with-python-the-3-main-applications-518db9a68a78>
 
 # 50+数据结构与算法 [javinpaul](https://medium.com/u/bb36d8439904?source=post_page-----c64f4725d968--------------------------------) 为程序员准备的面试问题
 
 我的另一篇文章包含了一些常见的编码问题，你可以用 Python 解决这些问题来构建你的编程逻辑和编码意识。
 
-</hackernoon/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0>  
+</hackernoon/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0>
 
 # 如何用 Python 和 BeautifulSoup 抓取网站[贾斯汀·耶克](https://medium.com/u/bb0a08e70dc6?source=post_page-----c64f4725d968--------------------------------)
 
 您会惊讶地发现，使用 Python 和 BeautifulSoup(完美的文章)来浏览 Python 编程在现实世界中的潜力是多么容易。
 
-</free-code-camp/how-to-scrape-websites-with-python-and-beautifulsoup-5946935d93fe>  
+</free-code-camp/how-to-scrape-websites-with-python-and-beautifulsoup-5946935d93fe>
 
 # 由 [javinpaul](https://medium.com/u/bb36d8439904?source=post_page-----c64f4725d968--------------------------------) 提供的 5 门免费学习 Python 的课程
 
 学习 Python 的一些免费在线课程的精选列表。
 
-</swlh/5-free-python-courses-for-beginners-to-learn-online-e1ca90687caf>  
+</swlh/5-free-python-courses-for-beginners-to-learn-online-e1ca90687caf>
 
 而且，如果你不介意花钱学习像 Python 这样有价值的东西，那么你也可以看看我定期向所有想学习 Python 的人推荐的这两门课程:
 
-1.  [**何塞·波尔蒂利亚完成 Python 3 boot camp**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcomplete-python-bootcamp%2F)
-2.  [**CodeCademy 上的 Python 3 互动课程**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=44188&murl=https%3A%2F%2Fwww.codecademy.com%2Flearn%2Flearn-python-3&LSNSUBSITE=TEST)
-3.  [**Python 为大家特殊化上 Coursera**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fpython)
+1. [**何塞·波尔蒂利亚完成 Python 3 boot camp**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcomplete-python-bootcamp%2F)
+
+2. [**CodeCademy 上的 Python 3 互动课程**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=44188&murl=https%3A%2F%2Fwww.codecademy.com%2Flearn%2Flearn-python-3&LSNSUBSITE=TEST)
+
+3. [**Python 为大家特殊化上 Coursera**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fpython)
 
 这就是你这个周末可以阅读的一些最好的 Python 文章和教程。如果你有任何其他你认为 Python 程序员应该阅读的有趣的文章，请随意与我们分享。
 

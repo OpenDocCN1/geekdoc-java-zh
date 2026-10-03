@@ -1,41 +1,42 @@
-# ant-Spring MVC 和 WAR 文件示例
+
+# Ant-Spring MVC 和 WAR 文件示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/ant/ant-spring-mvc-and-war-file-example/>
 
-在本教程中，我们将向您展示如何使用 Ant 构建脚本来管理 Spring MVC web 应用程序项目，创建 WAR 文件并部署到 Tomcat。
+在本教程中，我们将向您展示如何使用 Ant 构建脚本来管理 Spring MVC Web 应用程序项目，创建 WAR 文件并部署到 Tomcat。
 
-使用的技术:
+使用的技术：
 
-1.  Eclipse 4.2
-2.  JDK 1.7
-3.  Ant 1.9.4
-4.  蚂蚁常春藤 2.4
-5.  回溯 1.1.2
-6.  jstl 1.2
-7.  弹簧 4.1.3 .释放
-8.  Tomcat 7
+1. Eclipse 4.2
+2. JDK 1.7
+3. Ant 1.9.4
+4. 蚂蚁常春藤 2.4
+5. 回溯 1.1.2
+6. JSTL 1.2
+7. Spring 4.1.3.RELEASE
+8. Tomcat 7
 
-## 1.项目目录
+## 1. 项目目录
 
-审查最终项目结构:
+审查最终项目结构：
 
 ![Ant-SpringMVC-Project](img/28090fda99a91d4b425f870af2594ff3.png)
 
-1.  资源——放置 Java 源代码所需的 xml 和属性文件。比如 log4j.properties，logback.xml，db.properties 等等。
-2.  src–放 Java 源代码。
-3.  目标–最终的 WAR 文件将存储在这里。
-4.  战争——与网络相关的东西。
-5.  WAR/WEB-INF–WAR 文件的标准 we b-INF 目录结构。
-6.  war/resources–用于 css 和 js 文件
+1. `resources`——放置 Java 源代码所需的 XML 和属性文件，例如 `log4j.properties`、`logback.xml`、`db.properties` 等。
+2. `src`——放置 Java 源代码。
+3. `target`——最终的 WAR 文件将存储在这里。
+4. `war`——与 Web 相关的内容。
+5. `war/WEB-INF`——WAR 文件的标准 `WEB-INF` 目录结构。
+6. `war/resources`——用于 CSS 和 JS 文件。
 
-## 2.项目相关性
+## 2. 项目依赖
 
-我们使用 Ivy 下载项目依赖关系:
+我们使用 Ivy 下载项目依赖关系。
 
-ivy.xml
+### `ivy.xml`
 
-```java
- <ivy-module version="2.0">
+```xml
+<ivy-module version="2.0">
 	<info organisation="org.apache" module="WebProject" />
 
 	<!-- Classpath management, thanks Maven -->
@@ -55,17 +56,17 @@ ivy.xml
 		<dependency org="org.springframework" name="spring-web" rev="4.1.3.RELEASE" conf="compile->default"/>
 		<dependency org="org.springframework" name="spring-webmvc" rev="4.1.3.RELEASE" conf="compile->default"/>
 	</dependencies>
-</ivy-module> 
+</ivy-module>
 ```
 
-## 3.Ant 构建脚本
+## 3. Ant 构建脚本
 
-Ant 脚本来管理这个 Spring MVC 项目，不言自明。
+Ant 脚本用于管理这个 Spring MVC 项目，内容不言自明。
 
-build.xml
+### `build.xml`
 
-```java
- <project xmlns:ivy="antlib:org.apache.ivy.ant" name="HelloProject" default="main" basedir=".">
+```xml
+<project xmlns:ivy="antlib:org.apache.ivy.ant" name="HelloProject" default="main" basedir=".">
 	<description>
 		Create a Spring MVC (WAR) with Ant build script
 	</description>
@@ -95,7 +96,7 @@ build.xml
 	<!-- install ivy if you don't have ivyide-->
 	<target name="ivy" description="Install ivy">
 		<mkdir dir="${user.home}/.ant/lib" />
-		<get dest="${user.home}/.ant/lib/ivy.jar" 
+		<get dest="${user.home}/.ant/lib/ivy.jar"
 		src="http://search.maven.org/remotecontent?filepath=org/apache/ivy/ivy/2.4.0-rc1/ivy-2.4.0-rc1.jar" />
 	</target>
 	<!-- ivy end -->
@@ -103,15 +104,15 @@ build.xml
 	<!-- Compile Java source from ${src.dir} and output it to ${web.classes.dir} -->
 	<target name="compile" depends="init, resolve" description="compile source code">
 		<mkdir dir="${web.classes.dir}" />
-		<javac destdir="${web.classes.dir}" source="${jdk.version}" target="${jdk.version}" 
+		<javac destdir="${web.classes.dir}" source="${jdk.version}" target="${jdk.version}"
 			debug="true" includeantruntime="false" classpathref="compile.path">
 			<src path="${src.dir}" />
 		</javac>
 	</target>
 
 	<!-- Copy *.xml or *.properties from ${resources.dir} to ${web.classes.dir} -->
-	<target name="copy-resources" 
-                description="copy Java resources like xml and properties files">
+	<target name="copy-resources"
+		description="copy Java resources like xml and properties files">
 		<copy todir="${web.classes.dir}">
 			<fileset dir="${resources.dir}">
 				<include name="**/*.xml" />
@@ -121,8 +122,8 @@ build.xml
 	</target>
 
 	<!-- Create the final WAR file for deployment -->
-	<target name="package" depends="clean, compile, copy-resources" 
-                description="create a war file">
+	<target name="package" depends="clean, compile, copy-resources"
+		description="create a war file">
 
 		<!-- ivy get dependencies and put it in ${lib.dir} -->
 		<ivy:retrieve pattern="${lib.dir}/[artifact]-[revision].[ext]" conf="runtime" />
@@ -150,19 +151,19 @@ build.xml
 
 	<target name="main" depends="package" />
 
-</project> 
+</project>
 ```
 
-## 4.Spring MVC、JSP 和 XML 文件
+## 4. Spring MVC、JSP 和 XML 文件
 
 如果您感兴趣，这里有完整的 Java、XML 和 JSP 文件。
 
-4.1 Spring MVC 控制器类。
+### 4.1 Spring MVC 控制器类
 
-WelcomeController.java
+#### `WelcomeController.java`
 
 ```java
- package com.mkyong.controller;
+package com.mkyong.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -197,15 +198,15 @@ public class WelcomeController {
 
 	}
 
-} 
+}
 ```
 
-4.2 简单的日志返回配置文件，用于日志记录。
+### 4.2 简单的日志返回配置文件，用于日志记录
 
-logback.xml
+#### `logback.xml`
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
@@ -222,15 +223,15 @@ logback.xml
 	  <appender-ref ref="STDOUT" />
 	</root>
 
-</configuration> 
+</configuration>
 ```
 
-4.3 JSP 和 CSS 文件。
+### 4.3 JSP 和 CSS 文件
 
-war/WEB-INF/pages/index.jsp
+#### `war/WEB-INF/pages/index.jsp`
 
-```java
- <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+```jsp
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:url var="resources" value="/resources/theme1" scope="request" />
 
 <html>
@@ -240,31 +241,33 @@ war/WEB-INF/pages/index.jsp
 <body>
 <h1>Ant + Spring MVC Web Project Example</h1>
 
-<p>Message : ${message}</p>	
+<p>Message : ${message}</p>
 </body>
-</html> 
+</html>
 ```
 
-war/resources/theme1/css/core.css
+#### `war/resources/theme1/css/core.css`
 
-```java
- h1 {
+```css
+h1 {
 	font-size: 50px;
 }
 
 p {
 	font-size: 20px;
 	border: 5px solid red;
-	padding:10px;
-} 
+	padding: 10px;
+}
 ```
 
-4.4 弹簧配置。
+### 4.4 Spring 配置
 
-mvc-dispatcher-servlet.xml
+#### `mvc-dispatcher-servlet.xml`
+
+
 
 ```java
- <beans 
+<beans 
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
@@ -293,15 +296,15 @@ mvc-dispatcher-servlet.xml
 
 	<mvc:annotation-driven />
 
-</beans> 
+</beans>
 ```
 
-4.5 一个标准的 web.xml，与 Spring 容器集成。
+## 4.5 一个标准的 `web.xml`，与 Spring 容器集成
 
-web.xml
+`web.xml`
 
 ```java
- <web-app  
+<web-app  
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	      http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
@@ -328,15 +331,15 @@ web.xml
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
-</web-app> 
+</web-app>
 ```
 
-## 5.运行和测试
+## 5. 运行和测试
 
-5.1 默认情况下，它会运行`package`任务。
+### 5.1 默认情况下，它会运行 `package` 任务
 
 ```java
- $ pwd
+$ pwd
 /Users/mkyong/Documents/workspace/AntSpringMVC
 
 $ ant
@@ -398,15 +401,15 @@ package:
 main:
 
 BUILD SUCCESSFUL
-Total time: 3 seconds 
+Total time: 3 seconds
 ```
 
-根据您开发环境，上述结果可能会有所不同。如果构建成功，最终的 WAR 文件将被创建在`target`文件夹中。
+根据您开发环境，上述结果可能会有所不同。如果构建成功，最终的 WAR 文件将被创建在 `target` 文件夹中。
 
-5.2 查看生成的 WAR 文件的内容—`helloproject.war`
+### 5.2 查看生成的 WAR 文件的内容—`helloproject.war`
 
 ```java
- mkyong-mac:AntSpringMVC mkyong$ tar -tvf target/helloproject.war 
+mkyong-mac:AntSpringMVC mkyong$ tar -tvf target/helloproject.war
 drwxrwxrwx  0 0      0           0 Dec 26 16:55 META-INF/
 -rwxrwxrwx  0 0      0         103 Dec 26 16:55 META-INF/MANIFEST.MF
 drwxrwxrwx  0 0      0           0 Dec 26 16:55 WEB-INF/
@@ -437,19 +440,24 @@ drwxrwxrwx  0 0      0           0 Dec 24 15:04 WEB-INF/pages/
 drwxrwxrwx  0 0      0           0 Dec 26 16:48 resources/
 drwxrwxrwx  0 0      0           0 Dec 25 13:30 resources/theme1/
 drwxrwxrwx  0 0      0           0 Dec 25 13:27 resources/theme1/css/
--rwxrwxrwx  0 0      0          88 Dec 25 13:45 resources/theme1/css/core.css 
+-rwxrwxrwx  0 0      0          88 Dec 25 13:45 resources/theme1/css/core.css
 ```
 
-所有文件都是放置属性，要部署它只需复制`helloproject.war`并将其放入`$Tomcat/webapps`文件夹。
+所有文件都是放置属性，要部署它只需复制 `helloproject.war` 并将其放入 `$Tomcat/webapps` 文件夹。
 
-5.3 http://localhost:8080/hello project/
+### 5.3 `http://localhost:8080/hello project/`
 
 ![ant-spring-mvc-example1](img/08e01013772dda065d8d0077489d5a3f.png)
 
-5.4 http://localhost:8080/hello project/mkyong
+### 5.4 `http://localhost:8080/hello project/mkyong`
 
-![ant-spring-mvc-example2](img/bb7dfa621639360cc642d4b6bc26f30f.png)**Note**
-Follow up : [how to debug this ant-ivy project in Eclipse IDE](http://web.archive.org/web/20221031160054/http://www.mkyong.com/ant/how-to-debug-ant-ivy-project-in-eclipse-ide/).
+
+
+![ant-spring-mvc-example2](img/bb7dfa621639360cc642d4b6bc26f30f.png)
+
+**Note**
+
+Follow up: [how to debug this ant-ivy project in Eclipse IDE](http://web.archive.org/web/20221031160054/http://www.mkyong.com/ant/how-to-debug-ant-ivy-project-in-eclipse-ide/).
 
 ## 下载源代码
 
@@ -457,15 +465,15 @@ Download It – [Ant-SpringMVC-Example.zip](http://web.archive.org/web/202210311
 
 ## 参考
 
-1.  [蚂蚁常春藤检索模式](http://web.archive.org/web/20221031160054/https://ant.apache.org/ivy/history/latest-milestone/use/retrieve.html)
-2.  [蚂蚁类型 zipfileset](http://web.archive.org/web/20221031160054/https://ant.apache.org/manual/Types/zipfileset.html)
-3.  [蚂蚁大战任务](http://web.archive.org/web/20221031160054/https://ant.apache.org/manual/Tasks/war.html)
-4.  [蚂蚁复制任务](http://web.archive.org/web/20221031160054/https://ant.apache.org/manual/Tasks/copy.html)
-5.  [Stackoverflow : Ivy 类路径管理](http://web.archive.org/web/20221031160054/https://stackoverflow.com/questions/14029777/is-there-any-ant-feature-that-copies-classpath-dependencies-to-web-inf-lib)
-6.  [W3schools CSS Border](http://web.archive.org/web/20221031160054/https://www.w3schools.com/css/css_border.asp)
-7.  [Ant–如何使用外部库创建 Jar 文件](http://web.archive.org/web/20221031160054/http://www.mkyong.com/ant/ant-how-to-create-a-jar-file-with-external-libraries/)
-8.  [伊夫德 WTP 集成](http://web.archive.org/web/20221031160054/https://ant.apache.org/ivy/ivyde/history/latest-milestone/cpc/wtp.html)
-9.  [Maven:如何创建 web 项目](http://web.archive.org/web/20221031160054/http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/)
-10.  [Spring IO : Spring MVC 步步为营](http://web.archive.org/web/20221031160054/https://docs.spring.io/docs/Spring-MVC-step-by-step/part1.html)
+1. [蚂蚁常春藤检索模式](http://web.archive.org/web/20221031160054/https://ant.apache.org/ivy/history/latest-milestone/use/retrieve.html)
+2. [蚂蚁类型 `zipfileset`](http://web.archive.org/web/20221031160054/https://ant.apache.org/manual/Types/zipfileset.html)
+3. [蚂蚁大战任务](http://web.archive.org/web/20221031160054/https://ant.apache.org/manual/Tasks/war.html)
+4. [蚂蚁复制任务](http://web.archive.org/web/20221031160054/https://ant.apache.org/manual/Tasks/copy.html)
+5. [Stack Overflow：Ivy 类路径管理](http://web.archive.org/web/20221031160054/https://stackoverflow.com/questions/14029777/is-there-any-ant-feature-that-copies-classpath-dependencies-to-web-inf-lib)
+6. [W3Schools CSS Border](http://web.archive.org/web/20221031160054/https://www.w3schools.com/css/css_border.asp)
+7. [Ant – 如何使用外部库创建 Jar 文件](http://web.archive.org/web/20221031160054/http://www.mkyong.com/ant/ant-how-to-create-a-jar-file-with-external-libraries/)
+8. [IvyDE WTP 集成](http://web.archive.org/web/20221031160054/https://ant.apache.org/ivy/ivyde/history/latest-milestone/cpc/wtp.html)
+9. [Maven：如何创建 Web 项目](http://web.archive.org/web/20221031160054/http://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/)
+10. [Spring IO：Spring MVC 步步为营](http://web.archive.org/web/20221031160054/https://docs.spring.io/docs/Spring-MVC-step-by-step/part1.html)
 
 <input type="hidden" id="mkyong-current-postId" value="13508">

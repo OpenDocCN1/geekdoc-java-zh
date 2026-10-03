@@ -1,3 +1,4 @@
+
 # Spring Boot Log4j 2 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-boot-log4j-2-example/>
@@ -6,7 +7,7 @@
 
 在本教程中，我们将向您展示如何在 Spring Boot 框架中使用 [Apache Log4j 2](http://web.archive.org/web/20221004102333/https://logging.apache.org/log4j/2.x/) 。
 
-使用的技术:
+使用的技术：
 
 *   Spring Boot 2.1.2 .版本
 *   弹簧 5.1.4 释放
@@ -14,18 +15,18 @@
 *   maven3
 *   Java 8
 
-## 1.项目目录
+## 1. 项目目录
 
 ![project directory](img/77031a42a762b4bbdcff051a107c446d.png)
 
-## 2.专家
+## 2. 专家
 
 关键是排除默认`logback`，用`spring-boot-starter-log4j2`包含`log4j`
 
-pom.xml
+`pom.xml`
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
@@ -116,24 +117,24 @@ pom.xml
 
         </plugins>
     </build>
-</project> 
+</project>
 ```
 
 显示项目依赖关系。
 
 ```java
- $ mvn dependency:tree
+$ mvn dependency:tree
 
 [INFO] \- org.springframework.boot:spring-boot-starter-log4j2:jar:2.1.2.RELEASE:compile
 [INFO]    +- org.apache.logging.log4j:log4j-slf4j-impl:jar:2.11.1:compile <--- slf4j to log4j bridge
 [INFO]    |  \- org.apache.logging.log4j:log4j-api:jar:2.11.1:compile
 [INFO]    +- org.apache.logging.log4j:log4j-core:jar:2.11.1:compile
 [INFO]    +- org.apache.logging.log4j:log4j-jul:jar:2.11.1:compile
-[INFO]    \- org.slf4j:jul-to-slf4j:jar:1.7.25:compile 
+[INFO]    \- org.slf4j:jul-to-slf4j:jar:1.7.25:compile
 ```
 
 ```java
- $ mvn dependency:tree
+$ mvn dependency:tree
 
 [INFO] org.springframework.boot:logging-log4j2:jar:1.0
 [INFO] +- org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE:compile
@@ -179,17 +180,31 @@ pom.xml
 [INFO] |  \- org.slf4j:jul-to-slf4j:jar:1.7.25:compile
 [INFO] +- com.lmax:disruptor:jar:3.4.2:compile
 [INFO] \- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.9.8:compile
-[INFO]    \- com.fasterxml.jackson.core:jackson-core:jar:2.9.8:compile 
+[INFO]    \- com.fasterxml.jackson.core:jackson-core:jar:2.9.8:compile
 ```
 
-## 3.log4j2.xml
+## 3. `log4j2.xml`
 
 3.1 在项目类路径中创建一个`log4j2.xml`，`src/resources/`
 
-src/resources/log4j2.xml
+`src/resources/log4j2.xml`
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
+
+
+# Log4j 2 配置与使用指南
+
+## 1. 引言
+
+本文档介绍如何在 Spring Boot 应用中使用 Log4j 2 进行日志记录，包括配置文件的编写、异步日志的启用以及实际应用示例。
+
+## 2. 配置文件
+
+### 2.1 `log4j2.xml`
+
+以下是一个标准的 `log4j2.xml` 配置示例，它定义了控制台和文件两种日志输出方式：
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="DEBUG">
     <Appenders>
         <Console name="LogToConsole" target="SYSTEM_OUT">
@@ -214,32 +229,34 @@ src/resources/log4j2.xml
             <AppenderRef ref="LogToConsole"/>
         </Root>
     </Loggers>
-</Configuration> 
+</Configuration>
 ```
 
-3.2 对于`log4j2.yml`，我们需要包含`jackson-databind`和`jackson-dataformat-yaml`，因为`jackson-databind`已经包含在 Spring Boot 启动器中，所以我们只需要包含`jackson-dataformat-yaml`
+### 2.2 `log4j2.yml`
 
-pom.xml
+对于`log4j2.yml`，我们需要包含`jackson-databind`和`jackson-dataformat-yaml`，因为`jackson-databind`已经包含在 Spring Boot 启动器中，所以我们只需要包含`jackson-dataformat-yaml`。
 
-```java
- <!-- spring-boot-starter-web -> spring-boot-starter-json -> jackson-databind-->
-	<!-- included by spring boot
-	<dependency>
-		<groupId>com.fasterxml.jackson.core</groupId>
-		<artifactId>jackson-databind</artifactId>
-	</dependency>
-	-->
+**pom.xml**
 
-	<dependency>
-		<groupId>com.fasterxml.jackson.dataformat</groupId>
-		<artifactId>jackson-dataformat-yaml</artifactId>
-	</dependency> 
+```xml
+<!-- spring-boot-starter-web -> spring-boot-starter-json -> jackson-databind-->
+<!-- included by spring boot
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+</dependency>
+-->
+
+<dependency>
+    <groupId>com.fasterxml.jackson.dataformat</groupId>
+    <artifactId>jackson-dataformat-yaml</artifactId>
+</dependency>
 ```
 
-log4j2.yml
+**log4j2.yml**
 
-```java
- Configuration:
+```yaml
+Configuration:
   status: debug
 
   appenders:
@@ -272,17 +289,19 @@ log4j2.yml
     Root:
       level: error
       AppenderRef:
-        ref: LogToConsole 
+        ref: LogToConsole
 ```
 
-## 4.你好 log4j2
+## 3. 应用示例
 
-4.1 一个简单的 Spring MVC web 应用，用 log4j2 登录。
+### 3.1 一个简单的 Spring MVC Web 应用
 
-HelloController.java
+以下是一个使用 Log4j 2 进行日志记录的 Spring MVC Web 应用示例。
+
+**HelloController.java**
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -319,15 +338,15 @@ public class HelloController {
         return 100;
     }
 
-} 
+}
 ```
 
-4.2 模板
+### 3.2 模板文件
 
-src/resources/templates/welcome.html
+**src/resources/templates/welcome.html**
 
-```java
- <!DOCTYPE HTML>
+```html
+<!DOCTYPE HTML>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head></head>
 <body>
@@ -338,17 +357,17 @@ src/resources/templates/welcome.html
 </ul>
 
 </body>
-</html> 
+</html>
 ```
 
-## 5.演示
+## 4. 演示
 
-5.1 启动 Spring Boot
+### 4.1 启动 Spring Boot
 
-StartApplication.java
+**StartApplication.java**
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -360,42 +379,46 @@ public class StartApplication {
         SpringApplication.run(StartApplication.class, args);
     }
 
-} 
+}
 ```
 
-*http://localhost:8080*
+访问 `http://localhost:8080`。
 
 ![demo](img/8e170427263fa855236c15af7306a927.png)
 
-查看日志记录:
+### 4.2 查看日志记录
 
-Terminal
+**Terminal**
 
-```java
- 19:10:08.723 [http-nio-8080-exec-1] DEBUG com.mkyong.HelloController - Hello from Log4j 2 - num : [1, 2, 3, 4, 5]
-19:10:08.724 [http-nio-8080-exec-1] DEBUG com.mkyong.HelloController - Hello from Log4j 2 - num : [1, 2, 3, 4, 5] 
+```
+19:10:08.723 [http-nio-8080-exec-1] DEBUG com.mkyong.HelloController - Hello from Log4j 2 - num : [1, 2, 3, 4, 5]
+19:10:08.724 [http-nio-8080-exec-1] DEBUG com.mkyong.HelloController - Hello from Log4j 2 - num : [1, 2, 3, 4, 5]
 ```
 
-## 6.log4j 2–异步记录器
+## 5. Log4j 2 异步记录器
 
-6.1 要启用异步日志，我们需要包含`disruptor`
+### 5.1 启用异步日志
 
-pom.xml
+要启用异步日志，我们需要包含`disruptor`。
 
-```java
- <dependency>
-		<groupId>com.lmax</groupId>
-		<artifactId>disruptor</artifactId>
-		<version>3.4.2</version>
-	</dependency> 
+**pom.xml**
+
+```xml
+<dependency>
+    <groupId>com.lmax</groupId>
+    <artifactId>disruptor</artifactId>
+    <version>3.4.2</version>
+</dependency>
 ```
 
-6.2 设置系统属性`log4j2.contextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector`
+### 5.2 设置系统属性
 
-Terminal
+设置系统属性`log4j2.contextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector`。
 
-```java
- $ mvn package 
+**Terminal**
+
+```
+$ mvn package
 
 $ java -Dlog4j2.contextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector -jar target/logging-log4j2-1.0.jar
 
@@ -407,25 +430,31 @@ $ java -Dlog4j2.contextSelector=org.apache.logging.log4j.core.async.AsyncLoggerC
 2019-03-27 19:28:57,196 main DEBUG Registering MBean org.apache.logging.log4j2:type=AsyncContext@578486a3,component=Loggers,name=
 2019-03-27 19:28:57,196 main DEBUG Registering MBean org.apache.logging.log4j2:type=AsyncContext@578486a3,component=Loggers,name=com.mkyong
 2019-03-27 19:28:57,197 main DEBUG Registering MBean org.apache.logging.log4j2:type=AsyncContext@578486a3,component=Appenders,name=LogToConsole
-2019-03-27 19:28:57,200 main DEBUG Registering MBean org.apache.logging.log4j2:type=AsyncContext@578486a3,component=Appenders,name=LogToFile 
+2019-03-27 19:28:57,200 main DEBUG Registering MBean org.apache.logging.log4j2:type=AsyncContext@578486a3,component=Appenders,name=LogToFile
 ```
 
-## 下载源代码
+## 6. 下载源代码
 
-$ git clone [https://github.com/mkyong/spring-boot.git](http://web.archive.org/web/20221004102333/https://github.com/mkyong/spring-boot.git)
+```
+$ git clone https://github.com/mkyong/spring-boot.git
 $ cd logging-log4j2
 $ mvn spring-boot:run
-Access *localhost:8080*
+```
 
-$ mvn 包
-$ Java-dlog 4j 2 . context selector = org . Apache . logging . log4j . core . async . asyncloggercontextselector-jar target/logging-log4j 2-1.0 . jar
-Access*localhost:8080*
+访问 `localhost:8080`。
 
-## 参考
+```
+$ mvn package
+$ java -Dlog4j2.contextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector -jar target/logging-log4j2-1.0.jar
+```
 
-*   [Spring Boot 测井](http://web.archive.org/web/20221004102333/https://docs.spring.io/spring-boot/docs/current/reference/html/howto-logging.html)
-*   [阿帕奇 Log4j 2](http://web.archive.org/web/20221004102333/https://logging.apache.org/log4j/2.x/)
-*   [Apache Log4j 2 教程](/web/20221004102333/https://mkyong.com/logging/apache-log4j-2-tutorials/)
-*   [用于低延迟记录的异步记录器](http://web.archive.org/web/20221004102333/https://logging.apache.org/log4j/2.x/manual/async.html)
+访问 `localhost:8080`。
+
+## 7. 参考
+
+- [Spring Boot 测井](http://web.archive.org/web/20221004102333/https://docs.spring.io/spring-boot/docs/current/reference/html/howto-logging.html)
+- [阿帕奇 Log4j 2](http://web.archive.org/web/20221004102333/https://logging.apache.org/log4j/2.x/)
+- [Apache Log4j 2 教程](/web/20221004102333/https://mkyong.com/logging/apache-log4j-2-tutorials/)
+- [用于低延迟记录的异步记录器](http://web.archive.org/web/20221004102333/https://logging.apache.org/log4j/2.x/manual/async.html)
 
 <input type="hidden" id="mkyong-current-postId" value="15012">

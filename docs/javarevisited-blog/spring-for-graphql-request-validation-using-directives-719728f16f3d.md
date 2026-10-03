@@ -1,4 +1,5 @@
-# 使用指令的 Spring for GraphQL 请求验证。
+
+# 使用指令的 Spring for GraphQL 请求验证
 
 > 原文：<https://medium.com/javarevisited/spring-for-graphql-request-validation-using-directives-719728f16f3d?source=collection_archive---------0----------------------->
 

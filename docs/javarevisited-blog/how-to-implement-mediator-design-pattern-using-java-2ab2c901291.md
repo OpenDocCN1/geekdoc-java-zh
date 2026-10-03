@@ -1,3 +1,4 @@
+
 # 如何用 Java 实现 Mediator 设计模式？
 
 > 原文：<https://medium.com/javarevisited/how-to-implement-mediator-design-pattern-using-java-2ab2c901291?source=collection_archive---------2----------------------->
@@ -45,6 +46,7 @@
 中介设计模式是行为设计模式家族的一部分，**它有助于减少对象之间的紧密耦合或对象之间的混乱依赖**。一个真实的例子是，假设我们是一名翻译。在我们的场景中，我们去了一个地方，那里的居民不懂你说的语言。在这种情况下，我们需要一个懂两种语言的翻译。在这些情况下，译者充当了中介者的角色，这就是中介者模式在现实生活中的工作方式。
 
 > **定义:**
+>
 > *中介模式是一种设计模式，它让我们能够* ***减少对象之间混乱的依赖关系。该模式限制了对象之间的直接通信，并迫使它们通过中介对象进行协作。***
 
 **2 →为什么要实现 Mediator 设计模式？**
@@ -68,19 +70,19 @@
 
 **第二步→如何调解人(翻译)会沟通？**
 
-Translator(具体类)正在实现 ITranslator 接口。在我们的例子中，Translator 将文本从英语转换成西班牙语，反之亦然
+`Translator`(具体类)正在实现 `ITranslator` 接口。在我们的例子中，`Translator` 将文本从英语转换成西班牙语，反之亦然
 
 [![](img/16368193f87e920ae7570fa87277a659.png)](https://www.java67.com/2020/11/top-5-course-to-learn-design-patterns-javascript.html)
 
-Translator.class
+`Translator.class`
 
 **步骤 3→在我们的案例中，翻译(中介)将如何发生？**
 
-在用户对象下面，我们有一个 translate 方法，它将文本转换成另一种用户语言。
+在用户对象下面，我们有一个 `translate` 方法，它将文本转换成另一种用户语言。
 
 [![](img/3a60c46b01bf349c1fef84deabe3594d.png)](https://www.java67.com/2022/01/top-5-courses-to-learn-design-patterns.html)
 
-User.class
+`User.class`
 
 **步骤 4→如何测试 MediatorDesign 模式？**
 
@@ -92,7 +94,7 @@ User.class
 
 ## ⚡Where 为**中介**设计模式寻找代码库？
 
-<https://github.com/Rohan2596/Design-pattern-examples/tree/pattern/mediator>  
+<https://github.com/Rohan2596/Design-pattern-examples/tree/pattern/mediator>
 
 ## ⚡Conclusion:-
 
@@ -100,10 +102,8 @@ User.class
 
 不要忘记看看我的网站，以了解更多关于我的信息
 
-  
-
 ## 📚参考书目:-
 
-<https://refactoring.guru/design-patterns/mediator>  ![](img/0f2615e6c2f4828c479469fb81d75612.png)
+<https://refactoring.guru/design-patterns/mediator> ![](img/0f2615e6c2f4828c479469fb81d75612.png)
 
 谢谢观众们——罗汉·卡达姆

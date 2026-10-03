@@ -1,3 +1,4 @@
+
 # 我最喜欢的 2023 年有经验程序员学习 DevOps 的在线课程
 
 > 原文：<https://medium.com/javarevisited/top-10-courses-to-learn-devops-for-experienced-programmers-d93b666db151?source=collection_archive---------0----------------------->
@@ -90,49 +91,53 @@ Docker 是 DevOps 的重要技术之一。它允许您将组件捆绑在一起�
 
 基础设施自动化是 DevOps 的重要组成部分，Ansible、Chef、Puppet 等工具很有帮助，但 Terraform 最近很受欢迎，如果你正在或即将进入 Ops / DevOps 角色，它是你需要掌握的工具。
 
+
+
 [![](img/33bfbfcf997a4ef589a013ccdbb8bc79.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Flearn-devops-infrastructure-automation-with-terraform%2F)
 
-Terraform 从相同的原则出发，基础设施即代码，但侧重于基础设施本身的自动化。您的整个云基础架构(实例、卷、网络、IPs)都可以用 terraform 来描述。
+`Terraform` 从相同的原则出发，基础设施即代码，但侧重于基础设施本身的自动化。您的整个云基础架构（实例、卷、网络、IPs）都可以用 `terraform` 来描述。
 
-在本课程中，您将了解如何通过 terraforming 以及 [AWS](http://www.java67.com/2018/05/top-5-amazon-web-services-or-aws-courses-to-learn-online.html) 、Packer、 [Docker](https://hackernoon.com/10-free-courses-to-learn-docker-for-programmers-and-devops-engineers-7ff2781fd6e0) 、ECR、ECS 和 Jenkins 实现基础设施自动化。
+在本课程中，您将了解如何通过 `terraforming` 以及 [AWS](http://www.java67.com/2018/05/top-5-amazon-web-services-or-aws-courses-to-learn-online.html) 、`Packer`、 [Docker](https://hackernoon.com/10-free-courses-to-learn-docker-for-programmers-and-devops-engineers-7ff2781fd6e0) 、`ECR`、`ECS` 和 `Jenkins` 实现基础设施自动化。
 
-## 8. [**DevOps 与 AWS CodePipeline，Jenkins 与 AWS CodeDeploy**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fci-and-cd-with-aws-codepipeline-jenkins-and-aws-codedeploy%2F)
+## 8. [DevOps 与 AWS CodePipeline，Jenkins 与 AWS CodeDeploy](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fci-and-cd-with-aws-codepipeline-jenkins-and-aws-codedeploy%2F)
 
-如果您对什么是持续集成(CI)、持续交付和持续部署(CD)以及如何使用 Amazon Web Service(例如 AWS 和 Jenkins)进行开发运维感到困惑，那么这是适合您的课程。
+如果您对什么是持续集成（CI）、持续交付和持续部署（CD）以及如何使用 Amazon Web Service（例如 AWS 和 Jenkins）进行开发运维感到困惑，那么这是适合您的课程。
 
 在本课程中，您将学习基本的 DevOps 技能，以及在 AWS 云中的持续集成和持续交付。
 
-<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fci-and-cd-with-aws-codepipeline-jenkins-and-aws-codedeploy%2F>  
+<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fci-and-cd-with-aws-codepipeline-jenkins-and-aws-codedeploy%2F>
 
-## 9 [**DevOps: CI/CD 与 Jenkins pipelines、Maven、Gradle**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fdevops-and-continuous-integration-with-jenkins-pipelines%2F)
+## 9. [DevOps: CI/CD 与 Jenkins pipelines、Maven、Gradle](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fdevops-and-continuous-integration-with-jenkins-pipelines%2F)
 
-这个在线 DevOps 课程将教你如何使用 Jenkins 和它的许多插件来构建复杂的持续集成和持续交付管道。尤其是管道插件。
+这个在线 DevOps 课程将教你如何使用 `Jenkins` 和它的许多插件来构建复杂的持续集成和持续交付管道。尤其是管道插件。
 
 [![](img/07d169c61acd8a1e9a782e1a5cf0eb92.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fdevops-and-continuous-integration-with-jenkins-pipelines%2F)
 
-本课程旨在向您介绍 Jenkins 的来龙去脉以及如何设置 DevOps 管道，即使您几乎没有这方面的经验，也可以帮助您实施这些 DevOps 实践，从而简化您的开发流程。
+本课程旨在向您介绍 `Jenkins` 的来龙去脉以及如何设置 DevOps 管道，即使您几乎没有这方面的经验，也可以帮助您实施这些 DevOps 实践，从而简化您的开发流程。
 
-简而言之，用 Java、Gradle、Maven、Artifactory 和 Sqitch 构建持续集成、持续交付和 DevOps 管道的绝佳课程。
+简而言之，用 `Java`、`Gradle`、`Maven`、`Artifactory` 和 `Sqitch` 构建持续集成、持续交付和 DevOps 管道的绝佳课程。
 
-<https://www.udemy.com/course/devops-and-continuous-integration-with-jenkins-pipelines/?LSNPUBID=JVFxdTr9V80&ranEAID=JVFxdTr9V80&ranMID=39197&ranSiteID=JVFxdTr9V80-BWLS9C_3owGMgijI4VkSKA>  
+<https://www.udemy.com/course/devops-and-continuous-integration-with-jenkins-pipelines/?LSNPUBID=JVFxdTr9V80&ranEAID=JVFxdTr9V80&ranMID=39197&ranSiteID=JVFxdTr9V80-BWLS9C_3owGMgijI4VkSKA>
 
-## 10. [**完成与 Docker、Jenkins、GIT、vagger、Maven 的 devo PS**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fdevops-docker-complete-guide-hands-on-with-practical%2F)
+## 10. [完成与 Docker、Jenkins、GIT、Vagrant、Maven 的 DevOps](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fdevops-docker-complete-guide-hands-on-with-practical%2F)
 
 如果您正在寻找一门既能向您解释开发运维工程师的角色，又能提供基本开发运维工具实践经验的开发运维实践课程，那么这就是适合您的课程。
 
-提供了基本 DevOps 技术的完整教程。您将通过跟随实践指南学习 Docker Mastery、Jenkins、GIT、流浪者和 Maven。
+提供了基本 DevOps 技术的完整教程。您将通过跟随实践指南学习 `Docker Mastery`、`Jenkins`、`GIT`、`Vagrant` 和 `Maven`。
 
-<https://www.udemy.com/course/devops-docker-complete-guide-hands-on-with-practical/?LSNPUBID=JVFxdTr9V80&ranEAID=JVFxdTr9V80&ranMID=39197&ranSiteID=JVFxdTr9V80-ponvoiWJ7OXgITazmtwwfw>  
+<https://www.udemy.com/course/devops-docker-complete-guide-hands-on-with-practical/?LSNPUBID=JVFxdTr9V80&ranEAID=JVFxdTr9V80&ranMID=39197&ranSiteID=JVFxdTr9V80-ponvoiWJ7OXgITazmtwwfw>
 
-以上就是 2023 年学习 DevOps 成为 DevOps 工程师的一些**最好的课程。正如我所说，对优秀 DevOps 工程师和软件开发人员的需求呈指数级增长，而市场上没有足够的 DevOps 专业人员来支持这种需求。
+以上就是 2023 年学习 DevOps 成为 DevOps 工程师的一些**最好的课程**。正如我所说，对优秀 DevOps 工程师和软件开发人员的需求呈指数级增长，而市场上没有足够的 DevOps 专业人员来支持这种需求。
 
-这意味着这是一个学习 DevOps 并进入这份更负责任、高薪和令人兴奋的工作的好机会。DevOps 引擎的平均利润从**的 12 万美元**到**的 15 万美元**不等。如果你想在 2023 年成为一名 DevOps 工程师，这些课程是一个很好的起点。
+这意味着这是一个学习 DevOps 并进入这份更负责任、高薪和令人兴奋的工作的好机会。DevOps 引擎的平均利润从**12 万美元**到**15 万美元**不等。如果你想在 2023 年成为一名 DevOps 工程师，这些课程是一个很好的起点。
 
-其他**对 DevOps 工程师有用的资源**
-[2023 devo PS 开发者路线图](https://javarevisited.blogspot.com/2018/09/the-2018-devops-roadmap-your-guide-to-become-DevOps-Engineer.html)
-[10 门免费课程学习 Docker](https://hackernoon.com/10-free-courses-to-learn-docker-for-programmers-and-devops-engineers-7ff2781fd6e0)
-[5 门免费课程学习 Kubernetes](https://javarevisited.blogspot.com/2019/01/top-5-free-kubernetes-courses-for-DevOps-Engineer.html)
-[10 门免费课程学习 Maven、Jenkins 和 Docker](/javarevisited/top-10-free-courses-to-learn-maven-jenkins-and-docker-for-java-developers-51fa7a1e66f6) [Java 开发者学习 Jenkins 的前 5 门课程](https://javarevisited.blogspot.com/2018/09/top-5-jenkins-courses-for-java-and-DevOps-Programmers.html)
-[Top](https://www.java67.com/2019/04/top-5-courses-to-learn-git-and-github.html)**
+其他**对 DevOps 工程师有用的资源**：
+
+- [2023 DevOps 开发者路线图](https://javarevisited.blogspot.com/2018/09/the-2018-devops-roadmap-your-guide-to-become-DevOps-Engineer.html)
+- [10 门免费课程学习 Docker](https://hackernoon.com/10-free-courses-to-learn-docker-for-programmers-and-devops-engineers-7ff2781fd6e0)
+- [5 门免费课程学习 Kubernetes](https://javarevisited.blogspot.com/2019/01/top-5-free-kubernetes-courses-for-DevOps-Engineer.html)
+- [10 门免费课程学习 Maven、Jenkins 和 Docker](/javarevisited/top-10-free-courses-to-learn-maven-jenkins-and-docker-for-java-developers-51fa7a1e66f6)
+- [Java 开发者学习 Jenkins 的前 5 门课程](https://javarevisited.blogspot.com/2018/09/top-5-jenkins-courses-for-java-and-DevOps-Programmers.html)
+- [Top 5 课程学习 Git 和 GitHub](https://www.java67.com/2019/04/top-5-courses-to-learn-git-and-github.html)
 
 感谢您阅读本文。如果你喜欢这些 DevOps 课程，请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。

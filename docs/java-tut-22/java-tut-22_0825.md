@@ -1,3 +1,4 @@
+
 # 打开策略文件
 
 > 原文：[`docs.oracle.com/javase/tutorial/security/tour2/wstep1.html`](https://docs.oracle.com/javase/tutorial/security/tour2/wstep1.html)
@@ -6,7 +7,6 @@
 
 ```java
 policytool
-
 ```
 
 这将打开策略工具窗口。要打开`examplepolicy`策略文件，请在**文件**菜单中使用**打开**命令。这将显示一个打开对话框，您可以使用它来浏览目录结构，直到找到包含策略文件的目录（即`C:\Test\`目录）。

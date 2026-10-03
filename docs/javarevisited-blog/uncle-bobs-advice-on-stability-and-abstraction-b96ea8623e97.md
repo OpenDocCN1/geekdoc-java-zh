@@ -1,10 +1,11 @@
+
 # 鲍勃大叔关于稳定性和抽象性的建议
 
 > 原文：<https://medium.com/javarevisited/uncle-bobs-advice-on-stability-and-abstraction-b96ea8623e97?source=collection_archive---------3----------------------->
 
 我对鲍勃大叔老[干净代码](https://cleancoders.com/)系列的简明扼要的总结。即，关于非循环依赖、稳定依赖和稳定抽象原则的那一集。
 
-# 1.无环依赖原则
+## 1. 无环依赖原则
 
 **非循环依赖原则声明组件之间的依赖不能形成循环。**
 

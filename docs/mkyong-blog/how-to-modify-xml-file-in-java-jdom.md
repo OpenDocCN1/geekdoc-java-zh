@@ -1,46 +1,47 @@
-# 如何在 Java 中修改 XML 文件—(JDOM)
+
+# 如何在 Java 中修改 XML 文件——JDOM
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/how-to-modify-xml-file-in-java-jdom/>
 
 本教程展示了如何使用 [JDOM](http://web.archive.org/web/20220626054141/https://github.com/hunterhacker/jdom) 来修改 XML 文件。
 
-目录
+## 目录
 
-*   [1。下载 JDOM 2.x](#download-the-jdom-2x)
-*   [2。XML 文件，](#the-xml-file-before-and-after)前后
-*   [3。修改 XML 文件](#modify-xml-file)
-*   [4。查找并删除 XML 元素](#find-and-remove-xml-elements)
-*   [5。下载源代码](#download-source-code)
-*   [6。参考文献](#references)
+- [1. 下载 JDOM 2.x](#download-the-jdom-2x)
+- [2. XML 文件前后对比](#the-xml-file-before-and-after)
+- [3. 修改 XML 文件](#modify-xml-file)
+- [4. 查找并删除 XML 元素](#find-and-remove-xml-elements)
+- [5. 下载源代码](#download-source-code)
+- [6. 参考文献](#references)
 
-*用 JDOM 2.0.6 测试的 PS*
+*PS：用 JDOM 2.0.6 测试。*
 
 **注意**
-我们需要了解 JDOM 如何[解析 XML](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-read-xml-file-in-java-jdom-example/) 和[编写 XML](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-create-xml-file-in-java-jdom-parser/) ，以便修改 XML 文档。
 
-## 1。下载 JDOM 2.x
+我们需要了解 JDOM 如何[解析 XML](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-read-xml-file-in-java-jdom-example/)和[编写 XML](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-create-xml-file-in-java-jdom-parser/)，以便修改 XML 文档。
+
+## 1. 下载 JDOM 2.x
 
 Maven for JDOM。
 
-pom.xml
+`pom.xml`
 
 ```java
- <dependency>
-      <groupId>org.jdom</groupId>
-      <artifactId>jdom2</artifactId>
-      <version>2.0.6</version>
-  </dependency> 
+<dependency>
+    <groupId>org.jdom</groupId>
+    <artifactId>jdom2</artifactId>
+    <version>2.0.6</version>
+</dependency>
 ```
 
-## 2。XML 文件，
-前后
+## 2. XML 文件前后对比
 
-2.1 原始 XML 文件。
+### 2.1 原始 XML 文件
 
-c:\\test\\staff.xml
+`c:\test\staff.xml`
 
-```java
- <?xml version="1.0" encoding="utf-8"?>
+```xml
+<?xml version="1.0" encoding="utf-8"?>
 <company>
     <staff id="1001">
         <name>mkyong</name>
@@ -55,31 +56,33 @@ c:\\test\\staff.xml
         <salary currency="EUR">8000</salary>
         <bio><![CDATA[a & b]]></bio>
     </staff>
-</company> 
+</company>
 ```
 
-2.2 见下图 [JDOM 示例](#modify-xml-file)修改上述 XML，添加、删除和更新元素、属性、注释、CDATA 等。
+### 2.2 修改 XML 文件
 
-对于员工，id 是 1001
+见下图[JDOM 示例](#modify-xml-file)修改上述 XML，添加、删除和更新元素、属性、注释、CDATA 等。
 
-1.  移除 XML 元素`role`
-2.  更新 XML 元素`salary`，将属性更新为 MYR
+对于员工，`id` 是 `1001`：
 
-对于员工，id 是 1002
+1. 移除 XML 元素`role`。
+2. 更新 XML 元素`s­alary`，将属性更新为 `MYR`。
 
-1.  移除 xml 元素`name`
-2.  添加新的 xml 元素`address`和 CDATA 内容
-3.  将 xml 元素`salary`更新为 2000
-4.  移除 xml 元素 CDATA
+对于员工，`id` 是 `1002`：
+
+1. 移除 XML 元素`name`。
+2. 添加新的 XML 元素`address`和 CDATA 内容。
+3. 将 XML 元素`salary`更新为 `2000`。
+4. 移除 XML 元素 CDATA。
 
 另外，添加一个新的 XML 子节点`staff`，并删除所有 XML 注释。
 
 下面是修改后的 XML 输出。
 
-c:\\test\\staff.xml
+`c:\test\staff.xml`
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <company>
   <staff id="1001">
     <name>mkyong</name>
@@ -93,19 +96,19 @@ c:\\test\\staff.xml
     <address><![CDATA[123 & abc]]></address>
   </staff>
   <staff id="1003" />
-</company> 
+</company>
 ```
 
-## 3。修改 XML 文件
+## 3. 修改 XML 文件
 
 下面的例子使用 JDOM 解析 XML 文件上面的[，修改内容并将其写入文件。](#the-xml-file-before-and-after)
 
 阅读代码注释，这是不言自明的。
 
-ModifyXmlJDom.java
+`ModifyXmlJDom.java`
 
 ```java
- package com.mkyong.xml.jdom;
+package com.mkyong.xml.jdom;
 
 import org.jdom2.CDATA;
 import org.jdom2.Content;
@@ -203,15 +206,15 @@ public class ModifyXmlJDom {
 
     }
 
-} 
+}
 ```
 
-输出
+### 输出
 
-c:\\test\\staff-update.xml
+`c:\test\staff-update.xml`
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <company>
   <staff id="1001">
     <name>mkyong</name>
@@ -225,17 +228,17 @@ c:\\test\\staff-update.xml
     <address><![CDATA[123 & abc]]></address>
   </staff>
   <staff id="1003" />
-</company> 
+</company>
 ```
 
-## 4。查找并删除 XML 元素
+## 4. 查找并删除 XML 元素
 
 如果一个 XML 元素`name`等于`mkyong`，删除它的数据，以及整个`staff`元素。
 
-ModifyXmlJDom4.java
+`ModifyXmlJDom4.java`
 
 ```java
- package com.mkyong.xml.jdom;
+package com.mkyong.xml.jdom;
 
 import org.jdom2.CDATA;
 import org.jdom2.Content;
@@ -284,15 +287,15 @@ public class ModifyXmlJDom4 {
 
   }
 
-} 
+}
 ```
 
-输出
+### 输出
 
-Terminal
+`Terminal`
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <company>
   <staff id="1002">
     <name>yflow</name>
@@ -300,28 +303,39 @@ Terminal
     <salary currency="EUR">8000</salary>
     <bio><![CDATA[a & b]]></bio>
   </staff>
-</company> 
+</company>
 ```
 
 **注**
+
 更多 JDOM2 示例——[JDOM 2 入门](http://web.archive.org/web/20220626054141/https://github.com/hunterhacker/jdom/wiki/JDOM2-A-Primer)
 
-## 5。下载源代码
+## 5. 下载源代码
 
-$ git 克隆[https://github.com/mkyong/core-java](http://web.archive.org/web/20220626054141/https://github.com/mkyong/core-java)
+```bash
+git clone https://github.com/mkyong/core-java
+cd java-xml
+cd src/main/java/com/mkyong/xml/jdom/
+```
 
-$ cd java-xml
+## 6. 参考文献
 
-$ CD src/main/Java/com/mkyong/XML/JDOM/
 
-## 6。参考文献
 
-*   [JDOM 网站](http://web.archive.org/web/20220626054141/http://www.jdom.org/)
-*   [JDOM 2 文档](http://web.archive.org/web/20220626054141/https://github.com/hunterhacker/jdom/wiki/JDOM2-A-Primer)
-*   [JDOM JavaDoc](http://web.archive.org/web/20220626054141/http://www.jdom.org/docs/apidocs/org/jdom2/)
-*   [维基百科–JDOM](http://web.archive.org/web/20220626054141/https://en.wikipedia.org/wiki/JDOM)
-*   [如何在 Java 中读取 XML 文件—(JDOM)](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-read-xml-file-in-java-jdom-example/)
-*   [如何用 Java 编写 XML 文件—(JDOM)](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-create-xml-file-in-java-jdom-parser/)
-*   [JAXB hello world 示例](http://web.archive.org/web/20220626054141/https://mkyong.com/java/jaxb-hello-world-example/)
+- [JDOM 网站](http://web.archive.org/web/20220626054141/http://www.jdom.org/)
 
+- [JDOM 2 文档](http://web.archive.org/web/20220626054141/https://github.com/hunterhacker/jdom/wiki/JDOM2-A-Primer)
+
+- [JDOM JavaDoc](http://web.archive.org/web/20220626054141/http://www.jdom.org/docs/apidocs/org/jdom2/)
+
+- [维基百科–JDOM](http://web.archive.org/web/20220626054141/https://en.wikipedia.org/wiki/JDOM)
+
+- [如何在 Java 中读取 XML 文件—(JDOM)](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-read-xml-file-in-java-jdom-example/)
+
+- [如何用 Java 编写 XML 文件—(JDOM)](http://web.archive.org/web/20220626054141/https://mkyong.com/java/how-to-create-xml-file-in-java-jdom-parser/)
+
+- [JAXB hello world 示例](http://web.archive.org/web/20220626054141/https://mkyong.com/java/jaxb-hello-world-example/)
+
+```html
 <input type="hidden" id="mkyong-current-postId" value="4355">
+```

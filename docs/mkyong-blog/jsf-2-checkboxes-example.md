@@ -1,21 +1,22 @@
+
 # JSF 2 复选框示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jsf2/jsf-2-checkboxes-example/>
 
-在 JSF，**<h:selectBooleanCheckbox/>**标签用于呈现“ **checkbox** 类型的单个 HTML 输入元素。
+在 JSF 中，`<h:selectBooleanCheckbox/>`标签用于呈现“checkbox”类型的单个 HTML 输入元素。
 
 ```java
- //JSF...
+//JSF...
 <h:selectBooleanCheckbox value="#{user.rememberMe}" /> Remember Me
 
 //HTML output...
-<input type="checkbox" name="j_idt6:j_idt8" /> Remember Me 
+<input type="checkbox" name="j_idt6:j_idt8" /> Remember Me
 ```
 
-而**<h:selectmany Checkbox/>**标签用于渲染一组“checkbox”类型的 HTML 输入元素，并用 HTML 表格和标签标签对其进行格式化。
+而`<h:selectManyCheckbox/>`标签用于渲染一组“checkbox”类型的 HTML 输入元素，并用 HTML 表格和标签标签对其进行格式化。
 
 ```java
- //JSF...
+//JSF...
 <h:selectManyCheckbox value="#{user.favNumber1}">
    	<f:selectItem itemValue="1" itemLabel="Number1 - 1" />
    	<f:selectItem itemValue="2" itemLabel="Number1 - 2" />
@@ -36,30 +37,32 @@
 	<label for="j_idt6:j_idt10:2" class=""> Number1 - 3</label></td>
   <td>
 </tr>
-</table> 
+</table>
 ```
 
 ## JSF 2.0 示例
 
-这里有一个 JSF 2.0 的例子来展示“ **h:selectBooleanCheckbox** ”和“ **h:selectManyCheckbox** ”标签的使用。
+这里有一个 JSF 2.0 的例子来展示`h:selectBooleanCheckbox`和`h:selectManyCheckbox`标签的使用。
 
 **h:selectBooleanCheckbox**
+
 渲染单个复选框，用布尔属性绑定。
 
 **h:selectManyCheckbox**
-呈现一组复选框，以不同的方式填充数据:
 
-1.  “**f:selecti item**标签中的硬核值。
-2.  用数组生成值，放入“**f:selecti items**标签。
-3.  用 Map 生成值，并将其放入“**f:selecti items**标签中。
-4.  用一个对象数组生成值，放入“ **f:selectItems** ”标签，然后用“ **var** 属性表示值。
+呈现一组复选框，以不同的方式填充数据：
 
- ## 1.支撑豆
+1. `f:selectItem`标签中的硬核值。
+2. 用数组生成值，放入`f:selectItems`标签。
+3. 用 Map 生成值，并将其放入`f:selectItems`标签中。
+4. 用一个对象数组生成值，放入`f:selectItems`标签，然后用`var`属性表示值。
+
+## 1. 支撑豆
 
 用于保存提交的复选框值的后备 bean。
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.Arrays;
 import java.util.LinkedHashMap;
@@ -158,15 +161,15 @@ public class UserBean{
 		return Arrays.toString(favNumber4);
 	}
 
-} 
+}
 ```
 
- ## 2.JSF·佩奇
+## 2. JSF 页面
 
-一个 JSF 页面，演示了“ **h:selectBooleanCheckbox** ”和“ **h:selectManyCheckbox** ”标签的使用。
+一个 JSF 页面，演示了`h:selectBooleanCheckbox`和`h:selectManyCheckbox`标签的使用。
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html    
@@ -222,13 +225,13 @@ public class UserBean{
     	</h:form>
 
     </h:body>
-</html> 
+</html>
 ```
 
-result.xhtml…
+`result.xhtml`…
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html    
@@ -250,45 +253,47 @@ result.xhtml…
     	</ol>
     </h:body>
 
-</html> 
+</html>
 ```
 
-## 3.演示
+## 3. 演示
 
 ![jsf2-checkboxes-example-1](img/3e7aba5381a13faec0ff14c3822dbb84.png "jsf2-checkboxes-example-1")
 
-单击“提交”按钮时，链接到“result.xhtml”页面并显示提交的 checkboxe 值。
+单击“提交”按钮时，链接到`result.xhtml`页面并显示提交的 checkboxe 值。
 
 ![jsf2-checkboxes-example-2](img/d9061837aa030846d0a155dac2af2f9f.png "jsf2-checkboxes-example-2")
 
 ## 如何默认检查复选框的值？
 
 **h:selectBooleanCheckbox**
-如果布尔值设置为 true，则检查“f:selectItem”标签的值。在上面的示例中，如果您将布尔属性“rememberMe”设置为 true:
+
+如果布尔值设置为 `true`，则检查`f:selectItem`标签的值。在上面的示例中，如果您将布尔属性`rememberMe`设置为 `true`：
 
 ```java
- @ManagedBean(name="user")
+@ManagedBean(name="user")
 @SessionScoped
 public class UserBean{
 
 	public boolean rememberMe = true;
 
-	//... 
+	//...
 ```
 
-默认情况下,“记住我”复选框值处于选中状态。
+默认情况下，“记住我”复选框值处于选中状态。
 
 **h:selectManyCheckbox**
-检查“f:selectItems”标签的值是否与“h:selectManyCheckbox”标签的“value”匹配。在上面的示例中，如果您将收藏编号 3 设置为{ " 1 "," 3 " }:
+
+检查`f:selectItems`标签的值是否与`h:selectManyCheckbox`标签的`value`匹配。在上面的示例中，如果您将收藏编号 3 设置为`{"1","3"}`：
 
 ```java
- @ManagedBean(name="user")
+@ManagedBean(name="user")
 @SessionScoped
 public class UserBean{
 
 	public String[] favNumber3 = {"1","3"};
 
-	//... 
+	//...
 ```
 
 默认情况下，“收藏数字 3”复选框、“数字 1”和“数字 3”值处于选中状态。
@@ -299,14 +304,7 @@ Download It – [JSF-2-Checkboxes-Example.zip](http://web.archive.org/web/201902
 
 #### 参考
 
-1.  [JSF<h:select boolean checkbox/>JavaDoc](http://web.archive.org/web/20190223081515/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/h/selectBooleanCheckbox.html)
-2.  JSF < h:选择多个复选框。html/ > JavaDoc
+1. [JSF `<h:selectBooleanCheckbox/>` JavaDoc](http://web.archive.org/web/20190223081515/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/h/selectBooleanCheckbox.html)
+2. JSF `<h:selectManyCheckbox/>` JavaDoc
 
-[复选框](http://web.archive.org/web/20190223081515/http://www.mkyong.com/tag/checkbox/)[JSF 2](http://web.archive.org/web/20190223081515/http://www.mkyong.com/tag/jsf2/)
-
-
-
-
-
-
-
+[复选框](http://web.archive.org/web/20190223081515/http://www.mkyong.com/tag/checkbox/) [JSF 2](http://web.archive.org/web/20190223081515/http://www.mkyong.com/tag/jsf2/)

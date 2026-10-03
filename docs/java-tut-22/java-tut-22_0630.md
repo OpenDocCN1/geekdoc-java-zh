@@ -1,3 +1,4 @@
+
 # 使用 JTextComponent 类处理双向文本
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/text/bidi.html`](https://docs.oracle.com/javase/tutorial/i18n/text/bidi.html)
@@ -6,15 +7,11 @@
 
 下面涵盖了以下主题：
 
-+   确定双向文本的方向性
-
-+   显示和移动插入符
-
-+   命中测试
-
-+   高亮选择
-
-+   设置组件方向
++ 确定双向文本的方向性
++ 显示和移动插入符
++ 命中测试
++ 高亮选择
++ 设置组件方向
 
 欲了解更多信息，或者如果您想更好地控制处理这些问题，请参阅处理双向文本在 2D 图形教程中。
 
@@ -32,7 +29,6 @@
 textPane.getDocument().putProperty(
     TextAttribute.RUN_DIRECTION,
     TextAttribute.RUN_DIRECTION_RTL);
-
 ```
 
 或者，您可以根据语言环境指定特定 Swing 组件的组件方向。例如，以下语句指定对象`textPane`的组件方向基于 ar-SA 语言环境：
@@ -43,7 +39,6 @@ Locale arabicSaudiArabia =
 
 textPane.setComponentOrientation(
     ComponentOrientation.getOrientation(arabicSaudiArabia));
-
 ```
 
 因为阿拉伯语的运行方向是从右到左，所以`textPane`对象中包含的文本的运行方向也是从右到左。
@@ -100,14 +95,11 @@ private static void createAndShowGUI(Locale currentLocale) {
     frame.applyComponentOrientation(
         ComponentOrientation.getOrientation(currentLocale));
     // ...
-  }
-
+}
 ```
 
 示例 `InternationalizedMortgageCalculator.java` 需要以下资源文件：
 
-+   `resources/Resources.properties`
-
-+   `resources/Resources_ar.properties`
-
-+   `resources/Resources_fr.properties`
++ `resources/Resources.properties`
++ `resources/Resources_ar.properties`
++ `resources/Resources_fr.properties`

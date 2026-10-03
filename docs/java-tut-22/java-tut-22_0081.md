@@ -1,3 +1,4 @@
+
 # 定义一个接口
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/IandI/interfaceDef.html`](https://docs.oracle.com/javase/tutorial/java/IandI/interfaceDef.html)
@@ -16,10 +17,9 @@ public interface GroupedInterface extends Interface1, Interface2, Interface3 {
     void doSomething (int i, double x);
     int doSomethingElse(String s);
 }
-
 ```
 
-`public`访问修饰符表示接口可以被任何包中的任何类使用。如果不指定接口为 public，则接口只能被与接口在同一包中定义的类访问。
+`public`访问修饰符表示接口可以被任何包中的任何类使用。如果不指定接口为`public`，则接口只能被与接口在同一包中定义的类访问。
 
 一个接口可以扩展其他接口，就像一个类可以子类化或扩展另一个类一样。然而，一个类只能扩展一个其他类，而一个接口可以扩展任意数量的接口。接口声明包括一个逗号分隔的所有它扩展的接口的列表。
 

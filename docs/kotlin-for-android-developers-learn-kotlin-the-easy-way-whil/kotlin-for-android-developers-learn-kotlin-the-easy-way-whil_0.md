@@ -1,20 +1,5 @@
+
 # Android 开发者的 Kotlin 入门指南：在开发 Android 应用的同时轻松学习 Kotlin
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## I. 关于这本书
 
@@ -66,7 +51,7 @@ Antonio Leiva 是一位 Android 工程师，花费时间学习获取 Android 的
 
 Antonio 起初担任 CRM 技术的顾问，但一段时间后，在寻找真正的热情时发现了 Android 平台。在获得一些经验后，他在一家移动公司开启了新的冒险，在那里他为知名公司领导了多个项目。
 
-他目前在 [Plex](http://plex.tv)  Android 工程师，他在 Android 应用的设计和 UX 上也起着至关重要的作用。
+他目前在 [Plex](http://plex.tv) 担任 Android 工程师，他在 Android 应用的设计和 UX 上也起着至关重要的作用。
 
 你可以在 Twitter 上的 [@lime_cl](https://twitter.com/lime_cl) 或 Google+ 上的 +AntonioLeivaGordillo 找到 Antonio。
 
@@ -78,9 +63,6 @@ Antonio 起初担任 CRM 技术的顾问，但一段时间后，在寻找真正�
 
 在书中，我将向你展示如何做，因此我希望我帮助你理解 Kotlin 让你领先一步并让你的代码变得更好的各种方式。
 
-
-
-
 然而，在深入研究语言的特性之前，让我先简单介绍一下背景。
 
 ### 1.1 什么是 Kotlin？
@@ -89,23 +71,23 @@ Kotlin 是 [JetBrains](https://www.jetbrains.com/) 开发的一种语言，该�
 
 JetBrains 设计 Kotlin 时考虑了 Java 开发者，并以 IntelliJ 作为其主要的开发 IDE。这两个因素是让 Android 开发者快速采用该语言的突破点：
 
-* `Kotlin 对 Java 开发者来说非常直观且易于学习`。语言的大部分与我们已经熟悉的非常相似，差异可以很快掌握。
-
-* `我们免费拥有与日常使用的 IDE 的全方位集成`。Android Studio 可以理解、编译和运行 Kotlin 代码。此外，对这种语言的支持来自开发 IDE 的公司，因此我们 Android 开发者是一等公民。
+*   `Kotlin 对 Java 开发者来说非常直观且易于学习`。语言的大部分与我们已经熟悉的非常相似，差异可以很快掌握。
+*   `我们免费拥有与日常使用的 IDE 的全方位集成`。Android Studio 可以理解、编译和运行 Kotlin 代码。此外，对这种语言的支持来自开发 IDE 的公司，因此我们 Android 开发者是一等公民。
 
 然而，这仅与语言如何与我们的工具集成。与 Java 6 相比，这种语言的优势何？
 
-* `它更具表现力`：这是它的主要特点之一。你可以用更少的代码实现更多的功能。
+*   `它更具表现力`：这是它的主要特点之一。你可以用更少的代码实现更多的功能。
+*   `它更安全`：Kotlin 是空安全的，这意味着我们在编译时就能处理可能的空情况，以防止运行时异常。我们需要显式地指定一个对象可以为空，然后在使用它之前检查其空值。你可以节省大量调试空指针异常和修复空值错误的时间。
+*   `它是函数式的`：Kotlin 从根本上是一种面向对象的语言，而不是纯函数式语言。但是，像许多其他现代语言一样，它使用了函数式编程的许多概念（如 lambda 表达式）来更自然地解决问题。另一个很棒特性是它处理集合的方式。
+*   `它利用扩展函数`：这意味着即使我们无法访问，也可以为任何类扩展新功能。
+*   `它是高度的互操作性`：你可以继续使用大多数用 Java 编写的库和代码，因为两种语言之间的互操作性非常好。甚至可以创建混合项目，让 Kotlin 和 Java 文件共存。
 
-* `它更安全`：Kotlin 是空安全的，这意味着我们在编译时就能处理可能的空情况，以防止运行时异常。我们需要显式地指定一个对象可以为空，然后在使用它之前检查其空值。你可以节省大量调试空指针异常和修复空值错误的时间。
+然而，这只是冰山一角：
 
-* `它是函数式的`：Kotlin 从根本上是一种面向对象的语言，而不是纯函数式语言。但是，像许多其他现代语言一样，它使用了函数式编程的许多概念（如 lambda 表达式）来更自然地解决问题。另一个很棒特性是它处理集合的方式。
-
-* `它利用扩展函数`：这意味着即使我们无法访问，也可以为任何类扩展新功能。
-
-* `它是高度的互操作性`：你可以继续使用大多数用 Java 编写的库和代码，因为两种语言之间的互操作性非常好。甚至可以创建混合项目，让 Kotlin 和 Java 文件共存。
-
-然而，这只是冰山一角：- 自 Kotlin 1.1 版本起，[Kotlin JS](https://kotlinlang.org/docs/reference/js-overview.html) 的最终版本已经发布。这个新变体允许你使用 Kotlin 开发 Web 应用。- 自 Kotlin 1.2 版本起，你还可以创建[多平台项目](https://kotlinlang.org/docs/reference/whatsnew12.html#multiplatform-projects-experimental)。通过它，你可以在 JVM 和 Javascript 之间共享代码。- 作为一项实验性特性，JetBrains 团队还发布了 [Kotlin/Native](https://kotlinlang.org/docs/reference/native-overview.html)，该项目终于让 Kotlin 脱离了 JVM。在未来，我们将能够使用 Kotlin 编写大部分代码来实现服务器、Web 以及 Android 和 iOS 应用。此外，你今天就可以尝试它。- Gradle 正在添加支持使用 Kotlin Script（Kotlin 的简化版本）来编写 Gradle 文件，而不是 Groovy。该项目正快速接近其 1.0 发布。
+*   自 Kotlin 1.1 版本起，[Kotlin JS](https://kotlinlang.org/docs/reference/js-overview.html) 的最终版本已经发布。这个新变体允许你使用 Kotlin 开发 Web 应用。
+*   自 Kotlin 1.2 版本起，你还可以创建[多平台项目](https://kotlinlang.org/docs/reference/whatsnew12.html#multiplatform-projects-experimental)。通过它，你可以在 JVM 和 Javascript 之间共享代码。
+*   作为一项实验性特性，JetBrains 团队还发布了 [Kotlin/Native](https://kotlinlang.org/docs/reference/native-overview.html)，该项目终于让 Kotlin 脱离了 JVM。在未来，我们将能够使用 Kotlin 编写大部分代码来实现服务器、Web 以及 Android 和 iOS 应用。此外，你今天就可以尝试它。
+*   Gradle 正在添加支持使用 Kotlin Script（Kotlin 的简化版本）来编写 Gradle 文件，而不是 Groovy。该项目正快速接近其 1.0 发布。
 
 所以你可以看到，Kotlin 的未来非常有前景。学习 Kotlin 可能会成为许多其他平台的参考语言，而且在所有平台之间共享代码无疑是一个重大的卖点。
 
@@ -118,63 +100,63 @@ JetBrains 设计 Kotlin 时考虑了 Java 开发者，并以 IntelliJ 作为其�
 使用 Kotlin，要避免样板代码变得简单得多，因为语言默认涵盖了最常见的模式。例如，在 Java 中，如果我们想创建一个数据类，我们需要编写（或至少生成）以下代码：
 
 ```java
- 1 public class Artist {
- 2     private long id;
- 3     private String name;
- 4     private String url;
- 5     private String mbid;
- 6  
- 7     public long getId() {
- 8         return id;
- 9     }
-10  
- 11     public void setId(long id) {
- 12         this.id = id;
- 13     }
- 14  
- 15     public String getName() {
- 16         return name;
- 17     }
- 18  
- 19     public void setName(String name) {
- 20         this.name = name;
- 21     }
- 22  
- 23     public String getUrl() {
- 24         return url;
- 25     }
- 26  
- 27     public void setUrl(String url) {
- 28         this.url = url;
- 29     }
- 30  
- 31     public String getMbid() {
- 32         return mbid;
- 33     }
- 34  
- 35     public void setMbid(String mbid) {
- 36         this.mbid = mbid;
- 37     }
- 38  
- 39     @Override public String toString() {
- 40         return "Artist{" +
- 41                 "id=" + id +
- 42                 ", name='" + name + '\'' +
- 43                 ", url='" + url + '\'' +
- 44                 ", mbid='" + mbid + '\'' +
- 45                 '}';
- 46     }
- 47 }
+public class Artist {
+    private long id;
+    private String name;
+    private String url;
+    private String mbid;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getMbid() {
+        return mbid;
+    }
+
+    public void setMbid(String mbid) {
+        this.mbid = mbid;
+    }
+
+    @Override public String toString() {
+        return "Artist{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", url='" + url + '\'' +
+                ", mbid='" + mbid + '\'' +
+                '}';
+    }
+}
 ```
 
 使用 Kotlin，你只需要利用数据类：
 
 ```kotlin
-1 data class Artist(
-2     var id: Long,
-3     var name: String,
-4     var url: String,
-5     var mbid: String)
+data class Artist(
+    var id: Long,
+    var name: String,
+    var url: String,
+    var mbid: String)
 ```
 
 这个数据类会自动生成所有字段和属性访问器，以及一些实用的方法，如 `toString()`。
@@ -186,29 +168,29 @@ JetBrains 设计 Kotlin 时考虑了 Java 开发者，并以 IntelliJ 作为其�
 我们可以像这样操作：
 
 ```kotlin
-1 // 这无法编译。Artist 不可以为空
-2 var notNullArtist: Artist = null
-3  
-4 // Artist 可以为空
-5 var artist: Artist? = null
-6  
-7 // 将无法编译，artist 可能为空
-8 artist.print()
-9  
-10 // 仅在 artist != null 时打印
-11 artist?.print()
-12  
-13 // 智能转换。如果我们之前检查过空值，那么 
-14 // 就不需要使用安全调用操作符了
-15 if (artist != null) {
-16     artist.print()
-17 }
-18  
-19 // 仅在在我们确定它不为空时使用它。否则将抛出异常。
-20 artist!!.print()
-21  
-22 // 使用 Elvis 操作符在对象为空时提供备选方案。
-23 val name = artist?.name ?: "empty"
+// 这无法编译。Artist 不可以为空
+var notNullArtist: Artist = null
+
+// Artist 可以为空
+var artist: Artist? = null
+
+// 将无法编译，artist 可能为空
+artist.print()
+
+// 仅在 artist != null 时打印
+artist?.print()
+
+// 智能转换。如果我们之前检查过空值，那么
+// 就不需要使用安全调用操作符了
+if (artist != null) {
+    artist.print()
+}
+
+// 仅在在我们确定它不为空时使用它。否则将抛出异常。
+artist!!.print()
+
+// 使用 Elvis 操作符在对象为空时提供备选方案。
+val name = artist?.name ?: "empty"
 ```
 
 #### 扩展函数
@@ -216,15 +198,15 @@ JetBrains 设计 Kotlin 时考虑了 Java 开发者，并以 IntelliJ 作为其�
 多亏了扩展函数，你可以为任何类添加新函数。它是我们项目中常见的工具类更整洁的替代方案。例如，你可以为 fragment 添加一个新方法来显示 toast：
 
 ```kotlin
-1 fun Fragment.toast(message: CharSequence, duration: Int = Toast.LENGTH_SHORT) {
-2     Toast.makeText(getActivity(), message, duration).show()
-3 }
+fun Fragment.toast(message: CharSequence, duration: Int = Toast.LENGTH_SHORT) {
+    Toast.makeText(getActivity(), message, duration).show()
+}
 ```
 
 然后像这样使用它：
 
 ```kotlin
-1 fragment.toast("Hello world!")
+fragment.toast("Hello world!")
 ```
 
 #### 函数式支持 (Lambdas)
@@ -232,15 +214,12 @@ JetBrains 设计 Kotlin 时考虑了 Java 开发者，并以 IntelliJ 作为其�
 如果我们不需要每次在实现点击监听器时声明一个匿名类，而是只需定义我们想做的事情会怎样？我们确实可以这样做。这（以及许多其他有趣的事情）正是得益于 lambda 得到的：
 
 ```kotlin
-1 view.setOnClickListener { toast("Hello world!") }
+view.setOnClickListener { toast("Hello world!") }
 ```
 
 这些特性只是 Kotlin 能够功能的一小部分。现在你已经知道了这种语言的许多优秀特性，你可能会决定这不适合你。如果你继续下去，我们将在下一章立即开始编写代码。
 
 ## 2 准备工作
-
-
-
 
 既然你已经了解了一些可以用 Kotlin 实现的简单示例，我相信你想尽快开始付诸实践。别担心；前几个章节将帮助你配置开发环境，让你立即开始编写代码。
 
@@ -274,6 +253,8 @@ Android Studio 的采用是 Android 开发者的一大进步。首先，我们�
 
 现在是时候开始创建我们的 App 了。我特意想让解释保持简单，因为 Android Studio 的向导程序（wizard）会经常变化，这些步骤很快就会过时。
 
+
+
 我们的应用由一个简单的天气应用组成，类似于 [Udacity 上的 Google 初学者课程](https://www.udacity.com/course/android-development-for-beginners--ud837)中使用的那一个。我们将关注不同的点，但该应用的核心思想是相同的，因为它包含了许多你在普通应用中会发现的内容。如果你是刚开始 Android 开发，我向你推荐这门课程。
 
 ### 3.1 在 Android Studio 中创建新项目
@@ -290,7 +271,7 @@ Android Studio 的采用是 Android 开发者的一大进步。首先，我们�
 
 最后，我们被要求选择一个活动模板。选择 `Empty Activity`（空活动）。此模板生成的代码很少，便于我们添加新逻辑。
 
-保留下一个屏幕中活动或布局（布局））的名称。如果需要，我们稍后会更改它们。按下 `Finish`（完成）并让 Android Studio 完成工作。
+保留下一个屏幕中活动或布局（布局）的名称。如果需要，我们稍后会更改它们。按下 `Finish`（完成）并让 Android Studio 完成工作。
 
 使用 Android Studio 3，你就完成了，跳到第 3.4 点。接两个步骤仅在你必须手动安装插件时才需要。
 
@@ -328,7 +309,8 @@ allprojects {
     }
 }
 ```
-build.gradle
+
+`build.gradle`
 
 你可以看到，它创建一个保存 Kotlin 版本的变量。我们在许多地方都需要该版本号，例如在 Kotlin 插件的新依赖中。
 
@@ -346,17 +328,14 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 ```
-app/build.gradle
+
+`app/build.gradle`
 
 ### 3.4 引入其他有用配置
 
 我们将使用一些其他额外的库，所以趁此将它们添加到 `build.gradle` 中。
 
 一个重要的库是 Anko，它利用 Kotlin 的力量来简化 Android 中的某些任务。我们稍会使用更多 Anko 模块，但目前只需添加 `anko-common` 即可。该库被拆分为几个较小的库，以便我们只在项目中包含需要的部分。
-
-
-
-
 
 ```
 buildscript {
@@ -559,9 +538,6 @@ toast(message = "Hello", length = Toast.LENGTH_SHORT)
 
 ### 5.1 创建布局
 
-
-
-
 渲染预报列表的主视图将是一个 `RecyclerView`，因此需要一个新的依赖项。修改 `build.gradle` 文件：
 
 ```
@@ -609,106 +585,29 @@ toast(message = "Hello", length = Toast.LENGTH_SHORT)
 
 目前用于 `RecyclerView` 适配器的视图将只是 `TextView`，以及我们手动创建的简单文本列表。添加名为 `ForecastListAdapter.kt` 的新 Kotlin 文件，并包含以下代码：
 
-```
- 1 class ForecastListAdapter(val items: List<String>) : 
- 2         RecyclerView.Adapter<ForecastListAdapter.ViewHolder>() {
- 3 
- 4     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): 
- 5             ViewHolder {
- 6         return ViewHolder(TextView(parent.context))
- 7     }
- 8 
- 9     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-10         holder.textView.text = items[position]
-11     }
-12 
-13     override fun getItemCount(): Int = items.size
-14 
-15     class ViewHolder(val textView: TextView) : RecyclerView.ViewHolder(textView)
-16 }
-```
 
-`ForecastListAdapter.kt`
-
-同样，我们可以像属性一样访问上下文和文本。你可以照这样做（使用 getter 和 setter），但你会收到编译警告。如果你喜欢继续使用 Java 方法，可以禁用此检查。然而，一旦你习惯了属性，你就永远不会回头了。
-
-如果你检查之前的代码，可能会发现有几处警告。第一个是建议将 `items` 参数设置为私有，因为它只在类内部使用。
-
-```
-1 class ForecastListAdapter(private val items: List<String>)
-```
-
-另一个是建议使用表达式体来编写单行函数。在这里也遵循这些建议：
-
-```
-1 override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-2         ViewHolder(TextView(parent.context))
-```
-
-因此，完整的代码如下：
-
-```
- 1 class ForecastListAdapter(private val items: List<String>) 
- 2     : RecyclerView.Adapter<ForecastListAdapter.ViewHolder>() {
- 3 
- 4     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
- 5             ViewHolder(TextView(parent.context))
- 6 
- 7     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
- 8         holder.textView.text = items[position]
- 9     }
-10 
-11     override fun getItemCount(): Int = items.size
-12 
-13     class ViewHolder(val textView: TextView) : RecyclerView.ViewHolder(textView)
-14 }
-```
-
-`ForecastListAdapter.kt`
-
-回到 `MainActivity`，让我们创建字符串列表然后创建一个适配器的实例：
-
-```
- 1 private val items = listOf(
- 2     "Mon 6/23 - Sunny - 31/17",
- 3     "Tue 6/24 - Foggy - 21/8",
- 4     "Wed 6/25 - Cloudy - 22/17",
- 5     "Thurs 6/26 - Rainy - 18/11",
- 6     "Fri 6/27 - Foggy - 21/10",
- 7     "Sat 6/28 - TRAPPED IN WEATHERSTATION - 23/18",
- 8     "Sun 6/29 - Sunny - 20/7"
- 9 )
-10 
-11 override fun onCreate(savedInstanceState: Bundle?) {
-12     val forecastList = findViewById(R.id.forecast_list) as RecyclerView
-13     forecastList.layoutManager = LinearLayoutManager(this)
-14     forecastList.adapter = ForecastListAdapter(items)
-15 }
-```
-
-`MainActivity.kt`
 
 ### 6. 变量与属性
 
-### Kotlin 中，**一切都是对象**。它与 Java 有一些不同：
+在 Kotlin 中，**一切都是对象**。它与 Java 有一些不同：
 
-### 6.1 基本类型
+#### 6.1 基本类型
 
-数值类型之间没有自动转换。例如，从 `Int` 到 `Double`：
+数值类型之间没有自动转换。例如，从`Int`到`Double`：
 
 ```
 val i = 7
 val d = i.toDouble()
 ```
 
-*   字符 (`Char`）不能直接作为数字使用。但是，我们可以将其转换为：
+*   字符（`Char`）不能直接作为数字使用。但是，我们可以将其转换为：
 
 ```
 val c = 'c'
 val i = c.toInt()
 ```
 
-*   位运算 略有不同。在 Android 中，我们使用标志位 `and` 和 `or` 作为示例：
+*   位运算略有不同。在 Android 中，我们使用标志位`and`和`or`作为示例：
 
 ```
 // Java
@@ -732,7 +631,7 @@ val d = 3.5 // 一个 Double
 val f = 3.5F // 一个 Float
 ```
 
-*   `String` 可以像数组一样被访问并进行遍历：
+*   `String`可以像数组一样被访问并进行遍历：
 
 ```
 val s = "Example"
@@ -745,17 +644,15 @@ for (c in s) {
 }
 ```
 
-### 6.2 不可变性
+#### 6.2 不可变性
 
-在 Kotlin 中，变量可以很容易地定义为可变的 (`var`) 或不可变的 (`val`)。这种想法与 Java 变量中使用 `final` 非常相似。
+在 Kotlin 中，变量可以很容易地定义为可变的（`var`）或不可变的（`val`）。这种想法与 Java 变量中使用`final`非常相似。
 
 不可变对象是在实例化后状态无法更改的对象。如果你需要修改后的版本，你需要创建一个新对象。不可变性使得软件更加健壮且可预测。在 Java 中，绝大多数对象都是可变的，这意味着访问该对象的任何部分都可以修改它，从而影响应用程序的其他部分。
 
 不可变对象从定义上就是线程安全的。因为值是常量，所有线程始终获取相同的对象。
 
-
-
-因此，如果我们想利用不可变性，我们在 Kotlin 中思考代码的方式会发生一些微变化。核心概念是：尽可能多使用 `val`。在某些情况下（特别是在 Android 中，某些类的构造函数是由系统调用的），不可变性变得很难实现，但大多数情况下它是可以实现的。
+因此，如果我们想利用不可变性，我们在 Kotlin 中思考代码的方式会发生一些微变化。核心概念是：尽可能多使用`val`。在某些情况下（特别是在 Android 中，某些类的构造函数是由系统调用的），不可变性变得很难实现，但大多数情况下它是可以实现的。
 
 之前提到的另一点是，我们通常可以避免指定对象类型，编译器会从值中推断，这使得代码更整洁，修改也更快。我们在上面的章节中已经有了一些示例。
 
@@ -772,7 +669,7 @@ for (c in s) {
 2 val c: Context = activity
 ```
 
-### 6.3 属性 (Properties)
+#### 6.3 属性（Properties）
 
 属性等于 Java 中的字段（fields），但要强大得多。属性实现了字段加上 getter（get 器）和 setter（赋值）。让我们来看一个示例来对比差异。以下代码段显示了 Java 中安全访问和修改字段所需的代码：
 
@@ -826,34 +723,35 @@ for (c in s) {
 9 }
 ```
 
-如果属性在自定义 getter 或 setter 中需要访问其值（如本例所示），则需要创建一个后台字段（backing field）。可以使用保留字 `field` 来访问它，当编译器发现需要它时，它会自动创建。请注意，如果我们直接使用属性，我们将使用 setter 和 getter，而不是进行直接赋值。你只能在属性的访问器内部使用后台字段。
+如果属性在自定义 getter 或 setter 中需要访问其值（如本例所示），则需要创建一个后台字段（backing field）。可以使用保留字`field`来访问它，当编译器发现需要它时，它会自动创建。请注意，如果我们直接使用属性，我们将使用 setter 和 getter，而不是进行直接赋值。你只能在属性的访问器内部使用后台字段。
 
 正如在之前的某些章节中提到的，当处理用 Java 编写的代码时，Kotlin 允许在 Java 定义了 getter 以及可选的 setter 的地方使用属性语法。编译器只需链接到原始的 getter 和 setter，因此在使用这些映射属性时没有性能开销。
 
-## 7 Anko 和扩展函数 (Extension Functions)
+### 7 Anko 和扩展函数（Extension Functions）
 
 Kotlin 团队开发了一些很棒的工具来让 Android 开发变得更容易。在本章中，我将向你介绍它们以及你如何开始使用它们。
 
-### 7.1 什么是 Anko？
+#### 7.1 什么是 Anko？
 
 [Anko](https://github.com/JetBrains/anko) 是由 JetBrains 开发的一个健壮的库。它的主要目的是通过使用代码而不是 XML 来生成 UI 布局。这个功能非常有趣；如果有机会，请尝试一下，但我不会在这个项目中使用它。对我来说（可能由于多年编写用户界面的经验）使用 XML 更加舒服，但你可能会有不同的想法。
 
 然而，这并不是我们从这个库中可以获得的唯一功能。Anko 包含了许多有用的函数和属性，可以避免大量的样板代码。本书中涵盖了几个示例，但你很快就会看到这个库解决了哪种的问题。
 
-由于 Anko 是一个专门为 Android 编写的库，理解它在背后做了什么是一个很好的练习。你可以随时使用 `ctrl + click`（Windows 或 Linux）或 `cmd + click`（Mac） 导航到 Anko 的源码。Anko 的实现是学习如何充分利用 Kotlin 语言有用方法的极佳示例。
+由于 Anko 是一个专门为 Android 编写的库，理解它在背后做了什么是一个很好的练习。你可以随时使用`ctrl + click`（Windows 或 Linux）或`cmd + click`（Mac）导航到 Anko 的源码。Anko 的实现是学习如何充分利用 Kotlin 语言有用方法的极佳示例。
 
-### 7.2 开始使用 Anko
+#### 7.2 开始使用 Anko
 
 在继续之前，让我们使用 Anko 来改进几点。正如你将看到的，每当你使用 Anko 的任何东西时，它都会在文件中包含一个带有该属性或函数名称的导入。Anko 使用扩展函数为 Android 框架添加新功能，并且导入会链接到它们。我们将在正下方看到扩展函数是什么以及如何编写它。
 
-在 `MainActivity::onCreate` 中，可以使用 Anko 扩展函数代替 `findViewById` 来查找 `RecyclerView`。自 API 26 以来，这不再是必要的，因为 `findViewById` 现在是泛型的，但它仍然可以作为一个示例：
+在`MainActivity::onCreate`中，可以使用 Anko 扩展函数代替`findViewById`来查找`RecyclerView`。自 API 26 以来，这不再是必要的，因为`findViewById`现在是泛型的，但它仍然可以作为一个示例：
 
 ```
 1 val forecastList: RecyclerView = find(R.id.forecast_list) 
 ```
-activities/MainActivity.kt
 
-看看导入部分，你会发现 `find` 函数被添加到了那里：
+`activities/MainActivity.kt`
+
+看看导入部分，你会发现`find`函数被添加到了那里：
 
 ```
 1 import org.jetbrains.anko.find
@@ -861,11 +759,11 @@ activities/MainActivity.kt
 
 这些是我们目前能从库库使用的所有内容，但 Anko 可以帮助我们简化，包括 Intent 的实例化、Activity 之间的导航、Fragment 的创建、数据库访问或警框的构建。我们将在实现应用时看到。
 
-### 7.3 扩展函数
+#### 7.3 扩展函数
 
-正如在之前的章节中提到的，当处理 Java 编写的代码时，Kotlin 允许在 Java 定义了 getter 以及可选 setter 的地方使用属性语法。编译器只需链接到原始的 getter 和 setter，因此在使用这些映射属性时没有性能惩罚。扩展函数是为类添加新行为的函数，即使我们无法访问其源代码。在 Java 中，我们通常在包含静态方法的工具类中实现它们。在 Kotlin 中使用扩展函数的优势是我们不需要将对象作为参数传递。扩展函数就像是类的一部分，我们可以通过 `this` 来实现它。
+正如在之前的章节中提到的，当处理 Java 编写的代码时，Kotlin 允许在 Java 定义了 getter 以及可选 setter 的地方使用属性语法。编译器只需链接到原始的 getter 和 setter，因此在使用这些映射属性时没有性能惩罚。扩展函数是为类添加新行为的函数，即使我们无法访问其源代码。在 Java 中，我们通常在包含静态方法的工具类中实现它们。在 Kotlin 中使用扩展函数的优势是我们不需要将对象作为参数传递。扩展函数就像是类的一部分，我们可以通过`this`来实现它。
 
-例如，我们可以创建一个 `toast` 函数，它可以被任何 `Context` 以及继承自 `Context` 的类型（如 Activity 或 Service）使用：
+例如，我们可以创建一个`toast`函数，它可以被任何`Context`以及继承自`Context`的类型（如 Activity 或 Service）使用：
 
 ```
 1 fun Context.toast(message: CharSequence, duration: Int = Toast.LENGTH_SHORT) {
@@ -880,14 +778,14 @@ activities/MainActivity.kt
 2 toast("Hello world!", Toast.LENGTH_LONG)
 ```
 
-当然，Anko 已经包含了自己的自己的扩展函数，与这个非常相似。库提供了针对 `CharSequence` 和资源的函数，以及针对短长 toast 的不同名称：
+当然，Anko 已经包含了自己的自己的扩展函数，与这个非常相似。库提供了针对`CharSequence`和资源的函数，以及针对短长 toast 的不同名称：
 
 ```
 1 toast("Hello world!")
 2 longToast(R.string.hello_world)
 ```
 
-扩展也可以是属性。因此你可以以非常的方式创建扩展属性。得益于下面的代码，你可以为 `ViewGroup` 添加一个额外的属性来获取其子视图列表：
+扩展也可以是属性。因此你可以以非常的方式创建扩展属性。得益于下面的代码，你可以为`ViewGroup`添加一个额外的属性来获取其子视图列表：
 
 ```
 1 val ViewGroup.childViews: List<View>
@@ -898,12 +796,9 @@ activities/MainActivity.kt
 
 本章没有太大变化；[你可以在这里找到源码](https://github.com/antoniolg/Kotlin-for-Android-Developers/tree/chapter-7)。
 
+我们目前的占位符文本是了解我们想要目标的绝佳起点，但现在是时候请求真实数据了，这将用于填充`RecyclerView`。我们将利用 [OpenWeatherMap](http://openweathermap.org/) API 来获取数据，并使用一些普通类处理请求。由于 Kotlin 互操作非常强大，你可以使用任何需要的库，例如 [Retrofit](https://github.com/square/retrofit) 来进行服务器请求。然而，由于我们只是执行一个简单的 API 请求，无需添加另一个第三方库就可以更轻松地实现目标。
 
-
-
-我们目前的占位符文本是了解我们想要目标的绝佳起点，但现在是时候请求真实数据了，这将用于填充 `RecyclerView`。我们将利用 [OpenWeatherMap](http://openweathermap.org/) API 来获取数据，并使用一些普通类处理请求。由于 Kotlin 互操作非常强大，你可以使用任何需要的库，例如 [Retrofit](https://github.com/square/retrofit) 来进行服务器请求。然而，由于我们只是执行一个简单的 API 请求，无需添加另一个第三方库就可以更轻松地实现目标。
-
-此外，正如你所看到的，Kotlin 提供了了一些扩展函数，让请求变得简单得多。首先，我们将创建一个新的 `Request` 类：
+此外，正如你所看到的，Kotlin 提供了了一些扩展函数，让请求变得简单得多。首先，我们将创建一个新的`Request`类：
 
 ```
 1 class Request(private val url: String) {
@@ -918,35 +813,36 @@ activities/MainActivity.kt
 
 `data/Request.kt`
 
-构造函数接收一个 URL。然后 `run` 函数读取结果并将 JSON 输出到 Logcat 中。
+构造函数接收一个 URL。然后`run`函数读取结果并将 JSON 输出到 Logcat 中。
 
-使用 `readText`（Kotlin 标准库中的一个扩展函数）时实现非常直观。这种方法不建议用于大型响应，但在我们的情况下已经足够了。
+使用`readText`（Kotlin 标准库中的一个扩展函数）时实现非常直观。这种方法不建议用于大型响应，但在我们的情况下已经足够了。
+
+
 
 如果你将此代码与 Java 中需要的代码进行比较，你会发现通过使用标准库我们节省了大量的开销。为了获得相同的结果，需要 `HttpURLConnection`、`BufferedReader` 以及对结果进行迭代，此外还需要管理连接和读取器的状态。显然，这就是该函数在后台执行的工作，但我们免费获得了。
 
 为了能够执行请求，App 必须使用 Internet 权限。因此，必须将其添加到 `AndroidManifest.xml` 中：
 
 ```
-1 <uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.INTERNET" />
 ```
 
 `AndroidManifest.xml`
 
 ## 8.2 在主线程之外执行请求
 
-正如你所知的，主线程不允许 HTTP 请求，否则 App 将抛出异常。这种限制防止了阻塞 UI 线程，这是一种坏做法。Android 的标准解决方案是使用 `AsyncTask`。然而，这些类非常糟糕，而且很难在没有副作用的情况下实现。如果不小心使用 `AsyncTask` 是危险的，因为当到达 `postExecute` 时，系统可能已经销了 activity，导致任务崩溃。
+正如你所知的，主线程不允许 HTTP 请求，否则 App 将抛出异常。这种限制防止了阻塞 UI 线程，这是一种坏做法。Android 的标准解决方案是使用 `AsyncTask`。然而，这些类非常糟糕，而且很难在没有副作用的情况下实现。如果不小心使用 `AsyncTask` 是危险的，因为当到达 `postExecute` 时，系统可能已经销毁了 activity，导致任务崩溃。
 
 Anko 提供了一个非常简单的 DSL 来处理异步操作，符合大多数基本需求。它提供了一个 `doAsync` 函数，在另一个线程中执行其代码，并可以选择调用 `uiThread` 返回主线程。在辅助线程中执行请求就像这样：
 
 ```
-1 val url = "http://api.openweathermap.org/data/2.5/forecast/daily?" +
-                 "APPID=15646a06818f61f7b8d7823ca833e1ce&zip=94043&mode=json&units=met\
-3 ric&cnt=7"
-4 
-5 doAsync() {
-6     Request(url).run()
-7     uiThread { longToast("Request performed") }
-8 }
+val url = "http://api.openweathermap.org/data/2.5/forecast/daily?" +
+                 "APPID=15646a06818f61f7b8d7823ca833e1ce&zip=94043&mode=json&units=metric&cnt=7"
+
+doAsync() {
+    Request(url).run()
+    uiThread { longToast("Request performed") }
+}
 ```
 
 `activities/MainActivity.kt`
@@ -958,10 +854,10 @@ Anko 提供了一个非常简单的 DSL 来处理异步操作，符合大多数�
 你也可以使用自己的执行器：
 
 ```
-1 val executor = Executors.newScheduledThreadPool(4)
-2 doAsync(executor) {
-3     // Some task
-4 }
+val executor = Executors.newScheduledThreadPool(4)
+doAsync(executor) {
+    // Some task
+}
 ```
 
 `doAsync` 返回一个 Java `Future`，以防你想处理 future。如果你需要它返回一个带有结果的 `Future`，可以使用 `doAsyncResult`。
@@ -973,7 +869,7 @@ Anko 提供了一个非常简单的 DSL 来处理异步操作，符合大多数�
 数据类是一种功能强大的类，通常提供 getter 和 setter。定义数据类非常简单，连同字段也是：
 
 ```kotlin
-1 data class Forecast(val date: Date, val temperature: Float, val details: String)
+data class Forecast(val date: Date, val temperature: Float, val details: String)
 ```
 
 ### 9.1 额外函数
@@ -989,8 +885,8 @@ Anko 提供了一个非常简单的 DSL 来处理异步操作，符合大多数�
 如果我们像在某些章节中讨论的那样使用不可变性，则需要一个新的实例。例如，如果我们需要更改温度，只需这样做：
 
 ```kotlin
-1 val f1 = Forecast(27.5f, "Shiny day")
-2 val f2 = f1.copy(temperature = 30f)
+val f1 = Forecast(27.5f, "Shiny day")
+val f2 = f1.copy(temperature = 30f)
 ```
 
 通过这样，我们复制了第一个预测并仅修改了温度。
@@ -1000,24 +896,24 @@ Anko 提供了一个非常简单的 DSL 来处理异步操作，符合大多数�
 这个过程被称为解构（destructuring），由将对象内部每个属性映射到一个变量组成。这就是为什么会自动创建 `componentX` 函数。使用之前的 `Forecast` 类的示例：
 
 ```kotlin
-1 val f1 = Forecast(Date(), 27.5f, "Shiny day")
-2 val (date, temperature, details) = f1
+val f1 = Forecast(Date(), 27.5f, "Shiny day")
+val (date, temperature, details) = f1
 ```
 
 这种多声明被编译为以下代码：
 
 ```kotlin
-1 val date = f1.component1()
-2 val temperature = f1.component2()
-3 val details = f1.component3()
+val date = f1.component1()
+val temperature = f1.component2()
+val details = f1.component3()
 ```
 
 该功能背后的逻辑非常强大，可以在许多情况下帮助简化代码。例如，`Map` 类实现了一些扩展函数，允许在迭代中恢复其键和值：
 
 ```
-1 for ((key, value) in map) {
-2     Log.d("map", "key:$key, value:$value")
-3 }
+for ((key, value) in map) {
+    Log.d("map", "key:$key, value:$value")
+}
 ```
 
 ## 10 解析数据
@@ -1027,10 +923,6 @@ Anko 提供了一个非常简单的 DSL 来处理异步操作，符合大多数�
 ### 10.1 将 JSON 转换为数据类
 
 在我们目前的 UI 中，我们不会使用所有这些数据。然而，我们将所有内容都解析为类，以防将来有用。这些是我们需要的数据类：
-
-
-
-
 
 ```kotlin
 data class ForecastResult(val city: City, val list: List<Forecast>)
@@ -1046,6 +938,7 @@ data class Temperature(val day: Float, val min: Float, val max: Float,
 data class Weather(val id: Long, val main: String, val description: String,
                    icon: String)
 ```
+
 `data/ResponseClasses.kt`
 
 由于我们使用 [Gson](https://github.com/google/gson) 来将 JSON 解析到我们的类中，属性名称必须与 JSON 中的名称一致，或者指定一个序列化名称。大多数软件架构中解释的一种良好实践是为应用的不同层使用不同的模型，以便将它们解耦。因此，我倾向于简化这些类的声明，因为会在它们用于应用的其他部分之前对其进行转换。此类中使用的属性名称与 JSON 响应中的名称相同。
@@ -1069,6 +962,7 @@ class ForecastRequest(private val zipCode: String) {
     }
 }
 ```
+
 `data/ForecastRequest.kt`
 
 记得你需要将 Gson 库添加到 `build.gradle` 依赖中：
@@ -1076,6 +970,7 @@ class ForecastRequest(private val zipCode: String) {
 ```gradle
 compile "com.google.code.gson:gson:2.8.1"
 ```
+
 `app/build.gradle`
 
 ### 10.2 构建领域模型层
@@ -1089,6 +984,7 @@ public interface Command<out T> {
     fun execute(): T
 }
 ```
+
 `domain/commands/Command.kt`
 
 这些命令执行一个操作并返回其泛型类型中指定的类对象。记住 Kotlin 中的每个函数都会返回一个值。默认情况下，如果没有指定，它将返回 `Unit` 类的对象。因此，如果我们想让 `Command` 返回任何内容，可以指定 `Unit` 为其类型。
@@ -1104,6 +1000,7 @@ data class ForecastList(val city: String, val country: String,
 data class Forecast(val date: String, val description: String, val high: Int, 
                     val low: Int)
 ```
+
 `domain/model/DomainClasses.kt`
 
 当我们以后添加更多功能时，这些类可能需要重新进行审查。目前，它们保留的数据已经足够。
@@ -1135,6 +1032,7 @@ class ForecastDataMapper {
     }
 }
 ```
+
 `domain/mappers/ForecastDataMapper.kt`
 
 ### 10.3 在 UI 中绘制数据
@@ -1149,6 +1047,7 @@ doAsync() {
     }
 }
 ```
+
 `ui/activities/MainActivity.kt`
 
 适配器也需要一些修改：
@@ -1173,10 +1072,6 @@ class ForecastListAdapter(private val weekForecast: ForecastList) :
 }
 ```
 
-
-
-
-
 `ui/adapters/ForecastListAdapter.kt`
 
 本章包含一些新代码，欢迎随时在[仓库](https://github.com/antoniolg/Kotlin-for-Android-Developers/tree/chapter-10)中查看。
@@ -1185,7 +1080,7 @@ class ForecastListAdapter(private val weekForecast: ForecastList) :
 
 Kotlin 允许我们在任何类中使用一组固定数量的符号运算符。这些符号映射到特定的函数，而该函数提供了运算符所使用的逻辑。通过重载这些运算符，可以提高你代码的可读性和简洁性。
 
-若要通知编译器你想要重载某个运算符，必须使用 `operator` 饰符对函数进行标记。
+若要通知编译器你想要重载某个运算符，必须使用 `operator` 修饰符对函数进行标记。
 
 ### 11.1 运算符列表
 
@@ -1210,27 +1105,43 @@ Kotlin 允许我们在任何类中使用一组固定数量的符号运算符。�
 | `a % b` | `a.mod(b)` |
 | `a..b` | `a.rangeTo(b)` |
 | `a in b` | `b.contains(a)` |
+
+
+
 | `a !in b` | `!b.contains(a)` |
+
 | `a += b` | `a.plusAssign(b)` |
+
 | `a -= b` | `a.minusAssign(b)` |
+
 | `a *= b` | `a.timesAssign(b)` |
+
 | `a /= b` | `a.divAssign(b)` |
+
 | `a %= b` | `a.modAssign(b)` |
 
 #### 数组类操作
 
 | `a[i]` | `a.get(i)` |
+
 | :--- | :--- |
+
 | `a[i, j]` | `a.get(i, j)` |
+
 | `a[i_1, …, i_n]` | `a.get(i_1, …, i_n)` |
+
 | `a[i] = b` | `a.set(i, b)` |
+
 | `a[i, j] = b` | `a.set(i, j, b)` |
+
 | `a[i_1, …, i_n] = b` | `a.set(i_1, …, i_n, b)` |
 
 #### 等于操作
 
 | `a == b` | `a?.equals(b) ?: b === null` |
+
 | :--- | :--- |
+
 | `a != b` | `!(a?.equals(b) ?: b === null)` |
 
 `equals` 操作稍有不同，因为它们使用了更复杂的转换来执行正确的等性检查，并且它们期望精确的函数规范，而不仅仅是特定的名称。函数必须按照如下方式实现：
@@ -1244,8 +1155,11 @@ Kotlin 允许我们在任何类中使用一组固定数量的符号运算符。�
 #### 函数调用
 
 | `a(i)` | `a.invoke(i)` |
+
 | :--- | :--- |
+
 | `a(i, j)` | `a.invoke(i, j)` |
+
 | `a(i_1, …, i_n)` | `a.invoke(i_1, …, i_n)` |
 
 ### 11.2 示例
@@ -1387,10 +1301,6 @@ private fun generateIconUrl(iconCode: String): String
 
 `domain/mappers/ForecastDataMapper.kt`
 
-
-
-
-
 我们从第一个请求中获得的 `icon` 代码用于构建图标图像的完整 URL。加载图像最简单的方法是使用图像加载库。[Picasso](http://square.github.io/picasso/) 是一个极佳的选择。你必须将其添加到 `build.gradle` 依赖项中：
 
 ```
@@ -1462,10 +1372,10 @@ private fun generateIconUrl(iconCode: String): String
  11     }
  12 
  13     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
- 14         holder.bindForecast(weekForecast[position])
- 15     }
- 16     ...
- 17 }
+14         holder.bindForecast(weekForecast[position])
+15     }
+16     ...
+17 }
 ```
 
 `ui/adapters/ForecastListAdapter.kt`
@@ -1506,72 +1416,74 @@ Lambda 表达式是定义匿名函数的简单方法。Lambda 非常有用，因
 
 让我们通过 Android 中的一个典型示例来看它是如何工作的：来自 `View` 的点击监听器方法。如果我们想在 Java 中实现点击监听器行为，首先需要编写 `OnClickListener` 接口：
 
+
+
 ```java
-1 interface OnClickListener {
-2     void onClick(View v);
-3 }
+interface OnClickListener {
+    void onClick(View v);
+}
 ```
 
 然后编写一个实现该接口的匿名类：
 
 ```java
-1 view.setOnClickListener(new OnClickListener() {
-2     @Override
-3     public void onClick(View v) {
-4         Toast.makeText(v.getContext(), "Click", Toast.LENGTH_SHORT).show();
-5     }
-6 });
+view.setOnClickListener(new OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Toast.makeText(v.getContext(), "Click", Toast.LENGTH_SHORT).show();
+    }
+});
 ```
 
 这是代码转换为 Kotlin（使用来自 Anko 的 `toast` 函数）：
 
 ```kotlin
-1 view.setOnClickListener(object : OnClickListener {
-2     override fun onClick(v: View) {
-3         toast("Click")
-4     }
-5 })
+view.setOnClickListener(object : OnClickListener {
+    override fun onClick(v: View) {
+        toast("Click")
+    }
+})
 ```
 
 幸运的是，Kotlin 对此有一些优化，lambda 可以替代任何接收单个函数的接口。如果我们这样定义 `setOnClickListener()`：
 
 ```kotlin
-1 fun setOnClickListener(listener: (View) -> Unit)
+fun setOnClickListener(listener: (View) -> Unit)
 ```
 
 要定义 lambda 表达式，在箭头左侧（括号内）指定函数参数，在右侧指定类型。在这种情况下，我们得到 `View` 并返回 `Unit`（无）。所以根据此，我们可以简化之前的代码：
 
 ```kotlin
-1 view.setOnClickListener({ view -> toast("Click")})
+view.setOnClickListener({ view -> toast("Click")})
 ```
 
 很棒的区别！在定义函数时，我们必须使用大括号并在左侧指定参数值，在右侧指定函数体。如果参数没有被使用，我们甚至可以去掉左部分：
 
 ```kotlin
-1 view.setOnClickListener({ toast("Click") })
+view.setOnClickListener({ toast("Click") })
 ```
 
 如果函数的最后一个参数也是函数，我们可以将其从括号中移出：
 
 ```kotlin
-1 view.setOnClickListener() { toast("Click") }
+view.setOnClickListener() { toast("Click") }
 ```
 
 最后，如果函数是唯一的参数，我们可以去掉括号：
 
 ```kotlin
-1 view.setOnClickListener { toast("Click") }
+view.setOnClickListener { toast("Click") }
 ```
 
 比原始 Java 代码小了五倍以上，并且更容易理解在做什么。
 
-### 13.2 ForecastListAdapter 的点击监听器
+## 13.2 ForecastListAdapter 的点击监听器
 
 在上一节中，我故意用困难的方法编写点击监听器是为了为开发这一个提供良好的背景。但现在是时候付诸所学了。我们正在从 `ForecastListAdapter` 中移除监听器接口并改用 lambda：
 
 ```kotlin
-1 public class ForecastListAdapter(private val weekForecast: ForecastList, 
-                                  private val itemClick: (Forecast) -> Unit)
+public class ForecastListAdapter(private val weekForecast: ForecastList, 
+                                 private val itemClick: (Forecast) -> Unit)
 ```
 
 `ui/adapters/ForecastListAdapter.kt`
@@ -1579,7 +1491,7 @@ Lambda 表达式是定义匿名函数的简单方法。Lambda 非常有用，因
 该函数将接收一个预报并不返回。相同的更改也可以对 `ViewHolder` 进行：
 
 ```kotlin
-1 class ViewHolder(view: View, private val itemClick: (Forecast) -> Unit)
+class ViewHolder(view: View, private val itemClick: (Forecast) -> Unit)
 ```
 
 `ui/adapters/ForecastListAdapter.kt`
@@ -1587,57 +1499,54 @@ Lambda 表达式是定义匿名函数的简单方法。Lambda 非常有用，因
 其余代码保持不变。只是对 `MainActivity` 的最后更改：
 
 ```kotlin
-1 val adapter = ForecastListAdapter(result) { forecast -> toast(forecast.date) }
+val adapter = ForecastListAdapter(result) { forecast -> toast(forecast.date) }
 ```
 
 `ui/activities/MainActivity.kt`
 
-
-
-
 我们可以进一步简化最后一行。在只有一个参数的 lambda 中，我们可以利用 `it` 引用，这避免了我们显式地定义函数的左部分。因此我们可以这样做：
 
 ```kotlin
-1 val adapter = ForecastListAdapter(result) { toast(it.date) }
+val adapter = ForecastListAdapter(result) { toast(it.date) }
 ```
 
-### 13.3 扩展语言
+## 13.3 扩展语言
 
 得益于这些转换，我们可以创建自己的构建器和代码块。我们已经在使用一些像 `with` 这样有趣的函数。虽然标准库中包含的稍微复杂一点，但更简单的实现如下：
 
 ```kotlin
-1 inline fun <T> with(t: T, body: T.() -> Unit) { t.body() }
+inline fun <T> with(t: T, body: T.() -> Unit) { t.body() }
 ```
 
 该函数接收一个类型为 `T` 的对象和一个行为类似于扩展函数的 lambda。实现过程接收该对象并允许执行该函数。由于函数的第二个参数是另一个函数，它可以提取到括号之外，因此我们可以创建一个代码块，在其中我们可以直接使用 `this` 以及该对象的公共属性和方法：
 
 ```kotlin
-1 with(forecast) {
-2     Picasso.with(itemView.ctx).load(iconUrl).into(iconView)
-3     dateView.text = date
-4     descriptionView.text = description
-5     maxTemperatureView.text = "$high"
-6     minTemperatureView.text = "$low"
-7     itemView.setOnClickListener { itemClick(this) }
-8 }
+with(forecast) {
+    Picasso.with(itemView.ctx).load(iconUrl).into(iconView)
+    dateView.text = date
+    descriptionView.text = description
+    maxTemperatureView.text = "$high"
+    minTemperatureView.text = "$low"
+    itemView.setOnClickListener { itemClick(this) }
+}
 ```
 
 另一个例子：我们可以创建仅在版本为 Lollipop 或更高版本时才运行的代码块：
 
 ```kotlin
-1 inline fun supportsLollipop(code: () -> Unit) {
-2     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-3         code()
-4     }
-5 }
+inline fun supportsLollipop(code: () -> Unit) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        code()
+    }
+}
 ```
 
 函数体会检查版本，并在满足要求时执行代码。现在我们可以这样做：
 
 ```kotlin
-1 supportsLollipop {
-2     window.setStatusBarColor(Color.BLACK)
-3 }
+supportsLollipop {
+    window.setStatusBarColor(Color.BLACK)
+}
 ```
 
 例如，Anko 也是基于这个思想来实现 Android 布局 DSL 的。你也可以查看 Kotlin 参考中的一个示例，它展示了如何从代码中[生成 HTML](http://kotlinlang.org/docs/reference/type-safe-builders.html) 的 DSL。
@@ -1677,7 +1586,7 @@ Kotlin 中修饰符的使用与 Java 有不同。这种语言的默认修饰符�
 默认情况下，所有构造函数都是 `public` 的，这意味着可以在类可见的任何作用域中使用它们。如果我们想限制构造函数的可见性，可以使用这种特定语法对其应用修饰符：
 
 ```kotlin
-1 class C private constructor(a: Int) { ... }
+class C private constructor(a: Int) { ... }
 ```
 
 ### 14.3 复习我们的代码
@@ -1685,15 +1594,15 @@ Kotlin 中修饰符的使用与 Java 有不同。这种语言的默认修饰符�
 我们已经使用了默认的 `public` 修饰符，最新版本的 Kotlin 插件也会检测参数何时可以是私有的。例如，在 `RequestForecastCommand` 中，我们将 `zipCode` 属性设为了私有。
 
 ```kotlin
-1 class RequestForecastCommand(private val zipCode: String)
+class RequestForecastCommand(private val zipCode: String)
 ```
 
 此外，在 Kotlin 中，如果编译器可以推断，我们就不需要指定函数的返回类型。这是一个如何获取返回类型的示例：
 
 ```kotlin
-1 data class(...) {
-2     operator fun get(position: Int)
-3 }
+data class(...) {
+    operator fun get(position: Int)
+}
 ```
 
 ## 15 Kotlin Extensions
@@ -1707,11 +1616,12 @@ Kotlin 中修饰符的使用与 Java 有不同。这种语言的默认修饰符�
 让我们看看有多简单。虽然该插件是常规的一部分（不需要安装新插件），但如果你想使用它，需要在 Android 模块中添加一个额外的 `apply`：
 
 ```gradle
-1 apply plugin: 'com.android.application'
-2 apply plugin: 'kotlin-android'
-3 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 ```
-app/build.gradle
+
+`app/build.gradle`
 
 如果你记得的话，我们在书的开头已经这样做。
 
@@ -1720,47 +1630,43 @@ app/build.gradle
 从现在起，恢复视图就像直接在活动中使用你在 XML 中定义的视图 ID 一样简单。假设你有一个像这样的 XML：
 
 ```xml
- 1 <FrameLayout
-2     xmlns:android="http://schemas.android.com/apk/res/android"
-3     android:layout_width="match_parent"
-4     android:layout_height="match_parent"
-5 
-6     <TextView
-7         android:id="@+id/welcomeMessage"
-8         android:layout_width="wrap_content"
-9         android:layout_height="wrap_content"
-10         android:layout_gravity="center"
-11         android:text="Hello World!"/>
-12 
-13 </FrameLayout>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    <TextView
+        android:id="@+id/welcomeMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Hello World!"/>
+
+</FrameLayout>
 ```
 
 如你所见，`TextView` 拥有 `welcomeMessage` ID。在 `MainActivity` 中，你现在可以写：
 
 ```kotlin
-1 override fun onCreate(savedInstanceState: Bundle?) {
-2     super.onCreate(savedInstanceState)
-3     setContentView(R.layout.activity_main)
-4 
-5     welcomeMessage.text = "Hello Kotlin!"
-6 }
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
+
+    welcomeMessage.text = "Hello Kotlin!"
+}
 ```
-
-
-
-
 
 要使用它，你需要一个特殊的 `import`（就是我在下面写的这一个），但 IDE 可以为你写好 import：
 
 ```
-1 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.*
 ```
 
 新的 Android Studio Activity 模板现在通过使用 `include` 标签包含了嵌套布局。重要的一点是，你必须为你使用的每个 XML 添加对应的合成导入（synthetic import）：
 
 ```
-1 import kotlinx.android.synthetic.main.activity_main.*
-2 import kotlinx.android.synthetic.main.content_main.*
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
 ```
 
 正如我上面提到的，生成的代码包含一个视图缓存（view cache）。因此，如果你再次请求该视图，就不需要再次调用 `findViewById`。让我们来看看它在后台执行了什么。
@@ -1780,27 +1686,27 @@ app/build.gradle
 有趣的部分是这一个：
 
 ```
- 1 ...
- 2 public View _$_findCachedViewById(int var1) {
- 3    if(this._$_findViewCache == null) {
- 4       this._$_findViewCache = new HashMap();
- 5    }
- 6 
- 7    View var2 = (View)this._$_findViewCache.get(Integer.valueOf(var1));
- 8    if(var2 == null) {
- 9       var2 = this.findViewById(var1);
-10       this._$_findViewCache.put(Integer.valueOf(var1), var2);
-11    }
-12 
-13    return var2;
-14 }
-15 
-16 public void _$_clearFindViewByIdCache() {
-17    if(this._$_findViewCache != null) {
- 18       this._$_findViewCache.clear();
-19    }
-20 
-21 }
+...
+public View _$_findCachedViewById(int var1) {
+   if(this._$_findViewCache == null) {
+      this._$_findViewCache = new HashMap();
+   }
+
+   View var2 = (View)this._$_findViewCache.get(Integer.valueOf(var1));
+   if(var2 == null) {
+      var2 = this.findViewById(var1);
+      this._$_findViewCache.put(Integer.valueOf(var1), var2);
+   }
+
+   return var2;
+}
+
+public void _$_clearFindViewByIdCache() {
+   if(this._$_findViewCache != null) {
+      this._$_findViewCache.clear();
+   }
+
+}
 ```
 
 这就是我们讨论过的视图缓存。当请求一个视图时，它会尝试在缓存中查找。如果那里没有，它会使用 `findViewById` 并将其添加到缓存中。确实非常简单。
@@ -1808,14 +1714,14 @@ app/build.gradle
 此外，它还添加了一个清除缓存的函数：`clearFindViewByIdCache()`。你可以在重建视图时使用它，因为旧视图已经不再有效了。那么这一行：
 
 ```
-1 welcomeMessage.text = "Hello Kotlin!"
+welcomeMessage.text = "Hello Kotlin!"
 ```
 
 被转换为：
 
 ```
-1 ((TextView)this._$_findCachedViewById(id.welcomeMessage))
-2     .setText((CharSequence)"Hello Kotlin!");
+((TextView)this._$_findCachedViewById(id.welcomeMessage))
+    .setText((CharSequence)"Hello Kotlin!");
 ```
 
 所以属性并不是真实的，插件并没有为每个视图生成属性。它在编译期间替换代码以访问视图缓存，将其转换为正确的类型并调用方法。
@@ -1826,66 +1732,69 @@ Fragment 也可以使用这个插件。Fragment 的问题在于，视图可以�
 
 让我们看看使用 Fragment 时生成的代码。我正在创建这个简单的 Fragment，它使用了我上面写的同一个 XML：
 
-```
- 1 class Fragment : Fragment() {
- 2 
- 3     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, 
- 4             savedInstanceState: Bundle?): View? {
- 5         return inflater.inflate(R.layout.fragment, container, false)
- 6     }
- 7 
- 8     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
- 9         super.onViewCreated(view, savedInstanceState)
-10         welcomeMessage.text = "Hello Kotlin!"
-11     }
-12 }
-```
 
-在 `onViewCreated` 中，我更改了 `TextView` 的文本。生成的字节码呢？一切与 Activity 中一样，只有这个细微的区别：
 
 ```
-1 // $FF: synthetic method
-2 public void onDestroyView() {
-3    super.onDestroyView();
-4    this._$_clearFindViewByIdCache();
-5 }
+class Fragment : Fragment() {
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, 
+            savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.fragment, container, false)
+    }
+
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        welcomeMessage.text = "Hello Kotlin!"
+    }
+}
 ```
 
-当视图销毁时，该方法会调用 `clearFindViewByIdCache`，所以在这里是安全的。
+在`onViewCreated`中，我更改了`TextView`的文本。生成的字节码呢？一切与 Activity 中一样，只有这个细微的区别：
+
+```
+// $FF: synthetic method
+public void onDestroyView() {
+   super.onDestroyView();
+   this._$_clearFindViewByIdCache();
+}
+```
+
+当视图销毁时，该方法会调用`clearFindViewByIdCache`，所以在这里是安全的。
 
 ### 自定义 View 中的 Kotlin Android extensions
 
 在自定义 View 上的工作方式非常相似。假设我们有这样一个视图：
 
 ```
- 1 <merge xmlns:android="http://schemas.android.com/apk/res/android"
- 2               android:orientation="vertical"
- 3               android:layout_width="match_parent"
- 4               android:layout_height="match_parent">
- 5 
- 6     <ImageView
- 7         android:id="@+id/itemImage"
- 8         android:layout_width="match_parent"
- 9         android:layout_height="200dp"/>
-10 
- 11     <TextView
- 12         android:id="@+id/itemTitle"
- 13         android:layout_width="match_parent"
-14         android:layout_height="wrap_content"/>
-15 
-16 </merge>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/itemImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</merge>
 ```
 
 ```
-1 class CustomView @JvmOver constructor(2         context: Context, attrs: AttributeSet? = null,
-3 defStyleAttr: Int = 0
-4 ) : LinearLayout(context, attrs, defStyleAttr) {
- 5 
-6     init {
- 7         LayoutInflater.from(context).inflate(R.layout.custom, this, true)
- 8         itemTitle.text = "Hello Kotlin!"
-9     }
-10 }
+class CustomView @JvmOver constructor(
+        context: Context, attrs: AttributeSet? = null,
+        defStyleAttr: Int = 0
+) : LinearLayout(context, attrs, defStyleAttr) {
+
+    init {
+        LayoutInflater.from(context).inflate(R.layout.custom, this, true)
+        itemTitle.text = "Hello Kotlin!"
+    }
+}
 ```
 
 ### 从另一个视图恢复视图
@@ -1893,101 +1802,98 @@ Fragment 也可以使用这个插件。Fragment 的问题在于，视图可以�
 Kotlin Extensions 提供的另一种方案是从另一个视图使用属性。我正在使用一个与上一节非常相似的布局。假设它在适配器中加载。你也可以通过使用此插件直接访问子视图：
 
 ```
-1 val itemView = ...
-2 itemView.itemImage.setImageResource(R.drawable.image)
-3 itemView.itemTitle.text = "My Text"
+val itemView = ...
+itemView.itemImage.setImageResource(R.drawable.image)
+itemView.itemTitle.text = "My Text"
 ```
 
-插件还会帮助你填充 `import`。检查这一个不同：
+插件还会帮助你填充`import`。检查这一个不同：
 
 ```
-1 import kotlinx.android.synthetic.main.view_item.view.*
+import kotlinx.android.synthetic.main.view_item.view.*
 ```
 
 关于这一点你需要了解几点：
 
-*   在编译时，你可以从任何其他视图引用任何视图。这意味着你可能会引用一个并不是它的直接子元素的视图。当然，在运行时尝试恢复不存在的视图时会崩溃。
-*   在这种情况下，视图是不被缓存的，这与 `Activities` 和 `Fragments` 不同。
+* 在编译时，你可以从任何其他视图引用任何视图。这意味着你可能会引用一个并不是它的直接子元素的视图。当然，在运行时尝试恢复不存在的视图时会崩溃。
 
+* 在这种情况下，视图是不被缓存的，这与`Activities`和`Fragments`不同。
 
-
-
-
-此 `experimental` 标志意味着该 API 尚未完善，因此它在未来可能会发生。
+此`experimental`标志意味着该 API 尚未完善，因此它在未来可能会发生。
 
 ### 在 ViewHolder（或任何自定义类）上的缓存
 
-你现在可以以简单的方式在任何类上构建缓存。唯一的要求是你的类必须实现 `LayoutContainer` 接口。该接口提供了插件用于查找子视图的视图。假设我们有一个 `ViewHolder`，它持有一个具有如之前示例中所示布局的视图。所需的代码如下：
+你现在可以以简单的方式在任何类上构建缓存。唯一的要求是你的类必须实现`LayoutContainer`接口。该接口提供了插件用于查找子视图的视图。假设我们有一个`ViewHolder`，它持有一个具有如之前示例中所示布局的视图。所需的代码如下：
 
 ```
-1 class ViewHolder(override val containerView: View) 
-2         : RecyclerView.ViewHolder(containerView), LayoutContainer {
-3 
-4     fun bind(title: String) {
-5         itemTitle.text = "Hello Kotlin!"
-6     }
-7 }
+class ViewHolder(override val containerView: View) 
+        : RecyclerView.ViewHolder(containerView), LayoutContainer {
+
+    fun bind(title: String) {
+        itemTitle.text = "Hello Kotlin!"
+    }
+}
 ```
 
-`containerView` 是我们从 `LayoutContainer` 接口中重写的那个，这也就是你需要的全部。从现在起，你可以直接访问视图，不再需要在前面前加上 `itemView` 来获取对子视图的访问权限。
+`containerView`是我们从`LayoutContainer`接口中重写的那个，这也就是你需要的全部。从现在起，你可以直接访问视图，不再需要在前面前加上`itemView`来获取对子视图的访问权限。
 
 再次强调，如果你检查代码生成的内容，你会发现它正在从缓存中获取视图：
 
 ```
-1 ((TextView)this._$_findCachedViewById(id.itemTitle))
-2     .setText((CharSequence)"Hello Kotlin!");
+((TextView)this._$_findCachedViewById(id.itemTitle))
+    .setText((CharSequence)"Hello Kotlin!");
 ```
 
-我在这里一个 `ViewHolder` 上使用了它，但你可以看到它是足够通用的，可以用于任何类。
+我在这里一个`ViewHolder`上使用了它，但你可以看到它是足够通用的，可以用于任何类。
 
 ### 使用 Kotlin Android Extensions 实现 Parcelable
 
-有了新的 `@Parcelize` 注解，你可以轻松地实现 `Parcelable`。只需编写注解，插件就会完成所有繁琐的工作：
+有了新的`@Parcelize`注解，你可以轻松地实现`Parcelable`。只需编写注解，插件就会完成所有繁琐的工作：
 
 ```
-1 @Parcelize
-2 class Model(val title: String, val amount: Int) : Parcelable
+@Parcelize
+class Model(val title: String, val amount: Int) : Parcelable
 ```
 
 然后，正如你所知道的，你可以将对象添加到 intent 中：
 
 ```
-1 val intent = Intent(this, DetailActivity::class.java)
-2 intent.putExtra(DetailActivity.EXTRA, model)
-3 startActivity(intent)
+val intent = Intent(this, DetailActivity::class.java)
+intent.putExtra(DetailActivity.EXTRA, model)
+startActivity(intent)
 ```
 
 并在需要该对象的地方从 intent 中恢复它（在本例中，即在目标 activity 中）：
 
 ```
-1 val model: Model = intent.getParcelableExtra(EXTRA)
+val model: Model = intent.getParcelableExtra(EXTRA)
 ```
 
 ### 自定义缓存构建
 
-此实验性 set 包含的最后一个新功能是一个名为 `@ContainerOptions` 的新注解。它允许你自定义缓存的构建方式，甚至防止某个类创建缓存。
+此实验性 set 包含的最后一个新功能是一个名为`@ContainerOptions`的新注解。它允许你自定义缓存的构建方式，甚至防止某个类创建缓存。
 
-默认情况下，如我们之前所见，它使用 `Hashmap`。这种行为可以更改为使用 Android 框架的 `SparseArray`，这在某些情况下可能更高效。最后，如果由于某种原因你想禁用某个特定类的缓存，你也有该选项。
+默认情况下，如我们之前所见，它使用`Hashmap`。这种行为可以更改为使用 Android 框架的`SparseArray`，这在某些情况下可能更高效。最后，如果由于某种原因你想禁用某个特定类的缓存，你也有该选项。
 
 这里是更改缓存实现的一个示例：
 
 ```
-1 @ContainerOptions(CacheImplementation.SPARSE_ARRAY)
-2 class MainActivity : AppCompatActivity() {
-3     ...
-4 }
+@ContainerOptions(CacheImplementation.SPARSE_ARRAY)
+class MainActivity : AppCompatActivity() {
+    ...
+}
 ```
 
 目前，现有选项如下：
 
 ```
-1 public enum class CacheImplementation {
-2     SPARSE_ARRAY,
-3     HASH_MAP,
-4     NO_CACHE;
-5 
-6     ...
-7 }
+public enum class CacheImplementation {
+    SPARSE_ARRAY,
+    HASH_MAP,
+    NO_CACHE;
+
+    ...
+}
 ```
 
 现在你已经了 Kotlin Android Extensions 插件提供的所有功能。现在，让我们在代码中使用其中一些功能吧。
@@ -1996,102 +1902,104 @@ Kotlin Extensions 提供的另一种方案是从另一个视图使用属性。�
 
 为了开始使用 Kotlin Android Extensions，我们对示例应用进行的修改非常简单。
 
-让我们从 `MainActivity` 开始。我们目前只使用了一个 `forecast_list` 视图，它是 `RecyclerView` 的实例。让我们清理一下这段代码。
+让我们从`MainActivity`开始。我们目前只使用了一个`forecast_list`视图，它是`RecyclerView`的实例。让我们清理一下这段代码。
 
-如所述，我们使用 `id` 来访问视图，因此我更改了 `RecyclerView` 的 `id`，使其不再使用下划线，而是使用符合 Kotlin 变量规范的名称。XML 现在看起来如下：
-
-```
- 1 <FrameLayout
- 2     xmlns:android="http://schemas.android.com/apk/res/android"
- 3     android:layout_width="match_parent"
- 4     android:layout_height="match_parent">
- 5 
- 6     <android.support.v7.widget.RecyclerView
- 7         android:id="@+id/forecastList"
- 8         android:layout_width="match_parent"
- 9         android:layout_height="match_parent"/>
-10 
-11 </FrameLayout>
-```
-layout/activity_main.xml
-
-现在我们只需要去掉 `find` 那行了。开始编写视图的 id，自动补全就会帮助你添加导入。否则，你需要添加这个：
+如所述，我们使用`id`来访问视图，因此我更改了`RecyclerView`的`id`，使其不再使用下划线，而是使用符合 Kotlin 变量规范的名称。XML 现在看起来如下：
 
 ```
-1 import kotlinx.android.synthetic.main.activity_main.*
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/forecastList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>
 ```
-ui/activities/MainActivity.kt
+
+`layout/activity_main.xml`
+
+现在我们只需要去掉`find`那行了。开始编写视图的 id，自动补全就会帮助你添加导入。否则，你需要添加这个：
+
+```
+import kotlinx.android.synthetic.main.activity_main.*
+```
+
+`ui/activities/MainActivity.kt`
 
 这是最终生成的代码：
 
 ```
-1 override fun onCreate(savedInstanceState: Bundle?) {
-2     super.onCreate(savedInstanceState)
-3     setContentView(R.layout.activity_main)
-4 
-5     forecastList.layoutManager = LinearLayoutManager(this)
-6     ...
-7 }
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
+
+    forecastList.layoutManager = LinearLayoutManager(this)
+    ...
+}
 ```
-ui/activities/MainActivity.kt
 
-改进并不大，因为这个布局只有一个视图。但 `ForecastListAdapter` 也可以从该插件中受益。在这里，我们可以使用该机制将属性绑定到视图中，这将帮助我们移除 `ViewHolder` 内部所有的 `find` 代码。
+`ui/activities/MainActivity.kt`
 
-这是为 `item_forecast` 需要的合成导入：
+改进并不大，因为这个布局只有一个视图。但`ForecastListAdapter`也可以从该插件中受益。在这里，我们可以使用该机制将属性绑定到视图中，这将帮助我们移除`ViewHolder`内部所有的`find`代码。
 
-```
-1 import kotlinx.android.synthetic.main.item_forecast.view.*
-```
-ui/adapters/ForecastListAdapter.kt
-
-现在我们可以在 `ViewHolder` 内部通过 `itemView` 属性找到视图。正如我之前提到的，你可以通过 `itemView` 使用属性，但如果视图不包含请求的视图，将会崩溃。
-
-为了解决这个问题，可以使用 Kotlin 1.1.4 中的新功能。首先，在 `build.gradle` 中启用 `experimental` 标志：
+这是为`item_forecast`需要的合成导入：
 
 ```
-1 androidExtensions {
-2     experimental = true
-3 }
+import kotlinx.android.synthetic.main.item_forecast.view.*
 ```
-app/build.gradle
 
-现在更新 `ViewHolder`。你不再需要通过 `itemView` 访问视图，因为现在视图表现为 `ViewHolder` 的属性。检查导入是否不同：
+`ui/adapters/ForecastListAdapter.kt`
+
+现在我们可以在`ViewHolder`内部通过`itemView`属性找到视图。正如我之前提到的，你可以通过`itemView`使用属性，但如果视图不包含请求的视图，将会崩溃。
+
+为了解决这个问题，可以使用 Kotlin 1.1.4 中的新功能。首先，在`build.gradle`中启用`experimental`标志：
 
 ```
-1 import kotlinx.android.synthetic.main.item_forecast.*
-2 
-3 class ForecastListAdapter(private val weekForecast: ForecastList,
-4         private val itemClick: (Forecast) -> Unit) :
-5         RecyclerView.Adapter<ForecastListAdapter.ViewHolder>() {
-6 
-7     ...
-8 
-9     class ViewHolder(override val containerView: View, 
-10          private val itemClick: (Forecast) -> Unit)
-11         : RecyclerView.ViewHolder(containerView), LayoutContainer {
-12 
-13         fun bindForecast(forecast: Forecast) {
-14             with(forecast) {
-15                 Picasso.with(itemView.ctx).load(iconUrl).into(icon)
-16                 dateText.text = date
-17                 descriptionText.text = description
-18                 maxTemperature.text = "${high}º"
-19                 minTemperature.text = "${low}º"
-20                 itemView.setOnClickListener { itemClick(this) }
-21             }
-22         }
-23     }
-24 }
+androidExtensions {
+    experimental = true
+}
 ```
-ui/adapters/ForecastListAdapter.kt
 
-我们的布局非常简单，不会影响性能。无论如何，请记住我们在上面节中讨论过的内容：这并没有缓存视图，这意味着每次调用 `bind` 函数在底层都会为它的视图执行 `findViewById`。
+`app/build.gradle`
 
-我在 XML 中也做了更改，以便视图的名称与 `Forecast` 中的属性不同。否则在引用它们时将会出现问题。
+现在更新`ViewHolder`。你不再需要通过`itemView`访问视图，因为现在视图表现为`ViewHolder`的属性。检查导入是否不同：
 
+```
+import kotlinx.android.synthetic.main.item_forecast.*
 
+class ForecastListAdapter(private val weekForecast: ForecastList,
+        private val itemClick: (Forecast) -> Unit) :
+        RecyclerView.Adapter<ForecastListAdapter.ViewHolder>() {
 
+    ...
 
+    class ViewHolder(override val containerView: View, 
+         private val itemClick: (Forecast) -> Unit)
+        : RecyclerView.ViewHolder(containerView), LayoutContainer {
+
+        fun bindForecast(forecast: Forecast) {
+            with(forecast) {
+                Picasso.with(itemView.ctx).load(iconUrl).into(icon)
+                dateText.text = date
+                descriptionText.text = description
+                maxTemperature.text = "${high}º"
+                minTemperature.text = "${low}º"
+                itemView.setOnClickListener { itemClick(this) }
+            }
+        }
+    }
+}
+```
+
+`ui/adapters/ForecastListAdapter.kt`
+
+我们的布局非常简单，不会影响性能。无论如何，请记住我们在上面节中讨论过的内容：这并没有缓存视图，这意味着每次调用`bind`函数在底层都会为它的视图执行`findViewById`。
+
+我在 XML 中也做了更改，以便视图的名称与`Forecast`中的属性不同。否则在引用它们时将会出现问题。
 
 ```
 <TextView
@@ -2140,373 +2048,23 @@ class App : Application() {
 
 `ui/App.kt`
 
-记住你需要将此 `App` 类添加到 `AndroidManifest.xml` 中以便作为应用实例使用：
+记住你需要将此`App`类添加到`AndroidManifest.xml`中以便作为应用实例使用：
 
-```xml
-<application
-    android:allowBackup="true"
-    android:icon="@mipmap/ic_launcher"
-    android:label="@string/app_name"
-    android:theme="@style/AppTheme"
-    android:name=".ui.App">
-    ...
-</application>
-```
-`AndroidManifest.xml`
 
-Android 的问题在于我们对许多类的构造函数没有控制权。例如，我们无法初始化非空属性，因为它的值必须在构造函数中声明。因此，我们需要一个可空变量，以及一个返回非空值的函数。我们知道始终有一个 `App` 实例，并且第一个执行的代码是应用的 `onCreate`，所以我们可以假设 `instance()` 函数始终可以返回非空的 `App` 实例，这是安全的。
 
-然而，这个解决方案看起来很奇怪。我们需要定义一个属性（已经有了 getter 和 setter），然后用一个函数来返回该属性。我们有其他方法来获得类似的结果吗？有的，我们可以将属性的值委托给另一个类。
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
-### 16.2 委托属性
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
 
-在属性中，我们可能需要某些有趣的复用行为，例如懒加载值（lazy values）或可观察属性（observable properties）。与其重复声明相同的代码，Kotlin 提供了一种方法将属性所需的代码委托给另一个类。这些成员被称为委托属性（delegated properties）。
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
 
-当我们从属性中使用 `get` 或 `set` 时，委托器会调用其对应的 `getValue` 和 `setValue`，这些方法可以决定是否、何时以及如何设置或返回值。
-
-属性委托的结构如下：
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
 
 ```
-class Delegate<T> {
-    operator fun getValue(thisRef: Any?, property: KProperty<*>): T {
-        return ...
-    }
-
-    operator fun setValue(thisRef: Any?, property: KProperty<*>, value: T) {
-        ...
-    }
-}
-```
-
-`T` 是委托行为的属性的类型。`getValue` 函数接收类引用和属性的元数据。`setValue` 函数还接收赋值的值。如果属性是不可变的（`val`），则只需要 `getValue` 函数。
-
-下面的代码片段是属性委托如何赋值的示例：
-
-```kotlin
-class Example {
-  var p: String by Delegate()
-}
-```
-
-它使用保留字 `by` 来指定委托。
-
-### 16.3 标准委托
-
-你可以在 Kotlin 标准库中找到一组委托。这些是委托可能实用的常见情况，但我们也可以创建自己的。
-
-#### Lazy (懒加载)
-
-它接收一个 lambda 表达式，该表达式在第一次调用 `getValue` 后运行，因此属性的初始化被延迟到那个时刻。后续调用将返回相同的值。这种委托对于那些不总是被使用或在某些部分准备好之前无法声明的项非常有用。我们可以节省内存，并直到属性需要时才跳过初始化。
-
-```kotlin
-class App : Application() {
-    val database: SQLiteOpenHelper by lazy {
-        MyDatabaseHelper(applicationContext)
-    }
-
-    override fun onCreate() {
-        super.onCreate()
-        val db = database.writableDatabase
-    }
-}
-```
-
-在这个示例中，数据库在 `onCreate` 中第一次被调用时才会初始化。在那个时刻，我们确定应用上下文存在并准备好使用。`lazy` 操作是线程安全的。
-
-如果你不担心多线程并想获得额外的性能，可以使用 `lazy(LazyThreadSafetyMode.NONE) { ... }`。
-
-#### Observable (可观察)
-
-这种委托帮助我们检测需要观察的任何属性的变化。每当调用 `set` 函数时，它都会执行声明的 lambda 表达式。因此，在分配新值后，我们会接收委托属性、旧值和新值。
-
-```kotlin
-class ViewModel(val db: MyDatabase) {
-
-    var myProperty by Delegates.observable("") {
-        _, _, new ->
-        db.saveChanges(this, new)
-    }
-
-}
-```
-
-这个示例展示了一个感知 `myProperty` 变化的 `ViewModel` 类，每次赋值时都会保存更改。
-
-#### Vetoable (否决)
-
-这种委托与 `observable` 类似，区别在于它在赋值之前执行，并让你决定是否必须保存。它可以用于保存值之前检查某些条件。
-
-```kotlin
-var positiveNumber = Delegates.vetoable(0) {
-    _, _, new ->
-    new >= 0
-}
-```
-
-前者只在新值为正数时允许保存。在 lambda 内部，最后一行代表返回值。你不能使用 `return` 单词，因为它无法编译。
-
-#### lateinit (延迟初始化)
-
-有时我们需要其他东西来初始化属性，但我们缺乏必要的状态，或者在这一点甚至无法获取它。这种情况在 Android 中经常发生，例如在活动、碎片、服务或广播接收器中。然而，非抽象属性在构造函数执行之前需要一个值。我们不能等到想给属性赋值时才赋值。我们至少有两个选择。
-
-第一种选择是使用可空类型并在获得真实值之前将其设置为 null。使用这种方案，我们需要在代码的处处检查属性是否为空。如果我们确定在第一次使用属性时它不会为空，这可能会让我们编写一些不必要的代码。
-
-第二种替代方案是 `lateinit`，它可以标识属性应该是非空值，但我们推迟了赋值。如果在赋值之前请求该值，它将抛出一个标识所访问属性的异常。
-
-`late` 不完全是委托，而是属性修饰符，这就是为什么它必须写属性之前。
-
-这个修饰符在 App 单例示例中很有用：
-
-```kotlin
-class App : Application() {
-
-    companion object {
-        lateinit var instance: App
-    }
-
-    override fun onCreate() {
-        super.onCreate()
-        instance = this
-    }
-}
+if (condVar > someVal) {console.log("xxx")}
 ```
 
 
-
-
-
-在使用如 `Dagger` 等依赖注入器时，`lateinit` 也是不可或缺的，而且测试也非常有用。
-
-## 来自 map 的值
-
-委托属性值的另一种方法是从 map 中获取它们，使用属性的名称作为 map 的键。该委托允许从一个动态 map 创建对象的实例。如果我们使用不可变属性，map 也可以是不可变的。对于可变属性，该类需要一个 `MutableMap` 作为构造函数参数。
-
-想象我们有一个从 JSON 加载的配置类，并将这些键值对赋值给一个 map。我们可以通过将此 map 传递给构造函数来创建类的实例：
-
-```
-1 class Configuration(map: Map<String, Any?>) {
-2     val width: Int by map
-3     val height: Int by map
-4     val dp: Int by map
-5     val deviceName: String by map
-6 }
-```
-
-作为参考，这里是我们可以创建该类所需的 map：
-
-```
-1 val conf = Configuration(mapOf(
-2         "width" to 1080,
-3         "height" to 720,
-4         "dp" to 240,
-5         "deviceName" to "mydevice"
-6 ))
-```
-
-### 16.4 如何创建自定义委托
-
-假设我们想要创建一个非空且只能赋值一次的委托。当第二次被赋值时，它将抛出异常。
-
-要定义一个委托类，你只需要编写几个运算符函数：`getValue` 和 `setValue`。它们有一组非常特定的参数，如下：
-
-```
- 1 class NotNullSingleValueVar<T> {
- 2 
-3     operator fun getValue(thisRef: Any?, property: KProperty<*>): T {
- 4         return ...
- 5     }
- 6 
-7     operator fun setValue(thisRef: Any?, property: KProperty<*>, value: T) {
- 8         ...
- 9     }
-10 }
-```
-
-ui/utils/DelegatesExt.kt
-
-此委托适用于任何非空类型。它接收任意类型对象的引用，并使用 `T` 作为 getter 和 setter 的类型。现在我们需要实现这些方法：
-
-- 如果已赋值，getter 返回该值；否则，它抛出一个异常。
-- 如果仍然为空，setter 赋值该值；否则，它抛出一个异常。
-
-```
- 1 class NotNullSingleValueVar<T> {
- 2 
-3     private var value: T? = null
- 4 
-5     operator fun getValue(thisRef: Any?, property: KProperty<*>): T =
- 6         value ?: throw IllegalStateException("${property.name} " +
- 7                 "not initialized")
- 8     }
- 9 
-10     operator fun setValue(thisRef: Any?, property: KProperty<*>, value: T) {
-11         this.value = if (this.value == null) value
-12         else throw IllegalStateException("${property.name} already initialized")
-13     }
-14 }
-```
-
-ui/utils/DelegatesExt.kt
-
-现在让我们创建一个提供你新委托函数的对象：
-
-```
-1 object DelegatesExt {
-2     fun <T> notNullSingleValue() = NotNullSingleValueVar<T>()
-3 }
-```
-
-ui/utils/DelegatesExt.kt
-
-最后部分不是必须的，但它可以帮助你聚合所有你实现的委托。
-
-### 16.5 重新实现 App 单例
-
-委托可以在这种情况下对我们的帮助。我们知道单例不会为空，但我们无法使用构造函数来分配属性。因此，我们可以利用 `lateinit` 委托：
-
-```
- 1 class App : Application() {
- 2 
-3     companion object {
- 4         lateinit var instance: App
- 5     }
- 6 
-7     override fun onCreate() {
- 8         super.onCreate()
-9         instance = this
-10     }
-11 }
-```
-
-ui/App.kt
-
-这种解决方案的问题在于我们可以从应用的任何地方更改此实例的值，因为如果我们要使用 `lateinit`，就需要 `var` 属性。使用私有的 `set` 可以轻松解决：
-
-```
-1 companion object {
-2     lateinit var instance: App
-3         private set
-4 }
-```
-
-现在，实例的值只能在 `App` 类内部修改。
-
-但我们将使用自定义委托：
-
-```
-1 companion object {
-2     var instance: App by DelegatesExt.notNullSingleValue()
-3 }
-```
-
-ui/App.kt
-
-尽管在这种情况下，`lateinit` 可能是最简单的选项，但我想向你展示如何创建一个自定义属性委托并在代码中使用它。
-
-如果你有任何疑问，请查看此章节的特定[分支](https://github.com/antoniolg/Kotlin-for-Android-Developers/tree/chapter-16)。
-
-## 17 创建 SQLiteOpenHelper
-
-如你所知，Android 使用 `SQLite` 作为数据库管理系统。`SQLite` 是一个嵌入应用中的数据库，它是轻量级的。这就是为什么它是移动应用的良好选择。
-
-然而，Android 中用于处理数据库的 API 相当很原始。你将看到需要为数据库编写许多 SQL 语句，并将它们映射到对象或 `Cursor`。幸运亏有 Kotlin，我们可以简化这一切。
-
-### 17.1 ManagedSQLiteOpenHelper
-
-`SQLiteOpenHelper` 简化了大量工作。在使用它时调用 `ReadableDatabase()` 或 `WritableDatabase()`，稍后看到：
-
-```
-1 forecastDbHelper.use {
-2 ...
-3 }
-```
-
-`use` 接收一个 `SQLiteDatabase` 的扩展函数。在大括号内，`this` 指向 `SQLiteDatabase`。`use` 函数可以返回值，稍后看到它的实现：
-
-```kotlin
-public fun <T> SQLiteOpenHelper.use(f: SQLiteDatabase.() -> T): T {
-    try {
-        return openDatabase().f()
-    } finally {
-        closeDatabase()
-    }
-}
-```
-
-首先，`use` 可以这样使用：
-
-```
-1 result = forecastDbHelper.use {
-2 ...
-3 }
-```
-
-记住，在函数内部，最后一行代表返回的值。`T` 没有限制，我们可以返回任何值。甚至是不返回任何内容的 `Unit`。通过使用 `try-finally`，`use` 函数无论扩展函数成功还是崩溃都会关闭数据库。
-
-此外，我们还有许多实用的 `SQLiteDatabase` 扩展函数稍后会用到。现在，让我们定义数据库表并实现 `SQLiteOpenHelper`。
-
-## 17. 表定义
-
-让我们创建几个表示表的对象。这些对象将有助于避免名称拼写错误和重复。我们需要两个表：一个存储城市信息，另一个存储每日的预报。第二个表与第一个表有外键。
-
-`CityForecastTable` 首先提供了表名，然后是它需要的列集：`id`（城市的邮政编码）、城市名称和国家。
-
-```
-1 object CityForecastTable {
-2     const val NAME = "CityForecast"
-3     const val ID = "_id"
-4     const val CITY = "city"
-5     const val COUNTRY = "country"
-6 }
-```
-
-data/db/Tables.kt
-
-`DayForecast` 有更多信息，因此它需要下面看到的列集。最后一列 `cityId` 保留了该预报所属的 `CityForecast` 的 id。
-
-```
-1 object DayForecastTable {
-2     const val NAME = "DayForecast"
-3     const val ID = "_id"
-4     const val DATE = "date"
-5     const val DESCRIPTION = "description"
-6     const val HIGH = "high"
-7     const val LOW = "low"
-8     const val ICON_URL = "iconUrl"
-9     const val CITY_ID = "cityId"
-10 }
-```
-
-data/db/Tables.kt
-
-
-
-
-### 17.3 实现 SqliteOpenHelper
-
-如果你还记得，Anko 被分为几个库以变得更加轻量化。我们已经添加了 `anko-common`，但如果我们想使用数据库功能，我们还需要 `anko-sqlite`：
-
-```
-1 dependencies {
-2     ...
-3     compile "org.jetbrains.anko:anko-sqlite:$anko_version"
-4 }
-```
-
-`app/build.gradle`
-
-我们的 `SqliteOpenHelper` 将将管理数据库的创建和升级，并提供 `SqliteDatabase` 以便我们对其进行操作。查询将被提取到另一个类中：
-
-```
-1 class ForecastDbHelper() : ManagedSQLiteOpenHelper(App.instance,
-2         ForecastDbHelper.DB_NAME, null, ForecastDbHelper.DB_VERSION) {
-3     ...
-4 }
-```
-
-`data/db/ForecastDbHelper.kt`
-
-我们使用了上一节中创建的 `App.instance` 以及数据库名称和版本。在伴侣对象（companion object）中定义这些值，并定义辅助类实例：
 
 ```
 1 companion object {
@@ -2531,9 +2089,9 @@ data/db/Tables.kt
 
 `data/db/ForecastDbHelper.kt`
 
-*   第一个参数是表名。
-*   第二个参数当设置为 `true` 时，会在尝试创建表之前检查该表是否存在。
-*   第三个参数是 `Pair` 的 `vararg` 参数。`vararg` 类型在 Java 中也存在，它是向函数传递相同类型变数量参数的方法。该函数随后接收一个包含这些对象的数组。
+- 第一个参数是表名。
+- 第二个参数当设置为 `true` 时，会在尝试创建表之前检查该表是否存在。
+- 第三个参数是 `Pair` 的 `vararg` 参数。`vararg` 类型在 Java 中也存在，它是向函数传递相同类型变数量参数的方法。该函数随后接收一个包含这些对象的数组。
 
 列类型使用了一个名为 `SqlType` 的特殊 Anko 类，它可以与 `SqlTypeModifier`（如 `PRIMARY_KEY`）一起使用。`+` 操作的重载方式我们在第 11 节中看到过。这个 `plus` 函数正确地连接了两个值并返回一个新的特殊的 `SqlType`：
 
@@ -2623,30 +2181,27 @@ data/db/Tables.kt
 2 val dbHelper2 = ForecastDbHelper(mockedContext) // 例如为了测试
 ```
 
-
-
-
-
 我们之前在项目中项目中使用过集合（collections），但现在是时候展示它们在结合函数式操作时有多强大了。函数式编程的好处在于，我们不需要解释“如何”做”，只需要说明我们“想要做什么”。例如，如果我们想过滤一个列表，与其创建一个新列表、遍历原始列表并将满足条件的项添加到新列表中，我们只需使用一个 `filter` 函数并指定我们想要使用的过滤器即可。这样一来，我们就可以用更少的代码实现更多的功能。
 
 虽然我们可以使用 Java 集合，但 Kotlin 提供了一组非常好的原生接口，你可能会想要使用它们：
 
-* `Iterable`：父类。任何继承此接口的类都代表一个我们可以迭代的元素序列。
-* `MutableIterable`：支持在迭代过程中删除项的可迭代对象。
-* `Collection`：此类表示元素的泛型集合集合。我们可以访问返回集合大小、判断集合是否为空、是否包含某个元素或一组元素的函数。此类集合的所有方法都仅用于请求数据，因为集合是不可变的。
-* `MutableCollection`：一种支持添加和删除元素的 `Collection`。它提供了额外的函数，如 `add`、`remove` 或 `clear` 等。
-* `List`：可能是最流行的集合类型。它表示元素的泛型有序集合。由于它是有序的，我们可以通过 `get` 函数根据位置请求某个项。
-* `MutableList`：一种支持添加和删除元素的 `List`。
-* `Set`：一种无序元素集合，会忽略重复元素。
-* `MutableSet`：一种支持添加和删除元素的 `Set`。
-* `Map`：一种键值对集合。map 中的键必须是唯一的，这意味着在 map 中不能有两个具有相同键的对。
-* `MutableMap`：一种支持添加和删除元素的 `Map`。
+- `Iterable`：父类。任何继承此接口的类都代表一个我们可以迭代的元素序列。
+- `MutableIterable`：支持在迭代过程中删除项的可迭代对象。
+- `Collection`：此类表示元素的泛型集合集合。我们可以访问返回集合大小、判断集合是否为空、是否包含某个元素或一组元素的函数。此类集合的所有方法都仅用于请求数据，因为集合是不可变的。
+- `MutableCollection`：一种支持添加和删除元素的 `Collection`。它提供了额外的函数，如 `add`、`remove` 或 `clear` 等。
+- `List`：可能是最流行的集合类型。它表示元素的泛型有序集合。由于它是有序的，我们可以通过 `get` 函数根据位置请求某个项。
+- `MutableList`：一种支持添加和删除元素的 `List`。
+- `Set`：一种无序元素集合，会忽略重复元素。
+- `MutableSet`：一种支持添加和删除元素的 `Set`。
+- `Map`：一种键值对集合。map 中的键必须是唯一的，这意味着在 map 中不能有两个具有相同键的对。
+- `MutableMap`：一种支持添加和删除元素的 `Map`。
 
 这些集合可以应用一组函数式操作。我想向你展示一些定义以及几种操作的示例。了解有哪些选项是有用的，这样可以更容易识别这些函数可以使用哪些地方。
 
 ## 18.1 聚合操作 (Aggregate operations)
 
 #### any
+
 如果至少有一个元素匹配给定的谓词，则返回 `true`。
 
 ```
@@ -2656,6 +2211,7 @@ data/db/Tables.kt
 ```
 
 #### all
+
 如果所有元素都匹配给定的谓词，则返回 `true`。
 
 ```
@@ -2664,6 +2220,7 @@ data/db/Tables.kt
 ```
 
 #### count
+
 返回匹配给定的谓词的元素数量。
 
 ```
@@ -2671,6 +2228,7 @@ data/db/Tables.kt
 ```
 
 #### fold
+
 从初始值开始，对集合从第一个元素到最后一个元素应用操作来累加值。
 
 ```
@@ -2678,6 +2236,7 @@ data/db/Tables.kt
 ```
 
 #### foldRight
+
 与 `fold` 相同，但它是从最后一个元素到第一个元素。
 
 ```
@@ -2685,6 +2244,7 @@ data/db/Tables.kt
 ```
 
 #### forEach
+
 对每个元素执行给定的操作。
 
 ```
@@ -2692,6 +2252,7 @@ data/db/Tables.kt
 ```
 
 #### forEachIndexed
+
 与 `forEach` 相同，尽管我们还得到了元素的索引。
 
 ```
@@ -2700,6 +2261,7 @@ data/db/Tables.kt
 ```
 
 #### max
+
 返回最大的元素，如果没有元素则返回 `null`。
 
 ```
@@ -2707,6 +2269,7 @@ data/db/Tables.kt
 ```
 
 #### maxBy
+
 返回由给定函数产生最大值的第一个元素，如果没有元素则返回 `null`。
 
 ```
@@ -2715,6 +2278,7 @@ data/db/Tables.kt
 ```
 
 #### min
+
 返回最小的元素，如果没有元素则返回 `null`。
 
 ```
@@ -2722,6 +2286,7 @@ data/db/Tables.kt
 ```
 
 #### minBy
+
 返回由给定函数产生最小值的第一个元素，如果没有元素则返回 `null`。
 
 ```
@@ -2730,6 +2295,7 @@ data/db/Tables.kt
 ```
 
 #### none
+
 如果没有元素匹配给定的谓词，则返回 `true`。
 
 ```
@@ -2738,6 +2304,7 @@ data/db/Tables.kt
 ```
 
 #### reduce
+
 与 `fold` 相同，但它不使用初始值。它对集合从第一个元素到最后一个元素应用操作来累加值。
 
 ```
@@ -2745,6 +2312,7 @@ data/db/Tables.kt
 ```
 
 #### reduceRight
+
 与 `reduce` 相同，但它是从最后一个元素到第一个元素。
 
 ```
@@ -2752,6 +2320,7 @@ data/db/Tables.kt
 ```
 
 #### sumBy
+
 返回由转换函数从集合元素中产生的所有值之和。
 
 ```
@@ -2761,6 +2330,7 @@ data/db/Tables.kt
 ### 18.2 过滤操作 (Filtering operations)
 
 #### drop
+
 返回一个包含除前 n 个元素以外的所有元素的列表。
 
 ```
@@ -2768,6 +2338,7 @@ data/db/Tables.kt
 ```
 
 #### dropWhile
+
 返回一个包含除满足条件的元素以外的列表（注：此处原文描述可能有误，按逻辑翻译）。
 
 ```
@@ -2775,6 +2346,7 @@ data/db/Tables.kt
 ```
 
 #### dropLast
+
 返回一个包含除最后 n 个元素以外的所有元素的列表。
 
 ```
@@ -2782,6 +2354,7 @@ data/db/Tables.kt
 ```
 
 #### filter
+
 返回一个包含匹配给定谓词元素的列表。
 
 ```
@@ -2789,6 +2362,7 @@ data/db/Tables.kt
 ```
 
 #### filterNot
+
 返回一个包含不匹配给定谓词元素的列表。
 
 ```
@@ -2796,6 +2370,7 @@ data/db/Tables.kt
 ```
 
 #### filterNotNull
+
 返回一个包含所有非 `null` 元素的列表。
 
 ```
@@ -2804,6 +2379,7 @@ data/db/Tables.kt
 ```
 
 #### slice
+
 返回包含指定索引元素的列表。
 
 ```
@@ -2811,6 +2387,7 @@ data/db/Tables.kt
 ```
 
 #### take
+
 返回包含前 n 个元素的列表。
 
 ```
@@ -2818,6 +2395,7 @@ data/db/Tables.kt
 ```
 
 #### takeLast
+
 返回包含最后 n 个元素的列表。
 
 ```
@@ -2825,6 +2403,7 @@ data/db/Tables.kt
 ```
 
 #### takeWhile
+
 返回包含满足给定谓词的前元素列表。
 
 ```
@@ -2834,6 +2413,7 @@ data/db/Tables.kt
 ### 18.3 映射操作 (Mapping operations)
 
 #### flatMap
+
 遍历元素并为每个元素创建一个新集合，最后将所有集合平化为一个列表。
 
 ```
@@ -2842,6 +2422,7 @@ data/db/Tables.kt
 ```
 
 #### groupBy
+
 根据给定函数的结果对原始集合中的元素分组返回 map。
 
 ```
@@ -2850,6 +2431,7 @@ data/db/Tables.kt
 ```
 
 #### map
+
 返回一个将转换函数应用于原始集合每个元素结果的列表。
 
 ```
@@ -2857,6 +2439,7 @@ data/db/Tables.kt
 ```
 
 #### mapIndexed
+
 返回一个将转换函数应用于原始集合每个元素及其索引结果的列表。
 
 ```
@@ -2865,34 +2448,35 @@ data/db/Tables.kt
 ```
 
 #### mapNotNull
+
 返回一个将转换函数应用于原始集合中每个非 `null` 元素的列表。
+
+
 
 ```
 1 listWithNull = listOf(1, null, 2, 3, 4)
 2 assertEquals(listOf(2, 4, 6, 8), listWithNull.mapNotNull { it * 2 })
 ```
 
-### 18.4 元素操作 (Elements operations)
+## 18.4 元素操作 (Elements operations)
 
-#### contains
+### contains
+
 如果在集合中找到了该元素，则返回 `true`。
 
 ```
 1 assertTrue(list.contains(2))
 ```
 
-#### elementAt
+### elementAt
+
 返回给定索引处的元素，如果索引超出此集合范围，则抛出 `IndexOutOfBoundsException`。
-
-
-
-
 
 ```
 1 assertEquals(2, list.elementAt(1))
 ```
 
-#### elementAtOrElse
+### elementAtOrElse
 
 返回指定索引处的元素；如果索引超出此集合的范围，则返回默认函数的执行。
 
@@ -2908,7 +2492,7 @@ data/db/Tables.kt
 1 assertNull(list.elementAtOrNull(10))
 ```
 
-#### first
+### first
 
 返回匹配给定谓词的第一个元素。如果没有找到元素，将抛出 `NoSuchElementException`。
 
@@ -2916,7 +2500,7 @@ data/db/Tables.kt
 1 assertEquals(2, list.first { it % 2 == 0 })
 ```
 
-#### firstOrNull
+### firstOrNull
 
 返回匹配给定谓词的第一个元素；如果没有找到任何元素，则返回 `null`。
 
@@ -2924,7 +2508,7 @@ data/db/Tables.kt
 1 assertNull(list.firstOrNull { it % 7 == 0 })
 ```
 
-#### indexOf
+### indexOf
 
 返回元素的第一个索引；如果集合不包含该元素，则返回 -1。
 
@@ -2932,7 +2516,7 @@ data/db/Tables.kt
 1 assertEquals(3, list.indexOf(4))
 ```
 
-#### indexOfFirst
+### indexOfFirst
 
 返回匹配给定谓词的第一个元素的索引；如果集合不包含此类元素，则返回 -1。
 
@@ -2940,7 +2524,7 @@ data/db/Tables.kt
 1 assertEquals(1, list.indexOfFirst { it % 2 == 0 })
 ```
 
-#### indexOfLast
+### indexOfLast
 
 返回匹配给定谓词的最后一个元素的索引；如果集合不包含此类元素，则返回 -1。
 
@@ -2948,7 +2532,7 @@ data/db/Tables.kt
 1 assertEquals(5, list.indexOfLast { it % 2 == 0 })
 ```
 
-#### last
+### last
 
 返回匹配给定谓词的最后一个元素。如果没有找到元素，将抛出 `NoSuchElementException`。
 
@@ -2965,7 +2549,7 @@ data/db/Tables.kt
 2 assertEquals(5, listRepeated.lastIndexOf(5))
 ```
 
-#### lastOrNull
+### lastOrNull
 
 返回匹配给定谓词的最后一个元素；如果没有找到此类元素，则返回 `null`。
 
@@ -2974,7 +2558,7 @@ data/db/Tables.kt
 2 assertNull(list.lastOrNull { it % 7 == 0 })
 ```
 
-#### single
+### single
 
 返回匹配给定谓词的唯一元素；如果没有元素或有多个匹配元素，则抛出异常。
 
@@ -2982,7 +2566,7 @@ data/db/Tables.kt
 1 assertEquals(5, list.single { it % 5 == 0 })
 ```
 
-#### singleOrNull
+### singleOrNull
 
 返回匹配给定谓词的唯一元素；如果未找到元素或找到了多个元素，则返回 `null`。
 
@@ -2990,9 +2574,9 @@ data/db/Tables.kt
 1 assertNull(list.singleOrNull { it % 7 == 0 })
 ```
 
-### 18.5 生成操作
+## 18.5 生成操作
 
-#### merge
+### merge
 
 使用提供的转换函数，根据两个集合中具有相同索引的元素构建一个值列表。该列表的长度为最短集合的长度。
 
@@ -3003,7 +2587,7 @@ data/db/Tables.kt
 4         it1 + it2 })
 ```
 
-#### partition
+### partition
 
 将原始集合拆分为一对集合，其中第一个集合包含谓词返回 `true` 的元素，而第二个集合包含谓词返回 `false` 的元素。
 
@@ -3012,7 +2596,7 @@ data/db/Tables.kt
 2         list.partition { it % 2 == 0 })
 ```
 
-#### plus
+### plus
 
 返回一个包含原始集合所有元素以及给定集合所有元素的列表。由于该函数的名称，我们可以对它使用 `+` 运算符。
 
@@ -3020,7 +2604,7 @@ data/db/Tables.kt
 1 assertEquals(listOf(1, 2, 3, 4, 5, 6, 7, 8), list + listOf(7, 8))
 ```
 
-#### zip
+### zip
 
 返回一个由两个集合中相同索引元素构建的对列表。该列表的长度为最短集合的长度。
 
@@ -3036,9 +2620,9 @@ data/db/Tables.kt
 1 assertEquals(Pair(listOf(5, 6), listOf(7, 8)), listOf(Pair(5, 7), Pair(6, 8)).unzip())
 ```
 
-### 18.6 排序操作
+## 18.6 排序操作
 
-#### reverse
+### reverse
 
 返回一个元素反序的列表。
 
@@ -3047,7 +2631,7 @@ data/db/Tables.kt
 2 assertEquals(listOf(5, 7, 2, 3), unsortedList.reverse())
 ```
 
-#### sort
+### sort
 
 返回一个所有元素排序后的列表。
 
@@ -3055,7 +2639,7 @@ data/db/Tables.kt
 1 assertEquals(listOf(2, 3, 5, 7), unsortedList.sort())
 ```
 
-#### sortBy
+### sortBy
 
 返回一个按指定比较器排序的所有元素列表。
 
@@ -3063,7 +2647,7 @@ data/db/Tables.kt
 1 assertEquals(listOf(3, 7), unsortedList.sortBy)
 ```
 
-#### sortDescending
+### sortDescending
 
 返回一个按降序排序的所有元素列表。
 
@@ -3071,7 +2655,7 @@ data/db/Tables.kt
 1 assertEquals(listOf(7, 5), unsortedList.sortDescending())
 ```
 
-#### sortDescendingBy
+### sortDescendingBy
 
 返回一个按指定比较器降序排序的所有元素列表。
 
@@ -3079,7 +2663,7 @@ data/db/Tables.kt
 1 assertEquals(listOf(7, 5), unsortedList.sortDescendingBy)
 ```
 
-### 19. 保存和请求数据
+## 19. 保存和请求数据
 
 上一章节涵盖了 `SQLiteOpenHelper`，但现在我们需要持久化和恢复数据的方法。
 
@@ -3130,12 +2714,9 @@ data/db/Tables.kt
 19 }
 ```
 
-data/db/DbClasses.kt
+`data/db/DbClasses.kt`
 
 这些类帮助我们在对象和 SQLite 表之间进行双向数据映射。
-
-
-
 
 `SqliteOpenHelper` 只是一个工具，是面向对象世界和 SQL 世界之间的桥梁。我们在一个新的类中使用它，来请求已保存到数据库中的数据，并保存新数据。该类的定义使用了 `ForecastDbHelper` 和 `DataMapper`，后者负责将数据库类转换为领域模型。我仍然使用默认值作为一种简便依赖注入方式：
 
@@ -3239,298 +2820,21 @@ data/db/DbClasses.kt
 
 最后，如果返回的城市不空，我们将将其转换为领域对象并返回。否则，我们直接返回 `null`。
 
-```
-1 if (city != null) dataMapper.convertToDomain(city) else null
-```
 
-`data/db/ForecastDb.kt`
 
-`DataMapper` 函数非常简单：
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
-```
-1 fun convertToDomain(forecast: CityForecast) = with(forecast) {
-2     val daily = daily.map { convertDayDomain(it) }
-3     ForecastList(_id, city)
-4 }
-5
-6 private fun convertDayDomain(dayForecast: DayForecast) = with(dayForecast) {
-7     Forecast(date, description, high, low, iconUrl)
-8 }
-```
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
 
-`data/db/DataMapper.kt`
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
 
-所以完整的函数是这样的：
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
 
 ```
-1 fun requestForecastByZipCode(zipCode: Long, date: Long) = forecastDbHelper.use {
-2 
-3     val dailyRequest = "${DayForecastTable.CITY_ID} = ? " + 
-4         "AND ${DayForecastTable.DATE} >= ?"
-5     val dailyForecast = select(DayForecastTable.NAME)
-6             .whereSimple(dailyRequest, zipCode.toString(), date.toString())
-7             .parseList { DayForecast(HashMap(it)) }
-8 
-9     val city = select(CityForecastTable.NAME)
-10             .whereSimple("${CityForecastTable.ID} = ?", zipCode.toString())
-11             .parseOpt { CityForecast(HashMap(it), dailyForecast) }
-12 
-13     if (city != null) dataMapper.convertToDomain(city) else null
-14 }
+if (condVar > someVal) {console.log("xxx")}
 ```
 
-`data/db/ForecastDb.kt`
 
-这里没有展示 Anko 的另一个有趣功能：你可以使用 `classParser()` 而不是我们使用的 `MapRowParser`，它通过反射根据列名填充类。我更喜欢另一种方法，因为我们不需要反射并且对转换有更多的控制，但它在以后可能对你有用。
-
-### 保存预报
-
-`saveForecast` 函数清除数据库中的数据以便我们保存新数据，将领域预报模型转换为数据库模型，并插入每个每日预报和城市预报。结构与之前的类似：它返回数据库 helper 中 `use` 函数的值。在这种情况下，我们不需要结果，所以它将返回 `Unit`。
-
-```
-1 fun saveForecast(forecast: ForecastList) = forecastDbHelper.use {
-2     ...
-3 }
-```
-
-`data/db/ForecastDb.kt`
-
-
-
-首先，我们清空两张表。Anko 没有提供任何优雅的方法来实现这一点，因此我们为 `SQLiteDatabase` 创建了一个扩展函数，用于为我们执行正确的 SQL 查询：
-
-```
-1 fun SQLiteDatabase.clear(tableName: String) {
-2     execSQL("delete from $tableName")
-3 }
-```
-
-`extensions/DatabaseExtensions.kt`
-
-该函数应用于两张表：
-
-```
-1 clear(CityForecastTable.NAME)
-2 clear(DayForecastTable.NAME)
-```
-
-`data/db/ForecastDb.kt`
-
-现在是时候转换数据，并使用结果来执行 `insert` 查询了。`with` 函数可以帮到我们：
-
-```
-1 with(dataMapper.convertFromDomain(forecast)) {
-2      ...
-3 }
-```
-
-`data/db/ForecastDb.kt`
-
-从领域模型的转换也很直接：
-
-```
-1 fun convertFromDomain(forecast: ForecastList) = with(forecast) {
-2     val daily = dailyForecast.map { convertDayFromDomain(id, it) }
-3     CityForecast(id, city, country, daily)
-4 }
-5 
-6 private fun convertDayFromDomain(cityId: Long, forecast: Forecast) = 
-7     with(forecast) {
-8         DayForecast(date, description, high, low, iconUrl, cityId)
-9 }
-```
-
-`data/db/DbDataMapper.kt`
-
-在块内部，我们可以直接使用 `dailyForecast` 和 `map` 而无需引用变量，就像在类内部一样。我们使用了另一个 Anko 函数进行插入，它需要一个表名和一个 `Pair<String, Any>` 的 `vararg` 参数。该函数会将 `vararg` 转换为 Android SDK 所需的 `ContentValues` 对象。因此，我们的任务是将 `map` 转换为 `vararg` 数组。我们为 `Map` 创建了另一个扩展函数来实现这一点：
-
-```
-1 fun <K, V : Any> MutableMap<K, V?>.toVarargArray(): 
-2     Array<out Pair<K, V>> =  map({ Pair(it.key, it.value!!) }).toTypedArray()
-```
-
-`extensions/CollectionExtensions.kt`
-
-它作用于带有可空值的 `Map`（这是 map 代理的一个条件），并将其转换为带有非空值对数组的 `Array`（`select` 函数的要求）。另一个复杂的点你现在不需要理解，我很快会讲解空值处理。
-
-所以，有了这个新函数，我们可以这样做：
-
-```
-1 insert(CityForecastTable.NAME, *map.toVarargArray())
-```
-
-`data/db/ForecastDb.kt`
-
-它在 `CityForecast` 表中插入一条新行。在 `toVarargArray` 结果之前使用的 `*` 表示数组被解构为 `vararg` 参数。这在 Java 中是自动完成的，但在 Kotlin 中我们需要显式指定。
-
-对于每个每日预报也是如此：
-
-```
-1 dailyForecast.forEach { insert(DayForecastTable.NAME, *it.map.toVarargArray()) }
-```
-
-`data/db/ForecastDb.kt`
-
-因此，通过使用 map，我们能够轻松地将类转换为数据库记录，反之亦然。一旦准备好了这些扩展函数，我们就可以将它们用于其他项目，所以这种投入是非常的。
-
-该函数的完整代码：
-
-```
- 1 fun saveForecast(forecast: ForecastList) = forecastDbHelper.use {
- 2 
- 3     clear(CityForecastTable.NAME)
- 4     clear(DayForecastTable.NAME)
- 5 
- 6     with(dataMapper.convertFromDomain(forecast)) {
- 7         insert(CityForecastTable.NAME, *map.toVarargArray())
- 8         dailyForecast forEach { 
- 9             insert(DayForecastTable.NAME, *it.map.toVarargArray()) 
-10         }
-11     }
-12 }
-```
-
-`data/db/ForecastDb.kt`
-
-本章涉及许多新代码，你可以查看[仓库](https://github.com/antoniolg/Kotlin-for-Android-Developers/tree/chapter-19) 进行回顾。
-
-# Kotlin 中的空安全
-
-对于来自 Java 7 的开发者来说，空安全是 Kotlin 最令人兴奋的特性之一。然而，正如你在书中看到的，它是如此隐式，以至于在上一章之前，我们几乎不需要担心它。
-
-`null` 被其创建者认为是[价值十的错误](https://en.wikipedia.org/wiki/Tony_Hoare)，事实是，我们有时需要定义一个变量是否包含值。在 Java 中，尽管如今注解和集成开发环境（IDE）提供了很大帮助，我们仍然可以编写类似下面的代码：
-
-```
-1 Forecast forecast = null;
-2 forecast.toString();
-```
-
-这段代码可以正确编译（你可能会收到 IDE 的警告），当它运行时，它自然会抛出 `NullPointerException`。这是不安全的，即使你认为可以控制一切，随着代码的增长，你将开始失去对那些可能为 null 的对象的追踪。我们最终会导致大量的 `NullPointerException` 或大量的空值检查（可能是两者的兼顾）。
-
-### 20.1 空类型如何工作
-
-大多数现代语言都以某种方式解决了这个问题。Kotlin 与 Swift 等其他类似语言一样使用了可空类型。在 Java 中，我们仍然可以做类似这样的操作：
-
-```
-1 Forecast forecast = null;
-2 forecast.toString();
-```
-（注：后续重复内容已根据指令要求删除，保留核心逻辑）
-
-
-
-
-好的，之前的解释对于 Kotlin 代码来说运行得非常完美。但对于通用的 Java 库，特别是 Android SDK 又是怎样的？在 Java 中，根据定义，每个对象都可以为 `null`。因此，我们必须处理许多在现实生活中永远不会为 `null` 但可能为空的变量。这意味着我们的代码可能会出现成百个 `!!` 运算符，这完全不是一个好主意。
-
-当你处理 Android SDK 时，可能会发现当使用 Java 方法时，某些参数被标记为单叹号 `!`。例如，在 Java 中获取 `Object` 的方法在 Kotlin 中被表示为 `Any!`。这个特殊的运算符表示，由开发者来决定该变量是否应该为 `null`。
-
-幸运的是，最新版本的 Android 框架和支持库开始使用 `@Nullable` 和 `@NonNull` 注解来标识可以为 `null` 的参数或可以返回 `null` 的函数，Kotlin 编译器可以检测到这一点并选择将其翻译成 Kotlin 语言。
-
-尽管如此，如果我们正在为一个 `Activity` 重写 `onCreate`，我们需要将 `savedInstanceState` 标记为可空：
-
-```
-1 override fun onCreate(savedInstanceState: Bundle?) {
-2 }
-```
-
-否则，它将显示错误。我们无法使用这种实现：
-
-```
-1 override fun onCreate(savedInstanceState: Bundle) {
-2 }
-```
-
-这太棒了，因为活动可以接收一个 `null` bundle，而我们免费获得了正确的实现。然而，SDK 的某些部分仍然缺少注解。所以，当你产生疑问时，你只需要使用可空对象并处理可能的 `null`。记住，如果你使用 `!!`，是因为你确定该对象不为 `null`，所以你可以直接将其声明为非空。
-
-## 21 创建用于数据访问的业务逻辑
-
-在实现了对服务器的访问以及与数据库交互的方法后，是时候将这些内容整合在一起了。逻辑步骤如下：
-
-1. 从数据库请求所需数据
-2. 检查对应周次是否有数据
-3. 如果找到了所需数据，则将其返回，以便 UI 进行渲染
-4. 否则，它向服务器请求数据
-5. 将结果保存到数据库中并返回，以便 UI 进行渲染
-
-我们的命令不应该处理所有这些逻辑。数据源是一个实现细节，很可能需要逻辑修改，因此添加一些额外的代码将命令从数据访问中抽象出来似乎是一个好主意。在我们的实现中，它将遍历源列表，直到找到适当的结果。
-
-让我们从指定任何想要被我们的提供者（provider）使用的数据源实现的接口开始：
-
-```
-1 interface ForecastDataSource {
-2     fun requestForecastByZipCode(zipCode: Long, date: Long): ForecastList?
-3 }
-```
-
-提供者需要一个接收邮政编码和日期的函数，它应该返回从那天开始的每周预报。
-
-```
-1 class ForecastProvider(private val sources: List<ForecastDataSource> =
-2         ForecastProvider.SOURCES) {
-3 
-4     companion object {
-5         const val DAY_IN_MILLIS = 1000 * 60 * 60 * 24
-6         val SOURCES = listOf(ForecastDb(), ForecastServer())
-7     }
-8 ...
-9 }
-```
-
-`domain/datasource/ForecastProvider.kt`
-
-预报提供者接收源列表，这再次可以通过构造函数指定（例如为了测试目的），但我将其设置为在伴对象中定义的 `SOURCES` 列表。它将使用一个数据库源和一个服务器源。顺序至关重要，因为它会遍历这些源，当任何一个源返回有效结果时搜索将停止。逻辑顺序是先在本地（数据库）搜索，然后通过 API 搜索。
-
-所以主方法看起来如下：
-
-```
-1 fun requestByZipCode(zipCode: Long, days: Int): ForecastList
-2             = sources.firstResult { requestSource(it, days, zipCode) }
-```
-
-`domain/datasource/ForecastProvider.kt`
-
-它获取第一个非 `null` 的结果。在搜索第 18 章解释的函数操作符列表时，我没有找到一个完全符合我要求的。因此，由于我们可以访问 Kotlin 源码，我直接复制了 `first` 函数并对其进行了修改以符合预期：
-
-```
-1 inline fun <T, R : Any> Iterable<T>.firstResult(predicate: (T) -> R?): R {
-2     for (element in this) {
-3         val result = predicate(element)
-4         if (result != null) return result
-5     }
-6     throw NoSuchElementException("No element matching predicate was found.")
-7 }
-```
-
-`extensions/CollectionsExtensions.kt`
-
-该函数接收一个谓词（predicate），该谓词接收一个类型为 `T` 的对象并返回一个类型为 `R?` 的值。泛型指定了谓词可以返回 `null`，但我们的 `firstResult` 函数不能。这就是它返回类型为 `R` 值的原因。
-
-它是如何工作的？它遍历 `Iterable` 集合中的元素执行谓词。当谓词的结果为空时，返回该结果。
-
-如果我们想包含所有源都返回 `null` 的情况，我们可以派自 `firstOrNull` 函数。区别在于最后一行返回 `null` 而不是抛出异常。但我这段代码中没有处理这些细节。
-
-在我们的示例中 `T = ForecastDataSource`，`R = ForecastList`。但记住 `ForecastDataSource` 中指定的函数返回 `ForecastList?`，这等于 `R?`，所以一切都是匹配的。`requestSource` 让之前的函数更具可读性：
-
-```
-1 fun requestSource(source: ForecastDataSource, days: Int,
-2         zipCode: Long): ForecastList? {
-3     val res = source.requestForecastByZipCode(zipCode, todayTimeSpan())
-4     return if (res != null && res.size >= days) res else null
-5 }
-```
-
-`domain/datasource/ForecastProvider.kt`
-
-执行请求并仅在结果不为 `null` 且天数匹配时返回。否则，源没有最新的数据返回。
-
-`todayTimeSpan()` 计算当天的毫秒数，消除“时间”偏移，只保留日期。某些源（在我们案例中是数据库）可能需要它。除非我们指定，否则它在服务器那里会被忽略。
-
-```
-1 private fun todayTimeSpan() = System.currentTimeMillis() /
-2     DAY_IN_MILLIS * DAY_IN_MILLIS
-```
-
-`domain/datasource/ForecastProvider.kt`
 
 该类的完整代码如下：
 
@@ -3561,12 +2865,8 @@ data/db/DbClasses.kt
 
 我们已经定义了 `ForecastDb`。它现在需要实现 `ForecastDataSource`。
 
-
-
-
-
 ```kotlin
- class ForecastDb(private val forecastDbHelper: ForecastDbHelper =
+class ForecastDb(private val forecastDbHelper: ForecastDbHelper =
         ForecastDbHelper.instance, 
         private val dataMapper: DbDataMapper = DbDataMapper())
         : ForecastDataSource {
@@ -3584,7 +2884,7 @@ data/db/DbClasses.kt
 我们还没有实现 `ForecastServer`，但它的实现非常直接。它利用 `ForecastDb` 在从服务器接收到响应后将其保存。这样，我们就可以将其缓存到数据库中，以供后续请求。
 
 ```kotlin
- class ForecastServer(
+class ForecastServer(
     private val dataMapper: ServerDataMapper = ServerDataMapper(),
     private val forecastDb: ForecastDb = ForecastDb()) 
     : ForecastDataSource {
@@ -3609,7 +2909,7 @@ data/db/DbClasses.kt
 完成这些最后步骤后，提供者已经实现完毕。现在我们需要开始使用它了。`ForecastCommand` 不再应该直接与服务器请求交互，也不再将数据转换为领域模型。
 
 ```kotlin
- class RequestForecastCommand(private val zipCode: Long,
+class RequestForecastCommand(private val zipCode: Long,
         private val forecastProvider: ForecastProvider = ForecastProvider()) :
         Command<ForecastList> {
 
@@ -3661,9 +2961,6 @@ val z = if (condition) x else y
 ### 22.2 When 表达式
 
 `When` 表达式类似于 Java 中的 `switch`，但要强大得多。它将参数与可能的情况进行匹配，直到找到匹配的项为止。
-
-
-
 
 Kotlin 为任何可比较类型定义了范围（ranges），但对于数值类型，编译器通过将其转换为 Java 中更简单的模拟代码来优化，以避免额外的开销。数值范围也是可迭代的，循环也会被优化，转换为与 Java 中使用的带索引的 `for` 循环相同的相同的字节码：
 
@@ -3772,12 +3069,11 @@ override fun requestDayForecast(id: Long): Forecast? = forecastDbHelper.use {
 
 `data/db/ForecastDb.kt`
 
-```
-
 `select` 查询与之前的非常相似。我创建了另一个工具函数 `byId`，因为通过 `id` 查询非常常见，一个这样的函数可以简化过程并更易读。该函数的实现非常简单：
 
 ```
 fun SelectQueryBuilder.byId(id: Long) 
+
         = whereSimple("_id = ?", id.toString())
 ```
 
@@ -3789,6 +3085,7 @@ fun SelectQueryBuilder.byId(id: Long)
 
 ```
 override fun requestDayForecast(id: Long) 
+
         = UnsupportedOperationException()
 ```
 
@@ -3798,11 +3095,15 @@ override fun requestDayForecast(id: Long)
 
 ```
 class RequestForecastCommand(
+
         val id: Long,
+
         private val forecastProvider: ForecastProvider = ForecastProvider()) :
+
         Command<Forecast> {
 
     override fun execute() = forecastProvider.requestForecast(id)
+
 }
 ```
 
@@ -3824,10 +3125,15 @@ class RequestForecastCommand(
 public class DetailActivity : AppCompatActivity() {
 
     companion object {
+
         const val ID = "DetailActivity:id"
+
         const val CITY_NAME = "DetailActivity:cityName"
+
     }
+
     ...
+
 }
 ```
 
@@ -3835,78 +3141,85 @@ public class DetailActivity : AppCompatActivity() {
 
 在 `onCreate` 函数中，第一步是设置内容视图。UI 将非常简单，但对于这个应用示例来说足够了：
 
-
-
-
-
 ```xml
 <LinearLayout
+
     xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
+
     android:layout_height="match_parent"
+
     android:orientation="vertical"
+
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin">
+```
 
-    <LinearLayout
-        android:layout_width="match_parent"
+
+
+`android:paddingLeft="@dimen/activity_horizontal_margin"`
+
+`android:paddingRight="@dimen/activity_horizontal_margin"`
+
+`android:paddingTop="@dimen/activity_vertical_margin"`
+
+```
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    tools:ignore="UseCompoundDrawables">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        tools:src="@mipmap/ic_launcher"
+        tools:ignore="ContentDescription"/>
+
+    <TextView
+        android:id="@+id/weatherDescription"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        tools:ignore="UseCompoundDrawables">
+        android:layout_margin="@dimen/spacing_xlarge"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:text="Few clouds"/>
 
-        <ImageView
-            android:id="@+id/icon"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            tools:src="@mipmap/ic_launcher"
-            tools:ignore="ContentDescription"/>
+</LinearLayout>
 
-        <TextView
-            android:id="@+id/weatherDescription"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/spacing_xlarge"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            tools:text="Few clouds"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/maxTemperature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/spacing_xlarge"
+        android:gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        tools:text="30"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/maxTemperature"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/spacing_xlarge"
-            android:gravity="center_horizontal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-            tools:text="30"/>
-
-        <TextView
-            android:id="@+id/minTemperature"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/spacing_xlarge"
-            android:gravity="center_horizontal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-            tools:text="10"/>
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/minTemperature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/spacing_xlarge"
+        android:gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        tools:text="10"/>
 
 </LinearLayout>
 ```
 
 `layout/activity_detail.xml`
 
-Then assign it from `onCreate` code. Use the city name to fill the toolbar title. The methods for `intent` and `title` are automatically mapped to a property:
+然后在 `onCreate` 代码中分配它。使用城市名称填充工具栏标题。`intent` 和 `title` 的方法会自动映射到属性：
 
 ```
 setContentView(R.layout.activity_detail)
@@ -3915,7 +3228,7 @@ title = intent.getStringExtra(CITY_NAME)
 
 `ui/activities/DetailActivity.kt`
 
-The other part in `onCreate` implements the call to the command. It is very similar to the call we previously did:
+`onCreate` 中的另一部分实现了对命令的调用。这与我们之前做的调用非常相似：
 
 ```
 doAsync {
@@ -3926,7 +3239,7 @@ doAsync {
 
 `ui/activities/DetailActivity.kt`
 
-When the result is recovered from the database, the `bindForecast` function is called in the UI thread. I am using Kotlin Android Extensions plugin again in this activity, to get the properties from the XML without using `findViewById`:
+当从数据库恢复结果时，会在 UI 线程中调用 `bindForecast` 函数。我再次在此 Activity 中使用 Kotlin Android Extensions 插件，以从 XML 中获取属性，而无需使用 `findViewById`：
 
 ```
 import kotlinx.android.synthetic.main.activity_detail.*
@@ -3943,7 +3256,7 @@ private fun bindForecast(forecast: Forecast) = with(forecast) {
 
 `ui/activities/DetailActivity.kt`
 
-There are some interesting things here. For instance, I am creating another extension function able to convert a `Long` object into a visual date string. Remember we were using it in the adapter too, so it is a good moment to extract it into a function:
+这里有一些有趣的事情。例如，我创建了另一个扩展函数，能够将 `Long` 对象转换为可视日期字符串。记住我们在适配器中也使用了它，所以现在是将其提取为函数的好时机：
 
 ```
 fun Long.toDateString(dateFormat: Int = DateFormat.MEDIUM): String {
@@ -3954,9 +3267,9 @@ fun Long.toDateString(dateFormat: Int = DateFormat.MEDIUM): String {
 
 `extensions/ExtensionUtils.kt`
 
-It gets a date format (or use the default `DateFormat.MEDIUM`) and converts the `Long` into a `String` that is understandable by the user.
+它获取日期格式（或使用默认的 `DateFormat.MEDIUM`），并将 `Long` 转换为用户可理解的 `String`。
 
-Another interesting function is `bindWeather`. It gets a `vararg` of pairs of `Int` and `TextView`, and assigns a text and a text color to the `TextView`s based on the temperature.
+另一个有趣的函数是 `bindWeather`。它接收一个 `Int` 和 `TextView` 对的 `vararg`，并根据温度将文本和文本颜色分配给 `TextView`。
 
 ```
 private fun bindWeather(vararg views: Pair<Int, TextView>) = views.forEach {
@@ -3971,9 +3284,9 @@ private fun bindWeather(vararg views: Pair<Int, TextView>) = views.forEach {
 
 `ui/activities/DetailActivity.kt`
 
-### 23.3 Start an activity: reified functions
+### 23.3 启动 Activity：具化函数
 
-The final step consists of starting the detail activity from the main activity. We can rewrite the adapter instantiation this way:
+最后一步是从主 Activity 启动详情 Activity。我们可以这样重写适配器实例化：
 
 ```
 val adapter = ForecastListAdapter(result) {
@@ -3984,7 +3297,7 @@ val adapter = ForecastListAdapter(result) {
 }
 ```
 
-But this is too verbose. As usual, Anko provides a much simpler way to start an activity by using a **reified function**:
+但这太冗长了。像往常一样，Anko 通过使用**具化函数**提供了一种更简单的启动 Activity 的方式：
 
 ```
 val adapter = ForecastListAdapter(result) {
@@ -3995,20 +3308,16 @@ val adapter = ForecastListAdapter(result) {
 
 `ui/activities/MainActivity.kt`
 
-
-
-
-
-具化函数（reified functions）背后的魔法是什么？如你所知，当我们在 `Java` 中创建一个泛型方法时，无法从泛型类型获取类。一种通用的替代方法是将类作为参数传递。在 Kotlin 中，内联函数（inline function）可以被具化，这意味着可以在函数内部获取并使用泛型类型的类。在这种情况下，我们可以通过调用 `T::class.javaClass` 在函数内部创建 intent。Anko 所做功能的简单版本如下（在此示例中我仅使用了 `String` 额外参数）：
+具化函数背后的魔法是什么？如你所知，当我们在 `Java` 中创建泛型方法时，无法从泛型类型获取类。一种通用的替代方法是将类作为参数传递。在 Kotlin 中，内联函数可以被具化，这意味着可以在函数内部获取并使用泛型类型的类。在这种情况下，我们可以通过调用 `T::class.javaClass` 在函数内部创建 intent。Anko 所做功能的简单版本如下（在此示例中我仅使用了 `String` 额外参数）：
 
 ```
-1 public inline fun <reified T: Activity> Context.startActivity(
-2         vararg params: Pair<String, String>) {
-3     
-4     val intent = Intent(this, T::class.java)
-5     params.forEach { intent.putExtra(it.first, it.second) }
-6     startActivity(intent)
-7 }
+public inline fun <reified T: Activity> Context.startActivity(
+        vararg params: Pair<String, String>) {
+    
+    val intent = Intent(this, T::class.java)
+    params.forEach { intent.putExtra(it.first, it.second) }
+    startActivity(intent)
+}
 ```
 
 真正的实现要复杂一些，因为它使用了一个冗长且无聊的 `when` 表达式根据类型添加额外参数，但这对该概念并没有增加多少实用的知识。
@@ -4024,58 +3333,58 @@ val adapter = ForecastListAdapter(result) {
 Kotlin 中的接口比 `Java 7` 更加强大。如果你工作过 `Java 8`，那么它们的相似性会非常接近。在 Kotlin 中，我们可以像在 `Java` 中一样使用接口。假设我们有一些动物，其中一些会飞。这是我们可以为会飞的动物设计的接口：
 
 ```
-1 interface FlyingAnimal {
-2     fun fly()
-3 }
+interface FlyingAnimal {
+    fun fly()
+}
 ```
 
 鸟类和蝙蝠都可以通过扇动翅膀飞行。所以，让我们为它们创建几个类：
 
 ```
-1 class Bird : FlyingAnimal {
-2     val wings: Wings = Wings()
-3     override fun fly() = wings.move()
-4 }
-5 
-6 class Bat : FlyingAnimal {
-7     val wings: Wings = Wings()
-8     override fun fly() = wings.move()
-9 }
+class Bird : FlyingAnimal {
+    val wings: Wings = Wings()
+    override fun fly() = wings.move()
+}
+
+class Bat : FlyingAnimal {
+    val wings: Wings = Wings()
+    override fun fly() = wings.move()
+}
 ```
 
 当多个类扩展一个接口时，它们都共享相同的实现是非常典型的。然而，`Java 7` 接口只能定义行为，而不能实现它。
 
-另一方面，Kotlin 接口可以实现函数。与类的唯一区别在于它们是无状态的，因此需要支持字段（backing field）的属性需要由类来重写。类负责保存接口属性的状态。
+另一方面，Kotlin 接口可以实现函数。与类的唯一区别在于它们是无状态的，因此需要支持字段的属性需要由类来重写。类负责保存接口属性的状态。
 
 我们可以让接口实现 `fly` 函数：
 
 ```
-1 interface FlyingAnimal {
-2     val wings: Wings
-3     fun fly() = wings.move()
-4 }
+interface FlyingAnimal {
+    val wings: Wings
+    fun fly() = wings.move()
+}
 ```
 
 如前提到的，类需要重写该属性：
 
 ```
-1 class Bird : FlyingAnimal {
-2     override val wings: Wings = Wings()
-3 }
-4 
-5 class Bat : FlyingAnimal {
-6     override val wings: Wings = Wings()
-7 }
+class Bird : FlyingAnimal {
+    override val wings: Wings = Wings()
+}
+
+class Bat : FlyingAnimal {
+    override val wings: Wings = Wings()
+}
 ```
 
 现在，鸟类和蝙蝠都会飞了：
 
 ```
-1 val bird = Bird()
-2 val bat = Bat()
-3 
-4 bird.fly()
-5 bat.fly()
+val bird = Bird()
+val bat = Bat()
+
+bird.fly()
+bat.fly()
 ```
 
 ### 24.2 委托
@@ -4085,56 +3394,58 @@ Kotlin 中的接口比 `Java 7` 更加强大。如果你工作过 `Java 8`，那
 在我们之前的示例中，我们可以通过构造函数指定动物如何飞翔，而不是直接实现它。例如，一个使用翅膀飞行的动物可以这样实现：
 
 ```
-1 interface CanFly {
-2     fun fly()
-3 }
-4 
-5 class Bird(f: CanFly) : CanFly by f
+interface CanFly {
+    fun fly()
+}
+
+class Bird(f: CanFly) : CanFly by f
 ```
 
 我们可以通过使用接口来指示鸟会飞，但鸟飞行的方式是通过构造函数传入的委托定义的，因此我们可以拥有具有不同飞行方法的不同鸟。带翅膀的动物飞行方式在另一个类中定义：
 
 ```
-1 class AnimalWithWings : CanFly {
-2     val wings: Wings = Wings()
-3     override fun fly() = wings.move()
-4 }
+class AnimalWithWings : CanFly {
+    val wings: Wings = Wings()
+    override fun fly() = wings.move()
+}
 ```
 
 带翅膀的动物通过移动翅膀来飞行。因此，现在我们可以创建一个使用翅膀飞行的鸟：
 
 ```
-1 val birdWithWings = Bird(AnimalWithWings())
-2 birdWithWings.fly()
+val birdWithWings = Bird(AnimalWithWings())
+birdWithWings.fly()
 ```
 
 但现在翅膀也可以用于其他非鸟类动物。如果我们假设蝙蝠总是使用翅膀，我们可以在指定委托的地方直接实例化：
 
 ```
-1 class Bat : CanFly by AnimalWithWings()
-2 ...
-3 val bat = Bat()
-4 bat.fly()
+class Bat : CanFly by AnimalWithWings()
+...
+val bat = Bat()
+bat.fly()
 ```
+
+
 
 ### 24.3 在我们的 App 中实现一个示例
 
 接口可以从具有相似行为的类中提取公共代码。例如，我们可以创建一个处理 App 工具栏的接口。`MainActivity` 和 `DetailActivity` 共享处理工具栏的相似代码。
 
-但，需要进行一些更改以使用工具栏而不是 `ActionBar`。第一件事是扩展 `NoActionBar` 主题：
+但需要进行一些更改以使用工具栏而不是 `ActionBar`。第一件事是扩展 `NoActionBar` 主题：
 
-```
+```xml
 1 <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 2     <item name="colorPrimary">#ff2121</item>
 3     <item name="colorPrimaryDark">@android:color/black</item>
 4 </style>
 ```
 
-values/styles.xml
+`values/styles.xml`
 
 我们使用的是浅色主题。接下来，创建一个可以在其他布局中包含的工具栏布局：
 
-```
+```xml
 1 <android.support.v7.Toolbar
 2     xmlns:app="http://schemas.android.com/apk/res-auto"
 3     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -4146,13 +3457,13 @@ values/styles.xml
 9     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 ```
 
-layout/toolbar.xml
+`layout/toolbar.xml`
 
-工具栏指定了背景、它生成的弹出主题（例如溢出菜单）。然后我们得到了之前拥有的相同主题：带 ActionBar 的浅色主题。
+工具栏指定了背景、它生成的弹出主题（例如溢出菜单）。然后我们得到了之前拥有的相同主题：带 `ActionBar` 的浅色主题。
 
 下一步将修改 `MainActivity` 布局以包含工具栏：
 
-```
+```xml
 1 <FrameLayout
 2     xmlns:android="http://schemas.android.com/apk/res/android"
 3     android:layout_width="match_parent"
@@ -4170,29 +3481,25 @@ layout/toolbar.xml
 15 </FrameLayout>
 ```
 
-layout/activity_main.xml
+`layout/activity_main.xml`
 
 现在已经在布局中添加了工具栏，我们就可以使用它了。我们创建一个接口，允许我们：
 
 *   更改标题
 *   指定是否显示返回导航操作
 *   滚动时动画工具栏
-*   为所有 Activity 分配相同的菜单以及操作的事件
+*   为所有 `Activity` 分配相同的菜单以及操作的事件
 
 所以让我们定义 `ToolbarManager`：
 
-```
+```kotlin
 1 interface ToolbarManager {
 2     val toolbar: Toolbar
 3     ...
 4 }
 ```
 
-ui/activities/ToolbarManager.kt
-
-
-
-
+`ui/activities/ToolbarManager.kt`
 
 ```kotlin
 1 var toolbarTitle: String
@@ -4209,15 +3516,15 @@ ui/activities/ToolbarManager.kt
 我们现在正在创建一个新函数，通过加载菜单并设置监听器来初始化工具栏：
 
 ```kotlin
- 1 fun initToolbar() {
- 2     toolbar.inflateMenu(R.menu.menu_main)
- 3     toolbar.setOnMenuItemClickListener {
- 4         when (it.itemId) {
- 5             R.id.action_settings -> App.instance.toast("Settings")
- 6             else -> App.instance.toast("Unknown option")
- 7         }
- 8         true
- 9     }
+1 fun initToolbar() {
+2     toolbar.inflateMenu(R.menu.menu_main)
+3     toolbar.setOnMenuItemClickListener {
+4         when (it.itemId) {
+5             R.id.action_settings -> App.instance.toast("Settings")
+6             else -> App.instance.toast("Unknown option")
+7         }
+8         true
+9     }
 10 }
 ```
 
@@ -4237,7 +3544,7 @@ ui/activities/ToolbarManager.kt
 
 `ui/activities/ToolbarManager.kt`
 
-该函数接收监听器，使用最终状态下的 [DrawerArrowDrawable](https://developer.android.com/reference/android/support/v7/graphics/drawable/DrawerArrowDrawable.html)（箭头已经显示时）创建向上 drawable，并将监听器分配给 `toolbar`。
+该函数接收监听器，使用最终状态下的 `DrawerArrowDrawable`（箭头已经显示时）创建向上 drawable，并将监听器分配给 `toolbar`。
 
 最后，接口提供了一个函数允许工具栏绑定到滚动视图，并根据滚动的方向对工具栏进行动画。当我们向下滚动时，工具栏会被隐藏，向上滚动时会再次显示：
 
@@ -4288,15 +3595,15 @@ ui/activities/ToolbarManager.kt
 `MainActivity` 将初始化工具栏、绑定到 `RecyclerView` 滚动视图并修改工具栏标题：
 
 ```kotlin
- 1 override fun onCreate(savedInstanceState: Bundle?) {
- 2     super.onCreate(savedInstanceState)
- 3     setContentView(R.layout.activity_main)
- 4     initToolbar()
- 5 
- 6     forecastList.layoutManager = LinearLayoutManager(this)
- 7     attachToScroll(forecastList)
- 8 
- 9     doAsync {
+1 override fun onCreate(savedInstanceState: Bundle?) {
+2     super.onCreate(savedInstanceState)
+3     setContentView(R.layout.activity_main)
+4     initToolbar()
+5 
+6     forecastList.layoutManager = LinearLayoutManager(this)
+7     attachToScroll(forecastList)
+8 
+9     doAsync {
 10         val result = RequestForecastCommand(94043).execute()
 11         uiThread {
 12             val adapter = ForecastListAdapter(result) {
@@ -4315,24 +3622,24 @@ ui/activities/ToolbarManager.kt
 `DetailActivity` 也需要一些布局修改：
 
 ```xml
- 1 <LinearLayout
- 2     xmlns:android="http://schemas.android.com/apk/res/android"
- 3     xmlns:tools="http://schemas.android.com/tools"
- 4     android:layout_width="match_parent"
- 5     android:layout_height="match_parent"
- 6     android:orientation="vertical">
- 7 
- 8     <include layout="@layout/toolbar"/>
- 9 
+1 <LinearLayout
+2     xmlns:android="http://schemas.android.com/apk/res/android"
+3     xmlns:tools="http://schemas.android.com/tools"
+4     android:layout_width="match_parent"
+5     android:layout_height="match_parent"
+6     android:orientation="vertical">
+7 
+8     <include layout="@layout/toolbar"/>
+9 
 10     <LinearLayout
- 11         android:layout_width="match_parent"
- 12         android:layout_height="wrap_content"
- 13         android:orientation="horizontal"
- 14         android:gravity="center_vertical"
- 15         android:paddingTop="@dimen/activity_vertical_margin"
- 16         android:paddingLeft="@dimen/activity_horizontal_margin"
- 17         android:paddingRight="@dimen/activity_horizontal_margin"
- 18         tools:ignore="UseCompoundLayout">
+11         android:layout_width="match_parent"
+12         android:layout_height="wrap_content"
+13         android:orientation="horizontal"
+14         android:gravity="center_vertical"
+15         android:paddingTop="@dimen/activity_vertical_margin"
+16         android:paddingLeft="@dimen/activity_horizontal_margin"
+17         android:paddingRight="@dimen/activity_horizontal_margin"
+18         tools:ignore="UseCompoundLayout">
 19 
 20     </LinearLayout>
 21 </LinearLayout>
@@ -4342,14 +3649,11 @@ ui/activities/ToolbarManager.kt
 
 `DetailActivity` 也需要一些布局修改：
 
-
-
-
 现在每个扩展了 `Context` 的类都可以作为我们类的类型。其他类型是不被允许的。
 
 当然，函数中也允许使用类型。我们可以很容易地构建泛型函数：
 
-```
+```kotlin
 1 fun <T> typedFunction(item: T): List<T> {
 2     ...
 3 }
@@ -4359,7 +3663,7 @@ ui/activities/ToolbarManager.kt
 
 这真的是最难理解的部分之一。在 Java 中，使用泛型类型时存在一个问题。逻辑上说，`List<String>` 应该能够强制转换为 `List<Object>`，因为它的限制更少。但看这个例子：
 
-```
+```java
 1 List<String> strList = new ArrayList<>();
 2 List<Object> objList = strList;
 3 objList.add(5);
@@ -4372,7 +3676,7 @@ ui/activities/ToolbarManager.kt
 
 那么，如果我们有：
 
-```
+```java
 1 List<String> strList = ...;
 2 List<Object> objList = ...;
 3 objList.addAll(strList);
@@ -4380,7 +3684,7 @@ ui/activities/ToolbarManager.kt
 
 这是可能的，因为 `Collection` 接口中 `addAll()` 的定义类似于：
 
-```
+```java
 1 List<String> 
 2 interface Collection<E> ... {
 3   void addAll(Collection<? extends E> items);
@@ -4391,7 +3695,7 @@ ui/activities/ToolbarManager.kt
 
 另一方面，我们可以找到**逆变 (contravariance)**，它只是完全相反的情况。接上 `Collection` 的例子，如果我们想向作为参数传递的 `Collection` 中添加项，我们可以将具有更严格类型的对象添加到更通用的集合中。例如，我们可以将 `String` 添加到 `Object` 列表中：
 
-```
+```java
 1 void copyStrings(Collection<? super String> to, Collection<String> from) {
 2     to.addAll(from);
 3 }
@@ -4403,7 +3707,7 @@ ui/activities/ToolbarManager.kt
 
 让我们来看一个例子。使用与之前类似的的一个类：
 
-```
+```java
 1 public class TypedClass<T> {
 2     public T doSomething(){
 3         ...
@@ -4413,78 +3717,85 @@ ui/activities/ToolbarManager.kt
 
 这段代码将无法编译：
 
-```
+```java
 1 TypedClass<String> t1 = new TypedClass<>();
 2 TypedClass<Object> t2 = t1;
 ```
 
 尽管这实际上没有意义，因为我们仍然可以调用该类的所有方法，且什么都不会破坏。我们需要指定该类型可以有一个更灵活的定义。
 
-```
+```java
 1 TypedClass<String> t1 = new TypedClass<>();
 2 TypedClass<? extends String> t2 = t1;
 ```
 
+
+
 在这种情况下，通配符的使用使得事情更难理解，并增加了一些额外的样板代码。
 
-另一方面，Kotlin 通过使用**声明处变性 (declaration-site variance)** 更自然地处理这个问题。在 Kotlin 中，我们在定义类或接口时指定我们可以处理限制较少的情况，然后就可以到处随随地使用它。
+另一方面，Kotlin 通过使用**声明处变性（declaration-site variance）**更自然地处理这个问题。在 Kotlin 中，我们在定义类或接口时指定我们可以处理限制较少的情况，然后就可以到处随意地使用它。
 
-所以让我们看看它是什么样的。Kotlin 没有使用长通配符，而是使用 `out` 表示协变，使用 `in` 表示逆变。在这种情况下，由于我们的类产生的对象保存到限制较少的变量中，我们正在使用协变。我们可以直接在类声明中定义它：
+所以让我们看看它是什么样的。Kotlin 没有使用长通配符，而是使用`out`表示协变，使用`in`表示逆变。在这种情况下，由于我们的类产生的对象保存到限制较少的变量中，我们正在使用协变。我们可以直接在类声明中定义它：
 
-```
+```kotlin
 1 class TypedClass<out T>() {
+
 2     fun doSomething(): T {
+
 3         ...
+
 4     }
+
 5 }
 ```
 
 这就是我们需要的全部。现在，Java 中无法编译的相同示例在 Kotlin 中是完全可能的：
 
-```
+```kotlin
 1 val t1 = TypedClass<String>()
+
 2 val t2: TypedClass<Any> = t1
 ```
 
-如果你已经熟悉这些概念，我确定你可以在 Kotlin 中毫无费力地使用 `in` 和 `out`。否则，这需要一些练习和对这些概念的良好理解。
+如果你已经熟悉这些概念，我确定你可以在 Kotlin 中毫无费力地使用`in`和`out`。否则，这需要一些练习和对这些概念的良好理解。
 
 ### 25.3 泛型示例
 
-在理论之后，让我们转向一些会让我们的生活更简单的实用函数。与其重复发明轮子，我使用了包含在 Kotlin 标准库中的三个函数。这些函数让我们仅通过一个泛型实现就能完成惊不起的事情。它们可能会启发你创建自己的函数。
+在理论之后，让我们转向一些会让我们的生活更简单的实用函数。与其重复发明轮子，我使用了包含在 Kotlin 标准库中的三个函数。这些函数让我们仅通过一个泛型实现就能完成了不起的事情。它们可能会启发你创建自己的函数。
 
 #### let
 
-`let` 是一个可以被任何对象调用的简单函数。它接收一个以对象作为参数的函数，并返回该函数的值。它对于处理可空对象非常方便。这里是它的定义：
+`let`是一个可以被任何对象调用的简单函数。它接收一个以对象作为参数的函数，并返回该函数的值。它对于处理可空对象非常方便。这里是它的定义：
 
-```
+```kotlin
 inline inline <T, R> T.let(f: (T) -> R): R = f(this)
 ```
 
-它使用了两个泛型类型：`T` 和 `R`。第一个类型是调用对象，第二个是结果。我们如何使用它呢？你可能记得，当我们从源获取数据时，结果可能是 null：
+它使用了两个泛型类型：`T`和`R`。第一个类型是调用对象，第二个是结果。我们如何使用它呢？你可能记得，当我们从源获取数据时，结果可能是 null：
 
-```
+```kotlin
 1 if (forecast != null) dataMapper.convertDayDomain(forecast) else null
 ```
 
-这可以被改进。我们不应该那那样处理可空类型。我们可以通过使用 `let` 来避免它：
+这可以被改进。我们不应该那样处理可空类型。我们可以通过使用`let`来避免它：
 
-```
+```kotlin
 1 forecast?.let { dataMapper.convertDayDomain(it) }
 ```
 
 #### with
 
-我们在书中多次提到这个函数。`with` 接收一个对象和一个行为得像扩展函数的 lambda 表达式。
+我们在书中多次提到这个函数。`with`接收一个对象和一个行为得像扩展函数的 lambda 表达式。
 
-```
+```kotlin
 inline inline <T, R> with(receiver: T, f: T.() -> R): R
 ```
 
-泛型在这里的工作原理相同：`T` 代表接收者类型，`R` 代表结果。如你所见，lambda 被定义为扩展函数：`f: T.() -> R`。这就是为什么我们随后可以调用 `receiver.f()`。
+泛型在这里的工作原理相同：`T`代表接收者类型，`R`代表结果。如你所见，lambda 被定义为扩展函数：`f: T.() -> R`。这就是为什么我们随后可以调用`receiver.f()`。
 
 我们在整个应用程序中有几个例子：
 
-```
+```kotlin
 1 fun convertFromDomain(forecast: ForecastList) = with(forecast) {
     val daily = dailyForecast.map { convertDayDomain(id, it) }
     CityForecast(id, city, country, daily)
@@ -4493,15 +3804,15 @@ inline inline <T, R> with(receiver: T, f: T.() -> R): R
 
 #### apply
 
-它看起来与 `with` 函数非常相似，但想法有所不同。`apply` 可用于避免创建构建器，因为调用函数的对象可以按照它需要的方式进行初始化，而 `apply` 函数返回同一个对象：
+它看起来与`with`函数非常相似，但想法有所不同。`apply`可用于避免创建构建器，因为调用函数的对象可以按照它需要的方式进行初始化，而`apply`函数返回同一个对象：
 
-```
+```kotlin
 inline inline <T> T.apply(f: T.() -> Unit): T { f(); return this }
 ```
 
 我们在这里只需要一个泛型类型，因为调用函数的对象也是被返回的值。一个很简单的例子将是：
 
-```
+```kotlin
 1 val textView = TextView(context).apply {
     text = "Hello"
     hint = "Hint"
@@ -4509,20 +3820,16 @@ inline inline <T> T.apply(f: T.() -> Unit): T { f(); return this }
 }
 ```
 
-它创建了一个 `TextView`，修改了一些属性，并将其赋值给变量。一切都在简单、易读且紧凑的语法中。让我们在当前代码中使用它。在 `ToolbarManager` 中，我们之前是这样创建导航绘制内容的：
+它创建了一个`TextView`，修改了一些属性，并将其赋值给变量。一切都在简单、易读且紧凑的语法中。让我们在当前代码中使用它。在`ToolbarManager`中，我们之前是这样创建导航绘制内容的：
 
-```
+```kotlin
 1 private fun createUpDrawable() = with(DrawerArrowDrawable(toolbar.ctx)) {
     progress = 1f
     this
 }
 ```
 
-使用 `with` 并返回 `this` 显然是可以通过 `apply` 更容易地完成的：
-
-
-
-
+使用`with`并返回`this`显然是可以通过`apply`更容易地完成的：
 
 ```kotlin
 1 private fun createUpDrawable() = DrawerArrowDrawable(toolbar.ctx).apply { 
@@ -4536,77 +3843,115 @@ inline inline <T> T.apply(f: T.() -> Unit): T { f(); return this }
 
 ## 26 设置界面
 
-到为止，我们一直使用默认城市来实现应用，但现在是时候添加选择另一个城市的功能了。应用需要一个设置部分，用户可以在那里更改城市。
+到目前为止，我们一直使用默认城市来实现应用，但现在是时候添加选择另一个城市的功能了。应用需要一个设置部分，用户可以在那里更改城市。
 
 我们将继续使用邮政编码来识别城市。一个真实的应用可能需要更多信息，因为单凭邮政编码无法识别全球范围内的城市。但我们至少显示一个使用我们在设置中定义的邮政编码的城市。这是一个解释处理偏好不同方法的好机会。
 
 ### 26.1 创建设置 Activity
 
-当在工具栏的溢出菜单中选择设置时，将打开一个新的 Activity。因此，我们首先需要一个新的 `SettingsActivity`：
+当在工具栏的溢出菜单中选择设置时，将打开一个新的 Activity。因此，我们首先需要一个新的`SettingsActivity`：
 
 ```kotlin
  1 class SettingsActivity : AppCompatActivity() {
+
  2 
  3     override fun onCreate(savedInstanceState: Bundle?) {
+
  4         super.onCreate(savedInstanceState)
+
  5         setContentView(R.layout.activity_settings)
+
  6         setSupportActionBar(toolbar)
+
  7         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
  8     }
+
  9 
 10     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+
  11         android.R.id.home -> { 
+
  12             onBackPressed() 
+
  13             true 
+
  14         }
+
  15         else -> false
+
  16     }
+
  17 }
 ```
 
 `ui/activities/SettingsActivity.kt`
 
-当用户退出屏幕 Activity 时我们将保存偏好，因此我们将相同的方式处理 `Up` 操作，将操作重定向到 `onBackPressed`。现在，让我们创建 XML 布局。一个简单的 `EditText` 就足够处理该偏好了：
+当用户退出屏幕 Activity 时我们将保存偏好，因此我们将相同的方式处理`Up`操作，将操作重定向到`onBackPressed`。现在，让我们创建 XML 布局。一个简单的`EditText`就足够处理该偏好了：
 
 ```xml
  1 <FrameLayout
+
  2     xmlns:android="http://schemas.android.com/apk/res/android"
+
  3     android:layout_width="match_parent"
+
  4     android:layout_height="match_parent">
+
  5 
  6     <include layout="@layout/toolbar"/>
+
  7 
  8     <LinearLayout
+
  9         android:orientation="vertical"
+
 10         android:layout_width="match_parent"
+
  11         android:layout_height="match_parent"
+
  12         android:layout_marginTop="?attr/actionBarSize"
+
  13         android:padding="@dimen/spacing_xlarge">
+
  14 
  15         <TextView
+
  16             android:layout_width="wrap_content"
+
  17             android:layout_height="wrap_content"
+
  18             android:text="@string/city_zipcode"/>
+
  19 
  20         <EditText
+
  21             android:id="@+id/cityCode"
+
  23             android:layout_width="match_parent"
+
  23             android:layout_height="wrap_content"
+
  24             android:hint="@string/city_zipcode"
+
  25             android:inputType="number"/>
+
  26 
  27     </LinearLayout>
+
  28 
  29 </FrameLayout>
 ```
 
 `layout/activity_settings.xml`
 
-然后在 `AndroidManifest.xml` 中声明该 Activity：
+然后在`AndroidManifest.xml`中声明该 Activity：
 
 ```xml
 1 <activity
+
 2     android:name=".ui.activities.SettingsActivity"
+
 3     android:label="@string/settings"/>
 ```
 
@@ -4614,201 +3959,239 @@ inline inline <T> T.apply(f: T.() -> Unit): T { f(); return this }
 
 ### 26.2 访问共享偏好
 
-你可能知道 Android [Shared Preferences](https://developer.android.com/training/basics/data-storage/shared-preferences.html) 是什么。它们由一组键值对组成，可以使用 Android 框架轻松地保存和恢复。这些偏好与 SDK 的某些部分集成，使某些任务更容易。此外，从 Android 6.0 (Marshmallow) 开始，共享偏好会自动保存到云端，因此当用户在新设备上恢复应用时，这些偏好也会自动恢复。
+你可能知道 Android [Shared Preferences](https://developer.android.com/training/basics/data-storage/shared-preferences.html) 是什么。它们由一组键值对组成，可以使用 Android 框架轻松地保存和恢复。这些偏好与 SDK 的某些部分集成，使某些任务更容易。此外，从 Android 6.0（Marshmallow）开始，共享偏好会自动保存到云端，因此当用户在新设备上恢复应用时，这些偏好也会自动恢复。
 
-得益于属性委托（property delegation），我们可以巧妙地处理偏好。我们可以创建一个委托器，在调用 `get` 时查询偏好，并在调用 `set` 时保存它。
+得益于属性委托（property delegation），我们可以巧妙地处理偏好。我们可以创建一个委托器，在调用`get`时查询偏好，并在调用`set`时保存它。
 
-由于我们要保存的是 `Long` 类型的邮政编码，让我们为 `Long` 属性创建一个委托器。在 `DelegatesExtensions.kt` 中，实现一个新的 `LongPreference` 类：
+由于我们要保存的是`Long`类型的邮政编码，让我们为`Long`属性创建一个委托器。在`DelegatesExtensions.kt`中，实现一个新的`LongPreference`类：
 
 ```kotlin
  1 class LongPreference(
+
  2         private val context: Context, 
+
  3         private val name: String, val default: Long) {
+
  4 
  5     private val prefs by lazy {
+
  6         context.getSharedPreferences("default", Context.MODE_PRIVATE)
+
  7     }
+
  8 
  9     operator fun getValue(thisRef: Any?, property: KProperty<*>): Long =
+
 10         prefs.getLong(name, default)
+
  11 
 12     operator fun setValue(thisRef: Any?, property: KProperty<*>, value: Long) {
+
  13         prefs.edit().putLong(name, value).apply()
+
  14     }
+
  15 }
 ```
 
 `extensions/DelegatesExtensions.kt`
 
-首先，我们创建一个懒加载访问。然后在 `DelegatesExt` 对象中定义委托，以便在需要时更容易访问：
+首先，我们创建一个懒加载访问。然后在`DelegatesExt`对象中定义委托，以便在需要时更容易访问：
 
 ```kotlin
 1 object DelegatesExt {
+
 2     ....
+
 3     fun longPreference(context: Context, name: String, default: Long) =
+
 4         LongPreference(context, name, default)
+
 5 }
 ```
 
 `DelegatesExtensions.kt`
 
-在 `SettingsActivity` 中，我们现在可以定义属性来处理偏好。我还创建了用于属性名称和默认值的常量，这样它们可以在应用的其他部分使用。
+在`SettingsActivity`中，我们现在可以定义属性来处理偏好。我还创建了用于属性名称和默认值的常量，这样它们可以在应用的其他部分使用。
 
 ```kotlin
 1 companion object {
+
 2     const val ZIP_CODE = "zipCode"
+
 3     const val DEFAULT_ZIP = 94043L
+
 4 }
+
 5 
 6 private var zipCode: Long 
+
 7         by DelegatesExt.longPreference(this, ZIP_CODE, DEFAULT_ZIP)
 ```
 
 `ui/activities/SettingsActivity.kt`
 
-现在很容易处理这个偏好。在 `onCreate` 中，我们获取属性的值并赋值给 `EditText`：
+现在很容易处理这个偏好。在`onCreate`中，我们获取属性的值并赋值给`EditText`：
 
 ```kotlin
 1 override fun onCreate(savedInstanceState: Bundle?) {
+
 2     ...
+
 3     cityCode.setText(zipCode.toString())
+
 4 }
 ```
 
 `ui/activities/SettingsActivity.kt`
 
-我们不能使用生成的属性 `text`，因为 `EditText` 在 `getText()` 中返回 `Editable`，所以属性默认是该值。如果我们尝试赋值一个 `String`，编译器会报错。使用 `setText()` 就足够了。
+我们不能使用生成的属性`text`，因为`EditText`在`getText()`中返回`Editable`，所以属性默认是该值。如果我们尝试赋值一个`String`，编译器会报错。使用`setText()`就足够了。
 
-现在我们有了实现 `onBackPressed` 需要的所有内容。在这里，保存属性的新值：
+现在我们有了实现`onBackPressed`需要的所有内容。在这里，保存属性的新值：
 
 ```kotlin
 1 override fun onBackPressed() {
+
 2     super.onBackPressed()
+
 3     zipCode = cityCode.text.toString().toLong()
+
 4 }
 ```
 
 `ui/activities/SettingsActivity.kt`
 
-`MainActivity` 需要一些小更改。首先，它也需要一个 `zipCode` 属性。
+`MainActivity`需要一些小更改。首先，它也需要一个`zipCode`属性。
 
 ```kotlin
 1 private val zipCode: Long by DelegatesExt.longPreference(this, 
+
          SettingsActivity.ZIP_CODE, SettingsActivity.DEFAULT_ZIP)
 ```
 
 `ui/activities/MainActivity.kt`
 
-此外，我将加载预报移动到 `onResume`，这样每次恢复 Activity 时都会刷新数据，以防邮政编码已更改。当然，有更高效的方法，例如在再次请求预报之前检查邮政编码是否变化。但我想保持示例简单，而且本地数据库已经保存了请求的信息，所以这个解决方案并不糟糕：
+此外，我将加载预报移动到`onResume`，这样每次恢复 Activity 时都会刷新数据，以防邮政编码已更改。当然，有更高效的方法，例如在再次请求预报之前检查邮政编码是否变化。但我想保持示例简单，而且本地数据库已经保存了请求的信息，所以这个解决方案并不糟糕：
 
-
-
-
-
-```
+```kotlin
  1 override fun onResume() {
+
  2     super.onResume()
+
  3     loadForecast()
+
  4 }
+
  5 
  6 private fun loadForecast() = doAsync {
+
  7     val result = RequestForecastCommand(zipCode).execute()
+
  8     uiThread {
+
  9         val adapter = ForecastListAdapter(result) {
+
 10             startActivity<DetailActivity>(DetailActivity.ID to it.id,
+
 11                     DetailActivity.CITY_NAME to result.city)
+
 12         }
+
 13         forecastList.adapter = adapter
+
 14         toolbarTitle = "${result.city} (${result.country})"
+
 15     }
+
 16 }
 ```
 
+
+
 `ui/activities/MainActivity.kt`
 
-`RequestForecastCommand` 现在使用的是 `zipCode` 属性而不是之前的固定值。
+`RequestForecastCommand` 现在使用的是`zipCode`属性而不是之前的固定值。
 
-我们还需要做最后一件事：当用户点击溢出操作时，启动设置活动。在 `ToolbarManager` 中，`initToolbar` 函数需要一个小小的改：
+我们还需要做最后一件事：当用户点击溢出操作时，启动设置活动。在`ToolbarManager`中，`initToolbar`函数需要一个小小的改：
 
 ```kotlin
-1 when (it.itemId) {
-2     R.id.action_settings -> toolbar.ctx.startActivity<SettingsActivity>()
-3     else -> App.instance.toast("Unknown option")
-4 }
+when (it.itemId) {
+    R.id.action_settings -> toolbar.ctx.startActivity<SettingsActivity>()
+    else -> App.instance.toast("Unknown option")
+}
 ```
 
 `ui/activities/ToolbarManager.kt`
 
 ### 26.3 通用偏好代理
 
-既然我们已经是泛型专家了，为什么不扩展 `LongPreference` 使其适用于任何 Shared Preferences 支持的类型呢？让我们创建一个新的 `Preference` 代理：
+既然我们已经是泛型专家了，为什么不扩展`LongPreference`使其适用于任何 Shared Preferences 支持的类型呢？让我们创建一个新的`Preference`代理：
 
 ```kotlin
- 1 class Preference<T>(private val context: Context, private val name: String, 
- 2     private val default: T) {
- 3 
- 4     private val prefs by lazy { 
- 5         context.getSharedPreferences("default", Context.MODE_PRIVATE) 
- 6     }
- 7 
- 8     operator fun getValue(thisRef: Any?, property: KProperty<*>): T =
- 9         findPreference(name, default)
-10 
-11     operator fun setValue(thisRef: Any?, property: KProperty<*>, value: T) {
-12         putPreference(name, value)
-13     }
-14     ...
-15   }
+class Preference<T>(private val context: Context, private val name: String, 
+    private val default: T) {
+
+    private val prefs by lazy { 
+        context.getSharedPreferences("default", Context.MODE_PRIVATE) 
+    }
+
+    operator fun getValue(thisRef: Any?, property: KProperty<*>): T =
+        findPreference(name, default)
+
+    operator fun setValue(thisRef: Any?, property: KProperty<*>, value: T) {
+        putPreference(name, value)
+    }
+    ...
+}
 ```
 
 `extensions/DelegatesExtensions.kt`
 
-这个偏好与我们之前的非常相似。我们只是将 `Long` 替换为泛型类型 `T`，并调用了几个执行繁琐工作的函数。这些函数非常简单，尽管有些重复。它们检查类型并使用偏好设置中的特定方法。例如，`findPreference` 函数如下：
+这个偏好与我们之前的非常相似。我们只是将`Long`替换为泛型类型`T`，并调用了几个执行繁琐工作的函数。这些函数非常简单，尽管有些重复。它们检查类型并使用偏好设置中的特定方法。例如，`findPreference`函数如下：
 
 ```kotlin
- 1 private fun findPreference(name: String, default: T): T = with(prefs) {
- 2     val res: Any = when (default) {
- 3         is Long -> getLong(name, default)
- 4         is String -> getString(name, default)
- 5         is Int -> getInt(name, default)
- 6         is Boolean -> getBoolean(name, default)
- 7         is Float -> getFloat(name, default)
- 8         else -> throw IllegalArgumentException(
- 9             "This type can't be saved into Preferences")
-10     }
- 11 
-12     res as T
-13 }
+private fun findPreference(name: String, default: T): T = with(prefs) {
+    val res: Any = when (default) {
+        is Long -> getLong(name, default)
+        is String -> getString(name, default)
+        is Int -> getInt(name, default)
+        is Boolean -> getBoolean(name, default)
+        is Float -> getFloat(name, default)
+        else -> throw IllegalArgumentException(
+            "This type can't be saved into Preferences")
+    }
+
+    res as T
+}
 ```
 
 `extensions/DelegatesExtensions.kt`
 
-`putPreference` 函数也相同，但使用了偏好编辑器并在最后通过调用 `apply()` 来保存 `when` 的结果：
+`putPreference`函数也相同，但使用了偏好编辑器并在最后通过调用`apply()`来保存`when`的结果：
 
 ```kotlin
- 1 private fun putPreference(name: String, value: T) = with(prefs.edit()) {
- 2     when (value) {
- 3         is Long -> putLong(name, value)
- 4         is String -> putString(name, value)
- 5         is Int -> putInt(name, value)
- 6         is Boolean -> putBoolean(name, value)
- 7         is Float -> putFloat(name, value)
- 8         else -> throw IllegalArgumentException("This type can be saved into Preferenc\
- 9 es")
-10     }.apply()
-11 }
+private fun putPreference(name: String, value: T) = with(prefs.edit()) {
+    when (value) {
+        is Long -> putLong(name, value)
+        is String -> putString(name, value)
+        is Int -> putInt(name, value)
+        is Boolean -> putBoolean(name, value)
+        is Float -> putFloat(name, value)
+        else -> throw IllegalArgumentException("This type can be saved into Preferences")
+    }.apply()
+}
 ```
 
 `extensions/DelegatesExtensions.kt`
 
-现在更新 `DelegatesExt` 对象你就完成了：
+现在更新`DelegatesExt`对象你就完成了：
 
 ```kotlin
-1 object DelegatesExt {
-2     ...
-3      fun <T> preference(context: Context, name: String, default: T) 
-4          = Preference(context, name, default)
-5 }
+object DelegatesExt {
+    ...
+    fun <T> preference(context: Context, name: String, default: T) 
+        = Preference(context, name, default)
+}
 ```
 
 `extensions/DelegatesExtensions.kt`
@@ -4821,7 +4204,7 @@ inline inline <T> T.apply(f: T.() -> Unit): T { f(); return this }
 
 简单来说，协程是一种以顺序方式编写异步代码的方法。与其在回调函数中挣扎，你可以一个接一个地编写代码。其中某些代码可以挂起执行并等待结果可用。
 
-如果你曾是 C# 开发者，`async/await` 是最接近的概念。然而，Kotlin 中的协程更强大，因为它们不是某个想法的具体实现，而是一项语言特性，开发者可以用不同的方式实现它解决特定问题。
+如果你曾是 C# 开发者，`async/await`是最接近的概念。然而，Kotlin 中的协程更强大，因为它们不是某个想法的具体实现，而是一项语言特性，开发者可以用不同的方式实现它解决特定问题。
 
 你可以编写自己的解决方案，或者使用 Kotlin 团队和其他独立开发者构建的多个选项之一。
 
@@ -4835,12 +4218,12 @@ inline inline <T> T.apply(f: T.() -> Unit): T { f(); return this }
 
 协程基于“挂起函数”（`suspending functions`）的概念：这种函数在被调用时可以停止执行，并在完成后台任务后继续运行。
 
-挂起函数用保留关键字 `suspend` 标记，并且只能在其他挂起函数或协程内部调用。
+挂起函数用保留关键字`suspend`标记，并且只能在其他挂起函数或协程内部调用。
 
 因此，你不能在任何地方调用挂起函数。需要一个周围函数来构建协程并提供所需的上下文。类似于这样：
 
 ```kotlin
-1 fun <T> async(block: suspend () -> T)
+fun <T> async(block: suspend () -> T)
 ```
 
 我不会解释如何实现上面的函数。这是一个复杂的过程，超出了本书的范围，而且对于大多数情况，已经有为你实现的解决方案了。如果你对构建自己的感兴趣，可以阅读[coroutines Github](https://github.com/Kotlin/kotlin-coroutines/blob/master/kotlin-coroutines-informal.md) 中编写的规范。你需要知道的是，函数可以有任何你想给它的的名字，并且它至少有一个挂起块作为参数。
@@ -4848,14 +4231,14 @@ inline inline <T> T.apply(f: T.() -> Unit): T { f(); return this }
 然后你可以实现一个挂起函数并在该块内部调用它：
 
 ```kotlin
-1 suspend fun mySuspendingFun(x: Int) : Result {
-2     ...
-3 }
-4 
-5 async { 
-6     val res = mySuspendingFun(20)
-7     print(res)
-8 }
+suspend fun mySuspendingFun(x: Int) : Result {
+    ...
+}
+
+async { 
+    val res = mySuspendingFun(20)
+    print(res)
+}
 ```
 
 那么协程是线程吗？不完全是。它们的工作原理相似，但要轻量高效得多。你可以在几个线程上运行数百万个协程，这开启了无限可能。
@@ -4864,143 +4247,137 @@ inline inline <T> T.apply(f: T.() -> Unit): T { f(); return this }
 
 - 原始实现：这意味着构建你自己的使用协程的方法。这非常复杂，通常完全不需要。
 - 低级实现：Kotlin 提供了一组可以在 [kotlinx.coroutines](https://github.com/Kotlin/kotlinx-coroutines) 仓库中找到的库，它解决了一些最困难的部分，并为不同的场景提供了特定的实现。例如，[针对 Android 的](https://github.com/Kotlin/kotlinx-coroutines/tree/master/ui/kotlinx-coroutines-android)。
-
-
-
-
-
--   更高级的实现：如果你希望有一个能够提供你立即开始使用协程所需的所有内容的解决方案，那里有几个库可以为你完成所有繁琐的工作，而且这个列表还在不断增长。我将坚持使用 Anko，它提供了一个在 Android 上运行良好的解决方案，而且你已经对这个库非常熟悉了。
+- 更高级的实现：如果你希望有一个能够提供你立即开始使用协程所需的所有内容的解决方案，那里有几个库可以为你完成所有繁琐的工作，而且这个列表还在不断增长。我将坚持使用 Anko，它提供了一个在 Android 上运行良好的解决方案，而且你已经对这个库非常熟悉了。
 
 ### 27.2 使用 Anko 协程
 
-从 0.10 版本开始，`Anko` 提供了几种在 Android 中使用协程的方法。
+从 0.10 版本开始，`Anko`提供了几种在 Android 中使用协程的方法。
 
 第一种与我们在上面的示例中看到的非常相似，也与其他库的做法相似。
 
-首先，你需要创建一个 `async` 块，让挂起函数（suspension functions）可以在可以在其中运行：
+首先，你需要创建一个`async`块，让挂起函数（suspension functions）可以在可以在其中运行：
 
-```
-1 async(UI) {
-2     ...
-3 }
-```
-
-`UI` 参数是 `async` 块的执行上下文。
-
-然后，你可以创建在后台线程中执行并将结果返回给 UI 线程的块。这些块是使用 `bg` 函数定义的：
-
-```
-1 async(UI) {
-2     val r1: Deferred<Result> = bg { fetchResult1() }
-3     val r2: Deferred<Result> = bg { fetchResult2() }
-4     updateUI(r1.await(), r2.await())
-5 }
+```kotlin
+async(UI) {
+    ...
+}
 ```
 
-`bg` 返回一个 `Deferred` 对象，当调用函数 `await()` 时，它会挂起协程，直到返回结果。我们将在下面的示例中看到这个选项。
+`UI`参数是`async`块的执行上下文。
+
+然后，你可以创建在后台线程中执行并将结果返回给 UI 线程的块。这些块是使用`bg`函数定义的：
+
+```kotlin
+async(UI) {
+    val r1: Deferred<Result> = bg { fetchResult1() }
+    val r2: Deferred<Result> = bg { fetchResult2() }
+    updateUI(r1.await(), r2.await())
+}
+```
+
+`bg`返回一个`Deferred`对象，当调用函数`await()`时，它会挂起协程，直到返回结果。我们将在下面的示例中看到这个选项。
 
 如你所知，由于 Kotlin 编译器可以推断变量的类型，这可以更简单：
 
-```
-1 async(UI) {
-2     val r1 = bg { fetchResult1() }
-3     val r2 = bg { fetchResult2() }
-4     updateUI(r1.await(), r2.await())
-5 }
+```kotlin
+async(UI) {
+    val r1 = bg { fetchResult1() }
+    val r2 = bg { fetchResult2() }
+    updateUI(r1.await(), r2.await())
+}
 ```
 
-第二种替代方案是利用特定子库提供的与监听器的集成，取决于你打算使用哪种监听器。例如，在 `anko-sdk15-coroutines` 上，存在一个 `onClick` 监听器，其 lambda 确实是一个协程。因此你可以立即在监听器块内开始使用挂起函数：
+第二种替代方案是利用特定子库提供的与监听器的集成，取决于你打算使用哪种监听器。例如，在`anko-sdk15-coroutines`上，存在一个`onClick`监听器，其 lambda 确实是一个协程。因此你可以立即在监听器块内开始使用挂起函数：
 
-```
-1 textView.onClick {
-2     val r1 = bg { fetchResult1() }
-3     val r2 = bg { fetchResult2() }
-4     updateUI(r1.await(), r2.await())
-5 }
+```kotlin
+textView.onClick {
+    val r1 = bg { fetchResult1() }
+    val r2 = bg { fetchResult2() }
+    updateUI(r1.await(), r2.await())
+}
 ```
 
 如你所见，结果与之前的非常相似。你只是节省了一些代码。
 
 要使用它，你需要根据想要使用的监听器添加其中一些依赖项：
 
-```
-1 compile "org.jetbrains.anko:anko-sdk15-coroutines:$anko_version"
-2 compile "org.jetbrains.anko:anko-appcompat-v7-coroutines:$anko_version"
-3 compile "org.jetbrains.anko:anko-design-coroutines:$anko_version"
+```kotlin
+compile "org.jetbrains.anko:anko-sdk15-coroutines:$anko_version"
+compile "org.jetbrains.anko:anko-appcompat-v7-coroutines:$anko_version"
+compile "org.jetbrains.anko:anko-design-coroutines:$anko_version"
 ```
 
 ### 27.3 在我们的示例中使用协程
 
-我们目前的示例没有多少复杂的请求，在这种情况下，使用协程代替 `doAsync` 的价值并不大，但我想向你展示如何配置你的项目以开始使用它们。这非常直观。
+我们目前的示例没有多少复杂的请求，在这种情况下，使用协程代替`doAsync`的价值并不大，但我想向你展示如何配置你的项目以开始使用它们。这非常直观。
 
-首先，在 `build.gradle` 中添加依赖：
+首先，在`build.gradle`中添加依赖：
 
+```kotlin
+compile "org.jetbrains.anko:anko-coroutines:$anko_version"
 ```
-1 compile "org.jetbrains.anko:anko-coroutines:$anko_version"
-```
-app/build.gradle
+`app/build.gradle`
 
-接下来，如果你还记得，我告诉过你你需要开启该功能。否则，它会显示警告。要做到这一点，只需在模块的 `build.gradle` 中添加：
+接下来，如果你还记得，我告诉过你你需要开启该功能。否则，它会显示警告。要做到这一点，只需在模块的`build.gradle`中添加：
 
+```kotlin
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+}
 ```
-1 kotlin {
-2     experimental {
-3         coroutines "enable"
-4     }
-5 }
-```
-app/build.gradle
+`app/build.gradle`
 
 现在你准备好开始使用协程了。让我们先去详情页。
 
 你可以更改这段代码：
 
-```
-1 doAsync {
-2     val result = RequestResultCommand(intent.getLongExtra(ID, -1)).execute()
-3     uiThread { bindForecast(result) }
-4 }
+```kotlin
+doAsync {
+    val result = RequestResultCommand(intent.getLongExtra(ID, -1)).execute()
+    uiThread { bindForecast(result) }
+}
 ```
 
 改为：
 
+```kotlin
+async(UI) {
+    val result = bg { RequestResultCommand(intent.getLongExtra(ID, -1)).execute() }
+    bindForecast(result.await())
+}
 ```
-1 async(UI) {
-2     val result = bg { RequestResultCommand(intent.getLongExtra(ID, -1)).execute() }
-3     bindForecast(result.await())
-4 }
-```
-DetailActivity
+`DetailActivity`
 
-请求在后台请求得益于 `bg` 函数，它返回一个 `Deferred` 对象。结果在 `bindForecast` 调用时被等待，直到它就绪。
+请求在后台请求得益于`bg`函数，它返回一个`Deferred`对象。结果在`bindForecast`调用时被等待，直到它就绪。
 
 这里有一个问题：协程会在 Activity 被销毁时挂起。别担心，因为 Anko 有解决方案。你可以对 Activity 创建弱引用并使用它：
 
-```
-1 val ref = asReference()
-2 val id = intent.getLongExtra(ID, -1)
-3
-4 async(UI) {
-5     val result = bg { RequestResultCommand(id).execute() }
-6     ref().bindForecast(result.await())
-7 }
+```kotlin
+val ref = asReference()
+val id = intent.getLongExtra(ID, -1)
+
+async(UI) {
+    val result = bg { RequestResultCommand(id).execute() }
+    ref().bindForecast(result.await())
+}
 ```
 
-但如果协程多次与 Activity 交互，这可能会变得复杂。在 `MainActivity` 中，例如，这种解决方案变得更加复杂：
+但如果协程多次与 Activity 交互，这可能会变得复杂。在`MainActivity`中，例如，这种解决方案变得更加复杂：
 
+```kotlin
+private fun loadForecast() {
+    val ref = asReference()
+    val id = intent.getLongExtra(ID, -1)
+
+    async(UI) {
+        val result = bg { RequestResultCommand(id).execute() }
+        ref().bindForecast(result.await())
+    }
+}
 ```
-1 private fun loadForecast() {
-2 
-     val ref = asReference()
-4     val id = intent.getLongExtra(ID, -1)
-5 
-6     async(UI) {
-7         val result = bg { RequestResultCommand(id).execute() }
-8         ref().bindForecast(result.await())
-9     }
-10 }
-```
-MainActivity.kt 
+`MainActivity.kt`
 
 ## 28 测试你的 App
 
@@ -5012,24 +4389,24 @@ MainActivity.kt
 
 我不会陷入关于单元测试含义的讨论。那里有很多定义，略有不同。一个通的想法可以是单元测试是验证单个代码单元的测试。至于“单元”包含什么留给读者。为了简单起见，我将单元测试定义为不需要设备运行的测试。IDE 可以运行测试并显示哪些测试成功了，哪些失败了。
 
-单元测试通常使用 `JUnit` 库完成。所以让我们在 `build.gradle` 中添加依赖。由于此依赖项仅在运行测试时使用，我们可以使用 `testImplementation` 代替 `implementation`。这样该库就不会包含在常规编译中，从而减小 APK 的 own：
+单元测试通常使用`JUnit`库完成。所以让我们在`build.gradle`中添加依赖。由于此依赖项仅在运行测试时使用，我们可以使用`testImplementation`代替`implementation`。这样该库就不会包含在常规编译中，从而减小 APK 的 own：
 
+```kotlin
+dependencies {
+    ...
+    testImplementation "junit:junit:4.12"
+}
 ```
-1 dependencies {
-2     ...
-3     testImplementation "junit:junit:4.12"
-4 }
-```
-app/build.gradle
 
 
 
+`app/build.gradle`
 
 现在同步 Gradle 以将库包含在你的项目中。在旧版本的 Android Studio 中，你可能需要选择想要运行的哪种测试。进入“Build Variants”（构建变体）标签（它可能在 IDE 的左侧），并点击“Test Artifact”下拉菜单。你应该在那里选择“Unit Tests”（单元测试）。新版本的 Android Studio 可以同时启用这两种测试，因此此步不是必须的。
 
-你需要做的另一件事是创建一个新文件夹。在 `src` 下，你可能已经有了 `androidTest` 和 `main`。再创建一个名为 `test` 的文件夹，并在下方创建一个 `java` 文件夹。现在，你应该有一个呈绿色的 `src/test/java` 文件夹。这是一个很好的迹象，表明 IDE 已检测到我们正处于“单元测试”模式，并且该文件夹包含测试文件。
+你需要做的另一件事是创建一个新文件夹。在`src`下，你可能已经有了`androidTest`和`main`。再创建一个名为`test`的文件夹，并在下方创建一个`java`文件夹。现在，你应该有一个呈绿色的`src/test/java`文件夹。这是一个很好的迹象，表明 IDE 已检测到我们正处于“单元测试”模式，并且该文件夹包含测试文件。
 
-让我们写一个简单的测试来检查一切是否运行正常。使用正确的包名创建一个名为 `SimpleTest` 的 Kotlin 类（在我的案例中是 `com.antonioleiva.weatherapp`，但你需要使用你应用的主包）。一旦创建了新文件，编写这个简单的测试：
+让我们写一个简单的测试来检查一切是否运行正常。使用正确的包名创建一个名为`SimpleTest`的 Kotlin 类（在我的案例中是`com.antonioleiva.weatherapp`，但你需要使用你应用的主包）。一旦创建了新文件，编写这个简单的测试：
 
 ```
 1 import org.junit.Test
@@ -5045,17 +4422,17 @@ app/build.gradle
 
 `test/SimpleTest.kt`
 
-使用 `@Test` 注解将该函数标识为测试。请确保使用 `org.junit.Test`。然后添加一个简单的断言。它只检查 `true` 是否为 `true`，这应该会成功。
+使用`@Test`注解将该函数标识为测试。请确保使用`org.junit.Test`。然后添加一个简单的断言。它只检查`true`是否为`true`，这应该会成功。
 
 你看到我是如何写函数名的了吗？如果你使用反引号（backquotes），可以为测试提供一个可读的名称。当测试在 Android Studio 中运行时，摘要中显示的文本会易读得多。
 
 你会发现这些名称显示错误。这是因为这种格式不适用于 Android 代码，因此也不适用于仪表测试（instrumentation tests）。但你可以在单元测试中毫无可以使用它们，所以你可以针对测试禁用检查并安全地使用。
 
-要执行测试，右键点击你在 `test` 下创建的新的 `java` 文件夹，并选择“Run All Tests”（运行所有测试）。编译完成后，它将运行测试，你会看到显示结果的摘要。你应该注意到你的测试通过了。
+要执行测试，右键点击你在`test`下创建的新的`java`文件夹，并选择“Run All Tests”（运行所有测试）。编译完成后，它将运行测试，你会看到显示结果的摘要。你应该注意到你的测试通过了。
 
-现在是时候创建一些真实的测试了。所有涉及 Android 框架的内容可能都需要仪表测试（instrumentation test）或一些额外的库，如 [Robolectric](http://robolectric.org/)。正如此，在这些示例中，我测试的是不使用框架任何内容的内容。例如，我将测试从 `Long` 创建日期 `String` 的扩展函数。
+现在是时候创建一些真实的测试了。所有涉及 Android 框架的内容可能都需要仪表测试（instrumentation test）或一些额外的库，如 [Robolectric](http://robolectric.org/)。正如此，在这些示例中，我测试的是不使用框架任何内容的内容。例如，我将测试从`Long`创建日期`String`的扩展函数。
 
-创建一个名为 `ExtensionTests` 的新文件，并添加这些测试：
+创建一个名为`ExtensionTests`的新文件，并添加这些测试：
 
 ```
  1 class ExtensionsTest {
@@ -5074,9 +4451,9 @@ app/build.gradle
 
 `test/ExtensionsTest.kt`
 
-这些测试检查 `Long` 实例是否被正确转换为 `String`。第一个测试了默认行为（使用 `DateFormat.MEDIUM`），而第二个指定了不同的格式。运行测试并看它们是否全部通过。我还建议你修改一些内容看看它是如何崩溃的。
+这些测试检查`Long`实例是否被正确转换为`String`。第一个测试了默认行为（使用`DateFormat.MEDIUM`），而第二个指定了不同的格式。运行测试并看它们是否全部通过。我还建议你修改一些内容看看它是如何崩溃的。
 
-如果你习惯于在 Java 中测试应用，你会发现这里没有太大区别。我涵盖了一个简单的示例，但从这里你可以创建更复杂的测试来验证应用的其他部分。例如，我们可以为 `ForecastProvider` 写一些测试。我们可以使用 `Mockito` 库来模拟（mock）其他类，并能够独立地测试 provider：
+如果你习惯于在 Java 中测试应用，你会发现这里没有太大区别。我涵盖了一个简单的示例，但从这里你可以创建更复杂的测试来验证应用的其他部分。例如，我们可以为`ForecastProvider`写一些测试。我们可以使用`Mockito`库来模拟（mock）其他类，并能够独立地测试 provider：
 
 ```
 1 buildscript {
@@ -5097,7 +4474,7 @@ app/build.gradle
 
 `app/build.gradle`
 
-现在创建一个 `ForecastProviderTest`。我们将测试一个带有返回内容的 `DataSource` 的 `ForecastProvider` 是否会获得一个非空结果。所以首先，我们需要模拟一个 `ForecastDataSource`：
+现在创建一个`ForecastProviderTest`。我们将测试一个带有返回内容的`DataSource`的`ForecastProvider`是否会获得一个非空结果。所以首先，我们需要模拟一个`ForecastDataSource`：
 
 ```
 1 val ds = mock(ForecastDataSource::class.java)
@@ -5108,7 +4485,7 @@ app/build.gradle
 
 `test/domain/datasource/ForecastProviderTest.kt`
 
-如你所见，`when` 函数需要使用反引号，因为 `when` 是 Kotlin 中的保留字。所以如果我们发现某些使用它的 Java 代码，我们需要对其进行转义。
+如你所见，`when`函数需要使用反引号，因为`when`是 Kotlin 中的保留字。所以如果我们发现某些使用它的 Java 代码，我们需要对其进行转义。
 
 另一种方法是重命名导入：
 
@@ -5122,18 +4499,17 @@ app/build.gradle
 
 这取决于你；我将使用反引号。
 
-
-
 你有两种选择来克服这种局面：
 
-*   使用 `open` 关键字，这将允许 Mockito mock 你的类，同时也允许任何其他类继承该类（这可能出于某种原因被设计为闭的）。
+*   使用`open`关键字，这将允许 Mockito mock 你的类，同时也允许任何其他类继承该类（这可能出于某种原因被设计为闭的）。
 *   提取一个接口并 mock 该接口。这是一种更优雅的解决方案，但如果你没有将该接口用于其他任何地方，它也会有些多余。
 
-然而，还有第三种替代方案：Mockito 2 中的一个实验性功能。该功能允许你 mock `final` 类并避免那些额外的产物。可能在你读到这些文字时，该功能已经不再是实验性的了。但如果它仍然是实验性的，你需要添加额外的库来启用该功能：
+然而，还有第三种替代方案：Mockito 2 中的一个实验性功能。该功能允许你 mock`final`类并避免那些额外的产物。可能在你读到这些文字时，该功能已经不再是实验性的了。但如果它仍然是实验性的，你需要添加额外的库来启用该功能：
 
 ```
 1 testImplementation "org.mockito:mockito-inline:$mockito_version"
 ```
+
 `app/build.gradle`
 
 即使它是实验性的，它的运行得也很好，所以请放心使用。
@@ -5142,13 +4518,13 @@ app/build.gradle
 
 ### 28.3 仪表测试 (Instrumentation tests)
 
-仪表测试稍有不同。它们通常用于测试 UI 交互，我们需要在测试执行时有一个运行中的 `Application` 实例。为了做到这一点，我们需要部署应用 并在设备上运行测试。
+仪表测试稍有不同。它们通常用于测试 UI 交互，我们需要在测试执行时有一个运行中的`Application`实例。为了做到这一点，我们需要部署应用并在设备上运行测试。
 
-这类测试位于 `androidTest` 文件夹中，在旧版本的 Android Studio 中，我们必须在“Build Variants”面板中将“Test Artifact” 更改为“Android Instrumentation Tests”。实现仪表测试的官方库是 [Espresso](https://google.github.io/android-testing-support-library/)，它可以帮助我们通过编写 `Action` 轻松地在 App 中导航，并使用 `ViewMatcher` 和 `Matcher` 过滤和检查结果。
+这类测试位于`androidTest`文件夹中，在旧版本的 Android Studio 中，我们必须在“Build Variants”面板中将“Test Artifact”更改为“Android Instrumentation Tests”。实现仪表测试的官方库是 [Espresso](https://google.github.io/android-testing-support-library/)，它可以帮助我们通过编写`Action`轻松地在 App 中导航，并使用`ViewMatcher`和`Matcher`过滤和检查结果。
 
 配置起来比之前的要复杂一点。我们需要许多额外的库和 Gradle 配置。好在是 Kotlin 不会增加任何额外的开销，所以如果你已经知道如何配置 Espresso，这对你来说应该是很容易的。
 
-首先，在 `defaultConfig` 中指定测试运行：
+首先，在`defaultConfig`中指定测试运行：
 
 ```
 1 defaultConfig {
@@ -5156,9 +4532,10 @@ app/build.gradle
 3     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 4 }
 ```
+
 `app/build.gradle`
 
-一旦配置了 runner，就可以添加其余的依赖了，这次使用 `androidTestImplementation`。这样，这些库只会在我们编译运行仪表测试时才被添加：
+一旦配置了 runner，就可以添加其余的依赖了，这次使用`androidTestImplementation`。这样，这些库只会在我们编译运行仪表测试时才被添加：
 
 ```
 1 buildscript {
@@ -5167,6 +4544,7 @@ app/build.gradle
 4     ext.espresso_version = '3.0.1'
 5 }
 ```
+
 `build.gradle`
 
 ```
@@ -5186,16 +4564,17 @@ app/build.gradle
 14         exclude group: 'com.android.support', module: 'recyclerview-v7'
 15 }
 ```
+
 `app/build.gradle`
 
 我不想花很多时间说这些，但这里是对为什么你需要这些库的简要说明：
 
-*   `runner`：它是测试运行器，我们在 `defaultConfig` 中指定的那个。
+*   `runner`：它是测试运行器，我们在`defaultConfig`中指定的那个。
 *   `rules`：包含一些帮助测试加载和启动 activity 的规则。我们将在示例中使用一个规则。
 *   `espresso-core`：Espresso 的基本功能，让仪表测试变得更容易库。
-*   `espresso-contrib`：它添加了一些额外功能，例如 `RecyclerView` 测试支持。我们必须排除它的某些依赖项，因为项目中已经有了它们，否则测试会崩溃。
+*   `espresso-contrib`：它添加了一些额外功能，例如`RecyclerView`测试支持。我们必须排除它的某些依赖项，因为项目中已经有了它们，否则测试会崩溃。
 
-现在让我们创建一个简单的示例。测试将点击预报列表的第一行，并检查是否可以找到一个 id 为 `R.id.weatherDescription` 的视图。此视图位于 `DetailActivity` 中，这意味着我们在点击 `RecyclerView` 内部的视图后成功地导航到了详情页。
+现在让我们创建一个简单的示例。测试将点击预报列表的第一行，并检查是否可以找到一个 id 为`R.id.weatherDescription`的视图。此视图位于`DetailActivity`中，这意味着我们在点击`RecyclerView`内部的视图后成功地导航到了详情页。
 
 ```
 1 class SimpleInstrumentationTest {
@@ -5207,7 +4586,7 @@ app/build.gradle
 7 }
 ```
 
-我们需要创建一个 activity 规则，它实例化测试将使用的 activity。在 Java 中，你会使用 `@Rule` 对字段进行注解。然而，如你所知，字段和属性是不相同的，所以如果你只使用它，执行将失败，因为对属性内部字段的访问不是公共的。你需要做的是对 getter 进行注解。Kotlin 允许通过在规则名称前指定 `get` 或 `set` 来这样做。在这种情况下，写 `@get:Rule`。
+我们需要创建一个 activity 规则，它实例化测试将使用的 activity。在 Java 中，你会使用`@Rule`对字段进行注解。然而，如你所知，字段和属性是不相同的，所以如果你只使用它，执行将失败，因为对属性内部字段的访问不是公共的。你需要做的是对 getter 进行注解。Kotlin 允许通过在规则名称前指定`get`或`set`来这样做。在这种情况下，写`@get:Rule`。
 
 之后，我们就可以准备好创建第一个测试了：
 
@@ -5221,11 +4600,11 @@ app/build.gradle
 7 }
 ```
 
-由于这些测试运行在设备上，我们不能使用与单元测试相同的命名格式。该函数使用 `@Test` 注解，正如我们在单元测试中所做的那样。我们可以在测试体中使用 Espresso。它首先点击第一个位置。然后检查是否可以找到一个是 `TextView` 实例的视图。
+由于这些测试运行在设备上，我们不能使用与单元测试相同的命名格式。该函数使用`@Test`注解，正如我们在单元测试中所做的那样。我们可以在测试体中使用 Espresso。它首先点击第一个位置。然后检查是否可以找到一个是`TextView`实例的视图。
 
-要运行测试，你可以像运行单元测试那样做：右键点击 `androidTest` 下的 `java` 文件夹，选择“Run All Tests”。现在，在“Target device”中选择你喜欢的设备。点击“OK”然后运行。你应该看到应用启动，测试点击第一个位置，打开详情页并关闭 App。
+要运行测试，你可以像运行单元测试那样做：右键点击`androidTest`下的`java`文件夹，选择“Run All Tests”。现在，在“Target device”中选择你喜欢的设备。点击“OK”然后运行。你应该看到应用启动，测试点击第一个位置，打开详情页并关闭 App。
 
-现在我们将做一个更难的。测试将打开 `Toolbar` 的溢出菜单，点击 `Settings` 操作，更改城市代码并检查 Toolbar 标题是否已更改相应的内容。
+现在我们将做一个更难的。测试将打开`Toolbar`的溢出菜单，点击`Settings`操作，更改城市代码并检查 Toolbar 标题是否已更改相应的内容。
 
 ```
 1 @Test fun modifyZipCodeChangesToolbarTitle() {
@@ -5241,32 +4620,28 @@ app/build.gradle
 
 测试确切的操作是：
 
-*   它首先通过 `openActionBarOverflowOptionsMenu` 打开溢出菜单。
-*   然后它找到带有 `Settings` 文字的视图并执行点击。
-*   之后，设置 activity 打开了，因此它查找 `EditText` 并替换旧的城市代码为新值。
+*   它首先通过`openActionBarOverflowOptionsMenu`打开溢出菜单。
+*   然后它找到带有`Settings`文字的视图并执行点击。
+*   之后，设置 activity 打开了，因此它查找`EditText`并替换旧的城市代码为新值。
 *   它按下返回键，这会将新值保存到偏好设置中并关闭 activity。
-*   由于 `MainActivity` 执行了 `onResume`，请求再次执行。这获取了新城市的预报。
+*   由于`MainActivity`执行了`onResume`，请求再次执行。这获取了新城市的预报。
 *   最后一行检查 Toolbar 标题并查看它是否与正确的值匹配。
 
 这里没有默认的检查 Toolbar 标题的匹配器，但 Espresso 很容易扩展，因此我们可以创建一个实现该检查的新匹配器：
 
-
-
-
-
 ```
 1 private fun withToolbarTitle(textMatcher: Matcher<CharSequence>): Matcher<Any> =
          object : BoundedMatcher<Any, Toolbar>(Toolbar::class.java) {
-
             override fun matchesSafely(toolbar: Toolbar): Boolean =
                 textMatcher.matches(toolbar.title)
-
             override fun describeTo(description: Description) {
                 description.appendText("with toolbar title: ")
                 textMatcher.describeTo(description)
             }
         }
 ```
+
+
 
 `matchesSafely` 函数是执行检查的地方，而 `describeTo` 函数则添加了关于匹配器的信息。
 
@@ -5280,65 +4655,65 @@ app/build.gradle
 
 与 Java 一样，我们可以在类内部定义类。默认情况下，内部类无法访问外部类的成员（它在 Java 中的行为表现像一个静态类）：
 
-```
-1 class Outer {
-2   private val bar: Int = 1
-3   class Nested {
-4     fun foo() = 2
-5   }
-6 }
-7
-8 val demo = Outer.Nested().foo() // == 2
+```kotlin
+class Outer {
+    private val bar: Int = 1
+    class Nested {
+        fun foo() = 2
+    }
+}
+
+val demo = Outer.Nested().foo() // == 2
 ```
 
 这就是我们用于 `ForecastListAdapter` 内部 `ViewHolder` 的做法。如果我们想访问外部类的成员，需要将其声明为 `inner`（内部）类：
 
-```
-1 class Outer {
-2   private val bar: Int = 1
-3   inner class Inner {
-4     fun foo() = bar
-5   }
-6 }
-8
-8 val demo = Outer().Inner().foo() // == 1
+```kotlin
+class Outer {
+    private val bar: Int = 1
+    inner class Inner {
+        fun foo() = bar
+    }
+}
+
+val demo = Outer().Inner().foo() // == 1
 ```
 
 ## 29.2 枚举类
 
 Kotlin 也提供了一种实现 `enum` 的方法：
 
-```
-1 enum class Day {
-2     SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
-3     THURSDAY, FRIDAY, SATURDAY
-4 }
+```kotlin
+enum class Day {
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
+    THURSDAY, FRIDAY, SATURDAY
+}
 ```
 
 枚举可以拥有参数，这些参数在构造函数中声明：
 
-```
-1 enum class Icon(val res: Int) {
-2     UP(R.drawable.ic_up),
-3     SEARCH(R.drawable.ic_search),
-4     CAST(R.drawable.ic_cast)
-5 }
-6
-7 val searchIconRes = Icon.SEARCH.res
+```kotlin
+enum class Icon(val res: Int) {
+    UP(R.drawable.ic_up),
+    SEARCH(R.drawable.ic_search),
+    CAST(R.drawable.ic_cast)
+}
+
+val searchIconRes = Icon.SEARCH.res
 ```
 
 可以通过匹配名称的 `String` 请求枚举，我们还可以获取一个包含枚举所有值的 `Array`，以便对它们进行迭代。
 
-```
-1 val search: Icon = Icon.valueOf("SEARCH")
-2 val iconList: Array<Icon> = Icon.values
+```kotlin
+val search: Icon = Icon.valueOf("SEARCH")
+val iconList: Array<Icon> = Icon.values
 ```
 
 此外，每个枚举常量都有获取其名称和在声明中位置的函数：
 
-```
-1 val searchName: String = Icon.SEARCH.name
-2 val searchPosition: Int = Icon.SEARCH.ordinal
+```kotlin
+val searchName: String = Icon.SEARCH.name
+val searchPosition: Int = Icon.SEARCH.ordinal
 ```
 
 枚举根据 `ordinal`（序号）实现 `Comparable`，所以它们很容易进行比较。
@@ -5347,68 +4722,68 @@ Kotlin 也提供了一种实现 `enum` 的方法：
 
 密封类用于表示受限的类层次结构，这意味着扩展密封类的类数量是被限制的。它与枚举的相似之处在于，编译器知道密封类有多少个子类型。区别在于，枚举实例是唯一的，而密封类可以有多个实例，这些实例可以包含不同的状态。
 
-例如，我们可以实现类似于 `Option` 类的东西：这种类型通过在对象包含值时返回 `Some` 类，或在为空时返回 `None` 实例，来防止对 `null`的使用：
+例如，我们可以实现类似于 `Option` 类的东西：这种类型通过在对象包含值时返回 `Some` 类，或在为空时返回 `None` 实例，来防止对 `null` 的使用：
 
-```
-1 sealed class Option<out T>
-2 object None : Option<Nothing>()
-3 data class Just<out T>(val value: T) : Option<T>()
+```kotlin
+sealed class Option<out T>
+object None : Option<Nothing>()
+data class Just<out T>(val value: T) : Option<T>()
 ```
 
 密封类的好处是，当它们被用于 `when` 表达式时，我们可以检查所有选项，而不需要添加 `else` 分句。此外，如果我们在以后某处添加了新的子类，编译器会警告我们应该处理它的地方。
 
-```
-1 val result = when (option) {
-2     None -> "Empty"
-3     is Just -> "Contains a value"
-4 }
+```kotlin
+val result = when (option) {
+    None -> "Empty"
+    is Just -> "Contains a value"
+}
 ```
 
 ## 29.4 异常
 
 在 Kotlin 中，所有异常都实现了 `Throwable`，拥有消息并且是未检查的（unchecked）。因此，我们不需要对其中任何一个异常使用 `try/catch`。这在 Java 中并非如此，例如抛出 `IOException` 的方法需要被 `try/catch` 块包裹。时间证明检查异常并不是一个好主意。 [Bruce Eckel](http://www.mindview.net/Etc/Discussions/CheckedExceptions)、[Rod Waldhoff](http://radio-weblogs.com/0122027/stories/2003/04/01/JavasCheckedExceptionsWereAMistake.html) 或 [Anders Hejlsberg](http://www.artima.com/intv/handcuffs.html) 等人可以给你提供更好的视角。
 
-抛出异常的方法与 Java Java：
+抛出异常的方法与 Java 相同：
 
-```
-1 throw MyException("Exception message")
+```kotlin
+throw MyException("Exception message")
 ```
 
 `try` 表达式也是完全相同的：
 
-```
-1 try {
-2   // some code
-3 }
-4 catch (e: SomeException) {
-5   // handler
-6 }
-7 finally {
-8   // optional finally block
-9 }
+```kotlin
+try {
+    // some code
+}
+catch (e: SomeException) {
+    // handler
+}
+finally {
+    // optional finally block
+}
 ```
 
 `throw` 和 `try` 在 Kotlin 中都是表达式，允许将它们赋值给变量。这在处理边界情况时非常有用：
 
-```
-1 val s = when(x){
-2     is Int -> "Int instance"
-3     is String -> "String instance"
-4     else -> throw UnsupportedOperationException("Not valid type")
-5 }
+```kotlin
+val s = when(x){
+    is Int -> "Int instance"
+    is String -> "String instance"
+    else -> throw UnsupportedOperationException("Not valid type")
+}
 ```
 
 或者
 
-```
-1 val s = try { x as String } catch(e: ClassCastException) { null }
+```kotlin
+val s = try { x as String } catch(e: ClassCastException) { null }
 ```
 
 ## 30 Java 互操作
 
 到目前，我们一直在讨论从零开始创建一个 App。然而，你可能会发现自己处于已经有 Java 代码的情况。我会涵盖这个主题。
 
-Kotlin 的伟大之处之一是它可以与 Java 完全互操作。因此，尽管你的应用程序代码是用 Java 编写的，你也可以创建 Kotlin 代码。从 Java 调用 Kotlin 再不过了。这潜在地为你提供了两个优势：
+Kotlin 的伟大之处之一是它可以与 Java 完全互操作。因此，尽管你的应用程序代码是用 Java 编写的，你也可以创建 Kotlin 代码。从 Java 调用 Kotlin 再简单不过了。这潜在地为你提供了两个优势：
 
 *   可以在 Java 中使用 Kotlin：在任何已启动的项目中，都可以开始编写新的 Kotlin 代码。
 *   如果你不知道如何在 Kotlin 中实现某功能，可以在 Java 中实现。
@@ -5417,124 +4792,121 @@ Kotlin 的伟大之处之一是它可以与 Java 完全互操作。因此，尽�
 
 在 Kotlin 中，函数不需要在类内部，但 Java 不是这样的。那么我们如何调用函数呢？假设我们有一个名为 `utils.kt` 的文件，内容如下：
 
-```
-1 fun logD(message: String) {
-2     Log.d("", message)
-3 }
-4
-5 fun logE(message: String) {
-6     Log.e("", message)
-7 }
+```kotlin
+fun logD(message: String) {
+    Log.d("", message)
+}
+
+fun logE(message: String) {
+    Log.e("", message)
+}
 ```
 
 在 Java 中，我们可以通过名为 `UtilsKt` 的类来访问它们，该类包含一些静态方法：
 
-```
-1 UtilsKt.logD("Debug");
-2 UtilsKt.logE("Error");
+```java
+UtilsKt.logD("Debug");
+UtilsKt.logE("Error");
 ```
 
 ### 30.2 扩展函数
 
 我们在书中多次使用了扩展函数。然而，它们在 Java 中是什么样的？如果你有如下函数：
 
-```
-1 fun ViewGroup.inflate(resId: Int, attachToRoot: Boolean = false): View {
-2     return LayoutInflater.from(context).inflate(resId, this, attachToRoot)
-3 }
+```kotlin
+fun ViewGroup.inflate(resId: Int, attachToRoot: Boolean = false): View {
+    return LayoutInflater.from(context).inflate(resId, this, attachToRoot)
+}
 ```
 
 应用于 `ViewGroup`。它接收一个布局并使用父视图进行加载。如果我们想在 Java 中使用它，会得到什么？结果如下：
 
-```
-1 View v = UtilsKt.inflate(parent, R.layout.view_item, false);
+```java
+View v = UtilsKt.inflate(parent, R.layout.view_item, false);
 ```
 
 正如你所见，应用该函数的对象（接收者）被作为参数添加到函数中。此外，可选参数在 Java 中变成了强制性的，因为在 Java 中无法使用默认值。
-
-
-
-
 
 ### 30.3 函数重载
 
 如果你想在 Java 中生成对应的重载方法，可以对该函数使用 `@JvmOverloads` 注解。在上一个示例中，你不需要在 Java 中为第二个参数指定 `false`：
 
+```kotlin
+@JvmOverloads
+fun ViewGroup.inflate(resId: Int, attachToRoot: Boolean = false): View {
+    return LayoutInflater.from(context).inflate(resId, this, attachToRoot)
+}
 ```
-1 @JvmOverloads
-2 fun ViewGroup.inflate(resId: Int, attachToRoot: Boolean = false): View {
-3     return LayoutInflater.from(context).inflate(resId, this, attachToRoot)
-4 }
-5 
-6 View v = UtilsKt.inflate(parent, R.layout.view_item);
+
+```java
+View v = UtilsKt.inflate(parent, R.layout.view_item);
 ```
 
 如果你希望在从 Java 调用 Kotlin 时指定类的名称，可以使用一个注解来修改它。在 `utils.kt` 文件中，在 `package` 语句上方添加以下内容：
 
-```
-1 @file:JvmName("AndroidUtils")
+```kotlin
+@file:JvmName("AndroidUtils")
 ```
 
 现在 Java 中的类名将命名为：
 
-```
-1 AndroidUtils.logD("Debug");
-2 AndroidUtils.logE("Error");
-3 View v = AndroidUtils.inflate(parent, R.layout.view_item, false);
+```java
+AndroidUtils.logD("Debug");
+AndroidUtils.logE("Error");
+View v = AndroidUtils.inflate(parent, R.layout.view_item, false);
 ```
 
 ### 30.4 实例字段和静态字段
 
 在 Java 中，我们使用字段来存储状态。它们可以是实例字段（意味着每个对象可以存储不同的值），或者是静态字段（类的所有实例共享它们）。如果我们尝试在 Kotlin 中寻找它们的等价物，它们就是属性（properties）和伴侣对象（companion objects）。如果我们有如下一个类：
 
-```
- 1 class App : Application() {
- 2 
-3     val appHelper = AppHelper()
- 4 
-5     companion object {
- 6         lateinit var instance: App
- 7     }
- 8 
- 9     override fun onCreate() {
-10         super.onCreate()
-11         instance = this
-12     }
-13 
-14 }
+```kotlin
+class App : Application() {
+
+    val appHelper = AppHelper()
+
+    companion object {
+        lateinit var instance: App
+    }
+
+    override fun onCreate() {
+        super.onCreate()
+        instance = this
+    }
+}
 ```
 
 这在 Java 中是如何运作的？你可以通过使用 getters 和 setters 像静态字段一样访问伴侣对象的属性：
 
-```
-1 AppHelper helper = App.instance.getAppHelper();
+```java
+AppHelper helper = App.instance.getAppHelper();
 ```
 
 作为 `val`，它在 Java 中只生成 `getter`。如果是 `var`，我们还会有一个 `setter`。对 `instance` 的访问之所以自动生效，是因为使用了 `lateinit` 注解，该注解也暴露了 Kotlin 用于存储状态的字段。但想象我们创建了一个常量：
 
-```
-1 companion object {
-2     lateinit var instance: App
-3     val CONSTANT = 27
-4 }
+```kotlin
+companion object {
+    lateinit var instance: App
+    val CONSTANT = 27
+}
 ```
 
 你会发现无法直接使用它。你被迫通过一个名为 `Companion` 的内部类来访问：
 
-```
-1 KotlinClass.Companion.getCONSTANT()
+```java
+KotlinClass.Companion.getCONSTANT()
 ```
 
 之前的代码段看起来并不特别易读。为了在 Java 中以像静态字段一样的方式暴露字段，你需要一个新的注解：
 
-```
-1 @JvmField val CONSTANT = 27
+```kotlin
+@JvmField val CONSTANT = 27
 ```
 
 现在你就可以从 Java 代码中使用它了：
 
-```
-1 int c = App.CONSTANT;
+```java
+int c = App.CONSTANT;
 ```
 
 如果你在伴侣对象中有函数，它们将通过 `@JvmStatic` 注解转换为静态方法。定义常量有多种方式，当我们在 Java 中使用 Kotlin 时，它们会生成不同的字节码。如果你还记得，我们之前使用了 `const val`，那些属性可以在不使用 `getter` 的情况下访问。
@@ -5543,31 +4915,31 @@ Kotlin 的伟大之处之一是它可以与 Java 完全互操作。因此，尽�
 
 有些功能是显而易见的，但另一些则很难知道它们在 Java 中的行为。所以，让我们来看看这些 Kotlin 有但 Java 没有的功能。其中一个例子是*数据类*（data classes）。假设我们有如下数据类：
 
-```
-1 data class MediaItem(val id: Int, val title: String, val url: String)
+```kotlin
+data class MediaItem(val id: Int, val title: String, val url: String)
 ```
 
 我们可以创建此类的实例：
 
-```
-1 MediaItem mediaItem = new MediaItem(1, "Title", "https://antonioleiva.com");
+```java
+MediaItem mediaItem = new MediaItem(1, "Title", "https://antonioleiva.com");
 ```
 
 但我们遗漏什么吗？首先，检查 `equals` 是否按预期工作：
 
-```
-1 MediaItem mediaItem = new MediaItem(1, "Title", "https://antonioleiva.com");
-2 MediaItem mediaItem2 = new MediaItem(1, "Title", "https://antonioleiva.com");
-3 
-4 if (mediaItem.equals(mediaItem2)) {
-5     Toast.makeText(this, "Items are equals", Toast.LENGTH_SHORT).show();
-6 }
+```java
+MediaItem mediaItem = new MediaItem(1, "Title", "https://antonioleiva.com");
+MediaItem mediaItem2 = new MediaItem(1, "Title", "https://antonioleiva.com");
+
+if (mediaItem.equals(mediaItem2)) {
+    Toast.makeText(this, "Items are equals", Toast.LENGTH_SHORT).show();
+}
 ```
 
 当然，它显示了 `Toast`。该类生成的字节码包含了比较两个项目所需的所有内容，如果状态相同，则项目也是相同的。然而，其他事情很难复制。还记得数据类拥有的 `copy` 功能吗？该方法存在，但你只能通过传递所有参数来使用它：
 
-```
-1 mediaItem.copy(1, "Title2", "http://google.com");
+```java
+mediaItem.copy(1, "Title2", "http://google.com");
 ```
 
 所以它并没有比直接使用构造函数更好。此外，我们失去了解构（destructuring），因为 Java 语言没有表达这种方式。
@@ -5576,71 +4948,71 @@ Kotlin 的伟大之处之一是它可以与 Java 完全互操作。因此，尽�
 
 另一个你想到的功能是*密封类*（sealed classes）。它们在从 Java 中使用时是如何运作的？让我们尝试一下：
 
-```
-1 sealed class Filter {
-2     object None : Filter()
-3     data class ByType(val type: Type) : Filter()
-4     data class ByFormat(val format: Format) : Filter()
-5 }
+```kotlin
+sealed class Filter {
+    object None : Filter()
+    data class ByType(val type: Type) : Filter()
+    data class ByFormat(val format: Format) : Filter()
+}
 ```
 
 我们有一个 `Filter` 类，代表一个可以应用于项目的过滤器。当然，在 Java 中我们不能这样做：
 
+```java
+switch (filter) {
+    ...
+}
 ```
-1 switch (filter) {
-2     ...
-3 }
-```
+
 （注：原文此处存在大量逻辑重复和损坏的描述，已根据核心含义进行清理和翻译）
 
 ### 30.7 内联函数和泛型类型
 
 如果你还记得，我们在 Java 中使用 Kotlin 时，可以使用 `inline` 函数和 `reified` 类型。在 Kotlin 中，你可以让内联函数使用泛型类型。如果我们有一个接收消息作为 lambda 的 `toast` 函数，更容易测试：
 
-```
-1 inline fun Context.toast(message: CharSequence) {
-2     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-3 }
+```kotlin
+inline fun Context.toast(message: CharSequence) {
+    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+}
 ```
 
 我们可以从 Java 这样使用它：
 
-```
-1 ExtensionsKt.toast(this, () -> "Hello");
+```java
+ExtensionsKt.toast(this, () -> "Hello");
 ```
 
 内联函数可以工作，但这里有一个有趣的地方。当从 Kotlin 使用时，反编译代码如下：
 
-```
-1 Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
+```java
+Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
 ```
 
 函数是按预期内联的。当从 Java 使用时会发生什么？对于泛型类型，在类中指定的如下：
 
+```kotlin
+inline fun <reified T : Activity> Context.startActivity() {
+    startActivity(Intent(this, T::class.java))
+}
 ```
-1 inline fun <reified T : Activity> Context.startActivity() {
-2     startActivity(Intent(this, T::class.java))
-3 }
-```
+
+
 
 那么，如果你从 Java 调用此函数，你会发现该方法是私有的，因此泛型类型函数在 Java 代码中是不可用的。
 
-### 31 结
+## 31 结
 
 感谢阅读本书。在整个章节中，我们通过实现一个 Android 应用来学习了 Kotlin。天气应用是一个极佳的示例，用于练习大多数应用程序需要的核心功能：主详情界面、与 API 通信、数据库存储、共享偏好……
 
-
-
-
 这种方法的好处在于，你在使用的过程中已经学习了最重要的 Kotlin 概念。在我看来，将新知识付诸实践会更容易被吸收。这是我的首要目标，因为参考书通常是解决特定疑虑的有用工具，但很难从头读到尾。此外，由于示例通常脱离了特定语境，很难理解这些特性解决的是什么类型的问题。
 
-事实上，这也是这本书的另一个目标：向你展示我们在 Android 中面临的真实问题，以及如何使用 Kotlin 来解决它们。任何 Android 开发者在处理异步、数据库，或必须实现冗长的监听器或 Activity 导航时，都会遇到许多问题。通过使用一个真实的 App 作为示例，我们在学习新语言特的同时的同时回答了许多此类问题。
+事实上，这也是这本书的另一个目标：向你展示我们在 Android 中面临的真实问题，以及如何使用 Kotlin 来解决它们。任何 Android 开发者在处理异步、数据库，或必须实现冗长的监听器或 Activity 导航时，都会遇到许多问题。通过使用一个真实的 App 作为示例，我们在学习新语言特性的同时回答了许多此类问题。
 
 我希望我实现了这些目标，并希望你不仅学会了 Kotlin，而且享受阅读这本书的过程。既然 Google 已经采用了 Kotlin，我深信学习这门语言是必经之路：你将享受开发 App，并为这项已成为许多 Android 职位日益紧需的新技能做好准备。
 
 这本书已经结束了，但并不意味着它完结了。我将继续将其更新到 Kotlin 的最新版本，并根据你的反馈和建议对其进行审查和改进。欢迎随时给我写信，告诉你的想法、发现的错误、不够清楚的概念或你可能有的任何顾虑。
 
-在写这本书的几个月里，这是一段奇妙的旅程。我也到了很多，所以再次感谢你让《Kotlin for Android Developers》成为现实。
+在写这本书的几个月里，这是一段奇妙的旅程。我也学到了很多，所以再次感谢你让《Kotlin for Android Developers》成为现实。
 
 祝好，
 

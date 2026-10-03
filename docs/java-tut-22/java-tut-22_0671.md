@@ -1,3 +1,4 @@
+
 # 变换形状、文本和图像
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/advanced/transforming.html`](https://docs.oracle.com/javase/tutorial/2d/advanced/transforming.html)
@@ -9,22 +10,16 @@
 `AffineTransform`定义了以下工厂方法，以便更容易构造新的变换：
 
 +   `getRotateInstance`
-
 +   `getScaleInstance`
-
 +   `getShearInstance`
-
 +   `getTranslateInstance`
 
 或者，您可以使用`Graphics2D`的一个变换方法来修改当前变换。当您调用这些便利方法之一时，生成的变换将与当前变换连接，并在渲染期间应用：
 
-+   `rotate`  用于指定以弧度为单位的旋转角度
-
-+   `scale`  用于指定*x*和*y*方向的缩放因子
-
-+   `shear`  用于指定*x*和*y*方向的剪切因子
-
-+   `translate`  用于指定*x*和*y*方向的平移偏移量
++   `rotate` — 用于指定以弧度为单位的旋转角度
++   `scale` — 用于指定*x*和*y*方向的缩放因子
++   `shear` — 用于指定*x*和*y*方向的剪切因子
++   `translate` — 用于指定*x*和*y*方向的平移偏移量
 
 您还可以直接构造一个`AffineTransform`对象，并通过调用`transform`方法将其与当前变换连接。
 
@@ -42,7 +37,7 @@
 
 * * *
 
-``Transform.java`` 包含此小程序的完整代码。
+`Transform.java`包含此小程序的完整代码。
 
 当从变换菜单中选择一个变换时，该变换将连接到`AffineTransform` `at`上：
 
@@ -65,14 +60,12 @@ public void setTrans(int transIndex) {
         break;
     }
 }
-
 ```
 
 在显示与菜单选择对应的形状之前，应用程序首先从`Graphics2D`对象中检索当前变换：
 
 ```java
 AffineTransform saveXform = g2.getTransform();
-
 ```
 
 此变换将在渲染后恢复到`Graphics2D`中。
@@ -83,21 +76,18 @@ AffineTransform saveXform = g2.getTransform();
 AffineTransform toCenterAt = new AffineTransform();
 toCenterAt.concatenate(at);
 toCenterAt.translate(-(r.width/2), -(r.height/2));
-
 ```
 
 使用`transform`方法将`toCenterAt`变换连接到`Graphics2D`变换上：
 
 ```java
 g2.transform(toCenterAt);
-
 ```
 
 渲染完成后，使用`setTransform`方法恢复原始变换：
 
 ```java
 g2.setTransform(saveXform);
-
 ```
 
 * * *
@@ -105,11 +95,8 @@ g2.setTransform(saveXform);
 **注意：**永远不要使用`setTransform`方法将坐标变换连接到现有的变换上。`setTransform`方法会覆盖`Graphics2D`对象的当前变换，这可能会因其他原因而需要，比如在窗口中定位 Swing 和轻量级组件。执行变换的步骤如下：
 
 1.  使用`getTransform`方法获取当前变换。
-
-1.  使用`transform`、`translate`、`scale`、`shear`或`rotate`来连接一个变换。
-
-1.  执行渲染。
-
-1.  使用`setTransform`方法恢复原始变换。
+2.  使用`transform`、`translate`、`scale`、`shear`或`rotate`来连接一个变换。
+3.  执行渲染。
+4.  使用`setTransform`方法恢复原始变换。
 
 * * *

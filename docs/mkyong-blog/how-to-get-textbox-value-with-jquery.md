@@ -1,18 +1,19 @@
+
 # 如何用 jQuery 获取文本框值
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jquery/how-to-get-textbox-value-with-jquery/>
 
-要获得文本框的值，可以使用 jQuery **val()** 函数。
+要获得文本框的值，可以使用 jQuery 的`val()`函数。
 
-举个例子，
+举个例子：
 
-1.  $('input:textbox ')。val()–获取文本框值。
-2.  $('input:textbox ')。val("新文本消息")–设置文本框值。
+1. `$('input:textbox').val()`–获取文本框值。
+2. `$('input:textbox').val("新文本消息")`–设置文本框值。
 
 ## 文本框示例
 
-```java
- <html>
+```html
+<html>
 <head>
 <title>jQuery get textbox value example</title>
 
@@ -61,6 +62,6 @@
 </html> 
 ```
 
-[http://web.archive.org/web/20220618072948if_/https://www.mkyong.com/wp-content/uploads/jQuery/jQuery-get-textbox-value.html](http://web.archive.org/web/20220618072948if_/https://www.mkyong.com/wp-content/uploads/jQuery/jQuery-get-textbox-value.html)
+<http://web.archive.org/web/20220618072948if_/https://www.mkyong.com/wp-content/uploads/jQuery/jQuery-get-textbox-value.html>
 
 [Try Demo](http://web.archive.org/web/20220618072948/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-get-textbox-value.html)<input type="hidden" id="mkyong-current-postId" value="5028">

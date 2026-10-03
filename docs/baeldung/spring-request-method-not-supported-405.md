@@ -1,14 +1,16 @@
+
+
 # Spring 中不支持的请求方法(405)
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-request-method-not-supported-405>
 
-## 1.概观
+## 1. 概观
 
 这篇简短的文章关注一个常见的错误——“不支持请求方法——405”——开发者在使用 Spring MVC 为特定 HTTP 动词公开 API 时会遇到这个错误。
 
 自然，我们还将讨论这个错误的常见原因。
 
-## 2.请求方法基础
+## 2. 请求方法基础
 
 在着手解决常见问题之前，如果您刚刚开始学习 Spring MVC，这里有一篇很好的介绍文章。
 
@@ -16,13 +18,13 @@
 
 简单来说，MVC HTTP 方法是请求可以在服务器上触发的基本操作。例如，一些方法从服务器`fetch`得到数据，一些方法`submit`得到数据，一些方法可能`delete`得到数据等等。
 
-`[@RequestMapping](/web/20220727020632/https://www.baeldung.com/spring-requestmapping) annotation `指定了请求所支持的方法。
+`@RequestMapping` annotation 指定了请求所支持的方法。
 
-Spring 在一个 enum `RequestMethod`下声明所有支持的请求方法；它指定了标准的`GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS, TRACE` 动词。
+Spring 在一个 enum `RequestMethod`下声明所有支持的请求方法；它指定了标准的`GET`, `HEAD`, `POST`, `PUT`, `PATCH`, `DELETE`, `OPTIONS`, `TRACE` 动词。
 
-[弹簧`DispatcherServlet`](/web/20220727020632/https://www.baeldung.com/spring-dispatcherservlet) 默认支持除`OPTIONS` 和`TRACE`之外的所有弹簧；`@RequestMapping `使用`RequestMethod enum`来指定支持哪些方法。
+弹簧`DispatcherServlet` 默认支持除`OPTIONS` 和`TRACE`之外的所有弹簧；`@RequestMapping` 使用`RequestMethod` enum来指定支持哪些方法。
 
-## 3。简单的 MVC 场景
+## 3. 简单的 MVC 场景
 
 现在，让我们来看一个映射所有 HTTP 方法的代码示例:
 
@@ -56,7 +58,7 @@ $ curl --request POST http://localhost:8080/api/employees
 
 当然，如果请求被正确映射并且成功，我们希望得到`200 OK`响应。
 
-## 4。问题场景–HTTP 405
+## 4. 问题场景–HTTP 405
 
 但是，我们在这里讨论的是——当然——请求不成功的情况。
 
@@ -80,7 +82,7 @@ $ curl --request PUT http://localhost:8080/api/employees
 "message":"Request method 'PUT' not supported","path":"/api/employees"} 
 ```
 
-## 5.405 不支持–原因、解决方案
+## 5. 405 不支持–原因、解决方案
 
 在前面的场景中，我们得到的是带有 405 状态代码的 HTTP 响应，这是一个客户端错误，表明服务器不支持请求中发送的方法/动词。
 
@@ -104,8 +106,9 @@ $ curl --request PUT http://localhost:8080/api/employees
 public List<Employee> postEmployees() ... 
 ```
 
-## 6.结论
+## 6. 结论
 
 请求方法/动词是 HTTP 通信中的一个关键方面，我们需要注意我们在服务器端定义的操作的确切语义，以及我们发送的确切请求。
 
 和往常一样，本文展示的例子可以在 GitHub 的[上找到。](https://web.archive.org/web/20220727020632/https://github.com/eugenp/tutorials/tree/master/spring-web-modules/spring-mvc-basics-2)
+

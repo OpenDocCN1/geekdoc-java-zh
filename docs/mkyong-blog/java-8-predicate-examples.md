@@ -1,3 +1,4 @@
+
 # Java 8 谓词示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java8/java-8-predicate-examples/>
@@ -5,23 +6,24 @@
 在 Java 8 中，[谓词](http://web.archive.org/web/20221205205342/https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html)是一个函数接口，它接受一个参数并返回一个布尔值。通常，它用于对象集合的过滤器中。
 
 ```java
- @FunctionalInterface
+@FunctionalInterface
 public interface Predicate<T> {
   boolean test(T t);
-} 
+}
 ```
 
 **延伸阅读**
+
 [Java 8 双预测例题](/web/20221205205342/https://mkyong.com/java8/java-8-bipredicate-examples/)
 
-## 1.过滤器()中的谓词
+## 1. `filter()` 中的谓词
 
-`filter()`接受谓词作为参数。
+`filter()` 接受谓词作为参数。
 
-Java8Predicate.java
+`Java8Predicate.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -39,19 +41,19 @@ public class Java8Predicate {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- [6, 7, 8, 9, 10] 
+[6, 7, 8, 9, 10]
 ```
 
-Java8Predicate.java
+`Java8Predicate.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -74,23 +76,23 @@ public class Java8Predicate {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- [6, 7, 8, 9, 10] 
+[6, 7, 8, 9, 10]
 ```
 
-## 2.谓词. and()
+## 2. `Predicate.and()`
 
 2.1 多重过滤器。
 
-Java8Predicate2.java
+`Java8Predicate2.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -110,21 +112,21 @@ public class Java8Predicate2 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- [6, 7] 
+[6, 7]
 ```
 
-2.1 替换为`Predicate.and()`
+2.1 替换为 `Predicate.and()`
 
-Java8Predicate2.java
+`Java8Predicate2.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -148,21 +150,21 @@ public class Java8Predicate2 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- [6, 7] 
+[6, 7]
 ```
 
-## 3.谓词. or()
+## 3. `Predicate.or()`
 
-Java8Predicate3.java
+`Java8Predicate3.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -186,23 +188,23 @@ public class Java8Predicate3 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- [A, AA, AAA, BBB] 
+[A, AA, AAA, BBB]
 ```
 
-## 4.Predicate.negate()
+## 4. `Predicate.negate()`
 
 查找不以“A”开头的所有元素。
 
-Java8Predicate4.java
+`Java8Predicate4.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -225,23 +227,23 @@ public class Java8Predicate4 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- [B, BB, BBB] 
+[B, BB, BBB]
 ```
 
-## 5.函数中的 Predicate.test()
+## 5. 函数中的 `Predicate.test()`
 
 函数中的谓词。
 
-Java8Predicate5.java
+`Java8Predicate5.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -268,24 +270,24 @@ class StringProcessor {
     static List<String> filter(List<String> list, Predicate<String> predicate) {
         return list.stream().filter(predicate::test).collect(Collectors.toList());
     }
-} 
+}
 ```
 
 输出
 
 ```java
- [A, AA, AAA]
-[AAA] 
+[A, AA, AAA]
+[AAA]
 ```
 
-## 6.谓词链接
+## 6. 谓词链接
 
 我们可以将谓词链接在一起。
 
-Java8Predicate6.java
+`Java8Predicate6.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.function.Predicate;
 
@@ -305,22 +307,22 @@ public class Java8Predicate6 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- true
-false 
+true
+false
 ```
 
-## 7.宾语中的谓语
+## 7. 对象中的谓词
 
-Hosting.java
+`Hosting.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 public class Hosting {
 
@@ -335,13 +337,13 @@ public class Hosting {
     }
 
     //... getters and setters, toString()
-} 
+}
 ```
 
-HostingRespository.java
+`HostingRespository.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.List;
 import java.util.function.Predicate;
@@ -356,13 +358,13 @@ public class HostingRespository {
                 .collect(Collectors.toList());
     }
 
-} 
+}
 ```
 
-Java8Predicate7.java
+`Java8Predicate7.java`
 
 ```java
- package com.mkyong.java8;
+package com.mkyong.java8;
 
 import java.util.Arrays;
 import java.util.List;
@@ -390,22 +392,27 @@ public class Java8Predicate7 {
     public static Predicate<Hosting> isDeveloperFriendly() {
         return n -> n.getName().equals("linode");
     }
-} 
+}
 ```
 
 输出
 
 ```java
- result : [Hosting{Id=4, name='google', url='google.com'}]
-result2 : [Hosting{Id=2, name='linode', url='linode.com'}] 
+result : [Hosting{Id=4, name='google', url='google.com'}]
+result2 : [Hosting{Id=2, name='linode', url='linode.com'}]
 ```
 
 完成了。
 
 ## 参考
 
-*   [谓词 JavaDoc](http://web.archive.org/web/20221205205342/https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html)
-*   [Java 8 流过滤器示例](/web/20221205205342/https://mkyong.com/java8/java-8-streams-filter-examples/)
-*   [Java 8 双预测示例](/web/20221205205342/https://mkyong.com/java8/java-8-bipredicate-examples/)
+* [谓词 JavaDoc](http://web.archive.org/web/20221205205342/https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html)
 
+
+
+* [Java 8 流过滤器示例](/web/20221205205342/https://mkyong.com/java8/java-8-streams-filter-examples/)
+* [Java 8 双预测示例](/web/20221205205342/https://mkyong.com/java8/java-8-bipredicate-examples/)
+
+```html
 <input type="hidden" id="mkyong-current-postId" value="15391">
+```

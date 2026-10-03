@@ -1,28 +1,11 @@
+
 # Java 入门指南，第7版：精通主要功能
-
-
 
 ![](img/cover.jpg)
 
-![image](img/cover.jpg)
-
-![image](img/title.jpg)
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### 前言
 
-本书的创作为我 Mike McGrath 了一个了一个利用最新技术更新我 Java 书籍的好机会。
+本书的创作为我 Mike McGrath 提供了一个利用最新技术更新我 Java 书籍的好机会。
 
 ### 书中的约定
 
@@ -37,21 +20,27 @@ System.out.println(message);
 此外，为了识别书中描述的每个源代码文件，步骤旁侧会出现一个彩色图标和文件名，如下：
 
 ![image](img/j1.jpg)
+
 App.java
 
 ![image](img/j2.jpg)
+
 App.class
 
 ![image](img/j3.jpg)
+
 App.jar
 
 ![image](img/j4.jpg)
+
 App.xml
 
 ![image](img/j5.jpg)
+
 App.html
 
 ![image](img/j6.jpg)
+
 App.jnlp
 
 ### 获取源代码
@@ -59,50 +48,58 @@ App.jnlp
 为了方便起见，我将书中示例的所有源代码文件放置在单个 ZIP 存档中。你可以按照以下简单步骤获取完整存档：
 
 ![image](img/1g1.jpg)
+
 浏览到 **[www.ineasysteps.com](http://www.ineasysteps.com)**，然后导航到 Free Resources（免费资源）并选择 Downloads（下载）部分
 
 ![image](img/2g1.jpg)
+
 在列表中找到 Java in easy steps, 7th Edition，然后点击标题为 All Code Examples（所有代码示例）的超链接
 
 ![image](img/3g1.jpg)
+
 现在，将存档内容解压到计算机上的任何方便位置
 
 *Mike McGrath*
 
-1
+---
 
-**开始学习**
+# 开始学习
 
 ***欢迎来到 Java 编程精彩的世界。本章将展示如何创建和运行简单的 Java 程序，并演示如何在程序中存储数据。***
 
-
-
-
-
 ## 简介
+
 ## 安装 JDK
+
 ## 编写第一个 Java 程序
+
 ### 编译与运行程序
+
 ## 创建变量
+
 ## 识别数据类型
+
 ## 创建常量
+
 ## 添加注释
-# 故障排排除
+
+# 故障排除
+
 ## 总结
 
 ## 简介
 
-Java™ 编程语言由 Sun Microsystems 的工程师詹姆斯·高林（James Gosling）于 1990 年首次开发。他不喜欢使用 C++ 编程语言，因此创建了一种新语言，并将其命名为“Oak”（橡树），这是他在办公室窗外外看到的一棵树。
+Java™ 编程语言由 Sun Microsystems 的工程师詹姆斯·高林（James Gosling）于 1990 年首次开发。他不喜欢使用 C++ 编程语言，因此创建了一种新语言，并将其命名为“Oak”（橡树），这是他在办公室窗外看到的一棵树。
 
 ![image](img/pg8_1.jpg)
 
 这是“Duke”（迪克）——Java 编程语言的亲切吉祥物。
 
-随着世界网的日益普及，Sun 公司意识到高林编写的这种语言可以针对互联网进行开发。因此，Sun 公司将该语言重命名为“Java”（仅仅是因为这个名字听起来很酷），并于 1995 年免费提供。全球的开发者很快采用了这种令人兴奋的新语言，并且由于其模块化设计，他们能够创建添加到核心语言中的新功能。最受喜爱的额外功能被保留在 Java 后后的发布版本中，并发展成为当今的全面版本。
+随着万维网的日益普及，Sun 公司意识到高林编写的这种语言可以针对互联网进行开发。因此，Sun 公司将该语言重命名为“Java”（仅仅是因为这个名字听起来很酷），并于 1995 年免费提供。全球的开发者很快采用了这种令人兴奋的新语言，并且由于其模块化设计，他们能够创建添加到核心语言中的新功能。最受喜爱的额外功能被保留在 Java 后续的发布版本中，并发展成为当今的全面版本。
 
-Java 的本质是一个称为“类”（classes）的文件库，每个类都包含小段现成的、经过验证的代码。这些类中的任何一个都可以像墙上的砖块一样整合到新程序中，因此只需要编写相对少的新代码即可完成程序。这为程序员节省了大量时间，并在很大程度上解释了 Java 编程如此受欢迎的原因。此外，这种模块化安排比单一大型程序更容易识别任何错误。
+Java 的本质是一个称为“类”（`classes`）的文件库，每个类都包含小段现成的、经过验证的代码。这些类中的任何一个都可以像墙上的砖块一样整合到新程序中，因此只需要编写相对少的新代码即可完成程序。这为程序员节省了大量时间，并在很大程度上解释了 Java 编程如此受欢迎的原因。此外，这种模块化安排比单一大型程序更容易识别任何错误。
 
-Java 技术既是一种编程语言也是一个平台。在 Java 编程中，源代码首先以可 java` 的文件编写，由 `javac` 编译器编译为机器可读的 `.class` 文件。然后，`java` 解释器可以通过 Java 虚拟机（Java VM）的实例来执行程序：
+Java 技术既是一种编程语言也是一个平台。在 Java 编程中，源代码首先以 `.java` 的文件编写，由 `javac` 编译器编译为机器可读的 `.class` 文件。然后，`java` 解释器可以通过 Java 虚拟机（Java VM）的实例来执行程序：
 
 ![image](img/pg8_2.jpg)
 
@@ -144,19 +141,19 @@ JDK 包适用于 Linux、Mac 和 Windows 平台的 32 位和 64 位变体——�
 
 ![image](img/pg10_1.jpg)
 
-![image](img/1b.jpg)JDK 包含几个可执行文件，分别是 Java 编译器、Java 壳和 Java 虚拟机。虚拟机。
+![image](img/1b.jpg) JDK 包含几个可执行文件，分别是 Java 编译器、Java 壳和 Java 虚拟机。
 
 ![image](img/pg10_2.jpg)
 
-![image](img/2b.jpg)对于 Windows，从 OpenJDK 网站下载安装包，然后按照以下步骤安装 JDK：
+![image](img/2b.jpg) 对于 Windows，从 OpenJDK 网站下载安装包，然后按照以下步骤安装 JDK：
 
 ![image](img/pg10_3.jpg)
 
-![image](img/3b.jpg)点击 **Next** 继续，接受许可协议并再次点击 **Next**。
+![image](img/3b.jpg) 点击 **Next** 继续，接受许可协议并再次点击 **Next**。
 
 ![image](img/pg10_4.jpg)
 
-![image](img/4b.jpg)将位置更改为 `C:\Java` 并选择“添加到路径”选项，然后点击 **Next**。
+![image](img/4b.jpg) 将位置更改为 `C:\Java` 并选择“添加到路径”选项，然后点击 **Next**。
 
 ![image](img/pg10_5.jpg)
 
@@ -164,11 +161,11 @@ JDK 包适用于 Linux、Mac 和 Windows 平台的 32 位和 64 位变体——�
 
 ![image](img/pg11_1.jpg)
 
-![image](img/1b.jpg)按下 **Winkey** + **R** 打开“运行”窗口，然后输入 `cmd` 命令提示符窗口——或在 Linux 上打开终端窗口。
+![image](img/1b.jpg) 按下 **Winkey** + **R** 打开“运行”窗口，然后输入 `cmd` 打开命令提示符窗口——或在 Linux 上打开终端窗口。
 
 ![image](img/pg11_2.jpg)
 
-![image](img/3b.jpg)Windows 键
+![image](img/3b.jpg) Windows 键
 
 在提示符处输入 `java -version` 命令查看 JDK 版本（如下方所示的 Xs）。
 
@@ -178,7 +175,7 @@ JDK 包适用于 Linux、Mac 和 Windows 平台的 32 位和 64 位变体——�
 
 ![image](img/pg11_4.jpg)
 
-![image](img/pg11_5.jpg)Java 壳 `jshell` 是一个交互式工具，允许你测试代码片段，无需先编译代码。它用于第 2 章演示各种“运算符”。
+![image](img/pg11_5.jpg) Java 壳 `jshell` 是一个交互式工具，允许你测试代码片段，无需先编译代码。它用于第 2 章演示各种“运算符”。
 
 ## 编写第一个 Java 程序
 
@@ -188,7 +185,7 @@ JDK 包适用于 Linux、Mac 和 Windows 平台的 32 位和 64 位变体——�
 
 按照以下步骤创建一个简单的 Java 程序，它将输出传统的第一个程序问候：
 
-![image](img/1b.jpg)打开文本编辑器（如记事本），并按照列出的内容输入此代码以创建一个名为“Hello”的类
+![image](img/1b.jpg) 打开文本编辑器（如记事本），并按照列出的内容输入此代码以创建一个名为“Hello”的类
 
 ```java
 class Hello {
@@ -196,9 +193,10 @@ class Hello {
 ```
 
 ![image](img/common.jpg)
+
 Hello.java
 
-![image](img/2b.jpg)在 **Hello** 类的大括号之间插入此代码以为 **Hello** 类创建一个“main”方法
+![image](img/2b.jpg) 在 **Hello** 类的大括号之间插入此代码以为 **Hello** 类创建一个“main”方法
 
 ```java
 public static void main ( String[] args )
@@ -206,24 +204,21 @@ public static void main ( String[] args )
 }
 ```
 
-![image](img/3b.jpg)在 **main** 方法的大括号之间插入此行代码——说明程序将要做什么
+![image](img/3b.jpg) 在 **main** 方法的大括号之间插入此行代码——说明程序将要做什么
 
 ```java
 System.out.println( “Hello World!” ) ;
 ```
 
-
-
-
-
 ![image](img/4b.jpg)
+
 将文件保存到任何方便的位置，但请务必精确命名为 `Hello.java` – 现在完整的程序看起来应该是这样的：
 
 ![image](img/pg12_2.jpg)
 
 ![image](img/snake.jpg)
 
-Java 是一种大小敏感的语言，“Hello”和“hello”是完全不同的 –传统上，Java 程序名应该始终以大写字母开头。
+Java 是一种大小写敏感的语言，“Hello”和“hello”是完全不同的 –传统上，Java 程序名应该始终以大写字母开头。
 
 ![image](img/forget.jpg)
 
@@ -245,7 +240,7 @@ class Hello { }
 public static void main ( String[] args ) { }
 ```
 
-这行看起来很吓畏的代码是用于定义几乎所有 Java 程序起点的标准代码。它将会在书中大多数示例中以与上面完全的形式出现 – 所以记住它可能会很有用。
+这行看起来很吓人的代码是用于定义几乎所有 Java 程序起点的标准代码。它将会在书中大多数示例中以与上面完全相同的形式出现 – 所以记住它可能会很有用。
 
 该代码声明了一个名为“main”的方法，该方法在其大括号内包含实际的程序指令。
 
@@ -275,13 +270,15 @@ System.out.println( “Hello World!” ) ;
 
 在 Java 程序运行之前，它必须首先由 Java 编译器编译成 `class` 文件。它位于 Java 的 `bin` 子目录下，是一个名为 `javac` 的应用程序。在安装期间，`bin` 子目录已添加到系统路径，因此 `javac` 可以从任何系统位置调用。
 
-按照以下步骤编译程序这里：
+按照以下步骤编译程序：
 
 ![image](img/1b.jpg)
+
 打开命令行窗口，然后导航到你保存 `Hello.java` 源码文件的目录
 
 ![image](img/2b.jpg)
-输入 `javac` 后跟一个空格，然后是源码文件的全名 `Hello.java` 并按 `Enter` 
+
+输入 `javac` 后跟一个空格，然后是源码文件的全名 `Hello.java` 并按 `Enter`
 
 ![image](img/pg14_1.jpg)
 
@@ -303,7 +300,7 @@ System.out.println( “Hello World!” ) ;
 
 向 `javac` 编译器指定文件的完整路径地址，也可以从另一个位置编译源码 – 在这种情况下为 `C:\MyJava\Hello.java`
 
-当 Java 编译器完成编译时，命令行提示符窗口的焦点返回提示提示符，没有任何确认消息 – 程序已准备好运行。
+当 Java 编译器完成编译时，命令行提示符窗口的焦点返回提示符，没有任何确认消息 – 程序已准备好运行。
 
 ![image](img/pg15_3.jpg)
 
@@ -312,16 +309,18 @@ Java 程序解释器是一个名为 `java` 的应用程序，位于 Java 的 `bi
 按照这里描述的步骤运行已编译的程序：
 
 ![image](img/1b.jpg)
+
 打开命令行提示符窗口，然后导航到 `Hello.class` 程序文件所在的目录
 
 ![image](img/2b.jpg)
+
 在提示符处，输入 `java` 后跟一个空格，然后是程序名 `Hello` 并按回车
 
 ![image](img/pg15_1.jpg)
 
 ![image](img/snake.jpg)
 
-运行程序时不包含 .class 扩展名 – 只使用程序名。
+运行程序时不包含 `.class` 扩展名 – 只使用程序名。
 
 `Hello` 程序运行并执行其 main 方法内语句中定义的任务 – 输出“Hello World!”。完成后，焦点再次返回到提示符。
 
@@ -341,7 +340,7 @@ Java 程序解释器是一个名为 `java` 的应用程序，位于 Java 的 `bi
 String message ;
 ```
 
-变量名由程序员选择，但必须遵循某些命名规范。变量名只能以字母、美元符号 `$` 或下划线字符 `_` 开头，随后可以是字母、数字、美元符号或下划线。名称对大小敏感，因此“var”和“Var”是不同的名称，名称中不允许空格。
+变量名由程序员选择，但必须遵循某些命名规范。变量名只能以字母、美元符号 `$` 或下划线字符 `_` 开头，随后可以是字母、数字、美元符号或下划线。名称对大小写敏感，因此“var”和“Var”是不同的名称，名称中不允许空格。
 
 变量名还应避免下表列出的 Java 关键字，因为这些词在语言中有特殊含义。
 
@@ -360,23 +359,21 @@ String message ;
 
 ![image](img/snake.jpg)
 
-每个变量声明都必须以分号字符结尾 正 与所有其他语句一样。
+每个变量声明都必须以分号字符结尾，正如与所有其他语句一样。
 
 ![image](img/hot.jpg)
 
-严格来说，表中的某些词并不是真正的关键字 – `true`、`false` 和 `null` 都是字面量；`String` 是一个特殊的类名；`const` 和 `goto` 是保留字（目前未未使用）。将它们包含在表中是因为在命名变量时也必须避免这些词。
+严格来说，表中的某些词并不是真正的关键字 – `true`、`false` 和 `null` 都是字面量；`String` 是一个特殊的类名；`const` 和 `goto` 是保留字（目前未使用）。将它们包含在表中是因为在命名变量时也必须避免这些词。
 
 
 
-
-
-作为良好的习惯，变量命名应使用单词或易于识别的缩写，以描述该变量的用途。例如，使用 `button1` 或 `btn1` 来描述一号按钮。单词单词优先使用小写字母，例如 `gear`；由多个单词组成的名称应将每个后续单词的首字母大写，例如 `gearRatio` —— 即所谓的 `camelCase`（驼峰命名）命名规范。
+作为良好的习惯，变量命名应使用单词或易于识别的缩写，以描述该变量的用途。例如，使用 `button1` 或 `btn1` 来描述一号按钮。单词优先使用小写字母，例如 `gear`；由多个单词组成的名称应将每个后续单词的首字母大写，例如 `gearRatio` —— 即所谓的 `camelCase`（驼峰命名）命名规范。
 
 一旦声明变量，可以使用等号 `=` 为其分配相应数据类型的初始值，可以在声明时赋值，也可以在程序的后期赋值，然后可以使用变量名随时引用其值。
 
 按照以下步骤创建一个程序，该程序声明一个变量，并在声明时对其初始化，稍后进行更改：
 
-![image](img/1b.jpg)启动一个名为“FirstVariable”的新程序，包含标准的 main 方法
+1. 启动一个名为“FirstVariable”的新程序，包含标准的 main 方法
 
 ```java
 class FirstVariable
@@ -386,29 +383,23 @@ class FirstVariable
 }
 ```
 
-![image](img/common.jpg)
-
 FirstVariable.java
 
-![image](img/2b.jpg)在 main 方法的大括号之间插入此代码，以创建、初始化并输出一个变量
+2. 在 main 方法的大括号之间插入此代码，以创建、初始化并输出一个变量
 
 ```java
 String message = “Initial value” ;
 System.out.println( message ) ;
 ```
 
-![image](img/3b.jpg)添加这些行来修改并输出变量值
+3. 添加这些行来修改并输出变量值
 
 ```java
 message = “Modified value” ;
 System.out.println( message ) ;
 ```
 
-![image](img/4b.jpg)将程序保存为 `FirstVariable.java`，然后编译并运行程序
-
-![image](img/pg17_1.jpg)
-
-![image](img/forget.jpg)
+4. 将程序保存为 `FirstVariable.java`，然后编译并运行程序
 
 如果在编译或运行程序时遇到问题，可以在此处获取排查问题的帮助。
 
@@ -416,9 +407,7 @@ System.out.println( message ) ;
 
 Java 变量声明中最常用的数据类型列在本表中，并带有简要描述：
 
-![image](img/pg18_1.jpg)
-
-| 数据类型: | 描述: | 示例: |
+| 数据类型 | 描述 | 示例 |
 | :--- | :--- | :--- |
 | `char` | 单个 Unicode 字符 | ‘a’ |
 | `String` | 任意数量的 Unicode 字符 | “my String” |
@@ -426,30 +415,26 @@ Java 变量声明中最常用的数据类型列在本表中，并带有简要描
 | `float` | 带有小数点的浮点数 | 3.14159265f |
 | `boolean` | 真或假的二选一逻辑值 | true |
 
-![image](img/snake.jpg)
-
 由于浮点数运算的不规则性，`float` 数据类型绝不应用于货币等精确值 —— 详情请参见此处。
 
 注意，`char` 数据值必须始终由单引号包含，而 `String` 数据值必须始终由双引号包含。此外，记住 `float` 数据值必须始终带有 “f” 后缀，以确保它们被视为 `float` 值。
 
 除了上述更常见的数据类型外，Java 还提供了这些特殊数据类型用于精确情况：
 
-| 数据类型: | 描述: |
+| 数据类型 | 描述 |
 | :--- | :--- |
 | `byte` | 从 -128 到 +127 的整数 |
 | `short` | 从 -32,768 到 +32,767 的整数 |
 | `long` | 超过 21.4 亿的正负整数 |
 | `double` | 极长的浮点数 |
 
-![image](img/forget.jpg)
-
 除了 `String`（这是一个特殊类），所有数据类型关键字都以小写字母开头。
 
-特殊数据类型在高级 Java 程序中很有 —— 本书示例大多使用顶部表中常用的数据类型。
+特殊数据类型在高级 Java 程序中很有用 —— 本书示例大多使用顶部表中常用的数据类型。
 
 按照以下步骤创建一个 Java 程序，该程序创建、初始化并输出所有五个常用数据类型的变量：
 
-![image](img/1b.jpg)启动一个名为“DataTypes”的新程序，包含标准的 main 方法
+1. 启动一个名为“DataTypes”的新程序，包含标准的 main 方法
 
 ```java
 class DataTypes
@@ -459,11 +444,9 @@ class DataTypes
 }
 ```
 
-![image](img/common.jpg)
-
 DataTypes.java
 
-![image](img/2b.jpg)在 main 方法的大括号之间插入这些声明来创建并初始化五个变量
+2. 在 main 方法的大括号之间插入这些声明来创建并初始化五个变量
 
 ```java
 char letter = ‘M’ ;
@@ -473,7 +456,7 @@ float decimal = 98.6f ;
 boolean result = true ;
 ```
 
-![image](img/3b.jpg)添加这些行以将适当的文本 `String` 拼接到每个变量的值
+3. 添加这些行以将适当的文本 `String` 拼接到每个变量的值
 
 ```java
 System.out.println( “Initial is ” + letter ) ;
@@ -483,27 +466,19 @@ System.out.println( “Temperature is ” + decimal ) ;
 System.out.println( “Answer is ” + result ) ;
 ```
 
-![image](img/4b.jpg)将程序保存为 `DataTypes.java`，然后编译并运行程序
-
-![image](img/pg19_1.jpg)
-
-![image](img/5b.jpg)
+4. 将程序保存为 `DataTypes.java`，然后编译并运行程序
 
 `System.out.println( “Initial is ” + letter ) ;`
-
-![image](img/hot.jpg)
 
 `+` 在此处用于拼接字符串值。
 
 ## 创建常量
 
-`final` 关键字是一个修饰符，声明变量时可以使用防止任何更改。
-
-![image](img/pg20_1.jpg)以这种方式创建变量被称为“常量”。
+`final` 关键字是一个修饰符，声明变量时可以使用防止任何更改。以这种方式创建变量被称为“常量”。
 
 按照以下步骤创建一个包含常量的 Java 程序：
 
-![image](img/1b.jpg)启动一个名为“Constants”的新程序，包含标准的 main 方法
+1. 启动一个名为“Constants”的新程序，包含标准的 main 方法
 
 ```java
 class Constants
@@ -513,11 +488,9 @@ class Constants
 }
 ```
 
-![image](img/common.jpg)
-
 Constants.java
 
-![image](img/2b.jpg)在 main 方法的大括号之间插入此代码以创建并初始化三个常量
+2. 在 main 方法的大括号之间插入此代码以创建并初始化三个常量
 
 ```java
 final int TOUCHDOWN = 6 ;
@@ -525,13 +498,13 @@ final int CONVERSION = 1 ;
 final int FIELDGOAL = 3 ;
 ```
 
-![image](img/3b.jpg)现在，声明四个普通变量
+3. 现在，声明四个普通变量
 
 ```java
 int td , pat , fg , total ;
 ```
 
-![image](img/4b.jpg)使用常量的倍数初始化普通变量
+4. 使用常量的倍数初始化普通变量
 
 ```java
 td = 4 * TOUCHDOWN ;
@@ -540,23 +513,23 @@ fg = 2 * FIELDGOAL ;
 total = ( td + pat + fg ) ;
 ```
 
-![image](img/5b.jpg)添加此行显示总分
+5. 添加此行显示总分
 
 ```java
 System.out.println( “Score: ” + total ) ;
 ```
 
-![image](img/6b.jpg)将程序保存为 `Constants.java`，然后编译并运行程序以输出，Score: 33
+6. 将程序保存为 `Constants.java`，然后编译并运行程序以输出，Score: 33
 
 ( 4 x 6 = 24, 3 x 1 = 3, 2 x 3 = 6，所以 24 + 3 + 6 = 33 ).
 
-![image](img/hot.jpg)`*` 星号在此处用于乘以常量，括号包裹了它们的加法。
+`*` 星号在此处用于乘以常量，括号包裹了它们的加法。
 
 ## 添加注释
 
 在任何语言中编程时，为程序代码添加注释以解释特定部分是良好的习惯。这使得其他人以及自己在离开一段时间后能更容易理解代码。
 
-在 Java 编程中，可以在 `/*` 和 `*/` 标识符之间添加跨行注释，也可以在 `//` 注释标识符之后添加单行注释`/*` 和 `*/` 之间或 `//` 之后的任何内容都会被 `javac` 编译器完全忽略。
+在 Java 编程中，可以在 `/*` 和 `*/` 标识符之间添加跨行注释，也可以在 `//` 注释标识符之后添加单行注释。`/*` 和 `*/` 之间或 `//` 之后的任何内容都会被 `javac` 编译器完全忽略。
 
 为 `Constants.java` 程序添加注释后，源代码可能如下：
 
@@ -576,37 +549,18 @@ class Constants
         // 计算得分。
         int td , pat , fg , total ;
         td = 4 * TOUCHDOWN ; // 4x6=24
-        pat = 3 * CONVERSION ;
-        fg = 2 * FIELDGOAL ;
-        total = ( td + pat + fg ) ;
-        System.out.println( “Score: ” + total ) ;
+        pat = 3 * CONVERSION ; // 3x1= 3
+        fg = 2 * FIELDGOAL ; // 2x3= 6
+        total = ( td + pat + fg ) ; // 24+3+6=33
+        // Output calculated total.
+        System.out.println( “Score: “ + total ) ;
     }
 }
 ```
 
-
-
-
-
-```java
-pat = 3 * CONVERSION ; // 3x1= 3
-fg = 2 * FIELDGOAL ; // 2x3= 6
-total = ( td + pat + fg ) ; // 24+3+6=33
-// Output calculated total.
-System.out.println( “Score: “ + total ) ;
-}
-}
-```
-
-![image](img/common.jpg)
-
 Constants.java (已注释)
 
 带有注释保存后，程序可以正常编译并运行：
-
-![image](img/pg21_1.jpg)
-
-![image](img/forget.jpg)
 
 你可以添加一条尝试更改常量值值的语句，然后尝试重新编译程序以查看生成的错误信息。
 
@@ -617,56 +571,34 @@ Constants.java (已注释)
 ```java
 class test
 {
-public static void main ( String[] args )
-{
-String text ;
-System.out.println( “Test ” + text )
-}
+    public static void main ( String[] args )
+    {
+        String text ;
+        System.out.println( “Test ” + text )
+    }
 }
 ```
-
-![image](img/common.jpg)
 
 Test.java
 
 首次尝试编译 `Test.java` 会产生此错误报告：
 
-![image](img/pg22_1.jpg)
-
 * 原因 – 找不到 `javac` 编译器。
 * 解决方案 – 使用命令 `setx path “%path%;C:\Java\bin”` 修改系统环境，或使用完整路径命令 `C:\Java\bin\javac Test.java` 调用编译器。
 
-![image](img/pg22_2.jpg)
+要在 Windows 中编辑环境变量，你可以打开系统属性，点击高级选项卡，然后点击环境变量按钮。选择 `Path`，点击编辑并添加 `C:\Java\bin`，然后点击确定应用更改。
 
 * 原因 – 找不到文件 `Test.java`。
 * 解决方案 – 到文件所在的目录，或在命令中使用文件的完整路径地址。
 
-![image](img/hot.jpg)
-
-要在 Windows 中编辑环境变量，你可以打开**系统属性**，点击**高级**选项卡，然后点击**环境变量**按钮。选择 `Path`，点击**编辑**并添加 `C:\Java\bin`，然后点击**确定**应用更改。
-
-![image](img/pg22_3.jpg)
-
-![image](img/pg23_1.jpg)
-
 * 原因 – 语句没有正确终止。
-
-![image](img/pg23_2.jpg)
 * 解决方案 – 在源代码的语句末尾添加分号，然后保存文件应用更改。
-
-![image](img/pg23_3.jpg)
 
 * 原因 – 程序名与类名不匹配。
 * 解决方案 – 在源代码中将类名从 `test` 改为 `Test`，然后保存文件应用更改。
 
-![image](img/pg23_4.jpg)
-
 * 原因 – 变量 `text` 没有值。
-* 解决方案 – 在变量声明中为变量分配一个有效的 `String` 值（例如 `= “success”），然后保存文件。
-
-![image](img/pg23_5.jpg)
-
-![image](img/snake.jpg)
+* 解决方案 – 在变量声明中为变量分配一个有效的 `String` 值（例如 `= “success”`），然后保存文件。
 
 你必须在程序所在的目录下运行程序——不能使用路径地址，因为 Java 启动器需要的是程序名而不是文件名。
 
@@ -687,20 +619,18 @@ Test.java
 * 最常见的 Java 数据类型是 `String`、`int`、`char`、`float` 和 `boolean`。
 * `String` 值必须包含在双引号内；`char` 值在单引号内；`float` 值必须带有 “f” 后缀。
 * `final` 关键字可以创建常量变量。
-* 注释可以添加在 Java 源代码的 `/***` 和 `***/**` 之间（跨越一行或多行），或者在单行的 `//` 之后。
+* 注释可以添加在 Java 源代码的 `/*` 和 `*/` 之间（跨越一行或多行），或者在单行的 `//` 之后。
 * 错误报告用于识别编译器和运行时问题。
 
 ## 执行操作
 
-*本章演示了用于在 Java 程序中创建表达式的各种运算符。*
+本章演示了用于在 Java 程序中创建表达式的各种运算符。
 
 ### 算术运算
 
 下表列出的算术运算符用于在 Java 程序中创建返回单一结果值的表达式。例如，表达式 `4 * 2` 返回值 `8`。
 
-![image](img/pg26_1.jpg)
-
-| 运算符: | 操作 |
+| 运算符 | 操作 |
 | :--- | :--- |
 | `+` | 加法（并拼接 `String` 值） |
 | `-` | 减法 |
@@ -718,15 +648,9 @@ Test.java
 
 取模运算符将第一个操作数除以第二个操作数，并返回操作的余数。例如，`32 % 5` 返回 `2` ——5 除入 32 六次，余数为 2。
 
-
-
-
-
 赋值运算符列如下表所示，用于为表达式的结果赋值。除了简单的 `=` 运算符外，所有的都是更长表达式的简写形式：
 
-![image](img/pg28_1.jpg)
-
-| **运算符：** | **示例：** | **等价：** |
+| 运算符 | 示例 | 等价 |
 | :--- | :--- | :--- |
 | `=` | `a = b` | `a = b` |
 | `+=` | `a += b` | `a = a + b` |
@@ -745,55 +669,44 @@ Test.java
 
 所有其他赋值运算符的运行方式都相同：首先对两个存储的值进行算术计算，然后将结果赋值给第一个变量——成为其新的存储值。
 
-![image](img/hot.jpg)
-
 `==` 相等运算符用于比较两个值，其详细解释请参见此处。
 
 按照以下步骤在 Java 交互式外壳（Java shell）中探索 Java 赋值运算符：
 
-![image](img/1r.jpg)打开一个命令行提示提示符窗口，然后输入 `jshell` 并按 `Enter` 键启动 Java 交互式外壳
-
-![image](img/2r.jpg)接下来，输入语句初始化两个 `String` 变量
+1. 打开一个命令行提示符窗口，然后输入 `jshell` 并按 `Enter` 键启动 Java 交互式外壳
+2. 接下来，输入语句初始化两个 `String` 变量
 
 ```java
 String txt = “Super ” ; String lang = “Java” ;
 ```
 
-![image](img/3r.jpg)现在，分别输入语句添加并赋值一个 `String` 值，然后显示拼接后的字符串结果
+
+
+现在，分别输入语句添加并赋值一个 `String` 值，然后显示拼接后的字符串结果
 
 ```java
 txt += lang ; txt ;
 ```
 
-![image](img/pg29_1.jpg)
-
-![image](img/4r.jpg)然后输入语句初始化两个整数变量
+然后输入语句初始化两个整数变量
 
 ```java
 int sum = 10 ; int num = 20 ;
 ```
 
-![image](img/5r.jpg)分别输入语句添加并赋值一个 `int` 值，然后显示加总后的整数结果
+分别输入语句添加并赋值一个 `int` 值，然后显示加总后的整数结果
 
 ```java
 sum += num ; sum ;
 ```
 
-![image](img/pg29_2.jpg)
-
-![image](img/hot.jpg)
-
 Java 交互式外壳会创建带有 `$` 前缀的内部编号变量，包含评估的结果。在这里，内部变量 `$3` 和 `$7` 包含评估结果。
-
-![image](img/snake.jpg)
 
 为变量分配错误的数据类型将导致错误。
 
-### 比较值
+## 比较值
 
 比较运算符列如下表所示，用于比较表达式中的两个值，并返回一个单一的 `true` 或 `false` 布尔值——描述该比较的结果。
-
-![image](img/pg30_1.jpg)
 
 | **运算符：** | **比较：** |
 | :--- | :--- |
@@ -816,55 +729,42 @@ Java 交互式外壳会创建带有 `$` 前缀的内部编号变量，包含评�
 
 在 `>` “大于”运算符或 `<` “小于”运算符后添加 `=` 赋值运算符，可以使其在两个操作数的值完全相等时也返回 `true`。
 
-![image](img/hot.jpg)
-
 `<` 小于运算符通常用于测试循环中的计数器值——可以在此处 找到此类的示例。
 
 按照以下步骤在 Java 交互式外壳中探索 Java 比较运算符：
 
-![image](img/1r.jpg)打开一个命令行提示符窗口，然后输入 `jshell` 并按 `Enter` 键启动 Java 交互式外壳
-
-![image](img/2r.jpg)接下来，输入语句初始化两个 `String` 变量
+1. 打开一个命令行提示符窗口，然后输入 `jshell` 并按 `Enter` 键启动 Java 交互式外壳
+2. 接下来，输入语句初始化两个 `String` 变量
 
 ```java
 String txt = “Super ” ; String lang = “Java” ;
 ```
 
-![image](img/3r.jpg)现在，分别输入语句添加并赋值一个 `String` 值，然后显示拼接后的字符串结果
+3. 现在，分别输入语句添加并赋值一个 `String` 值，然后显示拼接后的字符串结果
 
 ```java
 txt += lang ; txt ;
 ```
 
-![image](img/pg29_1.jpg)
-
-![image](img/4r.jpg)然后输入语句初始化两个整数变量
+4. 然后输入语句初始化两个整数变量
 
 ```java
 int sum = 10 ; int num = 20 ;
 ```
 
-![image](img/5r.jpg)分别输入语句添加并赋值一个 `int` 值，然后显示加总后的整数结果
+5. 分别输入语句添加并赋值一个 `int` 值，然后显示加总后的整数结果
 
 ```java
 sum += num ; sum ;
 ```
 
-![image](img/pg29_2.jpg)
-
-![image](img/hot.jpg)
-
 Java 交互式外壳会创建带有 `$` 前缀的内部编号变量，包含评估的结果。在这里，内部变量 `$3` 和 `$7` 包含评估结果。
-
-![image](img/snake.jpg)
 
 为变量分配错误的数据类型将导致错误。
 
-### 逻辑评估
+## 逻辑评估
 
 逻辑运算符如下表所示，用于将多个每个返回布尔值的表达式组合成一个返回单一值的复杂表达式。
-
-![image](img/pg32_1.jpg)
 
 | **运算符：** | **操作：** |
 | :--- | :--- |
@@ -884,25 +784,19 @@ Java 交互式外壳会创建带有 `$` 前缀的内部编号变量，包含评�
 
 你可以在 Java 交互式外壳中通过输入 `/help` 命令发现更多选项。
 
-
-
-
-
-![image](img/2r.jpg)接下来，输入语句来初始化两个 `boolean` 
+1. 接下来，输入语句来初始化两个 `boolean`
 
 ```java
 boolean yes = true ; boolean no = false ;
 ```
 
-![image](img/3r.jpg)输入语句测试两个条件是否都为真
+2. 输入语句测试两个条件是否都为真
 
 ```java
 boolean result = ( yes && yes ) ; result = ( yes && no ) ;
 ```
 
-![image](img/pg33_1.jpg)
-
-![image](img/4r.jpg)输入语句测试其中任一个条件是否为真
+3. 输入语句测试其中任一个条件是否为真
 
 ```java
 result = ( yes || yes ) ;
@@ -910,31 +804,21 @@ result = ( yes || no ) ;
 result = ( no || no ) ;
 ```
 
-![image](img/5r.jpg)输入语句显示原始值和反反值
+4. 输入语句显示原始值和反反值
 
 ```java
 result = yes ; result = !yes ;
 ```
 
-![image](img/pg33_2.jpg)
-
-![image](img/hot.jpg)
-
 Java shell 也称为“REPL”，它是 Read（读取）、Evaluate（求值）、Print（打印）、Loop（循环）的缩写，描述了这种交互式工具。
-
-![image](img/hot.jpg)
 
 注意 `false && false` 返回 `false` 而不是 `true` —— 这证明了“两个错并不出一个对”的格言。
 
-![image](img/forget.jpg)
-
 由 `!` NOT 逻辑运算符返回的值是存储值的反值 —— 存储值本身保持不变。
 
-### 检查条件
+## 检查条件
 
 Java 程序员最喜爱的运算符可能是 `? :` 条件运算符，它能以非常简洁的方式实现强大的语句。它不寻常的语法初看之下可能很难理解，但了解这个实用的运算符是非常值得的。
-
-![image](img/pg34_1.jpg)
 
 条件运算符首先评估一个表达式的 `true` 或 `false` 值，然后根据求值结果返回两个给定的操作数之一。它的语法如下：
 
@@ -968,63 +852,48 @@ busted = ( speed > speedLimit ) ? true : false ;
 bodyTemperature = ( scale != “Celsius” ) ? 98.6 : 37.0 ;
 ```
 
-![image](img/hot.jpg)
-
 条件运算符也被称为“三元”运算符。
 
 按照以下步骤在 Java shell 中探索 Java 条件运算符：
 
-![image](img/1r.jpg)打开命令行提示窗口，然后输入 `jshell` 并按 `Enter` 键启动 Java shell
-
-![image](img/2r.jpg)接下来，输入语句来初始化两个 `int` 变量
+1. 打开命令行提示窗口，然后输入 `jshell` 并按 `Enter` 键启动 Java shell
+2. 接下来，输入语句来初始化两个 `int` 变量
 
 ```java
 int num1 = 1357 ; int num2 = 2468 ;
 ```
 
-![image](img/3r.jpg)声明另一个变量来存储测试结果 `String`
+3. 声明另一个变量来存储测试结果 `String`
 
 ```java
 String result ;
 ```
 
-![image](img/4r.jpg)输入此语句判断第一个整数值是奇数还是偶数
+4. 输入此语句判断第一个整数值是奇数还是偶数
 
 ```java
 result = ( num1 % 2 != 0 ) ? “Odd” : “Even” ;
 ```
 
-![image](img/pg35_1.jpg)
-
-![image](img/5r.jpg)现在，输入此语句判断第二个整数值是奇数还是偶数
+5. 现在，输入此语句判断第二个整数值是奇数还是偶数
 
 ```java
 result = ( num2 % 2 != 0 ) ? “Odd” : “Even” ;
 ```
 
-![image](img/pg35_2.jpg)
-
-![image](img/hot.jpg)
-
 你还可以使用命令 `jshell --feedback verbose` 启动 Java shell，以便在每次求值后接收描述性输出。
-
-![image](img/hot.jpg)
 
 注意未初始化的 `String` 变量返回一个特殊的 `null` 值 —— 表示它完全不包含内容。
 
-![image](img/forget.jpg)
-
 在这里，当存在余数时，表达式为真。
 
-### 设置优先级
+## 设置优先级
 
 包含多个运算符和操作数的复杂表达式如果没有明确操作执行顺序，就会产生歧义。这种缺乏清晰度很容易导致同一个表达式暗示不同的结果。例如，考虑这个复杂表达式：
 
 ```java
 num = 8 + 4 * 2 ;
 ```
-
-![image](img/pg36_1.jpg)
 
 从左到右计算：`8 + 4 = 12`，`12 * 2 = 24`，所以 `num = 24`。但从右到左计算：`2 * 4 = 8`，`8 + 8 = 16`，所以 `num = 16`。
 
@@ -1037,10 +906,10 @@ Java 程序员可以通过添加括号来显式指定应该先执行哪个操作
 | `++` `--` `!` | 增、减、逻辑非 |
 | `*` `/` `%` | 乘法、除法、取模 |
 | `+` `-` | 加法、减法 |
-| `>` `>=` `< `<=` | 大于、大于等于、小于、小于等于 |
+| `>` `>=` `<` `<=` | 大于、大于等于、小于、小于等于 |
 | `==` `!=` | 等于、不等 |
 | `&&` | 逻辑与 |
-| `\|\|` | 逻辑或 |
+| `||` | 逻辑或 |
 | `? :` | 条件 |
 | `=` `+=` `-=` `*=` `/=` `%=` | 赋值 |
 
@@ -1058,10 +927,7 @@ Java 程序员可以通过添加括号来显式指定应该先执行哪个操作
 
 `32 - 24 = 8, x 2 = 16`
 
-本章到目前为止使用 Java shell **jshell** 通过评估代码片段来探索各种 Java 运算符。后续示例将使用 Java 编译器 **javac** 和 Java 运行时 **java** 来创建和运行程序。你可以使用命令 `/exit` 退出 Java shell 返回普通提示符。
-
-
-
+本章到目前为止使用 Java shell `jshell` 通过评估代码片段来探索各种 Java 运算符。后续示例将使用 Java 编译器 `javac` 和 Java 运行时 `java` 来创建和运行程序。你可以使用命令 `/exit` 退出 Java shell 返回普通提示符。
 
 字面量通常与 Java 语言的关键字分离，但在 `String` 值内部如果需要双引号或单引号，则必须指示该引号字符被视为字面量处理，以避免过早终止 `String`。这可以通过在每个嵌套的引号字符前紧跟一个 `\` 转义运算符来轻松实现。例如，在 `String` 变量中包含引号，如下：
 
@@ -1082,15 +948,13 @@ String quote = “ \”Fortune favors the brave.\” said Virgil ”;
 | `\’` | 单引号 |
 | `\”` | 双引号 |
 
-![image](img/hot.jpg)
-
 可以将单引号嵌套在双引号内，作为转义引号字符的替代方案。
 
 `\n` 换行转义序列经常用于长 `String` 值中，以便多行显示输出。同样，`\t` 制表符转义序列经常用于列显示输出。使用 `\n` 换行和 `\t` 制表符转义序列的组合允许输出按行和列格式化——类似于表格。
 
 按照以下步骤使用转义序列创建 Java 程序来格式化输出：
 
-![image](img/1r.jpg)创建一个名为“Escape”的新程序，包含标准的 main 方法
+1. 创建一个名为“Escape”的新程序，包含标准的 main 方法
 
 ```java
 class Escape
@@ -1099,11 +963,9 @@ class Escape
 }
 ```
 
-![image](img/common.jpg)
-
 Escape.java
 
-![image](img/2r.jpg)在 main 方法的大括号之间插入此代码，以构建一个包含格式化表格标题和列标题的 `String`
+2. 在 main 方法的大括号之间插入此代码，以构建一个包含格式化表格标题和列标题的 `String`
 
 ```java
 String header = “\n\tNEW YORK 3-DAY FORECAST:\n” ;
@@ -1111,7 +973,7 @@ header += “\n\tDay\t\tHigh\tLow\tConditions\n” ;
 header += “\t---\t\t----\t---\t----------\n” ;
 ```
 
-![image](img/3r.jpg)添加这些行以构建一个包含格式化表格单元数据的 `String`
+3. 添加这些行以构建一个包含格式化表格单元数据的 `String`
 
 ```java
 String forecast = “\tSunday\t\t68F\t48F\tSunny\n” ;
@@ -1119,25 +981,19 @@ forecast += “\tMonday\t\t69F\t57F\tSunny\n” ;
 forecast += “\tTuesday\t\t71F\t50F\tCloudy\n” ;
 ```
 
-![image](img/4r.jpg)现在，添加此行输出两个格式化的 `String` 值
+4. 现在，添加此行输出两个格式化的 `String` 值
 
 ```java
 System.out.print( header + forecast ) ;
 ```
 
-![image](img/5r.jpg)将程序保存为 `Escape.java`，然后编译并运行程序
-
-![image](img/pg39_1.jpg)
-
-![image](img/forget.jpg)
+5. 将程序保存为 `Escape.java`，然后编译并运行程序
 
 在这种情况下，转义序列添加了换行，因此此处使用了 `print()` 方法——而不是输出后会自动添加换行的 `println()` 方法。
 
 ## 使用位操作
 
 除了本章前面介绍的普通运算符外，Java 还提供了用于二进制运算的特殊运算符。这些运算符比其他运算符不常用，但在这里简要讨论是为了让大家了解它们的存在。
-
-![image](img/pg40_1.jpg)
 
 Java “位”运算符可以与 `int` 整数数据类型一起使用，用于操作值的二进制表示位。这需要理解二进制计数，其中字节中的八位代表十进制的零到 255。例如，53 的二进制为 `00110101`（`0` x 128, `0` x 64, `1` x 32, `1` x 16, `0` x 8, `1` x 4, `0` x 2, `1` x 1）。
 
@@ -1152,6 +1008,11 @@ Java “位”运算符可以与 `int` 整数数据类型一起使用，用于�
 
 | **运算符:** | **操作:** | **示例:** | **结果:** |
 | :--- | --- | --- | --- |
+
+
+
+| 运算符 | 名称 | 示例 | 说明 |
+| :--- | :--- | :--- | :--- |
 | `&` | 与 (AND) | `a & b` | 如果两个位都为 1 则结果为 1 |
 | `\|` | 或 (OR) | `a \| b` | 如果其中一个位为 1 则结果为 1 |
 | `^` | 异或 (XOR) | `a ^ b` | 如果两个位不同则为 1 |
@@ -1166,33 +1027,17 @@ Java “位”运算符可以与 `int` 整数数据类型一起使用，用于�
 | `+` | 7 | = | `00000111` |
 | | 60 | = | `00111100` |
 
+# 本章演示了用于 Java 程序中创建分支的各种关键字。
 
-
-
-
-本章演示了用于 Java 程序中创建分支的各种关键字。
-
-### 使用 if 进行分支
-### 分支的替代方案
-### 切换分支
-## for 循环
-## 为 true 的 while 循环
-## 执行 do-while 循环
-## 跳出循环
-## 返回控制权
-## 总结
-
-### 使用 if 进行分支
+## 使用 if 进行分支
 
 `if` 关键字执行条件测试，以评估一个表达式的布尔值（Boolean）。表达式后的语句仅在评估结果为 `true` 时才会被执行，否则程序将继续执行后续代码——即走向下一个“分支”。`if` 语句的语法如下：
 
-`if (test-expression) code-to-be-executed-when-true;`
-
-![image](img/ycap.jpg)
+```java
+if (test-expression) code-to-be-executed-when-true;
+```
 
 如果被执行的代码可以包含多条语句，前提是它们被包含在大括号内，以形成一个“语句块”：
-
-![image](img/1g.jpg)创建一个名为“If”的新程序，其中包含标准的 main 方法
 
 ```java
 class If
@@ -1202,79 +1047,73 @@ class If
 }
 ```
 
-![image](img/j1.jpg)
+在 main 方法的大括号之间插入这个简单的条件测试，当一个数字大于另一个数字时，执行单条语句：
 
-If.java
+```java
+if ( 5 > 1 ) System.out.println( "Five is greater than one." ) ;
+```
 
-![image](img/2g.jpg)在 main 方法的大括号之间插入这个简单的条件测试，当一个数字大于另一个数字时，执行单条语句
-
-`if ( 5 > 1 ) System.out.println( “Five is greater than one.” ) ;`
-
-![image](img/3g.jpg)添加第二个条件测试，当一个数字小于另一个数字时，它会执行整个语句块
+添加第二个条件测试，当一个数字小于另一个数字时，它会执行整个语句块：
 
 ```java
 if ( 2 < 4 )
 {
-    System.out.println( “Two is less than four.” ) ;
-    System.out.println( “Test succeeded.” ) ;
+    System.out.println( "Two is less than four." ) ;
+    System.out.println( "Test succeeded." ) ;
 }
 ```
 
-![image](img/4g.jpg)将程序保存为 `If.java`，然后编译并运行程序，以看到所有语句都被执行——因为在这种情况下，两个测试的评估结果均为 `true`：
-
-![image](img/pg44_1.jpg)
-
-![image](img/hot.jpg)
+将程序保存为 `If.java`，然后编译并运行程序，以看到所有语句都被执行——因为在这种情况下，两个测试的评估结果均为 `true`。
 
 表达式可以使用 `true` 和 `false` 关键字。测试表达式 `( 2 < 4 )` 是 `( 2 < 4 == true )` 的简写。
 
 条件测试还可以评估复杂的表达式，以测试多个条件的布尔值。括号包裹每个测试条件以建立优先级——因此它们会被先评估。布尔运算符 `&&`（与/AND）确保只有当两个测试条件都为 `true` 时，复杂表达式才会返回 `true`：
 
-`if ( (test-condition1) && (test-condition2) ) execute-this-code;`
+```java
+if ( (test-condition1) && (test-condition2) ) execute-this-code;
+```
 
 布尔运算符 `||`（或/OR）确保只有当测试条件中的一个为 `true` 时，复杂表达式才会返回 `true`：
 
-`if ( (test-condition1) || (test-condition2) ) execute-this-code;`
+```java
+if ( (test-condition1) || (test-condition2) ) execute-this-code;
+```
 
 这些组合可以形成更长的复杂表达式：
 
-![image](img/5g.jpg)在 `If.java` 的 main 方法内部插入此行来声明并初始化一个名为 `num` 的整数变量
+在 `If.java` 的 main 方法内部插入此行来声明并初始化一个名为 `num` 的整数变量：
 
 ```java
 int num = 8 ;
 ```
 
-![image](img/6g.jpg)添加第三个条件测试，当 `num` 变量的值在指定范围内，或者恰好等于指定值时，执行一条语句
+添加第三个条件测试，当 `num` 变量的值在指定范围内，或者恰好等于指定值时，执行一条语句：
 
 ```java
 if ( ( ( num > 5 ) && ( num < 10 ) ) || ( num == 12 ) )
-    System.out.println( “Number is 6-9 inclusive, or 12” ) ;
+    System.out.println( "Number is 6-9 inclusive, or 12" ) ;
 ```
 
-![image](img/7g.jpg)重新编译程序并再次运行一次，以看到复杂表达式后的语句被执行
+重新编译程序并再次运行一次，以看到复杂表达式后的语句被执行。
 
-![image](img/pg45_1.jpg)
-
-![image](img/8g.jpg)更改赋值给 `num` 变量的值，使其既不在指定的 6-9 范围内，也不恰好等于 12。重新编译程序并再次运行，现在你会看到复杂表达式后的语句没有被执行
-
-![image](img/hot.jpg)
+更改赋值给 `num` 变量的值，使其既不在指定的 6-9 范围内，也不恰好等于 12。重新编译程序并再次运行，现在你会看到复杂表达式后的语句没有被执行。
 
 范围可以使用 `>=` 和 `<=` 运算符扩展到包含上限和下限。
 
-![image](img/forget.jpg)
-
 复杂表达式使用 `==` 等于运算符来指定精确匹配，而不是 `=` 赋值运算符。
 
-### 分支的替代方案
+## 分支的替代方案
 
 `else` 关键字与 `if` 关键字结合使用，创建 `if else` 语句，根据测试表达式的评估结果为程序提供备选择的分支。在最简单的形式中，它仅仅是在测试失败时指定一个备选语句执行：
 
-`if (test-expression) code-to-be-executed-when-true;`
-`else code-to-be-executed-when-false;`
+```java
+if (test-expression) code-to-be-executed-when-true;
+else code-to-be-executed-when-false;
+```
 
-![image](img/ycap.jpg)每个备选分支可以是单条语句，也可以是包含多条语句的语句——包含在大括号内
+每个备选分支可以是单条语句，也可以是包含多条语句的语句块——包含在大括号内。
 
-![image](img/1g.jpg)创建一个名为“Else”的新程序，其中包含标准的 main 方法
+创建一个名为“Else”的新程序，其中包含标准的 main 方法：
 
 ```java
 class Else
@@ -1284,59 +1123,49 @@ class Else
 }
 ```
 
-![image](img/j1.jpg)
-
-Else.java
-
-![image](img/2g.jpg)在 main 方法内部插入此行来声明并初始化一个名为 `hrs` 的整数变量
+在 main 方法内部插入此行来声明并初始化一个名为 `hrs` 的整数变量：
 
 ```java
 int hrs = 11 ;
 ```
 
-![image](img/3g.jpg)插入这个简单的条件测试，当 `hrs` 变量的值为 13 时，执行单条语句
+插入这个简单的条件测试，当 `hrs` 变量的值为 13 时，执行单条语句：
 
 ```java
 if ( hrs < 13 )
 {
-    System.out.println( “Good morning: ” + hrs ) ;
+    System.out.println( "Good morning: " + hrs ) ;
 }
 ```
 
-![image](img/4g.jpg)将程序保存为 `Else.java`，然后编译并运行程序，以看到语句被执行
+将程序保存为 `Else.java`，然后编译并运行程序，以看到语句被执行。注意在 `else` 关键字之前，第一条语句像通常一样用分号结束的。
 
-![image](img/pg44_1.jpg)注意在 `else` 关键字之前，第一条语句像通常一样用分号结束的
-
-![image](img/5g.jpg)更改赋值给 `hrs` 变量的值为 15，然后在 `if` 语句之后直接添加此备选分支
+更改赋值给 `hrs` 变量的值为 15，然后在 `if` 语句之后直接添加此备选分支：
 
 ```java
 else if ( hrs < 18 )
 {
-    System.out.println( “Good afternoon: ” + hrs ) ;
+    System.out.println( "Good afternoon: " + hrs ) ;
 }
 ```
 
-![image](img/6g.jpg)保存更改，重新编译并再次运行程序，以看到只执行备选语句
+保存更改，重新编译并再次运行程序，以看到只执行备选语句。
 
-![image](img/7g.jpg)有时提供一个最终的 `else` 分支（不嵌套 `if` 语句）是有必要的，以便指定在没有测试表达式评估为 `true` 时执行的“默认”语句：
+有时提供一个最终的 `else` 分支（不嵌套 `if` 语句）是有必要的，以便指定在没有测试表达式评估为 `true` 时执行的“默认”语句：
 
-![image](img/8g.jpg)更改赋值给 `hrs` 变量的值为 21，然后在 `if else` 语句末尾添加此默认分支
+更改赋值给 `hrs` 变量的值为 21，然后在 `if else` 语句末尾添加此默认分支：
 
 ```java
-else System.out.println( “Good evening: ” + hrs ) ;
+else System.out.println( "Good evening: " + hrs ) ;
 ```
 
-![image](img/pg45_1.jpg)保存更改，重新编译并再次运行程序，以只执行默认语句
-
-![image](img/hot.jpg) 
+保存更改，重新编译并再次运行程序，以只执行默认语句。
 
 条件分支是计算机程序运行的基本过程。
 
-### 切换分支
+## 切换分支
 
 大量的 `if else` 语句为程序提供了许多条件分支，可能会变得臃肿。当测试表达式反复评估同一个变量值时，`switch` 语句通常提供更优雅的解决方案。
-
-![image](img/ycap.jpg)
 
 典型的 switch 语句块如下：
 
@@ -1350,32 +1179,27 @@ switch (test-variable)
 }
 ```
 
-
-
-
 `switch` 语句的工作方式不同寻常。它接收一个指定的变量，然后尝试在多个 `case` 选项中匹配其赋值值。随后，将执行与匹配值相同的选项相关的语句。
 
 可选地，`switch` 语句可以包含一个使用 `default` 关键字的最终选项，用于指定当没有 `case` 选项匹配指定变量的赋值值时要执行的语句。
 
-每个选项都以 `case` 关键字开头，并跟跟着一个要匹配的值。接着是 `:` 冒号以及匹配成功后要执行的语句（如果有的话）。
+每个选项都以 `case` 关键字开头，并跟着一个要匹配的值。接着是 `:` 冒号以及匹配成功后要执行的语句（如果有的话）。
 
 重要的一点是，与每个 `case` 选项相关的语句或语句块必须由 `break` 关键字终止。否则，程序将在执行完匹配选项后继续执行其他 `case` 选项的语句。有时，这种做法是有意义的，即可以指定多个 `case` 选项，让它们在匹配时都执行相同的语句——例如，每三个选项块执行同一个语句，如下所示：
 
 ```java
 switch (test-variable)
 {
-case value1 : case value2 : case value3 :
-    code-A-to-be-executed-when-true ; break ;
-case value4 : case value5 : case value6 :
-    code-B-to-be-executed-when-true ; break ;
+    case value1 : case value2 : case value3 :
+        code-A-to-be-executed-when-true ; break ;
+    case value4 : case value5 : case value6 :
+        code-B-to-be-executed-when-true ; break ;
 }
 ```
 
-![image](img/snake.jpg)
-
 缺少 `break` 关键字并不是语法错误——请确保 `switch` 块中存在所有预期的 `break`，以避免意外结果。
 
-![image](img/1g.jpg)创建一个名为“Switch”的新程序，其中包含标准的 main 方法
+创建一个名为“Switch”的新程序，其中包含标准的 main 方法：
 
 ```java
 class Switch
@@ -1384,17 +1208,13 @@ class Switch
 }
 ```
 
-![image](img/j1.jpg)
-
-Switch.java
-
-![image](img/2g.jpg)在 main 方法内部声明并初始化三个整数变量
+在 main 方法内部声明并初始化三个整数变量：
 
 ```java
 int month = 2, year = 2022, num = 31 ;
 ```
 
-![image](img/3g.jpg)添加一个 `switch` 语句块来测试赋值给 `month` 变量的值
+添加一个 `switch` 语句块来测试赋值给 `month` 变量的值：
 
 ```java
 switch ( month )
@@ -1402,41 +1222,35 @@ switch ( month )
 }
 ```
 
-![image](img/4g.jpg)在 `switch` 块内部，插入 `case` 选项，为月份 4、6、9 和 11 给变量 `num` 分配新值
+在 `switch` 块内部，插入 `case` 选项，为月份 4、6、9 和 11 给变量 `num` 分配新值：
 
 ```java
 case 4 : case 6 : case 9 : case 11 : num = 30 ; break ;
 ```
 
-![image](img/5g.jpg)根据 `year` 的值，插入一个 `case` 选项，为月份 2 给变量 `num` 分配新值
+根据 `year` 的值，插入一个 `case` 选项，为月份 2 给变量 `num` 分配新值：
 
 ```java
 case 2 : num = ( year % 4 == 0 ) ? 29 : 28 ; break ;
 ```
 
-![image](img/6g.jpg)在 `switch` 块之后、main 方法末尾，添加此行以输出所有三个整数值
+在 `switch` 块之后、main 方法末尾，添加此行以输出所有三个整数值：
 
 ```java
-System.out.println( month+“/”+year+“: “+num+“days” ) ;
+System.out.println( month+"/"+year+": "+num+"days" ) ;
 ```
 
-![image](img/7g.jpg)将程序保存为 `Switch.java`，然后编译并运行程序查看输出
-
-![image](img/pg49_1.jpg)
-
-![image](img/hot.jpg)
+将程序保存为 `Switch.java`，然后编译并运行程序查看输出。
 
 注意这三个整数变量在这里是如何使用方便的简写方式内联声明并初始化的。
 
-![image](img/forget.jpg)
-
 条件运算符在第 5 步发挥了很好的作用。你可以返回这里回顾它是如何工作的。
 
-## 循环 (Looping for)
+# 循环
+
+## for 循环
 
 循环是一个代码块，它重复执行包含的语句，直到满足某个测试条件——随后循环结束，程序继续执行下一个任务。
-
-![image](img/arrowg.jpg)
 
 Java 编程中最频繁使用的循环结构采用 `for` 关键字，其语法如下：
 
@@ -1459,61 +1273,54 @@ for ( initializer ; test-expression ; updater )
 
 更新器通常被称为“递增器 (incrementer)”，因为它通常是递增而非递减计数器变量。
 
-![image](img/1g.jpg)创建一个名为“Switch”的新程序，其中包含标准的 main 方法
+创建一个名为“For”的新程序，其中包含标准的 main 方法：
 
 ```java
-class Switch
+class For
 {
     public static void main ( String[] args ) { }
 }
 ```
 
-![image](img/j1.jpg)
-
-For.java
-
-![image](img/2g.jpg)在 main 方法内部声明并初始化一个整数变量
+在 main 方法内部声明并初始化一个整数变量：
 
 ```java
 int num = 0;
 ```
 
-![image](img/3g.jpg)添加一个 `for` 循环执行三次迭代并显示 `i` 的当前值
+添加一个 `for` 循环执行三次迭代并显示 `i` 的当前值：
 
 ```java
 for ( int i = 1 ; i < 4 ; i++ )
 {
-    System.out.println( “Outer Loop=” + i );
+    System.out.println( "Outer Loop=" + i );
 }
 ```
 
-![image](img/4g.jpg)在 `for` 块内部插入一个嵌套的 `for` 循环同样执行三次迭代，显示 `j` 的当前值
+在 `for` 块内部插入一个嵌套的 `for` 循环同样执行三次迭代，显示 `j` 的当前值：
 
 ```java
 for ( int j = 1 ; j < 4 ; j++ )
 {
-    System.out.print( “\tInner Loop=” + j );
-    System.out.println( “\t\tTotal=” (++num) );
+    System.out.print( "\tInner Loop=" + j );
+    System.out.println( "\t\tTotal=" + (++num) );
 }
 ```
 
-![image](img/5g.jpg)将程序保存为 `For.java`，然后编译并运行程序查看输出
-
-![image](img/pg51_1.jpg)
-
-![image](img/snake.jpg)
+将程序保存为 `For.java`，然后编译并运行程序查看输出。
 
 递增 `++` 和递减 `--` 运算符可以作为变量的前缀以立即更改值，也可以作为后缀——在引用时才更改值。尝试将此示例中的递增运算符改为 `++i` 和 `++j` 以查看差异。
 
-## While 真循环 (Looping while true)
+## while 循环
 
-`for` 循环的另一种结构（见此处
+`for` 循环的另一种结构采用 `while` 关键字，其语法如下：
+
+```java
+while ( test-expression )
 {
     statements-to-be-executed-on-each-iteration ;
 }
 ```
-
-![image](img/arrowg.jpg)
 
 与 `for` 循环一样，`while` 循环重复执行包含的语句，直到满足测试条件——随后循环结束，程序继续执行下一个任务。
 
@@ -1523,19 +1330,22 @@ for ( int j = 1 ; j < 4 ; j++ )
 
 注意，如果测试表达式在第一次评估时返回 `false`，则循环语句将永远不会执行。
 
-
-
-
-
 一个 `while` 循环可以构造成类似于 `for` 循环的结构，通过在测试表达式中评估计数器变量，实现方法是在循环外部创建一个计数器变量，并在每次迭代执行的语句改变它的值。例如，上一个示例中的外部 `for` 循环可以重构为 `while` 循环，如下：
 
 ```java
 int i = 1 ;
 while ( i < 4 )
 {
-    System.out.println( “Outer Loop i=” +i ) ;
-    i++;
+```
+
+
+
+System.out.println( “Outer Loop i=” + i ) ;
+
+i++;
+
 }
+
 ```
 
 这会将计数器初始化放置在 `while` 循环结构外部，并将更新器放在语句块内部。
@@ -1544,12 +1354,14 @@ while ( i < 4 )
 
 无限循环会由于持续执行迭代而锁定程序——在 Windows 上，按下 `Ctrl + C` 停止。
 
-![image](img/1g.jpg)创建一个名为“While”的新程序，其中包含标准的 `main` 方法
+![image](img/1g.jpg)
+
+### 创建一个名为“While”的新程序，其中包含标准的 `main` 方法
 
 ```java
 class While
 {
-    public static void main ( String[] args ) {      }
+    public static void main ( String[] args ) { }
 }
 ```
 
@@ -1557,13 +1369,17 @@ class While
 
 While.java
 
-![image](img/2g.jpg)在 `main` 方法内部声明并初始化一个名为 `num` 的整数变量
+![image](img/2g.jpg)
+
+### 在 `main` 方法内部声明并初始化一个名为 `num` 的整数变量
 
 ```java
 int num = 100 ;
 ```
 
-![image](img/3g.jpg)添加一个 `while` 循环，当 `num` 变量大于零时显示其当前值
+![image](img/3g.jpg)
+
+### 添加一个 `while` 循环，当 `num` 变量大于零时显示其当前值
 
 ```java
 while ( num > 0 )
@@ -1572,13 +1388,17 @@ while ( num > 0 )
 }
 ```
 
-![image](img/4g.jpg)在 `while` 循环块的末尾插入一个更新器，每次迭代将 `num` 变量的值减少 10——从而避免无限循环
+![image](img/4g.jpg)
+
+### 在 `while` 循环块的末尾插入一个更新器，每次迭代将 `num` 变量的值减少 10——从而避免无限循环
 
 ```java
 num -= 10 ;
 ```
 
-![image](img/5g.jpg)将程序保存为 `While.java`，然后编译并运行程序查看输出
+![image](img/5g.jpg)
+
+### 将程序保存为 `While.java`，然后编译并运行程序查看输出
 
 ![image](img/pg53_1.jpg)
 
@@ -1616,12 +1436,14 @@ while ( test-expression ) ;
 
 始终将循环要执行的语句包含在大括号内——以保持代码的清晰度并提高代码的可维护性。
 
-![image](img/1g.jpg)创建一个名为“DoWhile”的新程序，其中包含标准的 `main` 方法
+![image](img/1g.jpg)
+
+### 创建一个名为“DoWhile”的新程序，其中包含标准的 `main` 方法
 
 ```java
 class DoWhile
 {
-    public static void main ( String[] args ) {      }
+    public static void main ( String[] args ) { }
 }
 ```
 
@@ -1629,13 +1451,17 @@ class DoWhile
 
 DoWhile.java
 
-![image](img/2g.jpg)在 `main` 方法内部声明并初始化一个名为 `num` 的整数变量
+![image](img/2g.jpg)
+
+### 在 `main` 方法内部声明并初始化一个名为 `num` 的整数变量
 
 ```java
 int num = 100 ;
 ```
 
-![image](img/3g.jpg)添加一个 `do while` 循环，当 `num` 变量小于 10 时显示其当前值
+![image](img/3g.jpg)
+
+### 添加一个 `do while` 循环，当 `num` 变量小于 10 时显示其当前值
 
 ```java
 do
@@ -1645,13 +1471,17 @@ do
 while ( num < 10 ) ;
 ```
 
-![image](img/4g.jpg)在 `while` 循环块的末尾插入一个更新器，每次迭代将 `num` 变量的值减少 10——从而避免无限循环
+![image](img/4g.jpg)
+
+### 在 `while` 循环块的末尾插入一个更新器，每次迭代将 `num` 变量的值减少 10——从而避免无限循环
 
 ```java
 num -= 10 ;
 ```
 
-![image](img/5g.jpg)将程序保存为 `While.java`，然后编译并运行程序查看输出
+![image](img/5g.jpg)
+
+### 将程序保存为 `While.java`，然后编译并运行程序查看输出
 
 ## 跳出循环
 
@@ -1659,12 +1489,14 @@ num -= 10 ;
 
 ![image](img/pg55.jpg)
 
-![image](img/1g.jpg)创建一个名为“Break”的程序，包含标准的 `main` 方法
+![image](img/1g.jpg)
+
+### 创建一个名为“Break”的程序，包含标准的 `main` 方法
 
 ```java
 class Break
 {
-    public static void main ( String[] args ) {      }
+    public static void main ( String[] args ) { }
 }
 ```
 
@@ -1672,7 +1504,9 @@ class Break
 
 Break.java
 
-![image](img/2g.jpg)在 `main` 方法内部创建两个嵌套的 `for` 循环，在每次迭代中显示它们的计数器值
+![image](img/2g.jpg)
+
+### 在 `main` 方法内部创建两个嵌套的 `for` 循环，在每次迭代中显示它们的计数器值
 
 ```java
 for ( int i = 1 ; i < 4 ; i++ )
@@ -1684,7 +1518,9 @@ for ( int i = 1 ; i < 4 ; i++ )
 }
 ```
 
-![image](img/3g.jpg)将程序保存为 `Break.java`，然后编译并运行程序查看输出
+![image](img/3g.jpg)
+
+### 将程序保存为 `Break.java`，然后编译并运行程序查看输出
 
 ![image](img/pg56_1.jpg)
 
@@ -1720,17 +1556,15 @@ for ( int i = 1 ; i < 4 ; i++ )
 }
 ```
 
-
-
-
-
 `break` 和 `continue` 关键字的默认行为可以更改，通过指明标签名称来显式指定控制流返回到带标签的外层循环。这允许循环执行迭代，直到满足指定的条件或被中断。
 
 ![image](img/pg58_2.jpg)
 
 标记循环的语法需要一个标签名称，后跟一个冒号 `:`，放在循环结构开始之前。
 
-![image](img/1g.jpg)启动一个名为“Label”的新程序，其中包含标准的 main 方法
+![image](img/1g.jpg)
+
+### 启动一个名为“Label”的新程序，其中包含标准的 main 方法
 
 ```java
 class Label
@@ -1743,7 +1577,9 @@ class Label
 
 Label.java
 
-![image](img/2g.jpg)在 main 方法内部，创建两个嵌套的 `for` 循环，在三次迭代中的每次中显示它们的计数器值
+![image](img/2g.jpg)
+
+### 在 main 方法内部，创建两个嵌套的 `for` 循环，在三次迭代中的每次中显示它们的计数器值
 
 ```java
 for ( int i = 1 ; i < 4 ; i++ )
@@ -1755,11 +1591,15 @@ for ( int i = 1 ; i < 4 ; i++ )
 }
 ```
 
-![image](img/3g.jpg)将程序保存为 `Label.java`，然后编译并运行程序以查看输出
+![image](img/3g.jpg)
+
+### 将程序保存为 `Label.java`，然后编译并运行程序以查看输出
 
 ![image](img/pg58_1.jpg)
 
-![image](img/4g.jpg)修改外层循环的开头，将其标记为“outerLoop”
+![image](img/4g.jpg)
+
+### 修改外层循环的开头，将其标记为“outerLoop”
 
 ```java
 outerLoop : for ( int i = 1 ; i < 4 ; i++ )
@@ -1767,7 +1607,9 @@ outerLoop : for ( int i = 1 ; i < 4 ; i++ )
 
 要显式指定程序应在外层循环中继续，在 `continue` 关键字之后写上该循环的标签名称。
 
-![image](img/5g.jpg)将此 `continue` 语句添加到内层循环语句的开头，以便进入外层循环的下一次迭代——然后重新编译并运行程序
+![image](img/5g.jpg)
+
+### 将此 `continue` 语句添加到内层循环语句的开头，以便进入外层循环的下一次迭代——然后重新编译并运行程序
 
 ```java
 if ( i == 1 && j == 1 )
@@ -1785,7 +1627,9 @@ if ( i == 1 && j == 1 )
 
 要显式指定程序应从外层循环退出，在 `break` 关键字之后写上该循环的标签名称。
 
-![image](img/6g.jpg)将此 `break` 语句添加到内层循环语句的开头，以便退出外层循环——然后重新编译并运行程序
+![image](img/6g.jpg)
+
+### 将此 `break` 语句添加到内层循环语句的开头，以便退出外层循环——然后重新编译并运行程序
 
 ```java
 if ( i == 2 && j == 3 )
@@ -1837,7 +1681,9 @@ if ( i == 2 && j == 3 )
 
 在 Java 中处理值需要一个类型以便进行处理。
 
-![image](img/pg62_1.jpg)数值值可以以以下语法轻松转换为另一种数据类型：
+![image](img/pg62_1.jpg)
+
+数值值可以以以下语法轻松转换为另一种数据类型：
 
 ```java
 (type)value
@@ -1845,7 +1691,9 @@ if ( i == 2 && j == 3 )
 
 将 `float` 转换为 `int` 时会发生某些精度损失。
 
-![image](img/common.jpg)例如，将 9.9 的 `float` 转换为 `int` 会截断小数部分。
+![image](img/common.jpg)
+
+例如，将 9.9 的 `float` 转换为 `int` 会截断小数部分。
 
 数值可以使用该类型的 `toString()` 方法转换为 `String`：
 
@@ -1877,7 +1725,9 @@ Float.parseFloat(msg)
 
 当将 `String` 值转换为数值类型时，该 `String` 只能包含有效的数值，否则编译器将报告错误。所有数值类都有一个 `parse...` 方法和一个 `toString` 方法，允许在 `String` 值和数值类型之间进行转换。
 
-![image](img/1p.jpg)启动一个名为“Convert”的新程序，其中包含标准的 main 方法
+![image](img/1p.jpg)
+
+### 启动一个名为“Convert”的新程序，其中包含标准的 main 方法
 
 ```java
 class Convert
@@ -1886,7 +1736,9 @@ class Convert
 }
 ```
 
-![image](img/2p.jpg)Convert.java
+![image](img/2p.jpg)
+
+Convert.java
 
 在 main 方法内部，声明并初始化一个 `float` 变量和一个 `String` 变量：
 
@@ -1907,17 +1759,14 @@ int daysInt = (int) daysFloat;
 int weeksInt = Integer.parseInt(weeksString);
 ```
 
-
-
-
-
-```
+```java
 int week = ( daysInt / weeksInt ) ;
-
 System.out.println( “Days per week: “ + week ) ;
 ```
 
-![image](img/6p.jpg)将程序保存为 `Convert.java`，然后编译并运行程序以查看输出。
+![image](img/6p.jpg)
+
+### 将程序保存为 `Convert.java`，然后编译并运行程序以查看输出。
 
 ![image](img/pg63_1.jpg)
 
@@ -1927,13 +1776,17 @@ System.out.println( “Days per week: “ + week ) ;
 
 ![image](img/pinkbox.jpg)
 
-数组的声明首先说明其数据类型，使用数据类型关键字之一，随后紧跟一个方括号 `[ ]` 以表示它是一个数组变量。接下来，声明会写数组变量名，并遵循标准的命名规范。
+数组的声明首先说明其数据类型，使用数据类型关键字之一，随后紧跟一个方括号 `[]` 以表示它是一个数组变量。接下来，声明会写数组变量名，并遵循标准的命名规范。
 
 可以在声明时通过通过逗号分隔的列表分配适宜数据类型的值来初始化数组，该列表包含在花括号 `{ }` 中。例如，一个初始化了三个值的整数数组变量的声明可能如下所示：
 
+```java
+int[] numbersArray = { 1, 2, 3 } ;
 ```
-int[ ] numbersArray = { 1, 2, 3 } ;
-```
+
+
+
+# 数组
 
 数组创建的长度等于分配列表的长度，允许每个值对应一个“元素”——在这种情况下，它是一个包含三个元素的数组。
 
@@ -1943,8 +1796,8 @@ int[ ] numbersArray = { 1, 2, 3 } ;
 
 数组也可以通过 `new` 关键字创建一个指定大小的空数组“对象”，从而在声明时不分配初始值列表来声明一个空数组。所需的空元素数量在适宜数据类型后的方括号内的赋值语句中指定。例如，一个具有三个元素的空整数数组变量的声明可能如下所示：
 
-```
-int[ ] numbersArray = new int[3] ;
+```java
+int[] numbersArray = new int[3];
 ```
 
 `int` 和 `float` 数据类型的元素被分配默认值 0，`String` 数据类型为 `null`，`char` 数据类型为 `\0`，`boolean` 数据类型为 `false`。
@@ -1953,67 +1806,64 @@ int[ ] numbersArray = new int[3] ;
 
 记住数组索引从零开始。这意味着 `index[2]` 访问数组中的第三个元素，而不是第二个元素。
 
-![image](img/1p.jpg)启动一个名为“Array”的新程序，包含标准的 main 方法
+## 示例：Array 程序
 
-```
-class Array
-{
-public static void main ( String[] args ) { }
+![image](img/1p.jpg) 启动一个名为“Array”的新程序，包含标准的 main 方法
+
+```java
+class Array {
+    public static void main(String[] args) { }
 }
 ```
 
-![image](img/common.jpg)
+![image](img/common.jpg) Array.java
 
-Array.java
+![image](img/2p.jpg) 在 main 方法内部，声明并初始化一个具有三个元素的 `String` 数组
 
-![image](img/2p.jpg)在 main 方法内部，声明并初始化一个具有三个元素的 `String` 数组
-
-```
-String[] str = { “Much ”, “More”, “ Java” } ;
+```java
+String[] str = { "Much ", "More", " Java" };
 ```
 
-![image](img/3p.jpg)声明一个具有三个元素的空整数数组
+![image](img/3p.jpg) 声明一个具有三个元素的空整数数组
 
-```
-intint num = new int[3] ;
-```
-
-![image](img/4p.jpg)给前两个整数数组元素赋值
-
-```
-num[0] = 100 ;
-num[1] = 200 ;
+```java
+int[] num = new int[3];
 ```
 
-![image](img/5p.jpg)给第二个 String 数组元素赋新值
+![image](img/4p.jpg) 给前两个整数数组元素赋值
 
-```
-str[1] = “Better” ;
-```
-
-![image](img/6p.jpg)输出每个数组的长度以及每个数组所有元素的内容
-
-```
-System.out.println( “String array length is “ + str.length ) ;
-System.out.println( “Integer array length is”+ num.length) ;
-System.out.println( num[0] + ”,” +num[1]+ ”,”+num[2] ) ;
-System.out.println( str[0] + str[1] + str[2] ) ;
+```java
+num[0] = 100;
+num[1] = 200;
 ```
 
-![image](img/7p.jpg)将程序保存为 `Array.java`，然后编译并运行程序以查看输出。
+![image](img/5p.jpg) 给第二个 String 数组元素赋新值
+
+```java
+str[1] = "Better";
+```
+
+![image](img/6p.jpg) 输出每个数组的长度以及每个数组所有元素的内容
+
+```java
+System.out.println("String array length is " + str.length);
+System.out.println("Integer array length is " + num.length);
+System.out.println(num[0] + "," + num[1] + "," + num[2]);
+System.out.println(str[0] + str[1] + str[2]);
+```
+
+![image](img/7p.jpg) 将程序保存为 `Array.java`，然后编译并运行程序以查看输出。
 
 ![image](img/pg65_1.jpg)
 
-![image](img/forget.jpg)
+![image](img/forget.jpg) `String` 值需要包含在引号内。
 
-`String` 值需要包含引号内。
-
-## 传递参数
+# 传递参数
 
 声明程序 `main` 方法的标准 Java 代码在其括号内包含一个参数，该参数创建一个 `String` 数组，传统命名为“args”：
 
 ```java
-public static void main( String[] args ) { }
+public static void main(String[] args) { }
 ```
 
 ![image](img/pg68_1.jpg)
@@ -2022,144 +1872,127 @@ public static void main( String[] args ) { }
 
 传递给程序的单个值会自动放置在 `args[]` 数组的第一个元素中，因此程序可以通过 `args[0]` 访问它。
 
-重要的是 `args[]` 数组是 `String` 类型。数组中元素的总数以整数形式存储在该数组的 `length` 属性中。访问该数字的语法只需在数组名后加上一个点和“length”。例如，`numbersArray.length` 将返回上述示例中数组的大小——在这种情况下，为整数 3。
+## 示例：Args 程序（单参数）
 
-数组也可以通过 `new` 关键字创建一个指定大小的空数组“对象”，从而在声明时不分配初始值列表来声明一个空数组。所需的空元素数量在适宜数据类型后的方括号内的赋值语句中指定。记住数组索引从零开始。这意味着 `index[2]` 访问数组中的第三个元素，而不是第二个元素。
+![image](img/1p.jpg) 启动一个名为“Array”的新程序，包含标准的 main 方法
 
-![image](img/1p.jpg)启动一个名为“Array”的新程序，包含标准的 main 方法
-
-```
-class Array
-{
-public static void main ( String[] args ) { }
+```java
+class Array {
+    public static void main(String[] args) { }
 }
 ```
 
-![image](img/common.jpg)
+![image](img/common.jpg) Array.java
 
-Array.java
-
-![image](img/2p.jpg)在 main 方法内部，声明并初始化一个具有三个元素的 `String` 数组
-
-```
-String[] str = { “Much ”, “More”, “ Java” } ;
-```
-
-![image](img/3p.jpg)声明一个具有三个元素的空整数数组
-
-```
-intint num = new int[3] ;
-```
-
-![image](img/4p.jpg)给前两个整数数组元素赋值
-
-```
-num[0] = 100 ;
-num[1] = 200 ;
-```
-
-![image](img/5p.jpg)给第二个 String 数组元素赋新值
-
-```
-str[1] = “Better” ;
-```
-
-![image](img/6p.jpg)输出每个数组的长度以及每个数组所有元素的内容
+![image](img/2p.jpg) 在 main 方法内部，声明并初始化一个具有三个元素的 `String` 数组
 
 ```java
-System.out.println( “String array length is “ + str.length ) ;
-System.out.println( “Integer array length is”+ num.length) ;
-System.out.println( num[0] + ”,” +num[1]+ ”,”+num[2] ) ;
-System.out.println( str[0] + str[1] + str[2] ) ;
+String[] str = { "Much ", "More", " Java" };
 ```
 
-![image](img/7p.jpg)将程序保存为 `Array.java`，然后编译并运行程序以查看输出。
+![image](img/3p.jpg) 声明一个具有三个元素的空整数数组
+
+```java
+int[] num = new int[3];
+```
+
+![image](img/4p.jpg) 给前两个整数数组元素赋值
+
+```java
+num[0] = 100;
+num[1] = 200;
+```
+
+![image](img/5p.jpg) 给第二个 String 数组元素赋新值
+
+```java
+str[1] = "Better";
+```
+
+![image](img/6p.jpg) 输出每个数组的长度以及每个数组所有元素的内容
+
+```java
+System.out.println("String array length is " + str.length);
+System.out.println("Integer array length is " + num.length);
+System.out.println(num[0] + "," + num[1] + "," + num[2]);
+System.out.println(str[0] + str[1] + str[2]);
+```
+
+![image](img/7p.jpg) 将程序保存为 `Array.java`，然后编译并运行程序以查看输出。
 
 ![image](img/pg65_1.jpg)
 
-![image](img/forget.jpg)
+![image](img/forget.jpg) `String` 值需要包含在引号内。
 
-`String` 值需要包含引号内。
-
-## 传递多个参数
+# 传递多个参数
 
 可以在命令行向程序传递多个参数，跟在程序名和空格之后。参数之间必须由至少一个空格，其值将按顺序放入 `args[]` 数组的元素中。然后可以像任何其他数组一样通过索引数字访问每个值——`args[0]` 是第一个参数，`args[1]` 是第二个参数，依此类推。
 
-
-
-
 该程序可以测试 `args[]` 数组的 `length` 属性，以确保用户输入了数量参数。当测试失败时，可以使用 `return` 关键字退出 `main` 方法，从而退出程序：
 
-![image](img/1p.jpg)启动名为“Args”的新程序，包含标准的 main 方法
+## 示例：Args 程序（多参数）
+
+![image](img/1p.jpg) 启动名为“Args”的新程序，包含标准的 main 方法
 
 ```java
-class Args
-{
-    public static void main ( String[] args ) {
-    }
+class Args {
+    public static void main(String[] args) { }
 }
 ```
 
-![image](img/common.jpg)
+![image](img/common.jpg) Args.java
 
-Args.java
-
-![image](img/2p.jpg)在 main 方法内部，编写一个 `if` 语句，当没有从命令行 `args[]` 数组中输入所需的数量参数时，输出建议并退出程序——在这种情况下，数量为三个
+![image](img/2p.jpg) 在 main 方法内部，编写一个 `if` 语句，当没有从命令行 `args[]` 数组中输入所需的数量参数时，输出建议并退出程序——在这种情况下，数量为三个
 
 ```java
-if ( args.length != 3 )
-{
-    System.out.println( “Wrong number of arguments” ;
-    return ;
+if (args.length != 3) {
+    System.out.println("Wrong number of arguments");
+    return;
 }
 ```
 
-![image](img/3p.jpg)在 `if` 语句下方创建两个 `int` 变量——分别初始化为第一个参数和第三个参数的值
+![image](img/3p.jpg) 在 `if` 语句下方创建两个 `int` 变量——分别初始化为第一个参数和第三个参数的值
 
 ```java
-int num1 = Integer.parseInt( args[0] ) ;
-int num2 = Integer.parseInt( args[2] ) ;
+int num1 = Integer.parseInt(args[0]);
+int num2 = Integer.parseInt(args[2]);
 ```
 
-![image](img/4p.jpg)添加一个 `String` 变量，初始化为所有三个参数的拼接
+![image](img/4p.jpg) 添加一个 `String` 变量，初始化为所有三个参数的拼接
 
 ```java
-String msg = args[0] + args[1] + args[2] + “=” ;
+String msg = args[0] + args[1] + args[2] + "=";
 ```
 
-![image](img/hot.jpg)
+![image](img/hot.jpg) `return` 关键字退出当前方法。它还可以将值返回到调用方法的地方。更多详情请参阅此处。
 
-`return` 关键字退出当前方法。它还可以将值返回到调用方法的地方。更多详情请参阅此处。
-
-![image](img/5p.jpg)添加此 `if else` 语句对参数进行算术运算，并将结果附加到 `String` 变量
+![image](img/5p.jpg) 添加此 `if else` 语句对参数进行算术运算，并将结果附加到 `String` 变量
 
 ```java
-if ( args[1].equals(“+”) )             msg += (num1 + num2);
-else if ( args[1].equals(“-”) )      msg += (num1 - num2) ;
-else if ( args[1].equals(“x”) )      msg += (num1 * num2) ;
-else if ( args[1].equals(“/”) )      msg += (num1 / num2) ;
-else msg = “Incorrect operator” ;
+if (args[1].equals("+"))             msg += (num1 + num2);
+else if (args[1].equals("-"))        msg += (num1 - num2);
+else if (args[1].equals("x"))        msg += (num1 * num2);
+else if (args[1].equals("/"))        msg += (num1 / num2);
+else msg = "Incorrect operator";
 ```
 
-![image](img/6p.jpg)在 main 方法末尾插入此行以显示附加的 `String`
+![image](img/6p.jpg) 在 main 方法末尾插入此行以显示附加的 `String`
 
 ```java
-System.out.println( msg ) ;
+System.out.println(msg);
 ```
 
-![image](img/7p.jpg)将程序保存为 `Args.java`，然后使用三个参数编译并运行程序——一个整数、任何算术符号 + - x /，以及另一个整数
+![image](img/7p.jpg) 将程序保存为 `Args.java`，然后使用三个参数编译并运行程序——一个整数、任何算术符号 + - x /，以及另一个整数
 
 ![image](img/pg69_1.jpg)
 
-![image](img/8p.jpg)现在，使用错误的第二个参数和错误的参数数量运行程序
+![image](img/8p.jpg) 现在，使用错误的第二个参数和错误的参数数量运行程序
 
 ![image](img/pg69_2.jpg)
 
-![image](img/hot.jpg)
+![image](img/hot.jpg) 如果输入了非数值，此程序将报告错误。关于如何捕获错误的详情，请参阅此处。
 
-如果输入了非数值，此程序将报告错误。关于如何捕获错误的详情，请参阅此处。
-
-## 遍历元素
+# 遍历元素
 
 所有类型的循环都可以轻松读取存储在数组元素中的所有值。循环计数器应该从第一个元素的索引开始，然后一直进行到最后一个索引。数组中最后一个元素的索引始终比数组长度少 1——因为索引从零开始。
 
@@ -2167,169 +2000,107 @@ System.out.println( msg ) ;
 
 将数组的 `length` 属性设置为循环的条件测试，以确定循环何时结束是很有用的。这意味着循环将持续到计数器值超过数组最后一个元素的索引。
 
-![image](img/1p.jpg)启动名为“Loops”的新程序，包含标准的 main 方法
+## 示例：Loops 程序
+
+![image](img/1p.jpg) 启动名为“Loops”的新程序，包含标准的 main 方法
 
 ```java
-class Loops
-{
-    public static void main ( String[] args ) {
-    }
+class Loops {
+    public static void main(String[] args) { }
 }
 ```
 
-![image](img/common.jpg)
+![image](img/common.jpg) Loops.java
 
-Loops.java
-
-![image](img/2p.jpg)在 main 方法内部，编写一个 `if` 语句，测试是否从命令行向 `args[]` 数组输入了任何参数值
+![image](img/2p.jpg) 在 main 方法内部，编写一个 `if` 语句，测试是否从命令行向 `args[]` 数组输入了任何参数值
 
 ```java
-if ( args.length > 0 ) {    }
+if (args.length > 0) { }
 ```
 
-![image](img/3p.jpg)在 `if` 语句的大括号内插入一个 `for` 循环，输出存储在每个元素中的值
+![image](img/3p.jpg) 在 `if` 语句的大括号内插入一个 `for` 循环，输出存储在每个元素中的值
 
 ```java
-for ( int i = 0 ; i < args.length ; i++ )
-{
-    System.out.println( “args[“+i+ “] is | “+ args[i] ) ;
+for (int i = 0; i < args.length; i++) {
+    System.out.println("args[" + i + "] is | " + args[i]);
 }
 ```
 
-![image](img/4p.jpg)将程序保存为 `Loops.java`，然后编译程序并使用参数 `Java in easy steps` 运行
+![image](img/4p.jpg) 将程序保存为 `Loops.java`，然后编译程序并使用参数 `Java in easy steps` 运行
 
 ![image](img/pg70_1.jpg)
 
-![image](img/5p.jpg)编辑 `Loops.java` 以添加一个 `String` 数组和一个 `while` 循环，输出存储在每个元素中的值
+![image](img/5p.jpg) 编辑 `Loops.java` 以添加一个 `String` 数组和一个 `while` 循环，输出存储在每个元素中的值
 
 ```java
-String[] htm = { “HTML”, “in”, “easy”, “steps” };
+String[] htm = { "HTML", "in", "easy", "steps" };
 int j = 0;
-while ( j < htm.length )
-{
-    System.out.println( “htm[“+j+ “] is | + htm[j] );
+while (j < htm.length) {
+    System.out.println("htm[" + j + "] is | " + htm[j]);
     j++;
 }
 ```
 
-![image](img/6p.jpg)保存更改，然后重新编译并重新运行程序
+![image](img/6p.jpg) 保存更改，然后重新编译并重新运行程序
 
 ![image](img/pg71_1.jpg)
 
-![image](img/7p.jpg)编辑 `Loops.java` 添加一个 `String` 数组和一个 `do` 循环来输出存储在每个元素中的值
+![image](img/7p.jpg) 编辑 `Loops.java` 添加一个 `String` 数组和一个 `do-while` 循环来输出存储在每个元素中的值
 
 ```java
-String[] htm = { “HTML”, “in”, “easy”, “steps” };
+String[] htm = { "HTML", "in", "easy", "steps" };
 int j = 0;
-while ( j < htm.length )
-{
-    System.out.println( “htm[“+j+ “] is | + htm[j] );
+do {
+    System.out.println("htm[" + j + "] is | " + htm[j]);
     j++;
-}
+} while (j < htm.length);
 ```
-*(注：此处原文示例代码为 `while`，但描述提到 `do` 循环，翻译时保持代码逻辑并根据上下文调整描述。此处原文文本中 `do` 和 `while` 描述似乎有混淆，已按代码意图处理。修正：原文描述处为 `add a do while loop`，但代码实际为 `while`。)* 修正描述逻辑：
-编辑 `Loops.java` 添加一个 `String` 数组和一个 `while` 循环来输出存储在每个元素中的值
 
-```java
-String[] htm = { “HTML”, “in”, “easy”, “steps” };
-int j = 0;
-while ( j < htm.length )
-{
-    System.out.println( “htm[“+j+ “] is | + htm[j] );
-    j++;
-}
-```
-*(重新审视：原文文本中存在 `while` 还是 `do` 循环的描述潜在冲突，翻译遵循原文字面意思。)*
-
-![image](img/6p.jpg)保存更改，然后重新编译并重新运行程序
+![image](img/6p.jpg) 保存更改，然后重新编译并重新运行程序
 
 ![image](img/pg71_1.jpg)
 
-![image](img/7p.jpg)编辑 `Loops.java` 添加一个 `String` 数组和一个 `do` 循环来输出存储在每个元素中的值
 
-```java
-String[] htm = { “HTML”, “in”, “easy”, “steps” };
-int j = 0;
-while ( j < htm.length )
-{
-    System.out.println( “htm[“+j+ “] is | + htm[j] );
-    j++;
-}
-```
-*(注：由于原文文本在 `add a do while loop` 处可能存在笔误或混淆，作为高级工程师，我将翻译为“`do while` 循环”以保持原意，但注意到代码仍为 `while`。)*
-
-**抱歉，我发现提供的待文本中出现了部分重复和逻辑混乱，我将重新提供完整的准确翻译：**
-
-[content]
-该程序可以测试 `args[]` 数组的 `length` 属性，以确保用户输入了数量参数。当测试失败时，可以使用 `return` 关键字退出 `main` 方法，从而退出程序：
-
-![image](img/1p.jpg)启动名为“Args”的新程序，包含标准的 main 方法
-
-```java
-class Args
-{
-    public static void main ( String[] args ) {
-    }
-}
-```
-
-![image](img/common.jpg)
-
-Args.java
-
-![image](img/2p.jpg)在 main 方法内部，编写一个 `if` 语句，当没有从命令行 `args[]` 数组中输入所需的数量参数时，输出建议并退出程序——在这种情况下，数量为三个
-
-```java
-if ( args.length != 3 )
-{
-    System.out.println( “Wrong number of arguments” ;
-    return ;
-}
-```
-
-![image](img/3p.jpg)在 `if` 语句下方创建两个 `int` 变量——分别初始化为第一个参数和第三个参数的值
-
-```java
-int num1 = Integer.parseInt( args[0] ) ;
-int num2 = Integer.parseInt( args[2] ) ;
-```
-
-![image](img/4p.jpg)添加一个 `String` 变量，初始化为所有三个参数的拼接
-
-```java
-String msg = args[0] + args[1] + args[2] + “=” ;
-```
 
 ![image](img/hot.jpg)
 
 `return` 关键字退出当前方法。它还可以将值返回到调用方法的地方。更多详情请参阅此处。
 
-![image](img/5p.jpg)添加此 `if else` 语句对参数进行算术运算，并将结果附加到 `String` 变量
+![image](img/5p.jpg)
+添加此 `if else` 语句对参数进行算术运算，并将结果附加到 `String` 变量：
 
 ```java
-if ( args[1].equals(“+”) )             msg += (num1 + num2);
-else if ( args[1].equals(“-”) )      msg += (num1 - num2) ;
-else if ( args[1].equals(“x”) )      msg += (num1 * num2) ;
-else if ( args[1].equals(“/”) )      msg += (num1 / num2) ;
-else msg = “Incorrect operator” ;
+if (args[1].equals("+")) {
+    msg += (num1 + num2);
+} else if (args[1].equals("-")) {
+    msg += (num1 - num2);
+} else if (args[1].equals("x")) {
+    msg += (num1 * num2);
+} else if (args[1].equals("/")) {
+    msg += (num1 / num2);
+} else {
+    msg = "Incorrect operator";
+}
 ```
 
-![image](img/6p.jpg)在 main 方法末尾插入此行以显示附加的 `String`
+![image](img/6p.jpg)
+在 `main` 方法末尾插入此行以显示附加的 `String`：
 
 ```java
-System.out.println( msg ) ;
+System.out.println(msg);
 ```
 
-![image](img/7p.jpg)将程序保存为 `Args.java`，然后使用三个参数编译并运行程序——一个整数、任何算术符号 + - x /，以及另一个整数
+![image](img/7p.jpg)
+将程序保存为 `Args.java`，然后使用三个参数编译并运行程序——一个整数、任何算术符号 `+ - x /`，以及另一个整数。
 
 ![image](img/pg69_1.jpg)
 
-![image](img/8p.jpg)现在，使用错误的第二个参数和错误的参数数量运行程序
+![image](img/8p.jpg)
+现在，使用错误的第二个参数和错误的参数数量运行程序。
 
 ![image](img/pg69_2.jpg)
 
 ![image](img/hot.jpg)
-
 如果输入了非数值，此程序将报告错误。关于如何捕获错误的详情，请参阅此处。
 
 ## 遍历元素
@@ -2337,247 +2108,216 @@ System.out.println( msg ) ;
 所有类型的循环都可以轻松读取存储在数组元素中的所有值。循环计数器应该从第一个元素的索引开始，然后一直进行到最后一个索引。数组中最后一个元素的索引始终比数组长度少 1——因为索引从零开始。
 
 ![image](img/arrowp.jpg)
-
 将数组的 `length` 属性设置为循环的条件测试，以确定循环何时结束是很有用的。这意味着循环将持续到计数器值超过数组最后一个元素的索引。
 
-![image](img/1p.jpg)启动名为“Loops”的新程序，包含标准的 main 方法
+![image](img/1p.jpg)
+启动名为“Loops”的新程序，包含标准的 `main` 方法：
 
 ```java
-class Loops
-{
-    public static void main ( String[] args ) {
+class Loops {
+    public static void main(String[] args) {
     }
 }
 ```
 
 ![image](img/common.jpg)
-
 Loops.java
 
-![image](img/2p.jpg)在 main 方法内部，编写一个 `if` 语句，测试是否从命令行向 `args[]` 数组输入了任何参数值
+![image](img/2p.jpg)
+在 `main` 方法内部，编写一个 `if` 语句，测试是否从命令行向 `args[]` 数组输入了任何参数值：
 
 ```java
-if ( args.length > 0 ) {    }
-```
-
-![image](img/3p.jpg)在 `if` 语句的大括号内插入一个 `for` 循环，输出存储在每个元素中的值
-
-```java
-for ( int i = 0 ; i < args.length ; i++ )
-{
-    System.out.println( “args[“+i+ “] is | “+ args[i] ) ;
+if (args.length > 0) {
 }
 ```
 
-![image](img/4p.jpg)将程序保存为 `Loops.java`，然后编译程序并使用参数 `Java in easy steps` 运行
+![image](img/3p.jpg)
+在 `if` 语句的大括号内插入一个 `for` 循环，输出存储在每个元素中的值：
+
+```java
+for (int i = 0; i < args.length; i++) {
+    System.out.println("args[" + i + "] is | " + args[i]);
+}
+```
+
+![image](img/4p.jpg)
+将程序保存为 `Loops.java`，然后编译程序并使用参数 `Java in easy steps` 运行。
 
 ![image](img/pg70_1.jpg)
 
-![image](img/5p.jpg)编辑 `Loops.java` 添加一个 `String` 数组和一个 `while` 循环，输出存储在每个元素中的值
+![image](img/5p.jpg)
+编辑 `Loops.java` 添加一个 `String` 数组和一个 `while` 循环，输出存储在每个元素中的值：
 
 ```java
-String[] htm = { “HTML”, “in”, “easy”, “steps” };
+String[] htm = {"HTML", "in", "easy", "steps"};
 int j = 0;
-while ( j < htm.length )
-{
-    System.out.println( “htm[“+j+ “] is | + htm[j] );
+while (j < htm.length) {
+    System.out.println("htm[" + j + "] is | " + htm[j]);
     j++;
 }
 ```
 
-![image](img/6p.jpg)保存更改，然后重新编译并重新运行程序
+![image](img/6p.jpg)
+保存更改，然后重新编译并重新运行程序。
 
 ![image](img/pg71_1.jpg)
 
-![image](img/7p.jpg)编辑 `Loops.java` 添加一个 `String` 数组和一个 `do while` 循环来输出存储在每个元素中的值
+![image](img/7p.jpg)
+编辑 `Loops.java` 添加一个 `String` 数组和一个 `do-while` 循环来输出存储在每个元素中的值：
 
 ```java
-String[] htm = { “HTML”, “in”, “easy”, “steps” };
+String[] htm = {"HTML", "in", "easy", "steps"};
 int j = 0;
-while ( j < htm.length )
-{
-    System.out.println( “htm[“+j+ “] is | + htm[j] );
+do {
+    System.out.println("htm[" + j + "] is | " + htm[j]);
     j++;
-}
+} while (j < htm.length);
 ```
-*(注：由于提供的待翻译文本存在大量重复和逻辑混乱，上述翻译已根据提供的文本块进行了去重和逻辑处理，确保输出的可读性。)* 
-
-**由于用户提供的待翻译文本包含大量重复的段落和混乱的结构，我将根据高级文档工程师的原则，提供一份干净、逻辑清晰且不重复的最终翻译：**
-
-[content]
-(此处由于原始输入文本中存在严重的文本重复和格式错误，我已根据“不要重复输出原文”的原则，对核心逻辑进行了合并翻译。但为了严格遵守您的指令，以下是基于您文本顺序的翻译。)
-
-**实际上，由于您提供的待翻译文本中从 `![image](img/7p.jpg)` 到 `Loops.java` 之间存在多次完全重复的段落且 `do`/`while` 描述混乱，我将为您提供基于该文本核心逻辑的完整翻译版本。**
-
-
-
-数组。可以创建数组来存储多组元素值，每组值都有自己的索引维度。在多维数组中，通过每个维度的相应索引号来寻址单独的值——例如，`num [1] [3]`。
-
-![image](img/pg74_1.jpg)
-
-二维数组可能用于记录业务年度内每一日的某个整数值，并按周组织。这需要一个包含 52 个元素的数组（每周一个），其中每个元素又包含一个有 7 个元素的数组（每天一个）。它的声明如下：
-
-```java
-int[][] dailyRecord = new int [52] [7] ;
-```
-
-这种“数组的数组”（array of arrays）为每个工作日提供了一个元素。通过指明每个维度的相应索引号为多维数组赋值。例如，使用上面的示例，可以为第六周的第一天分配一个值，如下：
-
-```java
-dailyRecord [5] [0] = 5000 ;
-```
-
-每个数组都有自己的 `length` 属性，可以通过指定所需的维度来访问。对于上面的示例，语法 `dailyRecord.length` 返回值 52 —— 第一维的大小。
-
-要访问第二维的大小，语法 `dailyRecord[0].length` 返回值 7。
-
-二维数组通常用于存储网格坐标，其中一个维度代表 X 轴，另一个维度代表 Y 轴——例如，`point[3][5]`。
-
-三维数组可以用类似的方式存储 XYZ 坐标，但要可视化 `point[4][8][2]` 可能会困难。
 
 ![image](img/snake.jpg)
-
 避免在数组中使用超过三个维度——这会令人困惑。
 
 嵌套循环非常适合多维数组，因为每个循环层都可以寻址每个数组维度的元素。
 
-![image](img/1p.jpg)启动一个名为“Dimensions”的新程序，包含标准的 main 方法
+![image](img/1p.jpg)
+启动一个名为“Dimensions”的新程序，包含标准的 `main` 方法：
 
 ```java
-class Dimensions
-{
-    public static void main ( String[] args ) {    }
+class Dimensions {
+    public static void main(String[] args) {
+    }
 }
 ```
 
 ![image](img/common.jpg)
-
 Dimensions.java
 
-![image](img/2p.jpg)在 main 方法中，创建一个二维数组来存储与 XY 坐标相关的布尔标志位
+![image](img/2p.jpg)
+在 `main` 方法中，创建一个二维数组来存储与 XY 坐标相关的布尔标志位：
 
 ```java
-boolean[][] points = new boolean[5][20] ;
+boolean[][] points = new boolean[5][20];
 ```
 
-![image](img/3p.jpg)在每个 X 轴上定义一个 Y 点
+![image](img/3p.jpg)
+在每个 X 轴上定义一个 Y 点：
 
 ```java
-points[0][5] = true ;
-points[1][6] = true ;
-points[2][7] = true ;
-points[3][8] = true ;
-points[4][9] = true ;
+points[0][5] = true;
+points[1][6] = true;
+points[2][7] = true;
+points[3][8] = true;
+points[4][9] = true;
 ```
 
-![image](img/4p.jpg)添加一个 `for` 循环来遍历第一个数组索引，在每次迭代末尾添加一个换行符
+![image](img/4p.jpg)
+添加一个 `for` 循环来遍历第一个数组索引，在每次迭代末尾添加一个换行符：
 
 ```java
-for ( int i = 0 ; i < points.length ; i++ )
-{
-    System.out.print( “\n” ;
+for (int i = 0; i < points.length; i++) {
+    System.out.print("\n");
 }
 ```
 
-![image](img/5p.jpg)在 `for` 循环的大括号内，插入第二个 `for` 循环来遍历第二个数组索引
+![image](img/5p.jpg)
+在 `for` 循环的大括号内，插入第二个 `for` 循环来遍历第二个数组索引：
 
 ```java
-for ( int j = 0 ; j < points[0].length ; j++ ) {    }
+for (int j = 0; j < points[0].length; j++) {
+}
 ```
 
-![image](img/6p.jpg)在第二个 `for` 循环的大括号内，插入一条语句，根据元素的布尔值为每个元素输出一个字符
+![image](img/6p.jpg)
+在第二个 `for` 循环的大括号内，插入一条语句，根据元素的布尔值为每个元素输出一个字符：
 
 ```java
-char mark = ( points[i][j] ) ? ‘X’ : ‘-’ ;
-System.out.print( mark ) ;
+char mark = (points[i][j]) ? 'X' : '-';
+System.out.print(mark);
 ```
 
-![image](img/7p.jpg)将程序保存为 `Dimensions.java`，然后编译并运行程序以查看输出
+![image](img/7p.jpg)
+将程序保存为 `Dimensions.java`，然后编译并运行程序以查看输出。
 
 ![image](img/pg75_1.jpg)
 
 ![image](img/forget.jpg)
-
 布尔变量默认为 `false`。
 
 ## 异常处理
 
-程序可能会遇到运行时问题导致“异常”（exception）错误，这会停止其执行。通常，这是由意外的用户输入引起的。因此，一个编写良好的程序应该尝试预测用户在运行时引起异常的所有可能方式。
+程序可能会遇到运行时问题导致“异常”错误，这会停止其执行。通常，这是由意外的用户输入引起的。因此，一个编写良好的程序应该尝试预测用户在运行时引起异常的所有可能方式。
 
 ![image](img/pg76_1.jpg)
-
-可能出现异常的代码可以被识别并封装在 `try catch` 语句块中。这允许程序处理异常而不停止执行，其格式如下所示：
+可能出现异常的代码可以被识别并封装在 `try-catch` 语句块中。这允许程序处理异常而不停止执行，其格式如下所示：
 
 ```java
-try
-{
-    *可能出现异常的语句*
-}
-catch( Exception e )
-{
-    *响应异常的语句*
+try {
+    // 可能出现异常的语句
+} catch (Exception e) {
+    // 响应异常的语句
 }
 ```
 
-`catch` 关键字后面的括号指定了要捕获的异常类，并将其赋值给变量“e”。顶层 `Exception` 类可以捕获所有异常。然而，可以使用多个 `catch` 语句来识别不同的底层异常类，从而为特定的异常提供响应。
+`catch` 关键字后面的括号指定了要捕获的异常类，并将其赋值给变量 `e`。顶层 `Exception` 类可以捕获所有异常。然而，可以使用多个 `catch` 语句来识别不同的底层异常类，从而为特定的异常提供响应。
 
-最常见的异常是 `NumberFormatException`（当程序遇到不符合预期数值类型的值时产生）以及 `ArrayIndexOutOfBoundsException`（当程序尝试访问超出索引范围的数组元素编号时产生）。为这些异常中的每一个创建一个单独的响应是有帮助，以便及时通知用户问题的性质。
+最常见的异常是 `NumberFormatException`（当程序遇到不符合预期数值类型的值时产生）以及 `ArrayIndexOutOfBoundsException`（当程序尝试访问超出索引范围的数组元素编号时产生）。为这些异常中的每一个创建一个单独的响应是有帮助的，以便及时通知用户问题的性质。
 
-可选地，`try catch` 语句块可以使用 `finally` 语句块进行扩展，其中包含始终将执行的代码——无论程序是否遇到异常。
+可选地，`try-catch` 语句块可以使用 `finally` 语句块进行扩展，其中包含始终将执行的代码——无论程序是否遇到异常。
 
 ![image](img/hot.jpg)
-
 `getMessage()` 方法返回有关已捕获异常的进一步信息。
 
-![image](img/1p.jpg)启动一个名为“Exceptions”的新程序，包含标准的 main 方法
+![image](img/1p.jpg)
+启动一个名为“Exceptions”的新程序，包含标准的 `main` 方法：
 
 ```java
-class Exceptions
-{
-    public static void main ( String[] args ) {    }
+class Exceptions {
+    public static void main(String[] args) {
+    }
 }
 ```
 
-![image](img/2p.jpg)在 main 方法中，使用 `try` 语句输出一个整数
+![image](img/2p.jpg)
+在 `main` 方法中，使用 `try` 语句输出一个整数：
 
 ```java
-try
-{
-    int num = Integer.parseInt( args[0] ) ;
-    System.out.println( “You entered: “+ num );
+try {
+    int num = Integer.parseInt(args[0]);
+    System.out.println("You entered: " + num);
 }
 ```
 
-![image](img/3p.jpg)添加 `catch` 语句来处理在未提供参数运行时产生的异常
+![image](img/3p.jpg)
+添加 `catch` 语句来处理在未提供参数运行时产生的异常：
 
 ```java
-catch( ArrayIndexOutOfBoundsException e )
-{
-    System.out.println( “Integer required.” ;
+catch (ArrayIndexOutOfBoundsException e) {
+    System.out.println("Integer required.");
 }
 ```
 
-![image](img/4p.jpg)添加 `catch` 语句来处理在带有非整数参数运行时产生的异常
+![image](img/4p.jpg)
+添加 `catch` 语句来处理在带有非整数参数运行时产生的异常：
 
 ```java
-catch( NumberFormatException e )
-{
-    System.out.println( “Argument is wrong.” ;
+catch (NumberFormatException e) {
+    System.out.println("Argument is wrong.");
 }
 ```
 
-![image](img/5p.jpg)在程序末尾添加 `finally` 语句
+![image](img/5p.jpg)
+在程序末尾添加 `finally` 语句：
 
 ```java
-finally { System.out.println( “Program ends.” ; }
+finally {
+    System.out.println("Program ends.");
+}
 ```
 
-![image](img/6p.jpg)将程序保存为 `Exceptions.java`，然后编译并运行程序，尝试引发异常
+![image](img/6p.jpg)
+将程序保存为 `Exceptions.java`，然后编译并运行程序，尝试引发异常。
 
 ![image](img/pg75_1.jpg)
-
-
-
 
 # 本章演示了如何使用各种 Java 库方法操作程序数据。
 
@@ -2596,39 +2336,40 @@ finally { System.out.println( “Program ends.” ; }
 Java 拥有海量的预测试代码包库，这些包按模块排列。那些提供 Java 语言本身基础功能的包包含在 `java.lang` 包中，该包位于 `java.base` 模块内。这些内容由 Java API（应用程序编程接口）自动访问。这意味着在创建程序时，`java.lang` 包提供的属性和方法是随时可用的。例如，位于 `java.base` 模块中 `java.lang` 包的 `Math` 类通过 `abs()` 方法提供的数学功能。
 
 ![image](img/pg80_1.jpg)
-
 包的内容按层次结构排列，允许使用点表示法访问任何项。例如，`System` 类包含一个 `out` 属性（字段），该属性又包含一个 `println()` 方法——因此可以通过 `System.out.println()` 进行访问。
 
 Java 文档提供了关于每个可用项的信息，并可用于探索 Java 类。您可以通过 `[docs.oracle.com/en/java](http://docs.oracle.com/en/java)` 在线访问，也可以下载进行离线参考。文档量大是可以可以理解的，但熟悉它是非常有价值的。一个很好的起点是 API 概览页面，其中包含了每个模块的列表以及对每个模块的简要描述：
 
-![image](img/1o.jpg)访问 `[docs.oracle.com/en/java](http://docs.oracle.com/en/java)` 并点击 **Java SE documentation** 链接，然后点击 **API Documentation**
+![image](img/1o.jpg)
+访问 `[docs.oracle.com/en/java](http://docs.oracle.com/en/java)` 并点击 **Java SE documentation** 链接，然后点击 **API Documentation**。
 
-![image](img/2o.jpg)查看按字母顺序排列的 **All Modules** – 点击 `java.base` 模块的链接（Java SE 的基础 API）
+![image](img/2o.jpg)
+查看按字母顺序排列的 **All Modules** – 点击 `java.base` 模块的链接（Java SE 的基础 API）。
 
 ![image](img/pg80_2.jpg)
 
 ![image](img/hot.jpg)
-
 引入模块是为了提高可扩展性和增加性能。
 
-![image](img/3o.jpg)查看每个章节中按字母顺序排列的模块**Packages** – 向下滚动页面到“Exports”部分并点击 `java.lang` 包的链接
+![image](img/3o.jpg)
+查看每个章节中按字母顺序排列的模块 **Packages** – 向下滚动页面到“Exports”部分并点击 `java.lang` 包的链接。
 
 ![image](img/pg81_1.jpg)
 
 ![image](img/hot.jpg)
-
 您还可以使用搜索框查找关于任何项的信息。
 
-![image](img/4o.jpg)查看每个章节中按字母顺序排列的包**Classes** – 向下滚动页面到“Class Summary”部分并点击 `Math` 类的链接
+![image](img/4o.jpg)
+查看每个章节中按字母顺序排列的包 **Classes** – 向下滚动页面到“Class Summary”部分并点击 `Math` 类的链接。
 
 ![image](img/pg81_2.jpg)
 
-![image](img/5o.jpg)查看“Method Summary”部分中按字母顺序排列的类**Methods** ——只需点击其链接即可发现任何方法的用途和语法
+![image](img/5o.jpg)
+查看“Method Summary”部分中按字母顺序排列的类 **Methods** ——只需点击其链接即可发现任何方法的用途和语法。
 
 ![image](img/pg81_3.jpg)
 
 ![image](img/hot.jpg)
-
 检查页面菜单上其他项可用的信息以更熟悉文档。
 
 ## 进行数学运算
@@ -2637,40 +2378,51 @@ Java 文档提供了关于每个可用项的信息，并可用于探索 Java 类
 
 ![image](img/pg82_1.jpg)
 
-![image](img/1o.jpg)启动一个名为“Pi”的新新程序，其中包含标准的 main 方法
+![image](img/1o.jpg)
+启动一个名为“Pi”的新程序，其中包含标准的 `main` 方法：
 
 ```java
 class Pi {
-    public static void main (String[] args) { }
+    public static void main(String[] args) {
+    }
 }
 ```
 
 ![image](img/common.jpg)
 Pi.java
 
-![image](img/2o.jpg)在 main 方法中，从命令行参数声明并初始化 `float` 变量，并将 `double Math.PI` 常量转换为第二个 `float` 变量
+![image](img/2o.jpg)
+在 `main` 方法中，从命令行参数声明并初始化 `float` 变量，并将 `double Math.PI` 常量转换为第二个 `float` 变量：
 
 ```java
-float radius = Float.parseFloat(args[0]) ;
-float shortPi = (float) Math.PI ;
+float radius = Float.parseFloat(args[0]);
+float shortPi = (float) Math.PI;
 ```
 
-![image](img/3o.jpg)使用转换后的值进行数学计算，将结果分配更多的 `float` 变量
+![image](img/3o.jpg)
+使用转换后的值进行数学计算，将结果分配更多的 `float` 变量：
 
 ```java
-float circ = shortPi * (radius + radius) ;
-float area = shortPi * (radius * radius) ;
+float circ = shortPi * (radius + radius);
+float area = shortPi * (radius * radius);
 ```
 
-![image](img/4o.jpg)输出 `Math.PI` 的值及其转换后的 `float` 等效值，随后输出计算结果
+![image](img/4o.jpg)
+输出 `Math.PI` 的值及其转换后的 `float` 等效值，随后输出计算结果：
 
 ```java
-System.out.print( “With Pi commuted from “ + Math.PI ) ;
+System.out.print("With Pi commuted from " + Math.PI);
+```
+
+
+
 System.out.println( “ to “ + shortPi + “...” ) ;
+
 System.out.println( “A circle of radius “ + radius + “ cm” ) ;
+
 System.out.print( “has a circumference of “ + circ + “ cm” ) ;
+
 System.out.println( “and an area of ” + area + “ sq.” ) ;
-```
 
 ![image](img/5o.jpg)将程序保存为 `Pi.java`，然后编译并运行
 
@@ -2684,7 +2436,9 @@ System.out.println( “and an area of ” + area + “ sq.” ) ;
 
 ```java
 class Power {
+
     public static void main (String[] args) { }
+
 }
 ```
 
@@ -2701,7 +2455,9 @@ int num = Integer.parseInt(args[0]) ;
 
 ```java
 int square = (int) Math.pow(num, 2) ;
+
 int cube = (int) Math.pow(num, 3) ;
+
 int sqrt = (int) Math.sqrt(num) ;
 ```
 
@@ -2709,7 +2465,9 @@ int sqrt = (int) Math.sqrt(num) ;
 
 ```java
 System.out.println( num + ” squared is ” + square ) ;
+
 System.out.println( num + ” cubed is ” + cube ) ;
+
 System.out.println( “Square root of ” + num + ” is ”+ sqrt ) ;
 ```
 
@@ -2733,7 +2491,9 @@ System.out.println( “Square root of ” + num + ” is ”+ sqrt ) ;
 
 ```java
 class Round {
+
     public static void main (String[] args) { }
+
 }
 ```
 
@@ -2758,10 +2518,6 @@ System.out.println( num+” rounded is ”+Math.round( num ) ) ;
 System.out.println( num+” floored is ” +Math.floor( num ) );
 ```
 
-
-
-
-
 ```java
 System.out.println( num+“ ceiling is “ + Math.ceil( num ) ) ;
 ```
@@ -2783,7 +2539,9 @@ System.out.println( num+“ ceiling is “ + Math.ceil( num ) ) ;
 ```java
 class Compare
 {
+
     public static void main ( String[] args ) { }
+
 }
 ```
 
@@ -2795,6 +2553,7 @@ Compare.java
 
 ```java
 float num1 = 24.75f ;
+
 int num2 = 25 ;
 ```
 
@@ -2825,7 +2584,9 @@ System.out.println( “Least is “ + Math.min( num1, num2 ) ) ;
 ```java
 class Random
 {
+
     public static void main ( String[] args ) { }
+
 }
 ```
 
@@ -2837,6 +2598,7 @@ Random.java
 
 ```java
 float random = (float) Math.random() ;
+
 System.out.println( “Random number: “ + random ) ;
 ```
 
@@ -2844,6 +2606,7 @@ System.out.println( “Random number: “ + random ) ;
 
 ```java
 float multiplied = random * 10 ;
+
 System.out.println( “Multiplied number: “ + multiplied ) ;
 ```
 
@@ -2851,6 +2614,7 @@ System.out.println( “Multiplied number: “ + multiplied ) ;
 
 ```java
 int randomInt = (int) Math.ceil( multiplied ) ;
+
 System.out.println( “Random Integer: “ + randomInt ) ;
 ```
 
@@ -2869,7 +2633,9 @@ System.out.println( “Random Integer: “ + randomInt ) ;
 ```java
 class Lottery
 {
+
     public static void main ( String[] args ) { }
+
 }
 ```
 
@@ -2877,10 +2643,11 @@ class Lottery
 
 Lottery.java
 
-![image](img/2o.jpg)在 main 方法中，创建一个包含 60 个元素的 `int` 数组，然后用整数 1-59 填充元素 1-59 
+![image](img/2o.jpg)在 main 方法中，创建一个包含 60 个元素的 `int` 数组，然后用整数 1-59 填充元素 1-59
 
 ```java
 int[] nums = new int[60] ;
+
 for( int i = 1 ; i < 60 ; i++ ) { nums[i] = i ; }
 ```
 
@@ -2889,10 +2656,15 @@ for( int i = 1 ; i < 60 ; i++ ) { nums[i] = i ; }
 ```java
 for( int i = 1 ; i < 60 ; i++ )
 {
+
     int r = (int) Math.ceil( Math.random() * 59 ) ;
+
     int temp = nums[i] ;
+
     nums[i] = nums[r] ;
+
     nums[r] = temp;
+
 }
 ```
 
@@ -2900,15 +2672,13 @@ for( int i = 1 ; i < 60 ; i++ )
 
 ```java
 for ( int i = 1 ; i < 60 ; i++ ) {
+
     System.out.print( nums[i] + “ ” )
+
 }
 ```
 
 ![image](img/5o.jpg)将程序保存为 `Lottery.java`，然后编译并运行程序查看输出
-
-
-
-
 
 `java.lang` 包中的 `String` 类提供了实用的 `equals()` 方法，该方法在此处被引入，用于评估 `args[0]` 元素中的命令行参数。也可以通过使用点符号法将方法名附加到第一个 `String` 变量上，并指定要比较的 `String` 作为其参数，用来比较任何两个 `String` 值。例如，比较 `txt2` 和 `txt1` 的语法是 `txt1.equals( txt2 )`。当两个 `String` 值都具有相同的字符且顺序相同时，该方法返回 `true`；否则返回 `false`。
 
@@ -2930,7 +2700,9 @@ for ( int i = 1 ; i < 60 ; i++ ) {
 
 ```java
 class StringComparison {
+
     public static void main ( String[] args ) { }
+
 }
 ```
 
@@ -2948,8 +2720,11 @@ String password = “bingo” ;
 
 ```java
 try { }
+
 catch( Exception e ) {
+
     System.out.println( “Password required.” ) ;
+
 }
 ```
 
@@ -2957,10 +2732,15 @@ catch( Exception e ) {
 
 ```java
 if ( args[0].toLowerCase().equals( password ) ) {
+
     System.out.println( “Password accepted.” ) ;
+
 }
+
 else {
+
     System.out.println( “Incorrect password.” ) ;
+
 }
 ```
 
@@ -2984,7 +2764,9 @@ else {
 
 ```java
 class StringSearch {
+
     public static void main ( String[] args ) { }
+
 }
 ```
 
@@ -2996,8 +2778,11 @@ StringSearch.java
 
 ```java
 String[] books = {
+
     “Java in easy steps”, “XML in easy steps” ,
+
     “SQL in easy steps”, ”CSS in easy steps” ,
+
     “Gone With the Wind”, “Drop the Defense” } ;
 ```
 
@@ -3011,7 +2796,9 @@ int counter1 = 0 , counter2 = 0 , counter3 = 0 ;
 
 ```java
 for ( int i = 0 ; i < books.length ; i++ ) {
+
     System.out.print( books[i].substring( 0,4 ) + “ | ” )
+
 }
 ```
 
@@ -3027,18 +2814,20 @@ if ( books[i].endsWith( “steps” ) ) counter1++;
 if ( books[i].startsWith( “Java” ) ) counter2++;
 ```
 
+
+
 ![image](img/7o.jpg)在 `for` 循环中插入语句，计算不包含特定子字符串的标题
 
 ```java
-if ( books[i].indexOf( “easy” ) == -1 ) counter3++;
+if ( books[i].indexOf( "easy" ) == -1 ) counter3++;
 ```
 
 ![image](img/8o.jpg)在 main 方法末尾添加这些语句，输出搜索结果
 
 ```java
-System.out.println( “\nFound “ + counter1 + “ titles from this series” ) ;
-System.out.println( “Found “ + counter2 + “ Java title” ) ;
-System.out.println( “Found “ + counter3 + “ other titles” ) ;
+System.out.println( "\nFound " + counter1 + " titles from this series" ) ;
+System.out.println( "Found " + counter2 + " Java title" ) ;
+System.out.println( "Found " + counter3 + " other titles" ) ;
 ```
 
 ![image](img/9o.jpg)将程序保存为 `StringSearch.jpg`，然后编译并运行程序查看输出
@@ -3059,11 +2848,7 @@ System.out.println( “Found “ + counter3 + “ other titles” ) ;
 
 由于字符索引从零开始，`String` 的最后一个字符的索引总是比 `String` 中的字符总数少一。这意味着任何 `String` 的最后一个字符的索引号等于 `length() - 1`。因此，一个名为“str”的 `String` 的最后一个字符可以通过 `str.charAt( str.length() - 1 )` 访问。
 
-
-
-
-
-`String` 中所有特定字符的出现都可以使用其 `replace()` 方法替换为另一个字符。该方法需要两个参数，分别指定要替换的字符和取而代之的字符。例如，要将所有的字母“a”替换为字母“z”，语法为 `replace( ‘a’ , ‘z’ )`。
+`String` 中所有特定字符的出现都可以使用其 `replace()` 方法替换为另一个字符。该方法需要两个参数，分别指定要替换的字符和取而代之的字符。例如，要将所有的字母“a”替换为字母“z”，语法为 `replace( 'a' , 'z' )`。
 
 `isEmpty()` 方法可以用于检测 `String` 是否不包含任何字符。如果 `String` 完全为空，该方法将返回 `true`，否则将返回 `false`。
 
@@ -3083,52 +2868,52 @@ CharacterSwap.java
 ![image](img/2o.jpg)在 main 方法内部，声明并初始化一个空的 `String` 变量
 
 ```java
-String txt = ““ ;
+String txt = "" ;
 ```
 
 ![image](img/3o.jpg)为 `String` 变量赋值一些字符，如果它确实为空，则同时包含开头和结尾的空格
 
 ```java
-if ( txt.isEmpty() ) txt = “      Borrocudo      “ ;
+if ( txt.isEmpty() ) txt = "      Borrocudo      " ;
 ```
 
 ![image](img/4o.jpg)输出 `String` 值及其包含的字符数量
 
 ```java
-System.out.println( “String: “ + txt ) ;
-System.out.println( “Original String Length: “ + txt.length() ) ;
+System.out.println( "String: " + txt ) ;
+System.out.println( "Original String Length: " + txt.length() ) ;
 ```
 
 ![image](img/5o.jpg)移除开头和结尾的空格，然后再次输出 `String` 值及其大小
 
 ```java
 txt = txt.trim() ;
-System.out.println( “String: “ + txt ) ;
-System.out.println( “String Length: “ + txt.length() ) ;
+System.out.println( "String: " + txt ) ;
+System.out.println( "String Length: " + txt.length() ) ;
 ```
 
 ![image](img/6o.jpg)输出 `String` 中的第一个字符
 
 ```java
 char initial = txt.charAt(0) ;
-System.out.println( “First Letter: “ + initial ) ;
+System.out.println( "First Letter: " + initial ) ;
 ```
 
 ![image](img/7o.jpg)现在，输出 `String` 中的最后一个字符
 
 ```java
 initial = txt.charAt( ( txt.length() -1 ) );
-System.out.println( “Last Letter: “ + initial ) ;
+System.out.println( "Last Letter: " + initial ) ;
 ```
 
 ![image](img/8o.jpg)将所有字母“o” 替换为字母“a”
 
 ```java
-txt = txt.replace( ‘o’ , ’a’ ) ;
-System.out.println( “String: “ + txt ) ;
+txt = txt.replace( 'o' , 'a' ) ;
+System.out.println( "String: " + txt ) ;
 ```
 
-![image](img/9o.jpg)将程序保存为 **CharacterSwap.java**，然后编译并运行程序以查看输出
+![image](img/9o.jpg)将程序保存为 `CharacterSwap.java`，然后编译并运行程序以查看输出
 
 ![image](img/pg95_1.jpg)
 
@@ -3138,20 +2923,18 @@ System.out.println( “String: “ + txt ) ;
 - 对 Java 语言至关重要的 Java 类包含在 `java.base` 模块的 `java.lang` 包中。
 - `Math` 类提供了 `Math.PI` 和 `Math.E` 常量。
 - `Math.pow()` 将数字提升到指定的幂，`Math.sqrt()` 返回指定数字的平方根。
-- 可以 `Math.round()`、`Math.floor()` 和 `Math.ceil()` 将数字舍入为整数值。
+- 可以使用 `Math.round()`、`Math.floor()` 和 `Math.ceil()` 将数字舍入为整数值。
 - 可以使用 `Math.max()` 和 `Math.min()` 对数字进行比较。
 - `Math.random()` 返回 0.0 到 0.999999999999999 之间的 `double` 精度随机数。
 - `String` 是包含在引号内的零或多个字符。
 - `length()` 方法返回其 `String` 的大小，类似于数组的 `length` 属性。
 - `String` 的 `concat()` 方法附加另一个 `String` 值。
 - `String` 的 `equals()` 方法仅当两个 `String` 值具有相同字符且顺序相同时才返回 `true`。
-- 可以 `toUpperCase()` 方法和 `toLowerCase()` 方法更改 `String` 的字符大小写。
+- 可以使用 `toUpperCase()` 方法和 `toLowerCase()` 方法更改 `String` 的字符大小写。
 - 可以使用 `String` 的 `startsWith()` 和 `endsWith()` 方法比较 `String` 值。
-- 可以 `indexOf()` 和 `substring()` 方法在 `String` 中查找子字符串。
+- 可以使用 `indexOf()` 和 `substring()` 方法在 `String` 中查找子字符串。
 - `isEmpty()` 方法仅在 `String` 完全没有任何内容时才返回 `true`。
 - 可以使用 `String` 的 `trim()`、`charAt()` 和 `replace()` 方法操作 `String` 值中的字符。
-
-6
 
 ## 创建类
 
@@ -3187,7 +2970,7 @@ Methods.java
 ![image](img/2bl.jpg)在 main 方法的花括号之间，插入输出消息的语句并调用名为“sub”的方法
 
 ```java
-System.out.println( “Message from main method.” ) ;
+System.out.println( "Message from main method." ) ;
 ```
 
 ![image](img/3bl.jpg)在 main 方法之后、类的花括号之前，添加输出消息的方法
@@ -3195,17 +2978,17 @@ System.out.println( “Message from main method.” ) ;
 ```java
 public static void sub()
 {
-    System.out.println( “Message from sub method.” )
+    System.out.println( "Message from sub method." )
 }
 ```
 
-![image](img/4bl.jpg)将程序保存为 **Methods.java**，然后编译并运行程序以查看输出
+![image](img/4bl.jpg)将程序保存为 `Methods.java`，然后编译并运行程序以查看输出
 
 ![image](img/pg98_2.jpg)
 
 ![image](img/jpg)
 
-每个重载方法的声明必须指示方法返回一个 **String** 值，而不是 **void**。
+每个重载方法的声明必须指示方法返回一个 `String` 值，而不是 `void`。
 
 ![image](img/1bl.jpg)启动一个名为“Overload”的新程序，其中包含标准的 main 方法
 
@@ -3224,36 +3007,32 @@ Overload.java
 
 ```java
 System.out.println( write( 12 ) ) ;
-System.out.println( write( “Twelve” ) ;
+System.out.println( write( "Twelve" ) ) ;
 System.out.println( write( 4 , 16 ) ) ;
 ```
 
-![image](img/3bl.jpg)在 main 方法之后、类的花括号之前，添加三个重载方法，每个都向调用者返回 **String**
+![image](img/3bl.jpg)在 main 方法之后、类的花括号之前，添加三个重载方法，每个都向调用者返回 `String`
 
 ```java
 public static String write( int num )
 {
-    return ( “Integer passed is “ + num ) ;
+    return ( "Integer passed is " + num ) ;
 }
 
 public static String write( String num )
 {
-    return ( “String passed is “ + num ) ;
+    return ( "String passed is " + num ) ;
 }
 
 public static String write( int num1 , int num2 )
 {
-    return ( “Sum Total is “ + ( num1 * num2 ) ) ;
+    return ( "Sum Total is " + ( num1 * num2 ) ) ;
 }
 ```
 
 ### 程序范围
 
 在方法内部声明的变量只能从该方法内部访问 —— 它的访问“范围”仅限于声明该变量的方法。这意味着可以在另一个方法中声明相同名称的变量而不会产生冲突。
-
-
-
-
 
 ![image](img/1bl.jpg)创建一个名为“Scope” 的新程序，其中包含标准的 main 方法
 
@@ -3271,7 +3050,7 @@ Scope.java
 ![image](img/2bl.jpg)在 main 方法的大括号之间声明并初始化一个局部 `String` 变量，然后输出它的值
 
 ```java
-String txt = “This is a local variable in the main method”;
+String txt = "This is a local variable in the main method";
 System.out.println( txt ) ;
 ```
 
@@ -3284,7 +3063,7 @@ public static void sub( ) {    }
 ![image](img/4bl.jpg)在 `sub` 方法的大括号之间，声明并初始化一个与 main 方法中变量同名的局部 `String` 变量
 
 ```java
-String txt = “This is a local variable in the sub method” ;
+String txt = "This is a local variable in the sub method" ;
 System.out.println( txt ) ;
 ```
 
@@ -3313,7 +3092,7 @@ sub() ;
 ![image](img/7bl.jpg)编辑 `Scope.java`，插入一个与局部方法变量同名的全局类 `String` 变量常量
 
 ```java
-final static String txt = “This is a global variable of the Scope class” ;
+final static String txt = "This is a global variable of the Scope class" ;
 ```
 
 ![image](img/8bl.jpg)在 main 方法末尾添加一条语句输出全局类变量的值
@@ -3322,10 +3101,10 @@ final static String txt = “This is a global variable of the Scope class” ;
 System.out.println( Scope.txt ) ;
 ```
 
-![image](img/9bl.jpg)注释掉 `sub` 方法中声明局部变量的行行——这样输出语句现在将访问同名的全局变量
+![image](img/9bl.jpg)注释掉 `sub` 方法中声明局部变量的行——这样输出语句现在将访问同名的全局变量
 
 ```java
-//String txt = “This is a local variable in the sub method” ;
+//String txt = "This is a local variable in the sub method" ;
 ```
 
 ![image](img/10bl.jpg)保存更改，然后重新编译程序并再次运行以查看修改后的输出
@@ -3360,7 +3139,7 @@ Multi.java
 ![image](img/2bl.jpg)在 main 方法的大括号之间声明并初始化一个 `String` 变量，然后输出它的内容
 
 ```java
-String msg = “This is a local variable in the Multi class” ;
+String msg = "This is a local variable in the Multi class" ;
 System.out.println( msg ) ;
 ```
 
@@ -3395,36 +3174,35 @@ class Data
 }
 ```
 
+
+
 ![image](img/common.jpg)
 
 Data.java
 
-![image](img/8bl.jpg)声明并初始化一个 public 类常量
+![image](img/8bl.jpg)声明并初始化一个 `public` 类常量
 
 ```java
-public static String txt = “This is a global variable” ;
+public static String txt = "This is a global variable";
 ```
 
-![image](img/9bl.jpg)添加 public “greeting”类方法
+![image](img/9bl.jpg)添加 `public` “greeting”类方法
 
 ```java
-public static void greeting()
-{
-    System.out.print( “This is a global method” ) ;
-    System.out.println( “of the class” ) ;
+public static void greeting() {
+    System.out.print("This is a global method");
+    System.out.println("of the class");
 }
 ```
 
 ![image](img/10bl.jpg)将文件保存为 `Data.java` 并与 `Multi.java` 程序位于同一目录下
 
-![image](img/11bl.jpg)在一个文件中创建 Draw 类和一个默认访问的“line”方法——不使用 `public` 关键字
+![image](img/11bl.jpg)在一个文件中创建 `Draw` 类和一个默认访问的“line”方法——不使用 `public` 关键字
 
 ```java
-class Draw
-{
-    static void line()
-    {
-        System.out.println( ) ;
+class Draw {
+    static void line() {
+        System.out.println();
     }
 }
 ```
@@ -3447,7 +3225,7 @@ Draw.java
 
 ![image](img/pg104_1.jpg)
 
-继承类被称为“子”类，而它继承的类被称为“父”类。在上面的例子中，Base` 类是父类`Extra` 类是子类。
+继承类被称为“子”类，而它继承的类被称为“父”类。在上面的例子中，`Base` 类是父类，`Extra` 类是子类。
 
 父类中创建的方法和变量通常可以被认为存在于子类中，只要它们没有被声明为 `private` 关键字（该关键字会拒绝类外部访问）。
 
@@ -3458,7 +3236,7 @@ Draw.java
 ![image](img/1bl.jpg)创建一个名为“SuperClass” 的新类
 
 ```java
-class SuperClass {    }
+class SuperClass { }
 ```
 
 ![image](img/common.jpg)
@@ -3468,26 +3246,19 @@ SuperClass.java
 ![image](img/2bl.jpg)在类的大括号之间添加一个输出标识性 `String` 方法
 
 ```java
-public static void hello( )
-{
-    System.out.println( “Hello from the Super Class” ) ;
+public static void hello() {
+    System.out.println("Hello from the Super Class");
 }
 ```
 
 ![image](img/3bl.jpg)添加第二个方法尝试输出传递的参数，然后将文件保存为 `SuperClass.java`
 
-
-
-
-
 ```java
-public static void echo( String arg )
-{
+public static void echo(String arg) {
     try {
-        System.out.println( “You entered: “ + arg ) ;
-    }
-    catch( Exception e ) {
-        System.out.println( “Argument required” ) ;
+        System.out.println("You entered: " + arg);
+    } catch (Exception e) {
+        System.out.println("Argument required");
     }
 }
 ```
@@ -3495,9 +3266,8 @@ public static void echo( String arg )
 ![image](img/4bl.jpg)启动一个名为“SubClass”的新程序，继承自 `SuperClass` 类
 
 ```java
-class SubClass extends SuperClass
-{
-    public static void main ( String[] args ) {      }
+class SubClass extends SuperClass {
+    public static void main(String[] args) { }
 }
 ```
 
@@ -3505,26 +3275,25 @@ class SubClass extends SuperClass
 
 SubClass.java
 
-![image](img/5bl.jpg)在 main 方法之后，添加一个输出标识 `String` 的方法，重写与同名的继承方法
+![image](img/5bl.jpg)在 `main` 方法之后，添加一个输出标识 `String` 的方法，重写与同名的继承方法
 
 ```java
-public static void hello()
-{
-    System.out.println( “Hello from the Sub Class” ) ;
+public static void hello() {
+    System.out.println("Hello from the Sub Class");
 }
 ```
 
-![image](img/6bl.jpg)在 main 方法的大括号之间，插入对重写方法的调用，然后显式地调用父类中同名的方法
+![image](img/6bl.jpg)在 `main` 方法的大括号之间，插入对重写方法的调用，然后显式地调用父类中同名的方法
 
 ```java
-hello() ;
-SuperClass.hello() ;
+hello();
+SuperClass.hello();
 ```
 
 ![image](img/7bl.jpg)添加对另一个继承方法的调用
 
 ```java
-echo( args[0] ) ;
+echo(args[0]);
 ```
 
 ![image](img/8bl.jpg)将程序保存为 `SubClass.java`，然后在不带命令行参数的情况下编译并运行程序
@@ -3563,9 +3332,7 @@ Java 中对象的创建是通过定义一个类作为模板的，从该模板可
 ![image](img/1bl.jpg)启动一个名为“Car”的新模板类
 
 ```java
-class Car
-{
-}
+class Car { }
 ```
 
 ![image](img/common.jpg)
@@ -3575,35 +3342,33 @@ FirstObject.java
 ![image](img/2bl.jpg)在 `Car` 类的大括号之间，声明并初始化两个描述属性的全局 `String` 常量
 
 ```java
-public final static String color = “Red” ;
-public final static String bodyType = “Coupe” ;
+public final static String color = "Red";
+public final static String bodyType = "Coupe";
 ```
 
 ![image](img/3bl.jpg)添加一个描述行为的全局方法
 
 ```java
-public static String accelerate()
-{
-    String motion = “Accelerating -->” ;
-    return motion ;
+public static String accelerate() {
+    String motion = "Accelerating -->";
+    return motion;
 }
 ```
 
-![image](img/4bl.jpg)在 `Car` 类之后，启动一个名为“FirstObject”的新程序类，包含标准的 main 方法
+![image](img/4bl.jpg)在 `Car` 类之后，启动一个名为“FirstObject”的新程序类，包含标准的 `main` 方法
 
 ```java
-class FirstObject
-{
-    public static void main ( String[] args ) {      }
+class FirstObject {
+    public static void main(String[] args) { }
 }
 ```
 
-![image](img/5bl.jpg)在 main 方法的大括号之间，插入语句输出每个 `Car` 属性的值并调用其行为方法
+![image](img/5bl.jpg)在 `main` 方法的大括号之间，插入语句输出每个 `Car` 属性的值并调用其行为方法
 
 ```java
-System.out.println( “Paint is “ + Car.color ) ;
-System.out.println( “Style is “ + Car.bodyType ) ;
-System.out.println( Car.accelerate() ) ;
+System.out.println("Paint is " + Car.color);
+System.out.println("Style is " + Car.bodyType);
+System.out.println(Car.accelerate());
 ```
 
 ![image](img/6bl.jpg)将程序保存为 `FirstObject.java`，然后编译并运行程序查看输出
@@ -3616,25 +3381,25 @@ System.out.println( Car.accelerate() ) ;
 
 ![image](img/hot.jpg)
 
-对象类通常在包含 main 方法的程序类之前创建。
+对象类通常在包含 `main` 方法的程序类之前创建。
 
 ## 生成对象实例
 
-每个类都有一个内置的“构造”方法，可用于创建该类的新实例。构造方法的方法与类名相同，并使用 `new` 关键字调用。
+每个类都有一个内置的“构造”方法，可用于创建该类的新实例。构造方法的方法名与类名相同，并使用 `new` 关键字调用。
 
-![image](img/pg108_1.jpg)类的每个实例都继承属性和行为。继承原理贯穿 Java，以便程序可以使用现成的属性。为了提高灵活性，对象类定义可以在包含程序的其他文件中。这意味着它们可以被多个程序随时使用。
+![image](img/pg108_1.jpg)
+
+类的每个实例都继承属性和行为。继承原理贯穿 Java，以便程序可以使用现成的属性。为了提高灵活性，对象类定义可以在包含程序的其他文件中。这意味着它们可以被多个程序随时使用。
 
 现在，重复上一个示例中的 `Car` 类对象模板：
 
 ```java
-class Car
-{
-    public final static String color = “Red” ;
-    public final static String bodyType = “Coupe” ;
-    public static String accelerate()
-    {
-        String motion = “Accelerating -->” ;
-        return motion ;
+class Car {
+    public final static String color = "Red";
+    public final static String bodyType = "Coupe";
+    public static String accelerate() {
+        String motion = "Accelerating -->";
+        return motion;
     }
 }
 ```
@@ -3642,9 +3407,8 @@ class Car
 ![image](img/1bl.jpg)将文件保存为 `Car.java`
 
 ```java
-class FirstObject
-{
-    public static void main ( String[] args ) {      }
+class FirstObject {
+    public static void main(String[] args) { }
 }
 ```
 
@@ -3652,43 +3416,36 @@ class FirstObject
 
 FirstInstance.java
 
-![image](img/2bl.jpg)在 main 方法的大括号之间，插入语句输出每个 `Car` 属性的值并调用其行为方法
+![image](img/2bl.jpg)在 `main` 方法的大括号之间，插入语句输出每个 `Car` 属性的值并调用其行为方法
 
 ```java
-System.out.println( “Paint is “ + Car.color ) ;
-System.out.println( “Style is “ + Car.bodyType ) ;
-System.out.println( Car.accelerate() ) ;
+System.out.println("Paint is " + Car.color);
+System.out.println("Style is " + Car.bodyType);
+System.out.println(Car.accelerate());
 ```
 
 ![image](img/3bl.jpg)现在，添加一条语句创建一个 `Car` 类的 `Porsche` 实例
 
 ```java
-Car Porsche = new Car() ;
+Car Porsche = new Car();
 ```
 
 ![image](img/4bl.jpg)添加语句输出每个 `Porsche` 属性继承的值并调用其行为方法
 
 ```java
-System.out.println( “Porsche paint is “ + Porsche.color ) ;
-System.out.println( “Porsche style is “ + Porsche.bodyType ) ;
-System.out.println( Porsche.accelerate() ) ;
+System.out.println("Porsche paint is " + Porsche.color);
+System.out.println("Porsche style is " + Porsche.bodyType);
+System.out.println(Porsche.accelerate());
 ```
 
 ![image](img/5bl.jpg)将程序保存为 `FirstInstance.java` 并与 `Car.java` 模板文件一起，然后编译并运行程序查看输出
 
-
-
-
-
 在声明对象变量和方法时，可以使用 `private` 关键字，以保护它们免受外部程序代码的操纵。该对象应包含 `public` 方法来获取值并调用这些方法。这种技术整洁地将变量和方法封装在对象结构内部。接下来的步骤将演示如何重现之前的示例——但使用了经过封装的属性和方法：
 
-![image](img/1bl.jpg)创建一个名为“Car”的新新类
+![image](img/1bl.jpg)创建一个名为“Car”的新类
 
 ```java
-class Car
-{
-
-}
+class Car { }
 ```
 
 ![image](img/pg110_1.jpg)
@@ -3700,75 +3457,72 @@ SafeInstance.java
 ![image](img/2bl.jpg)在类的大括号之间，声明三个 `private` `String` 变量来存储对象属性
 
 ```java
-private String maker ;
-private String color ;
-private String bodyType ;
+private String maker;
+private String color;
+private String bodyType;
 ```
 
 ![image](img/3bl.jpg)添加一个描述行为的 `private` 方法
 
 ```java
-private String accelerate()
-{
-String motion = “Accelerating -->” ;
-return motion ;
+private String accelerate() {
+    String motion = "Accelerating -->";
+    return motion;
 }
 ```
 
 ![image](img/4bl.jpg)添加一个 `public` 方法，将传递的参数值赋值给每个 `private` 变量
 
 ```java
-public void setCar( String brand , String paint , String style )
-{
-maker = brand ;
-color = paint ;
-bodyType = style ;
+public void setCar(String brand, String paint, String style) {
+    maker = brand;
+    color = paint;
+    bodyType = style;
 }
 ```
 
 ![image](img/5bl.jpg)添加另一个 `public` 方法来获取 `private` 变量的值并调用 `private` 方法
 
 ```java
-public void getCar()
-{
-System.out.println( maker + ” paint is “ + color ) ;
-System.out.println( maker + “ style is ” + bodyType ) ;
-System.out.println( maker + “ is ” + accelerate() + ”\n” ) ;
+public void getCar() {
+    System.out.println(maker + " paint is " + color);
+    System.out.println(maker + " style is " + bodyType);
+    System.out.println(maker + " is " + accelerate() + "\n");
 }
 ```
 
-![image](img/6bl.jpg)在 `Car` 类结束后，启动另一个名为“SafeInstance”的类，包含标准的 main 方法
+![image](img/6bl.jpg)在 `Car` 类结束后，启动另一个名为“SafeInstance”的类，包含标准的 `main` 方法
 
 ```java
-class SafeInstance
-{
-public static void main ( String[] args) {} }
+class SafeInstance {
+    public static void main(String[] args) { }
+}
 ```
 
-![image](img/7bl.jpg)在 main 方法的大括号之间，插入一条语句创建 `Car` 类的实例
+![image](img/7bl.jpg)在 `main` 方法的大括号之间，插入一条语句创建 `Car` 类的实例
 
 ```java
-Car Porsche = new Car() ;
+Car Porsche = new Car();
 ```
 
 ![image](img/8bl.jpg)添加一条调用 `Car` 类 `public` 方法的语句，为其 `private` 变量赋值
 
 ```java
-Porsche.setCar( “Porsche” , ”Red” , ”Coupe” ) ;
+Porsche.setCar("Porsche", "Red", "Coupe");
 ```
 
 ![image](img/9bl.jpg)现在，添加一条语句调用 `Car` 的另一个 `public` 方法来获取存储的属性值并调用 `private` 行为方法
 
 ```java
-Porsche.getCar() ;
+Porsche.getCar();
 ```
 
 ![image](img/10bl.jpg)创建另一个实例，进行赋值和取值
 
 ```java
-Car Bentley = new Car() ;
-Bentley.setCar( “Bentley” , ”Green” , ”Saloon” ) ;
-Bentley.getCar() ;
+Car Bentley = new Car();
+Bentley.setCar("Bentley", "Green", "Saloon");
+Bentley.getCar();
 ```
 
 ![image](img/11bl.jpg)将程序保存为 `SafeInstance.java`，然后编译并运行程序查看输出
@@ -3786,10 +3540,7 @@ Bentley.getCar() ;
 ![image](img/1bl.jpg)创建一个名为“Car”的新类
 
 ```java
-class Car
-{
-
-}
+class Car { }
 ```
 
 ![image](img/pg112_1.jpg)
@@ -3801,74 +3552,84 @@ Constructor.java
 ![image](img/2bl.jpg)在类的大括号之间，声明三个 `private` `String` 变量来存储对象属性
 
 ```java
-private String maker ;
-private String color ;
-private String bodyType ;
+private String maker;
+private String color;
+private String bodyType;
 ```
 
 ![image](img/3bl.jpg)添加一个构造方法，用属性值初始化所有三个变量
 
 ```java
-public Car()
-{
-maker = “Porsche” ;
-color = “Silver” ;
-bodyType = “Coupe” ;
+public Car() {
+    maker = "Porsche";
+    color = "Silver";
+    bodyType = "Coupe";
 }
 ```
 
 ![image](img/4bl.jpg)添加一个描述行为的 `private` 方法
 
 ```java
-private String accelerate()
-{
-String motion = “Accelerating -->” ;
-return motion ;
-}
+private String accelerate() {
 ```
 
-![image](img/5bl.jpg)添加一个 `public` 方法，将传递的参数值赋值给每个 `private` 变量
+
+
+String motion = “Accelerating -->” ;
+
+return motion ;
+
+}
+
+```
+
+![image](img/5bl.jpg)
+添加一个 `public` 方法，将传递的参数值赋值给每个 `private` 变量
 
 ```java
 public void setCar( String brand , String paint , String style )
 {
-maker = brand ;
-color = paint ;
-bodyType = style ;
+    maker = brand ;
+    color = paint ;
+    bodyType = style ;
 }
 ```
 
 ![image](img/snake.jpg)
-
 构造方法的声明没有指定任何返回数据类型。
 
-![image](img/6bl.jpg)添加另一个 `public` 方法来获取 `private` 变量的值并调用 `private` 方法
+![image](img/6bl.jpg)
+添加另一个 `public` 方法来获取 `private` 变量的值并调用 `private` 方法
 
 ```java
 public void getCar()
 {
-System.out.println( maker + ” paint is ” + color ) ;
-System.out.println( maker + “ style is ” + bodyType ) ;
-System.out.println( maker + “ is ” + accelerate() + ”\n” ) ;
+    System.out.println( maker + ” paint is ” + color ) ;
+    System.out.println( maker + “ style is ” + bodyType ) ;
+    System.out.println( maker + “ is ” + accelerate() + ”\n” ) ;
 }
 ```
 
-![image](img/7bl.jpg)在 `Car` 类结束后，启动另一个名为“Constructor”的类，包含标准的 main 方法
+![image](img/7bl.jpg)
+在 `Car` 类结束后，启动另一个名为“Constructor”的类，包含标准的 main 方法
 
 ```java
 class Constructor
 {
-public static void main ( String[] args) {}
+    public static void main ( String[] args ) {}
+}
 ```
 
-![image](img/8bl.jpg)在 main 方法的大括号之间，插入一条语句创建 `Car` 类的实例并获取初始值
+![image](img/8bl.jpg)
+在 main 方法的大括号之间，插入一条语句创建 `Car` 类的实例并获取初始值
 
 ```java
 Car Porsche = new Car() ;
 Porsche.getCar() ;
 ```
 
-![image](img/9bl.jpg)创建另一个实例，进行赋值和取值
+![image](img/9bl.jpg)
+创建另一个实例，进行赋值和取值
 
 ```java
 Car Bentley = new Car() ;
@@ -3876,7 +3637,8 @@ Bentley.setCar( “Bentley” , ”Green” , ”Saloon” ) ;
 Bentley.getCar() ;
 ```
 
-![image](img/10bl.jpg)将程序保存为 `Constructor.java`，然后编译并运行程序查看输出
+![image](img/10bl.jpg)
+将程序保存为 `Constructor.java`，然后编译并运行程序查看输出
 
 ## 总结
 
@@ -3889,14 +3651,9 @@ Bentley.getCar() ;
 - 使用类名和点符号可以显式访问特定的类方法或类变量。
 - 真实世界对象具有属性和行为，可以通过程序中的变量和方法来表示。
 
-
-
-
-
 Java 包含一个名为 `java.io` 的包，用于处理文件输入输出过程。通过在 `.java` 文件的最开始包含 `import` 语句，可以使程序可以使用该包。在语句 `import java.io.* ;` 中可以使用通配符字符 `*` 来表示“所有类”。
 
 ![image](img/pg116_1.jpg)
-
 `java.io` 包有一个名为 `File` 的类，用于访问文件或完成目录。必须先使用 `new` 关键字创建一个 `File` 对象，并将文件名或目录名作为构造函数的参数。例如，创建一个名为 `info` 代表名为 `info.dat` 的本地文件的 `File` 对象的语法如下：
 
 ```
@@ -3918,20 +3675,20 @@ File info = new File( “info.dat” ) ;
 | `list()` | `String` 类型的文件或文件夹名称数组 |
 
 ![image](img/forget.jpg)
-
 作为构造函数参数指定的名必须包含在引号内。
 
-![image](img/1v.jpg)启动一个新程序，导入所有 `java.io` 类的功能
+![image](img/1v.jpg)
+启动一个新程序，导入所有 `java.io` 类的功能
 
 ```
 import java.io.* ;
 ```
 
 ![image](img/common.jpg)
-
 ListFiles.java
 
-![image](img/2v.jpg)添加一个名为“ListFiles”的类，包含标准的 main 方法
+![image](img/2v.jpg)
+添加一个名为“ListFiles”的类，包含标准的 main 方法
 
 ```
 class ListFiles
@@ -3940,13 +3697,15 @@ class ListFiles
 }
 ```
 
-![image](img/3v.jpg)在 main 方法的大括号之间，插入一个语句为名为“data”的目录文件夹创建一个 `File` 对象
+![image](img/3v.jpg)
+在 main 方法的大括号之间，插入一个语句为名为“data”的目录文件夹创建一个 `File` 对象
 
 ```
 File dir = new File( “data” ) ;
 ```
 
-![image](img/4v.jpg)添加一个 `if` 语句输出该文件夹中所有文件的名称，或者如果文件夹为空则输出消息
+![image](img/4v.jpg)
+添加一个 `if` 语句输出该文件夹中所有文件的名称，或者如果文件夹为空则输出消息
 
 ```java
 if ( dir.exists() )
@@ -3955,14 +3714,17 @@ if ( dir.exists() )
     System.out.println( files.length + “ files found...” ) ;
     for ( int i = 0 ; i < files.length ; i++ )
     {
-               System.out.println( files[i] ) ;
+        System.out.println( files[i] ) ;
     }
 }
 else
-{              System.out.println( “Folder not found.” ) ; }
+{
+    System.out.println( “Folder not found.” ) ;
+}
 ```
 
-![image](img/5v.jpg)将程序保存为 `ListFiles.java`，并带上包含某些文件的“data”文件夹，然后编译并运行程序，以查看输出列出的文件名
+![image](img/5v.jpg)
+将程序保存为 `ListFiles.java`，并带上包含某些文件的“data”文件夹，然后编译并运行程序，以查看输出列出的文件名
 
 ![image](img/pg117_1.jpg)
 
@@ -3971,22 +3733,22 @@ else
 `java.io` 包允许程序从命令行读取输入 – 与用户交互。正如 `System.out` 字段可以将输出发送到命令行一样，`System.in` 字段可以使用 `InputStreamReader` 对象从命令行读取内容。这以字节形式读取输入，并将其转换为代表 Unicode 字符值的整数值。
 
 ![image](img/pg118_1.jpg)
-
 为了读取整整行输入文本，`BufferedReader` 对象的 `readLine()` 方法会读取由 `InputStreamReader` 解码的字符。此方法必须在 `try catch` 语句内部调用，以捕获任何 `IOException` 问题。
 
 通常情况下，`readLine()` 方法会将输入赋值给 `String` 变量供程序处理。
 
-![image](img/1v.jpg)启动一个新程序，导入所有 `java.io` 类的功能
+![image](img/1v.jpg)
+启动一个新程序，导入所有 `java.io` 类的功能
 
 ```
 import java.io.* ;
 ```
 
 ![image](img/common.jpg)
-
 ReadString.java
 
-![image](img/2v.jpg)添加一个名为“ReadString”的类，包含标准的 main 方法
+![image](img/2v.jpg)
+添加一个名为“ReadString”的类，包含标准的 main 方法
 
 ```
 class ReadString
@@ -3995,31 +3757,36 @@ class ReadString
 }
 ```
 
-![image](img/3v.jpg)在 main 方法的大括号之间，插入一个语句输出提示用户输入的消息
+![image](img/3v.jpg)
+在 main 方法的大括号之间，插入一个语句输出提示用户输入的消息
 
 ```java
 System.out.print( “Enter the title of this book: “ ) ;
 ```
 
-![image](img/4v.jpg)添加一个创建一个 `InputStreamReader` 对象的语句，允许从命令行读取输入
+![image](img/4v.jpg)
+添加一个创建一个 `InputStreamReader` 对象的语句，允许从命令行读取输入
 
 ```java
 InputStreamReader isr = new InputStreamReader( System.in ) ;
 ```
 
-![image](img/5v.jpg)创建一个 `BufferedReader` 对象来读取解码后的输入
+![image](img/5v.jpg)
+创建一个 `BufferedReader` 对象来读取解码后的输入
 
 ```java
 BufferedReader buffer = new BufferedReader( isr ) ;
 ```
 
-![image](img/6v.jpg)声明并初始化一个空的 `String` 变量用于存储输入
+![image](img/6v.jpg)
+声明并初始化一个空的 `String` 变量用于存储输入
 
 ```java
 String input =“ ;
 ```
 
-![image](img/7v.jpg)添加 `try catch` 语句从命令行读取输入并存入变量
+![image](img/7v.jpg)
+添加 `try catch` 语句从命令行读取输入并存入变量
 
 ```java
 try
@@ -4033,43 +3800,48 @@ catch ( IOException e )
 }
 ```
 
-![image](img/8v.jpg)输出包含存储值的消息
+![image](img/8v.jpg)
+输出包含存储值的消息
 
 ```java
 System.out.println( “\nThanks, you are reading “ + input ) ;
 ```
 
-![image](img/9v.jpg)将程序保存为 `ReadString.java` 然后编译并运行程序
+![image](img/9v.jpg)
+将程序保存为 `ReadString.java` 然后编译并运行程序
 
-![image](img/pg19.jpg)输入文本，然后按回车查看输出
+![image](img/pg19.jpg)
+输入文本，然后按回车查看输出
 
-![image](img/10v.jpg)在不再需要时调用 `BufferedReader` 的 `close()` 方法是一个良好的习惯
+![image](img/10v.jpg)
+在不再需要时调用 `BufferedReader` 的 `close()` 方法是一个良好的习惯
 
 ### 读取文件
 
 `java.io` 包包含一个名为 `FileReader` 的类，专门用于读取文本文件。该类是 `InputStreamReader` 的子类，可以通过将字节流转换为代表 Unicode 字符值的整数来读取输入。
 
 ![image](img/pg120_1.jpg)
-
 为了逐行读取文本文件，可以使用 `BufferedReader` 对象的 `readLine()` 方法。此方法必须在 `try catch` 语句内部调用。
 
 读取包含多行的文本文件的所有行通过重复调用 `readLine()` 方法来实现。在文件末尾，该调用将返回 `null` 值，可用于终止循环。
 
-![image](img/1v.jpg)打开一个纯文本编辑器（如 Windows 记事本），编写几行文本 – 例如奥斯卡·威尔德《惩狱之歌》中的著名诗句
+![image](img/1v.jpg)
+打开一个纯文本编辑器（如 Windows 记事本），编写几行文本 – 例如奥斯卡·威尔德《惩狱之歌》中的著名诗句
 
 ![image](img/pg120_2.jpg)
 
-![image](img/2v.jpg)将文本文件保存为 `Oscar.txt`，然后启动一个导入所有 `java.io` 类的程序
+![image](img/2v.jpg)
+将文本文件保存为 `Oscar.txt`，然后启动一个导入所有 `java.io` 类的程序
 
 ```
 import java.io.* ;
 ```
 
 ![image](img/common.jpg)
-
 ReadFile.java
 
-![image](img/3v.jpg)添加一个名为“ReadFile”的类，包含标准的 main 方法
+![image](img/3v.jpg)
+添加一个名为“ReadFile”的类，包含标准的 main 方法
 
 ```
 class ReadFile
@@ -4078,7 +3850,8 @@ class ReadFile
 }
 ```
 
-![image](img/4v.jpg)在 main 方法的大括号之间，插入一个 `try catch` 语句
+![image](img/4v.jpg)
+在 main 方法的大括号之间，插入一个 `try catch` 语句
 
 ```java
 try {      }
@@ -4088,46 +3861,50 @@ catch ( IOException e )
 }
 ```
 
-![image](img/5v.jpg)在 `try` 块的大括号之间，插入一个语句创建一个 `FileReader` 对象
+![image](img/5v.jpg)
+在 `try` 块的大括号之间，插入一个语句创建一个 `FileReader` 对象
 
 ```java
 FileReader file = new FileReader( “Oscar.txt” ) ;
 ```
 
-
-
-
-![image](img/6v.jpg)创建一个 `BufferedReader` 对象来读取文件
+![image](img/6v.jpg)
+创建一个 `BufferedReader` 对象来读取文件
 
 ```java
 BufferedReader buffer = new BufferedReader( file ) ;
 ```
 
-![image](img/7v.jpg)声明并初始化一个空的 `String` 变量，用于存储一行文本
+![image](img/7v.jpg)
+声明并初始化一个空的 `String` 变量，用于存储一行文本
 
 ```java
 String line = ““ ;
 ```
 
-![image](img/8v.jpg)添加一个循环将文本文件内容读入变量中并输出每行文本
+![image](img/8v.jpg)
+添加一个循环将文本文件内容读入变量中并输出每行文本
 
 ```java
 while ( ( line = buffer.readLine() ) != null )
-{            System.out.println( line ) ;        }
+{
+    System.out.println( line ) ;
+}
 ```
 
-![image](img/9v.jpg)记住在不再需要时关闭 `BufferedReader` 对象
+![image](img/9v.jpg)
+记住在不再需要时关闭 `BufferedReader` 对象
 
 ```java
 buffer.close() ;
 ```
 
-![image](img/10v.jpg)将程序保存为 `ReadFile.java` 并与文本文件放在一起，然后编译并运行程序以查看输出
+![image](img/10v.jpg)
+将程序保存为 `ReadFile.java` 并与文本文件放在一起，然后编译并运行程序以查看输出
 
 ![image](img/pg121_1.jpg)
 
 ![image](img/forget.jpg)
-
 作为 `FileReader` 参数指定的文本文件必须包含在引号内。
 
 ## 写文件
@@ -4135,24 +3912,24 @@ buffer.close() ;
 在 `java.io` 包中，用于读取文本文件的 `FileReader` 和 `BufferedReader` 类有对应的 `FileWriter` 和 `BufferedWriter` 类，它们可用于写入文本文件。
 
 ![image](img/pg122_1.jpg)
-
 使用 `new` 关键字创建 `FileWriter` 对象，并将要写入的文件名作为其参数。可选，该参数可以包含指向程序所在目录之外待写入文件的完整路径。
 
 使用 `new` 关键字创建 `BufferedWriter` 对象，并将 `FileWriter` 对象的名称作为其参数。然后可以使用 `BufferedWriter` 对象的 `write()` 方法写入文本，并通过调用其 `newLine()` 方法将行隔开。这些方法应该在 `try catch` 语句内部调用，以捕获可能出现的任何 `IOException` 问题。
 
 如果已存在指定名称的文件，其内容将被 `write()` 方法覆盖，否则将创建一个该名称的新文件并写入其内容。
 
-![image](img/1v.jpg)启动一个新程序，导入所有 `java.io` 类的功能
+![image](img/1v.jpg)
+启动一个新程序，导入所有 `java.io` 类的功能
 
 ```java
 import java.io.* ;
 ```
 
 ![image](img/common.jpg)
-
 WriteFile.java
 
-![image](img/2v.jpg)添加一个名为“WriteFile”的类，包含标准的 main 方法
+![image](img/2v.jpg)
+添加一个名为“WriteFile”的类，包含标准的 main 方法
 
 ```java
 class WriteFile
@@ -4161,7 +3938,8 @@ class WriteFile
 }
 ```
 
-![image](img/3v.jpg)在 main 方法的大括号之间插入一个 `try catch` 语句
+![image](img/3v.jpg)
+在 main 方法的大括号之间插入一个 `try catch` 语句
 
 ```java
 try {      }
@@ -4171,19 +3949,22 @@ catch ( IOException e )
 }
 ```
 
-![image](img/4v.jpg)在 `try` 块的大括号之间插入一条语句为名为“Tam.txt”的文本文件创建一个 `FileWriter` 对象
+![image](img/4v.jpg)
+在 `try` 块的大括号之间插入一条语句为名为“Tam.txt”的文本文件创建一个 `FileWriter` 对象
 
 ```java
 FileWriter file = new FileWriter( “Tam.txt” ) ;
 ```
 
-![image](img/5v.jpg)创建一个 `BufferedWriter` 对象来写入文件
+![image](img/5v.jpg)
+创建一个 `BufferedWriter` 对象来写入文件
 
 ```java
 BufferedWriter buffer = new BufferedWriter( file ) ;
 ```
 
-![image](img/6v.jpg)添加语句向文本文件写入文本行和换行符——例如来自罗伯特·伯斯《Tam O’Shanter》的节译的诗节
+![image](img/6v.jpg)
+添加语句向文本文件写入文本行和换行符——例如来自罗伯特·伯斯《Tam O’Shanter》的节译的诗节
 
 ```java
 buffer.write( “The wind blew as if it had blown its last” ) ;
@@ -4196,23 +3977,27 @@ buffer.write( “Loud, deep and long the thunder bellowed” ) ;
 buffer.newLine() ;
 buffer.write( “That night a child might understand” ) ;
 buffer.newLine() ;
-buffer.write( “The devil had business on his hand.” ) ;
 ```
 
-![image](img/7v.jpg)记住在不再需要时关闭 `BufferedWriter` 对象
+
+
+buffer.write("The devil had business on his hand.");
+
+![image](img/7v.jpg)
+记住在不再需要时关闭 `BufferedWriter` 对象
 
 ```java
-buffer.close() ;
+buffer.close();
 ```
 
-![image](img/8v.jpg)将程序保存为 `WriteFile.java`，然后编译并运行程序以在程序旁边写入文本文件
+![image](img/8v.jpg)
+将程序保存为 `WriteFile.java`，然后编译并运行程序以在程序旁边写入文本文件
 
 ![image](img/pg123_1.jpg)
 
 ![image](img/pg123_2.jpg)
 
 ![image](img/hot.jpg)
-
 你可以调用 `BufferedWriter` 对象的 `append()` 方法来添加文本——而不是使用 `write()` 方法覆盖文本。
 
 ## 排序数组元素
@@ -4222,10 +4007,6 @@ Java 包含一个名为 `java.util` 的包，它为处理数据集合提供了�
 ![image](img/pg124_1.jpg)
 
 `java.util` 包有一个名为“Arrays”的类，它拥有可以用于操作数组的方法。通过在 `.java` 文件的开头包含 `import` 语句，可以让该功能对程序可用。在语句 `import java.util.* ;` 中可以使用通配符字符表示“所有类”。
-
-*(注：原文中存在大量重复段落，已根据要求去重保留核心内容)*
-
-
 
 通过向列表的 `set()` 方法传递索引数字和新值作为参数，可以修改元素值。通过向列表的 `add()` 方法传递索引数字和值作为参数，可以在列表的特定位置添加元素。列表通过沿索引移动元素值来扩展以容纳额外的元素。
 
@@ -4244,24 +4025,23 @@ Java 包含一个名为 `java.util` 的包，它为处理数据集合提供了�
 使用列表的 `forEach()` 方法，迭代中的当前元素值可以作为参数传递给 Lambda 表达式，然后通过其语句在输出中显示。
 
 ![image](img/hot.jpg)
-
 你可以通过调用其 `size()` 方法来发现列表当前有多少个元素。
 
 ![image](img/hot.jpg)
-
 Lambda 表达式是在 Java 8 中引入的，用于实现简洁的匿名方法。
 
-![image](img/1v.jpg)启动一个新程序，导入 `java.util.ArrayList` 类中所有方法的功能。
+![image](img/1v.jpg)
+启动一个新程序，导入 `java.util.ArrayList` 类中所有方法的功能。
 
 ```java
 import java.util.ArrayList ;
 ```
 
 ![image](img/common.jpg)
-
 Lists.java
 
-![image](img/2v.jpg)添加一个名为“Lists”的类，其中包含标准的 main 方法。
+![image](img/2v.jpg)
+添加一个名为“Lists”的类，其中包含标准的 main 方法。
 
 ```java
 class Lists
@@ -4270,44 +4050,47 @@ class Lists
 }
 ```
 
-![image](img/3v.jpg)在 main 方法的大括号之间，插入一条语句来创建一个名为“list”的 `String ArrayList` 对象。
+![image](img/3v.jpg)
+在 main 方法的大括号之间，插入一条语句来创建一个名为“list”的 `String ArrayList` 对象。
 
 ```java
 ArrayList<String> list = new ArrayList<String>() ;
 ```
 
-![image](img/4v.jpg)接下来，添加语句用 `String` 值填充列表元素，然后显示整个列表。
+![image](img/4v.jpg)
+接下来，添加语句用 `String` 值填充列表元素，然后显示整个列表。
 
 ```java
-list.add( “Alpha” ) ;
-list.add( “Delta” ) ;
-list.add( “Charlie” ) ;
-System.out.println( “List: ” + list ) ;
+list.add( "Alpha" ) ;
+list.add( "Delta" ) ;
+list.add( "Charlie" ) ;
+System.out.println( "List: " + list ) ;
 ```
 
-![image](img/5v.jpg)现在，识别第二个元素中的当前值，然后将其替换为新的 `String`。
+![image](img/5v.jpg)
+现在，识别第二个元素中的当前值，然后将其替换为新的 `String`。
 
 ```java
-System.out.println( “Replacing: ” + list.get(1) + “\n” ) ;
-list.set( 1, “Bravo” ) ;
+System.out.println( "Replacing: " + list.get(1) + "\n" ) ;
+list.set( 1, "Bravo" ) ;
 ```
 
-![image](img/6v.jpg)最后，遍历列表并显示现在存储在每个元素中的 `String` 值。
+![image](img/6v.jpg)
+最后，遍历列表并显示现在存储在每个元素中的 `String` 值。
 
 ```java
-list.forEach( ( x ) -> System.out.println( “Item: “ + x ) ) ;
+list.forEach( ( x ) -> System.out.println( "Item: " + x ) ) ;
 ```
 
-![image](img/7v.jpg)将程序保存为 `Lists.java`，然后编译并运行程序以查看输出。
+![image](img/7v.jpg)
+将程序保存为 `Lists.java`，然后编译并运行程序以查看输出。
 
 ![image](img/pg127_1.jpg)
 
 ![image](img/forget.jpg)
-
 与普通数组一样，`ArrayList` 中的元素具有从 0 开始的索引。
 
 ![image](img/hot.jpg)
-
 此处引入的图形化 Java Swing `JComboBox` 组件包含一个选项列表，因此在创建该对象时也必须指定其泛型数据类型。
 
 ### 管理日期
@@ -4315,22 +4098,22 @@ list.forEach( ( x ) -> System.out.println( “Item: “ + x ) ) ;
 `java.time` 包包含一个名为 `LocalDateTime` 的类，它具有实用的方法可以从 `LocalDateTime` 对象中提取描述特定时间点的特定字段。可以通过 `import java.time.LocalDateTime;` 导入特定类，或者通过使用通配符 `import java.time.* ;` 导入该包中的所有类，来供程序可用。
 
 ![image](img/pg128_1.jpg)
-
 可以使用 `now()` 方法创建一个带有描述当前日期时间的字段的新 `LocalDateTime` 对象。这些字段根据当前区域的系统时钟初始化。
 
 可以使用 `LocalDateTime` 对象的适当方法检索单个字段内的值。例如，可以使用其 `getYear()` 方法检索年份字段的值。同样，可以使用 `LocalDateTime` 对象的适当方法更改任何字段以指定替换值。例如，可以通过向其 `withYear()` 方法传递一个新的年份作为参数来更改年份字段的值。
 
-![image](img/1v.jpg)启动一个新程序，导入 `java.time.LocalDateTime` 类中所有方法的功能。
+![image](img/1v.jpg)
+启动一个新程序，导入 `java.time.LocalDateTime` 类中所有方法的功能。
 
 ```java
 import java.time.LocalDateTime ;
 ```
 
 ![image](img/common.jpg)
-
 DateTime.java
 
-![image](img/2v.jpg)添加一个名为“DateTime”的类，包含 main 方法。
+![image](img/2v.jpg)
+添加一个名为“DateTime”的类，包含 main 方法。
 
 ```java
 class DateTime
@@ -4339,53 +4122,54 @@ class DateTime
 }
 ```
 
-![image](img/3v.jpg)在 main 方法的大括号之间，插入一条语句来创建一个 `LocalDateTime` 对象。
+![image](img/3v.jpg)
+在 main 方法的大括号之间，插入一条语句来创建一个 `LocalDateTime` 对象。
 
 ```java
 LocalDateTime date = LocalDateTime.now() ;
 ```
 
-![image](img/4v.jpg)输出当前日期和时间。
+![image](img/4v.jpg)
+输出当前日期和时间。
 
 ```java
-System.out.println( “It is now ” + date )
+System.out.println( "It is now " + date )
 ```
 
-![image](img/5v.jpg)增加年份，并输出修改后的日期。
+![image](img/5v.jpg)
+增加年份，并输出修改后的日期。
 
 ```java
 date = date.withYear( 2022 ) ;
-System.out.println( “Date is now ” + date )
+System.out.println( "Date is now " + date )
 ```
 
-![image](img/6v.jpg)输出修改后的 `LocalDateTime` 字段。
+![image](img/6v.jpg)
+输出修改后的 `LocalDateTime` 字段。
 
 ```java
-String fields = “\nYear:\t\t\t” + date.getYear();
-fields += “\nMonth:\t\t\t” + date.getMonth();
-fields += “\nMonth Number:\t\t” + date.getMonthValue();
-fields += “\nDay:\t\t\t” + date.getDayOfWeek();
-fields += “\nDay Number:\t\t” + date.getDayOfMonth();
-fields += “\nDay Number Of Year:\t” + date.getDayOfYear();
-fields += “\nHour (0-23):\t\t” + date.getHour();
-fields += “\nMinute:\t\t\t” + date.getMinute();
-fields += “\nSecond:\t\t\t” + date.getSecond();
+String fields = "\nYear:\t\t\t" + date.getYear();
+fields += "\nMonth:\t\t\t" + date.getMonth();
+fields += "\nMonth Number:\t\t" + date.getMonthValue();
+fields += "\nDay:\t\t\t" + date.getDayOfWeek();
+fields += "\nDay Number:\t\t" + date.getDayOfMonth();
+fields += "\nDay Number Of Year:\t" + date.getDayOfYear();
+fields += "\nHour (0-23):\t\t" + date.getHour();
+fields += "\nMinute:\t\t\t" + date.getMinute();
+fields += "\nSecond:\t\t\t" + date.getSecond();
 System.out.println( fields )
 ```
 
-![image](img/7v.jpg)将程序保存为 `DateTime.java`，然后编译并运行程序以查看输出。
+![image](img/7v.jpg)
+将程序保存为 `DateTime.java`，然后编译并运行程序以查看输出。
 
-
-
-
-
-`java.time.format` 包包含一个 `DateTimeFormatter` 类，可用于格式化 `java.time` 日期和时间对象。`DateTimeFormatter` 对象包含一个格式化模式，该模式作为字符串参数传递给其 `ofPattern()` 方法。格式器由 Java 文档中定义的字母以及你选择的分隔符组成。例如，`“M/d/y”` 指定月份、日和年，并用斜杠分隔。该格式通过将格式化器作为 `java.time` 日期和时间对象的 `format()` 方法的参数来应用。
+`java.time.format` 包包含一个 `DateTimeFormatter` 类，可用于格式化 `java.time` 日期和时间对象。`DateTimeFormatter` 对象包含一个格式化模式，该模式作为字符串参数传递给其 `ofPattern()` 方法。格式器由 Java 文档中定义的字母以及你选择的分隔符组成。例如，`"M/d/y"` 指定月份、日和年，并用斜杠分隔。该格式通过将格式化器作为 `java.time` 日期和时间对象的 `format()` 方法的参数来应用。
 
 ![image](img/hot.jpg)
-
 `java.time.format` 包在 Java 8 中引入，以便更容易地指定日期格式模式。
 
-![image](img/1v.jpg)启动一个新程序，导入 `java.text` 包中 `NumberFormat` 类的所有方法，以及 `java.time.format` 包中 `DateTimeFormatter` 类的所有方法。
+![image](img/1v.jpg)
+启动一个新程序，导入 `java.text` 包中 `NumberFormat` 类的所有方法，以及 `java.time.format` 包中 `DateTimeFormatter` 类的所有方法。
 
 ```java
 import java.text.NumberFormat ;
@@ -4393,10 +4177,10 @@ import java.time.format.DateTimeFormatter ;
 ```
 
 ![image](img/common.jpg)
-
 Formats.java
 
-![image](img/2v.jpg)添加一个名为“Formats”的类，包含标准的 main 方法。
+![image](img/2v.jpg)
+添加一个名为“Formats”的类，包含标准的 main 方法。
 
 ```java
 class Formats
@@ -4407,57 +4191,62 @@ class Formats
 }
 ```
 
-![image](img/3v.jpg)在 main 方法的大括号之间插入语句，输出带有分组分隔符的数字。
+![image](img/3v.jpg)
+在 main 方法的大括号之间插入语句，输出带有分组分隔符的数字。
 
 ```java
 NumberFormat nf = NumberFormat.getNumberInstance() ;
-System.out.println( “\nNumber: “ + nf.format(123456789) ) ;
+System.out.println( "\nNumber: " + nf.format(123456789) ) ;
 ```
 
-![image](img/4v.jpg)添加语句输出带有货币符号的数字。
+![image](img/4v.jpg)
+添加语句输出带有货币符号的数字。
 
 ```java
 NumberFormat cf = NumberFormat.getCurrencyInstance() ;
-System.out.println( “\nCurrency: “ + cf.format(1234.50f) ) ;
+System.out.println( "\nCurrency: " + cf.format(1234.50f) ) ;
 ```
 
-![image](img/5v.jpg)添加语句输出带有百分比符号的数字。
+![image](img/5v.jpg)
+添加语句输出带有百分比符号的数字。
 
 ```java
 NumberFormat pf = NumberFormat.getPercentInstance() ;
-System.out.println( “\nPercent: “ + pf.format( 0.75f ) ) ;
+System.out.println( "\nPercent: " + pf.format( 0.75f ) ) ;
 ```
 
-![image](img/6v.jpg)添加语句创建一个当前的 `LocalDateTime` 对象。
+![image](img/6v.jpg)
+添加语句创建一个当前的 `LocalDateTime` 对象。
 
 ```java
 java.time.LocalDateTime now = java.time.LocalDateTime.now() ;
 ```
 
-![image](img/7v.jpg)添加语句输出格式化的数字日期。
+![image](img/7v.jpg)
+添加语句输出格式化的数字日期。
 
 ```java
-DateTimeFormatter df = DateTimeFormatter.ofPattern( “MMM d, yyyy” ) ;
-System.out.println( “\nDate: “ + now.format( df ) ) ;
+DateTimeFormatter df = DateTimeFormatter.ofPattern( "MMM d, yyyy" ) ;
+System.out.println( "\nDate: " + now.format( df ) ) ;
 ```
 
-![image](img/8v.jpg)添加语句输出格式化的数字时间。
+![image](img/8v.jpg)
+添加语句输出格式化的数字时间。
 
 ```java
-DateTimeFormatter tf = DateTimeFormatter.ofPattern( “h:m a” ) ;
-System.out.println( “\nTime: “ + now.format( tf ) ) ;
+DateTimeFormatter tf = DateTimeFormatter.ofPattern( "h:m a" ) ;
+System.out.println( "\nTime: " + now.format( tf ) ) ;
 ```
 
-![image](img/9v.jpg)将程序保存为 `Formats.java`，然后编译并运行程序以查看格式化输出。
+![image](img/9v.jpg)
+将程序保存为 `Formats.java`，然后编译并运行程序以查看格式化输出。
 
 ![image](img/pg131_1.jpg)
 
 ![image](img/hot.jpg)
-
 语句可以使用完整包地址来引用未导入的类——如在此处创建 `LocalDateTime` 对象的语句所示。
 
 ![image](img/snake.jpg)
-
 模式字母对大小写敏感——请参考文档以了解可能模式的完整细节。
 
 ## 总结
@@ -4503,7 +4292,6 @@ System.out.println( “\nTime: “ + now.format( tf ) ) ;
 - 显示窗口——作为布尔参数传递给 `setVisible()` 方法。
 
 ![image](img/snake.jpg)
-
 通过记住 `JAVA` 来记住 `javax.swing` 中的 `x`。
 
 此外，构造函数可以将 `JPanel` 容器组件添加到窗口，可以使用 `JFrame` 类的 `add()` 方法添加小的组件。
@@ -4513,28 +4301,24 @@ System.out.println( “\nTime: “ + now.format( tf ) ) ;
 相反步骤描述了如何创建一个带有 `FlowLayout` 布局管理器的 `JPanel` 窗口。该窗口将出现在本书后续的示例中，这些示例演示了如何向 `JPanel` 容器添加各种组件。
 
 ![image](img/hot.jpg)
-
 布局管理器在此处有更详细的介绍](#chapter08.html_sec72)。
 
-
-
-
-
-```
+```java
 add( pnl ) ;
-
 setVisible( true ) ;
-
 }
 ```
 
-![image](img/5b.jpg)通过在主方法中插入此行创建 `Window` 类的实例
+![image](img/5b.jpg)
+通过在主方法中插入此行创建 `Window` 类的实例
 
 ```java
 Window gui = new Window() ;
 ```
 
-![image](img/6b.jpg)将程序保存为 `Window.java`，然后编译并运行程序以看到基础窗口出现
+
+
+![image](img/6b.jpg)将程序保存为 `Window.java`，然后编译并运行程序以看到基础窗口出现。
 
 ![image](img/pg135_1.jpg)
 
@@ -4564,36 +4348,36 @@ Swing 的 `JButton` 类创建一个可以添加到图形界面中的推按钮组
 
 将 `ImageIcon` 对象的名称指定作为 `JButton` 构造函数的参数，以便在按钮上显示该图像；或者指定一个 `String` 和一个 `ImageIcon` 作为其两个参数，用以同时显示文本和图像。
 
-![image](img/1b.jpg)从这里 编辑 `Window.java` 的副本，将声明、构造函数和实例语句中的类名从“Window”更改为“Buttons”
+![image](img/1b.jpg)从这里 编辑 `Window.java` 的副本，将声明、构造函数和实例语句中的类名从“Window”更改为“Buttons”。
 
 ![image](img/common.jpg)
 
 Buttons.java
 
-![image](img/2b.jpg)在 `Buttons()` 构造函数之前，创建两个 `ImageIcon` 对象
+![image](img/2b.jpg)在 `Buttons()` 构造函数之前，创建两个 `ImageIcon` 对象：
 
 ```java
-ImageIcon tick = new ImageIcon( “Tick.png” ) ;
-ImageIcon cross = new ImageIcon( “Cross.png” ) ;
+ImageIcon tick = new ImageIcon("Tick.png");
+ImageIcon cross = new ImageIcon("Cross.png");
 ```
 
-![image](img/3b.jpg)接下来，创建三个 `JButton` 对象，分别显示文本、图像以及文本和图像
+![image](img/3b.jpg)接下来，创建三个 `JButton` 对象，分别显示文本、图像以及文本和图像：
 
 ```java
-JButton btn = new JButton( “Click Me” ) ;
-JButton tickBtn = new JButton( tick ) ;
-JButton crossBtn = new JButton( “STOP” , cross ) ;
+JButton btn = new JButton("Click Me");
+JButton tickBtn = new JButton(tick);
+JButton crossBtn = new JButton("STOP", cross);
 ```
 
-![image](img/4b.jpg)在 `Buttons()` 构造函数内部，插入三个语句将 `JButton` 组件添加到 `JPanel` 容器中
+![image](img/4b.jpg)在 `Buttons()` 构造函数内部，插入三个语句将 `JButton` 组件添加到 `JPanel` 容器中：
 
 ```java
-pnl.add( btn ) ;
-pnl.add( tickBtn ) ;
-pnl.add( crossBtn ) ;
+pnl.add(btn);
+pnl.add(tickBtn);
+pnl.add(crossBtn);
 ```
 
-![image](img/5b.jpg)将程序保存为 `Buttons.java`，然后编译并运行程序，看到窗口中出现推按钮
+![image](img/5b.jpg)将程序保存为 `Buttons.java`，然后编译并运行程序，看到窗口中出现推按钮。
 
 ![image](img/pg137_1.jpg)
 
@@ -4613,27 +4397,27 @@ pnl.add( crossBtn ) ;
 
 向 `ClassLoader` 的 `getResource()` 方法指定资源文件名或路径会返回一个 URL，该 URL 可以作为 `ImageIcon` 构造函数的参数。`java.net` 包提供了一个实用的 `URL` 类，可以先赋值给这些对象。
 
-![image](img/6b.jpg)在 `Buttons()` 构造函数之前，创建一个 `ClassLoader` 对象
+![image](img/6b.jpg)在 `Buttons()` 构造函数之前，创建一个 `ClassLoader` 对象：
 
 ```java
-ClassLoader ldr = this.getClass().getClassLoader() ;
+ClassLoader ldr = this.getClass().getClassLoader();
 ```
 
-![image](img/7b.jpg)加载图像资源的 URL
+![image](img/7b.jpg)加载图像资源的 URL：
 
 ```java
-java.net.URL tickURL = ldr.getResource( “Tick.png” ) ;
-java.net.URL crossURL = ldr.getResource( “Cross.png” ) ;
+java.net.URL tickURL = ldr.getResource("Tick.png");
+java.net.URL crossURL = ldr.getResource("Cross.png");
 ```
 
-![image](img/8b.jpg)修改第 2 步中的 `ImageIcon()` 构造函数以使用 URL
+![image](img/8b.jpg)修改第 2 步中的 `ImageIcon()` 构造函数以使用 URL：
 
 ```java
-ImageIcon tick = new ImageIcon( tickURL ) ;
-ImageIcon cross = new ImageIcon( crossURL ) ;
+ImageIcon tick = new ImageIcon(tickURL);
+ImageIcon cross = new ImageIcon(crossURL);
 ```
 
-![image](img/9b.jpg)保存更改，重新编译并运行程序 —— 它将像以前一样运行，但现在可以部署在 JAR 中了
+![image](img/9b.jpg)保存更改，重新编译并运行程序 —— 它将像以前一样运行，但现在可以部署在 JAR 中了。
 
 ![image](img/hot.jpg)
 
@@ -4643,50 +4427,50 @@ ImageIcon cross = new ImageIcon( crossURL ) ;
 
 Swing 的 `JLabel` 类创建一个可以添加到图形界面中的标签组件。这可以用于显示非交互式文本或图像，或同时显示文本和图像。
 
-![image](img/pg138_1.jpg)`JLabel` 对象使用 `new` 关键字创建，其构造函数接受一个 `String` 参数来指定显示的文本。此外，通过向其 `setToolTip()` 方法指定一个 `String`，可以让 `JLabel` 对象在光标悬停时显示工具提示。
+![image](img/pg138_1.jpg) `JLabel` 对象使用 `new` 关键字创建，其构造函数接受一个 `String` 参数来指定显示的文本。此外，通过向其 `setToolTip()` 方法指定一个 `String`，可以让 `JLabel` 对象在光标悬停时显示工具提示。
 
-![image](img/1b.jpg)从这里 编辑 `Window.java` 的副本，将声明、构造函数和实例语句中的类名从“Window”更改为“Labels”
+![image](img/1b.jpg)从这里 编辑 `Window.java` 的副本，将声明、构造函数和实例语句中的类名从“Window”更改为“Labels”。
 
 ![image](img/common.jpg)
 
 Labels.java
 
-![image](img/2b.jpg)在 `Labels()` 构造函数之前，创建一个 `ImageIcon` 对象
+![image](img/2b.jpg)在 `Labels()` 构造函数之前，创建一个 `ImageIcon` 对象：
 
 ```java
-ImageIcon duke = new ImageIcon( “Duke.png” ) ;
+ImageIcon duke = new ImageIcon("Duke.png");
 ```
 
-![image](img/3b.jpg)接下来，创建三个 `JLabel` 对象分别显示图像、文本以及文本和图像
+![image](img/3b.jpg)接下来，创建三个 `JLabel` 对象分别显示图像、文本以及文本和图像：
 
 ```java
-JLabel lbl1 = new JLabel( duke ) ;
-JLabel lbl2 = new JLabel( “Duke is the friendly mascot of technology.” ) ;
-JLabel lbl3 = new JLabel( “Duke” , duke , JLabel.CENTER ) ;
+JLabel lbl1 = new JLabel(duke);
+JLabel lbl2 = new JLabel("Duke is the friendly mascot of technology.");
+JLabel lbl3 = new JLabel("Duke", duke, JLabel.CENTER);
 ```
 
-![image](img/4b.jpg)在 `Labels()` 构造函数内部，插入此语句为第一个标签创建工具提示
+![image](img/4b.jpg)在 `Labels()` 构造函数内部，插入此语句为第一个标签创建工具提示：
 
 ```java
-lbl1.setToolTip( “Duke - the Mascot” ) ;
+lbl1.setToolTip("Duke - the Mascot");
 ```
 
-![image](img/5b.jpg)添加这两个语句将文本居中对齐在第三个标签下方
+![image](img/5b.jpg)添加这两个语句将文本居中对齐在第三个标签下方：
 
 ```java
-lbl3.setHorizontalTextPosition( JLabel.CENTER ) ;
-lbl3.setVerticalTextPosition( JLabel.BOTTOM ) ;
+lbl3.setHorizontalTextPosition(JLabel.CENTER);
+lbl3.setVerticalTextPosition(JLabel.BOTTOM);
 ```
 
-![image](img/6b.jpg)现在，添加三个语句将 `JLabel` 组件添加到 `JPanel` 容器中
+![image](img/6b.jpg)现在，添加三个语句将 `JLabel` 组件添加到 `JPanel` 容器中：
 
 ```java
-pnl.add( lbl1 ) ;
-pnl.add( lbl2 ) ;
-pnl.add( lbl3 ) ;
+pnl.add(lbl1);
+pnl.add(lbl2);
+pnl.add(lbl3);
 ```
 
-![image](img/7b.jpg)将程序保存为 `Labels.java`，然后编译并运行程序，将光标停在第一个标签上
+![image](img/7b.jpg)将程序保存为 `Labels.java`，然后编译并运行程序，将光标停在第一个标签上。
 
 ![image](img/pg139_1.jpg)
 
@@ -4696,16 +4480,11 @@ pnl.add( lbl3 ) ;
 
 `JLabel` 对齐常量包括 `LEFT`、`CENTER`、`RIGHT`、`TOP` 和 `BOTTOM`。`JLabel` 对象可以接受三个参数：`String`、`ImageIcon` 和 `JLabel` 对齐值。例如，文本的相对位置可以通过 `JLabel` 对象的 `setHorizontalPosition()` 和 `setVerticalPosition()` 方法来确定。
 
-
-
-
-[content]
-
-```
-new ImageIcon( ldr.getResource( “Duke.png” ) ) ;
+```java
+new ImageIcon(ldr.getResource("Duke.png"));
 ```
 
-![image](img/10b.jpg)保存更改，然后重新编译并运行程序——它的运行方式将与之前一样，但现在可以部署到 JAR 中
+![image](img/10b.jpg)保存更改，然后重新编译并运行程序——它的运行方式将与之前一样，但现在可以部署到 JAR 中。
 
 ![image](img/hot.jpg)
 
@@ -4725,71 +4504,62 @@ Swing 的 `JTextField` 类创建一个单行文本字段组件，该组件可以
 
 可以使用 `JTextArea` 类创建多行文本字段，其构造函数接受两个数值参数，分别指定它的行数和宽度。或者，可以提供三个参数，分别指定默认文本、行数和宽度。通过向 `JTextArea` 对象的 `setLineWrap()` 方法和 `setWrapStyleWord()` 方法传递 `true` 作为参数，可以使该字段内的文本在单词结束处自动换行。
 
-当输入到 `JTextArea` 组件的文本超过其初始大时，组件将扩展以容纳文本。要使组件具有固定大小并带有滚动功能，可以将其放置在 `JScrollPane` 容器中。该容器使用 `new` 关键字创建，并将 `JTextArea` 的名称作为其参数。
+当输入到 `JTextArea` 组件的文本超过其初始大小时，组件将扩展以容纳文本。要使组件具有固定大小并带有滚动功能，可以将其放置在 `JScrollPane` 容器中。该容器使用 `new` 关键字创建，并将 `JTextArea` 的名称作为其参数。
 
-默认情况下，滚动条只有在字段包含超过其初始大小的文本时才会出现——但通过向 `JScrollPane` 对象的命名巧妙的 `setVerticalScrollBarPolicy()` 或 `setHorizontalScrollBarPolicy()` 方法传递 `JScrollPane` 常数作为参数，可以使其始终出现。例如，要始终显示垂直滚动条，请使用 `JScrollPane.VERTICAL_SCROLLBAR_ALWAYS` 常数作为参数。
+默认情况下，滚动条只有在字段包含超过其初始大小的文本时才会出现——但通过向 `JScrollPane` 对象的 `setVerticalScrollBarPolicy()` 或 `setHorizontalScrollBarPolicy()` 方法传递 `JScrollPane` 常数作为参数，可以使其始终出现。例如，要始终显示垂直滚动条，请使用 `JScrollPane.VERTICAL_SCROLLBAR_ALWAYS` 常数作为参数。
 
-![image](img/1b.jpg)从此处编辑 `Window.java` 的副本，将声明、构造函数和实例语句中的类名从“Window”改为“TextFields”
+![image](img/1b.jpg)从此处编辑 `Window.java` 的副本，将声明、构造函数和实例语句中的类名从“Window”改为“TextFields”。
 
 ![image](img/common.jpg)
 
 TextFields.java
 
-![image](img/2b.jpg)在 `TextFields()` 构造函数之前，创建两个 `JTextField` 对象
+![image](img/2b.jpg)在 `TextFields()` 构造函数之前，创建两个 `JTextField` 对象：
 
-```
-JTextField txt1 = new JTextField( 38 ) ;
-```
-
-```
-JTextField txt2 = new JTextField( “Default Text” , 38 ) ;
+```java
+JTextField txt1 = new JTextField(38);
+JTextField txt2 = new JTextField("Default Text", 38);
 ```
 
-![image](img/3b.jpg)创建一个五行高的 `JTextArea` 对象
+![image](img/3b.jpg)创建一个五行高的 `JTextArea` 对象：
 
-```
-JTextArea txtArea = new JTextArea( 5 , 37 ) ;
-```
-
-![image](img/4b.jpg)添加一个 `JScrollPane` 对象——用于包含第 3 步中创建的 `JTextArea`
-
-```
-JScrollPane pane = new JScrollPane( txtArea ) ;
+```java
+JTextArea txtArea = new JTextArea(5, 37);
 ```
 
-![image](img/5b.jpg)在 `TextFields()` 构造方法方法中，插入语句使 `JTextArea` 对象在单词结束处换行
+![image](img/4b.jpg)添加一个 `JScrollPane` 对象——用于包含第 3 步中创建的 `JTextArea`：
 
-```
-txtArea.setLineWrap( true ) ;
-```
-
-```
-txtArea.setWrapStyleWord( true ) ;
+```java
+JScrollPane pane = new JScrollPane(txtArea);
 ```
 
-![image](img/6b.jpg)插入一条语句为 `JTextArea` 对象始终显示垂直滚动条
+![image](img/5b.jpg)在 `TextFields()` 构造方法中，插入语句使 `JTextArea` 对象在单词结束处换行：
 
-```
-pane.setVerticalScrollBarPolicy( JScrollPane.VERTICAL_SCROLLBAR_ALWAYS ) ;
-```
-
-![image](img/7b.jpg)插入两条语句将 `JTextField` 组件添加到 `JPanel` 容器中
-
-```
-pnl.add( txt1 ) ;
+```java
+txtArea.setLineWrap(true);
+txtArea.setWrapStyleWord(true);
 ```
 
-```
-pnl.add( txt2 ) ;
+![image](img/6b.jpg)插入一条语句为 `JTextArea` 对象始终显示垂直滚动条：
+
+```java
+pane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 ```
 
-![image](img/8b.jpg)插入另一语句将 `JScrollPane` 容器（包含 `JTextArea` 字段）添加到 `JPanel` 容器中
+![image](img/7b.jpg)插入两条语句将 `JTextField` 组件添加到 `JPanel` 容器中：
 
-```
-pnl.add( pane ) ;
+```java
+pnl.add(txt1);
+pnl.add(txt2);
 ```
 
-![image](img/9b.jpg)将程序保存为 **TextFields.java**，然后编译并运行程序，在文本区域输入一些文本
+![image](img/8b.jpg)插入另一语句将 `JScrollPane` 容器（包含 `JTextArea` 字段）添加到 `JPanel` 容器中：
+
+```java
+pnl.add(pane);
+```
+
+![image](img/9b.jpg)将程序保存为 `TextFields.java`，然后编译并运行程序，在文本区域输入一些文本。
 
 ![image](img/pg141_1.jpg)
 
@@ -4809,68 +4579,71 @@ Swing 的 `JCheckBox` 类创建一个复选框组件，该组件可以添加到�
 
 可以通过 `JComboBox` 类提供项目选择，它创建一个下拉列表，用户可以从中选择任何单个项目。该对象使用 `new` 关键字创建，其构造函数通常接受数组名称作为参数。同样，`JList` 类也可以提供项目选择，用户可以从中选择一个或多个项目。它使用 `new` 关键字创建，其构造函数接受数组作为参数。`JList` 和 `JComboBox` 在创建时必须指定泛型，例如 `<String>`。
 
-![image](img/1b.jpg)从此处编辑 `Window.java` 的副本，将声明、构造函数和实例语句中的类名从“Window”改为“Items”
+![image](img/1b.jpg)从此处编辑 `Window.java` 的副本，将声明、构造函数和实例语句中的类名从“Window”改为“Items”。
 
 ![image](img/common.jpg)
 
 Items.java
 
-![image](img/2b.jpg)在 `Items()` 构造函数之前，创建一个用于选择的 `String` 数组
+![image](img/2b.jpg)在 `Items()` 构造函数之前，创建一个用于选择的 `String` 数组：
 
-```
-String[] toppings = { “Pepperoni” , “Mushroom” , “Ham” , “Tomato” } ;
-```
-
-![image](img/3b.jpg)创建 `JCheckBox` 对象呈现每个项目——默认选中一个
-
-```
-JCheckBox chk1 = new JCheckBox( toppings[0] ) ;
-JCheckBox chk2 = new JCheckBox( toppings[1] , true ) ;
-JCheckBox chk3 = new JCheckBox( toppings[2] ) ;
-JCheckBox chk4 = new JCheckBox( toppings[3] ) ;
+```java
+String[] toppings = {"Pepperoni", "Mushroom", "Ham", "Tomato"};
 ```
 
-![image](img/4b.jpg)添加第二个用于选择的 `String` 数组
+![image](img/3b.jpg)创建 `JCheckBox` 对象呈现每个项目——默认选中一个：
 
-```
-String[] styles = { “Deep Dish” , “Gourmet Style” , “Thin & Crispy” } ;
-```
-
-![image](img/5b.jpg)创建一个 `JComboBox` 对象呈现第二个数组中的每个项目
-
-```
-JComboBox<String> box1 = new JComboBox<String>( styles ) ;
+```java
+JCheckBox chk1 = new JCheckBox(toppings[0]);
+JCheckBox chk2 = new JCheckBox(toppings[1], true);
+JCheckBox chk3 = new JCheckBox(toppings[2]);
+JCheckBox chk4 = new JCheckBox(toppings[3]);
 ```
 
-![image](img/6b.jpg)添加 `JList` 对象呈现第一个数组中的每个项目——从列表
+![image](img/4b.jpg)添加第二个用于选择的 `String` 数组：
 
-```
-JList<String> lst1 = new JList<String>( toppings ) ;
-```
-
-![image](img/7b.jpg)在 `Items()` 构造方法中，插入语句将 `JCheckBox` 组件添加到 `JPanel` 容器中
-
-```
-pnl.add( chk1 ) ;
-pnl.add( chk2 ) ;
-pnl.add( chk3 ) ;
-pnl.add( chk4 ) ;
+```java
+String[] styles = {"Deep Dish", "Gourmet Style", "Thin & Crispy"};
 ```
 
-![image](img/8b.jpg)插入语句设置默认选择并将 `JComboBox` 组件添加到 `JPanel` 容器中
+![image](img/5b.jpg)创建一个 `JComboBox` 对象呈现第二个数组中的每个项目：
 
-```
-box1.setSelectedIndex( 0 ) ;
-pnl.add( box1 ) ;
-```
-
-![image](img/9b.jpg)现在，插入一条语句将 `JList` 组件添加到 `JPanel` 容器中
-
-```
-pnl.add( lst1 ) ;
+```java
+JComboBox<String> box1 = new JComboBox<String>(styles);
 ```
 
-![image](img/10b.jpg)将程序保存为 **Items.java**，然后编译并运行程序，从列表中选择项目
+![image](img/6b.jpg)添加 `JList` 对象呈现第一个数组中的每个项目——从列表：
+
+```java
+JList<String> lst1 = new JList<String>(toppings);
+```
+
+![image](img/7b.jpg)在 `Items()` 构造方法中，插入语句将 `JCheckBox` 组件添加到 `JPanel` 容器中：
+
+```java
+pnl.add(chk1);
+pnl.add(chk2);
+pnl.add(chk3);
+pnl.add(chk4);
+```
+
+![image](img/8b.jpg)插入语句设置默认选择并将 `JComboBox` 组件添加到 `JPanel` 容器中：
+
+```java
+box1.setSelectedIndex(0);
+pnl.add(box1);
+```
+
+![image](img/9b.jpg)现在，插入一条语句将 `JList` 组件添加到 `JPanel` 容器中：
+
+```java
+pnl.add(lst1);
+```
+
+
+
+![image](img/10b.jpg)
+将程序保存为 `Items.java`，然后编译并运行程序，从列表中选择项目。
 
 ![image](img/pg143_1.jpg)
 
@@ -4884,9 +4657,6 @@ pnl.add( lst1 ) ;
 
 关于如何创建事件处理方法以响应用户操作（如项目选择）的详细信息可以查阅第 9 章。
 
-
-
-
 `JRadioButton` 类创建了一个可以添加到图形界面的单选按钮组件。这可以用于允许用户从一组单选按钮中选择一个项目。
 
 ![image](img/pg144_1.jpg)
@@ -4897,7 +4667,7 @@ pnl.add( lst1 ) ;
 
 ![image](img/1b.jpg)
 
-从这里 复制 `Window.java` 并进行编辑，将声明、构造函数和实例化语句中的类名从“Window”更改为“Radios”
+从这里复制 `Window.java` 并进行编辑，将声明、构造函数和实例化语句中的类名从“Window”更改为“Radios”。
 
 ![image](img/common.jpg)
 
@@ -4905,45 +4675,45 @@ Radios.java
 
 ![image](img/2b.jpg)
 
-在 `Radios()` 构造函数之前，创建三个 `JRadioButton` 对象——其中一个默认被选中
+在 `Radios()` 构造函数之前，创建三个 `JRadioButton` 对象——其中一个默认被选中。
 
-```
-JRadioButton rad1 = new JRadioButton( “Red” , true ) ;
-JRadioButton rad2 = new JRadioButton( “Rosé” ) ;
-JRadioButton rad3 = new JRadioButton( “White” ) ;
+```java
+JRadioButton rad1 = new JRadioButton("Red", true);
+JRadioButton rad2 = new JRadioButton("Rosé");
+JRadioButton rad3 = new JRadioButton("White");
 ```
 
 ![image](img/3b.jpg)
 
-接下来，创建一个 `ButtonGroup` 对象来对单选按钮分组
+接下来，创建一个 `ButtonGroup` 对象来对单选按钮分组。
 
-```
-ButtonGroup wines = new ButtonGroup() ;
+```java
+ButtonGroup wines = new ButtonGroup();
 ```
 
 ![image](img/4b.jpg)
 
-在 `Radios()` 构造方法中，插入语句将每个 `JRadioButton` 组件添加到 `JButtonGroup`
+在 `Radios()` 构造方法中，插入语句将每个 `JRadioButton` 组件添加到 `ButtonGroup`。
 
-```
-wines.add( rad1 ) ;
-wines.add( rad2 ) ;
-wines.add( rad3 ) ;
+```java
+wines.add(rad1);
+wines.add(rad2);
+wines.add(rad3);
 ```
 
 ![image](img/5b.jpg)
 
-插入语句将 `JRadioButton` 组件添加到 `JPanel` 容器中
+插入语句将 `JRadioButton` 组件添加到 `JPanel` 容器中。
 
-```
-pnl.add( rad1 ) ;
-pnl.add( rad2 ) ;
-pnl.add( rad3 ) ;
+```java
+pnl.add(rad1);
+pnl.add(rad2);
+pnl.add(rad3);
 ```
 
 ![image](img/6b.jpg)
 
-将程序保存为 `Radios.java`，然后编译并运行程序，在默认选项之后选择任一单选按钮
+将程序保存为 `Radios.java`，然后编译并运行程序，在默认选项之后选择任一单选按钮。
 
 ![image](img/pg145_1.jpg)
 
@@ -4969,7 +4739,7 @@ pnl.add( rad3 ) ;
 
 尝试使用 Java 文档为 Radios 程序添加一个 `JSlider` 组件——有关如何使用文档的细节请参阅这里。
 
-### 布局组件
+## 布局组件
 
 `java.awt` 包（抽象窗口工具包）包含许多布局管理器类，可以使用不同的方式将组件放置在容器中。
 
@@ -4977,7 +4747,7 @@ pnl.add( rad3 ) ;
 
 使用 `new` 关键字创建布局管理器对象，然后可以将其作为 `JPanel` 构造函数的参数，让面板使用该布局。当组件被添加到面板时，它们将根据指定的布局管理器的规则进行放置。
 
-| 布局管理器: | 规则: |
+| 布局管理器 | 规则 |
 | :--- | :--- |
 | `BorderLayout` | 放置在北、南、东、西和中心（内容面板的默认值） |
 | `BoxLayout` | 在单行或单列中放置 |
@@ -4985,7 +4755,7 @@ pnl.add( rad3 ) ;
 | `FlowLayout` | 从左到右在换行的行中放置（`JPanel` 的默认值） |
 | `GridBagLayout` | 在单元格网格中放置，允许组件跨单元格 |
 | `GridLayout` | 在行和列的网格中放置 |
-| `GroupLayout` | 水平和和垂直放置 |
+| `GroupLayout` | 水平和垂直放置 |
 | `SpringLayout` | 通过相对间距放置 |
 
 顶层 `JFrame` 对象有一个“内容面板”容器，它默认使用 `BorderLayout` 布局管理器放置组件。这可以用来放置多五个 `JPanel` 容器，每个面板可以使用其默认的 `FlowLayout` 布局管理器或上表中的任何布局管理器。使用各种布局管理器可以满足大多数布局需求。
@@ -4998,9 +4768,9 @@ pnl.add( rad3 ) ;
 
 ![image](img/1b.jpg)
 
-从这里 复制 `Window.java` 并进行编辑，将声明、构造函数和实例化语句中的类名从“Window”更改为“Layout”，并在程序开头添加 `java.awt` 包的导入
+从这里复制 `Window.java` 并进行编辑，将声明、构造函数和实例化语句中的类名从“Window”更改为“Layout”，并在程序开头添加 `java.awt` 包的导入。
 
-```
+```java
 import java.awt.*;
 ```
 
@@ -5010,47 +4780,47 @@ Layout.java
 
 ![image](img/2b.jpg)
 
-在 `Layout()` 构造函数之前，创建一个 `Container` 对象来代表内容面板
+在 `Layout()` 构造函数之前，创建一个 `Container` 对象来代表内容面板。
 
-```
+```java
 Container contentPane = getContentPane();
 ```
 
 ![image](img/3b.jpg)
 
-使用 `GridLayout` 布局管理器创建第二个 `JPanel` 对象，设置为 2 列
+使用 `GridLayout` 布局管理器创建第二个 `JPanel` 对象，设置为 2 列。
 
-```
-JPanel grid = new JPanel( 2 ) ;
+```java
+JPanel grid = new JPanel(new GridLayout(0, 2));
 ```
 
 ![image](img/4b.jpg)
 
-在 `Layout()` 构造方法中，插入语句将 `JButton` 组件添加到 `JPanel` 对象中
+在 `Layout()` 构造方法中，插入语句将 `JButton` 组件添加到 `JPanel` 对象中。
 
-```
-pnl.add( “Yes” ) ;
-pnl.add( “No” ) ;
-pnl.add( “Cancel” ) ;
-grid.add( “1” ) ;
-grid.add( “2” ) ;
-grid.add( “3” ) ;
-grid.add( “4” ) ;
+```java
+pnl.add(new JButton("Yes"));
+pnl.add(new JButton("No"));
+pnl.add(new JButton("Cancel"));
+grid.add(new JButton("1"));
+grid.add(new JButton("2"));
+grid.add(new JButton("3"));
+grid.add(new JButton("4"));
 ```
 
 ![image](img/5b.jpg)
 
-现在，插入语句将面板和按钮添加到内容面板
+现在，插入语句将面板和按钮添加到内容面板。
 
-```
-contentPane.add( “North” , pnl ) ;
-contentPane.add( “Center” , grid ) ;
-contentPane.add( “West” , new JButton( “West” ) ) ;
+```java
+contentPane.add("North", pnl);
+contentPane.add("Center", grid);
+contentPane.add("West", new JButton("West"));
 ```
 
 ![image](img/6b.jpg)
 
-将程序保存为 `Layout.java`，然后编译并运行程序查看布局
+将程序保存为 `Layout.java`，然后编译并运行程序查看布局。
 
 ![image](img/pg147_1.jpg)
 
@@ -5058,7 +4828,7 @@ contentPane.add( “West” , new JButton( “West” ) ) ;
 
 虽然 `FlowLayout` 保持 `JButton` 的大小，但其他布局管理器会扩展组件以填充布局。
 
-### 修改外观
+## 修改外观
 
 `java.awt` 包（抽象窗口工具包）包含了用于界面组件着色的“绘制”类。通过包含初始语句 `import java.awt.*;` 可以让这些类程序可用。
 
@@ -5072,90 +4842,94 @@ contentPane.add( “West” , new JButton( “West” ) ) ;
 
 `java.awt` 包中还有 `Font` 类，可用于修改显示文本的字体。`Font` 对象表示字体，其构造函数可以接受三个参数来指定名称、样式和大小：
 
-• 指定的名称应该是三个平台无关名称之一——“Serif ”、“SansSerif ”或“Monospaced”。
-
-• 指定的样式应该是以下三种之一
-
-
-
-
-### 常量
-常量：`Font.PLAIN`、`Font.BOLD` 或 `Font.ITALIC`。
-
-•指定的尺寸应该是字号的整数。
+* 指定的名称应该是三个平台无关名称之一——“Serif”、“SansSerif”或“Monospaced”。
+* 指定的样式应该是以下三种常量之一：`Font.PLAIN`、`Font.BOLD` 或 `Font.ITALIC`。
+* 指定的尺寸应该是字号的整数。
 
 每个组件都有一个 `setFont()` 方法，该方法接受一个 `Font` 对象作为参数，用指定的字体绘制该组件。
 
 ![image](img/1b.jpg)
-从这里 复制一份 `Window.java`，将声明、构造函数和实例语句中的类名从“Window”更改为“Custom”
+
+从这里复制一份 `Window.java`，将声明、构造函数和实例语句中的类名从“Window”更改为“Custom”。
 
 ![image](img/common.jpg)
 
 Custom.java
 
 ![image](img/2b.jpg)
-在程序的的最开头添加一条语句，导入 `java.awt` 包中所有类的功能
+
+在程序的最开头添加一条语句，导入 `java.awt` 包中所有类的功能。
 
 ```java
-import java.awt.* ;
+import java.awt.*;
 ```
 
 ![image](img/3b.jpg)
-在 `Custom()` 构造函数之前，创建三个 `JLabel` 对象
+
+在 `Custom()` 构造函数之前，创建三个 `JLabel` 对象。
 
 ```java
-JLabel lbl1 = new JLabel( “Custom Background” ) ;
-JLabel lbl2 = new JLabel( “Custom Foreground” ) ;
-JLabel lbl3 = new JLabel( “Custom Font” ) ;
+JLabel lbl1 = new JLabel("Custom Background");
+JLabel lbl2 = new JLabel("Custom Foreground");
+JLabel lbl3 = new JLabel("Custom Font");
 ```
 
 ![image](img/4b.jpg)
-接下来，创建 `Color`、`Font` 和 `Box` 布局对象
+
+接下来，创建 `Color`、`Font` 和 `Box` 布局对象。
 
 ```java
-Color customColor = new Color( 255 , 0 , 0 ) ;
-Font customFont = new Font( “Serif” , Font.PLAIN , 64 ) ;
-Box box = Box.createVerticalBox() ;
+Color customColor = new Color(255, 0, 0);
+Font customFont = new Font("Serif", Font.PLAIN, 64);
+Box box = Box.createVerticalBox();
 ```
 
 ![image](img/5b.jpg)
-在 `Custom()` 构造方法中，插入语句使用 `Color` 常量为 `JLabel` 背景上色
+
+在 `Custom()` 构造方法中，插入语句使用 `Color` 常量为 `JLabel` 背景上色。
 
 ```java
-lbl1.setOpaque( true ) ;
-lbl1.setBackground( Color.YELLOW )
+lbl1.setOpaque(true);
+lbl1.setBackground(Color.YELLOW);
 ```
 
 ![image](img/6b.jpg)
-插入语句使用 `Color` 对象为 `JLabel` 前景上色
+
+插入语句使用 `Color` 对象为 `JLabel` 前景上色。
 
 ```java
-lbl2.setForeground( customColor ) ;
+lbl2.setForeground(customColor);
 ```
 
 ![image](img/7b.jpg)
-插入语句使用自定义字体在 `JLabel` 上绘制文本
+
+插入语句使用自定义字体在 `JLabel` 上绘制文本。
 
 ```java
-lbl3.setFont( customFont ) ;
+lbl3.setFont(customFont);
 ```
 
 ![image](img/8b.jpg)
-将每个标签添加到布局容器中
+
+将每个标签添加到布局容器中。
 
 ```java
-box.add( lbl1 ) ; box.add( lbl2 ) ; box.add( lbl3 ) ;
+box.add(lbl1);
+box.add(lbl2);
+box.add(lbl3);
 ```
 
 ![image](img/9b.jpg)
-然后，将布局容器添加到 `JPanel` 容器中
+
+然后，将布局容器添加到 `JPanel` 容器中。
 
 ```java
-pnl.add( box ) ;
+pnl.add(box);
 ```
 
 ![image](img/10b.jpg)
-将程序保存为 `Custom.java`，然后编译并运行程序查看效果
+
+将程序保存为 `Custom.java`，然后编译并运行程序查看效果。
 
 ![image](img/pg149_jpg)
 
@@ -5168,41 +4942,44 @@ pnl.add( box ) ;
 `Box` 对象是一个使用 `BoxLayout` 作为布局管理器的方便容器。`Box` 对象的 `createVerticalBox()` 方法单独显示组件。
 
 ## 总结
-• `javax.swing` 包包含了用于创建 GUI 组件的 Swing 类。
-• 创建顶级容器 `JFrame`。
-• `JFrame` 构造函数应该指定窗口的标题、大小、关闭操作和可见性。
-• `JPanel` 容器使用其默认的 `FlowLayout` 布局管理器显示较小的组件。
-• `JButton` 构造函数可以指定显示在按钮组件上的文本和图像。
-• `ImageIcon` 对象表示程序中使用的图像。
-• 要部署为单个 Java 存档 (JAR) 的程序应使用 `ClassLoader` 对象指定图像源。
-• `JLabel` 对象显示非交互文本和内容。
-• 可编辑文本可以显示在 `JTextField` 和 `JTextArea` 字段中。
-• `JScrollPane` 对象为 `JTextArea` 字段提供滚动条。
-• 选项、JComboBox、JList 项可以通过 `ButtonGroup` 对象逻辑上分组多个 `JRadioButton` 组件，使其只能选择一个。
-• `java.awt` 包的 `Color` 类可以表示特定的颜色。
-• `java.awt` 包有一个 `Font` 类，可以创建表示字体名称、样式和大小的对象。
-• 使用 `java.awt` 包的 `Container` 类可以将多个 `JPanel` 容器添加到 `JFrame`。
-当创建 `JPanel` 容器对象时，可以可选指定布局管理器。
 
-### 识别事件
+* `javax.swing` 包包含了用于创建 GUI 组件的 Swing 类。
+* 创建顶级容器 `JFrame`。
+* `JFrame` 构造函数应该指定窗口的标题、大小、关闭操作和可见性。
+* `JPanel` 容器使用其默认的 `FlowLayout` 布局管理器显示较小的组件。
+* `JButton` 构造函数可以指定显示在按钮组件上的文本和图像。
+* `ImageIcon` 对象表示程序中使用的图像。
+* 要部署为单个 Java 存档 (JAR) 的程序应使用 `ClassLoader` 对象指定图像源。
+* `JLabel` 对象显示非交互文本和内容。
+* 可编辑文本可以显示在 `JTextField` 和 `JTextArea` 字段中。
+* `JScrollPane` 对象为 `JTextArea` 字段提供滚动条。
+* 选项、`JComboBox`、`JList` 项可以通过 `ButtonGroup` 对象逻辑上分组多个 `JRadioButton` 组件，使其只能选择一个。
+* `java.awt` 包的 `Color` 类可以表示特定的颜色。
+* `java.awt` 包有一个 `Font` 类，可以创建表示字体名称、样式和大小的对象。
+* 使用 `java.awt` 包的 `Container` 类可以将多个 `JPanel` 容器添加到 `JFrame`。
+* 当创建 `JPanel` 容器对象时，可以可选指定布局管理器。
+
+# 识别事件
+
 *本章演示了如何创建响应用户界面操作的 Java 程序处理器。*
 
-- 监听事件
-- 生成事件
-- 处理按钮事件
-- 处理项目事件
-- 响应键盘事件
-- 响应鼠标事件
-- 发布消息
-- 请求输入
-- 总结
+* 监听事件
+* 生成事件
+* 处理按钮事件
+* 处理项目事件
+* 响应键盘事件
+* 响应鼠标事件
+* 发布消息
+* 请求输入
+* 总结
 
-#### 监听事件
+## 监听事件
+
 用户可以通过鼠标、键盘或其他输入设备的操作来与提供图形界面 (GUI) 的程序交互。这些操作会导致界面中发生“事件”。
 
 ![image](img/152.jpg)
 
-程序为了识别事件，需要添加来自 `java.awt.event` 包的 `EventListener` 接口。通过添加初始语句 `import java.awt.event.* ;` 可以使这些接口可用。
+程序为了识别事件，需要添加来自 `java.awt.event` 包的 `EventListener` 接口。通过添加初始语句 `import java.awt.event.*;` 可以使这些接口可用。
 
 可以使用 `implements` 关键字在类声明中包含所需的 `EventListener` 接口。例如，一个监听点击的类声明可能如下：
 
@@ -5224,7 +5001,8 @@ Java 文档描述了许多可以监听不同事件的 `EventListener` 接口，�
 
 多个 `EventListener` 可以作为逗号分隔的列表包含在 `implements` 关键字之后。
 
-#### 生成事件
+## 生成事件
+
 如果组件要有用，它们就需要生成 `EventListener` 接口可以识别的事件。在如所示向程序添加了适当的 `EventListener` 后，必须向组件添加一个事件生成器。
 
 ![image](img/153.jpg)
@@ -5234,22 +5012,21 @@ Java 文档描述了许多可以监听不同事件的 `EventListener` 接口，�
 创建生成事件按钮语句所示：
 
 ```java
-JButton btn = new JButton( “Click Me” ) ;
-btn.addActionListener( this ) ;
+JButton btn = new JButton("Click Me");
+btn.addActionListener(this);
 ```
+
+
 
 当用户点击生成事件的按钮时，`ActionListener` 接口识别事件并在程序内寻找事件处理器执行响应。
 
 每个 `EventListener` 接口都有一个关联的事件处理器，该方法在识别到事件时被调用。例如，当按钮被点击时，`ActionListener` 接口会调用名为 `actionPerformed()` 的关联方法，并传递一个 `ActionEvent` 对象作为其参数。
 
-
-
-
 一个 `ActionEvent` 对象包含了有关事件本身以及其源自组件的信息。最有用的是，它有一个 `getSource()` 方法，可以识别生成事件的物体。这可以用于为该组件创建适当响应。
 
 为特定按钮点击创建响应的事件处理方法可能如下：
 
-```
+```java
 public void actionPerformed( ActionEvent event )
 {
     if ( event.getSource() == btn )
@@ -5275,27 +5052,27 @@ Actions.java
 
 ![image](img/2r.jpg)在程序的最开始处添加语句，导入 `java.awt.event` 包中所有类的功能
 
-```
+```java
 import java.awt.event.* ;
 ```
 
 ![image](img/3r.jpg)修改类声明，为程序添加 `ActionListener` 接口
 
-```
+```java
 class Actions extends JFrame implements ActionListener
 ```
 
 ![image](img/4r.jpg)在 `Actions()` 构造函数之前，创建两个 `JButton` 推射按钮和一个 `JTextArea` 文本字段
 
-```
-JButton btn1 = new JButton( “Button 1” ) ;
-JButton btn2 = new JButton( “Button 2” ) ;
+```java
+JButton btn1 = new JButton( "Button 1" ) ;
+JButton btn2 = new JButton( "Button 2" ) ;
 JTextArea txtArea = new JTextArea( 5 , 38 ) ;
 ```
 
 ![image](img/5r.jpg)将按钮和文本区域添加到 `JPanel` 容器中
 
-```
+```java
 pnl.add( btn1 ) ;
 pnl.add( btn2 ) ;
 pnl.add( txtArea ) ;
@@ -5303,32 +5080,33 @@ pnl.add( txtArea ) ;
 
 ![image](img/6r.jpg)插入设置两个组件初始状态的语句
 
-```
+```java
 btn2.setEnabled( false ) ;
-txtArea.setText( “Button 2 is Disabled” ) ;
+txtArea.setText( "Button 2 is Disabled" ) ;
 ```
 
 ![image](img/7r.jpg)在 `Actions()` 构造函数中插入语句，使每个按钮点击时生成 `ActionEvent` 事件
 
-```
+```java
 btn1.addActionListener( this ) ;
 btn2.addActionListener( this ) ;
 ```
 
 ![image](img/8r.jpg)在构造方法之后，为 `ActionListener` 接口添加事件处理方法——用于显示标识哪个按钮被点击的文本
 
-```
+```java
 public void actionPerformed( ActionEvent event )
 {
-    txtArea.setText( event.getActionCommand() + “ Clicked and Disabled” ) ;
+    txtArea.setText( event.getActionCommand() + " Clicked and Disabled" ) ;
 }
 ```
 
 ![image](img/9r.jpg)在事件处理方法中插入 `if` 语句——对每个按钮点击执行特定的响应
 
-```
+```java
 if ( event.getSource() == btn1 )
 { btn2.setEnabled( true ) ; btn1.setEnabled( false ) ; }
+
 if ( event.getSource() == btn2 )
 { btn1.setEnabled( true ) ; btn2.setEnabled( false ) ; }
 ```
@@ -5336,17 +5114,13 @@ if ( event.getSource() == btn2 )
 ![image](img/10r.jpg)将程序保存为 `Actions.java`，然后编译并运行程序，点击推送按钮
 
 ![image](img/pg155_1.jpg)
-
 ![image](img/pg155_2.jpg)
-
 ![image](img/pg155_3.jpg)
 
 ![image](img/forget.jpg)
-
 组件在构造函数之前声明，因此它们对于事件处理方法是全局可用的。
 
 ![image](img/hot.jpg)
-
 在用户执行所需操作之前禁用组件，有时是有用的。
 
 ### 处理项目事件
@@ -5357,7 +5131,7 @@ Swing `JRadioButton`、`JCheckBox` 和 `JComboBox` 组件维护状态，其状�
 
 ![image](img/1r.jpg)从此处编辑一份 `Window.java` 的副本，将声明、构造函数和实例化语句中的类名从“Window”更改为“Actions”。然后在在程序的最开始处添加语句，导入 `java.awt.event` 包中所有类的功能
 
-```
+```java
 import java.awt.event.* ;
 ```
 
@@ -5367,21 +5141,21 @@ Actions.java
 
 ![image](img/2r.jpg)修改类声明，为程序添加 `ActionListener` 接口
 
-```
+```java
 class Actions extends JFrame implements ActionListener
 ```
 
 ![image](img/4r.jpg)在 `Actions()` 构造函数之前，创建两个 `JButton` 推射按钮和一个 `JTextArea` 文本字段
 
-```
-JButton btn1 = new JButton( “Button 1” ) ;
-JButton btn2 = new JButton( “Button 2” ) ;
+```java
+JButton btn1 = new JButton( "Button 1" ) ;
+JButton btn2 = new JButton( "Button 2" ) ;
 JTextArea txtArea = new JTextArea( 5 , 38 ) ;
 ```
 
 ![image](img/5r.jpg)将按钮和文本区域添加到 `JPanel` 容器中
 
-```
+```java
 pnl.add( btn1 ) ;
 pnl.add( btn2 ) ;
 pnl.add( txtArea ) ;
@@ -5389,32 +5163,33 @@ pnl.add( txtArea ) ;
 
 ![image](img/6r.jpg)插入设置两个组件初始状态的语句
 
-```
+```java
 btn2.setEnabled( false ) ;
-txtArea.setText( “Button 2 is Disabled” ) ;
+txtArea.setText( "Button 2 is Disabled" ) ;
 ```
 
 ![image](img/7r.jpg)在 `Actions()` 构造函数中，插入语句，使每个按钮点击时生成 `ActionEvent` 事件
 
-```
+```java
 btn1.addActionListener( this ) ;
 btn2.addActionListener( this ) ;
 ```
 
 ![image](img/8r.jpg)在构造方法之后，为 `ActionListener` 接口添加事件处理方法——用于显示哪个按钮被点击的文本
 
-```
+```java
 public void actionPerformed( ActionEvent event )
 {
-    txtArea.setText( event.getActionCommand() + “ Clicked and Disabled” ) ;
+    txtArea.setText( event.getActionCommand() + " Clicked and Disabled" ) ;
 }
 ```
 
 ![image](img/9r.jpg)在事件处理方法中插入 `if` 语句——对每个按钮点击执行特定的响应
 
-```
+```java
 if ( event.getSource() == btn1 )
 { btn2.setEnabled( true ) ; btn1.setEnabled( false ) ; }
+
 if ( event.getSource() == btn2 )
 { btn1.setEnabled( true ) ; btn2.setEnabled( false ) ; }
 ```
@@ -5422,21 +5197,14 @@ if ( event.getSource() == btn2 )
 ![image](img/10r.jpg)将程序保存为 `Actions.java`，然后编译并运行程序，点击推送按钮
 
 ![image](img/pg155_1.jpg)
-
 ![image](img/pg155_2.jpg)
-
 ![image](img/pg155_3.jpg)
 
 ![image](img/forget.jpg)
-
 组件在构造函数之前声明，因此它们对于事件处理方法是全局可用的。
 
 ![image](img/hot.jpg)
-
 在用户执行所需操作之前禁用组件，有时是有用的。
-
-
-
 
 ## KeyListener
 
@@ -5454,7 +5222,7 @@ if ( event.getSource() == btn2 )
 
 ![image](img/1r.jpg)从这里编辑一份 `Window.java` 的副本，将声明、构造函数和实例语句中的类名从“Window”更改为“Keystrokes”。然后，添加初始语句以导入 `java.awt.event` 包的功能。
 
-```
+```java
 import java.awt.event.* ;
 ```
 
@@ -5492,7 +5260,7 @@ field.addKeyListener( this ) ;
 ```java
 public void keyPressed( KeyEvent event )
 {
-    txtArea.setText( “Key Pressed” ) ;
+    txtArea.setText( "Key Pressed" ) ;
 }
 ```
 
@@ -5501,7 +5269,7 @@ public void keyPressed( KeyEvent event )
 ```java
 public void keyTyped( KeyEvent event )
 {
-    txtArea.append( “\nCharacter : ” + event.getKeyChar() ) ;
+    txtArea.append( "\nCharacter : " + event.getKeyChar() ) ;
 }
 ```
 
@@ -5511,8 +5279,8 @@ public void keyTyped( KeyEvent event )
 public void keyReleased( KeyEvent event )
 {
     int keyCode = event.getKeyCode() ;
-    txtArea.append( “\nKey Code : ” + keyCode ) ;
-    txtArea.append( “\nKey Text : ” + event.getKeyText( keyCode ) ) ;
+    txtArea.append( "\nKey Code : " + keyCode ) ;
+    txtArea.append( "\nKey Text : " + event.getKeyText( keyCode ) ) ;
 }
 ```
 
@@ -5521,10 +5289,10 @@ public void keyReleased( KeyEvent event )
 ![image](img/pg159_1.jpg)
 
 ![image](img/snake.jpg)
-
 `getKeyCode()` 方法只有在从 `keyPressed()` 或 `keyReleased()` 事件处理器内部调用时才会返回键码——而不是从 `keyTyped()` 事件处理器中调用。
 
-![image](img/hot.jpg)运行此程序并按下非字符键（如退格键），查看其键文本名称。
+![image](img/hot.jpg)
+运行此程序并按下非字符键（如退格键），查看其键文本名称。
 
 ## MouseListener
 
@@ -5582,479 +5350,325 @@ txtArea.addMotionListener( this ) ;
 txtArea.addMouseListener( this ) ;
 ```
 
-![image](img/5r.jpg)在构造方法之后，为 `MouseMotionListener` 接口添加事件处理器
+
+
+## 鼠标事件处理
+
+在构造方法之后，为 `MouseMotionListener` 接口添加事件处理器：
 
 ```java
-public void mouseMoved( MouseEvent event )
-{
-    x = event.getX() ;
-    y = event.getY() ;
+public void mouseMoved(MouseEvent event) {
+    x = event.getX();
+    y = event.getY();
 }
 
-public void mouseDragged( MouseEvent event )
-{
-    x = event.getX() ;
-    y = event.getY() ;
+public void mouseDragged(MouseEvent event) {
+    x = event.getX();
+    y = event.getY();
 }
 ```
 
-![image](img/6r.jpg)为 `MouseListener` 接口添加五个事件处理器
+为 `MouseListener` 接口添加五个事件处理器：
 
 ```java
-public void mousePressed( MouseEvent event )
-{
-    txtArea.append( “\nPressed at X: ”+x+“Y: “+y ) ;
+public void mousePressed(MouseEvent event) {
+    txtArea.append("\nPressed at X: " + x + " Y: " + y);
 }
 
-public void mouseReleased( MouseEvent event )
-{
-    txtArea.append( “\nReleased” ) ;
+public void mouseReleased(MouseEvent event) {
+    txtArea.append("\nReleased");
 }
 
-public void mouseClicked( MouseEvent event )
-{
-    txtArea.append( “\nClicked” ) ;
+public void mouseClicked(MouseEvent event) {
+    txtArea.append("\nClicked");
 }
 
-public void mouseEntered( MouseEvent event )
-{
-    txtArea.setText( “\nEntered” ) ;
+public void mouseEntered(MouseEvent event) {
+    txtArea.setText("\nEntered");
 }
 
-public void mouseExited( MouseEvent event )
-{
-    txtArea.setText( “\nExited” ) ;
+public void mouseExited(MouseEvent event) {
+    txtArea.setText("\nExited");
 }
 ```
 
-![image](img/7r.jpg)将程序保存为 `Mouse.java`，然后编译并运行程序，点击 `JTextArea` 组件。可以通过 `mouseEntered()` 和 `mouseExited()` 事件处理器交换图像来创建悬停效果。
+将程序保存为 `Mouse.java`，然后编译并运行程序，点击 `JTextArea` 组件。可以通过 `mouseEntered()` 和 `mouseExited()` 事件处理器交换图像来创建悬停效果。
 
 ## 发布消息
 
 Swing `JOptionPane` 类用于在其窗口中心创建一个标准的对话框。其 `showMessageDialog()` 方法向用户显示提供信息、警告或错误描述的消息。
 
-![image](img/pg162_1.jpg)
-
 `showMessageDialog()` 方法可以接受四个参数：
 
 - 父对象——通常通过 `this` 关键字引用
-- 要显示的消息 `String` 
+- 要显示的消息 `String`
 - 对话框标题 `String`
 - `JOptionPane` 常量之一：`INFORMATION_MESSAGE`、`WARNING_MESSAGE` 或 `ERROR_MESSAGE`
 
 对话框将根据指定的 `JOptionPane` 常量显示相应的图标。
 
-
-
-
-
-![image](img/4r.jpg)在 `Messages()` 构造函数之前，创建三个 `JButton` 组件
+在 `Messages()` 构造函数之前，创建三个 `JButton` 组件：
 
 ```java
-JButton btn1= new JButton( “Show Information Message” ) ;
-JButton btn2= new JButton( “Show Warning Message” ) ;
-JButton btn3= new JButton( “Show Error Message” ) ;
+JButton btn1 = new JButton("Show Information Message");
+JButton btn2 = new JButton("Show Warning Message");
+JButton btn3 = new JButton("Show Error Message");
 ```
 
-![image](img/5r.jpg)插入语句将按钮组件添加到 `JPanel` 容器中
+插入语句将按钮组件添加到 `JPanel` 容器中：
 
 ```java
-pnl.add( btn1 ) ;
-pnl.add( btn2 ) ;
-pnl.add( btn3 ) ;
+pnl.add(btn1);
+pnl.add(btn2);
+pnl.add(btn3);
 ```
 
-![image](img/6r.jpg)在 `Messages()` 构造函数中，插入语句使每个按钮生成一个 `ActionEvent` 事件
+在 `Messages()` 构造函数中，插入语句使每个按钮生成一个 `ActionEvent` 事件：
 
 ```java
-btn1.addActionListener( this ) ;
-btn2.addActionListener( this ) ;
-btn3.addActionListener( this ) ;
+btn1.addActionListener(this);
+btn2.addActionListener(this);
+btn3.addActionListener(this);
 ```
 
-![image](img/7r.jpg)在构造函数方法之后，为 `ActionListener` 接口添加一个事件处理方法
+在构造函数方法之后，为 `ActionListener` 接口添加一个事件处理方法：
 
 ```java
-public void actionPerformed( ActionEvent event ) {      }
+public void actionPerformed(ActionEvent event) { }
 ```
 
-![image](img/8r.jpg)在事件处理器的括号之间，插入 `if` 语句，在按钮被点击时显示对话框
+在事件处理器的括号之间，插入 `if` 语句，在按钮被点击时显示对话框：
 
 ```java
-if ( event.getSource() == btn1 )
-JOptionPane.showMessageDialog( this , “Information...” , “Message Dialog”, JOptionPane.INFORMATION_MESSAGE ) ;
+if (event.getSource() == btn1)
+    JOptionPane.showMessageDialog(this, "Information...", "Message Dialog", JOptionPane.INFORMATION_MESSAGE);
 
-if ( event.getSource() == btn2 )
-JOptionPane.showMessageDialog( this , “Warning...” , “Message Dialog” , JOptionPane.WARNING_MESSAGE ) ;
+if (event.getSource() == btn2)
+    JOptionPane.showMessageDialog(this, "Warning...", "Message Dialog", JOptionPane.WARNING_MESSAGE);
 
-if ( event.getSource() == btn3 )
-JOptionPane.showMessageDialog( this , “Error...” , “Message Dialog” , JOptionPane.ERROR_MESSAGE ) ;
+if (event.getSource() == btn3)
+    JOptionPane.showMessageDialog(this, "Error...", "Message Dialog", JOptionPane.ERROR_MESSAGE);
 ```
 
-![image](img/9r.jpg)将程序保存为 `Messages.java`，然后编译并运行程序，点击每个按钮
+将程序保存为 `Messages.java`，然后编译并运行程序，点击每个按钮。
 
-![image](img/pg163_1.jpg)
-
-![image](img/pg163_2.jpg)
-
-![image](img/pg163_3.jpg)
-
-![image](img/pg163_4.jpg)
-
-![image](img/hot.jpg)
-
-你也可以简单地指定父对象和消息作为两个参数，创建一个带有默认信息图标和默认“Message”标题的对话框。
+> 你也可以简单地指定父对象和消息作为两个参数，创建一个带有默认信息图标和默认“Message”标题的对话框。
 
 ### 请求输入
 
-Swing `JOptionPane` 类可以通过其 `showConfirmationDialog()` 方法打开对话框向用户请求信息（请求决策），或者通过其 `showInputDialog()` 方法请求用户输入。
-
-![image](img/pg164_1.jpg)
+Swing `JOptionPane` 类可以通过其 `showConfirmDialog()` 方法打开对话框向用户请求信息（请求决策），或者通过其 `showInputDialog()` 方法请求用户输入。
 
 这两个方法都可以接受四个参数：
 
-*   父对象 – 通常由 `this` 关键字引用
-*   要显示的请求 `String`
-*   对话框标题 `String`
-*   一个 `JOptionPane` 常量之一，例如 `PLAIN_MESSAGE`，或指定对话框决策按钮为 `YES_NO_CANCEL_OPTION`
+- 父对象 – 通常由 `this` 关键字引用
+- 要显示的请求 `String`
+- 对话框标题 `String`
+- 一个 `JOptionPane` 常量之一，例如 `PLAIN_MESSAGE`，或指定对话框决策按钮为 `YES_NO_CANCEL_OPTION`
 
 对话框将返回来自输入对话框的输入 `String`，或来自决策按钮的整数—— 0 表示是，1 表示否，或 2 表示取消。
 
-![image](img/1r.jpg)从这里编辑 `Window.java` 的副本，将声明、构造函数和实例语句中的类名从“Window”更改为“Request”。然后添加添加初始语句来导入 `java.awt.event` 包的功能
+从这里编辑 `Window.java` 的副本，将声明、构造函数和实例语句中的类名从“Window”更改为“Request”。然后添加一个初始语句来导入 `java.awt.event` 包的功能：
 
 ```java
-import java.awt.event.* ;
+import java.awt.event.*;
 ```
 
-![image](img/common.jpg)
-
-Request.java
-
-![image](img/2r.jpg)修改类声明以为程序添加 `ActionListener` 接口
+修改类声明以为程序添加 `ActionListener` 接口：
 
 ```java
 class Request extends JFrame implements ActionListener
 ```
 
-![image](img/3r.jpg)在 `Request()` 构造函数之前，创建一个 `JTextField` 和两个 `JButton` 组件
+在 `Request()` 构造函数之前，创建一个 `JTextField` 和两个 `JButton` 组件：
 
 ```java
-JTextField field = new JTextField( 38 ) ;
-JButton btn1 = new JButton( “Request Decision” ) ;
-JButton btn2 = new JButton( “Request Input” ) ;
+JTextField field = new JTextField(38);
+JButton btn1 = new JButton("Request Decision");
+JButton btn2 = new JButton("Request Input");
 ```
 
-![image](img/4r.jpg)将每个组件添加到 `JPanel` 容器中
+将每个组件添加到 `JPanel` 容器中：
 
 ```java
-pnl.add( field ) ; pnl.add( btn1 ) ; pnl.add( btn2 ) ;
+pnl.add(field);
+pnl.add(btn1);
+pnl.add(btn2);
 ```
 
-![image](img/5r.jpg)在 `Request()` 构造函数中，插入语句使每个按钮生成一个 `ActionEvent` 事件
+在 `Request()` 构造函数中，插入语句使每个按钮生成一个 `ActionEvent` 事件：
 
 ```java
-btn1.addActionListener( this ) ;
-btn2.addActionListener( this ) ;
+btn1.addActionListener(this);
+btn2.addActionListener(this);
 ```
 
-![image](img/6r.jpg)在构造函数方法之后，为 `ActionListener` 接口添加一个事件处理方法
+在构造函数方法之后，为 `ActionListener` 接口添加一个事件处理方法：
 
 ```java
-public void actionPerformed( ActionEvent event ) { }
+public void actionPerformed(ActionEvent event) { }
 ```
 
-![image](img/7r.jpg)在事件处理器的括号之间，插入一个 `if` 语句来响应决策按钮点击
+在事件处理器的括号之间，插入一个 `if` 语句来响应决策按钮点击：
 
 ```java
-if ( event.getSource() == btn1 )
-{
-    int n = JOptionPane.showConfirmDialog( this ,
-    “Do you agree?” , “Confirmation Dialog” ,
-    JOptionPane.YES_NO_CANCEL_OPTION ) ;
-    switch( n )
-    {
-        case 0 : field.setText( “Agreed” ) ; break ;
-        case 1 : field.setText( “Disagreed” ) ; break ;
-        case 2 : field.setText( “Canceled” ) ; break ;
+if (event.getSource() == btn1) {
+    int n = JOptionPane.showConfirmDialog(this,
+        "Do you agree?", "Confirmation Dialog",
+        JOptionPane.YES_NO_CANCEL_OPTION);
+
+    switch (n) {
+        case 0: field.setText("Agreed"); break;
+        case 1: field.setText("Disagreed"); break;
+        case 2: field.setText("Canceled"); break;
     }
 }
 ```
 
-![image](img/8r.jpg)插入一个 `if` 语句来处理
+插入一个 `if` 语句来处理输入请求按钮点击：
 
 ```java
-if ( event.getSource() == btn2 )
-JOptionPane.showMessageDialog( this ,
-“Enter your comment”
+if (event.getSource() == btn2)
+    JOptionPane.showInputDialog(this,
+        "Enter your comment", "Input Dialog", JOptionPane.PLAIN_MESSAGE);
 ```
 
-![image](img/9r.jpg)将程序保存为 `Messages.java`，然后编译并运行程序，点击每个按钮
+将程序保存为 `Request.java`，然后编译并运行程序，点击每个按钮。
 
-![image](img/pg163_1.jpg)
-
-![image](img/pg163_2.jpg)
-
-![image](img/pg163_3.jpg)
-
-![image](img/pg163_4.jpg)
-
-![image](img/hot.jpg)
-
-你也可以简单地指定父对象和消息作为两个参数，创建一个带有默认信息图标和默认“Message”标题的对话框。
-
-### 请求输入
-
-Swing `JOptionPane` 类可以通过其 `showConfirmationDialog()` 方法打开对话框向用户请求信息（请求决策），或者通过其 `showInputDialog()` 方法请求用户输入。
-
-![image](img/pg164_1.jpg)
-
-这两个方法都可以接受四个参数：
-
-*   父对象 – 通常由 `this` 关键字引用
-*   要显示的请求 `String`
-*   对话框标题 `String`
-*   一个 `JOptionPane` 常量之一，例如 `PLAIN_MESSAGE`，或指定对话框决策按钮为 `YES_NO_CANCEL_OPTION`
-
-对话框将返回来自输入对话框的输入 `String`，或来自决策按钮的整数—— 0 表示是，1 表示否，或 2 表示取消。
-
-![image](img/1r.jpg)从这里编辑 `Window.java` 的副本，将声明、构造函数和实例语句中的类名从“Window”更改为“Request”。然后添加一个初始语句来导入 `java.awt.event` 包的功能
-
-```java
-import java.awt.event.* ;
-```
-
-![image](img/common.jpg)
-
-Request.java
-
-![image](img/2r.jpg)修改类声明以为程序添加 `ActionListener` 接口
-
-```java
-class Request extends JFrame implements ActionListener
-```
-
-![image](img/3r.jpg)在 `Request()` 构造函数之前，创建一个 `JTextField` 和两个 `JButton` 组件
-
-```java
-JTextField field = new JTextField( 38 ) ;
-JButton btn1 = new JButton( “Request Decision” ) ;
-JButton btn2 = new JButton( “Request Input” ) ;
-```
-
-![image](img/4r.jpg)将每个组件添加到 `JPanel` 容器中
-
-```java
-pnl.add( field ) ; pnl.add( btn1 ) ; pnl.add( btn2 ) ;
-```
-
-![image](img/5r.jpg)在 `Request()` 构造函数中，插入语句使每个按钮生成一个 `ActionEvent` 事件
-
-```java
-btn1.addActionListener( this ) ;
-btn2.addActionListener( this ) ;
-```
-
-![image](img/6r.jpg)在构造函数方法之后，为 `ActionListener` 接口添加一个事件处理方法
-
-```java
-public void actionPerformed( ActionEvent event ) { }
-```
-
-![image](img/7r.jpg)在事件处理器的括号之间，插入一个 `if` 语句来响应决策按钮点击
-
-```java
-if ( event.getSource() == btn1 )
-{
-    int n = JOptionPane.showConfirmDialog( this ,
-    “Do you agree?” , “Confirmation Dialog” ,
-    JOptionPane.YES_NO_CANCEL_OPTION ) ;
-    switch( n )
-    {
-        case 0 : field.setText( “Agreed” ) ; break ;
-        case 1 : field.setText( “Disagreed” ) ; break ;
-        case 2 : field.setText( “Canceled” ) ; break ;
-    }
-}
-```
-
-![image](img/8r.jpg)插入一个 `if` 语句来处理
-
-```java
-if ( event.getSource() == btn2 )
-JOptionPane.showMessageDialog( this ,
-“Enter your comment” , “Message Dialog” , JOptionPane.WARNING_MESSAGE ) ;
-
-if ( event.getSource() == btn3 )
-JOptionPane.showMessageDialog( this , “Error...” , “Message Dialog” , JOptionPane.ERROR_MESSAGE ) ;
-```
-
-![image](img/9r.jpg)将程序保存为 `Messages.java`，然后编译并运行程序，点击每个按钮
-
-![image](img/pg163_1.jpg)
-
-
-
-
+## Lotto 应用程序示例
 
 ```java
 public class Lotto extends JFrame implements ActionListener {
-    ClassLoader ldr = this.getClass( ).getClassLoader( ) ;
-    java.net.URL iconURL = ldr.getResource( “Lotto.png” ) ;
-    ImageIcon icon = new ImageIcon( iconURL ) ;
-    JLabel img = new JLabel( icon ) ;
-    JTextField txt = new JTextField( “” , 18 ) ;
-    JButton btn = new JButton( “Get My Lucky Numbers” ) ;
-    JPanel pnl = new JPanel( ) ;
+
+    ClassLoader ldr = this.getClass().getClassLoader();
+    java.net.URL iconURL = ldr.getResource("Lotto.png");
+    ImageIcon icon = new ImageIcon(iconURL);
+    JLabel img = new JLabel(icon);
+    JTextField txt = new JTextField("", 18);
+    JButton btn = new JButton("Get My Lucky Numbers");
+    JPanel pnl = new JPanel();
 
     // Constructor
-    public Lotto( ) {
-        super( “Lotto App” ) ; setSize( 260 , 210 ) ;
-        setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE ) ;
-        pnl.add( img ) ; pnl.add( txt ) ; pnl.add( btn ) ;
-        btn.addActionListener( this ) ; add( pnl ) ; setVisible( true ) ;
+    public Lotto() {
+        super("Lotto App");
+        setSize(260, 210);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        pnl.add(img);
+        pnl.add(txt);
+        pnl.add(btn);
+        btn.addActionListener(this);
+        add(pnl);
+        setVisible(true);
     }
 
     // Event-handler
-    public void actionPerformed( ActionEvent event ) {
-        if ( event.getSource( ) == btn ) {
-            int[ ] nums = new int[ 60 ] ; String str = “” ;
-            for ( int i = 1 ; i < 60 ; i++ ) { nums[ i ] = i ; }
-            for ( int i = 1 ; i < 60 ; i++ ) {
-                int r= ( int ) ( 59 * Math.random( ) ) + 1 ;
-                int t= nums[ i ] ; nums[ i ]= nums[ r ] ; nums[ r ]= t ;
-            }
-            for ( int i = 1 ; i < 7 ; i++ ) {
-                str += “ ” + Integer.toString( nums[ i ] ) + “ ” ;
-            }
-            txt.setText( str ) ;
+    public void actionPerformed(ActionEvent event) {
+        if (event.getSource() == btn) {
+            int[] nums = new int[60];
+            String str = "";
+            // ... 后续逻辑
         }
-    }
-
-    // Entry-point
-    public static void main ( String[ ] args ) {
-        Lotto lotto = new Lotto( ) ;
     }
 }
 ```
 
-![image](img/common.jpg)
+
+
+```java
+for (int i = 1; i < 60; i++) {
+    nums[i] = i;
+}
+
+for (int i = 1; i < 60; i++) {
+    int r = (int) (59 * Math.random()) + 1;
+    int t = nums[i];
+    nums[i] = nums[r];
+    nums[r] = t;
+}
+
+for (int i = 1; i < 7; i++) {
+    str += " " + Integer.toString(nums[i]) + " ";
+}
+
+txt.setText(str);
+```
 
 ### Lotto.java
-![image](img/hot.jpg)
 
 该事件处理器中的算法在数组中打乱 1-59 的整数，然后将这些整数的前六个元素赋值给字符串。
 
-Lotto 程序以 import 语句开头，以使 Swing 组件和 `ActionListener` 接口可用。
+Lotto 程序以 `import` 语句开头，以使 Swing 组件和 `ActionListener` 接口可用。
 
-![image](img/pg169_1.jpg)
+#### 组件
 
-### 组件
 该程序包含一个单一面板组件，其中包含一个显示图像的标签组件、一个显示输出的文本字段组件和一个用于用户交互的按钮组件。
 
-### 构造函数
-`Lotto()` 构造函数构建了一个简单的 Swing 界面，将面板加载到尺寸为 260 x 210 的窗口框架中。
+#### 构造函数
 
-![image](img/pg169_2.jpg)
+`Lotto()` 构造函数构建了一个简单的 Swing 界面，将面板加载到尺寸为 260 x 210 的窗口框架中。
 
 `Lotto.png` – 格子区域是透明的。
 
-### 事件处理器
+#### 事件处理器
+
 按钮的事件处理器方法执行一种算法，在 1-59 范围内选择六个唯一的随机数，并显示在文本字段组件中。
 
-### 入口点
+#### 入口点
+
 `main()` 方法创建应用的实例，并调用 `ClassLoader()` 在程序文件相同的目录下查找图像文件资源 `Lotto.png`。在尝试编译程序之前，必须按照这种方式安排文件。
-
-![image](img/pg169_3.jpg)
-
-![image](img/hot.jpg)
 
 Lotto 程序在本章中被用于为桌面和手持设备创建应用。
 
-观察所需的文件安排，可以使用通常方式使用 `javac` 编译器创建 `Lotto.class` 文件，然后可以使用 `java` 解释器执行程序：
+观察所需的文件安排，可以使用通常方式使用 `javac` 编译器创建 `Lotto.class` 文件，然后可以使用 `java` 解释器执行程序。
 
-![image](img/pg169_4.jpg)
+#### 分发程序
 
-![image](img/pg169_5.jpg)
-
-### 分发程序
-Lotto 程序会打开一个指定大小的新窗口，其中包含 Swing 界面组件。用户每点击一次推按钮，其事件处理器就会文本字段组件中显示 1-59 范围内的六个新随机数：
-
-![image](img/pg170_1.jpg)
-
-![image](img/pg170_2.jpg)
+Lotto 程序会打开一个指定大小的新窗口，其中包含 Swing 界面组件。用户每点击一次推按钮，其事件处理器就会在文本字段组件中显示 1-59 范围内的六个新随机数。
 
 与书中的其他示例一样，Lotto 程序在此处为 Java 编译，并可以分发到带有适当 Java 运行时环境 (JRE) 的其他计算机上执行——无论其操作系统是什么。例如，在下方的图中，`Lotto.class` 和 `Lotto.png` 文件已复制到运行 Linux 操作系统且安装了 Java 运行时的计算机桌面上。因此，Lotto 程序可以用与原始 Windows 系统相同的方式通过 `java` 解释器执行。
-
-![image](img/pg170_3.jpg)
-
-![image](img/pg170_4.jpg)
-
-![image](img/hot.jpg)
 
 分发程序时不需要包含 `.java` 源代码文件——只需要 `.class` 和资源文件。
 
 然而，分发程序存在一种危险——`jar` 工具提供将多个文件打包到单个归档的方法。`jar` 工具创建一个 ZIP 归档，这是一种文件的压缩格式。
 
-![image](img/pg169_1.jpg)
+`jar` 工具是 Java 开发工具包 (JDK) 的一部分，用于创建、提取和管理 Java 存档文件。
 
-`jar` 工具是 Java 开发工具包 (JDK) 的，用于创建、提取和管理 Java 存档文件。
-
-### 常用 jar 命令
+##### 常用 jar 命令
 
 | 命令 | 说明 |
 | :--- | :--- |
 | `jar cf archive.jar file1 file2` | 创建新归档 |
 | `jar xf archive.jar` | 从归档中提取所有文件 |
 | `jar tf archive.jar` | 列出归档内容 |
-| `jar u archive.jar file1` | 用新文件更新现有归档 |
-| `jar d archive.jar file1` | 从归档中删除文件 |
+| `jar uf archive.jar file1` | 用新文件更新现有归档 |
+| `jar df archive.jar file1` | 从归档中删除文件 |
 | `jar cvf archive.jar file1` | 创建带有详细输出的归档 |
 | `jar xvf archive.jar` | 带详细输出提取文件 |
-| `jar ttf archive.jar` | 带详细输出列出内容 |
-| `jar ju archive.jar file1` | 带详细输出更新归档 |
-| `jar jd archive.jar file1` | 带详细输出删除文件 |
+| `jar tvf archive.jar` | 带详细输出列出内容 |
+| `jar uvf archive.jar file1` | 带详细输出更新归档 |
+| `jar dvf archive.jar file1` | 带详细输出删除文件 |
 | `jar cmf archive.jar manifest.txt` | 创建带有自身清单文件的归档 |
-| `jar xfm archive.jar` | 使用清单文件提取文件 |
-| `jar tfm archive.jar` | 使用清单文件列出内容 |
-| `jarjum archive.jar file1` | 使用清单文件更新归档 |
-| `jar jdm archive.jar file1` | 使用清单文件删除文件 |
+| `jar xmf archive.jar` | 使用清单文件提取文件 |
+| `jar tmf archive.jar` | 使用清单文件列出内容 |
+| `jar umf archive.jar file1` | 使用清单文件更新归档 |
+| `jar dmf archive.jar file1` | 使用清单文件删除文件 |
 
-`jar` 工具对于打包 Java 程序，特别是那些需要多个类的程序。
+`jar` 工具对于打包 Java 程序，特别是那些需要多个类的程序，非常有用。
 
-### 构建归档
+##### 构建归档
+
 按照以下步骤为 Lotto 程序创建 JAR：
 
-![image](img/1g.jpg)
-
-打开命令行窗口，然后导航到 Lotto 文件所在的目录——`Lotto.class` 和 `Lotto.png`。
-
-![image](img/pg172_1.jpg)
-
-Lotto.jar
-
-![image](img/2g.jpg)
-
-输入 `jar cfe Lotto.jar Lotto.class Lotto.png`，然后按回键创建 `Lotto.jar` 归档。
-
-- `c`: 创建归档。
-- `f`: 指定归档文件名。
-- `e`: 指定入口点（主类）。
-
-![image](img/3g.jpg)
-
-接下来，输入 `jar tf Lotto.jar` 查看 JAR 的所有内容。
-
-![image](img/pg172_2.jpg)
+1. 打开命令行窗口，然后导航到 Lotto 文件所在的目录——`Lotto.class` 和 `Lotto.png`。
+2. 输入 `jar cfe Lotto.jar Lotto Lotto.class Lotto.png`，然后按回车键创建 `Lotto.jar` 归档。
+   - `c`: 创建归档。
+   - `f`: 指定归档文件名。
+   - `e`: 指定入口点（主类）。
+3. 接下来，输入 `jar tf Lotto.jar` 查看 JAR 的所有内容。
 
 注意 `jar` 工具会在存档文件旁边创建一个 `META-INF` 目录。它包含一个名为 `MANIFEST.MF` 的文本清单文件，你可以检查：
 
-![image](img/4g.jpg)
-
-现在，输入 `jar xf Lotto.jar META-INF` 提取 `META-INF` 目录的副本。
-
-![image](img/5g.jpg)
-
-最后，在 Windows 上输入 `type META-INF\MANIFEST.MF` 或在 Linux/macOS 上输入 `cat META-INF/MANIFEST.MF` 查看存档文件内的文本。
+4. 现在，输入 `jar xf Lotto.jar META-INF` 提取 `META-INF` 目录的副本。
+5. 最后，在 Windows 上输入 `type META-INF\MANIFEST.MF` 或在 Linux/macOS 上输入 `cat META-INF/MANIFEST.MF` 查看存档文件内的文本。
 
 输出应该如下：
 
@@ -6065,38 +5679,14 @@ Main-Class: Lotto
 
 `Main-Class` 属性指定了执行文件。
 
-### 部署应用
+##### 部署应用
+
 Java JAR 文件可以在安装了适当版本 Java 运行时的系统上执行：
 
-![image](img/1g.jpg)
-
-在命令行中，导航到 `Lotto.jar` 文件所在的目录，然后输入 `java -jar Lotto.jar` 并按回键运行 Lotto 应用。
-
-![image](img/pg173_1.jpg)
-
-![image](img/pg173_2.jpg)
-
-![image](img/pg173_3.jpg)
-
-![image](img/pg173_4.jpg)
-
-![image](img/pg173_5.jpg)
-
-![image](img/2g.jpg)
-
-或者，双击或右键点击 `Lotto.jar` 文件图标，并选择“打开方式”使用 Java 运行时。
-
-
-
-
-
-![image](img/pg173_8.jpg)
-
-![image](img/snake.jpg)
+1. 在命令行中，导航到 `Lotto.jar` 文件所在的目录，然后输入 `java -jar Lotto.jar` 并按回车键运行 Lotto 应用。
+2. 或者，双击或右键点击 `Lotto.jar` 文件图标，并选择“打开方式”使用 Java 运行时。
 
 从提示符中执行 JAR 文件时，需要 `.jar` 文件扩展名。
-
-![image](img/hot.jpg)
 
 将 JRE 设置为系统上的默认 JAR 文件处理程序，以实现永久的双击执行。
 
@@ -6104,31 +5694,18 @@ Java JAR 文件可以在安装了适当版本 Java 运行时的系统上执行�
 
 在手持设备上广泛使用的 Android 操作系统包含了一组核心库，这些库提供了 Java 编程语言中大部分功能的支持。这意味着 Java 程序可以很容易地转换为 Android 程序。
 
-![image](img/pg174_1.jpg)
-
 你可以从 [developer.android.com/studio](http://developer.android.com/studio) 免费获取 Android Studio。
 
 本章描述了使用编写时可最新版本的 Android Studio 进行 Android 应用开发——其他版本的说明可能会有所不同。
 
 Android 应用开发最好使用官方的 Android Studio 集成开发环境 (IDE)。它提供了一个统一的环境，你可以在其中为所有 Android 设备开发应用，并提供了广泛的测试工具。完成的程序以 Android 应用包（APK）归档文件的形式发布，这类似于 Java 归档（JAR）文件。它使用流行的 ZIP 格式将所有程序文件压缩成带有 `.apk` 文件扩展名的单个文件。每个应用首先在 Android Studio 中被创建一个“项目”，开发者向其中添加代码和资源：
 
-![image](img/1g.jpg)启动 Android Studio，然后在“欢迎”对话框选项中选择 **Start a new Android Studio project**（启动一个新的 Android Studio 项目）——打开“选择你的项目”对话框
-
-![image](img/2g.jpg)选择目标设备类型和活动类型——通常选择“Phone and Tablet”（手机和平板）和“Empty Activity”（空活动）
-
-![image](img/pg174_2.jpg)
-
-![image](img/3g.jpg)点击 **Next**（下一步）打开“配置你的项目”对话框
-
-![image](img/pg175_1.jpg)
-
-![image](img/8g.jpg)选择运行应用所需的 **Minimum API level**（最低 API 级别）（“Ice Cream Sandwich”是默认值）
-
-![image](img/9g.jpg)点击 **Finish**（完成）按钮使用指定的配置创建 Android 项目
-
-![image](img/10g.jpg)等待 Android Studio 现在为新项目生成几个文件和文件夹（这可能需要一些时间），最终你将看到 IDE 界面出现
-
-![image](img/hot.jpg)
+1. 启动 Android Studio，然后在“欢迎”对话框选项中选择 **Start a new Android Studio project**（启动一个新的 Android Studio 项目）——打开“选择你的项目”对话框。
+2. 选择目标设备类型和活动类型——通常选择“Phone and Tablet”（手机和平板）和“Empty Activity”（空活动）。
+3. 点击 **Next**（下一步）打开“配置你的项目”对话框。
+4. 选择运行应用所需的 **Minimum API level**（最低 API 级别）（“Ice Cream Sandwich”是默认值）。
+5. 点击 **Finish**（完成）按钮使用指定的配置创建 Android 项目。
+6. 等待 Android Studio 现在为新项目生成几个文件和文件夹（这可能需要一些时间），最终你将看到 IDE 界面出现。
 
 如果你希望应用运行在 Google Play 商店活跃的 100% 设备上，请选择 API 15。
 
@@ -6136,31 +5713,20 @@ Android 应用开发最好使用官方的 Android Studio 集成开发环境 (IDE
 
 Android Studio IDE 提供了一个 Project 窗口，显示项目内所有文件和文件夹的可展开树状视图。
 
-![image](img/pg176_1.jpg)
-
 你可以点击 Project 窗口中的任何箭头来展开文件夹，并双击 Project 窗口中的任何文件以在标签页 Editor 窗口中打开它。
-
-![image](img/pg176_2.jpg)
 
 尽管最初看起来很复杂，但开发者只需修改两个文件即可创建一个自定义的应用程序：
 
-• `MainActivity.java` – 用于将控件加载到应用界面的 Java 文件，并可以包含事件处理代码，以响应应用界面内的用户操作。
-
-• `activity_main.xml` – 用于定义应用界面中显示的每个控件及其布局的 XML 文件。
-
-![image](img/hot.jpg)
+- `MainActivity.java` – 用于将控件加载到应用界面的 Java 文件，并可以包含事件处理代码，以响应应用界面内的用户操作。
+- `activity_main.xml` – 用于定义应用界面中显示的每个控件及其布局的 XML 文件。
 
 如果 Project 窗口没有立即显示，点击左侧边栏中的 Project 按钮，或使用快捷键 `Alt + F1` 打开。
 
 在 Project 窗口中选择 `activity_main.xml` 文件将会在 Editor 窗口中以两种可能的视图之一显示——视觉上的 Design（设计）视图，或程序化的 Text（文本）视图。窗口底部有标签页用于切换这些视图。
 
-![image](img/pg177_1.jpg)
-
 Design 视图提供了一个控件面板（Palette），可以将其拖到应用的图形化表示上；一个用于选择任何添加控件的组件树（Component Tree），以及一个用于修改所选控件外观的属性窗口。
 
 Text 视图提供了布局的“后置代码”版本，使用 XML 属性描述所添加控件的每个方面。
-
-![image](img/pg177_2.jpg)
 
 控件可以在 Design 视图中通过视觉方式添加并修改，也可以在 Text 视图中通过程序方式进行。
 
@@ -6170,33 +5736,19 @@ Text 视图提供了布局的“后置代码”版本，使用 XML 属性描述�
 
 要开始为 Lotto 程序自定义默认的 Android Studio 空应用，首先可以将图像作为“资源”添加：
 
-![imageimage](img/pg178_1.jpg)
-
-![image](img/1g.jpg)右键点击 `Lotto.png` 图像，并选择 **Copy**（拷贝）
-
-![image](img/2g.jpg)接下来，右键点击 Project 窗口中的 `app>res>drawable` 文件夹，并选择 **Paste**（粘贴）
-
-![image](img/3g.jpg)选择目标目录，然后将文件重命名为小写的 `lotto.png`
-
-![image](img/pg178_2.jpg)
-
-![image](img/4g.jpg)点击 **OK** 查看文件现在出现在 `drawable` 文件夹中
-
-![image](img/pg178_3.jpg)
-
-![image](img/snake.jpg)
+1. 右键点击 `Lotto.png` 图像，并选择 **Copy**（拷贝）。
+2. 接下来，右键点击 Project 窗口中的 `app > res > drawable` 文件夹，并选择 **Paste**（粘贴）。
+3. 选择目标目录，然后将文件重命名为小写的 `lotto.png`。
+4. 点击 **OK** 查看文件现在出现在 `drawable` 文件夹中。
 
 Android 资源项仅支持小写文件名。
-
-![image](img/pg178_4.jpg)
 
 ### 界面控件
 
 Lotto 应用需要在垂直布局三个界面控件——用于 Logo 的 `ImageView` 控件、用于输出的 `TextView` 控件，以及用于用户交互的 `Button` 控件。
 
-![image](img/2g.jpg)在 Text 视图中打开 `activity_main.xml` 文件
-
-![image](img/1g.jpg)在现有的默认 TextView 元素之前插入此 `ImageView` 控件
+1. 在 Text 视图中打开 `activity_main.xml` 文件。
+2. 在现有的默认 TextView 元素之前插入此 `ImageView` 控件：
 
 ```xml
 <ImageView
@@ -6208,9 +5760,9 @@ Lotto 应用需要在垂直布局三个界面控件——用于 Logo 的 `ImageV
     android:layout_constraintTop_toTopOf="parent" />
 ```
 
-![image](img/hot.jpg)`app:srcCompat` 属性引用添加到 `drawable` 文件夹的图像资源。该元素中的属性使控件适应布局宽度，并将控件放置在容器的顶部。图像被赋予了一个 id 以供其他元素引用。
+`app:srcCompat` 属性引用添加到 `drawable` 文件夹的图像资源。该元素中的属性使控件适应布局宽度，并将控件放置在容器的顶部。图像被赋予了一个 id 以供其他元素引用。
 
-![image](img/3g.jpg)编辑现有的 TextView 元素如下如下：
+3. 编辑现有的 TextView 元素如下：
 
 ```xml
 <TextView
@@ -6223,7 +5775,7 @@ Lotto 应用需要在垂直布局三个界面控件——用于 Logo 的 `ImageV
     android:layout_constraintTop_toBottomOf="@+id/imageView" />
 ```
 
-![image](img/4g.jpg)在 TextView 元素之后插入此 `Button` 元素
+4. 在 TextView 元素之后插入此 `Button` 元素：
 
 ```xml
 <Button
@@ -6235,6 +5787,8 @@ Lotto 应用需要在垂直布局三个界面控件——用于 Logo 的 `ImageV
     android:text="GET MY NUMBERS"
     android:layout_constraintTop_toBottomOf="@+id/textView" />
 ```
+
+
 
 ![image](img/hot.jpg)每个元素中的 `android:id` 属性指定 Java 代码引用的唯一名称。`android:onClick` 属性指定了要调用的事件处理器名称。
 
@@ -6252,11 +5806,7 @@ Lotto 应用需要在垂直布局三个界面控件——用于 Logo 的 `ImageV
 
 ![image](img/pg179_4.jpg)
 
-**插入 Java 代码**
-
-
-
-
+### 插入 Java 代码
 
 在添加此处所示的资源和控件后，应用界面现在应该看起来像 `Lotto.jar` 应用程序：
 
@@ -6278,15 +5828,15 @@ import android.view.View ;
 
 MainActivity.java
 
-![image](img/2g.jpg)将此事件处理器签名插入到 `MainActivity` 类中，紧接在其 `onCreate( )` 方法块之后
+![image](img/2g.jpg)将此事件处理器签名插入到 `MainActivity` 类中，紧接在其 `onCreate()` 方法块之后
 
 ```java
 public void lotto( View vue ) { }
 ```
 
-在代码中可以通过指定它们的身份作为 `findViewById( )` 方法的参数来引用界面控件。这是在 `activity_main.xml` 中分配给它们的 `android:id` 属性的名称，前加上 `R.id.` ：
+在代码中可以通过指定它们的身份作为 `findViewById()` 方法的参数来引用界面控件。这是在 `activity_main.xml` 中分配给它们的 `android:id` 属性的名称，前加上 `R.id.` ：
 
-![image](img/3g.jpg)在事件处理器块内部，将 `<TextView>` 控件元素的赋值赋值变量
+![image](img/3g.jpg)在事件处理器块内部，将 `<TextView>` 控件元素赋值给变量
 
 ```java
 TextView txt = (TextView) findViewById( R.id.textView ) ;
@@ -6295,16 +5845,25 @@ TextView txt = (TextView) findViewById( R.id.textView ) ;
 ![image](img/4g.jpg)最后，在事件处理器块内部，从 `Lotto.java` 程序中的事件处理器（列在此处）中复制输出六个唯一随机数的代码
 
 ```java
-int[ ] nums = new int[ 60 ] ; String = “ ” ; str
-for ( int i = 1 ; i < 60 ; i++ ) { nums[ i ] = i ; }
-for ( int i = 1 ; i < 60 ; i++ ) {
-    int r= ( int ) ( 59 * Math.random( ) ) + 1 ;
-    int t= nums[ i ] ; nums[ i ]= nums[ r ] ; nums[ r ]= t ;
+int[] nums = new int[60];
+String str = "";
+
+for (int i = 1; i < 60; i++) {
+    nums[i] = i;
 }
-for ( int i = 1 ; i < 7 ; i++ ) {
-    str += “ ” + Integer.toString( nums[ i ] ) + “ ” ;
+
+for (int i = 1; i < 60; i++) {
+    int r = (int) (59 * Math.random()) + 1;
+    int t = nums[i];
+    nums[i] = nums[r];
+    nums[r] = t;
 }
-txt.setText( str ) ;
+
+for (int i = 1; i < 7; i++) {
+    str += " " + Integer.toString(nums[i]) + " ";
+}
+
+txt.setText(str);
 ```
 
 ![image](img/forget.jpg)
@@ -6334,91 +5893,13 @@ txt.setText( str ) ;
 
 ![image](img/3g.jpg)按下应用按钮，查看 `TextView` 内容在较小设备上如何换行
 
-![image](img/pg182_2.jpg)编辑 `activity_main.xml` 以缩小字体大小 `android:textSize=”26sp”`
+![image](img/pg182_2.jpg)编辑 `activity_main.xml` 以缩小字体大小 `android:textSize="26sp"`
 
 ![image](img/5g.jpg)点击 `Build`、`Rebuild Project` 以应用更改，然后在模拟器中再次运行应用以查看解决方案
 
 ![image](img/pg182_3.jpg)
-![image](img/7g.jpg)选择一个 AVD 手机模拟器进行连接，然后点击 `OK` 将 Lotto 应用安装到模拟器上
 
-![image](img/pg182_2.jpg)
-![image](img/2g.jpg)选择一个 AVD 手机模拟器进行连接，然后点击 `OK` 将 Lotto 应用安装到模拟器上
 
-![image](img/3g.jpg)按下应用按钮，查看 `TextView` 内容在较小设备上如何换行
-
-![image](img/pg182_2.jpg)编辑 `activity_main.xml` 以缩小字体大小 `android:textSize=”26sp”`
-
-![image](img/5g.jpg)点击 `Build`、`Rebuild Project` 以应用更改，然后在模拟器中再次运行应用以查看解决方案
-
-![image](img/pg182_3.jpg)
-![image](img/7g.jpg)选择一个 AVD 手机模拟器进行连接，然后点击 `OK` 将 Lotto 应用安装到模拟器上
-
-![image](img/pg182_2.jpg)
-![image](img/2g.jpg)选择一个 AVD 手机模拟器进行连接，然后点击 `OK` 将 Lotto 应用安装到模拟器上
-
-![image](img/3g.jpg)按下应用按钮，查看 `TextView` 内容在较小设备上如何换行
-
-![image](img/pg182_2.jpg)编辑 `activity_main.xml` 以缩小字体大小 `android:textSize=”26sp”`
-
-![image](img/5g.jpg)点击 `Build`、`Rebuild Project` 以应用更改，然后在模拟器中再次运行应用以查看解决方案
-
-![image](img/pg182_3.jpg)
-![image](img/7g.jpg)选择一个 AVD 手机模拟器进行连接，然后点击 `OK` 将 Lotto 应用安装到模拟器上
-
-*(注：由于提供的文本中存在大量重复段落，上述译文已根据注意事项“不要重复输出原文”的原则对重复内容进行了去重处理，但为了确保逻辑完整，我保留了所有关键步骤的翻译。)*
-
----
-**更正说明：** 提供的待翻译文本在后半部分存在严重的重复。以下是根据您的要求，去重并翻译后的**完整逻辑版本**：
-
-[content]
-在添加了此处所示的资源和控件后，应用界面现在应该看起来像 `Lotto.jar` 应用程序：
-
-![image](img/pg180_1.jpg)
-![image](img/pg180_2.jpg)
-![image](img/snake.jpg)
-
-如果控件看起来与此截图不符，您应该返回此处并仔细检查每个元素的属性。
-
-接下来，可以通过在 `MainActivity.java` 文件中插入一个事件处理器（eventhandler）来为应用添加功能，当用户按下按钮时，它将响应按钮的 `onClick` 事件。此事件会自动向事件处理器传递一个参数，该参数是所点击控件的标识引用。因此，事件处理器的签名必须通过包含一个 `View` 类的参数（所有小部件的基类）来适应该参数。该方法还必须具有 `void` 返回类型：
-
-![image](img/1g.jpg)首先在 `MainActivity.java` 文件开头的 import 语句中添加此行
-
-```java
-import android.view.View ;
-```
-
-![image](img/common.jpg)
-
-MainActivity.java
-
-![image](img/2g.jpg)将此事件处理器签名插入到 `MainActivity` 类中，紧接在其 `onCreate( )` 方法块之后
-
-```java
-public void lotto( View vue ) { }
-```
-
-在代码中可以通过指定它们的身份作为 `findViewById( )` 方法的参数来引用界面控件。这是在 `activity_main.xml` 中分配给它们的 `android:id` 属性的名称，前加上 `R.id.` ：
-
-![image](img/3g.jpg)在事件处理器块内部，将 `<TextView>` 控件元素的赋值赋值变量
-
-```java
-TextView txt = (TextView) findViewById( R.id.textView ) ;
-```
-
-![image](img/4g.jpg)最后，在事件处理器块内部，从 `Lotto.java` 程序中的事件处理器（列在此处）中复制输出六个唯一随机数的代码
-
-```java
-int[ ] nums = new int[ 60 ] ; String = “ ” ; str
-for ( int i = 1 ; i < 60 ; i++ ) { nums[ i ] = i ; }
-for ( int i = 1 ; i < 60 ; i++ ) {
-    int r= ( int ) ( 59 * Math.random( ) ) + 1 ;
-    int t= nums[ i ] ; nums[ i ]= nums[ r ] ; nums[ r ]= t ;
-}
-for ( int i = 1 ; i < 7 ; i++ ) {
-    str += “ ” + Integer.toString( nums[ i ] ) + “ ” ;
-}
-txt.setText( str ) ;
-```
 
 ![image](img/forget.jpg)
 
@@ -6426,40 +5907,48 @@ txt.setText( str ) ;
 
 现在 Lotto 应用已拥有所有的资源、控件和功能代码，可以尝试进行构建：
 
-![image](img/5g.jpg)在 Android Studio 工具栏上，点击 `View`、`Tool Windows`、`Build` —— 打开“Build”窗口
+![image](img/5g.jpg)
+在 Android Studio 工具栏上，点击 `View`、`Tool Windows`、`Build` —— 打开“Build”窗口。
 
-![image](img/6g.jpg)然后，点击 `Build`、`Make Project`（或按 `Ctrl` + `F9` 快捷键）开始构建 —— 在“Build”窗口中查看其进度
+![image](img/6g.jpg)
+然后，点击 `Build`、`Make Project`（或按 `Ctrl` + `F9` 快捷键）开始构建 —— 在“Build”窗口中查看其进度。
 
 ![image](img/pg181_1.jpg)
-![image](img/7g.jpg)点击“Toggle View”按钮查看构建成功或失败的确认
+![image](img/7g.jpg)
+点击“Toggle View”按钮查看构建成功或失败的确认。
 
 ![image](img/pg181_2.jpg)
-![image](img/8g.jpg)修复任何报告的错误，然后重新构建，直到看到成功确认
+![image](img/8g.jpg)
+修复任何报告的错误，然后重新构建，直到看到成功确认。
 
-![image](img/hot.jpg)如果构建尝试失败，请查找代码中的红色灯泡图标 —— Android Studio 添加这些图标是为了让您轻松找到并纠正错误。
+![image](img/hot.jpg)
+如果构建尝试失败，请查找代码中的红色灯泡图标 —— Android Studio 添加这些图标是为了让您轻松找到并纠正错误。
 
 ### 测试应用程序
 
 一旦应用项目构建成功，就可以进行测试了。测试可以在通过 USB 连接到电脑的真实 Android 设备上进行，也可以在虚拟设备 (AVD) 模拟器上进行。AVD 允许您测试应用在系列设备上的性能，但它们使用更多系统资源，且速度可能慢得惊人。应用程序应该在至少一台手机设备和一个平板电脑上测试：
 
-![image](img/1g.jpg)点击 `Run`、`Run ‘app’`（或按 `Shift` + `F10` 快捷键）打开“Select Deployment”对话框
+![image](img/1g.jpg)
+点击 `Run`、`Run ‘app’`（或按 `Shift` + `F10` 快捷键）打开“Select Deployment”对话框。
 
 ![image](img/pg182_1.jpg)
-![image](img/2g.jpg)选择一个 AVD 手机模拟器进行连接，然后点击 `OK` 将 Lotto 应用安装到模拟器上
+![image](img/2g.jpg)
+选择一个 AVD 手机模拟器进行连接，然后点击 `OK` 将 Lotto 应用安装到模拟器上。
 
-![image](img/3g.jpg)按下应用按钮，查看 `TextView` 内容在较小设备上如何换行
+![image](img/3g.jpg)
+按下应用按钮，查看 `TextView` 内容在较小设备上如何换行。
 
-![image](img/pg182_2.jpg)编辑 `activity_main.xml` 以缩小字体大小 `android:textSize=”26sp”`
+![image](img/pg182_2.jpg)
+编辑 `activity_main.xml` 以缩小字体大小 `android:textSize="26sp"`。
 
-![image](img/5g.jpg)点击 `Build`、`Rebuild Project` 以应用更改，然后在模拟器中再次运行应用以查看解决方案
+![image](img/5g.jpg)
+点击 `Build`、`Rebuild Project` 以应用更改，然后在模拟器中再次运行应用以查看解决方案。
 
 ![image](img/pg182_3.jpg)
-![image](img/7g.jpg)选择一个 AVD 手机模拟器进行连接，然后点击 `OK` 将 Lotto 应用安装到模拟器上
+![image](img/7g.jpg)
+选择一个 AVD 手机模拟器进行连接，然后点击 `OK` 将 Lotto 应用安装到模拟器上。
 
 *(注：原文后部分存在大量重复，译文已按要求去重处理。)*
-
-
-
 
 ![image](img/8g.jpg)
 点击弹出通知上的 `locate` 找到生成的 APK，然后将 APK 从 `app-release.apk` 重命名为 `Lotto.apk`。
@@ -6467,53 +5956,49 @@ txt.setText( str ) ;
 ![image](img/pg184_5.jpg)
 
 ![image](img/hot.jpg)
-
-如果你想将应用上传到 Google Play 商店，请选择 Android App Bundle 。
+如果你想将应用上传到 Google Play 商店，请选择 Android App Bundle。
 
 ![image](img/hot.jpg)
-
 密钥库存储公钥/私钥对。你作为所有者保留私钥，而 Android Studio 签名工具会将公钥附加到 APK 中。这唯一地将 APK 关联起来，以确保 APK 的任何后续更新都来自你——即原始开发者。
 
 除非用户选择允许，否则来自 Google Play 以外来源的 APK 将被阻止：
 
 ![image](img/1g.jpg)
-将 `Lotto.apk` 下载到 Android 设备，然后点击文件图标尝试安装
+将 `Lotto.apk` 下载到 Android 设备，然后点击文件图标尝试安装。
 
 ![image](img/2g.jpg)
-在安全对话框中选择 `SETTINGS` 选项
+在安全对话框中选择 `SETTINGS` 选项。
 
 ![image](img/pg185_1.jpg)
 
 ![image](img/3g.jpg)
-将 `Allow from this source` 选项的滑块滑到 ON 位置，然后在提示时点击 `Install`
+将 `Allow from this source` 选项的滑块滑到 ON 位置，然后在提示时点击 `Install`。
 
 ![image](img/pg185_2.jpg)
 
 ![image](img/4g.jpg)
-现在在 Play Protect 对话框中选择 `INSTALL ANYWAY` 选项
+现在在 Play Protect 对话框中选择 `INSTALL ANYWAY` 选项。
 
 ![image](img/pg185_3.jpg)
 
 ![image](img/5g.jpg)
-等待应用安装到设备上
+等待应用安装到设备上。
 
 ![image](img/pg185_4.jpg)
 
 ![image](img/pg185_5.jpg)
 
 ![image](img/hot.jpg)
-
-在较版本的 Android 版本上，前往设置、安全并选择“允许来自未知来源的应用”。
+在较旧版本的 Android 版本上，前往设置、安全并选择“允许来自未知来源的应用”。
 
 ![image](img/hot.jpg)
-
 Play Protect 是内置于每个带有 Google Play 的设备中的安全防护。
 
 ## 总结
 
 - Java 程序可以部署为运行在适当版本 JRE 上的独立桌面应用程序。
 - 应用文件可以使用适当的 `java` 解释器分发并在其他操作系统上执行。
-- 将所有程序文件打包到单个 JAR 归文件中有助于确保资源文件不会被意外隔离。
+- 将所有程序文件打包到单个 JAR 归档文件中有助于确保资源文件不会被意外隔离。
 - 可执行的 JAR 应用程序可以通过提示符使用 `java -jar` 命令执行，也可以通过点击其文件图标执行。
 - Java 程序可以很容易转换为 Android 操作系统，因为它包含相似的核心库。
 - Android Studio 是开发 Android 应用的官方 IDE。
@@ -6534,4 +6019,3 @@ Play Protect 是内置于每个带有 Google Play 的设备中的安全防护。
 ![image](img/back2.jpg)
 
 ![image](img/bcover.jpg)
-

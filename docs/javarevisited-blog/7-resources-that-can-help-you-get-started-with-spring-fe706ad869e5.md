@@ -1,3 +1,4 @@
+
 # 可以帮助你开始使用 Spring 的 7 个资源
 
 > 原文：<https://medium.com/javarevisited/7-resources-that-can-help-you-get-started-with-spring-fe706ad869e5?source=collection_archive---------2----------------------->
@@ -8,7 +9,7 @@
 
 S[spring](https://spring.io/images/podcast-6e27b40f738a450c1224f874647aedaf.jpg)官网照片
 
-## **简介**
+## 简介
 
 就在不久前，我决定学习 [Spring Boot](https://spring.io/projects/spring-boot) 。我第一次看到这些注释时，它们让我不知所措，让我逃离春天。感谢上帝，尽管我设法重新开始学习。我想[学习 Spring](/javarevisited/10-best-online-courses-to-learn-spring-framework-in-2020-f7f73599c2fd) 的原因是我想用 Java 进行开发，Spring 是 Java 开发的首选框架。另一个原因是 Java 和 Spring 拥有广泛的社区支持，而且这个框架也经受住了时间的考验。
 
@@ -22,23 +23,32 @@ S[spring](https://spring.io/images/podcast-6e27b40f738a450c1224f874647aedaf.jpg)
 
 如果您是 Spring 框架的初学者，下面的七个资源可能对您有用
 
-1.  [**Java Brains Youtube**](https://www.youtube.com/user/koushks):每当我必须学习新东西的时候，Youtube 是我搜索的第一个地方。youtube 上有很多关于 Spring 的教程，但是，我发现最有用的是 Java Brains。这家伙有关于 Spring Boot、Spring Security 和[微服务](/javarevisited/top-5-courses-to-learn-microservices-in-java-and-spring-framework-e9fed1ba804d)的最好的教程之一。在其他地方，我还没有找到更好的、更简洁的关于 spring 相关主题的解释。教程应该足以让你开始。
-2.  [**calli coder**](https://www.callicoder.com)[:](https://www.callicoder.com:)如果你在寻找制作级的代码教程，那么这里就是你要去的地方。它有大约 40 个关于 Spring 的教程，涵盖了基于 java 开发的所有方面，还有 Docker 和 React。如果您学习了他的所有教程，我敢打赌您已经准备好在基于 java 的开发环境中工作了。
-3.  [**Baeldung**](https://www.baeldung.com) :一个非常棒的内容丰富的网站，上面有几乎所有关于 Java 和 Spring 概念的文章。我发现这个[系列](https://www.baeldung.com/rest-with-spring-series)对 Spring 构建 REST APIs 非常有帮助。该列表按照从初级到高级的概念进行组织。
-4.  **Github 库**:如果你正在寻找一些好的 Spring 开源项目，下面的列表可能会对你有所帮助:
+1. [**Java Brains Youtube**](https://www.youtube.com/user/koushks)：每当我必须学习新东西的时候，Youtube 是我搜索的第一个地方。youtube 上有很多关于 Spring 的教程，但是，我发现最有用的是 Java Brains。这家伙有关于 Spring Boot、Spring Security 和[微服务](/javarevisited/top-5-courses-to-learn-microservices-in-java-and-spring-framework-e9fed1ba804d)的最好的教程之一。在其他地方，我还没有找到更好的、更简洁的关于 spring 相关主题的解释。教程应该足以让你开始。
 
-    这些是中级到高级水平的项目:
-    [https://github.com/sqshq/piggymetrics](https://github.com/sqshq/piggymetrics)
-    [https://github.com/spring-petclinic/spring-petclinic-rest](https://github.com/spring-petclinic/spring-petclinic-rest)
-    [https://github.com/yidongnan/spring-cloud-netflix-example](https://github.com/yidongnan/spring-cloud-netflix-example)
-5.  [**javarestived**](https://javarevisited.blogspot.com/search/label/spring?max-results=3#axzz6e7SSPwJM):javarestived 有几乎所有 java 概念的文章。如果你还不知道的话，他们也有一个关于[介质](https://medium.com/javarevisited)的出版物，并且该出版物上的大多数文章都是 Java 聚焦的。
-6.  <https://mkyong.com/tutorials/spring-boot-tutorials>**:另一个伟大的资源，你可以看看。**
-7.  **[**官网**](https://spring.io/learn) :在所有这些资源中，不可能有比官网更好的资源了。我在最后提到，因为没有人喜欢阅读官方文件，但相信我，这个地方是春天的圣经。**
+2. [**calli coder**](https://www.callicoder.com)[:](https://www.callicoder.com:)如果你在寻找制作级的代码教程，那么这里就是你要去的地方。它有大约 40 个关于 Spring 的教程，涵盖了基于 java 开发的所有方面，还有 Docker 和 React。如果您学习了他的所有教程，我敢打赌您已经准备好在基于 java 的开发环境中工作了。
 
-**所以，这是一个帮助我学习和成长的所有资源的紧凑列表。您可以在方便的时候探索这些资源，但是如果您是一个完全的初学者，我建议您从上到下开始。**
+3. [**Baeldung**](https://www.baeldung.com) ：一个非常棒的内容丰富的网站，上面有几乎所有关于 Java 和 Spring 概念的文章。我发现这个[系列](https://www.baeldung.com/rest-with-spring-series)对 Spring 构建 REST APIs 非常有帮助。该列表按照从初级到高级的概念进行组织。
 
-**再次感谢你阅读这篇文章。我希望这些资源能像帮助我一样帮助你。**
+4. **Github 库**：如果你正在寻找一些好的 Spring 开源项目，下面的列表可能会对你有所帮助：
 
-**快乐学习😊！**
+   这些是中级到高级水平的项目：
 
-**我在这里没有做任何推广，我真正使用了这些资源，而且它们是完全免费的。**
+   [https://github.com/sqshq/piggymetrics](https://github.com/sqshq/piggymetrics)
+
+   [https://github.com/spring-petclinic/spring-petclinic-rest](https://github.com/spring-petclinic/spring-petclinic-rest)
+
+   [https://github.com/yidongnan/spring-cloud-netflix-example](https://github.com/yidongnan/spring-cloud-netflix-example)
+
+5. [**javarestived**](https://javarevisited.blogspot.com/search/label/spring?max-results=3#axzz6e7SSPwJM)：javarestived 有几乎所有 java 概念的文章。如果你还不知道的话，他们也有一个关于[介质](https://medium.com/javarevisited)的出版物，并且该出版物上的大多数文章都是 Java 聚焦的。
+
+6. <https://mkyong.com/tutorials/spring-boot-tutorials>：另一个伟大的资源，你可以看看。
+
+7. [**官网**](https://spring.io/learn) ：在所有这些资源中，不可能有比官网更好的资源了。我在最后提到，因为没有人喜欢阅读官方文件，但相信我，这个地方是春天的圣经。
+
+所以，这是一个帮助我学习和成长的所有资源的紧凑列表。您可以在方便的时候探索这些资源，但是如果您是一个完全的初学者，我建议您从上到下开始。
+
+再次感谢你阅读这篇文章。我希望这些资源能像帮助我一样帮助你。
+
+快乐学习😊！
+
+我在这里没有做任何推广，我真正使用了这些资源，而且它们是完全免费的。

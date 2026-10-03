@@ -1,30 +1,31 @@
+
 # Struts 国际化或本地化示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts/struts-internationalizing-or-localization-example/>
 
-这是一个 Struts 本地化示例，根据指定的语言显示消息或内容。默认情况下，Struts 将为每个用户在其会话上下文中存储一个 Locale 属性，该属性位于关键字"**org . Apache . Struts . action . Locale**"下，您所需要做的就是使用这个会话属性。
+这是一个 Struts 本地化示例，根据指定的语言显示消息或内容。默认情况下，Struts 将为每个用户在其会话上下文中存储一个 `Locale` 属性，该属性位于关键字 `org.apache.struts.action.Locale` 下，您所需要做的就是使用这个会话属性。
 
-Download this Struts localization example – [Struts-Localization-Example.zip](http://web.archive.org/web/20210507021650/http://www.mkyong.com/wp-content/uploads/2010/04/Struts-Localization-Example.zip)
+下载此 Struts 本地化示例 – [Struts-Localization-Example.zip](http://web.archive.org/web/20210507021650/http://www.mkyong.com/wp-content/uploads/2010/04/Struts-Localization-Example.zip)
 
-## 1.项目结构
+## 1. 项目结构
 
 这是项目结构。
 
 ![Struts-localization-folder](img/9ddb737bbda5ee7aa968e87ac3b1832a.png "Struts-localization-folder")
 
-## 2.属性文件
+## 2. 属性文件
 
-所有本地化消息都在属性文件中声明，格式为“**filename _ locale _ code . properties**”。你可以在 **Java 中查看地区代码。Util.Locale** 类。例如
+所有本地化消息都在属性文件中声明，格式为 `filename_locale_code.properties`。你可以在 `java.util.Locale` 类中查看地区代码。例如：
 
-*   英语–Common . properties 或 Common_en_US.properties
-*   中文–Common _ zh _ cn . properties
-*   法国–Common _ fr .属性
-*   德语–Common _ de .属性
+- 英语 – `Common.properties` 或 `Common_en_US.properties`
+- 中文 – `Common_zh_cn.properties`
+- 法国 – `Common_fr.properties`
+- 德语 – `Common_de.properties`
 
-**公共属性**
+**Common.properties**
 
 ```java
- #error message
+#error message
 error.common.username.required = Username is required
 error.common.password.required = Password is required
 
@@ -35,10 +36,10 @@ label.common.password = Password
 label.common.button.submit = Submit 
 ```
 
-**公共属性**
+**Common_de.properties**
 
 ```java
- #error message
+#error message
 error.common.username.required = Benutzername ist erforderlich
 error.common.password.required = Passwort ist erforderlich
 
@@ -49,12 +50,12 @@ label.common.password = Kennwort
 label.common.button.submit = Einreichen 
 ```
 
-## 3.动作类
+## 3. 动作类
 
-创建一个 action 类，该类扩展 DispatchAction 以实现多种操作目的。
+创建一个 action 类，该类扩展 `DispatchAction` 以实现多种操作目的。
 
 ```java
- package com.mkyong.common.action;
+package com.mkyong.common.action;
 
 import java.util.Locale;
 
@@ -112,12 +113,12 @@ public class LanguageSelectAction extends DispatchAction{
 } 
 ```
 
-## 4.动作形式
+## 4. 动作表单
 
 创建一个动作表单来保存用户名和密码数据，并用于表单验证。
 
 ```java
- package com.mkyong.common.form;
+package com.mkyong.common.form;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -177,32 +178,34 @@ public class UserForm extends ActionForm{
 } 
 ```
 
-## 5.JSP
+## 5. JSP
 
-创建一个 JSP 页面来显示语言选择、表单值以及错误消息。" **/Locale.do？method=chinese** 将匹配 DispatchAction **chinese()** 方法。
+创建一个 JSP 页面来显示语言选择、表单值以及错误消息。`/Locale.do?method=chinese` 将匹配 `DispatchAction` 的 `chinese()` 方法。
 
 ```java
 <%@taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 <%@taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
 
-<message key="label.common.message"></message>
+<bean:message key="label.common.message"></bean:message>
 
-Chinese
-English
-German
-France
+<html:link action="/Locale?method=chinese">Chinese</html:link>
+<html:link action="/Locale?method=english">English</html:link>
+<html:link action="/Locale?method=german">German</html:link>
+<html:link action="/Locale?method=france">France</html:link>
 
+<html:form action="/Submit">
+<bean:message key="label.common.username"/>: <html:text property="username"/>
+<bean:message key="label.common.password"/>: <html:text property="password"/>
+<html:submit><bean:message key="label.common.button.submit"></bean:message></html:submit>
+</html:form>
 ```
 
-<form action="/Submit">
-<message key="label.common.username">: <text property="username"><message key="label.common.password">: <text property="password"><submit><message key="label.common.button.submit"></message></submit>
-
-## 6.struts-config.xml
+## 6. struts-config.xml
 
 把这些放在一起。
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts-config PUBLIC 
 "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" 
 "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
@@ -251,12 +254,12 @@ France
 </struts-config> 
 ```
 
-## 7 .好的. xml
+## 7. web.xml
 
 将 Struts 框架集成到 web 部署描述符文件中。
 
-```java
- <!DOCTYPE web-app PUBLIC
+```xml
+<!DOCTYPE web-app PUBLIC
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
@@ -287,7 +290,7 @@ France
 
 ## 屏幕截图
 
-> http://localhost:8080/struts example/log in page . do
+> http://localhost:8080/struts-example/loginPage.do
 
 您可以通过语言链接更改界面。
 
@@ -305,4 +308,6 @@ France
 
 **德语界面**
 
-![Struts-localization-german](img/9d7ab75136386fb026b5799e8634f667.png "Struts-localization-german")Tags : [multiple languages](http://web.archive.org/web/20210507021650/https://mkyong.com/tag/multiple-languages/) [struts](http://web.archive.org/web/20210507021650/https://mkyong.com/tag/struts/)<input type="hidden" id="mkyong-current-postId" value="4534"></text></message></text></message></form>
+![Struts-localization-german](img/9d7ab75136386fb026b5799e8634f667.png "Struts-localization-german")
+
+标签： [multiple languages](http://web.archive.org/web/20210507021650/https://mkyong.com/tag/multiple-languages/) [struts](http://web.archive.org/web/20210507021650/https://mkyong.com/tag/struts/)

@@ -1,3 +1,4 @@
+
 # 延迟加载、聚合和 CQRS
 
 > 原文：<https://medium.com/javarevisited/lazy-loading-aggregate-and-cqrs-10feea6d391?source=collection_archive---------0----------------------->
@@ -10,4 +11,4 @@
 
 在本文中，我将通过一个例子来解释何时使用每种模式，何时不使用。从头到尾都是同一个例子，一步一步地解释。
 
-# 变得太大的聚合
+## 变得太大的聚合

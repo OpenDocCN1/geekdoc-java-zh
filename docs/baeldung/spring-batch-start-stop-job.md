@@ -1,18 +1,19 @@
+
 # 如何触发和停止计划的春季批处理作业
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-batch-start-stop-job>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将研究和比较不同的方式来**触发和停止任何所需业务案例的预定 Spring 批处理作业**。
 
 如果您需要关于 Spring Batch 和 Scheduler 的介绍，请参考 [Spring-Batch](/web/20220710202406/https://www.baeldung.com/introduction-to-spring-batch) 和 [Spring-Scheduler](/web/20220710202406/https://www.baeldung.com/spring-scheduled-tasks) 文章。
 
-## 2.触发计划的春季批处理作业
+## 2. 触发计划的春季批处理作业
 
 首先，我们有一个类`SpringBatchScheduler`来配置调度和批处理作业。方法`launchJob()`将被注册为计划任务。
 
-此外，为了以最直观的方式触发预定的 Spring 批处理作业，让我们添加一个条件标志，仅当该标志设置为 true 时才触发作业:
+此外，为了以最直观的方式触发预定的 Spring 批处理作业，让我们添加一个条件标志，仅当该标志设置为 true 时才触发作业：
 
 ```java
 private AtomicBoolean enabled = new AtomicBoolean(true);
@@ -36,7 +37,7 @@ public void launchJob() throws Exception {
 
 变量`batchRunCounter`将用于集成测试，以验证批处理作业是否已停止。
 
-## 3.停止计划的春季批处理作业
+## 3. 停止计划的春季批处理作业
 
 有了上面的条件标志，我们就能够在调度任务有效的情况下触发调度的 Spring 批处理作业。
 
@@ -44,11 +45,11 @@ public void launchJob() throws Exception {
 
 让我们在接下来的两个小节中看看两个选项。
 
-### 3.1.使用调度程序后处理器
+### 3.1. 使用调度程序后处理器
 
 因为我们是通过使用 [`@Scheduled`](https://web.archive.org/web/20220710202406/https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/scheduling/annotation/Scheduled.html) 注释来调度一个方法，所以 bean post 处理器 [`ScheduledAnnotationBeanPostProcessor`](https://web.archive.org/web/20220710202406/https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/scheduling/annotation/ScheduledAnnotationBeanPostProcessor.html) 会被首先注册。
 
-我们可以显式调用`postProcessBeforeDestruction()`来销毁给定的调度 bean:
+我们可以显式调用`postProcessBeforeDestruction()`来销毁给定的调度 bean：
 
 ```java
 @Test
@@ -72,11 +73,11 @@ public void stopJobSchedulerWhenSchedulerDestroyed() throws Exception {
 
 考虑到多个调度程序，最好在自己的类中保留一个调度程序，这样我们可以根据需要停止特定的调度程序。
 
-### 3.2.取消预定的`Future`
+### 3.2. 取消预定的`Future`
 
 另一种停止调度程序的方法是手动取消它的`Future`。
 
-这里有一个用于捕获`Future`地图的自定义任务调度程序:
+这里有一个用于捕获`Future`地图的自定义任务调度程序：
 
 ```java
 @Bean
@@ -103,7 +104,7 @@ private class CustomTaskScheduler
 }
 ```
 
-然后，我们迭代`Future`图，并取消批处理作业调度器的`Future`:
+然后，我们迭代`Future`图，并取消批处理作业调度器的`Future`：
 
 ```java
 public void cancelFutureSchedulerTasks() {
@@ -117,7 +118,7 @@ public void cancelFutureSchedulerTasks() {
 
 在有多个调度器任务的情况下，我们可以在定制调度器池中维护`Future`映射，但是基于调度器类取消相应的调度`Future`。
 
-## 4.结论
+## 4. 结论
 
 在这篇简短的文章中，我们尝试了三种不同的方式来触发或停止预定的 Spring 批处理作业。
 

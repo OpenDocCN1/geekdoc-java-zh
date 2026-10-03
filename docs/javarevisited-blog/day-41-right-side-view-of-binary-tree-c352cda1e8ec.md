@@ -1,3 +1,4 @@
+
 # 第 41 天——二叉树的右侧视图
 
 > 原文：<https://medium.com/javarevisited/day-41-right-side-view-of-binary-tree-c352cda1e8ec?source=collection_archive---------0----------------------->

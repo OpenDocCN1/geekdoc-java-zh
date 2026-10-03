@@ -1,17 +1,18 @@
+
 # Java——如何将一个名字打印 10 次？
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/java-how-to-print-a-name-10-times/>
 
 这篇文章向你展示了打印一个名字十次的不同方法。
 
-## 1.环
+## 1. 循环
 
-1.1 For 循环
+### 1.1 For 循环
 
-JavaSample1.java
+`JavaSample1.java`
 
 ```java
- package com.mkyong.samples;
+package com.mkyong.samples;
 
 public class JavaSample1 {
 
@@ -23,13 +24,12 @@ public class JavaSample1 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- Java
 Java
 Java
 Java
@@ -38,15 +38,16 @@ Java
 Java
 Java
 Java
-Java 
+Java
+Java
 ```
 
-1.2 While 循环
+### 1.2 While 循环
 
-JavaSample2.java
+`JavaSample2.java`
 
 ```java
- package com.mkyong.samples;
+package com.mkyong.samples;
 
 public class JavaSample2 {
 
@@ -60,17 +61,17 @@ public class JavaSample2 {
 
     }
 
-} 
+}
 ```
 
-## 2.阅读和打印
+## 2. 阅读和打印
 
 这个例子将从控制台读取输入并打印十次。
 
-JavaSampleReadPrint.java
+`JavaSampleReadPrint.java`
 
 ```java
- package com.mkyong.samples;
+package com.mkyong.samples;
 
 import java.util.Scanner;
 
@@ -90,13 +91,13 @@ public class JavaSampleReadPrint {
         }
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- Your name: mkyong
+Your name: mkyong
 mkyong
 mkyong
 mkyong
@@ -106,17 +107,17 @@ mkyong
 mkyong
 mkyong
 mkyong
-mkyong 
+mkyong
 ```
 
-## 3.递归
+## 3. 递归
 
 这个例子将使用递归循环。
 
-JavaSampleReadRecursion.java
+`JavaSampleReadRecursion.java`
 
 ```java
- package com.mkyong.samples;
+package com.mkyong.samples;
 
 public class JavaSampleReadRecursion {
 
@@ -135,13 +136,13 @@ public class JavaSampleReadRecursion {
         }
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- 10:mkyong
+10:mkyong
 9:mkyong
 8:mkyong
 7:mkyong
@@ -150,17 +151,17 @@ public class JavaSampleReadRecursion {
 4:mkyong
 3:mkyong
 2:mkyong
-1:mkyong 
+1:mkyong
 ```
 
-## 4.没有循环，没有递归
+## 4. 没有循环，没有递归
 
 这个例子很有趣，它打印一个字符串 1000 次没有循环，只是简单的数学。
 
-JavaNoLoop.java
+`JavaNoLoop.java`
 
 ```java
- package com.mkyong.samples;
+package com.mkyong.samples;
 
 public class JavaNoLoop {
 
@@ -177,15 +178,15 @@ public class JavaNoLoop {
 
     }
 
-} 
+}
 ```
 
-## 5.字符+字符串并替换
+## 5. 字符 + 字符串并替换
 
-JavaCharStrReplace.java
+`JavaCharStrReplace.java`
 
 ```java
- package com.mkyong.samples;
+package com.mkyong.samples;
 
 public class JavaCharStrReplace {
 
@@ -196,17 +197,17 @@ public class JavaCharStrReplace {
         System.out.print(str.replace("\0", "Mkyong\n"));
 
     }
-} 
+}
 ```
 
-## 6.Java 8 字符串连接
+## 6. Java 8 字符串连接
 
-6.1 `Collections.nCopies`和`String.join`
+### 6.1 `Collections.nCopies` 和 `String.join`
 
-JavaStringJoin.java
+`JavaStringJoin.java`
 
 ```java
- package com.mkyong.samples;
+package com.mkyong.samples;
 
 import java.util.Collections;
 
@@ -217,15 +218,15 @@ public class JavaStringJoinNCopies {
         System.out.print(String.join("\n", Collections.nCopies(10, "Mkyong")));
 
     }
-} 
+}
 ```
 
-6.2 `Arrays.fill`和`String.join`
+### 6.2 `Arrays.fill` 和 `String.join`
 
-JavaStringJoinArray.java
+`JavaStringJoinArray.java`
 
 ```java
- package com.mkyong.samples;
+package com.mkyong.samples;
 
 import java.util.Arrays;
 
@@ -238,15 +239,15 @@ public class JavaStringJoinArray {
         System.out.println(String.join("\n", str));
 
     }
-} 
+}
 ```
 
-## 7.Java 8 IntStream.range
+## 7. Java 8 `IntStream.range`
 
-JavaIntStream.java
+`JavaIntStream.java`
 
 ```java
- package com.mkyong.samples;
+package com.mkyong.samples;
 
 import java.util.stream.IntStream;
 
@@ -257,15 +258,15 @@ public class JavaIntStream {
         IntStream.range(0,10).forEach(x->System.out.println("Mkyong"));
 
     }
-} 
+}
 ```
 
-## 8.Java 11 重复
+## 8. Java 11 重复
 
-Java11Repeat.java
+`Java11Repeat.java`
 
 ```java
- package com.mkyong.samples;
+package com.mkyong.samples;
 
 public class Java11Repeat {
 
@@ -275,13 +276,11 @@ public class Java11Repeat {
         System.out.println(str.repeat(10));
 
     }
-} 
+}
 ```
 
 ## 参考
 
-*   [如何从控制台读取输入–Java](/web/20221206171235/https://mkyong.com/java/how-to-read-input-from-console-java/)
-*   [collections . n copies JavaDoc](http://web.archive.org/web/20221206171235/https://docs.oracle.com/javase/7/docs/api/java/util/Collections.html#nCopies(int,%20T))
-*   [Java 11 重复](http://web.archive.org/web/20221206171235/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#repeat(int))
-
-<input type="hidden" id="mkyong-current-postId" value="15335">
+* [如何从控制台读取输入–Java](/web/20221206171235/https://mkyong.com/java/how-to-read-input-from-console-java/)
+* [collections . n copies JavaDoc](http://web.archive.org/web/20221206171235/https://docs.oracle.com/javase/7/docs/api/java/util/Collections.html#nCopies(int,%20T))
+* [Java 11 重复](http://web.archive.org/web/20221206171235/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#repeat(int))

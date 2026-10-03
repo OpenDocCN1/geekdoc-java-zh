@@ -1,16 +1,18 @@
+
+
 # 带 Netty 的 HTTP 服务器
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-netty-http-server>
 
-## 1.概观
+## 1. 概观
 
-在本教程中，我们将通过 Netty 在 [HTTP](https://web.archive.org/web/20220630012938/http://<a href="https//www.w3.org/Protocols/HTTP/1.1/draft-ietf-http-v11-spec-01.html">) 上**实现一个简单的大写服务器，Netty**是一个异步框架，它给了我们用 Java 开发网络应用程序的灵活性。
+在本教程中，我们将通过 Netty 在 [HTTP](https://web.archive.org/web/20220630012938/http://<a href="https//www.w3.org/Protocols/HTTP/1.1/draft-ietf-http-v11-spec-01.html">) 上实现一个简单的大写服务器。Netty 是一个异步框架，它给了我们用 Java 开发网络应用程序的灵活性。
 
-## 2.服务器引导
+## 2. 服务器引导
 
 在开始之前，我们应该了解 Netty 的[基础概念，比如通道、处理器、编码器和解码器。](/web/20220630012938/https://www.baeldung.com/netty#core-concepts)
 
-在这里，我们将直接开始引导服务器，这与简单协议服务器基本相同:
+在这里，我们将直接开始引导服务器，这与简单协议服务器基本相同：
 
 ```java
 public class HttpServer {
@@ -39,28 +41,28 @@ public class HttpServer {
           });
         ...
     }
-} 
+}
 ```
 
-所以，这里**只有`childHandler`根据我们想要实现的协议**不同，对我们来说是 HTTP。
+所以，这里只有`childHandler`根据我们想要实现的协议不同，对我们来说是 HTTP。
 
-我们将向服务器的管道中添加三个处理程序:
+我们将向服务器的管道中添加三个处理程序：
 
-1.  内蒂的[`HttpResponseEncoder`](https://web.archive.org/web/20220630012938/https://netty.io/4.0/api/io/netty/handler/codec/http/HttpResponseEncoder.html)——连载
-2.  内蒂的[`HttpRequestDecoder`](https://web.archive.org/web/20220630012938/https://netty.io/4.0/api/io/netty/handler/codec/http/HttpRequestDecoder.html)–用于反序列化
-3.  我们自己的`CustomHttpServerHandler`–用于定义我们服务器的行为
+1. 内蒂的[`HttpResponseEncoder`](https://web.archive.org/web/20220630012938/https://netty.io/4.0/api/io/netty/handler/codec/http/HttpResponseEncoder.html)——连载。
+2. 内蒂的[`HttpRequestDecoder`](https://web.archive.org/web/20220630012938/https://netty.io/4.0/api/io/netty/handler/codec/http/HttpRequestDecoder.html)——用于反序列化。
+3. 我们自己的`CustomHttpServerHandler`——用于定义我们服务器的行为。
 
 接下来让我们详细看看最后一个处理程序。
 
-## 3.`CustomHttpServerHandler`
+## 3. `CustomHttpServerHandler`
 
 我们的自定义处理程序的工作是处理入站数据并发送响应。
 
 让我们把它分解一下，以了解它的工作原理。
 
-### 3.1.处理程序的结构
+### 3.1. 处理程序的结构
 
-`CustomHttpServerHandler`扩展 Netty 的抽象`SimpleChannelInboundHandler`并实现其生命周期方法:
+`CustomHttpServerHandler`扩展 Netty 的抽象`SimpleChannelInboundHandler`并实现其生命周期方法：
 
 ```java
 public class CustomHttpServerHandler extends SimpleChannelInboundHandler {
@@ -91,11 +93,11 @@ public class CustomHttpServerHandler extends SimpleChannelInboundHandler {
 
 现在让我们继续有趣的事情，实现`channelRead0`。
 
-### 3.2.阅读频道
+### 3.2. 阅读频道
 
-我们的用例很简单，服务器会简单地将请求体和查询参数(如果有的话)转换成大写。关于在响应中反映请求数据，这里需要注意一点——我们这样做只是为了演示，以理解我们如何使用 Netty 来实现 HTTP 服务器。
+我们的用例很简单，服务器会简单地将请求体和查询参数（如果有的话）转换成大写。关于在响应中反映请求数据，这里需要注意一点——我们这样做只是为了演示，以理解我们如何使用 Netty 来实现 HTTP 服务器。
 
-这里，**我们将消费消息或请求，并将其响应设置为协议** 推荐的[(注意，`RequestUtils` 是我们马上要写的内容):](https://web.archive.org/web/20220630012938/https://www.w3.org/Protocols/HTTP/1.1/draft-ietf-http-v11-spec-01.html#Response)
+这里，我们将消费消息或请求，并将其响应设置为协议推荐的[(注意，`RequestUtils` 是我们马上要写的内容):](https://web.archive.org/web/20220630012938/https://www.w3.org/Protocols/HTTP/1.1/draft-ietf-http-v11-spec-01.html#Response)
 
 ```java
 if (msg instanceof HttpRequest) {
@@ -119,10 +121,10 @@ if (msg instanceof HttpContent) {
         responseData.append(RequestUtils.prepareLastResponse(request, trailer));
         writeResponse(ctx, trailer, responseData);
     }
-} 
+}
 ```
 
-正如我们所看到的，当我们的通道接收到一个`HttpRequest`时，它首先检查请求是否期望一个 [100 继续](https://web.archive.org/web/20220630012938/https://www.w3.org/Protocols/HTTP/1.1/draft-ietf-http-v11-spec-01.html#Status-Codes)状态。在这种情况下，我们立即写回一个状态为`CONTINUE`的空响应:
+正如我们所看到的，当我们的通道接收到一个`HttpRequest`时，它首先检查请求是否期望一个[100 继续](https://web.archive.org/web/20220630012938/https://www.w3.org/Protocols/HTTP/1.1/draft-ietf-http-v11-spec-01.html#Status-Codes)状态。在这种情况下，我们立即写回一个状态为`CONTINUE`的空响应：
 
 ```java
 private void writeResponse(ChannelHandlerContext ctx) {
@@ -134,7 +136,7 @@ private void writeResponse(ChannelHandlerContext ctx) {
 
 之后，处理程序初始化一个要作为响应发送的字符串，并将请求的查询参数添加到该字符串中，然后按原样发送回去。
 
-现在让我们定义方法`formatParams`并把它放在一个`RequestUtils`助手类中来完成:
+现在让我们定义方法`formatParams`并把它放在一个`RequestUtils`助手类中来完成：
 
 ```java
 StringBuilder formatParams(HttpRequest request) {
@@ -156,7 +158,7 @@ StringBuilder formatParams(HttpRequest request) {
 }
 ```
 
-接下来，在接收到一个`HttpContent`，**时，我们获取请求体并将其转换为大写**:
+接下来，在接收到一个`HttpContent`时，我们获取请求体并将其转换为大写：
 
 ```java
 StringBuilder formatBody(HttpContent httpContent) {
@@ -170,7 +172,7 @@ StringBuilder formatBody(HttpContent httpContent) {
 }
 ```
 
-同样，如果接收的`HttpContent`是一个`LastHttpContent`，我们添加一个再见消息和尾部报头，如果有的话:
+同样，如果接收的`HttpContent`是一个`LastHttpContent`，我们添加一个再见消息和尾部报头，如果有的话：
 
 ```java
 StringBuilder prepareLastResponse(HttpRequest request, LastHttpContent trailer) {
@@ -191,9 +193,9 @@ StringBuilder prepareLastResponse(HttpRequest request, LastHttpContent trailer) 
 }
 ```
 
-### 3.3.撰写回应
+### 3.3. 撰写回应
 
-既然我们要发送的数据已经准备好了，我们可以写对`ChannelHandlerContext`的响应了:
+既然我们要发送的数据已经准备好了，我们可以写对`ChannelHandlerContext`的响应了：
 
 ```java
 private void writeResponse(ChannelHandlerContext ctx, LastHttpContent trailer,
@@ -223,48 +225,51 @@ private void writeResponse(ChannelHandlerContext ctx, LastHttpContent trailer,
 
 如果一个请求要保持活动，或者换句话说，如果不关闭连接，我们将响应的`connection`头设置为`keep-alive`。否则，我们关闭连接。
 
-## 4.测试服务器
+## 4. 测试服务器
 
 为了测试我们的服务器，让我们发送一些 [cURL](/web/20220630012938/https://www.baeldung.com/curl-rest) 命令并查看响应。
 
-当然，**我们需要通过运行这个**之前的类`HttpServer`来启动服务器。
+当然，我们需要通过运行这个之前的类`HttpServer`来启动服务器。
 
-### 4.1.获取请求
+### 4.1. 获取请求
 
-让我们首先调用服务器，提供一个带有请求的 cookie:
+让我们首先调用服务器，提供一个带有请求的 cookie：
 
 ```java
 curl http://127.0.0.1:8080?param1=one
 ```
 
-作为回应，我们得到:
+作为回应，我们得到：
 
-```java
+```text
 Parameter: PARAM1 = ONE
 
-Good Bye! 
+Good Bye!
 ```
 
 我们也可以在任何浏览器中点击`[http://127.0.0.1:8080?param1=one](https://web.archive.org/web/20220630012938/http://127.0.0.1:8080/?param1=one)`来查看相同的结果。
 
-### 4.2.发布请求
+### 4.2. 发布请求
 
-作为我们的第二个测试，让我们发送一个正文为`sample content`的帖子:
+作为我们的第二个测试，让我们发送一个正文为`sample content`的帖子：
 
 ```java
 curl -d "sample content" -X POST http://127.0.0.1:8080
 ```
 
-以下是回应:
+以下是回应：
 
-```java
+```text
 SAMPLE CONTENT
 Good Bye!
 ```
 
-这一次，因为我们的请求包含了一个主体，**服务器用大写字母**将其发回。
 
-## 5.结论
+
+
+这一次，因为我们的请求包含了一个主体，服务器用大写字母`**`将其发回。
+
+## 5. 结论
 
 在本教程中，我们看到了如何实现 HTTP 协议，特别是使用 Netty 的 HTTP 服务器。
 

@@ -1,3 +1,4 @@
+
 # “Java 集合框架”的阴暗面
 
 > 原文：<https://medium.com/javarevisited/the-dark-side-of-java-collections-framework-881a9f142231?source=collection_archive---------2----------------------->
@@ -6,15 +7,15 @@
 
 ![](img/9feed1cb8785cdfe07c2aac8f4c834bc.png)
 
-来自 [Pixabay](https://pixabay.com/) 的[erikawittleb](https://pixabay.com/users/ErikaWittlieb-427626/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1724901)的图片
+来自 [Pixabay](https://pixabay.com/) 的[erikawittleb](https://pixabay.com/users/ErikaWittlieb-427626/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1724901)的图片
 
-# 没有真正的不变性
+## 没有真正的不变性
 
 Java Collections Framework 从一开始就没有考虑过任何只读或不可变的东西，因为即使是`Collection`接口也有像`clear`、`add`和`remove`这样的方法。这种方法本来是可以接受的，但是最近，Java 语言已经通过众所周知的实用程序得到了增强，比如`Arrays.asList<T>(T... element)`、`Collections.emptyList()`、`Collections.singletonList<T>(T element)`和许多其他实用程序。那么，他们怎么了？让我们仔细看看。
 
 ```
 List<Integer> list = Arrays.asList(21, 22, 23); 
-list.add(24) *// UnsupportedOperationException, but why?*
+list.add(24) // UnsupportedOperationException, but why?
 ```
 
 什么鬼东西？我们知道`List`是从拥有`add`方法的`Collection`扩展而来的。所以，问题是`Arrays.asList`返回了一个限制添加新项目的实现。现在我们面临着一个奇怪的局面。虽然`List`接口为我们提供了一个方法，但是我们不能调用它。但问题是模糊会变得更糟。看看这个。
@@ -22,7 +23,7 @@ list.add(24) *// UnsupportedOperationException, but why?*
 ```
 List<Integer> list = Arrays.asList(21, 22, 23); 
 list.set(0, 121);
-System.out.println(list); *// [121, 22, 23]*
+System.out.println(list); // [121, 22, 23]
 ```
 
 这里没有例外。因此，我们可以修改列表，但不能在其中插入新的项目。我不知道为什么会做出如此奇怪的设计决定。但说实话，这个方法的 JavaDoc 恰当地描述了这种情况。
@@ -40,7 +41,7 @@ List<Integer> filtered = filter(list);
 
 `filter`方法接受`List`实现并返回一个过滤后的实现，但是结果返回了什么列表呢？它是一个新实例还是同一个修改过的实例？可以修改原来的列表吗，会影响结果吗？顺便问一下，我们如何知道作为参数传递的是什么实现？也许无法添加或删除条目(例如，这种实现会在`Collections.emptyList()`之前返回)。如您所见，即使是简单的代码片段也会产生如此大的混乱。可以说我们可以使用 [Java Stream API](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html) 。嗯，这是真的。`Stream`在每次`map`、`filter`或其他方法调用时创建一个新对象。问题解决了吗？不。我们有一个方便的外观来操作集合，但这并不意味着集合摆脱了模糊性和意外的行为。那么，有什么解决办法呢？其实有好几个。
 
-# 遗传可变性
+## 遗传可变性
 
 这就是 Kotlin 作为一个新的集合架构所提供的。我们在子接口中定义所有的变异方法，而不是把它们放在一个地方。看起来是这样的。
 
@@ -69,12 +70,12 @@ mutableList.clear()
 虽然已经执行了`someAsyncTask`的线程无权修改列表，但是另一个线程意外地清除了它，因为原始对象实现了`MutableList`。所以，也可以解释为`List`。我必须承认 JavaDoc 对于`List`接口再次有了它的权威性。
 
 ```
-Creates a new read-only list with the specified **[size]**, where each element is calculated by calling the specified **[init]** function.
+Creates a new read-only list with the specified [size], where each element is calculated by calling the specified [init] function.
 ```
 
 *只读*不代表*不可变*。这意味着当前线程不能访问任何变异方法，但是不能保证这个列表不能被其他人修改。所以，我们有一些理论上可以被除了我们之外的任何人修改的东西。我认为这样的行为不是我们所要寻找的，但无论如何，这种方法仍然比 Java 实现的要好。
 
-# 分离可变性
+## 分离可变性
 
 我们可以定义一个单独的层次结构，而不是继承只读集合。
 
@@ -86,6 +87,6 @@ Creates a new read-only list with the specified **[size]**, where each element i
 
 > 可以注意到，所有这些集合都有一个公共接口。那就是`Iterable<T>`。不仅如此，`Iterable.iterator()`返回的`Iterator`还有`remove`方法，默认抛出异常。然而，这意味着即使是不可变的集合也不是完全不可变的。所以，这是我们想要使用 Java `for-each`循环必须付出的代价，因为实现`Iterable<T>`是唯一的办法。
 
-# 结论
+## 结论
 
 我坚信不变性是一个不应该被忽视的基本要素。也许有一天 [JCP](https://www.jcp.org/en/home/index) 会同意这个观点，但是现在，仅此而已。

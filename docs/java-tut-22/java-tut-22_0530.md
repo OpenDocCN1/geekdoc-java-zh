@@ -1,14 +1,13 @@
+
 # 排序地图接口
 
 > 原文：[`docs.oracle.com/javase/tutorial/collections/interfaces/sorted-map.html`](https://docs.oracle.com/javase/tutorial/collections/interfaces/sorted-map.html)
 
 一个[`SortedMap`](https://docs.oracle.com/javase/8/docs/api/java/util/SortedMap.html)是一个维护其条目按升序排列的[`Map`](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)，根据键的自然顺序排序，或者根据在创建`SortedMap`时提供的`Comparator`排序。自然排序和`Comparator`在对象排序部分讨论。`SortedMap`接口提供了常规`Map`操作以及以下操作：
 
-+   `Range view`  在排序地图上执行任意范围操作
-
-+   `Endpoints`  返回排序地图中的第一个或最后一个键
-
-+   `Comparator access`  返回用于对地图进行排序的`Comparator`（如果有的话）。
++   `Range view` — 在排序地图上执行任意范围操作
++   `Endpoints` — 返回排序地图中的第一个或最后一个键
++   `Comparator access` — 返回用于对地图进行排序的`Comparator`（如果有的话）。
 
 以下接口是[`SortedSet`](https://docs.oracle.com/javase/8/docs/api/java/util/SortedSet.html)的`Map`模拟。
 
@@ -21,7 +20,6 @@ public interface SortedMap<K, V> extends Map<K, V>{
     K firstKey();
     K lastKey();
 }
-
 ```
 
 ## 地图操作
@@ -29,7 +27,6 @@ public interface SortedMap<K, V> extends Map<K, V>{
 `SortedMap`从`Map`继承的操作在排序地图和普通地图上的行为相同，有两个例外：
 
 +   任何排序地图的`Collection`视图上的`iterator`操作返回的`Iterator`按顺序遍历集合。
-
 +   `Collection`视图的`toArray`操作返回的数组按顺序包含键、值或条目。
 
 虽然接口不能保证，但 Java 平台所有`SortedMap`实现中`Collection`视图的`toString`方法返回一个字符串，其中包含视图中的所有元素，按顺序排列。

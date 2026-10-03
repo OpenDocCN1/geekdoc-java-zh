@@ -1,14 +1,11 @@
+
 # 创建自定义布局管理器
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/layout/custom.html`](https://docs.oracle.com/javase/tutorial/uiswing/layout/custom.html)
 
 在开始创建自定义布局管理器之前，请确保没有现有的布局管理器符合您的要求。特别是像`GridBagLayout`、`SpringLayout`和`BoxLayout`这样的布局管理器在许多情况下都足够灵活。您还可以从其他来源找到布局管理器，比如从互联网上。最后，您可以通过将组件分组到诸如面板之类的容器中来简化布局。
 
-* * *
-
 **注意：** 本课程涵盖了手动编写布局代码，这可能具有挑战性。如果您不想学习布局管理的所有细节，您可能更喜欢使用`GroupLayout`布局管理器结合构建工具来布局您的 GUI。其中一个构建工具是 NetBeans IDE。否则，如果您想手动编码而不想使用`GroupLayout`，那么推荐使用`GridBagLayout`作为下一个最灵活和强大的布局管理器。
-
-* * *
 
 如果您有兴趣使用 JavaFX 来创建您的 GUI，请参阅[在 JavaFX 中使用布局](https://docs.oracle.com/javase/8/javafx/layout-tutorial/index.html)。
 

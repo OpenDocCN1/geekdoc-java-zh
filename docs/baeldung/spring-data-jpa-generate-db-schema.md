@@ -1,8 +1,9 @@
+
 # 用 Spring 数据 JPA 生成数据库模式
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-data-jpa-generate-db-schema>
 
-## 1.概观
+## 1. 概观
 
 创建持久层时，我们需要将 SQL 数据库模式与我们在代码中创建的对象模型相匹配。这可能需要手动完成大量工作。
 
@@ -12,39 +13,39 @@
 
 最后，我们将探索使用 Hibernate 的本地 API 生成 DDL 的替代方法。
 
-## 2.JPA 模式生成
+## 2. JPA 模式生成
 
 JPA 2.1 引入了数据库模式生成标准。因此，从这个版本开始，我们可以通过一组预定义的配置属性来控制如何生成和导出数据库模式。
 
-### 2.1.剧本`action`
+### 2.1. 剧本`action`
 
-首先，**为了控制我们将生成哪些 DDL 命令**，JPA 引入了脚本`action`配置选项:
+首先，**为了控制我们将生成哪些 DDL 命令**，JPA 引入了脚本`action`配置选项：
 
 ```java
 javax.persistence.schema-generation.scripts.action
 ```
 
-我们可以从四个不同的选项中选择:
+我们可以从四个不同的选项中选择：
 
-*   `none`–不生成任何 DDL 命令
-*   `create`–仅生成数据库创建命令
-*   `drop`–仅生成数据库删除命令
-*   `drop-and-create`–生成数据库删除命令，然后是创建命令
+* `none`–不生成任何 DDL 命令
+* `create`–仅生成数据库创建命令
+* `drop`–仅生成数据库删除命令
+* `drop-and-create`–生成数据库删除命令，然后是创建命令
 
-### 2.2.剧本`target`
+### 2.2. 剧本`target`
 
-其次，对于每个指定的脚本`action`，我们需要定义相应的`target`配置:
+其次，对于每个指定的脚本`action`，我们需要定义相应的`target`配置：
 
 ```java
 javax.persistence.schema-generation.scripts.create-target
 javax.persistence.schema-generation.scripts.drop-target
 ```
 
-本质上，脚本`target` **定义了包含模式创建或删除命令**的文件的位置。例如，如果我们选择`drop-and-create `作为脚本`action`，我们将需要指定两个`target`
+本质上，脚本`target`**定义了包含模式创建或删除命令**的文件的位置。例如，如果我们选择`drop-and-create`作为脚本`action`，我们将需要指定两个`target`。
 
-### 2.3.模式`Source`
+### 2.3. 模式`source`
 
-最后，为了从我们的实体模型生成模式 DDL 命令，我们应该包含模式`source`配置，并选择`metadata`选项:
+最后，为了从我们的实体模型生成模式 DDL 命令，我们应该包含模式`source`配置，并选择`metadata`选项：
 
 ```java
 javax.persistence.schema-generation.create-source=metadata
@@ -53,11 +54,11 @@ javax.persistence.schema-generation.drop-source=metadata
 
 在下一节中，我们将展示如何使用 Spring Data JPA 自动生成具有标准 JPA 属性的数据库模式。
 
-## 3.用 Spring 数据 JPA 生成模式
+## 3. 用 Spring 数据 JPA 生成模式
 
-### 3.1.模特们
+### 3.1. 模型
 
-让我们想象我们正在实现一个用户账户系统，它有一个名为`Account`的[实体](/web/20220627081244/https://www.baeldung.com/jpa-entities):
+让我们想象我们正在实现一个用户账户系统，它有一个名为`Account`的[实体](/web/20220627081244/https://www.baeldung.com/jpa-entities)：
 
 ```java
 @Entity
@@ -81,7 +82,7 @@ public class Account {
 }
 ```
 
-每个帐户可以有多个帐户设置，因此这里我们将有一个[一对多](/web/20220627081244/https://www.baeldung.com/hibernate-one-to-many)映射:
+每个帐户可以有多个帐户设置，因此这里我们将有一个[一对多](/web/20220627081244/https://www.baeldung.com/hibernate-one-to-many)映射：
 
 ```java
 @Entity
@@ -103,12 +104,12 @@ public class AccountSetting {
     private Account account;
 
     // getters and setters
-} 
+}
 ```
 
-### 3.2.Spring 数据 JPA 配置
+### 3.2. Spring 数据 JPA 配置
 
-现在，为了生成数据库模式，我们需要将模式生成属性传递给正在使用的持久性提供者。为此，我们将在配置文件中的`spring.jpa.properties`前缀下设置本机 JPA 属性:
+现在，为了生成数据库模式，我们需要将模式生成属性传递给正在使用的持久性提供者。为此，我们将在配置文件中的`spring.jpa.properties`前缀下设置本机 JPA 属性：
 
 ```java
 spring.jpa.properties.javax.persistence.schema-generation.scripts.action=create
@@ -116,11 +117,11 @@ spring.jpa.properties.javax.persistence.schema-generation.scripts.create-target=
 spring.jpa.properties.javax.persistence.schema-generation.scripts.create-source=metadata
 ```
 
-因此， **Spring Data JPA 在创建`EntityManagerFactory` bean 时会将这些属性传递给持久性提供者**。
+因此，**Spring Data JPA 在创建`EntityManagerFactory` bean 时会将这些属性传递给持久性提供者**。
 
-### 3.3.`create.sql`文件
+### 3.3. `create.sql`文件
 
-因此，在应用程序启动时，上述配置将基于实体映射元数据生成数据库创建命令。此外，DDL 命令被导出到`create.sql`文件中，该文件创建在我们的主项目文件夹中:
+因此，在应用程序启动时，上述配置将基于实体映射元数据生成数据库创建命令。此外，DDL 命令被导出到`create.sql`文件中，该文件创建在我们的主项目文件夹中：
 
 ```java
 create table account_settings (
@@ -144,11 +145,11 @@ alter table account_settings
    references accounts (id)
 ```
 
-## 4.使用 Hibernate API 生成模式
+## 4. 使用 Hibernate API 生成模式
 
 如果我们使用 Hibernate，**我们可以直接使用它的本地 API，`SchemaExport`，来生成我们的模式 DDL 命令**。同样，Hibernate API 使用我们的应用程序实体模型来生成和导出数据库模式。
 
-有了 Hibernate 的`SchemaExport`，我们可以显式地使用`drop`、`createOnly,`和`create`方法:
+有了 Hibernate 的`SchemaExport`，我们可以显式地使用`drop`、`createOnly`和`create`方法：
 
 ```java
 MetadataSources metadataSources = new MetadataSources(serviceRegistry);
@@ -166,15 +167,15 @@ schemaExport.createOnly(EnumSet.of(TargetType.SCRIPT), metadata);
 
 `SchemaExport`是 [Hibernate 引导 API](/web/20220627081244/https://www.baeldung.com/hibernate-5-bootstrapping-api) 的一部分。
 
-## 5.模式生成选项
+## 5. 模式生成选项
 
 尽管模式生成可以在开发过程中节省我们的时间，但是我们应该只在基本的场景中使用它。
 
 例如，我们可以用它来快速启动开发或测试数据库。
 
-相比之下，对于更复杂的场景，比如数据库迁移，**我们应该使用更精细的工具，比如 [Liquibase](/web/20220627081244/https://www.baeldung.com/liquibase-refactor-schema-of-java-app) 或[Flyway](/web/20220627081244/https://www.baeldung.com/database-migrations-with-flyway)。**
+相比之下，对于更复杂的场景，比如数据库迁移，**我们应该使用更精细的工具，比如 [Liquibase](/web/20220627081244/https://www.baeldung.com/liquibase-refactor-schema-of-java-app) 或 [Flyway](/web/20220627081244/https://www.baeldung.com/database-migrations-with-flyway)**。
 
-## 6.结论
+## 6. 结论
 
 在本教程中，我们看到了如何在 JPA `schema-generation`属性的帮助下生成和导出我们的数据库模式。随后，我们看到了如何使用 Hibernate 的本地 API`SchemaExport`来实现相同的结果。
 

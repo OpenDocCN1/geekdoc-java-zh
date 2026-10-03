@@ -1,3 +1,4 @@
+
 # 列表实现
 
 > 原文：[`docs.oracle.com/javase/tutorial/collections/implementations/list.html`](https://docs.oracle.com/javase/tutorial/collections/implementations/list.html)
@@ -18,4 +19,4 @@
 
 如果你需要同步，`Vector`比使用`Collections.synchronizedList`同步的`ArrayList`稍快一些。但`Vector`有很多遗留操作，所以一定要小心，始终使用`List`接口操作`Vector`，否则你将无法在以后替换实现。
 
-如果你的`List`大小是固定的  也就是说，你永远不会使用`remove`、`add`或者除了`containsAll`之外的任何批量操作  那么你有第三个选项，绝对值得考虑。查看方便实现部分的`Arrays.asList`获取更多信息。
+如果你的`List`大小是固定的——也就是说，你永远不会使用`remove`、`add`或者除了`containsAll`之外的任何批量操作——那么你有第三个选项，绝对值得考虑。查看方便实现部分的`Arrays.asList`获取更多信息。

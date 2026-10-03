@@ -1,3 +1,4 @@
+
 # 细看绘制机制
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/painting/closer.html`](https://docs.oracle.com/javase/tutorial/uiswing/painting/closer.html)
@@ -18,13 +19,13 @@ API 并未阻止您的代码覆盖`paintBorder`和`paintChildren`，但一般来
 
 正如先前提到的，大多数标准的 Swing 组件都通过单独的 UI 代理实现其外观和感觉。这意味着大多数（或全部）标准 Swing 组件的绘制过程如下进行。
 
-1.  `paint()`调用`paintComponent()`.
+1.  `paint()`调用`paintComponent()`。
 
-1.  如果`ui`属性非空，则`paintComponent()`会调用`ui.update()`。
+2.  如果`ui`属性非空，则`paintComponent()`会调用`ui.update()`。
 
-1.  如果组件的`opaque`属性为 true，则`ui.update()`会用背景颜色填充组件的背景并调用`ui.paint()`。
+3.  如果组件的`opaque`属性为 true，则`ui.update()`会用背景颜色填充组件的背景并调用`ui.paint()`。
 
-1.  `ui.paint()`渲染组件的内容。
+4.  `ui.paint()`渲染组件的内容。
 
 这就是为什么我们的`SwingPaintDemo`代码调用`super.paintComponent(g)`。我们可以添加额外的注释以使其更清晰：
 
@@ -37,7 +38,6 @@ public void paintComponent(Graphics g) { // Let UI Delegate paint first, which
     g.drawString("This is my custom Panel!",10,20);
     redSquare.paintSquare(g);
 }  
-
 ```
 
 如果您已经理解了本课程提供的所有演示代码，恭喜！您已经具备足够的实际知识来在自己的应用程序中编写高效的绘制代码。但是，如果您想更深入地了解“底层原理”，请参考本课程第一页链接的 SDN 文章。

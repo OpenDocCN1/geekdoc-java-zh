@@ -1,10 +1,7 @@
+
 # Power Java 高级指南
 
-
-
 ![](img/00029.jpeg)
-
-
 
 本书已可在 [`leanpub.com/powerjava`](http://leanpub.com/powerjava) 购买
 
@@ -17,10 +14,6 @@
 这是一本来自 [Leanpub](http://leanpub.com) 的书。Leanpub 通过精益出版流程为作者和出版社赋能。[精益出版](http://leanpub.com/manifesto) 是使用轻量级工具和多次迭代来出版正在开发中的电子书，以获取读者反馈，并不断调整方向直到获得正确的书籍，并在一旦成功后建立势头。
 
 * * * * * *
-
-
-
-
 
 ## 前言
 
@@ -76,9 +69,6 @@ Java 是一种灵活的语言，拥有大量的开源库和工具程序。Java �
 这一章是关于网络编程技术的教程，我相信它对开发物联网应用程序非常有用。关于用户 协议和组播的内容对网络游戏开发也有用。
 
 我没有涵盖一些重要的内容：用户体验和设备的设计，以及使用本地低功电无线连接协作设备的物联网设备。尽管如此，思考驱动物联网开发的动机是值得的，我们将在下一节进行讨论。
-
-
-
 
 我们已经习惯了使用计算设备的物理限制。20 世纪 60 年代中期当我读高中时，在当地的一所大学上了一门编程课，我必须前往计算机中心“朝圣”，等待使用打字孔机的机会，走过去提交打孔卡，然后站在那里等待，最后拿到打印输出并取回我的卡片。后来，交互式终端允许我能够在更舒适的物理环境中工作。时间一快，近五十年过去了，我现在可以使用智能手机 `SSH` 连接到我的服务器，看电影，甚至使用 `Java` IDE。当我写这本书时，可能有 70% 的互联网使用是在移动设备上完成的。
 
@@ -165,10 +155,6 @@ Java 是一种灵活的语言，拥有大量的开源库和工具程序。Java �
 
 本节中的示例程序使用 `JmsDNS` Java 库注册了一个监听端口 `1234` 的的服务。在下一节中，我们将查看另一个连接到该服务的示例程序。
 
-
-
-
-
 ```
  1 package com.markwatson.iot;
  2 
@@ -217,7 +203,11 @@ FOO123 SERVICE ADDED in class CreateTestService
 
 如果你正在运行上一节中示例程序创建的服务，那么接的示例程序将查找该服务。
 
-```
+
+
+# 使用 JmDNS 查找服务
+
+```java
  1 package com.markwatson.iot;
  2 
  3 import javax.jmdns.*;
@@ -278,11 +268,11 @@ java -cp target/iot-1.0-SNAPSHOT-jar-with-dependencies.jar \
 
 你可能熟悉使用 `TCP/IP` 进行网络编程。`TCP/IP` 在数据递送失败时提供某些保证。用户数据报协议（`UDP`）不提供此类保证，但在局域网中，它比 `TCP/IP` 高效得多。
 
-### UDP 服务示例
+## UDP 服务示例
 
 本节中的示例程序实现了一个在 `9005` 端口监听 UDP 数据包的简单服务。示例代码打印客户端数据，更改客户端的内容并返回给客户端。
 
-```
+```java
  1 package com.markwatson.iot;
  2 
  3 import java.io.IOException;
@@ -321,12 +311,9 @@ message from client: address: /127.0.0.1 port: 63300
 
 注意，你还必须运行下一节中的示例程序才能获得第 `4` 行和 `5` 行的输出。这就是为什么我在章节开头列出了运行所有示例的命令：我认为如果你按照这些早期的指令运行所有示例，这些示例程序将更易理解。
 
-### UDP 客户端示例
+## UDP 客户端示例
 
 本节中的示例程序为上一节中的 UDP 服务器实现了一个简单的客户端。它会将一个示例字符串发送到服务器并打印响应。
-
-
-
 
 ```java
 package com.markwatson.iot;
@@ -365,13 +352,13 @@ from server - HelloServer1431540275433
 
 我在许多项目中使用过 `UDP` 网络编程，这里提到其中两个。在 20 世纪 80 年代，我是 NMRD 项目的架构师和开发者，该项目利用全球 38 个地震研究站收集数据，我们通过这些数据来判断是否有国家正在进行核爆炸试验。我们对元控制数据使用了保证送达的消息系统，但大部分原始数据传输使用了低层的 `UDP`。另一个应用程序是用于运行在局域网上的网络赛车和气垫游戏的通信库。`UDP` 非常适合局域网游戏开发，因为它的效率很高，丢失数据包的概率很低，即使丢失了包，通常影响影响游戏。请记住，使用 `UDP` 时，你无法保证数据的送达，也无法保证失败通知！
 
-### 组播/广播网络编程
+## 组播/广播网络编程
 
 接下来两个节中的示例与最后两个节的示例相似，主要区别在于：服务器使用 `UDP` 定期广播数据。服务器并不关心是否有客户端在监听，它只是简单广播数据。如果有任何客户端在监听，它们可能会接收到数据。我之所以说“可能”接收，是因为 `UDP` 不提供任何送达保证。
 
 特定的 `INET` 地址可以用于本地组播，其地址范围在 `224.0.0.0` 到 `224.0.0.255` 之间。我们将在两个示例程序中使用 `224.0.0.5`。这些是对于互联网是不可见的本地地址。
 
-#### 组播广播服务器
+### 组播广播服务器
 
 接例的示例与两个节前看到的示例（Java 类 `UDPServer`）非常相似，但我们不再等待客户端请求。
 
@@ -421,7 +408,7 @@ broadcast message sent: message 9
 
 与两个节前的 `UDPServer` 示例不同，无论你是否在下一节运行列表客户端，都会得到此输出。
 
-#### 组播广播监听器
+### 组播广播监听器
 
 本节的示例监听上一节中服务器示例的广播。广播服务器和客户端需要对 `INET` 地址和端口号一致。
 
@@ -469,17 +456,17 @@ received broadcast message: message 8
 received broadcast message: message 9
 ```
 
-### IoT 总结
+## IoT 总结
 
 尽管我个人对 IoT 应用和产品的安全与隐私有些顾虑，但我对通过小型网络设备让我们的生活更简单、更高效的可能性充满热情。当我们工作和娱乐时，我们希望尽可能不要去考虑我们的计算设备，这样我们就能专注于自己的活动。
+
+
 
 在本章中，我对于实用的 IoT 技术介绍仅仅是触及皮毛，但我希望我向你展示了可以在项目（包括 IoT 以及网络游戏编程）中使用的网络编程技术。当我写这本书时，有许多公司在提供 IoT 硬件开发包，选择一个套件和软件框架并创建你自己的项目是一个很好的进展方法。
 
 ## 使用 OpenNLP 进行自然语言处理
 
 从 20 世纪 80 年代初，我就一直在自然语言处理（NLP）领域工作。很多人对 NLP 领域感兴趣，而且技术已经发生了巨大的变化。NLP 通常被认为是人工智能（AI）领域的一部分，在 20 世纪 80 年代和 90 年代，人们对符号 AI 有更大的兴趣，即对高层符号的操作，这些符号因为我们对现实世界的知识而对人类产生意义。例如，符号 `car` 对我们是有意义的，但对于 AI 软件来说，这个符号本身除了与 `driver` 和 `road` 等符号可能存在的语义关系没有任何意义。
-
-
 
 自然语言处理（NLP）领域仍有许多工作是将单词视为符号的：句法解析器和语义解析器就是两个例子。发生变化的是对统计和机器学习技术的强烈依赖。在本章中，我们将使用开源的（Apache 2 许可）`OpenNLP` 项目，该项目使用机器学习来创建语言模型。目前，`OpenNLP` 支持丹麦语、德语、英语、西班牙语、葡萄牙语和瑞典语。我在 github 仓库中包含了一些用于本章示例的英语训练模型。你可以在 [OpenNLP 1.5 模型页面](http://opennlp.sourceforge.net/models-1.5/) 下载其他语言的模型（本书使用的是 `OpenNLP` 的 1..6.0 版本，该版本使用了 1.5 版本的模型）。
 
@@ -491,7 +478,7 @@ received broadcast message: message 9
 
 本章示例的 IntelliJ 项目视图
 
-我们将使用预训练模型来对文本进行分词分词（tokenizing），并识别输入文本中的机构名称、人名、地名以及单词的词性。我们还将训练一个新模型（github 仓库中的 `opennlp/models/en-newscat.bin` 文件），用于识别输入文本的类别。关于使用你自己的训练数据训练新的最大熵分类模型的章节，可能是本章中你自己的项目中最常用的内容。我们将训练一个模型来识别 `COMPUTERS`（计算机）、`ECONOMY`（经济）、`HEALTH`（健康）和 `POLITICS`（政治）类别。之后，你应该具备使用自己的训练文本为应用程序所需的类别训练自己的模型的知识。我们还将使用包含 `OpenNLP` 分发版中的某些预训练模型，以及我们在下一章即将创建的分类模式——下一章我们将学习如何使用 Apache Spark 平台执行可扩展的机器学习算法，届时我们将研究处理大规模文本集的技术以发现信息。
+我们将使用预训练模型来对文本进行分词（tokenizing），并识别输入文本中的机构名称、人名、地名以及单词的词性。我们还将训练一个新模型（github 仓库中的 `opennlp/models/en-newscat.bin` 文件），用于识别输入文本的类别。关于使用你自己的训练数据训练新的最大熵分类模型的章节，可能是本章中你自己的项目中最常用的内容。我们将训练一个模型来识别 `COMPUTERS`（计算机）、`ECONOMY`（经济）、`HEALTH`（健康）和 `POLITICS`（政治）类别。之后，你应该具备使用自己的训练文本为应用程序所需的类别训练自己的模型的知识。我们还将使用包含 `OpenNLP` 分发版中的某些预训练模型，以及我们在下一章即将创建的分类模式——下一章我们将学习如何使用 Apache Spark 平台执行可扩展的机器学习算法，届时我们将研究处理大规模文本集的技术以发现信息。
 
 在构建完分类模型后，我们将用一个有趣的话题结束本章：通过统计解析句子来发现输入文本中每个句子最可能的语言结构。在本书的其余部分我们将不再使用解析，因此如果你目前对将句子解析为名词短语和动词短语、专有名词、名词、形容词等语言组件感兴趣，可以跳过本章的最后一节。
 
@@ -597,8 +584,6 @@ mvn clean build test
 
 寻找机构、地点和人物的代码几乎相同，因此我只将在下一个识别地点的列表里显示代码。请查看 `com.markwatson.opennlp.NLP` 类中的 `companyNames` 和 `personNames` 方法以查看查找公司和人物名称的实现。
 
-
-
 ```java
   public static Set<String> locationNames(String text) {
     return locationNames(tokenizer.tokenize(text));
@@ -673,11 +658,7 @@ OpenNLP 文档提供了编写自定义 Java 代码构建模型的示例，但我
 bin/opennlp DoccatTrainer -model models/en-newscat.bin
 ```
 
-OpenNLP 文档提供了编写自定义 Java 代码构建模型的示例，但我通常只使用命令行工具；例如：
 
-```
-bin/opennlp DoccatTrainer -model models/en-newscat.bin
-```
 
 OpenNLP 文档提供了编写自定义 Java 代码构建模型的示例，但我通常只使用命令行工具；例如：
 
@@ -773,7 +754,7 @@ public DocumentCategorizerME(DoccatModel model,
            new FeatureGenerator[]{});
 ```
 
-对于大多数用途，默认的频率（词袋）生成器可能足够，因此命令行工具是一个很好的起点。以下是运行 `DoccatTrainer` 的输出：
+对于大多数用途，默认的频率（词袋）生成器可能足够，因此命令行工具是一个很好的起点。以下是运行`DoccatTrainer`的输出：
 
 ```
 > bin/opennlp DoccatTrainer -model models/en-newscat.bin -lang en
@@ -785,11 +766,9 @@ Wrote document categorizer model to
 path: /Users/mark/power-java/opennlp/models/en-newscat.bin
 ```
 
-我们将在下一节中使用新训练的模型文件 `en-newscat.bin`。
+我们将在下一节中使用新训练的模型文件`en-newscat.bin`。
 
 **请注意，在这个简单示例中我使用了很少的数据，每个训练类别仅有几百个单词。我在各种项目中使用过 OpenNLP 最大熵库，效果大多良好，但我每个类别都使用了数千个单词。数据越多越好。**
-
-
 
 使用我们在上一节中训练的模型的代码短到完全可以完整列出：
 
@@ -855,16 +834,16 @@ path: /Users/mark/power-java/opennlp/models/en-newscat.bin
 59 }
 ```
 
-在第 33 到 42 行中，我们为 `DoccatModel` 类的实例初始化静态数据，加载上一节创建的模型文件。
+在第 33 到 42 行中，我们为`DoccatModel`类的实例初始化静态数据，加载上一节创建的模型文件。
 
-每想要分类输入文本时，都会在第 28 行创建一个 `DocumentCategorizerME` 类的新实例。我调用了该类的使用默认特征检测器的单参数构造函数。另一种构造函数是：
+每想要分类输入文本时，都会在第 28 行创建一个`DocumentCategorizerME`类的新实例。我调用了该类的使用默认特征检测器的单参数构造函数。另一种构造函数是：
 
 ```java
 1 public DocumentCategorizerME(DoccatModel model,
 2                              FeatureGenerator... featureGenerators)
 ```
 
-默认的特征生成器是 `BagOfWordsFeatureGenerator`，它仅使用词频进行分类。对于我们在上一节中使用的较小训练集来说这是合理的，但当我有大量的训练数据时，我倾向于将 `BagOfWordsFeatureGenerator` 与 `NGramFeatureGenerator` 结合。你可以这样调用构造函数：
+默认的特征生成器是`BagOfWordsFeatureGenerator`，它仅使用词频进行分类。对于我们在上一节中使用的较小训练集来说这是合理的，但当我有大量的训练数据时，我倾向于将`BagOfWordsFeatureGenerator`与`NGramFeatureGenerator`结合。你可以这样调用构造函数：
 
 ```java
 1 public DocumentCategorizerME(DoccatModel model,
@@ -872,7 +851,7 @@ path: /Users/mark/power-java/opennlp/models/en-newscat.bin
 3                                   new NGramFeatureGenerator()});
 ```
 
-以下列表穿插了使用 `NewsClassifier` 类的示例代码片段，随后是每个代码片段打印的输出：
+以下列表穿插了使用`NewsClassifier`类的示例代码片段，随后是每个代码片段打印的输出：
 
 ```java
  String sentence = "Apple Computer, Microsoft, and Google are in the tech sector. Each is very profitable.";
@@ -909,83 +888,81 @@ Apple Computer is located in Cupertino, California and Microsoft
 Location names found: [Cupertino, California, Seattle, Washington, Oregon]
 ```
 
-
-
-
-
 我们将使用 OpenNLP 分发版中包含的解析模型来解析英文输入文本。在你的工作中可能不太会用到统计解析模型，但我认为你会喜欢这一节的材料。如果你对实战技术更感兴趣，请跳到下一章，该章节将介绍更多的机器学习技术。
 
 接下来的示例代码列表很长（68 行），但我将在列表之后解释其中有趣的部分：
 
+
+
 ```java
- 1 package com.markwatson.opennlp;
- 2 
- 3 import opennlp.tools.cmdline.parser.ParserTool;
- 4 import opennlp.tools.parser.Parse;
- 5 import opennlp.tools.parser.ParserModel;
- 6 import opennlp.tools.parser.chunking.Parser;
- 7 
- 8 import java.io.FileInputStream;
- 9 import java.io.IOException;
-10 import java.io.InputStream;
-11 
-12 /**
-13  * 使用分块解析器模型进行实验
-14  */
-15 public class ChunkingParserDemo {
-16   public Parse[] parse(String text) {
-17     Parser parser = new Parser(parserModel);
-18     return ParserTool.parseLine(text, parser, 5);
-19   }
-20 
-21   public void prettyPrint(Parse p) {
-22     StringBuffer sb = new StringBuffer();
-23     p.show(sb);
-24     String s = sb.toString() + " ";
-25     int depth = 0;
-26     for (int i = 0, size = s.length() - 1; i < size; i++) {
-27       if (s.charAt(i) == ' ' && s.charAt(i + 1) == '(') {
-28         System.out.print("\n");
-29         for (int j = 0; j < depth; j++) System.out.print("  ");
-30       } else if (s.charAt(i) == '(') System.out.print(s.charAt(i));
-31       else if (s.charAt(i) != ')' || s.charAt(i + 1) == ')')
-32         System.out.print(s.charAt(i));
-33       else {
-34         System.out.print(s.charAt(i));
-35         for (int j = 0; j < depth; j++) System.out.print("  ");
-36       }
-37       if (s.charAt(i) == '(') depth++;
-38       if (s.charAt(i) == ')') depth--;
-39     }
-40     System.out.println();
-41   }
-42 
-43   static ParserModel parserModel = null;
-44 
-45   static {
-46 
-47     try {
-48       InputStream modelIn = new FileInputStream("models/en-parser-chunking.bin");
-49       parserModel = new ParserModel(modelIn);
-50     } catch (IOException e) {
-51       e.printStackTrace();
-52     }
-53   }
-54 
-55   public static void main(String[] args) {
-56     ChunkingParserDemo cpd = new ChunkingParserDemo();
-57     Parse[] possibleParses =
-58       cpd.parse("John Smith went to the store on his way home from work ");
-59     for (Parse p : possibleParses) {
-60       System.out.println("parse:\n");
-61       p.show();
-62       //p.showCodeTree();
-63       System.out.println("\npretty printed parse:\n");
-64       cpd.prettyPrint(p);
-65       System.out.println("\n");
-66     }
-67   }
-68 }
+package com.markwatson.opennlp;
+
+import opennlp.tools.cmdline.parser.ParserTool;
+import opennlp.tools.parser.Parse;
+import opennlp.tools.parser.ParserModel;
+import opennlp.tools.parser.chunking.Parser;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+/**
+ * 使用分块解析器模型进行实验
+ */
+public class ChunkingParserDemo {
+  public Parse[] parse(String text) {
+    Parser parser = new Parser(parserModel);
+    return ParserTool.parseLine(text, parser, 5);
+  }
+
+  public void prettyPrint(Parse p) {
+    StringBuffer sb = new StringBuffer();
+    p.show(sb);
+    String s = sb.toString() + " ";
+    int depth = 0;
+    for (int i = 0, size = s.length() - 1; i < size; i++) {
+      if (s.charAt(i) == ' ' && s.charAt(i + 1) == '(') {
+        System.out.print("\n");
+        for (int j = 0; j < depth; j++) System.out.print("  ");
+      } else if (s.charAt(i) == '(') System.out.print(s.charAt(i));
+      else if (s.charAt(i) != ')' || s.charAt(i + 1) == ')')
+        System.out.print(s.charAt(i));
+      else {
+        System.out.print(s.charAt(i));
+        for (int j = 0; j < depth; j++) System.out.print("  ");
+      }
+      if (s.charAt(i) == '(') depth++;
+      if (s.charAt(i) == ')') depth--;
+    }
+    System.out.println();
+  }
+
+  static ParserModel parserModel = null;
+
+  static {
+
+    try {
+      InputStream modelIn = new FileInputStream("models/en-parser-chunking.bin");
+      parserModel = new ParserModel(modelIn);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+
+  public static void main(String[] args) {
+    ChunkingParserDemo cpd = new ChunkingParserDemo();
+    Parse[] possibleParses =
+      cpd.parse("John Smith went to the store on his way home from work ");
+    for (Parse p : possibleParses) {
+      System.out.println("parse:\n");
+      p.show();
+      //p.showCodeTree();
+      System.out.println("\npretty printed parse:\n");
+      cpd.prettyPrint(p);
+      System.out.println("\n");
+    }
+  }
+}
 ```
 
 OpenNLP 解析模型是从第 45 行到 53 行从文件中读取的。静态变量 `parserModel`（`ParserModel` 类的实例）在第 49 行创建，并在第 17 行和 18 行中用于解析输入文本。查看中间计算结果是有帮助的。第 17 行定义的变量 `parser` 的值为：
@@ -1007,15 +984,13 @@ OpenNLP 分块解析器代码以平铺列表的形式输出结果，每行一个
  6 
  7 pretty printed parse:
  8 
-9 (TOP (S (NP (NNP John) (NNP Smith)) (VP (VBD went) (PP (TO to) (NP (DT the) (NN \
+ 9 (TOP (S (NP (NNP John) (NNP Smith)) (VP (VBD went) (PP (TO to) (NP (DT the) (NN \
 10 store))) (PP (IN on) (NP (NP (NP (PRP$ his) (NN way)) (ADVP (NN home))) (PP (IN \
 11 from) (NP))))
 ```
 
-
-
-
 *   解释和使用模型结果。通常，模型会被用于处理其他数据集以自动标记数据（正如我们在本章中对维基百科文本数据所的那样），或从新的时间序列数值数据源进行预测。
+
 *   将训练好的模型作为大型系统的嵌入部分部署。这是一个可选步骤——有时，仅使用模型来充分理解一个问题并知道如何解决它就足够了。然而，通常模型会作为正常数据处理和决策工作流的一部分反复使用（通常是自动化的）。在本章，我会特意说明如何重用嵌入到 Java 应用程序中的模型。
 
 在本书的示例中，我已为示例程序提供了测试数据。请记住，尽管我将数据挖掘和机器学习模型构建的步骤列为一系列顺序步骤，但在实践中，这是一个非常迭代的过程。在看到使用不同算法构建模型的初步结果后，可能需要重新进行数据收集和清洗。我们可能会迭代地调整模型参数，并通过添加或删除用于构建模型的数据特征来改进模型。
@@ -1027,13 +1002,17 @@ OpenNLP 分块解析器代码以平铺列表的形式输出结果，每行一个
 广而言，机器学习模型有四类：
 
 *   回归 - 预测一个数值。输入是数值值。
+
 *   分类 - 预测“是”或“否”。输入是数值值。
+
 *   聚类 - 将一组数据项划分为不相交的集合。数据项可以是文本文档、传感器读取的数值数据集、包含文本和数字的结构化数据集。输入必须转换为数值值。
+
 *   推荐 - 根据用户的之前的行为和/或通过将用户与其他相似用户匹配以使用其他用户的行为，做出推荐对象的决策。
 
 你稍后在处理文本时会看到我们需要将单词转换为数字（每个单词都被分配一个唯一的数字 ID）。文档由一个稀疏向量表示，对于每个唯一的单词索引都有非空元素。此外，我们可以将机器学习问题分为两个大类：
 
 *   监督学习 - 用于训练的输入特征带有所需预测的标签。我们将看到的的监督学习示例是使用癌症症状数据构建回归模型，以根据新的输入特征集预测恶性 vs. 良性。
+
 *   无监督学习 - 输入特征没有标签。我们将看到的无监督学习示例包括：K-Means 类似的维基百科文档聚类，以及使用 word2vec 寻找文档中的相关单词。
 
 在本章的目标是向你介绍使用 Spark 和机器学习算法的实用技术。在你学习完材料后，我建议阅读 Spark 文档，以查看更多可用的模型。还要考虑参加 Andrew Ng 出出的[机器学习课程](https://www.coursera.org/learn/machine-learning)。
@@ -1066,8 +1045,6 @@ spark-1.5.0/examples/src/main/java/org/apache/spark/examples/MLlib/
 mvn clean install
 ```
 
-
-
 本章包含四个示例。如果你想跳过前面的并在阅读本章其余内容之前运行代码，请分别运行每个 maven 测试：
 
 ```
@@ -1090,64 +1067,65 @@ Spark 包含了整个 Hadoop 作为依赖项，因为 Spark 能够与 Hadoop 和
 
 词频计数示例常用于引入 map reduce，我在这里也会用它作为一个类似于“hello 世界”的简单 Spark 示例。在接下来的列表中，第 3 到第 6 行导入了所需的类。在第 3 和第 4 行中，`RDD` 代表弹性数据集（Resilient Distributed Datasets）。Spark 是用 Scala 写的，因此我们有时会看到带有“Java”前缀的 Java 包装类。每个 `RDD` 是某种类型对象的集合，可以分布在 Spark 集群的多个服务器上。`RDDs` 是容错的，Spark 集群中有足够的信息来重建任何因服务器或软件故障而丢失的数据。
 
+
+
 ```
- 1 package com.markwatson.machine_learning;
- 2 
- 3 import org.apache.spark.api.java.JavaPairRDD;
- 4 import org.apache.spark.api.java.JavaRDD;
- 5 import org.apache.spark.api.java.JavaSparkContext;
- 6 import scala.Tuple2;
- 7 
- 8 import java.util.Arrays;
- 9 import java.util.List;
-10 import java.util.Map;
- 1 
-12 public class HelloSpark {
- 13 
-14   static private List<String> tokenize(String s) {
- 15     return Arrays.asList(s.replaceAll("\\.", " \\. ").replaceAll(",", " , ")
-16         .replaceAll(";", " ; ").split(" "));
-17   }
- 18 
-19   static public void main(String[] args) {
- 20     JavaSparkContext sc = new JavaSparkContext("local", "Hello Spark");
- 21 
- 22     JavaRDD<String> lines = sc.textFile("data/test1.txt");
- 23     JavaRDD<String> tokens = lines.flatMap(line -> tokenize(line));
- 24     JavaPairRDD<String, Integer> counts =
- 25         tokens.mapToPair(token ->
- 26 			 new Tuple2<String, Integer>(token.toLowerCase(), 1))
- 27               .reduceByKey((count1, count2) -> count1 + count2);
- 28     Map countMap = counts.collectAsMap();
- 29     System.out.println(countMap);
- 30     List<Tuple2<String, Integer>> collection = counts.collect();
- 31     System.out.println(collection);
- 32   }
- 33 }
+package com.markwatson.machine_learning;
+
+import org.apache.spark.api.java.JavaPairRDD;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+import scala.Tuple2;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+
+public class HelloSpark {
+
+  static private List<String> tokenize(String s) {
+    return Arrays.asList(s.replaceAll("\\.", " \\. ").replaceAll(",", " , ")
+        .replaceAll(";", " ; ").split(" "));
+  }
+
+  static public void main(String[] args) {
+    JavaSparkContext sc = new JavaSparkContext("local", "Hello Spark");
+
+    JavaRDD<String> lines = sc.textFile("data/test1.txt");
+    JavaRDD<String> tokens = lines.flatMap(line -> tokenize(line));
+    JavaPairRDD<String, Integer> counts =
+        tokens.mapToPair(token ->
+			 new Tuple2<String, Integer>(token.toLowerCase(), 1))
+              .reduceByKey((count1, count2) -> count1 + count2);
+    Map countMap = counts.collectAsMap();
+    System.out.println(countMap);
+    List<Tuple2<String, Integer>> collection = counts.collect();
+    System.out.println(collection);
+  }
+}
 ```
 
-第 14 到第 17 行定义了简单的 `tokenizer` 方法，该方法接收英文文本并映射到字符串列表。我将其提取出来作为一个独立的方法，是为了提醒需要处理标点符号，而且将其分成独立方法可以方便你对特定文本输入文件可能所需的自定义分词进行实验。一种可能性是使用我们在上一章中使用的 OpenNLP 分词器模型。例如，我们希望字符串“tree.”被分词为 ["tree”, “.”] 而不是 [“tree.”]。该方法在第 23 行中使用，并为输入文本文件的每一行调用一次。
+第 14 到第 17 行定义了简单的 `tokenizer` 方法，该方法接收英文文本并映射到字符串列表。我将其提取出来作为一个独立的方法，是为了提醒需要处理标点符号，而且将其分成独立方法可以方便你对特定文本输入文件可能所需的自定义分词进行实验。一种可能性是使用我们在上一章中使用的 OpenNLP 分词器模型。例如，我们希望字符串“tree.”被分词为 `["tree", "."]` 而不是 `["tree."]`。该方法在第 23 行中使用，并为输入文本文件的每一行调用一次。
 
 在示例的第 22 行中，我们正在读取本地文本文件 `data/test1.txt`，但通常情况下，`JavaSparkContext.textFile()` 的参数可以是指定本地 Hadoop 文件系统 (HDFS)、Amazon S3 对象或 Cassandra 文件系统的 URI。请注意在第 22 行定义的变量 `lines` 的类型：类型 `JavaRDD<string>` 指定了一个 RDD 集合，其中的分布式对象是字符串。
 
 第 29 到第 32 行的代码如果逐行解析，其实并不复杂。`counts` 的类型是一个 RDD 分布式集合，集合中的每个对象都是一个字符串和一个整数值的对。第 25 到第 27 行的代码获取原始文本文件中的每个 token，并产生一个由 token 字符串和整数 1 组成的二值对（或 `Tuple2` 值）。例如，一个包含三个 token 的数组如：
 
 ```
-1     ["the", "dog", "ran"]
+["the", "dog", "ran"]
 ```
 
 将被转换为一个包含三个对的数组：
 
 ```
-1     [["the", 1], ["dog", 1], ["ran", 1]]
+[["the", 1], ["dog", 1], ["ran", 1]]
 ```
 
 第 28 行的语句使用了 `reduceByKey` 方法，它根据唯一键对数组进行分区。这里是程序的输出内容：
 
 ```
-1     {dog=2, most=1, of=1, down=1, rabbit=1, slept=1, the=5, street=1,
-2      chased=1, day=1}
-3 
+{dog=2, most=1, of=1, down=1, rabbit=1, slept=1, the=5, street=1,
+ chased=1, day=1}
 ```
 
 ### 介绍 Spark MLlib 库
@@ -1160,17 +1138,13 @@ Spark 包含了整个 Hadoop 作为依赖项，因为 Spark 能够与 Hadoop 和
 
 在本节中，我们将使用监督学习建立一个回归模型，将症状的数值特征向量映射到一个数值，数值越大表示恶性，数值越接近 0 表示良性。
 
-MLlib 支持三种线性模型：支持向量机 (SVM)、逻辑回归（针对一个或多个类别的模型）以及线性回归（将类别输出为 [0..1] 范围内的浮点数的模型）。Spark MLlib 文档（http://spark.apache.org/docs/latest/mllib-linear-methods.html）对这三种线性模型的描述非常出色，它们的示例程序也很相似，因此切换你使用的线性模型类型很容易。
+MLlib 支持三种线性模型：支持向量机 (SVM)、逻辑回归（针对一个或多个类别的模型）以及线性回归（将类别输出为 `[0..1]` 范围内的浮点数的模型）。Spark MLlib 文档（http://spark.apache.org/docs/latest/mllib-linear-methods.html）对这三种线性模型的描述非常出色，它们的示例程序也很相似，因此切换你使用的线性模型类型很容易。
 
 我们将在本节的示例中使用逻辑回归。吴恩达在他优秀的[机器学习课程](https://www.coursera.org/learn/machine-learning) 中提到，开始一个新问题时第一个尝试的模型是线性模型。我们将在下一节使用 SVM 代替逻辑回归重复此示例。
 
 如果你读过我的书籍 [Build Intelligent Systems with Javascript](https://leanpub.com/aijavascript)，本节使用的训练和测试数据集你会感到熟悉：[威斯康星大学乳癌数据集](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29)。
 
 根据威斯康星大学网页，以下是该数据集中的属性及其允许范围：
-
-
-
-
 
 ```
 - 0 Sample code number            integer
@@ -1189,69 +1163,69 @@ MLlib 支持三种线性模型：支持向量机 (SVM)、逻辑回归（针对�
 文件 `data/university_of_wisconson_data_.txt` 包含原始数据。我们将使用此示例数据集，但进行两处更改：我们通过移除样本代码列来对其进行清洗，并将接下来的 9 个值缩缩到 `[0..1]` 范围内，并将类别映射为 `0`（良性）或 `1`（恶性）。因此，我们的输入特征是缩放过的（介于 `[0 and 1]` 之间的数值，表示肿块厚度、细胞大小均匀性等）。指定预期预测内容的标签是类别（2 为良性，4 为恶性，我们将其缩放为 `0` 或 `1`）。在接下来的列表中，数据从训练文件中读取并在第 27 行到 44 行之间进行缩放。在这里我使用了 MLlib 提供的一些实用方法。在第 28 行，我使用 `JavaSparkContext.textFile` 方法将文本文件读取到实质上是一个字符串列表中（每个输入行一个字符串）。第 29 行到 44 行创建了 `LabeledPoint` 类的实例列表，该类包含带有关联数值特征数据的训练标签。容器类 `JavaRDD` 充当元素列表，可以在 Spark 服务器集群上进行自动管理。当在带有本地 `JavaSparkContext` 的开发模式下，一切都运行在单个 JVM 中，因此 `JavaRDD` 类的实例的行为非常像简单的内存中的列表。
 
 ```
- 1 package com.markwatson.machine_learning;
- 2 
- 3 import org.apache.spark.api.java.JavaDoubleRDD;
- 4 import org.apache.spark.api.java.JavaRDD;
- 5 import org.apache.spark.api.java.JavaSparkContext;
- 6 import org.apache.spark.api.java.function.Function;
- 7 import org.apache.spark.mllib.linalg.Vectors;
- 8 import org.apache.spark.mllib.regression.LabeledPoint;
- 9 import org.apache.spark.mllib.regression.LinearRegressionModel;
-10 import org.apache.spark.mllib.regression.LinearRegressionWithSGD;
-11 import scala.Tuple2;
- 12 
-13 public class LogisticRegression {
- 14 
-15   public static double testModel(LinearRegressionModel model,
-16                                  double [] features) {
-17     org.apache.spark.mllib.linalg.Vector inputs = Vectors.dense(features);
-18     return model.predict(inputs);
-19   }
-20 
-21   public static void main(String[] args) {
-22     JavaSparkContext sc =
-23 	  new JavaSparkContext("local",
-24 	                       "University of Wisconson Cancer Data");
-25 
-26     // Load and parse the data
-27     String path = "data/university_of_wisconson_data_.txt";
-28     JavaRDD<String> data = sc.textFile(path);
-29     JavaRDD<LabeledPoint> parsedData = data.map(
-30         new Function<String, LabeledPoint>() {
-31             public LabeledPoint call(String line) {
-32             String[] features = line.split(",");
-33             double label = 0;
-34             double[] v = new double[features.length - 2];
-35             for (int i = 0; i < features.length - 2; i++)
-36               v[i] = Double.parseDouble(features[i + 1]) * 0.09;
-37             if (features[10].equals("2"))
-38               label = 0; // benign
-39             else
-40               label = 1; // malignant
-41             return new LabeledPoint(label, Vectors.dense(v));
-42           }
-43         }
-44     );
-45     // Split initial RDD into two data sets with 70% training data
-46     // and 30% testing data (13L is a random seed):
-47     JavaRDD<LabeledPoint>[] splits =
-48 	  parsedData.randomSplit(new double[]{0.7, 0.3}, 13L);
-49     JavaRDD<LabeledPoint> training = splits[0].cache();
-50     JavaRDD<LabeledPoint> testing = splits[1];
-51     training.cache();
-52 
-53     // Building the model
-54     int numIterations = 100;
-55     final LinearRegressionModel model =
-56         LinearRegressionWithSGD.train(JavaRDD.toRDD(training),
-57 		                              numIterations);
-58 
-59     // Evaluate model on training examples and compute training error
-60     JavaRDD<Tuple2<Double, Double>> valuesAndPreds = testing.map( // ... wait, the logic continues in the block
+package com.markwatson.machine_learning;
+
+import org.apache.spark.api.java.JavaDoubleRDD;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.api.java.function.Function;
+import org.apache.spark.mllib.linalg.Vectors;
+import org.apache.spark.mllib.regression.LabeledPoint;
+import org.apache.spark.mllib.regression.LinearRegressionModel;
+import org.apache.spark.mllib.regression.LinearRegressionWithSGD;
+import scala.Tuple2;
+
+public class LogisticRegression {
+
+  public static double testModel(LinearRegressionModel model,
+                                 double [] features) {
+    org.apache.spark.mllib.linalg.Vector inputs = Vectors.dense(features);
+    return model.predict(inputs);
+  }
+
+  public static void main(String[] args) {
+    JavaSparkContext sc =
+	  new JavaSparkContext("local",
+	                       "University of Wisconson Cancer Data");
+
+    // Load and parse the data
+    String path = "data/university_of_wisconson_data_.txt";
+    JavaRDD<String> data = sc.textFile(path);
+    JavaRDD<LabeledPoint> parsedData = data.map(
+        new Function<String, LabeledPoint>() {
+            public LabeledPoint call(String line) {
+            String[] features = line.split(",");
+            double label = 0;
+            double[] v = new double[features.length - 2];
+            for (int i = 0; i < features.length - 2; i++)
+              v[i] = Double.parseDouble(features[i + 1]) * 0.09;
+            if (features[10].equals("2"))
+              label = 0; // benign
+            else
+              label = 1; // malignant
+            return new LabeledPoint(label, Vectors.dense(v));
+          }
+        }
+    );
+    // Split initial RDD into two data sets with 70% training data
+    // and 30% testing data (13L is a random seed):
+    JavaRDD<LabeledPoint>[] splits =
+	  parsedData.randomSplit(new double[]{0.7, 0.3}, 13L);
+    JavaRDD<LabeledPoint> training = splits[0].cache();
+    JavaRDD<LabeledPoint> testing = splits[1];
+    training.cache();
+
+    // Building the model
+    int numIterations = 100;
+    final LinearRegressionModel model =
+        LinearRegressionWithSGD.train(JavaRDD.toRDD(training),
+		                              numIterations);
+
+    // Evaluate model on training examples and compute training error
+    JavaRDD<Tuple2<Double, Double>> valuesAndPreds = testing.map( // ... wait, the logic continues in the block
 ```
 
-（注：提示中提供的代码块在中间被截断/中断了，但我根据提供的文本流保持了其结构）*
+（注：提示中提供的代码块在中间被截断/中断了，但我根据提供的文本流保持了其结构）
 
 一旦数据被读取并转换为数值特征，我们接下来的工作是将输入数据随机划分为两个单独的集合：一个用于训练，另一个用于测试我们的模型。这种数据划分在第 47 行和第 48 行完成。第 49 行复制了训练数据，并请求当前上下文尝试将这些数据缓存。在第 50 行，我们复制了测试数据，但没有指定测试数据需要缓存。
 
@@ -1270,10 +1244,6 @@ Should be benign (close to 0.0): 0.29575663511929096
 ### 使用 Wisconsin Database 的 SVM 分类示例
 
 本节的示例与上一节非常相似。唯一的区别是用 MLlib 类 `SvmClassifier` 代替我们在上一节使用的 `LogisticRegression` 类，并将训练迭代次数设置为 500。我们在本节中使用了相同的威斯康星大学癌症数据集——有关该数据集的讨论请参考前节。
-
-
-
-
 
 由于本节的代码与上一个示例非常相似，我将不再重复列出。请参考本书 GitHub 仓库中的源文件 `SvmClassifier.java` 和测试文件 `SvmClassifier.java`。在仓库的子目录 `machine_learning_spark` 中，在运行本节示例之前，您需要删除运行上一节示例时生成的模型文件：
 
@@ -1294,6 +1264,8 @@ Should be benign (close to 0.0): 0.0
 
 ## MLlib K-Means 示例程序
 
+
+
 在本节中，我们将使用无监督学习，特别是 K-Means 聚类算法。该聚类过程将输入划分成共享共同特征的组。在本章稍后的部分，我们将查看一个示例，其输入将是一些随机选择的维基百科文章。
 
 K-Means 分析适用于许多类型的数据，你可能希望将某个集合的成员聚合成不同的子组。例如，你可能是一位研究鱼类的生物学家。对于每种鱼类，你可能拥有长度、重量、位置、淡水/咸水等属性。你可以使用 K-Means 将鱼类划分为相似的子组。
@@ -1305,6 +1277,7 @@ K-Means 分析适用于许多类型的数据，你可能希望将某个集合的
 实现 K-Means 非常简单，但使用 MLlib 的实现具有处理极大数据集的优势。计算 K-Means 的第一步是选择所需的簇数量 `NC`。随机计算 `NC` 个簇中心。然后我们执行内部循环，直到簇中心停止变化或完成指定的迭代次数：
 
 * 对于每个数据点，将其分配给离它最近的簇中心。
+
 * 对于每个簇中心，将该中心移动到该簇中数据点的平均位置。
 
 在实践中，你将重复此聚类过程多次，并使用失真度（distortion）最小的簇中心。失真度是簇内每个数据点到最终簇中心距离的平方和。
@@ -1382,11 +1355,8 @@ Cluster centers:
 37   }
 38 }
 ```
+
 *(注：由于原文提供的文本中代码块部分存在行号错乱和格式错误（如第 3-12 行的混乱），在翻译时遵循了“代码块不需要翻译”的原则，并修正了逻辑上的显示问题以确保可读性。)*
-
-
-
-
 
 这个简单的示例结合上一节中的“Hello Spark”示例，已经向你展示了如何在笔记本电脑上以开发者模式运行 Spark。在下一节中，我们将看到如何将输入文本转换为数值特征向量。
 
@@ -1514,8 +1484,6 @@ Cluster centers:
 
 
 
-
-
 ```java
  // This example is derived from the Spark MLlib examples
 
@@ -1608,10 +1576,6 @@ public class WikipediaKMeans {
 
 以下是按簇索引打印出的 2001 维基百科文章的簇索引。当你运行示例程序时，这些分配到八个不同簇的文档列表输出非常多。在下文中，我只列出了前四个簇的一部分输出。如果你仔细观察生成的簇，你会发现某些簇似乎并不好用，因为该簇中实际上代表了两个或三个主题。这可能表明可以使用更大的请求聚类数量重新运行聚类（即增加 `number_of_clusters` 的值）。另一方面，簇 1 看起来非常棒，几乎所有文章都与体育有关。
 
-
-
-
-
 ```
 集群索引 0 中的文档
 
@@ -1644,7 +1608,7 @@ public class WikipediaKMeans {
 - 文章标题：阿尔弗雷德·罗森
 ```
 
-# 集群索引 1 中的文档
+## 集群索引 1 中的文档
 
 - 文章标题：阿尔伯特·斯波尔丁
 - 文章标题：亚利桑那红雀队
@@ -1680,7 +1644,7 @@ public class WikipediaKMeans {
 - 文章标题：巴里·邦德
 - 文章标题：鲍勃·科斯塔
 
-# 集群索引 2 中的文档
+## 集群索引 2 中的文档
 
 - 文章标题：国际原子时
 - 文章标题：利他主义
@@ -1713,7 +1677,7 @@ public class WikipediaKMeans {
 - 文章标题：腺苷三酸
 - 文章标题：抗菌
 
-# 集群索引 3 中的文档
+## 集群索引 3 中的文档
 
 - 文章标题：奥斯卡奖
 - 文章标题：动画
@@ -1742,11 +1706,9 @@ public class WikipediaKMeans {
 
 Google 以 Apache 2 许可证发布了他们的开源 `word2vec` 库。[Deeplearning4j](http://deeplearning4j.org) 项目和 Spark 的 MLlib 都包含了其实现。在我撰写这一章时，Deeplearning4j 版本具有更高的灵活性，但我们在这里将使用 MLlib 版本。我们将在后面的章节中介绍 Deeplearning4j。在本节中，我们将使用 Deeplearning4j 项目的示例数据文件。
 
-`word2vec` 库可以识别文本中哪些词与文本中的其他词密切相关。如果你在大型英语文本样本上运行 `word2vec`，你会发现单词 woman 与 man 密相关，child 与 mother 密相关，road 与 car 密相关等等。
+`word2vec` 库可以识别文本中哪些词与文本中的其他词密切相关。如果你在大型英语文本样本上运行 `word2vec`，你会发现单词 `woman` 与 `man` 密相关，`child` 与 `mother` 密相关，`road` 与 `car` 密相关等等。
 
 接下来的列表显示了 `Word2VecRelatedWords` 类，它非常简单，因为我们只需要对文本进行分词，丢弃噪声词（或停用词），并将输入文本转换为正确的 Spark 数据类型，以便 MLlib 类 `Word2VecModel` 进行处理。
-
-
 
 
 
@@ -1827,10 +1789,6 @@ public class Word2VecRelatedWords {
 ```
 
 该示例程序的输出是：
-
-
-
-
 
 ```
 words associated with 'day': (season,0.952233990962071)
@@ -1924,39 +1882,41 @@ words associated with 'women': (case,0.571499057524990)
 words associated with 'women': (family,0.56098615245850)
 ```
 
-While **word2vec** results are just the result of statistical processing and the code does not understand the semantic of the English language, the results are still impressive.
-
-### Chapter Wrap Up
-
-In the previous chapter we used machine learning for natural language processing using the OpenNLP project. In the examples in this chapter we used Spark MLlib for logistic regression, document clustering, and determining which words are closely associated with each other.
-
-You can go far using OpenNLP and Spark MLlib in your projects. There are a few things to keep in mind, however. One of the most difficult aspects of machine learning is finding and preparing training data.
-
-One of the most powerful machine learning techniques is artificial neural networks. I have a long history of using neural networks (I was on a DARPA neural network advisory panel and wrote the first version of the commercial ANSim neural network product in the late 1980s). I decided not to cover simple neural network models in this book because I have already written about neural networks in one chapter of [Practical Artificial Intelligence Programming in Java](https://leanpub.com/javaai). “Deep learning” neural networks are also very effective (if difficult to use) for some types of machine learning problems (e.g., image recognition and speech recognition) and we will use the [Deeplearning4j](http://deeplearning4j.org) project in a later chapter.
-
-In the next chapter we cover another type of machine learning: anomaly detection.
-
-## Anomaly Detection Machine Learning Example
-
-Anomaly detection models are used in one very specific class of use cases: when you have many negative (non-anomaly) examples and relatively few positive (anomaly) examples. For training we will ignore positive examples, create a model of “how things should be”, and hopefully be able to detect anomalies different from the original negative examples.
-
-If you have a large training set of both negative and positive examples then do not use anomaly detection models.
-
-### Motivation for Anomaly Detection
-
-There are two other examples in this book using the University of Wisconsin cancer data. These other examples are supervised learning. Anomaly detection as we do it in this chapter is, more or less, unsupervised learning.
-
-When should we use anomaly detection? You should use supervised learning algorithms like neural networks and logistic classification when there are roughly equal number of available negative and positive examples in the training data. The University of Wisconsin cancer data set is fairly evenly split between negative and positive examples.
 
 
+虽然`word2vec`的结果只是统计处理的结果，代码本身并不理解英语的语义，但这些结果仍然令人印象深刻。
 
+### 章节总结
 
-当你有大量的负样本（“正常”）和相对较少的正样本（“异常”）时，应该使用异常检测。对于本章中的示例，我们将通过以下方式使用威斯星癌症数据准备数据，以模拟正样本（“异常”）结果的稀缺性：
+在上一章中，我们使用机器学习进行自然语言处理，并使用了 OpenNLP 项目。在本章的示例中，我们使用了 Spark MLlib 进行逻辑回归、文档聚类，以及确定哪些单词彼此紧密关联。
+
+在你的项目中使用 OpenNLP 和 Spark MLlib 可以走得很远。然而，有几件事需要牢记。机器学习最困难的方面之一是寻找和准备训练数据。
+
+最强大的机器学习技术之一是人工神经网络。我使用神经网络有着悠久的历史（我曾是 DARPA 神经网络顾问小组成员，并在 1980 年代末编写了商业 ANSim 神经网络产品的第一个版本）。我决定不在本书中介绍简单的神经网络模型，因为我已经在《[Practical Artificial Intelligence Programming in Java](https://leanpub.com/javaai)》的一章中写过神经网络。“深度学习”神经网络对于某些类型的机器学习问题（例如，图像识别和语音识别）也非常有效（尽管难以使用），我们将在后面的章节中使用 [Deeplearning4j](http://deeplearning4j.org) 项目。
+
+在下一章中，我们将介绍另一种类型的机器学习：异常检测。
+
+## 异常检测机器学习示例
+
+异常检测模型用于一类非常特定的用例：当你有很多负（非异常）样本和相对较少的正（异常）样本时。对于训练，我们将忽略正样本，创建一个“事物应该如何”的模型，并希望能够检测出与原始负样本不同的异常。
+
+如果你有一个包含大量负样本和正样本的大型训练集，那么不要使用异常检测模型。
+
+### 异常检测的动机
+
+本书中还有两个示例使用了威斯康星大学癌症数据。这些其他示例是监督学习。我们在本章中进行的异常检测，或多或少是无监督学习。
+
+我们什么时候应该使用异常检测？当训练数据中可用的负样本和正样本数量大致相等时，你应该使用监督学习算法，如神经网络和逻辑分类。威斯康星大学癌症数据集在负样本和正样本之间分布相当均匀。
+
+当你有大量的负样本（“正常”）和相对较少的正样本（“异常”）时，应该使用异常检测。对于本章中的示例，我们将通过以下方式使用威斯康星癌症数据准备数据，以模拟正样本（“异常”）结果的稀缺性：
 
 - 我们将数据分为训练集 (60%)、交叉验证集 (20%) 和测试集 (20%)。
+
 - 对于训练数据，我们将除两个正样本（“异常”）以外的所有样本。这样做是为了模拟真实世界的测试用例：尽管我们希望训练数据只包含负样本（“正常”），但现实情况下某些正样本可能会出现在训练数据中。
-- 我们将使用交叉验证数据来为 epsilon 元参数找到一个合适的值。
-- 在找到合适的 epsilon 值后，我们将计算模型的 F1 测量。
+
+- 我们将使用交叉验证数据来为 `epsilon` 元参数找到一个合适的值。
+
+- 在找到合适的 `epsilon` 值后，我们将计算模型的 F1 测量。
 
 ## 异常检测数学基础
 
@@ -1974,17 +1934,15 @@ When should we use anomaly detection? You should use supervised learning algorit
 
 ## AnomalyDetection 工具类
 
-在本节开发的 `AnomalyDetection` 类具有相当的通用性。它处理一组训练样本，并为每个特征计算 ![$\mu$](img/00017.gif) 和 ![$\sigma ²$](img/00018.gif)。我们还在训练第三个参数：epsilon “阈值”值：如果对于给定的输入向量，![P(x : \mu, \sigma ²)$](img/00019.gif) 的求值值大于 epsilon，则该输入向量为“正常”，小于 epsilon 则意味着输入向量是“异常”。从训练数据计算这三个特征的数学原理相当简单，但代码实现并不容易：我们需要组织训练数据，并寻找一个使交叉验证数据集误差最小最小的 epsilon 值。
+在本节开发的 `AnomalyDetection` 类具有相当的通用性。它处理一组训练样本，并为每个特征计算 ![$\mu$](img/00017.gif) 和 ![$\sigma ²$](img/00018.gif)。我们还在训练第三个参数：`epsilon` “阈值”值：如果对于给定的输入向量，![P(x : \mu, \sigma ²)$](img/00019.gif) 的求值值大于 `epsilon`，则该输入向量为“正常”，小于 `epsilon` 则意味着输入向量是“异常”。从训练数据计算这三个特征的数学原理相当简单，但代码实现并不容易：我们需要组织训练数据，并寻找一个使交叉验证数据集误差最小最小的 `epsilon` 值。
 
-为了清楚起见：我们将输入样本分为训练、交叉验证和测试数据三个独立集合。我们使用训练数据来设置模型参数，使用交叉验证数据来学习 epsilon 值，最后使用测试数据获取精确率（precision）、召回率（recall）和 F1 分数，以指示模型检测未用于训练和交叉验证的数据中异常的能力。
+为了清楚起见：我们将输入样本分为训练、交叉验证和测试数据三个独立集合。我们使用训练数据来设置模型参数，使用交叉验证数据来学习 `epsilon` 值，最后使用测试数据获取精确率（`precision`）、召回率（`recall`）和 F1 分数，以指示模型检测未用于训练和交叉验证的数据中异常的能力。
 
 我将示例程序作为一个长列表列出，并在列表之后提供更详细的代码解释。请注意从第 28 行到第 74 行遍历每个输入训练样本的长循环。第 25 行到 44 行的代码将输入训练数据处理为三个不相交的训练、交叉验证和测试数据集。然后，第 45 行到 63 行的代码将这三组数据拷贝到 Java 数组中。
 
 第 65 行到 73 行的代码计算训练样本的 ![$\mu$](img/00020.gif) 值（代码中的变量 `mu`）。
 
-请注意代码示例，即使在不需要时，我也会在方法中使用“this.” 前缀加上类变量。这样做是为了可读性，也是我的个人风格。
-
-
+请注意代码示例，即使在不需要时，我也会在方法中使用“`this.`” 前缀加上类变量。这样做是为了可读性，也是我的个人风格。
 
 
 
@@ -2164,102 +2122,30 @@ public class AnomalyDetection {
 }
 ```
 
-
-
-
-一旦为每个特征定义了训练数据以及 ![\mu](img/00021.gif)（代码中的变量 `mu`）的值，我们就可以在第 86 到 104 行定义 `train` 方法，该方法使用第 138 到 165 行定义的 `train_helper` 方法为训练数据集计算最佳的 `epsilon` “截断”值。我们通过对独立的交叉验证数据集进行测试来使用“最佳” `epsilon` 值；我们通过调用在第 167 到 198 行定义的 `test` 方法来实现这一点。
+一旦为每个特征定义了训练数据以及 `mu`（代码中的变量 `mu`）的值，我们就可以在第 86 到 104 行定义 `train` 方法，该方法使用第 138 到 165 行定义的 `train_helper` 方法为训练数据集计算最佳的 `epsilon` “截断”值。我们通过对独立的交叉验证数据集进行测试来使用“最佳” `epsilon` 值；我们通过调用在第 167 到 198 行定义的 `test` 方法来实现这一点。
 
 ### 使用威斯康星大学癌症数据的示例
 
 本节中的示例加载了威斯康星大学的数据，并使用上一节中开发的 `AnomalyDetection` 类来发现异常。在本示例中，异常是指代表原始数据中恶性的的输入向量。
 
-```
- 1 package com.markwatson.anomaly_detection;
- 2 
- 3 import java.io.*;
- 4 import org.apache.commons.io.FileUtils;
- 5 
- 6 /**
- 7  * 在威斯康星大学癌症数据集上训练深层信念网络。
- 8  */
- 9 public class WisconsinAnomalyDetection {
-10 
- 11   private static boolean PRINT_HISTOGRAMS = true;
- 12 
- 13   public static void main(String[] args) throws Exception {
- 14 
- 15     String [] lines =
- 16       FileUtils.readFileToString(
- 17          new File("data/cleaned_wisconsin_cancer_data.csv")).split("\n");
- 18     double [][] training_data = new double[lines.length][];
- 19     int line_count = 0;
- 20     for (String line : lines) {
- 21       String [] sarr = line.split(",");
- 22       double [] xs = new double[10];
- 23       for (int i=0; i<10; i++) xs[i] = Double.parseDouble(sarr[i]);
- 24       for (int i=0; i<9; i++) xs[i] *= 0.1;
- 25       xs[9] = (xs[9] - 2) * 0.5; // make target output be [0,1] instead of [2,4]
- 26       training_data[line_count++] = xs;
- 27     }
- 28 
- 29     if (PRINT_HISTOGRAMS) {
- 30       PrintHistogram.historam("Clump Thickness", training_data, 0, 0.0, 1.0, 10);
- 31       PrintHistogram.historam("Uniformity of Cell Size", training_data,
- 32                               1, 0.0, 1.0, 10);
- 33       PrintHistogram.historam("Uniformity of Cell Shape", training_data,
- 34                               2, 0.0, 1.0, 10);
- 35       PrintHistogram.historam("Marginal Adhesion", training_data,
- 36                               3, 0.0, 1.0, 10);
- 37       PrintHistogram.historam("Single Epithelial Cell Size", training_data,
- 38                               4, 0.0, 1.0, 10);
- 39       PrintHistogram.historam("Bare Nuclei", training_data, 5, 0.0, 1.0, 10);
- 40       PrintHistogram.historam("Bland Chromatin", training_data, 6, 0.0, 1.0, 10);
- 41       PrintHistogram.historam("Normal Nucleoli", training_data, 7, 0.0, 1.0, 10);
- 42       PrintHistogram.historam("Mitoses", training_data, 8, 0.0, 1.0, 10);
- 43     }
- 44     
- 45     AnomalyDetection detector = new AnomalyDetection(10, line_count - 1,
- 46                                                      training_data);
- 47 
- 48     // the train method will print training results like
- 49     // precision, recall, and F1:
- 50     detector.train();
-  1 
- 52     // get best model parameters:
- 53     double best_epsilon = detector.bestEpsilon();
- 54     double [] mean_values = detector.muValues();
- 55     double [] sigma_squared = detector.sigmaSquared();
- 56 
- 57     // to use this model, us the method AnomalyDetection.isAnamoly(double []):
- 58 
- 59     double [] test_malignant = new double[] {0.5,1,1,0.8,0.5,0.5,0.7,1,0.1};
- 60     double [] test_benign = new double[] {0.5,0.4,0.5,0.1,0.8,0.1,0.3,0.6,0.1};
- 61     boolean malignant_result = detector.isAnamoly(test_malignant);
- 62     boolean benign_result = detector.isAnamoly(test_benign);
-```
-[/content]
 
-Wait，我发现你提供的待翻译文本似乎包含了一些重复的乱码或不完整的段落。根据你要求的“不要重复输出原文”以及“翻译内容”原则，我将针对你提供的最后一段有效文本进行标准的翻译：
 
-[content]
+
 ## 使用 Deeplearning4j 进行深度学习
 
-The [Deeplearning4j.org](http://deeplearning4j.org/) Java library supports several neural network algorithms including support for Deep Learning (DL). We will look at an example of DL implementing Deep-Belief networks using the same University of Wisconsin database that we used in the chapters on machine learning with Spark and on anomaly detection.
+[Deeplearning4j.org](http://deeplearning4j.org/) Java 库支持多种神经网络算法，包括深度学习（DL）支持。我们将通过一个深度学习示例来了解深度置信网络的实现，该示例使用与 Spark 机器学习章节和异常检测章节相同的威斯康星大学数据集。
 
-I am going to assume that you have some knowledge of simple backpropagation neural networks. If you are unfamiliar with neural networks you might want to pause and do a web search for “neural networks backpropagation tutorial” or read the neural network chapter in my book [Practical Artificial Intelligence Programming With Java, 4th edition](https://leanpub.com/javaai).
+我假设你已经具备一些简单的反向传播神经网络知识。如果你对神经网络不熟悉，不妨暂停一下，在网上搜索“神经网络反向传播教程”，或者阅读我的书《Practical Artificial Intelligence Programming With Java, 4th edition》中的神经网络章节。
 
-
-
-
-使用反向传播算法训练许多层网络的困难之处在于，靠近输入层（远离输出层）的层中的 delta 误差会变得非常小，即使在现代处理器和 GPU 上，训练也可能需要很长时间。Geoffrey Hinton 和他的同事创建了一种用于预训练权重的新技术。2012 年，我参加了由 Hinton 及其同事教授的一门名为[面向机器学习的神经网络](https://www.coursera.org/course/neuralnets) 的 Coursera 课程，当你阅读这本书时，这些材料可能在网上可用。
+使用反向传播算法训练许多层网络的困难之处在于，靠近输入层（远离输出层）的层中的 delta 误差会变得非常小，即使在现代处理器和 GPU 上，训练也可能需要很长时间。Geoffrey Hinton 和他的同事创建了一种用于预训练权重的新技术。2012 年，我参加了由 Hinton 及其同事教授的一门名为[面向机器学习的神经网络](https://www.coursera.org/course/neuralnets)的 Coursera 课程，当你阅读这本书时，这些材料可能在网上可用。
 
 对于 Java 开发者来说，`Deeplearning4j` 是实验深度学习的绝佳起点。如果你也使用 Python，那么在 [deeplearning.net](http://deeplearning.net/) 上还有很好的教程和其他学习资源。
 
-# 深度置信网络 (Deep Belief Networks)
+## 深度置信网络 (Deep Belief Networks)
 
 深度置信网络（DBN）是一种深度神经网络，包含多个隐藏神经元层，其中任何一个特定隐藏层内部的神经元之间都没有连接。每个隐藏层根据训练数据以及前一个隐藏层的权重值来学习特征。我所说的“前一层”是指靠近输入层的连接层。DBN 可以学习到更抽象的特征，且距离输入层越“远”的隐藏层，其抽象程度越高。
 
-DBN 是逐层进行训练的。最初，使用一组训练输入来训练输入层与第一隐藏神经元层之间的权重。从技术上讲，当我们预训练后续每一对层时，我们正在训练受限玻尔兹曼机（RBM）来学习一组新特征。你只需要知道 RBM 是两层（输入层和输出层），它们全全连接（第一层中的所有神经元与下一层的每个神经元都有权重连接），并且没有层内连接。
+DBN 是逐层进行训练的。最初，使用一组训练输入来训练输入层与第一隐藏神经元层之间的权重。从技术上讲，当我们预训练后续每一对层时，我们正在训练受限玻尔兹曼机（RBM）来学习一组新特征。你只需要知道 RBM 是两层（输入层和输出层），它们全连接（第一层中的所有神经元与下一层的每个神经元都有权重连接），并且没有层内连接。
 
 当我们逐步训练 DBN 时，一个 RBM 的输出层将成为下一对神经元层预训练的输入层。
 
@@ -2267,9 +2153,9 @@ DBN 是逐层进行训练的。最初，使用一组训练输入来训练输入�
 
 需要理解的一点是，反向传播对于具有许多隐藏层的网络往往效果不好，因为当我们向输入神经元反向处理时，传播的误差会变得越来越小——这会导致网络训练非常缓慢。通过使用 RBM 对预计算权重，我们更接近一组能够最小化训练集（以及测试集）误差的权重。
 
-# 深度置信网络示例
+## 深度置信网络示例
 
-接下来的屏幕截图了本章示例的 IntelliJ 项目（你可以使用免费的社区版或专业版来完成书中的示例）：
+接下来的屏幕截图展示了本章示例的 IntelliJ 项目（你可以使用免费的社区版或专业版来完成书中的示例）：
 
 ![本章示例的 IntelliJ 项目视图](img/00022.jpeg)
 
@@ -2286,7 +2172,7 @@ DBN 是逐层进行训练的。最初，使用一组训练输入来训练输入�
  6 
  7 
  8 public class WisconsinDataSetIterator extends BaseDatasetIterator {
- 9private static final long serialVersionUID = -2023454995728682368L;
+ 9   private static final long serialVersionUID = -2023454995728682368L;
 10 
 11   public WisconsinDataSetIterator(int batch, int numExamples)
 12          throws FileNotFoundException {
@@ -2330,171 +2216,166 @@ DBN 是逐层进行训练的。最初，使用一组训练输入来训练输入�
 
 
 
-
 ```java
- 1 package com.markwatson.deeplearning;
-  2 
-  3 import org.deeplearning4j.datasets.iterator.DataSetIterator;
-  4 import org.deeplearning4j.eval.Evaluation;
-  5 import org.deeplearning4j.nn.conf.MultiLayerConfiguration;
-  6 import org.deeplearning4j.nn.conf.NeuralNetConfiguration;
-  7 import org.deeplearning4j.nn.conf.layers.OutputLayer;
-  8 import org.deeplearning4j.nn.conf.layers.RBM;
-  9 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
- 10 import org.deeplearning4j.nn.weights.WeightInit;
-  11 import org.nd4j.linalg.api.ndarray.INDArray;
-  12 import org.nd4j.linalg.dataset.DataSet;
-  13 import org.nd4j.linalg.dataset.SplitTestAndTrain;
-  14 import org.nd4j.linalg.factory.Nd4j;
-  15 import org.nd4j.linalg.lossfunctions.LossFunctions;
-  16 import org.slf4j.Logger;
-  17 import org.slf4j.LoggerFactory;
-  18 
-  19 import java.io.*;
-  20 import java.nio.file.Files;
-  21 import java.nio.file.Paths;
-  22 import java.util.Random;
-  23 
-  24 import org.apache.commons.io.FileUtils;
-  25 
-  26 /**
-  27  * 在威斯康星大学癌症数据集上训练深层信念网络。
-  28  */
-  29 public class DeepBeliefNetworkWisconsinData {
-  30 
-  31   private static Logger log =
-  32     LoggerFactory.getLogger(DeepBeliefNetworkWisconsinData.class);
-  33 
-  34   public static void main(String[] args) throws Exception {
-  35 
-  36     final int numInput = 9;
-  37     int outputNum = 2;
-  38      /**
-  39      * F1 分数随隐藏层单元数量超参数的变化：
-  40      *
-  41      *
-  42      *    numHidden   F1
-  43      *    ---------   --
-  44      *            2   0.50734
-  45      *            3   0.87283 (建议使用的值 - 最佳结果 / 最小的网络)
-  46      *           13   0.87283
-  47      *          100   0.55987 (过拟合)
-  48      *
-  49      *   其他超参数保持不变：batchSize = 648
-  50      */
-  51     int numHidden = 3;
-  52     int numberOfLayers = 3; // 输入、隐藏、输出
-  53     int numSamples = 648;
-  54 
-  55     /**
-  56      * F1 分数随批次大小的变化：
-  57      *
-  58      *    batchSize   F1
-  59      *    ---------   --
-  60      *           30   0.50000
-  61      *           64   0.78787
-  62      *          323   0.67123
-  63      *          648   0.87283 (在一个批次中处理所有训练向量最佳)
-  64      *
-  65      *   其他超参数保持不变：numHidden = 3
-  66      */
-  67     int batchSize = 648; // 等于样本数量
-  68 
-  69     int iterations = 100;
-  70     int fractionOfDataForTraining = (int) (batchSize * 0.7);
-  71     int seed = 33117;
-  72 
-  73     DataSetIterator iter = new WisconsinDataSetIterator(batchSize, numSamples);
-  74     DataSet next = iter.next();
-  75     next.normalizeZeroMeanUnitUnitVariance();
-  76 
-  77     SplitTestAndTrain splitDataSets =
-  78 	  next.splitTestAndTrain(fractionOfDataForTraining, new Random(seed));
-  79     DataSet train = splitDataSets.getTrain();
-  80     DataSet test = splitDataSets.getTest();
-  81 
-  82     MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
-  83         .seed(seed) // 使用相同的随机种子
-  84         .iterations(iterations)
-  85         .l1(1e-1).regularization(true).l2(2e-4)
-  86         .list(numberOfLayers - 1) // 不计算输入层
-  87         .layer(0,
-  88             new RBM.Builder(RBM.HiddenUnit.RECTIFIED, RBM.VisibleUnit.GAUSSIAN)
-  89                 .nIn(numInput)
-  90                 .nOut(numHidden)
-  91                 // 根据以下设置随机初始化权重方差
-  92                 .weightInit(WeightInit.XIER)
-  93                 .dropOut(0.25)
-  94                 .build()
-  95         )
-  96         .layer(1,
-  97             new OutputLayer.Builder(LossFunctions.MCENT)
-  98                 .nIn(numHidden)
-  99                 .nOut(outputNum)
-  100             .activation("softmax")
-  101             .build()
-  102         .build();
-  103     MultiLayerNetwork model = new MultiLayerNetwork(conf);
-  104     model.init();
-  105     model.fit(train);
-  106 
-  107     log.info("\n 评估模型:\n");
-  108     Evaluation eval = new Evaluation();
-  109     INDArray output = model.output(test);
-  110 
-  111     for (int i = 0; i < output.rows(); i++) {
-  112       String target = test.getLabels().getRow(i).toString();
-  113       String predicted = output.getRow(i).toString();
-  114       log.info("target: " + target + " predicted: " + predicted);
-  115     }
-  116 
-  117     eval.eval(output);
-  118     log.info(eval.stats());
-  119 
-  120     /**
-  121      * 保存模型以便复用：
-  122      */
-  123     FileUtils.writeString(new File("conf.json"), model.getLayerConfigurations().toJson());
-  124     FileUtils.writeBytes(new File("saved-model.bin"), model.params());
-  125 
-  126     /**
-  127      * 加载模型并再次测试：
-  128      */
-  129     log.info("\n 加载模型:\n");
-  130     MultiLayerConfiguration conffromJson = MultiLayerConfiguration.fromJson(FileUtils.readString(new File("conf.json")));
-  131     INDArray newParams = Nd4j.read(new File("saved-model.bin"));
-  132     MultiLayerNetwork savedModel = new MultiLayerNetwork(conffromJson);
-  133     savedModel.init();
-  134     savedModel.setParameters(newParams);
-  135 
-  136     log.info("\n 从磁盘评估模型:\n");
-  137     Evaluation eval2 = new Evaluation();
-  138     INDArray output2 = savedModel.output(test);
-  139 
-  140     for (int i = 0; i < output2.rows(); i++) {
-  141       String target = test.getLabels().getRow(i).toString();
-  142       String predicted = output2.getRow(i).toString();
-  143       log.info("target: " + target + " predicted: " + predicted);
-  144     }
-  145 
-  146     eval2.eval(output2);
-  147     log.info(eval2.stats());
-  148 }
+package com.markwatson.deeplearning;
+
+import org.deeplearning4j.datasets.iterator.DataSetIterator;
+import org.deeplearning4j.eval.Evaluation;
+import org.deeplearning4j.nn.conf.MultiLayerConfiguration;
+import org.deeplearning4j.nn.conf.NeuralNetConfiguration;
+import org.deeplearning4j.nn.conf.layers.OutputLayer;
+import org.deeplearning4j.nn.conf.layers.RBM;
+import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
+import org.deeplearning4j.nn.weights.WeightInit;
+import org.nd4j.linalg.api.ndarray.INDArray;
+import org.nd4j.linalg.dataset.DataSet;
+import org.nd4j.linalg.dataset.SplitTestAndTrain;
+import org.nd4j.linalg.factory.Nd4j;
+import org.nd4j.linalg.lossfunctions.LossFunctions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Random;
+
+import org.apache.commons.io.FileUtils;
+
+/**
+ * 在威斯康星大学癌症数据集上训练深层信念网络。
+ */
+public class DeepBeliefNetworkWisconsinData {
+
+  private static Logger log =
+    LoggerFactory.getLogger(DeepBeliefNetworkWisconsinData.class);
+
+  public static void main(String[] args) throws Exception {
+
+    final int numInput = 9;
+    int outputNum = 2;
+     /**
+     * F1 分数随隐藏层单元数量超参数的变化：
+     *
+     *
+     *    numHidden   F1
+     *    ---------   --
+     *            2   0.50734
+     *            3   0.87283 (建议使用的值 - 最佳结果 / 最小的网络)
+     *           13   0.87283
+     *          100   0.55987 (过拟合)
+     *
+     *   其他超参数保持不变：batchSize = 648
+     */
+    int numHidden = 3;
+    int numberOfLayers = 3; // 输入、隐藏、输出
+    int numSamples = 648;
+
+    /**
+     * F1 分数随批次大小的变化：
+     *
+     *    batchSize   F1
+     *    ---------   --
+     *           30   0.50000
+     *           64   0.78787
+     *          323   0.67123
+     *          648   0.87283 (在一个批次中处理所有训练向量最佳)
+     *
+     *   其他超参数保持不变：numHidden = 3
+     */
+    int batchSize = 648; // 等于样本数量
+
+    int iterations = 100;
+    int fractionOfDataForTraining = (int) (batchSize * 0.7);
+    int seed = 33117;
+
+    DataSetIterator iter = new WisconsinDataSetIterator(batchSize, numSamples);
+    DataSet next = iter.next();
+    next.normalizeZeroMeanUnitUnitVariance();
+
+    SplitTestAndTrain splitDataSets =
+	  next.splitTestAndTrain(fractionOfDataForTraining, new Random(seed));
+    DataSet train = splitDataSets.getTrain();
+    DataSet test = splitDataSets.getTest();
+
+    MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
+        .seed(seed) // 使用相同的随机种子
+        .iterations(iterations)
+        .l1(1e-1).regularization(true).l2(2e-4)
+        .list(numberOfLayers - 1) // 不计算输入层
+        .layer(0,
+            new RBM.Builder(RBM.HiddenUnit.RECTIFIED, RBM.VisibleUnit.GAUSSIAN)
+                .nIn(numInput)
+                .nOut(numHidden)
+                // 根据以下设置随机初始化权重方差
+                .weightInit(WeightInit.XIER)
+                .dropOut(0.25)
+                .build()
+        )
+        .layer(1,
+            new OutputLayer.Builder(LossFunctions.MCENT)
+                .nIn(numHidden)
+                .nOut(outputNum)
+            .activation("softmax")
+            .build()
+        .build();
+    MultiLayerNetwork model = new MultiLayerNetwork(conf);
+    model.init();
+    model.fit(train);
+
+    log.info("\n 评估模型:\n");
+    Evaluation eval = new Evaluation();
+    INDArray output = model.output(test);
+
+    for (int i = 0; i < output.rows(); i++) {
+      String target = test.getLabels().getRow(i).toString();
+      String predicted = output.getRow(i).toString();
+      log.info("target: " + target + " predicted: " + predicted);
+    }
+
+    eval.eval(output);
+    log.info(eval.stats());
+
+    /**
+     * 保存模型以便复用：
+     */
+    FileUtils.writeString(new File("conf.json"), model.getLayerConfigurations().toJson());
+    FileUtils.writeBytes(new File("saved-model.bin"), model.params());
+
+    /**
+     * 加载模型并再次测试：
+     */
+    log.info("\n 加载模型:\n");
+    MultiLayerConfiguration conffromJson = MultiLayerConfiguration.fromJson(FileUtils.readString(new File("conf.json")));
+    INDArray newParams = Nd4j.read(new File("saved-model.bin"));
+    MultiLayerNetwork savedModel = new MultiLayerNetwork(conffromJson);
+    savedModel.init();
+    savedModel.setParameters(newParams);
+
+    log.info("\n 从磁盘评估模型:\n");
+    Evaluation eval2 = new Evaluation();
+    INDArray output2 = savedModel.output(test);
+
+    for (int i = 0; i < output2.rows(); i++) {
+      String target = test.getLabels().getRow(i).toString();
+      String predicted = output2.getRow(i).toString();
+      log.info("target: " + target + " predicted: " + predicted);
+    }
+
+    eval2.eval(output2);
+    log.info(eval2.stats());
+}
 ```
 
 在威斯康星大学癌症数据集上训练深层信念网络。
 
-在第 71 行，我们将 `fractionOfDataForTraining` 设置为 `0.7`，这意味着我们将使用 70% 的数据进行训练，剩下的 30% 用于测试。在第 78 至 81 行，我们将数据划分为互不交的训练集和测试集。只要网络内存足够，识别训练数据的性能应该总是是好的。
+在第 71 行，我们将`fractionOfDataForTraining`设置为`0.7`，这意味着我们将使用 70% 的数据进行训练，剩下的 30% 用于测试。在第 78 至 81 行，我们将数据划分为互不交的训练集和测试集。只要网络内存足够，识别训练数据的性能应该总是是好的。
 
-在第 86 行，我们设置了三个元学习参数：输入层和隐藏层之间第一组权重的学习率为 `1e-1`、启用正则化，以及隐藏层到输出层的权重学习率为 `2e-4`。
+在第 86 行，我们设置了三个元学习参数：输入层和隐藏层之间第一组权重的学习率为`1e-1`、启用正则化，以及隐藏层到输出层的权重学习率为`2e-4`。
 
 在第 95 行，我们设置了丢弃（dropout）因子，这里表示对于任何训练示例随机不使用 25% 的神经元。与正则化一起，dropout 有助于防止过拟合。过拟合发生在神经网络无法泛化并学习了训练数据中的噪声时。目标是学习影响训练模型处理新数据有用性的特征。我们不希望将数据中的随机噪声学习为重要特征。防止过拟合的另一种方法是使用尽可能少的隐藏层神经元，同时在独立测试数据上保持良好性能。
 
 当我运行模型时，程序的输出如下：
-
-
-
-
 
 ```
 Evaluating model:
@@ -2516,9 +2397,9 @@ Actual Class 1 was predicted with Predicted 0 with count 44 times
 ===========================================================================
 ```
 
-`F1` 分数的计算方法为精确率乘以召回率的两倍，并除以`精确率 + 召回率`。我们希望 `F1` 越接近 1.0 越好，通常会花长时间对元学习参数进行实验以提高 `F1`。
+`F1`分数的计算方法为精确率乘以召回率的两倍，并除以`精确率 + 召回率`。我们希望`F1`越接近 1.0 越好，通常会花长时间对元学习参数进行实验以提高`F1`。
 
-尝试学习元学习参数的良好值也是非常常见的。我们在这里不会这样做，但过程涉及将数据分为三个互不相交的集合：训练集、验证集和测试集。改变元参数进行训练，并使用验证数据选择最佳元参数集。最后，我们使用根据元参数定义的网络以及学习到的权重对独立的测试数据进行测试，以查看有效的 `F1` 分数是多少。
+尝试学习元学习参数的良好值也是非常常见的。我们在这里不会这样做，但过程涉及将数据分为三个互不相交的集合：训练集、验证集和测试集。改变元参数进行训练，并使用验证数据选择最佳元参数集。最后，我们使用根据元参数定义的网络以及学习到的权重对独立的测试数据进行测试，以查看有效的`F1`分数是多少。
 
 ## 深度学习总结
 
@@ -2538,17 +2419,15 @@ Actual Class 1 was predicted with Predicted 0 with count 44 times
 
 我倾向于使用三种通用技术之一来爬取网站。本章将仅涵盖前两种：
 
-*   使用 HTML 解析库，它可以剥离页面上所有的 HTML 标记和 JavaScript，并返回一个“纯文本”块。在这里，导航菜单、页眉等等中的文本将与我们通常认为的网站“内容”交织在一起。
 
-*   利用网站上的 HTML DOM（文档对象模型）格式信息来提取页眉、页面标题、导航菜单和大型内容文本块。
 
-*   使用诸如 (Selenium)[http://docs.seleniumhq.org/) 之类的工具通过程序化控制网络浏览器，以便你的软件代理可以登录网站并执行其他导航。换句话说，你的软件代理可以模拟使用网络浏览器的人类。
+使用 HTML 解析库，它可以剥离页面上所有的 HTML 标记和 JavaScript，并返回一个“纯文本”块。在这里，导航菜单、页眉等等中的文本将与我们通常认为的网站“内容”交织在一起。
+
+利用网站上的 HTML DOM（文档对象模型）格式信息来提取页眉、页面标题、导航菜单和大型内容文本块。
+
+使用诸如 [Selenium](http://docs.seleniumhq.org/) 之类的工具通过程序化控制网络浏览器，以便你的软件代理可以登录网站并执行其他导航。换句话说，你的软件代理可以模拟使用网络浏览器的人类。
 
 我很少需要使用 `Selenium` 这样的工具，但俗言道：“当你需要它们时，你就需要它们。”对于简单的网站，我倾向于提取所有文本作为一个单一块，并在需要时使用 DOM 处理。
-
-
-
-
 
 ```
  1 package com.markwatson.web_scraping;
@@ -2671,11 +2550,7 @@ Mark Watson: Consultant specializing in machine learning and artificial intellig
 
 我刚刚向你展示了关于工作中最常见用例的快速参考。我没有向你展示的是一个组织抓取信息以供复用的示例。
 
-
-
-
-
-注意：我出版了《Practical Semantic Web and Linked Data Applications: Java, JRuby, Scala, and Clojure Edition》，你可以在[这里获取该书的免费 PDF](http://www.markwatson.com/opencontent_data/book_java.pdf)。虽然书中的技术细节仍然具有参考价值，但我现在对哪些链接数据和语义网技术最有用有了明确的观点，因此本章将更有重点。通过一些改进，我使用了之前书中用于 DBPedia 搜索的 Java 客户端代码和 `SPARQL` 查询。我还包含了以 JSON 返回查询结果的新版本。我假设你已经获取了我的书籍《Practical Semantic Web and Linked Data Applications》的免费副本，并使用第 6 和第 7 章作为资源描述语言（`RDF` 和 `RDFS`）的介绍，使用第 8 章作为 `SPARQL` 查询语言的教程。如果你想直接进入本章的示例，稍后阅读这些背景材料也是可以的。我在下一节中对 `SPARQL` 和 `RDF` 进行简要介绍，但请务必也获取一份我的语义网书籍以获得更深入的探讨。我们使用标准查询语言 `SPARQL` 从 RDF` 数据源中检索信息，就像我们使用 `SQL` 从关系型数据库中检索信息一样。
+注意：我出版了《Practical Semantic Web and Linked Data Applications: Java, JRuby, Scala, and Clojure Edition》，你可以在[这里获取该书的免费 PDF](http://www.markwatson.com/opencontent_data/book_java.pdf)。虽然书中的技术细节仍然具有参考价值，但我现在对哪些链接数据和语义网技术最有用有了明确的观点，因此本章将更有重点。通过一些改进，我使用了之前书中用于 DBPedia 搜索的 Java 客户端代码和 `SPARQL` 查询。我还包含了以 JSON 返回查询结果的新版本。我假设你已经获取了我的书籍《Practical Semantic Web and Linked Data Applications》的免费副本，并使用第 6 和第 7 章作为资源描述语言（`RDF` 和 `RDFS`）的介绍，使用第 8 章作为 `SPARQL` 查询语言的教程。如果你想直接进入本章的示例，稍后阅读这些背景材料也是可以的。我在下一节中对 `SPARQL` 和 `RDF` 进行简要介绍，但请务必也获取一份我的语义网书籍以获得更深入的探讨。我们使用标准查询语言 `SPARQL` 从 `RDF` 数据源中检索信息，就像我们使用 `SQL` 从关系型数据库中检索信息一样。
 
 在本章中，我们将学习如何对公共 `RDF` 数据存储执行 `SPARQL` 查询来消费链接数据，并搜索 DBPedia。使用上一章“Natural Language Processing Using OpenNLP”中的代码，我们还将开发一个示例应用程序，通过为实体标记唯一的 DBPedia `URIs` 来对文本进行注释（我们将在下一章知识管理的代码示例中使用这个例子）。
 
@@ -2710,48 +2585,58 @@ Mark Watson: Consultant specializing in machine learning and artificial intellig
 资源描述框架（`RDF`）用于以主语/谓语/宾三元组值的形式存储信息。`RDF` 数据最初被编码为 `XML` 并旨在用于自动化处理。在本章中我们将使用两种易读的格式，称为“N-Triples”和“N3”。`RDF` 数据由一组三元组值组成：
 
 * subject（主语）
+
 * predicate（谓语）
+
 * object（宾语）
 
 例如，假设我们的应用程序涉及新闻故事，我们希望有一种存储和查询元数据的方法。我们可以通过从文本中提取语义信息并将其存储在 `RDF` 中。我将在本章的示例中使用该领域。我们可能会使用如下三元组：
 
 * subject：新闻文章的 URL（或 `URI`）
+
 * predicate：如“containsPerson”（包含人物）之类的关系
+
 * object：如“Bill Clinton”这样的值
 
 如前所述，我们将使用 `URIs` 或字符串字面量作为主语和宾语的值。我们始终将使用 `URIs` 作为谓语的值。在任何情况下，`URIs` 通常比字符串字面量更受青睐，因为它们是唯一的。我们将看到这种优先用法的示例，但首先我们需要学习 N-Triples 和 N3 格式。
 
 三元组的任何部分（主语、谓语或宾语）都是 `URI` 或字符串字面量。`URIs` 编码命名空间。例如，上一个示例中的 containsPerson 谓语可以正确写为：
 
-```http://knowledgebooks.com/ontology/#containsPerson own```
+```
+http://knowledgebooks.com/ontology/#containsPerson own
+```
 
-此 `URI` 的第一部分被认为是“containsPerson”（我们将用作谓语）的命名空间。当不同的 `RDF` 三元组使用相同的谓语时，这确保了所有该谓语的用户都遵循相同的含义。此外，我们将在 RDFS 章节 中看到，可以使用 `RDFS` 来声明此谓语（在 http://knowledgebooks.com/ontology/ 命名空间下）与其他数据源使用的不同 `URIs` 表示的谓语之间的等效性。N-Triple 格式的语句由三个 `URIs`（或字符串字面量——任何组合）组成，后面跟着一个句号。虽然语句在源文件中通常每行一个，但也可以跨行编写；结尾的句号标记了语句的结束。N-Triple 格式的标准文件扩展名为 `*.nt`，N3 格式的标准格式扩展名为 `*.n3`。
-
-
-
+此 `URI` 的第一部分被认为是“containsPerson”（我们将用作谓语）的命名空间。当不同的 `RDF` 三元组使用相同的谓语时，这确保了所有该谓语的用户都遵循相同的含义。此外，我们将在 RDFS 章节中看到，可以使用 `RDFS` 来声明此谓语（在 `http://knowledgebooks.com/ontology/` 命名空间下）与其他数据源使用的不同 `URIs` 表示的谓语之间的等效性。N-Triple 格式的语句由三个 `URIs`（或字符串字面量——任何组合）组成，后面跟着一个句号。虽然语句在源文件中通常每行一个，但也可以跨行编写；结尾的句号标记了语句的结束。N-Triple 格式的标准文件扩展名为 `*.nt`，N3 格式的标准格式扩展名为 `*.n3`。
 
 我倾向于将我编写的程序输出 N-Triple 格式的文件，以 RDF 形式保存数据。如果我需要读取甚至手动编辑这些文件，我通常会使用 `Sesame` 将 N-Triple 文件转换为 `N3`。当我们看一个示例时，你就会明白为什么我更偏于 `N3` 格式了：
 
 ```
 1 @prefix kb:  <http://knowledgebooks.com/ontology#> .
+
 2 <http://news.com/201234 /> kb:containsCountry "China"  .
 ```
 
-在这里，我们看到为我的公司 KnowledgeBooks.com 的本体使用了命名空间缩写前 `kb:`。RDF 语句中的第一个项（主语）是一篇新闻文章的 URI。第二个项（谓语）是 `kb:` 命名空间下的 `containsCountry`。语句中的最后一项（宾语）是一个字符串字面量 `China. `。我会用英文这样描述这条 RDF 语句：“URI 为 `http://news.com/201234` 的新闻文章提到了中国国家。”
+
+
+在这里，我们看到为我的公司 `KnowledgeBooks.com` 的本体使用了命名空间缩写前 `kb:`。`RDF` 语句中的第一个项（主语）是一篇新闻文章的 `URI`。第二个项（谓语）是 `kb:` 命名空间下的 `containsCountry`。语句中的最后一项（宾语）是一个字符串字面量 `China`。我会用英文这样描述这条 `RDF` 语句：“`URI` 为 `http://news.com/201234` 的新闻文章提到了中国国家。”
 
 这是一个非常简单的 `N3` 示例，我们将扩展它来展示 `N3` 标记的其他功能。另一个例子是，假设这篇新闻也提到了美国。我们不需要像下面这样添加整个新语句：
 
 ```
 1     @prefix kb:  <http://knowledgebooks.com/ontology#> .
+
 2     <http://news.com/201234 /> kb:containsCountry "China"  .
+
 3     <http://news.com/201234 /> kb:containsCountry "USA"  .
 ```
 
-我们可以使用 `N3` 语法将它们合并。`N3` 允许我们合并多个具有相同主语且可选地具有相同谓语的 RDF 语句：
+我们可以使用 `N3` 语法将它们合并。`N3` 允许我们合并多个具有相同主语且可选地具有相同谓语的 `RDF` 语句：
 
 ```
 1     @prefix kb:  <http://knowledgebooks.com/ontology#> .
+
 2     <http://news.com/201234 /> kb:containsCountry "China" ,
+
 3                                                   "USA" .
 ```
 
@@ -2759,130 +2644,229 @@ Mark Watson: Consultant specializing in machine learning and artificial intellig
 
 ```
  1     @prefix kb:  <http://knowledgebooks.com/ontology#> .
+
  2 
+
 3     <http://news.com/201234 /> kb:containsCountry "China" ,
+
  4                                                   "USA" .
+
  5         kb:containsOrganization "United Nations" ;
+
  6         kb:containsPerson "Ban Ki-moon" , "Gordon Brown" ,
+
  7                           "Hu Jintao" , "George W. Bush" ,, 8                           "Pervez Musharraf" ,
+
  9                           "Vladimir Putin" , 
+
 10                           "Mahmoud Ahmadinejad" .
 ```
 
-这一单一 `N3` 语句代表了十个独立的 RDF 三元组。定义相同主语和谓语的三元组部分，对象用逗号分隔并以句号结束。请注意，无论我们使用哪种 RDF 存储系统（我们将使用 `Sesame`），以 `XML`、`N-Triple` 或 `N3` 格式文件加载 RDF 并没有区别：内部主语、谓语和宾语三元组的存储和使用方式是相同的。
+这一单一 `N3` 语句代表了十个独立的 `RDF` 三元组。定义相同主语和谓语的三元组部分，对象用逗号分隔并以句号结束。请注意，无论我们使用哪种 `RDF` 存储系统（我们将使用 `Sesame`），以 `XML`、`N-Triple` 或 `N3` 格式文件加载 `RDF` 并没有区别：内部主语、谓语和宾语三元组的存储和使用方式是相同的。
 
-我向你们承诺过 RDF 数据存储的数据很容易扩展。作为一个例子，假设我们编写了能够读取在线新闻文章并创建捕捉文章某些语义的 RDF 数据的软件。如果我们扩展程序以识别文章的发布日期，我们只需重新处理文章，并为每篇文章使用如下形式向我们的 RDF 数据存储中添加三元组：
+我向你们承诺过 `RDF` 数据存储的数据很容易扩展。作为一个例子，假设我们编写了能够读取在线新闻文章并创建捕捉文章某些语义的 `RDF` 数据的软件。如果我们扩展程序以识别文章的发布日期，我们只需重新处理文章，并为每篇文章使用如下形式向我们的 `RDF` 数据存储中添加三元组：
 
 ```
 1     <http://news.com/201234 /> kb:datePublished
+
 2                                "2008-05-11" .
 ```
 
 此外，取决于应用程序，并不是所有的新闻文章都有日期，这通常是可以接受的。
 
-`SPARQL` 是一种用于查询 RDF 数据存储的查询语言。虽然 `SPARQL` 看起来看起来像 `SQL`，但它们存在一些重要的区别，例如对 `RDFS` 和 `OWL` 推理的支持。本节将介绍 `SPARQL` 的基础知识。
+`SPARQL` 是一种用于查询 `RDF` 数据存储的查询语言。虽然 `SPARQL` 看起来像 `SQL`，但它们存在一些重要的区别，例如对 `RDFS` 和 `OWL` 推理的支持。本节将介绍 `SPARQL` 的基础知识。
 
-在本节的讨论中我们将以下示例 RDF 数据：
-
-
-
-
+在本节的讨论中我们将使用以下示例 `RDF` 数据：
 
 ```
  1     @prefix kb:  <http://knowledgebooks.com/ontology#> .
+
  2     @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
  3 
+
  4     kb:containsCity rdfs:subPropertyOf kb:containsPlace .
+
  5 
+
  6     kb:containsCountry rdfs:subPropertyOf kb:containsPlace .
+
  7 
+
  8     kb:containsState rdfs:subPropertyOf kb:containsPlace .
+
  9 
+
 10     <http://yahoo.com/20080616/usa_flooding_dc_16 />
+
 11         kb:containsCity "Burlington" , "Denver" ,
+
 12                         "St. Paul" ," " Chicago" ,
+
 13                         "Quincy" , "CHICAGO" ,
+
 14                         "Iowa City" ;
+
 15         kb:containsRegion "U.S. Midwest" , "Midwest" ;
+
 16         kb:containsCountry "United States" , "Japan" ;
+
 17         kb:containsState "Minnesota" , "Illinois" , 
+
 18                          "Mississippi" , "Iowa" ;
+
 19         kb:containsOrganization "National Guard" ,
+
 20                          "U.S. Department of Agriculture" ,
+
 21                          "White House" ,
+
 22                          "Chicago Board of Trade" ,
+
 23                          "Department of Transportation" ;
+
 24         kb:containsPerson "Dena Gray-Fisher" ,
+
 25                           "Donald Miller" ,
+
 26                           "Glenn Hollander" ,
+
 27                           "Rich Feltes" ,
+
 28                           "George W. Bush" ;
+
 29         kb:containsIndustryTerm "food inflation" , "food" ,
+
 30                                 "finance ministers" ,
+
 31                                 "oil" .
+
 32 
+
 33     <http://yahoo.com/78325/ts_nm/usa_politics_dc_2 />
+
 34         kb:containsCity "Washington" , "Baghdad" ,
+
 35                         "Arlington" , "Flint" ;
+
 36         kb:containsCountry "United States" ,
+
 37                            "Afghanistan" ,
+
 38                            "Iraq" ;
+
 39         kb:containsState "Illinois" , "Virginia" ,
+
 40                          "Arizona" , "Michigan" ;
+
 41         kb:containsOrganization "White House" ,
+
 42                                 "Obama administration" ,
+
 43                                 "Iraqi government" ;
+
 44         kb:containsPerson "David Petraeus" ,
+
 45                           "John McCain" ,
+
 46                           "Hoshiyar Zebari" ,
+
 47                           "Barack Obama" ,
+
 48                           "George W. Bush" ,
+
 49                           "Carly Fiorina" ;
+
 50         kb:containsIndustryTerm "oil prices" .
+
 51 
+
 52     <http://yahoo.com/10944/ts_nm/worldleaders_dc_1 />
+
 53         kb:containsCity "WASHINGTON" ;
+
 54         kb:containsCountry "United States" , "Pakistan" ,
+
 55                            "Islamic Republic of Iran" ;
+
 56         kb:containsState "Maryland" ;
+
 57         kb:containsOrganization "University of Maryland" ,
+
 58                                 "United Nations" ;
+
 59         kb:containsPerson "Ban Ki-moon" , "Gordon Brown" ,
+
 60                           "Hu Jintao" , "George W. Bush" ,
+
 61                           "Pervez Musharraf" ,
+
 62                           "Vladimir Putin" ,
+
 63                           "Steven Kull" ,
+
 64                           "Mahmoud Ahmadinejad" .
+
 65 
+
 66     <http://yahoo.com/10622/global_economy_dc_4 />
+
 67         kb:containsCity "Sao Paulo" , "Kuala Lumpur" ;
+
 68         kb:containsRegion "Midwest" ;
+
 69         kb:containsCountry "United States" , "Britain" ,
+
 70                            "Saudi Arabia" , "Spain" ,
+
 71                            "Italy" , India" , 
+
 72                            ""France" , "Canada" ,
+
 73                            "Russia" , "Germany" , "China" ,
+
 74                            "Japan" , "South Korea" ;
+
 75         kb:containsOrganization "Federal Reserve Bank" ,
+
 76                                 "European Union" ,
+
 77                                 "European Central Bank" ,
+
 78                                 "European Commission" ;
+
 79         kb:containsPerson "Lee Myung-bak" , "Rajat Nag" ,
+
 80                           "Luiz Inacio Lula da Silva" ,
+
 81                           "Jeffrey Lacker" ;
+
 82         kb:containsCompany "Development Bank Managing" ,
+
 83                            "Reuters" ,
+
 84                            "Richmond Federal Reserve Bank" ;
+
 85         kb:containsIndustryTerm "central bank" , "food" ,
+
 86                                 "energy costs" ,
+
 87                                 "finance ministers" ,
+
 88                                 "crude oil prices" ,
+
 89                                 "oil prices" ,
+
 90                                 "oil shock" ,
+
 91                                 "food prices" ,
+
 92                                 "Finance ministers" ,
+
 93                                 "Oil prices" , "oil" .
 ```
+
+
 
 在接下来的示例中，我们将查看查询而不查看结果。我们将从一个针对主体的（subjects）的简单 SPARQL 查询开始。
 
@@ -2941,24 +2925,24 @@ Mark Watson: Consultant specializing in machine learning and artificial intellig
 ---
 
 ```sparql
-    <http://yahoo.com/78325/ts_nm/usa_politics_dc_2 />
-        kb:containsCity "Washington" , "Baghdad" ,
-                        "Arlington" , "Flint" ;
-        kb:containsCountry "United States" ,
-                            "Afghanistan" ,
-                            "Iraq" ;
-        kb:containsState "Illinois" , "Virginia" ,
-                          "Arizona" , "Michigan" ;
-        kb:containsOrganization "White House" ,
-                                 "Obama administration" ,
-                                 "Iraqi government" ;
-        kb:containsPerson "David Petraeus" ,
-                            "John McCain" ,
-                            "Hoshiyar Zebari" ,
-                            "Barack Obama" ,
-                            "George W. Bush" ,
-                            "Carly Fiorina" ;
-        kb:containsIndustryTerm "oil prices" .
+<http://yahoo.com/78325/ts_nm/usa_politics_dc_2 />
+    kb:containsCity "Washington" , "Baghdad" ,
+                    "Arlington" , "Flint" ;
+    kb:containsCountry "United States" ,
+                        "Afghanistan" ,
+                        "Iraq" ;
+    kb:containsState "Illinois" , "Virginia" ,
+                      "Arizona" , "Michigan" ;
+    kb:containsOrganization "White House" ,
+                             "Obama administration" ,
+                             "Iraqi government" ;
+    kb:containsPerson "David Petraeus" ,
+                        "John McCain" ,
+                        "Hoshiyar Zebari" ,
+                        "Barack Obama" ,
+                        "George W. Bush" ,
+                        "Carly Fiorina" ;
+    kb:containsIndustryTerm "oil prices" .
 ```
 
 ---
@@ -2976,26 +2960,26 @@ Mark Watson: Consultant specializing in machine learning and artificial intellig
 ...主体（新闻文章 URL）和对象（匹配的三元组）：
 
 ```sparql
-    SELECT ?subject
-    WHERE {
-        ?subject <knowledgebooks.com/ontology#>containsCountry
-    }
+SELECT ?subject
+WHERE {
+    ?subject <knowledgebooks.com/ontology#>containsCountry
+}
 ```
 
 ---
 
-当 WHERE 子句包含多个三元组模式时，这等同于“与”操作。DISTINCT 子句会去除重复结果。ORDER BY 子句会对输出进行字母排序：在此情况下首先按属性（containsCity, containsCountry 等），然后按对象。LIMIT 修饰符限制返回的结果，OFFSET 修饰符设置跳过的匹配结果数量。
+当 `WHERE` 子句包含多个三元组模式时，这等同于“与”操作。`DISTINCT` 子句会去除重复结果。`ORDER BY` 子句会对输出进行字母排序：在此情况下首先按属性（`containsCity`, `containsCountry` 等），然后按对象。`LIMIT` 修饰符限制返回的结果，`OFFSET` 修饰符设置跳过的匹配结果数量。
 
 ```sparql
-    PREFIX kb:<http://knowledgebooks.com/ontology#>
-    SELECT ?subject ?a_predicate ?an_object
-    WHERE {
-        ?subject:containsCountry
-    }
-    DISTINCT
-    ORDER BY ?a_predicate ?an_object
-    LIMIT 10
-    OFFSET 5
+PREFIX kb:<http://knowledgebooks.com/ontology#>
+SELECT ?subject ?a_predicate ?an_object
+WHERE {
+    ?subject:containsCountry
+}
+DISTINCT
+ORDER BY ?a_predicate ?an_object
+LIMIT 10
+OFFSET 5
 ```
 
 ---
@@ -3003,9 +2987,9 @@ Mark Watson: Consultant specializing in machine learning and artificial intellig
 我们也可以对任何其他谓进行过滤，例如查找精确为“Maryland”的文章。接下来的查询是从 Java 文件复制的，因此你不需要转义标记。
 
 ```sparql
-    PREFIX kb:<http://knowledgebooks.com/ontology#>
-    SELECT ?subject
-    WHERE { ?subject:containsState "Maryland" }
+PREFIX kb:<http://knowledgebooks.com/ontology#>
+SELECT ?subject
+WHERE { ?subject:containsState "Maryland" }
 ```
 
 ---
@@ -3013,12 +2997,12 @@ Mark Watson: Consultant specializing in machine learning and artificial intellig
 我们还可以使用正则表达式匹配部分字符串字面量：
 
 ```sparql
-    PREFIX kb:<http://knowledgebooks.com/ontology#>
-    SELECT ?subject ?object
-    WHERE {
-        ?subject:containsOrganization
-        ?object FILTER(?object, "University")
-    }
+PREFIX kb:<http://knowledgebooks.com/ontology#>
+SELECT ?subject ?object
+WHERE {
+    ?subject:containsOrganization
+    ?object FILTER(?object, "University")
+}
 ```
 
 ---
@@ -3026,19 +3010,18 @@ Mark Watson: Consultant specializing in machine learning and artificial intellig
 在最后一个示例查询之前，我们只请求查询匹配三元组的主体和属性的值。然而，我们可能希望返回主体（在本例中为新闻文章 URI）的所有匹配三元组。注意这里有两个匹配的三元组，每个都以句号结尾：
 
 ```sparql
-    PREFIX kb:<http://knowledgebooks.com/ontology#>
-    SELECT ?subject ?a_predicate ?an_object
-    WHERE {
-        ?subject:containsOrganization
-        ?object FILTER(?object, "University") .
-
-        ?subject ?a_predicate ?an_object .
-    }
+PREFIX kb:<http://knowledgebooks.com/ontology#>
+SELECT ?subject ?a_predicate ?an_object
+WHERE {
+    ?subject:containsOrganization
+    ?object FILTER(?object, "University") .
+    ?subject ?a_predicate ?an_object .
+}
 ```
 
 ---
 
-我们结束了关于 SELECT 查询形式的快速教程。还有三种查询形式我没有在本章中介绍：
+我们结束了关于 `SELECT` 查询形式的快速教程。还有三种查询形式我没有在本章中介绍：
 
 *   `CONSTRUCT` – 返回查询结果的新型 RDF 图
 *   `ASK` – 返回布尔值真或假，表示查询是否匹配任何三元组
@@ -3048,18 +3031,10 @@ Mark Watson: Consultant specializing in machine learning and artificial intellig
 
 有很多可用的公共 RDF 数据。一些公开可用的 SPARQL 端点（endpoints）如下：
 
-
-
-
-
 *   [DBPedia](http://dbpedia.org/sparql) 它将 Wikipedia 信息框中的结构化信息编码为 RDF 数据。DBPedia 数据也可以免费下载，并托管在你自己的 `SPARQL` 端点上。
-
 *   [LinkDb](http://www.genome.jp/linkdb/linkdb_rdf.html) 包含人类基因组数据。
-
 *   [美国国会图书馆](http://id.loc.gov/techcenter/searching.html) 目前没有提供 SPARQL 端点，但可以下载主题相关的 Sparql 数据以用于你自己的 SPARQL 端点，并且提供了一个可以返回 RDF 数据结果的搜索功能。
-
 *   [BBC 节目与音乐](http://lod.openlinksw.com/sparql/)
-
 *   [FactForge](http://factforge.net/sparql) 结合了来自多个源的 RDF 数据，包括 DBPedia、Geonames、Wordnet 和 Freebase。SPARQL 查询页面有许多很棒的示例可以帮助入门。例如，查看查询“显示距离伦敦最多 50 英里以内的机场距离”的 SPARQL 语句和结果。
 
 网络上有许多公共的 SPARQL 端点，但我需要提醒你，它们并不总是可用的。大多数公共端点的原始 RDF 数据通常是可用的，因此如果你正在构建一个依赖公共数据集的系统，应该考虑在你自己的服务器之一上托管一份数据副本。我通常使用以下 RDF 存储库和 SPARQL 查询接口之一：：[Star Dog](http://stardog.com/)、[Virtuoso](http://virtuoso.openlinksw.com/) 和 [Sesame](http://rdf4j.org/)。尽管如此，还有许多其他优秀的 RDF 存储库服务器选项，包括商业的和源的。在读完这一章后，你可能想读我写的一篇较新的[博客文章](http://blog.markwatson.com/2014/07/using-opencyc-rdfowl-data-in-stardog.html)，介绍了如何将 OpenCYC 世界知识库导入并并在本地仓库中使用。
@@ -3068,71 +3043,71 @@ Mark Watson: Consultant specializing in machine learning and artificial intellig
 
 ### JSON 客户端
 
-```
- 1 package com.markwatson.linkeddata;
- 2 
-3 import org.apache.http.HttpResponse;
- 4 import org.apache.http.client.methods.HttpGet;
- 5 import org.apache.http.impl.client.DefaultHttpClient;
- 6 
-7 import java.io.BufferedReader;
- 8 import java.io.InputStreamReader;
- 9 import java.net.URLEncoder;
-10 
-11 public class SparqlClientJson {
-12   public static String query(String endpoint_URL, String sparql)
-13                        throws Exception {
-14     StringBuffer sb = new StringBuffer();
-15     try {
-16       org.apache.http.client.HttpClient httpClient =
-17 	    new DefaultHttpClient();
-18       String req = URLEncoder.encode(sparql, "utf-8");
-19       HttpGet getRequest =
-20           new HttpGet(endpoint_URL + "?query=" + req);
-21       getRequest.addHeader("accept", "application/json");
-22       HttpResponse response = httpClient.execute(getRequest);
-23       if (response.getStatusLine().getStatusCode() != 200)
-24 	     return "Server error";
-25 
-26       BufferedReader br =
-27           new BufferedReader(
-28               new InputStreamReader(
-29 				   (response.getEntity().getContent())));
-30       String line;
-31       while ((line = br.readLine()) != null) {
-32         sb.append(line);
-33       }
-34       httpClient.getConnectionManager().shutdown();
-35     } catch (Exception e) {
-36       e.printStackTrace();
-37     }
-38     return sb.toString();
-39   }
-40 }
+```java
+package com.markwatson.linkeddata;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.URLEncoder;
+
+public class SparqlClientJson {
+  public static String query(String endpoint_URL, String sparql)
+                       throws Exception {
+    StringBuffer sb = new StringBuffer();
+    try {
+      org.apache.http.client.HttpClient httpClient =
+	    new DefaultHttpClient();
+      String req = URLEncoder.encode(sparql, "utf-8");
+      HttpGet getRequest =
+          new HttpGet(endpoint_URL + "?query=" + req);
+      getRequest.addHeader("accept", "application/json");
+      HttpResponse response = httpClient.execute(getRequest);
+      if (response.getStatusLine().getStatusCode() != 200)
+	     return "Server error";
+
+      BufferedReader br =
+          new BufferedReader(
+              new InputStreamReader(
+				   (response.getEntity().getContent())));
+      String line;
+      while ((line = br.readLine()) != null) {
+        sb.append(line);
+      }
+      httpClient.getConnectionManager().shutdown();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    return sb.toString();
+  }
+}
 ```
 
 我们将使用以下 SPARQL 查询来寻找在亚利桑那州的人：
 
-```
-1 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-2         PREFIX dbpedia2: <http://dbpedia.org/property/>
-3         PREFIX dbpedia: <http://dbpedia.org/>
-4         SELECT ?name ?person WHERE {
-5              ?person dbpedia2:birthPlace <http://dbpedia.org/resource/Arizona> .
-6              ?person foaf:name ?name .
-7         }
-8         LIMIT 10
+```sparql
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+        PREFIX dbpedia2: <http://dbpedia.org/property/>
+        PREFIX dbpedia: <http://dbpedia.org/>
+        SELECT ?name ?person WHERE {
+             ?person dbpedia2:birthPlace <http://dbpedia.org/resource/Arizona> .
+             ?person foaf:name ?name .
+        }
+        LIMIT 10
 ```
 
 你可以使用以下命令运行 DBPedia 查找和 SPARQL 查询的单元测试：
 
-```
-1 mvn test -Dtest=DBPediaTest
+```bash
+mvn test -Dtest=DBPediaTest
 ```
 
 以下是使用此示例 SPARQL 查询运行该类单元测试时产生的部分输出：
 
-```
+```json
 {
   "head": {
     "link": [],
@@ -3161,56 +3136,56 @@ Mark Watson: Consultant specializing in machine learning and artificial intellig
 }
 ```
 
+
+
 ### DBPedia Lookup
 
-DBPedia Lookup 服务默认返回 XML 响应。`DBpediaLookupClient` 类非常简单。它编码查询字符串，调用 Web 服务并解析返回的 XML 负载。
+`DBpedia Lookup` 服务默认返回 XML 响应。`DBpediaLookupClient` 类非常简单。它编码查询字符串，调用 Web 服务并解析返回的 XML 负载。
 
 ### Java 数据
 
+```java
+public class DBpediaLookupClient extends DefaultHandler {
+
+  public DBpediaLookupClient(String query) throws Exception {
+    this.query = query;
+    HttpClient client = new HttpClient();
+
+    String query2 = query.replaceAll(" ", "+");
+    HttpMethod method =
+        new GetMethod(
+          "http://lookup.dbpedia.org/api/search?QueryString="
+  +query2);
+    try {
+      client.executeMethod(method);
+      InputStream ins = method.getResponseBody();
+      SAXParserFactory factory = SAXParserFactory.newInstance();
+      SAXParser sax = factory.newSAXParser();
+      sax.parse(ins, this);
+    } catch (HttpException he) {
+      System.err.println("Http error connecting to lookup.dbpedia.org");
+    } catch (IOException ioe) {
+      System.err.println("Unable to connect to lookup.dbpedia.org");
+    }
+    method.releaseConnection();
+  }
+
+  public void printResults(List<Map<String, String>> results) {
+    for (Map<String, String> result : results) {
+      System.out.println("\nNext result:\n");
+      for (String key : result.keySet()) {
+        System.out.println("  " + key + "\t:\t" + result.get(key));
+      }
+    }
+  }
+
+  // ... XML 解析代码省略 ...
+
+  public List<Map<String, String>> variableBindings() {
+    return variableBindings;
+  }
+}
 ```
-1 public class DBpediaLookupClient extends DefaultHandler {
-2   public DBpediaLookupClient(String query) throws Exception {
-3     this.query = query;
-4     HttpClient client = new HttpClient();
-5 
-6     String query2 = query.replaceAll(" ", "+");
-7     HttpMethod method =
-8         new GetMethod(
-9           "http://lookup.dbpedia.org/api/search?QueryString="
-10  +query2);
-11     try {
-12       client.executeMethod(method);
-13       InputStream ins = method.getResponseBody();
-14       SAXParserFactory factory = SAXParserFactory.newInstance();
-15       SAXParser sax = factory.newSAXParser();
-16       sax.parse(ins, this);
-17     } catch (HttpException he) {
-18       System.err.println("Http error connecting to lookup.dbpedia.org");
-19     } catch (IOException ioe) {
-20       System.err.println("Unable to connect to lookup.dbpedia.org");
-21     }
-22     method.releaseConnection();
-23   }
-24 
-25   public void printResults(List<Map<String, String>> results) {
-26     for (Map<String, String> result : results) {
-27       System.out.println("\nNext result:\n");
-28       for (String key : result.keySet()) {
-29         System.out.println("  " + key + "\t:\t" + result.get(key));
-30       }
-31     }
-32   }
-33 
-34   // ... XML 解析代码省略 ...
-35 
-36   public List<Map<String, String>> variableBindings() {
-37     return variableBindings;
-38   }
-39 }
-```
-
-
-
 
 如果你运行此示例程序，你会发现描述文本全部打印在同一行上；而在 `about` 示例中，它会自动换行。
 
@@ -3221,59 +3196,59 @@ DBPedia Lookup 服务默认返回 XML 响应。`DBpediaLookupClient` 类非常�
 本节中的示例比上一节的示例更简单，因为我们只需要原样返回从查询 Web 服务 get 负载（即作为编码在字符串中的 JSON 数据）。
 
 ```java
- 1 package com.markwatson.linkeddata;
- 2 
- 3 import org.apache.http.HttpResponse;
- 4 import org.apache.http.client.HttpClient;
- 5 import org.apache.http.client.methods.HttpGet;
- 6 import org.apache.http.impl.client.DefaultHttpClient;
- 7 
- 8 import java.io.BufferedReader;
- 9 import java.io.InputStreamReader;
-10 
-11 /**
-12  * Copyright 2015 Mark Watson.  Apache 2 license.
-13  */
-14 public class DBpediaLookupClientJson {
-15   public static String lookup(String query) {
-16     StringBuffer sb = new StringBuffer();
-17     try {
-18       HttpClient httpClient = new DefaultHttpClient();
-19       String query2 = query.replaceAll(" ", "+");
-20       HttpGet getRequest =
-21           new HttpGet(
-22 		    "http://lookup.dbpedia.org/api/search.asmx/KeywordSearch?QueryString="
-23               + query2);
-24       getRequest.addHeader("accept", "application/json");
-25       HttpResponse response = httpClient.execute(getRequest);
-26 	  
-27       if (response.getStatusLine().getStatusCode() != 200) return "Server error";
-28 
-29       BufferedReader br =
-30           new BufferedReader(
-31               new InputStreamReader((response.getEntity().getContent())));
-32       String line;
-33       while ((line = br.readLine()) != null) {
-34         sb.append(line);
-35       }
-36       httpClient.getConnectionManager().shutdown();
-37     } catch (Exception e) {
-38       e.printStackTrace();
-39     }
-40     return sb.toString();
-41   }
-42 }
+package com.markwatson.linkeddata;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+/**
+ * Copyright 2015 Mark Watson.  Apache 2 license.
+ */
+public class DBpediaLookupClientJson {
+  public static String lookup(String query) {
+    StringBuffer sb = new StringBuffer();
+    try {
+      HttpClient httpClient = new DefaultHttpClient();
+      String query2 = query.replaceAll(" ", "+");
+      HttpGet getRequest =
+          new HttpGet(
+		    "http://lookup.dbpedia.org/api/search.asmx/KeywordSearch?QueryString="
+              + query2);
+      getRequest.addHeader("accept", "application/json");
+      HttpResponse response = httpClient.execute(getRequest);
+	  
+      if (response.getStatusLine().getStatusCode() != 200) return "Server error";
+
+      BufferedReader br =
+          new BufferedReader(
+              new InputStreamReader((response.getEntity().getContent())));
+      String line;
+      while ((line = br.readLine()) != null) {
+        sb.append(line);
+      }
+      httpClient.getConnectionManager().shutdown();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    return sb.toString();
+  }
+}
 ```
 
 你可以使用以下命令运行 DBPedia 查询和 SPARQL 查询的单元测试：
 
 ```
-1 mvn test -Dtest=DBPediaTest
+mvn test -Dtest=DBPediaTest
 ```
 
 以下关于“Bill Clinton”查询的示例展示了样例 JSON（字符串）内容，为了可读性，我使用 IntelliJ 进行了“格式化打印”：
 
-```
+```json
 {
   "results": [
     {
@@ -3333,8 +3308,6 @@ Cabinet_members",
 
 在本节中，我们仅仅在文本中寻找 `DBPedia URIs` 描述的精确匹配。在下一节中，我们将对描述进行分词，并对文本进行分词，以匹配实体名称与 `URIs` 匹配。我还会向你展示一些示例。
 
-在本节中，我们仅仅在文本中寻找 `DBPedia URIs` 描述的精确匹配。在下一节中，我们将对描述进行分词，并对文本进行分词，以匹配实体名称与 `URIs` 匹配。我还会向你展示一些示例。
-
 在本节中，我们仅仅在文本中寻找 `DBPedia URIs` 描述的精确匹配。
 
 在本节中为实体类创建映射：人、国家和公司。这些实体类的数据存储在 `dbpedia_entities` 目录下。在下一节中，我将向你展示 `dbpedia dump` 数据的样子。
@@ -3347,106 +3320,69 @@ Cabinet_members",
 
 在节中的。
 
+```java
+while ((line = br.readLine()) != null) {
+  int index = line.indexOf('\t');
+  if (index > -1) {
+    String name = line.substring(0, index);
+    String uri = line.substring((index + 1));
+    map.put(name, uri);
+  }
+}
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       while ((line = br.readLine()) != null) {
-
-         int = = line...t.
-
-
-
- (index
-11 {
-
-           String = =...(0,
-);
-           String uri = line.substring((index + 1));
-           map.put((, uri);
-         }
-       }
-     }
-     } catch (Exception ex) {
-       ex.printStackTrace();
-     }
-   }
-   static void loadMap(Map<String, String> map, String entityFilePath) {
-     try {
-       InputStream fis = new FileInputStream(entityFilePath);
-       InputStreamReader isr =
-         new InputStreamReader(fis, Charset.forName("UTF-8"));
-       BufferedReader br = new BufferedReader(isr);
-       String line = null;
-       while ((line = br.readLine()) != null) {
-         int index = line.indexOf('\t');
-         if (index > -1) {
-           String name = line.substring(0, index);
-           String uri = line.substring((index + 1));
-           map.put(name, uri);
-         }
-       }
-     } catch (Exception ex) {
-       ex.printStackTrace();
-     }
-   }
-   static {
-     loadMap(companyMap, "dbpedia_entities/CompanyNamesDbPedia.txt");
-     loadMap(countryMap, "dbpedia_entities/CountryNamesDbPedia.txt");
-     loadMap(peopleMap, "dbpedia_entities/PeopleDbPedia.txt");
-   }
- }
+```java
+static void loadMap(Map<String, String> map, String entityFilePath) {
+  try {
+    InputStream fis = new FileInputStream(entityFilePath);
+    InputStreamReader isr =
+      new InputStreamReader(fis, Charset.forName("UTF-8"));
+    BufferedReader br = new BufferedReader(isr);
+    String line = null;
+    while ((line = br.readLine()) != null) {
+      int index = line.indexOf('\t');
+      if (index > -1) {
+        String name = line.substring(0, index);
+        String uri = line.substring((index + 1));
+        map.put(name, uri);
+      }
+    }
+  } catch (Exception ex) {
+    ex.printStackTrace();
+  }
+}
+static {
+  loadMap(companyMap, "dbpedia_entities/CompanyNamesDbPedia.txt");
+  loadMap(countryMap, "dbpedia_entities/CountryNamesDbPedia.txt");
+  loadMap(peopleMap, "dbpedia_entities/PeopleDbPedia.txt");
+}
 ```
 
 如果你运行这段代码的单元测试，输出看起来像：
 
-
-
-
-
 ```
- 1 > mvn test -Dtest=AnnotationTest
- 2 [INFO] Compiling 5 source files to /Users/markw/BITBUCKET/power-java/linked_data\
- 3 /target/classes
- 4 
- 5 -------------------------------------------------------
- 6  T E S T S
- 7 -------------------------------------------------------
- 8 Running com.markwatson.linkeddata.AnnotationTest
- 9 
-10 Annotated string: Bill Clinton (<http://dbpedia.org/resource/Bill_Clinton>) went\
-11  to a charity event in Thailand (<http://dbpedia.org/resource/Thailand>). 
-12 
-13 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.251 sec
-14 
-15 Results :
-16 
-17 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+> mvn test -Dtest=AnnotationTest
+[INFO] Compiling 5 source files to /Users/markw/BITBUCKET/power-java/linked_data/target/classes
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.markwatson.linkeddata.AnnotationTest
+
+Annotated string: Bill Clinton (<http://dbpedia.org/resource/Bill_Clinton>) went to a charity event in Thailand (<http://dbpedia.org/resource/Thailand>). 
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.251 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 ```
 
 ### 将文本中的命名实体解析为 Wikipedia URI
 
 在本节中，我们将解决与上一节相同的问题：使用 DBPedia（Wikipedia）URI 解析命名实体，但我们将使用一种替代方法。
+
+
 
 在我的某些工作中，我发现将文本中的命名实体（例如人、组织、产品、地点等）解析为唯一的 DBPedia URI 是很有用的。DBPedia 的语义网数据（我们将在下一章中讨论）源自 Wikipedia 文章条目中的“信息框”（info boxes）。我发现 DBPedia 是一个极其有用的知识源。我在 Google 工作知识图谱时，我们使用了来自 Wikipedia/DBPedia 和 Freebase 的核心知识，并结合了许多其他信息源。DBPedia 已经是（相当）干净的数据，可以直接在你的应用程序中使用。
 
@@ -3472,7 +3408,7 @@ Cabinet_members",
 15 	<http://dbpedia.org/resource/Category:The_World_Wars> .
 ```
 
-`[SKOS (简单知识组织系统)](http://www.w3.org/2004/02/skos/)` 定义了分类层级结构，这些分类对于现实世界实体、动作等非常有用。随后，分类被用于 RDF 版本的 文章标题、摘要、地理数据等。以下是一个将主体 URI 映射到文本标签的 RDF 示例：
+[SKOS (简单知识组织系统)](http://www.w3.org/2004/02/skos/) 定义了分类层级结构，这些分类对于现实世界实体、动作等非常有用。随后，分类被用于 RDF 版本的 文章标题、摘要、地理数据等。以下是一个将主体 URI 映射到文本标签的 RDF 示例：
 
 ```
  1 <http://dbpedia.org/resource/Abraham_Lincoln>
@@ -3562,10 +3498,6 @@ Cabinet_members",
 
 `TextToDbpediaUris` 类使用了在 `NerMaps` 类中定义的九种 NER 类型。在接下来的列表中，为了简练起见，未显示所有关于广播新闻网络 NER 类的全部代码：
 
-
-
-
-
 ```java
 package com.markwatson.ner_dbpedia;
 
@@ -3645,6 +3577,7 @@ company 13 14 Coca Cola    <http://dbpedia.org/resource/Coca-Cola>
 一个强大的想法是结合公共和私有的链接数据；例如，将 DBPedia 中存储的海量真实世界知识与包含公司特定私有数据的 RDF 数据存储器相结合。实现此点有两种方法：
 
 * 使用 SPARQL 查询从多个 SPARQL 端点连接数据
+
 * 假设你有一个存储私有数据的 RDF 仓库，则将 DBPedia 等外部源导入到你的本地数据存储中
 
 这超出了我对 SPARQL 讲解的范围，但可以使用 SPARQL `WHERE` 子句中的 `SERVICE` 关键字从多个端点连接数据。同样，像 DBPedia 这样的公共源也可以导入到你的本地 RDF 仓库中：这不仅能使查询更高效，还能让你的系统在第三方服务故障时更加健壮。
@@ -3664,7 +3597,9 @@ company 13 14 Coca Cola    <http://dbpedia.org/resource/Coca-Cola>
 知识管理是一个庞大的学科，但我对本章中的一个特定想法感兴趣：即将本地数据源（关系型和 NoSQL）与云数据源（例如 Google Drive、Microsoft OneDrive）相结合，以产生可操作的知识。我关注知识管理领域多年了，但在过去的几年里，我更喜欢将公共源与私有数据融合的想法。有时云数据仅仅是为了备份本地笔记本电脑，但通常我将云数据用于：
 
 * 非常大的数据集
+
 * 需要在广泛设备上可用的数据
+
 * 有价值且需要复制的数据
 
 思考你的工作流：你使用 Google 文档和日历吗？Microsoft Office 365？我在工作中使用这两种云服务。系统中的数据融合
@@ -3677,15 +3612,13 @@ company 13 14 Coca Cola    <http://dbpedia.org/resource/Coca-Cola>
 
 我决定使用 Google Takeout 从我的 Google 账户导出日历、Google Drive 和 Gmail 的小部分测试数据，并将这些数据的清洗版本用于示例程序。Google Drive 文档导出为 Microsoft 格式（Word docx 文件、Excel xlsx 表格文件）以及标准的日历 `ics` 格式文件和标准 `mbox` 格式的邮件。也就是说，此示例也适用于存储在 Microsoft Office 365 中的数据。
 
-
-
-
-
 一个使用我们将涵盖的技术的真实系统，可以实现为运行在 Google Cloud Services 或 Microsoft Azure 上的 Web 应用，该应用可以通过用户的 Google 或 Microsoft 账户进行身份验证，并拥有对用户云数据的实时访问权限。
 
-我们将使用开源 Java 库来访问 Microsoft Excel 和 Office 格式的数据（注意，Google 会以这些格式导出 Google 文，Microsoft 的 Office 365 也是如此）。
 
-知识管理（KM）系统中有一个我不涵盖的优秀工具是`web search`。自动访问全网搜索索引以为系统用户提供更多信息以做出决策，是设计 KM 和决策支持系统时需要考虑的。我决定不在本书书中介绍调用公共网络搜索 API 的 Java 示例，但你可以使用我在 github 上的项目，该项目[封装了 Microsoft Bing Search API](https://github.com/mark-watson/bing_search_java)。我曾编写过一个使用搜索 API 来注释笔记和存储文档的服务。使用 `DBPedia`（正如我们在上一节中所做的）和 `Bing search` 非常简单，让我能够实时地对文本进行注释（带有指向网络信息源的超链接）。
+
+我们将使用开源 Java 库来访问 Microsoft Excel 和 Office 格式的数据（注意，Google 会以这些格式导出 Google 文档，Microsoft 的 Office 365 也是如此）。
+
+知识管理（KM）系统中有一个我不涵盖的优秀工具是`web search`。自动访问全网搜索索引以为系统用户提供更多信息以做出决策，是设计 KM 和决策支持系统时需要考虑的。我决定不在本书中介绍调用公共网络搜索 API 的 Java 示例，但你可以使用我在 GitHub 上的项目，该项目[封装了 Microsoft Bing Search API](https://github.com/mark-watson/bing_search_java)。我曾编写过一个使用搜索 API 来注释笔记和存储文档的服务。使用`DBPedia`（正如我们在上一节中所做的）和`Bing search`非常简单，让我能够实时地对文本进行注释（带有指向网络信息源的超链接）。
 
 # 知识管理的动力
 
@@ -3697,11 +3630,11 @@ company 13 14 Coca Cola    <http://dbpedia.org/resource/Coca-Cola>
 
 由于 KM 是一个非常宽泛的话题，我将集中在几个相对简单的示例上，这些示例将为你提供获取和使用知识的灵感，并在某些情况下还可以提供书中示例中你可以使用的有用代码：
 
-*   将你的电子邮件捕获到关系型数据库中，并使用我们在 NLP 和机器学习章节中学到的某些技术来分配类别。
-*   存储网页 URI 和内容片段以备后之用。
-*   使用 Java 客户端处理 Google Drive 中的数据，特别是读取 Google 用于导出 Google 文档的 Microsoft 文件格式。
-*   通过将实体名称解析为唯一的 `DBPedia` URIs 来对文档存储器中的文本进行注释。
-*   使用 `Postgres` 作为本地数据库，存储由本节示例软件发现的数据。
+* 将你的电子邮件捕获到关系型数据库中，并使用我们在 NLP 和机器学习章节中学到的某些技术来分配类别。
+* 存储网页 URI 和内容片段以备后之用。
+* 使用 Java 客户端处理 Google Drive 中的数据，特别是读取 Google 用于导出 Google 文档的 Microsoft 文件格式。
+* 通过将实体名称解析为唯一的`DBPedia` URIs 来对文档存储器中的文本进行注释。
+* 使用`Postgres`作为本地数据库，存储由本节示例软件发现的数据。
 
 我使用的 Microsoft Office 365 也有 API，可以将你自己的程序集成到 Office 365 工作流中。我决定在本节中使用 Google Drive，是因为它是免费的，但我也鼓励你尝试 Office 365 的 API。你可以参加在线 [edX.org](http://edx.org) 提供的免费 Office 365 API 课程。我们将使用 Google Drive 作为本节开发的示例代码的数据源。
 
@@ -3709,18 +3642,18 @@ company 13 14 Coca Cola    <http://dbpedia.org/resource/Coca-Cola>
 
 有许多针对组织或个人的 KM 产品。根据你的需求，你可能想将自定义软件与现成软件工具结合。KM 的另一个重要方面是`master data`的概念，即为各种（通常是遗留的）数据库创建一个统一的数据模型和存储策略。这部分也是我在 Google 工作的内容。即使对于我们在本节中开发的三个简单示例，也存在涉及主数据的有趣问题，我稍后会提到。
 
-大多数 KM 系统处理存储在本地服务器上的内部数据。虽然我在本节稍后的部分提供了一些使用 `Postgres` 关系型数据库的非常简单的示例，但我想让你思考使用多个数据源并专注于存储在商业云服务中的数据是有意义的。
+大多数 KM 系统处理存储在本地服务器上的内部数据。虽然我在本节稍后的部分提供了一些使用`Postgres`关系型数据库的非常简单的示例，但我想让你思考使用多个数据源并专注于存储在商业云服务中的数据是有意义的。
 
 # 使用 Google Drive Cloud Takeout 服务
 
-正如我在本节引言中提到的，虽然编写一个使用 Office 365 API 的 Microsoft Azure Web 应用以及一个使用 Google Drive 数据访问 API 的 AppEngine（或 Google Cloud）Web 应用是相当容易的，但构建一个具有使用这些 API 所需的 auth2 支持的 Web 应用出了示例程序的范范围。所以，我稍微耍了小聪明。Google 有一个“Google Takeout”服务，每个使用 Google 服务的人都应该定期使用它来保存来自 Google 服务的所有数据。
+正如我在本节引言中提到的，虽然编写一个使用 Office 365 API 的 Microsoft Azure Web 应用以及一个使用 Google Drive 数据访问 API 的 AppEngine（或 Google Cloud）Web 应用是相当容易的，但构建一个具有使用这些 API 所需的 auth2 支持的 Web 应用超出了示例程序的范围。所以，我稍微耍了小聪明。Google 有一个“Google Takeout”服务，每个使用 Google 服务的人都应该定期使用它来保存来自 Google 服务的所有数据。
 
 在本节及包含子节中，我们将使用“Google Takeout”转储作为示例程序使用的数据。以下子节包含读取和解析的实用：
 
-*   Microsoft Excel，这是 Google Takeout 导出 Google Drive 表格的格式。
-*   Microsoft Word `docx` 文件，这是 Google Takeout 用于导出 Google Drive 文字处理文档的格式。
-*   `iCal` 日历文件，这是 Google Calendar 数据导出的标准格式。
-*   电子邮件 `mbox` 文件，这是 GMail 导出的格式。
+* Microsoft Excel，这是 Google Takeout 导出 Google Drive 表格的格式。
+* Microsoft Word `docx` 文件，这是 Google Takeout 用于导出 Google Drive 文字处理文档的格式。
+* `iCal` 日历文件，这是 Google Calendar 数据导出的标准格式。
+* 电子邮件 `mbox` 文件，这是 GMail 导出的格式。
 
 这些都是广泛使用的文件格式，所以我希望接下来四个子节中开发的工具对你通常很有用。下面的图显示了 IntelliJ Community Edition 项目浏览器的截图，仅显示了我使用 Google Takeout 导出的数据文件。我“清理”了这些文件，通过更改名称、电子邮件地址等以用于本节的示例程序。
 
@@ -3730,7 +3663,7 @@ company 13 14 Coca Cola    <http://dbpedia.org/resource/Coca-Cola>
 
 ## 处理 Microsoft Excel 表格 xlsx 和 Microsoft Word docx 文件
 
-我们将使用 Apache Tika 和 `iCal4j` 库来实现接下来三个子节中的代码。下面的图显示了本节使用的 IntelliJ 源码和测试文件：
+我们将使用 Apache Tika 和`iCal4j`库来实现接下来三个子节中的代码。下面的图显示了本节使用的 IntelliJ 源码和测试文件：
 
 ![Java 源码和测试文件](img/00028.jpeg)
 
@@ -3738,14 +3671,11 @@ Java 源码和测试文件
 
 我们将使用 Tika 库来解析 Excel 表格文件中的所有工作表（即单独页面）。输出是一个格式良好的文本文件，由换行符和制表符分隔。以下实用类通过将纯文本表示解析为 Java 数据来解析此文本输出，以便更方便使用：
 
-
-
-
 ```java
- package com.markwatson.km;
+package com.markwatson.km;
 
- import java.util.*;
- import java.util.regex.Pattern;
+import java.util.*;
+import java.util.regex.Pattern;
 
 public class ExcelData {
   public List<List<List<String>>> sheetsAndRows = new ArrayList<>();
@@ -3783,25 +3713,25 @@ public class ExcelData {
 }
 ```
 
-当创建 `ExcelData` 类的新实例时，你可以通过 `sheetsAndRows` 中的公共数据访问各个工作表（sheets）以及每个工作表中的行（rows）。
+当创建`ExcelData`类的新实例时，你可以通过`sheetsAndRows`中的公共数据访问各个工作表（sheets）以及每个工作表中的行（rows）。
 
-`sheetsAndRows` 的第一个索引访问单个工作表，第二个索引访问所选工作表中的行，第三个（内部）索引则访问所选行中的单个列（columns）。公共工具方法 `toString` 提供了访问这些数据的示例。在下一个列表的示例代码使用了 `ExcellData` 类。
+`sheetsAndRows`的第一个索引访问单个工作表，第二个索引访问所选工作表中的行，第三个（内部）索引则访问所选行中的单个列（columns）。公共工具方法`toString`提供了访问这些数据的示例。在下一个列表的示例代码使用了`ExcelData`类。
 
-以下工具类 `PoiMicrosoftFileReader` 具有处理 Excel 和 Word 文件的方法：
+以下工具类`PoiMicrosoftFileReader`具有处理 Excel 和 Word 文件的方法：
 
 ```java
- package com.markwatson.km;
+package com.markwatson.km;
 
- import java.io.*;
- import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
- import org.apache.tika.Tika;
- import org.apache.tika.exception.TikaException;
- import org.apache.tika.metadata.Metadata;
- import org.apache.tika.parser.ParseContext;
- import org.apache.tika.parser.microsoft.ooxml.OOXMLParser;
- import org.apache.tika.sax.BodyContentHandler;
- import org.apache.xmlbeans.XmlException;
- import org.xml.sax.SAXException;
+import java.io.*;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.tika.Tika;
+import org.apache.tika.exception.TikaException;
+import org.apache.tika.metadata.Metadata;
+import org.apache.tika.parser.ParseContext;
+import org.apache.tika.parser.microsoft.ooxml.OOXMLParser;
+import org.apache.tika.sax.BodyContentHandler;
+import org.apache.xmlbeans.XmlException;
+import org.xml.sax.SAXException;
 
 public class PoiMicrosoftFileReader {
 
@@ -3838,9 +3768,9 @@ public class PoiMicrosoftFileReader {
 }
 ```
 
-静态公共方法 `DocxToText` 将指定 Microsoft Word docx 文件的路径转换为该文件中的纯文本。公共静态方法 `readXlsx` 将 Excel xlsx 文件的路径转换为我们之前看过的 `ExcelData` 类的实例。
+静态公共方法`DocxToText`将指定 Microsoft Word docx 文件的路径转换为该文件中的纯文本。公共静态方法`readXlsx`将 Excel xlsx 文件的路径转换为我们之前看过的`ExcelData`类的实例。
 
-运行测试程序 `GoogleDriveTest.testDocxToText` 和 `GoogleDriveTest.testExcelReader` 生成了以下输出。我使用 jUnit 测试作为一种方便的方式，在示例代码中提供调用 API 的示例。这里是测试代码及其输出：
+运行测试程序`GoogleDriveTest.testDocxToText`和`GoogleDriveTest.testExcelReader`生成了以下输出。我使用 jUnit 测试作为一种方便的方式，在示例代码中提供调用 API 的示例。这里是测试代码及其输出：
 
 ```
 String contents = PoiMicrosoftFileReader.DocxToText("Googleout/Drive/Test document.docx");
@@ -3852,27 +3782,31 @@ System.err.println("Contents of spreadsheet:\n\n" + spreadsheet);
 
 docx 文件内容：
 
+```
 <ExcelData # sheets: 1
   <Sheet
     <row []>
   >
 >
+```
 
 #### 处理 iCal 文件
 
-iCal 格式是 Google、Apple 以及其他供应商导出日历数据的标准。以下代码使用了 `net.fortuna.icalj` 库，该库提供了一个处理 iCal 文件的丰富 API。在以下示例中，我们使用了其中的一小部分：
+iCal 格式是 Google、Apple 以及其他供应商导出日历数据的标准。以下代码使用了`net.fortuna.icalj`库，该库提供了一个处理 iCal 文件的丰富 API。在以下示例中，我们使用了其中的一小部分：
+
+
 
 ```java
- package com.markwatson.km;
+package com.markwatson.km;
 
- // refenerence: https://github.com/ical4j/ical
- import net.fortuna.icalj.data.CalendarBuilder;
- import net.fortuna.icalj.data.ParserException;
- import net.fortuna.ical4j.model.Component;
- import net.fortuna.ical4j.model.Property;
- import java.io.FileInputStream;
- import java.io.IOException;
- import java.util.*;
+// reference: https://github.com/ical4j/ical
+import net.fortuna.icalj.data.CalendarBuilder;
+import net.fortuna.icalj.data.ParserException;
+import net.fortuna.ical4j.model.Component;
+import net.fortuna.ical4j.model.Property;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.*;
 
 public class ReadCalendarFiles {
 
@@ -3915,10 +3849,6 @@ public class ReadCalendarFiles {
 ```
 
 运行测试程序 `GoogleDriveTest.testCalendarFileReader` 生成了以下输出。这里是测试代码及其输出：
-
-
-
-
 
 ```java
  1   ReadCalendarFiles calendar =
@@ -4091,145 +4021,145 @@ public class ReadCalendarFiles {
 
 在这一节中，我们使用 Apache Tika 库来解析 `mbox` 格式的电子邮件文件。第 36 行有一处被注释的输出，你可能想要取消注释并查看完整的消息文本，以查看每封邮件在处理时的所有可用元数据。你在应用程序中使用的元数据可能比我在示例代码中使用的更多。
 
+
+
 ```java
- 1 package com.markwatson.km;
-  2 
-  3 // reference: https://tika.apache.org/
-  4 
-  5 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-  6 import org.apache.tika.exception.TikaException;
-  7 import org.apache.tika.metadata.Metadata;
-  8 import org.apache.tika.parser.ParseContext;
-  9 import org.apache.tika.parser.Parser;
- 10 import org.apache.tika.parser.mbox.MboxParser;
- 11 import org.apache.tika.parser.microsoft.ooxml.OOXMLParser;
- 12 import org.apache.tika.sax.BodyContentHandler;
- 13 import org.apache.xmlbeans.XmlException;
- 14 import org.xml.sax.SAXException;
- 15 
- 16 import java.io.*;
- 17 import java.nio.charset.StandardCharsets;
- 18 import java.util.ArrayList;
- 19 import java.util.List;
- 20 
- 21 /**
- 22  * Created by markw on 9/17/15.
- 23  */
- 24 public class ReadMbox {
- 25 
- 26   static private boolean DEBUG_PRINT_META_DATA = true;
- 27 
- 28   private String getTextContents(InputStream stream) {
- 29     BufferedReader br = new BufferedReader(new InputStreamReader(stream));
- 30     StringBuffer sb = new StringBuffer();
- 31     String subject = "";
- 32     String from = "";
- 33     String to = "";
- 34     try {
- 35       String line = null;
- 36       boolean inText = false;
- 37       while ((line = br.readLine()) != null) {
- 38         //System.err.println("-- line: " + line);
- 39         if (!inText) {
- 40           if (line.startsWith("Subject:")) subject = line.substring(9);
- 41           if (line.startsWith("To:"))      to = line.substring(4);
- 42           if (line.startsWith("From:"))    from = line.substring(6);
- 43         }
- 44         if (line.startsWith("Content-Type: text/plain;")) {
- 45             inText = true;
- 46             br.readLine();
- 47         } else if (inText) {
- 48           if (line.startsWith("-----")) break;
- 49           if (line.startsWith("--_---")) break;
- 50           if (line.startsWith("Content-Type: text/html;")) break;
- 51           sb.append(line + "\n");
- 52         }
- 53       }
- 54     } catch (Exception ex) {
- 55       System.err.println("ERROR: " + ex);
- 56     }
- 57     return "To: " + to + "\nFrom: " + from + "\nSubject: " +
- 58            subject + "\n" + sb.toString();
- 59   }
- 60 
- 61   public ReadMbox(String filePath)
- 62       throws IOException, InvalidFormatException, XmlException {
- 63     FileInputStream inputStream = new FileInputStream(filePath);
- 64     BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
- 65     StringBuffer sb = new StringBuffer();
- 66     String line = null;
- 67     boolean inText = false;
- 68     try {
- 69       while ((line = br.readLine()) != null) {
- 70         if (!inText) {
- 71           if (line.startsWith("Subject:")) subject = line.substring(9);
- 72           if (line.startsWith("To:"))      to = line.substring(4);
- 73           if (line.startsWith("From:"))    from = line.substring(6);
- 74         }
- 75         if (line.startsWith("Content-Type: text/plain;")) {
- 76             inText = true;
- 77             br.readLine();
- 78         } else if (inText) {
- 79           if (line.startsWith("-----")) break;
- 80           if (line.startsWith("--_---")) break;
- 81           if (line.startsWith("Content-Type: text/html;")) break;
- 82           sb.append(line + "\n");
- 83         }
- 84       }
- 85     } catch (Exception ex) {
- 86       System.err.println("ERROR: " + ex);
- 87     }
- 88     return "To: " + to + "\nFrom: " + from + "\nSubject: " +
- 89            subject + "\n" + sb.toString();
- 90   }
- 91 
- 92   public int size() {
- 93     return emails.size();
- 94   }
- 95 
- 96   public String getEmail(int index) {
- 97     return emails.get(index);
- 98   }
- 99 
- 100  public List<String> emails = new ArrayList<>();
-101 }
+package com.markwatson.km;
+
+// reference: https://tika.apache.org/
+
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.tika.exception.TikaException;
+import org.apache.tika.metadata.Metadata;
+import org.apache.tika.parser.ParseContext;
+import org.apache.tika.parser.Parser;
+import org.apache.tika.parser.mbox.MboxParser;
+import org.apache.tika.parser.microsoft.ooxml.OOXMLParser;
+import org.apache.tika.sax.BodyContentHandler;
+import org.apache.xmlbeans.XmlException;
+import org.xml.sax.SAXException;
+
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by markw on 9/17/15.
+ */
+public class ReadMbox {
+
+  static private boolean DEBUG_PRINT_META_DATA = true;
+
+  private String getTextContents(InputStream stream) {
+    BufferedReader br = new BufferedReader(new InputStreamReader(stream));
+    StringBuffer sb = new StringBuffer();
+    String subject = "";
+    String from = "";
+    String to = "";
+    try {
+      String line = null;
+      boolean inText = false;
+      while ((line = br.readLine()) != null) {
+        //System.err.println("-- line: " + line);
+        if (!inText) {
+          if (line.startsWith("Subject:")) subject = line.substring(9);
+          if (line.startsWith("To:"))      to = line.substring(4);
+          if (line.startsWith("From:"))    from = line.substring(6);
+        }
+        if (line.startsWith("Content-Type: text/plain;")) {
+            inText = true;
+            br.readLine();
+        } else if (inText) {
+          if (line.startsWith("-----")) break;
+          if (line.startsWith("--_---")) break;
+          if (line.startsWith("Content-Type: text/html;")) break;
+          sb.append(line + "\n");
+        }
+      }
+    } catch (Exception ex) {
+      System.err.println("ERROR: " + ex);
+    }
+    return "To: " + to + "\nFrom: " + from + "\nSubject: " +
+           subject + "\n" + sb.toString();
+  }
+
+  public ReadMbox(String filePath)
+      throws IOException, InvalidFormatException, XmlException {
+    FileInputStream inputStream = new FileInputStream(filePath);
+    BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
+    StringBuffer sb = new StringBuffer();
+    String line = null;
+    boolean inText = false;
+    try {
+      while ((line = br.readLine()) != null) {
+        if (!inText) {
+          if (line.startsWith("Subject:")) subject = line.substring(9);
+          if (line.startsWith("To:"))      to = line.substring(4);
+          if (line.startsWith("From:"))    from = line.substring(6);
+        }
+        if (line.startsWith("Content-Type: text/plain;")) {
+            inText = true;
+            br.readLine();
+        } else if (inText) {
+          if (line.startsWith("-----")) break;
+          if (line.startsWith("--_---")) break;
+          if (line.startsWith("Content-Type: text/html;")) break;
+          sb.append(line + "\n");
+        }
+      }
+    } catch (Exception ex) {
+      System.err.println("ERROR: " + ex);
+    }
+    return "To: " + to + "\nFrom: " + from + "\nSubject: " +
+           subject + "\n" + sb.toString();
+  }
+
+  public int size() {
+    return emails.size();
+  }
+
+  public String getEmail(int index) {
+    return emails.get(index);
+  }
+
+  public List<String> emails = new ArrayList<>();
+}
 ```
 
 ```text
- 1   ReadCalendarFiles calendar = new ReadCalendarFiles("GoogleTakeout/Calendar/Mark Watson.ics");
- 2   System.err.println("\n\nTest iCal calendar file has " + calendar.size() + " calendar entries.");
- 3   for (int i=0, size=calendar.size(); i<size; i++) {
- 4     Map<String,String> entry = calendar.getCalendarEntry(i);
- 5     System.err.println("\n\tNext calendar entry:");
- 6     System.err.println("\n\t\tDTSAMP:\t" + entry.getOrDefault("DTSTAMP", ""));
- 7     System.err.println("\n\t\tSUMMARY:\t" + entry.getOrDefault("SUMMARY", ""));
- 8     System.err.println("\n\t\tDESCRIPTION:\t" + entry.getOrDefault("DESCRIPTION", ""));
- 9   }
+ReadCalendarFiles calendar = new ReadCalendarFiles("GoogleTakeout/Calendar/Mark Watson.ics");
+System.err.println("\n\nTest iCal calendar file has " + calendar.size() + " calendar entries.");
+for (int i=0, size=calendar.size(); i<size; i++) {
+  Map<String,String> entry = calendar.getCalendarEntry(i);
+  System.err.println("\n\tNext calendar entry:");
+  System.err.println("\n\t\tDTSAMP:\t" + entry.getOrDefault("DTSTAMP", ""));
+  System.err.println("\n\t\tSUMMARY:\t" + entry.getOrDefault("SUMMARY", ""));
+  System.err.println("\n\t\tDESCRIPTION:\t" + entry.getOrDefault("DESCRIPTION", ""));
+}
 ```
 
 ```text
- 1 Test iCal calendar file has 11 calendar entries.
- 2 
- 3 	Next calendar entry:
- 4 
- 5 		DTSAMP: 20150917T234033Z
- 6 
- 7 		SUMMARY: Free Foobar Test  Meeting
- 8 
- 9 		DESCRIPTION: Bob Smith has invited you to join a meeting
-10 
-11  ... ...
+Test iCal calendar file has 11 calendar entries.
+
+	Next calendar entry:
+
+		DTSAMP: 20150917T234033Z
+
+		SUMMARY: Free Foobar Test  Meeting
+
+		DESCRIPTION: Bob Smith has invited you to join a meeting
+
+ ... ...
 ```
 
-### 使用 Postgres 作为带有文本搜索的本地文档存储库
+## 使用 Postgres 作为带有文本搜索的本地文档存储库
 
 现在我们将开发一组简单的工具类，用于方便地将 Postgres 数据库中的结构化数据和“较非结构化”的 JSON 数据转换为字符串。我们还将为包含文本数据的列提供文本搜索支持。
 
 我在工作中使用许多不同的数据存储：Amazon S3 和 DynamoDB、Google Big Table、Hadoop 文件系统、MongoDB、CouchDB、Cassandra 等。对于不同的项目有很多很好的选择！
 
 尽管如此，Postgres 是我的“瑞士军刀”式数据存储库，它提供了稳固的关系型数据库、全文索引以及对无模式原生 JSON 文档的原支持。在这一短节中，我将介绍 Postgres 的 JDBC 访问，并涵盖如果你也想将 Postgres 作为你的“瑞士军刀”式数据存储库时可能需要的常见用例。
-
-
 
 
 
@@ -4354,11 +4284,8 @@ public class PostgresUtilities {
 }
 ```
 
-
-
-
-```
- results = pcon.doQuery(
+```java
+results = pcon.doQuery(
         "select * from test where to_tsvector(description) @@ to_tsquery('" +
         search_string + "')");
     System.out.println("results = " + results);
@@ -4370,8 +4297,8 @@ public class PostgresUtilities {
 results = [{name=Anita, description=sister inlaw who lives in San Diego, id=1}]
 ```
 
-```
- num_rows = pcon.doUpdate("drop table test");
+```java
+num_rows = pcon.doUpdate("drop table test");
     System.out.println("num_rows = " + num_rows);
 ```
 
@@ -4394,10 +4321,8 @@ num_rows = 0
 我关于构建解决世界现实问题的系统的一通用哲学包括以下几点：
 
 - 将学习新技术作为一种背景练习，以“保持工具箱完整”。这在如今技术快速变化的当下尤为重要，而且新技术往往能让实现新功能变得更加容易。我写这本书的一个主要原因是向你介绍我发现的最实用的技术。
+
 - 确保你解决的是正确的问题。构建对你的公司、组织以及整个世界产生影响的系统，通过构建你认为将产生最大积极影响的事物。
 
-```
 顺颂商祺，
 Mark Watson  2015 年 11 月 10 日
-```
-

@@ -1,8 +1,7 @@
+
 # 桌面应用
 
-## 桌面应用
-
-Clojure 可以创建基于 Swing 的 GUI 程序。下面是一个简单的例子， 用户可以输入他们的名字，然后点击“Greet：按钮，然后它会弹出一个对话框显示一个欢迎信息。可以关注一下这里我们使用了 `proxy` 宏来创建一个集成某个指定类 ( `JFrame` )并且实现了一些 java 接口 (这里只有 `ActionListener` 一个接口)的对象。.
+Clojure 可以创建基于 Swing 的 GUI 程序。下面是一个简单的例子，用户可以输入他们的名字，然后点击“Greet”按钮，之后会弹出一个对话框显示欢迎信息。这里使用了`proxy`宏来创建一个集成某个指定类（`JFrame`）并且实现了一些 Java 接口（这里只有`ActionListener`一个接口）的对象。
 
 ![Swing input frame](img/22IF3u.png) ![Swing output dialog](img/JZ7vay.png)
 
@@ -37,5 +36,5 @@ Clojure 可以创建基于 Swing 的 GUI 程序。下面是一个简单的例子
     (.setDefaultCloseOperation JFrame/EXIT_ON_CLOSE)
     (.setVisible true))
   ; Register frame to listen for greet-button presses.
-  (.addActionListener greet-button frame)) 
+  (.addActionListener greet-button frame))
 ```

@@ -1,4 +1,5 @@
-# 如何在构建中断时通知微软团队！
+
+# 如何在构建中断时通知微软团队
 
 > 原文：<https://medium.com/javarevisited/never-overlook-a-broken-build-again-get-notified-in-microsoft-teams-d020a24292cd?source=collection_archive---------1----------------------->
 
@@ -16,7 +17,7 @@
 
 不要像杰克一样。如果构建中断，让 CI 服务器通知您。**收到一条团队关于不完整构建的消息。**
 
-<https://verbosemode.dev/membership>  
+<https://verbosemode.dev/membership>
 
 ## 配置 Microsoft 团队
 
@@ -68,4 +69,4 @@
 
 想要从团队中获得更多？查看以下文章:
 
-</javarevisited/react-faster-alertmanager-to-teams-fa888bcd7c01> 
+</javarevisited/react-faster-alertmanager-to-teams-fa888bcd7c01>

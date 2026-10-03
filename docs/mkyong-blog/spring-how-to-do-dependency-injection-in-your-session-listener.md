@@ -1,17 +1,18 @@
-# spring——如何在会话监听器中进行依赖注入
+
+# Spring——如何在会话监听器中进行依赖注入
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring/spring-how-to-do-dependency-injection-in-your-session-listener/>
 
-Spring 附带了一个" **ContextLoaderListener** "监听器，用于将 Spring 依赖注入会话监听器。在本教程中，它通过在会话监听器中添加一个 Spring 依赖注入 bean 来修改这个 [HttpSessionListener 示例](http://web.archive.org/web/20190224160129/http://www.mkyong.com/servlet/a-simple-httpsessionlistener-example-active-sessions-counter/)。
+Spring 附带了一个`ContextLoaderListener`监听器，用于将 Spring 依赖注入会话监听器。在本教程中，它通过在会话监听器中添加一个 Spring 依赖注入 bean 来修改这个 [HttpSessionListener 示例](http://web.archive.org/web/20190224160129/http://www.mkyong.com/servlet/a-simple-httpsessionlistener-example-active-sessions-counter/)。
 
-## 1.春豆
+## 1. 春豆
 
 创建一个简单的计数器服务来打印创建的会话总数。
 
-*文件:CounterService.java*
+*文件：`CounterService.java`*
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 public class CounterService{
 
@@ -19,13 +20,13 @@ public class CounterService{
 		System.out.println("Total session created : " + count);
 	}
 
-} 
+}
 ```
 
-*文件:counter . XML*–Bean 配置文件。
+*文件：`counter.xml`*——Bean 配置文件。
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <beans 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
@@ -33,17 +34,17 @@ public class CounterService{
 
 	<bean id="counterService" class="com.mkyong.common.CounterService" />
 
-</beans> 
+</beans>
 ```
 
- ## 2.WebApplicationContextUtils
+## 2. WebApplicationContextUtils
 
-使用“`WebApplicationContextUtils`”来获取 Spring 的上下文，然后您可以用正常的 Spring 方式获取任何声明的 Spring 的 bean。
+使用`WebApplicationContextUtils`来获取 Spring 的上下文，然后您可以用正常的 Spring 方式获取任何声明的 Spring 的 bean。
 
-*文件:SessionCounterListener.java*
+*文件：`SessionCounterListener.java`*
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpSessionEvent;
@@ -86,20 +87,20 @@ public class SessionCounterListener implements HttpSessionListener {
 
           counterService.printCounter(totalActiveSessions);
     }
-} 
+}
 ```
 
- ## 3.综合
+## 3. 综合
 
-唯一的问题是，您的 web 应用程序如何知道在哪里加载 Spring bean 配置文件？秘密就在“web.xml”文件中。
+唯一的问题是，您的 web 应用程序如何知道在哪里加载 Spring bean 配置文件？秘密就在`web.xml`文件中。
 
-1.  将“`ContextLoaderListener`”注册为第一个监听器，让您的 web 应用程序知道 Spring context loader。
-2.  配置“`contextConfigLocation`”并定义 Spring 的 bean 配置文件。
+1. 将`ContextLoaderListener`注册为第一个监听器，让您的 web 应用程序知道 Spring context loader。
+2. 配置`contextConfigLocation`并定义 Spring 的 bean 配置文件。
 
-*文件:web.xml*
+*文件：`web.xml`*
 
 ```java
- <!DOCTYPE web-app PUBLIC
+<!DOCTYPE web-app PUBLIC
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
@@ -133,13 +134,13 @@ public class SessionCounterListener implements HttpSessionListener {
 	<url-pattern>/Demo</url-pattern>
   </servlet-mapping>
 
-</web-app> 
+</web-app>
 ```
 
-*文件:App.java*
+*文件：`App.java`*
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -165,33 +166,26 @@ public class App extends HttpServlet{
         out.println("</html>");	
 
    }
-} 
+}
 ```
 
-启动 Tomcat，访问网址“*http://localhost:8080/spring web example/Demo*”。
+启动 Tomcat，访问网址`http://localhost:8080/spring web example/Demo`。
 
 *输出*
 
 ```java
- sessionCreated - add one session into counter
+sessionCreated - add one session into counter
 Total session created : 1
 sessionDestroyed - deduct one session from counter
-Total session created : 0 
+Total session created : 0
 ```
 
 查看控制台输出，通过 Spring DI 获得计数器服务 bean，并打印会话总数。
 
 ## 结论
 
-在 Spring 中，“`ContextLoaderListener`”是将 Spring 依赖注入集成到几乎所有 web 应用程序的一种通用方式。
+在 Spring 中，`ContextLoaderListener`是将 Spring 依赖注入集成到几乎所有 web 应用程序的一种通用方式。
 
-## [计] 下载
+## 下载
 
-Download It – [SpringWeb-DI-Session-listener-Example.zip](http://web.archive.org/web/20190224160129/http://www.mkyong.com/wp-content/uploads/2010/03/SpringWeb-DI-Session-listener-Example.zip)[session listener](http://web.archive.org/web/20190224160129/http://www.mkyong.com/tag/session-listener/) [spring](http://web.archive.org/web/20190224160129/http://www.mkyong.com/tag/spring/)
-
-
-
-
-
-
-
+Download It – [SpringWeb-DI-Session-listener-Example.zip](http://web.archive.org/web/20190224160129/http://www.mkyong.com/wp-content/uploads/2010/03/SpringWeb-DI-Session-listener-Example.zip) [session listener](http://web.archive.org/web/20190224160129/http://www.mkyong.com/tag/session-listener/) [spring](http://web.archive.org/web/20190224160129/http://www.mkyong.com/tag/spring/)

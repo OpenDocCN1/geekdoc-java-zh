@@ -1,8 +1,9 @@
+
 # 理解签署和验证
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/jar/intro.html`](https://docs.oracle.com/javase/tutorial/deployment/jar/intro.html)
 
-Java™ 平台使你能够数字签名 JAR 文件。你数字签名一个文件的原因与你可能用钢笔在纸上签署文件的原因相同--让读者知道你写了这个文件，或者至少这个文件得到了你的批准。
+Java™ 平台使你能够数字签名 JAR 文件。你数字签名一个文件的原因与你可能用钢笔在纸上签署文件的原因相同——让读者知道你写了这个文件，或者至少这个文件得到了你的批准。
 
 当你签署一封信时，例如，所有认识你签名的人都可以确认你写了这封信。同样地，当你数字签名一个文件时，任何“认识”你数字签名的人都知道这个文件来自你。识别电子签名的过程称为*验证*。
 
@@ -25,7 +26,6 @@ Java 平台通过使用称为公钥和私钥的特殊数字来实现签署和验
 总结数字签名：
 
 +   签名者使用私钥对 JAR 文件进行签名。
-
 +   相应的公钥与其证书一起放置在 JAR 文件中，以便任何想要验证签名的人可以使用。
 
 ## 摘要和签名文件
@@ -35,7 +35,6 @@ Java 平台通过使用称为公钥和私钥的特殊数字来实现签署和验
 ```java
 Name: test/classes/ClassOne.class
 SHA1-Digest: TD1GZt8G11dXY2p4olSZPc5Rj64=
-
 ```
 
 摘要值是文件内容的哈希值或编码表示，这些值是在签名时文件的内容。只有当文件本身发生变化时，文件的摘要值才会改变。
@@ -58,7 +57,6 @@ SHA1-Digest: kdHbE7kL9ZHLgK7akHttYV4XIa0=
 
 Name: test/images/ImageTwo.gif
 SHA1-Digest: mF0D5zpk68R4oaxEqoS9Q7nhm60=
-
 ```
 
 如您所见，签名文件包含存档文件的摘要条目，这些条目看起来类似于清单中的摘要值条目。然而，清单中的摘要值是从文件本身计算出来的，而签名文件中的摘要值是从清单中的相应条目计算出来的。签名文件还包含整个清单的摘要值（请参见上面示例中的`SHA1-Digest-Manifest`头）。
@@ -74,25 +72,21 @@ SHA1-Digest: mF0D5zpk68R4oaxEqoS9Q7nhm60=
 签名块文件包含两个用于验证的关键元素：
 
 +   使用签名者的私钥生成的 JAR 文件的数字签名
-
 +   包含签名者公钥的证书，供任何想要验证已签名 JAR 文件的人使用
 
 签名块文件的文件名通常会有一个`.DSA`扩展名，表示它们是由默认数字签名算法创建的。如果使用与其他标准算法相关的密钥进行签名，则可能会有其他文件扩展名。
 
-* * *
+---
 
 ## 相关文档
 
-有关密钥、证书和认证机构的其他信息，请参见
+有关密钥、证书和认证机构的其他信息，请参见：
 
 +   [JDK 安全工具](https://docs.oracle.com/javase/8/docs/technotes/tools/index.html#security)
-
 +   [X.509 证书](https://docs.oracle.com/javase/8/docs/technotes/guides/security/cert3.html)
 
 有关 Java 平台安全架构的更多信息，请参阅此相关文档：
 
 +   Java SE 中的安全功能
-
 +   [Java SE 安全性](http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136007.html)
-
 +   [安全工具](https://docs.oracle.com/javase/8/docs/technotes/tools/index.html#security)

@@ -1,3 +1,4 @@
+
 # 用 Keycloak 在 Spring Boot 实现基于角色的授权
 
 > 原文：<https://medium.com/javarevisited/implement-role-based-authorization-in-spring-boot-with-keycloak-d7416ebd6206?source=collection_archive---------1----------------------->

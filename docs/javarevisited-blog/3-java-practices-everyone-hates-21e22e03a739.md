@@ -1,3 +1,4 @@
+
 # 人人讨厌的 3 种 Java 实践
 
 > 原文：<https://medium.com/javarevisited/3-java-practices-everyone-hates-21e22e03a739?source=collection_archive---------1----------------------->
@@ -8,6 +9,6 @@
 
 照片由[马体·米罗什尼琴科](https://www.pexels.com/@tima-miroshnichenko?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)从[派克斯](https://www.pexels.com/photo/man-person-people-woman-6914069/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)拍摄——由作者编辑
 
-*你使用静态关键字吗？你抛出异常了吗？您是否将数据放在会话中？*
+*你使用`static`关键字吗？你抛出异常了吗？您是否将数据放在会话中？*
 
-Java 开发人员实践了这些，但不知道要点。他们不知道什么时候使用静态属性。他们不知道如何处理异常。他们把所有的数据都放在会话中。
+Java 开发人员实践了这些，但不知道要点。他们不知道什么时候使用`static`属性。他们不知道如何处理异常。他们把所有的数据都放在会话中。

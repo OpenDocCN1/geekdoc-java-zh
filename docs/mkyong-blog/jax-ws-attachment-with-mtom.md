@@ -1,3 +1,4 @@
+
 # JAX-WS 与 MTOM 的关系
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/webservices/jax-ws/jax-ws-attachment-with-mtom/>
@@ -5,6 +6,7 @@
 一个完整的基于 JAX-WS SOAP 的示例，展示了如何使用**消息传输优化机制(MTOM)** 和**XML-二进制优化打包(XOP)** 技术在服务器和客户端之间发送二进制附件(图像)。
 
 **Note**
+
 There are ton of articles about what’s MTOM and the benefits of using it (see [reference sites](#reference) below), but it’s lack of complete example to use **MTOM in JAX-WS**, hope this example can fill in some missing pieces in the whole picture.
 
 ## 在服务器上启用 MTOM
@@ -169,6 +171,7 @@ public class ImageClient{
 这是客户端生成的 HTTP 和 SOAP 流量，由流量监控工具捕获。
 
 为了节省空间，省略了第一个 wsdl 请求。
+
 **客户端发送请求:**
 
 ```java
@@ -293,10 +296,15 @@ public class ImageClient{
 这是客户端生成的 HTTP 和 SOAP 流量，由流量监控工具捕获。
 
 为了节省空间，省略了第一个 wsdl 请求。
+
 **客户端发送请求:**
 
+
+
+## 请求示例
+
 ```java
- POST /ws/image HTTP/1.1
+POST /ws/image HTTP/1.1
 Content-type: multipart/related;
 start="<rootpart*751f2e5d-47f8-47d8-baf0-f793c29bd931@example.jaxws.sun.com>";
 type="application/xop+xml";
@@ -336,10 +344,10 @@ Content-Transfer-Encoding: binary
 Binary data here............. 
 ```
 
-**服务器发送响应:**
+## 服务器发送响应
 
 ```java
- HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 Transfer-encoding: chunked
 Content-type: multipart/related;
 start="<rootpart*188a5835-198b-4c28-9b36-bf030578f2bd@example.jaxws.sun.com>";
@@ -366,12 +374,12 @@ Content-Transfer-Encoding: binary
 
 ## 完整的 WSDL 文档
 
-有兴趣研究 WSDL 文件的，可以通过 URL:*http://localhost:9999/ws/image 获取 wsdl 文件？wsdl*
+有兴趣研究 WSDL 文件的，可以通过 URL：`http://localhost:9999/ws/image` 获取 wsdl 文件？wsdl
 
-*ImageServer WSDL 文件示例*
+### ImageServer WSDL 文件示例
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <definitions 
 	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
@@ -452,11 +460,11 @@ Download It – [JAX-WS-Attachment-MTOM-Example.zip](http://web.archive.org/web/
 
 ## 参考
 
-1.  [http://www.devx.com/xml/Article/34797/1763/page/1](http://web.archive.org/web/20210610050633/http://www.devx.com/xml/Article/34797/1763/page/1)
-2.  [http://download . Oracle . com/docs/CD/e 17802 _ 01/web services/web services/docs/2.0/jaxws/mtom-swaref . html](http://web.archive.org/web/20210610050633/https://download.oracle.com/docs/cd/E17802_01/webservices/webservices/docs/2.0/jaxws/mtom-swaref.html)
-3.  [http://www.crosschecknet.com/intro_to_mtom.php](http://web.archive.org/web/20210610050633/http://www.crosschecknet.com/intro_to_mtom.php)
-4.  [http://download . Oracle . com/docs/CD/e 12840 _ 01/WLS/docs 103/webserv _ adv/mtom . html](http://web.archive.org/web/20210610050633/https://download.oracle.com/docs/cd/E12840_01/wls/docs103/webserv_adv/mtom.html)
-5.  [http://www . the server side . com/news/1363957/Sending-Attachments-with-SOAP](http://web.archive.org/web/20210610050633/http://www.theserverside.com/news/1363957/Sending-Attachments-with-SOAP)
-6.  [http://metro.java.net/guide/Binary_Attachments__MTOM_.html](http://web.archive.org/web/20210610050633/http://metro.java.net/guide/Binary_Attachments__MTOM_.html)
+1. [http://www.devx.com/xml/Article/34797/1763/page/1](http://web.archive.org/web/20210610050633/http://www.devx.com/xml/Article/34797/1763/page/1)
+2. [http://download.oracle.com/docs/cd/E17802_01/webservices/webservices/docs/2.0/jaxws/mtom-swaref.html](http://web.archive.org/web/20210610050633/https://download.oracle.com/docs/cd/E17802_01/webservices/webservices/docs/2.0/jaxws/mtom-swaref.html)
+3. [http://www.crosschecknet.com/intro_to_mtom.php](http://web.archive.org/web/20210610050633/http://www.crosschecknet.com/intro_to_mtom.php)
+4. [http://download.oracle.com/docs/cd/E12840_01/wls/docs103/webserv_adv/mtom.html](http://web.archive.org/web/20210610050633/https://download.oracle.com/docs/cd/E12840_01/wls/docs103/webserv_adv/mtom.html)
+5. [http://www.theserverside.com/news/1363957/Sending-Attachments-with-SOAP](http://web.archive.org/web/20210610050633/http://www.theserverside.com/news/1363957/Sending-Attachments-with-SOAP)
+6. [http://metro.java.net/guide/Binary_Attachments__MTOM_.html](http://web.archive.org/web/20210610050633/http://metro.java.net/guide/Binary_Attachments__MTOM_.html)
 
-Tags : [attachment](http://web.archive.org/web/20210610050633/https://mkyong.com/tag/attachment/) [jax-ws](http://web.archive.org/web/20210610050633/https://mkyong.com/tag/jax-ws/) [mtom](http://web.archive.org/web/20210610050633/https://mkyong.com/tag/mtom/) [web services](http://web.archive.org/web/20210610050633/https://mkyong.com/tag/web-services/)<input type="hidden" id="mkyong-current-postId" value="7764">
+Tags : [attachment](http://web.archive.org/web/20210610050633/https://mkyong.com/tag/attachment/) [jax-ws](http://web.archive.org/web/20210610050633/https://mkyong.com/tag/jax-ws/) [mtom](http://web.archive.org/web/20210610050633/https://mkyong.com/tag/mtom/) [web services](http://web.archive.org/web/20210610050633/https://mkyong.com/tag/web-services/)

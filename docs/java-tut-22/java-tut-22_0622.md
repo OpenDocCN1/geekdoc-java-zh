@@ -1,3 +1,4 @@
+
 # 单词边界
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/text/word.html`](https://docs.oracle.com/javase/tutorial/i18n/text/word.html)
@@ -7,7 +8,6 @@
 ```java
 BreakIterator wordIterator =
     BreakIterator.getWordInstance(currentLocale);
-
 ```
 
 当您的应用程序需要对单词执行操作时，您会想要创建这样一个`BreakIterator`。这些操作可能是常见的单词处理功能，如选择、剪切、粘贴和复制。或者，您的应用程序可能会搜索单词，并且必须能够区分整个单词和简单字符串。
@@ -27,7 +27,6 @@ String someText = "She stopped. " +
     "on.";
 
 markBoundaries(someText, wordIterator);
-
 ```
 
 `markBoundaries`方法在`BreakIteratorDemo.java`中定义。该方法通过在目标字符串下方打印插入符号(^)来标记边界。在接下来的代码中，请注意`while`循环，其中`markBoundaries`通过调用`next`方法扫描字符串：
@@ -52,7 +51,6 @@ static void markBoundaries(String target, BreakIterator iterator) {
     System.out.println(target);
     System.out.println(markers);
 }
-
 ```
 
 `markBoundaries`方法的输出如下。请注意插入符号(^)相对于标点符号和空格的位置：
@@ -63,7 +61,6 @@ She stopped.  She said, "Hello there," and then
 
 went on.
 ^   ^^ ^^
-
 ```
 
 `BreakIterator`类使得从文本中选择单词变得容易。您不必编写自己的处理各种语言标点规则的例程；`BreakIterator`类会为您处理这些。
@@ -86,7 +83,6 @@ static void extractWords(String target, BreakIterator wordIterator) {
         end = wordIterator.next();
     }
 }
-
 ```
 
 `BreakIteratorDemo`程序调用`extractWords`，将其传递给前面示例中使用的相同目标字符串。`extractWords`方法打印出以下单词列表：
@@ -102,5 +98,4 @@ and
 then
 went
 on
-
 ```

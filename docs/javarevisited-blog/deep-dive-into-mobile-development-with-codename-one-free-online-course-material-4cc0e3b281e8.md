@@ -1,3 +1,4 @@
+
 # 深入了解代号为 One 的移动开发——免费在线课程材料
 
 > 原文：<https://medium.com/javarevisited/deep-dive-into-mobile-development-with-codename-one-free-online-course-material-4cc0e3b281e8?source=collection_archive---------4----------------------->
@@ -8,7 +9,7 @@
 
 作为本课程的一部分，我们将介绍构建一个简单的餐厅点餐系统的过程，并介绍几个复杂的代号为 One 的 API。
 
-该课程的最初版本包括由 parse4cn1 的创建者 Chidiebere Okwudire 创建的一个部分，该部分在此处被删除。我选择省略它，因为 Parse 项目的状态不清楚，并且我不确定该部分的 IP 所有权。
+该课程的最初版本包括由 `parse4cn1` 的创建者 Chidiebere Okwudire 创建的一个部分，该部分在此处被删除。我选择省略它，因为 Parse 项目的状态不清楚，并且我不确定该部分的 IP 所有权。
 
 # 使用 CSS
 
@@ -84,9 +85,10 @@
 
 # 把所有的放在一起
 
-服务器和移动应用程序的最终存储库在这里:
+服务器和移动应用程序的最终存储库在这里：
 
 *   [https://github.com/shai-almog/AppBackendServerFinal](https://github.com/shai-almog/AppBackendServerFinal)
+
 *   [https://github.com/shai-almog/MyRestaurantFinal](https://github.com/shai-almog/MyRestaurantFinal)
 
 ## 与服务器通信
@@ -135,4 +137,4 @@
 
 ## 在 iOS 和 Android 设备上进行分析
 
-## 案例研究:厨房水槽的性能问题
+## 案例研究：厨房水槽的性能问题

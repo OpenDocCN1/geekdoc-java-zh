@@ -1,3 +1,4 @@
+
 # 添加、替换具有属性的绑定
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/ops/bindattr.html`](https://docs.oracle.com/javase/tutorial/jndi/ops/bindattr.html)
@@ -21,10 +22,9 @@ attrs.put(objclass);
 
 // Perform bind
 ctx.bind("ou=favorite, ou=Fruits", fruit, attrs);
-
 ```
 
-`此示例`创建一个``Fruit``类的对象，并将其绑定到名称`"ou=favorite"`中，相对于`ctx`命名为`"ou=Fruits"`的上下文。此绑定具有`"objectclass"`属性。如果随后在`ctx`中查找名称`"ou=favorite, ou=Fruits"`，则会获取`fruit`对象。然后获取`"ou=favorite, ou=Fruits"`的属性，您将获得创建对象时使用的属性。以下是此示例的输出。
+此示例创建一个`Fruit`类的对象，并将其绑定到名称`"ou=favorite"`中，相对于`ctx`命名为`"ou=Fruits"`的上下文。此绑定具有`"objectclass"`属性。如果随后在`ctx`中查找名称`"ou=favorite, ou=Fruits"`，则会获取`fruit`对象。然后获取`"ou=favorite, ou=Fruits"`的属性，您将获得创建对象时使用的属性。以下是此示例的输出。
 
 ```java
 # java Bind
@@ -42,7 +42,6 @@ attribute: javareferenceaddress
 value: #0#fruit#orange
 attribute: ou
 value: favorite
-
 ```
 
 显示的额外属性和属性值用于存储有关对象（`fruit`）的信息。这些额外属性在本教程中将更详细地讨论。
@@ -66,10 +65,9 @@ attrs.put(objclass);
 
 // Perform bind
 ctx.rebind("ou=favorite, ou=Fruits", fruit, attrs);
-
 ```
 
-当您运行`此示例`时，它将替换``bind()``示例创建的绑定。
+当您运行此示例时，它将替换`bind()`示例创建的绑定。
 
 ```java
 # java Rebind
@@ -87,5 +85,4 @@ attribute: javareferenceaddress
 value: #0#fruit#lemon
 attribute: ou
 value: favorite
-
 ```

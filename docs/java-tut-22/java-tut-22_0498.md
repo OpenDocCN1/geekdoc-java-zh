@@ -1,3 +1,4 @@
+
 # 如何编写鼠标滚轮监听器
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/events/mousewheellistener.html`](https://docs.oracle.com/javase/tutorial/uiswing/events/mousewheellistener.html)
@@ -8,7 +9,7 @@
 
 通常不需要实现鼠标滚轮监听器，因为鼠标滚轮主要用于滚动。滚动窗格会自动注册鼠标滚轮监听器，以适当地响应鼠标滚轮。
 
-但是，要创建一个自定义组件用于滚动窗格内部，您可能需要自定义其滚动行为 —— 具体来说，您可能需要设置单位和块增量。例如，对于文本区域，滚动一个单位意味着滚动一行文本。块增量通常会滚动整个“页面”或视口的大小。有关更多信息，请参阅实现滚动智能客户端页面中的如何使用滚动窗格。
+但是，要创建一个自定义组件用于滚动窗格内部，您可能需要自定义其滚动行为——具体来说，您可能需要设置单位和块增量。例如，对于文本区域，滚动一个单位意味着滚动一行文本。块增量通常会滚动整个“页面”或视口的大小。有关更多信息，请参阅实现滚动智能客户端页面中的如何使用滚动窗格。
 
 要生成鼠标滚轮事件，光标必须位于已注册监听鼠标滚轮事件的组件*上方*。发生的滚动类型，无论是`WHEEL_UNIT_SCROLL`还是`WHEEL_BLOCK_SCROLL`，都取决于平台。鼠标滚轮滚动的量也取决于平台。滚动的类型和量都可以通过平台的鼠标控制面板进行设置。
 
@@ -16,23 +17,23 @@
 
 ![](img/f727de06d91f1422cd29860799dfa939.png)
 
-* * *
+---
 
 **试试这个：**
 
-1.  单击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 MouseWheelEventDemo（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参阅示例索引。![启动 MouseWheelEventDemo 应用程序](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/MouseWheelEventDemoProject/MouseWheelEventDemo.jnlp)
+1. 单击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行`MouseWheelEventDemo`（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参阅示例索引。![启动 MouseWheelEventDemo 应用程序](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/MouseWheelEventDemoProject/MouseWheelEventDemo.jnlp)
 
-1.  将光标移动到文本区域上。
+2. 将光标移动到文本区域上。
 
-1.  将鼠标滚轮远离您。您将看到一个或多个鼠标滚轮事件向*上*方向。
+3. 将鼠标滚轮远离您。您将看到一个或多个鼠标滚轮事件向*上*方向。
 
-1.  将鼠标滚轮向相反方向旋转。您将看到鼠标滚轮事件向*下*方向。
+4. 将鼠标滚轮向相反方向旋转。您将看到鼠标滚轮事件向*下*方向。
 
-1.  尝试更改系统的鼠标控制面板中鼠标滚轮的滚动行为，看看输出如何变化。您不需要重新启动演示以使更改生效。
+5. 尝试更改系统的鼠标控制面板中鼠标滚轮的滚动行为，看看输出如何变化。您不需要重新启动演示以使更改生效。
 
-* * *
+---
 
-对于其鼠标滚轮使用单位增量的系统的 MouseWheelEventDemo 的输出可能如下所示：
+对于其鼠标滚轮使用单位增量的系统的`MouseWheelEventDemo`的输出可能如下所示：
 
 ```java
 javax.swing.JTextArea: Mouse wheel moved UP 1 notch(es)
@@ -40,7 +41,6 @@ javax.swing.JTextArea: Mouse wheel moved UP 1 notch(es)
     Scroll amount: 3 unit increments per notch
     Units to scroll: -3 unit increments
     Vertical unit increment: 16 pixels
-
 ```
 
 由`getScrollAmount`方法返回的滚动量指示将滚动多少个单位，并始终呈现正数。由`getUnitsToScroll`方法返回的滚动单位在向下滚动时为正，在向上滚动时为负。垂直单位的像素数是使用`getUnitIncrement`方法从垂直滚动条获取的。在前面的示例中，向上滚动鼠标滚轮一个刻度应导致文本区域向上滚动 48 像素（3x16）。
@@ -51,7 +51,6 @@ javax.swing.JTextArea: Mouse wheel moved UP 1 notch(es)
 javax.swing.JTextArea: Mouse wheel moved UP 1 notch(es)
     Scroll type: WHEEL_BLOCK_SCROLL
     Vertical block increment: 307 pixels
-
 ```
 
 垂直块增量是使用`getBlockIncrement`方法从垂直滚动条获取的。在这种情况下，向上滚动鼠标滚轮一个刻度意味着文本区域应向上滚动 307 像素。
@@ -61,7 +60,7 @@ javax.swing.JTextArea: Mouse wheel moved UP 1 notch(es)
 ```java
 public class MouseWheelEventDemo ... implements MouseWheelListener ... {
     public MouseWheelEventDemo() {
-        *//where initialization occurs:*
+        //where initialization occurs:
         //Register for mouse-wheel events on the text area.
         textArea.addMouseWheelListener(this);
         ...
@@ -96,12 +95,11 @@ public class MouseWheelEventDemo ... implements MouseWheelListener ... {
     }
     ...
 }
-
 ```
 
 ## 鼠标滚轮监听器 API
 
-鼠标滚轮监听器接口
+### 鼠标滚轮监听器接口
 
 尽管`MouseWheelListener`只有一个方法，但它有相应的适配器类——`MouseAdapter`。这种能力使应用程序只需一个适配器类实例来管理来自鼠标指针的所有类型的事件。
 
@@ -109,7 +107,7 @@ public class MouseWheelEventDemo ... implements MouseWheelListener ... {
 | --- | --- |
 | [mouseWheelMoved(MouseWheelEvent)](https://docs.oracle.com/javase/8/docs/api/java/awt/event/MouseWheelListener.html#mouseWheelMoved-java.awt.event.MouseWheelEvent-) | 当鼠标滚轮旋转时调用。 |
 
-鼠标滚轮事件类
+### 鼠标滚轮事件类
 
 | 方法 | 目的 |
 | --- | --- |

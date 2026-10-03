@@ -1,14 +1,15 @@
+
 # Java bouncy castle 简介
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-bouncy-castle>
 
-## 1。概述
+## 1. 概述
 
 [BouncyCastle](https://web.archive.org/web/20220911184840/https://www.bouncycastle.org/) 是一个 Java 库，补充了默认的 Java 加密扩展(JCE)。
 
 在这篇介绍性文章中，我们将展示如何使用 BouncyCastle 来执行加密操作，如加密和签名。
 
-## 2。Maven 配置
+## 2. Maven 配置
 
 在我们开始使用这个库之前，我们需要将所需的依赖项添加到我们的`pom.xml` 文件中:
 
@@ -22,7 +23,7 @@
 
 注意，我们总是可以在 [Maven 中央存储库](https://web.archive.org/web/20220911184840/https://search.maven.org/classic/#search%7Cga%7C1%7Cg%3A%22org.bouncycastle%22%20)中查找最新的依赖版本。
 
-## 3。设置无限强度管辖策略文件
+## 3. 设置无限强度管辖策略文件
 
 标准 Java 安装在加密函数的强度方面受到限制，这是由于政策禁止使用超过特定值(例如 AES 的 128)的密钥。
 
@@ -30,12 +31,12 @@
 
 为了做到这一点，我们首先需要通过这个[链接](https://web.archive.org/web/20220911184840/http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)下载这个包。然后，我们需要将压缩文件解压到我们选择的目录中，其中包含两个 jar 文件:
 
-*   `local_policy.jar`
-*   `US_export_policy.jar`
+- `local_policy.jar`
+- `US_export_policy.jar`
 
 最后，我们需要查找`{JAVA_HOME}/lib/security`文件夹，并用我们在这里提取的文件替换现有的策略文件。
 
-注意在 Java 9 中的**，我们不再需要下载策略文件包**，将`crypto.policy`属性设置为`unlimited`就足够了:
+注意在 Java 9 中，**我们不再需要下载策略文件包**，将`crypto.policy`属性设置为`unlimited`就足够了:
 
 ```java
 Security.setProperty("crypto.policy", "unlimited");
@@ -58,16 +59,16 @@ Max Key Size for AES : 2147483647
 
 如果返回值等于 128，我们需要确保已经将文件安装到运行代码的 JVM 中。
 
-## 4。密码操作
+## 4. 密码操作
 
-### 4.1。准备证书和私钥
+### 4.1. 准备证书和私钥
 
 在我们开始实现加密函数之前，我们首先需要创建一个证书和一个私钥。
 
 出于测试目的，我们可以使用这些资源:
 
-*   [Baeldung.cer](https://web.archive.org/web/20220911184840/https://github.com/eugenp/tutorials/tree/master/libraries/src/main/resources)
-*   [bael dung . p12(password = " password ")](https://web.archive.org/web/20220911184840/https://github.com/eugenp/tutorials/tree/master/libraries/src/main/resources)
+- [Baeldung.cer](https://web.archive.org/web/20220911184840/https://github.com/eugenp/tutorials/tree/master/libraries/src/main/resources)
+- [Baeldung.p12 (password = "password")](https://web.archive.org/web/20220911184840/https://github.com/eugenp/tutorials/tree/master/libraries/src/main/resources)
 
 `Baeldung.cer`是使用国际 X.509 公钥基础设施标准的数字证书，而`Baeldung.p12`是包含私钥的受密码保护的 [PKCS12](https://web.archive.org/web/20220911184840/https://tools.ietf.org/html/rfc7292) 密钥库。
 
@@ -99,7 +100,7 @@ security.provider.N = org.bouncycastle.jce.provider.BouncyCastleProvider
 
 一旦正确安装了提供者，我们就使用`getInstance()`方法创建了一个`CertificateFactory`对象。
 
-`getInstance()`方法有两个参数；证书类型“X.509”和安全提供者“BC”。
+`getInstance()`方法有两个参数；证书类型"X.509"和安全提供者"BC"。
 
 通过`generateCertificate()`方法，`certFactory`实例随后被用来生成一个`X509Certificate`对象。
 
@@ -111,12 +112,12 @@ security.provider.N = org.bouncycastle.jce.provider.BouncyCastleProvider
 
 证书和私钥对主要用于非对称加密操作:
 
-*   加密
-*   [通信]解密
-*   签名
-*   确认
+- 加密
+- 解密
+- 签名
+- 确认
 
-### 4.2。CMS/PKCS7 加密和解密
+### 4.2. CMS/PKCS7 加密和解密
 
 在非对称加密技术中，每次通信都需要一个公共证书和一个私钥。
 
@@ -215,7 +216,7 @@ Encrypted Message : 0�*�H��...
 Decrypted Message : My password is 123456Seven
 ```
 
-### 4.3。CMS/PKCS7 签名和验证
+### 4.3. CMS/PKCS7 签名和验证
 
 签名和验证是验证数据真实性的加密操作。
 
@@ -257,6 +258,8 @@ public static byte[] signData(
 
 现在我们已经了解了如何对数据进行签名，让我们来看看如何验证已签名的数据:
 
+
+
 ```java
 public static boolean verifSignedData(byte[] signedData)
   throws Exception {
@@ -287,7 +290,7 @@ public static boolean verifSignedData(byte[] signedData)
 
 最后，我们使用`build()`方法创建了一个`SignerInformationVerifier`对象，并将其传递给`verify()`方法。
 
-如果给定的对象可以成功验证 signer 对象上的签名，verify()方法返回`true` 。
+如果给定的对象可以成功验证`signer`对象上的签名，`verify()`方法返回`true`。
 
 这里有一个简单的例子:
 
@@ -303,10 +306,10 @@ System.out.println(check);
 true
 ```
 
-## 5。结论
+## 5. 结论
 
-在本文中，我们发现了如何使用 BouncyCastle 库来执行基本的加密操作，比如加密和签名。
+在本文中，我们发现了如何使用`BouncyCastle`库来执行基本的加密操作，比如加密和签名。
 
 在现实世界中，我们通常希望签署然后加密我们的数据，这样，只有收件人能够使用私钥解密它，并根据数字签名检查其真实性。
 
-代码片段一如既往地可以在 GitHub 的[上找到。](https://web.archive.org/web/20220911184840/https://github.com/eugenp/tutorials/tree/master/libraries-security)
+代码片段一如既往地可以在 GitHub 的[上找到](https://web.archive.org/web/20220911184840/https://github.com/eugenp/tutorials/tree/master/libraries-security)。

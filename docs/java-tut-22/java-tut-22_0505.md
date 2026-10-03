@@ -1,3 +1,4 @@
+
 # 如何编写可撤销编辑监听器
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/events/undoableeditlistener.html`](https://docs.oracle.com/javase/tutorial/uiswing/events/undoableeditlistener.html)
@@ -8,8 +9,8 @@
 
 ```java
 ...
-*//where initialization occurs*
-*document*.addUndoableEditListener(new MyUndoableEditListener());
+//where initialization occurs
+document.addUndoableEditListener(new MyUndoableEditListener());
 ...
 protected class MyUndoableEditListener implements UndoableEditListener {
     public void undoableEditHappened(UndoableEditEvent e) {
@@ -18,11 +19,10 @@ protected class MyUndoableEditListener implements UndoableEditListener {
         undoAction.updateUndoState();
         redoAction.updateRedoState();
     }
-}  
-
+}
 ```
 
-您可以在使用 Swing 组件示例索引中找到`TextComponentDemo`的源文件链接。有关程序中可撤销编辑监听器方面的讨论，请参阅实现撤销和重做
+您可以在使用 Swing 组件示例索引中找到`TextComponentDemo`的源文件链接。有关程序中可撤销编辑监听器方面的讨论，请参阅实现撤销和重做。
 
 ## 可撤销编辑监听器 API
 
@@ -38,7 +38,7 @@ protected class MyUndoableEditListener implements UndoableEditListener {
 
 | 方法 | 目的 |
 | --- | --- |
-| [Object getSource()](https://docs.oracle.com/javase/8/docs/api/java/util/EventObject.html#getSource--) (*在 `java.util.EventObject` 中*) | 返回触发事件的对象。 |
+| [Object getSource()](https://docs.oracle.com/javase/8/docs/api/java/util/EventObject.html#getSource--) (*在`java.util.EventObject`中*) | 返回触发事件的对象。 |
 | [UndoableEdit getEdit()](https://docs.oracle.com/javase/8/docs/api/javax/swing/event/UndoableEditEvent.html#getEdit--) | 返回一个表示发生的编辑并包含有关撤消或重做编辑的信息和命令的[`UndoableEdit`](https://docs.oracle.com/javase/8/docs/api/javax/swing/undo/UndoableEdit.html)对象。 |
 
 ## 使用可撤销编辑监听器的示例

@@ -1,3 +1,4 @@
+
 # 什么是套接字？
 
 > 原文：[`docs.oracle.com/javase/tutorial/networking/sockets/definition.html`](https://docs.oracle.com/javase/tutorial/networking/sockets/definition.html)
@@ -16,13 +17,9 @@
 
 客户端和服务器现在可以通过写入或从套接字读取来进行通信。
 
-* * *
-
 **定义：**
 
 *套接字*是网络上两个运行程序之间的双向通信链路的一个端点。套接字绑定到一个端口号，以便 TCP 层可以识别数据要发送到的应用程序。
-
-* * *
 
 一个端点是 IP 地址和端口号的组合。每个 TCP 连接可以通过其两个端点唯一标识。这样，您可以在主机和服务器之间建立多个连接。
 
@@ -30,4 +27,4 @@ Java 平台中的`java.net`包提供了一个类`Socket`，它实现了您的 Ja
 
 此外，`java.net`包含`ServerSocket`类，它实现了服务器可以用来监听并接受客户端连接的套接字。本课程将向您展示如何使用`Socket`和`ServerSocket`类。
 
-如果你想连接到网络，`URL` 类及其相关类（`URLConnection`，`URLEncoder`）可能比套接字类更合适。实际上，URL 是与网络连接的相对高级的方式，并且在其底层实现中使用了套接字。有关通过 URL 连接到网络的信息，请参阅使用 URL。
+如果你想连接到网络，`URL`类及其相关类（`URLConnection`，`URLEncoder`）可能比套接字类更合适。实际上，URL 是与网络连接的相对高级的方式，并且在其底层实现中使用了套接字。有关通过 URL 连接到网络的信息，请参阅使用 URL。

@@ -1,25 +1,28 @@
+
 # 快速学习 Java 与 Java 编码练习
-
-
 
 ![](img/cover00186.jpeg)
 
-
 ## Java 简介
 
-## 在 Java 中运行简单的 Hello World 
+## 在 Java 中运行简单的 Hello World
 
 ### 安装
+
 你可以从以下位置下载 java 软件：
+
 http://www.oracle.com/java/javase/downloads/index.html 安装该产品。
 
 ### 设置 Java 环境
 
 #### 在 Windows 上
+
 假设你将 java 安装在以下目录：
+
 `C:\Program Files\Java`
 
 那么 java 编译器 `javac` 和 java 启动器 `java` 将位于：
+
 `C:\Program Files\Java\jdk.7.0_13\bin`
 
 我们需要将 `C:\Program Files\Java\jdk.7.0_13\bin` 添加到系统路径中，这样我们就可以任何地方运行程序了。按照以下步骤操作：
@@ -32,9 +35,11 @@ http://www.oracle.com/java/javase/downloads/index.html 安装该产品。
 6. 点击确定。
 
 #### 如何检查路径是否设置正确
+
 打开命令提示符并输入 `javac`。如果你看到输出，说明你成功设置了 java 环境。
 
 #### 在 Unix 系统上
+
 如果你将 java 安装在下面的目录 `/usr/java7`，那么 java 编译器 `javac` 和 java 启动器 `java` 位于 `/usr/java7/bin` 目录。你需要如下所示更新路径：
 
 ```bash
@@ -47,7 +52,8 @@ export PATH=/usr/java7/bin:$PATH
 export PATH=/usr/java7/bin:$PATH
 ```
 
-## Hello World 
+## Hello World
+
 让我们从通常打印“Hello World”的简单程序开始。
 
 打开记事本，输入以下代码：
@@ -63,87 +69,43 @@ class Hello{
 将文件保存为 `Hello.java`。让文件保存在 `C:\java Programs` 路径。打开命令提示符并进入文件保存的目录。
 
 ### 如何编译程序
+
 使用以下命令：
+
 ```bash
 javac Hello.java
 ```
 
 ### 如何运行程序
+
 使用以下命令：
+
 ```bash
 java Hello
 ```
+
 在使用命令 `java Hello` 运行程序后，你将看到输出 "Hello World"。
 
 ### 讨论
+
 1. 文件名应与 `class` 名称完全相等。这里 `class` 名称是 "Hello"，所以我将文件名保存为 `Hello.java`。
 
 ## Java 中的数据类型
+
 Java 主要支持两类数据类型：
+
 1. 原型类型
 2. 引用类型
 
 ### 1. 原型类型
+
 Java 语言支持 8 种数据数据类型。它们是：
+
 - `byte`, `short`, `int`, `long`
 - `float`, `double`
-
-# Java 中的运算符
-## 算术运算符
-## 算术运算符：++, --
-### 条件运算符
-### 逻辑运算符
-## 位运算符
-# Java 中的其他运算符
-
-## 控制流语句
-### 决策：if-then, if ifelse, if-else if-else
-###  ：：switch
-### 循环：while, do-while
-### 循环：for
-# 分支语句：break
-# 分支语句：continue
-
-# 数组
-## 一维数组
-## 多维数组
-
-## 类与对象
-### 声明一个类
-# 创建对象
-# 构造函数
-### 类变量 
-
-## JAVA 编程练习
-### 打印 hello
-### 打印和
-### 除以两个数
-# 打印结果
-# 打印乘法表
-### 计算面积
-# 交换两个变量
-# 打印一个脸
-# 华氏度转摄氏度
-### 英尺转米
-### 数字相加
-### 打印年份和天数
-# 计算 (BMI)
-### 计算米制的速度
-### 除以两个指定的整数
-### 乘以两个指定的整数
-### 打印和
-# 找出三个数中的最大值
-### 显示乘法表
-### 显示图案
-# 打印金字塔形状图案
-# 显示数字菱形结构
-
-
-
-
-
 - `boolean`
 - `char`
+
 - `byte`, `short`, `int` 和 `long` 用于存储整数值
 - `float` 和 `double` 用于存储实数值。
 - `Boolean` 用于存储真（true）或假（false）值
@@ -152,13 +114,17 @@ Java 语言支持 8 种数据数据类型。它们是：
 # 如何定义变量
 
 ### 语法：
+
 `dataType variableName = value;`
 
 ### 示例：
+
 ```
 int intVariable = 10;
 ```
+
 这里：
+
 - `dataType` 是 `int`
 - `variableName` 是 `intVariable`
 - `value` 是 `10`
@@ -166,13 +132,16 @@ int intVariable = 10;
 变量是一个命名的内存位置，用于存储一个值。
 
 ### 定义变量的命名规范
+
 1. 变量名必须以字符或下划线开头。
 2. 变量名可以包含字母和数字字符。
 3. 变量名不应该是 `java` 的保留字或关键字。
 4. 根据惯例，变量名以小写字母开头，随后的每个单词大大字母开头。
-   例如：`noOfChar`、`mySalary` 等。
+
+例如：`noOfChar`、`mySalary` 等。
 
 # Java 关键字
+
 关键字是保留字，对其定义了特殊的含义。
 
 | abstract | continue | for | New | switch |
@@ -206,6 +175,7 @@ class DataTypes{
 ```
 
 ### 输出
+
 ```
 ******************************************
 Value Of byte Variable is 10
@@ -220,9 +190,11 @@ Value Of char Variable is A
 ```
 
 # 类型
+
 在 `java` 中，`Strings`、`Arrays` 和 `Objects` 被视为引用类型。将在后续文章中讨论。
 
 ### 需要记忆的点
+
 1. 和许多其他语言一样，`java` 不支持无符号数。`java` 中没有无符号标识符。
 
 ```java
@@ -230,7 +202,9 @@ class UnsignedEx{
 unsigned int a;
 }
 ```
+
 当你尝试编译上面的类时，会抛出以下错误：
+
 ```
 UnsignedEx.java:2: error: <identifier> expected
   unsigned int a;
@@ -257,7 +231,9 @@ class ConversionEx{
     }
 }
 ```
+
 当你尝试编译上面的程序时，编译器会抛出以下错误：
+
 ```
 ConversionEx.java:6: error: possible loss of precision
 byte = (b1 + b2);
@@ -271,7 +247,9 @@ required: short
 found: int
 2 errors
 ```
+
 为了使程序正常运行，我们需要在执行操作后显式强制转换：
+
 ```java
 class ConversionEx{
     public static void main(String args[]){
@@ -286,7 +264,9 @@ class ConversionEx{
     }
 }
 ```
+
 **输出**
+
 `3`
 
 3. 在 `java` 中，如果操作数之一是 `double`，另一个也会被提升为 `double`，最终结果将是 `double`。
@@ -300,9 +280,6 @@ class ConversionEx{
     }
 }
 ```
-
-
-
 
 ```java
 System.out.println(doubleVar);
@@ -350,27 +327,34 @@ float floatVar = 10.09f;
 运算符是执行某种操作的符号。
 
 如果一个运算符对单个操作数执行操作，则称为 `unary`（一元运算符）。
+
 例如：
+
 ```java
 int a = 10;
 a++;
 ```
 
 如果一个运算符对两个操作数执行操作，则称为 `binary`（二元运算符）。
+
 例如：
+
 ```java
 int a=10, b=20;
 int c = a-b;
 ```
 
 如果一个运算符对三个操作数执行操作，则称为 `ternary`（三元运算符）。
+
 例如：
+
 ```java
 int a = 10, b=20, c;
 c= (a>b) ? a : b;
 ```
 
 Java 中的运算符分为 4 大类：
+
 - 算术运算符
 - 条件运算符
 - 逻辑运算符
@@ -404,6 +388,7 @@ class ArithmeticOperation{
 ```
 
 输出
+
 ```
 Addition of operand1 and operand2 is 40
 Subtraction of operand1 and operand2 is 20
@@ -417,6 +402,97 @@ Remainder of operand1 and operand2 is 0
 1. 乘法、除法和取数运算符的优先级高于加法和减法运算符。
 
 ### 示例
+
+## Java 中的运算符
+
+### 算术运算符：++, --
+
+### 条件运算符
+
+### 逻辑运算符
+
+## 位运算符
+
+# Java 中的其他运算符
+
+## 控制流语句
+
+### 决策：if-then, if ifelse, if-else if-else
+
+### ：：switch
+
+### 循环：while, do-while
+
+### 循环：for
+
+# 分支语句：break
+
+# 分支语句：continue
+
+# 数组
+
+## 一维数组
+
+## 多维数组
+
+## 类与对象
+
+### 声明一个类
+
+# 创建对象
+
+# 构造函数
+
+### 类变量
+
+## JAVA 编程练习
+
+### 打印 hello
+
+### 打印和
+
+### 除以两个数
+
+# 打印结果
+
+# 打印乘法表
+
+### 计算面积
+
+# 交换两个变量
+
+# 打印一个脸
+
+# 华氏度转摄氏度
+
+### 英尺转米
+
+### 数字相加
+
+### 打印年份和天数
+
+# 计算 (BMI)
+
+### 计算米制的速度
+
+### 除以两个指定的整数
+
+### 乘以两个指定的整数
+
+### 打印和
+
+# 找出三个数中的最大值
+
+### 显示乘法表
+
+### 显示图案
+
+# 打印金字塔形状图案
+
+# 显示数字菱形结构
+
+
+
 ```java
 class ArithmeticPriority{
     public static void main(String args[]){
@@ -432,30 +508,47 @@ class ArithmeticPriority{
 ```
 
 输出
+
 ```
 210
 8
 10
 ```
 
-#### 解析
+## 解析
+
 对于表达式：
+
 - `result = var1+var2*var1`
+
   `= 10 + 20*10`
+
   `= 10 +200`
+
   `= 210`
+
 - `result = var1-var2/var1`
+
   `= 10-20/10`
+
   `= 10-2`
+
   `= 8`
+
 - `result = var1+var2%var1`
+
   `= 10 + 20 % 10`
+
   `= 10 + 0`
+
   `= 10`
 
-2. 取余运算符总是返回被除数的符号。
+取余运算符总是返回被除数的符号。
+
 例如：
+
 `5 % 2 = 1`
+
 ```java
 class RemainderEx{
     public static void main(String args[]){
@@ -468,12 +561,17 @@ class RemainderEx{
 ## 算术运算符： ++, --
 
 `++` 运算符将值加 1。
+
 `--` 运算符将值减 1。
 
 ### 前增
+
 语法：`++variable`
+
 前增会立即将值加 1。
+
 示例：
+
 ```java
 class PreIncrement{
     public static void main(String args[]){
@@ -482,14 +580,19 @@ class PreIncrement{
     }
 }
 ```
+
 输出
+
 ```
 11
 ```
 
 ### 后增
+
 语法：`variable++`
+
 后增在执行完当前语句后将值加 1。
+
 ```java
 class PostIncrement{
     public static void main(String args[]){
@@ -498,12 +601,17 @@ class PostIncrement{
     }
 }
 ```
+
 *(注：原文代码块中后增逻辑显示不全，已根据逻辑补全)*
 
 ### 前减
+
 语法：`--variable`
+
 前减会立即将值减 1。
+
 示例：
+
 ```java
 class PreDecrement{
     public static void main(String args[]){
@@ -512,14 +620,19 @@ class PreDecrement{
     }
 }
 ```
+
 输出
+
 ```
 9
 ```
 
 ### 后减
+
 语法：`variable--`
+
 后减在执行完当前语句后将值减 1。
+
 ```java
 class PostDecrement{
     public static void main(String args[]){
@@ -529,27 +642,32 @@ class PostDecrement{
 }
 ```
 
-
-
-
 Java 提供了三个逻辑运算符：它们是 `&&`（与）、`||`（或）和 `!`（非）。
 
 - 逻辑与也被称为条件与。
+
 - 逻辑或也被称为条件或。
+
 - 逻辑与、`OR` 被称为短路运算符，很快就会看到为什么这些被称为短路运算符。
 
 ## 逻辑与运算符
 
 | 操作数 1 | 操作数 2 | 求值结果为 |
+
 | :--- | :--- | :--- |
+
 | TRUE | TRUE | TRUE |
+
 | TRUE | FALSE | FALSE |
+
 | FALSE | TRUE | FALSE |
+
 | FALSE | FALSE | FALSE |
 
 如上表所示，当两个操作数的求值均为 `true` 时，`&&` 运算符返回 `true`，否则返回 `false`。
 
 ### 示例
+
 ```java
 class AndEx{
     public static void main(String args[]){
@@ -570,6 +688,7 @@ class AndEx{
 ```
 
 ### 输出
+
 ```
 true
 false
@@ -578,9 +697,11 @@ false
 ```
 
 ### 为什么逻辑与被称为短路运算符
+
 因为如果表达式中的第一个语句求值为为 `false`，那么 `java` 就不会求值整个表达式。因此，逻辑与被称为短路与。
 
 ### 示例
+
 ```java
 class ShortCircuitAnd{
     public static void main(String args[]){
@@ -598,6 +719,7 @@ class ShortCircuitAnd{
 ```
 
 ### 输出
+
 ```
 a is not incremented 10
 This statement is evaluated
@@ -605,20 +727,27 @@ a is not incremented 11
 ```
 
 ### 观察
+
 在表达式 `(a>b) && (a++ > b)` 中，`a>b` 为 `false`，所以 `&&` 运算符不会求值表达式中的第二个语句，因此 `a` 没有增加。
 
 ## 逻辑或运算符
 
 | 操作数 1 | 操作数 2 | 求值结果为 |
+
 | :--- | :--- | :--- |
+
 | TRUE | TRUE | TRUE |
+
 | TRUE | FALSE | TRUE |
+
 | FALSE | TRUE | TRUE |
+
 | FALSE | FALSE | FALSE |
 
 如上表所示，当任意一个操作数求值为 `true` 时，`||` 运算符返回 `true`，否则返回 `false`。
 
 ### 示例
+
 ```java
 class OrEx{
     public static void main(String args[]){
@@ -639,6 +768,7 @@ class OrEx{
 ```
 
 ### 输出
+
 ```
 true
 true
@@ -647,9 +777,11 @@ false
 ```
 
 ### 为什么逻辑或被称为短路
+
 因为如果第一个语句求值为 `true`，`java` 就不会求值整个表达式。因此，逻辑或被称为短路或。
 
 ### 示例
+
 ```java
 class ShortCircuitOr{
     public static void main(String args[]){
@@ -667,6 +799,7 @@ class ShortCircuitOr{
 ```
 
 ### 输出
+
 ```
 This statement evaluated
 a is not incremented 10
@@ -676,13 +809,17 @@ a is incremented 11
 ## 逻辑非运算符
 
 | 操作数 | 求值结果为 |
+
 | :--- | :--- |
+
 | FALSE | TRUE |
+
 | TRUE | FALSE |
 
 如果操作数为 `FALSE`，`!` 运算符求值为 `TRUE`。如果操作数为 `TRUE`，`!` 运算符求值为 `FALSE`。
 
 ### 示例
+
 ```java
 class LogicalNot{
     public static void main(String args[]){
@@ -695,6 +832,7 @@ class LogicalNot{
 ```
 
 ### 输出
+
 ```
 false
 true
@@ -705,38 +843,55 @@ true
 Java 语言提供了对整型类型执行位运算和移位操作的运算符。
 
 | 运算符 | 描述 |
+
 | :--- | :--- |
+
 | `~` | 反反位模式 |
+
 | `<<` | 执行左移 |
+
 | `>>` | 执行右移 |
+
 | `>>>` | 执行无符号右移 |
+
 | `&` | 位与 |
+
 | `\|` | 位或 |
+
 | `^` | 位异异 |
 
 在讨论位运算符之前，我们先看位运算。
 
 ### 1 补码
+
 如果第一个语句求值为 `false`，那么它求值为 `true`。
 
 ### 取反 (~)
+
 取反运算符反转位模式。
 
 ### 2 补码
+
 负数以 2 补码存储。
 
 ### 1 补码
+
 取反运算符反转位模式。
 
 例如：
+
 `a = 7;`
+
 `a` 的二进制格式为 `00000111`
+
 `~(a)` 的二进制格式为 `11111000`。
 
 ### 2 补码
+
 `8` 的 2 补码是 `00001000`。
 
 ### 示例
+
 ```java
 class BitWiseEx{
     public static void main(String args[]){
@@ -748,30 +903,44 @@ class BitWiseEx{
 ```
 
 ### 输出
+
 ```
 7
 -8
 ```
 
 ### 左移 (<<)
+
 左移运算符将所有位向左移动，即使值翻倍。
 
 语法：
+
 `expression << n`
+
 将 `expression` 向左移动 `n` 位。
 
 例如：
+
 `1 << 1` = `2`
+
 `1 << 2` = `4`
+
 `1 << 3` = `8`
+
 `1 << 4` = `16`
+
 `1 << 5` = `32`
+
 `1 << 6` = `64`
+
 `1 << 7` = `128`
+
 `1 << 8` = `256`
+
 `1 << 9` = `512`
 
 ### 示例
+
 ```java
 class LeftShiftEx{
     public static void main(String args[]){
@@ -783,28 +952,40 @@ class LeftShiftEx{
 ```
 
 ### 输出
+
 ```
 2
 4
 ```
 
 ### 右移 (>>)
+
 右移运算符将所有位向右移动，即使值减半。
 
 语法：
+
 `expression >> n`
+
 将 `expression` 向右移动 `n` 位。
 
 例如：
+
 `128 >> 1` = `64`
+
 `128 >> 2` = `32`
+
 `128 >> 3` = `16`
+
 `128 >> 4` = `8`
+
 `128 >> 5` = `4`
+
 `128 >> 6` = `2`
+
 `128 >> 7` = `1`
 
 ### 示例
+
 ```java
 class RightShiftEx{
     public static void main(String args[]){
@@ -816,20 +997,24 @@ class RightShiftEx{
 ```
 
 ### 输出
+
 ```
 64
 32
 ```
 
-
-
 右移 4 位后
+
 右移 5 位后
+
 右移 6 位后
+
 右移 6 位后
+
 int 变量的值为 128
 
 #### 位运算符：无符号右移(>>>)
+
 `>>>` 将所有位向右移动一位，并将最侧位置零。
 
 ```java
@@ -843,25 +1028,39 @@ class BitWiseEx{
 ```
 
 ### 输出
+
 int 变量的值为 -128
+
 右移 1 位后 2147483584
 
 #### 解释
+
 -128 在补码形式下的表示为：
+
 `11111111 11111111 11111111 10000000`
+
 `>>>` 将位向右移动一位，并将左侧位替换为零
+
 因此 `(-128>>>1)` 的序列如下所示：
+
 `01111111 11111111 11111111 11000000`
 
 #### 位运算符：与(&), 逻辑或(|), 异或(^)
+
 | 位 1 | 位 2 | & | | | ^ |
+
 | :--- | :--- | :--- | :--- | :--- |
+
 | 0 | 0 | 0 | 0 | 0 |
+
 | 0 | 1 | 0 | 1 | 1 |
+
 | 1 | 0 | 0 | 1 | 1 |
+
 | 1 | 1 | 1 | 1 | 0 |
 
 ### 示例
+
 ```java
 class BitWiseEx{
     public static void main(String args[]){
@@ -875,19 +1074,31 @@ class BitWiseEx{
 ```
 
 ### 输出
+
 a & b is 8
+
 a | b is 9
+
 a ^ b is 1
 
 #### 解释
+
 `a` = `0000 1000`
+
 `b` = `0000 1001`
+
 `a&b` = `0000 1000`
+
 `a` = `0000 1000`
+
 `b` = `0000 1001`
+
 `a|b` = `0000 1001`
+
 `a` = `0000 1000`
+
 `b` = `0000 1001`
+
 `a^b` = `0000 0001`
 
 **注意：** 位运算符仅适用于 `byte`、`short` 等整数值，不适用于 `float`、`double`、`Boolean`。
@@ -895,24 +1106,35 @@ a ^ b is 1
 # Java 中的其他运算符
 
 ### 赋值运算符
+
 赋值运算符用于给变量赋值。
 
 **语法：**
+
 `type 变量 = 值;`
 
 **示例：**
+
 `int a = 10;`
+
 `int b = 20;`
 
 Java 支持复合赋值
 
 #### 复合赋值
+
 **语法：**
+
 `变量 运算符= 值`
 
 **示例：**
+
 假设
+
 `int a = 10;`
+
+
+
 `a+=10` 结果等于 `a=a+10`
 
 | 复合运算符 | 示例 | 说明 |
@@ -922,7 +1144,8 @@ Java 支持复合赋值
 | `*=` | `a*=10` | `a=a*10` |
 | `/=` | `a/=10` | `a=a/10` |
 
-#### 示例程序
+## 示例程序
+
 ```java
 class CompoundAssignment{
     public static void main(String args[]){
@@ -937,15 +1160,20 @@ class CompoundAssignment{
 ```
 
 ### 输出
+
+```
 sum+var1 is 110
 sub-var1 is -90
 mul*var1 is 1000
 div/var1 is 10
+```
 
-### 类型比较 instanceof
+## 类型比较 instanceof
+
 `instanceof` 运算符将 `object` 与指定的类型进行比较。你可以用它测试一个对象是否是 `class` 的实例、`subclass` 的实例，或者是实现了特定 `interface` 的类的实例。
 
 **示例：**
+
 ```java
 class InstanceOf{
     public static void main(String args[]){
@@ -955,19 +1183,28 @@ class InstanceOf{
     }
 }
 ```
+
 ### 输出
+
+```
 true
 false
+```
+
 不用太担心这个程序，你会学习类和对象的。
 
-### 三元运算符( :)
+## 三元运算符( ?: )
+
 三元运算符 `?:` 根据条件返回两个表达式之一。
 
 **语法：**
+
 `test ? 表达式 1 : 表达式 2`
+
 如果 `test` 条件为真，返回 `expression1`，否则返回 `expression2`。
 
 **示例：**
+
 ```java
 class TernaryEx{
     public static void main(String args[]){
@@ -979,24 +1216,34 @@ class TernaryEx{
     }
 }
 ```
+
 ### 输出
+
+```
 1
 0
+```
+
 **观察：** 语句 `a>10` 为真，所以返回了 `1` 并赋值给 `flag`。
 
 # 控制流语句：选择结构 if-then, if-else, if-else if-else
+
 Java 提供了用于选择（`if`、`if-else`、`switch`）和循环（`for`、`while`、`do-while`）的控制流语句。
 
-### 语句块
+## 语句块
+
 Java 中 `{ }` 之间的语句被称为语句块。
 
-#### if 语句
+### if 语句
+
 当条件为真时，`if` 语句执行代码部分。
 
 **语法：**
+
 `if(条件){ ... }`
 
 **示例：**
+
 ```java
 class Grades{
     public static void main(String args[]){
@@ -1007,13 +1254,19 @@ class Grades{
     }
 }
 ```
+
 ### 输出
+
+```
 You failed in the Exam. Better time
+```
 
 **注意点：**
+
 1. 在 Java 中，`if` 中的条件必须是布尔值，否则编译器会报错。
 
 **示例：**
+
 ```java
 class Grades{
     public static void main(String args[]){
@@ -1023,18 +1276,26 @@ class Grades{
     }
 }
 ```
-当你尝试编译上述程序时会得到如下错误：
-`Grades.java:5: error: incompatible types`
-`if(var1 = 10){`
-`required: boolean`
-`found: int`
 
-#### if-else 语句
+当你尝试编译上述程序时会得到如下错误：
+
+```
+Grades.java:5: error: incompatible types
+if(var1 = 10){
+required: boolean
+found: int
+```
+
+### if-else 语句
+
 **语法：**
+
 `if(条件){ ... } else{ ... }`
+
 如果条件为真，执行 `if` 块；否则执行 `else` 块。
 
 **示例：**
+
 ```java
 class Grades{
     public static void main(String args[]){
@@ -1046,11 +1307,17 @@ class Grades{
     }
 }
 ```
+
 ### 输出
+
+```
 You are passed
+```
+
 **观察：** 在上面的程序中，我们没有写 `{ }` 语句块，因为块之间只有一个语句，我们可以省略 `{ }`。
 
-#### if-else if-else
+### if-else if-else
+
 通过使用 `if-else if-else` 结构，你可以选择方案。`if` 语句可以跟随可选的 `else if...else` 语句，这对于使用单个 `if...else` 语句测试各种条件非常有用。
 
 ```java
@@ -1070,15 +1337,21 @@ class Grades{
     }
 }
 ```
+
 ### 输出
+
+```
 You are passed and got first class
+```
 
 # 控制流语句：选择结构 switch
+
 `switch` 语句体被称为 switch 块。switch 块中的语句可以使用一个或多个 `case` 或 `default` 标记。`switch` 语句计算表达式，然后执行匹配的标签后的语句。
 
 `switch` 适用于 `byte`、`short`、`char` 和 `int` 原始数据类型。它也支持 `enums`（Java 7 在 case 评估中也支持 `strings`）以及几个包装原始类型的特殊类：`Character`、`Byte`、`Short` 和 `Integer`。`Integer`、`Char`、`Short` 被称为包装类。将在后续文章中详细讨论这些。
 
 **示例：**
+
 ```java
 class SwitchEx{
     public static void main(String args[]){
@@ -1111,13 +1384,16 @@ class SwitchEx{
     }
 }
 ```
+
 ### 输出
+
+```
 ThursDay
+```
 
 #### 解释
+
 如你在上面的程序所示，变量“day”被设置为 5。因此在 switch case 中，执行了 case 5。
-
-
 
 你可以从上面的程序看到，每个 `case` 都有关联的 `break` 语句，这是有必要的吗？当然有。如果你没有在 `case` 语句中指定 `break`，那么被评估 case 下的所有 `case` 语句都会执行。
 
@@ -1150,6 +1426,7 @@ class SwitchEx{
 ```
 
 **Output**
+
 ```
 ThursDay
 Friday
@@ -1163,9 +1440,11 @@ You entered wrong day number
 另外一点在上面的程序中，`case 1` 位于 `7` 之后，这在 Java 中是可以接受的行为。
 
 ### 此处 default 的必要性是什么
+
 如果没有 case 被评估，则会执行 `default`，就像 `if-else if-else` 阶梯中的 `else` 块一样。
 
 ### 示例
+
 ```java
 class SwitchEx{
   public static void main(String args[]){
@@ -1198,29 +1477,37 @@ class SwitchEx{
 }
 }
 ```
+
 **Output**
+
 ```
 You entered wrong day number
 ```
 
 ### 需要记忆的点
+
 1. 什么时候使用 `if-else if -else` 阶梯而不是 `switch`？
+
 `Switch` case 不支持像 `age>30`、`year<2000` 等类的范围检查，在这些情况下，使用 `if-else if-else` 阶梯更好。
 
 # 控制流语句：循环：while, do-while
 
-### while
+## while
+
 `while` 语句执行一个语句块，直到特定条件为真。
 
 **语法**
+
 ```java
 while (expression) {
   //statements
 }
 ```
+
 `while` 语句中的 `expression` 必须评估为一个布尔值，否则编译器将抛错。`While` 语句首先评估 `expression`，直到 `expression` 评估为 `true`，它才会执行 `while` 块内的代码，否则将退出 `while` 循环。
 
 **示例**：使用 `while` 循环打印 0 到 9 的数字。
+
 ```java
 class WhileEx{
   public static void main(String args[]){
@@ -1232,7 +1519,9 @@ class WhileEx{
 }
 }
 ```
+
 **Output**
+
 ```
 0
 1
@@ -1246,16 +1535,20 @@ class WhileEx{
 9
 ```
 
-### do-while
+## do-while
+
 `do-while` 也是类似于 `while` 的循环结构，但它在循环的底部评估表达式，而不是顶部。
 
 **语法**
+
 ```java
 do {
   //statement(s)
 } while (expression);
 ```
+
 **示例**
+
 ```java
 class DoWhileEx{
   public static void main(String args[]){
@@ -1267,7 +1560,9 @@ class DoWhileEx{
 }
 }
 ```
+
 **Output**
+
 ```
 0
 1
@@ -1282,10 +1577,13 @@ class DoWhileEx{
 ```
 
 ### 需要记忆的点
+
 1. `while` 和 `do-while` 之间的区别是什么？
+
 `do` 块内的语句即使表达式评估为 `false` 也会至少执行一次。
 
 **示例**
+
 ```java
 class CompareLoop{
   public static void main(String args[]){
@@ -1298,34 +1596,45 @@ class CompareLoop{
 }
 }
 ```
+
 **Output**
+
 ```
 I am in do-while loop
 ```
+
 **观察**
+
 注意，即使表达式 `flag` 为 `false`，`do-while` 也会执行。而且如果你只有一条语句，则不需要在 `{ }` 之间放置该行。
 
 # 控制流语句：循环： for
+
 `for` 语句提供了一种紧凑的方式来遍历值的范围。
 
 **语法**
+
 ```java
 for(initialization; condition; update){
   //statements
 }
 ```
+
 `for` 循环执行语句直到 `condition` 评估为 `false`。`Initialization` 部分在循环开始时只执行一次。`Condition` 部分在每次执行循环前评估。`update` 部分在每次循环执行后立即执行。
 
 **示例**：打印 0 到 9 的数字
+
 ```java
 class ForEx{
   public static void main(String args[]){
-  for(int var1=0; var1 < 10;
-++){System.System.println(var1);
+  for(int var1=0; var1 < 10; var1++){
+    System.out.println(var1);
   }
 }
+}
 ```
+
 **Output**
+
 ```
 0
 1
@@ -1338,15 +1647,36 @@ class ForEx{
 8
 9
 ```
+
+
+
+```
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+```
+
 **需要记忆的点**
-1. 你可以在 `for` 循环内部声明变量：`for(int i=0; i<10; i++)` 是有效的结构。
-2. `for( )` 会无限运行。
+
+1. 你可以在`for`循环内部声明变量：`for(int i=0; i<10; i++)`是有效的结构。
+
+2. `for( )`会无限运行。
 
 # 分支语句： break
-我们已经在 `switch` case 中见过 `break` 的用法。同样，`break` 也用于 `while`、`do-while` 和 `for` 循环。`Break` 有两种形式。
 
-### 1. 无标签 break
+我们已经在`switch` case中见过`break`的用法。同样，`break`也用于`while`、`do-while`和`for`循环。`Break`有两种形式。
+
+## 1. 无标签 break
+
 **示例**
+
 ```java
 class BreakEx{
   public static void main(String args[]){
@@ -1357,7 +1687,9 @@ class BreakEx{
   System.out.println("out of loop");
 }
 ```
+
 **Output**
+
 ```
 0
 1
@@ -1365,12 +1697,15 @@ class BreakEx{
 3
 4
 ```
-在上面的程序中，当变量 `i` 达到 5 时，调用 `break` 并退出循环。
 
-### 2. 有标签 break
-`label` 是通过 `labelname` 标识的一组语句。
+在上面的程序中，当变量`i`达到 5 时，调用`break`并退出循环。
+
+## 2. 有标签 break
+
+`label`是通过`labelname`标识的一组语句。
 
 **语法**
+
 ```java
 labelName:{
   statement 1
@@ -1379,7 +1714,9 @@ labelName:{
   statement N
 }
 ```
+
 **示例**
+
 ```java
 class BreakEx{
   public static void main(String args[]){
@@ -1393,7 +1730,9 @@ class BreakEx{
   System.out.println("out of loop");
 }
 ```
+
 **Output**
+
 ```
 0
 1
@@ -1401,17 +1740,23 @@ class BreakEx{
 3
 4
 ```
-如你在上面的程序所示，标签名为 `myLoop`。当变量 `i` 达到 5 时，退出标签。
+
+如你在上面的程序所示，标签名为`myLoop`。当变量`i`达到 5 时，退出标签。
 
 # 分支语句： continue
-`continue` 语句跳过 `for`、`while`, `do-while` 循环的当前迭代。就像 `break` 一样，`continue` 也有形式。
 
-### 无标签 continue
+`continue`语句跳过`for`、`while`, `do-while`循环的当前迭代。就像`break`一样，`continue`也有形式。
+
+## 无标签 continue
+
 **语法**
+
 ```java
 continue;
 ```
+
 **示例**：计算 0 到 10 之间的奇数
+
 ```java
 class ContinueEx{
   public static void main(String args[]){
@@ -1426,7 +1771,9 @@ class ContinueEx{
 }
 }
 ```
+
 **Output**
+
 ```
 1
 3
@@ -1436,12 +1783,16 @@ class ContinueEx{
 Total number of odd numbers from 0 to 10 is 5
 ```
 
-### 有标签 continue
+## 有标签 continue
+
 **语法**
+
 ```java
 continue labelName;
 ```
+
 **示例**
+
 ```java
 class ContinueEx{
   public static void main(String args[]){
@@ -1456,14 +1807,18 @@ class ContinueEx{
 }
 }
 ```
+
 **Output**
+
 ```
 10
 out of the label
 ```
 
 # 数组
+
 数组是连续内存位置的相同类型元素的序列。数组中的元素通过索引位置访问。假设你想计算 9 个整数的和，你需要定义 9 个变量：
+
 ```java
 int var1, var2, var3, var4, var5, var6, var7, var8, var9;
 var1 = 5;
@@ -1476,7 +1831,9 @@ var7 = 14;
 var8 = 21;
 var9 = 0;
 ```
-通过使用 `new` 关键字，我们可以如下声明：
+
+通过使用`new`关键字，我们可以如下声明：
+
 ```java
 int var[] = new int[9];
 var[0] = 5;
@@ -1489,17 +1846,16 @@ var[6] = 14;
 var[7] = 21;
 var[8] = 0;
 ```
-如你所示，数组索引从 0 开始。`var[0]` 代表 5，`var[2]` 代表 7，以此此类推。
+
+如你所示，数组索引从 0 开始。`var[0]`代表 5，`var[2]`代表 7，以此此类推。
 
 ## 一维数组
 
 **语法：**
+
 ```java
 dataType arrayName[] = new dataType[size];
 ```
-
-
-
 
 (或)
 
@@ -1508,9 +1864,9 @@ dataType arrayName[];
 arrayName = new dataType[size];
 ```
 
-这里的 `dataType` 可以是任何 `primitive`（基本）类型或引用类型。
+这里的`dataType`可以是任何`primitive`（基本）类型或引用类型。
 
-Size 是存储在 `array` 中的元素个数。
+Size 是存储在`array`中的元素个数。
 
 ### 示例
 
@@ -1577,6 +1933,7 @@ class ArrayEx{
 ```
 
 **输出**
+
 HELLOJAVA
 
 #### 示例 2
@@ -1591,9 +1948,10 @@ class ArrayEx{
 ```
 
 **输出**
+
 HELLOJAVA
 
-如你所见，当你将数组名作为参数传递给 `println` 方法时，会将整个数组数据打印到控制台上。
+如你所见，当你将数组名作为参数传递给`println`方法时，会将整个数组数据打印到控制台上。
 
 ### 如何一次性声明多个数组
 
@@ -1628,11 +1986,12 @@ class ArrayEx{
 ```
 
 **输出**
+
 HELLO JAVA
 
 ### 如何获取数组的长度
 
-java 为数组提供了名为 `length` 的属性来计算数组的长度。
+java 为数组提供了名为`length`的属性来计算数组的长度。
 
 ### 语法
 
@@ -1657,7 +2016,9 @@ class ArrayEx{
 ```
 
 **输出**
+
 Length of Array1 is 6
+
 Length of Array2 is 4
 
 ### 如何使用循环遍历数组元素
@@ -1677,12 +2038,15 @@ class SumOfNum{
     }
 }
 ```
+
 **输出**
+
 Sum of Numbers is 55
 
 ### 需要记忆的点
 
-1. 如果你尝试使用非法索引访问数组，编译器将抛出 `ArrayIndexOutOfBoundsException`。
+1. 如果你尝试使用非法索引访问数组，编译器将抛出`ArrayIndexOutOfBoundsException`。
+
 ```java
 class ArrayEx{
     public static void main(String args[]){
@@ -1691,10 +2055,13 @@ class ArrayEx{
     }
 }
 ```
+
 **输出**
+
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 11 at ArrayEx.java:5
 
-2. 如果程序定义的数组大小为负数，编译可以通过，但在运行时会抛出 `NegativeArraySize`。
+2. 如果程序定义的数组大小为负数，编译可以通过，但在运行时会抛出`NegativeArraySize`。
+
 ```java
 class ArrayEx{
     public static void main(String args[]){
@@ -1702,10 +2069,13 @@ class ArrayEx{
     }
 }
 ```
+
 **输出**
+
 Exception in thread "main" java.lang.NegativeArraySize at ArrayEx.java:3
 
-3. 数组大小始终是一个整数，因此使用 `byte`、`short` 和 `int` 作为数组大小是正确的。而不应使用 `long`。
+3. 数组大小始终是一个整数，因此使用`byte`、`short`和`int`作为数组大小是正确的。而不应使用`long`。
+
 ```java
 class ArrayEx{
     public static void main(String args[]){
@@ -1718,7 +2088,7 @@ class ArrayEx{
     }
 }
 ```
-4. 数组大小始终是一个整数，因此使用 `byte`、`short` 和 `int` 作为数组大小是正确的。而不应使用 `long`。
+
 4. 数组的大小在初始化后是固定的，不能更改。
 
 ## 多维数组
@@ -1736,9 +2106,9 @@ dataType arrayName[][];
 arrayName = new dataType[size1][size2];
 ```
 
-这里的 `dataType` 可以是任何 `primitive`（基本）类型或引用类型。
+这里的`dataType`可以是任何`primitive`（基本）类型或引用类型。
 
-`size1` 和 `size2` 是存储在 `array` 中的元素个数。
+`size1`和`size2`是存储在`array`中的元素个数。
 
 ### 示例
 
@@ -1805,6 +2175,7 @@ class ArrayEx{
 ```
 
 **输出**
+
 H
 
 #### 示例 2
@@ -1819,9 +2190,10 @@ class ArrayEx{
 ```
 
 **输出**
+
 O
 
-如你所见，当你将数组索引作为参数传递给 `println` 方法时，它会打印对应位置的数据。
+如你所见，当你将数组索引作为参数传递给`println`方法时，它会打印对应位置的数据。
 
 ### 如何一次性声明多个多维数组
 
@@ -1832,6 +2204,8 @@ dataType[][] arr1, arr2;
 ```
 
 ### 示例
+
+
 
 ```java
 class ArrayEx{
@@ -1856,11 +2230,12 @@ class ArrayEx{
 ```
 
 **输出**
+
 HELLO JAVA
 
 ### 如何获取多维数组的长度
 
-java 为数组提供了 `length` 属性来计算数组的长度。
+`java` 为数组提供了 `length` 属性来计算数组的长度。
 
 ### 语法
 
@@ -1885,7 +2260,9 @@ class ArrayEx{
 ```
 
 **输出**
+
 Length of Array1 is 1
+
 Length of Array2 is 1
 
 ### 如何使用循环遍历多维数组元素
@@ -1907,12 +2284,15 @@ class SumOfNum{
     }
 }
 ```
+
 **输出**
+
 Sum of Numbers is 55
 
 ### 需要记忆的点
 
 1. 如果你尝试使用非法索引访问数组，编译器将抛出 `ArrayIndexOutOfBoundsException`。
+
 ```java
 class ArrayEx{
     public static void main(String args[]){
@@ -1926,46 +2306,13 @@ class ArrayEx{
 
 3. 数组的大小在初始化后是固定的，不能更改。
 
-[/content]
-
-*(注：由于提供的原始文本中存在大量重复的关于数组和多维数组的示例描述，在翻译时我遵循“不要重复输出原文”的原则，进行了逻辑上的合并与整理，确保文档的完整性与可读性。)* 
-
-**抱歉，重新审视指令：我发现提供的“待翻译文本”中包含了大量重复的段落（数组和多维数组的部分非常相似）。根据“一定不要重复输出原文”的指令，我应该只翻译每个独特的内容一次。但作为高级文档工程师，通常需要保留文档的结构。如果我严格执行“不要重复输出原文”，是指不要在输出中同时包含英文原文。由于任务是翻译，且原文存在大量重复，我将提供一个精简且重复的中文翻译版本。**
-
 ---
 
-**以下是根据您的要求翻译后的内容（已针对原文中重复的示例结构进行了去重）：**
-
-[content]
-(或)
-
-```java
-dataType arrayName[];
-arrayName = new dataType[size];
-```
-
-这里的 `dataType` 可以是任何 `primitive`（基本）类型或引用类型。
-
-Size 是存储在 `array` 中的元素个数。
-
-### 示例
-
-```java
-char arr[] = new char[9];
-```
-
-(或)
-
-```java
-char arr[];
-arr = new char[9];
-```
-
-上述两种声明方式在语法上都是正确的，并且创建了一个名为“arr”的类型为 char 的数组，它具有存储 9 个字符的能力。
+## 数组基础
 
 ### 如何定义数组
 
-你可以使用索引或在创建时为数组分配元素。数组索引从 0 开始。如果数组大小为 'n' 那么最大索引为 'n-1' 因为索引从 0 开始。
+你可以使用索引或在创建时为数组分配元素。数组索引从 0 开始。如果数组大小为 `n`，那么最大索引为 `n-1`，因为索引从 0 开始。
 
 #### 使用索引进行赋值
 
@@ -1977,7 +2324,7 @@ arr[2] = 'L';
 arr[3] = 'L';
 arr[4] = 'O';
 arr[5] = 'J';
-arr[6]='A';
+arr[6] = 'A';
 arr[7] = 'V';
 arr[8] = 'A';
 ```
@@ -1988,7 +2335,7 @@ arr[8] = 'A';
 char arr[] = {'H', 'E', 'L', 'L', 'O', 'J', 'A', 'V', 'A'};
 ```
 
-数组“arr”中的元素存储如下
+数组 `arr` 中的元素存储如下
 
 ![`3.bp.blogspot.com/-H3cfhR3m6-8/UvXQj6EGNsI/AAAAAAAAAJ8/CFm8SWTZHqI/s1600/Array3.bmp`](img/image00176.jpeg)
 
@@ -2013,6 +2360,7 @@ class ArrayEx{
 ```
 
 **输出**
+
 HELLOJAVA
 
 #### 示例 2
@@ -2027,6 +2375,7 @@ class ArrayEx{
 ```
 
 **输出**
+
 HELLOJAVA
 
 如你所见，当你将数组名作为参数传递给 `println` 方法时，会将整个数组数据打印到控制台上。
@@ -2064,11 +2413,12 @@ class ArrayEx{
 ```
 
 **输出**
+
 HELLO JAVA
 
 ### 如何获取数组的长度
 
-java 为数组提供了名为 `length` 的属性来计算数组的长度。
+`java` 为数组提供了名为 `length` 的属性来计算数组的长度。
 
 ### 语法
 
@@ -2093,7 +2443,9 @@ class ArrayEx{
 ```
 
 **输出**
+
 Length of Array1 is 6
+
 Length of Array2 is 4
 
 ### 如何使用循环遍历数组元素
@@ -2113,12 +2465,15 @@ class SumOfNum{
     }
 }
 ```
+
 **输出**
+
 Sum of Numbers is 55
 
 ### 需要记忆的点
 
 1. 如果你尝试使用非法索引访问数组，编译器将抛出 `ArrayIndexOutOfBoundsException`。
+
 ```java
 class ArrayEx{
     public static void main(String args[]){
@@ -2127,10 +2482,13 @@ class ArrayEx{
     }
 }
 ```
+
 **输出**
+
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 11 at ArrayEx.java:5
 
 2. 如果程序定义的数组大小为负数，编译可以通过，但在运行时会抛出 `NegativeArraySize`。
+
 ```java
 class ArrayEx{
     public static void main(String args[]){
@@ -2138,12 +2496,16 @@ class ArrayEx{
     }
 }
 ```
+
 **输出**
+
 Exception in thread "main" java.lang.NegativeArraySize at ArrayEx.java:3
 
-3. 数组的大小始终是一个整数，因此使用 `byte`、`short` 和 `int` 作为数组大小是正确的。而不应使用 `long`。
+3. 数组的大小始终是一个整数，因此使用 `byte`、`short` 和 `int` 作为数组大小是正确的，而不应使用 `long`。
 
 4. 数组的大小在初始化后是固定的，不能更改。
+
+---
 
 ## 多维数组
 
@@ -2177,7 +2539,7 @@ char arr[][];
 arr = new char[3][3];
 ```
 
-上述两种声明方式在语法上都是正确的，并且创建了一个名为“arr”的类型为 char 的二维数组，它具有存储 9 个字符的能力。
+上述两种声明方式在语法上都是正确的，并且创建了一个名为 `arr` 的类型为 `char` 的二维数组，它具有存储 9 个字符的能力。
 
 ### 如何定义多维数组
 
@@ -2204,7 +2566,7 @@ arr[2][2] = 'A';
 char arr[][] = {{'H', 'E', 'L'}, {'L', 'O', 'J'}, {'A', 'V', 'A'}};
 ```
 
-数组“arr”中的元素存储如下
+数组 `arr` 中的元素存储如下
 
 ![`3.bp.blogspot.com/-H3cfhR3m6-8/UvXQj6EGNsI/AAAAAAAAAJ8/CFm8SWTZHqI/s1600/Array3.bmp`](img/image00176.jpeg)
 
@@ -2241,11 +2603,12 @@ class ArrayEx{
 ```
 
 **输出**
+
 HELLO JAVA
 
 ### 如何获取多维数组的长度
 
-java 为数组提供了 `length` 属性来计算数组的长度。
+`java` 为数组提供了 `length` 属性来计算数组的长度。
 
 ### 语法
 
@@ -2270,7 +2633,9 @@ class ArrayEx{
 ```
 
 **输出**
+
 Length of Array1 is 1
+
 Length of Array2 is 1
 
 ### 如何使用循环遍历多维数组元素
@@ -2292,12 +2657,14 @@ class SumOfNum{
     }
 }
 ```
+
 **输出**
+
 Sum of Numbers is 55
 
+---
 
-
-
+## 对象与类
 
 所有人都属于 `Human`（人类）类别
 
@@ -2308,15 +2675,19 @@ Sum of Numbers is 55
 # 编程术语中的对象与类
 
 ## 什么是对象？
+
 对象是相关状态和行为的软件组合包。`java` 的主要优势在于你可以将 `Java` 中的对象与现实世界的对象进行比较。因此，在 `Java` 中操作对象非常容易。
 
 ## 什么是类？
+
 类是用于创建对象的蓝图或原型。
 
 # 声明类
-`java` 中的 `class` 使用关键字“class”来声明。
+
+`java` 中的 `class` 使用关键字 `class` 来声明。
 
 ### 语法
+
 ```java
 class ClassName{
 
@@ -2324,12 +2695,16 @@ class ClassName{
 ```
 
 ### 示例
+
+
+
 ```java
 class Person{
 }
 ```
 
 ## 如何声明类的属性
+
 每个属性都由一个变量表示。
 
 ```java
@@ -2339,16 +2714,20 @@ String color, country;
 }
 ```
 
-由于 `height` 和 `weight` 是实数类型值，因此它们被声明为 `float`。而 `color` 和 `country` 是 `String` 类型。因此它们被声明为 `string` 类型。
+由于`height`和`weight`是实数类型值，因此它们被声明为`float`。而`color`和`country`是`String`类型。因此它们被声明为`string`类型。
 
 **注意：**
-我们还没有讨论任何关于字符串的内容，只需记住 `string` 是一组字符。
+
+我们还没有讨论任何关于字符串的内容，只需记住`string`是一组字符。
 
 ## 如何为类定义行为
-`Java` 中的每个行为由 `method`（方法）表示。
-`Method` 是一个语句块，并关联有一个名称。
+
+`Java`中的每个行为由`method`（方法）表示。
+
+`Method`是一个语句块，并关联有一个名称。
 
 ### 语法：
+
 ```java
 returnType methodName(parameters){
 
@@ -2356,15 +2735,18 @@ returnType methodName(parameters){
 ```
 
 ### 示例
+
 ```java
 int sum(int a, int b){
     return (a+b);
 }
 ```
-这里，`returnType` 是 `int`，`parameters` 是 `a`, `b`。
+
+这里，`returnType`是`int`，`parameters`是`a`, `b`。
+
 返回值必须与方法的返回类型匹配。
 
-在为 `Person` 类添加行为后，代码更改如下：
+在为`Person`类添加行为后，代码更改如下：
 
 ```java
 class Person{
@@ -2391,50 +2773,62 @@ String getCountry(){
 # 创建对象
 
 ## 创建对象的语法
+
 ```java
 ClassName objectName = new ClassName();
 ```
 
 ### 示例
+
 ```java
 Person personA = new Person();
 ```
-这里 `Person` 是类名，`personA` 是为类 `Person` 创建的对象。
-一旦定义了 `class`，你就可以为它创建任何数量的对象。
+
+这里`Person`是类名，`personA`是为类`Person`创建的对象。
+
+一旦定义了`class`，你就可以为它创建任何数量的对象。
+
 ```java
 Person personB = new Person();
 Person personC = new Person();
 ```
 
 ## 如何访问对象的属性
-`java` 提供了 `.` 运算符来访问对象的属性。
+
+`java`提供了`.`运算符来访问对象的属性。
 
 ### 语法
+
 ```java
 objectName.propertyName = value;
 ```
 
 ### 示例
+
 ```java
 personA.height = 6;
 personB.height = 5.5;
 ```
 
 ## 如何调用行为
+
 就像访问属性一样，你可以调用行为。
 
 ### 语法
+
 ```java
 objectName.behavior();
 ```
 
 ### 示例
+
 ```java
 personA.getHeight();
 personB.getHeight();
 ```
 
 ## Person 类的完整工作示例
+
 ```java
 class Person{
 float height, weight;
@@ -2482,7 +2876,9 @@ public static void main(String args[]){
 }
 }
 ```
+
 **输出：**
+
 ```
 PersonA Height is 6.0
 PersonA Weight is 75.0
@@ -2495,14 +2891,20 @@ PersonB country is America
 ```
 
 # 构造函数
+
 构造函数用于在创建时初始化对象。
 
 ### 语法
+
 ```java
 modifier className(){
 }
 ```
-`modifier` 是任何如 `private`、`public`、`protected`、`default` 等内容。将在 `packages` 部分进一步讨论更多。由于构造函数没有任何 `return` 类型，因此它们与方法不同。构造函数的名称与类名相同。如果你不提供构造函数，编译器将提供默认构造函数。### 示例
+
+`modifier`是任何如`private`、`public`、`protected`、`default`等内容。将在`packages`部分进一步讨论更多。由于构造函数没有任何`return`类型，因此它们与方法不同。构造函数的名称与类名相同。如果你不提供构造函数，编译器将提供默认构造函数。
+
+### 示例
+
 ```java
 class Person{
 float height, weight;
@@ -2548,12 +2950,15 @@ public static void main(String args[]){
   System.out.println("PersonB color is " + personB.getColor());
   System.out.println("PersonB country is " + personB.getCountry());
 }
+}
 ```
 
-重载构造函数
+## 重载构造函数
+
 就像重载方法一样，我们也可以重载构造函数。
 
 ### 示例
+
 ```java
 class Box{
 int width,height;
@@ -2580,7 +2985,9 @@ public static void main(String args[]){
 }
 }
 ```
+
 **输出：**
+
 ```
 b1 width is 0
 b2 height is 10
@@ -2589,8 +2996,11 @@ b3 height is 25
 ```
 
 ## 一些需要记忆的点
-1. **我们可以让构造函数和方法同名吗？** 是的，这在 `Java` 中是有效的。
+
+1. **我们可以让构造函数和方法同名吗？** 是的，这在`Java`中是有效的。
+
 ### 示例
+
 ```java
 class Box{
 int width,height;
@@ -2607,38 +3017,49 @@ public static void main(String args[]){
 }
 }
 ```
+
 **输出：**
+
 ```
 10	10
 ```
 
-2. **构造函数可以抛出异常吗？** 是的，构造函数是 `java` 中的特殊方法。
+2. **构造函数可以抛出异常吗？** 是的，构造函数是`java`中的特殊方法。
+
 ### 示例
+
 ```java
 public Socket(String host,int port)throws UnknownHostException,IOException
 ```
-`java.net.Socket` 包中的 `Socket` 类在无法确定主机的 IP 地址时会抛出 `UnknownHostException`。
+
+`java.net.Socket`包中的`Socket`类在无法确定主机的 IP 地址时会抛出`UnknownHostException`。
 
 # 类变量
+
 众所周知，`实例变量`与`对象`关联，而`类变量`与`类`关联，即对所有对象可用。
 
 ### 语法
+
 ```java
 static dataType variableName;
 ```
 
 ### 示例
+
 ```java
 static int count;
 ```
-`static` 变量通过类名进行访问。
+
+`static`变量通过类名进行访问。
 
 ### 访问静态变量的语法
+
 ```java
 ClassName.variablename
 ```
 
 ### 示例：统计类创建的对象数量的程序
+
 ```java
 class Person{
 static int count =0;
@@ -2654,14 +3075,12 @@ public static void main(String args[]){
 }
 }
 ```
+
 **输出：**
+
 ```
 Number Of persons created are 2
 ```
-
-
-
-
 
 ```java
     System.out.print("Input the first number: ");
@@ -2674,7 +3093,9 @@ Number Of persons created are 2
   }
 }
 ```
-OUTPUT
+
+**输出：**
+
 ```
 Input the first number: 545
 Input the second number: 455
@@ -2682,9 +3103,11 @@ Sum: 1000
 ```
 
 # 除两个数
+
 打印在屏幕上
 
-JAVA CODE
+**Java 代码：**
+
 ```java
 import java.util.Scanner;
 
@@ -2702,7 +3125,9 @@ public class Main {
   }
 }
 ```
-OUTPUT
+
+**输出：**
+
 ```
 Input the first number: 100
 Input the second number: 25
@@ -2710,9 +3135,11 @@ The division of a and b is:4
 ```
 
 # 打印结果
+
 指定操作的结果
 
-JAVA CODE
+**Java 代码：**
+
 ```java
 public class Main {
 public static void main(String[] args) {
@@ -2726,7 +3153,9 @@ public static void main(String[] args) {
 ```
 
 # 打印乘法表
-JAVA CODE
+
+**Java 代码：**
+
 ```java
 import java.util.Scanner;
 
@@ -2741,7 +3170,9 @@ public static void main(String[] args) {
 }
 }
 ```
-OUTPUT
+
+**输出：**
+
 ```
 Input the Number:
 15
@@ -2757,10 +3188,10 @@ Input the Number:
 15*10 = 150
 ```
 
-# 计算圆的面积
-和周长
+# 计算圆的面积和周长
 
-JAVA CODE
+**Java 代码：**
+
 ```java
 import java.util.Scanner;
 
@@ -2774,7 +3205,11 @@ public static void main(String[] args) {
 }
 }
 ```
-OUTPUT
+
+
+
+## 计算圆的周长和面积
+
 ```
 Input the radius of the circle:
 10
@@ -2782,8 +3217,10 @@ Perimeter is = 62.83185307179586
 Area is = 314.1592653589793
 ```
 
-# 交换两个变量
-JAVA CODE
+## 交换两个变量
+
+### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -2802,7 +3239,9 @@ public class Main {
   }
 }
 ```
-OUTPUT
+
+### 输出
+
 ```
 Input the first number:
 25
@@ -2811,8 +3250,10 @@ Input the second number:
 Swapped values are3:50 and 25
 ```
 
-# 打印一个脸
-JAVA CODE
+## 打印一个脸
+
+### JAVA 代码
+
 ```java
 public class Main {
 public static void main(String[] args) {
@@ -2827,7 +3268,9 @@ public static void main(String[] args) {
   }
 }
 ```
-OUTPUT
+
+### 输出
+
 ```
 +"""+
 [| o o |]
@@ -2836,8 +3279,10 @@ OUTPUT
 +-----+
 ```
 
-# 华氏度转摄氏度
-JAVA CODE
+## 华氏度转摄氏度
+
+### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -2851,14 +3296,18 @@ public class Main {
   }
 }
 ```
-OUTPUT
+
+### 输出
+
 ```
 Input a degree in Fahrenheit: 96
 96.0 degree is equal to 35.55555555556
 ```
 
-# 英寸转米
-JAVA CODE
+## 英寸转米
+
+### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -2872,14 +3321,18 @@ public class Main {
   }
 }
 ```
-OUTPUT
+
+### 输出
+
 ```
 Input a value for inch: 5
 5.0 inch is 1.27 meters
 ```
 
-# 累加数字
-JAVA CODE
+## 累加数字
+
+### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -2900,14 +3353,18 @@ public class Main {
   }
 }
 ```
-OUTPUT
+
+### 输出
+
 ```
 Input an integer between 0 and 1000: 750
 The sum of all digits in 750 is 12
 ```
 
-# 从分钟计算年和天
-JAVA CODE
+## 从分钟计算年和天
+
+### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -2923,15 +3380,18 @@ public class Main {
   }
 }
 ```
-OUTPUT
+
+### 输出
+
 ```
 Input the number of minutes: 123456
 123456 minutes is approximately 0 years and 85 days
 ```
 
-# 计算 (BMI)
-体重指数
-JAVA CODE
+## 计算体重指数（BMI）
+
+### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -2947,15 +3407,19 @@ public class Main {
   }
 }
 ```
-OUTPUT
+
+### 输出
+
 ```
 Input weight in pounds: 450
 Input height in inches: 72
 Body Index is 61.030345454881
 ```
 
-# 计算每秒、每公里和每小时的速度
-JAVA CODE
+## 计算每秒、每公里和每小时的速度
+
+### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -2983,7 +3447,9 @@ public class Main {
   }
 }
 ```
-OUTPUT
+
+### 输出
+
 ```
 Input distance in meters: 3000
 Input hour: 5
@@ -2994,8 +3460,10 @@ Your speed in km/h is 0.5413805
 Your speed in miles/h is 0.3364702
 ```
 
-# 使用减法运算符除法两个指定的整数
-JAVA CODE
+## 使用减法运算符除法两个指定的整数
+
+### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -3012,10 +3480,6 @@ if (divider == 0) {
   float decimalPart = (float) dividend / (float) divider;
 }
 ```
-
-
-
-
 
 ```java
     result += decimalPart;
@@ -3040,15 +3504,17 @@ System.out.println("\n 结果: " + divide_using_subtraction(dividend,divider));
 ```
 
 ### 输出
+
 ```text
 Input the dividend: 900
 Input the divider: 30
 Result: 30.0
 ```
 
-# 不使用乘法运算符乘以两个指定的整数
+## 不使用乘法运算符乘以两个指定的整数
 
 ### JAVA 代码
+
 ```java
 import java.util.*;
 
@@ -3080,17 +3546,19 @@ System.out.println("\n 结果: " + multiply(n1,n2));
 ```
 
 ### 输出
+
 ```text
 Input the first number: 25
 Input the second number: 30
 Result: 750
 ```
 
-# 打印和：差、积、平均值、距离、最大值和最小值
+## 打印和：差、积、平均值、距离、最大值和最小值
 
 ![](img/image00181.jpeg)
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -3114,6 +3582,7 @@ public class Main {
 ```
 
 ### 输出
+
 ```text
 Input 1st integer: 50
 Input 2nd integer: 30
@@ -3126,12 +3595,16 @@ Max integer: 50
 Min integer: 30
 ```
 
-# 找出三个数中的最大值
+## 找出三个数中的最大值
 
 ### 条件判断语句
+
 ![](img/image0182.jpeg)
 
 ### JAVA 代码
+
+
+
 ```java
 import java.util.Scanner;
 
@@ -3157,6 +3630,7 @@ public class Main {
 ```
 
 ### 输出
+
 ```text
 Input the 1st number: 25
 Input the 2nd number: 5
@@ -3167,6 +3641,7 @@ The greatest: 9
 # 显示给定整数的乘法表
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -3185,6 +3660,7 @@ public class Main {
 ```
 
 ### 输出
+
 ```text
 Input the number(to be calculated): 7
 Input of terms : 7
@@ -3204,6 +3680,7 @@ Input of terms : 7
 ![](img/image0183.jpeg)
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -3225,6 +3702,7 @@ public class Main {
 ```
 
 ### 输出
+
 ```text
 Input number of rows : 9
 1
@@ -3243,6 +3721,7 @@ Input number of rows : 9
 ![](img/image0184.jpeg)
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -3272,6 +3751,7 @@ public class Main {
 ```
 
 ### 输出
+
 ```text
 Input number of rows : 7
            1
@@ -3288,6 +3768,7 @@ Input number of rows : 7
 ![](img/image0185.jpeg)
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -3341,6 +3822,7 @@ public class Main {
 ```
 
 ### 输出
+
 ```text
 Input the number: 7
            1
@@ -3351,4 +3833,3 @@ Input the number: 7
   6 6 6 6 6 6
 7 7 7 7 7 7 7
 ```
-

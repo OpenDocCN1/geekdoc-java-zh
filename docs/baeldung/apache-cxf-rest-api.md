@@ -1,18 +1,19 @@
+
 # Apache CXF 对 RESTful Web 服务的支持
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/apache-cxf-rest-api>
 
-## 1。概述
+## 1. 概述
 
 本教程介绍了作为符合 JAX-RS 标准的框架的 Apache CXF，该标准定义了 Java 生态系统对表述性状态转移(REST)架构模式的支持。
 
 具体来说，它一步一步地描述了如何构建和发布 RESTful web 服务，以及如何编写单元测试来验证服务。
 
-这是 Apache CXF 系列的第三篇；[第一个](/web/20221208143856/https://www.baeldung.com/introduction-to-apache-cxf)关注 CXF 作为 JAX-WS 完全兼容的实现的使用。[的第二篇文章](/web/20221208143856/https://www.baeldung.com/apache-cxf-with-spring)提供了如何使用 CXF 和 Spring 的指南。
+这是 Apache CXF 系列的第三篇；[第一个](/web/20221208143856/https://www.baeldung.com/introduction-to-apache-cxf)关注 CXF 作为 JAX-WS 完全兼容的实现的使用。[第二篇文章](/web/20221208143856/https://www.baeldung.com/apache-cxf-with-spring)提供了如何使用 CXF 和 Spring 的指南。
 
-## 2。Maven 依赖关系
+## 2. Maven 依赖关系
 
-第一个需要依赖的是`org.apache.cxf:cxf-rt-frontend-` `jaxrs`。这个工件提供了 JAX-RS API 以及一个 CXF 实现:
+第一个需要依赖的是`org.apache.cxf:cxf-rt-frontend-jaxrs`。这个工件提供了 JAX-RS API 以及一个 CXF 实现:
 
 ```java
 <dependency>
@@ -44,13 +45,13 @@
 
 [在这里](https://web.archive.org/web/20221208143856/https://search.maven.org/classic/#search%7Cga%7C1%7Cg%3A%22org.apache.cxf%22%20AND%20a%3A%22cxf-rt-frontend-jaxrs%22)你可以找到最新版本的`cxf-rt-frontend-jaxrs`依赖。你可能还想参考[这个链接](https://web.archive.org/web/20221208143856/https://search.maven.org/classic/#search%7Cga%7C1%7Cg%3A%22org.apache.cxf%22%20AND%20a%3A%22cxf-rt-transports-http-jetty%22)来获得`org.apache.cxf:cxf-rt-transports-http-jetty`工件的最新版本。最后，`httpclient`的最新版本可以在[这里](https://web.archive.org/web/20221208143856/https://search.maven.org/classic/#search%7Cga%7C1%7Cg%3A%22org.apache.httpcomponents%22%20AND%20a%3A%22httpclient%22)找到。
 
-## 3。资源类别和请求映射
+## 3. 资源类别和请求映射
 
-让我们开始实现一个简单的例子；我们将用两个资源`Course` 和`Student.` 来设置我们的 REST API
+让我们开始实现一个简单的例子；我们将用两个资源`Course`和`Student`来设置我们的 REST API。
 
 我们将从简单的开始，然后逐步走向更复杂的例子。
 
-### 3.1。资源
+### 3.1. 资源
 
 下面是`Student`资源类的定义:
 
@@ -119,7 +120,7 @@ public class CourseRepository {
 
 `@Produces`注释的值用于告诉服务器在将对象发送给客户机之前，将从该类中的方法返回的对象转换成 XML 文档。我们在这里使用 JAXB 作为缺省值，因为没有指定其他绑定机制。
 
-### 3.2。简单的数据设置
+### 3.2. 简单的数据设置
 
 因为这是一个简单的示例实现，所以我们使用内存中的数据，而不是成熟的持久解决方案。
 
@@ -153,7 +154,7 @@ public class CourseRepository {
 
 这个类中处理 HTTP 请求的方法将在下一小节中介绍。
 
-### 3.3。API–请求映射方法
+### 3.3. API–请求映射方法
 
 现在，让我们来看看实际的 REST API 的实现。
 
@@ -255,7 +256,7 @@ public Course pathToStudent(@PathParam("courseId") int courseId) {
 
 我们已经展示了`Course`类中处理委托请求的方法。
 
-## 4。`Server`终点
+## 4. `Server`终点
 
 本节重点介绍 CXF 服务器的构造，该服务器用于发布 RESTful web 服务，其资源在前一节中有所描述。第一步是实例化一个`JAXRSServerFactoryBean`对象并设置根资源类:
 
@@ -295,11 +296,11 @@ public class RestfulServer {
 
 第 6 节介绍了这个`main`方法的调用。
 
-## 5。测试用例
+## 5. 测试用例
 
 本节描述了用于验证我们之前创建的 web 服务的测试用例。这些测试在响应四种最常用方法的 HTTP 请求后验证服务的资源状态，这四种方法是`GET`、`POST`、`PUT`和`DELETE`。
 
-### 5.1。准备工作
+### 5.1. 准备工作
 
 首先，在测试类中声明了两个静态字段，名为`RestfulTest`:
 
@@ -309,6 +310,8 @@ private static CloseableHttpClient client;
 ```
 
 在运行测试之前，我们创建一个`client`对象，用于与服务器通信，并在之后销毁它:
+
+
 
 ```java
 @BeforeClass
@@ -324,11 +327,11 @@ public static void closeClient() throws IOException {
 
 `client`实例现在可以被测试用例使用了。
 
-### 5.2。`GET`请求
+### 5.2. `GET`请求
 
-在 test 类中，我们定义了两种方法来向运行 web 服务的服务器发送`GET`请求。
+在`test`类中，我们定义了两种方法来向运行`web`服务的服务器发送`GET`请求。
 
-第一种方法是在给定资源中的`id`的情况下获取一个`Course`实例:
+第一种方法是在给定资源中的`id`的情况下获取一个`Course`实例：
 
 ```java
 private Course getCourse(int courseOrder) throws IOException {
@@ -340,7 +343,7 @@ private Course getCourse(int courseOrder) throws IOException {
 }
 ```
 
-第二个是获得一个`Student`实例，给出资源中的课程和学生的`id`:
+第二种是获得一个`Student`实例，给出资源中的课程和学生的`id`：
 
 ```java
 private Student getStudent(int courseOrder, int studentOrder)
@@ -353,13 +356,13 @@ private Student getStudent(int courseOrder, int studentOrder)
 }
 ```
 
-这些方法向服务资源发送 HTTP `GET`请求，然后将 XML 响应解组到相应类的实例。两者都用于在执行`POST`、`PUT`和`DELETE`请求后验证服务资源状态。
+这些方法向服务资源发送HTTP `GET`请求，然后将XML响应解组到相应类的实例。两者都用于在执行`POST`、`PUT`和`DELETE`请求后验证服务资源状态。
 
-### 5.3。`POST`请求
+### 5.3. `POST`请求
 
-这一小节以两个针对`POST`请求的测试案例为特色，说明了当上传的`Student`实例导致冲突时以及当它被成功创建时 web 服务的操作。
+这一小节以两个针对`POST`请求的测试案例为特色，说明了当上传的`Student`实例导致冲突时以及当它被成功创建时`web`服务的操作。
 
-在第一个测试中，我们使用了一个从`conflict_student.xml`文件解组的`Student`对象，它位于类路径中，包含以下内容:
+在第一个测试中，我们使用了一个从`conflict_student.xml`文件解组的`Student`对象，它位于类路径中，包含以下内容：
 
 ```java
 <Student>
@@ -368,7 +371,7 @@ private Student getStudent(int courseOrder, int studentOrder)
 </Student>
 ```
 
-这就是内容被转换成`POST`请求体的方式:
+这就是内容被转换成`POST`请求体的方式：
 
 ```java
 HttpPost httpPost = new HttpPost(BASE_URL + "1/students");
@@ -377,20 +380,20 @@ InputStream resourceStream = this.getClass().getClassLoader()
 httpPost.setEntity(new InputStreamEntity(resourceStream));
 ```
 
-设置`Content-Type`头是为了告诉服务器请求的内容类型是 XML:
+设置`Content-Type`头是为了告诉服务器请求的内容类型是XML：
 
 ```java
 httpPost.setHeader("Content-Type", "text/xml");
 ```
 
-由于上传的`Student`对象已经存在于第一个`Course`实例中，我们预计创建会失败，并返回一个状态为`Conflict` (409)的响应。以下代码片段验证了预期:
+由于上传的`Student`对象已经存在于第一个`Course`实例中，我们预计创建会失败，并返回一个状态为`Conflict` (409)的响应。以下代码片段验证了预期：
 
 ```java
 HttpResponse response = client.execute(httpPost);
 assertEquals(409, response.getStatusLine().getStatusCode());
 ```
 
-在下一个测试中，我们从名为`created_student.xml`的文件中提取 HTTP 请求的主体，这个文件也在类路径中。以下是该文件的内容:
+在下一个测试中，我们从名为`created_student.xml`的文件中提取HTTP请求的主体，这个文件也在类路径中。以下是该文件的内容：
 
 ```java
 <Student>
@@ -399,7 +402,7 @@ assertEquals(409, response.getStatusLine().getStatusCode());
 </Student>
 ```
 
-与前面的测试案例类似，我们构建并执行一个请求，然后验证一个新的实例是否成功创建:
+与前面的测试案例类似，我们构建并执行一个请求，然后验证一个新的实例是否成功创建：
 
 ```java
 HttpPost httpPost = new HttpPost(BASE_URL + "2/students");
@@ -412,7 +415,7 @@ HttpResponse response = client.execute(httpPost);
 assertEquals(200, response.getStatusLine().getStatusCode());
 ```
 
-我们可以确认 web 服务资源的新状态:
+我们可以确认`web`服务资源的新状态：
 
 ```java
 Student student = getStudent(2, 3);
@@ -420,7 +423,7 @@ assertEquals(3, student.getId());
 assertEquals("Student C", student.getName());
 ```
 
-下面是对新的`Student`对象请求的 XML 响应:
+下面是对新的`Student`对象请求的XML响应：
 
 ```java
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -430,9 +433,9 @@ assertEquals("Student C", student.getName());
 </Student>
 ```
 
-### 5.4。`PUT`请求
+### 5.4. `PUT`请求
 
-让我们从一个无效的更新请求开始，这里被更新的`Course`对象不存在。以下是用于替换 web 服务资源中不存在的`Course`对象的实例的内容:
+让我们从一个无效的更新请求开始，这里被更新的`Course`对象不存在。以下是用于替换`web`服务资源中不存在的`Course`对象的实例的内容：
 
 ```java
 <Course>
@@ -441,7 +444,7 @@ assertEquals("Student C", student.getName());
 </Course>
 ```
 
-该内容存储在类路径上名为`non_existent_course.xml`的文件中。它被提取出来，然后用下面的代码填充一个`PUT`请求的主体:
+该内容存储在类路径上名为`non_existent_course.xml`的文件中。它被提取出来，然后用下面的代码填充一个`PUT`请求的主体：
 
 ```java
 HttpPut httpPut = new HttpPut(BASE_URL + "3");
@@ -450,20 +453,20 @@ InputStream resourceStream = this.getClass().getClassLoader()
 httpPut.setEntity(new InputStreamEntity(resourceStream));
 ```
 
-设置`Content-Type`头是为了告诉服务器请求的内容类型是 XML:
+设置`Content-Type`头是为了告诉服务器请求的内容类型是XML：
 
 ```java
 httpPut.setHeader("Content-Type", "text/xml");
 ```
 
-因为我们故意发送了一个无效的请求来更新一个不存在的对象，所以预期会收到一个`Not Found` (404)响应。响应得到验证:
+因为我们故意发送了一个无效的请求来更新一个不存在的对象，所以预期会收到一个`Not Found` (404)响应。响应得到验证：
 
 ```java
 HttpResponse response = client.execute(httpPut);
 assertEquals(404, response.getStatusLine().getStatusCode());
 ```
 
-在第二个针对`PUT`请求的测试案例中，我们提交了一个具有相同字段值的`Course`对象。因为在这种情况下什么都没有改变，我们期望返回一个状态为`Not Modified` (304)的响应。整个过程举例说明如下:
+在第二个针对`PUT`请求的测试案例中，我们提交了一个具有相同字段值的`Course`对象。因为在这种情况下什么都没有改变，我们期望返回一个状态为`Not Modified` (304)的响应。整个过程举例说明如下：
 
 ```java
 HttpPut httpPut = new HttpPut(BASE_URL + "1");
@@ -476,7 +479,7 @@ HttpResponse response = client.execute(httpPut);
 assertEquals(304, response.getStatusLine().getStatusCode());
 ```
 
-其中`unchanged_course.xml`是类路径上保存用于更新的信息的文件。以下是它的内容:
+其中`unchanged_course.xml`是类路径上保存用于更新的信息的文件。以下是它的内容：
 
 ```java
 <Course>
@@ -485,7 +488,7 @@ assertEquals(304, response.getStatusLine().getStatusCode());
 </Course>
 ```
 
-在最后一个对`PUT`请求的演示中，我们执行了一个有效的更新。以下是`changed_course.xml`文件的内容，其内容用于更新 web 服务资源中的`Course`实例:
+在最后一个对`PUT`请求的演示中，我们执行了一个有效的更新。以下是`changed_course.xml`文件的内容，其内容用于更新`web`服务资源中的`Course`实例：
 
 ```java
 <Course>
@@ -494,7 +497,7 @@ assertEquals(304, response.getStatusLine().getStatusCode());
 </Course>
 ```
 
-请求是这样构建和执行的:
+请求是这样构建和执行的：
 
 ```java
 HttpPut httpPut = new HttpPut(BASE_URL + "2");
@@ -504,14 +507,14 @@ httpPut.setEntity(new InputStreamEntity(resourceStream));
 httpPut.setHeader("Content-Type", "text/xml");
 ```
 
-让我们验证对服务器的`PUT`请求，并验证成功的上传:
+让我们验证对服务器的`PUT`请求，并验证成功的上传：
 
 ```java
 HttpResponse response = client.execute(httpPut);
 assertEquals(200, response.getStatusLine().getStatusCode());
 ```
 
-让我们验证 web 服务资源的新状态:
+让我们验证`web`服务资源的新状态：
 
 ```java
 Course course = getCourse(2);
@@ -519,7 +522,7 @@ assertEquals(2, course.getId());
 assertEquals("Apache CXF Support for RESTful", course.getName());
 ```
 
-下面的代码片段显示了发送对之前上传的`Course`对象的 GET 请求时 XML 响应的内容:
+下面的代码片段显示了发送对之前上传的`Course`对象的GET请求时XML响应的内容：
 
 ```java
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -529,9 +532,9 @@ assertEquals("Apache CXF Support for RESTful", course.getName());
 </Course>
 ```
 
-### 5.5。`DELETE`请求
+### 5.5. `DELETE`请求
 
-首先，让我们尝试删除一个不存在的`Student`实例。操作应该会失败，并且预期会有一个具有`Not Found` (404)状态的相应响应:
+首先，让我们尝试删除一个不存在的`Student`实例。操作应该会失败，并且预期会有一个具有`Not Found` (404)状态的相应响应：
 
 ```java
 HttpDelete httpDelete = new HttpDelete(BASE_URL + "1/students/3");
@@ -539,7 +542,7 @@ HttpResponse response = client.execute(httpDelete);
 assertEquals(404, response.getStatusLine().getStatusCode());
 ```
 
-在针对`DELETE`请求的第二个测试用例中，我们创建、执行并验证一个请求:
+在针对`DELETE`请求的第二个测试用例中，我们创建、执行并验证一个请求：
 
 ```java
 HttpDelete httpDelete = new HttpDelete(BASE_URL + "1/students/1");
@@ -547,7 +550,7 @@ HttpResponse response = client.execute(httpDelete);
 assertEquals(200, response.getStatusLine().getStatusCode());
 ```
 
-我们使用以下代码片段验证 web 服务资源的新状态:
+我们使用以下代码片段验证`web`服务资源的新状态：
 
 ```java
 Course course = getCourse(1);
@@ -556,7 +559,7 @@ assertEquals(2, course.getStudents().get(0).getId());
 assertEquals("Student B", course.getStudents().get(0).getName());
 ```
 
-接下来，我们列出在请求 web 服务资源中的第一个`Course`对象之后收到的 XML 响应:
+接下来，我们列出在请求`web`服务资源中的第一个`Course`对象之后收到的XML响应：
 
 ```java
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -572,17 +575,17 @@ assertEquals("Student B", course.getStudents().get(0).getName());
 
 很明显，第一个`Student`已经成功移除。
 
-## 6。测试执行
+## 6. 测试执行
 
-第 4 节描述了如何在`RestfulServer`类的`main`方法中创建和销毁一个`Server`实例。
+第4节描述了如何在`RestfulServer`类的`main`方法中创建和销毁一个`Server`实例。
 
-启动并运行服务器的最后一步是调用那个`main`方法。为了实现这一点，在 Maven POM 文件中包含并配置了 Exec Maven 插件:
+启动并运行服务器的最后一步是调用那个`main`方法。为了实现这一点，在Maven POM文件中包含并配置了Exec Maven插件：
 
 ```java
 <plugin>
     <groupId>org.codehaus.mojo</groupId>
     <artifactId>exec-maven-plugin</artifactId>
-    <version>3.0.0<version>
+    <version>3.0.0</version>
     <configuration>
         <mainClass>
           com.baeldung.cxf.jaxrs.implementation.RestfulServer
@@ -593,7 +596,7 @@ assertEquals("Student B", course.getStudents().get(0).getName());
 
 这个插件的最新版本可以通过[这个链接](https://web.archive.org/web/20221208143856/https://search.maven.org/classic/#search%7Cga%7C1%7Cg%3A%22org.codehaus.mojo%22%20AND%20a%3A%22exec-maven-plugin%22)找到。
 
-在编译和打包本教程中展示的工件的过程中，Maven Surefire 插件自动执行所有包含在名称以`Test`开头或结尾的类中的测试。如果是这种情况，插件应该被配置为排除那些测试:
+在编译和打包本教程中展示的工件的过程中，Maven Surefire插件自动执行所有包含在名称以`Test`开头或结尾的类中的测试。如果是这种情况，插件应该被配置为排除那些测试：
 
 ```java
 <plugin>
@@ -607,14 +610,14 @@ assertEquals("Student B", course.getStudents().get(0).getName());
 </plugin>
 ```
 
-在上面的配置中， `ServiceTest`被排除，因为它是测试类的名称。您可以为该类选择任何名称，只要其中包含的测试在服务器准备好连接之前没有被 Maven Surefire 插件运行。
+在上面的配置中，`ServiceTest`被排除，因为它是测试类的名称。您可以为该类选择任何名称，只要其中包含的测试在服务器准备好连接之前没有被Maven Surefire插件运行。
 
-最新版本的 Maven Surefire 插件，请查看[这里](https://web.archive.org/web/20221208143856/https://search.maven.org/classic/#search%7Cga%7C1%7Ca%3A%22maven-surefire-plugin%22)。
+最新版本的Maven Surefire插件，请查看[这里](https://web.archive.org/web/20221208143856/https://search.maven.org/classic/#search%7Cga%7C1%7Ca%3A%22maven-surefire-plugin%22)。
 
-现在您可以执行`exec:java`目标来启动 RESTful web 服务服务器，然后使用 IDE 运行上面的测试。同样，您可以通过在终端中执行命令 `mvn -Dtest=ServiceTest test`来开始测试。
+现在您可以执行`exec:java`目标来启动RESTful web服务服务器，然后使用IDE运行上面的测试。同样，您可以通过在终端中执行命令`mvn -Dtest=ServiceTest test`来开始测试。
 
-## 7 .**。结论**
+## 7. 结论
 
-本教程演示了 Apache CXF 作为 JAX-RS 实现的使用。它演示了如何使用该框架来定义 RESTful web 服务的资源，以及如何创建用于发布服务的服务器。
+本教程演示了Apache CXF作为JAX-RS实现的使用。它演示了如何使用该框架来定义RESTful web服务的资源，以及如何创建用于发布服务的服务器。
 
-所有这些例子和代码片段的实现都可以在 GitHub 项目中找到。
+所有这些例子和代码片段的实现都可以在GitHub项目中找到。

@@ -1,8 +1,9 @@
+
 # 在 RxJava 中组合观察值
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/rxjava-combine-observables>
 
-## 1。简介
+## 1. 简介
 
 在这个快速教程中，我们将讨论在 RxJava 中组合`Observables`的不同方式。
 
@@ -10,7 +11,7 @@
 
 现在，让我们开始吧。
 
-## 2。`Observables`
+## 2. `Observables`
 
 `Observable`序列，或简称为`Observables`，是异步数据流的表示。
 
@@ -18,7 +19,7 @@
 
 订阅是非阻塞的，因为`Observer`会对`Observable`将来发出的任何消息做出反应。这反过来又促进了并发性。
 
-下面是 RxJava 中的一个简单演示:
+下面是 RxJava 中的一个简单演示：
 
 ```java
 Observable
@@ -26,7 +27,7 @@ Observable
   .subscribe(name -> System.out.println("Hello " + name))
 ```
 
-## 3。组合可观测量
+## 3. 组合可观测量
 
 当使用反应式框架编程时，组合各种`Observables`是一个常见的用例。
 
@@ -36,9 +37,9 @@ Observable
 
 在这一节中，我们将讨论在 RxJava 中组合多个`Observables`的一些不同方法，以及每种方法适用的不同用例。
 
-### 3.1。`Merge`
+### 3.1. `Merge`
 
-我们可以使用`merge`操作符来组合多个`Observables`的输出，这样它们就像一个:
+我们可以使用`merge`操作符来组合多个`Observables`的输出，这样它们就像一个：
 
 ```java
 @Test
@@ -54,9 +55,9 @@ public void givenTwoObservables_whenMerged_shouldEmitCombinedResults() {
 }
 ```
 
-### 3.2。`MergeDelayError`
+### 3.2. `MergeDelayError`
 
-`mergeDelayError`方法与`merge`的相同之处在于它将多个`Observables`合并为一个，但是**如果在合并过程中出现错误，它允许无错误的项目在传播错误**之前继续:
+`mergeDelayError`方法与`merge`的相同之处在于它将多个`Observables`合并为一个，但是**如果在合并过程中出现错误，它允许无错误的项目在传播错误**之前继续：
 
 ```java
 @Test
@@ -74,7 +75,7 @@ public void givenMutipleObservablesOneThrows_whenMerged_thenCombineBeforePropaga
 }
 ```
 
-上面的例子**发出所有无错值**:
+上面的例子**发出所有无错值**：
 
 ```java
 hello
@@ -82,11 +83,11 @@ world
 rxjava
 ```
 
-**注意，如果我们使用`merge`而不是`mergeDelayError`，将不会发出`String` " *rxjava"* ，因为当错误发生时`merge`会立即停止来自`Observables`的数据流。**
+**注意，如果我们使用`merge`而不是`mergeDelayError`，将不会发出`String` "rxjava"，因为当错误发生时`merge`会立即停止来自`Observables`的数据流。**
 
-### 3.3。`Zip`
+### 3.3. `Zip`
 
-`zip`扩展方法**将两个值序列组合成对**:
+`zip`扩展方法**将两个值序列组合成对**：
 
 ```java
 @Test
@@ -104,9 +105,9 @@ public void givenTwoObservables_whenZipped_thenReturnCombinedResults() {
 }
 ```
 
-### 3.4。带间隔的 zip
+### 3.4. 带间隔的 zip
 
-在这个例子中，我们将使用`[interval](https://web.archive.org/web/20221205171539/http://reactivex.io/documentation/operators/interval.html)` 压缩一个流，这实际上将延迟第一个流的元素的发出:
+在这个例子中，我们将使用`[interval](https://web.archive.org/web/20221205171539/http://reactivex.io/documentation/operators/interval.html)`压缩一个流，这实际上将延迟第一个流的元素的发出：
 
 ```java
 @Test
@@ -126,7 +127,7 @@ public void givenAStream_whenZippedWithInterval_shouldDelayStreamEmmission() {
 }
 ```
 
-## 4。总结
+## 4. 总结
 
 在本文中，我们已经看到了一些将`Observables`与 RxJava 相结合的方法。你可以在[官方 RxJava 文档](https://web.archive.org/web/20221205171539/https://github.com/ReactiveX/RxJava/wiki/Combining-Observables)中了解到其他类似`[combineLatest](https://web.archive.org/web/20221205171539/http://reactivex.io/documentation/operators/combinelatest.html)`、`[join](https://web.archive.org/web/20221205171539/http://reactivex.io/documentation/operators/join.html)`、`[groupJoin](https://web.archive.org/web/20221205171539/http://reactivex.io/documentation/operators/join.html)`、`[switchOnNext](https://web.archive.org/web/20221205171539/http://reactivex.io/documentation/operators/switch.html)`的方法。
 

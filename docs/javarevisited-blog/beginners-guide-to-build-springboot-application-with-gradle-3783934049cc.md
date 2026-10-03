@@ -1,3 +1,4 @@
+
 # 使用 Gradle 构建 SpringBoot 应用程序的初学者指南
 
 > 原文：<https://medium.com/javarevisited/beginners-guide-to-build-springboot-application-with-gradle-3783934049cc?source=collection_archive---------3----------------------->

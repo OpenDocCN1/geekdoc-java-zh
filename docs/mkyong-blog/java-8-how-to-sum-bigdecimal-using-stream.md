@@ -1,17 +1,18 @@
+
 # Java 8–如何使用 Stream 对 BigDecimal 求和？
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java8/java-8-how-to-sum-bigdecimal-using-stream/>
 
 在 Java 8 中，我们可以使用`Stream.reduce()`对一列`BigDecimal`求和。
 
-## 1.Stream.reduce()
+## 1. Stream.reduce()
 
 使用一个普通的 for 循环和一个`stream.reduce()`对一系列`BigDecimal`值求和的 Java 示例。
 
-JavaBigDecimal.java
+`JavaBigDecimal.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.math.BigDecimal;
 import java.util.LinkedList;
@@ -41,24 +42,24 @@ public class JavaBigDecimal {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- Sum = 36.59
-Sum (Stream) = 36.59 
+Sum = 36.59
+Sum (Stream) = 36.59
 ```
 
-## 2.映射和缩小
+## 2. 映射和缩小
 
 对列表`Invoices`中的所有`BigDecimal`求和。
 
-JavaBigDecimalObject.java
+`JavaBigDecimalObject.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -123,19 +124,19 @@ class Invoice {
     public void setQty(BigDecimal qty) {
         this.qty = qty;
     }
-} 
+}
 ```
 
 输出
 
 ```java
- 75.851
-75.85 
+75.851
+75.85
 ```
 
 ## 参考
 
-*   [Java 8 Stream.reduce()示例](/web/20221206172253/https://mkyong.com/java8/java-8-stream-reduce-examples/)
-*   [如何在 Java 中计算货币值](/web/20221206172253/https://mkyong.com/java/how-do-calculate-monetary-values-in-java-double-vs-bigdecimal/)
+* [Java 8 Stream.reduce()示例](/web/20221206172253/https://mkyong.com/java8/java-8-stream-reduce-examples/)
+* [如何在 Java 中计算货币值](/web/20221206172253/https://mkyong.com/java/how-do-calculate-monetary-values-in-java-double-vs-bigdecimal/)
 
 <input type="hidden" id="mkyong-current-postId" value="15479">

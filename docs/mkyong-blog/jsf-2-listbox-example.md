@@ -1,11 +1,12 @@
+
 # JSF 2 列表框示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jsf2/jsf-2-listbox-example/>
 
-在 JSF，**<h:selectone listbox/>**标签用于呈现单个选择列表框——HTML 选择元素，具有“**大小**属性。
+在 JSF 中，`<h:selectOneListbox/>`标签用于呈现单个选择列表框——HTML 选择元素，具有“**大小**”属性。
 
 ```java
- //JSF...
+//JSF...
 <h:selectOneListbox value="#{user.favYear1}">
    	<f:selectItem itemValue="2000" itemLabel="Year1 - 2000" />
    	<f:selectItem itemValue="2010" itemLabel="Year1 - 2010" />
@@ -22,18 +23,18 @@
 
 ## h:selectOneListbox 示例
 
-一个 JSF 2.0 示例，展示了如何使用" **h:selectOneListbox** "标记来呈现单个选择列表框，并以 3 种不同的方式填充数据:
+一个 JSF 2.0 示例，展示了如何使用`h:selectOneListbox`标记来呈现单个选择列表框，并以 3 种不同的方式填充数据：
 
-1.  “**f:selecti item**标签中的硬核值。
-2.  用 Map 生成值，并将其放入“**f:selecti items**标签中。
-3.  用一个对象数组生成值，放入“ **f:selectItems** ”标签，然后用“ **var** 属性表示值。
+1. `f:selectItem`标签中的硬核值。
+2. 用`Map`生成值，并将其放入`f:selectItems`标签中。
+3. 用一个对象数组生成值，放入`f:selectItems`标签，然后用`var`属性表示值。
 
- ## 1.支撑豆
+## 1. 支撑豆
 
 为列表框值保存和生成数据的后备 bean。
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.io.Serializable;
 import java.util.LinkedHashMap;
@@ -99,12 +100,12 @@ public class UserBean implements Serializable{
 } 
 ```
 
- ## 2.JSF·佩奇
+## 2. JSF 页面
 
-演示“ **h:selectOneListbox** ”标签使用的 JSF 页面。
+演示`h:selectOneListbox`标签使用的 JSF 页面。
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html    
@@ -148,10 +149,10 @@ public class UserBean implements Serializable{
 </html> 
 ```
 
-result.xhtml…
+`result.xhtml`…
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html    
@@ -174,20 +175,20 @@ result.xhtml…
 </html> 
 ```
 
-## 3.演示
+## 3. 演示
 
 ![jsf2-listbox-example-1](img/73f2dcdd9673075eecef3490e895168e.png "jsf2-listbox-example-1")
 
-单击“提交”按钮时，链接到“result.xhtml”页面并显示提交的列表框值。
+单击“提交”按钮时，链接到`result.xhtml`页面并显示提交的列表框值。
 
 ![jsf2-listbox-example-2](img/04cb1b634bd8600207a30cad225b51bd.png "jsf2-listbox-example-2")
 
 ## 如何预先选择列表框值？
 
-如果与“ **h:selectOneListbox** ”标记的“值”匹配，则选择“ **f:selectItems** ”标记的值。在上面的示例中，如果您将 favYear1 属性设置为“2010”:
+如果与`h:selectOneListbox`标记的“值”匹配，则选择`f:selectItems`标记的值。在上面的示例中，如果您将`favYear1`属性设置为`"2010"`：
 
 ```java
- @ManagedBean(name="user")
+@ManagedBean(name="user")
 @SessionScoped
 public class UserBean{
 
@@ -196,7 +197,7 @@ public class UserBean{
 	//... 
 ```
 
-默认情况下，“favYear1”列表框值“2010”处于选中状态。
+默认情况下，`favYear1`列表框值`"2010"`处于选中状态。
 
 ## 下载源代码
 
@@ -204,13 +205,6 @@ Download It – [JSF-2-Listbox-Example.zip](http://web.archive.org/web/201902251
 
 #### 参考
 
-1.  [JSF<h:selectone listbox/>JavaDoc](http://web.archive.org/web/20190225103149/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/h/selectOneListbox.html)
+1. [JSF `<h:selectOneListbox/>` JavaDoc](http://web.archive.org/web/20190225103149/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/h/selectOneListbox.html)
 
 [JSF 2](http://web.archive.org/web/20190225103149/http://www.mkyong.com/tag/jsf2/)[listbox](http://web.archive.org/web/20190225103149/http://www.mkyong.com/tag/listbox/)
-
-
-
-
-
-
-

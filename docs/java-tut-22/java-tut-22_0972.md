@@ -1,3 +1,4 @@
+
 # 目录概念
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/concepts/directory.html`](https://docs.oracle.com/javase/tutorial/jndi/concepts/directory.html)
@@ -23,7 +24,6 @@
 ```java
 Attribute Identifier : Attribute Value
                  mail   john.smith@example.com
-
 ```
 
 ## 目录和目录服务

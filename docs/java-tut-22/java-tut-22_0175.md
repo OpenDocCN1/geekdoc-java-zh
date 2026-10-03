@@ -1,3 +1,4 @@
+
 # 文件 I/O（具有 NIO.2 功能）
 
 > 译文：[`docs.oracle.com/javase/tutorial/essential/io/fileio.html`](https://docs.oracle.com/javase/tutorial/essential/io/fileio.html)
@@ -10,7 +11,7 @@
 
 `java.nio.file`包及其相关包`java.nio.file.attribute`为文件 I/O 和访问默认文件系统提供了全面支持。尽管 API 有许多类，但您只需关注其中的一些入口点。您会发现这个 API 非常直观和易于使用。
 
-本教程首先询问什么是路径？然后介绍了该包的主要入口点 Path 类。解释了与语法操作相关的`Path`类中的方法。然后教程转向包中的另一个主要类`Files`类，其中包含处理文件操作的方法。首先介绍了许多 file operations 共有的一些概念。然后介绍了用于检查、删除、复制和移动文件的方法。
+本教程首先询问什么是路径？然后介绍了该包的主要入口点`Path`类。解释了与语法操作相关的`Path`类中的方法。然后教程转向包中的另一个主要类`Files`类，其中包含处理文件操作的方法。首先介绍了许多 file operations 共有的一些概念。然后介绍了用于检查、删除、复制和移动文件的方法。
 
 教程展示了在继续学习 file I/O 和 directory I/O 之前如何管理元数据。解释了随机访问文件并检查了与符号链接和硬链接相关的问题。
 

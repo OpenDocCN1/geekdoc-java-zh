@@ -1,22 +1,23 @@
+
 # 在 Spring Data JPA 中启用事务锁
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-jpa-transaction-locks>
 
-## 1.概观
+## 1. 概观
 
 在这个快速教程中，我们将讨论在 Spring Data JPA 中为[自定义查询方法](/web/20221005062618/https://www.baeldung.com/spring-data-jpa-query)和预定义的存储库 CRUD 方法启用事务锁。
 
 我们还将了解不同的锁类型和设置事务锁超时。
 
-## 2.锁类型
+## 2. 锁类型
 
 JPA 定义了两种主要的锁类型，悲观锁和乐观锁。
 
-### 2.1。悲观锁定
+### 2.1. 悲观锁定
 
 **当我们在一个事务中使用[悲观锁定](/web/20221005062618/https://www.baeldung.com/jpa-pessimistic-locking)并访问一个实体时，它会被立即锁定**。事务通过提交或回滚事务来释放锁。
 
-### 2.2。乐观锁定
+### 2.2. 乐观锁定
 
 **在[乐观锁定](/web/20221005062618/https://www.baeldung.com/jpa-optimistic-locking)中，事务不会立即锁定实体。**相反，事务通常用分配给它的版本号保存实体的状态。
 
@@ -26,7 +27,7 @@ JPA 定义了两种主要的锁类型，悲观锁和乐观锁。
 
 除了版本号方法，我们可以使用其他方法，比如时间戳、散列值计算或序列化校验和，这取决于哪种方法最适合我们当前的开发环境。
 
-## 3.对查询方法启用事务锁
+## 3. 对查询方法启用事务锁
 
 **要获取实体上的锁，我们可以通过传递所需的锁模式类型** `.` 用`[Lock](https://web.archive.org/web/20221005062618/https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/Lock.html)`注释来注释目标查询方法
 
@@ -51,7 +52,7 @@ public Optional<Customer> findById(Long customerId);
 
 如果锁不能被授予并且锁定冲突没有导致事务回滚，JPA 抛出一个 [`LockTimeoutException`](https://web.archive.org/web/20221005062618/https://docs.oracle.com/javaee/7/api/javax/persistence/LockTimeoutException.html) 。但是它没有将活动事务标记为回滚。
 
-## 4.设置事务锁定超时
+## 4. 设置事务锁定超时
 
 使用悲观锁定时，数据库将尝试立即锁定实体。当不能立即获得锁时，底层 JPA 实现抛出一个`LockTimeoutException`。为了避免这种异常，我们可以指定锁超时值。
 
@@ -65,7 +66,7 @@ public Optional<Customer> findById(Long customerId);
 
 关于在不同作用域设置锁超时提示的更多细节可以在本文 [ObjectDB 文章](https://web.archive.org/web/20221005062618/https://www.objectdb.com/java/jpa/persistence/lock#Pessimistic_Locking_)中找到。
 
-## 5.结论
+## 5. 结论
 
 在本教程中，我们学习了不同类型的事务锁模式。我们已经学习了如何在 Spring Data JPA 中启用事务锁。我们还讨论了设置锁超时。
 

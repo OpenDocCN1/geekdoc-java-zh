@@ -1,3 +1,4 @@
+
 # 2023 年，高级技术开发人员的下一步是什么？项目经理、技术架构师还是 DevOps 工程师？
 
 > 原文：<https://medium.com/javarevisited/what-next-for-senior-developers-in-tech-project-manager-technical-architect-or-a-devops-engineer-b532a80c9ba1?source=collection_archive---------0----------------------->
@@ -88,43 +89,58 @@
 
 分析师参与业务系统或 IT 系统的设计或修改。分析师与业务涉众和主题专家互动，以便理解他们的问题和需求。
 
-分析师还收集文档并分析业务需求和要求。如果你是商业分析新手，不知道你的角色是什么，我建议你看一下商业分析基础<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fbusiness-analysis-ba%2F>****s**，这是关于这个主题的较好的课程之一。**
+分析师还收集文档并分析业务需求和要求。如果你是商业分析新手，不知道你的角色是什么，我建议你看一下商业分析基础<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fbusiness-analysis-ba%2F>，这是关于这个主题的较好的课程之一。
 
-**我向有抱负的业务分析师和将业务分析作为工作一部分的开发人员强烈推荐这门课程。**
+我向有抱负的业务分析师和将商业分析作为工作一部分的开发人员强烈推荐这门课程。
 
-**[![](img/0fcc674d33ca4437c27e820f1833c51b.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fbusiness-analysis-ba%2F)**
+[![](img/0fcc674d33ca4437c27e820f1833c51b.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fbusiness-analysis-ba%2F)
 
-## **6.开发商代言人**
+## 6.开发商代言人
 
-**我看到许多高级开发人员还在扮演另一个角色，那就是开发倡导者。如果你对某项技术或产品充满热情，比如 IntelliJIDEA，那么你也可以成为一名开发者拥护者。这是一个专门的角色，作为公司和它的开发者社区之间的联系。**
+我看到许多高级开发人员还在扮演另一个角色，那就是开发倡导者。如果你对某项技术或产品充满热情，比如 IntelliJIDEA，那么你也可以成为一名开发者拥护者。这是一个专门的角色，作为公司和它的开发者社区之间的联系。
 
-**近年来，我看到许多高级开发人员选择了这个角色，因为这也给了他们一个机会来确立自己在特定工具或技术方面权威地位，并作为一个有影响力的人建立自己的在线档案。**
+近年来，我看到许多高级开发人员选择了这个角色，因为这也给了他们一个机会来确立自己在特定工具或技术方面权威地位，并作为一个有影响力的人建立自己的在线档案。
 
-**所以，这个角色拥有两个世界的精华，如果你想成为开发者拥护者，我建议你在投入之前了解更多。如果你需要资源，Packt 的 [**开发者手册是一个很好的起点。作者不是别人，正是 Geertjan Wielenga，他是 NetBeans IDE(Java 开发人员最流行的 IDE 之一)的幕后人员。**](https://www.amazon.com/Developer-Advocate-Conversations-turning-passion/dp/1789138744?tag=javamysqlanta-20)**
+所以，这个角色拥有两个世界的精华，如果你想成为开发者拥护者，我建议你在投入之前了解更多。如果你需要资源，Packt 的 [**开发者手册是一个很好的起点。作者不是别人，正是 Geertjan Wielenga，他是 NetBeans IDE(Java 开发人员最流行的 IDE 之一)的幕后人员。**](https://www.amazon.com/Developer-Advocate-Conversations-turning-passion/dp/1789138744?tag=javamysqlanta-20)
 
-**顺便说一下，整本书的标题是“开发者，倡导者！:关于将谈论技术的热情转化为职业的对话”，你可以猜猜它对你有什么帮助。**
+顺便说一下，整本书的标题是“开发者，倡导者！:关于将谈论技术的热情转化为职业的对话”，你可以猜猜它对你有什么帮助。
 
-**[![](img/b2ddf37523a523347c4e7180d95e6029.png)](https://www.amazon.com/Developer-Advocate-Conversations-turning-passion/dp/1789138744?tag=javamysqlanta-20)**
+[![](img/b2ddf37523a523347c4e7180d95e6029.png)](https://www.amazon.com/Developer-Advocate-Conversations-turning-passion/dp/1789138744?tag=javamysqlanta-20)
 
-**这就是有经验的 Java 程序员的一些职业选择，比如有 8 到 15 年经验的人。我知道，你们中的许多人不想进入人员管理的道路，而想继续亲自参与编码和目前正在做的任何事情。**
+这就是有经验的 Java 程序员的一些职业选择，比如有 8 到 15 年经验的人。我知道，你们中的许多人不想进入人员管理的道路，而想继续亲自参与编码和目前正在做的任何事情。
 
-**如果是这样，那么你应该在[解决方案架构师](http://javarevisited.blogspot.sg/2018/02/5-must-read-books-to-become-software-architect-solution.html)和[开发运维工程师](https://javarevisited.blogspot.com/2018/09/the-2018-devops-roadmap-your-guide-to-become-DevOps-Engineer.html)之间做出选择。两者都是非常实际的角色，你将继续与技术打交道。**
+如果是这样，那么你应该在[解决方案架构师](http://javarevisited.blogspot.sg/2018/02/5-must-read-books-to-become-software-architect-solution.html)和[开发运维工程师](https://javarevisited.blogspot.com/2018/09/the-2018-devops-roadmap-your-guide-to-become-DevOps-Engineer.html)之间做出选择。两者都是非常实际的角色，你将继续与技术打交道。
 
-**另一方面，如果你现在正考虑离开编码，并想在领导、人员和产品方面探索更多的选择，那么 scrum master、业务分析师和项目经理的角色非常适合你。**
+另一方面，如果你现在正考虑离开编码，并想在领导、人员和产品方面探索更多的选择，那么 scrum master、业务分析师和项目经理的角色非常适合你。
 
-**其他**文章你可能喜欢**探索
+其他**文章**你可能喜欢**探索
+
 [2023 年 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
+
 [Java 和 Web 开发者应该学习的 10 件事](http://javarevisited.blogspot.sg/2017/12/10-things-java-programmers-should-learn.html#axzz53ENLS1RB)
+
 [Java 开发者应该知道的 10 个测试工具](http://javarevisited.blogspot.sg/2018/01/10-unit-testing-and-integration-tools-for-java-programmers.html)
+
 [5 个框架 Java 开发者应该学习的 5 门课程](http://javarevisited.blogspot.sg/2018/04/top-5-java-frameworks-to-learn-in-2018_27.html)
+
 [学习 Java 中的大数据和 Apache Spark](http://javarevisited.blogspot.sg/2017/12/top-5-courses-to-learn-big-data-and.html)
+
 [10 门课程学习 Java 开发者的 devo PS](https://javarevisited.blogspot.com/2018/09/10-devops-courses-for-experienced-java-developers.html)
+
 <http://www.java67.com/2018/02/10-books-java-developers-should-read-in.html>
+
 [Java 开发人员在日常工作中使用的 10 个工具](http://javarevisited.blogspot.sg/2017/03/10-tools-used-by-java-programming-Developers.html#axzz55lrMRnNC)
-[成为更好的 Java 开发人员的 10 个技巧](https://javarevisited.blogspot.com/2018/05/10-tips-to-become-better-java-developer.html)**
 
-**感谢阅读这篇文章！如果你喜欢这篇文章，那么请分享给你的朋友和同事。此外，如果您有任何问题或反馈，请在下面的评论中留言！**
+[成为更好的 Java 开发人员的 10 个技巧](https://javarevisited.blogspot.com/2018/05/10-tips-to-become-better-java-developer.html)
 
-## **您可能喜欢的其他媒体文章:**
+感谢阅读这篇文章！如果你喜欢这篇文章，那么请分享给你的朋友和同事。此外，如果您有任何问题或反馈，请在下面的评论中留言！
 
-**</javarevisited/what-java-programmers-should-learn-in-2020-648050533c83>  </javarevisited/top-10-programming-languages-you-can-learn-for-jobs-and-career-in-technology-491e611c22bc>  </javarevisited/these-are-the-highest-paying-tech-jobs-programmers-can-aim-to-increase-their-pay-c59e1eeb6904> **
+## 您可能喜欢的其他媒体文章:
+
+
+
+`</javarevisited/what-java-programmers-should-learn-in-2020-648050533c83>`
+
+`</javarevisited/top-10-programming-languages-you-can-learn-for-jobs-and-career-in-technology-491e611c22bc>`
+
+`</javarevisited/these-are-the-highest-paying-tech-jobs-programmers-can-aim-to-increase-their-pay-c59e1eeb6904>`

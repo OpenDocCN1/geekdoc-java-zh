@@ -1,3 +1,4 @@
+
 # 打印用户界面的内容
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/printing/gui.html`](https://docs.oracle.com/javase/tutorial/2d/printing/gui.html)
@@ -7,7 +8,6 @@
 ```java
 java.awt.Component.print(Graphics g);
 java.awt.Component.printAll(Graphics g);
-
 ```
 
 以下图表示一个简单的用户界面。
@@ -34,13 +34,8 @@ public int print(Graphics g, PageFormat pf, int page)
 
     return PAGE_EXISTS;
 }
-
 ```
 
-* * *
-
 **注意：** `printAll`方法的调用是此示例与打印文本或图像示例之间的唯一区别。`print(Graphics g)`方法反映了用于屏幕渲染的`java.awt.Component.paint(Graphics g)`方法。使用`print()`方法而不是`paint()`方法，因为`Components`类可能已经重写了`print()`方法以不同方式处理打印情况。
-
-* * *
 
 `printAll(Graphics g)`方法打印组件及其所有子组件。通常使用此方法打印对象，例如完整窗口，而不是单个组件。

@@ -1,3 +1,4 @@
+
 # 搜索结果
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/ldap/result.html`](https://docs.oracle.com/javase/tutorial/jndi/ldap/result.html)
@@ -5,11 +6,8 @@
 当您在[`DirContext`](https://docs.oracle.com/javase/8/docs/api/javax/naming/directory/DirContext.html)接口中使用搜索方法时，您将获得一个[`NamingEnumeration`](https://docs.oracle.com/javase/8/docs/api/javax/naming/NamingEnumeration.html)。`NamingEnumeration`中的每个项目都是一个[`SearchResult`](https://docs.oracle.com/javase/8/docs/api/javax/naming/directory/SearchResult.html)，其中包含以下信息：
 
 +   名称
-
 +   对象
-
 +   类名
-
 +   属性
 
 ## 名称
@@ -21,12 +19,11 @@ NamingEnumeration answer = ctx.search("ou=NewHires",
     "(&(mySpecialKey={0}) (cn=*{1}))",  // Filter expression
     new Object[]{key, name},                // Filter arguments
     null);                                  // Default search controls
-
 ```
 
 在本示例中，目标上下文由`"ou=NewHires"`命名。`answer`中的`SearchResult`中的名称相对于`"ou=NewHires"`。例如，如果`getName()`返回`"cn=J. Duke"`，那么相对于`ctx`的名称将是`"cn=J. Duke, ou=NewHires"`。
 
-如果您使用[`SearchControls.SUBTREE_SCOPE`](https://docs.oracle.com/javase/8/docs/api/javax/naming/directory/SearchControls.html#SUBTREE_SCOPE)或[`SearchControls.OBJECT_SCOPE`](https://docs.oracle.com/javase/8/docs/api/javax/naming/directory/SearchControls.html#OBJECT_SCOPE)执行搜索，并且目标上下文本身满足搜索过滤器，则返回的名称将是""（空名称），因为这是相对于目标上下文的名称。
+如果您使用[`SearchControls.SUBTREE_SCOPE`](https://docs.oracle.com/javase/8/docs/api/javax/naming/directory/SearchControls.html#SUBTREE_SCOPE)或[`SearchControls.OBJECT_SCOPE`](https://docs.oracle.com/javase/8/docs/api/javax/naming/directory/SearchControls.html#OBJECT_SCOPE)执行搜索，并且目标上下文本身满足搜索过滤器，则返回的名称将是`""`（空名称），因为这是相对于目标上下文的名称。
 
 这并不是全部。如果搜索涉及引荐（请参阅[JNDI 教程](https://docs.oracle.com/javase/jndi/tutorial/ldap/referral/index.html)）或解引用别名（请参阅[JNDI 教程](https://docs.oracle.com/javase/jndi/tutorial/ldap/misc/aliases.html)），那么相应的`SearchResult`将具有不相对于目标上下文的名称。相反，它们将是直接引用条目的 URL。要确定`getName()`返回的名称是相对还是绝对，请使用[`isRelative()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/NameClassPair.html#isRelative--)。如果此方法返回`true`，则名称相对于目标上下文；如果返回`false`，则名称是一个 URL。
 

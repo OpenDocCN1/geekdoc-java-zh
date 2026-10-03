@@ -1,3 +1,4 @@
+
 # 获取和设置数组及其组件
 
 > 原文：[`docs.oracle.com/javase/tutorial/reflect/special/arraySetGet.html`](https://docs.oracle.com/javase/tutorial/reflect/special/arraySetGet.html)
@@ -12,10 +13,9 @@
 
 ## 设置类型为数组的字段
 
-``GrowBufferedReader``示例演示了如何替换类型为数组的字段的值。在这种情况下，代码将[`java.io.BufferedReader`](https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html)的后备数组替换为更大的数组。（这假设原始`BufferedReader`的创建在不可修改的代码中；否则，可以简单地使用接受输入缓冲区大小的替代构造函数[`BufferedReader(java.io.Reader in, int size)`](https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html#BufferedReader-java.io.Reader-int-)。）
+`GrowBufferedReader`示例演示了如何替换类型为数组的字段的值。在这种情况下，代码将[`java.io.BufferedReader`](https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html)的后备数组替换为更大的数组。（这假设原始`BufferedReader`的创建在不可修改的代码中；否则，可以简单地使用接受输入缓冲区大小的替代构造函数[`BufferedReader(java.io.Reader in, int size)`](https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html#BufferedReader-java.io.Reader-int-)。）
 
 ```java
-
 import java.io.BufferedReader;
 import java.io.CharArrayReader;
 import java.io.FileNotFoundException;
@@ -68,7 +68,6 @@ public class GrowBufferedReader {
 	}
     }
 }
-
 ```
 
 ```java
@@ -76,17 +75,15 @@ $ *java GrowBufferedReader grow*
 Using new backing array, size=16384
 $ *java GrowBufferedReader*
 Using original backing array, size=8192
-
 ```
 
 请注意，上述示例使用了数组实用方法[`java.util.Arrays.copyOf)`](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#copyOf-char:A-int-)。[`java.util.Arrays`](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)包含许多在操作数组时方便的方法。
 
 ## 访问多维数组的元素
 
-多维数组简单来说就是嵌套数组。二维数组是数组的数组。三维数组是二维数组的数组，依此类推。``CreateMatrix``示例演示了如何使用反射创建和初始化多维数组。
+多维数组简单来说就是嵌套数组。二维数组是数组的数组。三维数组是二维数组的数组，依此类推。`CreateMatrix`示例演示了如何使用反射创建和初始化多维数组。
 
 ```java
-
 import java.lang.reflect.Array;
 import static java.lang.System.out;
 
@@ -106,7 +103,6 @@ public class CreateMatrix {
                 out.format("matrix[%d][%d] = %d%n", i, j, ((int[][])matrix)[i][j]);
     }
 }
-
 ```
 
 ```java
@@ -115,7 +111,6 @@ matrix[0][0] = 1
 matrix[0][1] = 2
 matrix[1][0] = 3
 matrix[1][1] = 4
-
 ```
 
 通过使用以下代码片段也可以获得相同的结果：
@@ -132,7 +127,6 @@ Array.setInt(row1, 1, 4);
 
 Array.set(matrix, 0, row0);
 Array.set(matrix, 1, row1);
-
 ```
 
 可变参数[`Array.newInstance(Class<?> componentType, int... dimensions)`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Array.html#newInstance-java.lang.Class-int...-)提供了一个方便的方式来创建多维数组，但组件仍然需要使用多维数组是嵌套数组的原则进行初始化。（反射不提供用于此目的的多个索引`get`/`set`方法。）

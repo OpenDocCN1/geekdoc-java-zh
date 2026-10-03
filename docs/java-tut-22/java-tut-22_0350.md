@@ -1,3 +1,4 @@
+
 # 教程：使用 Swing 创建 GUI
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/index.html`](https://docs.oracle.com/javase/tutorial/uiswing/index.html)
@@ -10,9 +11,9 @@
 
 是开始使用 Swing 的最快最简单的方法。本课程探讨了 NetBeans IDE 的 GUI 构建器，这是一个强大的功能，让您可以直观地构建您的图形用户界面。
 
-告诉您如何使用 Swing 组件中的每个部分  按钮、表格、文本组件等等。它还告诉您如何使用边框和图标。
+告诉您如何使用 Swing 组件中的每个部分 — 按钮、表格、文本组件等等。它还告诉您如何使用边框和图标。
 
-讨论了并发如何应用于 Swing 编程。包括有关事件分派线程和 SwingWorker 类的信息。
+讨论了并发如何应用于 Swing 编程。包括有关事件分派线程和 `SwingWorker` 类的信息。
 
 告诉您如何使用动作、定时器和系统托盘；如何与桌面类集成，如何支持辅助技术，如何打印表格和文本，如何创建启动画面，以及如何在对话框中使用模态。
 
@@ -40,4 +41,4 @@
 
 +   [JavaFX 文档](https://docs.oracle.com/javase/8/javase-clienttechnologies.htm)，描述了如何使用 JavaFX 构建 UI。
 
-+   Bonus 路径包含 全屏独占模式 API，这是一个介绍如何使用 v1.4 中引入的 API 直接向屏幕渲染图形的课程。
++   Bonus 路径包含全屏独占模式 API，这是一个介绍如何使用 v1.4 中引入的 API 直接向屏幕渲染图形的课程。

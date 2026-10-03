@@ -1,3 +1,4 @@
+
 # TestNG–超时测试
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/unittest/testng-tutorial-4-time-test/>
@@ -6,10 +7,10 @@
 
 这个“超时”也可以用于性能测试，以确保方法在合理的时间内返回。
 
-TestTimeout.java
+`TestTimeout.java`
 
 ```java
- package com.mkyong.testng.examples.timeout;
+package com.mkyong.testng.examples.timeout;
 
 import org.testng.annotations.Test;
 
@@ -25,13 +26,13 @@ public class TestTimeout {
 		while (true);
 	}
 
-} 
+}
 ```
 
 输出
 
 ```java
- [TestNG] Running:
+[TestNG] Running:
 
 PASSED: testThisShouldPass
 FAILED: testThisShouldFail
@@ -53,14 +54,7 @@ org.testng.internal.thread.ThreadTimeoutException: Method org.testng.internal.Te
 ===============================================
     Default test
     Tests run: 2, Failures: 1, Skips: 0
-=============================================== 
+===============================================
 ```
 
 [testng](http://web.archive.org/web/20190227120240/http://www.mkyong.com/tag/testng/) [timeout](http://web.archive.org/web/20190227120240/http://www.mkyong.com/tag/timeout/)![](img/c306c26b3b675eac2365691f1a4e54ae.png) (function (i,d,s,o,m,r,c,l,w,q,y,h,g) { var e=d.getElementById(r);if(e===null){ var t = d.createElement(o); t.src = g; t.id = r; t.setAttribute(m, s);t.async = 1;var n=d.getElementsByTagName(o)[0];n.parentNode.insertBefore(t, n); var dt=new Date().getTime(); try{i[l][w+y](h,i[l][q+y](h)+'&amp;'+dt);}catch(er){i[h]=dt;} } else if(typeof i[c]!=='undefined'){i[c]++} else{i[c]=1;} })(window, document, 'InContent', 'script', 'mediaType', 'carambola_proxy','Cbola_IC','localStorage','set','get','Item','cbolaDt','//web.archive.org/web/20190227120240/http://route.carambo.la/inimage/getlayer?pid=myky82&amp;did=112239&amp;wid=0')<input type="hidden" id="mkyong-postId" value="1358">
-
-
-
-
-
-
-

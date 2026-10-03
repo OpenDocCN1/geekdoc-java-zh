@@ -1,11 +1,10 @@
+
 # Java 傻瓜指南：无需任何基础，学习 Java 编程基础！
-
-
 
 ![](img/MeOc5c22Q_eDtULUc5-ZLQ2.jpg)
 
-
 # 目录
+
 - 引言
 - 第 0 章：软件要点
 - 第 1 章：Java 到底是什么鬼？
@@ -25,6 +24,7 @@
 - 结语
 
 # 引言
+
 你好，我是 Steve。我在这里是为了教你 `Java` 的基础知识。或者说是 `Java` 的入门教程。二选一，或者两者都有。也许我应该在书的开头用一段小短的电梯演讲介绍一下它为什么存在。
 
 厌倦了跳来份去工作来赚钱吗？点击这里学习如何在家里每月赚取 120,000 美元！！！
@@ -36,6 +36,7 @@
 我觉得这很令人沮丧。我想要被像对待我这个大傻瓜一样对待我，该死的。我向你保证，在本书里，我不会忘记你是一个像我一样的妈死的傻痴。唯一的真实要求是你能读字。如果你在下载电子书时还不会读字，那朋友，我不知道该对你说什么。
 
 ## 这本书是什么
+
 这是一本快速、易读的书，它将引导你学习 `Java` 的基础知识；从变量、方法、运算符，到类、对象和包。不知道这些词是什么意思？没问题。我对英语的精通程度（在高中时至少能拿 B- 级）将带你进入一个 `Java` 编程的神秘世界。
 
 那些完全自创且有机的代码片段将解释英语原本无法表达的内容。我在写这本书时看 YouTube 这一事实完全不会产生任何负面影响。而且这一切都是我我自己写的，所以你知道这本书是完全自创且有机的。并且倾向于用“而且”开头很多句子。
@@ -43,43 +44,61 @@
 这本书的目标是让你，这个对 `Java` 编程感兴趣的空头读者，能够合上书并说：“嘿，我学到的比开始读它时多得多。而且这并并不太糟糕！”
 
 ## 这本书不是什么
+
 就像任何一段健康的关系一样，我们应该诚实相待。我现在就对你诚实，告诉你这本书不是什么：
 
 1. **关于如何下载、安装和配置 `Java` 的详细指南。**
+
    我不认为这符合此本书的格式或主题，而且我对写这个话题一点都不感兴趣。我确实在这个话题上写了一段简短的介绍，但我侧重于 `Java` 语言本身。
 
 2. **一本充满练习的练习册。**
+
    考虑到 `Java` 已经有 24 多年的历史，这类练习多得的是。我将专注于教你概念，你只需要在代码里瞎搞腾并锻炼你的大脑。
 
 3. **一份全面的 Java 指南，详细探索它所提供的所有功能。**
+
    是的，哥们，我拒绝这个。`Java` 中更复杂的部分我只会略带提及。其他部分我们根本来不及。这就是一本给妈死的傻痴看的书的本质。
 
 4. **由拥有几十年经验的 Java 大师编写。**
+
    我写 `Java` 代码大约有 6 年了，但我只是个普通人。
 
 5. **情绪稳定**
+
    这本书会非常不公平并对你发火，有时会进行人身攻击。先先歉了。
 
 6. **可能会让我赚到钱。**
+
    但我愿意接受这一点。
 
 ## 我应该如何读这本书？
+
 它是被设计成像你在马桶上上厕时翻看的东西，但你会非常喜欢它以至于一直读下去。
 
 ## 系好安全带
+
 准备好你的毛巾，好戏了。我们要开始第一章了，一旦我们开始，就无路回头。
 
 # 第 0 章：软件要点
+
 开玩笑的，我们要从第 0 章开始……因为编程。这里有一个关于软件的简要总结，让你进入状态。
 
 - 这是一个操作系统：`Windows`。它运行并与各个部分通信，这样我们就不需要自己去。
+
 - 这是一个编程语言：`C++`。它是人类用来编写运行在操作系统上的程序。
+
 - 这是一个程序：`Google Chrome`。它是一个用编程语言编写的网络浏览器，运行网站。
+
 - 这是我们在书中使用的编程语言：`Java`。
+
 - 这是细胞的动力工厂：线粒体。
+
 - 这些是圆括号：`()`
+
 - 这些是大括号：`{}`
+
 - 这些是括号：`[]`
+
 - 这些角括号：`<>`
 
 ![](img/src3P.jpg)
@@ -87,6 +106,7 @@
 太好了，现在你进入状态了……进入正文！
 
 # 第 1 章：Java 到底是什么鬼？
+
 `Java` 是一种编程语言（顺便说一下，它是最流行的）。编程语言是计算机可以理解的特殊语言。当你用编程语言写东西时，你创建的内容通常被称为 `code`。不是摩斯密码，或任何你用来告诉某人你不高兴而不是说你为什么不高兴的密码。不是那些；是计算机代码。
 
 因此，程序员是指用编程语言编写代码的人，以便计算机为我们工作。然而，计算机是傻痴，甚至比你还傻。如果你把你的 `Java` 代码展示给你的计算机，它并不知道怎么读。哈！该死的机器！
@@ -99,13 +119,10 @@
 2. 编译器将他的源代码（他写的代码）转换为机器码。
 3. Steve 的计算机运行这些机器码，这样他就可以享受他的新鲜表情包了。
 
-
-
-
-
 所以，Steve 的源代码（人类可读）通过编译器编译成机器码（机器可读）。而机器码就是要在计算机上运行的内容。这就像是请了一位翻译员来和说不同语言的人交流。
 
 `Source Code -> Compiler -> Machine Code`
+
 “计算机，请把 2 加 2” -> 编译器 -> “01100110101”
 
 明白了吗？你编写源代码，编译器将其转换为机器码，然后计算机运行这些机器码。把这些东西记进你那厚实的脑瓜里（两个两个 c）。
@@ -153,7 +170,9 @@ Java 的创造者感到非常沮丧，并问道：“如果我们能编写一种
 你是否希望自己从未读过这样的段落？你现在恨我恨入骨髓了吗？我不怪你，但让我们快速触及一些在讨论编程语言，呃……“移植性”这个话题时会提到的术语。毕竟，你可能不想在描述技术性内容时引用一个虚构的圣经故事。我仍然不信任你能尝试描述任何技术性东西，但如果你需要的话，这部分应该会有帮助。
 
 *   **机器语言 (Machine Language)**：针对计算机 `CPU` 的极其具体的指令，告诉它如何处理 0 和 1、执行数学运算以及那些令人困惑的破事。
+
 *   **汇编语言 (Assembly Language)**：一种比机器语言稍微好理解一点的语言。汇编语言代表我们，为特定的 `CPU` 架构创建机器码。它基本上是机器语言的缩写。离远点。
+
 *   **编程语言 (Programming Language)**：现代人类用来编写软件的语言。像汇编语言一样，它根据你针对的处理器类型编译成对应类型的机器码。
 
 但我们并不需要使用像汇编语言那种晦涩、完全无法理解的垃圾（真的，去 Google 搜搜），而是可以使用相对容易编写和理解的编程语言。编程语言的编译器会负责将我们降级为机器码！！
@@ -187,10 +206,6 @@ Java 程序员不需要担心为戴尔电脑、惠普电脑或 MacBook 计算机
 *   Java 虚拟机 (`JVM`)，让你的计算机可以运行 Java 编写的程序。
 *   Java 标准库，让你不需要为了完成其他 Java 程序员做的常见事情而重新发明轮子。
 *   一大堆其他东西。
-
-
-
-
 
 # Java 编程语言本身在哪里？我该如何安装它？
 
@@ -229,11 +244,13 @@ Microsoft Word 就像是写论文、散文、小说或大多数涉及文字处�
 ```bash
 javac HelloWorld.java
 ```
+
 会创建一个名为 `HelloWorld.class` 的字节码文件。
 
 ```bash
 java HelloWorld
 ```
+
 然后将使用生成的字节码运行该程序。
 
 阅读更多：
@@ -284,39 +301,45 @@ public class HelloWorld {
 # 第 3 章：对象
 
 “Ryan 使用了一个对象。” – Kelly 很多 Java 课程和教程都会谈到这个。类（class）是某个可以存在的蓝图。
+
 - 它有属性（properties），描述它是什么
 - 它有方法（methods），描述它能做什么
 
 对象（object）是类的实例（instance）。意味着，它是被赋予了生命的类。例如，可能有一个类叫 `Douchebag`。它是 `Douchebag` 可能行为的模板。
 
-## 一 我写了一个 `Airplane` 类。
+
+
+## 一 我写了一个 `Airplane` 类
+
 - 它的属性有 `name`、`speed` 和 `weight`。
 - 它的方法有 `takeoff()`、`land()`、`crash()` 和 `burn()`。
 
 我从 `Airplane` 类创建一个实例（对象）。
+
 - 我给它命名为“Crash”，速度设为 420，重量设为 10000。
 - 我让飞机 `takeoff()` 和 `land()`。我不使用 `crash` 和 `burn` 方法。客气了各位。
 
-## 二 我写了一个 `Monster` 类。
+## 二 我写了一个 `Monster` 类
+
 - 它的属性有 `name`、`damage` 和 `health`。
 - 它的方法有 `fight()` 和 `die()`。
 
 我为 `Monster` 类创建了两个怪物对象。
+
 - 第一个叫“goblin”，有 10 点 `health` 和 2 点 `damage`。
-- 第二一个叫“troll”，有 50 点 `health` 和 6 点 `damage`。
+- 第二个叫“troll”，有 50 点 `health` 和 6 点 `damage`。
 
-我让他们轮替互相 `fight()`战斗，这会降低对方怪物的生命值。当其中一个的生命值达到 0 时，我告诉它 `die()`。哎。
+我让他们轮替互相 `fight()` 战斗，这会降低对方怪物的生命值。当其中一个的生命值达到 0 时，我告诉它 `die()`。哎。
 
-## 三 我写了一个 `Book` 类。
+## 三 我写了一个 `Book` 类
+
 - `Book` 类的属性有 `title` 和 `stars`。
 - `Book` 类没有方法，因为它什么都不干。
 
 我写了一个 `Reader` 类。
+
 - `Reader` 类的唯一属性是 `currentBook`，它是一个 `Book`。
 - `Reader` 类的方法有 `read()` 和 `rate()`。
-
-
-
 
 呼。铺垫了这么多。我们能用这些类做些什么呢？
 
@@ -338,7 +361,7 @@ Java 以及面向对象的设计（Java 像信拜宗教一样遵循它）是一�
 
 现在，让我们稍微后退一步，看看这些知识如何应用于“Hello, World!”程序。这里是给那些短期记忆缺失的人的（可能是你们中的大多数人）准备的。
 
-```
+```java
 public class HelloWorld {
     public static void main (String[] args) {
         System. out .println( "Hello, world!" );
@@ -356,9 +379,9 @@ public class HelloWorld {
 
 “你觉得你自己是谁？凭什么……凭凭什么？”—— 迈克尔·斯科特
 
-`main` 方法是程序的入口；当程序运行时，就会运行 `main` 方法。包含“Hello, World!”字样的代码位于 `main` 方法内部。你放在那些大括号 {} 之间的任何内容实际上都在 `main` 方法内部。
+`main` 方法是程序的入口；当程序运行时，就会运行 `main` 方法。包含“Hello, World!”字样的代码位于 `main` 方法内部。你放在那些大括号 `{}` 之间的任何内容实际上都在 `main` 方法内部。
 
-```
+```java
 public class HelloWorld {
     public static void main (String[] args) {
         System. out .println( "Hello, world!" );
@@ -368,29 +391,30 @@ public class HelloWorld {
 
 为什么有一个 `main` 方法？是什么让它如此特别？`main` 方法之所以存在是因为程序启动时需要某些东西运行。还记得那个“鸡生蛋还是蛋生鸡”的困境吗？
 
-*   有人说鸡先生，因为所有的蛋都是鸡产的。
-*   有人说蛋先生，因为所有的鸡都是从蛋里出来的。
+- 有人说鸡先生，因为所有的蛋都是鸡产的。
+- 有人说蛋先生，因为所有的鸡都是从蛋里出来的。
 
 Java 的答案是，这两个对象都不是先生的。`main` 方法才是。如果没有 `main` 方法首先在对象领域之外运行，任何东西都不会存在。这就是那个“静态狗屁”的意思。静态属性和方法在没有对象的情况下存在。
 
 “没有对象，没问题。”—— `static` 关键字
 
 或者……
+
 “除非必要，否则不要让事情变成静态的，因为对象是好的。”—— 我
 
 如果你还没有 100% 理解这一点，不用太担心。就担心一点点。好吧，你可能在想。但是 `main` 单词前面的那些其他东西呢？`public`？还是 `void`？这简直太让人困惑了。
 
 我会在书的后面更详细地介绍这些内容。但我现在也会简要回答一下，因为我讨厌当你想知道某事，而作者却说“等一下，我们会讲到的”。混蛋，我现在就告诉你。
 
-*   在东西前面加上 `public` 表示所有其他类（即使在不同的文件夹中）都能看到它。如果你的某些代码要去上厕所并需要隐私之类的，你也可以将其描述为 `private`（私有的），但 `main` 方法不会！它总是是公开的！
-*   在某些代码前面加上 `void` 意味着它执行了一些酷炫的操作，但不汇报结果。没有人要求 `main` 方法报告事情进展是否顺利，或者返回某个数学计算的值。`Main` 方法不在乎是否有人知道。
+- 在东西前面加上 `public` 表示所有其他类（即使在不同的文件夹中）都能看到它。如果你的某些代码要去上厕所并需要隐私之类的，你也可以将其描述为 `private`（私有的），但 `main` 方法不会！它总是是公开的！
+- 在某些代码前面加上 `void` 意味着它执行了一些酷炫的操作，但不汇报结果。没有人要求 `main` 方法报告事情进展是否顺利，或者返回某个数学计算的值。`Main` 方法不在乎是否有人知道。
 
 懂了吗？如果没有懂，再读一遍那些解释……好吧，我知道你不会去读。我会更简短地总结一下：
 
-1.  `main` 方法是 Java 开始运行你的程序的方式。
-2.  `main` 方法是 `static`（静态的），因为需要某些东西存在于对象领域之外。Java 的开发者是这么说的。
-3.  `main` 方法是 `void`（无返回），因为它不需要向调用它的人提供值。Java 的开发者是这么说的。
-4.  `main` 方法是 `public`（公共的），因为它会被这个文件夹之外的人调用。Java 的开发者是这么说的。
+1. `main` 方法是 Java 开始运行你的程序的方式。
+2. `main` 方法是 `static`（静态的），因为需要某些东西存在于对象领域之外。Java 的开发者是这么说的。
+3. `main` 方法是 `void`（无返回），因为它不需要向调用它的人提供值。Java 的开发者是这么说的。
+4. `main` 方法是 `public`（公共的），因为它会被这个文件夹之外的人调用。Java 的开发者是这么说的。
 
 # 声明一个类
 
@@ -445,8 +469,6 @@ bestBook. averageRating = 5.0 ;
 System. out .println(bestBook. title );
 ```
 
-
-
 结果是什么？程序输出了文本：“如何在不到 20 分钟内成为一名华丽的服务员”。那个点，或者说句号，就像通往对象灵魂的窗口。在你的对象名称后面加上这个点，就可以访问它能看到的所有内容。
 
 ## Methods
@@ -457,8 +479,8 @@ System. out .println(bestBook. title );
 
 我们刚刚简要地提到了属性（properties），它们是与对象相关的数据片段。属性和方法之间的区别是什么？
 
-*   属性是对象**是什么**。
-*   方法是对象**能做什么**。
+- 属性是对象**是什么**。
+- 方法是对象**能做什么**。
 
 “但是……但是，Steve。这并不能真正解释 Java 中的方法到底是什么。你算什么，我是个白痴吗？”——你
 
@@ -476,7 +498,9 @@ class Video {
 ```
 
 就像属性一样，你可以使用点符号法来操作它的东西。
+
 `bestVideo.resume();`
+
 `bestVideo.pause();`
 
 我刚刚快速恢复并暂停了视频。希望这没有让它坏掉并导致缓存永恒……总之，我意识到我把那些方法留空了。也许那些方法正在修改 `Video` 对象的属性（我没写出来的那些）。
@@ -490,10 +514,13 @@ class Video {
 “变量不够……嗯……变量远远不够。” - Heimerdinger
 
 好了，现在是时候深入学习这种语言的细枝末节了。穿上大男孩（或大女孩）裤，因为事情要变得真格了。让我们聊聊变量。初中学上过代数吗？见过这样的东西吗？
+
 `7 = 3 + x`
+
 解出 `x` 对吧？变量就像那样。
 
 这是一个例子：
+
 ```java
 int myFavoriteNumber = 7 ;
 ```
@@ -515,37 +542,45 @@ int myFavoriteNumber = 7 ;
 ## Making 变量
 
 你可以声明一个变量，基本上是告诉编译器“嘿，这是我以后要用到的东西，好吗？”，像这样：
+
 ```java
 int numberOfStarsToAwardThisBook;
 ```
+
 变量已声明。万岁！但是，它还没有值。我们稍后可以用新行代码初始化该值来修复它：
+
 ```java
 numberOfStarsToAwardThisBook = 5 ;
 ```
+
 或者，我们可以从一开始就完成（声明并初始化）：
+
 ```java
 int numberOfStarsToAwardThisBook = 5 ;
 ```
+
 自然地，Amazon 的软件中并没有内置让每条评论都变成 5 星的代码。我们可能会向用户显示一个屏幕进行选择，然后将此变量设置为他们选择的星数。
 
 ## Data types
 
 “int”部分是干什么用的？
+
 `int` 是 integer（整数）的缩写。整数是全数。老实说这是基础数学，但正如我之前提到的……做出最少假设。
 
 这些是整数：4, 8, 15, 23, 42, -15
+
 这些不是全数：½, ¾, 84
 
 你可以在变量前加上 `int` 来指定它是一个全数。Java 对这些“类型”非常敏感。这里是一些你可以创建的不同类型的变量：
 
-*   `byte`: 一个很小的数字（-128 到 127），支持正负数。通常用于处理文件。
-*   `int`: 一个整数。非常常见。
-*   `short`: 一个较小的 `int`（除非你有特殊需求）。
-*   `long`: 一个可以存储非常巨大的整数。
-*   `double`: 可以带有小数点的数字，如 4.2。
-*   `float`: `double` 的一个没用的版本。
-*   `char`: 单个引号内的单个字符，如 ‘g’ 或 ‘f’。
-*   `boolean`: 真或假。没有别的。这种类型。
+- `byte`: 一个很小的数字（-128 到 127），支持正负数。通常用于处理文件。
+- `int`: 一个整数。非常常见。
+- `short`: 一个较小的 `int`（除非你有特殊需求）。
+- `long`: 一个可以存储非常巨大的整数。
+- `double`: 可以带有小数点的数字，如 4.2。
+- `float`: `double` 的一个没用的版本。
+- `char`: 单个引号内的单个字符，如 ‘g’ 或 ‘f’。
+- `boolean`: 真或假。没有别的。这种类型。
 
 你可以搜索“Java 数据类型”或点击[此链接](https://docs.oracle.com/javase/tutorial/nutsandbolts/datatypes.html) 查看所有的选项。
 
@@ -553,11 +588,10 @@ int numberOfStarsToAwardThisBook = 5 ;
 
 它们是原始数据类型；不是因为它们底层，而是它们不是对象。想象 Java 宇宙在底层不是由质子、中子和电子组成的（希望你初中毕业了！），而是原始变量。每个存储或处理数据的类或对象，深处都有由原始类型表示的数据。我想。也许。例如，我列出的所有示例都以小写字母开头；这是原始变量的典型特征。
 
-
-
 秘密地说（好吧，没那么秘密）它是一堆绑定在一起的字符变量。`String` 类已经为你处理了这一切。我们在书中有一整整一个章节专门介绍字符串、如何处理它们，以及书中后面会遇到的这类各种垃圾内容。但希望这能让你先应付这一关。
 
 ## 实验
+
 我建议你尝试声明变量、给它们赋值，并看看会发生什么。你甚至可以启动你那蠢的“Hello, World!”程序，并把它放在 `main` 方法中。
 
 ```java
@@ -573,65 +607,88 @@ public class HelloWorld {
 }
 ```
 
-尽管去尝试一些行不起通的事情。挑战 Java 编译器的极限。例如，你可以写这样一行代码：`int wellThisIsJustWrong = false;`。然后编译并运行代码。它会发大雷霆，向 NASA 发送报告，并通知你的互联网服务提供商立即取消你的套餐。
+尽管去尝试一些行不行通的事情。挑战 Java 编译器的极限。例如，你可以写这样一行代码：`int wellThisIsJustWrong = false;`。然后编译并运行代码。它会发大雷霆，向 NASA 发送报告，并通知你的互联网服务提供商立即取消你的套餐。
 
 # 第 5 章：运算符
+
 “你好，运算符？快给我叫海军来！[你已拨入海军的自动电话服务。] 章奇！机器人接管了海军！不是海军啊！！” —— 海绵宝宝派水粉丝
 
 好了，现在你已经知道变量的基础知识了。希望如此吧。现在，让我们看看运算符，或者说我们与变量交互的各种。
 
 ## 什么是运算符？
+
 它们是执行特殊操作的特殊符号。也许你想把两个值相加。或者看看两个值是否相同。或者检查一个数字是否大于或等于另一个数字。或者，你想同时执行以上所有操作。运算符，出发！
 
 注意，运算符不是变量。它们不是方法，不是对象，不是数据类型，而且它们对你并不感兴趣。它们就像计算器上那些不是数字的按钮。
 
 ## 算术运算符！
+
 让我们开始吧！
-* 使用 `+` 加数
-* 使用 `–` 减数
-* 使用 `/` 除数
-* 使用 `*` 乘数
+
+- 使用 `+` 加数
+- 使用 `–` 减数
+- 使用 `/` 除数
+- 使用 `*` 乘数
 
 对于 99% 的场景来说，这听起来一样简单。
+
 `int x = 2 + 2;`
+
 …`x` 变为 4
+
 `int y = 4 * 9;`
-…`x` 变为 36 但当我们开始组合运算符时会发生什么？我们如何知道哪个更重要并先执行？我们是先乘法、再加法再减法吗？要是有某种气动设备能记住…… 嗯，你猜怎么着？[PEMDAS](https://www.mathsisfun.com/operation-order-pemdas.html) 回来了！！
+
+
+
+…`x` 变为 36，但当我们开始组合运算符时会发生什么？我们如何知道哪个更重要并先执行？我们是先乘法、再加法再减法吗？要是有某种气动设备能记住…… 嗯，你猜怎么着？[PEMDAS](https://www.mathsisfun.com/operation-order-pemdas.html) 回来了！！
 
 ## 运算顺序
+
 操作就是一小块数学破事。你的服务员可能按照特定的顺序为你服务（每个桌子都是一个操作），取决于你到达的时间、他们对你的喜爱程度、他们预期你给的小费金额、你在餐厅的位置等。
 
 数学有它自己的运算顺序：PEMDAS。
+
 * **P**arentheses 括号 `()`
-* **E** xponents 幂 `^`
-* **M** ultplication 乘法 & **D** ivision 除法 `*/`
-* **A** ddition 加法 & **S** ubtraction 减法 `+-`
+* **E**xponents 幂 `^`
+* **M**ultiplication 乘法 & **D**ivision 除法 `*/`
+* **A**ddition 加法 & **S**ubtraction 减法 `+-`
 
 好消息是！你真美。不，但 Java 中没有幂。你只需要记住括号里的东西先发生，然后是乘法/除法，最后是加法/减法。如果这些类别之间没有组合，你只需从左到右即可。相信我，这超级简单。进入示例，走！
 
-**示例一！**
+### 示例一
+
 `int x = 5 + 3 - 7;`
+
 `x` 是 1。为什么？不需要担心 PEMDAS 规则，这只是加法/减法。`5 + 3` 是 8。如果我们从结果减去 7，就得到 1。
 
-**示例二！**
-`int y = 5 - 7 * 6;`
-`x` 是 -37。为什么？乘法必须先发生，因为 PEMDAS 是这么说的。`7 * 6` 是 42。如果我们从 5 中减去 42，就得到 -37。
+### 示例二
 
-**示例三！**
+`int y = 5 - 7 * 6;`
+
+`y` 是 -37。为什么？乘法必须先发生，因为 PEMDAS 是这么说的。`7 * 6` 是 42。如果我们从 5 中减去 42，就得到 -37。
+
+### 示例三
+
 `int z = 28 / ( 3 + 4 );`
-`x` 是 4。为什么？虽然是加法，但 3 和 4 必须先处理，因为它们在括号内。`3 + 4` 是 7。然后我们可以用 28 除以 7 得到 4。
+
+`z` 是 4。为什么？虽然是加法，但 3 和 4 必须先处理，因为它们在括号内。`3 + 4` 是 7。然后我们可以用 28 除以 7 得到 4。
 
 编程中的大多数数学（至少对于 90% 的开发者来说）是非常基础的；加两个值，乘两个值等。所以不要指望会经常需要担心这个“运算顺序”。
 
 ## 取模
+
 另外……我纠结过要不要提它，但好吧，还有一个。它被称为取模运算符，它很蠢。它使用百分号（因为去你的吧，它就是这样）。
+
 `int remainder = 5 % 2;`
+
 `remainder` 被设置为 1。为什么？因为取模执行除法，然后给你该除法操作的余数。
 
 此外，检查一个数字是否为偶数：`boolean isEven = myNumber % 2 == 0;` 关于这个我就说这么多。
 
-## 逻辑运算符！
+## 逻辑运算符
+
 这些非常简单。它们基本上是这些英语单词的 Java 版本：
+
 * 与 `&&`
 * 或 `||`
 
@@ -643,12 +700,13 @@ boolean imHungry = false;
 // 真
 boolean imGoingToFood = imBored || imHungry;
 ```
+
 看到或运算符 `||` 是如何工作的了吗？“我很聊或者我很饿，我就去吃。”只要其中一个条件为真，`imGoingToFood` 就设置为真。
 
 * 我正在制作一个文字冒险游戏。如果用户输入“exit”或“done”，我就退出程序。
 * 我正在写一个监控股市的程序（这是金钱生死之地）。如果我拥有的股票价格大幅上涨或下跌，我就发送电子邮件警报。事实上，如果 `||` 运算符的左侧已经为真，Java 甚至不会看右侧；没意义！Java 就像……如果我已经知道 `imBored` 足够让我吃饭了，为什么要检查 `imHungry` 呢？
 
-对于与 `&&` 运算符 true 如此。两者都必须为真，表达式结果才为真
+对于与 `&&` 运算符 true 如此。两者都必须为真，表达式结果才为真。
 
 ```java
 boolean wellRested = true;
@@ -656,12 +714,11 @@ boolean motivated = false;
 // 假
 boolean goingToWorkOut = wellRested && motivated;
 ```
+
 即使我休息充足，如果我完全没有动力，也不会健身。而且即使我有健身的动力，如果因为睡眠不足没有精力，我也会放弃。
 
 * 我正在写一个应用程序，用户必须使用账户信息登录。只有当他们输入了用户名和密码时，我才尝试让他们登录。
 * 我正在创建一个照明系统，如果灯处于开启状态且房间内 5 分钟无人，它就会自动关灯。
-
-
 
 觉得太简单了？这很“逻辑化”，对吧？懂了吗？逻辑（Logical）？因为它们被称为逻辑-噢（logic-Oh），就像数学运算符一样；不，你不应该创建一个始终为 `true` 或始终为 `false` 的变量。它们是变量。但我现在正试图把这个概念传达达，明白？等我们进入条件判断和 `if` 语句时会讨论。
 
@@ -677,7 +734,7 @@ boolean goingToWorkOut = wellRested && motivated;
 
 你会怎么大声读它？可能是这样的：“x 等于 7”。
 
-在 Java 中你可以做非常相似的操作。看这行代码
+在 Java 中你可以做非常相似的操作。看这行代码：
 
 ```java
 int x = 7 ;
@@ -712,9 +769,11 @@ int x = 7 ;
 还记得箭头符号 `<` 和 `>` 吗？也许你被教过把它们想象成鳄鱼；鳄鱼的嘴指向较大的数字？也许吧？反正……在普通数学中这里是一些真陈述：
 
 `2 < 3` 小于 3。
+
 `3.5 > 4` 大于 4。
 
 酷。现在，这是错的。
+
 `5 > 5` 大于 5。
 
 它们的值相同；5 并不大于 5。错误，你现在一定在尖叫了！
@@ -728,10 +787,10 @@ int x = 7 ;
 既然我已经总结了你六年级代数课的所有内容，让我们来看看这在 Java 中是如何运作的。关系！
 
 ```java
-//True
+// True
 boolean itsSmaller = 2 < 3 ;
 
-//False
+// False
 boolean itsBigger = 3 > 4 ;
 ```
 
@@ -739,17 +798,17 @@ boolean itsBigger = 3 > 4 ;
 
 但还有更多的变数要向你袭来了。记得我上面提到的“或等于”部分吗？在普通的数学中，那是给箭头符号加下划线，像这样：`≥`
 
-你可以将等号与比较运算符之一结合起来形成相同的内容；一种更疯狂的关系检查
+你可以将等号与比较运算符之一结合起来形成相同的内容；一种更疯狂的关系检查：
 
 ```java
-//True
+// True
 boolean itsBiggerOrTheSame = 5 >= 5 ;
 
-//False
+// False
 boolean itsSmallerOrTheSame = 3 <= 2 ;
 ```
 
-当然，把等号放在箭头后面不像在代数中那样加下划线那么“酷炫”。但在 Java 中就是是这么做的。你可以继续尝试这些内容，但你可能已经掌握要窍了。是的，我想可以说这是一种赞美。继续加油，伙计。编程如此简单难道不不可思议吗！！！！你太聪明了！还是个极好的读者！另外，你给这本书打 5 星评了吗？
+当然，把等号放在箭头后面不像在代数中那样加下划线那么“酷炫”。但在 Java 中就是这么做的。你可以继续尝试这些内容，但你可能已经掌握要窍了。是的，我想可以说这是一种赞美。继续加油，伙计。编程如此简单难道不不可思议吗！！！！你太聪明了！还是个极好的读者！另外，你给这本书打 5 星评了吗？
 
 ## 比较运算符
 
@@ -758,128 +817,103 @@ boolean itsSmallerOrTheSame = 3 <= 2 ;
 好的，假设我们不想给变量赋值。相反，我们想检查一个变量是否等于一个值。顺便说一下，这是超级超级常见的。
 
 ```java
-//True
+// True
 boolean isSameCharacter = 5 == 5 ;
 
-//False
+// False
 boolean isSameNumber = 5 == 4 ;
 ```
-*(注：此处原文示例代码中可能误为 'c'，翻译时保持逻辑一致或修正为语境，此处按逻辑翻译)*
-
-原文：`//True boolean isSameCharacter = 5 == 5 ;` 这里的 `c` 似乎是原文的笔误，翻译如下：
-
-我知道你在想什么。我胜有稳筹。那些运算符很简单！比较值以判断其中一个比另一个大还是小？哈！真是笑话。这家哥们一定觉得我是个完全的白痴。好吧，没错，重点就在这里。
-
-*(抱歉，由于提供的英文原文在 `isSameCharacter` 处似乎有截断或重复错误，我将根据上下文逻辑完成最后的翻译)*
-
-**修正后的最后部分翻译：**
-
-[content]
-如果你把两个等号放在一起会发生什么呢：思考表情：答案是，妈妈等号和爸爸等号结合在一起，形成了一个新运算符；**比较运算符**！这就是我之前关于单等号 (=) 意思是“赋值”而不是“等于”的那些插话真正发挥作用的地方。所以我希望你一直留住了那个神秘的妙妙工具！
-
-好的，假设我们不想给变量赋值。相反，我们想检查一个变量是否等于一个值。顺便说一下，这是超级超级常见的。
-
-```java
-//True
-boolean isSameCharacter = 5 == 5 ;
-
-//False
-boolean isSameNumber = 5 == 4 ;
-```
-*(注：原文提供的文本在最后出现了大量重复的逻辑和乱码，已根据高级工程师逻辑进行了清理和对齐翻译)*
-[/content]
-
-*(注：由于你提供的待翻译文本结尾部分存在大量重复（如 Booleans are back, baby! 的循环），作为高级文档工程师，我在翻译时识别了这些是冗余错误并确保了输出的连贯性。以下是基于你提供的原始逻辑的完整清理翻译：)*
-
-[content]
-如果你把两个等号放在一起会发生什么呢：思考表情：答案是，妈妈等号和爸爸等号结合在一起，形成了一个新运算符；**比较运算符**！这正是我之前关于单等号 (=) 意思是“赋值”而不是“等于”的那些插话真正发挥作用的地方。所以我希望你一直留住了那个神秘的妙妙工具！
-
-好的，假设我们不想给变量赋值。相反，我们想检查一个变量是否等于一个值。顺便说一下，这是超级超级常见的。
-
-```java
-//True
-boolean isSameCharacter = 5 == 5 ;
-
-//False
-boolean isSameNumber = 5 == 4 ;
-```
-*(注：由于原始文本在最后一段出现了严重的文本重复和错误，此处已根据文档工程师逻辑进行了去重处理并翻译。)*
-
-
 
 “将 `numGiraffes` 赋值为 `numGiraffes` 当前值乘以 2。”
 
 老实说，我通常不建议使用这些运算符，可能 `++` 和 `--` 除外。我**个人认为**（观点警告！！）觉得直接写出具体的数学运算更容易理解。记住，你编写代码的主要目的是为了让人类读懂；你未来的自己以及团队成员会感激之的。
 
 ### 布尔之王
+
 还记得我讲过的感叹号（`!`）吗？它基本上就是“不”的意思。所以 `!=` 是在检查一个值是否“不等于”另一个值，对吗？
 
 如果你只是想翻转某个值从真到假（`boolean` 值），或反之，在 `Java` 中有更简单的写法。例如，与其写成：
+
 `boolean isBad = isGood != true ;`
+
 你完全可以直接说：
+
 `boolean isBad = !isGood ;`
+
 感叹号直接放在 `boolean` 前面。哇，再次惊叹！！
 
 其他的运算符……我都不打算讲了。如果你想学习位运算、移位或三元运算符，请去找更高级的材料。或者鼓励我再写一本书。眨眼。
 
 ### 我头疼
+
 所有那些深奥的理论都是可选的，所以别纠结。此外，如果你使用像 `IntelliJ` 这样的 IDE，当你用很蠢的方法做事时，它会纠正你。
 
 # 第 6 章：条件语句
+
 “是时候玩点花了。” – DJ Casper
 
 大多数时候，你的代码不能简单地从上到下一条接一条执行并完成任何有用操作。你需要代码根据用户输入的内容、库存产品、或者运行的 `Android` 版本等执行不同的操作。
 
 看，强大的 `if` 语句：
+
 ```java
 if (numGiraffes > 500 ) {
-    System. out .println( "Please send help." );
+    System.out.println( "Please send help." );
 }
 ```
+
 那行打印到系统的代码只在我们拥有超过 500 只长颈鹿时才会发生。另一个例子：
+
 ```java
-Scanner userInputReader = new Scanner(System. in );
+Scanner userInputReader = new Scanner(System.in);
 
 int userInputNumGiraffes = userInputReader.nextInt();
 
 if (userInputNumGiraffes <= 0 ) {
-    System. out .println( "它们在哪儿?" );
+    System.out.println( "它们在哪儿?" );
 }
 ```
+
 那行代码只有在用户输入 0 或负数时才会打印到系统。我将跳过解释[如何通过 Scanner 获取输入](https://stackoverflow.com/questions/11871520/how-can-i-read-input-from-the-console-using-the-scanner-class-in-java/31241089)，好吗？真的，非常无聊的内容。
 
 不管怎样，`if` 部分好理解吗？它其实和英语很像。如果这样，就做那样。现在，如果我们还想在用户输入实际数值时做些什么呢？如果你还记得比较运算符，你可以在该条件语句下方添加类似下面的代码：
+
 ```java
 if (userInputNumGiraffes <= 0 ) {
-    System. out .println( "它们在哪儿?" );
+    System.out.println( "它们在哪儿?" );
 }
 
 if (userInputNumGiraffes > 0 ) {
-    System. out .println( "我会立即添加它们。" );
+    System.out.println( "我会立即添加它们。" );
 }
 ```
+
 两个连续的 `if` 语句。这样可以运行，对吧？但太蠢了。为什么要在这两个地方检查 `userInputNumGiraffes` 的值？不要这样做。
 
 相反，在原始的 `if` 语句中添加一个 `else` 块，如下：
+
 ```java
 if (userInputNumGiraffes <= 0 ) {
-    System. out .println( "它们在哪儿?" );
+    System.out.println( "它们在哪儿?" );
 } else {
-    System. out .println( "我会立即添加它们。" );
+    System.out.println( "我会立即添加它们。" );
 }
 ```
+
 如果第一个检查（用户输入的值小于等于 0）为真，我们就进入 `if` 块。否则（`else`！）我们就进入 `else` 块。编程非常简单，哥们。
 
 噢，你不需要把 `else` 单词和那个大括号 `{` 写在同一行。你可以按回车并将 `else {` 推到下一行，如下所示：
+
 ```java
 if (userInputNumGiraffes == 0 ) {
-    System. out .println( "它们在哪儿?" );
+    System.out.println( "它们在哪儿?" );
 }
 
 else {
-    System. out .println( "我会立即添加它们。" );
+    System.out.println( "我会立即添加它们。" );
 }
 ```
+
 你也可以把每个大括号单独占一行。这会是在违反 `Java` 代码风格的暴行，但如果你真的想惹恼我，你可以这么做。
 
 好了，我希望你目前为止都跟上了；你可以检查某值是真是假，然后使用 `if/else`（条件）逻辑采取相应的行动。这被称为控制流。你正在控制程序的流向。
@@ -887,29 +921,28 @@ else {
 然而，在某些情况下并不是简单的“如果 X 则这样做，否则做不同的”。例如，你可能想根据长颈鹿的数量来做不同的事情。我们怎么做呢？嗯，有几种方法……
 
 ## 多个 if/else 检查
-这种怎么样？在 `else` 块内部添加另一个 `if/else` 检查。在那个 `else` 块内部再添加另一个 `if/else`，以此此类推。这样得通，对吧？注意，如果你在小屏幕上，这部分可能会变得很乱，但请耐心听……
+
+这种怎么样？在 `else` 块内部添加另一个 `if/else` 检查。在那个 `else` 块内部再添加另一个 `if/else`，以此类推。这样得通，对吧？注意，如果你在小屏幕上，这部分可能会变得很乱，但请耐心听……
+
 ```java
 if (userInputNumGiraffes < 0 ) {
-    System.out .println("离我的长颈鹿远点。" );
+    System.out.println("离我的长颈鹿远点。" );
 } else {
     if (userInputNumGiraffes == 0 ) {
-        System.out .println("抱歉，你不能添加 0 只长颈鹿。");
+        System.out.println("抱歉，你不能添加 0 只长颈鹿。");
     } else {
         if (userInputNumGiraffes < 3 ) {
-            System.out .println("感谢提供 1-2 只长颈鹿。");
+            System.out.println("感谢提供 1-2 只长颈鹿。");
         } else {
             if (userInputNumGiraffes < 10 ) {
-                System.out .println("感谢提供 3-9 只长颈鹿。");
+                System.out.println("感谢提供 3-9 只长颈鹿。");
             } else {
-                System.out .println("你怎么会有 10 只以上的长颈鹿？");
+                System.out.println("你怎么会有 10 只以上的长颈鹿？");
             }
         }
     }
 }
 ```
-
-
-
 
 ```java
 player.moveRight();
@@ -918,6 +951,8 @@ default :
     player.stopMoving();
 }
 ```
+
+
 
 哇，太疯狂了！我们创建了一个取值为用户输入的 `switch` 语句，然后对每个 `case` 执行不同的操作。不，`case` 与大写或小写字母没有关系；它是当 `switch` 等于某个特定值时。如果他们按了 ‘W’，就会运行 ‘W’ `case` 下的代码。如果他们按了 ‘D’，就会运行 ‘D’ `case` 下的代码。`default` 是当用户输入不符合我们的任何一个 `case` 时发生的情况。也许他们按了空格键，或者按了某个我们没有考虑到的字母。明白吗？和之前的 `if/else` 示例对比一下。
 
@@ -1018,15 +1053,12 @@ String[] names = {"Alice", "Bob", "Charlie"};
 这些每一个都是不同类型的数组。`[]` 是告诉 Java 这是一个数组的关键。
 
 总结：
+
 - 声明：`type[] name;`
 - 尺寸初始化：`type[] name = new type[size];`
 - 值初始化：`type[] name = {val1, val2, ...};`
 - 访问元素：`name[index]`
 - 数组长度：`name.length`
-
-
-
-
 
 `userFavoriteLetters[ 1 ] = 'Q' ;` 看到我刚才在做什么了吗？我说“把字母 Q 放在第一个槽位。” 然后你可以继续这么搞：`userFavoriteLetters[ 2 ] = 'C' ;` 见鬼，你甚至可以直接跳到这里：`userFavoriteLetters[ 7 ] = 'Z' ;` 现在你的数组在底层看起来是这样：`[ , Q, C, , , , , Z, , ]`
 
@@ -1046,6 +1078,7 @@ String[] names = {"Alice", "Bob", "Charlie"};
 *   现在，“Hello ”位于位置 `0`，但“universe ” 位于位置 `1`。
 
 ## 从盒子里拿东西
+
 和把东西放进去的方法几乎一样，使用一些方括号 `[]`。`char firstLetter = userFavoriteLetters[ 0 ];`
 
 这些方括号中提供的数字被称为 `index`（索引）。在任何你想要放入或取出东西的数组中，你都必须指定你进行操作的 `index`。
@@ -1061,6 +1094,7 @@ String[] names = {"Alice", "Bob", "Charlie"};
 *   第 5 个位置的项目索引为 `4`。
 
 ## 脑筋急转弯
+
 如果你向数组请求一个不存在的槽位的物品会发生什么？例如，在我们 10 个槽位的数组中，如果我们请求用户的第 15 个喜爱的字母呢？`char fifteenthFavoriteLetter = userFavoriteLetters[ 14 ];`
 
 答案是你的程序“崩溃”了。发生了一个“异常”。一切都变得一团糟。你见过电脑、手机或游戏机上的程序直接完全关闭，并让你按一个按钮报告错误吗？
@@ -1068,17 +1102,23 @@ String[] names = {"Alice", "Bob", "Charlie"};
 有很多方法可以防止这种情况。你可以在在确保盒子至少那么大后才查看其内部（使用 `if` 检查）。或者做一些被称为“[异常处理](https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html)”的奇特操作，我不会在这本书里讲这部分。
 
 ## 列表
+
 `Java` 有一些非常有用的类，我们可以用来代替数组。虽然我不会在书中介绍它们，但欢迎[去过目了解一下](https://docs.oracle.com/javase/tutorial/collections/interfaces/list.html)。
 
 # 第 8 章：循环
+
 “你让循环转圈圈，拉拉拉
+
 你的鞋看起来很酷
+
 你来来回回，从左到右
+
 转圈圈，你把它们拉紧”– 海绵宝宝
 
 欢迎来到循环章节。`Java` 有 3 种循环。其中一种被一直使用。另一种偶尔用一次。还有一种几乎从不用。我会让你在学习过程中去猜。
 
 你：等一下，妈的什么是循环？
+
 生活。生活就是一个循环。你醒来。为这一天准备。去学校或上班。你精疲力竭地回家。如果有时间尝试放松。你睡觉。重复。
 
 我们可以在 `Java` 代码中做同样的事情，稍微没那么压抑！
@@ -1096,6 +1136,7 @@ System. out .println(alphabet[ 4 ]);
 哇，这太累了。就像生活一样，对吧，我的 Z 世代伙伴？写一次这行代码，然后对字母表的每个字母运行一次，不是容易得多吗？`Java` 在这里救你。好吧，每种编程语言都可以救你。但 `Java` 也可以。
 
 ## while 循环：通向无限……超越！
+
 假设你想永远做某件事。给你：
 
 ```java
@@ -1140,9 +1181,6 @@ while(index < alphabet. length ) {
     index = index + 1 ;
 }
 ```
-
-
-
 
 这种在循环中执行某些操作然后将索引加 1（递增）的方法非常常见。你基本上是在逐个地遍历数组。注意：如果你愿意，可以将索引加 2，并打印每隔一个字母！那难道不令人兴奋吗？！？！哇！！
 
@@ -1213,19 +1251,21 @@ while (index < alphabet. length ) {
 
 你明白了吗？花一点时间。
 
-**答案：** 循环无限运行！看看字母是 F 时发生了什么；我们立即使用 `continue;` 跳过这次迭代并进入循环的下一次迭代。但下一次迭代我们要看哪个字母呢？F。再下一次？F。我们从来没有增加 `index` 的值！！！由于索引没有改变，我们会不断从数组中取出 F。不要犯这个错误。
+
+
+**答案：** 循环无限运行！看看字母是 `F` 时发生了什么；我们立即使用 `continue;` 跳过这次迭代并进入循环的下一次迭代。但下一次迭代我们要看哪个字母呢？`F`。再下一次？`F`。我们从来没有增加 `index` 的值！！！由于索引没有改变，我们会不断从数组中取出 `F`。不要犯这个错误。
 
 这里是修复后的示例。我们在从数组中取出字母后立即增加索引：
 
 ```java
-while (index < alphabet. length ) {
+while (index < alphabet.length) {
     char letter = alphabet[index];
-    index = index + 1 ;
+    index = index + 1;
 
-    if (letter == 'F' ) {
-        continue ;
+    if (letter == 'F') {
+        continue;
     }
-    System. out .println(letter);
+    System.out.println(letter);
 }
 ```
 
@@ -1236,11 +1276,9 @@ while (index < alphabet. length ) {
 注意，循环并不一定得运行。如果在对字母表进行循环之前，我们将 `index` 设置为 0 以外的值？一个字母表大小之外的值？
 
 ```java
-int index = 87 ;
-while (index < alphabet. length ) {
+int index = 87;
+while (index < alphabet.length) {
 ```
-
-
 
 我承认。`for` 循环对新手来说更让人困惑，尤其是对于那些白痴、蠢货和菜鸟来说。而且不，我也不知道最后那个词是什么意思。但一旦你习惯了它，你就能获得非常简洁且易于理解的代码。你猜怎么着？你在 `Java` 中 95% 的情况下看到的都是这种循环。
 
@@ -1258,17 +1296,17 @@ while (index < alphabet. length ) {
 通过调整 `for` 循环的三个部分，也可以轻松进行不同类型的循环。如果你注意到，这些部分确实是用分号隔开的。例如，也许你想反向遍历 `array`。以下是这 3 个部分指定的内容：
 
 1. 将索引的初始值设置为 `array` 的末尾
-   `int i = myArray. length - 1 ;`
+   `int i = myArray.length - 1;`
 2. 持续运行循环直到我们到达 `array` 的开头（包括位置 0）
-   `i >= 0 ;`
+   `i >= 0;`
 3. 在每次循环迭代结束时减少索引的值
    `i--`
 
 ```java
-char [] myArray = { 'A' , 'B' , 'C' , 'D' };
+char[] myArray = { 'A', 'B', 'C', 'D' };
 
-for ( int i = myArray. length - 1 ; i >= 0 ; i--) {
-    System. out .println(myArray[i]);
+for (int i = myArray.length - 1; i >= 0; i--) {
+    System.out.println(myArray[i]);
 }
 ```
 
@@ -1282,10 +1320,10 @@ for ( int i = myArray. length - 1 ; i >= 0 ; i--) {
 下面是它实际运行的每一步说明。如果你现在感到困惑，这部分应该会有帮助。
 
 ```java
-char [] myArray = { 'A' , 'B' , 'C' , 'D' };
+char[] myArray = { 'A', 'B', 'C', 'D' };
 
-for ( int i = myArray. length - 1 ; i >= 0 ; i--) {
-    System. out .println(myArray[i]);
+for (int i = myArray.length - 1; i >= 0; i--) {
+    System.out.println(myArray[i]);
 }
 ```
 
@@ -1303,25 +1341,25 @@ for ( int i = myArray. length - 1 ; i >= 0 ; i--) {
 Meme[] memes;
 
 for (Meme currentMeme : memes) {
-    //对 meme 些些什么
+    // 对 meme 做些什么
 }
 ```
 
-你甚至不需要创建和初始化索引变量。不需要获取 `array` 中该位置的项。不需要在循环结束时增加索引。这些统都不需要。它是遍历 `list` 中某些项的完美方式。除非你有理由不这样做，否则请始终使用其中之一。
+你甚至不需要创建和初始化索引变量。不需要获取 `array` 中该位置的项。不需要在循环结束时增加索引。这些统统不需要。它是遍历 `list` 中某些项的完美方式。除非你有理由不这样做，否则请始终使用其中之一。
 
 作为另一个例子，你可以这样替换我们之前的示例：
 
 ```java
-char [] myArray = { 'A' , 'B' , 'C' , 'D' };
+char[] myArray = { 'A', 'B', 'C', 'D' };
 
-for ( int i = 0 ; i < myArray. length ; i++) {
-    System. out .println(myArray[i]);
+for (int i = 0; i < myArray.length; i++) {
+    System.out.println(myArray[i]);
 }
 
-char [] myArray = { 'A' , 'B' , 'C' , 'D' };
+char[] myArray = { 'A', 'B', 'C', 'D' };
 
-for ( char character : myArray) {
-    System. out .println(character);
+for (char character : myArray) {
+    System.out.println(character);
 }
 ```
 
@@ -1329,7 +1367,7 @@ for ( char character : myArray) {
 
 “噢！那到底是什么鬼！？？[实例化]！那是你仪式的第一部分。什么仪式？我们要让你安息了！” – 海绵宝宝 Square 裤
 
-我们回来了，宝贝们！对象重回到菜单单上了！！！是时候从一个 `CLASS` 创建一个对象了。准备好了吗？？
+我们回来了，宝贝们！对象重回到菜单上了！！！是时候从一个 `CLASS` 创建一个对象了。准备好了吗？？
 
 ## 创建对象
 
@@ -1340,112 +1378,6 @@ Book myBook = new Book();
 “我做到了！我做到了，爸爸！我造了一个对象！” - 你
 
 好了，你造了一个对象。
-[/content]
-
-(注：由于用户提供的“需要翻译的文本”部分包含了已经翻译好的示例内容，根据指令“不要重复输出原文”以及作为高级工程师的逻辑，我已对提供的英文文本进行了翻译。但如果用户提供的待翻译文本本身已经是英文，我将按照其要求的格式输出对应的中文翻译。)
-
-**重新审视**：用户在“以下是需要翻译的文本”中提供的是一段**英文原文**。我应该将这段英文翻译成中文。
-
-[content]
-我承认。`for` 循环对新手来说更让人困惑，尤其是对于那些白痴、蠢货和菜鸟来说。而且不，我也不知道最后那个词是什么意思。但一旦你习惯了它，你就能获得非常简洁且易于理解的代码。你猜怎么着？你在 `Java` 中 95% 的情况下看到的这种循环。
-
-这是因为循环最常见的原因是遍历数据集中的每一个元素（比如一个 `array`），并对每个元素执行某些操作。这是实现该操作最简洁的方法。
-
-## 为什么要用以及何时用 for 循环？
-
-99% 的情况下，当你有一个数据 `array`（或某些 `list`）时，你会使用 `for` 循环。你需要对 `array` 中的每个项执行某些操作，或者你需要使用 `array` 中的每个项完成某些任务。
-
-- 对于购物车中的每种产品应用优惠券代码。
-- 对于比赛中的每只马，计算它们获胜的概率。
-- 对于每一段忧郁的记忆，哭泣 1 小时。
-- 反转，反转！
-
-通过调整 `for` 循环的三个部分，也可以轻松进行不同类型的循环。如果你注意到，这些部分确实是用分号隔开的。例如，也许你想反向遍历 `array`。以下是这 3 个部分指定的内容：
-
-1. 将索引的初始值设置为 `array` 的末尾
-   `int i = myArray. length - 1 ;`
-2. 持续运行循环直到我们到达 `array` 的开头（包括位置 0）
-   `i >= 0 ;`
-3. 在每次循环迭代结束时减少索引的值
-   `i--`
-
-```java
-char [] myArray = { 'A' , 'B' , 'C' , 'D' };
-
-for ( int i = myArray. length - 1 ; i >= 0 ; i--) {
-    System. out .println(myArray[i]);
-}
-```
-
-尝试自己多读几次以理解每个部分在做什么。然后我就来揭秘了。我讨厌豆子。以下是我们要求 `Java` 运行的事情的英文描述……
-
-1. 创建一个包含 4 个元素 `A`、`B`、`C`、`D` 的 `array`。
-2. 创建一个变量 `i`（索引）并将其初始值设置为 `3`。
-3. 指定只要 `i` 大于或等于 `0`，循环就持续持续。
-4. 指定在每次循环结束时，我们将索引减去 `1`。
-
-下面是它实际运行的每一步说明。如果你现在感到困惑，这部分应该会有帮助。
-
-```java
-char [] myArray = { 'A' , 'B' , 'C' , 'D' };
-
-for ( int i = myArray. length - 1 ; i >= 0 ; i--) {
-    System. out .println(myArray[i]);
-}
-```
-
-1. 将 `i` 设置为 `3`。这大于或等于 `0`。运行循环内部的代码（打印‘D’）。将 `i` 减 `1`。
-2. `i` 现在是 `2`。这大于或等于 `0`。运行循环内部的代码（打印‘C’）。将 `i` 减 `1`。
-3. `i` 现在是 `1`。这大于或等于 `0`。运行循环内部的代码（打印‘B’）。将 `i` 减 `1`。
-4. `i` 现在是 `0`。这大于或等于 `0`。运行循环内部的代码（打印‘a’）。将 `i` 减 `1`。
-5. `i` 现在是 `-1`。这不大于或等于 `0`。循环结束。
-
-## 增强型 for 循环
-
-`Java` 让 `for` 循环变得更加简单。在只需遍历某些数据集合的简单情况下，你可以这样做：
-
-```java
-Meme[] memes;
-
-for (Meme currentMeme : memes) {
-    //对 meme 些些什么
-}
-```
-
-你甚至不需要创建和初始化索引变量。不需要获取 `array` 中该位置的项。不需要在循环结束时增加索引。这些统都不需要。它是遍历 `list` 中某些项的完美方式。除非你有理由不这样做，否则请始终使用其中之一。
-
-作为另一个例子，你可以这样替换我们之前的示例：
-
-```java
-char [] myArray = { 'A' , 'B' , 'C' , 'D' };
-
-for ( int i = 0 ; i < myArray. length ; i++) {
-    System. out .println(myArray[i]);
-}
-
-char [] myArray = { 'A' , 'B' , 'C' , 'D' };
-
-for ( char character : myArray) {
-    System. out .println(character);
-}
-```
-
-# 第 9 章：实例化
-
-“噢！那到底是什么鬼！？？[实例化]！那是你仪式的第一部分。什么仪式？我们要让你安息了！” – 海绵宝宝 Square 裤
-
-我们回来了，宝贝们！对象重回到菜单单上了！！！是时候从一个 `CLASS` 创建一个对象了。准备好了吗？？
-
-## 创建对象
-
-```java
-Book myBook = new Book();
-```
-
-“我做到了！我做到了，爸爸！我造了一个对象！” - 你
-
-
-
 
 构造函数的名称总是类名，后面跟着圆括号 `()`。然后是一些大括号 `{}`。看到那个例子中的构造函数了吗？当一个 `House` 对象被创建时，`color` 属性被赋予了值“Gray”（灰色）。然后，构造函数开始工作了，……额吧，这一个什么都没做。甚至不需要写出来。但它一直存在那儿！！
 
@@ -1453,9 +1385,9 @@ Book myBook = new Book();
 
 ```java
 class House {
-    String color ;
+    String color;
     House() {
-        color = "Gray" ;
+        color = "Gray";
     }
 }
 ```
@@ -1463,16 +1395,18 @@ class House {
 在这个例子和上一个例子之间切换一下。注意它们的区别。嗯，实际上没有区别，但你可以选择你偏好的方式。我喜欢在构造函数内部设置属性值（这一个）。
 
 ## 从一开始就做对
+
 无论如何，当然；Bob 可以盖好房子，把它漆成灰色的，然后你可以来自己重新粉刷地方。
 
 ```java
 House stevesHouse = new House();
-System. out .println(stevesHouse. color );
-stevesHouse. color = "Blue" ;
-System. out .println(stevesHouse. color );
+System.out.println(stevesHouse.color);
+stevesHouse.color = "Blue";
+System.out.println(stevesHouse.color);
 ```
 
 输出：
+
 > Gray
 > Blue
 
@@ -1480,7 +1414,7 @@ System. out .println(stevesHouse. color );
 
 ```java
 class House {
-    String color ;
+    String color;
     House(String customColor) {
         color = customColor;
     }
@@ -1498,55 +1432,59 @@ House stevesHouse = new House();
 这怎么样呢？
 
 ```java
-House stevesHouse = new House( "Blue" );
-System. out .println(stevesHouse. color );
+House stevesHouse = new House("Blue");
+System.out.println(stevesHouse.color);
 ```
 
 是的，这行了！我们盖了房子，而且它是蓝色的。“Blue”被打印到了控制台上。
 
 ## 大脑筋转弯！
+
 你认为这里发生了什么？
 
 ```java
 class House {
-    String color = "Gray" ;
+    String color = "Gray";
     House() {
-        color = "White" ;
+        color = "White";
     }
 }
 ```
 
 如果我这样做，会打印什么颜色：
+
 ```java
 House coloredHouse = new House();
-System. out .println(coloredHouse. color );
+System.out.println(coloredHouse.color);
 ```
 
 答案是？它是…………颜色……White（白色）！是的，构造函数的代码在属性值赋值之后运行。你可以通过添加一些 `Sysouts` 来验证这一点。
 
 ```java
 class House {
-    String color = "Gray" ;
+    String color = "Gray";
     House() {
-        System. out .println( color );
-        color = "White" ;
-        System. out .println( color );
+        System.out.println(color);
+        color = "White";
+        System.out.println(color);
     }
 }
 ```
 
 结果是？
+
 > Gray
 > White
 
 Bob 的蓝图上有 Gray，但当他开始建筑时，他决定用 White。大脑筋转弯结束。你的大脑不再被戏弄了。
 
 ## 大脑筋转弯 #2！
+
 哈哈，捉到你了！我们带着又一个回来了。如果我们创建一个像这样的构造函数呢？
 
 ```java
 class House {
-    String color ;
+    String color;
     House(String color) {
         color = color;
     }
@@ -1559,9 +1497,9 @@ class House {
 
 ```java
 class House {
-    String color ;
+    String color;
     House(String color) {
-        this . color = color;
+        this.color = color;
     }
 }
 ```
@@ -1569,15 +1507,16 @@ class House {
 就像你可以通过“点表示法”（dot notation）——即句号来访问对象的属性和方法一样，对象可以使用 `this` 后面跟着点来引用它自己的属性和方法。这在这种情况下太棒了，因为我们需要区分同名的属性和参数。
 
 ## 构造函数重载
+
 是时候向你介绍一个叫做“工程师过度设计”（engineer overkill）的概念了。等等，不是那个……构造函数压力？不，不……构造函数……重载（overload）？是的，就是它！**构造函数重载**！
 
 对我这个 Java 开发者来说很幸运，我不需要只有一个构造函数。我可以根据需要有这么多或几个！对你来说遗憾，这是另一个你需要学习的知识。看这个：
 
 ```java
 class House {
-    String color ;
+    String color;
     House() {
-        color = "White" ;
+        color = "White";
     }
     House(String customColor) {
         color = customColor;
@@ -1591,10 +1530,13 @@ class House {
 // 使用空构造函数
 House houseOne = new House();
 // 使用 StringColor 构造函数
-House houseTwo = new House( "Magenta" );
+House houseTwo = new House("Magenta");
 ```
 
 ## 什么是 null？
+
+
+
 听过 `NullPointerException`（空指针异常）吗？没过？好吧，如果你学了 Java，你一生都会看到它们。在那之前，让我们聊聊 `null`。
 
 ```java
@@ -1621,6 +1563,7 @@ if (stevesHouse != null ) {
 ```
 
 # 第 10 章：方法
+
 “执行吧。” —— 帕帕廷议员
 
 方法负责某些事情。飞机 `fly()`。咖啡机 `brew()`。人飞得像纸一样，嗨得像飞机一样。猫在我努力工作时无缘无故地喵喵叫，该死的 JASPER 我刚刚喂过你罐头——
@@ -1634,10 +1577,6 @@ class Cat {
     void meow() {
 }
 ```
-
-
-
-
 
 ```java
 System.out.println("Meow!");
@@ -1746,12 +1685,10 @@ boolean isPositive(int number) {
 
 （注：此处原文存在大量重复文本，已按要求保留核心逻辑翻译）
 
-
-
-
 ```java
 airplane.fly( 0 , 12552.854 );
 ```
+
 是的，最后那行代码会让飞机以惊人的速度坠毁。别担心，`fly` 方法应该确保传递的参数是合理的。如果你想在调用方法时允许更多自定义的行为，同时又提供一种简单的方法在传递那么多参数的情况下调用方法，那么对方法进行重载通常是一个好主意。在底层，你甚至可以像这样操作让你的代码非常具复用性：
 
 ```java
@@ -1792,22 +1729,27 @@ String translate(String textToTranslate) {
 # 第 11 章：字符串 (Strings)
 
 ## 字符串理论 (String theory)
+
 这是一个理论框架，其中粒子物理学中的点粒子被称为“字符串”的一维对象所取代。我的字符串理论是，Java 中的 `String` 是史上最好的变量类型。有史以来最好！
 
 ## 什么是字符串？
+
 你见过它们。我聊过它们。你现在可能对它们是什么有个大概的了解。它只是一些文本，对吧？“abc”或“23890chusoao”？这些不是 `Strings` 吗？是的。双引号 “ ” 是标识 `Strings` 的标志。或者，你知道的……`String` 这个单词。呆。但 `Strings` 在 Java 中非常特殊；它们不仅极其常见，还有大量的内置方法让它们变得超级强大。你应该知道为什么 `Strings` 是最好的。就是 Alanis Morisette 会提倡的那种“应该知道”的东西。任何不需要数学（加法、乘法之类的）且不是布尔值（真或假）的值在 99.9% 的情况下都应该是字符串，ISO（在 Steve 看来）。
 
 ## 文本 (Text)
+
 想表示单个字符吗？你可以使用 `char`，对吧？
 
 ```java
 char firstLetter = 'A' ;
 ```
+
 直接用 `String` 吧。
 
 ```java
 String firstLetter = "A" ;
 ```
+
 既然可以获得真货，何必去用基本类型呢？不用说，如果你需要字符字符串，你也会使用 `String`。
 
 ```java
@@ -1827,6 +1769,7 @@ public final class String … {
 想象一排字符排好队，用一根绳把它们系在一起。并没有那么牢固；如果你想的话，可以剪断绳。但它们是一个整体！耶，`Strings!`！
 
 ## 数字 (Numbers)
+
 那数字呢？仅仅因为一个值看起来是数字并不意味着它应该是一个整数。别误会我，很多时候你需要数字是 `ints` 或 `doubles`（去他的浮点型）。但并不如此！例如，电话号码……
 
 ```java
@@ -1840,6 +1783,7 @@ String jennysNumber = "5558675309" ;
 ```
 
 ## 创建字符串 (Making a String)
+
 “你只是把一些东西放在两个双引号里，我懂。”好吧……我应该告诉你，理论上你可以这样做。别这样做。
 
 ```java
@@ -1847,8 +1791,6 @@ String jennysNumber = new String( "5558675309" );
 ```
 
 是的，`Strings` 是对象。它们有构造函数。不过，这个构造函数完全没用。说真的，比男人的乳头还没用。Java 让我们使用简写简单地将值放在双引号内并就此结束。
-
-
 
 嗯。我们如何检查“vaccines”是否在里面，无论字母的大小写情况如何？我知道了！我们可以用 `containsIgnoreCase`！开个玩笑的——根本没这个方法！该死的 Java。
 
@@ -1940,28 +1882,30 @@ String firstFive = helloWorld.substring( 0 , 5 );
 
 我知道，我知道。你是个笨蛋新手，你仍然很困惑。但这是那种真正需要刻在脑里的事情之一。在这里，我会给你一些例子来帮助你，朋友。用你的手指从左到右数，理解为什么结果会是那样：
 
+
+
 ```java
-//"NOP"
-"LMNOPQ" .substring( 2 , 5 );
+// "NOP"
+"LMNOPQ".substring(2, 5);
 
-//"B"
-"ABCDEFG" .substring( 1 , 2 );
+// "B"
+"ABCDEFG".substring(1, 2);
 
-//"WH"
-"WHAT" .substring( 0 , 2 );
+// "WH"
+"WHAT".substring(0, 2);
 
-//"" (空字符串)
-"GAWRSH" .substring( 1 , 1 );
+// "" (空字符串)
+"GAWRSH".substring(1, 1);
 ```
 
 希望你开始理解这个了。这里还有一点要提。你知道我们是如何提供起始索引和结束索引的吗？如果你愿意，Java 允许你只提供起始索引。结果是？你只剪一刀，Java 会给你整个 `String` 的尾部分。
 
 ```java
-//"Cool"
-"Lame Cool" .substring( 5 );
+// "Cool"
+"Lame Cool".substring(5);
 
-//"BC"
-"ABCDEFGHIJKLMNOP" .substring( 1 );
+// "BC"
+"ABCDEFGHIJKLMNOP".substring(1);
 ```
 
 ## `split`
@@ -1969,18 +1913,18 @@ String firstFive = helloWorld.substring( 0 , 5 );
 我喜欢这个方法。它从 `String` 中创建出一系列较小的 `String`。你给 Java 一个字符来执行 `split`（分割）。你会得到一个数组。该字符每次出现的地方变成字符串。
 
 ```java
-String sentence = "I just think they're neat" ;
-String[] words = sentence.split( " );
+String sentence = "I just think they're neat";
+String[] words = sentence.split(" ");
 ```
 
-猜怎么着？我们现在有一个数组！`{ "I" , "just" , "think" , "they're" , "neat" }`。当 Java 看到空格时，它去掉了字符串。左侧和右侧部分最终进了数组。
+猜怎么着？我们现在有一个数组！`{ "I", "just", "think", "they're", "neat" }`。当 Java 看到空格时，它去掉了字符串。左侧和右侧部分最终进了数组。
 
 ## `trim`
 
 好了，最后一个。这个很容易。它移除 `String` 首尾所有的空格和换行符。
 
 ```java
-"This is great." .trim();
+"This is great.".trim();
 ```
 
 我们留下了“This is great.”
@@ -1988,17 +1932,16 @@ String[] words = sentence.split( " );
 好的，不错！再来一个例子。假设你是互联网上的购物网站。用户购买了一个商品，你想感谢他们的购买。也许你会向他们显示这样的消息：
 
 ```java
-String itemName = "Everybody Poops" ;
+String itemName = "Everybody Poops";
 
-double price = 2.99 ;
+double price = 2.99;
 ```
 
-
-
-
 ```java
-String messageToUser ="Thanks for purchasing the " + itemName + " for $" + price + "." ;
-``` 当我们最终将这个 `String` 显示给用户时，你可能会看到“Thanks for purchasing Everybody Poops for $2.99.”不，对于网站来说，`System.out.println()` 并不够用……但那是另一个话题了。而且，你大可以相信，我为了在句末加个句号，特意多加了一个 `String` 拼接，即使只是为了例子也是如此。这真让我火大。总之，`String` 拼接无处不在。我的意思是，真的。将 `Strings` 与 `Strings` 结合，或者和数字、对象，或者各种破事结合在一起。`+` 是一个非常重要的小家伙。
+String messageToUser = "Thanks for purchasing the " + itemName + " for $" + price + ".";
+```
+
+当我们最终将这个 `String` 显示给用户时，你可能会看到“Thanks for purchasing Everybody Poops for $2.99.”不，对于网站来说，`System.out.println()` 并不够用……但那是另一个话题了。而且，你大可以相信，我为了在句末加个句号，特意多加了一个 `String` 拼接，即使只是为了例子也是如此。这真让我火大。总之，`String` 拼接无处不在。我的意思是，真的。将 `Strings` 与 `Strings` 结合，或者和数字、对象，或者各种破事结合在一起。`+` 是一个非常重要的小家伙。
 
 ## 格式化 (Formatting)
 
@@ -2009,7 +1952,7 @@ String messageToUser ="Thanks for purchasing the " + itemName + " for $" + price
 以下是你如何使用这种方法实现完全相同的消息：
 
 ```java
-String messageToUser =String. format ( "Thanks for purchasing %s for %f." , itemName, price);
+String messageToUser = String.format("Thanks for purchasing %s for %f.", itemName, price);
 ```
 
 看到这些字母前面有一个百分号 `%` 了吗？不，它不是你熟悉的那种百分比符号。这不是一个基于 100 的值。这也不是模运算。它们就像小小的占位符。然后当你使用 `String.format` 时，你给了 Java 真实的值！它会将它们插入到所属的位置。
@@ -2023,12 +1966,13 @@ String messageToUser =String. format ( "Thanks for purchasing %s for %f." , item
 拼接？那创建了一个新的 `String`。当你使用我们看到的任何 `String` 方法时？它们都创建了新的 `Strings`。你需要确保不要期望通过使用这些方法让 `String` 发生改变。相反，你必须预期 Java 会根据你要求它操作创建一个新的 `String`。
 
 ```java
-String initialString = "Ah, hello there." ;
+String initialString = "Ah, hello there.";
 
 initialString.toUpperCase();
 
-System. out .println(initialString);
-``` 
+System.out.println(initialString);
+```
+
 > “Ah, hello there.”
 
 看到了吗？字符串并没有变成全大写。你以为欧比旺（Obi-Wan）会大喊“AH, HELLO THERE.” 吗？真遗憾。
@@ -2038,12 +1982,13 @@ System. out .println(initialString);
 另一个失败：
 
 ```java
-String sillyString = "haha dank memerinos!" ;
+String sillyString = "haha dank memerinos!";
 
-sillyString.substring( 5 );
+sillyString.substring(5);
 
-System. out .println(sillyString);
+System.out.println(sillyString);
 ```
+
 > “haha dank memorinos!”
 
 请杀了我吧。但再次，那个 `String` 方法并没有改变我们 `String` 的值，它创建了一个被忽略的新字符串。我们没有把 `sillyString` 改为“dank memerinos!”
@@ -2053,15 +1998,14 @@ System. out .println(sillyString);
 噢，这里是你正确编写这些示例的方法：
 
 ```java
-String initialString = "Ah, hello there." ;
+String initialString = "Ah, hello there.";
 
 String initialStringUpper = initialString.toUpperCase();
 
-String sillyString = "haha dank memerinos!" ;
+String sillyString = "haha dank memerinos!";
 
 // 重用同一个变量
-
-sillyString = sillyString.substring( 5 );
+sillyString = sillyString.substring(5);
 ```
 
 # 第 12 章：Java 电影宇宙 (The Java Cinematic Universe)
@@ -2082,16 +2026,13 @@ sillyString = sillyString.substring( 5 );
 
 Java 提供了许多预制的类来帮助处理这些任务。这些都是我在开头提到的 Java 标准部分。它们可能不是最酷的，但它们确实为你提供服务。不像你半夜去买牛奶再也没回来的父亲。我想你了，爸爸。
 
-
-
-
-
 它字面上就是 `package` 单词，后面跟着 Java 文件所在的目录。哦，还有一个分号。是的，这个类目前什么都没做。它只是一个 `main` 方法。也许如果我们真的开发了这个东西，我们会打开一个新窗口并向用户显示一个表情包（memes）列表。目前我主要关注包（packages），谢谢大家。
 
 ## 俄罗斯套娃
+
 你可以在文件夹内部继续创建文件夹。因此，可以在包内部继续创建包。就像那些俄罗斯套娃，一个俄罗斯套娃里面套着俄罗斯套娃，里面再套着……
 
-我确实提到过我们可能会向用户显示一个表情包列表，因为这是一个表情包商店。让我们添加一个名为 `list` 的新包，并在里面放入一个 `MemeListScreen` 类![](img/rsrc1W6.jpg)
+我确实提到过我们可能会向用户显示一个表情包列表，因为这是一个表情包商店。让我们添加一个名为 `list` 的新包，并在里面放入一个 `MemeListScreen` 类 ![](img/rsrc1W6.jpg)
 
 好了，我们创建了那个新包（字面上就是一个文件夹），并创建了一个名为 `MemeListScreen.java` 的新 Java 文件。
 
@@ -2104,6 +2045,7 @@ public class MemeListScreen {
 ```
 
 ### 理解包的结构
+
 惊喜吧，它实际上什么都不是。但请注意这一行包定义。看到那里的点了吗？这表示该类属于 `app.list` 包，而它是它所在的目录结构。
 
 例如，如果我们继续这样操作，在 `list` 文件夹内部，我们可以创建一个 `options` 文件夹。然后在 `options` 文件夹内部，我们可以再创建一个 `about` 文件夹。然后我们就可以在 `app.list.options.about` 包中有一个类。也许它叫 `AboutMemeStoreScreen` 之类的什么鬼名字。我不知道。
@@ -2113,6 +2055,7 @@ public class MemeListScreen {
 感到困惑了吗？核心思想是这样的：我们组织代码是为了保持内容的整洁和易于理解。就像你可能会把 Word 文档放在一个文件夹里，把 PowerPoint 放在另一个文件夹里一样，将相关的 Java 代码放在同一个文件夹（包）中也是一个好主意。你可以继续将其不断细分。
 
 ## 为你的包命名
+
 和 Java 的其他许多领域一样，在创建包时也有惯例（或常用的处理方法）。我先给你们看几个示例包，因为这些惯例可能会变得显而易见：
 
 * `com.google.gson`
@@ -2130,9 +2073,11 @@ public class MemeListScreen {
 相反，我们在所有的包之前都加上自己的网站名称作为前缀。
 
 ### “好吧，但为什么是反的？”
+
 我不知道。人们就是这么做的。而且，如果你没有域名，就编一个。`com.stevebrown.memestore.app` 看起来不错！
 
 ## 所以……这有点让人困惑
+
 是吗？也许吧。当我们仅仅有一个名为 `app` 的文件夹，且里面有一些文件夹时，它要直观得多（意思是容易于理解）。这意味着我们现在有一个 `com` 文件夹吗？然后是一个 `stevebrown` 文件夹？然后在里面是我所有的带有 Java 代码的实际包？
 
 是的，没错。但由于我们是正常的人类而不是精神异常者，我们使用像 `IntelliJ` 这样的程序来编写代码。它会根据包名替我们创建所有这些文件夹。例如，我可以使用 `IntelliJ` 创建这样的包结构：![](img/rsrc1XE.jpg)
@@ -2156,6 +2101,7 @@ public class MemeApp {
 随着时间的推移，你会习惯的。我发誓。相信我吗？
 
 ## 我应该如何对类进行打包？
+
 完全由你决定组织所有类的最佳方式。但这里有一些人们常用的流行选项：
 
 1. 按功能划分 (Package by feature)
@@ -2163,6 +2109,7 @@ public class MemeApp {
 3. 按你随心情划分 (Package by whatever hell you feel like)
 
 ### 按功能划分
+
 如果你喜欢选项 3，那么现在可以跳过本节的剩余内容。胆鬼。
 
 这意味着什么？功能，嗯，就是你软件的一个功能。你提供的有价值的东西。对于一个用户真正看到的软件，一个功能可能是一个屏幕，或者是一组屏幕。想象你正在为 Amazon 创建一个移动应用程序。在按功能划分的方法中，我们可能会为每个屏幕创建一个顶级包。然后为其他所有内容创建一个包。
@@ -2178,16 +2125,20 @@ public class MemeApp {
 这是用纯英语描述的结构（我喜欢英语）。使用我们刚刚学过的打包惯例，看起来可能是这样：![](img/rsrc1YJ.jpg) 注意，Amazon 的 App 比这复杂得多。而且我不在那里工作，不知道他们是如何组织代码的。但这是“按功能划分”方法的一个简单示例。每个功能都有自己的大包，任何不完全属于功能的东西都被丢在其他地方。
 
 ### 按分层划分
+
 当然，按“层”划分……随你如何称呼它。按功能、按目的等。在上一种方法“按功能划分”中，我们为应用程序的每个主屏幕创建一个包……为我们提供的用户的每个“功能”。在这种方法“按分层划分”中，我们根据类的类型进行分组。例如，这个类是用户界面的部分吗？放在 `userinterface` (ui) 包中。![](img/rsrc1YW.jpg) 懂我的意思吗？你感受到了吗？
 
 * `package by feature`：根据应用程序的板块或你认为的程序的任何“功能”将内容分组。
 * `package by layer`：完全根据其功能将内容分组，无论是用户界面、网络、辅助类、创建文件、数学之类的。
 
 假设我想添加一些与网络相关的代码，这些代码只影响 `ProductDetailScreen`。它们应该放在哪里？
+
 按功能划分，它们放在 `productdetail` 包中。
+
 按分层划分，它们放在 `networking` 包中。
 
 ## (Imports)
+
 “很显然，我们的国家依赖于外国石油。我们越来越多的进口来自海外。”–乔治·W·布什
 
 这段话和任何事情都没关系。但最后那部分花了老死的时间，我想在这里重置一下我们的思路。呼。好……
@@ -2196,13 +2147,10 @@ public class MemeApp {
 
 ```java
 Networker networker = new Networker();
+Response networkResponse = networker.getProductsToDisplay();
 ```
 
-
-
-
-
-Response networkResponse = networker.getProductsToDisplay();…这看起来很合理，对吧？我们知道在项目中有一个 `Networker` 类。为什么我们不能从这个类创建对象呢？为什么我们不能随心所欲地“实例化”它呢？
+…这看起来很合理，对吧？我们知道在项目中有一个 `Networker` 类。为什么我们不能从这个类创建对象呢？为什么我们不能随心所欲地“实例化”它呢？
 
 因为 Java 需要你对其进行“导入（import）”。除非你想使用的类与你的类在完全相同的包中，否则你必须在 Java 文件的顶部添加 import 语句。还记得包声明（package declarations）吗？那是一个简单的单行语句，指定类所属的包。在它的下方（基本上仍然在文件的顶部），你只需要从该文件外部导入所有需要的类。
 
@@ -2211,6 +2159,8 @@ package com.amazon.app.productlist;
 
 import com.amazon.app.shared.networking.Networker;
 ```
+
+
 
 现在，对于类的其余部分，你可以创建新的 `Networkers` 了！尽情发挥吧！去连接到存在过的每一个网站吧！喔哦呜呜呜！咳。没错，这就是你如何从项目的其他部分导入类的方法。但同样的规则也适用于使用 Java 自带的类。
 
@@ -2231,6 +2181,7 @@ int randomInt = randomNumberGenerator.nextInt();
 太棒了！我的记忆力像金鱼一样，所以我需要记住每个想用到的类的完整包名吗？不需要！你只需要知道类的名称，在代码中开始输入它，然后使用你像 IntelliJ 这样超级强大的 IDE（优惠码 Steve）来自动导入你需要的类。导入类（Import class）。它会将导入语句添加到你类的顶部。砰，搞定。
 
 ## 导入导入一切
+
 看到上面我们是如何导入 `Random` 类的吗？我们可以使用星号 `*` 导入 `java.util` 包中的每一个类。
 
 ```java
@@ -2240,6 +2191,7 @@ import java.util.*;
 没错。现在这个类可以使用 `java.util` 包中的任何类。得益于 IntelliJ 等其他软件提供的这种“防金鱼式”导入管理方法，几乎没有理由这样做。但这样导入是完全可能的。
 
 ## 规则的例外？
+
 在本书中我们一直在使用一个类，但我们从未需要导入它。你能猜出它是什么吗？它和“我真该死的什么都记不住”以及“当、当、当！”听起来很押韵。没错，它就是 `String` ！！为什么我们不需要导入 `String` 呢？
 
 我刚才才说过，如果一个类不在你的包中，你需要在使用它之前对其进行导入。我们知道 `String` 是一个类，因为我们讨论过它最重要的方法。怎么回事？我是撒谎的吗？
@@ -2247,6 +2199,7 @@ import java.util.*;
 Java 对我们耍了个小花招。他们悄地在每个 Java 文件中导入了一个特殊的包。那个包的名字是什么？阿尔伯特·爱因斯坦。不，是 `java.lang`；`String` 属于 `java.lang` 包。这意味着你不需要导入它。
 
 ## 趣味事实
+
 如果你想让你周围的人都哭，你可以这样创建一个 `String`：
 
 ```java
@@ -2254,16 +2207,20 @@ String oofOuchOwie = new java.lang.String( "Why?");
 ```
 
 ## 这些就是规则
+
 再次强调一下，对于每一个 Java 文件：
+
 1. 文件名应与 Java 类匹配，并以 `.java` 结尾。
 2. 文件应该存放在与包名匹配的文件夹结构中（仅用点分隔文件夹）。
 3. 文件顶部应该说明该类所属的包。
 4. 在包语句下方，文件应该导入它将要用到的每一个类。
 
 # 第 13 章：面向对象概念
+
 为了结束这本书，我将为你简要介绍一些让语言成为“面向对象”的软件“设计”原则，仅仅是因为我很喜欢你。
 
 ## 抽象（Abstraction）
+
 你去餐厅。你点了一份非常美味、昂贵的晚餐。服务员离开了，20-30 分钟后带着你的菜回来。服务员是从哪里拿到食物的？是他自己做的吗？他是去商店买的吗？他是跑去街对面的餐厅从那里拿的吗？
 
 当你点餐时，你不需要走进厨房，告诉厨师如何准备，微观管理他们如何互动，自己把食物放入烤箱，或者顺便去沃尔玛买餐厅卖光了的面包等。你只需要向服务员要菜；并预期他们会为你提供。服务员抽象了食物是如何准备的细节。
@@ -2271,6 +2228,7 @@ String oofOuchOwie = new java.lang.String( "Why?");
 优秀的程序员创建这样的类。你可能有一个非常大、强大的程序，拥有几十个或数百个类来完成超级复杂的事情。也许你有一个程序可以计算地图上 A 点和 B 点之间旅行的最快路径。但你的用户界面需要直接与所有这些不同的类来计算路线吗？或者我们可以创建一个抽象掉所有复杂性的类？也许一个类只需要简单地接收地址 1 作为一个 `String`，地址 2 作为一个 `String`，然后返回你需要执行的步骤数组（此处原文略有逻辑断层）。这正是抽象的精髓：暴露给其他类或系统的设计简化。
 
 ## 封装（Encapsulation）
+
 我们可以强制抽象。类可以简单地拒绝将自己暴露为公共（public）。感谢天谢如此。你可能是一个拥有 500 个属性、1500 个方法以及全世界糟糕代码的类。但你知道吗？其他类不需要看到那些。它们不需要关心。封装是将我们的代码与其他类隔离开的一种方式。
 
 假设我们经营一家比萨业务，让客户跟踪订单进度。客户使用安装在手机上的 App。该 App 需要通过互联网进行一些网络调用以获取更新。不，你不需要担心这些。这就是重点。假设这个该示例中使用的每个类都在完全不同的包中。
@@ -2308,10 +2266,6 @@ public class Networker {
     private String getStatusFromResult() {}
 }
 ```
-
-
-
-
 
 我们可以从用户界面类调用公共方法 `getOrderStatus`。而我们完全不知道底层正在发生这些复杂的网络操作。这就是封装的魅力所在；我们强制实现了抽象。如果其他类根本没有访问它的权限，它们就没法搞乱我们的事儿。
 
@@ -2444,9 +2398,6 @@ while (goblin.health > 0 && golem.health > 0){
 - 用户可以编辑的输入字段，[EditText](https://developer.android.com/reference/android/widget/EditText)，它继承自 [TextView](https://developer.android.com/reference/android/widget/TextView)，后者只显示文本。`EditText` 可以做 `TextView` 能做的一切以及更多……主要是编辑这些文本。
 - 我们可以通过扩展 [RoomDatabase](https://developer.android.com/reference/androidx/room/RoomDatabase) 类在我们的 Android 设备上创建数据库。不需要尝试从零编写本地数据库来让自己丢脸，我们只需要继承这个类然后遵循规则即可。
 
-
-
-
 上一个例子？看看[你的特殊数据库类通过继承自动拥有多少代码](https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/room/runtime/src/main/java/androidx/room/RoomDatabase.java) ，仅仅通过继承就做到了。太棒了！继承！老实说，继承在这里还有很多东西可以挖掘。想从我这里学习更多吗？那我们需要一本更大的书才行。
 
 ## 多态 (Polymorphism)
@@ -2459,7 +2410,7 @@ Java 有时很聪明。它最聪明的一点就是知道该调用哪个方法。
 
 让我们回到我们的怪物示例。我们之前写了一些类似这样的代码：
 
-```
+```java
 Goblin warts = new Goblin();
 ```
 
@@ -2485,13 +2436,15 @@ public void attack(Monster monsterToAttack) {
 
 Java 使用多态允许我们针对类的父类数据类型进行编码，而它负责动态地运行该类子类实现的方法。
 
+
+
 ```java
 class Magikarp extends Monster {
     Magikarp() {
-        damage = 5000 0 ;
+        damage = 50000;
     }
     void attack(Monster monsterToAttack) {
-        System. out.println( "Magikarp used SPLASH! But nothing happened!" );
+        System.out.println("Magikarp used SPLASH! But nothing happened!");
     }
 }
 ```
@@ -2508,31 +2461,31 @@ fishy.attack(goblin);
 *   我们会攻击并造成 50000 伤害吗？
 *   Java 调用的是父类 `Monster` 的“attack”方法，还是子类 `Magikarp` 的“attack”方法？
 
-我的头。我那可怜的头。答案是，我们我们溅起了水花，然后什么都没有发生！注意，`fishy` 的数据类型是 `Monster`。但我们创建了一个新的 `Magikarp()`。再次，这种当使用父类数据类型创建变量时调用子类方法的能力，被称为多态。
+我的头。我那可怜的头。答案是，我们溅起了水花，然后什么都没有发生！注意，`fishy` 的数据类型是 `Monster`。但我们创建了一个新的 `Magikarp()`。再次，这种当使用父类数据类型创建变量时调用子类方法的能力，被称为多态。
 
 ### 多态的实际示例？
 
 Java 中多态的一个极其常用的用法是 `Lists`。我在数组部分简要提到过它们……说是说我不会涵盖它们。但对于这一节，我会讲，哪怕只有一下。
 
 ```java
-List firstList = new ArrayList ();
-List secondList = new LinkedList ();
-firstList.add( new Goblin());
-secondList.add( new Goblin());
+List firstList = new ArrayList();
+List secondList = new LinkedList();
+firstList.add(new Goblin());
+secondList.add(new Goblin());
 ```
 
-这两种 `List` 的“实现”——[`ArrayList`](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html) 和 [`LinkedList](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html)——对内容的管理方式非常不同；一个底层是数组，另一个是一系列混乱的节点。但这并不重要；一旦你将这些变量声明为 `Lists`，你就可以以相同的方式与它们交互。
+这两种 `List` 的“实现”——[`ArrayList`](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html) 和 [`LinkedList`](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html)——对内容的管理方式非常不同；一个底层是数组，另一个是一系列混乱的节点。但这并不重要；一旦你将这些变量声明为 `Lists`，你就可以以相同的方式与它们交互。
 
 另一个是与 Android 相关的：我在 Android 应用中创建了几个继承自 `Activity` 类的屏幕。Android 本身可能会将这些存储为 `Activities` 数组：
 
 ```java
-Activity[] currentActivities ;
+Activity[] currentActivities;
 ```
 
 当应用关闭时，Android 会遍历这些活动并告诉我们屏幕正在销毁。
 
 ```java
-for (Activity activity : currentActivities ) {
+for (Activity activity : currentActivities) {
     activity.onDestroy();
 }
 ```
@@ -2544,54 +2497,30 @@ Java 和 Android 不在乎它是翻译文本的屏幕，还是显示当前 GPS �
 我们学了什么？我能用编号列表来总结整本 Java 入门书吗？让我们发现吧。” —— 扭士糖棒上的猫头鹰
 
 1. 计算机理解“机器语言”。我们自己不写这种语言；我们使用编程语言以我们凡人能理解的格式进行编写。
-2. Java 作为一种编程语言不像大多数语言那样直接编译或转换为机器语言。它编译为“字节码”，字节码在 Java 虚拟机（JVM）上运行，而虚拟机运行在实际计算机上。“一次编写，随运行。”
-3. Java 开发人员使用 Java 开发工具包 (JDK) 来编译代码，并使用 Java 标准库提供的功能，如字符串、网络、数学、UI 等。对于 Java 的底层部分，我希望你对语言的每个基本部分是什么、为什么存在以及如何开始有了大致了解。记住 Google 是你的朋友，你想知道的一切都是一系列沮丧的网络搜索。
+2. Java 作为一种编程语言不像大多数语言那样直接编译或转换为机器语言。它编译为“字节码”，字节码在 Java 虚拟机（`JVM`）上运行，而虚拟机运行在实际计算机上。“一次编写，随处运行。”
+3. Java 开发人员使用 Java 开发工具包（`JDK`）来编译代码，并使用 Java 标准库提供的功能，如字符串、网络、数学、UI 等。对于 Java 的底层部分，我希望你对语言的每个基本部分是什么、为什么存在以及如何开始有了大致了解。记住 Google 是你的朋友，你想知道的一切都是一系列沮丧的网络搜索。
 4. Java 坚守于面向对象编程，代码被划分为逻辑块，称为类。这些类作为蓝图，我们据此创建对象。对象之间以直观的方式交互，创建出易维护、易理解且有价值的软件。希望如此。
 5. 对象拥有属性；如数字、单词、列表或其他数据，这些数据与对象相关并描述它是什么。飞机可以有速度，书籍可以有价格，人可以有头部。
-
-
-
-
-# Java 编程基础
-
-7. 你可以声明一个变量，例如 `int x;`；之后可以使用等号给它赋值，例如 `x=5;`。你也可以同时进行声明和赋值，例如 `int x = 5;`。
-
-8. Java 中的所有变量都是“强类型”的，这意味着它们绝对、绝对必须有一个数据类型（如 `int`、`char`、`String` 等），且永远无法改变。
-
-9. 类拥有方法；或者说是对象执行的操作……它们是动词，可以执行计算、比较、显示或任何其他动作操作。一个 `MemeListScreen` 可能会 `refreshMemes()`，一个 `RemoteController` 可能会 `sendButtonPressToTV()`，一个 `Driver` 可能会 `checkBlindSpot()`。
-
-10. `main` 方法是每个 Java 程序都必须拥有的特殊方法，它是每个 Java 程序运行的第一个方法（由 Java 虚拟机自动运行）。
-
-11. `Strings` 是 Java 内置的类，被频繁使用，拥有如 `toLowerCase`、`equals`、`contains`、`substring` 和 `trim` 等方法。
-
-12. Java 内置了一些称为“运算符”的特殊字符，用于执行基本功能，如加 (`+`)、减 (`-`)、逻辑或 (`||`)、逻辑与 (`&&`)、比较 (`>`, `>=`, `<`, `<=`, `==`) 等。通过这些运算符我们可以构建出强大的功能。
-
-13. 当程序需要根据某些条件（如用户输入、变量值等）更改其行为时，它会使用条件语句或 `if` 语句。在这些条件内部，只有当条件被认为为真时，代码才会运行。
-
-14. 条件语句可以通过“else if”块变得更加特殊，该块会在某些次要条件时执行；或者通过“else”块，它在所有其他条件都不满足时执行。
-
-15. `Arrays` 是可以包含多个值的箱子，例如 `Strings` 数组或数字数组。它们必须永远保持相同的大小。数组中的第一个项索引为 `0`。
-
-16. 循环是只要某些条件为真重复运行相同代码的方法。`while` 循环只是在该条件下持续运行，而 `for` 循环是一个增强版，内置了方法来跟踪循环的次数以及循环结束后要执行的操作。
-
 6. 类通过“实例化”或通过创建该类的“实例”转变为对象。你使用 `new` 关键字来完成这一点。注意：实例和对象是同一东西；即被赋予了生命的类。
-
-18. 当类正在被“实例化”时，会使用其构造函数来构建该类。可以创建一个自定义构造函数，并以“参数”的形式提供指令，即传递到构造函数括号 `()` 中的变量。
-
-19. 类被分组在包中，例如 `com.example.mypackage`。该包中的类会在文件顶部写上 `package com.example.mypackage;`。
-
-20. 想要使用其他包中类的（这非常常见）必须先导入它们，使用诸如 `import java.util.ArrayList` 的代码行。
-
-21. 类可以“扩展”另一个类，以减少代码重复，并提供比父类更具体的的功能。这被称为继承。`Dog` 可以扩展 `Animal`。
-
-22. 我们可以创建一个父类数据类型的变量，但使用子类的构造函数。当调用父类方法时，Java 仍然知道调用子类的方法。这被称为多态。
-
-23. 抽象是一种策略，只暴露关于类的功能及其如何实现的那些需要暴露的部分。并不是每个类都需要看到另一个类内部是如何运作的。
-
-24. 封装是一种通过访问修饰符 `public/protected/private/default` 强制执行抽象的方法。大多数内容应该保持为私有，以防止其他类看到它们。
-
-25. 在 Java 编程中，你不再是个大傻瓜了。你可能还是个新手，但你现在已经准备好在 Java 游泳池中游得更深了。
+7. 你可以声明一个变量，例如 `int x;`；之后可以使用等号给它赋值，例如 `x=5;`。你也可以同时进行声明和赋值，例如 `int x = 5;`。
+8. Java 中的所有变量都是“强类型”的，这意味着它们绝对、绝对必须有一个数据类型（如 `int`、`char`、`String` 等），且永远无法改变。
+9. 类拥有方法；或者说是对象执行的操作……它们是动词，可以执行计算、比较、显示或任何其他动作操作。一个 `MemeListScreen` 可能会 `refreshMemes()`，一个 `RemoteController` 可能会 `sendButtonPressToTV()`，一个 `Driver` 可能会 `checkBlindSpot()`。
+10. `main` 方法是每个 Java 程序都必须拥有的特殊方法，它是每个 Java 程序运行的第一个方法（由 Java 虚拟机自动运行）。
+11. `Strings` 是 Java 内置的类，被频繁使用，拥有如 `toLowerCase()`、`equals()`、`contains()`、`substring()` 和 `trim()` 等方法。
+12. Java 内置了一些称为“运算符”的特殊字符，用于执行基本功能，如加（`+`）、减（`-`）、逻辑或（`||`）、逻辑与（`&&`）、比较（`>`、`>=`、`<`、`<=`、`==`）等。通过这些运算符我们可以构建出强大的功能。
+13. 当程序需要根据某些条件（如用户输入、变量值等）更改其行为时，它会使用条件语句或 `if` 语句。在这些条件内部，只有当条件被认为为真时，代码才会运行。
+14. 条件语句可以通过“else if”块变得更加特殊，该块会在某些次要条件时执行；或者通过“else”块，它在所有其他条件都不满足时执行。
+15. `Arrays` 是可以包含多个值的箱子，例如 `Strings` 数组或数字数组。它们必须永远保持相同的大小。数组中的第一个项索引为 `0`。
+16. 循环是只要某些条件为真重复运行相同代码的方法。`while` 循环只是在该条件下持续运行，而 `for` 循环是一个增强版，内置了方法来跟踪循环的次数以及循环结束后要执行的操作。
+17. 当类正在被“实例化”时，会使用其构造函数来构建该类。可以创建一个自定义构造函数，并以“参数”的形式提供指令，即传递到构造函数括号 `()` 中的变量。
+18. 类被分组在包中，例如 `com.example.mypackage`。该包中的类会在文件顶部写上 `package com.example.mypackage;`。
+19. 想要使用其他包中类的（这非常常见）必须先导入它们，使用诸如 `import java.util.ArrayList` 的代码行。
+20. 类可以“扩展”另一个类，以减少代码重复，并提供比父类更具体的的功能。这被称为继承。`Dog` 可以扩展 `Animal`。
+21. 我们可以创建一个父类数据类型的变量，但使用子类的构造函数。当调用父类方法时，Java 仍然知道调用子类的方法。这被称为多态。
+22. 抽象是一种策略，只暴露关于类的功能及其如何实现的那些需要暴露的部分。并不是每个类都需要看到另一个类内部是如何运作的。
+23. 封装是一种通过访问修饰符 `public`/`protected`/`private`/`default` 强制执行抽象的方法。大多数内容应该保持为私有，以防止其他类看到它们。
+24. 在 Java 编程中，你不再是个大傻瓜了。你可能还是个新手，但你现在已经准备好在 Java 游泳池中游得更深了。
 
 ## 结语
-感谢阅读。我希望你在这里感到有些轻松，并在过程中学到了东西。如果你不介意留下评价，我将不胜感激（无论好评差评）。你也可以通过 `scbWriterGuy@gmail.com` 向我发送你的反馈。这是我第一次尝试写超出大学论文规定页数限制的内容，所以我会接受任何帮助。愿父亲保佑你，祝你好运。
 
+感谢阅读。我希望你在这里感到有些轻松，并在过程中学到了东西。如果你不介意留下评价，我将不胜感激（无论好评差评）。你也可以通过 `scbWriterGuy@gmail.com` 向我发送你的反馈。这是我第一次尝试写超出大学论文规定页数限制的内容，所以我会接受任何帮助。愿父亲保佑你，祝你好运。

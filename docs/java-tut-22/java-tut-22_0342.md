@@ -1,3 +1,4 @@
+
 # 签署和验证 JAR 文件
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/jar/signindex.html`](https://docs.oracle.com/javase/tutorial/deployment/jar/signindex.html)

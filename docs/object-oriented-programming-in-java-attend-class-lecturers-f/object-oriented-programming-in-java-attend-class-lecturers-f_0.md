@@ -1,14 +1,10 @@
+
 # Java 面向对象编程实战：在家听课
-
-
 
 ![](img/00047.jpeg)
 
-
-
-
-
 ## 作者致辞
+
 亲爱的读者：
 
 欢迎来到这段旅程。我很荣幸随信附上《Java 面向对象编程：在家听授课程》。在进入主题之前，我想强调一下关于该主题及其内容的几点：
@@ -25,22 +21,26 @@
 
 作者
 
-
 # 基础术语
 
 ## JVM
+
 全称为 Java Virtual Machine（Java 虚拟机）。当我们编译 `java` 时，得到 `.class` 文件。换句话说，它是一个编译代码的虚拟机。此时 `JVM` 就出现了。
 
 ## JRE
+
 全称为 Java Runtime Environment（Java 运行时）。它包含了 `JVM` 和库文件。要运行 Java 程序，必须安装 `JRE`。所以，我们可以简单地说是 `JRE` + 某些包。
 
 ## JDK
+
 全称为 Java Development Kit（Java 开发工具包）。它提供了我们开发 `java` 需要的工具。这些工具包含了 `javac.exe`, `java.exe`。当我们启动应用程序时，它会打开 `JRE` 然后执行 `main` 方法。所以，我们可以得出结论 `JDK`=`JRE` + 开发工具。
 
 ## 字节码
+
 字节码是 `JVM` 的机器语言。它们为 `JVM` 提供了指令集。这是经过编译的 Java 代码。`JVM` 的出现是因为它介于这些字节码和我们的物理机器之间。
 
 ## 平台
+
 我们使用“平台”一词是指程序运行的地方。它可以是你的机器，也可以是你完全开发的操作系统。当我们说一种语言是平台无关的，我们的意思是程序员的代码在不同平台之间不会变化。因此，一旦 Java 程序被编译，我们就会得到字节码。这种字节码格式对于每个平台（Windows/Linux/Solaris 等）都是相同的。因此，我们需要一个解释器来解释这些字节码并产生特定于机器的代码。现在 `JVM` 出现了。在 Java 中，这些字节码由适用于所有操作系统的 `JVM` 解释。所以，要将 Java 程序移植到新平台，我们需要移植 Java 解释器。
 
 因此，`JVM` 和 `字节码` 的组合使得 `Java` 具有可移植性。
@@ -48,9 +48,11 @@
 注意：底线是，`JVM`、`JRE` 和 `JDK` 这三者是依赖平台的（因为依赖于操作系统），但 `Java` 是平台无关的。
 
 ## IDE
+
 全称为 Integrated Development Environment（集成开发环境）。它们为软件开发提供了设施。通常，它们非常智能——为我们提供智能代码补全技术。它们还可以高亮/建议我们代码中各种可能的修复。一个 IDE 应该包含源代码编辑器、调试器和构建应用程序的自动化工具。IDE 通常包含编译器或解释器（或两者都有）。我们这里使用了 `eclipse`，它包含了这两者。
 
 # 安装
+
 我们需要两个主要东西。
 
 1. `JDK`
@@ -64,10 +66,6 @@
 或者
 
 下载 JDK，直接访问这里：
-
-
-
-
 
 [`www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html`](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
@@ -88,10 +86,15 @@
 # 命名规范
 
 - **类 (Class)**- 应该以大写字母开头，并且是一个名词，例如 `MyClass`、`String` 等。
+
 - **接口 (Interface/s)**- 应该以大写字母开头并是一个形容词，例如 `Runnable`、`Remote`。
+
 - **方法 (Method/s)**- 它们应该以小写字母开头并是一个动词，例如 `main()`、`showMyMethod()` 等。
+
 - **变量 (Variable/s)**- 应该以小写字母开头，例如 `myIntegerValue`、`myDoubleValue`、`myName` 等。
+
 - **包 (Package/s)**- 应该全部小写字母，例如 `mypackage`、`package1` 等。
+
 - **常量 (Constants)**- 它们应该是全大写字母，例如 `MY_CONSTANT` 等。
 
 除了少数特殊情况外，我们尝试在书中维持这些规范。
@@ -99,6 +102,7 @@
 # 简介
 
 ## 历史
+
 1991 年 6 月，James Gosling、Mike Sheridan 和 Patrick Naughton 启动了 Java 语言项目。Gosling 的办公室外有一棵橡树（Oak）。人们说这就是为什么该语言最初命名为 Oak。后来他们将项目重命名为 Green（他们的团队名称也是 Green team）。最后他们将其重命名为 Java。Green 项目由 Sun Microsystem 授权。
 
 团队成员希望有一个在本质上非常独特的名称，同时又能反映出未来技术的本质。因此，他们选择了如“Dynamic”、“Revolutionary”、“Silk”、“Jolt”、“DNA”等名称。
@@ -110,14 +114,21 @@ Java 于 2006 年 11 月 13 日开源。Sun 在 2007 年 5 月 8 日通过将所
 后来，Oracle 公司收购了 Sun Microsystem，收购过程于 2010 年 1 月 27 日完成。
 
 ## 首要目标
+
 这些特性是 Java 的主要关注领域：
+
 1. 简单、面向对象且熟悉。
+
 2. 健壮性和安全性。
+
 3. 架构中立且可移植。
+
 4. 高性能能力。
+
 5. 解释型、多线程和动态性。
 
 ## 我们的第一个程序
+
 现在让我们来看第一个程序。我们在这里打印 Hello World。
 
 ```java
@@ -131,23 +142,37 @@ public class HelloWorld {
 ```
 
 输出：
+
 ![](img/00002.jpeg)
 
 ## 分析
+
 1. 首先，在整个书中，我们将程序组织在包（package/s）中。但对于这个程序，这不是强制性的。一旦我们学习了关于包的章节，这一点对我们将很清楚。
+
 2. 这是 `main` 方法的基本结构。每个关键字的含义和意义你将逐渐明白。因此，目前你必须遵循这个结构。
+
 3. 我们的源代码文件名为 `HelloWorld.java`。我们需要为 Java 文件使用 `.java` 扩展。这是编译器的要求。
+
 4. Java 是区分大小大小的。
+
 5. `main`- 程序将从这里开始。
+
    - `public`- 访问修饰符。访问修饰符用于控制成员的可见性。
+
    - `static`- 它允许我们在不实例化类的特定实例的情况下调用 `main()`。我们稍后会分析 `static`。
+
    - `void`- 返回类型。
+
    - `String args[]`- `args` 是 `String` 类实例的数组。String 对象用于存储字符字符串。
+
    - `println`- 它用于显示信息。
+
    - `System.out`- 在此阶段很难解释。我们只需要知道 `System` 是一个类，而 `out` 是与控制台关联的输出流。
 
 ## 测验
+
 输出是什么？
+
 ```java
 class Hello {
     static void main(String args[]) {
@@ -155,12 +180,10 @@ class Hello {
     }
 }
 ```
+
 输出：
+
 ![](img/00002.jpeg)
-
-
-
-
 
 # 类演示-2
 
@@ -189,6 +212,7 @@ class ClassEx3
 ```
 
 输出：
+
 ![](img/00007.jpeg)
 
 ## 学生问：老师，这里的 `this` 有什么用？
@@ -242,6 +266,7 @@ class ClassEx3
 ```
 
 输出：
+
 ![](img/00008.jpeg)
 
 作业：创建一个类 `Vehicle`。该类应该包含字段 `no_of_seats` 和 `no_of_wheels`。为该类创建两个对象-`Motorcycle` 和 `Car`。你的输出应该显示 `Car` 的描述。
@@ -255,9 +280,13 @@ class ClassEx3
 通常，我们处理 4 种继承。
 
 ## 单继承继承
+
 一个子类派生自一个基类。
+
 ![](img/0009.jpeg) 图：单继承
+
 代码格式如下：
+
 ```java
 class Parent {
     // 你的代码...
@@ -268,9 +297,13 @@ class Child extends Parent {
 ```
 
 ## 层级继承
+
 多个子类可以派生自一个基类。
+
 ![](img/00010.jpeg) 图：层级继承
+
 代码格式如下：
+
 ```java
 class Parent {
     // 你的代码...
@@ -284,10 +317,15 @@ class Child2 extends Parent {
 ```
 
 ## 多级继承
+
 在这里，父类有孙类。
+
 ![](img/00011.jpeg) 图：多级继承
+
 老师问：现在尝试用 Java 代码实现这个概念。
+
 解答：代码格式如下：
+
 ```java
 class Parent {
     // 你的代码...
@@ -301,8 +339,11 @@ class GrandChild extends Child {
 ```
 
 ## 多继承
+
 在这里，一个类可以派生自多个父类。
+
 ![](img/00012.jpeg) 图：多继承
+
 注意，Java 不支持这种继承（通过类）。即在 Java 中，子类不能派生自多个一个父类。为了处理这种情况，我们需要理解接口。
 
 注意：还有一种类型的继承被称为混合继承。它是上述一种或多种类型继承的结合。
@@ -332,11 +373,13 @@ class Example1
 ```
 
 输出：
+
 ![](img/0013.jpeg)
 
 ## 学生问：为什么 Java 不支持类的多继承？
 
 主要原因是为了避免歧义。它们在某些典型场景下会引起混乱：
+
 假设我们的父类中有一个名为 `show()` 的方法。父类有多个孩子——假设 `child1` 和 `child2`，它们为了自己的目的重写了该方法。代码可能如下：
 
 ```java
@@ -359,11 +402,10 @@ class GrandChild extends Child1, Child2 {
     // 这在 Java 中是不可能的
 }
 ```
-现在假设我们的 `GrandChild` 继承/调用 `show()`——`Child1` 或 `Child2`。(images/0014.jpeg)这个问题以一个著名的名称——菱形问题（Diamond problem）。
 
 
 
-
+现在假设我们的`GrandChild`继承/调用`show()`——`Child1`或`Child2`。(images/0014.jpeg)这个问题以一个著名的名称——菱形问题（Diamond problem）。
 
 ```java
 System.out.println("I am in Parent constructor");
@@ -402,7 +444,7 @@ class Test2 {
 
 输出：![](img/00015.jpeg)
 
-我们将通过以下示例检查 `super` 的另一种用法。在这里我们将看到，即使父类的变量被子类的变量隐藏了，`super` 仍然允许我们访问父类的变量。
+我们将通过以下示例检查`super`的另一种用法。在这里我们将看到，即使父类的变量被子类的变量隐藏了，`super`仍然允许我们访问父类的变量。
 
 ```java
 package javaclassnotes.testprograms;
@@ -435,7 +477,7 @@ class Test3 {
 
 输出：![](img/00016.jpeg)
 
-注意：学生问：我们可以使用 `super` 关键字来调用被子类隐藏的方法吗？可以。
+注意：学生问：我们可以使用`super`关键字来调用被子类隐藏的方法吗？可以。
 
 # 重载 (Overloading)
 
@@ -453,13 +495,13 @@ String sum(String s1,String s2) {
 }
 ```
 
-学生回答：是的，老师。我们看到所有方法的名称都是 `sum`，但从方法体来看，每个方法都在做不同的事情。
+学生回答：是的，老师。我们看到所有方法的名称都是`sum`，但从方法体来看，每个方法都在做不同的事情。
 
 老师说：是的。当你这样做时，我们将其称为方法重载。但你应该注意到，这里的方法签名是不同的。
 
 学生问：什么是方法签名？
 
-方法签名由方法名和参数列表组成。Java 编译器可以区分同名但参数列表不同的方法。因此，对于 Java 编译器来说，`double sum(double x, double y)` 与 `int sum(int x, int y)` 是不同的。
+方法签名由方法名和参数列表组成。Java 编译器可以区分同名但参数列表不同的方法。因此，对于 Java 编译器来说，`double sum(double x, double y)`与`int sum(int x, int y)`是不同的。
 
 考虑下面的程序。在这里通过以下示例表示方法重载：
 
@@ -569,11 +611,11 @@ class A1 {
 }
 ```
 
-老师：当然。现在，主函数中的以下行 `A1 ob1=new A1(); ob1.A1(5);` 可以如下输出：![](img/00019.jpeg)
+老师：当然。现在，主函数中的以下行`A1 ob1=new A1(); ob1.A1(5);`可以如下输出：![](img/00019.jpeg)
 
 # 重写 (Overriding)
 
-有时我们想要重新定义或修改父类的行为。在这种情况下就出现了方法重写。考虑下面的程序。注意，这里 `showMe()` 方法在父类和子类中具有相同的签名。
+有时我们想要重新定义或修改父类的行为。在这种情况下就出现了方法重写。考虑下面的程序。注意，这里`showMe()`方法在父类和子类中具有相同的签名。
 
 ```java
 package javaclassnotes.programs;
@@ -598,10 +640,6 @@ class OverridingEx {
 ```
 
 输出：![](img/00020.jpeg)
-
-
-
-
 
 # 动态方法分派
 
@@ -639,16 +677,20 @@ class DynamicMethodDispatchEx
 ```
 
 输出:
+
 ![](img/00021.jpeg)
 
 ## 记忆点
+
 - 通过父类引用，我们可以引用子类对象，但反之则不可行。
-- 因此，`MyParentClass parent=new MyChildClass();` 是可以，但 `MyChildClass child=new MyParentClass();` 将抛出错误。
+
+- 因此，`MyParentClass parent=new MyChildClass();`是可以，但`MyChildClass child=new MyParentClass();`将抛出错误。
 
 ## 老师提问
+
 现在可能在某些情况下我们希望进行限制：父类中的方法不应被其子类重写。我们如何实现这一点？
 
-在很多面试中，你可能会遇到这个问题。我们必须记住，可以通过 `static`、`private` 或 `final` 关键字来防止重写。但在这里我们只讨论 `final` 的使用。这非常有帮助，因为编译器本身将阻止重写过程。
+在很多面试中，你可能会遇到这个问题。我们必须记住，可以通过`static`、`private`或`final`关键字来防止重写。但在这里我们只讨论`final`的使用。这非常有帮助，因为编译器本身将阻止重写过程。
 
 ```java
 class ParentClass
@@ -667,6 +709,7 @@ class ChildClass extends ParentClass
     }
 }
 ```
+
 所以，使用上述代码，编译器将抛出错误。
 
 # 抽象类
@@ -680,6 +723,7 @@ class ChildClass extends ParentClass
 一个简单的抽象类演示：
 
 ## 实现-1
+
 ```java
 package javaclassnotes.programs;
 
@@ -708,12 +752,17 @@ class AbstractClassEx
     }
 }
 ```
+
 输出:
+
 ![](img/00022.jpeg)
 
 抽象类可以包含具体的方法。子类可能会也可能重写这些方法。
 
 ## 实现-2
+
+
+
 ```java
 package javaclassnotes.programs;
 
@@ -754,15 +803,19 @@ class AbstractClassEx2
     }
 }
 ```
-输出:
+
+输出：
+
 ![](img/00023.jpeg)
 
-我们在这里可以实现动态分派的概念吗？可以。以下声明将完全没问题并调用 `ConcreteClass` 的 `CompleteMethod1`。`AbstractClass abstractRef=new ConcreteClass(); abstractRef.completeMethod1();`
+我们在这里可以实现动态分派的概念吗？可以。以下声明将完全没问题并调用`ConcreteClass`的`CompleteMethod1`。`AbstractClass abstractRef=new ConcreteClass(); abstractRef.completeMethod1();`
 
 ## 学生提问
+
 - 抽象类可以包含字段吗？可以。接下来的示例将演示我们如何在这里使用动态分派的概念。此外，程序将显示抽象类包含字段。
 
 ## 实现-3
+
 ```java
 package javaclassnotes.programs;
 
@@ -794,14 +847,19 @@ class AbstractClassEx3
     }
 }
 ```
-输出:
+
+输出：
+
 ![](img/00024.jpeg)
 
 - 假设一个类中有多个方法，其中只有一个是抽象方法。我们仍然需要将该类标记为抽象类吗？
-是的。如果一个类包含至少一个抽象方法，该类本身就是抽象类。你可以从通的角度来看——`abstract` 关键字被用来表示不完整性。因此，如果你的类包含一个不完整的方法，你的类本身就是不完整的，因此需要用 `abstract` 关键字标记。
+
+是的。如果一个类包含至少一个抽象方法，该类本身就是抽象类。你可以从通的角度来看——`abstract`关键字被用来表示不完整性。因此，如果你的类包含一个不完整的方法，你的类本身就是不完整的，因此需要用`abstract`关键字标记。
+
 所以，简单的公式是：只要你的类至少有一个抽象方法，你的类本身就是一个抽象类。
 
 ## 老师提问
+
 现在考虑一种相反的情况。假设你将你的类标记为抽象类，但它其中没有抽象方法，如下所示：
 
 ```java
@@ -812,10 +870,6 @@ abstract class AbstractClass
     }
 }
 ```
-
-
-
-
 
 ```java
     }
@@ -846,7 +900,7 @@ abstract class AbstractClass
 
 如果一个类继承了抽象类，它必须实现所有的抽象方法吗？
 
-它可能实现也可能未实现父类中所有的抽象方法。简单的公式是：如果你想创建一个类的对象，那么该类必须是完整的，即它不应该包含任何抽象方法。因此，如果子类不能提供所有抽象方法的实现（即方法体），它应该再次用 `abstract` 关键字标记，如下例所示。
+它可能实现也可能未实现父类中所有的抽象方法。简单的公式是：如果你想创建一个类的对象，那么该类必须是完整的，即它不应该包含任何抽象方法。因此，如果子类不能提供所有抽象方法的实现（即方法体），它应该再次用`abstract`关键字标记，如下例所示。
 
 ```java
 abstract class AbstractClass {
@@ -870,9 +924,9 @@ abstract class child1 extends AbstractClass {
 
 **学生提问：**
 
-我们可以对一个方法同时标记为 `abstract` 和 `final` 吗？
+我们可以对一个方法同时标记为`abstract`和`final`吗？
 
-不可以。想想一下，通过声明 `abstract`，你想要重写；而通过声明 `final`，你想要防止重写。
+不可以。想想一下，通过声明`abstract`，你想要重写；而通过声明`final`，你想要防止重写。
 
 **学生提问：**
 
@@ -912,6 +966,7 @@ public class InterfaceEx1 {
 ```
 
 输出：
+
 ![](img/00025.jpeg)
 
 ## 实现-2：
@@ -933,6 +988,7 @@ abstract class MyClass2 implements MyInterface2 {
     }
 }
 ```
+
 注意：所以公式是：类需要实现接口中定义的所有方法。否则，它将是一个抽象类。
 
 ## 实现-3：
@@ -972,6 +1028,7 @@ public class InterfaceEx3 {
 ```
 
 输出：
+
 ![](img/00026.jpeg)
 
 **学生提问：**
@@ -1013,7 +1070,9 @@ public class InterfaceEx4 {
     }
 }
 ```
+
 输出：
+
 ![](img/0027.jpeg)
 
 **学生提问：**
@@ -1065,6 +1124,7 @@ public class InterfaceEx5 {
 ```
 
 输出：
+
 ![](img/0028.jpeg)
 
 ## 标记/标记接口：
@@ -1082,21 +1142,20 @@ interface ITaggingInterface {
 你能告诉我吗：为什么我们需要标记接口？
 
 1. 我们可以创建一个公共父类。
-2. 类可以声明是某个集合的成员，例如，如果我们的类实现了 `Serializable` 接口，它就变成了可序列化的。因此，我们的类通过多态实际上变成了接口类型。即使是实现标记接口的类，不需要定义任何新方法，因为接口本身没有任何此类方法。
+
+2. 类可以声明是某个集合的成员，例如，如果我们的类实现了`Serializable`接口，它就变成了可序列化的。因此，我们的类通过多态实际上变成了接口类型。即使是实现标记接口的类，不需要定义任何新方法，因为接口本身没有任何此类方法。
 
 **老师提问：**
 
 你能告诉我吗：抽象类和接口之间的区别是什么？
 
-
-
-
-
 # 抽象类 vs 接口
 
-1. `abstract class`（抽象类）可以包含具体方法，但 `interface`（接口）不可以。[稍后我们会提到这一点。在 Java 8 中，我们有一个名为 `default` 的关键字。我们可以在 `interface` 中使用这个关键字来提供某些默认实现，参见下文的 `implementation-6`。
+1. `abstract class`（抽象类）可以包含具体方法，但`interface`（接口）不可以。[稍后我们会提到这一点。在 Java 8 中，我们有一个名为`default`的关键字。我们可以在`interface`中使用这个关键字来提供某些默认实现，参见下文的`implementation-6`。
 
-2. `abstract class` 只能有一个父类（可以继承另一个抽象类或具体类），而 `interface` 可以有多个父接口。`interface` 只能继承其他一个或多个接口。
+2. `abstract class`只能有一个父类（可以继承另一个抽象类或具体类），而`interface`可以有多个父接口。`interface`只能继承其他一个或多个接口。
+
+
 
 3. `interface` 的成员默认是 `public`。`abstract class` 可以有其他修饰符，例如 `private`、`protected` 等。
 
@@ -1105,6 +1164,7 @@ interface ITaggingInterface {
 ## 讨论
 
 学生提问：
+
 “老师，那么我们该如何决定应该使用抽象类还是接口呢？”
 
 问得好。我相信，如果我们希望拥有一些集中的或默认的行为，`abstract class` 是更好的选择。因为在这里我们可以提供一些默认实现（对于抽象类而言）。另一方面，`interface` 的实现是从零开始的。它们指示了某种规则——要做什么（例如，你必须实现该方法），但它们不会强制你如何去做。此外，当我们尝试实现多继承的概念时，接口是首选的。
@@ -1153,6 +1213,7 @@ public class UseOfDefaultEx
 ```
 
 输出：
+
 ![](img/00029.jpeg)
 
 ## 作业
@@ -1166,20 +1227,31 @@ public class UseOfDefaultEx
 我们可以将类/接口等封装在自己的包内部。包帮助我们避免命名冲突和/或控制可见性。我们可以这样控制包内部的可见性，使得我们的特定类可能可能暴露给外部（包括包内部和外部）。包以目录的形式体现。在 eclipse 中创建包非常简单。我们甚至不需要考虑 Java 运行时是如何找到内部适当的包或类的。否则，我们需要特别注意 `CLAS` 环境变量。
 
 我们必须记住以下几点：
+
 1. `package` 语句应该位于源文件的顶部。如果我们不显式定义它，那么所有类/接口等将位于当前的默认包中。
+
 2. 当一个类引用同一个包内的另一个类时，需要包含 `package` 语句。否则，我们需要使用全限定名 `<packagename>.<classname>` 或使用 `import` 语句。
+
 3. 可以导入整个包：`import <packagename>.*;`。或者如果我们只想从包导入某个特定的类，使用：`import <packagename>.<classname>`
+
 4. 包的名称必须遵循目录结构。
 
 ## 在 Eclipse 中创建包
+
 1. 点击 `File` -> `New` -> `Package` (images/0030.jpeg)
+
 2. 提供所需信息并点击 finish (images/0031.jpeg)
+
 3. 现在你会在包资源管理器视图中看到该包，例如所示（images/0032.jpeg）[注意：在这里包中，有一些我们之前创建的包和类]。
+
 4. 现在右键点击包名->`New`->`Class/Package` 等，将类/子包放入创建的包中。它可能有以下结构（images/0033.jpeg）[注意：在这里包中，有一些我们之前创建的类]。
 
 ## 实现
+
 现在让我们来看一个例子。考虑两家旅行公司——`a` 和 `b`。公司 `a` 经营果阿和喀拉拉的旅游。公司 `b` 经营果阿和安达曼旅游。任何游客都可以向他们咨询任何旅游套餐的信息。在这里涵盖了以下两种场景：
+
 1. 挑战性较低：只有公司 `a` 经营喀拉拉旅游，只有公司 `b` 经营安达曼旅游。
+
 2. 更具挑战性：注意，两家公司都提供果阿的旅游。我们需要通过 `GoaPackage` 类获取信息。[注意两个包都使用了相同的类名]
 
 Eclipse Package View (images/0034.gif)
@@ -1230,9 +1302,6 @@ public class AndamanPackage
     }
 }
 ```
-
-
-
 
 ```java
 System.out.println("For two person , Andaman tour package is Rs. "+ basic_price*2 );
@@ -1298,48 +1367,77 @@ public class PackageEx {
 ```
 
 Output:
+
 ![](img/00035.jpeg)
 
 Note:
+
 1. 记住在 Java 中，`java.lang` 包中的所有类都是默认导入的。
+
 2. 你必须记住下表所示的可见性控制机制：
 
 | | public | protected | private | Default/No modifier |
+
 | :--- | :--- | :--- | :--- | :--- |
+
 | 同一类 | Yes | Yes | Yes | Yes |
+
 | 同包中的子类 | Yes | Yes | No | Yes |
+
 | 同包中的非子类 | Yes | Yes | No | Yes |
+
 | 不同包中的子类 | Yes | Yes | No | No |
+
 | 不同包中的非子类 | Yes | No | No | No |
 
 # 复习 OOP 概念
 
 面向对象编程的核心特征如下：
+
 1. 类和对象 (Class and Object)
+
 2. 多态 (Polymorphism)
+
 3. 抽象 (Abstraction)
+
 4. 封装 (Encapsulation)
+
 5. 继承 (Inheritance)
+
 6. 消息传递 (Message passing)
+
 7. 动态绑定 (Dynamic binding)
 
 老师问：
+
 你能告诉我们在 Java 中是如何实现这些内容的吗？
+
 1. 类和对象——几乎在每个例子中，我们使用了类和对象。
+
 2. 多态——方法重载和方法重写。
+
 3. 抽象——抽象类和接口。
+
 4. 封装——每个类都可以是一个更有效的例子，例如一个具有私有成员以及 getter-setter 方法的类。
+
 5. 继承——继承的示例。
+
 6. 消息传递——主要在多线程环境中观察到。但动态分发也可以被归为此类。
+
 7. 动态绑定——通过动态分发中的示例（方法重写）来实现。
 
 学生问：
+
 多态有哪些不同类型？
+
 1. 编译时多态——调用哪个方法是由编译器解析的。因此，它也被称为早期绑定 (early binding)。由于调用在早期就解析了，通常速度更快。
+
 2. 运行时多态（或动态多态）——调用哪个方法将在运行时决定。这就是为什么它也被称为晚期绑定 (late binding)，与早期绑定相比，它较慢。
 
 学生问：
+
 Java 支持像 C/C++ 那样的指针吗？
+
 不支持。主要原因之一是我们可能会访问意图之外的数据，这是非常危险的。此外，如果我们支持指针，内存管理将变得繁琐，因为在很多情况下它们很容易出错。我们相信，只要我们处于 Java 执行环境中，就不会感觉到使用指针的需求。
 
 ## static 关键字的使用
@@ -1347,7 +1445,9 @@ Java 支持像 C/C++ 那样的指针吗？
 有时我们需要一种在不创建该类的任何对象的情况下就可以使用的变量。为了实现这个目的，我们用 `static` 标记成员。当成员被标有 `static` 关键字时，在 true 类的任何对象创建之前就可以访问该成员，即在此语文中我们不需要引用任何对象。
 
 考虑下面的示例：
+
 实现-1:
+
 ```java
 package javaclassnotes.programs;
 class StaticDemo1 {
@@ -1370,12 +1470,19 @@ public class StaticEx1 {
     }
 }
 ```
+
 输出:
+
 ![](img/00036.jpeg)
+
 分析：我们可以 `<classname>` 访问静态成员，即我们不需要创建对象。
 
 实现-2:
+
 让我们来看另一个例子。在这里我们将通过静态方法和静态块测试静态变量。
+
+
+
 ```java
 package javaclassnotes.programs;
 class StaticEx2 {
@@ -1411,15 +1518,14 @@ public class StaticEx {
     }
 }
 ```
-输出:
+
+输出：
+
 ![](img/00037.jpeg)
+
 分析：仔细观察输出。观察输出的顺序。你可以看到静态块中的语句在输出的最顶部。即使在执行静态块之前，静态变量已经初始化。随后静态块改变了值（当我们调用静态方法时，清楚地反映了这一点）。
 
 这是因为一旦静态类被加载，所有的静态语句都会执行。
-
-
-
-
 
 你应该注意到另一个重要的特征：静态方法只能访问静态成员。
 
@@ -1428,8 +1534,10 @@ public class StaticEx {
 ## 经验法则
 
 1. 静态方法只能调用其他静态方法。
+
 2. 静态方法只能访问静态字段。
-3. 静态方法不能引用 `this` 或 `super`。
+
+3. 静态方法不能引用`this`或`super`。
 
 ## 学生提问
 
@@ -1437,7 +1545,7 @@ public class StaticEx {
 
 可以。但有一个限制条件。静态类必须在另一个类的内部，即它必须是嵌套的。Java 不允许我们创建顶层静态类。
 
-包含静态类的类被称为 `outer class`（外部类）。
+包含静态类的类被称为`outer class`（外部类）。
 
 考虑下面的示例。在这里我们展示了如何创建和使用嵌套静态类以及嵌套非静态类（`Inner class` 内部类）。
 
@@ -1474,7 +1582,8 @@ class StaticClassEx {
 }
 ```
 
-输出:
+输出：
+
 ![](img/0038.jpeg)
 
 **什么是内部类？**
@@ -1497,18 +1606,23 @@ class OuterClass {
     }
 }
 ```
-但如果 `outer_int` 是非静态的，编译器将会报错。
+
+但如果`outer_int`是非静态的，编译器将会报错。
 
 ## 作业
 
 1. 假设你组建了一个板球球队。现在你的球队将与对手队进行比赛。你必须意识到一个事实：哪队先击球（或投球）将通过硬币决定决定，你需要派遣队长去参加。因此，首先，你必须选出一个队长。同时，你必须意识到你只能选择一个队长。所以，如果你还没有这样的队长，就选一个并派去掷硬币。否则，直接派已命名的队长去掷硬币。你能设计这个程序吗？
-2. 创建一个 `Vehicle`（车辆）。该类应该拥有 `no_of_seats`（座位）和 `no_of_wheels`（轮子）字段。
-3. 为该类创建两个对象 `Motorcycle`（摩托车）和 `Car`（汽车）。你的输出应该显示 `Car` 和 `Motorcycle` 的描述。
 
-Uml 类图:
+2. 创建一个`Vehicle`（车辆）。该类应该拥有`no_of_seats`（座位）和`no_of_wheels`（轮子）字段。
+
+3. 为该类创建两个对象`Motorcycle`（摩托车）和`Car`（汽车）。你的输出应该显示`Car`和`Motorcycle`的描述。
+
+Uml 类图：
+
 ![](img/0039.jpeg)
 
-实现:
+实现：
+
 不需要包含包声明。一旦你理解了包的概念，我们就会发现为我们的程序建立有组织的结构是非常方便的。
 
 ```java
@@ -1540,10 +1654,7 @@ class Assignment_1 {
 }
 ```
 
-
-
-
-注意输出。每当我们想要初始化子类对象时，父类的构造函数会先被调用。这就是为什么子类构造函数会先调用父类构造函数。同样，我们的 `GrandChild` 类构造函数会先调用它的父类（即 `Child` 类构造函数），而它又会先调用它的父类（即 `Parent` 类构造函数）。
+注意输出。每当我们想要初始化子类对象时，父类的构造函数会先被调用。这就是为什么子类构造函数会先调用父类构造函数。同样，我们的`GrandChild`类构造函数会先调用它的父类（即`Child`类构造函数），而它又会先调用它的父类（即`Parent`类构造函数）。
 
 ## static 关键字的使用
 
@@ -1615,42 +1726,75 @@ The captains are the same.
 ## FAQ
 
 1. 什么是类（class）？
+
 2. 什么是对象（object）？
+
 3. 引用（reference）的区别。
+
 4. 我们可以实现多重继承吗？
+
 5. 我们可以实现混合继承吗？
+
 6. 区分抽象类（abstract class）和接口（interface）。
+
 7. 区分方法重载（method overloading）和方法重写（method overriding）。
+
 8. 你如何实现动态多态/多态（dynamic polymorphism）？
-9. 什么是 `JVM`？
-10. 区分 `JRE` 和 `JDK`。
+
+9. 什么是`JVM`？
+
+10. 区分`JRE`和`JDK`。
+
 11. 什么是内部类（inner class）？
+
 12. 如何创建静态类（static class）？
+
 13. 你如何实现抽象（abstraction）和封装（encapsulation）？
+
 14. 区分静态绑定（static binding）和动态绑定（dynamic binding）。
-15. `super` 的作用是什么？
-16. `this` 的作用是什么？
-17. `default` 的作用是什么？
+
+15. `super`的作用是什么？
+
+16. `this`的作用是什么？
+
+17. `default`的作用是什么？
+
 18. 可以在没有抽象方法的情况下创建抽象类吗？
+
 19. 可以继承构造函数吗？
-20. `final` 的作用是什么？
+
+20. `final`的作用是什么？
+
 21. 区分实例方法（instance method）和类方法（class method/static method）？
+
 22. 你可以创建静态块（static block）吗？
+
 23. 默认包（default package）是什么？
+
 24. Java 支持指针（pointers）吗？
 
 ## 参考文献
 
 - http://www.javatpoint.com/
+
 - http://www.tutorialspoint.com/
+
 - http://beginnersbook.com/
+
 - https://docs.oracle.com/javase/tutorial
+
 - http://freefeast.info/difference-between/runtime-polymorphism-and-compile-time-polymorphism/
+
 - http://www.javabeat.net/what-is-the-difference-between-rejvm-and-jdk/
+
 - http://www.geeksforgeeks.org/static-class-in-java/
+
 - http://javarevisited.blogspot.in/2015/04/3-ways-to-prevent-method-overriding/
+
 - http://mindprod.com/jgloss/interfacevsabstract.
+
 - http://www.programmerinterview.com/index.php/java-questions/interface-vs-abstract-class/
+
 - http://www.javaworld.com/article/207721/learn-java/abstract-classes-vs-interfaces.
 
 ## 致谢
@@ -1659,5 +1803,4 @@ The captains are the same.
 
 # 关于作者
 
-Vaskaran Sarcar (ME (软件工程), MCA, B Sc. (数学)) 是 Hewlett India Software Operation Pvt. Ltd. 的高级软件工程师。他自 2009 年 8 月以来一直在 HP India PPS 研发部门工作。他同时也是书籍《Design Patterns in C#》、《Design Patterns in JAVA》、《Java Design Patterns（2015 年 12 月出版修订增强版）》、《《Operating System: Computer Science Interview Series》、《Easy manifestation and Sweetheart》、《You Can Also Manifest Your Goal》的作者。他在早年（2005-2007 年）在各工程学院教学。随后在 2007-2009 年获得了印度 MHRD-GATE 学金金。阅读和学习新事物是他的热情。你可以通过以下邮箱与他联系任何意见、建议或进一步改进：vaskaran@rediffmail.com。
-
+Vaskaran Sarcar (ME (软件工程), MCA, B Sc. (数学)) 是 Hewlett India Software Operation Pvt. Ltd. 的高级软件工程师。他自 2009 年 8 月以来一直在 HP India PPS 研发部门工作。他同时也是书籍《Design Patterns in C#》、《Design Patterns in JAVA》、《Java Design Patterns（2015 年 12 月出版修订增强版）》、《Operating System: Computer Science Interview Series》、《Easy manifestation and Sweetheart》、《You Can Also Manifest Your Goal》的作者。他在早年（2005-2007 年）在各工程学院教学。随后在 2007-2009 年获得了印度 MHRD-GATE 学金金。阅读和学习新事物是他的热情。你可以通过以下邮箱与他联系任何意见、建议或进一步改进：vaskaran@rediffmail.com。

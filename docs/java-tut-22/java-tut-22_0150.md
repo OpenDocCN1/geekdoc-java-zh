@@ -1,3 +1,4 @@
+
 # 捕获和处理异常
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/exceptions/handling.html`](https://docs.oracle.com/javase/tutorial/essential/exceptions/handling.html)
@@ -37,11 +38,10 @@ public class ListOfNumbers {
         out.close();
     }
 }
-
 ```
 
 粗体的第一行是对构造函数的调用。构造函数在文件上初始化一个输出流。如果文件无法打开，构造函数会抛出一个`IOException`异常。第二行粗体是对`ArrayList`类的`get`方法的调用，如果其参数的值太小（小于 0）或太大（大于`ArrayList`当前包含的元素数量），则会抛出`IndexOutOfBoundsException`异常。
 
-如果尝试编译``ListOfNumbers``类，编译器会打印有关`FileWriter`构造函数抛出的异常的错误消息。但是，它不会显示有关`get`方法抛出的异常的错误消息。原因是构造函数抛出的异常`IOException`是一个已检查异常，而`get`方法抛出的异常`IndexOutOfBoundsException`是一个未检查异常。
+如果尝试编译`ListOfNumbers`类，编译器会打印有关`FileWriter`构造函数抛出的异常的错误消息。但是，它不会显示有关`get`方法抛出的异常的错误消息。原因是构造函数抛出的异常`IOException`是一个已检查异常，而`get`方法抛出的异常`IndexOutOfBoundsException`是一个未检查异常。
 
 现在您熟悉了`ListOfNumbers`类以及其中可能抛出异常的位置，您可以编写异常处理程序来捕获和处理这些异常了。

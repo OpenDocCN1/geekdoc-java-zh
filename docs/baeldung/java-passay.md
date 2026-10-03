@@ -1,3 +1,4 @@
+
 # 帕萨伊指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-passay>
@@ -28,7 +29,7 @@
 
 ### 3.1.`PasswordData`
 
-为了验证我们的密码，我们应该使用`PasswordData.` **它是一个容器，用于存放验证所需的信息。**它可以存储如下数据:
+为了验证我们的密码，我们应该使用`PasswordData`。**它是一个容器，用于存放验证所需的信息。**它可以存储如下数据:
 
 *   密码
 *   用户名
@@ -111,7 +112,7 @@ Assert.assertTrue(password.length() == 10);
 Assert.assertTrue(containsOnlyCharactersFromSet(password, "0123456789"));
 ```
 
-要知道我们需要一个`CharacterData`的对象来创建`CharacterRule`。**另一个有趣的事实是，本库为我们提供了`EnglishCharacterData.`** 这是一个由五组字符组成的枚举:
+要知道我们需要一个`CharacterData`的对象来创建`CharacterRule`。**另一个有趣的事实是，本库为我们提供了`EnglishCharacterData`。**这是一个由五组字符组成的枚举:
 
 *   数字
 *   小写英文字母
@@ -154,7 +155,7 @@ Assert.assertTrue(containsOnlyCharactersFromSet(password, "[[email protected]](
 *   `AllowedRegexRule`–定义密码必须匹配的正则表达式
 *   `CharacterRule`–定义一个字符集和密码中应包含的最少字符数
 *   `LengthRule`–定义密码的最小长度
-*   `CharacterCharacteristicsRule`–检查密码是否满足定义规则的`N`。
+*   `CharacterCharacteristicsRule`–检查密码是否满足定义规则的`N`
 *   `LengthComplexityRule`–允许我们为不同的密码长度定义不同的规则
 
 ### 5.1.简单的正匹配规则
@@ -190,7 +191,7 @@ assertEquals(
 
 ### 5.2.`CharacterCharacterisitcsRule`
 
-`CharcterCharacterisitcsRule`比以前提出的规则更复杂。**要创建一个`CharcterCharacterisitcsRule`对象，我们需要提供一个`CharacterRule`s.``** 的列表，更重要的是，我们还要设置其中有多少个对象的密码必须匹配。我们可以这样做:
+`CharcterCharacterisitcsRule`比以前提出的规则更复杂。**要创建一个`CharcterCharacterisitcsRule`对象，我们需要提供一个`CharacterRule`的列表。**更重要的是，我们还要设置其中有多少个对象的密码必须匹配。我们可以这样做:
 
 ```java
 CharacterCharacteristicsRule characterCharacteristicsRule = new CharacterCharacteristicsRule(
@@ -280,15 +281,17 @@ DictionaryRule dictionaryRule = new DictionaryRule(wordListDictionary);
 DictionarySubstringRule dictionarySubstringRule = new DictionarySubstringRule(wordListDictionary);
 ```
 
+
+
 我们可以看到字典规则使我们能够提供一个禁用单词的列表。当我们有一个最常见或最容易破解密码的列表时，这是非常有益的。因此，禁止用户使用它们是合理的。
 
 在现实生活中，我们肯定会从文本文件或数据库中加载单词列表。那样的话，我们可以用`WordLists`。它有三个重载方法，接受一个数组`Reader`并创建`ArrayWordList`。
 
-### 6.3.`HistoryRule`和`SourceRule`
+## 6.3.`HistoryRule`和`SourceRule`
 
 此外，`Passay`库给了我们`HistoryRule`和`SourceRule`。他们可以根据不同来源的历史密码或文本内容来验证密码。
 
-让我们来看看这个例子:
+让我们来看看这个例子：
 
 ```java
 SourceRule sourceRule = new SourceRule();
@@ -306,15 +309,15 @@ PasswordValidator passwordValidator = new PasswordValidator(
 
 帮助我们检查密码以前是否被使用过。因为这样的做法是不安全的，我们不希望用户使用旧密码。
 
-另一方面，`SourceRule` 允许我们检查密码是否与`SourceReferences`中提供的不同。我们可以避免在不同系统或应用程序中使用相同密码的风险。
+另一方面，`SourceRule`允许我们检查密码是否与`SourceReferences`中提供的不同。我们可以避免在不同系统或应用程序中使用相同密码的风险。
 
-值得一提的是，还有像`DigestSourceRule`和`DigestHistoryRule.`这样的规则，我们将在下一段中介绍它们。
+值得一提的是，还有像`DigestSourceRule`和`DigestHistoryRule`这样的规则，我们将在下一段中介绍它们。
 
-### 6.4.摘要规则
+## 6.4.摘要规则
 
-在`Passay`库中有两个摘要规则:`DigestHistoryRule`和`DigestSourceRule`。**摘要规则适用于以摘要或哈希形式存储的密码。**因此，为了定义它们，我们需要提供一个`EncodingHashBean`对象。
+在`Passay`库中有两个摘要规则：`DigestHistoryRule`和`DigestSourceRule`。摘要规则适用于以摘要或哈希形式存储的密码。因此，为了定义它们，我们需要提供一个`EncodingHashBean`对象。
 
-让我们看看它是如何做到的:
+让我们看看它是如何做到的：
 
 ```java
 List<PasswordData.Reference> historicalReferences = Arrays.asList(
@@ -335,7 +338,7 @@ EncodingHashBean encodingHashBean = new EncodingHashBean(
 
 此外，我们可以指定迭代次数以及算法是否加盐。
 
-一旦我们有了编码 bean，我们就可以验证我们的摘要密码:
+一旦我们有了编码 bean，我们就可以验证我们的摘要密码：
 
 ```java
 PasswordData passwordData = new PasswordData("example!");
@@ -348,13 +351,13 @@ RuleResult validate = passwordValidator.validate(passwordData);
 Assert.assertTrue(validate.isValid());
 ```
 
-我们可以在[洞穴图书馆网页](https://web.archive.org/web/20221129003433/http://www.cryptacular.org/about.html)了解更多关于`EncodingHashinBean`的信息。
+我们可以在[洞穴图书馆网页](https://web.archive.org/web/20221129003433/http://www.cryptacular.org/about.html)了解更多关于`EncodingHashBean`的信息。
 
-### 6.5.`RepeatCharacterRegexRule`
+## 6.5.`RepeatCharacterRegexRule`
 
-另一个有趣的验证规则是`RepeatCharacterRegexRule`。**我们可以用它来检查密码是否包含重复的`ASCII`字符。**
+另一个有趣的验证规则是`RepeatCharacterRegexRule`。我们可以用它来检查密码是否包含重复的`ASCII`字符。
 
-下面是一个示例代码:
+下面是一个示例代码：
 
 ```java
 PasswordValidator passwordValidator = new PasswordValidator(new RepeatCharacterRegexRule(3));
@@ -365,11 +368,11 @@ assertFalse(validate.isValid());
 assertEquals("ILLEGAL_MATCH:{match=aaa, pattern=([^\\x00-\\x1F])\\1{2}}", getDetail(validate, 0));
 ```
 
-### 6.6.`UsernameRule`
+## 6.6.`UsernameRule`
 
-本章我们要讨论的最后一个规则是`UsernameRule`。**它使我们能够禁止在密码中使用用户名。**
+本章我们要讨论的最后一个规则是`UsernameRule`。它使我们能够禁止在密码中使用用户名。
 
-正如我们之前所学的，我们应该将用户名存储在`PasswordData`中:
+正如我们之前所学的，我们应该将用户名存储在`PasswordData`中：
 
 ```java
 PasswordValidator passwordValidator = new PasswordValidator(new UsernameRule());
@@ -385,9 +388,9 @@ assertEquals("ILLEGAL_USERNAME:{username=testuser, matchBehavior=contains}", get
 
 ## 7.定制消息
 
-`Passay`库使我们能够定制验证规则返回的消息。**首先，我们应该定义消息，并将它们分配给错误代码。**
+`Passay`库使我们能够定制验证规则返回的消息。首先，我们应该定义消息，并将它们分配给错误代码。
 
-我们可以把它们放入一个简单的文件中。让我们看看有多简单:
+我们可以把它们放入一个简单的文件中。让我们看看有多简单：
 
 ```java
 TOO_LONG=Password must not have more characters than %2$s.
@@ -396,7 +399,7 @@ TOO_SHORT=Password must not contain less characters than %2$s.
 
 一旦我们有消息，我们必须加载该文件。最后，我们可以将它传递给`PasswordValidator`对象。
 
-下面是一个示例代码:
+下面是一个示例代码：
 
 ```java
 URL resource = this.getClass().getClassLoader().getResource("messages.properties");
@@ -408,7 +411,7 @@ MessageResolver resolver = new PropertiesMessageResolver(props);
 
 正如我们所看到的，我们已经加载了`message.properties`文件并将其传递给了`Properties`对象。然后，我们可以使用`Properties`对象来创建`PropertiesMessageResolver`。
 
-让我们看一下如何使用消息解析器的例子:
+让我们看一下如何使用消息解析器的例子：
 
 ```java
 PasswordValidator validator = new PasswordValidator(
@@ -434,6 +437,6 @@ Assert.assertEquals(
 
 在本教程中，我们学习了如何使用`Passay`库。我们已经分析了几个例子，说明了这个库如何能够很容易地用于密码验证。提供的规则涵盖了确保密码安全的大多数常见方式。
 
-但是我们应该记住，Passay 库本身并不能保证我们的密码安全。首先，我们应该了解什么是通用规则，然后使用库来实现它们。
+但是我们应该记住，`Passay`库本身并不能保证我们的密码安全。首先，我们应该了解什么是通用规则，然后使用库来实现它们。
 
 所有的例子都可以在 GitHub 上找到[。](https://web.archive.org/web/20221129003433/https://github.com/eugenp/tutorials/tree/master/libraries-security)

@@ -1,16 +1,17 @@
-# RxJava 一个可观察的多订户
+
+# RxJava：一个可观察的多订户
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/rxjava-multiple-subscribers-observable>
 
-## 1.概观
+## 1. 概观
 
-多个订阅者的默认行为并不总是令人满意的。在本文中，我们将介绍如何改变这种行为，并以适当的方式处理多个订阅者。
+多个订阅者的默认行为并不总是令人满意。在本文中，我们将介绍如何改变这种行为，并以适当的方式处理多个订阅者。
 
 但是首先，让我们看看多个订户的默认行为。
 
-## 2.默认行为
+## 2. 默认行为
 
-假设我们有以下的`Observable`:
+假设我们有以下的 `Observable`：
 
 ```java
 private static Observable getObservable() {
@@ -25,9 +26,9 @@ private static Observable getObservable() {
 }
 ```
 
-一旦`Subscriber` s 订阅，就会发出两个元素。
+一旦 `Subscriber` 订阅，就会发出两个元素。
 
-在我们的示例中，我们有两个`Subscriber`:
+在我们的示例中，我们有两个 `Subscriber`：
 
 ```java
 LOGGER.info("Subscribing");
@@ -41,7 +42,7 @@ s2.unsubscribe();
 
 想象一下，获取每个元素是一项代价高昂的操作——例如，它可能包括密集的计算或打开 URL 连接。
 
-为了简单起见，我们只返回一个数字:
+为了简单起见，我们只返回一个数字：
 
 ```java
 private static Integer gettingValue(int i) {
@@ -50,9 +51,9 @@ private static Integer gettingValue(int i) {
 }
 ```
 
-以下是输出:
+以下是输出：
 
-```java
+```text
 Subscribing
 Getting 1
 subscriber#1 is printing 1
@@ -66,17 +67,17 @@ Clear resources
 Clear resources
 ```
 
-正如我们所见，**获取每个元素以及清除资源默认执行两次**——每个`Subscriber`一次。这不是我们想要的。`ConnectableObservable`类有助于解决这个问题。
+正如我们所见，获取每个元素以及清除资源默认执行两次——每个 `Subscriber` 一次。这不是我们想要的。`ConnectableObservable` 类有助于解决这个问题。
 
-## 3.`ConnectableObservable`
+## 3. `ConnectableObservable`
 
 [`ConnectableObservable`](https://web.archive.org/web/20221205210906/http://reactivex.io/RxJava/javadoc/rx/observables/ConnectableObservable.html) 类允许与多个订阅者共享订阅，并且不需要多次执行底层操作。
 
-但首先，让我们创建一个`ConnectableObservable`。
+但首先，让我们创建一个 `ConnectableObservable`。
 
-### 3.1.`publish()`
+### 3.1. `publish()`
 
-`publish()`方法就是从一个`Observable`创建一个`ConnectableObservable`的东西:
+`publish()` 方法就是从一个 `Observable` 创建一个 `ConnectableObservable` 的东西：
 
 ```java
 ConnectableObservable obs = Observable.create(subscriber -> {
@@ -88,13 +89,13 @@ ConnectableObservable obs = Observable.create(subscriber -> {
 }).publish();
 ```
 
-但是现在，它什么也做不了。让它起作用的是`connect()`方法。
+但是现在，它什么也做不了。让它起作用的是 `connect()` 方法。
 
-### 3.2.`connect()`
+### 3.2. `connect()`
 
-**直到`ConnectableObservable`的`connect()`方法没有被调用`Observable`的`onSubcribe()`回调没有被触发**，即使有一些订阅者。
+直到 `ConnectableObservable` 的 `connect()` 方法没有被调用，`Observable` 的 `onSubcribe()` 回调没有被触发，即使有一些订阅者。
 
-让我们来演示一下:
+让我们来演示一下：
 
 ```java
 LOGGER.info("Subscribing");
@@ -106,9 +107,9 @@ Subscription s = obs.connect();
 s.unsubscribe();
 ```
 
-我们订阅，然后在连接前等待一秒钟。输出是:
+我们订阅，然后在连接前等待一秒钟。输出是：
 
-```java
+```text
 Subscribing
 Connecting
 Getting 1
@@ -120,25 +121,25 @@ subscriber #2 is printing 2
 Clear resources
 ```
 
-我们可以看到:
+我们可以看到：
 
 这种延迟是有益的——有时我们需要给所有的订阅者相同的元素序列，即使其中一个比另一个订阅得早。
 
-### 3.3.可观测量的一致视图-`subscribe()`之后的`connect()`
+### 3.3. 可观测量的一致视图：`subscribe()` 之后的 `connect()`
 
-这个用例无法在我们之前的`Observable`上演示，因为它运行起来很冷，而且两个订阅者都获得了整个元素序列。
+这个用例无法在我们之前的 `Observable` 上演示，因为它运行起来很冷，而且两个订阅者都获得了整个元素序列。
 
-相反，设想一个元素的发出不依赖于订阅的时刻，例如鼠标点击时发出的事件。现在还假设第二个`Subscriber`在第一个订阅之后订阅了第二个。
+相反，设想一个元素的发出不依赖于订阅的时刻，例如鼠标点击时发出的事件。现在还假设第二个 `Subscriber` 在第一个订阅之后订阅了第二个。
 
-在这个例子中，第一个`Subscriber`将获得所有发出的元素，而第二个`Subscriber`将只接收一些元素。
+在这个例子中，第一个 `Subscriber` 将获得所有发出的元素，而第二个 `Subscriber` 将只接收一些元素。
 
-另一方面，在正确的地方使用`connect()`方法可以让两个订阅者对`Observable`序列有相同的看法。
+另一方面，在正确的地方使用 `connect()` 方法可以让两个订阅者对 `Observable` 序列有相同的看法。
 
-**热点的例子`Observable`**
+#### 热点的例子：`Observable`
 
-让我们创造一个热点`Observable`。它将在鼠标点击`JFrame`时发射元素。
+让我们创造一个热点 `Observable`。它将在鼠标点击 `JFrame` 时发射元素。
 
-每个元素都将是单击的 x 坐标:
+每个元素都将是单击的 x 坐标：
 
 ```java
 private static Observable getObservable() {
@@ -149,7 +150,7 @@ private static Observable getObservable() {
                 subscriber.onNext(e.getX());
             }
         });
-        subscriber.add(Subscriptions.create(() {
+        subscriber.add(Subscriptions.create(() -> {
             LOGGER.info("Clear resources");
             for (MouseListener listener : frame.getListeners(MouseListener.class)) {
                 frame.removeMouseListener(listener);
@@ -159,9 +160,9 @@ private static Observable getObservable() {
 } 
 ```
 
-**热门的默认行为`Observable`**
+#### 热门的默认行为：`Observable`
 
-现在，如果我们以第二个间隔一个接一个地订阅两个`Subscriber`，运行程序并开始单击，我们将看到第一个`Subscriber`将获得更多元素:
+现在，如果我们以第二个间隔一个接一个地订阅两个 `Subscriber`，运行程序并开始单击，我们将看到第一个 `Subscriber` 将获得更多元素：
 
 ```java
 public static void defaultBehaviour() throws InterruptedException {
@@ -183,7 +184,7 @@ public static void defaultBehaviour() throws InterruptedException {
 }
 ```
 
-```java
+```text
 subscribing #1
 subscriber#1 is printing x-coordinate 280
 subscriber#1 is printing x-coordinate 242
@@ -196,9 +197,9 @@ unsubscribe#2
 clearing resources
 ```
 
-**`connect()`后`subscribe()`**
+#### `connect()` 后 `subscribe()`
 
-为了使两个订阅者得到相同的序列，我们将把这个`Observable`转换成`ConnectableObservable`，并在订阅后调用`connect()`两个`Subscriber`:
+为了使两个订阅者得到相同的序列，我们将把这个 `Observable` 转换成 `ConnectableObservable`，并在订阅后调用 `connect()` 两个 `Subscriber`：
 
 ```java
 public static void subscribeBeforeConnect() throws InterruptedException {
@@ -221,9 +222,9 @@ public static void subscribeBeforeConnect() throws InterruptedException {
 }
 ```
 
-现在他们会得到相同的序列:
+现在他们会得到相同的序列：
 
-```java
+```text
 subscribing #1
 subscribing #2
 connecting:
@@ -237,13 +238,13 @@ clearing resources
 
 因此，关键是等待所有订户都准备好的那一刻，然后调用 `connect()`。
 
-例如，在 Spring 应用程序中，我们可以在应用程序启动时订阅所有组件，并在`onApplicationEvent()`中调用`connect()`。
+例如，在 Spring 应用程序中，我们可以在应用程序启动时订阅所有组件，并在 `onApplicationEvent()` 中调用 `connect()`。
 
-但是让我们回到我们的例子；请注意，`connect()`方法之前的所有点击都会被忽略。如果我们不想错过元素，而是相反地处理它们，我们可以将`connect()`放在代码的前面，并迫使`Observable`在没有任何`Subscriber`的情况下产生事件。
+但是让我们回到我们的例子；请注意，`connect()` 方法之前的所有点击都会被忽略。如果我们不想错过元素，而是相反地处理它们，我们可以将 `connect()` 放在代码的前面，并迫使 `Observable` 在没有任何 `Subscriber` 的情况下产生事件。
 
-### 3.4.在`subscribe()`之前没有`Subscriber`–`connect()`的情况下强制订阅
+### 3.4. 在 `subscribe()` 之前没有 `Subscriber`：在 `connect()` 的情况下强制订阅
 
-为了证明这一点，让我们纠正我们的例子:
+为了证明这一点，让我们纠正我们的例子：
 
 ```java
 public static void connectBeforeSubscribe() throws InterruptedException {
@@ -262,17 +263,17 @@ public static void connectBeforeSubscribe() throws InterruptedException {
 }
 ```
 
-步骤相对简单:
+步骤相对简单：
 
-*   首先，我们连接
-*   然后我们等待一秒钟，订阅第一个`Subscriber`
-*   最后，我们再等一秒，订阅第二个`Subscriber`
+- 首先，我们连接。
+- 然后我们等待一秒钟，订阅第一个 `Subscriber`。
+- 最后，我们再等一秒，订阅第二个 `Subscriber`。
 
-注意，我们已经添加了`doOnNext()`操作符。在这里，我们可以在数据库中存储元素，但在我们的代码中，我们只打印“保存…”。
+注意，我们已经添加了 `doOnNext()` 操作符。在这里，我们可以在数据库中存储元素，但在我们的代码中，我们只打印“保存…”。
 
-如果我们启动代码并开始单击，我们将看到元素在`connect()`调用后立即被发出并处理:
+如果我们启动代码并开始单击，我们将看到元素在 `connect()` 调用后立即被发出并处理：
 
-```java
+```text
 connecting:
 saving 306
 saving 248
@@ -292,27 +293,29 @@ clearing resources
 
 如果没有订阅者，元素仍然会被处理。
 
-**因此`connect()`方法开始发出和处理元素，而不管是否有人订阅**，就好像有一个具有空动作的人工`Subscriber`消耗了元素。
+因此 `connect()` 方法开始发出和处理元素，而不管是否有人订阅，就好像有一个具有空动作的人工 `Subscriber` 消耗了元素。
 
-如果一些真实的`Subscriber`订阅了，这个人工的中介只是向它们传播元素。
+如果一些真实的 `Subscriber` 订阅了，这个人工的中介只是向它们传播元素。
 
-要取消订阅人工`Subscriber`我们执行:
+要取消订阅人工 `Subscriber`，我们执行：
 
 ```java
 s.unsubscribe();
 ```
 
-其中:
+其中：
 
 ```java
 Subscription s = obs.connect();
 ```
 
-### 3.5.`autoConnect()`
+### 3.5. `autoConnect()`
 
-**这个方法意味着 `connect()`不是在订阅之前或之后调用，而是在第一个`Subscriber`订阅**时自动调用。
+这个方法意味着 `connect()` 不是在订阅之前或之后调用，而是在第一个 `Subscriber` 订阅时自动调用。
 
-使用这个方法，我们不能自己调用`connect()`，因为返回的对象是一个普通的`Observable`，它没有这个方法，但是使用了一个底层的`ConnectableObservable`:
+使用这个方法，我们不能自己调用 `connect()`，因为返回的对象是一个普通的 `Observable`，它没有这个方法，但是使用了一个底层的 `ConnectableObservable`：
+
+
 
 ```java
 public static void autoConnectAndSubscribe() throws InterruptedException {

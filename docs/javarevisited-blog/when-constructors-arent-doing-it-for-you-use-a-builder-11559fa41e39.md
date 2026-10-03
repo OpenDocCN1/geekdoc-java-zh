@@ -1,3 +1,4 @@
+
 # 当构造函数不为你做的时候，使用构造函数
 
 > 原文：<https://medium.com/javarevisited/when-constructors-arent-doing-it-for-you-use-a-builder-11559fa41e39?source=collection_archive---------1----------------------->
@@ -18,7 +19,7 @@
 
 假设我们想要模拟一个**纳税申报表**。想想我们在这里可以有多少个字段。最直接的方法是创建一个构造函数，见下面的例子。
 
-不使用构建器的 IncomeTaxReturn.java。
+不使用构建器的`IncomeTaxReturn.java`。
 
 所以这里我们有一个长构造函数，当实例化时，很难阅读和理解哪个参数对应什么值。如果我们以后想要添加一个新的字段，这也是有问题的。或者我们想模拟不同的组合。
 
@@ -40,13 +41,16 @@
 
 为了简洁起见，我删除了一些字段，但请记住，我们在这里解决的问题如上所述。
 
-使用生成器模式的 IncomeTaxReturn.java。
+使用生成器模式的`IncomeTaxReturn.java`。
 
 关于这个例子，你能注意到什么？
 
 *   纳税申报表只有最终字段，其中的可选值已在构建器中指定。
+
 *   创建任何类型的复杂报税组合都非常容易。
+
 *   我们还可以在不影响当前用户的情况下添加新的字段。
+
 *   由于有一个私有构造函数，不使用构建器就无法创建纳税申报单。
 
 这也使得代码易于阅读，因为所有的特殊字段现在都有了名称。
@@ -78,4 +82,5 @@
 **参考文献**
 
 [1]有效 Java 作者约书亚·布洛赫
+
 [https://www . oreilly . com/library/view/Effective-Java/9780134686097/](https://www.oreilly.com/library/view/effective-java/9780134686097/)

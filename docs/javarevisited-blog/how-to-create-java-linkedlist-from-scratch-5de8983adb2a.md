@@ -1,3 +1,4 @@
+
 # 如何从头开始创建 Java LinkedList
 
 > 原文：<https://medium.com/javarevisited/how-to-create-java-linkedlist-from-scratch-5de8983adb2a?source=collection_archive---------1----------------------->

@@ -1,10 +1,8 @@
+
 # JAVA 编程练习：零基础学者基础指南
 
-
-
-
-
 ## JAVA 练习册
+
 - [计算复利的 Java 程序]
 - [寻找最大数的 Java 程序]
 - [寻找所有数字之和的 Java 程序]
@@ -28,9 +26,11 @@
 - [逐行读取文件的 Java 程序]
 
 ## 计算复利的 Java 程序
+
 给定本金、利率时间和，使用 Java 程序我们需要找到复利。
 
 示例：
+
 ```
 Enter Principal : 5000
 Enter Rate : 5
@@ -40,6 +40,7 @@ Compound Interest : 788.1250000000009
 ```
 
 程序
+
 ```java
 import java.util.Scanner;
 
@@ -68,7 +69,9 @@ public class CompoundInterest {
 ```
 
 输出
+
 第一次运行：
+
 ```
 Enter Principal : 5000
 Enter Rate : 5
@@ -76,7 +79,9 @@ Enter Time : 3
 Amount : 5788.125000000001
 Compound Interest : 788.1250000000009
 ```
+
 第二次运行：
+
 ```
 Enter Principal : 10000
 Enter Rate : 20
@@ -86,9 +91,11 @@ Compound Interest : 14883.199999999997
 ```
 
 ## 寻找最大数的 Java 程序
+
 该程序从键盘（三个整数）读取，并选择最大的数。
 
 程序
+
 ```java
 // 在三个数中寻找最大数的 Java 程序。
 import java.util.*;
@@ -113,9 +120,13 @@ class LargestFrom3 {
     }
 }
 ```
+
 输出
+
 编译：`javac LargestFrom3.java`
+
 运行：`java LargestFrom3`
+
 ```
 Enter first number:45
 Enter second number:56
@@ -124,20 +135,25 @@ Largest Number is : 67
 ```
 
 ## 寻找所有数字之和的 Java 程序
+
 给定一个数字，我们需要使用 Java 程序找到所有数字之和。
 
 示例 1：
+
 ```
 Input: 852
 Output: Sum of all digits: 15
 ```
+
 示例 2：
+
 ```
 Input: 256868
 Output: Sum of all digits: 35
 ```
 
 程序
+
 ```java
 import java.util.Scanner;
 public class AddDigits {
@@ -159,21 +175,22 @@ public class AddDigits {
     }
 }
 ```
+
 输出
+
 第一次运行：
+
 ```
 Enter the Number : 852
 Sum of all digits of 852 is : 15
 ```
+
 第二次运行：
+
 ```
 Enter the Number : 256868
 Sum of all digits of 256868 is : 35
 ```
-
-
-
-
 
 ## 练习 1：数字之和
 
@@ -182,6 +199,7 @@ Sum of all digits of 256868 is : 35
 ![](img/image00066.jpeg)
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -204,6 +222,7 @@ public class Main {
 ```
 
 ### 输出
+
 ```
 Input an integer between 0 and 1000: 565
 The sum of all digits in 565 is 16
@@ -218,6 +237,7 @@ Java 数据类型练习：英寸到米
 编写一个 Java 程序，接收一个英寸值并将其转换为米。
 
 ### 英寸转米
+
 - 1 英寸 = 0.025400 米
 - 2 英寸 = 0.050800 米
 - 3 英寸 = 0.076200 米
@@ -226,6 +246,7 @@ Java 数据类型练习：英寸到米
 - 6 英寸 = 0.152400 米
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -241,6 +262,7 @@ public class Exercise2 {
 ```
 
 ### 输出
+
 ```
 Input a value for inch: 1000
 1000.0 inch is 25.4 meters
@@ -257,6 +279,7 @@ Input a value for inch: 1000
 ![](img/image00067.jpeg)
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -274,6 +297,7 @@ public class Exercise4 {
 ```
 
 ### 输出
+
 ```
 Input the number of minutes: 345789
 345689 minutes is approximately 6 years and 210 days
@@ -288,6 +312,7 @@ Java 条件语句：检查数字是负数、零还是正数.
 ![](img/image0068.jpeg)
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -308,6 +333,7 @@ public class Exercise27 {
 ```
 
 ### 输出
+
 ```
 Input a number: 7
 Number is positive
@@ -322,6 +348,7 @@ Number is positive
 创建一个 Java 程序，读取一个数字并显示该数字的平方、立方和四次方。
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -338,6 +365,7 @@ public class Exercise8 {
 ```
 
 ### 输出
+
 ```
 Input the side length value: 15
 Square:       225.00
@@ -354,6 +382,7 @@ Fourth power: 50625.00
 ![](img/image0069.jpeg)
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -374,6 +403,7 @@ public class Exercise12 {
 ```
 
 ### 输出
+
 ```
 Input 5 numbers:
 1
@@ -393,6 +423,9 @@ The sum of 5 no is 15 Average is : 3.0
 ![](img/image0070.jpeg)
 
 ### JAVA 代码
+
+
+
 ```java
 import java.util.Scanner;
 
@@ -422,6 +455,7 @@ public class Exercise5 {
 ```
 
 ### 输出
+
 ```
 Input number: 3
 Wednesday
@@ -436,6 +470,7 @@ Wednesday
 ![](img/image0071.jpeg)
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 
@@ -456,6 +491,7 @@ public class Exercise11 {
 ```
 
 ### 输出
+
 ```
 Input number: 7
 The first n natural numbers are : 7
@@ -469,15 +505,12 @@ The first n natural numbers are : 7
 The Sum of Natural Number upto 7 terms : 28
 ```
 
-
-
-
-
 ## 计算前 n 项自然数的和：28
 
 使用 while 循环打印从 1 到 `N` 的数字
 
 ### 程序
+
 ```java
 import java.util.Scanner;
 
@@ -504,6 +537,7 @@ public class Print_1_To_N_UsingWhile
 ```
 
 ### 输出
+
 ```
 Enter the value n : 15
 Numbers are :
@@ -531,6 +565,7 @@ Numbers are :
 给定一个整数（十进制）数字，我们需要使用 Java 程序将其转换为二进制。
 
 ### 程序
+
 ```java
 // Scanner 类用于用于从用户处获取输入
 import java.util.Scanner;
@@ -555,6 +590,7 @@ class DecimalToBinaryConversionClass{
 ```
 
 ### 输出
+
 ```
 Enter Any Decimal Number :
 30
@@ -568,6 +604,7 @@ Conversion of decimal to binary is : 11110
 共有 2 个程序：两个一维数组的加法，两个二维数组的加法。
 
 ### 1) Java 中两个一维数组的加法
+
 ```java
 class AddTwoArrayClass{
     public static void main(String[] args){
@@ -585,7 +622,9 @@ class AddTwoArrayClass{
     }
 }
 ```
+
 ### 输出
+
 ```
 Enter sum of 0index 7
 Enter sum of 1index 9
@@ -595,6 +634,7 @@ Enter sum of 4index 15
 ```
 
 ### 2) Java 中两个二维数组的加法
+
 ```java
 class AddTwoArrayOf2DClass{
     public static void main(String[] args){
@@ -613,7 +653,9 @@ class AddTwoArrayOf2DClass{
     }
 }
 ```
+
 ### 输出
+
 ```
 Enter sum of 0 0index 8
 Enter sum of 0 1index 10
@@ -628,7 +670,9 @@ Enter sum of 1 2index 18
 ## 逐行读取文件的 Java 程序
 
 给定一个文件，我们需要使用 Java 程序逐行读取其内容。
+
 为此程序使用的名为 `B.txt` 的文件位于 `F:\` 盘，因此文件路径为 `F:\B.txt`，文件内容为：
+
 ```
 This is line 1
 This is line 2
@@ -637,6 +681,7 @@ This is line 4
 ```
 
 ### 程序
+
 ```java
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -673,6 +718,7 @@ public class ReadLineByLine
 ```
 
 ### 输出
+
 ```
 Enter the file name: F:/B.txt
 This is line 1
@@ -680,4 +726,3 @@ This is line 2
 This is line 3
 This is line 4
 ```
-

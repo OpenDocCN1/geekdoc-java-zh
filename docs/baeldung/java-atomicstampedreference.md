@@ -1,26 +1,25 @@
+
 # Java 中的 AtomicStampedReference 指南
 
-> 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-atomicstampedreference>
+## 1. 概观
 
-## 1.概观
-
-在之前的文章中，我们了解到 [`AtomicStampedReference`可以预防 ABA 问题](/web/20220628084028/https://www.baeldung.com/cs/aba-concurrency)。
+在之前的文章中，我们了解到`AtomicStampedReference`可以预防 ABA 问题。
 
 在本教程中，我们将仔细看看如何最好地使用它。
 
-## 2.我们为什么需要`AtomicStampedReference`？
+## 2. 我们为什么需要`AtomicStampedReference`？
 
-首先， **`AtomicStampedReference`为我们提供了一个对象引用变量和一个我们可以原子读写的标记**。**我们可以认为这个标记有点像时间戳或版本号**。
+首先， **`AtomicStampedReference`为我们提供了一个对象引用变量和一个我们可以原子读写的标记**。我们可以认为这个标记有点像时间戳或版本号。
 
 简单地说，添加一个标记 **允许我们检测另一个线程何时改变了共享引用，从原始引用 A，到新引用 B，再回到原始引用 A** 。
 
 让我们看看它在实践中的表现。
 
-## 3.银行账户示例
+## 3. 银行账户示例
 
 假设一个银行账户有两个数据:余额和最后修改日期。只要余额发生变化，最后修改日期就会更新。通过观察这个最后修改日期，我们可以知道帐户已经更新。
 
-### 3.1.读取值及其戳记
+### 3.1. 读取值及其戳记
 
 首先，让我们假设我们的引用持有一个帐户余额:
 
@@ -34,7 +33,7 @@ AtomicStampedReference<Integer> account = new AtomicStampedReference<>(100, 0);
 
 同样，我们可以通过`AtomicStampedReference.getStamp()`获得图章。
 
-### 3.2.更改值及其戳记
+### 3.2. 更改值及其戳记
 
 现在，让我们回顾一下如何自动设置一个`AtomicStampedReference`的值。
 
@@ -89,7 +88,7 @@ int newStamp = this.stamp.incrementAndGet();
 
 意味着存款还没有完成。
 
-然后，线程 2 运行 `deposit(100)`和`withdraw(100)`，使余额达到$200，然后回到$100。
+然后，线程 2 运行`deposit(100)`和`withdraw(100)`，使余额达到$200，然后回到$100。
 
 最后，线程 1 运行:
 
@@ -99,7 +98,7 @@ return this.account.compareAndSet(current, current + 100, stamps[0], newStamp);
 
 线程 1 将成功地检测到，自上次读取以来，其他线程已经更改了帐户余额，即使余额本身与线程 1 读取它时的余额相同。
 
-### 3.3.测试
+### 3.3. 测试
 
 测试起来很棘手，因为这依赖于一种非常特殊的线程交错。但是，让我们至少编写一个简单的单元测试来验证存款和取款的工作情况:
 
@@ -136,14 +135,12 @@ public class ThreadStampedAccountUnitTest {
 }
 ```
 
-### 3.4.选择下一枚邮票
+### 3.4. 选择下一枚邮票
 
-从语义上来说，时间戳就像一个时间戳或版本号，**，所以它通常总是递增的**。也可以使用随机数生成器。
+从语义上来说，时间戳就像一个时间戳或版本号，**所以它通常总是递增的**。也可以使用随机数生成器。
 
 这样做的原因是，如果印记可以被改变成以前的样子，这可能会使`AtomicStampedReference`的目的落空。**`AtomicStampedReference`本身并不强制执行这种约束，所以由我们来遵循这种做法。**
 
-## 4.结论
+## 4. 结论
 
 总之，`AtomicStampedReference`是一个强大的并发实用程序，它提供了一个引用和一个可以自动读取和更新的标记。它是为 A-B-A 检测而设计的，应该优先于其他并发类，比如关注 A-B-A 问题的`AtomicReference`。
-
-和往常一样，我们可以在 GitHub 上找到可用的代码[。](https://web.archive.org/web/20220628084028/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-concurrency-advanced-3)

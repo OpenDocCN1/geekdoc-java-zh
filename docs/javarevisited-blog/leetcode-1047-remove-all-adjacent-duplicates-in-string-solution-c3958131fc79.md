@@ -1,3 +1,4 @@
+
 # Leetcode 1047 删除字符串中所有相邻的重复项[解决方案]
 
 > 原文：<https://medium.com/javarevisited/leetcode-1047-remove-all-adjacent-duplicates-in-string-solution-c3958131fc79?source=collection_archive---------1----------------------->

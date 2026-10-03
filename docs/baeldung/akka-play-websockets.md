@@ -1,38 +1,39 @@
+
 # 使用 Play 框架和 Akka 的 WebSockets
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/akka-play-websockets>
 
-## 1.概观
+## 1. 概观
 
-当我们希望我们的 web 客户端与我们的服务器保持对话时，WebSockets 是一个有用的解决方案。WebSockets 保持持久的全双工连接。这个 **让我们能够在服务器和客户端之间发送双向消息。**
+当我们希望我们的 web 客户端与我们的服务器保持对话时，WebSockets 是一个有用的解决方案。WebSockets 保持持久的全双工连接。这个**让我们能够在服务器和客户端之间发送双向消息。**
 
 在本教程中，我们将学习如何在[游戏框架](/web/20220628113531/https://www.baeldung.com/java-intro-to-the-play-framework)中使用带有 [Akka](/web/20220628113531/https://www.baeldung.com/akka-actors-java) 的 WebSockets。
 
-## 2.设置
+## 2. 设置
 
 让我们建立一个简单的聊天应用程序。用户将向服务器发送消息，服务器将使用来自 [JSONPlaceholder](https://web.archive.org/web/20220628113531/https://jsonplaceholder.typicode.com/) 的消息进行响应。
 
-### 2.1.设置 Play 框架应用程序
+### 2.1. 设置 Play 框架应用程序
 
 我们将使用 Play 框架构建这个应用程序。
 
 让我们按照[Java Play 简介](/web/20220628113531/https://www.baeldung.com/java-intro-to-the-play-framework#Play)中的说明来设置和运行一个简单的 Play 框架应用程序。
 
-### 2.2.添加必要的 JavaScript 文件
+### 2.2. 添加必要的 JavaScript 文件
 
 此外，我们需要使用 JavaScript 进行客户端脚本编写。这将使我们能够接收从服务器推送的新消息。为此，我们将使用 [jQuery](https://web.archive.org/web/20220628113531/https://code.jquery.com/) 库。
 
-让我们将 jQuery 添加到`app/views/i` `ndex.scala.html`文件的底部:
+让我们将 jQuery 添加到`app/views/index.scala.html`文件的底部:
 
 ```java
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 ```
 
-### 2.3.设置 Akka
+### 2.3. 设置 Akka
 
 最后，我们将使用 Akka 来处理服务器端的 WebSocket 连接。
 
-让我们导航到`build.sbt` 文件并添加依赖项。
+让我们导航到`build.sbt`文件并添加依赖项。
 
 我们需要添加`[akka-actor](https://web.archive.org/web/20220628113531/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22com.typesafe.akka%22%20AND%20a%3A%22akka-actor_2.13%22)`和`[akka-testkit](https://web.archive.org/web/20220628113531/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22com.typesafe.akka%22%20AND%20a%3A%22akka-testkit_2.13%22)`依赖项:
 
@@ -58,13 +59,13 @@ libraryDependencies += "com.typesafe.akka" %% "akka-http" % akkaHttpVersion
 
 现在我们都准备好了。让我们看看如何让 WebSockets 工作！
 
-## 3.用 Akka Actors 处理 WebSockets
+## 3. 用 Akka Actors 处理 WebSockets
 
 **Play 的 WebSocket 处理机制是围绕 Akka 流构建的。**web socket 被建模为一个流。因此，传入的 WebSocket 消息被输入到流中，由流产生的消息被发送到客户端。
 
-为了使用 Actor 处理 WebSocket，我们需要 Play 实用程序`ActorFlow`，它将`ActorRef `转换为流。这主要需要一些 Java 代码，稍微配置一下。
+为了使用 Actor 处理 WebSocket，我们需要 Play 实用程序`ActorFlow`，它将`ActorRef`转换为流。这主要需要一些 Java 代码，稍微配置一下。
 
-### 3.1.WebSocket 控制器方法
+### 3.1. WebSocket 控制器方法
 
 首先，我们需要一个`Materializer`实例。**物化器是流执行引擎的工厂。**
 
@@ -91,7 +92,7 @@ public WebSocket socket() {
 }
 ```
 
-这里我们调用函数`acceptOrResult`,它接受请求头并返回一个未来值。返回的 future 是一个处理 WebSocket 消息的流。
+这里我们调用函数`acceptOrResult`，它接受请求头并返回一个未来值。返回的 future 是一个处理 WebSocket 消息的流。
 
 相反，我们可以拒绝请求并返回拒绝结果。
 
@@ -105,7 +106,7 @@ private CompletionStage<F.Either<Result, Flow<JsonNode, JsonNode, ?>>>
 }
 ```
 
-Play 框架中的`F `类定义了一组函数式编程风格的助手。在这种情况下，我们使用`F.` `Either.Right `来接受连接并返回流。
+Play 框架中的`F`类定义了一组函数式编程风格的助手。在这种情况下，我们使用`F.Either.Right`来接受连接并返回流。
 
 假设我们想在客户端未经身份验证时拒绝连接。
 
@@ -124,7 +125,7 @@ private CompletionStage<F.Either<Result, Flow<JsonNode, JsonNode, ?>>>
 }
 ```
 
-我们使用`F.Either.Left `拒绝连接，就像我们使用`F.Either.Right`提供流一样。
+我们使用`F.Either.Left`拒绝连接，就像我们使用`F.Either.Right`提供流一样。
 
 最后，我们将流链接到将处理消息的参与者:
 
@@ -137,7 +138,7 @@ private Flow<JsonNode, JsonNode, ?> createFlowForActor() {
 
 **`ActorFlow.actorRef`创建一个由`Messenger`角色**处理的流。
 
-### 3.2.`routes`文件
+### 3.2. `routes`文件
 
 现在，让我们在`conf/routes`中添加控制器方法的`routes`定义:
 
@@ -150,9 +151,9 @@ GET  /assets/*file        controllers.Assets.versioned(path="/public", file: Ass
 
 这些路由定义将传入的 HTTP 请求映射到控制器动作方法，如 Java 中的 [Routing in Play Applications 中所述。](/web/20220628113531/https://www.baeldung.com/routing-in-play)
 
-### 3.3.执行元实现
+### 3.3. 执行元实现
 
-**actor 类最重要的部分是`createReceive` 方法**，它决定了 actor 可以处理哪些消息:
+**actor 类最重要的部分是`createReceive`方法**，它决定了 actor 可以处理哪些消息:
 
 ```java
 @Override
@@ -164,7 +165,7 @@ public Receive createReceive() {
 }
 ```
 
-actor 将所有匹配`JsonNode`类的消息转发给`onSendMessage `处理程序方法:
+actor 将所有匹配`JsonNode`类的消息转发给`onSendMessage`处理程序方法:
 
 ```java
 private void onSendMessage(JsonNode jsonNode) {
@@ -186,7 +187,7 @@ private void processMessage(RequestDTO requestDTO) {
 }
 ```
 
-### 3.4.使用 Akka HTTP 使用 Rest API
+### 3.4. 使用 Akka HTTP 使用 Rest API
 
 我们将向位于 [JSONPlaceholder Posts](https://web.archive.org/web/20220628113531/https://jsonplaceholder.typicode.com/posts/) 的虚拟消息生成器发送 HTTP 请求。当响应到达时，我们通过写响应给客户机`out`。
 
@@ -201,7 +202,7 @@ private CompletionStage<HttpResponse> getRandomMessage() {
 }
 ```
 
-我们还处理从调用服务中获得的`HttpResponse`,以便获得 JSON 响应:
+我们还处理从调用服务中获得的`HttpResponse`，以便获得 JSON 响应:
 
 ```java
 private CompletionStage<MessageDTO> consumeHttpResponse(
@@ -218,7 +219,7 @@ private CompletionStage<MessageDTO> consumeHttpResponse(
 }
 ```
 
-`MessageConverter `类是用于在`JsonNode `和 dto 之间进行转换的实用程序:
+`MessageConverter`类是用于在`JsonNode`和 dto 之间进行转换的实用程序:
 
 ```java
 public static MessageDTO jsonNodeToMessage(JsonNode jsonNode) {
@@ -244,11 +245,13 @@ private void discardEntity(
 
 现在已经完成了 WebSocket 的处理，让我们看看如何使用 HTML5 WebSockets 为此设置一个客户端。
 
-## 4.设置 WebSocket 客户端
+## 4. 设置 WebSocket 客户端
 
 对于我们的客户端，让我们构建一个简单的基于 web 的聊天应用程序。
 
-### 4.1.控制器动作
+### 4.1. 控制器动作
+
+
 
 我们需要定义一个呈现索引页面的控制器动作。我们将把它放入控制器类`app.controllers.HomeController`:
 
@@ -262,7 +265,7 @@ public Result index(Http.Request request) {
 
 ### 4.2.模板页面
 
-现在，让我们转到`app/views/ndex.scala.html` 页面，添加一个用于接收消息的容器和一个用于捕获新消息的表单:
+现在，让我们转到`app/views/ndex.scala.html`页面，添加一个用于接收消息的容器和一个用于捕获新消息的表单:
 
 ```java
 <div id="messageContent"></div>F
@@ -272,7 +275,7 @@ public Result index(Http.Request request) {
 </form>
 ```
 
-我们还需要通过在`app/views/index.scala.html` 页面的顶部声明这个参数来传入 WebSocket 控制器动作的 URL:
+我们还需要通过在`app/views/index.scala.html`页面的顶部声明这个参数来传入 WebSocket 控制器动作的 URL:
 
 ```java
 @(url: String)
@@ -322,7 +325,7 @@ function onMessage(evt) {
 }
 ```
 
-然后，为了显示输出，我们将使用函数`appendMessageToView` 和`writeToScreen`:
+然后，为了显示输出，我们将使用函数`appendMessageToView`和`writeToScreen`:
 
 ```java
 function appendMessageToView(title, message) {
@@ -375,7 +378,7 @@ public WebSocket akkaStreamsSocket() {
 
 `Source#` `tick`方法有三个参数。第一个是处理第一个分笔成交点之前的初始延迟，第二个是连续分笔成交点之间的间隔。在上面的代码片段中，我们将两个值都设置为两秒。第三个参数是应该在每个节拍返回的对象。
 
-要看到这一点，我们需要修改`index `动作中的 URL，并使其指向`akkaStreamsSocket `端点:
+要看到这一点，我们需要修改`index`动作中的 URL，并使其指向`akkaStreamsSocket`端点:
 
 ```java
 String url = routes.HomeController.akkaStreamsSocket().webSocketURL(request);
@@ -393,7 +396,7 @@ String url = routes.HomeController.akkaStreamsSocket().webSocketURL(request);
 
 我们如何检测 WebSocket 何时被关闭？
 
-当处理 WebSocket 的 actor 终止时，Play 将自动关闭 WebSocket。所以我们可以通过实现`Actor#postStop `方法来处理这个场景:
+当处理 WebSocket 的 actor 终止时，Play 将自动关闭 WebSocket。所以我们可以通过实现`Actor#postStop`方法来处理这个场景:
 
 ```java
 @Override
@@ -454,7 +457,7 @@ sbt -Dwebsocket.frame.maxLength=64k run
 
 默认情况下，我们用来处理 WebSocket 的 actor 在一分钟后被终止。这是因为运行我们的应用程序的 Play 服务器的默认空闲超时是 60 秒。这意味着在六十秒内没有收到请求的所有连接都将自动关闭。
 
-我们可以通过配置选项来改变这一点。让我们来看看我们的`application.conf `,将服务器改为没有空闲超时:
+我们可以通过配置选项来改变这一点。让我们来看看我们的`application.conf`,将服务器改为没有空闲超时:
 
 ```java
 play.server.http.idleTimeout = "infinite"
@@ -466,7 +469,7 @@ play.server.http.idleTimeout = "infinite"
 sbt -Dhttp.idleTimeout=infinite run
 ```
 
-我们也可以通过在`build.sbt`中指定`devSettings `来进行配置。
+我们也可以通过在`build.sbt`中指定`devSettings`来进行配置。
 
 **在`build.sbt`中指定的配置选项仅在开发中使用，在生产中会被忽略:**
 

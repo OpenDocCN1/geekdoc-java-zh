@@ -1,3 +1,4 @@
+
 # 2023 年新手学习的 5 门最佳 iOS & Swift 课程
 
 > 原文：<https://medium.com/javarevisited/top-5-online-courses-to-learn-ios-12-swift-in-2019-a35ae1be7b2b?source=collection_archive---------0----------------------->
@@ -36,7 +37,7 @@
 
 最棒的是，它配备了一些真正前沿的技术和 API，允许你创建一些真正令人印象深刻和令人敬畏的应用程序，如 Pokemon Go。我说的技术包括 Core ML 2 和 ARKit 2，苹果的[机器学习](https://javarevisited.blogspot.com/2018/10/data-science-and-machine-learning-courses-using-python-and-R-programming.html)和增强现实 API。选择详细解释这两个关键 API 的课程很重要，尤其是如果你想创建一个令人敬畏的现代应用程序。
 
-# **1。iOS 15 & Swift 5 —完整的 iOS 应用程序开发训练营，作者 Angela Yu**
+# 1. iOS 15 & Swift 5 —完整的 iOS 应用程序开发训练营，作者 Angela Yu
 
 一句话，这可能是世界上最好的 iOS 开发者课程。它太棒了，甚至激励我去创建一门课程，这是另一个故事，但这是一门非常好的课程。
 
@@ -60,7 +61,7 @@
 
 <https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fios-13-app-development-bootcamp%2F>  
 
-# **2。iOS 15 & Swift 5:从初学者到付费专业**
+# 2. iOS 15 & Swift 5:从初学者到付费专业
 
 如果由于某种原因你无法连接到 Angela Yu，那么这是 Udemy 上的另一个全面的 iOS 开发者课程。这门课程包含超过 88 小时的高质量材料。
 
@@ -74,7 +75,7 @@
 
 这门[课程](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=634352.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fdevslopes-ios12%2F)非常适合任何想成为 iOS 开发者但没有编程经验的人。你不仅会学到 iOS 12 和 Swift 4，还会学到一般的[编程](https://javarevisited.blogspot.sg/2018/05/10-reasons-to-learn-python-programming.html)。该课程不仅能帮助你找到一份 iOS 开发人员的工作，还能帮助你创建自己的 iPhone 和 iPad 应用程序，成为一名应用程序企业家或其他什么人。这门[课程](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=634352.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fdevslopes-ios12%2F)也得到了大约 4000 名学生的平均 4.5 分，这很棒。
 
-# **3。完整的 iOS 12 & Swift 开发者课程—构建 28 个应用**
+# 3. 完整的 iOS 12 & Swift 开发者课程—构建 28 个应用
 
 这是学习 iOS 的另一门[伟大课程](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=634352.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fios-12-developer-course%2F)。它也很全面，涵盖了超过 44.5 小时的材料，由像 [Rob Percival](https://medium.com/u/479f328b80ac?source=post_page-----a35ae1be7b2b--------------------------------) 这样的教师设计和交付。
 
@@ -88,13 +89,15 @@
 
 简而言之，这是一门学习 iOS 12 的[课程，但大多数课程都来自他们的 iOS 11 版本，你可能会在各处找到它们。谈到社会证明，这门课程也得到了近 9000 名学生的平均 4.5 分，非常优秀。](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=634352.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fios-12-developer-course%2F)
 
-# **4。为期 10 天的 iPhone 应用 boot camp——新的 iOS 12 和 Xcode 10**
+# 4. 为期 10 天的 iPhone 应用 boot camp——新的 iOS 12 和 Xcode 10
 
 这个也是学习 iOS 12 和 Swift 4 成为 iOS 开发者的 [nice 课程。讲师](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=634352.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fthe-10-day-iphone-app-bootcamp-new-ios-12-and-xcode-10%2F)[尼克·沃尔特](https://medium.com/u/7695369d7431?source=post_page-----a35ae1be7b2b--------------------------------)在短短 10 天内，从零开始解释 iOS 概念到更高级的主题，如[机器学习](http://www.java67.com/2019/01/5-free-courses-to-learn-machine-and-deep-learning-in-2019.html)，做得非常好。
 
+
+
 时间条件使得这门课程非常有趣，你每天只需要花 2 到 3 个小时来学习这门课程，10 天后你就可以在苹果的应用商店里拥有自己的 iOS 应用了。
 
-以下是参加课程的链接— [**为期 10 天的 iPhone 应用训练营**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=634352.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fthe-10-day-iphone-app-bootcamp-new-ios-12-and-xcode-10%2F)
+以下是参加课程的链接 — [**为期 10 天的 iPhone 应用训练营**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=634352.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fthe-10-day-iphone-app-bootcamp-new-ios-12-and-xcode-10%2F)
 
 [![](img/75e4623f55e186932162426687ce01be.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=634352.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fthe-10-day-iphone-app-bootcamp-new-ios-12-and-xcode-10%2F)
 
@@ -102,13 +105,13 @@
 
 如果你能与 Nick 取得联系，那么你将会喜欢这门课程以及你成为一名深度 iOS 开发人员的旅程。近 3000 名学生对[课程](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=634352.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fthe-10-day-iphone-app-bootcamp-new-ios-12-and-xcode-10%2F)的平均评分为 4.7 分，令人印象深刻。
 
-# **5。iOS 12:学习编码&在 Swift 中构建真正的 iOS 应用**
+## 5. iOS 12：学习编码 & 在 Swift 中构建真正的 iOS 应用
 
 这是另一个在 Udemy 上学习 iOS 的课程。像这个列表中的所有课程一样，这个课程也教授 Swift 4、XCode 10 和 iOS 12。它开始解释 Swift 4 编程的基础，然后转向如何为 iOS 创建应用程序的基础。
 
 但是，它不仅涵盖了基础知识，还涵盖了高级技术，如使用 Core ML2 的[机器学习](https://javarevisited.blogspot.com/2018/10/data-science-and-machine-learning-courses-using-python-and-R-programming.html)和使用 ARkit 2 的增强现实，这些都是 iOS 12 的一些很酷的功能。
 
-链接加入课程— [**iOS 12:学习编码和构建真正的 app**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=634352.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fios-12-learn-to-code%2F)
+链接加入课程 — [**iOS 12：学习编码和构建真正的 app**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=634352.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fios-12-learn-to-code%2F)
 
 [![](img/2f2e691c7b53154738951bd9b722c721.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=634352.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fios-12-learn-to-code%2F)
 
@@ -116,22 +119,22 @@
 
 最后，这门课程还得到了近 2000 名学生的平均 4.6 分，鉴于安吉拉·于的 iOS 训练营课程的受欢迎程度，这还算不错。
 
-以上是关于 iPhone 和 iPad 应用程序开发学习 iOS 12 和 Swift 4 的一些**最佳课程。通过学习这些课程，您可以创建 iOS 应用程序、游戏、工具等等。你也可以加入许多寻找可靠的 iOS 开发者的公司，与他们一起工作
+以上是关于 iPhone 和 iPad 应用程序开发学习 iOS 12 和 Swift 4 的一些**最佳课程**。通过学习这些课程，您可以创建 iOS 应用程序、游戏、工具等等。你也可以加入许多寻找可靠的 iOS 开发者的公司，与他们一起工作。
 
-你可能喜欢的其他**在线编程资源****
+## 你可能喜欢的其他**在线编程资源**
 
-1.  [devo PS 程序员路线图](https://javarevisited.blogspot.com/2018/09/the-2018-devops-roadmap-your-guide-to-become-DevOps-Engineer.html)
-2.  【Java 和 Web 开发者应该学习的 10 个框架
-3.  [为有经验的开发者提供的 10 门免费 Java 课程](http://www.java67.com/2018/08/top-10-free-java-courses-for-beginners-experienced-developers.html)
-4.  [深入学习 Docker 的 10 门免费课程](http://www.java67.com/2018/02/5-free-docker-courses-for-java-and-DevOps-engineers.html)
-5.  [面向初学者的 10 门数据科学和机器学习课程](https://dev.to/javinpaul/10-data-science-and-machine-learning-courses-for-programmers-looking-to-switch-career-57kd)
-6.  [2023 年 React JS 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
-7.  [10 门免费学习数据结构和算法的课程](https://hackernoon.com/10-free-data-structure-and-algorithm-courses-junior-developers-should-explore-978b72871af5)
-8.  [深入学习 Node JS 的前 5 门课程](http://javarevisited.blogspot.sg/2018/01/top-5-nodejs-and-express-js-online-courses-for-web-developers.html)
-9.  [深入学习 React JS 的 5 大课程](https://javarevisited.blogspot.com/2018/08/top-5-react-js-and-redux-courses-to-learn-online.html)
-10.  [面向 Java 开发人员的 5 门 Android 在线培训课程](https://javarevisited.blogspot.com/2017/12/top-5-android-online-training-courses-for-Java-developers.html)
+1. [DevOps 程序员路线图](https://javarevisited.blogspot.com/2018/09/the-2018-devops-roadmap-your-guide-to-become-DevOps-Engineer.html)
+2. [Java 和 Web 开发者应该学习的 10 个框架](https://javarevisited.blogspot.com/2018/10/top-10-frameworks-java-web-developers-should-learn.html)
+3. [为有经验的开发者提供的 10 门免费 Java 课程](http://www.java67.com/2018/08/top-10-free-java-courses-for-beginners-experienced-developers.html)
+4. [深入学习 Docker 的 10 门免费课程](http://www.java67.com/2018/02/5-free-docker-courses-for-java-and-DevOps-engineers.html)
+5. [面向初学者的 10 门数据科学和机器学习课程](https://dev.to/javinpaul/10-data-science-and-machine-learning-courses-for-programmers-looking-to-switch-career-57kd)
+6. [2023 年 React JS 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
+7. [10 门免费学习数据结构和算法的课程](https://hackernoon.com/10-free-data-structure-and-algorithm-courses-junior-developers-should-explore-978b72871af5)
+8. [深入学习 Node JS 的前 5 门课程](http://javarevisited.blogspot.sg/2018/01/top-5-nodejs-and-express-js-online-courses-for-web-developers.html)
+9. [深入学习 React JS 的 5 大课程](https://javarevisited.blogspot.com/2018/08/top-5-react-js-and-redux-courses-to-learn-online.html)
+10. [面向 Java 开发人员的 5 门 Android 在线培训课程](https://javarevisited.blogspot.com/2017/12/top-5-android-online-training-courses-for-Java-developers.html)
 
-# 结束语
+## 结束语
 
 感谢您阅读本文。你可能会想，有这么多东西要学，有这么多课程要参加，但你不需要担心。
 
@@ -141,16 +144,18 @@
 
 说到底，你应该对这里提到的事情有足够的知识和经验。
 
-祝您的 iOS 应用程序开发之旅好运！当然**不会很容易**，但是通过遵循这个路线图和指南，你离成为你一直想成为的 iOS 应用开发者又近了一步
+祝您的 iOS 应用程序开发之旅好运！当然**不会很容易**，但是通过遵循这个路线图和指南，你离成为你一直想成为的 iOS 应用开发者又近了一步。
 
-如果你喜欢这篇文章，那么请考虑在 medium ( [javinpaul](https://medium.com/u/bb36d8439904?source=post_page-----a35ae1be7b2b--------------------------------) )上关注我。如果你想在每篇新文章上得到通知，别忘了在 Twitter 上关注**[**javarevited**](https://twitter.com/javarevisited)！**
+如果你喜欢这篇文章，那么请考虑在 Medium（[javinpaul](https://medium.com/u/bb36d8439904?source=post_page-----a35ae1be7b2b--------------------------------)）上关注我。如果你想在每篇新文章上得到通知，别忘了在 Twitter 上关注 [**javarevisited**](https://twitter.com/javarevisited)！
 
-**再出这 5 个，如果要选一个，就加入第一个[**完整的 iOS App 开发 Bootcamp**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fios-13-app-development-bootcamp%2F) 简直是 2023 年最好的 iOS 开发者课程。**
+再出这 5 个，如果要选一个，就加入第一个 [**完整的 iOS App 开发 Bootcamp**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fios-13-app-development-bootcamp%2F)，简直是 2023 年最好的 iOS 开发者课程。
 
-**<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=634352.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fios-12-app-development-bootcamp%2F>  
+<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=634352.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fios-12-app-development-bootcamp%2F>
 
-> **p . s .**——如果你正在寻找免费的在线课程来学习 iOS 和 Swift 编程语言，那么你也可以看看我为程序员准备的免费 iOS 和 Swift 课程清单<https://javarevisited.blogspot.com/2018/11/5-free-ios-app-development-courses-for.html>
+> **P.S.** —— 如果你正在寻找免费的在线课程来学习 iOS 和 Swift 编程语言，那么你也可以看看我为程序员准备的免费 iOS 和 Swift 课程清单：<https://javarevisited.blogspot.com/2018/11/5-free-ios-app-development-courses-for.html>
 
-## **您可能喜欢的其他媒体文章:**
+## 您可能喜欢的其他媒体文章
 
-**</javarevisited/my-favorite-flutter-and-dart-programming-courses-for-beginners-9e8355710d78>  </hackernoon/top-5-courses-to-learn-android-for-java-programmers-667e03d995b4>  </hackernoon/top-5-react-native-courses-for-mobile-application-developers-b82febdf8a46> ****
+- [我最喜欢的 Flutter 和 Dart 编程课程（面向初学者）](https://javarevisited.blogspot.com/2019/01/my-favorite-flutter-and-dart-programming-courses-for-beginners.html)
+- [面向 Java 程序员学习 Android 的 5 大课程](https://hackernoon.com/top-5-courses-to-learn-android-for-java-programmers-667e03d995b4)
+- [面向移动应用开发者的 5 大 React Native 课程](https://hackernoon.com/top-5-react-native-courses-for-mobile-application-developers-b82febdf8a46)

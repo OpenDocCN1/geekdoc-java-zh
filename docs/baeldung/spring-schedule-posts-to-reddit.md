@@ -1,16 +1,18 @@
+
+
 # 用 Spring 安排发布到 Reddit
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-schedule-posts-to-reddit>
 
-## 1。概述
+## 1. 概述
 
 在本案例研究的[早期](/web/20220815042026/https://www.baeldung.com/spring-security-oauth2-authentication-with-reddit "Authenticating with Reddit OAuth2 and Spring Security") [部分](/web/20220815042026/https://www.baeldung.com/spring-security-oauth-post-to-reddit "Post a Link to the Reddit API")中，我们使用 Reddit API 设置了一个简单的应用程序和 OAuth 认证流程。
 
-现在让我们用 Reddit 构建一些有用的东西——支持**为后者安排帖子**。
+现在让我们用 Reddit 构建一些有用的东西——支持为后者安排帖子。
 
-## 2。`User`和帖子
+## 2. `User`和帖子
 
-首先，让我们创建两个主要实体——`User`和`Post`。`User`将跟踪用户名和一些额外的 Oauth 信息:
+首先，让我们创建两个主要实体——`User`和`Post`。`User`将跟踪用户名和一些额外的 OAuth 信息：
 
 ```java
 @Entity
@@ -32,7 +34,7 @@ public class User {
 }
 ```
 
-下一个——`Post`实体——保存向 Reddit 提交链接所需的信息:`title`、`URL`、`subreddit`、…等等。
+下一个——`Post`实体——保存向 Reddit 提交链接所需的信息：`title`、`URL`、`subreddit`、……等等。
 
 ```java
 @Entity
@@ -55,18 +57,16 @@ public class Post {
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
-```
 
-```java
- // standard setters and getters
+    // standard setters and getters
 }
 ```
 
-## 3。持久层
+## 3. 持久层
 
-我们将使用 **Spring Data JPA 来实现持久化**，所以除了众所周知的存储库接口定义之外，这里没有太多东西要看:
+我们将使用 Spring Data JPA 来实现持久化，所以除了众所周知的存储库接口定义之外，这里没有太多东西要看：
 
-*   `**UserRepository:**`
+- `UserRepository`：
 
 ```java
 public interface UserRepository extends JpaRepository<User, Long> {
@@ -77,7 +77,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 }
 ```
 
-*   **T2`PostRepository:`**
+- `PostRepository`：
 
 ```java
 public interface PostRepository extends JpaRepository<Post, Long> {
@@ -88,11 +88,11 @@ public interface PostRepository extends JpaRepository<Post, Long> {
 }
 ```
 
-## 4。一个调度器
+## 4. 调度器
 
 对于应用程序的调度方面，我们还将充分利用开箱即用的 Spring 支持。
 
-我们正在定义一个每分钟都要运行的任务；这将简单地查找将要提交给 Reddit 的帖子:
+我们正在定义一个每分钟都要运行的任务；这将简单地查找将要提交给 Reddit 的帖子：
 
 ```java
 public class ScheduledTasks {
@@ -105,7 +105,7 @@ public class ScheduledTasks {
 
     @Scheduled(fixedRate = 1 * 60 * 1000)
     public void reportCurrentTime() {
-        List<Post> posts = 
+        List<Post> posts =
           postReopsitory.findBySubmissionDateBeforeAndIsSent(new Date(), false);
         for (Post post : posts) {
             submitPost(post);
@@ -115,15 +115,15 @@ public class ScheduledTasks {
     private void submitPost(Post post) {
         try {
             User user = post.getUser();
-            DefaultOAuth2AccessToken token = 
+            DefaultOAuth2AccessToken token =
               new DefaultOAuth2AccessToken(user.getAccessToken());
             token.setRefreshToken(new DefaultOAuth2RefreshToken((user.getRefreshToken())));
             token.setExpiration(user.getTokenExpiration());
             redditRestTemplate.getOAuth2ClientContext().setAccessToken(token);
 
-            UsernamePasswordAuthenticationToken userAuthToken = 
+            UsernamePasswordAuthenticationToken userAuthToken =
               new UsernamePasswordAuthenticationToken(
-              user.getUsername(), token.getValue(), 
+              user.getUsername(), token.getValue(),
               Arrays.asList(new SimpleGrantedAuthority("ROLE_USER")));
             SecurityContextHolder.getContext().setAuthentication(userAuthToken);
 
@@ -157,11 +157,11 @@ public class ScheduledTasks {
 }
 ```
 
-请注意，如果出现任何问题，帖子将不会被标记为`sent`——因此**下一个周期将在一分钟**后再次尝试提交。
+请注意，如果出现任何问题，帖子将不会被标记为`sent`——因此下一个周期将在一分钟后再次尝试提交。
 
-## 5。登录流程
+## 5. 登录流程
 
-有了新的用户实体，保存了一些特定于安全性的信息，我们需要**修改我们简单的登录过程来存储这些信息**:
+有了新的用户实体，保存了一些特定于安全性的信息，我们需要修改简单的登录过程来存储这些信息：
 
 ```java
 @RequestMapping("/login")
@@ -173,7 +173,7 @@ public String redditLogin() {
 }
 ```
 
-和`loadAuthentication()`:
+和`loadAuthentication()`：
 
 ```java
 private void loadAuthentication(String name, OAuth2AccessToken token) {
@@ -194,8 +194,8 @@ private void loadAuthentication(String name, OAuth2AccessToken token) {
     user.setTokenExpiration(token.getExpiration());
     userReopsitory.save(user);
 
-    UsernamePasswordAuthenticationToken auth = 
-      new UsernamePasswordAuthenticationToken(user, token.getValue(), 
+    UsernamePasswordAuthenticationToken auth =
+      new UsernamePasswordAuthenticationToken(user, token.getValue(),
       Arrays.asList(new SimpleGrantedAuthority("ROLE_USER")));
     SecurityContextHolder.getContext().setAuthentication(auth);
 }
@@ -203,9 +203,9 @@ private void loadAuthentication(String name, OAuth2AccessToken token) {
 
 请注意，如果用户不存在，它是如何自动创建的。这使得“使用 Reddit 登录”过程在首次登录时在系统中创建一个本地用户。
 
-## 6。时间表页面
+## 6. 时间表页面
 
-接下来，让我们看看允许安排新帖子的页面:
+接下来，让我们看看允许安排新帖子的页面：
 
 ```java
 @RequestMapping("/postSchedule")
@@ -225,14 +225,12 @@ private User getCurrentUser() {
 }
 ```
 
-**:**
-
-```java
+```html
 <form>
     <input name="title" />
     <input name="url" />
     <input name="subreddit" />
-    <input type="checkbox" name="sendreplies" value="true"/> 
+    <input type="checkbox" name="sendreplies" value="true"/>
     <input name="submissionDate">
     <button type="submit" onclick="schedulePost()">Schedule</button>
 </form>
@@ -247,19 +245,19 @@ function schedulePost(){
         type: 'POST',
         contentType:'application/json',
         success: function(result) { window.location.href="scheduledPosts"; },
-        error: function(error) { alert(error.responseText); }   
-    }); 
+        error: function(error) { alert(error.responseText); }
+    });
 }
-</script> 
-</body> 
+</script>
+</body>
 </html>
 ```
 
-请注意我们需要如何检查验证码。这是因为—**如果用户的 karma 数少于 10 个**——他们就不能在不填写验证码的情况下安排发布。
+请注意我们需要如何检查验证码。这是因为——如果用户的 karma 数少于 10 个——他们就不能在不填写验证码的情况下安排发布。
 
-## 7 .**。过账**
+## 7. 过账
 
-当提交时间表时，**帖子信息被简单地验证并持久化**,以便稍后由调度程序获取:
+当提交时间表时，帖子信息被简单地验证并持久化，以便稍后由调度程序获取：
 
 ```java
 @RequestMapping(value = "/api/scheduledPosts", method = RequestMethod.POST)
@@ -275,9 +273,9 @@ public Post schedule(@RequestBody Post post) {
 }
 ```
 
-## 8。预定岗位列表
+## 8. 预定岗位列表
 
-现在让我们实现一个简单的 REST API 来检索我们已有的预定帖子:
+现在让我们实现一个简单的 REST API 来检索我们已有的预定帖子：
 
 ```java
 @RequestMapping(value = "/api/scheduledPosts")
@@ -288,7 +286,10 @@ public List<Post> getScheduledPosts() {
 }
 ```
 
-一种简单、快捷的方式来**在前端**显示这些预定的帖子:
+一种简单、快捷的方式来在前端显示这些预定的帖子：
+
+
+
 
 ```java
 <table>
@@ -307,11 +308,11 @@ $(function(){
 </script>
 ```
 
-## 9。编辑预定的帖子
+## 9. 编辑预定的帖子
 
 接下来，让我们看看如何编辑预定的帖子。
 
-我们将从前端开始，首先是非常简单的 MVC 操作:
+我们将从前端开始，首先是非常简单的 MVC 操作：
 
 ```java
 @RequestMapping(value = "/editPost/{id}", method = RequestMethod.GET)
@@ -320,7 +321,7 @@ public String showEditPostForm() {
 }
 ```
 
-在简单的 API 之后，这里是前端消费它:
+在简单的 API 之后，这里是前端消费它：
 
 ```java
 <form>
@@ -365,7 +366,7 @@ function editPost(){
 </script>
 ```
 
-现在，让我们看看 **REST API** :
+现在，让我们看看 REST API：
 
 ```java
 @RequestMapping(value = "/api/scheduledPosts/{id}", method = RequestMethod.GET) 
@@ -385,9 +386,9 @@ public void updatePost(@RequestBody Post post, @PathVariable Long id) {
 }
 ```
 
-## 10。取消安排/删除帖子
+## 10. 取消安排/删除帖子
 
-我们还将为任何预定的帖子提供一个简单的删除操作:
+我们还将为任何预定的帖子提供一个简单的删除操作：
 
 ```java
 @RequestMapping(value = "/api/scheduledPosts/{id}", method = RequestMethod.DELETE)
@@ -397,7 +398,7 @@ public void deletePost(@PathVariable("id") Long id) {
 }
 ```
 
-从客户端来看，我们是这样称呼它的:
+从客户端来看，我们是这样称呼它的：
 
 ```java
 <a href="#" onclick="confirmDelete(${post.getId()})">Delete</a>
@@ -421,12 +422,12 @@ function deletePost(id){
 </script>
 ```
 
-## 11。结论
+## 11. 结论
 
 在 Reddit 案例研究的这一部分，我们使用 Reddit API 构建了第一个重要的功能——安排帖子。
 
-对于一个严肃的 Reddit 用户来说，这是一个超级有用的功能，尤其是考虑到**Reddit 提交的内容是多么的时间敏感**。
+对于一个严肃的 Reddit 用户来说，这是一个超级有用的功能，尤其是考虑到 **Reddit 提交的内容是多么的时间敏感**。
 
 接下来，我们将构建一个更有用的功能来帮助获得 Reddit 上的内容投票——机器学习建议。
 
-本教程的**完整实现**可以在[的 github 项目](https://web.archive.org/web/20220815042026/https://github.com/Baeldung/reddit-app "The Full Spring / Reddit Example Project on Github")中找到——这是一个基于 Eclipse 的项目，所以它应该很容易导入和运行。
+本教程的 **完整实现** 可以在 [的 github 项目](https://web.archive.org/web/20220815042026/https://github.com/Baeldung/reddit-app "The Full Spring / Reddit Example Project on Github") 中找到——这是一个基于 Eclipse 的项目，所以它应该很容易导入和运行。

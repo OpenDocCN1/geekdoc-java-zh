@@ -1,3 +1,4 @@
+
 # 读取/加载图像
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/images/loadimage.html`](https://docs.oracle.com/javase/tutorial/2d/images/loadimage.html)
@@ -14,7 +15,6 @@ try {
     img = ImageIO.read(new File("strawberry.jpg"));
 } catch (IOException e) {
 }
-
 ```
 
 Image I/O 将文件的内容识别为 JPEG 格式图像，并将其解码为可以被 Java 2D 直接使用的 `BufferedImage`。
@@ -29,7 +29,6 @@ try {
     img = ImageIO.read(url);
 } catch (IOException e) {
 }
-
 ```
 
 这个示例中使用的 `getCodeBase` 方法返回部署在 Web 服务器上时包含这个小程序的目录的 URL。如果小程序是本地部署的，`getCodeBase` 返回 null，小程序将无法运行。
@@ -38,11 +37,7 @@ try {
 
 <applet code="LoadImageApplet" archive="examples/lib/LoadImageApplet.jar" width="200" height="200" alt="LoadImageApplet example"><param name="permissions" value="sandbox"></applet>
 
-* * *
-
 **注意：** 如果你看不到小程序运行，你需要至少安装 [Java SE Development Kit (JDK) 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html) 版本。
-
-* * *
 
 `LoadImageApplet.java` 包含了这个示例的完整代码，这个小程序需要 `strawberry.jpg` 图像文件。
 

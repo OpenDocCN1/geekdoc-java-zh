@@ -1,12 +1,5 @@
-# Java Cucumber 指南指南
 
-
-
-
-
-
-
-
+# Java Cucumber 指南
 
 ![](img/3bdd08a58a5b15b4736776437bb8f3a0_0_0.png)
 
@@ -14,83 +7,87 @@
 
 这本书不仅适用于程序员，也适用于测试人员。它超越了 Cucumber 本身：它不仅提供了测试指南，还提供了避免糟糕测试的提示和技巧。
 
-- **Janet Gregory**，*敏捷测试：测试人员的实用指南》（与 Lisa Crispin 合著）
-“如果你在早上读这本书，然后尽快找到一个利益相关者，那么在下午你就能和他们一起编写出有效的场景了。从今天开始吧。”
+- **Janet Gregory**，《敏捷测试：测试人员的实用指南》（与 Lisa Crispin 合著）
 
-- **J.B. Rainsberger**，*单元测试食谱》（Unit Recipes）
-“这本书最棒的地方在于：它将帮助你识别**为什么**可能想要使用 Cucumber，并引导你与整个团队协作，以良好的方式来实现它。”
+> “如果你在早上读这本书，然后尽快找到一个利益相关者，那么在下午你就能和他们一起编写出有效的场景了。从今天开始吧。”
+>
+> — **J.B. Rainsberger**，《单元测试食谱》
 
-- **Lisa Crispin**，*敏捷测试：测试人员的实用指南》（与 Janet Gregory 合著）
-“这是一本关于在 JVM 上使用 Cucumber 的极佳介绍，它清晰地引导读者理解 API 的复杂性，并避开在真实项目应用中常见的常见陷阱。”
+> “这本书最棒的地方在于：它将帮助你识别**为什么**可能想要使用 Cucumber，并引导你与整个团队协作，以良好的方式来实现它。”
+>
+> — **Lisa Crispin**，《敏捷测试：测试人员的实用指南》（与 Janet Gregory 合著）
 
-- **Nat Pryce**，*由测试引导的面向对象软件增长》（与 Steve Freeman 合著）
-“这本书不仅深入探讨了在 Java 环境有效使用 Cucumber 的技术细节，还涵盖了如何通过交替使用系统行为的可读示例来成功驱动实现等更广泛的问题。因此，它将成为整个团队极具价值的参考书。”
+> “这是一本关于在 JVM 上使用 Cucumber 的极佳介绍，它清晰地引导读者理解 API 的复杂性，并避开在真实项目应用中常见的常见陷阱。”
+>
+> — **Nat Pryce**，《由测试引导的面向对象软件增长》（与 Steve Freeman 合著）
 
-- **David Evans**，*改进你用户故事的 50 个快速想法》（与 Gojko Adjić 合著）
-“如果你以测试优先的方式实现应用程序，采取细小而谨慎的步骤，并交替进行实现和重构阶段，你的测试将告诉你下一步该做什么。听听你的测试，也听听这本书！”
+> “这本书不仅深入探讨了在 Java 环境有效使用 Cucumber 的技术细节，还涵盖了如何通过交替使用系统行为的可读示例来成功驱动实现等更广泛的问题。因此，它将成为整个团队极具价值的参考书。”
+>
+> — **David Evans**，《改进你用户故事的 50 个快速想法》（与 Gojko Adjić 合著）
 
-- **Gáspar Nagy**，SpecFlow - .NET 版 Cucumber 的创建者
-“这本书将教你入门 Java 平台上的 Cucumber 所需的所有知识……尽管作者确保了非程序员也能跟上进度。它将出现在我的书架上，以及我在培训课程中提供的书籍推荐里。”
+> “如果你以测试优先的方式实现应用程序，采取细小而谨慎的步骤，并交替进行实现和重构阶段，你的测试将告诉你下一步该做什么。听听你的测试，也听听这本书！”
+>
+> — **Gáspar Nagy**，SpecFlow - .NET 版 Cucumber 的创建者
 
-- **Markus Gaertner**，作者，*示例 ATDD》（ATDD by Example）
-“对于软件项目构建维护者来说，这是一份优秀的参考指南，因为作者仔细处理了 Cucumber 与 Java 平台其他常用工具的集成，如 JDBC、数据库、依赖注入容器（如 CDI 和 Spring Framework）以及 REST 服务端点。”
+> “这本书将教你入门 Java 平台上的 Cucumber 所需的所有知识……尽管作者确保了非程序员也能跟上进度。它将出现在我的书架上，以及我在培训课程中提供的书籍推荐里。”
+>
+> — **Markus Gaertner**，作者，《示例 ATDD》
 
-- **Peter Pilgrim**，作者，*Java EE 7 开发人员手册*
-《Cucumber for Java 实战》满足了一个重要需求——庞大的 Java 社区拥有 Cucumber 这一强大工具，但关于如何有效使用它的文档非常少。这是我将推荐给那些想要快速上手 Cucumber 的 Java 客户的书籍。”
+> “对于软件项目构建维护者来说，这是一份优秀的参考指南，因为作者仔细处理了 Cucumber 与 Java 平台其他常用工具的集成，如 JDBC、数据库、依赖注入容器（如 CDI 和 Spring Framework）以及 REST 服务端点。”
+>
+> — **Peter Pilgrim**，作者，《Java EE 7 开发人员手册》
 
-- **Richard Lawrence**，BDD 培训师兼教练，Agile for All
-“对 JVM 上 Cucumber 的一个温和而全面的介绍。这是一本关注细节的极佳循序渐进式指南。”
+> “《Cucumber for Java 实战》满足了一个重要需求——庞大的 Java 社区拥有 Cucumber 这一强大工具，但关于如何有效使用它的文档非常少。这是我将推荐给那些想要快速上手 Cucumber 的 Java 客户的书籍。”
+>
+> — **Richard Lawrence**，BDD 培训师兼教练，Agile for All
 
-- **Paul Grenger**，Naked Element 和 NorDevCon 创始人
-“书中的内容基于真实经验，并对我们作为测试人员/软件架构师/经理在内部和外部面临的日常问题表示认同。”
+> “对 JVM 上 Cucumber 的一个温和而全面的介绍。这是一本关注细节的极佳循序渐进式指南。”
+>
+> — **Paul Grenger**，Naked Element 和 NorDevCon 创始人
 
-- **Márton Mészáros**，Tailored Tunes 创始人及测试自动化专家
-“作者很好地结合了技术性和非技术性的教训。对于初学者和经验丰富的 BDD 随者来说，这都是非常好的读物。”
+> “书中的内容基于真实经验，并对我们作为测试人员/软件架构师/经理在内部和外部面临的日常问题表示认同。”
+>
+> — **Márton Mészáros**，Tailored Tunes 创始人及测试自动化专家
 
-- **Craig Harrison**，软件工程师
-
-
+> “作者很好地结合了技术性和非技术性的教训。对于初学者和经验丰富的 BDD 追随者来说，这都是非常好的读物。”
+>
+> — **Craig Harrison**，软件工程师
 
 Seb Rose
+
 Matt Wynne
+
 Aslak Hellesøy
 
-
-
-
-
-
 制作本书的团队包括：
+
 Jacquelyn Carter（编辑）
+
 Potomac Indexing, LLC（校对编辑）
+
 Liz Welch（编辑）
+
 Dave Thomas（排字）
+
 Janet Furlow（制作）
+
 Ellie Callahan（支持）
 
-
-
-
-
-
+---
 
 ### 第一部分 Cucumber 基础
 
+### 第二部分 实例演示
 
-### 第二部分 — 实例演示
+### 第三部分 更多技巧
 
+- 我们刚刚学到的内容 ................................................................. 272
+- 15. 与 REST Web 服务协作 ................................................................. 273
+- A1. 安装 Cucumber .................................................................................................................................... 293
+- A2. Cucumber 与其他 JVM 语言 ....................................................................................................... 297
+- A3. 参考文献 ................................................................................................................................................................... 307
 
-
-
-
-
-# 第三部分 — 更多技巧
-
-    - 我们刚刚学到的内容 ................................................................. . . . . . . . . . . . . . . 272
-- 15. 与 REST Web 服务协作 ................................................................. . ................................. . 273
-## A1. 安装 Cucumber .................................................................................................................................... 293
-## A2. Cucumber 与其他 JVM 语言 ....................................................................................................... . 297
-## A3. 参考文献 ................................................................................................................................................................... . 307
+---
 
 # 前言
 
@@ -100,9 +97,9 @@ Ellie Callahan（支持）
 
 嗯，把这些念头抛出脑外吧——因为，相信我，这本书可能很厚，但它也非常硬核。（呃……）这部分没印出来……但是……
 
-[注：第 11-12 页的 OCR 文本包含大量的损坏/重复和碎片化句子。根据“保留原始语言和所有信息”以及“不要删除或总结”的指令，以下是所提供片段的清理版本，移除了看起来像是去连字符或 OCR 错误产生的去噪/伪迹（如“meat”或“pant”），同时保持了可能的连贯性。]
+> [注：第 11-12 页的 OCR 文本包含大量的损坏/重复和碎片化句子。根据“保留原始语言和所有信息”以及“不要删除或总结”的指令，以下是所提供片段的清理版本，移除了看起来像是去连字符或 OCR 错误产生的去噪/伪迹（如“meat”或“pant”），同时保持了可能的连贯性。]
 
-[注：11-12 页的 OCR 具有重复性。文本“Foreword • xii”表示前言部分的结束。]
+> [注：11-12 页的 OCR 具有重复性。文本“Foreword • xii”表示前言部分的结束。]
 
 前言 • xii
 
@@ -110,18 +107,18 @@ Ellie Callahan（支持）
 
 我们首先想要感谢的是数百位为 Cucumber 社区做出贡献的你们。无论是在邮件列表上分享想法、经验和意见，在 IRC 频道中帮助他人，还是为代码库贡献新功能和 Bug 修复，这一切都是帮助的。没有你们的贡献，就没有 Cucumber，也就没有这本书。
 
-写这本书付出的努力比我们任何人的预想都要多得多。在整个过程中，我们的编辑 Jackie Carter 一直耐心地守候在我们身边，在我们我们需要时安抚我们，在我们应该被指备时告备我们，并在每一个机会提供深思熟虑的反馈。Jackie 对你正在阅读内容的质量做出了巨大贡献，她的名字完全配得上它在封面上的位置。
+写这本书付出的努力比我们任何人的预想都要多得多。在整个过程中，我们的编辑 Jackie Carter 一直耐心地守候在我们身边，在我们需要时安抚我们，在我们应该被指正时指正我们，并在每一个机会提供深思熟虑的反馈。Jackie 对你正在阅读内容的质量做出了巨大贡献，她的名字完全配得上它在封面上的位置。
 
 感谢我们的审稿员：
 
-- Nat Pryce Morton Meszaros Tim Pizey
-- Roberto Lo Giacco Gáspar Nagy Craig Harrison
-- Kev McCabe Paolo Ambrosio Simon Spencer
-- Leslie Brooks Jim Spearman Axel He
+- Nat Pryce, Morton Meszaros, Tim Pizey
+- Roberto Lo Giacco, Gáspar Nagy, Craig Harrison
+- Kev McCabe, Paolo Ambrosio, Simon Spencer
+- Leslie Brooks, Jim Spearman, Axel He
 
 你们的建议和鼓励令我们不胜感激。
 
-特别感谢 Paolo Ambrosio 和 Krzysztof Jelski，他们帮助应对不断变化的 Spring 集成；并感谢 Ulises Cerviño Beresi，他们提供了及时的 Clojure-fr 翻译。
+特别感谢 Paolo Ambrosio 和 Krzysztof Jelski，他们帮助应对不断变化的 Spring 集成；并感谢 Ulises Cerviño Beresi，他们提供了及时的 Clojure 翻译。
 
 感谢所有留下反馈的测试读者，他们帮助我们纠正了自己永远无法察觉的小错误。
 
@@ -131,15 +128,13 @@ Ellie Callahan（支持）
 
 Robert C. Martin (Uncle Bob)
 
-
-
-
-
 来自 Seb：致 Claire、Megan、Angus，感谢你们在过去一年里忍受我的频繁缺席——这可能不是缺席的结束，从现在起我需要一个新的借口了。如果没有 *The Cucumber Book* 的成功，Java 版就没有什么东西可以重写了，所以感谢 Matt 和 Aslak。此外，如果没有 Cucumber 从 Ruby 移植到 JVM，这本书根本就没有任何存在的必要，所以额外感谢 Aslak 和整个 Cucumber-JVM 团队。
 
 来自 Matt：我想感谢 Songkick 团队，特别是 Sabrina Leandro、Niko Felger、Dan Lucraft、Phil Cowans 和 Matt Johnson。此书中的许多教训都是和你们一起学到的。最感谢我出色的妻子 Anna，感谢她相信这个项目并给予了我真正完成它所需要的支持。想象一下，在书完成后，我们现在能做多少事情吧！
 
 来自 Aslak：爸爸，感谢你在 1981 年远见卓识为我买了一台 Commodore 64。Patricia，我亲爱的妻子——感谢你无数小时的耐心和鼓励。感谢你想出了这个既傻又洗脑的名字 Cucumber！
+
+---
 
 # 前言
 
@@ -147,18 +142,22 @@ Robert C. Martin (Uncle Bob)
 
 从这些对话中产生了一系列所有利益相关者都能理解的规范。Cucumber 能够对规范进行直接自动化，这意味着任何人都可以一眼看出哪些功能已经实现，哪些尚未实现。它还为开发团队提供了一个安全网，这样如果他们正在进行的更改破坏了任何现有功能，就能获得早期反馈。它还让你的测试人员解放出来，去做更有趣、更具创造性的工作，而不是定期运行重复的人工回归测试模式。
 
-Cucumber 现在已被许多团队使用，并以不同的方式从中获益。我们这些从初就被 Cucumber 吸引的人直能地意识到，它不仅仅是一个测试自动化工具；它更是一个协作工具。让我们明确一点——Cucumber 可以用于测试自动化——但这并不是其创作者的初意，我们的一些设计选择也反映了这一点。通过编写这本书，我们希望不仅向你展示如何使用 Cucumber，还向你展示如何“正确地”使用它。
+Cucumber 现在已被许多团队使用，并以不同的方式从中获益。我们这些从一开始就被 Cucumber 吸引的人直观地意识到，它不仅仅是一个测试自动化工具；它更是一个协作工具。让我们明确一点——Cucumber 可以用于测试自动化——但这并不是其创作者的初意，我们的一些设计选择也反映了这一点。通过编写这本书，我们希望不仅向你展示如何使用 Cucumber，还向你展示如何“正确地”使用它。
 
 Cucumber 最初是用 Ruby 编写的。多年来，它变得极其流行并被移植到许多其他语言。这本书是 *The Cucumber Book* 的 Java 版本，包含了关于如何协作交付稳健应用程序的优秀建议，但所有代码都完全用 Java 重写，并增加了涵盖 Java 版 Cucumber 特有功能的新章节。
+
+---
 
 # 这本书适合谁
 
 Cucumber 的设计旨在帮助软件团队中技术成员和非技术成员之间建立桥梁，我们尝试考虑了这两种读者。书的大部分内容是为技术读者写的，即对测试自动化感兴趣且已经具备编程技能的人。然而，有几个章节——尤其是书的第一部分中解释如何编写规范的部分——是更多地考虑了非技术读者的。这些章节是：
 
-- 第 6 章，保持你的 Cucumber 清鲜，位于第 91 页
+- 第 6 章，保持你的 Cucumber 清新，位于第 91 页
 - 第 16 章，与遗留应用协作，位于第 285 页
 
 随着书的展开，我们将查看更复杂的测试情况，阅读这些章节所需的专业知识水平将会增加。
+
+---
 
 # 你不需要成为 Java 专家
 
@@ -168,15 +167,21 @@ Java¹ 是一种编程语言，可以在所有主流操作系统上安装和运�
 
 为了跟上技术章节中的代码示例，如果你熟悉 Java 将对你很有帮助。Java 不是容易学习的语言，但也不是最难的，而且我们将使用的 Java 示例是刻意简单的。
 
+---
+
 # 你不是测试驱动也没关系
 
 我们在 Cucumber 上的最大成功是作为“自外向内”（outside-in）方法的一部分，从一个失败的 Cucumber 测试开始，并以此驱动我们对应用程序代码的开发工作。作为开发者，这种工作方式帮助我们保持诚实，并避免构建那些没有人要求的功能的功能诱惑，以防将来某天可能需要。
 
 Cucumber 是促进这种工作方式的工具，但它并不强迫你这样做。有些团队使用 Cucumber 为开发者已经完成的工作编写自动化测试。这通常是采纳“自外向内”方法的第一步，因为 Cucumber 的可读测试开始吸引团队技术利益相关者的注意力，将他们引入流程之中。即使你使用 Selenium 等替代方案而非 Cucumber，我们认为你仍然会从中获益匪浅。
 
+---
+
 # 为什么你应该听我们的
 
 所有作者都开发了多年软件，我们花了许多时间让自己的想法受到挑战。Cucumber 创建于 2008 年，Matt 是它最活跃的用户之一。我们使用 Cucumber 测试过所有系统，从 Ruby on Rails 到企业级 Java 服务。Cucumber 社区充满了活跃的辩论，我们尽可能地提炼了这些经验。
+
+---
 
 # 本书的结构
 
@@ -186,7 +191,7 @@ Cucumber 是促进这种工作方式的工具，但它并不强迫你这样做�
 
 ## 书中包含的内容
 
-虽然可以使用 Cucumber 测试 Flash 和移动应用程序，但遗憾的是，细节超出了本版的范围。本书涵盖了原生运行在 JVM 上的 Java 版 Cucumber，但不会涵盖与其他 JVM 语言一起使用。Cucumber 的线路协议（一种通过 套 套字驱动远程系统的协议）也超出范围。
+虽然可以使用 Cucumber 测试 Flash 和移动应用程序，但遗憾的是，细节超出了本版的范围。本书涵盖了原生运行在 JVM 上的 Java 版 Cucumber，但不会涵盖与其他 JVM 语言一起使用。Cucumber 的线路协议（一种通过套接字驱动远程系统的协议）也超出范围。
 
 ## 运行代码示例
 
@@ -196,7 +201,7 @@ Cucumber 是促进这种工作方式的工具，但它并不强迫你这样做�
 
 大多数代码示例在 Windows 和 *nix 操作系统上是相同的。在少数出现差异的情况下，你将在附近的侧边栏找到 Windows 版本，并在所指的正文中给出注释。
 
-你会注意到我们使用 $ 符号作为命令提示符。这对于 Linux 或 Mac 用户来说很熟悉，但对 Windows 用户来说可能感到有些陌生。所以，当你看到类似这样的时：
+你会注意到我们使用 `$` 符号作为命令提示符。这对于 Linux 或 Mac 用户来说很熟悉，但对 Windows 用户来说可能感到有些陌生。所以，当你看到类似这样的时：
 
 ```
 $ mvn clean test
@@ -209,11 +214,10 @@ C:\> mvn clean test
 ```
 
 ¹ http://java.com
+
 ² http://pragprog.com/titles/srcuc/source_code
 
-
-
-
+---
 
 # 在线资源
 
@@ -222,9 +226,12 @@ C:\> mvn clean test
 如果你有关于 Cucumber 的通用问题，Cucumber 社区将欢迎你加入他们的邮件列表。Cucumber 是一个开源工具，这意味着为小组贡献的每个人都是在投入自己的时间，因此在邮件列表上寻求帮助之前，请确保你已经尽可能彻底地研究了你的问题。如果人们看到你正在尝试自己解决问题，他们会更有可能帮助你。
 
 Seb Rose, Matt Wynne, 和 Aslak Hellesøy
+
 2015年2月
 
-- 4. https://groups.google.com/forum/#lforum/cuc
+- 4. https://groups.google.com/forum/#lforum/cucumber
+
+---
 
 # 第一部分
 
@@ -234,49 +241,56 @@ Seb Rose, Matt Wynne, 和 Aslak Hellesøy
 
 理解 BDD 不是一种“万灵药”解决方案是非常重要的，因此我们还会花一些时间看看事情可能会变得出错。我们见过 BDD 帮助过各种组织，一旦你能够识别（并纠正）新接触 Cucumber 的团队所常见的常见症状，我们有信心它也能帮助你的团队。
 
+---
+
 # 第 1 章
 
 ## 为什么选择 Cucumber？
 
 软件源于一个想法。
 
-假设这是一个好主——一个可以让世界变得更好，或者至少让某人赚点钱的主意。软件开发者的挑战是将这个想法变为现实，变成一个能够交付利益的东西。
+假设这是一个好主意——一个可以让世界变得更好，或者至少让某人赚点钱的主意。软件开发者的挑战是将这个想法变为现实，变成一个能够交付利益的东西。
+
+
+
+# 原始想法与沟通挑战
 
 原始的想法是完美且美丽的。如果产生主意的人恰好是一个才华横溢的软件开发者，那么我们可能很幸运：想法可以直接转化为运行的软件，而无需向其他人解释。但更多时候，拥有原始想法的人并不具备实现它所需的编程技能。现在，这个想法必须从一个人的脑海进入到其他人的脑海。它需要被沟通。
 
 大多数软件项目都涉及几个人协作工作的团队，因此高质量的沟通对他们的成功至关重要。正如你可能知道的，良好的沟通不仅仅是向他人描述你的想法；你还需要寻求反馈以确保你的理解是正确的。这就是为什么敏捷软件团队学会了以小增量的方式工作，使用增量构建的软件作为反馈向利益相关者表示：“这就是你的意思吗？”
 
-即使如此仍然是不的。如果团队在为期两周的迭代中实现了一个误解，他们不仅浪费了两个周的努力，还用无法反映原始想法的概念和功能破坏了代码库的完整性。其他开发者可能已经无意无意地开始在这些糟糕的主意之上构建更多代码，导致代码库可能永远无法正确地反映业务领域。
+即使如此仍然是不够的。如果团队在为期两周的迭代中实现了一个误解，他们不仅浪费了两周的努力，还用无法反映原始想法的概念和功能破坏了代码库的完整性。其他开发者可能已经无意中开始在这些糟糕的主意之上构建更多代码，导致代码库可能永远无法正确地反映业务领域。
 
 我们需要一种过滤器来保护我们的代码库免受被误解的想法的影响。
 
-## 自动化验收测试
+# 自动化验收测试
 
 自动化验收测试的想法源于极端编程¹（XP），特别是在测试驱动开发²（TDD）的实践。
 
-与其由业务利益相关者将需求传递给开发团队而没有反馈的机会，而是开发者和利益相关者合作编写自动化测试，用以表达利益相关者想要的结果。我们称它们为验收测试，因为它们表达了软件需要做什么才能让利益相关者认为是可以接受的。测试在编写时会失败，因为还没有编写任何代码，但它捕捉了完成工作所需的条件。
+与其由业务利益相关者将需求传递给开发团队而没有反馈的机会，不如让开发者和利益相关者合作编写自动化测试，用以表达利益相关者想要的结果。我们称它们为验收测试，因为它们表达了软件需要做什么才能让利益相关者认为是可以接受的。测试在编写时会失败，因为还没有编写任何代码，但它捕捉了完成工作所需的条件。
 
-这些测试与单元测试不同，单元测试面向开发者，帮助他们推导出并检查他们的软件设计。有时说，单元测试确保你“把事情做对”，而验收测试确保你“做了对的实”。
+这些测试与单元测试不同，单元测试面向开发者，帮助他们推导出并检查他们的软件设计。有时说，单元测试确保你“把事情做对”，而验收测试确保你“做了对的事”。
 
-自动化验收测试已经是优秀 XP 团队的一项成熟实践，但许多经验较少的敏捷团队似乎认为 TDD 仅仅是程序员的活动。正正如 Lisa Crispin 和 Janet Gregory 在《敏捷测试：面向测试人员和敏捷团队的实用指南》[CG08] 中指出的，没有面向业务的验收测试，程序员很难知道他们需要编写哪些单元测试。自动化验收测试帮助你的团队专注于重点，确保你在每次迭代中做的工作是你可能所做的最有价值的事情。你仍然会犯错——但犯的错会少得多——这意味着你可以回家享受你余生的生活。
+自动化验收测试已经是优秀 XP 团队的一项成熟实践，但许多经验较少的敏捷团队似乎认为 TDD 仅仅是程序员的活动。正如 Lisa Crispin 和 Janet Gregory 在《敏捷测试：面向测试人员和敏捷团队的实用指南》[CG08] 中指出的，没有面向业务的验收测试，程序员很难知道他们需要编写哪些单元测试。自动化验收测试帮助你的团队专注于重点，确保你在每次迭代中做的工作是你可能所做的最有价值的事情。你仍然会犯错——但犯的错会少得多——这意味着你可以回家享受你余生的生活。
 
-## 行为驱动开发
+# 行为驱动开发
 
-行为驱动开发（BDD）通过将优秀 TDD 实践者的良好习惯形式化，建立在测试驱动开发（TDD）之上。优秀的 TDD 实践者从外向内工作，从一个失败的客户验收测试开始，该测试从客户的角度描述了系统的行为。作为 BDD 实践者，我们特意编写验收测试作为团队可以阅读的示例。我们利用编写这些示例的过程从业务利益相关者那里获得反馈
+行为驱动开发（BDD）通过将优秀 TDD 实践者的良好习惯形式化，建立在测试驱动开发（TDD）之上。优秀的 TDD 实践者从外向内工作，从一个失败的客户验收测试开始，该测试从客户的角度描述了系统的行为。作为 BDD 实践者，我们特意编写验收测试作为团队可以阅读的示例。我们利用编写这些示例的过程从业务利益相关者那里获得反馈：
+
+1.  在我们开始之前，确认我们是否正致力于构建正确的东西。
+2.  在我们做的过程中，我们刻意努力开发一种关于系统的共享、通用语言。
+
+## 参考资料
 
 - 1. 《极端编程：拥抱变化》[Bec00]
 - 2. 《测试驱动开发：实例教程》[Bec02]
-- 3. http://behaviour-driven.org/
+- 3. <http://behaviour-driven.org/>
 
-在我们开始之前，确认我们是否正致力于构建正确的东西。
+# 通用语言
 
-在我们做的过程中，我们刻意努力开发一种关于系统的共享、通用语言。
+正如埃里克·埃文斯在他的书籍《领域驱动设计》[Eva03] 中描述的，许多软件项目面临着领域专家和团队程序员之间沟通质量低下的问题：
 
-## 通用语言
-
-正如埃里克·埃文斯他的书籍《领域驱动设计》[Eva03] 中描述的，许多软件项目面临着领域专家和团队程序员之间沟通质量低下的问题：
-
-> “当一个项目的语言碎片化时，它就会面临严重问题。领域专家使用他们的专业术语，而技术团队有针对设计设计调整过的语言……跨越这一语言鸿沟，领域专家模糊地描述他们想要的。开发者在努力理解对他们来说是新的领域时，模糊地”
+> “当一个项目的语言碎片化时，它就会面临严重问题。领域专家使用他们的专业术语，而技术团队有针对设计调整过的语言……跨越这一语言鸿沟，领域专家模糊地描述他们想要的。开发者在努力理解对他们来说是新的领域时，模糊地理解。”
 
 通过团队有意识的努力，可以产生一种被项目中的所有人使用和理解的通用语言。当团队在对话、文档和代码中一致使用这种语言时，翻译每个人不同方言的摩擦就消失了，误解的概率也大大降低。
 
@@ -284,15 +298,11 @@ Cucumber 通过为语言鸿沟的两端提供一个会合点，有助于团队�
 
 当我们在开发开始之前编写这些测试时，我们可以在它们渗透进代码库之前，探索并消除许多误解。
 
-## 示例
+# 示例
 
 让 Cucumber 在众多工具中脱颖而出的是它经过专门设计，以确保验收测试可以被团队中的任何人轻松阅读和编写。这揭示了验收测试作为沟通和协作工具的真正价值。Cucumber 验收测试的可读性将利益相关者引入过程，帮助你探索和理解他们的需求。
 
 这里有一个 Cucumber 验收测试的示例：
-
-
-
-
 
 ## 特性：注册
 
@@ -300,63 +310,63 @@ Cucumber 通过为语言鸿沟的两端提供一个会合点，有助于团队�
 
 ### 场景：注册成功
 
-新用户应该收到一封确认邮件，并在登录后受到网站的个人个性化问候。
+新用户应该收到一封确认邮件，并在登录后受到网站的个性化问候。
 
 + 假设我选择了注册
-当我使用有效信息进行注册时
-那么我应该收到一封确认邮件
-并且我应该看到一条个性化的问候消息
++ 当我使用有效信息进行注册时
++ 那么我应该收到一封确认邮件
++ 并且我应该看到一条个性化的问候消息
 
 ### 场景：重复邮箱
 
-当某些尝试为一个已存在的邮箱地址创建账户时。
+当有人尝试为一个已存在的邮箱地址创建账户时。
 
 + 假设我选择了注册
-当我使用已经注册过的邮箱地址进行注册时
-那么我应该被告知该邮箱已注册
-并且我应该获得找回密码的选项
++ 当我使用已经注册过的邮箱地址进行注册时
++ 那么我应该被告知该邮箱已注册
++ 并且我应该获得找回密码的选项
 
-注意测试是如何被指定为我们希望系统在特定场景下行为的*示例*的。使用此类示例会产生意想不到的强大效果，能让人们在系统构建之前就对其进行视觉化处理。所有团队成员都可以阅读测试，并告诉您它是否反映了他们对系统应该做什么的理解，这很可能激发他们的想象力，去思考你可能也需要考虑的其他场景。Goj Adzić 的书籍 *Specification by Example [Ad 11]* 包含了许多团队发现这一点并利用其优势的案例研究。
+注意测试是如何被指定为我们希望系统在特定场景下行为的*示例*的。使用此类示例会产生意想不到的强大效果，能让人们在系统构建之前就对其进行视觉化处理。所有团队成员都可以阅读测试，并告诉您它是否反映了他们对系统应该做什么的理解，这很可能激发他们的想象力，去思考你可能也需要考虑的其他场景。Gojko Adzic 的书籍 *Specification by Example* [Adz11] 包含了许多团队发现这一点并利用其优势的案例研究。
 
 这种风格编写的验收测试不仅仅是测试；它们变成了可执行的规范。
 
-## 活文档
+# 活文档
 
-Cucumber *feature files (特性文件)* 具有传统规范文档的优点，即可以由业务利益相关者编写和阅读，但它们有一个明显的优势：计算机可以理解它们。在实践中，这意味着你的文档不再是写一次后就过时的东西，而是变成反映项目真实状态的“活”的东西。
+Cucumber `feature files`（特性文件）具有传统规范文档的优点，即可以由业务利益相关者编写和阅读，但它们有一个明显的优势：计算机可以理解它们。在实践中，这意味着你的文档不再是写一次后就过时的东西，而是变成反映项目真实状态的“活”的东西。
 
-## 事实渊源
+# 事实渊源
 
 对于许多团队来说，Cucumber 特性文件成为系统功能的定义的事实渊源。在一个单一的地方获取这些信息可以节省大量时间，这些时间通常被浪费在保持需求文档、测试和代码同步上。拥有单一事实渊源有助于建立团队内部的信任，因为团队的不同部分不再拥有自己版本的“真相”。
 
-## Cucumber 如何工作
+# Cucumber 如何工作
 
 在我们深入书籍的核心内容之前，让我们通过对典型 Cucumber 测试套件的高层概述来为你提供一些背景知识。这种从特性到自动化库的结构如图所示。
 
-Cucumber 最初由 Ruby 社区的成员作为命令行工具创建。此以后它已翻译到几个开发环境，包括 Java，以便让我们更多人享受它的好处。当你运行 Cucumber 时，它会从名为 features 的纯文本文本文件中读取你的规范，检查其中待测试的场景，并并在你的系统上运行这些场景。每个场景都是 Cucumber 执行的步骤列表。为了让 Cucumber 能理解这些特性文件，它们必须遵循一些基本的语法规则。这组规则的称为 Gherkin。
+Cucumber 最初由 Ruby 社区的成员作为命令行工具创建。此后它已移植到几个开发环境，包括 Java，以便让更多人享受它的好处。当你运行 Cucumber 时，它会从名为 `features` 的纯文本文件中读取你的规范，检查其中待测试的场景，并在你的系统上运行这些场景。每个场景都是 Cucumber 执行的步骤列表。为了让 Cucumber 能理解这些特性文件，它们必须遵循一些基本的语法规则。这组规则称为 Gherkin。
 
 ![](img/3bdd08a58a5b15b4736776437bb8f3a0_25_0.png)
 
-除了特性之外，你还为 Cucumber 提供一组步骤定义（step definitions），这些定义将每个步骤的业务可读语言映射为代码（在本书中使用 Java 编写），以执行步骤所描述的任何操作。在一个成熟的测试套件中，步骤定义本身可能只有一两行代码，委托给一个针对你应用程序领域的支持代码库，该库知道如何执行系统上的常见任务。这些任务有时可能涉及自动化库，例如浏览器自动化库 Selenium，以便与系统本身进行交互。
+除了特性之外，你还为 Cucumber 提供一组步骤定义（`step definitions`），这些定义将每个步骤的业务可读语言映射为代码（在本书中使用 Java 编写），以执行步骤所描述的任何操作。在一个成熟的测试套件中，步骤定义本身可能只有一两行代码，委托给一个针对你应用程序领域的支持代码库，该库知道如何执行系统上的常见任务。这些任务有时可能涉及自动化库，例如浏览器自动化库 Selenium，以便与系统本身进行交互。
 
 如果步骤定义中的代码执行无错误，Cucumber 将继续执行场景中的下一步。如果它运行到场景末尾而没有任何步骤抛出错误，它将该场景标记为通过。然而，如果场景中的任何步骤失败，Cucumber 将该场景标记为失败，并移动到下一个。随着场景的运行，Cucumber 会打印结果，向你准确显示哪些在正常工作，哪些没有。
 
-简而言之，Cucumber 还有许多其他优势使其成为极佳的选择：你可以用四十多种种不同的口语语言编写规范，可以使用标签（tags）来组织和分组你的场景，并且你可以轻松地与许多高质量的自动化库集成以驱动几乎任何类型的应用程序。所有这些以及更多内容将在阅读本书其余部分时变得清晰。
+简而言之，Cucumber 还有许多其他优势使其成为极佳的选择：你可以用四十多种不同的口语语言编写规范，可以使用标签（`tags`）来组织和分组你的场景，并且你可以轻松地与许多高质量的自动化库集成以驱动几乎任何类型的应用程序。所有这些以及更多内容将在阅读本书其余部分时变得清晰。
 
-## 我们刚刚学了什么
+# 我们刚刚学了什么
 
 让我们回顾一下目前为止涵盖的内容。
 
-- 当开发者和业务利益相关者之间清晰良好时，软件团队的工作效果最好。实现这一点的极佳方法是使用自动化验收测试协作指定即将完成的工作。
+- 当开发者和业务利益相关者之间沟通清晰良好时，软件团队的工作效果最好。实现这一点的极佳方法是使用自动化验收测试协作指定即将完成的工作。
 - 当验收测试以示例的形式编写时，它们会激发人们的想象力，并帮助他们看到以前没有考虑过的场景。
-- 当团队成员协作编写验收测试时，他们可以开发出用于讨论业务领域的自己的通用语言（ubiquitous language）。这有助于他们避免误解。
+- 当团队成员协作编写验收测试时，他们可以开发出用于讨论业务领域的自己的通用语言（`ubiquitous language`）。这有助于他们避免误解。
 - Cucumber 专为帮助业务利益相关者参与编写验收测试而设计。
-- Cucumber 中的每个测试用例被称为 *scenario (场景)*，场景被分到 features (特性) 中。每个场景包含几个步骤。
+- Cucumber 中的每个测试用例被称为 `scenario`（场景），场景被分到 `features`（特性）中。每个场景包含几个步骤。
 - Cucumber 测试套件中面向业务的部分存储在特性文件中，必须根据语法规则（称为 Gherkin）编写，以便 Cucumber 能够读取它们。
 - 在底层，步骤定义将从面向业务的步骤语言翻译为代码。
 
 为了说明这些概念，在下一章中，我们将直接深入并构建一个非常简单的应用程序，使用 Cucumber 来驱动开发。
 
-## 尝试一下
+# 尝试一下
 
 Cucumber 有它自己的通用语言。你能列出你在本章中学到的 Cucumber 领域术语，并描述你认为每个术语的含义吗？
 
@@ -366,7 +376,7 @@ Cucumber 有它自己的通用语言。你能列出你在本章中学到的 Cucu
 
 我们猜你已经迫不及待要开始了，我们将通过一个简单的示例让你感觉如何使用 Cucumber。你可能还没有完全理解这里发生的一切，但在接下来的几个章节中，我们将回来完善细节。
 
-假设你想要跟随本操作（你需要安装依赖管理工具，如 Maven、Ant 或 Gradle），但对于我们的第一个示例，我们将直接运行 Cucumber。
+假设你想要跟随本操作（你需要安装依赖管理工具，如 `Maven`、`Ant` 或 `Gradle`），但对于我们的第一个示例，我们将直接运行 Cucumber。
 
 创建一个新文件夹来放置它们：
 
@@ -375,46 +385,42 @@ mkdir checkout
 cd checkout
 ```
 
- 那么……我们开始吧？
+那么……我们开始吧？
 
-
-
-
-
-我们将让 Cucumber 引导我们完成结账程序，所以让我们立即从 checkout 文件夹运行 cucumber：
+我们将让 Cucumber 引导我们完成结账程序，所以让我们立即从 `checkout` 文件夹运行 cucumber：
 
 ```
 $ java -cp "jars/*" cucumber.api.cli.Main -p pretty
 ```
 
-在 [] 处未找到 features。
+在 `[]` 处未找到 features。
 
 - Scenarios
 - Steps
   0m.000s
 
-这里有很多操作，所以让我们仔细查看命令行。首先，我们调用了 java 解释器，指定了类路径以执行包含 `cucumber.api.cli.Main` 类中的入口点。该类包含了实现 Cucumber 命令行界面 (CLI) 的代码，它允许我们控制 Cucumber 搜索要运行测试的方式。在这种情况下，我们向 Cucumber 传递了两个东西：
+这里有很多操作，所以让我们仔细查看命令行。首先，我们调用了 `java` 解释器，指定了类路径以执行包含 `cucumber.api.cli.Main` 类中的入口点。该类包含了实现 Cucumber 命令行界面（CLI）的代码，它允许我们控制 Cucumber 搜索要运行测试的方式。在这种情况下，我们向 Cucumber 传递了两个东西：
 
 - `-p` 告诉 cucumber 使用 pretty 格式化插件（你稍后就会知道为什么）
 - 一个指向我们 feature 文件位置的路径
 
 我们还没有编写任何 feature 文件，这就是为什么当我们运行 Cucumber 时，它给了我们一个友好的错误信息“No features found at [].”。
 
-这需要输入很多内容，所以让我们把它放到脚本中。在项目根目录（称为 /checkout）下，使用你喜欢的文本编辑器创建一个名为 `cucumber` 的文件（如果你使用的是 Windows，则为 `cucumber.bat`）。输入以下文本：
+这需要输入很多内容，所以让我们把它放到脚本中。在项目根目录（称为 `/checkout`）下，使用你喜欢的文本编辑器创建一个名为 `cucumber` 的文件（如果你使用的是 Windows，则为 `cucumber.bat`）。输入以下文本：
 
 ```
 first_taste/01/cucumber
 java -cp "jars/*" cucumber.api.cli.Main -p pretty
 ```
 
-如果你在 Unix 风格的操作系统上工作，你可能需要在运行新的 shell 脚本之前使 cucumber 文件可执行：
+如果你在 Unix 风格的操作系统上工作，你可能需要在运行新的 shell 脚本之前使 `cucumber` 文件可执行：
 
 ```
 $ chmod u+x cucumber
 $ ./cucumber
 ```
 
-如果你在 Windows 上工作，只需运行批处理文件（以后以后当你在文本中使用 /checkout 时都使用此命令）：
+如果你在 Windows 上工作，只需运行批处理文件（以后当你在文本中使用 `/checkout` 时都使用此命令）：
 
 ```
 C:\checkout> cucumber.bat
@@ -422,11 +428,12 @@ C:\checkout> cucumber.bat
 
 无论你使用哪种操作系统，你都应该得到与我们第一次完全相同的输出：
 
+```
 No features found at [].
-
 - Scenarios
 - Steps
   0m.000s
+```
 
 现在是时候创建我们的第一个 feature 了。我们可以在当前文件夹中创建它，但很快就会变得混乱，所以让我们创建一个文件夹：
 
@@ -461,15 +468,16 @@ java -cp "jars/*" cucumber.api.cli.Main -p pretty features
 $ ./cucumber
 ```
 
+```
 No features found at [features]
-
 - Scenarios
 - Steps
 0m.000s
+```
 
 每个 Cucumber 测试被称为一个 scenario，每个 scenario 都包含告诉 Cucumber 要做什么的步骤。此输出意味着 Cucumber 正在愉快地扫描 features 目录，但它没有找到任何要运行的 scenario。让我们创建一个。
 
-我们的研究显示 67% 的购物者都会买香蕉，所以我们从这里开始。在你喜喜欢的编辑器中，编辑你刚刚创建的空文件 checkout.feature：
+我们的研究显示 67% 的购物者都会买香蕉，所以我们从这里开始。在你喜欢的编辑器中，编辑你刚刚创建的空文件 `checkout.feature`：
 
 ```
 first_taste/02/features/checkout.feature
@@ -480,25 +488,23 @@ When I checkout 1 "banana"
 Then the total price should be 40c
 ```
 
-这个 feature 文件包含了我们 checkout 类的第一个 scenario。我们将在本章开始时给出的示例之一翻译成了 Cucumber，我们可以要求计算机运行它，一次又一次。你可能已经看到，Cucumber 期望此文件具有某种结构。Feature, Scenario, Given, When 和 Then 关键字是结构，其他所有内容都是文档。虽然书中某些关键字被高亮了——它们在你的编辑器中可能也是这样——但它只是一个纯文本文件。这种结构被称为 Gherkin。
+这个 feature 文件包含了我们 checkout 类的第一个 scenario。我们将在本章开始时给出的示例之一翻译成了 Cucumber，我们可以要求计算机运行它，一次又一次。你可能已经看到，Cucumber 期望此文件具有某种结构。`Feature`、`Scenario`、`Given`、`When` 和 `Then` 关键字是结构，其他所有内容都是文档。虽然书中某些关键字被高亮了——它们在你的编辑器中可能也是这样——但它只是一个纯文本文件。这种结构被称为 Gherkin。
 
 当你保存此文件并运行 cucumber 时，你应该看到比上次多得多的输出：
 
 ```
 $ ./cucumber
 Feature: Checkout
-```
 
-```
 Scenario: Checkout a banana # checkout.feature:2
 Given the price of a "banana" is 40c
 When I checkout 1 "banana"
 Then the total price should be 40c
-```
 
-+ 1 Scenarios (undefined)
+1 Scenarios (undefined)
 3 Steps (undefined)
 0m0.0s
+```
 
 你可以使用下面的代码片段来实现：
 
@@ -508,17 +514,13 @@ public void the_price_of_a_c(String arg1, int arg2) throws Throwable {
     // Write code to turn phrase into concrete actions
     throw new PendingException();
 }
-```
 
-```
-@When("I checkout (\\d+) \"(.*?)\\$")
+@When("I checkout (\\d+) \"(.*?)\"$")
 public void i_checkout(int arg1, String arg2) throws Throwable {
     // Write code to turn phrase into concrete actions
     throw new PendingException();
 }
-```
 
-```
 @Then("the total price should be (\\d+)c$")
 public void the_total_price_should_be_c(int arg1) throws Throwable {
     // Write code to turn phrase into concrete actions
@@ -526,7 +528,7 @@ public void the_total_price_should_be_c(int arg1) throws Throwable {
 }
 ```
 
-哇，有很多东西！让我们看看发生了什么。首先，我们注意到 Cucumber 出了三个片段。这些是步骤定义的示例代码。由于 Cucumber 使用 ANSI 序列，你可能在控制台中看到彩色文本。如果你在 Windows 上工作，你需要安装一个小型应用程序来正确渲染它们。请参阅附录 1 安装 Cucumber，第 29 页。
+哇，有很多东西！让我们看看发生了什么。首先，我们注意到 Cucumber 输出了三个片段。这些是步骤定义的示例代码。由于 Cucumber 使用 ANSI 序列，你可能在控制台中看到彩色文本。如果你在 Windows 上工作，你需要安装一个小型应用程序来正确渲染它们。请参阅附录 1 安装 Cucumber，第 29 页。
 
 现在我们将实现步骤定义，使我们的 scenario 不再是未定义的。
 
@@ -537,6 +539,10 @@ public void the_total_price_should_be_c(int arg1) throws Throwable {
 ## 创建步骤定义
 
 不用深思它们意味着什么，让我们把 Cucumber 上次输出中的片段复制粘贴到新的 Java 文件中。Cucumber 不在乎你称它为什么，只要它是一个 Java 文件，但这是一个很好的名称。在文本编辑器中打开并输入以下类定义：
+
+
+
+## 代码片段
 
 ```java
 __taste/04/step_definitions/CheckoutSteps.java
@@ -551,10 +557,7 @@ public class CheckoutSteps {
 
 现在粘贴这些片段：
 
-
-
-
-first_taste/04/step_definitions/CheckoutSteps.java
+`first_taste/04/step_definitions/CheckoutSteps.java`
 
 ```java
 package step_definitions;
@@ -585,7 +588,9 @@ public class CheckoutSteps {
 }
 ```
 
-我们现在想做的是运行 Cucumber，让它告诉我们下一步要做什么，但在那之前，我们需要编译新的 CheckoutSteps 类并将其添加到类路径中。通常我们不会费心在自己喜欢的 IDE 中工作，但由于我们是从命令行操作的，现在我们将编辑 cucumber shell 脚本文件，使其在编译我们的 Java 代码的同时调用 Cucumber。
+## 编译与运行
+
+我们现在想做的是运行 Cucumber，让它告诉我们下一步要做什么，但在那之前，我们需要编译新的 `CheckoutSteps` 类并将其添加到类路径中。通常我们不会费心在自己喜欢的 IDE 中工作，但由于我们是从命令行操作的，现在我们将编辑 `cucumber` shell 脚本文件，使其在编译我们的 Java 代码的同时调用 Cucumber。
 
 ```bash
 first_taste/04/step_definitions/CheckoutSteps.java
@@ -593,18 +598,18 @@ java -cp "jars/*" step_definitions.cucumber.api.java.Main -p pretty -snippets- \
     -g step_definitions features
 ```
 
-第 1 行编译了我们刚刚创建的 CheckoutSteps 类。第 2 行调用了 Cucumber。这里 的调用有两个细微的添加：
+第 1 行编译了我们刚刚创建的 `CheckoutSteps` 类。第 2 行调用了 Cucumber。这里 的调用有两个细微的添加：
 
-- 1. 我们将当前目录 "." 添加到了类路径。
-- 2. 我们添加了 -g step_definitions 命令行参数，以告诉 Cucumber 去哪里寻找它需要的步骤定义，这些定义将把 feature 文件中的步骤“粘合”到结账应用程序（我们还没有编写该程序）。
+1. 我们将当前目录 `.` 添加到了类路径。
+2. 我们添加了 `-g step_definitions` 命令行参数，以告诉 Cucumber 去哪里寻找它需要的步骤定义，这些定义将把 feature 文件中的步骤“粘合”到结账应用程序（我们还没有编写该程序）。
 
-现在，让我们再次执行 ./cucumber 看看下一步需要做什么：
+现在，让我们再次执行 `./cucumber` 看看下一步需要做什么：
 
 ## Seb 说：类路径分隔符
 
-Java 类路径的语法取决于底层的操作系统。对于 *nix* 系统，分隔符是冒号 (:)，而 Windows 操作系统的分隔符是分号 (;)。
+Java 类路径的语法取决于底层的操作系统。对于 *nix* 系统，分隔符是冒号 (`:`) ，而 Windows 操作系统的分隔符是分号 (`;`) 。
 
-我们在本章中展示了 cucumber 脚本，这是为 *nix* 用户准备。你还会在下载的代码中找到 cucumber.bat 文件，它包含了完全相同但针对 Windows 格式格式化的操作。
+我们在本章中展示了 `cucumber` 脚本，这是为 *nix* 用户准备。你还会在下载的代码中找到 `cucumber.bat` 文件，它包含了完全相同但针对 Windows 格式格式化的操作。
 
 ## Feature: Checkout
 
@@ -619,8 +624,8 @@ Then the total price should be 40c # CheckoutSteps.theTotalPriceShouldBe(int)
 ```
 
 - 1 Scenarios (1 pending)
-3 Steps (2 skipped, 1 pending)
-0m.138s
+- 3 Steps (2 skipped, 1 pending)
+- 0m.138s
 
 ```
 cucumber.api.PendingException: TODO: implement me
@@ -636,9 +641,9 @@ at Given the price of a "banana" is 40c (checkout.feature:3)
 
 ## 实现我们的第一个步骤定义
 
-我们决定这个版本的结账功能将是一个类，它将价格列表和购买的物品作为方法的参数。因此，在 `Given price of a banana is 40c` 的步骤定义中，我们的工作仅仅是记住香蕉的价格。在 step_definitions 文件夹中，编辑 CheckoutSteps.java 文件，使第一步看起来如下：
+我们决定这个版本的结账功能将是一个类，它将价格列表和购买的物品作为方法的参数。因此，在 `Given price of a banana is 40c` 的步骤定义中，我们的工作仅仅是记住香蕉的价格。在 `step_definitions` 文件夹中，编辑 `CheckoutSteps.java` 文件，使第一步看起来如下：
 
-太好了，这很简单。现在我们写了一些 Java 代码，所以我们需要编译 Checkout 类并通过运行 ./cucumber 再次运行 Cucumber。
+太好了，这很简单。现在我们写了一些 Java 代码，所以我们需要编译 `Checkout` 类并通过运行 `./cucumber` 再次运行 Cucumber。
 
 ```gherkin
 Feature: Checkout
@@ -652,8 +657,8 @@ Then the total price should be 40c #CheckoutSteps.theTotalPriceShouldBe(int)
 ```
 
 - 1 Scenarios (1 pending)
-3 Steps (2 skipped, 1 pending)
-0m.26s
+- 3 Steps (2 skipped, 1 pending)
+- 0m.26s
 
 ```
 cucumber.api.PendingException: TODO: implement me
@@ -661,9 +666,9 @@ at step definitions.CheckoutSteps.iCheckout(CheckoutSteps.java:17)
 at I checkout 1 "banana" (checkout.feature:4)
 ```
 
-太棒了！第一步通过了。现在的场景仍然标记为待处理，因为我们还没有编写 Checkout 类。你可能觉得在写出并尝试运行 Checkout 类代码之前，完全知道 Checkout 类并不存在有点奇怪。我们是刻意这么做的，因为我们希望在编写解决方案之前，确保我们有一个功能完整的测试。这种纪律让我们相信，当测试通过时，我们真的完成了。这种温和的节奏是我们所说的*外向内开发（outside-in development）*的重要部分，尽管起初看起来很奇怪，我们希望在书中向你展示它的巨大好处。
+太棒了！第一步通过了。现在的场景仍然标记为待处理，因为我们还没有编写 `Checkout` 类。你可能觉得在写出并尝试运行 `Checkout` 类代码之前，完全知道 `Checkout` 类并不存在有点奇怪。我们是刻意这么做的，因为我们希望在编写解决方案之前，确保我们有一个功能完整的测试。这种纪律让我们相信，当测试通过时，我们真的完成了。这种温和的节奏是我们所说的*外向内开发（outside-in development）*的重要部分，尽管起初看起来很奇怪，我们希望在书中向你展示它的巨大好处。
 
-从外向内开发的另一个好处是，我们有机会从用户的角度考虑 Checkout 类的命令行接口，而无需付出任何实现工作。在这个阶段，如果我们发现对接口的某些地方不满意，对我们来说很容易修改它。
+从外向内开发的另一个好处是，我们有机会从用户的角度考虑 `Checkout` 类的命令行接口，而无需付出任何实现工作。在这个阶段，如果我们发现对接口的某些地方不满意，对我们来说很容易修改它。
 
 现在我们创建一个存放实现的文件夹：
 
@@ -671,7 +676,7 @@ at I checkout 1 "banana" (checkout.feature:4)
 $ mkdir implementation
 ```
 
-现在在 implementation 文件夹中创建一个名为 Checkout.java 的 Java 文件。用你的文本编辑器打开它并输入以下类定义：
+现在在 `implementation` 文件夹中创建一个名为 `Checkout.java` 的 Java 文件。用你的文本编辑器打开它并输入以下类定义：
 
 ```java
 first_taste/08/implementation/Checkout.java
@@ -681,7 +686,7 @@ public class Checkout {
 }
 ```
 
-我们需要将此添加到 cucumber 脚本的完整步骤中，并修改类路径以包含项目根目录：
+我们需要将此添加到 `cucumber` 脚本的完整步骤中，并修改类路径以包含项目根目录：
 
 ```bash
 first_taste/08/cucumber
@@ -689,14 +694,12 @@ javac -cp "jars/*:" step_definitions/CheckoutSteps.java \
 implementation/Checkout.java
 ```
 
-现在当你运行 cucumber 时，你应该看到以下输出：
+现在当你运行 `cucumber` 时，你应该看到以下输出：
 
 ```
 - 1 Scenarios (1 pending)
 3 Steps (2 skipped, 1 pending)
 0m.81s
-
-```
 
 cucumber.api.PendingException: TODO: implement me
 at step definitions.CheckoutSteps.iCheckout(CheckoutSteps.java:17)
@@ -717,7 +720,7 @@ first_taste/08/cucumber --help
 
 ## 测试我们的 Checkout 类
 
-为了实现下一个步骤，编辑 CheckoutSteps.java，使第二个步骤看起来如下：
+为了实现下一个步骤，编辑 `CheckoutSteps.java`，使第二个步骤看起来如下：
 
 ```java
 first_taste/07/step_definitions/CheckoutSteps.java
@@ -728,7 +731,7 @@ public void iCheckout(int itemCount, String itemName) throws Throwable {
 }
 ```
 
-这段代码尝试在 Checkout 类实例上调用 `add()` 方法，传递购买的物品数量和价格。这次当我们运行 ./cucumber 时，应该得到编译错误，因为我们还没有创建 Checkout 类：
+这段代码尝试在 `Checkout` 类实例上调用 `add()` 方法，传递购买的物品数量和价格。这次当我们运行 `./cucumber` 时，应该得到编译错误，因为我们还没有创建 `Checkout` 类：
 
 ```
 step_definitions/CheckoutSteps.java:15: error: cannot find symbol
@@ -737,14 +740,11 @@ symbol: class Checkout
 location: class CheckoutSteps
 ```
 
-我们的步骤失败了，因为我们还没有可以使用的 Checkout 类。
-
-
-
+我们的步骤失败了，因为我们还没有可以使用的 `Checkout` 类。
 
 我们将 `Checkout` 类导入到 `CheckoutSteps` 中：
 
-```
+```java
 first_taste/08/step_definitions/CheckoutSteps.java
 import implementation.Checkout;
 ```
@@ -754,7 +754,6 @@ import implementation.Checkout;
 ```
 step_definitions/CheckoutSteps.java:19: error: cannot find symbol
 checkout.add(itemCount, bananaPrice);
-
 symbol:
     variable bananaPrice
     location: class CheckoutSteps
@@ -764,11 +763,11 @@ symbol:
 
 我们现在有两个通过了测试的步骤和一个 `Checkout` 的骨架实现。
 
-## 添加断言 (Adding an Assertion)
+## 添加断言
 
 为了让上一个测试恢复工作，请将 `step_definitions/CheckoutSteps.java` 中的步骤定义修改为如下所示：
 
-```
+```java
 first_taste/10/step_definitions/CheckoutSteps.java
 @Then("the total price should be (\\d+)\$")
 public void theTotalPriceShouldBec(int total) throws Throwable {
@@ -778,7 +777,7 @@ public void theTotalPriceShouldBec(int total) throws Throwable {
 
 我们正在使用 JUnit 断言来检查特征文件中的预期值是否与 `checkout` 的总额相匹配。如果不匹配，JUnit 将抛出错误。在可以编译之前，我们需要在 `step_definitions/CheckoutSteps.java` 中添加一个导入语句：
 
-```
+```java
 first_taste/10/step_definitions/CheckoutSteps.java
 import static org.junit.Assert.*;
 ```
@@ -789,7 +788,7 @@ import static org.junit.Assert.*;
 
 ## 现在为 Checkout 添加 `total()` 方法的实现：
 
-```
+```java
 first_taste/10/implementation/Checkout.java
 public int total() {
     return 0;
@@ -801,25 +800,23 @@ public int total() {
 ```
 step_definitions/CheckoutSteps.java:31: error: cannot find symbol
     assertEquals(total, checkout.total());
-
 symbol: variable checkout
 location: class CheckoutSteps
 error
 ```
 
-当我们我们在 `totalPriceShouldBeC` 中调用 `total()` 时，在 `iCheckout` 中创建的局部变量已经离开了作用范围。我们需要做的是把它变成 `CheckoutSteps` 的实例变量：
+当我们在 `totalPriceShouldBeC` 中调用 `total()` 时，在 `iCheckout` 中创建的局部变量已经离开了作用范围。我们需要做的是把它变成 `CheckoutSteps` 的实例变量：
 
-这是在同一个 Java 类中实现的不同步骤定义之间共享信息的常用方法。稍你还会看到其他实现方法，但这是一个你会经常使用的简单方法。
+这是在同一个 Java 类中实现的不同步骤定义之间共享信息的常用方法。稍后你还会看到其他实现方法，但这是一个你会经常使用的简单方法。
 
 当我们运行 `./cucumber` 时，我们有了一个真正的失败测试：
 
+```
 ..F
-
 - 1 Scenarios (1 failed)
 3 Steps (1 failed)
 0m0.099s
 
-```
 java.lang.AssertionError: expected:<40> but was:<0>
     at org.junit.Assert.fail(Assert.java:92)
     at org.junit.Assert.failNotEquals(Assert.java:646)
@@ -830,13 +827,13 @@ java.lang.AssertionError: expected:<40> but was:<0>
     at .Then the total price should be 40c(checkout.feature:5)
 ```
 
+
+
 太棒了！现在我们的测试是因为完全正确的原因失败的：它正在使用 `Checkout`，检查总额，并告诉我们总额应该是什么样子。这是一个停下来休息的自然时机。我们已经完成了这个版本最辛苦的工作：当我们回到这段代码时，Cucumber 将准确地告诉我们需要对程序做什么才能让它工作。如果所有的需求都能像这样带上失败的测试就绪，那么软件开发就会变得简单！
 
-## 尝试一下 (Try This)
+## 尝试一下
 
 尝试为 `Checkout` 添加一个 `total()` 的实现，让测试通过。
-
-
 
 ```java
 public void add(int count, int price) {
@@ -858,21 +855,21 @@ public int total() {
 
 在这一章中，我们快速浏览了许多不同的内容，这些内容之后都会再次进行详细介绍。让我们总结并强调一些最重要的要点。
 
-# 目录结构
+## 目录结构
 
 Cucumber 需要你指定特性（features）和步骤定义（step definitions）的存放位置。
 
-# 初学者之路
+## 初学者之路
 
 在进行示例的过程中，你注意到我们频繁运行 `../cucumber` 吗？
 
 我们喜欢使用 Cucumber 进行由外向内（outside-in）开发的原因之一是它能帮助我们保持专注。我们可以让 Cucumber 引导我们完成所需的工作，让自己能够专注于创建一个优雅的解决方案。通过在每次做出更改时都运行 Cucumber，我们犯的任何错误都能被发现并解决，我们能获得关于进展的反馈和鼓励。
 
-# Gherkin
+## Gherkin
 
 Cucumber 测试使用一种名为 Gherkin 的语法来表示。Gherkin 文件是纯文本，扩展名为 `.feature`。我们将在[第 3 章，第 31 页的 Gherkin 基础]中详细讨论。
 
-# 步骤定义
+## 步骤定义
 
 步骤定义是将你的 Cucumber 测试与你正在测试的应用程序结合在一起的胶水。整个部分协同工作，看起来有点像 17 页的图 1，Cucumber 测试套件的主要层。
 
@@ -974,11 +971,7 @@ And 我应该看到一条告知正确位数的消息。
 3. 《极端编程：拥抱变化》[Bec00]
 4. 给读者的注：Gherkin 语言有由解析器强制的语法，但该语言并不是图灵完备的。
 
-
-
-
-
-# 第 3 章. Gherkin 基础 • 34
+## 第 3 章. Gherkin 基础 • 34
 
 场景：过期日期不能在过去
 当我输入一个过去的卡片过期日期时
@@ -1066,7 +1059,7 @@ Feature: 这是该特性的描述，可以跨多行。
 
 所以，我们从一个*上下文*开始，接着描述一个*动作*，最后检查*结果*（outcome）*是否符合预期。每个场景都讲述了一个小故事，描述了系统应该能够做。
 
-# Given, When, Then
+## Given, When, Then
 
 在 Gherkin 中，我们使用 Given、When 和 Then 关键字来识别场景的不同部分：
 
@@ -1110,7 +1103,6 @@ Then 应该联系银行
 有些人觉得 Given, When, Then, And 有点啰嗦。有一个额外的关键字可以启动步骤：*（星号）。我们可以这样写场景：
 
 Scenario: 尝试使用被盗的卡片
-
 * 我的账户中有 $100
 * 我的卡片无效
 * 我请求 $20
@@ -1119,7 +1111,7 @@ Scenario: 尝试使用被盗的卡片
 
 对于 Cucumber 来说，这完全是同一个场景。你觉得这个版本更容易读吗？也许。某些意义会丢失吗？也许。这取决于你和团队想要如何表述。
 
-## 无状态 (Stateless)
+## 无状态
 
 在编写场景时，有一个你需要掌握的非常重要的概念：
 
@@ -1132,11 +1124,6 @@ Scenario: 尝试使用被盗的卡片
 ## 名称和描述
 
 就像 Feature 一样，Scenario关键字可以使用名称和描述。通常你可能只会使用一个，但 Gherkin 的做法是在名称后跟一个多行描述——直到第一个 Given、When 或 Then 之前的所有内容都会被吸入场景描述中。
-
-
-
-
-场景 • 39
 
 过时的场景名称可能会导致困惑。在修改现有场景（或复制粘贴它们）时，请务必检查名称是否仍然符合逻辑。由于场景名称仅仅是文档，即使它的名称与步骤中实际发生的情况不再有任何关系，Cucumber 也不会让场景失败。这对于以后阅读该场景的任何人来说，都可能非常困惑。
 
@@ -1166,27 +1153,38 @@ Scenario: 尝试使用被盗的卡片
 
 这是一个示例：
 
-```
+
+
 gherkin_basics/comments_example.feature
+
 ## This feature covers the account much transaction and hardware-driver modules
+
 Feature: Withdraw Cash
+
 In order to buy beer
+
 As an account holder
+
 Want to withdraw cash from the ATM
 
 ## Can’t figure out how to integrate with magic wand interface
-Scenario: Withdraw too much from an account in credit
-Given I have $50 in my account
-## When I wave my magic wand
-And I withdraw $100
-Then I should receive cash $100
-```
 
+Scenario: Withdraw too much from an account in credit
+
+Given I have $50 in my account
+
+## When I wave my magic wand
+
+And I withdraw $100
+
+Then I should receive cash $100
+
+```
 你也可以在场景内部放置注释。最常见的用途是注释掉某个步骤，正如我们在上一个示例中所示的那样。
 
 像任何编程语言一样，注释可能会很快过时变得毫无意义甚至完全让人困惑。当这种情况发生时，注释带来的害处大于利处。我们建议你尽可能少地使用它们，并将重要的内容放在可以测试的场景中。
 
-以下是我们对此的看法：描述（你可以将其放在每个关键字之后）是是结构化 Gherkin 文档的一部分，也是为利益相关者放置文档的正确位置。
+以下是我们对此的看法：描述（你可以将其放在每个关键字之后）是结构化 Gherkin 文档的一部分，也是为利益相关者放置文档的正确位置。
 
 相反，注释可以为处理这些特性的测试人员和程序员留记。将注释看作是更临时性的，有点类似于便利贴。
 
@@ -1202,14 +1200,21 @@ Then I should receive cash $100
 
 ```
 ## language: no
+
 Egenskap: Summering
+
 For å unngå at firmaet går konkurs
+
 Må regnskapsførere bruke regnemaskin for å legge sammen tall
 
 Scenario: to tall
+
 Gitt at jeg har tastet inn 5
+
 Og jeg har tastet inn 7
+
 år jeg summerer
+
 Så skal resultatet være 12
 ```
 
@@ -1273,9 +1278,6 @@ $ ./cucumber --i18n ja
 
 为你的项目编写第一个正式的 Gherkin 场景。选择你现在正在处理的特性，并尝试描述完成后系统应该如何运行。注意在你对应该使用的精确语言或精确行为有疑问时，记录下这些问题。尝试与团队中合适的人交流以回答这些问题。向他们展示这个场景：对他们来说合理吗？他们会如何表述？
 
-
-
-
 ## 步骤定义：从外部开始
 
 现在你已经知道如何使用 Gherkin 来描述你想要测试执行的*内容*，接下来的任务是告诉它们*如何*执行。无论你选择通过 Cucumber 场景还是简单的 JUnit 测试来驱动你的验收测试，都无法逃避最终需要编写某些代码的事实。现在是时候了。
@@ -1286,8 +1288,8 @@ Given I have $100 in my Account
 
 这个步骤定义需要完成以下操作：
 
--   为场景中的主角创建一个账户（如果尚未创建）。
--   将该账户的余额设置为 $100。
+- 为场景中的主角创建一个账户（如果尚未创建）。
+- 将该账户的余额设置为 $100。
 
 是否能准确地实现这两个目标在很大程度上取决于你的具体应用程序。自动化验收测试通常尝试模拟用户与系统的交互，而步骤定义正是你告诉 Cucumber 你希望它如何“探测”你的系统的地方。这可能涉及点击用户界面上的按钮，或者深入内部直接向数据库插入数据、写入文件，甚至调用 Web 服务。我们将步骤定义本身与执行实际探测的自动化代码隔离开来，以便层级之间保持分离，如图所示：
 
@@ -1311,10 +1313,15 @@ Gherkin 步骤以纯文本形式表示。Cucumber 扫描每个步骤以寻找它
 
 ```
 step_definitions/intro/features/cash_withdrawal.feature
+
 Feature: Cash withdrawal
+
 Scenario: Successful withdrawal from an account in credit
+
 Given I have $100 in my account
+
 When I request $20
+
 Then $20 should be dispensed
 ```
 
@@ -1336,8 +1343,11 @@ Then $20 should be dispensed
 
 ```
 @Given("I have \$100 in my Account")
+
 public void iHave100InAccount() throws Throwable {
+
     // TODO: 将 $100 放入用户账户的代码
+
 }
 ```
 
@@ -1353,38 +1363,51 @@ Maven 非常强大，但我们只使用一小部分子集来帮助管理示例�
 
 ```
 express_scenarios/01/pom.xml
+
 <properties>
+
   <cucumber.version>1.2.0</cucumber.version>
+
   <junit.version>4.11</junit.version>
+
 </properties>
 
 <dependencies>
+
   <dependency>
+
     <groupId>info.cucumber.cukes</groupId>
+
     <artifactId>cucumber-java</artifactId>
+
     <version>${cucumber.version}</version>
+
     <scope>test</scope>
+
   </dependency>
+
   <dependency>
+
     <groupId>info.cucumber.cukes</groupId>
+
     <artifactId>cucumber-junit</artifactId>
+
     <version>${cucumber.version}</version>
+
     <scope>test</scope>
+
   </dependency>
+
 </dependencies>
 ```
 
-+   a. http://maven.apache.org
++ a. http://maven.apache.org
 
-注册步骤定义。我们向 @Given 注解传递一个正则表达式来匹配一个或多个步骤（双引号之间的部分），并定义一个匹配时执行的 Java 方法。Cucumber 存储了正则表达式与方法之间的映射，因此当遇到匹配的步骤时它可以调用该方法。
+注册步骤定义。我们向 `@Given` 注解传递一个正则表达式来匹配一个或多个步骤（双引号之间的部分），并定义一个匹配时执行的 Java 方法。Cucumber 存储了正则表达式与方法之间的映射，因此当遇到匹配的步骤时它可以调用该方法。
 
 实际上，使用三种方法中的哪一种来注册步骤定义并不重要，因为 Cucumber 在匹配步骤时会忽略关键字。在底层，所有注解都是 `StepDefAnnotation` 的别名。
 
 你也可以以同样的方式使用 `@When` 或 `@Then` 注解来创建步骤定义。
-
-
-
-
 
 # 依赖管理—第 2 部分
 
@@ -1392,17 +1415,29 @@ express_scenarios/01/pom.xml
 
 ```
 express_scenarios/01/pom.xml
+
 <plugin>
+
   <groupId>org.apache.maven.plugins</groupId>
+
   <artifactId>maven-surefire-plugin</artifactId>
+
   <version>2.12.2</version>
+
   <configuration>
+
     <argLine>-Duser.language=en</argLine>
+
     <argLine>-Xmx128m</argLine>
+
     <argLine>-XX:MaxPermSize=256m</argLine>
+
     <argLine>-Dfile.encoding=UTF-8</argLine>
+
     <useFile>false</useFile>
+
   </configuration>
+
 </plugin>
 ```
 
@@ -1440,23 +1475,30 @@ Then 我的账户中有 $100
 
 ```java
 @Given("I have \$100 in My Account")
+
 void iHave100InMyAccount() {
+
   // TODO: 将 $100 放入用户账户的代码写在此处
+
 }
 ```
 
-现在我们已经学了 Cucumber 会忽略匹配步骤的 `@Given`/`@When`/`@Then` 注解，我们可以看到这个原始步骤定义也会匹配我们新场景的最后一步。即 “我的账户中有 $100”。惊喜吧！我们本以为该步骤会检查账户余额，但实际上它会向账户中存入 $100！
+
+
+# 步骤定义与正则表达式
+
+现在我们已经了解了 Cucumber 会忽略匹配步骤的 `@Given`、`@When`、`@Then` 注解，我们可以看到这个原始步骤定义也会匹配我们新场景的最后一步，即“我的账户中有 $100”。惊喜吧！我们本以为该步骤会检查账户余额，但实际上它会向账户中存入 $100！
 
 在这种情况下我们显然需要小心，因为我们很容易得到一个给我们虚假正报的场景：在失败时却通过了测试。这看起来可能不像，但 Cucumber 的灵活性实际上通过暴露每个步骤所用语言中某些微妙的歧义来帮助了我们。我们发现避免这种问题的最佳方法是仔细注意步骤中精确的措辞。你可以更改两个步骤，使其不那么歧义：
 
-Given 我在我的账户中存入了 $100
-Then 我的账户余额应该是 $100
+> Given 我在我的账户中存入了 $100
+> Then 我的账户余额应该是 $100
 
-通过这样重新排列步骤，你让它们能够更好地传达它们将执行的的确切内容。学习排序和消除这种歧义是需要练习的。注意这样的两个步骤之间的区别也可以为你提供一些提示，即某些可能不需要在你的代码中表达的概念。这看起来可能很死板，但我们发现，关注这些细节的团队编写的软件质量更好，速度也更快。
+通过这样重新排列步骤，你让它们能够更好地传达它们将执行的确切内容。学习排序和消除这种歧义是需要练习的。注意这样的两个步骤之间的区别也可以为你提供一些提示，即某些可能不需要在你的代码中表达的概念。这看起来可能很死板，但我们发现，关注这些细节的团队编写的软件质量更好，速度也更快。
 
-## 语言混合（Speaking in Tongues）
+## 语言混合
 
-如果你在特性（features）中使用与英语不同的口语语言，在注册步骤定义时仍然可以使用相同的语言。Cucumber 为每种口语语言的每个注解创建一个别名，例如，在西班牙工作的团队可以使用以下代码：
+如果你在特性中使用与英语不同的口语语言，在注册步骤定义时仍然可以使用相同的语言。Cucumber 为每种口语语言的每个注解创建一个别名，例如，在西班牙工作的团队可以使用以下代码：
 
 ```java
 @Dado("tengo \$100 en mi Cuenta")
@@ -1465,7 +1507,7 @@ public void tengo$100EnMiCuenta() {
 }
 ```
 
-## 捕获参数（Capturing Arguments）
+## 捕获参数
 
 你会注意到，在我们使用的示例步骤中，我们一直在谈论 $100 的总和。如果我们有另一个场景，需要向账户存入不同金额的钱呢？我们需要另一个步骤定义吗，像这样：
 
@@ -1474,262 +1516,100 @@ public void tengo$100EnMiCuenta() {
 void iHaveDeposited100() {
   // TODO 代码写在此处
 }
-```
 
-```java
 @Given("I have deposited \$250 in my Account")
 void iHaveDeposited250() {
   // TODO 代码写在此处
 }
 ```
 
-由于我们已经学了 Cucumber 会忽略匹配步骤的 `@Given`/`@When`/`@Then` 注解，我们可以看到这个原始步骤定义也会匹配我们新场景的最后一步。“我的账户中有 $100”。惊喜吧！我们本以为该步骤会检查账户余额，但实际上它会向账户中存入 $100！
+显然这不可行。我们需要一种方法来捕获步骤文本中的变量部分，并将其传递给步骤定义方法。Cucumber 使用正则表达式来实现这一点。
 
-在这种情况下我们显然需要小心，因为我们很容易得到一个给我们虚假正报的场景：在失败时却通过了测试。这看起来可能不像，但 Cucumber 的灵活性实际上通过暴露每个步骤所用语言中某些微妙的歧义来帮助了我们。我们发现避免这种问题的最佳方法是仔细注意步骤中精确的措辞。你可以更改两个步骤，使其不那么歧义：
+### 正则表达式基础
 
-Given 我在我的账户中存入了 $100
-Then 我的账户余额应该是 $100
-
-通过这样重新排列步骤，你让它们能够更好地传达它们将执行的确切内容。学习排序和消除这种歧义是需要练习的。注意这样的两个步骤之间的区别也可以为你提供一些提示，即某些可能不需要在你的代码中表达的概念。这看起来可能很死板，但我们发现，关注这些细节的团队编写的软件质量更好，速度也更快。
-
-# 捕获参数（Arguments Arguments）
-
-你会注意到，在我们使用的示例步骤中，我们一直在谈论 $100 的总和。如果我们有另一个场景，需要向账户存入不同金额的钱呢？我们需要另一个步骤定义吗，像这样：
+我们可以修改步骤定义，使用正则表达式捕获金额：
 
 ```java
-@Given("I have deposited \$100 in my Account")
-void iHaveDeposited100() {
-  // TODO 代码写在此处
-}
-```
-
-```java
-@Given("I have deposited \$250 in my Account")
-void iHaveDeposited250() {
-  // TODO 代码写在此处
-}
-```
-
-由于我们已经学了 Cucumber 会忽略匹配步骤的 `@Given`/`@When`/`@Then` 注解，我们可以看到这个原始步骤定义也会匹配我们新场景的最后一步。“我的账户中有 $100”。惊喜吧！我们本以为该步骤会检查账户余额，但实际上它会向账户中存入 $100！
-
-## 捕获参数（Capturing Arguments）
-
-你会注意到，在我们使用的示例步骤中，我们一直在谈论 $100 的总和。如果我们有另一个场景，需要向账户存入不同金额的钱呢？我们需要另一个步骤定义吗，像这样：
-
-```java
-@Given("I have deposited \$100 in my Account")
-void iHaveDeposited100() {
-  // TODO 代码写在此处
-}
-```
-
-```java
-@Given("I have deposited \$250 in my Account")
-void iHaveDeposited250() {
-  // TODO 代码写在此处
-}
-```
-
-## 捕获参数（Capturing Arguments）
-
-你会注意到，在我们使用的示例步骤中，我们一直在谈论 $100 的总和。如果我们有另一个场景，需要向账户存入不同金额的钱呢？我们需要另一个步骤定义吗，像这样：
-
-```java
-@Given("I have deposited \$100 in my Account")
-void iHaveDeposited100() {
-  // TODO 代码写在此处
-}
-```
-
-```java
-@Given("I have deposited \$250 in my Account")
-void iHaveDeposited250() {
-  // TODO 代码写在此处
-}
-```
-
-## 捕获参数（Capturing Arguments）
-
-你会注意到，在我们使用的示例步骤中，我们一直在谈论 $100 的总和。如果我们有另一个场景，需要向账户存入不同金额的钱呢？我们需要另一个步骤定义吗，像这样：
-
-```java
-@Given("I have deposited \$100 in my Account")
-void iHaveDeposited100() {
-  // TODO 代码写在此处
-}
-```
-
-```java
-@Given("I have deposited \$250 in my Account")
-void iHaveDeposited250() {
-  // TODO 代码写在此处
-}
-```
-
-（注：由于提供的文本中存在大量重复段落，此处已根据逻辑进行翻译并去重，以符合 Markdown 文档规范。）
-
-## 捕获参数（Capturing Arguments）
-
-你会注意到，在我们使用的示例步骤中，我们一直在谈论 $100 的总和。如果我们有另一个场景，需要向账户存入不同金额的钱呢？我们需要另一个步骤定义吗，像这样：
-
-```java
-@Given("I have deposited \$100 in my Account")
-void iHaveDeposited100() {
-  // TODO 代码写在此处
-}
-```
-
-```java
-@Given("I have deposited \$250 in my Account")
-void iHaveDeposited250() {
-  // TODO 代码写在此处
-}
-```
-
-## 捕获参数（Capturing Arguments）
-
-你会注意到，在我们使用的示例步骤中，我们一直在谈论 $100 的总和。如果我们有另一个场景，需要向账户存入不同金额的钱呢？我们需要另一个步骤定义吗，像这样：
-
-（此处由于原文内容高度重复，实际翻译时已针对核心逻辑进行了去重性处理。）
-
-
-
-
-# 第 4 章 步骤定义：从外部开始 • 54
-
-现在我们将接受的字符限制为数字。我们仍然使用星号 `*` 来修改字符以接受任意数量的字符，但现在我们明确了将接受连续的数字字符串。
-
-## 简写字符类
-
-对于像 `[0-9]` 常见的字符模式，有一些可以替代的简写字符类。你可能会觉得正则表达式更晦涩，但需要学习的只有几个。对于数字，你可以使用 `\d` 作为 `[0-9]` 的简写：
-
-```
-@Given("I have deposited $\\d* in my Account"
+@Given("I have deposited \\$(\\d+) in my Account")
 public void iHaveDepositedInMyAccount(int amount) {
   // TODO: code goes here
 }
 ```
+
+这里 `\\$` 匹配字面量 `$` 符号，`(\\d+)` 是一个捕获组，匹配一个或多个数字。Cucumber 会将捕获到的字符串自动转换为方法参数的类型（此处为 `int`）。
+
+### 简写字符类
+
+对于像 `[0-9]` 常见的字符模式，有一些可以替代的简写字符类。对于数字，你可以使用 `\\d` 作为 `[0-9]` 的简写。
 
 以下是最有用的字符类：
 
-- `\w` 表示单词字符，具体为 `[A-Za-z0-9]`。注意它包含下划线和数字，但不包含连字符。
-- `\d` 表示数字，或 `[0-9]`。
-- `\s` 表示空白字符，具体为 `[\s\n]`。这意味着制表符或换行符。
-- `\b` 表示单词边界，它非常像 `\s` 但实际上是 `\w` 的相反。任何非字符的地方都是单词边界。
+- `\\w` 表示单词字符，具体为 `[A-Za-z0-9_]`。注意它包含下划线和数字，但不包含连字符。
+- `\\d` 表示数字，或 `[0-9]`。
+- `\\s` 表示空白字符，具体为 `[ \\t\\n\\r]`。这意味着空格、制表符或换行符。
+- `\\b` 表示单词边界。
 
-你也可以通过大写字母来取反字符类，例如 `\D` 表示数字以外的任何字符。
+你也可以通过大写字母来取反字符类，例如 `\\D` 表示数字以外的任何字符。
 
-回到匹配我们的账户。看起来我们已经完成了，但还有一个问题需要修复。你能看出是什么吗？
+### + 修饰符
 
-## + 修饰符
+星号 `*` 是重复修饰符的一个例子，它表示“零次或多次”。一个微妙的问题是，任意次数可能意味着零。
 
-星号是重复修饰符的一个例子，还有其他的。星号一个微妙的问题是，任意次数可能意味着零。
+所以，如果使用 `\\d*`，这个步骤会匹配：
 
-所以，这个步骤会匹配：
+> Given I have deposited $ in my Account
 
-```
-Given I have deposited $ in my Account
-```
-这可不太好。为了修复这个问题，我们可以使用 `+` 修饰符，它意味着至少一次：
-```
-@Given("I have deposited $\\$d+ in my Account"
+这可不太好。为了修复这个问题，我们可以使用 `+` 修饰符，它意味着“至少一次”：
+
+```java
+@Given("I have deposited \\$(\\d+) in my Account")
 public void iHaveDepositedInMyAccount(int amount) {
   // TODO: code goes here
 }
 ```
 
-好了。我们通过一条路线得到了答案，但在途中，我们几乎访问了每一个在构建 Cucumber 步骤定义时有用的正则表达式特性。我们只剩下几个需要涵盖。
-
-## 尝试一下
-
-想象你正在为机场候机室屏幕构建系统。你需要能够从 Cucumber 场景中捕获航班代码示例。你能写一个单一步骤定义来捕获所有这些步骤中的航班代码吗？
-
-Given the flight EZY4567 is leaving today
-
-Given the flight C038 is leaving today
-
-Given a flight BA01618 is leaving today
-
-从写一个适用于第一个步骤的步骤定义开始，然后让它变得更加通用，使其也能适用于其他步骤。
-
-## 多重捕获
+### 多重捕获
 
 你不需要停止于捕获单个参数。Cucumber 会为正则表达式中的每个捕获组向你的方法传递一个参数，因此你可以从一个步骤中获取你需要的任何细节。
 
-这是一个示例。让我们假设银行想开始为客户提供储蓄账户以及他们常规的支票账户。客户可以使用 ATM 在他们的账户之间转账。这里是该功能的一个场景：
+让我们假设银行想开始为客户提供储蓄账户以及他们常规的支票账户。客户可以使用 ATM 在他们的账户之间转账。这里是该功能的一个场景：
 
+```gherkin
 Scenario: Transfer funds from savings into checking account
-
-```
-Given I I have deposited $10 in my Checking Account
-And I have deposited $500 in my Savings Account
-When I transfer $500 from my Savings Account into my Checking Account
-Then the balance of the Checking Account should be $510
-And the balance of the Savings Account should be $0
+  Given I have deposited $10 in my Checking Account
+  And I have deposited $500 in my Savings Account
+  When I transfer $500 from my Savings Account into my Checking Account
+  Then the balance of the Checking Account should be $510
+  And the balance of the Savings Account should be $0
 ```
 
 让我们尝试写一个可以处理前两个步骤的步骤定义。除了存款的金额，我们还需要捕获账户类型，以便我们知道把钱存放在哪里。
 
-我们可以使用之前使用的正则表达式的修改版本来捕获账户类型：
-
-# 第 4 章 步骤定义：从外部开始 • 56
-
-```
-@Given("I have deposited \$\(d+\) in my (\w+) Account")
+```java
+@Given("I have deposited \\$(\\d+) in my (\\w+) Account")
 public void iHaveDepositedInMyAccount(int amount, String accountType) {
   // TODO: code goes here
 }
 ```
 
-我们使用了简写类 `\w`，通过 `+` 修饰以表示任何单词字符，至少一次，有效地捕获了单个单词。该单词随后被传递给我们命名为 `accountType` 的方法。
+我们使用了简写类 `\\w`，通过 `+` 修饰以表示任何单词字符，至少一次，有效地捕获了单个单词。该单词随后被传递给我们命名为 `accountType` 的方法。
 
-## 尝试一下
+对于转账步骤，该步骤应该捕获三个参数：转账的金额、被扣款的账户类型、接收的账户类型。
 
-想象你正在为机场候机室屏幕构建系统。你需要能够从 Cucumber 场景中捕获航班代码示例。你能写一个单一步骤定义来捕获所有这些步骤中的航班代码吗？
-
-Given the flight EZY4567 is leaving today
-
-Given the flight C038 is leaving today
-
-Given a flight BA01618 is leaving today
-
-该步骤应该捕获三个参数：
-
-- 转账的金额
-- 被扣款的账户类型
-- 接收的账户类型
-
-## 灵活性
-
-星号是重复修饰符的一个例子，还有其他的。星号一个微妙的问题是，任意次数可能意味着零。
-
-所以，这个步骤会匹配：
-
-```
-Given I have deposited $ in my Account
-```
-这可不太好。为了修复这个问题，我们可以使用 `+` 修饰符，它意味着至少一次：
-```
-@Given("I have deposited $\\$d+ in my Account"
-public void iHaveDepositedInMyAccount(int amount) {
+```java
+@When("I transfer \\$(\\d+) from my (\\w+) Account into my (\\w+) Account")
+public void iTransferFromTo(int amount, String fromAccount, String toAccount) {
   // TODO: code goes here
 }
 ```
 
-好了。我们通过一条路线得到了答案，但在途中，我们几乎访问了每一个在构建 Cucumber 步骤定义时有用的正则表达式特性。我们只剩下几个需要涵盖。
+---
 
-（注：提供的 OCR 文本包含重复和交错的部分。我已经根据提供的字符串对逻辑流进行了处理。）
+# 第 4 章 步骤定义：从外部开始
 
+## Cucumber 如何执行用例
 
-
-
-![](img/3bdd08a58a5b15b4736776437bb8f3a0_74_0.png)
-
-图 2—Cucumber 如何执行用例
-
-## 第 4 章 步骤定义：从外部 • 60
-
-与大多数其他测试工具一样，Cucumber 使用异常来告知测试的失败。在执行用例时，Cucumber 会逐个执行步骤，除非步骤定义抛出异常，否则它假设该步骤已通过。如果抛出的异常是 `PendingException`，则该步骤被标记为待处理（pending）——所有其他异常都会导致步骤失败。如果步骤通过，Cucumber 将移动到下一个步骤。见第 59 页图 2，Cucumber 如何执行用例展示了这一过程。
+与大多数其他测试工具一样，Cucumber 使用异常来告知测试的失败。在执行用例时，Cucumber 会逐个执行步骤，除非步骤定义抛出异常，否则它假设该步骤已通过。如果抛出的异常是 `PendingException`，则该步骤被标记为待处理——所有其他异常都会导致步骤失败。如果步骤通过，Cucumber 将移动到下一个步骤。
 
 在 Cucumber 中，结果比简单的通过或失败要复杂一些。已执行的用例可能处于以下任何状态之一：
 
@@ -1738,36 +1618,33 @@ public void iHaveDepositedInMyAccount(int amount) {
 - 跳过 (Skipped)
 - 通过 (Passed)
 
-设计这些状态旨在帮助指示你在开发测试时取得的进展。让我们运行一个自动化 ATM 取款用例的示例来说明我们的意思。
+设计这些状态旨在帮助指示你在开发测试时取得的进展。
 
-## 未定义的步骤 (Undefined Steps)
+## 未定义的步骤
 
 当 Cucumber 找不到匹配步骤的步骤定义时，它会将该步骤标记为未定义（黄色）并停止用例。用例中的其余步骤如果它们本身没有匹配的步骤定义，将会被跳过或标记为未定义。
 
 为了展示这是如何工作的，我们可以运行 ATM 取款用例。创建一个名为 `resources/cash_withdrawal.feature` 的文件并将以下内容其中：
 
-```
-step_definitions/00/src/test/resources/cash_withdrawal.feature
+```gherkin
 Feature: Cash Withdrawal
+
 Scenario: Successful withdrawal from an account in credit
-Given I have deposited $100 in my account
-When I request $20
-Then $20 should be dispensed
+  Given I have deposited $100 in my account
+  When I request $20
+  Then $20 should be dispensed
 ```
 
 我们还没有编写任何步骤定义，所以当我们运行这个功能文件时，我们应该看到所有步骤都显示为未定义：
 
 ```
 T E S T
-
 Running RunCTest
 Feature: Cash Withdrawal
-
 Scenario: Successful withdrawal from an account in credit
-Given I have deposited $100 in my account
-When I request $20
-Then $20 should be dispensed
-
+  Given I have deposited $100 in my account
+  When I request $20
+  Then $20 should be dispensed
 + 1 Scenarios (1 undefined)
 3 Steps (3 undefined)
 0m.000s
@@ -1775,31 +1652,43 @@ Then $20 should be dispensed
 
 你可以使用下面的代码片段实现缺失的步骤：
 
-```
-@When("\\\\(\\d+) in my account$")
+```java
+@Given("I have deposited \\$(\\d+) in my account")
 public void iHaveDepositedInMyAccount(int arg) throws Throwable {
     // 编写代码将上述短语转换为具体动作
     throw new PendingException();
 }
 
-@When("I request \\\(\d+$")
+@When("I request \\$(\\d+)")
 public void iRequest(int arg) throws Throwable {
     // 编写代码将上述短语转换为具体动作
     throw new PendingException();
 }
 
-@Then("\\\\(\d+) should be disposed$")
-public void shouldBeDisposed(int arg) throws Throwable {
+@Then("\\$(\\d+) should be dispensed")
+public void shouldBeDispensed(int arg) throws Throwable {
     // 编写代码将上述短语转换为具体动作
     throw new PendingException();
 }
+```
+
+
+
+public void shouldBeDisposed(int arg) throws Throwable {
+
+    // 编写代码将上述短语转换为具体动作
+
+    throw new PendingException();
+
+}
+
 ```
 
 运行测试: 5, 失败: 0, 错误: 0, 跳过: 4, 耗时: 0.382 sec
 
 你应该能看到每个步骤都是黄色的，表示它既没有失败（红色）也没有通过（绿色），而是处于两者之间。注意 Cucumber 为每个缺失的步骤定义都打印了一个代码片段。我们可以将这些作为实现我们自己的步骤定义的起点。
 
-## 待处理步骤 (Pending Steps)
+## 待处理步骤
 
 当 Cucumber 发现一个步骤定义实现了一半时，它会将该步骤标记为待处理（黄色）。同样，用例将停止，其余步骤将被跳过或标记为未定义。
 
@@ -1808,7 +1697,7 @@ Cucumber 如何知道一个步骤定义是否已经实现？
 
 当你从步骤定义内部抛出 `PendingException` 时，这会告诉 Cucumber 的运行时该步骤失败了，但是以一种特殊的方式：该步骤定义仍在开发中。你可能已经注意到了——
 
-## 断言与异常 (Assertions and Exceptions)
+## 断言与异常
 
 即使你习惯使用 JUnit 这样的测试库，你可能还没有意识到这些库中的断言是通过抛出异常来工作的。
 
@@ -1816,18 +1705,29 @@ Cucumber 如何知道一个步骤定义是否已经实现？
 
 ```
 step_definitions/assertions_sidebar/AssertionExample.java
+
 import org.junit.*;
+
 import static org.junit.Assert.*;
 
 public class AssertionExample {
+
     public static void main(String[] args) {
+
         try {
+
             assertTrue(false);
+
         } catch (AssertionError e) {
+
             System.out.print("Exception was raised was ");
+
             System.out.println(e.getClass().getName());
+
         }
+
     }
+
 }
 ```
 
@@ -1841,18 +1741,25 @@ Cucumber 为未定义步骤生成的代码片段抛出了 `PendingException` ：
 
 ```
 step_definitions/01/src/test/java/nicebank/Steps.java
+
 package nicebank;
 
 import cucumber.api.java.en.*;
+
 import cucumber.api.PendingException
 
 public class Steps {
 
     @Given("I have deposited \\\\|\\\d+) in my account$")
+
     public void IHaveDepositedInMyAccount(int amount) throws Throwable {
+
         // 在此处编写代码将该短语转换为具体动作
+
         throw new PendingException();
+
     }
+
 }
 ```
 
@@ -1862,22 +1769,33 @@ public class Steps {
 T E S T
 
 Running RunCTest
+
 Feature: Cash Withdrawal
 
 Scenario: Successful withdrawal from an account in credit
+
 Given I have deposited $100 in my account
+
 cucumber.api.PendingException: TODO: implement me
+
 at nicebank.Steps.IHaveDepositedInMyAccount(Steps.java:11)
+
 at *.Given I have deposited $100 in my account(cash_withdrawal.feature:3)
+
 When I request $20
+
 Then $20 should be deposited
 
 + 1 Scenarios (1 undefined)
+
 3 Steps (1 pending, 2 undefined)
+
 0m.121s
 
 cucumber.api.PendingException: TODO: implement me
+
 at nicebank.Steps.IHaveDepositedInMyAccount(Steps.java:11)
+
 at *.Given I have deposited $100 in my account(cash_withdrawal.feature:3)
 ```
 
@@ -1887,16 +1805,20 @@ at *.Given I have deposited $100 in my account(cash_withdrawal.feature:3)
 
 ```
 @Then("^$(\d+) should be dispensed$")
+
 public void shouldBeDispensed(int arg) throws Throwable {
+
     // 在此处编写代码将该短语转换为具体动作
+
     throw new PendingException();
+
 }
 ```
 
-> 严格模式 (Strict Mode)
+> 严格模式
 如果你在 shell 脚本中使用 `-strict` 命令行选项 cucumber，如果存在任何未定义或待处理的步骤，它将返回错误代码 1（表示错误）。这在持续集成构建中非常有用，可以停止意外提交的半成品功能，或者在你重构步骤定义导致某些步骤不再匹配时使用。
 
-## 失败步骤 (Failed Steps)
+## 失败步骤
 
 如果执行步骤定义的代码块抛出异常，Cucumber 将该步骤标记为失败（红色）并停止用例。用例中的其余步骤将被跳过。
 
@@ -1905,10 +1827,7 @@ public void shouldBeDispensed(int arg) throws Throwable {
 - 场景无法完成，是因为在你的步骤代码或被测系统中存在一个 Bug，导致它抛出了错误。当你使用 Cucumber 从外部向内部驱动开发时，你会经常看到这些失败。每个失败消息都告诉了你需要做什么。
 - 步骤定义使用了断言来检查系统的状态，但检查没有通过。你通常会在外向内开发循环结束时遇到这些错误，或者在功能实现很久之后，如果有人意外引入了 Bug 就会遇到这些错误。
 
-
-
-
-# 返回结果 • 65
+## 返回结果 • 65
 
 你为系统安装了警报器，如果系统开始以意想不到的方式运行，它就会响起来。无论如何，Cucumber 都会在输出中显示异常消息和回溯轨迹，因此调查工作由你负责。
 
@@ -1916,9 +1835,13 @@ public void shouldBeDispensed(int arg) throws Throwable {
 
 ```
 step_definitions/03/src/test/java/nicebank/Steps.java
+
 @Given("I have deposited ${int} in my account")
+
 public void iHaveDepositedInMyAccount(int amount) throws Throwable {
+
     new Account(amount);
+
 }
 ```
 
@@ -1926,8 +1849,11 @@ public void iHaveDepositedInMyAccount(int amount) throws Throwable {
 
 ```
 step_definitions/04/src/test/java/nicebank/Steps.java
+
 class Account {
+
     public Account(int openingBalance) {
+
 }
 ```
 
@@ -1935,17 +1861,27 @@ class Account {
 
 ```
 TESTS
+
 ---------------------------------------
+
 Running RunCukesTest
+
 Feature: Cash Withdrawal
 
 Scenario: Successful withdrawal from an account in credit
+
 Given I have deposited $100 in my account
+
     When I request $20
+
 cucumber.api.PendingException: TODO: implement
+
     at nicebank.Steps.iRequest$(Steps.java:24)
+
     at *.When I request $20(cash_withdrawal.feature:4)
+
     Then $20 should be dispensed
+
 ```
 
 - 1 Scenarios (1 pending)
@@ -1965,11 +1901,8 @@ Tests run: 5, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 0.739 sec
 将步骤定义看作一种特殊的方法是有用的。与名称必须精确匹配的普通方法不同，步骤定义可以可以由任何匹配其正则表达式的步骤调用。由于正则表达式可以包含通配符，这意味着你有灵活性让 Gherkin 步骤变得优美且易于读，同时保持你的 Java 定义代码整洁且无重复。
 
 - 步骤定义提供了从 Gherkin 场景（用户操作的自然语言描述）到模拟这些操作的 Java 代码的映射。
-
 - 步骤定义通过使用 `@Given`、`@When`、`@Then` 或你所用语言的别名来注册到 Cucumber 中。
-
 - 步骤定义使用正则表达式来声明它们可以处理的步骤。由于正则表达式可以包含通配符，一个步骤定义可以处理多个不同的步骤。
-
 - 步骤定义通过抛出或不抛出异常向 Cucumber 通信其结果。
 
 现在你已经看到 Gherkin 和步骤定义是如何结合在一起的，你已经准备好开始使用它们。为了测试应用程序，你需要学习如何使用这些功能，例如见第 225 页的 `Applications`。Web 服务见第 273 页的 `Web Services`。
@@ -1994,7 +1927,6 @@ Tests run: 5, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 0.739 sec
 功能文件中的 `background` 部分允许你指定一组适用于每个场景的步骤。你不需要为每个场景反复重复这些步骤，而是将它们移动到 `Background` 中。这样做有两个优点：
 
 - 如果你需要更改这些步骤，只需要在一个地方进行更改。
-
 - 这些步骤的重要性会淡入背景，这样当你阅读每个场景时，就可以专注于该场景独特的部分。
 
 为了向你解释我们的意思，让我们取一个使用基本 `Scenario` 元素的现有场景，并通过重构使用 `Background` 来提高其可读性。这是我们重构后的场景：
@@ -2007,30 +1939,41 @@ Tests run: 5, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 0.739 sec
 
 ```
 Scenario: Change PIN successfully
+
 Given I have issued a new card
+
 And I insert the card, entering the correct PIN
+
 When I choose "Change PIN" from the menu
+
 And I change the PIN to 9876
+
 Then the system should remember my PIN is now 9876
 ```
 
 ```
 Scenario: Try to change PIN to the same as before
+
 Given I have issued a new card
+
 And I insert the card, entering the correct PIN
+
 When I choose "Change PIN" from the menu
+
 And I try to change the PIN to the original PIN number
+
 Then I should see a warning message
+
 And the system should not have changed my PIN
 ```
 
-你可以看到这里有两个场景，但如果不仔细阅读，很难看出每个场景中发生了什么。每个场景的前三个步骤虽然对于明确场景背景是必要的，但在两个场景中完全重复了。这种重复会分散注意力，让你更难看出每个场景测试的本质。
-
-让我们将重复的步骤提取到 `Background` 中，如下：
 
 
+# 重构为背景
 
+重构是更改代码以提高其可读性或设计而不改变其行为的过程。这种技术适用于 Gherkin 功能就像适用于你代码库的其他部分一样。随着你在项目过程中对领域的理解增加，你会希望通过更新功能来反映这种学习。
 
+通常你不会立即看到背景。你可能最初从编写一两个场景开始，只有当你写第三个时你才会注意到某些步骤。当你看到一个功能在多个场景中重复相同或相似的步骤时，看看你是否可以通过重构将这些步骤提取到背景中。这样做可能需要一点勇气，因为存在可能出错并破坏某些东西的风险，但这是一种相当安全的重构。一旦你完成，该功能执行的结果应该与之前完全相同。
 
 ## 功能：更改 PIN码
 
@@ -2038,18 +1981,18 @@ And the system should not have changed my PIN
 
 为了能够将其更改为他们容易记忆的内容，持有新银行卡的客户需要能够通过 ATM 更改 PIN 码。
 
-背景：
+### 背景
 
 - 假设我已获得了一张新卡
 - 并且我插入卡片并输入了正确的 PIN
 - 并且从菜单中选择了“更改 PIN”
 
-## 场景：更改 PIN
+### 场景：更改 PIN
 
 - 当我将 PIN 更改为 9876
 - 系统应该记住我的 PIN 现在是 9876
 
-## 场景：尝试将 PIN 更改为相同
+### 场景：尝试将 PIN 更改为相同
 
 - 当我尝试将 PIN 更改为原始 PIN 号时
 - 我应该看到一条警告消息
@@ -2057,13 +2000,13 @@ And the system should not have changed my PIN
 
 我们的重构完全没有改变测试的行为：在运行时，背景中的步骤在每个场景开始时执行，与以前一样。我们所做的是让每个单独的场景变得更易读。
 
-你可以在功能文件中包含一个背景（Background）元素，它必须出现在任何场景（Scenario）或大纲（Outline）元素之前。与其他 Gherkin 元素一样，你可以给它命名，并且在第一个步骤之前有空间放置多行描述。例如：
+你可以在功能文件中包含一个背景（`Background`）元素，它必须出现在任何场景（`Scenario`）或大纲（`Outline`）元素之前。与其他 Gherkin 元素一样，你可以给它命名，并且在第一个步骤之前有空间放置多行描述。例如：
 
 ## 功能：更改 PIN
 
 为了能够将其更改为他们容易记忆的内容，持有新银行卡的客户需要能够通过 ATM 更改 PIN 码。
 
-背景：插入新发放的卡片并登录
+### 背景：插入新发放的卡片并登录
 
 每当银行向客户发放新卡时，他们会获得一个由系统随机生成的个人识别码（PIN）。
 
@@ -2075,40 +2018,33 @@ And the system should not have changed my PIN
 
 - 不要使用背景来设置复杂的状态，除非该状态是读者实际上需要知道的。例如，在上一个示例中，我们没有提到系统生成 PIN 的实际细节，因为该细节与任何场景都不相关。
 - 保持你的背景部分简短。毕竟，你期望用户在阅读场景时实际上能记住这些内容。如果背景超过四行，你是否能找到一种用一或两个步骤来表达该操作的方法？
-- 让你的背景部分生动起来。使用形象的名称并尝试讲述一个故事，你的读者对故事的追踪能力远高于对枯燥名称（如 User A、User B、Site 1 等）的能力。如果值得提到，就让它真正脱颖而出。
+- 让你的背景部分生动起来。使用形象的名称并尝试讲述一个故事，你的读者对故事的追踪能力远高于对枯燥名称（如 `User A`、`User B`、`Site 1` 等）的能力。如果值得提到，就让它真正脱颖而出。
 - 保持你的场景简短，并且不要太多。如果背景超过三个或四个步骤，考虑使用更高级别的步骤或拆分功能文件。你可以将背景作为一个判断功能是否过长的良好指标：如果你想要添加的新场景与现有的背景不匹配，请考虑拆分该功能。
-- 避免在背景中放置技术细节，如清除队列、启动后端服务或打开浏览器。这些内容的大部分将是读者默认的，并且有方法将这些动作推到你的支持代码中，我们将在书后的部分解释这些，例如第 157 页的标记钩子（Tagged Hooks）。
+- 避免在背景中放置技术细节，如清除队列、启动后端服务或打开浏览器。这些内容的大部分将是读者默认的，并且有方法将这些动作推到你的支持代码中，我们将在书后的部分解释这些，例如第 157 页的标记钩子（`Tagged Hooks`）。
 
-背景对于在每个场景中重复的 Given（有时是 When）步骤非常有用，可以将它们移动到单个位置。这有助于保持你的场景的清晰和简洁。
+背景对于在每个场景中重复的 `Given`（有时是 `When`）步骤非常有用，可以将它们移动到单个位置。这有助于保持你的场景的清晰和简洁。
 
-## 数据表
+# 数据表
 
-有时场景中的步骤需要描述不易于放入单行 Given、When 或 Then 的数据。Gherkin 允许我们在步骤正下方的表格中放置这些细节。数据表为你提供了一种扩展 Gherkin 步骤到单行之外的方法，以包含更大的数据。
+有时场景中的步骤需要描述不易于放入单行 `Given`、`When` 或 `Then` 的数据。Gherkin 允许我们在步骤正下方的表格中放置这些细节。数据表为你提供了一种扩展 Gherkin 步骤到单行之外的方法，以包含更大的数据。
 
 例如，考虑以下步骤：
 
-## 重构为背景
-
-重构是更改代码以提高其可读性或设计而不改变其行为的过程。这种技术适用于 Gherkin 功能就像适用于你代码库的其他部分一样。随着你在项目过程中对领域的理解增加，你会希望通过更新功能来反映这种学习。
-
-通常你不会立即看到背景。你可能最初从编写一两个场景开始，只有当你写第三个时你才会注意到某些步骤。当你看到一个功能在多个场景中重复相同或相似的步骤时，看看你是否可以通过重构将这些步骤提取到背景中。这样做可能需要一点勇气，因为存在可能出错并破坏某些东西的风险，但这是一种相当安全的重构。一旦你完成，该功能执行的结果应该与之前完全相同。
-
-- a. 重构：*改进现有代码的设计*
-
-假设一个出生于 1958 年 8 月 29 日的用户 "Michael Jackson"
-以及一个出生于 1935 年 1 月 8 日的用户 "Elvis"
-以及一个出生于 1940 年 10 月 9 日的用户 "John Lennon"
+假设一个出生于 `1958 年 8 月 29 日` 的用户 `"Michael Jackson"`
+以及一个出生于 `1935 年 1 月 8 日` 的用户 `"Elvis"`
+以及一个出生于 `1940 年 10 月 9 日` 的用户 `"John Lennon"`
 
 无聊了！在传统规范中我们不会容忍这种事情，也不需要容忍。我们可以将这些步骤合并到一个步骤中，使用表格来表示数据：
 
 假设这些：
 
 | name | date of birth |
+| ---- | ------------- |
 | Michael Jackson | 1958 年 8 月 29 日 |
 | Elvis | 1935 年 1 月 8 日 |
 | John Lennon | 1940 年 10 月 9 日 |
 
-这清晰多了。表格从步骤之后的一行开始，其单元格之间使用管道符（|）分隔：你可以使用空格对齐管道符以使表格看起来整齐整洁，尽管 Cucumber 并不介意你是否这样做；它会剥离每个单元格中的值。在上一个表格中，我们为表格中的每列都使用了标题，但那仅仅是因为这对于那个特定的步骤是有意义的。你可以自由地以不同的方式指定数据，例如将标题放在侧边：
+这清晰多了。表格从步骤之后的一行开始，其单元格之间使用管道符（`|`）分隔：你可以使用空格对齐管道符以使表格看起来整齐整洁，尽管 Cucumber 并不介意你是否这样做；它会剥离每个单元格中的值。在上一个表格中，我们为表格中的每列都使用了标题，但那仅仅是因为这对于那个特定的步骤是有意义的。你可以自由地以不同的方式指定数据，例如将标题放在侧边：
 
 那么 我匹配以下内容：
 
@@ -2133,9 +2069,13 @@ And the system should not have changed my PIN
 
 ```
 expressive_scenarios/01/src/test/resources/tic_tac-toe/tic_tac-toe.feature
+
 Feature:
+
 Scenario:
+
 Given 一个像这样的棋盘:
+
 | 1 | 2 | 3 |
 | 2 | | |
 | 3 | | |
@@ -2150,85 +2090,127 @@ Given 一个像这样的棋盘:
 
 我们将向你展示如何从第一个步骤获取表格，在第二个步骤中对其进行操作，最后将场景中的预期棋盘与实际棋盘进行比较。
 
-运行 `./cucumber` 生成步骤定义代码段，并将它们粘贴到 step_definitions/BoardSteps.java 中：
+运行 `./cucumber` 生成步骤定义代码段，并将它们粘贴到 `step_definitions/BoardSteps.java` 中：
 
 ```
 expressive_scenarios/0/src/java/test/tic_tac_toe/BoardSteps.java
+
 package tic_tac_toe;
 
 import cucumber.api.java.*;
+
 import cucumber.api.PendingException;
+
 import cucumber.api.DataTable;
 
 public class BoardSteps {
+
     @Given("一个像这样的棋盘:$")
+
     public void aBoardLikeThis(DataTable data, Object arg) throws Throwable {
+
         // 编写将短语转换为动作的代码
+
         // 对于自动转换，更改 DataTable 为之一
+
         // List(YourType), List<List<E>>, Map(K, V) or Map(K, V).
+
         // E,K 必须是标量 (String, Integer, Date, enum)
+
         throw new PendingException();
+
     }
 
     @When("玩家 x 在第 \\d+ 行第 \\d+ 列下子时")
+
     public void playerXPlaysInRowColumn(int arg1, int arg2) throws Throwable {
+
         // 编写将短语转换为动作的代码
+
         throw new PendingException();
+
     }
 
     @Then("棋盘应该像这样:$")
+
     public void theBoardShouldLikeThis(DataTable dataTable) throws Throwable {
+
         // 编写将短语转换为动作的代码
+
         // 对于自动转换，更改 DataTable 为之一
+
         // List(YourType), List<List<E>>, Map(K, V) or Map(K, V).
+
         // E,K 必须是标量 (String, Integer, Date, enum)
+
         throw new PendingException();
+
     }
+
 }
 ```
-
 
 作为一个实验，为第二个步骤定义添加一个实现，仅打印原始棋板，这样我们就能看到它的样子了：
 
 ```
 expressive_scenarios/02/src/test/java/tic_tac_toe/BoardSteps.java
+
 package tic_tac_toe;
 ```
 
 ```java
 import cucumber.api.java.en.*;
+
 import cucumber.api.PendingException;
+
 import cucumber.api.DataTable;
 
 import java.util.List;
 
 public class BoardSteps {
+
     private List<String> board;
 
     @Given("a board like this:$s")
+
     public void addBoardLikeThis(DataTable table) throws Throwable {
+
         board = table.row();
+
     }
 
     @When("player x plays in row (\d+), column (\d+)")
+
     public void playerXPlaysInColumn(int arg1, int arg2) throws Throwable {
+
         System.out.println(board.toString());
+
         throw new PendingException();
+
     }
 
     @Then("the board should look like this:$s")
+
     public void theBoardShouldLikeThis(DataTable arg) throws Throwable {
+
         // 将代码将上述短语转换为具体操作
+
         // 对于自动转换，将 DataTable 更改为
+
         // List<YourType>, List<List<E>>, List<Map<K, V>> 或 Map<K, V>
+
         // E,K 必须是标量（String, Integer, Date, enum 等）
+
         throw new PendingException();
+
     }
+
 }
 ```
 
-当你运行 ./cucumber 时，你将看到打印出的二维数组。
+当你运行 `./cucumber` 时，你将看到打印出的二维数组。
 
+```
 $ ./cucumber
 
 TESTS
@@ -2248,6 +2230,7 @@ Then the board should look like this:
 
 +   1 Scenarios (1 pending)
 3 Steps (1 skipped, 1 pending, 1 passed)
+```
 
 注意原始表格包含了列标题和行标题。
 
@@ -2257,19 +2240,25 @@ Then the board should look like this:
 
 ```
 expressive_scenarios/03/src/test/java/tic_tac_toe/BoardSteps.java
+
 @When("player x plays in row (\d+), column (\d+)")
+
 public void playerXPlaysInColumn(int arg1, int arg2) throws Throwable
 ```
 
 ```java
 @Then("the board should look like this:$")
+
 public void boardShouldLookLikeThis(DataTable expectedTable) throws Throwable {
+
     expectedTable.diff(board);
+
 }
 ```
 
 我们在描述事物应该是什么样子的表格上使用了 `diff` 方法，并了我们在应用程序看到的实际棋板。当你再次运行 `mvn clean test` 时，你应该看到该步骤失败了，因为两个表格并不相同：
 
+```
 $ mvn clean test
 
 TESTS
@@ -2281,7 +2270,10 @@ When x plays in row 2, column 1
 Then the board should look like this:
 
 ```
+
+```
 cucumber.runtime.table.TableDiffException: Tables were not identical:
+
 | 1 | 2 | 3 |
 | 1 | |
 | 2 | x |
@@ -2305,9 +2297,13 @@ at *.Then the board should look like this:(tic_toe.feature:9)
 
 ```java
 expressive_scenarios/04/src/test/java/tic_toe/BoardSteps.java
+
 @When("player x plays in row (\d+), column (\d+)")
+
 public void playerXPlaysInRowColumn(int row, int col) throws Throwable {
+
     board.get(row).set(col, "x");
+
 }
 ```
 
@@ -2324,18 +2320,27 @@ at *.When player x plays in row 2, column 1
 
 ```java
 expressive_scenarios/05/src/test/java/tic_toe/BoardSteps.java
+
 @Given("a board like this:$s")
+
 public void addBoardLikeThis(DataTable table) throws Throwable {
+
     board = new ArrayList<>();
+
     for (List<String> row : table.rows()) {
+
         board.add(new ArrayList<>(row));
+
     }
+
 }
 ```
 
+
+
 运行场景，你应该看到它通过了。
 
-使用场景大纲（scenario outline）的优势之一是可以清楚地看到示例中的空白。在我们的示例中，我们没有测试任何边界情况，例如尝试提取超过你拥有的金额。当你看到所有值对齐在表格中时，这会变得更加明显。
+使用场景大纲的优势之一是可以清楚地看到示例中的空白。在我们的示例中，我们没有测试任何边界情况，例如尝试提取超过你拥有的金额。当你看到所有值对齐在表格中时，这会变得更加明显。
 
 ## 场景大纲
 
@@ -2345,13 +2350,13 @@ public void addBoardLikeThis(DataTable table) throws Throwable {
 
 “取款”菜单包含固定金额。
 
-Scenario Outline: 取款金额
-Given I <Balance> in my account
-When I choose to withdraw <Withdrawal>
-Then I should receive <Received>
-And the balance should be <Remaining>
+**Scenario Outline:** 取款金额
+Given I `<Balance>` in my account
+When I choose to withdraw `<Withdrawal>`
+Then I should receive `<Received>`
+And the balance should be `<Remaining>`
 
-Examples:
+**Examples:**
 
 | Balance | Withdrawal | Remaining |
 | :--- | :--- | :--- |
@@ -2359,11 +2364,7 @@ Examples:
 | 500 | 100 | 400 |
 | 500 | 200 | 300 |
 
-
-
-
-
-# 场景大纲 • 81
+## 场景大纲 • 81
 
 占位符的位置是固定的。你可以根据需要从任何步骤的文本中替换尽可能多或少的内容。
 
@@ -2371,9 +2372,13 @@ Examples:
 
 ```
 Scenario: 尝试取款过多
+
 Given 我的账户里有 $100
+
 When 我选择取款 $200 的固定金额
+
 Then 我应该看到一条错误消息
+
 And 我的账户余额应该是 $100
 ```
 
@@ -2383,33 +2388,41 @@ And 我的账户余额应该是 $100
 
 ```
 Scenario Outline: 取出固定金额
+
 Given 我的账户里有 <Balance>
+
 When 我选择取款固定金额 <Withdrawal>
+
 Then 我应该执行 <Outcome>
+
 And 我的账户余额应该是 <Remaining>
 ```
 
 | Balance | Withdrawal | Remaining | Outcome |
 | :--- | :--- | :--- | :--- |
-| $500 | $50 | $450 |  $50 现金 |
-| $500 | $100 | $400 |  $100 现金 |
-| $500 | $200 | $300 |  $200 现金 |
+| $500 | $50 | $450 | $50 现金 |
+| $500 | $100 | $400 | $100 现金 |
+| $500 | $200 | $300 | $200 现金 |
 
 现在我们只需将失败用例添加到该表格的底部：
 
 ```
 Scenario Outline: 取出固定金额
+
 Given 我的账户里有 <Balance>
+
 When 我选择取款固定金额 <Withdrawal>
+
 Then 我应该执行 <Outcome>
+
 And 我的账户余额应该是 <Remaining>
 ```
 
 | Balance | Withdrawal | Remaining | Outcome |
 | :--- | :--- | :--- | :--- |
-| $500 | $50 | $450 |  $50 现金 |
-| $500 | $100 | $400 |  $100 现金 |
-| $500 | $200 | $300 |  $200 现金 |
+| $500 | $50 | $450 | $50 现金 |
+| $500 | $100 | $400 | $100 现金 |
+| $500 | $200 | $300 | $200 现金 |
 | $100 | $200 | $100 | 显示一条错误消息 |
 
 我们可以使用占位符来替换步骤中任何我们喜欢的文本。注意，占位符在表格中出现的顺序并不重要；重要的是列标题要与场景大纲中的占位符匹配。
@@ -2437,10 +2450,10 @@ And 我的账户余额应该是 <Remaining>
 Cucumber 乐意处理 Scenario Outline 下方的任意数量的 Examples 元素，这意味着如果你愿意，可以将不同类型的示例分在一起。例如：
 
 **Scenario Outline:** 取出固定金额
-Given 我的账户里有 <Balance>
-When 我选择取款固定金额 <Withdrawal>
-Then 我应该 <Outcome>
-And 我的账户余额应该是 <Remaining>
+Given 我的账户里有 `<Balance>`
+When 我选择取款固定金额 `<Withdrawal>`
+Then 我应该 `<Outcome>`
+And 我的账户余额应该是 `<Remaining>`
 
 **Examples:** 成功取款
 | Balance | Withdrawal | Remaining |
@@ -2462,8 +2475,8 @@ And 我的账户余额应该是 <Remaining>
 
 **Feature:** 账户创建
 **Scenario Outline:** 密码验证
-Given 我尝试创建一个余额为 <Balance> 的账户
-Then 我应该看到的是 < <>
+Given 我尝试创建一个余额为 `<Balance>` 的账户
+Then 我应该看到的是 `< <>`
 
 **Examples:** 太短
 如果密码少于 4 个字符，则无效
@@ -2492,11 +2505,11 @@ And 我的账户余额应该是 $450
 
 Given 我已通过密码验证
 
-从场景中删除那三行，并用这个单个步骤替换。现在运行 /cucumber 为你的新高级步骤生成步骤定义片段。它看起来应该是这样的：
+从场景中删除那三行，并用这个单个步骤替换。现在运行 `cucumber` 为你的新高级步骤生成步骤定义片段。它看起来应该是这样的：
 
-```
+```java
 @Given("I have authenticated with the correct PIN$")
-public void iAuthenticatedWithTheCorrectPIN() Throwable {
+public void iAuthenticatedWithTheCorrectPIN() throws Throwable {
     // 用之前的代码表示正则表达式
     throw new PendingException();
 }
@@ -2504,16 +2517,12 @@ public void iAuthenticatedWithTheCorrectPIN() Throwable {
 
 现在，在你的步骤定义中创建一个名为 `authenticateWithPin` 的方法，执行与 PIN 验证所需的操作，并修改你的步骤定义使其如下所示：
 
-```
+```java
 @Given("I have authenticated with the correct PIN$")
-public void iAuthenticatedWithTheCorrectPIN() Throwable {
+public void iAuthenticatedWithTheCorrectPIN() throws Throwable {
     authenticateWithPIN();
 }
 ```
-
-
-
-
 
 ## 第 5 章 表现力丰富的场景 • 86
 
@@ -2588,7 +2597,7 @@ story_39004 log_in.feature
 
 ## 标签 (Tags)
 
-如果子文件夹是你书中的章节，那么标签就是你贴在想要快速查找页面上的便利贴。你通过在行开头加一个带有 @ 前缀的单词来标记场景：
+如果子文件夹是你书中的章节，那么标签就是你贴在想要快速查找页面上的便利贴。你通过在行开头加一个带有 `@` 前缀的单词来标记场景：
 
 ```gherkin
 @tag
@@ -2615,7 +2624,9 @@ Scenario: My scenario
 $ cucumber --tags @nightly
 ```
 
-这将选择并运行仅标记为 @nightly 的场景。
+
+
+这将选择并运行仅标记为 `@nightly` 的场景。
 
 ## 我们刚刚学了什么
 
@@ -2628,20 +2639,17 @@ $ cucumber --tags @nightly
 - 你可以将特性组织到子文件夹中，就像书的章节一样。
 - 标签允许你对场景和特性进行标记，以便选择特定的集合进行运行或报告。
 
-
-
-
 # 保持你的黄瓜甜美
 
 当你的团队刚开始使用 Cucumber 时，没多久你就会注意到，你创建的代码 bug 似乎比以前少了。你可能会发现自己开始勇敢地重构那些以前让你畏于触碰的代码。受到看到第一个通过的用例时所那种喜悦的影响，你可能会一个接一个地添加新功能。
 
-然而，过了一段时间，事情开始变得糟糕。突然间，你让你头大地发现测试运行需要很长时间。或者，你可能开始注意到某些用例似乎随机失败，通常正发生在你面临紧迫截止日期的时候。也许非技术性的利益相关者已经对这个过程失去了兴趣，现在只有开发者在阅读这些功能特性（features）。人们甚至可能开始这样做：
+然而，过了一段时间，事情开始变得糟糕。突然间，你让你头大地发现测试运行需要很长时间。或者，你可能开始注意到某些用例似乎随机失败，通常正发生在你面临紧迫截止日期的时候。也许非技术性的利益相关者已经对这个过程失去了兴趣，现在只有开发者在阅读这些功能特性。人们甚至可能开始这样做：
 
-*Cucumber 正在拖我们的后腿吗？*
+> Cucumber 正在拖我们的后腿吗？
 
-好消息是，你不必一直与这些问题作作斗争。在我们的教练和咨询工作中，我们见过了各种团队在学习使用 Cucumber 时遇到的各种类型的问题。在本章中，我们将描述我们看到的最常见的问题。我们将帮助你理解这些问题的根源，并为解决它们或理想情况下从源头上避免它们提供建议。本章不会有太多代码，但你会发现很多实用的建议。
+好消息是，你不必一直与这些问题作斗争。在我们的教练和咨询工作中，我们见过了各种团队在学习使用 Cucumber 时遇到的各种类型的问题。在本章中，我们将描述我们看到的最常见的问题。我们将帮助你理解这些问题的根源，并为解决它们或理想情况下从源头上避免它们提供建议。本章不会有太多代码，但你会发现很多实用的建议。
 
-我们将从痛苦源开始，描述你的团队可能经历的四种不同症状。然后，我们将深入这些这些的底层原因，最后查看解决方案。在本章结束时，你应该对如何帮助你的团队长期地通过 Cucumber 保持成功感到更有信心。
+我们将从痛苦源开始，描述你的团队可能经历的四种不同症状。然后，我们将深入这些症状的底层原因，最后查看解决方案。在本章结束时，你应该对如何帮助你的团队长期地通过 Cucumber 保持成功感到更有信心。
 
 ## 感受痛苦
 
@@ -2649,10 +2657,10 @@ $ cucumber --tags @nightly
 
 | 症状 | 问题 |
 | --- | --- |
-| 我们的某些测试随机失败。 | 闪烁的用例 (Flickering scenarios) |
-| 我们不断无意中破坏测试。 | 脆弱的功能 (Brittle features) |
-| 我们的功能运行时间太长。 | 运行缓慢的功能 (Slow features) |
-| 我们的利益相关者不读我们的功能。 | 无聊的利益相关者 (Bored stakeholders) |
+| 我们的某些测试随机失败。 | 闪烁的用例 |
+| 我们不断无意中破坏测试。 | 脆弱的功能 |
+| 我们的功能运行时间太长。 | 运行缓慢的功能 |
+| 我们的利益相关者不读我们的功能。 | 无聊的利益相关者 |
 
 让我们仔细观察这些症状。
 
@@ -2666,27 +2674,11 @@ $ cucumber --tags @nightly
 
 闪烁的用例通常由以下问题之一引起：
 
-- 共享环境 (Shared Environments)，第 105 页
-- 泄露用例 (Leaky Scenarios)，第 103 页
-- 竞态条件和休眠步骤 (Race Conditions and Sleepy Steps)，第 104 页
+- 共享环境，第 105 页
+- 泄露用例，第 103 页
+- 竞态条件和休眠步骤，第 104 页
 
 ## 脆弱的功能
-
-（注：此处根据原文逻辑翻译，原文中该段存在重复的 OCR 错误）
-
-当一个用例昨天还能通过，今天就失败了，而在相同的环境下运行相同的源代码时，你就拥有了我们所谓的“闪烁用例”——一种偶尔且随机失败的用例。同一个用例在相同的代码库和相同的环境下运行，大多数时候会通过，但有时会失败。这些显然不可控的失败导致团队对他们的测试、他们的代码以及他们自己失去信心。
-
-闪烁用例最糟糕的一点是，每当你尝试重现它以便修复它时，它就拒绝失败。修复闪烁用例是你可以承担的最困难的任务之一，但它也是最重要的任务之一。为了让一组自动化测试套件有用，团队必须对它有绝对的信任。当仅仅某一项测试就会损害信任时，它对每个人对整个套件的感觉会产生腐蚀性影响。
-
-要修复闪烁用例，你必须研究代码并试着理解为什么会发生这种情况。这是一个科学的过程：对失败的原因提出假设，创建一个实验来验证或反驳该假设，然后运行实验看看你是否正确。在解决问题之前，你可能需要反复这个循环几次，如果闪烁用例是间歇性失败，运行一次实验可能需要几天时间。如果你没主意了，考虑直接删除该测试，以防它以后又回来并在它自己选择的时间再次让你失败。闪烁的用例通常由以下问题引起：
-
-- 共享环境 (Shared Environments)，第 105 页
-- 泄露用例 (Leaky Scenarios)，第 103 页
-- 竞态条件和休眠步骤 (Race Conditions and Sleepy Steps)，第 104 页
-
-## 脆弱的功能
-
-（注：此处根据原文逻辑翻译，原文存在重复）
 
 当一个用例昨天还能通过，今天就失败了，而在相同的环境下运行相同的源代码时，你就拥有了我们所谓的“闪烁用例”——一种偶尔且随机失败的用例。同一个用例在相同的代码库和相同的环境下运行，大多数时候会通过，但有时会失败。这些显然不可控的失败导致团队对他们的测试、他们的代码以及他们自己失去信心。
 
@@ -2696,10 +2688,10 @@ $ cucumber --tags @nightly
 
 脆弱的功能通常由以下之一引起：
 
-- 固定件数据 (Fixture Data)，第 107 页
-- 重复 (Duplication)，第 98 页
-- 泄露用例 (Leaky Scenarios)，第 103 页
-- 测试者心态 (Testerheid)，第 106 页
+- 固定件数据，第 107 页
+- 重复，第 98 页
+- 泄露用例，第 103 页
+- 测试者心态，第 106 页
 
 ## 运行缓慢的功能
 
@@ -2709,10 +2701,7 @@ $ cucumber --tags @nightly
 
 “我们的利益相关者不读我们的功能特性。” 这是那些尝试过 Cucumber 但未能将其变成自动化测试脚本工具之外的其他东西团队的常见抱怨。然而，许多其他团队都证实了 Cucumber 给他们带来的变革性影响，帮助开发团队与业务利益相关者进行更有效的协作。
 
-
-
-
-这种痛苦的症状通常是由以下底层问题的共同引起的：
+这种痛苦的症状通常是由以下底层问题共同引起的：
 
 - [附带细节，见第 95 页](#page-95)
 - [命令式步骤，见第 97 页](#page-97)
@@ -2720,49 +2709,55 @@ $ cucumber --tags @nightly
 - [无处不在的问题？见第 100 页](#page-100)
 - [孤立的功能，见第 101 页](#page-101)
 
-一旦你在团队中发现了这些任何一种症状，你就知道该怎么办了。是时候看看正在起的底层问题，以及你可以针对它们采取什么措施了。
+一旦你在团队中发现了这些任何一种症状，你就知道该怎么办了。是时候看看正在起作用的底层问题，以及你可以针对它们采取什么措施了。
 
 ## 协同工作
 
-Cucumber 特性是 Gojko Adzic¹ 所称的“文档”。这个术语几乎概括了使用 Cucumber 的两个主要好处：
+Cucumber 特性是 Gojko Adzic¹ 所称的“活文档”。这个术语几乎概括了使用 Cucumber 的两个主要好处：
 
-- 活的（Living）：它自动测试系统，以便你可以安全地进行工作。
-- 文档（Documentation）：它促进了关于系统当前或计划行为的良好沟通。
+- 活的：它自动测试系统，以便你可以安全地进行工作。
+- 文档：它促进了关于系统当前或计划行为的良好沟通。
 
-当你的团队在 Cucumber 上挣挣扎时，你们所面临的问题会出现在这两个地方之一：要么它们导致 Cucumber 场景无法为开发人员提供反馈，要么意味着 Cucumber 无法帮助你的团队进行沟通。我们首先来看看可能是什么阻碍了让这些特性作为沟通工具发挥作用。
+当你的团队在 Cucumber 上挣扎时，你们所面临的问题会出现在这两个地方之一：要么它们导致 Cucumber 场景无法为开发人员提供反馈，要么意味着 Cucumber 无法帮助你的团队进行沟通。我们首先来看看可能是什么阻碍了让这些特性作为沟通工具发挥作用。
 
 ## 附带细节
 
 考虑以下在线客户端的场景：
 
+```
 Scenario: 检查件箱
 Given 一个密码为 "password" 的 "Dave"
 And 一个密码为 "secret" 的用户 "Sue"
 And 一封发给 "Dave" 来自 "Sue" 的邮件
 When 我用密码 "password" 登录 "Dave"
-Then我在收件箱中看到 1 封来自 "Sue" 的邮件
+Then 我在收件箱中看到 1 封来自 "Sue" 的邮件
+```
 
 这个场景中有很多细节：我们有主要角色 Dave 的用户名和密码，我们还有另一个用户 Sue。用户名非常有用，因为它们有助于讲述场景的故事，但密码只是噪声；用户的密码与测试内容无关，事实上，它们让阅读变得更加困难。
 
-+ 1. 示例驱动规范 [Ad 11]
+> 1. 示例驱动规范 [Ad 11]
 
 例如，Sue 的密码与 Dave 不同。当你阅读这个场景，并想知道这是否相关时，你的注意力就偏离了场景的核心点：检查 Dave 是否能看到 Sue 的邮件。
 
 我们将像密码这样的细节称为**附带细节**²，即在场景中被提及但实际上与场景目的无关的细节。这种无关的细节使得场景更难阅读，反而会导致你的利益相关者对阅读它们失去兴趣。让我们在不包含密码的情况下重写场景：
 
-- Scenario: 检查件箱
+```
+Scenario: 检查件箱
 Given 一个用户 "Dave"
 And 一个用户 "Sue"
 And 一封来自 "Sue" 发给 "Dave" 的邮件
 When 我登录 "Dave"
-Then我应该在收件箱中看到 1 封来自 "Sue" 的邮件
+Then 我应该在收件箱中看到 1 封来自 "Sue" 的邮件
+```
 
 这绝对是一个改进，使其更容易阅读和理解场景的本质。让我们尝试剔除一些噪声：
 
-- Scenario: 检查件箱
+```
+Scenario: 检查件箱
 Given 我收到了一封来自 "Sue" 的邮件
 When 我登录
-Then我应该在收件箱中看到 1 封来自 "Sue" 的邮件
+Then 我应该在收件箱中看到 1 封来自 "Sue" 的邮件
+```
 
 现在我们有一个简单的、清晰且简洁的三步场景。它也更具可维护性：如果我们的产品想要更改身份验证机制，我们只需要重写底层的步骤定义，而无需触碰特性。
 
@@ -2772,7 +2767,7 @@ Then我应该在收件箱中看到 1 封来自 "Sue" 的邮件
 
 尝试在编写场景时不要受现有的步骤定义引导，直接用通俗英语写下你真正想要的内容。相反，让非技术利益相关者或分析师从纯粹的业务角度为每个场景编写初稿，或者理想情况下与程序员配对编写，以帮助他们分享心理模型。通过一个设计良好的支持层，你可以自信且快速地编写步骤定义来匹配他们所表达的场景。
 
-+ 2 这个术语源于 Dale Emery 的优秀论文 "Writing Maintainable Acceptance Tests"：http://dhemery.com/pdf/writing_maintainable_automated_acceptance_tests.pdf。
+> 2 这个术语源于 Dale Emery 的优秀论文 "Writing Maintainable Acceptance Tests"：http://dhemery.com/pdf/writing_maintainable_automated_acceptance_tests.pdf。
 
 ## 命令式步骤
 
@@ -2780,20 +2775,22 @@ Then我应该在收件箱中看到 1 封来自 "Sue" 的邮件
 
 命令式编程意味着使用一系列命令让计算机按照特定顺序执行。Java 是命令式语言的示例：你编写的程序是一系列语句，Java 按顺序一次一次运行这些语句。声明式程序告诉计算机它应该做*什么*，而不规定*如何*做。CSS 是声明式语言的示例：你告诉计算机你希望网页上的元素看起来像什么，并让它处理其余部分。
 
-当然，Gherkin 是一种命令式语言。Cucumber 按你编写的顺序一个接一个执行场景中的每个步骤。然而，这并不意味着这些步骤需要像组装平板板家具的指令一样。让我们来看一个命令式的典型示例：
+当然，Gherkin 是一种命令式语言。Cucumber 按你编写的顺序一个接一个执行场景中的每个步骤。然而，这并不意味着这些步骤需要像组装平板家具的指令一样。让我们来看一个命令式的典型示例：
 
 ```
 Scenario: 登录后将用户重定向到最初请求的页面
 Given 存在密码为 `secret` 的用户 "dave"
-And我没有登录
-When我导航到首页
-Then我被重定向到
-When我在 "dave" 中填写 `secret`
-And我点击 "Login"
-Then我应该处于主页
+And 我没有登录
+When 我导航到首页
+Then 我被重定向到
+When 我在 "dave" 中填写 `secret`
+And 我点击 "Login"
+Then 我应该处于主页
 ```
 
-这个场景有什么用处？嗯，它使用了通用的步骤定义，如 `fill in with`，这意味着你可以编写很多场景而无需创建步骤步骤代码。
+
+
+这个场景有什么用处？嗯，它使用了通用的步骤定义，如 `fill in with`，这意味着你可以编写很多场景而无需创建步骤代码。
 
 然而，当团队使用命令式风格时，很快他们就会经历测试脆弱和利益相关者无味的痛苦。这种风格编写的场景不仅嘈杂、冗长无味，而且很容易破坏：如果用户体验决定将提交按钮文字从 "Log" 改为 "Login"，场景就会失败。
 
@@ -2804,13 +2801,13 @@ Then我应该处于主页
 让我们提高这个场景的抽象级别，并使用更声明式的风格重写它：
 
 - Scenario: 登录后将用户重定向到最初请求的页面
-Given 我是一个未验证的用户
-When我尝试查看受限内容
-Then显示登录表单
-When我使用凭据进行验证
-Then我应该看到受限代码
+- Given 我是一个未验证的用户
+- When 我尝试查看受限内容
+- Then 显示登录表单
+- When 我使用凭据进行验证
+- Then 我应该看到受限代码
 
-这种风格的魅力在于它与用户界任何特定实现解耦。相同的场景适用于桌面客户端或移动应用程序。它使用的词不是技术性的，而是任何对安全感兴趣的利益者都能清晰理解的语言（未验证、受限、凭据）。正是在这个级别表达每个场景，你会发现团队的通用语言。
+这种风格的魅力在于它与用户界面任何特定实现解耦。相同的场景适用于桌面客户端或移动应用程序。它使用的词不是技术性的，而是任何对安全感兴趣的利益者都能清晰理解的语言（未验证、受限、凭据）。正是在这个级别表达每个场景，你会发现团队的通用语言。
 
 使用声明式风格意味着你需要编写更多的步骤定义，但通过将实际工作推送到支持代码中的辅助方法，你可以保持这些步骤定义的代码简短且易于维护。我们将在第8章支持代码（见第141页）中展示如何这样做。
 
@@ -2818,11 +2815,7 @@ Then我应该看到受限代码
 
 所有优秀的程序员都理解重复对代码维护性的破坏性。然而，我们经常看到团队的特性中充斥着重复。重复显然会让你的场景变得脆弱，也会让它们变得无味。
 
-Gherkin 提供了 `Background` 和 `Scenario Outline` 关键字来减少重复，正如我们在第5章表现力场景（见第69页）中展示的那样，但要警惕重复何时是步骤编写的抽象级别过低的信号。如果你的步骤太过于命令式，将它们移动到 Background 或 Scenario Outline 中也无济。与团队中的非技术成员合作，获取关于他们可以接受的重复类型以及哪些类型让他们感到疲倦的反馈。
-
-
-
-
+Gherkin 提供了 `Background` 和 `Scenario Outline` 关键字来减少重复，正如我们在第5章表现力场景（见第69页）中展示的那样，但要警惕重复何时是步骤编写的抽象级别过低的信号。如果你的步骤太过于命令式，将它们移动到 `Background` 或 `Scenario Outline` 中也无济于事。与团队中的非技术成员合作，获取关于他们可以接受的重复类型以及哪些类型让他们感到疲倦的反馈。
 
 # 从命令式到声明式的光谱
 
@@ -2843,9 +2836,9 @@ Gherkin 提供了 `Background` 和 `Scenario Outline` 关键字来减少重复�
 
 然而，当你使用示例来驱动代码时，另一个原则在起作用，我认为它超过了 DRY 原则：示例应该讲述一个好故事。它们是文档叙述，将指导未来的程序员（包括当你在三个月后回来修改这段代码并忘记了它是做什么的时的你）。在这种情况下，意图的清晰度取决于叙述的质量，而不一定取决于最小化重复。
 
-几年前，我与 Martin Fowler 有了我的第一次结对编程体验。也就是说，我之前不仅和 Martin，还过很多结对编程。在我们查看我编写的测试驱动的 Ruby 代码之前，Martin 要求查看测试，“以“找出代码是做什么的”。然后他做了一件相当奇怪的事。他开始移动测试的位置。我在源文件中几个辅助类和工具方法，整齐地放在末尾互不干扰。他将它们向上移动，并把它们内联到在它们所使用的第一个测试之前。
+几年前，我与 Martin Fowler 有了我的第一次结对编程体验。也就是说，我之前不仅和 Martin，还和很多结对编程。在我们查看我编写的测试驱动的 Ruby 代码之前，Martin 要求查看测试，“以找出代码是做什么的”。然后他做了一件相当奇怪的事。他开始移动测试的位置。我在源文件中有几个辅助类和工具方法，整齐地放在末尾互不干扰。他将它们向上移动，并把它们内联到在它们所使用的第一个测试之前。
 
-太疯了！我想——现在支持性代码到处都是！这真的冒犯了我的整洁癖。然后我看到一个模式开始显现：测试代码开始读起来像一个故事。我们在叙事中它们恰步出现之前，引入了这些小方法和类。这对我来说是一个大开眼界。测试代码流动着并流露着被测类的故事。
+太疯了！我想——现在支持性代码到处都是！这真的冒犯了我的整洁癖。然后我看到一个模式开始显现：测试代码开始读起来像一个故事。我们在叙事中它们恰好出现之前，引入了这些小方法和类。这对我来说是一个大开眼界。测试代码流动着并流露着被测类的故事。
 
 当我想象读一本角色和情节都被“DRY 掉”的书时，那种豁然开明的时刻。一切都会在脚注或附录中。角色描述、元素、潜台词等会被仔细地提取到带有完全引用的段落中。如果你在读一本百科全书，那很棒，但如果你想进入状态并发现发生了什么，这就不合适了。你会在书中来来回去，并很快就忘记自己处于故事的哪里。用老笑话的话说，字典的情节很糟糕，但至少它们在进行时解释了所有的单词。
 
@@ -2867,9 +2860,6 @@ Gherkin 提供了 `Background` 和 `Scenario Outline` 关键字来减少重复�
 
 特性的质量将显著提高。当技术和业务团队开始在场景中使用相同的语言时，特性的质量将会提高。
 
-
-
-
 因此，你的特性（features）可以作为对整个团队的反馈机制，告知他们系统的行为，并向程序员反馈你是否弄坏了某些功能。为了让这些反馈循环发挥作用，测试必须既快速又可靠。让我们先从影响测试可靠性的问题开始。
 
 ## 泄露场景 (Leaky Scenarios)
@@ -2890,7 +2880,7 @@ Cucumber 场景（scenarios）基本上是状态转换测试：你将系统置�
 
 你可能已经知道测试数据构建器（Builder 模式的特化形式——参见《设计模式：可重用对象软件元素》[GHJV95]）。对于初学者，这里是其益处的快速总结。
 
-假设你正在测试一个薪资系统，并且在某个场景中需要创建一个 PayCheck 记录。你的领域模型是结构化的，PayCheck 需要一个 Employee（员工），而 Employee 反过来需要一个 Address（地址）。它们每一个都有几个强制字段。你不需要在步骤定义（step definition）代码中单独创建所有这些对象，也不需要有一堆巨大的固件数据，你只需要说：
+假设你正在测试一个薪资系统，并且在某个场景中需要创建一个 `PayCheck` 记录。你的领域模型是结构化的，`PayCheck` 需要一个 `Employee`（员工），而 `Employee` 反过来需要一个 `Address`（地址）。它们每一个都有几个强制字段。你不需要在步骤定义（step definition）代码中单独创建所有这些对象，也不需要有一堆巨大的固件数据，你只需要说：
 
 ```java
 @Given("have been paid")
@@ -2899,7 +2889,7 @@ void i_have_paid() {
 }
 ```
 
-一旦你创建了 PayCheckBuilder，你只需要向它索要一个 PayCheck，它不仅会创建 PayCheck 对象，还会创建所有依赖对象，并用合理的默认值设置强制字段。如果你关心某个字段的特定值，可以提供一个方法来覆盖默认值：
+一旦你创建了 `PayCheckBuilder`，你只需要向它索要一个 `PayCheck`，它不仅会创建 `PayCheck` 对象，还会创建所有依赖对象，并用合理的默认值设置强制字段。如果你关心某个字段的特定值，可以提供一个方法来覆盖默认值：
 
 ```java
 @Given("have paid 50 dollars")
@@ -2910,19 +2900,21 @@ void i_have_paid_50_dollars() {
 }
 ```
 
-当创建数据变得容易时，你就不再需要携带大型固件数据集的包袱。当然，在创建这些构建器上投入少量的前期工作，很快就会在可靠、可读的场景和步骤定义代码中获得报报。
+
+
+当创建数据变得容易时，你就不再需要携带大型固件数据集的包袱。当然，在创建这些构建器上投入少量的前期工作，很快就会在可靠、可读的场景和步骤定义代码中获得回报。
 
 - a. http://www.natryce.com/articles/000714.html
 
-## 竞态条件与休眠步骤 (Race Conditions and Sleepy Steps)
+## 竞态条件与休眠步骤
 
-如果你为复杂的系统编写自动化测试，最终会遇到这个问题。竞态条件（Race Conditions）发生在两个或多个部分正在并行运行，但成功取决于其中一个先完成。在 Cucumber 测试中，你的步骤可能会导致系统执行某些工作。如果后台任务在步骤执行之前完成，测试将通过；如果后台任务在步骤执行后才完成，测试将失败。
+如果你为复杂的系统编写自动化测试，最终会遇到这个问题。竞态条件发生在两个或多个部分正在并行运行，但成功取决于其中一个先完成。在 Cucumber 测试中，你的步骤可能会导致系统执行某些工作。如果后台任务在步骤执行之前完成，测试将通过；如果后台任务在步骤执行后才完成，测试将失败。
 
-当自动化测试在同一个环境下运行时，通常会遇到竞态问题，导致场景随机通过或失败。解决这个问题的粗略方法是在测试中引入固定长度的暂停，即休眠（sleep），以给系统处理时间。这在短期内是有用的，但除非你理解问题的所在，否则不应该在测试中使用休眠步骤。引入休眠步骤只会增加测试的总运行时间，且不能解决问题。
+当自动化测试在同一个环境下运行时，通常会遇到竞态问题，导致场景随机通过或失败。解决这个问题的粗略方法是在测试中引入固定长度的暂停，即休眠（`sleep`），以给系统处理时间。这在短期内是有用的，但除非你理解问题的所在，否则不应该在测试中使用休眠步骤。引入休眠步骤只会增加测试的总运行时间，且不能解决问题。
 
-我们无法如何强调独立场景对于成功的自动化测试是多么至关重要。除了独立设置自身数据的场景增加了可靠性外，它们还更易于阅读和调试。关于一个例子，请参见第 169 页《消息队列与异步组件》。
+我们无法过分强调独立场景对于成功的自动化测试是多么至关重要。除了独立设置自身数据的场景增加了可靠性外，它们还更易于阅读和调试。关于一个例子，请参见第 169 页《消息队列与异步组件》。
 
-## 共享环境 (Shared Environments)
+## 共享环境
 
 这是我们在从手动测试转向自动化测试的团队中发现的一个问题。传统上，手动测试人员有一个专门的环境，通常称为测试环境，可以在那里部署一个构建。如果多个团队成员都需要在该环境下运行测试，他们会相互沟通以确保不互相踩脚。
 
@@ -2938,40 +2930,36 @@ void i_have_paid_50_dollars() {
 
 测试领域（源自硬件世界）有一项悠久的传统，将测试系统与被测系统之间的链接称为 fixture。这就是我们在书中提到的“胶水代码”角色。FIT 测试框架使用了该术语的含义。
 
-某些单元测试（如 NUnit）通过将测试类本身称为 fixture 进一步模糊了问题。
+某些单元测试（如 `NUnit`）通过将测试类本身称为 fixture 进一步模糊了问题。
 
 - xUnit Test Patterns [Mes07]
 - http://fit.c2.com/
 
-## 测试人员的隔离 (Tester Apartheid)
+## 测试人员的隔离
 
-测试人员在软件团队中往往被不公平地视为二等公民。正如我们在第 141 页《支持代码》中所解释的那样，开发一套健康的 Cucumber 特性不仅需要测试技能，还需要编程技能。当让测试人员独立构建自己的 Cucumber 测试时，他们可能缺乏保持步骤定义和支持代码良好组织的的软件工程技能。很快，测试就变成了一堆人们害怕更改的脆弱性泥潭。
+测试人员在软件团队中往往被不公平地视为二等公民。正如我们在第 141 页《支持代码》中所解释的那样，开发一套健康的 Cucumber 特性不仅需要测试技能，还需要编程技能。当让测试人员独立构建自己的 Cucumber 测试时，他们可能缺乏保持步骤定义和支持代码良好组织的软件工程技能。很快，测试就变成了一堆人们害怕更改的脆弱性泥潭。
 
 通过鼓励程序员和测试人员共同编写步骤定义和支持代码来对抗这一点。程序员可以向测试人员展示如何保持代码组织，并提取出其他团队可以使用的组件或库。通过与测试人员结对
-
-
-
-
 
 ## 一键系统设置
 
 为了避免使用共享环境导致的闪烁场景，团队需要一个设置脚本，只需点击按钮即可从头创建一个新的系统实例。
 
-如果系统有数据库，脚本生成的数据库应该包含最新的架构（schema），以及任何存储过程、视图、函数等。它应该包含系统运行所需的最少基线数据，例如配置数据。任何多余的数据都应该留给独立场景由自行创建。
+如果系统有数据库，脚本生成的数据库应该包含最新的架构（`schema`），以及任何存储过程、视图、函数等。它应该包含系统运行所需的最少基线数据，例如配置数据。任何多余的数据都应该留给独立场景由自行创建。
 
 如果有消息队列或内存缓存守护进程，设置脚本也应该启动它们，并带有你预期在运行系统上应有的最小化配置。
 
 通过这种方式，程序员也能更好地理解使他们的代码具有*可测试性*需要什么。
 
-当在团队中充分发挥 Cucumber 的作用时，测试人员应该能够将运行基本检查的工作委托给 Cucumber。这让他们释放出时间去做更有趣、更具创造性的*探索性测试*，正如[Agile Testing: A Practical Guide for Testers and Agile Teams|CG08]所解释的那样。
+当在团队中充分发挥 Cucumber 的作用时，测试人员应该能够将运行基本检查的工作委托给 Cucumber。这让他们释放出时间去做更有趣、更具创造性的*探索性测试*，正如《Agile Testing: A Practical Guide for Testers and Agile Teams》[CG08]所解释的那样。
 
-## Fi 数据
+## Fixture 数据
 
 在手动测试系统时，向其中填充真实数据是有用的，这样你就可以像在实际应用程序中一样在系统中穿行。当你的团队从手动测试转向自动化测试时，你可能会忍不住只想导出生产数据的子集，以便自动化测试能够立即拥有一个可以运行的系统。
 
 另一种方法是让每个测试都设置自己的数据，这看起来似乎太难了。在遗留系统中——尤其是那种设计有机演进的系统——为你正在编写的测试创建一个所需的单个对象意味着你需要创建一个巨大的其他依赖对象树，你会觉得最简单的选项是在 fixture 数据中创建一次这棵树，并将其与所有其他测试共享。
 
-这种方法有两个显著的问题。一组 fixture 数据即使初始时相对精简，往往也会随着时间的推移而增大。随着越来越多和越来越多的场景依赖于这些数据，且每个场景都需要自己的特定微调，fixture 数据的规模和复杂性就会不断增长。当你对一个场景的数据进行更改时，如果该更改导致其他场景失败，你就会开始感到功能脆弱性所带来的痛苦。由于你有许多不同的场景依赖于这些 fixture 数据，你会倾向于堆砌更多数据，因为这比更改现有数据更安全。当场景失败时，很难知道系统中的海量数据中哪些部分可能与失败有关，这使得诊断变得非常困难。
+这种方法有两个显著的问题。一组 fixture 数据即使初始时相对精简，往往也会随着时间的推移而增大。随着越来越多的场景依赖于这些数据，且每个场景都需要自己的特定微调，fixture 数据的规模和复杂性就会不断增长。当你对一个场景的数据进行更改时，如果该更改导致其他场景失败，你就会开始感到功能脆弱性所带来的痛苦。由于你有许多不同的场景依赖于这些 fixture 数据，你会倾向于堆砌更多数据，因为这比更改现有数据更安全。当场景失败时，很难知道系统中的海量数据中哪些部分可能与失败有关，这使得诊断变得非常困难。
 
 当你拥有一大组 fixture 数据时，在每个测试之间设置它的速度可能会很慢。这迫使你编写一些泄露的场景，这些场景在每个场景之间不重置系统状态，因为不这样做更快。我们已经解释了这会导致什么后果。
 
@@ -2981,11 +2969,11 @@ void i_have_paid_50_dollars() {
 
 这似乎像是在说显而易见的话，但拥有大量的场景是你让自己整体功能运行变慢最简单的方法。我们并不是在建议你过度使用 BDD 并变成一个“牛仔哥程序员”，但我们确实建议你将缓慢的功能视为红旗。拥有大量的测试除了等待很长时间反馈外，还有其他代价。组织大量的功能集是困难的，让读者在导航时感到很尴尬。对底层系统定义和支持代码的维护负担也更大。
 
-我们发现，拥有单一巨大构建的团队，其架构往往可以被描述为“大泥球”（big ball of mud）。由于系统中的所有行为都实现在地方，所有的测试也必须存在一个地方，并且必须作为一个大整体一起运行。这是长寿应用的经典疾病，它们在子系统之间没有明显接口的情况下是有有机地增长的。
+我们发现，拥有单一巨大构建的团队，其架构往往可以被描述为“大泥球”（big ball of mud）。由于系统中的所有行为都实现在地方，所有的测试也必须存在一个地方，并且必须作为一个大整体一起运行。这是长寿应用的经典疾病，它们在子系统之间没有明显接口的情况下是有机地增长的。
 
 我们将在下一节中详细讨论如何处理“大泥球”。在意识到问题发生时就去面对并解决它是非常重要的，但这并不是一个你能够一夜就能解决的问题。
 
-在此期间，你可以使用子文件夹和标签（第 5 章，表达性场景[Expressive Scenarios]，见第 69 页）来保持你的功能的组织条理。打标签特别有帮助，因为你可以使用标签来划分你的测试。你可以选择并行运行划分后的测试集，甚至将其中一部分分配到每日构建（第 109 页）中。
+在此期间，你可以使用子文件夹和标签（第 5 章，表达性场景，见第 69 页）来保持你的功能的组织条理。打标签特别有帮助，因为你可以使用标签来划分你的测试。你可以选择并行运行划分后的测试集，甚至将其中一部分分配到每日构建（第 109 页）中。
 
 ## 每日构建
 
@@ -3005,7 +2993,7 @@ void i_have_paid_50_dollars() {
 
 # 第 6 章 保持你的 Cucumber 清新
 
-我们建议使用 Alistair Cockburn 的适配器架构（ports and adapters architecture）作为使你的系统可测试的方法。Michael Feathers 的《有效处理遗留代码[Fea04]提供了许多分解系统的实用示例。
+我们建议使用 Alistair Cockburn 的适配器架构（ports and adapters architecture）作为使你的系统可测试的方法。Michael Feathers 的《有效处理遗留代码》[Fea04]提供了许多分解系统的实用示例。
 
 与你的团队定期举行会议，讨论你的架构：你喜欢什么，不喜欢什么，以及你想把它带到哪里。人们很容易产生一些宏大的想法，但在回到座位后就烟消云散，确保你们离开这些会议时带着真实的、可行的步骤，引导你们走向正确的方向。
 
@@ -3023,18 +3011,6 @@ void i_have_paid_50_dollars() {
 
 在丰田的工厂中，当出现问题时，每个车间工人都有权且责任停止整个生产线。问题将获得经验丰富的员工的立即和集中关注，并在问题解决后重启生产线。生产线重启后，一个小组负责对问题进行根因分析，以理解为什么会发生，从而解决问题的根源。
 
-
-
-
-
-# 停线与缺陷预防 111
-
-当大野大（Taiichi Ono）⁷引入这个想法时，他认为经理们都疯了。在当时，制造业内理所当然地认为你能做的最重要的事情就是让你的流水线运行，必要时甚至日夜不停。
-
-当大野第一次告诉经理们实施这个新系统时，有些人听了，而有些人没听。起初，执行了该政策的经理发现他们的生产率下降了。停下来立即处理每个问题减慢了他们的速度，当他们将自己的产量数据与那些忽略此要求的经理进行比较时，看起来老板似乎错了。
-
-然而，随着推移，那些允许生产线停止并处理每一个问题的经理开始发现他们的生产线停止频率降低了。因为每个问题都是通过缺陷预防来解决的，这些生产线一直在投入持续改进运行生产线的机器和流程的质量。这种投资开始产生报报，他们的生产线开始变得越来越快。很快，他们的产量就远大于那些忽视了疯狂老板的经理所控制的生产线了。生产线仍然以相同的速度运转着，完成着相同的订单。
-
 ## 缺陷预防
 
 丰田这种反直觉但极其成功的停线政策之所以有效，因为它是更广泛过程的一部分，即*缺陷预防*，该过程专注于持续改进制造系统。如果没有这个更广泛的过程，停线本身的效果将微乎其微。这个过程有四个步骤：
@@ -3042,19 +3018,15 @@ void i_have_paid_50_dollars() {
 - 发现异常。
 - 停止你正在做的工作。
 - 修复或纠正即时问题。
-- 调查根本原因并制定对措施。
+- 调查根本原因并制定对策。
 
 这第四步至关重要，因为它利用了手头问题提供的机会，去理解关于你的流程更本质的东西。它也意味着修复问题变成了一种习惯，而不是推到以后某天在你不忙的时候再去处理。
 
 例如，假设构建由于某个测试失败而崩溃。事实证明，推送包含失败测试代码的那个家伙在推送之前没有运行所有测试。为什么呢？事实证明他认为测试运行太久了，所以他只运行了他认为覆盖了他所做更改的测试，然后祈祷好运并还是提交了他的代码。根本原因是功能运行太慢了。现在我们理解了根本原因，就可以着手修复它。
 
-⁷ 7. *丰田生产系统：超越大规模生产 [Ohn88]*
-
-第 6 章 保持你的黄瓜甜度 • 112
-
 有些团队记录构建失败的日志，每次都记录根本原因。当他们有足够的证据表明某个特定原因值得对时，他们就可以集中精力来妥善地解决它。
 
-想象你的团队是一条生产线，为你的用户产出有价值的功能。如果你发现了一个正在减慢生产线的问题，就停下线并彻底解决该问题。实施“停线”意味着你已经决定让运行快速、高质量、可靠的测试成为你团队的首要任务，而不是去处理影响你客户的生产环境问题。当测试出现问题时——无论是像测试失败这样的紧急问题，还是像场景闪烁这样的令人烦的困扰——都要安排你最优秀的人去处理，并永远修复它。
+想象你的团队是一条生产线，为你的用户产出有价值的功能。如果你发现了一个正在减慢生产线的问题，就停下线并彻底解决该问题。实施“停线”意味着你已经决定让运行快速、高质量、可靠的测试成为你团队的首要任务，而不是去处理影响你客户的生产环境问题。当测试出现问题时——无论是像测试失败这样的紧急问题，还是像场景闪烁这样的令人烦恼的困扰——都要安排你最优秀的人去处理，并永远修复它。
 
 ## 我们刚刚学到了什么
 
@@ -3066,14 +3038,15 @@ Cucumber 看起来可能只是一个测试工具，但它的核心实际上是�
 
 这里有一些可以让你自己尝试的练习。
 
-## 在你的团队中实施缺陷预防
+### 在你的团队中实施缺陷预防
 
 想三个正在减慢你团队生产线速度的事情。它们的根本原因是什么？你可以做什么来让它们变得更好？
 
-## 偶然细节练习
+### 偶然细节练习
 
 这里有一个场景，用隐藏的命令式风格编写，充满了附带细节：
 
+```
 Scenario: 创建发票
 Given 我是一个登录的用户，角色为: admin
 And 一个名为 "Test Client" 的客户 "Test Client" 存在
@@ -3094,39 +3067,39 @@ And 我在 "invoice_id" 中填入 "abc"
 And 我按下 "Submit"
 Then 我在管理员发票页面
 And 不应该看到 "Test Client"
+```
 
 从尝试弄清楚系统到底在做什么开始：你注意到附带细节像杂草一样妨碍了吗？现在你理解了场景的本质，用自己的话重写它。你应该需要更少的步骤，但你可能想要使用多个场景。
 
 现在你已经重写了场景，你能发现原始场景中漏掉的关键步骤吗？
 
-# 第二部分
-
-## 示例案例
+# 第二部分 示例案例
 
 接下来的几章将带你通过一个示例案例。虽然它可能比你通常处理的应用程序小且简单，但它使用了真实的工具并解决了现实的问题。你不仅将快速学会使用 Cucumber 将规范转换为自动化测试，很快就会发现如何处理复杂问题，例如异步过程和数据库事务。
 
-# 第7 章
+# 第 7 章 步骤定义：内部
 
-## 步骤定义：内部
-
-是时候把你在第一中学到的所有内容整合起来并付实践了。关于 Cucumber 有一些高级概念我们需要向你解释，通过示例演示会更容易。我们在书中这一部分的很多工作将模糊测试与开发之间的界限。如果你更像是一个测试人员而不是开发者，别担心：我们将构建的 Java 代码已经是最简单的了。通过跟随，你对我们喜欢工作的方式有一个良好的感受，并获得一些关于使用 Cucumber 的新知识。
+是时候把你在第一部分学到的所有内容整合起来并付诸实践了。关于 Cucumber 有一些高级概念我们需要向你解释，通过示例演示会更容易。我们在书中这一部分的很多工作将模糊测试与开发之间的界限。如果你更像是一个测试人员而不是开发者，别担心：我们将构建的 Java 代码已经是最简单的了。通过跟随，你对我们喜欢工作的方式有一个良好的感受，并获得一些关于使用 Cucumber 的新知识。
 
 在“返回结果”的第 58 页，我们刚刚开始一个全新的项目来构建 ATM 的软件。我们只有一个场景，描述了系统最重要的行为：让某人在机器前取款。
 
-```step_definitions_inside/01/src/test/resources/cash_withdrawal.feature
+```
+step_definitions_inside/01/src/test/resources/cash_withdrawal.feature
+
 Feature: 取款
+
 Scenario: 余额充足时成功取款
+
 Given 我在账户中存入了 $100
+
 When 我 $20
+
 Then $20 应该被取出
 ```
 
 现在我们将拿起这个场景并从外向内工作，在做的过程中设计系统，就像我们在真实项目中这样做一样。在本章中，我们将通过驱动出一个简单的 ATM 领域模型来让场景通过。然后，在下一章中，当我们发现场景中遗掉了一个关键步骤时，将会得到一个糟糕的惊喜。
 
-
-
-
-在本章结束时，你将学习如何管理在步骤定义（step definitions）之间共享的状态。我们将编写一些自定义辅助方法，为我们的步骤定义与正在构建的应用程序之间引入解耦层。我们将向你展示如何使用转换（transforms）来减少步骤定义中的重复，并使处理有意义的数据类型变得更容易。最后，我们将向你如何组织项目中的文件，使其以便于工作和维护。
+在本章结束时，你将学习如何管理在步骤定义（step definitions）之间共享的状态。我们将编写一些自定义辅助方法，为我们的步骤定义与正在构建的应用程序之间引入解耦层。我们将向你展示如何使用转换（transforms）来减少步骤定义中的重复，并使处理有意义的数据类型变得更容易。最后，我们将向你展示如何组织项目中的文件，使其以便于工作和维护。
 
 ## 勾勒领域模型
 
@@ -3136,23 +3109,35 @@ Then $20 应该被取出
 
 ```
 ----------------------------------------------------------------------
+
 TESTS
 
 Running RunCukesTest
+
 Feature: Cash Withdrawal
 
 Scenario: Successful withdrawal from an account in credit
+```
+
+
+
 Given I have deposited $100 in my account
+
 When I request $20
+
+```
 cucumber.api.PendingException: TODO: implement
 at @logback.Steps(Steps.java:22)
 at *.When I request $20($cash_withdrawal.feature:4)
-Then $20 should be dispensed
 ```
 
+Then $20 should be dispensed
+
+```
 1 Scenarios (1 pending)
 3 Steps (1 skipped, 1 pending, 1 passed)
 0m.090s
+```
 
 ```
 cucumber.api.PendingException: TODO: implement
@@ -3164,6 +3149,7 @@ at *.When I request $20($cash_withdrawal.feature:4)
 
 ```
 step_definitions_inside_/01/src/java/test/nicebank/Steps.java
+
 package nicebank;
 
 import cucumber.api.java.en.*;
@@ -3172,24 +3158,26 @@ import cucumber.api.java.PendingException;
 public class Steps {
 
     class Account {
+
         public Account(int openingBalance) {
-    }
+        }
 
-    @Given("I have deposited \|d+\$ in my account")
-    public void iDepositedInMyAccount(int amount) throws Throwable {
-        new Account(amount);
-    }
+        @Given("I have deposited \\d+\\$ in my account")
+        public void iDepositedInMyAccount(int amount) throws Throwable {
+            new Account(amount);
+        }
 
-    @When("I request \|d+\$")
-    public void iRequest(int arg) throws Throwable {
-        // Write code that throws the phrase above into concrete actions
-        throw new PendingException();
-    }
+        @When("I request \\d+\\$")
+        public void iRequest(int arg) throws Throwable {
+            // Write code that throws the phrase above into concrete actions
+            throw new PendingException();
+        }
 
-    @Then("\\d+\$ should be dispensed")
-    public void iShouldBeDispensed(int arg) throws Throwable {
-        // Write code that throws the phrase above into concrete actions
-        throw new PendingException();
+        @Then("\\d+\\$ should be dispensed")
+        public void iShouldBeDispensed(int arg) throws Throwable {
+            // Write code that throws the phrase above into concrete actions
+            throw new PendingException();
+        }
     }
 }
 ```
@@ -3200,7 +3188,7 @@ public class Steps {
 - 步骤在欺骗我们！它显示 `Given I have deposited $100 in my account` 并且通过了。但从我们的实现中知道，没有任何资金被存入任何地方。
 - 余额并不总是包含美元金额，但我们的步骤定义使用了 `int`。我们应该能够处理美元和分。
 
-在继续场景中的下一个步骤之前，我们将逐解决这些问题。
+在继续场景中的下一个步骤之前，我们将逐一解决这些问题。
 
 ## 准确用词
 
@@ -3208,14 +3196,17 @@ public class Steps {
 
 ```
 step_definitions_inside/02/src/test/java/nicebank/Steps.java
+
 class Account {
     public void deposit(int amount) {
+    }
 }
 ```
 
 ```
 step_definitions_inside/02/src/test/java/nicebank/Steps.java
-@Given("I have deposited \|d+\$ in my account")
+
+@Given("I have deposited \\d+\\$ in my account")
 public void iDepositedInAccount(int amount) throws Throwable {
     Account myAccount = new Account();
     myAccount.deposit(amount);
@@ -3232,65 +3223,57 @@ public void iDepositedInAccount(int amount) throws Throwable {
 
 ```
 step_definitions_inside/03/src/test/java/nicebank/Steps.java
-@Given("I have deposited \|d+\$ in my account")
+
+@Given("I have deposited \\d+\\$ in my account")
 public void iHaveDepositedInAccount(int amount) throws Throwable {
     Account myAccount = new Account();
     myAccount.deposit(amount);
+    Assert.assertEquals("Incorrect account balance-", amount, myAccount.getBalance());
 }
 ```
-
-```
-Assert.assertEquals("Incorrect account balance-",
-    amount, myAccount.getBalance());
-}
-```
-
-## 勾勒领域模型 · 121
 
 在这里使用了 JUnit 断言，但如果你偏好其他断言库，请随时使用。在 `Given` 步骤中放置断言可能看起来奇怪，但它向代码的未来读者传递了步骤运行后我们期望系统的状态。我们需要在 `Account` 中添加一个 `balance` 方法才能运行这段代码：
 
 ```
 step_definitions_inside/03/src/test/java/nicebank/Steps.java
-class Account {
-  public void deposit(int amount) {
-  }
 
-  public int getBalance() {
-    return 0;
-  }
+class Account {
+    public void deposit(int amount) {
+    }
+    public int getBalance() {
+        return 0;
+    }
 }
 ```
 
 注意我们是在勾勒接口，而不是添加实现。当我们运行测试时，得到了一个有用的失败：
 
 > Scenario: Successful withdrawal
-Given I have deposited $100 in my account
-java.lang.AssertionError: Incorrect account balance
-      expected:<100> but was:<0>
-at org.junit.Assert.fail(Assert.java:88)
-at org.junit.Assert.failEquals(Assert.java:74)
-at org.junit.Assert.assertEquals(Assert.java:118)
-at org.junit.Assert.assertEquals(Assert.java:555)
-at org.nicebank.Steps.iHaveDepositedInAccount(Steps.java:29)
-  at cash_withdrawal.feature:3
-
-When I request $20
-Then $20 should be dispensed
-
-+1 Scenarios (1 failed)
-3 Steps (1 failed)
-0.076s
-
+> Given I have deposited $100 in my account
 > java.lang.AssertionError: Incorrect account balance
-      expected:<100> but was:<0>
+>       expected:<100> but was:<0>
+> at org.junit.Assert.fail(Assert.java:88)
+> at org.junit.Assert.failEquals(Assert.java:74)
+> at org.junit.Assert.assertEquals(Assert.java:118)
+> at org.junit.Assert.assertEquals(Assert.java:555)
+> at org.nicebank.Steps.iHaveDepositedInAccount(Steps.java:29)
+>   at cash_withdrawal.feature:3
+>
+> When I request $20
+> Then $20 should be dispensed
+>
+> +1 Scenarios (1 failed)
+> 3 Steps (1 failed)
+> 0.076s
+>
+> java.lang.AssertionError: Incorrect account balance
+>       expected:<100> but was:<0>
 
 我们的步骤定义健壮得多，因为如果项目以后出现回归，我们会发出警报；诊断也更容易，因为场景会在问题发生时立即失败。这种技术在您勾勒事物时最有用：
 
 我们现在处于一个决策点。我们实际上完成了步骤定义的实现，但在对 `Account` 类的实现进行某些更改之前，我们无法进入下一个。这就像在建筑现场搭建脚手架：我们最终会拆除它，但在此期间有助于事物立起来。
 
 ## 做最简单的事
-
-我们现在处于一个决策点。我们实际上完成了步骤定义的实现……（等待，重复了）
 
 很容易停下来，将 `Account` 类移动到一个单独的文件，并开始使用单元测试驱动我们想要的行为。我们现在将尝试抵抗这种诱惑，留在 `Account` 类的外部。如果我们能从这个视角完整地遍历场景，那么在我们进入内部并实现它时，会对类的接口设计更有信心。
 
@@ -3300,13 +3283,12 @@ Then $20 should be dispensed
 
 ```
 step_definitions_inside/04/src/test/java/nicebank/Steps.java
+
 class Account {
     private int balance;
-
     public void deposit(int amount) {
         balance += amount;
     }
-
     public int getBalance() {
         return balance;
     }
@@ -3314,8 +3296,6 @@ class Account {
 ```
 
 ![](img/3bdd08a58a5b15b4736776437bb8f3a0_134_0.png)
-
-
 
 很好。我们的列表中还剩最后一个问题了，就是我们使用 `int` 作为余额。既然我们的步骤已经通过了，我们可以放心地进行这次重构了。
 
@@ -3325,7 +3305,9 @@ class Account {
 
 ```
 step_definitions_inside/05/src/test/resources/cash_withdrawal.feature
+
 Feature: Cash Withdrawal
+
 Scenario: Successful withdrawal from an account in credit
 Given I have deposited $100.00 in my account
 When I request $20
@@ -3334,28 +3316,28 @@ Then $20 should be dispensed
 
 现在当我们运行 `clean test` 时，它报告有一个未定义的定义，并告诉我们现在需要使用什么正则表达式来匹配我们的特性：
 
-Feature: Cash Withdrawal
-
+> Feature: Cash Withdrawal
 > Scenario: Successful withdrawal from an account in credit
-Given I have deposited $100.00 in my account
-When I request $20
-Then $20 should be dispensed
-
-+   1 Scenarios (1 undefined)
-3 Steps (2 skipped, 1 undefined)
-0m.000s
-
-你可以通过下面的代码片段实现缺失的步骤：
+> Given I have deposited $100.00 in my account
+> When I request $20
+> Then $20 should be dispensed
+> +   1 Scenarios (1 undefined)
+> 3 Steps (2 skipped, 1 undefined)
+> 0m.000s
+>
+> 你可以通过下面的代码片段实现缺失的步骤：
+>
+> ```
+> @Given("I have deposited \\\\$(\\d+)\\\\$(\\d+) in my account$") throws Throwable {
+> public void iHaveDepositedInMyAccount(int arg1, int arg2) {
+>     // 编写将短语转换为具体动作的代码
+>     throw new PendingException();
+> }
+> ```
 
 ```
-@Given("I have deposited \\\\$(\d+)\\\\$(\d+) in my account$") throws Throwable {
-public void iHaveDepositedInMyAccount(int arg1, int arg2) {
-    // 编写将短语转换为具体动作的代码
-    throw new PendingException();
-}
-```
-
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0.458 sec
+```
 
 Cucumber 识别了步骤中的两个数字，并生成了一个正则表达式，该表达式分别捕获它们，并将它们作为两个整数传递给我们的步骤定义。与其传递两个整数，我们将使用一个专门为此编写的 `Money` 类，你可以在 `src/main/java/nicebank` 中找到它。
 
@@ -3368,34 +3350,33 @@ Cucumber 识别了步骤中的两个数字，并生成了一个正则表达式�
 
 ```
 step_definitions_inside/06/src/test/java/niceback/Steps.java
-@Given("I have deposited |$(\d+)\||(\d+) in my account")
+
+@Given("I have deposited \\$(\\d+)\\|(\\d+) in my account")
 public void iHaveDepositedInMyAccount(int dollars, int cents) throws Throwable {
     Account myAccount = new Account();
     Money money = new Money(dollars, cents);
     myAccount.deposit(amount);
-```
-
-```
-Assert.assertEquals("Incorrect account balance -", amount, myAccount.getBalance());
+    Assert.assertEquals("Incorrect account balance -", amount, myAccount.getBalance());
+}
 ```
 
 我们更改了 `Account` 的实现以处理 `Money` 存款：
 
 ```
 step_definitions_inside/06/src/test/java/niceback/Steps.java
+
 class Account {
     private Money balance = new Money();
-
     public void deposit(Money amount) {
         balance = balance.add(amount);
     }
-
     public Money getBalance() {
         return balance;
     }
+}
 ```
 
-这很好，但这意味着我们必须每个处理美元和分的步骤定义中都创建一个 `Money` 实例。如果 Cucumber 能直接将 `Money` 对象传递给步骤定义就更好了。
+这很好，但这意味着我们必须在每个处理美元和分的步骤定义中都创建一个 `Money` 实例。如果 Cucumber 能直接将 `Money` 对象传递给步骤定义就更好了。
 
 要实现这一点，我们需要做的第一件事是更改步骤定义，使得：
 
@@ -3407,40 +3388,39 @@ class Account {
 你是否好奇过 Cucumber 如何知道在它生成的步骤代码片段中使用什么参数？首先，它在正则表达式中生成一个参数捕获组。然后，对于每个捕获组，如果匹配到数字，它会创建一个 `int` 参数；否则，它会创建一个 `String` 参数。例如：
 
 ```
-@Given("a = amount\(\d+)\")
-public void aDollarAmount(String arg1, int arg2) Throwable {
+@Given("a = amount(\\d+)")
+public void aDollarAmount(String arg1, int arg2) throws Throwable {
 }
 ```
 
 如果你想将数字作为 `String` 进行操作呢？没问题——只需要 Cucumber 给你的一点点提示。如果你想使用不同的类型，只需更改步骤定义的签名，如下所示：
 
 ```
-@Given("a = amount\(\d+)\")
-public void aDollarAmount(String arg1, int arg2) Throwable {
+@Given("a = amount(\\d+)")
+public void aDollarAmount(String arg1, int arg2) throws Throwable {
 }
 ```
 
 在底层，Cucumber 将正则表达式中的每个捕获组表示为 `String`。在调用时，步骤定义会将 `String` 转换为期望的类型。如果无法转换，它将抛出 `cucumber.runtime.CucumberException`，否则转换会自动发生——就像魔术一样。
 
+```
 step_definitions_inside/07/src/test/java/nicebank/Steps.java
 
-```
-@Given("I have deposited\(\d+\.\d+\)\) in my account$")
+@Given("I have deposited(\\d+\\.\\d+)\\) in my account$")
 public void iHaveDepositedInMyAccount(Money amount) throws Throwable {
-  Account myAccount = new Account();
-  myAccount.deposit(amount);
+    Account myAccount = new Account();
+    myAccount.deposit(amount);
+    Assert.assertEquals("Incorrect account balance --", myAccount.getBalance());
 }
 ```
 
-```
-Assert.assertEquals("Incorrect account balance --", myAccount.getBalance());
-```
 
-现在我们需要知道 Cucumber 如何将 `String` 转换为 `Money` 对象。一种方法是为我们的 `Money` 类提供一个一个接收 `String` 的单参数构造函数。这样 Cucumber 在调用步骤定义时就会自动调用它，并传入匹配捕获组的 `String`。
 
-step_definitions_inside/07/src/test/java/nicebank/Money.java
+现在我们需要知道 Cucumber 如何将 `String` 转换为 `Money` 对象。一种方法是为我们的 `Money` 类提供一个接收 `String` 的单参数构造函数。这样 Cucumber 在调用步骤定义时就会自动调用它，并传入匹配捕获组的 `String`。
 
-```
+`step_definitions_inside/07/src/test/java/nicebank/Money.java`
+
+```java
 public Money(String amount) {
   Pattern pattern = Pattern.compile("^(\\d+)\\.(\d+)$");
   Matcher matcher = pattern.matcher(amount);
@@ -3457,7 +3437,9 @@ public Money(String amount) {
 
 我们在步骤定义中对参数进行注解，以告诉 Cucumber 使用哪个 Transformer：
 
-step_definitions_inside/09/src/test/java/nicebank/Steps.java
+`step_definitions_inside/09/src/test/java/nicebank/Steps.java`
+
+```java
 @Given("I have deposited (|$d+|+|d+) in my account$")
 public void iHaveDepositedInMyAccount(
     @transform(Money.class) Money amount)
@@ -3469,9 +3451,9 @@ public void iHaveDepositedInMyAccount(
 
 当然，我们必须对 `MoneyConverter` 进行相应的更改以确保它正确处理货币符号。目前（由于我们不处理多种货币），我们将仅处理美元符号：
 
-step_definitions_inside/09/src/test/java/nicebank/MoneyConverter.java
+`step_definitions_inside/09/src/test/java/nicebank/MoneyConverter.java`
 
-```
+```java
 String[] numbers = amount.substring(1).split("\\|");
 ```
 
@@ -3483,25 +3465,25 @@ String[] numbers = amount.substring(1).split("\\|");
 
 Feature: Cash Withdrawal
 
-```
+```gherkin
 Scenario: Successful withdrawal from an account in credit
 I have deposited $100 in my account
 When I request $20
 Then $ should be dispensed
 ```
-cucumber.api.PendingException: TODO: implement me
-at nicebank.Steps.iRequest($Steps.java:44)
-at *. When I request $20($cash_withdrawal.feature:4)
 
+```text
+cucumber.api.PendingException: TODO: implement me
+at nicebank.Steps.iRequest$(Steps.java:44)
+at *. When I request $20($cash_withdrawal.feature:4)
 +   1 Scenarios (1 pending)
 3 Steps (1 skipped, 1 pending, 1 passed)
 0m.099s
-
-
+```
 
 第 7 章 步骤定义：内部实现 • 128
 
-```
+```text
 cucumber.api.PendingException: TODO: implement me
 at nicebank.Steps.IRequest$(Steps.java:44)
 at at *. When I request 20(cash_withdrawal.feature:4)
@@ -3511,8 +3493,9 @@ at at *. When I request 20(cash_withdrawal.feature:4)
 
 第一步正如我们预期地通过了，第二步由于待处理（pending）消息而失败。因此，我们的下一个任务是实现该步骤，模拟客户从 ATM 提取现金。这里是空的步骤定义：
 
-```
-step_definitions_inside/09/src/test/java/nicebank/Steps.java
+`step_definitions_inside/09/src/test/java/nicebank/Steps.java`
+
+```java
 @When("I request \|\d+\$")
 public void iRequest$(int arg1) throws Throwable {
     // 编写将上述语句转换为具体动作的代码
@@ -3520,9 +3503,9 @@ public void iRequest$(int arg1) throws Throwable {
 }
 ```
 
-我们需要一个地方来提取现金，这意味着我们需要在这个场景中引入一个新的新参与者（actor）。这个新类将处理我们从账户中提取现金的请求。如果我们现实生活中走进银行，柜员会扮演什么角色。再次进行“从外向内”的思考，让我们勾勒出我们想要的代码：
+我们需要一个地方来提取现金，这意味着我们需要在这个场景中引入一个新的参与者（actor）。这个新类将处理我们从账户中提取现金的请求。如果我们现实生活中走进银行，柜员会扮演什么角色。再次进行“从外向内”的思考，让我们勾勒出我们想要的代码：
 
-```
+```java
 @When("I request \|\d+\$")
 public void iRequest$(int amount) throws Throwable {
     Teller teller = new Teller();
@@ -3532,8 +3515,9 @@ public void iRequest$(int amount) throws Throwable {
 
 这看起来很不错。柜员需要知道从哪个账户提取现金，以及提取多少。语言中又出现了一点点不一致之处，但在代码中我们确实是在进行“提取（withdraw）”。Withdraw 是我们经常使用的术语，所以让我们更改场景中的文本以匹配它。
 
-```
-step_definitions_inside/10/src/test/resources/cash_withdrawal.feature
+`step_definitions_inside/10/src/test/resources/cash_withdrawal.feature`
+
+```gherkin
 Feature: 现金提取
 Scenario: 从信贷账户成功取款
 Given I have deposited $100.00 in my account
@@ -3541,8 +3525,9 @@ When I withdraw $20
 Then $20 should be dispensed
 ```
 
-```
-step_definitions_inside/10/src/test/java/nicebank/Steps.java
+`step_definitions_inside/10/src/test/java/nicebank/Steps.java`
+
+```java
 @When("I withdraw \|\d+\$")
 public void iWithdraw$(int arg1) throws Throwable {
     Teller teller = new Teller();
@@ -3552,8 +3537,9 @@ public void iWithdraw$(int arg1) throws Throwable {
 
 这样好多了。现在场景中的语言更真实地反映了下方代码正在发生。再次运行 `mvn clean test`，系统会提示你创建一个 `Teller` 类。让我们创建一个吧：
 
-```
-step_definitions_inside/11/src/test/java/nicebank/Steps.java
+`step_definitions_inside/11/src/test/java/nicebank/Steps.java`
+
+```java
 class Teller {
     public void withdrawFrom(Account account, int dollars) {
 }
@@ -3561,7 +3547,7 @@ class Teller {
 
 同样，我们现在只是勾勒了接口，还没有添加任何实现。就绪后，再次运行 `mvn clean test`：
 
-```
+```text
 [INFO]
 [ERROR] COMPILATION ERROR :
 [INFO]
@@ -3577,11 +3563,9 @@ class Teller {
 
 就像普通 Java 类上的方法一样，我们可以使用实例变量在定义在同一类中的步骤定义之间传递状态。以下是代码使用存储在步骤定义实例变量中的 `myAccount` 的方式：
 
-```
+```java
 private Account myAccount;
-```
 
-```
 @Given("I have deposited \|\|\d+\|\|\d) in my account$")
 public void iHaveDepositedInMyAccount(
     @Transform(MoneyConverter.class) Money amount
@@ -3589,7 +3573,7 @@ public void iHaveDepositedInMyAccount(
     myAccount.deposit(amount)
 ```
 
-```
+```java
 Assert.assertEquals("Incorrect account balance -", amount, myAccount.balance());
 ```
 
@@ -3605,7 +3589,7 @@ Cucumber 使用依赖注入（dependency injection）来促进步骤之间的状
 
 在普通类中，我们可能会通过将实例变量放在访问器方法之后来避免 `null`，如下：
 
-```
+```java
 private Account myAccount;
 public Account getMyAccount() {
     if (myAccount == null) {
@@ -3617,8 +3601,9 @@ public Account getMyAccount() {
 
 我们可以创建一个辅助类来在步骤之间共享状态。让我们定义一个辅助类并在步骤定义中使用它。
 
-```
-step_definitions_inside/12/src/test/java/nicebank/Steps.java
+`step_definitions_inside/12/src/test/java/nicebank/Steps.java`
+
+```java
 class Teller {
     public void withdrawFrom(Account account, int dollars) {
 }
@@ -3628,7 +3613,7 @@ class Teller {
 
 在普通类中，我们可能会通过将实例变量放在访问器方法之后来避免 `null`，如下：
 
-```
+```java
 private Account myAccount;
 public Account getMyAccount() {
     if (myAccount == null) {
@@ -3640,8 +3625,9 @@ public Account getMyAccount() {
 
 我们可以创建一个辅助类来在步骤之间共享状态。让我们定义一个辅助类并在步骤定义中使用它。
 
-```
-step_definitions_inside/12/src/test/java/nicebank/Steps.java
+`step_definitions_inside/12/src/test/java/nicebank/Steps.java`
+
+```java
 class KnowsAccount {
     private Account myAccount;
 
@@ -3651,14 +3637,16 @@ class KnowsAccount {
         }
         return myAccount;
     }
+}
 ```
 
 # 设计通终点的路线
 
 现在让我们尝试完成最后一个步骤。我们可以看到前两个步骤通过了，而最后一个是待处理的。让我们看看那个步骤定义：
 
-```
-step_definitions_inside/12/src/test/java/nicebank/Steps.java
+`step_definitions_inside/12/src/test/java/nicebank/Steps.java`
+
+```java
 @Then("^\d+\$ should be dispensed")
 public void iRequest$(int arg1) throws Throwable {
     // 编写将上述语句转换为具体动作的代码
@@ -3668,8 +3656,9 @@ public void iRequest$(int arg1) throws Throwable {
 
 这里的大问题是：现金会被取出？我们可以检查系统的哪个部分来确定是否拿到钱？似乎我们缺少一个领域概念。在物理 ATM 中，现金是从 ATM 的一个插口出来的，如下：
 
-```
-step_definitions_inside/13/src/test/java/nicebank/Steps.java
+`step_definitions_inside/13/src/test/java/nicebank/Steps.java`
+
+```java
 @Then("\|(\d+) should be dispensed$")
 public void ShouldBeDispensed(int dollars) throws Throwable {
     Assert.assertEquals("Incorrect amount dispensed -", dollars, helper.getCashSlot().contents());
@@ -3678,8 +3667,9 @@ public void ShouldBeDispensed(int dollars) throws Throwable {
 
 看起来不错。当我们有了硬件代码时，我们需要某种与它通信的方式，在此之前对象可以作为测试双桩（test double）。让我们开始 `mvn clean` 来驱动它。首先它告诉我们需要定义 `getCashSlot` 方法，这是自然的。让我们为我们的类添加另一个方法并重命名以反映它的新角色。
 
-```
-step_definitions_inside/13/src/test/java/nicebank/Steps.java
+`step_definitions_inside/13/src/test/java/nicebank/Steps.java`
+
+```java
 class KnowsTheDomain {
     private Account myAccount;
     private CashSlot cashSlot;
@@ -3687,17 +3677,15 @@ class KnowsTheDomain {
 
 我们再次运行 `mvn clean test`，这一次它要求我们定义 `CashSlot` 类，所以我们就按要求做。同样，我们只是构建了一个我们想要使用的接口草图，并带有最少的实现：
 
-```
-step_definitions_inside/14/src/test/java/nicebank/Steps.java
+`step_definitions_inside/14/src/test/java/nicebank/Steps.java`
+
+```java
 class CashSlot {
     public int getContents() {
         return 0;
     }
 }
 ```
-
-
-
 
 # 添加自定义辅助方法 · 133
 
@@ -3716,8 +3704,9 @@ java.lang.AssertionError: Incorrect amount dispensed
 
 为了让最后一步通过，需要有人在客户取款时告诉 `CashSlot` 释放现金。虽然出纳员（Teller）负责交易，但此时的时刻它对 `CashSlot` 一无所知。现在我们可以想象一个新的 `CashSlot` 方法，出纳员可以用它来告诉其释放现金：使用 `dependency injection`（依赖注入）。
 
+`step_definitions/15/src/test/java/nicebank/Steps.java`
+
 ```java
-step_definitions/15/src/test/java/nicebank/Steps.java
 class Teller {
     private Teller(CashSlot cashSlot) {
         this.cashSlot = cashSlot;
@@ -3732,6 +3721,8 @@ class Teller {
 这似乎是让场景通过所需要的的 `Teller` 最简单的实现方式。很奇怪的是，当我们从外部设计这个方法时，我们认为我们需要 `account` 参数，但现在我们不需要了。让我们保持专注；我们会在待办事项上做一个标记，稍后研究这个问题，并继续让这一步通过。
 
 我们需要做两处更改。我们需要在 `CashSlot` 中添加新的 `disperse` 方法，并且我们必须更改第二个步骤定义以正确地创建 `Teller`：
+
+
 
 ```java
 @When("I withdraw $\|(\d+)\$")
@@ -3774,14 +3765,13 @@ class CashSlot {
 
 太棒了！去喝杯饮料——然后我们可以坐下来审查代码并进行重构。
 
-#组织代码
+# 组织代码
 
 在结束这一节之前，让我们对未来的自己好一点，稍微整理一下。在我们工作时，我们直接在 `src/test/java/nicebank/Steps` 文件中内联了所有内容。我们将把更多内容移出，放到更常规的地方。这里是我们想要修复的列表：
 
 - 应用程序域模型类应该移动到 `src/main/java` 树。
 - `KnowsDomain` 类可以移动到自己的文件中。
-
-`Steps` 文件可以拆分以更好地组织步骤定义。对于一个只有三个步骤定义的项目来说，这可能是没必要的，但我们将这样做是为了展示在更大的项目中是如何操作的。
+- `Steps` 文件可以拆分以更好地组织步骤定义。对于一个只有三个步骤定义的项目来说，这可能是没必要的，但我们将这样做是为了展示在更大的项目中是如何操作的。
 
 ## 分离应用程序代码
 
@@ -3793,7 +3783,7 @@ class CashSlot {
 
 保存文件并运行 `mvn test`。
 
-## 干运行 (Dry Run)
+## 干运行
 
 当我们开始移动文件时，使用“干运行”来测试一切是否匹配是有用的。干运行旨在解析特征文件但不实际运行。
 
@@ -3806,9 +3796,9 @@ public class CucumberTest {
 
 如果你只想检查场景，这比实际运行要快得多。
 
-## 分离应用程序代码
+## 分离支持代码
 
-我们目前使用支持。随着步骤定义的数量增加，我们将根据需要拆分文件。
+我们目前使用支持代码。随着步骤定义的数量增加，我们将根据需要拆分文件。
 
 ```java
 import nicebank.Account;
@@ -3816,7 +3806,7 @@ import nicebank.CashSlot;
 import nicebank.Teller;
 ```
 
-#组织代码
+# 组织代码
 
 我们目前保持一个文件。随着步骤定义的数量增加，我们将根据需要拆分文件。
 
@@ -3824,19 +3814,16 @@ import nicebank.Teller;
 step_definitions_inside/18/src/test/java/nicebank/Steps.java
 ```
 
-```
-
-我们目前保持一个文件。随着步骤定义的数量增加，我们将根据需要拆分文件。
-
 ```java
 step_definitions_inside/18/src/test/java/nicebank/AccountSteps.java
 KnowsDomain helper;
+
 public AccountSteps() {
     helper = new KnowsDomain();
 }
 ```
 
-```java
+```
 java.lang.AssertionError: Incorrect amount dispensed
     - expected:<20> but was:<0>
     at org.junit.Assert.fail(Assert.java:88)
@@ -3849,7 +3836,7 @@ java.lang.AssertionError: Incorrect amount dispensed
 
 ## 依赖注入
 
-依赖注入 (DI) 是一种技术，允许我们在运行时之前将类与其依赖项隔离离开。这通常被用于推迟关于我们将使用接口的哪种实际实现的决定。在这种情况下，Cucumber 使用一个依赖注入框架来创建一个类的单例，并在我们需要的所有步骤定义类之间共享该实例。（我们将在第205页的“使用依赖注入简化设计”中更多地讨论 Cucumber 对 DI 的使用。）
+依赖注入 (DI) 是一种技术，允许我们在运行时之前将类与其依赖项隔离开来。这通常被用于推迟关于我们将使用接口的哪种实际实现的决定。在这种情况下，Cucumber 使用一个依赖注入框架来创建一个类的单例，并在我们需要的所有步骤定义类之间共享该实例。（我们将在第205页的“使用依赖注入简化设计”中更多地讨论 Cucumber 对 DI 的使用。）
 
 Cucumber 提供了几个流行的集成框架供选择。我们将使用 PicoContainer，它可能是最轻量级的，并且在 BSD 许可证下可用。我们修改 `pom.xml` 以添加 PicoContainer 作为依赖：
 
@@ -3872,11 +3859,7 @@ step_definitions_inside_19/pom.xml
 现在我们只需要更改每个步骤定义中的构造函数。以下是一个用例：
 
 - 1. http://www.martinfowler.com/articles/injection.html
-2. http://picocainer.codehaus.org
-
-
-
-
+- 2. http://picocainer.codehaus.org
 
 ```java
 step_definitions_inside/19/src/test/java/nicebank/AccountSteps.java
@@ -3887,20 +3870,20 @@ public AccountSteps(KnowsTheDomain helper) {
 }
 ```
 
-现在当我们我们运行 `mvn clean all`，所有步骤再次通过了。试一下吧！
+现在当我们运行 `mvn clean all`，所有步骤再次通过了。试一下吧！
 
 ## 我们刚刚学到了什么
 
-看起来我们在这里构建的系统似乎只是一个玩具。它没有用户可以交互的任何具体组件：我们的 `CashSlot` 只是一个普通的 Java 类，而且没有给用户可以按的按钮。然而，我们拥有的是领域模型的开端，以及对问题更深层次的理解。“由外而内”（Outside-in）并不总是从用户界面开始；它的意思是从你想要发现的事物的外部开始。
+看起来我们在这里构建的系统似乎只是一个玩具。它没有用户可以交互的任何具体组件：我们的 `CashSlot` 只是一个普通的 Java 类，而且没有给用户可以按的按钮。然而，我们拥有的是领域模型的开端，以及对问题更深层次的理解。“由外而内”并不总是从用户界面开始；它的意思是从你想要发现的事物的外部开始。
 
 我们知道这种工作方式并不总是可行的。你经常需要向遗留系统添加测试，或者在一个在你被要求开发代码时用户界面已经定义好的项目上工作。即使在这些情况下，用 Java 类对你的领域进行建模也有助于你的所有权，并从长远来看使测试代码更具维护性。
 
 以下是本章中涵盖的一些更具体的课题：
 
--   `Transforms` 通过移除处理从步骤中捕获参数的烦人重复代码，帮助提高了可维护性。
--   支持步骤定义的 Java 代码可以重构到单独的类中。
--   每个实体使用一个文件来组织步骤定义是一个良好的做法。
--   你可以使用 Cucumber 与若干依赖注入框架之一的集成所实例化和管理的辅助类，在步骤之间传递状态。
+- `Transforms` 通过移除处理从步骤中捕获参数的烦人重复代码，帮助提高了可维护性。
+- 支持步骤定义的 Java 代码可以重构到单独的类中。
+- 每个实体使用一个文件来组织步骤定义是一个良好的做法。
+- 你可以使用 Cucumber 与若干依赖注入框架之一的集成所实例化和管理的辅助类，在步骤之间传递状态。
 
 通过添加我们的 `KnowsTheDomain` 类，我们让步骤定义代码变得更易读，并开始将步骤定义与系统解耦。这种解耦的益处将随着系统本身的演变而显出来。事实上，在下一章中，我们将展示你如何引入一个 Web 用户界面来提取现金，而无需更改步骤定义中的任何代码。
 
@@ -3932,12 +3915,16 @@ public AccountSteps(KnowsTheDomain helper) {
 
 在上一章中，我们开始研究一个如何使用 Cucumber 由外而内地构建一个真实应用程序的示例。我们构建的系统是一个银行的自动取款机（ATM），我们使用 Cucumber 来帮助我们设计了一个满足该场景的简单领域模型：
 
-```gher
+```gherkin
 support_code/01/src/test/resources/cash_withdrawal.feature
 Feature: Cash Withdrawal
+
 Scenario: Successful withdrawal from an account in credit
+
 Given I have deposited $100.00 in my account
+
 When I withdraw $20
+
 Then $20 should be dispensed
 ```
 
@@ -3958,9 +3945,11 @@ support_code/01/src/test/java/AccountSteps.java
 package nicebank;
 
 import cucumber.api.java.*;
+
 import KnowsTheDomain;
 
 public class AccountSteps {
+
     KnowsTheDomain helper;
 
     public AccountSteps(KnowsTheDomain helper) {
@@ -3976,12 +3965,16 @@ public class AccountSteps {
 
 看起来我们很明确地想要让从账户中取出指定的金额。但场景：
 
-```gher
+```gherkin
 support_code/01/src/test/resources/cash_withdrawal.feature
 Feature: Cash Withdrawal
+
 Scenario: Successful withdrawal from an account in credit
+
 Given I have deposited $100.00 in my account
+
 When I withdraw $20
+
 Then $20 should be dispensed
 ```
 
@@ -3989,17 +3982,22 @@ Then $20 should be dispensed
 
 让我们采用这个额外的步骤：
 
-```gher
+```gherkin
 support_code/02/src/test/resources/cash_withdrawal.feature
 Feature: Cash Withdrawal
+
 Scenario: Successful withdrawal from an account in credit
+
 Given I have deposited $100.00 in my account
+
 When I withdraw $20
+
 Then $20 should be dispensed
+
 And the balance of my account should be $80
 ```
 
-运行 `mvn clean test`并将新步骤定义的片段粘贴到 `AccountSteps.java` 中：
+运行 `mvn clean test` 并将新步骤定义的片段粘贴到 `AccountSteps.java` 中：
 
 ```java
 support_code/02/src/test/java/nicebank/AccountSteps.java
@@ -4028,19 +4026,18 @@ The balance of my account should be $80.00
 java.lang.AssertionError: Incorrect account balance -
 expected:<$80.00> but was:<$100.00>
 at at org.junit.Assertion.fail(Assert.java:80)
-at at nicebank.AccountSteps.balanceOfMyAccountShouldBe(
-    (AccountSteps.java:36)
-    *.And the balance of my account should be $80.00)
 ```
 
 
 
-
+at `nicebank.AccountSteps.balanceOfMyAccountShouldBe`(
+    `AccountSteps.java:36`
+    *.And the balance of my account should be $80.00)
 
 ## Matt 说道：
 这不是 Bug；这只是缺少了一个场景
 
-当我第一次使用 Cucumber 从外向内地构建一个完整的应用程序时，我发现的奇妙之处在于，当我们开始进行手动探索性测试并发现 Bug 时，几乎无例外，这些 Bug 中的某一个都可以追溯到我们为系统某部分编写的 Cucumber 场景中的漏洞。因为这些场景是业务人员和开发者共同协作完成的，所以 Bug 的出现并不是任何人的错错。这只是一个我们最初没有预料到的边缘情况（edge case）。
+当我第一次使用 Cucumber 从外向内地构建一个完整的应用程序时，我发现的奇妙之处在于，当我们开始进行手动探索性测试并发现 Bug 时，几乎无例外，这些 Bug 中的某一个都可以追溯到我们为系统某部分编写的 Cucumber 场景中的漏洞。因为这些场景是业务人员和开发者共同协作完成的，所以 Bug 的出现并不是任何人的错。这只是一个我们最初没有预料到的边缘情况（edge case）。
 
 在我的经验中，Bug 是软件团队中摩擦和不快乐的巨大来源。业务人员将其归咎于开发者的疏心，而开发者则将其归咎于业务人员提供的需求不充分。实际上，它们只是软件开发这项复杂任务的自然结果。使用 Cucumber 帮助团队意识到弥补这些漏洞是每个人的责任。指责并没有发生，我们拥有了一个更快乐的团队，因为：
 
@@ -4048,6 +4045,7 @@ Bug 被我们的场景捕捉到了。正如我们所怀疑的那样，账户余�
 
 ```
 support_code/03/src/main/java/nicebank/Teller.java
+
 public void withdraw(Account account, int dollars) {
     cashLot.dispose(dollars);
 }
@@ -4057,6 +4055,7 @@ public void withdraw(Account account, int dollars) {
 
 ```
 support_code/04/src/main/java/nicebank/Teller.java
+
 public void withdraw(Account account, int dollars) {
     account.debit(dollars);
     cashLot.dispense(dollars);
@@ -4069,9 +4068,7 @@ public void withdraw(Account account, int dollars) {
 
 ```
 support_code/05/src/main/java/java/nicebank/Account.java
-```
 
-```
 public void debit(int dollars) {
     balance = balance.minus(new Money(dollars, 0));
 }
@@ -4079,6 +4076,7 @@ public void debit(int dollars) {
 
 我们实现了一个名为 `debit` 的新方法，它根据给定的金额减少余额。让我们运行 `clean test` 看看我们是否成功修复了 Bug：
 
+```
 Running RunCukesTest
 Feature: Cash Withdrawal
 
@@ -4093,6 +4091,8 @@ And the balance of my account should be $80.00
 0m.079s
 
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.513 sec
+```
+
 万喜，我们做到了！现在是在继续之前进行一些重构了。
 
 ## 审查与重构
@@ -4108,30 +4108,24 @@ Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.513 sec
 
 ```
 support_code/05/src/main/java/java/nicebank/Account.java
-```
 
-```
 package nicebank;
-```
 
-```
 public class Account {
     private Money balance = new Money();
-```
 
-```
-public void deposit(Money amount) {
-    balance = balance.add(amount);
-}
+    public void deposit(Money amount) {
+        balance = balance.add(amount);
+    }
 
-public void debit(int dollars) {
-    balance = balance.minus(new Money(dollars, 0));
-}
+    public void debit(int dollars) {
+        balance = balance.minus(new Money(dollars, 0));
+    }
 
-public Money getBalance() {
-    return balance;
+    public Money getBalance() {
+        return balance;
+    }
 }
-```
 ```
 
 反思一下，我们使用了 `deposit` 和 `debit` 这两个方法名令人困惑。我们希望看到要么 `deposit` 和 `withdraw`，要么 `credit` 和 `debit`，而不是两者的结合。哪对组合对我们的 `Account` 类更合适？
@@ -4143,9 +4137,6 @@ public Money getBalance() {
 ```
 test/AccountSteps.java:26: error: cannot find symbol
 helper.getMyAccount().deposit(amount);
-```
-
-```
 symbol: deposit(Money)
 location: Account
 ```
@@ -4154,16 +4145,13 @@ location: Account
 
 ```
 support_code/07/src/test/java/nicebank/AccountSteps.java
-@Given("^I have deposited (\||\d+\.\d+) in my account$")
-public void iHaveDepositedInAccount() {
-```
 
-```
-@Transform(MoneyConverter.class) Money amount
-throws Throwable {
+@Given("^I have deposited (\\$\\d+\\.\\d+) in my account$")
+public void iHaveDepositedInAccount(
+    @Transform(MoneyConverter.class) Money amount
+) throws Throwable {
     helper.getMyAccount().credit(amount);
-    Assert.assertEquals("Incorrect account balance",
-amount, helper.getBalance());
+    Assert.assertEquals("Incorrect account balance", amount, helper.getBalance());
 }
 ```
 
@@ -4175,6 +4163,7 @@ amount, helper.getBalance());
 
 ```
 support_code/08/src/test/resources/cash_withdrawal.feature
+
 Feature: Cash Withdrawal
 Scenario: Successful withdrawal from an account in credit
 Given my account has been credited with $100.00
@@ -4185,25 +4174,17 @@ And the balance of my account should be $80.00
 
 ```
 support_code/08/src/test/java/nicebank/AccountSteps.java
-@Given("^my account has been credited with (\||\d+\.\d+)$")
-public void myAccountHasBeenCreditedWith(amount) {
-}
-```
 
-```
-@Transform(MoneyConverter.class) Money amount
-throws Throwable {
+@Given("^my account has been credited with (\\$\\d+\\.\\d+)$")
+public void myAccountHasBeenCreditedWith(
+    @Transform(MoneyConverter.class) Money amount
+) throws Throwable {
     helper.getMyAccount().credit(amount);
-    Assert.assertEquals("Incorrect account balance",
-amount, helper.getBalance());
+    Assert.assertEquals("Incorrect account balance", amount, helper.getBalance());
 }
 ```
 
 这让我们能够轻松地勾掉待办事项列表中的最后一项：移除账户两个步骤定义中余额断言的重复。我们可以简单地删除第一个，因为它已经不再相关了。
-
-
-
-
 
 # 自动化测试就是软件开发
 
@@ -4217,30 +4198,19 @@ amount, helper.getBalance());
 
 ```java
 support_code/09/src/test/java/nicebank/AccountSteps.java
-```
 
-```java
-@Given("my account has been credited with (\\$\d+\\.\\d+\\$)")
+@Given("my account has been credited with (\\$\\d+\\.\\d+)")
 public void myAccountHasBeenCreditedWith(
-```
-
-```java
-@Transform(MoneyConverter.class) Money amount
-throws Throwable {
-helper.getMyAccount().credit(amount);
+    @Transform(MoneyConverter.class) Money amount
+) throws Throwable {
+    helper.getMyAccount().credit(amount);
 }
-```
 
-```java
-@Then("the balance of my account should be (\\$\d+\\.\\d+\\$)")
+@Then("the balance of my account should be (\\$\\d+\\.\\d+)")
 public void theBalanceOfMyAccountShouldBe(
-@Transform(MoneyConverter.class) Money amount
-throws Throwable {"
-```
-
-```java
-Assert.assertEquals("Incorrect account balance -",
-amount, helper.getMyAccount().getBalance());
+    @Transform(MoneyConverter.class) Money amount
+) throws Throwable {
+    Assert.assertEquals("Incorrect account balance -", amount, helper.getMyAccount().getBalance());
 }
 ```
 
@@ -4258,6 +4228,7 @@ amount, helper.getMyAccount().getBalance());
 
 ```xml
 support_code/10/pom.xml
+
 <dependency>
   <groupId>org.eclipse.jetty</groupId>
   <artifactId>jetty-webapp</artifactId>
@@ -4274,18 +4245,15 @@ support_code/10/pom.xml
 
 ```java
 support_code/10/src/main/java/niceback/AtmServlet.java
-package niceback;
-```
 
-```java
+package niceback;
+
 import java.io.IOException;
-import javax.servlet.ServletExceptionException;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-```
 
-```java
 public class AtmServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
@@ -4297,18 +4265,19 @@ public class AtmServlet extends HttpServlet {
 }
 ```
 
-最后，我们将创建 AtmServer 将我们的页面串联起来：
+最后，我们将创建 `AtmServer` 将我们的页面串联起来：
 
 ```java
 support_code/10/src/main/java/niceback/AtmServer.java
-package niceback;
-```
 
-```java
+package niceback;
+
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 ```
+
+
 
 ```java
 public class AtmServer {
@@ -4340,11 +4309,11 @@ public static void main(String[] args) throws Exception {
 
 ## 启动服务器
 
-通过启动 AtmServer 来启动服务器，当你看到“Listening on” http://127.0.0.1:9988 时，打开你喜欢的浏览器并导航到 http://127.0.0.1:9988，你应该能看到“Welcome to our bank.”
+通过启动 `AtmServer` 来启动服务器，当你看到“Listening on” `http://127.0.0.1:9988` 时，打开你喜欢的浏览器并导航到 `http://127.0.0.1:9988`，你应该能看到“Welcome to our bank.”
 
 ## 切换
 
-我们的目标是引入一个提取现金的用户界面。我们希望在进行这些更改时由 Cucumber，因此我们需要更改测试代码与应用程序交互的方式。直到现在，所有的步骤定义都是与领域模型交互。但如果我们让 getTeller 返回其他内容，例如符合我们需要与柜员交互行为的接口呢？如图所示。但是，哪些步骤需要更改？
+我们的目标是引入一个提取现金的用户界面。我们希望在进行这些更改时由 Cucumber，因此我们需要更改测试代码与应用程序交互的方式。直到现在，所有的步骤定义都是与领域模型交互。但如果我们让 `getTeller` 返回其他内容，例如符合我们需要与柜员交互行为的接口呢？如图所示。但是，哪些步骤需要更改？
 
 ![](img/3bdd08a58a5b15b4736776437bb8f3a0_162_0.png)
 
@@ -4384,12 +4353,9 @@ public class TellerSteps {
 }
 ```
 
-我们在这里所做的只是对某个对象调用 `withdrawFrom`。现在，那个对象是领域模型中 Teller 类的实例。但如果我们让 getTeller 返回其他内容，例如符合我们需要与柜员交互行为的接口呢？这就是面向对象编程的魅力之处——只要该对象理解 `withdrawFrom` 方法，这个步骤定义就会很满意。我们需要做的是创建一个描述柜员职责的接口，并让我们现有的 Teller 实现它。
+我们在这里所做的只是对某个对象调用 `withdrawFrom`。现在，那个对象是领域模型中 `Teller` 类的实例。但如果我们让 `getTeller` 返回其他内容，例如符合我们需要与柜员交互行为的接口呢？这就是面向对象编程的魅力之处——只要该对象理解 `withdrawFrom` 方法，这个步骤定义就会很满意。我们需要做的是创建一个描述柜员职责的接口，并让我们现有的 `Teller` 实现它。
 
-
-
-
-我们现在面临着编程中最困难的问题之一：我们应该如何给接口命名？接口最好的名称是 Teller（柜员），因此我们需要重命名现有的类，给它一个恰具描述性的名称，例如 AutomatedTeller（自动取款机）：
+我们现在面临着编程中最困难的问题之一：我们应该如何给接口命名？接口最好的名称是 `Teller`（柜员），因此我们需要重命名现有的类，给它一个恰具描述性的名称，例如 `AutomatedTeller`（自动取款机）：
 
 ```
 support_code/11/src/main/java/nicebank/Teller.java
@@ -4464,6 +4430,7 @@ And the balance of my account should be $80.00
 ```
 
 - 1 个场景（1 失败）
+
 - 4 个步骤（1 失败，1 跳过，2 通过）
 
 该场景失败是因为我们新的支持模块尚未连接到系统，因此在出钞口中没有找到任何东西。现在我们有一个目标：让该场景再次通过，但这次是通过用户界面完成的。
@@ -4471,7 +4438,9 @@ And the balance of my account should be $80.00
 ## 设计用户界面
 
 | 金额 |
+
 | :--- |
+
 | 500 |
 
 ![](img/3bdd08a58a5b15b4736776437bb8f3a0_165_0.png)
@@ -4518,6 +4487,7 @@ support_code/12/pom.xml
 当我们对此运行 `mvn clean test` 时，它理然会失败，原因如下：
 
 1. 我们还没有启动服务器。（如果你一直在跟着操作，那么当我们之前在“启动我们的服务器”章节第 151 页进行测试时，服务器可能仍在运行。如果正在运行，请按 Ctrl-C 停止它。）
+
 2. 我们还没有构建表单。
 
 让我们运行 `mvn clean test` 来检查：
@@ -4568,6 +4538,7 @@ public class SomeHooks {
 Feature: Delete Widgets
 
 Background:
+
 Given 我已登录
 
 ...
@@ -4575,6 +4546,7 @@ Given 我已登录
 另一种方法是标记功能，然后使用 `@Before` 钩子来运行相同的代码以登录管理员。
 
 @admin
+
 Feature: Delete Widgets
 
 ...
@@ -4593,10 +4565,6 @@ public void logInAsAdmin() {
 ## 检查场景
 
 如果我们需要，我们的钩子可以接受一个代表场景的单一参数。例如，我们可以询问场景的状态：
-
-
-
-
 
 ## 步骤定义是全局的
 
@@ -4617,7 +4585,7 @@ public void logInAsAdmin() {
 在 Cucumber 中，同一个句子可以代表一个意思。
 
 ```java
-@after
+@After
 public void afterCallingScenario(Scenario scenario) {
   System.out.println("The scenario completed with a status of "
   + scenario.getStatus());
@@ -4632,7 +4600,9 @@ public void afterCallingScenario(Scenario scenario) {
 
 如果你想在所有功能启动之前运行代码，方法是使用 Java 语言特性，例如静态字段。
 
-如果你想在所有功能完成后运行代码，你可以使用 Java 内置的 `addShutdownHook`，它将在 Cucumber进程退出之前运行。你通常会使用这种机制来关闭你从支持代码启动的某些外部系统。
+如果你想在所有功能完成后运行代码，你可以使用 Java 内置的 `addShutdownHook`，它将在 Cucumber 进程退出之前运行。你通常会使用这种机制来关闭你从支持代码启动的某些外部系统。
+
+
 
 有时人们还会询问如何为某个特定功能运行一次特定的设置和清理代码，而不是该功能中的每个场景。有很多方法可以实现这一点，而不需要 Cucumber 提供任何额外功能，其中一种由 Paolo Ambrosio 详细描述过。⁵
 
@@ -4641,7 +4611,7 @@ public void afterCallingScenario(Scenario scenario) {
 ```java
 Joe 问：我的钩子按什么顺序运行？
 
-有时，能够指定钩子运行的精确顺序是非常关重要的。`@Before` 和 `@After` 注解有一个你可以设置的 `order` 参数。对于任何没有特定顺序的钩子，默认值为 10000。
+有时，能够指定钩子运行的精确顺序是非常关键的。`@Before` 和 `@After` 注解有一个你可以设置的 `order` 参数。对于任何没有特定顺序的钩子，默认值为 10000。
 
 @Before(order = 5)
 public void oneHook() {
@@ -4652,12 +4622,13 @@ public void oneHook() {
 public void anotherHook() {
     // ...
 }
-
 ```
 
 Cucumber 从低到高运行 `@Before` 钩子。顺序为 10 的 `@Before` 钩子将在顺序为 20 的钩子之前运行。`@After` 钩子按相反的方向运行——从高到低——所以顺序为 21 的 `@After` 钩子将在顺序为 10 的钩子之前运行。
 
 如果你需要使用 `value="Tag"`，你必须使用 `value` 参数：
+
+```java
 @Before(value="myTag", order=5)
 public void oneHook() {
     // ...
@@ -4666,7 +4637,7 @@ public void oneHook() {
 
 ⁵https://groups.google.com/d/msg/kukes/Z2mWGk0Rsgs/4F2H8SPcmRsj
 
-#get绿色（通过）
+# 让场景变绿（通过）
 
 我们刚才在忙什么？我们刚才正尝试让我们的场景与 UI 通信，这时意识到我们需要学习如何让 Cucumber 启动和停止 Web 服务器。一旦我们运行成功，就需要设计并构建一个 UI。最后，我们必须编写新的 UI 以匹配我们现有的领域模型。
 
@@ -4678,15 +4649,16 @@ public void oneHook() {
 
 ```java
 support_code/14/src/test/java/hooks/ServerHooks.java
+
 package hooks;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.Scenario;
-
 import nicebank.AtmServer;
 
 public class ServerHooks {
+
     public static final int PORT = 8888;
 
     private AtmServer server;
@@ -4708,141 +4680,47 @@ public class ServerHooks {
 
 ```java
 support_code/14/src/test/java/support/AtmInterface.java
+
 package support;
+
 // 假设引用了 PORT
 // ...
 public class AtmInterface {
     // ... 使用 PORT
 }
 ```
-*(注：原文此部分代码块不完整，此处根据语意翻译并保持结构)*
-
-```java
-support_code/14/src/test/java/support/AtmInterface.java
-package support;
-
-// 这里的代码在逻辑上会引用 ServerHooks.PORT
-```
-*(更正：原文提供的文本在此处似乎有断层或重复，我根据您的要求翻译后续内容)*
-
-```
-
-*原文后续部分出现了格式杂乱，以下是基于您提供的文本内容逻辑的翻译和整理：*
 
 在 Cucumber 中，同一个句子可以代表一个意思。
 
 ```java
-@after
+@After
 public void afterCallingScenario(Scenario scenario) {
-  System.out.println("The scenario completed with a status of "
-  + scenario.getStatus());
+    System.out.println("The scenario completed with a status of " + scenario.getStatus());
 }
 ```
 
-关于 `Scenario` 对象的更多详细信息，请查看 `cucumber.api.Scenario` 的文档
+关于 `Scenario` 对象的更多详细信息，请查看 `cucumber.api.Scenario` 的文档。
 
-⁴4. http://cucumber.info/api/cucumber/jvm/javadoc/cucumber/api/Scenario.html
+⁴ http://cucumber.info/api/cucumber/jvm/javadoc/cucumber/api/Scenario.html
 
 ## 在其他时间运行的钩子
 
 如果你想在所有功能启动之前运行代码，方法是使用 Java 语言特性，例如静态字段。
 
-如果你想在所有功能完成后运行代码，你可以使用 Java 内置的 `addShutdownHook`，它将在 Cucumber进程退出之前运行。你通常会使用这种机制来关闭你从支持代码启动的某些外部系统。
+如果你想在所有功能完成后运行代码，你可以使用 Java 内置的 `addShutdownHook`，它将在 Cucumber 进程退出之前运行。你通常会使用这种机制来关闭你从支持代码启动的某些外部系统。
 
-有时人们还会询问如何为某个特定功能运行一次特定的设置和清理代码，而不是该功能中的每个场景。有很多方法可以实现这一点，而不需要 Cucumber 提供任何额外功能，其中一种由 Paolo Ambrosio 详细描述过。⁵
-
-掌握了这些关于钩子的新知识后，让我们回到 ATM 的工作中吧。
-
-```java
-Joe 问：我的钩子按什么顺序运行？
-
-有时，能够指定钩子运行的精确顺序是非常关重要的。`@Before` 和 `@After` 注解有一个你可以设置的 `order` 参数。对于任何没有特定顺序的钩子，默认值为 10000。
-
-@Before(order = 5)
-public void oneHook() {
-    // ...
-}
-
-@After(order = 200)
-public void anotherHook() {
-    // ...
-}
-```
-
-Cucumber 从低到高运行 `@Before` 钩子。顺序为 10 的 `@Before` 钩子将在顺序为 20 的钩子之前运行。`@After` 钩子按相反的方向运行——从高到低——所以顺序为 21 的 `@After` 钩子将在顺序为 10 的钩子之前运行。
-
-如果你需要使用 `value="Tag"`，你必须使用 `value` 参数：
-@Before(value="myTag", order=5)
-public void oneHook() {
-    // ...
-}
-```
-
-⁵https://groups.google.com/d/msg/kukes/Z2mWGk0Rsgs/4F2H8SPcmRsj
-
-#get绿色（通过）
-
-我们刚才在忙什么？我们刚才正尝试让我们的场景与 UI 通信，这时意识到我们需要学习如何让 Cucumber 启动和停止 Web 服务器。一旦我们运行成功，就需要设计并构建一个 UI。最后，我们必须编写新的 UI 以匹配我们现有的领域模型。
-
-让我们开始吧！
-
-## 启动服务器
-
-我们希望在每个场景运行之前启动服务器，并在每个场景完成后停止服务器。这正是 `@Before` 和 `@After` 钩子的预期用途。让我们创建一个新文件 `src/test/java/hooks/ServerHooks.java`，在其中创建我们的钩子。
-
-```java
-support_code/14/src/test/java/hooks/ServerHooks.java
-package hooks;
-
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
-import cucumber.api.java.Scenario;
-
-import nicebank.AtmServer;
-
-public class ServerHooks {
-    public static final int PORT = 8888;
-
-    private AtmServer server;
-
-    @Before
-    public void startServer() throws Exception {
-        server = new AtmServer(PORT);
-        server.start();
-    }
-
-    @After
-    public void stopServer() throws Exception {
-        server.stop();
-    }
-}
-```
-
-我们还想在驱动接口的类中使用刚刚引入的常量 `PORT`：
-
-```java
-support_code/14/src/test/java/support/AtmInterface.java
-package support;
-```
-*(由于您提供的原文后半部分存在大量重复和乱码字符，以上已根据“不要重复输出原文”的原则，对核心逻辑部分进行了翻译处理。)*
-
-
-
-
+---
 
 # 从准备到执行 • 163
 
 ```html
-<<body><form action="/withdraw" method="post">
+<body>
+<form action="/withdraw" method="post">
   <label for="amount">金额</label>
   <input type="text" id="amount" name="amount">
   <button type="submit" id="withdraw">提取</button>
 </form>
-</body></html>
-```
-
-}
-}
+</body>
 ```
 
 我们还将创建一个新的请求处理器，以便表单有地方提交，尽管它只是一个在被调用时抛出错误的存根：
@@ -4850,121 +4728,106 @@ package support;
 ```java
 support_code/16/src/main/java/nicebank/WithdrawalServlet.java
 package nicebank;
-```
 
-```java
-import java.io.IOException
-import javax.servlet.ServletException
-import javax.servlet.http.HttpServlet
-import javax.servlet.http.HttpServletRequest
-import javax.servlet.http.HttpServletResponse
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-public class WithdrawalServlet extends HttpServlet
-{
-  protected void doPost(HttpServletRequest request, HttpServletResponse response)
-      throws ServletException, IOException
-  {
-    response.setContentType("text/html");
-    response.setStatus(HttpServletResponse.SC_OK);
-    response.getWriter().println(
-      "<html><head><title>Nice Bank ATM</title></head>"
-      "<body>我还不知道如何取款，抱歉</body>"
-      "</html>");
-  }
+public class WithdrawalServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+        response.setContentType("text/html");
+        response.setStatus(HttpServletResponse.SC_OK);
+        response.getWriter().println(
+            "<html><head><title>Nice Bank ATM</title></head>" +
+            "<body>我还不知道如何取款，抱歉</body>" +
+            "</html>");
+    }
 }
 ```
 
-最后，我们将 WithdrawalServlet 添加到 AtmServer 中：
+最后，我们将 `WithdrawalServlet` 添加到 `AtmServer` 中：
 
 ```java
-support_support_code/16/src/main/java/nicebank/AtmServer.java
+support_code/16/src/main/java/nicebank/AtmServer.java
 package nicebank;
-```
 
-```java
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
-public class AtmServer
-{
-  private final Server server;
+public class AtmServer {
+    private final Server server;
 
-  public AtmServer(int port) {
-    server = new Server(port);
+    public AtmServer(int port) {
+        server = new Server(port);
+    }
+
+    ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+    context.setContextPath("/");
+    server.setHandler(context);
+
+    context.addServlet(new ServletHolder(new WithdrawalServlet()), "/withdraw");
+    context.addServlet(new ServletHolder(new AtmServlet()), "/");
+
+    public void start() throws Exception {
+        server.start();
+        System.out.println("正在监听 " + server.getURI());
+    }
+
+    public void stop() throws Exception {
+        server.stop();
+        System.out.println("服务器已关机");
+    }
+
+    public static void main(String[] args) throws Exception {
+        new AtmServer(9988).start();
+    }
 }
 ```
 
-```java
-ServletContextHandler context = 
-  new ServletContextHandler(ServletContextHandler.ESSIONS);
-context.setContextPath("/");
-server.setHandler(context);
-
-context.addServlet(new ServletHolder(new WithdrawalServlet()),"/withdraw");
-context.addServlet(new ServletHolder(new AtmServlet()),"/");
-```
-
-```java
-public void start() throws Exception {
-    server.start();
-    System.out.println("正在监听 " + server.getURI());
-}
-```
-
-```java
-public void stop() throws Exception {
-    server.stop();
-    System.out.println("服务器已关机");
-}
-```
-
-```java
-public static void main(String[]) args throws Exception {
-    new AtmServer(9988).start();
-}
-```
-
-运行 `mvn clean test`。如果一切按照计划进行，你将在 Cucumber 的输出中看到“I don't know how to withdraw yet, sorry”的错误。我们的下一步工作是在 WithdrawalServlet 请求处理器中实现正确的代码，以实际执行取款。
+运行 `mvn clean test`。如果一切按照计划进行，你将在 Cucumber 的输出中看到“I don't know how to withdraw yet, sorry”的错误。我们的下一步工作是在 `WithdrawalServlet` 请求处理器中实现正确的代码，以实际执行取款。
 
 ## 发放现金
 
-我们已经构建了领域模型，因此我们有了很大的领先。知道如何执行取款的类是 `Teller`（柜员），因此当我们在 Web 服务器上接收到提交的数据时，我们需要创建该类的实例。要创建一个 `Teller` 实例，我们需要传递一个 `CashSlot` 给构造函数。这里有点棘手的地方在于，我们需要确保步骤定义（step definitions）也在查看同一个 `CashSlot` 实例；否则，它们将无法看到我们发放的现金。
+我们已经构建了领域模型，因此我们有了很大的领先。知道如何执行取款的类是 `Teller`，因此当我们在 Web 服务器上接收到提交的数据时，我们需要创建该类的实例。要创建一个 `Teller` 实例，我们需要传递一个 `CashSlot` 给构造函数。这里有点棘手的地方在于，我们需要确保步骤定义也在查看同一个 `CashSlot` 实例；否则，它们将无法看到我们发放的现金。
 
-而且如果我们想从柜员处取款，我们还需要一个 `Account`（账户）。随着项目的进展，我们可能会通过读取用户的卡片来确定 `Account`，但目前我们的领域模型还没有走多远。暂时，我们需要一种方法让步骤定义能够告诉 Web 应用程序：“看，就相信我并使用这个账户。”
+而且如果我们想从柜员处取款，我们还需要一个 `Account`。随着项目的进展，我们可能会通过读取用户的卡片来确定 `Account`，但目前我们的领域模型还没有走多远。暂时，我们需要一种方法让步骤定义能够告诉 Web 应用程序：“看，就相信我并使用这个账户。”
 
 实现这一点的最简单方法是在创建服务器时，将 `CashSlot` 和 `Account` 的共享实例传递给服务器。它只需将它们传递给 `WithdrawalHandler`。
 
 ```java
 support_code/17/src/java/nicebank/AtmServer.java
 public AtmServer(int port, CashSlot cashSlot, Account account) {
-  server = new Server(port);
+    server = new Server(port);
 
-  ServletContextHandler context =
-    new ServletContextHandler(ServletContextHandler.ESSIONS);
+    ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
     context.setContextPath("/");
     server.setHandler(context);
 
-  context.addServlet(new ServletHolder(
-    new WithdrawalServlet(cashSlot, account)), "/withdraw");
-  context.addServlet(new ServletHolder(new AtmServlet()), "/");
+    context.addServlet(new ServletHolder(new WithdrawalServlet(cashSlot, account)), "/withdraw");
+    context.addServlet(new ServletHolder(new AtmServlet()), "/");
 }
 ```
 
-我们需要更新服务器钩子（server hook），以便在启动服务器时利用 `CashSlot` 和 `Account` 的这些接触点：
+我们需要更新服务器钩子，以便在启动服务器时利用 `CashSlot` 和 `Account` 的这些接触点：
 
 ```java
 support_code/17/src/test/java/hooks/ServerHooks.java
 @Before
 public void startServer() throws Exception {
-  server = new AtmServer(PORT, helper.getCashSlot(), helper.getMyAccount());
-  server.start();
+    server = new AtmServer(PORT, helper.getCashSlot(), helper.getMyAccount());
+    server.start();
 }
 ```
 
-像这样提供账户是跳过通过实体卡和  验证用户过程的临时捷径，因为我们还不想担心该过程的那个部分。
+像这样提供账户是跳过通过实体卡和 PIN 验证用户过程的临时捷径，因为我们还不想担心该过程的那个部分。
 
-最后要做的是让 `WithdrawalServlet` 实际请求取款并通知用户已已发放：
+最后要做的是让 `WithdrawalServlet` 实际请求取款并通知用户已发放：
+
+
 
 ```java
 support_code/17/src/java/nicebank/WithdrawalServlet.java
@@ -5029,23 +4892,24 @@ Scenario: 从账户成功取款
 Feature 防止用户透支
 
 Scenario: 用户尝试提取超过余额的金额
+
 假设我的账户里有 $100
+
 当我提取 $200
+
 那么不应该发放任何钱
+
 并且应该被告知余额不足
 
 你能实现它吗？
 
-
-
-
-
 # 第 9 章
+
 ## 消息队列与异步组件
 
 到目前为止，我们的示例一直相当简单。我们测试的是单一的 Web 服务器进程，它甚至没有数据库，而且我们只使用了一个场景来对它进行测试。当你读完这本书后需要处理的真实系统可能比这复杂得多，它们有多个服务相互交互，以实现你在 Cucumber 特性中描述的行为。
 
-在本章中，我们将让系统系统变得更具“企业级感”，将架构拆分为前端和后端，以便我们向你展示如何测试这类系统。在此过程中，我们将有机会解释一些关于异步系统测试的基本概念。
+在本章中，我们将让系统变得更具“企业级感”，将架构拆分为前端和后端，以便我们向你展示如何测试这类系统。在此过程中，我们将有机会解释一些关于异步系统测试的基本概念。
 
 ## 我们新的异步架构
 
@@ -5065,9 +4929,9 @@ ATM 将事务消息发布到事务队列（Transaction Queue）。事务处理�
 
 ## 如何同步
 
-在我们目前的实现中，扣款和入账事务是由我们简单的 Account 类同步处理的：
+在我们目前的实现中，扣款和入账事务是由我们简单的 `Account` 类同步处理的：
 
-```
+```java
 support_code/17/src/main/java/nicebank/Account.java
 public class Account (
     private Money balance = new Money();
@@ -5075,21 +4939,20 @@ public class Account (
     public void credit(Money amount) {
         balance = balance.add(amount);
     }
-```
 
-```
-public void debit(int dollars) {
-    balance = balance.minus(new Money(dollars, 0));
+    public void debit(int dollars) {
+        balance = balance.minus(new Money(dollars, 0));
+    }
+
+    public Money getBalance() {
+        return balance;
+    }
 }
-
-public Money getBalance() {
-    return balance;
-}
 ```
 
-这种实现方式（在调用 credit 或 debit 方法期间更新余额）意味着我们可以确定，当 Cucumber 在场景的最后一个 `Then` 步骤检查账户余额时，余额已经更新完毕。
+这种实现方式（在调用 `credit` 或 `debit` 方法期间更新余额）意味着我们可以确定，当 Cucumber 在场景的最后一个 `Then` 步骤检查账户余额时，余额已经更新完毕。
 
-```
+```gherkin
 support_code/17/src/test/resources/cash_withdrawal.feature
 Feature: 现金提款
 Scenario: Successful withdrawal from an account in credit
@@ -5118,10 +4981,6 @@ And the balance of my account should be $80.00
 当无法从系统监听事件时，下一个备选方案是反复轮询系统以获取预期的状态变化。如果变化在特定时间内没有出现，你就放弃并让测试失败。
 
 采样可能会导致测试比监听慢一点，因为存在轮询间隔。你越频繁地轮询系统，测试就能越快按预期继续执行。在无法从被测试系统接收事件的情况下，采样通常是务实的选择。在本章的剩余部分，我们将展示如何使用采样来提高测试的可靠性。
-
-
-
-
 
 ```java
 private int nextId = 1;
@@ -5171,28 +5030,27 @@ public String read() {
   // Open it
   Scanner scanner = null;
   try {
-scanner = new Scanner(messages[0]);
+    scanner = new Scanner(messages[0]);
 
-if (scanner.hasNextLine()) {
-    message = scanner.nextLine();
-    scanner.close();
+    if (scanner.hasNextLine()) {
+      message = scanner.nextLine();
+      scanner.close();
 
-    // Delete it
-    messages[0].delete();
-} else {
-    scanner.close();
-}
+      // Delete it
+      messages[0].delete();
+    } else {
+      scanner.close();
+    }
 
-catch (FileNotFoundException e) {
+  } catch (FileNotFoundException e) {
     // File has gone away!
+  }
+
+  return message;
 }
-
-return message;
-
-```
 ```
 
-这是一段相当简单的 Java 代码，但它是我们目前为止遇到过最复杂的代码，让我们先运行它。首先，我们使用从第 15 行开始静态方法 `TransactionQueue.clear()`，我们将用它来确保在场景之间之间清理队列。当我们初始化 `TransactionQueue` 时，我们在第 13 行创建了一个实例变量 `nextId`，它将用于为每个新消息提供唯一的文件名。当要求写入消息时（第 24 行），我们在 `messages` 目录中创建一个新文件（第 30 行），将消息内容写入文件（第 37 行），并递增 `nextId`（第 40 行），为命名下一个消息文件做好准备。
+这是一段相当简单的 Java 代码，但它是我们目前为止遇到过最复杂的代码，让我们先运行它。首先，我们使用从第 15 行开始静态方法 `TransactionQueue.clear()`，我们将用它来确保在场景之间清理队列。当我们初始化 `TransactionQueue` 时，我们在第 13 行创建了一个实例变量 `nextId`，它将用于为每个新消息提供唯一的文件名。当要求写入消息时（第 24 行），我们在 `messages` 目录中创建一个新文件（第 30 行），将消息内容写入文件（第 37 行），并递增 `nextId`（第 40 行），为命名下一个消息文件做好准备。
 
 当被要求读取消息时（第 43 行），我们获取 `messages` 目录中所有文件的列表（第 46 行）。如果目录为空，我们直接从方法中返回一个空消息（第 81 行）。如果目录不为空，那么我们根据消息 ID 对消息列表进行排序（第 52 行）。我们打开第一条消息（第 63 行），读取消息（第 66 行），从队列中删除该消息（第 70 行），并将内容返回给调用者（第 81 行）。
 
@@ -5204,10 +5062,9 @@ return message;
 
 ```java
 message_queues/01/src/main/java/nicebank/BalanceStore.java
-package nicebank;
-```
 
-```java
+package nicebank;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -5215,39 +5072,67 @@ import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
 public class BalanceStore {
+
     private String BALANCE_FILE_PATH = "./balance";
 
     public static void clear() {
+
         new File(BALANCE_FILE_PATH).delete();
+
         setBalance(new Money(0,0));
+
     }
 
     public static Money getBalance() {
+
         File balanceFile = new File(BALANCE_FILE_PATH);
+
         Scanner scanner = null;
+
         try {
+
             scanner = new Scanner(balanceFile);
+
         } catch (FileNotFoundException e) {
+
             e.printStackTrace();
+
         }
+
         // 这里可能需要正则
+
         Money balance = new Money(scanner.nextLine());
+
         scanner.close();
+
         return balance;
+
     }
 
     public static void setBalance(Money newBalance) {
+
         PrintWriter writer = null;
+
         try {
+
             writer = new PrintWriter(BALANCE_FILE_PATH, "UTF-8");
+
         } catch (FileNotFoundException e) {
+
             e.printStackTrace();
+
         } catch (UnsupportedEncodingException e) {
+
             e.printStackTrace();
+
         }
+
         writer.println(newBalance.toString());
+
         writer.close();
+
     }
+
 }
 ```
 
@@ -5263,25 +5148,30 @@ public class BalanceStore {
 
 ```java
 message_queues/01/src/main/java/nicebank/TransactionProcessor.java
-package nicebank;
 
+package nicebank;
+```
+
+
+
+# 事务处理器
+
+```java
 public class TransactionProcessor {
+
     private TransactionQueue queue = new TransactionQueue();
 
     public void process() {
         do {
             String message = queue.read();
-
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
             }
-
             if (message.length() > 0) {
                 Money balance = BalanceStore.getBalance();
                 Money transactionAmount = new Money(message);
-
-                if (isCreditTransaction(message)){
+                if (isCreditTransaction(message)) {
                     BalanceStore.setBalance(balance.add(transactionAmount));
                 } else {
                     BalanceStore.setBalance(balance.minus(transactionAmount));
@@ -5308,30 +5198,29 @@ public class TransactionProcessor {
 
 ```java
 message_queues_01/src/test/java/hooks/BackgroundProcessHooks.java
+
 package hooks;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-
 import nicebank.TransactionProcessor;
 
 public class BackgroundProcessHooks {
+
     private Thread transactionProcessorThread;
 
-@Before
+    @Before
     public void startBackgroundThread() {
-        transactionProcessorThread = new Thread(new {
+        transactionProcessorThread = new Thread(new Runnable() {
             public void run() {
                 TransactionProcessor processor = new TransactionProcessor();
                 processor.process();
             }
         });
-
         transactionProcessorThread.start();
     }
 
-
-@After
+    @After
     public void stopBackgroundThread() {
         transactionProcessorThread.interrupt();
     }
@@ -5340,17 +5229,13 @@ public class BackgroundProcessHooks {
 
 这些钩子会在每个场景中在独立的线程中启动 `TransactionProcessor`，并在场景结束后停止它。
 
-
-
-
-
 ## 调查不稳定的测试例
 
 我们的测试已全部连接到新架构上，因此我们准备好运行它们并对这些不稳定的测试进行调查了。运行 `mvn clean test` 并尝试一下：
 
+```text
 TESTS
-
-RunningCukesTest
+Running CukesTest
 Feature: 现金提取
 监听 http://192.168.1.11:8887/
 服务器关闭
@@ -5360,60 +5245,53 @@ Given 我的账户存入了 $100.00
 Then 应该吐出 $20
 And 我的账户余额应该是 $80.00
 
-```java
 java.lang.AssertionError: Incorrect balance
 at org.junit.Assert.fail(Assert.java:88)
 at org.junit.Assert.failEquals(Assert.java:743)
 at org.junit.Assert.assertEquals(Assert.java:118)
-at niceback.AccountSteps.theBalanceOfMyAccountShouldBe
+at nicebank.AccountSteps.theBalanceOfMyAccountShouldBe
 at *.And the balance of my account should be $80.00 AccountSteps.java:32)
-```
 
 - 场景 (1 个失败)
 - 步骤 (1 个失败，3 个通过)
+```
 
 测试失败了，原因是时机问题：Cucumber 查找余额存储时发现余额为零，而它预期的值是 80。这是因为我们在事务处理器中引入了一秒的暂停，导致它每次都输给了与 Cucumber 的竞争。在 Cucumber 检查余额之前，它没有机会更新余额并导致场景失败。
 
 让我们调换一下，让 Cucumber 处于劣势，而不是事务处理器。从事务处理器中移除第 1 行并将其放入 Cucumber 的 `then` 步骤中。现在你的文件应该看起来这样：
 
 ```java
-message_queues/02/src/main/java/niceback/TransactionProcessor.java
+message_queues/02/src/main/java/nicebank/TransactionProcessor.java
+
 public void process() {
     String message = queue.read();
-
     if (message.length() > 0) {
         Money balance = BalanceStore.getBalance();
+        Money transactionAmount = new Money(message);
+        if (isCreditTransaction(message)) {
+            BalanceStore.setBalance(balance.add(transactionAmount));
+        } else {
+            BalanceStore.setBalance(balance.minus(transactionAmount));
+        }
+    }
+    while (true) {
+    }
+}
 ```
-
-## 修复不稳定的场景
-
-Money transactionAmount = new Money(message);
 
 ```java
-if (isCreditTransaction(message)) {
-    BalanceStore.setBalance(balance.add(transactionAmount));
-} else {
-    BalanceStore.setBalance(balance.minus(transactionAmount));
-}
-while (true) {
-}
-```
-
 message_queues_02/src/test/java/nicebank/AccountSteps.java
 
-```java
-@Then("^the balance of my account should be (\\|\\d+\\|\\|\\d+\)$")
-public void the balanceOfMyAccountShouldBe(
-    @Parameter(MoneyConverter.class) Money amount)
-throws Throwable {
-
-try {
-    Thread.sleep(1000);
-} catch (InterruptedException e) {
-    e.printStackTrace();
+@Then("^the balance of my account should be (\\$\\d+\\.\\d+)$")
+public void theBalanceOfMyAccountShouldBe(
+    @Parameter(MoneyConverter.class) Money amount) throws Throwable {
+    try {
+        Thread.sleep(1000);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+    Assert.assertEquals("Incorrect account balance -", amount, helper.getMyAccount().getBalance());
 }
-
-Assert.assertEquals("Incorrect account balance -", amount, helper.getMyAccount().getBalance());
 ```
 
 ## 捕捉外部服务的异常
@@ -5428,17 +5306,19 @@ Assert.assertEquals("Incorrect account balance -", amount, helper.getMyAccount()
 
 ## 我应该在 Feature 中显示同步点吗？
 
-在本章中，我们使用了 JUnit AssertionError 方法，在不改变 Gherkin 本身的情况下向我们的场景中引入了一个隐式同步点。这意味着异步行为对任何阅读场景的人来说都是隐藏的。在许多情况下，异步行为是一个不需要在特性中暴露的细节细节，但有时你的读者希望在场景中看到它。
+在本章中，我们使用了 JUnit `AssertionError` 方法，在不改变 Gherkin 本身的情况下向我们的场景中引入了一个隐式同步点。这意味着异步行为对任何阅读场景的人来说都是隐藏的。在许多情况下，异步行为是一个不需要在特性中暴露的实现细节，但有时你的读者希望在场景中看到它。
 
 关键问题是你的项目中非技术利益相关者是否关心系统的异步行为。也许他们关心。他们倾向于阅读这些：
 
-- Given 我的账户存入了 $100
+```gherkin
+Given 我的账户存入了 $100
 When 我提取 $20
 Then 应该吐出 $20
 When 我等待所有事务处理完毕
 Then 我的账户余额应该是 $80
+```
 
-记住，编写 Cucumber Feature 是为了通信系统的行为。每个团队和项目所需的细节程度都不同，因此请询问你团队成员的意见。
+记住，编写 Cucumber Feature 是为了沟通系统的行为。每个团队和项目所需的细节程度都不同，因此请询问你团队成员的意见。
 
 ## 使用采样来修复不稳定性
 
@@ -5451,23 +5331,19 @@ Then 我的账户余额应该是 $80
 
 ```java
 message_queues/03/src/test/java/nicebank/AccountSteps.java
-@Then("the balance of my account should be (\\|\\d+\\|\\|\\d+\)$")
-public void the balanceOfMyAccountShouldBe(
+
+@Then("the balance of my account should be (\\$\\d+\\.\\d+)$")
+public void theBalanceOfMyAccountShouldBe(
     @Parameter(MoneyConverter.class) Money amount) throws Throwable {
-    int timeoutMilliss = 3000;
-    int pollMilliss = 100;
-
-    while (!helper.getMyAccount().getBalance().equals(amount) && timeoutMilliss > 0) {
-        Thread.sleep(pollMilliss);
-        timeoutMilliss -= pollMilliss;
+    int timeoutMillis = 3000;
+    int pollMillis = 100;
+    while (!helper.getMyAccount().getBalance().equals(amount) && timeoutMillis > 0) {
+        Thread.sleep(pollMillis);
+        timeoutMillis -= pollMillis;
     }
-
     Assert.assertEquals("Incorrect account balance -", amount, helper.getMyAccount().getBalance());
 }
 ```
-
-
-
 
 # 第 10 章
 
@@ -5477,22 +5353,22 @@ public void the balanceOfMyAccountShouldBe(
 
 在这个实战示例的最后部分中，我们将向 ATM 系统引入一个关系型数据库。目前，我们的基于文件的数据库只能存储单个客户账户的余额。让我们引入存储多个不同账户余额的能力，使用数据库表通过单独的行存储每个客户的账户余额。
 
-我们将使用 MySQL 数据库，尽管选择什么数据库对这一点并不是非常重要。因为我们将通过对象关系映射器（ORM）与之交互。你为编写 Cucumber 测试的几乎每个系统都有某种形式的数据库，因此了解如何从测试代码直接与数据库通信是有帮助的。
+我们将使用 MySQL 数据库，虽然选择什么数据库对这一点并不是非常重要。因为我们将通过对象关系映射器（ORM）与之交互。你为编写 Cucumber 测试的几乎每个系统都有某种形式的数据库，因此了解如何从测试代码直接与数据库通信是有帮助的。
 
 ## 迭代数据库开发
 
-有很多 ORM 可以将你的数据模型连接到数据库，或者你可以使用 JDBC、JPA 或类似的工具自己实现。在本章中，我们将使用 ActiveJDBC。ActiveJDBC 仅需几行 Java 代码即可提供相同的数据库功能。它为与其通信的每个关系数据库提供了一致的接口，并且（截至本文编写）拥有 MySQL、PostgreSQL、Oracle、H2 和 Microsoft Server 数据库的驱动。
+有很多 ORM 可以将你的数据模型连接到数据库，或者你可以使用 JDBC、JPA 或类似的工具自己实现。在本章中，我们将使用 ActiveJDBC。ActiveJDBC 仅需几行 Java 代码即可提供相同的数据库功能。它为与其通信的每个关系数据库提供了一致的接口，并且（截至本文编写）拥有 MySQL、PostgreSQL、Oracle、H2 和 Microsoft SQL Server 数据库的驱动。
 
-- 1. http://www.mysql.com
-- 2. http://code.google.com/p/activejdbc/wiki//GettingStarted
+1. http://www.mysql.com
+2. http://code.google.com/p/activejdbc/wiki/GettingStarted
 
-由于我们是迭代开发应用程序，因此我们也迭代开发数据库模式。在本章中，我们将使用一个名为 Liquibase³ 的流行工具来管理数据库的演变。随着你的产品变得越来越复杂，这类工具会变得特别有用。
+由于我们是迭代开发应用程序，因此我们也迭代开发数据库模式。在本章中，我们将使用一个名为 Liquibase 的流行工具来管理数据库的演变。随着你的产品变得越来越复杂，这类工具会变得特别有用。
 
 对这些数据库工具有一个基本的了解是有用的，因此在将其接入我们的示例之前，我们将先进行简要介绍。
 
 ## 引入 ActiveJDBC ORM
 
-ActiveJDBC 库灵感来自 Ruby on Rails 框架中的一种实现，而该框架又基于 Active Record 设计模式⁴。ActiveJDBC 易于通过 Java 代码与任何现有数据库通信。例如，如果我们有一个包含以下数据的 accounts 表：
+ActiveJDBC 库灵感来自 Ruby on Rails 框架中的一种实现，而该框架又基于 Active Record 设计模式。ActiveJDBC 易于通过 Java 代码与任何现有数据库通信。例如，如果我们有一个包含以下数据的 `accounts` 表：
 
 | id | balance |
 |---|---|
@@ -5502,50 +5378,53 @@ ActiveJDBC 库灵感来自 Ruby on Rails 框架中的一种实现，而该框架
 
 那么我们可以使用以下 Java 代码查询该数据库表：
 
-```
+```java
 Account account = Account.getFirst("number = 2214");
 System.out.println(account.getString("balance"));
 ```
 
 同样，要向表中添加新行，我们可以这样做：
 
-```
+```java
 Account newAccount = new Account();
 newAccount.setInt("number", 2134);
 newAccount.setString("amount", "0.00");
 newAccount.saveIt();
 ```
 
-我们仍然需要定义这个 Account 类，但巧妙的地方在于，我们不需要在代码中定义数据库列。以下是类的定义方式：
+我们仍然需要定义这个 `Account` 类，但巧妙的地方在于，我们不需要在代码中定义数据库列。以下是类的定义方式：
 
-```
+```java
 import activejdbc.Model;
+
 public class Account extends Model {
+}
 ```
 
-就这些了！ActiveJDBC 会检查数据库模式并施洒一点 Java 魔法，以从数据库表中检索 Account 类属性，提供按列名获取和设置这些属性的方法。还有像 `where` 和 `findFirst` 这样的类方法，用于通过特定字段搜索行。我们只需要继承 `activejdbc.Model`，剩下的工作由 ActiveJDBC 完成。
+就这些了！ActiveJDBC 会检查数据库模式并施加一点 Java 魔法，以从数据库表中检索 `Account` 类属性，提供按列名获取和设置这些属性的方法。还有像 `where` 和 `findFirst` 这样的类方法，用于通过特定字段搜索行。我们只需要继承 `activejdbc.Model`，剩下的工作由 ActiveJDBC 完成。
 
-- 3. http://www.liquibase.org
-- 4. http://en.wikipedia.org/wiki/Active_Record_design_pattern
+3. http://www.liquibase.org
+4. http://en.wikipedia.org/wiki/Active_Record_design_pattern
 
-它如何知道要看哪个表的？ActiveJDBC 拥护“约定优于配置”的原则。这意味着由 Account ActiveJDBC 类表示的数据库表的预期名称是 `accounts`；如果表名为 `widgets`，我们就把类命名为 `Widget`。只要我们遵循这些约定，就能用极少的代码获得很多实用的益处。
+它如何知道要看哪个表的？ActiveJDBC 拥护“约定优于配置”的原则。这意味着由 `Account` ActiveJDBC 类表示的数据库表的预期名称是 `accounts`；如果表名为 `widgets`，我们就把类命名为 `Widget`。只要我们遵循这些约定，就能用极少的代码获得很多实用的益处。
 
 ## 针对非传统数据库调整 ActiveJDBC
 
 ActiveJDBC 的默认约定在你从零开始构建数据库时是非常棒的，但如果你正在处理的是一个遗留系统呢？如果你的数据库不符合 ActiveJDBC 的约定，你可以覆盖默认约定：
 
-```
+```java
 @Table("tblAccounts")
 class Account extends Model {
     int getNumber() {
         return getInteger("intNumber");
     }
-
     void setNumber(int number) {
         setInteger("intNumber", number);
     }
 }
 ```
+
+
 
 `@Table` 注解告诉 ActiveJDBC 你想要使用的表名。
 
@@ -5559,7 +5438,7 @@ class Account extends Model {
 
 ## 重构以使用数据库
 
-在我们的当前系统中，余额存储在 Account 类中。让我们开始实践吧。
+在我们的当前系统中，余额存储在 `Account` 类中。让我们开始实践吧。
 
 ## 创建数据库
 
@@ -5567,13 +5446,15 @@ class Account extends Model {
 
 ```sql
 CREATE DATABASE bank;
+
 CREATE USER 'teller'@'localhost' IDENTIFIED BY 'password';
+
 GRANT ALL ON * TO 'teller'@'localhost';
 ```
 
 你可以这样运行该脚本：
 
-```
+```bash
 $ mysql -h localhost -p < setup.sql
 ```
 
@@ -5581,7 +5462,7 @@ $ mysql -h localhost -p < setup.sql
 
 要配置 Liquibase，我们首先在 `pom.xml` 中添加另一个插件：
 
-```
+```xml
 databases/00/pom.xml
 <plugin>
   <groupId>org.liquibase</groupId>
@@ -5617,9 +5498,7 @@ databases/00/pom.xml
 - 账户号码，作为辅助键。这必须是唯一的。
 - 账户当前余额。
 
-ActiveJDBC 将使这三个字段对每个 Account 实例可用。
-
-
+ActiveJDBC 将使这三个字段对每个 `Account` 实例可用。
 
 ```java
 public int getNumber() {
@@ -5657,7 +5536,6 @@ xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
 	/http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
-
   <changeSet id="1" author="seeb">
     <createTable tableName="accounts">
       <column name="id" type="int" autoIncrement="true" />
@@ -5671,7 +5549,6 @@ xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
     </column>
     </createTable>
   </changeSet>
-
 </databaseChangeLog>
 ```
 
@@ -5699,12 +5576,10 @@ nicebank/TransactionProcessor.java
 public void process() {
     do {
         String message = queue.read();
-
         if (message.length() > 0) {
             String[] parts = message.split(",");
             Account account = Account.findFirst("number = ?", parts[1]);
             Money transactionAmount = new Money(parts[0]);
-
             if (isCreditTransaction(message)) {
                 account.setBalance(account.getBalance().add(transactionAmount));
             } else {
@@ -5744,6 +5619,9 @@ databases/00/pom.xml
   <artifactId>mysql-connector-java</artifactId>
   <version>5.1.27</version>
 </dependency>
+```
+
+```xml
 databases/00/pom.xml
 <plugin>
   <groupId>org.javolite</groupId>
@@ -5760,17 +5638,13 @@ databases/00/pom.xml
 </plugin>
 ```
 
-
-
-
-
 ## 数据库的读写 • 195
 
-金额、账号？如果没有账号，事务处理器（`Transaction-Processor`）如何在数据库中找到正确的账户来更新其余额呢？
+金额、账号？如果没有账号，事务处理器（`TransactionProcessor`）如何在数据库中找到正确的账户来更新其余额呢？
 
 所以，让我们在 `Account` 类上提供一个构造函数，接收一个账号，为了保险起见，我们还将把新账户的余额设置为“0.00”。我们还需要创建一个默认构造函数，以便 ActiveJDBC 能够自己创建 `Account` 实例：
 
-```
+```java
 databases/02/src/main/java/nicebank/Account.java
 public Account(int number) {
     setInteger("number", number);
@@ -5780,7 +5654,7 @@ public Account(int number) {
 
 现在当我们在 `KnowsTheDomain` 中创建账户时，使用这个非默认构造函数：
 
-```
+```java
 databases/02/src/test/java/support/KnowsTheDomain.java
 public Account getAccount() {
     if (myAccount == null) {
@@ -5799,7 +5673,7 @@ Feature: 提现
 Listening on http://192.168.1.11:8887/
 Exception in thread "Thread-9" org.javalite.jdbc.DBException:
 org.javalite.jdbc.DBException:
-线程上没有 'default'  own，你打开了它吗？
+线程上没有 'default' 连接，你打开了它吗？
 Query: SELECT * FROM ACCOUNTS WHERE number = ? LIMIT 1, parameters: 1234
 at org.javalite.jdbc.DB.connection(DB.java:604)
 at org.javalite.jdbc.DB.find(DB.java:402)
@@ -5819,13 +5693,15 @@ Server shutdown
 
 这次是运行 `TransactionProcessor` 的线程需要数据库连接，所以让我们在这个进程方法中打开一个连接：
 
-```
+```java
 databases/03/src/main/java/nicebank/TransactionProcessor.java
 public void process() {
     if (!Base.hasConnection()){
         Base.open(
 "com.mysql.jdbc.Driver"
 ```
+
+
 
 再次运行 `mvn clean test`，我们现在有两个错误了：
 
@@ -5842,9 +5718,6 @@ Scenario: 从贷方账户中成功提现
 Given 我的账户已存入 $100.00
 When 我提现 $20
 Then 应该取出 $20
-
-## 数据库的读写 197
-
 And 我的账户余额应该是 $80.00
 java.lang.AssertionError: 账户余额不正确
 expected:$80.00 but was:$80.00
@@ -5890,20 +5763,13 @@ public Account getAccount() {
 
 ```
 TESTS
-
 Running RunCukesTest
 Feature: 提现
 Listening on http://127.0.0.1:887/
-```
-
-## 第 10 章 数据库 • 198
-
 Scenario: 从贷方账户中成功提现
 Given 我的账户已存入 $100.00
 When 我提现 $20
 Then 应该取出 $20
-
-```
 And 我的账户余额应该是 $80.00
 java.lang.AssertionError: 账户余额不正确
 expected:<80.00> but was:<0.00>
@@ -5912,23 +5778,17 @@ at org.junit.Assert.failNotEquals(Assert.java:743)
 at org.junit.Assert.assertEquals(Assert.java:118)
 at at nicebank.AccountSteps.theBalanceOfMyAccountShouldBe
 at *.And the balance of my account should be $80.00
-
 - 1 个场景 (1失败)
 4 个 步骤 (1失败, 3通过)
+```
 
-
-
-
-
-# Cucumber
-数据库
-应用
+# Cucumber 数据库 应用
 
 ![](img/3bdd08a58a5b15b4736776437bb8f3a0_210_0.png)
 
 图 4—数据库事务
 
-现在我们已经有了一个干净的数据库，让我们配置 Cucumber 来启动和回滚事务。ActiveJDBC 是在 Java JDBC 实现之上的一个薄层封装，因此我们在打开连接时关闭自动提交，并在 @After 钩子中回滚事务：
+现在我们已经有了一个干净的数据库，让我们配置 Cucumber 来启动和回滚事务。ActiveJDBC 是在 Java JDBC 实现之上的一个薄层封装，因此我们在打开连接时关闭自动提交，并在 `@After` 钩子中回滚事务：
 
 ```java
 databases/06/src/test/java/support/KnowsTheDomain.java
@@ -5939,7 +5799,6 @@ public KnowsTheDomain() {
             "jdbc:mysql://localhost/bank",
             "teller", "password"
         );
-
         try {
             Base.connection().setAutoCommit(false);
         } catch (Exception se) {
@@ -5961,7 +5820,7 @@ public void rollback() {
 
 这就是在每个场景（scenario）开始时启动事务并在结束时回滚所需的全部内容。
 
-我们还会在 TransactionProcessor 中添加一些有用的诊断信息：
+我们还会在 `TransactionProcessor` 中添加一些有用的诊断信息：
 
 ```java
 databases/06/src/main/java/nicebank/TransactionProcessor.java
@@ -5981,13 +5840,13 @@ if (account == null) {
 at nicebank.TransactionProcessor.process(TransactionProcessor.java:26)
 at nicebank.BackgroundProcessHooks1.run(BackgroundProcessHooks.java:26)
 
-我们告诉过你这行通的。现在是时候找出原因了。TransactionProcessor 无法找到我们在第一步中创建的账户，导致我们的场景失败了。为什么 TransactionProcessor 找不到该账户呢？
+我们告诉过你这行通的。现在是时候找出原因了。`TransactionProcessor` 无法找到我们在第一步中创建的账户，导致我们的场景失败了。为什么 `TransactionProcessor` 找不到该账户呢？
 
 数据库事务的属性之一是隔离性。这意味着在事务内部发生的任何数据库活动都无法被其他数据库连接看到。不要忘记，我们有多个数据库连接。
 
 第一个数据库连接是由运行 Cucumber 的进程创建的。Cucumber 开始一个数据库事务并创建了一个账户。
 
-第二个数据库连接是由 TransactionProcessor 创建的，由 BackgroundProcessHooks 在一个独立的进程中启动。TransactionProcessor 从队列中弹出贷方和借方消息，查找账户并更新余额。然而，由于 Cucumber 启动的数据库事务从未被提交，TransactionProcessor 无法看到我们在第一步中创建的账户。
+第二个数据库连接是由 `TransactionProcessor` 创建的，由 `BackgroundProcessHooks` 在一个独立的进程中启动。`TransactionProcessor` 从队列中弹出贷方和借方消息，查找账户并更新余额。然而，由于 Cucumber 启动的数据库事务从未被提交，`TransactionProcessor` 无法看到我们在第一步中创建的账户。
 
 # 浏览器测试与数据库
 
@@ -6008,9 +5867,9 @@ at nicebank.BackgroundProcessHooks1.run(BackgroundProcessHooks.java:26)
 
 # Joe 提问：为什么不在 @After 钩子中截断数据库？
 
-在 @After 钩子中截断数据库通常与在场景执行前执行的效果一样，但存在细微的。
+在 `@After` 钩子中截断数据库通常与在场景执行前执行的效果一样，但存在细微的差别。
 
-首先，如果进程在来得及清理 @After 钩子之前被杀死，它可能会导致下次测试失败。
+首先，如果进程在来得及清理 `@After` 钩子之前被杀死，它可能会导致下次测试失败。
 
 其次，如果一个场景失败，失败的原因可能显而易见，而能够在事后分析（postmortem）查看数据库内部的能力有助于我们理解为什么场景会失败。
 
@@ -6023,7 +5882,6 @@ public KnowsTheDomain() {
             "jdbc:mysql://localhost/bank",
             "teller", "password"
         );
-
         try {
             Base.connection().setAutoCommit(false);
         } catch (Exception se) {
@@ -6041,7 +5899,6 @@ Feature: Withdrawal
 Given 我的账户已存入 100
 When 我取款
 Then 我的余额应该是 0
-
 Scenario: 成功取款
 ```
 
@@ -6061,9 +5918,7 @@ Scenario: 成功取款
 
 在你的网上找到一个现有数据库，看看能否让 ActiveJDBC 连接它。只需要几行 Java 代码即可设置一个可以与表通信的模型子类。阅读 ActiveJDBC 的 API 文档并对数据库运行查询。看看使用 ActiveJDBC 操作数据库变得多么简单！
 
-# 第 11 章
-
-# 使用依赖注入简化设计
+# 第 11 章 使用依赖注入简化设计
 
 在“依赖注入”第 137 页，我们看到了 Cucumber 如何使用依赖注入（DI）在步骤定义之间共享 `KnowsDomain` 实例，但我们只触了浅角。现在是时候深入探讨了。
 
@@ -6074,10 +5929,6 @@ Scenario: 成功取款
 使用 Cucumber 时不需要 DI 容器。当你不使用任何 DI 集成使用 Cucumber 时，它自己管理所有钩子和步骤定义的创建。Cucumber 为每个场景创建每个步骤定义或钩子类的实例。这意味着这些类必须有默认构造函数；否则 Cucumber 不知道如何创建它们。这使得在多个步骤定义类之间安全地共享状态变得困难。
 
 DI 可以让你的日常工作不再那么枯燥容易出错。一旦添加 DI 集成，DI 容器就会接管创建钩子和步骤定义的责任。所有的 DI 容器都可以在创建时向我们的钩子和步骤定义注入对象。更棒的是，DI 容器会创建任何所需的对象实例，你可以轻松构建依赖网络，将复杂的连接工作交给 DI 容器。
-
-
-
-
 
 ## 第 11 章. 使用依赖注入简化设计 · 206
 
@@ -6105,19 +5956,23 @@ Cucumber 自带与几个流行的 DI 容器（以及对大多数人来说并不�
 
 改进我们的设计 DI • 207
 
-- cucumber-picocontainer—PicoContainer:¹ 一个由 Aslak Hellesøy、Paul Hammant 和 Jon Tirsen 开发的轻量 DI 容器
-- cucumber-guice—Guice:² 一个由 Google 开发的轻量 DI 容器
-- cucumber-spring—Spring:³ 一个包含 DI 及更多功能的流行框架
-- cucumber-weld—CDI/Weld:⁴ CDI（Java EE 平台的上下文和依赖注入框架）的参考实现
-- cucumber-openejb—OpenEJB:⁵ 一个来自 Apache 的独立 EJB 服务器，包含一个 DI 实现
+- `cucumber-picocontainer`—PicoContainer:¹ 一个由 Aslak Hellesøy、Paul Hammant 和 Jon Tirsen 开发的轻量 DI 容器
+- `cucumber-guice`—Guice:² 一个由 Google 开发的轻量 DI 容器
+- `cucumber-spring`—Spring:³ 一个包含 DI 及更多功能的流行框架
+- `cucumber-weld`—CDI/Weld:⁴ CDI（Java EE 平台的上下文和依赖注入框架）的参考实现
+- `cucumber-openejb`—OpenEJB:⁵ 一个来自 Apache 的独立 EJB 服务器，包含一个 DI 实现
 
 你通过在类路径（classpath）中选择使用哪种框架来决定使用相应的 Cucumber JAR 包，因为类路径中只会存在一个 Cucumber DI JAR 包。一旦你将这些 JAR 包之一放入类路径中，Cucumber 就会将你的钩子和步骤定义的创建与管理委托给你所使用的 DI 容器。Cucumber JAR 包仅包含集成 DI 容器的代码——你还需要添加对 DI 本身的依赖项。
 
 ## 我应该选择哪种 DI 容器？
 
-各种 DI 容器提供的功能几乎相同。每个容器需要稍微不同的配置，但选择取决于你的应用程序中已经在使用哪种 DI。如果你的应用程序使用 Spring，则选择 `cucumber-spring`。如果你的应用程序使用 Guice，则选择 `cucumber-guice`。
 
-如果你的应用完全没有使用 DI，PicoContainer 是一个很棒的选择，因为它简单易。
+
+## 各种 DI 容器提供的功能几乎相同
+
+每个容器需要稍微不同的配置，但选择取决于你的应用程序中已经在使用哪种 DI。如果你的应用程序使用 Spring，则选择 `cucumber-spring`。如果你的应用程序使用 Guice，则选择 `cucumber-guice`。
+
+如果你的应用完全没有使用 DI，PicoContainer 是一个很棒的选择，因为它简单易用。
 
 让我们回到 ATM 示例，看看 DI 如何改进我们测试代码的结构。它所带来的巨大差异会让你惊讶。
 
@@ -6131,7 +5986,7 @@ Cucumber 自带与几个流行的 DI 容器（以及对大多数人来说并不�
 
 ## 分解 KnowsTheDomain
 
-我们将首先将 `KnowsTheDomain` 分分为几个内聚的辅助类——每个领域实体一个——如图所示。然后我们可以通过在需要传递它们，确保步骤定义访问只需要交互的实体。
+我们将首先将 `KnowsTheDomain` 分解为几个内聚的辅助类——每个领域实体一个——如图所示。然后我们可以通过在需要时传递它们，确保步骤定义仅访问需要交互的实体。
 
 1. http://picocontainer.codehaus.org
 2. https://github.com/google/guice
@@ -6144,32 +5999,35 @@ Cucumber 自带与几个流行的 DI 容器（以及对大多数人来说并不�
 | KnowsDomain | CashSteps |
 | --- | --- |
 | Account getAccount() | void CashSteps(KnowsDomain helper) { ... } |
+
 | KnowsAccount | SlotSteps |
 | --- | --- |
 | Account getAccount() | void CashSteps(KnowsTheSlot helper) { ... } |
+
 | KnowsTeller | |
-| TellerTeller() | |
+| --- | --- |
+| Teller Teller() | |
+
 | KnowsTheSlot | | |
 
 6. http://lostechies.com/chrismar/2009/05/28/anti-patterns-and-worst-practices-monster-objects/
 7. http://c2.com/cgi/wi?RefactoringInSmallSteps
 
-我们将特定每个领域实体的功能移动到辅助类中。以 `KnowsTheSlot` 为例：
+我们将特定于每个领域实体的功能移动到辅助类中。以 `KnowsTheSlot` 为例：
 
 ```java
 package support;
-import niceback.CashSlot;
+import nicebank.CashSlot;
 
 public class KnowsTheSlot {
     private CashSlot cashSlot;
-```
 
-```java
-public CashSlot getCashSlot() {
-    if (cashSlot == null) {
-        cashSlot = new CashSlot();
+    public CashSlot getCashSlot() {
+        if (cashSlot == null) {
+            cashSlot = new CashSlot();
+        }
+        return cashSlot;
     }
-    return cashSlot;
 }
 ```
 
@@ -6182,13 +6040,11 @@ package nicebank;
 import support.KnowsTheSlot;
 
 public class CashSlotSteps {
-    KnowsTheSlotHelper;
-```
+    private KnowsTheSlot cashSlotHelper;
 
-```java
-public CashSlotSteps(KnowsTheSlotHelper) {
-    this.cashSlotHelper = cashSlotHelper;
-}
+    public CashSlotSteps(KnowsTheSlot cashSlotHelper) {
+        this.cashSlotHelper = cashSlotHelper;
+    }
 }
 ```
 
@@ -6197,81 +6053,77 @@ public CashSlotSteps(KnowsTheSlotHelper) {
 ```java
 package nicebank;
 
-public TellerSteps(KnowsTheTeller tellerHelper, KnowsTheAccount accountHelper) {
-    this.tellerHelper = tellerHelper;
-    this.accountHelper = accountHelper;
-}
+public class TellerSteps {
+    private KnowsTheTeller tellerHelper;
+    private KnowsTheAccount accountHelper;
+
+    public TellerSteps(KnowsTheTeller tellerHelper, KnowsTheAccount accountHelper) {
+        this.tellerHelper = tellerHelper;
+        this.accountHelper = accountHelper;
+    }
 }
 ```
 
-当我们完成功能移动到新的辅助类后，注意到 `KnowsDomain` 中仍然有一些代码是关于创建一个共享的 `EventFiringWebDriver` 的由于这是驱动用户界面的特定技术，它逻辑上不属于任何 `KnowsThexx` 类的考虑范围，因此我们需要决定将其放在哪里，我们将在接下来进行讨论。
-
-
-
+当我们完成功能移动到新的辅助类后，注意到 `KnowsDomain` 中仍然有一些代码是关于创建一个共享的 `EventFiringWebDriver` 的。由于这是驱动用户界面的特定技术，它逻辑上不属于任何 `KnowsThexx` 类的考虑范围，因此我们需要决定将其放在哪里，我们将在接下来进行讨论。
 
 # 提取 Web Driver
 
-AtmUserInterface 和 WebHooks 都依赖于一个共享的 EventFiring-Driver。这以前由 KnowsTheDomain 管理，但实际上它与领域没有关系。相反，让我们提取一个全新的 `MyWebDriver` 类：
+`AtmUserInterface` 和 `WebHooks` 都依赖于一个共享的 `EventFiringWebDriver`。这以前由 `KnowsTheDomain` 管理，但实际上它与领域没有关系。相反，让我们提取一个全新的 `MyWebDriver` 类：
 
-```
+```java
 dependency_injection/pico/02/src/test/java/support/MyWebDriver.java
 package support;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.events.EventFiringDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
-public class MyWebDriver extends EventFiringWebDriver{
+public class MyWebDriver extends EventFiringWebDriver {
     public MyWebDriver() {
         super(new FirefoxDriver());
     }
 }
 ```
 
-KnowsTheDomain 中已经没有代码了，所以我们可以将其删除。但是，我们仍然需要通过更改构造函数将共享的 WebDriver 实例到 AtmUserInterface 和 WebDriver-Hooks 中：
-
-```
-dependency_injection/pico/02/src/test/java/support/AtmUserInterface.java
-private final EventFiringWebDriver driver;
-```
+`KnowsTheDomain` 中已经没有代码了，所以我们可以将其删除。但是，我们仍然需要通过更改构造函数将共享的 `WebDriver` 实例注入到 `AtmUserInterface` 和 `WebHooks` 中：
 
 ```java
+dependency_injection/pico/02/src/test/java/support/AtmUserInterface.java
+private final EventFiringWebDriver driver;
+
 public AtmUserInterface(MyWebDriver driver) {
-    this.webDriver = driver;
+    this.driver = driver;
 }
 ```
 
-（WebHooks 的构造函数看起来相同。）
+（`WebHooks` 的构造函数看起来相同。）
 
-现在我们运行 `mvn clean test` 来确保我们没有引入任何缺陷。通过将 UI 与领域实体解耦，我们得到了改进。我们的 DI 容器现在承担了管理 WebDriver 共享实例并将其注入到任何需要它的构造中的责任。在下一步中，我们将发现大多数辅助类所做的事情（或做的极少）是我们的 DI 容器无法为我们完成的，因此我们将完全重构掉它们。
+现在我们运行 `mvn clean test` 来确保我们没有引入任何缺陷。通过将 UI 与领域实体解耦，我们得到了改进。我们的 DI 容器现在承担了管理 `WebDriver` 共享实例并将其注入到任何需要它的构造函数中的责任。在下一步中，我们将发现大多数辅助类所做的事情（或做的极少）是我们的 DI 容器无法为我们完成的，因此我们将完全重构掉它们。
 
 # 替换辅助类
 
-到此时，我们已经创建了更小、内聚性更高的辅助类，现在让我们仔细观察其中的每一个类，看看我们是否对测试代码的结构满意。现在我们有了更小的辅助类，更容易看到底底哪一个类是做什么的，并根据我们对 DI 更深层的理解，判断是否可以做得更好。如果我们认为可以进一步改进，我们仍然有通过测试用例的安全网，以确保在继续重构时不会破坏任何内容。
+到此时，我们已经创建了更小、内聚性更高的辅助类，现在让我们仔细观察其中的每一个类，看看我们是否对测试代码的结构满意。现在我们有了更小的辅助类，更容易看到到底哪一个类是做什么的，并根据我们对 DI 更深层的理解，判断是否可以做得更好。如果我们认为可以进一步改进，我们仍然有通过测试用例的安全网，以确保在继续重构时不会破坏任何内容。
 
-# KnowsTheCashSlot
+## KnowsTheCashSlot
 
-查看 `KnowsTheCashSlot` 类，我们可以看到它所做的只是管理领域实体 `CashSlot` 的创建。我们最初使用 DI 是为了管理共享对象的创建，所以我们竟然自己写了一个做这种事的类，这看起来很奇怪！发生的是，通过重构 KnowsDomain，并结合我们对 DI 工作原理的新知识，我们现在可以发现完全不需要 `KnowsTheCashSlot` 了。让我们通过删除 `KnowsTheCashSlot` 并将 `CashSlot` 直接注入到定义中来简化代码库：
-
-```
-dependency_injection/pico/03/src/test/java/nicebank/CashSlotSteps.java
-CashSlot cashSlot;
-```
+查看 `KnowsTheCashSlot` 类，我们可以看到它所做的只是管理领域实体 `CashSlot` 的创建。我们最初使用 DI 是为了管理共享对象的创建，所以我们竟然自己写了一个做这种事的类，这看起来很奇怪！发生的是，通过重构 `KnowsDomain`，并结合我们对 DI 工作原理的新知识，我们现在可以发现完全不需要 `KnowsTheCashSlot` 了。让我们通过删除 `KnowsTheCashSlot` 并将 `CashSlot` 直接注入到步骤定义中来简化代码库：
 
 ```java
+dependency_injection/pico/03/src/test/java/nicebank/CashSlotSteps.java
+private CashSlot cashSlot;
+
+@Inject
 public CashSlotSteps(CashSlot cashSlot) {
     this.cashSlot = cashSlot;
 }
 ```
 
-我们还需要将 `CashSlot` 注入到我们的 ServerHooks 中：
+我们还需要将 `CashSlot` 注入到我们的 `ServerHooks` 中：
 
-```
+```java
 dependency_injection/pico/03/src/test/java/ServerHooks.java
 private KnowsTheAccount accountHelper;
 private CashSlot cashSlot;
-```
 
-```java
 public ServerHooks(KnowsTheAccount accountHelper, CashSlot cashSlot) {
     this.accountHelper = accountHelper;
     this.cashSlot = cashSlot;
@@ -6280,18 +6132,17 @@ public ServerHooks(KnowsTheAccount accountHelper, CashSlot cashSlot) {
 
 运行 `mvn clean test` 确保我们的测试仍然是绿色的！
 
-# KnowsTheTeller
+## KnowsTheTeller
 
-`KnowsTheTeller` 也只管理 `Teller` 的创建。如果我们采取相同的更改来删除 `teller`，那么在尝试创建 `TellerSteps` 时将产生运行时错误。这是因为 DI 容器不知道要实例化 `Teller` 接口的哪个实现类。我们通过更改 `TellerSteps` 构造函数的签名来告诉它实例化哪个具体类：
-
-```
-dependency_injection/pico/04/src/test/java/nicebank/TellerSteps.java
-KnowsTheAccount accountHelper;
-Teller teller;
-```
+`KnowsTheTeller` 也只管理 `Teller` 的创建。如果我们采取相同的更改来删除 `KnowsTheTeller`，那么在尝试创建 `TellerSteps` 时将产生运行时错误。这是因为 DI 容器不知道要实例化 `Teller` 接口的哪个实现类。我们通过更改 `TellerSteps` 构造函数的签名来告诉它实例化哪个具体类：
 
 ```java
-public TellerSteps(TellerInterface teller, KnowsTheAccount accountHelper) {
+dependency_injection/pico/04/src/test/java/nicebank/TellerSteps.java
+private KnowsTheAccount accountHelper;
+private Teller teller;
+
+@Inject
+public TellerSteps(Teller teller, KnowsTheAccount accountHelper) {
     this.teller = teller;
     this.accountHelper = accountHelper;
 }
@@ -6299,7 +6150,7 @@ public TellerSteps(TellerInterface teller, KnowsTheAccount accountHelper) {
 
 再次运行 `mvn clean test`。
 
-# KnowsTheAccount
+## KnowsTheAccount
 
 移除 `KnowsTheAccount` 更加复杂，因为（现在显而易见）它有几项责任。它执行了以下操作：
 
@@ -6309,7 +6160,7 @@ public TellerSteps(TellerInterface teller, KnowsTheAccount accountHelper) {
 
 让我们从将数据库连接和账户删除移动到 `ResetHooks` 开始。我们需要确保它在任何需要数据库连接的钩子之前运行，因此我们指定了一个较小的顺序数字：
 
-```
+```java
 dependency_injection/pico/05/src/test/java/hooks/ResetHooks.java
 public class ResetHooks {
     @Before(order = 1)
@@ -6329,29 +6180,30 @@ public class ResetHooks {
 
 现在 `KnowsTheAccount` 的唯一责任是在数据库中存储一个测试账户，所以这个名称不再有意义。将其重命名为 `TestAccount` 并扩展 `Account`：
 
-```
+```java
 dependency_injection/pico/05/src/test/java/support/TestAccount.java
 package support;
 import nicebank.Account;
-public class TestAccount {
+
+public class TestAccount extends Account {
 ```
 
 # 迁移到 Guice
 
-Guice 是 Google 提供的一个 DI 容器，具有 Pico-Container 的许多功能。在我们看来，它不像 PicoContainer 那么容易用，但它提供了额外的可能性。此外，由于它是流行工具集的一部分，你可能已经熟悉它了。
+Guice 是 Google 提供的一个 DI 容器，具有 PicoContainer 的许多功能。在我们看来，它不像 PicoContainer 那么容易用，但它提供了额外的可能性。此外，由于它是流行工具集的一部分，你可能已经熟悉它了。
 
 我们将快速修改 ATM 解决方案以在 Guice 上运行，并在过程中指出差异。更多细节可以在 Guice 网站上找到。注意此处 Guice 4.0 处于测试阶段，但本示例使用的是 Guice 3.0。
 
 # 切换 DI 容器
 
-我们将从上一个章节结束产生的重构代码开始。第一步要做的是替换 `pom.xml` 中对 `cucumber-container` 和 `PicoContainer` 的依赖。
+我们将从上一个章节结束产生的重构代码开始。第一步要做的是替换 `pom.xml` 中对 `cucumber-picocontainer` 和 `PicoContainer` 的依赖。
 
-```
+```xml
 dependency_injection/guice/01/pom.xml
 <dependency>
   <groupId>info.cukes</groupId>
   <artifactId>cucumber-guice</artifactId>
-  <version>$(cucumber.version)</version>
+  <version>${cucumber.version}</version>
   <scope>test</scope>
 </dependency>
 <dependency>
@@ -6365,44 +6217,47 @@ dependency_injection/guice/01/pom.xml
 
 ```
 T E S T
-RunningCukesTest
+Running CukesTest
 Feature: Cash Withdrawal
-Failure in before hook:ServerHooks.startServer()
+Failure in before hook: ServerHooks.startServer()
 Message: com.google.inject.ConfigurationException: Guice configuration errors:
-```
 
-+   1) Could not find a suitable constructor in hooks.ServerHooks.
-Classes have either one（且仅有一个）带有 @Inject 注解的构造函数或非私有的零参数构造函数。at ServerHooks.class(ServerHooks.java:19)
+1) Could not find a suitable constructor in hooks.ServerHooks.
+Classes must have either one (and only one) constructor annotated with @Inject or a zero-argument constructor that is not private.
+at ServerHooks.class(ServerHooks.java:19)
+
 while locating hooks.ServerHooks
 ```
 
-
-这告诉了我们什么？Guice 需要实例化我们的胶接类（glue classes），但它不知道应该使用哪个构造函数（尽管它们各只有一个构造函数）。
+这告诉了我们什么？Guice 需要实例化我们的胶水代码类，但它不知道应该使用哪个构造函数（尽管它们各只有一个构造函数）。
 
 ## @Inject 注解
 
 为了告诉 Guice 使用哪个构造函数，我们在我们想要注入的构造函数上添加 `@Inject` 注解：
 
-```
+```java
 dependency_injection/guice/02/src/test/java/nicebank/CashSlotSteps.java
-CashSlot cashSlot;
+private CashSlot cashSlot;
+
 @Inject
 public CashSlotSteps(CashSlot cashSlot) {
     this.cashSlot = cashSlot;
 }
 ```
 
-我们还必须对 AtmmInterface、AccountSteps、ServerHooks、TellerSteps 和 WebDrivers 中的构造函数进行注解。当我们运行 `mvn clean test` 时，我们的两个场景都失败了，但错误信息不同：
+我们还必须对 `AtmUserInterface`、`AccountSteps`、`ServerHooks`、`TellerSteps` 和 `WebHooks` 中的构造函数进行注解。当我们运行 `mvn clean test` 时，我们的两个场景都失败了，但错误信息不同：
 
 ```
 TESTS
 -------
-RunningCukesTest
+Running CukesTest
 Feature: Cash Withdrawal
 Listening on http://10.101.77:8887/
-Failure in after hook:ServerHooks.stopServer
-Message: com.google.inject.ProvisionException:Guice provision errors:
+Failure in after hook: ServerHooks.stopServer
+Message: com.google.inject.ProvisionException: Guice provision errors:
 ```
+
+
 
 > 1 error injecting constructor, org.servlet.activejdbcbc.DBException:
 com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException:
@@ -6413,15 +6268,13 @@ while locating TestAccount
 for parameter 0 at ServerHooks.<init>(ServerHooks.java:22)
 while locating ServerHooks
 
-```
-
 这里发生了什么？报告的错误是 `IntegrityConstraintViolation`（完整性约束违反），该错误是因为我们正尝试创建一个相同编号的多个账户。我们在数据库上设置的唯一约束不允许这样做，这就是错误的原因。问题的根源在于作用范围（scope）。我们发现了 PicoContainer 和 Guice 之间存在显著差异，我们将来看这个问题。
 
 ## @ScenarioScoped 注解
 
 Cucumber 文档说：不建议让步骤定义类没有作用范围，这意味着 Cucumber 将为每个使用该定义的场景为该类创建一个新实例。
 
-我们有两个潜在的作用范围可以选择：`@ScenarioScoped` 和 `@Singleton`。通常情况下，我们将使用 `@ScenarioScoped`，因为这确保了状态在每个场景开始之前被重置。让我们对步骤定义和钩子（hooks）进行注解，表示我们希望为每个场景创建它们。需要注解的类有 AccountSteps、CashSlotSteps、TellerSteps、BackgroundHooks、ServerHooks 和 WebDriverHooks：
+我们有两个潜在的作用范围可以选择：`@ScenarioScoped` 和 `@Singleton`。通常情况下，我们将使用 `@ScenarioScoped`，因为这确保了状态在每个场景开始之前被重置。让我们对步骤定义和钩子进行注解，表示我们希望为每个场景创建它们。需要注解的类有 `AccountSteps`、`CashSlotSteps`、`TellerSteps`、`BackgroundHooks`、`ServerHooks` 和 `WebDriverHooks`：
 
 ```
 dependency_injection/guice/03/src/test/java/nicebank/AccountSteps.java
@@ -6449,7 +6302,7 @@ at AccountSteps.class(AccountSteps.java:24)
 while looping AccountSteps
 ```
 
-我们修复了关闭阶段的失败，但仍在尝试创建重复的账户。这是因为虽然我们已经在胶接代码上标注了 `@ScenarioScoped` 注解，但 Guice 在每次需要注入时仍然会创建一个新实例。由于我们使用注入来在对象之间共享同一个实例，我们需要对这些类也进行注解。需要注解的类有 AtmInterface、CashSlot、MyWebDriver 和 TestAccount。
+我们修复了关闭阶段的失败，但仍在尝试创建重复的账户。这是因为虽然我们已经在胶接代码上标注了 `@ScenarioScoped` 注解，但 Guice 在每次需要注入时仍然会创建一个新实例。由于我们使用注入来在对象之间共享同一个实例，我们需要对这些类也进行注解。需要注解的类有 `AtmInterface`、`CashSlot`、`MyWebDriver` 和 `TestAccount`。
 
 唯一出现问题的类是 `CashSlot`，因为它是生产代码的一部分，我们可能不想为了让测试框架正常工作而添加注解。另一种方案是创建一个扩展 `CashSlot` 的 `TestSlot`，这样可以将 Guice 注解留给我们的测试代码：
 
@@ -6470,18 +6323,16 @@ public class TestSlot extends CashSlot {
 ```
 dependency_injection/guice/04/src/test/java/nicebank/CashSlotSteps.java
 CashSlot cashSlot;
-```
 
-```
 @Inject
-public CashSlot(TestSlot cashSlot) {
+public CashSlotSteps(TestSlot cashSlot) {
   this.cashSlot = cashSlot;
 }
 ```
 
 现在测试通过了！
 
- @Singleton 注解
+## @Singleton 注解
 
 在上一节中，我们对由 Guice 管理的每个类应用了 `@ScenarioScoped` 注解。这意味着每个运行的场景都会创建一个新实例。这对于我们目前来说不是问题，因为我们目前只有一个场景，但如果对象的构造开销很大，这种方法可能会浪费资源。
 
@@ -6538,9 +6389,6 @@ dependency_injection/spring/01/src/test/resources/cucumber.xml
 </beans>
 ```
 
-
-
-
 现在我们已经完成了操作，所有的支持类都已识别为 bean，Spring 将乐意地根据需要实例化并注入它们。
 
 运行 `mvn clean test` 来检查一切是否运行正常。
@@ -6557,7 +6405,7 @@ Spring 提供了另一种替代方法，通过在配置文件将类配置为 bea
 dependency_injection/spring/02/src/test/resources/cucumber.xml
 <bean class="support.AtmUserInterface" scope="cucumber-glue" />
 <bean class="support.MyWebDriver" scope="cucumber-glue" />
-<bean class="niceback.CashSlot" scope="cucumber-glue" />
+<bean class="nicebank.CashSlot" scope="cucumber-glue" />
 ```
 
 现在我们可以从 `AtmInterface` 和 `MyWebDriver` 中移除注解，并完全删除 `CashSlot`（因为我们创建它仅仅是为了避免编辑生产代码）。我们还需要对 `TestAccount` 做一些处理，因为我们必须向其构造函数传递一个账号。一种解决方案是创建 `AccountFactory` 并配置 Spring 使用它：
@@ -6572,7 +6420,7 @@ lazy-init="true" scope="cucumber-glue" />
 dependency_injection/spring/02/src/test/java/support/AccountFactory.java
 package support;
 
-import niceback.Account;
+import nicebank.Account;
 
 public class AccountFactory {
 
@@ -6642,7 +6490,7 @@ dependency_injection/weld/01/pom.xml
   <scope>test</scope>
 </dependency>
 <dependency>
-  <groupId>javax.java.enterprise</groupId>
+  <groupId>javax.enterprise</groupId>
   <artifactId>cdi-api</artifactId>
   <version>${cdi.version}</version>
 </dependency>
@@ -6652,6 +6500,8 @@ dependency_injection/weld/01/pom.xml
   <version>${weld.version}</version>
 </dependency>
 ```
+
+
 
 与我们之前看到的 DI 容器一样，我们需要告诉 Weld/CDI 如何以及何时注入我们的对象。我们使用 `@Inject` 注解展示对象在哪里注入，并指示我们。
 
@@ -6682,48 +6532,45 @@ ATM 示例是一个具有单一功能的 Web 应用——取款——但这还�
 
 ## Selenium WebDriver
 
-使用 Cucumber 最流行的方法之一是 Web Web的自动化开发。这里有一个小秘密：
+使用 Cucumber 最流行的方法之一是 Web 应用的自动化开发。这里有一个小秘密：
 
 Cucumber 根本不知道与 Web 应用通信！
 
-
-
-
-# 第 12 章 与 Web 应用程序交互 • 226
+# 第 12 章 与 Web 应用程序交互 · 226
 
 没错——对于这一点它完全没用。尽管如此，人们仍然在使用它来开发 Web 应用程序。为什么呢？
 
 请记住，Cucumber 不过是一个解析 Gherkin 特性文件并执行步骤定义的工具。它不知道如何与数据库、Web 应用程序或任何外部系统通信。人们会安装其他库来实现这些，并在步骤定义和支持代码中使用它们来连接到这些外部系统。
 
-截至写作时，最流行的用于与 Web 应用程序程序交互的 Java 库是 Selenium WebDriver。它提供了一个 API，用于访问网页并与其交互，其方式与真实用户的操作相似——在字段和文本区域中输入文本、检查复选框、点击链接和按钮等。Selenium WebDriver 允许你引入驱动程序，在多个不同的浏览器（如 Firefox、Internet Explorer 和 Chrome）中运行这些交互。
+截至写作时，最流行的用于与 Web 应用程序交互的 Java 库是 `Selenium WebDriver`。它提供了一个 API，用于访问网页并与其交互，其方式与真实用户的操作相似——在字段和文本区域中输入文本、检查复选框、点击链接和按钮等。`Selenium WebDriver` 允许你引入驱动程序，在多个不同的浏览器（如 Firefox、Internet Explorer 和 Chrome）中运行这些交互。
 
-我们在书中已经使用了一些 Selenium WebDriver 的功能，但本章将需要更多功能。因此，是时候向你简要概述 Selenium 的完整威力了，以便你为稍后编写的步骤定义做好准备。请务必参考 Selenium 官方文档以获取更详尽的细节.¹¹
+我们在书中已经使用了一些 `Selenium WebDriver` 的功能，但本章将需要更多功能。因此，是时候向你简要概述 Selenium 的完整威力了，以便你为稍后编写的步骤定义做好准备。请务必参考 Selenium 官方文档以获取更详尽的细节.¹¹
 
 ## 导航、WebElements 和位置
 
 使用浏览器最基本的方法是访问特定的 URL。Selenium 提供了 `get` 方法（我们之前已经使用过），用于向指定的 URL 发送 GET 请求：`driver.get(String path)`。然而，你不能假设 Selenium 会在此方法返回之前等待页面加载。
 
-一旦加载了网页，你可能想执行一些操作，如向框中输入文本或点击按钮。Selenium 将组成页面的组件称为 WebElements，并提供了许多方法帮助你发现它们。这些方法大部分都以 Selenium 定位器（locator）作为参数，指定你感兴趣的元素，最简单的是 `findElement`。如果有多个元素匹配你提供的定位器，`findElement` 会返回第一个匹配的元素。你也可以使用 `findElements` 获取所有匹配你定位器的元素列表。
+一旦加载了网页，你可能想执行一些操作，如向框中输入文本或点击按钮。Selenium 将组成页面的组件称为 `WebElements`，并提供了许多方法帮助你发现它们。这些方法大部分都以 Selenium 定位器（locator）作为参数，指定你感兴趣的元素，最简单的是 `findElement`。如果有多个元素匹配你提供的定位器，`findElement` 会返回第一个匹配的元素。你也可以使用 `findElements` 获取所有匹配你定位器的元素列表。
 
 这形成了一个非常流畅的接口，读起来像一个英语句子：“element by id dateOfBirth”（通过 id 查找出生日期）。
 
-`id` 方法只是提供的许多方法之一。其他还包括 `xpath`、`link-Text`、`name`、`className` 和 `inputfieldName`——更多请查阅 Selenium 文档。所有方法名称都是自明易懂的，有助于保持你的步骤易于阅读（和维护）。
+`id` 方法只是提供的许多方法之一。其他还包括 `xpath`、`linkText`、`name`、`className` 和 `inputfieldName`——更多请查阅 Selenium 文档。所有方法名称都是自明易懂的，有助于保持你的步骤易于阅读（和维护）。
 
-一旦你获取了感兴趣的 WebElement，你就会想对其进行某些操作。你有许多方法可以选择，它们都具有像 `click`、`sendKeys` 和 `submit` 这样描述性且自明的名称。 WebElement 实例背后 HTML 控件的实际行为取决于它是什么类型的控件。例如，调用复选框会改变其选中状态，而调用按钮会触发按钮按下动作。
+一旦你获取了感兴趣的 `WebElement`，你就会想对其进行某些操作。你有许多方法可以选择，它们都具有像 `click`、`sendKeys` 和 `submit` 这样描述性且自明的名称。 `WebElement` 实例背后 HTML 控件的实际行为取决于它是什么类型的控件。例如，调用复选框会改变其选中状态，而调用按钮会触发按钮按下动作。
 
 ## 切换窗口
 
-当然，并不是所有应用只有一个浏览器窗口，所以你可能需要在窗口或帧（frames）之间切换。Selenium 提供了 `switchTo` 方法为此目的。例如，你可以通过名称切换到另一个窗口：`driver.switchToTo().window("myWindow")`。一旦调用此方法，驱动程序会将后续的 Selenium 调用指向该窗口。
+当然，并不是所有应用只有一个浏览器窗口，所以你可能需要在窗口或帧（frames）之间切换。Selenium 提供了 `switchTo` 方法为此目的。例如，你可以通过名称切换到另一个窗口：`driver.switchTo().window("myWindow")`。一旦调用此方法，驱动程序会将后续的 Selenium 调用指向该窗口。
 
-除了窗口方法外，还可以使用 `frame` 和 `alert` 分将调用指向指定的 IFrame 或警告框。
+除了窗口方法外，还可以使用 `frame` 和 `alert` 将调用指向指定的 IFrame 或警告框。
 
 ## Cookie 管理
 
-Selenium 驱动程序还有 `manage` 方法让你直接访问当前的浏览器会话。如果你的 Web 应用程序使用了 Cookie，你需要它来管理 Cookie。Selenium 提供了具有描述性名称的方法，如 `addCookie`、`deleteCookies` 和 `getCookieNamed`，你可以像这样使用：`driver.manager().getCookieNamed("my-cookie")`。
+Selenium 驱动程序还有 `manage` 方法让你直接访问当前的浏览器会话。如果你的 Web 应用程序使用了 Cookie，你需要它来管理 Cookie。Selenium 提供了具有描述性名称的方法，如 `addCookie`、`deleteCookies` 和 `getCookieNamed`，你可以像这样使用：`driver.manage().getCookieNamed("my-cookie")`。
 
 Selenium 还提供了 `Cookie` 类作为封装器，使操作 Cookie 变得简单。如果你想向浏览器会话添加 Cookie，只需这样做：
 
-```
+```java
 Cookie cookie = new Cookie("name", "value");
 driver.addCookie(cookie);
 ```
@@ -6732,11 +6579,11 @@ driver.addCookie(cookie);
 
 ## 管理超时
 
-通过 Selenium 驱动程序的 `manage` 接口另一个可用功能是超时（timeout），它用于更改 Selenium 在发出错误之前等待的各种超时时间。例如，这可以用于确保页面在查找特定 WebElement 之前有时间加载：`driver.manager().timeout().pageLoadTimeout(10, TimeUnit.SECONDS)`。
+通过 Selenium 驱动程序的 `manage` 接口另一个可用功能是超时（timeout），它用于更改 Selenium 在发出错误之前等待的各种超时时间。例如，这可以用于确保页面在查找特定 `WebElement` 之前有时间加载：`driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS)`。
 
-你还可以告诉驱动程序在寻找特定 WebElement 时，对 DOM 进行一段时间的轮询——例如：`driver.manager().timeout().implicitlyWait(10, TimeUnit.MILLISECONDS)`。当页面上的某些元素需要一定时间渲染时，这会有帮助，Selenium 对我们在第 172 页的“通过采样进行同步”中所完成的操作有完全实现。
+你还可以告诉驱动程序在寻找特定 `WebElement` 时，对 DOM 进行一段时间的轮询——例如：`driver.manage().timeouts().implicitlyWait(10, TimeUnit.MILLISECONDS)`。当页面上的某些元素需要一定时间渲染时，这会有帮助，Selenium 对我们在“通过采样进行同步”中所完成的操作有完全实现。
 
-使用这些超时的缺点是它们会全局应用于所有 Selenium 调用，这可能导致失败的用例运行非常缓慢。你将在稍后第 242 页的“Selenium 中的同步”中学习一种更具针对性的方法。
+使用这些超时的缺点是它们会全局应用于所有 Selenium 调用，这可能导致失败的用例运行非常缓慢。你将在稍后“Selenium 中的同步”中学习一种更具针对性的方法。
 
 本节已经让你领略了 Selenium 提供的各种可能性。我们将在章节末尾开始使用其中的一些特性。我们有很多工作要做，让我们开始吧。
 
@@ -6744,7 +6591,7 @@ driver.addCookie(cookie);
 
 我们已经交付了一个可以运行的用例并向利益相关者展示了它。他们对我们目前的工作表示满意，但我们想讨论如何处理一些常见的错误情况。一旦完成了这些讨论，就是扩展我们的 Web 应用程序了，我们将看到一些强制错误的示例。
 
-现在我们来实现与利益相关者合作时捕捉的场景。由于 Spring 是一个非常流行的 DI 容器，我们将从第 218 页“你的步骤”中编写 Spring 代码开始。我们不会花大量时间描述代码，因为你已经在书中之前学习了大部分内容，但我们将在使用时描述新的 Selenium 功能。如果你想跳过开发阶段，可以随时跳转到第 233 页的“复用浏览器”。
+现在我们来实现与利益相关者合作时捕捉的场景。由于 Spring 是一个非常流行的 DI 容器，我们将从“你的步骤”中编写 Spring 代码开始。我们不会花大量时间描述代码，因为你已经在书中之前学习了大部分内容，但我们将在使用时描述新的 Selenium 功能。如果你想跳过开发阶段，可以随时跳转到“复用浏览器”。
 
 ## 故障 ATM
 
@@ -6765,11 +6612,10 @@ And 我的账户余额应该是 $100.00
 
 ## 注入故障
 
-我们希望确保当 ATM 机制（由我们的 CashSlot 表示）出现问题时，软件表现正常。我们不想修改生产代码，因此创建一个 `TestCashSlot`（扩展 `CashSlot`）以便我们模拟故障：
+我们希望确保当 ATM 机制（由我们的 `CashSlot` 表示）出现问题时，软件表现正常。我们不想修改生产代码，因此创建一个 `TestCashSlot`（扩展 `CashSlot`）以便我们模拟故障：
 
-
-
-```javafast/01/src/java/test/support/TestCashSlot.java
+```java
+fast/01/src/java/test/support/TestCashSlot.java
 package support;
 
 import nicebank.CashSlot;
@@ -6798,7 +6644,7 @@ fast/01/src/test/resources/cucumber.xml
 <bean class="support.TestCashSlot" scope="cucumber-glue" />
 ```
 
-现在，当我们的场景运行时时，Spring 会创建 `TestCashSlot` 的单例，并将其注入到任何我们需要 `TestCashSlot` 或 `CashSlot` 的地方。当从故障的 ATM 取款时，`dispense` 将抛出一个异常。在我们目前使用 Java 的 `RuntimeException` 的情况下，如果这不仅仅是一个示例，我们会希望将其替换为更有意义的内容。
+现在，当我们的场景运行时，Spring 会创建 `TestCashSlot` 的单例，并将其注入到任何我们需要 `TestCashSlot` 或 `CashSlot` 的地方。当从故障的 ATM 取款时，`dispense` 将抛出一个异常。在我们目前使用 Java 的 `RuntimeException` 的情况下，如果这不仅仅是一个示例，我们会希望将其替换为更有意义的内容。
 
 我们可以使用 `injectFault` 方法在任何时候注入我们的 `TestCashSlot`。我们在新的步骤定义“But the cash slot has developed a fault”中调用了它：
 
@@ -6817,7 +6663,7 @@ public void theFault() throws Throwable {
 如果 ATM 发生故障，我们希望向用户显示一条有用的消息。我们使用 Selenium WebDriver 来检查是否显示了正确的消息。为此，我们添加了以下步骤定义：
 
 ```
-fast01/src/test/java/nice/TellerSteps.java
+fast/01/src/test/java/nice/TellerSteps.java
 @Then("I should see an out-of-order message$")
 public void iShouldSeeOutOfOrderMessage() throws Throwable {
     Assert.assertTrue(
@@ -6827,12 +6673,12 @@ public void iShouldSeeOutOfOrderMessage() throws Throwable {
 }
 ```
 
-所有的步骤定义都将责任委托给 `Teller` 的实现，以检查是否显示了所需的“Out of order”消息。我们没有在步骤定义本身中执行复杂的工作，因为我们已经解释过，希望保持这种类型的胶水代码尽可能薄薄。我们在 `AtmUserInterface` 中执行检查 UI 上显示文本的实际工作：
+所有的步骤定义都将责任委托给 `Teller` 的实现，以检查是否显示了所需的“Out of order”消息。我们没有在步骤定义本身中执行复杂的工作，因为我们已经解释过，希望保持这种类型的胶水代码尽可能薄。我们在 `AtmUserInterface` 中执行检查 UI 上显示文本的实际工作：
 
-当然，我们第一次运行它时会失败，因为我们还没有对生产环境代码进行任何更改。为了处理尝试使用故障的 `CashSlot` 时抛出的异常，我们修改了 `WithdrawalServlet`  `doPost` 方法。它现在会从 catch 异常中提取消息并显示给用户：
+当然，我们第一次运行它时会失败，因为我们还没有对生产环境代码进行任何更改。为了处理尝试使用故障的 `CashSlot` 时抛出的异常，我们修改了 `WithdrawalServlet` 的 `doPost` 方法。它现在会从 catch 异常中提取消息并显示给用户：
 
 ```
-fast01/src/main/java/nice/WithdrawalServlet.java
+fast/01/src/main/java/nice/WithdrawalServlet.java
 protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
     Teller teller = new AutomatedTeller(cashSlot);
@@ -6863,7 +6709,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
 
 看看我们新的场景。你觉得读起来顺畅吗？其中是否有任何与正在开发的行为无关的细节？
 
-## 第 12 章 与 Web 应用程序交互 · 232
+# 第 12 章 与 Web 应用程序交互 · 232
 
 看看我们新的场景。你觉得读起来顺畅吗？其中是否有任何与正在开发的行为无关的细节？
 
@@ -6878,9 +6724,6 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
 ## 使用 Spring 共享浏览器
 
 ## 一个停机钩子
-
-
-
 
 Ajax 235
 
@@ -6902,31 +6745,30 @@ public void deleteAllCookies() {
 }
 ```
 
-我们创建了一个简单的驱动器实例并将其存储在静态变量中（第 2 行）。该实例将被 SharedDriver 的所有实例共享。我们还创建了一个静态线程（第 3 行），并将其添加到 JVM 的钩子列表中，这些钩子会在 JVM 退出时被调用（第 11 行）。
+我们创建了一个简单的驱动器实例并将其存储在静态变量中（第 2 行）。该实例将被 `SharedDriver` 的所有实例共享。我们还创建了一个静态线程（第 3 行），并将其添加到 JVM 的钩子列表中，这些钩子会在 JVM 退出时被调用（第 11 行）。
 
-如果你尝试手动关闭驱动器，SharedDriver 将检查该调用是否来自已注册的 `CLOSE_THREAD`（第 20 行）。如果不是，SharedDriver 将通过异常报告错误。这可以防止你在执行 Cucumber 特性过程中无意中关闭浏览器。
+如果你尝试手动关闭驱动器，`SharedDriver` 将检查该调用是否来自已注册的 `CLOSE_THREAD`（第 20 行）。如果不是，`SharedDriver` 将通过异常报告错误。这可以防止你在执行 Cucumber 特性过程中无意中关闭浏览器。
 
-此示例还展示了你如何使用钩子在每个场景测试（scenario）运行之前清除 Cookie（第 29 行）。`manage` 方法是 Selenium 提供的 `EventFiringWebDriver` API 的一部分。
 
-在修复 ATM 的某些故障功能时，我们学习了一种在 Cucumber 运行结束时调用清理程序的通用方法。我们使用 Selenium 来确保每个场景都能清理上一个场景可能保存的任何 Cookie。现在，我们需要向用户展示我们所做的，并看看他们是否喜欢！
 
 # Ajax
 
 在可用性测试期间，我们发现用户并不喜欢被告知他们请求的金额不可用。如果我们能在他们点击提交按钮之前，在向 ATM 输入金额时就显示一条 ATM 资金不足的消息，他们会更乐意。这可以通过一个新场景来描述：
 
-fast/05/src/test/resources/cash_withdrawal.feature
+`fast/05/src/test/resources/cash_withdrawal.feature`
 
 **场景：** 由于 ATM 资金不足导致提取失败
-我的账户有余额
-并且 ATM 中有 $10
-当我输入 $20 时
-我应该看到一条“请求较少金额”的消息
+
+* 我的账户有余额
+* 并且 ATM 中有 $10
+* 当我输入 $20 时
+* 我应该看到一条“请求较少金额”的消息
 
 在这里我们的 `When` 步骤有一个细微的区别。我们只是在输入文本，与我们上一个场景中的 `When` 步骤不同，我们没有通过点击按钮或按 Enter/Return 键来提交表单。我们已经有了如何实现此功能的主意——当用户输入字符时，我们将使用 Ajax 请求，当响应返回时，我们将在同一页面上显示消息，而无需解..
 
 # 输入金额
 
-当我们运行 `mvn clean test` 时，Cucumber 会因为缺少步骤定义（step definition）而退出。我们需要告诉它如何在不提交表单的情况下向字段输入文本。这很简单！我们将实现未定义的步骤定义，类似于我们在上一个场景中使用的那个，但这次我们不会按下提交按钮——我们只填充字段。
+当我们运行 `mvn clean test` 时，Cucumber 会因为缺少步骤定义而退出。我们需要告诉它如何在不提交表单的情况下向字段输入文本。这很简单！我们将实现未定义的步骤定义，类似于我们在上一个场景中使用的那个，但这次我们不会按下提交按钮——我们只填充字段。
 
 如果你再次运行该特性并仔细观察，你会发现在场景删除且浏览器关闭之前，字段中已经填充了我们 Gherkin 场景中请求的金额。太棒了！这让我们只剩下一个失败的步骤——即我们需要验证错误消息是否正在显示。现在是时候休息一下，思考一下我们如何通过使用 Ajax 和动态 HTML 来实现它了。
 
@@ -6942,11 +6784,11 @@ fast/05/src/test/resources/cash_withdrawal.feature
 
 由于缺乏良好的工具，开发 JavaScript TDD 来很难，但这并不是那种工具——它太高级了。使用 JavaScript 进行低级 TDD 超出了本书的范围，但如果你想尝试，我们可以推荐 QUnit 或 Jasmine。测试驱动的 JavaScript 开发 [Joh10] 是一本非常好的书，它处理得非常好。同时也值得看看 Jim Shore 的“Let’s code JavaScript”视频教程。
 
-# 不进行 JavaScript 编程。
+# 不进行 JavaScript 编程
 
 我们大家都是这样开始的。编写代码；手动测试！由于 JavaScript TDD 是一个我们在书中不会涵盖的大话题，我们将小作作弊，“直接写代码”。我们将启动 Web 服务器，并在 ATM 中设置有限的现金，一直编写到我们有可以运行的东西，并在浏览器中手动测试。当我们有了可以运行的东西时，可以运行 Cucumber 来获得最终验证。
 
-这种方法并不理想——在实际项目中，我们也对 JavaScript 脚本使用 TDD。尽管如此，我们的 Cucumber 场景将作为验证，并在未来有人更改 JavaScript 时保护我们免受回归影响。所以，话话不多说，我们将直接使用我们开发的 JavaScript 代码。在 `src/main/webapp/js` 中创建一个名为 `notifications.js` 的新文件，内容如下：
+这种方法并不理想——在实际项目中，我们也对 JavaScript 脚本使用 TDD。尽管如此，我们的 Cucumber 场景将作为验证，并在未来有人更改 JavaScript 时保护我们免受回归影响。所以，话不多说，我们将直接使用我们开发的 JavaScript 代码。在 `src/main/webapp/js` 中创建一个名为 `notifications.js` 的新文件，内容如下：
 
 ```javascript
 // src/main/webapp/js/notifications.js
@@ -6998,19 +6840,17 @@ jQuery.fn.setupValidation = function () {
 jQuery(function() { jQuery('#withdrawalForm').setupValidation(); });
 ```
 
-
-
 最后，我们在 `AtmServlet` 的输入字段中添加了 `autocomplete="off"` 属性，以防止浏览器在我们输入时提供建议值。
 
 所有这些代码都通过了，现在是再次运行 Cucumber 的时候了！
 
 场景：由于 ATM 资金不足导致取款失败
-  我的账户有余额
-  并且 ATM 控制 $10
 
-    - 当我输入 $20 时
-      我应该看到一条“请求减小金额”的消息
-      Java.langAssertionError: Expected error message not displayed at org.junit.Assert.fail(Assert.java:88) at org.junit.Assert.assertTrue(Assert.java:41) at nicebank.TellerSteps.IShouldSeeAnAskForMoneyMessage at *.*
+* 我的账户有余额
+* 并且 ATM 控制 $10
+  * 当我输入 $20 时
+    * 我应该看到一条“请求减小金额”的消息
+    * `Java.langAssertionError: Expected error message not displayed at org.junit.Assert.fail(Assert.java:88) at org.junit.Assert.assertTrue(Assert.java:41) at nicebank.TellerSteps.IShouldSeeAnAskForMoneyMessage at *.*`
 
 我们的其他功能仍然通过，但现在我们正在测试的 Ajax 没有通过。输出表明预期的通知没有显示在页面上。这需要进行一些侦查工作，我们将深入研究。
 
@@ -7018,41 +6858,39 @@ jQuery(function() { jQuery('#withdrawalForm').setupValidation(); });
 
 我们调试了一个 Jetty 服务器，发现我们的 `ValidationServlet` 根本没有接收到请求。进一步调查发现，我们发现 JavaScript 方法队列也从未被调用，这意味着我们的 ATM Web 页面从未接收到任何按键事件。这是怎么？
 
-在互联网上快速搜索发现了一个鲜为人知的实：如果你传递字符串，`SeleniumKeys` 方法会产生 keyup 或 key 事件，但如果你通过 `Keys` 枚举传递，则不会。
+在互联网上快速搜索发现了一个鲜为人知的事实：如果你传递字符串，`SeleniumKeys` 方法会产生 keyup 或 key 事件，但如果你通过 `Keys` 枚举传递，则不会。
 
-所以，我们采取了最简单的方法，即将输入金额转换为一系列按键序列
+所以，我们采取了最简单的方法，即将输入金额转换为一系列按键序列：
 
 ```java
-fast/07/src/test/java/support/AtmUserInterface.java
+// fast/07/src/test/java/support/AtmUserInterface.java
 public void type(int amount) {
- WebDriver.get("http://localhost:" + hooks.ServerHosts.PORT);
- WebElement input = WebDriver.findElement(By.id("amount"));
- String amountString = String.valueOf(amount);
- for (int i = 0; i<amountString.length(); i++) {
- input.sendKeys(convertToKey(amountString.charAt(i)));
- }
+    WebDriver.get("http://localhost:" + hooks.ServerHosts.PORT);
+    WebElement input = WebDriver.findElement(By.id("amount"));
+    String amountString = String.valueOf(amount);
+    for (int i = 0; i < amountString.length(); i++) {
+        input.sendKeys(convertToKey(amountString.charAt(i)));
+    }
 }
 ```
 
 - 7. https://code.google.com/p/selenium/issues/detail?id=5786
 
-```}
-}
-
 ```java
 private Keys convertToKey(char digit) {
-switch (digit){
-    case '0': return Keys.NUMPAD0;
-    case '1': return Keys.NUMPAD1;
-    case '2': return Keys.NUMPAD2;
-    case '3': return Keys.NUMPAD3;
-    case '4': return Keys.NUMPAD4;
-    case '5': return Keys.NUMPAD5;
-    case '6': return Keys.NUMPAD6;
-    case '7': return Keys.NUMPAD7;
-    case '8': return Keys.NUMPAD8;
-    case '9': return Keys.NUMPAD9;
-    default: throw new RuntimeException("Invalid keypress in test");
+    switch (digit) {
+        case '0': return Keys.NUMPAD0;
+        case '1': return Keys.NUMPAD1;
+        case '2': return Keys.NUMPAD2;
+        case '3': return Keys.NUMPAD3;
+        case '4': return Keys.NUMPAD4;
+        case '5': return Keys.NUMPAD5;
+        case '6': return Keys.NUMPAD6;
+        case '7': return Keys.NUMPAD7;
+        case '8': return Keys.NUMPAD8;
+        case '9': return Keys.NUMPAD9;
+        default: throw new RuntimeException("Invalid keypress in test");
+    }
 }
 ```
 
@@ -7065,12 +6903,12 @@ switch (digit){
 为了做到这一点，我们在 `AtmUserInterface` 中添加了以下代码：
 
 ```java
-fast/08/src/test/java/AtmUserInterface.java
+// fast/08/src/test/java/AtmUserInterface.java
 public void type(int amount) {
     WebDriver driver = WebDriver.get("http://localhost:" + hooks.ServerHooks.PORT());
     WebElement input = driver.findElement(By.id("amount"));
     String amountString = String.valueOf(amount);
-    for (int i = 0; i<amountString.length(); i++) {
+    for (int i = 0; i < amountString.length(); i++) {
         input.sendKeys(convertToKey(amountString.charAt(i)));
     }
 }
@@ -7081,35 +6919,33 @@ ask("Ready to continue");
 ```java
 public void ask(String question) {
     JOptionPane.showMessageDialog(
-null,
-question,
-"Ask for response",
-JOptionPane.PLAIN_MESSAGE);
+        null,
+        question,
+        "Ask for response",
+        JOptionPane.PLAIN_MESSAGE);
 }
 ```
 
-## 第12 章与 Web 应用程序工作
+## 第 12 章 与 Web 应用程序工作
 
 现在当我们运行 `mvn test` 时，当我们在预期通知方法可见时，`ask` 方法弹出了对话框。足够了：“ATM 资金不足！看起来我们在下一节中还有另一个问题要解决。”
 
 ## Selenium 中的同步
 
-**缺失了什么？在这一点可能很难判断。使用 `ask` 暂停场景帮助我们理解了通知正在显示——最终显示了。
+**缺失了什么？** 在这一点可能很难判断。使用 `ask` 暂停场景帮助我们理解了通知正在显示——最终显示了。
 
 在我们的步骤中，我们正在输入要提取的金额，然后验证页面上是否有预期的通知。问题是——我们查找结果太快了，在 Ajax 查询有机会完成之前！正如我们在第 9 章《消息队列与异步组件》中第 169 页讨论的那样，我们需要引入一个同步点，以便我们可以在继续检查返回的内容之前，确保验证请求已完成。
 
 幸运的是，Selenium 有许多不同的方法可以简单地处理这种情况。在这种情况下，我们使用辅助类 `DriverManager` 每隔 30 毫秒轮询一次页面，最多 20 秒：
 
 ```java
-fast/09/src/test/java/support/AtmInterface.java
+// fast/09/src/test/java/support/AtmInterface.java
 public boolean isDisplay(String message) {
- By locator = By.xpath("*contains(text(),'" + message + "')");
-
- WebDriverWait wait = new WebDriverWait(driver, 20);
- WebElement element = wait.until(ExpectedConditions.presenceOfLocated(locator));
-
- List<WebElement> list = driver.findElements(locator);
-return list.size() > 0;
+    By locator = By.xpath("*contains(text(),'" + message + "')");
+    WebDriverWait wait = new WebDriverWait(driver, 20);
+    WebElement element = wait.until(ExpectedConditions.presenceOfLocated(locator));
+    List<WebElement> list = driver.findElements(locator);
+    return list.size() > 0;
 }
 ```
 
@@ -7122,7 +6958,7 @@ return list.size() > 0;
 我们提供了一些你可以迭代的 Java，核心是这个类：
 
 ```java
-robot/01/src/main/java/WebDriver.java
+// robot/01/src/main/java/WebDriver.java
 import javax.swing.JOptionPane;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -7131,7 +6967,6 @@ public class WebDriver {
     public static void main(String[] args) {
         FirefoxDriver firefoxDriver = new FirefoxDriver();
         EventFiringWebDriver webDriver = new EventFiringWebDriver(firefoxDriver);
-
         webDriver.get("http://www.google.com");
         // ...
         ask("Ready to finish");
@@ -7145,56 +6980,49 @@ public class WebDriver {
 }
 ```
 
+
+
 下载项目后，你可以通过 `mvn compile exec:java -Dexec.mainClass="WebDriver"` 来运行它。
 
-## 第13 章
+## 第 13 章 保持你的功能快速
 
-## 保持你的功能快速
-
-我们在 ATM 中开发了一些新功能，以处理 ATM 尝试向客户发放现金时可能出现的错误。我们还实现了一个功能，让用户在点击提交按钮之前就知道 ATM 是否有足够的满足他们的请求。场景都在单个浏览器会话中通过 ATM UI 运行，目前似乎足够快。
+我们在 ATM 中开发了一些新功能，以处理 ATM 尝试向客户发放现金时可能出现的错误。我们还实现了一个功能，让用户在点击提交按钮之前就知道 ATM 是否有足够的现金满足他们的请求。场景都在单个浏览器会话中通过 ATM UI 运行，目前似乎足够快。
 
 然而，在发布集成之前，我们可能想要编写数百甚至上千个场景，因此我们功能的运行时间将继续增加。我们编写许多场景反复测试 UI 的相同部分，并不是因为这能带给我们对程序的任何信心，而是因为这是展示我们感兴趣的行为的唯一方式。很快，你将等待几小时而不是几分钟获得反馈。
 
-## 分功能和场景
+### 分功能和场景
 
-减少 Cucumber 运行时间的简单方法之一是运行更少的场景。为你的场景标记，你可以选择运行场景子集，覆盖你正在工作的区域。一旦工作提交，较大但仍然减少的快速测试子集可能会在我们的持续集成 (CI) 服务器上运行。较大的子集可能会在后续
+减少 Cucumber 运行时间的简单方法之一是运行更少的场景。为你的场景标记标签，你可以选择运行场景子集，覆盖你正在工作的区域。一旦工作提交，较大但仍然减少的快速测试子集可能会在我们的持续集成 (CI) 服务器上运行。较大的子集可能会在后续持续交付流水线的步骤，或者按照预定的间隔（例如隔夜或每周）运行。最后，全套场景可以作为发布过程或质量保证（QA）过程的一部分，按需运行。
 
+#### 可能的分类
 
-
-
-第 13 章 保持功能运行快速 • 246
-
-持续交付流水线的步骤，或者按照预定的间隔（例如隔夜或每周）。最后，全套场景可以作为发布过程或质量保证（QA）过程的一部分，按需运行。
-
-# 可能的分类
-
-为了方便这种工作方式，我们需要商约定一组应用于场景的标签（tags）。以下是我们看到的一些典型标签：
+为了方便这种工作方式，我们需要商定一组应用于场景的标签。以下是我们看到的一些典型标签：
 
 | 分类类型 | 描述 | 示例 |
 | --- | --- | --- |
-| 速度 (Speed) | 对运行场景的时间进行任意分类。这让我们能够排除运行较慢的场景。 | @fast, @slow, @glacial |
-| 发布 (Release) | 执行仅适用于特定发布版本的场景。 | @release_104, @hot-fix_2014_3_27, @version_2 |
-| 缺陷 (Defect) | 执行验证缺陷的场景。 | @defect, @defect_10983 |
-| 目的 (Purpose) | 测试最有用地方的分类。 | @regression, @smoke_test |
-| 风险 (Risk) | 对场景所缓解的风险进行任意分组，以便我们可以运行具有风险配置的场景。 | @High, @Medium, @Low, @CurrentSprint, @WIP |
+| 速度 (Speed) | 对运行场景的时间进行任意分类。这让我们能够排除运行较慢的场景。 | `@fast`, `@slow`, `@glacial` |
+| 发布 (Release) | 执行仅适用于特定发布版本的场景。 | `@release_104`, `@hot-fix_2014_3_27`, `@version_2` |
+| 缺陷 (Defect) | 执行验证缺陷的场景。 | `@defect`, `@defect_10983` |
+| 目的 (Purpose) | 测试最有用地方的分类。 | `@regression`, `@smoke_test` |
+| 风险 (Risk) | 对场景所缓解的风险进行任意分组，以便我们可以运行具有风险配置的场景。 | `@High`, `@Medium`, `@Low`, `@CurrentSprint`, `@WIP` |
 
 记住，标签是自由格式的文本，所以如果我们拼写错了其中一个，Cucumber 无法知道也不会警告我们。
 
-# 标签表达式
+#### 标签表达式
 
-正如第 261 页的“运行场景子集”中所解释的那样，我们可以构建标签的逻辑表达式，以指定我们想要让 Cucumber 执行哪些场景。我们可以将标签放置在功能特性（features）、场景（scenarios）、场景大纲（scenario outlines）或示例块（example blocks）上，并且每个都可以带有任意数量的标签。例如，查看以下功能：
+正如第 261 页的“运行场景子集”中所解释的那样，我们可以构建标签的逻辑表达式，以指定我们想要让 Cucumber 执行哪些场景。我们可以将标签放置在功能特性、场景、场景大纲或示例块上，并且每个都可以带有任意数量的标签。例如，查看以下功能：
 
-```
+```gherkin
 @high_risk
 @first_released_2_0
 Feature: 在身份验证系统指示时保留卡片
+
 @fast
 @regression
 Scenario: 饮料机保留已注销的卡片
 Given 已注销的银行卡
 When 进行认证
 Then 卡片被保留
-```
 
 @slow
 @smoke_test
@@ -7209,28 +7037,29 @@ Given 银行卡
 When 客户 <customer-action>
 Then 卡片被 <card-action>
 
-+   @regression
+@regression
 Examples: 常见客户行为
 | customer-action | card-action |
 | 30秒内无操作 | 保留 |
 | 点击取消 | 返回 |
-| 输入 码 | 授权 |
+| 输入密码 | 授权 |
 
-+   @defect
+@defect
 @defect_12345
 Examples: 意外行为
 | customer-action | card-action |
 | 插入卡片不正确 | 返回 |
+```
 
 功能特性上的标签适用于该功能特性下的所有场景和场景大纲。场景大纲上的标签适用于与其关联的每个示例（此外应用于功能特性的任何标签）。示例块上的标签适用于该块中的所有示例（此外还有应用于功能特性和场景大纲的任何标签）。
 
-如果在不带任何标签表达式的情况下运行此功能文件，将运行六个场景（2 个场景 + 4 个示例）。如果我们只想运行回归或缺陷场景，我们会告诉 Cucumber 运行 @regression 或 @defect，此时该功能中将只运行五个场景。如果我们指定要运行高风险回归场景，我们将使用 @high_risk 和 @regression，此时该功能中将运行四个场景。这是因为整个功能特性都被标记为 @high_risk，但只有一个场景和三个示例被标记为 @regression。最后，如果我们只运行未标记为 @slow 的场景，则只会运行一个场景。组合标签的语法在第 261 页的“运行场景子集”中进行了解释。
+如果在不带任何标签表达式的情况下运行此功能文件，将运行六个场景（2 个场景 + 4 个示例）。如果我们只想运行回归或缺陷场景，我们会告诉 Cucumber 运行 `@regression` 或 `@defect`，此时该功能中将只运行五个场景。如果我们指定要运行高风险回归场景，我们将使用 `@high_risk` 和 `@regression`，此时该功能中将运行四个场景。这是因为整个功能特性都被标记为 `@high_risk`，但只有一个场景和三个示例被标记为 `@regression`。最后，如果我们只运行未标记为 `@slow` 的场景，则只会运行一个场景。组合标签的语法在第 261 页的“运行场景子集”中进行了解释。
 
 通过使用标签，我们可以构建场景子集，并在开发过程的不同时间运行这些子集，以控制获取反馈之前所需的时间。随着应用程序的演变，我们可以从功能文件中添加或删除标签。例如，今天被归类为高风险的功能，在六个月后一旦我们解决了技术问题，可能被认为风险较低。
 
 现在我们已经探索了这种简单的技术，是时候从另一个角度解决测试缓慢的问题了。为了这一点，我们需要回到测试什么以及为什么要测试的根本问题上。
 
-# 什么样的测试？
+### 什么样的测试？
 
 BDD（行为驱动开发）和 TDD（测试驱动开发）都要求我们在编写代码之前编写示例，以帮助我们引出客户想要的功能，仅此而已。当我们编写这些场景和测试时，它们会引导我们的演进设计。一旦功能实现，它的目的是在我们重构或添加新行为时赋予我们信心，保护我们免受回归的影响。
 
@@ -7238,15 +7067,15 @@ BDD（行为驱动开发）和 TDD（测试驱动开发）都要求我们在编�
 
 我们将引入一个新模型来帮助你思考这个问题，但让我们先看看敏捷社区中使用一种受认可的模型。
 
-# 测试金字塔
+#### 测试金字塔
 
-Mike Cohn 在他的书《Succeeding with Agile: Software Development Using Scrum [Coh09]》中引入了测试金字塔的概念，强调你应该拥有比全栈测试多多的单元测试。接下来的图灵感来自他的想法，显示单元测试是你的自动化测试套件的基础。它们驱动实现并规定了单个组件的精确行为。集成测试或组件测试验证了子系统之间的交互。
+Mike Cohn 在他的书《Succeeding with Agile: Software Development Using Scrum [Coh09]》中引入了测试金字塔的概念，强调你应该拥有比全栈测试多得多的单元测试。接下来的图灵感来自他的想法，显示单元测试是你的自动化测试套件的基础。它们驱动实现并规定了单个组件的精确行为。集成测试或组件测试验证了子系统之间的交互。
 
 单元测试比全栈测试更优，因为它们更快，且当它们失败时，会告诉我们哪里需要修复。全栈测试确保整个应用程序“在一起”。
 
 通过 BDD，我们以业务语言描述应用程序。
 
-# 什么样的测试？ • 249
+#### 什么样的测试？
 
 ![](img/3bdd08a58b154736776437bb83a0_257.png)
 
@@ -7254,51 +7083,47 @@ Mike Cohn 在他的书《Succeeding with Agile: Software Development Using Scrum
 
 由于某些场景运行时间过长而提出的解决方案之一是单元测试。这可行，但由于行为现在定义在特性中，我们的现场文档变得不完整且不可用。我们需要一种新方法来思考这个问题。
 
-# 环境特定的步骤定义
+### 环境特定的步骤定义
 
-一个常见的请求是根据运行环境以不同的方式运行场景。例如，我们的 CI 环境可能无法访问外部网络服务或生产数据库，因此我们在那里运行场景时将使用测试双胞（test doubles）。另一方面，我们将
+一个常见的请求是根据运行环境以不同的方式运行场景。例如，我们的 CI 环境可能无法访问外部网络服务或生产数据库，因此我们在那里运行场景时将使用测试替身。另一方面，我们将在系统集成测试 (SIT) 或用户验收测试 (UAT) 环境中运行场景时，请使用真实系统。
 
-- http://xunitpatterns.com/Test%20Double.html
+我们将向 Cucumber 传递一个环境变量，让我们的步骤定义知道如何行为。由我们来使用标准的软件开发技术来构建实现该行为的条件逻辑。
 
+#### 创建缝点
 
+Michael Feathers 在他的经典著作《有效维护 Legacy 代码》（Working Effectively with Legacy Code）[Fea04] 中引入了“缝点”的概念。他这样定义缝点：
 
-
-特定环境集合定义 • 251
-
-当我们在系统集成测试 (SIT) 或用户验收测试 (UAT) 环境中运行场景时，请使用真实系统。
-
-我们将向 Cucumber 传递一个环境变量，让我们的集合定义知道如何行为。由我们来使用标准的软件开发技术来构建实现该行为的条件逻辑。
-
-## 创建缝点 (The Seam)
-
-Michael Feathers 在他的经典著作《有效维护 legacy代码》（Working Effectively with Legacy Code）[Fea04] 中引入了“缝点”（seam）的概念。他这样定义缝点：
-
-缝点是一个你可以在其中修改程序行为而无需修改该处的地方。
+> 缝点是一个你可以在其中修改程序行为而无需修改该处的地方。
 
 引入缝点的一种方法是创建一个工厂，根据环境创建接口的不同实现。我们做的第一件事是提取一个提供我们的 `TellerSteps` 依赖的功能的接口：
 
 ```java
-fast/10/src/test/java/support/AtmInterface.java
+// fast/10/src/test/java/support/AtmInterface.java
 package support;
+
 import nicebank.Teller;
+
 public interface AtmInterface extends Teller {
+
     void type(int amount);
+
     boolean isDisplaying(String message);
+
 }
 ```
 
-然后我们修改 `AtmInterface` 以实现 `AtmInterface`，并更改 `TellerSteps` 以使用 `AtmInterface`：
+然后我们修改 `AtmUserInterface` 以实现 `AtmInterface`，并更改 `TellerSteps` 以使用 `AtmInterface`：
 
 ```java
-fast/10/src/test/java/nicebank/TellerSteps.java
+// fast/10/src/test/java/nicebank/TellerSteps.java
 @Autowired
 private AtmInterface teller;
 ```
 
-现在，我们需要告诉 Spring 在每次需要 `AtmInterface` 的实现时，使用一个工厂来创建一个 `AtmUser-interface` 实例：
+现在，我们需要告诉 Spring 在每次需要 `AtmInterface` 的实现时，使用一个工厂来创建一个 `AtmUserInterface` 实例：
 
 ```xml
-fast/10/src/test/resources/cucumber.xml
+<!-- fast/10/src/test/resources/cucumber.xml -->
 <bean class="support.AtmFactory" factory-method="createAtmInterface"
   lazy-init="true" scope="cucumber-glue" />
 ```
@@ -7306,23 +7131,28 @@ fast/10/src/test/resources/cucumber.xml
 最后，我们创建一个创建所需对象的工厂：
 
 ```java
-fast/10/src/test/java/support/AtmInterfaceFactory.java
+// fast/10/src/test/java/support/AtmInterfaceFactory.java
 package support;
+
 public class AtmInterfaceFactory {
+
     public static AtmInterface createAtmInterface() {
+
         return new AtmUserInterface();
+
     }
+
 }
 ```
 
-## 改变实现
+#### 改变实现
 
-我们所做的是创建一个缝点，我们可以在这里对想要创建种类的 `AtmInterface` 做出决定。目前我们像以前一样创建一个 `AtmInterface`，但我们可以在工厂中添加逻辑来决定使用不同的实现。
+我们所做的是创建一个缝点，我们可以在这里对想要创建种类的 `AtmInterface` 做出决定。目前我们像以前一样创建一个 `AtmUserInterface`，但我们可以在工厂中添加逻辑来决定使用不同的实现。
 
 现在，让我们为 `AtmInterface` 创建一个新实现。这个实现不会通过 UI，而是直接与 `Teller`、`CashSlot` 和 `Account` 交互：
 
 ```java
-fast/11/src/test/java/support/AtmProgrammaticInterface.java
+// fast/11/src/test/java/support/AtmProgrammaticInterface.java
 package support;
 
 import java.util.List;
@@ -7330,18 +7160,19 @@ import java.util.List;
 import nicebank.Account;
 import nicebank.AutomatedTeller;
 import nicebank.CashSlot;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class AtmProgrammaticInterface implements AtmInterface {
+
     @Autowired
     private CashSlot cashSlot;
 
     @Override
     public void withdrawFrom(Account account, int amount) {
+
         try {
             AutomatedTeller.withdrawFrom(cashSlot, account, amount);
-        } catch (RuntimeException e){
+        } catch (RuntimeException e) {
             runtimeException = e;
         }
     }
@@ -7354,55 +7185,68 @@ public class AtmProgrammaticInterface implements AtmInterface {
         // SHOULD THIS BE TRUE OR FALSE throw NotImplementedException();
         return true;
     }
+
 }
 ```
 
-我们决定如果测试运行在一个定义了变量 `CUCUMBER_ENVIRONMENT` 为 `DEVELOPMENT` 的环境中，我们希望工厂创建一个 `AtmProgrammaticinterface` 实例。如果该变量有不同的值或未设置，它将创建一个 `AtmInterface` 实例。
+我们决定如果测试运行在一个定义了变量 `CUCUMBER_ENVIRONMENT` 为 `DEVELOPMENT` 的环境中，我们希望工厂创建一个 `AtmProgrammaticInterface` 实例。如果该变量有不同的值或未设置，它将创建一个 `AtmUserInterface` 实例。
 
 ```java
-fast/11/src/test/java/support/AtmInterfaceFactory.java
+// fast/11/src/test/java/support/AtmInterfaceFactory.java
 package support;
-```
 
-```java
 public class AtmInterfaceFactory {
+
+    public static AtmInterface createAtmInterface() {
+        String env = System.getenv("CUCUMBER_ENVIRONMENT");
+        if ("DEVELOPMENT".equals(env)) {
+            return new AtmProgrammaticInterface();
+        } else {
+            return new AtmUserInterface();
+        }
+    }
+
+}
 ```
 
 现在，我们可以根据设置了什么环境变量来修改我们步骤的行为：
 
-- nix: export CUCUMBER_ENVIRONMENT=DEVELOPMENT
-- Windows: set CUCUMBER_ENVIRONMENT=DEVELOPMENT
+- nix: `export CUCUMBER_ENVIRONMENT=DEVELOPMENT`
+- Windows: `set CUCUMBER_ENVIRONMENT=DEVELOPMENT`
 
-现在我们运行该功能（feature）时，将发现步骤没有执行 UI。这种技术允许我们根据步骤运行的环境来改变步骤的行为，这在 CI 流水线中非常有用。我们甚至可以使用我们的 CI 工具来控制场景的行为。
+现在我们运行该功能时，将发现步骤没有执行 UI。这种技术允许我们根据步骤运行的环境来改变步骤的行为，这在 CI 流水线中非常有用。我们甚至可以使用我们的 CI 工具来控制场景的行为。
 
-## 使用标签更改步骤定义
+### 使用标签更改步骤定义
 
-本节在上一节的技术的基础上，使用 Gherkin 标签来修改我们步骤定义的行为。使用标签而不是环境变量的优势在于，测试所执行的层级被记录在特性文件中，供整个团队查看。
+本节在上一节技术的基础上，使用 Gherkin 标签来修改我们步骤定义的行为。使用标签而不是环境变量的优势在于，测试所执行的层级被记录在特性文件中，供整个团队查看。
 
-## 使用带标签的钩子 (Tagged Hooks)
+#### 使用带标签的钩子
 
 在之前的章节中，我们设置了一个缝点，允许 `AtmInterfaceFactory` 决定我们的步骤定义是要与 Web UI 还是其 Java API 交互。在本节中我们将重用该缝点，但我们将使用 Gherkin 标签来修改工厂的行为，而不是我们之前使用的环境变量。
 
-我们将使用的 Cucumber 是带标签的钩子，我们在第 157 页的“Tagged Hooks”中见过它们。我们将使用 `@bypass_teller_ui` 来标记我们想要直接针对 Java API 运行的场景，并编写一个带标签的钩子来记录我们做出了这个决定：
+我们将使用的 Cucumber 是带标签的钩子，我们在第 157 页的“Tagged Hooks”中见过它们。我们将使用 `@bypass_ui` 来标记我们想要直接针对 Java API 运行的场景，并编写一个带标签的钩子来记录我们做出了这个决定：
 
 ```java
-fast/12/src/test/java/hooks/TaggedHooks.java
+// fast/12/src/test/java/hooks/TaggedHooks.java
 @ContextConfiguration("classpath:cucumber.xml")
 public class TaggedHooks {
-    @Before("bypass ui")
+
+    @Before("@bypass_ui")
     public void bypassUI() {
         AtmInterfaceFactory.bypassUI();
     }
+
 }
 ```
 
 由于工厂标志是静态的，我们需要在运行之前进行重置：
 
 ```java
-fast/12/src/test/java/support/AtmInterfaceFactory.java
+// fast/12/src/test/java/support/AtmInterfaceFactory.java
 package support;
 
 public class AtmInterfaceFactory {
+
     private static boolean bypassUI = false;
 
     public static void reset() {
@@ -7420,18 +7264,23 @@ public class AtmInterfaceFactory {
             return new AtmUserInterface();
         }
     }
+
 }
 ```
 
 ```java
-fast/12/src/test/java/hooks/ResetHooks.java
+// fast/12/src/test/java/hooks/ResetHooks.java
 public class ResetHooks {
+
     @Before(order = 1)
     public void reset() {
         AtmInterfaceFactory.reset();
     }
+
 }
 ```
+
+
 
 我们只需为特性标记 `@bypass_teller_ui`，它们将直接针对 Java API 运行，而不是通过 Web UI。通过在特性文件中添加标签来控制每个场景执行的应用程序范围。使用标签更改步骤定义 • 255
 
@@ -7447,9 +7296,6 @@ public class ResetHooks {
 
 通过在编写场景之初执行整个应用程序，建立对应用程序正确性的信任。一旦建立了这种信任，我们就可以标签和单元测试来最小化运行所有场景的成本。没有信任这将是不可能的，因此记住失去信任是多么容易。
 
-
-
-
 组织并专注于可靠地交付软件，为我们的客户交付价值。
 
 在本章中，我们看到了一些可以帮助你控制用例运行的技术。我们使用的示例是了跳过 UI 以减少所需的 Web 自动化数量。这些技术不仅限于我们的 UI，也可以适用于应用程序的任何地方。与其通过网络调用服务，我们可以使用这些技术切换到本地测试双胞（test double），它可以返回数据以加速用例运行。或者可以在使用真实数据库作为持久化存储与内存数据结构之间进行切换。可能性是无限的。我们的可执行规范保持了完整性，我们的用例持续提供一致的高覆盖率，但它们继续保持快速运行并提供快速、可靠的反馈。
@@ -7464,17 +7310,13 @@ public class ResetHooks {
 
 当你尝试这样做时，请考虑我们之前做的设计决策如何影响更改的便利性。是否某些决策让引入缝隙（seam）变得更加困难？从一开始就实现缝隙是否会更好？
 
-## 第三部分
-
-## 更多技术
+## 第三部分：更多技术
 
 在书的最后一部分，我们将向你展示如何精细调整对 Cucumber 控制。无论你是从命令行运行 Cucumber 还是通过许多持续集成（CI）服务器之一，这些材料都将很有用。
 
 你还将学习在之前的练习示例中未涵盖的情况下使用 Cucumber 的技术。我们将通过一个简单的 REST Web 服务示例，它将让你练习与没有用户界面的应用程序进行交互。最后，我们将提供关于如何在遗留应用程序（legacy applications）中使用 BDD 和 Cucumber 的建议。
 
-## 第 14 章
-
-## 控制 Cucumber
+## 第 14 章：控制 Cucumber
 
 我们已经尽力让 Cucumber 在无需复杂配置的情况下开箱即用。它不需要我们提供配置文件或传递许多复杂的命令行选项即可工作。然而，某些时候我们需要调整 Cucumber 的行为。
 
@@ -7492,34 +7334,18 @@ $ java cucumber.api.Main --help
 
 用法：java cucumber.api.Main [options] [ [FILE|DIR][:LINE[:LINE]*] ]
 
-- - -g,--glue PATH
-  加载胶代码的地方。
-- -p, --plugin PLUGIN[:PATH OR URL]
-  注册插件。
-  内置插件类型：junit, html, pretty, progress, json, usage,
-  rerun。PLUGIN 也可以是完全限定类名，允许
-  注册第三方插件。
-- -f, --format FORMAT[:PATH OR URL]
-  已弃用。请使用 `--plugin`。
-- -t, --tags EXPRESSION
-  仅运行带有匹配 TAG_EXPRESSION 标签的用例。
-- -n, --name REGEXP
-  仅运行名称匹配 REGEXP 的用例。
-- -d, --[no]-dry-run
-  跳过胶代码的执行。
-- -m, --[no]-monochrome
-  不在终端输出中显示颜色。
-- -s, --[no]-strict
-  将未定义和待定的步骤视为错误。
-- --snippets
-  片段名称：underscore, camelcase
-- -v, --version
-  打印版本。
-- -h, --help
-  你就在这里。
-- --i18n LANG
-  列出特定语言的关键字
-  运行 "--i18n" 以帮助查看所有语言
+- `-g,--glue PATH`：加载胶代码的地方。
+- `-p, --plugin PLUGIN[:PATH OR URL]`：注册插件。内置插件类型：junit, html, pretty, progress, json, usage, rerun。PLUGIN 也可以是完全限定类名，允许注册第三方插件。
+- `-f, --format FORMAT[:PATH OR URL]`：已弃用。请使用 `--plugin`。
+- `-t, --tags EXPRESSION`：仅运行带有匹配 TAG_EXPRESSION 标签的用例。
+- `-n, --name REGEXP`：仅运行名称匹配 REGEXP 的用例。
+- `-d, --[no]-dry-run`：跳过胶代码的执行。
+- `-m, --[no]-monochrome`：不在终端输出中显示颜色。
+- `-s, --[no]-strict`：将未定义和待定的步骤视为错误。
+- `--snippets`：片段名称：underscore, camelcase
+- `-v, --version`：打印版本。
+- `-h, --help`：你就在这里。
+- `--i18n LANG`：列出特定语言的关键字。运行 "--i18n" 以帮助查看所有语言
 
 这有很多选项，而且每个选项在什么时候有用可能并不显而易见。让我们看看你会使用其中一些选项的情况。
 
@@ -7553,115 +7379,7 @@ $ java cucumber.api.cli.Main -g step_definitions.widgets features
 现在当我们运行相同的命令时，Cucumber 告诉我们所有的钩子都是未定义的。可以将新包 `step_definitions.hooks` 添加到命令行中：
 
 ```
-$ java cucumber.api.cli.Main -g step_definitions.hooks
--g step_definitions.hooks features
-```
-
-那样可以正常工作，但命令行变得很长，而且有一种更紧凑的方法获取结果：
-
-```
-$ java cucumber.api.cli.Main -g step_definitions features
-```
-
-现在 Cucumber 将在类路径中搜索根包 `step_definitions` 下的所有胶代码。如果我们需要在 `step_definitions` 下添加更多包，我们在运行 Cucumber 时就不需要更改 `glue` 选项了。
-
-### 运行用例子集
-
-随着特性和用例数量的增加，我们经常会遇到只想运行一个（或几个）用例以获得更快反馈的情况。如果我们正在编写一个新的用例，或者我们破坏了某个用例，可能会出现这种情况。
-
-当你尝试这样做时，请考虑我们之前做的设计决策如何影响更改的便利性。是否某些决策让引入缝隙变得更加困难？从一开始就实现缝隙是否会更好？
-
-## 第三部分
-
-## 更多技术
-
-在书的最后一部分，我们将向你展示如何精细调整对 Cucumber 的控制。无论你是从命令行运行 Cucumber 还是通过许多持续集成（CI）服务器之一，这些材料都将很有用。
-
-你还将学习在之前的练习示例中未涵盖的情况下使用 Cucumber 的技术。我们将通过简单的 REST Web 服务示例，它将让你练习与没有用户界面的应用程序进行交互。最后，我们将提供关于如何在遗留应用程序中使用 BDD 和 Cucumber 的建议。
-
-## 第 14 章
-
-## 控制 Cucumber
-
-我们已经尽力让 Cucumber 无需复杂配置即可开箱用。它不需要我们提供配置文件或传递许多复杂的命令行选项即可工作。然而，某些时候我们需要调整 Cucumber 的行为。
-
-有时，默认输出可能过于详尽，或者我们可能需要一种更容易与他人共享的格式。我们可能只想运行用例的子集，或者可能以稍微不同的方式组织 Gherkin 特性文件和步骤定义的位置。在本章中，我们将更仔细地查看 Cucumber 提供的选项以及它们如何帮助我们实现其中一些目标。
-
-运行 Cucumber 的最基本的方法是使用 `cucumber.api.Main` 类。我们在书的第一部分的示例中已经开始使用这个类了。我们可以通过向 `Main.main` 传递参数来控制 Cucumber 行为的某些方面。我们已经见过其中一些了，但让我们看看哪些可用选项。
-
-### Cucumber 的运行时选项
-
-让我们从探索选项开始。Cucumber 提供了 `--help` 选项，你可以从命令行调用它（你需要在类路径上有 `cucumber-core.jar` 和 `gherkin.jar`）：
-
-```
-$ java cucumber.api.Main --help
-```
-
-用法：java cucumber.api.Main [options] [ [FILE|DIR][:LINE[:LINE]*] ]
-
-- - -g,--glue PATH
-  胶代码加载的地方。
-- -p, --plugin PLUGIN[:PATH OR URL]
-  注册插件。
-  内置插件类型：junit, html, pretty, progress, json, usage,
-  rerun。PLUGIN 也可以是完全限定类名，允许
-  注册第三方插件。
-- -f, --format FORMAT[:PATH OR URL]
-  已弃用。请使用 `--plugin`。
-- -t, --tags EXPRESSION
-  仅运行带有匹配 TAG_EXPRESSION 标签的用例。
-- -n, --name REGEXP
-  仅运行名称匹配 REGEXP 的用例。
-- -d, --[no]-dry-run
-  跳过胶代码的执行。
-- -m, --[no]-monochrome
-  不在终端输出中显示颜色。
-- -s, --[no]-strict
-  将未定义和待定的步骤视为错误。
-- --snippets
-  片段名称：underscore, camelcase
-- -v, --version
-  打印版本。
-- -h, --help
-  你就在这里。
-- --i18n LANG
-  列出特定语言的关键字
-  运行 "--i18n" 以帮助查看所有语言
-
-这有很多选项，而且每个选项在什么时候有用可能并不显而易见。让我们看看你会使用其中一些选项的情况。
-
-### Cucumber 如何找到我们的步骤定义
-
-Cucumber 调用我们的步骤定义胶代码，因为它们将特性与应用程序胶合在一起。钩子（`@Before` 和 `@After` 钩子以及所有带标签的钩子）也被认为是胶代码。
-
-我们使用 `--glue` 选项告诉 Cucumber 我们的胶代码在哪个包中，如果其中有步骤定义（或钩子），它们就会被加载。理解的一点是，Cucumber 将你指定的包视为一个根，从该根开始扫描胶代码。一旦你理解了这一点，你就能避免一个常见的困惑和挫败的源头。让我们用一个例子来说说明。假设我们按所示组织了特性和步骤定义：
-
-- features
-  - stuff.feature
-  - step.definitions
-    - widgets
-      - MyWidgetSteps.java
-
-我们可以通过以下命令运行我们特性文件中的所有用例：
-
-```
-$ java cucumber.api.cli.Main -g step_definitions.widgets features
-```
-
-然后，某一天我们向特性中添加了一个新用例，并发现我们需要创建一个钩子：
-
-- features
-  - stuff.feature
-    - step_definitions
-      - MyHooks.java
-      - widgets
-        - MyWidgetsteps.java
-
-现在当我们运行相同的命令时，Cucumber 告诉我们所有的钩子都是未定义的。可以将新包 `step_definitions.hooks` 添加到命令行中：
-
-```
-$ java cucumber.api.cli.Main -g step_definitions.hooks
--g step_definitions.hooks features
+$ java cucumber.api.cli.Main -g step_definitions.hooks -g step_definitions.hooks features
 ```
 
 那样可以正常工作，但命令行变得很长，而且有一种更紧凑的方法获取结果：
@@ -7720,10 +7438,7 @@ $ cucumber features/something.feature:45:107
 
 #### 按名称过滤
 
-如果标签不满足你的需求，你可以根据名称过滤用例。例如，你想运行所有包含 logout 文本的用例
-
-
-名称，并且它们分散在几个特性文件中，没有特定的标签来标识它们。运行它们只需执行以下操作：
+如果标签不满足你的需求，你可以根据名称过滤用例。例如，你想运行所有包含 logout 文本的用例名称，并且它们分散在几个特性文件中，没有特定的标签来标识它们。运行它们只需执行以下操作：
 
 ```
 $ java cucumber.api.cli.Main --name logout
@@ -7735,17 +7450,20 @@ $ java cucumber.api.cli.Main --name logout
 
 Cucumber 的默认行为是使用 progress 插件输出结果，它会生成一个每个步骤一个字符的极简报告（正如我们已经所看到的）：
 
-```
-$ java cucumber.api.cli.Main features
-..U-..F.
-```
 
+
+$ java cucumber.api.cli.Main features
+
+..U-..F.
+
+```
 每个字符代表每个步骤的状态：
 
-- * 表示通过。
-- U 表示未定义（undefined）。
-- - 表示跳过（或是 Scenario Outline 的步骤）。
-- F 表示失败。
+- `.` 表示通过。
+- `U` 表示未定义（undefined）。
+- `-` 表示跳过（或是 Scenario Outline 的步骤）。
+- `F` 表示失败。
+```
 
 Cucumber 还可以使用插件生成更详细的报告，该报告类似于 Gherkin 源码——但包含一些额外信息，如颜色、匹配的步骤定义的位置、参数的高亮显示等：
 
@@ -7765,6 +7483,7 @@ Cucumber 还内置了可以输出 html、json 和 junit 格式的插件。如果
 
 ```
 $ java cucumber.api.cli.Main --plugin rerun features
+
 features/one.feature:367 another.feature:91:117
 ```
 
@@ -7786,7 +7505,7 @@ $ java cucumber.api.cli.Main -p pretty -p html:cukes.html -p rerun:rerun.txt ckt
 
 还有几个值得提到的选项。
 
-# 代码段名称格式
+## 代码段名称格式
 
 变量名的格式可能会在某些开发团队中引起很多摩擦，Cucumber 允许你选择是否生成带有下划线的 CamelCase 方法名的代码段（默认是使用下划线）：
 
@@ -7803,83 +7522,31 @@ $ java cucumber.api.cli.Main --snippets camelcase features
 1. http://en.wikipedia.org/wiki/CamelCase
 2. http://en.wikipedia.org/wiki/Snake_case
 
-# 颜色或单色输出
+## 颜色或单色输出
 
 默认情况下，绑定的插件产生彩色输出，以强调每个步骤的结果。这是通过在输出中插入控制字符实现的，但有时这并不是你想要的。只需提供 `--monochrome` 选项，输出将是纯文本。
 
-# 覆盖 Cucumber 选项
+## 覆盖 Cucumber 选项
 
 有几种方法可以设置选项来控制 Cucumber 如何运行你的特性。如果你希望 Cucumber 根据调用它的方式表现出不同的行为，学习它们如何相互作用是有用的。让我们看看向 Cucumber 提供选项各种方式以及它们是如何相互作用的。
 
-# Cucumber 如何覆盖
+### Cucumber 如何覆盖
 
 Cucumber 选项最初由提供给运行器的参数设置——可以是直接在命令行上针对 `cucumber.api.cli.Main`，或者为 JUnit 或 TestNG 运行器使用 `@CucumberOptions` 注解。
 
 Cucumber 然后查找是否提供了任何选项覆盖。它会在以下三个地方查找：
 
-- 1. 操作系统环境变量 `CUCUMBER_OPTIONS`
+1. 操作系统环境变量 `CUCUMBER_OPTIONS`
 2. Java 系统属性 `cucumber.options`
-3. 带有 `cucumber.options` 属性的 Java 资源包 `cucumber.properties` 
+3. 带有 `cucumber.options` 属性的 Java 资源包 `cucumber.properties`
+
 覆盖是通过名为 `cucumber.options` 或 `CUCUMBER_OPTIONS` 的变量（或属性）提供的。Cucumber 按此处显示的顺序搜索该变量并使用找到的值。一旦找到覆盖，它将不再搜索其他位置。
 
 除了插件参数外，在覆盖中找到的值将替换已设置的任何值。覆盖中未提到的参数将不会影响该参数已提供的任何值。
 
-插件选项的处理方式略有不同。覆盖指定的插件列表将与任何已指定的插件合并。如果 Cucumber 最终有多个插件尝试输出到 STDOUT，可能会导致问题，在这种情况下插件选项的处理方式略有不同。覆盖指定的插件列表将与任何已指定的插件合并。如果 Cucumber 最终有多个插件尝试输出到 STDOUT，可能会导致问题，在这种情况下插件选项的处理方式略有不同。覆盖指定的插件列表将与任何已指定的插件合并。如果 Cucumber 最终有多个插件尝试输出到 STDOUT，可能会导致问题，在这种情况下插件选项的处理方式略有不同。（注意：插件部分包含重复文本，已清理逻辑）。
+插件选项的处理方式略有不同。覆盖指定的插件列表将与任何已指定的插件合并。如果 Cucumber 最终有多个插件尝试输出到 STDOUT，可能会导致问题。
 
-# 输出到文件并使用多个输出插件
-
-默认情况下，所有绑定的插件都会将其输出打印到 STDOUT。那么，如果你想看到普通的 pretty 输出，同时又想要 html 和 rerun 报告，该怎么办？这时你需要告诉 Cucumber 将输出重定向到文件而不是 STDOUT。例如：
-
-```
-$ java cucumber.api.cli.Main -p pretty -p html:cukes.html -p rerun:rerun.txt ckt features
-```
-
-这告诉 Cucumber 将 HTML 报告写入文件 `cukes.html`，将 rerun 输出写入 `rerun.txt`，并在控制台中显示 pretty 插件的输出。
-
-# 杂选项
-
-还有几个值得提到的选项。
-
-# 代码段名称格式
-
-变量名的格式可能会某些开发团队中引起很多摩擦，Cucumber 允许你选择是否生成带有下划线的 CamelCase 方法名的代码段（默认是使用下划线）：
-
-```
-# snake_case
-$ java cucumber.api.cli.Main --snippets underscore features
-```
-
-```
-# CamelCase
-$ java cucumber.api.cli.Main --snippets camelcase features
-```
-
-1. http://en.wikipedia.org/wiki/CamelCase
-2. http://en.wikipedia.org/wiki/Snake_case
-
-# 颜色或单色输出
-
-默认情况下，绑定的插件产生彩色输出以强调每个步骤的结果。这是通过在输出中插入控制字符实现的，但有时这并不是你想要的。只需提供 `--monochrome` 选项，输出将是纯文本。
-
-# 覆盖 Cucumber 选项
-
-有几种方法可以设置选项来控制 Cucumber 如何运行你的特性。如果你希望 Cucumber 根据调用它的方式表现出不同的行为，学习它们如何相互作用是有用的。让我们看看向 Cucumber 提供选项各种方式以及它们是如何相互作用的。
-
-# Cucumber 如何覆盖
-
-Cucumber 选项最初由提供运行器的参数设置——可以是直接在命令行上针对 `cucumber.api.cli.Main`，或者为 JUnit 或 TestNG 运行器使用 `@CucumberOptions` 注解。
-
-Cucumber 然后查找是否提供了任何选项覆盖。它会在以下三个地方查找：
-
-- 1. 操作系统环境变量 `CUCUMBER_OPTIONS`
-2. Java 系统属性 `cucumber.options`
-3. 带有 `cucumber.options` 属性的 Java 资源包 `cucumber.properties` 覆盖是通过名为 `cucumber.options` 或 `CUCUMBER_OPTIONS` 的变量（或属性）提供的。Cucumber 按此处显示的顺序搜索该变量并使用找到的值。一旦找到覆盖，它将不再搜索其他位置。
-
-除了插件参数外，在覆盖中找到的值将替换已设置的任何值。覆盖中未提到的参数将不会影响该参数已提供的任何值。
-
-插件选项的处理方式略有不同。覆盖指定的插件列表将与任何已指定的插件合并。如果 Cucumber 最终有多个插件尝试输出到 STDOUT，这种插件选项的处理方式略有不同。
-
-# 格式化覆盖
+### 格式化覆盖
 
 在覆盖 Cucumber 选项时，使用与你在命令行上相同的格式。例如：
 
@@ -7896,7 +7563,7 @@ $ java cucumber.api.cli.Main -g stepdefinitions
 也可以在操作系统环境中设置：
 
 ```bash
-export Cucumber_OPTIONS="-g stepdefinitions"
+export CUCUMBER_OPTIONS="-g stepdefinitions"
 ```
 
 或者你可能会将其放在 `cucumber.properties` 中：
@@ -7923,7 +7590,7 @@ import org.junit.runner.RunWith;
 public class RunCukesTest {}
 ```
 
-此类不应该包含任何代码。它所做的只是 JUnit 调用 Cucumber 运行器。它将搜索特性文件并运行它们，以 JUnit 能理解的格式返回输出。一像既常一样，我们可以通过在测试类上标记选项来控制 Cucumber 的运行。例如：
+此类不应该包含任何代码。它所做的只是 JUnit 调用 Cucumber 运行器。它将搜索特性文件并运行它们，以 JUnit 能理解的格式返回输出。一如既常一样，我们可以通过在测试类上标记选项来控制 Cucumber 的运行。例如：
 
 ```java
 import cucumber.api.CucumberOptions;
@@ -7931,18 +7598,17 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 ```
 
-```
+```java
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin="pretty", "html:out.html", glue="nicebank",
-features="src/test/resources/nicebank")
+@CucumberOptions(plugin="pretty", "html:out.html", glue="nicebank", features="src/test/resources/nicebank")
 public class RunCukesTest {}
 ```
 
-# 运行 JUnit
+## 运行 JUnit
 
 记住，在 `@CucumberOptions` 注解中提供的选项可能会在本章之前描述的所有方式被覆盖。
 
-# 从 TestNG 运行 Cucumber
+## 从 TestNG 运行 Cucumber
 
 TestNG 支持在 2013 年被添加到 Cucumber 项目，它与 JUnit 集成非常相似：
 
@@ -7964,20 +7630,18 @@ TestNG 运行器使用与 JUnit 运行器相同的 `@CucumberOptions` 注解来�
 
 我们到目前为止使用的简单示例很容易放入 `@CucumberOptions` 注解中：
 
-
-
-
-
 ## 第 14 章 控制 Cucumber * 268
 
+```java
 @CucumberOptions(glue="step_definitions", features="features")
+```
 
 ### 为属性提供多个值
 
 如果你想为一个属性指定多个值，可以使用列表。在这里，我们指定了想要使用的两个插件的列表：
 
 ```java
-@CucumberOptions(glue="step_definitions"
+@CucumberOptions(glue="step_definitions")
 ```
 
 你可以在 features、glue、plugin 和 tags 上使用字符串列表。
@@ -8014,9 +7678,9 @@ TestNG 运行器使用与 JUnit 运行器相同的 `@CucumberOptions` 注解来�
 
 我们可以使用如所述的 (NOT) 运算符 -
 
-## 从构建工具运行 Cucumber
+# 从构建工具运行 Cucumber
 
-作为你开发环境的一部分，你可能已经设置了某种自动化构建脚本。在过去，人们可能使用，⁵ JVM 开发者更有可能正在使用 Maven，⁶ 或 Gradle。⁷我们将查看 Ant 和 Maven 如何与 Cucumber 集成。
+作为你开发环境的一部分，你可能已经设置了某种自动化构建脚本。在过去，人们可能使用 Make⁵，JVM 开发者更有可能正在使用 Maven⁶ 或 Gradle⁷。我们将查看 Ant 和 Maven 如何与 Cucumber 集成。
 
 - 5. http://www.gnu.org/software/make/
 - 6. http://ant.apache.org
@@ -8025,11 +7689,11 @@ TestNG 运行器使用与 JUnit 运行器相同的 `@CucumberOptions` 注解来�
 
 ## 从 Maven 运行 Cucumber
 
-对于 Maven 运行你的场景的最简单方法是在与你的测试同时运行它们。你已经像“与单元测试框架的集成”第 266 页所示创建了一个空的测试类。如果你已经在运行单元测试，那么就没有什么需要做的了——你的场景将由 Maven 自带的 Surefire9 插件运行。
+对于 Maven 运行你的场景的最简单方法是在与你的测试同时运行它们。你已经像“与单元测试框架的集成”第 266 页所示创建了一个空的测试类。如果你已经在运行单元测试，那么就没有什么需要做的了——你的场景将由 Maven 自带的 Surefire⁹ 插件运行。
 
-当然，将你的场景作为单元测试运行的麻烦在于，它们可能会变得由于独立于你的单元测试而无法区分。偶尔你会发现使用 Maven 运行场景时，其中一个（使用 Maven Failsafe10 插件）由 Sébastien Le Callonnec11 进行了详细描述。
+当然，将你的场景作为单元测试运行的麻烦在于，它们可能会变得由于独立于你的单元测试而无法区分。偶尔你会发现使用 Maven 运行场景时，其中一个（使用 Maven Failsafe¹⁰ 插件）由 Sébastien Le Callonnec¹¹ 进行了详细描述。
 
-将单元测试与场景隔离开的另一种方法是使用 `cucumber.api.cli.Main` 显式地运行它们。要在 Maven 中执行此操作，你需要使用 maven-plugin12（其示例已发布在 Cucumber 邮件列表13 中）。
+将单元测试与场景隔离开的另一种方法是使用 `cucumber.api.cli.Main` 显式地运行它们。要在 Maven 中执行此操作，你需要使用 maven-plugin¹²（其示例已发布在 Cucumber 邮件列表¹³ 中）。
 
 ```xml
 <build>
@@ -8050,15 +7714,28 @@ TestNG 运行器使用与 JUnit 运行器相同的 `@CucumberOptions` 注解来�
         <mainClass>cucumber.cli.Main</mainClass>
         <arguments>
           <argument>--plugin</argument>
-          <argument>--pretty</argument>
-          <argument>--glue</argument>
-          <argument>--nicebank</argument>
-          <argument>--src/test/resources/nicebank</argument>
-        </arguments>
-      </configuration>
-    </plugin>
-  </plugins>
+```
+
+
+
+<argument>--pretty</argument>
+
+<argument>--glue</argument>
+
+<argument>--nicebank</argument>
+
+<argument>--src/test/resources/nicebank</argument>
+
+</arguments>
+
+</configuration>
+
+</plugin>
+
+</plugins>
+
 </build>
+
 ```
 
 - 9. http://maven.apache.org/surefire/maven-surefire-plugin/
@@ -8068,11 +7745,17 @@ TestNG 运行器使用与 JUnit 运行器相同的 `@CucumberOptions` 注解来�
 - 13. https://groups.google.com/forum/#/topic/cukes/ye5joTffqs
 
 ```xml
+
 <execution>
+
 </execution>
+
 <plugin>
+
 </plugins>
+
 </build>
+
 ```
 
 Maven 是一个强大的软件，完全描述它的功能超出了本书的范围。本节中的示例演示了使用 Maven 使用 Cucumber 的一些方法，但还有其他方法可以实现的结果。
@@ -8081,29 +7764,44 @@ Maven 是一个强大的软件，完全描述它的功能超出了本书的范�
 
 Ant 是一个旧的构建工具，但它非常常见。它不带有依赖管理工具，因此许多人结合 Ivy¹⁴ 使用，它可以使用 Maven 基础设施来管理依赖。
 
-### 使用测试运行器 (Test Runners)
+### 使用测试运行器
 
-可用的 JUnit¹⁵ 和 TestNG¹⁰ Ant 任务将按照“与单元测试框架的集成”第 266 页描述的测试运行器运行你的场景。一如既往，你可以使用类中定义的选项或作为系统属性传递给 Ant（使用嵌套的 `prosperty` 标签）来控制 Cucumber 的执行。这是一个示例：
+可用的 `JUnit`¹⁵ 和 `TestNG`¹⁰ Ant 任务将按照“与单元测试框架的集成”第 266 页描述的测试运行器运行你的场景。一如既往，你可以使用类中定义的选项或作为系统属性传递给 Ant（使用嵌套的 `property` 标签）来控制 Cucumber 的执行。这是一个示例：
 
 ```xml
+
 <junit>
-  <prosperty key="cucumber.options" value="plugin"
+
+  <property key="cucumber.options" value="plugin" />
+
+</junit>
+
 ```
 
 ### 使用 cucumber.api.cli.Main
 
-你可以使用如所述的 (NOT) 运算符
+你可以使用如所述的 `NOT` 运算符
 
 ```xml
+
 <target name="runcucumber" depends="compile">
+
   <java class="cucumber.api" fork="true">
+
     <arg value="plugin" />
+
     <arg value="pretty" />
+
     <arg value="glue" />
+
     <arg value="nicebank" />
+
     <arg value="src/test/resources/nicebank" />
+
   </java>
+
 </target>
+
 ```
 
 - 14. http://ant.apache.org/ivy/
@@ -8111,34 +7809,51 @@ Ant 是一个旧的构建工具，但它非常常见。它不带有依赖管理�
 - 16. http://ant.apache.org/manual/
 
 ```xml
+
 <fail message="Cucumber">
-<condition>
-  <not arg="${exitstatus}" value="0"/></not>
-</condition>
+
+  <condition>
+
+    <not arg="${exitstatus}" value="0" />
+
+  </condition>
+
+</fail>
+
 ```
 
 ## 在持续集成中运行 Cucumber
 
 许多团队设置持续集成⁷在每次更改时运行 Cucumber。由于你已经如何在工作站上使用不同的选项。
 
-### 严格模式 (Being Strict)
+### 严格模式
 
 有些团队努力保持主干线的纯净。
 
 ```xml
+
 <target name="runcucumber" depends="compile">
+
   <java class="cucumber.cli.Main" fork="true">
+
     <arg value="strict" />
+
   </java>
+
 </target>
+
 ```
 
 ```
+
 # OS X 或 Linux
+
 $ echo $?
 
 # Windows
+
 $ echo %ERRORLEVEL%
+
 ```
 
 - 17. http://martinfowler.com/articles/continuousintegration
@@ -8165,35 +7880,44 @@ Cucumber 拥有丰富的选项，让我们完全控制它的行为。我们现�
 
 - 你能找到多少种不同的方法来获取 Cucumber 版本号？思考你可以在哪些地方提供 `--version` 覆盖。
 
-
-
-
-
 ## 第 15 章
 
 ## 与 REST Web 服务交互
 
-有时，我们开发的系统的用户可能不是人类，而是另一个计算机程序。对于这类系统，用户界面通常是一个 REST¹ Web 服务。为了对它进行自动化场景测试，我们需要让我们的 Cucumber 步骤定义（step definitions）像普通的客户端应用程序一样与 Web 服务通信。
+有时，我们开发的系统的用户可能不是人类，而是另一个计算机程序。对于这类系统，用户界面通常是一个 REST¹ Web 服务。为了对它进行自动化场景测试，我们需要让我们的 Cucumber 步骤定义像普通的客户端应用程序一样与 Web 服务通信。
 
-你的应用程序不需要用 Java（或任何其他 JVM 语言）编写就可以使用 Cucumber 进行开发。使用 Ruby,.NET、PHP 或任何其他编程语言编写的应用都可以在 Cucumber 运行之前启动应用程序，然后让 Cucumber 使用 HTTP 客户端库与其通信来完成测试。
+你的应用程序不需要用 Java（或任何其他 JVM 语言）编写就可以使用 Cucumber 进行开发。使用 Ruby、.NET、PHP 或任何其他编程语言编写的应用都可以在 Cucumber 运行之前启动应用程序，然后让 Cucumber 使用 HTTP 客户端库与其通信来完成测试。
 
 我们将处理一个用于存储和检索水果的非常简单的 REST API。它可能不是世界上最有用的系统，但它应该让我们能够说明 REST 和 Cucumber 的基础。我们将从零开始构建 Web 服务。这里是我们的第一个场景：
 
-```gher
+```gherkin
 rest_web_services/00/src/test/resources/fruit_list.feature
+
 Feature: 水果列表
+
 为了制作美味的奶昔，我需要一些水果
+
 Scenario: 列出水果
+
 Given 系统知道以下水果:
+
 | name | color |
+
 | banana | yellow |
+
 | strawberry | red |
+
 When 客户端请求 GET /fruits
+
 Then 响应为 JSON:
 ```
+
 ```json
+
 { "name": "banana", "color": "yellow",
+
   "name": "strawberry", "color": "red" }
+
 ```
 
 + 1. http://en.wikipedia.org/wiki/Representational_state_transfer
@@ -8207,33 +7931,54 @@ Then 响应为 JSON:
 当我们使用 `mvn clean test` 运行 List 功能时，我们将看到通常的代码片段：
 
 ```java
+
 @Given("the system knows about the following Fruit:$")
-public void the theSystemKnowsAboutTheFollowingFruit(DataTable arg1) throws Throwable {
+
+public void theSystemKnowsAboutTheFollowingFruit(DataTable arg1) throws Throwable {
+
     // 编写将短语转换为具体操作的代码
+
     // 对于自动转换，将 DataTable 更改为
+
     List<YourType>, List<E>, List<Map<K,V>> 或 Map<K,V>
+
     // E,K,V 必须是标量（String, Integer, enum 等）
+
     throw new PendingException();
+
 }
+
 ```
 
 ```java
+
 @When("the client requests GET /fruits")
+
 public void theClientGetFruits() throws Throwable {
+
     // 编写将短语转换为具体操作的代码
+
     throw new PendingException();
+
 }
+
 ```
 
 ```java
+
 @Then("the response should be JSON:$")
+
 public void theResponseShouldBeJSON(String arg1) throws Throwable {
+
     // 编写将短语转换为具体操作的代码
+
     throw new PendingException();
+
 }
+
 ```
 
-在我们继续将之前的片段粘贴到 Java 文件并填充空白之前，让我们来看每一个片段。第一个片段是一个领域特定的步骤定义——它关于我们的水果系统。最后两个看起来是更通用的、用于 HTTP REST 操作的步骤定义。正如第 134 页[代码组织](Organizing the Code)（此处假设有链接）中所讨论的那样，我们将把每一个都放在一个描述它们所相关的领域概念的文件中。这使得将来将第一个放在 `src/test/java/fruit/FruitSteps.java`，以及将后两个放在 `src/test/java/fruit/RestSteps.java` 变得更加容易。
+在我们继续将之前的片段粘贴到 Java 文件并填充空白之前，让我们来看每一个片段。第一个片段是一个领域特定的步骤定义——它关于我们的水果系统。最后两个看起来是更通用的、用于 HTTP REST 操作的步骤定义。正如第 134 页[代码组织](Organizing the Code)中所讨论的那样，我们将把每一个都放在一个描述它们所相关的领域概念的文件中。这使得将来将第一个放在 `src/test/java/fruit/FruitSteps.java`，以及将后两个放在 `src/test/java/fruit/RestSteps.java` 变得更加容易。
 
 当我们运行 `mvn clean test` 时，我们的场景被标记为 Pending（待处理）。
 
@@ -8246,69 +7991,108 @@ public void theResponseShouldBeJSON(String arg1) throws Throwable {
 为了简单起见，让我们使用内存之后第二种简单的数据存储——文件。让我们我们的步骤定义将水果信息写入文件：
 
 ```java
+
 rest_web_services/02/src/test/java/fruit/FruitSteps.java
+
 import com.google.gson.Gson;
+
 import cucumber.api.java.en.*;
+
 import java.io.PrintWriter;
+
 import java.util.List;
+
 public class FruitSteps {
+
     @Given("the system knows about the following fruit:$$")
+
     public void theSystemKnowsAboutTheFollowingFruit(List<Fruit> fruitList) throws Throwable {
+
         Gson gson = new Gson();
+
         PrintWriter writer = new PrintWriter("fruit.json", "UTF-8");
+
         writer.println(gson.toJson(fruitList));
+
         writer.close();
+
     }
+
 }
+
 ```
 
-在这个步骤定义中有几点新内容。首先，你会看到我们更改了步骤定义的签名以接受 `List<Fruit>`（第 13 行）。我们还第一次使用了 Gson。你可以从我们对它的使用（第 16 行）看到它是如此易用。稍后我们会使用一些高级功能，但现在我们需要在 `pom.xml` 中添加它：
+在这个步骤定义中有几点新内容。首先，你会看到我们更改了步骤定义的签名以接受 `List<Fruit>`（第 13 行）。我们还第一次使用了 `Gson`。你可以从我们对它的使用（第 16 行）看到它是如此易用。稍后我们会使用一些高级功能，但现在我们需要在 `pom.xml` 中添加它：
 
 ```xml
+
 rest_web_services/02/pom.xml
+
 <dependency>
+
     <groupId>com.google.gson</groupId>
+
     <artifactId>gson</artifactId>
+
     <version>2.8.5</version>
+
 </dependency>
+
 ```
 
 283
-第15 章 与 REST 服务 276
+第 15 章 与 REST 服务 276
 
 为了让第一步通过，我们最后要做的是定义 `Fruit` 类：
 
 ```java
+
 rest_web_services/02/src/main/java/fruit/Fruit.java
+
 package fruit;
 
 public class Fruit {
+
     private String name;
+
     private String color;
 
     public String getName() {
+
         return name;
+
     }
 
     public void setName(String name) {
+
         this.name = name;
+
     }
 
     public String getColor() {
+
         return color;
+
     }
 
     public void setColor(String color) {
+
         this.color = color;
+
     }
+
 }
+
 ```
 
 现在运行 `mvn clean test`，第一步通过了，并在项目根目录下创建了 `fruit.json`：
 
 ```json
+
 rest_web_services/02/fruit.json
+
 [{"name":"banana","color":"yellow"},{"name":"strawberry","color":"red"}]
+
 ```
 
 文件的内容如你所期的，是第一步定义数据的 JSON 表示。接下来我们需要为我们的步骤定义创建一个 Web 服务器。
@@ -8322,63 +8106,82 @@ rest_web_services/02/fruit.json
 我们将使用 Jersey 框架来实现小型 REST Web 服务，因为它从零开始创建一个简单的 Web 服务非常容易。如果不使用 Web 框架来实现，功能和步骤定义文件将完全相同，但会有更多的应用程序代码需要包含在书中。让我们从 `pom.xml` 中添加所需的依赖：
 
 ```xml
+
 rest_web_services/03/pom.xml
+
 <dependency>
+
   <groupId>org.eclipse.jetty</groupId>
+
   <artifactId>jetty-webapp</artifactId>
+
   <version>${jetty.version}</version>
+
 </dependency>
+
 <dependency>
+
   <groupId>com.sun.jersey</groupId>
+
   <artifactId>jersey-server</artifactId>
+
   <version>${jersey.version}</version>
+
 </dependency>
+
 <dependency>
+
   <groupId>com.sun.jersey</groupId>
+
   <artifactId>jersey-client</artifactId>
+
   <version>${jersey.version}</version>
+
 </dependency>
+
 <dependency>
+
   <groupId>com.sun.jersey</groupId>
+
   <artifactId>jersey-json</artifactId>
+
   <version>${jersey.version}</version>
+
 </dependency>
+
 ```
 
-我们需要 jetty-webapp 来运行我们的 Web 服务器，jersey-server 来部署 JAX-RS Web 服务，jersey-client 与 Web 服务通信，以及 jersey-json 用于我们的领域对象自动转换为 JSON。
+
+
+# 第 15 章 使用 REST Web 服务
+
+我们需要 `jetty-webapp` 来运行我们的 Web 服务器，`jersey-server` 来部署 JAX-RS Web 服务，`jersey-client` 与 Web 服务通信，以及 `jersey-json` 用于我们的领域对象自动转换为 JSON。
 
 处理完这些后，我们就可以构建我们的 Web 服务器了。在 `src/main/java/fruit` 目录下创建一个名为 `FruitServer.java` 的文件。在该文件中添加以下代码：
 
-+ 2. https://jersey.java.net/
-
-
-
-
-
-# 第 15 章.使用 REST Web 服务 • 278
+1. https://jersey.java.net/
 
 ```java
 rest_web_services/03/src/java/fruit/FruitServer.java
+
 package fruit;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
-
 import com.sun.jersey.spi.container.servlet.ServletContainer;
 
 public class FruitServer {
+
     private final Server server;
 
     public FruitServer(int port) {
-        ServletHolder sh = new ServletHolder(ServletContextHandler.class);
-        sh.initParameter("com.sun.jersey.config.config.resourceConfig", "com.sun.jersey.api.packages.ResourceConfig");
-        sh.initParameter("com.sun.jersey.config.property.packages", "fruit");
-        sh.initParameter("com.sun.jersey.json.JsonMappingFeature", "true");
-
+        ServletHolder sh = new ServletHolder(ServletContainer.class);
+        sh.setInitParameter("com.sun.jersey.config.property.packages", "fruit");
+        sh.setInitParameter("com.sun.jersey.api.json.POJOMappingFeature", "true");
         server = new Server(port);
         ServletContextHandler context = new ServletContextHandler(server, "/");
-        context.addServlet(sh, "/");
+        context.addServlet(sh, "/*");
     }
 
     public void start() throws Exception {
@@ -8397,7 +8200,7 @@ public class FruitServer {
 }
 ```
 
-这与我们在 ATM 示例中的 AtmServer 非常相似，但这里我们没有显式地添加 servlet 包，而是告诉它去 fruit 包中查找服务（第 17 行）。接下来是设置属性 `POJOMappingFeature` 为 true（第 18 行），这告诉 Jersey 尽可能地将 Plain Old Java Objects (POJO) 转换为 JSON。
+这与我们在 ATM 示例中的 `AtmServer` 非常相似，但这里我们没有显式地添加 servlet 包，而是告诉它去 `fruit` 包中查找服务。接下来是设置属性 `POJOMappingFeature` 为 `true`，这告诉 Jersey 尽可能地将 Plain Old Java Objects (POJO) 转换为 JSON。
 
 我们将在 `src/test/java/hooks/ServerHooks.java` 中创建钩子（与 ATM 示例中的完全相同）来启动和停止 Web 服务。我们还需要在每个场景之前使用 `src/test/java/hooks/ResetHooks.java` 中定义的钩子来删除 `fruit.json`。
 
@@ -8405,191 +8208,79 @@ public class FruitServer {
 
 ```java
 rest_web_services/03/src/test/java/fruit/RestSteps.java
+
 @When("^the client requests GET /fruits$")
-public void the clientRequestsGETFruits() throws Throwable {
-  try {
-    Client client = Client.create();
-
-    WebResource resource = client
-      .resource("http://localhost" + "/fruits");
-
-    Response response = resource.type("application/json")
-      .get(ClientResponse.class);
-  } catch (RuntimeException r) {
-    throw r;
-  } catch (Exception e) {
-    System.out.println("Exception caught");
-    e.printStackTrace();
-  }
+public void theClientRequestsGETFruits() throws Throwable {
+    try {
+        Client client = Client.create();
+        WebResource resource = client.resource("http://localhost:9988/fruits");
+        ClientResponse response = resource.type("application/json").get(ClientResponse.class);
+    } catch (RuntimeException r) {
+        throw r;
+    } catch (Exception e) {
+        System.out.println("Exception caught");
+        e.printStackTrace();
+    }
+    Assert.assertEquals("Did not receive OK response: " + HttpURLConnection.HTTP_OK, response.getStatus());
 }
-
-Assert.assertEquals("Did not receive OK response: " + HttpURLConnection.HTTP_OK, response.getStatus());
 ```
 
-遗憾的是，当我们运行 `mvn clean` 时，第二步失败了，出现了一堆堆栈跟踪和一个失败的断言，期望<200> 但实际为:<500。此 HTTP 状态代码表示服务器错误，查看堆栈跟踪的开头可以为我们提供问题的线索：`ResourceConfig` 不包含任何根资源。这并不是一个很好的信息，但 Jetty 试图告诉我们的是，我们创建了一个没有任何服务的服务器。在下一步中，我们将看到添加一个服务是多么简单。
+遗憾的是，当我们运行 `mvn clean test` 时，第二步失败了，出现了一堆堆栈跟踪和一个失败的断言，期望 `<200>` 但实际为 `<500>`。此 HTTP 状态代码表示服务器错误，查看堆栈跟踪的开头可以为我们提供问题的线索：`ResourceConfig` 不包含任何根资源。这并不是一个很好的信息，但 Jetty 试图告诉我们的是，我们创建了一个没有任何服务的服务器。在下一步中，我们将看到添加一个服务是多么简单。
 
-# 使用 JAX-RS 创建服务
+## 使用 JAX-RS 创建服务
 
-使用 JAX-RS³ 创建服务非常简单。看看这个 `FruitService` 的简单实现：
+使用 JAX-RS 创建服务非常简单。看看这个 `FruitService` 的简单实现：
 
 ```java
 rest_web_services/04/src/main/java/fruit/FruitService.java
+
 package fruit;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+@Path("/fruits")
+public class FruitService {
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Fruit> getFruits() {
+        return Arrays.asList(new Fruit("Apple"), new Fruit("Banana"));
+    }
+}
 ```
 
-+   3. https://jax-rs-spec.java.net/
+1. https://jax-rs-spec.java.net/
 
-`@GET` 注解表示当向由 `@Path` 注解描述的 URI 发送 GET 请求时，应该调用此方法。最后，`@Produces` 注解指定了该服务可以提供的格式。JAX-RS 允许你创建比这复杂得多的服务，但这超出了本书的范围，所以请参阅文档⁴
+`@GET` 注解表示当向由 `@Path` 注解描述的 URI 发送 GET 请求时，应该调用此方法。最后，`@Produces` 注解指定了该服务可以提供的格式。JAX-RS 允许你创建比这复杂得多的服务，但这超出了本书的范围，所以请参阅文档。
 
 在 `ClientGetFruits` 结束时，你会注意到断言 GET 请求返回 HTTP 状态 OK。这与我们在 ATM 示例的存款步骤中检查账户余额相似——它帮助我们验证该步骤确实是我们所预期的。
 
 再次运行 `mvn clean test`，你会发现第二步通过了，这意味着我们的 Web 服务正在返回 OK 状态。只剩最后一步了！
 
-# 我们的劳动成果
+## 我们的劳动成果
 
-现在是时候让场景的第三步，也是最后一步通过了。在更改服务中的任何内容之前，以便让我们将收到的 JSON 与预期的 JSON 进行比较。现在，一旦我们把第三步从 Pending（待处理）移动到 Failing（失败）状态，就该时候在服务和场景中编写代码并让其通过了。
+现在是时候让场景的第三步，也是最后一步通过了。在更改服务中的任何内容之前，以便让我们将收到的 JSON 与预期的 JSON 进行比较。现在，一旦我们把第三步从 Pending 移动到 Failing 状态，就该时候在服务和场景中编写代码并让其通过了。
 
-# 整合一切
-
-JSON 通常表示为文本，因此通过比较我们预期的字符串与从 Web 服务收到的字符串，比较预期的 JSON 是非常容易的：
-
-+   4. https://github.org/user-guide.html （等等，OCR 文本被截断了，但根据上下文我将继续处理）
-
-实际上，查看提供的文本，流程突然中断。
-
-（自纠：提示词要求处理提供的文本。）
-
-*等待，OCR 文本提供了多个页面。我将按顺序合并它们。*
-
-合并页面 285, 286, 287, 288, 289：...
-# 我们的劳动成果
-
-现在是时候让场景的第三步，也是最后一步通过了。在更改服务中的任何内容之前，以便让我们将收到的 JSON 与预期的 JSON 进行比较。现在，一旦我们把第三步从 Pending 移动到 Failing，就该时候在服务和场景中编写代码并让其通过了。
-
-# 整合一切
+## 整合一切
 
 JSON 通常表示为文本，因此通过比较我们预期的字符串与从 Web 服务收到的字符串，比较预期的 JSON 是非常容易的：
 
-+   4. https://jersey.net/user-guide.html （等等，OCR 文本说是 "4. https://jersey.net/user-guide.html" 或类似的）
-
-*实际上，我将提供所有文本的合并版本。*
-
-**最终输出：**
-# 第15章 使用 REST Web 服务 • 278
-
-```java
-rest_web_services/03/src/java/fruit/FruitServer.java
-package fruit;
-
-import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.servlet.ServletContextHandler;
-import org.eclipse.jetty.servlet.ServletHolder;
-
-import com.sun.jersey.spi.container.servlet.ServletContainer;
-
-public class FruitServer {
-    private final Server server;
-
-    public FruitServer(int port) {
-        ServletHolder sh = new ServletHolder(ServletContextHandler.class);
-        sh.initParameter("com.sun.jersey.config.config.resourceConfig", "com.sun.jersey.api.packages.ResourceConfig");
-        sh.initParameter("com.sun.jersey.config.property.packages", "fruit");
-        sh.initParameter("com.sun.jersey.json.JsonMappingFeature", "true");
-
-        server = new Server(port);
-        ServletContextHandler context = new ServletContextHandler(server, "/");
-        context.addServlet(sh, "/");
-    }
-
-    public void start() throws Exception {
-        server.start();
-        System.out.println("Listening on " + server.getURI());
-    }
-
-    public void stop() throws Exception {
-        server.stop();
-        System.out.println("Server shutdown");
-    }
-
-    public static void main(String[] args) throws Exception {
-        new FruitServer(9988).start();
-    }
-}
-```
-
-这与我们在 ATM 示例中的 AtmServer 非常相似，但这里我们没有显式地添加 servlet 包，而是告诉它去 fruit 包中查找服务（第 17 行）。接下来是设置属性 `POJOMappingFeature` 为 true，这告诉 Jersey 尽可能地将 Plain Old Java Objects (POJO) 转换为 JSON。
-
-我们将在 `src/test/java/hooks/ServerHooks.java` 中创建钩子（与 ATM 示例中的完全相同）来启动和停止 Web 服务。我们还需要在每个场景之前使用 `src/test/java/hooks/ResetHooks.java` 中定义的钩子来删除 `fruit.json`。
-
-现在是时候让第二步通过了，我们需要发送一个 GET 请求：
-
-```java
-rest_web_services/03/src/test/java/fruit/RestSteps.java
-@When("^the client requests GET /fruits$")
-public void the clientRequestsGETFruits() throws Throwable {
-  try {
-    Client client = Client.create();
-
-    WebResource resource = client
-      .resource("http://localhost" + "/fruits");
-
-    Response response = resource.type("application/json")
-      .get(ClientResponse.class);
-  } catch (RuntimeException r) {
-    throw r;
-  } catch (Exception e) {
-    System.out.println("Exception caught");
-    e.printStackTrace();
-  }
-}
-
-Assert.assertEquals("Did not receive OK response: " + HttpURLConnection.HTTP_OK, response.getStatus());
-```
-
-遗憾的是，当我们运行 `mvn clean` 时，第二步失败了，出现了一堆堆栈跟踪和一个失败的断言，期望<200> 但实际为:<500。此 HTTP 状态代码表示服务器错误，查看堆栈跟踪的开头可以为我们提供问题的线索：`ResourceConfig` 不包含任何根资源。这并不是一个很好的信息，但 Jetty 试图告诉我们的是，我们创建了一个没有任何服务的服务器。在下一步中，我们将看到添加一个服务是多么简单。
-
-# 使用 JAX-RS 创建服务
-
-使用 JAX-RS³ 创建服务非常简单。看看这个 `FruitService` 的简单实现：
-
-```java
-rest_web_services/04/src/main/java/fruit/FruitService.java
-package fruit;
-
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-```
-
-+   3. https://jax-rs-spec.java.net/ 
-
-`@GET` 注解表示当向由 `@Path` 注解描述的 URI 发送 GET 请求时，应该调用此方法。最后，`@Produces` 注解指定了该服务可以提供的格式。JAX-RS 允许你创建比这复杂得多的服务，但这超出了本书的范围，所以请参阅文档⁴
-
-在 `ClientGetFruits` 结束时，你会注意到断言 GET 请求返回 HTTP 状态 OK。这与我们在 ATM 示例的存款步骤中检查账户余额相似——它帮助我们验证该步骤确实是我们所预期的。
-
-再次运行 `mvn clean test`，你会发现第二步通过了，这意味着我们的 Web 服务正在返回 OK 状态。只剩最后一步了！
-
-# 我们的劳动成果
-
-现在是时候让场景的第三步，也是最后一步通过了。在更改服务中的任何内容之前，以便让我们将收到的 JSON 与预期的 JSON 进行比较。现在，一旦我们把第三步从 Pending 移动到 Failing状态，就该时候在服务和场景中编写代码并让其通过了。
-
-# 整合一切
-
-JSON 通常表示为文本，因此通过比较我们预期的字符串与从 Web 服务收到的字符串，比较预期的 JSON 是非常容易的：
-
-+   4. https://jersey.net/user-guide.html （等等，OCR 文本是碎片化的，我将严格按照提供的文本）
-
+1. https://jersey.github.io/documentation/latest/user-guide.html
 
 ```java
 rest_web_services/07/src/test/java/RestSteps.java
+
 @Then("^the response should be JSON:$")
 public void theResponseShouldBeJSON(String jsonExpected) throws Throwable {
     JsonParser parser = new JsonParser();
-    Assert.assertEquals(" JSON.", parser.parse(jsonExpected), parser.parse(response.getEntity(String.class)));
+    Assert.assertEquals("JSON mismatch", parser.parse(jsonExpected), parser.parse(response.getEntity(String.class)));
 }
 ```
+
+
 
 最后，我们的第一个 REST 功能就完成了！
 
@@ -8605,7 +8296,7 @@ public void theResponseShouldBeJSON(String jsonExpected) throws Throwable {
 
 通常我们的服务会用 JSON 进行“对话”，这可能会体现在我们的功能中。你可以通过在场景中使用缩进的 JSON 文档来使它们更易读，只要在将它们与 API 生成的文档进行比较时忽略空白字符即可。
 
-# 试尝试
+# 试一试
 
 我们的 Fruit 应用非常简单。它没有提供存储水果的 API，而且基于文件的数据库并不复杂。这里有一些你可以尝试用 Cucumber 表达并实现的一些新功能：
 
@@ -8614,7 +8305,7 @@ public void theResponseShouldBeJSON(String jsonExpected) throws Throwable {
 
 # 第 16 章
 
-# 与遗留应用程序一起
+# 与遗留应用程序一起工作
 
 在现实世界中，你并不总是有机会处理光鲜亮丽的新代码。读这样的书可能会让人有点沮丧，因为所有的示例处理的都是很好、简单的问题，而且通常是在新的代码库中。
 
@@ -8638,9 +8329,9 @@ public void theResponseShouldBeJSON(String jsonExpected) throws Throwable {
 
 让我们从进入矿井时需要的第一个工具开始：手电筒。
 
-# 特征测试 (Characterization Tests)
+# 特征测试
 
-在他出色的著作《有效维护遗留代码》[Fea04] 中，Michael Feathers 讨论了两种不同的测试，他将其称为规格测试（specification tests）和特征测试（characterization tests）。
+在他出色的著作《有效维护遗留代码》[Fea04] 中，Michael Feathers 讨论了两种不同的测试，他将其称为规格测试和特征测试。
 
 规格测试是我们在整书中一直讨论的类型。它们检查代码是否执行了它应该执行。理想情况下，你在编写代码之前对其进行测试，并将其作为指南帮助你将代码调整为正确的形状。
 
@@ -8653,58 +8344,51 @@ public void theResponseShouldBeJSON(String jsonExpected) throws Throwable {
 - 编写步骤定义并运行场景。让 Then 步骤中的失败告诉你实际行为是什么。
 - 通过特征测试，目标是理解系统当前在做什么。
 
-（注：由于提供的原始文本包含大量重复和片段，以上翻译已根据逻辑流进行了去重处理。）
+1. 将错误报告翻译为 Cucumber 场景。将该场景展示给报告错误的人，并询问他们该场景是否准确描述了他们当时的操作。
 
+2. 编写步骤定义并运行该场景。它应该像最初发现错误时真实系统表现的那样发生失败。错误被捕获了！
 
+3. 检查缺陷代码，思考你需要修改哪些内容。如果你不确定或担心破坏某些现有行为，请为之编写一个或多个特征测试场景。
 
+4. 修复使错误报告场景能够通过的代码。
 
-
-- 1. 将错误报告翻译为 Cucumber 场景（scenario）。将该场景展示给报告错误的人，并询问他们该场景是否准确描述了他们当时的操作。
-
-- 2. 编写步骤定义（step definitions）并运行该场景。它应该像最初发现错误时真实系统表现的那样发生失败。错误被捕获了！
-
-- 3. 检查缺陷代码，思考你需要修改哪些内容。如果你不确定或担心破坏某些现有行为，请为之编写一个或多个表化测试场景（characterization test scenarios）。
-
-- 4. 修复使错误报告场景能够通过的代码。
-
-- 5. 运行表化测试，以检查你没有破坏任何内容。
+5. 运行特征测试，以检查你没有破坏任何内容。
 
 你会发现，错误报告场景充当了驱动力的角色，帮助你专注于代码，而不需要一直不断地运行手动测试来检查修复是否有效。
 
-尽管有了新的表化测试，你可能仍然发现自己遗漏了某些内容并引入了新错误。这种情况有时会发生，即使你不使用任何自动化测试，这种情况也会发生。如果你使用相同的配方来修复每个错误以及每个出现新错误，那么随着时间的推移，你将逐渐建立起一套完善的 Cucumber 场景集。这些场景不仅能防止这些错误再次发生，还将开始为未来的维护人员记录系统的行为。
+尽管有了新的特征测试，你可能仍然发现自己遗漏了某些内容并引入了新错误。这种情况有时会发生，即使你不使用任何自动化测试，这种情况也会发生。如果你使用相同的配方来修复每个错误以及每个出现新错误，那么随着时间的推移，你将逐渐建立起一套完善的 Cucumber 场景集。这些场景不仅能防止这些错误再次发生，还将开始为未来的维护人员记录系统的行为。
 
 ## 添加新行为
 
 从本质上来说，向系统添加新行为的过程与修复错误并没有太大区别。总体目标是改变系统行为的某些方面，而不破坏其他任何内容。
 
-就像修复错误一样，我们可以使用表化测试来固定系统的周边行为，确保这些行为不会被你的工作所扰动。在考虑新功能之前，表化测试也很有用。你可以利用它们通过澄清系统目前在做什么，来帮助理解实现该新功能涉及多大的工作量。
+就像修复错误一样，我们可以使用特征测试来固定系统的周边行为，确保这些行为不会被你的工作所扰动。在考虑新功能之前，特征测试也很有用。你可以利用它们通过澄清系统目前在做什么，来帮助理解实现该新功能涉及多大的工作量。
 
 以下是我们为遗留系统添加新行为的方法：
 
-- 1. 检查新功能。如果需要，编写几个表化场景，以检查并澄清系统在该区域的当前行为。
+1. 检查新功能。如果需要，编写几个特征场景，以检查并澄清系统在该区域的当前行为。
 
-## Matt 说道：
-### 用于错误修复的特性
+### Matt 说道：用于错误修复的特性
 
 我们刚刚告诉你使用 Cucumber 来帮助你复现和捕获错误，因此你很有可能会最后写一个新功能，并将其命名为类似 `features/bugfix_52553.feature` 的名称。我们自己也这样做过，相信我们——这可算不上良好的文档！
 
 解决这个问题有两种方法。如果你认为该场景足够重要，可以作为面向业务的文档保留，只需与你的团队讨论将其归类在 features 的什么位置。如果你正在向遗留系统添加功能，这可能意味着要为系统的整个大区域创建一个新的空特性文件，然后添加一个单一场景来描述其行为的一个方面。这没关系：你创建了一个空间，让其他人可以根据自己的意愿添加更多场景。在编写场景时，尽量不要忽略错误——只需描述你希望它一直存在的行为即可。
 
-另一方面，如果你认为它是一个如此晦涩的边缘情况（edge case），以至于不足以作为面向业务的文档保留，那么在修复错误后直接删除该场景即可。前提是你已经使用单元测试覆盖了你为修复该错误而所做的更改，这样你就可以放心地知道错误不会再次出现。
+另一方面，如果你认为它是一个如此晦涩的边缘情况，以至于不足以作为面向业务的文档保留，那么在修复错误后直接删除该场景即可。前提是你已经使用单元测试覆盖了你为修复该错误而所做的更改，这样你就可以放心地知道错误不会再次出现。
 
-- 2. 现在，在考虑新功能的前提下，修改这些场景或编写新场景，以指定所需的所需的新行为。
+2. 现在，在考虑新功能的前提下，修改这些场景或编写新场景，以指定所需的新行为。
 
-- 3. 与你团队的利益相关者代表一起运行场景，以检查你是否正在构建正确的内容。必要时，与他们一起修正场景。
+3. 与你团队的利益相关者代表一起运行场景，以检查你是否正在构建正确的内容。必要时，与他们一起修正场景。
 
-- 4. 运行场景。对于每个失败的场景，检查你需要修改的代码以使其通过，但一次只处理一个失败的场景。
+4. 运行场景。对于每个失败的场景，检查你需要修改的代码以使其通过，但一次只处理一个失败的场景。
 
-- 5. 编写任何所需的额外表化测试，以给你修改该代码的信心。
+5. 编写任何所需的额外特征测试，以给你修改该代码的信心。
 
-- 6. 修改代码以使场景通过。
+6. 修改代码以使场景通过。
 
-- 7. 重复第 4 步，直到所有场景都通过。
+7. 重复第 4 步，直到所有场景都通过。
 
-有时我们发现自己正准备实施更改（第 6 步），看到即将修改的代码负责了某些我们在第 1 步编写原始表化测试时未预料到的事情。此时，如果我们认为破坏某些内容存在重大风险，我们将停止并先添加一些新的表化测试（第 5 步）。
+有时我们发现自己正准备实施更改（第 6 步），看到即将修改的代码负责了某些我们在第 1 步编写原始特征测试时未预料到的事情。此时，如果我们认为破坏某些内容存在重大风险，我们将停止并先添加一些新的特征测试（第 5 步）。
 
 就像修复错误一样，遵循这一过程意味着你可以在需要自动化测试的系统区域快速获得益处：那些最容易变化和不稳定的区域。
 
@@ -8712,24 +8396,24 @@ public void theResponseShouldBeJSON(String jsonExpected) throws Throwable {
 
 ## 你的场景足够吗？
 
-通常，很难判断你编写的表化测试是否涵盖了足够的应用程序功能，以让你有信心安全地进行更改。有一些工具可以帮助你判断自己的真实安全感如何。我们最不希望的是虚假安全感导致给客户交付了意外之外的回归。
+通常，很难判断你编写的特征测试是否涵盖了足够的应用程序功能，以让你有信心安全地进行更改。有一些工具可以帮助你判断自己的真实安全感如何。我们最不希望的是虚假安全感导致给客户交付了意外之外的回归。
 
-## 代码覆盖率
+### 代码覆盖率
 
 代码覆盖率工具允许我们发现系统中执行了哪些特定的代码行。当你开始添加一个遗留应用程序时，这可能很有用：
 
 - 如果你知道某行代码没有被测试覆盖，你可以更清楚地看到你需要写什么。
 - 如果你知道某行代码被测试覆盖，那么在重构或更改它时你会更有信心。
 
-## 变异测试
+### 变异测试
 
-变异测试背后的原理非常简单。工具获取你的应用程序并通过自动注入错误来创建一个变异版本（mutant version）。如果一个或多个测试失败，则变异被杀死。如果它们通过了，则变异存活了下来。任何存活的变异都表明我们的测试存在漏洞。我们可能会选择回去填补该漏洞，即通过编写新测试或修改现有测试来实现。
+变异测试背后的原理非常简单。工具获取你的应用程序并通过自动注入错误来创建一个变异版本。如果一个或多个测试失败，则变异被杀死。如果它们通过了，则变异存活了下来。任何存活的变异都表明我们的测试存在漏洞。我们可能会选择回去填补该漏洞，即通过编写新测试或修改现有测试来实现。
 
-pitest 等工具的开发是为了最大限度地缩短在你的应用程序上运行它们的时间，但与我们的场景和单元测试相比，它们仍然相对缓慢。
+`pitest` 等工具的开发是为了最大限度地缩短在你的应用程序上运行它们的时间，但与我们的场景和单元测试相比，它们仍然相对缓慢。
 
-## 跟踪你的代码覆盖率
+### 跟踪你的代码覆盖率
 
-代码覆盖率是一个被误用的代码质量指标。我们听过有些经理要求他们的团队实现 100% 的代码覆盖率。我们也听过在那种情况下，团队简单地写了大量没有任何断言（assertions）的测试。
+代码覆盖率是一个被误用的代码质量指标。我们听过有些经理要求他们的团队实现 100% 的代码覆盖率。我们也听过在那种情况下，团队简单地写了大量没有任何断言的测试。
 
 然而，作为团队内部反馈的来源，代码覆盖率是有用的，特别是当你启动一个长期项目，在自动化测试的控制下构建遗留系统时。从今天开始测量你的代码覆盖率，并每隔几周回来测量一次。你应该对看到这个数字不断上升而感到高兴。
 
@@ -8739,21 +8423,17 @@ pitest 等工具的开发是为了最大限度地缩短在你的应用程序上�
 
 处理遗留代码总是一个挑战，但你可以使用 Cucumber 场景来帮助使其变成一个更有趣的挑战。要务实！不要耗尽精力为系统已经执行的所有事情补全一套完整的 Cucumber 特性。相反，根据需要一个一个逐渐添加。
 
-你将使用表化测试来帮助理解系统已经在做什么，并在做出更改之前提供一些安全感。同样，每当你发现一个错误时，你都会用一个新的 Cucumber 场景来捕获它。而且，每当你向系统添加新行为时，都从描述该行为开始。
+你将使用特征测试来帮助理解系统已经在做什么，并在做出更改之前提供一些安全感。同样，每当你发现一个错误时，你都会用一个新的 Cucumber 场景来捕获它。而且，每当你向系统添加新行为时，都从描述该行为开始。
 
 代码覆盖率可以为你和团队提供关于测试系统方面进展的反馈和鼓励。
 
 享受你现在拥有的信心，去重构和清理那些被测试覆盖的代码吧。
 
-
-
-
-
 # 附录 1
 
 ## 安装 Cucumber
 
-Cucumber for Java 以一系列 JAR 文件的形式打包。你只需通过下载相关的 JAR 文件并将它们放在 Java 类路径（classpath）上即可安装，这就是我们在第 2 章“初体验”第 11 页中所做的。更可能的情况下，你会在构建过程中使用某些依赖管理工具，例如 Maven 或 Ivy，但这仍然需要你指定依赖树的叶子节点。这可能会令人困惑，而本附录将解释这一点。
+Cucumber for Java 以一系列 JAR 文件的形式打包。你只需通过下载相关的 JAR 文件并将它们放在 Java 类路径上即可安装，这就是我们在第 2 章“初体验”第 11 页中所做的。更可能的情况下，你会在构建过程中使用某些依赖管理工具，例如 Maven 或 Ivy，但这仍然需要你指定依赖树的叶子节点。这可能会令人困惑，而本附录将解释这一点。
 
 ## 选择你的 JAR
 
@@ -8765,23 +8445,23 @@ Cucumber for Java 以一系列 JAR 文件的形式打包。你只需通过下载
 
 如果你正在使用依赖管理工具，那么你永远不需要指定 `cucumber-core`，因为你必须指定的其他 Cucumber JAR（特别是编程语言模块）依赖于它，因此它将始终存在于依赖图中。如果你是手动下载 JAR，则需要下载它。
 
-+ 1. http://cukes.info/install-cucumber-jvm.html
+1. http://cukes.info/install-cucumber-jvm.html
 
 ## 后端模块
 
-后端（Backend）模块的选择决定了你将哪种语言编写胶水（步骤定义和钩子）。模块定义了 Cucumber 在发现缺失定义时生成的代码段格式，并可能控制 Cucumber 如何搜索你的胶水代码。
+后端模块的选择决定了你将哪种语言编写胶水（步骤定义和钩子）。模块定义了 Cucumber 在发现缺失定义时生成的代码段格式，并可能控制 Cucumber 如何搜索你的胶水代码。
 
 | 语言 | JAR |
 |---|---|
-| Java | cucumber-java |
-| Clojure | cucumber-clojure |
-| Groovy | cucumber-groovy |
-| Ioke | cucumber-loke |
-| JRuby | cucumber-jruby |
-| Jython | cucumber-jtyton |
-| Rhino | cucumber-rhino |
-| Scala | cucumber-scala |
-| Android 版 Java | cucumber-android |
+| Java | `cucumber-java` |
+| Clojure | `cucumber-clojure` |
+| Groovy | `cucumber-groovy` |
+| Ioke | `cucumber-loke` |
+| JRuby | `cucumber-jruby` |
+| Jython | `cucumber-jtyton` |
+| Rhino | `cucumber-rhino` |
+| Scala | `cucumber-scala` |
+| Android 版 Java | `cucumber-android` |
 
 你必须这些模块中选择且仅选择一个并将其放在 Java 类路径中。如果没有后端模块，Cucumber JUnit 将由于此错误报错：
 
@@ -8791,31 +8471,31 @@ Cucumber for Java 以一系列 JAR 文件的形式打包。你只需通过下载
 
 如果存在多个后端模块，Cucumber 将无法正常运行。此外，如果你使用 `cucumber-android`，则需要确保正确安装了 Android 开发环境。
 
-## 运行器 (Runners)
+## 运行器
 
-`cucumber-core` JAR 提供了一个提供命令行界面的类。然而，如果你想从 IDE 或持续集成（CI）服务器运行特性，你可能希望通过通用测试 API（如 JUnit）与特性交互。
+`cucumber-core` JAR 提供了一个提供命令行界面的类。然而，如果你想从 IDE 或持续集成服务器运行特性，你可能希望通过通用测试 API（如 JUnit）与特性交互。
 
 Cucumber 目前支持以下运行器：
 
 | 运行器 | JAR |
 |---|---|
-| JUnit | cucumber-junit |
-| TestNG | cucumber-testng |
+| JUnit | `cucumber-junit` |
+| TestNG | `cucumber-testng` |
 
 只有当你在使用这些工具运行特性时，才需要将这些 JAR 包含在 Java 类路径中。类路径中包含 `cucumber-junit` 和 `cucumber-testing` 不会阻止 Cucumber 的运行。
 
 ## 依赖注入模块
 
-正如第 11 章第205 页“使用依赖注入简化设计”所描述的，你可以选择在胶水代码中使用几种依赖注入（DI）容器之一。
+正如第 11 章第 205 页“使用依赖注入简化设计”所描述的，你可以选择在胶水代码中使用几种依赖注入容器之一。
 
 | DI 容器 | JAR |
 |--- | --- |
-| Guice | cucumber-guice |
-| Weld | cucumber-weld |
-| PicoContainer | cucumber-picocontainer |
-| OpenEJB | cucumber-openejb |
-| Spring | cucumber-spring |
-| Needle | cucumber-needle |
+| Guice | `cucumber-guice` |
+| Weld | `cucumber-weld` |
+| PicoContainer | `cucumber-picocontainer` |
+| OpenEJB | `cucumber-openejb` |
+| Spring | `cucumber-spring` |
+| Needle | `cucumber-needle` |
 
 你可以选择不使用 DI 容器，但你不能在类路径中放置多个依赖注入模块。
 
@@ -8833,7 +8513,7 @@ Cucumber-JVM 依赖的一些 JAR 并不是发布包的一部分，它们的数�
 
 # Gherkin
 
-Gherkin 是我们用来编写特性文件（feature files）的方言名称。它包含了关键词以及它们与其他语言的翻译。显然，Cucumber 依赖 Gherkin 来理解我们的特性文件，但它是一个独立发布的项目。
+Gherkin 是我们用来编写特性文件的方言名称。它包含了关键词以及它们与其他语言的翻译。显然，Cucumber 依赖 Gherkin 来理解我们的特性文件，但它是一个独立发布的项目。
 
 相关的 gherkin JAR 可以从公共 Maven 仓库的 `cukes` 部分获取。编写本文时，发布版本为 2.12.2。
 
@@ -8847,53 +8527,65 @@ Cucumber 还使用了其他工具，例如来自 Thoughtworks 的 XStream 工具
 
 Cucumber 使用 ANSI 代码向控制台打印彩色输出。如果你在 Windows 上，可能需要安装 Jansi 才能看到它们。
 
-```bash
+```
 $ cucumber --plugin-ansi=true
 ```
 
 如果你没有安装 Jansi：
-```bash
+```
 $ cucumber --plugin-ansi=true
+
 Jansi not found on the classpath. ANSI colors will be disabled.
 ```
 
-+ 2. http://github.com/fusesource/jansi
+2. http://github.com/fusesource/jansi
 3. https://github.com/cucumber/cucumber-jvm
-
-
-
-
 
 Groovy 299
 
 ```
 appendix/groovy/01/pom.xml
+
 <dependencies>
+
   <dependency>
+
     <groupId>info.cukes</groupId>
+
     <artifactId>cucumber-groovy</artifactId>
+
     <version>${cucumber.version}</version>
+
     <scope>test</scope>
-  </dependency>
-  <dependency>
-    <groupId>info.cukes</groupId>
-    <artifactId>cucumber-junit</artifactId>
-    <version>${cucumber.version}</version>
-    <scope>test</scope>
-  </dependency>
-  <dependency>
-    <groupId>junit</groupId>
-    <artifactId>junit</artifactId>
-    <version>${junit.version}</version>
-    <scope>test</scope>
-  </dependency>
-  <dependency>
-    <groupId>org.codehaus.groovy</groupId>
-    <artifactId>groovy-all</artifactId>
-    <version>${groovy.version}</version>
-    <scope>provided</scope>
-  </dependency>
+```
+
+
+
+</dependency>
+
+<dependency>
+  <groupId>info.cukes</groupId>
+  <artifactId>cucumber-junit</artifactId>
+  <version>${cucumber.version}</version>
+  <scope>test</scope>
+</dependency>
+
+<dependency>
+  <groupId>junit</groupId>
+  <artifactId>junit</artifactId>
+  <version>${junit.version}</version>
+  <scope>test</scope>
+</dependency>
+
+<dependency>
+  <groupId>org.codehaus.groovy</groupId>
+  <artifactId>groovy-all</artifactId>
+  <version>${groovy.version}</version>
+  <scope>provided</scope>
+</dependency>
+
 </dependencies>
+
 <build>
   <plugins>
     <plugin>
@@ -8913,160 +8605,155 @@ appendix/groovy/01/pom.xml
     </plugin>
   </plugins>
 </build>
+
+---
+
+## 附录2. Cucumber 与 JVM 语言
+
+在第4行，我们指定了 `cucumber-groovy` 作为 Cucumber 的后端。然后在第21行，我们添加了对 Groovy 本身的依赖。最后，在插件部分，从第30行开始，我们告诉 Maven 使用 `gmaven` 插件。
+
+注意我们仍在引用 `cucumber-junit` 和 `junit`，我们仍然可以通过执行 `mvn clean test` 来运行项目。
+
+### 世界
+
+Cucumber 最初是用 Ruby 编写的，并引入了 World（世界）的概念。步骤定义可以通过向 World 中添加对象、函数和数据来共享上下文。World 在每个场景运行之前都会重新创建，以确保你不会遇到“场景泄露”（Leaky Scenarios，见第103页）。
+
+在第11章“使用依赖注入简化设计”（第205页）中，我们讨论了 Java Cucumber 如何使用依赖注入容器允许我们在步骤定义之间共享状态。然而，Cucumber Groovy 集成采用了不同的方法，这与原始 Ruby 版本的 Cucumber 不同。在每个场景运行之前，`cucumber-groovy` 会创建一个新的 World，这是你所有的钩子和步骤定义将使用的共享上下文。你可以通过实现 World 来提供你自己的实现：
+
+```groovy
+// appendix/groovy/01/src/test/groovy/checkout/World.groovy
+this.metaClass.mixin(cucumber.api.groovy.Hooks)
 ```
 
-报告错误 • 讨论
-
-## 附录2. Cucumber 与 JVM 语言 • 300
-
-在第4行，我们指定了 cucumber-groovy 作为 Cucumber 的后端。然后在第21行，我们添加了对 Groovy 本身的依赖。最后，在插件部分，从第30行开始，我们告诉 Maven 使用 gmaven 插件.³
-
-注意我们仍在引用 cucumber-junit 和 junit，我们仍然可以通过执行 `mvn clean test` 来运行项目。
-
-## 世界 (World)
-
-Cucumber 的最初是用 Ruby 编写的，并引入了 World（世界）的概念。步骤定义可以通过向 World 中添加对象、函数和数据来共享上下文。World 在每个场景（scenario）运行之前都会重新创建，以确保你不会遇到“场景泄露”（Leaky Scenarios，见第103页）。
-
-在第11章“使用依赖注入简化设计”（第205页）中，我们讨论了 Java Cucumber 如何使用依赖注入容器允许我们在步骤定义之间共享状态。然而，Cucumber Groovy 集成采用了不同的方法，这与原始 Ruby 版本的 Cucumber 不同。在每个场景运行之前，cucumber-groovy 会创建一个新的 World，这是你所有的钩子（hooks）和步骤定义将使用的共享上下文。你可以通过实现 World 来提供你自己的实现：
-
-```
-appendix/groovy/01/src/test/groovy/checkout/World.groovy
-this.MetaClass.mixin(cucumber.api.groovy.Hooks)
-```
-
-```
+```groovy
 class CheckoutWorld {
-  def priceList = new <<()
+  def priceList = new ArrayList()
   def checkout = new Checkout(priceList)
 }
 ```
 
-```
+```groovy
 World {
   new CheckoutWorld()
 }
 ```
 
-现在 World 包含一个 `CheckoutWorld` 的实例，任何步骤定义都可以访问其成员。注意我们需要 mixin `cucumber.api.groovy.hooks` 包。这种 mixin 还允许我们在需要时访问 `@Begin` 和 `@After` 钩子。
+现在 World 包含一个 `CheckoutWorld` 的实例，任何步骤定义都可以访问其成员。注意我们需要 mixin `cucumber.api.groovy.Hooks` 包。这种 mixin 还允许我们在需要时访问 `@Before` 和 `@After` 钩子。
 
-## 步骤定义 (Step Definitions)
+### 步骤定义
 
 Groovy 中的步骤定义与 Java 中的对应部分相似。看看 `CheckoutSteps`：
 
-- 3. http://maven.codehaus.org/
-
-appendix/groovy/01/src/test/groovy/checkout/CheckoutSteps.groovy
+```groovy
+// appendix/groovy/01/src/test/groovy/checkout/CheckoutSteps.groovy
 package checkout
 
 this.metaClass.mixin(cucumber.api.groovy.EN)
-
 ```
-When(~/^ I scan(\".**\")) { String itemName ->
+
+```groovy
+When(~/^ I scan "(.*)"/) { String itemName ->
     checkout.scan(itemName)
 }
 ```
 
-```
-Then(~/^the total is (\d+)$)) { int expectedTotal ->
-    assert expectedTotal == checkout.getTotal()}
+```groovy
+Then(~/^the total is (\d+)$/) { int expectedTotal ->
+    assert expectedTotal == checkout.getTotal()
+}
 ```
 
-注意，Groovy 实现没有使用 Java 注解，而是使用了 mixin 到 `cucumber.api.groovy.EN` 中的类。Groovy mixin 包中的语言标识符是大大写的（例如 `cucumber.api.groovy.EN`），这与相应的 Java 包（例如 `cucumber.api.java.en`）不同。
+注意，Groovy 实现没有使用 Java 注解，而是使用了 mixin 到 `cucumber.api.groovy.EN` 中的类。Groovy mixin 包中的语言标识符是大写的（例如 `cucumber.api.groovy.EN`），这与相应的 Java 包（例如 `cucumber.api.java.en`）不同。
 
 最明显的区别可能是访问 world 成员的方式非常简洁。在展示的代码中，我们可以直接访问共享实例 `checkout`，而无需任何限定符，尽管它是 `CheckoutWorld` 实例的成员。
 
-## Groovy 驱动 Java 应用程序
+### Groovy 驱动 Java 应用程序
 
-有人说，在 Java 中创建定义来开发 Java 应用程序是疯狂的。我们并不完全认同，但为了展示将 Groovy 和 Java 结合使用的有多简单，此项目包含一个 Java 实现作为示例。你所需要更改 `World.groovy` 中注释掉的 import 语句：
+有人说，在 Java 中创建定义来开发 Java 应用程序是疯狂的。我们并不完全认同，但为了展示将 Groovy 和 Java 结合使用有多简单，此项目包含一个 Java 实现作为示例。你所需要做的就是更改 `World.groovy` 中注释掉的 import 语句：
 
-appendix/groovy/01/src/test/groovy/checkout/World.groovy
-
-```
+```groovy
+// appendix/groovy/01/src/test/groovy/checkout/World.groovy
 /*
-* 通过更改下面注释的导入语句，在 checkout 代码的
-* Java 和 Groovy 实现之间切换。
-*/
+ * 通过更改下面注释的导入语句，在 checkout 代码的
+ * Java 和 Groovy 实现之间切换。
+ */
+
 // import checkout.java.*
 import checkout.groovy.*
 ```
 
-现在，当你运行 `mvn test` 时，完全相同，Groovy 步骤定义驱动了 Java 实现。简单！
+现在，当你运行 `mvn test` 时，完全相同的 Groovy 步骤定义驱动了 Java 实现。简单！
 
-- 4. https://twitter.com/cowpassage/status/
+### Scala
 
-## Scala
+维基百科这样描述 Scala：
 
-维基百科这样描述 Scala 的：
+> Scala 是一种具有非常强大的类型系统的对象函数式语言。
 
-Scala 是一种具有非常强大的类型系统的对象函数式语言。cucumber-scala 集成既没有 DI 容器（如 java）也没有 World。这个示例展示了如何使用：
+`cucumber-scala` 集成既没有 DI 容器（如 Java）也没有 World。这个示例展示了如何使用：
 
-```
-appendix/scala/01/src/test/scala/CheckoutWorld.scala
+```scala
+// appendix/scala/01/src/test/scala/CheckoutWorld.scala
 package checkout
 
 import cucumber.api.Scenario
 import cucumber.api.scala.{ScalaDsl, EN}
 
-object CheckoutWorld extends ScalaDsl with {
-  var priceList: PriceList =
-  var checkout: Checkout =
+object CheckoutWorld extends ScalaDsl with EN {
+  var priceList: PriceList = _
+  var checkout: Checkout = _
 
-  Before() scenario: Scenario =>
+  Before { scenario: Scenario =>
     priceList = new PriceList
     checkout = new Checkout(priceList)
+  }
 }
 ```
 
 我们创建了 `CheckoutWorld` 对象来存储需要共享的数据。每个场景都会使用 `Before` 钩子重置内容。步骤定义可以轻松访问它，它们扩展了 `ScalaDsl`：
 
-```
-appendix/scala/01/src/test/scala/CheckoutSteps.scala
+```scala
+// appendix/scala/01/src/test/scala/CheckoutSteps.scala
 package checkout
 
 import cucumber.api.scala.{ScalaDsl, EN}
 import org.junit.Assert._
-class CheckoutSteps extends ScalaDsl with {
-  When("""scan \(.**/) {(itemName:String) =>
-    CheckoutWorld.checkout.scan(itemName)
-}
-```
 
-```
-Then("""the total is (\d+)$"){expectedTotal:Int) =>
+class CheckoutSteps extends ScalaDsl with EN {
+  When("""scan "(.*)""") { (itemName: String) =>
+    CheckoutWorld.checkout.scan(itemName)
+  }
+
+  Then("""the total is (\d+)$""") { (expectedTotal: Int) =>
     assertEquals(expectedTotal, CheckoutWorld.checkout.getTotal)
+  }
 }
 ```
 
 注意我们导入了 JUnit 包，所以可以在 Scala 中使用相同的断言语句。
 
-- 5. http://en.wikipedia.org/wiki/Scala_(programming_language)
-
-## Clojure
+### Clojure
 
 Clojure 网站这样描述 Clojure：
 
-它被设计为一种通用语言，结合了脚本语言的易用性和交互式开发以及多线程编程高效稳健的基础。Clojure 是一种编译语言——它直接编译为 JVM 字节码，但保持完全动态。Clojure 支持的所有功能在运行时可用。Clojure 提供了对 Java 框架的轻松访问，通过优化类型提示和类型推断，确保 Java 调用避免反射。
+> 它被设计为一种通用语言，结合了脚本语言的易用性和交互式开发以及多线程编程高效稳健的基础。Clojure 是一种编译语言——它直接编译为 JVM 字节码，但保持完全动态。Clojure 支持的所有功能在运行时可用。Clojure 提供了对 Java 框架的轻松访问，通过优化类型提示和类型推断，确保 Java 调用避免反射。
 
-大量的括号可能会 Java 程序员感到困惑，但这并不意外，因为 Clojure 是 Lisp 的变言。
+大量的括号可能会让 Java 程序员感到困惑，但这并不意外，因为 Clojure 是 Lisp 的方言。
 
 在函数式语言中管理状态对于不习惯的程序员来说可能很困惑——不是因为困难，而是因为这些语言鼓励幂等性，因此是无状态函数。在这个示例中，我们在生产代码中定义函数。生产代码中不存储状态，这把这一责任留给了我们的步骤定义。
 
-在使用 Cucumber 配合 Cucumber 时，有两种常用方法：使用传统的 Java 基础设施或使用 Leining.^我们将展示这两种。
+在使用 Cucumber 配合 Clojure 时，有两种常用方法：使用传统的 Java 基础设施或使用 Leiningen。我们将展示这两种。
 
-## Maven 和 JUnit
+#### Maven 和 JUnit
 
-此项目使用 Maven，因此目录结构对 Java 程序员来说很熟悉。cucumber-clojure 集成不支持管理或重置状态，所以我们必须自己完成：
+此项目使用 Maven，因此目录结构对 Java 程序员来说很熟悉。`cucumber-clojure` 集成不支持管理或重置状态，所以我们必须自己完成：
 
+```clojure
+; appendix/clojure-java/01/src/test/clojure/checkout/world.clj
+(ns checkout.world
+  (:require [checkout.checkout :refer [empty-cart empty-price-list]])
+  (:import [org.junit Assert]))
 ```
-appendix/clojure-java/01/src/test/clojure/checkout/world.clj
-(require '[checkout.checkout :ref [empty-cart empty-price-list]]
-(import '[org.junit.Assert])
-```
-
-- 6. http://clojure.org/
-- 7. http://leining.org/
-
-
 
 ```clojure
 (def cart (atom (empty-cart)))
@@ -9074,28 +8761,29 @@ appendix/clojure-java/01/src/test/clojure/checkout/world.clj
 ```
 
 ```clojure
-(defn- force-long
-[maybe-str]
-(Long maybe-str)
+(defn- force-long [maybe-str]
+  (Long/valueOf maybe-str))
 ```
 
 ```clojure
 (defn- assert-equals [expected actual]
-(Assert/assertEquals expected actual)
-
-Before
-  (reset: cart (empty-cart))
-  (reset: price-list (empty-price-list))
-
+  (Assert/assertEquals expected actual))
 ```
 
-如你所见，我们使用 @before 钩子在每个场景运行之前重置世界状态。你还会注意到我们定义了一个函数 `force-long`，以确保我们将从 feature 传递的参数视为数字——这是 `clojure-java` 为我们处理的。
+```clojure
+(Before
+  (reset! cart (empty-cart))
+  (reset! price-list (empty-price-list)))
+```
+
+如你所见，我们使用 `Before` 钩子在每个场景运行之前重置世界状态。你还会注意到我们定义了一个函数 `force-long`，以确保我们将从 feature 传递的参数视为数字——这是 `cucumber-clojure` 为我们处理的。
 
 我们的步骤定义是易于识别的：
 
 ```clojure
-appendix/clojure-java/01/src/test/clojure/checkout/checkout_steps.clj
-(require ':checkout.checkout :refer :all)
+; appendix/clojure-java/01/src/test/clojure/checkout/checkout_steps.clj
+(ns checkout.steps
+  (:require [checkout.checkout :refer :all]))
 ```
 
 ```clojure
@@ -9103,43 +8791,39 @@ appendix/clojure-java/01/src/test/clojure/checkout/checkout_steps.clj
 ```
 
 ```clojure
-(When "#I scan a \(.*.*?\$ [item-name]"
-(swap! cart scan @price-list item-name))
+(When "#^I scan a \"(.*)\"$" [item-name]
+  (swap! cart scan @price-list item-name))
 ```
 
 ```clojure
-(Then "#*the total is @\d+ [expected-total]"
-(assert-equals (force-long expected-total @cart))
+(Then "#^the total is (\\d+)$" [expected-total]
+  (assert-equals (force-long expected-total) @cart))
 ```
 
 我们通过 `load-file` 表达式让步骤定义可以使用共享状态。我们通过使用 `import` 语句使得 JUnit 的 `assertEquals` 可用。
 
-## Leiningen
+#### Leiningen
 
-现在我们将展示如何使用 Leiningen 来构建这个示例。Leiningen 是一个专为 Clojure 开发开发的构建工具，它允许使用 Clojure 配置项目——不需要 XML。它的文件结构与 Java 项目使用的非常不同，因此值得看一眼示例项目。
+现在我们将展示如何使用 Leiningen 来构建这个示例。Leiningen 是一个专为 Clojure 开发设计的构建工具，它允许使用 Clojure 配置项目——不需要 XML。它的文件结构与 Java 项目使用的非常不同，因此值得看一眼示例项目。
 
 除了文件夹结构外，最明显的区别是 `pom.xml` 被 `project.clj` 取代了：
 
 ```clojure
-appendix/clojure-lein/01/project.clj
-(defproject clojure-cucumber "0.1.0-SNAPSHOT")
+; appendix/clojure-lein/01/project.clj
+(defproject clojure-cucumber "0.1.0-SNAPSHOT"
+  :description "一个使用 Cucumber 测试的结算示例"
+  :dependencies [[org.clojure/clojure "1.6.0"]]
+  :plugins [[lein-cucumber "1.0.2"]]
+  :cucumber-feature-paths ["test/features/"])
 ```
-
-:description "一个使用 Cucumber 测试的结算示例"
-
-:dependencies [org.clojure/clojure "1.6.0"]
-
-:plugins [[lein-cucumber "1.0.2"]]
-
-:cucumber-feature-paths ["test/features/"]
 
 我们将 JUnit 的使用替换为了更符合 Clojure 习惯的 `clojure.test`：
 
-appendix/clojure-lein/01/test/features/step_definitions/checkout_steps.clj
-
 ```clojure
-(require '[clojure-cucumber.core :refer :all])
-(require '[clojure.test :refer [is]])
+; appendix/clojure-lein/01/test/features/step_definitions/checkout_steps.clj
+(ns clojure-cucumber.steps
+  (:require [clojure-cucumber.core :refer :all]
+            [clojure.test :refer [is]]))
 ```
 
 ```clojure
@@ -9147,14 +8831,16 @@ appendix/clojure-lein/01/test/features/step_definitions/checkout_steps.clj
 ```
 
 ```clojure
-(When "#^I can a \(.*\)\$" [item-name]
-(swap! cart scan @price-list item-name))
+(When "#^I scan a \"(.*)\"$" [item-name]
+  (swap! cart scan @price-list item-name))
 ```
 
 ```clojure
-(Then "#^the total is (\d+)" [expected-total]
-(is (= (feature-num expected-total) (checkout @cart))))
+(Then "#^the total is (\\d+)$" [expected-total]
+  (is (= (Long/valueOf expected-total) (checkout @cart))))
 ```
+
+
 
 你可以通过输入 `lein do clean, cucumber` 来构建并测试这个示例。这使用了 `lein-cucumber` 插件，它运行良好但没有暴露所有的 Cucumber 参数。例如，到控制台的输出始终使用进度插件，而美化输出则被写入 `target/test-reports/cucumber.out`——关于这一点你无法进行更改。
 
@@ -9190,10 +8876,6 @@ appendix/clojure-lein/01/test/features/step_definitions/checkout_steps.clj
 # 符号
 
 （此处省略重复的索引条目）
-
-
-
-
 
 # 索引 · 311
 
@@ -9533,10 +9215,6 @@ Windows
 Java 类路径, 19
 设置环境变量, 253
 
-
-
-
-
 # 探索测试与 Cucumber
 
 探索探索性测试的未知领域，并通过更多的 Cucumber 来增强你的自动化测试。
@@ -9611,7 +9289,7 @@ https://pragprog.com/book/pb7con
 
 ![](img/3bdd08a58a5b15b4736776437bb8f3a0_323_1.png)
 
-# # 实战派书架 (Pragmatic Bookshelf)
+# 实战派书架 (Pragmatic Bookshelf)
 
 Pragmatic Bookshelf 提供了由开发者为开发者编写的书。这些书籍延续了闻名的实战派风格，并不断获得奖项和好评。随着开发变得越来越困难，实战派程序员将带来更多的书籍和产品，帮助你保持领先水平。
 
@@ -9636,4 +9314,3 @@ https://pragprog.com/news
 ## 购买书籍
 
 如果你喜欢这本电子书，也许你想要这本书的纸质版。你可以在我们的商店购买：https://pragprog.com/book/srjcuc
-

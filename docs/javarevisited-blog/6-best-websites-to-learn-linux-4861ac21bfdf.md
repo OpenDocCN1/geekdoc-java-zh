@@ -1,3 +1,4 @@
+
 # 2023 年在线学习 Linux 的 6 个最佳地点
 
 > 原文：<https://medium.com/javarevisited/6-best-websites-to-learn-linux-4861ac21bfdf?source=collection_archive---------1----------------------->
@@ -61,96 +62,98 @@ Udemy 是我学习任何东西的必去之地，包括 Linux。它收集了最�
 
 他们还有一个名为[**Coursera Plus**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus)**的会员资格，可以让你从超过 7000 门顶级 Coursera 课程中学习尽可能多的课程、证书和专业知识。**
 
-**<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus> ** 
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
-## **3.[教育性](https://www.educative.io/trial?affiliate_id=5073518643380224)【基于文本，在线练习，免费试用】**
+## 3. [教育性](https://www.educative.io/trial?affiliate_id=5073518643380224)【基于文本，在线练习，免费试用】
 
-**这是另一个学习在线学习 Linux 的好地方。这个基于文本的交互式网站允许您在浏览器中键入 Linux 命令，并从交互式反馈中学习。**
+这是另一个学习在线学习 Linux 的好地方。这个基于文本的交互式网站允许您在浏览器中键入 Linux 命令，并从交互式反馈中学习。
 
-**如果你在 Windows 机器上工作，不知道如何在虚拟机器上安装 Linux，这显然不是那么容易，那么你会喜欢这个网站，因为你不需要安装任何东西来练习 Linux 命令。你可以在浏览器上完成。**
+如果你在 Windows 机器上工作，不知道如何在虚拟机器上安装 Linux，这显然不是那么容易，那么你会喜欢这个网站，因为你不需要安装任何东西来练习 Linux 命令。你可以在浏览器上完成。
 
-**[教育性](https://www.educative.io?affiliate_id=5073518643380224)类似于[code academy](/javarevisited/codecademy-or-pluralsight-which-is-a-better-platform-to-learn-coding-skills-59251a080642)，通过简单的理论和简单的练习来学习新事物。它提供基于文本的课程，包括测验、评估和图表，以获得更有吸引力的学习体验。**
+[教育性](https://www.educative.io?affiliate_id=5073518643380224)类似于[code academy](/javarevisited/codecademy-or-pluralsight-which-is-a-better-platform-to-learn-coding-skills-59251a080642)，通过简单的理论和简单的练习来学习新事物。它提供基于文本的课程，包括测验、评估和图表，以获得更有吸引力的学习体验。
 
-**不幸的是，他们没有任何完整的免费课程来学习 Linux 命令或 bash 脚本，但他们有一门课程，如面向程序员的[**Bash**](https://www.educative.io/courses/bash-for-programmers?affiliate_id=5073518643380224)**，你可以通过使用他们的 **7 天免费试用**免费观看。****
+不幸的是，他们没有任何完整的免费课程来学习 Linux 命令或 bash 脚本，但他们有一门课程，如面向程序员的[**Bash**](https://www.educative.io/courses/bash-for-programmers?affiliate_id=5073518643380224)**，你可以通过使用他们的 **7 天免费试用**免费观看。**
 
-****[![](img/49cc0814ff0e461149c99eb764ef1cff.png)](https://www.educative.io/courses/bash-for-programmers?affiliate_id=5073518643380224)****
+[![](img/49cc0814ff0e461149c99eb764ef1cff.png)](https://www.educative.io/courses/bash-for-programmers?affiliate_id=5073518643380224)
 
-****如果你对互动学习感兴趣，我强烈推荐你试试这个平台。他们的摸索课程像 [*摸索系统设计面试*](https://www.educative.io/collection/5668639101419520/5649050225344512?affiliate_id=5073518643380224) 和[摸索机器学习面试](https://www.educative.io/courses/grokking-the-machine-learning-interview?affiliate_id=5073518643380224)对于通过编码面试真的很有用。****
+如果你对互动学习感兴趣，我强烈推荐你试试这个平台。他们的摸索课程像 [*摸索系统设计面试*](https://www.educative.io/collection/5668639101419520/5649050225344512?affiliate_id=5073518643380224) 和[摸索机器学习面试](https://www.educative.io/courses/grokking-the-machine-learning-interview?affiliate_id=5073518643380224)对于通过编码面试真的很有用。
 
-****他们也有许多免费资源来学习编程技能，如 Java、Python、JavaScript、PHP、Ruby 等，并且 [***教育订阅***](https://www.educative.io/subscription?affiliate_id=5073518643380224) 也非常实惠，只需 14.9 美元就可以获得他们所有的高质量课程。****
+他们也有许多免费资源来学习编程技能，如 Java、Python、JavaScript、PHP、Ruby 等，并且 [***教育订阅***](https://www.educative.io/subscription?affiliate_id=5073518643380224) 也非常实惠，只需 14.9 美元就可以获得他们所有的高质量课程。
 
-****<https://www.educative.io/subscription?affiliate_id=5073518643380224> **** 
+<https://www.educative.io/subscription?affiliate_id=5073518643380224>
 
-## ****4.[学习 Linux @ Codecademy](https://bit.ly/codecademyhome)****
+## 4. [学习 Linux @ Codecademy](https://bit.ly/codecademyhome)
 
-****你可能知道 Codecademy 有一个学习 Linux 命令的在线互动课程，在这个课程中，你有一个学习 Linux 命令的简单任务。这也是一个免费的课程，这意味着你不需要支付任何费用就可以加入，你只需要创建一个 CodeCademy 帐户就可以加入这个课程。****
+你可能知道 Codecademy 有一个学习 Linux 命令的在线互动课程，在这个课程中，你有一个学习 Linux 命令的简单任务。这也是一个免费的课程，这意味着你不需要支付任何费用就可以加入，你只需要创建一个 CodeCademy 帐户就可以加入这个课程。
 
-****虽然[**学习命令行**](https://www.pjtra.com/t/TUJGR0lLR0JHRklJSkhCR0ZISk1N?url=https%3A%2F%2Fwww.codecademy.com%2Flearn%2Flearn-the-command-line) 不是一门非常全面的课程，但它确实提供了一个很好的基本 Linux 命令介绍，每个程序员都应该知道这些命令，如`ls`、`mkdir`、`cd`、`ps`、`less`、`cat`、`more`等。****
+虽然[**学习命令行**](https://www.pjtra.com/t/TUJGR0lLR0JHRklJSkhCR0ZISk1N?url=https%3A%2F%2Fwww.codecademy.com%2Flearn%2Flearn-the-command-line) 不是一门非常全面的课程，但它确实提供了一个很好的基本 Linux 命令介绍，每个程序员都应该知道这些命令，如`ls`、`mkdir`、`cd`、`ps`、`less`、`cat`、`more`等。
 
-****另一个值得注意的事情是，它提供了一个交互式终端，这意味着你不需要设置任何东西，这对于许多在 Windows 环境下工作的初学者来说是非常重要的。****
+另一个值得注意的事情是，它提供了一个交互式终端，这意味着你不需要设置任何东西，这对于许多在 Windows 环境下工作的初学者来说是非常重要的。
 
-****如果你以前有过 Linux 的经验，并且想从头开始学习 Linux 命令，我强烈推荐这个网站****
+如果你以前有过 Linux 的经验，并且想从头开始学习 Linux 命令，我强烈推荐这个网站
 
-****[![](img/b45780a2ce00d73fe432dfc9289ebea7.png)](https://bit.ly/codecademyhome)****
+[![](img/b45780a2ce00d73fe432dfc9289ebea7.png)](https://bit.ly/codecademyhome)
 
-****他们也有一个 [**Codecademy PRO**](https://bit.ly/codecademypro) 计划，在年度计划中每月只需 15.9 美元就可以访问他们所有的互动课程。如果你喜欢互动学习，那么你可以通过订阅来学习所需的技术技能。他们现在还提供 *40%的折扣*，使用 code GETHIRED，所以这是加入 Codecademy 的好时机。****
+他们也有一个 [**Codecademy PRO**](https://bit.ly/codecademypro) 计划，在年度计划中每月只需 15.9 美元就可以访问他们所有的互动课程。如果你喜欢互动学习，那么你可以通过订阅来学习所需的技术技能。他们现在还提供 *40%的折扣*，使用 code GETHIRED，所以这是加入 Codecademy 的好时机。
 
-****<https://bit.ly/codecademypro> **** 
+<https://bit.ly/codecademypro>
 
-## ****5.[网络终端](https://www.webminal.org/)****
+## 5. [网络终端](https://www.webminal.org/)
 
-****这是另一个在线学习 Linux 的好网站。这提供了免费的 GNU/Linux 在线终端和编程 IDE，您可以在其中键入 Linux 命令并查看输出。****
+这是另一个在线学习 Linux 的好网站。这提供了免费的 GNU/Linux 在线终端和编程 IDE，您可以在其中键入 Linux 命令并查看输出。
 
-****使用 webminal，你可以练习 Linux 命令，编写 bash 脚本，创建和访问 MySQL 表，[学习 Python](/javarevisited/10-free-python-tutorials-and-courses-from-google-microsoft-and-coursera-for-beginners-96b9ad20b4e6) ， [C](/javarevisited/10-best-c-programming-courses-for-beginners-2c2c1f6bcb12) ， [Ruby](/javarevisited/10-best-ruby-on-rails-courses-for-beginners-dca4d66e9f7b) ， [Jav](/javarevisited/the-java-programmer-roadmap-f9db163ef2c2?source=post_recirc---------0----------------------------) a， [Rust 编程](/javarevisited/7-best-rust-programming-courses-and-books-for-beginners-in-2021-2ed2311af46c)并使用虚拟平台执行基本的 root 用户任务。****
+使用 webminal，你可以练习 Linux 命令，编写 bash 脚本，创建和访问 MySQL 表，[学习 Python](/javarevisited/10-free-python-tutorials-and-courses-from-google-microsoft-and-coursera-for-beginners-96b9ad20b4e6) ， [C](/javarevisited/10-best-c-programming-courses-for-beginners-2c2c1f6bcb12) ， [Ruby](/javarevisited/10-best-ruby-on-rails-courses-for-beginners-dca4d66e9f7b) ， [Jav](/javarevisited/the-java-programmer-roadmap-f9db163ef2c2?source=post_recirc---------0----------------------------) a， [Rust 编程](/javarevisited/7-best-rust-programming-courses-and-books-for-beginners-in-2021-2ed2311af46c)并使用虚拟平台执行基本的 root 用户任务。
 
-****借助*“网络游戏”*功能，您可以观看视频(而不是阅读文档)并进行练习。****
+借助*“网络游戏”*功能，您可以观看视频(而不是阅读文档)并进行练习。
 
-****根据他们的网站，来自 128 个不同国家的 142000 多名用户练习了超过 1094 万条命令，准确地说是执行了 10940282 条命令！！！****
+根据他们的网站，来自 128 个不同国家的 142000 多名用户练习了超过 1094 万条命令，准确地说是执行了 10940282 条命令！！！
 
-****总的来说，这是一个独特的免费在线学习平台，在这里你可以学习 Linux，练习，玩 Linux，并与其他 Linux 用户互动。****
+总的来说，这是一个独特的免费在线学习平台，在这里你可以学习 Linux，练习，玩 Linux，并与其他 Linux 用户互动。
 
-****![](img/a97ed76d7467a11f4d13c368998fda18.png)****
+![](img/a97ed76d7467a11f4d13c368998fda18.png)
 
-## ****6.复数视野【免费试用】****
+## 6. 复数视野【免费试用】
 
-****这是另一个你可以用来学习包括 Linux 在内的任何技能的在线门户或网站。与 Udemy 不同，Pluralsight 是一个基于订阅的网站，Udemy 是一个可以找到免费和付费在线课程的市场。****
+这是另一个你可以用来学习包括 Linux 在内的任何技能的在线门户或网站。与 Udemy 不同，Pluralsight 是一个基于订阅的网站，Udemy 是一个可以找到免费和付费在线课程的市场。
 
-****你需要一个 Pluralsight 会员来观看他们的课程，这不是免费的，但是他们确实提供了一个 [**10 天的免费试用**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial) ，你可以用它来免费观看任何 Linux 课程。Pluralsight 拥有 7000 多门在线课程，可以学习任何技术和编程技能****
+你需要一个 Pluralsight 会员来观看他们的课程，这不是免费的，但是他们确实提供了一个 [**10 天的免费试用**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial) ，你可以用它来免费观看任何 Linux 课程。Pluralsight 拥有 7000 多门在线课程，可以学习任何技术和编程技能
 
-****对于经常需要学习新的编程语言、库和框架的程序员来说，这非常有用。****
 
-****如果你拥有 Pluralsight 会员资格，并且想学习 Linux，我强烈推荐你观看[**Linux 命令行入门**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fgetting-started-linux-command-line) 在线课程。****
 
-****[![](img/5e0c65f426082bc808aaa69626641347.png)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fgetting-started-linux-command-line)****
+对于经常需要学习新的编程语言、库和框架的程序员来说，这非常有用。
 
-****这是在线学习 Linux 的一个很棒的课程。如果您没有 Pluralsight 会员资格，请使用他们的 [***10 天免费试用***](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial) 免费观看本课程。****
+如果你拥有 Pluralsight 会员资格，并且想学习 Linux，我强烈推荐你观看[Linux 命令行入门](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fgetting-started-linux-command-line)在线课程。
 
-****<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial>  
+[![](img/5e0c65f426082bc808aaa69626641347.png)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fgetting-started-linux-command-line)
+
+这是在线学习 Linux 的一个很棒的课程。如果您没有 Pluralsight 会员资格，请使用他们的[10 天免费试用](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial)免费观看本课程。
+
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial>
 
 以上是关于在线学习 Linux 的一些最好的网站。我已经尝试包括不同种类的资源，如在线课程和网站，你可以在那里练习 Linux 命令，但这个列表绝不是完整的，如果你遇到其他学习 Linux 命令的好网站，请分享。
 
 总结一下，我建议你参加 Udemy 上的一个好课程，学习理论和例子，然后在 CodeCademy 上练习 Linux 命令。
 
-如果你在 Windows 上工作，你也可以使用 [Docker](/javarevisited/top-5-free-courses-to-learn-docker-for-beginners-best-of-lot-b2b1ad2b98ad?source=collection_home---4------2-----------------------) 、CygWin，甚至 Git 命令行工具和客户端，比如 Git bash，在你的 Windows 机器上练习一些 Linux 命令。
+如果你在 Windows 上工作，你也可以使用 [Docker](/javarevisited/top-5-free-courses-to-learn-docker-for-beginners-best-of-lot-b2b1ad2b98ad?source=collection_home---4------2-----------------------)、CygWin，甚至 Git 命令行工具和客户端，比如 Git bash，在你的 Windows 机器上练习一些 Linux 命令。
 
 您可能喜欢的其他**编程文章和教程**
 
-*   [免费学习 Java 编码的前 5 名](https://javarevisited.blogspot.com/2018/07/top-5-websites-to-learn-coding-in-java.html)
-*   [5 个免费学习 Python 的网站](https://javarevisited.blogspot.com/2019/09/5-websites-to-learn-python-for-free.html)
-*   [2023 年你能学会的 10 种编程语言](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html)
-*   [每个 Java 开发者都应该知道的 10 个工具](http://www.java67.com/2018/04/10-tools-java-developers-should-learn.html)
-*   [10 个免费学习 Git 和 Github 的网站](https://javarevisited.blogspot.com/2019/05/10-free-websites-to-learn-git-online.html)
-*   [完整的 DevOps 工程师路线图](/hackernoon/the-2018-devops-roadmap-31588d8670cb)
-*   [程序员 50+数据结构面试问题](/hackernoon/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0)
-*   [5 个免费学习数据结构和算法的网站](https://javarevisited.blogspot.com/2017/02/5-websites-for-practicing-data-structure-algorithms-for-coding-interviews.html)
-*   [Java 和 Web 开发人员应该学习的 10 个框架](http://javarevisited.blogspot.sg/2018/01/10-frameworks-java-and-web-developers-should-learn.html)
-*   [5 个免费在线学习 SQL 的网站](https://javarevisited.blogspot.com/2015/06/5-websites-to-learn-sql-online-for-free.html)
-*   [完整的 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
-*   Java 程序员应该在 2023 年学会的 10 件事
-*   [21 个免费在线学习编码的网站](https://www.java67.com/2018/06/21-websites-to-learn-how-to-code-for.html)
+* [免费学习 Java 编码的前 5 名](https://javarevisited.blogspot.com/2018/07/top-5-websites-to-learn-coding-in-java.html)
+* [5 个免费学习 Python 的网站](https://javarevisited.blogspot.com/2019/09/5-websites-to-learn-python-for-free.html)
+* [2023 年你能学会的 10 种编程语言](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html)
+* [每个 Java 开发者都应该知道的 10 个工具](http://www.java67.com/2018/04/10-tools-java-developers-should-learn.html)
+* [10 个免费学习 Git 和 Github 的网站](https://javarevisited.blogspot.com/2019/05/10-free-websites-to-learn-git-online.html)
+* [完整的 DevOps 工程师路线图](/hackernoon/the-2018-devops-roadmap-31588d8670cb)
+* [程序员 50+数据结构面试问题](/hackernoon/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0)
+* [5 个免费学习数据结构和算法的网站](https://javarevisited.blogspot.com/2017/02/5-websites-for-practicing-data-structure-algorithms-for-coding-interviews.html)
+* [Java 和 Web 开发人员应该学习的 10 个框架](http://javarevisited.blogspot.sg/2018/01/10-frameworks-java-and-web-developers-should-learn.html)
+* [5 个免费在线学习 SQL 的网站](https://javarevisited.blogspot.com/2015/06/5-websites-to-learn-sql-online-for-free.html)
+* [完整的 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
+* Java 程序员应该在 2023 年学会的 10 件事
+* [21 个免费在线学习编码的网站](https://www.java67.com/2018/06/21-websites-to-learn-how-to-code-for.html)
 
 感谢您阅读本文。如果你喜欢这个*在线学习 Linux 的最佳网站列表*，那么请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
-如果你不介意花几块钱去学习像 Linux 这样有价值且受欢迎的技能，它将会为你服务很长一段时间，那么我强烈推荐你去看看 Medium 上的 [**初学者最佳 Linux 课程**](/javarevisited/7-best-linux-courses-for-developers-cloud-engineers-and-devops-in-2021-7415314087e1) 列表，它包含了程序员、开发人员和 DevOps 工程师的最佳 Linux 课程。
+如果你不介意花几块钱去学习像 Linux 这样有价值且受欢迎的技能，它将会为你服务很长一段时间，那么我强烈推荐你去看看 Medium 上的[初学者最佳 Linux 课程](/javarevisited/7-best-linux-courses-for-developers-cloud-engineers-and-devops-in-2021-7415314087e1)列表，它包含了程序员、开发人员和 DevOps 工程师的最佳 Linux 课程。
 
-<https://www.java67.com/2020/07/top-5-courses-to-learn-linux-in-depth.html> ****
+<https://www.java67.com/2020/07/top-5-courses-to-learn-linux-in-depth.html>

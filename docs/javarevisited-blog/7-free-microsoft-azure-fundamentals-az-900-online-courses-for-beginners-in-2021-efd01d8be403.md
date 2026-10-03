@@ -1,4 +1,5 @@
-# 2023 年 7 个最佳免费微软 Azure 基础(AZ-900)初学者在线课程
+
+# 2023 年 7 个最佳免费微软 Azure 基础（AZ-900）初学者在线课程
 
 > 原文：<https://medium.com/javarevisited/7-free-microsoft-azure-fundamentals-az-900-online-courses-for-beginners-in-2021-efd01d8be403?source=collection_archive---------0----------------------->
 
@@ -6,7 +7,7 @@
 
 [![](img/cf99b973e56def3aa934792658b7516f.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faz900-azure%2F)
 
-大家好，如果你正在准备 AZ-900 认证或 Azure 基础考试，并寻找免费的在线课程开始准备，那么你来对地方了。
+大家好，如果你正在准备 `AZ-900` 认证或 Azure 基础考试，并寻找免费的在线课程开始准备，那么你来对地方了。
 
 在过去，我已经分享了免费和付费课程来学习 [AWS](https://www.java67.com/2018/05/top-5-amazon-web-services-or-aws-courses-to-learn-online.html) 、 [Azure](https://javarevisited.blogspot.com/2020/09/top-5-courses-to-learn-microsoft-azure.html#axzz6XbrCHCk9) 和 [Google Cloud](https://javarevisited.blogspot.com/2019/07/top-5-google-cloud-platform-gcp-courses-certifications-online.html) 以及[最佳 AZ-900 课程](/javarevisited/5-best-azure-fundamentals-courses-to-pass-az-900-certification-exam-in-2020-9e602aea035d)和[实践测试](https://javarevisited.blogspot.com/2020/02/top-5-AZ-900-exam-Azure-Fundamentals-certification-practice-tests-and-mock-exams-to.html)，今天，我将分享通过 Azure 基础考试的*免费 AZ-900 课程*。
 
@@ -22,7 +23,7 @@
 
 此外，如果你不介意花几块钱学习 Azure 和云计算等有用的技能，并寻找更全面和深入的课程来学习 Azure 服务，那么我也建议你在 Udemy 上查看 Scott Duffy 的[**AZ-900:Microsoft Azure Fundamentals 考试准备**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faz900-azure%2F) **课程。**这是准备 2023 年 AZ-900 认证考试最好的在线课程之一。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faz900-azure%2F>  
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faz900-azure%2F>
 
 # 2023 年通过 Azure 基础 AZ-900 考试的 7 门免费课程
 
@@ -30,9 +31,9 @@
 
 这些在线课程由专家创建，受到成千上万开发者的信任。你也可以加入他们在线学习，成为一名 Azure 认证专家。记住，它们是完全免费的，你不需要支付任何费用。
 
-## 1. [AZ-900 微软 Azure 基础](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faz-900-azure-tutorial%2F)(免费 Udemy 课程)
+## 1. [AZ-900 微软 Azure 基础](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faz-900-azure-tutorial%2F)（免费 Udemy 课程）
 
-如果你时间紧迫，需要一些东西来帮助你在有限的时间内准备 Azure 基础 AZ-900 考试，那么这个课程就是为你准备的。这是一个 2 小时长的视频课程，可以在 Udemy 上看到，由马鲁蒂·马克瓦纳创建，到目前为止，已经有超过 6，000 名学生注册了这个课程。
+如果你时间紧迫，需要一些东西来帮助你在有限的时间内准备 Azure 基础 AZ-900 考试，那么这个课程就是为你准备的。这是一个 2 小时长的视频课程，可以在 Udemy 上看到，由马鲁蒂·马克瓦纳创建，到目前为止，已经有超过 6,000 名学生注册了这个课程。
 
 在本课程中，您将了解 Azure 平台的基础知识，以及如何在日常项目中使用它。除此之外，在本课程中，讲师将简要介绍其他 Azure 概念，如应用的安全性和部署。
 
@@ -44,7 +45,7 @@
 
 [![](img/5a5f09c019f5c6811e651b9e166fa4c8.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faz-900-azure-tutorial%2F)
 
-## 2.[微软 Azure 概念](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flinux-academy-microsoft-azure-concepts%2F) (Udemy 免费课程)
+## 2. [微软 Azure 概念](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flinux-academy-microsoft-azure-concepts%2F)（Udemy 免费课程）
 
 这是另一门免费课程，对学习基本的微软 Azure 概念很有帮助，对准备 [AZ-900 考试](https://javarevisited.blogspot.com/2020/04/how-to-crack-microsoft-azure-fundamentals-certification-az-900-exam.html)和[云计算](/javarevisited/5-best-cloud-computing-courses-to-learn-in-2020-f5f091159401)的任何人来说都是完美的。
 
@@ -52,12 +53,12 @@
 
 这个课程是严格的视觉化和概念化。您将获得云及其服务的概念知识，这将有助于您进一步学习高级功能，这对于通过 [AZ-900 认证](https://javarevisited.blogspot.com/2020/02/top-5-AZ-900-exam-Azure-Fundamentals-certification-practice-tests-and-mock-exams-to.html)考试非常重要。
 
-以下是您将在本课程中学到的重要知识:
+以下是您将在本课程中学到的重要知识：
 
-*   云简介
-*   蔚蓝色和云
-*   azure 服务简介
-*   应用和解释
+- 云简介
+- 蔚蓝色和云
+- azure 服务简介
+- 应用和解释
 
 这个免费的在线 azure 课程通过为你提供参考框架学习创造了奇迹，这对于解决高级 Azure 学习中的复杂问题非常有效。
 
@@ -67,7 +68,7 @@
 
 此外，它还提供额外的功能和动手实验室的访问卡，以增强学习效果。课程会定期更新，因此您的所有疑问都会得到解答。
 
-## 3.[微软 Azure 基础(Pluralsight 课程)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fazure-fundamentals)
+## 3. [微软 Azure 基础（Pluralsight 课程）](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fazure-fundamentals)
 
 如果你对实用的方法感兴趣，那么这个课程就是为你准备的。它可以在 Pluralsight 网站上获得，虽然它是一个付费平台，但使用 10 天的试用选项，您可以快速完成这门课程。
 
@@ -79,23 +80,23 @@
 
 [![](img/5faf3e0c91e09e533757cae5144b920a.png)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fazure-fundamentals)
 
-因此，如果你正在寻找一个简单易学和实用的课程，那么这个课程是给你的。顺便说一下，你需要一个 [Pluralsight 会员](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn)才能加入这个课程，费用大约是每月 29 美元或每年 299 美元(14%的折扣)。
+因此，如果你正在寻找一个简单易学和实用的课程，那么这个课程是给你的。顺便说一下，你需要一个 [Pluralsight 会员](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn)才能加入这个课程，费用大约是每月 29 美元或每年 299 美元（14% 的折扣）。
 
 我向所有程序员强烈推荐这个订阅，因为它提供了超过 7000 个在线课程的即时访问，以学习任何技术技能。或者，你也可以使用他们的 [**10 天免费试用**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 免费观看本课程。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>
 
-## 4.【Azure 入门(Coursera 免费课程)
+## 4. [Azure 入门（Coursera 免费课程）](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fcloud-azure-intro)
 
 如果你刚刚开始使用 Azure，并且想要详细地了解一切，那么这个 Coursera 课程是你的完美选择。该课程目前已有超过 9000 名学生注册，在 [Coursera](/javarevisited/18-coursera-courses-you-can-join-in-2020-to-learn-from-the-worlds-top-tech-companies-google-74af46967d1e?source=collection_home---4------0-----------------------) 上被评为畅销课程。
 
-这是一个 20 小时长的视频课程，在整个课程中，讲师会给学生分配不同的任务，只有当他们按时完成这些任务时，他们才能观看下一个视频。尽管这些任务有灵活的截止日期，但你不能跳过它们。在本课程中，您将学到以下内容:
+这是一个 20 小时长的视频课程，在整个课程中，讲师会给学生分配不同的任务，只有当他们按时完成这些任务时，他们才能观看下一个视频。尽管这些任务有灵活的截止日期，但你不能跳过它们。在本课程中，您将学到以下内容：
 
-*   Azure 简介
-*   在 Azure 上部署虚拟机
-*   Azure 的安全性
-*   Azure 网络的部署
-*   防火墙和资源配置
+- Azure 简介
+- 在 Azure 上部署虚拟机
+- Azure 的安全性
+- Azure 网络的部署
+- 防火墙和资源配置
 
 通过本课程，你将有各种概念的实际实施，其余的将在简单而迷人的图形的帮助下教授。
 
@@ -107,9 +108,9 @@
 
 它每年花费大约 399 美元，但它完全值得你的钱，因为你可以获得无限的证书。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
-## 5. [AZ-900 备考:微软 Azure 基础(免费 CloudCademy 课程)](https://cloudacademy.com/learning-paths/az-900-exam-preparation-microsoft-azure-fundamentals-524/)
+## 5. [AZ-900 备考：微软 Azure 基础（免费 CloudCademy 课程）](https://cloudacademy.com/learning-paths/az-900-exam-preparation-microsoft-azure-fundamentals-524/)
 
 如果你有足够的时间，并能参加深入的解释性视频，那么这个 cloudacademy.com 课程是给你的。在这个 **6 小时长的**视频课程中，你将了解与 Azure 平台相关的每一个元素。
 
@@ -119,13 +120,15 @@
 
 ![](img/753e1ed33319335e5c4618e15102c8b0.png)
 
-## 6.微软 Azure 基础认证课程(AZ-900)(免费代码营)
+## 6. 微软 Azure 基础认证课程（AZ-900）（免费代码营）
 
 这是另一个准备微软 Azure 基础认证的免费资源。由领先的 AWS 和云专家 Andrew Brown 创建的这个 **3 小时课程**非常适合快速准备 Azure 基础认证。
 
 Azure 基础知识考试是证明云概念、核心 Azure 服务、Azure 定价、SLA 和生命周期以及云安全、隐私、合规性和信任的基础知识的机会。在本课程中，您将了解所有这些内容。
 
-**这里是免费观看本课程的 youtube 链接** :-
+**这里是免费观看本课程的 youtube 链接**：-
+
+
 
 ## 7. [AZ-900 Prep — Azure 虚拟机(VMs)大师班(免费 Udemy 课程)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fazure-virtual-machines-master-class%2F)
 
@@ -152,7 +155,7 @@ Azure 基础知识考试是证明云概念、核心 Azure 服务、Azure 定价�
 
 如果你遇到一些没有列在这里但能提供高质量信息的课程，请告诉我。
 
-面向 IT 专业人员和 Java 程序员的其他 **Azure** **认证资源**
+## 面向 IT 专业人员和 Java 程序员的其他 **Azure** **认证资源**
 
 *   [破解 Azure 开发人员助理考试的前 5 门课程](https://javarevisited.blogspot.com/2020/06/top-5-course-to-crack-Microsoft-Azure-Developer-Certification-Exam-AZ-203.html)
 *   [如何破解 AWS 解决方案架构师考试](https://javarevisited.blogspot.com/2019/08/how-to-crack-aws-certified-solution-architect-exam.html)
@@ -180,4 +183,4 @@ Azure 基础知识考试是证明云概念、核心 Azure 服务、Azure 定价�
 
 **P.S.** —如果你想在第一次尝试中通过微软 Azure 平台，并寻找更全面和深入的课程来学习 Azure 服务，那么我也建议你在 Udemy 上查看 [**AZ-900:微软 Azure 基础考试准备**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faz900-azure%2F) **课程。是准备 2023 年 AZ-900 认证考试最好的在线课程。**
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faz900-azure%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faz900-azure%2F>

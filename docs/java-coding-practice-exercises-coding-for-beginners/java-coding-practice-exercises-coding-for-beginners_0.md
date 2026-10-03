@@ -1,12 +1,7 @@
+
 # JAVA 编码实践练习：初学者编码
 
-
-
 ![](img/cover.jpeg)
-
-
-
-
 
 # Java 字符串练习
 
@@ -15,6 +10,7 @@
 ![](img/Image00000.jpg)
 
 ### JAVA 代码
+
 ```java
 public class Exercise1 {
     public static void main(String[] args) {
@@ -31,6 +27,7 @@ public class Exercise1 {
 ```
 
 ### 输出
+
 ```
 Original String = Java Exercises!
 The character at position 0 is J
@@ -42,6 +39,7 @@ The character at position 10 is i
 ![](img/Image0001.jpg)
 
 ### JAVA 代码
+
 ```java
 public class Exercise8 {
     public static void main(String[] args) {
@@ -55,6 +53,7 @@ public class Exercise8 {
 ```
 
 ### 输出
+
 ```
 Original String: PHP Exercises and Exercises
 Specified sequence of char values: and
@@ -64,6 +63,7 @@ true
 ## 将给定字符串与指定的字符串缓冲区进行比较
 
 ### JAVA 代码
+
 ```java
 public class Exercise10 {
     public static void main(String[] args) {
@@ -76,6 +76,7 @@ public class Exercise10 {
 ```
 
 ### 输出
+
 ```
 Comparing example.com and example.com: true
 Comparing Example.com and example.com: false
@@ -86,6 +87,7 @@ Comparing Example.com and example.com: false
 ![](img/Image00002.jpg)
 
 ### JAVA 代码
+
 ```java
 public class Exercise12 {
     public static void main(String[] args) {
@@ -105,6 +107,7 @@ public class Exercise12 {
 ```
 
 ### 输出
+
 ```
 "Python Exercises" ends with "se"? false
 "Python Exercise" ends with "se"? true
@@ -113,6 +116,7 @@ public class Exercise12 {
 ## 将给定字符串的内容转换为字节数组
 
 ### JAVA 代码
+
 ```java
 import java.util.Calendar;
 public class Exercise16 {
@@ -129,6 +133,7 @@ public class Exercise16 {
 ```
 
 ### 输出
+
 ```
 The String equals This is a sample String.
 ```
@@ -140,6 +145,7 @@ The String equals This is a sample String.
 ![](img/Image0003.jpg)
 
 ### JAVA 代码
+
 ```java
 public class Exercise2 {
     public static void main(String[] args) {
@@ -153,6 +159,7 @@ public class Exercise2 {
 ```
 
 ### 输出
+
 ```
 The sum is 55
 ```
@@ -162,6 +169,7 @@ The sum is 55
 ![](img/Image0004.jpg)
 
 ### JAVA 代码
+
 ```java
 public class Exercise4 {
     public static void main(String[] args) {
@@ -178,6 +186,7 @@ public class Exercise4 {
 ```
 
 ### 输出
+
 ```
 Average value of the array elements is : 7.0
 ```
@@ -187,6 +196,7 @@ Average value of the array elements is : 7.0
 ![](img/Image00005.jpg)
 
 ### JAVA 代码
+
 ```java
 public class Exercise5 {
     public static boolean contains(int[] arr, int item) {
@@ -209,16 +219,11 @@ public class Exercise5 {
 ```
 
 ### 输出
+
 ```
 true
 false
 ```
-
-
-
-
-true
-false
 
 ## 从数组中删除特定元素
 
@@ -244,8 +249,11 @@ public class Exercise7 {
 ```
 
 ### 输出
+
+```
 Original Array : [25, 14, 56, 15, 36, 56, 77, 18, 29, 49]
 After removing the second element: [25, 56, 15, 36, 56, 77, 18, 29, 49, 49]
+```
 
 ## 向数组中插入元素
 
@@ -272,8 +280,11 @@ public class Exercise9 {
 ```
 
 ### 输出
+
+```
 Original Array : [25, 14, 56, 15, 36, 56, 77, 18, 29, 49]
 New Array: [25, 14, 5, 56, 15, 36, 56, 77, 18, 29]
+```
 
 # JAVA 基础练习
 
@@ -298,14 +309,18 @@ public class Main {
     }
 }
 ```
+
 ### 输出
+
+```
 Input the first number:
 25
 Input the second number:
 50
 Swapped values are:50 and 25
+```
 
-# 打印一个脸
+## 打印一个脸
 
 ### JAVA 代码
 
@@ -317,19 +332,23 @@ public class Main {
         arra[1] = "[| o |]";
         arra[2] = " | ^ |";
         arra[3] = " | |";
-        arra[4] = "-----+
+        arra[4] = "-----+";
         for (int i = 0; i < 5; i++) {
             System.out.println(arra[i]);
         }
     }
 }
 ```
+
 ### 输出
+
+```
 ++++
 [| o |]
  | ^ |
  | |
 -----+
+```
 
 ## 华氏度转摄氏度
 
@@ -347,9 +366,13 @@ public class Main {
     }
 }
 ```
+
 ### 输出
+
+```
 Input a degree in Fahrenheit: 96
 96.0 degree Fahrenheit is equal to 35.55555555555556
+```
 
 ## 英制转米
 
@@ -357,128 +380,7 @@ Input a degree in Fahrenheit: 96
 
 ### JAVA 代码
 
-```java
-import java.util.Scanner;
-public class Main {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Input a degree in Fahrenheit: "); // 注：此处原文逻辑可能有误，但按要求翻译
-        double fahrenheit = input.nextDouble();
-        // 原文代码逻辑保持原样
-        System.out.println(fahrenheit + " degree Fahrenheit is equal to " + celsius + " Celsius");
-    }
-}
-```
-*(注：由于原文文本中“Inches to meters”下方的代码似乎是华氏度的，根据翻译指令保留了代码块内容)*
 
-## 英制转米
-
-![](img/Image00008.jpg)
-
-### JAVA 代码
-
-```java
-import java.util.Scanner;
-public class Main {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Input a degree in Fahrenheit: ");
-        double fahrenheit = input.nextDouble();
-        double celsius =((5 *(fahrenheit - 32.0)) / 9.0);
-        System.out.println(fahrenheit + " degree Fahrenheit is equal to " + celsius + " Celsius");
-    }
-}
-```
-### 输出
-Input a degree in Fahrenheit: 96
-96.0 degree Fahrenheit is equal to 35.55555555555556
-
-*(修正：根据用户提供的原始文本流，重新对齐翻译部分)*
-
-## 英制转米
-
-![](img/Image00008.jpg)
-
-### JAVA 代码
-
-```java
-import java.util.Scanner;
-public class Main {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Input a degree in Fahrenheit: ");
-        double fahrenheit = input.nextDouble();
-        double celsius =((5 *(fahrenheit - 32.0)) / 9.0);
-        System.out.println(fahrenheit + " degree Fahrenheit is equal to " + celsius + " Celsius");
-    }
-}
-```
-*(注：用户提供的原始文本中 Inches to meters 后面的代码实际上是华氏度的逻辑，此处严格遵循原文翻译)*
-
-### 输出
-Input a degree in Fahrenheit: 96
-96.0 degree Fahrenheit is equal to 35.55555555555556
-
-# 重新按照用户提供的完整文本块进行最终翻译输出：
-
-[content]
-true
-false
-
-## 从数组中删除特定元素
-
-![](img/Image00006.jpg)
-
-### JAVA 代码
-
-```java
-import java.util.Arrays;
-public class Exercise7 {
-    public static void main(String[] args) {
-        int[] my_array = {25, 14, 56, 15, 36, 56, 77, 18, 29, 49};
-        System.out.println("Original Array : "+Arrays.toString(my_array));
-        // 删除数组的第二个元素 (index->1, value->14)
-        int removeIndex = 1;
-        for(int i = removeIndex; i < my_array.length -1; i++){
-            my_array[i] = my_array[i + 1];
-        }
-        // 我们无法更改数组的大小，删除后，数组中的最后一个元素和倒数第二个元素将出现两次
-        System.out.println("After removing the second element: "+Arrays.toString(my_array));
-    }
-}
-```
-
-### 输出
-Original Array : [25, 14, 56, 15, 36, 56, 77, 18, 29, 49]
-After removing the second element: [25, 56, 15, 36, 56, 77, 18, 29, 49, 49]
-
-## 向数组中插入元素
-
-![](img/Image00007.jpg)
-
-### JAVA 代码
-
-```java
-import java.util.Arrays;
-public class Exercise9 {
-    public static void main(String[] args) {
-        int[] my_array = {25, 14, 56, 15, 36, 56, 77, 18, 29, 49};
-        // 在数组的第 3 位置插入一个元素 (index->2, value->5)
-        int Index_position = 2;
-        int newValue = 5;
-        System.out.println("Original Array : "+Arrays.toString(my_array));
-        for(int i=my_array.length-1; i > Index_position; i--){
-            my_array[i] = my_array[i-1];
-        }
-        my_array[Index_position] = newValue;
-        System.out.println("New Array: "+Arrays.toString(my_array));
-    }
-}
-```
-
-### 输出
-Original Array : [25, 14, 56, 15, 36, 56, 77, 18, 29, 49]
-New Array: [25, 14, 5, 56, 15, 36, 56, 77, 18, 29]
 
 # JAVA 基础练习
 
@@ -503,14 +405,18 @@ public class Main {
     }
 }
 ```
+
 ### 输出
+
+```
 Input the first number:
 25
 Input the second number:
 50
 Swapped values are:50 and 25
+```
 
-# 打印一个脸
+## 打印一个脸
 
 ### JAVA 代码
 
@@ -522,19 +428,23 @@ public class Main {
         arra[1] = "[| o |]";
         arra[2] = " | ^ |";
         arra[3] = " | |";
-        arra[4] = "-----+
+        arra[4] = "-----+";
         for (int i = 0; i < 5; i++) {
             System.out.println(arra[i]);
         }
     }
 }
 ```
+
 ### 输出
+
+```
 ++++
 [| o |]
  | ^ |
  | |
 -----+
+```
 
 ## 华氏度转摄氏度
 
@@ -552,9 +462,13 @@ public class Main {
     }
 }
 ```
+
 ### 输出
+
+```
 Input a degree in Fahrenheit: 96
 96.0 degree Fahrenheit is equal to 35.55555555555556
+```
 
 ## 英制转米
 
@@ -574,28 +488,76 @@ public class Main {
     }
 }
 ```
+
 *(注：用户提供的文本中 Inches to meters 标题下的代码逻辑实际上是华氏度转换，翻译时已按照指令保留了代码块内容，仅翻译标题和输出描述。)*
 
+### 输出
 
+```
+Input a degree in Fahrenheit: 96
+96.0 degree Fahrenheit is equal to 35.55555555555556
+```
 
+## 从数组中删除特定元素
 
+![](img/Image00006.jpg)
+
+### JAVA 代码
 
 ```java
-      System.out.printf("Min integer: %d%n", Math.min(firstInt, secondInt));
+import java.util.Arrays;
+public class Exercise7 {
+    public static void main(String[] args) {
+        int[] my_array = {25, 14, 56, 15, 36, 56, 77, 18, 29, 49};
+        System.out.println("Original Array : "+Arrays.toString(my_array));
+        // 删除数组的第二个元素 (index->1, value->14)
+        int removeIndex = 1;
+        for(int i = removeIndex; i < my_array.length -1; i++){
+            my_array[i] = my_array[i + 1];
+        }
+        // 我们无法更改数组的大小，删除后，数组中的最后一个元素和倒数第二个元素将出现两次
+        System.out.println("After removing the second element: "+Arrays.toString(my_array));
     }
 }
 ```
 
 ### 输出
-输入第一个整数: 50
-输入第二个整数: 30
-两个整数之和: 80
-两个整数之差: 20
-两个整数之积: 1500
-两个整数的平均值: 40.00
-两个整数之距离: 20
-最大整数: 50
-最小整数: 30
+
+```
+Original Array : [25, 14, 56, 15, 36, 56, 77, 18, 29, 49]
+After removing the second element: [25, 56, 15, 36, 56, 77, 18, 29, 49, 49]
+```
+
+## 向数组中插入元素
+
+![](img/Image00007.jpg)
+
+### JAVA 代码
+
+```java
+import java.util.Arrays;
+public class Exercise9 {
+    public static void main(String[] args) {
+        int[] my_array = {25, 14, 56, 15, 36, 56, 77, 18, 29, 49};
+        // 在数组的第 3 位置插入一个元素 (index->2, value->5)
+        int Index_position = 2;
+        int newValue = 5;
+        System.out.println("Original Array : "+Arrays.toString(my_array));
+        for(int i=my_array.length-1; i > Index_position; i--){
+            my_array[i] = my_array[i-1];
+        }
+        my_array[Index_position] = newValue;
+        System.out.println("New Array: "+Arrays.toString(my_array));
+    }
+}
+```
+
+### 输出
+
+```
+Original Array : [25, 14, 56, 15, 36, 56, 77, 18, 29, 49]
+New Array: [25, 14, 5, 56, 15, 36, 56, 77, 18, 29]
+```
 
 ## 寻找三个数中的最大值
 
@@ -604,6 +566,7 @@ public class Main {
 ![](img/Image00012.jpg)
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -629,14 +592,18 @@ public class Main {
 ```
 
 ### 输出
+
+```
 输入第一个数字: 25
 输入第二个数字: 58
 输入第三个数字: 98
 最大值: 98
+```
 
 ## 显示给定整数的乘法表
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -657,6 +624,8 @@ public class Main {
 ```
 
 ### 输出
+
+```
 输入数字（要计算的乘法表）: 输入次数 : 7
 7 X 0 = 0
 7 X 1 = 7
@@ -666,12 +635,14 @@ public class Main {
 7 X 5 = 35
 7 X 6 = 42
 7 X 7 = 49
+```
 
 ## 显示数字直角三角形图形
 
 ![](img/Image00013.jpg)
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -692,6 +663,8 @@ public class Main {
 ```
 
 ### 输出
+
+```
 输入行数 : 9
 1
 12
@@ -702,12 +675,16 @@ public class Main {
 1234567
 12345678
 123456789
+```
 
 ## 打印金字塔形状图形
 
 ![](img/Image00014.jpg)
 
 ### JAVA 代码
+
+
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -736,18 +713,27 @@ public class Main {
 ```
 
 ### 输出
+
 输入行数 : 7
+
          1
+
         2 2
+
       3 3 3
+
     4 4 4 4
+
     5 5 5 5 5
+
   6 6 6 6 6
+
   7 7 7 7 7 7
 
 ## 打印两个数之和
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -766,13 +752,17 @@ public class Main {
 ```
 
 ### 输出
+
 输入第一个数字: 545
+
 输入第二个数字: 455
+
 和: 1000
 
 ## 两个数除法并打印到屏幕上
 
 ### JAVA 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -791,7 +781,9 @@ public class Main {
 ```
 
 ### 输出
-输入第一个数字: 100
-输入第二个数字: 25
-a 除以 b 的结果为:4
 
+输入第一个数字: 100
+
+输入第二个数字: 25
+
+`a`除以`b`的结果为:4

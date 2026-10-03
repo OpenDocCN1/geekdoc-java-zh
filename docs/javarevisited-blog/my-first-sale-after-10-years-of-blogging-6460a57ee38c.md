@@ -1,3 +1,4 @@
+
 # 我写博客 10 年后的第一笔销售
 
 > 原文：<https://medium.com/javarevisited/my-first-sale-after-10-years-of-blogging-6460a57ee38c?source=collection_archive---------1----------------------->
@@ -8,7 +9,7 @@
 
 我写博客 10 年后的第一笔销售
 
-朋友们，你们好，我非常兴奋地宣布，我昨天拿到了我的第一笔销售。虽然我已经写了 10 年的博客，但我从未真正卖出过任何东西，没有任何书、课程或数码产品。终于，现在我有了我的书— [**在@Gumroad 上预售的 Java 访谈**](https://gumroad.com/l/QqjGH) ，并且拿到了我的第一笔销售(预购)。
+朋友们，你们好，我非常兴奋地宣布，我昨天拿到了我的第一笔销售。虽然我已经写了 10 年的博客，但我从未真正卖出过任何东西，没有任何书、课程或数码产品。终于，现在我有了我的书——[**在@Gumroad 上预售的 Java 访谈**](https://gumroad.com/l/QqjGH)，并且拿到了我的第一笔销售（预购）。
 
 破解 Java 面试并不容易，其中一个主要原因是 Java 非常庞大。要成为一名优秀的 Java 开发人员，需要掌握很多概念和 API。
 
@@ -20,6 +21,6 @@
 
 作为一名 Java 开发人员，这是我能给你的最重要的提示。永远记住，你的答案决定面试，这些问题会告诉你如何让面试官了解你的强项。
 
-如果你对这本书感兴趣，你可以在 Gumroad **上以特价**$ 9.9**——**[**搜索 Java 访谈**](https://gumroad.com/l/QqjGH)**】**
+如果你对这本书感兴趣，你可以在 Gumroad 上以特价 **$9.9**——[**搜索 Java 访谈**](https://gumroad.com/l/QqjGH) 购买。
 
-我非常感谢独立黑客社区和你们所有人，我在 Twitter 和 Medium for inspiration 上的读者，特别是丹尼尔·瓦萨洛，他的 [**每个人都可以建立一个 Twitter 受众**](https://gumroad.com/a/703100019/PBkrO) 课程和推文激励我努力创作自己的书。免责声明-我也是丹尼尔的 AWS 书籍和 Twitter 课程的会员。
+我非常感谢独立黑客社区和你们所有人，我在 Twitter 和 Medium for inspiration 上的读者，特别是丹尼尔·瓦萨洛，他的 [**每个人都可以建立一个 Twitter 受众**](https://gumroad.com/a/703100019/PBkrO) 课程和推文激励我努力创作自己的书。免责声明——我也是丹尼尔的 AWS 书籍和 Twitter 课程的会员。

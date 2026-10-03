@@ -1,3 +1,4 @@
+
 # 教程：入门指南
 
 > 原文：[`docs.oracle.com/javase/tutorial/getStarted/index.html`](https://docs.oracle.com/javase/tutorial/getStarted/index.html)

@@ -1,14 +1,15 @@
+
 # Java 11 单文件源代码
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-single-file-source-code>
 
-## 1。简介
+## 1. 简介
 
-[JDK 11](https://web.archive.org/web/20220625073334/https://openjdk.java.net/projects/jdk/11/) ，这是 Java SE 11 的实现，2018 年 9 月发布。
+JDK 11，这是 Java SE 11 的实现，2018 年 9 月发布。
 
 在本教程中，我们将介绍启动单文件源代码程序的 Java 11 新特性。
 
-## 2。Java 11 之前
+## 2. Java 11 之前
 
 单文件程序是指程序适合放在单个源文件中的程序。
 
@@ -33,7 +34,7 @@ Hello Java 11!
 
 但是，一步到位的流程不是很好吗？Java 11 试图解决这个问题，它允许我们直接从源代码运行这样的程序。
 
-## 3。启动单文件源代码程序
+## 3. 启动单文件源代码程序
 
 首先，让我们指出，在 Java 11 中，我们仍然可以像以前使用早期 Java 版本一样，编译和运行我们的 Java 程序。
 
@@ -58,20 +59,21 @@ Hello Java 11!
 java WrongName.java
 ```
 
-这将起作用，并将预期的结果打印到控制台。但是，如果我们试图用' javac '命令编译 WrongName.java，我们会得到一个错误消息，因为文件中定义的类名与文件名不一致。
+这将起作用，并将预期的结果打印到控制台。但是，如果我们试图用`javac`命令编译`WrongName.java`，我们会得到一个错误消息，因为文件中定义的类名与文件名不一致。
 
 也就是说，不遵循几乎通用的命名约定仍然是不鼓励的。相应地重命名我们的文件或类应该是正确的做法。
 
-## 4。命令行选项
+## 4. 命令行选项
 
 Java launcher 引入了一个新的`source-file mode`来支持这个特性。如果满足以下两个条件之一，则启用源文件模式:
 
-1.  命令行上的第一项，后跟 JVM 选项，是一个扩展名为`.java`的文件名
-2.  命令行包含`–source`版本选项
+1. 命令行上的第一项，后跟 JVM 选项，是一个扩展名为`.java`的文件名
+
+2. 命令行包含`–source`版本选项
 
 **如果文件不遵循 Java 源文件的标准命名约定，我们需要使用`–source`选项。**我们将在下一节中更多地讨论这样的文件。
 
-**在原始命令行中，任何放在源文件名**后面的参数都会在编译后的类执行时传递给它。
+**在原始命令行中，任何放在源文件名后面的参数都会在编译后的类执行时传递给它。**
 
 例如，我们有一个名为`Addition.java`的文件，其中包含一个`Addition`类。这个类包含一个计算其参数总和的`main()`方法:
 
@@ -85,7 +87,7 @@ $ java Addition.java 1 2 3
 $ java --class-path=/some-path Addition.java 1 2 3
 ```
 
-现在，**如果应用程序类路径中有一个类与我们正在执行的类**同名，我们将得到一个错误。
+现在，**如果应用程序类路径中有一个类与我们正在执行的类同名**，我们会得到一个错误。
 
 例如，假设在开发过程中的某个时刻，我们使用`javac`编译了当前工作目录中的文件:
 
@@ -93,7 +95,7 @@ $ java --class-path=/some-path Addition.java 1 2 3
 $ javac HelloWorld.java
 ```
 
-我们现在在当前工作目录中有两个`HelloWorld.java and HelloWorld.class`:
+我们现在在当前工作目录中有两个`HelloWorld.java`和`HelloWorld.class`:
 
 ```java
 $ ls
@@ -103,13 +105,13 @@ HelloWorld.class  HelloWorld.java
 但是，如果我们尝试使用源文件模式，我们会得到一个错误:
 
 ```java
-$ java HelloWorld.java                                            
+$ java HelloWorld.java
 error: class found on application class path: HelloWorld
 ```
 
-## 5。社邦档案
+## 5. 社邦档案
 
-在 Unix 派生的系统中，如 macOS 和 Linux，使用“#”是很常见的指令来运行可执行脚本文件。
+在 Unix 派生的系统中，如 macOS 和 Linux，使用`#`是很常见的指令来运行可执行脚本文件。
 
 例如，shell 脚本通常以下列开头:
 
@@ -185,8 +187,8 @@ $ ./Addition.java
 
 关于 shebang 文件需要注意的最后一点是，该指令使得文件依赖于平台。该文件无法在 Windows 等平台上使用，因为 Windows 本身不支持它。
 
-## 6。结论
+## 6. 结论
 
 在本文中，我们看到了 Java 11 中引入的新的单文件源代码特性。
 
-像往常一样，代码片段可以在 GitHub 上找到[。](https://web.archive.org/web/20220625073334/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-11)**
+像往常一样，代码片段可以在 GitHub 上找到。

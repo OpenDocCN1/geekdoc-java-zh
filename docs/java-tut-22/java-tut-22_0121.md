@@ -1,3 +1,4 @@
+
 # 泛型方法和有界类型参数
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/generics/boundedTypeParams.html`](https://docs.oracle.com/javase/tutorial/java/generics/boundedTypeParams.html)
@@ -12,7 +13,6 @@ public static <T> int countGreaterThan(T[] anArray, T elem) {
             ++count;
     return count;
 }
-
 ```
 
 该方法的实现很简单，但它无法编译，因为大于运算符（`>`）仅适用于原始类型，如`short`、`int`、`double`、`long`、`float`、`byte`和`char`。你不能使用`>`运算符来比较对象。为了解决这个问题，使用一个由`Comparable<T>`接口限定的类型参数：
@@ -21,7 +21,6 @@ public static <T> int countGreaterThan(T[] anArray, T elem) {
 public interface Comparable<T> {
     public int compareTo(T o);
 }
-
 ```
 
 最终的代码将是：
@@ -34,5 +33,4 @@ public static <T extends Comparable<T>> int countGreaterThan(T[] anArray, T elem
             ++count;
     return count;
 }
-
 ```

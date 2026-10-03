@@ -1,3 +1,4 @@
+
 # 课程：使用文本 APIs
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/text/index.html`](https://docs.oracle.com/javase/tutorial/2d/text/index.html)
@@ -8,14 +9,14 @@
 
 这些主题将在以下部分中讨论。
 
-物理和逻辑字体
+## 物理和逻辑字体
 
 这一部分解释了如何使用`Font`类的方法来确定系统上可用的字体，创建`Font`对象，并获取有关字体系列的信息。
 
-测量文本
+## 测量文本
 
 这一部分解释了如何通过使用`FontMetrics`类的实例来正确测量文本。
 
-高级文本显示
+## 高级文本显示
 
 这一部分解释了如何定位和渲染一段样式文本，显示抗锯齿文本，使用文本属性来设置文本样式，并处理双向文本。

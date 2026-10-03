@@ -1,20 +1,21 @@
+
 # NIO2 文件属性 API 指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-nio2-file-attribute>
 
-## 1。概述
+## 1. 概述
 
 在本文中，我们将探索 Java 7 NIO.2 文件系统 API 的高级特性之一——特别是文件属性 API。
 
-如果你想先深入了解这些基础部分，我们之前已经介绍了 [`File`](/web/20220812054902/https://www.baeldung.com/java-nio-2-file-api) 和[`Path`API](/web/20220812054902/https://www.baeldung.com/java-nio-2-path)。
+如果你想先深入了解这些基础部分，我们之前已经介绍了 [`File`](/web/20220812054902/https://www.baeldung.com/java-nio-2-file-api) 和 [`Path` API](/web/20220812054902/https://www.baeldung.com/java-nio-2-path)。
 
-处理文件系统操作所需的所有文件都打包在`java.nio.file package`中:
+处理文件系统操作所需的所有文件都打包在`java.nio.file`包中:
 
 ```java
 import java.nio.file.*;
 ```
 
-## 2。档案基本属性
+## 2. 档案基本属性
 
 让我们从所有文件系统共有的基本属性的高级视图开始——由`BasicFileAttributeView`提供——它存储所有强制和可选的可见文件属性。
 
@@ -126,7 +127,7 @@ public void givenFileTimes_whenComparesThem_ThenCorrect() {
 
 在第二个断言中，我们得到一个正整数值，因为修改只能在创建事件之后进行。最后，当比较的时间相等时，它返回 0。
 
-当我们有一个 FileTime 对象时，我们可以根据需要将它转换成大多数其他单位；天、小时、分钟、秒、毫秒等等。我们通过调用适当的 API 来实现这一点:
+当我们有一个`FileTime`对象时，我们可以根据需要将它转换成大多数其他单位；天、小时、分钟、秒、毫秒等等。我们通过调用适当的 API 来实现这一点:
 
 ```java
 accessed.to(TimeUnit.SECONDS);
@@ -158,7 +159,7 @@ basicView.setTimes(null, newAccessTime , null);
 
 从运行在机器上并使用文件系统的任何其他应用程序来看，这种更改将保留在实际文件中。
 
-## 3。文件空间属性
+## 3. 文件空间属性
 
 当你在 Windows、Linux 或 Mac 上打开`my computer`时，你通常可以看到关于你的存储驱动器的空间信息的图形分析。
 
@@ -209,7 +210,7 @@ for (FileStore fileStore : fileStores) {
 
 可用空间是 JVM 可用的空间，而未分配空间是底层文件系统可见的可用空间。因此，可用空间有时可能小于未分配的空间。
 
-## 4。文件所有者属性
+## 4. 文件所有者属性
 
 为了检查文件所有权信息，我们使用了`FileOwnerAttributeView`接口。它为我们提供了所有权信息的高级视图。
 
@@ -233,7 +234,7 @@ UserPrincipal owner = ownerView.getOwner();
 String ownerName = owner.toString();
 ```
 
-## 5。用户定义的文件属性
+## 5. 用户定义的文件属性
 
 有些情况下，文件系统中定义的文件属性不足以满足您的需求。如果您遇到这种情况，并且需要在文件上设置自己的属性，那么`UserDefinedFileAttributeView`接口将会派上用场:
 
@@ -266,13 +267,13 @@ attrValue.flip();
 String attrValue = Charset.defaultCharset().decode(attrValue).toString();
 ```
 
-要从文件中删除用户定义的属性，我们只需调用视图的 delete API:
+要从文件中删除用户定义的属性，我们只需调用视图的 `delete` API:
 
 ```java
 userDefView.delete(attrName);
 ```
 
-## 6。结论
+## 6. 结论
 
 在本文中，我们探讨了 Java 7 NIO.2 文件系统 API 中一些不常用的特性，特别是文件属性 API。
 

@@ -1,3 +1,4 @@
+
 # 2023 年我最喜欢的免费 SalesForce 新手培训课程
 
 > 原文：<https://medium.com/javarevisited/my-favorite-free-salesforce-training-courses-for-beginners-in-2021-3b6d5836605d?source=collection_archive---------0----------------------->
@@ -22,7 +23,7 @@ image_credit — Edureka
 
 顺便说一句，如果你不介意花点钱学习像 Salesforce 这样有价值的技能并寻找更全面的课程，那么我也建议你看看 Udemy 上的 [**Salesforce 初学者发展培训**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-salesforce-apex-basic-to-advance%2F) 课程。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-salesforce-apex-basic-to-advance%2F>  
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-salesforce-apex-basic-to-advance%2F>
 
 # 2023 年学习 Salesforce 的 7 个最佳免费在线课程和网站
 
@@ -34,7 +35,7 @@ image_credit — Edureka
 
 加上所有那些资料和源代码都是可以下载的。
 
-您将在本课程中学到以下内容:
+您将在本课程中学到以下内容：
 
 *   Salesforce 简介
 *   构建数据模型
@@ -57,7 +58,7 @@ image_credit — Edureka
 
 要注册这门课程，你需要有一个互联网连接，没有其他先决条件。本课程将为您提供使用 Salesforce 的视角。如果你想转行，我们推荐这门课程。在整个课程中，你将被彻底地引导去了解你的选择。
 
-课程内容:
+课程内容：
 
 *   Salesforce 简介
 *   认证指南
@@ -78,7 +79,7 @@ Salesforce 是您可以用来开发定制应用程序的最佳工具之一。为
 
 他们会教你关于 Apex 编程的知识，并指导你如何提高和应用他们课程中学到的知识。
 
-课程内容:
+课程内容：
 
 *   编程入门
 *   顶点和变量
@@ -103,7 +104,7 @@ Trailhead 是 Salesforce 的免费在线学习平台，教人们如何使用 Sal
 
 如果您是初学者，本课程将对您有所帮助，因为它涵盖了 Salesforce 和云计算。开始这门课程不需要有任何编程经验。这是将指导你学习过程的课程之一。导师是从业多年的专业人士，他的经验会在很多方面让你受益。
 
-本次免费 Salesforce 课程的内容:
+本次免费 Salesforce 课程的内容：
 
 *   Salesforce 简介
 *   云概念
@@ -139,6 +140,8 @@ Trailhead 是 Salesforce 的免费在线学习平台，教人们如何使用 Sal
 
 感谢您到目前为止阅读本课程。如果您认为这些*免费的 Salesforce 在线培训课程*有用，请与您的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
+
+
 **P. S.** —如果你不介意花几个钱学习像 Salesforce 这样有价值的技能，并寻找更全面的课程，那么我也建议你看看 Udemy 上的 [**Salesforce 初学者发展培训**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-salesforce-apex-basic-to-advance%2F) 课程。它包含 14 个小时的高质量课程，你只需花 10 美元就可以在每月举行的 Udemy 销售上购买。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-salesforce-apex-basic-to-advance%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-salesforce-apex-basic-to-advance%2F>

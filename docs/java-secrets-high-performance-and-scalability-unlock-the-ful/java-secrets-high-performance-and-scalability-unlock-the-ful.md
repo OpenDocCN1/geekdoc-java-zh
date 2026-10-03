@@ -1,35 +1,7 @@
+
 # Java 秘籍：高性能与可扩展性：利用高级 JVM 内部机制构建可扩展、高性能应用的专家技术，解锁 Java 的全部潜力（第一部分）
 
-
-
-
-
-
-
-
-
-
-
-
-
 # 第一部分
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 献辞
 
@@ -56,15 +28,17 @@ Alex Harrison
 感谢我的朋友们，他们丰富内容的对话和宝贵的建议帮助塑造了书中的许多想法。我们随时间推移分享的学习对于扩展我对 Java 开发的视角至关重要，并激励我将这些知识转化为这些文字。
 
 我也感谢我的专业同事和导师，他们挑战我进行批判性思考，不断追求卓越并永不停止学习。他们的直接和间接贡献对本作品产生了重大影响。
+
 感谢评审员和编辑，他们投入了时间和专业知识以确保这本书的清晰度和质量，我深表感谢。他们的工作改进了每一页，使这本书更易读。
 
 最后，感谢你——读者，决定开启这段旅程。这本书是为你而写的，诚心希望它能成为你旅程中实用且富有启发性的工具。
 
 致以谢意，
+
 Alex Harrison
 
 > “在书中，学习变得生动，并始终带我们走向远方。” - 尼尔·盖曼
-
+>
 > “机器只能遵循规则；心灵可以解释它们。” - 阿兰·图灵
 
 ## 引言
@@ -79,10 +53,6 @@ Alex Harrison
 
 无论你是初级开发者还是寻求更新的经验专业人士，这本书都是邀请你探索 Java 提供的无限可能。欢迎来到这段学习与创造的旅程，每一行代码都是构建高性能、可扩展软件的一步！
 
-
-
-
-
 ## 前言
 
 软件开发领域不断演进，而 Java 在构建高性能和可扩展的应用程序方面始终处于前沿。自诞生以来，Java 已经成长为一个多功能且强大的平台，使开发者能够创建健壮、高效且安全的企业级解决方案。这本书的诞生源于我想要分享这些知识，并帮助开发者（无论是初学者还是经验丰富的人士）充分发挥 Java 的潜力。
@@ -95,28 +65,23 @@ Alex Harrison
 
 无论您是 Java 新手还是寻求提升技能，本书都是为您量身的。我希望它能成为一份宝贵的资源，激励您在掌握 Java 性能和扩展性特性的同时，创造卓越的软件解决方案。
 
-
-
-第一章
+## 第一章
 
 ## 1 - 理解 Java 架构
 
-探索 Java 的核心架构，包括 JVM、字节码和执行模型。
+探索 Java 的核心架构，包括 `JVM`、字节码和执行模型。
 
-Java 的核心在于其强大的架构，它允许开发者编写出平台无关、可扩展且高效的代码。要理解这一架构，我们必须探索三个关键组件：Java 虚拟机 (JVM)、字节码和 Java 的执行模型。这些组件共同定义了 Java 代码如何被编译、执行和优化。
+Java 的核心在于其强大的架构，它允许开发者编写出平台无关、可扩展且高效的代码。要理解这一架构，我们必须探索三个关键组件：`Java` 虚拟机 (`JVM`)、字节码和 `Java` 的执行模型。这些组件共同定义了 `Java` 代码如何被编译、执行和优化。
 
-JVM 是 Java “一次编写，随处运行”承诺的基石。它充当了 Java 程序与环境之间的抽象层。（注：原文 OCR 为 "IVM"，已根据上下文更正为 "JVM"）。
+`JVM` 是 `Java` “一次编写，随处运行”承诺的基石。它充当了 `Java` 程序与环境之间的抽象层。（注：原文 OCR 为 "IVM"，已根据上下文更正为 "`JVM`"）。
 
+在该程序中，`performCalculation` 方法被重复执行。`JIT` 编译器识别出该方法为“热点”，并将其编译为原生代码以提高性能。因此，你会发现与逐行解释相比，其执行速度更快。
 
-
-
-在该程序中，`performCalculation` 方法被重复执行。JIT 编译器识别出该方法为“热点”，并将其编译为原生代码以提高性能。因此，你会发现与逐行解释相比，其执行速度更快。
-
-JVM 的执行模型涉及几个阶段：类加载、字节码验证、执行和垃圾回收。类加载确保必要的类文件在内存中是可用的。字节码验证确保代码符合 Java 的安全约束，例如防止非法的类型转换或未经授权的内存访问。
+`JVM` 的执行模型涉及几个阶段：类加载、字节码验证、执行和垃圾回收。类加载确保必要的类文件在内存中是可用的。字节码验证确保代码符合 `Java` 的安全约束，例如防止非法的类型转换或未经授权的内存访问。
 
 你可以通过编写一个使用自定义类加载器的程序来实验类加载机制：
 
-```
+```java
 1 public class CustomClassLoader extends ClassLoader {
 2     public static void main(String[] args) throws Exception {
 3         CustomClassLoader loader = new CustomClassLoader();
@@ -126,11 +91,11 @@ JVM 的执行模型涉及几个阶段：类加载、字节码验证、执行和�
 7 }
 ```
 
-在这个示例中，自定义类加载器动态地加载了 `HelloWorld` 类。Java 的类加载机制支持分级和动态类加载，这对于 Web 服务器和框架等应用至关重要。
+在这个示例中，自定义类加载器动态地加载了 `HelloWorld` 类。`Java` 的类加载机制支持分级和动态类加载，这对于 Web 服务器和框架等应用至关重要。
 
-JVM 执行模型的另一个关键组件是垃圾回收器（GC）。GC 通过回收不再使用的对象来自动管理内存，这有助于防止内存泄漏。你可以在程序中手动触发垃圾回收器：
+`JVM` 执行模型的另一个关键组件是垃圾回收器（`GC`）。`GC` 通过回收不再使用的对象来自动管理内存，这有助于防止内存泄漏。你可以在程序中手动触发垃圾回收器：
 
-```
+```java
 public class GarbageCollectorExample {
     public static void main(String[] args) {
         for (int i = 0; i < 1000; i++) {
@@ -142,11 +107,11 @@ public class GarbageCollectorExample {
 }
 ```
 
-在该程序中，创建了多个对象，`System.gc()` 方法请求垃圾回收器运行。然而，JVM 会根据其算法和内存需求决定何时执行垃圾回收。
+在该程序中，创建了多个对象，`System.gc()` 方法请求垃圾回收器运行。然而，`JVM` 会根据其算法和内存需求决定何时执行垃圾回收。
 
-JVM 还使用方法内联、循环展开和逃逸分析等技术来优化执行。这些优化会自动应用，以提高你代码的性能。例如，考虑以下简单方法：
+`JVM` 还使用方法内联、循环展开和逃逸分析等技术来优化执行。这些优化会自动应用，以提高你代码的性能。例如，考虑以下简单方法：
 
-```
+```java
 1 public class InlineExample {
 2     public static void main(String[] args) {
 3      long start = System.nanoTime();
@@ -163,21 +128,21 @@ JVM 还使用方法内联、循环展开和逃逸分析等技术来优化执行�
 14 }
 ```
 
-JVM 可能会自动内联 `inlineMethod` 方法，在编译期间将方法调用替换为实际实现。这减少了方法调用的开销并提高了性能。
+`JVM` 可能会自动内联 `inlineMethod` 方法，在编译期间将方法调用替换为实际实现。这减少了方法调用的开销并提高了性能。
 
-总结来说，Java 架构依赖于 JVM、字节码和高级执行模型来提供平台独立性和高性能。JVM 作为运行时环境，解释或将字节码编译为机器码。字节码是 Java 程序的平台无关表示，而执行模型确保了执行的优化和安全。通过结合解释、JIT 编译、垃圾回收和运行时优化，Java 在不同平台上同时实现了可扩展性和效率。
+总结来说，`Java` 架构依赖于 `JVM`、字节码和高级执行模型来提供平台独立性和高性能。`JVM` 作为运行时环境，解释或将字节码编译为机器码。字节码是 `Java` 程序的平台无关表示，而执行模型确保了执行的优化和安全。通过结合解释、`JIT` 编译、垃圾回收和运行时优化，`Java` 在不同平台上同时实现了可扩展性和效率。
 
 ### 1.1 - Java 架构简介
 
-Java 架构概述及其在构建可扩展应用中的意义。
+`Java` 架构概述及其在构建可扩展应用中的意义。
 
-Java 架构的设计旨在性能、可移植性和扩展性之间取得平衡，这使其成为构建大型应用的理想选择。其核心是遵循了多层方法，由 Java 虚拟机（JVM）、Java 运行环境（JRE）和 Java 开发工具包（JDK）组成。理解这些组件对于利用 Java 进行高效可扩展的软件开发至关重要。
+`Java` 架构的设计旨在性能、可移植性和扩展性之间取得平衡，这使其成为构建大型应用的理想选择。其核心是遵循了多层方法，由 `Java` 虚拟机（`JVM`）、`Java` 运行环境（`JRE`）和 `Java` 开发工具包（`JDK`）组成。理解这些组件对于利用 `Java` 进行高效可扩展的软件开发至关重要。
 
-Java 架构的第一个元素是 JVM，它是 Java 平台无关性的基础。JVM 允许 Java 程序在任何操作系统或硬件上运行而无需修改。当你编写 Java 程序时，源代码会被编译成字节码，这是一种 JVM 解析或编译为机器码的中间格式。
+`Java` 架构的第一个元素是 `JVM`，它是 `Java` 平台无关性的基础。`JVM` 允许 `Java` 程序在任何操作系统或硬件上运行而无需修改。当你编写 `Java` 程序时，源代码会被编译成字节码，这是一种 `JVM` 解析或编译为机器码的中间格式。
 
 为了说明这一点，让我们从编译和运行程序的简单示例开始。首先，创建一个源文件：
 
-```
+```java
 1 public class Example {
     public static void main(String[] args) {
         System.out.println("Java Architecture in Action");
@@ -187,21 +152,21 @@ Java 架构的第一个元素是 JVM，它是 Java 平台无关性的基础。JV
 
 使用 `javac` 命令编译程序：
 
-```
+```bash
 1 javac Example.java
 ```
 
-这将生成名为 `Example.class` 的字节码文件。`.class` 文件平台平台，包含了由 JVM 执行的指令。使用 `java` 命令运行程序：
+这将生成名为 `Example.class` 的字节码文件。`.class` 文件平台无关，包含了由 `JVM` 执行的指令。使用 `java` 命令运行程序：
 
-```
+```bash
 1 java Example
 ```
 
-JVM 加载字节码并在机器上执行它。这种抽象使得 Java 能够在不同平台之间保持兼容性，这是部署在各种基础设施上的可扩展应用的关键特性。
+`JVM` 加载字节码并在机器上执行它。这种抽象使得 `Java` 能够在不同平台之间保持兼容性，这是部署在各种基础设施上的可扩展应用的关键特性。
 
-Java 架构的第二个组件是 JRE，它包含了 JVM 和执行 Java 程序所需的额外库。JRE 提供了一个让 Java 程序可以顺畅运行的运行时环境。例如，如果你安装了 Java 运行环境，你可以执行任何 `.class` 文件而不需要源代码。
+`Java` 架构的第二个组件是 `JRE`，它包含了 `JVM` 和执行 `Java` 程序所需的额外库。`JRE` 提供了一个让 `Java` 程序可以顺畅运行的运行时环境。例如，如果你安装了 `Java` 运行环境，你可以执行任何 `.class` 文件而不需要源代码。
 
-对于较大的应用程序，Java 架构提供了增强扩展性的功能。其中一个功能是多线程，它允许任务的并发执行。多线程对于需要同时处理多个用户或进程的应用来说至关重要。
+对于较大的应用程序，`Java` 架构提供了增强扩展性的功能。其中一个功能是多线程，它允许任务的并发执行。多线程对于需要同时处理多个用户或进程的应用来说至关重要。
 
 这是一个基础多线程程序的示例：
 
@@ -229,9 +194,6 @@ public class MultiThreadExample implements Runnable {
 }
 ```
 
-
-
-
 #### 客户端代码：
 
 ```java
@@ -250,11 +212,11 @@ public class RMIClient {
 }
 ```
 
-要运行此程序，请编译服务器和客户端代码，启动 RMI 注册表，然后运行服务器和客户端。RMI 框架允许跨分布式系统进行方法调用，这对于构建可扩展的应用程序至关重要。
+要运行此程序，请编译服务器和客户端代码，启动 `RMI` 注册表，然后运行服务器和客户端。`RMI` 框架允许跨分布式系统进行方法调用，这对于构建可扩展的应用程序至关重要。
 
-Java 架构还包含了健壮的库和框架，例如 Java EE 和 Spring，它们简化了企业级应用程序的开发。这些框架处理依赖注入、事务管理和负载均衡，这些对于可扩展性至关重要。
+`Java` 架构还包含了健壮的库和框架，例如 `Java EE` 和 `Spring`，它们简化了企业级应用程序的开发。这些框架处理依赖注入、事务管理和负载均衡，这些对于可扩展性至关重要。
 
-使用 Spring Boot 框架创建 REST API 的实际示例如下：
+使用 `Spring Boot` 框架创建 `REST API` 的实际示例如下：
 
 #### Spring Boot 应用：
 
@@ -282,9 +244,9 @@ class ApiController {
 }
 ```
 
-运行此程序后，你可以在 `http://localhost:8080/api/hello` 访问 REST API。Spring Boot 框架抽象了构建可扩展 Web 服务的大部分复杂性，让开发者能够专注于业务逻辑。
+运行此程序后，你可以在 `http://localhost:8080/api/hello` 访问 `REST API`。`Spring Boot` 框架抽象了构建可扩展 Web 服务的大部分复杂性，让开发者能够专注于业务逻辑。
 
-Java 架构还通过在 Java 9 中引入的模块系统促进了模块化。模块化有助于管理依赖并提高大型应用程序的可扩展性。你可以使用 `module-info.java` 文件定义模块：
+`Java` 架构还通过在 `Java 9` 中引入的模块系统促进了模块化。模块化有助于管理依赖并提高大型应用程序的可扩展性。你可以使用 `module-info.java` 文件定义模块：
 
 ```java
 module com.example.app {
@@ -295,15 +257,15 @@ module com.example.app {
 
 这种模块化方法允许开发者创建松耦合的组件，从而提高应用程序的可维护性和可扩展性。
 
-通过结合平台无关性、多线程、垃圾收集、分布式计算能力和强大的框架，Java 架构提供了构建可扩展应用程序所需的工具。JVM 确保了高效的执行和优化，而 Java 广泛的生态系统简化了复杂大型系统的开发。无论运行在单机上还是跨分布式环境，Java 架构都能适应性能和可扩展性的需求。
+通过结合平台无关性、多线程、垃圾收集、分布式计算能力和强大的框架，`Java` 架构提供了构建可扩展应用程序所需的工具。`JVM` 确保了高效的执行和优化，而 `Java` 广泛的生态系统简化了复杂大型系统的开发。无论运行在单机上还是跨分布式环境，`Java` 架构都能适应性能和可扩展性的需求。
 
 ### 1.2 - Java 虚拟机 (JVM)
 
-解释 JVM 在执行 Java 应用程序中的作用。
+解释 `JVM` 在执行 `Java` 应用程序中的作用。
 
-Java 虚拟机 (JVM) 是 Java 平台的核心组件，允许 Java 应用程序无需修改即可在任何系统上运行。它作为抽象硬件和操作系统的运行时，实现了 Java 的平台无关性。JVM 获取 Java 字节码，对其进行验证并执行，执行方式可以是逐行解释，也可以使用即时编译（JIT）编译将其编译为原生机器码。
+`Java` 虚拟机 (`JVM`) 是 `Java` 平台的核心组件，允许 `Java` 应用程序无需修改即可在任何系统上运行。它作为抽象硬件和操作系统的运行时，实现了 `Java` 的平台无关性。`JVM` 获取 `Java` 字节码，对其进行验证并执行，执行方式可以是逐行解释，也可以使用即时编译（`JIT`）编译将其编译为原生机器码。
 
-当你编译 Java 程序时，`javac` 编译器会将源代码转换为一种称为字节码的中间形式。这种字节码是平台无关的，设计用于 JVM 执行。以下简单程序演示了这一点：
+当你编译 `Java` 程序时，`javac` 编译器会将源代码转换为一种称为字节码的中间形式。这种字节码是平台无关的，设计用于 `JVM` 执行。以下简单程序演示了这一点：
 
 ```java
 public class HelloJVM {
@@ -325,12 +287,13 @@ javac HelloJVM.java
 java HelloJVM
 ```
 
-JVM 在执行期间执行三项主要任务：类加载、字节码验证和执行。首先，JVM 通过其**类加载器 (ClassLoader)** 子系统将 `class` 文件加载到内存中。然后，它验证字节码，最后执行它。要检查字节码，请使用 `javap` 命令：
+
+
+JVM 在执行期间执行三项主要任务：类加载、字节码验证和执行。首先，JVM 通过其`类加载器 (ClassLoader)`子系统将`class`文件加载到内存中。然后，它验证字节码，最后执行它。要检查字节码，请使用`javap`命令：
 
 ```bash
 javap -c HelloJVM
 ```
-
 
 ```java
 public class JITExample {
@@ -349,9 +312,9 @@ public class JITExample {
 }
 ```
 
-在该程序中，`calculate` 方法被重复执行。JIT 编译器识别其为“热点”代码并将其编译为原生代码。结果是循环随着时间的推移运行得越来越快。
+在该程序中，`calculate`方法被重复执行。JIT 编译器识别其为“热点”代码并将其编译为原生代码。结果是循环随着时间的推移运行得越来越快。
 
-JVM 还支持分析和调试，以监控应用程序的行为。`-Xprof` 选项会生成程序的性能分析文件。运行以下命令：
+JVM 还支持分析和调试，以监控应用程序的行为。`-Xprof`选项会生成程序的性能分析文件。运行以下命令：
 
 ```bash
 java -Xprof JITexample
@@ -359,15 +322,15 @@ java -Xprof JITexample
 
 输出显示了哪些方法消耗了大部分时间，帮助你优化应用程序的关键部分。
 
-总结来说，JVM 通过加载字节码、验证其完整性并通过解释或 JIT 编译高效执行，充了 Java 应用程序的骨干。它通过垃圾回收管理内存，通过 JIT 编译器优化执行，并提供监控和调试工具。通过抽象底层系统，JVM 确保了 Java 应用程序可以在跨平台上可靠运行，使其成为构建高性能和可扩展应用程序的关键性组件。
+总结来说，JVM 通过加载字节码、验证其完整性并通过解释或 JIT 编译高效执行，充当了 Java 应用程序的骨干。它通过垃圾回收管理内存，通过 JIT 编译器优化执行，并提供监控和调试工具。通过抽象底层系统，JVM 确保了 Java 应用程序可以在跨平台上可靠运行，使其成为构建高性能和可扩展应用程序的关键性组件。
 
-#### 1.2.1 - JVM 组件
+### 1.2.1 - JVM 组件
 
 对 JVM 组件（如类加载器、内存区域和执行引擎）的详细解释。
 
-Java 虚拟机（JVM）分为几个组件，它们共同工作以高效执行 Java 程序。JVM 的三个关键组件是**类加载器 (Class Loader)**、**内存区域 (Memory Areas)** 和**执行引擎 (Execution Engine)**。这些组件确保了 Java 的平台无关性、动态类加载、内存管理和优化执行。
+Java 虚拟机（JVM）分为几个组件，它们共同工作以高效执行 Java 程序。JVM 的三个关键组件是`类加载器 (Class Loader)`、`内存区域 (Memory Areas)`和`执行引擎 (Execution Engine)`。这些组件确保了 Java 的平台无关性、动态类加载、内存管理和优化执行。
 
-**类加载器**子系统是 Java 程序执行时第一个介入的组件。它的职责是将类文件加载到 JVM 中。类加载器将字节码文件（`.class`）加载到 JVM 并对其进行链接以执行。该过程包含三个阶段：**加载 (Loading)**、**链接 (Linking)** 和**初始化 (Initialization)**。
+`类加载器`子系统是 Java 程序执行时第一个介入的组件。它的职责是将类文件加载到 JVM 中。类加载器将字节码文件（`.class`）加载到 JVM 并对其进行链接以执行。该过程包含三个阶段：`加载 (Loading)`、`链接 (Linking)`和`初始化 (Initialization)`。
 
 为了演示类加载，让我们创建一个自定义的类加载器来动态加载类：
 
@@ -395,7 +358,7 @@ public class CustomClassLoader extends ClassLoader {
 }
 ```
 
-在这里，自定义类加载器将 `class` 文件读取为字节流并使用 `defineClass` 方法将其加载到 JVM 中。要测试这一点，首先创建一个简单的类：
+在这里，自定义类加载器将`class`文件读取为字节流并使用`defineClass`方法将其加载到 JVM 中。要测试这一点，首先创建一个简单的类：
 
 ```java
 public class HelloWorld {
@@ -411,7 +374,7 @@ public class HelloWorld {
 javac HelloWorld.java
 ```
 
-运行自定义类加载器程序以动态加载 `HelloWorld.class`：
+运行自定义类加载器程序以动态加载`HelloWorld.class`：
 
 ```bash
 java CustomClassLoader
@@ -419,9 +382,9 @@ java CustomClassLoader
 
 此示例强调了类加载器在运行时动态加载类的作用，这是模块化应用程序的基础。
 
-一旦类被加载，JVM 就会在**内存区域**中为它们分配内存。JVM 内存分为五个主要区域：方法区域（Method Area）、堆（Heap）、栈（Stack）、程序计数器寄存器（PC Register）和本地方法栈（Native Method Stack）。每个内存区域在程序执行中都起着至关重要的作用。
+一旦类被加载，JVM 就会在`内存区域`中为它们分配内存。JVM 内存分为五个主要区域：`方法区域（Method Area）`、`堆（Heap）`、`栈（Stack）`、`程序计数器寄存器（PC Register）`和`本地方法栈（Native Method Stack）`。每个内存区域在程序执行中都起着至关重要的作用。
 
-**堆 (Heap)** 是存储对象的区域。**方法区域 (Method Area)** 存储元数据、类级信息和方法字节码。局部变量和方法调用细节存储在**栈 (Stack)** 中，每次方法都会创建一个新的栈帧。
+`堆 (Heap)`是存储对象的区域。`方法区域 (Method Area)`存储元数据、类级信息和方法字节码。局部变量和方法调用细节存储在`栈 (Stack)`中，每次方法都会创建一个新的栈帧。
 
 这是一个演示在堆上创建对象和在栈上进行方法调用的示例：
 
@@ -439,15 +402,15 @@ public class MemoryExample {
 }
 ```
 
-在这个示例中，`example` 对象在堆中分配了内存，而局部变量 `localVar` 和方法调用信息存储在栈中。使用以下命令运行程序：
+在这个示例中，`example`对象在堆中分配了内存，而局部变量`localVar`和方法调用信息存储在栈中。使用以下命令运行程序：
 
 ```bash
 java MemoryExample
 ```
 
-执行时，JVM 为该对象创建内存并为 `main` 方法管理栈帧。
+执行时，JVM 为该对象创建内存并为`main`方法管理栈帧。
 
-**执行引擎 (Execution Engine)** 是 JVM 中负责执行字节码的组件。它可以通过两种方式执行：**解释 (Interpretation)** 和**即时编译 (Just-In-Time (JIT) Compilation)**。最初，JVM 逐行解释字节码，速度较慢。为了提高性能，JIT 编译器会将频繁执行的代码（热点）转换为原生代码。
+`执行引擎 (Execution Engine)`是 JVM 中负责执行字节码的组件。它可以通过两种方式执行：`解释 (Interpretation)`和`即时编译 (Just-In-Time (JIT) Compilation)`。最初，JVM 逐行解释字节码，速度较慢。为了提高性能，JIT 编译器会将频繁执行的代码（热点）转换为原生代码。
 
 这是一个演示 JIT 的程序示例：
 
@@ -507,7 +470,7 @@ public class GarbageCollectionDemo {
 java GarbageCollectionDemo
 ```
 
-在该程序中，创建了许多对象但没有引用。回收器会移除它们并调用 `finalize` 方法。虽然 `System.gc()` 建议垃圾回收，但 JVM 决定执行它的合适时间。
+在该程序中，创建了许多对象但没有引用。回收器会移除它们并调用`finalize`方法。虽然`System.gc()`建议垃圾回收，但 JVM 决定执行它的合适时间。
 
 这是一个调用原生方法的示例：
 
@@ -525,24 +488,23 @@ public class NativeExample {
 }
 ```
 
-
-要创建原生方法，请编写相应的 C 实现并将其编译为共享库。使用 `javah` 工具将该库链接到程序中并运行：
+要创建原生方法，请编写相应的 C 实现并将其编译为共享库。使用`javah`工具将该库链接到程序中并运行：
 
 ```bash
 java NativeExample
 ```
 
-这种集成凸显了原生方法栈（Native Method Stack）在连接 Java 与原生代码以进行底层系统操作中的作用。
+这种集成凸显了`原生方法栈（Native Method Stack）`在连接 Java 与原生代码以进行底层系统操作中的作用。
 
 JVM 的组件——类加载器（Class Loader）、内存区域和执行引擎——协同工作，高效地加载、管理和执行 Java 程序。类加载器动态加载类，内存区域管理数据存储，而执行引擎通过 JIT 编译确保优化的执行。它们共同使 JVM 成为一个运行可扩展和高性能 Java 应用程序的强大引擎。
 
-#### 1.2.2 - JVM 生命周期
+### 1.2.2 - JVM 生命周期
 
 描述从程序编译到执行的生命周期。
 
 JVM 生命周期涵盖了 Java 程序从编译、加载、验证、执行到最终终止的整个过程。这一生命周期确保了 Java 虚拟机（JVM）在保持平台独立性和健壮性能的同时，高效地管理 Java 程序的执行。理解此生命周期的每个阶段将帮助开发者优化应用程序，以实现扩展性和高性能。
 
-生命周期始于**程序编译**。编写在 `java` 文件中的 Java 源代码使用 `javac` 编译器编译为字节码。字节码是 JVM 可理解的平台无关中间表示。考虑以下示例：
+生命周期始于`程序编译`。编写在`java`文件中的 Java 源代码使用`javac`编译器编译为字节码。字节码是 JVM 可理解的平台无关中间表示。考虑以下示例：
 
 ```java
 public class LifecycleExample {
@@ -552,21 +514,21 @@ public class LifecycleExample {
 }
 ```
 
-要编译此程序，使用 `javac` 命令：
+要编译此程序，使用`javac`命令：
 
 ```bash
 javac LifecycleExample.java
 ```
 
-`javac` 编译器会生成 `.class` 文件，其中包含字节码。你可以通过列出目录内容来确认编译字节码的存在：
+`javac`编译器会生成`.class'文件，其中包含字节码。你可以通过列出目录内容来确认编译字节码的存在：
 
 ```bash
 ls
 ```
 
-输出将包含 `LifecycleExample.class` 文件。
+输出将包含`LifecycleExample.class`文件。
 
-编译完成后，JVM 生命周期的下一步是**类加载**。类加载器系统将字节码加载到 JVM 内存中。JVM 遵循分层的类加载机制，由**启动类加载器（Bootstrap Class Loader）**、**扩展类加载器（Extension Class Loader）**和**应用类加载器（Application Class Loader）**组成。
+编译完成后，JVM 生命周期的下一步是`类加载`。类加载器系统将字节码加载到 JVM 内存中。JVM 遵循分层的类加载机制，由`启动类加载器（Bootstrap Class Loader）`、`扩展类加载器（Extension Class Loader）`和`应用类加载器（Application Class Loader）`组成。
 
 为了观察类加载的过程，可以使用以下程序，它可以打印特定类的类加载器：
 
@@ -588,9 +550,9 @@ javac ClassLoaderDemo.java
 java ClassLoaderDemo
 ```
 
-输出将显示 `ClassLoaderDemo` 类是由**应用类加载器**加载的，而 `String` 类（Java 核心类）是由原生代码编写的**启动类加载器**加载的。
+输出将显示`ClassLoaderDemo`类是由`应用类加载器`加载的，而`String`类（Java 核心类）是由原生代码编写的`启动类加载器`加载的。
 
-加载之后，下一阶段是**字节码验证**。JVM 验证字节码符合 Java 的安全和安全约束，确保没有非法指令或类型不匹配。验证防止了恶意或损坏字节码的执行。
+加载之后，下一阶段是`字节码验证`。JVM 验证字节码符合 Java 的安全和安全约束，确保没有非法指令或类型不匹配。验证防止了恶意或损坏字节码的执行。
 
 以下是一个使用故意错误修改的无效字节码示例：
 
@@ -598,9 +560,9 @@ java ClassLoaderDemo
 javap -c LifecycleExample
 ```
 
-使用 `javap` 工具检查 `LifecycleExample` 的字节码。如果字节码被篡改（在典型用法之外），验证器将拒绝它，并且 JVM 将抛出 `VerifyError`。
+使用`javap`工具检查`LifecycleExample`的字节码。如果字节码被篡改（在典型用法之外），验证器将拒绝它，并且 JVM 将抛出`VerifyError`。
 
-通过验证后，**执行引擎**开始执行字节码。JVM 执行模型遵循两种方法：**解释（Interpretation）**和**即时编译（JIT Compilation）**。最初，字节码逐行解释，但 JIT 编译器会识别频繁执行的代码（热点）并将其编译为原生机器码以加快执行速度。
+通过验证后，`执行引擎`开始执行字节码。JVM 执行模型遵循两种方法：`解释（Interpretation）`和`即时编译（JIT Compilation）`。最初，字节码逐行解释，但 JIT 编译器会识别频繁执行的代码（热点）并将其编译为原生机器码以加快执行速度。
 
 以下程序演示了 JIT 编译对频繁执行方法的影响：
 
@@ -636,7 +598,7 @@ java -XX:+PrintCompilation JITDemo
 
 输出将显示哪些方法被 JIT 编译器编译为原生代码，从而提高了执行速度。
 
-在执行期间，JVM 还通过**垃圾回收（GC）**管理内存。GC 通过移除不再被引用的对象来回收内存，确保堆的高效使用。以下示例演示了 JVM 生命周期中的垃圾回收：
+在执行期间，JVM 还通过`垃圾回收（GC）`管理内存。GC 通过移除不再被引用的对象来回收内存，确保堆的高效使用。以下示例演示了 JVM 生命周期中的垃圾回收：
 
 编译并执行程序：
 
@@ -645,9 +607,11 @@ javac GarbageCollectionLifecycle.java
 java GarbageCollectionLifecycle
 ```
 
-程序创建了大量对象，JVM 的垃圾回收器会回收内存。`finalize` 方法在每个对象销毁之前被调用，显示了对象在执行期间的生命周期。
+程序创建了大量对象，JVM 的垃圾回收器会回收内存。`finalize`方法在每个对象销毁之前被调用，显示了对象在执行期间的生命周期。
 
-执行完成后，JVM 终止。**JVM 关钩子（JVM Shutdown Hook）**允许开发者在 JVM 关闭之前执行特定任务，例如关闭资源或保存应用程序状态。以下是添加关闭钩子的示例：
+执行完成后，JVM 终止。`JVM 关钩子（JVM Shutdown Hook）`允许开发者在 JVM 关闭之前执行特定任务，例如关闭资源或保存应用程序状态。以下是添加关闭钩子的示例：
+
+
 
 ```java
 public class ShutdownHookExample {
@@ -672,9 +636,6 @@ public class ShutdownHookExample {
 javac ShutdownHookExample.java
 java ShutdownHookExample
 ```
-
-
-
 
 ```java
 public class BytecodeExample {
@@ -736,12 +697,12 @@ public class BytecodeExample {
 
 此输出分解了 `main` 方法的每一条字节码指令。以下是一些关键指令的含义：
 
-- `iconst_5`: 将整数常量 `5` 推入操作数栈。
-- `bipush 10`: 推入整数常量 `10`。
-- `iadd`: 将栈上的两个整数相加。
-- `istore`: 将结果存储到局部变量中。
-- `getstatic`: 静态字段，例如 `System.out`。
-- `invokevirtual`: 调用方法，例如 `println()`。
+- `iconst_5`：将整数常量 `5` 推入操作数栈。
+- `bipush 10`：推入整数常量 `10`。
+- `iadd`：将栈上的两个整数相加。
+- `istore`：将结果存储到局部变量中。
+- `getstatic`：静态字段，例如 `System.out`。
+- `invokevirtual`：调用方法，例如 `println()`。
 
 JVM 在执行期间逐行解释这些指令，或者使用 JIT 编译将它们编译为原生代码以提高性能。
 
@@ -849,80 +810,77 @@ java/lang/System.out:java/io/PrintStream;
 19: return
 ```
 
-
-
-
 以下是关键指令的详细介绍：
 
-- `const_5`: 将常量 `5` 推入操作数栈。
-- `bipush 10`: 将常量 `10` 推入操作数栈。
-- `iadd`: 将操作数栈顶两个整数相加。
-- `istore_x`: 将结果存储到局部变量中。
-- `getstatic`: 访问 `System.out` 静态字段。
-- `invokevirtual`: 调用如 `println` 等方法。
+- `const_5`：将常量 `5` 推入操作数栈。
+- `bipush 10`：将常量 `10` 推入操作数栈。
+- `iadd`：将操作数栈顶两个整数相加。
+- `istore_x`：将结果存储到局部变量中。
+- `getstatic`：访问 `System.out` 静态字段。
+- `invokevirtual`：调用如 `println` 等方法。
 
 为了进一步探索，让我们从字节码层面查看方法调用是如何工作的。更新程序以包含一个方法调用：
 
-```
-1 public class MethodBycode {
-2     public static void main(String[] args) {
-3         int result = addNumbers(5, 10);
-4         System.out.println("Sum: " + result);
-5     }
-6 
-7     public static int addNumbers(int x, int y) {
-8         return x + y;
-9     }
-10 }
+```java
+public class MethodBycode {
+    public static void main(String[] args) {
+        int result = addNumbers(5, 10);
+        System.out.println("Sum: " + result);
+    }
+
+    public static int addNumbers(int x, int y) {
+        return x + y;
+    }
+}
 ```
 
 编译并反汇编程序：
 
 ```
-1 javac MethodBycode.java
-2 javap -c MethodBycode
+javac MethodBycode.java
+javap -c MethodBycode
 ```
 
 `addNumbers` 方法的字节码输出将包含：
 
 ```
-1 public static int addNumbers(int, int);
-2    Code:
-3    0: iload_0
-4    1: iload_1
-5    2: iadd
-6    3: ireturn
+public static int addNumbers(int, int);
+   Code:
+  0: iload_0
+  1: iload_1
+  2: iadd
+  3: ireturn
 ```
 
 在这里：
 
-- `iload_0`: 将第一个参数 `x` 加载到操作数栈。
-- `iload_1`: 加载第二个参数 `y`。
-- `iadd`: 将两个值相加。
-- `ireturn`: 将结果返回给调用方法。
+- `iload_0`：将第一个参数 `x` 加载到操作数栈。
+- `iload_1`：加载第二个参数 `y`。
+- `iadd`：将两个值相加。
+- `ireturn`：将结果返回给调用方法。
 
 在 `main` 方法中，由于 `addNumbers` 是静态方法，使用了 `invokestatic` 指令。
 
 现在考虑条件语句，查看字节码是如何处理分支的：
 
-```
-1 public class ConditionalBytecode {
-2    public static void main(String[] args) {
-3      int number = 7;
-4      if (number > 5) {
-5        System.out.println("Number is greater than 5");
-6      } else {
-7        System.out.println("Number is less than or equal to 5");
-8      }
-9  }
-10 }
+```java
+public class ConditionalBytecode {
+   public static void main(String[] args) {
+     int number = 7;
+     if (number > 5) {
+       System.out.println("Number is greater than 5");
+     } else {
+       System.out.println("Number is less than or equal to 5");
+     }
+  }
+}
 ```
 
 编译并反汇编：
 
 ```
-1 javac ConditionalBytecode.java
-2 javap -c ConditionalBytecode
+javac ConditionalBytecode.java
+javap -c ConditionalBytecode
 ```
 
 字节码输出包含了类似 `if_icmple` 的条件指令：
@@ -951,28 +909,28 @@ java/io/PrintStream.println:(Ljava/lang/String;)V
 
 在这里：
 
-- `if_icmple`: 检查 `number` 的值是否小于或等于 5，如果是则跳转到 `else` 块。
-- `goto`: 当条件满足时跳过 `else` 块。
+- `if_icmple`：检查 `number` 的值是否小于或等于 5，如果是则跳转到 `else` 块。
+- `goto`：当条件满足时跳过 `else` 块。
 
 JVM 使用类似 `if_icmp` 和 `goto` 的**分支**指令来实现控制流结构。
 
 现在让我们探索循环在字节码中是如何表示的：
 
-```
-1 public class LoopBybytecode {
-2   public static void main(String[] args) {
-3     for (int i = 0; i < 3; i++) {
-4       System.out.println("Iteration: " + i);
-5     }
-6   }
-7 }
+```java
+public class LoopBybytecode {
+  public static void main(String[] args) {
+    for (int i = 0; i < 3; i++) {
+      System.out.println("Iteration: " + i);
+    }
+  }
+}
 ```
 
 编译并反汇编：
 
 ```
-1 javac LoopBytecode.java
-2 javap -c LoopBytecode
+javac LoopBytecode.java
+javap -c LoopBytecode
 ```
 
 字节码包含了初始化、检查和增加循环变量的指令：
@@ -998,13 +956,13 @@ JVM 使用类似 `if_icmp` 和 `goto` 的**分支**指令来实现控制流结�
 
 在这里：
 
-- `if_icmpge`: 比较 `i` 和 `3`，如果条件失败则退出循环。
-- `iinc`: 增加循环变量 `i`。
-- `goto`: 跳回循环条件检查。
+- `if_icmpge`：比较 `i` 和 `3`，如果条件失败则退出循环。
+- `iinc`：增加循环变量 `i`。
+- `goto`：跳回循环条件检查。
 
 最后，让我们演示字节码是如何处理对象创建的：
 
-```
+```java
 public class ObjectBytecode {
     public static void main(String[] args) {
         ObjectBytecode obj = new ObjectBytecode();
@@ -1012,9 +970,8 @@ public class ObjectBytecode {
     }
 }
 ```
+
 （注：`ObjectBytecode` 部分的 OCR 文本存在碎片，我根据提供的原始文本重构了逻辑结构。）
-
-
 
 `2 * 5` 是一个常量表达式。JVM 将通过**循环不变代码移动**对其进行优化，将常量计算移动到循环之外。这防止了不必要的重复计算，提高了效率。
 
@@ -1053,6 +1010,8 @@ public class EscapeAnalysis {
 ```bash
 java -XX:+DoEscapeAnalysis -XX:+PrintGCEscapeAnalysis
 ```
+
+
 
 JVM 确定 `Data` 对象没有逃逸出 `writeObject` 方法，因此它将对象分配在栈上而不是堆上。这减少了内存占用和垃圾回收的频率。
 
@@ -1102,7 +1061,7 @@ JVM 检测到 `100*20*5` 是一个常量表达式，并将其替换为预计算�
 
 Java 字节码优化是在运行时动态应用的，这允许 JVM 适应应用程序的行为。这些技术使 JVM 在平衡性能和内存使用的同时，将复杂的优化操作从开发者中抽象出来。理解这些优化有助于开发者编写高效代码并分析运行时性能，使 Java 成为高性能和可扩展应用程序的强大平台。
 
-### 1.4 - Java 执行模型
+### 1.4 Java 执行模型
 
 讨论 Java 的执行模型，从代码编译到运行时执行。
 
@@ -1192,34 +1151,26 @@ public class ControlFlowExample {
 
 编译并反汇编字节码：
 
-
-
-
-```
-1 javac ControlFlowExample.java
-2 javap -c ControlFlowExample
+```bash
+javac ControlFlowExample.java
+javap -c ControlFlowExample
 ```
 
 字节码输出包含了用于条件判断的 `if_icmpgt` 和用于循环控制的 `goto` 指令：
 
 ```
-1 0: bipush 10
+0: bipush 10
 2: istore_1
 3: iload_1
 4: iconst_5
 5: if_icmple 16
-6: getstatic #2 // Field
-java/lang/System.Out:Ljava/io/PrintStream;
+6: getstatic #2 // Field java/lang/System.Out:Ljava/io/PrintStream;
 7: ldc #3 // String Value is greater than 5
-8: invokirtual #4 // Method
-java/io/PrintStream.println:(Ljava/lang/String;)JV
+8: invokirtual #4 // Method java/io/PrintStream.println:(Ljava/lang/String;)JV
 9: goto 28
-10: getstatic #2 // Field
-java/lang/System.Out:Ljava/io/PrintStream;
-11: ldc #5 // String Value is less than or
-equal to 5
-12: invokirtual #4 // Method
-java/io/PrintStream.println:(Ljava/lang/String;)JV
+10: getstatic #2 // Field java/lang/System.Out:Ljava/io/PrintStream;
+11: ldc #5 // String Value is less than or equal to 5
+12: invokirtual #4 // Method java/io/PrintStream.println:(Ljava/lang/String;)JV
 13: 27: return
 ```
 
@@ -1233,24 +1184,24 @@ Java 执行模型的最后一部分是**垃圾回收 (GC)**。JVM 通过回收�
 
 编译并运行该程序：
 
-```
-1 javac GarbageCollectionExample.java
-2 java -verbose:gc GarbageCollectionExample
+```bash
+javac GarbageCollectionExample.java
+java -verbose:gc GarbageCollectionExample
 ```
 
 `-verbose:gc` 标记会输出垃圾回收活动的详情：
 
 ```
-1 [GC (System.gc()) 65536K->38912K(125952K), 0.0150117 secs)
-2 Garbage Collection Triggered
-3 Object finalized
+[GC (System.gc()) 65536K->38912K(125952K), 0.0150117 secs)
+Garbage Collection Triggered
+Object finalized
 ```
 
 JVM 自动管理内存并为新对象释放空间。
 
 Java 的执行模型将静态编译与动态运行时优化相结合。JVM 加载类、验证字节码以确保安全性、解释或编译代码以供执行，并通过垃圾回收高效地管理内存。通过理解执行模型的每个阶段，开发者可以更好地优化代码以提高性能和可扩展性。
 
-#### 1.4.1 - 即时编译 (JIT) 编译
+#### 1.4.1 即时编译 (JIT) 编译
 
 详细说明了 JIT 编译如何提高运行时性能。
 
@@ -1258,34 +1209,33 @@ Java 的执行模型将静态编译与动态运行时优化相结合。JVM 加�
 
 为了观察 JIT 编译的效果，考虑一个具有重复方法调用的简单程序：
 
-```
-1 public class JITCompilationExample {
-2     public static void main(String[] args) {
-3         long start = System.nanoTime();
-4         for (int i = 0; i < 1_000_000_000; i++) {
-5             calculate();
-6         }
-7         long end = System.nanoTime();
-8         System.out.println("Execution time: " + (end - start) / 1e9 + "
-8 seconds");
-9     }
-10
-11    public static int calculate() {
-12        return 5 + 10;
-13    }
-14 }
+```java
+public class JITCompilationExample {
+    public static void main(String[] args) {
+        long start = System.nanoTime();
+        for (int i = 0; i < 1_000_000_000; i++) {
+            calculate();
+        }
+        long end = System.nanoTime();
+        System.out.println("Execution time: " + (end - start) / 1e9 + " seconds");
+    }
+
+    public static int calculate() {
+        return 5 + 10;
+    }
+}
 ```
 
 编译该程序：
 
-```
-1 javac JITCompilationExample.java
+```bash
+javac JITCompilationExample.java
 ```
 
 使用 `-XX:+PrintCompilation` 选项运行程序以观察 JIT 编译日志：
 
-```
-1 java -XX:+PrintCompilation JITCompilationExample
+```bash
+java -XX:+PrintCompilation JITCompilationExample
 ```
 
 输出显示方法在被频繁执行时会被 JIT 编译器编译：
@@ -1293,7 +1243,7 @@ Java 的执行模型将静态编译与动态运行时优化相结合。JVM 加�
 | 1 | 57 | 1 JITCompilationExample::calculate (5 bytes) |
 | 2 | 112 | 2 java/lang/StringBuilder::append (15 bytes) |
 
-在这里，`calculate` 方法被编译成了原生机器代码，因为它被重复调用。这减少了了解执行的开销并加快了程序的运行速度。
+在这里，`calculate` 方法被编译成了原生机器代码，因为它被重复调用。这减少了解释执行的开销并加快了程序的运行速度。
 
 JIT 编译使用多种策略来优化性能。其中一个关键策略是**方法内联**，它用方法的实际实现替换方法调用。这消除了方法调用的开销。
 
@@ -1318,173 +1268,178 @@ public class MethodInliningExample {
 
 使用以下命令编译并运行以启用内联日志：
 
-```
-1 java -XX:+UnlockDiagnosticVMOptions -XX:+PrintInlining
+```bash
+java -XX:+UnlockDiagnosticVMOptions -XX:+PrintInlining MethodInliningExample
 ```
 
 输出将确认 `inlineMethod` 已内联：
 
 ```
-1 57 1 MethodInliningExample::inlineMethod (5 bytes)
+57 1 MethodInliningExample::inlineMethod (5 bytes)
 ```
 
 JIT 编译器识别出循环为热点并通过减少迭代次数来展开它。考虑以下程序：
 
 ```java
-1 public class LoopUnrolling {
-2    public static void main(String[] args) {
-3        long start = System.nanoTime();
-4        int sum = 0;
-5        for (int i = 0; i < 1000000; i++) {
-6            sum += i;
-7        }
-8        long end = System.nanoTime();
-9        System.out.println("Sum: " + sum);
-10   }
-11 }
+public class LoopUnrolling {
+    public static void main(String[] args) {
+        long start = System.nanoTime();
+        int sum = 0;
+        for (int i = 0; i < 1000000; i++) {
+            sum += i;
+        }
+        long end = System.nanoTime();
+        System.out.println("Sum: " + sum);
+    }
+}
 ```
 
 编译该程序：
 
-```
-1 javac LoopUnrolling.java
+```bash
+javac LoopUnrolling.java
 ```
 
 使用启用 JIT 日志运行：
 
+```bash
+java -XX:+PrintCompilation LoopUnrolling
+```
+
 JIT 编译还利用**逃逸分析**通过将对象分配在栈而不是堆上来优化分配。这是一个示例：
 
 ```java
-1 public class EscapeAnalysisExample {
-2    public static void main(String[] args) {
-3      long start = System.nanoTime();
-4      for (int i = 0; i < 1000000; i++) {
-5        createObject();
-6      }
-7      long end = System.nanoTime();
-8      System.out.println("Execution time: " + (end - start) / 1e9 + " seconds");
-9  }
-10
-11  public static void createObject() {
-12    Data d = new Data(10, 20);
-13  }
-14
-15  static class Data {
-16    int x, y;
-17    Data(int x, int y) {
-18      this.x = x;
-19      this.y = y;
-20    }
-21  }
-22 }
+public class EscapeAnalysisExample {
+    public static void main(String[] args) {
+        long start = System.nanoTime();
+        for (int i = 0; i < 1000000; i++) {
+            createObject();
+        }
+        long end = System.nanoTime();
+        System.out.println("Execution time: " + (end - start) / 1e9 + " seconds");
+    }
+
+    public static void createObject() {
+        Data d = new Data(10, 20);
+    }
+
+    static class Data {
+        int x, y;
+        Data(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+}
 ```
 
 启用逃逸分析运行：
 
-```
-1 java -XX:+DoEscapeAnalysis -XX:+PrintGC EscapeAnalysis
+```bash
+java -XX:+DoEscapeAnalysis -XX:+PrintGC EscapeAnalysisExample
 ```
 
 JIT 编译器还会执行**死代码消除**，移除不影响程序结果的字节码。这是一个示例：
 
 ```java
-1 public class DeadCodeEliminationExample {
-2    public static void main(String[] args) {
-3        int a = 5;
-4        int b = 10;
-5        int unused = a + b; // 此计算从未被使用
-6        System.out.println("End of Program");
-7    }
-8 }
+public class DeadCodeEliminationExample {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 10;
+        int unused = a + b; // 此计算从未被使用
+        System.out.println("End of Program");
+    }
+}
 ```
 
 编译该程序：
 
-```
-1 javac DeadCodeEliminationExample.java
+```bash
+javac DeadCodeEliminationExample.java
 ```
 
 使用 JIT 日志运行：
 
-```
-1 java -XX:+PrintCompilation DeadCodeEliminationExample
+```bash
+java -XX:+PrintCompilation DeadCodeEliminationExample
 ```
 
 JIT 编译还应用**常量折叠**，将常量表达式在运行时进行预计算。考虑以下程序：
 
 ```java
-1 public class ConstantFoldingExample {
-2    public static void main(String[] args) {
-3      int result = 50 * 20 * 2;
-4      System.out.println("Result: " + result);
-5  }
-6 }
+public class ConstantFoldingExample {
+    public static void main(String[] args) {
+        int result = 50 * 20 * 2;
+        System.out.println("Result: " + result);
+    }
+}
 ```
-
-
-
 
 编译程序：
 
 ```bash
-1. javac ConstantFoldingExample.java
+javac ConstantFoldingExample.java
 ```
 
 运行程序：
 
 ```bash
-1. java ConstantFoldingExample
+java ConstantFoldingExample
 ```
 
 JIT 编译器将 `50*20*2` 替换为预计算出的结果 `2000`。这节省了运行时处理时间并提高了效率。
 
+
+
+# JIT 编译
+
 JIT 编译是 JVM 的一项强大特性，它可以在运行时优化字节码执行。通过识别频繁执行的代码路径，JIT 将它们动态地编译成原生机器码，从而显著提高性能。方法内联、循环展开、逃逸分析、死代码消除和常量折叠等技术允许 JVM 能够高效地执行 Java 程序，同时为开发者抽象了复杂性。JIT 确保了 Java 兼具可移植性与近原生的性能，使其适用于高性能和可扩展的应用。
 
-#### 1.4.2 - 垃圾回收
+## 1.4.2 - 垃圾回收
 
 探索垃圾回收机制及其对内存管理的影响。
 
-Java 中的垃圾回收（GC）是一种自动内存管理过程，用于回收不再被引用的对象所占用的内存。这允许开发者专注于应用程序逻辑，而无需显式地释放内存。JVM 处理垃圾回收，确保了高效的内存利用并防止内存泄漏。然而，理解垃圾回收的工作原理及其对性能的影响对于构建可扩展且高效的应用程序关重要。
+Java 中的垃圾回收（GC）是一种自动内存管理过程，用于回收不再被引用的对象所占用的内存。这允许开发者专注于应用程序逻辑，而无需显式地释放内存。JVM 处理垃圾回收，确保了高效的内存利用并防止内存泄漏。然而，理解垃圾回收的工作原理及其对性能的影响对于构建可扩展且高效的应用程序关键。
 
-JVM 将内存划分为区域：**堆**（heap）和**非堆**（non-heap）区域。堆是分配对象的地方，并进一步分为**新生代**（Young Generation）、**老代**（Old Generation / Tenured）和**永久代**（Java 8+ 中的 Metaspace）。垃圾回收主要关注于回收堆中未使用的对象。
+JVM 将内存划分为区域：`堆`（heap）和`非堆`（non-heap）区域。堆是分配对象的地方，并进一步分为`新生代`（Young Generation）、`老代`（Old Generation / Tenured）和`永久代`（Java 8+ 中的 Metaspace）。垃圾回收主要关注于回收堆中未使用的对象。
 
 要理解 GC 如何工作，可以从创建一个许多对象的简单程序开始：
 
 ```java
-1. public class GCDemo {
-2    public static void main(String[] args) {
-3      for (int i = 0; i < 10000; i++) {
-4        new GCDemo(); // 创建对象
-5      }
-6      System.gc(); // 建议垃圾回收
-7      System.out.println("Garbage Collection Triggered");
-8    }
-9
-10   @Override
-11   protected void finalize() {
-12     System.out.println("Object is being garbage collected");
-13   }
-14 }
+public class GCDemo {
+    public static void main(String[] args) {
+        for (int i = 0; i < 10000; i++) {
+            new GCDemo(); // 创建对象
+        }
+        System.gc(); // 建议垃圾回收
+        System.out.println("Garbage Collection Triggered");
+    }
+
+    @Override
+    protected void finalize() {
+        System.out.println("Object is being garbage collected");
+    }
+}
 ```
 
 编译程序：
 
 ```bash
-1. javac GCDemo.java
+javac GCDemo.java
 ```
 
 启用垃圾回收详情并运行程序：
 
 ```bash
-1. java -verbose:gc GCDemo
+java -verbose:gc GCDemo
 ```
 
 `verbose:gc` 标志会显示有关 GC 事件的信息：
 
 ```
-1. [GC (System.gc() )) 65536K->38912K(125952K), 0.0150326 secs
-2. Object is being garbage collected
-3. Garbage Collection Triggered
+[GC (System.gc() )) 65536K->38912K(125952K), 0.0150326 secs
+Object is being garbage collected
+Garbage Collection Triggered
 ```
 
 在这里：
@@ -1492,9 +1447,9 @@ JVM 将内存划分为区域：**堆**（heap）和**非堆**（non-heap）区�
 - `System.gc()` 调用建议执行 GC，但由 JVM 决定何时实际执行。
 - `finalize()` 方法在正在被垃圾回收的对象上调用。
 
-堆被分为**新生代**和**老代**：
+堆被分为`新生代`和`老代`：
 
-1. **新生代**：新创建的对象分配在这里。它进一步分为 **Eden 区**（Eden，存放新对象）和两个**存活区**（Survivor Spaces，即 S0 和 S1，用于存放存过 Minor GC 的对象）。
+1. **新生代**：新创建的对象分配在这里。它进一步分为 `Eden 区`（Eden，存放新对象）和两个`存活区`（Survivor Spaces，即 S0 和 S1，用于存放存过 Minor GC 的对象）。
 2. **老代**：在新生代中存活足够的对象会被提升到这里。Major GC（大 GC）会清理老代。
 
 运行以下程序以观察 Minor GC 和 Major GC 的工作：
@@ -1519,14 +1474,16 @@ java -Xms10M -Xmx10M -XX:+PrintGCDetails GCRegionsDemo
 `-Xms` 和 `-Xmx` 选项将初始和最大堆大小设置为 10MB。`-XX:+PrintGCDetails` 标志提供详细的 GC 日志：
 
 ```
-1. [GC (Allocation Failure) [PSYoungGen: 8192K->1024K(9216K)] 8192K->4352K(9728K), 0.0010542 secs]
-2. [Full GC (System.gc()) [PSOldGen: 3328K->4352K(4352K)] [PSYoungGen: 1024K->0K(9216K)] 4352K->4352K, 0.0100353 secs]
+[GC (Allocation Failure) [PSYoungGen: 8192K->1024K(9216K)] 8192K->4352K(9728K), 0.0010542 secs]
+[Full GC (System.gc()) [PSOldGen: 3328K->4352K(4352K)] [PSYoungGen: 1024K->0K(9216K)] 4352K->4352K, 0.0100353 secs]
 ```
 
 在这里：
 
 - Minor GC (`PSYoungGen`) 在新生代填满时发生。
 - Full GC 同时清理新生代和老代。
+
+### 垃圾回收算法
 
 **垃圾回收算法**定义了如何回收内存。Java 提供了几种算法，每种都适用于不同的用例：
 
@@ -1535,100 +1492,99 @@ java -Xms10M -Xmx10M -XX:+PrintGCDetails GCRegionsDemo
 3. **G1 GC**（Garbage First）：将堆划分为多个区域，并优先对垃圾最多的区域进行回收。
 4. **ZGC 和 Shenandoah**：适用于大堆的低延迟收集器。
 
-
-
+## JRE 基础演示
 
 为了演示 JRE 的功能，让我们从一个基础 Java 程序开始：
 
-```
-1 public class HelloJRE {
-2    public static void main(String[] args) {
-3      System.out.println("Java Runtime Environment Demonstration");
-4    }
-5 }
+```java
+public class HelloJRE {
+    public static void main(String[] args) {
+        System.out.println("Java Runtime Environment Demonstration");
+    }
+}
 ```
 
 使用 Java 编译器 `javac` 编译程序：
 
-```
-1 javac HelloJRE.java
+```bash
+javac HelloJRE.java
 ```
 
 编译过程会生成一个名为 `HelloJRE.class` 的字节码文件。该文件包含平台无关的指令，可以由 JVM 执行。
 
 要运行程序，请使用 `java` 命令，它是 JRE 的一部分：
 
-```
-1 java HelloJRE
+```bash
+java HelloJRE
 ```
 
 JRE 提供了必要的组件（如 JVM 和核心库），用于加载和执行 `HelloJRE.class` 文件。
 
-#### JRE 中的核心 Java 库
+### JRE 中的核心 Java 库
 
 JRE 中的核心库在执行 Java 应用程序时起着至关重要的作用。它们包含了用于以下内容的包：
 
-- 输入/输出 (java.io)
-- 工具类 (java.util)
-- 集合 (java.util.Collection)
-- 并发 (java.util.concurrent)
-- 网络 (java.net)
+- 输入/输出 (`java.io`)
+- 工具类 (`java.util`)
+- 集合 (`java.util.Collection`)
+- 并发 (`java.util.concurrent`)
+- 网络 (`java.net`)
 
 这里是一个演示使用核心库执行文件输入/输出的示例：
 
-```
-1 import java.io.File;
-2 import java.io.FileWriter;
-3 import java.io.IOException;
-4
-5 public class FileIODemo {
-6      public static void main(String[] args) {
-7      try {
-8          File file = new File("example.txt");
-9          FileWriter writer = new FileWriter(file);
-10         writer.write("This file is created using JRE libraries.");
-11         writer.close();
-12 
-13         System.out.println("File written successfully: " + 
-14         file.getAbsolutePath());
-15     } catch (IOException e) {
-16         e.printStackTrace();
-17     }
-18  }
-19 }
+```java
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileIODemo {
+    public static void main(String[] args) {
+        try {
+            File file = new File("example.txt");
+            FileWriter writer = new FileWriter(file);
+            writer.write("This file is created using JRE libraries.");
+            writer.close();
+
+            System.out.println("File written successfully: " +
+                    file.getAbsolutePath());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
 ```
 
 编译并运行程序：
 
-```
-1 javac FileIODemo.java
-2 java FileIODemo
+```bash
+javac FileIODemo.java
+java FileIODemo
 ```
 
-该程序使用 `java.io.` 库创建并写入名为 `example.txt` 的文件。JRE 确保在运行时加载必要的类（`File`、`FileWriter`）。
+该程序使用 `java.io` 库创建并写入名为 `example.txt` 的文件。JRE 确保在运行时加载必要的类（`File`、`FileWriter`）。
 
-#### JVM 在 JRE 中的作用
+### JVM 在 JRE 中的作用
 
 **JVM** 是 JRE 的关键组件，负责解释和执行 Java 字节码。它执行诸如类加载、字节码验证以及通过解释或即时编译（JIT）进行执行等任务。
 
 要观察 JVM 的作用，请使用以下命令启用详细执行日志：
 
-```
-1 java -verbose:class HelloJRE
+```bash
+java -verbose:class HelloJRE
 ```
 
 该命令会打印出程序执行期间 JVM 加载的所有类：
 
 ```
-1 [Loaded java.lang.Object from /path/to/rt.jar]
-2 [Loaded java.lang.String from /path/to/rt.jar]
-3 [Loaded HelloJRE from file:/path/to/HelloJRE.class]
-4 Java Runtime Environment Demonstration
+[Loaded java.lang.Object from /path/to/rt.jar]
+[Loaded java.lang.String from /path/to/rt.jar]
+[Loaded HelloJRE from file:/path/to/HelloJRE.class]
+Java Runtime Environment Demonstration
 ```
 
 在这里，JVM 加载了所需的类，例如 `java.lang.Object`、`java.lang.String` 以及用户定义的类 `HelloJRE`。
 
-#### JRE 中的内存管理
+### JRE 中的内存管理
 
 JRE 包含了用于内存管理的垃圾回收。垃圾回收识别并移除不再被引用的对象，确保内存的高效利用。以下程序演示了垃圾回收的运行：
 
@@ -1651,45 +1607,55 @@ public class MemoryManagementDemo {
 
 编译并运行程序：
 
-```
-1 javac MemoryManagementDemo.java
-2 java -verbose:gc MemoryManagementDemo
+```bash
+javac MemoryManagementDemo.java
+java -verbose:gc MemoryManagementDemo
 ```
 
 `-verbose:gc` 标志显示详细的垃圾回收日志。你将观察到指示内存回收以及调用 `finalize` 方法的消息：
 
 ```
-1 [GC (System.gc())] 65536K->38912K(125952K), 0.0150326 secs
-2 Object is being garbage collected.
-3 Garbage collection suggested.
+[GC (System.gc())] 65536K->38912K(125952K), 0.0150326 secs
+Object is being garbage collected.
+Garbage collection suggested.
 ```
 
 JVM 作为 JRE 的一部分会自动处理内存清理，这防止了内存泄漏并提高了性能。
 
-#### JRE 中的支持文件
+### JRE 中的支持文件
 
 JRE 包含了支持配置文件，例如 `java.policy`、`java.security` 和属性文件。这些文件管理安全设置、运行时参数和系统属性。
 
 要访问系统属性，请使用 `System` 类：
 
+```java
+public class SystemPropertiesDemo {
+    public static void main(String[] args) {
+        System.out.println("Java Version: " + System.getProperty("java.version"));
+        System.out.println("JRE Vendor: " + System.getProperty("java.vendor"));
+        System.out.println("JRE Path: " + System.getProperty("java.home"));
+    }
+}
+```
+
 编译并运行程序：
 
-```
-1 javac SystemPropertiesDemo.java
-2 java SystemPropertiesDemo
+```bash
+javac SystemPropertiesDemo.java
+java SystemPropertiesDemo
 ```
 
 示例输出：
 
 ```
-1 Java Version: 11.0.12
-2 JRE Vendor: Oracle Corporation
-3 JRE Path: /usr/lib/jvm/java-11-openjdk
+Java Version: 11.0.12
+JRE Vendor: Oracle Corporation
+JRE Path: /usr/lib/jvm/java-11-openjdk
 ```
 
 该程序获取并打印了关键属性，如 JRE 版本、供应商和安装路径。
 
-#### JRE 中的多线程与并发
+### JRE 中的多线程与并发
 
 JRE 通过 `java.util.concurrent` 包为多线程提供了强大的支持。线程允许并发执行，从而提高了扩展性。这里是一个示例：
 
@@ -1716,12 +1682,12 @@ public class MultiThreadingDemo {
 
 编译并运行程序：
 
-```
-1 javac MultiThreadingDemo.java
-2 java MultiThreadingDemo
+```bash
+javac MultiThreadingDemo.java
+java MultiThreadingDemo
 ```
 
-#### JRE 中的网络支持
+### JRE 中的网络支持
 
 JRE 通过 `java.net` 包支持网络操作。这里是一个从 URL 获取数据的示例：
 
@@ -1748,9 +1714,23 @@ public class NetworkingDemo {
 }
 ```
 
+## JDK 工具演示
 
+### Java 编译器 (`javac`)
+
+`javac` 是 Java 编译器，用于将 Java 源代码编译为字节码。
 
 ```java
+public class HelloJDK {
+    public static void main(String[] args) {
+        System.out.println("Hello, JDK!");
+    }
+}
+```
+
+编译程序：
+
+```bash
 javac HelloJDK.java
 ```
 
@@ -1770,38 +1750,38 @@ java HelloJDK
 
 ![](img/7d8ec1502785ce30da8062a81c59bbe0_153_0.png)
 
-#### Java 归档工具 (`jar`)
+### Java 归档工具 (`jar`)
 
 `jar` 工具将多个类文件、资源和元数据打包成单个 Java 归档 (JAR) 文件。JAR 文件简化了程序的部署和发布。
 
 以下是创建一个 JAR 文件的示例：
 
-- 1. 编译程序：
+1. 编译程序：
 
 ```java
-1 public class JarExample {
-2     public static void main(String[] args) {
-3      System.out.println("Running from a JAR file");
-4     }
-5 }
+public class JarExample {
+    public static void main(String[] args) {
+        System.out.println("Running from a JAR file");
+    }
+}
 ```
 
 编译程序：
 
-```java
-1 javac JarExample.java
+```bash
+javac JarExample.java
 ```
 
 2. 创建清单文件 (`manifest.txt`) 以指定主类：
 
 ```text
-1 Main-Class: JarExample
+Main-Class: JarExample
 ```
 
 3. 将类文件打包成 JAR：
 
 ```bash
-1 jar cfm JarExample.jar manifest.txt JarExample.class
+jar cfm JarExample.jar manifest.txt JarExample.class
 ```
 
 - `c` 创建 JAR。
@@ -1811,35 +1791,37 @@ java HelloJDK
 4. 运行 JAR 文件：
 
 ```bash
-1 java -jar JarExample.jar
+java -jar JarExample.jar
 ```
 
 输出：
 
 ```text
-1 Running from a JAR file
+Running from a JAR file
 ```
 
 `jar` 工具允许将 Java 程序捆成可分发的归档。
 
-#### Java 调试器 (`jdb`)
+### Java 调试器 (`jdb`)
 
 `jdb` 工具用于调试 Java 程序。它允许开发者设置断点、检查变量并控制程序的执行。
 
 以下是调试程序的示例：
 
 ```java
-1 public class DebugExample {
-2     public static void main(String[] args) {
-3      int a = 5;
-44      int b = 10;
-5      int sum = a + b;
-6      System.out.println("Sum: " + sum);
-7     }
-8 }
+public class DebugExample {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 10;
+        int sum = a + b;
+        System.out.println("Sum: " + sum);
+    }
+}
 ```
 
 1. 带有调试信息编译程序：
+
+
 
 ```bash
 1 javac -g DebugExample.java
@@ -1874,7 +1856,7 @@ java HelloJDK
 
 `jdb` 工具允许开发者在开发过程中交互式地调试问题。
 
-#### Java 文档工具 (`javadoc`)
+### Java 文档工具 (`javadoc`)
 
 `javadoc` 工具根据 Javadoc 风格编写的 Java 源码注释生成 HTML 文档。文档有助于开发者理解和维护代码。
 
@@ -1911,7 +1893,7 @@ java HelloJDK
 
 打开 `docs` 目录下的 `index.html` 文件查看生成的文档。
 
-#### Java 编译器 API
+### Java 编译器 API
 
 JDK 包含 Java 编译器 API，允许通过编程方式编译代码。这对于动态代码编译非常有用。
 
@@ -1952,11 +1934,11 @@ JDK 包含 Java 编译器 API，允许通过编程方式编译代码。这对于
 1 Compilation successful!
 ```
 
-#### 监控工具：`jstat` 和 `jconsole`
+### 监控工具：`jstat` 和 `jconsole`
 
 JDK 提供了监控应用程序性能、内存使用和垃圾回收的工具。
 
-##### jstat
+#### jstat
 
 `jstat` 工具提供 JVM 性能的统计信息，例如堆使用和垃圾回收。
 
@@ -1972,7 +1954,7 @@ JDK 提供了监控应用程序性能、内存使用和垃圾回收的工具。
 1 jstat -gc <PID>
 ```
 
-##### jconsole
+#### jconsole
 
 `jconsole` 工具提供了监控 JVM 指标的图形界面。
 
@@ -1982,9 +1964,7 @@ JDK 提供了监控应用程序性能、内存使用和垃圾回收的工具。
 1 jconsole
 ```
 
-
-
-#### 自定义加载器示例
+### 自定义加载器示例
 
 可以通过扩展 `ClassLoader` 并重写 `findClass` 方法来创建一个自定义加载器。这允许你从自定义位置动态加载类。
 
@@ -2051,7 +2031,7 @@ public class HelloWorld {
 
 编译 `HelloWorld` 类：
 
-```
+```bash
 javac HelloWorld.java
 ```
 
@@ -2059,24 +2039,25 @@ javac HelloWorld.java
 
 使用你的自定义加载器运行程序：
 
-```
+```bash
 javac CustomClassLoader.java TestCustomClassLoader.java
 java TestCustomClassLoader
 ```
 
 输出：
 
-```
+```text
 Hello from HelloWorld class!
 Class Loaded: HelloWorld
 Class Loader: CustomClassLoader@1b6d3586
 ```
 
 在此示例中：
+
 - `CustomClassLoader` 从指定的目录动态加载 `HelloWorld` 类。
 - 展示了如何跳过默认委托机制从自定义源加载类。
 
-#### 使用 `Class.forName` 在运行时加载类
+### 使用 `Class.forName` 在运行时加载类
 
 `Class.forName()` 方法允许你在运行时动态加载类。它对于需要动态行为的框架和应用程序特别有用。
 
@@ -2099,23 +2080,23 @@ public class DynamicLoadingExample {
 
 编译并运行程序：
 
-```
+```bash
 javac DynamicLoadingExample.java
 java DynamicLoadingExample
 ```
 
 输出：
 
-```
+```text
 Class Loaded: java.util.ArrayList
 Class Loader: null
 ```
 
 在这里：
 
-- `ArrayList` 类是由 **Bootstrap Class Loader** 加载的。
+- `ArrayList` 类是由 `Bootstrap Class Loader` 加载的。
 
-#### 类加载器中的父子委托
+### 类加载器中的父子委托
 
 父级委托模型确保类按层级加载。自定义类加载器除非被显式重写，否则遵循此委托规则。
 
@@ -2137,14 +2118,14 @@ public class DelegationExample {
 
 编译并运行程序：
 
-```
+```bash
 javac DelegationExample.java
 java DelegationExample
 ```
 
 输出：
 
-```
+```text
 System Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader
 Parent Class Loader: jdk.internal.loader.ClassLoaders$PlatformClassLoader
 Bootstrap Class Loader: null
@@ -2154,14 +2135,11 @@ Bootstrap Class Loader: null
 
 - 系统类加载器加载应用类。
 - 平台类加载器加载扩展类。
-- **Bootstrap Class Loader** 表示为 `null`。
+- `Bootstrap Class Loader` 表示为 `null`。
 
-#### 结论
+### 结论
 
 Java 类加载器是 JVM 的关键部分，负责将类动态加载到内存中。它遵循委托模型以确保效率和一致性。创建自定义加载器允许实现动态且灵活的应用行为，特别是在框架和模块化系统中。通过理解类加载器的工作原理，开发者可以管理类加载、解决问题并优化性能。
-
-
-
 
 ```java
 1 javac LoadingPhase.java
@@ -2170,7 +2148,7 @@ Java 类加载器是 JVM 的关键部分，负责将类动态加载到内存中�
 
 Output:
 
-```
+```text
 1 Class Loader of this class: jdk.internal.loader.ClassLoaders$AppClassLoader
 2 Class Loader of String class: null
 3 Class Loader of javax.crypto.Cipher: jdk.internal.loader.ClassLoaders$PlatformClassLoader
@@ -2180,9 +2158,9 @@ Output:
 - **启动类加载器**加载核心 Java 类（例如 `String`），并表示为 `null`。
 - **平台类加载器**加载诸如 `javax.crypto.Cipher` 等类的扩展类。
 
-## ### 步骤 2：链接 (Linking)
+## 步骤 2：链接 (Linking)
 
-**链接**阶段为已加载的类执行执行做准备。它由三个子步骤组成：
+**链接**阶段为已加载的类执行做准备。它由三个子步骤组成：
 
 1. **验证 (Verification)**：确保字节码是有效的并符合 JVM 规范。
 2. **准备 (Preparation)**：为静态变量分配内存并用默认值对其进行初始化。
@@ -2207,31 +2185,34 @@ Output:
 
 编译并运行该程序：
 
-```
+```bash
 1 javac LinkingPhase.java
 2 java LinkingPhase
 ```
 
 Output:
 
-```
+```text
 1 Static block executed. Count: 10
 2 Count in main: 10
 ```
 
 在这里：
+
 - 在**准备**阶段，变量 `count` 初始化为默认值 `0`。
 - 静态块在**初始化**阶段运行，将 `count` 设置为 `10`。
 
 **验证**步骤确保字节码不会违反安全规则，例如对内存的非法访问或无效的方法调用。如果字节码无效，JVM 将在运行时抛出 `VerifyError`。
 
-## ### 步骤 3：初始化 (Initialization)
+## 步骤 3：初始化 (Initialization)
 
 **初始化**阶段是类加载过程的最后一步。在此阶段：
+
 1. 静态变量 `static {}` 被赋予它们的显式值。
 2. 静态块 `static {}` 按照它们在类中出现的顺序进行执行。
 
 JVM 只在以下情况初始化类：
+
 - 它第一次被引用。
 - 访问了静态字段或方法。
 
@@ -2263,29 +2244,30 @@ public class InitializationPhase {
 
 编译并运行该程序：
 
-```
+```bash
 1 javac InitializationPhase.java
 2 java InitializationPhase
 ```
 
 Output:
 
-```
+
+
 1 Static Block 1: x = 5
 2 Static Block 2: x = 10
 3 Main Method Starts
 4 Static Method: x = 10
-```
 
 在这里：
+
 - 当类初始化时，两个静态块按顺序执行。
 - `display()` 方法在静态初始化完成后被调用。
 
 **初始化**阶段确保在访问类中的任何方法或字段之前，所有的静态变量和块都已执行完毕。
 
-## ### 使用 `Class.forName` 进行动态加载
+## 使用 `Class.forName` 进行动态加载
 
-`Class.forName()` 方法在运行时动态加载并初始化一个类。它通常用于根据配置加载加载类的框架中。
+`Class.forName()` 方法在运行时动态加载并初始化一个类。它通常用于根据配置加载类的框架中。
 
 这里有一个动态类加载的示例：
 
@@ -2321,7 +2303,7 @@ Output:
 
 `Class.forName()` 方法会触发类加载过程并在初始化期间执行静态块。
 
-## ### 自定义类加载器 (Custom Class Loader)
+## 自定义类加载器
 
 为了更好地理解类加载过程，你可以创建一个自定义类加载器。此示例从自定义位置动态加载类文件。
 
@@ -2357,13 +2339,10 @@ Output:
 ```
 
 步骤：
+
 1. 编译 `ExampleClass`。
 2. 将 `ExampleClass.class` 放在 `/path/to/classes/`。
 3. 运行程序。
-
-
-
-
 
 ```java
 import javax.crypto.Cipher;
@@ -2392,12 +2371,12 @@ jdk.internal.loader.ClassLoaders$PlatformClassLoader
 
 在这里：
 
-- **平台类加载器 (Platform Class Loader)** 加载了 `javax.crypto.Cipher` 类。
+- **平台类加载器** 加载了 `javax.crypto.Cipher` 类。
 - 它负责从扩展库和平台特定包加载类。
 
-### ### 应用（系统）类加载器
+## 应用（系统）类加载器
 
-**应用类加载器 (Application Class Loader)** 从应用程序的 classpath加载类。这包括用户定义的类、第三方库以及运行时指定的其他资源。
+**应用类加载器** 从应用程序的 classpath 加载类。这包括用户定义的类、第三方库以及运行时指定的其他资源。
 
 这里有一个观察应用类加载器的示例：
 
@@ -2436,15 +2415,15 @@ Class Loader of ArrayList: null
 在这里：
 
 - **应用类加载器** 加载了 `ApplicationLoaderExample` 类。
-- `ArrayList` 类属于 `java.util` 的一部分，由启动类加载器 (Bootstrap Class Loader) 加载。
+- `ArrayList` 类属于 `java.util` 的一部分，由启动类加载器加载。
 
-### ### 自定义类加载器
+## 自定义类加载器
 
-你可以通过创建**自定义类加载器 (Custom Class Loader)** 来扩展类加载器的功能。这对于动态从非标准位置（如外部文件、网络位置或加密源）加载类非常有用。
+你可以通过创建**自定义类加载器** 来扩展类加载器的功能。这对于动态从非标准位置（如外部文件、网络位置或加密源）加载类非常有用。
 
 这是一个自定义类加载器的示例：
 
-#### 1. 创建自定义类加载器：
+### 1. 创建自定义类加载器
 
 ```java
 import java.io.File;
@@ -2472,7 +2451,7 @@ public class CustomClassLoader extends ClassLoader {
 }
 ```
 
-2. 创建一个待加载的示例类 (`MyCustomClass.java`)：
+### 2. 创建一个待加载的示例类 (`MyCustomClass.java`)
 
 ```java
 public class MyCustomClass {
@@ -2482,7 +2461,7 @@ public class MyCustomClass {
 }
 ```
 
-3. 编译 `MyCustomClass` 并将其放在自定义目录中：
+### 3. 编译 `MyCustomClass` 并将其放在自定义目录中
 
 ```bash
 javac MyCustomClass.java
@@ -2490,7 +2469,7 @@ mkdir classes
 mv MyCustomClass.class classes/
 ```
 
-4. 使用 `CustomClassLoader` 加载类：
+### 4. 使用 `CustomClassLoader` 加载类
 
 ```java
 public class TestCustomClassLoader {
@@ -2529,9 +2508,9 @@ Class Loader: CustomClassLoader@6d06d69c
 - `CustomClassLoader` 从自定义目录 `classes` 加载了 `MyCustomClass`。
 - 它演示了如何覆盖默认的类加载行为。
 
-### ### 委托模型
+## 委托模型
 
-**父级委托模型 (parent delegation model)** 确保类加载请求按层级向上传递。如果父加载器无法加载类，则当前类加载器尝试加载它。
+**父级委托模型** 确保类加载请求按层级向上传递。如果父加载器无法加载类，则当前类加载器尝试加载它。
 
 这里有一个打印类加载器层级的示例：
 
@@ -2557,19 +2536,19 @@ null
 
 父级委托模型确保了一致性并防止了核心类的重复加载。每个加载器都有特定的用途，委托机制维持了层级结构。
 
-## 1. Java 内存模型
+# 1. Java 内存模型
 
 **Java 内存模型 (JMM)** 定义了 Java 虚拟机 (JVM) 如何组织和管理内存。它规定了线程如何与内存交互，以确保线程安全性能。内存主要分为：
 
-- **堆内存 (Heap Memory)**：存储对象和实例。
-- **栈内存 (Stack Memory)**：存储方法帧和局部变量。
-- **元空间 (Metaspace)**：存储类元数据、方法信息和常量。
-- **程序计数器 (PC Register)**：跟踪当前指令的地址。
-- **本地方法栈 (Native Method Stack)**：管理原生方法。
+- **堆内存**：存储对象和实例。
+- **栈内存**：存储方法帧和局部变量。
+- **元空间**：存储类元数据、方法信息和常量。
+- **程序计数器**：跟踪当前指令的地址。
+- **本地方法栈**：管理原生方法。
 
-### ### 堆内存示例
+## 堆内存示例
 
-堆内存是存储所有对象的地方。它被分为新生年代 (Young Generation)、老年代 (Old Generation) 和幸存者区域 (Survivor Spaces)。垃圾回收器会清理未使用的对象以释放堆空间。
+堆内存是存储所有对象的地方。它被分为新生年代、老年代 和幸存者区域。垃圾回收器会清理未使用的对象以释放堆空间。
 
 这里是一个演示堆内存使用的程序：
 
@@ -2607,10 +2586,7 @@ Added 1,000,000 items to the list
 
 这显示了内存分配失败时新生年代的垃圾回收活动。堆是动态管理的，垃圾回收器会移除未使用的对象。
 
-
-
-
-栈内存（Stack memory）用于方法调用帧、局部变量和对象引用。每次方法调用都会创建一个新的栈帧。当方法结束时，该栈帧会被移除。
+栈内存用于方法调用帧、局部变量和对象引用。每次方法调用都会创建一个新的栈帧。当方法结束时，该栈帧会被移除。
 
 以下是一个栈内存运行的示例：
 
@@ -2646,40 +2622,47 @@ Added 1,000,000 items to the list
 ```
 
 在此程序中：
+
 - `methodA` 和 `methodB` 创建了它们自己的栈帧。
 - 局部变量 `x` 和 `y` 存储在各自的栈帧中。
 - 一旦 `methodB` 执行完毕，它的栈帧就会被移除。
 
 如果程序超过了栈内存限制，会抛出 `StackOverflow`。为了模拟这一点，请创建一个无限递归的程序：
 
-```
-1 public class StackOverflowDemo {
-2   public static void main(String[] args) {
-3     recurse();
-4   }
-5 
-6   public static void recurse() {
-7     recurse(); // Infinite recursion
-8   }
-9 }
+
+
+# Java 内存管理与垃圾回收示例
+
+## 栈溢出错误示例
+
+```java
+public class StackOverflowDemo {
+  public static void main(String[] args) {
+    recurse();
+  }
+
+  public static void recurse() {
+    recurse(); // Infinite recursion
+  }
+}
 ```
 
 编译并运行程序：
 
-```
-1 javac StackOverflowDemo.java
-2 java StackOverflowDemo
+```bash
+javac StackOverflowDemo.java
+java StackOverflowDemo
 ```
 
 输出：
 
 ```
-1 Exception in thread "main" java.lang.StackOverflowError
+Exception in thread "main" java.lang.StackOverflowError
 ```
 
 程序执行失败是因为栈内存空间耗尽。
 
-#### Metaspace 示例
+## Metaspace 示例
 
 Metaspace 存储类元数据、方法信息和运行时常量。与使用**永久代 (Permanent Generation)** 的旧版本不同，Metaspace 会根据类的加载和卸载动态增长。
 
@@ -2705,16 +2688,16 @@ public class MetaspaceDemo {
 
 带有 Metaspace 限制编译并运行程序：
 
-```
-1 javac MetaspaceDemo.java
-2 java -XX:MaxMetaspaceSize=50M -XX:+PrintGCDetails MetaspaceDemo
+```bash
+javac MetaspaceDemo.java
+java -XX:MaxMetaspaceSize=50M -XX:+PrintGCDetails MetaspaceDemo
 ```
 
 - `-XX:MaxMetaspaceSize` 将 Metaspace 的最大大小设置为 50 MB。
 
 Metaspace 根据类加载活动动态增长。如果 Metaspace 超过了其限制，会抛出 `OutOfMemoryError`。
 
-#### 程序计数器（PC）寄存器示例
+## 程序计数器（PC）寄存器示例
 
 PC 寄存器存储方法中下一个要执行指令的地址。虽然它由 JVM 自动管理，但它对于执行字节码指令至关重要。
 
@@ -2735,22 +2718,22 @@ public class PCRegisterDemo {
 
 编译并运行程序：
 
-```
-1 javac PCRegisterDemo.java
-2 java PCRegisterDemo
+```bash
+javac PCRegisterDemo.java
+java PCRegisterDemo
 ```
 
 输出：
 
 ```
-1 Result: 15
+Result: 15
 ```
 
 PC 寄存器在 `add` 方法被调用和返回时跟踪指令指针。
 
-#### 内存管理中的垃圾回收
+## 内存管理中的垃圾回收
 
-垃圾回收是 Java 内存模型的关键部分。它回收未使用的对象占用的内存，以确保高效内存内存。
+垃圾回收是 Java 内存模型的关键部分。它回收未使用的对象占用的内存，以确保高效内存管理。
 
 以下是一个观察垃圾回收的示例：
 
@@ -2773,22 +2756,22 @@ public class GarbageCollectionDemo {
 
 编译并运行程序：
 
-```
-1 javac GarbageCollectionDemo.java
-2 java -verbose:gc GarbageCollectionDemo
+```bash
+javac GarbageCollectionDemo.java
+java -verbose:gc GarbageCollectionDemo
 ```
 
 示例输出：
 
 ```
-1 [GC (System.gc()) 65536K->38912K(125952K), 0.0150326 secs]
-2 Object garbage collected
-3 Garbage collection suggested.
+[GC (System.gc()) 65536K->38912K(125952K), 0.0150326 secs]
+Object garbage collected
+Garbage collection suggested.
 ```
 
 `System.gc()` 调用建议进行垃圾回收，而 `finalize` 方法确认了对象何时被回收。
 
-
+## 栈内存示例
 
 ```java
 public class StackMemoryExample {
@@ -2824,7 +2807,7 @@ Result: 15
 
 每次方法调用都会将一个栈帧推入栈中，并在方法完成后栈帧会从栈中弹出。
 
-## ### ### 示例：堆 vs 栈
+## 示例：堆 vs 栈
 
 要理解堆（Heap）和栈（Stack）内存之间的区别，请观察以下程序：
 
@@ -2873,7 +2856,7 @@ Heap objects: obj1.value = 100, obj2.value = 200
 
 这种区别表明，基本类型和引用使用栈内存，而对象使用堆内存。
 
-## ### ### 栈溢出错误 (Stack Overflow Error)
+## 栈溢出错误 (Stack Overflow Error)
 
 栈的大小在运行时固定定义。如果程序由于深度递归或过多的方法调用超过了可用的栈空间，就会发生 `StackOverflowError`。
 
@@ -2914,7 +2897,7 @@ java -Xss2M StackOverflowExample
 
 这会将栈的大小设置为 2 MB，可能允许更深层次的递归。
 
-## ### ### ### 堆中的垃圾回收
+## 堆中的垃圾回收
 
 垃圾回收器会回收堆中不再被引用的对象的内存。这里有一个观察垃圾回收的示例：
 
@@ -2956,7 +2939,7 @@ Garbage collection suggested
 - `ExampleObject` 实例在堆内存中创建。
 - `System.gc()` 调用建议进行垃圾回收，未使用的对象会被最终化并清理干净。
 
-## ### ### ### 线程特定的栈内存
+## 线程特定的栈内存
 
 Java 程序中的每个线程都有它们自己的栈内存。当创建多个线程时，每个线程都使用自己的栈进行独立操作。
 
@@ -2979,8 +2962,7 @@ public class ThreadStackExample {
 }
 ```
 
-
-
+## G1 GC 与并行 GC
 
 G1 GC 将堆划分为多个区域（regions），并优先对垃圾最多的区域进行回收，从而最大限度地减少停顿时间。
 
@@ -2992,7 +2974,7 @@ java -XX:+UseParallelGC -Xmx1G -Xms1G -XX:+PrintGCDetails GCDemo
 
 Parallel GC 使用多个线程进行新生代（Young Generation）收集，提高了 CPU 密集型应用程序的吞吐量。
 
-#### 调优堆内存
+## 调优堆内存
 
 堆内存调优涉及调整堆的大小和各个代的大小以优化垃圾回收性能。关键参数有：
 
@@ -3024,13 +3006,14 @@ java -Xms256M -Xmx256M -XX:NewRatio=2 -XX:SurvivorRatio=6 -XX:+PrintGCDetails He
 ```
 
 参数解释：
+
 - `-Xms256M` 和 `-Xmx256M` 将堆大小设置为 256 MB。
-- `-XX:NewRatio=2` 将堆的三分之一分配给新生代，将二之二分配给老年代。
+- `-XX:NewRatio=2` 将堆的三分之一分配给新生代，将三分之二分配给老年代。
 - `-XX:SurvivorRatio=6` 将 Eden 区与幸存区的比例设置为 6:1。
 
 通过观察 GC 日志，你可以确定堆设置对性能的影响并据此调整参数。
 
-#### 使用剖析器检测内存泄漏
+## 使用剖析器检测内存泄漏
 
 内存泄漏发生在对象不再被程序引用，但由于持久引用而未被垃圾回收时。像 **VisualVM** 和 **Eclipse MAT** 这样的剖析工具有助于检测此类泄漏。
 
@@ -3070,7 +3053,7 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
 2. 将 VisualVM 挂载到运行中的程序上。
 3. 监控堆使用情况并获取堆转储（heap dump）以识别泄漏对象。
 
-#### 启用垃圾回收日志进行分析
+## 启用垃圾回收日志进行分析
 
 垃圾回收日志提供了内存使用和 GC 行为的洞察。使用以下选项启用 GC日志：
 
@@ -3091,13 +3074,21 @@ java -Xmx256M -Xms256M -Xlog:gc* -XX:+PrintGCDetails GCDemo
 - **GC 前后内存**: GC 回收前堆使用情况。
 - **停顿时间**: GC 消耗的时间。
 
-#### 减少 GC 开销
+## 减少 GC 开销
 
 为了减少垃圾回收的开销：
 
-1. **使用合适的 GC 算法**：低停顿应用使用 G1 GC，高吞吐量应用使用 Parallel GC。
+
+
+# Java 安全与性能调优指南
+
+## JVM 调优建议
+
+1. **使用合适的 GC 算法**：低停顿应用使用 `G1 GC`，高吞吐量应用使用 `Parallel GC`。
 2. **调整代大小**：使用 `-XX:NewRatio` 和 `-XX:SurvivorRatio` 优化新生代和老年代的比例。
 3. **减少对象分配**：在密集循环中减少短命对象。
+
+### 对象重用示例
 
 这是一个通过重用对象减少垃圾回收的示例：
 
@@ -3123,15 +3114,15 @@ java -Xmx50M -Xms50M -verbose:gc ObjectReuseExample
 
 重用对象减少了堆中的内存分配，从而降低了垃圾回收的频率。
 
-#### 技术总结
+### 技术总结
 
 1. **调优堆大小**：使用 `-Xms` 和 `-Xmx` 调整堆内存。
-2. **选择正确的 GC 算法**：根据应用需求选择 G1 GC、Parallel GC 或 ZGC。
-3. **启用 GC日志**：使用 `-verbose:gc` 或 `-Xlog:gc*`。
-4. **检测内存泄漏**：使用 VisualVM 或 Eclipse MAT。
+2. **选择正确的 GC 算法**：根据应用需求选择 `G1 GC`、`Parallel GC` 或 `ZGC`。
+3. **启用 GC 日志**：使用 `-verbose:gc` 或 `-Xlog:gc*`。
+4. **检测内存泄漏**：使用 `VisualVM` 或 `Eclipse MAT`。
 5. **减少对象分配**：通过对象重用优化。
 
-
+## 网络访问控制示例
 
 ```java
 import java.net.URL;
@@ -3154,29 +3145,28 @@ public class NetworkAccessDemo {
 无限制地编译并运行程序：
 
 ```bash
-1 javac NetworkAccessDemo.java
-2 java NetworkAccessDemo
+javac NetworkAccessDemo.java
+java NetworkAccessDemo
 ```
 
 现在创建一个策略文件（`network.policy`）来阻止所有网络访问：
 
 ```
-1 grant {
+grant {
     // 没有权限
 };
 ```
 
-使用安全管理器（Security Manager）运行程序：
+使用安全管理器（`Security Manager`）运行程序：
 
 ```bash
-1 java -Djava.security.manager -Djava.security.policy=network.policy
-   NetworkAccessDemo
+java -Djava.security.manager -Djava.security.policy=network.policy NetworkAccessDemo
 ```
 
 输出：
 
 ```
-1 java.security.AccessControlException: access denied
+java.security.AccessControlException: access denied
 ```
 
 在这里，安全管理器阻止了程序建立任何网络连接。
@@ -3185,39 +3175,39 @@ public class NetworkAccessDemo {
 
 代码签名确保了代码的真实性和完整性。它使用数字签名来验证代码未被篡改。
 
--   1. **生成密钥库**：
+### 1. 生成密钥库
 
 ```bash
-1 keytool -genkeypair -alias mykey -keystore keystore.jks -keyalg RSA -keysize 2048 -validity 365
+keytool -genkeypair -alias mykey -keystore keystore.jks -keyalg RSA -keysize 2048 -validity 365
 ```
 
--   2. **对 JAR 文件签名**：
+### 2. 对 JAR 文件签名
 
 为你的程序创建一个 JAR 文件：
 
 ```bash
-1 jar -cvf signed-demo.jar FileAccessDemo.class
+jar -cvf signed-demo.jar FileAccessDemo.class
 ```
 
 使用生成的密钥库对 JAR 文件签名：
 
 ```bash
-1 jarsigner -keystore mykeystore.jks -signedjar signed-demo-signed.jar signed-demo.jar mykey
+jarsigner -keystore mykeystore.jks -signedjar signed-demo-signed.jar signed-demo.jar mykey
 ```
 
--   3. **验证签名的 JAR 文件**：
+### 3. 验证签名的 JAR 文件
 
 ```bash
-1 jarsigner -verify -verbose -certs signed-demo-signed.jar
+jarsigner -verify -verbose -certs signed-demo-signed.jar
 ```
 
 成功的验证确保了代码已签名且未被更改。
 
-#### 使用 `java.security` 包
+## 使用 `java.security` 包
 
 Java 在 `java.security` 包中提供了用于哈希、加密和安全随机数生成等加密操作的 API。
 
-以下是一个生成安全随机数的示例：
+### 生成安全随机数示例
 
 ```java
 import java.security.SecureRandom;
@@ -3234,23 +3224,23 @@ public class SecureRandomDemo {
 编译并运行程序：
 
 ```bash
-1 javac SecureRandomDemo.java
-2 java SecureRandomDemo
+javac SecureRandomDemo.java
+java SecureRandomDemo
 ```
 
 输出（示例）：
 
 ```
-1 Secure random number: 42
+Secure random number: 42
 ```
 
 `SecureRandom` 类生成密码学强健的随机值，这对于安全敏感型应用至关重要。
 
-#### 使用 MessageDigest 进行哈希
+### 使用 `MessageDigest` 进行哈希
 
-哈希通过将输入转换为固定大小的哈希值来确保数据完整性。Java 的 `MessageDigest` 类支持 SHA-256 等算法。
+哈希通过将输入转换为固定大小的哈希值来确保数据完整性。Java 的 `MessageDigest` 类支持 `SHA-256` 等算法。
 
-以下是一个生成 SHA-256 哈希的示例：
+以下是一个生成 `SHA-256` 哈希的示例：
 
 ```java
 import java.security.MessageDigest;
@@ -3272,24 +3262,24 @@ public class HashingDemo {
 编译并运行程序：
 
 ```bash
-1 javac HashingDemo.java
-2 java HashingDemo
+javac HashingDemo.java
+java HashingDemo
 ```
 
 输出：
 
 ```
-1 SHA-256 Hash:
+SHA-256 Hash:
 eb59f98a55f9e3f1b4e6488ea3c32c94d502ed4847af032dfbf52fa7116a8e5b
 ```
 
-SHA-256 哈希确保了数据完整性，因为输入即使微小的变化也会产生完全不同的哈希。
+`SHA-256` 哈希确保了数据完整性，因为输入即使微小的变化也会产生完全不同的哈希。
 
-#### 使用 AES 进行加密
+### 使用 AES 进行加密
 
-**Java 加密架构 (JCA)** 支持使用 AES 算法的对称加密。
+**Java 加密架构 (JCA)** 支持使用 `AES` 算法的对称加密。
 
-以下使用 AES 加密和解密数据的示例：
+以下使用 `AES` 加密和解密数据的示例：
 
 ```java
 import javax.crypto.Cipher;
@@ -3324,50 +3314,47 @@ public class AesEncryptionDemo {
 编译并运行程序：
 
 ```bash
-1 javac AesEncryptionDemo.java
-2 java AesEncryptionDemo
+javac AesEncryptionDemo.java
+java AesEncryptionDemo
 ```
 
 输出：
 
 ```
-1 Encrypted Data:
+Encrypted Data:
 [hex string]
-2 Decrypted Data: Hello, World!
+Decrypted Data: Hello, World!
 ```
 
 Java 加密架构 (JCA) 为构建安全应用程序提供了一个框架。它支持各种加密协议和算法的实现。
 
+## 文件读取权限控制
 
-
-
-
-```
-1 java -Djava.security.manager -Djava.security.policy=file-read.policy
-FileReadExample
+```bash
+java -Djava.security.manager -Djava.security.policy=file-read.policy FileReadExample
 ```
 
 输出:
 
 ```
-1 File Content: Hello, Java Security!
+File Content: Hello, Java Security!
 ```
 
 更新后的策略文件赋予了 `test.txt` 读权限。`java.io.FilePermission` 指定了文件名和操作类型（`read`）。
 
-### ### 限制网络访问
+## 限制网络访问
 
 你可以使用 `java.net.SocketPermission` 类来控制网络权限。这里是一个尝试连接到 URL 的示例程序：
 
-```
-1 import java.net.URL;
-2 import java.net.URLConnection;
-3
-4 public class NetworkExample {
+```java
+import java.net.URL;
+import java.net.URLConnection;
+
+public class NetworkExample {
     public static void main(String[] args) {
         try {
             URL url = new URL("http://example.com");
-            URLConnection connection = url.openConnectionConnection();
+            URLConnection connection = url.openConnection();
             connection.connect();
             System.out.println("Network connection successful!");
         } catch (Exception e) {
@@ -3379,20 +3366,20 @@ FileReadExample
 
 编译该程序：
 
-```
-1 javac NetworkExample.java
+```bash
+javac NetworkExample.java
 ```
 
 在没有限制的情况下运行程序：
 
-```
-1 java NetworkExample
+```bash
+java NetworkExample
 ```
 
 输出：
 
 ```
-1 Network connection successful!
+Network connection successful!
 ```
 
 现在通过创建一个策略文件（`network-deny.policy`）来限制网络访问：
@@ -3405,9 +3392,8 @@ grant {
 
 使用安全管理器运行程序：
 
-```java
-java -Djava.security.manager -Djava.security.policy=network-deny.policy
-NetworkExample
+```bash
+java -Djava.security.manager -Djava.security.policy=network-deny.policy NetworkExample
 ```
 
 输出：
@@ -3430,7 +3416,7 @@ grant {
 
 再次运行程序：
 
-```
+```bash
 java -Djava.security.manager -Djava.security.policy=network-allow.policy NetworkExample
 ```
 
@@ -3438,53 +3424,52 @@ java -Djava.security.manager -Djava.security.policy=network-allow.policy Network
 
 策略文件仅授予了对 `80` 端口上 `example.com` 的网络连接权限。
 
-### ### 限制系统属性访问
+## 限制系统属性访问
 
 系统属性（如用户目录或 Java 版本）也可以被限制。这里有一个访问系统属性的示例程序：
 
-```
-1 public class PropertyExample {
-2     public static void main(String[] args) {
-3         System.out.println("User Directory: " +
-         System.getProperty("user.dir");
-4         System.out.println("Java Version: " +
-         System.getProperty("java.version");
-5     }
-6 }
+```java
+public class PropertyExample {
+    public static void main(String[] args) {
+        System.out.println("User Directory: " +
+         System.getProperty("user.dir"));
+        System.out.println("Java Version: " +
+         System.getProperty("java.version"));
+    }
+}
 ```
 
 编译程序：
 
-```
-1 javac PropertyExample.java
+```bash
+javac PropertyExample.java
 ```
 
 在没有限制的情况下运行程序：
 
-```
-1 java PropertyExample
+```bash
+java PropertyExample
 ```
 
 输出：
 
 ```
-1 User Directory: /your/working/directory
-2 Java Version: 17.0.1
+User Directory: /your/working/directory
+Java Version: 17.0.1
 ```
 
 现在创建一个限制系统属性访问的策略文件（`property-deny.policy`）：
 
 ```
-1 grant {
-2     // 没有系统属性权限
-3 };
+grant {
+    // 没有系统属性权限
+};
 ```
 
 使用安全管理器运行程序：
 
-```
-java -Djava.security.manager -Djava.security.policy=property-deny.policy
-   PropertyExample
+```bash
+java -Djava.security.manager -Djava.security.policy=property-deny.policy PropertyExample
 ```
 
 输出：
@@ -3497,62 +3482,62 @@ java.security.AccessControlException: access denied
 安全管理器阻止了对系统属性的访问。要为特定属性授予权限，请更新策略文件（`property-allow.policy`）：
 
 ```
-1 grant {
-2     permission java.util.PropertyPermission "user.dir", "read";
-3 };
+grant {
+    permission java.util.PropertyPermission "user.dir", "read";
+};
 ```
 
 再次运行程序：
 
-```
-java -Djava.security.manager -Djava.security.policy=property-allow.policy
-PropertyExample
+```bash
+java -Djava.security.manager -Djava.security.policy=property-allow.policy PropertyExample
 ```
 
 输出：
 
 ```
-1 User Directory: /your/working/directory
-2 Java Version: null
+User Directory: /your/working/directory
+Java Version: null
 ```
 
-只有 `user.dir` 属性是可的，而其他属性仍然受到限制。
+只有 `user.dir` 属性是可访问的，而其他属性仍然受到限制。
 
-### ### 授予所有权限
+## 授予所有权限
 
 在某些情况下，你可能想向特定代码（如受信任的应用）授予所有权限。在策略文件（`all.policy`）中使用 `AllPermission` 类：
 
 ```
-1 grant {
-2     permission java.security.AllPermission;
-3 };
+grant {
+    permission java.security.AllPermission;
+};
 ```
 
 使用此策略文件运行任何程序：
 
-```
-1 java -Djava.security.manager -Djava.security.policy=all.policy
-FileReaderExample
+```bash
+java -Djava.security.manager -Djava.security.policy=all.policy FileReaderExample
 ```
 
 输出：
 
 ```
-1 File Content: Hello, Java Security!
+File Content: Hello, Java Security!
 ```
 
 `AllPermission` 类授予了对所有资源的无限制访问。
 
-### ### 动态安全策略更改
+## 动态安全策略更改
 
 Java 还允许在运行时动态更改策略。你可以在不重启应用程序的情况下更新权限。
 
 这是一个动态加载策略文件的示例程序：
 
-```
-1 import java.security.Policy;
-2
-3 public class DynamicPolicyExample {
+
+
+```java
+import java.security.Policy;
+
+public class DynamicPolicyExample {
     public static void main(String[] args) {
         try {
             System.out.println("Setting dynamic policy...");
@@ -3567,31 +3552,29 @@ Java 还允许在运行时动态更改策略。你可以在不重启应用程序
 
 编译并运行程序：
 
+```bash
+javac DynamicPolicyExample.java
+java -Djava.security.manager -Djava.security.policy=file-read.policy DynamicPolicyExample
 ```
-1 javac DynamicPolicyExample.java
-2 java -Djava.security.manager -Djava.security.policy=file-read.policy DynamicPolicyExample
-```
 
+### 2. 使用策略文件运行程序
 
-
-2. 使用策略文件运行程序：
-
-```
-1 java -Djava.security.manager -Djava.security.policy=file-permission.policy SecurityManagerDemo
+```bash
+java -Djava.security.manager -Djava.security.policy=file-permission.policy SecurityManagerDemo
 ```
 
 输出：
 
-```
-1 Security Manager enabled
-2 File Content: Hello, Security Manager!
+```text
+Security Manager enabled
+File Content: Hello, Security Manager!
 ```
 
 该策略文件授予了读取 `test.txt` 文件的权限，允许程序成功执行。
 
 #### 限制网络访问
 
-Security Manager 可以通过检查 `java.net.SocketPermission` 来控制网络操作。是一个连接外部 URL 的示例：
+Security Manager 可以通过检查 `java.net.SocketPermission` 来控制网络操作。下面是一个连接外部 URL 的示例：
 
 ```java
 import java.net.URL;
@@ -3616,86 +3599,84 @@ public class NetworkAccessDemo {
 
 1. 编译程序：
 
-```
-1 javac NetworkAccessDemo.java
+```bash
+javac NetworkAccessDemo.java
 ```
 
 2. 创建名为 `network-permission.policy` 的策略文件，允许访问 `example.com`：
 
-```
-1 grant {
-2     permission java.net.SocketPermission "example.com:80",
-     "connect,resolve";
-3 };
+```text
+grant {
+    permission java.net.SocketPermission "example.com:80", "connect,resolve";
+};
 ```
 
 3. 使用 Security Manager 和策略文件运行程序：
 
-```
-1 java -Djava.security.manager -Djava.security.policy=network-permission.policy NetworkAccessDemo
+```bash
+java -Djava.security.manager -Djava.security.policy=network-permission.policy NetworkAccessDemo
 ```
 
 输出：
 
-```
-1 Security Manager enabled
-2 Connection successful!
+```text
+Security Manager enabled
+Connection successful!
 ```
 
 如果策略文件中没有包含该权限，将发生以下异常：
 
-```
-1 java.security.AccessControlException: access denied
-("java.net.SocketPermission" "example.com:80" "connect,resolve")
+```text
+java.security.AccessControlException: access denied ("java.net.SocketPermission" "example.com:80" "connect,resolve")
 ```
 
 这确保了网络访问被控制在特定的主机和端口上。
 
 #### 限制系统属性
 
-Security Manager 还可以使用 `java.util.PropertyPermission` 限制对系统属性的访问。这是一个读取 `user.dir` 属性的示例：
+Security Manager 还可以使用 `java.util.PropertyPermission` 限制对系统属性的访问。下面是一个读取 `user.dir` 属性的示例：
 
 ```java
-1 public class SystemPropertyDemo {
-2     public static void main(String[] args) {
-3      System.setSecurityManager(new SecurityManager());
-4      System.out.println("Security Manager enabled");
-5
-6      try {
-7          String userDir = System.getProperty("user.dir");
-8          System.out.println("User Directory: " + userDir);
-9      } catch (SecurityException e) {
-10      e.printStackTrace();
-11     }
-12  }
-13 }
+public class SystemPropertyDemo {
+    public static void main(String[] args) {
+        System.setSecurityManager(new SecurityManager());
+        System.out.println("Security Manager enabled");
+
+        try {
+            String userDir = System.getProperty("user.dir");
+            System.out.println("User Directory: " + userDir);
+        } catch (SecurityException e) {
+            e.printStackTrace();
+        }
+    }
+}
 ```
 
 1. 编译程序：
 
-```
-1 javac SystemPropertyDemo.java
+```bash
+javac SystemPropertyDemo.java
 ```
 
 2. 创建名为 `property-permission.policy` 的策略文件：
 
-```
-1 grant {
-2 permission java.util.PropertyPermission "user.dir", "read";
-3 };
+```text
+grant {
+    permission java.util.PropertyPermission "user.dir", "read";
+};
 ```
 
 3. 使用 Security Manager 和策略文件运行程序：
 
-```
-1 java -Djava.security.manager -Djava.security.policy=property-permission.policy SystemPropertyDemo
+```bash
+java -Djava.security.manager -Djava.security.policy=property-permission.policy SystemPropertyDemo
 ```
 
 输出：
 
-```
-1 Security Manager enabled
-2 User Directory: /your/current/directory
+```text
+Security Manager enabled
+User Directory: /your/current/directory
 ```
 
 如果没有策略文件，程序在尝试访问属性时会抛出 `SecurityException`。
@@ -3706,30 +3687,30 @@ Security Manager 还可以使用 `java.util.PropertyPermission` 限制对系统�
 
 1. 创建名为 `all-permission.policy` 的策略文件：
 
-```
-1 grant {
-2     permission java.security.AllPermission;
-3 };
+```text
+grant {
+    permission java.security.AllPermission;
+};
 ```
 
 2. 使用策略文件运行程序：
 
-```
-1 java -Djava.security.manager -Djava.security.policy=all-permission.policy SecurityManagerDemo
+```bash
+java -Djava.security.manager -Djava.security.policy=all-permission.policy SecurityManagerDemo
 ```
 
 输出：
 
-```
-1 Security Manager enabled
-2 File Content: Hello, Security Manager!
+```text
+Security Manager enabled
+File Content: Hello, Security Manager!
 ```
 
 `AllPermission` 类允许程序对所有资源进行无限制的访问。
 
 #### 动态设置权限
 
-Java 还允许你在运行时使用自定义的 **Security Manager** 动态设置权限。这是一个覆盖默认检查的示例：
+Java 还允许你在运行时使用自定义的 `SecurityManager` 动态设置权限。下面是一个覆盖默认检查的示例：
 
 ```java
 import java.security.Permission;
@@ -3737,8 +3718,7 @@ import java.security.Permission;
 public class CustomSecurityManager extends SecurityManager {
     @Override
     public void checkPermission(Permission perm) {
-        if ("read".equals(perm.getActions()) &&
-            perm.getName().endsWith("test.txt")) {
+        if ("read".equals(perm.getActions()) && perm.getName().endsWith("test.txt")) {
             throw new SecurityException("Custom Security Manager: File read blocked");
         }
     }
@@ -3758,21 +3738,21 @@ public class CustomSecurityManager extends SecurityManager {
 
 1. 编译程序：
 
-```
-1 javac CustomSecurityManager.java
+```bash
+javac CustomSecurityManager.java
 ```
 
 2. 运行程序：
 
-```
-1 java CustomSecurityManager
+```bash
+java CustomSecurityManager
 ```
 
 输出：
 
-```
-1 Custom Security Manager enabled
-2 java.lang.SecurityException: Custom Security Manager: File read blocked
+```text
+Custom Security Manager enabled
+java.lang.SecurityException: Custom Security Manager: File read blocked
 ```
 
 自定义的 `SecurityManager` 拦截了文件读取操作，如果文件是 `test.txt`，则抛出 `SecurityException`。
@@ -3791,11 +3771,11 @@ Security Manager 确保 Java 运行在受控且安全的环境中。通过启用
 
 解释了 Java 如何通过其架构实现平台无关性。
 
-Java 通过其**一次编写，到处运行**的原则实现平台无关性。这由 Java 架构实现，使用了 **Java 虚拟机 (JVM)**、**字节码 (bytecode)** 和 **Java 运行环境 (JRE)**。Java 编译器并不将 Java 程序编译为特定于机器的代码，而是产生一种名为**字节码**的中间格式。这种字节码可以在任何安装了 JVM 的机器上执行，无论底层硬件或操作系统如何。
+Java 通过其**一次编写，到处运行**的原则实现平台无关性。这由 Java 架构实现，使用了 `Java 虚拟机 (JVM)`、`字节码 (bytecode)` 和 `Java 运行环境 (JRE)`。Java 编译器并不将 Java 程序编译为特定于机器的代码，而是产生一种名为**字节码**的中间格式。这种字节码可以在任何安装了 JVM 的机器上执行，无论底层硬件或操作系统如何。
 
 #### 字节码和 JVM：平台无关性的核心
 
-当 Java 程序被编译时，**javac** 编译器将源代码转换为**字节码**。字节码是平台无关的，可以在任何 JVM 上运行。JVM 充当抽象层，在运行时将字节码翻译成特定机器的指令。
+当 Java 程序被编译时，`javac` 编译器将源代码转换为**字节码**。字节码是平台无关的，可以在任何 JVM 上运行。JVM 充当抽象层，在运行时将字节码翻译成特定机器的指令。
 
 这是一个演示字节码和 JVM 作用的示例程序：
 
@@ -3809,31 +3789,31 @@ public class PlatformIndependenceDemo {
 
 编译程序：
 
-```
-1 javac PlatformIndependenceDemo.java
+```bash
+javac PlatformIndependenceDemo.java
 ```
 
 `javac` 编译器生成名为 `PlatformIndependenceDemo.class` 的字节码文件。要确认生成了字节码，列出目录下的文件：
 
-```
-1 ls
+```bash
+ls
 ```
 
 你会看到 `PlatformIndependenceDemo.class` 文件。该文件包含了平台无关的指令。
 
 在带有 JVM 的任何平台上运行程序：
 
-```
-1 java PlatformIndependenceDemo
+```bash
+java PlatformIndependenceDemo
 ```
 
 输出：
 
-```
-1 Java Platform Independence Demonstration
+```text
+Java Platform Independence Demonstration
 ```
 
-同一个 `.class` 文件可以在 Windows、macOS 或 Linux 上执行重新编译。
+同一个 `.class` 文件可以在 Windows、macOS 或 Linux 上执行而无需重新编译。
 
 #### 查看字节码
 
@@ -3841,34 +3821,32 @@ public class PlatformIndependenceDemo {
 
 反汇编 `PlatformIndependenceDemo.class` 文件：
 
-
-
-```
-1 java -c PlatformIndependenceDemo
+```bash
+javap -c PlatformIndependenceDemo
 ```
 
-输出:
+输出：
 
-```
-1 public class PlatformIndependenceDemo {
-2   public PlatformIndependenceDemo();
-3   Code:
-4     @: aload_0
-5     1: invokespecial #1      // Method java/lang/Object.<init>()V)
-6     4: return
-7
-8   public static void main(java.lang.String[]) {
-9   Code:
-10    @: getstatic #2           // Field java/lang/System.out:Ljava/io/PrintStream;
-11    3: ldc #3                // String Java Platform Independence Demonstration
-12    5: invokevirtual #4      // Method java/io/PrintStream.println((Ljava/lang/String;)V)
-13    8: return
-14 }
+```text
+public class PlatformIndependenceDemo {
+  public PlatformIndependenceDemo();
+  Code:
+     0: aload_0
+     1: invokespecial #1      // Method java/lang/Object."<init>":()V
+     4: return
+
+  public static void main(java.lang.String[]);
+  Code:
+     0: getstatic #2           // Field java/lang/System.out:Ljava/io/PrintStream;
+     3: ldc #3                // String Java Platform Independence Demonstration
+     5: invokevirtual #4      // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+     8: return
+}
 ```
 
 在这里：
 
-- 字节码指令（`aload_0`, `getstatic`, `ldc`）与平台无关。
+- 字节码指令（`aload_0`、`getstatic`、`ldc`）与平台无关。
 - 这些指令由 JVM 执行，JVM 在运行时将其转换为特定机器的代码。
 
 #### JVM 在平台独立性中的作用
@@ -3877,37 +3855,37 @@ JVM 是特定平台的，但它遵循一致的规范。每个操作系统都有�
 
 为了演示这一点，请在一个操作系统上编译程序，并在另一个操作系统上运行它。
 
-##### 第 1 步：编译程序（平台 1）
+##### 步骤 1：编译程序（平台 1）
 
 在 Linux 或 macOS 系统上：
 
-```
-1 javac CrossPlatformDemo.java
+```bash
+javac CrossPlatformDemo.java
 ```
 
 将生成 `CrossPlatformDemo.class` 文件。
 
-##### 第 2 步：将字节码拷贝到另一个平台
+##### 步骤 2：将字节码拷贝到另一个平台
 
 将 `CrossPlatformDemo.class` 文件传输到 Windows 系统。
 
-##### 第 3 步：运行程序（平台 2）
+##### 步骤 3：运行程序（平台 2）
 
 在 Windows 上，使用 JVM 执行程序：
 
-```
-1 java CrossPlatformDemo
+```bash
+java CrossPlatformDemo
 ```
 
 输出：
 
-```
-1 Java Platform Independence Demonstration
+```text
+Java Platform Independence Demonstration
 ```
 
 程序无需重新编译即可成功运行，因为 Windows 上的 JVM 解释了相同的字节码。
 
-## Java 库的系统独立
+### Java 库的系统独立性
 
 Java 标准库为文件 IO、网络和多线程等常见任务提供了平台无关的 API。这些库抽象了特定平台的细节。
 
@@ -3935,23 +3913,25 @@ public class FileExample {
 
 编译程序：
 
-```
-1 javac FileExample.java
+```bash
+javac FileExample.java
 ```
 
 运行程序：
 
-```
-1 java FileExample
-```
-
-在 Linux上的输出：
-
-```
-1 File created: /home/user/example.txt
+```bash
+java FileExample
 ```
 
-在 Windows上的输出：
+在 Linux 上的输出：
+
+```text
+File created: /home/user/example.txt
+```
+
+在 Windows 上的输出：
+
+
 
 ```
 1 File created: C:\Users\user\example.txt
@@ -3962,7 +3942,7 @@ public class FileExample {
 - `File` 类抽象了特定平台的路径分隔符（Linux 上的 `/` 和 Windows 上的 `\`）。
 - Java 程序保持可移植性，不需要为不同的操作系统进行更改。
 
-#### 使用 `os.name` 属性进行检测
+### 使用 `os.name` 属性进行检测
 
 有时，需要为某些操作检测操作系统。可以使用 `System.getProperty` 方法获取特定平台的细节。
 
@@ -3975,14 +3955,14 @@ public class FileExample {
 2 java OSDetectionExample
 ```
 
-在 Linux上的输出：
+在 Linux 上的输出：
 
 ```
 1 Running on: Linux
 2 This is Linux/Unix
 ```
 
-在 Windows上的输出：
+在 Windows 上的输出：
 
 ```
 1 Running on: Windows 10
@@ -3990,471 +3970,6 @@ public class FileExample {
 ```
 
 `os.name` 属性帮助 Java 程序适应环境，而无需硬编码平台。
-
-#### 使用 `os.name` 属性进行检测
-
-有时，需要为某些操作检测操作系统。`System.getProperty` 方法可以获取特定平台的细节。
-
-这是一个示例：
-
-编译并运行程序：
-
-```
-1 javac OSDetectionExample.java
-2 java OSDetectionExample
-```
-
-在 Linux上的输出：
-
-```
-1 Running on: Linux
-2 This is Linux/Unix
-```
-
-在 Windows上的输出：
-
-```
-1 Running on: Windows 10
-2 This is Windows
-```
-
-`os.name` 属性帮助 Java 程序适应环境，而无需硬编码平台。
-
-#### 使用 `os.name` 属性进行检测
-
-有时，需要为某些操作检测操作系统。`System.getProperty` 方法可以获取特定平台的细节。
-
-这是一个示例：
-
-编译并运行程序：
-
-```
-1 javac OSDetectionExample.java
-2 java OSDetectionExample
-```
-
-在 Linux上的输出：
-
-```
-1 Running on: Linux
-2 This is Linux/Unix
-```
-
-在 Windows上的输出：
-
-```
-1 Running on: Windows 10
-2 This is Windows
-```
-
-`os.name` 属性帮助 Java 程序适应环境，而无需硬编码平台。
-
-#### 使用 `os.name` 属性进行检测
-
-有时，需要为某些操作检测操作系统。`System.getProperty` 方法可以获取特定平台的细节。
-
-这是一个示例：
-
-编译并运行程序：
-
-```
-1 javac OSDetectionExample.java
-2 java OSDetectionExample
-```
-
-在 Linux上的输出：
-
-```
-1 Running on: Linux
-2 This is Linux/Unix
-```
-
-在 Windows上的输出：
-
-```
-1 Running on: Windows 10
-2 This is Windows
-```
-
-`os.name` 属性帮助 Java 程序适应环境，而无需硬编码平台。
-
-#### 使用 `os.name` 属性进行检测
-
-有时，需要为某些操作检测操作系统。`System.getProperty` 方法可以获取特定平台的细节。
-
-这是一个示例：
-
-编译并运行程序：
-
-```
-1 javac OSDetectionExample.java
-2 java OSDetectionExample
-```
-
-在 Linux上的输出：
-
-```
-1 Running on: Linux
-2 This is Linux/Unix
-```
-
-在 Windows上的输出：
-
-```
-1 Running on: Windows 10
-2 This is Windows
-```
-
-`os.name` 属性帮助 Java 程序适应环境，而无需硬编码平台。
-
-#### 使用 `os.name` 属性进行检测
-
-有时，需要为某些操作检测操作系统。`System.getProperty` 方法可以获取特定平台的细节。
-
-这是一个示例：
-
-编译并运行程序：
-
-```
-1 javac OSDetectionExample.java
-2 java OSDetectionExample
-```
-
-在 Linux上的输出：
-
-```
-1 Running on: Linux
-2 This is Linux/Unix
-```
-
-在 Windows上的输出：
-
-```
-1 Running on: Windows 10
-2 This is Windows
-```
-
-`os.name` 属性帮助 Java 程序适应环境，而无需硬编码平台。
-
-#### 使用 `os.name` 属性进行检测
-
-有时，需要为某些操作检测操作系统。`System.getProperty` 方法可以获取特定平台的细节。
-
-这是一个示例：
-
-编译并运行程序：
-
-```
-1 javac OSDetectionExample.java
-2 java OSDetectionExample
-```
-
-在 Linux上的输出：
-
-```
-1 Running on: Linux
-2 This is Linux/Unix
-```
-
-在 Windows上的输出：
-
-```
-1 Running on: Windows 10
-2 This is Windows
-```
-
-`os.name` 属性帮助 Java 程序适应环境，而无需硬编码平台。
-
-#### 使用 `os.name` 属性进行检测
-
-有时，需要为某些操作检测操作系统。`System.getProperty` 方法可以获取特定平台的细节。
-
-这是一个示例：
-
-编译并运行程序：
-
-```
-1 javac OSDetectionExample.java
-2 java OSDetectionExample
-```
-
-在 Linux上的输出：
-
-```
-1 Running on: Linux
-2 This is Linux/Unix
-```
-
-在 Windows上的输出：
-
-```
-1 Running on: Windows 10
-2 This is Windows
-```
-
-`os.name` 属性帮助 Java 程序适应环境，而无需硬编码平台。
-
-#### 使用 `os.name` 属性进行检测
-
-有时，需要为某些操作检测操作系统。`System.getProperty` 方法可以获取特定平台的细节。
-
-这是一个示例：
-
-编译并运行程序：
-
-```
-1 javac OSDetectionExample.java
-2 java OSDetectionExample
-```
-
-在 Linux上的输出：
-
-```
-1 Running on: Linux
-2 This is Linux/Unix
-```
-
-在 Windows上的输出：
-
-```
-1 Running on: Windows 10
-2 This is Windows
-```
-
-`os.name` 属性帮助 Java 程序适应环境，而无需硬编码平台。
-
-#### 使用 `os.name` 属性进行检测
-
-有时，需要为某些操作检测操作系统。`System.getProperty` 方法可以获取特定平台的细节。
-
-这是一个示例：
-
-编译并运行程序：
-
-```
-1 javac OSDetectionExample.java
-2 java OSDetectionExample
-```
-
-在 Linux上的输出：
-
-```
-1 Running on: Linux
-2 This is Linux/Unix
-```
-
-在 Windows上的输出：
-
-```
-1 Running on: Windows 10
-2 This is Windows
-```
-
-`os.name` 属性帮助 Java 程序适应环境，而无需硬编码平台。
-
-#### 使用 `os.name` 属性进行检测
-
-有时，需要为某些操作检测操作系统。`System.getProperty` 方法可以获取特定平台的细节。
-
-这是一个示例：
-
-编译并运行程序：
-
-```
-1 javac OSDetectionExample.java
-2 java OSDetectionExample
-```
-
-在 Linux上的输出：
-
-```
-1 Running on: Linux
-2 This is Linux/Unix
-```
-
-在 Windows上的输出：
-
-```
-1 Running on: Windows 10
-2 This is Windows
-```
-
-`os.name` 属性帮助 Java 程序适应环境，而无需硬编码平台。
-
-#### 使用 `os.name` 属性进行检测
-
-有时，需要为某些操作检测操作系统。`System.getProperty` 方法可以获取特定平台的细节。
-
-这是一个示例：
-
-编译并运行程序：
-
-```
-1 javac OSDetectionExample.java
-2 java OSDetectionExample
-```
-
-在 Linux上的输出：
-
-```
-1 Running on: Linux
-2 This is Linux/Unix
-```
-
-在 Windows上的输出：
-
-```
-1 Running on: Windows 10
-2 This is Windows
-```
-
-`os.name` 属性帮助 Java 程序适应环境，而无需硬编码平台。
-
-#### 使用 `os.name` 属性进行检测
-
-有时，需要为某些操作检测操作系统。`System.getProperty` 方法可以获取特定平台的细节。
-
-这是一个示例：
-
-编译并运行程序：
-
-```
-1 javac OSDetectionExample.java
-2 java OSDetectionExample
-```
-
-在 Linux上的输出：
-
-```
-1 Running on: Linux
-2 This is Linux/Unix
-```
-
-在 Windows上的输出：
-
-```
-1 Running on: Windows 10
-2 This is Windows
-```
-
-`os.name` 属性帮助 Java 程序适应环境，而无需硬编码平台。
-
-#### 使用 `os.name` 属性进行检测
-
-有时，需要为某些操作检测操作系统。`System.getProperty` 方法可以获取特定平台的细节。
-
-这是一个示例：
-
-编译并运行程序：
-
-```
-1 javac OSDetectionExample.java
-2 java OSDetectionExample
-```
-
-在 Linux上的输出：
-
-```
-1 Running on: Linux
-2 This is Linux/Unix
-```
-
-在 Windows上的输出：
-
-```
-1 Running on: Windows 10
-2 This is Windows
-```
-
-`os.name` 属性帮助 Java 程序适应环境，而无需硬编码平台。
-
-#### 使用 `os.name` 属性进行检测
-
-有时，需要为某些操作检测操作系统。`System.getProperty` 方法可以获取特定平台的细节。
-
-这是一个示例：
-
-编译并运行程序：
-
-```
-1 javac OSDetectionExample.java
-2 java OSDetectionExample
-```
-
-在 Linux上的输出：
-
-```
-1 Running on: Linux
-2 This is Linux/Unix
-```
-
-在 Windows上的输出：
-
-```
-1 Running on: Windows 10
-2 This is Windows
-```
-
-`os.name` 属性帮助 Java 程序适应环境，而无需硬编码平台。
-
-#### 使用 `os.name` 属性进行检测
-
-有时，需要为某些操作检测操作系统。`System.getProperty` 方法可以获取特定平台的细节。
-
-这是一个示例：
-
-编译并运行程序：
-
-```
-1 javac OSDetectionExample.java
-2 java OSDetectionExample
-```
-
-在 Linux上的输出：
-
-```
-1 Running on: Linux
-2 This is Linux/Unix
-```
-
-在 Windows上的输出：
-
-```
-1 Running on: Windows 10
-2 This is Windows
-```
-
-`os.name` 属性帮助 Java 程序适应环境，而无需硬编码平台。
-
-#### 使用 `os.name` 属性进行检测
-
-有时，需要为某些操作检测操作系统。`System.getProperty` 方法可以获取特定平台的细节。
-
-这是一个示例：
-
-编译并运行程序：
-
-```
-1 javac OSDetectionExample.java
-2 java OSDetectionExample
-```
-
-在 Linux上的输出：
-
-```
-1 Running on: Linux
-2 This is Linux/Unix
-```
-
-在 Windows上的输出：
-
-```
-1 Running on: Windows 10
-2 This is Windows
-```
-
-`os.name` 属性帮助 Java 程序适应环境，而无需硬编码平台。
-
 
 ```java
 public class MemoryExample {
@@ -4493,7 +4008,7 @@ java -verbose:gc MemoryExample
 
 这显示了 GC 活动，其中未使用的堆内存被回收了。
 
-## ### Java 安全模型与安全管理器
+### Java 安全模型与安全管理器
 
 Java 的安全模型通过**安全管理器（Security Manager）**和**策略文件（policy files）**强制执行安全执行。安全管理器限制了文件访问、网络连接和系统属性。
 
@@ -4551,7 +4066,7 @@ File Content: Hello, Secure World!
 
 安全管理器确保只执行显式允许的操作。
 
-## ### 使用标准库实现平台无关性
+### 使用标准库实现平台无关性
 
 Java 的标准库抽象了文件 I/O、线程和网络等操作的特定平台细节。这确保了平台无关性。
 
@@ -4589,11 +4104,13 @@ File path: C:\Users\user\example.txt
 
 Java 抽象了文件路径分隔符和其他细节，确保了跨平台的一致性。
 
-## ### 使用 JIT 编译进行性能优化
+### 使用 JIT 编译进行性能优化
 
 即时编译（JIT）编译器通过在运行时将字节码转换为机器码来提高 Java 性能。你可以使用 `-XX:+PrintCompilation` 标记来监控 JIT 编译。
 
 示例：
+
+
 
 ```java
 public class JITexample {
@@ -4623,7 +4140,7 @@ java -XX:+PrintCompilation JITExample
 
 方法 `calculate` 被识别为热点方法并编译为原生代码，从而提高了运行时性能。
 
-## ### 多线程与并发
+### 多线程与并发
 
 Java 提供了多线程和并发支持。创建线程的示例：
 
@@ -4652,7 +4169,7 @@ java ThreadExample
 Thread is running
 ```
 
-## 2 - 垃圾回收
+## 垃圾回收
 
 Java 的垃圾回收是一个自动过程，通过回收不再使用的对象来管理内存。这减少了像 C 和 C++ 语言中那样手动管理内存的需求。
 
@@ -4689,71 +4206,67 @@ public class EligibleForGC {
 
 Java 的垃圾回收器遵循多种算法来有效地管理内存。常见的算法包括：
 
-- 1. **标记-清除算法（Mark-and-Sweep）**：GC 标记可达的对象并清除未引用的对象。
-- 2. **分代垃圾回收（Generational Garbage Collection）**：将堆划分为新生代、老年代和永久代。
-
-
-。新创建的对象被放在新生年代，并在生存多次 GC 周期后晋到老年代。
-
-- 3. **Concurrent Mark-Sweep (CMS)**：与应用程序线程并发运行，以尽可能地减少停顿时间。
-- 4. **G1 垃圾回收器**：重点于将堆划分为多个区域，为大内存提供高效的垃圾回收。
+1. **标记-清除算法（Mark-and-Sweep）**：GC 标记可达的对象并清除未引用的对象。
+2. **分代垃圾回收（Generational Garbage Collection）**：将堆划分为新生代、老年代和永久代。新创建的对象被放在新生代，并在生存多次 GC 周期后晋升到老年代。
+3. **Concurrent Mark-Sweep (CMS)**：与应用程序线程并发运行，以尽可能地减少停顿时间。
+4. **G1 垃圾回收器**：专注于将堆划分为多个区域，为大内存提供高效的垃圾回收。
 
 以下是一个使用 JVM 选项演示分代垃圾回收的示例：
 
-```
-1 public class GenerationalGC {
-2     public static void main(String[] args) {
-3      for (int i = 0; i < 1000; i++) {
-4        String temp = new String("Temporary Object " + i);
-5      }
-6      System.gc();
-7      System.out.println("Generated objects to observe garbage collection behavior");
-8  }
-9 }
+```java
+public class GenerationalGC {
+    public static void main(String[] args) {
+        for (int i = 0; i < 1000; i++) {
+            String temp = new String("Temporary Object " + i);
+        }
+        System.gc();
+        System.out.println("Generated objects to observe garbage collection behavior");
+    }
+}
 ```
 
 你可以使用以下 JVM 选项来观察垃圾回收：
 
 ```
-1 -XX:+PrintGCDetails -XX:+UseSerialGC
+-XX:+PrintGCDetails -XX:+UseSerialGC
 ```
 
-`-XX:+PrintGCDetails` 用于打印垃圾回收事件的详细信息。`-XX:+UseSerialGC` 选项指定使用串口垃圾回收器，它适用于单线程环境的小型应用程序。
+`-XX:+PrintGCDetails` 用于打印垃圾回收事件的详细信息。`-XX:+UseSerialGC` 选项指定使用串行垃圾回收器，它适用于单线程环境的小型应用程序。
 
 内存管理中的另一个重要概念是**最终化 (finalization)**。Java 提供了 `finalize()` 方法，它会在垃圾回收器移除对象之前调用。然而，不建议依赖 `finalize()`，因为它引入了不可预测性。这里有一个示例：
 
-```
-1 public class FinalizeExample {
-2   @Override
-3   protected void finalize() throws Throwable {
-4     System.out.println("Object is being finalized and garbage collected");
-5   }
-6 
-7   public static void main(String[] args) {
-8     FinalizeExample obj = new FinalizeExample();
-9     obj = null;
-10
-11    System.gc();
-12    System.out.println("Finalize method might be invoked");
-13 }
-14 }
+```java
+public class FinalizeExample {
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("Object is being finalized and garbage collected");
+    }
+
+    public static void main(String[] args) {
+        FinalizeExample obj = new FinalizeExample();
+        obj = null;
+
+        System.gc();
+        System.out.println("Finalize method might be invoked");
+    }
+}
 ```
 
 在这个示例中，重写了 `finalize()` 方法在对象被垃圾回收之前打印消息。但是，无法保证 `finalize()` 会立即执行，因为垃圾回收的时机是由 JVM 控制的。
 
 当对象不再被需要但仍被引用时，Java 可能会发生内存泄漏。这通常发生在未使用对象被无意中留在集合、静态引用或监听器中。为了演示这一点，请考虑以下示例：
 
-```
-1 import java.util.ArrayList;
-2
-3 public class MemoryLeakExample {
-4 public static void main(String[] args) {
-5 ArrayList<String> list = new ArrayList<>();
-6 while (true) {
-7 list.add("Memory Leak Example");
-8 
-9 }
-10 }
+```java
+import java.util.ArrayList;
+
+public class MemoryLeakExample {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        while (true) {
+            list.add("Memory Leak Example");
+        }
+    }
+}
 ```
 
 在这里，`ArrayList` 在不释放内存的情况下持续增长。这可能导致 `OutOfMemoryError`。为了防止此类内存泄漏，请务必确保在对象和引用不再被需要时将其正确移除。
@@ -4763,54 +4276,54 @@ Java 的垃圾回收器遵循多种算法来有效地管理内存。常见的算
 例如，你可以使用以下 JVM 选项生成堆转储：
 
 ```
-1 -XX:+HeapDumpOnOutOfError
+-XX:+HeapDumpOnOutOfError
 ```
 
 此选项在发生 `OutOfMemoryError` 时触发堆转储，允许你分析哪些对象正在消耗内存以及原因。
 
 最后，开发者应该考虑使用弱引用，它允许对象在仍被引用的情况下被垃圾回收。弱引用使用 `WeakReference` 类进行管理。这里有一个示例：
 
-```
-1 import java.lang.ref.WeakReference;
-2
-3 public class WeakReferenceExample {
-4 public static void main(String[] args) {
-5 String str = new String("Weak Reference");
-6 WeakReference<String> weakRef = new WeakReference<>(str);
+```java
+import java.lang.ref.WeakReference;
 
-8 str = null; // Remove strong reference
-9 System.gc();
+public class WeakReferenceExample {
+    public static void main(String[] args) {
+        String str = new String("Weak Reference");
+        WeakReference<String> weakRef = new WeakReference<>(str);
 
-1 if (weakRef.get() == null) {
-2 System.out.println("Object has been garbage collected");
-3 } else {
-4 System.out.println("Object is still alive");
-5 }
-6 }
-7
+        str = null; // Remove strong reference
+        System.gc();
+
+        if (weakRef.get() == null) {
+            System.out.println("Object has been garbage collected");
+        } else {
+            System.out.println("Object is still alive");
+        }
+    }
+}
 ```
 
 在这个示例中，即使弱引用仍然存在，`WeakReference` 也允许对象被垃圾回收。弱引用对于对内存优化至关重要的缓存场景非常有用。
 
 有效的内存管理和对 Java 垃圾回收的理解对于构建可扩展的应用程序至关重要。通过负责任地创建对象、监控堆使用情况以及利用工具分析内存行为，开发者可以避免由内存处理不当导致的性能瓶颈。
 
-### 2.1 - 内存管理简介
+### 内存管理简介
 
 Java 内存管理的概述、重要性以及它对性能的影响。
 
-Java 内存管理在确保应用程序高效运行和保持可扩展性方面起着性作用。Java 通过 **JVM（Java 虚拟机）** 抽象了底层的内存分配细节，它自动管理堆、栈和垃圾回收机制。开发者不需要显式地分配或释放内存，这减少了常见的编程错误，如悬指针和内存泄漏。有效的内存管理至关重要，因为内存管理不当会导致**性能瓶颈**甚至出现 `OutOfMemoryError` 等致命错误。理解内存如何管理和优化直接影响应用程序的性能。
+Java 内存管理在确保应用程序高效运行和保持可扩展性方面起着关键作用。Java 通过 **JVM（Java 虚拟机）** 抽象了底层的内存分配细节，它自动管理堆、栈和垃圾回收机制。开发者不需要显式地分配或释放内存，这减少了常见的编程错误，如悬指针和内存泄漏。有效的内存管理至关重要，因为内存管理不当会导致**性能瓶颈**甚至出现 `OutOfMemoryError` 等致命错误。理解内存如何管理和优化直接影响应用程序的性能。
 
 Java 中的内存可以分为两个主要区域：**堆 (Heap)** 和**栈 (Stack)**。堆是存储对象的地方，由垃圾回收器管理。栈用于方法调用和局部变量。每当调用一个方法时，栈中就会添加一个帧。当方法执行完成时，该帧从栈中移除，内存被回收。
 
 让我们从一个简单的对象创建示例开始，理解内存是如何分配的：
 
-```
-1 public class MemoryDemo {
-2     public static void main(String[] args) {
-3         String greeting = new String("Hello, Memory Management!");
-4         System.out.println(greeting);
-5 }
-6 }
+```java
+public class MemoryDemo {
+    public static void main(String[] args) {
+        String greeting = new String("Hello, Memory Management!");
+        System.out.println(greeting);
+    }
+}
 ```
 
 在这个示例中，`String` 对象分配在堆内存中，因为它使用了 `new` 关键字。变量 `greeting` 存储在栈上，并持有指向字符串对象的引用。一旦 `main` 方法执行完成，栈帧被移除，但堆中的 `String` 对象只有在没有活动引用指向它时才能被回收。
@@ -4819,58 +4332,55 @@ Java 中的对象有生命周期。它们被创建、使用，并在不再被引
 
 以下示例演示了对象如何变得可以被垃圾回收：
 
-```
-1 public class GarbageCollectionDemo {
-2 public static void main(String[] args) {
-3     Object obj = new Object();
-4     obj = null; // Remove reference to the object
-5     System.gc(); // Suggest garbage collection
-6     System.out.println("Garbage collection has been suggested");
-7 }
-8 }
+```java
+public class GarbageCollectionDemo {
+    public static void main(String[] args) {
+        Object obj = new Object();
+        obj = null; // Remove reference to the object
+        System.gc(); // Suggest garbage collection
+        System.out.println("Garbage collection has been suggested");
+    }
+}
 ```
 
 在这里，创建了一个 `Object` 并赋值给 `obj`。当 `obj` 被置为 `null` 时，该对象不再有任何引用指向它，因此可以被回收。`System.gc()` 调用是对 JVM 运行垃圾回收器的建议。然而，由 JVM 决定是否立即执行垃圾回收。
 
-Java 将堆内存分为不同的代，作为其分代垃圾回收策略的一部分。堆被分为**新生年代 (Young Generation)**、**老年代 (Old Generation)**，在 Java 8 之前还有**永久年代 (Permanent Generation)**。新创建的对象被放在新生年代，那里的垃圾回收频繁且快速。
-
-
+Java 将堆内存分为不同的代，作为其分代垃圾回收策略的一部分。堆被分为**新生代 (Young Generation)**、**老年代 (Old Generation)**，在 Java 8 之前还有**永久代 (Permanent Generation)**。新创建的对象被放在新生代，那里的垃圾回收频繁且快速。
 
 垃圾回收周期被提升到老年代（Old Generation），在该区域进行垃圾回收的频率较低。
 
 这是一个实用的示例，通过模拟创建许多对象来观察垃圾回收行为：
 
-```
-1 public class GenerationalMemoryDemo {
-2 public static void main(String[] args) {
-3 for (int i = 0; i < 10000; i++) {
-4 String temp = new String("Temporary Object " + i);
-5 }
-6 System.out.println("Objects created. Suggesting garbage collection...");
-7 System.gc();
-8 }
-9 }
-```
-
-在这个示例中，循环中创建了许多临时字符串对象。这些对象大部分是短命的，并保留在年轻年代（Young Generation）。随着垃圾收集器的运行，这些临时对象会被快速移除，从而释放内存。
-
-内存管理还涉及对**内存泄漏**（memory leaks）的理解。当对象不再需要但仍被引用时，就会发生了垃圾回收。这会导致堆内存占用增加，并最终引发 `OutOfMemoryError`。下面的示例使用 `List` 模拟了内存泄漏：
-
-```
-1 import java.util.ArrayList;
-2
-3 public class MemoryLeakDemo {
-4    public static void main(String[] args) {
-5        ArrayList<String> list = new ArrayList<>();
-6        while (true) {
-7            list.add("Memory Leak Example");
-8
-9        }
-10   }
-11}
+```java
+public class GenerationalMemoryDemo {
+    public static void main(String[] args) {
+        for (int i = 0; i < 10000; i++) {
+            String temp = new String("Temporary Object " + i);
+        }
+        System.out.println("Objects created. Suggesting garbage collection...");
+        System.gc();
+    }
+}
 ```
 
-在代码代码中，`ArrayList` 会无限增长，因为它持有永远不会被移除的对象引用。随着时间的推移，应用程序将抛出 `OutOfMemoryError`。为了防止内存泄漏，开发者应该确保在对象和引用不再需要时对其进行适当清理。
+在这个示例中，循环中创建了许多临时字符串对象。这些对象大部分是短命的，并保留在年轻代（Young Generation）。随着垃圾收集器的运行，这些临时对象会被快速移除，从而释放内存。
+
+内存管理还涉及对**内存泄漏**（memory leaks）的理解。当对象不再需要但仍被引用时，就会发生内存泄漏，阻止了垃圾回收。这会导致堆内存占用增加，并最终引发 `OutOfMemoryError`。下面的示例使用 `List` 模拟了内存泄漏：
+
+```java
+import java.util.ArrayList;
+
+public class MemoryLeakDemo {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        while (true) {
+            list.add("Memory Leak Example");
+        }
+    }
+}
+```
+
+在代码中，`ArrayList` 会无限增长，因为它持有永远不会被移除的对象引用。随着时间的推移，应用程序将抛出 `OutOfMemoryError`。为了防止内存泄漏，开发者应该确保在对象和引用不再需要时对其进行适当清理。
 
 优化内存管理的一种方法是使用**弱引用**（weak references）。弱引用允许垃圾收集器即使在对象仍被弱引用时也对其进行回收。Java 中的 `WeakReference` 类有助于实现这一点：
 
@@ -4901,12 +4411,14 @@ public class WeakReferenceExample {
 要实时监控垃圾回收和堆使用，可以使用以下 JVM 选项：
 
 ```
-1 -XX:+PrintGCDetails -XX:+PrintGCTimeamps
+-XX:+PrintGCDetails -XX:+PrintGCTimeStamps
 ```
 
 这些选项提供了垃圾回收事件的详细日志和时间戳，有助于诊断与内存相关的性能问题。
 
 这是一个最后的示例，展示了如何创建对象并分析垃圾回收日志：
+
+
 
 ```java
 public class GCLogExample {
@@ -4928,25 +4440,24 @@ java -XX:+PrintGCDetails -XX:+PrintGCTimeamps GCLogExample
 
 日志将提供关于每次垃圾回收事件期间释放了多少内存以及在垃圾回收上花费的总时间的信息。通过分析这些日志，开发者可以识别内存低效问题并调整垃圾回收以获得更好的性能。
 
-有效的内存管理对于构建高性能且可扩展的 Java 应用程序至关重要。通过理解堆（heap）、栈（stack）和垃圾工作的原理，开发者可以优化内存使用，减少性能瓶颈并避免内存泄漏等常见问题。使用 Java VisualVM 和 JConsole 等工具进行定期监控和分析进一步有助于确保高效的内存管理。
+有效的内存管理对于构建高性能且可扩展的 Java 应用程序至关重要。通过理解堆（`heap`）、栈（`stack`）和垃圾工作的原理，开发者可以优化内存使用，减少性能瓶颈并避免内存泄漏等常见问题。使用 `Java VisualVM` 和 `JConsole` 等工具进行定期监控和分析进一步有助于确保高效的内存管理。
 
-### 2.2 - Java 内存模型 (JMM)
+## 2.2 - Java 内存模型 (JMM)
 
 对 Java 内存结构的详细解释，包括堆、栈、方法区域和运行时常量池。
 
-Java 内存模型（JMM）定义了 Java 虚拟机（JVM）如何组织和管理内存。Java 的内存结构确保了程序的高效、可维护性和线程安全。内存模型包括**堆**、**栈**、**方法区域**和**运行时常量池**，每个部分在程序执行中都有独特的用途。
+Java 内存模型（JMM）定义了 Java 虚拟机（JVM）如何组织和管理内存。Java 的内存结构确保了程序的高效、可维护性和线程安全。内存模型包括`heap`（堆）、`stack`（栈）、`method area`（方法区域）和`runtime constant pool`（运行时常量池），每个部分在程序执行中都有独特的用途。
 
-**heap**（堆）是内存中存储对象的最大的部分。它被所有线程共享并由垃圾收集器管理。当你使用 `new` 关键字创建对象时，它被分配在堆中。堆本身分为代：年轻年代（Eden 和 Survivor 空间）和老年代。对象根据其生命周期在这些区域之间移动。
+`heap`（堆）是内存中存储对象的最大的部分。它被所有线程共享并由垃圾收集器管理。当你使用 `new` 关键字创建对象时，它被分配在堆中。堆本身分为代：年轻年代（Eden 和 Survivor 空间）和老年代。对象根据其生命周期在这些区域之间移动。
 
-**stack**（栈）内存用于存储方法调用、局部变量和引用。每个线程都有自己的栈，每当调用一个方法时，栈中就会添加一个新的栈帧。当方法完成时，其栈帧会被移除，内存会被自动回收。
+`stack`（栈）内存用于存储方法调用、局部变量和引用。每个线程都有自己的栈，每当调用一个方法时，栈中就会添加一个新的栈帧。当方法完成时，其栈帧会被移除，内存会被自动回收。
 
-**method area**（方法区域，在 Java 8 及更高版本中也称为 MetaSpace）存储类级元数据，如字节码、方法定义、静态变量和常量值。
+`method area`（方法区域，在 Java 8 及更高版本中也称为 MetaSpace）存储类级元数据，如字节码、方法定义、静态变量和常量值。
 
-**runtime constant pool**（运行时常量池）是方法区域的一部分，持有符号引用、字面量和编译时常量。它是所有线程共享的。
-
-
+`runtime constant pool`（运行时常量池）是方法区域的一部分，持有符号引用、字面量和编译时常量。它是所有线程共享的。
 
 3. 在 `firstMethod` 内部调用了 `secondMethod`，这为 `b` 创建了另一个栈帧。
+
 4. 一旦 `secondMethod` 完成，它的栈帧会被移除，随后是 `firstMethod`。
 
 程序的输出将是：
@@ -4957,7 +4468,7 @@ Java 内存模型（JMM）定义了 Java 虚拟机（JVM）如何组织和管理
 
 这演示了栈帧是如何随着方法的调用和完成而不断添加和移除的。
 
-**方法区（method area）***被所有线程共享，并包含类级元数据。静态变量、方法定义和常量都存储于此处。静态变量被初始化一次并全局共享。让我们观察静态变量的行为：
+`method area`（方法区）被所有线程共享，并包含类级元数据。静态变量、方法定义和常量都存储于此处。静态变量被初始化一次并全局共享。让我们观察静态变量的行为：
 
 ```java
 public class StaticVariableDemo {
@@ -4985,7 +4496,7 @@ public class StaticVariableDemo {
 
 这证明了静态变量存储在方法区，并在多次调用中维持其状态。
 
-**运行时常量池（runtime constant pool）**是方法区的一个子集，用于存储字面量和常量。例如，程序中的字符串字面量和常量值被放置在这里。为了观察这一点，请考虑以下示例：
+`runtime constant pool`（运行时常量池）是方法区的一个子集，用于存储字面量和常量。例如，程序中的字符串字面量和常量值被放置在这里。为了观察这一点，请考虑以下示例：
 
 ```java
 public class ConstantPoolDemo {
@@ -5001,9 +4512,11 @@ public class ConstantPoolDemo {
 
 在此示例中：
 
-- 1. 字面量 `Java` 存储在运行时常量池中。
-- 2. `str1` 和 `str2` 引用常量池中相同的 `Java` 字面量，因此 `str1 == str2` 结果为 `true`。
-- 3. `new` 关键字在堆中为 `str3` 创建了一个新的字符串对象，因此 `str1 == str3` 结果为 `false`。
+1. 字面量 `Java` 存储在运行时常量池中。
+
+2. `str1` 和 `str2` 引用常量池中相同的 `Java` 字面量，因此 `str1 == str2` 结果为 `true`。
+
+3. `new` 关键字在堆中为 `str3` 创建了一个新的字符串对象，因此 `str1 == str3` 结果为 `false`。
 
 输出：
 
@@ -5038,7 +4551,9 @@ class MyClass {
 在这段代码中：
 
 1. 方法 `createObject` 被反复调用，在每次调用时都会在堆上创建一个新的 `MyClass` 对象。
+
 2. 对象的引用仅存在于方法内部，因此一旦方法完成，该引用就会从栈中移除。
+
 3. 由于没有引用指向它，堆中的对象将成为可以垃圾回收的对象。
 
 输出：
@@ -5051,7 +4566,7 @@ class MyClass {
 
 Java 内存模型提供了内存区域的清晰划分，允许对变量、对象和常量进行高效管理。通过理解堆、栈、方法区和运行时常量池的工作机制，开发者可以优化内存使用，并避免内存泄漏和对象创建效率低下等问题。这些概念的实践知识有助于提高应用程序的可扩展性，并确保内存得到有效利用。
 
-#### 2.2.1 - 堆内存 (Heap Memory)
+### 2.2.1 - 堆内存 (Heap Memory)
 
 Java 堆内存描述及其在对象存储中的作用。
 
@@ -5060,9 +4575,13 @@ Java 堆内存是程序执行期间存储对象的主要区域。堆由 Java 虚
 作为 Java **分代垃圾回收（Generational Garbage Collection）**策略的一部分，堆被分为不同的代：
 
 - **新生代（Young Generation）**：新创建的对象分配在这里。包括：
+
     - **Eden 区**：大多数对象最初创建的地方。
+
     - **存活区（Survivor Spaces S0 和 S1）**：在初始垃圾回收的对象移动此处。
+
 - **老年代（Old Generation / Tenured）**：在多次垃圾回收循环的长生存对象会被移动到老年代。
+
 - **元空间（Metaspace，Java 8 及以后）**：存储类元数据，取代了早期版本中的永久代。
 
 这种结构允许垃圾回收器通过关注新生代中的短命对象来优化内存管理，因为这些对象的回收频率更高、速度更快。
@@ -5087,7 +4606,9 @@ class MyObject {
 在这里：
 
 1. 当 `MyObject` 实例化时，`obj1` 和 `obj2` 引用存储在**栈**中，但实际对象创建在堆中。
+
 2. 每个对象的 `value` 和 `name` 字段存储在堆中。
+
 3. 执行后`obj1` 和 `obj2` 引用失效，使得堆中的对象可以被回收。
 
 当你运行此程序时，对象在新生代的 Eden 区创建。如果发生垃圾回收，存活的对象将移动到存活区。
@@ -5099,6 +4620,7 @@ java -Xms10m -Xmx20m HeapExample
 ```
 
 - `-Xms10m` 设置初始堆大小为 10 MB。
+
 - `-Xmx20m` 设置最大堆大小为 20 MB。
 
 下一个示例演示了当创建过多对象时的堆耗尽：
@@ -5124,6 +4646,7 @@ class MyObject {
 在这里：
 
 1. 列表持续添加带有大数组的 `MyObject` 实例，消耗堆内存。
+
 2. 最终，当堆满时，程序抛出 `OutOfMemoryError`。
 
 使用以下 JVM 参数运行程序可以更快触发错误：
@@ -5144,97 +4667,101 @@ java -Xms20m -Xmx20m -XX:+PrintGCDetails -XX:+PrintGCTimeStamps HeapExample
 
 日志输出可能如下所示：
 
-
-
 ```
 1 [GC (Allocation Failure)] [PSYoungGen: 6144K->512K(9216K)] 6144K->512K(19456K), 0.0055330 secs
 ```
 
 此输出表示：
 
-- 1. 年生代（Young Generation）发生次垃圾回收事件。
-- 2. 垃圾回收前后堆的使用情况。
-- 3. 堆的总容量以及 GC 消耗的时间。
+1. 年生代（Young Generation）发生次垃圾回收事件。
+
+2. 垃圾回收前后堆的使用情况。
+
+3. 堆的总容量以及 GC 消耗的时间。
 
 你还可以使用 **Java VisualVM** 实时监控堆内存，这是一个提供堆使用统计图表的工具。要启动 VisualVM：
 
-- 1. 运行程序。
-- 2. 启动 Java VisualVM。
-- 3 将其附加到运行中的进程以观察内存使用情况。
+1. 运行程序。
+
+2. 启动 Java VisualVM。
+
+3. 将其附加到运行中的进程以观察内存使用情况。
 
 接下来，让我们看看对象如何在堆的不同代之间移动：
 
-```
-1 public class ObjectLifecycleDemo {
-2     public static void main(String[] args) {
-3      for (int i = 0; i < 10000; i++) {
-4        MyObject obj = new MyObject();
-5      }
-6      System.gc();
-7      System.out.println("Suggested garbage collection.");
-8  }
-9 }
-10
-11 class MyObject {
-12     int[] data = new int[1024];
-13 }
+```java
+public class ObjectLifecycleDemo {
+    public static void main(String[] args) {
+     for (int i = 0; i < 10000; i++) {
+       MyObject obj = new MyObject();
+     }
+     System.gc();
+     System.out.println("Suggested garbage collection.");
+ }
+}
+
+class MyObject {
+    int[] data = new int[1024];
+}
 ```
 
 在此示例中：
 
-- 1. 在循环内部创建了许多 `MyObject` 实例。这些对象是短命的并创建在 Eden 空间（Eden Space）中。
-- 2. 循环结束后，所有对象都失去了引用，使其可以被垃圾回收。
-- 3. 存活的对象会被移动到幸存区（Survivor Space），在经过多次 GC 回后，它们会被移动到老年代（Old Generation）。
+1. 在循环内部创建了许多 `MyObject` 实例。这些对象是短命的并创建在 Eden 空间（Eden Space）中。
+
+2. 循环结束后，所有对象都失去了引用，使其可以被垃圾回收。
+
+3. 存活的对象会被移动到幸存区（Survivor Space），在经过多次 GC 回后，它们会被移动到老年代（Old Generation）。
 
 `System.gc()` 调用建议进行垃圾回收，但 JVM 决定何时执行它。
 
 你可以使用以下 JVM 选项观察堆行为和各个代：
 
 ```
-java -Xms50m -Xmx50m -XX:+UseSerialGC -XX:+PrintGCDetails
-ObjectLifecycleDemo
+java -Xms50m -Xmx50m -XX:+UseSerialGC -XX:+PrintGCDetails ObjectLifecycleDemo
 ```
 
 `-XX:+UseSerialGC` 选项强制使用串口垃圾回收器，这对于小型应用程序非常有用。
 
 现在让我们通过复用对象来演示内存优化：
 
-```
-1 public class ObjectReuseDemo {
-2     public static void main(String[] args) {
-3      for (int i = 0; i < 1000000; i++) {
-4          MyObject obj = ObjectFactory.getInstance();
-5          obj.use();
-6      }
-7      System.out.println("Reused objects to optimize heap memory.");
-8     }
-9 }
-10 
-11 class MyObject {
-12     void use() {
-13         System.out.println("Using object: " + this.hashCode());
-14     }
-15 }
-16 
-17 class ObjectFactory {
-18     private static final MyObject instance = new MyObject();
-19 
-20     public static MyObject getInstance() {
-21         return instance; // 复用同一个对象
-22     }
-23 }
+```java
+public class ObjectReuseDemo {
+    public static void main(String[] args) {
+     for (int i = 0; i < 1000000; i++) {
+         MyObject obj = ObjectFactory.getInstance();
+         obj.use();
+     }
+     System.out.println("Reused objects to optimize heap memory.");
+    }
+}
+
+class MyObject {
+    void use() {
+        System.out.println("Using object: " + this.hashCode());
+    }
+}
+
+class ObjectFactory {
+    private static final MyObject instance = new MyObject();
+
+    public static MyObject getInstance() {
+        return instance; // 复用同一个对象
+    }
+}
 ```
 
 在此示例中：
 
-- 1. `ObjectFactory` 类复用同一个 `MyObject` 实例以减少堆中对象的创建。
-- 2. 程序中使用了单一的共享实例，而不是创建新对象。
+1. `ObjectFactory` 类复用同一个 `MyObject` 实例以减少堆中对象的创建。
+
+2. 程序中使用了单一的共享实例，而不是创建新对象。
 
 这种方法减少了堆内存的使用和垃圾回收开销，这对于高性能应用程序特别有用。
 
 Java 堆内存在对象存储中起着核心作用，为运行时的对象提供动态内存分配。通过理解堆如何划分为不同的代，开发者可以更好地管理内存、优化对象创建并避免 `OutOfMemoryError`。垃圾回收日志和 VisualVM 等工具允许你监控和分析堆的使用情况，为应用程序性能提供见。高效的堆管理（如复用对象和最小化不必要的分配）可以使 Java 具有更好的扩展性和性能。
 
-#### 2.2.2 - 栈内存 (Stack Memory)
+### 2.2.2 - 栈内存 (Stack Memory)
 
 Java 栈内存描述及其在方法执行和变量存储中的作用。
 
@@ -5244,36 +4771,38 @@ Java 栈内存在方法执行和局部变量存储中起着至关重要的作用
 
 以下示例演示了栈帧在方法执行期间是如何创建和删除的：
 
-```
-1 public class StackMemoryDemo {
-2   public static void main(String[] args) {
-3      methodA();
-4   }
-5
-6   static void methodA() {
-7      int a = 10; // 存储在栈中的局部变量
-8      methodB();
-9   }
-10
-11  static void methodB() {
-12     int b = 20; // 存储在栈中的局部变量
-13     System.out.println("Executing methodB");
-14  }
-15 }
+
+
+```java
+public class StackMemoryDemo {
+    public static void main(String[] args) {
+        methodA();
+    }
+
+    static void methodA() {
+        int a = 10; // 存储在栈中的局部变量
+        methodB();
+    }
+
+    static void methodB() {
+        int b = 20; // 存储在栈中的局部变量
+        System.out.println("Executing methodB");
+    }
+}
 ```
 
 在这里：
 
-- 1. 当调用 `main` 时，会为 `main` 创建一个新的栈帧。
-- 2. `methodA()` 调用创建一个新的栈帧，并将 `a` 作为局部变量。
-- 3. `methodB()` 调用添加了另一个栈帧，并将 `b` 存储为局部变量。
-- 4. 一旦 `methodB` 完成执行，它的栈帧就会被。
-- 5. `methodA` 帧在完成后也会被移除，然后是 `main` 方法。
+1. 当调用 `main` 时，会为 `main` 创建一个新的栈帧。
+2. `methodA()` 调用创建一个新的栈帧，并将 `a` 作为局部变量。
+3. `methodB()` 调用添加了另一个栈帧，并将 `b` 存储为局部变量。
+4. 一旦 `methodB` 完成执行，它的栈帧就会被移除。
+5. `methodA` 帧在完成后也会被移除，然后是 `main` 方法。
 
 程序的输出将是：
 
 ```
-1 Executing methodB
+Executing methodB
 ```
 
 栈内存确保局部变量 `a` 和 `b` 仅在各自的方法内部可访问。一旦方法完成，内存就会被回收。
@@ -5298,9 +4827,9 @@ public class RecursionDemo {
 
 在这里：
 
-- 1. 每次递归调用 `factorial` 都会创建一个栈帧。
-- 2. 变量 `n` 存储在每个帧中。
-- 3. 当达到基础情况（`n <= 1`）时，帧随着递归的回溯而弹出。
+1. 每次递归调用 `factorial` 都会创建一个栈帧。
+2. 变量 `n` 存储在每个帧中。
+3. 当达到基础情况（`n <= 1`）时，帧随着递归的回溯而弹出。
 
 程序的输出将是：
 
@@ -5322,8 +4851,8 @@ public class StackOverflowDemo {
 
 在这里：
 
-- 1. `causeStackOverflow` 方法无限调用自身，添加栈帧直到栈耗尽。
-- 2. 当没有可用空间时，JVM 会抛出 `StackOverflowError`。
+1. `causeStackOverflow` 方法无限调用自身，添加栈帧直到栈耗尽。
+2. 当没有可用空间时，JVM 会抛出 `StackOverflowError`。
 
 输出类似于：
 
@@ -5331,7 +4860,7 @@ public class StackOverflowDemo {
 Exception in thread "main" java.lang.StackOverflowError
 ```
 
-此示例强调了确保递归具有正确终止条件以避免栈溢的重要性。
+此示例强调了确保递归具有正确终止条件以避免栈溢出的重要性。
 
 栈还存储方法参数。以下程序演示了参数是如何传递并存储在栈中的：
 
@@ -5352,9 +4881,9 @@ public class MethodArgumentsDemo {
 
 在这里：
 
-- 1. 变量 `x` 和 `y` 作为参数传递给 `sum` 方法。
-- 2. 在 `sum` 内部，方法参数 `a` 和 `b` 存储在栈帧中。
-- 3. 结果 `a + b` 被计算并存储在局部变量 `result` 中。
+1. 变量 `x` 和 `y` 作为参数传递给 `sum` 方法。
+2. 在 `sum` 内部，方法参数 `a` 和 `b` 存储在栈帧中。
+3. 结果 `a + b` 被计算并存储在局部变量 `result` 中。
 
 输出将是：
 
@@ -5362,7 +4891,7 @@ public class MethodArgumentsDemo {
 Sum: 15
 ```
 
-一旦 `sum` 方法完成，它的栈帧会被移除，局部变量 `a`、`b` 和 `result` 不可可用。
+一旦 `sum` 方法完成，它的栈帧会被移除，局部变量 `a`、`b` 和 `result` 不再可用。
 
 栈内存负责存储对象的引用，而实际对象存储在堆中。这是一个示例：
 
@@ -5373,6 +4902,7 @@ public class StackHeapDemo {
         obj.display();
     }
 }
+
 class MyObject {
     void display() {
         int localVar = 50; // 栈中的局部变量
@@ -5381,46 +4911,42 @@ class MyObject {
 }
 ```
 
-
-
-
-
 在此程序中：
 
-- 1. 引用 `obj` 存储在 `main` 的栈帧中。
-- 2. 实际的 `MyObject` 实例存储在堆内存中。
-- 3. `display` 方法中的 `localVar` 存储在 `display` 的栈帧中。
+1. 引用 `obj` 存储在 `main` 的栈帧中。
+2. 实际的 `MyObject` 实例存储在堆内存中。
+3. `display` 方法中的 `localVar` 存储在 `display` 的栈帧中。
 
 输出结果为：
 
 ```
-1 Local variable: 50
+Local variable: 50
 ```
 
 栈在方法执行和变量存储方面非常高效，因为内存的分配和释放会随着方法的调用而自动完成。它不需要垃圾回收，因此比堆内存更快。然而，栈的大小是有限的，超过限制会导致 `StackOverflowError`（栈溢出）。
 
 以下示例演示了如何向方法传递**基本数据类型**和**引用**：
 
-```
-1 public class PassByValueDemo {
-2     public static void main(String[] args) {
-3      int primitiveValue = 10;
-4      MyObject obj = new MyObject();
-5      modifyValues(primitiveValue, obj);
-6 
-7      System.out.println("Primitive Value: " + primitiveValue);
-8      System.out.println("Object Value: " + obj.value);
-9  }
-10 
-11 static void modifyValues(int num, MyObject objRef) {
-12     num = 20; // 不影响原始的 primitiveValue
-13     objRef.value = 100; // 修改堆内存中的对象
-14 }
-15 }
-16 
-17 class MyObject {
-18     int value = 50;
-19 }
+```java
+public class PassByValueDemo {
+    public static void main(String[] args) {
+        int primitiveValue = 10;
+        MyObject obj = new MyObject();
+        modifyValues(primitiveValue, obj);
+
+        System.out.println("Primitive Value: " + primitiveValue);
+        System.out.println("Object Value: " + obj.value);
+    }
+
+    static void modifyValues(int num, MyObject objRef) {
+        num = 20; // 不影响原始的 primitiveValue
+        objRef.value = 100; // 修改堆内存中的对象
+    }
+}
+
+class MyObject {
+    int value = 50;
+}
 ```
 
 在这里：
@@ -5431,15 +4957,15 @@ class MyObject {
 输出将是：
 
 ```
-1 Primitive Value: 10
-2 Object Value: 100
+Primitive Value: 10
+Object Value: 100
 ```
 
 这证明了基本类型是通过按值传递的，而对象引用指向堆内存中的实际对象。
 
 栈内存是 Java 执行模型的关键部分，确保了方法调用、局部变量和方法参数的高效存储和检索。每个线程都有自己的栈，内存通过栈帧的添加和删除自动管理。通过理解栈内存的工作原理，开发者可以编写更好的程序，避免像 `StackOverflowError` 等递归陷阱，并有效地管理局部变量和方法参数。
 
-### 2.3 - 内存分配策略
+### 2.3 内存分配策略
 
 Java 用于高效资源管理的内存分配策略。
 
@@ -5449,187 +4975,43 @@ Java 中的内存分配在决定应用程序性能和可扩展性方面起着至
 
 让我们从一个突出栈分配与堆分配区别的示例开始：
 
-```
-1 public class MemoryAllocationDemo {
-2     public static void main(String[] args) {
-3      int localVar = 10; // 栈分配
-4      MyObject obj = new MyObject(); // 堆分配
-5      obj.show();
-6  }
-7 }
-8
-9 class MyObject {
-10    int value = 20; // 与对象一起存储在堆中
-11
-12    void show() {
-13      int methodVar = 30; // 栈分配
-14      System.out.println("Heap value: " + value);
-15    }
-16 }
+```java
+public class MemoryAllocationDemo {
+    public static void main(String[] args) {
+        int localVar = 10; // 栈分配
+        MyObject obj = new MyObject(); // 堆分配
+        obj.show();
+    }
+}
+
+class MyObject {
+    int value = 20; // 与对象一起存储在堆中
+
+    void show() {
+        int methodVar = 30; // 栈分配
+        System.out.println("Heap value: " + value);
+    }
+}
 ```
 
 在此处：
 
-1. `primitiveValue` 被传递给方法 `modifyValues`，其值被复制到方法的栈帧中。对 `num` 的修改不会影响原始变量。
-2. `objRef` 是存储在堆中的 `MyObject` 实例的引用。对对象字段 `value` 的修改会影响原始对象。
+1. `localVar` 是基本类型，存储在栈中。
+2. `obj` 是引用变量，存储在栈中，指向堆中的 `MyObject` 实例。
+3. `value` 是对象的实例字段，存储在堆中。
+4. `methodVar` 是 `show()` 方法的局部变量，存储在栈帧中。
 
 输出将是：
 
 ```
-1 Primitive Value: 10
-2 Object Value: 100
+Heap value: 20
 ```
 
 这说明基本类型是按值传递的，而对象引用指向堆内存中的实际对象。
 
-栈内存是 Java 执行模型的关键部分，确保了方法调用、局部变量和方法参数的高效存储和检索。每个线程都有自己的栈，内存通过栈帧的添加和删除自动管理。通过理解栈内存的工作原理，开发者可以编写更好的程序，避免像 `StackOverflowError` 等递归陷阱，并有效地管理局部变量和方法参数。
-
-### 2.3 - 内存分配策略
-
-Java 用于高效资源管理的内存分配策略。
-
-Java 中的内存分配在决定应用程序性能和可扩展性方面起着至关重要的作用。Java 通过 JVM 提供自动内存管理，处理对象的分配和释放。内存主要分为栈内存和堆内存。栈内存用于方法调用和局部变量，而堆内存用于对象存储。为了高效管理这些资源，Java 采用了不同的分配策略，例如**静态内存分配**、**动态内存分配**和**分代内存分配**。
-
-静态内存分配发生在编译时，主要针对在执行前就已知内存需求的变量。动态内存分配发生在运行时，此时在堆上动态为对象或数据结构分配内存。分代分配是 Java 堆策略的一部分，将堆内存划分为不同的区域以优化垃圾回收性能。
-
-让我们从一个突出栈分配与堆分配区别的示例开始：
-
-```
-1 public class MemoryAllocationDemo {
-2     public static void main(String[] args) {
-3      int localVar = 10; // 栈分配
-4      MyObject obj = new MyObject(); // 堆分配
-5      obj.show();
-6  }
-7 }
-8
-9 class MyObject {
-10    int value = 20; // 与对象一起存储在堆中
-11
-12    void show() {
-13      int methodVar = 30; // 栈分配
-14      System.out.println("Heap value: " + value);
-15    }
-16 }
-```
-
-在此处：
-
-1. `primitiveValue` 被传递给方法 `modifyValues`，其值被复制到方法的栈帧中。对 `num` 的修改不会影响原始变量。
-2. `objRef` 是存储在堆中的 `MyObject` 实例的引用。对对象字段 `value` 的修改会影响原始对象。
-
-输出将是：
-
-```
-1 Primitive Value: 10
-2 Object Value: 100
-```
-
-这证明了基本类型是通过按值传递的，而对象引用指向堆内存中的实际对象。
-
-[/content] (注：由于你提供的待翻译文本中存在重复内容，我已根据“不要重复输出原文”的原则进行了去重翻译)
-
-[content]
-在此程序中：
-
-- 1. 引用 `obj` 存储在 `main` 的栈帧中。
-- 2. 实际的 `MyObject` 实例存储在堆内存中。
-- 3. `display` 方法中的 `localVar` 存储在 `display` 的栈帧中。
-
-输出结果为：
-
-```
-1 Local variable: 50
-```
-
-栈在方法执行和变量存储方面非常高效，因为内存的分配和释放会随着方法的调用而自动完成。它不需要垃圾回收，因此比堆内存更快。然而，栈的大小是有限的，超过限制会导致 `StackOverflowError`（栈溢出）。
-
-以下示例演示了如何向方法传递**基本数据类型**和**引用**：
-
-```
-1 public class PassByValueDemo {
-2     public static void main(String[] args) {
-3      int primitiveValue = 10;
-4      MyObject obj = new MyObject();
-5      modifyValues(primitiveValue, obj);
-6 
-7      System.out.println("Primitive Value: " + primitiveValue);
-8      System.out.println("Object Value: " + obj.value);
-9  }
-10 
-11 static void modifyValues(int num, MyObject objRef) {
-12     num = 20; // 不影响原始的 primitiveValue
-13     objRef.value = 100; // 修改堆内存中的对象
-14 }
-15 }
-16 
-17 class MyObject {
-18     int value = 50;
-19 }
-```
-
-在这里：
-
-1. `primitiveValue` 被传递给方法 `modifyValues`，其值被复制到方法的栈帧中。对 `num` 的修改不会影响原始变量。
-2. `objRef` 是存储在堆中的 `MyObject` 实例的引用。对对象字段 `value` 的修改会影响原始对象。
-
-输出将是：
-
-```
-1 Primitive Value: 10
-2 Object Value: 100
-```
-
-这证明了基本类型是通过按值传递的，而对象引用指向堆内存中的实际对象。
-
-栈内存是 Java 执行模型的关键部分，确保了方法调用、局部变量和方法参数的高效存储和检索。每个线程都有自己的栈，内存通过栈帧的添加和删除自动管理。通过理解栈内存的工作原理，开发者可以编写更好的程序，避免像 `StackOverflowError` 等递归陷阱，并有效地管理局部变量和方法参数。
-
-### 2.3 - 内存分配策略
-
-Java 用于高效资源管理的内存分配策略。
-
-Java 中的内存分配在决定应用程序性能和可扩展性方面起着至关重要的作用。Java 通过 JVM 提供自动内存管理，处理对象的分配和释放。内存主要分为栈内存和堆内存。栈内存用于方法调用和局部变量，而堆内存用于对象存储。为了高效管理这些资源，Java 采用了不同的分配策略，例如**静态内存分配**、**动态内存分配**和**分代内存分配**。
-
-静态内存分配发生在编译时，主要针对在执行前就已知内存需求的变量。动态内存分配发生在运行时，此时在堆上动态为对象或数据结构分配内存。分代分配是 Java 堆策略的一部分，将堆内存划分为不同的区域以优化垃圾回收性能。
-
-让我们从一个突出栈分配与堆分配区别的示例开始：
-
-```
-1 public class MemoryAllocationDemo {
-2     public static void main(String[] args) {
-3      int localVar = 10; // 栈分配
-4      MyObject obj = new MyObject(); // 堆分配
-5      obj.show();
-6  }
-7 }
-8
-9 class MyObject {
-10    int value = 20; // 与对象一起存储在堆中
-11
-12    void show() {
-13      int methodVar = 30; // 栈分配
-14      System.out.println("Heap value: " + value);
-15    }
-16 }
-```
-
-在此处：
-
-1. `primitiveValue` 被传递给方法 `modifyValues`，其值被复制到方法的栈帧中。对 `num` 的修改不会影响原始变量。
-2. `objRef` 是存储在堆中的 `MyObject` 实例的引用。对对象字段 `value` 的修改会影响原始对象。
-
-输出将是：
-
-```
-1 Primitive Value: 10
-2 Object Value: 100
-```
-
-这证明了基本类型是通过按值传递的，而对象引用指向堆内存中的实际对象。
+对象池是一种内存分配策略，通过重用对象而不是创建新实例来减少内存开销，并提高频繁使用对象的性能。
 
 
-
-对象池是一种内存分配策略，其中通过重用对象而不是创建新实例。这种技术减少了内存开销，并提高了频繁使用对象的性能。
 
 ```java
 import java.util.ArrayList;
@@ -5670,8 +5052,8 @@ class ObjectPool {
 
 在此程序中：
 
-- 1. 对象从池中借用，而不是动态创建。
-- 2. 对象在使用后会被返回到池中以供重用。
+1. 对象从池中借用，而不是动态创建。
+2. 对象在使用后会被返回到池中以供重用。
 
 输出：
 
@@ -5683,11 +5065,11 @@ class ObjectPool {
 5 Reused object: 366712642
 ```
 
-对象池最最小化了堆分配，减少了垃圾回收的频率并提高了性能。
+对象池最小化了堆分配，减少了垃圾回收的频率并提高了性能。
 
-#### 栈分配的逃逸分析
+### 栈分配的逃逸分析
 
-JVM 使用**逃逸分析**来确定对象是否可以分配在栈上而不是堆上。这种优化减少了堆内存的使用。
+JVM 使用`逃逸分析`来确定对象是否可以分配在栈上而不是堆上。这种优化减少了堆内存的使用。
 
 ```java
 public class EscapeAnalysisDemo {
@@ -5715,26 +5097,26 @@ class Point {
 
 在此程序中：
 
-- 1. `Point` 对象是 `allocateOnStack` 方法的局部变量。
-- 2. 如果逃逸分析确定对象没有逃逸出方法，JVM 就可以优化这种分配并将对象放置在栈上。
+1. `Point` 对象是 `allocateOnStack` 方法的局部变量。
+2. 如果逃逸分析确定对象没有逃逸出方法，JVM 就可以优化这种分配并将对象放置在栈上。
 
 在启用逃逸分析的情况下运行程序：
 
 ```
-1 java -XX:+DoEscapeAnalysis -XX:+PrintGCDetails EscapeAnalysisDemo
+java -XX:+DoEscapeAnalysis -XX:+PrintGCDetails EscapeAnalysisDemo
 ```
 
 日志中缺少堆分配表示存在栈分配优化。
 
 内存分配策略如静态分配、动态分配、分代分配、对象池和逃逸分析，确保了 Java 中高效的资源管理。通过理解这些策略并使用 GC 日志和 JVM 参数等工具，开发者可以优化内存使用，减少垃圾回收开销，并提高应用程序的性能和扩展性。
 
-#### 2.3.1 - 静态 vs 动态内存分配
+### 2.3.1 静态 vs 动态内存分配
 
 静态与动态内存分配技术的比较。
 
-在 Java 中，内存分配在程序执行期间变量、对象和方法的存储与访问中起着基础性作用。**静态内存分配**在编译时针对静态变量、常量和类级元数据发生。**动态内存分配**发生在运行时，即为堆上的对象、数组或变量分配内存。理解这些技术之间的区别允许开发者在有效管理内存资源的同时编写高效代码。
+在 Java 中，内存分配在程序执行期间变量、对象和方法的存储与访问中起着基础性作用。`静态内存分配`在编译时针对静态变量、常量和类级元数据发生。`动态内存分配`发生在运行时，即为堆上的对象、数组或变量分配内存。理解这些技术之间的区别允许开发者在有效管理内存资源的同时编写高效代码。
 
-静态内存分配在**方法区域**（Java 8+ 中的元空间 Metaspace）预留内存，分配的内存贯穿整个应用程序生命周期。静态变量和类级常量使用静态内存分配。由于是在编译时分配的，因此速度快且不需要垃圾回收。
+静态内存分配在`方法区域`（Java 8+ 中的`元空间 Metaspace`）预留内存，分配的内存贯穿整个应用程序生命周期。静态变量和类级常量使用静态内存分配。由于是在编译时分配的，因此速度快且不需要垃圾回收。
 
 另一方面，动态内存分配在运行时使用 `new` 关键字在堆上分配内存。这种分配更加灵活，但引入了开销，因为它需要垃圾回收来回收未使用的内存。动态存储在堆上的对象可以具有不同的生命周期，并在线程间共享。
 
@@ -5758,14 +5140,14 @@ public class StaticMemoryDemo {
 
 在此程序中：
 
-- 1. `counter` 变量被声明为 `static`，因此它在方法区域分配内存。
-- 2. 静态变量被所有实例共享，并在程序生命周期内持续。
-- 3. 内存是在编译时分配的，使得访问 `counter` 非常快。
+1. `counter` 变量被声明为 `static`，因此它在方法区域分配内存。
+2. 静态变量被所有实例共享，并在程序生命周期内持续。
+3. 内存是在编译时分配的，使得访问 `counter` 非常快。
 
 输出：
 
 ```
-1 Counter: 2
+Counter: 2
 ```
 
 静态内存分配对于值需要在全局共享或在程序过程中保持不变的变量效果良好。
@@ -5793,15 +5175,15 @@ class MyObject {
 
 在这里：
 
-- 1. `new` 关键字创建了 `MyObject` 实例，这些对象在堆上动态分配。
-- 2. 每个 `MyObject` 实例都有自己的 `value` 字段。
-- 3. `obj1` 和 `obj2` 引用存储在栈上，但实际对象位于堆内存中。
+1. `new` 关键字创建了 `MyObject` 实例，这些对象在堆上动态分配。
+2. 每个 `MyObject` 实例都有自己的 `value` 字段。
+3. `obj1` 和 `obj2` 引用存储在栈上，但实际对象位于堆内存中。
 
 输出：
 
 ```
-1 Object value: 10
-2 Object value: 10
+Object value: 10
+Object value: 10
 ```
 
 动态内存分配提供了灵活性，因为对象是在运行时创建的。然而，它引入了垃圾回收开销，因为需要清理使用的对象。
@@ -5838,22 +5220,20 @@ class MyObject {
 
 在此程序中：
 
-- 1. 第一个循环增加存储在方法区域的静态变量。
-- 2. 第二个循环在堆上动态创建一个新的 `MyObject`。
-- 3. 由于对象创建的开销，动态内存分配较慢。
+1. 第一个循环增加存储在方法区域的静态变量。
+2. 第二个循环在堆上动态创建一个新的 `MyObject`。
+3. 由于对象创建的开销，动态内存分配较慢。
 
 示例输出可能如下：
 
 ```
-1 Static Allocation Time: 1600000 ns
-2 Dynamic Allocation Time: 45000000 ns
+Static Allocation Time: 1600000 ns
+Dynamic Allocation Time: 45000000 ns
 ```
 
 静态内存分配具有局限性。它要求在编译时知道内存大小，且静态变量在程序结束之前无法释放。动态内存分配通过允许在运行时分配内存来克服这些局限性。
 
 考虑以下需要动态分配的示例：
-
-
 
 ```java
 import java.util.Scanner;
@@ -5870,7 +5250,7 @@ public class DynamicArrayDemo {
         }
 
         System.out.println("Dynamic Array Contents:");
-        for (int num :dynamicArray) {
+        for (int num : dynamicArray) {
             System.out.print(num + " ");
         }
     }
@@ -5879,9 +5259,9 @@ public class DynamicArrayDemo {
 
 在这个程序中：
 
-- 1. 数组的大小在运行时根据用户输入确定。
-- 2. `dynamicArray` 的内存动态在堆上分配。
-- 3. 静态内存分配在这里不可行，因为数组大小在编译时是未知的。
+1. 数组的大小在运行时根据用户输入确定。
+2. `dynamicArray` 的内存动态在堆上分配。
+3. 静态内存分配在这里不可行，因为数组大小在编译时是未知的。
 
 示例输出：
 
@@ -5891,7 +5271,7 @@ Dynamic Array Contents:
 0 2 4 6 8 
 ```
 
-动态内存分配对于需要灵活性的程序至关重要，例如处理用户输入或可变数据大。
+动态内存分配对于需要灵活性的程序至关重要，例如处理用户输入或可变数据大小。
 
 静态内存分配更适用于在整个应用程序生命周期内固定的常量或变量。让我们来看另一个静态分配场景：
 
@@ -5912,8 +5292,8 @@ public class StaticConstantDemo {
 
 在这里：
 
-- 1. `PI` 被声明为静态常量，因为它的值是固定的。
-- 2. 静态内存分配确保了 `PI` 是全局可用的，并高效地存储在方法区域中。
+1. `PI` 被声明为静态常量，因为它的值是固定的。
+2. 静态内存分配确保了 `PI` 是全局可用的，并高效地存储在方法区域中。
 
 输出：
 
@@ -5950,8 +5330,8 @@ class MyObject {
 
 在这里：
 
-- 1. `staticCounter` 因为使用了静态内存，因此在整个程序生命周期内持续。
-- 2. 每个 `MyObject` 实例都有很短的生命周期，并在堆上进行动态分配。
+1. `staticCounter` 因为使用了静态内存，因此在整个程序生命周期内持续。
+2. 每个 `MyObject` 实例都有很短的生命周期，并在堆上进行动态分配。
 
 输出：
 
@@ -5964,15 +5344,17 @@ Static Counter: 3
 
 静态内存分配高效但缺乏灵活性，而动态内存分配以运行时开销为代价提供了灵活性。理解何时使用静态或动态分配对于构建高效的 Java 应用至关重要。静态分配是常量和全局状态的理想选择，而动态分配对于需要运行时灵活性的对象是必要的。通过平衡这些技术，开发者可以优化性能和资源利用。
 
-#### 2.3.2 - 内存池
+### 2.3.2 内存池
 
 使用内存池来减少分配开销。
 
 内存池是一种强大的策略，通过重用预分配的对象而不是频繁地创建和销毁对象来优化内存使用。在 Java 中，使用 `new` 动态创建对象会产生分配开销，而垃圾回收在回收内存时会引入性能成本。内存池通过重用对象来最小化这些问题，减少垃圾回收的压力并提高应用程序性能。
 
-内存池的核心思想是维护一个**可重用对象池**。当需要一个对象时，程序从池中检索它，而不是分配一个新的。一旦对象不再被使用，它就会返回池中重用，而不是被销毁。这种方法对于创建成本高昂或频繁使用的对象特别为有效。
+内存池的核心思想是维护一个`可重用对象池`。当需要一个对象时，程序从池中检索它，而不是分配一个新的。一旦对象不再被使用，它就会返回池中重用，而不是被销毁。这种方法对于创建成本高昂或频繁使用的对象特别有效。
 
 这是一个演示对象池概念的简单示例：
+
+
 
 ```java
 import java.util.ArrayList;
@@ -5992,6 +5374,7 @@ public class ObjectPoolDemo {
         obj2.display(); // 重用同一个对象
     }
 }
+
 class MyObject {
     private int value;
 
@@ -6018,10 +5401,10 @@ class ObjectPool<T> {
 
 在这个程序中：
 
-- 1. `ObjectPool` 类维护一个预分配对象的池。
-- 2. 对象通过工厂被创建并存储在列表中。
-- 3. 当通过 `borrowObject()` 请求对象时，它从池中检索。如果池为空，则创建一个新对象。
-- 4. 当对象不再被需要时，通过 `returnObject()` 返回到池中。
+1. `ObjectPool` 类维护一个预分配对象的池。
+2. 对象通过工厂被创建并存储在列表中。
+3. 当通过 `borrowObject()` 请求对象时，它从池中检索。如果池为空，则创建一个新对象。
+4. 当对象不再被需要时，通过 `returnObject()` 返回到池中。
 
 示例输出：
 
@@ -6096,10 +5479,6 @@ interface ObjectFactory<T> {
 }
 ```
 
-
-
-
-
 ```
 1 Thread-1 - Object Value: 83
 2 Thread-0 - Object Value: 45
@@ -6141,9 +5520,9 @@ public class ThreadPoolDemo {
 
 在此处：
 
-- 1. 使用 `Executors.newFixedThreadPool(3)` 创建了一个拥有三个线程的线程池。
-- 2. 任务被提交到线程池。线程被复用以执行任务，而无需每次创建新线程。
-- 3. 这最小化了线程创建和销毁的开销。
+1. 使用 `Executors.newFixedThreadPool(3)` 创建了一个拥有三个线程的线程池。
+2. 任务被提交到线程池。线程被复用以执行任务，而无需每次创建新线程。
+3. 这最小化了线程创建和销毁的开销。
 
 示例输出：
 
@@ -6159,45 +5538,44 @@ public class ThreadPoolDemo {
 
 内存池也被广泛用于高性能应用程序中的缓冲区管理。Java 的 `ByteBuffer` 可以被池化以减少垃圾回收的开销。这里是一个示例：
 
-```
-1 import java.nio.ByteBuffer;
-2 import java.util.concurrent.ArrayBlockingQueue;
-3 
-4 public class BufferPoolDemo {
-5     private static final int POOL_SIZE = 5;
-6     private static final ArrayBlockingQueue<ByteBuffer> bufferPool = new
-7 ArrayBlockingQueue<>(POOL_SIZE);
-8 
-9     static {
-10        for (int i = 0; i < POOL_SIZE; i++) {
-11            bufferPool.add(ByteBuffer.allocate(1024)); // Allocate 1KB
-12        }
-13    }
-14}
-15    public static void main(String[] args) throws InterruptedException {
-16        ByteBuffer buffer = borrowBuffer();
-17        buffer.put("Pooled ByteBuffer Example".getBytes());
-18 
-19        System.out.println("Buffer content: " + new
-20 String(buffer.array()).trim());
-21        returnBuffer(buffer);
-22    }
-23 
-24    public static ByteBuffer borrowBuffer() throws InterruptedException {
-25        return bufferPool.take();
-26    }
-27 
-28    public static void returnBuffer(ByteBuffer buffer) {
-29        buffer.clear();
-30        bufferPool.offer(buffer);
-31    }
+```java
+import java.nio.ByteBuffer;
+import java.util.concurrent.ArrayBlockingQueue;
+
+public class BufferPoolDemo {
+    private static final int POOL_SIZE = 5;
+    private static final ArrayBlockingQueue<ByteBuffer> bufferPool = new ArrayBlockingQueue<>(POOL_SIZE);
+
+    static {
+        for (int i = 0; i < POOL_SIZE; i++) {
+            bufferPool.add(ByteBuffer.allocate(1024)); // Allocate 1KB
+        }
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        ByteBuffer buffer = borrowBuffer();
+        buffer.put("Pooled ByteBuffer Example".getBytes());
+
+        System.out.println("Buffer content: " + new String(buffer.array()).trim());
+        returnBuffer(buffer);
+    }
+
+    public static ByteBuffer borrowBuffer() throws InterruptedException {
+        return bufferPool.take();
+    }
+
+    public static void returnBuffer(ByteBuffer buffer) {
+        buffer.clear();
+        bufferPool.offer(buffer);
+    }
+}
 ```
 
 在此程序中：
 
-- 1. 预分配了一个 1KB 的 `ByteBuffer` 实例池并将其存储在 `ArrayBlockingQueue` 中。
-- 2. 使用 `borrowBuffer()` 借缓冲区，在使用后通过 `returnBuffer()` 返回。
-- 3. 这减少了内存分配开销，并最小化了频繁使用缓冲器的垃圾回收压力。
+1. 预分配了一个 1KB 的 `ByteBuffer` 实例池并将其存储在 `ArrayBlockingQueue` 中。
+2. 使用 `borrowBuffer()` 借缓冲区，在使用后通过 `returnBuffer()` 返回。
+3. 这减少了内存分配开销，并最小化了频繁使用缓冲器的垃圾回收压力。
 
 示例输出：
 
@@ -6213,9 +5591,9 @@ public class ThreadPoolDemo {
 
 Java 中的垃圾回收是自动回收不再使用的对象所占内存的过程。这消除了对手动内存管理的需求，而手动管理是 C 和 C++ 等语言中内存泄漏和悬指针等错误的常见来源。Java 的垃圾回收器（GC）识别不可达的对象，释放内存并供未来分配使用，从而确保高效的资源管理。
 
-垃圾回收过程在**堆内存**中进行，使用 `new` 关键字创建的对象存储于此。JVM 将堆分为不同的区域：**新生代（Young Generation）**、**老年代（Old Generation）**和**元空间（Metaspace）**。新生代是创建短生命周期对象的地方，存活的对象会被提升到老年代。元空间存储类元数据。
+垃圾回收过程在`堆内存`中进行，使用 `new` 关键字创建的对象存储于此。JVM 将堆分为不同的区域：`新生代（Young Generation）`、`老年代（Old Generation）`和`元空间（Metaspace）`。新生代是创建短生命周期对象的地方，存活的对象会被提升到老年代。元空间存储类元数据。
 
-垃圾回收机制基于几种算法，包括**标记-清除（Mark and Sweep）**、**分代收集（Generational GC）**、**并行回收（Parallel GC）**等。GC 算法的选择取决于应用程序性能需求，例如延迟或吞吐量。
+垃圾回收机制基于几种算法，包括`标记-清除（Mark and Sweep）`、`分代收集（Generational GC）`、`并行回收（Parallel GC）`等。GC 算法的选择取决于应用程序性能需求，例如延迟或吞吐量。
 
 这是一个观察垃圾回收的简单示例：
 
@@ -6231,6 +5609,7 @@ public class GarbageCollectionDemo {
 
 class MyObject {
     int[] data = new int[1000];
+
     @Override
     protected void finalize() {
         System.out.println("Finalizing object...");
@@ -6240,9 +5619,9 @@ class MyObject {
 
 在此程序中：
 
-- 1. 在循环中创建了许多短生命周期对象。
-- 2. `System.gc()` 建议进行垃圾回收。
-- 3. 调用了 `finalize()` 方法。
+1. 在循环中创建了许多短生命周期对象。
+2. `System.gc()` 建议进行垃圾回收。
+3. 调用了 `finalize()` 方法。
 
 示例输出（不保证）：
 
@@ -6251,11 +5630,9 @@ Finalizing object...
 Finalizing object...
 ```
 
-
-
 在此程序中：
 
-- 1. `obj1` 和 `obj2` 都被设置为 `null`，使得对象变得不可达。
+1. `obj1` 和 `obj2` 都被设置为 `null`，使得对象变得不可达。
 2. 垃圾回收器释放它们的内存，并调用 `finalize`。
 
 输出：
@@ -6270,59 +5647,62 @@ Finalizing object...
 
 Java 提供了多种垃圾回收策略，取决于应用程序的需求。主要的垃圾回收器类型有：
 
-- 1. **Serial GC（串口回收）**：适用于小型应用程序的单线程 GC。使用以下命令启用：
+1. **Serial GC（串口回收）**：适用于小型应用程序的单线程 GC。使用以下命令启用：
 
 ```
 java -XX:+UseSerialGC GarbageCollectionDemo
 ```
 
-- 2. **Parallel GC（并行回收）**：使用多个线程进行垃圾回收，提高了多线程应用程序的吞吐量。使用以下命令启用：
+2. **Parallel GC（并行回收）**：使用多个线程进行垃圾回收，提高了多线程应用程序的吞吐量。使用以下命令启用：
 
 ```
 java -XX:+UseParallelGC GarbageCollectionDemo
 ```
 
-- 3. **G1 GC（垃圾优先回收）**：Garbage-First GC 将堆划分为多个区域，并优先回收垃圾最多的区域。使用以下命令启用：
+3. **G1 GC（垃圾优先回收）**：Garbage-First GC 将堆划分为多个区域，并优先回收垃圾最多的区域。使用以下命令启用：
 
 ```
 java -XX:+UseG1GC GarbageCollectionDemo
 ```
 
-- **ZGC 和 Shenandoah GC**：针对大内存和实时应用程序设计的低延迟回收器。使用以下命令启用：
+4. **ZGC 和 Shenandoah GC**：针对大内存和实时应用程序设计的低延迟回收器。使用以下命令启用：
 
 ```
-1 java -XX:+UseZGC GarbageCollectionDemo
-2 java -XX:+UseShenandoahGC GarbageCollectionDemo
+java -XX:+UseZGC GarbageCollectionDemo
+java -XX:+UseShenandoahGC GarbageCollectionDemo
 ```
 
 这是一个用于测试不同 GC 并观察性能差异的示例：
 
-```
-1 public class GCComparison {
-2     static void main(String[] args) {
-3     for (int i = 0; i < 1000000; i++) {
-4         MyObject obj = new MyObject();
-5     }
-6     System.out.println("Completed object creation.");
-7 }
-8 }
-10 class MyObject {
-11     int[] data = new int[1000];
-12 }
+```java
+public class GCComparison {
+    static void main(String[] args) {
+        for (int i = 0; i < 1000000; i++) {
+            MyObject obj = new MyObject();
+        }
+        System.out.println("Completed object creation.");
+    }
+}
+
+class MyObject {
+    int[] data = new int[1000];
+}
 ```
 
 使用不同的 GC 运行此程序以比较性能：
 
 ```
-1 java -Xms50m -Xmx50m -XX:+UseSerialGC -XX:+PrintGCDetails GCComparison
-2 java -Xms50m -Xmx50m -XX:+UseG1GC -XX:+PrintGCDetails GCComparison
+java -Xms50m -Xmx50m -XX:+UseSerialGC -XX:+PrintGCDetails GCComparison
+java -Xms50m -Xmx50m -XX:+UseG1GC -XX:+PrintGCDetails GCComparison
 ```
 
 比较 GC 日志以查看 GC 消耗的时间和堆的使用情况。
 
 #### 弱引用与垃圾回收
 
-Java 提供了 **弱引用（Weak References）**，允许对象在被引用时也可以被垃圾回收。这对于缓存非常有用。
+Java 提供了 `弱引用（Weak References）`，允许对象在被引用时也可以被垃圾回收。这对于缓存非常有用。
+
+
 
 ```java
 import java.lang.ref.WeakReference;
@@ -6350,7 +5730,7 @@ class MyObject {
 
 在此程序中：
 
-- 1. `WeakReference` 允许对象被垃圾回收。
+1. `WeakReference` 允许对象被垃圾回收。
 2. GC 之后，弱引用不再持有该对象。
 
 输出：
@@ -6366,7 +5746,7 @@ Java 中的垃圾回收通过自动回收未使用的内存来简化内存管理
 
 Java 中使用的不同垃圾回收算法说明。
 
-Java 提供了系列垃圾回收算法，旨在根据应用程序需求优化内存管理。这些算法确保高效移除未使用的对象，在平衡 CPU 开销、应用程序吞吐量和停顿时间的同时释放内存。最常用的垃圾回收算法包括 **Serial GC**、**Parallel GC**、**G1 GC**、**ZGC** 和 **Shenandoah GC**。
+Java 提供了系列垃圾回收算法，旨在根据应用程序需求优化内存管理。这些算法确保高效移除未使用的对象，在平衡 CPU 开销、应用程序吞吐量和停顿时间的同时释放内存。最常用的垃圾回收算法包括 `Serial GC`、`Parallel GC`、`G1 GC`、`ZGC` 和 `Shenandoah GC`。
 
 每个垃圾回收器的工作方式不同，但都依赖于**标记清除（Mark and Sweep）**、**复制（Copying）**和**压缩（Compacting）**核心概念。堆被分为新生（Eden 和 Survivor 空间）和老年代，每个 GC 使用其自己的策略管理这些区域。
 
@@ -6377,7 +5757,7 @@ Java 提供了系列垃圾回收算法，旨在根据应用程序需求优化内
 使用以下 JVM 通过 Serial GC 运行程序：
 
 ```
-1 java -Xms50m -Xmx50m -XX:+UseSerialGC -XX:+PrintGCDetails SerialGCDemo
+java -Xms50m -Xmx50m -XX:+UseSerialGC -XX:+PrintGCDetails SerialGCDemo
 ```
 
 **Serial GC** 使用单线程执行垃圾回收。它在 GC 期间会暂停应用程序，适用于小型应用程序或单线程环境。
@@ -6385,35 +5765,36 @@ Java 提供了系列垃圾回收算法，旨在根据应用程序需求优化内
 示例 GC 日志输出：
 
 ```
-1 [GC (Allocation Failure) [DefNew: 4096K->512K(9216K), 0.0053420 secs 4096K->512K(19456K), 0.0053680 secs]
+[GC (Allocation Failure) [DefNew: 4096K->512K(9216K), 0.0053420 secs 4096K->512K(19456K), 0.0053680 secs]
 ```
 
 在这里：
 
-- 1. **DefNew** 指新生代。
+1. **DefNew** 指新生代。
 2. 它会暂停应用程序（全世界停顿）。
 
 **Parallel GC** 使用多个线程进行垃圾回收，提高了多线程应用程序的吞吐量。使用以下命令启用：
 
-```
-1 public class GCComparison {
-2     static void main(String[] args) {
-3     for (int i = 0; i < 1000000; i++) {
-4         MyObject obj = new MyObject();
-5     }
-6     System.out.println("Completed object creation.");
-7 }
-8 }
-10 class MyObject {
-11     int[] data = new int[1000];
-12 }
+```java
+public class GCComparison {
+    static void main(String[] args) {
+        for (int i = 0; i < 1000000; i++) {
+            MyObject obj = new MyObject();
+        }
+        System.out.println("Completed object creation.");
+    }
+}
+
+class MyObject {
+    int[] data = new int[1000];
+}
 ```
 
 使用不同的 GC 运行此程序以比较性能：
 
 ```
-1 java -Xms50m -Xmx50m -XX:+UseSerialGC -XX:+PrintGCDetails GCComparison
-2 java -Xms50m -Xmx50m -XX:+UseG1GC -XX:+PrintGCDetails GCComparison
+java -Xms50m -Xmx50m -XX:+UseSerialGC -XX:+PrintGCDetails GCComparison
+java -Xms50m -Xmx50m -XX:+UseG1GC -XX:+PrintGCDetails GCComparison
 ```
 
 比较 GC 日志以查看 GC 消耗的时间和堆的使用情况。
@@ -6423,7 +5804,7 @@ Java 提供了系列垃圾回收算法，旨在根据应用程序需求优化内
 Garbage-First GC 将堆划分为多个区域，并优先回收垃圾最多的区域。使用以下命令启用：
 
 ```
-1 java -XX:+UseG1GC GarbageCollectionDemo
+java -XX:+UseG1GC GarbageCollectionDemo
 ```
 
 **G1 GC** 将堆划分为区域，优先回收垃圾最多的区域。它减少了全世界停顿时间。
@@ -6431,37 +5812,33 @@ Garbage-First GC 将堆划分为多个区域，并优先回收垃圾最多的区
 示例 GC 日志输出：
 
 ```
-1 [GC (Allocation Failure) [DefNew: 4096K->512K(9216K), 0.0053420 secs 4096K->512K(19456K), 0.0053680 secs]
+[GC (Allocation Failure) [DefNew: 4096K->512K(9216K), 0.0053420 secs 4096K->512K(19456K), 0.0053680 secs]
 ```
 
 在这里：
 
-- 1. **DefNew** 指新生代。
+1. **DefNew** 指新生代。
 2. 它暂停应用程序以清理内存。
-
-
-
-
 
 ```java
 public class ShenandoahGCDemo {
-  public static void main(String[] args) {
-    for (int i = 0; i < 100000; i++) {
-        MyObject obj = new MyObject();
+    public static void main(String[] args) {
+        for (int i = 0; i < 100000; i++) {
+            MyObject obj = new MyObject();
+        }
+        System.out.println("Objects created with Shenandoah GC.");
     }
-    System.out.println("Objects created with Shenandoah GC.");
-  }
 }
+
 class MyObject {
-  int[] data = new int[1000];
+    int[] data = new int[1000];
 }
 ```
 
-使用启用的 Shenandoah GC运行程序：
+使用启用的 Shenandoah GC 运行程序：
 
 ```
-java -Xms50m -Xmx50m -XX:+UseShenandoahGC -XX:+PrintGCDetails
-ShenandoahGCDemo
+java -Xms50m -Xmx50m -XX:+UseShenandoahGC -XX:+PrintGCDetails ShenandoahGCDemo
 ```
 
 **Shenandoah GC** 执行并发垃圾回收，停顿时间极短，非常适合对延迟敏感的应用。
@@ -6474,8 +5851,8 @@ ShenandoahGCDemo
 
 在此：
 
-- 1. **Shenandoah Paused Mark** 表示在标记阶段期间有短暂的停顿。
-- 2. Shenandoah 通过并发执行大部分垃圾回收工作来最小化停顿时间。
+1. **Shenandoah Paused Mark** 表示在标记阶段期间有短暂的停顿。
+2. Shenandoah 通过并发执行大部分垃圾回收工作来最小化停顿时间。
 
 每个垃圾回收器都有其优势，并适用于特定的用场景：
 
@@ -6529,10 +5906,10 @@ class AnyObject {
 
 在此示例中：
 
-- 1. 创建了两个对象，`obj1` 和 `obj2`。
-- 2. 当两个引用都被设置为 `null` 时，对象变为不可达。
-- 3. 垃圾回收器识别出这些对象为未标记并对其进行清除清理。
-- 4. 在对象内存回收之前会调用 `finalize` 方法。
+1. 创建了两个对象，`obj1` 和 `obj2`。
+2. 当两个引用都被设置为 `null` 时，对象变为不可达。
+3. 垃圾回收器识别出这些对象为未标记并对其进行清除清理。
+4. 在对象内存回收之前会调用 `finalize` 方法。
 
 示例输出：
 
@@ -6543,6 +5920,7 @@ Finalizing object with ID: 2
 ```
 
 **标记阶段**遍历与 GC 根连接的对象并标记所有可达对象。
+
 这里有一个具有多个引用的示例来说明这一点：
 
 ```java
@@ -6573,12 +5951,9 @@ class MyObject {
 
 在此示例中：
 
-- 1. 创建了两个对象 `obj1` 和 `obj2`。
-- 2. 当两个引用都被设置为 `null` 时，对象变为不可达。
-- 3. 垃圾回收器识别出这些对象为未标记并对其进行清除清理。
-- 4. 在对象内存回收之前会调用 `finalize` 方法。
-
-（注：原文后续存在大量重复的段落，已根据要求“不要重复输出原文”进行去重处理，保留核心逻辑结构）
+1. 创建了对象链 `root` -> `child1` -> `child2`。
+2. 将 `root` 设置为 `null` 使整个链不可达。
+3. 垃圾回收器标记并清除不可达对象。
 
 示例输出：
 
@@ -6588,18 +5963,15 @@ Finalizing object with ID: 1
 Finalizing object with ID: 2
 ```
 
-
-
-
 GC 日志将显示清理列表后堆中的内存回收情况。
 
 标记-清除算法（mark-and-sweep algorithm）确保高效释放未使用的内存，但它也有局限性：
 
-- 1. **停停世界 (Stop-the-world pauses)**：应用程序在标记和清除阶段会停止。
-- 2. **碎片**：清除后可能会出现内存空隙。
-- 3. **性能开销**：标记所有对象所需与堆的大小成正比。
+1. **停停世界 (Stop-the-world pauses)**：应用程序在标记和清除阶段会停止。
+2. **碎片**：清除后可能会出现内存空隙。
+3. **性能开销**：标记所有对象所需与堆的大小成正比。
 
-这些问题在现代垃圾回收器中通过使用增量 GC、并行标记和压缩策略得到了缓解。例如，G1 GC 和 ZGC 通过将堆划分为多个区域并增量地处理它们，提高了标记-清除算法的性能。
+这些问题在现代垃圾回收器中通过使用增量 GC、并行标记和压缩策略得到了缓解。例如，`G1 GC` 和 `ZGC` 通过将堆划分为多个区域并增量地处理它们，提高了标记-清除算法的性能。
 
 标记-清除算法是 Java 垃圾回收的基础。通过识别不可达对象并回收其内存，它简化了资源管理并防止了内存泄漏。虽然它的“停停世界”行为会引入延迟，但并行处理和压缩等优化使其对于现代应用程序变得非常高效。理解标记-清除算法的工作原理有助于开发者编写更具内存效率的程序，并调优垃圾回收性能。
 
@@ -6632,27 +6004,26 @@ class MyObject {
 
 在此程序中：
 
-- 1. 循环创建了 10,000 个短命对象。
-- 2. 这些对象分配在新生代的 **Eden 区**中。
-- 3. 一旦发生垃圾回收，未存活的对象会被快速移除。
+1. 循环创建了 10,000 个短命对象。
+2. 这些对象分配在新生代的 **Eden 区**中。
+3. 一旦发生垃圾回收，未存活的对象会被快速移除。
 
 带有 GC 日志功能运行程序以观察行为。
 
 ```
-1java -Xms50m -Xmx50m -XX:+UseSerialGC -XX:+PrintGCDetails
-YoungGenerationDemo
+java -Xms50m -Xmx50m -XX:+UseSerialGC -XX:+PrintGCDetails YoungGenerationDemo
 ```
 
 示例 GC 日志输出：
 
 ```
-1 [GC (Allocation Failure) [DefNew: 8192K->512K(9216K)] 8192K->512K(19456K), 0.004123 secs]
+[GC (Allocation Failure) [DefNew: 8192K->512K(9216K)] 8192K->512K(19456K), 0.004123 secs]
 ```
 
 在这里：
 
-- 1. **DefNew** 指新生代。
-- 2. Eden 区中的对象在 Minor GC（ Minor GC）期间被收集，存活的对象被移动到一个幸存区。
+1. **DefNew** 指新生代。
+2. Eden 区中的对象在 Minor GC（ Minor GC）期间被收集，存活的对象被移动到一个幸存区。
 
 新生代中的存活对象在一次 GC 周期后会被提升到**幸存区**。如果它们存过多个周期，则会被提升到**老年代**。这里有一个演示对象提升的示例：
 
@@ -6680,65 +6051,64 @@ class MyObject {
 
 在此示例中：
 
-- 1. `createObject()` 方法创建了短命对象。
-- 2. `System.gc()` 调用触发了垃圾回收。
-- 3. 存活多个周期的对象被提升到老年代。
+1. `createObject()` 方法创建了短命对象。
+
+
+
+- `System.gc()` 调用触发了垃圾回收。
+- 存活多个周期的对象被提升到老年代。
 
 使用以下选项运行程序：
 
 ```
-1java -Xms50m -Xmx50m -XX:+UseParallelGC -XX:+PrintGCDetails
-ObjectPromotionDemo
+java -Xms50m -Xmx50m -XX:+UseParallelGC -XX:+PrintGCDetails ObjectPromotionDemo
 ```
 
 示例 GC 日志输出：
 
 ```
-1 [GC (Allocation Failure) [DefNew: 8192K->512K(9216K)] 8192K->512K(19456K), 0.004123 secs]
-1 [Full GC (Allocation Failure) [Old: 512K->1024K(19456K)] 512K->1024K(19456K), 0.025423 secs]
+[GC (Allocation Failure) [DefNew: 8192K->512K(9216K)] 8192K->512K(19456K), 0.004123 secs]
+[Full GC (Allocation Failure) [Old: 512K->1024K(19456K)] 512K->1024K(19456K), 0.025423 secs]
 ```
 
 在这里：
 
-- 1. **ParallelGC** 代表新生代。
-- 2. Eden 区的对象在 Minor GC 期间被收集，存活的对象被移动到一个幸存区。
+- **ParallelGC** 代表新生代。
+- Eden 区的对象在 Minor GC 期间被收集，存活的对象被移动到一个幸存区。
 
 新生代中的存活对象在一次 GC 周期后会被提升到**幸存区**。如果它们存过多个周期，则会被提升到**老年代**。
-
-（注：原文后续存在大量重复段落，已根据要求不重复输出，此处确保核心逻辑翻译完整）
-
-
 
 使用以下命令运行程序：
 
 ```
-1 java -Xms100m -Xmx100m -XX:+UseG1GC -XX:+PrintGCDetails MixedObjectDemo
+java -Xms100m -Xmx100m -XX:+UseG1GC -XX:+PrintGCDetails MixedObjectDemo
 ```
 
 日志将显示频繁的 Minor GC（新生垃圾回收）正在清理短命对象，而长命对象则留在老年代（Old Generation）。
 
 分代垃圾回收通过将堆划分为多个区域并对短命和长命对象进行区分处理来优化内存管理。年轻代（Young Generation）专注于通过频繁的 Minor GC 收集短命对象，而老年代则通过频率较低的 Major GC（主回收）处理长命对象。这种策略提高了性能，缩短了停顿时间并确保了堆内存的高效利用，使其具有多种内存分配模式的现代应用的理想选择。通过理解和调优分代垃圾回收，开发者可以实现高性能、可扩展的 Java 应用。
 
-##### 2.5.3 - G1 垃圾回收器
+### 2.5.3 - G1 垃圾回收器
 
 G1 垃圾回收器的特性和工作原理。
 
-G1（垃圾优先优先）垃圾回收器是 Java 7 中引入的低停顿垃圾回收器，并从 Java 9 开始成为默认 GC。它设计用于在处理大内存时提供一致且可预测的停顿时间。G1 GC 将堆划分为固定大小的区域（regions），而不是像传统分代垃圾回收器那样使用连续空间。它优先收集垃圾最多的区域，因此得名于 **Garbage-First（垃圾优先）**。
+G1（垃圾优先）垃圾回收器是 Java 7 中引入的低停顿垃圾回收器，并从 Java 9 开始成为默认 GC。它设计用于在处理大内存时提供一致且可预测的停顿时间。G1 GC 将堆划分为固定大小的区域（regions），而不是像传统分代垃圾回收器那样使用连续空间。它优先收集垃圾最多的区域，因此得名于 **Garbage-First（垃圾优先）**。
 
-G1 GC 中的堆在逻辑上被划分为**年轻代**和**老年代**，但这些表现为一组区域，而不是连续空间。G1 同时执行 **Minor GCs**（针对年轻代区域）和 **Mixed GCs**（混合回收），后混合回收会同时从年轻代和老年代区域中收集垃圾。
+G1 GC 中的堆在逻辑上被划分为**年轻代**和**老年代**，但这些表现为一组区域，而不是连续空间。G1 同时执行 **Minor GCs**（针对年轻代区域）和 **Mixed GCs**（混合回收），后者会同时从年轻代和老年代区域中收集垃圾。
 
 G1 GC 的核心特性包括：
 
-- 1. **基于区域的内存管理**：堆被划分为多个等大小的区域，使得内存管理既灵活又高效。
-- 2. **垃圾优先策略**：G1 优先考虑垃圾最多的区域，确保了的回收。
-- 3. **可预测的停顿时间**：G1 旨在通过 `MaxGCPauseMillis` 参数满足用户定义的停顿时间目标。
-- 4. **并发压缩**：G1 在 GC 过程中执行压缩，消除了堆碎片。
+- **基于区域的内存管理**：堆被划分为多个等大小的区域，使得内存管理既灵活又高效。
+- **垃圾优先策略**：G1 优先考虑垃圾最多的区域，确保了高效的回收。
+- **可预测的停顿时间**：G1 旨在通过 `MaxGCPauseMillis` 参数满足用户定义的停顿时间目标。
+- **并发压缩**：G1 在 GC 过程中执行压缩，消除了堆碎片。
 
-以下示例演示了 G1 GC 如何在短命和长命对象混合的情况下内存：
+以下示例演示了 G1 GC 如何在短命和长命对象混合的情况下管理内存：
 
 ```java
 import java.util.ArrayList;
 import java.util.List;
+
 public class G1GCDemo {
     public static void main(String[] args) {
         List<byte[]> shortLivedObjects = new ArrayList<>();
@@ -6759,38 +6129,38 @@ public class G1GCDemo {
 
 在此示例中：
 
-- 1. 短命对象（100 KB）被反复创建和清理，模拟临时数据。
-- 2. 长命对象（1 MB）被创建并保留，模拟晋升到老年代的对象。
+- 短命对象（100 KB）被反复创建和清理，模拟临时数据。
+- 长命对象（1 MB）被创建并保留，模拟晋升到老年代的对象。
 
 使用启用的 G1 GC 程序：
 
 ```
-1 java -Xms200m -Xmx200m -XX:+UseG1GC -XX:+PrintGCDetails -XX:MaxGCPauseMillis=50 G1CDemo
+java -Xms200m -Xmx200m -XX:+UseG1GC -XX:+PrintGCDetails -XX:MaxGCPauseMillis=50 G1CDemo
 ```
 
-- 1. `-Xms200m` 和 `-Xmx200m` 将堆大小设置为 200 MB。
-- 2. `-XX:+UseG1GC` 启用 G1 GC。
-- 3. `-XX:MaxGCPauseMillis=50` 将目标停顿时间设置为 50 毫秒。
-- 4. `-XX:+PrintGCDetails` 启用详细的垃圾回收日志。
+- `-Xms200m` 和 `-Xmx200m` 将堆大小设置为 200 MB。
+- `-XX:+UseG1GC` 启用 G1 GC。
+- `-XX:MaxGCPauseMillis=50` 将目标停顿时间设置为 50 毫秒。
+- `-XX:+PrintGCDetails` 启用详细的垃圾回收日志。
 
 输出将包含 GC 事件：
 
 ```
-1 [GC pause (G1 Evacuation Pause) (young) 75M->50M(200M), 0.045 secs]
-2 [GC pause (G1 Evacuation Pause) (mixed) 80M->55M(200M), 0.050 secs]
+[GC pause (G1 Evacuation Pause) (young) 75M->50M(200M), 0.045 secs]
+[GC pause (G1 Evacuation Pause) (mixed) 80M->55M(200M), 0.050 secs]
 ```
 
 在这里：
 
-- 1. **Young GCs** 收集包含短命对象的区域。
-- 2. **Mixed GCs** 收集同时包含年轻代和老年代对象的区域。
+- **Young GCs** 收集包含短命对象的区域。
+- **Mixed GCs** 收集同时包含年轻代和老年代对象的区域。
 
 G1 GC 将堆划分为多个固定大小的区域。这些区域被分类为：
 
-- 1. **Eden Region（Eden 区）**：新对象初始分配的地方。
-- 2. **Survivor Regions（存活区）**：在 Minor GC 期间存活对象移动的地方。
-- 3. **Old Regions（老年代区域）**：长命对象从存活区晋升后所在地。
-- 4. **Humongous Regions（巨型区域）**：存放大于区域大小 50% 对象的特殊区域。
+- **Eden Region（Eden 区）**：新对象初始分配的地方。
+- **Survivor Regions（存活区）**：在 Minor GC 期间存活对象移动的地方。
+- **Old Regions（老年代区域）**：长命对象从存活区晋升后所在地。
+- **Humongous Regions（巨型区域）**：存放大于区域大小 50% 对象的特殊区域。
 
 以下示例演示了 G1 GC 如何处理**巨型对象（humongous objects）**：
 
@@ -6805,23 +6175,20 @@ public class HumongousObjectDemo {
 }
 ```
 
-
-
-
 垃圾回收器、优化堆大小以及根据应用程序需求配置 GC 行为。
 
 首先通过启用 GC 日志来监控垃圾回收活动。GC 日志提供了关于 GC 事件频率、内存使用和停顿时间的详细见解。
 
 ```bash
-java -Xms512m -Xmx512m -XX:+PrintGCDetails -XX:+PrintGCTimeestamps MyApp
+java -Xms512m -Xmx512m -XX:+PrintGCDetails -XX:+PrintGCTimeStamps MyApp
 ```
 
-- 1. `-Xms512m` 将初始堆大小设置为 512 MB。
-- 2. `-Xmx512m` 将最大堆大小设置为 512 MB。
-- 3. `-XX:+PrintGCDetails` 启用详细 GC 日志。
-- 4. `-XX:+PrintGCTimeestamps` 为每个 GC 事件打印时间戳。
+- `-Xms512m` 将初始堆大小设置为 512 MB。
+- `-Xmx512m` 将最大堆大小设置为 512 MB。
+- `-XX:+PrintGCDetails` 启用详细 GC 日志。
+- `-XX:+PrintGCTimeStamps` 为每个 GC 事件打印时间戳。
 
-日志提供了关于**Minor GC（新生代）**、**Major GC（老代）**和**停顿时间**的信息，这些对于调优关重要。
+日志提供了关于 **Minor GC（新生代）**、**Major GC（老代）** 和 **停顿时间** 的信息，这些对于调优关键。
 
 为了减少 GC 开销，应该合理配置堆大小。小堆可能会触发频繁的 GC 循环，增加停顿时间；而过大的堆会导致 GC 持续时间变长。从配置堆大小开始：
 
@@ -6829,9 +6196,9 @@ java -Xms512m -Xmx512m -XX:+PrintGCDetails -XX:+PrintGCTimeestamps MyApp
 java -Xms1g -Xmx1g -XX:+UseG1GC -XX:MaxGCPauseMillis=50 MyApp
 ```
 
-- 1. 堆大小被设置为 1 GB。
-- 2. `XX:+UseG1GC` 启用 G1 垃圾回收器。
-- 3. `XX:MaxGCPauseMillis=50` 指定目标停顿时间为 50 毫秒。
+- 堆大小被设置为 1 GB。
+- `-XX:+UseG1GC` 启用 G1 垃圾回收器。
+- `-XX:MaxGCPauseMillis=50` 指定目标停顿时间为 50 毫秒。
 
 在负载下测试应用程序并监控 GC 日志，以验证是否达到了停顿时间目标。
 
@@ -6864,14 +6231,14 @@ java -Xms512m -Xmx512m -XX:+UseG1GC -XX:+PrintGCDetails -XX:MaxGCPauseMillis=20 
 
 监控 GC 日志以观察停顿时间和内存回收。
 
-如果应用程序需要高吞吐量，使用**Parallel Garbage Collector（并行垃圾回收器）**。它利用多线程进行垃圾回收，以略微增加停顿时间为代价提高了吞吐量。
+如果应用程序需要高吞吐量，使用 **Parallel Garbage Collector（并行垃圾回收器）**。它利用多线程进行垃圾回收，以略微增加停顿时间为代价提高了吞吐量。
 
 ```bash
 java -Xms1g -Xmx1g -XX:+UseParallelGC -XX:+PrintGCDetails -XX:MaxGCPauseMillis=100 MyApp
 ```
 
-- 1. `XX:+UseParallelGC` 启用并行 GC。
-- 2. `XX:MaxGCPauseMillis=100` 将停顿时间设置为 100 毫秒。
+- `-XX:+UseParallelGC` 启用并行 GC。
+- `-XX:MaxGCPauseMillis=100` 将停顿时间设置为 100 毫秒。
 
 并行 GC 适用于优先于低延迟的批处理应用程序。
 
@@ -6908,8 +6275,8 @@ java -Xms512m -Xmx512m -XX:+UseParallelGC -XX:+PrintGCDetails ParallelGCDemo
 java -Xms1g -Xmx1g -XX:+UseZGC -XX:+PrintGCDetails MyApp
 ```
 
-- 1. `XX:+UseZGC` 启用垃圾回收器。
-- 2. ZGC 设计用于处理海量堆（达 TB ），停顿时间在毫秒范围内。
+- `-XX:+UseZGC` 启用 ZGC 垃圾回收器。
+- ZGC 设计用于处理海量堆（达 TB 级），停顿时间在毫秒范围内。
 
 以下程序模拟内存压力以观察 ZGC 行为：
 
@@ -6963,13 +6330,13 @@ public class CompactionExample {
 java -Xms1g -Xmx1g -XX:+UseG1GC -XX:+PrintGCDetails CompactionExample
 ```
 
-监控 GC 日志以观察区域是如何被压缩以及内存是如何高效回收的。为了为了性能细调 G1 GC，请使用以下选项：
+监控 GC 日志以观察区域是如何被压缩以及内存是如何高效回收的。为了性能细调 G1 GC，请使用以下选项：
 
 - `-XX:InitiatingOccupancyPercent=45` 当堆占用超过 45% 时触发并发 GC。
 - `-XX:G1MixedGCTarget=8` 限制 Full GC 之后混合 GC 的数量。
 - `-XX:G1ReservePercent=10` 为未来的分配预留百分比的堆区域。
 
-另一种有效技术是使用**GC 调优工具**，如 **VisualVM** 或 **Java Mission Control**。这些工具提供了关于堆使用、GC 行为和停顿时间的实时见解。
+另一种有效技术是使用 **GC 调优工具**，如 **VisualVM** 或 **Java Mission Control**。这些工具提供了关于堆使用、GC 行为和停顿时间的实时见解。
 
 启动 VisualVM 监控应用程序：
 
@@ -6977,8 +6344,8 @@ java -Xms1g -Xmx1g -XX:+UseG1GC -XX:+PrintGCDetails CompactionExample
 visualvm
 ```
 
-- 1. 连接到运行中的 Java 进程。
-- 2. 分析堆内存、GC 活动和线程行为以识别瓶颈。
+- 连接到运行中的 Java 进程。
+- 分析堆内存、GC 活动和线程行为以识别瓶颈。
 
 使用 `jmap` 工具分析堆转储并识别内存泄漏：
 
@@ -6990,23 +6357,19 @@ jmap -dump:live,format=b,file=heapdump.prof <pid>
 
 为了平衡 GC 效率和应用程序性能，请遵循以下调优策略：
 
-- 1. 调整堆大小（`-Xms` 和 `-Xmx`）以减少 GC 频率。
-- 2. 根据需求选择合适的垃圾回收器（`-UseG1GC`、`-UseParallelGC``-UseZGC`）。
-- 3. 使用 `MaxGCPauseMillis` 和 `InitiatingOccupancyPercent` 等选项调优 GC 行为。
-- 4. 使用 VisualVM 和 jstat 等工具监控 GC 日志以识别瓶颈。
-- 5. 使用内存分析工具处理内存泄漏和碎片。
+- 调整堆大小（`-Xms` 和 `-Xmx`）以减少 GC 频率。
+- 根据需求选择合适的垃圾回收器（`-XX:+UseG1GC`、`-XX:+UseParallelGC`、`-XX:+UseZGC`）。
+- 使用 `MaxGCPauseMillis` 和 `InitiatingOccupancyPercent` 等选项调优 GC 行为。
+- 使用 VisualVM 和 jstat 等工具监控 GC 日志以识别瓶颈。
+- 使用内存分析工具处理内存泄漏和碎片。
 
 通过理解并应用这些技术，开发者可以对垃圾回收进行细调，以实现应用程序的可预知停顿时间、减少开销和高效的内存利用。
 
-
-
-
-
 在本示例中：
 
-- 1. `list` 被声明为静态变量，这意味着它是类元数据的一部分，并会在整个程序的生命周期内持续。
-- 2. 对象被不断添加到列表中，而没有移除未使用的元素。
-- 3. 由于引用仍然保留在列表中，垃圾回收器无法回收这些内存。
+- `list` 被声明为静态变量，这意味着它是类元数据的一部分，并会在整个程序的生命周期内持续。
+- 对象被不断添加到列表中，而没有移除未使用的元素。
+- 由于引用仍然保留在列表中，垃圾回收器无法回收这些内存。
 
 运行程序并使用 VisualVM 观察内存使用：
 
@@ -7014,17 +6377,19 @@ jmap -dump:live,format=b,file=heapdump.prof <pid>
 java -Xms100m -Xmx100m MemoryLeakExample
 ```
 
-- 1. 使用 `jvisualvm` 启动 **VisualVM**。
-- 2. 挂载进程并实时监控堆的使用情况。
-- 3. 由于静态列表在不断增长，堆内存使用量稳步增加。
+- 使用 `jvisualvm` 启动 **VisualVM**。
+- 挂载进程并实时监控堆的使用情况。
+- 由于静态列表在不断增长，堆内存使用量稳步增加。
 
-要修复此内存泄漏，请确保在对象不再需要时将其移除：
+要修复此内存泄漏，请确保在对象不再需要时将其移除。
+
+
 
 ```java
 list.clear();
 ```
 
-以下是一个由于事件监听器实现不当导致内存泄漏的示例
+以下是一个由于事件监听器实现不当导致内存泄漏的示例：
 
 ```java
 import java.awt.event.ActionEvent;
@@ -7058,9 +6423,9 @@ class LeakyListener implements ActionListener {
 
 在本示例中：
 
-- 1. 即使在窗口关闭后`LeakyListener` 仍然持有对按钮的引用。
-- 2. 如果窗口关闭且引用未释放，监听器将阻止 `LeakyListener` 对象被垃圾回收。
-- 3. `finalize` 方法永远不会被调用，因为该对象仍然留在内存中。
+1. 即使在窗口关闭后 `LeakyListener` 仍然持有对按钮的引用。
+2. 如果窗口关闭且引用未释放，监听器将阻止 `LeakyListener` 对象被垃圾回收。
+3. `finalize` 方法永远不会被调用，因为该对象仍然留在内存中。
 
 要修复此内存泄漏，请在监听器不再需要时移除它：
 
@@ -7088,10 +6453,10 @@ public class CacheMemoryLeak {
 
 在此程序中：
 
-- 1. `cache` map 持有所有添加到它的对象的强引用。
-- 2. 即使对象不再需要，它们仍然留在缓存中并阻止了垃圾回收。
+1. `cache` map 持有所有添加到它的对象的强引用。
+2. 即使对象不再需要，它们仍然留在缓存中并阻止了垃圾回收。
 
-为了避免这种内存泄漏，请使用 **WeakHashMap**，它允许在没有强引用存在时对象被垃圾回收：
+为了避免这种内存泄漏，请使用 `WeakHashMap`，它允许在没有强引用存在时对象被垃圾回收：
 
 ```java
 import java.util.WeakHashMap;
@@ -7112,8 +6477,8 @@ public class FixedCacheExample {
 
 在这里：
 
-- 1. 当键不再被其他地方引用时，`WeakHashMap` 会自动移除条目。
-- 2. 这防止了对象在内存中意外保留。
+1. 当键不再被其他地方引用时，`WeakHashMap` 会自动移除条目。
+2. 这防止了对象在内存中意外保留。
 
 当内部类或匿名类持有对其外部类的引用时，也会发生内存泄漏。考虑这个示例：
 
@@ -7145,211 +6510,205 @@ public class InnerClassLeak {
 
 在本示例中：
 
-- 1. `LeakyInnerClass` 持有对外部类（`InnerClassLeak`）的隐式引用。
-- 2. 即使在外部类被置为 `null` 后，内部类的引用也会阻止其被垃圾回收。
+1. `LeakyInnerClass` 持有对外部类（`InnerClassLeak`）的隐式引用。
+2. 即使在外部类被置为 `null` 后，内部类的引用也会阻止其被垃圾回收。
 
-要解决这个问题，请使用**静态嵌套类**代替内部类。
-
+要解决这个问题，请使用静态嵌套类代替内部类。
 
 这里：
 
-- 1. 对象被添加到列表中。
+1. 对象被添加到列表中。
 2. `dataList.clear()` 显式地移除对对象的引用，允许它们被垃圾回收。
 
 通过重用现有实例或使用适当的数据结构来避免创建不必要的对象。
 
-```
-1 public class ObjectReuseDemo {
-2     public static void main(String[] args) {
-3         for (int i = 0; i < 1000000; i++) {
-4             String result = process(i % 2 == 0);
-5             System.out.println(result);
-6         }
-7     }
-8
-9     private static final String YES = "Yes";
-10    private static final String NO = "No";
-11
-12    private static String process(boolean condition) {
-13        return condition ? YES : NO; // Reuse string constants
-14    }
-15 }
+```java
+public class ObjectReuseDemo {
+    public static void main(String[] args) {
+        for (int i = 0; i < 1000000; i++) {
+            String result = process(i % 2 == 0);
+            System.out.println(result);
+        }
+    }
+
+    private static final String YES = "Yes";
+    private static final String NO = "No";
+
+    private static String process(boolean condition) {
+        return condition ? YES : NO; // Reuse string constants
+    }
+}
 ```
 
 在此示例中：
 
-- 1. 重用了常量 `YES` 和 `NO`，而不是创建新的字符串对象。
+1. 重用了常量 `YES` 和 `NO`，而不是创建新的字符串对象。
 2. 这种方法减少了堆内存消耗，并避免了不必要的 GC 开销。
 
 对缓存和监听器使用弱引用，以防止由强引用引起的内存泄漏。弱引用在没有强引用存在时允许对象被垃圾回收。
 
-```
-1 import java.lang.ref.WeakReference;
-2 import java.util.WeakHashMap;
-3
-4 public class WeakReferenceDemo {
-5     public static void main(String[] args) {
-6      WeakHashMap<String, String> cache = new WeakHashMap<>();
-7
-8      String key1 = new String("key1");
-9      String key2 = new String("key2");
-10
-11     cache.put(key1, "Value 1");
-12     cache.put(key2, "Value 2");
-13
-14     key1 = null; // Remove strong reference
-15     System.gc(); // Suggest garbage collection
-16
-17     System.out.println("Cache content: " + cache);
-18
-19 }
+```java
+import java.lang.ref.WeakReference;
+import java.util.WeakHashMap;
+
+public class WeakReferenceDemo {
+    public static void main(String[] args) {
+        WeakHashMap<String, String> cache = new WeakHashMap<>();
+
+        String key1 = new String("key1");
+        String key2 = new String("key2");
+
+        cache.put(key1, "Value 1");
+        cache.put(key2, "Value 2");
+
+        key1 = null; // Remove strong reference
+        System.gc(); // Suggest garbage collection
+
+        System.out.println("Cache content: " + cache);
+    }
+}
 ```
 
 这里：
 
-- 1. 使用 `WeakHashMap` 存储缓存条目。
+1. 使用 `WeakHashMap` 存储缓存条目。
 2. 一旦对 `key1` 的强引用被移除，相关的条目就可以被垃圾回收。
 
 优先使用基本数据类型而不是包装类，以减少内存开销。与其对应的基本类型相比，`Integer` 和 `Double` 等包装类消耗了更多内存。
 
-```
-1 public class PrimitiveVsWrapperDemo {
-2   public static void main(String[] args) {
-3      long startTime = System.nanoTime();
-4      int sum = 0;
-5      for (int i = 0; i < 1000000; i++) {
-6        sum += i; // Primitive int
-7      }
-8      long endTime = System.nanoTime();
-9      System.out.println("Time with primitives: " + (endTime -
-10      startTime) + " ns");
-11 
-12     Long wrapperSum = 0L;
-13     startTime = System.nanoTime();
-14     for (int i = 0; i < 1000000; i++) {
-15       wrapperSum += i; // Wrapper Long
-16     }
-17     endTime = System.nanoTime();
-18     System.out.println("Time with wrappers: " + (endTime -
-19     startTime) + " ns");
-20   }
-2 }
+```java
+public class PrimitiveVsWrapperDemo {
+    public static void main(String[] args) {
+        long startTime = System.nanoTime();
+        int sum = 0;
+        for (int i = 0; i < 1000000; i++) {
+            sum += i; // Primitive int
+        }
+        long endTime = System.nanoTime();
+        System.out.println("Time with primitives: " + (endTime - startTime) + " ns");
+
+        Long wrapperSum = 0L;
+        startTime = System.nanoTime();
+        for (int i = 0; i < 1000000; i++) {
+            wrapperSum += i; // Wrapper Long
+        }
+        endTime = System.nanoTime();
+        System.out.println("Time with wrappers: " + (endTime - startTime) + " ns");
+    }
+}
 ```
 
 在此示例中：
 
-- 1. 与 `Long` 相比，基本类型 `int` 更快且消耗内存更少。
+1. 与 `Long` 相比，基本类型 `int` 更快且消耗内存更少。
 2. 在性能敏感的应用中避免不必要的使用包装类。
 
-在处理大字符串时，使用 **StringBuilder** 而不是使用 `+` 拼接字符串。字符串拼接会创建多个中间对象，增加内存占用。
+在处理大字符串时，使用 `StringBuilder` 而不是使用 `+` 拼接字符串。字符串拼接会创建多个中间对象，增加内存占用。
 
-```
-1 public class StringBuilderDemo {
-2     public static void main(String[] args) {
-3      StringBuilder builder = new StringBuilder();
-4
-5      for (int i = 0; i < 10000; i++) {
-6          builder.append("Item ").append(i).append("\n");
-7      }
-8
-9      System.out.println("Final string length: " + builder.length());
-10  }
-11 }
+```java
+public class StringBuilderDemo {
+    public static void main(String[] args) {
+        StringBuilder builder = new StringBuilder();
+
+        for (int i = 0; i < 10000; i++) {
+            builder.append("Item ").append(i).append("\n");
+        }
+
+        System.out.println("Final string length: " + builder.length());
+    }
+}
 ```
 
 在此示例中：
 
-- 1. `StringBuilder` 高效地处理字符串拼接，而不会创建中间对象。
+1. `StringBuilder` 高效地处理字符串拼接，而不会创建中间对象。
 2. 它减少了内存消耗并提升了性能。
 
 使用 VisualVM、`jstat` 和 `jmap` 等工具监控内存使用和垃圾回收活动。启用 GC 日志以识别性能瓶颈。
 
-```
-java -Xms512m -Xmx512m -XX:+PrintGCDetails -XX:+PrintGCTimeStamps XX:+UseG1GC MyApp
+```bash
+java -Xms512m -Xmx512m -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+UseG1GC MyApp
 ```
 
-- 1. `-XX:+PrintGCDetails` 打印详细的垃圾回收日志。
-- 2. `-XX:+PrintGCTimeStamps` 为 GC 事件提供时间戳。
-- 3. `-XX:+UseG1GC` 启用 G1 垃圾回收。
+1. `-XX:+PrintGCDetails` 打印详细的垃圾回收日志。
+2. `-XX:+PrintGCTimeStamps` 为 GC 事件提供时间戳。
+3. `-XX:+UseG1GC` 启用 G1 垃圾回收。
 
 通过生成堆转储分析堆内存：
 
-```
+```bash
 jmap -dump:live,format=b,file=heapdump.hprof <pid>
 ```
 
-使用 **Eclipse MAT** 或 VisualVM 分析堆转储并识别内存泄漏或未使用的对象。
+使用 Eclipse MAT 或 VisualVM 分析堆转储并识别内存泄漏或未使用的对象。
 
 优化数据结构以获得更好的内存效率。对于可预测的大小使用 `ArrayList` 而不是 `LinkedList`，后者由于节点引用而具有更高的开销。
 
-```
-1 import java.util.ArrayList;
-2 import java.util.LinkedList;
-3
-4 public class DataStructure {
-5     public static void main(String[] args) {
-6      long startTime = System.nanoTime();
-7      int sum = 0;
-8      for (int i = 0; i < 1000000; i++) {
-9        sum += i; // Primitive int
-10      }
-11      long endTime = System.nanoTime();
-12      System.out.println("Time with primitives: " + (endTime -
-13      startTime) + " ns");
-14 
-15     Long wrapperSum = 0L;
-16     startTime = System.nanoTime();
-17     for (int i = 0; i < 1000000; i++) {
-18       wrapperSum += i; // Wrapper Long
-19     }
-20     endTime = System.nanoTime();
-21     System.out.println("Time with wrappers: " + (endTime -
-22     startTime) + " ns");
-23   }
-24 }
+```java
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class DataStructure {
+    public static void main(String[] args) {
+        long startTime = System.nanoTime();
+        int sum = 0;
+        for (int i = 0; i < 1000000; i++) {
+            sum += i; // Primitive int
+        }
+        long endTime = System.nanoTime();
+        System.out.println("Time with primitives: " + (endTime - startTime) + " ns");
+
+        Long wrapperSum = 0L;
+        startTime = System.nanoTime();
+        for (int i = 0; i < 1000000; i++) {
+            wrapperSum += i; // Wrapper Long
+        }
+        endTime = System.nanoTime();
+        System.out.println("Time with wrappers: " + (endTime - startTime) + " ns");
+    }
+}
 ```
 
 在此示例中：
 
-- 1. 与 `Long` 相比，基本类型 `int` 更快且消耗内存更少。
-- 2. 在性能敏感的应用中避免不必要的使用包装类。
+1. 与 `Long` 相比，基本类型 `int` 更快且消耗内存更少。
+2. 在性能敏感的应用中避免不必要的使用包装类。
 
-```
-1 import java.util.concurrent.ExecutorService;
-2 import java.util.concurrent.Executors;
-3
-4 public class ThreadPoolDemo {
-5     public static void main(String[] args) {
-6         ExecutorService executor = Executors.newFixedThreadPool(5);
-7
-8         for (int i = 0; i < 10; i++) {
-9             executor.submit(() -> {
-10                 System.out.println("Task executed by " + Thread.currentThread().getName());
-11             });
-12         }
-13         executor.shutdown();
-14     }
-15 }
+```java
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class ThreadPoolDemo {
+    public static void main(String[] args) {
+        ExecutorService executor = Executors.newFixedThreadPool(5);
+
+        for (int i = 0; i < 10; i++) {
+            executor.submit(() -> {
+                System.out.println("Task executed by " + Thread.currentThread().getName());
+            });
+        }
+        executor.shutdown();
+    }
+}
 ```
 
 在此示例中：
 
-- 1. 线程池重用线程而不是为任务创建新的。
-- 2. 这减少了内存消耗并提升了性能。
-
-
-
+1. 线程池重用线程而不是为任务创建新的。
+2. 这减少了内存消耗并提升了性能。
 
 ### 1. jvisualvm
 
-- 1. 从左侧面板选择应用程序，将 VisualVM 附加到运行中的 Java 进程。
+1. 从左侧面板选择应用程序，将 VisualVM 附加到运行中的 Java 进程。
 2. 使用 **Monitor**（监控）标签卡实时观察 CPU 使用率、堆内存和 GC 活动。
 3. 导航到 **Threads**（线程）标签卡分析线程活动并识别任何阻塞或死锁的线程。
 4. 使用 **Sampler**（采样器）标签卡进行内存分析，找到消耗内存最多的对象。
 
 这里有一个示例程序，用于在 VisualVM 中生成用于监控的内存和 GC 活动：
 
-```
+
+
+```java
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7373,9 +6732,9 @@ public class VisualVMDemo {
 java -Xms512m -Xmx512m -XX:+UseG1GC -XX:+PrintGCDetails VisualVMDemo
 ```
 
-附加 VisualVM，监控堆图，并观察随着内存分配和清理，GC 事件是如何发生。
+附加 `VisualVM`，监控堆图，并观察随着内存分配和清理，GC 事件是如何发生。
 
-**jstat** 是一个用于监控 GC 行为和内存使用的命令行工具。它提供了关于堆、GC 频率和区域使用的实时统计数据。使用以下命令监控堆使用：
+`jstat` 是一个用于监控 GC 行为和内存使用的命令行工具。它提供了关于堆、GC 频率和区域使用的实时统计数据。使用以下命令监控堆使用：
 
 ```
 jstat -gc <pid> 1000
@@ -7395,7 +6754,7 @@ jstat -gc <pid> 1000
 
 运行以下程序模拟 GC 活动：
 
-```
+```java
 public class JStatDemo {
     public static void main(String[] args) {
         for (int i = 0; i < 100000; i++) {
@@ -7421,18 +6780,18 @@ jstat -gc <pid> 1000
 
 观察 Eden 区和老年代使用情况在垃圾回收期间的变化。
 
-**jmap** 用于生成堆转储（heap dumps）并分析内存使用。使用以下命令捕捉运行进程的堆转储：
+`jmap` 用于生成堆转储（heap dumps）并分析内存使用。使用以下命令捕捉运行进程的堆转储：
 
 ```
 jmap -dump:live,format=b,file=heapdump.hprof <pid>
 ```
 
-1. `dump-live` 选项仅包含转储中的存活对象。
+1. `dump:live` 选项仅包含转储中的存活对象。
 2. 在 **Eclipse MAT**（内存分析工具）中打开生成的 `heapdump.hprof` 文件，以分析内存使用并识别内存泄漏。
 
 这是一个故意创建内存泄漏的程序：
 
-```
+```java
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7458,12 +6817,12 @@ public class JLeakDemo {
 java -Xms512m -Xmx512m -XX:+FlightRecorder -XX:StartRecording=filename=recording.jfr
 ```
 
-- 1. 记录保存到 `recording.jfr`。
-- 2. 使用 Java Mission Control 分析内存使用。
+1. 记录保存到 `recording.jfr`。
+2. 使用 Java Mission Control 分析内存使用。
 
 这是一个 JFR 示例程序：
 
-```
+```java
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7479,16 +6838,16 @@ public class JCMemo {
 }
 ```
 
-**jconsole** 是用于监控 JVM 应用程序的图形化工具。
+`jconsole` 是用于监控 JVM 应用程序的图形化工具。
 
-- 1. 附加到运行中的 Java 进程。
-- 2. 使用 **Monitor** 标签卡观察堆使用。
-- 3. 使用 **GC** 标签卡监控垃圾回收。
-- 4. 使用 **Threads** 标签卡分析线程活动。
+1. 附加到运行中的 Java 进程。
+2. 使用 **Monitor** 标签卡观察堆使用。
+3. 使用 **GC** 标签卡监控垃圾回收。
+4. 使用 **Threads** 标签卡分析线程活动。
 
 运行以下程序模拟 GC 活动：
 
-```
+```java
 public class JConsoleDemo {
     public static void main(String[] args) {
         List<byte[]> memoryLoad = new ArrayList<>();
@@ -7511,7 +6870,7 @@ public class JConsoleDemo {
 java -Xms512m -Xmx512m -XX:+UseG1GC JConsoleDemo
 ```
 
-### 2.10 案例研究与示例
+## 2.10 案例研究与示例
 
 ### MemoryCollection 中的内存泄漏
 
@@ -7536,8 +6895,6 @@ public class MemoryLeakCollection {
 }
 ```
 
-
-
 ```java
 import java.util.WeakHashMap;
 
@@ -7545,8 +6902,7 @@ public class FixedMemoryLeakCollection {
     public static void main(String[] args) {
         WeakHashMap<Integer, byte[]> cache = new WeakHashMap<>();
         for (int i = 0; i < 1000000; i++) {
-            cache.put(i, new byte[1024 * 100]); // Weak reference allows
-            GC
+            cache.put(i, new byte[1024 * 100]); // Weak reference allows GC
         }
         System.out.println("Fixed memory leak using WeakHashMap.");
     }
@@ -7570,8 +6926,8 @@ public class UnnecessaryObjectCreation {
 
 在此程序中：
 
-- 1. `new String("Constant String")` 创建了不必要的新对象。
-- 2. 使用字符串字面量可以避免创建重复对象。
+1. `new String("Constant String")` 创建了不必要的新对象。
+2. 使用字符串字面量可以避免创建重复对象。
 
 进行优化：
 
@@ -7590,7 +6946,7 @@ public class OptimizedObjectCreation {
 
 字符串字面量存储在字符串池中，防止了冗余对象的创建。
 
-在第三个示例中，由于短命对象过多导致了内存使用效率低下。通过 G1 GC 优化 GC行为可以解决性能问题。
+在第三个示例中，由于短命对象过多导致了内存使用效率低下。通过 G1 GC 优化 GC 行为可以解决性能问题。
 
 ```java
 import java.util.ArrayList;
@@ -7681,19 +7037,19 @@ public class HeapDumpMemoryLeak {
 java -Xms200m -Xmx200m HeapDumpMemoryLeak
 ```
 
-使用 `jmap` 工具捕堆转储：
+使用 `jmap` 工具捕获堆转储：
 
 ```
 jmap -dump:live,format=b,file=heapdump.hprof <pid>
 ```
 
-- 1. 将 `<pid>` 替换为运行应用程序的进程 ID。
-- 2. 在 Eclipse MAT（内存分析工具）中打开 `heapdump.hprof` 文件。
+1. 将 `<pid>` 替换为运行应用程序的进程 ID。
+2. 在 Eclipse MAT（内存分析工具）中打开 `heapdump.hprof` 文件。
 
 在 Eclipse MAT 中：
 
-- 1. 生成**泄漏嫌报告（Leak Suspects Report）**以识别消耗过多内存的对象。
-- 2. 使用**支配树（Dominator Tree）**追踪留存对象并定位泄漏的根源。
+1. 生成**泄漏嫌疑报告（Leak Suspects Report）**以识别消耗过多内存的对象。
+2. 使用**支配树（Dominator Tree）**追踪留存对象并定位泄漏的根源。
 
 要修复泄漏，请确保清除未使用的引用：
 
@@ -7702,6 +7058,8 @@ memoryLeak.clear();
 ```
 
 最后一个示例侧重于在高吞量应用中监控和分析 GC 性能。记录 GC 指标有助于识别由垃圾收集引起的延迟。
+
+
 
 ```java
 public class GCLoggingDemo {
@@ -7720,13 +7078,9 @@ public class GCLoggingDemo {
 java -Xms200m -Xmx200m -XX:+UseG1GC -XX:+PrintGCDetails GCLoggingDemo
 ```
 
+在这里，`Thread` 类在它的构造函数中接收一个 `Runnable` 对象，并在新线程中执行 `run()` 方法。
 
-
-
-
-在这里，**`Thread`** 类在它的构造函数中接收一个 **`Runnable`** 对象，并在新线程中执行 **`run()`** 方法。
-
-为了管理多个线程，Java 提供了同步机制来控制对共享资源的访问。**`synchronized`** 关键字确保同一时间只有一个线程可以执行某个代码块或方法。
+为了管理多个线程，Java 提供了同步机制来控制对共享资源的访问。`synchronized` 关键字确保同一时间只有一个线程可以执行某个代码块或方法。
 
 ```java
 // Example 1: Synchronization to prevent race conditions
@@ -7768,7 +7122,7 @@ public class SyncExample {
 
 在这个示例中，两个线程对共享计数器进行自增。如果没有 `synchronized`，线程可能会相互干扰，导致竞态条件。`synchronized` 关键字确保了互斥性，允许同一时间只有一个线程修改 `count`。
 
-**`volatile`** 关键字提供了一种确保线程可见性的轻量级替代。虽然它不提供互斥性，但 `volatile` 确保一个线程所做的更改对其他线程可见。
+`volatile` 关键字提供了一种确保线程可见性的轻量级替代。虽然它不提供互斥性，但 `volatile` 确保一个线程所做的更改对其他线程可见。
 
 ```java
 // Example 4: Using volatile for visibility
@@ -7800,9 +7154,9 @@ class VolatileTest {
 }
 ```
 
-在这里，**`volatile`** 关键字确保 **`running`** 变量始终从主内存中读取，防止线程缓存其值。
+在这里，`volatile` 关键字确保 `running` 变量始终从主内存中读取，防止线程缓存其值。
 
-对于更高级的并发控制，Java 提供了 **`java.util.concurrent`** 包。**`ExecutorService`** 通过抽象化线程池的创建和处理，简化了线程管理。
+对于更高级的并发控制，Java 提供了 `java.util.concurrent` 包。`ExecutorService` 通过抽象化线程池的创建和处理，简化了线程管理。
 
 ```java
 // Example 5: Using ExecutorService to manage threads
@@ -7826,11 +7180,11 @@ public class ExecutorExample {
 }
 ```
 
-在这个示例中，大小为 3 的固定线程池并发执行三个任务。**ExecutorService** 管理线程的生命周期，包括创建、复用和关闭。
+在这个示例中，大小为 3 的固定线程池并发执行三个任务。`ExecutorService` 管理线程的生命周期，包括创建、复用和关闭。
 
 在处理大量任务时，线程池对性能至关重要。反复创建新线程代价高昂，而线程池通过复用现有线程提供了帮助。
 
-并发控制也可以使用 **`ReentrantLock`** 等类来实现，它们提供了比 **`synchronized`** 更灵活的锁机制。
+并发控制也可以使用 `ReentrantLock` 等类来实现，它们提供了比 `synchronized` 更灵活的锁机制。
 
 ```java
 // Example 8: ReentrantLock
@@ -7879,16 +7233,13 @@ public class ReentrantLockTest {
 }
 ```
 
-
-
-
 在这里，`Thread` 构造函数接受一个 `Runnable` 对象，而 `start()` 方法会在新线程中执行 `run()` 方法。使用 `Runnable` 接口提供了灵活性，因为类可以在实现 `Runnable` 的同时继承其他类。
 
 线程在多个任务必须同时运行的场景中至关重要，例如在处理数据的同时处理用户输入，或者执行后台操作而不冻结主程序。例如，程序可以在单独线程中执行计算，同时主线程响应用户交互。
 
 线程的执行顺序由**线程调度器（Thread Scheduler）**决定，它使用优先级来决定哪个线程获得 CPU 时间。然而，线程调度不是确定性的。开发者应该避免依赖线程优先级来确保程序的正确性。
 
-```
+```java
 // Example 3: Creating multiple threads
 class MyTask implements Runnable {
     private String taskName;
@@ -7920,39 +7271,39 @@ public class MultiThreadExample {
 }
 ```
 
-在这个示例中，两个线程并发运行，执行 **`Task`** 逻辑。**`Thread.sleep()`** 方法会暂停线程执行指定的时间，允许其他线程运行。请记住，在使用**`sleep()`** 时必须处理 **`InterruptedException`**。
+在这个示例中，两个线程并发运行，执行 `Task` 逻辑。`Thread.sleep()` 方法会暂停线程执行指定的时间，允许其他线程运行。请记住，在使用 `sleep()` 时必须处理 `InterruptedException`。
 
 Java 线程还可以被分配名称，以便在调试期间更易识别。
 
-```
-1 // Example 4: Assigning thread names
-2 class NamedThread extends Thread {
-3     NamedThread(String name) {
-4         super(name); // Assign thread name
-5     }
-6 
-7     public void run() {
-8         System.out.println("Thread Name: " +
-9             Thread.currentThread().getName());
-10    }
-11 }
-12 
-13 public class NamedThreadExample {
-14     public static void main(String[] args) {
-15         NamedThread t1 = new NamedThread("Worker-1");
-16         NamedThread t2 = new NamedThread("Worker-2");
-17 
-18         t1.start();
-19         t2.start();
-20     }
-21 }
+```java
+// Example 4: Assigning thread names
+class NamedThread extends Thread {
+    NamedThread(String name) {
+        super(name); // Assign thread name
+    }
+ 
+    public void run() {
+        System.out.println("Thread Name: " +
+            Thread.currentThread().getName());
+   }
+}
+ 
+public class NamedThreadExample {
+    public static void main(String[] args) {
+        NamedThread t1 = new NamedThread("Worker-1");
+        NamedThread t2 = new NamedThread("Worker-2");
+ 
+        t1.start();
+        t2.start();
+    }
+}
 ```
 
-使用 `Thread` 类的构造函数可以分配线程名称。**`getName()`** 方法获取当前线程的名称。
+使用 `Thread` 类的构造函数可以分配线程名称。`getName()` 方法获取当前线程的名称。
 
-为了确保线程在继续之前完成其任务，使用了 **`join()`** 方法。这在线程依赖于彼此的结果时非常有用。
+为了确保线程在继续之前完成其任务，使用了 `join()` 方法。这在线程依赖于彼此的结果时非常有用。
 
-```
+```java
 // Example 5: Using join to ensure thread completion
 class Worker implements Runnable {
     private String task;
@@ -7989,11 +7340,11 @@ public class JoinExample {
 }
 ```
 
-在这里，`join()` 方法确保主线程等待 **t1** 和 **t2** 完成执行后才打印最终消息。这在必须合并或按顺序处理线程结果时特别有用。
+在这里，`join()` 方法确保主线程等待 `t1` 和 `t2` 完成执行后才打印最终消息。这在必须合并或按顺序处理线程结果时特别有用。
 
 Java 线程共享相同的内存空间，这使得它们是轻量级的，但需要对共享资源进行仔细处理。如果没有同步，多个线程修改共享变量可能会导致不一致的结果，这种现象被称为竞态条件（race conditions）。
 
-**Thread** 类还提供了如 **isAlive()** 等方法来检查线程是否仍在运行，以及 **interrupt()** 方法来中断睡眠或等待状态的线程。然而，中断线程应该谨慎进行，以避免留下未完成的任务。
+`Thread` 类还提供了如 `isAlive()` 等方法来检查线程是否仍在运行，以及 `interrupt()` 方法来中断睡眠或等待状态的线程。然而，中断线程应该谨慎进行，以避免留下未完成的任务。
 
 使用线程可以提高程序的性能和响应能力，特别是对于 CPU 密集型和 I/O 密集型任务。例如，在 GUI 应用程序中，后台线程可以在执行计算的同时保持界面的响应。
 
@@ -8004,14 +7355,13 @@ Java 线程共享相同的内存空间，这使得它们是轻量级的，但需
 线程是可以并发运行的轻量级执行单元。它们共享相同的内存空间，使得创建和管理非常高效。在 Java 中，线程允许程序同时执行多个任务，提高性能和响应能力。
 
 在 Java 中创建线程有两种主要方式：
+
 - 继承 `Thread` 类
 - 实现 `Runnable` 接口
 
 每个线程都有自己的执行堆栈，但它们共享堆内存。这种共享需要仔细的同步以避免竞态条件（即多个线程同时修改同一个变量）。
 
 线程对于需要并行和并发的现代应用程序是至关重要的。理解线程的创建、执行和管理是掌握 Java 并发模型的第一步。通过利用 `Runnable`、`Thread` 等工具以及 `sleep()`、`join()` 和 `start()` 等方法，开发者可以编写高效且响应快速的 Java 程序。
-
-
 
 
 
@@ -8041,7 +7391,7 @@ public class ThreadSleepExample {
 }
 ```
 
-在这个示例中，两个线程运行一个任务，每次迭代中都会睡眠 500 毫秒。**Thread.sleep()** 方法允许线程暂停执行，为其他线程提供运行的机会。
+在这个示例中，两个线程运行一个任务，每次迭代中都会睡眠 500 毫秒。`Thread.sleep()` 方法允许线程暂停执行，为其他线程提供运行的机会。
 
 线程可以显式命名，以便在调试或执行期间更容易识别它们。
 
@@ -8124,16 +7474,13 @@ class Main {
 
 线程对于在现代应用程序中实现并行执行至关重要。通过创建和管理线程，程序可以同时执行多个任务，提高响应能力资源利用率。无论是处理多个客户端连接、处理大型数据集还是执行后台操作，线程都能实现高效的并行化。正确理解线程的行为、如 `start()`、`sleep()` 和 `join()` 等方法，以及细致的资源管理，对于充分利用 Java 的威力至关重要。
 
-#### 3.1.2 - 单线程与多线程应用程序
+### 3.1.2 - 单线程与多线程应用程序
 
 单线程应用程序和多线程应用程序代表了两种不同的执行模型，决定了程序中任务执行的方式。在单线程应用程序中，任务使用单个执行线程按顺序一个接一个地执行。这种方式实现简单，但当需要同时执行多个任务时，可能会变得效率低下，特别是在 CPU 密集型或 I/O 密集型场景下。另一方面，多线程应用程序使用多个线程并发执行任务，能够更好地利用系统资源并提高响应能力。
 
 单线程应用程序在单个流中执行所有任务，在当前任务完成之前会阻塞后续进展。这可以通过一个按顺序执行两个任务的示例来说说明。
 
 ![](img/7d8ec1502785ce30da80)
-
-
-
 
 在这个单线程示例中，程序在开始读取 **file2.txt** 之前，会完全读取完 **file1.txt**。如果这些文件很大，程序可能会变得无响应。
 
@@ -8284,11 +7631,11 @@ public class MultiThreadGUI {
 
 这种设计促进了更好的代码复用性和模块化。
 
-高效地管理线程通常需要控制它们的行为。Java 在 **Thread** 类中提供了几种方法来管理线程，例如 **join()**、**sleep()** 和 **interrupt()**。**join()** 方法确保线程在程序继续之前完成其执行。
+高效地管理线程通常需要控制它们的行为。Java 在 `Thread` 类中提供了几种方法来管理线程，例如 `join()`、`sleep()` 和 `interrupt()`。`join()` 方法确保线程在程序继续之前完成其执行。
 
 ## 创建和管理线程
 
-创建线程的最直接方法是扩展 **Thread** 类。**run()** 方法是定义任务逻辑的地方。
+创建线程的最直接方法是扩展 `Thread` 类。`run()` 方法是定义任务逻辑的地方。
 
 ```java
 // Example 1: Creating a thread by extending Thread class
@@ -8308,7 +7655,9 @@ public class ThreadCreation {
 
 ## 使用 Runnable 接口
 
-创建线程更灵活的方法实现 **Runnable** 接口。这种方法将任务逻辑与线程管理解耦。
+创建线程更灵活的方法实现 `Runnable` 接口。这种方法将任务逻辑与线程管理解耦。
+
+
 
 ```java
 // Example 2: Creating a thread using the Runnable interface
@@ -8329,9 +7678,6 @@ public class RunnableThread {
     }
 }
 ```
-
-
-
 
 在这个示例中，`join()` 确保了 `thread1` 在 `thread2` 开始之前完成执行。主线程会等待两个线程都完成后再打印最终消息。
 
@@ -8367,7 +7713,7 @@ public class SleepExample {
 为了更健壮的线程管理，Java 提供了 `java.util.concurrent` 包，其中包含了 `ExecutorService` 框架。`ExecutorService` 简化了线程创建、任务提交和线程池的管理。
 
 ```java
- // Example 5: Managing threads using ExecutorService
+// Example 5: Managing threads using ExecutorService
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -8441,18 +7787,18 @@ public class CallableExample {
 }
 ```
 
-在这个示例中，两个任务使用 **`Callable`** 计算部分和，并使用 **`Future.get()`** 获取它们的结果。这演示了任务如何在多线程环境中返回值。
+在这个示例中，两个任务使用 `Callable` 计算部分和，并使用 `Future.get()` 获取它们的结果。这演示了任务如何在多线程环境中返回值。
 
-由于得益于内置的 API，在 Java 中创建和管理线程是高效且多功能的。**`Thread`** 类和 **`Runnable`** 接口允许基础的线程创建，而 **`ExecutorService`**、**`Callable`** 和 **`Future`** 则实现了更高级的线程管理和结果处理。通过有效使用这些工具，应用程序可以在多线程环境中获得更好的性能、响应性和扩展性。
+由于得益于内置的 API，在 Java 中创建和管理线程是高效且多功能的。`Thread` 类和 `Runnable` 接口允许基础的线程创建，而 `ExecutorService`、`Callable` 和 `Future` 则实现了更高级的线程管理和结果处理。通过有效使用这些工具，应用程序可以在多线程环境中获得更好的性能、响应性和扩展性。
 
-#### 3.2.1 Thread 类和 Runnable 接口
+### 3.2.1 Thread 类和 Runnable 接口
 
-Java 线程可以使用 **`Thread`** 类或 **`Runnable`** 接口来实现。这两种方法都提供了并发执行任务的灵活性，允许程序同时执行多个操作。**`Thread`** 类表示独立的执行线程，而 **`Runnable`** 接口将任务逻辑与线程创建解耦，使其成为更具通用性的选择。
+Java 线程可以使用 `Thread` 类或 `Runnable` 接口来实现。这两种方法都提供了并发执行任务的灵活性，允许程序同时执行多个操作。`Thread` 类表示独立的执行线程，而 `Runnable` 接口将任务逻辑与线程创建解耦，使其成为更具通用性的选择。
 
-使用 **`Thread`** 类创建线程，需要扩展该类并重写其 `run()` 方法。`run()` 方法包含了在新线程中执行的代码。
+使用 `Thread` 类创建线程，需要扩展该类并重写其 `run()` 方法。`run()` 方法包含了在新线程中执行的代码。
 
 ```java
- // Example 1: Creating a thread using Thread class
+// Example 1: Creating a thread using Thread class
 class MyThread extends Thread {
     public void run() {
         for (int i = 0; i < 5; i++) {
@@ -8479,10 +7825,10 @@ public class ThreadExample {
 
 在这个示例中，两个线程通过 `start()` 方法创建并启动。`Thread.sleep()` 调用模拟了延迟，允许其他线程执行。每个线程独立运行 `run()` 方法定义的逻辑。
 
-许多情况下使用 **`Runnable`** 接口创建线程是优的，因为 Java 不支持多继承。使用 `Runnable`，类可以在定义线程的同时扩展另一个类。
+许多情况下使用 `Runnable` 接口创建线程是优的，因为 Java 不支持多继承。使用 `Runnable`，类可以在定义线程的同时扩展另一个类。
 
 ```java
- // Example 2: Creating a thread using Runnable interface
+// Example 2: Creating a thread using Runnable interface
 class MyRunnable implements Runnable {
     public void run() {
         for (int i = 0; i < 5; i++) {
@@ -8509,11 +7855,9 @@ public class RunnableExample {
 }
 ```
 
-**`Runnable`** 实现实现了任务逻辑与线程管理的分离。将 `Runnable` 对象传递给 `Thread` 构造函数，并通过 `start()` 方法启动线程。
+`Runnable` 实现实现了任务逻辑与线程管理的分离。将 `Runnable` 对象传递给 `Thread` 构造函数，并通过 `start()` 方法启动线程。
 
 你还可以向线程传递参数以自定义其行为。通过在 `Runnable` 实现或扩展的 `Thread` 类中包含带参数构造函数，线程可以根据输入执行不同的任务。
-
-
 
 ```java
 // Example 3: Passing parameters to threads
@@ -8550,6 +7894,8 @@ public class ParameterizedThreadExample {
 在此示例中，`ParameterizedTask` 类接收一个消息作为输入，允许每个线程在执行时打印不同的消息。
 
 `Thread` 类提供了控制线程行为的方法。例如，`join()` 方法确保主线程在继续执行之前等待其他线程完成。这对于管理线程之间的依赖关系特别有用。
+
+
 
 ```java
 // Example 4: Using Join to control thread execution order
@@ -8598,7 +7944,7 @@ public class JoinExample {
 
 `Thread` 类和 `Runnable` 接口都是在 Java 中创建和管理线程的基础。`Thread` 类提供了一种通过扩展来创建线程的简单方法，而 `Runnable` 接口则通过将任务逻辑与线程创建分离，提供了更大的灵活性并促进了更好的设计。通过理解这些机制，开发者可以编写高效且可扩展的多线程应用程序，利用当前执行的力量。
 
-#### 3.2.2 - Executor 框架
+### 3.2.2 - Executor 框架
 
 Java 中的 Executor 框架是管理线程池和高效执行任务的强大工具。它提供了一个更高层次的 API 来处理线程，消除了手动管理线程创建和周期的需要。该框架是 `java.util.concurrent` 包的一部分，旨在为可扩展的应用程序简化并优化线程管理。
 
@@ -8703,10 +8049,6 @@ public class ScheduledThreadPoolExample {
 }
 ```
 
-
-
-
-
 此示例演示了如何使用定时线程池调度任务。一个任务会在延迟 3 秒后执行，另一个任务则每隔 2 秒定期运行一次。
 
 对于返回结果的任务，Executor 框架提供了 `Callable` 接口和 `Future` 对象。`Callable` 与 `Runnable` 相似，但它可以返回值并抛出异常。
@@ -8791,11 +8133,13 @@ public class CustomThreadPoolExample {
 
 Executor 框架通过抽象线程创建和生命周期管理简化了线程管理。它为不同的工作负载提供了灵活的选项，例如用于可预测负载的固定线程池、用于动态负载的缓存线程池以及用于周期性任务的定时线程池。通过使用 `ExecutorService`、`Callable`、`Future` 和 `ThreadPoolExecutor`，可以可以高性能应用程序实现可扩展、高效且健壮的线程管理。
 
-#### 3.3 - 线程生命周期与状态
+### 3.3 - 线程生命周期与状态
 
-在 Java 中，线程通过一个定义的生命周期，由多个状态组成：**NEW**、**RUNNABLE**、**BLOCKED**、**WAITING**、**TIMED_WAITING** 和 **TERMINATED**。理解这些状态对于有效管理线程行为至关重要。生命周期定义了线程如何创建、启动、执行、暂停并最终终止。每个状态代表线程的当前活动或条件。
+在 Java 中，线程通过一个定义的生命周期，由多个状态组成：`NEW`、`RUNNABLE`、`BLOCKED`、`WAITING`、`TIMED_WAITING` 和 `TERMINATED`。理解这些状态对于有效管理线程行为至关重要。生命周期定义了线程如何创建、启动、执行、暂停并最终终止。每个状态代表线程的当前活动或条件。
 
-线程在创建但尚未启动时处于 **NEW** 状态。一旦调用 `start()` 方法，线程就会移动到 **RUNNABLE** 状态，此时它准备好执行，但取决于线程调度器，可能不会立即运行。让我们来看基础线程生命周期的示例。
+线程在创建但尚未启动时处于 `NEW` 状态。一旦调用 `start()` 方法，线程就会移动到 `RUNNABLE` 状态，此时它准备好执行，但取决于线程调度器，可能不会立即运行。让我们来看基础线程生命周期的示例。
+
+
 
 ```java
 // Example 1: Basic thread lifecycle
@@ -8833,9 +8177,9 @@ public class BasicThreadLifecycle {
 }
 ```
 
-线程在创建但尚未启动时处于 **NEW** 状态。一旦调用 `start()` 方法，线程就会移动到 **RUNNABLE** 状态，此时它准备好执行，但取决于线程调度器，可能不会立即运行。在此示例中，你可以观察线程在不同状态之间的转换，从 **NEW** 变为 **RUNNABLE**，最后变为 **TERMINATED**。`getState()` 方法用于监控线程的当前状态。
+线程在创建但尚未启动时处于 `NEW` 状态。一旦调用 `start()` 方法，线程就会移动到 `RUNNABLE` 状态，此时它准备好执行，但取决于线程调度器，可能不会立即运行。在此示例中，你可以观察线程在不同状态之间的转换，从 `NEW` 变为 `RUNNABLE`，最后变为 `TERMINATED`。`getState()` 方法用于监控线程的当前状态。
 
-当线程尝试访问被另一个线程锁定的同步资源时，它会进入 **BLOCKED** 状态。以下示例演示了当线程尝试获取同一个锁时的情况。
+当线程尝试访问被另一个线程锁定的同步资源时，它会进入 `BLOCKED` 状态。以下示例演示了当线程尝试获取同一个锁时的情况。
 
 ```java
 // Example 2: Thread BLOCKED
@@ -8868,7 +8212,7 @@ public class BlockedStateExample {
 }
 ```
 
-线程在等待另一个线程发出信号时会进入 **WAITING** 状态。这通常通过 `wait()`、`notify()` 或 `join()` 方法来实现。以下示例使用 `wait()` 和 `notify()` 进行演示。
+线程在等待另一个线程发出信号时会进入 `WAITING` 状态。这通常通过 `wait()`、`notify()` 或 `join()` 方法来实现。以下示例使用 `wait()` 和 `notify()` 进行演示。
 
 ```java
 // Example 3: Thread entering WAITING state
@@ -8908,36 +8252,29 @@ class WaitingStateExample {
 }
 ```
 
+在本示例中，`Thread-1` 调用了 `wait()` 并进入 `WAITING` 状态。`Thread-2` 调用了 `notify()` 来唤醒 `Thread-1`，使其能够继续执行。
 
-
-
-在本示例中，**Thread-1** 调用了 **`wait()`** 并进入 **WAITING** 状态。**Thread-2** 调用了 **`notify()`** 来唤醒 **Thread-1**，使其能够继续执行。
-
-当线程等待指定的时间时，它会进入 **TIMED_WAITING** 状态。诸如 **`Thread.sleep()`**、带有超时的 **`join()`** 以及带有超时的 **`wait()`** 方法都会导致线程进入此状态。
+当线程等待指定的时间时，它会进入 `TIMED_WAITING` 状态。诸如 `Thread.sleep()`、带有超时的 `join()` 以及带有超时的 `wait()` 方法都会导致线程进入此状态。
 
 ```java
 // Example 4: Thread entering TIMED_WAITING state
 public class ThreadWaitingExample {
   public static void main(String[] args) {
     Thread t1 = new Thread(() -> {
-      System.out.println(Thread.currentThread().getName() + " is
-      sleeping.");
+      System.out.println(Thread.currentThread().getName() + " is sleeping.");
       try {
         Thread.sleep(2000); // Thread enters TIMED_WAITING state
       } catch (InterruptedException e) {
-        System.out.println(Thread.currentThread().getName() + " has
-        was interrupted.");
+        System.out.println(Thread.currentThread().getName() + " has was interrupted.");
       }
-      System.out.println(Thread.currentThread().getName() + " has
-      finished sleeping.");
+      System.out.println(Thread.currentThread().getName() + " has finished sleeping.");
     }, "Thread-1");
     
     t1.start();
     
     try {
       Thread.sleep(500); // Allow Thread-1 to start sleeping
-      System.out.println("State of Thread-1: " + t1.getState()); //
-      TIMED_WAITING
+      System.out.println("State of Thread-1: " + t1.getState()); // TIMED_WAITING
     } catch (InterruptedException e) {
       e.printTrace();
     }
@@ -8945,9 +8282,9 @@ public class ThreadWaitingExample {
 }
 ```
 
-在本示例中，**Thread-1** 在睡眠 2 秒后进入了 **TIMED_WAITING** 状态。`getState()` 方法确认了它在睡眠期间的 。
+在本示例中，`Thread-1` 在睡眠 2 秒后进入了 `TIMED_WAITING` 状态。`getState()` 方法确认了它在睡眠期间的状态。
 
-一旦线程完成执行或被显式停止，它就会移动到 **TERMINATED** 状态。这是线程的终极状态，表示它不再能够执行任何任务。
+一旦线程完成执行或被显式停止，它就会移动到 `TERMINATED` 状态。这是线程的终极状态，表示它不再能够执行任何任务。
 
 ```java
 // Example 5: Thread in TERMINATED state
@@ -8976,17 +8313,17 @@ class TerminatedStateExample {
 }
 ```
 
-在本示例中，线程在完成执行后移动到了 **TERMINATED** 状态。
+在本示例中，线程在完成执行后移动到了 `TERMINATED` 状态。
 
-线程的生命周期及其状态是有效管理线程的关键概念。线程根据其活动以及与其他线程的交互，在 **NEW**、**RUNNABLE**、**BLOCKED**、**WAITING**、**TIMED_WAITING** 和 **TERMINATED** 状态之间切换。通过理解这些状态并使用 `wait()`、`notify()`、`join()` 和 `sleep()` 等方法，开发者可以控制线程行为并设计高效、线程安全的应用程序。
+线程的生命周期及其状态是有效管理线程的关键概念。线程根据其活动以及与其他线程的交互，在 `NEW`、`RUNNABLE`、`BLOCKED`、`WAITING`、`TIMED_WAITING` 和 `TERMINATED` 状态之间切换。通过理解这些状态并使用 `wait()`、`notify()`、`join()` 和 `sleep()` 等方法，开发者可以控制线程行为并设计高效、线程安全的应用程序。
 
-#### 3.4 - 线程同步
+### 3.4 - 线程同步
 
 Java 中的线程同步对于在多个线程访问共享资源时避免竞态条件并确保数据一致性至关重要。当两个或多个线程尝试同时修改同一个资源时，就会发生竞态条件，导致不可预测的结果。Java 提供了几种同步机制，例如 `synchronized` 关键字、锁（locks）和并发工具，以有效地处理这些场景。
 
 `synchronized` 关键字是确保一次只有一个线程执行代码临界区域的最简单方法。它可以应用于方法或代码块。
 
-``````java
+```java
 // Example 1: Synchronizing method to avoid race conditions
 class Counter {
   private int count = 0;
@@ -9062,6 +8399,8 @@ public class SynchronizedBlockExample {
 
 Java 提供了使用 `ReentrantLock` 类的另一种同步机制。与 `synchronized` 不同，`ReentrantLock` 提供了更大的灵活性，例如在不阻塞等待锁的情况下尝试获取锁。
 
+
+
 ```java
 // Example 3: Using ReentrantLock for synchronization
 import java.util.concurrent.locks.ReentrantLock;
@@ -9117,7 +8456,6 @@ public class ReentrantLockExample {
 
 Java 还提供了 `java.util.concurrent` 包，其中包含 `ConcurrentHashMap` 和 `CopyOnWriteArrayList` 等类，用于处理并发修改。这些类在内部管理同步，简化了对共享集合的线程安全访问。
 
-
 ```java
 // Example 5: Using ConcurrentHashMap for thread-safe operations
 import java.util.concurrent.ConcurrentHashMap;
@@ -9147,17 +8485,17 @@ public class ConcurrentHashMapExample {
 }
 ```
 
-在这个示例中，**`ConcurrentHashMap`** 确保了对 map 的线程访问，允许多个线程在无需显式同步的情况下对其进行更新。
+在这个示例中，`ConcurrentHashMap` 确保了对 map 的线程访问，允许多个线程在无需显式同步的情况下对其进行更新。
 
-同步对于在多线程应用程序中维护数据一致性和避免竞态条件至关重要。**`synchronized`** 关键字和 **`ReentrantLock`** 是管理共享资源访问的有效工具。高级技术（例如使用 **`Lock`** 防止死锁以及利用 `ConcurrentHashMap` 等并发工具类）可以实现高效且安全的线程同步。通过适当应用这些机制，开发者可以构建健壮且可扩展应用程序。
+同步对于在多线程应用程序中维护数据一致性和避免竞态条件至关重要。`synchronized` 关键字和 `ReentrantLock` 是管理共享资源访问的有效工具。高级技术（例如使用 `Lock` 防止死锁以及利用 `ConcurrentHashMap` 等并发工具类）可以实现高效且安全的线程同步。通过适当应用这些机制，开发者可以构建健壮且可扩展应用程序。
 
-##### 3.4.1 - 同步块与方法 (Synchronized Blocks and Methods)
+### 3.4.1 - 同步块与方法 (Synchronized Blocks and Methods)
 
 在多线程 Java 应用中，对共享资源进行适当控制对于避免竞态条件和确保数据一致性至关重要。Java 中的 `synchronized` 关键字允许你控制线程对代码关键区域的访问，确保一次只有一个线程可以执行某个块或方法。可以使用同步**方法**（methods）或同步**块**（blocks）来实现同步，选择取决于代码的哪些部分需要保护。
 
 同步**方法**确保整个方法被锁定，因此一次只有一个线程可以执行它。当一个方法被声明为 `synchronized` 时，线程为非静态方法获取对象锁，或为静态方法获取类锁。线程将持有该锁，直到方法执行完毕。
 
-这里是一个同步方法的示例示例：
+这里是一个同步方法的示例：
 
 ```java
 class SharedResource {
@@ -9190,11 +8528,11 @@ public class SynchronizedMethodExample {
 
 在这个示例中：
 
-- 1. `increment()` 方法被标记为 `synchronized`，这确保一次只有一个线程可以执行它。
-- 2. 当两个线程（`Thread-1` 和 `Thread-2`）并发访问该方法时，`synchronized` 关键字防止了竞态条件。
-- 3. 每个线程在互不干扰的情况下增加共享变量 `count`，确保了输出的一致性。
+1. `increment()` 方法被标记为 `synchronized`，这确保一次只有一个线程可以执行它。
+2. 当两个线程（`Thread-1` 和 `Thread-2`）并发访问该方法时，`synchronized` 关键字防止了竞态条件。
+3. 每个线程在互不干扰的情况下增加共享变量 `count`，确保了输出的一致性。
 
-另一方面，同步**块**（block）提供了更细粒度的控制。你不需要锁定整个方法，而是可以锁定代码的关键区域。当仅在方法的一小部分需要同步时，这了性能。
+另一方面，同步**块**（block）提供了更细粒度的控制。你不需要锁定整个方法，而是可以锁定代码的关键区域。当仅在方法的一小部分需要同步时，这提高了性能。
 
 这里是一个同步块的示例：
 
@@ -9232,9 +8570,9 @@ public class SynchronizedBlockExample {
 
 在这个示例中：
 
-- 1. `synchronized` 块仅锁定修改共享变量 `count` 的关键区域。
-- 2. `lock` 对象作为同步监控器。任何进入 `synchronized` 块的线程必须获取该对象的锁。
-- 3. 这种方法提高了性能，因为方法的其余部分可以在没有同步的情况下执行。
+1. `synchronized` 块仅锁定修改共享变量 `count` 的关键区域。
+2. `lock` 对象作为同步监控器。任何进入 `synchronized` 块的线程必须获取该对象的锁。
+3. 这种方法提高了性能，因为方法的其余部分可以在没有同步的情况下执行。
 
 同步块的另一个关键用例是保护静态方法中的共享资源。在静态方法中，同步必须应用于 `Class` 对象而不是实例。
 
@@ -9300,23 +8638,19 @@ public class SynchronizedStaticBlockExample {
 
 在这个版本中：
 
-- 1. `synchronized` 块使用 `SharedResource.class` 作为监控器，以确保静态方法的线程安全。
-- 2. 尽管多个线程并发运行，但一次只有一个线程可以执行关键区域。
-
-
-
-
+1. `synchronized` 块使用 `SharedResource.class` 作为监控器，以确保静态方法的线程安全。
+2. 尽管多个线程并发运行，但一次只有一个线程可以执行关键区域。
 
 在本示例中：
 
-- 1. 两个独立的计数器 `count1` 和 `count2` 被各自的锁（`lock1` 和 `lock2`）保护。
-- 2. 线程可以并发地增加这两个计数器，而互不干扰，从而提高了整体性能。
+1. 两个独立的计数器 `count1` 和 `count2` 被各自的锁（`lock1` 和 `lock2`）保护。
+2. 线程可以并发地增加这两个计数器，而互不干扰，从而提高了整体性能。
 
 使用 `synchronized` 块和方法是控制线程访问共享资源的一种简单且有效的方法。`synchronized` 方法提供了一种保护整个方法的简单机制，而 `synchronized` 块则通过只锁定代码的必要部分提供了更细粒度的控制。这有助于减少竞争并提高系统性能。
 
 在 `synchronized` 方法和块之间做出选择时，请考虑同步的范围。如果整个方法都需要同步，使用 `synchronized` 方法更为直接。然而，如果只需要方法的部分需要同步，`synchronized` 块会更高效。通过理解使用同步的不同方式，开发者可以编写健壮且线程安全的代码，确保在多线程环境中的行为一致。
 
-##### 3.4.2 - 锁与 ReentrantLocks
+### 3.4.2 - 锁与 ReentrantLocks
 
 在多线程 Java 应用中，虽然 `synchronized` 关键字提供了基本的锁定能力，但在某些高级场景下，它可能过于限制或不足。Java 的 `java.util.concurrent.locks` 包提供了更灵活、更强大的锁定机制，其中 `ReentrantLock` 是最广泛使用的类之一。`ReentrantLock` 让开发者对锁的获取和释放拥有显式控制，并具备高级特性，如公平策略、带超时的锁以及可中断的锁。
 
@@ -9359,10 +8693,12 @@ class BasicExample {
 
 在本示例中：
 
-- 1. `ReentrantLock` 实例 `lock` 被用于控制对 `increment()` 方法的访问。
-- 2. `lock.lock()` 获取锁，确保了互斥。
-- 3. `lock.unlock()` 在 `finally` 块中释放锁，以保证即使发生异常，锁也会被释放。
-- 4. 两个线程都安全地增加共享变量 `count`，而不会产生竞态条件。
+1. `ReentrantLock` 实例 `lock` 被用于控制对 `increment()` 方法的访问。
+2. `lock.lock()` 获取锁，确保了互斥。
+3. `lock.unlock()` 在 `finally` 块中释放锁，以保证即使发生异常，锁也会被释放。
+4. 两个线程都安全地增加共享变量 `count`，而不会产生竞态条件。
+
+
 
 `ReentrantLock` 还支持公平策略，该策略可以确保等待时间最长的线程先获取锁。这对于公平性要求优于吞吐量的应用非常有用。
 
@@ -9407,9 +8743,9 @@ public class FairReentrantLockExample {
 
 在本示例中：
 
-- 1. 带有公平参数（`true`）的 `ReentrantLock` 确保线程按公平的顺序获取锁。
-- 2. 等待最长的线程将先获得锁，防止饥饿。
-- 3. 当多个线程竞争锁时，可以观察到这种行为。
+1. 带有公平参数（`true`）的 `ReentrantLock` 确保线程按公平的顺序获取锁。
+2. 等待最长的线程将先获得锁，防止饥饿。
+3. 当多个线程竞争锁时，可以观察到这种行为。
 
 `ReentrantLock` 还支持使用 `tryLock()` 进行非阻塞锁获取。该方法允许线程尝试获取锁，如果失败则立即返回，而不会无限期阻塞。
 
@@ -9457,9 +8793,9 @@ public class TryLockExample {
 
 在本示例中：
 
-- 1. `lock.tryLock()` 尝试在非阻塞的情况下获取锁。
-- 2. 如果锁不可用，线程将继续执行而不等待。
-- 3. 这种方法适用于等待锁不可接受的情况。
+1. `lock.tryLock()` 尝试在非阻塞的情况下获取锁。
+2. 如果锁不可用，线程将继续执行而不等待。
+3. 这种方法适用于等待锁不可接受的情况。
 
 对于需要超时处理的情况，`tryLock()` 还可以指定最大等待时间。这有助于在无法获取锁时避免无限期阻塞。
 
@@ -9469,9 +8805,9 @@ public class TryLockExample {
 
 在本示例中：
 
-- 1. `lock.tryLock(500, TimeUnit.MILLISECONDS)` 等待 500 毫秒以获取锁。
-- 2. 如果在超时未获取锁，线程将继续执行。
-- 3. 中断通过 `InterruptedException` 进行显式处理。
+1. `lock.tryLock(500, TimeUnit.MILLISECONDS)` 等待 500 毫秒以获取锁。
+2. 如果在超时未获取锁，线程将继续执行。
+3. 中断通过 `InterruptedException` 进行显式处理。
 
 `ReentrantLock` 还通过 `lockInterruptibly()` 支持可中断锁。这允许一个线程中断另一个等待锁的线程。
 
@@ -9519,18 +8855,15 @@ public class LockInterruptiblyExample {
 }
 ```
 
-
-
-
 在本例中：
 
-- 1. `lockInterruptibly()` 允许线程在等待锁时可以被中断。
-- 2. 如果线程被中断，则会抛出 `InterruptedException`，线程可以停止等待锁。
-- 3. 这对于必须避免长时间等待的应用非常有用。
+1. `lockInterruptibly()` 允许线程在等待锁时可以被中断。
+2. 如果线程被中断，则会抛出 `InterruptedException`，线程可以停止等待锁。
+3. 这对于必须避免长时间等待的应用非常有用。
 
 `ReentrantLock` 为内建锁（`synchronized`）提供了一个灵活的替代方案，并具有公平性、非阻塞锁、超时机制和可中断锁等高级功能。在 `ReentrantLock` 和 `synchronized` 之间进行选择取决于应用的复杂性。对于简单的场景，`synchronized` 就足够了，而 `ReentrantLock` 则更适用于需要精确控制和高级锁行为的应用程序。通过有效使用 `ReentrantLock`，开发者可以提高多线程系统的性能和可扩展性。
 
-#### 3.5 - 线程间通信
+### 3.5 - 线程间通信
 
 Java 中的线程间通信指的是多个线程之间的协调，以便它们能够共享资源、交换数据并高效协作工作。Java 提供了几种线程通信机制，例如 `wait()`、`notify()`、`notifyAll()` 以及来自 `java.util.concurrent` 包的高级并发工具。
 
@@ -9576,18 +8909,11 @@ class WaitNotify {
 }
 ```
 
-```java
-49 producer.start();
-50 consumer.start();
-51 }
-52 }
-```
-
 在本例中：
 
-- 1. `produce()` 方法产生数据并将 `hasData` 设置为 `true`。如果数据已经存在，它将等待直到消费者将其消费。
-- 2. `consume()` 方法消费数据并将 `hasData` 设置为 `false`。如果没有数据，它将等待直到生产者产生新数据。
-- 3. `notify()` 唤醒等待的线程，确保生产者和消费者之间的流畅通信。
+1. `produce()` 方法产生数据并将 `hasData` 设置为 `true`。如果数据已经存在，它将等待直到消费者将其消费。
+2. `consume()` 方法消费数据并将 `hasData` 设置为 `false`。如果没有数据，它将等待直到生产者产生新数据。
+3. `notify()` 唤醒等待的线程，确保生产者和消费者之间的流畅通信。
 
 `wait()`、`notify()` 和 `notifyAll()` 方法提供了基本的线程间通信，但需要对共享状态和条件进行仔细处理。更健壮的方法是使用 `java.util.concurrent` 工具，例如 `BlockingQueue`。
 
@@ -9631,12 +8957,14 @@ public class BlockingQueueExample {
 
 在本例中：
 
-- 1. 使用大小为 5 的 `BlockingQueue` 用于线程间的通信。
-- 2. `put()` 方法在队列满时会阻塞生产者，确保数据不溢出。
-- 3. `take()` 方法在队列为空时会阻塞消费者，确保数据不下溢。
-- 4. 这种方法消除了手动同步的需求，并使代码更简洁。
+1. 使用大小为 5 的 `BlockingQueue` 用于线程间的通信。
+2. `put()` 方法在队列满时会阻塞生产者，确保数据不溢出。
+3. `take()` 方法在队列为空时会阻塞消费者，确保数据不下溢。
+4. 这种方法消除了手动同步的需求，并使代码更简洁。
 
 对于高级的线程间通信，`ReentrantLock` 中的 `Condition` 类提供了对等待的更细粒控制。这是一个使用 `Condition` 处理生产者-消费者场景的示例：
+
+
 
 ```java
 import java.util.concurrent.locks.Condition;
@@ -9711,10 +9039,10 @@ public class ConditionExample {
 
 在本例中：
 
-- 1. `ReentrantLock` 为同步提供了显式的锁。
-- 2. `Condition` 允许线程等待并信号特定的条件。
-- 3. `await()` 暂停线程直到被另一个线程信号。
-- 4. `signal()` 唤醒一个等待的线程，确保通信正常。
+1. `ReentrantLock` 为同步提供了显式的锁。
+2. `Condition` 允许线程等待并信号特定的条件。
+3. `await()` 暂停线程直到被另一个线程信号。
+4. `signal()` 唤醒一个等待的线程，确保通信正常。
 
 另一种线程通信的方法涉及 `CountDownLatch`，它允许一个或多个线程等待特定数量的操作完成。
 
@@ -9760,19 +9088,16 @@ public class CountDownLatchExample {
 }
 ```
 
-
-
-
 在本示例中：
 
-- 1. 初始化一个计数次数为 `3` 的 `CountDownLatch`。
-- 2. 每个工作线程在完成任务后调用 `countDown()`。
-- 3. 协调线程使用 `await()` 等待，直到锁计数达到零。
-- 4. 一旦所有工作线程完成，协调线程将继续执行。
+1. 初始化一个计数次数为 `3` 的 `CountDownLatch`。
+2. 每个工作线程在完成任务后调用 `countDown()`。
+3. 协调线程使用 `await()` 等待，直到锁计数达到零。
+4. 一旦所有工作线程完成，协调线程将继续执行。
 
 通过使用 `wait()/notify()`、`BlockingQueue`、`Condition` 和 `CountDownLatch()` 等技术，开发者可以实现健壮的线程间通信机制。这些工具确保线程能够有效协作协调其活动，同时避免竞态条件、死锁和低效率问题。选择合适的通信策略取决于应用程序的具体需求以及所需的控制粒级。
 
-##### 3.5.1 - wait(), notify(), and notifyAll
+### 3.5.1 - wait(), notify(), and notifyAll
 
 `wait()`、`notify()` 和 `notifyAll()` 方法是 Java 线程间通信的核心组件。这些方法属于 `Object` 类，用于同步线程并实现生产者与消费者之间、或共享共同资源的线程之间的协作。它们在防止竞态条件和实现线程的有序执行方面特别有用。这些方法必须在 `synchronized` 代码块或方法中使用，因为它们依赖于对象的内置锁。
 
@@ -9835,9 +9160,9 @@ class WaitNotifyExample {
 
 在本示例中：
 
-- 1. 生产者线程生产数据并将 `hasData` 设置为 `true`。如果数据已经可用，它会调用 `wait()` 暂停。
-- 2. 消费者线程消耗数据并将 `hasData` 设置为 `false`。如果没有数据，它会调用 `wait()` 暂停。
-- 3. 当状态改变时，使用 `notify()` 唤醒另一个线程。
+1. 生产者线程生产数据并将 `hasData` 设置为 `true`。如果数据已经可用，它会调用 `wait()` 暂停。
+2. 消费者线程消耗数据并将 `hasData` 设置为 `false`。如果没有数据，它会调用 `wait()` 暂停。
+3. 当状态改变时，使用 `notify()` 唤醒另一个线程。
 
 这种方法确保了线程之间的有序通信，而不会浪费 CPU 周期。
 
@@ -9904,11 +9229,13 @@ public class NotifyAllExample {
 
 在本示例中：
 
-- 1. 生产者线程生产数据并使用 `notifyAll()` 通知所有等待的线程。
-- 2. 多个消费者线程（Consumer-1 和 Consumer-2）竞争数据。
-- 3. 只有一个线程在重新获取锁后可以继续。
+1. 生产者线程生产数据并使用 `notifyAll()` 通知所有等待的线程。
+2. 多个消费者线程（Consumer-1 和 Consumer-2）竞争数据。
+3. 只有一个线程在重新获取锁后可以继续。
 
 `wait()` 方法也可以接受一个超时值，指定线程应该等待的最长时间。这里是使用 `wait(timeout)` 的示例：
+
+
 
 ```java
 class SharedResource {
@@ -9968,9 +9295,9 @@ public class WaitTimeoutExample {
 
 在本示例中：
 
-- 1. `wait(1000)` 导致线程等待 1 秒。
-- 2. 如果在此期间没有发生 `notify()`，线程会自动唤醒并再次检查条件。
-- 3. 这防止了线程无限等待。
+1. `wait(1000)` 导致线程等待 1 秒。
+2. 如果在此期间没有发生 `notify()`，线程会自动唤醒并再次检查条件。
+3. 这防止了线程无限等待。
 
 `wait()` 方法如果被另一个线程调用 `interrupt()` 则中断。这在需要动态停止或恢复线程的应用程序中特别有用。
 
@@ -10007,19 +9334,15 @@ public class InterruptExample {
 }
 ```
 
-
-
-
-
 在本示例中：
 
-- 1. `Worker-1` 线程调用 `wait()` 并暂停。
-- 2. 1 秒后，主线程使用 `interrupt()` 中断 `Worker-1`。
-- 3. 线程唤醒，并抛出一个 `InterruptedException`。
+1. `Worker-1` 线程调用 `wait()` 并暂停。
+2. 1 秒后，主线程使用 `interrupt()` 中断 `Worker-1`。
+3. 线程唤醒，并抛出一个 `InterruptedException`。
 
 `wait()`、`notify()` 和 `notifyAll()` 方法为 Java 中的线程间通信提供了基础。虽然这些方法非常强大，但它们需要对条件和同步进行细致管理，以避免竞态条件、丢失通知或死锁等问题。通过有效使用这些方法，线程可以在共享资源场景下高效、安全地协调操作。
 
-#### 3.6 - 线程安全的集合与并发工具
+### 3.6 - 线程安全的集合与并发工具
 
 Java 中的线程安全集合和并发工具允许开发者构建健壮、可扩展且高效的多线程应用程序。与 `java.util` 包中非线程安全的传统集合不同，线程安全的集合确保了在多个线程访问或修改相同数据时具有行为的一致性。Java 的 `java.util.concurrent` 包提供了优化的线程安全数据结构和工具，能够最大限度地减少竞争并提高并发下的性能。
 
@@ -10061,9 +9384,9 @@ public class SynchronizedListExample {
 
 在本示例中：
 
-- 1. `Collections.synchronizedList` 包装了一个 `ArrayList` 以使其变为线程安全。
-- 2. 多线程可以安全地向列表添加元素，而不会导致数据损坏。
-- 3. 虽然列表是同步的，但单个操作仍保持原子性，而复合操作（如迭代）需要额外的同步。
+1. `Collections.synchronizedList` 包装了一个 `ArrayList` 以使其变为线程安全。
+2. 多线程可以安全地向列表添加元素，而不会导致数据损坏。
+3. 虽然列表是同步的，但单个操作仍保持原子性，而复合操作（如迭代）需要额外的同步。
 
 Java 在 `java.util.concurrent` 包提供了更高效的线程安全集合，例如 `CopyOnWriteArrayList`。这种列表在读操作远多于写操作的场景特别有用。
 
@@ -10104,9 +9427,9 @@ public class CopyOnWriteArrayListExample {
 
 在本示例中：
 
-- 1. `CopyOnWriteArrayList` 每次进行修改（添加/删除操作）时都会创建一个列表的新副本。
-- 2. 它非常适合频繁读取和偶尔写入的场景。
-- 3. 对此列表进行迭代不需要外部同步。
+1. `CopyOnWriteArrayList` 每次进行修改（添加/删除操作）时都会创建一个列表的新副本。
+2. 它非常适合频繁读取和偶尔写入的场景。
+3. 对此列表进行迭代不需要外部同步。
 
 `ConcurrentHashMap` 是一种高度高效的线程安全 `Map` 实现，专为并发访问设计。与 `HashTable` 不同，它将 map 分为多个段（segments），允许多个线程并发地操作不同部分。
 
@@ -10154,8 +9477,8 @@ public class ConcurrentHashMapExample {
 
 在本示例中：
 
-- 1. `ConcurrentHashMap` 允许多个线程并发修改 map。
-- 2. 与 `HashTable` 不同，它通过对段使用细粒度锁，在重竞争下提供了更好的性能。
+1. `ConcurrentHashMap` 允许多个线程并发修改 map。
+2. 与 `HashTable` 不同，它通过对段使用细粒度锁，在重竞争下提供了更好的性能。
 
 另一个有用的并发工具是 `BlockingQueue`，它是 `java.util.concurrent` 的一部分。它通过在队列满或为空时阻塞，允许生产者和消费者线程之间的安全通信。
 
@@ -10199,13 +9522,15 @@ public class BlockingQueueExample {
 
 在本示例中：
 
-- 1. `ArrayBlockingQueue` 初始化容量为 3。
-- 2. 队列满时生产者线程阻塞，队列空时消费者线程阻塞。
-- 3. 这确保了不需要显式同步即可进行顺畅通信。
+1. `ArrayBlockingQueue` 初始化容量为 3。
+2. 队列满时生产者线程阻塞，队列空时消费者线程阻塞。
+3. 这确保了不需要显式同步即可进行顺畅通信。
 
 `ConcurrentSkipMap` 是一种允许访问的线程安全的排序 map。当你需要具有预测顺序的线程安全 map 时，它特别有用。
 
 以下是一个使用 `ConcurrentSkipMap` 的示例：
+
+
 
 ```java
 import java.util.concurrent.ConcurrentSkipListMap;
@@ -10244,10 +9569,6 @@ public class ConcurrentExample {
 }
 ```
 
-
-
-
-
 在此示例中：`ConcurrentSkipListMap` 是 `Map` 的线程安全且排序的版本。
 
 - 1. `ConcurrentSkipListMap` 按照其自然顺序维护（也可以提供自定义的比较器）。
@@ -10256,7 +9577,7 @@ public class ConcurrentExample {
 
 Java 中的线程安全集合和并发工具为多线程应用程序中的共享资源管理提供了优化工具。虽然 `Collections` 提供的同步包装可以满足基本需求，但 `java.util.concurrent` 中的工具（如 `CopyOnWriteArrayList`、`ConcurrentHashMap`、`BlockingQueue` 和 `ConcurrentSkipListMap`）提供了更好的扩展性和性能。选择合适的工具取决于具体场景，例如读多型、写多型或生产者-消费者场景。这些工具允许开发者为高性能应用程序编写整洁、高效且线程安全的代码。
 
-#### 3.7 - 并发问题与解决方案
+## 3.7 - 并发问题与解决方案
 
 Java 中的并发可能会导致许多常见问题，例如：竞态条件、死锁、可见性问题和线程饥饿。当多个线程在没有适当同步或协调的情况下访问共享资源时，就会发生这些问题。理解这些问题及其解决方案对于构建扩展且线程安全的应用程序至关重要。
 
@@ -10458,7 +9779,6 @@ public class FairLockExample {
 }
 ```
 
-
 在这种情况下：
 
 - 1. 两个线程都持续让出执行权并重试相同的条件。
@@ -10466,9 +9786,9 @@ public class FairLockExample {
 
 通过理解竞态条件、死锁、可见性问题、线程饥饿和活锁，开发者可以编写出更好的并发应用程序。同步机制、原子类、公平锁和 `volatile` 关键字有助于有效解决这些问题，确保多线程环境下的性能和可靠性。
 
-##### 3.7.1 - 死锁
+### 3.7.1 - 死锁
 
-在多线程程序中，当两个或多个线程无限地等待对方释放资源时，就会发生死锁。这种情况通常发生在以不一致的顺序获取多个锁时，导致线程之间产生循环依赖。死锁会降低应用程序性能，并且调试起来极具挑战性。理解死锁并应用预防技术可以确保多线程应用程序保持响应响应且高效。
+在多线程程序中，当两个或多个线程无限地等待对方释放资源时，就会发生死锁。这种情况通常发生在以不一致的顺序获取多个锁时，导致线程之间产生循环依赖。死锁会降低应用程序性能，并且调试起来极具挑战性。理解死锁并应用预防技术可以确保多线程应用程序保持响应且高效。
 
 这里是一个简单的死锁示例：
 
@@ -10523,7 +9843,14 @@ class DeadlockExample {
 - 2. 同时，`Thread-2` 获取了 `lock2` 并等待 `lock1`。
 - 3. 两个线程现在都在等待对方释放锁，导致了死锁。
 
+
+
+# 死锁、活锁与饥饿的预防策略
+
+## 死锁预防
+
 要解决死锁，最有效的技术是**按照一致的顺序获取锁**。
+
 通过确保所有线程以相同的顺序获取资源，就可以避免循环依赖。
 
 以下是之前示例的修复版本：
@@ -10565,8 +9892,8 @@ class DeadlockResolved {
 
 在此示例中：
 
-- 1. `method1` 和 `method2` 都按照相同的顺序获取锁：先获取 `lock1`，后获取 `lock2`。
-- 2. 这防止了循环依赖，消除了死锁的可能性。
+1. `method1` 和 `method2` 都按照相同的顺序获取锁：先获取 `lock1`，后获取 `lock2`。
+2. 这防止了循环依赖，消除了死锁的可能性。
 
 防止死锁的另一种策略是使用 `ReentrantLock` 类中的 **`tryLock`**。`tryLock` 方法尝试获取锁而不会无限阻塞。如果在指定的时间内无法获取锁，线程可以优雅地恢复。
 
@@ -10686,15 +10013,12 @@ class TimeoutExample {
 }
 ```
 
-
-
-
 在此示例中：
 
-- 1. 使用带有超时的 `tryLock` 可以确保线程不会无限阻塞。
-- 2. 如果在 2 秒内无法获取锁，线程将优雅地退出。
+1. 使用带有超时的 `tryLock` 可以确保线程不会无限阻塞。
+2. 如果在 1 秒内无法获取锁，线程将优雅地退出。
 
-另一种防止死锁的技术是**避免嵌套锁**。通过避免线程持有一个锁并尝试获取另一个锁的情况，可以度地减少循环依赖的风险。
+另一种防止死锁的技术是**避免嵌套锁**。通过避免线程持有一个锁并尝试获取另一个锁的情况，可以显著减少循环依赖的风险。
 
 这是一个示例：
 
@@ -10704,14 +10028,14 @@ class AvoidNestedLocks {
 
    public void performTask() {
       synchronized (lock) {
-          System.out.println(Thread.currentThread().getName() + " \nperforming task("");
+          System.out.println(Thread.currentThread().getName() + " performing task");
       }
    }
 
     public static void main(String[] args) {
         AvoidNestedLocks example = new AvoidNestedLocks();
 
-        Runnable task = example::performTask();
+        Runnable task = example::performTask;
 
         Thread thread1 = new Thread(task, "Thread-1");
         Thread thread2 = new Thread(task, "Thread-2");
@@ -10724,12 +10048,12 @@ class AvoidNestedLocks {
 
 在此示例中：
 
-- 1. 仅使用单个锁 (`lock`) 来同步访问，完全避免了嵌套锁。
-- 2. 这显著降低了死锁的风险。
+1. 仅使用单个锁 (`lock`) 来同步访问，完全避免了嵌套锁。
+2. 这显著降低了死锁的风险。
 
 当多个线程以不一致的顺序获取资源时就会发生死锁，导致循环依赖。使用一致顺序获取锁、使用带有超时的 `tryLock`、避免嵌套锁以及使用超时机制等技术可以有效防止死锁。通过应用这些策略，开发者可以确保他们的多线程应用程序是无死锁、高效且可扩展的。
 
-##### 3.7.2 - 活锁与饥饿
+## 3.7.2 - 活锁与饥饿
 
 活锁（Livelocks）和线程饥饿（Starvation）是会降低应用程序性能和响应能力的并发问题。**活锁**发生在两个或多个线程不断响应对方的状态变化但未能取得进展的情况下。相比之下，**线程饥饿**发生在低优先级线程因为高优先级线程垄占资源而无法获得访问的情况下。这两个问题都会导致多线程程序出现严重的延迟和效率低下。理解如何识别和防止这些问题对于构建可扩展且可靠的系统至关重要。这是一个活锁示例，两个线程反复放弃执行权以允许另一个线程继续运行，但两者都没有取得进展：
 
@@ -10780,9 +10104,11 @@ public class LivelockExample {
 
 在此示例中：
 
-- 1. `Thread-1` 和 `Thread-2` 持续检查另一个线程是否正在工作。
-- 2. 当一个线程检测到另一个正在忙时，它调用 `Thread.yield()` 让另一个线程继续执行。
-- 3. 然而，两个线程都反复让出执行权，导致两个线程都无法进展的活锁。
+1. `Thread-1` 和 `Thread-2` 持续检查另一个线程是否正在工作。
+2. 当一个线程检测到另一个正在忙时，它调用 `Thread.yield()` 让另一个线程继续执行。
+3. 然而，两个线程都反复让出执行权，导致两个线程都无法进展的活锁。
+
+
 
 要修复活锁，可以引入超时或随机延迟，使线程最终停止让出并取得进展。这减少了线程之间过度往返。
 
@@ -10827,16 +10153,14 @@ class SharedResource {
         }
     }
 }
-```（注：OCR 提供的修复版本包含了一些碎片化的代码数字，已根据所提供的上下文重建了逻辑）。
+```
+（注：OCR 提供的修复版本包含了一些碎片化的代码数字，已根据所提供的上下文重建了逻辑）。
 
 *自纠正：第 640-41 页中“修复版本”的 OCR 文本因行号严重破碎。下方的清理版本侧重于逻辑流。*
 
 要修复活锁，可以引入超时或随机延迟，使线程最终停止让出并取得进展。这减少了线程之间过度往返。
 
-
-
-
-# 在此示例中：
+## 在此示例中：
 
 1. 通过向构造函数传递 `true`，创建了一个开启了**公平性**的 `ReentrantLock`。
 
@@ -10885,6 +10209,7 @@ public class StarvationTimeoutExample {
 在此示例中：
 
 - 1. `tryLock(2, TimeUnit.SECONDS)` 确保线程不会无限期等待锁。
+
 - 2. 如果在 2 秒内未获取锁，线程将继续执行而不会阻塞。
 
 活锁（Livelocks）和饥饿（starvation）是微妙的并发问题，可能会阻碍多线程应用程序的进展。要防止活锁，应避免重复的让出（yielding）并引入延迟或退避策略。通过使用公平锁、超时机制以及避免基于优先级的资源垄占，可以防止线程饥饿。通过应用这些技术，应用程序可以保持响应性能并确保所有线程的公平执行。
@@ -10939,7 +10264,9 @@ public class AtomicIntegerExample {
 在此示例中：
 
 - 1. 使用 `AtomicInteger` 类来原子地增加计数器。
+
 - 2. `incrementAndGet()` 方法确保了增加操作是线程安全的。
+
 - 3. 与使用同步机制不同，原子变量是轻量级的且不会阻塞其他线程。
 
 原子变量的另一种常见操作是**比较并交换**（CAS）。CAS 允许你仅在值匹配预期值时才更新它，从而避免了对锁。
@@ -10972,11 +10299,7 @@ public class CASTest {
 }
 ```
 
-
-
-
-
-# 在此示例中：
+## 在此示例中：
 
 `ReentrantLock` 通过向其构造函数传递 `true` 来初始化为公平锁。
 
@@ -10990,7 +10313,7 @@ public class CASTest {
 
 ```java
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.ReentrantLock;
+import java.util.concurrent.locks.ReentrantLock;
 
 class TimeoutExample {
     private final ReentrantLock lock = new ReentrantLock();
@@ -11027,7 +10350,9 @@ public class TimeoutExample {
 在此示例中：
 
 - 1. `tryLock(2, TimeUnit.SECONDS)` 尝试在 2 秒内获取锁。
+
 - 2. 如果锁不可用，线程可以处理超时，而不会无限阻塞。
+
 - 3. 这种方法对于防止死锁和提高响应能力很有用。
 
 原子变量和锁在细粒度线程控制中起着互补的作用。原子变量（如 `AtomicInteger`）是轻量级的，非常适合简单的计数器自增等原子操作。锁（如 `ReentrantLock`）对临界区域提供了更多的灵活性控制力，并具有公平性、尝试加锁和超时等功能。通过根据应用的复杂性选择机制，开发者可以确保线程安全、提高性能并避免常见的并发问题。
@@ -11060,7 +10385,9 @@ public class ParallelStreamExample {
 在此示例中：
 
 - 1. `parallelStream()` 方法将列表转换为并行流。
+
 - 2. 流将列表分成多个块，并使用 ForkJoin 框架并发处理它们。
+
 - 3. 结果被合并，并利用并行性高效地计算和。
 
 并行流对于大型数据集和计算密集型操作良好。然而，由于拆分和合并任务的开销，它们可能对于小数据集并不理想。
@@ -11089,8 +10416,13 @@ public class ParallelStreamFiltering {
 在此示例中：
 
 - 1. `parallelStream()` 并发处理整数列表。
+
+
+
 - 2. `filter` 操作提取偶数，而 `sorted()` 确保最终列表是排序的。
 - 3. 结果通过 `collect(Collectors.toList())` 收集到列表中。
+
+### ForkJoin 框架
 
 ForkJoin 框架引入于 Java 7，提供了一种通过递归地将任务拆分为更小的子任务来实现并行性的强大方法。`ForkJoinPool` 是并行流和 ForkJoin 任务背后的引擎。
 
@@ -11195,9 +10527,6 @@ public class ForkJoinSearchExample {
 }
 ```
 
-
-
-
 ```java
 47 ForkJoinPool pool = new ForkJoinPool();
 48 SearchTask task = new SearchTask(array, 0, array.length, 1234);
@@ -11224,34 +10553,34 @@ public class ForkJoinSearchExample {
 以下使用并行流处理字符串列表以执行计算密集型操作的示例：
 
 ```java
-1 import java.util.List;
-2 import java.util.stream.Collectors;
-3 import java.util.stream.IntStream;
-4
-5 public class ParallelStreamStringProcessing {
-6     public static void main(String[] args) {
-7         List<String> strings = IntStream.rangeClosed(1, 1000)
-8             .mapToObj(i -> "String-" + i)
-9             .toList();
-10
-11        List<String> results = strings.parallelStream()
-12            .map(s -> s + " processed")
-13            .collect(Collectors.toList());
-14
-15        System.out.println("Processed strings: " + results);
-16    }
-17 }
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+public class ParallelStreamStringProcessing {
+    public static void main(String[] args) {
+        List<String> strings = IntStream.rangeClosed(1, 1000)
+            .mapToObj(i -> "String-" + i)
+            .toList();
+
+        List<String> results = strings.parallelStream()
+            .map(s -> s + " processed")
+            .collect(Collectors.toList());
+
+        System.out.println("Processed strings: " + results);
+    }
+}
 ```
 
 在此示例中：
 
 - 1. 并行流并发处理字符串列表。
-- 2. 每个字符串通过附加单词“processed”来转换转换。
+- 2. 每个字符串通过附加单词“processed”来转换。
 - 3. 结果被收集到一个新的列表中。
 
 Java 的并行流和 ForkJoin 框架提供了实现并行性和利用多核处理器的有效方法。并行流简化了大型数据集的并行数据处理，而 ForkJoin 框架实现了对任务拆分和执行的细粒度控制。通过有效结合这些工具，开发者可以构建在多线程环境中良好扩展的高性能应用程序。
 
-### 3.10 - 并发编程的最佳实践
+### 3.10 并发编程的最佳实践
 
 在 Java 中设计和实现并发应用需要仔细的规划并采用最佳实践，以避免常见的陷阱，如竞态条件、死锁、活锁和资源竞争。使用适当的工具、框架和编码模式可以确保线程安全、可扩展性和可维护性。
 
@@ -11260,33 +10589,33 @@ Java 的并行流和 ForkJoin 框架提供了实现并行性和利用多核处�
 以下是一个使用不可变对象来确保线程安全的示例：
 
 ```java
-1 final class ImmutableData {
-2   private final int value;
-3
-4   public ImmutableData(int value) {
-5     this.value = value;
-6   }
-7
-8   public int getValue() {
-9     return value;
-10  }
-11 }
-12
-13 public class ImmutableExample {
-14   public static void main(String[] args) {
-15     ImmutableData data = new ImmutableData(42);
-16
-17     Runnable task = () -> {
-18       System.out.println(Thread.currentThread().getName() + " read value: " + data.getValue());
-19   };
-20
-21     Thread thread1 = new Thread(task, "Thread-1");
-22     Thread thread2 = new Thread(task, "Thread-2");
-23
-24     thread1.start();
-25     thread2.start();
-26   }
-27 }
+final class ImmutableData {
+    private final int value;
+
+    public ImmutableData(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
+}
+
+public class ImmutableExample {
+    public static void main(String[] args) {
+        ImmutableData data = new ImmutableData(42);
+
+        Runnable task = () -> {
+            System.out.println(Thread.currentThread().getName() + " read value: " + data.getValue());
+        };
+
+        Thread thread1 = new Thread(task, "Thread-1");
+        Thread thread2 = new Thread(task, "Thread-2");
+
+        thread1.start();
+        thread2.start();
+    }
+}
 ```
 
 在此示例中：

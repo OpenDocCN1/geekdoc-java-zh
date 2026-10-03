@@ -1,17 +1,18 @@
-# struts-<present><notpresent>示例</notpresent></present>
+
+# struts-`<present>` `<notpresent>`示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts/struts-logic-present-logic-notpresent-example/>
 
-Download this example – [Struts-Logic-Present-NotPresent-Example.zip](http://web.archive.org/web/20190224153322/http://www.mkyong.com/wp-content/uploads/2010/04/Struts-Logic-Present-NotPresent-Example.zip)
+下载此示例 – [Struts-Logic-Present-NotPresent-Example.zip](http://web.archive.org/web/20190224153322/http://www.mkyong.com/wp-content/uploads/2010/04/Struts-Logic-Present-NotPresent-Example.zip)
 
-Struts <present>标签用于检查给定的对象或属性是否存在或存在于当前请求中；而<notpresent>则反其道而行。</notpresent></present>
+Struts `<present>`标签用于检查给定的对象或属性是否存在或存在于当前请求中；而`<notpresent>`则反其道而行。
 
-这里有一个例子来展示<present>和<notpresent>的用法。</notpresent></present>
+这里有一个例子来展示`<present>`和`<notpresent>`的用法。
 
-**User.java**–一个用户类包含一个 url 属性。
+**User.java** – 一个用户类包含一个`url`属性。
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 public class User{
 
@@ -27,10 +28,10 @@ public class User{
 } 
 ```
 
-**LogicExampleAction.java**–初始化用户对象，设置 url 属性，并将其存储到请求会话中。
+**LogicExampleAction.java** – 初始化用户对象，设置`url`属性，并将其存储到请求会话中。
 
 ```java
- package com.mkyong.common.action;
+package com.mkyong.common.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -84,7 +85,7 @@ Struts - <present>&</present>
 **struts-config.xml**
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts-config PUBLIC 
 "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" 
 "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
@@ -107,14 +108,14 @@ Struts - <present>&</present>
 </struts-config> 
 ```
 
- ## 结果
+## 结果
 
 *http://localhost:8080/struts example/logictest . do*
 
 ![Struts-logic-present-notpresent-example](img/f6ace489ee0564a879ab89a58e5ea8aa.png "Struts-logic-present-notpresent-example")
 
 ```java
- Struts - <logic:present> & <logic:notPresent>
+Struts - <logic:present> & <logic:notPresent>
 User object is exists.
 
 Abc object does not exists.
@@ -125,10 +126,3 @@ User object, email property does not exists.
 ```
 
 [struts](http://web.archive.org/web/20190224153322/http://www.mkyong.com/tag/struts/)![](img/b35e144227e44551b2ec2f4991e98345.png) (function (i,d,s,o,m,r,c,l,w,q,y,h,g) { var e=d.getElementById(r);if(e===null){ var t = d.createElement(o); t.src = g; t.id = r; t.setAttribute(m, s);t.async = 1;var n=d.getElementsByTagName(o)[0];n.parentNode.insertBefore(t, n); var dt=new Date().getTime(); try{i[l][w+y](h,i[l][q+y](h)+'&amp;'+dt);}catch(er){i[h]=dt;} } else if(typeof i[c]!=='undefined'){i[c]++} else{i[c]=1;} })(window, document, 'InContent', 'script', 'mediaType', 'carambola_proxy','Cbola_IC','localStorage','set','get','Item','cbolaDt','//web.archive.org/web/20190224153322/http://route.carambo.la/inimage/getlayer?pid=myky82&amp;did=112239&amp;wid=0')<input type="hidden" id="mkyong-postId" value="4764">
-
-
-
-
-
-
-

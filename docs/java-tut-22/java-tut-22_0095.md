@@ -1,3 +1,4 @@
+
 # 编写最终类和方法
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/IandI/final.html`](https://docs.oracle.com/javase/tutorial/java/IandI/final.html)
@@ -15,7 +16,6 @@ class ChessAlgorithm {
     }
     ...
 }
-
 ```
 
 从构造函数中调用的方法通常应该声明为最终方法。如果构造函数调用一个非最终方法，子类可能重新定义该方法，导致意想不到或不希望的结果。

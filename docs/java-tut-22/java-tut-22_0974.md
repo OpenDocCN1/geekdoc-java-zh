@@ -1,3 +1,4 @@
+
 # 命名包
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/overview/naming.html`](https://docs.oracle.com/javase/tutorial/jndi/overview/naming.html)
@@ -8,23 +9,23 @@
 
 `javax.naming`包定义了一个[`Context`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html)接口，这是查找、绑定/解绑、重命名对象以及创建和销毁子上下文的核心接口。
 
-查找
+### 查找
 
 最常用的操作是[`lookup()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html#lookup-javax.naming.Name-)。您提供`lookup()`要查找的对象的名称，它将返回绑定到该名称的对象。
 
-绑定
+### 绑定
 
 [`listBindings()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html#listBindings-javax.naming.Name-)返回一个名称到对象绑定的枚举。绑定是一个包含绑定对象的名称、对象类的名称和对象本身的元组。
 
-列表
+### 列表
 
 [`list()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html#list-javax.naming.Name-)类似于`listBindings()`，只是它返回一个包含对象名称和对象类名称的名称枚举。`list()`对于诸如浏览器之类的应用程序很有用，这些应用程序希望发现上下文中绑定的对象的信息，但不需要所有实际对象。虽然`listBindings()`提供了相同的信息，但它可能是一个更昂贵的操作。
 
-名称
+### 名称
 
 `Name`是表示通用名称的接口——一个有序的零个或多个组件的序列。命名系统使用此接口来定义遵循其约定的名称，如命名和目录概念课程中所述。
 
-引用
+### 引用
 
 对象以不同方式存储在命名和目录服务中。引用可能是对象的非常紧凑的表示。
 

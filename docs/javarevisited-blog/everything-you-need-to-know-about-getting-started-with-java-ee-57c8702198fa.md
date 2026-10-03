@@ -1,3 +1,4 @@
+
 # 关于 Java EE 入门您需要知道的一切
 
 > 原文：<https://medium.com/javarevisited/everything-you-need-to-know-about-getting-started-with-java-ee-57c8702198fa?source=collection_archive---------3----------------------->
@@ -10,7 +11,7 @@ Java 是一个相当复杂的话题，对于一个刚刚开始学习这些东西
 
 对于一个绝对的新手来说，你需要明白的一点是，Java 编程语言和 Java 平台是两回事。Java 平台，如 Java 标准版或 Java 企业版(我们稍后会谈到这些)使用 Java 编程语言。语言是用于编写程序的编码，但平台是用于实际构建程序和部署程序的。这是你需要记住的主要区别之一。
 
-**Java SE vs Java EE**
+## Java SE vs Java EE
 
 这里，我们不打算关注语言，而是关注平台。有两种不同类型的平台— Java SE(标准版)和 Java EE(企业版)。Java SE 是一个基础平台，它提供了一系列通用的 API，比如用于 Java 类库的 Java API。这些可以用来在 Java 平台上构建应用程序和程序。
 
@@ -28,12 +29,13 @@ Java EE 的主要目标是简化开发人员在通过不同的 API 构建现代�
 
 为了解决这个问题，Eduonix 开设了一门沉浸式课程，包括理论、实际应用，甚至动手项目。企业 [Java 教程](https://www.eduonix.com/projects-in-enterprise-java#utm_source=medium&utm_medium=social&utm_campaign=sdaprl)中的项目不仅包括什么是 Java EE 及其不同组件的理论，而且您还将看到如何使用它的实例，您还将构建自己的 5 个项目！这确保了课程结束后，您将能够在 Java 平台上构建自己的项目。
 
-其他**编程篇**你可能喜欢的
-[2019 年学习 Java EE 的前 5 门课程](https://javarevisited.blogspot.com/2018/09/top-5-java-ee-courses-to-learn-online.html)
-[2019 年学习 Python 的 10 个理由](https://javarevisited.blogspot.com/2018/05/10-reasons-to-learn-python-programming.html)
-[2019 年你可以学习的 10 种编程语言](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html)
-[每个 Java 开发者都应该知道的 10 个工具](http://www.java67.com/2018/04/10-tools-java-developers-should-learn.html)
-[学习 Java 编程语言的 10 个理由](http://javarevisited.blogspot.sg/2013/04/10-reasons-to-learn-java-programming.html)
-[2010 年 Java 和 Web 开发者应该学习的 10 个框架 2019 年更好的 Java 开发者](http://javarevisited.blogspot.sg/2018/01/10-frameworks-java-and-web-developers-should-learn.html)
-[2019 年要学习的 5 大 Java 框架](http://javarevisited.blogspot.sg/2018/04/top-5-java-frameworks-to-learn-in-2018_27.html)
-[每个 Java 开发者都应该知道的 10 个测试库](https://medium.freecodecamp.org/these-are-the-top-testing-tools-libraries-and-frameworks-for-java-developers-8c0e3f9bc11d)
+## 其他**编程篇**你可能喜欢的
+
+- [2019 年学习 Java EE 的前 5 门课程](https://javarevisited.blogspot.com/2018/09/top-5-java-ee-courses-to-learn-online.html)
+- [2019 年学习 Python 的 10 个理由](https://javarevisited.blogspot.com/2018/05/10-reasons-to-learn-python-programming.html)
+- [2019 年你可以学习的 10 种编程语言](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html)
+- [每个 Java 开发者都应该知道的 10 个工具](http://www.java67.com/2018/04/10-tools-java-developers-should-learn.html)
+- [学习 Java 编程语言的 10 个理由](http://javarevisited.blogspot.sg/2013/04/10-reasons-to-learn-java-programming.html)
+- [2010 年 Java 和 Web 开发者应该学习的 10 个框架 2019 年更好的 Java 开发者](http://javarevisited.blogspot.sg/2018/01/10-frameworks-java-and-web-developers-should-learn.html)
+- [2019 年要学习的 5 大 Java 框架](http://javarevisited.blogspot.sg/2018/04/top-5-java-frameworks-to-learn-in-2018_27.html)
+- [每个 Java 开发者都应该知道的 10 个测试库](https://medium.freecodecamp.org/these-are-the-top-testing-tools-libraries-and-frameworks-for-java-developers-8c0e3f9bc11d)

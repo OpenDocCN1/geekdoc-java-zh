@@ -1,3 +1,4 @@
+
 # LDAP 非请求通知
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/ldap/unsol.html`](https://docs.oracle.com/javase/tutorial/jndi/ldap/unsol.html)
@@ -19,7 +20,6 @@ public class UnsolListener implements UnsolicitedNotificationListener {
             evt.getException().printStackTrace();
     }
 }
-
 ```
 
 以下是`一个示例`，展示了如何向事件源注册`UnsolicitedNotificationListener`的实现。请注意，只有[`EventContext.addNamingListener()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/event/EventContext.html#addNamingListener-javax.naming.Name-int-javax.naming.event.NamingListener-)中的监听器参数与非请求通知相关。名称和范围参数与非请求通知无关。
@@ -34,7 +34,6 @@ NamingListener listener = new UnsolListener();
 
 // Register the listener with the context (all targets equivalent)
 ctx.addNamingListener("", EventContext.ONELEVEL_SCOPE, listener);
-
 ```
 
 运行此程序时，您需要将其指向一个可以生成非请求通知并促使服务器发出通知的 LDAP 服务器。否则，程序将在一分钟后悄无声息地退出。

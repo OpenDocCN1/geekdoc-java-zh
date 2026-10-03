@@ -1,3 +1,4 @@
+
 # 2023 年学习 Servlet、JSP 和 Java FX 的 6 大免费课程——最好的
 
 > 原文：<https://medium.com/javarevisited/6-free-courses-to-learn-servlet-jsp-and-java-fx-in-2020-best-of-lot-720201c84f63?source=collection_archive---------0----------------------->
@@ -78,57 +79,53 @@ Servlet 主要用作使用 MVC 设计模式创建的 web 应用程序中的控�
 
 然后展示了如何使用各种参数类型(IN、INOUT、OUT 和`ResultSet`)调用存储过程，以及如何处理 BLOBs 和 CLOBs 之类的大型数据类型。最后，本课程以从配置文件中读取数据库连接信息的部分结束。总的来说，这是一个免费开始学习 JDBC API 的好课程。
 
-## 4. [JSP (Java 服务器页面)和 Servlet 基础知识](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjsp-servlet-free%2F)
 
-这是另一个在 Udemy 上学习 JSP 和 Servlet 的免费课程。本课程也是初级课程，教授 JSP 和 servlets 的基本概念。学生可以开始学习 Chaand Sheikh 和 StudyEasy Organization 创建的 Spring、JSF 等
 
-框架，本课程还解释了 JDBC、Servlets 和 JSP 在 web 应用程序中的作用，并提供了一个使用 JDBC 与数据库通信的演示程序。这也是一门免费的课程，你可以利用这门课程和之前的课程来更好地了解 JDBC。
+## 4. JSP（Java 服务器页面）和 Servlet 基础知识
 
-**这里是免费报名本课程的链接—** [JSP (Java 服务器页面)和 servlet 基础](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjsp-servlet-free%2F)
+这是另一个在 Udemy 上学习 JSP 和 Servlet 的免费课程。本课程也是初级课程，教授 JSP 和 servlets 的基本概念。学生可以开始学习 Chaand Sheikh 和 StudyEasy Organization 创建的 Spring、JSF 等框架，本课程还解释了 JDBC、Servlets 和 JSP 在 web 应用程序中的作用，并提供了一个使用 JDBC 与数据库通信的演示程序。这也是一门免费的课程，你可以利用这门课程和之前的课程来更好地了解 JDBC。
+
+**这里是免费报名本课程的链接**：[JSP（Java 服务器页面）和 servlet 基础](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjsp-servlet-free%2F)
 
 [![](img/92096589f1673404e4267b5309f62e83.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjsp-servlet-free%2F)
 
-## [**5。JavaFX 速成班:制作 GUI 应用程序的最佳方式**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fcrash-course-into-javafx-the-best-way-to-make-gui-apps%2F)
+## 5. JavaFX 速成班：制作 GUI 应用程序的最佳方式
 
-Java FX 允许您使用 Java 编程语言创建基于 GUI 的应用程序，就像您使用 Swing 库创建像 Eclipse 和 IntelliJ IDEA 这样的桌面应用程序一样。
+Java FX 允许您使用 Java 编程语言创建基于 GUI 的应用程序，就像您使用 Swing 库创建像 Eclipse 和 IntelliJ IDEA 这样的桌面应用程序一样。它被吹捧为 Swing 的替代品，被认为更加轻量级，提供更多功能和更好的性能。本课程将教授您 JavaFX 的基础知识，如 GUI 组件和概念，如节点、按钮和窗格，以及稍微复杂一些的东西，如形状、颜色和属性绑定。本课程还会在每课开始时解释所有的语法和术语，但会在整个课程中贯彻这些概念。
 
-它被吹捧为 Swing 的替代品，被认为更加轻量级，提供更多功能和更好的性能。本课程将教授您 JavaFX 的基础知识，如 GUI 组件和概念，如节点、按钮和窗格，以及稍微复杂一些的东西，如形状、颜色和属性绑定。本课程还会在每课开始时解释所有的语法和术语，但会在整个课程中贯彻这些概念。
-
-**这里是免费注册本课程的链接—**[Java FX 速成班:制作 GUI 应用的最佳方式](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fcrash-course-into-javafx-the-best-way-to-make-gui-apps%2F)
+**这里是免费注册本课程的链接**：[Java FX 速成班：制作 GUI 应用的最佳方式](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fcrash-course-into-javafx-the-best-way-to-make-gui-apps%2F)
 
 [![](img/473ecb3b5cbe44ac9b2ff1bbc11047bb.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fcrash-course-into-javafx-the-best-way-to-make-gui-apps%2F)
 
 这意味着，如果你知道这些术语，但不知道如何实施它们，你仍然可以享受这门课程。此外，我们将有广泛的案例研究，这将使我们能够用我们讨论过的想法解决现实世界的问题。该课程还使用 [Eclipse](/javarevisited/top-10-courses-to-learn-eclipse-junit-and-mockito-for-java-developers-4de1e8d62b96) 和标准 [Java 工具](/javarevisited/top-10-tools-for-automation-testing-in-java-b615c2d57f54)进行编码和演示。
 
-## 6.[使用 Spring MVC 和 MyBatis 开发数据库应用](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeveloping-database-application-using-spring-mvc-and-mybatis%2F)
+## 6. 使用 Spring MVC 和 MyBatis 开发数据库应用
 
-Bushan Sirgur 创建了一个速成班，介绍如何使用 Spring MVC 和 Mybatis 开发数据库 web 应用程序。这是两种最流行的 java 框架，用于构建行业标准的企业应用程序。
+Bushan Sirgur 创建了一个速成班，介绍如何使用 Spring MVC 和 Mybatis 开发数据库 web 应用程序。这是两种最流行的 java 框架，用于构建行业标准的企业应用程序。这不是 Spring MVC 和 Mybatis 的综合课程，但本课程将帮助您集成这两个不同的框架，这将帮助您创建基于 web 的企业应用程序。
 
-这不是 Spring MVC 和 Mybatis 的综合课程，但本课程将帮助您集成这两个不同的框架，这将帮助您创建基于 web 的企业应用程序。
-
-**这里是免费注册本课程的链接—** [使用 Spring MVC 和 MyBatis 开发数据库应用](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeveloping-database-application-using-spring-mvc-and-mybatis%2F)
+**这里是免费注册本课程的链接**：[使用 Spring MVC 和 MyBatis 开发数据库应用](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeveloping-database-application-using-spring-mvc-and-mybatis%2F)
 
 [![](img/71858afb6aca5c142d72672600efc4d3.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeveloping-database-application-using-spring-mvc-and-mybatis%2F)
 
-以上是一些学习 Servlet、JSP 和 JDBC 的最好的**免费在线课程。您可以使用这些课程从 Java web 技术开始，并创建自己的应用程序，该应用程序可以生成动态网页并与数据库进行交互。**
+以上是一些学习 Servlet、JSP 和 JDBC 的最好的**免费在线课程**。您可以使用这些课程从 Java web 技术开始，并创建自己的应用程序，该应用程序可以生成动态网页并与数据库进行交互。
 
 要进一步学习 Spring 和 Hibernate 等行业标准框架，需要良好的 JSP 和 Servlet 知识。如果你想进入桌面和 GUI 开发领域，那么 JavaFX 是一项需要学习的关键技术。
 
-其他**你可能喜欢探索的免费在线课程**
+**其他你可能喜欢探索的免费在线课程**
 
-1.  [完整的 Web 开发者路线图](/hackernoon/the-2019-web-developer-roadmap-ab89ac3c380e)
-2.  [我最喜欢的免费 JavaScript 初学者教程](/javarevisited/my-favorite-free-tutorials-and-courses-to-learn-javascript-8f4d0a71faf2)
-3.  [15 面向 Web 开发人员的 Docker、Kubernetes 和 AWS 课程](/javarevisited/top-15-online-courses-to-learn-docker-kubernetes-and-aws-for-fullstack-developers-and-devops-d8cc4f16e773)
-4.  [Web 开发者可以学习的 10 个 JavaScript 框架](/javarevisited/10-of-the-most-popular-javascript-frameworks-libraries-for-web-development-in-2019-a2c8cea68094)
-5.  [学习 Web 开发的五大课程](/better-programming/my-5-favorite-courses-to-learn-web-development-in-2019-a5e74167f8b2)
-6.  [我最喜欢的学习 HTML 和 CSS 的免费课程](/javarevisited/5-free-html-and-css-courses-to-learn-front-end-web-development-online-8b04517c6ecb?source=collection_home---4------0-----------------------)
-7.  [面向前端开发者的 5 门免费 Docker 课程](/javarevisited/top-5-free-courses-to-learn-docker-for-beginners-best-of-lot-b2b1ad2b98ad)
-8.  [初学者学习 SQL 和数据库的 7 门免费课程](/javarevisited/7-free-courses-to-learn-database-and-sql-for-programmers-and-data-scientist-e7ae19514ed2)
-9.  [完整的 React.js 开发者路线图](/javarevisited/the-2019-react-js-developer-roadmap-9a8e290b8a56)
-10.  [2023 年学习 Angular 的 10 本书和课程](/javarevisited/top-10-angular-books-and-courses-for-beginners-and-experienced-web-developers-best-of-lot-9a2dae87f04c)
+1. [完整的 Web 开发者路线图](/hackernoon/the-2019-web-developer-roadmap-ab89ac3c380e)
+2. [我最喜欢的免费 JavaScript 初学者教程](/javarevisited/my-favorite-free-tutorials-and-courses-to-learn-javascript-8f4d0a71faf2)
+3. [15 面向 Web 开发人员的 Docker、Kubernetes 和 AWS 课程](/javarevisited/top-15-online-courses-to-learn-docker-kubernetes-and-aws-for-fullstack-developers-and-devops-d8cc4f16e773)
+4. [Web 开发者可以学习的 10 个 JavaScript 框架](/javarevisited/10-of-the-most-popular-javascript-frameworks-libraries-for-web-development-in-2019-a2c8cea68094)
+5. [学习 Web 开发的五大课程](/better-programming/my-5-favorite-courses-to-learn-web-development-in-2019-a5e74167f8b2)
+6. [我最喜欢的学习 HTML 和 CSS 的免费课程](/javarevisited/5-free-html-and-css-courses-to-learn-front-end-web-development-online-8b04517c6ecb?source=collection_home---4------0-----------------------)
+7. [面向前端开发者的 5 门免费 Docker 课程](/javarevisited/top-5-free-courses-to-learn-docker-for-beginners-best-of-lot-b2b1ad2b98ad)
+8. [初学者学习 SQL 和数据库的 7 门免费课程](/javarevisited/7-free-courses-to-learn-database-and-sql-for-programmers-and-data-scientist-e7ae19514ed2)
+9. [完整的 React.js 开发者路线图](/javarevisited/the-2019-react-js-developer-roadmap-9a8e290b8a56)
+10. [2023 年学习 Angular 的 10 本书和课程](/javarevisited/top-10-angular-books-and-courses-for-beginners-and-experienced-web-developers-best-of-lot-9a2dae87f04c)
 
 感谢您阅读本文。如果你喜欢这些免费的 JSP、Servlet 和 JDBC 课程，请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
-> **p . s .**——如果你能花几块钱学习一些有用的东西，比如 Servlet 和 JSP，那么你也可以看看 [**JSP、Servlet 和面向初学者的 JDBC:在 Udemy 上构建一个数据库应用**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjsp-tutorial%2F) 。Java web 开发人员学习 Servlet 和 JSP 的一门很好的实践课程。
+> **p.s.**——如果你能花几块钱学习一些有用的东西，比如 Servlet 和 JSP，那么你也可以看看 [**JSP、Servlet 和面向初学者的 JDBC：在 Udemy 上构建一个数据库应用**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjsp-tutorial%2F)。Java web 开发人员学习 Servlet 和 JSP 的一门很好的实践课程。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjsp-tutorial%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjsp-tutorial%2F>

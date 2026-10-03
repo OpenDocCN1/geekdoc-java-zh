@@ -1,3 +1,4 @@
+
 # 2023 年学习编程和编码的十大免费文本在线课程
 
 > 原文：<https://medium.com/javarevisited/top-10-free-interactive-programming-courses-from-educative-for-beginners-to-learn-in-2021-713cbf96d4eb?source=collection_archive---------1----------------------->
@@ -26,7 +27,7 @@ image_credit — [教育性](https://www.educative.io/subscription?affiliate_id=
 
 他们的一些课程，如[探索系统设计面试](https://www.educative.io/collection/5668639101419520/5649050225344512?affiliate_id=5073518643380224)和[探索编码面试:编码问题的模式](https://www.educative.io/collection/5668639101419520/5671464854355968?affiliate_id=5073518643380224)对于准备编码面试的人来说非常有用。这些课程是由一个专家团队开发的，他们也参与了谷歌、微软、亚马逊等最著名的科技公司的招聘过程。
 
-<https://www.educative.io/collection/5668639101419520/5649050225344512?affiliate_id=5073518643380224>  <https://www.educative.io/collection/5668639101419520/5671464854355968?affiliate_id=5073518643380224>  
+<https://www.educative.io/collection/5668639101419520/5649050225344512?affiliate_id=5073518643380224>  <https://www.educative.io/collection/5668639101419520/5671464854355968?affiliate_id=5073518643380224>
 
 而且，如果你正在准备编码面试，一定要去看看那些课程，他们现在还提供对[教育会员](https://www.educative.io/subscription?affiliate_id=5073518643380224)的 50%折扣，所以这是一个获得会员资格的好时机，每月 18 美元就可以享受他们所有的高级课程，这对你来说是一个不错的投资。
 
@@ -118,13 +119,15 @@ C++是另一种在世界上广泛使用的编程语言。您会发现用 C++编�
 
 [![](img/8168393c9921f9189d381a585cf34653.png)](https://www.educative.io/courses/learn-scala-from-scratch?affiliate_id=5073518643380224)
 
+
+
 你可以免费参加这个课程，如果你需要更多的资源，查看这个[免费 Scala 课程列表](https://javarevisited.blogspot.com/2019/01/5-free-scala-programming-courses-for-java-programmers-learn-online.html)以获得更多选项。
 
-## 7.[从零开始学习 R](https://www.educative.io/courses/learn-r-from-scratch?affiliate_id=5073518643380224)
+## 7. [从零开始学习 R](https://www.educative.io/courses/learn-r-from-scratch?affiliate_id=5073518643380224)
 
 R 编程语言可能是最流行的数据分析语言。由于其强大的统计功能、出色的绘图能力和通过包的可扩展性，它已经被使用了很多年。
 
-这个交互式的[免费编码课程](https://hackernoon.com/20-best-courses-from-udemy-free-resource-center-to-learn-programming-and-coding-48873yjn)将让你快速上手，并且假设你没有 r 语言的先验知识。你将从最基础的开始，逐步学习像异常处理这样的高级概念。
+这个交互式的[免费编码课程](https://hackernoon.com/20-best-courses-from-udemy-free-resource-center-to-learn-programming-and-coding-48873yjn)将让你快速上手，并且假设你没有 R 语言的先验知识。你将从最基础的开始，逐步学习像异常处理这样的高级概念。
 
 当你完成的时候，你将能够自己用 R 编写详细的、有用的代码。
 
@@ -134,27 +137,27 @@ R 编程语言可能是最流行的数据分析语言。由于其强大的统计
 
 如果你需要更多的资源，你也可以查看这份数据科学与编程的[免费 R 编程课程](https://hackernoon.com/5-free-r-programming-courses-for-data-scientists-and-ml-programmers-5732cb9e10)列表。
 
-## 8.[从零开始学习 C 语言](https://www.educative.io/courses/learn-c-from-scratch)
+## 8. [从零开始学习 C 语言](https://www.educative.io/courses/learn-c-from-scratch)
 
-c 是一切开始的地方，也是您开始编程之旅的地方。令人难以置信的高效和强大的 C 语言形成了许多其他语言的基础，如 [C++](/javarevisited/top-10-courses-to-learn-c-for-beginners-best-and-free-4afc262a544e) 和 [Java](/javarevisited/top-5-java-online-courses-for-beginners-best-of-lot-1e1e240a758) 。
+C 是一切开始的地方，也是您开始编程之旅的地方。令人难以置信的高效和强大的 C 语言形成了许多其他语言的基础，如 [C++](/javarevisited/top-10-courses-to-learn-c-for-beginners-best-and-free-4afc262a544e) 和 [Java](/javarevisited/top-5-java-online-courses-for-beginners-best-of-lot-1e1e240a758)。
 
 它可以让你直接与内存和低级计算机操作进行交互，从而增强你的编程技能，加深你的理解。
 
-这门全面且*免费的 C 编程课程*将向您介绍 C 语言的所有基本和高级编程概念。此外，它还解决了 c 语言中的内存、调试和并行编程问题。
+这门全面且*免费的 C 编程课程*将向您介绍 C 语言的所有基本和高级编程概念。此外，它还解决了 C 语言中的内存、调试和并行编程问题。
 
-这里是加入这个免费的 C 编程课程— [从零开始学习 C 语言](https://www.educative.io/courses/learn-c-from-scratch)
+这里是加入这个免费的 C 编程课程——[从零开始学习 C 语言](https://www.educative.io/courses/learn-c-from-scratch)
 
 [![](img/36b8859014b9582360926ae0bcb72c70.png)](https://www.educative.io/courses/learn-c-from-scratch)
 
-而且，如果你需要更多的资源来学习 C 编程，你应该看看这个为初学者准备的 [**最佳 C 编程课程**](https://javarevisited.blogspot.com/2019/11/top-5-courses-to-learn-c-programming-in.html) 列表。
+而且，如果你需要更多的资源来学习 C 编程，你应该看看这个为初学者准备的[**最佳 C 编程课程**](https://javarevisited.blogspot.com/2019/11/top-5-courses-to-learn-c-programming-in.html)列表。
 
-## 9.[从零开始学习 Ruby](https://www.educative.io/courses/learn-ruby-from-scratch?affiliate_id=5073518643380224)
+## 9. [从零开始学习 Ruby](https://www.educative.io/courses/learn-ruby-from-scratch?affiliate_id=5073518643380224)
 
 如果你想用 Ruby 编程语言开始你的编程生涯，那么这是一个很好的免费编程课程。
 
 Ruby 是一种智能的、易于使用的、功能性的、[面向对象的编程语言](/javarevisited/my-favorite-courses-to-learn-object-oriented-programming-and-design-in-2019-197bab351733?source=---------103------------------)，它是 Perl 的脚本能力、Pythonic 能力等等的奇妙组合！
 
-正如 [Ruby](/javarevisited/10-best-ruby-on-rails-courses-for-beginners-dca4d66e9f7b) 的创造者 Matsumoto 所暗示的:*“我希望看到 Ruby 帮助世界上的每一个程序员变得高效，并且享受编程，并且快乐。这是 Ruby 语言的主要目的。”*
+正如 [Ruby](/javarevisited/10-best-ruby-on-rails-courses-for-beginners-dca4d66e9f7b) 的创造者 Matsumoto 所暗示的：*“我希望看到 Ruby 帮助世界上的每一个程序员变得高效，并且享受编程，并且快乐。这是 Ruby 语言的主要目的。”*
 
 这门入门课程将为您提供大量交互式编码插图、练习以及变量、内置类、对象、条件、块等不可或缺的主题支持的动手实践！
 
@@ -164,7 +167,7 @@ Ruby 是一种智能的、易于使用的、功能性的、[面向对象的编�
 
 如果你需要更多的选择，你也可以在 Medium 上查看这个[免费 Ruby 课程](/javarevisited/top-5-free-courses-to-learn-ruby-and-rails-for-beginners-best-of-lot-e149fe03c964)的列表来获得一些想法。
 
-## 10.。[JavaScript 简介:第一步](https://www.educative.io/courses/introduction-to-javascript-first-steps?affiliate_id=5073518643380224)
+## 10. [JavaScript 简介：第一步](https://www.educative.io/courses/introduction-to-javascript-first-steps?affiliate_id=5073518643380224)
 
 这是给完全初学者的 JavaScript 介绍。它将提供语言的基础。主题包括变量、运算符、函数、数组、对象和循环。
 
@@ -172,15 +175,15 @@ Ruby 是一种智能的、易于使用的、功能性的、[面向对象的编�
 
 学完本课程后，您应该准备好通过高级课程或其他资源进一步学习。
 
-**这里是加入这个免费 JavaScript 课程的链接**—[JavaScript 简介:第一步](https://www.educative.io/courses/introduction-to-javascript-first-steps?affiliate_id=5073518643380224)
+**这里是加入这个免费 JavaScript 课程的链接**——[JavaScript 简介：第一步](https://www.educative.io/courses/introduction-to-javascript-first-steps?affiliate_id=5073518643380224)
 
 [![](img/77ca675f65c45c6217813659463ead5a.png)](https://www.educative.io/courses/introduction-to-javascript-first-steps?affiliate_id=5073518643380224)
 
-而且，如果你需要更多的资源来学习 JavaScript，你应该看看这个为初学者准备的 <https://javarevisited.blogspot.com/2019/11/top-5-courses-to-learn-c-programming-in.html> [**我最喜欢的免费 JavaScript 课程**](/javarevisited/my-favorite-free-tutorials-and-courses-to-learn-javascript-8f4d0a71faf2) 列表。
+而且，如果你需要更多的资源来学习 JavaScript，你应该看看这个为初学者准备的 [**我最喜欢的免费 JavaScript 课程**](/javarevisited/my-favorite-free-tutorials-and-courses-to-learn-javascript-8f4d0a71faf2) 列表。
 
-以上是关于在教育平台上学习 Python、Java、C++和 JavaScript 的一些免费编程课程。这是一个很棒的在线学习网站，我真的很喜欢他们的课程材料和互动教学风格。
+以上是关于在教育平台上学习 Python、Java、C++ 和 JavaScript 的一些免费编程课程。这是一个很棒的在线学习网站，我真的很喜欢他们的课程材料和互动教学风格。
 
-这不是一个视频，但你仍然可以通过做中学到很多东西，阅读总是比看视频更快，如果你喜欢从 Educative 的互动课程中学习，我强烈建议你参加 [**Educative 订阅**](https://www.educative.io/subscription?affiliate_id=5073518643380224) ，每月只需**18 美元**。
+这不是一个视频，但你仍然可以通过做中学到很多东西，阅读总是比看视频更快，如果你喜欢从 Educative 的互动课程中学习，我强烈建议你参加 [**Educative 订阅**](https://www.educative.io/subscription?affiliate_id=5073518643380224)，每月只需 **18 美元**。
 
 这对提高你的技能是一项巨大的投资。你会比看视频教程学得快一倍。非常感谢[教育团队](https://medium.com/u/163aa84775f6?source=post_page-----713cbf96d4eb--------------------------------)创建了这个令人敬畏的在线培训平台并提供这些免费的编程课程。
 
@@ -188,29 +191,29 @@ Ruby 是一种智能的、易于使用的、功能性的、[面向对象的编�
 
 其他对开发者有用的免费编程资源
 
-*   [学习 SQL 的免费课程](http://www.java67.com/2018/02/5-free-database-and-sql-query-courses-programmers.html)
-*   [学习 Python 的免费课程](https://hackernoon.com/10-free-python-programming-courses-for-beginners-to-learn-online-38312f3b9912)
-*   [学习算法的免费课程](https://hackernoon.com/10-free-data-structure-and-algorithm-courses-junior-developers-should-explore-978b72871af5)
-*   [免费学习 C++](https://hackernoon.com/top-5-free-c-courses-to-learn-programming-in-2019-d27352277da0)
-*   [学习 Linux 的免费课程](http://www.java67.com/2018/02/5-free-linux-unix-courses-for-programmers-learn-online.html)
-*   [学习区块链的免费课程](http://www.java67.com/2018/02/5-free-blockchain-technology-courses.html)
-*   [学习网页开发的免费课程](http://www.java67.com/2018/03/top-5-free-courses-to-learn-web-development.html)
-*   [学习 JavaScript 的免费课程](http://www.java67.com/2018/04/top-5-free-javascript-courses-to-learn.html)
-*   [免费学习棱角分明的课程](http://www.java67.com/2018/01/top-5-free-angular-js-online-courses-for-web-developers.html)
-*   [学习 React JS 的免费课程](http://www.java67.com/2018/02/5-free-react-courses-for-web-developers.html)
-*   [学习 OOP 的免费课程](http://www.java67.com/2018/02/5-free-object-oriented-programming-online-courses.html)
-*   [学习 Java 的免费课程](http://www.java67.com/2018/08/top-10-free-java-courses-for-beginners-experienced-developers.html)
-*   [学习 HTML 和 CSS 的免费课程](http://www.java67.com/2018/02/5-free-html-and-css-courses-to-learn-web-development.html)
-*   [学习数据结构和算法的免费课程](http://www.java67.com/2019/02/top-10-free-algorithms-and-data.html)
-*   [学习 Nodejs 的免费课程](https://www.java67.com/2019/07/top-5-free-nodejs-courses-for-web-development.html)
-*   [学习 Git 和 Github 的免费课程](https://javarevisited.blogspot.com/2018/01/5-free-git-courses-for-programmers-to-learn-online.html)
-*   [学习 Bash 的免费课程](https://www.java67.com/2019/04/top-5-free-course-to-learn-bash-shell-scripting-linux.html)
-*   [我最喜欢的免费课程学习 TypeScript](/javarevisited/top-10-free-typescript-courses-to-learn-online-best-of-lot-44bce9da41d1)
-*   [13 门面向初学者的免费 JavaScript 课程](/javarevisited/12-free-courses-to-learn-javascript-and-es6-for-beginners-and-experienced-developers-aa35874c9a32)
-*   [面向开发者的 7 门免费区块链课程](/javarevisited/7-free-courses-to-learn-blockchain-in-2020-764e66b47ebe)
+* [学习 SQL 的免费课程](http://www.java67.com/2018/02/5-free-database-and-sql-query-courses-programmers.html)
+* [学习 Python 的免费课程](https://hackernoon.com/10-free-python-programming-courses-for-beginners-to-learn-online-38312f3b9912)
+* [学习算法的免费课程](https://hackernoon.com/10-free-data-structure-and-algorithm-courses-junior-developers-should-explore-978b72871af5)
+* [免费学习 C++](https://hackernoon.com/top-5-free-c-courses-to-learn-programming-in-2019-d27352277da0)
+* [学习 Linux 的免费课程](http://www.java67.com/2018/02/5-free-linux-unix-courses-for-programmers-learn-online.html)
+* [学习区块链的免费课程](http://www.java67.com/2018/02/5-free-blockchain-technology-courses.html)
+* [学习网页开发的免费课程](http://www.java67.com/2018/03/top-5-free-courses-to-learn-web-development.html)
+* [学习 JavaScript 的免费课程](http://www.java67.com/2018/04/top-5-free-javascript-courses-to-learn.html)
+* [免费学习棱角分明的课程](http://www.java67.com/2018/01/top-5-free-angular-js-online-courses-for-web-developers.html)
+* [学习 React JS 的免费课程](http://www.java67.com/2018/02/5-free-react-courses-for-web-developers.html)
+* [学习 OOP 的免费课程](http://www.java67.com/2018/02/5-free-object-oriented-programming-online-courses.html)
+* [学习 Java 的免费课程](http://www.java67.com/2018/08/top-10-free-java-courses-for-beginners-experienced-developers.html)
+* [学习 HTML 和 CSS 的免费课程](http://www.java67.com/2018/02/5-free-html-and-css-courses-to-learn-web-development.html)
+* [学习数据结构和算法的免费课程](http://www.java67.com/2019/02/top-10-free-algorithms-and-data.html)
+* [学习 Nodejs 的免费课程](https://www.java67.com/2019/07/top-5-free-nodejs-courses-for-web-development.html)
+* [学习 Git 和 Github 的免费课程](https://javarevisited.blogspot.com/2018/01/5-free-git-courses-for-programmers-to-learn-online.html)
+* [学习 Bash 的免费课程](https://www.java67.com/2019/04/top-5-free-course-to-learn-bash-shell-scripting-linux.html)
+* [我最喜欢的免费课程学习 TypeScript](/javarevisited/top-10-free-typescript-courses-to-learn-online-best-of-lot-44bce9da41d1)
+* [13 门面向初学者的免费 JavaScript 课程](/javarevisited/12-free-courses-to-learn-javascript-and-es6-for-beginners-and-experienced-developers-aa35874c9a32)
+* [面向开发者的 7 门免费区块链课程](/javarevisited/7-free-courses-to-learn-blockchain-in-2020-764e66b47ebe)
 
 感谢您阅读本文。如果你喜欢这些来自 Educative 的免费编程课程，那么请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
 **P. S. —** 如果你正在寻找一个最佳教育课程的列表，那么你也可以看看我的关于 [**10 个程序员最佳教育课程**](https://javarevisited.blogspot.com/2020/05/top-10-educative-courses-for-programmers.html) 的帖子，里面有很多资源可以找到优质的免费编程资源，比如书籍和课程。
 
-<https://www.educative.io/collection/5668639101419520/5649050225344512?affiliate_id=5073518643380224> 
+<https://www.educative.io/collection/5668639101419520/5649050225344512?affiliate_id=5073518643380224>

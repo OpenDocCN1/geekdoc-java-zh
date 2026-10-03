@@ -1,3 +1,4 @@
+
 # Java 15 有什么值得期待的
 
 > 原文：<https://medium.com/javarevisited/what-to-expect-in-java-15-a62d0033beb9?source=collection_archive---------1----------------------->
@@ -10,7 +11,7 @@
 
 3 月 17 日发布的 Java 14 有一些重要的改进。按照为 Java 设定的 6 个月发布周期，Java 14 将在 8 月被 Java 15 取代。Java 15 也将像 Java 14 一样成为 Java 的一个特性版本，而不是一个长期支持(LTS)版本。当前的 LTS 版本是 Java 11，有望在 2021 年被 Java 17 LTS 版本取代。
 
-截至 7 月 16 日，Java 15 正处于第二阶段。这意味着整个特性集被冻结了，在这个版本中不会再有新的 jep 了。因此，根据 [OpenJDK 网站](https://openjdk.java.net/projects/jdk/15/)的消息，以下是 Java 15 将推出的预期特性。
+截至 7 月 16 日，Java 15 正处于第二阶段。这意味着整个特性集被冻结了，在这个版本中不会再有新的 JEP 了。因此，根据 [OpenJDK 网站](https://openjdk.java.net/projects/jdk/15/)的消息，以下是 Java 15 将推出的预期特性。
 
 *   [爱德华兹曲线数字签名算法(EdDSA)](https://openjdk.java.net/jeps/339)
 *   [密封类(预览)](https://openjdk.java.net/jeps/360)
@@ -31,7 +32,7 @@
 
 ## JEP 339:爱德华曲线数字签名算法(EdDSA)
 
-EdDSA 是一个数字签名系统，它是 Schnorr 的带有 Edwards 曲线的签名系统的变体。你可以在这里了解更多关于[的信息。Java 15 提供了这种签名方案，它优于 JDK 中现有的签名方案。](https://tools.ietf.org/html/rfc8032)
+EdDSA 是一个数字签名系统，它是 Schnorr 的带有 Edwards 曲线的签名系统的变体。你可以在这里了解更多关于[的信息](https://tools.ietf.org/html/rfc8032)。Java 15 提供了这种签名方案，它优于 JDK 中现有的签名方案。
 
 Java 增强建议(JEP)主要旨在实现 RFC 8032 中标准化的该方案，并开发与平台无关的 EdDSA 实现，其性能优于现有的 ECDSA 实现，并确保定时独立于所使用的秘密。
 
@@ -71,17 +72,17 @@ public sealed class Shape
 
 Java 15 引入了不能被其他类的字节码直接使用的类。这些类旨在供在运行时生成类并通过反射间接使用它们的框架使用。
 
-该 JEP 的主要目标包括允许框架将类定义为框架的不可发现的实现细节，以便它们不能被其他类链接，也不能通过反射被发现，支持主动卸载不可发现的类，并反对非标准 API，*misc . Unsafe::define anonymous class。*
+该 JEP 的主要目标包括允许框架将类定义为框架的不可发现的实现细节，以便它们不能被其他类链接，也不能通过反射被发现，支持主动卸载不可发现的类，并反对非标准 API，`misc.Unsafe::defineAnonymousClass`。
 
 ## JEP 373:重新实现传统的 DatagramSocket API
 
-*java.net.DatagramSocket* 和*Java . net . multicast socket*API 的代码库都非常陈旧脆弱。这些 API 可以追溯到 JDK 1.0，它们是遗留 Java 和 C 代码的混合，现在很难维护。并且多播套接字也是在 IPv6 开发时实现的。因此，它不太支持 IPv6。此外，他们有一些并发问题，由于这些原因，这些实现将被更简单、更现代、更易于维护和调试的实现所取代。
+`java.net.DatagramSocket`和`java.net.MulticastSocket`API 的代码库都非常陈旧脆弱。这些 API 可以追溯到 JDK 1.0，它们是遗留 Java 和 C 代码的混合，现在很难维护。并且多播套接字也是在 IPv6 开发时实现的。因此，它不太支持 IPv6。此外，他们有一些并发问题，由于这些原因，这些实现将被更简单、更现代、更易于维护和调试的实现所取代。
 
 ## JEP 378:文本块
 
 文本块是一种多行字符串文字，可以避免使用转义序列。从 Java 12 延续到 Java 13 和 14，有很多关于多行字符串的实验。现在它正在成为 Java 15 中的一个永久特性。这样，表达跨越几行的字符串就非常容易使用，并且可读性也得到提高。现在，程序员可以轻松地将 HTML、XML、SQL 或 JSON 的片段嵌入到字符串文字中，这在以前需要使用连接和转义序列进行大量编辑。
 
-文本块可以用三个”字符创建，也可以用同样的三个”字符结束。以下是摘自 [OpenJDK 网站的一个例子。](https://openjdk.java.net/jeps/378)
+文本块可以用三个`"`字符创建，也可以用同样的三个`"`字符结束。以下是摘自 [OpenJDK 网站](https://openjdk.java.net/jeps/378)的一个例子。
 
 ```
 String query = """
@@ -95,7 +96,7 @@ String query = """
 
 偏向锁定是 HotSpot 虚拟机中使用的一种优化技术，用于减少无竞争锁定的开销。但是随着现代先进计算机的发展，偏向锁的好处变得不那么重要了，因此 Java 15 中禁用了偏向锁。
 
-但是由于一些 Java 应用程序可能会在禁用偏置锁定的情况下出现性能下降，程序员可以通过在命令行中设置 *XX:+UseBiasedLocking* 来重新启用这种情况。
+但是由于一些 Java 应用程序可能会在禁用偏置锁定的情况下出现性能下降，程序员可以通过在命令行中设置`XX:+UseBiasedLocking`来重新启用这种情况。
 
 ## JEP 377 和 JEP 379:垃圾收集者
 
@@ -121,7 +122,7 @@ if (obj instanceof String s) {
 
 ## JEP 383:外部内存访问 API(第二个孵化器)
 
-这个 API 已经作为 Java 14 中的孵化模块交付了。孵化特性是实验性的 API，以独立模块的形式发布，名称以“jdk.incubator”为前缀。
+这个 API 已经作为 Java 14 中的孵化模块交付了。孵化特性是实验性的 API，以独立模块的形式发布，名称以`jdk.incubator`为前缀。
 
 这个 API 允许 Java 程序安全有效地访问 Java 堆外的内存，重点是提供通用性、安全性、确定性和可用性。
 

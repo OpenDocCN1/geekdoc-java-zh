@@ -1,19 +1,20 @@
+
 # Struts 2 bean 标记示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts2/struts-2-bean-tag-example/>
 
 Download It – [Struts2-Bean-Tag-Example.zip](http://web.archive.org/web/20190225125854/http://www.mkyong.com/wp-content/uploads/2010/07/Struts2-Bean-Tag-Example.zip)
 
-Struts 2 " **bean** "标签用于在 JSP 页面中实例化一个类。在本教程中，您将使用“ **bean** ”标记实例化一个名为“ **HelloBean** ”的类，通过“ **param** ”元素设置其属性并打印出值。
+Struts 2 "`bean`"标签用于在 JSP 页面中实例化一个类。在本教程中，您将使用"`bean`"标记实例化一个名为"`HelloBean`"的类，通过"`param`"元素设置其属性并打印出值。
 
-## 1.简单豆
+## 1. 简单豆
 
-一个简单的类，稍后使用 **bean** 标签来实例化它。
+一个简单的类，稍后使用`bean`标签来实例化它。
 
-**地狱篇. java**
+**HelloBean.java**
 
 ```java
- package com.mkyong.common.action;
+package com.mkyong.common.action;
 
 public class HelloBean{
 
@@ -27,17 +28,17 @@ public class HelloBean{
 		this.msg = msg;
 	}
 
-} 
+}
 ```
 
- ## 2.行动
+## 2. 动作
 
 转发请求的操作类。
 
 **BeanTagAction.java**
 
 ```java
- package com.mkyong.common.action;
+package com.mkyong.common.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -47,20 +48,20 @@ public class BeanTagAction extends ActionSupport{
 		return SUCCESS;
 	}
 
-} 
+}
 ```
 
- ## 2.Bean 标记示例
+## 3. Bean 标记示例
 
-一个 JSP 页面，展示了如何使用“ **bean** ”标记实例化“ **HelloBean** ”。
+一个 JSP 页面，展示了如何使用"`bean`"标记实例化"`HelloBean`"。
 
-In “**bean**” tag, you can assign a name to the bean via a “**var**” attribute, later you can access the bean via **#var_bean_name** , or its property value via **#var_bean_name.property**.
+在"`bean`"标签中，您可以通过"`var`"属性为 bean 分配一个名称，之后您可以通过`#var_bean_name`访问该 bean，或通过`#var_bean_name.property`访问其属性值。
 
 **bean.jsp**
 
 ```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
- <html>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<html>
 <head>
 </head>
 
@@ -74,15 +75,15 @@ In “**bean**” tag, you can assign a name to the bean via a “**var**” att
 The HelloBean's msg property value : <s:property value="#hello.msg"/>
 
 </body>
-</html> 
+</html>
 ```
 
-## 3.struts.xml
+## 4. struts.xml
 
 链接一下~
 
 ```java
- <?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
@@ -97,12 +98,12 @@ The HelloBean's msg property value : <s:property value="#hello.msg"/>
 	</action>
 
     </package>
-</struts> 
+</struts>
 ```
 
-## 4.演示
+## 5. 演示
 
-*http://localhost:8080/struts 2 example/bean tag action . action*
+*http://localhost:8080/struts2example/beanTagAction.action*
 
 **输出**
 
@@ -110,13 +111,6 @@ The HelloBean's msg property value : <s:property value="#hello.msg"/>
 
 ## 参考
 
-1.  [Struts 2 Bean 标签文档](http://web.archive.org/web/20190225125854/http://struts.apache.org/2.0.14/docs/bean.html)
+1. [Struts 2 Bean 标签文档](http://web.archive.org/web/20190225125854/http://struts.apache.org/2.0.14/docs/bean.html)
 
 [struts2](http://web.archive.org/web/20190225125854/http://www.mkyong.com/tag/struts2/)
-
-
-
-
-
-
-

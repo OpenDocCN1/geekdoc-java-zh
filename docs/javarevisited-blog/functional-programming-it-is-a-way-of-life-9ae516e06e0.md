@@ -1,8 +1,9 @@
+
 # 函数式编程——它是一种生活方式
 
 > 原文：<https://medium.com/javarevisited/functional-programming-it-is-a-way-of-life-9ae516e06e0?source=collection_archive---------2----------------------->
 
-## 函数式编程的主要方面是什么？和我们平常的哎呀有什么不同？
+## 函数式编程的主要方面是什么？和我们平常的 OOPS 有什么不同？
 
 ![](img/43f535edf729ac23167286012cc3c7ea.png)
 

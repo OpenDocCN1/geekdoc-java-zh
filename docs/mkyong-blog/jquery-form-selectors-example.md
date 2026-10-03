@@ -1,199 +1,200 @@
+
 # jQuery 表单选择器示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jquery/jquery-form-selectors-example/>
 
 jQuery 附带了许多表单选择器，可以更容易、更有效地访问表单元素。下面是一个简单的 jQuery 表单选择器参考。
 
-## 1\. TextBox – $(‘input:text’)
+## 1. TextBox – `$('input:text')`
 
 选择文本框
 
 ```java
- $('input:text'); 
+$('input:text');
 ```
 
 获取文本框值
 
 ```java
- $('input:text').val(); 
+$('input:text').val();
 ```
 
 设置文本框值
 
 ```java
- $('input:text').val("New Text"); 
+$('input:text').val("New Text");
 ```
 
- ## 2.密码-$('输入:密码')
+## 2. 密码 – `$('input:password')`
 
 要选择密码
 
 ```java
- $('input:password'); 
+$('input:password');
 ```
 
 获取密码值
 
 ```java
- $('input:password').val(); 
+$('input:password').val();
 ```
 
 要设置密码值
 
 ```java
- $('input:text').val("New Text"); 
+$('input:text').val("New Text");
 ```
 
- ## 3.textarea-$(' textarea ')
+## 3. textarea – `$('textarea')`
 
 要选择文本区域
 
 ```java
- $('textarea'); 
+$('textarea');
 ```
 
 获取 textarea 值
 
 ```java
- $('textarea').val(); 
+$('textarea').val();
 ```
 
 要设置 textarea 值
 
 ```java
- $('textarea').val("New Text in Textarea"); 
+$('textarea').val("New Text in Textarea");
 ```
 
-## 4.单选按钮-$('输入:单选')
+## 4. 单选按钮 – `$('input:radio')`
 
 要选择单选按钮
 
 ```java
- $('input:radio'); 
+$('input:radio');
 ```
 
 获取选中的单选按钮选项
 
 ```java
- $('input:radio[name=radiobutton-name]:checked').val(); 
+$('input:radio[name=radiobutton-name]:checked').val();
 ```
 
 选择第一个单选按钮选项
 
 ```java
- $('input:radio[name=radiobutton-name]:nth(0)').attr('checked',true);
+$('input:radio[name=radiobutton-name]:nth(0)').attr('checked',true);
 or
-$('input:radio[name=radiobutton-name]')[0].checked = true; 
+$('input:radio[name=radiobutton-name]')[0].checked = true;
 ```
 
 [更多详情…](http://web.archive.org/web/20190227163628/http://www.mkyong.com/jquery/how-to-select-a-radio-button-with-jquery/)
 
-## 5.复选框-$('输入:复选框')
+## 5. 复选框 – `$('input:checkbox')`
 
 要选择复选框
 
 ```java
- $('input:checkbox'); 
+$('input:checkbox');
 ```
 
 检查复选框是否被选中
 
 ```java
- $('input:checkbox[name=checkboxname]').is(':checked'); 
+$('input:checkbox[name=checkboxname]').is(':checked');
 ```
 
 要选中复选框
 
 ```java
- $('input:checkbox[name=checkboxname]').attr('checked',true); 
+$('input:checkbox[name=checkboxname]').attr('checked',true);
 ```
 
 取消选中复选框
 
 ```java
- $('input:checkbox[name=checkboxname]').attr('checked',false); 
+$('input:checkbox[name=checkboxname]').attr('checked',false);
 ```
 
 [更多详情…](http://web.archive.org/web/20190227163628/http://www.mkyong.com/jquery/how-to-select-a-radio-button-with-jquery/)
 
-## 6.上传文件-$('输入:文件')
+## 6. 上传文件 – `$('input:file')`
 
 要选择文件
 
 ```java
- $('input:file'); 
+$('input:file');
 ```
 
 获取文件值
 
 ```java
- $('input:file').val(); 
+$('input:file').val();
 ```
 
-## 7.隐藏值–$('输入:隐藏')
+## 7. 隐藏值 – `$('input:hidden')`
 
 要选择隐藏值
 
 ```java
- $('input:hidden'); 
+$('input:hidden');
 ```
 
 为了得到隐藏的值
 
 ```java
- $('input:hidden').val(); 
+$('input:hidden').val();
 ```
 
 要设置隐藏值
 
 ```java
- $('input:hidden').val("New Text"); 
+$('input:hidden').val("New Text");
 ```
 
-## 8.选择(下拉框)–$('选择')
+## 8. 选择（下拉框）– `$('select')`
 
 选择下拉框
 
 ```java
- $('select')
+$('select')
 or
-$('#dropdown-id') 
+$('#dropdown-id')
 ```
 
 获取选定的下拉框值
 
 ```java
- $('#dropdown-id').val(); 
+$('#dropdown-id').val();
 ```
 
 将下拉框值设置为“中国”
 
 ```java
- $("#dropdown-id").val("China"); 
+$("#dropdown-id").val("China");
 ```
 
 [更多详情…](http://web.archive.org/web/20190227163628/http://www.mkyong.com/jquery/how-to-set-a-dropdown-box-value-in-jquery/)
 
-## 9.提交按钮-$('输入:提交')
+## 9. 提交按钮 – `$('input:submit')`
 
 要选择提交按钮
 
 ```java
- $('input:submit'); 
+$('input:submit');
 ```
 
-## 10.重置按钮-$('输入:重置')
+## 10. 重置按钮 – `$('input:reset')`
 
 要选择复位按钮
 
 ```java
- $('input:reset'); 
+$('input:reset');
 ```
 
 ## jQuery 表单选择器
 
-```java
- <html>
+```html
+<html>
 <head>
 <title>jQuery form selector example</title>
 
@@ -290,16 +291,9 @@ $('#dropdown-id')
 </script>
 
 </body>
-</html> 
+</html>
 ```
 
 [http://web.archive.org/web/20190227163628if_/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-form-selector.html](http://web.archive.org/web/20190227163628if_/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-form-selector.html)
 
-[Try Demo](http://web.archive.org/web/20190227163628/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-form-selector.html)[jquery](http://web.archive.org/web/20190227163628/http://www.mkyong.com/tag/jquery/) [jquery selector](http://web.archive.org/web/20190227163628/http://www.mkyong.com/tag/jquery-selector/)
-
-
-
-
-
-
-
+[Try Demo](http://web.archive.org/web/20190227163628/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-form-selector.html) [jquery](http://web.archive.org/web/20190227163628/http://www.mkyong.com/tag/jquery/) [jquery selector](http://web.archive.org/web/20190227163628/http://www.mkyong.com/tag/jquery-selector/)

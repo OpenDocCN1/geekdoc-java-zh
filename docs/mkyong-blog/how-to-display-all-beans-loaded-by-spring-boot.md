@@ -1,15 +1,16 @@
-# 如何显示 Spring Boot 加载的所有 beans
+
+# 如何显示 Spring Boot 加载的所有 Beans
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/how-to-display-all-beans-loaded-by-spring-boot/>
 
-在 Spring Boot，您可以使用`appContext.getBeanDefinitionNames()`来获取 Spring 容器装载的所有 beans。
+在 Spring Boot 中，您可以使用`appContext.getBeanDefinitionNames()`来获取 Spring 容器装载的所有 Beans。
 
-## 1.CommandLineRunner 作为接口
+## 1. `CommandLineRunner` 作为接口
 
-Application.java
+### `Application.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -40,15 +41,15 @@ public class Application implements CommandLineRunner {
 
     }
 
-} 
+}
 ```
 
-输出
+### 输出
 
-Console.java
+#### `Console.java`
 
 ```java
- application
+application
 customerRepository
 customerRepositoryImpl
 dataSource
@@ -61,17 +62,17 @@ entityManagerFactoryBuilder
 hikariPoolDataSourceMetadataProvider
 jdbcTemplate
 jpaContext
-//... 
+//...
 ```
 
- ## 2.作为 Bean 的 CommandLineRunner
+## 2. 作为 Bean 的 `CommandLineRunner`
 
-只是打印加载的 beans 的方式不同。
+只是打印加载的 Beans 的方式不同。
 
-Application.java
+### `Application.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -98,19 +99,12 @@ public class Application {
         };
     }
 
-} 
+}
 ```
 
- ## 参考
+## 参考
 
-1.  [命令行运行程序 JavaDoc](http://web.archive.org/web/20190225100502/http://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/CommandLineRunner.html)
-2.  [Spring Boot 非 web 应用实例](http://web.archive.org/web/20190225100502/http://www.mkyong.com/spring-boot/spring-boot-non-web-application-example/)
-
-[application context](http://web.archive.org/web/20190225100502/http://www.mkyong.com/tag/application-context/) [spring boot](http://web.archive.org/web/20190225100502/http://www.mkyong.com/tag/spring-boot/)
-
-
-
-
-
-
-
+1. [命令行运行程序 JavaDoc](http://web.archive.org/web/20190225100502/http://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/CommandLineRunner.html)
+2. [Spring Boot 非 Web 应用实例](http://web.archive.org/web/20190225100502/http://www.mkyong.com/spring-boot/spring-boot-non-web-application-example/)
+3. [Application Context](http://web.archive.org/web/20190225100502/http://www.mkyong.com/tag/application-context/)
+4. [Spring Boot](http://web.archive.org/web/20190225100502/http://www.mkyong.com/tag/spring-boot/)

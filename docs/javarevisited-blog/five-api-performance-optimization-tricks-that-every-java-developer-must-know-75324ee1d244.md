@@ -1,3 +1,4 @@
+
 # 每个 Java 开发人员都必须知道的五个 API 性能优化技巧
 
 > 原文：<https://medium.com/javarevisited/five-api-performance-optimization-tricks-that-every-java-developer-must-know-75324ee1d244?source=collection_archive---------1----------------------->

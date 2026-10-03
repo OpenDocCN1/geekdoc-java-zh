@@ -1,4 +1,5 @@
-# Python 基础知识-4:函数，使用函数，类，使用类，继承
+
+# Python 基础知识-4：函数，使用函数，类，使用类，继承
 
 > 原文：<https://medium.com/javarevisited/python-basics-4-functions-working-with-functions-classes-working-with-class-inheritance-70e0338c1b2e?source=collection_archive---------2----------------------->
 

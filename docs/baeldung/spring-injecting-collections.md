@@ -1,14 +1,15 @@
+
 # 春季注入系列
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-injecting-collections>
 
-## 1。简介
+## 1. 简介
 
 在本教程中，我们将展示如何使用 Spring 框架来**注入`Java`集合。**
 
-简单地说，我们将用`List, Map, Set`集合接口来演示例子。
+简单地说，我们将用`List`、`Map`、`Set`集合接口来演示例子。
 
-## 2。`List`同`@Autowired`
+## 2. `List`同`@Autowired`
 
 让我们创建一个示例 bean:
 
@@ -26,11 +27,11 @@ public class CollectionsBean {
 
 这里，我们声明了`nameList`属性来保存`String`值的`List`。
 
-**在这个例子中，我们对`nameList`使用场注入。因此，我们把`@Autowired`标注为**。
+**在这个例子中，我们对`nameList`使用场注入。因此，我们把`@Autowired`标注为`@Autowired`。**
 
 要了解更多关于依赖注入或实现它的不同方法，请查看本[指南](/web/20221126224914/https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring)。
 
-之后，我们在配置设置类中注册`CollectionsBean `:
+之后，我们在配置设置类中注册`CollectionsBean`:
 
 ```java
 @Configuration
@@ -59,15 +60,15 @@ CollectionsBean collectionsBean = context.getBean(
 collectionsBean.printNameList();
 ```
 
-printNameList()方法的输出:
+`printNameList()`方法的输出:
 
 ```java
 [John, Adam, Harry]
 ```
 
-## 3。`Set`用构造函数注入
+## 3. `Set`用构造函数注入
 
-要用`Set`集合设置相同的示例，让我们修改`CollectionsBean `类:
+要用`Set`集合设置相同的示例，让我们修改`CollectionsBean`类:
 
 ```java
 public class CollectionsBean {
@@ -93,9 +94,9 @@ public CollectionsBean getCollectionsBean() {
 }
 ```
 
-## 4。`Map`用二传手注射
+## 4. `Map`用二传手注射
 
-按照同样的逻辑，让我们添加` nameMap`字段来演示 map 注入:
+按照同样的逻辑，让我们添加`nameMap`字段来演示 map 注入:
 
 ```java
 public class CollectionsBean {
@@ -132,7 +133,7 @@ public Map<Integer, String> nameMap(){
 {1=John, 2=Adam, 3=Harry}
 ```
 
-## 5。注入 Bean 引用
+## 5. 注入 Bean 引用
 
 让我们看一个例子，在这个例子中，我们注入 bean 引用作为集合的元素。
 
@@ -147,7 +148,7 @@ public class BaeldungBean {
 }
 ```
 
-并将`BaeldungBean`的一个`List`作为属性添加到`CollectionsBean `类:
+并将`BaeldungBean`的一个`List`作为属性添加到`CollectionsBean`类:
 
 ```java
 public class CollectionsBean {
@@ -198,14 +199,14 @@ public class CollectionConfig {
 
 我们可以使用`@Autowired(required = false)`将依赖关系标记为可选的。不抛出异常，`beanList`不会被初始化，它的值将保持`null`。
 
-如果我们需要一个空列表来代替`null,`，我们可以用一个新的`ArrayList:`来初始化`beanList`
+如果我们需要一个空列表来代替`null`，我们可以用一个新的`ArrayList`来初始化`beanList`:
 
 ```java
 @Autowired(required = false)
 private List<BaeldungBean> beanList = new ArrayList<>();
 ```
 
-### 5.1。使用`@Order`分类豆子
+### 5.1 使用`@Order`分类豆子
 
 **我们可以在注入集合**时指定 beans 的顺序。
 
@@ -235,9 +236,9 @@ public class CollectionConfig {
 }
 ```
 
-**Spring 容器首先将注入名为`“Harry”`** 的 bean，因为它具有最低的顺序值。
+**Spring 容器首先将注入名为`Harry`** 的 bean，因为它具有最低的顺序值。
 
-然后，它将注入`“John”,`，最后是`“Adam”` bean:
+然后，它将注入`John`，最后是`Adam` bean:
 
 ```java
 [Harry, John, Adam]
@@ -245,7 +246,7 @@ public class CollectionConfig {
 
 在[指南](/web/20221126224914/https://www.baeldung.com/spring-order)中了解更多关于`@Order`的信息。
 
-### 5.2。使用`@Qualifier`选择豆子
+### 5.2 使用`@Qualifier`选择豆子
 
 **我们可以使用`@Qualifier`来选择要注入到与`@Qualifier`名称匹配的特定集合中的 beans。**
 
@@ -283,7 +284,7 @@ public class CollectionConfig {
 }
 ```
 
-在这个例子中，我们指定名为*“约翰”*的 bean 将被注入到名为`“CollectionsBean”`的`List`中。我们在这里测试的结果是:
+在这个例子中，我们指定名为`John`的 bean 将被注入到名为`CollectionsBean`的`List`中。我们在这里测试的结果是:
 
 ```java
 ApplicationContext context = new AnnotationConfigApplicationContext(CollectionConfig.class);
@@ -297,7 +298,7 @@ collectionsBean.printBeanList();
 [John]
 ```
 
-## 6。将空列表设置为默认值
+## 6. 将空列表设置为默认值
 
 我们可以通过使用`Collections.emptyList()`静态方法将注入列表属性的默认值设置为空列表:
 
@@ -313,7 +314,7 @@ public class CollectionsBean {
 }
 ```
 
-如果我们使用未通过属性文件初始化的“names.list”键运行此命令:
+如果我们使用未通过属性文件初始化的`names.list`键运行此命令:
 
 ```java
 collectionsBean.printNameListWithDefaults();
@@ -325,7 +326,7 @@ collectionsBean.printNameListWithDefaults();
 [ ]
 ```
 
-## 7。总结
+## 7. 总结
 
 通过这篇指南，我们学习了如何使用 Spring 框架注入不同类型的 Java 集合。
 

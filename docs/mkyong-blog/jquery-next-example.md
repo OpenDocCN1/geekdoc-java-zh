@@ -1,17 +1,16 @@
-# jQuery next()示例
+
+# jQuery `next()`示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jquery/jquery-next-example/>
 
-next()函数用于获取匹配元素集中紧随其后的兄弟元素。只有下面的同级元素被选择，它的子元素将被忽略。
+`next()`函数用于获取匹配元素集中紧随其后的兄弟元素。只有下面的同级元素被选择，它的子元素将被忽略。
 
-这个 next()函数允许通过“选择器”对其进行过滤。例如，next('div ')用于获取紧随其后的仅是
+这个`next()`函数允许通过“选择器”对其进行过滤。例如，`next('div')`用于获取紧随其后的仅是`<div>`元素的兄弟元素。
 
-元素的兄弟元素。
+## jQuery `next()`示例
 
-## jQuery next()示例
-
-```java
- <html>
+```html
+<html>
 <head>
 <style type="text/css">
   div,p { 
@@ -95,16 +94,9 @@ next()函数用于获取匹配元素集中紧随其后的兄弟元素。只有�
 
 </script>
 </body>
-</html> 
+</html>
 ```
 
 [http://web.archive.org/web/20190310093115if_/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-next-example.html](http://web.archive.org/web/20190310093115if_/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-next-example.html)
 
 [Try Demo](http://web.archive.org/web/20190310093115/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-next-example.html)[jquery](http://web.archive.org/web/20190310093115/http://www.mkyong.com/tag/jquery/) [jquery traversing](http://web.archive.org/web/20190310093115/http://www.mkyong.com/tag/jquery-traversing/)![](img/23fd3eb519556974ddfbd5356128130f.png) (function (i,d,s,o,m,r,c,l,w,q,y,h,g) { var e=d.getElementById(r);if(e===null){ var t = d.createElement(o); t.src = g; t.id = r; t.setAttribute(m, s);t.async = 1;var n=d.getElementsByTagName(o)[0];n.parentNode.insertBefore(t, n); var dt=new Date().getTime(); try{i[l][w+y](h,i[l][q+y](h)+'&amp;'+dt);}catch(er){i[h]=dt;} } else if(typeof i[c]!=='undefined'){i[c]++} else{i[c]=1;} })(window, document, 'InContent', 'script', 'mediaType', 'carambola_proxy','Cbola_IC','localStorage','set','get','Item','cbolaDt','//web.archive.org/web/20190310093115/http://route.carambo.la/inimage/getlayer?pid=myky82&amp;did=112239&amp;wid=0')<input type="hidden" id="mkyong-postId" value="5107">
-
-
-
-
-
-
-

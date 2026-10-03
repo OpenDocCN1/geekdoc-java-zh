@@ -1,3 +1,4 @@
+
 # 为什么选择 StAX？
 
 > 原文：[`docs.oracle.com/javase/tutorial/jaxp/stax/why.html`](https://docs.oracle.com/javase/tutorial/jaxp/stax/why.html)
@@ -83,12 +84,21 @@ StAX 规范定义了 API 的许多用例：
 XML 解析器 API 特性摘要
 
 | 特性 | StAX | SAX | DOM | TrAX |
+
 | --- | --- | --- | --- | --- |
+
 | API 类型 | 拉取，流式 | 推送，流式 | 内存树 | XSLT 规则 |
+
 | 使用便捷性 | 高 | 中 | 高 | 中 |
+
 | XPath 能力 | 否 | 否 | 是 | 是 |
+
 | CPU 和内存效率 | 良好 | 良好 | 各异 | 各异 |
+
 | 仅向前 | 是 | 是 | 否 | 否 |
+
 | 读取 XML | 是 | 是 | 是 | 是 |
+
 | 写入 XML | 是 | 否 | 是 | 是 |
+
 | 创建，读取，更新，删除 | 否 | 否 | 是 | 否 |

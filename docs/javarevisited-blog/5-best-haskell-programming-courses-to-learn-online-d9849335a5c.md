@@ -1,3 +1,4 @@
+
 # 2023 年在线学习函数式编程的 5 门最佳 Haskell 课程
 
 > 原文：<https://medium.com/javarevisited/5-best-haskell-programming-courses-to-learn-online-d9849335a5c?source=collection_archive---------0----------------------->
@@ -8,7 +9,7 @@
 
 大家好，如果你想学习 Haskell，2023 年最好的函数式编程语言之一，并寻找最好的在线课程，那么你来对地方了。
 
-早些时候，我已经分享了 [**最好的 Scala 编程课程，**](https://javarevisited.blogspot.com/2020/09/top-5-courses-to-learn-scala.html) 另一种顶级函数式编程语言，在这篇文章中，我将分享来自 Udemy 和 Pluralsight 的最好的 Haskell 课程，这是学习编程和软件开发的两个最好的网站。
+早些时候，我已经分享了[**最好的 Scala 编程课程，**](https://javarevisited.blogspot.com/2020/09/top-5-courses-to-learn-scala.html) 另一种顶级函数式编程语言，在这篇文章中，我将分享来自 Udemy 和 Pluralsight 的最好的 Haskell 课程，这是学习编程和软件开发的两个最好的网站。
 
 这些是我找到的学习 Haskell 的最好资源，因为这也是我 2023 年的目标之一。但是，在学习 Haskell 之前，您需要了解什么是函数式编程。
 
@@ -149,17 +150,29 @@ Haskell 为开发人员提供了许多优势，如提高生产率、易于维护
 其他**资源**学习顶级编程语言:
 
 *   [2023 年学习 Java 编程的 5 门最佳课程](https://javarevisited.blogspot.com/2018/05/top-5-java-courses-for-beginners-to-learn-online.html)
+
 *   [初学者学习的 5 门最好的 Python 3 课程](https://javarevisited.blogspot.com/2018/03/top-5-courses-to-learn-python-in-2018.html)
+
 *   [2023 年初学者学习的 5 个最佳 Golang 课程](https://www.java67.com/2019/12/top-5-courses-to-learn-go-or-golang.html)
+
 *   [2023 年初学者学习的 10 门最佳 JavaScript 课程](https://www.java67.com/2020/10/best-javascript-courses-for.html)
+
 *   [2023 年学习 C 编程的前 5 门课程](https://javarevisited.blogspot.com/2019/11/top-5-courses-to-learn-c-programming-in.html)
+
 *   [我最喜欢的深入学习 C++的课程](https://javarevisited.blogspot.com/2020/07/top-10-courses-to-learn-c-in-depth-best.html)
+
 *   [10 个最适合初学者的 Ruby 在线课程](https://javarevisited.blogspot.com/2021/04/top-10-online-courses-to-learn-ruby-on.html)
+
 *   [2023 年初学 PHP 我最喜欢的课程](https://javarevisited.blogspot.com/2020/11/top-10-courses-to-learn-php-for.html)
+
 *   [初学者学习 C#的 10 门在线课程](https://javarevisited.blogspot.com/2019/11/top-5-courses-to-learn-c-sharp-in.html)
+
 *   [2023 年学习打字稿的前 5 门课程](https://javarevisited.blogspot.com/2018/07/top-5-courses-to-learn-typescript.html)
+
 *   [学习 Rust 编程的 5 门最佳在线课程](https://javarevisited.blogspot.com/2020/01/top-5-courses-and-books-to-learn-rust-programming-language.html#axzz6grO2U4Lp)
+
 *   [我最喜欢的学习 Julia 编程语言的课程](/javarevisited/top-5-julia-programming-books-courses-and-tutorials-for-beginners-e5b4bd7067ec)
+
 *   [5 门面向初学者的免费 Scala 开发课程](https://javarevisited.blogspot.com/2019/01/5-free-scala-programming-courses-for-java-programmers-learn-online.html)
 
 如果你喜欢这份*学习 Haskell 的 5 大课程列表，*请随意与你的朋友和家人分享。此外，如果您有任何疑问或问题，请留下您的评论，我们将立即回复您。

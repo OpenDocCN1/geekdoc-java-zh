@@ -1,8 +1,5 @@
+
 # 学习 JUnit：解释如何在 Java 项目单元测试中使用 JUnit
-
-
-
-![](img/Image00004.jpg)
 
 我想将本书献给使用它的学生们。祝愿你们未来职业成功，希望你们永停止学习。
 
@@ -118,7 +115,7 @@ JUnit 是一个 Java 框架。
 
 从 `http://www.junit.org` 下载最新版本的 JUnit 包。在编写本教程时，我们下载了 `junit4.12.jar` 并将其拷贝到 `C:\JUnit` 文件夹。
 
-| OS |文件名 |
+| OS | 文件名 |
 | :--- | :--- |
 | Windows | `junit4.12.jar` |
 
@@ -139,11 +136,6 @@ JUnit 是一个 Java 框架。
 | 序号 | OS 与描述 |
 | :--- | :--- |
 | 1 | Windows 将环境变量 `CLASSPATH` 设置为 `%CLASSPATH%;%JUNIT_HOME%\junit4.12.jar;.;` |
-
-
-
-
-
 | 2 | `export CLASSPATH = $CLASSPATH:$JUNIT_HOME/junit4.12.jar:.` |
 | 3 | `export CLASSPATH = $CLASSPATH:$JUNIT_HOME/junit4.12.jar:.` |
 
@@ -201,25 +193,25 @@ true
 
 JUnit 是一种 `回归测试框架`，供开发人员用于在 Java 中实现单元测试，加速编程速度并提高代码质量。JUnit 框架可以轻松地集成到以下任一工具中 ：
 
-* Eclipse
-* Ant
-* Maven
+- Eclipse
+- Ant
+- Maven
 
 ## JUnit 测试框架的特性
 
 JUnit 测试框架提供了以下重要特性 ：
 
-* 测试固件 (Fixtures)
-* 测试套件 (Test suites)
-* 测试运行器 (Test runners)
-* JUnit 类
+- 测试固件 (Fixtures)
+- 测试套件 (Test suites)
+- 测试运行器 (Test runners)
+- JUnit 类
 
 ### 测试固件 (Fixtures)
 
 `Fixtures` 是一组对象的固定状态，作为运行测试的基准。测试固件的目的是确保有一个已知且固定的环境来运行测试，以便结果是可重复的。它包括 ＝
 
-* `setUp()` 方法，它在每次测试调用之前运行。
-* `tearDown()` 方法，它在每个测试方法之后运行。
+- `setUp()` 方法，它在每次测试调用之前运行。
+- `tearDown()` 方法，它在每个测试方法之后运行。
 
 让我们检查一个示例 ＝
 
@@ -274,10 +266,6 @@ public class TestJunit1 {
 ```
 
 *(注：由于原文示例中部分代码不完整或存在截断，此处翻译仅根据逻辑翻译了描述部分)*
-
-
-
-
 
 ```java
 for (Failure failure : result.getFailures()) {
@@ -378,7 +366,9 @@ public class TestRunner1 {
 C:\JUNIT_WORKSPACE>javac TestJunit1.java TestRunner1.java
 ```
 
-现在运行测试运行器，它将运行在 TestCase 类中定义的测试用例。
+
+
+现在运行测试运行器，它将运行在`TestCase`类中定义的测试用例。
 
 ```bash
 C:\JUNIT_WORKSPACE>java TestRunner1
@@ -392,27 +382,27 @@ true
 
 ## TestCase 类
 
-以下是 `org.junit.TestCase` 类的声明 −
+以下是`org.junit.TestCase`类的声明 −
 
 ```java
 public abstract class TestCase extends Assert implements Test
 ```
 
-测试用例定义了运行多个测试的测试固件。`TestCase` 类的一些重要方法如下 −
+测试用例定义了运行多个测试的测试固件。`TestCase`类的一些重要方法如下 −
 
 | 序号 | 方法与描述 |
 | :--- | :--- |
-| 1 | `int countTestCases()` 统计由 `run(TestResult result)` 执行的测试用例数量。 |
-| 2 | `TestResult createResult()` 创建默认的 `TestResult` 对象。 |
-| 3 | `String getName()` 获取 `TestCase` 的名称。 |
-| 4 | `TestResult run()` 运行此测试的便利方法，使用默认的 `TestResult` 对象收集结果。 |
-| 5 | `void run(TestResult result)` 运行测试用例并将结果收集在 `TestResult` 中。 |
-| 6 | `void setName(String name)` 设置 `TestCase` 的名称。 |
+| 1 | `int countTestCases()` 统计由`run(TestResult result)`执行的测试用例数量。 |
+| 2 | `TestResult createResult()` 创建默认的`TestResult`对象。 |
+| 3 | `String getName()` 获取`TestCase`的名称。 |
+| 4 | `TestResult run()` 运行此测试的便利方法，使用默认的`TestResult`对象收集结果。 |
+| 5 | `void run(TestResult result)` 运行测试用例并将结果收集在`TestResult`中。 |
+| 6 | `void setName(String name)` 设置`TestCase`的名称。 |
 | 7 | `void setUp()` 设置固件，例如打开网络连接。 |
 | 8 | `void tearDown()` 拆卸固件，例如关闭网络连接。 |
 | 9 | `String toString()` 返回测试用例的字符串表示形式。 |
 
-让我们在示例中使用上面提到的一些方法。在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `TestJunit2.java` 的 java 类文件。
+让我们在示例中使用上面提到的一些方法。在`C:\>JUNIT_WORKSPACE`中创建一个名为`TestJunit2.java`的 java 类文件。
 
 ```java
 import junit.framework.TestCase;
@@ -447,7 +437,7 @@ public class TestJunit2 extends TestCase {
 }
 ```
 
-接下来，在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `TestRunner2.java` 的 java 类来执行测试用例。
+接下来，在`C:\>JUNIT_WORKSPACE`中创建一个名为`TestRunner2.java`的 java 类来执行测试用例。
 
 ```java
 import org.junit.runner.JUnitCore;
@@ -467,13 +457,13 @@ public class TestRunner2 {
 
 ## TestResult 类
 
-以下是 `org.junit.TestResult` 类的声明 −
+以下是`org.junit.TestResult`类的声明 −
 
 ```java
 public class TestResult extends Object
 ```
 
-TestResult 收集执行测试用例的结果。它是收集模式的实例。测试框架区分失败（failures）和错误（errors）。失败是预期的且通过断言检查。错误是非预期的问题，例如 `ArrayIndexOutOfBoundsException`。
+`TestResult`收集执行测试用例的结果。它是收集模式的实例。测试框架区分失败（failures）和错误（errors）。失败是预期的且通过断言检查。错误是非预期的问题，例如`ArrayIndexOutOfBoundsException`。
 
 | 序号 | 方法与描述 |
 | :--- | :--- |
@@ -483,12 +473,12 @@ TestResult 收集执行测试用例的结果。它是收集模式的实例。测
 | 4 | `int errorCount()` 获取错误的数量。 |
 | 5 | `Enumeration<TestFailure> errors()` 返回错误的枚举器。 |
 | 6 | `int failureCount()` 获取失败的数量。 |
-| 7 | `void run(TestCase test)` 运行一个 `TestCase`。 |
+| 7 | `void run(TestCase test)` 运行一个`TestCase`。 |
 | 8 | `int runCount()` 获取运行的测试数量。 |
 | 9 | `void startTest(Test test)` 通知结果测试将开始。 |
 | 10 | `void stop()` 标记测试运行应该停止。 |
 
-在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `TestJunit3.java` 的 java 类文件。
+在`C:\>JUNIT_WORKSPACE`中创建一个名为`TestJunit3.java`的 java 类文件。
 
 ```java
 import org.junit.Test;
@@ -518,27 +508,23 @@ public class TestJunit3 extends TestResult {
 }
 ```
 
-
-
-
-
 ```java
-import org . junit . runner . JUnitCore ;
-import org . junit . runner . Result ;
-import org . junit . runner . notification . Failure ;
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
 
 public class TestRunner3 {
-    public static void main ( String [] args ) {
-        Result result = JUnitCore . runClasses ( TestJunit3 . class );
-        for ( Failure failure : result . getFailures ()) {
-            System . out . println ( failure . toString ());
+    public static void main(String[] args) {
+        Result result = JUnitCore.runClasses(TestJunit3.class);
+        for (Failure failure : result.getFailures()) {
+            System.out.println(failure.toString());
         }
-        System . out . println ( result . wasSuccessful ());
+        System.out.println(result.wasSuccessful());
     }
 }
 ```
 
-使用 `javac` 编译测试用例和 Test Runner 类。
+使用`javac`编译测试用例和 Test Runner 类。
 
 ```bash
 C:\JUNIT_WORKSPACE>javac TestJunit3.java TestRunner3.java
@@ -552,47 +538,49 @@ C:\JUNIT_WORKSPACE>java TestRunner3
 
 验证输出。
 
-`true`
+```
+true
+```
 
 ## TestSuite 类
 
-以下是 `org.junit.TestSuite` 类的声明：
+以下是`org.junit.TestSuite`类的声明：
 
 ```java
 public class TestSuite extends Object implements Test
 ```
 
-`TestSuite` 是测试的组合（Composite）。它运行一组测试用例。`TestSuite` 类的一些重要方法如下 −
+`TestSuite`是测试的组合（Composite）。它运行一组测试用例。`TestSuite`类的一些重要方法如下 −
 
 | 序号 | 方法与描述 |
 | :--- | :--- |
-| 1 | `void addTest(Test test)`向测试套件（suite）中添加一个测试。 |
-| 2 | `void addTestSuite(Class<? extends TestCase> testClass)`将给定类中的测试添加到套件中。 |
-| 3 | `int countTestCases()`计算此测试将运行的测试用例数量。 |
-| 4 | `String getName()`返回套件名称。 |
-| 5 | `void run(TestResult result)`运行测试并将它们的结果收集在 TestResult 中。 |
-| 6 | `void setName(String name)`设置套件名称。 |
-| 7 | `Test testAt(int index)`返回指定索引处的测试。 |
-| 8 | `int testCount()`返回此套件中测试的数量。 |
-| 9 | `static Test warning(String message)`返回一个会失败并记录警告消息的测试。 |
+| 1 | `void addTest(Test test)` 向测试套件（suite）中添加一个测试。 |
+| 2 | `void addTestSuite(Class<? extends TestCase> testClass)` 将给定类中的测试添加到套件中。 |
+| 3 | `int countTestCases()` 计算此测试将运行的测试用例数量。 |
+| 4 | `String getName()` 返回套件名称。 |
+| 5 | `void run(TestResult result)` 运行测试并将它们的结果收集在`TestResult`中。 |
+| 6 | `void setName(String name)` 设置套件名称。 |
+| 7 | `Test testAt(int index)` 返回指定索引处的测试。 |
+| 8 | `int testCount()` 返回此套件中测试的数量。 |
+| 9 | `static Test warning(String message)` 返回一个会失败并记录警告消息的测试。 |
 
-在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `JunitTestSuite.java` 的 java 类文件来创建测试套件。
+在`C:\>JUNIT_WORKSPACE`中创建一个名为`JunitTestSuite.java`的 java 类文件来创建测试套件。
 
 ```java
-import junit . framework .*;
+import junit.framework.*;
 
 public class JunitTestSuite {
-    public static void main ( String [] a ) {
+    public static void main(String[] a) {
         // 在套件中添加测试
-        TestSuite suite = new TestSuite ( TestJunit1 . class , TestJunit2 . class , TestJunit3 . class );
-        TestResult result = new TestResult ();
-        suite . run ( result );
-        System . out . println ( "Number of test cases = " + result . runCount ());
+        TestSuite suite = new TestSuite(TestJunit1.class, TestJunit2.class, TestJunit3.class);
+        TestResult result = new TestResult();
+        suite.run(result);
+        System.out.println("Number of test cases = " + result.runCount());
     }
 }
 ```
 
-使用 `javac` 编译测试套件类。
+使用`javac`编译测试套件类。
 
 ```bash
 C:\JUNIT_WORKSPACE>javac JunitTestSuite.java
@@ -606,156 +594,162 @@ C:\JUNIT_WORKSPACE>java JunitTestSuite
 
 验证输出。
 
-`No of Test Case = 1`
-`Test Case Name = testAdd`
-`Updated Test Case Name = testNewAdd`
-`Number of test cases = 3`
+```
+No of Test Case = 1
+Test Case Name = testAdd
+Updated Test Case Name = testNewAdd
+Number of test cases = 3
+```
 
 # 编写测试
 
 在这里我们将看到一个使用 POJO 类、业务逻辑类和测试类进行 JUnit 测试的完整示例，该示例将由测试器运行。
 
-在 `C:\>JUNIT_WORKSPACE` 中创建 `EmployeeDetails.java`，它是一个 POJO 类。
+在`C:\>JUNIT_WORKSPACE`中创建`EmployeeDetails.java`，它是一个 POJO 类。
 
 ```java
 public class EmployeeDetails {
-    private String name ;
-    private double monthlySalary ;
-    private int age ;
+    private String name;
+    private double monthlySalary;
+    private int age;
+
     /**
     * @return 名称
     */
-    public String getName () {
-        return name ;
+    public String getName() {
+        return name;
     }
 
     /**
     * @param name 要设置的名字
     */
-    public void setName ( String name ) {
-        this . name = name ;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
     * @return 月薪
     */
-    public double getMonthlySalary () {
-        return monthlySalary ;
+    public double getMonthlySalary() {
+        return monthlySalary;
     }
 
     /**
     * @param monthlySalary 要设置的月薪
     */
-    public void setMonthlySalary ( double monthlySalary ) {
-        this . monthlySalary = monthlySalary ;
+    public void setMonthlySalary(double monthlySalary) {
+        this.monthlySalary = monthlySalary;
     }
 
     /**
     * @return 年龄
     */
-    public int getAge () {
-        return age ;
+    public int getAge() {
+        return age;
     }
 
     /**
     * @param age 要设置的年龄
     */
-    public void setAge ( int age ) {
-        this . age = age ;
+    public void setAge(int age) {
+        this.age = age;
     }
 }
 ```
 
-`EmployeeDetails` 类用于 −
+`EmployeeDetails`类用于 −
 
 *   获取/设置员工的名字。
 *   获取/设置员工的月薪。
 *   获取/设置员工的年龄。
 
-在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `EmpBusinessLogic.java` 的文件，它包含业务逻辑。
+在`C:\>JUNIT_WORKSPACE`中创建一个名为`EmpBusinessLogic.java`的文件，它包含业务逻辑。
 
 ```java
 public class EmpBusinessLogic {
     // 计算员工的年薪
-    public double calculateYearlySalary ( EmployeeDetails employeeDetails ) {
-        double yearlySalary = 0 ;
-        yearlySalary = employeeDetails . getMonthlySalary () * 12 ;
-        return yearlySalary ;
+    public double calculateYearlySalary(EmployeeDetails employeeDetails) {
+        double yearlySalary = 0;
+        yearlySalary = employeeDetails.getMonthlySalary() * 12;
+        return yearlySalary;
     }
 
     // 计算员工的调薪金额
-    public double calculateAppraisal ( EmployeeDetails employeeDetails ) {
-        double appraisal = 0 ;
-        if ( employeeDetails . getMonthlySalary () < 10000 ){
-            appraisal = 500 ;
+    public double calculateAppraisal(EmployeeDetails employeeDetails) {
+        double appraisal = 0;
+        if (employeeDetails.getMonthlySalary() < 10000) {
+            appraisal = 500;
         } else {
-        return appraisal ;
+            return appraisal;
+        }
     }
 }
 ```
 
-`EmpBusinessLogic` 类用于计算
+`EmpBusinessLogic`类用于计算
 
 *   员工的年薪。
 *   员工的调薪金额。
 
-在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `TestEmployeeDetails.java` 的文件，它包含测试用例。
+在`C:\>JUNIT_WORKSPACE`中创建一个名为`TestEmployeeDetails.java`的文件，它包含测试用例。
+
+
 
 ```java
-import org . junit . Test ;
-import static org . junit . Assert .*;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 public class TestEmployeeDetails {
-    EmpBusinessLogic empLogic = new EmpBusinessLogic ();
-    EmployeeDetails employee = new EmployeeDetails ();
+    EmpBusinessLogic empLogic = new EmpBusinessLogic();
+    EmployeeDetails employee = new EmployeeDetails();
 
     // 测试年薪
     @Test
-    public void testYearlySalary () {
-        employee.setName ( "Rajeev" );
-        employee.setMonthlySalary ( 8000 );
-        employee.setAge ( 25 );
-        double salary = empLogic . calculateYearlySalary ( employee );
-        assertEquals ( 96000 , salary );
+    public void testYearlySalary() {
+        employee.setName("Rajeev");
+        employee.setMonthlySalary(8000);
+        employee.setAge(25);
+        double salary = empLogic.calculateYearlySalary(employee);
+        assertEquals(96000, salary);
     }
 
     // 测试调薪金额
     @Test
-    public void testAppraisal () {
-        employee.setName ( "Rajeev" );
-        employee.setMonthlySalary ( 8000 );
-        employee.setAge ( 25 );
-        double appraisal = empLogic .calculateAppraisal ( employee );
-        assertEquals ( 500 , appraisal );
+    public void testAppraisal() {
+        employee.setName("Rajeev");
+        employee.setMonthlySalary(8000);
+        employee.setAge(25);
+        double appraisal = empLogic.calculateAppraisal(employee);
+        assertEquals(500, appraisal);
     }
 }
 ```
 
-创建一个 `TestRunner.java` 类来执行测试用例。
+创建一个`TestRunner.java`类来执行测试用例。
 
 ```java
-import org . junit . runner . JUnitCore ;
-import org . junit . runner . Result ;
-import org . junit . runner . notification . Failure ;
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
 
 public class TestRunner {
-    public static void main ( String [] args ) {
-        Result result = JUnitCore . runClasses ( TestEmployeeDetails . class );
-        for ( Failure failure : result . getFailures ()) {
-            System . out . println ( failure . toString ());
+    public static void main(String[] args) {
+        Result result = JUnitCore.runClasses(TestEmployeeDetails.class);
+        for (Failure failure : result.getFailures()) {
+            System.out.println(failure.toString());
         }
-        System . out . println ( result . wasSuccessful ());
+        System.out.println(result.wasSuccessful());
     }
 }
 ```
 
-使用 `javac` 编译测试用例和 Test Runner 类。
+使用`javac`编译测试用例和 Test Runner 类。
 
 ```bash
 C:\JUNIT_WORKSPACE>javac EmployeeDetails.java EmpBusinessLogic.java TestEmployeeDetails.java TestRunner.java
 ```
 
-现在运行 Test Runner，它将运行在提供的 TestEmployeeDetails 类中定义的测试用例。
+现在运行 Test Runner，它将运行在提供的`TestEmployeeDetails`类中定义的测试用例。
 
 ```bash
 C:\JUNIT_WORKSPACE>java TestRunner
@@ -769,13 +763,13 @@ C:\JUNIT_WORKSPACE>java TestRunner
 
 ## 断言
 
-所有的断言都在 `Assert` 类中。
+所有的断言都在`Assert`类中。
 
 ```java
 public class Assert extends java.lang.Object
 ```
 
-该类提供了一组断言方法，用于编写测试。只有失败的断言会被记录。`Assert` 类的一些重要方法如下 −
+该类提供了一组断言方法，用于编写测试。只有失败的断言会被记录。`Assert`类的一些重要方法如下 −
 
 | 序号 | 方法与描述 |
 | :--- | :--- |
@@ -784,97 +778,76 @@ public class Assert extends java.lang.Object
 | 3 | `void assertFalse(boolean condition)`检查条件是否为假。 |
 | 4 | `void assertNotNull(Object object)`检查对象不为空。 |
 | 5 | `void assertNull(Object object)`检查对象是否为空。 |
-| 6 | `void assertSame(object1, object2)``assertSame()` 方法测试两个引用是否指向同一个对象。 |
-| 7 | `void assertNotSame(object1, object2)``assertNotSame()` 方法测试两个引用是否指向不同的对象。 |
-| 8 | `void assertArrayEquals(expectedArray, resultArray)``assertArrayEquals()` 方法将测试两个数组是否相等。 |
+| 6 | `void assertSame(object1, object2)` `assertSame()`方法测试两个引用是否指向同一个对象。 |
+| 7 | `void assertNotSame(object1, object2)` `assertNotSame()`方法测试两个引用是否指向不同的对象。 |
+| 8 | `void assertArrayEquals(expectedArray, resultArray)` `assertArrayEquals()`方法将测试两个数组是否相等。 |
 
-让我们在示例中使用上述某些方法。在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `TestAssertions.java` 的 java 类文件。
+让我们在示例中使用上述某些方法。在`C:\>JUNIT_WORKSPACE`中创建一个名为`TestAssertions.java`的 java 类文件。
 
 ```java
-import org . junit . Test ;
-import static org . junit . Assert .*;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 public class TestAssertions {
     @Test
-    public void testAssertions () {
+    public void testAssertions() {
         //测试数据
-        String str1 = new String ( "abc" );
-        String str2 = new String ( "abc" );
+        String str1 = new String("abc");
+        String str2 = new String("abc");
+        String str3 = null;
+        String str4 = "abc";
+        String str5 = "abc";
+        int val1 = 5;
+        int val2 = 6;
+        String[] expectedArray = {"one", "two", "three"};
+        String[] resultArray = {"one", "two", "three"};
+
+        //Check that two objects are equal
+        assertEquals(str1, str2);
+
+        //Check that a condition is true
+        assertTrue(val1 < val2);
+
+        //Check that a condition is false
+        assertFalse(val1 > val2);
+
+        //Check that an object isn't null
+        assertNotNull(str1);
+
+        //Check that an object is null
+        assertNull(str3);
+
+        //Check if two object references point to the same object
+        assertSame(str4, str5);
+
+        //Check if two object references not point to the same object
+        assertNotSame(str1, str3);
+
+        //Check whether two arrays are equal to each other.
+        assertArrayEquals(expectedArray, resultArray);
     }
 }
 ```
 
-
-
-
+接下来，在`C:\>JUNIT_WORKSPACE`中创建一个名为`TestRunner.java`的 Java 类文件来执行测试用例。
 
 ```java
-String str3 = null ;
-
-String str4 = "abc" ;
-
-String str5 = "abc" ;
-
-int val1 = 5 ;
-
-int val2 = 6 ;
-
-String [] expectedArray = { "one" , "two" , "three" };
-
-String [] resultArray = { "one" , "two" , "three" };
-
-//Check that two objects are equal
-assertEquals ( str1 , str2 );
-
-//Check that a condition is true
-assertTrue ( val1 < val2 );
-
-//Check that a condition is false
-assertFalse ( val1 > val2 );
-
-//Check that an object isn't null
-assertNotNull ( str1 );
-
-//Check that an object is null
-assertNull ( str3 );
-
-//Check if two object references point to the same object
-assertSame ( str4 , str5 );
-
-//Check if two object references not point to the same object
-assertNotSame ( str1 , str3 );
-
-//Check whether two arrays are equal to each other.
-assertArrayEquals ( expectedArray , resultArray );
-
-}
-
-}
-```
-
-接下来，在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `TestRunner.java` 的 Java 类文件来执行测试用例。
-
-```java
-import org . junit . runner . JUnitCore ;
-
-import org . junit . runner . Result ;
-
-import org . junit . runner . notification . Failure ;
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
 
 public class TestRunner2 {
-
-public static void main ( String [] args ) {
-Result result = JUnitCore . runClasses ( TestAssertions . class );
-for ( Failure failure : result . getFailures ()) {
-System . out . println ( failure . toString ());
-}
-System . out . println ( result . wasSuccessful ());
-}
-
+    public static void main(String[] args) {
+        Result result = JUnitCore.runClasses(TestAssertions.class);
+        for (Failure failure : result.getFailures()) {
+            System.out.println(failure.toString());
+        }
+        System.out.println(result.wasSuccessful());
+    }
 }
 ```
 
-使用 `javac` 编译测试用类和 Test Runner 类。
+使用`javac`编译测试用类和 Test Runner 类。
 
 ```
 C:\JUNIT_WORKSPACE>javac TestAssertions.java TestRunner.java
@@ -888,7 +861,7 @@ C:\JUNIT_WORKSPACE>java TestRunner
 
 验证输出。
 
-true
+`true`
 
 # 注解 (Annotation)
 
@@ -902,92 +875,81 @@ true
 
 | 序号 | 注解与描述 |
 | :--- | :--- |
-| 1 | @Test | @Test 注解告诉 JUnit 映射其所附加的 public void 方法可以作为测试用例运行。 |
-| 2 | @Before | 某些测试在运行之前需要创建相似的实例。在 public void 方法上添加 @Before 会导致该方法在每个 Test 方法运行之前运行。 |
-| 3 | @After | 如果你在 Before 方法中分配了外部资源，你需要在测试运行后释放它们。在 public void 方法上添加 @After 会导致该方法在 Test 方法运行后运行。 |
-| 4 | @BeforeClass | 在 public static void 方法上添加 @BeforeClass 会导致它在类中的任何测试方法运行之前运行一次。 |
-| 5 | @AfterClass | 这将在所有测试完成后执行该方法。它可以用于执行清理工作。 |
-| 6 | @Ignore | @Ignore 注解用于忽略测试，该测试将不会执行。 |
+| 1 | `@Test` | `@Test`注解告诉 JUnit 映射其所附加的 `public void` 方法可以作为测试用例运行。 |
+| 2 | `@Before` | 某些测试在运行之前需要创建相似的实例。在 `public void` 方法上添加`@Before`会导致该方法在每个 Test 方法运行之前运行。 |
+| 3 | `@After` | 如果你在 Before 方法中分配了外部资源，你需要在测试运行后释放它们。在 `public void` 方法上添加`@After`会导致该方法在 Test 方法运行后运行。 |
+| 4 | `@BeforeClass` | 在 `public static void` 方法上添加`@BeforeClass`会导致它在类中的任何测试方法运行之前运行一次。 |
+| 5 | `@AfterClass` | 这将在所有测试完成后执行该方法。它可以用于执行清理工作。 |
+| 6 | `@Ignore` | `@Ignore`注解用于忽略测试，该测试将不会执行。 |
 
-在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `JunitAnnotation.java` 的 Java 类文件来测试注解。
+在`C:\>JUNIT_WORKSPACE`中创建一个名为`JunitAnnotation.java`的 Java 类文件来测试注解。
 
 ```java
-import org . junit . After ;
-
-import org . junit . AfterClass ;
-
-import org . junit . Before ;
-
-import org . junit . BeforeClass ;
-
-import org . junit . Ignore ;
-
-import org . junit . Test ;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Ignore;
+import org.junit.Test;
 
 public class JunitAnnotation {
+    //在类前执行
+    @BeforeClass
+    public static void beforeClass() {
+        System.out.println("in before class");
+    }
 
-//在类前执行
-@BeforeClass
-public static void beforeClass () {
-System . out . println ( "in before class" );
-}
+    //在类后执行
+    @AfterClass
+    public static void afterClass() {
+        System.out.println("in after class");
+    }
 
-//在类后执行
-@AfterClass
-public static void afterClass () {
-System . out . println ( "in after class" );
-}
+    //在测试前执行
+    @Before
+    public void before() {
+        System.out.println("in before");
+    }
 
-//在测试前执行
-@Before
-public void before () {
-System . out . println ( "in before" )}
-}
+    //在测试后执行
+    @After
+    public void after() {
+        System.out.println("in after");
+    }
 
-//在测试后执行
-@After
-public void after () {
-System . out . println ( "in after" )}
-}
+    //测试用例
+    @Test
+    public void test() {
+        System.out.println("in test");
+    }
 
-//测试用例
-@Test
-public void test () {
-System . out . println ( "in test" )}
-}
-
-//忽略测试用例，将不会执行
-@Ignore
-public void ignoreTest () {
-System . out . println ( "in ignore test" )}
-}
-
+    //忽略测试用例，将不会执行
+    @Ignore
+    public void ignoreTest() {
+        System.out.println("in ignore test");
+    }
 }
 ```
 
-接下来，在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `TestRunner.java` 的 Java 类文件来执行注解。
+接下来，在`C:\>JUNIT_WORKSPACE`中创建一个名为`TestRunner.java`的 Java 类文件来执行注解。
 
 ```java
-import org . junit . runner . JUnitCore ;
-
-import org . junit . runner . Result ;
-
-import org . junit . runner . notification . Failure ;
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
 
 public class TestRunner {
-
-public static void main ( String [] args ) {
-Result result = JUnitCore . runClasses ( JunitAnnotation . class );
-for ( Failure failure : result . getFailures ()) {
-System . out . println ( failure . toString ());
-}
-System . out . println ( result . wasSuccessful ());
-}
-
+    public static void main(String[] args) {
+        Result result = JUnitCore.runClasses(JunitAnnotation.class);
+        for (Failure failure : result.getFailures()) {
+            System.out.println(failure.toString());
+        }
+        System.out.println(result.wasSuccessful());
+    }
 }
 ```
 
-使用 `javac` 编译测试用类和 Test Runner 类。
+使用`javac`编译测试用类和 Test Runner 类。
 
 ```
 C:\JUNIT_WORKSPACE>javac JunitAnnotation.java TestRunner.java
@@ -1001,109 +963,109 @@ C:\JUNIT_WORKSPACE>java TestRunner
 
 验证输出。
 
-in before class
-in before
-in test
-in after
-in after class
+`in before class`
+
+`in before`
+
+`in test`
+
+`in after`
+
+`in after class`
 
 # 执行顺序 (Execution Procedure)
 
 本章解释了 JUnit 中方法的执行顺序。下面讨论了带有示例的执行顺序。
 
 ```java
-import org . junit . After ;
-
-import org . junit . AfterClass ;
-
-import org . junit . Before ;
-
-import org . junit . BeforeClass ;
-
-import org . junit . Ignore ;
-
-import org . junit . Test ;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Ignore;
+import org.junit.Test;
 
 public class ExecutionProcedure {
+    //在类前运行一次
+    @BeforeClass
+    public static void beforeClass() {
+        System.out.println("in before class");
+    }
 
-//在类前运行一次
-@BeforeClass
-public static void beforeClass () {
-System . out . println ( "in before class" )}
-}
+    //在类后运行一次
+    @AfterClass
+    public static void afterClass() {
+        System.out.println("in after class");
+    }
 
-//在类后运行一次
-@AfterClass
-public static void afterClass () {
-System . out . println ( "in after class" )}
-}
+    //在每个测试前运行
+    @Before
+    public void before() {
+        System.out.println("in before");
+    }
 
-//在每个测试前运行
-@Before
-public void before () {
-System . out . println ( "in before" )}
-}
+    //在每个测试后运行
+    @After
+    public void after() {
+        System.out.println("in after");
+    }
 
-//在每个测试后运行
-@After
-public void after () {
-System . out . println ( "in after" )}
-}
+    //测试用例
+    @Test
+    public void test() {
+        System.out.println("in test");
+    }
 
-//测试用例
-@Test
-public void test () {
-System . out . println ( "in test" )}
-}
-
-//忽略测试用例，将不会执行
-@Ignore
-public void ignoreTest () {
-System . out . println ( "in ignore test" )}
-}
-
+    //忽略测试用例，将不会执行
+    @Ignore
+    public void ignoreTest() {
+        System.out.println("in ignore test");
+    }
 }
 ```
 
-
-
-
-
 `public class JUnitCore extends java.lang.Object`
 
-在这里我们将看到如何借助 `JUnitCore` 来执行测试。
+在这里我们将看到如何借助`JUnitCore`来执行测试。
 
 ## 创建类
 
-在 `C:\>JUNIT_WORKSPACE` 中创建一个待测试的 java 类，例如 `MessageUtil.java`。
+在`C:\>JUNIT_WORKSPACE`中创建一个待测试的 java 类，例如`MessageUtil.java`。
 
 ```java
 /*
 * 此类在控制台上打印给定的消息。
 */
 public class MessageUtil {
-    private String message ;
+    private String message;
+
     // 构造函数
     //@param message 要打印的消息
-    public MessageUtil ( String message ){
-        this . message = message ;
+    public MessageUtil(String message) {
+        this.message = message;
     }
+
     // 打印消息
-    public String printMessage (){
-        System . out . println ( message );
-        return message ;
+    public String printMessage() {
+        System.out.println(message);
+        return message;
     }
 }
 ```
 
 ## 创建测试用例类
 
-- 创建一个 java 测试类，例如 `TestJunit.java`。
-- 在你的测试类中添加一个一个测试方法 `testPrintMessage()`。
-- 为方法 `testPrintMessage()` 添加注解 `@Test`。
-- 实现测试条件并使用 JUnit 的 `assertEquals` API 检查该条件。
+- 创建一个 java 测试类，例如`TestJunit.java`。
 
-在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `TestJunit.java` 的 java 类文件。
+
+
+在你的测试类中添加一个测试方法`testPrintMessage()`。
+
+为方法`testPrintMessage()`添加注解`@Test`。
+
+实现测试条件并使用 JUnit 的`assertEquals` API 检查该条件。
+
+在`C:\>JUNIT_WORKSPACE`中创建一个名为`TestJunit.java`的 java 类文件。
 
 ```java
 import org . junit . Test ;
@@ -1121,7 +1083,7 @@ public class TestJunit {
 
 ## 创建测试运行类
 
-现在在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `TestRunner.java` 的 java 类来执行测试用例。它导入了 `JUnitCore` 类并使用 `runClasses()` 方法，该方法接受测试类名作为参数。
+现在在`C:\>JUNIT_WORKSPACE`中创建一个名为`TestRunner.java`的 java 类来执行测试用例。它导入了`JUnitCore`类并使用`runClasses()`方法，该方法接受测试类名作为参数。
 
 ```java
 import org . junit . runner . JUnitCore ;
@@ -1139,7 +1101,7 @@ public class TestRunner {
 }
 ```
 
-使用 `javac` 编译测试用类和测试运行类。
+使用`javac`编译测试用类和测试运行类。
 
 `C:\JUNIT_WORKSPACE>javac MessageUtil.java TestJunit.java TestRunner.java`
 
@@ -1148,16 +1110,18 @@ public class TestRunner {
 `C:\JUNIT_WORKSPACE>java TestRunner`
 
 验证输出。
+
 Hello World
+
 true
 
 # 套件测试
 
-`Test suite`（测试套件）用于组合单元测试用例并一起运行。在 JUnit 中，`@RunWith` 和 `@Suite` 注解都用于运行套件测试。本章举了一个包含两个测试类 `TestJunit1` 和 `TestJunit2` 的示例，它们使用测试套件一起运行。
+`Test suite`（测试套件）用于组合单元测试用例并一起运行。在 JUnit 中，`@RunWith`和`@Suite`注解都用于运行套件测试。本章举了一个包含两个测试类`TestJunit1`和`TestJunit2`的示例，它们使用测试套件一起运行。
 
 ## 创建类
 
-在 `C:\>JUNIT_WORKSPACE` 中创建一个待测试的 java 类，例如 `MessageUtil.java`。
+在`C:\>JUNIT_WORKSPACE`中创建一个待测试的 java 类，例如`MessageUtil.java`。
 
 ```java
 /*
@@ -1186,7 +1150,7 @@ public class MessageUtil {
 
 ## 创建测试用例类
 
-在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `TestJunit1.java` 的 java 类文件。
+在`C:\>JUNIT_WORKSPACE`中创建一个名为`TestJunit1.java`的 java 类文件。
 
 ```java
 import org . junit . Test ;
@@ -1204,7 +1168,7 @@ public class TestJunit1 {
 }
 ```
 
-在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `TestJunit2.java` 的 java 类文件。
+在`C:\>JUNIT_WORKSPACE`中创建一个名为`TestJunit2.java`的 java 类文件。
 
 ```java
 import org . junit . Test ;
@@ -1226,10 +1190,10 @@ public class TestJunit2 {
 ## 创建测试套件类
 
 - 创建一个 java 类。
-- 在类上附加 `@RunWith(Suite.class)` 注解。
-- 使用 `@Suite.SuiteClasses` 注解添加 JUnit 测试类的引用。
+- 在类上附加`@RunWith(Suite.class)`注解。
+- 使用`@Suite.SuiteClasses`注解添加 JUnit 测试类的引用。
 
-在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `TestSuite.java` 的 java 类文件来执行测试用例。
+在`C:\>JUNIT_WORKSPACE`中创建一个名为`TestSuite.java`的 java 类文件来执行测试用例。
 
 ```java
 import org . junit . runner . RunWith ;
@@ -1243,7 +1207,7 @@ public class TestSuite {
 
 ## 创建测试运行类
 
-在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `TestRunner.java` 的 java 类来执行测试用例。
+在`C:\>JUNIT_WORKSPACE`中创建一个名为`TestRunner.java`的 java 类来执行测试用例。
 
 ```java
 import org . junit . runner . JUnitCore ;
@@ -1261,7 +1225,8 @@ public class TestRunner {
 }
 ```
 
-使用 `javac` 编译所有类。
+使用`javac`编译所有类。
+
 `C:\JUNIT_WORKSPACE>javac MessageUtil.java TestJunit1.java TestJunit2.java TestSuite.java TestRunner.java`
 
 现在运行测试运行类，它将运行在提供的测试用例类中定义的测试用例。
@@ -1269,33 +1234,39 @@ public class TestRunner {
 `C:\JUNIT_WORKSPACE>java TestRunner`
 
 验证输出。
+
 Inside testPrintMessage()
+
 Robert
+
 Inside testSalutationMessage()
+
 Hi Robert
+
 true
 
 # Ignore 测试
 
-有时在运行测试用例时我们的代码还没有准备好，导致测试用例失败。`@Ignore` 注解有助于这种情况。
+有时在运行测试用例时我们的代码还没有准备好，导致测试用例失败。`@Ignore`注解有助于这种情况。
 
-- 标记了 `@Ignore` 的测试方法将不会执行。
- 如果 如果测试类标记了 `@Ignore`，则它的测试方法都不会执行。
+- 标记了`@Ignore`的测试方法将不会执行。
+- 如果测试类标记了`@Ignore`，则它的测试方法都不会执行。
 
-现在让我们来看看 `@Ignore` 的作用。
+现在让我们来看看`@Ignore`的作用。
 
 ## 创建类
 
-在 `C:\>JUNIT_WORKSPACE` 中创建一个待测试的 java 类，例如 `MessageUtil.java`。
+在`C:\>JUNIT_WORKSPACE`中创建一个待测试的 java 类，例如`MessageUtil.java`。
+
 （代码同上）
 
 ## 创建测试用例类
 
-- 在 `C:\>JUNIT_WORKSPACE` 中创建一个 java 测试类，例如 `TestJunit.java`。
-- 在你的测试类中添加一个测试方法 `testPrintMessage()` 或 `testSalutationMessage()`。
-- 为方法 `testPrintMessage()` 添加一个 `@Ignore`。
+- 在`C:\>JUNIT_WORKSPACE`中创建一个 java 测试类，例如`TestJunit.java`。
+- 在你的测试类中添加一个测试方法`testPrintMessage()`或`testSalutationMessage()`。
+- 为方法`testPrintMessage()`添加一个`@Ignore`。
 
-在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `TestJunit.java` 的 java 类文件。
+在`C:\>JUNIT_WORKSPACE`中创建一个名为`TestJunit.java`的 java 类文件。
 
 ```java
 import org . junit . Test ;
@@ -1321,17 +1292,13 @@ public class TestJunit {
 }
 ```
 
-
-
-
-
 # 参数化测试
 
-JUnit 提供了一种使用不同数据多次运行相同测试的方法。这是通过 `@Parameterized` 注解和数据源实现的。
+JUnit 提供了一种使用不同数据多次运行相同测试的方法。这是通过`@Parameterized`注解和数据源实现的。
 
 ## 创建类
 
-创建一个要进行测试的 Java 类，例如在 `C:\>JUNIT_WORKSPACE` 中创建 `MessageUtil.java`。
+创建一个要进行测试的 Java 类，例如在`C:\>JUNIT_WORKSPACE`中创建`MessageUtil.java`。
 
 添加一个处理消息的方法。
 
@@ -1357,9 +1324,9 @@ public class MessageUtil {
 
 ## 创建测试用例类
 
-创建一个 Java 测试类，例如 `TestJunit.java`。使用 `@Parameterized` 为测试提供多个输入。
+创建一个 Java 测试类，例如`TestJunit.java`。使用`@Parameterized`为测试提供多个输入。
 
-在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `TestJunit.java` 的 Java 类文件。
+在`C:\>JUNIT_WORKSPACE`中创建一个名为`TestJunit.java`的 Java 类文件。
 
 ```java
 import org.junit.Test;
@@ -1396,7 +1363,7 @@ public class TestJunit {
 
 ## 创建测试运行器类
 
-在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `TestRunner.java` 的 Java 类来执行测试用例。
+在`C:\>JUNIT_WORKSPACE`中创建一个名为`TestRunner.java`的 Java 类来执行测试用例。
 
 ```java
 import org.junit.runner.JUnitCore;
@@ -1414,7 +1381,7 @@ public class TestRunner {
 }
 ```
 
-使用 `javac` 编译 `MessageUtil`、`TestJunit` 和 `TestRunner` 类。
+使用`javac`编译`MessageUtil`、`TestJunit`和`TestRunner`类。
 
 `C:\JUNIT_WORKSPACE>javac MessageUtil.java TestJunit.java TestRunner.java`
 
@@ -1426,23 +1393,21 @@ public class TestRunner {
 
 true
 
+JUnit 4 引入了一个名为`parameterized tests`（参数化测试）的新功能。参数化测试允许开发者使用不同的值多次运行测试。创建参数化测试需要遵循以下五个步骤。
+
+- 使用`@RunWith(Parameterized.class)`注解测试类。
+- 创建一个带有`@Parameters`注解的公共静态方法，该方法返回一个`Objects`的`Collection`（以`Array`形式）作为测试数据集。
+- 创建一个公共构造函数，接收等同于测试数据某一个“行”的参数。
+- 为测试数据的每一“列”创建一个实例变量。
+- 使用实例变量作为测试数据源创建你的测试用例。
 
 
-
-
-JUnit 4 引入了一个名为 `parameterized tests`（参数化测试）的新功能。参数化测试允许开发者使用不同的值多次运行测试。创建参数化测试需要遵循以下五个步骤。
-
-*   使用 `@RunWith(Parameterized.class)` 注解测试类。
-*   创建一个带有 `@Parameters` 注解的公共静态方法，该方法返回一个 `Objects` 的 `Collection`（以 `Array` 形式）作为测试数据集。
-*   创建一个公共构造函数，接收等同于测试数据某一个“行”的参数。
-*   为测试数据的每一“列”创建一个实例变量。
-*   使用实例变量作为测试数据源创建你的测试用例。
 
 测试用例将为每行数据调用一次。让我们来看看参数化测试的实际运行情况。
 
 ## 创建一个类
 
-创建一个要测试的 java 类，例如在 `C:\>JUNIT_WORKSPACE` 中创建 `PrimeNumberChecker.java`。
+创建一个要测试的 Java 类，例如在`C:\>JUNIT_WORKSPACE`中创建`PrimeNumberChecker.java`。
 
 ```java
 public class PrimeNumberChecker {
@@ -1459,7 +1424,7 @@ public class PrimeNumberChecker {
 
 ## 创建参数化测试用例类
 
-创建一个 java 测试类，例如 `PrimeNumberCheckerTest.java`。在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `PrimeNumberCheckerTest.java` 的 java 类文件。
+创建一个 Java 测试类，例如`PrimeNumberCheckerTest.java`。在`C:\>JUNIT_WORKSPACE`中创建一个名为`PrimeNumberCheckerTest.java`的 Java 类文件。
 
 ```java
 import java . util . Arrays ;
@@ -1513,7 +1478,7 @@ public class PrimeNumberCheckerTest {
 
 ## 创建测试运行类
 
-在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `TestRunner.java` 的 java 类来执行测试用例。
+在`C:\>JUNIT_WORKSPACE`中创建一个名为`TestRunner.java`的 Java 类来执行测试用例。
 
 ```java
 import org . junit . runner . JUnitCore ;
@@ -1531,7 +1496,7 @@ public class TestRunner {
 }
 ```
 
-使用 `javac` 编译 `PrimeNumberChecker`、`PrimeNumberCheckerTest` 和 `TestRunner` 类。
+使用`javac`编译`PrimeNumberChecker`、`PrimeNumberCheckerTest`和`TestRunner`类。
 
 ```bash
 C:\JUNIT_WORKSPACE>javac PrimeNumberChecker.java PrimeNumberCheckerTest.java
@@ -1562,7 +1527,7 @@ true
 
 ## 步骤 1：下载 Apache Ant
 
-根据你正在使用的操作系统下载 `Apache Ant`。
+根据你正在使用的操作系统下载`Apache Ant`。
 
 | OS | 归包名称 |
 | :--- | :--- |
@@ -1572,13 +1537,13 @@ true
 
 ## 步骤 2：设置 Ant 环境
 
-将环境变量 `ANT_HOME` 指向基础目录位置，即 Ant 库存储在你的机器上的位置。我们假设 Ant 库存储在 `apache-ant-1.8.4` 文件夹中。
+将环境变量`ANT_HOME`指向基础目录位置，即 Ant 库存储在你的机器上的位置。我们假设 Ant 库存储在`apache-ant-1.8.4`文件夹中。
 
 | 序号 | OS 及描述 |
 | :--- | :--- |
-| 1 | Windows:将环境变量 `ANT_HOME` 设置为 `C:\Program Files\Apache Software Foundation\apache-ant-1.8.4` |
-| 2 | Linux:export ANT_HOME = /usr/local/apache-ant-1.8.4 |
-| 3 | Mac:export ANT_HOME = /usr/local/apache-ant-1.8.4 |
+| 1 | Windows：将环境变量`ANT_HOME`设置为`C:\Program Files\Apache Software Foundation\apache-ant-1.8.4` |
+| 2 | Linux：`export ANT_HOME = /usr/local/apache-ant-1.8.4` |
+| 3 | Mac：`export ANT_HOME = /usr/local/apache-ant-1.8.4` |
 
 将 Ant 编译器位置添加到系统路径如下：
 
@@ -1600,17 +1565,17 @@ true
 
 ## 步骤 4：创建项目结构
 
-*   在 `C:\>JUNIT_WORKSPACE` 中创建 `test` 文件夹。
-*   在 `C:\>JUNIT_WORKSPACE` 中创建 `src` 文件夹。
-*   在 `C:\>JUNIT_WORKSPACE` 中创建 `lib` 文件夹。
-*   将 `junit-4.1.jar` 复制到 `lib` 文件夹。
-*   将 `PrimeNumberChecker.java` 复制到 `src` 文件夹。
-*   将 `PrimeNumberCheckerTest.java` 复制到 `src` 文件夹。
-*   在 `C:\>JUNIT_WORKSPACE` 中创建一个名为 `build.xml` 的文件。
+*   在`C:\>JUNIT_WORKSPACE`中创建`test`文件夹。
+*   在`C:\>JUNIT_WORKSPACE`中创建`src`文件夹。
+*   在`C:\>JUNIT_WORKSPACE`中创建`lib`文件夹。
+*   将`junit-4.1.jar`复制到`lib`文件夹。
+*   将`PrimeNumberChecker.java`复制到`src`文件夹。
+*   将`PrimeNumberCheckerTest.java`复制到`src`文件夹。
+*   在`C:\>JUNIT_WORKSPACE`中创建一个名为`build.xml`的文件。
 
 ## 创建 build.xml
 
-我们将使用 Ant 中的 `<junit>` 任务来执行我们的测试用例。
+我们将使用 Ant 中的`<junit>`任务来执行我们的测试用例。
 
 ```xml
 <project name="JunitTest" default="test" basedir=".">
@@ -1647,10 +1612,6 @@ true
     </target>
 </project>
 ```
-
-
-
-
 
 验证输出。
 
@@ -1696,6 +1657,8 @@ Buildfile: `C:\JUNIT_WORKSPACE\TestJunitWithAnt\build.xml`
 
 `test:`
 
+
+
 ```text
 [ junit] Testsuite: TestMessageUtil
 [ junit] Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.008 sec
@@ -1734,7 +1697,7 @@ Buildfile: `C:\JUNIT_WORKSPACE\TestJunitWithAnt\build.xml`
 
 ![Image](img/Image00000.jpg)
 
-我们假设你的 Eclipse 内置了 JUnit 插件。如果 `C:\>eclipse\plugins` 目录下没有该插件，你可以从 **JUnit Plugin** 下载。将下载的 zip 文件解压到 Eclipse 的插件文件夹中。最后重启 Eclipse。
+我们假设你的 Eclipse 内置了 JUnit 插件。如果 `C:\>eclipse\plugins` 目录下没有该插件，你可以从 JUnit Plugin 下载。将下载的 zip 文件解压到 Eclipse 的插件文件夹中。最后重启 Eclipse。
 
 现在你的 Eclipse 已经准备好进行 JUnit 测试用例的开发。
 
@@ -1790,11 +1753,11 @@ public class TestJunit {
 
 ![Image](img/Image0003.jpg)
 
-# 扩展：
+# 扩展
 
-*   Cactus
-*   JWebUnit
-*   XMLUnit
+* Cactus
+* JWebUnit
+* XMLUnit
 
 ## Cactus
 
@@ -1802,8 +1765,8 @@ Cactus 是一个用于服务器端代码的简单测试框架（Servlets, EJBs, 
 
 Cactus 生态系统由几个组件组成：
 
-*   **Cactus Framework** 是 Cactus 的核心。它是提供测试的引擎。
-*   **Cactus Integration Modules** 是前端，提供了简单的方法（Ant, Eclipse 插件）。
+* **Cactus Framework** 是 Cactus 的核心。它是提供测试的引擎。
+* **Cactus Integration Modules** 是前端，提供了简单的方法（Ant, Eclipse 插件）。
 
 以下代码演示了如何使用 Cactus：
 
@@ -1863,16 +1826,11 @@ public class ExampleWebTestCase extends TestCase {
 
 XMLUnit 提供单一的 JUnit 扩展类 `XMLTestCase` 以及一组辅助类，允许对以下内容进行断言：
 
-*   两个 XML 段之间的差异（通过 `Diff` 和 `DetailedDiff` 类）。
-*   XML 的有效性（通过 `Validator` 类）。
-*   使用 XSLT 转换 XML 的结果（通过 `Transform` 类）。
-
-
-
-
-
-- 对 XML 片段进行 XPath 表达式的评估（通过实现 `XpathEngine` 接口的类）。
-- 通过 DOM 遍历暴露的 XML 片段中的单个节点（通过 `NodeTest` 类）。
+* 两个 XML 段之间的差异（通过 `Diff` 和 `DetailedDiff` 类）。
+* XML 的有效性（通过 `Validator` 类）。
+* 使用 XSLT 转换 XML 的结果（通过 `Transform` 类）。
+* 对 XML 片段进行 XPath 表达式的评估（通过实现 `XpathEngine` 接口的类）。
+* 通过 DOM 遍历暴露的 XML 片段中的单个节点（通过 `NodeTest` 类）。
 
 让我们假设有两个想要比较的 XML 片段，并断言它们是相等的。我们可以编写如下的简单测试类 −
 
@@ -1894,12 +1852,12 @@ public class MyXMLTestCase extends XMLTestCase {
 
 在单元测试中，模拟对象（mock objects）可以模拟复杂的真实（非 mock）对象的行为，因此当真实对象无法或难以集成到单元测试中时，它们非常有用。
 
-使用模拟对象进行测试的通用编码风格如下如下：
+使用模拟对象进行测试的通用编码风格如下：
 
-- 创建模拟对象的实例。
-- 在模拟对象中设置状态和期望。
-- 使用模拟对象作为参数调用领域代码。
-- 验证模拟对象的一致性。
+* 创建模拟对象的实例。
+* 在模拟对象中设置状态和期望。
+* 使用模拟对象作为参数调用领域代码。
+* 验证模拟对象的一致性。
 
 下面是一个使用 Jmock 使用 MockObject 的示例。
 
@@ -1926,4 +1884,3 @@ class PubTest extends TestCase {
     }
 }
 ```
-

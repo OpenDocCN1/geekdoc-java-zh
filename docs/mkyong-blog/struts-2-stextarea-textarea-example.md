@@ -1,31 +1,32 @@
-# Struts 2 <textarea>textarea 示例</textarea>
+
+# Struts 2 `<textarea>` 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts2/struts-2-stextarea-textarea-example/>
 
-Download It – [Struts2-TextArea–Example.zip](http://web.archive.org/web/20190222143654/http://www.mkyong.com/wp-content/uploads/2010/06/Struts2-TextArea-Example.zip)
+下载：[Struts2-TextArea–Example.zip](http://web.archive.org/web/20190222143654/http://www.mkyong.com/wp-content/uploads/2010/06/Struts2-TextArea-Example.zip)
 
-在 Struts 2 中，你可以使用 **< s:textarea >** 来创建一个 HTML textarea 字段。
+在 Struts 2 中，你可以使用`<s:textarea>`来创建一个 HTML `textarea` 字段。
 
-```java
- <s:textarea label="Address" name="address" cols="40" rows="10"/> 
+```
+<s:textarea label="Address" name="address" cols="40" rows="10"/>
 ```
 
 它将呈现为以下 HTML 代码。
 
-```java
- <textarea name="address" cols="40" rows="10" id="formaction_address"></textarea> 
+```
+<textarea name="address" cols="40" rows="10" id="formaction_address"></textarea>
 ```
 
-## Struts 2 <textarea>示例</textarea>
+## Struts 2 `<textarea>` 示例
 
 一个页面包含一个地址文本区字段，并在表单提交后显示文本区值。
 
- ## 1.行动
+## 1. 行动
 
-**TextAreaAction.java**
+`TextAreaAction.java`
 
 ```java
- package com.mkyong.common.action;
+package com.mkyong.common.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -45,17 +46,17 @@ public class TextAreaAction extends ActionSupport{
 		return SUCCESS;
 	}
 
-} 
+}
 ```
 
- ## 2.查看页面
+## 2. 查看页面
 
-Struts 2 " **s:textarea** "标记来创建一个 textarea 字段。
+Struts 2 `s:textarea` 标记来创建一个 `textarea` 字段。
 
-**textarea.jsp**
+`textarea.jsp`
 
 ```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
 </head>
@@ -74,13 +75,13 @@ Struts 2 " **s:textarea** "标记来创建一个 textarea 字段。
 </s:form>
 
 </body>
-</html> 
+</html>
 ```
 
-**welcome.jsp**
+`welcome.jsp`
 
 ```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 
 <body>
@@ -91,15 +92,15 @@ Struts 2 " **s:textarea** "标记来创建一个 textarea 字段。
 </h2> 
 
 </body>
-</html> 
+</html>
 ```
 
-## 3.struts.xml
+## 3. `struts.xml`
 
 链接在一起~
 
 ```java
- <?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
@@ -118,24 +119,17 @@ Struts 2 " **s:textarea** "标记来创建一个 textarea 字段。
 	</action>
   </package>
 
-</struts> 
+</struts>
 ```
 
-## 4.演示
+## 4. 演示
 
-*http://localhost:8080/struts 2 example/textarea . action*
+`http://localhost:8080/struts2example/textarea.action`
 
 ![Struts2 textarea example](img/97e4e286563d16f528d7fc76f1a6db31.png "struts2-textarea-example")
 
 ## 参考
 
-1.  [Struts 2 文本区文档](http://web.archive.org/web/20190222143654/http://struts.apache.org/2.x/docs/textarea.html)
+1. [Struts 2 文本区文档](http://web.archive.org/web/20190222143654/http://struts.apache.org/2.x/docs/textarea.html)
 
 [struts2](http://web.archive.org/web/20190222143654/http://www.mkyong.com/tag/struts2/) [textarea](http://web.archive.org/web/20190222143654/http://www.mkyong.com/tag/textarea/)
-
-
-
-
-
-
-

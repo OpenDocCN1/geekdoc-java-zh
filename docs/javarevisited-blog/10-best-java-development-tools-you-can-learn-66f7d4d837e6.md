@@ -1,3 +1,4 @@
+
 # 2023 年 Java 开发人员应该学习的 10 大工具
 
 > 原文：<https://medium.com/javarevisited/10-best-java-development-tools-you-can-learn-66f7d4d837e6?source=collection_archive---------1----------------------->
@@ -100,54 +101,56 @@ Jenkins 是 Java 开发人员的另一个重要工具，尤其是那些希望成
 
 它通过领先的平台将机器数据转化为答案，以应对最棘手的 It、物联网和安全挑战。
 
-公司正在使用 Splunk 来搜索、监控、分析和可视化机器数据。如果您想进一步了解 Splunk，Udemy 上的 [**完整的 Splunk 初级课程**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fsplunker%2F) 是一个很好的起点。
+
+
+公司正在使用 `Splunk` 来搜索、监控、分析和可视化机器数据。如果您想进一步了解 `Splunk`，Udemy 上的[完整的 `Splunk` 初级课程](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fsplunker%2F)是一个很好的起点。
 
 [![](img/a0d81d34ccb588f1651d3012fe47f611.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fsplunker%2F)
 
-## 9.厨师
+## 9. 厨师
 
-这是基础设施自动化的另一个优秀工具，比如构建新的服务器和安装应用程序。厨师是用 [Ruby](http://www.java67.com/2018/02/5-free-ruby-and-rails-courses-to-learn-online.html) 和 [Erlang](https://javarevisited.blogspot.com/2022/01/top-5-courses-to-learn-erlang-for.html) 编写的配置管理工具。
+这是基础设施自动化的另一个优秀工具，比如构建新的服务器和安装应用程序。厨师是用 [`Ruby`](http://www.java67.com/2018/02/5-free-ruby-and-rails-courses-to-learn-online.html) 和 [`Erlang`](https://javarevisited.blogspot.com/2022/01/top-5-courses-to-learn-erlang-for.html) 编写的配置管理工具。
 
-它使用一种纯 Ruby 的、特定领域的语言来编写系统配置“菜谱”。有了 [Chef](https://javarevisited.blogspot.com/2021/11/top-5-online-courses-to-learn-chef-and-salt.html) ，你可以轻松管理服务器的大量服务。
+它使用一种纯 `Ruby` 的、特定领域的语言来编写系统配置“菜谱”。有了 [`Chef`](https://javarevisited.blogspot.com/2021/11/top-5-online-courses-to-learn-chef-and-salt.html)，你可以轻松管理服务器的大量服务。
 
-每台服务器的手动修补、配置更新和服务安装等耗时活动都可以实现自动化。简而言之，对于负责管理环境的高级 Java 开发人员和 DevOps 工程师来说，这都是一个有用的工具。
+每台服务器的手动修补、配置更新和服务安装等耗时活动都可以实现自动化。简而言之，对于负责管理环境的高级 `Java` 开发人员和 `DevOps` 工程师来说，这都是一个有用的工具。
 
-如果您对 Chef 感兴趣，并在您的组织中使用它，那么我也建议您通过[**Chef Fundamentals**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fchef-fundamentals-a-recipe-for-automating-infrastructure%2F)了解更多信息。
+如果您对 `Chef` 感兴趣，并在您的组织中使用它，那么我也建议您通过 [`Chef Fundamentals`](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fchef-fundamentals-a-recipe-for-automating-infrastructure%2F)了解更多信息。
 
 [![](img/1b3fbfb1d4eca2e9f935beddfd6ac18e.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fchef-fundamentals-a-recipe-for-automating-infrastructure%2F)
 
-## 10.IntelliJ IDEA [Eclipse 或 NetBeans]
+## 10. IntelliJ IDEA（Eclipse 或 NetBeans）
 
-最后，对 Java 开发人员来说最重要的工具是 IDE。我确信你已经使用过 IDE，因为我几乎不知道哪个 Java 开发人员不使用 IDE，但是大多数用户只是学习一个 IDE，像 [Eclipse](http://www.java67.com/2018/02/5-free-eclipse-and-junit-online-courses-java-developers.html) 或 NetBeans，而忽略其他的。
+最后，对 `Java` 开发人员来说最重要的工具是 `IDE`。我确信你已经使用过 `IDE`，因为我几乎不知道哪个 `Java` 开发人员不使用 `IDE`，但是大多数用户只是学习一个 `IDE`，像 [`Eclipse`](http://www.java67.com/2018/02/5-free-eclipse-and-junit-online-courses-java-developers.html) 或 `NetBeans`，而忽略其他的。
 
-[IntelliJ IDEA](/javarevisited/7-best-courses-to-learn-intellij-idea-for-beginners-and-experienced-java-programmers-2e9aa9bb0c05)就是其中之一，它被许多使用 Eclipse 的 Java 开发人员所忽略，但是它提供了更多。如果您碰巧已经知道 Eclipse，那么您可以学习它来进一步提高您的生产率。我发现许多复杂的项目更适合在 IntelliJ IDEA 中工作，它们对 Java 8 的支持也比 Eclipse 好得多。无论如何，如果你是认真的想在 2023 年学习这个 IDE，那么我建议你通过 [**IntelliJ IDEA Tricks 来提高 Java Devs 的生产力**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fintellij-idea-secrets-double-your-coding-speed-in-2-hours%2F) 来进一步提高你的生产力。
+[`IntelliJ IDEA`](/javarevisited/7-best-courses-to-learn-intellij-idea-for-beginners-and-experienced-java-programmers-2e9aa9bb0c05)就是其中之一，它被许多使用 `Eclipse` 的 `Java` 开发人员所忽略，但是它提供了更多。如果您碰巧已经知道 `Eclipse`，那么您可以学习它来进一步提高您的生产率。我发现许多复杂的项目更适合在 `IntelliJ IDEA` 中工作，它们对 `Java 8` 的支持也比 `Eclipse` 好得多。无论如何，如果你是认真的想在 2023 年学习这个 `IDE`，那么我建议你通过[IntelliJ IDEA Tricks 来提高 Java Devs 的生产力](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fintellij-idea-secrets-double-your-coding-speed-in-2-hours%2F)来进一步提高你的生产力。
 
 [![](img/4b318ccf4541a807c6a60d8e0dbbcb7b.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fintellij-idea-secrets-double-your-coding-speed-in-2-hours%2F)
 
-这就是 Java 开发人员在 2023 年可以学习和掌握的**最基本的工具**，让他们变得更有价值，并提高他们的生产力。这个列表包含了很多工具，而且有可能你已经熟悉了其中的大部分，但是你还可以更好地学习它们，以便有效地使用它们。
+这就是 `Java` 开发人员在 2023 年可以学习和掌握的最基本的工具，让他们变得更有价值，并提高他们的生产力。这个列表包含了很多工具，而且有可能你已经熟悉了其中的大部分，但是你还可以更好地学习它们，以便有效地使用它们。
 
-俗话说，**你和你的工具一样好**，对于 Java 开发人员来说，熟悉能够改进编码、单元测试、开发、部署、基础设施自动化和持续集成的现代工具变得越来越重要，尤其是如果你想成为 DevOps 工程师或全栈 Java 开发人员
+俗话说，你和你的工具一样好，对于 `Java` 开发人员来说，熟悉能够改进编码、单元测试、开发、部署、基础设施自动化和持续集成的现代工具变得越来越重要，尤其是如果你想成为 `DevOps` 工程师或全栈 `Java` 开发人员。
 
-其他你可能喜欢的 **Java 和编程文章**
+## 其他你可能喜欢的 Java 和编程文章
 
-*   [2023 年 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html#123)
-*   [2023 年 Java 开发人员应该学会的 10 件事](http://javarevisited.blogspot.sg/2017/12/10-things-java-programmers-should-learn.html#axzz53JaDYLsP)
-*   [成为全栈 Java 开发人员的前 5 门课程](https://javarevisited.blogspot.com/2020/04/top-5-courses-to-become-full-stack-java-developer-with-Angular-and-Reactjs.html)
-*   [2023 年探索 10 种编程语言](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html)
-*   [Java 和 Web 开发人员应该学习的 10 个框架](http://javarevisited.blogspot.sg/2018/01/10-frameworks-java-and-web-developers-should-learn.html)
-*   [2023 年你可以读的 20 本 Java 书](/javarevisited/10-books-java-developers-should-read-in-2020-e6222f25cc72)
-*   [面向有经验程序员的 10 门高级核心 Java 课程](https://javarevisited.blogspot.com/2020/04/top-10-advanced-core-java-courses-for-experienced-developers.html)
-*   成为更好的 Java 程序员的 10 个技巧
-*   [2023 年 DevOps 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
-*   为有经验的开发人员准备的 10 本高级 Java 书籍
-*   [面向 Java 开发人员的 10 个自动化测试工具](https://javarevisited.blogspot.com/2018/01/10-unit-testing-and-integration-tools-for-java-programmers.html)
-*   【Java 开发人员应该知道的 20 个 API 和库
-*   [5 大春季和冬季培训课程](https://javarevisited.blogspot.com/2016/12/top-5-spring-and-hibernate-training-courses-java-jee-programmers.html)
-*   【Java 开发人员的 10 门最佳 Spring 框架课程
-*   [为有经验的开发人员开设的 10 门高级 Spring Boot 课程](/javarevisited/10-advanced-spring-boot-courses-for-experienced-java-developers-5e57606816bd?source=collection_home---4------0-----------------------)
+- [2023 年 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html#123)
+- [2023 年 Java 开发人员应该学会的 10 件事](http://javarevisited.blogspot.sg/2017/12/10-things-java-programmers-should-learn.html#axzz53JaDYLsP)
+- [成为全栈 Java 开发人员的前 5 门课程](https://javarevisited.blogspot.com/2020/04/top-5-courses-to-become-full-stack-java-developer-with-Angular-and-Reactjs.html)
+- [2023 年探索 10 种编程语言](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html)
+- [Java 和 Web 开发人员应该学习的 10 个框架](http://javarevisited.blogspot.sg/2018/01/10-frameworks-java-and-web-developers-should-learn.html)
+- [2023 年你可以读的 20 本 Java 书](/javarevisited/10-books-java-developers-should-read-in-2020-e6222f25cc72)
+- [面向有经验程序员的 10 门高级核心 Java 课程](https://javarevisited.blogspot.com/2020/04/top-10-advanced-core-java-courses-for-experienced-developers.html)
+- 成为更好的 Java 程序员的 10 个技巧
+- [2023 年 DevOps 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
+- 为有经验的开发人员准备的 10 本高级 Java 书籍
+- [面向 Java 开发人员的 10 个自动化测试工具](https://javarevisited.blogspot.com/2018/01/10-unit-testing-and-integration-tools-for-java-programmers.html)
+- Java 开发人员应该知道的 20 个 API 和库
+- [5 大春季和冬季培训课程](https://javarevisited.blogspot.com/2016/12/top-5-spring-and-hibernate-training-courses-java-jee-programmers.html)
+- Java 开发人员的 10 门最佳 Spring 框架课程
+- [为有经验的开发人员开设的 10 门高级 Spring Boot 课程](/javarevisited/10-advanced-spring-boot-courses-for-experienced-java-developers-5e57606816bd?source=collection_home---4------0-----------------------)
 
-感谢您阅读本文。如果你喜欢 2023 年学习的这些*最好的 Java 工具和库*，并且同意高级 Java 开发人员将从学习这些工具中受益，那么请将它们分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
+感谢您阅读本文。如果你喜欢 2023 年学习的这些最好的 `Java` 工具和库，并且同意高级 `Java` 开发人员将从学习这些工具中受益，那么请将它们分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
 
-**附言**。—如果你想以优异的成绩开始 2023 年，那么我建议你加入 [**完整 Java 大师班**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F) ，这是一门最新的课程。它最近针对 Java 17 和更高版本进行了更新，并将在新的 Java 版本中进行更新。
+**附言**。—如果你想以优异的成绩开始 2023 年，那么我建议你加入[完整 `Java` 大师班](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F)，这是一门最新的课程。它最近针对 `Java 17` 和更高版本进行了更新，并将在新的 `Java` 版本中进行更新。
 
-<https://javarevisited.blogspot.com/2018/05/top-5-java-courses-for-beginners-to-learn-online.html> 
+<https://javarevisited.blogspot.com/2018/05/top-5-java-courses-for-beginners-to-learn-online.html>

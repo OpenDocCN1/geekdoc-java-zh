@@ -1,3 +1,5 @@
+
+
 # Android 进度条示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/android/android-progress-bar-example/>
@@ -7,18 +9,19 @@
 在本教程中，我们将向您展示如何显示一个进度条对话框来告诉用户您的任务正在运行，以及如何增加进度条状态直到任务完成。
 
 **Note**
+
 Refer to this [Android ProgressBar JavaDoc](http://web.archive.org/web/20190210022552/http://developer.android.com/reference/android/widget/ProgressBar.html) for detail explanation.
 
-*P.S 这个项目是在 Eclipse 3.7 中开发的，用 Android 2.3.3 测试过。*
+P.S 这个项目是在 Eclipse 3.7 中开发的，用 Android 2.3.3 测试过。
 
-## 1.添加按钮
+## 1. 添加按钮
 
-打开“ **res/layout/main.xml** 文件，只需添加普通按钮进行演示即可。
+打开`res/layout/main.xml`文件，只需添加普通按钮进行演示即可。
 
-*文件:res/layout/main.xml*
+文件：`res/layout/main.xml`
 
 ```java
- <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
@@ -31,17 +34,17 @@ Refer to this [Android ProgressBar JavaDoc](http://web.archive.org/web/201902100
         android:layout_height="wrap_content"
         android:text="Download File" />
 
-</LinearLayout> 
+</LinearLayout>
 ```
 
- ## 2.代码代码
+## 2. 代码
 
-使用进度条的关键是使用“`Thread`”来运行您的耗时任务，并使用另一个“`Thread`”来相应地更新进度条状态。阅读代码的注释，应该是不言自明的。
+使用进度条的关键是使用`Thread`来运行您的耗时任务，并使用另一个`Thread`来相应地更新进度条状态。阅读代码的注释，应该是不言自明的。
 
-*文件:MyAndroidAppActivity.java*
+文件：`MyAndroidAppActivity.java`
 
 ```java
- package com.mkyong.android;
+package com.mkyong.android;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -159,24 +162,24 @@ public class MyAndroidAppActivity extends Activity {
 
 	}
 
-} 
+}
 ```
 
-“doSomeTasks”方法只是一个文件大小下载模拟器，只是用你的长时间运行的任务替换这个方法。
+`doSomeTasks`方法只是一个文件大小下载模拟器，只是用你的长时间运行的任务替换这个方法。
 
- ## 3.演示
+## 3. 演示
 
 运行应用程序。
 
-1.结果，一个按钮。
+1. 结果，一个按钮。
 
 ![android progress bar demo1](img/d0129d436368272cd7c1c2cbf7f3c2e1.png "android-progressbar-demo1")
 
-2.点击按钮，会提示一个“进度条对话框”显示当前下载进度。
+2. 点击按钮，会提示一个“进度条对话框”显示当前下载进度。
 
 ![android progress bar demo2](img/d80921c5c3ead8693927bc979b75454f.png "android-progressbar-demo2")
 
-3.任务完成后，进度条会显示 100%，并自动关闭。
+3. 任务完成后，进度条会显示 100%，并自动关闭。
 
 ![android progress bar demo3](img/ab100c130ad3a2772061ac009926e89f.png "android-progressbar-demo3")
 
@@ -186,15 +189,9 @@ Download it - [Android-ProgressBar-Example.zip](http://web.archive.org/web/20190
 
 ## 参考
 
-1.  [安卓进度条示例](http://web.archive.org/web/20190210022552/http://developer.android.com/reference/android/widget/ProgressBar.html)
-2.  [Android progress dialog JavaDoc](http://web.archive.org/web/20190210022552/http://developer.android.com/reference/android/app/ProgressDialog.html)
-3.  [另一个 Android ProgressBar 例子](http://web.archive.org/web/20190210022552/http://huuah.com/android-progress-bar-and-thread-updating/)
+1. [安卓进度条示例](http://web.archive.org/web/20190210022552/http://developer.android.com/reference/android/widget/ProgressBar.html)
+2. [Android progress dialog JavaDoc](http://web.archive.org/web/20190210022552/http://developer.android.com/reference/android/app/ProgressDialog.html)
+3. [另一个 Android ProgressBar 例子](http://web.archive.org/web/20190210022552/http://huuah.com/android-progress-bar-and-thread-updating/)
 
 [android](http://web.archive.org/web/20190210022552/http://www.mkyong.com/tag/android/) [progress bar](http://web.archive.org/web/20190210022552/http://www.mkyong.com/tag/progress-bar/)
-
-
-
-
-
-
 

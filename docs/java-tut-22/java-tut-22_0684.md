@@ -1,3 +1,4 @@
+
 # MIDI 包概述
 
 > 原文：[`docs.oracle.com/javase/tutorial/sound/overview-MIDI.html`](https://docs.oracle.com/javase/tutorial/sound/overview-MIDI.html)
@@ -17,14 +18,13 @@ MIDI 规范的简要硬件部分规定了 MIDI 电缆的引脚排列方式以及
 MIDI 规范的软件部分非常广泛。这部分内容涉及 MIDI 数据的结构以及合成器等设备应如何响应该数据。重要的是要理解 MIDI 数据可以*流式传输*或*序列化*。这种二元性反映了 Complete MIDI 1.0 详细规范的两个不同部分：
 
 +   MIDI 1.0
-
 +   标准 MIDI 文件
 
 通过检查 MIDI 规范的这两个部分的目的，我们将解释流式传输和序列化的含义。
 
 ## MIDI 线协议中的流数据
 
-MIDI 规范的这两个部分中的第一个描述了非正式称为“MIDI 线协议”的内容。 MIDI 线协议，即原始 MIDI 协议，基于这样一个假设，即 MIDI 数据正在通过 MIDI 电缆（“线”）发送。电缆将数字数据从一个 MIDI 设备传输到另一个 MIDI 设备。每个 MIDI 设备可能是乐器或类似设备，也可能是配备有 MIDI 功能的声卡或 MIDI 到串口接口的通用计算机。
+MIDI 规范的这两个部分中的第一个描述了非正式称为“MIDI 线协议”的内容。MIDI 线协议，即原始 MIDI 协议，基于这样一个假设，即 MIDI 数据正在通过 MIDI 电缆（“线”）发送。电缆将数字数据从一个 MIDI 设备传输到另一个 MIDI 设备。每个 MIDI 设备可能是乐器或类似设备，也可能是配备有 MIDI 功能的声卡或 MIDI 到串口接口的通用计算机。
 
 MIDI 数据，根据 MIDI 线协议定义，被组织成消息。不同类型的消息由消息中的第一个字节区分，称为*状态字节*。（状态字节是唯一一个最高位设置为 1 的字节。）在消息中跟随状态字节的字节称为*数据字节*。某些 MIDI 消息，称为*通道*消息，具有包含四位用于指定通道消息类型和另外四位用于指定通道号的状态字节。因此有 16 个 MIDI 通道；接收 MIDI 消息的设备可以设置为响应所有或仅一个这些虚拟通道上的通道消息。通常，每个 MIDI 通道（不应与音频通道混淆）用于发送不同乐器的音符。例如，两个常见的通道消息是 Note On 和 Note Off，分别启动音符发声并停止它。这两个消息各自需要两个数据字节：第一个指定音符的音高，第二个指定其“速度”（假设键盘乐器正在演奏音符时按下或释放键的速度）。
 
@@ -45,9 +45,7 @@ MIDI 规范的标准 MIDI 文件部分解决了 MIDI 传输协议中的时间限
 [`MidiMessage`](https://docs.oracle.com/javase/8/docs/api/javax/sound/midi/MidiMessage.html) 是表示“原始” MIDI 消息的抽象类。一个“原始” MIDI 消息通常是由 MIDI 传输协议定义的消息。它也可以是标准 MIDI 文件规范中定义的事件之一，但没有事件的时间信息。在 Java Sound API 中，有三类原始 MIDI 消息，分别由这三个相应的 `MidiMessage` 子类表示：
 
 +   [`ShortMessages`](https://docs.oracle.com/javase/8/docs/api/javax/sound/midi/ShortMessage.html)是最常见的消息，状态字节后最多有两个数据字节。通道消息，如 Note On 和 Note Off，都是短消息，还有一些其他消息也是短消息。
-
 +   [`SysexMessages`](https://docs.oracle.com/javase/8/docs/api/javax/sound/midi/SysexMessage.html)包含*系统专用*的 MIDI 消息。它们可能有许多字节，并且通常包含制造商特定的指令。
-
 +   [`MetaMessages`](https://docs.oracle.com/javase/8/docs/api/javax/sound/midi/MetaMessage.html)出现在 MIDI 文件中，但不出现在 MIDI 线协议中。元消息包含数据，例如歌词或速度设置，这对于音序器可能很有用，但通常对合成器没有意义。
 
 ### MIDI 事件
@@ -63,9 +61,7 @@ MIDI 规范的标准 MIDI 文件部分解决了 MIDI 传输协议中的时间限
 Java Sound API 将 MIDI 数据组织成三部分层次结构：
 
 +   [`Sequence`](https://docs.oracle.com/javase/8/docs/api/javax/sound/midi/Sequence.html)
-
 +   [`Track`](https://docs.oracle.com/javase/8/docs/api/javax/sound/midi/Track.html)
-
 +   [`MidiEvent`](https://docs.oracle.com/javase/8/docs/api/javax/sound/midi/MidiEvent.html)
 
 `Track`是`MidiEvents`的集合，`Sequence`是`Tracks`的集合。这种层次结构反映了标准 MIDI 文件规范中的文件、轨道和事件。（注意：这是一种包含和拥有的层次结构；这不是一种继承的类层次结构。这三个类直接继承自`java.lang.Object`。）

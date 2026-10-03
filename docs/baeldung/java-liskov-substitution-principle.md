@@ -1,36 +1,37 @@
+
 # Java 中的 Liskov 替换原理
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-liskov-substitution-principle>
 
-## 1.概观
+## 1. 概观
 
-罗伯特·c·马丁在他 2000 年的论文`[Design Principles and Design Patterns](https://web.archive.org/web/20221203233830/https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf)`中介绍了[固体设计原则](/web/20221203233830/https://www.baeldung.com/solid-principles)。坚实的设计原则帮助我们**创建更易维护、更易理解、更灵活的软件。**
+罗伯特·c·马丁在他 2000 年的论文`[Design Principles and Design Patterns](https://web.archive.org/web/20221203233830/https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf)`中介绍了[固体设计原则](/web/20221203233830/https://www.baeldung.com/solid-principles)。坚实的设计原则帮助我们创建更易维护、更易理解、更灵活的软件。
 
 在本文中，我们将讨论利斯科夫替代原理，即首字母缩写词中的“L”。
 
-## 2.开放/封闭原则
+## 2. 开放/封闭原则
 
-要理解利斯科夫替代原理，首先要理解开/闭原理(来自固体的“O”)。
+要理解利斯科夫替代原理，首先要理解开/闭原理（来自固体的“O”）。
 
-开放/封闭原则的目标鼓励我们设计我们的软件，所以我们**只通过添加新代码**来添加新特性。当这成为可能时，我们就有了松散耦合的、因而易于维护的应用程序。
+开放/封闭原则的目标鼓励我们设计我们的软件，所以我们只通过添加新代码来添加新特性。当这成为可能时，我们就有了松散耦合的、因而易于维护的应用程序。
 
-## 3.一个示例用例
+## 3. 一个示例用例
 
 让我们看一个银行应用程序的例子来更好地理解开放/封闭原则。
 
-### 3.1.没有开/关原理
+### 3.1. 没有开/关原理
 
 我们的银行应用程序支持两种账户类型——“活期”和“储蓄”。这些分别由类`CurrentAccount`和`SavingsAccount`表示。
 
-`BankingAppWithdrawalService`为其用户提供取款功能:
+`BankingAppWithdrawalService`为其用户提供取款功能：
 
 [![1](img/673d450293e41560308860db2c81a4a5.png)](/web/20221203233830/https://www.baeldung.com/wp-content/uploads/2020/07/1.png)
 
-不幸的是，扩展这种设计有一个问题。`BankingAppWithdrawalService`知道账户`.`的两个具体实现，因此，每次引入新的账户类型时，`BankingAppWithdrawalService`都需要改变。
+不幸的是，扩展这种设计有一个问题。`BankingAppWithdrawalService`知道账户的两个具体实现，因此，每次引入新的账户类型时，`BankingAppWithdrawalService`都需要改变。
 
-### 3.2.使用开放/封闭原则使代码可扩展
+### 3.2. 使用开放/封闭原则使代码可扩展
 
-让我们重新设计解决方案，以符合开放/封闭原则。当需要新的账户类型时，我们将通过使用一个`Account`基类来关闭`BankingAppWithdrawalService`的修改:
+让我们重新设计解决方案，以符合开放/封闭原则。当需要新的账户类型时，我们将通过使用一个`Account`基类来关闭`BankingAppWithdrawalService`的修改：
 
 [![2](img/32900670c15578a58c4bc0d0e2b58355.png)](/web/20221203233830/https://www.baeldung.com/wp-content/uploads/2020/07/2.png)
 
@@ -38,11 +39,11 @@
 
 `BankingAppWithdrawalService`不再依赖于具体的账户类。因为它现在只依赖于抽象类，所以当引入新的帐户类型时，它不需要改变。
 
-因此，`BankingAppWithdrawalService`对于具有新账户类型的扩展来说是**开放的，但是对于修改**来说**是关闭的，因为新类型不需要为了集成而改变它。**
+因此，`BankingAppWithdrawalService`对于具有新账户类型的扩展来说是开放的，但是对于修改来说是关闭的，因为新类型不需要为了集成而改变它。
 
-### 3.3.Java 代码
+### 3.3. Java 代码
 
-让我们用 Java 来看看这个例子。首先，让我们定义一下`Account`类:
+让我们用 Java 来看看这个例子。首先，让我们定义一下`Account`类：
 
 ```java
 public abstract class Account {
@@ -59,7 +60,7 @@ public abstract class Account {
 } 
 ```
 
-并且，让我们定义一下`BankingAppWithdrawalService`:
+并且，让我们定义一下`BankingAppWithdrawalService`：
 
 ```java
 public class BankingAppWithdrawalService {
@@ -77,13 +78,13 @@ public class BankingAppWithdrawalService {
 
 现在，让我们来看看，在这个设计中，一个新的帐户类型是如何违反 Liskov 替代原则的。
 
-### 3.4.新的帐户类型
+### 3.4. 新的帐户类型
 
 该银行现在想向客户提供一个高利息的定期存款账户。
 
 为了支持这一点，让我们引入一个新的`FixedTermDepositAccount`类。现实世界中的定期存款账户是一种账户类型。这意味着我们面向对象设计中的继承。
 
-所以，我们让`FixedTermDepositAccount`成为`Account`的子类:
+所以，我们让`FixedTermDepositAccount`成为`Account`的子类：
 
 ```java
 public class FixedTermDepositAccount extends Account {
@@ -93,7 +94,7 @@ public class FixedTermDepositAccount extends Account {
 
 到目前为止，一切顺利。然而，银行不允许定期存款账户提款。
 
-这意味着新的`FixedTermDepositAccount`类不能有意义地提供`Account`定义的`withdraw`方法。一个常见的解决方法是让`FixedTermDepositAccount`在它无法实现的方法中抛出一个`UnsupportedOperationException`:
+这意味着新的`FixedTermDepositAccount`类不能有意义地提供`Account`定义的`withdraw`方法。一个常见的解决方法是让`FixedTermDepositAccount`在它无法实现的方法中抛出一个`UnsupportedOperationException`：
 
 ```java
 public class FixedTermDepositAccount extends Account {
@@ -109,9 +110,9 @@ public class FixedTermDepositAccount extends Account {
 }
 ```
 
-### 3.5.使用新帐户类型进行测试
+### 3.5. 使用新帐户类型进行测试
 
-虽然这个新类工作得很好，但是让我们试着将它与`BankingAppWithdrawalService`一起使用:
+虽然这个新类工作得很好，但是让我们试着将它与`BankingAppWithdrawalService`一起使用：
 
 ```java
 Account myFixedTermDepositAccount = new FixedTermDepositAccount();
@@ -121,7 +122,7 @@ BankingAppWithdrawalService withdrawalService = new BankingAppWithdrawalService(
 withdrawalService.withdraw(new BigDecimal(100.00));
 ```
 
-不出所料，银行应用程序崩溃了，错误如下:
+不出所料，银行应用程序崩溃了，错误如下：
 
 ```java
 Withdrawals are not supported by FixedTermDepositAccount!!
@@ -129,9 +130,9 @@ Withdrawals are not supported by FixedTermDepositAccount!!
 
 如果一个有效的对象组合导致了一个错误，那么这个设计显然有问题。
 
-### 3.6.哪里出了问题？
+### 3.6. 哪里出了问题？
 
-`BankingAppWithdrawalService`是`Account`类的客户端。它期望`Account`及其子类型都保证`Account`类为其`withdraw`方法指定的行为:
+`BankingAppWithdrawalService`是`Account`类的客户端。它期望`Account`及其子类型都保证`Account`类为其`withdraw`方法指定的行为：
 
 ```java
 /**
@@ -144,33 +145,33 @@ Withdrawals are not supported by FixedTermDepositAccount!!
 protected abstract void withdraw(BigDecimal amount);
 ```
 
-然而，由于不支持`withdraw`方法，`FixedTermDepositAccount`违反了这个方法规范`.`，因此，我们不能可靠地用`FixedTermDepositAccount`代替`Account`。
+然而，由于不支持`withdraw`方法，`FixedTermDepositAccount`违反了这个方法规范，因此，我们不能可靠地用`FixedTermDepositAccount`代替`Account`。
 
 换句话说，`FixedTermDepositAccount`违背了利斯科夫替代原理。
 
-### 3.7.我们不能处理`BankingAppWithdrawalService`中的错误吗？
+### 3.7. 我们不能处理`BankingAppWithdrawalService`中的错误吗？
 
 我们可以修改设计，让`Account`的`withdraw`方法的客户端知道调用它时可能会出错。然而，这将意味着客户必须具有意外子类型行为的特殊知识。这开始打破开/关原则。
 
-换句话说，为了让开放/封闭原则很好地工作，所有的**子类型必须可以替换它们的父类型，而不必修改客户端代码**。坚持利斯科夫替代原理确保了这种可替代性。
+换句话说，为了让开放/封闭原则很好地工作，所有的子类型必须可以替换它们的父类型，而不必修改客户端代码。坚持利斯科夫替代原理确保了这种可替代性。
 
 现在让我们详细看看利斯科夫替代原理。
 
-## 4.利斯科夫替代原理
+## 4. 利斯科夫替代原理
 
-### 4.1.定义
+### 4.1. 定义
 
-罗伯特·马丁总结道:
+罗伯特·马丁总结道：
 
 > 子类型必须可以替换它们的基本类型。
 
-Barbara Liskov 在 1988 年定义了它，提供了一个更数学化的定义:
+Barbara Liskov 在 1988 年定义了它，提供了一个更数学化的定义：
 
 > `If for each object o1 of type S there is an object o2 of type T such that for all programs P defined in terms of T, the behavior of P is unchanged when o1 is substituted for o2 then S is a subtype of T.`
 
 让我们多理解一下这些定义。
 
-### 4.2.什么时候子类型可以替代它的父类型？
+### 4.2. 什么时候子类型可以替代它的父类型？
 
 子类型不会自动替换其父类型。为了能够被替换，子类型必须表现得像它的父类型一样。
 
@@ -178,27 +179,27 @@ Barbara Liskov 在 1988 年定义了它，提供了一个更数学化的定义:
 
 Java 中的子类型要求基类的属性和方法在子类中可用。
 
-然而，[行为子类型化](https://web.archive.org/web/20221203233830/https://en.wikipedia.org/wiki/Behavioral_subtyping)意味着子类型不仅提供父类型中的所有方法，而且它**必须遵守父类型**的行为规范。这确保了子类型满足客户对超类型行为的任何假设。
+然而，[行为子类型化](https://web.archive.org/web/20221203233830/https://en.wikipedia.org/wiki/Behavioral_subtyping)意味着子类型不仅提供父类型中的所有方法，而且它必须遵守父类型的行为规范。这确保了子类型满足客户对超类型行为的任何假设。
 
 这是利斯科夫替代原则给面向对象设计带来的额外约束。
 
 现在让我们重构我们的银行应用程序，以解决我们之前遇到的问题。
 
-## 5.重构
+## 5. 重构
 
 为了解决我们在银行示例中发现的问题，让我们从理解根本原因开始。
 
-### 5.1.根本原因
+### 5.1. 根本原因
 
 在这个例子中，我们的`FixedTermDepositAccount`不是`Account`的行为子类型。
 
-`Account`的设计错误地假设所有`Account`类型都允许提款。因此，`Account,`的所有子类型，包括不支持撤销的`FixedTermDepositAccount`，都继承了`withdraw`方法。
+`Account`的设计错误地假设所有`Account`类型都允许提款。因此，`Account`的所有子类型，包括不支持撤销的`FixedTermDepositAccount`，都继承了`withdraw`方法。
 
 虽然我们可以通过延长`Account`的合同来解决这个问题，但是还有其他的解决方案。
 
-### 5.2.修改后的类图
+### 5.2. 修改后的类图
 
-让我们以不同的方式设计我们的帐户层次结构:
+让我们以不同的方式设计我们的帐户层次结构：
 
 [![3](img/3dfcde84ff2d1af04024bc340c3c3d37.png)](/web/20221203233830/https://www.baeldung.com/wp-content/uploads/2020/07/3.png)
 
@@ -206,9 +207,9 @@ Java 中的子类型要求基类的属性和方法在子类中可用。
 
 这意味着`BankingAppWithdrawalService`可以信任正确类型的帐户来提供`withdraw`功能。
 
-### 5.3.重构后的`BankingAppWithdrawalService`
+### 5.3. 重构后的`BankingAppWithdrawalService`
 
-`BankingAppWithdrawalService`现在需要使用`WithdrawableAccount` `:`
+`BankingAppWithdrawalService`现在需要使用`WithdrawableAccount`：
 
 ```java
 public class BankingAppWithdrawalService {
@@ -226,25 +227,25 @@ public class BankingAppWithdrawalService {
 
 至于`FixedTermDepositAccount`，我们保留`Account`作为它的父类。因此，它只继承它能可靠实现的`deposit`行为，而不再继承它不想要的`withdraw`方法。这种新设计避免了我们之前看到的问题。
 
-## 6.规则
+## 6. 规则
 
 现在让我们看看一些关于方法签名、不变量、前置条件和后置条件的规则/技术，我们可以遵循这些规则/技术来确保创建行为良好的子类型。
 
-在他们的书 [`Program Development in Java: Abstraction, Specification, and Object-Oriented Design`](https://web.archive.org/web/20221203233830/https://www.oreilly.com/library/view/program-development-in/9780768685299/) 中，Barbara Liskov 和 John Guttag 将这些规则分为三类——签名规则、属性规则和方法规则。
+在他们的书[`Program Development in Java: Abstraction, Specification, and Object-Oriented Design`](https://web.archive.org/web/20221203233830/https://www.oreilly.com/library/view/program-development-in/9780768685299/)中，Barbara Liskov 和 John Guttag 将这些规则分为三类——签名规则、属性规则和方法规则。
 
 这些实践中的一些已经被 Java 的首要规则强制执行了。
 
 这里我们应该注意一些术语。宽类型更一般——例如，`Object`可以表示任何 Java 对象，比`CharSequence`更宽，而`String`非常具体，因此范围更窄。
 
-### 6.1.签名规则-方法参数类型
+### 6.1. 签名规则——方法参数类型
 
-该规则规定**被覆盖的子类型方法参数类型可以与超类型方法参数类型**相同或更宽。
+该规则规定被覆盖的子类型方法参数类型可以与超类型方法参数类型相同或更宽。
 
 Java 的方法覆盖规则通过强制被覆盖的方法参数类型与超类型方法完全匹配来支持这一规则。
 
-### 6.2.签名规则–返回类型
+### 6.2. 签名规则——返回类型
 
-被覆盖的子类型方法的返回类型可以比超类型方法的返回类型更窄。这被称为返回类型的[协方差](https://web.archive.org/web/20221203233830/https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)#Covariant_method_return_type)。协方差表示何时接受子类型代替超类型。Java 支持返回类型的协变性。让我们看一个例子:
+被覆盖的子类型方法的返回类型可以比超类型方法的返回类型更窄。这被称为返回类型的[协方差](https://web.archive.org/web/20221203233830/https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)#Covariant_method_return_type)。协方差表示何时接受子类型代替超类型。Java 支持返回类型的协变性。让我们看一个例子：
 
 ```java
 public abstract class Foo {
@@ -253,7 +254,7 @@ public abstract class Foo {
 } 
 ```
 
-`Foo`中的`generateNumber`方法的返回类型为`Number`。现在让我们通过返回一个更窄类型的`Integer`来覆盖这个方法:
+`Foo`中的`generateNumber`方法的返回类型为`Number`。现在让我们通过返回一个更窄类型的`Integer`来覆盖这个方法：
 
 ```java
 public class Bar extends Foo {
@@ -265,25 +266,29 @@ public class Bar extends Foo {
 }
 ```
 
-因为`Integer`是-A `Number`，一个期望`Number`的客户端代码可以用`Bar`替换`Foo`没有任何问题。
+因为`Integer`是`Number`的子类型，一个期望`Number`的客户端代码可以用`Bar`替换`Foo`而没有任何问题。
 
 另一方面，如果在`Bar`中被覆盖的方法要返回一个比`Number`更宽的类型，例如`Object`，那可能包括`Object`的任何子类型，例如`Truck`。任何依赖于返回类型`Number`的客户端代码都不能处理`Truck`！
 
 幸运的是，Java 的方法覆盖规则防止覆盖方法返回更宽的类型。
 
-### 6.3.签名规则–例外
+### 6.3. 签名规则——例外
 
-与超类型方法相比，子类型方法可以抛出更少或更窄(但不是任何额外或更宽)的异常。
+与超类型方法相比，子类型方法可以抛出更少或更窄（但不是任何额外或更宽）的异常。
 
 这是可以理解的，因为当客户端代码替换子类型时，它可以处理比超类型方法抛出更少异常的方法。但是，如果子类型的方法抛出新的或更广泛的检查异常，它将破坏客户端代码。
 
-Java 的方法覆盖规则已经对检查的异常实施了这个规则。但是，Java 中的**重写方法可以抛出任何** **`RuntimeException`** 而不管被重写的方法是否声明异常。
+Java 的方法覆盖规则已经对检查的异常实施了这个规则。但是，Java 中的重写方法可以抛出任何`RuntimeException`，而不管被重写的方法是否声明异常。
 
-### 6.4.属性规则–类不变量
+### 6.4. 属性规则——类不变量
+
+
+
+## 6.4.类不变量
 
 [类不变量](https://web.archive.org/web/20221203233830/https://en.wikipedia.org/wiki/Class_invariant)是关于对象属性的断言，对于对象的所有有效状态，该断言必须为真。
 
-让我们看一个例子:
+让我们看一个例子：
 
 ```java
 public abstract class Car {
@@ -299,9 +304,9 @@ public abstract class Car {
 }
 ```
 
-`Car`类指定了一个类不变量，即`speed`必须总是在`limit`之下。不变式规则声明**所有子类型方法(继承的和新的)必须维护或加强超类型的类不变式**。
+`Car`类指定了一个类不变量，即`speed`必须总是在`limit`之下。不变式规则声明所有子类型方法（继承的和新的）必须维护或加强超类型的类不变式。
 
-让我们定义一个保持类不变量的子类`Car`:
+让我们定义一个保持类不变量的子类`Car`：
 
 ```java
 public class HybridCar extends Car {
@@ -322,11 +327,11 @@ public class HybridCar extends Car {
 
 相反，如果类不变量没有被子类型保留，它会破坏任何依赖于父类型的客户端代码。
 
-### 6.5.属性规则–历史约束
+### 6.5.属性规则——历史约束
 
-历史约束声明**子类** **方法(继承的或新的)不应该允许基类不允许**的状态改变。
+历史约束声明子类方法（继承的或新的）不应该允许基类不允许的状态改变。
 
-让我们看一个例子:
+让我们看一个例子：
 
 ```java
 public abstract class Car {
@@ -347,7 +352,7 @@ public abstract class Car {
 
 `Car`类指定了对`mileage`属性的约束。`mileage`属性只能在创建时设置一次，之后不能重置。
 
-现在让我们定义一个扩展了`Car:`的`ToyCar`
+现在让我们定义一个扩展了`Car`的`ToyCar`：
 
 ```java
 public class ToyCar extends Car {
@@ -363,9 +368,9 @@ public class ToyCar extends Car {
 
 类似地，如果基类有一个不可变的属性，子类不应该允许这个属性被修改。这就是为什么[不可变类](/web/20221203233830/https://www.baeldung.com/java-immutable-object)应该是`final`。
 
-### 6.6.方法规则-前提条件
+### 6.6.方法规则——前提条件
 
-在一个方法可以被执行之前，一个[先决条件](https://web.archive.org/web/20221203233830/https://en.wikipedia.org/wiki/Precondition)应该被满足。让我们看一个关于参数值的前提条件的例子:
+在一个方法可以被执行之前，一个[先决条件](https://web.archive.org/web/20221203233830/https://en.wikipedia.org/wiki/Precondition)应该被满足。让我们看一个关于参数值的前提条件的例子：
 
 ```java
 public class Foo {
@@ -380,9 +385,9 @@ public class Foo {
 }
 ```
 
-这里，`doStuff`方法的前提条件规定`num`参数值必须在 1 和 5 之间。我们在方法中使用了范围检查来强制这个前提条件。**子类型可以削弱(但不能加强)它所覆盖的方法的前提条件**。当子类型削弱了前提条件时，它放松了父类型方法施加的约束。
+这里，`doStuff`方法的前提条件规定`num`参数值必须在 1 和 5 之间。我们在方法中使用了范围检查来强制这个前提条件。子类型可以削弱（但不能加强）它所覆盖的方法的前提条件。当子类型削弱了前提条件时，它放松了父类型方法施加的约束。
 
-现在让我们用一个弱化的前提条件覆盖`doStuff`方法:
+现在让我们用一个弱化的前提条件覆盖`doStuff`方法：
 
 ```java
 public class Bar extends Foo {
@@ -400,15 +405,15 @@ public class Bar extends Foo {
 
 这里，前置条件在被覆盖的`doStuff`方法中被弱化为`0 < num <= 10`，允许`num`有更大范围的值。对`Foo.doStuff`有效的`num`的所有值对`Bar.doStuff`也有效。因此，`Foo.doStuff`的客户端在用`Bar`替换`Foo`时不会注意到差异。
 
-相反，当一个子类型加强了前提条件时(例如，在我们的例子中的`0 < num <= 3`),它应用了比父类型更严格的限制。例如，`num`的值 4 & 5 对`Foo.doStuff`有效，但对`Bar.doStuff`不再有效。
+相反，当一个子类型加强了前提条件时（例如，在我们的例子中的`0 < num <= 3`），它应用了比父类型更严格的限制。例如，`num`的值 4 和 5 对`Foo.doStuff`有效，但对`Bar.doStuff`不再有效。
 
 这将破坏不期望这种新的更严格约束的客户端代码。
 
-### 6.7.方法规则–后置条件
+### 6.7.方法规则——后置条件
 
 一个[后置条件](https://web.archive.org/web/20221203233830/https://en.wikipedia.org/wiki/Postcondition)是一个方法执行后应该满足的条件。
 
-让我们看一个例子:
+让我们看一个例子：
 
 ```java
 public abstract class Car {
@@ -422,9 +427,9 @@ public abstract class Car {
 } 
 ```
 
-这里，`Car`的`brake`方法指定了一个后置条件，`Car`的`speed`在方法执行结束时必须减少这个后置条件。**子类型可以加强(但不是削弱)它覆盖的方法的后置条件**。当子类型加强后置条件时，它提供的不仅仅是超类型方法。
+这里，`Car`的`brake`方法指定了一个后置条件，即`Car`的`speed`在方法执行结束时必须减少。子类型可以加强（但不是削弱）它覆盖的方法的后置条件。当子类型加强后置条件时，它提供的不仅仅是超类型方法。
 
-现在，让我们定义一个`Car`的派生类来加强这个前提条件:
+现在，让我们定义一个`Car`的派生类来加强这个前提条件：
 
 ```java
 public class HybridCar extends Car {
@@ -460,7 +465,7 @@ public class HybridCar extends Car {
 
 这是上述代码气味的变体。子类型不能完成一个行为，所以它在被重写的方法中什么也不做。
 
-这里有一个例子。让我们定义一个`FileSystem`接口:
+这里有一个例子。让我们定义一个`FileSystem`接口：
 
 ```java
 public interface FileSystem {
@@ -470,7 +475,7 @@ public interface FileSystem {
 } 
 ```
 
-让我们定义一个实现`FileSystem:`的`ReadOnlyFileSystem`
+让我们定义一个实现`FileSystem`的`ReadOnlyFileSystem`：
 
 ```java
 public class ReadOnlyFileSystem implements FileSystem {
@@ -492,7 +497,7 @@ public class ReadOnlyFileSystem implements FileSystem {
 
 如果客户端代码需要使用`instanceof`或向下转换，那么很可能同时违反了开/闭原则和 Liskov 替换原则。
 
-让我们用一个`FilePurgingJob`来说明这一点:
+让我们用一个`FilePurgingJob`来说明这一点：
 
 ```java
 public class FilePurgingJob {
@@ -511,11 +516,11 @@ public class FilePurgingJob {
 }
 ```
 
-因为`FileSystem`模型从根本上与只读文件系统不兼容，所以`ReadOnlyFileSystem` 继承了它不支持的`deleteFile`方法。这个示例代码使用一个`instanceof`检查来完成基于子类型实现的特殊工作。
+因为`FileSystem`模型从根本上与只读文件系统不兼容，所以`ReadOnlyFileSystem`继承了它不支持的`deleteFile`方法。这个示例代码使用一个`instanceof`检查来完成基于子类型实现的特殊工作。
 
 ### 7.4.子类型方法总是返回相同的值
 
-这是一个比其他更微妙的违规行为，也更难被发现。在本例中，`ToyCar`总是为`remainingFuel`属性返回一个固定值:
+这是一个比其他更微妙的违规行为，也更难被发现。在本例中，`ToyCar`总是为`remainingFuel`属性返回一个固定值：
 
 ```java
 public class ToyCar extends Car {

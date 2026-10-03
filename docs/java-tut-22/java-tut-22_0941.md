@@ -1,3 +1,4 @@
+
 # 检索网络接口
 
 > 原文：[`docs.oracle.com/javase/tutorial/networking/nifs/retrieving.html`](https://docs.oracle.com/javase/tutorial/networking/nifs/retrieving.html)
@@ -36,7 +37,6 @@ public class ListNIFs
         }
      }
 }  
-
 ```
 
 以下是示例程序的样本输出：
@@ -53,5 +53,4 @@ Name: bge0
 
 Display name: lo0
 Name: lo0
-
 ```

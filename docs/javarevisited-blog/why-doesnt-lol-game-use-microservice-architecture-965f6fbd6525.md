@@ -1,3 +1,4 @@
+
 # LoL 游戏为什么不用微服务架构？
 
 > 原文：<https://medium.com/javarevisited/why-doesnt-lol-game-use-microservice-architecture-965f6fbd6525?source=collection_archive---------0----------------------->

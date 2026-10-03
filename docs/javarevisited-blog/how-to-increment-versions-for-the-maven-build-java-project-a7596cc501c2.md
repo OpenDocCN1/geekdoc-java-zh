@@ -1,3 +1,4 @@
+
 # 如何增加 Maven Build Java 项目的版本—第 1 部分
 
 > 原文：<https://medium.com/javarevisited/how-to-increment-versions-for-the-maven-build-java-project-a7596cc501c2?source=collection_archive---------0----------------------->

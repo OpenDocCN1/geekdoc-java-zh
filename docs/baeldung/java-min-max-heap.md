@@ -1,29 +1,30 @@
+
 # 如何在 Java 中实现最小最大堆
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-min-max-heap>
 
-## 1.概观
+## 1. 概观
 
-在本教程中，我们将看看如何在 Java 中实现 min-max [heap](/web/20220628062856/https://www.baeldung.com/cs/heap-vs-binary-search-tree) 。
+在本教程中，我们将看看如何在 Java 中实现 min-max [heap](/web/20220628062856/https://www.baeldung.com/cs/heap-vs-binary-search-tree)。
 
-## 2.最小-最大堆
+## 2. 最小-最大堆
 
-首先，我们来看看 heap 的定义和特点。最小-最大堆是一个完整的[二叉树](/web/20220628062856/https://www.baeldung.com/cs/binary-tree-intro)，同时具有最小堆和最大堆的特征:
+首先，我们来看看 `heap` 的定义和特点。最小-最大堆是一个完整的[二叉树](/web/20220628062856/https://www.baeldung.com/cs/binary-tree-intro)，同时具有最小堆和最大堆的特征：
 
 [![](img/4effdd936ec614ae2f34b2df695f4c64.png)](/web/20220628062856/https://www.baeldung.com/wp-content/uploads/2021/06/Screenshot-from-2021-06-14-22-37-11.png)
 
-正如我们在上面看到的，**树中偶数层的每个节点都小于它的所有后代，而奇数层的每个节点都大于它的所有后代，其中根在零层。**
+正如我们在上面看到的，树中偶数层的每个节点都小于它的所有后代，而奇数层的每个节点都大于它的所有后代，其中根在零层。
 
-最小-最大堆中的每个节点都有一个数据成员，通常称为键。在 min-max 堆中，`root`的`key`最小，第二层的两个节点中有一个是最大的`key`。对于最小-最大堆中的每个节点，如`X`:
+最小-最大堆中的每个节点都有一个数据成员，通常称为键。在 min-max 堆中，`root` 的 `key` 最小，第二层的两个节点中有一个是最大的 `key`。对于最小-最大堆中的每个节点，如 `X`：
 
-*   如果`X`在最小(或偶数)层，那么`X.key`是根为`X`的子树中所有键中最小的键
-*   如果`X`在最大(或奇数)级别，那么`X.key`是根为`X`的子树中所有关键字中最大的关键字
+- 如果 `X` 在最小（或偶数）层，那么 `X.key` 是根为 `X` 的子树中所有键中最小的键。
+- 如果 `X` 在最大（或奇数）级别，那么 `X.key` 是根为 `X` 的子树中所有关键字中最大的关键字。
 
-像最小堆或最大堆一样，插入和删除可以发生在`O(logN)`的[时间复杂度](/web/20220628062856/https://www.baeldung.com/cs/time-vs-space-complexity)内。
+像最小堆或最大堆一样，插入和删除可以发生在 `O(logN)` 的[时间复杂度](/web/20220628062856/https://www.baeldung.com/cs/time-vs-space-complexity)内。
 
-## 3.用 Java 实现
+## 3. 用 Java 实现
 
-让我们从一个简单的表示最小-最大堆的类开始:
+让我们从一个简单的表示最小-最大堆的类开始：
 
 ```java
 public class MinMaxHeap<T extends Comparable<T>> {
@@ -33,9 +34,9 @@ public class MinMaxHeap<T extends Comparable<T>> {
 }
 ```
 
-正如我们在上面看到的，我们使用一个`indicator`来计算添加到数组中的最后一个项目索引。但是在我们继续之前，我们需要记住**数组索引从零开始，但是我们假设索引从堆中的一开始。**
+正如我们在上面看到的，我们使用一个 `indicator` 来计算添加到数组中的最后一个项目索引。但是在我们继续之前，我们需要记住数组索引从零开始，但是我们假设索引从堆中的一开始。
 
-我们可以使用以下方法找到左右孩子的索引:
+我们可以使用以下方法找到左右孩子的索引：
 
 ```java
 private int getLeftChildIndex(int i) {
@@ -47,7 +48,7 @@ private int getRightChildIndex(int i) {
 }
 ```
 
-同样，我们可以通过以下代码找到数组中项目的父项和祖父项的索引:
+同样，我们可以通过以下代码找到数组中项目的父项和祖父项的索引：
 
 ```java
 private int getParentIndex(int i) {
@@ -59,7 +60,7 @@ private int getGrandparentIndex(int i) {
 }
 ```
 
-现在，让我们继续完成我们简单的最小-最大堆类:
+现在，让我们继续完成我们简单的最小-最大堆类：
 
 ```java
 public class MinMaxHeap<T extends Comparable<T>> {
@@ -85,9 +86,9 @@ public class MinMaxHeap<T extends Comparable<T>> {
 
 现在，让我们讨论堆上的操作。
 
-### 3.1.创造
+### 3.1. 创建
 
-让我们首先看看如何从一个现有的数组构建一个最小-最大堆。这里我们使用 Floyd 算法，并做了一些修改，如 [Heapify 算法](/web/20220628062856/https://www.baeldung.com/cs/binary-tree-max-heapify):
+让我们首先看看如何从一个现有的数组构建一个最小-最大堆。这里我们使用 Floyd 算法，并做了一些修改，如 [Heapify 算法](/web/20220628062856/https://www.baeldung.com/cs/binary-tree-max-heapify)：
 
 ```java
 public List<T> create() {
@@ -98,7 +99,7 @@ public List<T> create() {
 }
 ```
 
-让我们仔细看看下面的代码中的`pushDown`,看看上面的代码到底发生了什么:
+让我们仔细看看下面的代码中的 `pushDown`，看看上面的代码到底发生了什么：
 
 ```java
 private void pushDown(List<T> array, int i) {
@@ -110,7 +111,7 @@ private void pushDown(List<T> array, int i) {
 }
 ```
 
-正如我们所见，对于所有偶数级，我们用`pushDownMin.` 检查数组项。这种算法类似于我们将用于`removeMin`和`removeMax`的 heapify-down:
+正如我们所见，对于所有偶数级，我们用 `pushDownMin` 检查数组项。这种算法类似于我们将用于 `removeMin` 和 `removeMax` 的 heapify-down：
 
 ```java
 private void pushDownMin(List<T> h, int i) {
@@ -122,9 +123,9 @@ private void pushDownMin(List<T> h, int i) {
  }
 ```
 
-首先，我们找到'`i'`元素的最小子元素或孙元素的索引。那么我们按照以下条件进行。
+首先，我们找到 `i` 元素的最小子元素或孙元素的索引。那么我们按照以下条件进行。
 
-如果最小的子元素或孙元素不小于当前元素，则我们中断。换句话说，元素的当前排列类似于最小堆:
+如果最小的子元素或孙元素不小于当前元素，则我们中断。换句话说，元素的当前排列类似于最小堆：
 
 ```java
 if (h.get(indexOfSmallest - 1).compareTo(h.get(i - 1)) < 0) {
@@ -134,7 +135,7 @@ if (h.get(indexOfSmallest - 1).compareTo(h.get(i - 1)) < 0) {
 }
 ```
 
-**如果最小的子元素或孙元素小于当前元素，我们将其与其父元素或祖父元素交换:**
+如果最小的子元素或孙元素小于当前元素，我们将其与其父元素或祖父元素交换：
 
 ```java
 if (getParentIndex(getParentIndex(indexOfSmallest)) == i) {
@@ -150,9 +151,9 @@ if (getParentIndex(getParentIndex(indexOfSmallest)) == i) {
  }
 ```
 
-我们将继续上述操作，直到找到元素“I”的子元素。
+我们将继续上述操作，直到找到元素 `I` 的子元素。
 
-现在，让我们看看`getIndexOfSmallestChildOrGrandChild `是如何工作的。这很简单！首先，我们假设左边的孩子具有最小值，然后将其与其他孩子进行比较:
+现在，让我们看看 `getIndexOfSmallestChildOrGrandChild` 是如何工作的。这很简单！首先，我们假设左边的孩子具有最小值，然后将其与其他孩子进行比较：
 
 ```java
 private int getIndexOfSmallestChildOrGrandChild(List<T> h, int i) {
@@ -162,9 +163,9 @@ private int getIndexOfSmallestChildOrGrandChild(List<T> h, int i) {
 }
 ```
 
-**在每一步中，如果指数大于指标，最后找到的最小值就是答案。**
+在每一步中，如果指数大于指标，最后找到的最小值就是答案。
 
-例如，让我们比较一下`min-value`和正确的孩子:
+例如，让我们比较一下 `min-value` 和正确的孩子：
 
 ```java
 if (getRightChildIndex(i) < indicator) {
@@ -177,7 +178,7 @@ if (getRightChildIndex(i) < indicator) {
 }
 ```
 
-现在，让我们创建一个测试来验证从一个无序数组创建一个最小-最大堆是否可以正常工作:
+现在，让我们创建一个测试来验证从一个无序数组创建一个最小-最大堆是否可以正常工作：
 
 ```java
 @Test
@@ -189,11 +190,11 @@ public void givenUnOrderedArray_WhenCreateMinMaxHeap_ThenIsEqualWithMinMaxHeapOr
 }
 ```
 
-**`pushDownMax`的算法与`pushDownMin`的算法相同，但是所有的比较都是相反的。**
+`pushDownMax` 的算法与 `pushDownMin` 的算法相同，但是所有的比较都是相反的。
 
-### 3.2.插入
+### 3.2. 插入
 
-让我们看看如何向最小-最大堆添加元素:
+让我们看看如何向最小-最大堆添加元素：
 
 ```java
 public void insert(T item) {
@@ -210,7 +211,7 @@ public void insert(T item) {
  }
 ```
 
-首先，我们检查堆是否为空。如果堆是空的，我们添加新元素并增加指示器。否则，添加的新元素可能会改变 min-max 堆的顺序，所以我们需要用`pushUp`来调整堆:
+首先，我们检查堆是否为空。如果堆是空的，我们添加新元素并增加指示器。否则，添加的新元素可能会改变 min-max 堆的顺序，所以我们需要用 `pushUp` 来调整堆：
 
 ```java
 private void pushUp(List<T>h,int i) {
@@ -234,12 +235,12 @@ private void pushUp(List<T>h,int i) {
 }
 ```
 
-正如我们在上面看到的，新元素比较它的父元素，然后:
+正如我们在上面看到的，新元素比较它的父元素，然后：
 
-*   如果发现它小于(大于)父元素，那么它肯定小于(大于)堆根路径上最大(最小)层上的所有其他元素
-*   从新元素到根的路径(只考虑最小/最大级别)应该像插入前一样按降序(升序)排列。所以，我们需要在这个序列中插入一个新元素
+- 如果发现它小于（大于）父元素，那么它肯定小于（大于）堆根路径上最大（最小）层上的所有其他元素。
+- 从新元素到根的路径（只考虑最小/最大级别）应该像插入前一样按降序（升序）排列。所以，我们需要在这个序列中插入一个新元素。
 
-现在，让我们看看下面的`pushUpMin`:
+现在，让我们看看下面的 `pushUpMin`：
 
 ```java
 private void pushUpMin(List<T> h , int i) {
@@ -251,9 +252,9 @@ private void pushUpMin(List<T> h , int i) {
 }
 ```
 
-**从技术上来说，当父元素更强大时，用它的父元素替换新元素更简单。另外，`pushUpMax`与`pushUpMin`相同，但是所有的比较都是相反的。**
+从技术上来说，当父元素更强大时，用它的父元素替换新元素更简单。另外，`pushUpMax` 与 `pushUpMin` 相同，但是所有的比较都是相反的。
 
-现在，让我们创建一个测试来验证在最小-最大堆中插入一个新元素是否正常:
+现在，让我们创建一个测试来验证在最小-最大堆中插入一个新元素是否正常：
 
 ```java
 @Test
@@ -272,9 +273,9 @@ public void givenNewElement_WhenInserted_ThenIsEqualWithMinMaxHeapOrdered() {
 }
 ```
 
-### 3.3.查找最小值
+### 3.3. 查找最小值
 
-最小-最大堆中的主元素总是位于根，所以我们可以在时间复杂度 O(1)中找到它:
+最小-最大堆中的主元素总是位于根，所以我们可以在时间复杂度 `O(1)` 中找到它：
 
 ```java
 public T min() {
@@ -285,9 +286,9 @@ public T min() {
 }
 ```
 
-### 3.4.找到麦克斯
+### 3.4. 找到最大值
 
-最小-最大堆中的最大元素总是位于第一个奇数层，因此我们可以通过简单的比较在时间复杂度 O(1)中找到它:
+最小-最大堆中的最大元素总是位于第一个奇数层，因此我们可以通过简单的比较在时间复杂度 `O(1)` 中找到它：
 
 ```java
 public T max() {
@@ -304,9 +305,9 @@ public T max() {
 }
 ```
 
-### 3.5.移除最小值
+### 3.5. 移除最小值
 
-在这种情况下，我们将找到 min 元素，然后用数组的最后一个元素替换它:
+在这种情况下，我们将找到 min 元素，然后用数组的最后一个元素替换它：
 
 ```java
 public T removeMin() {
@@ -324,9 +325,11 @@ public T removeMin() {
 }
 ```
 
-3.6。移除最大值
+### 3.6. 移除最大值
 
-移除 max 元素与移除 min 元素是一样的，唯一的变化是我们找到 max 元素的索引，然后调用`pushDown`:
+移除 max 元素与移除 min 元素是一样的，唯一的变化是我们找到 max 元素的索引，然后调用 `pushDown`。
+
+
 
 ```java
 public T removeMax() {
@@ -352,10 +355,10 @@ public T removeMax() {
 }
 ```
 
-## 4.结论
+## 4. 结论
 
-在本教程中，我们看到了在 Java 中实现最小最大堆，并探索了一些最常见的操作。
+在本教程中，我们看到了在`Java`中实现最小最大堆，并探索了一些最常见的操作。
 
-首先，我们了解了最小-最大堆到底是什么，包括一些最常见的特性。然后，我们看到了如何在 min-max 堆实现中创建、插入、查找-min、查找-max、删除-min 和删除-max 项。
+首先，我们了解了最小-最大堆到底是什么，包括一些最常见的特性。然后，我们看到了如何在`min-max`堆实现中创建、插入、查找-`min`、查找-`max`、删除-`min`和删除-`max`项。
 
-像往常一样，本文中使用的所有例子都可以在 GitHub 上找到[。](https://web.archive.org/web/20220628062856/https://github.com/eugenp/tutorials/tree/master/data-structures)
+像往常一样，本文中使用的所有例子都可以在`GitHub`上找到[。](https://web.archive.org/web/20220628062856/https://github.com/eugenb/tutorials/tree/master/data-structures)

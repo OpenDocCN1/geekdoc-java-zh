@@ -1,26 +1,27 @@
+
 # Java 8 供应商示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java8/java-8-supplier-examples/>
 
 在 Java 8 中，[供应商](http://web.archive.org/web/20221206011825/https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html)是一个函数接口；它不接受任何参数并返回一个结果。
 
-Supplier.java
+`Supplier.java`
 
 ```java
- @FunctionalInterface
+@FunctionalInterface
 public interface Supplier<T> {
     T get();
-} 
+}
 ```
 
-## 1.供应商
+## 1. 供应商
 
 1.1 本例使用`Supplier`返回当前日期时间。
 
-Java8Supplier1.java
+`Java8Supplier1.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -44,22 +45,22 @@ public class Java8Supplier1 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- 2020-03-02T16:10:49.281223
-2020-03-02 16:10:49 
+2020-03-02T16:10:49.281223
+2020-03-02 16:10:49
 ```
 
-## 2.返回供应商
+## 2. 返回供应商
 
-Java8Supplier2.java
+`Java8Supplier2.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -85,17 +86,17 @@ public class Java8Supplier2<T> {
 
     }
 
-} 
+}
 ```
 
-## 3.工厂
+## 3. 工厂
 
 3.1 返回一个`Developer`对象的简单工厂方法。
 
-Java8Supplier3.java
+`Java8Supplier3.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -126,13 +127,13 @@ public class Java8Supplier3 {
 
     }
 
-} 
+}
 ```
 
-Developer.java
+`Developer.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -155,20 +156,20 @@ public class Developer {
     // get, set, constructor, toString
     //...
 
-} 
+}
 ```
 
 输出
 
 ```java
- Developer{name='default', salary=1, start=2017-08-08}
-Developer{name='mkyong', salary=1, start=2017-08-08} 
+Developer{name='default', salary=1, start=2017-08-08}
+Developer{name='mkyong', salary=1, start=2017-08-08}
 ```
 
 ## 参考
 
 *   [供应商](http://web.archive.org/web/20221206011825/https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html)
-*   [Java 8–如何格式化本地日期时间](/web/20221206011825/https://mkyong.com/java8/java-8-how-to-format-localdatetime/)
+*   [Java 8 – 如何格式化本地日期时间](/web/20221206011825/https://mkyong.com/java8/java-8-how-to-format-localdatetime/)
 *   [DateTimeFormatter JavaDoc](http://web.archive.org/web/20221206011825/https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html)
 *   [Java 8 教程](/web/20221206011825/https://mkyong.com/tutorials/java-8-tutorials/)
 

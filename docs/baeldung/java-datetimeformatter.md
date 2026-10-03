@@ -1,14 +1,15 @@
+
 # DateTimeFormatter 指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-datetimeformatter>
 
-## 1.概观
+## 1. 概观
 
-在本教程中，我们将回顾 Java 8 `DateTimeFormatter` 类及其格式化模式`.` 我们还将讨论该类可能的用例。
+在本教程中，我们将回顾 Java 8 `DateTimeFormatter` 类及其格式化模式。我们还将讨论该类可能的用例。
 
 我们可以使用`DateTimeFormatter`以预定义或用户定义的模式统一格式化应用程序中的日期和时间。
 
-## 2.`DateTimeFormatter`带有预定义的实例
+## 2. `DateTimeFormatter`带有预定义的实例
 
 **`DateTimeFormatter`带有多个[预定义的日期/时间格式](https://web.archive.org/web/20221027035204/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/DateTimeFormatter.html#ISO_LOCAL_DATE)** 遵循 ISO 和 RFC 标准。例如，我们可以使用`ISO_LOCAL_DATE`实例来解析日期，比如“2018-03-09”:
 
@@ -40,7 +41,7 @@ LocalDate.from(DateTimeFormatter.ISO_LOCAL_DATE.parse("2018-03-09")).plusDays(3)
 
 这个代码片段的结果是 2018 年 3 月 12 日的一个`LocalDate`表示。
 
-## 3.`DateTimeFormatter`同`FormatStyle`
+## 3. `DateTimeFormatter`同`FormatStyle`
 
 有时我们可能希望以人类可读的方式打印日期。
 
@@ -107,11 +108,11 @@ System.out.println(dateTime.plusHours(9));
 
 这个片段的输出是“2016-08-23t 22:12:45+03:00[欧洲/布加勒斯特]。”请注意，时间已经更改为“22:12:45”
 
-## 4.`DateTimeFormatter`带自定义格式
+## 4. `DateTimeFormatter`带自定义格式
 
 **预定义和内置的格式器和样式可以覆盖很多情况**。然而，有时我们需要将日期和时间的格式稍微改变一下。这就是自定义格式模式发挥作用的时候了。
 
-### 4.1.`DateTimeFormatter`为日期
+### 4.1. `DateTimeFormatter`为日期
 
 假设我们想要使用 31.12.2018 这样的常规欧洲格式呈现一个`java.time.LocalDate`对象。为此，我们可以调用工厂方法`DateTimeFormatter`。`ofPattern(“dd.MM.yyyy”).`
 
@@ -153,7 +154,7 @@ System.out.println(LocalDate.from(europeanDateFormatter.parse("15.08.2014")).isL
 
 这段代码检查日期“`15.08.2014`”是否是闰年，如果不是。
 
-### 4.2.`DateTimeFormatter`为时间
+### 4.2. `DateTimeFormatter`为时间
 
 也有可用于时间模式的模式字母:
 
@@ -198,7 +199,7 @@ LocalTime colonTime = LocalTime.of(17, 35, 50);
 System.out.println(timeColonFormatter.format(colonTime));
 ```
 
-生成的输出是“`05:35:50 PM.`
+生成的输出是“`05:35:50 PM.`”
 
 我们可能想用自定义格式化程序解析一个时间`String`,并检查它是否在中午之前:
 
@@ -209,7 +210,7 @@ System.out.println(LocalTime.from(timeFormatter.parse("12:25:30 AM")).isBefore(L
 
 最后一个代码片段的输出显示给定的时间实际上是在中午之前。
 
-### 4.3.`DateTimeFormatter`对于时区
+### 4.3. `DateTimeFormatter`对于时区
 
 我们通常希望看到某个特定日期时间变量的时区。如果我们使用基于纽约的日期时间(UTC -4)，我们可以使用“z”模式字母作为时区名称:
 
@@ -233,11 +234,13 @@ System.out.println(ZonedDateTime.from(zonedFormatter.parse("31.07.2016 14:15 GMT
 
 我们必须确保为`parse()`方法提供正确的日期时间`String`。如果我们将“31.07.2016 14:15”不带时区地传递给最后一段代码中的`zonedFormatter`，我们将得到一个`DateTimeParseException`。
 
-### 4.4.`DateTimeFormatter`瞬间
+### 4.4. `DateTimeFormatter`瞬间
 
 `DateTimeFormatter`带有一个很棒的 ISO 即时格式化程序，叫做`ISO_INSTANT`。顾名思义，这个格式化程序提供了一种方便的方式**来格式化或解析 UTC 中的一个瞬间。**
 
-根据[官方文档](https://web.archive.org/web/20221027035204/https://docs.oracle.com/en/java/javase/12/docs/api/java.base/java/time/format/DateTimeFormatter.html#ISO_INSTANT)，**在没有指定时区的情况下，瞬间不能被格式化为日期或时间**。因此，试图在`LocalDateTime`或`LocalDate`对象上使用`ISO_INSTANT`将导致一个异常:
+
+
+根据[官方文档](https://web.archive.org/web/20221027035204/https://docs.oracle.com/en/java/javase/12/docs/api/java.base/java/time/format/DateTimeFormatter.html#ISO_INSTANT)，在没有指定时区的情况下，瞬间不能被格式化为日期或时间。因此，试图在`LocalDateTime`或`LocalDate`对象上使用`ISO_INSTANT`将导致一个异常：
 
 ```java
 @Test(expected = UnsupportedTemporalTypeException.class)
@@ -246,7 +249,7 @@ public void shouldExpectAnExceptionIfInputIsLocalDateTime() {
 }
 ```
 
-然而，我们可以使用`ISO_INSTANT`来格式化`ZonedDateTime`实例，没有任何问题:
+然而，我们可以使用`ISO_INSTANT`来格式化`ZonedDateTime`实例，没有任何问题：
 
 ```java
 @Test
@@ -260,7 +263,7 @@ public void shouldPrintFormattedZonedDateTime() {
 
 如我们所见，我们用“欧洲/巴黎”时区创建了我们的`ZonedDateTime`。但是，格式化后的结果采用 UTC 格式。
 
-同样，**解析到`ZonedDateTime`时，我们需要指定时区**:
+同样，解析到`ZonedDateTime`时，我们需要指定时区：
 
 ```java
 @Test
@@ -272,7 +275,7 @@ public void shouldParseZonedDateTime() {
 }
 ```
 
-不这样做就会导致 [`DateTimeParseException`](https://web.archive.org/web/20221027035204/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/DateTimeParseException.html) :
+不这样做就会导致[`DateTimeParseException`](https://web.archive.org/web/20221027035204/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/DateTimeParseException.html)：
 
 ```java
 @Test(expected = DateTimeParseException.class)
@@ -281,10 +284,10 @@ public void shouldExpectAnExceptionIfTimeZoneIsMissing() {
 }
 ```
 
-同样值得一提的是，**解析要求至少指定`seconds`字段**。否则会抛出`DateTimeParseException`。
+同样值得一提的是，解析要求至少指定`seconds`字段。否则会抛出`DateTimeParseException`。
 
-## 5.结论
+## 5. 结论
 
-**在本文中，我们讨论了如何使用`DateTimeFormatter `类来格式化日期和时间。**我们还研究了现实生活中的例子模式，这些模式经常在我们处理日期时间实例时出现。
+在本文中，我们讨论了如何使用`DateTimeFormatter`类来格式化日期和时间。我们还研究了现实生活中的例子模式，这些模式经常在我们处理日期时间实例时出现。
 
 我们可以在[之前的教程](/web/20221027035204/https://www.baeldung.com/java-8-date-time-intro)中找到更多关于 Java 8 的`Date/Time` API。和往常一样，本文中使用的源代码可以在 GitHub 的[上获得。](https://web.archive.org/web/20221027035204/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-datetime-string)

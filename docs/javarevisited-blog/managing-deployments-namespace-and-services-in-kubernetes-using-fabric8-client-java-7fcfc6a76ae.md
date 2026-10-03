@@ -1,8 +1,9 @@
+
 # 使用 Fabric8 客户端管理 Kubernetes 中的部署、命名空间和服务— Java
 
 > 原文：<https://medium.com/javarevisited/managing-deployments-namespace-and-services-in-kubernetes-using-fabric8-client-java-7fcfc6a76ae?source=collection_archive---------1----------------------->
 
-## 使用 fabric8 动态创建、删除和扩展应用程序。
+## 使用 fabric8 动态创建、删除和扩展应用程序
 
 ![](img/50472050fa8a65fe3165ec0c1493778c.png)
 

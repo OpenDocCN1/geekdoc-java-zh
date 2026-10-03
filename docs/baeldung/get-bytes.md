@@ -1,3 +1,4 @@
+
 # Java String.getBytes()
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/string/get-bytes>
@@ -56,4 +57,4 @@ public void whenGetBytes_thenCorrect() throws UnsupportedEncodingException {
 }
 ```
 
-Next **»**[Java String.indexOf()](/web/20220829143229/https://www.baeldung.com/string/index-of)**«** Previous[Java String.format()](/web/20220829143229/https://www.baeldung.com/string/format)
+**Next »**[Java String.indexOf()](/web/20220829143229/https://www.baeldung.com/string/index-of)**« Previous**[Java String.format()](/web/20220829143229/https://www.baeldung.com/string/format)

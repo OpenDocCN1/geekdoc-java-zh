@@ -1,12 +1,13 @@
+
 # 如何使用 CardLayout
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/layout/card.html`](https://docs.oracle.com/javase/tutorial/uiswing/layout/card.html)
 
-* * *
+---
 
 **注意：** 本课程涵盖手动编写布局代码，这可能具有挑战性。如果您对学习布局管理的所有细节不感兴趣，您可能更喜欢使用`GroupLayout`布局管理器结合构建工具来布局您的 GUI。其中一个构建工具是 NetBeans IDE。否则，如果您想手动编码而不想使用`GroupLayout`，那么建议使用`GridBagLayout`作为下一个最灵活和强大的布局管理器。
 
-* * *
+---
 
 如果您有兴趣使用 JavaFX 创建 GUI，请参阅[JavaFX 中的布局](https://docs.oracle.com/javase/8/javafx/layout-tutorial/index.html)。
 
@@ -37,9 +38,7 @@
 从概念上讲，`CardLayout`管理的每个组件都像一叠扑克牌或交换卡片，任何时候只有顶部卡片可见。您可以通过以下任何方式选择显示的卡片：
 
 +   通过请求第一张或最后一张卡片，按照添加到容器的顺序
-
 +   通过向前或向后翻转卡片堆栈来选择卡片。
-
 +   通过指定具有特定名称的卡片
 
 `CardLayoutDemo`类使用最后一种方案。
@@ -47,12 +46,12 @@
 来自`CardLayoutDemo.java`应用程序的以下代码片段创建了`CardLayout`对象及其管理的组件。
 
 ```java
-*//Where instance variables are declared:*
+//Where instance variables are declared:
 JPanel cards;
 final static String BUTTONPANEL = "Card with JButtons";
 final static String TEXTPANEL = "Card with JTextField";
 
-*//Where the components controlled by the CardLayout are initialized:*
+//Where the components controlled by the CardLayout are initialized:
 //Create the "cards".
 JPanel card1 = new JPanel();
 ...
@@ -63,7 +62,6 @@ JPanel card2 = new JPanel();
 cards = new JPanel(new CardLayout());
 cards.add(card1, BUTTONPANEL);
 cards.add(card2, TEXTPANEL);
-
 ```
 
 要将组件添加到`CardLayout`对象管理的容器中，请指定一个标识要添加的组件的字符串。例如，在此演示中，第一个面板的字符串是`"Card with JButtons"`，第二个面板的字符串是`"Card with JTextField"`。在此演示中，这些字符串也在组合框中使用。
@@ -71,7 +69,7 @@ cards.add(card2, TEXTPANEL);
 要选择`CardLayout`对象显示的组件，请在您的代码示例中添加额外的代码：
 
 ```java
-*//Where the GUI is assembled:*
+//Where the GUI is assembled:
 //Put the JComboBox in a JPanel to get a nicer look.
 JPanel comboBoxPane = new JPanel(); //use FlowLayout
 String comboBoxItems[] = { BUTTONPANEL, TEXTPANEL };
@@ -90,7 +88,6 @@ public void itemStateChanged(ItemEvent evt) {
     CardLayout cl = (CardLayout)(cards.getLayout());
     cl.show(cards, (String)evt.getItem());
 }
-
 ```
 
 此示例显示，要使用`CardLayout`类的`show`方法，必须设置当前可见的组件。`show`方法中的第一个参数是`CardLayout`控制的容器，即`CardLayout`管理的组件的容器。第二个参数是标识要显示的组件的字符串。这个字符串与将组件添加到容器时使用的字符串相同。
@@ -101,12 +98,12 @@ public void itemStateChanged(ItemEvent evt) {
 
 | 方法 | 目的 |
 | --- | --- |
-| [`first (Container *parent*)`](https://docs.oracle.com/javase/8/docs/api/java/awt/CardLayout.html#first-java.awt.Container-) | 翻转到容器的第一张卡片。 |
-| [`next (Container *parent*)`](https://docs.oracle.com/javase/8/docs/api/java/awt/CardLayout.html#next-java.awt.Container-) | 翻转到容器的下一张卡片。如果当前可见的卡片是最后一张，则此方法将翻转到布局中的第一张卡片。 |
-| [`previous (Container *parent*)`](https://docs.oracle.com/javase/8/docs/api/java/awt/CardLayout.html#previous-java.awt.Container-) | 翻转到容器的上一张卡片。如果当前可见的卡片是第一张，则此方法将翻转到布局中的最后一张卡片。 |
-| [`last (Container *parent*)`](https://docs.oracle.com/javase/8/docs/api/java/awt/CardLayout.html#last-java.awt.Container-) | 翻转到容器的最后一张卡片。 |
-| [`show (Container *parent*, String *name*)`](https://docs.oracle.com/javase/8/docs/api/java/awt/CardLayout.html#show-java.awt.Container-java.lang.String-) | 使用指定的 `name` 使用 [`addLayoutComponent`](https://docs.oracle.com/javase/8/docs/api/java/awt/CardLayout.html#addLayoutComponent-java.awt.Component-java.lang.Object-) 方法添加到此布局中的组件进行翻转。 |
+| [`first(Container parent)`](https://docs.oracle.com/javase/8/docs/api/java/awt/CardLayout.html#first-java.awt.Container-) | 翻转到容器的第一张卡片。 |
+| [`next(Container parent)`](https://docs.oracle.com/javase/8/docs/api/java/awt/CardLayout.html#next-java.awt.Container-) | 翻转到容器的下一张卡片。如果当前可见的卡片是最后一张，则此方法将翻转到布局中的第一张卡片。 |
+| [`previous(Container parent)`](https://docs.oracle.com/javase/8/docs/api/java/awt/CardLayout.html#previous-java.awt.Container-) | 翻转到容器的上一张卡片。如果当前可见的卡片是第一张，则此方法将翻转到布局中的最后一张卡片。 |
+| [`last(Container parent)`](https://docs.oracle.com/javase/8/docs/api/java/awt/CardLayout.html#last-java.awt.Container-) | 翻转到容器的最后一张卡片。 |
+| [`show(Container parent, String name)`](https://docs.oracle.com/javase/8/docs/api/java/awt/CardLayout.html#show-java.awt.Container-java.lang.String-) | 使用指定的`name`使用[`addLayoutComponent`](https://docs.oracle.com/javase/8/docs/api/java/awt/CardLayout.html#addLayoutComponent-java.awt.Component-java.lang.Object-)方法添加到此布局中的组件进行翻转。 |
 
 ## 使用 CardLayout 的示例
 
-在这个教程中，只有一个示例使用了 `CardLayout`，即 `CardLayoutDemo`。一般来说，我们的示例使用 选项卡面板 而不是 `CardLayout`，因为选项卡面板提供了自己的 GUI。
+在这个教程中，只有一个示例使用了`CardLayout`，即`CardLayoutDemo`。一般来说，我们的示例使用选项卡面板而不是`CardLayout`，因为选项卡面板提供了自己的 GUI。

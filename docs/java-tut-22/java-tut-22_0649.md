@@ -1,3 +1,4 @@
+
 # 字体概念
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/text/fontconcepts.html`](https://docs.oracle.com/javase/tutorial/2d/text/fontconcepts.html)
@@ -6,7 +7,7 @@
 
 一个[`Font`](https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html)对象表示系统上可用的字体集合中的字体面实例。常见字体面的示例包括 Helvetica Bold 和 Courier Bold Italic。一个[`Font`](https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html)对象关联三个名称：其逻辑名称、族名称和字体面名称：
 
-+   一个[`Font`](https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html)对象的*逻辑名称*是映射到系统上可用的特定字体之一的名称。在 Java 中指定[`Font`](https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html)时，请使用*字体面名称*而不是逻辑名称。您可以通过调用[`getName`](https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html#getName--)方法从`Font`中获取逻辑名称。要获取映射到系统上可用的特定字体的逻辑名称列表，请调用[java.awt.GraphicsEnvironment.getAvailableFontFamilyNames](https://docs.oracle.com/javase/8/docs/api/java/awt/GraphicsEnvironment.html#getAvailableFontFamilyNames--)方法。
++   一个[`Font`](https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html)对象的*逻辑名称*是映射到系统上可用的特定字体之一的名称。在 Java 中指定[`Font`](https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html)时，请使用*字体面名称*而不是逻辑名称。您可以通过调用[`getName`](https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html#getName--)方法从`Font`中获取逻辑名称。要获取映射到系统上可用的特定字体的逻辑名称列表，请调用[`java.awt.GraphicsEnvironment.getAvailableFontFamilyNames`](https://docs.oracle.com/javase/8/docs/api/java/awt/GraphicsEnvironment.html#getAvailableFontFamilyNames--)方法。
 
     查看**物理和逻辑字体**以获取更多信息。
 

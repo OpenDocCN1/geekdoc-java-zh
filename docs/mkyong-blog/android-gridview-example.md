@@ -1,24 +1,25 @@
+
 # Android GridView 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/android/android-gridview-example/>
 
-在 Android 中，`GridView`让你在二维滚动网格中排列组件。有关详细的属性解释，请参见 [GridView](http://web.archive.org/web/20220118195605/https://developer.android.com/reference/android/widget/GridView.html) 参考。
+在 Android 中，`GridView` 让你在二维滚动网格中排列组件。有关详细的属性解释，请参见 [GridView](http://web.archive.org/web/20220118195605/https://developer.android.com/reference/android/widget/GridView.html) 参考。
 
-在本教程中，我们将向您展示两个常见的`GridView`示例:
+在本教程中，我们将向您展示两个常见的 `GridView` 示例：
 
-1.  正常方式，只是在`GridView`布局中显示文本。
-2.  创建自定义适配器以在`GridView`布局中显示图像和文本。
+1. 正常方式，只是在 `GridView` 布局中显示文本。
+2. 创建自定义适配器，以在 `GridView` 布局中显示图像和文本。
 
-*P.S 这个项目是在 Eclipse 3.7 中开发的，用 Android 2.3.3 测试过。*
+> P.S 这个项目是在 Eclipse 3.7 中开发的，用 Android 2.3.3 测试过。
 
-## 1.普通 GridView 示例
+## 1. 普通 GridView 示例
 
-在`GridView`布局中显示从 A 到 Z 的字符。很简单，应该是不言自明的。
+在 `GridView` 布局中显示从 A 到 Z 的字符。很简单，应该是不言自明的。
 
-*1.1 Android 布局文件–RES/Layout/main . XML*
+### 1.1 Android 布局文件 – RES/Layout/main . XML
 
 ```java
- <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <GridView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/gridView1"
     android:numColumns="auto_fit"
@@ -28,13 +29,13 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 
-</GridView> 
+</GridView>
 ```
 
-*1.2 活动*
+### 1.2 活动
 
 ```java
- package com.mkyong.android;
+package com.mkyong.android;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -80,23 +81,23 @@ public class GridViewActivity extends Activity {
 
 	}
 
-} 
+}
 ```
 
-*1.3 演示*
+### 1.3 演示
 
 ![android grid view example](img/eae6572a8e42bcb822dd56f806134c48.png "android-gridview-example-1")
 
-## 2.自定义适配器示例
+## 2. 自定义适配器示例
 
-在这个例子中，扩展一个`BaseAdapter`以在`GridView`布局中显示一组图像和文本。
+在这个例子中，扩展一个 `BaseAdapter`，以在 `GridView` 布局中显示一组图像和文本。
 
-*2.1 两个 Android 布局文件*
+### 2.1 两个 Android 布局文件
 
-*File–RES/layout/main . XML*
+#### File–RES/layout/main . XML
 
 ```java
- <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <GridView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/gridView1"
     android:numColumns="auto_fit"
@@ -106,13 +107,13 @@ public class GridViewActivity extends Activity {
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 
-</GridView> 
+</GridView>
 ```
 
-*File–RES/layout/mobile . XML*
+#### File–RES/layout/mobile . XML
 
 ```java
- <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -135,13 +136,13 @@ public class GridViewActivity extends Activity {
         android:textSize="15px" >
     </TextView>
 
-</LinearLayout> 
+</LinearLayout>
 ```
 
-*2.2 定制适配器*
+### 2.2 定制适配器
 
 ```java
- package com.mkyong.android.adapter;
+package com.mkyong.android.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -219,13 +220,13 @@ public class ImageAdapter extends BaseAdapter {
 		return 0;
 	}
 
-} 
+}
 ```
 
-*2.3 活动*
+### 2.3 活动
 
 ```java
- package com.mkyong.android;
+package com.mkyong.android;
 
 import com.mkyong.android.adapter.ImageAdapter;
 import android.app.Activity;
@@ -267,10 +268,10 @@ public class GridViewActivity extends Activity {
 
 	}
 
-} 
+}
 ```
 
-2.4 演示
+### 2.4 演示
 
 ![android gridview custom adapter example](img/818be077920091adcf383fbcead06c6d.png "android-gridview-example")
 
@@ -280,8 +281,8 @@ Download it – [Android-GridView-Example.zip](http://web.archive.org/web/202201
 
 ## 参考
 
-1.  [GridView Javadoc](http://web.archive.org/web/20220118195605/https://developer.android.com/reference/android/widget/GridView.html)
-2.  [Android GridView 示例](http://web.archive.org/web/20220118195605/https://developer.android.com/resources/tutorials/views/hello-gridview.html)
-3.  [Android ListView 示例](http://web.archive.org/web/20220118195605/http://www.mkyong.com/android/android-listview-example/)
+1. [GridView Javadoc](http://web.archive.org/web/20220118195605/https://developer.android.com/reference/android/widget/GridView.html)
+2. [Android GridView 示例](http://web.archive.org/web/20220118195605/https://developer.android.com/resources/tutorials/views/hello-gridview.html)
+3. [Android ListView 示例](http://web.archive.org/web/20220118195605/http://www.mkyong.com/android/android-listview-example/)
 
 <input type="hidden" id="mkyong-current-postId" value="10545">

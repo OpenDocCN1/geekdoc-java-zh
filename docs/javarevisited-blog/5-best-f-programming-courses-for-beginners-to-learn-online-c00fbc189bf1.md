@@ -1,3 +1,4 @@
+
 # 2022 年新手在线学习的 5 门最佳 F#编程课程
 
 > 原文：<https://medium.com/javarevisited/5-best-f-programming-courses-for-beginners-to-learn-online-c00fbc189bf1?source=collection_archive---------5----------------------->
@@ -8,7 +9,7 @@
 
 大家好，如果你想在 2022 年学习 F#编程语言，并寻找最好的在线课程和教程，那么你来对地方了。早些时候，我已经分享了学习函数式编程语言的最佳在线课程，如 [Scala](/javarevisited/10-best-scala-and-functional-programming-online-courses-for-beginners-b6461b27bf) 、 [Haskell](https://javarevisited.blogspot.com/2021/12/top-5-courses-to-learn-haskell-for.html) 、 [Elixir](https://javarevisited.blogspot.com/2022/01/top-5-courses-to-learn-elixir-and-phoneix.html) 和 [Erlang](https://javarevisited.blogspot.com/2022/01/top-5-courses-to-learn-erlang-for.html) ，在这篇文章中，我将分享从头开始学习 F#编程语言的最佳在线课程。
 
-对于新手来说，F#也称为 F sharp，是一种函数式编程语言，它允许您通过编写简单的代码来解决复杂的问题。
+对于新手来说，F#也称为 F sharp，是一种函数式编程语言，它允许你通过编写简单的代码来解决复杂的问题。
 
 F#使得编写能够解决复杂问题的简洁代码变得非常容易。是一种类似 [Scala](https://javarevisited.blogspot.com/2020/09/top-5-courses-to-learn-scala.html) 、 [Haskell](https://javarevisited.blogspot.com/2021/12/top-5-courses-to-learn-haskell-for.html) 、[elixin](https://javarevisited.blogspot.com/2022/01/top-5-courses-to-learn-elixir-and-phoneix.html)、 [Erlang](https://javarevisited.blogspot.com/2022/01/top-5-courses-to-learn-erlang-for.html) 的函数式编程语言。
 

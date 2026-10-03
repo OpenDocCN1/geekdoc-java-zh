@@ -1,37 +1,39 @@
+
 # Spring 3 MVC hello world 示例–注释
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring3/spring-3-mvc-hello-world-example-annotation/>
 
-在本教程中，我们将采用之前的 [Maven + Spring MVC XML 示例](http://web.archive.org/web/20190311142504/http://www.mkyong.com/spring3/spring-3-mvc-hello-world-example/)，重写它以支持`@JavaConfig`配置，不再需要 XML 文件，并将其部署到 Servlet 3.0+容器中，如 Tomcat 7 或 Jetty 9。
+在本教程中，我们将采用之前的 [Maven + Spring MVC XML 示例](http://web.archive.org/web/20190311142504/http://www.mkyong.com/spring3/spring-3-mvc-hello-world-example/)，重写它以支持`@JavaConfig`配置，不再需要 XML 文件，并将其部署到 Servlet 3.0+ 容器中，如 Tomcat 7 或 Jetty 9。
 
-使用的技术:
+使用的技术：
 
-1.  释放弹簧
-2.  maven3
-3.  JDK 1.6
-4.  Tomcat 7 或 Jetty 9
-5.  Eclipse 4.4
-6.  3 号艇
+1. 释放弹簧
+2. maven3
+3. JDK 1.6
+4. Tomcat 7 或 Jetty 9
+5. Eclipse 4.4
+6. 3 号艇
 
 **Spring 4 MVC Annotation**
-Try this [Spring 4 MVC hello world example – Annotation](http://web.archive.org/web/20190311142504/http://www.mkyong.com/spring-mvc/gradle-spring-4-mvc-hello-world-example-annotation/).
 
-## 1.项目结构
+尝试这个 [Spring 4 MVC hello world 示例 – Annotation](http://web.archive.org/web/20190311142504/http://www.mkyong.com/spring-mvc/gradle-spring-4-mvc-hello-world-example-annotation/)。
 
-下载项目[源代码](#download)并查看项目文件夹结构:
+## 1. 项目结构
+
+下载项目[源代码](#download)并查看项目文件夹结构：
 
 ![spring3-mvc-hello-world-annotation](img/22f0131351d2b809a7ff8ef704966b89.png)
 
 没有像`web.xml`这样的 XML 文件或任何其他 Spring XML 配置文件。
 
- ## 2.专家
+## 2. 专家
 
 2.1 一个`pom.xml`模板快速启动一个 Spring MVC 项目。为了编译这个项目，我们需要添加一个`servlet-api`依赖项。
 
-pom.xml
+`pom.xml`
 
 ```java
- <project 
+<project 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
   http://maven.apache.org/maven-v4_0_0.xsd"> 
@@ -115,23 +117,23 @@ pom.xml
     </plugins>
   </build>
 
-  </project> 
+</project> 
 ```
 
 2.2 编译这个项目并使它支持 Eclipse IDE。
 
-Terminal
+`Terminal`
 
 ```java
- $ mvn eclipse:eclipse 
+$ mvn eclipse:eclipse 
 ```
 
- ## 3.弹簧控制器
+## 3. 弹簧控制器
 
-HelloController.java
+`HelloController.java`
 
 ```java
- package com.mkyong.web.controller;
+package com.mkyong.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -165,14 +167,14 @@ public class HelloController {
 } 
 ```
 
-## 4.JSP 视图
+## 4. JSP 视图
 
 显示值的 JSP 页面，包括引导 css 和 js。
 
-html4strict
+`html4strict`
 
 ```java
- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -254,12 +256,12 @@ html4strict
 </html> 
 ```
 
-## 5.Spring @JavaConfig
+## 5. Spring @JavaConfig
 
-SpringWebConfig.java
+`SpringWebConfig.java`
 
 ```java
- package com.mkyong.config;
+package com.mkyong.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -294,8 +296,10 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter {
 
 XML 等价物。
 
+
+
 ```java
- <beans 
+<beans 
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
@@ -323,17 +327,17 @@ XML 等价物。
 
 	<mvc:annotation-driven />
 
-</beans> 
+</beans>
 ```
 
-## 6.Servlet 3.0+容器
+## 6. Servlet 3.0+ 容器
 
-通过扩展`AbstractAnnotationConfigDispatcherServletInitializer`创建一个 ServletInitializer 类，Servlet 3.0+容器将自动获取这个类并运行它。这是对`web.xml`的替代。
+通过扩展`AbstractAnnotationConfigDispatcherServletInitializer`创建一个`ServletInitializer`类，Servlet 3.0+ 容器将自动获取这个类并运行它。这是对`web.xml`的替代。
 
-MyWebInitializer.java
+`MyWebInitializer.java`
 
 ```java
- package com.mkyong.servlet3;
+package com.mkyong.servlet3;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
@@ -357,42 +361,37 @@ public class MyWebInitializer extends
 		return null;
 	}
 
-} 
+}
 ```
 
-## 7.演示
+## 7. 演示
 
 下载项目并使用嵌入的 Jetty 容器运行它。
 
-Terminal
+`Terminal`
 
 ```java
- $ mvn jetty:run 
+$ mvn jetty:run
 ```
 
-网址:*http://localhost:8080/spring 3*
+网址：`http://localhost:8080/spring3`
 
 ![spring3-mvc-maven-xml-demo](img/9b85b44da70ff93803f55a27d7d83aea.png)
 
-网址:*http://localhost:8080/spring 3/hello/mkyong*
+网址：`http://localhost:8080/spring3/hello/mkyong`
 
 ![spring3-mvc-maven-xml-demo2](img/2a2e175d69bd10ef8cdd126a6cd0713a.png)
 
 ## 下载源代码
 
-Download it – [spring3-mvc-maven-annotation-hello-world](http://web.archive.org/web/20190311142504/http://www.mkyong.com/wp-content/uploads/2015/06/spring3-mvc-maven-annotation-hello-world.zip) (47 KB)Github link – [spring3-mvc-maven-annotation-hello-world.git](http://web.archive.org/web/20190311142504/https://github.com/mkyong/spring3-mvc-maven-annotation-hello-world)
+下载地址 – [spring3-mvc-maven-annotation-hello-world](http://web.archive.org/web/20190311142504/http://www.mkyong.com/wp-content/uploads/2015/06/spring3-mvc-maven-annotation-hello-world.zip) (47 KB)
+
+Github 链接 – [spring3-mvc-maven-annotation-hello-world.git](http://web.archive.org/web/20190311142504/https://github.com/mkyong/spring3-mvc-maven-annotation-hello-world)
 
 ## 参考
 
-1.  [春季新品 3](http://web.archive.org/web/20190311142504/http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/new-in-3.html)
-2.  [Spring 3 MVC 和 XML 示例](http://web.archive.org/web/20190311142504/http://www.mkyong.com/spring-mvc/spring-3-mvc-and-xml-example/)
-3.  [Spring 3 MVC 和 JSON 示例](http://web.archive.org/web/20190311142504/http://www.mkyong.com/spring-mvc/spring-3-mvc-and-json-example/)
+1. [Spring 3 新特性](http://web.archive.org/web/20190311142504/http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/new-in-3.html)
+2. [Spring 3 MVC 和 XML 示例](http://web.archive.org/web/20190311142504/http://www.mkyong.com/spring-mvc/spring-3-mvc-and-xml-example/)
+3. [Spring 3 MVC 和 JSON 示例](http://web.archive.org/web/20190311142504/http://www.mkyong.com/spring-mvc/spring-3-mvc-and-json-example/)
 
 [maven](http://web.archive.org/web/20190311142504/http://www.mkyong.com/tag/maven/) [spring config](http://web.archive.org/web/20190311142504/http://www.mkyong.com/tag/spring-config/) [spring mvc](http://web.archive.org/web/20190311142504/http://www.mkyong.com/tag/spring-mvc/) [spring3](http://web.archive.org/web/20190311142504/http://www.mkyong.com/tag/spring3/)
-
-
-
-
-
-
-

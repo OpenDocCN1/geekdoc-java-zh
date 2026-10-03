@@ -1,19 +1,20 @@
+
 # Spring EL 运算符示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring3/spring-el-operators-example/>
 
-Spring EL 支持大多数标准的数学、逻辑或关系运算符。举个例子，
+Spring EL 支持大多数标准的数学、逻辑或关系运算符。举个例子：
 
-1.  **关系运算符**–等于(==，eq)，不等于(！=，ne)，小于(【T2，lt)，小于或等于(< =，le)，大于(【T4，gt)，大于或等于(> =，ge)。
-2.  **逻辑运算符**–and、or、and not(！).
-3.  **数学运算符**–加法(+)、减法(-)、乘法(*)、除法(/)、模数(%)和指数幂(^).
+1. **关系运算符** – 等于（`==`，`eq`），不等于（`!=`，`ne`），小于（`<`，`lt`），小于或等于（`<=`，`le`），大于（`>`，`gt`），大于或等于（`>=`，`ge`）。
+2. **逻辑运算符** – `and`、`or`、`and not`（`!`）。
+3. **数学运算符** – 加法（`+`）、减法（`-`）、乘法（`*`）、除法（`/`）、模数（`%`）和指数幂（`^`）。
 
-## 注释中的弹簧 EL
+## 注解中的 Spring EL
 
 这个例子演示了 SpEL 中操作符的使用。
 
 ```java
- package com.mkyong.core;
+package com.mkyong.core;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -91,11 +92,11 @@ public class Customer {
 				+ testExponentialPower + "]";
 	}
 
-} 
+}
 ```
 
 ```java
- package com.mkyong.core;
+package com.mkyong.core;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -114,45 +115,45 @@ public class Number {
 		this.no = no;
 	}
 
-} 
+}
 ```
 
 *运行它*
 
 ```java
- Customer obj = (Customer) context.getBean("customerBean");
-       System.out.println(obj); 
+Customer obj = (Customer) context.getBean("customerBean");
+System.out.println(obj);
 ```
 
 *输出*
 
 ```java
- Customer [
-	testEqual=true, 
-	testNotEqual=false, 
-	testLessThan=false, 
-	testLessThanOrEqual=true, 
-	testGreaterThan=false, 
-	testGreaterThanOrEqual=true, 
-	testAnd=false, 
-	testOr=true, 
-	testNot=false, 
-	testAdd=2.0, 
-	testAddString=1@1, 
-	testSubtraction=0.0, 
-	testMultiplication=1.0, 
-	testDivision=5.0, 
-	testModulus=0.0, 
+Customer [
+	testEqual=true,
+	testNotEqual=false,
+	testLessThan=false,
+	testLessThanOrEqual=true,
+	testGreaterThan=false,
+	testGreaterThanOrEqual=true,
+	testAnd=false,
+	testOr=true,
+	testNot=false,
+	testAdd=2.0,
+	testAddString=1@1,
+	testSubtraction=0.0,
+	testMultiplication=1.0,
+	testDivision=5.0,
+	testModulus=0.0,
 	testExponentialPower=4.0
-] 
+]
 ```
 
- ## XML 中的 Spring EL
+## XML 中的 Spring EL
 
-请参见 bean 定义 XML 文件中的等效版本。在 XML 中，像“**小于**这样的符号总是不被支持的，相反，你应该使用上面所示的文本等价符号，例如(' **<** ' = ' **lt** ')和(' **< =** ' = ' **le** ')。
+请参见 bean 定义 XML 文件中的等效版本。在 XML 中，像“**小于**”这样的符号总是不被支持的，相反，你应该使用上面所示的文本等价符号，例如（`<` = `lt`）和（`<=` = `le`）。
 
-```java
- <beans 
+```xml
+<beans
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
@@ -184,22 +185,15 @@ public class Number {
 		<property name="no" value="999" />
 	</bean>
 
-</beans> 
+</beans>
 ```
 
- ## 下载源代码
+## 下载源代码
 
 Download It - [Spring3-EL-Operator-Example.zip](http://web.archive.org/web/20190225100531/http://www.mkyong.com/wp-content/uploads/2011/06/Spring3-EL-Operator-Example.zip) (7 KB)
 
 ## 参考
 
-1.  [官方春联运营商参考文献](http://web.archive.org/web/20190225100531/http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/expressions.html#d0e11931)
+1. [官方 Spring EL 运算符参考文献](http://web.archive.org/web/20190225100531/http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/expressions.html#d0e11931)
 
 [spring el](http://web.archive.org/web/20190225100531/http://www.mkyong.com/tag/spring-el/) [spring3](http://web.archive.org/web/20190225100531/http://www.mkyong.com/tag/spring3/)
-
-
-
-
-
-
-

@@ -1,13 +1,13 @@
+
 # 识别数组类型
 
 > 原文：[`docs.oracle.com/javase/tutorial/reflect/special/arrayComponents.html`](https://docs.oracle.com/javase/tutorial/reflect/special/arrayComponents.html)
 
 可以通过调用[`Class.isArray()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#isArray--)来识别数组类型。要获取一个[`Class`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)，请使用本教程中检索类对象部分描述的方法之一。
 
-``ArrayFind``示例标识了命名类中的数组类型字段，并报告了每个字段的组件类型。
+`ArrayFind`示例标识了命名类中的数组类型字段，并报告了每个字段的组件类型。
 
 ```java
-
 import java.lang.reflect.Field;
 import java.lang.reflect.Type;
 import static java.lang.System.out;
@@ -39,7 +39,6 @@ public class ArrayFind {
 	}
     }
 }
-
 ```
 
 `Class.get*Type()`返回值的语法在[`Class.getName()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getName--)中有描述。类型名称开头的'`[`'字符的数量表示数组的维度（即嵌套的深度）。
@@ -52,7 +51,6 @@ final byte[] java.nio.ByteBuffer.hb
            Field: hb
             Type: class [B
   Component Type: byte
-
 ```
 
 一个引用类型为[`StackTraceElement`](https://docs.oracle.com/javase/8/docs/api/java/lang/StackTraceElement.html)的数组：
@@ -63,7 +61,6 @@ private java.lang.StackTraceElement[] java.lang.Throwable.stackTrace
            Field: stackTrace
             Type: class [Ljava.lang.StackTraceElement;
   Component Type: class java.lang.StackTraceElement
-
 ```
 
 `predefined`是一个引用类型的一维数组[`java.awt.Cursor`](https://docs.oracle.com/javase/8/docs/api/java/awt/Cursor.html)，而`cursorProperties`是一个引用类型的二维数组[`String`](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)：
@@ -78,5 +75,4 @@ static final java.lang.String[][] java.awt.Cursor.cursorProperties
            Field: cursorProperties
             Type: class [[Ljava.lang.String;
   Component Type: class [Ljava.lang.String;
-
 ```

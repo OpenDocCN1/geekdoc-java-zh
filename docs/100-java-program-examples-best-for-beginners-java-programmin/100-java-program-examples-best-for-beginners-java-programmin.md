@@ -1,23 +1,13 @@
-# 100 个 Java 程序示例 ｜ 初学者最佳教程 ｜ Java 编程书籍
 
-
-
-
-
-
+# 100 个 Java 程序示例｜初学者最佳教程｜Java 编程书籍
 
 ![](img/7d75bf5896cc08de79dfc9d70d016088_0_0.png)
 
-
-
-
-
 作者 - DEVBRAT RUDRA
-
 
 ## 第一组 SET-1
 
-### 1. Hello World:
+### 1. Hello World
 
 ```java
 public class HelloWorld {
@@ -27,7 +17,7 @@ public class HelloWorld {
 }
 ```
 
-### 2. 数相加:
+### 2. 数相加
 
 ```java
 public class AddTwoNumbers {
@@ -39,7 +29,7 @@ public class AddTwoNumbers {
 }
 ```
 
-### 3. 数字的阶乘:
+### 3. 数字的阶乘
 
 ```java
 public class Factorial {
@@ -54,7 +44,7 @@ public class Factorial {
 }
 ```
 
-### 4. 斐波那契数列:
+### 4. 斐波那契数列
 
 ```java
 public class Fibonacci {
@@ -71,7 +61,7 @@ public class Fibonacci {
 }
 ```
 
-### 5. 字符串反转:
+### 5. 字符串反转
 
 ```java
 public class ReverseString {
@@ -83,7 +73,7 @@ public class ReverseString {
 }
 ```
 
-### 6. 检查奇偶数:
+### 6. 检查奇偶数
 
 ```java
 public class EvenOrOdd {
@@ -98,7 +88,7 @@ public class EvenOrOdd {
 }
 ```
 
-### 7. 检查质数:
+### 7. 检查质数
 
 ```java
 public class PrimeNumber {
@@ -120,7 +110,7 @@ public class PrimeNumber {
 }
 ```
 
-### 8. 自然数求和:
+### 8. 自然数求和
 
 ```java
 public class SumOfNaturalNumbers {
@@ -134,7 +124,7 @@ public class SumOfNaturalNumbers {
 }
 ```
 
-### 9. 生成相乘法表:
+### 9. 生成乘法表
 
 ```java
 public class MultiplicationTable {
@@ -147,7 +137,7 @@ public class MultiplicationTable {
 }
 ```
 
-### 10. 找出三个数中的最大值:
+### 10. 找出三个数中的最大值
 
 ```java
 public class LargestAmongThree {
@@ -166,7 +156,7 @@ public class LargestAmongThree {
 
 ## 第二组 SET-2
 
-### 1. 寻找数组中的最大元素:
+### 1. 寻找数组中的最大元素
 
 ```java
 public class MaxElement {
@@ -183,7 +173,7 @@ public class MaxElement {
 }
 ```
 
-### 2. 计算数组平均值:
+### 2. 计算数组平均值
 
 ```java
 public class AverageArray {
@@ -199,7 +189,7 @@ public class AverageArray {
 }
 ```
 
-### 3. 检查字符串是否为回文:
+### 3. 检查字符串是否为回文
 
 ```java
 public class PalindromeCheck {
@@ -218,7 +208,7 @@ public class PalindromeCheck {
 }
 ```
 
-### 4. 使用递归计算阶乘:
+### 4. 使用递归计算阶乘
 
 ```java
 public class FactorialRecursive {
@@ -227,6 +217,7 @@ public class FactorialRecursive {
         long factorial = multiplyNumbers(num);
         System.out.println("Factorial of " + num + " = " + factorial);
     }
+
     public static long multiplyNumbers(int num) {
         if (num >= 1) {
             return num * multiplyNumbers(num - 1);
@@ -237,7 +228,7 @@ public class FactorialRecursive {
 }
 ```
 
-### 5. 显示字符串的字符:
+### 5. 显示字符串的字符
 
 ```java
 public class DisplayCharacters {
@@ -250,7 +241,7 @@ public class DisplayCharacters {
 }
 ```
 
-### 6. 交换两个数:
+### 6. 交换两个数
 
 ```java
 public class SwapNumbers {
@@ -259,10 +250,12 @@ public class SwapNumbers {
         System.out.println("--Before swap--");
         System.out.println("First number: " + first);
         System.out.println("Second number: " + second);
+
         // 交换值
         float temporary = first;
         first = second;
         second = temporary;
+
         System.out.println("--After swap--");
         System.out.println("First number: " + first);
         System.out.println("Second number: " + second);
@@ -270,7 +263,7 @@ public class SwapNumbers {
 }
 ```
 
-### 7. 计算数字的幂:
+### 7. 计算数字的幂
 
 ```java
 public class PowerOfNumber {
@@ -286,7 +279,7 @@ public class PowerOfNumber {
 }
 ```
 
-### 8. 打印字符的 ASCII 值:
+### 8. 打印字符的 ASCII 值
 
 ```java
 public class ASCIIValue {
@@ -298,7 +291,7 @@ public class ASCIIValue {
 }
 ```
 
-### 9. 显示两个区间间的质数:
+### 9. 显示两个区间间的质数
 
 ```java
 public class PrimeIntervals {
@@ -321,7 +314,7 @@ public class PrimeIntervals {
 }
 ```
 
-### 10. 找出两个数的最大公约数 (GCD)::
+### 10. 找出两个数的最大公约数（GCD）
 
 ```java
 public class GCD {
@@ -340,7 +333,7 @@ public class GCD {
 
 ## 第三组 SET-3
 
-### 1. 检查闰年:
+### 1. 检查闰年
 
 ```java
 public class LeapYear {
@@ -365,16 +358,15 @@ public class LeapYear {
 }
 ```
 
-
-
 ```java
-        
-        System.out.println("Reversed Array: " + Arrays.toString(array));
+System.out.println("Reversed Array: " + Arrays.toString(array));
     }
 }
 ```
 
-### 3. 计算字符串中的单词数:
+### 3. 计算字符串中的单词数
+
+
 
 ```java
 public class CountWords {
@@ -391,7 +383,7 @@ public class CountWords {
 }
 ```
 
-### 4. 计算单利:
+### 4. 计算单利
 
 ```java
 public class SimpleInterest {
@@ -405,7 +397,7 @@ public class SimpleInterest {
 }
 ```
 
-### 5. 检查数字是否为完全数:
+### 5. 检查数字是否为完全数
 
 ```java
 public class PerfectNumber {
@@ -426,7 +418,7 @@ public class PerfectNumber {
 }
 ```
 
-### 6. 检查阿姆斯特斯特数:
+### 6. 检查阿姆斯特朗数
 
 ```java
 public class ArmstrongNumber {
@@ -461,7 +453,7 @@ public class ArraySort {
 }
 ```
 
-## 8. 两个两个数的最小公倍数 (LCM):
+## 8. 两个数的最小公倍数（LCM）
 
 ```java
 public class LCM {
@@ -479,7 +471,7 @@ public class LCM {
 }
 ```
 
-### 9. 字符串中的空白空格:
+### 9. 删除字符串中的空白
 
 ```java
 public class RemoveWhiteSpaces {
@@ -491,7 +483,7 @@ public class RemoveWhiteSpaces {
 }
 ```
 
-### 10. 查找字符串中字符的频率:
+### 10. 查找字符串中字符的频率
 
 ```java
 import java.util.HashMap;
@@ -512,9 +504,9 @@ public class CharacterFrequency {
 }
 ```
 
-### SET-4
+## SET-4
 
-### 1. 计算圆的面积:
+### 1. 计算圆的面积
 
 ```java
 public class AreaOfCircle {
@@ -526,7 +518,7 @@ public class AreaOfCircle {
 }
 ```
 
-### 2. 创建并使用类:
+### 2. 创建并使用类
 
 ```java
 class Rectangle {
@@ -549,7 +541,7 @@ public class UseRectangle {
 }
 ```
 
-### 3. 实现继承:
+### 3. 实现继承
 
 ```java
 class Vehicle {
@@ -573,7 +565,7 @@ public class InheritanceExample {
 }
 ```
 
-### 4. 使用 Math.pow() 计算数字幂:
+### 4. 使用 `Math.pow()` 计算数字幂
 
 ```java
 public class PowerExample {
@@ -585,7 +577,7 @@ public class PowerExample {
 }
 ```
 
-### 5. 使用方法计算单利:
+### 5. 使用方法计算单利
 
 ```java
 public class Calculator {
@@ -599,7 +591,7 @@ public class Calculator {
 }
 ```
 
-### 6. Java 中的构造函数:
+### 6. Java 中的构造函数
 
 ```java
 class Student {
@@ -624,7 +616,7 @@ public class ConstructorExample {
 }
 ```
 
-### 7. Java 中的接口:
+### 7. Java 中的接口
 
 ```java
 interface Shape {
@@ -645,7 +637,7 @@ public class InterfaceExample {
 }
 ```
 
-### 8. Java 中的封装:
+### 8. Java 中的封装
 
 ```java
 class Encapsulate {
@@ -680,7 +672,7 @@ public class EncapsulationExample {
 }
 ```
 
-### 9. Java 中的 static 关键字:
+### 9. Java 中的 `static` 关键字
 
 ```java
 class Counter {
@@ -701,7 +693,7 @@ public class StaticExample {
 }
 ```
 
-### 10. Java 中的异常处理:
+### 10. Java 中的异常处理
 
 ```java
 public class ExceptionExample {
@@ -716,9 +708,9 @@ public class ExceptionExample {
 }
 ```
 
-### SET-5
+## SET-5
 
-### 1. 读取和写入文件:
+### 1. 读取和写入文件
 
 ```java
 import java.io.File;
@@ -732,8 +724,6 @@ public class FileReadWrite {
     }
 }
 ```
-
-
 
 ```java
 try {
@@ -754,7 +744,9 @@ try {
 }
 ```
 
-## 2. 选择排序算法：
+## 2. 选择排序算法
+
+
 
 ```java
 public class SelectionSort {
@@ -779,7 +771,7 @@ public class SelectionSort {
 }
 ```
 
-## 3. 归并排序算法：
+## 3. 归并排序算法
 
 ```java
 public class MergeSort {
@@ -837,7 +829,7 @@ public class MergeSort {
 }
 ```
 
-## 4. 冒泡排序算法：
+## 4. 冒泡排序算法
 
 ```java
 public class BubbleSort {
@@ -861,7 +853,7 @@ public class BubbleSort {
 }
 ```
 
-## 5. 线性查找算法：
+## 5. 线性查找算法
 
 ```java
 public class LinearSearch {
@@ -878,7 +870,7 @@ public class LinearSearch {
 }
 ```
 
-## 6. 二分查找算法：
+## 6. 二分查找算法
 
 ```java
 public class BinarySearch {
@@ -910,7 +902,7 @@ public class BinarySearch {
 }
 ```
 
-## 7. StringBuilder 类的使用：
+## 7. `StringBuilder` 类的使用
 
 ```java
 public class StringBuilderExample {
@@ -923,7 +915,7 @@ public class StringBuilderExample {
 }
 ```
 
-## 8. 生成随机数：
+## 8. 生成随机数
 
 ```java
 import java.util.Random;
@@ -936,7 +928,7 @@ public class RandomNumber {
 }
 ```
 
-## 9. Java 中枚举的使用：
+## 9. Java 中枚举的使用
 
 ```java
 enum Day {
@@ -954,7 +946,7 @@ public class EnumExample {
 }
 ```
 
-## 10. Java 中 Math 类的使用：
+## 10. Java 中 `Math` 类的使用
 
 ```java
 public class MathExample {
@@ -969,7 +961,7 @@ public class MathExample {
 }
 ```
 
-### 1. 递归斐波那契数列：
+### 1. 递归斐波那契数列
 
 ```java
 public class FibonacciRecursive {
@@ -989,7 +981,7 @@ public class FibonacciRecursive {
 }
 ```
 
-### 2. ArrayList 示例：
+### 2. `ArrayList` 示例
 
 ```java
 import java.util.ArrayList;
@@ -1006,7 +998,7 @@ public class ArrayListExample {
 }
 ```
 
-### 3. HashSet 示例：
+### 3. `HashSet` 示例
 
 ```java
 import java.util.HashSet;
@@ -1023,7 +1015,7 @@ public class HashSetExample {
 }
 ```
 
-### 4. HashMap 示例：
+### 4. `HashMap` 示例
 
 ```java
 import java.util.HashMap;
@@ -1039,7 +1031,7 @@ public class HashMapExample {
 }
 ```
 
-### 5. try-catch-finally 块的使用：
+### 5. `try-catch-finally` 块的使用
 
 ```java
 public class ExceptionHandling {
@@ -1056,7 +1048,7 @@ public class ExceptionHandling {
 }
 ```
 
-### 6. 实现 Runnable 接口：
+### 6. 实现 `Runnable` 接口
 
 ```java
 public class RunnableExample {
@@ -1075,7 +1067,7 @@ public class RunnableExample {
 }
 ```
 
-### 7. Java 中日期和时间的使用：
+### 7. Java 中日期和时间的使用
 
 ```java
 import java.time.LocalDateTime;
@@ -1091,7 +1083,9 @@ public class DateTimeExample {
 }
 ```
 
-### 8. 生成随机密码：
+### 8. 生成随机密码
+
+
 
 ```java
 import java.security.SecureRandom;
@@ -1108,10 +1102,6 @@ public class RandomPassword {
 }
 ```
 
-
-
-
-
 ```java
 random.nextBytes(bytes);
 String password =
@@ -1120,7 +1110,7 @@ System.out.println("Random Password: " + password);
 }
 ```
 
-### 9. 将字符串转换为整数：
+### 1. 将字符串转换为整数
 
 ```java
 public class StringToInteger {
@@ -1132,10 +1122,11 @@ public class StringToInteger {
 }
 ```
 
-### 10. 生成随机数组：
+### 2. 生成随机数组
 
 ```java
 import java.util.Random;
+
 public class RandomArray {
     public static void main(String[] args) {
         int n = 5;
@@ -1152,7 +1143,7 @@ public class RandomArray {
 }
 ```
 
-### 1. 使用 Thread 类的示例：
+### 3. 使用 `Thread` 类的示例
 
 ```java
 class MyThread extends Thread {
@@ -1174,7 +1165,7 @@ public class ThreadExample {
 }
 ```
 
-### 2. 使用 Runnable 接口的示例：
+### 4. 使用 `Runnable` 接口的示例
 
 ```java
 class MyRunnable implements Runnable {
@@ -1197,7 +1188,7 @@ public class RunnableThreadExample {
 }
 ```
 
-### 3. 从文件读取内容：
+### 5. 从文件读取内容
 
 ```java
 import java.io.BufferedReader;
@@ -1220,7 +1211,7 @@ public class ReadFile {
 }
 ```
 
-### 4. 向文件写入内容：
+### 6. 向文件写入内容
 
 ```java
 import java.io.BufferedWriter;
@@ -1241,7 +1232,7 @@ public class WriteFile {
 }
 ```
 
-### 5. 将内容从一个文件复制到另一个文件：
+### 7. 将内容从一个文件复制到另一个文件
 
 ```java
 import java.io.FileReader;
@@ -1267,7 +1258,7 @@ public class CopyFile {
 }
 ```
 
-### 6. Java 泛型的使用：
+### 8. Java 泛型的使用
 
 ```java
 import java.util.ArrayList;
@@ -1285,7 +1276,7 @@ public class GenericsExample {
 }
 ```
 
-### 7. 使用 Arrays.sort() 排序数组：
+### 9. 使用 `Arrays.sort()` 排序数组
 
 ```java
 import java.util.Arrays;
@@ -1299,7 +1290,7 @@ public class ArraySorting {
 }
 ```
 
-### 8. 计算数组的平均值：
+### 10. 计算数组的平均值
 
 ```java
 public class ArrayAverage {
@@ -1315,7 +1306,7 @@ public class ArrayAverage {
 }
 ```
 
-### 9. Java 中的 Lambda 表达式：
+### 11. Java 中的 Lambda 表达式
 
 ```java
 interface MyInterface {
@@ -1330,7 +1321,7 @@ public class LambdaExample {
 }
 ```
 
-### 10. 命令行参数的使用：
+### 12. 命令行参数的使用
 
 ```java
 public class CommandLineArguments {
@@ -1344,7 +1335,7 @@ public class CommandLineArguments {
 }
 ```
 
-## 1. 创建服务器套字：
+## 13. 创建服务器套字
 
 ```java
 import java.io.IOException;
@@ -1363,7 +1354,7 @@ public class ServerExample {
 }
 ```
 
-## 2. 创建客户端套字：
+## 14. 创建客户端套字
 
 ```java
 import java.io.IOException;
@@ -1382,7 +1373,7 @@ public class ClientExample {
 }
 ```
 
-### 3. Java 中的正则表达式：
+### 15. Java 中的正则表达式
 
 ```java
 import java.util.regex.Matcher;
@@ -1403,10 +1394,6 @@ public class RegexExample {
 }
 ```
 
-
-
-
-
 ```java
 public class StringFormatting {
     public static void main(String[] args) {
@@ -1418,7 +1405,7 @@ public class StringFormatting {
 }
 ```
 
-## 9. 检查数字是正数还是负数：
+## 16. 检查数字是正数还是负数
 
 ```java
 import java.util.Scanner;
@@ -1440,7 +1427,7 @@ public class PositiveNegativeCheck {
 }
 ```
 
-## 10. 反转字符串：
+## 17. 反转字符串
 
 ```java
 public class ReverseString {
@@ -1453,9 +1440,11 @@ public class ReverseString {
 }
 ```
 
-SET-9
 
-### 1. 实现栈（Stack）数据结构：
+
+# SET-9
+
+## 1. 实现栈（Stack）数据结构
 
 ```java
 import java.util.Stack;
@@ -1472,7 +1461,7 @@ public class StackExample {
 }
 ```
 
-### 2. 实现队列（Queue）数据结构：
+## 2. 实现队列（Queue）数据结构
 
 ```java
 import java.util.LinkedList;
@@ -1491,7 +1480,7 @@ public class QueueExample {
 }
 ```
 
-### 3. 二分查找算法：
+## 3. 二分查找算法
 
 ```java
 public class BinarySearchExample {
@@ -1523,7 +1512,7 @@ public class BinarySearchExample {
 }
 ```
 
-### 4. 深度优先搜索（DFS）算法：
+## 4. 深度优先搜索（DFS）算法
 
 ```java
 import java.util.ArrayList;
@@ -1573,7 +1562,7 @@ class Graph {
 }
 ```
 
-### 5. 广度优先搜索（BFS）算法：
+## 5. 广度优先搜索（BFS）算法
 
 ```java
 import java.util.Iterator;
@@ -1629,7 +1618,7 @@ class GraphBFS {
 }
 ```
 
-### 6. 使用 StringBuilder 进行字符串操作：
+## 6. 使用 `StringBuilder` 进行字符串操作
 
 ```java
 public class StringBuilderExample {
@@ -1643,7 +1632,7 @@ public class StringBuilderExample {
 }
 ```
 
-### 7. 将字符串转换为大写：
+## 7. 将字符串转换为大写
 
 ```java
 public class StringUppercase {
@@ -1655,7 +1644,7 @@ public class StringUppercase {
 }
 ```
 
-### 8. 将字符串转换为小写：
+## 8. 将字符串转换为小写
 
 ```java
 public class StringToLowerCase {
@@ -1667,7 +1656,7 @@ public class StringToLowerCase {
 }
 ```
 
-### 9. 使用 Math.random() 方法：
+## 9. 使用 `Math.random()` 方法
 
 ```java
 public class RandomNumberExample {
@@ -1678,7 +1667,7 @@ public class RandomNumberExample {
 }
 ```
 
-### 10. 使用 Math.abs() 方法：
+## 10. 使用 `Math.abs()` 方法
 
 ```java
 public class AbsoluteValueExample {
@@ -1690,9 +1679,9 @@ public class AbsoluteValueExample {
 }
 ```
 
-SET-10
+# SET-10
 
-### 1. 使用同步方法（Synchronized Method）：
+## 1. 使用同步方法（Synchronized Method）
 
 ```java
 class Table {
@@ -1743,7 +1732,7 @@ public class SynchronizedExample {
 }
 ```
 
-### 2. 使用 Try-Catch 块进行异常处理：
+## 2. 使用 `Try-Catch` 块进行异常处理
 
 ```java
 public class ExceptionHandlingExample {
@@ -1758,7 +1747,7 @@ public class ExceptionHandlingExample {
 }
 ```
 
-### 3. 使用多个 Catch 块：
+## 3. 使用多个 `Catch` 块
 
 ```java
 public class MultipleCatchExample {
@@ -1778,11 +1767,7 @@ public class MultipleCatchExample {
 }
 ```
 
-
-
-
-
-### 4. Finally 块的使用:
+## 4. `Finally` 块的使用
 
 ```java
 public class FinallyExample {
@@ -1800,7 +1785,9 @@ public class FinallyExample {
 }
 ```
 
-### 5. Throw 关键字的使用:
+## 5. `Throw` 关键字的使用
+
+
 
 ```java
 public class ThrowExample {
@@ -1811,6 +1798,7 @@ public class ThrowExample {
             System.out.println("Eligible to Vote");
         }
     }
+
     public static void main(String[] args) {
         checkAge(15);
         System.out.println("rest of the code");
@@ -1818,7 +1806,7 @@ public class ThrowExample {
 }
 ```
 
-### 6. 自定义异常的使用:
+### 6. 自定义异常的使用
 
 ```java
 class MyException extends Exception {
@@ -1826,6 +1814,7 @@ class MyException extends Exception {
         super(s);
     }
 }
+
 public class CustomExceptionExample {
     public static void main(String[] args) {
         try {
@@ -1837,7 +1826,7 @@ public class CustomExceptionExample {
 }
 ```
 
-### 7. 通过 Thread 实现 Runnable 接口:
+### 7. 通过 `Thread` 实现 `Runnable` 接口
 
 ```java
 public class RunnableThreadExample {
@@ -1847,8 +1836,10 @@ public class RunnableThreadExample {
                 System.out.println("Child Thread");
             }
         };
+
         Thread t = new Thread(r);
         t.start();
+
         for (int i = 0; i < 5; i++) {
             System.out.println("Main Thread");
         }
@@ -1856,7 +1847,7 @@ public class RunnableThreadExample {
 }
 ```
 
-### 8. Java 中嵌套类的使用:
+### 8. Java 中嵌套类的使用
 
 ```java
 public class Outer {
@@ -1876,7 +1867,7 @@ public class Outer {
 }
 ```
 
-### 9. Java 中匿名类的使用:
+### 9. Java 中匿名类的使用
 
 ```java
 abstract class Anonymous {
@@ -1890,12 +1881,13 @@ public class AnonymousClassExample {
                 System.out.println("Anonymous Class Example");
             }
         };
+
         obj.display();
     }
 }
 ```
 
-### 10. Java 中接口的使用:
+### 10. Java 中接口的使用
 
 ```java
 interface Drawable {

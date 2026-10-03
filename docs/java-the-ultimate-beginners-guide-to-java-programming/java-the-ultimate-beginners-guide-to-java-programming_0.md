@@ -1,31 +1,15 @@
+
 # Java：Java 编程初学者指南
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 引言
+## 引言
 
 Java 被认为是世界上最实用、通用的面向对象语言之一，它是你可以学习——甚至精通的最佳编程语言之一，即使你只是一个新手！
 
-在本书的帮助下，你将 Java 是什么、它的基本类型、数据类型、面向对象编程实际上是如何运作的等内容！
+在本书的帮助下，你将了解 Java 是什么、它的基本类型、数据类型、面向对象编程实际上是如何运作的等内容。
 
 现在开始阅读这本书，你将很快学到关于 Java 的知识！
 
-# 第 1 章 Java 简介
-
-
-
+## 第 1 章 Java 简介
 
 最重要的是，你必须理解的是，Java 是一种通用的、面向对象的编程语言——这意味着它比其他编程语言更容易理解。它的设计初衷主要是让软件开发人员只需编写一次程序，即可让这些程序运行在任何地方，或者至少在大多数平台上运行，只要这些平台允许 Java 代码运行。
 
@@ -33,7 +17,7 @@ Java 主要使用与 `C+` 和 `C++` 相同的一些元素，但将它们转换�
 
 Java 还被设计为能够提供足够的硬件和软件运行时支持，这是通过以清晰、简洁的方式表示每个字节码来实现的。例如，西西狮、边境牧奇犬和梗梗犬都是狗——因此，它们都可以被归类为狗，这样就不会占用太多的系统空间，系统能够快速运行。这也是 Java 成为世界上历史上最强大、使用最广泛的编程语言之一的原因！
 
-## 历史
+### 历史
 
 Java 的历史可以追溯到 1991 年，当时程序员 Patrick Haughton、Mike Sheridan 和 James Gosling 设想了一种最适合用于开发数字电视的编程语言。然而，它被认为远远超当时的时代，因此他们基于 `C+` 和 `C++` 平台对其重新开发，使其更易用、更经济。
 
@@ -49,13 +33,13 @@ Java 的历史可以追溯到 1991 年，当时程序员 Patrick Haughton、Mike
 
 1995 年，太阳系统公司（Sun Microsystems）最终发布了 Java 1.0——这是 Java 的首次公开诞生，它具有惊人的安全性、免费的运行时以及跨网络的文件访问限制。在过去的几年里，又进行了 7 次 Java 发布，从 2006 年开始，Java 开始通过 `GNU` 或通用公共许可（General Public License）提供——这意味着它现在是一门免费的开源编程语言。这源于当某些内容被私有化并收费时引发的公众抗议，这显然与它的核心原则不符。
 
-## 运行时与性能
+### 运行时与性能
 
 起初，Java 的运行速度并没有达到理想水平，主要是因为用它创建的前几个程序比用 `C+` 创建的程序需要更多的内存。然而，在多年以后，它的速度得到了提高，而且在行业中的声誉实际上比同类产品更好。
 
 由于 Java 本身是一个虚拟机，它现在使用了所谓的“即时编译”（just in time compilation），这使得它非常容易处理。它还提供了额外的支持，因此现在你可以开始使用内部类、数组、断言、字符串生成器等，同时也得到了更好的优化。
 
-## 语法
+### 语法
 
 当然，你以后会学习更多内容，但你现在必须意识到，在 Java 编程中，类封装了所有的代码——所以它们之间可以是连贯的，并且能够共存，所有这些内容都被视为自身的数据项。然而，原始数据类型（如字符、布尔值、整数等——你将在下一章中学习这些内容）是被排除在外的，因为它们知道如何独立存在。
 
@@ -75,7 +59,7 @@ Program HiWorld (
 
 但你必须注意，将类设为公共（public）使程序具有在其他平台上使用的能力。因此，除非程序仍处于开发阶段且你不想让它被访问，否则最好确保将其设为公共，以便你也可以进行测试。毕竟，通过使用 `void` 和 `static` 关键字，你可以确保其他人无法编辑或修改该程序。
 
-## 内存
+### 内存
 
 Java 运行快速的另一个原因是它利用了自动内存管理，这意味着运行时不会受到程序员选择增加或减少其正尝试创建的内容的影响。
 
@@ -83,7 +67,7 @@ Java 运行快速的另一个原因是它利用了自动内存管理，这意味
 
 现在是时候学习更多关于 Java 的内容了。
 
-# 第二章：Java 中的八种原始类型
+## 第二章：Java 中的八种原始类型
 
 如前所述，Java 有八种原始或基本数据类型。这里是 Java 的原始类型。基本上这些是你在创建程序时应该使用的词汇。
 
@@ -102,11 +86,12 @@ Java 运行快速的另一个原因是它利用了自动内存管理，这意味
 
 注意，这些关键字不能用作变量！
 
-## 缩进与行
+### 缩进与行
 
-使用的空格和单词数量决定了你编写的内容是正确的，还是会产生错误：请看下面的两个示例。第一个是正确的，而另一个因为最后一行没有缩进的 print 命令而产生错误。
+使用的空格和单词数量决定了你编写的内容是正确的，还是会产生错误：请看下面的两个示例。第一个是正确的，而另一个因为最后一行没有缩进的 `print` 命令而产生错误。
 
 示例 1：
+
 ```
 if True:
     print "True"
@@ -115,6 +100,7 @@ print "False"
 ```
 
 示例 2：
+
 ```
 if True:
     print "Answer"
@@ -124,9 +110,9 @@ else:
 print "False"
 ```
 
-## 引号
+### 引号
 
-在程序中创建引号时，请注意你可以使用单引号（‘'）、双引号（“”）或三引号（""""）来指示字符串和字面量字符串。
+在程序中创建引号时，请注意你可以使用单引号（`'`）、双引号（`"`）或三引号（`"""`）来指示字符串和字面量字符串。
 
 例如：
 
@@ -138,15 +124,11 @@ paragraph = """这是一个段落。它
 由多行和句子组成."""
 ```
 
-## 多行语句
+### 多行语句
 
-自动情况下，命令的结束决定了新行的开始，但如果你想继续自己的行，可以使用反斜杠（\）来这样做，但在使用括号时除外。
+自动情况下，命令的结束决定了新行的开始，但如果你想继续自己的行，可以使用反斜杠（`\`）来这样做，但在使用括号时除外。
 
 示例 1：
-
-
-
-
 
 ```
 total = item_one + \
@@ -154,17 +136,19 @@ total = item_one + \
     item_three
 ```
 
-示例 2:
+示例 2：
 
 ```python
 days = ['Monday', 'Tuesday', 'Wednesday',
         'Thursday', 'Friday']
 ```
 
-## 注释
-要创建注释，只需使用井号（#`）——这听起来非常符合社交媒体风格，对吧？例如：
+### 注释
 
-示例 1:
+要创建注释，只需使用井号（`#`）——这听起来非常符合社交媒体风格，对吧？例如：
+
+示例 1：
+
 ```python
 #!/usr/bin/java
 
@@ -173,7 +157,8 @@ days = ['Monday', 'Tuesday', 'Wednesday',
 print "Hello, Java!" # 第二条注释
 ```
 
-示例 2:
+示例 2：
+
 ```python
 ### 这是一个注释。
 ### 这也是一个注释。
@@ -181,7 +166,8 @@ print "Hello, Java!" # 第二条注释
 ### 我已经说过过了。
 ```
 
-### 等待用户
+#### 等待用户
+
 当你想要创建提示符来告诉用户你正在等待他的命令时，你可以尝试：
 
 ```python
@@ -190,7 +176,8 @@ print "Hello, Java!" # 第二条注释
 raw_input("\n\n 按回车键退出。")
 ```
 
-### 独立语句组
+#### 独立语句组
+
 在 Java 语言中，独立语句组被称为 `Suites`（语句块）。基本上，你必须以关键字开始并以冒号（`:`）结束，例如：
 
 ```python
@@ -206,7 +193,8 @@ else :
 
 上述命令将为你提供语句块！
 
-## 布尔表达式与逻辑
+### 布尔表达式与逻辑
+
 接下去是布尔逻辑。在这里，值被归约为真（true）或假（false），并用于二进制系统中。简而言之，它们帮助程序做出自己的决定。例如：
 
 ```python
@@ -217,7 +205,7 @@ True
 
 你必须记住的是，布尔逻辑决定了一个确切的结果——你想要看到的特定内容。就像哲学逻辑中存在对立平方一样，也存在布尔逻辑对立广场。下面是一个示例：
 
-| a | b | a== b | a!= b | A and b | A or b | not b |
+| a | b | a == b | a != b | a and b | a or b | not b |
 | --- | --- | --- | --- | --- | --- | --- |
 | False | False | True | False | False | False | True |
 | False | True | False | True | False | True | True |
@@ -226,7 +214,8 @@ True
 
 下是对该图表的解释。
 
-### 逻辑“与”
+#### 逻辑“与”
+
 如你所示，上面有一个表达式为 `a and b`。记住，这只有当 `a` 和 `b` 都具有相同的真值时，才会发生，这意味着结果可能为真——而在其他任何情况下为假。
 
 这是一个示例：
@@ -236,34 +225,39 @@ a and False == False
 False and a == False
 B and a == a and b
 A and True == a
-True and a== a
+True and a == a
 A and a == a
 ```
 
-### 逻辑等价
-逻辑等价或 `a==b` 发生在 `a` 和 `b` 都具有相同真值时，且可能为真也可以为假；否则，它们的值不同，核心不相同。
+#### 逻辑等价
 
-### 逻辑“或”
+逻辑等价或 `a == b` 发生在 `a` 和 `b` 都具有相同真值时，且可能为真也可以为假；否则，它们的值不同，核心不相同。
+
+#### 逻辑“或”
+
 接下来，你看到一个显示 `a or b` 的表格。这测试两者是否为真，或仅有一个变量为真。当 `a` 和 `b` 都为真时，值也返回为真——别无它。
 
 例如：
+
 ```python
 a or False == a
 False or a == a
-B or a== a or b
+B or a == a or b
 a or True == True
 True or a == True
 a or a == x
 ```
 
-### 逻辑否定
+#### 逻辑否定
+
 基本上，逻辑否定意味着两个变量具有相互抵消的能力。例如：
 
 ```python
 not (not a) == a
 ```
 
-### 条件执行
+#### 条件执行
+
 还有条件执行，或者改变行为并检查影响程序行为的条件的手段。这使用了 `If` 语句。这是一个很好的例子：
 
 ```python
@@ -277,14 +271,16 @@ else:
 
 这将给你如下结果：
 
-```pythonf BOOLEAN EXPRESSION:
+```python
+if BOOLEAN EXPRESSION:
     STATEMENTS_1        # 如果条件为 True 则执行
 else:
     STATEMENTS_2        # 如果条件为 False 则执行
 ```
 
-### 链式条件
-Else If/ If Else 在此条件中非常重要。这是一个示例：
+#### 链式条件
+
+`Else If`/`If Else` 在此条件中非常重要。这是一个示例：
 
 ```python
 if choice == "a":
@@ -297,7 +293,8 @@ else:
     print("无效选择.")
 ```
 
-### 嵌套条件
+#### 嵌套条件
+
 还有嵌套条件，基本上意味着条件可以叠加在另一个之上。例如：
 
 ```python
@@ -325,7 +322,8 @@ if 0 < x and x < 10:
     print("x 是一个正数字位.")
 ```
 
-### 省略 Else 子句
+#### 省略 Else 子句
+
 如果条件求值为真，则也可以省略 `Else` 子句。例如：
 
 ```python
@@ -336,7 +334,8 @@ print("我决定使用数字 42。")
 print( x, " 的平方根是", math.sqrt(x))
 ```
 
-### 返回语句
+#### 返回语句
+
 你还有 `return` 语句，无论操作是否为空，它都能为你返回一个值。
 
 ```python
@@ -348,7 +347,8 @@ def print_square_root(x):
     print(x, " 的平方根是", result)
 ```
 
-## 整数和浮点数
+### 整数和浮点数
+
 当然，你可以预感到整数和浮点数用于存储值，这就是为什么它们也被分在一起的。将你偏好的数字分配给变量。例如：
 
 ```python
@@ -357,6 +357,7 @@ var2 = 10
 ```
 
 你也可以利用以下类型：
+
 1. `Int`（整数）
 2. `Complex`（复数）
 3. `Float`（浮点数）
@@ -368,14 +369,16 @@ var2 = 10
 a = b = 1
 ```
 
-## 变量
+### 变量
+
 接下来，该学习什么是变量了。
 
 在学习之前，你必须知道它们基本上意味着存储值。在这里，你将使用大量的数字、整数和各种字符！
 
 在学习命令之前，这里有一个关于类型转换的快速课程。
 
-### 类型转换
+#### 类型转换
+
 1. `Int(x [base])`：如果 `x` 是字符串，它变为整数。
 2. `Float(x)`：将整数转换为浮点数。
 3. `Long(x [base])`：将 `x` 转换为长整数。
@@ -393,58 +396,58 @@ a = b = 1
 15. `Ord(x)`：这给单个字符其整数值。
 16. `Unichr(x)`：最后，使用此命令将得到一个 Unicode 字符。
 
-#### 赋值
+##### 赋值
+
 等号（`=`）在这里很重要，因为。你不需要在这里进行显式声明，但你必须确保将变量放在等号之前，而在右侧，放置你想让变量发生的操作。例如：
-
-
-
 
 此外，你还有 Java 运算符。这些运算符用于操作操作数，可以分类为：
 
-1.  算术运算符
-2.  赋值运算符
-3.  身份运算符
-4.  成员运算符
-5.  位运算符
-6.  逻辑运算符
-7.  比较/关系运算符
+1. 算术运算符
+2. 赋值运算符
+3. 身份运算符
+4. 成员运算符
+5. 位运算符
+6. 逻辑运算符
+7. 比较/关系运算符
 
-### 算术运算符
+#### 算术运算符
 
 以下是你可以使用的算术运算符：
 
-1.  `+` 加法。当然，这会加你运算符上的值（`a + b = 15`）。
-2.  `–` 减法。将右侧的操作数减去左侧的操作数（`a – b = -10`）。
-3.  `/` 除法。将左侧的操作数除以右侧的（`b/a = 2`）。
-4.  `*` 乘法。将你的内容倍乘（`a * b = 200`）。
-5.  `//` 整除。通过它，你可以得到商的结果，特别是在去除小数点时（`9//2 = 4`）（`9.0//2.0 = 4.0`）。
-6.  `**` 幂。这可以帮助你推导出指数符号（`a**b = 5 的 10 次`）。
-7.  `%` 取模。将左侧的操作数除以右侧并提供余数（`b% a = 0`）。
+1. `+` 加法。当然，这会加你运算符上的值（`a + b = 15`）。
+2. `–` 减法。将右侧的操作数减去左侧的操作数（`a – b = -10`）。
+3. `/` 除法。将左侧的操作数除以右侧的（`b/a = 2`）。
+4. `*` 乘法。将你的内容倍乘（`a * b = 200`）。
+5. `//` 整除。通过它，你可以得到商的结果，特别是在去除小数点时（`9//2 = 4`）（`9.0//2.0 = 4.0`）。
+6. `**` 幂。这可以帮助你推导出指数符号（`a**b = 5 的 10 次`）。
+7. `%` 取模。将左侧的操作数除以右侧并提供余数（`b% a = 0`）。
 
-### 赋值运算符
+#### 赋值运算符
 
-1.  `=` 将右侧的值赋给左侧的操作数（`c = a + b` 将 `a + b` 的值赋值给 `c`）。
-2.  `-=` 减并赋值。这将右侧的操作数减去左侧的操作数，并将结果赋值给左侧（`c -= a` 等于 `c = c – a`）。
-3.  `+=` 加并赋值。将右侧的操作数加到左侧并得到左侧操作数的结果（`c += a` 等于 `c = c + a`）。
-4.  `/=` 除并赋值。将左侧除以右侧操作数并将赋值赋值左侧（`c /= a` 等于 `c = c / a`）。
-5.  `*=` 乘并赋值。将右侧操作数乘以左侧操作数并将结果赋值给左侧操作数（`c *= a` 等于 `c = c * a`）。
-6.  `**=` 幂并赋值。推导出指数符号（`c **= a` 等于 `c = c ** a`）。
-7.  `%=` 取模并赋值。取两个操作数的模（`c %= a` 等于 `c = c % a`）。
-8.  `//=` 整除并赋值。通过它，你可以得到商的结果，特别是在去除小数点时（`c //= a` 等于 `c = c // a`）。
+1. `=` 将右侧的值赋给左侧的操作数（`c = a + b` 将 `a + b` 的值赋值给 `c`）。
+2. `-=` 减并赋值。这将右侧的操作数减去左侧的操作数，并将结果赋值给左侧（`c -= a` 等于 `c = c – a`）。
+3. `+=` 加并赋值。将右侧的操作数加到左侧并得到左侧操作数的结果（`c += a` 等于 `c = c + a`）。
+4. `/=` 除并赋值。将左侧除以右侧操作数并将赋值赋值左侧（`c /= a` 等于 `c = c / a`）。
+5. `*=` 乘并赋值。将右侧操作数乘以左侧操作数并将结果赋值给左侧操作数（`c *= a` 等于 `c = c * a`）。
+6. `**=` 幂并赋值。推导出指数符号（`c **= a` 等于 `c = c ** a`）。
+7. `%=` 取模并赋值。取两个操作数的模（`c %= a` 等于 `c = c % a`）。
+8. `//=` 整除并赋值。通过它，你可以得到商的结果，特别是在去除小数点时（`c //= a` 等于 `c = c // a`）。
+
+
 
 ### 身份运算符
 
 这些运算符比较两个不同对象的两个位置内存。
 
-1.  `is`。判断两边的变量是否为真；如果不是，运算符指向同一个主体（`x is y`，这里如果 `id(x)` 等于 `id(y)`，`is` 结果为 1）。
-2.  `is not`。如果两边的变量为假，运算符指向主体并在逻辑上为真（`x is not y`，这里如果 `id(x)` 不等于 `id(y)`，`is not` 结果为 1）。
+1. `is`。判断两边的变量是否为真；如果不是，运算符指向同一个主体（`x is y`，这里如果 `id(x)` 等于 `id(y)`，`is` 结果为 1）。
+2. `is not`。如果两边的变量为假，运算符指向主体并在逻辑上为真（`x is not y`，这里如果 `id(x)` 不等于 `id(y)`，`is not` 结果为 1）。
 
 ### 成员运算符
 
 这些运算符检查特定序列中是否存在成员关系或一致性。
 
-1.  `is`。检查各边的变量是否为真（`x is y`，这里如果 `id(x)` 等于 `id(y)`，`is` 结果为 1）。
-2.  `not in`。检查变量是否不在指定的序列中并评估为真假（`x not in y`，这里如果 `x` 不是序列 `y` 的成员，`not in` 结果为 1）。
+1. `is`。检查各边的变量是否为真（`x is y`，这里如果 `id(x)` 等于 `id(y)`，`is` 结果为 1）。
+2. `not in`。检查变量是否不在指定的序列中并评估为真假（`x not in y`，这里如果 `x` 不是序列 `y` 的成员，`not in` 结果为 1）。
 
 ### 位运算符
 
@@ -466,29 +469,29 @@ a^b = 0011 0001
 
 ### 比较运算符
 
-1.  `==`。如果操作数相等，则条件为真（`(a==b)` 不成立）。
-2.  `<>`。如果值不相等，条件变为真（`(a<>b)` 为真）。
-3.  `!=`。如果两个操作数的值不相等，条件变为真。
-4.  `<=`。如果左侧操作数的值小于右侧操作数，条件变为真（`a <=b` 为真）。
-5.  `>=`。如果左侧操作数的值大于右侧操作数，条件变为真（`a>=b` 不成立）。
-6.  `<`。如果左侧操作数的值小于右侧，条件为真（`a < b` 为真）。
-7.  `>`。如果左侧的值大于右侧，条件为真（`(a>b` 不成立）。
+1. `==`。如果操作数相等，则条件为真（`(a==b)` 不成立）。
+2. `<>`。如果值不相等，条件变为真（`(a<>b)` 为真）。
+3. `!=`。如果两个操作数的值不相等，条件变为真。
+4. `<=`。如果左侧操作数的值小于右侧操作数，条件变为真（`a <=b` 为真）。
+5. `>=`。如果左侧操作数的值大于右侧操作数，条件变为真（`a>=b` 不成立）。
+6. `<`。如果左侧操作数的值小于右侧，条件为真（`a < b` 为真）。
+7. `>`。如果左侧的值大于右侧，条件为真（`(a>b` 不成立）。
 
 ### 循环
 
 循环是提供可以在程序中使用的各种动作的语句。这些包括：
 
-1.  `For 循环`。这可以帮助你执行多次语句，并缩短变量中使用的代码。
-2.  `While 循环`。重复你在程序中想要再次使用的语句或语句组。
-3.  `嵌套循环`。这意味着你在程序中使用了一个或多个循环。
-4.  `Do…While 循环`。这相当于一个语句，但程序将其视为一个条件。
-5.  `Goto 语句`。这将控制交给已经执行的语句。
-6.  `Continue 语句`。跳过循环体的剩余部分。
-7.  `Break 语句`。终止循环。
+1. `For 循环`。这可以帮助你执行多次语句，并缩短变量中使用的代码。
+2. `While 循环`。重复你在程序中想要再次使用的语句或语句组。
+3. `嵌套循环`。这意味着你在程序中使用了一个或多个循环。
+4. `Do…While 循环`。这相当于一个语句，但程序将其视为一个条件。
+5. `Goto 语句`。这将控制交给已经执行的语句。
+6. `Continue 语句`。跳过循环体的剩余部分。
+7. `Break 语句`。终止循环。
 
 ### Switch Case
 
-Switch 允许你根据条件执行不同的代码块。
+`Switch` 允许你根据条件执行不同的代码块。
 
 ```c
 #include <stdio.h>
@@ -512,10 +515,10 @@ int main () {
 
 这意味着 Java 表达式：
 
-1.  Java 表达式包含过滤器——但 JavaScript 表达式不。
-2.  它们不支持异常、循环和坐标。
-3.  表达式可以写在 HTML 内部。
-4.  Java 表达式可以是变量、运算符和字量。
+1. Java 表达式包含过滤器——但 JavaScript 表达式不。
+2. 它们不支持异常、循环和坐标。
+3. 表达式可以写在 HTML 内部。
+4. Java 表达式可以是变量、运算符和字量。
 
 例如：
 
@@ -535,16 +538,13 @@ int main () {
 </html>
 ```
 
-通过移除 ng 指令，HTML 将无法解析表达式，而只是原样显示它，这看起来基本上就像是这样：
+通过移除 `ng` 指令，HTML 将无法解析表达式，而只是原样显示它，这看起来基本上就像是这样：
 
 ```html
 <!DOCTYPE html>
 <html>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 ```
-
-
-
 
 ```html
 <body>
@@ -568,7 +568,7 @@ int main () {
 
 ```html
 <div ng-app="" ng-init="points=[2,4,6,8]">
-  <p>第三个结果是 <span ng-bind="points[2]"></</span></p>
+  <p>第三个结果是 <span ng-bind="points[2]"></span></p>
 </div>
 ```
 
@@ -586,7 +586,7 @@ int main () {
 
 ```html
 <div ng-app="" ng-init="firstName='Mark';lastName='Ruffalo'">
-  <p>名字是 <span ng-bind="firstName + ' ' + lastName"></</span></p>
+  <p>名字是 <span ng-bind="firstName + ' ' + lastName"></span></p>
 </div>
 ```
 
@@ -609,6 +609,7 @@ int main () {
 Java 工作字符串基本上是被引号括起来的字符。使用这些字符串时，单引号被认为等同于双引号，因此你可以预期：
 
 `var1 = 'Hello World!'`
+
 `var2 = "Java Programming"`
 
 ### 访问值
@@ -626,6 +627,7 @@ print "var2[1:5]: ", var2[1:5]
 当你输入这些命令时，你将得到结果：
 
 `var1[0]: H`
+
 `var2[1:5]: ytho`
 
 你也可以通过以下操作来更新字符串：
@@ -672,9 +674,13 @@ print para_str
 当你输入上述语法时，将得到如下结果：
 
 this is a long string that is made up of
+
 several lines and non-printable characters such as
+
 TAB (     ) and they will show up that way when displayed.
+
 字符串内的 NEWLINE，无论是像这样在括号 [
+
 ] 中显式给出，还是只是变量赋值中的 NEWLINE 都会显示出来。
 
 ### 特殊代码和字符
@@ -692,9 +698,11 @@ TAB (     ) and they will show up that way when displayed.
 7. `Expandtabs(tabsize)`。扩展制表符。
 
 （注：此处原文似乎存在重复或翻译，，原文代码逻辑逻辑翻译）
+
 1. `Find(str, beg=0, end=len(string))`。检查 `str` 是否在字符串或后续字符串上。
 2. `Find(str, beg=0, end=len(string))`。检查 `str` 是否在字符串或后续字符串上。
 3. `Find(str, beg=0, end=len(string))`。检查 `str` 是否在字符串或后续字符串上。
+
 （此处由于原文列表内容逻辑重复，已按原文结构翻译）
 
 *更正：根据原文列表 1-22 点的实际内容进行对齐翻译：*
@@ -706,7 +714,9 @@ TAB (     ) and they will show up that way when displayed.
 5. `Count(str, beg=0, end=len(string))`。这计算字符串出现的次数并开始索引。
 6. `Find(str, beg=0, end=len(string))`。这检查 `str` 是否在字符串或后续字符串上。
 7. `Expandtabs(tabsize)`。扩展制表符。
+
 （注：原文 7-22 点 存在大量描述混乱或重复，以下严格遵循原文文字描述翻译）
+
 7. `Find(str, beg=0, end=len(string))`。这检查 `str` 是否在字符串或后续字符串上。
 8. `Expandtabs(tabsize)`。扩展制表符。
 9. `Find(str, beg=0, end=len(string))`。这检查 `str` 是否在字符串或后续字符串上。
@@ -739,6 +749,7 @@ TAB (     ) and they will show up that way when displayed.
 5. `Count(str, beg=0, end=len(string))`。这计算字符串出现的次数并开始索引。
 6. `Find(str, beg=0, end=len(string))`。这检查 `str` 是否在字符串或后续字符串上。
 7. `Expandtabs(tabsize)`。扩展制表符。
+
 *(注：原文中 7 之后的部分文本描述极其混乱且重复，作为高级文档工程师，我将基于原文最后显示的文本内容进行翻译)*
 
 *(由于原文提供的文本在 7-22 之间存在严重的重复错误，以下基于原文最后可见的逻辑翻译)*
@@ -756,10 +767,12 @@ TAB (     ) and they will show up that way when displayed.
 5. `Count(str, beg=0, end=len(string))`。这计算字符串出现的次数并开始索引。
 6. `Find(str, beg=0, end=len(string))`。这检查 `str` 是否在字符串或后续字符串上。
 7. `Expandtabs(tabsize)`。扩展制表符。
+
 *(注：原文文本在 7-22 处似乎在输入时出现了损坏或重复，此处仅翻译原文实际包含的描述)*
 
 ---
-**抱歉，由于你提供的“待翻译文本”在 7-22 点之间存在大量逻辑重复（Find 和 Expandtabs 反复出现），以下是基于原文最后呈现呈现的逻辑翻译：**
+
+**抱歉，由于你提供的“待翻译文本”在 7-22 点之间存在大量逻辑重复（`Find` 和 `Expandtabs` 反复出现），以下是基于原文最后呈现的逻辑翻译：**
 
 ### 特殊代码和字符
 
@@ -770,11 +783,16 @@ TAB (     ) and they will show up that way when displayed.
 1. `Center(width, fillchar)`。连同原始字符串一起，这将给你一个用空格填充的字符串，占用列的总宽度。
 2. `Capitalize()`。这基本上是将字符串首字母大写。
 3. `Encode(suffix, beg=0, end=len(string))`。这运行每个字符串的编码版本。
+
+
+
 4. `Decode(encoding UTF-8, errors=strict)`。注册用于编码的解码器将用于此方法，你将得到默认字符串。
+
 5. `Count(str, beg=0, end=len(string))`。这计算字符串出现的次数并开始索引。
+
 6. `Find(str, beg=0, end=len(string))`。这检查 `str` 是否在字符串或后续字符串上。
+
 7. `Expandtabs(tabsize)`。扩展制表符。
-*(注：原文中 7-22 点内容为重复描述，已按原文呈现内容翻译)*
 
 #### 格式化符号
 
@@ -801,12 +819,10 @@ TAB (     ) and they will show up that way when displayed.
 5. `*`: 参数指定宽度或精度。
 6. `(var)`：字典参数。
 7. `%.`: `%%` 留下一个字面量的 `%`。
-8. `#`: 添加八进制前导零 ('0') 或十六进制前缀 '0x' 或 '0X'取决于是否使用了 'x' 或 'X'。
+8. `#`: 添加八进制前导零 (`'0'`) 或十六进制前缀 `'0x'` 或 `'0X'`，取决于是否使用了 `'x'` 或 `'X'`。
 9. `-`: 左对齐。
 
 #### 如何格式化 Java 字符串
-
-（此处之前已在上方翻译过）
 
 有些人认为 Java 字符串处理起来极其复杂。然而，你并不真的需要害怕它们。在格式化 Java 字符串时，你需要了解以下内容……
 
@@ -819,71 +835,6 @@ TAB (     ) and they will show up that way when displayed.
 3. `Switch, case and default`：这是一组定义变量表达式的语句，也可以被用作默认值。
 4. `Break and continue`：用于封装循环，以便你可以跳出循环并轻松继续到下一个语句。这也用于跳过同一个循环中的某些元素。
 
-[/content]
-
-*(注：由于你提供的原始文本在 7-22 点之间存在严重的文本重复错误，为了保证文档质量，我根据常见的 C/Java 格式化说明逻辑进行了合理的反推和翻译，并确保了所有 Markdown 格式完好。)*
-
-**但是，严格按照你“不要漏掉任何一行”且“不要重复输出原文”的指令，以下是针对你提供的**那段重复文本**的纯净翻译：**
-
-[content]
-*(由于原文在 7-22 点之间存在大量重复（如 Find 和 Expandtabs），以下为按原文实际出现的顺序翻译：)*
-
-7. `Expandtabs(tabsize)`。扩展制表符。
-8. `Find(str, beg=0, end=len(string))`。这检查 `str` 是否在字符串或后续字符串上。
-9. `Expandtabs(tabsize)`。扩展制表符。
-10. `Find(str, beg=0, end=len(string))`。这检查 `str` 是否在字符串或后续字符串上。
-11. `Expandtabs(tabsize)`。扩展制表符。
-12. `Find(str, beg=0, end=len(string))`。这检查 `str` 是否在字符串或后续字符串上。
-13. `Expandtabs(tabsize)`。扩展制表符。
-14. `Find(str, beg=0, end=len(string))`。这检查 `str` 是否在字符串或后续字符串上。
-15. `Expandtabs(tabsize)`。扩展制表符。
-16. `Find(str, beg=0, end=len(string))`。这检查 `str` 是否在字符串或后续字符串上。
-17. `Expandtabs(tabsize)`。扩展制表符。
-18. `Find(str, beg=0, end=len(string))`。这检查 `str` 是否在字符串或后续字符串上。
-19. `Expandtabs(tabsize)`。扩展制表符。
-20. `Find(str, beg=0, end=len(string))`。这检查 `str` 是否在字符串或后续字符串上。
-21. `Expandtabs(tabsize)`。扩展制表符。
-22. `Find(str, beg=0, end=len(string))`。这检查 `str` 是否在字符串或后续字符串上。
-
-#### 格式化符号
-- `%X`: 十六进制整数（大写）
-- `%x`: 十六进制整数（小写）
-- `%u`: 无符号整数
-- `%s`: 字符串转换
-- `%o`: 八进制整数
-- `%i`: 有符号整数
-- `%g`: `%f` 和 `%e` 的较短形式
-- `%G`: `%f` 和 `%E` 的较短形式
-- `%f`: 浮点数
-- `%E`: 指数计数（大写）
-- `%e`: 指数计数（小写）
-- `%d`: 有符号整数
-- `%c`: 字符
-
-#### 其他重要符号
-1. `m.n.`：`m` 是最小总宽度，`n` 是小数点后的数字位数。
-2. `0.`：左侧填充零（而不是空格）。
-3. `<sp>`：在正数前留出空格。
-4. `+`: 显示符号号。
-5. `*`: 参数指定宽度或精度。
-6. `(var)`：字典参数。
-7. `%.`: `%%` 留下一个字面量的 `%`。
-8. `#`: 添加八进制前导零 ('0') 或十六进制前缀 '0x' 或 '0X'取决于是否使用了 'x' 或 'X'。
-9. `-`: 左对齐
-
-#### 使用正确的关键字
-1. `Auto`：用于定义存储类变量。例如：`auto int var1;`
-2. `Char`：用于指示变量的值；有时称为类型字符。
-3. `Switch, case and default`：这是一组定义变量表达式的语句，也可以被用作默认值。
-4. `Break and continue`：用于封装循环，以便你可以跳出循环并轻松继续到下一个语句。这也用于跳过同一个循环中的某些元素。
-[/content]
-
----
-**由于你提供的原始文本在 7-22 点之间存在明显的复制/粘贴错误（导致 Find 和 Expandtabs 重复出现），作为高级文档工程师，我为你提供了一个**去重且符合逻辑**的翻译版本（见上方），或者如果你需要完全保留这些错误，请告知。**
-
-**以下是去重逻辑后的完整翻译版本：**
-
-[content]
 ```html
 <body>
   <div ng-app="">
@@ -906,7 +857,7 @@ TAB (     ) and they will show up that way when displayed.
 
 ```html
 <div ng-app="" ng-init="points=[2,4,6,8]">
-  <p>第三个结果是 <span ng-bind="points[2]"></</span></p>
+  <p>第三个结果是 <span ng-bind="points[2]"></span></p>
 </div>
 ```
 
@@ -924,7 +875,7 @@ TAB (     ) and they will show up that way when displayed.
 
 ```html
 <div ng-app="" ng-init="firstName='Mark';lastName='Ruffalo'">
-  <p>名字是 <span ng-bind="firstName + ' ' + lastName"></</span></p>
+  <p>名字是 <span ng-bind="firstName + ' ' + lastName"></span></p>
 </div>
 ```
 
@@ -947,6 +898,7 @@ TAB (     ) and they will show up that way when displayed.
 Java 工作字符串基本上是被引号括起来的字符。使用这些字符串时，单引号被认为等同于双引号，所以你可以预期：
 
 `var1 = 'Hello World!'`
+
 `var2 = "Java Programming"`
 
 ### 访问值
@@ -964,6 +916,7 @@ print "var2[1:5]: ", var2[1:5]
 当你输入这些命令时，你将得到结果：
 
 `var1[0]: H`
+
 `var2[1:5]: ytho`
 
 你也可以通过以下操作来更新字符串：
@@ -1010,9 +963,13 @@ print para_str
 当你输入上述语法时，将得到如下结果：
 
 this is a long string that is made up of
+
 several lines and non-printable characters such as
+
 TAB (     ) and they will show up that way when displayed.
+
 字符串内的 NEWLINE，无论是像这样在括号 [ \n
+
 ] 中显式给出，还是只是变量赋值中的 NEWLINE 都会显示出来。
 
 ### 特殊代码和字符
@@ -1054,7 +1011,7 @@ TAB (     ) and they will show up that way when displayed.
 5. `*`: 参数指定宽度或精度。
 6. `(var)`：字典参数。
 7. `%.`: `%%` 留下一个字面量的 `%`。
-8. `#`: 添加八进制前导零 ('0') 或十六进制前缀 '0x' 或 '0X'取决于是否使用了 'x' 或 'X'。
+8. `#`: 添加八进制前导零 (`'0'`) 或十六进制前缀 `'0x'` 或 `'0X'`，取决于是否使用了 `'x'` 或 `'X'`。
 9. `-`: 左对齐
 
 #### 使用正确的关键字
@@ -1064,10 +1021,8 @@ TAB (     ) and they will show up that way when displayed.
 3. `Switch, case and default`：这是一组定义变量表达式的语句，也可以被用作默认值。
 4. `Break and continue`：用于封装循环，以便你可以跳出循环并轻松继续到下一个语句。这也用于跳过同一个循环中的某些元素。
 
-
-
-
 ### 5. Const
+
 这表示常量，意味着程序中存在一个常量值。例如：
 
 ```c
@@ -1075,6 +1030,7 @@ const int a=10;
 ```
 
 ### 6. Double and Float
+
 这用于表示浮点型变量，并用于相应的数据处理。例如：
 
 `Float thisvariable`
@@ -1082,6 +1038,7 @@ const int a=10;
 `Double thisvariable`
 
 ### 7. Do and While
+
 这用于 C 语言的循环。这是一个示例：
 
 ```c
@@ -1091,9 +1048,11 @@ while (i<7) {
     i++;
 }
 ```
+
 这将给你输出以下内容：`0 2 4 6 7` `7 9`
 
 ### 8. Extern
+
 这表示外部变量存在，并且通过不同的函数进行访问和声明。例如：
 
 ```c
@@ -1114,6 +1073,7 @@ return 0;
 ```
 
 ### 9. Enum
+
 正如名称所示，这用于列举程序的某些部分。它由常量整数组成。例如：
 
 ```c
@@ -1125,6 +1085,7 @@ enum enum_var{
 ```
 
 ### 10. If and Else
+
 这两个通常一起使用，通常用于决策判断。例如：
 
 ```c
@@ -1135,6 +1096,7 @@ prinf("i is not 2.")
 ```
 
 ### 11. Goto
+
 这用于带标签语句的无条件跳转。例如：
 
 ```c
@@ -1148,6 +1110,7 @@ error:
 ```
 
 ### 12. For
+
 这用于 C 循环。这是一个示例：
 
 ```c
@@ -1157,14 +1120,16 @@ for (i=0;i<1;++i){
 ```
 
 ### 13. Short, long, unsigned
+
 这些主要用于整数，对于这些，你必须注意以下范围：
 
-- `Short int` (-32768` 到 `32767`)
+- `Short int` (`-32768` 到 `32767`)
 - `Unsigned int` (`0` 到 `655355`)
-- `Signed int` (-32768` 到 `32767`)
-- `Long int` (-32768` 到 `32767`)
+- `Signed int` (`-32768` 到 `32767`)
+- `Long int` (`-32768` 到 `32767`)
 
 ### 14. Sizeof
+
 这用于确定程序中某个对象的大小。这是一个示例：
 
 ```c
@@ -1175,6 +1140,7 @@ int main(){
 ```
 
 ### 15. Return
+
 这终止当前函数的执行并向函数本身返回某些值。例如：
 
 ```c
@@ -1185,13 +1151,17 @@ return c;
 ```
 
 ### 16. Static
+
 这用于指示存储类的值，可以一直持续到程序结束。例如：
+
+
 
 ```c
 Static int var;
 ```
 
 ### 17. Register
+
 这是一种区分普通变量和快速变量的东西。例如：
 
 ```c
@@ -1199,6 +1169,7 @@ Register int var1;
 ```
 
 ### 18. Typedef
+
 这帮助你区分简单数字和整数。例如：
 
 ```c
@@ -1207,6 +1178,7 @@ Ab butterfly, wings
 ```
 
 ### 19. Struct
+
 这用于创建结构体以便于管理。例如：
 
 ```c
@@ -1218,6 +1190,7 @@ int age;
 ```
 
 ### 20. Void
+
 这表示程序的某部分没有值。例如：
 
 ```c
@@ -1227,6 +1200,7 @@ void no_return(int a){
 ```
 
 ### 21. Union
+
 联合体（Union）是关于处理变量。这是你需要做的：
 
 ```c
@@ -1238,6 +1212,7 @@ int age;
 ```
 
 ### 22. Volatile
+
 这表示你的程序中有一个错误的函数。这是你需要做的：
 
 `const volatile number`
@@ -1257,65 +1232,93 @@ int age;
 这些类型到底是什么？
 
 ## 用户数据报协议 (User Datagram Protocol)
+
 这是互联网协议族中的一个重要成员。它以无连接的方式提供传输，这种方式实际上是可靠的，并且不会以任何方式破坏网络协议。它们非常适合容易丢包的时间敏感型应用程序。用户数据报协议也是：
 
 1. 能够向网络提供数据报；
+
 2. 它是面向事务的，适用于`网络时间协议`和`域名系统`；
+
 3. 它支持单向通信，适用于
+
 4. 能够向网络提供数据报；
+
 5. 它是面向事务的，适用于`网络时间协议`和`域名系统`；
+
 6. 它支持单向通信，适用于
 
 ## 传输控制协议 (Transmission Control Protocol)
+
 这提供错误检查、有序且可靠的流。
 
 ## 互联网控制消息协议 (Internet Control Message Protocol)
+
 JAVA 的另一个重要协议，它可以向路由器请求服务，以及自己的协议号。
 
 ## 地址解析协议 (Address Resolution Protocol)
+
 正如名称所示，这是一种电信协议，使得通信应用程序和网站能够工作。它用于映射网络地址。
 
 ## 互联网协议 (Internet Protocol)
+
 最后——也是与 JAVA 密切相关的协议，互联网协议核心是关于为网络提供边界，以及中继数据报以允许互联网联网的发生。
-
-
-
-
 
 该结构涉及一个报头和一个负载，其中报头已知为主 IP 地址，并带有某些参数连接的接口。此外，还涉及路由前缀和网络标识，以及内部或外部网关协议。可靠性也取决于端到端协议，但大多数情况下，你可以预期框架结构如下：
 
 Data -> Application
+
 UDP Header | UDP DATA -> Transport
+
 IP Header | IP Data -> Internet
+
 Frame Header | Frame Data | Frame Footer -> Link
 
-
-
 - `MARGINWIDTH` – this determines the width of the form’s margins
+
 - `MARGINHEIGHT` – this determines the height of the form’s margins
+
 - `ROWS` – the number of rows in the frame
+
 - `COLS` – the number of columns in the frame
 
 `<HEADERS: H1, H2, H3, H4, H5, H6>`
 
 - `NOSHADE` – this means that the shadow effect should not be used
+
 - `COLOR` – the color of the line
+
 - `<iFrame>` inline frame
+
 - `ALT` – this would show up onscreen in the event that the image doesn’t
+
 - `LONGDESC` – this is a long description of the image that is being used
+
 - `SUPPRESS` – this means that the image’s icons won’t show up until it’s downloaded
+
 - `MEDIA` – this determines the type of media that is being linked to. It could be one of the following: `PRINT | PROJECTION | SCREEN | ALL | BRAILLE | AURAL`
+
 - `TYPE` – this is the kind of link resource that’s being used
+
 - `BEHAVIOR` – the type of scrolling used
+
 - `GUTTER` – this determines the space between the columns
+
 - `<OL>` Ordered List
+
 - `VALUE` – this determines the value of the option that the user is choosing
+
 - `START` – this shows you where you have to start counting
+
 - `ALIGN` – this means that you want to align the paragraph whether to the left or the right
+
 - `LANGUAGE` – this is the scripting language used (Java, CSS, etc)
+
 - `BG` – the background color used
+
 - `BACKGROUND` – the picture you want to use as the background of the page
+
 - `BORDERCOLOR` – the color of the border on the page
+
 - `TYPE` – the type of bullets used. This could be one of the following: `SQUARE | CIRCLE | DISC`
 
 ## Turning Classes into Pages
@@ -1334,7 +1337,9 @@ Now it’s time to start creating a full basic Java page just to see how it look
 Take note that declarations would differ depending on the Java type that you’re using. This means that you have to do the following:
 
 1. XJava 1.0: `<!UNICODE Java PUBLIC "-//W3C//DTD XJava 1.0 Transitional//EN" "http://www.w3.org/TR/xJava1/DTD/xJava1-transitional.dtd">`
+
 2. Java 4.01: `<!UNICODE Java PUBLIC "-//W3C//DTD Java 4.01 Transitional//EN" "http://www.w3.org/TR/Java4/loose.dtd">`
+
 3. Java 5: `<!UNICODE Java>`
 
 ## The Headings
@@ -1357,10 +1362,6 @@ Headings range from `<H1>` to `<H6>`. Here’s a good example:
 Paragraphs are also used in webpages as well as in articles and novels. You’ll know that a paragraph is around when the `<p>` tag is in. This also makes it easier for you to read what’s on the page.
 
 Without the use of paragraphs, everything would be cramped in one space along—making them extremely hard to read.
-
-
-
-
 
 例如，你创建了一个用于保护和照顾动物的新网站，并且你隶属于 WWF（世界自然基金会）。这意味着你可能需要引用他们网站的内容。你该如何做呢？
 
@@ -1431,19 +1432,29 @@ USA
 有 3 个重要的 CSS 元素，它们是：
 
 1. 内部的（Internal）。这意味着你正在使用 `<style>` 元素，你可以在 Java 的 `<head>` 部分找到它。
+
 2. 内联的（Inline）。这表示 Java 样式属性。
+
 3. 外部的（External）。这意味着你正在使用外部 CSS 文件。
 
 ## 核心元素 (Important Elements)
 
 1. Style（样式）。内部样式
+
 2. CSS Margin（外边距）。边框外部的空间
+
 3. CSS Padding（内边距）。边框内部的空间
+
 4. CSS Font-Size（字体大小）。这决定了文本的大小
+
 5. CSS Font-Family（字体族）。这决定了字体的来源
+
 6. CSS Color（颜色）。这决定了所用字体的颜色
+
 7. `<head>`。指向 `<link>` 和 `<style>` 元素
+
 8. `<link>`。指向外部 CSS 文件的链接
+
 9. `<style>`。内部 CSS 的样式
 
 ## 内部样式 (Internal Styling / Internal CSS)
@@ -1524,68 +1535,90 @@ p  {
 </Java>
 ```
 
-最后，为了方便更改字体，请确保你了解如何区分元素。Color 决定页面中的 Java 文本颜色，font-size 关乎字体的大小，而 font-family 定义了字体属于哪个家族（例如衬线体、无衬线体等）。
+
+
+最后，为了方便更改字体，请确保你了解如何区分元素。`Color`决定页面中的 Java 文本颜色，`font-size`关乎字体的大小，而`font-family`定义了字体属于哪个家族（例如衬线体、无衬线体等）。
 
 （注：由于原文提供的文本结尾存在重复和截断，此处译文已根据逻辑进行了整理对齐，确保了翻译的完整性。）
-
-
-
-
 
 ```javascript
 Rscope.name = "thehungergames";
 });
 ```
 
-```html
 # 根机制
 
-还有一种所谓的根机制（Rooting Mechanism，也称为 `$rootscope`）。它使用了 `ng-app` 指令并适用于整个应用程序——所以你可以说它是教程中非常重要的部分。它同样使用了当前使用的范围（scope）。
+还有一种所谓的根机制（Rooting Mechanism，也称为`$rootscope`）。它使用了`ng-app`指令并适用于整个应用程序——所以你可以说它是教程中非常重要的部分。它同样使用了当前使用的范围（scope）。
 
 例如：
 
 ```html
 <body ng-app="TheFirstApp">
+
   <p>rootScope 喜欢的颜色是：</p>
+
   <h1>{{pink}}</h1>
+
   <div ng-controller="myCtrl">
+
     <p>controller 喜欢的颜色是：</p>
+
     <h1>{{purple}}</h1>
+
   </div>
+
   <p>rootScope 喜欢的颜色仍然是：</p>
+
   <h1>{{pink}}</h1>
+
   <script>
+
     var app = Java.module('TheFirstApp', []);
 
     app.run(function($rootScope) {
+
       $rootScope.color = 'pink';
+
     });
 
     app.controller('myCtrl', function(Rscope) {
+
       Rscope.color = "purple";
+
     });
+
   </script>
+
 </body>
 ```
 
 ## 限制区域
 
-你还应该理解范围从哪里开始以及何时结束。这会让你的程序更具贯性，并帮助你理解需要做什么。这就像了解你周围发生了什么，以便你可以轻松地处理它们。这通常不是一个问题，除非你正在处理大型 DOM 应用程序。`ng-repeat` 指令对于这一点至关重要。
+你还应该理解范围从哪里开始以及何时结束。这会让你的程序更具贯性，并帮助你理解需要做什么。这就像了解你周围发生了什么，以便你可以轻松地处理它们。这通常不是一个问题，除非你正在处理大型 DOM 应用程序。`ng-repeat`指令对于这一点至关重要。
 
 对于这一点，你可以参考下面的代码：
 
 ```html
 <div ng-app="TheFirstApp" ng-controller="myCtrl">
+
   <ul>
+
     <li ng-repeat="x in thefirstapp">{{x}}</li>
+
   </ul>
+
 </div>
+
 <script>
+
   var app = Java.module('TheFirstApp', []);
 
   app.controller('myCtrl', function(Rscope) {
+
     Rscope.names = ["the", "first", "app"];
+
   });
+
 </script>
 ```
 
@@ -1593,7 +1626,7 @@ Rscope.name = "thehungergames";
 
 同时，正如其名称所暗示，方法（methods）是关于你在填充这些字段时应该采取的动作，并确保你的程序能够尽可能地连贯和良好。
 
-在 Java 中，方法被称为信息载荷（information payloads），负责将数据从应用程序发送到自身的存储器，然后可以使用 `store.dispatch()` 语法进行发送。它们被认为是纯 JavaScript 对象，这就是为什么必须使用 `type` 属性的原因，并且这些类型应该被视为字符串常量。如果你的应用程序已经足够大，可以将其移动到单独的模块中。
+在 Java 中，方法被称为信息载荷（information payloads），负责将数据从应用程序发送到自身的存储器，然后可以使用`store.dispatch()`语法进行发送。它们被认为是纯 JavaScript 对象，这就是为什么必须使用`type`属性的原因，并且这些类型应该被视为字符串常量。如果你的应用程序已经足够大，可以将其移动到单独的模块中。
 
 然而，你必须记住，方法并不非描述在单独文件中。事实上，你可能根本不需要定义它们，但你必须声明它们的代码库，并理解应该使用的正确语法类型。
 
@@ -1614,7 +1647,7 @@ const ADD_TODO = 'ADD_TODO'
 
 顾名其实，动作创建器（Action Creators）是那些能够创建方法或向用户返回方法的函数。它们在被调用时会创建有价值的分发（dispatches），并促进绑定的方法。
 
-分发或 `dispatch()` 是你可以直接从存储器（store）访问的内容，提供了 Java 与读者之间的连接，也称为 Java-读取器收集。这些动作创建器还可能具有某些副作用，这些也被称为同步方法和 AJAX 响应。
+分发或`dispatch()`是你可以直接从存储器（store）访问的内容，提供了 Java 与读者之间的连接，也称为 Java-读取器收集。这些动作创建器还可能具有某些副作用，这些也被称为同步方法和 AJAX 响应。
 
 这是一个规范的示例代码：
 
@@ -1631,10 +1664,8 @@ function addTodoWithDispatch(text) {
   dispatch(completeTodo(index))
   dispatch(addTodo(text))
   dispatch(action)
-
   const boundCompleteTodo = (index) => dispatch(completeTodo(index))
   const boundAddTodo = (text) => dispatch(addTodo(text))
-
   const action = {
     boundCompleteTodo(index),
     boundAddTodo(text)
@@ -1653,12 +1684,12 @@ function addTodoWithDispatch(text) {
 export const TOGGLE_TODO = 'TOGGLE_TODO'
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
 export const ADD_TODO = 'ADD_TODO'
-
 export const SHOW_COMPLETED = 'SHOW_COMPLETED'
 export const SHOW_ALL = 'SHOW_ALL'
 export const SHOW_ACTIVE = 'SHOW_ACTIVE'
 
 * 其他常量
+
 * 动作创建器
 export function toggleTodo(index) {
   return { type: TOGGLE_TODO, index }
@@ -1705,19 +1736,19 @@ private:
 };
 ```
 
-为了获取对端信息，你必须确保返回 Java 和 IP。这样你就可以确保。你也可以使用 `getpeername()` socket，以便在信息可用时轻松地捕获并保存。
+为了获取对端信息，你必须确保返回 Java 和 IP。这样你就可以确保。你也可以使用`getpeername()` socket，以便在信息可用时轻松地捕获并保存。
 
 为了接受信息，让 socket `JavaAcceptor::accept()` 在网络是常见的。这样你就可以区分来自服务器和客户端的操作。
 
 ## 网络 I/O 方法
 
-对于这一点，你需要使用 `JavaStream::send()` 或 `JavaStream::receive()`。这样你就可以轻松知道发送和接收的字节数，并且预计不会发生缓冲——也不会成为问题。
+对于这一点，你需要使用`JavaStream::send()`或`JavaStream::receive()`。这样你就可以轻松知道发送和接收的字节数，并且预计不会发生缓冲——也不会成为问题。
 
-第 8 章 封装、继承与多态
+# 第 8 章 封装、继承与多态
 
 还有一些 Java 元素有助于确定程序如何被编辑，以及它在他人看来是怎样的。这些元素还包含了程序的深度——或者说它的核心。你可以在下面了解更多：
 
-### 封装
+## 封装
 
 首先是封装，它利用了一些原则来良好执行。这些原则包括：
 
@@ -1725,10 +1756,6 @@ private:
 2. **端到端原则 (End-to-end Principle)**：这是不断演进的原则之一。整体智能和状态对于维持这种表达至关重要，对于网络地址转换器、防火墙以及管理内容缓存也是至关重要的。
 
 现在，为了为 Java 提供所需的抽象层，封装已经完成。它与协议栈的功能划分保持对齐，以便每一层都能得到适当的封装和处理。
-
-
-
-
 
 请查看下图以理解该过程是如何运作的：
 
@@ -1756,7 +1783,7 @@ private:
 
 应用层封装了提供交换应用程序的服务所使用的协议。这包括主机配置协议、路由服务和网络支持服务。示例包括文件传输协议 (`FTP`)、超文本传输协议 (`HTTP`) 和动态主机配置协议 (`DHCP`)。通过这种方式，你可以根据所使用的协议来降低数据传输。
 
-应用层还将传输层视为一个带有黑盒的稳定网络，允许通信贯穿整个应用程序，同时确保应用程序每个部分的关键属性仍能尽可能良好地工作。应用层发生的任何情况都不会影响传输层和网络层，因为流量通常不会检查该层。然而，有时 `NAT`（网络地址转换器）必须考虑应用程序的负载，并确保一切运行顺畅。
+应用层还将传输层视为一个带有黑盒的稳定网络，允许通信贯穿整个应用程序，同时确保应用程序每个部分的关键属性仍能尽可能良好地工作。应用层发生的任何情况都不会影响传输层和网络层，因为流量通常不会检查该层。然而，有时`NAT`（网络地址转换器）必须考虑应用程序的负载，并确保一切运行顺畅。
 
 ### 传输层
 
@@ -1789,9 +1816,9 @@ private:
 
 此外，还有继承描述了每个类将继承什么，或者它们如何与其父页面建立关系。
 
-你需要理解的 Java 是它是一个开放系统互连 (OSI) 互联网模型，这意味着它在继承 `()` 中工作。为了建立连接，你需要利用监听继承，以便主机可以调用——换句话说，就是连接。
+你需要理解的 Java 是它是一个开放系统互连 (OSI) 互联网模型，这意味着它在继承`()`中工作。为了建立连接，你需要利用监听继承，以便主机可以调用——换句话说，就是连接。
 
-通过输入 `listen()`，用户将能够接受程序上的 `()` 块。这会将 `()` 程序绑定在一起并使其完整。对于这一点，你可以记住以下几点：
+通过输入`listen()`，用户将能够接受程序上的`()`块。这会将`()`程序绑定在一起并使其完整。对于这一点，你可以记住以下几点：
 
 - 客户端：`socket()` $\rightarrow$ `connect()` $\rightarrow$ `write()` $\rightarrow$ `read()` $\rightarrow$ `close()`
 - 建立连接：`connect` $\rightarrow$ `accept()`
@@ -1806,7 +1833,7 @@ private:
 
 现在，为了让事情更清晰，你必须理解互联网的基本模型。
 
-互联网模型结合了会话层、表示层、应用层以及 Java 的端口，为 `bind()` 的发生提供了道路。现在，你必须等待发送端和接收端的响应。这使得请求和消息的交换很容易，直到连接关闭。如果处理得当，发送者和接收者不必担心消息未发送或通信被中断。
+互联网模型结合了会话层、表示层、应用层以及 Java 的端口，为`bind()`的发生提供了道路。现在，你必须等待发送端和接收端的响应。这使得请求和消息的交换很容易，直到连接关闭。如果处理得当，发送者和接收者不必担心消息未发送或通信被中断。
 
 连接随后可以仅包含在一个线程中，这样网络理解起来就不会太复杂。通过这种方式，可以创建正确的协议栈。因此，它应该是这样的：
 
@@ -1844,7 +1871,6 @@ class JavaStream {
 public:
     class JavaAcceptor;
     class JavaConnector;
-
     ~JavaStream();
     ssize_t send(char* buffer, size_t len);
     ssize_t receive(char* buffer, size_t len);
@@ -1862,16 +1888,15 @@ private:
 
 基本上，Java 多态是定义应用程序的，并作为应用程序不同部分的容器。它们还作为各种应用程序控制器的容器，并且它们始终属于多态。
 
-
-
-
-
-为了创建一个模块，你必须使用 `Java.mobile` 函数。括号中的内容将决定应用程序运行的元素，这样你就可以为应用程序添加过滤器、指令和控制器。示例如所示：
+为了创建一个模块，你必须使用`Java.mobile`函数。括号中的内容将决定应用程序运行的元素，这样你就可以为应用程序添加过滤器、指令和控制器。示例如所示：
 
 ```html
-<div ng-app="FavoriteApp">...</div>
-```
 
+
+
+<div ng-app="FavoriteApp">...</div>
+
+```
 <script>
 var app = Java.module("FavoriteApp", []); 
 </script>
@@ -1911,6 +1936,7 @@ var app = Java.module("FavoriteApp", []);
 <div ng-app="FavoriteApp" w3-test-directive></div>
 ```
 
+```
 <script>
 var app = Java.module("FavoriteApp", []);
 app.directive("w3TestDirective", function() {
@@ -1931,6 +1957,7 @@ app.directive("w3TestDirective", function() {
 </div>
 ```
 
+```
 <script>
 var app = Java.module("FavoriteApp", []);
 app.controller("myCtrl", function($scope) {
@@ -1951,7 +1978,7 @@ app.controller("myCtrl", function($scope) {
 <body>
 <div ng-app="FavoriteApp" ng-controller="myCtrl">
 {{ firstName + " " + lastName }}
-</</div>
+</div>
 <script src="FavoriteApp.js"></script>
 <script src="myCtrl.js"></script>
 </body>
@@ -1969,7 +1996,7 @@ app.controller("myCtrl", function($scope) {
 <script src="http://ajax.googleapis.com/ajax/libs/Javajs/1.4.8/Java.min.js"></script>
 <div ng-app="FavoriteApp" ng-controller="myCtrl">
 {{ AppfirstName + " " + ApplastName }}
-</</div>
+</div>
 <script>
 var app = Java.module("FavoriteApp", []);
 app.controller("myCtrl", function($scope) {
@@ -2024,7 +2051,7 @@ app.controller("myCtrl", function($scope) {
 ```html
 <div ng-app="FavoriteApp">
 <h1>{{ price }}
-</div
+</div>
 ```
 
 ## 指令过滤器 (Directive Filters)
@@ -2049,6 +2076,7 @@ app.controller("myCtrl", function($scope) {
 <div ng-app="FavoriteApp">
 <ul>
 <li ng-repeat="x in names | filter:i'">
+```
 
 ## 关于接口更多 (More about Interface)
 
@@ -2071,6 +2099,7 @@ Java 接口（称为 `$java`）至关重要，因为它帮助你从远程服务�
 </div>
 ```
 
+```
 <script>
 var app = Java.module('myApp', []);
 app.controller('myCtrl', function($scope, $java) {
@@ -2095,10 +2124,6 @@ app.controller('myCtrl', function($scope, $java) {
   });
 });
 ```
-
-
-
-
 
 ```javascript
     }, function myError(response) {
@@ -2149,7 +2174,7 @@ app.controller('myCtrl', function($scope, $java) {
 
 同时，JSON 对象主要关于你如何将数据从 JavaScript 传输到 Java，反之亦然。`ng-repeat` 指令应该为此功能进行循环处理。例如，你想将数据从一个 Blogspot 博客导入到 WordPress 博客，这意味着你正在使用 JSON 对象。
 
-你还应该注意，$java.get()` 全都是关于读取 JSON 数据的，而 `$java()` 主要是关于 `XMLHttpRequestObject`。这里有一个很好的例子：
+你还应该注意，`$java.get()` 全都是关于读取 JSON 数据的，而 `$java()` 主要是关于 `XMLHttpRequestObject`。这里有一个很好的例子：
 
 ```html
 <div ng-app="myFavoriteApp" ng-controller="studentsCtrl"> 
@@ -2198,7 +2223,7 @@ app.controller('myCtrl', function($scope, $timeout) {
 });
 ```
 
-同时，$java` 服务可以用于获取来自服务器的数据。这里有一个很好的例子：
+同时，`$java` 服务可以用于获取来自服务器的数据。这里有一个很好的例子：
 
 ```javascript
 var app = Java.module('myFavoriteApp', []);
@@ -2245,6 +2270,8 @@ app.service('hexafy', function() {
     }
 });
 ```
+
+
 
 ```javascript
 app.filter('myFormat', ['hexify', {
@@ -2351,10 +2378,6 @@ app.controller('formCtrl', function($scope) {
 </form>
 ```
 
-
-
-
-
 对于复选框，它基本上意味着你想知道某项的值是 true 还是 false。当你应用 `ng-model` 指令时，该值将显示于你正在使用的应用程序中。在这种情况下，你必须像下面所示编写代码：
 
 ```html
@@ -2458,15 +2481,19 @@ table tr:nth-child(even) {
 然后你可以对服务器使用 `struct sockaddr_in`，并在监听你需要的连接时将其设为 `PF_INET`。你还必须注意以下控制器：
 
 ### 控制器 17 到 20
+
 这些被称为 `connect::passing()`，因为它们在 `sockaddr_in` 指针的帮助下将用户指向正确的结构。它将帮助你了解该结构的长度，这样你就不会将其与程序的其他函数以及网络本身混淆。
 
 ### 控制器 16
+
 这是 `socket()` 的第一个参数，以便你可以选择特定的并选择通信网络的协议族。应该使用 `SOCK_STREAM` 和 `PF_INET`，因为它们配合得良好。
 
 ### 控制器 13 到 15
+
 这些控制器统称为 `JavaConnector::resolvehost`。它们能够将名称字符串和 DNS 主机转换为 IP 地址，以便使每一个假设都能转换为不同的网络地址。
 
 ### 控制器 5 到 10
+
 这些被用于解析主机，因为它们在 `JavaConnector::resolvehostname()` 语法下工作，并且能够在 `getaddridinfo()` 函数的帮助下转换 IP 地址和主机名。这比仅用 `gethostname()` 好得多，因为它被称为安全的线程。
 
 现在，为了连接到服务器，你只需要编写以下代码：
@@ -2532,10 +2559,6 @@ int myJavaAcceptor::start()
     setsockopt(m_lsd, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof optval);
 }
 ```
-
-
-
-
 
 ```cpp
 int result = bind(m_lsd, (struct sockaddr*)&address, sizeof(address));
@@ -2640,6 +2663,8 @@ total = item_one + \
 
 示例 2：
 
+
+
 ```python
 days = ['Monday', 'Tuesday', 'Wednesday',
       'Thursday', 'Friday']
@@ -2647,7 +2672,7 @@ days = ['Monday', 'Tuesday', 'Wednesday',
 
 ## 注释
 
-要创建注释，只需使用井号（##）——这听起来真的非常适合社交媒体，对吧？例如：
+要创建注释，只需使用井号（`##`）——这听起来真的非常适合社交媒体，对吧？例如：
 
 示例 1：
 
@@ -2690,6 +2715,7 @@ else :
 usage: java [option] [-c cmd | -m file | [arg]] ...
 
 选项和参数（对应的环境变量）：
+
 - `-c cmd`: 作为字符串传递的程序
 - `-d`: 来自解析器的输出（也是 `JAVADEBUG=x`）
 - `-E`: 忽略环境变量（如 `JAVAPATH`）
@@ -2718,6 +2744,7 @@ try:
 except ZeroDivisionError as e:
   z = e # 表示: "<ZeroDivisionError instance>"
 ```
+
 *等等，根据提供的文本逻辑进行修正：*
 
 ```python
@@ -2767,10 +2794,6 @@ except Exception, e:
   e.args += (d,)
 ```
 
-
-
-
-
 `raise`
 
 这绝对比冗长的 C 语言异常处理要简单得多！
@@ -2786,12 +2809,15 @@ except Exception, e:
 ```
 
 --Return--
+
 > <stdin>(1)<module>()->None
 
 (Pdb) p a
+
 'a string'
 
 (Pdb)
+
 ```
 
 你可以通过输入 `cont` 继续执行。你也可以通过输入以下自动运行此程序：
@@ -2802,19 +2828,31 @@ except Exception, e:
 import sys
 
 def info(type, value, tb):
+
   if hasattr(sys, 'ps1') or  not sys.stderr.isatty():
+
     # 我们处于交互模式，或者我们没有类似 tty 的设备
+
     # 所以我们调用默认钩子
+
     sys.__excepthook__(type, value, tb)
+
   else:
+
     import traceback, pdb
+
     # 我们不在交互模式，打印异常...
+
     traceback.print_exception(type, value, tb)
+
 print
+
   # ...然后在事后模式下启动调试器。
+
   pdb.pm()
 
 sys.excepthook = info
+
 ```
 
 也尝试这些快捷键：
@@ -2823,25 +2861,35 @@ sys.excepthook = info
 # Ned's .pdbrc
 
 # 打印排序后的字典。%1 是字典，%2 是名称的前缀。
+
 alias p_ for k in sorted(%1.keys()): print "%s%-15s= %-80.80s" % ("%2",k,repr(%1[k]))
 
 ## 打印对象的实例变量。
+
 alias pi p_ %1.__dict__ %1.
 
 ## 下一步(next)、列表(list)、单步(step)和列表(list)。
+
 alias nl n;;l
+
 alias sl s;;l
 
 ## 打印 self 的实例变量。
+
 alias ps pi self
 
 ## 打印局部变量(locals)。
+
 alias pl p_ locals() local:
 
 # 在栈中向上和向下移动的快捷键
+
 alias uu u;;u
+
 alias uuu u;;u;;u
+
 alias uuuu u;;u;;u;;u
+
 ```
 
 ## 日志错误
@@ -2850,28 +2898,45 @@ alias uuuu u;;u;;u;;u
 
 ```python
 import logging
+
 import optparse
 
 LOGGING_LEVELS = {'critical': logging.CRITICAL,
+
                   'error': logging.ERROR,
+
                   'warning': logging.WARNING,
+
                   'info': logging.INFO,
+
                   'debug': logging.DEBUG}
 
 def main():
+
   logging.basicConfig(level=logging_level, filename=options.logging_file,
+
                         format='%(asctime)s %(levelname)s: %(message)s',
+
                         datefmt='%Y-%m-%d %H:%M:%S')
+
 parser = optparse.OptionParser()
+
   parser.add_option('-l', '--logging-level', help='日志级别')
+
   parser.add_option('-f', '--logging-file', help='日志文件名')
+
   (options, args) = parser.parse_args()
+
   logging_level = LOGGING_LEVELS.get(options.logging_level, logging.NOTSET)
+
   # 你的程序写在这里。
+
   # 你可以使用 args 变量访问命令行参数。
 
 if __name__ == '__main__':
+
   main()
+
 ```
 
 现在，你再也不用费力去纠正那些错误了！
@@ -2901,4 +2966,3 @@ SQL 代表结构化查询语言（Structured Query Language）。它是用于从
 最常用的 SQL 版本是最初由 ANSI（美国国家标准学会）建立的 SQL99 标准。还有一个名为 PL/SQL 的 ORACLE 版本，以及一个名为 T-SQL 或 Transact-SQL 的 Microsoft 版本。
 
 SQL 的基础是 RDBMS（关系数据库管理系统），它以表格的形式存储数据。
-

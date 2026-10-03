@@ -1,3 +1,4 @@
+
 # Spring Boot 测试–如何禁用调试和信息日志
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-boot-test-how-to-stop-debug-logs/>
@@ -9,7 +10,7 @@
 Console
 
 ```java
- 2019-03-04 13:15:25.151  INFO   --- [           main] .b.t.c.SpringBootTestContextBootstrapper : 
+2019-03-04 13:15:25.151  INFO   --- [           main] .b.t.c.SpringBootTestContextBootstrapper : 
 2019-03-04 13:15:25.157  INFO   --- [           main] o.s.t.c.support.AbstractContextLoader    : 
 2019-03-04 13:15:25.158  INFO   --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : 
 2019-03-04 13:15:25.298  INFO   --- [           main] .b.t.c.SpringBootTestContextBootstrapper : 
@@ -40,10 +41,10 @@ Console
 
 1.1 在`application.properties`中关闭记录
 
-application.properties
+`application.properties`
 
 ```java
- logging.level.org.springframework=OFF
+logging.level.org.springframework=OFF
 logging.level.root=OFF 
 ```
 
@@ -52,7 +53,7 @@ Spring 横幅下面的调试或信息日志现在关闭了。
 Console
 
 ```java
- 2019-03-04 13:15:25.151  INFO   --- [           main] .b.t.c.SpringBootTestContextBootstrapper : 
+2019-03-04 13:15:25.151  INFO   --- [           main] .b.t.c.SpringBootTestContextBootstrapper : 
 2019-03-04 13:15:25.157  INFO   --- [           main] o.s.t.c.support.AbstractContextLoader    : 
 2019-03-04 13:15:25.158  INFO   --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : 
 2019-03-04 13:15:25.298  INFO   --- [           main] .b.t.c.SpringBootTestContextBootstrapper : 
@@ -70,10 +71,10 @@ Console
 
 1.2 在`src/test/resources`中创建一个`logback-test.xml`。同样，在这里关闭日志记录。
 
-![logback-test.xml](img/c73bd4049933e107e9b76c3dd6067cac.png)logback-test.xml
+![logback-test.xml](img/c73bd4049933e107e9b76c3dd6067cac.png)`logback-test.xml`
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <include resource="org/springframework/boot/logging/logback/base.xml" />
     <logger name="org.springframework" level="OFF"/>
@@ -85,7 +86,7 @@ Console
 Console
 
 ```java
- .   ____          _            __ _ _
+.   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
@@ -96,10 +97,10 @@ Console
 
 1.3 关闭弹簧横幅。
 
-application.properties
+`application.properties`
 
 ```java
- logging.level.org.springframework=OFF
+logging.level.org.springframework=OFF
 logging.level.root=OFF
 spring.main.banner-mode=off 
 ```
@@ -108,9 +109,9 @@ spring.main.banner-mode=off
 
 ## 参考
 
-*   [Spring Boot——伐木](http://web.archive.org/web/20221004081031/https://docs.spring.io/spring-boot/docs/current/reference/html/howto-logging.html)
-*   [测试 Spring Boot 应用](http://web.archive.org/web/20221004081031/https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-testing.html#boot-features-testing-spring-boot-applications)
-*   [logback.xml 示例](/web/20221004081031/https://mkyong.com/logging/logback-xml-example/)
-*   [log back–在单元测试中禁用日志记录](/web/20221004081031/https://mkyong.com/logging/logback-disable-logging-in-unit-test/)
+* [Spring Boot——伐木](http://web.archive.org/web/20221004081031/https://docs.spring.io/spring-boot/docs/current/reference/html/howto-logging.html)
+* [测试 Spring Boot 应用](http://web.archive.org/web/20221004081031/https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-testing.html#boot-features-testing-spring-boot-applications)
+* [logback.xml 示例](/web/20221004081031/https://mkyong.com/logging/logback-xml-example/)
+* [log back–在单元测试中禁用日志记录](/web/20221004081031/https://mkyong.com/logging/logback-disable-logging-in-unit-test/)
 
 <input type="hidden" id="mkyong-current-postId" value="14477">

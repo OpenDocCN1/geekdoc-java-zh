@@ -1,3 +1,4 @@
+
 # 将所有内容整合在一起
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/exceptions/putItTogether.html`](https://docs.oracle.com/javase/tutorial/essential/exceptions/putItTogether.html)
@@ -34,14 +35,12 @@ public void writeList() {
         }
     }
 }
-
 ```
 
 如前所述，此方法的`try`块有三种不同的退出可能性；以下是其中两种。
 
-1.  `try`语句中的代码失败并抛出异常。这可能是由`new FileWriter`语句引起的`IOException`，也可能是由`for`循环中错误的索引值引起的`IndexOutOfBoundsException`。
-
-1.  一切顺利，`try`语句正常退出。
+1. `try`语句中的代码失败并抛出异常。这可能是由`new FileWriter`语句引起的`IOException`，也可能是由`for`循环中错误的索引值引起的`IndexOutOfBoundsException`。
+2. 一切顺利，`try`语句正常退出。
 
 让我们看看在这两种退出可能性中`writeList`方法中会发生什么。
 
@@ -60,8 +59,7 @@ public void writeList() {
 ```java
 Entering try statement
 Caught IOException: OutFile.txt
-PrintWriter not open 
-
+PrintWriter not open
 ```
 
 以下清单中的粗体代码显示了在这种情况下执行的语句：
@@ -92,7 +90,6 @@ public void writeList() {
         }
     }
 }
-
 ```
 
 ## 情景 2：try 块正常退出
@@ -104,7 +101,6 @@ public void writeList() {
 ```java
 Entering try statement
 Closing PrintWriter
-
 ```
 
 以下示例中的粗体代码显示了在这种情况下执行的语句。
@@ -135,5 +131,4 @@ public void writeList() {
         }
     }
 }
-
 ```

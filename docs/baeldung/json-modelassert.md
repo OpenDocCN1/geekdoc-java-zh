@@ -1,8 +1,9 @@
+
 # JSON 的 ModelAssert 库指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/json-modelassert>
 
-## 1.概观
+## 1. 概观
 
 在为使用 JSON 的软件编写自动化测试时，我们经常需要将 JSON 数据与一些期望值进行比较。
 
@@ -10,7 +11,7 @@
 
 在本教程中，我们将看看如何使用 [ModelAssert](https://web.archive.org/web/20220824101529/https://github.com/webcompere/model-assert) 编写 JSON 值之间的断言和比较。我们将看到如何在 JSON 文档中构造单个值的断言，以及如何比较文档。我们还将讨论如何处理无法预测其确切值的字段，比如日期或 GUIDs。
 
-## 2.入门指南
+## 2. 入门指南
 
 ModelAssert 是一个数据断言库，语法类似于 [AssertJ](/web/20220824101529/https://www.baeldung.com/introduction-to-assertj) ，功能堪比 [JSONAssert](/web/20220824101529/https://www.baeldung.com/jsonassert) 。它基于 [Jackson](/web/20220824101529/https://www.baeldung.com/jackson) 进行 JSON 解析，并使用 [JSON 指针](/web/20220824101529/https://www.baeldung.com/json-pointer)表达式来描述文档中字段的路径。
 
@@ -24,7 +25,7 @@ ModelAssert 是一个数据断言库，语法类似于 [AssertJ](/web/2022082410
 }
 ```
 
-### 2.1.属国
+### 2.1. 属国
 
 首先，让我们将[模型断言](https://web.archive.org/web/20220824101529/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22uk.org.webcompere%22%20AND%20a%3A%22model-assert%22)添加到我们的`pom.xml`中:
 
@@ -37,7 +38,7 @@ ModelAssert 是一个数据断言库，语法类似于 [AssertJ](/web/2022082410
 </dependency>
 ```
 
-### 2.2.断言 JSON 对象中的字段
+### 2.2. 断言 JSON 对象中的字段
 
 让我们假设 JSON 作为一个`String,`返回给我们，我们想检查一下`name`字段是否等于`Baeldung`:
 
@@ -65,9 +66,9 @@ assertJson(jsonString)
   .at("/topics/1").isText("Spring");
 ```
 
-### 2.3.为什么字符串比较不起作用
+### 2.3. 为什么字符串比较不起作用
 
-我们经常想要将整个 JSON 文档与另一个文档进行比较。字符串比较虽然在某些情况下是可能的，但通常会被不相关的 JSON 格式问题抓住**:**
+我们经常想要将整个 JSON 文档与另一个文档进行比较。字符串比较虽然在某些情况下是可能的，但通常会被不相关的 JSON 格式问题抓住**:
 
 ```java
 String expected = loadFile(EXPECTED_JSON_PATH);
@@ -87,9 +88,9 @@ expected: "{
 but was : "{"name": "Baeldung","isOnline": true,"topics": [ "Java", "Spring", "Kotlin", "Scala", "Linux" ]}"
 ```
 
-### 2.4.语义比较树
+### 2.4. 语义比较树
 
-**要做一个整篇文档的对比，我们可以用`isEqualTo`** :
+**要做一个整篇文档的对比，我们可以用`isEqualTo`**:
 
 ```java
 assertJson(jsonString)
@@ -98,7 +99,7 @@ assertJson(jsonString)
 
 在这个实例中，实际的 JSON 的字符串由`assertJson`加载，预期的 JSON 文档——由`Path`描述的文件——被加载到`isEqualTo`中。该比较是基于数据进行的。
 
-### 2.5.不同格式
+### 2.5. 不同格式
 
 ModelAssert 还支持可以被 Jackson 转换成`JsonNode`的 Java 对象，以及`yaml`格式。
 
@@ -117,11 +118,11 @@ assertYaml("name: baeldung")
   .isEqualTo(map);
 ```
 
-## 3.字段断言
+## 3. 字段断言
 
 到目前为止，我们已经看到了一些基本的断言。让我们看看 DSL 的更多内容。
 
-### 3.1.在任何节点断言
+### 3.1. 在任何节点断言
 
 ModelAssert 的 DSL 允许针对树中的任何节点添加几乎所有可能的条件。这是因为 JSON 树可能在任何级别包含任何类型的节点。
 
@@ -157,7 +158,7 @@ assertJson(jsonString)
 
 当我们在`booleanNode`之后按下 IDE 中的`“.”`键时，我们只能看到布尔节点的自动完成选项。
 
-### 3.2.文本节点
+### 3.2. 文本节点
 
 当我们断言文本节点时，我们可以使用`isText`来用一个精确的值进行比较。或者，我们可以使用`textContains`断言一个子串:
 
@@ -175,7 +176,7 @@ assertJson(jsonString)
 
 这个例子断言`name`以一个大写字母开始。
 
-### 3.3.数字节点
+### 3.3. 数字节点
 
 对于数字节点，DSL 提供了一些有用的数字比较:
 
@@ -198,7 +199,7 @@ assertJson("{height: 6.3}")
   .at("/height").isNumberEqualTo(6.3);
 ```
 
-### 3.4.数组节点
+### 3.4. 数组节点
 
 我们可以用`isArrayContaining`测试数组的内容:
 
@@ -223,9 +224,9 @@ assertJson(ACTUAL_JSON)
   .isArrayContainingExactly("Java", "Spring", "Kotlin", "Scala", "Linux");
 ```
 
-这是断言包含原始值的数组内容的好方法。当数组包含对象时，我们可能希望使用`isEqualTo `来代替。
+这是断言包含原始值的数组内容的好方法。当数组包含对象时，我们可能希望使用`isEqualTo`来代替。
 
-## 4.整树匹配
+## 4. 整树匹配
 
 虽然我们可以用多个特定于字段的条件构造断言来检查 JSON 文档中的内容，但是我们经常需要将整个文档与另一个文档进行比较。
 
@@ -240,11 +241,12 @@ assertJson(jsonString)
 当 JSON 包含以下数据时，整树比较可能会遇到问题:
 
 *   相同，但顺序不同
+
 *   包括一些无法预测的值
 
-`where` a 方法用于定制下一个`isEqualTo`操作来绕过这些。
+`where`方法用于定制下一个`isEqualTo`操作来绕过这些。
 
-### 4.1.添加键顺序约束
+### 4.1. 添加键顺序约束
 
 让我们看两个看起来相同的 JSON 文档:
 
@@ -280,7 +282,7 @@ assertJson(actualJson)
 
 **定制比较规则的能力使我们能够处理许多无法完全控制或预测生成的确切文档的情况**。
 
-### 4.2.放松数组约束
+### 4.2. 放松数组约束
 
 如果我们的数组中值的顺序可以变化，那么我们可以放松整个比较的数组排序约束:
 
@@ -295,7 +297,7 @@ assertJson(actualJson)
 
 或者我们可以将约束限制在一条路径上，就像我们对`keysInAnyOrder`所做的那样。
 
-### 4.3.忽略路径
+### 4.3. 忽略路径
 
 也许我们的实际文档包含一些不感兴趣或不可预测的字段。我们可以添加一个规则来忽略该路径:
 
@@ -313,7 +315,7 @@ assertJson(actualJson)
 
 实际中的额外字段`“url”`现在被忽略。
 
-### 4.4.忽略任何 GUID
+### 4.4. 忽略任何 GUID
 
 到目前为止，我们只添加了使用`at`的规则，以便在文档的特定位置定制比较。
 
@@ -339,7 +341,7 @@ assertJson(actualJson)
 
 这里，我们的期望值可以是字段`id`的任何值，因为我们忽略了 JSON 指针从`“/user/credentials”`开始，然后有一个节点(数组索引)并以`“/id”`结束的任何字段。
 
-### 4.5.匹配任何 GUID
+### 4.5. 匹配任何 GUID
 
 忽略我们无法预测的字段是一种选择。更好的方法是通过类型来匹配这些节点，也可以通过它们必须满足的其他条件来匹配。让我们切换到强制这些 GUID 匹配 GUID 的模式，并让`id`节点出现在树的任何叶节点:
 
@@ -352,11 +354,13 @@ assertJson(actualJson)
 
 `ANY_SUBTREE`通配符匹配路径表达式部分之间的任意数量的节点。`GUID_PATTERN`来自 ModelAssert `Patterns`类，它包含一些常见的正则表达式来匹配数字和日期戳之类的东西。
 
-### 4.6.定制`isEqualTo`
+### 4.6. 定制`isEqualTo`
+
+
 
 `where`与`path`或`at`表达式的组合允许我们覆盖树中任何地方的比较。我们或者为匹配的对象或数组添加内置规则，或者指定特定的替代断言，用于比较中的单个路径或路径类。
 
-如果我们有一个通用的配置，在各种比较中重用，我们可以将其提取到一个方法中:
+如果我们有一个通用的配置，在各种比较中重用，我们可以将其提取到一个方法中：
 
 ```java
 private static <T> WhereDsl<T> idsAreGuids(WhereDsl<T> where) {
@@ -364,7 +368,7 @@ private static <T> WhereDsl<T> idsAreGuids(WhereDsl<T> where) {
 }
 ```
 
-然后，我们可以使用`configuredBy`将该配置添加到特定的断言中:
+然后，我们可以使用`configuredBy`将该配置添加到特定的断言中：
 
 ```java
 assertJson(actualJson)
@@ -373,15 +377,15 @@ assertJson(actualJson)
   .isEqualTo(expectedJson);
 ```
 
-## 5.与其他库的兼容性
+## 5. 与其他库的兼容性
 
 ModelAssert 是为互操作性而构建的。到目前为止，我们已经看到了 AssertJ 风格的断言。这些可以有多个条件，当第一个条件不满足时，它们就会失败。
 
 然而，有时我们需要产生一个 matcher 对象用于其他类型的测试。
 
-### 5.1.汉堡匹配器
+### 5.1. 汉堡匹配器
 
-Hamcrest 是一个被许多工具支持的主要断言助手库。**我们可以使用 ModelAssert 的 DSL 来生成一个 Hamcrest 匹配器**:
+Hamcrest 是一个被许多工具支持的主要断言助手库。我们可以使用 ModelAssert 的 DSL 来生成一个 Hamcrest 匹配器：
 
 ```java
 Matcher<String> matcher = json()
@@ -392,7 +396,7 @@ Matcher<String> matcher = json()
 
 用于表达比较的 DSL 与`assertJson`相同，但是只有在使用匹配器时才会执行比较。
 
-因此，我们可以将 ModelAssert 与 Hamcrest 的`MatcherAssert`一起使用:
+因此，我们可以将 ModelAssert 与 Hamcrest 的`MatcherAssert`一起使用：
 
 ```java
 MatcherAssert.assertThat(jsonString, json()
@@ -400,13 +404,13 @@ MatcherAssert.assertThat(jsonString, json()
   .at("/topics/1").isText("Spring"));
 ```
 
-### 5.2.与 Spring Mock MVC 一起使用
+### 5.2. 与 Spring Mock MVC 一起使用
 
-在 Spring Mock MVC 中使用[响应体验证时，我们可以使用 Spring 内置的`jsonPath`断言。然而，Spring 也允许我们使用](/web/20220824101529/https://www.baeldung.com/integration-testing-in-spring#2-verify-response-body) [Hamcrest 匹配器来断言作为响应内容返回的字符串](https://web.archive.org/web/20220824101529/https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/result/ContentResultMatchers.html#string-org.hamcrest.Matcher-)。这意味着我们可以使用 ModelAssert 执行复杂的内容断言。
+在 Spring Mock MVC 中使用响应体验证时，我们可以使用 Spring 内置的`jsonPath`断言。然而，Spring 也允许我们使用 Hamcrest 匹配器来断言作为响应内容返回的字符串。这意味着我们可以使用 ModelAssert 执行复杂的内容断言。
 
-### 5.3.与 Mockito 一起使用
+### 5.3. 与 Mockito 一起使用
 
-Mockito 已经可以与 Hamcrest 互操作。不过，ModelAssert 也提供了一个原生的 [`ArgumentMatcher`](/web/20220824101529/https://www.baeldung.com/mockito-argument-matchers) 。这既可以用来设置存根的行为，也可以用来验证对它们的调用:
+Mockito 已经可以与 Hamcrest 互操作。不过，ModelAssert 也提供了一个原生的`ArgumentMatcher`。这既可以用来设置存根的行为，也可以用来验证对它们的调用：
 
 ```java
 public interface DataService {
@@ -433,9 +437,9 @@ void givenUserIsOnline_thenIsLoggedIn() {
 }
 ```
 
-在这个例子中，Mockito `argThat`被用于 mock 和`verify`的设置。在里面，我们为匹配器使用了 Hamcrest 风格的构建器—`json`。然后我们给它添加条件，转换成莫奇托的`ArgumentMatcher`，结尾是`toArgumentMatcher`。
+在这个例子中，Mockito 的`argThat`被用于 mock 和`verify`的设置。在里面，我们为匹配器使用了 Hamcrest 风格的构建器—`json`。然后我们给它添加条件，转换成 Mockito 的`ArgumentMatcher`，结尾是`toArgumentMatcher`。
 
-## 6.结论
+## 6. 结论
 
 在本文中，我们看到了在测试中对 JSON 进行语义比较的必要性。
 
@@ -443,4 +447,4 @@ void givenUserIsOnline_thenIsLoggedIn() {
 
 最后，我们看到了如何将 ModelAssert 与 Hamcrest 和其他库一起使用。
 
-和往常一样，本教程的示例代码可以在 GitHub 上的[处获得。](https://web.archive.org/web/20220824101529/https://github.com/eugenp/tutorials/tree/master/libraries-testing)
+和往常一样，本教程的示例代码可以在 GitHub 上的此处获得。

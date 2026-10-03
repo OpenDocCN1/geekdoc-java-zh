@@ -1,60 +1,61 @@
-# Struts 2 <password>密码示例</password>
+
+# Struts 2 `<password>`密码示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts2/struts-2-spassword-password-example/>
 
 Download It – [Struts2-Password-Example.zip](http://web.archive.org/web/20190304032242/http://www.mkyong.com/wp-content/uploads/2010/06/Struts2-Password-Example.zip)
 
-在 Struts 2 中，你可以使用 **< s:password >** 来创建一个 HTML 密码字段。例如，您可以用一个 key 属性或 label 和 name 属性声明“ **s:password** ”。
+在 Struts 2 中，你可以使用`<s:password>`来创建一个 HTML 密码字段。例如，您可以用一个`key`属性或`label`和`name`属性声明“`s:password`”。
 
 ```java
- <s:password key="password" />
+<s:password key="password" />
 //or
-<s:textfield label="Password" name="password" /> 
+<s:textfield label="Password" name="password" />
 ```
 
-两者都生成相同的 HTML 输出(默认的 xhtml 主题)。
+两者都生成相同的 HTML 输出（默认的 xhtml 主题）。
 
 ```java
- <td class="tdLabel">
+<td class="tdLabel">
   <label for="registerUser_password" class="label">Password:</label>
-</td> 
+</td>
 <td>
   <input type="password" name="password" id="registerUser_password"/>
-</td> 
+</td>
 ```
 
-## Struts 2 <password>示例</password>
+## Struts 2 `<password>`示例
 
 带有“密码”和“确认密码”字段的页面，并进行验证以确保“确认密码”与“密码”匹配。
 
- ## 1.属性文件
+### 1. 属性文件
 
 **global.properties**
 
 ```java
- #Global messages
+#Global messages
 username = Username
 password = Password
 confirmPassword = Confirm Password
-submit = Submit 
+submit = Submit
 ```
 
-**register action . properties**
+**register action.properties**
 
 ```java
- #error message
+#error message
 username.required = Username is required
 password.required = Password is required
 cpassword.required = Confirm password is required
-cpassword.notmatch = Confirm password is not match 
+cpassword.notmatch = Confirm password is not match
 ```
 
- ## 2.行动
+### 2. 行动
 
 **RegisterAction.java**
 
 ```java
- package com.mkyong.user.action;
+package com.mkyong.user.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -112,17 +113,17 @@ public class RegisterAction extends ActionSupport{
 		}
 	}
 
-} 
+}
 ```
 
-## 3.查看页面
+### 3. 查看页面
 
-使用 Struts 2 " **s:password** "标记创建 HTML 密码字段的结果页面。
+使用 Struts 2 "`s:password`"标记创建 HTML 密码字段的结果页面。
 
 **register.jsp**
 
 ```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
 </head>
@@ -141,13 +142,13 @@ public class RegisterAction extends ActionSupport{
 </s:form>
 
 </body>
-</html> 
+</html>
 ```
 
 **welcome.jsp**
 
 ```java
- <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 
@@ -155,18 +156,18 @@ public class RegisterAction extends ActionSupport{
 <h1>Struts 2 - password example</h1>
 
 <h2>Password : <s:property value="password"/></h2>
-<h2>Confirm Password : <s:property value="%{confirmPassword}"/></h2> 
+<h2>Confirm Password : <s:property value="%{confirmPassword}"/></h2>
 
 </body>
-</html> 
+</html>
 ```
 
-## 4.struts.xml
+### 4. struts.xml
 
 链接在一起~
 
 ```java
- <?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
@@ -180,31 +181,24 @@ public class RegisterAction extends ActionSupport{
 	<action name="register">
 		<result>pages/register.jsp</result>
 	</action>
-	<action name="registerUser" 
+	<action name="registerUser"
                 class="com.mkyong.user.action.RegisterAction">
 		<result name="SUCCESS">pages/welcome.jsp</result>
 		<result name="input">pages/register.jsp</result>
 	</action>
    </package>
 
-</struts> 
+</struts>
 ```
 
-## 5.演示
+### 5. 演示
 
-*http://localhost:8080/struts 2 example/user/register . action*
+*http://localhost:8080/struts2example/user/register.action*
 
 ![Struts 2 password example](img/675af2d56aaed72f5ce6a49d552812a9.png "struts2-password-example")
 
-## 参考
+### 参考
 
-1.  [Struts 2 密码文档](http://web.archive.org/web/20190304032242/http://struts.apache.org/2.x/docs/password.html)
+1. [Struts 2 密码文档](http://web.archive.org/web/20190304032242/http://struts.apache.org/2.x/docs/password.html)
 
 [password](http://web.archive.org/web/20190304032242/http://www.mkyong.com/tag/password/) [struts2](http://web.archive.org/web/20190304032242/http://www.mkyong.com/tag/struts2/)
-
-
-
-
-
-
-

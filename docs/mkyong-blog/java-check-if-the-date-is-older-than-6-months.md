@@ -1,25 +1,26 @@
+
 # Java–检查日期是否超过 30 天或 6 个月
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java8/java-check-if-the-date-is-older-than-6-months/>
 
 本文展示了 Java 8 和遗留日期时间 API 示例，以检查日期是否比当前日期早 30 天或 6 个月。
 
-*   [1。Java 8 isBefore()](#java-8-isbefore)
-*   [2。Java 8 计时单位。{UNIT}。()之间](#java-8-chronounitunitbetween)
-*   [3。Java 8 Period.between()](#java-8-periodbetween)
-*   [4。传统日历和日期](#legacy-calendar-and-date)
-*   [5。参考文献](#references)
+- [1. Java 8 `isBefore()`](#java-8-isbefore)
+- [2. Java 8 `ChronoUnit.{UNIT}.between()`](#java-8-chronounitunitbetween)
+- [3. Java 8 `Period.between()`](#java-8-periodbetween)
+- [4. 传统 `Calendar` 和 `Date`](#legacy-calendar-and-date)
+- [5. 参考文献](#references)
 
-## 1。Java 8 isBefore()
+## 1. Java 8 `isBefore()`
 
 首先减去当前日期，然后使用`isBefore()`检查某个日期是否比当前日期早一段时间。
 
 1.1 此示例检查一个日期是否比当前日期早 6 个月。
 
-JavaMinusMonth.java
+`JavaMinusMonth.java`
 
 ```java
- package com.mkyong.app;
+package com.mkyong.app;
 
 import java.time.LocalDate;
 
@@ -43,27 +44,27 @@ public class JavaMinusMonths {
       }
 
   }
-} 
+}
 ```
 
 输出
 
-Terminal
+`Terminal`
 
 ```java
- currentDate: 2021-03-26
+currentDate: 2021-03-26
 currentDateMinus6Months : 2020-09-26
 
 date1 : 2019-08-23
-6 months older than current date! 
+6 months older than current date!
 ```
 
 1.2 此示例检查一个日期是否比当前日期早 30 天。
 
-JavaMinusDays.java
+`JavaMinusDays.java`
 
 ```java
- package com.mkyong.app;
+package com.mkyong.app;
 
 import java.time.LocalDate;
 
@@ -87,17 +88,17 @@ public class JavaMinusDays {
       }
 
   }
-} 
+}
 ```
 
-## 2。Java 8 计时单位。{UNIT}。()之间
+## 2. Java 8 `ChronoUnit.{UNIT}.between()`
 
 大多数新的 Java 8 日期和时间 API 都是通过`Temporal`接口实现的，例如`LocalDate`、`LocalDateTime`、`ZonedDateTime`等。我们可以使用`ChronoUnit.{UNIT}.between`来检查两个日期或`Temporal`对象之间的差异。
 
-2.1 审查以下`ChronoUnit.{UNIT}.between`方法:
+2.1 审查以下`ChronoUnit.{UNIT}.between`方法：
 
 ```java
- ChronoUnit.NANOS.between(Temporal t1, Temporal t2)
+ChronoUnit.NANOS.between(Temporal t1, Temporal t2)
 ChronoUnit.MICROS.between(Temporal t1, Temporal t2)
 ChronoUnit.MILLIS.between(Temporal t1, Temporal t2)
 ChronoUnit.SECONDS.between(Temporal t1, Temporal t2)
@@ -111,15 +112,15 @@ ChronoUnit.YEARS.between(Temporal t1, Temporal t2)
 ChronoUnit.DECADES.between(Temporal t1, Temporal t2)
 ChronoUnit.CENTURIES.between(Temporal t1, Temporal t2)
 ChronoUnit.MILLENNIA.between(Temporal t1, Temporal t2)
-ChronoUnit.ERAS.between(Temporal t1, Temporal t2) 
+ChronoUnit.ERAS.between(Temporal t1, Temporal t2)
 ```
 
 2.2 这个例子使用`ChronoUnit.MONTHS.between`来检查一个日期是否比当前日期早 6 个月。
 
-JavaChronoUnit1.java
+`JavaChronoUnit1.java`
 
 ```java
- package com.mkyong.app;
+package com.mkyong.app;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -150,15 +151,15 @@ public class JavaChronoUnit1 {
       }
 
   }
-} 
+}
 ```
 
 输出
 
-Terminal
+`Terminal`
 
 ```java
- now: 2021-03-26
+now: 2021-03-26
 
 2019-09-25
 -18
@@ -166,15 +167,15 @@ Terminal
 
 2020-09-26
 -6
-6 months older than current date! 
+6 months older than current date!
 ```
 
 2.3 这个例子使用`ChronoUnit.DAYS.between`来检查一个日期是否比当前日期早 30 天。
 
-JavaChronoUnit2.java
+`JavaChronoUnit2.java`
 
 ```java
- package com.mkyong.app;
+package com.mkyong.app;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -205,32 +206,32 @@ public class JavaChronoUnit2 {
       }
 
   }
-} 
+}
 ```
 
 输出
 
-Terminal
+`Terminal`
 
 ```java
- now: 2021-03-26
+now: 2021-03-26
 
 2019-09-25
 -548
 30 days older than current date!
 
 2021-02-25
--29 
+-29
 ```
 
-## 3。Java 8 Period.between()
+## 3. Java 8 `Period.between()`
 
 3.1 阅读一个简单的`java.time.Period`例子，了解周期是如何工作的。
 
-JavaPeriodExample.java
+`JavaPeriodExample.java`
 
 ```java
- package com.mkyong.app;
+package com.mkyong.app;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -265,28 +266,49 @@ public class JavaPeriodExample {
 
   }
 
-} 
+}
 ```
 
 输出
 
-Terminal
+`Terminal`
 
 ```java
- 2020-02-24
+2020-02-24
 2019-08-23
 0 years, -6 months, -1 days
 2019-01-01
 2021-03-23
-2 years, 2 months, 22 days 
+2 years, 2 months, 22 days
 ```
 
 3.2 此示例使用`Period`来检查`LocalDate`是否比当前日期大 6 个月。
 
-JavaPeriodExample2.java
+`JavaPeriodExample2.java`
+
+
+
+## 1. 概述
+
+本文通过示例演示了如何在 Java 中检查一个日期是否比当前日期早 6 个月或 30 天。
+
+## 2. 技术栈
+
+本文使用的技术栈：
+
+- Java 8 或更高版本
+- `java.time` 或 `java.util` 日期时间 API
+
+## 3. 传统日历和日期
+
+### 3.1 使用 `java.time.Period` 检查日期是否早于 6 个月
+
+本例使用 `java.time.Period` 检查 `LocalDate` 是否比当前日期早 6 个月。
+
+`JavaPeriodExample2.java`
 
 ```java
- package com.mkyong.app;
+package com.mkyong.app;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -335,7 +357,7 @@ public class JavaPeriodExample2 {
 
   }
 
-} 
+}
 ```
 
 输出
@@ -343,7 +365,7 @@ public class JavaPeriodExample2 {
 Terminal
 
 ```java
- Now: 2021-03-26
+Now: 2021-03-26
 
 Date: 2020-09-25
 0 years, -6 months, -1 days
@@ -362,17 +384,19 @@ Is 6 months older? false
 Now: 2021-03-26
 Date: 2001-10-26
 -19 years, -5 months, 0 days
-Is 6 months older? true 
+Is 6 months older? true
 ```
 
-## 4。传统日历和日期
+## 4. 传统日历和日期
 
-4.1 本例检查`java.util.Calendar`是否比当前日期早 6 个月。
+### 4.1 使用 `java.util.Calendar` 检查日期是否早于 6 个月
 
-JavaCalendarExample.java
+本例检查 `java.util.Calendar` 是否比当前日期早 6 个月。
+
+`JavaCalendarExample.java`
 
 ```java
- package com.mkyong.app;
+package com.mkyong.app;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -404,7 +428,7 @@ public class JavaCalendarExample {
 
   }
 
-} 
+}
 ```
 
 输出
@@ -412,18 +436,20 @@ public class JavaCalendarExample {
 Terminal
 
 ```java
- now: 2021-03-26
+now: 2021-03-26
 sixMonthsAgo: 2020-09-26
 date1: 2020-08-10
-6 months older than current date! 
+6 months older than current date!
 ```
 
-4.2 本例检查`java.util.Date`是否比当前日期早 30 天。
+### 4.2 使用 `java.util.Date` 检查日期是否早于 30 天
 
-JavaDateExample.java
+本例检查 `java.util.Date` 是否比当前日期早 30 天。
+
+`JavaDateExample.java`
 
 ```java
- package com.mkyong.app;
+package com.mkyong.app;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -453,7 +479,7 @@ public class JavaDateExample {
 
     }
 
-} 
+}
 ```
 
 输出
@@ -461,21 +487,19 @@ public class JavaDateExample {
 Terminal
 
 ```java
- now : 2021-03-26
+now : 2021-03-26
 thirtyDaysAgo : 2021-02-24
-30 days older than current date! 
+30 days older than current date!
 ```
 
-## 5。参考文献
+## 5. 参考文献
 
-*   [Java 日期和日历示例](http://web.archive.org/web/20211207220350/https://mkyong.com/java/java-date-and-calendar-examples/)
-*   [如何在 Java 中比较日期](http://web.archive.org/web/20211207220350/https://mkyong.com/java/how-to-compare-dates-in-java/)
-*   [如何在 Java 中计算货币值](http://web.archive.org/web/20211207220350/https://mkyong.com/java/how-do-calculate-monetary-values-in-java-double-vs-bigdecimal/)
-*   [Java–如何获取当前日期时间](http://web.archive.org/web/20211207220350/https://mkyong.com/java/java-how-to-get-current-date-time-date-and-calender/)
-*   [局部日期](http://web.archive.org/web/20211207220350/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDate.html)
-*   [局部日期时间](http://web.archive.org/web/20211207220350/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html)
-*   [ZonedDateTime](http://web.archive.org/web/20211207220350/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html)
-*   [周期](http://web.archive.org/web/20211207220350/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/Period.html)
-*   [计时单位](http://web.archive.org/web/20211207220350/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/temporal/ChronoUnit.html)
-
-<input type="hidden" id="mkyong-current-postId" value="15483">
+- [Java 日期和日历示例](http://web.archive.org/web/20211207220350/https://mkyong.com/java/java-date-and-calendar-examples/)
+- [如何在 Java 中比较日期](http://web.archive.org/web/20211207220350/https://mkyong.com/java/how-to-compare-dates-in-java/)
+- [如何在 Java 中计算货币值](http://web.archive.org/web/20211207220350/https://mkyong.com/java/how-do-calculate-monetary-values-in-java-double-vs-bigdecimal/)
+- [Java–如何获取当前日期时间](http://web.archive.org/web/20211207220350/https://mkyong.com/java/java-how-to-get-current-date-time-date-and-calender/)
+- [局部日期](http://web.archive.org/web/20211207220350/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDate.html)
+- [局部日期时间](http://web.archive.org/web/20211207220350/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html)
+- [ZonedDateTime](http://web.archive.org/web/20211207220350/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html)
+- [周期](http://web.archive.org/web/20211207220350/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/Period.html)
+- [计时单位](http://web.archive.org/web/20211207220350/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/temporal/ChronoUnit.html)

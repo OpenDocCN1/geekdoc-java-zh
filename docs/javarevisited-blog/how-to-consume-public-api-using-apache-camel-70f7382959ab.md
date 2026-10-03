@@ -1,3 +1,4 @@
+
 # 如何使用 Apache Camel 消费公共 API？
 
 > 原文：<https://medium.com/javarevisited/how-to-consume-public-api-using-apache-camel-70f7382959ab?source=collection_archive---------0----------------------->
@@ -29,8 +30,11 @@ Apache Camel 支持 Bean 绑定以及与 CDI、 [Spring](https://camel.apache.or
 让我们试着列出 Apache Camel 的一些用例
 
 1.  为**企业集成模式(EIP)** 提供支持
+
 2.  Apache Camel 是独立的，可以作为库嵌入到 Spring Boot、Quarkus、应用服务器和云中。Camel 子项目致力于简化您的工作。
+
 3.  **挤满了组件**:挤满了数百个组件，用于访问数据库、消息队列、API 或天底下的任何东西。帮助你融入一切。
+
 4.  **支持超过 50 种数据格式** :- Camel 支持大约 50 种数据格式，允许翻译多种格式的消息，并支持金融、电信、医疗保健等行业标准格式。
 
 ## ⚡如何使用 Apache Camel 消费开放 Api？
@@ -57,8 +61,6 @@ Apache Camel 支持 Bean 绑定以及与 CDI、 [Spring](https://camel.apache.or
 
 为实现将使用数字 API 的结帐链接如下👇👇
 
-  
-
 **第 4 步→如何为 Open/public API 创建路由？**
 
 [![](img/bf4001219899582e653dfa8a4c7cdbfd.png)](https://javarevisited.blogspot.com/2018/02/top-5-spring-microservices-courses-with-spring-boot-and-spring-cloud.html)
@@ -74,8 +76,6 @@ Apache Camel 支持 Bean 绑定以及与 CDI、 [Spring](https://camel.apache.or
 洛汗·拉温德拉·卡达姆控制者
 
 **⚡What 是制片人模板？**
-
-  
 
 **⚡What 是骆驼语境？**
 

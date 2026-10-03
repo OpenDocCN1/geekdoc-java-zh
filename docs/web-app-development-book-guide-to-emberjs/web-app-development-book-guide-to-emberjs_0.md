@@ -1,20 +1,16 @@
+
 # Web 应用开发指南：Ember.js 指南
 
-
-
-![](img/00001.jpeg)
-
-
-
-
-
 ## 免责声明
+
 尽管已尽力核实书中提供的信息，但作者对书中包含的错误、遗漏或对主题内容的相反阐释不承担任何责任。书中提供的信息仅供教育和娱乐之用。读者对其自己的行为负责，作者对使用这些信息而导致的任何实际或感知的责任或损害不承担任何责任。书中使用的商标均未经任何许可，且该商标的发布未获得商标所有者的许可或支持。书中的所有商标和品牌仅用于说明目的，归其所有者所有，与本文档无关。
 
 ## 引言
-对 Web 应用的需求日益增长。Ember JS 是一种可以辅助开发此类应用的 JavaScript。该框架易于学习，特别是对于 JavaScript 专家而言。然而，即使你完全不熟悉 JavaScript，也不必担心，因为书中的解释对你来说非常容易理解。通过这种 JavaScript，你可以创建具有高度交互用户界面的 Web 应用，你的用户一定会喜欢你的应用。
+
+对 Web 应用的需求日益增长。`Ember JS` 是一种可以辅助开发此类应用的 JavaScript。该框架易于学习，特别是对于 JavaScript 专家而言。然而，即使你完全不熟悉 JavaScript，也不必担心，因为书中的解释对你来说非常容易理解。通过这种 JavaScript，你可以创建具有高度交互用户界面的 Web 应用，你的用户一定会喜欢你的应用。
 
 ## 第 1 章 控制器
+
 控制器（Controllers）非常类似于组件（components），人们认为未来它们将被组件取代。在大多数当前的应用中，控制器并不经常使用。当使用它们时，它们承担以下职责：
 
 1. 用于根据当前正在使用的路由维护状态。
@@ -34,7 +30,7 @@
 </div>
 ```
 
-如上例所示，我们没有特定的属性或需要显示的的操作（actions）。假设我们需要添加一个功能，允许用户在正文部分的显示之间进行切换。为了实现这一点，我们将代码修改为：
+如上例所示，我们没有特定的属性或需要显示的操作（actions）。假设我们需要添加一个功能，允许用户在正文部分的显示之间进行切换。为了实现这一点，我们将代码修改为：
 
 ```html
 <h1>{{model.title}}</h1>
@@ -66,6 +62,7 @@ export default Ember.Controller.extend({
 ```
 
 ### 控制器之间的依赖关系管理
+
 有时，当我们嵌套资源时，我们通常需要在两个控制器之间建立连接。考虑下面的路由：
 
 ```javascript
@@ -105,6 +102,7 @@ export default Ember.Controller.extend({
 ```
 
 ## 第 2 章 模型
+
 构建 Web 应用的方法之一是实现与数据获取高度耦合的用户界面组件。考虑一种你正在创建一个博客应用的情况。如果你正在创建应用的管理部分，你可能被迫赋予组件负责获取和存储数据的责任。考虑下面的代码：
 
 ```html
@@ -174,6 +172,7 @@ export default DS.Model.extend({
 你必须注意，模型本身没有数据，但它们用于定义属性、关系以及被称为 `records` 的特定实例的行为。
 
 ### 创建记录
+
 当你需要创建记录时，只需在 store 上调用 `createRecord()` 方法。考虑下面的代码：
 
 ```javascript
@@ -186,6 +185,7 @@ store.createRecord('post', {
 存储的对象将通过 `this.store` 使控制器和路由器可用。
 
 ### 更新记录
+
 你可以通过设置需要更改的属性来更改 Ember JS 数据记录。如下面所示：
 
 ```javascript
@@ -193,10 +193,6 @@ this.store.findRecord('human', 1).then(function(myfunction) {
   // ...一旦记录被加载
 });
 ```
-
-
-
-
 
 ```javascript
 myfunction.set('fName', "John");
@@ -335,7 +331,7 @@ export default DS.Model.extend({
 
 ### 一对多关系
 
-这种关系可以在两个模型之间如下如下声明：考虑以下文件 `myposts.js` 的代码：
+这种关系可以在两个模型之间如下声明：考虑以下文件 `myposts.js` 的代码：
 
 ```javascript
 export default DS.Model.extend({
@@ -420,9 +416,7 @@ p.save();
 
 
 
-
-
-要移除一个 "belongsTo" 关系，只需将其设置为 `null`。这将将其从 "hasMany" 关系的一侧移除。考虑下方的代码，它很好地演示了这一点：
+要移除一个 `belongsTo` 关系，只需将其设置为 `null`。这将将其从 `hasMany` 关系的一侧移除。考虑下方的代码，它很好地演示了这一点：
 
 ```javascript
 let comm = this.store.peekRecord('comment', 1);
@@ -430,7 +424,7 @@ comm.set('post', null);
 comm.save();
 ```
 
-记录也可以从 "hasMany" 关系中移除。考虑下面的代码，它很好地展示了如何实现：
+记录也可以从 `hasMany` 关系中移除。考虑下面的代码，它很好地展示了如何实现：
 
 ```javascript
 let p = this.store.peekRecord('post', 1);
@@ -450,7 +444,7 @@ p.get('comments').then((comments) => {
 });
 ```
 
-同样的规则也适用于 "hasMany" 关系，如下：
+同样的规则也适用于 `hasMany` 关系，如下：
 
 ```javascript
 let comm = this.store.peekRecord('comment', 1);
@@ -608,7 +602,7 @@ store.query('post').then((res) => {
 })
 ```
 
-如果我们有一个 belongsTo 关系，可以如下所示操作：
+如果我们有一个 `belongsTo` 关系，可以如下所示操作：
 
 ```javascript
 let p = this.store.peekRecord('post', 1);
@@ -617,7 +611,7 @@ p.get('author').then((author) => {
 });
 ```
 
-在 hasMany 关系上，可以如下所示操作：
+在 `hasMany` 关系上，可以如下所示操作：
 
 ```javascript
 let p = this.store.peekRecord('post', 1);
@@ -679,10 +673,6 @@ inflect.uncountable('advice');
 // 符合 Ember Inspector 对导出的预期
 export default {};
 ```
-
-
-
-
 
 ```javascript
 export default DS.JSONAPIAdapter.extend({
@@ -816,6 +806,8 @@ export default DS.JSONAPIAdapter.extend({
 
 这类数据不是主请求的一部分，但具有一些关联关系，这些关系应该添加到 `included` 键下的数组中。考虑下面的代码：
 
+
+
 ```json
 {
   "data": {
@@ -858,11 +850,11 @@ export default DS.JSONAPIAdapter.extend({
 }
 ```
 
-在上面的示例中，我们请求了 `/blogs/1`，服务器给了我们 `included` 数据。
+在上面的示例中，我们请求了`/blogs/1`，服务器给了我们`included`数据。
 
-#### 自定义序列化器 (Serializers)
+## 自定义序列化器 (Serializers)
 
-在 Ember data 中，默认使用 `JSONSerializer`，但可以使用自定义序列化器。自定义序列化器有两种定义方式。人们可以选择为整个应用程序定义序列化器，也可以为特定模型定义。
+在 Ember data 中，默认使用`JSONSerializer`，但可以使用自定义序列化器。自定义序列化器有两种定义方式。人们可以选择为整个应用程序定义序列化器，也可以为特定模型定义。
 
 数据可以如下更改：
 
@@ -883,7 +875,7 @@ export default DS.JSONSerializer.extend({
 });
 ```
 
-如果后端存储提供的是 JSON API 以外的格式，可以使用 `normalizeResponse()` 钩子。通过上面的示例，服务器向我们提供的数据如下：
+如果后端存储提供的是 JSON API 以外的格式，可以使用`normalizeResponse()`钩子。通过上面的示例，服务器向我们提供的数据如下：
 
 ```json
 {
@@ -932,11 +924,7 @@ export default DS.JSONSerializer.extend({
 });
 ```
 
-
-
-
-
-如果你需要跟踪存储（store）中包含唯一记录，Ember data 期望负载（payload）中的每个记录都应该有一个唯一的 `id` 属性。对于特定类型的每条记录，`id` 也应该是唯一的。如果后端使用的不是 `id` 而是其他键，可以使用序列化器（serializer）的主键属性，以便在数据的序列化和反序列化过程中正确地转换 `id`。下文代码所示：
+如果你需要跟踪存储（store）中包含唯一记录，Ember data 期望负载（payload）中的每个记录都应该有一个唯一的`id`属性。对于特定类型的每条记录，`id`也应该是唯一的。如果后端使用的不是`id`而是其他键，可以使用序列化器（serializer）的主键属性，以便在数据的序列化和反序列化过程中正确地转换`id`。下文代码所示：
 
 ```javascript
 export default DS.JSONSerializer.extend({
@@ -956,7 +944,7 @@ export default DS.Model.extend({
 });
 ```
 
-`JSONAPISerializer` 期望服务器返回的文档负载中的属性是短横线形式（dasherized）的。下文代码所示：
+`JSONAPISerializer`期望服务器返回的文档负载中的属性是短横线形式（dasherized）的。下文代码所示：
 
 ```json
 {
@@ -972,7 +960,7 @@ export default DS.Model.extend({
 }
 ```
 
-如果服务器返回的属性使用了非常不同的约定，可以使用序列化器的 `keyForAttribute()` 方法将模型中的属性名转换为 JSON 负载中的键。考虑下文代码：
+如果服务器返回的属性使用了非常不同的约定，可以使用序列化器的`keyForAttribute()`方法将模型中的属性名转换为 JSON 负载中的键。考虑下文代码：
 
 ```javascript
 export default DS.JSONAPISerializer.extend({
@@ -982,7 +970,7 @@ export default DS.JSONAPISerializer.extend({
 });
 ```
 
-可以使用自定义序列化器来映射不规则的键。`attrs` 对象可以用于在 `DS` 中不同属性名之间声明简单的映射。考虑下文示例代码：
+可以使用自定义序列化器来映射不规则的键。`attrs`对象可以用于在`DS`中不同属性名之间声明简单的映射。考虑下文示例代码：
 
 ```javascript
 export default DS.Model.extend({
@@ -990,7 +978,7 @@ export default DS.Model.extend({
 });
 ```
 
-我们所做的是为我们的模型创建了一个自定义序列化器，然后重写了 `attrs` 属性。接下来的代码如下：
+我们所做的是为我们的模型创建了一个自定义序列化器，然后重写了`attrs`属性。接下来的代码如下：
 
 ```javascript
 export default DS.JSONAPISerializer.extend({
@@ -1002,7 +990,7 @@ export default DS.JSONAPISerializer.extend({
 
 ### 关系
 
-`id` 属性应该用于引用其他记录。考虑你的模型具有如下所示的 `hasMany` 关系的情况：
+`id`属性应该用于引用其他记录。考虑你的模型具有如下所示的`hasMany`关系的情况：
 
 ```javascript
 export default DS.Model.extend({
@@ -1053,7 +1041,7 @@ export default DS.Model.extend({
 }
 ```
 
-如果需要这些命名约定，则可以通过 `keyForRelationship` 方法对其进行重写。下文代码最清楚地说明了这一点：
+如果需要这些命名约定，则可以通过`keyForRelationship`方法对其进行重写。下文代码最清楚地说明了这一点：
 
 ```javascript
 export default DS.JSONAPISerializer.extend({
@@ -1065,7 +1053,7 @@ export default DS.JSONAPISerializer.extend({
 
 ### 自定义转换的创建
 
-在某些情况下，内置类型（如 `string`、`Boolean` 等）可能不足以让我们实现所需的功能。一个很好的例子是特定服务器给您提供了非标准的日期格式。
+在某些情况下，内置类型（如`string`、`Boolean`等）可能不足以让我们实现所需的功能。一个很好的例子是特定服务器给您提供了非标准的日期格式。
 
 在 Ember data 中，我们可能注册新的 JSON 转换以作属性。下文代码最完整地描述了这一点：
 
@@ -1088,7 +1076,7 @@ export default DS.Model.extend({
 });
 ```
 
-在从 API 接收 `coordinatePoint` 后，预期它是一个如下所示的数组：
+在从 API 接收`coordinatePoint`后，预期它是一个如下所示的数组：
 
 ```json
 {
@@ -1106,7 +1094,7 @@ c.get('position.x'); // 5
 c.get('position.y'); // 9
 ```
 
-一旦位置被修改并保存，它将通过我们转换中的 `serialize` 函数，并以数组的形式呈现在 JSON 中。要在应用中使用 `JSONSerializer`，必须定义 `serializer`，它只是 `JSONSerializer` 的扩展。考虑下文代码，它展示了这种做法：
+一旦位置被修改并保存，它将通过我们转换中的`serialize`函数，并以数组的形式呈现在 JSON 中。要在应用中使用`JSONSerializer`，必须定义`serializer`，它只是`JSONSerializer`的扩展。考虑下文代码，它展示了这种做法：
 
 ```javascript
 export default DS.JSONSerializer.extend({
@@ -1146,9 +1134,9 @@ export default DS.JSONSerializer.extend({
 
 ### EmbeddedRecordMixin
 
-在 Ember data 中，我们鼓励对关系进行侧载（sideload），但有时在与旧留 API 工作时，你可能会发现需要处理包含嵌入在记录中的关系的 JSON。`EmbeddedRecordsMixin` 的创建就是为了解决这个问题。要设置嵌入记录，只需在扩展序列化器的过程中包含该 mixin，然后对嵌入关系进行配置。
+在 Ember data 中，我们鼓励对关系进行侧载（sideload），但有时在与旧留 API 工作时，你可能会发现需要处理包含嵌入在记录中的关系的 JSON。`EmbeddedRecordsMixin`的创建就是为了解决这个问题。要设置嵌入记录，只需在扩展序列化器的过程中包含该 mixin，然后对嵌入关系进行配置。
 
-考虑模型 `post` 具有如下 `author` 记录的情况：
+考虑模型`post`具有如下`author`记录的情况：
 
 ```json
 {
@@ -1177,7 +1165,7 @@ export default DS.JSONSerializer.extend(EmbeddedRecordsMixin, {
 });
 ```
 
-如果你自己定义并需要序列化和反序列化嵌入关系，可以使用快捷选项 `{ embedded: 'always' }`。考虑与下文类似的示例：
+如果你自己定义并需要序列化和反序列化嵌入关系，可以使用快捷选项`{ embedded: 'always' }`。考虑与下文类似的示例：
 
 ```javascript
 export default DS.JSONSerializer.extend(EmbeddedRecordsMixin, {
@@ -1187,7 +1175,7 @@ export default DS.JSONSerializer.extend(EmbeddedRecordsMixin, {
 });
 ```
 
-考虑你希望在提取 JSON 负载的过程中读取嵌入记录，但在序列化记录时仅包含关系的 ID。这可以通过使用 `serialize: 'ids'` 选项轻松实现。若要排除关系的序列化，可以使用 `serialize: false` 选项。下文代码演示了如何操作：
+考虑你希望在提取 JSON 负载的过程中读取嵌入记录，但在序列化记录时仅包含关系的 ID。这可以通过使用`serialize: 'ids'`选项轻松实现。若要排除关系的序列化，可以使用`serialize: false`选项。下文代码演示了如何操作：
 
 ```javascript
 export default DS.JSONSerializer.extend(EmbeddedRecordsMixin, {
@@ -1206,18 +1194,14 @@ export default DS.JSONSerializer.extend(EmbeddedRecordsMixin, {
 
 #### EmbeddedRecordsMixin 默认值
 
-如果你不需要为特定关系重写 `attrs` 属性，那么 `EmbeddedRecordsMixin` 的行为如下：
+如果你不需要为特定关系重写`attrs`属性，那么`EmbeddedRecordsMixin`的行为如下：
 
 - `BelongsTo: { serialize: 'id', deserialize: 'id' }`
 - `HasMany: { serialize: false, deserialize: 'ids' }`
 
 ### 编写序列化器
 
-
-
-
-
-对于需要创建自定义序列化器的那些，我们建议从 `JSONAPISerializer` 或 `JSONSerializer` 开始，然后扩展其中之一以匹配我们的需求。然而，如果负载（payload）与其中一个序列化器不同，请考虑你获得了下面的模型“posts”：
+对于需要创建自定义序列化器的那些，我们建议从`JSONAPISerializer`或`JSONSerializer`开始，然后扩展其中之一以匹配我们的需求。然而，如果负载（payload）与其中一个序列化器不同，请考虑你获得了下面的模型“posts”：
 
 ```javascript
 export default DS.Model.extend({
@@ -1228,7 +1212,7 @@ export default DS.Model.extend({
 });
 ```
 
-`store.push` 将将接受一个如下所示的对象：
+`store.push`将接受一个如下所示的对象：
 
 ```json
 {
@@ -1253,6 +1237,8 @@ export default DS.Model.extend({
 }
 ```
 
+
+
 为了让每个序列化的记录都能转换为 Ember data 记录，必须遵循上述格式。
 
 # 第 3 章 应用关注点
@@ -1263,11 +1249,11 @@ export default DS.Model.extend({
 
 ## 工厂注册
 
-工厂（Factory）可以用于表示应用的一部分，例如模板、路由或自定义类。这方面一个很好的例子是使用键“template:index”注册的索引模板。
+工厂（Factory）可以用于表示应用的一部分，例如模板、路由或自定义类。这方面一个很好的例子是使用键`template:index`注册的索引模板。
 
 请注意，工厂注册必须在应用程序内部或应用实例初始化器中完成，但前者更为常见。
 
-考虑下例示例，它展示了应用初始化如何使用键名“logger:main”注册一个“logger”工厂：
+考虑下例示例，它展示了应用初始化如何使用键名`logger:main`注册一个`logger`工厂：
 
 ```javascript
 export function initialize(app) {
@@ -1287,9 +1273,9 @@ export default {
 
 ### 注册已实例化的对象
 
-默认设置是 Ember 在查找后会尝试实例化已注册的工厂。在特定类的已实例化对象的注册过程中，你必须使用 `instantiate: false` 选项，以避免它在查找期间被重复实例化。
+默认设置是 Ember 在查找后会尝试实例化已注册的工厂。在特定类的已实例化对象的注册过程中，你必须使用`instantiate: false`选项，以避免它在查找期间被重复实例化。
 
-在下例示例中，logger 是 JavaScript 中的一个对象，它在查找时应该原样返回。以下是该示例的代码：
+在下例示例中，`logger`是 JavaScript 中的一个对象，它在查找时应该原样返回。以下是该示例的代码：
 
 ```javascript
 export function initialize(app) {
@@ -1311,7 +1297,7 @@ export default {
 
 在 Ember data 中，注册被视为单例。这意味着在查找后必须创建一个实例，并且相同的实例将将被缓存并在后续的查找中返回。
 
-在下例示例中，类“message”将被注册为非单例：
+在下例示例中，类`message`将被注册为非单例：
 
 ```javascript
 export function initialize(app) {
@@ -1348,9 +1334,9 @@ export default {
 };
 ```
 
-由于这种类型注入，类型为“route”的工厂将使用已注入的 logger 进行实例化。logger 的值将从名为“logger:main”的工厂获取。
+由于这种类型注入，类型为`route`的工厂将使用已注入的`logger`进行实例化。`logger`的值将从名为`logger:main`的工厂获取。
 
-考虑下例示例，它展示了如何通过注入的 logger 访问应用。以下是示例：
+考虑下例示例，它展示了如何通过注入的`logger`访问应用。以下是示例：
 
 ```javascript
 export default Ember.Route.extend({
@@ -1367,9 +1353,9 @@ export default Ember.Route.extend({
 
 ### 临时注入 (Ad Hoc)
 
-依赖注入通过使用 `Ember.inject` 直接在 Ember 类上声明。目前，该属性支持服务（services）和控制器（controllers）的注入。
+依赖注入通过使用`Ember.inject`直接在 Ember 类上声明。目前，该属性支持服务（services）和控制器（controllers）的注入。
 
-考虑下面的代码，它展示了如何将服务“shopping-cart”作为“cart”注入到组件“cart-contents”中。以下是代码：
+考虑下面的代码，它展示了如何将服务`shopping-cart`作为`cart`注入到组件`cart-contents`中。以下是代码：
 
 ```javascript
 export default Ember.Component.extend({
@@ -1399,7 +1385,7 @@ export default {
 };
 ```
 
-我们我们也可能从工厂集中获取应用实例。考虑下例示例，它根据歌曲的“audioType”播放具有不同服务的歌曲。以下是代码：
+我们我们也可能从工厂集中获取应用实例。考虑下例示例，它根据歌曲的`audioType`播放具有不同服务的歌曲。以下是代码：
 
 ```javascript
 import Ember from 'ember';
@@ -1441,7 +1427,7 @@ export default Component.extend({
 
 `ember generate initializer shopping-cart`
 
-然后我们可以自定义 `shopping-cart` 初始化器，将属性 `cart` 注入到应用中的所有路由中。下面的代码描述了这一点：
+然后我们可以自定义`shopping-cart`初始化器，将属性`cart`注入到应用中的所有路由中。下面的代码描述了这一点：
 
 ```javascript
 export function initialize(app) {
@@ -1456,7 +1442,7 @@ export default {
 
 ### 应用实例初始化器 (Application Instance Initializers)
 
-这些可以使用 Ember CLI 的 `instance-initializer` 生成器创建。如下所示：
+这些可以使用 Ember CLI 的`instance-initializer`生成器创建。如下所示：
 
 `ember generate instance-initializer logger`
 
@@ -1467,10 +1453,6 @@ export function initialize(appInstance) {
   var logger = appInstance.lookup('logger:main');
 }
 ```
-
-
-
-
 
 ```javascript
 logger.log('Hi from our instance initializer!');
@@ -1484,7 +1466,7 @@ export default {
 
 # 指定初始化器顺序
 
-如果你需要控制初始化器运行的顺序，可以使用 `before` 和 `after` 选项来实现目的。考虑下面的代码：
+如果你需要控制初始化器运行的顺序，可以使用`before`和`after`选项来实现目的。考虑下面的代码：
 
 ```javascript
 export function initialize(app) {
@@ -1514,24 +1496,29 @@ export default {
 
 # 服务 (Services)
 
-`Ember.service` 属性是 Ember 中的一个对象，可以在应用程序的不同部分使用并可用。以下是服务使用的领域：
+`Ember.service`属性是 Ember 中的一个对象，可以在应用程序的不同部分使用并可用。以下是服务使用的领域：
 
 * `Geolocation`（地理位置）。
+
 * `User/session authentication`（用户/会话身份验证）。
+
 * `Web Sockets`（网络 WebSocket）。
-* `Server-backed API calls`（无法适应 `Ember Data` 的后端支持 API 调用）。
+
+* `Server-backed API calls`（无法适应`Ember Data`的后端支持 API 调用）。
+
 * `Third-party APIs`（第三方 API）。
+
 * `Server-sent events`（服务器发送事件）或通知。
 
 ## 服务的定义
 
-Ember CLI 中的 `service` 生成器可用于生成服务。考虑下面的命令，它可以用于创建一个 `shoppingCart` 服务：
+Ember CLI 中的`service`生成器可用于生成服务。考虑下面的命令，它可以用于创建一个`shoppingCart`服务：
 
 ```bash
 ember generate service shopping-cart
 ```
 
-服务必须扩展基类 `Ember.Service`。下方的代码所示：
+服务必须扩展基类`Ember.Service`。下方的代码所示：
 
 ```javascript
 export default Ember.Service.extend({
@@ -1561,7 +1548,7 @@ export default Ember.Service.extend({
 
 # 访问服务
 
-为了访问服务，可以使用函数 `Ember.inject.service` 将其注入到任何由容器解析（container-resolved）的对象中，例如另一个服务或组件。该函数有两种使用方式。你可以选择不带参数调用它，或者将你的服务的注册名称传递给它。
+为了访问服务，可以使用函数`Ember.inject.service`将其注入到任何由容器解析（container-resolved）的对象中，例如另一个服务或组件。该函数有两种使用方式。你可以选择不带参数调用它，或者将你的服务的注册名称传递给它。
 
 在不传递参数的情况下，服务必须根据其变量键名加载。要在不带参数的情况下加载购物车服务，请按如下所示操作：
 
@@ -1581,7 +1568,7 @@ export default Ember.Component.extend({
 });
 ```
 
-通过上面的代码，购物车服务将注入到我们的组件中，然后供 `cart` 属性可用。被注入的属性是懒加载的，这意味着在显式调用该属性之前，不会执行服务的实例化。这意味着必须使用 `get` 函数来访问特定组件的服务，否则你将获得 undefined 。
+通过上面的代码，购物车服务将注入到我们的组件中，然后供`cart`属性可用。被注入的属性是懒加载的，这意味着在显式调用该属性之前，不会执行服务的实例化。这意味着必须使用`get`函数来访问特定组件的服务，否则你将获得 undefined 。
 
 加载后，服务将一直持续到服务退出。
 
@@ -1598,7 +1585,7 @@ export default Ember.Component.extend({
 });
 ```
 
-在上面的代码中，我们为组件 `cart-contacts` 添加了 `remove` 动作。一旦被注入到组件中，该服务将在模板中使用。注意下面的代码中使用了 `cart` 来从购物车中获取数据：
+在上面的代码中，我们为组件`cart-contacts`添加了`remove`动作。一旦被注入到组件中，该服务将在模板中使用。注意下面的代码中使用了`cart`来从购物车中获取数据：
 
 ```html
 <ul>
@@ -1663,11 +1650,9 @@ var MyUser = Ember.Object.extend({
 
 我们已经到达本指南的结论。Ember 是目前使用的 JavaScript 框架之一。该框架主要用于我们需要开发 Web 应用程序客户端时使用。
 
-
-
-
-
 该框架具有许多我们可以利用的特性来增强我们的应用程序。
+
+
 
 在 Ember JS 中，控制器（controllers）非常重要，大多数人会将它们与组件（components）混淆。人们认为，控制器很快将被组件取代。控制器的目的是控制状态，而这取决于当前使用的路由类型。在将信息从组件传递到路由时，也会使用控制器，因为信息必须通过它进行传递。此外，控制器之间需要建立依赖关系。
 

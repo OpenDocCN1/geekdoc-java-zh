@@ -1,3 +1,4 @@
+
 # 工厂设计模式— Java
 
 > 原文：<https://medium.com/javarevisited/factory-design-pattern-java-b755025437b5?source=collection_archive---------2----------------------->
@@ -8,13 +9,13 @@
 
 # 工厂模式的定义
 
-> 在基于类的编程中， [**工厂方法模式**](https://javarevisited.blogspot.com/2015/06/difference-between-dependency-injection.html) 是一种创建模式，它使用工厂方法来处理创建对象的问题，而不必指定将要创建的对象的确切类。这是通过调用[工厂方法](http://javarevisited.blogspot.sg/2011/12/factory-design-pattern-java-example.html#axzz51cvxH5kW)来创建对象来完成的——要么在接口中指定并由子类实现，要么在基类中实现并可选地由派生类覆盖——而不是通过调用构造函数。
+> 在基于类的编程中，[**工厂方法模式**](https://javarevisited.blogspot.com/2015/06/difference-between-dependency-injection.html) 是一种创建模式，它使用工厂方法来处理创建对象的问题，而不必指定将要创建的对象的确切类。这是通过调用[工厂方法](http://javarevisited.blogspot.sg/2011/12/factory-design-pattern-java-example.html#axzz51cvxH5kW)来创建对象来完成的——要么在接口中指定并由子类实现，要么在基类中实现并可选地由派生类覆盖——而不是通过调用构造函数。
 
 # 在哪里使用工厂模式
 
 *   当一个类不知道需要创建什么子类时
-*   当一个类希望它的子类指定要创建的对象时。
-*   当父类选择创建对象到它的子类时。
+*   当一个类希望它的子类指定要创建的对象时
+*   当父类选择创建对象到它的子类时
 
 # UML 示例
 
@@ -28,7 +29,7 @@
 
 ## 实现
 
-每个实现[都会覆盖](https://www.java67.com/2015/08/top-10-method-overloading-overriding-interview-questions-answers-java.html)的 *getAge()* 方法，返回一个与年龄周期相对应的随机整数。
+每个实现[都会覆盖](https://www.java67.com/2015/08/top-10-method-overloading-overriding-interview-questions-answers-java.html)的`getAge()`方法，返回一个与年龄周期相对应的随机整数。
 
 ## 工厂
 
@@ -38,7 +39,7 @@
 
 ## 使用
 
-这将产生如下所示的输出:
+这将产生如下所示的输出：
 
 ```
 ==============================
@@ -54,4 +55,4 @@ age : 99
 
 以下是你可能喜欢的其他**设计模式文章**
 
-</javarevisited/7-best-online-courses-to-learn-object-oriented-design-pattern-in-java-749b6399af59>  </javarevisited/10-oop-design-principles-you-can-learn-in-2020-f7370cccdd31>  </javarevisited/7-best-books-to-learn-design-patterns-for-java-programmers-5627b93eefdb> 
+</javarevisited/7-best-online-courses-to-learn-object-oriented-design-pattern-in-java-749b6399af59>  </javarevisited/10-oop-design-principles-you-can-learn-in-2020-f7370cccdd31>  </javarevisited/7-best-books-to-learn-design-patterns-for-java-programmers-5627b93eefdb>

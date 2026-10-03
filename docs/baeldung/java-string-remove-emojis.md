@@ -1,14 +1,15 @@
+
 # 从 Java 字符串中移除表情符号
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-string-remove-emojis>
 
-## 1。概述
+## 1. 概述
 
 如今，表情符号在短信中变得越来越受欢迎——有时我们需要清除它们和其他符号。
 
 在本教程中，我们将讨论在 Java 中删除表情符号的不同方法。
 
-## 2。使用表情库
+## 2. 使用表情库
 
 首先，我们将使用表情库从我们的`String`中移除表情。
 
@@ -24,7 +25,7 @@
 
 最新版本可以在这里找到[。](https://web.archive.org/web/20221205194342/https://search.maven.org/search?q=emoji-java)
 
-现在让我们看看如何使用`emoji-java `从我们的`String`中删除表情符号:
+现在让我们看看如何使用`emoji-java`从我们的`String`中删除表情符号:
 
 ```java
 @Test
@@ -54,9 +55,9 @@ public void whenReplaceEmojiUsingLibrary_thenSuccess() {
 
 注意，如果我们需要用他们的别名替换表情符号，使用这个库是非常有用的。
 
-然而，表情符号-java 库只能检测表情符号，而不能检测符号或其他特殊字符。
+然而，`emoji-java`库只能检测表情符号，而不能检测符号或其他特殊字符。
 
-## 3。使用正则表达式
+## 3. 使用正则表达式
 
 接下来，我们可以使用正则表达式来删除表情符号和其他符号。我们将只允许特定类型的字符:
 
@@ -77,11 +78,11 @@ public void whenRemoveEmojiUsingMatcher_thenSuccess() {
 
 让我们分解一下我们的正则表达式:
 
-*   `\p{L}`–允许任何语言的所有字母
-*   `\p{N}`–用于数字
-*   `\p{P}`–用于标点符号
-*   `\p{Z}`–用于空白分隔符
-*   **^** 表示否定，因此所有这些表达式都将被列入白名单
+- `\p{L}` – 允许任何语言的所有字母
+- `\p{N}` – 用于数字
+- `\p{P}` – 用于标点符号
+- `\p{Z}` – 用于空白分隔符
+- **^** 表示否定，因此所有这些表达式都将被列入白名单
 
 这个表达式将只保留字母、数字、标点和空格。我们可以自定义表达式，以允许或删除更多字符类型
 
@@ -98,7 +99,7 @@ public void whenRemoveEmojiUsingRegex_thenSuccess() {
 }
 ```
 
-## 5。使用代码点
+## 5. 使用代码点
 
 现在，我们还将使用代码点来检测表情符号。**我们可以用 `\x{hexidecimal value}` 表达式来匹配一个特定的 Unicode 点。**
 
@@ -116,7 +117,7 @@ public void whenRemoveEmojiUsingCodepoints_thenSuccess() {
 
 当前可用表情符号及其代码点的完整列表可以在[这里](https://web.archive.org/web/20221205194342/https://unicode.org/emoji/charts/full-emoji-list.html)找到。
 
-## 6。使用 Unicode 范围
+## 6. 使用 Unicode 范围
 
 最后，我们将再次使用 Unicode，但这次使用的是`\u`表达式。
 
@@ -134,7 +135,7 @@ public void whenRemoveEmojiUsingUnicode_thenSuccess() {
 }
 ```
 
-## 7。结论
+## 7. 结论
 
 在这篇简短的文章中，我们学习了从 Java 字符串中删除表情符号的不同方法。我们使用表情库、正则表达式和 Unicode 范围。
 

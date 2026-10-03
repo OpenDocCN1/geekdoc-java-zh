@@ -1,3 +1,4 @@
+
 # 测试人员最重要的软技能
 
 > 原文：<https://medium.com/javarevisited/the-most-important-soft-skill-of-a-tester-77a9fc7347f2?source=collection_archive---------0----------------------->
@@ -8,7 +9,7 @@
 
 不是灵活，不是能做的态度，也不是耐心。当然，这些都很重要，但有一点尤为突出——外交！
 
-这里有一个简洁的定义:
+这里有一个简洁的定义：
 
 > 以敏感和圆滑的方式与人打交道的艺术
 

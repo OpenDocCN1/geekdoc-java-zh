@@ -1,3 +1,4 @@
+
 # 想快速学习 Java？烧掉你所有的 Java 教程
 
 > 原文：<https://medium.com/javarevisited/want-to-learn-java-quickly-burn-all-your-java-tutorial-books-6d06f5d77e84?source=collection_archive---------0----------------------->

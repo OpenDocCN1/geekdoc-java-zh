@@ -1,3 +1,4 @@
+
 # TransferHandler 类
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/dnd/transferhandler.html`](https://docs.oracle.com/javase/tutorial/uiswing/dnd/transferhandler.html)
@@ -6,7 +7,7 @@
 
 有三种方法用于在组件上使用`TransferHandler`：
 
-+   [`setDragEnabled(boolean)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JList.html#setDragEnabled-boolean-) — 打开拖动支持。（默认值为 false。）这个方法在支持拖动手势的每个组件上定义；链接将带您到`JList`的文档。
++   [`setDragEnabled(boolean)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JList.html#setDragEnabled-boolean-) — 打开拖动支持。（默认值为 `false`。）这个方法在支持拖动手势的每个组件上定义；链接将带您到`JList`的文档。
 
 +   [`setDropMode(DropMode)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JList.html#setDropMode-javax.swing.DropMode-) — 配置如何确定放置位置。这个方法为`JList`、`JTable`和`JTree`定义；链接将带您到`JList`的文档。
 

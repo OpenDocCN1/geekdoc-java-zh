@@ -1,14 +1,15 @@
+
 # Vavr 中的集合 API 指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/vavr-collections>
 
-## 1。概述
+## 1. 概述
 
 Vavr 库，以前称为 Javaslang，是 Java 的函数库。在本文中，我们将探索其强大的集合 API。
 
 要获得关于这个库的更多信息，请阅读本文。
 
-## 2。持续收集
+## 2. 持续收集
 
 持久性集合在被修改时会生成集合的新版本，同时保留当前版本。
 
@@ -18,32 +19,32 @@ Vavr 库，以前称为 Javaslang，是 Java 的函数库。在本文中，我�
 
 试图修改这样的集合会导致`UnsupportedOperationException`而不是创建一个新版本。此外，底层集合通过其直接引用仍然是可变的。
 
-## 3。`Traversable`
+## 3. `Traversable`
 
 是所有 Vavr 集合的基本类型——这个接口定义了所有数据结构共享的方法。
 
-它提供了一些有用的默认方法，如 `size()`、`get()`、`filter()`、`isEmpty()`等，这些方法被子接口继承。
+它提供了一些有用的默认方法，如`size()`、`get()`、`filter()`、`isEmpty()`等，这些方法被子接口继承。
 
 让我们进一步探索收藏库。
 
-## 4。`Seq`
+## 4. `Seq`
 
 我们从序列开始。
 
 `Seq`接口代表顺序数据结构。它是`List`、`Stream`、`Queue`、`Array`、`Vector`和`CharSeq`的父接口。所有这些数据结构都有自己独特的属性，我们将在下面探讨。
 
-### 4.1。`List`
+### 4.1. `List`
 
-一个 `List`是扩展了`LinearSeq`接口的元素的急切求值序列。
+一个`List`是扩展了`LinearSeq`接口的元素的急切求值序列。
 
 持久`Lists`由头部和尾部递归形成:
 
-*   头部——第一要素
-*   tail–包含剩余元素的列表(该列表也由头部和尾部组成)
+- 头部——第一要素
+- tail–包含剩余元素的列表(该列表也由头部和尾部组成)
 
 在`List` API 中有静态工厂方法可以用来创建`List`。我们可以使用静态的`of()`方法从一个或多个对象中创建一个`List`的实例。
 
-我们也可以使用静态的`empty()`来创建一个空的`List` 和`ofAll()`来从一个`Iterable`类型创建一个`List`:
+我们也可以使用静态的`empty()`来创建一个空的`List`和`ofAll()`来从一个`Iterable`类型创建一个`List`:
 
 ```java
 List<String> list = List.of(
@@ -68,11 +69,11 @@ List list4 = list.dropWhile(s -> s.length() > 0);
 assertTrue(list4.isEmpty());
 ```
 
-`drop(int n)`从列表的第一个元素开始删除`n`个元素，而`dropRight()` 从列表的最后一个元素开始执行相同的操作。
+`drop(int n)`从列表的第一个元素开始删除`n`个元素，而`dropRight()`从列表的最后一个元素开始执行相同的操作。
 
 `dropUntil()`继续从列表中删除元素，直到谓词评估为真，而当谓词为真时`dropWhile()`继续删除元素。
 
-还有`dropRightWhile()`和 `dropRightUntil()`开始从右边移除元素。
+还有`dropRightWhile()`和`dropRightUntil()`开始从右边移除元素。
 
 接下来，`take(int n)`用于从列表中抓取元素。它从列表中取出`n`个元素，然后停止。还有一个`takeRight(int n)`，它从列表末尾开始获取元素:
 
@@ -91,7 +92,7 @@ assertEquals(list7.size(), 3);
 
 此外，API 中还有其他有用的方法，例如，实际上返回非重复元素列表的`distinct()`以及接受`Comparator`来确定相等的`distinctBy()`。
 
-非常有趣的是，还有在列表的每个元素之间插入一个元素的 `intersperse()`。对于`String`操作来说非常方便:
+非常有趣的是，还有在列表的每个元素之间插入一个元素的`intersperse()`。对于`String`操作来说非常方便:
 
 ```java
 List list8 = list
@@ -119,9 +120,9 @@ assertEquals(map.get(true).get().size(), 5);
 
 `group(int n)`将一个`List`分成每组`n`个元素的组。`groupdBy()`接受一个包含划分列表逻辑的`Function`，并返回一个包含两个条目的`Map`—`true`和`false`。
 
-`true`键映射到满足`Function;`中指定条件的 `List`元素,`false`键映射到不满足条件的`List`元素。
+`true`键映射到满足`Function`中指定条件的`List`元素,`false`键映射到不满足条件的`List`元素。
 
-正如所料，当突变一个`List`时，原来的`List` 实际上并没有被修改。相反，新版本的`List`总是被返回。
+正如所料，当突变一个`List`时，原来的`List`实际上并没有被修改。相反，新版本的`List`总是被返回。
 
 我们还可以使用堆栈语义——元素的后进先出(LIFO)检索来与`List`交互。在这个意义上，有一些 API 方法用于操作堆栈，如`peek()`、`pop()`和`push()`:
 
@@ -140,7 +141,7 @@ assertEquals(intList2.size(), (intList1.size() - 1) );
 
 在`List`接口中还有其他有趣且非常有用的方法，这些方法在 [Java 文档](https://web.archive.org/web/20221004032439/https://static.javadoc.io/io.vavr/vavr/0.9.0/io/vavr/collection/List.html)中有清晰的记录。
 
-### 4.2。`Queue`
+### 4.2. `Queue`
 
 不可变的`Queue`存储允许先进先出(FIFO)检索的元素。
 
@@ -164,7 +165,7 @@ Queue<Integer> tailQueue = result._2;
 assertFalse(tailQueue.contains(secondQueue.get(0)));
 ```
 
-`dequeue`函数从`Queue`中移除头部元素并返回一个`Tuple2<T, Q>`。元组包含作为第一个条目被移除的头元素和作为第二个条目的`Queue` 的剩余元素。
+`dequeue`函数从`Queue`中移除头部元素并返回一个`Tuple2<T, Q>`。元组包含作为第一个条目被移除的头元素和作为第二个条目的`Queue`的剩余元素。
 
 我们可以使用`combination(n)`来获得`Queue`中元素的所有可能的`N`组合:
 
@@ -175,9 +176,9 @@ assertEquals(queue1.get(2).toCharSeq(), CharSeq.of("23"));
 
 同样，我们可以看到原始的`Queue`在元素入队/出队时没有被修改。
 
-### 4.3。`Stream`
+### 4.3. `Stream`
 
-一个`Stream`是一个惰性链表的实现，与`java.util.stream`有很大的不同。与 `java.util.stream`不同，Vavr `Stream`存储数据，并延迟评估下一个元素。
+一个`Stream`是一个惰性链表的实现，与`java.util.stream`有很大的不同。与`java.util.stream`不同，Vavr `Stream`存储数据，并延迟评估下一个元素。
 
 假设我们有一个`Stream`整数:
 
@@ -187,7 +188,7 @@ Stream<Integer> s = Stream.of(2, 1, 3, 4);
 
 将`s.toString()`的结果打印到控制台只会显示`Stream(2, ?)`。这意味着只有`Stream`的头部被评估，而尾部没有被评估。
 
-调用`s.get(3)`并随后显示`s.tail()`的结果返回`Stream(1, 3, 4, ?)`。相反，如果不调用第一个 `–`的`s.get(3)`，导致`Stream`对最后一个元素求值，那么`s.tail()`的结果只会是`Stream(1, ?)`。这意味着只计算了尾部的第一个元素。
+调用`s.get(3)`并随后显示`s.tail()`的结果返回`Stream(1, 3, 4, ?)`。相反，如果不调用第一个`–`的`s.get(3)`，导致`Stream`对最后一个元素求值，那么`s.tail()`的结果只会是`Stream(1, ?)`。这意味着只计算了尾部的第一个元素。
 
 这种行为可以提高性能，并使使用`Stream`来表示(理论上)无限长的序列成为可能。
 
@@ -231,7 +232,7 @@ assertEquals(t1._1().intValue(), 2);
 assertEquals(t1._2().intValue(), 7);
 ```
 
-### 4.4。`Array`
+### 4.4. `Array`
 
 `Array`是一个不可变的索引序列，允许高效的随机访问。它由对象的 Java `array`支持。本质上，它是类型为`T`的对象数组的`Traversable`包装器。
 
@@ -264,7 +265,7 @@ Array<Integer> array2 = intArray.replace(1, 5);
 assertEquals(array2.get(0).intValue(), 5);
 ```
 
-### 4.5。`Vector`
+### 4.5. `Vector`
 
 一个`Vector`是一种介于`Array`和`List`之间的元素，它提供了另一个索引元素序列，允许在固定时间内进行随机访问和修改:
 
@@ -279,7 +280,7 @@ assertEquals(2, intVector.get(1).intValue());
 assertEquals(6, newVector.get(1).intValue());
 ```
 
-### 4.6。`CharSeq`
+### 4.6. `CharSeq`
 
 `CharSeq`是一个集合对象，用来表示一个原始字符序列。它本质上是一个添加了集合操作的`String`包装器。
 
@@ -297,19 +298,21 @@ assertEquals('V', newChars.charAt(0));
 assertEquals("Vavr", newChars.mkString());
 ```
 
-## 5。`Set`
+## 5. `Set`
 
 在这一节中，我们将详细介绍集合库中的各种`Set`实现。`Set`数据结构的独特之处在于它不允许重复值。
 
-然而，`Set`有不同的实现方式，其中 `HashSet`是基本的实现方式。`TreeSet`不允许重复元素，可以排序。`LinkedHashSet`保持其元素的插入顺序。
+
+
+然而，`Set`有不同的实现方式，其中`HashSet`是基本的实现方式。`TreeSet`不允许重复元素，可以排序。`LinkedHashSet`保持其元素的插入顺序。
 
 让我们一个一个地仔细看看这些实现。
 
-### 5.1。`HashSet`
+### 5.1. `HashSet`
 
 `HashSet`有创建新实例的静态工厂方法——其中一些我们在本文前面已经探讨过——像`of()`、`ofAll()`和`range()`方法的变体。
 
-我们可以通过使用`diff()`方法得到两个集合之间的差异。同样，`union()`和`intersect()`方法返回两个集合的并集和交集:
+我们可以通过使用`diff()`方法得到两个集合之间的差异。同样，`union()`和`intersect()`方法返回两个集合的并集和交集：
 
 ```java
 HashSet<Integer> set0 = HashSet.rangeClosed(1,5);
@@ -320,7 +323,7 @@ assertEquals(set0.diff(set1), HashSet.rangeClosed(1,2));
 assertEquals(set0.intersect(set1), HashSet.rangeClosed(3,5));
 ```
 
-我们还可以执行基本操作，例如添加和删除元素:
+我们还可以执行基本操作，例如添加和删除元素：
 
 ```java
 HashSet<String> set = HashSet.of("Red", "Green", "Blue");
@@ -331,15 +334,15 @@ assertEquals(4, newSet.size());
 assertTrue(newSet.contains("Yellow"));
 ```
 
-`HashSet`实现由一个[散列数组映射的 trie (HAMT)](https://web.archive.org/web/20221004032439/https://en.wikipedia.org/wiki/Hash_array_mapped_trie) 支持，与普通的`HashTable` 相比，它拥有更好的性能，并且它的结构使它适合支持持久集合。
+`HashSet`实现由一个[散列数组映射的 trie (HAMT)](https://web.archive.org/web/20221004032439/https://en.wikipedia.org/wiki/Hash_array_mapped_trie) 支持，与普通的`HashTable`相比，它拥有更好的性能，并且它的结构使它适合支持持久集合。
 
-### 5.2。`TreeSet`
+### 5.2. `TreeSet`
 
 不可变的`TreeSet`是`SortedSet`接口的实现。它存储排序元素的`Set`，并使用二分搜索法树实现。它的所有操作都在 O(log n)时间内运行。
 
 默认情况下，`TreeSet`的元素按自然顺序排序。
 
-让我们使用自然排序顺序创建一个`SortedSet`:
+让我们使用自然排序顺序创建一个`SortedSet`：
 
 ```java
 SortedSet<String> set = TreeSet.of("Red", "Green", "Blue");
@@ -349,7 +352,7 @@ SortedSet<Integer> intSet = TreeSet.of(1,2,3);
 assertEquals(2, intSet.average().get().intValue());
 ```
 
-为了以定制的方式排序元素，在创建一个`TreeSet.` 的同时传递一个`Comparator`实例，我们也可以从集合元素中生成一个字符串:
+为了以定制的方式排序元素，在创建一个`TreeSet`的同时传递一个`Comparator`实例，我们也可以从集合元素中生成一个字符串：
 
 ```java
 SortedSet<String> reversedSet
@@ -360,15 +363,15 @@ String str = reversedSet.mkString(" and ");
 assertEquals("Red and Green and Blue", str);
 ```
 
-### 5.3。`BitSet`
+### 5.3. `BitSet`
 
-Vavr 集合还包含一个不可变的 `BitSet`实现。`BitSet`接口扩展了`SortedSet`接口。`BitSet`可以使用`BitSet.Builder`中的静态方法进行实例化。
+Vavr 集合还包含一个不可变的`BitSet`实现。`BitSet`接口扩展了`SortedSet`接口。`BitSet`可以使用`BitSet.Builder`中的静态方法进行实例化。
 
 像其他数据结构的实现一样，`BitSet`不允许重复的条目被添加到集合中。
 
 它从`Traversable`接口继承了操作方法。注意，它与标准 Java 库中的`java.util.BitSet`不同。`BitSet`数据不能包含`String`值。
 
-让我们看看如何使用工厂方法`of()`创建一个`BitSet`实例:
+让我们看看如何使用工厂方法`of()`创建一个`BitSet`实例：
 
 ```java
 BitSet<Integer> bitSet = BitSet.of(1,2,3,4,5,6,7,8);
@@ -376,21 +379,21 @@ BitSet<Integer> bitSet1 = bitSet.takeUntil(i -> i > 4);
 assertEquals(bitSet1.size(), 4);
 ```
 
-我们使用`takeUntil()`来选择`BitSet.`的前四个元素，该操作返回一个新的实例。注意，`takeUntil()`是在`Traversable`接口中定义的，它是`BitSet.`的父接口
+我们使用`takeUntil()`来选择`BitSet`的前四个元素，该操作返回一个新的实例。注意，`takeUntil()`是在`Traversable`接口中定义的，它是`BitSet`的父接口。
 
 上面演示的在`Traversable`接口中定义的其他方法和操作也适用于`BitSet`。
 
-## 6。`Map`
+## 6. `Map`
 
 映射是一种键值数据结构。Vavr 的`Map`是不可变的，并且有`HashMap`、`TreeMap`和`LinkedHashMap`的实现。
 
 通常，映射契约不允许重复的键，尽管可能有重复的值映射到不同的键。
 
-### 6.1。`HashMap`
+### 6.1. `HashMap`
 
 一个`HashMap`是一个不可变的`Map`接口的实现。它使用键的哈希代码存储键值对。
 
-Vavr 的`Map`使用`Tuple2`来表示键值对，而不是传统的`Entry`类型:
+Vavr 的`Map`使用`Tuple2`来表示键值对，而不是传统的`Entry`类型：
 
 ```java
 Map<Integer, List<Integer>> map = List.rangeClosed(0, 10)
@@ -403,7 +406,7 @@ assertEquals(5, map.get(1).get().size());
 
 与`HashSet`类似，`HashMap`实现由散列数组映射的 trie (HAMT)支持，导致几乎所有操作的时间恒定。
 
-我们可以使用`filterKeys()`方法按键过滤映射条目，或者使用`filterValues()`方法按值过滤。两种方法都接受一个`Predicate`作为参数:
+我们可以使用`filterKeys()`方法按键过滤映射条目，或者使用`filterValues()`方法按值过滤。两种方法都接受一个`Predicate`作为参数：
 
 ```java
 Map<String, String> map1
@@ -419,7 +422,7 @@ assertEquals(fMap2.size(), 1);
 assertTrue(fMap2.containsValue("val3"));
 ```
 
-我们还可以通过使用`map()`方法来转换地图条目。例如，让我们将`map1` 转换为`Map<String, Integer>`:
+我们还可以通过使用`map()`方法来转换地图条目。例如，让我们将`map1`转换为`Map<String, Integer>`：
 
 ```java
 Map<String, Integer> map2 = map1.map(
@@ -427,11 +430,11 @@ Map<String, Integer> map2 = map1.map(
 assertEquals(map2.get("key1").get().intValue(), 1);
 ```
 
-### 6.2。`TreeMap`
+### 6.2. `TreeMap`
 
 不可变的`TreeMap`是`SortedMap`接口的实现。类似于`TreeSet`，一个`Comparator`实例被用来定制一个`TreeMap`的排序元素。
 
-让我们演示一下`SortedMap`的创建:
+让我们演示一下`SortedMap`的创建：
 
 ```java
 SortedMap<Integer, String> map
@@ -441,7 +444,7 @@ assertEquals(1, map.keySet().toJavaArray()[0]);
 assertEquals("Four", map.get(4).get());
 ```
 
-默认情况下，`TreeMap`的条目按关键字的自然顺序排序。然而，我们可以指定一个用于排序的`Comparator`:
+默认情况下，`TreeMap`的条目按关键字的自然顺序排序。然而，我们可以指定一个用于排序的`Comparator`：
 
 ```java
 TreeMap<Integer, String> treeMap2 =
@@ -451,15 +454,15 @@ assertEquals(treeMap2.keySet().mkString(), "631");
 
 和`TreeSet`一样，`TreeMap`的实现也是用树来建模的，因此它的操作时间是 O(log n)。`map.get(key)`返回一个`Option`，它在地图中的指定键处包装一个值。
 
-## 7。与 Java 的互操作性
+## 7. 与 Java 的互操作性
 
 集合 API 与 Java 的集合框架完全互操作。让我们看看这在实践中是如何做到的。
 
-### 7.1。Java 到 Vavr 的转换
+### 7.1. Java 到 Vavr 的转换
 
 Vavr 中的每个集合实现都有一个静态工厂方法`ofAll()`，该方法使用一个`java.util.Iterable`。这允许我们从 Java 集合中创建一个 Vavr 集合。同样，另一个工厂方法`ofAll()`直接采用 Java `Stream`。
 
-要将 Java `List`转换成不可变的`List`:
+要将 Java `List`转换成不可变的`List`：
 
 ```java
 java.util.List<Integer> javaList = java.util.Arrays.asList(1, 2, 3, 4);
@@ -469,7 +472,7 @@ java.util.stream.Stream<Integer> javaStream = javaList.stream();
 Set<Integer> vavrSet = HashSet.ofAll(javaStream);
 ```
 
-另一个有用的函数是`collector()`，它可以与`Stream.collect()`结合使用，以获得 Vavr 集合:
+另一个有用的函数是`collector()`，它可以与`Stream.collect()`结合使用，以获得 Vavr 集合：
 
 ```java
 List<Integer> vavrList = IntStream.range(1, 10)
@@ -481,11 +484,11 @@ assertEquals(4, vavrList.size());
 assertEquals(2, vavrList.head().intValue());
 ```
 
-### 7.2。Vavr 到 Java 的转换
+### 7.2. Vavr 到 Java 的转换
 
 接口有很多方法将 Vavr 类型转换成 Java 类型。这些方法的格式是`toJavaXXX()`。
 
-让我们举几个例子:
+让我们举几个例子：
 
 ```java
 Integer[] array = List.of(1, 2, 3)
@@ -497,7 +500,7 @@ java.util.Map<String, Integer> map = List.of("1", "2", "3")
 assertEquals(2, map.get("2").intValue());
 ```
 
-我们还可以使用 Java 8 `Collectors`从 Vavr 集合中收集元素:
+我们还可以使用 Java 8 `Collectors`从 Vavr 集合中收集元素：
 
 ```java
 java.util.Set<Integer> javaSet = List.of(1, 2, 3)
@@ -507,7 +510,7 @@ assertEquals(3, javaSet.size());
 assertEquals(1, javaSet.toArray()[0]);
 ```
 
-### 7.3。Java 集合视图
+### 7.3. Java 集合视图
 
 或者，该库提供了所谓的集合视图，在转换为 Java 集合时性能会更好。上一节中的转换方法遍历所有元素来构建一个 Java 集合。
 
@@ -517,7 +520,7 @@ assertEquals(1, javaSet.toArray()[0]);
 
 在不可变视图上调用 mutator 方法会导致一个`UnsupportedOperationException`。
 
-让我们看一个例子:
+让我们看一个例子：
 
 ```java
 @Test(expected = UnsupportedOperationException.class)
@@ -530,7 +533,7 @@ public void givenVavrList_whenViewConverted_thenException() {
 }
 ```
 
-要创建不可变视图:
+要创建可变视图：
 
 ```java
 java.util.List<Integer> javaList = List.of(1, 2, 3)
@@ -540,7 +543,7 @@ javaList.add(4);
 assertEquals(4, javaList.get(3).intValue());
 ```
 
-## 8。结论
+## 8. 结论
 
 在本教程中，我们学习了 Vavr 的集合 API 提供的各种功能数据结构。在 Vavr 的集合 [JavaDoc](https://web.archive.org/web/20221004032439/https://static.javadoc.io/io.vavr/vavr/0.9.0/io/vavr/collection/package-frame.html) 和[用户指南](https://web.archive.org/web/20221004032439/http://www.vavr.io/vavr-docs/)中可以找到更多有用和高效的 API 方法。
 

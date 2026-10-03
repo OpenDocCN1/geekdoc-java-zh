@@ -1,3 +1,4 @@
+
 # 树莓 Pi 上 REST H2 弹簧与 Quarkus 应用的比较
 
 > 原文：<https://medium.com/javarevisited/comparing-a-rest-h2-spring-versus-quarkus-application-on-raspberry-pi-13013603fda8?source=collection_archive---------2----------------------->
@@ -8,33 +9,33 @@
 
 ![](img/19662bc88d1701a570a1e0972a085345.png)
 
-# 用过的工具
+## 用过的工具
 
 我使用 AdoptOpenJDK 11 和 IntelliJ IDEA 在 PC 上构建应用程序。Spring 应用程序的[源代码是我的书](https://github.com/FDelporte/JavaOnRaspberryPi/tree/master/Chapter_10_Spring/java-spring-rest-db)[“在 Raspberry Pi 上开始使用 Java”](https://webtechie.be/books)中所有例子的一部分。在这篇文章中，使用 Quarkus 和 Panache 制作了一个类似的应用程序，完整的代码也可以在 GitHub 上找到。
 
-# 关于夸库斯
+## 关于夸库斯
 
 [Quarkus](https://quarkus.io/) 是开源的，最初由[红帽](https://www.redhat.com)开发，提供“超音速亚原子 Java”。这是一个 Kubernetes 原生 Java 栈，为 OpenJDK HotSpot 和 GraalVM 量身定制，使用最好的 Java 库和标准。与其他云原生堆栈相比，它承诺使用更少的内存，启动更快。
 
-# 关于派头
+## 关于派头
 
 Panache 允许你用 Quarkus 简化你的数据库代码，完整的描述见[“quar kus——简化的 Hibernate ORM with Panache”](https://quarkus.io/guides/hibernate-orm-panache)。它构建在 Hibernate ORM 之上，将 Java 对象映射到关系数据库记录。
 
-# 应用程序是做什么的？
+## 应用程序是做什么的？
 
-这个示例 Quarkus 应用程序的目标与 Spring 概念验证应用程序完全相同:将数据存储在 H2 数据库中，并提供 REST API 来添加和读取该数据库中的数据。所以我们使用相同的图表:
+这个示例 Quarkus 应用程序的目标与 Spring 概念验证应用程序完全相同：将数据存储在 H2 数据库中，并提供 REST API 来添加和读取该数据库中的数据。所以我们使用相同的图表：
 
 ![](img/8ea89210727576ca256765b8945957c7.png)
 
-通过集成 Swagger UI，我们可以轻松测试 API:
+通过集成 Swagger UI，我们可以轻松测试 API：
 
 ![](img/3233d8ffbd2532d926a75978e00132a1.png)
 
-# 一些代码示例
+## 一些代码示例
 
-由于 Quarkus 和 Panache 扩展了 Java EE，代码看起来非常类似于 [Spring 代码](/javarevisited/10-free-spring-boot-tutorials-and-courses-for-java-developers-53dfe084587e?source=collection_home---4------7-----------------------)，例如，对于一个测量实体:
+由于 Quarkus 和 Panache 扩展了 Java EE，代码看起来非常类似于 [Spring 代码](/javarevisited/10-free-spring-boot-tutorials-and-courses-for-java-developers-53dfe084587e?source=collection_home---4------7-----------------------)，例如，对于一个测量实体：
 
-```
+```java
 @Entity
 public class MeasurementEntity extends PanacheEntity {
 
@@ -61,9 +62,9 @@ public class MeasurementEntity extends PanacheEntity {
 }
 ```
 
-rest 控制器还需要最少的代码，例如从数据库中获取所有测量值:
+rest 控制器还需要最少的代码，例如从数据库中获取所有测量值：
 
-```
+```java
 @ApplicationScoped
 @Path("/measurement")
 public class MeasurementRepository implements
@@ -77,11 +78,11 @@ public class MeasurementRepository implements
 }
 ```
 
-# 现场编码和测试
+## 现场编码和测试
 
-在开发 Quarkus 应用程序时，dev-mode 确实很吸引人。一旦有了可以运行的东西，就用以下命令启动应用程序:
+在开发 Quarkus 应用程序时，dev-mode 确实很吸引人。一旦有了可以运行的东西，就用以下命令启动应用程序：
 
-```
+```bash
 $ mvn quarkus:dev
 ```
 
@@ -89,23 +90,23 @@ $ mvn quarkus:dev
 
 为了比较 [Spring](/javarevisited/10-best-online-courses-to-learn-spring-framework-in-2020-f7f73599c2fd) 和 Quarkus 应用程序的启动速度，我使用了 Spring JAR、Quarkus JAR 和 Quarkus 本地应用程序。
 
-# 作为 JAR 文件
+### 作为 JAR 文件
 
-JAR 文件可以用 Maven 在两个项目中创建，也可以像其他项目一样用 java 启动:
+JAR 文件可以用 Maven 在两个项目中创建，也可以像其他项目一样用 java 启动：
 
-```
+```bash
 $ mvn clean package
 $ java -jar target/java-spring-rest-db-0.0.1-SNAPSHOT.jar
 $ java -jar target/javaquarkusrestdb-1.0-SNAPSHOT-runner.jar
 ```
 
-# 作为本机应用程序
+### 作为本机应用程序
 
-# 在 Linux PC 上
+#### 在 Linux PC 上
 
 使用提供的 Docker 文件，应用程序可以通过一个单独的 [Maven 命令](/javarevisited/top-10-free-courses-to-learn-maven-jenkins-and-docker-for-java-developers-51fa7a1e66f6?source=collection_home---4------3-----------------------)使用 [GraalVM](https://www.graalvm.org/) 转换为本地应用程序。请记住，H2 不能作为应用程序中的集成数据库，您需要独立运行它并调整应用程序。
 
-```
+```bash
 $ mvn package -Pnative -Dquarkus.native.container-build=true
 $ target/javaquarkusrestdb-1.0-SNAPSHOT-runner
 __  ____  __  _____   ___  __ ____  ______ 
@@ -120,17 +121,17 @@ __  ____  __  _____   ___  __ ____  ______
 
 请看上面几行，确实**启动时间是 0.062s** ！！！我试了几次，得到的**在 0.040s 到 0.078s** 之间。比光还快:-)
 
-# 为了树莓派
+#### 为了树莓派
 
 Raspberry Pi 3 和 4 有 64 位芯片，但 Raspbian OS 目前是 32 位系统。
 
-## 运行在 32 位 Raspbian 操作系统上
+##### 运行在 32 位 Raspbian 操作系统上
 
 还没有 GraalVM(还没有？)用于 32 位系统，所以不可能将 Quarkus 编译成 Raspbian OS 的本机应用程序。
 
-使用的是 JAR 版本。启动[弹簧作用](/javarevisited/top-10-free-courses-to-learn-spring-framework-for-java-developers-639db9348d25):
+使用的是 JAR 版本。启动[弹簧作用](/javarevisited/top-10-free-courses-to-learn-spring-framework-for-java-developers-639db9348d25)：
 
-```
+```bash
 $ java -jar target/java-spring-rest-db-0.0.1-SNAPSHOT.jar
 
   .   ____          _            __ _ _
@@ -147,9 +148,9 @@ $ java -jar target/java-spring-rest-db-0.0.1-SNAPSHOT.jar
 22:50:16.205  INFO 1702 --- [           main] b.w.j.JavaSpringRestDbApplication        : Started JavaSpringRestDbApplication in 36.606 seconds (JVM running for 39.212)
 ```
 
-启动 Quarkus 应用程序:
+启动 Quarkus 应用程序：
 
-```
+```bash
 $ java -jar target/javaquarkusrestdb-1.0-SNAPSHOT-runner.jar
 __  ____  __  _____   ___  __ ____  ______ 
  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
@@ -159,7 +160,7 @@ __  ____  __  _____   ___  __ ____  ______
 22:20:50 INFO  [io.quarkus]] (main) javaquarkusrestdb 1.0-SNAPSHOT on JVM (powered by Quarkus 1.6.0.Final) started in 9.259s. Listening on: http://0.0.0.0:8080
 ```
 
-## 在 64 位 Ubuntu 上运行
+##### 在 64 位 Ubuntu 上运行
 
 在 Raspberry，他们正在开发 Raspbian 操作系统的 64 位预发布版本，但在这次测试中，我使用带有“Ubuntu 20.04 LTS (Raspberry Pi 3/4/，用于 arm64 架构的 64 位服务器操作系统)”的 Raspberry Imager 工具闪存了一个新的 SD 卡。
 
@@ -169,7 +170,7 @@ __  ____  __  _____   ___  __ ____  ______
 
 下面的概览表使用了与 32 位系统相同的 JAR。
 
-不幸的是，我没能在 Pi 上创建一个本地应用程序。本机构建过程花费了很多时间，并且在该过程中的某个地方由于内存不足异常而不断失败。Docker 构建过程也不能在 Pi 上工作。也许可以在 PC 上的 [Docker](/javarevisited/top-5-free-courses-to-learn-docker-for-beginners-best-of-lot-b2b1ad2b98ad?source=collection_home---4------2-----------------------) 中交叉编译 aarch64 的 Raspberry Pi，但目前这已经超出了我的“舒适区”,所以我没有继续走这条路。
+不幸的是，我没能在 Pi 上创建一个本地应用程序。本机构建过程花费了很多时间，并且在该过程中的某个地方由于内存不足异常而不断失败。Docker 构建过程也不能在 Pi 上工作。也许可以在 PC 上的 [Docker](/javarevisited/top-5-free-courses-to-learn-docker-for-beginners-best-of-lot-b2b1ad2b98ad?source=collection_home---4------2-----------------------) 中交叉编译 aarch64 的 Raspberry Pi，但目前这已经超出了我的“舒适区”，所以我没有继续走这条路。
 
 **“惊人的快速启动时间”——正如 Quarkus 网站上承诺的——已经被证实，至少在 PC 上是这样。而且在树莓派上，启动速度也快了很多。**
 
@@ -177,19 +178,19 @@ __  ____  __  _____   ___  __ ____  ______
 
 原生的速度非常快，但我只在我的电脑上安装了它…
 
-*   (1 个):戴尔 i7，16 Gb 内存，64 位 Ubuntu 20.04
-*   (2):树莓派 3B+ 1GB 内存，博通 BCM2837B0，Cortex-A53 (ARMv8) 64 位 SoC @ 1.4GHz
-*   (3): Raspberry Pi 4B 4GB RAM、Broadcom BCM2711、四核 Cortex-A72 (ARM v8) 64 位 SoC @ 1.5GHz
-*   (32b):32 位 Raspbian 操作系统
-*   (64b): Ubuntu 服务器操作系统 20.04 LTS 64 位
+*   (1 个)：戴尔 i7，16 Gb 内存，64 位 Ubuntu 20.04
+*   (2)：树莓派 3B+ 1GB 内存，博通 BCM2837B0，Cortex-A53 (ARMv8) 64 位 SoC @ 1.4GHz
+*   (3)： Raspberry Pi 4B 4GB RAM、Broadcom BCM2711、四核 Cortex-A72 (ARM v8) 64 位 SoC @ 1.5GHz
+*   (32b)：32 位 Raspbian 操作系统
+*   (64b)： Ubuntu 服务器操作系统 20.04 LTS 64 位
 
-# 更多详细信息
+## 更多详细信息
 
-# 使用独立的 H2 数据库
+### 使用独立的 H2 数据库
 
 参见[https://o7 planning . org/en/11895/installing-H2-database-and-use-H2-console](https://o7planning.org/en/11895/installing-h2-database-and-using-h2-console)
 
-```
+```bash
 $ wget https://h2database.com/h2-2019-10-14.zip
 $ unzip h2-2019-10-14.zip
 $ cd h2/bin
@@ -199,15 +200,17 @@ $ ./h2.sh
 
 要能够从网络中的任何其他 PC 连接到 web 控制台，请参见[https://www.h2database.com/html/tutorial.html:](https://www.h2database.com/html/tutorial.html:)
 
-```
+```bash
 $ nano /home/ubuntu/.h2.server.properties webAllowOthers=true
 ```
 
-要在 web 控制台中使用的连接设置:
+要在 web 控制台中使用的连接设置：
 
-driver Class:org . H2 . driver JDBC URL:JDBC:H2:TCP://localhost/~/H2 . db 用户名:sa 密码:{empty}
 
-要将 Quarkus 应用程序与独立的 H2 数据库一起使用，需要将 application.properties 更改为:
+
+`driver Class:org . H2 . driver` `JDBC URL:JDBC:H2:TCP://localhost/~/H2 . db` 用户名:`sa` 密码:`{empty}`
+
+要将 Quarkus 应用程序与独立的 H2 数据库一起使用，需要将`application.properties`更改为:
 
 ```
 # H2 database
@@ -217,12 +220,15 @@ quarkus.datasource.username=sa
 quarkus.datasource.password=
 ```
 
-# 在树莓 Pi 上编译 Quarkus 本地应用程序
+## 在树莓 Pi 上编译 Quarkus 本地应用程序
 
 为了完整起见，这是我用来尝试从 Quarkus 应用程序的源代码构建本机应用程序的一步一步的步骤。
 
-```
+
+
 # Install Maven
+
+```
 $ sudo apt install maven
 
 $ mvn -v
@@ -236,23 +242,32 @@ $ java -version
 openjdk version "11.0.8" 2020-07-14
 OpenJDK Runtime Environment (build 11.0.8+10-post-Ubuntu-0ubuntu120.04)
 OpenJDK 64-Bit Server VM (build 11.0.8+10-post-Ubuntu-0ubuntu120.04, mixed mode)
+```
 
 # Spring DB application
+
+```
 $ git clone https://github.com/FDelporte/JavaOnRaspberryPi.git
 $ cd JavaOnRaspberryPi/Chapter_10_Spring/java-spring-rest-db/
 $ mvn clean package
 $ java -jar target/java-spring-rest-db-0.0.1-SNAPSHOT.jar
+```
 
 # Quarkus DB application (first as JAR)
+
+```
 $ git clone https://github.com/FDelporte/JavaQuarkusRestDb.git
 $ cd JavaQuarkusRestDb
 $ nano src/main/resources/application.properties
 quarkus.datasource.url=jdbc:h2:file:/home/ubuntu/database.db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
 $ java -jar target/javaquarkusrestdb-1.0-SNAPSHOT-runner.jar
+```
 
 # Quarkus DB application (then as native)
-# Building with Docker doesn't seem to work, so install GraalVM first
-# https://www.graalvm.org/docs/getting-started/linux
+
+Building with Docker doesn't seem to work, so install GraalVM first: <https://www.graalvm.org/docs/getting-started/linux>
+
+```
 $ cd /home/ubuntu
 $ wget https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-20.1.0/graalvm-ce-java11-linux-aarch64-20.1.0.tar.gz
 $ tar -xzf graalvm-ce-java11-linux-aarch64-20.1.0.tar.gz
@@ -261,18 +276,31 @@ $ which java
 /home/ubuntu/graalvm-ce-java11-20.1.0/bin/java
 $ export GRAALVM_HOME=/home/ubuntu/graalvm-ce-java11-20.1.0/
 $ export JAVA_HOME=/home/ubuntu/graalvm-ce-java11-20.1.0/
-# Make sure GRAALVM_HOME and JAVA_HOME are set as part of PATH
+```
+
+Make sure `GRAALVM_HOME` and `JAVA_HOME` are set as part of `PATH`:
+
+```
 $ echo $PATH
 $ echo GRAALVM_HOME
 $ echo JAVA_HOME
-# Or use gu to install correctly
+```
+
+Or use `gu` to install correctly:
+
+```
 $ /home/ubuntu/graalvm-ce-java11-20.1.0/bin/gu install native-image
+```
 
-# You will will also need GCC, and the glibc and zlib headers
-# https://quarkus.io/guides/building-native-image
+You will also need `GCC`, and the `glibc` and `zlib` headers (see <https://quarkus.io/guides/building-native-image>):
+
+```
 $ sudo apt-get install build-essential libz-dev zlib1g-dev
+```
 
-# Tried to compile to native up to 4g xmx but each with out of memory exception
+Tried to compile to native up to `4g` xmx but each with out of memory exception:
+
+```
 $ mvn package -Pnative -Dquarkus.native.native-image-xmx=2g
 
 $ mvn package -Pnative -DskipTests -Dquarkus.native.native-image-xmx=4g
@@ -355,6 +383,8 @@ Error: Image build request failed with exit status 137
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
 ```
+
+
 
 在 PC 上，我还成功地用 [Docker](/javarevisited/top-15-online-courses-to-learn-docker-kubernetes-and-aws-for-fullstack-developers-and-devops-d8cc4f16e773) 创建了一个原生应用程序，但在 Raspberry Pi 上却完全没有成功…
 

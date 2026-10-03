@@ -1,3 +1,4 @@
+
 # 必须知道 VS 代码快捷键
 
 > 原文：<https://medium.com/javarevisited/must-know-vs-code-shortcuts-50371a8b94b6?source=collection_archive---------3----------------------->
@@ -20,7 +21,7 @@ Visual Studio 代码快捷方式
 
 看到我之前说的魔法了吗？真的就这么简单。
 
-如果你看下面的插图，你会得到类似的结果:
+如果你看下面的插图，你会得到类似的结果：
 
 ![](img/631f32aba7916d6f51a4b89f876fda3e.png)
 
@@ -101,6 +102,7 @@ ID 和类属性
 ## 结论
 
 感谢您的阅读！希望你觉得有用！💙
+
 如果你有兴趣阅读更多内容，请关注我，别忘了订阅我的时事通讯，在你的收件箱里接收故事。
 
 [***中型***](https://ishratumar.medium.com/)***|***[***Twitter***](https://twitter.com/ishratUmar18)***|***[***GitHub***](https://github.com/ishratUmar18/)***|***[***hash node***](https://hashnode.com/@ishratUmar18)***|***

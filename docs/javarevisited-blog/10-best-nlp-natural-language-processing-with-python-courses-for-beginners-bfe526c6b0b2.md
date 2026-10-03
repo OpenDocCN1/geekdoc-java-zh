@@ -1,3 +1,4 @@
+
 # 2023 年 10 个最佳自然语言处理(NLP)和 Python 初学者课程
 
 > 原文：<https://medium.com/javarevisited/10-best-nlp-natural-language-processing-with-python-courses-for-beginners-bfe526c6b0b2?source=collection_archive---------0----------------------->
@@ -89,9 +90,13 @@
 在本课程中，您将学到许多有用的技能，如
 
 *   如何用 [Scikit-learn](https://javarevisited.blogspot.com/2021/10/top-5-courses-to-learn-scikit-learn.html) 、NLTK 和 SpaCy 实现 NLP 相关任务
+
 *   如何应用机器学习模型对文本数据进行分类
+
 *   如何进行文本分类(垃圾邮件检测、亚马逊产品评论分类)
+
 *   如何进行文本摘要(将 5000 字的文章变成 200 字)
+
 *   如何从最近发布的推文中计算情绪得分(Tweeter API)
 
 您还将有机会更新您的深度学习概念(ANN、CNN 和 RNN ),并使用 Keras 构建您自己的单词嵌入(Word2vec)模型，使用 Google Pretrained 模型构建单词嵌入应用程序。
@@ -110,38 +115,40 @@
 
 本课程由哥伦比亚大学的教师团队讲授，教你如何通过从书籍、文章、YouTube 视频、Twitter feeds 等中提取信息，使用 NLP 顺利完成大量数据分析的基本方法。
 
-除了 [NLP](https://www.java67.com/2020/07/top-5-courses-to-learn-natural-language-processing-NLP.html) 之外，本课程还将让您深入了解物联网( [IoT](https://www.java67.com/2020/06/top-5-course-to-learn-internet-of-things-IoT.html?m=1) )如何潜在地改变未来人们的生活方式，以及实现它需要哪些主要组件。
 
-也会讲解数据科学家应用的地面方法，包括条件概率、统计思维、机器学习等，让大家有个大概的了解。还有一本同名的书，[高管数据科学:利用机器智能推动商业投资回报率](https://www.amazon.com/Data-Science-Executives-Leveraging-Intelligence/dp/1544511256?tag=javamysqlanta-20)如果你有兴趣阅读，你也可以看看。
+
+除了 [NLP](https://www.java67.com/2020/07/top-5-courses-to-learn-natural-language-processing-NLP.html) 之外，本课程还将让您深入了解物联网（[IoT](https://www.java67.com/2020/06/top-5-course-to-learn-internet-of-things-IoT.html?m=1)）如何潜在地改变未来人们的生活方式，以及实现它需要哪些主要组件。
+
+也会讲解数据科学家应用的地面方法，包括条件概率、统计思维、机器学习等，让大家有个大概的了解。还有一本同名的书，[高管数据科学：利用机器智能推动商业投资回报率](https://www.amazon.com/Data-Science-Executives-Leveraging-Intelligence/dp/1544511256?tag=javamysqlanta-20)，如果你有兴趣阅读，你也可以看看。
 
 [![](img/cf639a7e1f65bb981c89c1e768a83aa6.png)](https://www.amazon.com/Data-Science-Executives-Leveraging-Intelligence/dp/1544511256?tag=javamysqlanta-20)
 
-## 7.[Python 自然语言处理入门](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fpython-natural-language-processing)
+## 7. [Python 自然语言处理入门](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fpython-natural-language-processing)
 
 鉴于 NLP 是当今时代最重要的技术之一，Pluralsight 提供了一个很好的课程，让开发人员能够创建一个能够理解复杂语言的系统。
 
-课程将引导学习者全面概述自然语言处理以及围绕它的不同原理&方法，包括[机器学习](https://becominghuman.ai/9-data-science-and-machine-learning-courses-by-harvard-ibm-udemy-and-others-12a0c7c23ec1)和[人工智能](/javarevisited/7-best-courses-to-learn-artificial-intelligence-in-2020-26d59d62f6fe)。
+课程将引导学习者全面概述自然语言处理以及围绕它的不同原理与方法，包括[机器学习](https://becominghuman.ai/9-data-science-and-machine-learning-courses-by-harvard-ibm-udemy-and-others-12a0c7c23ec1)和[人工智能](/javarevisited/7-best-courses-to-learn-artificial-intelligence-in-2020-26d59d62f6fe)。
 
-在课程中，您将了解自然语言处理的各个方面，如深层语义相似性模型(DSSM)、视觉语言多模态智能和统计机器翻译，以及它们在现实项目中的应用。
+在课程中，您将了解自然语言处理的各个方面，如深层语义相似性模型（DSSM）、视觉语言多模态智能和统计机器翻译，以及它们在现实项目中的应用。
 
-**这里是加入本课程**—[Python 自然语言处理入门](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fpython-natural-language-processing)的链接
+**这里是加入本课程**——[Python 自然语言处理入门](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fpython-natural-language-processing)的链接
 
 [![](img/0346651ffea84e37979b3b7b76a5ab3a.png)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fpython-natural-language-processing)
 
-顺便说一句，你需要一个 [Pluralsight 会员](https://javarevisited.blogspot.com/2019/10/udemy-vs-pluralsight-review-which-is-better-to-learn-code.html)才能观看这个课程，费用大约是每月 29 美元或每年 299 美元(14%的折扣)。如果你没有这个会员资格，我强烈建议你申请一个来加速你的学习。该订阅提供了超过 7000 个关于最新技术的在线课程，包括数据科学和机器学习。
+顺便说一句，你需要一个 [Pluralsight 会员](https://javarevisited.blogspot.com/2019/10/udemy-vs-pluralsight-review-which-is-better-to-learn-code.html)才能观看这个课程，费用大约是每月 29 美元或每年 299 美元（14% 的折扣）。如果你没有这个会员资格，我强烈建议你申请一个来加速你的学习。该订阅提供了超过 7000 个关于最新技术的在线课程，包括数据科学和机器学习。
 
 或者，你也可以使用他们的 [**10 天免费试用**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 免费观看本课程。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>
 
-## 8.[Python 中的现代自然语言处理](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmodern-nlp%2F)
+## 8. [Python 中的现代自然语言处理](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmodern-nlp%2F)
 
 这是学习 Python 中自然语言处理的又一门高级课程。在本课程中，您将使用 Google Colab 中的 Tensorflow 2，使用 Transformer 和 CNN 解决 Seq2Seq 和分类 NLP 任务。
 
 在整个 NLP 课程中，您将利用网上的大量语音和文本数据，并探索两个主要且最强大的 NLP 应用程序，它们将赋予您成功应对任何现实挑战的能力。
 
-1.  首先，您将学习 CNN 来创建一个情感分析应用程序。
-2.  然后你将学习变形金刚，代替 RNNs，创建一个语言翻译系统。
+1. 首先，您将学习 CNN 来创建一个情感分析应用程序。
+2. 然后你将学习变形金刚，代替 RNNs，创建一个语言翻译系统。
 
 该课程还使用了最新的技术 Tensorflow 2.0 和 Google Colab，向您保证您不会有任何本地机器/软件版本/兼容性问题，并且您使用的是最新的工具。
 
@@ -151,45 +158,45 @@
 
 [![](img/b2a3333edf94da769b46756c5599db11.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmodern-nlp%2F)
 
-## 10.[机器学习的自然语言处理](https://www.educative.io/courses/natural-language-processing-ml?affiliate_id=5073518643380224)【教育性】
+## 10. [机器学习的自然语言处理](https://www.educative.io/courses/natural-language-processing-ml?affiliate_id=5073518643380224)【教育性】
 
-最佳 NLP 在线课程列表中的第 9 门课程与其他课程有些不同，因为它是一门基于文本的交互式课程，来自 [Educative](https://www.educative.io/subscription?affiliate_id=5073518643380224) ，允许你在浏览器中练习。是的，您可以在浏览器上阅读和学习的同时执行代码，而无需在您的机器上安装和设置任何软件。
+最佳 NLP 在线课程列表中的第 9 门课程与其他课程有些不同，因为它是一门基于文本的交互式课程，来自 [Educative](https://www.educative.io/subscription?affiliate_id=5073518643380224)，允许你在浏览器中练习。是的，您可以在浏览器上阅读和学习的同时执行代码，而无需在您的机器上安装和设置任何软件。
 
-在这个交互式 NLP 课程中，您将学习处理文本数据、创建单词嵌入以及使用长短期记忆网络(LSTM)进行语义分析和机器翻译等任务的技术，这将使您有信心解决行业中面临的重要的日常 NLP 问题。
+在这个交互式 NLP 课程中，您将学习处理文本数据、创建单词嵌入以及使用长短期记忆网络（LSTM）进行语义分析和机器翻译等任务的技术，这将使您有信心解决行业中面临的重要的日常 NLP 问题。
 
-本课程的代码是围绕 TensorFlow 框架(工业机器学习的主要框架之一)和用于数据分析的 Python pandas 库构建的。对了，Python 和 TensorFlow 的知识是前提。
+本课程的代码是围绕 TensorFlow 框架（工业机器学习的主要框架之一）和用于数据分析的 Python pandas 库构建的。对了，Python 和 TensorFlow 的知识是前提。
 
-这门课程是由 AdaptiLab 创建的，AdaptiLab 是一家专门评估、寻找和提升企业机器学习人才的公司。它是与来自谷歌、微软、亚马逊和苹果的行业机器学习专家合作建立的
+这门课程是由 AdaptiLab 创建的，AdaptiLab 是一家专门评估、寻找和提升企业机器学习人才的公司。它是与来自谷歌、微软、亚马逊和苹果的行业机器学习专家合作建立的。
 
 **这里是加入这个 NLP 课程**——[机器学习的自然语言处理](https://www.educative.io/courses/natural-language-processing-ml?affiliate_id=5073518643380224)的链接
 
 [![](img/7aeedb8c604d3a4ec368a617f61705a0.png)](https://www.educative.io/courses/natural-language-processing-ml?affiliate_id=5073518643380224)
 
-而且，如果你发现教育平台和他们的探索课程，如[探索系统设计面试](https://www.educative.io/collection/5668639101419520/5649050225344512?affiliate_id=5073518643380224)，探索面向对象编程面试，然后考虑获得 [**教育订阅**](https://www.educative.io/subscription?affiliate_id=5073518643380224) ，提供每月 18 美元的 100 多门课程。非常划算，非常适合准备编码面试和学习新技能。
+而且，如果你发现教育平台和他们的探索课程，如[探索系统设计面试](https://www.educative.io/collection/5668639101419520/5649050225344512?affiliate_id=5073518643380224)，探索面向对象编程面试，然后考虑获得 [**教育订阅**](https://www.educative.io/subscription?affiliate_id=5073518643380224)，提供每月 18 美元的 100 多门课程。非常划算，非常适合准备编码面试和学习新技能。
 
-<https://www.educative.io/subscription?affiliate_id=5073518643380224>  
+<https://www.educative.io/subscription?affiliate_id=5073518643380224>
 
 这就是学习自然语言处理或 NLP 的最佳课程。如果你正在学习 NLP，那么你可以加入这些课程中的一个，以一种更加结构化和系统化的方式来学习这些有用的主题。如果你渴望更多的资源，这里有更多的数据科学、机器学习和人工智能课程和书籍，你可能会觉得有用。
 
-*   [2023 年学习 Python 的 5 大课程](http://javarevisited.blogspot.sg/2018/03/top-5-courses-to-learn-python-in-2018.html)
-*   [哈佛和 IBM 的 9 门数据科学课程](https://becominghuman.ai/9-data-science-and-machine-learning-courses-by-harvard-ibm-udemy-and-others-12a0c7c23ec1)
-*   [面向初学者的 5 大机器学习算法](https://www.java67.com/2020/07/top-5-machine-learning-algorithms-for-beginners.html)
-*   [为了更好地学习，你可以做的 8 个 Python 项目](/@javinpaul/8-projects-you-can-buil-to-learn-python-in-2020-251dd5350d56)
-*   [2023 年五大数据可视化工具](https://www.java67.com/2020/07/top-5-data-visualization-tools-every.html)
-*   [排名前五的数据科学和机器学习课程](https://hackernoon.com/top-5-data-science-and-machine-learning-course-for-programmers-e724cfb9940a)
-*   [免费学习 Python 编码的五大网站](https://javarevisited.blogspot.com/2019/09/5-websites-to-learn-python-for-free.html)
-*   [在线学习 PyTorch 和 Keras 的前 5 门课程](https://www.java67.com/2020/06/top-5-courses-to-learn-pytorch-and-keras.html)
-*   [5 门免费课程学习机器学习的 R 编程](http://www.java67.com/2018/09/top-5-free-R-programming-courses-for-Data-Science-Machine-Learning-Programmers.html)
-*   [从零开始学习 Python 的前 5 本书](https://javarevisited.blogspot.com/2019/07/top-5-books-to-learn-python-in-2019.html)
-*   [学习熊猫数据分析的 5 门最佳课程](https://becominghuman.ai/5-best-courses-to-learn-pythons-pandas-libary-for-data-analysis-and-data-science-34b62abb0e96)
-*   [前 5 名张量流和机器学习课程](https://hackernoon.com/top-5-tensorflow-and-ml-courses-for-programmers-8b30111cad2c)
-*   [8 大 Python 机器学习库](https://javarevisited.blogspot.com/2018/10/top-8-python-libraries-for-data-science-machine-learning.html)
-*   [学习 PyTorch、Keras、Sci-kit 和 MatPlotLib 的 9 门课程](https://becominghuman.ai/10-free-courses-to-learn-python-machine-learning-libraries-scikit-learn-numpy-pandas-keras-3c77ba1a6907)
-*   [2023 年程序员可以学习的 10 项技术](http://www.java67.com/2018/01/top-10-web-mobile-and-big-data-framework-libraries-technologies-programmers-should-learn-in-2018.html)
-*   [2023 年初学者学习 Python 的 5 门免费课程](http://www.java67.com/2018/02/5-free-python-online-courses-for-beginners.html)
+- [2023 年学习 Python 的 5 大课程](http://javarevisited.blogspot.sg/2018/03/top-5-courses-to-learn-python-in-2018.html)
+- [哈佛和 IBM 的 9 门数据科学课程](https://becominghuman.ai/9-data-science-and-machine-learning-courses-by-harvard-ibm-udemy-and-others-12a0c7c23ec1)
+- [面向初学者的 5 大机器学习算法](https://www.java67.com/2020/07/top-5-machine-learning-algorithms-for-beginners.html)
+- [为了更好地学习，你可以做的 8 个 Python 项目](/@javinpaul/8-projects-you-can-buil-to-learn-python-in-2020-251dd5350d56)
+- [2023 年五大数据可视化工具](https://www.java67.com/2020/07/top-5-data-visualization-tools-every.html)
+- [排名前五的数据科学和机器学习课程](https://hackernoon.com/top-5-data-science-and-machine-learning-course-for-programmers-e724cfb9940a)
+- [免费学习 Python 编码的五大网站](https://javarevisited.blogspot.com/2019/09/5-websites-to-learn-python-for-free.html)
+- [在线学习 PyTorch 和 Keras 的前 5 门课程](https://www.java67.com/2020/06/top-5-courses-to-learn-pytorch-and-keras.html)
+- [5 门免费课程学习机器学习的 R 编程](http://www.java67.com/2018/09/top-5-free-R-programming-courses-for-Data-Science-Machine-Learning-Programmers.html)
+- [从零开始学习 Python 的前 5 本书](https://javarevisited.blogspot.com/2019/07/top-5-books-to-learn-python-in-2019.html)
+- [学习熊猫数据分析的 5 门最佳课程](https://becominghuman.ai/5-best-courses-to-learn-pythons-pandas-libary-for-data-analysis-and-data-science-34b62abb0e96)
+- [前 5 名张量流和机器学习课程](https://hackernoon.com/top-5-tensorflow-and-ml-courses-for-programmers-8b30111cad2c)
+- [8 大 Python 机器学习库](https://javarevisited.blogspot.com/2018/10/top-8-python-libraries-for-data-science-machine-learning.html)
+- [学习 PyTorch、Keras、Sci-kit 和 MatPlotLib 的 9 门课程](https://becominghuman.ai/10-free-courses-to-learn-python-machine-learning-libraries-scikit-learn-numpy-pandas-keras-3c77ba1a6907)
+- [2023 年程序员可以学习的 10 项技术](http://www.java67.com/2018/01/top-10-web-mobile-and-big-data-framework-libraries-technologies-programmers-should-learn-in-2018.html)
+- [2023 年初学者学习 Python 的 5 门免费课程](http://www.java67.com/2018/02/5-free-python-online-courses-for-beginners.html)
 
-感谢您阅读本文。如果你觉得这些*最佳自然语言处理(NLP)在线课程*有用，那么请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
+感谢您阅读本文。如果你觉得这些*最佳自然语言处理（NLP）在线课程*有用，那么请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
-**p . s .**——如果你认真学习自然语言处理，但负担不起这些课程，而不是在 NLP 上寻找免费的在线培训课程，那么你也可以在 Udemy 上查看由 Analytics Vidhya 提供的 [**自然语言处理简介**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fintroduction-to-natural-language-processing%2F) 。这是一个完全免费的课程，你只需要一个免费的 Udemy 帐户就可以参加。
+**p.s.**——如果你认真学习自然语言处理，但负担不起这些课程，而不是在 NLP 上寻找免费的在线培训课程，那么你也可以在 Udemy 上查看由 Analytics Vidhya 提供的 [**自然语言处理简介**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fintroduction-to-natural-language-processing%2F)。这是一个完全免费的课程，你只需要一个免费的 Udemy 帐户就可以参加。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fintroduction-to-natural-language-processing%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fintroduction-to-natural-language-processing%2F>

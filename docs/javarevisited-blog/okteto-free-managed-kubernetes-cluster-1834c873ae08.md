@@ -1,4 +1,5 @@
-# Okteto:自由管理的 Kubernetes 集群
+
+# Okteto：自由管理的 Kubernetes 集群
 
 > 原文：<https://medium.com/javarevisited/okteto-free-managed-kubernetes-cluster-1834c873ae08?source=collection_archive---------0----------------------->
 
@@ -8,4 +9,4 @@
 
 照片由 [Unsplash](https://unsplash.com/s/photos/kubernetes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 上的 [Ihor Dvoretskyi](https://unsplash.com/@ihor_dvoretskyi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 拍摄
 
-最近，我一直在寻找一个免费的 Kubernetes 集群来运行我的一些实验工作。多亏了一篇在线文章，我找到了 **Okteto** ，一家将会颠覆软件团队开发现代应用的创业公司。就在上个月，他们宣布在首轮融资中筹集了 1500 万美元。的…
+最近，我一直在寻找一个免费的 Kubernetes 集群来运行我的一些实验工作。多亏了一篇在线文章，我找到了 **Okteto**，一家将会颠覆软件团队开发现代应用的创业公司。就在上个月，他们宣布在首轮融资中筹集了 1500 万美元。的…

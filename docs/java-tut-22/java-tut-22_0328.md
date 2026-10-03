@@ -1,3 +1,4 @@
+
 # 使用 JAR 文件：基础知识
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/jar/basicsindex.html`](https://docs.oracle.com/javase/tutorial/deployment/jar/basicsindex.html)
@@ -19,17 +20,14 @@ JAR 文件使用 ZIP 文件格式打包，因此您可以将它们用于诸如�
 | 提取 JAR 文件的内容 | `jar xf *jar-file*` |
 | 从 JAR 文件中提取特定文件 | `jar xf *jar-file archived-file(s)*` |
 | 运行打包为 JAR 文件的应用程序（需要`Main-class`清单头） | `java -jar *app.jar*` |
-| 调用打包为 JAR 文件的小程序 |
+| 调用打包为 JAR 文件的小程序 | `java` |
 
 ```java
 <applet code=*AppletClassName.class*
         archive="*JarFileName.jar*"
         width=*width* height=*height*>
 </applet>
-
 ```
-
-|
 
 本节向您展示如何执行最常见的 JAR 文件操作，并为每个基本功能提供示例：
 
@@ -57,6 +55,5 @@ JAR 文件使用 ZIP 文件格式打包，因此您可以将它们用于诸如�
 
 JDK 的文档包括 Jar 工具的参考页面：
 
-+   [Windows 平台的 Jar 工具参考](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jar.html)
-
-+   [UNIX 平台的 Jar 工具参考](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jar.html)
++ [Windows 平台的 Jar 工具参考](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jar.html)
++ [UNIX 平台的 Jar 工具参考](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jar.html)

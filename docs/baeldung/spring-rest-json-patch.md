@@ -1,19 +1,20 @@
+
 # 在 Spring REST APIs 中使用 JSON 补丁
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-rest-json-patch>
 
-## 1.介绍
+## 1. 介绍
 
-在各种可用的 HTTP 方法中，HTTP PATCH 方法扮演着独特的角色。它允许我们对 HTTP 资源应用部分更新。
+在各种可用的 HTTP 方法中，`HTTP PATCH`方法扮演着独特的角色。它允许我们对 HTTP 资源应用部分更新。
 
 在本教程中，我们将了解如何使用 HTTP 补丁方法和 JSON 补丁文档格式对 RESTful 资源进行部分更新。
 
-## 2.使用案例
+## 2. 使用案例
 
 让我们首先考虑一个由 JSON 文档表示的示例 HTTP `Customer`资源:
 
 ```java
-{ 
+{
     "id":"1",
     "telephone":"001-555-1234",
     "favorites":["Milk","Eggs"],
@@ -31,7 +32,7 @@
 
 让我们了解 HTTP 补丁方法和 JSON 补丁格式。
 
-## 3.HTTP 补丁方法和 JSON 补丁格式
+## 3. HTTP 补丁方法和 JSON 补丁格式
 
 HTTP PATCH 方法提供了一种对资源应用部分更新的好方法。因此，客户端只需要发送它们请求中的差异。
 
@@ -53,7 +54,7 @@ Content-Length: 100
 
 现在让我们看看 JSON 补丁操作和一些例子。
 
-## 4.JSON 补丁操作
+## 4. JSON 补丁操作
 
 JSON 补丁操作由单个`op`对象表示。
 
@@ -71,7 +72,7 @@ JSON 补丁操作由单个`op`对象表示。
 
 现在让我们简要地看一下可用的 JSON 补丁操作。
 
-### 4.1。`add`行动
+### 4.1. `add`行动
 
 我们使用`add`操作向对象添加一个新成员。此外，我们可以用它来更新一个现有的成员，并在数组的指定索引处插入一个新值。
 
@@ -96,7 +97,7 @@ JSON 补丁操作由单个`op`对象表示。
 }
 ```
 
-### 4.2。`remove`行动
+### 4.2. `remove`行动
 
 `remove`操作删除目标位置的值。此外，它可以从数组中移除指定索引处的元素。
 
@@ -120,7 +121,7 @@ JSON 补丁操作由单个`op`对象表示。
 }
 ```
 
-### 4.3。`replace`行动
+### 4.3. `replace`行动
 
 `replace`操作用新值更新目标位置的值。
 
@@ -137,15 +138,15 @@ JSON 补丁操作由单个`op`对象表示。
 在`replace`操作之后，修改后的客户详细信息将是:
 
 ```java
-{ 
-    "id":"1", 
-    "telephone":"001-555-5678", 
-    "favorites":["Bread","Milk","Eggs"], 
+{
+    "id":"1",
+    "telephone":"001-555-5678",
+    "favorites":["Bread","Milk","Eggs"],
     "communicationPreferences":null
 }
 ```
 
-### 4.4。`move`行动
+### 4.4. `move`行动
 
 `move`操作删除指定位置的值，并将其添加到目标位置。
 
@@ -162,17 +163,17 @@ JSON 补丁操作由单个`op`对象表示。
 在`move`操作之后，修改后的客户详细信息将是:
 
 ```java
-{ 
-    "id":"1", 
-    "telephone":"001-555-5678", 
-    "favorites":["Milk","Eggs","Bread"], 
+{
+    "id":"1",
+    "telephone":"001-555-5678",
+    "favorites":["Milk","Eggs","Bread"],
     "communicationPreferences":null
-} 
+}
 ```
 
 上例中的`/favorites/0`和`/favorites/-`是指向`favorites`数组的开始和结束索引的 JSON 指针。
 
-### 4.5。`copy`行动
+### 4.5. `copy`行动
 
 `copy`操作将指定位置的值复制到目标位置。
 
@@ -189,15 +190,15 @@ JSON 补丁操作由单个`op`对象表示。
 在`copy`操作之后，修改后的客户详细信息将是:
 
 ```java
-{ 
-    "id":"1", 
-    "telephone":"001-555-5678", 
-    "favorites":["Milk","Eggs","Bread","Milk"], 
+{
+    "id":"1",
+    "telephone":"001-555-5678",
+    "favorites":["Milk","Eggs","Bread","Milk"],
     "communicationPreferences":null
 }
 ```
 
-### 4.6。`test`行动
+### 4.6. `test`行动
 
 `test`操作测试“路径”上的值是否等于“值”。因为修补操作是原子性的，所以如果它的任何操作失败，就应该丢弃该修补程序。`test`操作可用于验证先决条件和后置条件是否得到满足。
 
@@ -205,15 +206,15 @@ JSON 补丁操作由单个`op`对象表示。
 
 ```java
 {
-    "op":"test", 
+    "op":"test",
     "path":"/telephone",
     "value":"001-555-5678"
-} 
+}
 ```
 
 现在让我们看看如何将上述概念应用到我们的示例中。
 
-## 5.使用 JSON 补丁格式的 HTTP 补丁请求
+## 5. 使用 JSON 补丁格式的 HTTP 补丁请求
 
 我们将重温我们的`Customer`用例。
 
@@ -223,7 +224,7 @@ JSON 补丁操作由单个`op`对象表示。
 curl -i -X PATCH http://localhost:8080/customers/1 -H "Content-Type: application/json-patch+json" -d '[
     {"op":"replace","path":"/telephone","value":"+1-555-56"},
     {"op":"add","path":"/favorites/0","value":"Bread"}
-]' 
+]'
 ```
 
 **最重要的是，JSON 补丁请求的`Content-Type`是`application/json-patch+json`。同样，请求体是一个 JSON 补丁操作对象的数组:**
@@ -247,9 +248,9 @@ curl -i -X PATCH http://localhost:8080/customers/1 -H "Content-Type: application
 
 现在让我们看看如何使用上述 JSON 补丁格式构建一个使用 HTTP 补丁请求的 REST 服务。
 
-## 6.在 Spring Boot 应用程序中实现 JSON 补丁
+## 6. 在 Spring Boot 应用程序中实现 JSON 补丁
 
-### 6.1.属国
+### 6.1. 属国
 
 json 补丁的最新版本可以在 Maven 中央存储库中找到。
 
@@ -278,7 +279,7 @@ public class Customer {
 
 接下来，我们将看看我们的控制器方法。
 
-### 6.2.静止控制器方法
+### 6.2. 静止控制器方法
 
 然后，我们可以为我们的客户用例实现 HTTP 补丁:
 
@@ -295,7 +296,7 @@ public ResponseEntity<Customer> updateCustomer(@PathVariable String id, @Request
     } catch (CustomerNotFoundException e) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
-} 
+}
 ```
 
 现在让我们来理解这种方法是怎么回事:
@@ -317,7 +318,7 @@ private Customer applyPatchToCustomer(
   JsonPatch patch, Customer targetCustomer) throws JsonPatchException, JsonProcessingException {
     JsonNode patched = patch.apply(objectMapper.convertValue(targetCustomer, JsonNode.class));
     return objectMapper.treeToValue(patched, Customer.class);
-} 
+}
 ```
 
 1.  首先，我们有一个`JsonPatch`实例，它保存了应用于目标`Customer`的操作列表
@@ -327,18 +328,20 @@ private Customer applyPatchToCustomer(
 
 现在让我们针对我们的 API 运行一些测试。
 
-### 6.3.测试
+### 6.3. 测试
 
 首先，让我们使用对 API 的 POST 请求来创建一个客户:
 
 ```java
-curl -i -X POST http://localhost:8080/customers -H "Content-Type: application/json" 
-  -d '{"telephone":"+1-555-12","favorites":["Milk","Eggs"],"communicationPreferences":{"post":true,"email":true}}' 
+curl -i -X POST http://localhost:8080/customers -H "Content-Type: application/json"
+  -d '{"telephone":"+1-555-12","favorites":["Milk","Eggs"],"communicationPreferences":{"post":true,"email":true}}'
 ```
 
-我们收到一个`201 Created` 响应:
 
-```java
+
+我们收到一个`201 Created`响应:
+
+```
 HTTP/1.1 201
 Location: http://localhost:8080/customers/1 
 ```
@@ -347,7 +350,7 @@ Location: http://localhost:8080/customers/1
 
 接下来，让我们使用补丁请求向该客户请求部分更新:
 
-```java
+```
 curl -i -X PATCH http://localhost:8080/customers/1 -H "Content-Type: application/json-patch+json" -d '[
     {"op":"replace","path":"/telephone","value":"+1-555-56"}, 
     {"op":"add","path":"/favorites/0","value": "Bread"}
@@ -356,7 +359,7 @@ curl -i -X PATCH http://localhost:8080/customers/1 -H "Content-Type: application
 
 我们收到一个`200` `OK`响应，其中包含修补后的客户详细信息:
 
-```java
+```
 HTTP/1.1 200
 Content-Type: application/json
 Transfer-Encoding: chunked
@@ -365,7 +368,7 @@ Date: Fri, 14 Feb 2020 21:23:14 GMT
 {"id":"1","telephone":"+1-555-56","favorites":["Bread","Milk","Eggs"],"communicationPreferences":{"post":true,"email":true}}
 ```
 
-## 7.结论
+## 7. 结论
 
 在本文中，我们研究了如何在 Spring REST APIs 中实现 JSON 补丁。
 
@@ -373,6 +376,6 @@ Date: Fri, 14 Feb 2020 21:23:14 GMT
 
 然后，我们研究了什么是 JSON 补丁，并理解了各种 JSON 补丁操作。
 
-最后，我们讨论了如何使用 json-patch 库在 Spring Boot 应用程序中处理 HTTP 补丁请求。
+最后，我们讨论了如何使用`json-patch`库在 Spring Boot 应用程序中处理 HTTP 补丁请求。
 
 与往常一样，本文中使用的示例的源代码可以在 GitHub 上的[处获得。](https://web.archive.org/web/20220629003311/https://github.com/eugenp/tutorials/tree/master/spring-web-modules/spring-rest-http)

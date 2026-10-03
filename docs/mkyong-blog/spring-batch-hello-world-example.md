@@ -1,33 +1,34 @@
+
 # 春季批次 Hello World 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring-batch/spring-batch-hello-world-example/>
 
-Spring Batch 是一个批处理框架——执行一系列作业。在 Spring Batch 中，一个作业由许多步骤组成，每个步骤由一个`READ-PROCESS-WRITE`任务或`single operation` 任务(小任务)组成。
+Spring Batch 是一个批处理框架——执行一系列作业。在 Spring Batch 中，一个作业由许多步骤组成，每个步骤由一个`READ-PROCESS-WRITE`任务或`single operation`任务（小任务）组成。
 
-1.  对于“读取-处理-写入”过程，它意味着从资源(csv、xml 或数据库)中“读取”数据，“处理”它并将它“写入”到其他资源(csv、xml 和数据库)。例如，一个步骤可以从 CSV 文件中读取数据，对其进行处理并将其写入数据库。Spring Batch 提供了许多用来读/写 CSV、XML 和数据库的类。
-2.  对于“单个”操作任务(tasklet)，它意味着只执行单个任务，比如在一个步骤开始或完成之前或之后清理资源。
-3.  并且这些步骤可以链接在一起作为一个作业运行。
+1. 对于“读取-处理-写入”过程，它意味着从资源（csv、xml 或数据库）中“读取”数据，“处理”它并将它“写入”到其他资源（csv、xml 和数据库）。例如，一个步骤可以从 CSV 文件中读取数据，对其进行处理并将其写入数据库。Spring Batch 提供了许多用来读/写 CSV、XML 和数据库的类。
+2. 对于“单个”操作任务（tasklet），它意味着只执行单个任务，比如在一个步骤开始或完成之前或之后清理资源。
+3. 并且这些步骤可以链接在一起作为一个作业运行。
 
-```java
- 1 Job = Many Steps.
+```
+1 Job = Many Steps.
 1 Step = 1 READ-PROCESS-WRITE or 1 Tasklet.
-Job = {Step 1 -> Step 2 -> Step 3} (Chained together) 
+Job = {Step 1 -> Step 2 -> Step 3} (Chained together)
 ```
 
 ## 春季批次示例
 
-考虑以下批处理作业:
+考虑以下批处理作业：
 
-1.  步骤 1–从文件夹 A 读取 CSV 文件，处理，将其写入文件夹 b。“读取-处理-写入”
-2.  步骤 2-从文件夹 B 中读取 CSV 文件，处理，将其写入数据库。"读取-处理-写入"
-3.  步骤 3–从文件夹 b“Tasklet”中删除 CSB 文件
-4.  步骤 4-从数据库中读取数据，处理并生成 XML 格式的统计报告，将其写入文件夹 c。“读取-处理-写入”
-5.  第 5 步-阅读报告并将其发送至经理邮箱。“小任务”
+1. 步骤 1–从文件夹 A 读取 CSV 文件，处理，将其写入文件夹 b。“读取-处理-写入”
+2. 步骤 2-从文件夹 B 中读取 CSV 文件，处理，将其写入数据库。"读取-处理-写入"
+3. 步骤 3–从文件夹 b“Tasklet”中删除 CSB 文件
+4. 步骤 4-从数据库中读取数据，处理并生成 XML 格式的统计报告，将其写入文件夹 c。“读取-处理-写入”
+5. 第 5 步-阅读报告并将其发送至经理邮箱。“小任务”
 
-在 Spring 批处理中，我们可以声明如下:
+在 Spring 批处理中，我们可以声明如下：
 
-```java
- <job id="abcJob" >
+```
+<job id="abcJob" >
 	<step id="step1" next="step2">
 	  <tasklet>
 		<chunk reader="cvsItemReader" writer="cvsItemWriter"  
@@ -52,39 +53,39 @@ Job = {Step 1 -> Step 2 -> Step 3} (Chained together)
 	<step id="step5">
 		<tasklet ref="sendingEmailTasklet" />
 	</step>
-  </job> 
+  </job>
 ```
 
 整个作业和步骤的执行都存储在数据库中，这使得失败的步骤能够从失败的地方重新开始，而不需要重新开始整个作业。
 
- ## 1.辅导的
+## 1. 辅导的
 
 在这个 Spring 批处理教程中，我们将向您展示如何创建作业、读取 CSV 文件、处理它、将输出写入 XML 文件。
 
 使用的工具和库
 
-1.  maven3
-2.  Eclipse 4.2
-3.  JDK 1.6
-4.  弹簧芯 3.2.2 .释放
-5.  春季 OXM 3.2.2 .发布
-6.  春季 JDBC 3.2.2 .发布
-7.  春季批次 2.2.0 .发布
+1. maven3
+2. Eclipse 4.2
+3. JDK 1.6
+4. 弹簧芯 3.2.2 .释放
+5. 春季 OXM 3.2.2 .发布
+6. 春季 JDBC 3.2.2 .发布
+7. 春季批次 2.2.0 .发布
 
- ## 2.项目目录
+## 2. 项目目录
 
 查看最终项目目录，这是一个标准的 Maven 项目。
 
 ![spring-batch-hello-world-directory](img/c7e69c584dc777f52d5bb3a474a36aa2.png)
 
-## 3.项目相关性
+## 3. 项目相关性
 
 他们必须依赖的只是 Spring Core、Spring Batch 和 JDK 1.5。阅读注释，了解更多信息。
 
-pom.xml
+`pom.xml`
 
-```java
- <project  
+```
+<project  
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
 	http://maven.apache.org/maven-v4_0_0.xsd">
@@ -185,28 +186,27 @@ pom.xml
 			</plugin>
 		</plugins>
 	</build>
-</project> 
+</project>
 ```
 
-## 4.春季批处理作业
+## 4. 春季批处理作业
 
 CSV 文件。
 
-report.csv
+`report.csv`
 
-```java
- 1001,"213,100",980,"mkyong", 29/7/2013
+```
+1001,"213,100",980,"mkyong", 29/7/2013
 1002,"320,200",1080,"staff 1", 30/7/2013
-1003,"342,197",1200,"staff 2", 31/7/2013 
+1003,"342,197",1200,"staff 2", 31/7/2013
 ```
 
-一个 Spring 批处理作业，用`FlatFileItemReader`读取上述 csv 文件，用`itemProcessor`处理数据，用`StaxEventItemWriter`将数据写入 XML 文件
-。
+一个 Spring 批处理作业，用`FlatFileItemReader`读取上述 csv 文件，用`itemProcessor`处理数据，用`StaxEventItemWriter`将数据写入 XML 文件。
 
-job-hello-world.xml
+`job-hello-world.xml`
 
-```java
- <beans 
+```
+<beans 
 	xmlns:batch="http://www.springframework.org/schema/batch" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/batch
@@ -272,15 +272,17 @@ job-hello-world.xml
 	    </property>
 	</bean>
 
-</beans> 
+</beans>
 ```
 
-将 CSV 值映射到`Report`对象，并将其写入 XML 文件(通过 jaxb 注释)。
+将 CSV 值映射到`Report`对象，并将其写入 XML 文件（通过 jaxb 注释）。
 
-Report.java
+`Report.java`
+
+
 
 ```java
- package com.mkyong.model;
+package com.mkyong.model;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -347,15 +349,15 @@ public class Report {
                     + ", qty=" + qty + ", staffName=" + staffName + "]";
 	}
 
-} 
+}
 ```
 
 要转换一个`Date`，需要一个自定义的`FieldSetMapper`。如果没有数据类型转换，只需使用`BeanWrapperFieldSetMapper`自动按名称映射值。
 
-ReportFieldSetMapper.java
+`ReportFieldSetMapper.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -391,15 +393,15 @@ public class ReportFieldSetMapper implements FieldSetMapper<Report> {
 
 	}
 
-} 
+}
 ```
 
-itemProcessor 将在 itemWriter 之前被激发。
+`itemProcessor`将在`itemWriter`之前被激发。
 
-CustomItemProcessor.java
+`CustomItemProcessor.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.batch.item.ItemProcessor;
 import com.mkyong.model.Report;
@@ -413,15 +415,15 @@ public class CustomItemProcessor implements ItemProcessor<Report, Report> {
 		return item;
 	}
 
-} 
+}
 ```
 
 Spring 上下文和数据库配置。
 
-context.xml
+`context.xml`
 
-```java
- <beans 
+```xml
+<beans 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="
 		http://www.springframework.org/schema/beans 
@@ -451,13 +453,13 @@ context.xml
 		<property name="jobRepository" ref="jobRepository" />
 	</bean>
 
-</beans> 
+</beans>
 ```
 
-database.xml
+`database.xml`
 
-```java
- <beans 
+```xml
+<beans 
 	xmlns:jdbc="http://www.springframework.org/schema/jdbc" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
@@ -483,15 +485,15 @@ database.xml
 		<jdbc:script location="org/springframework/batch/core/schema-mysql.sql" />
 	</jdbc:initialize-database>
 
-</beans> 
+</beans>
 ```
 
-#### 5.运行它
+### 5. 运行它
 
 运行批处理作业的最简单方法。
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecution;
@@ -526,15 +528,15 @@ public class App {
 	System.out.println("Done");
 
   }
-} 
+}
 ```
 
 输出
 
-report.xml
+`report.xml`
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <report>
 	<record id="1001">
 		<date>2013-07-29T00:00:00+08:00</date>
@@ -554,13 +556,13 @@ report.xml
 		<sales>342197</sales>
 		<staffName>staff 2</staffName>
 	</record>
-</report> 
+</report>
 ```
 
 在控制台中
 
 ```java
- Jul 30, 2013 11:52:00 PM org.springframework.batch.core.launch.support.SimpleJobLauncher$1 run
+Jul 30, 2013 11:52:00 PM org.springframework.batch.core.launch.support.SimpleJobLauncher$1 run
 INFO: Job: [FlowJob: [name=helloWorldJob]] launched with the following parameters: [{}]
 Jul 30, 2013 11:52:00 PM org.springframework.batch.core.job.SimpleStepHandler handleStep
 INFO: Executing step: [step1]
@@ -570,7 +572,7 @@ Processing...Report [id=1003, sales=342197, qty=1200, staffName=staff 2]
 Jul 30, 2013 11:52:00 PM org.springframework.batch.core.launch.support.SimpleJobLauncher$1 run
 INFO: Job: [FlowJob: [name=helloWorldJob]] completed with the following parameters: [{}] and the following status: [COMPLETED]
 Exit Status : COMPLETED
-Done 
+Done
 ```
 
 ## 下载源代码
@@ -579,15 +581,10 @@ Download it – [SpringBatch-Hello-World-Example.zip](http://web.archive.org/web
 
 ## 参考
 
-1.  [什么是批处理](http://web.archive.org/web/20190304005017/http://en.wikipedia.org/wiki/Batch_processing)
-2.  [春季批量框架](http://web.archive.org/web/20190304005017/http://static.springsource.org/spring-batch/)
-3.  [春季批次–参考文件](http://web.archive.org/web/20190304005017/http://static.springsource.org/spring-batch/reference/html/)
-
-[hello world](http://web.archive.org/web/20190304005017/http://www.mkyong.com/tag/hello-world/) [spring batch](http://web.archive.org/web/20190304005017/http://www.mkyong.com/tag/spring-batch/)
+1. [什么是批处理](http://web.archive.org/web/20190304005017/http://en.wikipedia.org/wiki/Batch_processing)
+2. [春季批量框架](http://web.archive.org/web/20190304005017/http://static.springsource.org/spring-batch/)
+3. [春季批次–参考文件](http://web.archive.org/web/20190304005017/http://static.springsource.org/spring-batch/reference/html/)
 
 
 
-
-
-
-
+[`hello world`](http://web.archive.org/web/20190304005017/http://www.mkyong.com/tag/hello-world/) [`spring batch`](http://web.archive.org/web/20190304005017/http://www.mkyong.com/tag/spring-batch/)

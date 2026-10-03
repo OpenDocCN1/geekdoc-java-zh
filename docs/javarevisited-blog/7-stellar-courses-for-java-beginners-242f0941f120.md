@@ -1,3 +1,4 @@
+
 # 面向 Java 初学者的 7 门一流课程
 
 > 原文：<https://medium.com/javarevisited/7-stellar-courses-for-java-beginners-242f0941f120?source=collection_archive---------4----------------------->
@@ -14,11 +15,11 @@
 
 这个博客充满了你作为一个初学者或者有抱负的 [Java 程序员](/javarevisited/top-10-free-courses-to-learn-spring-framework-for-java-developers-639db9348d25)所需要的信息。先来列举一下 [*最好的 Java 实用课程*](/javarevisited/top-5-java-online-courses-for-beginners-best-of-lot-1e1e240a758) 你可以选择。
 
-# 面向初学者的实用 Java 课程
+## 面向初学者的实用 Java 课程
 
-对初学者来说，最大的障碍之一是找到对你有益的最佳课程。有几十种在线资源可供选择，很难做出选择。在文章的这一部分，我将向您介绍一些非常有用的在线门户，它们提供了最佳的 java 学习体验。
+对初学者来说，最大的障碍之一是找到对你有益的最佳课程。有几十种在线资源可供选择，很难做出选择。在文章的这一部分，我将向您介绍一些非常有用的在线门户，它们提供了最佳的 Java 学习体验。
 
-# [CodeGym](https://codegym.cc/)
+### [CodeGym](https://codegym.cc/)
 
 ![](img/6fce5bf86fad78de2f0654f3577eeccd.png)
 
@@ -34,7 +35,7 @@ CodeGym 提供了 40 个不同的级别和 1200 多个编码挑战，可以快�
 
 Premium Pro subscription 增加了几个功能:您可以重新检查您的解决方案(以不同的方式解决相同的问题，并使用智能验证器多次检查)，还可以获得对您的编码风格的分析。
 
-# [代码大战](https://www.codewars.com/)
+### [代码大战](https://www.codewars.com/)
 
 ![](img/802f092351967fe7b28c0e35a8d8fcde.png)
 
@@ -46,7 +47,7 @@ Premium Pro subscription 增加了几个功能:您可以重新检查您的解决
 
 价格为 9.99 美元/月，可以访问学习例程和其他教程。
 
-# [厨师长](https://www.codechef.com/)
+### [厨师长](https://www.codechef.com/)
 
 ![](img/1ea734177bae07190e4435bcddc6b9a4.png)
 
@@ -54,23 +55,23 @@ CodeChef 以举办编码竞赛而闻名，全球的程序员都可以参加这�
 
 即使知道 CodeChef 是完全免费的，谁也不会选择它，所以不要等了，赶快动手吧！但是请记住，这不是一门课程，这是一个编程平台，你应该知道你的[编程语言](/javarevisited/why-java-is-the-best-programming-language-to-learn-coding-for-beginners-cba79aed1271)至少一点点，即使是对于一个新手的挑战。
 
-# [编码名称](https://www.codingame.com/start)
+### [编码名称](https://www.codingame.com/start)
 
 ![](img/fde1af27420d82ba3ca1d8b963710b92.png)
 
 当你点击这个网址的时候，你会被重定向到主页，在那里你会看到一个游戏，你会觉得你是其中的一部分。这个平台将扔给你的下一个东西，是一个带有使命陈述的对话框。之后，它会给你密码，并要求你把它放在一个合适的地方，这样你在游戏中的武器就可以重新装载弹药，开始向敌人的飞船开火！
 
-除了学习 java，你还可以从总共 27 种编程语言中进行选择。CodinGame 的另一个重要优势是，它是一个来自不同公司的招聘人员不断检查你表现的平台。如果你的游戏足够好，谁知道你会不会作为一名有成就的程序员在财富 500 强公司中获得一个席位呢？
+除了学习 Java，你还可以从总共 27 种编程语言中进行选择。CodinGame 的另一个重要优势是，它是一个来自不同公司的招聘人员不断检查你表现的平台。如果你的游戏足够好，谁知道你会不会作为一名有成就的程序员在财富 500 强公司中获得一个席位呢？
 
 和 CodeChef 一样，这个平台也需要你具备一些编程知识。
 
 UPD >开发者练习技能的平台对每个人都是免费的。CodinGame for Work 提供 14 天的免费试用，之后，你可以选择价格为 349 美元/月的增长套餐，然后是价值 249 美元/月的企业套餐，为期一年。
 
-# 理论 Java 课程
+## 理论 Java 课程
 
-下面，你会发现一些真正足智多谋的 java 学习课程，确保注册这些课程是绝对值得的！
+下面，你会发现一些真正足智多谋的 Java 学习课程，确保注册这些课程是绝对值得的！
 
-# [完整的 Java Masterclass](https://www.udemy.com/course/java-programming-course/)
+### [完整的 Java Masterclass](https://www.udemy.com/course/java-programming-course/)
 
 [![](img/af3cf1b582e91247f87fdce258a03efb.png)](http://bit.ly/2AHuthF)
 
@@ -80,7 +81,7 @@ UPD >开发者练习技能的平台对每个人都是免费的。CodinGame for W
 
 Java 编程大师班的价格标签是 129.99 美元。
 
-# [杜克大学 Java 认证](https://www.coursera.org/specializations/java-programming)
+### [杜克大学 Java 认证](https://www.coursera.org/specializations/java-programming)
 
 [![](img/5c47da2321af29066376f86e0b5e6b19.png)](https://javarevisited.blogspot.com/2020/11/coursera-course-review-java-programming-and-software-engineering-fundametnals.html#axzz6rQaZvLlb)
 
@@ -88,7 +89,7 @@ Java 编程大师班的价格标签是 129.99 美元。
 
 在 [Coursera](/javarevisited/10-best-software-development-courses-certifications-from-coursera-4ccc59aae201) 上，你可以以 49 美元/月的价格报名参加这个课程。然而，如果你想免费得到这个，你也可以申请经济资助。
 
-# [Java 深入:成为一名完整的 Java 工程师！](https://www.udemy.com/course/java-in-depth-become-a-complete-java-engineer/)
+### [Java 深入:成为一名完整的 Java 工程师！](https://www.udemy.com/course/java-in-depth-become-a-complete-java-engineer/)
 
 [![](img/e140d8136a85ccb89014f1acc05d5e74.png)](https://medium.com/javarevisited/10-free-courses-to-learn-java-in-2019-22d1f33a3915?source=collection_home---4------8-----------------------)
 
@@ -98,7 +99,7 @@ Java 编程大师班的价格标签是 129.99 美元。
 
 这门课的价格是 94.99 美元。
 
-# 包扎
+## 包扎
 
 和我们在一起意味着你要么是一个正在寻找课程学习的初级程序员，要么是一个只想改变语言的专业人士。
 

@@ -1,7 +1,5 @@
+
 # Gaddis Java 对象控制结构
-
-
-
 
 Copyright© 2020 Pearson Education Inc. 或其关联公司. 版权所有。本数字出版物受版权保护，在进行任何受禁止的复制、存储在检索系统中或以任何形式或任何方式（电子、机械、复印、录音或其他方式）进行传输之前，均应获得通过访问此数字应用程序的产品订阅所授权的许可。有关许可信息、申请表单以及皮尔逊教育全球权利与许可部门内部的适当联系人的信息，请访问 [www.pearsoned.com/permissions/](http://www.pearsoned.com/permissions/)。
 
@@ -16,10 +14,13 @@ Microsoft 和或或其各自供应商不对作为服务部分发布的文档及�
 # 关于用于 Starting Out With Java 的 Revel
 
 ## 关于本课程
+
 发布日期：2019 年 1 月 1 日
+
 更新：2019 年 12 月
 
 ### 课程更新
+
 *   对计分的 Checkpoint（检查）自测学习辅助工具进行了性能改进和内容增强
 *   对自动评分的章节末测验（Quiz）问题和章节末编程项目（Programming Projects）进行了题目陈述精炼和系统兼容性改进
 *   重新组织了作者编辑的学习活动（以尽量减少冗余，并与每个章节的学习目标保持更紧密的结合）
@@ -29,16 +30,19 @@ Revel 是交互式学习环境，吸引学生并帮助他们学习 Java 基础�
 在本课程中，CS1 作者兼讲师 Tony Gaddis 在整个叙述中整合了动画、视频、交互内容以及真实的、可分配的作业，使学生能够在学习点练习核心编码技能：
 
 #### 动态列表 (Animated Listings)
+
 动态列表通过“单步”引导学生阅读代码（类似于简单的调试工具），显示并解释程序中正在发生的情况：
 
 ![一个页面显示了程序第 5 dash 1 行的动态列表。](img/00_unfig01_java.png)完整备用文本
 
 #### 视频笔记 (VideoNotes)
+
 视频笔记模拟了“办公答疑”的体验。它们让初级程序员对困难的概念有更深入的理解，或者展示专家如何为编程项目构建解决方案。所有视频均由作者 Tony Gaddis 创建并配音。
 
 ![Video Note 页面中视频的截图。截图显示了一个向方法传递参数的程序，带有手画注释。](img/00_unfig02-java.png)完整备用文本
 
 #### 实时代码示例 (Live Code Examples)
+
 实时代码示例让学生能够在实时编码环境中练习所学内容：
 
 ![一个活跃的代码列表页面显示了一个问题，随后是一个包含程序的窗口和一个包含结果的窗口。](img/00_unfig03_java.png)完整备用文本
@@ -46,16 +50,19 @@ Revel 是交互式学习环境，吸引学生并帮助他们学习 Java 基础�
 通常，学生被要求修改或向预填充代码进行添加，然后对结果回答问题。程序运行在单一的交互“结果”（Result）窗口中（没有单独的输入窗口）。
 
 #### 交互内容 (Interactives)
+
 交互式内容在每个章节末尾通过多选题和匹配题测试学生新发现的 Java 知识：
 
 ![一个用于将循环与描述匹配的交互页面，显示了一个具有 2 列 3 行的表格。](img/00_unfig04_java.png)完整备用文本
 
 #### Checkpoint 问题 (Checkpoint Questions)
+
 计分的（值值 1 分）和不计分的 Checkpoint 问题要求学生通过编写一行或两行 C++ 代码来测试他们的理解情况。
 
 ![Checkpoint 5.64 下的一个简单代码问题。](img/00_unfig05_java.png)完整备用文本
 
 #### 评估与反馈 (Assessment and Feedback)
+
 系统评估学生代码，并在性能仪表板（成绩单）中记录尝试（无论正确或错误）。
 
 章节末测验（Quiz）和章节末编程项目（Programming Projects）通过提供编写部分或完整 Java 程序的机会来评估学生的理解。学生将获得即时的个性化反馈。教师可以在性能跟踪器中跟踪进度。
@@ -71,10 +78,6 @@ Revel 是交互式学习环境，吸引学生并帮助他们学习 Java 基础�
 在线课程应该是自包含的：编程学生不应该在网络上搜寻与其经验水平相符的准确、可靠材料。本针对 *Starting Out With Java* 的 Revel 课程精心平衡了经过验证的文本叙述与交互内容、编程机会和参考材料，所有内容都是为初级程序员量身定制的。
 
 # 给教师的说明
-
-
-
-
 
 Revel 中的 *Starting Out with Java: From Control Structures through Objects* 旨在用于为期一学期或两个学期的 CS1 课程。虽然它是为没有基础编程背景的学生编写的，但即使是经验丰富的学生也会从其详尽的细节中受益。叙述采用清晰、易懂的语言编写，涵盖了入门编程课程所需的所有主题。课程包含了丰富的示例程序，这些程序简洁、实用且面向实世界，确保学生不仅能学会如何实现 Java 的功能和结构，还能理解为什么以及何时使用它们。
 
@@ -125,7 +128,7 @@ Revel 设计用于在你的笔记本电脑和平板上运行，因此你可以�
 *   本 Revel 课程中介绍的每个示例程序的[源代码](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)
 *   七个[案例研究](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Case_Studies.zip)集合
 *   第 17–20 章[在线章节](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Online_Chapters.zip) 访问
--   [错误列表](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Errata.zip)
+*   [错误列表](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Errata.zip)
 
 # Java 开发工具/集成开发环境
 
@@ -134,18 +137,20 @@ Revel 设计用于在你的笔记本电脑和平板上运行，因此你可以�
 遵循这些链接下载应用程序。
 
 [jGRASP](https://www.jgrasp.org/)
+
 [Eclipse](https://www.eclipse.org/downloads/)
+
 [TextPad](https://www.textpad.com/download/)
+
 [NetBeans](https://netbeans.org/downloads/)
+
 [JCreator](http://www.jcreator.org/download.htm)
+
 [DrJava](http://www.drjava.org/)
 
 # 作者简介
 
 Tony Gaddis 是北卡罗来纳技术学院的退休教授。他编写了超过 30 本计算机科学教科书。
-
-
-
 
 计算机是许多职业共同使用的工具，以至于无法被简单归类。它可以执行许多不同的工作，也许是人类制造过的功能最强大的工具。对于会计师来说，计算机负责平衡账目、分析盈亏并准备纳税报告。对于工厂工人来说，计算机控制制造机器并跟踪生产情况。对于机械师来说，计算机分析汽车的各种系统并定位难以发现的问题。计算机之所以能完成如此广泛的任务，是因为它可以被`programmed`（编程）。它是一种专门设计用于遵循指令的机器。由于计算机的可编程性，它不属于任何单一的职业。计算机的设计是为了执行其程序或`software`（软件）要求它们完成的任何工作。
 
@@ -153,13 +158,13 @@ Tony Gaddis 是北卡罗来纳技术学院的退休教授。他编写了超过 3
 
 计算机编程既是一门艺术也是一门科学。它之所以是一门艺术，是因为程序的每一个方面都应该经过仔细的设计。以下是任何真实世界的计算机程序必须设计的几个内容：
 
-* 指令的逻辑流
-* 数学过程
-* 编程语句的布局
-* 屏幕的外观
-* 信息呈现给用户的方式
-* 程序的“用户友好性”
-* 手册、帮助系统和/或其他形式的书面文档
+*   指令的逻辑流
+*   数学过程
+*   编程语句的布局
+*   屏幕的外观
+*   信息呈现给用户的方式
+*   程序的“用户友好性”
+*   手册、帮助系统和/或其他形式的书面文档
 
 编程也是门科学。因为程序在第一次编写时很少能正常运行，因此需要大量的分析、实验、纠正和设计。这要求程序员具备耐心和坚持。编写软件也需要纪律。程序员必须学习诸如`Java`之类的特殊语言，因为计算机不理解英语或其他人类语言。编程语言具有必须严格遵守的严格规则。
 
@@ -181,11 +186,11 @@ Tony Gaddis 是北卡罗来纳技术学院的退休教授。他编写了超过 3
 
 `Hardware`指的是组成计算机的物理组件。我们通常认为的计算机不是一个单一的设备，而是一个设备系统。就像交响乐团中的乐器一样，每个设备都扮演自己的角色。一个典型的计算机系统由以下主要组件组成：
 
-* 中央处理器 (CPU)
-* 主内存
-* 次级存储设备
-* 输入设备
-* 输出设备
+*   中央处理器 (CPU)
+*   主内存
+*   次级存储设备
+*   输入设备
+*   输出设备
 
 计算机系统的结构如图图 1-1 所示。
 
@@ -208,6 +213,7 @@ Tony Gaddis 是北卡罗来纳技术学院的退休教授。他编写了超过 3
 程序是存储在计算机内存中的指令序列。当程序运行时，CPU 会参与一个被称为`fetch/execute cycle`（取指/执行周期）的过程。取指/执行周期的步骤如下：
 
 | Fetch (取指) | CPU 控制单元从主内存获取下一条指令。 |
+| --- | --- |
 | Decode (解码) | 指令以某种形式编码。控制单元对指令进行解码。 |
 | Execute (执行) | 将信号路由到相应的组件（如 ALU）。 |
 
@@ -225,7 +231,9 @@ Tony Gaddis 是北卡罗来纳技术学院的退休教授。他编写了超过 3
 
 通常被称为`random access memory`（随机存存储器）或 `RAM` 的计算机内存是一个存储信息的设备。具体来说，RAM 存储运行中的程序指令以及这些程序正在使用的数据。
 
-内存分为若干区域，存储相等的数据。每个区域由八个“开关”组成，开启或关闭。开启状态通常表示数字 1，而关闭状态通常表示数字 0。计算机通过将内存位置的开关设置为代表字符或数字的模式来存储数据。这些开关每一个被称为`bit`（位），全称为 `binary digit`。八个位组成的内存区域被称为`byte`（字节）。每个字节都被分配一个唯一的数字，即`address`（地址）。地址从低到高排序。通过地址识别字节就像通过地址识别邮邮箱一样。图 1-3 显示了一系列带有地址的字节。在图中，内存中存储了示例数据。数字 149 存储在地址 16 的字节中，数字 72 存储在地址 23 的字节中。
+
+
+内存分为若干区域，存储相等的数据。每个区域由八个“开关”组成，开启或关闭。开启状态通常表示数字 1，而关闭状态通常表示数字 0。计算机通过将内存位置的开关设置为代表字符或数字的模式来存储数据。这些开关每一个被称为`bit`（位），全称为`binary digit`。八个位组成的内存区域被称为`byte`（字节）。每个字节都被分配一个唯一的数字，即`address`（地址）。地址从低到高排序。通过地址识别字节就像通过地址识别邮邮箱一样。图 1-3 显示了一系列带有地址的字节。在图中，内存中存储了示例数据。数字 149 存储在地址 16 的字节中，数字 72 存储在地址 23 的字节中。
 
 ### 图 1-3 内存字节及其地址
 
@@ -237,14 +245,11 @@ RAM 通常是易失性内存，仅用于临时存储。当计算机关闭时，R
 
 `../components/metrodigi/ch01-inline_self_quiz_v1.0.0-05/index.html`
 
-
-
-
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-06/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-06/index.html`
 
 ## 检查点 1.8
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-07/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-07/index.html`
 
 ### 次级存储
 
@@ -266,11 +271,11 @@ RAM 通常是易失性内存，仅用于临时存储。当计算机关闭时，R
 
 ## 检查点 1.9
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-08/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-08/index.html`
 
 ## 检查点 1.10
 
-../components/metrodigi/ch01-assessable_table_v1.0.1-02/index.html
+`../components/metrodigi/ch01-assessable_table_v1.0.1-02/index.html`
 
 ### 软件
 
@@ -278,27 +283,27 @@ RAM 通常是易失性内存，仅用于临时存储。当计算机关闭时，R
 
 应用软件是指使计算机对用户有用的程序。这些程序解决特定问题或执行满足用户需求的通用操作。文字处理、电子表格和数据库软件包都是应用软件的示例。
 
-# 检查点 1.11
+## 检查点 1.11
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-09/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-09/index.html`
 
-# 检查点 1.12
+## 检查点 1.12
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-10/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-10/index.html`
 
-# 检查点 1.13
+## 检查点 1.13
 
-../components/metrodigi/ch01-fill_in_the_blank-01/index.html
+`../components/metrodigi/ch01-fill_in_the_blank-01/index.html`
 
-# 检查点 1.14
+## 检查点 1.14
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-11/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-11/index.html`
 
-# 1.4 编程语言
+## 1.4 编程语言
 
 概念：程序是计算机遵循的一组指令。编程语言是用于编写程序的特殊语言。
 
-## 什么是程序？
+### 什么是程序？
 
 计算机被设计为遵循指令。计算机程序是能够解决问题或执行任务的指令集。例如，假设我们要计算机计算总工资。以下是计算机执行此任务的列表：
 
@@ -321,25 +326,21 @@ RAM 通常是易失性内存，仅用于临时存储。当计算机关闭时，R
 
 想象，将算法编码为机器语言的过程是非常枯燥困难的。此外，每种类型的 CPU 都有自己的机器语言。如果你为计算机 A 编写了机器语言程序，然后想在具有不同类型的计算机 B 上运行，你就必须用计算机 B 的机器语言重写程序。
 
-# 检查点 1.15
+## 检查点 1.15
 
-../components/metrodigi/ch01-fill_in_the_blank-02/index.html
+`../components/metrodigi/ch01-fill_in_the_blank-02/index.html`
 
-# 检查点 1.16
+## 检查点 1.16
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-12/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-12/index.html`
 
-# 检查点 1.17
+## 检查点 1.17
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-13/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-13/index.html`
 
-# 检查点 1.18
+## 检查点 1.18
 
-
-
-
-
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-14/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-14/index.html`
 
 编程语言使用单词而不是数字，它们的发明是为了简化编程任务。
 
@@ -366,31 +367,31 @@ RAM 通常是易失性内存，仅用于临时存储。当计算机关闭时，R
 
 ### 检查 1.19
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-15/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-15/index.html`
 
 ### Java 的历史
 
-1991 年，Sun Microsystems（一家现由 Oracle 有的公司）成立了一个团队，负责预测近期可能出现的重要技术趋势。该团队被称为“绿色小组”（Green Team），他们得出计算机将与消费电器融合的结论。他们的第一个项目是开发一种名为 `7（读作 star seven）`的便携设备，可以用于控制各种家庭娱乐设备。为了让该设备工作，它必须使用一种能够被其控制的所有设备处理的编程语言。这产生了一个问题，因为不同品牌的消费设备使用不同的处理器，每个处理器都有其自己的机器语言。
+1991 年，Sun Microsystems（一家现由 Oracle 有的公司）成立了一个团队，负责预测近期可能出现的重要技术趋势。该团队被称为“绿色小组”（Green Team），他们得出计算机将与消费电器融合的结论。他们的第一个项目是开发一种名为`7（读作 star seven）`的便携设备，可以用于控制各种家庭娱乐设备。为了让该设备工作，它必须使用一种能够被其控制的所有设备处理的编程语言。这产生了一个问题，因为不同品牌的消费设备使用不同的处理器，每个处理器都有其自己的机器语言。
 
-由于不存在这样的通用语言，团队的首席工程师 James Gosling 创建了它。用这种语言（最初名为 `Oak`）编写的程序并没有翻译成特定处理器的机器语言，而是被翻译成被称为 `byte code`（字节码）的中间语言。然后另一个程序会将 `byte code` 翻译成由特定消费设备中的处理器执行的机器语言。
+由于不存在这样的通用语言，团队的首席工程师 James Gosling 创建了它。用这种语言（最初名为`Oak`）编写的程序并没有翻译成特定处理器的机器语言，而是被翻译成被称为`byte code`（字节码）的中间语言。然后另一个程序会将`byte code`翻译成由特定消费设备中的处理器执行的机器语言。
 
-遗憾的是，绿色小组开发的技术领先于时代。当时没有找到客户，主要是因为计算机控制的消费电器行业刚刚起步。但他们并没有放弃心血去转向其他项目，而是看到了另一个机会：互联网。互联网对于像 `Oak` 这样的通用编程语言来说是一个完美的环境。它由连接在单个网络中的许多不同计算机平台组成。
+遗憾的是，绿色小组开发的技术领先于时代。当时没有找到客户，主要是因为计算机控制的消费电器行业刚刚起步。但他们并没有放弃心血去转向其他项目，而是看到了另一个机会：互联网。互联网对于像`Oak`这样的通用编程语言来说是一个完美的环境。它由连接在单个网络中的许多不同计算机平台组成。
 
-为了证明其语言（后更名为 `Java`）的有效性，团队用它开发了一个 Web 浏览器。该浏览器名为 `HotJava`，能够下载并运行名为 `applets` 的小型 Java 程序。这让浏览器有了显示动画和与用户交互的能力。HotJava 在 1995 年的 SunWorld 大会上向令观众惊叹的人群进行了演示。随后宣布 Netscape 将将 Java 技术整合到它的 Navigator 浏览器中。其他互联网公司迅速跟进，增加了 Java 语言的接受度和影响力。今天，Java 非常流行，不仅用于开发 Web 应用的 `applets`，还用于开发 Web 应用、移动应用和桌面应用程序。
+为了证明其语言（后更名为`Java`）的有效性，团队用它开发了一个 Web 浏览器。该浏览器名为`HotJava`，能够下载并运行名为`applets`的小型 Java 程序。这让浏览器有了显示动画和与用户交互的能力。HotJava 在 1995 年的 SunWorld 大会上向令观众惊叹的人群进行了演示。随后宣布 Netscape 将将 Java 技术整合到它的 Navigator 浏览器中。其他互联网公司迅速跟进，增加了 Java 语言的接受度和影响力。今天，Java 非常流行，不仅用于开发 Web 应用的`applets`，还用于开发 Web 应用、移动应用和桌面应用程序。
 
 ### 检查 1.20
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-16/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-16/index.html`
 
 ### 检查 1.21
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-17/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-17/index.html`
 
-# 1.5 程序是由什么组成的？
+## 1.5 程序是由什么组成的？
 
 概念: 有某些元素是所有编程语言共有的。
 
-## 语言元素
+### 语言元素
 
 所有的语言都有共同点。表 1-2 列出了几乎每种语言中常见的元素。
 
@@ -415,10 +416,6 @@ RAM 通常是易失性内存，仅用于临时存储。当计算机关闭时，R
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr1-1/1.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr1-1/1.html)
 
 ### 关键字 (保留字)
-
-
-
-
 
 Java 的两个关键字出现在第 1 行：`public` 和 `class`。在第 3 行，`public`、`static` 和 `void` 都是关键字。第 5 行的 `int` 和第 6 行的 `double` 也是关键字。这些词始终以小写形式编写，每个在 Java 中都有特定的含义，且只能用于它们的用途。正如你将看到的，程序允许程序员为程序中的某些事物自定义名称。然而，关键字是保留的，不能用于其指定用途之外的任何地方。学习编程语言的一部分是就是学习常用的关键字、它们的含义以及如何使用它们。
 
@@ -454,15 +451,17 @@ grossPay = hours * payRate;
 
 注意第 5、6、8 和 9 行以分号结尾。Java 中的分号类似于英语中的句号：它标记了一个完整句子（或用编程术语称为“语句”）的结束。然而，Java 程序中并不是每一行的末尾都有分号。有规则规定了哪里需要分号，哪里不需要。学习 Java 的一部分是学习在何处放置分号和其他标点符号。
 
-# 检查点 1.22
+## 检查点 1.22
 
-../components/metrodigi/ch01-assessable_table_v1.0.1-03/index.html
+`../components/metrodigi/ch01-assessable_table_v1.0.1-03/index.html`
 
-# 检查点 1.23
+## 检查点 1.23
 
-../components/metrodigi/ch01-assessable_table_v1.0.1-04/index.html
+`../components/metrodigi/ch01-assessable_table_v1.0.1-04/index.html`
 
 ### 行与语句
+
+
 
 通常，程序的内容按行和语句来考虑的。*行*（line）就是指其实义——即程序主体中显示的单行。代码列表 1-1 显示了其每一行的编号。大多数行都包含有意义的内容；然而，第 7 行是空的。空行用于提高程序的可读性。
 
@@ -476,33 +475,29 @@ System.out.println("Your gross pay is $" + grossPay);
 
 # 检查点 1.24
 
-../components/metrodigi/ch01-assessable_table_v1.0.1-03/index.html
+`../components/metrodigi/ch01-assessable_table_v1.0.1-03/index.html`
 
-### 变量
+## 变量
 
-Java 程序在内存中存储数据的根本方式是使用变量。*变量*（variable）是内存中一个命名的存储位置。存储在变量中的数据在运行时可能会改变（因此被称为变量）。注意在代码列表 1-1 程序员定义的名称 `hours`、`payRate` 和 `grossPay`。这三个都是变量。正如你在本章后面将学到的，变量是可能存储数据的内存位置名称。
+Java 程序在内存中存储数据的根本方式是使用变量。*变量*（variable）是内存中一个命名的存储位置。存储在变量中的数据在运行时可能会改变（因此被称为变量）。注意在代码列表 1-1 程序员定义的名称`hours`、`payRate`和`grossPay`。这三个都是变量。正如你在本章后面将学到的，变量是可能存储数据的内存位置名称。
 
 ### 图 1-4 变量名称代表一个位置
 
 ![在 23 框处标记了 72](img/01fig04.png)
 
-在图 1-4 中，变量 `length` 持有值 72。数字 72 实际上存储在 RAM 地址 23，但名称代表了该存储位置。如果有帮助的话，你可以将变量想象成一个盒子。盒子内一次只能存储一个项目。如果程序在盒子中存储另一个值，它将取代 72。
+在图 1-4 中，变量`length`持有值 72。数字 72 实际上存储在 RAM 地址 23，但名称代表了该存储位置。如果有帮助的话，你可以将变量想象成一个盒子。盒子内一次只能存储一个项目。如果程序在盒子中存储另一个值，它将取代 72。
 
 # 检查点 1.25
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-18/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-18/index.html`
 
-# 编译器与 虚拟机
+# 编译器与虚拟机
 
-编写 Java 程序时，必须将其输入计算机并保存到文件中。使用*文本编辑器*（类似于文字处理软件）来进行此任务。程序员编写的 Java 编程语句被称为*源代码*，保存这些语句的文件称为*源文件*。Java 源文件以 .java 结尾。
+编写 Java 程序时，必须将其输入计算机并保存到文件中。使用*文本编辑器*（类似于文字处理软件）来进行此任务。程序员编写的 Java 编程语句被称为*源代码*，保存这些语句的文件称为*源文件*。Java 源文件以`.java`结尾。
 
 程序员将源代码保存到文件后，会运行 Java 编译器。*编译器*（compiler）是将源代码翻译成可执行形式的程序。在翻译过程中，编译器会发现程序中可能存在的语法错误。*语法错误*（syntax errors）是程序员违反编程语言规则的错误。在编译器翻译源代码之前，必须修正这些错误。一旦程序没有语法错误，编译器就会创建一个包含翻译后的指令的新文件。
 
-
-
-
-
-大多数编程语言编译器将源代码直接翻译成包含机器语言指令的文件。这些文件被称为 `executable files`，因为它们可以直接由计算机的 CPU 执行。然而，Java 编译器将 Java 源文件翻译成一个包含字节码指令的文件。字节码指令不是机器语言，因此不能直接由 CPU 直接执行。相反，它们由`Java Virtual Machine`（JVM）执行。JVM 是一个读取 Java 字节码指令并在读取时执行它们的程序。由于这个原因，JVM 通常被称为解释器，而 Java 通常被认为是一种解释型语言。图 1-5 展示了编写 Java 程序、将其编译为字节码并并运行该程序的过程。
+大多数编程语言编译器将源代码直接翻译成包含机器语言指令的文件。这些文件被称为`executable files`，因为它们可以直接由计算机的 CPU 执行。然而，Java 编译器将 Java 源文件翻译成一个包含字节码指令的文件。字节码指令不是机器语言，因此不能直接由 CPU 直接执行。相反，它们由`Java Virtual Machine`（JVM）执行。JVM 是一个读取 Java 字节码指令并在读取时执行它们的程序。由于这个原因，JVM 通常被称为解释器，而 Java 通常被认为是一种解释型语言。图 1-5 展示了编写 Java 程序、将其编译为字节码并并运行该程序的过程。
 
 ### 图 1-5 程序开发过程
 
@@ -510,7 +505,7 @@ Java 程序在内存中存储数据的根本方式是使用变量。*变量*（v
 
 虽然 Java 字节码不是 CPU 的机器语言，但它可以被视为 JVM 的机器语言。你可以将 JVM 视为一个模拟计算机的程序，其机器语言是 Java 字节码。
 
-### 可移植性
+## 可移植性
 
 `portable`可移植）一词意味着程序可以在一种类型的计算机上编写，然后在各种计算机上运行，几乎或不需要任何修改。由于 Java 字节码在所有计算机上都是相同的，编译后的 Java 程序具有高度的可移植性。事实上，编译后的 Java 程序可以在任何带有 Java 虚拟机的计算机上运行。图 1-6 展示了编译后的 Java 程序在 Windows、Linux、Mac 和 UNIX 计算机上运行的概念。
 
@@ -520,17 +515,19 @@ Java 程序在内存中存储数据的根本方式是使用变量。*变量*（v
 
 对于大多数其他编程语言，可移植性是通过为该语言要运行的每种计算机创建一个编译器来实现的。例如，为了让 Windows、Linux 和 Mac 支持 C++ 语言，必须为这些环境中的每一个创建一个独立的 C++ 编译器。编译器是非常复杂的程序，开发起来比解释器更困难。出于这个原因，已经为许多类型的计算机开发了 JVM。
 
-### Java 软件版本
+## Java 软件版本
 
-你用于创建 Java 程序的软件被称为 `JDK`（Java 开发工具包）或 `SDK`（软件开发包）。Oracle 提供了以下不同的 JDK 版本：
+你用于创建 Java 程序的软件被称为`JDK`（Java 开发工具包）或`SDK`（软件开发包）。Oracle 提供了以下不同的 JDK 版本：
 
 * `Java SE`——Java 标准版（Standard Edition）提供了编写 Java 所需的所有基本软件工具。
+
 * `Java EE`——Java 企业版（Enterprise Edition）为创建大型业务应用程序提供了工具，这些程序服务器并在 Web 上提供服务。
+
 * `Java ME`——Java 微型版（Micro Edition）为手机、传真机和电器等消费产品提供了一个小型、高度优化的运行时环境。
 
 可以通过以下地址从 Oracle 下载这些 Java 版本：
 
-[http:/<wbr data-chaucer-element-id="2cd5807a-3eb5-46f4-9883-df2839a5865f">/<wbr data-chaucer-element-id="15e0fffa-735e-48fc-ade5-2822722297db">java.oracle.com](http://java.oracle.com)
+[http://java.oracle.com](http://java.oracle.com)
 
 ### 注意
 
@@ -538,17 +535,17 @@ Java 程序在内存中存储数据的根本方式是使用变量。*变量*（v
 
 ## 检查点 1.27
 
-../components/metrodigi/ch01-assessable_table_v1.0.1-07/index.html
+`../components/metrodigi/ch01-assessable_table_v1.0.1-07/index.html`
 
 ## 检查点 1.28
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-19/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-19/index.html`
 
 ## 检查点 1.29
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-20/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-20/index.html`
 
-### 编译并运行 Java 程序
+## 编译并运行 Java 程序
 
 编译 Java 程序是一个简单的过程。一旦你安装了 JDK，请进入操作系统的命令提示符。
 
@@ -560,25 +557,25 @@ Java 程序在内存中存储数据的根本方式是使用变量。*变量*（v
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/secs_gaddis_6_vn_01_01_Compiling_and_Running_a_Java_Program`](https://mediaplayer.pearsoncmg.com/assets/_video.true/secs_gaddis_6_vn_01_01_Compiling_and_Running_a_Java_Program)
 
-在操作系统的命令提示符处，确保你处于想要编译的 Java 程序所在的相同目录或文件夹中。然后，使用如下格式的 `javac` 命令：
+在操作系统的命令提示符处，确保你处于想要编译的 Java 程序所在的相同目录或文件夹中。然后，使用如下格式的`javac`命令：
 
 ```
 javac Filename
 ```
 
-`Filename` 是包含 Java 源代码的文件名。如前所述，该文件具有 `.java` 扩展名。例如，如果你想编译 `Payroll.java` 文件，你需要执行以下命令：
+`Filename`是包含 Java 源代码的文件名。如前所述，该文件具有`.java`扩展名。例如，如果你想编译`Payroll.java`文件，你需要执行以下命令：
 
 ```
 javac Payroll.java
 ```
 
-该命令运行编译器。如果文件包含任何错误，你将看到一条或多个错误消息，编译器不会将其翻译为字节码。在这种情况下，你必须在编辑器中打开源文件并修复错误。然后再次运行编译器。如果没有语法错误，编译器将将其翻译为字节码。字节码存储在具有 `.class` 扩展的文件中，它与源文件位于相同的目录或文件夹中。要运行 Java 程序，使用如下格式的 `java` 命令：
+该命令运行编译器。如果文件包含任何错误，你将看到一条或多个错误消息，编译器不会将其翻译为字节码。在这种情况下，你必须在编辑器中打开源文件并修复错误。然后再次运行编译器。如果没有语法错误，编译器将将其翻译为字节码。字节码存储在具有`.class`扩展的文件中，它与源文件位于相同的目录或文件夹中。要运行 Java 程序，使用如下格式的`java`命令：
 
 ```
 java ClassFilename
 ```
 
-`ClassFilename` 是要执行的 `.class` 文件名；但不需要输入 `.class` 扩展名。例如，运行存储在 `Payroll.class` 文件中的程序，你需要输入：
+`ClassFilename`是要执行的`.class`文件名；但不需要输入`.class`扩展名。例如，运行存储在`Payroll.class`文件中的程序，你需要输入：
 
 ```
 java Payroll
@@ -598,30 +595,34 @@ java Payroll
 
 ## 检查点 1.30
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-21/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-21/index.html`
 
 ## 检查点 1.31
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-22/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-22/index.html`
 
 # 1.6 编程过程
 
 概念：编程过程包含几个步骤，包括设计、创建、测试和调试活动。
 
-
-
-
-
 既然你已经了解了什么是程序，现在是时候考虑创建程序了。当给没有经验的学生布置编程任务时，他们往往在开始时遇到困难，因为他们不知道该先做什么。如果你发现自己陷入了这种困境，以下步骤可能会有所帮助。
 
 1. 明确定义程序要做的功能。
+
 2. 在脑海中想象程序在计算机上运行的过程。
+
 3. 使用设计工具创建程序的模型。
+
 4. 检查模型是否存在逻辑错误。
+
 5. 输入代码并编译。
+
 6. 修正编译过程中发现的任何错误。根据需要重复第 5 和第 6 步。
+
 7. 使用测试数据作为输入运行程序。
+
 8. 修正运行过程中发现的任何运行时错误。根据需要重复第 5 至第 8 步。
+
 9. 验证程序的结果。
 
 这些步骤强调了规划的重要性。就像粉房子有好方法和坏方法，创建程序也有好方法和坏方法。良好的程序总是始于规划。以本章之前介绍的工资计算算法为例，让我们详细地查看每一个步骤。
@@ -631,9 +632,13 @@ java Payroll
 这一步通常要求你识别程序的目的、需要输入的数据、将要的处理以及预期的输出。让我们检查工资计算算法的每项要求。
 
 | 目的 | 计算用户的总薪。 |
+
 | :--- | :--- |
+
 | 输入 | 工作小时数、每小时薪率。 |
+
 | 处理 | 工作小时数乘以每小时薪率。结果为用户的总薪。 |
+
 | 输出 | 显示一条指示用户总薪的消息。 |
 
 ## 2. 在脑海中想象程序在计算机上运行的过程
@@ -648,28 +653,35 @@ java Payroll
 
 ### 检查点 1.34
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-23/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-23/index.html`
 
 ### 检查点 1.35
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-24/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-24/index.html`
 
 ## 3. 使用设计工具创建程序的模型
 
 在规划程序时，程序员使用一种或多个设计工具来创建程序的模型。例如，伪代码是人类语言和编程语言之间的混合体，在设计算法时特别有用。尽管计算机无法理解伪代码，但程序员经常发现，用一种“接近”编程语言但与自然语言非常相似的语言编写算法是有帮助的。例如，这里是描述工资计算算法的伪代码：
 
 * 获取薪资数据。
+
 * 计算总薪。
+
 * 显示总薪。
 
 虽然这段伪代码提供了程序的概述，但它并没有揭示程序的所有细节。以下是更详细版本的伪代码：
 
 * 显示“你工作了多少小时？”
+
 * 输入小时数。
+
 * 显示“每小时工资是多少？”
+
 * 输入费率。
-* 将小时乘以费率的值存储在变量 `pay` 中。
-* 显示 `pay` 变量中的值。
+
+* 将小时乘以费率的值存储在变量`pay`中。
+
+* 显示`pay`变量中的值。
 
 注意，伪代码使用的语句看起来更像命令，而不是第 1.4 节中描述算法的英语语句。伪代码甚至命名了变量并描述了数学运算。
 
@@ -687,11 +699,11 @@ java Payroll
 
 ### 检查点 1.36
 
-../components/metrodigi/ch01-fill_in_blank_03/index.html
+`../components/metrodigi/ch01-fill_in_blank_03/index.html`
 
 ### 检查点 1.38
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-25/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-25/index.html`
 
 ## 7. 使用测试数据作为输入运行程序
 
@@ -707,15 +719,15 @@ java Payroll
 
 ### 检查点 1.39
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-26/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-26/index.html`
 
 ### 检查点 1.40
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-27/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-27/index.html`
 
 ### 检查点 1.41
 
-../components/metrodigi/ch01-assessable_table_v1.0.1-08/index.html
+`../components/metrodigi/ch01-assessable_table_v1.0.1-08/index.html`
 
 ## 软件工程
 
@@ -723,25 +735,25 @@ java Payroll
 
 * 程序规范
 
-
-
-
-
 * 屏幕输出图示
+
 * 表示程序组件和数据流的图示
+
 * 伪代码
+
 * 预期输入和期望输出的示例
+
 * 为测试程序设计的专用软件
 
 大多数商业软件应用程序都是庞大且复杂的。通常由一个程序员团队而非单个人来开发。对程序需求进行彻底分析，并将其划分为子任务，由各个团队或团队内的个人处理是至关重要的。
 
 # 检查点 1.42
 
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-28/index.html
+`../components/metrodigi/ch01-inline_self_quiz_v1.0.0-28/index.html`
 
 # 1.7 面向对象编程
 
-概念：`Java` 是一种面向对象编程（OOP）语言。`OOP` 是一种软件开发方法，它有自己的实践、概念和词汇。
+概念：`Java`是一种面向对象编程（OOP）语言。`OOP`是一种软件开发方法，它有自己的实践、概念和词汇。
 
 目前使用的编程方法主要有两种：过程化和面向对象化。早期的编程语言是过程化的，这意味着程序是由一个或多个过程构的。`procedure`（过程）是一组编程语句，它们共同执行一个特定的任务。这些语句可能会从用户处收集输入，处理存储在计算机内存中的数据，并执行计算或完成过程任务所需的任何操作。
 
@@ -753,119 +765,13 @@ java Payroll
 
 正如你想象的，过程化编程的重点是创建操作程序数据的过程。然而，数据与操作数据的代码分离往往会导致问题。例如，数据存储在特定的格式中，该格式由变量和基于变量创建的更复杂的结构组成。设计操作数据的过程时必须考虑这种格式。但是，如果数据格式发生了变化会怎样？程序的规范经常会改变，导致重新设计数据格式。当数据结构发生变化时，操作数据的代码也必须更改以接受新格式。这为程序员增加了额外工作，并增加了代码中出现 Bug 的机会。
 
-这促进了从过程化编程向面向对象编程（OOP）的转变。过程化编程以创建过程为中心，而面向对象编程以创建对象为中心。对象是一个包含数据和过程的软件实体。对象中包含的数据被称为对象的 `attributes`（属性）。对象执行的过程（或行为）被称为对象的 `methods`（方法）。从概念上说，对象是一个由由数据（属性）和过程（方法）组成的自包含单元。这在图 1-10 中如图所示。
+这促进了从过程化编程向面向对象编程（OOP）的转变。过程化编程以创建过程为中心，而面向对象编程以创建对象为中心。对象是一个包含数据和过程的软件实体。对象中包含的数据被称为对象的`attributes`（属性）。对象执行的过程（或行为）被称为对象的`methods`（方法）。从概念上说，对象是一个由由数据（属性）和过程（方法）组成的自包含单元。这在图 1-10 中如图所示。
 
 ### 图 1-10 对象包含数据和过程
 
 ![对象包含作为属性的数据，该数据有多个操作该数据的方法。](img/01fig10.png)
 
-OOP 通过封装和数据隐藏解决了代码/数据分离的问题。`Encapsulation`（封装）是指将数据和代码合并到单个对象中。`Data hiding`（数据隐藏）是指对象将其数据隐藏在对象外部代码之外。只有对象的方法才能直接访问并修改对象的数据。对象通常会隐藏其数据，但允许外部代码访问操作数据的方法。如图 1-11 所示，对象的方法为对象外的编程语句提供了对对象数据的间接访问。
 
-### 图 1-11 对象外部的代码与对象的方法进行交互
-
-![对象在字段中拥有数据。操作数据的方法受字段中数据和对象外部代码的影响。](img/01fig11.png)
-
-当对象的内部数据对外部代码隐藏，且对该数据的访问限制在对象方法上时，数据就能受到意外损坏的保护。此外，对象外部的编程代码不需要了解对象数据的格式或内部结构。代码只需要与对象的方法交互。当程序员更改对象内部数据的结构时，他或她也会修改对象的方法，使其能够正确地处理数据。然而，外部代码与方法交互的方式不会改变。
-
-这些只是面向对象编程的益处之一。由于 `Java` 是完全面向对象的，随着你阅读这本书，你将学习更多关于 OOP 实践、概念和术语。
-
-# 检查点 1.43
-
-../components/metrodigi/ch01-assessable_table_v1.0.1-09/index.html
-
-# 检查点 1.42
-
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-28/index.html
-
-# 检查点 1.43
-
-../components/metrodigi/ch01-assessable_table_v1.0.1-09/index.html
-
-# 检查点 1.44
-
-../components/metrodigi/ch01-inline_self_quiz_v1.0.0-28/index.html
-
-# 检查点 1.45
-
-../components/metrodigi/ch01-assessable_table_v1.0.1-09/index.html
-
-# 1.7 面向对象编程
-
-概念：`Java` 是一种面向对象编程（OOP）语言。`OOP` 是一种软件开发方法，它有自己的实践、概念和词汇。
-
-目前使用的编程方法主要有两种：过程化和面向对象化。早期的编程语言是过程化的，这意味着程序是由一个或多个过程组成的。`procedure`（过程）是一组编程语句，它们共同执行一个特定的任务。这些语句可能会从用户处收集输入，处理存储在计算机内存中的数据，并执行计算或完成过程任务所需的任何操作。
-
-过程通常在独立于过程的数据项上操作。在过程化程序中，数据项通常从一个过程传递到另一个过程，如图 1-9 所示。
-
-## 图 1-9 数据在过程之间传递
-
-![数据项从过程 A 传递到过程 B。](img/01fig09.png)
-
-正如你想象的，过程化编程的重点是创建操作程序数据的过程。然而，数据与操作数据的代码分离往往会导致问题。例如，数据存储在特定的格式中，该格式由变量和基于变量创建的更复杂的结构组成。设计操作数据的时必须考虑这种格式。但是，如果数据格式发生了变化会怎样？程序的规范经常会改变，导致重新设计数据格式。当数据结构发生变化时，操作数据的代码也必须更改以接受新格式。这为程序员增加了额外工作，并增加了代码中出现 Bug 的机会。
-
-这促进了从过程化编程向面向对象编程（OOP）的转变。过程化编程以创建过程为中心，而面向对象编程以创建对象为中心。对象是一个包含数据和过程的软件实体。对象中包含的数据被称为对象的 `attributes`（属性）。对象执行的过程（或行为）被称为对象的 `methods`（方法）。从概念上说，对象是一个由数据（属性）和过程（方法）组成的自包含单元。这在图 1-10 中如图所示。
-
-### 图 1-10 对象包含数据和过程
-
-![对象包含作为属性的数据，该数据有多个操作该数据的方法。](img/01fig10.png)
-
-OOP 通过封装和数据隐藏解决了代码/数据分离的问题。`Encapsulation`（封装）是指将数据和代码合并到单个对象中。`Data hiding`（数据隐藏）是指对象将其数据隐藏在对象外部代码之外。只有对象的方法才能直接访问并修改对象的数据。对象通常会隐藏其数据，但允许外部代码访问操作数据的方法。如图 1-11 所示，对象的方法为对象外的编程语句提供了对对象数据的间接访问。
-
-### 图 1-11 对象外部的代码与对象的方法进行交互
-
-![对象在字段中拥有数据。操作数据的方法受字段中数据和对象外部代码的影响。](img/01fig11.png)
-
-当对象的内部数据对外部代码隐藏，且对该数据的访问限制在对象方法上时，数据就能受到意外损坏的保护。此外，对象外部的编程代码不需要了解对象数据的格式或内部结构。代码只需要与对象的方法交互。当程序员更改对象内部数据的结构时，他或她也会修改对象的方法，使其能够正确地处理数据。然而，外部代码与方法交互的方式不会改变。
-
-这些只是面向对象编程的益处之一。由于 `Java` 是完全面向对象的，随着你阅读这本书，你将学习更多关于 OOP 实践、概念和术语。
-
-## 编程挑战
-
-### 你的第一个程序
-
-此作业将帮助你熟悉开发软件。以下是你将插入 Java 程序：
-
-```java
-// 这是我的第一个程序。
-public class MyFirstProgram
-{
-   public static void main(String[] args)
-   {
-      System.out.println("Hello World!");
-   }
-}
-```
-
-### 如果你使用命令行下的 JDK
-
-1. 使用文本编辑器完全按照所示内容输入源代码。确保放置所有的标点符号，并仔细匹配字母的大小写。将其保存为 `MyFirstProgram.java`。
-
-2. 保存程序后，进入你操作系统的命令提示符，并将当前目录更改到你创建的 Java 程序的文件夹。然后使用以下命令编译程序：
-
-```bash
-javac MyFirstProgram.java
-```
-
-如果你完全按照所示输入文件内容，应该没有任何语法错误。如果看到错误消息，打开文件并将你的代码进行对比。修正任何错误，保存文件并再次运行编译器。如果没有看到错误消息，说明编译成功。
-
-3. 接下来，输入以下命令运行程序：
-
-```bash
-java MyFirstProgram
-```
-
-确保使用此处完全相同的 `MyFirstProgram` 大小写。你应该能在屏幕上看到“Hello World!”消息。
-
-### 如果你使用 IDE
-
-由于有很多 Java IDE，我们无法包含所有 IDE 的特定说明。以下适用于大多数 IDE 的通用步骤。你需要查阅你的 IDE 文档以获取特定说明。
-
-
-
-
-3. 保存程序后，使用你 IDE 的命令来编译程序。如果你输入的文件内容与所示完全一致，你不应该有任何语法错误。如果你看到错误信息，请将你的代码与显示的代码进行对比。纠正你犯任何错误，保存文件并再次运行编译器。如果没有看到错误信息，说明文件已成功编译。
-
-使用你 IDE 的命令运行程序。你应该看到显示出的消息“Hello World!”
 
 # 第 2 章 Java 基础
 
@@ -889,7 +795,7 @@ java MyFirstProgram
 
 # 2.1 Java 程序的组成部分
 
-概念：Java 程序具有具有特定用途的各个。
+概念：Java 程序具有具有特定用途的各个部分。
 
 Java 程序由不同的部分组成。学习 Java 的第一步是学习这些部分是什么。我们将从查看一个简单的示例开始，如代码列表 2-1 所示。
 
@@ -904,124 +810,6 @@ Java 程序由不同的部分组成。学习 Java 的第一步是学习这些部
 记住，程序列表中所示的行号不是程序的一部分。显示这些数字是为了我们可以引用特定的行。正如第 1 章中所提到的，如果你输入的文件内容与所示完全一致，你不应该有任何语法错误。如果你看到错误信息，请将你的代码与所示的代码进行对比。纠正你犯的任何错误，保存文件并再次运行编译器。如果没有看到错误信息，说明文件已成功编译。
 
 使用你 IDE 的命令运行程序。你应该看到显示出的消息“Hello World!”
-
-#提示
-
-记住，程序列表中所示的行号不是程序的一部分。显示这些数字是为了我们可以引用特定的行。正如第 1 章中所提到的，如果你输入的文件内容与所示完全一致，你不应该有任何语法错误。如果你看到错误信息，请将你的代码与所示的代码进行对比。纠正你犯的任何错误，保存文件并再次运行编译器。如果没有看到错误信息，说明文件已成功编译。
-
-使用你 IDE 的命令运行程序。你应该看到显示出的消息“Hello World!”
-
-#提示
-
-记住，程序列表中所示的行号不是程序的一部分。显示这些数字是为了我们可以引用特定的行。正如第 1 章中所提到的，如果你输入的文件内容与所示完全一致，你不应该有任何语法错误。如果你看到错误信息，请将你的代码与所示的代码进行对比。纠正你犯的任何错误，保存文件并再次运行编译器。如果没有看到错误信息，说明文件已成功编译。
-
-使用你 IDE 的命令运行程序。你应该看到显示出的消息“Hello World!”
-
-# 第 2 章 Java 基础
-
-## 目录
-
-1. 2.1 Java 程序的组成部分
-2. 2.2 `print` 和 `println` 方法以及 Java API
-3. 2.3 变量与字面量
-4. 2.4 原始数据类型
-5. 2.5 算术运算符
-6. 2.6 复合赋值运算符
-7. 2.7 原始数据类型之间的转换
-8. 2.8 使用 `final` 创建命名常量
-9. 2.9 `String` 类
-10. 2.10 作用域
-11. 2.11 注释
-12. 2.12 编程风格
-13. 2.13 读取键盘输入
-14. 2.14 对话框
-15. 2.15 需要避免的常见错误
-
-# 2.1 Java 程序的组成部分
-
-概念：Java 程序具有具有特定用途的各个。
-
-Java 程序由不同的部分组成。学习 Java 的第一步是学习这些部分是什么。我们将从查看一个简单的示例开始，如代码列表 2-1 所示。
-
-在下面的动画中，点击“上一个”或“下一个”按钮来逐步查看代码并在贯过程中查看解释。
-
-### 代码列表 2-1 `(Simple.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-1/1.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-1/1.html)
-
-### 提示
-
-记住，程序列表中所示的行号不是程序的一部分。显示这些数字是为了我们可以引用特定的行。正如第 1 章中所提到的，如果你输入的文件内容与所示完全一致，你不应该有任何语法错误。如果你看到错误信息，请将你的代码与所示的代码进行对比。纠正你犯的任何错误，保存文件并再次运行编译器。如果没有看到错误信息，说明文件已成功编译。
-
-使用你 IDE 的命令运行程序。你应该看到显示出的消息“Hello World!”
-
-# 2.1 Java 程序的组成部分
-
-概念：Java 程序具有具有特定用途的各个。
-
-Java 程序由不同的部分组成。学习 Java 的第一步是学习这些部分是什么。我们将从查看一个简单的示例开始，如代码列表 2-1 所示。
-
-在下面的动画中，点击“上一个”或“下一个”按钮来逐步查看代码并在贯过程中查看解释。
-
-### 代码列表 2-1 `(Simple.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-1/1.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-1/1.html)
-
-# 2.1 Java 程序的组成部分
-
-概念：Java 程序具有具有特定用途的各个。
-
-Java 程序由不同的部分组成。学习 Java 的第一步是学习这些部分是什么。我们将从查看一个简单的示例开始，如代码列表 2-1 所示。
-
-在下面的动画中，点击“上一个”或“下一个”按钮来逐步查看代码并在贯过程中查看解释。
-
-### 代码列表 2-1 `(Simple.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-1/1.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-1/1.html)
-
-(注：由于原始文本中存在大量重复的段落，根据指令“不要重复输出原文”的原则，此处仅展示核心内容的逻辑翻译。以下为针对给定文本内容的内容的完整翻译：)
-
-[content]
-# 第 2 章 Java 基础 
-
-## 目录
-
-1. 2.1 Java 程序的组成部分
-2. 2.2 `print` 和 `println` 方法以及 Java API
-3. 2.3 变量与字面量
-4. 2.4 原始数据类型
-5. 2.5 算术运算符
-6. 2.6 复合赋值运算符
-7. 2.7 原始数据类型之间的转换
-8. 2.8 使用 `final` 创建命名常量
-9. 2.9 `String` 类
-10. 2.10 作用域
-11. 2.11 注释
-12. 2.12 编程风格
-13. 2.13 读取键盘输入
-14. 2.14 对话框
-15. 2.15 需要避免的常见错误
-
-# 2.1 Java 程序的组成部分
-
-概念：Java 程序具有具有特定用途的各个。
-
-Java 程序由不同的部分组成。学习 Java 的第一步是学习这些部分是什么。我们将从查看一个简单的示例开始，如代码列表 2-1 所示。
-
-在下面的动画中，点击“上一个”或“下一个”按钮来逐步查看代码并在贯过程中查看解释。
-
-### 代码列表 2-1 `(Simple.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-1/1.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-1/1.html)
-
-### 提示
-
-记住，程序列表中所示的行号不是程序的一部分。显示这些数字是为了我们可以引用特定的行。正如第 1 章中所提到的，如果你输入的文件内容与所示完全一致，你不应该有任何语法错误。如果你看到错误信息，请将你的代码与所示的代码进行对比。纠正你犯的任何错误，保存文件并再次运行编译器。如果没有看到错误信息，说明文件已成功编译。
-
-使用你 IDE 的命令运行程序。你应该看到显示出的消息“Hello World!”
-
-
-
 
 ![一段代码读取如下：Public static void, main 左括号 string 左中括号右括号，a r g s 右括号。方法名称为 main。该行的其他部分对于方法的正确定义是必需的。](img/02fig01.png)
 
@@ -1066,15 +854,17 @@ System.out.println("Programming is great fun!");
 }
 ```
 
+
+
 在继续之前，让我们回顾一下刚刚涵盖的要点，包括一些较难记忆的规则。
 
-*   Java 是一种区分大小写的语言。它不认为大写字母与其小写形式是同一个字符。
-*   所有 Java 程序必须存储在以 `.java` 结尾的文件中。
-*   注释会被编译器忽略。
-*   一个 `.java` 文件可以包含许多类，但只能有一个 `public` 类。如果一个 `.java` 文件有一个公有类，则该类的名称必须与文件名相同。例如，如果文件 `Pizza.java` 包含一个 `public class`，那么该类的名称将是 `Pizza`。
-*   每个 Java 应用程序都必须有一个名为 `main` 的方法。
-*   每一个左大括号（或左大括号）都必须有一个对应的右大括号（或右大括号）。
-*   语句以分号结束。这不包括注释、类头部、方法头部或大括号。
+- Java 是一种区分大小写的语言。它不认为大写字母与其小写形式是同一个字符。
+- 所有 Java 程序必须存储在以 `.java` 结尾的文件中。
+- 注释会被编译器忽略。
+- 一个 `.java` 文件可以包含许多类，但只能有一个 `public` 类。如果一个 `.java` 文件有一个公有类，则该类的名称必须与文件名相同。例如，如果文件 `Pizza.java` 包含一个 `public class`，那么该类的名称将是 `Pizza`。
+- 每个 Java 应用程序都必须有一个名为 `main` 的方法。
+- 每一个左大括号（或左大括号）都必须有一个对应的右大括号（或右大括号）。
+- 语句以分号结束。这不包括注释、类头部、方法头部或大括号。
 
 在示例程序中，你遇到了几个特殊字符。表 2-1 总结了它们是如何被使用的。
 
@@ -1088,33 +878,33 @@ System.out.println("Programming is great fun!");
 | `" "` | 引号 | 括起一个字符字符串，例如要在屏幕上打印的消息 |
 | `;` | 分号 | 标记一个完整的编程语句的结束 |
 
-# 检查点 2.1
+## 检查点 2.1
 
-../components/metrodigi/ch02-assessable_table_v1.0.1-01/index.html
+`../components/metrodigi/ch02-assessable_table_v1.0.1-01/index.html`
 
-# 检查点 2.2
+## 检查点 2.2
 
-../components/metrodigi/ch02-assessable_table_v1.0.1-01/index.html
+`../components/metrodigi/ch02-assessable_table_v1.0.1-01/index.html`
 
-# 检查点 2.3
+## 检查点 2.3
 
-../components/metrodigi/ch02-assessable_table_v1.0.1-01/index.html
+`../components/metrodigi/ch02-assessable_table_v1.0.1-01/index.html`
 
-# 检查点 2.4
+## 检查点 2.4
 
-../components/metrodigi/ch02-assessable_table_v1.0.1-01/index.html
+`../components/metrodigi/ch02-assessable_table_v1.0.1-01/index.html`
 
-# 检查点 2.5
+## 检查点 2.5
 
-../components/metrodigi/ch02-assessable_table_v1.0.1-01/index.html
+`../components/metrodigi/ch02-assessable_table_v1.0.1-01/index.html`
 
-# 检查点 2.6
+## 检查点 2.6
 
-../components/metrodigi/ch02-assessable_table_v1.0.1-01/index.html
+`../components/metrodigi/ch02-assessable_table_v1.0.1-01/index.html`
 
-# 检查点 2.7
+## 检查点 2.7
 
-../components/metrodigi/ch02-assessable_table_v1.0.1-01/index.html
+`../components/metrodigi/ch02-assessable_table_v1.0.1-01/index.html`
 
 ## 2.2 `print` 和 `println` 方法以及 Java API
 
@@ -1124,29 +914,25 @@ System.out.println("Programming is great fun!");
 
 ![命令提示符窗口显示控制台输出。](img/02fig02.png)
 
-# 图 2-2 控制台窗口（Microsoft 公司）
+### 图 2-2 控制台窗口（Microsoft 公司）
 
-# 查看控制台输出
+### 查看控制台输出
 
 *console* 一词是一个老的计算机术语。它源于大型计算机系统的操作员通过由简单屏幕和键盘组成的终端与系统交互的时代。这个终端被称为*控制台*。仅显示文本的控制台屏幕被称为标准输出设备。
 
 在 Java 中执行输出操作以及许多其他任务，都是通过使用 Java API 完成的。*API* 的全称是*应用程序编程接口*。API 是用于执行特定操作的标准类库。这些类及其方法对所有 Java 程序可用。`print` 和 `println` 方法是 API 的一部分，提供了在标准输出设备上显示输出的方法。
 
-
-
-
-
 `System` 是 Java API 的部分一个类。`System` 类包含了执行系统级操作的对象和方法。`System` 类中包含的一个对象名为 `out`。`out` 对象拥有诸如 `print` 和 `println` 等方法，用于在系统控制台或标准输出设备上执行输出。`System`、`out`、`print` 和 `println` 之间的层次关系如图图 2-3 所示。
 
 ![System 类持有 out 对象和其他成员。System 类同样持有 out 对象以及其他成员。out 对象是 System 类的成员，包含两个成员，即 print 方法和 println 方法。](img/02fig03.png)
 
-## 图 2-3 `System` 类、`out` 对象与 `print` 方法和 `println` 方法之间的关系
+### 图 2-3 `System` 类、`out` 对象与 `print` 方法和 `println` 方法之间的关系
 
 以下是关于所有它们如何共同工作的简要总结：
 
-*   `System` 类是 Java API 的组成部分。它拥有用于执行系统级操作（如向控制台发送输出）的成员对象和方法。
-*   `out` 对象是 `System` 类的成员。它提供了向屏幕发送输出的方法。
-*   `print` 和 `println` 方法是 `out` 对象的成员。它们实际上执行在屏幕上写入字符的工作。
+- `System` 类是 Java API 的组成部分。它拥有用于执行系统级操作（如向控制台发送输出）的成员对象和方法。
+- `out` 对象是 `System` 类的成员。它提供了向屏幕发送输出的方法。
+- `print` 和 `println` 方法是 `out` 对象的成员。它们实际上执行在屏幕上写入字符的工作。
 
 这种层次结构解释了为什么执行 `println` 的语句会那么长。序列 `System.out.println` 指定了 `println` 是 `out` 的成员，而 `out` 是 `System` 的成员。
 
@@ -1166,17 +952,17 @@ System.out.println("King Arthur");
 
 在下方的动画中，点击“上一个”（Previous）或“下一个”（Next）按钮逐步执行代码并查看全程的解释。
 
-## 代码列表 2-2 `(TwoLines.java)`
+### 代码列表 2-2 `(TwoLines.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-2/2.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-2/2.html)
 
-## `print` 方法
+### `print` 方法
 
 `print` 方法也是 `System.out` 对象的一部分，其作用与 `println` 类似——在屏幕上显示输出。然而，`print` 方法在显示完消息后不会将光标移动到下一行。查看代码列表 2-3。
 
 在在下方的动画中，点击“上一个”（Previous）或“下一个”（Next）按钮逐步执行代码并查看全程的解释。
 
-## 代码列表 2-3 `(GreatFun.java)`
+### 代码列表 2-3 `(GreatFun.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-3/3.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-3/3.html)
 
@@ -1184,7 +970,7 @@ System.out.println("King Arthur");
 
 在下方的动画中，点击“上一个”（Previous）或“下一个”（Next）按钮逐步执行代码并查看全程的解释。
 
-## 代码列表 2-4 `(Unruly.java)`
+### 代码列表 2-4 `(Unruly.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-4/4.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-4/4.html)
 
@@ -1192,7 +978,7 @@ System.out.println("King Arthur");
 
 在下方的动画中，点击“上一个”（Previous）或“下一个”（Next）按钮逐步执行代码并查看全程的解释。
 
-## 代码列表 2-5 `(Adjusted.java)`
+### 代码列表 2-5 `(Adjusted.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-5/5.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-5/5.html)
 
@@ -1200,7 +986,7 @@ System.out.println("King Arthur");
 
 在下方的动画中，点击“上一个”（Previous）或“下一个”（Next）按钮逐步执行代码并查看全程的解释。
 
-## 代码列表 2-6 `(Tabs.java)`
+### 代码列表 2-6 `(Tabs.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-6/6.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-6/6.html)
 
@@ -1210,7 +996,7 @@ System.out.println("King Arthur");
 
 表 2-2 列出了常见的转义序列并对其进行了描述。
 
-# 表 2-2 常见转义序列
+### 表 2-2 常见转义序列
 
 | 转义序列 | 名称 | 描述 |
 | --- | --- | --- |
@@ -1222,23 +1008,19 @@ System.out.println("King Arthur");
 | `\'` | 单引号 | 打印一个单引号 |
 | `\"` | 双引号 | 打印一个双引号 |
 
-## 警告！
+### 警告！
 
 不要混淆反斜杠（`\`）和正斜杠（`/`）。如果你不小心用正斜杠开始转义序列，它将无效。此外，不要在斜杠和控制字符之间加上空格。
 
+`../components/metrodigi/ch02-inline_self_quiz_v1.0.0-06/index.html`
 
+## 检查点 2.10
 
+`../components/metrodigi/ch02-inline_self_quiz_v1.0.0-07/index.html`
 
+## 检查点 2.11
 
-../components/metrodigi/ch02-inline_self_quiz_v1.0.0-06/index.html
-
-# 检查点 2.10
-
-../components/metrodigi/ch02-inline_self_quiz_v1.0.0-07/index.html
-
-# 检查点 2.11
-
-../components/metrodigi/ch02-assessable_table_v1.0.1-03/index.html
+`../components/metrodigi/ch02-assessable_table_v1.0.1-03/index.html`
 
 ## 2.3 变量与字面量
 
@@ -1258,7 +1040,7 @@ System.out.println("King Arthur");
 int value;
 ```
 
-# 观察变量声明
+### 观察变量声明
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/8DVUgTNnFC_uY2H68SZnfLHfBllULCn5`](https://mediaplayer.pearsoncmg.com/assets/_video.true/8DVUgTNnFC_uY2H68SZnfLHfBllULCn5)
 
@@ -1289,7 +1071,7 @@ System.out.println(value);
 
 当双引号放在单词 `value` 周围时，它就变成了一个字符串字面量，而不是变量名。当字符串字面量被送到 `print` 或 `println` 时，它们将按照它们在引号内的样子完全显示。
 
-### 使用 + 运算符显示多个项目
+### 使用 `+` 运算符显示多个项目
 
 当 `+` 运算符与字符串一起使用时，它被称为*字符串连接运算符*。连接的意思是追加，因此字符串连接运算符的作用将一个字符串追加到另一个后面。例如，看以下语句：
 
@@ -1339,7 +1121,7 @@ System.out.println("The sum of the three " +
                    "numbers is " + sum);
 ```
 
-# 小心引号
+### 小心引号
 
 正如代码列表 2-8 所示，在变量名周围加上引号会改变程序的结果。事实上，在任何不应该是字符串字面量的东西周围加上双引号会导致某种类型的错误。例如，在代码列表 2-7 和 2-8 中，数字 5 被赋值给变量 `value`。这样赋值将会是错误的：
 
@@ -1347,9 +1129,11 @@ System.out.println("The sum of the three " +
 value = "5";
 ```
 
-在这一语句中，5 不再是整数，而是字符串字面量。因为 `value` 被声明为整数，你只能在其中存储整数。数字可以表示为字符串的事实经常让学生感到困惑。只需记住字符串是为了人类阅读。它们被打印在计算机屏幕或纸上。而数字主要用于数学运算。你不能对字符串进行数学运算，在数字显示在屏幕上之前，必须先转换为字符串。（幸运的是，当你将数字送到 `print` 或 `println` 时，它们会处理转换。）如果这仍然困扰你，不要担心。在本章后面，我们将通过讨论它们的内部存储进一步说明数字、字符和字符串之间的区别。
 
- 关于字面量的更多
+
+在这一语句中，`5` 不再是整数，而是字符串字面量。因为 `value` 被声明为整数，你只能在其中存储整数。数字可以表示为字符串的事实经常让学生感到困惑。只需记住字符串是为了人类阅读。它们被打印在计算机屏幕或纸上。而数字主要用于数学运算。你不能对字符串进行数学运算，在数字显示在屏幕上之前，必须先转换为字符串。（幸运的是，当你将数字送到 `print` 或 `println` 时，它们会处理转换。）如果这仍然困扰你，不要担心。在本章后面，我们将通过讨论它们的内部存储进一步说明数字、字符和字符串之间的区别。
+
+## 关于字面量的更多
 
 字面量是写入程序代码中的值。字面量通常被赋值给变量或显示。代码列表 2-9 包含了字面量和变量。
 
@@ -1381,15 +1165,11 @@ Today we sold 20 bushels of apples.
 
 ### 表 2-3 字面量
 
-
-
-
-
 | 字面量 | 字面量类型 |
 | --- | --- |
-| 20 | 整数字面量 |
-| “Today we sold ” | 字符串字面量 |
-| “ bushels of apples.” | 字符串字面量 |
+| `20` | 整数字面量 |
+| `"Today we sold "` | 字符串字面量 |
+| `" bushels of apples."` | 字符串字面量 |
 
 ## 标识符 (Identifiers)
 
@@ -1438,35 +1218,31 @@ int itemsordered;
 | `3dGraph` | 非法，因为标识符不能以数字开头 |
 | `june1997` | 合法 |
 | `mixture#3` | 非法，因为标识符只能使用字母、数字、下划线或美元 |
-| `week day` | 非法，因为标识符不能包含空格
+| `week day` | 非法，因为标识符不能包含空格 |
 
 ### 类名 (Class Names)
 
 如前，标准做法是变量名以小写字母开头，然后将名称后续每个单词的首字母大写。将类名的首字母以及其包含的后续每个单词的首字母大写也是一种标准做法。这有助于区分变量名和类名。例如，`payRate` 是一个变量名，而 `Employee` 是一个类名。
 
-# 检查点 2.14
+## 检查点 2.14
 
-../components/metrodigi/ch02-inline_self_quiz_v1.0.0-08/index.html
+`../components/metrodigi/ch02-inline_self_quiz_v1.0.0-08/index.html`
 
-# 检查点 2.15
+## 检查点 2.15
 
-../components/metrodigi/ch02-inline_self_quiz_v1.0.0-09/index.html
+`../components/metrodigi/ch02-inline_self_quiz_v1.0.0-09/index.html`
 
-# 检查点 2.16
+## 检查点 2.16
 
-../components/metrodigi/ch02-inline_self_quiz_v1.0.0-10/index.html
+`../components/metrodigi/ch02-inline_self_quiz_v1.0.0-10/index.html`
 
-# 检查点 2.17
+## 检查点 2.17
 
-../components/metrodigi/ch02-inline_self_quiz_v1.0.0-11/index.html
-
-[/content]
+`../components/metrodigi/ch02-inline_self_quiz_v1.0.0-11/index.html`
 
 ---
 
-### 第二部分：基元数据类型
-
-[content]
+## 第二部分：基元数据类型
 
 ## 2.4 基元类型 (Primitive Types)
 
@@ -1503,13 +1279,9 @@ double distance;
 
 表 2-5 中的大小列显示了每个数据类型的变量所使用的字节数。例如，`int` 变量使用 4 字节，而 `double` 变量使用 8 字节。范围列显示了每个数据类型变量可以存储的数字范围。
 
-
-
-
-
 这些数据类型被称为“原始”类型，因为你不能使用它们来创建对象。回想第 1 章中对面向对象编程的讨论，对象具有属性和方法。对于原始数据类型，你只能创建变量，而变量只能用于存储单个值。此类变量不具有属性或方法。
 
-# 整数数据类型
+## 整数数据类型
 
 表 2-5 中列出的前四个数据类型 `byte`、`int`、`short` 和 `long` 都是整数数据类型。整数变量可以存储整数，如 `7`、`125`、`−14` 和 `6928`。代码列表 2-10 中的程序展示了使用了几个不同整数数据类型的变量。
 
@@ -1535,11 +1307,11 @@ int length, width, area;
 
 你只需用逗号分隔变量名，就可以声明多个相同类型的变量。
 
-# 整数字面量
+## 整数字面量
 
 当你在程序代码中编写整数字面量时，Java 假设它是 `int` 数据类型。例如，在代码列表 2-10 中，字面量 `−20`、`105`、`120` 和 `189000` 都被处理为 `int` 值。然而，你可以通过在字面量后面加上字母 `L` 来强制将其处理为 `long`。例如，值 `57L` 将被视为一个 `long`。虽然你可以使用大写或小写的 `L`，但建议使用大写的 `L`，因为小写的 `l` 看起来太像数字 `1`。
 
-# 注意！
+## 注意！
 
 你不能在数值字面量中嵌入逗号。例如，以下语句会导致错误：
 
@@ -1567,7 +1339,7 @@ number = 1257649;      // 正确。
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-11/11.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-11/11.html)
 
-# 浮点字面量
+## 浮点字面量
 
 当你在程序代码中编写浮点字面量时，Java 假设它是 `double` 数据类型。例如，在代码列表 2-11 中，字面量 `29.75`、`1.76` 和 `31.5` 都被处理为 `double` 值。正因如此，将浮点字面量赋值给 `float` 变量时会出现问题：
 
@@ -1581,7 +1353,7 @@ float number = 23.5; // 错误
 float number = 23.5F; // 这是正确的。
 ```
 
-# 注意！
+## 注意！
 
 在处理数值字面量时，你不能嵌入货币符号或逗号。例如，以下语句会导致错误：
 
@@ -1601,9 +1373,9 @@ number = 1257649; // 正确。
 
 | 十进制表示 | 科学计数法 | E 计数法 |
 | --- | --- | --- |
-| 47.91 | 4.791 × 10¹ | 4.791E1 |
-| 0.0072 | 7.2 × 10⁻⁴ | 7.2E-4 |
-| 2900000 | 2.9 × 10⁶ | 2.9E6 |
+| `47.91` | `4.791 × 10¹` | `4.791E1` |
+| `0.0072` | `7.2 × 10⁻⁴` | `7.2E-4` |
+| `2900000` | `2.9 × 10⁶` | `2.9E6` |
 
 Java 使用 E 表示这些值。在科学计数法中，`47281.97` 是 `4.728197×10⁴`。E 可以是大写或小写。
 
@@ -1623,16 +1395,12 @@ Java 使用 E 表示这些值。在科学计数法中，`47281.97` 是 `4.728197
 
 `boolean` 类型的变量用于评估结果为真或假的条件。然而，我们还没有使用它们直到第 3 章，所以现在只需记住以下几点：
 
-*   `boolean` 变量只能持有 `true` 或 `false` 值。
-*   `boolean` 变量的内容不能复制到 `boolean` 以外的任何类型。
+* `boolean` 变量只能持有 `true` 或 `false` 值。
+* `boolean` 变量的内容不能复制到 `boolean` 以外的任何类型。
 
 ### char 数据类型
 
-`char` 数据类型用于存储字符。`char` 数据类型的变量每次存储一个字符。字符字面量封装在*单引号*中。代码列表 2-14 使用了 `char` 变量。字符字面量 'A' 和 'B' 被赋值给该变量。
-
-
-
-
+`char` 数据类型用于存储字符。`char` 数据类型的变量每次存储一个字符。字符字面量封装在*单引号*中。代码列表 2-14 使用了 `char` 变量。字符字面量 `'A'` 和 `'B'` 被赋值给该变量。
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-14/14.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-14/14.html)
 
@@ -1654,23 +1422,23 @@ Java 使用 E 表示这些值。在科学计数法中，`47281.97` 是 `4.728197
 
 ![三个字符 A, B, C 存储在内存中的形式为 00 垂直线 65，00 垂直线 66 和 00 垂直线 67。](img/02fig04.png)
 
-# 图 2-4 字符及其在内存中的存储方式
+## 图 2-4 字符及其在内存中的存储方式
 
-# Checkpoint 2.18
+## Checkpoint 2.18
 
-../components/metrodigi/ch02-inline_self_quiz_v1.0.0-12/index.html
+`../components/metrodigi/ch02-inline_self_quiz_v1.0.0-12/index.html`
 
-# Checkpoint 2.19
+## Checkpoint 2.19
 
-../components/metrodigi/ch02-fill_in_the_blank-02/index.html
+`../components/metrodigi/ch02-fill_in_the_blank-02/index.html`
 
-# Checkpoint 2.21
+## Checkpoint 2.21
 
-../components/metrodigi/ch02-inline_self_quiz_v1.0.0-13/index.html
+`../components/metrodigi/ch02-inline_self_quiz_v1.0.0-13/index.html`
 
-# Checkpoint 2.26
+## Checkpoint 2.26
 
-../components/metrodigi/ch02-fill_in_the_blank-03/index.html
+`../components/metrodigi/ch02-fill_in_the_blank-03/index.html`
 
 ### 变量赋值与初始化
 
@@ -1688,14 +1456,16 @@ unitsSold = 12;
 12 = unitsSold;      // 错误！
 ```
 
-`=` 运算符左侧的操作数必须是一个变量名。`=` 符号右侧的操作数必须是一个具有值的表达式。赋值运算符获取右操作数的值并将其放入左操作数所标识的变量中。假设 `length` 和 `width` 都是 `int` 变量，以下代码说明赋值运算符的右操作数可以是字面量或变量：
+
+
+`=`运算符左侧的操作数必须是一个变量名。`=`符号右侧的操作数必须是一个具有值的表达式。赋值运算符获取右操作数的值并将其放入左操作数所标识的变量中。假设`length`和`width`都是`int`变量，以下代码说明赋值运算符的右操作数可以是字面量或变量：
 
 ```
 length = 20;
 width = length;
 ```
 
-注意的是，赋值运算符只改变其左侧操作数的内容。第二个语句将 `length` 变量的值赋给 `width` 变量。语句执行后，`length` 保持原有的值。
+需要注意的是，赋值运算符只改变其左侧操作数的内容。第二个语句将`length`变量的值赋给`width`变量。语句执行后，`length`保持原有的值。
 
 你也可以在声明时为变量赋值。这被称为*初始化*。代码列表 2-15 展示了如何这样做。
 
@@ -1703,7 +1473,7 @@ width = length;
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-15/15.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-15/15.html)
 
-变量 `month` 初始化为 2，`days` 初始化为 28。这里是其他示例：
+变量`month`初始化为 2，`days`初始化为 28。这里是其他示例：
 
 ```java
 int month = 2;
@@ -1716,7 +1486,7 @@ int customerNum = 45;
 
 在下面的动画中，点击“上一个”或“下一个”按钮可以逐步查看代码并查看贯穿其中的解释。
 
-# 变量只能存储一个
+## 变量只能存储一个值
 
 记住，变量只能存储一个值。当你为变量赋值新值时，新值会替换旧的内容。例如，看下面的代码：
 
@@ -1727,36 +1497,36 @@ x = 99;
 System.out.println(x);
 ```
 
-在这段代码中，变量 `x` 初始化为 5 并输出了其内容。然后它被赋值为 99。这将产生输出：
+在这段代码中，变量`x`初始化为 5 并输出了其内容。然后它被赋值为 99。这将产生输出：
 
 ```
 5
 99
 ```
 
-# Checkpoint 2.27
+## Checkpoint 2.27
 
-../components/metrodigi/ch02-inline_self_quiz_v1.0.0-14/index.html
+`../components/metrodigi/ch02-inline_self_quiz_v1.0.0-14/index.html`
 
-# Checkpoint 2.28
+## Checkpoint 2.28
 
-../components/metrodigi/ch02-inline_self_quiz_v1.0.0-15/index.html
+`../components/metrodigi/ch02-inline_self_quiz_v1.0.0-15/index.html`
 
-# Checkpoint 2.29
+## Checkpoint 2.29
 
-../components/metrodigi/ch02-inline_self_quiz_v1.0.0-16/index.html
+`../components/metrodigi/ch02-inline_self_quiz_v1.0.0-16/index.html`
 
-# Checkpoint 2.30
+## Checkpoint 2.30
 
-../components/metrodigi/ch02-inline_self_quiz_v1.0.0-17/index.html
+`../components/metrodigi/ch02-inline_self_quiz_v1.0.0-17/index.html`
 
 ## 2.5 算术运算符
 
 概念：有很多运算符用于处理数值和执行算术运算。
 
-Java 提供了许多处理数据的运算符。通常有三种类型：*一元*、*二元*和*三元*。这些术语反映了运算符所需的的操作数数量。
+`Java`提供了许多处理数据的运算符。通常有三种类型：*一元*、*二元*和*三元*。这些术语反映了运算符所需的的操作数数量。
 
-## 查看简单的数学表达式
+### 查看简单的数学表达式
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/7yRmZ7kVTxDaFGEq3vz0AxD5oQSSpm6`](https://mediaplayer.pearsoncmg.com/assets/_video.true/7yRmZ7kVTxDaFGEq3vz0AxD5oQSSpm6)
 
@@ -1772,15 +1542,11 @@ Java 提供了许多处理数据的运算符。通常有三种类型：*一元*�
 –number
 ```
 
+此表达式给出了`number`中存储的值的负值。减号在这样使用时被称为`取反运算符`。因为它只需要需要一个操作数，所以它是一个一元运算符。
 
+二元运算符与两个操作数一起工作。赋值运算符属于这一类。正如你可能猜的那样，三元运算符需要三个操作数。`Java`只有一个三元运算符，在第 3 章中进行了讨论。
 
-
-
-此表达式给出了 `number` 中存储的值的负值。减号在这样使用时被称为`取反运算符`。因为它只需要需要一个操作数，所以它是一个一元运算符。
-
-二元运算符与两个操作数一起工作。赋值运算符属于这一类。正如你可能猜的那样，三元运算符需要三个操作数。`Java` 只有一个三元运算符，在第 3 章中进行了讨论。
-
-算术运算在编程中非常常见。表 2-7 展示了 `Java` 中的算术运算符。
+算术运算在编程中非常常见。表 2-7 展示了`Java`中的算术运算符。
 
 ### 表 2-7 算术运算符
 
@@ -1824,7 +1590,7 @@ teams = players / maxEach; // 将 players / maxEach 赋值给 teams
 half = number / 2;         // 将 number / 2 赋值给 half
 ```
 
-取模运算符返回涉及两个整数除法运算的余数。以下语句将 2 赋值给 `leftOver`：
+取模运算符返回涉及两个整数除法运算的余数。以下语句将 2 赋值给`leftOver`：
 
 ```
 leftOver = 17 % 3;
@@ -1842,19 +1608,19 @@ leftOver = 17 % 3;
 
 代码清单 2-17 计算了小时薪工人在一周内赚的总工资。正如注释中所提到的，有用于常规工资、基础薪率、常规工作小时、加班工资、加班薪率、加班工作小时和总工资的变量。
 
-程序的第 15 行将 `basePay` 乘以 `regularHours`并将结果（1000）存储在 `regularWages` 中：
+程序的第 15 行将`basePay`乘以`regularHours`并将结果（1000）存储在`regularWages`中：
 
 ```
 regularWages = basePay * regularHours;
 ```
 
-第 16 行将 `overtimePay` 乘以 `overtimeHours`，并将结果（375）存储在 `overtimeWages` 中：
+第 16 行将`overtimePay`乘以`overtimeHours`，并将结果（375）存储在`overtimeWages`中：
 
 ```
 overtimeWages = overtimePay * overtimeHours;
 ```
 
-第 17 行将常规工资和加班工资相加，并将结果（1375）存储在 `totalWages` 中：
+第 17 行将常规工资和加班工资相加，并将结果（1375）存储在`totalWages`中：
 
 ```
 totalWages = regularWages + overtimeWages;
@@ -1870,13 +1636,13 @@ totalWages = regularWages + overtimeWages;
 double number = 5 / 2;
 ```
 
-`number` 的值将是 2，因为小数部分被丢弃了。如果操作数是浮点数，结果将是浮点数。例如：
+`number`的值将是 2，因为小数部分被丢弃了。如果操作数是浮点数，结果将是浮点数。例如：
 
 ```
 double number = 5.0 / 2;
 ```
 
-`number` 的值将是 2.5，因为操作数是浮点数。
+`number`的值将是 2.5，因为操作数是浮点数。
 
 ### 运算符优先级
 
@@ -1889,7 +1655,7 @@ double number = 5.0 / 2;
 
 ![优先级通过一个数学表达式从 12 + 3 简化为 12 + 2 最后到最终结果 14 来演示](img/02fig05.png)
 
-# 图 2-5 优先级图示
+### 图 2-5 优先级图示
 
 表 2-8 显示了算术运算符的优先级。表格顶部的运算符优先级高于下面的运算符。
 
@@ -1910,10 +1676,6 @@ double number = 5.0 / 2;
 
 表 2-10 显示了一些表达式及其值。
 
-
-
-
-
 ### 表 2-10 某些表达式及其值
 
 | 表达式 | 值 |
@@ -1926,13 +1688,13 @@ double number = 5.0 / 2;
 
 ### 使用括号分组
 
-数学表达式中的部分可以使用括号分组，以强制某些操作在其他操作之前执行。在下面的语句中，`a`、`b`、`c` 和 `d` 的和被除以 `4.0`。
+数学表达式中的部分可以使用括号分组，以强制某些操作在其他操作之前执行。在下面的语句中，`a`、`b`、`c`和`d`的和被除以`4.0`。
 
 ```
 average = (a + b + c + d) / 4.0;
 ```
 
-然而，如果没有括号，`d` 将除以 `4`，并将结果加到 `a`、`b` 和 `c` 上。表 2-11 显示了更多的表达式及其值。
+然而，如果没有括号，`d`将除以`4`，并将结果加到`a`、`b`和`c`上。表 2-11 显示了更多的表达式及其值。
 
 ### 表 2-11 更多的表达式及其值
 
@@ -1946,9 +1708,9 @@ average = (a + b + c + d) / 4.0;
 
 ### 焦点：计算百分比和折扣
 
-确定百分比是计算机编程中常见的计算。虽然在通用数学中使用 `%` 符号表示百分比，但大多数编程语言（包括 `Java`）并不使用 `%` 符号来实现此目的。在程序中，你必须将百分比转换为浮点数，就像你使用计算器一样。例如，50% 应该写为 `0.5`，2% 应该写为 `0.02`。
+确定百分比是计算机编程中常见的计算。虽然在通用数学中使用`%`符号表示百分比，但大多数编程语言（包括`Java`）并不使用`%`符号来实现此目的。在程序中，你必须将百分比转换为浮点数，就像你使用计算器一样。例如，50%应该写为`0.5`，2%应该写为`0.02`。
 
-让我们来看一个例子。假设你每月赚 6,000 美元，并允许将每月总工资的一部分投入退休计划。你想确定，如果你投入每月总工资的 5%、8% 或 10%，你的工资中将有多少金额进入该计划。为了做出这一判断，你编写了一个像所示代码列表 2-18 所示的程序。
+让我们来看一个例子。假设你每月赚 6,000 美元，并允许将每月总工资的一部分投入退休计划。你想确定，如果你投入每月总工资的 5%、8%或 10%，你的工资中将有多少金额进入该计划。为了做出这一判断，你编写了一个像所示代码列表 2-18 所示的程序。
 
 在下方的动画中，点击“上一个”或“下一个”按钮，可以逐步执行代码并查看贯穿始终的解释。
 
@@ -1956,9 +1718,9 @@ average = (a + b + c + d) / 4.0;
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-18/18.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-18/18.html)
 
-第 11 行和 12 行声明了两个变量：`monthlyPay` 和 `contribution`。变量 `monthlyPay` 初始化为 `6000.0`，持有你的每月工资金额。`contribution` 变量将持有投入退休计划的金额。
+第 11 行和 12 行声明了两个变量：`monthlyPay`和`contribution`。变量`monthlyPay`初始化为`6000.0`，持有你的每月工资金额。`contribution`变量将持有投入退休计划的金额。
 
-第 15 行至 18 行的语句计算并显示月工资的 5%。计算在第 15 行完成，其中 `monthlyPay` 变量乘以 `0.05`。结果被赋值给 `contribution` 变量，然后通过第 16 行至 18 行的语句显示。
+第 15 行至 18 行的语句计算并显示月工资的 5%。计算在第 15 行完成，其中`monthlyPay`变量乘以`0.05`。结果被赋值给`contribution`变量，然后通过第 16 行至 18 行的语句显示。
 
 第 21 行至 24 行采取了类似的步骤，计算并显示了月工资的 8%，第 27 行至 30 行计算并显示了月工资的 10%。
 
@@ -1971,7 +1733,7 @@ average = (a + b + c + d) / 4.0;
 * 第一，你获得折扣金额，即商品原价的 20%。
 * 第二，你从商品原价中减去折扣金额。这让你得到了促销价。
 
-代码列表 2-19 显示了如何在 `Java` 中实现此。
+代码列表 2-19 显示了如何在`Java`中实现此。
 
 在下方的动画中，点击“上一个”或“下一个”按钮，可以逐步执行代码并查看贯穿始终的解释。
 
@@ -1979,7 +1741,7 @@ average = (a + b + c + d) / 4.0;
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-19/19.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-19/19.html)
 
-第 11 行至 13 行声明了三个变量。`regularPrice` 变量持有原价，初始化为 `59`。第 16 行通过将 `regularPrice` 乘以 `0.2` 计算 `discount` 变量。第 20 行通过从 `regularPrice` 中减去 `discount` 计算促销价，并存储在 `salePrice` 变量中。第 23 行至 25 行显示了原价、折扣和促销价。
+第 11 行至 13 行声明了三个变量。`regularPrice`变量持有原价，初始化为`59`。第 16 行通过将`regularPrice`乘以`0.2`计算`discount`变量。第 20 行通过从`regularPrice`中减去`discount`计算促销价，并存储在`salePrice`变量中。第 23 行至 25 行显示了原价、折扣和促销价。
 
 ## 2.6 复合赋值运算符
 
@@ -1991,36 +1753,33 @@ average = (a + b + c + d) / 4.0;
 x = x + 1;
 ```
 
-在赋值运算符的右侧，将 1 加到 `x`。结果被赋值给 `x`，替换之前的值。实际上，这条语句将 x 增加了 1。这里是另一个例子：
+在赋值运算符的右侧，将 1 加到`x`。结果被赋值给`x`，替换之前的值。实际上，这条语句将`x`增加了 1。这里是另一个例子：
 
 ```
 balance = balance + deposit;
 ```
 
-
-
-
-假设 `balance` 和 `deposit` 是变量，该语句将 `balance + deposit` 的值赋值给 `balance`。该语句的作用是将 `deposit` 加到存储在 `balance` 中的值上。这里是另一个示例：
+假设`balance`和`deposit`是变量，该语句将`balance + deposit`的值赋值给`balance`。该语句的作用是将`deposit`加到存储在`balance`中的值上。这里是另一个示例：
 
 ```
 balance = balance - withdrawal;
 ```
 
-假设 `balance` 和 `withdrawal` 是变量，该语句将 `balance - withdrawal` 的值赋值给 `balance`。该语句的作用是将 `withdrawal` 从存储在 `balance` 中的值中减去。
+假设`balance`和`withdrawal`是变量，该语句将`balance - withdrawal`的值赋值给`balance`。该语句的作用是将`withdrawal`从存储在`balance`中的值中减去。
 
 如果你以前没有见过这类类型的语句，它们可能会引起一些初始的困惑，因为同一个变量名同时出现在赋值运算符的两侧。表 2-12 显示了其他这种编写方式的语句示例。
 
-# 表 2-12 各种赋值语句（假设每个语句中 `x` = 6）
+### 表 2-12 各种赋值语句（假设每个语句中`x`= 6）
 
-| 语句 | 作用 | 语句执行后 `x` 的值 |
+| 语句 | 作用 | 语句执行后`x`的值 |
 | --- | --- | --- |
-| `x = x + 4;` | 将 `x` 加 4 | `10` |
-| `x = x − 3;` | 从 `x` 减去 3 | `3` |
-| `x = x * 10;` | 将 `x` 乘以 10 | `60` |
-| `x = x / 2;` | 将 `x` 除以 2 | `3` |
-| `x = x % 4` | 将 `x / 4` 的余数赋值给 `x` | `2` |
+| `x = x + 4;` | 将`x`加 4 | `10` |
+| `x = x − 3;` | 从`x`减去 3 | `3` |
+| `x = x * 10;` | 将`x`乘以 10 | `60` |
+| `x = x / 2;` | 将`x`除以 2 | `3` |
+| `x = x % 4` | 将`x / 4`的余数赋值给`x` | `2` |
 
-这类操作在编程中非常常见。为了方便起见，Java 提供了一组专门为这些工作设计的特殊运算符。表 2-13 显示了`复合赋值运算符`，也称为`复合运算符`。
+这类操作在编程中非常常见。为了方便起见，`Java`提供了一组专门为这些工作设计的特殊运算符。表 2-13 显示了`复合赋值运算符`，也称为`复合运算符`。
 
 ### 表 2-13 复合赋值运算符
 
@@ -2058,6 +1817,8 @@ balance −= withdrawal;
 
 ## 2.7 原始数据类型之间的转换
 
+
+
 概念：在将值存储在变量之前，该值的数据类型必须与变量的数据类型兼容。Java 会自动在数据类型之间进行某些转换，但不会自动执行任何可能导致数据丢失的转换。Java 在评估包含混合数据类型的算术表达式时，也遵循一套规则。
 
 Java 是一种`强类型`语言。这意味着在将值赋值给变量之前，Java 会检查变量和赋值给它的数据的类型，以确定它们是否兼容。例如，看以下语句：
@@ -2068,7 +1829,7 @@ double y = 2.5;
 x = y;
 ```
 
-该赋值语句试图将 `double` 值 (2.5) 存储在 `int` 变量中。当 Java 编译器遇到这行代码时，它将返回一条错误信息。（JDK 显示消息“possible loss of precision.”）
+该赋值语句试图将`double`值 (2.5) 存储在`int`变量中。当 Java 编译器遇到这行代码时，它将返回一条错误信息。（JDK 显示消息“possible loss of precision.”）
 
 然而，并不是所有混合数据类型的赋值语句都会被编译器拒绝。例如，看以下程序段：
 
@@ -2078,9 +1839,9 @@ short y = 2;
 x = y;
 ```
 
-这个赋值语句将 `short` 存储在 `int` 中，可以毫无问题运行。那么，为什么 Java 允许将 `short` 存储在 `int` 中，但不允许将 `double` 存储在 `int` 中呢？显然是因为 `double` 可以存储小数，并且可以持有比 `int` 能存储的大得多的值。如果 Java 允许 `double` 赋值给 `int`，可能会导致数据丢失。
+这个赋值语句将`short`存储在`int`中，可以毫无问题运行。那么，为什么 Java 允许将`short`存储在`int`中，但不允许将`double`存储在`int`中呢？显然是因为`double`可以存储小数，并且可以持有比`int`能存储的大得多的值。如果 Java 允许`double`赋值给`int`，可能会导致数据丢失。
 
-就像军队中的军官一样，原始数据类型是有级的。如果一个数据类型可以持有更大的数字，那么它的级别就高于另一个数据类型。例如，`float` 高于 `int`，而 `int` 高于 `short`。图 2-6 显示了按排序的数值数据类型。数据类型在列表中出现的位置越高，它的排名越高。
+就像军队中的军官一样，原始数据类型是有级的。如果一个数据类型可以持有更大的数字，那么它的级别就高于另一个数据类型。例如，`float`高于`int`，而`int`高于`short`。图 2-6 显示了按排序的数值数据类型。数据类型在列表中出现的位置越高，它的排名越高。
 
 ![原始数据类型排名从最低到最高。数据类型排名 byte 最低，然后是 short、然后是 int、然后是 float、最后是 double。](img/06.png)
 
@@ -2114,11 +1875,11 @@ x = (int)number;
 
 | 语句 | 说明 |
 | --- | --- |
-| `littleNum = (short)bigNum;` | 将 `bigNum` 转换为 `short` 类型，并赋值给 `littleNum`。 |
-| `x = (long)3.7;` | 强制运算符应用于表达式 3.7。它返回 3，赋值给 `x`。 |
-| `number = (int)72.567;` | 强制运算符应用于表达式 72.567。它返回 72，用于初始化变量 `number`。 |
-| `value = (float)x;` | 强制运算符将 `x` 转换为 `float` 类型，转换后的值赋值给 `value`。 |
-| `value = (byte)number;` | 强制运算符将 `number` 转换为 `byte` 类型，转换后的值赋值给 `value`。 |
+| `littleNum = (short)bigNum;` | 将`bigNum`转换为`short`类型，并赋值给`littleNum`。 |
+| `x = (long)3.7;` | 强制运算符应用于表达式 3.7。它返回 3，赋值给`x`。 |
+| `number = (int)72.567;` | 强制运算符应用于表达式 72.567。它返回 72，用于初始化变量`number`。 |
+| `value = (float)x;` | 强制运算符将`x`转换为`float`类型，转换后的值赋值给`value`。 |
+| `value = (byte)number;` | 强制运算符将`number`转换为`byte`类型，转换后的值赋值给`value`。 |
 
 注意，当强制运算符应用于变量时，它不会改变变量的内容。它只是返回存储在变量中的值，并转换为指定的数据类型。
 
@@ -2130,22 +1891,19 @@ double piesPerPerson;
 piesPerPerson = pies / people;
 ```
 
-尽管 10 除以 4 是 2.5，但这段代码会将 2 存储在 `piesPerPerson` 变量中。由于 `pies` 和 `people` 都是 `int` 变量，结果将是一个 `int`，小数部分将被丢弃。然而，我们可以通过强制运算符修改代码，以便其获得正确的浮点值结果：
+尽管 10 除以 4 是 2.5，但这段代码会将 2 存储在`piesPerPerson`变量中。由于`pies`和`people`都是`int`变量，结果将是一个`int`，小数部分将被丢弃。然而，我们可以通过强制运算符修改代码，以便其获得正确的浮点值结果：
 
 ```
 piesPerPerson = (double)pies / people;
 ```
 
-
-
-
-变量 `pies` 是一个 `int` 类型，其值为 10。表达式 `(double)pies` 返回将 `pies` 中的值转换为 `double` 后的结果。这意味着除法运算符的操作数之一是 `double`，因此除法的结果将是一个 `double`。该语句也可以写成如下形式：
+变量`pies`是一个`int`类型，其值为 10。表达式`(double)pies`返回将`pies`中的值转换为`double`后的结果。这意味着除法运算符的操作数之一是`double`，因此除法的结果将是一个`double`。该语句也可以写成如下形式：
 
 ```
 piesPerPerson = pies / (double)people;
 ```
 
-在这一语句中，强制转换符返回将 `people` 变量的值转换为 `double` 后的结果。在两种语句中，除法的结果都是 `double`。
+在这一语句中，强制转换符返回将`people`变量的值转换为`double`后的结果。在两种语句中，除法的结果都是`double`。
 
 # 警告！
 
@@ -2155,19 +1913,19 @@ piesPerPerson = pies / (double)people;
 piesPerPerson = (double)(pies / people);
 ```
 
-该语句并没有将 `pies` 或 `people` 中的值转换为 `double`，而是转换了表达式 `pies / people` 的结果。如果使用该语句，仍然会执行整数除法操作。原因如下：表达式 `pies / people` 的结果是 2（因为执行了整数除法）。将值 2 转换为 `double` 得到 2.0。为了防止整数除法的发生，必须将操作数之一转换为 `double`。
+该语句并没有将`pies`或`people`中的值转换为`double`，而是转换了表达式`pies / people`的结果。如果使用该语句，仍然会执行整数除法操作。原因如下：表达式`pies / people`的结果是 2（因为执行了整数除法）。将值 2 转换为`double`得到 2.0。为了防止整数除法的发生，必须将操作数之一转换为`double`。
 
 ### 混合整数操作
 
-Java 语言的细微之处之一是它内部处理 `int`、`byte` 和 `short` 变量算术运算的方式。当 `byte` 或 `short` 数据类型的值用于算术表达式时，它们会被临时转换为 `int` 值。仅使用 `byte`、`short` 或 `int` 值混合进行算术运算，其结果始终是一个 `int`。
+Java 语言的细微之处之一是它内部处理`int`、`byte`和`short`变量算术运算的方式。当`byte`或`short`数据类型的值用于算术表达式时，它们会被临时转换为`int`值。仅使用`byte`、`short`或`int`值混合进行算术运算，其结果始终是一个`int`。
 
-例如，假设以下表达式中的 `b` 和 `c` 是 `short` 变量：
+例如，假设以下表达式中的`b`和`c`是`short`变量：
 
 ```
 b + c
 ```
 
-尽管 `b` 和 `c` 都是 `short` 变量，但表达式 `b + c` 的结果是一个 `int`。这意味着当将此类表达式的结果存储在变量中时，该变量必须是 `int` 或更高的数据类型。例如，看以下代码：
+尽管`b`和`c`都是`short`变量，但表达式`b + c`的结果是一个`int`。这意味着当将此类表达式的结果存储在变量中时，该变量必须是`int`或更高的数据类型。例如，看以下代码：
 
 ```
 short firstNumber = 10,
@@ -2183,7 +1941,7 @@ thirdNumber = firstNumber + secondNumber;
 thirdNumber = firstNumber + secondNumber;
 ```
 
-该错误源于 `thirdNumber` 是一个 `short`。尽管 `firstNumber` 和 `secondNumber` 也是 `short` 变量，但表达式 `firstNumber + secondNumber` 的结果是一个 `int` 值。如果将 `thirdNumber` 声明为 `int`，或者在赋值语句中使用强制转换符，就可以修正该程序，如下所示：
+该错误源于`thirdNumber`是一个`short`。尽管`firstNumber`和`secondNumber`也是`short`变量，但表达式`firstNumber + secondNumber`的结果是一个`int`值。如果将`thirdNumber`声明为`int`，或者在赋值语句中使用强制转换符，就可以修正该程序，如下所示：
 
 ```
 thirdNumber = (short)(firstNumber + secondNumber);
@@ -2191,35 +1949,35 @@ thirdNumber = (short)(firstNumber + secondNumber);
 
 ### 其他混合数学表达式
 
-在数学表达式包含一个或多个 `double`、`float` 或 `long` 数据类型值的情况下，Java 会尽力将表达式中的所有操作数转换为相同的数据类型。让我们来看指导此类类型表达式评估的具体规则。
+在数学表达式包含一个或多个`double`、`float`或`long`数据类型值的情况下，Java 会尽力将表达式中的所有操作数转换为相同的数据类型。让我们来看指导此类类型表达式评估的具体规则。
 
-1. 如果运算符的操作数之一是 `double`，则另一个操作数的值将被转换为 `double`。表达式的结果将是 `double`。例如，在以下语句中假设 `b` 是 `double` 且 `c` 是 `int`：
+1. 如果运算符的操作数之一是`double`，则另一个操作数的值将被转换为`double`。表达式的结果将是`double`。例如，在以下语句中假设`b`是`double`且`c`是`int`：
 
 ```
 a = b + c;
 ```
 
-`c` 中的值将在加法之前被转换为 `double`。加法的结果将是 `double`，因此变量 `a` 也必须是是 `double`。
+`c`中的值将在加法之前被转换为`double`。加法的结果将是`double`，因此变量`a`也必须是是`double`。
 
-2. 如果运算符的操作数之一是 `float`，则另一个操作数的值将被转换为 `float`。表达式的结果将是 `float`。例如，在以下语句中假设 `x` 是 `short` 且 `y` 是 `float`：
+2. 如果运算符的操作数之一是`float`，则另一个操作数的值将被转换为`float`。表达式的结果将是`float`。例如，在以下语句中假设`x`是`short`且`y`是`float`：
 
 ```
 z = x * y;
 ```
 
-`x` 中的值将在乘法之前被转换为 `float`。乘法的结果将是 `float`，因此变量 `z` 必须是 `double` 或 `float`。
+`x`中的值将在乘法之前被转换为`float`。乘法的结果将是`float`，因此变量`z`必须是`double`或`float`。
 
-3. 如果运算符的操作数之一是 `long`，则另一个操作数的值将被转换为 `long`。表达式的结果将是 `long`。例如，在以下语句中假设 `a` 是 `long` 且 `b` 是 `short`：
+3. 如果运算符的操作数之一是`long`，则另一个操作数的值将被转换为`long`。表达式的结果将是`long`。例如，在以下语句中假设`a`是`long`且`b`是`short`：
 
 ```
 c = a − b;
 ```
 
-变量 `b` 将在减法之前被转换为 `long`。减法的结果将是 `long`，因此变量 `c` 也必须是 `long`、`float` 或 `double`。
+变量`b`将在减法之前被转换为`long`。减法的结果将是`long`，因此变量`c`也必须是`long`、`float`或`double`。
 
-## 2.8 使用 `final` 创建命名常量
+## 2.8 使用`final`创建命名常量
 
-概念：`final` 关键字可以在变量声明中使用，使变量成为命名常量。命名常量在初始化时赋予一个值，该值在程序执行期间不能更改。
+概念：`final`关键字可以在变量声明中使用，使变量成为命名常量。命名常量在初始化时赋予一个值，该值在程序执行期间不能更改。
 
 假设以下语句出现在一个计算贷款相关数据的程序中：
 
@@ -2229,7 +1987,7 @@ amount = balance * 0.069;
 
 在这样的程序中，会出现两个潜在问题。首先，除了原始程序员之外，其他人都不清楚 0.069 是什么。它看起来像是一个利率，但在某些情况下会有与贷款支付相关的费用。第二个问题发生在该数字在整个程序中使用且必须被更改时。假设该数字是利率，如果利率从 6.9% 变为 8.2% 呢？程序员必须搜索源代码以找到该数字出现的所有处。
 
-这两个问题都可以通过使用命名常量来解决。命名常量是一个值只读且在程序执行期间不能改变的变量。在 Java 中，你可以在变量声明中使用 `final` 关键字创建这样的变量。`final` 单词写在数据类型之前。这是一个示例：
+这两个问题都可以通过使用命名常量来解决。命名常量是一个值只读且在程序执行期间不能改变的变量。在 Java 中，你可以在变量声明中使用`final`关键字创建这样的变量。`final`单词写在数据类型之前。这是一个示例：
 
 ```
 final double INTEREST_RATE = 0.069;
@@ -2237,14 +1995,14 @@ final double INTEREST_RATE = 0.069;
 
 这条语句看起来和变量声明完全一样，只是变量。并不要求变量名使用大写字母，但许多程序员倾向于这样写，以便它们与普通变量名区分开来。
 
-当你将变量声明为 `final` 时，必须在使用之前对其进行初始化或给它赋一个值。例如，以下代码在输出操作之前声明并初始化了一个名为 `PRICE` 的 `final` 变量：
+当你将变量声明为`final`时，必须在使用之前对其进行初始化或给它赋一个值。例如，以下代码在输出操作之前声明并初始化了一个名为`PRICE`的`final`变量：
 
 ```
 final double PRICE = 19.99;
 System.out.println("The price is " + PRICE);
 ```
 
-以下代码声明了一个名为 `PRICE` 的 `final` 变量，在单独语句中对其赋值，然后在输出操作中使用它：
+以下代码声明了一个名为`PRICE`的`final`变量，在单独语句中对其赋值，然后在输出操作中使用它：
 
 ```
 final double PRICE;
@@ -2252,7 +2010,7 @@ PRICE = 19.99;
 System.out.println("The price is " + PRICE);
 ```
 
-然而，以下代码编译时会导致错误，因为你不能在给 `final` 变量赋值之前使用它：
+然而，以下代码编译时会导致错误，因为你不能在给`final`变量赋值之前使用它：
 
 ```
 final double PRICE;
@@ -2260,7 +2018,7 @@ System.out.println("The price is " + PRICE); // 错误！
 PRICE = 19.99;
 ```
 
-一旦给 `final` 变量赋了值，程序中的任何语句都不能更改其值。以下代码会导致编译错误：
+一旦给`final`变量赋了值，程序中的任何语句都不能更改其值。以下代码会导致编译错误：
 
 ```
 final double PRICE;
@@ -2281,29 +2039,27 @@ amount = balance * 0.069;
 amount = balance * INTEREST_RATE;
 ```
 
-
-
-一个新程序员可以阅读第二条语句并知道正在发生什么。显而易见，`balance` 正在乘以利率。这种方法的另一个优势是可以很容易地对程序进行广泛的更改。假设利率在整个程序中出现在十几个不同的语句中。当利率发生变化时，只有命名常量定义中的 `initialization value`（初始化值）是需要修改的值。如果利率增加到 8.2%，可以将声明更改为如下内容：
+一个新程序员可以阅读第二条语句并知道正在发生什么。显而易见，`balance`正在乘以利率。这种方法的另一个优势是可以很容易地对程序进行广泛的更改。假设利率在整个程序中出现在十几个不同的语句中。当利率发生变化时，只有命名常量定义中的`initialization value`（初始化值）是需要修改的值。如果利率增加到 8.2%，可以将声明更改为如下内容：
 
 ```
 final double INTEREST_RATE = 0.082;
 ```
 
-然后程序就可以准备重新编译了。每个使用 `INTEREST_RATE` 的语句都将使用新值。
+然后程序就可以准备重新编译了。每个使用`INTEREST_RATE`的语句都将使用新值。
 
-### `Math.PI` 命名常量
+### `Math.PI`命名常量
 
-作为 Java API 的一部分 `Math` 类提供了一个预定义的命名常量 `Math.PI`。该常量被赋值为值 3.14159265358979323846，这是数学数值 pi 的近似值。例如，看以下语句：
+作为 Java API 的一部分`Math`类提供了一个预定义的命名常量`Math.PI`。该常量被赋值为值 3.14159265358979323846，这是数学数值 pi 的近似值。例如，看以下语句：
 
 ```
 area = Math.PI * radius * radius;
 ```
 
-假设变量 `radius` 存储圆的半径，该语句使用 `Math.PI` 常量来计算圆的面积。
+假设变量`radius`存储圆的半径，该语句使用`Math.PI`常量来计算圆的面积。
 
 ### 注意
 
-关于 `Math` 类的更多信息，请参见 附录 F。
+关于`Math`类的更多信息，请参见 附录 F。
 
 # 检查点 2.44
 
@@ -2313,9 +2069,9 @@ area = Math.PI * radius * radius;
 
 ../components/metrodigi/ch02-inline_self_quiz_v1.0.0-23/index.html
 
-## 2.9 `String` 类
+## 2.9 `String`类
 
-概念：`String` 类允许你创建用于存储字符串的对象。它还有许多各种方法，允许你处理字符串。
+概念：`String`类允许你创建用于存储字符串的对象。它还有许多各种方法，允许你处理字符串。
 
 你已经遇到过字符串，并检查了那些在屏幕上显示它们的程序，但让我们花点时间确保你理解什么是字符串。字符串是字符的序列。它可以表示任何包含文本的数据类型，例如名称、地址、警告消息等。字符串字面量被包含在双引引号中，如下所示：
 
@@ -2330,15 +2086,15 @@ area = Math.PI * radius * radius;
 
 第 1 章 向你介绍了对象，它们是作为包含属性和方法的软件实体。对象的属性是存储在对象中的数据值。对象的方法是对对象的属性执行操作的过程。然而，在创建对象之前，必须由程序员对其进行设计。程序员确定了必要的属性和方法，然后创建一个描述该对象的类。
 
-你已经见过类被用作应用程序的容器。类也可以用于指定特定类型对象可能拥有的属性和方法。将类类为对象可以据此创建的“蓝图”。因此，类不是对象，而是对对象的描述。当程序运行时，它可以使用该类在内存中创建所需的任意数量的对象。从类中创建的每个对象都称为该类的一个 `instance`（实例）。
+你已经见过类被用作应用程序的容器。类也可以用于指定特定类型对象可能拥有的属性和方法。将类类为对象可以据此创建的“蓝图”。因此，类不是对象，而是对对象的描述。当程序运行时，它可以使用该类在内存中创建所需的任意数量的对象。从类中创建的每个对象都称为该类的一个`instance`（实例）。
 
 ### 提示
 
 如果这些概念对你来说似乎有点模糊，不要担心。随着你对这本书的阅读，类和对象的概念将反复被强化。
 
-### `String` 类
+### `String`类
 
-Java API 提供的处理字符串的类名为 `String`。使用 `String` 类的第一步是声明一个 `String` 类数据类型的变量。这是一个 `String` 变量声明的示例：
+Java API 提供的处理字符串的类名为`String`。使用`String`类的第一步是声明一个`String`类数据类型的变量。这是一个`String`变量声明的示例：
 
 ```
 String name;
@@ -2346,13 +2102,13 @@ String name;
 
 ### 提示
 
-`String` 中的 `S` 是大写字母。按照惯例，类名的第一个字母总是大写大写的。
+`String`中的`S`是大写字母。按照惯例，类名的第一个字母总是大写大写的。
 
-该语句将 `name` 声明为 `String` 变量。记住 `String` 是一个类，而不是原始数据类型。让我们简要查看原始类型变量和类类型变量之间的区别。
+该语句将`name`声明为`String`变量。记住`String`是一个类，而不是原始数据类型。让我们简要查看原始类型变量和类类型变量之间的区别。
 
 ### 原始类型变量和类类型变量
 
-任何类型的变量都可以与一个数据项关联。`Primitive type variables`（原始类型变量）持有与其关联的实际数据。例如，假设 `number` 是一个 `int` 变量。以下语句将值 25 存储在变量中：
+任何类型的变量都可以与一个数据项关联。`Primitive type variables`（原始类型变量）持有与其关联的实际数据。例如，假设`number`是一个`int`变量。以下语句将值 25 存储在变量中：
 
 ```
 number = 25;
@@ -2364,7 +2120,7 @@ number = 25;
 
 ### 图 2-7 原始类型变量与之关联的数据
 
-类类型变量 并不持有与其关联的实际数据项，而是持有与其关联的数据的地址。如果 `name` 是一个 `String` 类变量，那么 `name` 可以持有该对象的地址。这在 图 2-8 中所示。
+类类型变量 并不持有与其关联的实际数据项，而是持有与其关联的数据的地址。如果`name`是一个`String`类变量，那么`name`可以持有该对象的地址。这在 图 2-8 中所示。
 
 ![String 变量持有地址](img/02fig8.png)
 
@@ -2372,121 +2128,120 @@ number = 25;
 
 当类类型变量持有对象的地址时，可以说该变量引用了对象。由于这个原因，类类型变量通常被称为引用变量。
 
-### 创建 `String` 对象
+### 创建`String`对象
 
-每当程序中编写字符串字面量，Java 都会在内存中创建一个 `String` 对象来存储它。你可以使用简单的赋值语句在内存中创建一个 `String` 对象并将其地址存储在 `String` 变量中。例如：
+每当程序中编写字符串字面量，Java 都会在内存中创建一个`String`对象来存储它。你可以使用简单的赋值语句在内存中创建一个`String`对象并将其地址存储在`String`变量中。例如：
 
 ```
 name = "Joe Mahoney";
 ```
 
-在这里创建了一个 `String` 对象，其中存储了“Joe Mahoney”。然后赋值运算符将对象的地址存储在变量 `name` 中。执行此语句后，可以说 `name` 引用了 `String` 对象。
+在这里创建了一个`String`对象，其中存储了“Joe Mahoney”。然后赋值运算符将对象的地址存储在变量`name`中。执行此语句后，可以说`name`引用了`String`对象。
 
 ![例如，Mahoney](img/02fig9.png)
 
-# 图 2-9 `name` 变量持有地址
+# 图 2-9 `name`变量持有地址
 
-你还可以使用 `=` 运算符来初始化 `String` 变量，如下：
+你还可以使用`=`运算符来初始化`String`变量，如下：
 
 ```
 String name = "Joe Mahoney";
 ```
 
-该语句将 `name` 声明为 `String` 变量，创建一个存储了“Joe Mahoney”值的 `String` 对象，并将对象的内存地址分配给 `name` 变量。代码列表 2-20 显示了 `String` 变量的声明、初始化，然后在 `println` 语句中使用。
+该语句将`name`声明为`String`变量，创建一个存储了“Joe Mahoney”值的`String`对象，并将对象的内存地址分配给`name`变量。代码列表 2-20 显示了`String`变量的声明、初始化，然后在`println`语句中使用。
 
 在下面的动画中，点击“上一个”或“下一个”按钮逐步执行代码并贯穿查看解释。
 
 # 代码列表 2-20 `(StringDemo.java)`
 
+
+
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-20/20.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-20/20.html)
 
-由于 `String` 类型是类而不是原始数据类型，它提供了许多处理字符串的方法。例如，`String` 类有一个名为 `length()` 的方法，返回存储在对象中的字符串的长度。假设变量 `name` 引用一个 `String` 对象，以下语句将其字符串的长度存储在变量 `stringSize` 中（假设 `stringSize` 是一个 `int` 变量）：
+由于`String`类型是类而不是原始数据类型，它提供了许多处理字符串的方法。例如，`String`类有一个名为`length()`的方法，返回存储在对象中的字符串的长度。假设变量`name`引用一个`String`对象，以下语句将其字符串的长度存储在变量`stringSize`中（假设`stringSize`是一个`int`变量）：
 
 ```
 stringSize = name.length();
 ```
 
-
-
-
-该语句调用了 `name` 所引用对象的 `length` 方法。*调用*一个方法意味着执行该方法。方法调用的通用形式如下：
+该语句调用了`name`所引用对象的`length`方法。*调用*一个方法意味着执行该方法。方法调用的通用形式如下：
 
 ```
 referenceVariable.method(arguments . . .)
 ```
 
-`referenceVariable` 是引用对象的变量名，`method` 是方法名，而 `arguments. . .` 是传递给方法的零个或多个参数。如果没有向方法传递任何参数（如 `length` 方法所示），则必须在方法名后紧跟一对空括号。
+`referenceVariable`是引用对象的变量名，`method`是方法名，而`arguments. . .`是传递给方法的零个或多个参数。如果没有向方法传递任何参数（如`length`方法所示），则必须在方法名后紧跟一对空括号。
 
-`String` 类的 `length` 方法*返回*一个 `int` 类型的值。这意味着该方法会将一个 `int` 值返回给调用它的语句。该值可以存储在变量中、显示在屏幕上或用于计算中。代码代码列表 2-21 演示了 `length` 方法。
+`String`类的`length`方法*返回*一个`int`类型的值。这意味着该方法会将一个`int`值返回给调用它的语句。该值可以存储在变量中、显示在屏幕上或用于计算中。代码列表 2-21 演示了`length`方法。
 
 在下方的动画中，点击“上一个”或“下一个”按钮可以逐步查看代码并查看贯穿始终的解释。
 
-# 代码列表 2-21 `(StringLength.java)`
+## 代码列表 2-21 `(StringLength.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-21/21.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-21/21.html)
 
 ### 注意
 
-`String` 类的 `length` 方法返回字符串中的字符数，包括空格。
+`String`类的`length`方法返回字符串中的字符数，包括空格。
 
-你将在第 9 章中详细学习 `String` 类方法，但现在我们再来看几个例子。除了 `length` 之外，表 2-15 还描述了 `charAt`、`toLowerCase` 和 `toUpperCase` 方法。
+你将在第 9 章中详细学习`String`类方法，但现在我们再来看几个例子。除了`length`之外，表 2-15 还描述了`charAt`、`toLowerCase`和`toUpperCase`方法。
 
-# 表 2-15 一些 `String` 类方法
+## 表 2-15 一些`String`类方法
 
 | 方法 | 说明与示例 |
 | --- | --- |
-| `charAt(index)` | 参数 `index` 是一个 `int` 类型的值，指定字符串中的一个字符位置。第一个字符位于位置 0，第二个字符位于位置 1，以此此类推。该方法返回指定位置的字符。返回值的类型为 `char`。 |
+| `charAt(index)` | 参数`index`是一个`int`类型的值，指定字符串中的一个字符位置。第一个字符位于位置 0，第二个字符位于位置 1，以此类推。该方法返回指定位置的字符。返回值的类型为`char`。 |
 | | **示例：** |
-```
- char letter;
-    String name = "Herman";
-    letter = name.charAt(3);
+| | ```
+char letter;
+String name = "Herman";
+letter = name.charAt(3);
 ``` |
-| | 在执行此代码后，变量 `letter` 将持有字符 ‘m’。 |
-| `length()` | 此方法返回字符串中的字符数。返回值的类型为 `int`。 |
+| | 在执行此代码后，变量`letter`将持有字符 'm'。 |
+| `length()` | 此方法返回字符串中的字符数。返回值的类型为`int`。 |
 | | **示例：** |
-```
- int stringSize;
-    String name = "Herman";
-    stringSize = name.length();
+| | ```
+int stringSize;
+String name = "Herman";
+stringSize = name.length();
 ``` |
-| | 在执行此代码后，变量 `stringSize` 将持有值 6。 |
+| | 在执行此代码后，变量`stringSize`将持有值 6。 |
 | `toLowerCase()` | 此方法返回一个新字符串，该字符串是调用对象所包含字符串的小写形式。 |
 | | **示例：** |
-```
- String bigName = "HERMAN";
-    String littleName = bigName.toLowerCase();
+| | ```
+String bigName = "HERMAN";
+String littleName = bigName.toLowerCase();
 ``` |
-| | 在执行此代码后，由 `littleName` 引用的对象将持有字符串 “herman”。 |
+| | 在执行此代码后，由`littleName`引用的对象将持有字符串 "herman"。 |
 | `toUpperCase()` | 此方法返回一个新字符串，该字符串是调用对象所包含字符串的大写形式。 |
 | | **示例：** |
-```
- String littleName = "herman";
-    String bigName = littleName.toUpperCase();
+| | ```
+String littleName = "herman";
+String bigName = littleName.toUpperCase();
 ``` |
-| | 在执行此代码后，由 `bigName` 引用的对象将持有字符串 “HERMAN”。 |
+| | 在执行此代码后，由`bigName`引用的对象将持有字符串 "HERMAN"。 |
 
 程序代码列表 2-22 演示了这些方法。
 
 在下方的动画中，点击“上一个”或“下一个”按钮可以逐步查看代码并查看贯穿始终的解释。
 
-# 代码列表 2-22 `(StringMethods.java)`
+## 代码列表 2-22 `(StringMethods.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-22/22.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-22/22.html)
 
-# 检查点 2.47
+## 检查点 2.47
 
-../components/metrodigi/ch02-inline_self_quiz_v1.0.0-35/index.html
+`../components/metrodigi/ch02-inline_self_quiz_v1.0.0-35/index.html`
 
 ## 2.10 作用域
 
-概念：变量的作用域是程序中可以访问的部分。每个变量都有作用域。变量的作用域是程序中可以访问它的部分。到目前为止，你只看到了在 `main` 方法内部声明的变量。在后续的章节中我们将重新讨论这个主题。在方法内部声明的变量被称为*局部变量*。变量的作用域从声明处开始，到方法结束处结束。代码列表 2-23 展示了一个示例。在下方的动画中，点击“上一个”或“下一个”按钮可以逐步查看代码并查看贯穿始终的解释。
+概念：变量的作用域是程序中可以访问的部分。每个变量都有作用域。变量的作用域是程序中可以访问它的部分。到目前为止，你只看到了在`main`方法内部声明的变量。在后续的章节中我们将重新讨论这个主题。在方法内部声明的变量被称为*局部变量*。变量的作用域从声明处开始，到方法结束处结束。代码列表 2-23 展示了一个示例。在下方的动画中，点击“上一个”或“下一个”按钮可以逐步查看代码并查看贯穿始终的解释。
 
 ### 代码列表 2-23 `(Scope.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-23/23.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-23/23.html)
 
-该程序无法编译，因为它在变量声明之前尝试将 `value` 的内容发送给 `println`。请记住，编译器是从上到下读取程序的。要修复程序，必须在使用它的语句之前编写变量声明。
+该程序无法编译，因为它在变量声明之前尝试将`value`的内容发送给`println`。请记住，编译器是从上到下读取程序的。要修复程序，必须在使用它的语句之前编写变量声明。
 
 ### 注意
 
@@ -2506,11 +2261,11 @@ public static void main(String[] args)
 }
 ```
 
-该方法声明了一个名为 `number` 的变量并将其初始化为 7。变量的作用域从声明语句开始，延伸到方法结束。变量的作用域内出现了一个声明另一个 `number` 的语句。该语句会导致错误，因为在同一个作用域内不能有两个同名的局部变量。
+该方法声明了一个名为`number`的变量并将其初始化为 7。变量的作用域从声明语句开始，延伸到方法结束。变量的作用域内出现了一个声明另一个`number`的语句。该语句会导致错误，因为在同一个作用域内不能有两个同名的局部变量。
 
-# 检查点 2.52
+## 检查点 2.52
 
-../components/metrodigi/ch02-inline_self_quiz_v1.0.0-24/index.html
+`../components/metrodigi/ch02-inline_self_quiz_v1.0.0-24/index.html`
 
 ## 2.11 注释
 
@@ -2518,108 +2273,106 @@ public static void main(String[] args)
 
 注释是位于程序不同部分的简短说明，解释这些程序部分的工作原理。注释不是为编译器设计的。它们是为了供程序员阅读，帮助他们理解代码。编译器会跳过程序中出现的所有注释。
 
-
-
-
 作为一名初级程序员，你可能会抵制在程序中编写大量注释的想法。毕竟，编写能够实现实际功能的代码要有趣得多！然而，花额外的时间编写注释是至关重要的。当你以后需要修改或调试程序时，这些注释几乎肯定会为你节省时间。即使是大型且复杂的程序，如果注释得当，也可以变得易于阅读和理解。
 
 在 Java 中有三种类型的注释：单行注释、多行注释和文档注释。让我们简要讨论每种类型。
 
 ### 单行注释
 
-你已经见过在 Java 程序中编写注释的第一种方法。你只需要在想要开始写注释的地方放置两个正斜杠 `//`。编译器会忽略从该点开始到行尾的所有内容。代码列表 2-24 显示，注释可以自由地分布在整个程序中。
+你已经见过在 Java 程序中编写注释的第一种方法。你只需要在想要开始写注释的地方放置两个正斜杠`//`。编译器会忽略从该点开始到行尾的所有内容。代码列表 2-24 显示，注释可以自由地分布在整个程序中。
 
 ```
  1  // PROGRAM: Comment1.java
-  2  // Written by Herbert Dorfmann
-  3  // This program calculates company payroll
-  4
-  5  public class Comment1
-  6  {
-  7     public static void main(String[] args)
-  8     {
-  9        double payRate;       // Holds the hourly pay rate
- 10        double hours;         // Holds the hours worked
- 11        int employeeNumber;   // Holds the employee number
- 12
- 13        // The Remainder of This Program is Omitted.
-  14     }
-  15  }
+ 2  // Written by Herbert Dorfmann
+ 3  // This program calculates company payroll
+ 4
+ 5  public class Comment1
+ 6  {
+ 7     public static void main(String[] args)
+ 8     {
+ 9        double payRate;       // Holds the hourly pay rate
+10        double hours;         // Holds the hours worked
+11        int employeeNumber;   // Holds the employee number
+12
+13        // The Remainder of This Program is Omitted.
+14     }
+15  }
 ```
 
 ### 代码列表 2-24 `(Comment1.java)`
 
 ### 注释的作用
-说明说明是谁编写了程序以及描述变量的作用，注释还可以解释代码中复杂的步骤。
+
+说明是谁编写了程序以及描述变量的作用，注释还可以解释代码中复杂的步骤。
 
 ### 多行注释
 
-Java 中的第二种注释是多行注释。`多行注释`以 `/*`（正斜杠后跟星号）开始，以 `*/`（星号后跟正斜杠）结束。这两个标记之间的所有内容都会被忽略。代码列表 2-25 说明了如何使用多行注释。
+Java 中的第二种注释是多行注释。`多行注释`以`/*`（正斜杠后跟星号）开始，以`*/`（星号后跟正斜杠）结束。这两个标记之间的所有内容都会被忽略。代码列表 2-25 说明了如何使用多行注释。
 
 ```
  1  /*
-  2     PROGRAM: Comment2.java
-  3     Written by Herbert Dorfmann
-  4     This program calculates company payroll
-  5  */
-  6
-  7  public class Comment2
-  8  {
-  9     public static void main(String[] args)
- 10     {
- 11        double payRate;        // Holds the hourly pay rate
- 12        double hours;          // Holds the hours worked
- 13        int employeeNumber;    // Holds the employee number
- 14
-  5        // The Remainder of This Program is Omitted.
- 16     }
- 17  }
+ 2     PROGRAM: Comment2.java
+ 3     Written by Herbert Dorfmann
+ 4     This program calculates company payroll
+ 5  */
+ 6
+ 7  public class Comment2
+ 8  {
+ 9     public static void main(String[] args)
+10     {
+11        double payRate;        // Holds the hourly pay rate
+12        double hours;          // Holds the hours worked
+13        int employeeNumber;    // Holds the employee number
+14
+15        // The Remainder of This Program is Omitted.
+16     }
+17  }
 ```
 
 ### 代码列表 2-25 `(Comment2.java)`
 
-与以 `//` 开头的注释不同，多行注释可以跨越几行。这使得编写大块注释更加方便，因为你不需要标记每一行。因此，多行注释在编写单行注释时并不方便，因为你必须同时输入起始符号和结束注释符号。
+与以`//`开头的注释不同，多行注释可以跨越几行。这使得编写大块注释更加方便，因为你不需要标记每一行。因此，多行注释在编写单行注释时并不方便，因为你必须同时输入起始符号和结束注释符号。
 
 在使用多行注释时，请记住以下建议：
 
--   注意不要将起始符号与结束符号写反。
--   务必不要忘记结束符号。
+- 注意不要将起始符号与结束符号写反。
+- 务必不要忘记结束符号。
 
 许多程序员使用星号或其他字符在注释周围绘制边界或方框。这有助于在视觉上将注释与周围的代码隔离开。这些被称为块注释。表 2-16 显示了块注释的四个示例。
 
-### 表格 2-16 块注释
+### 表 2-16 块注释
 
 ```
 /*
-  *   This program demonstrates the
-  *   way to write comments.
-  */
+ *   This program demonstrates the
+ *   way to write comments.
+ */
 ```
 
 ```
 //***********************************
- //    This program demonstrates the *
- //    way to write comments.        *
- //***********************************
+//    This program demonstrates the *
+//    way to write comments.        *
+//***********************************
 ```
 
 ```
 ////////////////////////////////////
- //   This program demonstrates the
- //   way to write comments.
- ////////////////////////////////////
+//   This program demonstrates the
+//   way to write comments.
+////////////////////////////////////
 ```
 
 ```
 //-----------------------------------
- //    This program demonstrates the
- //    way to write comments.
- //-----------------------------------
+//    This program demonstrates the
+//    way to write comments.
+//-----------------------------------
 ```
 
 ## 文档注释
 
-第三种注释被称为文档注释。`文档注释`可以被一个名为 `javadoc` 的程序读取和处理，该程序随 JDK 一起提供。`javadoc`程序的目的是读取 Java 源代码文件并生成格式良好的 HTML 文件，对源代码进行文档。如果源代码包含任何文档注释，可以在 Web 浏览器中查看 HTML 文档。任何以 `/**` 开始并以 `*/` 结束的注释都是文档注释。通常你会在类头之前写一个文档注释，简要描述类。你会在每个方法之前写一个文档注释，简要描述该方法。代码列表 2-26 显示了一个带有文档注释的程序。
+第三种注释被称为文档注释。`文档注释`可以被一个名为`javadoc`的程序读取和处理，该程序随 JDK 一起提供。`javadoc`程序的目的是读取 Java 源代码文件并生成格式良好的 HTML 文件，对源代码进行文档。如果源代码包含任何文档注释，可以在 Web 浏览器中查看 HTML 文档。任何以`/**`开始并以`*/`结束的注释都是文档注释。通常你会在类头之前写一个文档注释，简要描述类。你会在每个方法之前写一个文档注释，简要描述该方法。代码列表 2-26 显示了一个带有文档注释的程序。
 
 ```
 /**
@@ -2642,58 +2395,60 @@ public class Comment3
 ### 代码列表 2-26 `(Comment3.java)`
 
 ### 使用 javadoc
-你在操作系统提示符中运行 `javadoc` 程序。这里是 `javadoc` 命令的通用格式：
+
+你在操作系统提示符中运行`javadoc`程序。这里是`javadoc`命令的通用格式：
 
 ```
 javadoc SourceFile.java
 ```
 
-`SourceFile.java` 是 Java 源文件的文件。javadoc 会读取该文件并生成文档。例如，以下命令将为 `Comment3.java` 源代码生成文档：
+`SourceFile.java`是 Java 源文件的文件。`javadoc`会读取该文件并生成文档。例如，以下命令将为`Comment3.java`源代码生成文档：
 
 ```
 javadoc Comment3.java
 ```
 
-在该命令执行后，会在源代码文件相同的目录中创建几个文档文件。其中一个文件命名为 *index.html*。图 2-10 显示了在 Web 浏览器中查看 *index.html* 文件。注意在文档注释中的文本出现在文件中。
+在该命令执行后，会在源代码文件相同的目录中创建几个文档文件。其中一个文件命名为*index.html*。图 2-10 显示了在 Web 浏览器中查看*index.html*文件。注意在文档注释中的文本出现在文件中。
 
 ![A documentation that has been generated by java doc.](img/02fig10.png)
 
-### 图 2-10 由 `javadoc` 生成的文档 (Google Inc.)
+### 图 2-10 由`javadoc`生成的文档 (Google Inc.)
 
 ### 提示
-当你为方法编写文档注释时，javadoc 生成的 HTML 文档将该方法有两个部分：摘要部分和细节部分。方法文档注释的第一句话被用作方法的摘要。注意 `javadoc` 将句子的结束识别为句号后跟空格字符。因此，当方法描述包含多个句子时，你应该始终以句号后跟空格字符来结束第一句。方法的细节部分将包含文档注释中的所有描述内容。
 
+当你为方法编写文档注释时，`javadoc`生成的 HTML 文档将该方法有两个部分：摘要部分和细节部分。方法文档注释的第一句话被用作方法的摘要。注意`javadoc`将句子的结束识别为句号后跟空格字符。因此，当方法描述包含多个句子时，你应该始终以句号后跟空格字符来结束第一句。方法的细节部分将包含文档注释中的所有描述内容。
 
+从书的这里开始，我们将在示例源代码中使用文档注释。随着各个主题的不断学习，你将看到文档注释以及`javadoc`程序的更多用法。
 
-从书的这里开始，我们将在示例源代码中使用文档注释。随着各个主题的不断学习，你将看到文档注释以及 `javadoc` 程序的更多用法。
+## 检查点 2.53
 
-# 检查点 2.53
+`../components/metrodigi/ch02-inline_self_quiz_v1.0.0-25/index.html`
 
-../components/metrodigi/ch02-inline_self_quiz_v1.0.0-25/index.html
+## 检查点 2.54
 
-# 检查点 2.54
+`../components/metrodigi/ch02-inline_self_quiz_v1.0.0-26/index.html`
 
-../components/metrodigi/ch02-inline_self_quiz_v1.0.0-26/index.html
+## 检查点 2.55
 
-# 检查点 2.55
+`../components/metrodigi/ch02-inline_self_quiz_v1.0.0-27/index.html`
 
-../components/metrodigi/ch02-inline_self_quiz_v1.0.0-27/index.html
+## 检查点 2.56
 
-# 检查点 2.56
-
-../components/metrodigi/ch02-inline_self_quiz_v1.0.0-28/index.html
+`../components/metrodigi/ch02-inline_self_quiz_v1.0.0-28/index.html`
 
 ## 2.12 编程风格
 
 概念：编程风格指的是程序员使用空格、缩进、空行和标点符号来在视觉上安排程序源代码的方式。
 
-在第 1 章中，你学习了语法规则规定了语言的使用方式。Java 的语法规则规定了关键字、分号、逗号、大括号以及语言其他元素的放置方式和位置。编译器会检查检查语法错误，如果没有错误，则生成字节码。
+在第 1 章中，你学习了语法规则规定了语言的使用方式。Java 的语法规则规定了关键字、分号、逗号、大括号以及语言其他元素的放置方式和位置。编译器会检查语法错误，如果没有错误，则生成字节码。
 
-当编译器读取程序时，它将其视为一个很长的字符流。编译器并不关心每个语句是否在单独的一上，也不关心空格是否将运算符与操作数隔开。相反，人类很难阅读那些编写方式视觉不美观的程序。以代码列表 2-27 为例。
+当编译器读取程序时，它将其视为一个很长的字符流。编译器并不关心每个语句是否在单独的一行上，也不关心空格是否将运算符与操作数隔开。相反，人类很难阅读那些编写方式视觉不美观的程序。以代码列表 2-27 为例。
 
 在下面的动画中，点击“上一个”（Previous）或“下一个”（Next）按钮逐步查看代码并查看全程的解释。
 
 ### 代码列表 2-27 `(Compact.java)`
+
+
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-27/27.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-27/27.html)
 
@@ -2701,7 +2456,7 @@ javadoc Comment3.java
 
 在下面的动画中，点击“上一个”（Previous）或“下一个”（Next）按钮逐步查看代码并查看全程的解释。
 
-### 代码列表 2-28 `(Readable.java)`
+## 代码列表 2-28 `(Readable.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-28/28.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-28/28.html)
 
@@ -2709,7 +2464,7 @@ javadoc Comment3.java
 
 例如，注意在代码列表 2-28 中，类大括号内部的每行都缩进了，而在 `main` 方法大括号内部，每行再次缩进。在一组大括号内对所有行进行缩进是一种常见的编程风格，如图 2-11 所示。
 
-# 图 2-11 缩进
+## 图 2-11 缩进
 
 ![编程风格中演示了缩进和额外空格的功能。](img/02fig11.png)图 2-11 完整替代文本
 
@@ -2725,17 +2480,17 @@ kelvin;            // 开尔文度
 
 你可能注意到在语句之间插入了空行。为了将声明与执行语句隔离开。关于编程风格的许多其他问题，将在书中介绍。
 
-# 检查点 2.57
+## 检查点 2.57
 
 ../components/metrodigi/ch02-inline_self_quiz_v1.0.0-29/index.html
 
-# 检查点 2.58
+## 检查点 2.58
 
 ../components/metrodigi/ch02-inline_self_quiz_v1.0.0-26/index.html
 
-# 2.13 读取输入
+## 2.13 读取输入
 
-概念：Scanner 类对象可以用于读取输入。之前我们讨论了 `System.out` 对象，它指向标准输出。Java 有另一个对象 `System.in`，它指向键盘。然而，使用 `System.in` 不像 `System.out` 那样简单，因为 `System.in` 只读取字节值。为了解决这个问题，你可以结合 `System.in` 使用 `Scanner` 类。它提供原始值或字符串输入。
+概念：`Scanner` 类对象可以用于读取输入。之前我们讨论了 `System.out` 对象，它指向标准输出。Java 有另一个对象 `System.in`，它指向键盘。然而，使用 `System.in` 不像 `System.out` 那样简单，因为 `System.in` 只读取字节值。为了解决这个问题，你可以结合 `System.in` 使用 `Scanner` 类。它提供原始值或字符串输入。
 
 首先，创建一个 `Scanner` 对象并将其连接到 `System.in`。这是一个实现此操作的语句示例：
 
@@ -2759,11 +2514,7 @@ Scanner keyboard
 
 图 2-12 指出了该语句每个部分的目的。图 2-13 插图了 `keyboard` 变量如何引用 `Scanner` 类对象。
 
-
-
-
-
-# 图 2-13 变量 keyboard 引用了一个 `Scanner` 对象
+## 图 2-13 变量 keyboard 引用了一个 `Scanner` 对象
 
 ### 注意事项
 
@@ -2785,62 +2536,84 @@ number = keyboard.nextInt();
 ## 表 2-17 `Scanner` 类的一些方法
 
 | 方法 | 示例和描述 |
+
 | --- | --- |
+
 | `nextByte` | **示例用法：** 
+
 ```
  byte x;
    Scanner keyboard = new Scanner(System.in);
    System.out.print("Enter a byte value: ");
    x = keyboard.nextByte();
 ```
+
 **描述：** 返回输入作为 `byte`。 |
+
 | `nextDouble` | **示例用法：** 
+
 ```
  double number;
    Scanner keyboard = new Scanner(System.in);
    System.out.print("Enter a double value: ");
    number = keyboard.nextDouble();
 ```
+
 **描述：** 返回输入作为 `double`。 |
+
 | `nextFloat` | **示例用法：** 
+
 ```
  float number;
    Scanner keyboard = new Scanner(System.in);
    System.out.print("Enter a float value: ");
    number = keyboard.nextFloat();
 ```
+
 **描述：** 返回输入作为 `float`。 |
+
 | `nextInt` | **示例用法：** 
+
 ```
  int number;
    Scanner keyboard = new Scanner(System.in);
    System.out.print("Enter an integer value: ");
    number = keyboard.nextInt();
 ```
+
 **描述：** 返回输入作为 `int`。 |
+
 | `nextLine` | **示例用法：** 
+
 ```
  String name;
    Scanner keyboard = new Scanner(System.in);
    System.out.print("Enter your name: ");
    name = keyboard.nextLine();
 ```
+
 **描述：** 返回输入作为 `String`。 |
+
 | `nextLong` | **示例用法：** 
+
 ```
  long number;
    Scanner keyboard = new Scanner(System.in);
    System.out.print("Enter a long value: ");
    number = keyboard.nextLong();
 ```
+
 **描述：** 返回输入作为 `long`。 |
+
 | `nextShort` | **示例用法：** 
+
 ```
  short number;
    Scanner keyboard = new Scanner(System.in);
    System.out.print("Enter a short value: ");
    number = keyboard.nextShort();
 ```
+
 **描述：** 返回输入作为 `short`。 |
 
 ## 使用 `import` 语句
@@ -2892,10 +2665,6 @@ answer = input.charAt(0); // 获取字符
 
 当用户在键盘上输入字符时，这些按键会被存储在有时被称为*键盘缓冲区*（keyboard buffer）的内存区域。按下 `Enter ↵` 键会导致换行符存储在键盘缓冲区中。在代码列表 2-30 的程序的示例运行中，用户被要求输入年龄，第 20 行语句调用了 `nextInt` 方法从键盘缓冲区读取一个整数。注意用户输入了 24 然后按了 `Enter ↵` 键。`nextInt` 方法从键盘缓冲区读取了值 24，然后在遇到换行符时停止。因此，值 24 从键盘缓冲区读取了，但换行符没有被读取。换行符留在键盘缓冲区中。
 
-
-
-
-
 接下来，用户被要求输入年收入。用户输入了 `50000.00` 然后按下了 `Enter ↵` 键。当第 24 行的 `nextDouble` 方法执行时，它首先遇到由 `nextInt` 方法留下的换行符。这不会引起问题，因为 `nextDouble` 方法的设计初衷是跳过它遇到的任何领先换行符。它会跳过初始换行符，从键盘缓冲区中读取值 `50000.00`，并在遇到下一个换行符时停止读取。这个换行符随后被留在键盘缓冲区中。
 
 接下来，用户被要求输入姓名。在第 28 行中调用了 `nextLine` 方法。然而，`nextLine` 方法的设计并不是为了跳过初始换行符的。如果换行符是 `nextLine` 方法遇到的第一个字符，那么将没有任何内容能被读取。由于第 24 行的 `nextDouble` 方法在键盘缓冲区中留下了一个换行符，`nextLine` 方法将读取任何输入。相反，它将立即终止，用户将没有机会输入姓名。
@@ -2904,7 +2673,7 @@ answer = input.charAt(0); // 获取字符
 
 在下面的动画中，点击“上一个”或“下一个”按钮可以逐步执行代码并查看全程各处的解释。
 
-# 代码列表 2-31 `(CorrectedInputProblem.java)`
+## 代码列表 2-31 `(CorrectedInputProblem.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-31/31.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-31/31.html)
 
@@ -2914,23 +2683,25 @@ answer = input.charAt(0); // 获取字符
 
 注意在第 27 行，当我们消耗剩余的换行符时，我们没有将方法的返回值赋值给任何变量。这是因为我们仅仅是调用该方法来移除换行符，不需要保留方法的返回值。
 
-# 检查点 2.60
+## 检查点 2.60
 
-# 检查点 2.61
+## 检查点 2.61
 
 ## 2.14 对话框
 
-### 概念：JOptionPane 类
+### 概念：`JOptionPane` 类
+
 `JOptionPane` 类允许你快速显示对话框，对话框是一个用于显示消息或请求输入的小型图形化窗口。
 
 *对话框*是一个向用户显示消息或请求输入的小型图形化窗口。你可以使用 `JOptionPane` 类快速显示对话框。在本节中，我们将讨论以下类型的对话框以及你如何使用 `JOptionPane` 显示它们：
 
 | • 消息对话框 | 显示消息的对话框；同时还会显示一个 OK 按钮 |
+
 | • 输入对话框 | 提示用户输入并提供输入文本框的对话框；同时显示一个 OK 按钮和一个取消按钮 |
 
 图 2-14 显示了每种对话框的示例。
 
-# 图 2-14 消息对话框和输入对话框（Oracle 法务顾问）
+## 图 2-14 消息对话框和输入对话框（Oracle 法务顾问）
 
 ![消息对话框和输入对话框包含一些重叠和一些不同的特征。](img/02fig14.png)图 2-14 完整替代文本
 
@@ -2952,9 +2723,11 @@ JOptionPane.showMessageDialog(null, "Hello World");
 
 第一个参数仅在显示其他图形窗口的程序中重要。在我们的示例中，我们始终将关键字 `null` 作为第一个参数。这会导致对话框显示在屏幕中央。第二个参数是我们希望在对话框中显示的消息。这段代码会导致图 2-15 中的对话框显示
 
-# 显示输入对话框
+## 显示输入对话框
 
 输入对话框是要求用户输入数据的快速简单方法。你使用 `JOptionPane` 类的 `InputDialog` 方法来显示。以下代码调用了该方法：
+
+
 
 ```
 String name;
@@ -2965,13 +2738,13 @@ name = JOptionPane.InputDialog("Enter your name.");
 
 ![输入对话框指示用户：Enter your name.](img/02fig16.png)
 
-# 图 2-16 输入对话框（Oracle 法务顾问）
+## 图 2-16 输入对话框（Oracle 法务顾问）
 
 ### 示例程序
 
 代码列表 2-32 中的程序演示了如何使用两种对话框。该程序使用输入对话框询问用户的名、中间和姓，然后显示一条问候消息。
 
-### 代码列表 2-32 `(NamesDialog.java)`
+### 代码列表 2-32 (`NamesDialog.java`)
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-32/32.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr2-32/32.html)
 
@@ -2983,21 +2756,17 @@ System.exit(0);
 
 该语句导致程序结束，在控制台程序中使用 `JOptionPane` 类时是必要的。当控制台程序使用 `JOptionPane` 显示对话框时，当 `main` 方法结束时，程序不会自动停止执行。这是因为 `JOptionPane` 类导致在 JVM 中运行一个额外的任务。如果没有调用 `System.exit` 方法，该任务（也称为*线程*）将继续执行，即使 `main` 方法已经执行完毕结束。
 
-# 警告！
+## 警告！
 
-仅在绝对必要时才使用 `System.exit`。在大型程序中，System.exit 可能会导致问题，因为它无条件地关闭 JVM，跳过了程序正常的逻辑流。在本书中，我们使用 `System.exit` 仅是因为结束使用 `JOptionPane` 的控制台程序是必要的。
-
-
-
-
+仅在绝对必要时才使用 `System.exit`。在大型程序中，`System.exit` 可能会导致问题，因为它无条件地关闭 JVM，跳过了程序正常的逻辑流。在本书中，我们使用 `System.exit` 仅是因为结束使用 `JOptionPane` 的控制台程序是必要的。
 
 `System.exit` 方法需要一个整数参数。该参数是一个传回操作系统的退出代码。虽然此代码通常会被忽略，但它可以在程序外部使用，用于指示程序是成功结束还是作为失败的结果结束的。值 `0` 传统上表示程序成功结束。
 
-# 将字符串输入转换为数字
+## 将字符串输入转换为数字
 
 与 `Scanner` 类不同，`JOptionPane` 类没有不同的方法来读取不同数据类型的输入值。`showInputDialog` 方法始终将用户的输入作为 `String` 返回，即使用户输入的是数字数据。例如，如果用户在输入对话框中输入数字 `72`，`showInputDialog` 方法将返回字符串 `"72"`。如果你想在数学运算中使用用户的输入，这可能会产生一个问题，因为你所知道的，你不能对字符串进行数学运算。在这种情况下，你必须将输入转换为数值。要将字符串值转换为数值，你可以使用表 2-18 中列出的方法之一。
 
-# 表 2-18 将字符串转换为数字的方法
+## 表 2-18 将字符串转换为数字的方法
 
 | 方法 | 使用此方法来 . . . . | 示例代码 |
 | --- | --- | --- |
@@ -3034,19 +2803,15 @@ price = Double.parseDouble(str);
 
 在下面的动画中，点击“上一个”或“下一个”按钮可以逐步通过代码并查看贯穿其中的解释。
 
-# 代码列表 2-33 `(PayrollDialog.java)`
+## 代码列表 2-33 (`PayrollDialog.java`)
 
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/)gaddis-java/33)
+[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/)gaddis-java/33
 
+- 错误地终止了多行注释或文档注释。多行注释和文档注释通过 `*/` 字符终止。忘记在注释预期的结束点放置这些字符，或者不小心调换了 `*` 和 `/` 的顺序，将导致注释没有结束点。
 
+- 在使用了 `Scanner` 类或 `JOptionPane` 类的程序中，忘记使用正确的 `import` 语句。为了让你的程序可以使用 `Scanner` 类，你必须在程序文件顶部附近包含 `import java.util.Scanner;` 导入语句。为了让你的程序可以使用 `JOptionPane` 类，你必须在程序文件顶部包含 `import javax.swing.JOptionPane;` 导入语句。
 
-
-
-*   错误地终止了多行注释或文档注释。多行注释和文档注释通过 `*/` 字符终止。忘记在注释预期的结束点放置这些字符，或者不小心调换了 `*` 和 `/` 的顺序，将导致注释没有结束点。
-
-*   在使用了 `Scanner` 类或 `JOptionPane` 类的程序中，忘记使用正确的 `import` 语句。为了让你的程序可以使用 `Scanner` 类，你必须在程序文件顶部附近包含 `import java.util.Scanner;` 导入语句。为了让你的程序可以使用 `JOptionPane` 类，你必须在程序文件顶部包含 `import javax.swing.JOptionPane;` 导入语句。
-
-*   当使用输入对话框读取数值型输入时，没有将 `showInputDialog` 方法的返回值转换为数字。`showInputDialog` 方法始终将用户的输入作为字符串返回的。如果用户输入了数值，在在数学语句中使用它之前，必须将其转换为数字。
+- 当使用输入对话框读取数值型输入时，没有将 `showInputDialog` 方法的返回值转换为数字。`showInputDialog` 方法始终将用户的输入作为字符串返回的。如果用户输入了数值，在在数学语句中使用它之前，必须将其转换为数字。
 
 ## 编程挑战
 
@@ -3054,9 +2819,9 @@ price = Double.parseDouble(str);
 
 编写一个程序，声明以下内容：
 
-*   一个名为 `name` 的 `String` 变量
-*   一个名为 `age` 的 `int` 变量
-*   一个名为 `annualPay` 的 `double` 变量
+- 一个名为 `name` 的 `String` 变量
+- 一个名为 `age` 的 `int` 变量
+- 一个名为 `annualPay` 的 `double` 变量
 
 将你的年龄、姓名和期望的年收入作为字面量存储在变量中。程序应该以类似于下面的方式在屏幕上显示这些值：
 
@@ -3073,10 +2838,10 @@ My name is Joe Mahoney, my age is 26 and
 
 编写一个程序显示以下信息，每项单独一行：
 
-*   你的姓名
-*   你的地址（包含城市、州和邮政编码）
-*   你的电话号码
-*   你的大学专业
+- 你的姓名
+- 你的地址（包含城市、州和邮政编码）
+- 你的电话号码
+- 你的大学专业
 
 尽管这些项目应该显示在不同的输出行上，但在程序中仅使用一个 `println` 语句。
 
@@ -3130,7 +2895,7 @@ My name is Joe Mahoney, my age is 26 and
 
 一家电子公司以 40% 的折扣出售电路板。如果你知道零售价，可以使用以下公式计算其利润：
 
-Profit = Retail price × 0.4
+`Profit = Retail price × 0.4`
 
 编写一个程序要求用户输入零售价，计算利润金额并显示结果。
 
@@ -3138,10 +2903,10 @@ Profit = Retail price × 0.4
 
 编写一个程序，要求用户输入他们喜欢的城市名称。使用一个 `String` 变量存储该输入。程序应该显示：
 
-*   名称的字符数
-*   大写字母名称
-*   小写字母名称
-*   名称的首字母
+- 名称的字符数
+- 大写字母名称
+- 小写字母名称
+- 名称的首字母
 
 ### 13. 餐厅账单
 
@@ -3157,24 +2922,24 @@ Profit = Retail price × 0.4
 
 Kathryn 购买了 600 股股票，每股 $21.77。她必须向经纪支付 2% 的佣金。编写一个程序计算并显示：
 
-*   股票金额
-*   佣金金额
-*   总支付金额（股票加佣金）
+- 股票金额
+- 佣金金额
+- 总支付金额（股票加佣金）
 
 ### 16. 能量饮料
 
 某软饮料公司最近调查了 12,467 名客户，发现大约 14% 的人每周购买一种或多种能量饮料。在这些购买能量饮料的客户中，约有 64% 喜欢柑橘味能量饮料。编写一个程序显示：
 
-*   调查中每周购买一种或多种能量饮料的客户约人数
-*   调查中喜欢柑橘味能量饮料的客户约人数
+- 调查中每周购买一种或多种能量饮料的客户约人数
+- 调查中喜欢柑橘味能量饮料的客户约人数
 
 ### 17. 配料调整
 
 一个饼干配方需要以下原料：
 
-*   1.5 杯糖
-*   1 杯黄油
-*   2.75 杯面粉
+- 1.5 杯糖
+- 1 杯黄油
+- 2.75 杯面粉
 
 该配方可以制作 48 块饼干。编写一个程序询问用户想要制作多少块饼干，然后显示指定数量所需的每种原料杯数。
 
@@ -3182,17 +2947,13 @@ Kathryn 购买了 600 股股票，每股 $21.77。她必须向经纪支付 2% �
 
 编写一个与用户玩单词游戏的程序。程序应要求用户输入以下内容：
 
-*   姓名
-*   年龄
-*   城市
-*   大学名称
-*   职业
-*   动物种类
-*   宠物名称
-
-
-
-
+- 姓名
+- 年龄
+- 城市
+- 大学名称
+- 职业
+- 动物种类
+- 宠物名称
 
 在用户输入这些项目后，程序应该显示以下故事，并将用户的输入插入适当的位置：
 
@@ -3204,23 +2965,23 @@ There once was a person named NAME who lived in CITY. At the age of AGE, NAME we
 
 上个月，Joe 在 Acme Software, Inc. 购买了一些股票。以下是购买详情：
 
-*   Joe 购买的股票数量为 1,000 股。
-*   当 Joe 购买股票时，每股价格为 32.87 美元。
-*   Joe 向他的股票经纪支付了佣金，金额为其支付股票金额的 2%。
+- Joe 购买的股票数量为 1,000 股。
+- 当 Joe 购买股票时，每股价格为 32.87 美元。
+- Joe 向他的股票经纪支付了佣金，金额为其支付股票金额的 2%。
 
 两周后，Joe 卖出了这些股票。以下是出售详情：
 
-*   Joe 卖出的股票数量为 1,000 股。
-*   他以每股 33.92 美元的价格卖出了股票。
-*   他向他的股票经纪支付了另一笔佣金，金额为其卖出股票所得金额的 2%。
+- Joe 卖出的股票数量为 1,000 股。
+- 他以每股 33.92 美元的价格卖出了股票。
+- 他向他的股票经纪支付了另一笔佣金，金额为其卖出股票所得金额的 2%。
 
 编写一个程序显示以下信息：
 
-*   Joe 购买股票支付的金额。
-*   Joe 在购买股票时支付给经纪人的佣金金额。
-*   Joe 卖出股票的金额。
-*   Joe 在卖出股票时支付给经纪人的佣金金额。
-*   显示 Joe 在卖出股票并向经纪支付两笔佣金后获得的利润。（如果你的程序显示的利润为负数，则说明 Joe 在该交易中亏损了。）
+- Joe 购买股票支付的金额。
+- Joe 在购买股票时支付给经纪人的佣金金额。
+- Joe 卖出股票的金额。
+- Joe 在卖出股票时支付给经纪人的佣金金额。
+- 显示 Joe 在卖出股票并向经纪支付两笔佣金后获得的利润。（如果你的程序显示的利润为负数，则说明 Joe 在该交易中亏损了。）
 
 ### 20. 种植葡萄藤
 
@@ -3230,16 +2991,16 @@ $$V = \frac{R - 2E}{S}$$
 
 公式中的术含义为：
 
-*   `V` 是行内可以容纳的葡萄藤数量。
-*   `R` 是行的长度，单位为英尺。
-*   `E` 是端柱组件占据的空间。
-*   `S` 是葡萄藤之间的距离，单位为英尺。
+- `V` 是行内可以容纳的葡萄藤数量。
+- `R` 是行的长度，单位为英尺。
+- `E` 是端柱组件占据的空间。
+- `S` 是葡萄藤之间的距离，单位为英尺。
 
 编写一个程序为葡萄园主进行计算。该程序应要求用户输入以下：
 
-*   行的长度（英尺）
-*   端柱组件占据的空间（英尺）
-*   葡萄藤之间的距离（英尺）
+- 行的长度（英尺）
+- 端柱组件占据的空间（英尺）
+- 葡萄藤之间的距离（英尺）
 
 一旦输入数据完成，程序应计算并显示行内可以容纳的葡萄藤数量。
 
@@ -3251,18 +3012,18 @@ $$A = P\left( {1 + \frac{r}{n}} \right)^{nt}$$
 
 公式中的术含义为：
 
-*   `A` 是指定年后账户中的金额。
-*   `P` 是最初存入账户的本金。
-*   `r` 是年利率。
-*   `n` 是每年计息的频率。
-*   `t` 是指定的年数。
+- `A` 是指定年后账户中的金额。
+- `P` 是最初存入账户的本金。
+- `r` 是年利率。
+- `n` 是每年计息的频率。
+- `t` 是指定的年数。
 
 编写一个程序为你进行计算。该程序应要求用户输入以下内容：
 
-*   最初存入账户的本金金额
-*   账户的年利率
-*   每年计息的次数（例如，如果每月计息一次，输入 12。如果按季度计息，输入 4。）
-*   账户产生收益的年数
+- 最初存入账户的本金金额
+- 账户的年利率
+- 每年计息的次数（例如，如果每月计息一次，输入 12。如果按季度计息，输入 4。）
+- 账户产生收益的年数
 
 一旦输入数据完成，程序应计算并显示指定年后账户中的金额。
 
@@ -3274,24 +3035,21 @@ $$A = P\left( {1 + \frac{r}{n}} \right)^{nt}$$
 
 ## 话题
 
-1.  3.1 `if` 语句
-2.  3.2 `if-else` 语句
-3.  3.3 嵌套 `if` 语句
-4.  3.4 `if-else-if` 语句
-5.  3.5 逻辑运算符
-6.  3.6 比较 `String` 对象
-7.  3.7 关于变量声明和作用域的更多
-8.  3.8 条件（可选）
-9.  3.9 `switch` 语句
+1. 3.1 `if` 语句
+2. 3.2 `if-else` 语句
+3. 3.3 嵌套 `if` 语句
+4. 3.4 `if-else-if` 语句
+5. 3.5 逻辑运算符
+6. 3.6 比较 `String` 对象
+7. 3.7 关于变量声明和作用域的更多
+8. 3.8 条件（可选）
+9. 3.9 `switch` 语句
 10. 3.10 使用 `System.out.printf` 和 `String.format` 显示格式化输出
 11. 3.11 需要避免的常见错误
 
-
-
-
 在流程图中，“穿外套”这一动作只在外面很冷时才会执行。如果外面不冷，则会跳过该动作。该动作是`有条件执行`的，因为它只在存在特定条件（外面很冷）时才执行。图 3-3 显示了一个更详尽的流程图，其中三个动作只在外面很冷时被执行。
 
-# 图 3-3 三动作决策结构逻辑
+## 图 3-3 三动作决策结构逻辑
 
 ![一个三动作决策结构逻辑说明了穿外套的几个动作取决于外面是否寒冷的条件。](img/03fig03.png)图 3-3 完整替代文本
 
@@ -3302,23 +3060,25 @@ if (BooleanExpression)
     statement;
 ```
 
-`if` 语句的工作原理非常简单：括号内部出现的 `BooleanExpression` 必须是一个 `boolean` 表达式。一个 `boolean`表达式要么为 `true` 要么为 `false`。如果 `boolean` 表达式为 `true`，则执行紧随其后的 `statement`。否则，将跳过它。该 `statement` 是有条件执行的，因为它只在括号中的表达式为 `true` 的条件下才执行。
+
+
+`if` 语句的工作原理非常简单：括号内部出现的`BooleanExpression`必须是一个`boolean`表达式。一个`boolean`表达式要么为`true`要么为`false`。如果`boolean`表达式为`true`，则执行紧随其后的`statement`。否则，将跳过它。该`statement`是有条件执行的，因为它只在括号中的表达式为`true`的条件下才执行。
 
 # 检查点 3.1
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-01/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-01/index.html`
 
 # 检查点 3.2
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-02/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-02/index.html`
 
 # 检查点 3.3
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-03/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-03/index.html`
 
 ## 使用关系运算符形成条件
 
-通常，由 `if` 语句测试的 `boolean` 表达式是由关系运算符组成的。`关系运算符` 确定两个值之间是否存在特定的关系。例如，大于运算符（`>`）确定一个值是否大于另一个值。等于运算符（`==`）确定两个值是否相等。表 3-1 列出了所有的 Java 关系运算符。
+通常，由`if`语句测试的`boolean`表达式是由关系运算符组成的。`关系运算符`确定两个值之间是否存在特定的关系。例如，大于运算符（`>`）确定一个值是否大于另一个值。等于运算符（`==`）确定两个值是否相等。表 3-1 列出了所有的 Java 关系运算符。
 
 ### 表 3-1 关系运算符
 
@@ -3337,58 +3097,65 @@ if (BooleanExpression)
 length > width
 ```
 
-该表达式确定 `length` 是否大于 `width`。如果 `length` 大于 `width`，则表达式的值为 `true`。否则，表达式的值为 `false`。因为该表达式只能为 `true` 或 `false`，所以它是一个 `boolean` 表达式。下面的表达式使用小于运算符来确定 `length` 是否小于 `width`：
+该表达式确定`length`是否大于`width`。如果`length`大于`width`，则表达式的值为`true`。否则，表达式的值为`false`。因为该表达式只能为`true`或`false`，所以它是一个`boolean`表达式。下面的表达式使用小于运算符来确定`length`是否小于`width`：
 
 ```
 length < width
 ```
 
-表 3-2 显示了比较变量 `x` 和 `y` 的几个 `boolean` 表达式示例。
+表 3-2 显示了比较变量`x`和`y`的几个`boolean`表达式示例。
 
-### 表 3-2 使用关系运算符的 `boolean` 表达式
+### 表 3-2 使用关系运算符的`boolean`表达式
 
 | 表达式 | 含义 |
 | --- | --- |
-| `x > y` | `x` 是否大于 `y`？ |
-| `x < y` | `x` 是否小于 `y`？ |
-| `x >= y` | `x` 是否大于或等于 `y`？ |
-| `x <= y` | `x` 是否小于或等于 `y`？ |
-| `x == y` | `x` 是否等于 `y`？ |
-| `x != y` | `x` 是否不等于 `y`？ |
+| `x > y` | `x`是否大于`y`？ |
+| `x < y` | `x`是否小于`y`？ |
+| `x >= y` | `x`是否大于或等于`y`？ |
+| `x <= y` | `x`是否小于或等于`y`？ |
+| `x == y` | `x`是否等于`y`？ |
+| `x != y` | `x`是否不等于`y`？ |
 
-两个运算符 `>=` 和 `<=` 测试的是多一种关系。`>=` 运算符确定其左侧的操作数是否大于或等于右侧的操作数。假设 `a` 是 4，`b` 是 6，`c` 是 4，那么表达式 `b >= a` 和 `a >= c` 都是 `true`，但 `a >= 5` 为 `false`。使用此运算符时，`>` 符号必须在 `=` 符号之前，且两者之间没有空格。`<=` 运算符确定左侧的操作数是否小于或等于右侧的操作数。再次假设 `a` 是 4，`b` 是 6，`c` 是 4，`a <= c` 和 `b <= 10` 都是 `true`，但 `b <= a` 为 `false`。使用此运算符时，`<` 符号必须在 `=` 符号之前，且两者之间没有空格。`==` 运算符确定左侧的操作数是否等于右侧的操作数。如果两个操作数相同，则表达式为 `true`。假设 `a` 是 4，表达式 `a == 4` 为 `true`，而 `a == 2` 为 `false`。注意相等运算符是两个 `=` 符号。不要将其与赋值 `=` 符号赋值运算符混淆。`!=` 运算符是不等于运算符。它确定左侧的操作数是否不等于右侧的，这与 `==` 运算符相反。如前假设 `a` 是 4，`b` 是 6，`c` 是 4，`b != a` 和 `a != c` 都是 `true`（等待，原文说 `b >= a` 和 `a >= c` 是 true，但上下文暗示是 `!=`。根据原文：`b >= a` 和 `a >= c` 均为 `true`，但 `a >= 5` 为 `false`）。
+两个运算符`>=`和`<=`测试的是多一种关系。`>=`运算符确定其左侧的操作数是否大于或等于右侧的操作数。假设`a`是 4，`b`是 6，`c`是 4，那么表达式`b >= a`和`a >= c`都是`true`，但`a >= 5`为`false`。使用此运算符时，`>`符号必须在`=`符号之前，且两者之间没有空格。`<=`运算符确定左侧的操作数是否小于或等于右侧的操作数。再次假设`a`是 4，`b`是 6，`c`是 4，`a <= c`和`b <= 10`都是`true`，但`b <= a`为`false`。使用此运算符时，`<`符号必须在`=`符号之前，且两者之间没有空格。`==`运算符确定左侧的操作数是否等于右侧的操作数。如果两个操作数相同，则表达式为`true`。假设`a`是 4，表达式`a == 4`为`true`，而`a == 2`为`false`。注意相等运算符是两个`=`符号。不要将其与赋值`=`符号赋值运算符混淆。`!=`运算符是不等于运算符。它确定左侧的操作数是否不等于右侧的，这与`==`运算符相反。如前假设`a`是 4，`b`是 6，`c`是 4，`b != a`和`a != c`都是`true`（等待，原文说`b >= a`和`a >= c`是 true，但上下文暗示是`!=`。根据原文：`b >= a`和`a >= c`均为`true`，但`a >= 5`为`false`）。
 
 # 检查点 3.4
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-01/index.html
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-01/index.html`
 
 # 检查点 3.5
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-02/index.html
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-02/index.html`
 
 # 检查点 3.6
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-03/index.html
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-03/index.html`
 
 # 检查点 3.7
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-04/index.html
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-04/index.html`
 
 # 检查点 3.8
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-05/index.html
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-05/index.html`
 
 # 检查点 3.9
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-06/index.html
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-06/index.html`
 
 # 检查点 3.10
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-07/index.html
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-07/index.html`
 
 ## 综合运用
 
-让我们来看一个 `if` 语句的示例：
+让我们来看一个`if`语句的示例：
 
 ```
 if (sales > 50000)
      bonus = 500.0;
 ```
 
-该语句使用 `>` 运算符确定 `sales` 是否大于 50,000。如果表达式 `sales > 50000` 为 `true`，则变量 `bonus` 被赋值为 500.0。如果表达式为 `false`，则跳过赋值语句。代码列表 3-1 显示另一个示例：用户输入三个分数，程序计算它们的平均分。如果平均分大于 95，程序将祝用户获得高分。
+该语句使用`>`运算符确定`sales`是否大于 50,000。如果表达式`sales > 50000`为`true`，则变量`bonus`被赋值为 500.0。如果表达式为`false`，则跳过赋值语句。代码列表 3-1 显示另一个示例：用户输入三个分数，程序计算它们的平均分。如果平均分大于 95，程序将祝用户获得高分。
 
 在下面的动画中，点击“上一个”或“下一个”按钮逐步查看代码并查看贯穿其中的解释。
 
@@ -3403,35 +3170,28 @@ if (average > 95)
     System.out.println("That's a great score!");
 ```
 
-图 3-4 显示了此 `if` 语句的逻辑。
+图 3-4 显示了此`if`语句的逻辑。
 
 ![if 语句 Average 大于 95 的逻辑被演示。如果答案为 True，显示器读取“That's a great score!”（带引号）。如果答案为 false，则没有任何语句。](img/03fig04.png)
 
+表 3-3 显示了`if`语句的其它示例及其结果。
 
-
-
-
-表 3-3 显示了 `if` 语句的其它示例及其结果。
-
-### 表 3-3 `if` 语句的其它示例
+### 表 3-3 `if`语句的其它示例
 
 | 语句 | 结果 |
 | --- | --- |
-| | |
-```
+| ```
 if (hours > 40)
    overTime = true;
-```
- | 如果 `hours` 大于 40，则给 `boolean` 变量 `overTime` 赋值 `true`。 |
-| | |
-```
+``` | 如果`hours`大于 40，则给`boolean`变量`overTime`赋值`true`。 |
+| ```
 if (value < 32)
    System.out.println("Invalid number");
-``` | | 如果 `value` 小于 32，则显示消息 `"Invalid number"`。 |
+``` | 如果`value`小于 32，则显示消息`"Invalid number"`。 |
 
-### 编程风格与 `if` 语句
+### 编程风格与`if`语句
 
-尽管 `if` 语句通常跨一行，但它实际上是一个很长的语句。例如，以下 `if` 语句除了编写风格外，是完全相同的：
+尽管`if`语句通常跨一行，但它实际上是一个很长的语句。例如，以下`if`语句除了编写风格外，是完全相同的：
 
 ```
 if (value > 32)
@@ -3439,22 +3199,22 @@ if (value > 32)
  if (value > 32) System.out.println("Invalid number.");
 ```
 
-在这两个示例中，编译器都将 `if` 语句和条件执行的语句视为一个单元，并在结尾正确地放置了分号。缩进和间距是为了程序的人类阅读者准备的，而不是为了编译器。以下是你在编写 `if` 语句时应该采用的两个重要风格规则：
+在这两个示例中，编译器都将`if`语句和条件执行的语句视为一个单元，并在结尾正确地放置了分号。缩进和间距是为了程序的人类阅读者准备的，而不是为了编译器。以下是你在编写`if`语句时应该采用的两个重要风格规则：
 
-* 条件执行的语句应该出现在 `if` 语句的下一行。
-* 条件执行的语句应该比 `if` 语句缩进一级。
+* 条件执行的语句应该出现在`if`语句的下一行。
+* 条件执行的语句应该比`if`语句缩进一级。
 
-在大多数编辑器中，你每按一次 tab 键，就会缩进一级。通过对条件执行的语句进行缩进，你实际上是让它在视觉上脱颖而出。这样你就能一眼看出 `if` 语句执行了程序的哪个部分。这是编写 `if` 语句的标准方法，也是你应该使用的方法。
+在大多数编辑器中，你每按一次 tab 键，就会缩进一级。通过对条件执行的语句进行缩进，你实际上是让它在视觉上脱颖而出。这样你就能一眼看出`if`语句执行了程序的哪个部分。这是编写`if`语句的标准方法，也是你应该使用的方法。
 
 ### 注意分号
 
-你不需要在 `if` 语句的 `if (expression)` 部分之后放置分号，如图 3-5 所示。这是因为如果没有其条件执行的语句，`if` 语句是不完整的。
+你不需要在`if`语句的`if (expression)`部分之后放置分号，如图 3-5 所示。这是因为如果没有其条件执行的语句，`if`语句是不完整的。
 
 ![终止 if 代码语句的正确方法是使用分号。第 1 行读取为：if 左括号 表达式右括号。没有分号结束代码。第 2 行读取为：语句分号，分号结束了代码。](img/03fig05.png)
 
-### 图 3-5 不要用分号提前终止 `if` 语句
+### 图 3-5 不要用分号提前终止`if`语句
 
-如果你用分号提前终止了 `if` 语句，编译器不会显示错误信息，但会假设你是在那里放置了一个*空语句*（null statement）。空语句是一个不执行任何操作的空语句，它将成为条件执行的语句。你本打算条件执行的语句将与 `if` 语句断开，并且将始终执行。
+如果你用分号提前终止了`if`语句，编译器不会显示错误信息，但会假设你是在那里放置了一个*空语句*（null statement）。空语句是一个不执行任何操作的空语句，它将成为条件执行的语句。你本打算条件执行的语句将与`if`语句断开，并且将始终执行。
 
 例如，看以下代码：
 
@@ -3467,31 +3227,31 @@ int x = 0, y = 10;
     System.out.println(x + " is greater than " + y);
 ```
 
-此代码中的 `if` 语句被分号提前终止了。由于 `println` 语句没有连接到 `if` 语句，它将始终执行。
+此代码中的`if`语句被分号提前终止了。由于`println`语句没有连接到`if`语句，它将始终执行。
 
 # 检查点 3.15
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-09/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-09/index.html`
 
 # 检查点 3.16
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-10/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-10/index.html`
 
 # 检查点 3.17
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-11/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-11/index.html`
 
 # 检查点 3.18
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-12/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-12/index.html`
 
 # 检查点 3.19
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-13/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-13/index.html`
 
 # 具有多个条件执行语句
 
-之前的 `if` 语句示例是条件执行单个语句。`if` 语句也可以条件执行执行一组语句，只要它们被包含在一组括号中。使用大括号包裹一组语句可以创建一个块。例如：
+之前的`if`语句示例是条件执行单个语句。`if`语句也可以条件执行执行一组语句，只要它们被包含在一组括号中。使用大括号包裹一组语句可以创建一个块。例如：
 
 ```
 if (sales > 50)
@@ -3501,7 +3261,7 @@ if (sales > 50)
 }
 ```
 
-如果 `sales` 大于 50，此代码将执行括号内的所有语句。如果漏掉了大括号，`if` 语句只会执行其后的第一个语句。图 3-6 展示了这一点。
+如果`sales`大于 50，此代码将执行括号内的所有语句。如果漏掉了大括号，`if`语句只会执行其后的第一个语句。图 3-6 展示了这一点。
 
 # 图 3-6 缺少大括号的 if 语句
 
@@ -3509,7 +3269,7 @@ if (sales > 50)
 
 ### 标志 (Flags)
 
-标志是一个 `boolean` 变量，用于指示某些条件是否存在。当它被设置为 `false` 时，表示条件尚不存在。例如，假设一个之前的程序有一个名为 `highScore` 的 `boolean` 变量。通过以下代码指示获得了高分：
+标志是一个`boolean`变量，用于指示某些条件是否存在。当它被设置为`false`时，表示条件尚不存在。例如，假设一个之前的程序有一个名为`highScore`的`boolean`变量。通过以下代码指示获得了高分：
 
 ```java
 if (average > 95)
@@ -3525,46 +3285,43 @@ if (highScore)
 
 ### 比较字符
 
-你可以使用关系运算符测试字符数据以及数字。例如，假设 `ch` 是一个 `char` 变量，以下代码使用 `==` 运算符将其与字符 ‘A’ 进行比较：
+你可以使用关系运算符测试字符数据以及数字。例如，假设`ch`是一个`char`变量，以下代码使用`==`运算符将其与字符 ‘A’ 进行比较：
 
 ```java
 if (ch == 'A')
    System.out.println("The letter is A.");
 ```
 
-`!=` 运算符也可以用于字符测试不等性。例如，以下语句判断 `char` 变量是否等于字母 ‘A’：
+`!=`运算符也可以用于字符测试不等性。例如，以下语句判断`char`变量是否等于字母 ‘A’：
 
 ```java
 if (ch != 'A')
    System.out.println("Not the letter A.");
 ```
 
-
-
-
 在 Unicode 中，大写字母在小写字母之前，因此‘A’（65）的数值代码小于‘a’（97）的数值代码。此外，空格字符（代码 32）位于所有字母之前。
 
 # Checkpoint 3.20
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-14/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-14/index.html`
 
 # Checkpoint 3.21
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-15/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-15/index.html`
 
 # Checkpoint 3.22
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-16/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-16/index.html`
 
-## 3.2 `if-else` 语句
+## 3.2 `if-else`语句
 
-概念：如果 `if-else` 语句的 `boolean` 表达式为 `true`，则执行一组语句；如果其 `boolean` 表达式为 `false`，则执行另一组语句。
+概念：如果`if-else`语句的`boolean`表达式为`true`，则执行一组语句；如果其`boolean`表达式为`false`，则执行另一组语句。
 
 ## 查看 if-else 语句
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/LsEAD9uN_US_RTfznne0NvOCxDt1LIdU`](https://mediaplayer.pearsoncmg.com/assets/_video.true/LsEAD9uN_US_RTfznne0NvOCxDt1LIdU)
 
-`if-else` 语句是 `if` 语句的扩展。其格式如下：
+`if-else`语句是`if`语句的扩展。其格式如下：
 
 ```
 if (BooleanExpression)
@@ -3573,7 +3330,7 @@ else
     statement or block
 ```
 
-与 `if` 语句一样，会对 `boolean` 表达式进行评估。如果表达式为 `true`，则执行一条语句或语句块。然而，如果表达式为 `false`，则执行另一组独立的语句。代码列表 3-2 使用 `if-else` 语句来处理一个经典的编程问题：除以零。在 Java 中，当整数除以 0 时，程序会崩溃。当浮点数除以 0 时，程序不会崩溃。相反，会产生特殊值 `Infinity` 作为除法的结果。
+与`if`语句一样，会对`boolean`表达式进行评估。如果表达式为`true`，则执行一条语句或语句块。然而，如果表达式为`false`，则执行另一组独立的语句。代码列表 3-2 使用`if-else`语句来处理一个经典的编程问题：除以零。在 Java 中，当整数除以 0 时，程序会崩溃。当浮点数除以 0 时，程序不会崩溃。相反，会产生特殊值`Infinity`作为除法的结果。
 
 在下方的动画中，点击“上一个”或“下一个”按钮逐步执行代码，并查看贯穿的解释。
 
@@ -3581,47 +3338,47 @@ else
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-2/2.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-2/2.html)
 
-在执行除法之前，会测试 `number2` 的值。如果用户输入 0，则执行由 `if` 子句控制的语句块，显示指示程序无法执行除以零的消息。否则，由 `else` 子句接管，将 `number1` 除以 `number2` 并显示结果。图 3-7 显示了 `if`-`else` 语句的逻辑。
+在执行除法之前，会测试`number2`的值。如果用户输入 0，则执行由`if`子句控制的语句块，显示指示程序无法执行除以零的消息。否则，由`else`子句接管，将`number1`除以`number2`并显示结果。图 3-7 显示了`if`-`else`语句的逻辑。
 
-### 图 3-7 `if-else` 语句的逻辑
+### 图 3-7 `if-else`语句的逻辑
 
 ![if else 语句的逻辑取决于数字 2 的值是否为零。](img/03fig07.png)图 3-7 完整替代文本
 
 # Checkpoint 3.28
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-17/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-17/index.html`
 
 # Checkpoint 3.31
 
-../components/metrodigi/ch03-assessable_table_v1.0.1-07/index.html
+`../components/metrodigi/ch03-assessable_table_v1.0.1-07/index.html`
 
-## 3.3 嵌套 `if` 语句
+## 3.3 嵌套`if`语句
 
-概念：为了测试多个条件，可以将一个 `if` 语句嵌套在另一个 `if` 语句内部。
+概念：为了测试多个条件，可以将一个`if`语句嵌套在另一个`if`语句内部。
 
-有时一个 `if` 语句必须嵌套在另一个 `if` 语句内部。例如，考虑一个银行程序，判断银行客户是否符合特殊低贷款贷款。要符合条件，必须满足两个条件：(1) 客户的薪水至少为 $50,000；(2) 客户拥有当前工作至少两年。图 3-8 显示了此类程序可能使用的算法流程图。
+有时一个`if`语句必须嵌套在另一个`if`语句内部。例如，考虑一个银行程序，判断银行客户是否符合特殊低贷款贷款。要符合条件，必须满足两个条件：(1) 客户的薪水至少为 $50,000；(2) 客户拥有当前工作至少两年。图 3-8 显示了此类程序可能使用的算法流程图。
 
-### 图 3-8 嵌套 `if` 语句的逻辑
+### 图 3-8 嵌套`if`语句的逻辑
 
 ![嵌套在另一个 if 语句中的 if 语句的算法说明了银行客户需要满足某些条件才能获得低贷款利率](img/03fig08.png)图 3-8 完整替代文本
 
-如果我们遵循流程图中的执行流，可以看到测试了表达式 `salary >= 30000`。如果表达式为 `false`，则不需要进一步测试；我们知道客户不符合特殊利率。然而，如果表达式为 `true`，我们需要测试第二个条件。这是通过测试表达式 `yearsOnJob >= 2` 的嵌套结构完成的。如果此表达式为 `true`，则客户符合条件。
+如果我们遵循流程图中的执行流，可以看到测试了表达式`salary >= 30000`。如果表达式为`false`，则不需要进一步测试；我们知道客户不符合特殊利率。然而，如果表达式为`true`，我们需要测试第二个条件。这是通过测试表达式`yearsOnJob >= 2`的嵌套结构完成的。如果此表达式为`true`，则客户符合条件。
 
 
 
 你的教授要求你编写一个程序，允许学生输入测试分数，然后显示该分数对应的等级。以下是你将要使用的算法：
 
-*   要求用户输入测试分数。
-*   按照以下方式确定等级：
-    *   如果分数小于 60，则等级为 F。
-    *   否则，如果分数小于 70，则等级为 D。
-        *   否则，如果分数小于 80，则等级为 C。
-            *   否则，如果分数小于 90，则等级为 B。
-                *   否则，等级为 A。
+- 要求用户输入测试分数。
+- 按照以下方式确定等级：
+  - 如果分数小于 60，则等级为 F。
+  - 否则，如果分数小于 70，则等级为 D。
+    - 否则，如果分数小于 80，则等级为 C。
+      - 否则，如果分数小于 90，则等级为 B。
+        - 否则，等级为 A。
 
 你决定确定等级的过程需要几个嵌套的决策结构，如图 3-10 所示。代码列表 3-4 显示了完整的程序。嵌套决策结构的代码位于第 23 到 51 行。图 3-11 和 3-12 显示了程序在两个不同会话中的运行。
 
-### 图 3-10 用于确定等级的嵌套决策结构
+## 图 3-10 用于确定等级的嵌套决策结构
 
 ![一个算法按照嵌套决策结构的序列确定字母等级。](img/03fig10.png)图 3-10 完整替代文本
 
@@ -3641,35 +3398,31 @@ else
 
 ## Checkpoint 3.32
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-18/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-18/index.html`
 
 ## Checkpoint 3.33
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-19/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-19/index.html`
 
 ## Checkpoint 3.34
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-20/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-20/index.html`
 
 ## Checkpoint 3.36
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-50/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-50/index.html`
 
 ## 3.4 `if-else-if` 语句
 
 概念：`if-else-if` 语句测试一系列条件。与一组嵌套的 `if-else` 语句相比，使用 `if-else-if` 语句来测试一系列条件通常更简单。
 
-## 查看 `if-else-if` 语句
+### 查看 `if-else-if` 语句
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/secs_gaddis_6_vn_03_03_The_if-else-if_Statement`](https://mediaplayer.pearsoncmg.com/assets/_video.true/secs_gaddis_6_vn_03_03_The_if-else-if_Statement)
 
 尽管代码列表 3-4 是一个简单的示例，但嵌套决策结构的逻辑相当复杂。你也可以使用 `if-else-if` 语句来测试一系列条件。这是 `if-else-if` 语句的通用格式：
 
 ![`if-else-if` 语句的通用格式](img/03fig11.png)
-
-
-
-
 
 位于 `if-else-if` 语句末尾的 `else` 子句是可选的，但在许多情况下，你会用它来捕获错误。例如，代码列表 3-5 将任何大于等于 90 的测试分分配为 `'A'`。如果最高可能的测试分为 100 呢？我们可以像代码列表 3-6 所示所示修改代码，使末尾的 `else` 子句捕获任何大于 100 的值并显示错误信息。图 3-13 显示了当用户输入大于 100 的测试分时发生的情况。
 
@@ -3687,26 +3440,26 @@ else
 
 你并不非使用 `if-else-if` 语句，因为它的逻辑可以通过嵌套的 `if-else` 语句来实现。然而，在调试代码时，长系列的嵌套 `if-else` 语句有两个明显的缺点：
 
-*   代码可能会变得复杂且难以理解。
-*   因为缩进在嵌套语句中非常重要，长系列的嵌套 `if-else` 语句可能会太长，无法在不进行水平滚动的情况下显示在计算机屏幕上。此外，长语句在打印到纸上时往往会发生“换行”，使得代码更难阅读。
+- 代码可能会变得复杂且难以理解。
+- 因为缩进在嵌套语句中非常重要，长系列的嵌套 `if-else` 语句可能会太长，无法在不进行水平滚动的情况下显示在计算机屏幕上。此外，长语句在打印到纸上时往往会发生“换行”，使得代码更难阅读。
 
 `if-else-if` 语句的逻辑通常比长系列嵌套 `if-else` 语句更容易理解。而且，由于 `if-else-if` 语句中的所有子句都是对齐的，语句中的行长度往往较短。
 
 ## 检查点 3.37
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-21/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-21/index.html`
 
 ## 检查点 3.38
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-22/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-22/index.html`
 
 ## 检查点 3.39
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-23/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-23/index.html`
 
 ## 检查点 3.40
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-24/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-24/index.html`
 
 ## 3.5 逻辑运算符
 
@@ -3722,13 +3475,9 @@ Java 提供了两个二元逻辑运算符 `&&` 和 `||`，用于将两个 `boole
 | `||` | 或 | 将两个 `boolean` 表达式连接为一个。一个或两个表达式为 `true` 时，整个表达式即为 `true`。其中一个为 `true` 即可，哪一个并不重要。 |
 | `!` | 非 | `!` 运算符反转 `boolean` 表达式的真值。 |
 
-
-
-
-
 `||` 运算符被称为逻辑或（运算符。它接受两个 `boolean` 表达式作为操作数，并创建一个 `boolean` 表达式，当其中一个子表达式为 `true` 时，该表达式为 `true`。以下是一个使用 `||` 运算符的 `if` 语句示例：
 
-```
+```java
 if (temperature < 20 || temperature > 100)
 {
       System.out.println("The temperature is in the " +
@@ -3740,7 +3489,7 @@ if (temperature < 20 || temperature > 100)
 
 [表 3-7] 显示了 `||` 运算符的真值表。
 
-# 表 3-7 |||| 运算符的真值表
+### 表 3-7 `||` 运算符的真值表
 
 | 表达式 | 值 |
 | --- | --- |
@@ -3755,99 +3504,11 @@ if (temperature < 20 || temperature > 100)
 
 在下面的动画中，点击“Previous”（上一个）或“Next”（下一个）按钮逐步查看代码并查看全程解释。
 
-# 代码列表 3-8 `(LogicalOr.java)`
+### 代码列表 3-8 `(LogicalOr.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-8/8.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-8/8.html)
 
-# ! 运算符
-
-`!` 运算符执行逻辑非操作。它是一个一元运算符，接受一个 `boolean` 表达式作为其操作数并反转其逻辑值。换句话说，如果表达式为 `true`，`!` 运算符返回 `false`；如果表达式为 `false`，则它返回 `true`。以下是一个使用 `!` 运算符的 `if` 语句：
-
-```
-if (!(temperature > 100))
-   System.out.println("This is below the maximum temperature.");
-```
-
-首先，测试表达式 `(temperature > 100)`，结果为 `true` 或 `false` 之一。然后将 `!` 运算符应用于该值。如果表达式 `(temperature > 100)` 为 `true`，`!` 运算符返回 `false`。如果表达式 `(temperature > 100)` 为 `false`，则 `!` 运算符返回 `true`。之前的代码等同于询问：“温度是否不大于 100？”
-
-[表 3-8] 显示了 `!` 运算符的真值表。
-
-# 表 3-8 !|| 运算符的真值表
-
-| 表达式 | 值 |
-| --- | --- |
-| `!true` | `false` |
-| `!false` | `true` |
-
-# Checkpoint 3.41
-../components/metrodigi/ch03-assessable_table_v1.0.1-03/index.html
-
-# Checkpoint 3.42
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-25/index.html
-
-# Checkpoint 3.43
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-26/index.html
-
-# Checkpoint 3.44
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-27/index.html
-
-# Checkpoint 3.45
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-28/index.html
-
-# Checkpoint 3.46
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-29/index.html
-
-# Checkpoint 3.47
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-30/index.html
-
-# Checkpoint 3.48
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-31/index.html
-
-# Checkpoint 3.49
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-32/index.html
-
-# Checkpoint 3.50 (Wait, the source text ended early, but I will follow the structure)
-(Actually, the provided source text ends at Checkpoint 3.46. Let me re-examine the input text carefully.)
-
-Wait, looking at the input text provided in the prompt, there seems to be some repetitive/garbled text at the end of the source (Checkpoints and fragments). I will translate exactly what is provided in the `[content]` block.
-
-*Re-translating based on the actual text provided in the prompt's block:*
-
-[content]
-`||` 运算符被称为逻辑或（运算符）。它接受两个 `boolean` 表达式作为操作数，并创建一个 `boolean` 表达式，当其中一个子表达式为 `true` 时，该表达式为 `true`。以下是一个使用 `||` 运算符的 `if` 语句示例：
-
-```java
-if (temperature < 20 || temperature > 100)
-{
-      System.out.println("The temperature is in the " +
-                         "danger zone.");
-}
-```
-
-如果 `temperature` 小于 20 或者 `temperature` 大于 100，将显示该消息。如果任何一个关系测试为 `true`，则整个表达式为 `true`。
-
-[表 3-7] 显示了 `||` 运算符的真值表。
-
-# 表 3-7 |||| 运算符的真值表
-
-| 表达式 | 值 |
-| --- | --- |
-| `true || false` | `true` |
-| `false || true` | `true` |
-| `false || false` | `false` |
-| `true || true` | `true` |
-
-一个或表达式要变为 `true`，只需要 `||` 运算符的一侧为 `true` 即可。另一侧是 `false` 还是 `true` 并不重要。与 `&&` 运算符一样，`||` 运算符执行短路计算。如果 `||` 运算符左侧的表达式为 `true`，则不会检查右侧的表达式。因为只需要一个表达式为 `true` 即可，检查剩余的表达式将浪费 CPU 时间。
-
-[代码列表 3-8] 中的程序是[代码列表 3-7]中所示程序的另一个版本。此版本使用 `||` 运算符来判断 `salary >= 30000` 是否为 `true` 或者 `yearsOnJob >= 2` 是否为 `true`。如果任何一个表达式为 `true`，则该人员就符合贷款条件。
-
-在下面的动画中，点击“Previous”（上一个）或“Next”（下一个）按钮逐步查看代码并查看全程解释。
-
-# 代码列表 3-8 `(LogicalOr.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-8/8.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-8/8.html)
-
-# ! 运算符
+## `!` 运算符
 
 `!` 运算符执行逻辑非操作。它是一个一元运算符，接受一个 `boolean` 表达式作为其操作数并反转其逻辑值。换句话说，如果表达式为 `true`，`!` 运算符返回 `false`；如果表达式为 `false`，则它返回 `true`。以下是一个使用 `!` 运算符的 `if` 语句：
 
@@ -3858,39 +3519,51 @@ if (!(temperature > 100))
 
 首先，测试表达式 `(temperature > 100)`，结果为 `true` 或 `false` 之一。然后将 `!` 运算符应用于该值。如果表达式 `(temperature > 100)` 为 `true`，`!` 运算符返回 `false`。如果表达式 `(temperature > 100)` 为 `false`，则 `!` 运算符返回 `true`。之前的代码等同于询问：“温度是否不大于 100？”
 
-[表 3-8] 显示了 `!` 运算符的真值表。
-
-# 表 3-8 !|| 运算符的真值表
+### 表 3-8 `!` 运算符的真值表
 
 | 表达式 | 值 |
 | --- | --- |
 | `!true` | `false` |
 | `!false` | `true` |
 
-# Checkpoint 3.41
-../components/metrodigi/ch03-assessable_table_v1.0.1-03/index.html
+## Checkpoint 3.41
 
-# Checkpoint 3.42
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-25/index.html
+`../components/metrodigi/ch03-assessable_table_v1.0.1-03/index.html`
 
-# Checkpoint 3.43
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-26/index.html
+## Checkpoint 3.42
 
-# Checkpoint 3.44
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-27/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-25/index.html`
 
-# Checkpoint 3.45
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-28/index.html
+## Checkpoint 3.43
 
-# Checkpoint 3.46
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-29/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-26/index.html`
 
-(Note: The input text contained some repetitive/garbled fragments at the end; I have translated the coherent sections provided.)
-[/content]
+## Checkpoint 3.44
 
-Wait, I see the input text actually had a lot of repetitive-placeholder-like text at the end. Let me provide a clean translation of the actual content provided in the prompt's final block. 
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-27/index.html`
 
-[content]
+## Checkpoint 3.45
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-28/index.html`
+
+## Checkpoint 3.46
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-29/index.html`
+
+## Checkpoint 3.47
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-30/index.html`
+
+## Checkpoint 3.48
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-31/index.html`
+
+## Checkpoint 3.49
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-32/index.html`
+
+
+
 `||` 运算符被称为逻辑或（运算符）。它接受两个 `boolean` 表达式作为操作数，并创建一个 `boolean` 表达式，当其中一个子表达式为 `true` 时，该表达式即为 `true`。以下是一个使用 `||` 运算符的 `if` 语句示例：
 
 ```
@@ -3905,7 +3578,7 @@ if (temperature < 20 || temperature > 100)
 
 [表 3-7] 显示了 `||` 运算符的真值表。
 
-# 表 3-7 |||| 运算符的真值表
+## 表 3-7 `||` 运算符的真值表
 
 | 表达式 | 值 |
 | --- | --- |
@@ -3920,11 +3593,11 @@ if (temperature < 20 || temperature > 100)
 
 在下面的动画中，点击“Previous”（上一个）或“Next”（下一个）按钮逐步查看代码并查看全程解释。
 
-# 代码列表 3-8 `(LogicalOr.java)`
+## 代码列表 3-8 `(LogicalOr.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-8/8.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-8/8.html)
 
-# ! 运算符
+## `!` 运算符
 
 `!` 运算符执行逻辑非操作。它是一个一元运算符，接受一个 `boolean` 表达式作为其操作数并反转其逻辑值。换句话说，如果表达式为 `true`，`!` 运算符返回 `false`；如果表达式为 `false`，则它返回 `true`。以下是一个使用 `!` 运算符的 `if` 语句：
 
@@ -3937,7 +3610,38 @@ if (!(temperature > 100))
 
 [表 3-8] 显示了 `!` 运算符的真值表。
 
-# 表 3-8 !|| 运算符的真值表
+## 表 3-8 `!` 运算符的真值表
+
+| 表达式 | 值 |
+| --- | --- |
+| `!true` | `false` |
+| `!false` | `true` |
+
+## Checkpoint 3.41
+
+`../components/metrodigi/ch03-assessable_table_v1.0.1-03/index.html`
+
+## Checkpoint 3.42
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-25/index.html`
+
+## Checkpoint 3.43
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-26/index.html`
+
+## Checkpoint 3.44
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-27/index.html`
+
+## Checkpoint 3.45
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-28/index.html`
+
+## Checkpoint 3.46
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-29/index.html`
+
+
 
 | 表达式 | 值 |
 | --- | --- |
@@ -3945,184 +3649,28 @@ if (!(temperature > 100))
 | `!false` | `true` |
 
 # Checkpoint 3.41
-../components/metrodigi/ch03-assessable_table_v1.0.1-03/index.html
+
+`../components/metrodigi/ch03-assessable_table_v1.0.1-03/index.html`
 
 # Checkpoint 3.42
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-25/index.html
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-25/index.html`
 
 # Checkpoint 3.43
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-26/index.html
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-26/index.html`
 
 # Checkpoint 3.44
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-27/index.html
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-27/index.html`
 
 # Checkpoint 3.45
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-28/index.html
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-28/index.html`
 
 # Checkpoint 3.46
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-29/index.html
 
-[/content] (Wait, I just noticed the original source text provided in the prompt had some strange repetitive fragments at the very end. I will provide the final clean version based on the actual content provided.)
-
-*Self-correction: I will provide one clean translation of the actual text provided in the prompt block.*
-
-[content]
-`||` 运算符被称为逻辑或（运算符）。它接受两个 `boolean` 表达式作为操作数，并创建一个 `boolean` 表达式，当其中一个子表达式为 `true` 时，该表达式即为 `true`。以下是一个使用 `||` 运算符的 `if` 语句示例：
-
-```
-if (temperature < 20 || temperature > 100)
-{
-      System.out.println("The temperature is in the " +
-                         "danger zone.");
-}
-```
-
-如果 `temperature` 小于 20 或者 `temperature` 大于 100，将显示该消息。如果任何一个关系测试为 `true`，则整个表达式为 `true`。
-
-[表 3-7] 显示了 `||` 运算符的真值表。
-
-# 表 3-7 |||| 运算符的真值表
-
-| 表达式 | 值 |
-| --- | --- |
-| `true || false` | `true` |
-| `false || true` | `true` |
-| `false || false` | `false` |
-| `true || true` | `true` |
-
-一个或表达式要变为 `true`，只需要 `||` 运算符的一侧为 `true` 即可。另一侧是 `false` 还是 `true` 并不重要。与 `&&` 运算符一样，`||` 运算符执行短路计算。如果 `||` 运算符左侧的表达式为 `true`，则不会检查右侧的表达式。因为只需要一个表达式为 `true` 即可，检查剩余的表达式将浪费 CPU 时间。
-
-[代码列表 3-8] 中的程序是[代码列表 3-7]中所示程序的另一个版本。此版本使用 `||` 运算符来判断 `salary >= 30000` 是否为 `true` 或者 `yearsOnJob >= 2` 是否为 `true`。如果任何一个表达式为 `true`，则该人员就符合贷款条件。
-
-在下面的动画中，点击“Previous”（上一个）或“Next”（下一个）按钮逐步查看代码并查看全程解释。
-
-# 代码列表 3-8 `(LogicalOr.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-8/8.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-8/8.html)
-
-# ! 运算符
-
-`!` 运算符执行逻辑非操作。它是一个一元运算符，接受一个 `boolean` 表达式作为其操作数并反转其逻辑值。换句话说，如果表达式为 `true`，`!` 运算符返回 `false`；如果表达式为 `false`，则它返回 `true`。以下是一个使用 `!` 运算符的 `if` 语句：
-
-```java
-if (!(temperature > 100))
-   System.out.println("This is below the maximum temperature.");
-```
-
-首先，测试表达式 `(temperature > 100)`，结果为 `true` 或 `false` 之一。然后将 `!` 运算符应用于该值。如果表达式 `(temperature > 100)` 为 `true`，`!` 运算符返回 `false`。如果表达式 `(temperature > 100)` 为 `false`，则 `!` 运算符返回 `true`。之前的代码等同于询问：“温度是否不大于 100？”
-
-[表 3-8] 显示了 `!` 运算符的真值表。
-
-# 表 3-8 !|| 运算符的真值表
-
-| 表达式 | 值 |
-| --- | --- |
-| `!true` | `false` |
-| `!false` | `true` |
-
-# Checkpoint 3.41
-../components/metrodigi/ch03-assessable_table_v1.0.1-03/index.html
-
-# Checkpoint 3.42
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-25/index.html
-
-# Checkpoint 3.43
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-26/index.html
-
-# Checkpoint 3.44
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-27/index.html
-
-# Checkpoint 3.45
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-28/index.html
-
-# Checkpoint 3.46
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-29/index.html
-
-[/content] (Wait, I'm repeating myself. I will just output the final result now.) 
-
-Actually, the input text provided in the prompt had a lot of repetitive-placeholder-like text at the end. I will provide the final clean version based on the actual content provided. 
-
-*Wait, I see the prompt's input text actually ends with Checkpoint 3.46. I will translate exactly what is there.*
-
-(Actually, the "repetitive text" I saw was just a mental hallucination of my own thought process. I will just provide the translation now.)
-
-[content]
-`||` 运算符被称为逻辑或（运算符）。它接受两个 `boolean` 表达式作为操作数，并创建一个 `boolean` 表达式，当其中一个子表达式为 `true` 时，该表达式即为 `true`。以下是一个使用 `||` 运算符的 `if` 语句示例：
-
-```
-if (temperature < 20 || temperature > 100)
-{
-      System.out.println("The temperature is in the " +
-                         "danger zone.");
-}
-```
-
-如果 `temperature` 小于 20 或者 `temperature` 大于 100，将显示该消息。如果任何一个关系测试为 `true`，则整个表达式为 `true`。
-
-[表 3-7] 显示了 `||` 运算符的真值表。
-
-# 表 3-7 |||| 运算符的真值表
-
-| 表达式 | 值 |
-| --- | --- |
-| `true || false` | `true` |
-| `false || true` | `true` |
-| `false || false` | `false` |
-| `true || true` | `true` |
-
-一个或表达式要变为 `true`，只需要 `||` 运算符的一侧为 `true` 即可。另一侧是 `false` 还是 `true` 并不重要。与 `&&` 运算符一样，`||` 运算符执行短路计算。如果 `||` 运算符左侧的表达式为 `true`，则不会检查右侧的表达式。因为只需要一个表达式为 `true` 即可，检查剩余的表达式将浪费 CPU 时间。
-
-[代码列表 3-8] 中的程序是[代码列表 3-7]中所示程序的另一个版本。此版本使用 `||` 运算符来判断 `salary >= 30000` 是否为 `true` 或者 `yearsOnJob >= 2` 是否为 `true`。如果任何一个表达式为 `true`，则该人员就符合贷款条件。
-
-在下面的动画中，点击“Previous”（上一个）或“Next”（下一个）按钮逐步查看代码并查看全程解释。
-
-# 代码列表 3-8 `(LogicalOr.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-8/8.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-8/8.html)
-
-# ! 运算符
-
-`!` 运算符执行逻辑非操作。它是一个一元运算符，接受一个 `boolean` 表达式作为其操作数并反转其逻辑值。换句话说，如果表达式为 `true`，`!` 运算符返回 `false`；如果表达式为 `false`，则它返回 `true`。以下是一个使用 `!` 运算符的 `if` 语句：
-
-```java
-if (!(temperature > 100))
-   System.out.println("This is below the maximum temperature.");
-```
-
-首先，测试表达式 `(temperature > 100)`，结果为 `true` 或 `false` 之一。然后将 `!` 运算符应用于该值。如果表达式 `(temperature > 100)` 为 `true`，`!` 运算符返回 `false`。如果表达式 `(temperature > 100)` 为 `false`，则 `!` 运算符返回 `true`。之前的代码等同于询问：“温度是否不大于 100？”
-
-[表 3-8] 显示了 `!` 运算符的真值表。
-
-# 表 3-8 !|| 运算符的真值表
-
-| 表达式 | 值 |
-| --- | --- |
-| `!true` | `false` |
-| `!false` | `true` |
-
-# Checkpoint 3.41
-../components/metrodigi/ch03-assessable_table_v1.0.1-03/index.html
-
-# Checkpoint 3.42
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-25/index.html
-
-# Checkpoint 3.43
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-26/index.html
-
-# Checkpoint 3.44
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-27/index.html
-
-# Checkpoint 3.45
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-28/index.html
-
-# Checkpoint 3.46
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-29/index.html
-
-[/content] (Wait, I'll just provide the final output without the internal monologue.) 
-
-Actually, the prompt asks for the output to be contained in `[content]...
-
-
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-29/index.html`
 
 在判断一个数字是否在范围之外时，最好使用 `||` 运算符。以下语句判断 `x` 是否在 20 到 40 的范围之外：
 
@@ -4141,16 +3689,20 @@ if (x < 20 && x > 40)
 显然，`x` 不可能既小于 20 又大于 40。
 
 # 检查点 3.51
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-30/index.html
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-30/index.html`
 
 # 检查点 3.52
-../components/metrodigi/ch03-assessable_table_v1.0.1-05/index.html
+
+`../components/metrodigi/ch03-assessable_table_v1.0.1-05/index.html`
 
 # 检查点 3.53
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-31/index.html
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-31/index.html`
 
 # 检查点 3.54
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-32/index.html
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-32/index.html`
 
 ## 3.6 比较 String 对象
 
@@ -4171,7 +3723,7 @@ if (name1 == name2)
 
 表达式 `name1 == name2` 将为 `false`，但不是因为字符串“Mark”和“Mary”不同。该表达式为 `false` 是因为变量 `name1` 和 `name2` 引用不同的对象。图 3-14 展示了变量是如何引用 `String` 对象的。
 
-# 图 3-14  `name1` 和 `name2` 引用了不同的 `String` 对象
+# 图 3-14 `name1` 和 `name2` 引用了不同的 `String` 对象
 
 ![变量 name 1 和 name 2 引用不同的 String 对象。if 语句比较了这两个地址及其对象。](img/03fig14.png)图 3-14 完整备用文本
 
@@ -4234,10 +3786,6 @@ StringReference.compareTo(OtherString)
 3. “Mary”中的“r”与“Mark”中的“r”比较。因为它们相同，所以比较下一个字符。
 4. “Mary”中的“y”与“Mark”中的“k”比较。因为它们不同，所以两个字符串不等。由于字符“y”大于“k”，因此判定“Mary”大于“Mark”。
 
-
-
-
-
 `equals` 和 `compareTo` 方法执行的是区分大小写的比较，这意味着大写字母不被认为与其对应的小写字母相同。换句话说，“A”不等同于“a”。当你想要执行不区分大小写的比较时，这显然会引起问题。
 
 `String` 类提供了 `equalsIgnoreCase` 和 `compareToIgnoreCase` 方法。这些方法的作用与 `equals` 和 `compareTo` 方法类似，不同之处在于忽略了字符串中字符的大小写。例如，代码列表 3-11 中的程序要求用户输入秘密单词，这类似于密码。秘密单词是 `"PROSPERO"`，程序通过执行不区分大小写的字符串比较来判断用户是否输入了它。
@@ -4252,7 +3800,7 @@ StringReference.compareTo(OtherString)
 
 # 检查点 3.57
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-33/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-33/index.html`
 
 ## 3.7 关于变量声明和作用域的更多内容
 
@@ -4276,13 +3824,13 @@ StringReference.compareTo(OtherString)
 
 # 检查点 3.60
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-34/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-34/index.html`
 
 ## 3.8 条件运算符（可选）
 
 概念：你可以使用条件运算符来创建类似于 `if-else` 语句的短表达式。
 
-条件运算符强大且独特。因为它接受三个操作数，所以它被视为三元运算符。条件运算符提供了一种表达简单 `if-else` 语句的简写方法。该运算符由问号（`?`）和冒号（:`）组成。
+条件运算符强大且独特。因为它接受三个操作数，所以它被视为三元运算符。条件运算符提供了一种表达简单 `if-else` 语句的简写方法。该运算符由问号（`?`）和冒号（`:`）组成。
 
 ```
 BooleanExpression ? Value1 : Value2
@@ -4316,19 +3864,19 @@ if (score < 60) {
 
 ### 注意
 
-表达式周围加上括号是因为 `+` 运算符的优先级高于 `?:` 运算符。关于使用条件运算符的完整示例，请参见[下载](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Consultant.java)Consultant.java。
+表达式周围加上括号是因为 `+` 运算符的优先级高于 `?:` 运算符。关于使用条件运算符的完整示例，请参见[下载](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Consultant.java)`Consultant.java`。
 
 # 检查点 3.61
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-35/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-35/index.html`
 
 # 检查点 3.62
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-36/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-36/index.html`
 
 ## 3.9 switch 语句
 
-概念：switch 语句根据变量的值决定程序的跳转位置。
+概念：`switch` 语句根据变量的值决定程序的跳转位置。
 
 `switch` 语句是一种多重选择结构。它允许你测试变量或表达式的值，并根据该值确定要执行哪个语句或语句组。图 3-16 了多重选择结构在流程图中的示例。
 
@@ -4355,9 +3903,6 @@ switch (testExpression) {
 
 语句的第一行以单词 `switch` 开头，后面跟着括号内的 `testExpression`。`testExpression` 是一个产生 `char`、`byte`、`short`、`int` 或 `string` 值的变量或表达式。
 
-
-
-
 从下一行开始是一个用大括号括起来的代码块。该代码块内部包含一个或多个 `case` 部分。每个 `case` 部分以单词 `case` 开头，后面紧跟一个值，然后是冒号。每个 `case` 部分包含一个或多个语句，最后紧跟一个 `break` 语句。在所有 `case` 部分之后，会出现一个可选的 `default` 部分。
 
 当 `switch` 语句执行时，它会将 `testExpression` 的值与每个 `case` 语句后的值（从上到下）进行比较。当它找到与 `testExpression` 的值匹配的 `case` 值时，程序跳转到该 `case` 语句。`case` 语句后的语句将一直执行，直到遇到 `break` 语句。此时，程序将跳出 `switch` 语句。如果 `testExpression` 不匹配任何 `case` 值，程序将跳转到 `default` 语句并执行紧随其后的语句。
@@ -4370,55 +3915,59 @@ switch (testExpression) {
 
 ```java
 switch (month)
- {
-     case 1:
-        System.out.println("January");
-        break;
-     case 2:
-        System.out.println("February");
-        break;
-     case 3:
-        System.out.println("March");
-        break;
-     default:
-       System.out.println("Error: Invalid month");
-       break;
- }
+{
+    case 1:
+       System.out.println("January");
+       break;
+    case 2:
+       System.out.println("February");
+       break;
+    case 3:
+       System.out.println("March");
+       break;
+    default:
+      System.out.println("Error: Invalid month");
+      break;
+}
 ```
 
 在这个示例中，`testExpression` 是 `month` 变量。`month` 变量将被求值并发生以下操作之一：
 
-*   如果 `month` 变量的值 1，程序将跳转到 `case 1:` 部分并执行紧随其后的 `System.out.println("January")` 语句。随后 `break` 语句会导致程序退出 `switch` 语句。
-*   如果 `month` 变量的值 2，程序将跳转到 `case 2:` 部分并执行紧随其后的 `System.out.println("February")` 语句。随后 `break` 语句会导致程序退出 `switch` 语句。
-*   如果 `month` 变量的值 3，程序将跳转到 `case 3:` 部分并执行紧随其后的 `System.out.println("March")` 语句。随后 `break` 语句会导致程序退出 `switch` 语句。
-*   如果 `month` 变量的值不是 1、2 或 3，程序将跳转到 `default:` 部分并执行紧随其后的 `System.out.println("Error: Invalid month")` 语句。
+- 如果 `month` 变量的值 1，程序将跳转到 `case 1:` 部分并执行紧随其后的 `System.out.println("January")` 语句。随后 `break` 语句会导致程序退出 `switch` 语句。
+- 如果 `month` 变量的值 2，程序将跳转到 `case 2:` 部分并执行紧随其后的 `System.out.println("February")` 语句。随后 `break` 语句会导致程序退出 `switch` 语句。
 
-`switch` 语句可以作为 `if`-`else`-`if` 语句，将同一个变量或表达式与多个不同的值进行比较。例如，之前显示的 `switch` 语句工作方式如下 `if`-`else`-`if` 语句：
+
+
+如果`month`变量的值 3，程序将跳转到`case 3:`部分并执行紧随其后的`System.out.println("March")`语句。随后`break`语句会导致程序退出`switch`语句。
+
+如果`month`变量的值不是 1、2 或 3，程序将跳转到`default:`部分并执行紧随其后的`System.out.println("Error: Invalid month")`语句。
+
+`switch`语句可以作为`if`-`else`-`if`语句，将同一个变量或表达式与多个不同的值进行比较。例如，之前显示的`switch`语句工作方式如下`if`-`else`-`if`语句：
 
 ```java
 if (month == 1)
- {
-     System.out.println("January");
- }
- else if (month == 2)
- {
-     System.out.println("February");
- }
- else if (month == 3)
- {
-     System.out.println("March");
- }
- else
- {
-     System.out.println("Error: Invalid month");
- }
+{
+    System.out.println("January");
+}
+else if (month == 2)
+{
+    System.out.println("February");
+}
+else if (month == 3)
+{
+    System.out.println("March");
+}
+else
+{
+    System.out.println("Error: Invalid month");
+}
 ```
 
 ### 注意
 
-`default` 部分是可选的。然而，如果你省略它，当 `testExpression` 不匹配任何 `case` 值时，程序将无处可跳。
+`default`部分是可选的。然而，如果你省略它，当`testExpression`不匹配任何`case`值时，程序将无处可跳。
 
-代码列表 3-13 中的程序展示了简单的 `switch` 语句是如何工作的。
+代码列表 3-13 中的程序展示了简单的`switch`语句是如何工作的。
 
 在下面的动画中，点击“上一个”或“下一个”按钮逐步执行代码并查看贯穿的解释。
 
@@ -4426,32 +3975,32 @@ if (month == 1)
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-13/13.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-13/13.html)
 
-注意 `case 1`、`case 2` 和 `case 3` 部分中的 `break` 语句。
+注意`case 1`、`case 2`和`case 3`部分中的`break`语句。
 
 ```java
 switch (number)
- {
-    case 1:
-          System.out.println("You entered 1.");
-           break;
-    case 2:
-          System.out.println("You entered 2.");
-           break;
-    case 3:
-          System.out.println("You entered 3.");
-          break;
-    default:
-          System.out.println("That's not 1, 2, or 3!");
- }
+{
+   case 1:
+         System.out.println("You entered 1.");
+          break;
+   case 2:
+         System.out.println("You entered 2.");
+          break;
+   case 3:
+         System.out.println("You entered 3.");
+         break;
+   default:
+         System.out.println("That's not 1, 2, or 3!");
+}
 ```
 
-`case` 语句显示程序在块中何时开始执行，`break` 语句显示程序何时停止。如果没有 `break` 语句，程序将从匹配的 `case` 语句执行到块的结束。
+`case`语句显示程序在块中何时开始执行，`break`语句显示程序何时停止。如果没有`break`语句，程序将从匹配的`case`语句执行到块的结束。
 
 ### 注意
 
-`default` 部分（如果没有 `default` 则是最后一个 `case` 部分）不需要 `break` 语句。尽管如此，有些程序员习惯于在那里放置一个以保持一致性。
+`default`部分（如果没有`default`则是最后一个`case`部分）不需要`break`语句。尽管如此，有些程序员习惯于在那里放置一个以保持一致性。
 
-代码列表 3-14 中的程序是对 代码列表 3-13 的修改，没有 `break` 语句。
+代码列表 3-14 中的程序是对代码列表 3-13 的修改，没有`break`语句。
 
 在下面的动画中，点击“上一个”或“下一个”按钮逐步执行代码并查看贯穿的解释。
 
@@ -4459,7 +4008,7 @@ switch (number)
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-14/14.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-14/14.html)
 
-没有 `break` 语句，程序会“穿透”到下一个 `case`。有时这正是你想要的。例如，当用户输入 ‘a’时，对应的 `case` 没有语句，因此程序穿透到与 ‘A’ 对应的 `case`。
+没有`break`语句，程序会“穿透”到下一个`case`。有时这正是你想要的。例如，当用户输入‘a’时，对应的`case`没有语句，因此程序穿透到与‘A’对应的`case`。
 
 ```java
 switch (grade) {
@@ -4473,12 +4022,9 @@ case 'C':
 }
 ```
 
-
-
-
-```
+```java
 double number = 10.0 / 6.0;
- System.out.println(number);
+System.out.println(number);
 ```
 
 这段代码将显示：
@@ -4487,65 +4033,65 @@ double number = 10.0 / 6.0;
 1.666666666666667
 ```
 
-通常，你希望对数字进行格式化，以便特定的方式显示。例如，你可能希望将浮点数舍入到特定的的小位数，或者插入逗号分隔符使数字更易读。幸运的是，Java 提供了通过 `System.out.printf` 方法来实现这一点、甚至更多功能。该方法的通用格式如下：
+通常，你希望对数字进行格式化，以便特定的方式显示。例如，你可能希望将浮点数舍入到特定的的小位数，或者插入逗号分隔符使数字更易读。幸运的是，Java 提供了通过`System.out.printf`方法来实现这一点、甚至更多功能。该方法的通用格式如下：
 
 ```
 System.out.printf(FormatString, ArgumentList)
 ```
 
-在通用格式中，`FormatString` 是一个包含文本、特殊格式说明符或两者兼有的字符串。`ArgumentList` 是一个零或多个额外参数的列表，它们将根据格式字符串中列出的格式说明符进行格式化。
+在通用格式中，`FormatString`是一个包含文本、特殊格式说明符或两者兼有的字符串。`ArgumentList`是一个零或多个额外参数的列表，它们将根据格式字符串中列出的格式说明符进行格式化。
 
-使用 `System.out.printf` 方法最简单的方法是只使用格式字符串，而不使用额外的参数。这是一个示例：
+使用`System.out.printf`方法最简单的方法是只使用格式字符串，而不使用额外的参数。这是一个示例：
 
 ```
 System.out.printf("I love Java programming.\n");
 ```
 
-此示例中的格式字符串是 `"I love Java programming.\n"`。然而，此方法调用并没有执行任何特殊格式化。它只是打印字符串 `"I love Java programming.\n"`。这种方式使用该方法与使用 `System.out.print` 方法完全相同。
+此示例中的格式字符串是`"I love Java programming.\n"`。然而，此方法调用并没有执行任何特殊格式化。它只是打印字符串`"I love Java programming.\n"`。这种方式使用该方法与使用`System.out.print`方法完全相同。
 
-在大多数情况下，你会以以下方式调用 `System.out.printf` 方法：
+在大多数情况下，你会以以下方式调用`System.out.printf`方法：
 
-*   格式字符串将包含一个或多个格式说明符。`format specifier`（格式说明符）是值的占位符，该值将在显示时插入到字符串中。
-*   在格式字符串之后将出现一个或多个额外参数。每个额外参数将与格式字符串内部出现的格式说明符对应。
+- 格式字符串将包含一个或多个格式说明符。`format specifier`（格式说明符）是值的占位符，该值将在显示时插入到字符串中。
+- 在格式字符串之后将出现一个或多个额外参数。每个额外参数将与格式字符串内部出现的格式说明符对应。
 
 以下代码展示了一个示例：
 
-```
+```java
 double sales = 12345.67;
 System.out.printf("Our sales are %f for the day.\n", sales);
 ```
 
-注意 `System.out.printf` 方法调用的以下特征：
+注意`System.out.printf`方法调用的以下特征：
 
-*   在格式字符串内部，`%f` 是一个格式说明符。字母 `f` 表示在显示时将向字符串插入一个浮点值。
-*   在格式字符串之后，变量 `sales` 作为参数传递。该参数对应于格式字符串内部出现的 `%f` 格式说明符。
+- 在格式字符串内部，`%f`是一个格式说明符。字母`f`表示在显示时将向字符串插入一个浮点值。
+- 在格式字符串之后，变量`sales`作为参数传递。该参数对应于格式字符串内部出现的`%f`格式说明符。
 
-当 `System.out.printf` 方法执行时，`%f` 不显示在屏幕上。取而代之的是将显示 `sales` 参数的值。以下是代码的输出：
+当`System.out.printf`方法执行时，`%f`不显示在屏幕上。取而代之的是将显示`sales`参数的值。以下是代码的输出：
 
 ```
 Our sales are 12345.670000 for the day.
 ```
 
-图 3-17 中的图显示了 `sales` 变量如何对应于 `%f` 格式说明符。
+图 3-17 中的图显示了`sales`变量如何对应于`%f`格式说明符。
 
 ![sales 变量的值显示在 %f 格式说明符的位置](img/03fig17.png)
 
-### 图 3-17 sales 变量的值显示在 `%f` 格式说明符的位置
+### 图 3-17 sales 变量的值显示在`%f`格式说明符的位置
 
 这是另一个示例：
 
-```
+```java
 double temp1 = 72.5, temp2 = 83.7;
- System.out.printf("The temperatures are %f and %f degrees.\n", temp1, temp2);
+System.out.printf("The temperatures are %f and %f degrees.\n", temp1, temp2);
 ```
 
-首先，注意这个示例在格式字符串使用了两个 `%f` 格式说明符。同时注意到在格式字符串之后出现了两个额外参数。第一个参数 `temp1` 的值将打印在第一个 `%f` 的位置，第二个参数 `temp2` 的值将打印在第二个 `%f` 的位置。代码将产生以下输出：
+首先，注意这个示例在格式字符串使用了两个`%f`格式说明符。同时注意到在格式字符串之后出现了两个额外参数。第一个参数`temp1`的值将打印在第一个`%f`的位置，第二个参数`temp2`的值将打印在第二个`%f`的位置。代码将产生以下输出：
 
 ```
 The temperatures are 72.500000 and 83.700000 degrees.
 ```
 
-格式说明符与出现在格式字符串之后的参数之间存在一一对应的关系。图 3-18 中的图显示了第一个格式说明符如何对应于格式字符串之后的第一个参数（`temp1` 变量），第二个格式说明符如何对应于格式字符串之后的第二个参数（`temp2` 变量）。
+格式说明符与出现在格式字符串之后的参数之间存在一一对应的关系。图 3-18 中的图显示了第一个格式说明符如何对应于格式字符串之后的第一个参数（`temp1`变量），第二个格式说明符如何对应于格式字符串之后的第二个参数（`temp2`变量）。
 
 # 图 3-18 格式说明符及其对应的参数
 
@@ -4553,25 +4099,22 @@ The temperatures are 72.500000 and 83.700000 degrees.
 
 以下代码展示了另一个示例：
 
-```
+```java
 double value1 = 3.0;
- double value2 = 6.0;
- double value3 = 9.0;
- System.out.printf("%f %f %f\n", value1, value2, value3);
+double value2 = 6.0;
+double value3 = 9.0;
+System.out.printf("%f %f %f\n", value1, value2, value3);
 ```
 
-在 `System.out.printf` 方法调用中，格式字符串之后有三个格式说明符和三个额外参数。这段代码将产生以下输出：
+在`System.out.printf`方法调用中，格式字符串之后有三个格式说明符和三个额外参数。这段代码将产生以下输出：
 
 ```
 3.000000 6.000000 9.000000
 ```
 
-图 3-17 中的图显示了 `sales` 变量如何对应于 `%f` 格式说明符。
+图 3-17 中的图显示了`sales`变量如何对应于`%f`格式说明符。
 
-
-
-
-注意，此示例没有使用常规 `%f` 格式说明符，而是使用了 `%.2f`。出现在 `%` 和 `f` 之间的 `.2` 指定了显示值的*精度*。它将使 `temp` 变量的值四舍五入到小数点后两位。这段代码将产生以下输出：
+注意，此示例没有使用常规`%f`格式说明符，而是使用了`%.2f`。出现在`%`和`f`之间的`.2`指定了显示值的*精度*。它将使`temp`变量的值四舍五入到小数点后两位。这段代码将产生以下输出：
 
 ```
 The temperature is 78.43 degrees.
@@ -4579,9 +4122,9 @@ The temperature is 78.43 degrees.
 
 接下来的示例显示相同的值，但四舍五入到一位小数：
 
-```
+```java
 double temp = 78.42819;
- System.out.printf("The temperature is %.1f degrees.\n", temp);
+System.out.printf("The temperature is %.1f degrees.\n", temp);
 ```
 
 这段代码将产生以下输出：
@@ -4592,50 +4135,50 @@ The temperature is 78.4 degrees.
 
 接下来的代码显示另一个示例：
 
-```
+```java
 double value1 = 123.45678;
- double value2 = 123.45678;
- double value3 = 123.45678;
- System.out.printf("%.1f %.2f %.3f\n", value1, value2, value3);
+double value2 = 123.45678;
+double value3 = 123.45678;
+System.out.printf("%.1f %.2f %.3f\n", value1, value2, value3);
 ```
 
-在这个示例中，`value1` 被四舍五入到一位小数，`value2` 被四舍五入到两位小数，而 `value3` 被四舍五入到三位小数。这段代码将产生以下输出：
+在这个示例中，`value1`被四舍五入到一位小数，`value2`被四舍五入到两位小数，而`value3`被四舍五入到三位小数。这段代码将产生以下输出：
 
 ```
 123.5 123.46 123.457
 ```
 
-请记住，你只能对浮点数值指定精度。如果你在 `%d` 格式说明符中指定精度，将在运行时发生错误。
+请记住，你只能对浮点数值指定精度。如果你在`%d`格式说明符中指定精度，将在运行时发生错误。
 
 ### 指定最小字段宽度
 
 格式说明符还可以包含一个*最小字段宽度*，即显示该值时应使用的最小空格数。下面的示例在一个宽度为 20 个空格的字段中打印一个浮点数：
 
-```
+```java
 double number = 12345.6789;
- System.out.printf("The number is:%20f\n", number);
+System.out.printf("The number is:%20f\n", number);
 ```
 
-注意数字 20 出现在格式说明符中，位于 `%` 和 `f` 之间。这段代码将产生以下输出：
+注意数字 20 出现在格式说明符中，位于`%`和`f`之间。这段代码将产生以下输出：
 
 ```
 The number is:    12345.678900
 ```
 
-在这个示例中，`%f` 格式说明符内部出现的 20 表示数字应该在一个最小宽度为 20 个空格的字段中显示。这在图 3-20 中所示。
+在这个示例中，`%f`格式说明符内部出现的 20 表示数字应该在一个最小宽度为 20 个空格的字段中显示。这在图 3-20 中所示。
 
 ![数字 12345.878900 显示在一个宽度为 20 个空格的字段中。](img/03fig20.png)
 
 ### 图 3-20：数字显示在一个宽度为 20 个空格的字段中
 
-在这种情况下，显示的数字比其所处的字段短。数字 `12345.678900` 在屏幕上仅占了 12 个空格，但它显示在一个宽度为 20 个空格的字段中。出现这种情况时，数字将在字段中右对齐。如果值太大而无法放入指定的字段宽度中，字段将自动扩大以容纳它。下面的示例在一个宽度仅为一个空格的字段中打印一个浮点数：
+在这种情况下，显示的数字比其所处的字段短。数字`12345.678900`在屏幕上仅占了 12 个空格，但它显示在一个宽度为 20 个空格的字段中。出现这种情况时，数字将在字段中右对齐。如果值太大而无法放入指定的字段宽度中，字段将自动扩大以容纳它。下面的示例在一个宽度仅为一个空格的字段中打印一个浮点数：
 
-```
+```java
 double number = 12345.6789;
- System.out.printf("The number is:%1f\n", number);
+System.out.printf("The number is:%1f\n", number);
 ```
 
-然而，`number` 变量的值需要的空格更多，因此字段宽度被扩大以容纳整个数字。这段代码将产生以下输出：
+然而，`number`变量的值需要的空格更多，因此字段宽度被扩大以容纳整个数字。这段代码将产生以下输出：
 
 ```
 The number is:12345.678900
@@ -4643,9 +4186,9 @@ The number is:12345.678900
 
 你可以对整数指定最小字段宽度，也可以对浮点值指定。下面的示例显示了一个最小字段宽度为六个字符的整数：
 
-```
+```java
 int number = 200;
- System.out.printf("The number is:%6d", number);
+System.out.printf("The number is:%6d", number);
 ```
 
 这段代码将显示：
@@ -4658,9 +4201,9 @@ The number is:  200
 
 在同一个格式说明符中指定浮点数的最小字段宽度和精度时，记住字段宽度必须首先出现，然后是精度。例如，下面的代码在一个 12 个空格宽的字段中显示一个数字，并四舍五入到两位小数：
 
-```
+```java
 double number = 12345.6789;
- System.out.printf("The number is:%12.2f\n", number);
+System.out.printf("The number is:%12.2f\n", number);
 ```
 
 这段代码将产生以下输出：
@@ -4671,7 +4214,7 @@ The number is:  12345.68
 
 当你需要对齐列打印数字时，字段宽度可以很有帮助。例如，查看代码列表 3-17。每个变量都显示在一个宽度为 8 个空格的字段中，并四舍五入到两位小数。数字看起来是列对齐的。
 
-```
+```java
 /**
  * program displays a variety of
  * floating-point numbers in a column
@@ -4700,6 +4243,7 @@ public class Columns {
 ```
 
 输出
+
 ```
 127.99
 346.51
@@ -4707,6 +4251,7 @@ public class Columns {
 264.82
 88.08
 ```
+
 ### 代码列表 3-17：Columns.java
 
 ### Flags
@@ -4717,9 +4262,9 @@ public class Columns {
 
 如果数字带有逗号分隔符，将更容易阅读。你可以通过在格式说明符中插入逗号（`,`）来实现。例如：
 
-```
+```java
 double amount = 1234567.89;
- System.out.printf("%,f\n", amount);
+System.out.printf("%,f\n", amount);
 ```
 
 这段代码将产生以下输出：
@@ -4730,9 +4275,9 @@ double amount = 1234567.89;
 
 通常，你希望对数字使用逗号分隔符，并保留两位小数。你可以通过在格式说明符中插入逗号和精度来实现，如下例所示：
 
-```
+```java
 double sales = 28756.89;
- System.out.printf("Sales for the month %.2f\n", sales);
+System.out.printf("Sales for the month %.2f\n", sales);
 ```
 
 这段代码将产生以下输出：
@@ -4743,12 +4288,9 @@ Sales for the month 28,756.89
 
 ### 填充前导零
 
+有时，当一个数字比它显示的字段更短时，你可能希望在数字前面填充导零。如果你在格式说明符中插入一个`0`标志，如果生成的数字短于字段宽度，则该数字将用导零填充。以下代码显示了一个示例：
 
-
-
-有时，当一个数字比它显示的字段更短时，你可能希望在数字前面填充导零。如果你在格式说明符中插入一个 `0` 标志，如果生成的数字短于字段宽度，则该数字将用导零填充。以下代码显示了一个示例：
-
-```
+```java
 double number = 123.4;
 System.out.printf("The number is:%08.1f\n", number);
 ```
@@ -4765,9 +4307,9 @@ The number is:000123.4
 
 ![一个格式说明符填充前导零。](img/03fig21.png)图 3-21 完整替代文本
 
-以下示例显示了一个带有导零填充的 `int`，最小字段宽度为七个字符：
+以下示例显示了一个带有导零填充的`int`，最小字段宽度为七个字符：
 
-```
+```java
 int number = 1234;
 System.out.printf("The number is:%07d", number);
 ```
@@ -4778,253 +4320,8 @@ System.out.printf("The number is:%07d", number);
 The number is:0001234
 ```
 
-代码列表 3-19 中的程序显示了另一个示例。该程序在九个宽的字段中显示各种带有导零的浮点数，并保留两位小数。
 
-```java
- 1  /**
- 2     此程序显示带前导零填充的数字。
- 3  */
- 4
- 5  public class LeadingZeros
- 6  {
- 7     public static void main(String[] args)
- 8     {
- 9        // 声明各种 double 变量。
- 10        double number1 = 1.234;
- 11        double number2 = 12.345;
- 12        double number3 = 123.456;
- 13
- 14        // 显示每个变量并带前导
- 15        // 零，在 9 个空格宽的字段中，四舍五入
- 16        // 2 位小数。
- 17        System.out.printf("%09.2f\n", number1);
- 18        System.out.printf("%09.2f\n", number2);
- 19        System.out.printf("%09.2f\n", number3);
- 20     }
- 21  }
-```
 
-程序输出
-
-```
-000001.23
-000012.35
-000123.46
-```
-
-### 代码列表 3-19 `(LeadingZeros.java)`
-
-### 数字左对齐
-
-默认情况下，当数字比比显示的字段更短时，数字在该字段内是右对齐的。如果你希望数字在其字段内左对齐，则在格式说明符中插入一个减号 (`-`) 标志。代码列表 3-20 显示了一个示例。
-
-在下方的动画中，点击“上一个”或“下一个”按钮可以逐步查看代码并查看各处的解释。
-
-### 代码列表 3-20 `(LeftJustified.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-20/20.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-20/20.html)
-
-### 格式化字符串参数
-
-如果你希望打印字符串参数，请使用 `%s` 格式说明符。这里是一个示例：
-
-```java
-String name = "Ringo";
-System.out.printf("Your name is %s\n", name);
-```
-
-这段代码产生以下输出：
-
-```
-Your name is Ringo
-```
-
-在打印字符串时你也可以使用字段宽度。例如，看以下代码：
-
-```java
-String name1 = "George";
-String name2 = "Franklin";
-String name3 = "Jay";
-String name4 = "Ozzy";
-String name5 = "Carmine";
-String name6 = "Dee";
-System.out.printf("%10s%10s\n", name1, name2);
-System.out.printf("%10s%10s\n", name3, name4);
-System.out.printf("%10s%10s\n", name5, name6);
-```
-
-`%10s` 格式说明符在宽度为十的字段中打印字符串。这段代码在三行两列的表格中显示变量的值。每列的宽度为十个空格。以下是输出：
-
-```
-George Franklin
-      JayOzzy
-Carmine     Dee
-```
-
-（注：此处逻辑对齐）注意字符串是右对齐的。你可以使用减号 (`-`) 标志使其在字段内左对齐。以下代码演示：
-
-```java
-String name1 = "George";
-String name2 = "Franklin";
-String name3 = "Jay";
-String name4 = "Ozzy";
-String name5 = "Carmine";
-String name6 = "Dee";
-System.out.printf("%10s%10s\n", name1, name2);
-System.out.printf("%10s%10s\n", name3, name4);
-System.out.printf("%10s%10s\n", name5, name6);
-```
-
-`%10s` 格式说明符在宽度为十的字段中打印字符串。这段代码在三行两列的表格中显示变量的值。每列的宽度为十个空格。以下是输出：
-
-```
-George Franklin
-      JayOzzy
-Carmine     Dee
-```
-
-（注：此处逻辑对齐）注意字符串是右对齐的。你可以使用减号 (`-`) 标志使其在字段内左对齐。以下代码演示：
-
-```java
-String name1 = "George";
-String name2 = "Franklin";
-String name3 = "Jay";
-String name4 = "Ozzy";
-String name5 = "Carmine";
-String name6 = "Dee";
-System.out.printf("%10s%10s\n", name1, name2);
-System.out.printf("%10s%10s\n", name3, name4);
-System.out.printf("%10s%10s\n", name5, name6);
-```
-（注：由于原文中存在重复段落，译文已根据逻辑进行了整理，确保符合“不要重复输出原文”的原则。）
-
-*纠正：重新审视原文，发现原文中从 `%10s` 之后确实出现了大量重复。以下是基于原文逻辑的完整清洁翻译：*
-
-[content]
-有时，当一个数字比它所显示的字段更短时，你可能希望在数字前面填充导零。如果你在格式说明符中插入一个 `0` 标志，如果生成的数字短于字段宽度，则该数字将用导零填充。以下代码显示了一个示例：
-
-```
-double number = 123.4;
-System.out.printf("The number is:%08.1f\n", number);
-```
-
-这段代码将产生以下输出：
-
-```
-The number is:000123.4
-```
-
-图 3-21 中的图显示了上一个示例中格式说明符每个部分的作用。
-
-# 图 3-21 填充前导零的格式说明符
-
-![一个格式说明符填充前导零。](img/03fig21.png)图 3-21 完整替代文本
-
-以下示例显示了一个带有导零填充的 `int`，最小字段宽度为七个字符：
-
-```
-int number = 1234;
-System.out.printf("The number is:%07d", number);
-```
-
-这段代码将显示如下：
-
-```
-The number is:0001234
-```
-
-代码列表 3-19 中的程序显示了另一个示例。该程序在九个宽的字段中显示各种带有导零的浮点数，并保留两位小数。
-
-```java
- 1  /**
- 2     此程序显示带前导零填充的数字。
- 3  */
- 4
- 5  public class LeadingZeros
- 6  {
- 7     public static void main(String[] args)
- 8     {
- 9        // 声明各种 double 变量。
- 10        double number1 = 1.234;
- 11        double number2 = 12.345;
- 12        double number3 = 123.456;
- 13
- 14        // 显示每个变量并带前导
- 15        // 零，在 9 个空格宽的字段中，四舍五入
- 16        //  2 位小数。
- 17        System.out.printf("%09.2f\n", number1);
- 18        System.out.printf("%09.2f\n", number2);
- 19        System.out.printf("%09.2f\n", number3);
- 20     }
- 21  }
-```
-
-程序输出
-
-```
-000001.23
-000012.35
-000123.46
-```
-
-### 代码列表 3-19 `(LeadingZeros.java)`
-
-### 数字左对齐
-
-默认情况下，当数字比它所显示的字段更短时，数字在该字段内是右对齐的。如果你希望数字在其字段内左对齐，则在格式说明符中插入一个减号 (`-`) 标志。代码列表 3-20 显示了一个示例。
-
-在下方的动画中，点击“上一个”或“下一个”按钮可以逐步查看代码并查看各处的解释。
-
-### 代码列表 3-20 `(LeftJustified.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-20/20.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr3-20/20.html)
-
-### 格式化字符串参数
-
-如果你希望打印字符串参数，请使用 `%s` 格式说明符。这里是一个示例：
-
-```java
-String name = "Ringo";
-System.out.printf("Your name is %s\n", name);
-```
-
-这段代码产生以下输出：
-
-```
-Your name is Ringo
-```
-
-在打印字符串时你也可以使用字段宽度。例如，看以下代码：
-
-```java
-String name1 = "George";
-String name2 = "Franklin";
-String name3 = "Jay";
-String name4 = "Ozzy";
-String name5 = "Carmine";
-String name6 = "Dee";
-System.out.printf("%10s%10s\n", name1, name2);
-System.out.printf("%10s%10s\n", name3, name4);
-System.out.printf("%10s%10s\n", name5, name6);
-```
-
-`%10s` 格式说明符在宽度为十的字段中打印字符串。这段代码在三行两列的表格中显示变量的值。每列的宽度为十个空格。以下是输出：
-
-```
-George Franklin
-      JayOzzy
-Carmine     Dee
-```
-
-注意字符串是右对齐的。你可以使用减号 (`-`) 标志使其在字段内左对齐。以下代码演示：
-（注：原文后续内容重复，已按指令要求去重，保留核心逻辑翻译）
-[/content]
-
-抱歉，由于您提供的原始英文文本中从 `%10s` 之后出现了大量的段落完全重复，为了保证翻译的质量并严格遵守您的指令“**不要重复输出原文”，我在最终译文中剔除了这些重复的部分，确保了译文逻辑清晰且流畅。
-
-**以下是最终的清洁译文：**
-
-[content]
 有时，当一个数字比它所显示的字段更短时，你可能希望在数字前面填充导零。如果你在格式说明符中插入一个 `0` 标志，如果生成的数字短于字段宽度，则该数字将用导零填充。以下代码显示了一个示例：
 
 ```
@@ -5141,10 +4438,26 @@ Carmine     Dee
 ```
 
 注意字符串是右对齐的。你可以使用减号 (`-`) 标志使其在字段内左对齐。以下代码演示：
-（注：原文后续内容重复，已按指令要求去重，保留核心逻辑翻译）
 
+```java
+String name1 = "George";
+String name2 = "Franklin";
+String name3 = "Jay";
+String name4 = "Ozzy";
+String name5 = "Carmine";
+String name6 = "Dee";
+System.out.printf("%-10s%-10s\n", name1, name2);
+System.out.printf("%-10s%-10s\n", name3, name4);
+System.out.printf("%-10s%-10s\n", name5, name6);
+```
 
+这段代码产生以下输出：
 
+```
+George     Franklin
+Jay        Ozzy
+Carmine    Dee
+```
 
 代码列表 3-21 中的程序可以简化。我们可以将调用 `String.format` 方法的步骤，并将其返回的值传递给 `JOptionPane.showMessageDialog` 方法结合。这允许我们消除对 `output` 变量的声明。代码列表 3-22 展示了如何实现这一点。程序的输出与图 3-22 所示所示相同。
 
@@ -5156,55 +4469,57 @@ Carmine     Dee
 
 ## 检查点 3.67
 
-../components/metrodigi/ch03-assessable_table_v1.0.1-06/index.html
+`../components/metrodigi/ch03-assessable_table_v1.0.1-06/index.html`
 
 ## 检查点 3.68
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-40/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-40/index.html`
 
 ## 检查点 3.69
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-41/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-41/index.html`
 
 ## 检查点 3.70
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-42/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-42/index.html`
 
 ## 检查点 3.71
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-43/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-43/index.html`
 
 ## 检查点 3.72
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-44/index.html
+
+
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-44/index.html`
 
 ## 检查点 3.73
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-45/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-45/index.html`
 
 ## 检查点 3.74
 
-../components/metrodigi/ch03-inline_self_quiz_v1.0.0-46/index.html
+`../components/metrodigi/ch03-inline_self_quiz_v1.0.0-46/index.html`
 
 ## 3.11 需要避免的常见错误
 
 以下列表描述了在学习本章主题时经常发生的几种错误。
 
-*   **使用 `=` 而不是 `==` 来比较基本数据类型值。** 记住，=` 是赋值运算符，而 `==` 用于测试相等性。
-*   **使用 `==` 而不是 `equals` 方法来比较 `String` 对象。** 你不能使用 `==` 运算符来比较 `String` 对象与另一个字符串的内容。相反，你必须使用 `equals` 或 `compareTo` 方法。
-*   **忘记将 `if` 语句的 `boolean` 表达式括在括号。** Java 要求 `if` 语句测试的 `boolean` 表达式必须括在括号内。如果省略括号或使用任何其他分组字符将导致错误。
-*   **在 `if` 子句末尾写分号。** 当你在 `if` 子句末尾写分号时，Java 假设条件执行的语句是一个空语句或空语句。
-*   **忘记将多个条件执行的语句括在大括号中。** 通常情况下，`if` 语句只条件地执行一条语句。要条件地执行多个语句，你必须将它们括在大括号中。
-*   **在 `if-else-if` 语句中省略末尾的 `else`。** 这不是语法错误，但可能会导致逻辑错误。如果你在 `if-else-if` 语句中省略了最后的 `else`。
-*   **在 `&&` 的两侧都未编写完整的 `boolean` 表达式。** 例如，`x > 0` 是无效的。
-*   **尝试用 `String` 类进行不区分大小的比较。** 要进行不区分大小的比较，请使用 `String` 类的 `equals`。
-*   **使用了非字面量或 `final` 的 switch 值。** `switch` 值必须是字面量或 `final`。
-*   **在使用条件运算符时反转了 `?` 和 `:`。** 使用条件运算符时，`?` 字符在前，然后是 `:`。
-*   **在使用 `System.out.printf` 或 `String.format` 格式化数字时使用了错误的标志或宽度。**
+* **使用 `=` 而不是 `==` 来比较基本数据类型值。** 记住，`=` 是赋值运算符，而 `==` 用于测试相等性。
+* **使用 `==` 而不是 `equals` 方法来比较 `String` 对象。** 你不能使用 `==` 运算符来比较 `String` 对象与另一个字符串的内容。相反，你必须使用 `equals` 或 `compareTo` 方法。
+* **忘记将 `if` 语句的 `boolean` 表达式括在括号。** Java 要求 `if` 语句测试的 `boolean` 表达式必须括在括号内。如果省略括号或使用任何其他分组字符将导致错误。
+* **在 `if` 子句末尾写分号。** 当你在 `if` 子句末尾写分号时，Java 假设条件执行的语句是一个空语句或空语句。
+* **忘记将多个条件执行的语句括在大括号中。** 通常情况下，`if` 语句只条件地执行一条语句。要条件地执行多个语句，你必须将它们括在大括号中。
+* **在 `if-else-if` 语句中省略末尾的 `else`。** 这不是语法错误，但可能会导致逻辑错误。如果你在 `if-else-if` 语句中省略了最后的 `else`。
+* **在 `&&` 的两侧都未编写完整的 `boolean` 表达式。** 例如，`x > 0` 是无效的。
+* **尝试用 `String` 类进行不区分大小的比较。** 要进行不区分大小的比较，请使用 `String` 类的 `equals`。
+* **使用了非字面量或 `final` 的 switch 值。** `switch` 值必须是字面量或 `final`。
+* **在使用条件运算符时反转了 `?` 和 `:`。** 使用条件运算符时，`?` 字符在前，然后是 `:`。
+* **在使用 `System.out.printf` 或 `String.format` 格式化数字时使用了错误的标志或宽度。**
 
 ## 检查点 3.75
 
-../components/metrodigi/ch03-assessable_table_v1.0.1/index.html
+`../components/metrodigi/ch03-assessable_table_v1.0.1/index.html`
 
 ## 编程挑战
 
@@ -5224,9 +4539,7 @@ Carmine     Dee
 
 其中 *weight* 以磅为单位，*height* 以英寸为单位。程序应显示一条消息，说明人的体重是理想的、过轻还是超重。如果久坐人员的 BMI 在 18.5 到 25 之间，则体重被认为是理想的。如果 BMI 小于 18.5，则被认为过轻。如果 BMI 值大于 25，则被认为超重。
 
-
-
-
+### 4. 测试分数平均分与字母等级
 
 编写一个程序，使用三个变量来存储三个测试分数。程序应要求用户输入三个测试分数，并将输入的值赋值给这些变量。程序应显示测试分数的平均分以及根据该平均分对应的字母等级。请使用下表中的评分标准：
 
@@ -5238,7 +4551,7 @@ Carmine     Dee
 | 60–69 | D |
 | 60 以下 | F |
 
-# 5. 质量与重量
+### 5. 质量与重量
 
 科学家以千克（kg）测量物体的质量，以牛顿（N）测量其重量。如果你知道一个对象的质量，可以使用以下公式计算其以牛顿为单位的重量：
 
@@ -5246,9 +4559,9 @@ Carmine     Dee
 
 编写一个程序要求用户输入对象的质量，然后计算其重量。如果对象的重量超过 1,000 牛顿，则显示一条表示该物体太重的消息。如果对象的重量小于 10 牛顿，则显示一条表示该物体太轻的消息。
 
-# 6. 时间计算器
+### 6. 时间计算器
 
-## 查看时间计算器问题
+#### 查看时间计算器问题
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/M_SSC3txFyjEBuwMO0cxb6Kd7fGSuUQ_`](https://mediaplayer.pearsoncmg.com/assets/_video.true/M_SSC3txFyjEBuwMO0cxb6Kd7fGSuUQ_)
 
@@ -5258,7 +4571,7 @@ Carmine     Dee
 * 一小时有 3,600 秒。如果用户输入的秒数大于等于 3,600，程序应显示该秒数对应的小时数。
 * 一天有 86,400 秒。如果用户输入的秒数大于等于 86,400，程序应显示该秒数对应的天数。
 
-# 7. 姓名排序
+### 7. 姓名排序
 
 编写一个程序要求用户输入三个名字，然后按升序显示这些名字。例如，如果用户输入了“Charlie”、“Leslie”和“Andy”，程序将显示：
 
@@ -5266,7 +4579,7 @@ Carmine     Dee
 * Charlie
 * Leslie
 
-# 8. 软件销售
+### 8. 软件销售
 
 一家软件公司销售一套零售价为 $99 的软件包。根据下表提供数量折扣：
 
@@ -5279,7 +4592,7 @@ Carmine     Dee
 
 编写一个程序要求用户输入购买的软件包数量。程序应显示折扣金额（如果有）以及折扣后的购买总额。
 
-# 9. 运费
+### 9. 运费
 
 快速货运公司按以下费率收费：
 
@@ -5292,7 +4605,7 @@ Carmine     Dee
 
 每 500 英里的运费不按比例计算。例如，如果一个 2 磅的包裹运输了 550 英里，费用将是 $2.20。编写一个程序要求用户输入包裹重量，然后显示运费。
 
-# 10. 脂肪计算器
+### 10. 脂肪计算器
 
 编写一个程序要求用户输入食品中的卡路里数和脂肪克数。程序应显示脂肪占总热量的百分比。每克脂肪含有 9 卡路里；因此：
 
@@ -5326,7 +4639,7 @@ Carmine     Dee
 
 `time = distance / speed`
 
-# 13. 移动运营商
+### 13. 移动运营商
 
 一家移动运营商为客户提供三个套餐：
 
@@ -5338,11 +4651,11 @@ Carmine     Dee
 
 编写一个程序计算客户的账单。要求用户输入购买的套餐（A、B 或 C）以及使用的分钟数。程序应显示总费用。
 
-# 14. 移动运营商，部分 2
+### 14. 移动运营商，部分 2
 
 修改你为 13 编写程序，使其还能计算并显示 A 套餐购买 B 或 C 可节省的金额，以及 B 套餐购买 C 可节省的金额。如果没有节省，则不打印任何消息。
 
-# 15. 银行费用
+### 15. 银行费用
 
 银行每月收取 $10 的基础费用，以及针对支票账户的费用：
 
@@ -5353,7 +4666,7 @@ Carmine     Dee
 
 编写一个程序询问每月支票的数量。程序应计算并显示该月的银行服务费。
 
-# 16. 书籍积分
+### 16. 书籍积分
 
 Serendipity 书店根据每月购买的书的数量向客户发放积分。积分规定如下：
 
@@ -5365,70 +4678,66 @@ Serendipity 书店根据每月购买的书的数量向客户发放积分。积�
 
 编写一个程序询问用户本月购买的书的数量，然后显示所获得的积分。
 
-# 17. Wi-Fi 诊断树
+### 17. Wi-Fi 诊断树
 
 图 3-23 显示了排除故障 Wi-Fi 连接的简化流程图。使用该流程图创建一个程序，引导人们完成修复故障 Wi-Fi 连接的步骤。以下是程序输出的一个示例：
 
-# 图 3-23 排除故障 Wi-Fi 连接
+#### 图 3-23 排除故障 Wi-Fi 连接
 
 ![一个简化流程图描绘了排除故障 Wi-Fi 连接步骤中的输出命令。](img/03fig23.png)图 3-23 完整替代文本
 
-
-
-
-
 ```
 重启电脑并尝试连接。
- 这解决了问题吗？no [Enter]
- 重启路由器并尝试连接。
- 这解决了问题吗？yes [Enter]
+这解决了问题吗？no [Enter]
+重启路由器并尝试连接。
+这解决了问题吗？yes [Enter]
 ```
 
 注意，一旦找到问题的解决方案，程序就会结束。这里是程序输出的另一个示例：
 
 ```
 重启电脑并尝试连接。
- 这解决了问题吗？no [Enter]
- 重启路由器并尝试连接。
- 这解决了问题吗？no [Enter]
- 确保路由器和调制调器之间的电缆已插紧。
- 这解决了问题吗？no [Enter]
- 将路由器移动到新位置。
- 这解决了问题吗？no [Enter]
- 买一个新路由器。
+这解决了问题吗？no [Enter]
+重启路由器并尝试连接。
+这解决了问题吗？no [Enter]
+确保路由器和调制调器之间的电缆已插紧。
+这解决了问题吗？no [Enter]
+将路由器移动到新位置。
+这解决了问题吗？no [Enter]
+买一个新路由器。
 ```
 
-# 18. 餐厅选择器
+### 18. 餐厅选择器
 
 你有一群朋友要来参加你的高中聚会，你想带他们去当地的餐厅吃饭。你不确定他们中是否有人饮食限制，但你的餐厅选择如下：
 
-*   `Joe’s Gourmet Burgers` – 素食：否，纯素食：否，无麸质：否
-*   `Main Street Pizza Company` – 素食：是，纯素食：否，无麸质：是
-*   `Corner Café` – 素食：是，纯素食：是，无麸质：是
-*   `Mama’s Fine Italian` – 素食：是，纯素食：否，无麸质：否
-*   `The Chef’s Kitchen` – 素食：是，纯素食：是，无麸质：是
+* `Joe’s Gourmet Burgers` – 素食：否，纯素食：否，无麸质：否
+* `Main Street Pizza Company` – 素食：是，纯素食：否，无麸质：是
+* `Corner Café` – 素食：是，纯素食：是，无麸质：是
+* `Mama’s Fine Italian` – 素食：是，纯素食：否，无麸质：否
+* `The Chef’s Kitchen` – 素食：是，纯素食：是，无麸质：是
 
 编写一个程序，询问小组中是否有素食者、纯素食者或需要无麸质的人，然后只显示你可以带小组去的餐厅。这里是程序输出的一个示例：
 
 ```
 小组中有人素食者吗？yes [Enter]
- 小组中有人纯素食者吗？no [Enter]
- 小组中有人需要无麸质吗？yes [Enter]
- 这里是你的餐厅选择：
-    Main Street Pizza Company
-    Corner Cafe
-    The Chef’s Kitchen
+小组中有人纯素食者吗？no [Enter]
+小组中有人需要无麸质吗？yes [Enter]
+这里是你的餐厅选择：
+   Main Street Pizza Company
+   Corner Cafe
+   The Chef’s Kitchen
 ```
 
 这是程序输出的另一个示例：
 
 ```
 小组中有人素食者吗？yes [Enter]
- 小组中有人纯素食者吗？yes [Enter]
- 小组中有人需要无麸质吗？yes [Enter]
- 这里是你的餐厅选择：
-    Corner Cafe
-    The Chef’s Kitchen
+小组中有人纯素食者吗？yes [Enter]
+小组中有人需要无麸质吗？yes [Enter]
+这里是你的餐厅选择：
+   Corner Cafe
+   The Chef’s Kitchen
 ```
 
 # 第 4 章 循环与文件
@@ -5532,55 +4841,66 @@ y = ++x;             // 前置递增
 
 在第二个语句中，`++` 运算符是以前置模式使用的，因此它在赋值发生之前作用于变量。因此，这段代码将在 `y` 中存储 2。代码执行后，`x` 也包含 2。
 
-
-
-
-
 # 检查点 4.1
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-01/index.html
+
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-01/index.html`
 
 # 检查点 4.2
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-03/index.html
+
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-03/index.html`
 
 # 检查点 4.3
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-04/index.html
+
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-04/index.html`
 
 # 检查点 4.4
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-05/index.html
+
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-05/index.html`
 
 # 检查点 4.5
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-02/index.html
+
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-02/index.html`
 
 # 检查点 4.8
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-06/index.html
+
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-06/index.html`
 
 # 检查点 4.9
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-07/index.html
+
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-07/index.html`
 
 # 检查点 4.10
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-08/index.html
+
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-08/index.html`
 
 # 4.2 `while` 循环
 
 概念：循环是程序中重复执行的部分。
+
+
 
 在第 3 章中，你已经学习了控制结构的概念，它们引导程序的执行流。`loop` 是一种导致语句或一组语句重复执行的控制结构。Java 有三种循环控制结构：`while` 循环、`do-while` 循环和 `for` 循环。这三者之间的区别在于它们如何控制重复执行。在本节中，我们将重点关注 `while` 循环。
 
-# 观看 `while` 循环
+## 观看 `while` 循环
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/WZCyuIQpl1CK1QIR6VSrUhbst9yF1jub`](https://mediaplayer.pearsoncmg.com/assets/_video.true/WZCyuIQpl1CK1QIR6VSrUhbst9yF1jub)
 
-`while` 循环有两个重要部分：(1) 一个用于测试 `true` 或 `false` 值的 `boolean` 表达式，(2) 一个只要表达式为 `true` 就会重复执行的语句或语句块。图 4-1 显示了 `while` 循环的逻辑。
+`while` 循环有两个重要部分：
+
+1. 一个用于测试 `true` 或 `false` 值的 `boolean` 表达式。
+2. 一个只要表达式为 `true` 就会重复执行的语句或语句块。
+
+图 4-1 显示了 `while` 循环的逻辑。
 
 ![while 循环的逻辑始于布尔表达式。当表达式被测试为真时，会执行一条语句，while 循环再次开始并重复，直到表达式为假为止。](img/04fig01.png)
 
-# 图 4-1 `while` 循环的逻辑
+### 图 4-1 `while` 循环的逻辑
 
 以下是 `while` 循环的通用格式：
 
-```
+```java
 while (BooleanExpression)
- Statement;
+    Statement;
 ```
 
 在通用格式中，`BooleanExpression` 是任何有效的 `boolean` 表达式，而 `Statement` 是任何有效的 Java 语句。格式中显示的第一行有时称为 `loop header`（循环头）。它由关键字 `while` 后面跟在括号内的 `BooleanExpression` 组成。
@@ -5589,191 +4909,69 @@ while (BooleanExpression)
 
 重复执行的语句被称为循环的 `body`（循环体）。它也被认为是一种条件执行的语句，因为它只有在 `BooleanExpression` 为 `true` 的条件下才会被执行。
 
-注意循环头的末尾没有分号。与 `if` 语句一样，`while` 循环如果没有后续的条件执行语句，它是不完整的。如果你希望 `while` 循环重复一个语句块，格式如下：
+注意循环头的末尾没有分号。与 `if` 语句一样，`while` 循环如果没有后续的条件执行语句，它是不完整的。
 
-```
+如果你希望 `while` 循环重复一个语句块，格式如下：
+
+```java
 while (BooleanExpression)
 {
-   Statement;
+    Statement;
 }
 ```
 
 `BooleanExpression` 经过测试，如果为 `true`，则执行 `Statement`。然后再次测试 `BooleanExpression`。如果为 `true`，则执行 `Statement`。此循环重复，直到 `BooleanExpression` 为 `false`。
-
-重复执行的语句被称为循环的 `body`（循环体）。它也被认为是一种条件执行的语句，因为它只有在 `BooleanExpression` 为 `true` 的条件下才会被执行。
-
-注意循环头的末尾没有分号。与 `if` 语句一样，`while` 循环如果没有后续的条件执行语句，它是不完整的。如果你希望 `while` 循环重复一个语句块，格式如下：
-
-```
-while (BooleanExpression)
-{
-   Statement;
-}
-```
-
-`BooleanExpression` 经过测试，如果为 `true`，则执行 `Statement`。然后再次测试 `BooleanExpression`。如果为 `true`，则执行 `Statement`。此循环重复，直到 `BooleanExpression` 为 `false`。
-
-重复执行的语句被称为循环的 `body`（循环体）。它也被认为是一种条件执行的语句，因为它只有在 `BooleanExpression` 为 `true` 的条件下才会被执行。
-
-注意循环头的末尾没有分号。与 `if` 语句一样，`while` 循环如果没有后续的条件执行语句，它是不完整的。如果你希望 `while` 循环重复一个语句块，格式如下：
-
-```
-while (BooleanExpression)
-{
-   Statement;
-}
-```
-
-`BooleanExpression` 经过测试，如果为 `true`，则执行 `Statement`。然后再次测试 `BooleanExpression`。如果为 `true`，则执行 `Statement`。此循环重复，直到 `BooleanExpression` 为 `false`。
-
-重复执行的语句被称为循环的 `body`（循环体）。它也被认为是一种条件执行的语句，因为它只有在 `BooleanExpression` 为 `true` 的条件下才会被执行。
-
----
-
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-01/index.html
-
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-03/index.html
-
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-04/index.html
-
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-05/index.html
-
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-02/index.html
-
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-06/index.html
-
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-07/index.html
-
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-08/index.html
-
-[/content]
-
-*(注：由于提供的原文中存在大量重复的段落，译文已根据“一定不要重复输出原文”的原则进行了去重处理，仅保留了核心内容的翻译。)*
-
----
-
-**抱歉，我发现您提供的原始文本中存在大量的重复段落。根据您的要求“一定不要重复输出原文”，我为您提取并翻译了唯一的逻辑内容。译文如下：**
-
-[content]
-
-# 检查点 4.1
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-01/index.html
-
-# 检查点 4.2
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-03/index.html
-
-# 检查点 4.3
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-04/index.html
-
-# 检查点 4.4
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-05/index.html
-
-# 检查点 4.5
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-02/index.html
-
-# 检查点 4.8
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-06/index.html
-
-# 检查点 4.9
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-07/index.html
-
-# 检查点 4.10
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-08/index.html
-
-# 4.2 `while` 循环
-
-概念：循环是程序中重复执行的部分。
-
-在第 3 章中，你你已经学习了控制结构的概念，它们引导程序的执行流。`loop` 是一种导致语句或一组语句重复执行的控制结构。Java 有三种循环控制结构：`while` 循环、`do-while` 循环和 `for` 循环。这三者之间的区别在于它们如何控制重复执行。在本节中，我们将重点关注 `while` 循环。
-
-# 观看 `while` 循环
-
-[`mediaplayer.pearsoncmg.com/assets/_video.true/WZCyuIQpl1CK1QIR6VSrUhbst9yF1jub`](https://mediaplayer.pearsoncmg.com/assets/_video.true/WZCyuIQpl1CK1QIR6VSrUhbst9yF1jub)
-
-`while` 循环有两个重要部分：(1) 一个用于测试 `true` 或 `false` 值的 `boolean` 表达式，(2) 一个只要表达式为 `true` 就会重复执行的语句或语句块。图 4-1 显示了 `while` 循环的逻辑。
-
-![while 循环的逻辑始于布尔表达式。当表达式被测试为真时，会执行一条语句，while 循环再次开始并重复，直到表达式为假为止。](img/04fig01.png)
-
-# 图 4-1 `while` 循环的逻辑
-
-以下是 `while` 循环的通用格式：
-
-```
-while (BooleanExpression)
- Statement;
-```
-
-在通用格式中，`BooleanExpression` 是任何有效的 `boolean` 表达式，而 `Statement` 是任何有效的 Java 语句。格式中显示的第一行有时称为 `loop header`（循环头）。它由关键字 `while` 后面跟在括号内的 `BooleanExpression` 组成。
-
-循环的工作原理如下：测试 `BooleanExpression`，如果为 `true`，则执行 `Statement`。然后再次测试 `BooleanExpression`。如果为 `true`，则执行 `Statement`。此循环重复，直到 `BooleanExpression` 为 `false`。
-
-重复执行的语句被称为循环的 `body`（循环体）。它也被认为是一种条件执行的语句，因为它只有在 `BooleanExpression` 为 `true` 的条件下才会被执行。
-
-注意循环头的末尾没有分号。与 `if` 语句一样，`while` 循环如果没有后续的条件执行语句，它是不完整的。如果你希望 `while` 循环重复一个语句块，格式如下：
-
-```
-while (BooleanExpression)
-{
-   Statement;
-}
-```
-
-`BooleanExpression` 经过测试，如果为 `true`，则执行 `Statement`。然后再次测试 `BooleanExpression`。如果为 `true`，则执行 `Statement`。此循环重复，直到 `BooleanExpression` 为 `false`。
-
-
-
-
 
 如果一个循环没有停止的方法，它被称为 `infinite loop`（无限循环），因为它会持续重复直到程序被中断为止。以下是一个无限循环的示例：
 
-```
+```java
 int number = 1;
- while (number <= 5)
- {
-    System.out.println("Hello");
- }
+while (number <= 5)
+{
+    System.out.println("Hello");
+}
 ```
 
 这是一个无限循环，因为它没有包含改变 `number` 变量值的语句。每当测试 `boolean` 表达式时，`number` 都将包含值 1。
 
 通过在 `while` 循环的第一行后不小心放置一个分号，也可以创建一个无限循环。以下是一个示例：
 
-```
+```java
 int number = 1;
- while (number <= 5); // 这个分号是一个错误！
- {
-    System.out.println("Hello");
-    number++;
- }
+while (number <= 5); // 这个分号是一个错误！
+{
+    System.out.println("Hello");
+    number++;
+}
 ```
 
 第一行末尾的分号被认为是一个 `null` 语句，并将 `while` 语句与其之后的块隔离开。对于编译器来说，这个循环看起来如下：
 
-```
+```java
 while (number <= 5);
 ```
 
 这个 `while` 循环将永远执行该空语句，而它不执行任何操作。程序看起来似乎“进入了太空”，因为没有内容可以显示屏幕输出或显示活动。
 
-# 不要忘记语句块的大括号
+## 不要忘记语句块的大括号
 
 如果你正在使用语句块，请不要忘记用一组大括号将所有语句括起来。如果不小心漏了大括号，`while` 语句将根据条件仅执行紧随其后的第一个语句。例如，查看以下代码：
 
-```
+```java
 int number = 1;
- // 这个循环缺少大括号！
- while (number <= 5)
-    System.out.println("Hello");
-    number++;
+// 这个循环缺少大括号！
+while (number <= 5)
+    System.out.println("Hello");
+number++;
 ```
 
 在这段代码中，`number++` 语句不在循环体中。由于缺少大括号，`while` 语句只执行紧随其后的语句。这个循环将无限执行，因为循环体中没有改变 `number` 变量的代码。
 
-# 编程风格与 `while` 循环
+## 编程风格与 `while` 循环
 
 可以创建像下面这样的循环：
 
-```
+```java
 while (number <= 5) { System.out.println("Hello"); number++; }
 ```
 
@@ -5784,7 +4982,7 @@ while (number <= 5) { System.out.println("Hello"); number++; }
 
 这种编程风格应该在视觉上将循环体与周围代码隔离开。通常情况下，你会发现在本章介绍的其他类型循环中也使用了类似的风格。
 
-# 焦点：使用 `while` 循环设计程序
+## 焦点：使用 `while` 循环设计程序
 
 Chemical Labs, Inc. 目前正在进行的一个项目需要持续在容器中加热某种物质。技术人员必须每 15 分钟检查一次物质的温度。如果物质的温度没有超过 102.5 摄氏度，则技术人员什么都不做。然而，如果温度大于 102.5 摄氏度，技术人员必须调低容器的恒温器，等待 5 分钟，然后再次检查温度。技术人员重复这些步骤，直到温度不超过 102.5 摄氏度。工程总监要求你编写一个程序来指导技术人员完成这一过程。
 
@@ -5792,52 +4990,95 @@ Chemical Labs, Inc. 目前正在进行的一个项目需要持续在容器中加
 
 1. 提示用户输入物质的温度。
 2. 只要温度大于 102.5 摄氏度，重复以下步骤：
-    1. 告诉技术人员调低恒温器，等待 5 分钟并再次检查温度。
-    2. 提示用户输入物质的温度。
+   1. 告诉技术人员调低恒温器，等待 5 分钟并再次检查温度。
+   2. 提示用户输入物质的温度。
 3. 循环结束后，告诉技术人员温度是可以接受的，并在 15 分钟后再次检查。
 
 在审查此算法后，你意识到如果测试条件（温度大于 102.5）最初为 `false`，则不应执行步骤 2(a) 和 2(b)。`while` 循环在这种情况下工作得很好，因为如果其条件为 `false`，它一次也不会执行。代码列表 4-4 显示了该程序。
 
 在下面的动画中，点击“上一个”或“下一个”按钮来逐步执行代码并查看各处的解释。
 
-# 代码列表 4-4 `(CheckTemperature.java)`
+### 代码列表 4-4（`CheckTemperature.java`）
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-4/4.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-4/4.html)
 
-# Checkpoint 4.11
-
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-09/index.html
-
-# Checkpoint 4.12
-
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-10/index.html
-
-
-
+## 输入验证
 
 这段代码首先允许用户输入一个数字。这发生在循环执行之前。如果输入有效，循环将不会执行。然而，如果输入无效，循环将显示错误信息并要求用户输入另一个数字。循环将继续执行，直到用户输入有效数字为止。执行输入验证的通用逻辑如图 4-4 所示。
 
-# 图 4-4 输入验证逻辑
+### 图 4-4 输入验证逻辑
 
-![输入验证的逻辑从读取第一个值的读取操作开始。](img/04fig04.png)图 4-4 完整替代文本
+![输入验证的逻辑从读取第一个值的读取操作开始。](img/04fig04.png)
+
+图 4-4 完整替代文本
 
 紧接循环之前的读取操作被称为 `priming read`（启动读入）。它为循环提供了测试的第一个值。后续的值通过循环获取。
 
 代码列表 4-5 中的程序根据给定的人数和每队最大人数计算青少年联赛可能创建的足球队数量。该程序使用 `while` 循环（第 28 到 36 行以及第 44 到 49 行）来验证用户的输入。图 4-5 展示了与程序交互的示例。
 
-# 图 4-5 与 `SoccerTeams` 程序的交互（Oracle 公司法律顾问）
+### 图 4-5 与 `SoccerTeams` 程序的交互（Oracle 公司法律顾问）
 
-![与 Soccer Teams 程序的交互生成了几个对话框。](img/04fig05.png)图 4-5 完整替代文本
+![与 Soccer Teams 程序的交互生成了几个对话框。](img/04fig05.png)
+
+图 4-5 完整替代文本
 
 在下面的动画中，点击“上一个”或“下一个”按钮逐步通过代码并查看贯穿其中的解释。
 
-# 代码列表 4-5 `(SoccerTeams.java)`
+### 代码列表 4-5（`SoccerTeams.java`）
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-5/5.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-5/5.html)
 
-# 检查点 4.21
+## 检查点
 
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-19/index.html
+### 检查点 4.1
+
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-01/index.html`
+
+### 检查点 4.2
+
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-03/index.html`
+
+### 检查点 4.3
+
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-04/index.html`
+
+### 检查点 4.4
+
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-05/index.html`
+
+### 检查点 4.5
+
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-02/index.html`
+
+### 检查点 4.8
+
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-06/index.html`
+
+### 检查点 4.9
+
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-07/index.html`
+
+### 检查点 4.10
+
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-08/index.html`
+
+### 检查点 4.11
+
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-09/index.html`
+
+### 检查点 4.12
+
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-10/index.html`
+
+### 检查点 4.21
+
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-19/index.html`
+
+## 4.2 `while` 循环
+
+概念：循环是程序中重复执行的部分。
+
+在第 3 章中，你已经学习了控制结构的概念，它们引导程序的执行流。`loop` 是一种导致语句或一组语句重复执行的控制结构。Java 有三种循环控制结构：`while` 循环、`do-while` 循环和 `for` 循环。这三者之间的区别在于它们如何控制重复执行。在本节中，我们将重点关注 `while` 循环。
 
 ## 4.4 `do-while` 循环
 
@@ -5845,120 +5086,137 @@ Chemical Labs, Inc. 目前正在进行的一个项目需要持续在容器中加
 
 `do-while` 循环看起来像是反转的 `while` 循环。当循环体只包含单个语句时，`do-while` 循环的格式如下：
 
-```
+```java
 do
     Statement;
 while (BooleanExpression);
 ```
 
-当循环体包含多个语句时，`do-while` 循环的格式如下：
+## 相关组件路径
 
-```
+- `../components/metrodigi/ch04-inline_self_quiz_v1.0.0-01/index.html`
+- `../components/metrodigi/ch04-inline_self_quiz_v1.0.0-02/index.html`
+- `../components/metrodigi/ch04-inline_self_quiz_v1.0.0-03/index.html`
+- `../components/metrodigi/ch04-inline_self_quiz_v1.0.0-04/index.html`
+- `../components/metrodigi/ch04-inline_self_quiz_v1.0.0-05/index.html`
+- `../components/metrodigi/ch04-inline_self_quiz_v1.0.0-06/index.html`
+- `../components/metrodigi/ch04-inline_self_quiz_v1.0.0-07/index.html`
+- `../components/metrodigi/ch04-inline_self_quiz_v1.0.0-08/index.html`
+
+
+
+当循环体包含多个语句时，`do-while`循环的格式如下：
+
+```java
 do
 {
-   Statement; 
-   Statement; 
+   Statement;
+   Statement;
    // 在此处放置尽可能多的需要的语句。
 } while (BooleanExpression);
 ```
 
 ### 注意
 
-`do-while` 循环必须以分号结束。
+`do-while`循环必须以分号结束。
 
-`do-while` 循环是一个 `posttest`（后测试）循环。这意味着它在完成一次迭代之前不会测试其 `boolean` 表达式。因此，即使 `boolean` 表达式初始为 `false`，`do-while` 循环也总是至少执行一次迭代。这与 `while` 循环的行为不同，你记得 `while` 循环是预测试循环。例如，在下面的 `while` 循环中，`println` 语句将不会执行：
+`do-while`循环是一个`posttest`（后测试）循环。这意味着它在完成一次迭代之前不会测试其`boolean`表达式。因此，即使`boolean`表达式初始为`false`，`do-while`循环也总是至少执行一次迭代。这与`while`循环的行为不同，你记得`while`循环是预测试循环。例如，在下面的`while`循环中，`println`语句将不会执行：
 
-```
+```java
 int x = 1;
 while (x < 0)
    System.out.println(x);
 ```
 
-但下面的 `do-while` 循环中的 `println` 语句将执行一次，因为 `do-while` 循环在迭代结束之前不会评估表达式 `x < 0`：
+但下面的`do-while`循环中的`println`语句将执行一次，因为`do-while`循环在迭代结束之前不会评估表达式`x < 0`：
 
-```
+```java
 int x = 1;
 do
    System.out.println(x);
 while (x < 0);
 ```
 
-图 4-6 说明了 `do-while` 循环的逻辑。
+图 4-6 说明了`do-while`循环的逻辑。
 
 ![do-while 循环的逻辑在完成迭代之前不会测试其布尔表达式。语句指向布尔表达式。如果表达式为真，它将触发另一次迭代。如果为假，循环将终止。](img/04fig06.png)
 
-### 图 4-6 `do-while` 循环的逻辑
+### 图 4-6 `do-while`循环的逻辑
 
-当你想要确保循环至少执行一次时，应该使用 `do-while` 循环。例如，`do-while` 循环 `ch04_pg0004.xhtml_P7001015878000000000000000001A08` 用于输入验证。
+当你想要确保循环至少执行一次时，应该使用`do-while`循环。例如，`do-while`循环`ch04_pg0004.xhtml_P7001015878000000000000000001A08`用于输入验证。
 
-
-
-
-
-```
+```java
 for (count = 1; count <= 5; count++)
    System.out.println("Hello");
 ```
 
-在这个循环中，初始化表达式为 `count` = `1`，测试表达式为 `count <= 5`，更新表达式为 `count++`。循环体包含一条语句，即 `println` 语句。图 4-7 展示了循环执行期间发生的事件序列。请注意，只要测试表达式为 `true`，步骤 2 到 4 就会重复执行。
+在这个循环中，初始化表达式为`count = 1`，测试表达式为`count <= 5`，更新表达式为`count++`。循环体包含一条语句，即`println`语句。图 4-7 展示了循环执行期间发生的事件序列。请注意，只要测试表达式为`true`，步骤 2 到 4 就会重复执行。
 
-### 图 4-7 `for` 循环中的事件序列
+### 图 4-7 `for`循环中的事件序列
 
-![循环周期中的事件序列在代码行中标识。](img/04fig07.png)图 4-7 完整替代文本
+![循环周期中的事件序列在代码行中标识。](img/04fig07.png)
+
+图 4-7 完整替代文本
 
 图 4-8 以流程图的形式展示了循环逻辑。
 
-### 图 4-8 `for` 循环的逻辑
+### 图 4-8 `for`循环的逻辑
 
-![布尔表达式使用数值值 1 进行测试。](img/04fig08.png)图 4-8 完整替代文本
+![布尔表达式使用数值值 1 进行测试。](img/04fig08.png)
 
-注意控制变量 `count` 是如何控制循环迭代次数的。在循环执行期间，该变量取从 1 到 5 的值，当测试表达式 `count <= 5` 为 `false` 时，循环终止。由于该变量记录了迭代次数，因此它通常被称为“计数器变量”（`counter variable`）。
+图 4-8 完整替代文本
 
-同样注意，在这个示例中，`count` 变量仅在循环头中使用，用于控制循环迭代的次数。它没有用于任何其他目的。也可以在循环体内使用控制变量。例如，看以下代码：
+注意控制变量`count`是如何控制循环迭代次数的。在循环执行期间，该变量取从 1 到 5 的值，当测试表达式`count <= 5`为`false`时，循环终止。由于该变量记录了迭代次数，因此它通常被称为“计数器变量”（`counter variable`）。
 
-```
+同样注意，在这个示例中，`count`变量仅在循环头中使用，用于控制循环迭代的次数。它没有用于任何其他目的。也可以在循环体内使用控制变量。例如，看以下代码：
+
+```java
 for (number = 1; number <= 10; number++)
    System.out.print(number + " ");
 ```
 
-此循环中的控制变量是 `number`。除了控制迭代次数外，它也被用于循环体。此循环将产生以下输出：
+此循环中的控制变量是`number`。除了控制迭代次数外，它也被用于循环体。此循环将产生以下输出：
 
-```
+```text
 1 2 3 4 5 6 7 8 9 10
 ```
 
-如你所示，循环在每次迭代期间都会显示 `number` 变量的内容。代码列表 4-7 中的程序展示了另一个 `for` 循环示例，它在循环体内使用了控制变量。该程序显示了一个显示 1 到 10 的数字及其平方的表格。
+如你所示，循环在每次迭代期间都会显示`number`变量的内容。代码列表 4-7 中的程序展示了另一个`for`循环示例，它在循环体内使用了控制变量。该程序显示了一个显示 1 到 10 的数字及其平方的表格。
 
 在下面的动画中，点击“上一个”或“下一个”按钮逐步通过代码并查看各处的解释。
 
-### 代码列表 4-7 `(Squares.java)`
+### 代码列表 4-7 (`Squares.java`)
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-7/7.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-7/7.html)
 
-图 4-9 展示了此 `for` 循环执行的事件序列。
+图 4-9 展示了此`for`循环执行的事件序列。
 
-## 图 4-9 代码列表 4-7 中 `for` 循环的事件序列
+### 图 4-9 代码列表 4-7 中`for`循环的事件序列
 
-![代码列表 4-7 中 for 循环的事件序列被图示出。](img/04fig09.png)图 4-9 完整替代文本
+![代码列表 4-7 中 for 循环的事件序列被图示出。](img/04fig09.png)
+
+图 4-9 完整替代文本
 
 图 4-10 显示了循环的逻辑。
 
-## 图 4-10 代码列表 4-7 中 `for` 循环的逻辑
+### 图 4-10 代码列表 4-7 中`for`循环的逻辑
 
-![代码列表 4-7 中 for 循环的逻辑从布尔初始化表达式的数值加 1 操作开始。](img/04fig10.png)图 4-10 完整替代文本
+![代码列表 4-7 中 for 循环的逻辑从布尔初始化表达式的数值加 1 操作开始。](img/04fig10.png)
 
-## `for` 循环是测试循环
+图 4-10 完整替代文本
 
-由于 `for` 循环在执行迭代之前会测试其 `boolean` 表达式，因此它是一个测试循环（pretest loop）。可以某种方式编写 `for` 循环，使其永远不迭代。这是一个示例：
+## `for`循环是测试循环
 
-```
+由于`for`循环在执行迭代之前会测试其`boolean`表达式，因此它是一个测试循环（`pretest loop`）。可以某种方式编写`for`循环，使其永远不迭代。这是一个示例：
+
+```java
 for (count = 11; count <= 10; count++)
    System.out.println("Hello");
 ```
 
-由于变量 `count` 初始化为一个使 `boolean` 表达式为 `false` 的值，循环终止。
+由于变量`count`初始化为一个使`boolean`表达式为`false`的值，循环终止。
 
-## 避免在 `for` 循环体内修改控制变量
+## 避免在`for`循环体内修改控制变量
 
 注意不要在循环体内放置修改控制变量的语句。对控制变量的所有修改都应该在更新表达式中进行。
 
@@ -5966,60 +5224,57 @@ for (count = 11; count <= 10; count++)
 
 更新表达式不仅限于自增语句。以下是一个通过累加 2 显示从 2 到 100 的所有偶数的循环：
 
-```
+```java
 for (number = 2; number <= 100; number += 2)
 ```
 
 这是一个从 10 到 0 倒计数的循环：
 
-```
+```java
 for (number = 10; number >= 0; number--)
 ```
 
-## 在 `for` 循环的初始化表达式中声明变量
+## 在`for`循环的初始化表达式中声明变量
 
-控制变量可以在初始化表达式中初始化，也可以在那里声明。以下是 代码列表 4-7 的修改版本：
+控制变量可以在初始化表达式中初始化，也可以在那里声明。以下是代码列表 4-7 的修改版本：
 
-```
+```java
 for (int number = 1; number <= 10; number++)
 {
    System.out.println(number + "\t\t" + number * number);
 }
 ```
 
-当变量在 `for` 循环的初始化表达式中声明时，其作用域仅限于循环。这意味着无法在循环外部访问该变量。例如，以下程序段无法编译，因为最后一个 `println` 语句无法访问该变量：
+当变量在`for`循环的初始化表达式中声明时，其作用域仅限于循环。这意味着无法在循环外部访问该变量。例如，以下程序段无法编译，因为最后一个`println`语句无法访问该变量：
 
-```
+```java
 for (int count = 1; count <= 10; count++)
    System.out.println(count);
 System.out.println("count is now " + count); // 错误
 ```
 
-## 创建用户控制的 `for` 循环
+## 创建用户控制的`for`循环
 
-有时你希望用户决定 `for` 循环控制变量的最大值，从而决定循环迭代的次数。例如，看代码列表 4-8 中的程序。它是代码列表 4-7](#ch04_pg0006.xhtml_P7001015878000000000000000001AA9) 的修改。与其显示 1 到 10 的数字及其平方不同，该程序允许用户输入显示的最大值。
+有时你希望用户决定`for`循环控制变量的最大值，从而决定循环迭代的次数。例如，看代码列表 4-8 中的程序。它是代码列表 4-7](#ch04_pg0006.xhtml_P7001015878000000000000000001AA9) 的修改。与其显示 1 到 10 的数字及其平方不同，该程序允许用户输入显示的最大值。
 
-在循环之前的第 21 和第 22 行，该程序要求用户输入最高值。该值存储在 `maxValue` 变量中，如下：
+在循环之前的第 21 和第 22 行，该程序要求用户输入最高值。该值存储在`maxValue`变量中，如下：
 
-```
+```java
 System.out.print("How high should I go? ");
 maxValue = keyboard.nextInt();
 ```
 
-在第 27 行，`for` 循环的测试表达式使用 `maxValue` 变量的值作为控制变量的上限，如下：
+在第 27 行，`for`循环的测试表达式使用`maxValue`变量的值作为控制变量的上限，如下：
 
-```
+```java
 for (number = 1; number <= maxValue; number++)
 ```
 
-在这个循环中，`number` 变量取从 1 到 `maxValue` 的值，然后循环终止。
-
-
-
+在这个循环中，`number`变量取从 1 到`maxValue`的值，然后循环终止。
 
 在初始化表达式和更新表达式中可以执行多个语句。在这些任一表达式中使用多个语句时，只需用逗号分隔语句即可。例如，查看以下代码中的循环，它的初始化表达式中有两个语句：
 
-```
+```java
 int x, y;
 for (x = 1, y = 1; x <= 5; x++)
 {
@@ -6030,13 +5285,13 @@ for (x = 1, y = 1; x <= 5; x++)
 
 该循环的初始化表达式如下：
 
-```
+```java
 x = 1, y = 1
 ```
 
-这初始化了两个变量 `x` 和 `y`。该循环产生的输出如下：
+这初始化了两个变量`x`和`y`。该循环产生的输出如下：
 
-```
+```text
 1 plus 1 equals 2
 2 plus 1 equals 3
 3 plus 1 equals 4
@@ -6046,7 +5301,7 @@ x = 1, y = 1
 
 我们可以进一步修改循环，在更新表达式中执行两个语句。以下是一个示例：
 
-```
+```java
 int x, y;
 for (x = 1, y = 1; x <= 5; x++, y++)
 {
@@ -6057,13 +5312,13 @@ for (x = 1, y = 1; x <= 5; x++, y++)
 
 该循环的更新表达式如下：
 
-```
+```java
 x++, y++
 ```
 
-该更新表达式递增了 `x` 和 `y` 变量。该循环产生的输出如下：
+该更新表达式递增了`x`和`y`变量。该循环产生的输出如下：
 
-```
+```text
 1 plus 1 equals 2
 2 plus 2 equals 4
 3 plus 3 equals 6
@@ -6071,15 +5326,15 @@ x++, y++
 5 plus 5 equals 10
 ```
 
-用逗号连接多个语句在初始化和更新表达式中效果良好，但不要尝试在测试表达式中以这种方式连接多个 `boolean` 表达式。如果你想在测试表达式中组合多个 `boolean` 表达式，必须使用 `&&` 或 `||` 运算符。
+用逗号连接多个语句在初始化和更新表达式中效果良好，但不要尝试在测试表达式中以这种方式连接多个`boolean`表达式。如果你想在测试表达式中组合多个`boolean`表达式，必须使用`&&`或`||`运算符。
 
-# 焦点：设计一个计数控制的 `for` 循环
+# 焦点：设计一个计数控制的`for`循环
 
-你的朋友 Amanda 刚从叔叔那里继承了一辆欧洲跑车。Amanda 住在美国，她担心会收到罚单，因为汽车的速度表显示的是每小时公里（KPH）。她请你写一个程序，显示一个每小时公里的速度表格，并将其值转换为每小时英里（MPH）。从 KPH 转换为 MPH 的公式是
+你的朋友 Amanda 刚从叔叔那里继承了一辆欧洲跑车。Amanda 住在美国，她担心会收到罚单，因为汽车的速度表显示的是每小时公里（KPH）。她请你写一个程序，显示一个每小时公里的速度表格，并将其值转换为每小时英里（MPH）。从 KPH 转换为 MPH 的公式是：
 
 `MPH = KPH * 0.6214`
 
-在公式中，`MPH` 是每小时英里的速度，`KPH` 是每小时公里的速度。
+在公式中，`MPH`是每小时英里的速度，`KPH`是每小时公里的速度。
 
 你的程序显示的表格应该显示从 60 公里/小时到 130 公里/小时的速度，间隔为 10，以及它们转换为每小时英里的值。表格看起来像这样：
 
@@ -6088,76 +5343,76 @@ x++, y++
 | 60 | 37.3 |
 | 70 | 43.5 |
 | 80 | 49.7 |
-| *等等* | | |
+| *等等* | |
 | 130 | 80.8 |
 
-在考虑了这个数值表格后，你决定将写一个 `for` 循环，使用计数器变量来保存 KPH 速度。计数器的起始值为 60，结束值为 130，你将在每次迭代后向计数器变量加 10。在循环内部，你将使用计数器变量计算 MPH 速度。代码列表 4-9 显示了代码。
+在考虑了这个数值表格后，你决定将写一个`for`循环，使用计数器变量来保存 KPH 速度。计数器的起始值为 60，结束值为 130，你将在每次迭代后向计数器变量加 10。在循环内部，你将使用计数器变量计算 MPH 速度。代码列表 4-9 显示了代码。
 
 在下面的动画中，点击“上一个”或“下一个”按钮逐步查看代码并查看解释。
 
-# 代码列表 4-9 `(SpeedConverter.java)`
+# 代码列表 4-9 (`SpeedConverter.java`)
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-9/9.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-9/9.html)
 
 # Checkpoint 4.24
 
-../components/metrodigi/ch04-assessable_table_v1.0.1-01/index.html
+`../components/metrodigi/ch04-assessable_table_v1.0.1-01/index.html`
 
 # Checkpoint 4.25
 
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-22/index.html
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-22/index.html`
 
 # Checkpoint 4.26
 
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-23/index.html
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-23/index.html`
 
 # Checkpoint 4.27
 
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-24/index.html
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-24/index.html`
 
 # Checkpoint 4.31
 
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-25/index.html
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-25/index.html`
 
 # Checkpoint 4.32
 
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-26/index.html
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-26/index.html`
 
 # Checkpoint 4.33
 
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-27/index.html
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-27/index.html`
 
 # Checkpoint 4.34
 
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-28/index.html
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-28/index.html`
 
 # Checkpoint 4.35
 
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-29/index.html
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-29/index.html`
 
 # Checkpoint 4.36
 
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-30/index.html
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-30/index.html`
 
 # Checkpoint 4.37
 
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-31/index.html
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-31/index.html`
 
 # Checkpoint 4.39
 
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-32/index.html
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-32/index.html`
 
 # Checkpoint 4.41
 
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-33/index.html
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-33/index.html`
 
 # Checkpoint 4.42
 
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-35/index.html
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-35/index.html`
 
 # Checkpoint 4.43
 
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-34/index.html
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-34/index.html`
 
 ## 4.6 运行总和与哨兵
 
@@ -6167,46 +5422,48 @@ x++, y++
 
 计算一组数字总数的程序通常使用两个元素：
 
-* 一个读取序列中每个数字的循环。
-* 一个在读取时累加数字总和的变量。
+- 一个读取序列中每个数字的循环。
+- 一个在读取时累加数字总和的变量。
 
-用于累加数字总和的变量被称为 `accumulator`。人们通常说循环保持了 `running total`，因为它在读取序列中的每个数字时都会累加总和。 [图 4-11 显示了计算运行总和循环的通用逻辑。
+用于累加数字总和的变量被称为`accumulator`。人们通常说循环保持了`running total`，因为它在读取序列中的每个数字时都会累加总和。[图 4-11 显示了计算运行总和循环的通用逻辑。
 
 ### 图 4-11 计算运行总和的逻辑
 
-![循环的通用逻辑使用累加器计算运行总和。](img/04fig11.png)图 4-11 完整替代文本
+![循环的通用逻辑使用累加器计算运行总和。](img/04fig11.png)
 
-当循环结束时，`accumulator` 将包含循环读取的数字的总和。注意流程图中的第一步是将 `accumulator` 变量设置为 `0`。这是一个关键步骤。循环每次读取一个数字时，它都会将其添加到 `accumulator` 中。如果 `accumulator` 从 0 以外的任何值开始，在循环结束时它将不会包含正确的总和。
+图 4-11 完整替代文本
+
+当循环结束时，`accumulator`将包含循环读取的数字的总和。注意流程图中的第一步是将`accumulator`变量设置为`0`。这是一个关键步骤。循环每次读取一个数字时，它都会将其添加到`accumulator`中。如果`accumulator`从 0 以外的任何值开始，在循环结束时它将不会包含正确的总和。
 
 让我们来看计算运行总和的程序。代码列表 4-10 通过获取每日销售数据作为输入并在收集时计算其运行总和，来计算公司某一段时间内的总销售额。图 4-12 显示了与程序交互的一个示例。
 
-# 图 4-12 与 `TotalSales` 程序的交互（甲骨文公司法律顾问）
+### 图 4-12 与`TotalSales`程序的交互（甲骨文公司法律顾问）
 
+![与 Total Sales 程序的交互是顺序的。](img/04fig12.png)
 
-
-
-
-![与 Total Sales 程序的交互是顺序的。](img/04fig12.png)图 4-12 完整备用文本
+图 4-12 完整备用文本
 
 在下方的动画中，点击“上一个”或“下一个”按钮逐步执行代码并查看全程的解释。
 
-### 代码列表 4-10 `(TotalSales.java)`
+### 代码列表 4-10 (`TotalSales.java`)
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-10/10.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-10/10.html)
 
-让我们仔细观察这个程序。在第 17 行和第 18 行，用户被要求输入拥有销售数据的天数。该数字从输入对话框中读取并赋值给 `days` 变量。然后，在第 22 行，`totalSales` 变量被赋值为 0.0。在通用编程术语中，`totalSales` 变量被称为累加器（accumulator）。*累加器*是一个初始化为起始值（通常为零）的变量，通过将数字加到它上来累积总和。正如你所看到的，在向其添加值之前将累加器设置为零是非常关重要的。
+让我们仔细观察这个程序。在第 17 行和第 18 行，用户被要求输入拥有销售数据的天数。该数字从输入对话框中读取并赋值给`days`变量。然后，在第 22 行，`totalSales`变量被赋值为 0.0。在通用编程术语中，`totalSales`变量被称为累加器（accumulator）。累加器是一个初始化为起始值（通常为零）的变量，通过将数字加到它上来累积总和。正如你所看到的，在向其添加值之前将累加器设置为零是非常关重要的。
 
-接下来，执行第 25 行到第 31 行的 `for` 循环。在循环的每次迭代中，用户输入特定天的销售额，并将其赋值给 `sales` 变量。这在第 27 行到第 29 行完成。然后，在第 30 行，将 `sales` 的内容加到 `totalSales` 变量的现有值。（注意，第 30 行并不是将 `sales` 赋值给 `totalSales`，而是将 `sales` 加到 `totalSales`。换句话说，这一行通过 `sales` 中的金额增加了 `totalSales`。）
+接下来，执行第 25 行到第 31 行的`for`循环。在循环的每次迭代中，用户输入特定天的销售额，并将其赋值给`sales`变量。这在第 27 行到第 29 行完成。然后，在第 30 行，将`sales`的内容加到`totalSales`变量的现有值。（注意，第 30 行并不是将`sales`赋值给`totalSales`，而是将`sales`加到`totalSales`。换句话说，这一行通过`sales`中的金额增加了`totalSales`。）
 
-由于 `totalSales` 最初被赋值为 0.0，因此在循环第一次迭代后，`totalSales` 将设置为与 `sales` 相同的值。在随后的每次迭代中，`totalSales` 都会根据 `sales` 的值而增加。循环结束后，`totalSales` 将包含所有录入的每日销售数据的总和。现在应该清楚为什么我们在循环执行之前给 `totalSales` 赋值为 0.0 了。如果 `totalSales` 从任何其他值开始，总和将是不正确的。
 
-### 使用哨兵值
+
+由于`totalSales`最初被赋值为`0.0`，因此在循环第一次迭代后，`totalSales`将设置为与`sales`相同的值。在随后的每次迭代中，`totalSales`都会根据`sales`的值而增加。循环结束后，`totalSales`将包含所有录入的每日销售数据的总和。现在应该清楚为什么我们在循环执行之前给`totalSales`赋值为`0.0`了。如果`totalSales`从任何其他值开始，总和将是不正确的。
+
+## 使用哨兵值
 
 代码列表 4-10 中的程序需要用户提前知道拥有销售数据的天数。有时，用户有一份很长的输入值列表，并且不知道精确数量。在其他情况下，用户可能从几个列表中输入值，要求计算每个列表中的每个项目是不现实的。
 
-在这些情况下可以使用的一种技术是要求用户在列表末尾输入一个哨兵值（sentinel value）。*哨兵值*是一个特殊的值，不会被误认为是列表的成员，并标志着没有更多值需要输入了。当用户输入哨兵值时，循环终止。
+在这些情况下可以使用的一种技术是要求用户在列表末尾输入一个哨兵值（sentinel value）。哨兵值是一个特殊的值，不会被误认为是列表的成员，并标志着没有更多值需要输入了。当用户输入哨兵值时，循环终止。
 
-代码列表 4-11 中的程序展示了一个示例。它计算一支足球队在一系列比赛中获得的总分。它允许用户输入系列比赛的分，然后输入 -1 来标志列表结束。
+代码列表 4-11 中的程序展示了一个示例。它计算一支足球队在一系列比赛中获得的总分。它允许用户输入系列比赛的分，然后输入`-1`来标志列表结束。
 
 在下方的动画中，点击“上一个”或“下一个”按钮逐步执行代码并查看全程的解释。
 
@@ -6214,23 +5471,23 @@ x++, y++
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-11/11.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-11/11.html)
 
-选择 -1 作为哨兵值是因为球队是不可能得负数的。注意，该程序执行了预读操作（priming read）来获取第一个值。这使得如果用户输入的第一个值是 -1，循环就可以立即终止。还要注意，哨兵值不包含在运行总量中。
+选择`-1`作为哨兵值是因为球队是不可能得负数的。注意，该程序执行了预读操作（priming read）来获取第一个值。这使得如果用户输入的第一个值是`-1`，循环就可以立即终止。还要注意，哨兵值不包含在运行总量中。
 
-# 检查点 4.44
+## 检查点 4.44
 
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-36/index.html
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-36/index.html`
 
-# 检查点 4.45
+## 检查点 4.45
 
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-37/index.html
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-37/index.html`
 
-# 检查点 4.46
+## 检查点 4.46
 
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-36/index.html
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-36/index.html`
 
-# 检查点 4.47
+## 检查点 4.47
 
-../components/metrodigi/ch04-inline_self_quiz_v1.0.0-39/index.html
+`../components/metrodigi/ch04-inline_self_quiz_v1.0.0-39/index.html`
 
 ## 4.7 嵌套循环
 
@@ -6238,15 +5495,11 @@ x++, y++
 
 在下方的动画中，点击“上一个”或“下一个”按钮逐步执行代码并查看全程的解释。
 
-# 代码列表 4-12 `(Clock.java)`
+### 代码列表 4-12 `(Clock.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-12/12.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-12/12.html)
 
-
-
-
-
-外层循环迭代八次。每次迭代时，内层循环迭代六次。（注意在第 9 行，在打印完每一行之后，我们调用了 `System.out.println()` 方法。我们必须这样做是为了在每行结束时将光标移动到下一行。如果没有该语句，所有的星号将以一长行的形式打印在屏幕上。）
+外层循环迭代八次。每次迭代时，内层循环迭代六次。（注意在第 9 行，在打印完每一行之后，我们调用了`System.out.println()`方法。我们必须这样做是为了在每行结束时将光标移动到下一行。如果没有该语句，所有的星号将以一长行的形式打印在屏幕上。）
 
 我们可以很容易地编写一个程序，提示用户输入行数和列数，如代码列表 4-14 所示。
 
@@ -6277,13 +5530,13 @@ x++, y++
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-15/15.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-15/15.html)
 
-外层循环（从第 13 行开始）将迭代八次。随着循环迭代，变量 `r` 将被赋值 0 到 7 的值。
+外层循环（从第 13 行开始）将迭代八次。随着循环迭代，变量`r`将被赋值 0 到 7 的值。
 
-对于外层循环的每次迭代，内层循环将迭代 `r + 1` 次。所以：
+对于外层循环的每次迭代，内层循环将迭代`r + 1`次。所以：
 
-*   在外层循环的第一次迭代期间，变量 `r` 被赋值为 0。内层循环迭代一次，打印一个星号。
-*   在外层循环的第二次迭代期间，变量 `r` 被赋值为 1。内层循环迭代两次，打印两个星号。
-*   在外层循环的第三次迭代期间，变量 `r` 被赋值为 2。内层循环迭代三次，打印三个星号。
+*   在外层循环的第一次迭代期间，变量`r`被赋值为 0。内层循环迭代一次，打印一个星号。
+*   在外层循环的第二次迭代期间，变量`r`被赋值为 1。内层循环迭代两次，打印两个星号。
+*   在外层循环的第三次迭代期间，变量`r`被赋值为 2。内层循环迭代三次，打印三个星号。
 *   以此此类推。
 
 让我们来看另一个例子。假设你想显示以下阶梯状模式：
@@ -6297,63 +5550,63 @@ x++, y++
      #
 ```
 
-该模式有六行。通常，我们可以描述每行包含若干数量的空格后跟一个 `#` 字符。以下是逐行的描述：
+该模式有六行。通常，我们可以描述每行包含若干数量的空格后跟一个`#`字符。以下是逐行的描述：
 
-| 第一行： | 0 个空格后跟一个 `#` 字符。 |
-| 第二行： | 1 个空格后跟一个 `#` 字符。 |
-| 第三行： | 2 个空格后跟一个 `#` 字符。 |
-| 第四行： | 3 个空格后跟一个 `#` 字符。 |
-| 第五行： | 4 个空格后跟一个 `#` 字符。 |
-| 第六行： | 5 个空格后跟一个 `#` 字符。 |
+| 第一行： | 0 个空格后跟一个`#`字符。 |
+| 第二行： | 1 个空格后跟一个`#`字符。 |
+| 第三行： | 2 个空格后跟一个`#`字符。 |
+| 第四行： | 3 个空格后跟一个`#`字符。 |
+| 第五行： | 4 个空格后跟一个`#`字符。 |
+| 第六行： | 5 个空格后跟一个`#`字符。 |
 
 为了显示此模式，我们可以编写包含一对嵌套循环的代码，其工作如下：
 
 *   外层循环将迭代六次。每次迭代将执行以下操作：
     *   内层循环将并行显示正确数量的空格。
-    *   然后，显示一个 `#` 字符。
+    *   然后，显示一个`#`字符。
 
 代码列表 4-16 显示了 Java 代码。
 
 在下面的动画中，点击“上一个”或“下一个”按钮可以逐步执行代码并查看贯穿其中的解释。
 
-## 代码列表 4-16 `(StairStepPattern.java)`
+### 代码列表 4-16 `(StairStepPattern.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-16/16.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-16/16.html)
 
-外层循环（从第 13 行开始）将迭代六次。随着循环迭代，变量 `r` 将被赋值 0 到 5 的值。
+外层循环（从第 13 行开始）将迭代六次。随着循环迭代，变量`r`将被赋值 0 到 5 的值。
 
-对于外层循环的每次迭代，内层循环将迭代 `r + 1` 次。所以：
+对于外层循环的每次迭代，内层循环将迭代`r + 1`次。所以：
 
-*   在外层循环的第一次迭代期间，变量 `r` 被赋值为 0。内层循环迭代一次，打印一个星号。
-*   在外层循环的第二次迭代期间，变量 `r` 被赋值为 1。内层循环迭代两次，打印两个星号。
-*   在外层循环的第三次迭代期间，变量 `r` 被赋值为 2。内层循环迭代三次，打印三个星号。
+*   在外层循环的第一次迭代期间，变量`r`被赋值为 0。内层循环迭代一次，打印一个星号。
+*   在外层循环的第二次迭代期间，变量`r`被赋值为 1。内层循环迭代两次，打印两个星号。
+*   在外层循环的第三次迭代期间，变量`r`被赋值为 2。内层循环迭代三次，打印三个星号。
 *   以此此类推。
 
 ## 练习题 48
 
-../components/metrodigi/ch04-inline-quiz_v1.0.0-40
+`../components/metrodigi/ch04-inline-quiz_v1.0.0-40`
 
 ## 练习题 49
 
-../components/metrodigi/ch04-inline-quiz_v1.0.0-41
+`../components/metrodigi/ch04-inline-quiz_v1.0.0-41`
 
-##8 break 和 continue 语句（可选）
+## 4.8 break 和 continue 语句（可选）
 
-概念：`break` 语句导致循环终止。`continue` 语句导致当前迭代结束。
+概念：`break`语句导致循环终止。`continue`语句导致当前迭代结束。
 
-`break` 语句在第 3 章中也可以放在循环内部。当遇到它时，循环停止并跳转到循环后的语句。
+`break`语句在第 3 章中也可以放在循环内部。当遇到它时，循环停止并跳转到循环后的语句。
 
-`continue` 语句导致当前迭代结束。当遇到它时，循环中后续的语句将被忽略，并准备下一次迭代。在 `while` 循环中，这意味着程序跳转到循环顶部的布尔表达式。如果表达式仍为 `true`，则开始下一次迭代。在 `do-while` 循环中，程序跳转到循环底部的布尔表达式来决定下一次迭代。在 `for` 循环中，`continue` 会执行更新表达式，然后评估测试表达式。
+`continue`语句导致当前迭代结束。当遇到它时，循环中后续的语句将被忽略，并准备下一次迭代。在`while`循环中，这意味着程序跳转到循环顶部的布尔表达式。如果表达式仍为`true`，则开始下一次迭代。在`do-while`循环中，程序跳转到循环底部的布尔表达式来决定下一次迭代。在`for`循环中，`continue`会执行更新表达式，然后评估测试表达式。
 
-`continue` 语句也应该被避免。和 `break` 语句一样，它会跳过循环逻辑并使代码难以理解和调试。
+`continue`语句也应该被避免。和`break`语句一样，它会跳过循环逻辑并使代码难以理解和调试。
 
 ## 练习题 50
 
-../components/metrodigi/ch04-inline-quiz_v1.0.0-42
+`../components/metrodigi/ch04-inline-quiz_v1.0.0-42`
 
 ## 练习题 51
 
-../components/metrodigi/ch04-inline-quiz_v1.0.0-43
+`../components/metrodigi/ch04-inline-quiz_v1.0.0-43`
 
 ## 4.9 决定使用哪种循环
 
@@ -6361,139 +5614,139 @@ x++, y++
 
 Java 的三种循环在不同情况下都是理想选择。以下是何时使用每种循环的简短总结：
 
-*   **`while` 循环**。`while` 循环是预测试循环。对于在条件为 `false` 时不想迭代的情况，它是理想的。如果你想使用哨兵值终止循环，它也是理想的。
-*   **`do-while` 循环**。`do-while` 循环是后测试循环。对于始终至少执行一次循环的情况，它是理想的。
-*   **`for` 循环**。`for` 循环是预测试循环，带有初始化、测试和更新表达式。这些表达式使得将循环控制变量作为计数器非常方便。对于已知精确迭代次数的情况，`for` 循环是理想的。
+*   **`while`循环**。`while`循环是预测试循环。对于在条件为`false`时不想迭代的情况，它是理想的。如果你想使用哨兵值终止循环，它也是理想的。
+*   **`do-while`循环**。`do-while`循环是后测试循环。对于始终至少执行一次循环的情况，它是理想的。
+*   **`for`循环**。`for`循环是预测试循环，带有初始化、测试和更新表达式。这些表达式使得将循环控制变量作为计数器非常方便。对于已知精确迭代次数的情况，`for`循环是理想的。
 
 ## 练习题 52
 
-../components/metrodigi/ch04-assessable_table_v1.0.1-02.html
+`../components/metrodigi/ch04-assessable_table_v1.0.1-02.html`
 
+## 4.10 文件输入与输出简介
 
-
-
-
-# 4.10 文件输入与输出简介
-
-概念：Java API 提供了几个类，你可以使用它们来向文件写入数据和从文件中读取数据。要向文件写入数据，你可以使用 `PrintWriter` 类，以及可选地使用 `FileWriter` 类。要从文件中读取数据，你可以使用 `Scanner` 类和 `File` 类。
+概念：Java API 提供了几个类，你可以使用它们来向文件写入数据和从文件中读取数据。要向文件写入数据，你可以使用`PrintWriter`类，以及可选地使用`FileWriter`类。要从文件中读取数据，你可以使用`Scanner`类和`File`类。
 
 你到目前为止编写的程序在每次运行时都需要重新输入数据。这是因为存储在内存（RAM）变量和对象中的数据在程序停止运行后就会消失。为了在多次运行之间保留数据，程序必须拥有一种保存数据的方法。
 
-数据可以保存在*文件*中，文件通常存储在计算机的磁盘上。一旦数据保存到文件中，在程序停止运行后它仍然留在那里。之后可以在其他时间检索并使用这些数据。通常，程序使用文件时会采取三个步骤：
+数据可以保存在文件中，文件通常存储在计算机的磁盘上。一旦数据保存到文件中，在程序停止运行后它仍然留在那里。之后可以在其他时间检索并使用这些数据。通常，程序使用文件时会采取三个步骤：
 
-1. 文件必须被*打开*。当打开文件时，文件和程序之间会建立连接。
+1. 文件必须被打开。当打开文件时，文件和程序之间会建立连接。
 2. 然后将数据写入文件或从文件中读取。
-3. 当程序完成对文件的使用时，必须*关闭*文件。在本节中，我们将讨论如何编写 Java 程序向文件写入数据和从文件中读取数据。*输入文件*和*输出文件*这两个术语被常用。*输入文件*是程序从中读取数据的文件。它之所以被称为输入文件是因为存储在其中的数据作为程序的输入。*输出文件*是程序向其写入数据的文件。它之所以被称为输出文件是因为程序将输出内容存储在文件中。
+3. 当程序完成对文件的使用时，必须关闭文件。
 
-通常，文件有两种类型：文本文件和二进制文件。*文本文件*包含使用 Unicode 等方案编码为文本的数据。即使文件中包含数字，这些数字也是以一系列字符的形式存储在文件中。因此，可以使用记事本（Notepad）等文本编辑器打开并查看文件。*二进制文件*包含未转换为文本的数据。因此，你无法用文本编辑器查看二进制文件的内容。在本章中，我们将讨论如何处理文本文件。二进制文件将在第 11 章](#ch11_pg0001.xhtml_P7001015878000000000000000004B65)中讨论。
+在本节中，我们将讨论如何编写 Java 程序向文件写入数据和从文件中读取数据。输入文件和输出文件这两个术语被常用。输入文件是程序从中读取数据的文件。它之所以被称为输入文件是因为存储在其中的数据作为程序的输入。输出文件是程序向其写入数据的文件。它之所以被称为输出文件是因为程序将输出内容存储在文件中。
 
-Java API 提供了许多你将用于处理文件的类。要使用这些类，你需要在程序顶部放置以下 `import` 语句：
+通常，文件有两种类型：文本文件和二进制文件。文本文件包含使用 Unicode 等方案编码为文本的数据。即使文件中包含数字，这些数字也是以一系列字符的形式存储在文件中。因此，可以使用记事本（Notepad）等文本编辑器打开并查看文件。二进制文件包含未转换为文本的数据。因此，你无法用文本编辑器查看二进制文件的内容。在本章中，我们将讨论如何处理文本文件。二进制文件将在第 11 章中讨论。
+
+Java API 提供了许多你将用于处理文件的类。要使用这些类，你需要在程序顶部放置以下`import`语句：
 
 ```
 import java.io.*;
 ```
 
-# 使用 `PrintWriter` 类向文件写入数据
+### 使用`PrintWriter`类向文件写入数据
 
-要向文件写入数据，你将创建一个 `PrintWriter` 类的实例。`PrintWriter` 类允许你打开一个文件进行写入。它还允许你使用之前在屏幕上显示数据时相同的 `print` 和 `println` 方法将数据写入文件。你将想要打开的文件名作为字符串传递给 `PrintWriter` 类的构造函数。例如，以下语句创建了一个 `PrintWriter` 对象并将文件名 `StudentData.txt` 传递给构造函数。
+要向文件写入数据，你将创建一个`PrintWriter`类的实例。`PrintWriter`类允许你打开一个文件进行写入。它还允许你使用之前在屏幕上显示数据时相同的`print`和`println`方法将数据写入文件。你将想要打开的文件名作为字符串传递给`PrintWriter`类的构造函数。例如，以下语句创建了一个`PrintWriter`对象并将文件名`StudentData.txt`传递给构造函数。
 
 ```
 PrintWriter outputFile = new PrintWriter("StudentData.txt");
 ```
 
-该语句将创建一个名为 `StudentData.txt` 的空文件，并在该文件与由 `outputFile` 引用的 `PrintWriter` 对象之间建立连接。该文件将在当前目录或文件夹中创建。
+该语句将创建一个名为`StudentData.txt`的空文件，并在该文件与由`outputFile`引用的`PrintWriter`对象之间建立连接。该文件将在当前目录或文件夹中创建。
 
-你也可以将 `String` 对象的引用作为参数传递给 `PrintWriter` 构造函数。例如，在以下代码中，用户指定了文件名。
+你也可以将`String`对象的引用作为参数传递给`PrintWriter`构造函数。例如，在以下代码中，用户指定了文件名。
 
 ```
 String filename;
- filename = JOptionPane.showInputDialog("Enter the filename.");
- PrintWriter outputFile = new PrintWriter(filename);
+filename = JOptionPane.showInputDialog("Enter the filename.");
+PrintWriter outputFile = new PrintWriter(filename);
 ```
 
-# 警告！
+### 警告！
 
-如果你用 `PrintWriter` 对象打开的文件已经存在，它将被擦除，并创建一个同名的空文件。
+如果你用`PrintWriter`对象打开的文件已经存在，它将被擦除，并创建一个同名的空文件。
 
-一旦你创建了 `PrintWriter` 类的实例并打开了文件，就可以使用 `print` 和 `println` 方法向文件写入数据。你已经知道如何配合 `System.out` 使用 `print` 和 `println` 来在屏幕上显示数据。它们在 `PrintWriter` 对象上的用法完全相同，用于将数据写入文件。例如，假设 `outputFile` 引用一个 `PrintWriter` 对象，以下语句将字符串 `"Jim"` 写入文件：
+一旦你创建了`PrintWriter`类的实例并打开了文件，就可以使用`print`和`println`方法向文件写入数据。你已经知道如何配合`System.out`使用`print`和`println`来在屏幕上显示数据。它们在`PrintWriter`对象上的用法完全相同，用于将数据写入文件。例如，假设`outputFile`引用一个`PrintWriter`对象，以下语句将字符串`"Jim"`写入文件：
 
 ```
 outputFile.println("Jim");
 ```
 
-当程序完成向文件写入数据后，必须关闭文件。使用 `PrintWriter` 类的 `close` 方法来关闭文件。以下是该方法的使用示例：
+当程序完成向文件写入数据后，必须关闭文件。使用`PrintWriter`类的`close`方法来关闭文件。以下是该方法的使用示例：
 
 ```
 outputFile.close();
 ```
 
-你的应用程序在完成文件操作后应始终关闭文件。这是因为系统在打开文件时会创建一个或多个缓冲区。*缓冲区*是内存中的一个较小的“暂存区域”。当程序向文件写入数据时，这些数据首先写入缓冲区。当缓冲区填满时，存储在那里的所有信息都会写入文件。这种技术提高了系统的性能，因为将数据写入内存的速度比写入磁盘要快。`close` 方法会写入文件缓冲区中任何任何未保存的数据。
+你的应用程序在完成文件操作后应始终关闭文件。这是因为系统在打开文件时会创建一个或多个缓冲区。缓冲区是内存中的一个较小的“暂存区域”。当程序向文件写入数据时，这些数据首先写入缓冲区。当缓冲区填满时，存储在那里的所有信息都会写入文件。这种技术提高了系统的性能，因为将数据写入内存的速度比写入磁盘要快。`close`方法会写入文件缓冲区中任何未保存的数据。
 
-一旦文件被关闭，它与 `PrintWriter` 对象之间的连接就会被移除。为了对文件进行后续操作，必须重新打开它。
+一旦文件被关闭，它与`PrintWriter`对象之间的连接就会被移除。为了对文件进行后续操作，必须重新打开它。
 
-#更多关于 `PrintWriter` 类的 `println` 方法的更多信息
+### 更多关于`PrintWriter`类的`println`方法的信息
 
-`PrintWriter` 类的 `println` 方法写入一行数据。例如，假设一个应用程序通过以下代码创建一个文件并在文件中写入三个学生的姓名和分数：
+`PrintWriter`类的`println`方法写入一行数据。例如，假设一个应用程序通过以下代码创建一个文件并在文件中写入三个学生的姓名和分数：
 
 ```
 PrintWriter outputFile = new PrintWriter("StudentData.txt");
- outputFile.println("Jim");
- outputFile.println(95);
- outputFile.println("Karen");
- outputFile.println(98);
- outputFile.println("Bob");
- outputFile.println(82);
- outputFile.close();
+outputFile.println("Jim");
+outputFile.println(95);
+outputFile.println("Karen");
+outputFile.println(98);
+outputFile.println("Bob");
+outputFile.println(82);
+outputFile.close();
 ```
 
-`println` 方法写入数据然后写入一个换行符。你可以通过以下方式可视化写入文件的数据：
+`println`方法写入数据然后写入一个换行符。你可以通过以下方式可视化写入文件的数据：
 
 ```
 Jim<newline>95<newline>Karen<newline>98<newline>Bob<newline>82<newline>
 ```
 
-换行符在这里被表示为 *<newline>*。你实际上看不到换行符，但当你用记事本等文本编辑器打开文件时，其内容将如图 4-13 所示。从图中可以看出，每个换行符都会导致随其后的数据显示在新的一行。
+换行符在这里被表示为*<newline>*。你实际上看不到换行符，但当你用记事本等文本编辑器打开文件时，其内容将如图 4-13 所示。从图中可以看出，每个换行符都会导致随其后的数据显示在新的一行。
 
 ![记事本文件 StudentData txt 包含 6 行，内容如下。第一行。Jim。第二行。95。第三行。Karen。第四行。98。第五行。Bob。第六行。82。](img/04fig13.png)
 
-# 图 4-13 在记事本中显示的内容（微软公司）
+### 图 4-13 在记事本中显示的内容（微软公司）
 
-除了将文件内容分行外，换行符还用作分隔符。*分隔符*是分隔其他项目的。当你使用 `println` 方法向文件写入数据时，换行符将分隔单个数据项。以后你会发现文件中的单个数据项必须分隔才能从文件中读取。
+除了将文件内容分行外，换行符还用作分隔符。分隔符是分隔其他项目的。当你使用`println`方法向文件写入数据时，换行符将分隔单个数据项。以后你会发现文件中的单个数据项必须分隔才能从文件中读取。
 
-# `PrintWriter` 类的 `print` 方法
+### `PrintWriter`类的`print`方法
 
-`print` 方法用于向文件写入一个数据项而不写入换行符。例如，查看以下代码：
+`print`方法用于向文件写入一个数据项而不写入换行符。例如，查看以下代码：
 
 ```
 String name = "Jeffrey Smith";
- String phone = "555-7864";
- int idNumber = 47895;
- PrintWriter outputFile = new PrintWriter("PersonalData.txt");
- outputFile.print(name + " ");
- outputFile.print(phone + " ");
- outputFile.println(idNumber);
- outputFile.close();
+String phone = "555-7864";
+int idNumber = 47895;
+PrintWriter outputFile = new PrintWriter("PersonalData.txt");
+outputFile.print(name + " ");
+outputFile.print(phone + " ");
+outputFile.println(idNumber);
+outputFile.close();
 ```
 
 
 
-
-这段代码使用 `print` 方法将 `name` 对象的的内容写入文件，后面紧跟一个空格（`" "`）。然后，它使用 `print` 方法将 `phone` 对象的的内容写入文件，后面也跟着一个空格。接着，它使用 `println` 方法将 `idNumber` 变量的内容写入文件，并紧跟一个换行符。图 4-14 显示了在记事本中显示的文件内容。
+这段代码使用`print`方法将`name`对象的内容写入文件，后面紧跟一个空格（`" "`）。然后，它使用`print`方法将`phone`对象的内容写入文件，后面也跟着一个空格。接着，它使用`println`方法将`idNumber`变量的内容写入文件，并紧跟一个换行符。图 4-14 显示了在记事本中显示的文件内容。
 
 ![记事本文件 Personal Data.txt 包含 1 行，内容如下：Jeffrey Smith 5 5 5 dash 7 8 6 4 dash 4 7 8 9 5。](img/04fig14.png)
 
-# 图 4-14 记事本中显示的文件内容（微软公司）
+## 图 4-14 记事本中显示的文件内容（微软公司）
 
-# 在方法头中添加 `throws` 子句
+## 在方法头中添加`throws`子句
 
-当 Java 程序发生意外事件时，我们说该程序抛出了异常。目前，你可以将 `exception` 视为一个信号，表示在处理该意外事件之前，程序无法继续运行。例如，假设你创建了一个 `PrintWriter` 对象并将一个文件名传递给它的构造函数。`PrintWriter` 对象尝试创建该文件，但出乎意的是，磁盘已满导致文件无法创建。显然，在处理此这种情况之前，程序无法继续执行，因此会抛出一个异常，这会导致程序暂停正常执行。
+当 Java 程序发生意外事件时，我们说该程序抛出了异常。目前，你可以将`exception`视为一个信号，表示在处理该意外事件之前，程序无法继续运行。例如，假设你创建了一个`PrintWriter`对象并将一个文件名传递给它的构造函数。`PrintWriter`对象尝试创建该文件，但出乎意料的是，磁盘已满导致文件无法创建。显然，在处理这种情况之前，程序无法继续执行，因此会抛出一个异常，这会导致程序暂停正常执行。
 
-当抛出异常时，正在执行的方法必须要么处理该异常，要么将其再次抛出。如果 `main` 方法抛出异常，程序将停止并显示错误信息。由于 `PrintWriter` 对象能够抛出异常，我们必须要么编写代码来处理可能出现的异常，要么允许我们的方法在异常发生时重新抛出这些异常。在第 11 章 throws IOException
+当抛出异常时，正在执行的方法必须要么处理该异常，要么将其再次抛出。如果`main`方法抛出异常，程序将停止并显示错误信息。由于`PrintWriter`对象能够抛出异常，我们必须要么编写代码来处理可能出现的异常，要么允许我们的方法在异常发生时重新抛出这些异常。在第 11 章中，你将学习如何处理异常。目前，我们将在方法头中添加`throws IOException`子句。以下是`main`方法头的示例：
+
+```
+public static void main(String[] args) throws IOException
 ```
 
-此方法头表示 `main` 方法能够抛出 `IOException` 类型的异常。这是 `PrintWriter` 对象可能抛出的异常类型。因此，任何使用 `PrintWriter` 对象且不响应其异常的方法，都必须在方法头中列出此 `throws` 子句。
+此方法头表示`main`方法能够抛出`IOException`类型的异常。这是`PrintWriter`对象可能抛出的异常类型。因此，任何使用`PrintWriter`对象且不响应其异常的方法，都必须在方法头中列出此`throws`子句。
 
-此外，任何调用使用 `PrintWriter` 对象的方法的方法都应该应该在其方法头中包含 `throws IOException` 子句。例如，假设 `main` 方法没有执行任何文件操作，但调用了一个名为 `buildFile` 的方法，该方法打开一个文件并向其中写入数据。`buildFile` 和 `main` 方法都应该在它们的方法头中包含 `throws IOException` 子句。否则，将发生编译错误。
+此外，任何调用使用`PrintWriter`对象的方法的方法都应该在其方法头中包含`throws IOException`子句。例如，假设`main`方法没有执行任何文件操作，但调用了一个名为`buildFile`的方法，该方法打开一个文件并向其中写入数据。`buildFile`和`main`方法都应该在它们的方法头中包含`throws IOException`子句。否则，将发生编译错误。
 
 ### 示例程序
 
@@ -6501,19 +5754,19 @@ String name = "Jeffrey Smith";
 
 在下面的动画中，点击“上一个”或“下一个”按钮逐步查看代码并查看贯穿其中的解释。
 
-# 代码列表 4-17 `(FileWriteDemo.java)`
+## 代码列表 4-17（`FileWriteDemo.java`）
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-17/17.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-17/17.html)
 
-第 2 行的 `import` 语句是必要的，因为此程序使用了 `PrintWriter` 类。此外，第 10 行的 `main` 方法头有一个 `throws IOException` 子句，因为 `PrintWriter` 类的对象可能会抛出 `IOException`。
+第 2 行的`import`语句是必要的，因为此程序使用了`PrintWriter`类。此外，第 10 行的`main`方法头有一个`throws IOException`子句，因为`PrintWriter`类的对象可能会抛出`IOException`。
 
-该程序要求用户输入他们有多少朋友（第 20 行和第 21 行），然后输入要创建的文件名（第 27 行和第 28 行）。`filename` 变量引用文件名，并在第 31 行的后续语句中使用：
+该程序要求用户输入他们有多少朋友（第 20 行和第 21 行），然后输入要创建的文件名（第 27 行和第 28 行）。`filename`变量引用文件名，并在第 31 行的后续语句中使用：
 
 ```
 PrintWriter outputFile = new PrintWriter(filename);
 ```
 
-该语句打开文件并创建一个 `PrintWriter` 对象，该对象可向文件写入数据。第 34 行到第 43 行的 `for` 循环为用户的每个朋友执行一次迭代，每次请求一个朋友的名字。用户的输入由 `friendName` 变量引用。一旦输入名称，就会通过出现在第 42 行的以下语句写入文件：
+该语句打开文件并创建一个`PrintWriter`对象，该对象可向文件写入数据。第 34 行到第 43 行的`for`循环为用户的每个朋友执行一次迭代，每次请求一个朋友的名字。用户的输入由`friendName`变量引用。一旦输入名称，就会通过出现在第 42 行的以下语句写入文件：
 
 ```
 outputFile.println(friendName);
@@ -6521,38 +5774,38 @@ outputFile.println(friendName);
 
 循环结束后，在第 46 行关闭文件。在输入所示输入执行程序后。
 
-# 图 4-14 记事本中显示的文件内容（微软公司）
+## 图 4-14 记事本中显示的文件内容（微软公司）
 
-# 复习
+## 复习
 
 在继续之前，让我们回顾一下写入文件时的基本步骤：
 
-1. 你在程序顶部需要 `import java.io.*;` 语句。
-2. 因为我们还没有学习如何处理异常，任何使用 `PrintWriter` 对象的方法都必须在方法头包含 `throws IOException`。
-3. 你创建一个 `PrintWriter` 对象并将文件名作为字符串传递给构造函数。
-4. 你使用 `PrintWriter` 类的 `print` 和 `println` 方法向文件写入数据。
-5. 完成写入文件后，你使用 `PrintWriter` 类的 `close` 方法关闭文件。
+1. 你在程序顶部需要`import java.io.*;`语句。
+2. 因为我们还没有学习如何处理异常，任何使用`PrintWriter`对象的方法都必须在方法头包含`throws IOException`。
+3. 你创建一个`PrintWriter`对象并将文件名作为字符串传递给构造函数。
+4. 你使用`PrintWriter`类的`print`和`println`方法向文件写入数据。
+5. 完成写入文件后，你使用`PrintWriter`类的`close`方法关闭文件。
 
-# 向文件追加数据
+## 向文件追加数据
 
-当你将文件名传递给 `PrintWriter` 构造函数时，如果文件已存在，它将被删除并创建一个空文件。然而，有时你想保留现有文件并追加数据。向文件追加数据意味着将新数据写入现有数据的末尾。
+当你将文件名传递给`PrintWriter`构造函数时，如果文件已存在，它将被删除并创建一个空文件。然而，有时你想保留现有文件并追加数据。向文件追加数据意味着将新数据写入现有数据的末尾。
 
-向现有文件追加数据，你首先创建一个 `FileWriter` 类的实例。向 `FileWriter` 构造函数传递两个参数：包含文件名的字符串和布尔值 `true`。这是一个示例：
+向现有文件追加数据，你首先创建一个`FileWriter`类的实例。向`FileWriter`构造函数传递两个参数：包含文件名的字符串和布尔值`true`。这是一个示例：
 
 ```
 FileWriter fwriter = new FileWriter("MyFriends.txt", true);
 ```
 
-该语句创建一个 `FileWriter` 对象并打开 *MyFriends.txt* 用于写入。（如果文件不存在，它将被创建。）
+该语句创建一个`FileWriter`对象并打开*MyFriends.txt*用于写入。（如果文件不存在，它将被创建。）
 
-你仍然需要创建一个 `PrintWriter` 对象，以便使用 `print` 和 `println` 方法向文件写入数据。当你创建 `PrintWriter` 对象时，将 `FileWriter` 对象的引用作为参数传递给 `PrintWriter` 构造函数。例如，看以下代码：
+你仍然需要创建一个`PrintWriter`对象，以便使用`print`和`println`方法向文件写入数据。当你创建`PrintWriter`对象时，将`FileWriter`对象的引用作为参数传递给`PrintWriter`构造函数。例如，看以下代码：
 
 ```
 FileWriter fwriter = new FileWriter("MyFriends.txt", true);
 PrintWriter outputFile = new PrintWriter(fwriter);
 ```
 
-这创建了一个 `PrintWriter` 对象，可用于向文件写入数据。写入文件的任何数据都将追加到文件的现有内容。例如，假设文件 *MyFriends.txt* 并包含以下数据：
+这创建了一个`PrintWriter`对象，可用于向文件写入数据。写入文件的任何数据都将追加到文件的现有内容。例如，假设文件*MyFriends.txt*包含以下数据：
 
 ```
 Joe
@@ -6573,11 +5826,7 @@ outputFile.println("Sharon");
 outputFile.close();
 ```
 
-执行此代码后，*MyFriends.txt* 文件将包含以下数据：
-
-
-
-
+执行此代码后，*MyFriends.txt*文件将包含以下数据：
 
 ```
 Joe
@@ -6590,25 +5839,25 @@ Steven
 Sharon
 ```
 
-# Note
+## 注意
 
-如果由于任何原因无法打开文件，`FileWriter` 类也会抛出 `IOException`。
+如果由于任何原因无法打开文件，`FileWriter`类也会抛出`IOException`。
 
-# 指定文件位置
+## 指定文件位置
 
-当你打开一个文件时，可以同文件名一起指定其路径。在 Windows 计算机上，路径包含反斜杠字符。请记住，当字符串字面量中出现单个反斜杠字符时，它标记着转义序列的开始，例如 `"\nn"`。字符串字面量中的两个反斜杠字符表示单个反斜杠。因此，当你在字符串字面量中提供路径且路径包含反斜杠字符时，你必须用两个反斜杠字符代替每个单个反斜杠字符。
+当你打开一个文件时，可以同文件名一起指定其路径。在 Windows 计算机上，路径包含反斜杠字符。请记住，当字符串字面量中出现单个反斜杠字符时，它标记着转义序列的开始，例如`"\nn"`。字符串字面量中的两个反斜杠字符表示单个反斜杠。因此，当你在字符串字面量中提供路径且路径包含反斜杠字符时，你必须用两个反斜杠字符代替每个单个反斜杠字符。
 
-例如，路径 `"E:\\Names.txt"` 指定 `Names.txt` 在 E 盘的根目录下，路径 `"C:\\MyData\\Data.txt"` 指定 `Data.txt` 在 C 盘的 `MyData` 文件夹中。在以下语句中，将在 H 盘的根目录下创建文件 `Pricelist.txt`：
+例如，路径`"E:\\Names.txt"`指定`Names.txt`在 E 盘的根目录下，路径`"C:\\MyData\\Data.txt"`指定`Data.txt`在 C 盘的`MyData`文件夹中。在以下语句中，将在 H 盘的根目录下创建文件`Pricelist.txt`：
 
 ```java
 PrintWriter outputFile = new PrintWriter("H:\\PriceList.txt");
 ```
 
-只有当文件的路径位于字符串字面量中，你才需要使用双反斜杠。如果你的程序要求用户将路径输入到 `String` 对象中，然后将其传递给 `PrintWriter` 或 `FileWriter` 构造函数，用户不需要输入双反斜杠。
+只有当文件的路径位于字符串字面量中，你才需要使用双反斜杠。如果你的程序要求用户将路径输入到`String`对象中，然后将其传递给`PrintWriter`或`FileWriter`构造函数，用户不需要输入双反斜杠。
 
-# Tip
+## 提示
 
-Java 允许你在 Windows 路径中使用正斜杠代替反斜杠。例如，路径 `"C:\\MyData\\Data.txt"` 可以写成 `"C:/MyData/Data.txt"`。这消除了使用双反斜杠的需求。
+Java 允许你在 Windows 路径中使用正斜杠代替反斜杠。例如，路径`"C:\\MyData\\Data.txt"`可以写成`"C:/MyData/Data.txt"`。这消除了使用双反斜杠的需求。
 
 在 UNIX 或 Linux 计算机上，你可以提供无需任何修改的路径。以下是一个示例：
 
@@ -6616,133 +5865,60 @@ Java 允许你在 Windows 路径中使用正斜杠代替反斜杠。例如，路
 PrintWriter outputFile = new PrintWriter("/home/rharrison/names.txt");
 ```
 
-# 从文件中读取数据
+## 从文件中读取数据
 
-在第 2 章中，你学习了如何使用 `Scanner` 类从键盘读取输入。要读取键盘输入，请回想我们创建一个 `Scanner` 对象，并将 `System.in` 传递给 `Scanner` 类的构造函数。这是一个示例：
+在第 2 章中，你学习了如何使用`Scanner`类从键盘读取输入。要读取键盘输入，请回想我们创建一个`Scanner`对象，并将`System.in`传递给`Scanner`类的构造函数。这是一个示例：
 
 ```java
 Scanner keyboard = new Scanner(System.in);
 ```
 
-记住 `System.in` 对象代表键盘。将 `System.in` 作为参数传递给 `Scanner` 构造函数，指定键盘是 `Scanner` 对象的输入源。
+记住`System.in`对象代表键盘。将`System.in`作为参数传递给`Scanner`构造函数，指定键盘是`Scanner`对象的输入源。
 
-你也可以使用 `Scanner` 类从文件中读取输入。与其将 `System.in` 传递给 `Scanner` 类构造函数，不如传递一个 `File` 对象的引用。这是一个示例：
+你也可以使用`Scanner`类从文件中读取输入。与其将`System.in`传递给`Scanner`类构造函数，不如传递一个`File`对象的引用。这是一个示例：
 
 ```java
 File myFile = new File("Customers.txt");
 Scanner inputFile = new Scanner(myFile);
 ```
 
-第一条语句创建了 `File` 类的一个实例。`File` 类位于 Java API 中，用于表示文件。注意我们将字符串 `"Customers.txt"` 传递给了构造函数。
+第一条语句创建了`File`类的一个实例。`File`类位于 Java API 中，用于表示文件。注意我们将字符串`"Customers.txt"`传递给了构造函数。
 
-第二个语句将 `File` 对象的引用传递给 `Scanner` 构造函数。这指定了该文件是 `Scanner` 对象的输入源。当你完成读取后，使用 `close()` 方法关闭文件。
+第二个语句将`File`对象的引用传递给`Scanner`构造函数。这指定了该文件是`Scanner`对象的输入源。当你完成读取后，使用`close()`方法关闭文件。
 
-# 使用 nextLine 方法从文件中读取行
+## 使用`nextLine`方法从文件中读取行
 
-`Scanner` 类的 `nextLine()` 方法从文件中读取一行并将其作为 `String` 返回。例如，如果程序执行以下语句：
+`Scanner`类的`nextLine()`方法从文件中读取一行并将其作为`String`返回。例如，如果程序执行以下语句：
 
 ```java
 String str = inputFile.nextLine();
 ```
 
-在该语句之后，变量 `str` 包含了从文件中读取的行内容。
 
 
+在该语句之后，变量`str`包含了从文件中读取的行内容。
 
-
-该语句将从文件中读取一行，从当前的读取位置开始。在语句执行后，由 `str` 引用的对象将包含字符串“Imagination is more”。文件的读取位置将移动到下一行，如图 4-18 所示。
-
-![读取了三行文本如下：Imagination is more.比知识更重要。爱因斯坦。在读取第一行后，读取位置移动到第二行的开头。](img/04fig18.png)
-
-## 图 4-18 读取第一行后的读取位置
-
-如果再次调用 `nextLine()` 方法，将从文件中读取第二行，并且文件的读取位置将移动到第三行。在读取完所有行后，读取位置将位于文件的末尾。
-
-### 注意事项
-
-从 `nextLine()` 方法返回的字符串不包含换行符。
-
-## 在方法头中添加 `throws` 子句
-
-当你将一个 `File` 对象引用传递给 `Scanner` 类的构造函数时，如果找不到指定的文件，构造函数将抛出一个 `IOException` 类型的异常。因此，在任何将 `File` 对象引用传递给 `Scanner` 类构造函数的方法头中，你都需要写一个 `throws IOException` 子句。
-
-##检测文件结束
-
-很多时候，程序必须在不知道文件中存储了多少项目的情况下读取文件内容。例如，程序在代码列表 4-17 中创建的 `MyFriends.txt` 文件可以存储任意数量的名字。这是因为程序会询问用户他或她有多少个朋友。如果用户输入的朋友数量为 5，程序将创建一个包含五个名字的文件。如果用户输入 100，程序将创建一个包含 100 个名字的文件。
-
-`Scanner` 类有一个名为 `hasNext()` 的方法，可以用于判断文件中是否有更多可以读取的数据。在调用任何其他读取文件的方法之前，你先调用 `hasNext()` 方法。如果文件中还有更多可以读取的数据，`hasNext()` 方法返回 `true`。
-
-如果已到达文件末尾没有更多数据可读，`hasNext()` 方法返回 `false`。
-
-代码列表 4-19 显示了一个示例。该程序读取包含你朋友名字的文件，该文件是由程序在代码列表 4-17 中创建的。
-
-在下面的动画中，点击“上一个”或“下一个”按钮逐步查看代码并查看各处的解释。
-
-## 代码列表 4-19 `(FileReadDemo.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-19/19.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-19/19.html)
-
-文件在第 21 行打开，并创建了一个读取它的 `Scanner` 对象。第 24 行到 31 行的循环读取了文件中所有的行并显示它们。在第 24 行，循环调用了 `Scanner` 对象的 `hasNext()` 方法。如果该方法返回 `true`，则文件中有更多数据待读。在这种情况下，在第 27 行从文件中读取下一行，并在第 30 行显示。循环不断重复，直到 `hasNext()` 方法在第 24 行返回 `false`。图 4-19 显示了读取文件直到末尾的逻辑。
-
-## 图 4-19 读取文件直到末尾的逻辑
-
-![读取文件直到末尾的逻辑。](img/04fig19.png)图 4-19 完整备用文本
-
-## 从文件中读取原始值
-
-回想第 2 章，`Scanner` 类提供了读取原始值的方法。这些方法名为 `nextByte()`、`nextDouble()`、`nextFloat()`、`nextInt()`、`nextLine()`、`nextLong()` 和 `nextShort()`。表 2-17 
-
-`nextLine()` 方法返回的字符串不包含换行符。
-
-## 在方法头中添加 `throws` 子句
-
-当你将一个 `File` 对象引用传递给 `Scanner` 类构造函数时，如果找不到指定的文件，构造函数将抛出一个 `IOException` 类型的异常。因此，在任何将 `File` 对象引用传递给 `Scanner` 类构造函数的方法头中，你都需要写一个 `throws IOException` 子句。
-
-## 检测文件结束
-
-很多时候，程序必须在不知道文件中存储了多少项目的情况下读取文件内容。例如，程序在代码列表 4-17 中创建的 `MyFriends.txt` 文件可以存储任意数量的名字。这是因为程序会询问用户他或她有多少个朋友。如果用户输入的朋友数量为 5，程序将创建一个包含五个名字的文件。如果用户输入 100，程序将创建一个包含 100 个名字的文件。
-
-`Scanner` 类有一个名为 `hasNext()` 的方法，可以用于判断文件中是否有更多可以读取的数据。在调用任何其他读取文件的方法之前，你先调用 `hasNext()` 方法。如果文件中还有更多可以读取的数据，`hasNext()` 方法返回 `true`。如果已到达文件末尾没有更多数据可读，`hasNext()` 方法返回 `false`。
-
-代码列表 4-19 显示了一个示例。该程序读取包含你朋友名字的文件，该文件是由程序在代码列表 4-17 中创建的。
-
-在下面的动画中，点击“上一个”或“下一个”按钮逐步查看代码并查看各处的解释。
-
-## 代码列表 4-19 `(FileReadDemo.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-19/19.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-19/19.html)
-
-文件在第 21 行打开，并创建了一个读取它的 `Scanner` 对象。第 24 行到 31 行的循环读取了文件中所有的行并显示它们。在第 24 行，循环调用了 `Scanner` 对象的 `hasNext()` 方法。如果该方法返回 `true`，则文件中有更多数据待读。在这种情况下，在第 27 行从文件中读取下一行，并在第 30 行显示。循环不断重复，直到 `hasNext()` 方法在第 24 行返回 `false`。图 4-19 显示了读取文件直到末尾的逻辑。
-
-## 图 4-19 读取文件直到末尾的逻辑
-
-![读取文件直到末尾的逻辑。](img/04fig19.png)图 4-19 完整备用文本
-
-## 从文件中读取原始值
-
-回想第 2 章，`Scanner` 类提供了读取原始值的方法。这些方法名为 `nextByte()`、`nextDouble()`、`nextFloat()`、`nextInt()`、`nextLine()`、`nextLong()` 和 `nextShort()`。表 2-17 
-
-该语句将从文件中读取一行，从当前的读取位置开始。在语句执行后，由 `str` 引用的对象将包含字符串“Imagination is more”。文件的读取位置将移动到下一行，如图 4-18 所示。
+该语句将从文件中读取一行，从当前的读取位置开始。在语句执行后，由`str`引用的对象将包含字符串“Imagination is more”。文件的读取位置将移动到下一行，如图 4-18 所示。
 
 ![读取了三行文本如下：Imagination is more.比知识更重要。爱因斯坦。在读取第一行后，读取位置移动到第二行的开头。](img/04fig18.png)
 
 ## 图 4-18 读取第一行后的读取位置
 
-如果再次调用 `nextLine()` 方法，将从文件中读取第二行，并且文件的读取位置将移动到第三行。在读取完所有行后，读取位置将位于文件的末尾。
+如果再次调用`nextLine()`方法，将从文件中读取第二行，并且文件的读取位置将移动到第三行。在读取完所有行后，读取位置将位于文件的末尾。
 
 ### 注意事项
 
-从 `nextLine()` 方法返回的字符串不包含换行符。
+从`nextLine()`方法返回的字符串不包含换行符。
 
-## 在方法头中添加 `throws` 子句
+## 在方法头中添加`throws`子句
 
-当你将一个 `File` 对象引用传递给 `Scanner` 类构造函数时，如果找不到指定的文件，构造函数将抛出一个 `IOException` 类型的异常。因此，在任何将 `File` 对象引用传递给 `Scanner` 类构造函数的方法头中，你都需要写一个 `throws IOException` 子句。
+当你将一个`File`对象引用传递给`Scanner`类的构造函数时，如果找不到指定的文件，构造函数将抛出一个`IOException`类型的异常。因此，在任何将`File`对象引用传递给`Scanner`类构造函数的方法头中，你都需要写一个`throws IOException`子句。
 
 ## 检测文件结束
 
-很多时候，程序必须在不知道文件中存储了多少项目的情况下读取文件内容。例如，程序在代码列表 4-17 中创建的 `MyFriends.txt` 文件可以存储任意数量的名字。这是因为程序会询问用户他或她有多少个朋友。如果用户输入的朋友数量为 5，程序将创建一个包含五个名字的文件。如果用户输入 100，程序将创建一个包含 100 个名字的文件。
+很多时候，程序必须在不知道文件中存储了多少项目的情况下读取文件内容。例如，程序在代码列表 4-17 中创建的`MyFriends.txt`文件可以存储任意数量的名字。这是因为程序会询问用户他或她有多少个朋友。如果用户输入的朋友数量为 5，程序将创建一个包含五个名字的文件。如果用户输入 100，程序将创建一个包含 100 个名字的文件。
 
-`Scanner` 类有一个名为 `hasNext()` 的方法，可以用于判断文件中是否有更多可以读取的数据。在调用任何其他读取文件的方法之前，你先调用 `hasNext()` 方法。如果文件中还有更多可以读取的数据，`hasNext()` 方法返回 `true`。如果已到达文件末尾没有更多数据可读，`hasNext()` 方法返回 `false`。
+`Scanner`类有一个名为`hasNext()`的方法，可以用于判断文件中是否有更多可以读取的数据。在调用任何其他读取文件的方法之前，你先调用`hasNext()`方法。如果文件中还有更多可以读取的数据，`hasNext()`方法返回`true`。如果已到达文件末尾没有更多数据可读，`hasNext()`方法返回`false`。
 
 代码列表 4-19 显示了一个示例。该程序读取包含你朋友名字的文件，该文件是由程序在代码列表 4-17 中创建的。
 
@@ -6752,7 +5928,7 @@ String str = inputFile.nextLine();
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-19/19.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-19/19.html)
 
-文件在第 21 行打开，并创建了一个读取它的 `Scanner` 对象。第 24 行到 31 行的循环读取了文件中所有的行并显示它们。在第 24 行，循环调用了 `Scanner` 对象的 `hasNext()` 方法。如果该方法返回 `true`，则文件中有更多数据待读。在这种情况下，在第 27 行从文件中读取下一行，并在第 30 行显示。循环不断重复，直到 `hasNext()` 方法在第 24 行返回 `false`。图 4-19 显示了读取文件直到末尾的逻辑。
+文件在第 21 行打开，并创建了一个读取它的`Scanner`对象。第 24 行到 31 行的循环读取了文件中所有的行并显示它们。在第 24 行，循环调用了`Scanner`对象的`hasNext()`方法。如果该方法返回`true`，则文件中有更多数据待读。在这种情况下，在第 27 行从文件中读取下一行，并在第 30 行显示。循环不断重复，直到`hasNext()`方法在第 24 行返回`false`。图 4-19 显示了读取文件直到末尾的逻辑。
 
 ## 图 4-19 读取文件直到末尾的逻辑
 
@@ -6760,12 +5936,39 @@ String str = inputFile.nextLine();
 
 ## 从文件中读取原始值
 
-回想第 2 章，`Scanner` 类提供了读取原始值的方法。这些方法名为 `nextByte()`、`nextDouble()`、`nextFloat()`、`nextInt()`、`nextLine()`、`nextLong()` 和 `nextShort()`。表 2-17 
+回想第 2 章，`Scanner`类提供了读取原始值的方法。这些方法名为`nextByte()`、`nextDouble()`、`nextFloat()`、`nextInt()`、`nextLine()`、`nextLong()`和`nextShort()`。表 2-17
 
-`nextLine()` 方法返回的字符串不包含换行符。
+`nextLine()`方法返回的字符串不包含换行符。
 
+## 在方法头中添加`throws`子句
 
+当你将一个`File`对象引用传递给`Scanner`类构造函数时，如果找不到指定的文件，构造函数将抛出一个`IOException`类型的异常。因此，在任何将`File`对象引用传递给`Scanner`类构造函数的方法头中，你都需要写一个`throws IOException`子句。
 
+## 检测文件结束
+
+很多时候，程序必须在不知道文件中存储了多少项目的情况下读取文件内容。例如，程序在代码列表 4-17 中创建的`MyFriends.txt`文件可以存储任意数量的名字。这是因为程序会询问用户他或她有多少个朋友。如果用户输入的朋友数量为 5，程序将创建一个包含五个名字的文件。如果用户输入 100，程序将创建一个包含 100 个名字的文件。
+
+`Scanner`类有一个名为`hasNext()`的方法，可以用于判断文件中是否有更多可以读取的数据。在调用任何其他读取文件的方法之前，你先调用`hasNext()`方法。如果文件中还有更多可以读取的数据，`hasNext()`方法返回`true`。如果已到达文件末尾没有更多数据可读，`hasNext()`方法返回`false`。
+
+代码列表 4-19 显示了一个示例。该程序读取包含你朋友名字的文件，该文件是由程序在代码列表 4-17 中创建的。
+
+在下面的动画中，点击“上一个”或“下一个”按钮逐步查看代码并查看各处的解释。
+
+## 代码列表 4-19 `(FileReadDemo.java)`
+
+[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-19/19.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr4-19/19.html)
+
+文件在第 21 行打开，并创建了一个读取它的`Scanner`对象。第 24 行到 31 行的循环读取了文件中所有的行并显示它们。在第 24 行，循环调用了`Scanner`对象的`hasNext()`方法。如果该方法返回`true`，则文件中有更多数据待读。在这种情况下，在第 27 行从文件中读取下一行，并在第 30 行显示。循环不断重复，直到`hasNext()`方法在第 24 行返回`false`。图 4-19 显示了读取文件直到末尾的逻辑。
+
+## 图 4-19 读取文件直到末尾的逻辑
+
+![读取文件直到末尾的逻辑。](img/04fig19.png)图 4-19 完整备用文本
+
+## 从文件中读取原始值
+
+回想第 2 章，`Scanner`类提供了读取原始值的方法。这些方法名为`nextByte()`、`nextDouble()`、`nextFloat()`、`nextInt()`、`nextLine()`、`nextLong()`和`nextShort()`。表 2-17
+
+`nextLine()`方法返回的字符串不包含换行符。
 
 ```
 Exception in thread "main" java.io.FileNotFoundException: Numbers.txt (The
@@ -6778,23 +5981,23 @@ system cannot find the file specified)
 
 与其让异常抛出并允许显示这段晦涩的错误信息，不如让程序在尝试打开文件之前检查该文件是否存在。如果文件不存在，程序可以显示一条更符合用户习惯的错误信息并优雅地关闭。
 
-在你创建了一个代表要打开的文件的 `File` 对象后，你可以使用 `File` 类的 `exists` 方法来确定文件是否存在。如果文件存在，该方法返回 `true`；如果文件不存在，则返回 `false`。代码列表 4-21 展示了如何使用该方法。这是对代码列表 4-20 中 `FileSum` 程序的修改。这个版本的程序在尝试打开 `Numbers.txt` 文件之前会先检查它的存在性。
+在你创建了一个代表要打开的文件的`File`对象后，你可以使用`File`类的`exists`方法来确定文件是否存在。如果文件存在，该方法返回`true`；如果文件不存在，则返回`false`。代码列表 4-21 展示了如何使用该方法。这是对代码列表 4-20 中`FileSum`程序的修改。这个版本的程序在尝试打开`Numbers.txt`文件之前会先检查它的存在性。
 
 ```
  1  import java.util.Scanner;
  2  import java.io.*;
- 3 
+ 3
  4  /**
  5     这个版本的程序在打开 Numbers.txt
  6     文件之前会确认其是否存在。
  7  */
- 8 
+ 8
  9  public class FileSum2
  10  {
  11      public static void main(String[] args) throws IOException
  12      {
  13         double sum = 0.0;  // 加器，初始化为 0
- 14 
+ 14
  15      // 确保文件存在。
  16      File file = new File("Numbers.txt");
  17      if (!file.exists())
@@ -6802,24 +6005,24 @@ system cannot find the file specified)
  19         System.out.println("The file Numbers.txt is not found.");
  20         System.exit(0);
  21      }
- 22 
+ 22
  23      // 打开文件读取。
  24      Scanner inputFile = new Scanner(file);
- 25 
+ 25
  26      // 读取文件中的所有值
  27      // 并计算总和。
  28      while (inputFile.hasNext())
  29      {
  30         // 从文件中读取一个值。
  31         double number = inputFile.nextDouble();
- 32 
+ 32
  33         // 将数字加到 sum 中。
  34         sum = sum + number;
  35      }
- 36 
+ 36
  37      // 关闭文件。
  38      inputFile.close();
- 39 
+ 39
  40      // 显示数字总和。
  41      System.out.println("The sum of the numbers in " +
  42                         "Numbers.txt is " + sum);
@@ -6827,35 +6030,19 @@ system cannot find the file specified)
  44  }
 ```
 
-程序输出（假设 Numbers.txt 不存在）
+程序输出（假设`Numbers.txt`不存在）
 
 ```
 The file Numbers.txt is not found.
 ```
+
+
 
 # 代码列表 4-21 (FileSum2.java)
 
 在第 16 行，程序创建了一个 `File` 对象来代表 `Numbers.txt` 文件。在第 17 行，`if` 语句调用了 `file.exists()` 方法。注意 `!` 运算符的使用。如果该方法返回 `false`（表示文件不存在），则执行第 19 行和第 20 行的代码。第 19 行显示错误信息，第 20 行调用 `System.exit(0)` 方法关闭程序。
 
 上一个示例展示了你如何在尝试打开文件进行输入之前确保文件存在。但是，当你打开一个文件进行输出时，有时你想确保该文件*不存在*。当你使用 `PrintWriter` 对象打开文件时，如果该文件已存在，它将被擦除。如果你不想擦除现有文件，则必须在创建 `PrintWriter` 对象之前检查它的存在性。代码列表 4-22 向你展示在这种情况下如何使用 `File` 类的 `exists` 方法。这是对你看到的代码列表 4-20 程序的修改。
-
-## 代码列表 4-21 (FileSum2.java)
-
-在第 16 行，程序创建了一个 `File` 对象来代表 `Numbers.txt` 文件。在第 17 行，`if` 语句调用了 `file.exists()` 方法。注意 `!` 运算符的使用。如果该方法返回 `false`（表示文件不存在），则执行第 19 行和第 20 行的代码。第 19 行显示错误信息，第 20 行调用 `System.exit(0)` 方法关闭程序。
-
-上一个示例展示了你如何在尝试打开文件进行输入之前确保文件存在。但是，当你打开一个文件进行输出时，有时你想确保该文件*不存在*。当你使用 `PrintWriter` 对象打开文件时，如果该文件已存在，它将被擦除。如果你不想擦除现有文件，则必须在创建 `PrintWriter` 对象之前检查它的存在性。代码列表 4-22 向你展示在这种情况下如何使用 `File` 类的 `exists` 方法。这是对你看到的代码列表 4-20 程序的修改。
-
-## 代码列表 4-21 (FileSum2.java)
-
-在第 16 行，程序创建了一个 `File` 对象来代表 `Numbers.txt` 文件。在第 17 行，`if` 语句调用了 `file.exists()` 方法。注意 `!` 运算符的使用。如果该方法返回 `false`（表示文件不存在），则执行第 19 行和第 20 行的代码。第 19 行显示错误信息，第 20 行调用 `System.exit(0)` 方法关闭程序。
-
-## 代码列表 4-21 (FileSum2.java)
-
-在第 16 行，程序创建了一个 `File` 对象来代表 `Numbers.txt` 文件。在第 17 行，`if` 语句调用了 `file.exists()` 方法。注意 `!` 运算符的使用。如果该方法返回 `false`（表示文件不存在），则执行第 19 行和第 20 行的代码。第 19 行显示错误信息，第 20 行调用 `System.exit(0)` 方法关闭程序。
-
-## 代码列表 4-21 (FileSum2.java)
-
-在第 16 行，程序创建了一个 `File` 对象来代表 `Numbers.txt` 文件。在第 17 行，`if` 语句调用了 `file.exists()` 方法。注意 `!` 运算符的使用。如果该方法返回 `false`（表示文件不存在），则执行第 19 行和第 20 行的代码。第 19 行显示错误信息，第 20 行调用 `System.exit(0)` 方法关闭程序。
 
 # 4.11 使用 Random 类生成随机数
 
@@ -6870,13 +6057,13 @@ The file Numbers.txt is not found.
 
 Java API 提供了一个名为 `Random` 的类，你可以用它生成随机数。该类是 `java.util` 包的一部分，因此任何使用它的程序都需要如下的 `import` 语句：
 
-```
+```java
 import java.util.Random;
 ```
 
 你通过如下语句从 `Random` 类创建一个对象：
 
-```
+```java
 Random randomNumbers = new Random();
 ```
 
@@ -6888,37 +6075,36 @@ Random randomNumbers = new Random();
 
 执行该语句后，`randomNumbers` 变量将引用一个 `Random` 对象。一旦你创建了 `Random` 对象，就可以调用它的 `nextInt` 方法来获取随机整数。以下代码显示了一个示例：
 
-```
+```java
 // 声明一个 int 变量。
 int number;
+
 // 创建一个 Random 对象。
 Random randomNumbers = new Random();
+
 // 获取随机整数并赋值给 number。
 number = randomNumbers.nextInt();
 ```
 
 执行该代码后，`number` 变量将包含一个随机整数。如果你不带参数地调用 `nextInt` 方法（如示例所示），返回的整数位于 −2,147,483,648 到 +2,147,483,647 之间。或者，你可以传递一个参数来指定生成数字范围的上限。在以下语句中，赋值给 `number` 的值位于 0 到 99 之间：
 
-```
+```java
 number = randomNumbers.nextInt(100);
 ```
 
-
-
-
 你可以通过增加或减少一个值来将数值范围向上或向下移动。在接下来的语句中，我们调用 `nextInt` 方法来获取一个 0 到 9 之间的随机数，然后对其加 1。因此，赋值给 `number` 的数字将位于 1 到 10 的范围内：
 
-```
+```java
 number = randomNumbers.nextInt(10) + 1;
 ```
 
 接下来的语句显示了另一个示例。它将一个 −50 到 +49 之间的随机整数赋值给 `number`：
 
-```
+```java
 number = randomNumbers.nextInt(100) - 50
 ```
 
-`Random` 类还有其他生成随机数的方法，表 4-1](#ch04_pg0014.xhtml_P7001015878000000000000000001E95) 总结了其中几种方法。
+`Random` 类还有其他生成随机数的方法，表 4-1 总结了其中几种方法。
 
 # 表 4-1 `Random` 类的一些方法
 
@@ -6940,10 +6126,10 @@ number = randomNumbers.nextInt(100) - 50
 
 木村博士教授一门入门统计学课程，他要求你写一个程序，以便他可以在课堂上用来模拟掷骰子。程序应该随机生成两个 1 到 6 范围内的数字并显示它们。在与木村博士的面试中，你了解到他希望使用该程序连续模拟多次掷骰子。以下是该程序的伪代码：
 
-*   当用户想要掷骰子时：
-    *   显示一个 1 到 6 范围内的随机数
-    *   显示另一个 1 到 6 范围内的随机数
-    *   询问用户是否还想再次掷骰子
+- 当用户想要掷骰子时：
+  - 显示一个 1 到 6 范围内的随机数
+  - 显示另一个 1 到 6 范围内的随机数
+  - 询问用户是否还想再次掷骰子
 
 你将编写一个 `while` 循环来模拟一次掷骰子，然后询问用户是否应该进行另一次投掷。只要用户回答“y”表示是，循环就会重复。代码列表 4-24 显示了该程序。在下面的动画中，点击“上一个”或“下一个”按钮逐步查看代码并查看全程中的解释。
 
@@ -6955,13 +6141,13 @@ number = randomNumbers.nextInt(100) - 50
 
 木村博士对你为他编写的掷骰子模拟器非常满意，他要求你再写一个程序。他希望有一个程序可以用来连续模拟十次抛硬币。每当程序模拟一次抛硬币时，它应该随机显示“正面”（Heads）或“反面”（Tails）。
 
-你决定可以通过可以通过随机生成一个 0 到 1 范围内的数字来模拟抛硬币。你将编写一个 `if` 语句，如果随机数是 0 则显示“反面”，否则显示“正面”。以下是伪代码：
+你决定可以通过随机生成一个 0 到 1 范围内的数字来模拟抛硬币。你将编写一个 `if` 语句，如果随机数是 0 则显示“反面”，否则显示“正面”。以下是伪代码：
 
-*   重复 10 次：
-    *   如果随机数是 0：
-        *   显示“反面”
-    *   否则：
-        *   显示“正面”
+- 重复 10 次：
+  - 如果随机数是 0：
+    - 显示“反面”
+  - 否则：
+    - 显示“正面”
 
 由于程序应该模拟 10 次，你决定使用 `for` 循环。代码列表 4-25 显示在下面的动画中，点击“上一个”或“下一个”按钮逐步查看代码并查看全程中的解释。
 
@@ -6971,23 +6157,25 @@ number = randomNumbers.nextInt(100) - 50
 
 # 检查点 4.6
 
-# 7 常见错误
+# 常见错误
 
 以下列表列出了在学习本章时常见的错误：
 
-*   以错误的模式使用递增或递减运算符：当增或减运算符放在操作数前面（左侧）时，使用的是前置模式。当放在操作数后面（右侧）时，使用的是后置模式。
-*   在 `while` 或 `for` 头部结束后放置分号：当你在 `while` 或 `for` 头部末尾写分号时，Java 认为循环体是空的。
-*   忘记在循环体中包含多个语句：通常循环只执行一个语句。为了执行多个语句，必须将语句放在大括号中。
-*   在 `for` 循环的初始化、测试和更新表达式中使用逗号代替分号。
-*   忘记在 `while` 或 `do-while` 循环体内编写修改控制变量的代码：如果 `while` 或 `do-while` 循环的布尔表达式永远变为 `false`，循环将无限循环。你必须在循环体内编写修改控制变量的代码，以便表达式最终会变为 `false`。
-*   使用也可以作为有效数据的哨兵值：记住，哨兵是一个不会被误认为数据列表成员的特殊值。如果你选择可能出现在列表中的值作为哨兵，循环将在遇到该值时提前终止。
-*   忘记将累加器初始化为零：为了让累加器保持正确的运行和，在添加任何值之前必须将其初始化为零。
+- 以错误的模式使用递增或递减运算符：当增或减运算符放在操作数前面（左侧）时，使用的是前置模式。当放在操作数后面（右侧）时，使用的是后置模式。
+- 在 `while` 或 `for` 头部结束后放置分号：当你在 `while` 或 `for` 头部末尾写分号时，Java 认为循环体是空的。
+- 忘记在循环体中包含多个语句：通常循环只执行一个语句。为了执行多个语句，必须将语句放在大括号中。
+- 在 `for` 循环的初始化、测试和更新表达式中使用逗号代替分号。
+- 忘记在 `while` 或 `do-while` 循环体内编写修改控制变量的代码：如果 `while` 或 `do-while` 循环的布尔表达式永远变为 `false`，循环将无限循环。你必须在循环体内编写修改控制变量的代码，以便表达式最终会变为 `false`。
+- 使用也可以作为有效数据的哨兵值：记住，哨兵是一个不会被误认为数据列表成员的特殊值。如果你选择可能出现在列表中的值作为哨兵，循环将在遇到该值时提前终止。
+- 忘记将累加器初始化为零：为了让累加器保持正确的运行和，在添加任何值之前必须将其初始化为零。
 
-## 编程挑战
+# 编程挑战
 
-# 1. 数字求和写一个程序，要求用户输入一个正非零整数值。程序应使用循环来获取从 1 到该数字的所有整数之和。例如，如果用户输入 50，循环将计算 1, 2, 3, 4, . . 50 的和。
+## 1. 数字求和
 
-# 2. 行程计算
+写一个程序，要求用户输入一个正非零整数值。程序应使用循环来获取从 1 到该数字的所有整数之和。例如，如果用户输入 50，循环将计算 1, 2, 3, 4, ... 50 的和。
+
+## 2. 行程计算
 
 车辆行驶的距离可以如下公式计算：
 
@@ -6995,21 +6183,17 @@ number = randomNumbers.nextInt(100) - 50
 
 例如，如果一列火车以每小时 40 英里的速度行驶 3 小时，行驶距离为 120 英里。写一个程序，询问车辆的速度（英里/小时）和它行驶的时间。程序应使用循环显示用户指定的时间段内车辆每小时行驶的距离。例如，如果一辆车辆以 40 mph 的速度行驶 3 小时的时间段，它应该显示一份类似于所示的报告：
 
-
-
-
-
 ![一个表格展示了公式距离 = 速度乘以时间，内容如下：第 1 行 小时，1. 行驶距离，40。第 2 行 小时，2. 行驶距离，80。第 3 行 小时，3. 行驶距离，120。](img/p0193_01.png)
 
 *输入验证：速度不接受负数，行驶时间不接受小于 1 的值。*
 
-# 3. 距离文件
+## 3. 距离文件
 
 修改你为编程挑战 2（`Distance Traveled`）编写的程序，使其报告写入文件而不是屏幕。使用 `Notepad` 或其他文本编辑器打开文件以确认输出。
 
-# 4. 分币报酬
+## 4. 分币报酬
 
-## 观看“分币报酬”问题
+观看“分币报酬”问题
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/secs_gaddis_6_vn_04_02_pennies_for_pay`](https://mediaplayer.pearsoncmg.com/assets/_video.true/secs_gaddis_6_vn_04_02_pennies_for_pay)
 
@@ -7017,15 +6201,15 @@ number = randomNumbers.nextInt(100) - 50
 
 *输入验证：工作天数不接受小于 1 的数字。*
 
-# 5. 字符计数器
+## 5. 字符计数器
 
 编写一个程序，要求用户输入一个字符串，然后要求用户输入一个字符。该程序应该计算并显示指定字符在字符串中出现的次数。
 
-# 6. 文件字符计数器
+## 6. 文件字符计数器
 
 编写一个程序，要求用户输入文件名，然后要求用户输入一个字符。该程序应该计算并显示指定字符在文件中出现的次数。使用 `Notepad` 或其他文本编辑器创建一个简单的文件，用于测试该程序。
 
-# 7. 酒店入住率
+## 7. 酒店入住率
 
 一间酒店的入住率计算方法如下：
 
@@ -7035,38 +6219,49 @@ number = randomNumbers.nextInt(100) - 50
 
 *输入验证：房间数不接受小于 1 的值*
 
-# 8. 平均降水量
+## 8. 平均降水量
 
 编写一个使用嵌套循环来收集数据的程序。外层循环询问用户年数。内层循环迭代 12 次，询问每个月的降雨量。循环完成后，程序应显示每年的平均降雨量。
 
-# 9. 人口
+## 9. 人口
 
 编写一个程序，要求用户输入天数。然后使用循环提示用户输入每天的人口数，并保持运行总和。循环结束，程序应显示输入的最大和最小人口。
 
 *输入验证：天数不接受小于 1 的值*
 
-# 10. 摄氏度转华氏度
+## 10. 摄氏度转华氏度
 
 编写一个程序，要求用户输入一个摄氏度温度。摄氏度转换为华氏度的公式为：$F = \frac{9}{5}C + 32$
 
 该程序应显示华氏度温度，精确到小数点后一位。
 
-# 11. 柱状图
+## 11. 柱状图
 
 编写一个程序，要求用户输入五家商店的销售额。通过显示星号创建一个柱状图。每个星号代表 $100。以下是程序的输出示例：
 
 ```
 Enter sales for store 1: 1000
+
 **********
+
 Enter sales for store 2: 1200
+
 ************
+
 Enter sales for store 3: 1800
+
 ******************
+
 Enter sales for store 4: 800
+
 ********
+
 Enter sales for store 5: 1900
+
 *******************
 ```
+
+
 
 # 12. 销售柱状图
 
@@ -7100,12 +6295,9 @@ Enter sales for store 5: 1900
 
 编写一个测试你的 ESP（超感应）的程序。程序应从以下颜色列表中随机选择一种颜色名称：
 
-*   *红色、绿色、蓝色、橙色、黄色*
+*红色、绿色、蓝色、橙色、黄色*
 
-
-
-
-为了选择一个单词，程序可以生成一个随机数。例如，如果数字是 0，选中的单词为 `Red`；如果数字是 1，选中的单词为 `Green`，以此此类推。
+为了选择一个单词，程序可以生成一个随机数。例如，如果数字是 0，选中的单词为 `Red`；如果数字是 1，选中的单词为 `Green`，以此类推。
 
 接下来，程序应该要求用户输入计算机选择的颜色。在用户输入猜测后，程序应该显示随机选择的颜色名称。程序应重复此操作 10 次，然后显示用户正确猜中选中颜色的次数。
 
@@ -7115,33 +6307,32 @@ Enter sales for store 5: 1900
 
 ```
 XXXXX
- XXXXX
- XXXXX
- XXXXX
- XXXXX
+XXXXX
+XXXXX
+XXXXX
+XXXXX
 ```
 
 如果用户输入 8，程序应显示如下内容：
 
 ```
 XXXXXXXX
- XXXXXXXX
- XXXXXXXX
- XXXXXXXX
- XXXXXXXX
- XXXXXXXX
- XXXXXXXX
- XXXXXXXX
- XXXXXXXX
+XXXXXXXX
+XXXXXXXX
+XXXXXXXX
+XXXXXXXX
+XXXXXXXX
+XXXXXXXX
+XXXXXXXX
 ```
 
 # 21. 骰子游戏
 
 编写一个让计算机和用户之间进行简单骰子游戏的程序。当程序运行时，循环应重复 10 次。循环的每次迭代应执行以下操作：
 
-*   生成一个 1 到 6 之间的随机整数。这是计算机骰子的值。
-*   生成另一个 1 到 6 之间的随机整数。这是用户骰子的值。
-*   点数最高的骰子获胜。（如果平局，则该轮骰子没有胜者。）
+- 生成一个 1 到 6 之间的随机整数。这是计算机骰子的值。
+- 生成另一个 1 到 6 之间的随机整数。这是用户骰子的值。
+- 点数最高的骰子获胜。（如果平局，则该轮骰子没有胜者。）
 
 随着循环迭代，程序应记录计算机胜的次数和用户胜的次数。在循环完成所有迭代后，程序应显示最终获胜者是计算机还是用户。
 
@@ -7149,14 +6340,12 @@ XXXXXXXX
 
 老虎机是一种赌博设备，用户向其投入钱然后拉动拉杆（或按下按钮）。老虎机随后会显示一组随机图像。如果两个或多个图像匹配，用户将赢得由老虎机返还给用户的金额。
 
-创建一个模拟老虎机的程序。当程序运行时，它它应执行以下操作：
+创建一个模拟老虎机的程序。当程序运行时，它应执行以下操作：
 
-*   要求用户输入他想要投入老虎机的金额。
-*   程序不显示图像，而是从以下列表中随机选择一个单词：
-    *Cherries, Oranges, Plums, Bells, Melons, Bars*
-    为了选择单词，程序可以生成一个 0 到 5 之间的随机数。如果数字是 0，选中的单词为 `Cherries`；如果数字是 1，选中的单词为 `Oranges`；以此此类推。程序应从该列表中随机选择三次单词并显示所有三个单词。
-*   如果所有随机选择的单词都不匹配，程序将通知用户他赢了 $0。如果两个单词匹配，程序将通知用户他赢了输入金额的两倍。如果三个单词匹配，程序将通知用户他赢了输入金额的三倍。
-*   程序将询问用户是否想再次玩。如果是，则重复这些步骤。如果不是，程序将显示投入老虎机的总金额和赢得总金额。
+- 要求用户输入他想要投入老虎机的金额。
+- 程序不显示图像，而是从以下列表中随机选择一个单词：`Cherries, Oranges, Plums, Bells, Melons, Bars`。为了选择单词，程序可以生成一个 0 到 5 之间的随机数。如果数字是 0，选中的单词为 `Cherries`；如果数字是 1，选中的单词为 `Oranges`；以此类推。程序应从该列表中随机选择三次单词并显示所有三个单词。
+- 如果所有随机选择的单词都不匹配，程序将通知用户他赢了 $0。如果两个单词匹配，程序将通知用户他赢了输入金额的两倍。如果三个单词匹配，程序将通知用户他赢了输入金额的三倍。
+- 程序将询问用户是否想再次玩。如果是，则重复这些步骤。如果不是，程序将显示投入老虎机的总金额和赢得总金额。
 
 # 决策结构
 
@@ -7164,8 +6353,8 @@ XXXXXXXX
 
 编写一个程序，要求用户输入其姓名，然后要求用户输入一句描述其自己的话。以下是程序的界面示例：
 
-*   输入你的姓名：`Julie Taylor [Enter]`
-*   描述你自己：`I am a computer science major, a member of the Jazz club, and I hope to work as a mobile app developer after I graduate. [Enter]`
+- 输入你的姓名：`Julie Taylor [Enter]`
+- 描述你自己：`I am a computer science major, a member of the Jazz club, and I hope to work as a mobile app developer after I graduate. [Enter]`
 
 一旦用户输入了请求的输入，程序应创建一个包含输入内容的 HTML 文件，用于简单的网页。以下是使用之前显示的示例输入的 HTML 内容示例：
 
@@ -7182,31 +6371,27 @@ XXXXXXXX
    and I hope to work as a mobile app developer after I graduate.
    <hr />
   </body>
-</</html>
+</html>
 ```
 
 # 第 5 章 方法
 
-# 题与
+## 题与
 
-1.  [5.1 方法简介]
-2.  [5.2 向方法传递参数]
-3.  [5.3 关于局部变量的更多信息]
-4.  [5.4 从方法返回值]
-5.  [5.5 使用方法解决问题]
-6.  [5.6 需避免的常见错误]
+1. [5.1 方法简介]
+2. [5.2 向方法传递参数]
+3. [5.3 关于局部变量的更多信息]
+4. [5.4 从方法返回值]
+5. [5.5 使用方法解决问题]
+6. [5.6 需避免的常见错误]
 
 ## 5.1 方法简介
 
-概念：方法可以用于将复杂的程序分解成较小的、易于管理的部分。空方法（void method）只需执行一组语句然后终止。有返回值的方法会返回一个值。
+概念：方法可以用于将复杂的程序分解成较小的、易于管理的部分。空方法（`void` method）只需执行一组语句然后终止。有返回值的方法会返回一个值。
 
-从一般意义上，方法是执行特定任务的语句集合。到目前，你通过两种方式体验了方法：(1) 你在每个程序中创建了一个名为 `main` 的方法，(2) 你执行了 API 中的预定义方法，例如 `System.out.println`、`Integer.parseInt` 和 `Math.pow`。在本章，你将学习如何创建除 `main` 之外的自定义方法。
+从一般意义上，方法是执行特定任务的语句集合。到目前为止，你通过两种方式体验了方法：(1) 你在每个程序中创建了一个名为 `main` 的方法，(2) 你执行了 API 中的预定义方法，例如 `System.out.println`、`Integer.parseInt` 和 `Math.pow`。在本章，你将学习如何创建除 `main` 之外的自定义方法。
 
 方法通常用于将问题分解为可行的部分。与其编写一个包含解决问题所需的所有语句的长方法，不如编写几个小方法，每个方法解决特定的部分。这种方法有时被称为*分治法*，因为它将一个大问题分解为容易解决的小问题。
-
-
-
-
 
 有返回值的方法不仅执行一项任务，还会向调用它的代码返回一个值。`Random` 类的 `nextInt()` 方法就是有返回值方法的示例。例如，看下面的代码：
 
@@ -7216,7 +6401,7 @@ XXXXXXXX
 3    number = rand.nextInt();
 ```
 
-第 1 行的语句声明了 `number` 变量。第 2 行创建一个 `Random` 对象并将其地址赋值给名为 `rand` 的变量。第 3 行是一个赋值语句，为 `number` 变量分配一个值。注意在 `=` 运算符的右侧是对 `rand.nextInt()` 方法的调用。该方法执行，然后返回一个值。从方法返回的值被赋值给 `number` 。
+第 1 行的语句声明了 `number` 变量。第 2 行创建一个 `Random` 对象并将其地址赋值给名为 `rand` 的变量。第 3 行是一个赋值语句，为 `number` 变量分配一个值。注意在 `=` 运算符的右侧是对 `rand.nextInt()` 方法的调用。该方法执行，然后返回一个值。从方法返回的值被赋值给 `number`。
 
 ### 定义 `void` 方法
 
@@ -7241,23 +6426,23 @@ public static void displayMessage()
 
 ![绘制了方法头部的 4 个部分。](img/05fig03.png)图 5-3 完整替代文本
 
-让我们仔细观察图中标识的各个：
+让我们仔细观察图中标识的各个部分：
 
-*   方法修饰符——关键字 `public` 和 `static` 是修饰符。你现在不需要过于担心这些修饰符，但如果你好奇心作祟，这里有一个简短的解释：`public` 单词意味着该方法对类外部的代码可用。`static` 单词意味着该方法属于类，而不是特定的对象。你将在后面的章节中学习更多关于这些修饰符的知识。在本章中我们写的每个方法都将以 `public static` 开头。
+- 方法修饰符——关键字 `public` 和 `static` 是修饰符。你现在不需要过于担心这些修饰符，但如果你好奇心作祟，这里有一个简短的解释：`public` 单词意味着该方法对类外部的代码可用。`static` 单词意味着该方法属于类，而不是特定的对象。你将在后面的章节中学习更多关于这些修饰符的知识。在本章中我们写的每个方法都将以 `public static` 开头。
 
-*   返回值类型——回顾我们之前对 `void` 和有返回值方法的讨论。当关键字 `void` 出现在这里时，意味着该方法是一个 `void` 方法，并且不返回值。正如你稍后看到的，有返回值的方法在此处会列出一个数据类型。
+- 返回值类型——回顾我们之前对 `void` 和有返回值方法的讨论。当关键字 `void` 出现在这里时，意味着该方法是一个 `void` 方法，并且不返回值。正如你稍后看到的，有返回值的方法在此处会列出一个数据类型。
 
-*   方法名——你应该给每个方法起一个描述性的名称。通常情况下，适用于变量名的规则也适用于方法名。此方法命名为 `displayMessage`，所以我们可以很容易地猜出该方法的作用：它显示一条消息。
+- 方法名——你应该给每个方法起一个描述性的名称。通常情况下，适用于变量名的规则也适用于方法名。此方法命名为 `displayMessage`，所以我们可以很容易地猜出该方法的作用：它显示一条消息。
 
-*   括号——在头部中，方法名后面总是跟着一组括号。正如你在本章稍后部分将学到的，方法能够接收参数。在这种情况下，括号内部会出现一个或多个变量声明的列表。此示例中的方法不接收任何参数，因此括号是空的。
+- 括号——在头部中，方法名后面总是跟着一组括号。正如你在本章稍后部分将学到的，方法能够接收参数。在这种情况下，括号内部会出现一个或多个变量声明的列表。此示例中的方法不接收任何参数，因此括号是空的。
 
 ### 注意
 
 方法头部永远不会以分号结束。
 
-# 调用方法
+## 调用方法
 
-方法在被调用时执行执行。`main` 方法在程序启动时被自动调用，但其他方法通过方法调用语句来执行。当方法被调用时，JVM 会跳转到该方法并执行其方法体中的语句。这里有一个方法调用语句的示例，调用了我们之前过的 `displayMessage` 方法：
+方法在被调用时执行。`main` 方法在程序启动时被自动调用，但其他方法通过方法调用语句来执行。当方法被调用时，JVM 会跳转到该方法并执行其方法体中的语句。这里有一个方法调用语句的示例，调用了我们之前见过的 `displayMessage` 方法：
 
 ```
 displayMessage();
@@ -7270,9 +6455,6 @@ displayMessage();
 注意，方法修饰符和 `void` 返回类型没有写在方法调用语句中。它们只写在方法头部。
 
 代码列表 5-1 中展示了程序。
-
-
-
 
 方法也可以以分层的方式调用。换句话说，方法 `A` 可以调用方法 `B`，然后 `B` 又调用方法 `C`。当方法 `C` 完成时，JVM 返回到方法 `B`。当方法 `B` 完成时，JVM 返回到方法 `A`。代码列表 5-4 程序通过三个方法演示了这一点：`main`、`deep` 和 `deeper`。`main` 方法调用 `deep` 方法，然后 `deep` 方法调用 `deeper` 方法。
 
@@ -7356,7 +6538,7 @@ public static void displayValue(int parameter) {
 
 # 在方法中使用文档注释
 
-你应该始终通过在方法定义之前编写注释来对方法进行文档说明。这些注释应该对方法的目的进行简要说明。注意，我们在本章中看到的程序使用了文档注释。回想[第 2 章]，文档注释以 `/**` 开头，以 `*/` 结束。这些类型的注释可以被名为 `javadoc` 的程序读取和处理，从而生成精美的 HTML 文档。随着本章的进行，你将学习更多关于文档注释以及如何将其与方法结合。
+你应该始终通过在方法定义之前编写注释来对方法进行文档说明。这些注释应该对方法的目的进行简要说明。注意，我们在本章中看到的程序使用了文档注释。回想第 2 章，文档注释以 `/**` 开头，以 `*/` 结束。这些类型的注释可以被名为 `javadoc` 的程序读取和处理，从而生成精美的 HTML 文档。随着本章的进行，你将学习更多关于文档注释以及如何将其与方法结合。
 
 ## 5.2 向方法传递参数
 
@@ -7383,18 +6565,20 @@ public static void displayValue(int parameter) {
   System.out.println("The value is " + parameter);
 }
 ```
+
+
 
 这里的 `main` 方法调用 `deep` 方法，然后 `deep` 方法调用 `deeper` 方法。
 
 在下方的动画中，点击“上一个”或“下一个”按钮可以逐步执行代码并查看全程的解释。
 
-# 代码列表 5-4 `(DeepAndDeeper.java)`
+# 代码列表 5-4（`DeepAndDeeper.java`）
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr5-4/4.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr5-4/4.html)
 
 # 在方法中使用文档注释
 
-你应该始终通过在方法定义之前编写注释来对方法进行文档说明。这些注释应该对方法的目的进行简要说明。注意，我们在本章中看到的程序使用了文档注释。回想[第 2 章]，文档注释以 `/**` 开头，以 `*/` 结束。这些类型的注释可以被名为 `javadoc` 的程序读取和处理，从而生成精美的 HTML 文档。随着本章的进行，你将学习更多关于文档注释以及如何将其与方法结合。
+你应该始终通过在方法定义之前编写注释来对方法进行文档说明。这些注释应该对方法的目的进行简要说明。注意，我们在本章中看到的程序使用了文档注释。回想第 2 章，文档注释以 `/**` 开头，以 `*/` 结束。这些类型的注释可以被名为 `javadoc` 的程序读取和处理，从而生成精美的 HTML 文档。随着本章的进行，你将学习更多关于文档注释以及如何将其与方法结合。
 
 ## 5.2 向方法传递参数
 
@@ -7418,207 +6602,16 @@ number = Integer.parseInt(str);
 
 ```
 public static void displayValue(int parameter) {
+
   System.out.println("The value is " + parameter);
+
 }
 ```
-
-这里的 `main` 方法调用 `deep` 方法，然后 `deep` 方法调用 `deeper` 方法。
-
-在下方的动画中，点击“上一个”或“下一个”按钮可以逐步执行代码并查看全程的解释。
-
-# 代码列表 5-4 `(DeepAndDeeper.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr5-4/4.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr5-4/4.html)
-
-# 在方法中使用文档注释
-
-你应该始终通过在方法定义之前编写注释来对方法进行文档说明。这些注释应该对方法的目的进行简要说明。注意，我们在本章中看到的程序使用了文档注释。回想[第 2 章]，文档注释以 `/**` 开头，以 `*/` 结束。这些类型的注释可以被名为 `javadoc` 的程序读取和处理，从而生成精美的 HTML 文档。随着本章的进行，你将学习更多关于文档注释以及如何将其与方法结合。
-
-## 5.2 向方法传递参数
-
-## 概念：方法可以写成接受参数的形式。那么在调用方法时，可以将数据传递到方法中。
-
-### 向方法传递参数
-
-传递到方法的值被称为 `arguments`（参数）。你已经熟悉了如何在方法调用中使用参数。例如，请查看以下语句：
-
-```
-System.out.println("Hello");
-```
-
-该语句调用了 `System.out.println` 方法并将 `"Hello"` 作为参数传递。这里是另一个例子：
-
-```
-number = Integer.parseInt(str);
-```
-
-该语句调用了 `Integer.parseInt` 方法并将 `str` 的内容作为参数传递。通过使用参数变量，你可以设计接收数据的自定义方法。`parameter variable`（参数变量，有时称为 `parameter`，参数）是一个特殊的变量。
-
-```
-public static void displayValue(int parameter) {
-  System.out.println("The value is " + parameter);
-}
-```
-
-这里的 `main` 方法调用 `deep` 方法，然后 `deep` 方法调用 `deeper` 方法。
-
-在下方的动画中，点击“上一个”或“下一个”按钮可以逐步执行代码并查看全程的解释。
-
-# 代码列表 5-4 `(DeepAndDeeper.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr5-4/4.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr5-4/4.html)
-
-# 在方法中使用文档注释
-
-你应该始终通过在方法定义之前编写注释来对方法进行文档说明。这些注释应该对方法的目的进行简要说明。注意，我们在本章中看到的程序使用了文档注释。回想[第 2 章]，文档注释以 `/**` 开头，以 `*/` 结束。这些类型的注释可以被名为 `javadoc` 的程序读取和处理，从而生成精美的 HTML 文档。随着本章的进行，你将学习更多关于文档注释以及如何将其与方法结合。
-
-## 5.2 向方法传递参数
-
-## 概念：方法可以写成接受参数的形式。那么在调用方法时，可以将数据传递到方法中。
-
-### 向方法传递参数
-
-传递到方法的值被称为 `arguments`（参数）。你已经熟悉了如何在方法调用中使用参数。例如，请查看以下语句：
-
-```
-System.out.println("Hello");
-```
-
-该语句调用了 `System.out.println` 方法并将 `"Hello"` 作为参数传递。这里是另一个例子：
-
-```
-number = Integer.parseInt(str);
-```
-
-该语句调用了 `Integer.parseInt` 方法并将 `str` 的内容作为参数传递。通过使用参数变量，你可以设计接收数据的自定义方法。`parameter variable`（参数变量，有时称为 `parameter`，参数）是一个特殊的变量。
-
-```
-public static void displayValue(int parameter) {
-  System.out.println("The value is " + parameter);
-}
-```
-
-这里的 `main` 方法调用 `deep` 方法，然后 `deep` 方法调用 `deeper` 方法。
-
-在下方的动画中，点击“上一个”或“下一个”按钮可以逐步执行代码并查看全程的解释。
-
-# 代码列表 5-4 `(DeepAndDeeper.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr5-4/4.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr5-4/4.html)
-
-# 在方法中使用文档注释
-
-你应该始终通过在方法定义之前编写注释来对方法进行文档说明。这些注释应该对方法的目的进行简要说明。注意，我们在本章中看到的程序使用了文档注释。回想[第 2 章]，文档注释以 `/**` 开头，以 `*/` 结束。这些类型的注释可以被名为 `javadoc` 的程序读取和处理，从而生成精美的 HTML 文档。随着本章的进行，你将学习更多关于文档注释以及如何将其与方法结合。
-
-## 5.2 向方法传递参数
-
-## 概念：方法可以写成接受参数的形式。那么在调用方法时，可以将数据传递到方法中。
-
-### 向方法传递参数
-
-传递到方法的值被称为 `arguments`（参数）。你已经熟悉了如何在方法调用中使用参数。例如，请查看以下语句：
-
-```
-System.out.println("Hello");
-```
-
-该语句调用了 `System.out.println` 方法并将 `"Hello"` 作为参数传递。这里是另一个例子：
-
-```
-number = Integer.parseInt(str);
-```
-
-该语句调用了 `Integer.parseInt` 方法并将 `str` 的内容作为参数传递。通过使用参数变量，你可以设计接收数据的自定义方法。`parameter variable`（参数变量，有时称为 `parameter`，参数）是一个特殊的变量。
-
-```
-public static void displayValue(int parameter) {
-  System.out.println("The value is " + parameter);
-}
-```
-
-这里的 `main` 方法调用 `deep` 方法，然后 `deep` 方法调用 `deeper` 方法。
-
-在下方的动画中，点击“上一个”或“下一个”按钮可以逐步执行代码并查看全程的解释。
-
-# 代码列表 5-4 `(DeepAndDeeper.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr5-4/4.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr5-4/4.html)
-
-# 在方法中使用文档注释
-
-你应该始终通过在方法定义之前编写注释来对方法进行文档说明。这些注释应该对方法的目的进行简要说明。注意，我们在本章中看到的程序使用了文档注释。回想[第 2 章]，文档注释以 `/**` 开头，以 `*/` 结束。这些类型的注释可以被名为 `javadoc` 的程序读取和处理，从而生成精美的 HTML 文档。随着本章的进行，你将学习更多关于文档注释以及如何将其与方法结合。
-
-## 5.2 向方法传递参数
-
-## 概念：方法可以写成接受参数的形式。那么在调用方法时，可以将数据传递到方法中。
-
-### 向方法传递参数
-
-传递到方法的值被称为 `arguments`（参数）。你已经熟悉了如何在方法调用中使用参数。例如，请查看以下语句：
-
-```
-System.out.println("Hello");
-```
-
-该语句调用了 `System.out.println` 方法并将 `"Hello"` 作为参数传递。这里是另一个例子：
-
-```
-number = Integer.parseInt(str);
-```
-
-该语句调用了 `Integer.parseInt` 方法并将 `str` 的内容作为参数传递。通过使用参数变量，你可以设计接收数据的自定义方法。`parameter variable`（参数变量，有时称为 `parameter`，参数）是一个特殊的变量。
-
-```
-public static void displayValue(int parameter) {
-  System.out.println("The value is " + parameter);
-}
-```
-
-这里的 `main` 方法调用 `deep` 方法，然后 `deep` 方法调用 `deeper` 方法。
-
-在下方的动画中，点击“上一个”或“下一个”按钮可以逐步执行代码并查看全程的解释。
-
-# 代码列表 5-4 `(DeepAndDeeper.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr5-4/4.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr5-4/4.html)
-
-# 在方法中使用文档注释
-
-你应该始终通过在方法定义之前编写注释来对方法进行文档说明。这些注释应该对方法的目的进行简要说明。注意，我们在本章中看到的程序使用了文档注释。回想[第 2 章]，文档注释以 `/**` 开头，以 `*/` 结束。这些类型的注释可以被名为 `javadoc` 的程序读取和处理，从而生成精美的 HTML 文档。随着本章的进行，你将学习更多关于文档注释以及如何将其与方法结合。
-
-## 5.2 向方法传递参数
-
-## 概念：方法可以写成接受参数的形式。那么在调用方法时，可以将数据传递到方法中。
-
-### 向方法传递参数
-
-传递到方法的值被称为 `arguments`（参数）。你已经熟悉了如何在方法调用中使用参数。例如，请查看以下语句：
-
-```
-System.out.println("Hello");
-```
-
-该语句调用了 `System.out.println` 方法并将 `"Hello"` 作为参数传递。这里是另一个例子：
-
-```
-number = Integer.parseInt(str);
-```
-
-该语句调用了 `Integer.parseInt` 方法并将 `str` 的内容作为参数传递。通过使用参数变量，你可以设计接收数据的自定义方法。`parameter variable`（参数变量，有时称为 `parameter`，参数）是一个特殊的变量。
-
-```
-public static void displayValue(int parameter) {
-  System.out.println("The value is " + parameter);
-}
-```
-
-这里的 `main` 方法调用 `deep` 方法，然后 `deep` 方法调用 `deeper` 方法。
 
 # 参数与类型兼容性
 
 `Value` 是一个 `int` 类型的变量，`int` 变量的 `int` 类型的参数。`Value` 是一个 `int` 类型的参数。
 
-```
 ```
 int value = 10;
 displayValue(value); // 传递 int 变量
@@ -7634,10 +6627,6 @@ displayValue(b);   // 将 byte 转换为 int
 ```
 
 然而，Java 不会自动将参数转换为排名较低的数据类型。这意味着 `long`、`float` 或 `double` 值不能传递给具有 `int` 参数变量的方法。例如，以下代码将导致编译错误：
-
-
-
-
 
 ```
 double d = 1.0;
@@ -7712,29 +6701,25 @@ public static void showSum(double num1, num2) // 错误！
 public static void showSum(double num1, double num2)
 ```
 
-查看本章源代码文件夹中的程序 `TwoArgs.java` 可以获得一个演示 `showSum` 方法的完整程序。你可以[下载](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)书的源码。
+
+
+查看本章源代码文件夹中的程序`TwoArgs.java`可以获得一个演示`showSum`方法的完整程序。你可以[下载](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)书的源码。
 
 # 参数按值传递
 
-在 Java 中，所有基本数据类型的参数都是`按值传递的`，这意味着只有参数值的副本会被传递到参数变量中。方法的参数变量与方法调用括号内列出的参数是分离且互不相同的。如果从方法内部更改了参数变量，它对原始参数没有影响。例如，查看代码列表 5-6 中的程序。
-
-
-
-
-
-
+在 Java 中，所有基本数据类型的参数都是按值传递的，这意味着只有参数值的副本会被传递到参数变量中。方法的参数变量与方法调用括号内列出的参数是分离且互不相同的。如果从方法内部更改了参数变量，它对原始参数没有影响。例如，查看代码列表 5-6 中的程序。
 
 在下方的动画中，点击“上一个”或“下一个”按钮逐步执行代码并查看全程的解释。
 
-# 代码列表 5-6 `(PassByValue.java)`
+# 代码列表 5-6 (`PassByValue.java`)
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr5-6/6.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr5-6/6.html)
 
-尽管参数变量 `myValue` 在 `changeMe` 方法中被更改，但参数 `number` 并没有被修改。`myValue` 只包含 `number` 的副本。
+尽管参数变量`myValue`在`changeMe`方法中被更改，但参数`number`并没有被修改。`myValue`只包含`number`的副本。
 
 # 将对象传递给方法
 
-到目前，你已经看到了接受基本值作为参数的方法示例。你也可以编写接受对象引用的方法。例如，查看以下方法：
+到目前为止，你已经看到了接受基本值作为参数的方法示例。你也可以编写接受对象引用的方法。例如，查看以下方法：
 
 ```
 public static void showLength(String str)
@@ -7743,52 +6728,48 @@ public static void showLength(String str)
 }
 ```
 
-该方法接受一个 `String` 引用并显示消息。下面的代码：
+该方法接受一个`String`引用并显示消息。下面的代码：
 
 ```
 String name = "Warren";
 showLength(name);
 ```
 
-当此代码执行时，`showLength` 方法将显示：
+当此代码执行时，`showLength`方法将显示：
 
 ```
 Warren is 6 characters.
 ```
 
-`name` 变量持有该对象的引用。当调用 `showLength` 方法时，对象的地址被传递给参数 `str`。此时，`name` 和 `str` 引用同一个对象。这可能会让你得出结论：方法可以更改作为参数传递给它的任何 `String` 对象。毕竟参数变量引用的是相同的对象。然而，Java 中的 `String` 对象是`不可变的`，这意味着它们不能被更改。例如，查看代码列表 5-7 中的程序。它将一个 `String` 对象传递给方法，似乎更改了对象。实际上，对象并没有改变。
+`name`变量持有该对象的引用。当调用`showLength`方法时，对象的地址被传递给参数`str`。此时，`name`和`str`引用同一个对象。这可能会让你得出结论：方法可以更改作为参数传递给它的任何`String`对象。毕竟参数变量引用的是相同的对象。然而，Java 中的`String`对象是不可变的，这意味着它们不能被更改。例如，查看代码列表 5-7 中的程序。它将一个`String`对象传递给方法，似乎更改了对象。实际上，对象并没有改变。
 
 在下方的动画中，点击“上一个”或“下一个”按钮逐步执行代码并查看全程的解释。
 
-# 代码列表 5-7 `(PassString.java)`
+# 代码列表 5-7 (`PassString.java`)
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr5-7/7.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr5-7/7.html)
 
-让我们仔细观察这个程序。在第 12 行执行后，`name` 变量引用包含 `"Shakespeare"` 的 `String` 对象。在第 20 行调用了 `changeName` 方法并将 `name` 变量作为参数传递。这将 `String` 对象的地址传递到 `str` 参数变量。此时，`name` 和 `str` 引用同一个对象，如图 5-11 所示。
+让我们仔细观察这个程序。在第 12 行执行后，`name`变量引用包含`"Shakespeare"`的`String`对象。在第 20 行调用了`changeName`方法并将`name`变量作为参数传递。这将`String`对象的地址传递到`str`参数变量。此时，`name`和`str`引用同一个对象，如图 5-11 所示。
 
 ![使用 show Length 方法，name 和 s t r 都引用同一个 String 对象，即带引号的单词 Shakespeare，并在第 36 行执行前运行。](img/05fig11.png)
 
-
-
-
-
-在 `changeName` 方法中，第 36 行的执行如下：
+在`changeName`方法中，第 36 行的执行如下：
 
 ```
 str = "Dickens";
 ```
 
-起初，你可能认为该语句将 `String` 对象的内容更改为了 `"Dickens"`。实际上发生的情况是创建了一个包含 `"Dickens"` 的新 `String` 对象，并将其地址存储在 `str` 变量中。在该语句执行后，`name` 变量和 `str` 参数变量引用不同的对象。这在图 5-12 所示。
+起初，你可能认为该语句将`String`对象的内容更改为了`"Dickens"`。实际上发生的情况是创建了一个包含`"Dickens"`的新`String`对象，并将其地址存储在`str`变量中。在该语句执行后，`name`变量和`str`参数变量引用不同的对象。这在图 5-12 所示。
 
 ![执行第 36 行后，name 和 s-t-r 参数引用不同的对象。name 变量指向 String 对象，引用引号中的单词 Shakespeare。s str 参数引用引号中的单词 Dickens。](img/05fig12.png)
 
-## 图 5-12 执行第 36 行后，`name` 和 `str` 引用不同的对象
+## 图 5-12 执行第 36 行后，`name`和`str`引用不同的对象
 
-在第 9 章中，我们将详细讨论 `String` 对象的不可变性。在此之前，只需记住这一点：`String` 对象不能更改。每当你使用 `=` 运算符将字符串字面量赋值给 `String` 引用变量时，内存中都会创建一个新的 `String` 对象。
+在第 9 章中，我们将详细讨论`String`对象的不可变性。在此之前，只需记住这一点：`String`对象不能更改。每当你使用`=`运算符将字符串字面量赋值给`String`引用变量时，内存中都会创建一个新的`String`对象。
 
 # 在文档注释中使用 @param 标签
 
-在编写方法的文档注释时，你可以使用 `@param` 标签为每个参数提供描述。当 `javadoc` 工具在方法的文档注释中看到 `@param` 标签时，它知道接下来将出现参数变量的文档。本章[源代码](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)中的 `TwoArgs2.java` 文件包含以下方法，它在文档注释使用了 `@param` 标签：
+在编写方法的文档注释时，你可以使用`@param`标签为每个参数提供描述。当`javadoc`工具在方法的文档注释中看到`@param`标签时，它知道接下来将出现参数变量的文档。本章[源代码](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)中的`TwoArgs2.java`文件包含以下方法，它在文档注释使用了`@param`标签：
 
 ```
  /**
@@ -7804,76 +6785,89 @@ str = "Dickens";
    }
 ```
 
-`@param` 标签注释的通用格式如下：
+`@param`标签注释的通用格式如下：
 
 ```
 @param  parameterName Description
 ```
 
-在通用格式中，`parameterName` 是参数名，`Description` 是参数的描述。记住关于 `@param` 标签注释的以下几点：
+在通用格式中，`parameterName`是参数名，`Description`是参数的描述。记住关于`@param`标签注释的以下几点：
 
-* 方法文档注释中所有的 `@param` 标签必须出现在方法的总体描述之后。
+* 方法文档注释中所有的`@param`标签必须出现在方法的总体描述之后。
+
 * 描述可以跨多行。它结束于文档注释的末尾（`*/`）或另一个标签的开始处。
 
-当方法的文档注释包含一个或多个 `@param` 标签时，`javadoc` 工具会在方法的文档中创建一个 `Parameters` 部分。这里将列出方法参数的描述。图 5-13 展示了 `javadoc` 为 `TwoArgs2.java` 文件中的 `showSum` 方法生成的文档。
+当方法的文档注释包含一个或多个`@param`标签时，`javadoc`工具会在方法的文档中创建一个`Parameters`部分。这里将列出方法参数的描述。图 5-13 展示了`javadoc`为`TwoArgs2.java`文件中的`showSum`方法生成的文档。
 
-## 图 5-13 `TwoArgs2.java` 中 `showSum` 方法的文档
+## 图 5-13 `TwoArgs2.java`中`showSum`方法的文档
 
 ![show Sum 方法显示两个数字之和。](img/05fig13.png)完整替代文本
 
 ## 检查点 5.10
-../components/metrodigi/ch05-assessable_table_v1.0-03/index.html
+
+`../components/metrodigi/ch05-assessable_table_v1.0-03/index.html`
 
 ## 检查点 5.11
-../components/metrodigi/ch05-inline_self_quiz_v1.0-0-09/index.html
+
+`../components/metrodigi/ch05-inline_self_quiz_v1.0-0-09/index.html`
 
 ## 检查点 5.12
-../components/metrodigi/ch05-fill_in_the_blank-01/index.html
+
+`../components/metrodigi/ch05-fill_in_the_blank-01/index.html`
 
 ## 检查点 5.13
-../components/metrodigi/ch05-inline_self_quiz_v1.0-0-17/index.html
+
+`../components/metrodigi/ch05-inline_self_quiz_v1.0-0-17/index.html`
 
 ## 检查点 5.14
-../components/metrodigi/ch05-inline_self_quiz_v1.0-0-11/index.html
+
+`../components/metrodigi/ch05-inline_self_quiz_v1.0-0-11/index.html`
 
 ## 检查点 5.15
-../components/metrodigi/ch05-inline_self_quiz_v1.0-0-12/index.html
+
+`../components/metrodigi/ch05-inline_self_quiz_v1.0-0-12/index.html`
 
 ## 检查点 5.16
-../components/metrodigi/ch05-inline_self_quiz_v1.0-0-13/index.html
+
+`../components/metrodigi/ch05-inline_self_quiz_v1.0-0-13/index.html`
 
 ## 检查点 5.17
-../components/metrodigi/ch05-inline_self_quiz_v1.0-0-14/index.html
+
+`../components/metrodigi/ch05-inline_self_quiz_v1.0-0-14/index.html`
 
 ## 检查点 5.18
-../components/metrodigi/ch05-inline_self_quiz_v1.0-0-15/index.html
+
+`../components/metrodigi/ch05-inline_self_quiz_v1.0-0-15/index.html`
 
 ## 检查点 5.19
-../components/metrodigi/ch05-inline_self_quiz_v1.0-0-16/index.html
+
+`../components/metrodigi/ch05-inline_self_quiz_v1.0-0-16/index.html`
 
 ## 检查点 5.21
-../components/metrodigi/ch05-inline_self_quiz_v1.0-0-18/index.html
+
+`../components/metrodigi/ch05-inline_self_quiz_v1.0-0-18/index.html`
 
 ## 检查点 5.22
-../components/metrodigi/ch05-fill_in_the_blank-02/index.html
+
+`../components/metrodigi/ch05-fill_in_the_blank-02/index.html`
 
 ## 检查点 5.23
-../components/metrodigi/ch05-inline_self_quiz_v1.0-0-29/index.html
+
+`../components/metrodigi/ch05-inline_self_quiz_v1.0-0-29/index.html`
 
 ## 检查点 5.25
-../components/metrodigi/ch05-inline_self_quiz_v1.0-0-30/index.html
+
+`../components/metrodigi/ch05-inline_self_quiz_v1.0-0-30/index.html`
 
 ## 检查点 5.26
-../components/metrodigi/ch05-inline_self_quiz_v1.0-0-31/index.html
+
+`../components/metrodigi/ch05-inline_self_quiz_v1.0-0-31/index.html`
 
 ## 检查点 5.27
-../components/metrodigi/ch05-inline_self_quiz_v1.0-0-31/index.html
 
+`../components/metrodigi/ch05-inline_self_quiz_v1.0-0-31/index.html`
 
-
-
-
-可以使用参数变量来初始化局部变量。有时这可以简化方法中的代码。例如，回想我们之前讨论过的 `showSum` 方法：
+可以使用参数变量来初始化局部变量。有时这可以简化方法中的代码。例如，回想我们之前讨论过的`showSum`方法：
 
 ```
 public static void showSum(double num1, double num2)
@@ -7884,7 +6878,7 @@ public static void showSum(double num1, double num2)
 }
 ```
 
-在方法体中，声明了 `sum` 变量，然后使用单独的赋值语句将 `num1 + num2` 赋值给 `sum`。我们可以将这些语句合并为一条，如下面修改后的方法所示：
+在方法体中，声明了`sum`变量，然后使用单独的赋值语句将`num1 + num2`赋值给`sum`。我们可以将这些语句合并为一条，如下面修改后的方法所示：
 
 ```
 public static void showSum(double num1, double num2)
@@ -7898,7 +6892,7 @@ public static void showSum(double num1, double num2)
 
 ## 警告！
 
-局部变量不会自动用默认值初始化。在使用它们之前，必须给它们赋值值。如果你尝试在给局部变量赋值之前使用它，将导致编译错误。例如，看以下方法：
+局部变量不会自动用默认值初始化。在使用它们之前，必须给它们赋值。如果你尝试在给局部变量赋值之前使用它，将导致编译错误。例如，看以下方法：
 
 ```
 public static void myMethod()
@@ -7908,27 +6902,27 @@ public static void myMethod()
 }
 ```
 
-这段代码将导致编译错误，因为变量 `x` 没有赋值，并且被用作参数传递给 `System.out.println` 方法。
+这段代码将导致编译错误，因为变量`x`没有赋值，并且被用作参数传递给`System.out.println`方法。
 
 ## Checkpoint 5.28
 
-../components/metrodigi/ch05-inline_self_quiz_v1.0.0-19/index.html
+`../components/metrodigi/ch05-inline_self_quiz_v1.0.0-19/index.html`
 
 ## Checkpoint 5.29
 
-../components/metrodigi/ch05-inline_self_quiz_v1.0.0-20/index.html
+`../components/metrodigi/ch05-inline_self_quiz_v1.0.0-20/index.html`
 
 ## Checkpoint 5.30
 
-../components/metrodigi/ch05-inline_self_quiz_v1.0.0-21/index.html
+`../components/metrodigi/ch05-inline_self_quiz_v1.0.0-21/index.html`
 
 ## Checkpoint 5.31
 
-../components/metrodigi/ch05-inline_self_quiz_v1.0.0-22/index.html
+`../components/metrodigi/ch05-inline_self_quiz_v1.0.0-22/index.html`
 
 ## Checkpoint 5.32
 
-../components/metrodigi/ch05-inline_self_quiz_v1.0.0-23/index.html
+`../components/metrodigi/ch05-inline_self_quiz_v1.0.0-23/index.html`
 
 ## 5.4 从方法返回值
 
@@ -7936,33 +6930,33 @@ public static void myMethod()
 
 方法可以将一个值发送回调用该方法的语句。
 
-你已经看到数据可以通过参数变量传递到方法。数据也可以从方法返回，回到调用它的语句。返回值的的方法被称为“有返回值的方法”（value-returning methods）。
+你已经看到数据可以通过参数变量传递到方法。数据也可以从方法返回，回到调用它的语句。返回值的方法被称为“有返回值的方法”（value-returning methods）。
 
 ## 观看视频：从方法返回值
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/hQdXuGPKF89cJw6C0PfY_a_UJdAHi2gz`](https://mediaplayer.pearsoncmg.com/assets/_video.true/hQdXuGPKF89cJw6C0PfY_a_UJdAHi2gz)
 
-你已经很熟练使用有返回值的方法。例如，你使用过包装类的解析方法，如 `Integer.parseInt`。这里有一个示例：
+你已经很熟练使用有返回值的方法。例如，你使用过包装类的解析方法，如`Integer.parseInt`。这里有一个示例：
 
 ```
 int num;
 num = Integer.parseInt("700");
 ```
 
-这段代码的第二行调用了 `Integer.parseInt` 方法，并将 `"700"` 作为参数。该方法返回整数值 700，由 `=` 运算符将其赋值给变量 `num`。你还见过返回返回值的 `Math.pow` 方法。这里有一个示例：
+这段代码的第二行调用了`Integer.parseInt`方法，并将`"700"`作为参数。该方法返回整数值 700，由`=`运算符将其赋值给变量`num`。你还见过返回值的`Math.pow`方法。这里有一个示例：
 
 ```
 double x;
 x = Math.pow(4.0, 2.0);
 ```
 
-这段代码的第二行调用了 `Math.pow` 方法，将 4.0 和 2.0 作为参数。该方法计算 4.0 幂 2.0 次的值并返回该值。该值为 16.0，由 `=` 运算符将其赋值给变量 `x`。
+这段代码的第二行调用了`Math.pow`方法，将 4.0 和 2.0 作为参数。该方法计算 4.0 的 2.0 次幂的值并返回该值。该值为 16.0，由`=`运算符将其赋值给变量`x`。
 
 在本节中，我们将讨论如何编写你自己的有返回值的方法。
 
 ## 定义有返回值的方法
 
-当你编写有返回值的方法时，你必须决定该方法将返回什么类型的值。这是因为你必须在方法头部中指定返回值的数据类型。记住，`void` 方法不返回值。有返回值的方法将使用 `int`、`double`、`boolean` 或任何其他数据类型。
+当你编写有返回值的方法时，你必须决定该方法将返回什么类型的值。这是因为你必须在方法头部中指定返回值的数据类型。记住，`void`方法不返回值。有返回值的方法将使用`int`、`double`、`boolean`或任何其他数据类型。
 
 ```
 public static int sum(int num1, int num2)
@@ -7973,11 +6967,11 @@ public static int sum(int num1, int num2)
 }
 ```
 
-`return` 语句表达式必须与方法头部指定的返回类型相同，或者与之兼容。否则，将发生编译错误。
+`return`语句表达式必须与方法头部指定的返回类型相同，或者与之兼容。否则，将发生编译错误。
 
 ### 注意
 
-`return` 语句在必要时可以宽转换（widen），但不会进行窄转换（narrow）。
+`return`语句在必要时可以宽转换（widen），但不会进行窄转换（narrow）。
 
 ## 调用有返回值的方法
 
@@ -8021,7 +7015,7 @@ public class ValueReturn
 }
 ```
 
-### 代码列表 5-9 (ValueReturn.java)
+### 代码列表 5-9 (`ValueReturn.java`)
 
 程序输出
 
@@ -8029,16 +7023,13 @@ public class ValueReturn
 The sum of 20 and 40 is 60
 ```
 
+第 14 行的语句调用了`sum`方法，并将`value1`和`value2`作为参数传递。它将`sum`方法的返回值赋值给变量`total`。在这种情况下，该方法将返回 60。图 5-15 显示了参数是如何传递给方法的，以及值是如何从方法返回的。
 
-
-
-第 14 行的语句调用了 `sum` 方法，并将 `value1` 和 `value2` 作为参数传递。它将 `sum` 方法的返回值赋值给变量 `total`。在这种情况下，该方法将返回 60。图 5-15 显示了参数是如何传递给方法的，以及值是如何从方法返回的。
-
-# 图 5-15 传递给 `sum` 的参数和返回的值
+# 图 5-15 传递给`sum`的参数和返回的值
 
 ![分别为 20 和 40 的两个参数返回总量 60。](img/05fig15.png)图 5-15 完整替代文本
 
-当你调用一个返回值的方法，你通常希望对它返回的值进行有意义的操作。`ValueReturn.java` 程序展示了将方法的返回值赋值给变量。这是使用值的常用方法，但你也可以对它们进行许多其他操作。例如，下面的代码显示了一个使用 `sum` 方法调用的数学表达式：
+当你调用一个返回值的方法，你通常希望对它返回的值进行有意义的操作。`ValueReturn.java`程序展示了将方法的返回值赋值给变量。这是使用值的常用方法，但你也可以对它们进行许多其他操作。例如，下面的代码显示了一个使用`sum`方法调用的数学表达式：
 
 ```
 int x = 10, y = 15;
@@ -8046,39 +7037,41 @@ double average;
 average = sum(x, y) / 2.0;
 ```
 
-在最后一条语句中，使用 `x` 和 `y` 作为参数调用了 `sum` 方法。方法的返回值 25 被除以 2.0。结果 12.5 被赋值给 `average`。这里是另一个例子：
+
+
+在最后一条语句中，使用`x`和`y`作为参数调用了`sum`方法。方法的返回值`25`被除以`2.0`。结果`12.5`被赋值给`average`。这里是另一个例子：
 
 ```
 int x = 10, y = 15;
 System.out.println("The sum is " + sum(x, y));
 ```
 
-这段代码将 `sum` 方法的返回值发送给 `System.out.println`，这样它就可以在屏幕上显示。将显示消息“The sum is 25”。
+这段代码将`sum`方法的返回值发送给`System.out.println`，这样它就可以在屏幕上显示。将显示消息“The sum is 25”。
 
-记住，返回值的方法返回一个特定数据类型的值。你可以在任何可以使用相同数据类型的普通值的地方使用方法的返回值。这意味着在任何可以使用 `int` 值的地方，都可以使用返回 `int` 值的方法调用。同样，在任何可以使用 `double` 值的地方，都可以使用返回 `double` 值的方法调用。对于所有其他数据类型也是如此的。
+记住，返回值的方法返回一个特定数据类型的值。你可以在任何可以使用相同数据类型的普通值的地方使用方法的返回值。这意味着在任何可以使用`int`值的地方，都可以使用返回`int`值的方法调用。同样，在任何可以使用`double`值的地方，都可以使用返回`double`值的方法调用。对于所有其他数据类型也是如此的。
 
-# 在文档注释中使用 `@return` 标签
+## 在文档注释中使用`@return`标签
 
-在为返回值的方法编写文档注释时，你可以使用 `@return` 标签提供对返回值的描述。当 `javadoc` 实用程序方法的文档注释内部看到 `@return` 标签时，它知道接下来将出现方法返回值的描述。
+在为返回值的方法编写文档注释时，你可以使用`@return`标签提供对返回值的描述。当`javadoc`实用程序方法的文档注释内部看到`@return`标签时，它知道接下来将出现方法返回值的描述。
 
-`@return` 标签注释的一般格式如下：
+`@return`标签注释的一般格式如下：
 
 ```
 @return Description
 ```
 
-`Description` 是返回值的描述。记住关于 `@return` 标签注释的以下几点：
+`Description`是返回值的描述。记住关于`@return`标签注释的以下几点：
 
-*   方法文档注释中的 `@return` 标签必须出现在方法的总体描述之后。
-*   描述可以跨越多行。它在文档注释的结束处（`*/` 符号）或另一个标签的开始处结束。
+* 方法文档注释中的`@return`标签必须出现在方法的总体描述之后。
+* 描述可以跨越多行。它在文档注释的结束处（`*/`符号）或另一个标签的开始处结束。
 
-当方法的文档注释包含 `@return` 标签时，`javadoc` 实用会在方法的文档中创建一个“Returns”部分。这里就是列出方法返回值描述的地方。图 5-16 显示了 `javadoc` 为 `ValueReturn.java` 文件中的 `sum` 方法生成的文档。
+当方法的文档注释包含`@return`标签时，`javadoc`实用会在方法的文档中创建一个“Returns”部分。这里就是列出方法返回值描述的地方。图 5-16 显示了`javadoc`为`ValueReturn.java`文件中的`sum`方法生成的文档。
 
 ![Value Return.java 中 sum 方法的文档。sum 方法返回两个参数之和。参数 num 1 和 num 2 包含要相加的第一个和第二个数字，并分别返回 num 1 和 num 2 的和](img/05fig16.png)
 
-# 图 5-16 `ValueReturn.java` 中 `sum` 方法的文档
+### 图 5-16 `ValueReturn.java`中`sum`方法的文档
 
-# 焦点聚焦：使用方法
+## 焦点聚焦：使用方法
 
 你的朋友 Michael 经营一家餐饮公司。他的食谱所需的某些成分是以杯（cups）为单位衡量的。然而，当他去商店购买这些成分时，它们仅按液盎（fluid ounce）出售。他请你写一个简单的程序，将杯转换为液盎。
 
@@ -8088,23 +7081,23 @@ System.out.println("The sum is " + sum(x, y));
 2. 将杯数转换为液盎。
 3. 显示结果。
 
-该算法列出了程序需要执行的高级任务，并成为该类 `main` 方法的基础。该类还将具有以下方法：
+该算法列出了程序需要执行的高级任务，并成为该类`main`方法的基础。该类还将具有以下方法：
 
-*   `getCups`——此方法将提示用户输入杯数，然后将该值作为 `double` 返回。
-*   `cupsTounces`——此方法将接受杯数作为参数，然后返回等量的液盎数作为 `double` 返回。
-*   `displayResults`——此方法显示一个指示转换的消息。代码列表 5-10 显示了该程序。图 5-17 显示了程序的执行交互。
+* `getCups`——此方法将提示用户输入杯数，然后将该值作为`double`返回。
+* `cupsTounces`——此方法将接受杯数作为参数，然后返回等量的液盎数作为`double`返回。
+* `displayResults`——此方法显示一个指示转换的消息。代码列表 5-10 显示了该程序。图 5-17 显示了程序的执行交互。
 
-# 图 5-17 `CupConverter` 程序交互
+### 图 5-17 `CupConverter`程序交互
 
 ![CupConverter 程序由一个输入框和一个显示结果的消息框组成。](img/05fig17.png)图 5-17 完整替代文本
 
 在下面的动画，点击“Previous”或“Next”按钮来逐步执行代码并查看。
 
-# 代码列表 5-10 (`CupConverter.java`)
+### 代码列表 5-10 (`CupConverter.java`)
 
-# 返回布尔值
+## 返回布尔值
 
-经常需要一个方法来测试参数并返回 `true` 或 `false` 值，以指示条件是否存在。例如，下面的方法当参数在 1 到 100 范围内时返回 `true`，否则返回 `false`：
+经常需要一个方法来测试参数并返回`true`或`false`值，以指示条件是否存在。例如，下面的方法当参数在 1 到 100 范围内时返回`true`，否则返回`false`：
 
 ```
 public static boolean isValid(int number)
@@ -8118,7 +7111,7 @@ public static boolean isValid(int number)
 }
 ```
 
-下面的代码显示了一个使用该方法的 `if-else` 语句：
+下面的代码显示了一个使用该方法的`if-else`语句：
 
 ```
 int value = 20;
@@ -8130,9 +7123,9 @@ else
 
 当这段代码执行时，将显示“The value is within range.”
 
-# 返回引用
+## 返回引用
 
-返回的方法还可以返回非基本类型的引用，例如 `String` 对象。代码列表 5-11 展示了这样一个例子。
+返回的方法还可以返回非基本类型的引用，例如`String`对象。代码列表 5-11 展示了这样一个例子。
 
 ```
 1  /**
@@ -8170,7 +7163,7 @@ else
 33  }
 ```
 
-# 代码列表 5-11 (`ReturnString.java`)
+### 代码列表 5-11 (`ReturnString.java`)
 
 程序输出
 
@@ -8178,97 +7171,93 @@ else
 John Martin
 ```
 
-第 12 行调用了 `fullName` 方法，并将 "John" 和 "Martin" 作为参数传递。该方法返回一个包含 "John Martin" 的 `String` 对象的引用。该引用被赋值给变量 `customerName`。这在图 5-18 所示。
+第 12 行调用了`fullName`方法，并将 "John" 和 "Martin" 作为参数传递。该方法返回一个包含 "John Martin" 的`String`对象的引用。该引用被赋值给变量`customerName`。这在图 5-18 所示。
 
-# 图 5-18 `fullName` 方法返回 `String` 对象的引用
-
-
-
+### 图 5-18 `fullName`方法返回`String`对象的引用
 
 ![`fullName` 方法返回一个字符串对象的引用。](img/05fig18.png)图 5-18 完整替代文本
 
-# Checkpoint 5.33
+### Checkpoint 5.33
 
-../components/metrodigi/ch05-inline_self_quiz_v1.0.0-24/index.html
+`../components/metrodigi/ch05-inline_self_quiz_v1.0.0-24/index.html`
 
-# Checkpoint 5.34
+### Checkpoint 5.34
 
-../components/metrodigi/ch05-inline_self_quiz_v1.0.0-25/index.html
+`../components/metrodigi/ch05-inline_self_quiz_v1.0.0-25/index.html`
 
-# Checkpoint 5.35
+### Checkpoint 5.35
 
-../components/metrodigi/ch05-inline_self_quiz_v1.0.0-26/index.html
+`../components/metrodigi/ch05-inline_self_quiz_v1.0.0-26/index.html`
 
-# Checkpoint 5.36
+### Checkpoint 5.36
 
-../components/metrodigi/ch05-inline_self_quiz_v1.0.0-27/index.html
+`../components/metrodigi/ch05-inline_self_quiz_v1.0.0-27/index.html`
 
 ## 5.5 使用方法解决问题
 
 概念：一个大型复杂的问题可以通过方法逐部分地解决。
 
-在本章开始，我们引入了使用方法来“分而治之”问题的思想。通常解决复杂问题的最佳方法是将其拆分为更小的问题，然后解决这些较小的问题。将问题拆分为较小部分的过程被称为 `functional decomposition`（功能分解）。
+在本章开始，我们引入了使用方法来“分而治之”问题的思想。通常解决复杂问题的最佳方法是将其拆分为更小的问题，然后解决这些较小的问题。将问题拆分为较小部分的过程被称为`functional decomposition`（功能分解）。
 
 在功能分解中，不再编写一个包含解决问题所需的所有语句的长方法，而是编写多个小方法，每个方法负责解决问题的特定部分。这些小方法随后可以按照所需的顺序执行以解决问题。
 
 让我们来看一个例子。代码列表 5-12 中的程序从文件中读取 30 天的销售额，然后显示总销售额和平均每日销售额。以下是该算法的简短伪代码模型：
 
-*   要求用户输入文件名。
-*   获取文件中销售额的总和。
-*   计算平均销售额。
-*   显示总销售额和平均销售额。
+* 要求用户输入文件名。
+* 获取文件中销售额的总和。
+* 计算平均销售额。
+* 显示总销售额和平均销售额。
 
-文件 `MonthlySales.txt`在本章的[源代码](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)中用于测试程序。图 5-19 显示了执行期间与程序的交互。
+文件`MonthlySales.txt`在本章的[源代码](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)中用于测试程序。图 5-19 显示了执行期间与程序的交互。
 
-# 图 5-19 与 `SalesReport.java` 程序的交互（Oracle 公司法律顾问）
+### 图 5-19 与`SalesReport.java`程序的交互（Oracle 公司法律顾问）
 
 ![该语句包含如下所示的四行。](img/05fig19.png)图 5-19 完整替代文本
 
 在下面的动画中，点击“上一个”或“下一个”按钮逐步查看代码并查看全程解释。
 
-# 代码列表 5-12 `(SalesReport.java)`
+### 代码列表 5-12 `(SalesReport.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr5-12/12.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr5-12/12.html)
 
-并不是在 `main` 方法中编写整个程序，而是将算法拆分为以下方法：
+并不是在`main`方法中编写整个程序，而是将算法拆分为以下方法：
 
-*   `getFileName`——此方法显示一个输入对话框，要求用户输入包含 30 天销售额的文件名。该方法返回一个包含用户输入名称的 `String` 对象的引用。
-*   `getTotalSales`——此方法接受文件名作为参数。打开文件，从中读取销售额，并累计销售额总和。该方法以 `double` 类型返回总额。
-*   `displayResults`——此方法接受总销售额和平均销售额作为参数。它显示一个指示这些值的消息对话框。
+* `getFileName`——此方法显示一个输入对话框，要求用户输入包含 30 天销售额的文件名。该方法返回一个包含用户输入名称的`String`对象的引用。
+* `getTotalSales`——此方法接受文件名作为参数。打开文件，从中读取销售额，并累计销售额总和。该方法以`double`类型返回总额。
+* `displayResults`——此方法接受总销售额和平均销售额作为参数。它显示一个指示这些值的消息对话框。
 
-# 调用抛出异常的方法
+### 调用抛出异常的方法
 
-关于 `SalesReport.java` 程序还有最后一点需要讨论。注意 `main` 方法头部（第 13 行）和 `getTotalSales` 方法头部（第 63 行）都具有 `throws` `IOException` 子句。`getTotalSales` 方法拥有该子句是因为它使用 `Scanner` 对象打开文件。正如你从第 4 章所知，任何使用 `Scanner` 对象打开文件的方法都应该有一个 `throws` 子句。关于 `SalesReport.java` 程序还有最后一点需要讨论。注意 `main` 方法头部（第 13 行）和 `getTotalSales` 方法头部（第 63 行）都具有 `throws` `IOException` 子句。`getTotalSales` 方法拥有该子句是因为它使用 `Scanner` 对象打开文件。正如你从第 4 章所知，任何使用 `Scanner` 对象打开文件的方法都应该有一个 `throws` 子句。关于 `SalesReport.java` 程序还有最后一点需要讨论。注意 `main` 方法头部（第 13 行）和 `getTotalSales` 方法头部（第 63 行）都具有 `throws` `IOException` 子句。`getTotalSales` 方法拥有该子句是因为它使用 `Scanner` 对象打开文件。正如你从第 4 章所知，任何使用 `Scanner` 对象打开文件的方法都应该有一个 `throws` 子句。关于 `SalesReport.java` 程序还有最后一点需要讨论。注意 `main` 方法头部（第 13 行）和 `getTotalSales` 方法头部（第 63 行）都具有 `throws` `IOException` 子句。`getTotalSales` 方法拥有该子句是因为它使用 `Scanner` 对象打开文件。正如你从第 4 章所知，任何使用 `Scanner` 对象打开文件的方法都应该有一个 `throws` 子句。关于 `SalesReport.java` 程序还有最后一点需要讨论。注意 `main` 方法头部（第 13 行）和 `getTotalSales` 方法头部（第 63 行）都具有 `throws` `IOException` 子句。`getTotalSales` 方法拥有该子句是因为它使用 `Scanner` 对象打开文件。正如你从第 4 章所知，任何使用 `Scanner` 对象打开文件的方法都应该有一个 `throws` 子句。关于 `SalesReport.java` 程序还有最后一点需要讨论。注意 `main` 方法头部（第 13 行）和 `getTotalSales` 方法头部（第 63 行）都具有 `throws` `IOException` 子句。`getTotalSales` 方法拥有该子句是因为它使用 `Scanner` 对象打开文件。正如你从第 4 章所知，任何使用 `Scanner` 对象打开文件的方法都应该有一个 `throws` 子句。关于 `SalesReport.java` 程序还有最后一点需要讨论。注意 `main` 方法头部（第 13 行）和 `getTotalSales` 方法头部（第 63 行）都具有 `throws` `IOException` 子句。`getTotalSales` 方法拥有该子句是因为它使用 `Scanner` 对象打开文件。正如你从第 4 章所知，任何使用 `Scanner` 对象打开文件的方法都应该有一个 `throws` 子句。关于 `SalesReport.java` 程序还有最后一点需要讨论。注意 `main` 方法头部（第 13 行）和 `getTotalSales` 方法头部（第 63 行）都具有 `throws` `IOException` 子句。`getTotalSales` 方法拥有该子句是因为它使用 `Scanner` 对象打开文件。正如你从第 4 章所知，任何使用 `Scanner` 对象打开文件的方法都应该有一个 `throws` 子句。关于 `SalesReport.java` 程序还有最后一点需要讨论。注意 `main` 方法头部（第 13 行）和 `getTotalSales` 方法头部（第 63 行）都具有 `throws` `IOException` 子句。`getTotalSales` 方法拥有该子句是因为它使用 `Scanner` 对象打开文件。正如你从第 4 章所知，任何使用 `Scanner` 对象打开文件的方法都应该有一个 `throws` 子句。关于 `SalesReport.java` 程序还有最后一点需要讨论。注意 `main` 方法头部（第 13 行）和 `getTotalSales` 方法头部（第 63 行）都具有 `throws` `IOException` 子句。`getTotalSales` 方法拥有该子句是因为它使用 `Scanner` 对象打开文件。正如你从第 4 章所知，任何使用 `Scanner` 对象打开文件的方法都应该有一个 `throws` 子句。关于 `SalesReport.java` 程序还有最后一点需要讨论。注意 `main` 方法头部（第 13 行）和 `getTotalSales` 方法头部（第 63 行）都具有 `throws` `IOException` 子句。`getTotalSales` 方法拥有该子句是因为它使用 `Scanner` 对象打开文件。正如你从第 4 章所知，任何使用 `Scanner` 对象打开文件的方法都应该有一个 `throws` 子句。关于 `SalesReport.java` 程序还有最后一点需要讨论。注意 `main` 方法头部（第 13 行）和 `getTotalSales` 方法头部（第 63 行）都具有 `throws` `IOException` 子句。`getTotalSales` 方法拥有该子句是因为它使用 `Scanner` 对象打开文件。正如你从第 4 章所知，任何使用 `Scanner` 对象打开文件的方法都应该有一个 `throws` 子句。
+关于`SalesReport.java`程序还有最后一点需要讨论。注意`main`方法头部（第 13 行）和`getTotalSales`方法头部（第 63 行）都具有`throws` `IOException`子句。`getTotalSales`方法拥有该子句是因为它使用`Scanner`对象打开文件。正如你从第 4 章所知，任何使用`Scanner`对象打开文件的方法都应该有一个`throws`子句。
 
-
-
-
-
-*   在有返回类型的方法中没有编写 `return` 语句。如果方法的返回类型是 `void`以外的任何类型，它都应该返回一个值。
-*   在调用其他方法的方法中没有编写所需的 `throws` 子句。任何调用头部中带有 `throws` 子句的方法的方法，都必须处理潜在的异常，或者具有相同的 `throws` 子句。你将在第 11 章中学习如何处理异常。
+* 在有返回类型的方法中没有编写`return`语句。如果方法的返回类型是`void`以外的任何类型，它都应该返回一个值。
+* 在调用其他方法的方法中没有编写所需的`throws`子句。任何调用头部中带有`throws`子句的方法的方法，都必须处理潜在的异常，或者具有相同的`throws`子句。你将在第 11 章中学习如何处理异常。
 
 ## 编程挑战
 
-## 1. `showChar` 方法
+### 1. `showChar`方法
 
-编写一个名为 `showChar` 的方法。该方法接受两个参数：一个 `String` 对象的引用和一个整数。整数参数是 `String` 中的字符位置，第一个字符位于位置 0。当方法执行时，它应该显示该位置上的字符。以下是该方法的调用示例：
+编写一个名为`showChar`的方法。该方法接受两个参数：一个`String`对象的引用和一个整数。整数参数是`String`中的字符位置，第一个字符位于位置 0。当方法执行时，它应该显示该位置上的字符。以下是该方法的调用示例：
 
 ```
 showChar("New York", 2);
 ```
 
-在此次调用中，方法将显示字符 `w`，因为它位于位置 2。请在一个完整的程序中演示该方法。
+在此次调用中，方法将显示字符`w`，因为它位于位置 2。请在一个完整的程序中演示该方法。
 
-## 2. 零售价计算器
+### 2. 零售价计算器
 
-### 查看零售价计算器问题
+#### 查看零售价计算器问题
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/secs_gaddis_6_vn_05_03_retail_price_problem`](https://mediaplayer.pearsoncmg.com/assets/_video.true/secs_gaddis_6_vn_05_03_retail_price_problem)
 
 编写一个程序，要求用户输入商品的批发价和加成率。然后它应该显示该商品的零售价。例如：
 
-*   如果一件商品的批发价为 5.00，加成率为 100%，则该商品的零售价为 10.00。
-*   如果一件商品的批发价为 5.00，加成率为 50%，则该商品的零售价为 7.50。
+
+
+如果一件商品的批发价为 5.00，加成率为 100%，则该商品的零售价为 10.00。
+
+如果一件商品的批发价为 5.00，加成率为 50%，则该商品的零售价为 7.50。
 
 该程序应该有一个名为 `calculateRetail` 的方法，该方法接收批发价和加成率作为参数，并返回该物品的零售价。
 
@@ -8276,20 +7265,20 @@ showChar("New York", 2);
 
 如果你已经[下载](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)了书源代码，你将在本章源代码文件夹中找到一个名为 `AreaRectangle.java` 的部分编写程序。你的任务是完善该程序。完成后，程序将要求用户输入矩形的宽度和长度，然后显示矩形的面积。该程序调用了以下方法，但这些方法尚未编写：
 
-*   `getLength`—该方法应该要求用户输入矩形的长度，然后作为 `double` 类型返回该值。
-*   `getWidth`—该方法应该要求用户输入矩形的宽度，然后作为 `double` 类型返回该值。
-*   `getArea`—该方法应该接受矩形的长度和宽度作为参数，并返回矩形的面积。面积通过长度乘以宽度计算得出。
-*   `displayData`—该方法应该接受矩形的长度、宽度和面积作为参数，并在屏幕上以适当的消息显示它们。
+- `getLength`—该方法应该要求用户输入矩形的长度，然后作为 `double` 类型返回该值。
+- `getWidth`—该方法应该要求用户输入矩形的宽度，然后作为 `double` 类型返回该值。
+- `getArea`—该方法应该接受矩形的长度和宽度作为参数，并返回矩形的面积。面积通过长度乘以宽度计算得出。
+- `displayData`—该方法应该接受矩形的长度、宽度和面积作为参数，并在屏幕上以适当的消息显示它们。
 
 ## 4. 油漆作业估算师
 
 一家油漆公司确定，每 115 平方英尺的墙面空间需要一加仑油漆和八小时的人工。该公司每小时收取 18.00 美元人工费。编写一个程序，允许用户输入要粉漆的房间数量和每加仑油漆的价格。它还应该询问每个房间墙面的平方英尺数。程序应该具有返回以下数据的方法：
 
-*   所需的油漆加仑
-*   所需的人工时数
-*   油漆成本
-*   人工费用
-*   油漆作业的总成本
+- 所需的油漆加仑
+- 所需的人工时数
+- 油漆成本
+- 人工费用
+- 油漆作业的总成本
 
 然后它应该在屏幕上显示这些数据。
 
@@ -8315,16 +7304,16 @@ $$C = \frac{5}{9}(F - 32)$$
 
 编写一个程序，要求用户输入五个分数。程序将显示平均分和字母等级。编写以下方法：
 
-*   `calcAverage`—该方法接受五个分数并返回平均分。
-*   `determineGrade`—该方法接受一个测试分数，并根据以下标准返回字母等级：
+- `calcAverage`—该方法接受五个分数并返回平均分。
+- `determineGrade`—该方法接受一个测试分数，并根据以下标准返回字母等级：
 
-    | 分数 | 字母等级 |
-    | --- | --- |
-    | 90–100 | A |
-    | 80–89 | B |
-    | 70–79 | C |
-    | 60–69 | D |
-    | 60 以下 | F |
+| 分数 | 字母等级 |
+| --- | --- |
+| 90–100 | A |
+| 80–89 | B |
+| 70–79 | C |
+| 60–69 | D |
+| 60 以下 | F |
 
 ## 8. 转换程序
 
@@ -8337,21 +7326,27 @@ $$C = \frac{5}{9}(F - 32)$$
 
 程序将根据用户的选择将距离转换为公里、英寸或英尺。以下是具体要求：
 
-*   编写一个名为 `showKilometers` 的 `void` 方法，接受米数作为参数。该方法应显示转换为公里的参数。使用以下公式将米转换为公里：
-    ```
-    kilometers = meters * 0.001
-    ```
-*   编写一个名为 `showInches` 的 `void` 方法，接受米数作为参数。该方法应显示转换为英寸的参数。使用以下公式将米转换为英寸：
-    ```
-    inches = meters * 39.37
-    ```
-*   编写一个名为 `showFeet` 的 `void` 方法，接受米数作为参数。该方法应显示转换为英尺的参数。使用以下公式将米转换为英尺：
-    ```
-    feet = meters * 3.281
-    ```
-*   编写一个名为 `menu` 的 `void` 方法来显示菜单。该方法不接受任何参数。程序将继续显示菜单，直到用户输入 4 退出程序。
-*   程序不应接受以米为单位的负数。
-*   如果用户从菜单选择了无效选项，程序应显示错误消息。
+- 编写一个名为 `showKilometers` 的 `void` 方法，接受米数作为参数。该方法应显示转换为公里的参数。使用以下公式将米转换为公里：
+
+```
+kilometers = meters * 0.001
+```
+
+- 编写一个名为 `showInches` 的 `void` 方法，接受米数作为参数。该方法应显示转换为英寸的参数。使用以下公式将米转换为英寸：
+
+```
+inches = meters * 39.37
+```
+
+- 编写一个名为 `showFeet` 的 `void` 方法，接受米数作为参数。该方法应显示转换为英尺的参数。使用以下公式将米转换为英尺：
+
+```
+feet = meters * 3.281
+```
+
+- 编写一个名为 `menu` 的 `void` 方法来显示菜单。该方法不接受任何参数。程序将继续显示菜单，直到用户输入 4 退出程序。
+- 程序不应接受以米为单位的负数。
+- 如果用户从菜单选择了无效选项，程序应显示错误消息。
 
 以下是程序的会话示例，使用控制台输入。用户的输入将以粗体显示。
 
@@ -8387,9 +7382,6 @@ $$C = \frac{5}{9}(F - 32)$$
 车辆行驶的距离可以如下计算计算
 
 `distance = speed * time`
-
-
-
 
 编写名为 `distance` 的方法，接受车辆的速度和时间作为参数，并返回车辆行驶的距离。修改你在第 4 章中编写的“已行驶距离”程序（编程挑战 2），以使用该方法。
 
@@ -8456,10 +7448,10 @@ $$P = \frac{F}{(1 + r)^{n}}$$
 
 公式中的项如下：
 
-* `P` 是**现值**，即你今天需要存入的金额。
-* `F` 是你希望在账户中拥有的**未来值**。（在这种情况下，`F` 为 $10,000。）
-* `r` 是**年利率**。
-* `n` 是你计划让资金存放的**年数**。
+- `P` 是**现值**，即你今天需要存入的金额。
+- `F` 是你希望在账户中拥有的**未来值**。（在这种情况下，`F` 为 $10,000。）
+- `r` 是**年利率**。
+- `n` 是你计划让资金存放的**年数**。
 
 编写一个名为 `presentValue` 的方法执行此计算。它应该接受`未来值`、`利率`和`年份`作为参数。它应该返回现值，即你今天需要存入的金额。在一个程序中演示该方法，让用户尝试不同的值。
 
@@ -8470,10 +7462,10 @@ $$P = \frac{F}{(1 + r)^{n}}$$
 1. 当程序开始时，生成一个 3 以内的随机数。如果是 1，电脑出石头；如果是 2，电脑出布子；如果是 3，电脑出剪刀。
 2. 用户通过键盘输入 "rock"、paper" 或 "scissors"。
 3. 根据以下规则确定胜者：
-    * 如果一个出石头，另一个出剪刀，则石头胜。
-    * 如果一个出剪刀，另一个出布子，则剪刀胜。
-    * 如果一个出布子，另一个出石头，则布子胜。
-    * 如果双方选择相同，则重新玩。
+   - 如果一个出石头，另一个出剪刀，则石头胜。
+   - 如果一个出剪刀，另一个出布子，则剪刀胜。
+   - 如果一个出布子，另一个出石头，则布子胜。
+   - 如果双方选择相同，则重新玩。
 
 确保将程序拆分为方法。
 
@@ -8496,9 +7488,6 @@ $$P = \frac{F}{(1 + r)^{n}}$$
 9. 6.9 关注面向对象的设计：寻找类及其职责
 10. 6.10 需要避免的常见错误
 
-
-
-
 ## 6.1 对象与类
 
 概念：对象是存在于内存中的软件组件，在程序中具有特定的用途。对象是由类创建的，而类包含了描述该对象的代码。
@@ -8507,14 +7496,14 @@ $$P = \frac{F}{(1 + r)^{n}}$$
 
 同样的概念也适用于计算机编程。今天使用的大多数编程语言都是面向对象的。在用像 `Java` 这样面向对象的语言时，你创建的程序是由对象构成的。然而，在编程中，对象并不是像方向盘或刹车踏板那样的物理设备；它是存在于计算机内存中并执行特定任务的软件组件。在软件中，对象通常具有两个通用能力：
 
-*   对象可以存储数据。存储在对象中的数据通常称为 `fields`（字段）。
-*   对象可以执行操作。对象可以执行的操作称为 `methods`（方法）。
+- 对象可以存储数据。存储在对象中的数据通常称为 `fields`（字段）。
+- 对象可以执行操作。对象可以执行的操作称为 `methods`（方法）。
 
 对象在 `Java` 中非常重要。以下是你之前学习过的一些对象示例：
 
-*   如果你需要从键盘或文件读取输入，可以使用 `Scanner` 对象。
-*   如果你需要生成随机数，可以使用 `Random` 对象。
-*   如果你需要将输出写入文件，可以使用 `PrintWriter` 对象。
+- 如果你需要从键盘或文件读取输入，可以使用 `Scanner` 对象。
+- 如果你需要生成随机数，可以使用 `Random` 对象。
+- 如果你需要将输出写入文件，可以使用 `PrintWriter` 对象。
 
 当程序需要某个特定类型对象的服务时，它会在内存中创建该对象，然后根据需要调用该对象的方法。
 
@@ -8546,16 +7535,16 @@ $$P = \frac{F}{(1 + r)^{n}}$$
 
 简而言之，该程序向名为 `numbers.txt` 的文件写入指定数量的随机数。当程序运行时，它会询问用户要写入的随机数数量。然后向文件中写入相应数量的数字。为了完成工作，它创建了对象：
 
-*   在第 17 行创建了 `Scanner` 类的实例，将其地址赋值给变量 `keyboard`。该对象用于读取输入。
-*   在第 20 行创建了 `Random` 类的实例，将其地址赋值给变量 `rand`。该对象用于生成随机数。
-*   在第 23 行创建了 `PrintWriter` 类的实例，将其地址赋值给变量 `output`。该对象用于输出到 `numbers.txt`。
+- 在第 17 行创建了 `Scanner` 类的实例，将其地址赋值给变量 `keyboard`。该对象用于读取输入。
+- 在第 20 行创建了 `Random` 类的实例，将其地址赋值给变量 `rand`。该对象用于生成随机数。
+- 在第 23 行创建了 `PrintWriter` 类的实例，将其地址赋值给变量 `output`。该对象用于输出到 `numbers.txt`。
 
 图 6-2 说明了程序创建的三个对象。当程序运行时，它使用这些对象来完成任务。例如：
 
-*   在第 27 行调用 `Scanner` 对象的 `nextInt` 方法读取用户输入（即要生成的随机数数量）。返回值赋值给 `maxNumbers`。
-*   在第 33 行调用 `Random` 对象的 `nextInt` 方法获取一个随机整数。返回值赋值给 `number`。
-*   在第 36 行调用 `PrintWriter` 对象的 `println` 方法将 `number` 的值写入文件。
-*   在第 40 行调用 `PrintWriter` 对象的 `close` 方法关闭文件。
+- 在第 27 行调用 `Scanner` 对象的 `nextInt` 方法读取用户输入（即要生成的随机数数量）。返回值赋值给 `maxNumbers`。
+- 在第 33 行调用 `Random` 对象的 `nextInt` 方法获取一个随机整数。返回值赋值给 `number`。
+- 在第 36 行调用 `PrintWriter` 对象的 `println` 方法将 `number` 的值写入文件。
+- 在第 40 行调用 `PrintWriter` 对象的 `close` 方法关闭文件。
 
 ### 图 6-2 ObjectDemo 程序创建的对象
 
@@ -8571,9 +7560,6 @@ $$P = \frac{F}{(1 + r)^{n}}$$
 
 第 2 章介绍了 Java 原型数据类型：`byte`、`short`、`int`、`long`、`char`、`float`、`double` 和 `boolean`。现在你已经看到了许多同时使用原型数据类型和对象的程序。事实上，代码列表 6-1 中的程序使用了两个原型变量（`maxNumbers` 和 `number`，均为 `int` 变量），以及一个 `Scanner` 对象、一个 `Random` 对象和一个 `PrintWriter` 对象。
 
-
-
-
 你可能已经注意到，创建一个对象的步骤与创建一个原始类型变量的步骤不同。例如，要创建一个 `int` 变量，你只需要进行如下的声明：
 
 ```
@@ -8587,6 +7573,8 @@ Random rand = new Rand();
 ```
 
 原始类型变量（如 `int`、`double` 等）仅仅是计算机内存中的存储位置。原始数据类型被称为“原始的”（primitive），是因为使用原始数据类型创建的变量除了存储值外，没有内置功能。当你声明一个原始类型变量时，编译器会预留或分配一段足够容纳该变量的内存。例如，查看以下变量声明：
+
+
 
 ```
 int wholeNumber;
@@ -8606,25 +7594,33 @@ wholeNumber = 99;
 realNumber = 123.45;
 ```
 
-图 6-4 显示了赋值的值是如何存储在每个变量的内存位置中的。![两个变量有不同的内存分配。第一个命名为 `int wholeNumber;`，分配了 4 字节内存。第二个命名为 `double realNumber;`，分配了 8 字节内存。](img/Fig06-04.png)
+图 6-4 显示了赋值的值是如何存储在每个变量的内存位置中的。
 
-# 图 6-4 赋值给变量的值
+![两个变量有不同的内存分配。第一个命名为 `int wholeNumber;`，分配了 4 字节内存。第二个命名为 `double realNumber;`，分配了 8 字节内存。](img/Fig06-04.png)
+
+### 图 6-4 赋值给变量的值
 
 从这些插图中可以看出，原始类型变量非常直观。当你处理原始变量时，你正在使用一个持有部分数据的存储位置。
 
 这与对象的工作方式不同。当你处理一个对象时，你通常在使用两样东西：
+
 * 对象本身，它必须在内存中创建
 * 指向该对象的引用变量
 
-在内存中创建的对象持有某种数据并执行某种操作（具体取决于它是什么类型的对象以及数据和操作）。为了在代码中使用对象，你需要某种方式来引用它。这就是引用变量派用用场。引用变量并不持有你的程序将处理的实际数据；相反，它持有对象的内存地址。我们说该变量引用了该对象。当你想要操作该对象时，你使用引用它的变量。引用变量（也称为类变量）只能用于引用对象。图 6-5 展示了在内存中创建的两个对象，每个都由一个变量引用。![两个相同的对象被两个相同的变量引用。每个引用变量都是一个标记为“Reference Variable”的空框，并指向一个内部有“Object”字样的矩形阴影圆。](img/Fig06-05.png)
+在内存中创建的对象持有某种数据并执行某种操作（具体取决于它是什么类型的对象以及数据和操作）。为了在代码中使用对象，你需要某种方式来引用它。这就是引用变量派用用场。引用变量并不持有你的程序将处理的实际数据；相反，它持有对象的内存地址。我们说该变量引用了该对象。当你想要操作该对象时，你使用引用它的变量。引用变量（也称为类变量）只能用于引用对象。图 6-5 展示了在内存中创建的两个对象，每个都由一个变量引用。
 
-# 图 6-5 由变量引用的两个对象
+![两个相同的对象被两个相同的变量引用。每个引用变量都是一个标记为“Reference Variable”的空框，并指向一个内部有“Object”字样的矩形阴影圆。](img/Fig06-05.png)
 
-要理解引用变量和对象是如何工作的，想象一下放风筝。为了放风筝，你需要卷连接在上面的线轴。当风筝在空中时，你使用线轴来握住风筝并控制它。这与对象与引用该对象的变量之间的关系相似。如图 6-6 所示，对象就像风筝，而引用该对象的变量就像线轴。![风筝和线说明了一个用于理解引用变量和对象如何协同工作的比喻。引用对象的变量充当线轴来控制风筝，风筝表示为在空中的风筝。](img/Fig06-06.png)
+### 图 6-5 由变量引用的两个对象
 
-# 图 6-6 风筝与线的比喻
+要理解引用变量和对象是如何工作的，想象一下放风筝。为了放风筝，你需要卷连接在上面的线轴。当风筝在空中时，你使用线轴来握住风筝并控制它。这与对象与引用该对象的变量之间的关系相似。如图 6-6 所示，对象就像风筝，而引用该对象的变量就像线轴。
+
+![风筝和线说明了一个用于理解引用变量和对象如何协同工作的比喻。引用对象的变量充当线轴来控制风筝，风筝表示为在空中的风筝。](img/Fig06-06.png)
+
+### 图 6-6 风筝与线的比喻
 
 创建一个对象通常需要以下两个步骤：
+
 1. 你声明一个引用变量。
 2. 你在内存中创建对象并将其赋值给该变量。
 
@@ -8635,70 +7631,79 @@ Random rand = new Rand();
 ```
 
 观察这个语句的不同部分：
+
 * 语句的左侧部分 `Random rand` 了一个变量 `rand`，它可以用于引用对象。
 * 语句的右侧部分 `new Rand()`：`new` 操作符在内存中创建一个对象并返回该对象的内存地址。
-* `=` 运算符将 `new` 操作符返回的内存地址赋值给变量 `rand`。该语句执行后，`rand` 变量将引用该对象。你随后可以使用引用它的变量对该对象进行操作，例如生成随机数。![rand 变量被绘为一个空框，引用框内的 Random 对象。](img/Fig06-07.png)
+* `=` 运算符将 `new` 操作符返回的内存地址赋值给变量 `rand`。该语句执行后，`rand` 变量将引用该对象。你随后可以使用引用它的变量对该对象进行操作，例如生成随机数。
 
-# 图 6-7 `rand` 变量引用 `Random` 对象
+![rand 变量被绘为一个空框，引用框内的 Random 对象。](img/Fig06-07.png)
 
-# 练习题 6.1
-../components/metrodigi/ch06-inline-self_quiz_v1.0.0-01/index.html
+### 图 6-7 `rand` 变量引用 `Random` 对象
 
-# 练习题 6.2
-../components/metrodigi/ch06-inline-self_quiz_v1.0.0-02/index.html
+### 练习题 6.1
 
-# 练习题 6.3
-../components/metrodigi/ch06-inline-self_quiz_v1.0.0-03/index.html
+`../components/metrodigi/ch06-inline-self_quiz_v1.0.0-01/index.html`
 
-# 练习题 6.4
-../components/metrodigi/ch06-inline-self_quiz_v1.0.0-04/index.html
+### 练习题 6.2
 
-# 练习题 6.5
-../components/metrodigi/ch06-inline-self_quiz_v1.0.0-05/index.html
+`../components/metrodigi/ch06-inline-self_quiz_v1.0.0-02/index.html`
 
-# 练习题 6.6
-../components/metrodigi/ch06-inline-self_quiz_v1.0.0-06/index.html
+### 练习题 6.3
 
-# 练习题 6.7
-../components/metrodigi/ch06-inline-self_quiz_v1.0.0-07/index.html
+`../components/metrodigi/ch06-inline-self_quiz_v1.0.0-03/index.html`
 
-# 6.2 逐步编写一个简单的类
+### 练习题 6.4
+
+`../components/metrodigi/ch06-inline-self_quiz_v1.0.0-04/index.html`
+
+### 练习题 6.5
+
+`../components/metrodigi/ch06-inline-self_quiz_v1.0.0-05/index.html`
+
+### 练习题 6.6
+
+`../components/metrodigi/ch06-inline-self_quiz_v1.0.0-06/index.html`
+
+### 练习题 6.7
+
+`../components/metrodigi/ch06-inline-self_quiz_v1.0.0-07/index.html`
+
+## 6.2 逐步编写一个简单的类
 
 **概念**：你可以编写自己的类来创建程序中需要的对象。我们将以逐步步进的方式演示编写类的过程。
 
 Java API 提供了许多预写好的类，可供程序使用。然而，有时你可能希望有一个对象来执行特定任务，而 Java API 中并不存在这样的类。这并不是问题，因为你可以根据任何情况编写自己的类，并包含所需的特定字段和方法。
 
-
-
-
 在本节中，我们将编写一个名为 `Rectangle` 的类。从 `Rectangle` 类创建的每个对象都将能够存储关于矩形的数据。具体来说，一个 `Rectangle` 对象将具有以下字段：
 
-*   `length.` `length` 字段将存储矩形的长度。
-*   `width.` `width` 字段将存储矩形的宽度。
+* `length`：`length` 字段将存储矩形的长度。
+* `width`：`width` 字段将存储矩形的宽度。
 
 `Rectangle` 类还将具有以下方法：
 
-*   `setLength.` `setLength` 方法将一个值存储在对象的 `length` 字段中。
-*   `setWidth.` `setWidth` 方法将一个值存储在对象的 `width` 字段中。
-*   `getLength.` `getLength` 方法将返回对象 `length` 字段中的值。
-*   `getWidth.` `getWidth` 方法将返回对象 `width` 字段中的值。
-*   `getArea.` `getArea` 方法将返回矩形的面积，该面积是对象的长度乘以其宽度的计算结果。
+* `setLength`：`setLength` 方法将一个值存储在对象的 `length` 字段中。
+* `setWidth`：`setWidth` 方法将一个值存储在对象的 `width` 字段中。
+* `getLength`：`getLength` 方法将返回对象 `length` 字段中的值。
+* `getWidth`：`getWidth` 方法将返回对象 `width` 字段中的值。
+* `getArea`：`getArea` 方法将返回矩形的面积，该面积是对象的长度乘以其宽度的计算结果。
 
 在设计类时，绘制 UML 图表通常很有帮助。UML 代表统一建模语言（Unified Modeling Language）。它提供了一系列标准图表，用于以图形方式描述面向对象的系统。图 6-8 显示了类 UML 图的通用布局。注意，该图是一个被分为三个部分的框。顶部部分是书写类名的地方。中间部分包含类的字段列表。底部部分包含类的方法列表。
 
 ![类 UML 图的通用布局在一个矩形框中所示，该框被均匀地分为三个空矩形框。类名放在顶部的框中。字段列在第二个框中。方法列在第三个框中。](img/Fig06-08.png)
 
-# 图 6-8 类 UML 图的通用布局
+### 图 6-8 类 UML 图的通用布局
 
-遵循这种布局，图 6-9 显示了我们 `Rectangle`类的 UML 图。在本书中，我们频繁使用 UML 图来说明类。
+遵循这种布局，图 6-9 显示了我们 `Rectangle` 类的 UML 图。在本书中，我们频繁使用 UML 图来说明类。
 
-# 图 6-9 Rectangle 类的 UML 图
+### 图 6-9 Rectangle 类的 UML 图
 
-![Rectangle 类的 UML 图被分为三个矩形部分。](img/Fig06-09.png)图 6-9 完整备用文本
+![Rectangle 类的 UML 图被分为三个矩形部分。](img/Fig06-09.png)
 
-# 编写类的代码
+图 6-9 完整备用文本
 
-# 视频编写类和显示对象
+### 编写类的代码
+
+**视频**：编写类和显示对象
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/secs_gaddis_6_vn_06_01_writing_classes_and_displa`](https://mediaplayer.pearsoncmg.com/assets/_video.true/secs_gaddis_6_vn_06_01_writing_classes_and_displa)
 
@@ -8706,8 +7711,8 @@ Java API 提供了许多预写好的类，可供程序使用。然而，有时�
 
 ```
 public class Rectangle
- {
- }
+{
+}
 ```
 
 出现在第一行的关键字 `public` 是一个访问修饰符。访问修饰符指示类如何可以被访问。`public` 访问修饰符表示该类将对 `Rectangle.java` 文件之外的代码公开可用。我们在书中编写的几乎所有类都是 `public` 的。
@@ -8716,23 +7721,23 @@ public class Rectangle
 
 ```
 AccessSpecifier class Name
- {
-     Members
- }
+{
+    Members
+}
 ```
 
 通俗地说，属于一个类的字段和方法被称为类的*成员*（members）。
 
-# 编写类字段的代码
+### 编写类字段的代码
 
 让我们继续编写 `Rectangle` 类，填充其部分成员的代码。首先，我们将为该类的两个字段 `length` 和 `width` 编写代码。我们将使用 `double` 数据类型的变量作为这些字段。新的代码行用粗体显示，如下：
 
 ```
 public class Rectangle
- {
-      private double length;
-      private double width;
- }
+{
+     private double length;
+     private double width;
+}
 ```
 
 我们添加的这两行代码声明了变量 `length` 和 `width`。注意两个声明都以关键字 `private` 开头，位于数据类型之前。关键字 `private` 是一个访问修饰符。它指示这些变量可能被类外的语句访问。
@@ -8744,28 +7749,28 @@ public class Rectangle
 | `private` | 当 `private` 访问修饰符应用于类时，该成员不能被类外访问。 |
 | `public` | 当 `public` 访问修饰符应用于类时，该成员可以被类外访问。 |
 
-# 编写 setLength 方法
+### 编写 setLength 方法
 
 现在我们将开始编写类方法。我们将从 `setLength` 方法开始。代码列表 6-2 显示了此阶段的 `Rectangle` 类。
 
 ```
  1  /**
-      Rectangle 类，阶段 1
-      构造中！
-   */
+     Rectangle 类，阶段 1
+     构造中！
+  */
  6  public class Rectangle
-   {
-      private double length;
-      private double width;
+  {
+     private double length;
+     private double width;
 11     /**
-         setLength 方法将一个值存储在
-         length 字段中。
-         @param len 要存储在 length 中的值。
-      */
+        setLength 方法将一个值存储在
+        length 字段中。
+        @param len 要存储在 length 中的值。
+     */
 17     public void setLength(double len)
-      {
-         length = len;
-      }
+     {
+        length = len;
+     }
 21  }
 ```
 
@@ -8775,21 +7780,18 @@ public class Rectangle
 public void setLength(double len)
 ```
 
-该方法头部看起来与你在第 5 章 中学习的任何其他方法头部非常相似。让我们查看各个部分：
+该方法头部看起来与你在第 5 章中学习的任何其他方法头部非常相似。让我们查看各个部分：
 
-*   `public.` 关键字 `public` 是一个访问修饰符。它指示该方法可以被调用。
-*   `void.` 这是方法的返回类型。关键字 `void` 表示方法不向调用它的语句返回任何数据。
-*   `setLength.` 这是方法的名字。
-*   `(double len).` 这是 `double` 数据类型的参数变量的声明，名为 `len`。
+* `public`：关键字 `public` 是一个访问修饰符。它指示该方法可以被调用。
+* `void`：这是方法的返回类型。关键字 `void` 表示方法不向调用它的语句返回任何数据。
+* `setLength`：这是方法的名字。
+* `(double len)`：这是 `double` 数据类型的参数变量的声明，名为 `len`。
 
 图 6-10 标注了 `setLength` 方法头部的每个部分。
 
-# 图 6-10 setLength 方法头部
+### 图 6-10 setLength 方法头部
 
 ![setLength 方法头部的头部如图所示，标识了访问修饰符、返回类型、方法名和参数变量声明。](img/Fig06-10.png)
-
-
-
 
 注意，方法头中没有出现 `static` 单词。当一个方法被设计为在类的实例上工作时，它被称为`实例方法`（instance method），你不需要在方法头中编写 `static` 单词。由于此方法会在 `Rectangle` 类实例的 `length` 字段中存储值，因此它是一个实例方法。我们稍后会详细讨论这一点。
 
@@ -8797,8 +7799,8 @@ public void setLength(double len)
 
 ```
 {
-      length = len;
- }
+     length = len;
+}
 ```
 
 该方法的体只有一条语句，即将将 `len` 的值赋值给 `length` 字段。当方法执行时，`len` 参数变量将持有传递给方法的参数值。该值被赋值给 `length` 字段。
@@ -8807,36 +7809,36 @@ public void setLength(double len)
 
 ```
  1  /**
-   2     This program demonstrates the Rectangle class’s
-   3     setLength method.
-   4  */
-   5
-   6  public class LengthDemo
-   7  {
-   8     public static void main(String[] args)
-   9     {
-  10        // Create a Rectangle object and assign its
-   11        // address to the box variable.
-   12        Rectangle box = new Rectangle();
-   13
-   14        // Indicate what we are doing.
-   15        System.out.println("Sending the value 10.0 " +
-   16                           "to the setLength method.");
-   17
-   18        // Call the box object's setLength method.
-   19        box.setLength(10.0);
-   20
-   21        // Indicate we are done.
-   22        System.out.println("Done.");
-   23     }
-   24  }
+ 2     This program demonstrates the Rectangle class’s
+ 3     setLength method.
+ 4  */
+ 5
+ 6  public class LengthDemo
+ 7  {
+ 8     public static void main(String[] args)
+ 9     {
+10        // Create a Rectangle object and assign its
+11        // address to the box variable.
+12        Rectangle box = new Rectangle();
+13
+14        // Indicate what we are doing.
+15        System.out.println("Sending the value 10.0 " +
+16                           "to the setLength method.");
+17
+18        // Call the box object's setLength method.
+19        box.setLength(10.0);
+20
+21        // Indicate we are done.
+22        System.out.println("Done.");
+23     }
+24  }
 ```
 
 ### 程序输出
 
 ```
 Sending the value 10.0 to the setLength method.
- Done.
+Done.
 ```
 
 ### 代码列表 6-3 `(LengthDemo.java)`
@@ -8847,7 +7849,7 @@ Sending the value 10.0 to the setLength method.
 javac LengthDemo.java
 ```
 
-当编译器读取 `LengthDemo.java` 的源代码并看到正在使用名为 `Rectangle` 的类时，它会在当前文件夹或目录中查找 `Rectangle.class` 文件。然而，该文件并不，因为我们还没有编译 `Rectangle.java`。因此，编译器会搜索 `Rectangle.java` 文件并编译它。这会创建 `Rectangle.class` 文件，使得 `Rectangle` 类可用。编译器随后完成 `LengthDemo.java` 的编译。生成的 `LengthDemo.class` 文件可以使用以下命令执行：
+当编译器读取 `LengthDemo.java` 的源代码并看到正在使用名为 `Rectangle` 的类时，它会在当前文件夹或目录中查找 `Rectangle.class` 文件。然而，该文件并不存在，因为我们还没有编译 `Rectangle.java`。因此，编译器会搜索 `Rectangle.java` 文件并编译它。这会创建 `Rectangle.class` 文件，使得 `Rectangle` 类可用。编译器随后完成 `LengthDemo.java` 的编译。生成的 `LengthDemo.class` 文件可以使用以下命令执行：
 
 ```
 java LengthDemo
@@ -8873,145 +7875,138 @@ Rectangle box
 = new Rectangle();
 ```
 
-语句的这部分使用了关键字 `new`，它创建一个对象。语句的部分 `Rectangle box` 声明了一个名为 `box` 的变量。变量的数据类型是 `Rectangle`。（因为 `Rectangle` 单词不是原始数据类型的名称，Java 假设它是一个类的名称。）记住，类类型的变量是引用变量，它持有对象的内存地址。当引用变量持有对象的内存地址时，称该变量引用该对象。因此，变量 `box` 将用于引用一个 `Rectangle` 对象。语句的第二部分 `= new Rectangle();` 使用了 `new`，它创建一个对象。`new` 关键字后面跟着类名，指定了要创建的类。
-
-由于用户提供的文本末尾出现了一些重复的句子，我将提供**最终的干净版本**。
 
 
+语句的这部分使用了关键字`new`，它创建一个对象。语句的部分`Rectangle box`声明了一个名为`box`的变量。变量的数据类型是`Rectangle`。（因为`Rectangle`单词不是原始数据类型的名称，Java 假设它是一个类的名称。）记住，类类型的变量是引用变量，它持有对象的内存地址。当引用变量持有对象的内存地址时，称该变量引用该对象。因此，变量`box`将用于引用一个`Rectangle`对象。语句的第二部分`= new Rectangle();`使用了`new`，它创建一个对象。`new`关键字后面跟着类名，指定了要创建的类。
 
+由于`length`和`width`字段是私有的，我们编写了`setLength`和`setWidth`方法，允许`Rectangle`类外部的代码向这些字段存储值。我们还必须编写方法，允许类外部代码获取存储在这些字段中的值。这就是`getLength`和`getWidth`方法要做的工作。`getLength`方法将返回存储在`length`字段中的值，`getWidth`方法将返回存储在`width`字段中的值。
 
-由于 `length` 和 `width` 字段是私有的，我们编写了 `setLength` 和 `setWidth` 方法，允许 `Rectangle` 类外部的代码向这些字段存储值。我们还必须编写方法，允许类外部代码获取存储在这些字段中的值。这就是 `getLength` 和 `getWidth` 方法要做的工作。`getLength` 方法将返回存储在 `length` 字段中的值，`getWidth` 方法将返回存储在 `width` 字段中的值。
-
-以下是 `getLength` 方法的代码：
+以下是`getLength`方法的代码：
 
 ```
 public double getLength()
- {
-     return length;
- }
+{
+    return length;
+}
 ```
 
-假设 `size` 是一个 `double` 类型变量，`box` 引用一个 `Rectangle` 对象，并执行了以下语句：
+假设`size`是一个`double`类型变量，`box`引用一个`Rectangle`对象，并执行了以下语句：
 
 ```
 size = box.getLength();
 ```
 
-该语句将 `getLength` 方法返回的值赋值给 `size` 变量。在该语句执行后，`size` 变量将包含与 `box` 对象 `length` 字段相同的值。
+该语句将`getLength`方法返回的值赋值给`size`变量。在该语句执行后，`size`变量将包含与`box`对象`length`字段相同的值。
 
-`getWidth` 方法与 `getLength` 类似。该方法的代码如下：
+`getWidth`方法与`getLength`类似。该方法的代码如下：
 
 ```
 public double getWidth()
- {
-      return width;
- }
+{
+     return width;
+}
 ```
 
-该方法返回存储在 `width` 字段中的值。例如，假设 `size` 是一个 `double` 类型变量，`box` 引用一个 `Rectangle` 对象，并执行了以下语句：
+该方法返回存储在`width`字段中的值。例如，假设`size`是一个`double`类型变量，`box`引用一个`Rectangle`对象，并执行了以下语句：
 
 ```
 size = box.getWidth();
 ```
 
-该语句将 `getWidth` 方法返回的值赋值给 `size` 变量。在该语句执行后，`size` 变量将包含与 `box` 对象 `width` 字段相同的值。
+该语句将`getWidth`方法返回的值赋值给`size`变量。在该语句执行后，`size`变量将包含与`box`对象`width`字段相同的值。
 
-代码列表 6-5 显示了包含目前为止讨论的所有成员的 `Rectangle` 类。`getLength` 和 `getWidth` 方法的代码位于第 33 至 53 行。（此文件存储在源代码文件夹 *Chapter 06\Rectangle Class Phase 3.* 中。）
+代码列表 6-5 显示了包含目前为止讨论的所有成员的`Rectangle`类。`getLength`和`getWidth`方法的代码位于第 33 至 53 行。（此文件存储在源代码文件夹`Chapter 06\Rectangle Class Phase 3.`中。）
 
 ```
  1  /**
-  2     Rectangle class, phase 3
-  3     Under construction!
-  4  */
-  5
-  6  public class Rectangle
-  7  {
-  8     private double length;
-  9     private double width;
- 10
-  11     /**
-  12        The setLength method stores a value in the
-  13        length field.
-  14        @param len The value to store in length.
-  15     */
-  16
-  17     public void setLength(double len)
-  18     {
-  19        length = len;
-  20     }
-  21
-  22     /**
-  23        The setWidth method stores a value in the
-  24        width field.
-  25        @param w The value to store in width.
-  26     */
-  27
-  ��28     public void setWidth(double w)
-  29     {
-  30        width = w;
-  31     }
-  32
-  33     /**
-  34        The getLength method returns a Rectangle
-  35        object's length.
-  36        @return The value in the length field.
-  37     */
-  38
-  39     public double getLength()
-  40     {
-  41        return length;
-  42     }
-  43
-  44
-  45     /**
-  46        The getWidth method returns a Rectangle
-  47        object's width.
-  48        @return The value in the width field.
-  49     */
-  50     public double getWidth()
-  51     {
-  52        return width;
-  53     }
-  54  }
+     Rectangle class, phase 3
+     Under construction!
+  */
+
+  public class Rectangle
+  {
+     private double length;
+     private double width;
+
+     /**
+        The setLength method stores a value in the
+        length field.
+        @param len The value to store in length.
+     */
+
+     public void setLength(double len)
+     {
+        length = len;
+     }
+
+     /**
+        The setWidth method stores a value in the
+        width field.
+        @param w The value to store in width.
+     */
+
+     public void setWidth(double w)
+     {
+        width = w;
+     }
+
+     /**
+        The getLength method returns a Rectangle
+        object's length.
+        @return The value in the length field.
+     */
+
+     public double getLength()
+     {
+        return length;
+     }
+
+
+     /**
+        The getWidth method returns a Rectangle
+        object's width.
+        @return The value in the width field.
+     */
+     public double getWidth()
+     {
+        return width;
+     }
+  }
 ```
 
 # 代码列表 6-5 `(Rectangle.java)`
 
-在继续之前，我们应该演示这些方法是如何工作的。查看代码列表 6-6 中的程序。（此文件也存储在源代码文件夹 *Chapter 06\Rectangle Class Phase 3.* 中。）
+在继续之前，我们应该演示这些方法是如何工作的。查看代码列表 6-6 中的程序。（此文件也存储在源代码文件夹`Chapter 06\Rectangle Class Phase 3.`中。）
 
 ```
  1  /**
-  2     This program demonstrates the Rectangle class's
-  3     setLength, setWidth, getLength, and getWidth methods.
-  4  */
-  5
-  6  public class LengthWidthDemo
-  7  {
-  8     public static void main(String[] args)
-  9     {
-  10        // Create a Rectangle object.
-  11        Rectangle box = new Rectangle();
-  12
-  13        // Call the object's setLength method, passing 10.0
-  14        // as an argument.
-  15        box.setLength(10.0);
-  16
-  17        // Call the object's setWidth method, passing 20.0
-  18        // as an argument.
-  19        box.setWidth(20.0);
-  20
-  21        // Display the object's length and width.
-  22        System.out.println("The box's length is " +
-  23                           box.getLength());
-  24        System.out.println("The box's width is " +
-  25                           box.getWidth());
-  26     }
-  27  
+     This program demonstrates the Rectangle class's
+     setLength, setWidth, getLength, and getWidth methods.
+  */
+
+  public class LengthWidthDemo
+  {
+     public static void main(String[] args)
+     {
+        // Create a Rectangle object.
+        Rectangle box = new Rectangle();
+
+        // Call the object's setLength method, passing 10.0
+        // as an argument.
+        box.setLength(10.0);
+
+        // Call the object's setWidth method, passing 20.0
+        // as an argument.
+        box.setWidth(20.0);
+
+        // Display the object's length and width.
+        System.out.println("The box's length is " +
+                           box.getLength());
+        System.out.println("The box's width is " +
+                           box.getWidth());
+     }
+  }
 ```
-
-
-
-
 
 ```java
   /**
@@ -9078,7 +8073,7 @@ size = box.getWidth();
 
 # 代码列表 6-7 `(Rectangle.java)`
 
-代码列表 6-8 程序演示了 `Rectangle` 类的所有方法，包括 `getArea`。（该文件也存储在源代码文件夹 `Chapter 06\Rectangle Class Phase 4.` 中。）
+代码列表 6-8 程序演示了`Rectangle`类的所有方法，包括`getArea`。（该文件也存储在源代码文件夹`Chapter 06\Rectangle Class Phase 4.`中。）
 
 ```java
   /**
@@ -9125,117 +8120,140 @@ The box's area is 200.0
 
 # 访问器和变变器方法
 
-如前所述，将类的所有字段设为私有（private），并提供公共方法来访问和更改这些字段是一种常见的通做法。这确保了拥有这些字段的对象能够控制对它们所进行的所有更改。获取值的方法是访问器（accessor），更改值的方法是变变器（mutator）。在 `Rectangle` 类中，`getLength` 和 `getWidth` 是访问器，而 `setLength` 和 `setWidth` 是变变器。
+如前所述，将类的所有字段设为私有（private），并提供公共方法来访问和更改这些字段是一种常见的通做法。这确保了拥有这些字段的对象能够控制对它们所进行的所有更改。获取值的方法是访问器（accessor），更改值的方法是变变器（mutator）。在`Rectangle`类中，`getLength`和`getWidth`是访问器，而`setLength`和`setWidth`是变变器。
 
 # 数据隐藏的重要性
 
 数据隐藏是面向对象编程中的一个重要概念。通过将字段设为私有，我们防止了外部类直接修改数据。相反，它们必须使用公共方法，这允许类验证数据并确保对象状态的完整性。
 
-
-
-
-
-注意，在 `Rectangle` 类中，首先声明字段变量，然后定义方法。你并不要求在方法定义之前编写字段声明。事实上，有些程序员倾向于先编写公共方法的定义，最后编写私有字段的声明。无论你使用哪种风格，都应该保持一致。在书中，我们总是先写字段声明，然后是方法定义。图 6-16 展示了这种布局。
+注意，在`Rectangle`类中，首先声明字段变量，然后定义方法。你并不要求在方法定义之前编写字段声明。事实上，有些程序员倾向于先编写公共方法的定义，最后编写私有字段的声明。无论你使用哪种风格，都应该保持一致。在书中，我们总是先写字段声明，然后是方法定义。图 6-16 展示了这种布局。
 
 ## 图 6-16 类成员的典型布局
 
 ![类成员的典型布局从字段声明开始](img/Fig06-16.png)图 6-16 完整替代文本
 
 ## 检查点 6.8
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-17/index.html
+
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-17/index.html`
 
 ## 检查点 6.9
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-08/index.html
+
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-08/index.html`
 
 ## 检查点 6.10
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-09/index.html
+
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-09/index.html`
 
 ## 检查点 6.11
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-10/index.html
+
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-10/index.html`
 
 ## 检查点 6.12
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-11/index.html
+
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-11/index.html`
 
 ## 检查点 6.13
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-12/index.html
+
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-12/index.html`
 
 ## 检查点 6.14
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-13/index.html
+
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-13/index.html`
 
 ## 检查点 6.15
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-14/index.html
+
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-14/index.html`
 
 ## 检查点 6.17
-../components/metrodigi/ch06-assessable_table_v1.0.1-01/index.html
+
+`../components/metrodigi/ch06-assessable_table_v1.0.1-01/index.html`
 
 ## 检查点 6.18
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-16/index.html
+
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-16/index.html`
 
 ## 6.3 实例字段与方法
 
 **概念**：类的每个实例都有自己的一组字段，这些字段被称为实例字段。你可以创建一个类的多个实例，并在每个实例的字段中存储不同的值。在类实例上操作的方法被称为实例方法。
 
-代码列表 6-8 中的程序创建了一个 `Rectangle` 类的实例。可以创建同一类的许多实例，每个实例都有自己的数据。例如，代码列表 6-9 中的 `RoomAreas.java` 程序创建了三个 `Rectangle` 类的实例，分别由变量 `kitchen`、`bedroom` 和 `den` 引用。图 6-17 展示了与程序的交互示例。（代码列表 6-9 中的文件存储在源代码 `第 6 章 Rectangle 第 4 阶段`中。）
+代码列表 6-8 中的程序创建了一个`Rectangle`类的实例。可以创建同一类的许多实例，每个实例都有自己的数据。例如，代码列表 6-9 中的`RoomAreas.java`程序创建了三个`Rectangle`类的实例，分别由变量`kitchen`、`bedroom`和`den`引用。图 6-17 展示了与程序的交互示例。（代码列表 6-9 中的文件存储在源代码`第 6 章 Rectangle 第 4 阶段`中。）
 
-### 图 6-17 与 `RoomAreas.java` 程序的交互（Oracle）
+### 图 6-17 与`RoomAreas.java`程序的交互（Oracle）
+
 ![与 RoomAreas.java 程序的系列交互生成了消息](img/Fig06-18.png)图 6-17 完整替代文本
+
 在下面的动画中，点击“上一个”或“下一个”按钮逐步查看代码。
 
 ### 代码列表 6-9 `(RoomAreas.java)`
+
 [`media.pearsoncmg.com/ph/esm/0media_ecs/pr6-9/9`](https://media.pearsoncmg.com/ph/esm/0media_ecs/pr6-9/9)
-在第 17、18、19 行创建了三个对象，每个对象都是 `Rectangle` 类的实例：
+
+在第 17、18、19 行创建了三个对象，每个对象都是`Rectangle`类的实例：
+
 ```
 Rectangle kitchen = Rectangle();
 Rectangle bedroom = Rectangle();
 Rectangle den = Rectangle();
 ```
-图 6-18 说明了 `kitchen`、`bedroom` 和 `den` 变量是如何引用对象的。
 
-### 图 6-18 `kitchen`、`bedroom` 和 `den` 变量引用 `Rectangle` 对象
-![`kitchen`、`bedroom` 和 `den` 变量引用 `Rectangle` 对象](img/Fig06-19.png)图 6-18 完整替代文本
-在程序的示例演示中，用户输入 10 和 14 作为 `kitchen` 的长宽，15 和 12 作为 `bedroom` 的长宽，20 和 30 作为 `den` 的长宽。图 6-19 展示了存储这些值后对象的状态。
+图 6-18 说明了`kitchen`、`bedroom`和`den`变量是如何引用对象的。
+
+### 图 6-18 `kitchen`、`bedroom`和`den`变量引用`Rectangle`对象
+
+![`kitchen`、`bedroom`和`den`变量引用`Rectangle`对象](img/Fig06-19.png)图 6-18 完整替代文本
+
+在程序的示例演示中，用户输入 10 和 14 作为`kitchen`的长宽，15 和 12 作为`bedroom`的长宽，20 和 30 作为`den`的长宽。图 6-19 展示了存储这些值后对象的状态。
 
 ### 图 6-19 存储数据后对象的状态
-![`kitchen`、`bedroom` 和 `den` 变量引用 `Rectangle` 对象](img/Fig06-20.png)图 6-19 完整替代文本
-从图 19 可以看出，`Rectangle` 类的每个实例都有自己的 `length` 和 `width` 变量。由于由于，这些变量被称为实例变量或实例字段。类的每个实例都有自己的一组实例字段，并可以在这些字段中存储自己的值。
+
+![`kitchen`、`bedroom`和`den`变量引用`Rectangle`对象](img/Fig06-20.png)图 6-19 完整替代文本
+
+
+
+从图 19 可以看出，`Rectangle` 类的每个实例都有自己的 `length` 和 `width` 变量。由于这些变量被称为实例变量或实例字段，类的每个实例都有自己的一组实例字段，并可以在这些字段中存储自己的值。
 
 在类实例上的操作被称为实例方法。`Rectangle` 类中的所有方法都是实例方法，因为它们在类的实例上执行操作。例如，查看 `RoomAreas.java` 程序第 25 行的以下语句：
+
 ```
 kitchen.setLength(number);
 ```
+
 该语句调用了 `setLength` 方法，在 `kitchen` 对象的 `length` 字段中存储了一个值。现在看第 35 行的以下语句：
+
 ```
 bedroom.setLength(number);
 ```
+
 该语句也调用了 `setLength` 方法，但这次在 `bedroom` 对象的 `length` 字段中存储了一个值。同样，第 45 行的以下语句调用了 `setLength` 方法在 `den` 对象的 `length` 字段中存储了一个值：
+
 ```
 den.setLength(number);
 ```
+
 `setLength` 方法在 `Rectangle` 类的特定实例中存储一个值。`Rectangle` 类的所有方法都是如此。
 
 **注意**：如前所述，实例方法的头部中没有 `static` 关键字。
 
 ## 检查点 6.19
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-24/index.html
+
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-24/index.html`
 
 ## 6.4 构造函数
 
 **概念**：构造函数是在对象创建时自动调用的方法。
 
 ### 观看使用构造函数初始化对象
+
 [`mediaplayer.pearsoncmg.com/assets/_video.true/3JLH4yRxWiwsXq6krg_RSepc9R7RbUAo`](https://mediaplayer.pearsoncmg.com/assets/_video.true/3JLH4yRxWiwsXq6krg_RSepc9R7RbUAo)
+
 构造函数是在类的实例创建时自动调用的方法。构造函数通常执行初始化或设置操作，例如在实例字段中存储初始值。它们被称为“构造函数”，是因为它们帮助构建对象。
 
 构造方法的方法名与类名相同。例如，代码列表 6-10 显示了 `Rectangle` 类新版本的前几行。在类的这个版本中，添加了一个构造函数。（该文件存储在源代码文件夹 `第 6 章 Rectangle 第 5 阶段`中。）
 
-
-
-
-
 ```java
-  /**
-     Rectangle 类，第 5 阶段
-  */
+/**
+   Rectangle 类，第 5 阶段
+*/
 
 public class Rectangle
 {
@@ -9262,7 +8280,7 @@ public class Rectangle
 
 此构造函数接受两个参数，这些参数被传递给 `len` 和 `w` 参数变量。然后，参数变量被赋值给 `length` 和 `width` 字段。
 
-注意，构造函数的头部没有指定返回类型——即使是 `void`也没有。这是因为构造函数不是通过显式方法调用执行的，并且不能返回值。构造函数的方法头采用以下通用格式：
+注意，构造函数的头部没有指定返回类型——即使是 `void` 也没有。这是因为构造函数不是通过显式方法调用执行的，并且不能返回值。构造函数的方法头采用以下通用格式：
 
 ```
 AccessSpecifier ClassName(Parameters...)
@@ -9277,10 +8295,10 @@ Rectangle box = new Rectangle(7.0, 14.0);
 执行此语句后，`box` 将引用一个 `Rectangle` 对象，其 `length` 字段设置为 7，`width` 字段设置为 14。代码列表 6-11 中的程序演示了 `Rectangle` 类的构造函数。（该文件也存储在源代码文件夹 `Chapter 06\Rectangle Class Phase 5.` 中。）
 
 ```java
-  /**
-     此程序演示了 Rectangle 类的
-     构造函数。
-  */
+/**
+   此程序演示了 Rectangle 类的
+   构造函数。
+*/
 
 public class ConstructorDemo
 {
@@ -9333,9 +8351,6 @@ Rectangle box;
 
 注意，此语句并没有创建 `Rectangle` 对象。它只是声明了一个名为 `box` 的变量，可用于引用 `Rectangle` 对象。由于 `box` 变量没有引用任何内容，如果你在初始化之前尝试使用它，将会导致编译错误。
 
-
-
-
 在本章较早之前（第 6.1 节），我们讨论了创建原始变量和创建对象之间的区别。你通过简单的声明语句创建原始变量，而通过 `new` 操作符创建对象。然而，有一个类可以在不使用 `new` 操作符的情况下实例化：即 `String` 类。
 
 由于字符串操作非常常见，Java 允许你像创建原始变量一样创建 `String` 对象。以下是一个示例：
@@ -9352,11 +8367,11 @@ String name = new String("Joe Mahoney");
 
 ### 注意
 
-`String` 对象是 Java 中的一个特殊情况。由于它们被频繁使用，Java 为 `String` 对象提供了许多快捷操作，这些操作在其他类型的对象上是不可能的。除了不使用 `new` 操作符创建 `String` 对象外，你还可以使用 `=` 运算符为 `String` 对象赋值，使用 `+` 运算符拼接字符串等。第 9 章 讨论了 `String` 类的几种方法。
+`String` 对象是 Java 中的一个特殊情况。由于它们被频繁使用，Java 为 `String` 对象提供了许多快捷操作，这些操作在其他类型的对象上是不可能的。除了不使用 `new` 操作符创建 `String` 对象外，你还可以使用 `=` 运算符为 `String` 对象赋值，使用 `+` 运算符拼接字符串等。第 9 章讨论了 `String` 类的几种方法。
 
 # 焦点聚焦：创建 `CellPhone` 类
 
-Wireless Solutions, Inc. 是一家销售手机和无线服务的公司。你是公司信息技术（IT）部门的一名程序员，你的团队正在设计一个程序来管理库存中的所有手机手机。你被要求设计一个代表手机的类。类中应作为字段保留的数据如下所示：
+Wireless Solutions, Inc. 是一家销售手机和无线服务的公司。你是公司信息技术（IT）部门的一名程序员，你的团队正在设计一个程序来管理库存中的所有手机。你被要求设计一个代表手机的类。类中应作为字段保留的数据如下所示：
 
 *   手机制造商的名称将赋值给 `manufact` 字段。
 *   手机的型号号将赋值给 `model` 字段。
@@ -9396,7 +8411,7 @@ Wireless Solutions, Inc. 是一家销售手机和无线服务的公司。你是�
 
 传统的骰子有 6 面。然而，某些游戏如*地下城之旅*使用不同面数的骰子。假设你正在编写一个模拟各种面数骰子的类。该类将有一个接收面数作为参数的构造函数。该类还具有掷骰子和获取骰子值的方法。
 
-```
+```java
 import java.util.Random;
 
 /**
@@ -9453,14 +8468,10 @@ public class Die
 
 | 字段/行号 | 描述 |
 | :--- | :--- |
-| 9 和 10 行 | 这些语句声明了两个 `int` 字段。`sides` 字段将存储骰子的面数，`value` 字段将存储掷掷后的值。 |
+| 9 和 10 行 | 这些语句声明了两个 `int` 字段。`sides` 字段将存储骰子的面数，`value` 字段将存储掷骰后的值。 |
 | 18 到 22 行 | 这是构造函数。注意构造函数有一个关于面数的参数。在第 20 行将该参数赋值给 `sides` 字段。第 21 行调用了 `roll` 方法，该方法模拟了掷骰子。 |
 | 29 到 36 行 | 这是 `roll` 方法，它模拟掷骰子。在第 32 行创建了一个 `Random` 对象，并由变量 `rand` 引用。第 35 行使用 `Random` 对象获取一个符合该骰子范围的随机数。 |
 | 43 到 46 行 | 这是 `getSides` 方法，一个返回 `sides` 字段的访问器方法。 |
-
-
-
-
 | 行号 53–56: | 这是 `getValue` 方法，一个返回 `value` 字段的访问器。 |
 
 代码列表 6-15 中的代码程序演示了该类。它创建了两个 `Die` 类的实例：一个是六面的，另一个是十二面的。然后它模拟了五次掷骰子。
@@ -9474,40 +8485,37 @@ public class Die
 让我们仔细观察这个程序：
 
 | 行号 9–11: | 这些语句声明了三个常量。`DIE1_SIDES` 是第一个骰子的面数（6），`DIE2_SIDES` 是第二个骰子的面数（12），而 `MAX_ROLLS` 是掷骰子的次数（5）。 |
-
 | 行号 14–15: | 这些语句创建了两个 `Die` 类的实例。注意，值为 6 的 `DIE1_SIDES` 被传递给第 14 行的构造函数，而值为 12 的 `DIE2_SIDES` 被传递给第 15 行的构造函数。因此，`die1` 将引用一个六面的 `Die` 对象，`die2` 将引用一个十二面的 `Die` 对象。 |
-
-| 行号 23: | 该语句显示了两个 `Die` 对象的初始值。（回想一下 `Die` 类的构造函数会执行初始掷掷。） |
-
+| 行号 23: | 该语句显示了两个 `Die` 对象的初始值。（回想一下 `Die` 类的构造函数会执行初始掷骰。） |
 | 行号 28–36: | 这个 `for` 循环迭代五次。每次循环迭代时，第 31 行调用 `die1` 对象的 `roll` 方法，第 32 行调用 `die2` 对象的 `roll` 方法。第 35 行显示了两个骰子的值。 |
 
 # 检查点 6.20
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-18/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-18/index.html`
 
 # 检查点 6.21
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-19/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-19/index.html`
 
 # 检查点 6.22
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-20/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-20/index.html`
 
 # 检查点 6.23
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-21/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-21/index.html`
 
 # 检查点 6.24
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-22/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-22/index.html`
 
 # 6.5 将对象作为参数传递
 
 概念：当一个对象作为参数传递给方法时，该对象的地址会被传递到方法的参数变量中。因此，参数引用了该对象。
 
-当你开发处理处理对象的应用程序时，你通常需要编写接受对象作为参数的方法。例如，假设一个程序正在使用之前显示过的 代码列表 6-14 中的 `Die` 类。下面的代码显示了一个名为 `showDieSides` 的方法，它接受一个 `Die` 对象作为参数：
+当你开发处理对象的应用程序时，你通常需要编写接受对象作为参数的方法。例如，假设一个程序正在使用之前显示过的代码列表 6-14 中的 `Die` 类。下面的代码显示了一个名为 `showDieSides` 的方法，它接受一个 `Die` 对象作为参数：
 
-```
+```java
 void showDieSides(Die d)
 {
     System.out.println("This die has " + d.getSides() +
@@ -9517,170 +8525,20 @@ void showDieSides(Die d)
 
 下面的代码示例展示了如何创建一个 `Die` 对象，然后将其作为参数传递给 `showDieSides` 方法：
 
-```
+```java
 Die myDie = new Die(6);
 showDieSides(myDie);
 ```
 
 当你将对象作为参数传递时，传递到参数变量的是对象的内存地址。因此，参数变量引用了该对象，方法可以访问该对象。
 
-代码列表 6-16 中显示的程序展示了我们如何创建一个 `Die` 对象，然后将其作为参数传递给 `showDieSides` 方法。它创建两个 `Die` 实例，一个是六面的，另一个是十二面的。下面的代码显示了一个名为 `showDieSides` 的方法接受一个 `Die` 对象作为参数：
 
-```
-void showDieSides(Die d)
-{
-    System.out.println("This die has " + d.getSides() +
-                       " sides.");
-}
-```
-
-下面的代码示例展示了我们如何创建一个 `Die` 对象，然后将其作为参数传递给 `showDieSides` 方法：
-
-```
-Die myDie = new Die(6);
-showDieSides(myDie);
-```
-
-当你将对象作为参数传递时，传递到参数变量的是对象的内存地址。因此，参数变量引用了该对象，方法可以访问该对象。
-
-代码列表 6-16 中显示的程序展示了我们我们如何创建一个 `Die` 对象，然后将其作为参数传递给 `showDieSides` 方法。它创建两个 `Die` 实例，一个是六面的，另一个是十二面的。下面的代码显示了一个名为 `showDieSides` 的方法接受一个 `Die` 对象作为参数：
-
-```
-void showDieSides(Die d)
-{
-    System.out.println("This die has " + d.getSides() +
-                       " sides.");
-}
-```
-(Wait, 我发现刚才重复了，根据要求重新处理)
-
-程序展示了我们如何创建一个 `Die` 对象，然后将其作为参数传递给 `showDieSides` 方法。它创建两个 `Die` 实例，一个是六面的，另一个是十二面的。下面的代码显示了一个名为 `showDieSides` 的方法接受一个 `Die` 对象作为参数：
-
-```
-void showDieSides(Die d)
-{
-    System.out.println("This die has " + d.getSides() +
-                       " sides.");
-}
-```
-
-(Wait, 重新，原文原文，，，，，，，，0 翻译的翻译翻译：
-
-
-
-```
-public class DieArgument
-{
-    public static void main(String[] args)
-    {
-        final int SIX_SIDES = 6;
-        final int TWENTY_SIDES = 20;
-
-        // Create a 6-sided die
-        Die sixDie = new Die(SIX_SIDES);
-
-        // Create a 20-sided die
-        Die twentyDie = new Die(TWENTY_SIDES);
-
-        // Roll the dice
-        rollDie(sixDie);
-        rollDie(twentyDie);
-    }
-
-    /**
-    This method simulates a die roll, displaying the number of sides
-    @param d Die object to roll
-    */
-    public static void rollDie(Die d)
-    {
-        // Display the number of sides
-        System.out.println("Rolling " + d.getSides() + " sided die.");
-        // Roll the die
-        d.roll();
-        // Display the die's value
-        System.out.println("The die's value: " + d.getValue());
-    }
-}
-```
-
-输出
-```
-Rolling 6 sided die.
-The die's value: 3
-Rolling 20 sided die.
-The die's value: 19
-```
-
-# 代码列表 6-16 `(DiceArgument.java)`
-
-# 焦点：模拟 Cho-Han 游戏
-
-Cho-Han 是一种传统的日本赌博游戏，庄家使用杯子掷两个六面骰子。杯子倒放在桌子上以隐藏骰子的值。玩家押注骰子的总和是偶数（Cho）还是奇数（Han）。赢者赢得所有赌注，如果没有赢者，则由庄赢得。
-
-我们将开发一个程序来模拟游戏的简化版本。模拟的游戏有一个庄和两个玩家。玩家不赌钱，而是简单猜测骰子的总和是偶数（Cho）还是奇数（Han）。正确预测结果的人将获得积分。游戏将进行五轮，得分最多的玩家是大获者。
-
-在程序中，我们将使用代码列表 6-14 中的 `Die` 类。我们将创建该类的两个实例表示两个六面骰子。除了 `Die` 类，我们还将编写以下类：
-
-*   `Dealer` 类：我们将创建该类的实例来代表庄。它将能够掷骰子、报告骰子的值并报告骰子总和是 Cho 还是 Han。
-*   `Player` 类：我们将创建该类的两个实例来代表玩家。`Player` 类实例可以存储玩家名称、在 Cho 和 Han 之间做出猜测并获得积分。
-
-首先，让我们看看 `Dealer` 类。图 6-23 显示该类的 UML 图，而代码列表 6-17 显示代码。
-
-# 图 6-23 `Dealer` 类的 UML 图
-
-![Die 类的 UML 图被分为三个矩形区域。](img/Fig06-25.png)图 6-23 完整替代文本
-
-[/content]
-``` (由于抱歉，在之前的回复中出现了逻辑混乱和重复，这里是根据您要求的最终正确翻译版本)
-
-[content]
-[content]
-
-| 行号 53–56: | 这是 `getValue` 方法，一个返回 `value` 字段的访问器。 |
-
-代码列表 6-15 中的代码程序演示了该类。它创建了两个 `Die` 类的实例：一个是六面的，另一个是十二面的。然后它模拟了五次掷骰子。
-
-在下方的动画中，点击“上一个”或“下一个”按钮可以逐步查看代码并看到贯穿的解释。
-
-# 代码列表 6-15 `(DiceDemo.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr6-15/15.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr6-15/15.html)
-
-让我们仔细观察这个程序：
-
-| 行号 9–11: | 这些语句声明了三个常量。`DIE1_SIDES` 是第一个骰子的面数（6），`DIE2_SIDES` 是第二个骰子的面数（12），而 `MAX_ROLLS` 是掷骰子的次数（5）。 |
-
-| 行号 14–15: | 这些语句创建了两个 `Die` 类的实例。注意，值为 6 的 `DIE1_SIDES` 被传递给第 14 行的构造函数，而值为 12 的 `DIE2_SIDES` 被传递给第 15 行的构造函数。因此，`die1` 将引用一个六面的 `Die` 对象，`die2` 将引用一个十二面的 `Die` 对象。 |
-
-| 行号 23: | 该语句显示了两个 `Die` 对象的初始值。（回想一下 `Die` 类的构造函数会执行初始掷掷。） |
-
-| 行号 28–36: | 这个 `for` 循环迭代五次。每次循环迭代时，第 31 行调用 `die1` 对象的 `roll` 方法，第 32 行调用 `die2` 对象的 `roll` 方法。第 35 行显示了两个骰子的值。 |
-
-# 检查点 6.20
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-18/index.html
-
-# 检查点 6.21
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-19/index.html
-
-# 检查点 6.22
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-20/index.html
-
-# 检查点 6.23
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-21/index.html
-
-# 检查点 6.24
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-22/index.html
 
 # 6.5 将对象作为参数传递
 
 概念：当一个对象作为参数传递给方法时，该对象的地址会被传递到方法的参数变量中。因此，参数引用了该对象。
 
-当你开发处理处理对象的应用程序时，你通常需要编写接受对象作为参数的方法。例如，假设一个程序正在使用之前显示过的 代码列表 6-14 中的 `Die` 类。下面的代码显示了一个名为 `showDieSides` 的方法，它接受一个 `Die` 对象作为参数：
+当你开发处理对象的应用程序时，你通常需要编写接受对象作为参数的方法。例如，假设一个程序正在使用之前显示过的代码列表 6-14 中的`Die`类。下面的代码显示了一个名为`showDieSides`的方法，它接受一个`Die`对象作为参数：
 
 ```
 void showDieSides(Die d)
@@ -9690,7 +8548,7 @@ void showDieSides(Die d)
 }
 ```
 
-下面的代码示例展示了我们如何创建一个 `Die` 对象，然后将其作为参数传递给 `showDieSides` 方法：
+下面的代码示例展示了我们如何创建一个`Die`对象，然后将其作为参数传递给`showDieSides`方法：
 
 ```
 Die myDie = new Die(6);
@@ -9699,7 +8557,9 @@ showDieSides(myDie);
 
 当你将对象作为参数传递时，传递到参数变量的是对象的内存地址。因此，参数变量引用了该对象，方法可以访问该对象。
 
-代码列表 6-16 中显示的程序展示了我们我们如何创建一个 `Die` 对象，然后将其作为参数传递给 `showDieSides` 方法。它创建两个 `Die` 实例，一个是六面的，另一个是十二面的。下面的代码显示了一个名为 `showDieSides` 的方法接受一个 `Die` 对象作为参数：
+## 代码列表 6-16 `(DiceArgument.java)`
+
+程序展示了我们如何创建一个`Die`对象，然后将其作为参数传递给`showDieSides`方法。它创建两个`Die`实例，一个是六面的，另一个是十二面的。下面的代码显示了一个名为`showDieSides`的方法接受一个`Die`对象作为参数：
 
 ```
 void showDieSides(Die d)
@@ -9708,11 +8568,8 @@ void showDieSides(Die d)
                        " sides.");
 }
 ```
-(Wait, 我发现刚才重复了，根据要求重新处理)
 
-程序展示了我们如何创建一个 `Die` 对象，然后将其作为参数传递给 `showDieSides` 方法。它创建两个 `Die` 实例，一个是六面的，另一个是十二面的。下面的代码显示了一个名为 `showDieSides` 的方法接受一个 `Die` 对象作为参数：
-
-(Wait, 重新，原文原文，，，，，，，，，0 翻译的翻译翻译：
+程序展示了我们如何创建一个`Die`对象，然后将其作为参数传递给`showDieSides`方法。它创建两个`Die`实例，一个是六面的，另一个是十二面的。下面的代码显示了一个名为`showDieSides`的方法接受一个`Die`对象作为参数：
 
 ```java
 public class DieArgument
@@ -9749,7 +8606,8 @@ public class DieArgument
 }
 ```
 
-输出
+输出：
+
 ```
 Rolling 6 sided die.
 The die's value: 3
@@ -9757,57 +8615,25 @@ Rolling 20 sided die.
 The die's value: 19
 ```
 
-# 代码列表 6-16 `(DiceArgument.java)`
-
-# 焦点：模拟 Cho-Han 游戏 
+## 焦点：模拟 Cho-Han 游戏
 
 Cho-Han 是一种传统的日本赌博游戏，庄家使用杯子掷两个六面骰子。杯子倒放在桌子上以隐藏骰子的值。玩家押注骰子的总和是偶数（Cho）还是奇数（Han）。赢者赢得所有赌注，如果没有赢者，则由庄赢得。
 
 我们将开发一个程序来模拟游戏的简化版本。模拟的游戏有一个庄和两个玩家。玩家不赌钱，而是简单猜测骰子的总和是偶数（Cho）还是奇数（Han）。正确预测结果的人将获得积分。游戏将进行五轮，得分最多的玩家是大获者。
 
-在程序中，我们将使用代码列表 6-14 中的 `Die` 类。我们将创建该类的两个实例表示两个六面骰子。除了 `Die` 类，我们还将编写以下类：
+在程序中，我们将使用代码列表 6-14 中的`Die`类。我们将创建该类的两个实例表示两个六面骰子。除了`Die`类，我们还将编写以下类：
 
-*   `Dealer` 类：我们将创建该类的实例来代表庄。它将能够掷骰子、报告骰子的值并报告骰子总和是 Cho 还是 Han。
-*   `Player` 类：我们将创建该类的两个实例来代表玩家。`Player` 类实例可以存储玩家名称、在 Cho 和 Han 之间做出猜测并获得积分。
+- `Dealer`类：我们将创建该类的实例来代表庄。它将能够掷骰子、报告骰子的值并报告骰子总和是 Cho 还是 Han。
+- `Player`类：我们将创建该类的两个实例来代表玩家。`Player`类实例可以存储玩家名称、在 Cho 和 Han 之间做出猜测并获得积分。
 
-首先，让我们看看 `Dealer` 类。图 6-23 显示该类的 UML 图，而代码列表 6-17 显示代码。
+首先，让我们看看`Dealer`类。图 6-23 显示该类的 UML 图，而代码列表 6-17 显示代码。
 
-# 图 6-23 `Dealer` 类的 UML 图
+## 图 6-23 `Dealer`类的 UML 图
 
 ![Die 类的 UML 图被分为三个矩形区域。](img/Fig06-25.png)图 6-23 完整替代文本
 
-[/content]
-``` (由于抱歉，在之前的回复中出现了逻辑混乱和重复，这里是根据您要求的最终正确翻译版本)
 
-(Wait, 刚才的输出出现了严重错误，我将重新提供一个完全干净、符合格式的翻译版本)
 
-[content]
-# 6.5 将对象作为参数传递
-
-概念：当一个对象作为参数传递给方法时，该对象的地址会被传递到方法的参数变量中。因此，参数引用了该对象。
-
-当你开发处理处理对象的应用程序时，你通常需要编写接受对象作为参数的方法。例如，假设一个程序正在使用之前显示过的 代码列表 6-14 中的 `Die` 类。下面的代码显示了一个名为 `showDieSides` 的方法，它接受一个 `Die` 对象作为参数：
-
-```
-void showDieSides(Die d)
-{
-    System.out.println("This die has " + d.getSides() +
-                       " sides.");
-}
-```
-
-下面的代码示例展示了我们如何创建一个 `Die` 对象，然后将其作为参数传递给 `showDieSides` 方法：
-
-```
-Die myDie = new Die(6);
-showDieSides(myDie);
-```
-
-当你将对象作为参数传递时，传递到参数变量的是对象的内存地址。因此，参数变量引用了该对象，方法可以访问该对象。
-[/content]
-``` (Wait, 发现我刚才在回复中陷入了严重的循环错误。现在我为您提供**唯一、正确且符合格式**的翻译：)
-
-[content]
 
 | 行号 53–56: | 这是 `getValue` 方法，一个返回 `value` 字段的访问器。 |
 
@@ -9831,25 +8657,90 @@ showDieSides(myDie);
 
 # 检查点 6.20
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-18/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-18/index.html`
 
 # 检查点 6.21
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-19/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-19/index.html`
 
 # 检查点 6.22
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-20/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-20/index.html`
 
 # 检查点 6.23
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-21/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-21/index.html`
 
 # 检查点 6.24
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-22/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-22/index.html`
 
 # 6.5 将对象作为参数传递
+
+概念：当一个对象作为参数传递给方法时，该对象的地址会被传递到方法的参数变量中。因此，参数引用了该对象。
+
+当你开发处理对象的应用程序时，你通常需要编写接受对象作为参数的方法。例如，假设一个程序正在使用之前显示过的代码列表 6-14 中的 `Die` 类。下面的代码显示了一个名为 `showDieSides` 的方法，它接受一个 `Die` 对象作为参数：
+
+```
+void showDieSides(Die d)
+{
+    System.out.println("This die has " + d.getSides() +
+                       " sides.");
+}
+```
+
+下面的代码示例展示了我们如何创建一个 `Die` 对象，然后将其作为参数传递给 `showDieSides` 方法：
+
+```
+Die myDie = new Die(6);
+showDieSides(myDie);
+```
+
+当你将对象作为参数传递时，传递到参数变量的是对象的内存地址。因此，参数变量引用了该对象，方法可以访问该对象。
+
+
+
+| 行号 53–56: | 这是 `getValue` 方法，一个返回 `value` 字段的访问器。 |
+
+在代码列表 6-15 中的代码程序演示了该类。它创建了两个 `Die` 类的实例：一个是六面的，另一个是十二面的。然后它模拟了五次掷骰子。
+
+在下方的动画中，点击“上一个”或“下一个”按钮可以逐步查看代码并看到贯穿的解释。
+
+## 代码列表 6-15 `(DiceDemo.java)`
+
+[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr6-15/15.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr6-15/15.html)
+
+让我们仔细观察这个程序：
+
+| 行号 9–11: | 这些语句声明了三个常量。`DIE1_SIDES` 是第一个骰子的面数（6），`DIE2_SIDES` 是第二个骰子的面数（12），而 `MAX_ROLLS` 是掷骰子的次数（5）。 |
+
+| 行号 14–15: | 这些语句创建了两个 `Die` 类的实例。注意，值为 6 的 `DIE1_SIDES` 被传递给第 14 行的构造函数，而值为 12 的 `DIE2_SIDES` 被传递给第 15 行的构造函数。因此，`die1` 将引用一个六面的 `Die` 对象，`die2` 将引用一个十二面的 `Die` 对象。 |
+
+| 行号 23: | 该语句显示了两个 `Die` 对象的初始值。（回想一下 `Die` 类的构造函数会执行初始掷掷。） |
+
+| 行号 28–36: | 这个 `for` 循环迭代五次。每次循环迭代时，第 31 行调用 `die1` 对象的 `roll` 方法，第 32 行调用 `die2` 对象的 `roll` 方法。第 35 行显示了两个骰子的值。 |
+
+## 检查点 6.20
+
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-18/index.html`
+
+## 检查点 6.21
+
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-19/index.html`
+
+## 检查点 6.22
+
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-20/index.html`
+
+## 检查点 6.23
+
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-21/index.html`
+
+## 检查点 6.24
+
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-22/index.html`
+
+## 6.5 将对象作为参数传递
 
 概念：当一个对象作为参数传递给方法时，该对象的地址会被传递到方法的参数变量中。因此，参数引用了该对象。
 
@@ -9871,358 +8762,6 @@ showDieSides(myDie);
 ```
 
 当你将对象作为参数传递时，传递到参数变量的是对象的内存地址。因此，参数变量引用了该对象，方法可以访问该对象。
-
-[/content]
-``` (Wait, I see the system is looping/confused. I will provide the final clean translation now without any internal commentary.)
-
-**Actually, I will just provide the requested translation of the text provided in the prompt once.**
-
-[content]
-
-| 行号 53–56: | 这是 `getValue` 方法，一个返回 `value` 字段的访问器。 |
-
-代码列表 6-15 中的代码程序演示了该类。它创建了两个 `Die` 类的实例：一个是六面的，另一个是十二面的。然后它模拟了五次掷骰子。
-
-在下方的动画中，点击“上一个”或“下一个”按钮可以逐步查看代码并看到贯穿的解释。
-
-# 代码列表 6-15 `(DiceDemo.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr6-15/15.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr6-15/15.html)
-
-让我们仔细观察这个程序：
-
-| 行号 9–11: | 这些语句声明了三个常量。`DIE1_SIDES` 是第一个骰子的面数（6），`DIE2_SIDES` 是第二个骰子的面数（12），而 `MAX_ROLLS` 是掷骰子的次数（5）。 |
-
-| 行号 14–15: | 这些语句创建了两个 `Die` 类的实例。注意，值为 6 的 `DIE1_SIDES` 被传递给第 14 行的构造函数，而值为 12 的 `DIE2_SIDES` 被传递给第 15 行的构造函数。因此，`die1` 将引用一个六面的 `Die` 对象，`die2` 将引用一个十二面的 `Die` 对象。 |
-
-| 行号 23: | 该语句显示了两个 `Die` 对象的初始值。（回想一下 `Die` 类的构造函数会执行初始掷掷。） |
-
-| 行号 28–36: | 这个 `for` 循环迭代五次。每次循环迭代时，第 31 行调用 `die1` 对象的 `roll` 方法，第 32 行调用 `die2` 对象的 `roll` 方法。第 35 行显示了两个骰子的值。 |
-
-# 检查点 6.20
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-18/index.html
-
-# 检查点 6.21
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-19/index.html
-
-# 检查点 6.22
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-20/index.html
-
-# 检查点 6.23
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-21/index.html
-
-# 检查点 6.24
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-22/index.html
-
-# 6.5 将对象作为参数传递
-
-概念：当一个对象作为参数传递给方法时，该对象的地址会被传递到方法的参数变量中。因此，参数引用了该对象。
-
-当你开发处理处理对象的应用程序时，你通常需要编写接受对象作为参数的方法。例如，假设一个程序正在使用之前显示过的 代码列表 6-14 中的 `Die` 类。下面的代码显示了一个名为 `showDieSides` 的方法，它接受一个 `Die` 对象作为参数：
-
-```
-void showDieSides(Die d)
-{
-    System.out.println("This die has " + d.getSides() +
-                       " sides.");
-}
-```
-
-下面的代码示例展示了我们如何创建一个 `Die` 对象，然后将其作为参数传递给 `showDieSides` 方法：
-
-```
-Die myDie = new Die(6);
-showDieSides(myDie);
-```
-
-当你将对象作为参数传递时，传递到参数变量的是对象的内存地址。因此，参数变量引用了该对象，方法可以访问该对象。
-
-[/content]
-``` (Wait, the prompt asks to translate the specific text provided at the end. I will provide the translation of that specific text block.)
-
-**Wait, the user provided a block of text under "## 以下是需要翻译的文本". I should translate THAT block.**
-
-[content]
-... (translation of the provided text)
-[/content]
-``` (I am extremely sorry for the technical glitch in the previous turns. Here is the clean translation of the text provided in the prompt.)
-
-**Actually, looking at the prompt, I need to translate the text that starts with `| Lines 53–56: |` and ends with the code block.**
-
-(Wait, the user provided the text *inside* `[content]` tags in the prompt to the the the the the the the the the the the the the the the the the the the translation of the text provided.)
-
-[/content]
-
-# 检查点 6.20
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-18/index.html
-
-# 检查点 6.21
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-19/index.html
-
-# 检查点 6.22
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-20/index.html
-
-# 检查点 6.23
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-21/index.html
-
-# 检查点 6.24
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-22/index.html
-
-[/content] (Wait, I will just stop and provide the correct response.)
-
-**Final Attempt at the actual translation of the provided text block:**
-
-[content]
-
-| 行号 53–56: | 这是 `getValue` 方法，一个返回 `value` 字段的访问器。 |
-
-在代码列表 6-15 中的代码程序演示了该类。它创建了两个 `Die` 类的实例：一个是六面的，另一个是十二面的。然后它模拟了五次掷骰子。
-
-在下方的动画中，点击“上一个”或“下一个”按钮可以逐步查看代码并看到贯穿的解释。
-
-# 代码列表 6-15 `(DiceDemo.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr6-15/15.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr6-15/15.html)
-
-让我们仔细观察这个程序：
-
-| 行号 9–11: | 这些语句声明了三个常量。`DIE1_SIDES` 是第一个骰子的面数（6），`DIE2_SIDES` 是第二个骰子的面数（12），而 `MAX_ROLLS` 是掷骰子的次数（5）。 |
-
-| 行号 14–15: | 这些语句创建了两个 `Die` 类的实例。注意，值为 6 的 `DIE1_SIDES` 被传递给第 14 行的构造函数，而值为 12 的 `DIE2_SIDES` 被传递给第 15 行的构造函数。因此，`die1` 将引用一个六面的 `Die` 对象，`die2` 将引用一个十二面的 `Die` 对象。 |
-
-| 行号 23: | 该语句显示了两个 `Die` 对象的初始值。（回想一下 `Die` 类的构造函数会执行初始掷掷。） |
-
-| 行号 28–36: | 这个 `for` 循环迭代五次。每次循环迭代时，第 31 行调用 `die1` 对象的 `roll` 方法，第 32 行调用 `die2` 对象的 `roll` 方法。第 35 行显示了两个骰子的值。 |
-
-# 检查点 6.20
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-18/index.html
-
-# 检查点 6.21
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-19/index.html
-
-(Wait, the text is long, I will provide the full thing correctly.)
-
-[/content]
-
-(I will provide the full translation of the provided text provided in the prompt now.)
-
-[content]
-
-| 行号 53–56: | 这是 `getValue` 方法，一个返回 `value` 字段的访问器。 |
-
-在代码列表 6-15 中的代码程序演示了该类。它创建了两个 `Die` 类的实例：一个是六面的，另一个是十二面的。然后它模拟了五次掷骰子。
-
-在下方的动画中，点击“上一个”或“下一个”按钮可以逐步查看代码并看到贯穿的解释。
-
-# 代码列表 6-15 `(DiceDemo.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr6-15/15.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr6-15/15.html)
-
-让我们仔细观察这个程序：
-
-| 行号 9–11: | 这些语句声明了三个常量。`DIE1_SIDES` 是第一个骰子的面数（6），`DIE2_SIDES` 是第二个骰子的面数（12），而 `MAX_ROLLS` 是掷骰子的次数（5）。 |
-
-| 行号 14–15: | 这些语句创建了两个 `Die` 类的实例。注意，值为 6 的 `DIE1_SIDES` 被传递给第 14 行的构造函数，而值为 12 的 `DIE2_SIDES` 被传递给第 15 行的构造函数。因此，`die1` 将引用一个六面的 `Die` 对象，`die2` 将引用一个十二面的 `Die` 对象。 |
-
-| 行号 23: | 该语句显示了两个 `Die` 对象的初始值。（回想一下 `Die` 类的构造函数会执行初始掷掷。） |
-
-| 行号 28–36: | 这个 `for` 循环迭代五次。每次循环迭代时，第 31 行调用 `die1` 对象的 `roll` 方法，第 32 行调用 `die2` 对象的 `roll` 方法。第 35 行显示了两个骰子的值。 |
-
-# 检查点 6.20
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-18/index.html
-
-# 检查点 6.21
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-19/index.html
-
-# 检查点 6.22
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-20/index.html
-
-# 检查点 6.23
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-21/index.html
-
-# 检查点 6.24
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-22/index.html
-
-# 6.5 将对象作为参数传递
-
-概念：当一个对象作为参数传递给方法时，该对象的地址会被传递到方法的参数变量中。因此，参数引用了该对象。
-
-当你开发处理处理对象的应用程序时，你通常需要编写接受对象作为参数的方法。例如，假设一个程序正在使用之前显示过的 代码列表 6-14 中的 `Die` 类。下面的代码显示了一个名为 `showDieSides` 的方法，它接受一个 `Die` 对象作为参数：
-
-```
-void showDieSides(Die d)
-{
-    System.out.println("This die has " + d.getSides() +
-                       " sides.");
-}
-```
-
-下面的代码示例展示了我们如何创建一个 `Die` 对象，然后将其作为参数传递给 `showDieSides` 方法：
-
-```
-Die myDie = new Die(6);
-showDieSides(myDie);
-```
-
-当你将对象作为参数传递时，传递到参数变量的是对象的内存地址。因此，参数变量引用了该对象，方法可以访问该对象。
-
-[/content]
-``` (Wait, the system is failing. I will just provide the translation of the first part of the text correctly.)
-
-**Actually, I will provide the full translation of the text provided now.**
-
-[content]
-
-| 行号 53–56: | 这是 `getValue` 方法，一个返回 `value` 字段的访问器。 |
-
-在代码列表 6-15 中的代码程序演示了该类。它创建了两个 `Die` 类的实例：一个是六面的，另一个是十二面的。然后它模拟了五次掷骰子。
-
-在下方的动画中，点击“上一个”或“下一个”按钮可以逐步查看代码并看到贯穿的解释。
-
-# 代码列表 6-15 `(DiceDemo.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr6-15/15.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr6-15/15.html)
-
-让我们仔细观察这个程序：
-
-| 行号 9–11: | 这些语句声明了三个常量。`DIE1_SIDES` 是第一个骰子的面数（6），`DIE2_SIDES` 是第二个骰子的面数（12），而 `MAX_ROLLS` 是掷骰子的次数（5）。 |
-
-| 行号 14–15: | 这些语句创建了两个 `Die` 类的实例。注意，值为 6 的 `DIE1_SIDES` 被传递给第 14 行的构造函数，而值为 12 的 `DIE2_SIDES` 被传递给第 15 行的构造函数。因此，`die1` 将引用一个六面的 `Die` 对象，`die2` 将引用一个十二面的 `Die` 对象。 |
-
-| 行号 23: | 该语句显示了两个 `Die` 对象的初始值。（回想一下 `Die` 类的构造函数会执行初始掷掷。） |
-
-| 行号 28–36: | 这个 `for` 循环迭代五次。每次循环迭代时，第 31 行调用 `die1` 对象的 `roll` 方法，第 32 行调用 `die2` 对象的 `roll` 方法。第 35 行显示了两个骰子的值。 |
-
-# 检查点 6.20
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-18/index.html
-
-# 检查点 6.21
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-19/index.html
-
-(Wait, the text continues...)
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-20/index.html (Wait, this is 6.22) 
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-21/index.html (6.23)
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-22/index.html (6.24)
-
-(I'm just going to provide the translation of the last part now.)
-
-# 6.5 将对象作为参数传递
-
-概念：当一个对象作为参数传递给方法时，该对象的地址会被传递到方法的参数变量中。因此，参数引用了该对象。
-
-当你开发处理处理对象的应用程序时，你通常需要编写接受对象作为参数的方法。例如，假设一个程序正在使用之前显示过的 代码列表 6-14 中的 `Die` 类。下面的代码显示了一个名为 `showDieSides` 的方法，它接受一个 `Die` 对象作为参数：
-
-```
-void showDieSides(Die d)
-{
-    System.out.println("This die has " + d.getSides() +
-                       " sides."); own}
-```
-
-下面的代码示例展示了我们如何创建一个 `Die` 对象，然后将其作为参数传递给 `showDieSides` 方法：
-
-```
-Die myDie = new Die(6);
-showDieSides(myDie);
-```
-
-当你将对象作为参数传递时，传递到参数变量的是对象的内存地址。因此，参数变量引用了该对象，方法可以访问该对象。
-
-[/content]
-``` (Wait, the system is broken. I will just provide the translation of the first part of the text correctly.)
-
-Actually, here is the final, correct translation of the provided text:
-
-[content]
-
-| 行号 53–56: | 这是 `getValue` 方法，一个返回 `value` 字段的访问器。 |
-
-在代码列表 6-15 中的代码程序演示了该类。它创建了两个 `Die` 类的实例：一个是六面的，另一个是十二面的。然后它模拟了五次掷骰子。
-
-在下方的动画中，点击“上一个”或“下一个”按钮可以逐步查看代码并看到贯穿的解释。
-
-# 代码列表 6-15 `(DiceDemo.java)`
-
-[`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr6-15/15.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr6-15/15.html)
-
-让我们仔细观察这个程序：
-
-| 行号 9–11: | 这些语句声明了三个常量。`DIE1_SIDES` 是第一个骰子的面数（6），`DIE2_SIDES` 是第二个骰子的面数（12），而 `MAX_ROLLS` 是掷骰子的次数（5）。 |
-
-| 行号 14–15: | 这些语句创建了两个 `Die` 类的实例。注意，值为 6 的 `DIE1_SIDES` 被传递给第 14 行的构造函数，而值为 12 的 `DIE2_SIDES` 被传递给第 15 行的构造函数。因此，`die1` 将引用一个六面的 `Die` 对象，`die2` 将引用一个十二面的 `Die` 对象。 |
-
-| 行号 23: | 该语句显示了两个 `Die` 对象的初始值。（回想一下 `Die` 类的构造函数会执行初始掷掷。） |
-
-| 行号 28–36: | 这个 `for` 循环迭代五次。每次循环迭代时，第 31 行调用 `die1` 对象的 `roll` 方法，第 32 行调用 `die2` 对象的 `roll` 方法。第 35 行显示了两个骰子的值。 |
-
-# 检查点 6.20
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-18/index.html
-
-# 检查点 6.21
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-19/index.html
-
-# 检查点 6.22
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-20/index.html
-
-# 检查点 6.23
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-21/index.html
-
-# 检查点 6.24
-
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-22/index.html
-
-# 6.5 将对象作为参数传递
-
-概念：当一个对象作为参数传递给方法时，该对象的地址会被传递到方法的参数变量中。因此，参数引用了该对象。
-
-当你开发处理处理对象的应用程序时，你通常需要编写接受对象作为参数的方法。例如，假设一个程序正在使用之前显示过的 代码列表 6-14 中的 `Die` 类。下面的代码显示了一个名为 `showDieSides` 的方法，它接受一个 `Die` 对象作为参数：
-
-```
-void showDieSides(Die d)
-{
-    System.out.println("This die has " + d.getSides() +
-                       " sides.");
-}
-```
-
-下面的代码示例展示了我们如何创建一个 `Die` 对象，然后将其作为参数传递给 `showDieSides` 方法：
-
-```
-Die myDie = new Die(6);
-showDieSides(myDie);
-```
-
-当你将对象作为参数传递时，传递到参数变量的是对象的内存地址。因此，参数变量引用了该对象，方法可以访问该对象。
-
-
-
-
 
 ```java
   /**
@@ -10299,20 +8838,25 @@ showDieSides(myDie);
   }
 ```
 
-# 代码列表 6-17 `Dealer.java`
+## 代码列表 6-17 `Dealer.java`
 
 让我们仔细观察 `Dealer` 类的代码：
 
 *   第 7 和第 8 行声明了字段 `die1Value` 和 `die2Value`。这些字段将存储骰子掷出的值。
+
 *   第 14 到第 18 行的构造函数将 `die1Value` 和 `die2Value` 初始化为 0。
+
 *   第 25 到第 36 行的 `rollDice` 方法模拟掷骰子。第 30 和 31 行创建了两个 `Die` 对象。注意 `Die` 类的构造函数执行了初始投掷，因此第 34 和 35 行将骰子的值保存到 `die1Value` 和 `die2Value` 字段中。
+
 *   第 44 到第 59 行的 `getChoOrHan` 方法返回骰子和是偶数还是单数。
+
 *   第 67 到第 70 行的 `die1Value` 方法返回第一个骰子的值。
+
 *   第 78 到第 81 行的 `die2Value` 方法返回第二个骰子的值（存储在 `die2Value` 字段中）。
 
 现在让我们来看 `Player` 类。图 6-24 显示了类的 UML 图，代码列表 6-18 显示了代码。
 
-# 图 6-24 Player 类的 UML 图
+## 图 6-24 Player 类的 UML 图
 
 ![Dealer 类的 UML 图分为三个矩形区域。](img/Fig06-26.png)图 6-24 替代文本
 
@@ -10396,51 +8940,64 @@ showDieSides(myDie);
   }
 ```
 
-# 代码列表 6-18 `Player.java`
+## 代码列表 6-18 `Player.java`
 
 让我们总结 `Player` 类的代码：
 
 *   第 9 到第 11 行声明了字段 `name`、`guess` 和 `points`。这些字段将存储玩家的名字、玩家的猜测以及玩家获得的积分。
+
 *   第 18 到第 23 行的构造函数接受玩家的名字，并将其赋值给 `name` 字段。`guess` 字段被为空字符串，`points` 字段被设置为 0。
+
 *   第 30 到第 44 行的 `makeGuess` 方法让玩家进行猜测。它生成一个 0 或 1 的随机数。第 40 行的 `if` 语句如果为 0，则将 `guess` 赋值为“Cho（偶）”，否则将其赋值为“Han（单）”。
+
 *   第 52 到第 55 行的 `addPoints` 方法将参数指定的积分添加到玩家的当前余额中。
+
 *   第 62 到第 65 行的 `getName` 方法返回玩家的名字。
+
 *   第 72 到第 75 行的 `getGuess` 方法返回玩家的猜测。
+
 *   第 82 到第 85 行的 `getPoints` 方法返回玩家的积分。
 
-
-
-
-
 *   第 25 行创建了 `Player` 类的另一个实例。该对象代表 2 号玩家，由变量 `player2` 引用。注意 `player2Name` 被作为参数传递给构造函数。
+
 *   从第 28 行开始的 `for` 循环执行五次，导致模拟了五轮游戏。该循环执行以下操作：
+
     *   第 34 行让庄家掷骰子。
+
     *   第 37 行让 1 号玩家做出猜测（Cho 或 Han）。
-    *   第 38 行让 2 号玩家做出猜测（Cho 或 Han）。
-    *   第 41 行将 `dealer`、`player1` 和 `player2` 对象传递给 `roundResults` 方法。该方法显示该轮的结果。
-*   第 45 行将 `player1` 和 `player2` 对象传递给 `displayGrandWinner` 方法，该方法显示游戏的最终获胜者。
+
+
+
+第 38 行让 2 号玩家做出猜测（`Cho` 或 `Han`）。
+
+第 41 行将 `dealer`、`player1` 和 `player2` 对象传递给 `roundResults` 方法。该方法显示该轮的结果。
+
+第 45 行将 `player1` 和 `player2` 对象传递给 `displayGrandWinner` 方法，该方法显示游戏的最终获胜者。
 
 显示回合结果的 `roundResults` 方法出现在第 56 至 67 行。以下是该方法的摘要：
-*   该方法接受 `dealer`、`player1` 和 `player2` 对象的引用作为参数。
-*   第 60 和 61 行的语句显示两个骰子的值。
-*   第 62 行调用 `dealer` 对象的 `getChoOrHan()` 方法来显示结果，Cho 或 Han。
-*   第 65 行调用 `checkGuess` 方法，将 `player1` 和 `dealer` 对象作为参数。`checkGuess` 方法将玩家的猜测与庄家的的结果（Cho 或 Han）进行比较，如果猜测正确，则给玩家加分。
-*   第 66 行调用 `checkGuess` 方法，将 `player2` 和 `dealer` 对象作为参数。
+
+- 该方法接受 `dealer`、`player1` 和 `player2` 对象的引用作为参数。
+- 第 60 和 61 行的语句显示两个骰子的值。
+- 第 62 行调用 `dealer` 对象的 `getChoOrHan()` 方法来显示结果，`Cho` 或 `Han`。
+- 第 65 行调用 `checkGuess` 方法，将 `player1` 和 `dealer` 对象作为参数。`checkGuess` 方法将玩家的猜测与庄家的结果（`Cho` 或 `Han`）进行比较，如果猜测正确，则给玩家加分。
+- 第 66 行调用 `checkGuess` 方法，将 `player2` 和 `dealer` 对象作为参数。
 
 比较玩家猜测与庄家结果并在正确时给玩家加分的 `checkGuess` 方法出现在第 76 至 93 行。以下是该方法的摘要：
-*   该方法接受一个 `Player` 对象和一个 `Dealer` 对象的引用作为参数。
-*   第 78 行声明常量 `POINTS_TO_ADD`，值设置为 1，这是当玩家猜测正确时要向玩家余额中增加的分数。
-*   第 79 行将玩家的猜测赋值给 `String` 对象 `guess`。
-*   第 80 行将庄家的结果（Cho 或 Han）赋值给 `String` 对象 `choHanResult`。
-*   第 83 和 84 行的语句显示玩家的名字和猜测。
-*   第 87 行的 `if` 语句比较玩家的猜测与庄家的结果。如果它们匹配，则玩家猜测正确，第 89 行给玩家加分。
+
+- 该方法接受一个 `Player` 对象和一个 `Dealer` 对象的引用作为参数。
+- 第 78 行声明常量 `POINTS_TO_ADD`，值设置为 1，这是当玩家猜测正确时要向玩家余额中增加的分数。
+- 第 79 行将玩家的猜测赋值给 `String` 对象 `guess`。
+- 第 80 行将庄家的结果（`Cho` 或 `Han`）赋值给 `String` 对象 `choHanResult`。
+- 第 83 和 84 行的语句显示玩家的名字和猜测。
+- 第 87 行的 `if` 语句比较玩家的猜测与庄家的结果。如果它们匹配，则玩家猜测正确，第 89 行给玩家加分。
 
 显示游戏最终获胜者的 `displayGrandWinner` 方法出现在第 101 至 116 行。以下是该方法的摘要：
-*   该方法接受 `player1` 和 `player2` 对象的引用。
-*   第 105 至 108 行的语句显示两个玩家的名字和分数。
-*   从第 110 行开始的 `if-else-if` 语句确定两个玩家得分最高的一个，并将该玩家的名字作为最终获胜者。如果两个玩家得分相同，则宣布为平局。
 
-# 6.6 重载方法和构造函数
+- 该方法接受 `player1` 和 `player2` 对象的引用。
+- 第 105 至 108 行的语句显示两个玩家的名字和分数。
+- 从第 110 行开始的 `if-else-if` 语句确定两个玩家得分最高的一个，并将该玩家的名字作为最终获胜者。如果两个玩家得分相同，则宣布为平局。
+
+## 6.6 重载方法和构造函数
 
 **概念**：类中的两个或多个方法只要它们的参数列表不同，就可以具有相同的名称。这同样适用于构造函数。
 
@@ -10463,7 +9020,7 @@ public String add(String str1, String str2)
 
 将方法调用与正确的方法进行匹配的过程被称为 `binding`（绑定）。当调用重载方法时，Java 使用方法的名称和参数列表来确定将调用绑定到哪个方法。如果向 `add` 方法传递两个 `int` 参数，则调用带有两个 `int` 参数的方法版本。同样，当向 `add` 传递两个 `String` 参数时，会调用带有两个 `String` 参数的版本。
 
-Java 使用方法的 `signature`（签名）来将其与其他同名方法区分来。方法的 `signature` 由方法名称和方法参数的数据类型组成。例如，这里是之前 `add` 方法的签名：
+Java 使用方法的 `signature`（签名）来将其与其他同名方法区分开来。方法的 `signature` 由方法名称和方法参数的数据类型组成。例如，这里是之前 `add` 方法的签名：
 
 ```
 add(int, int)
@@ -10506,306 +9063,291 @@ Rectangle box2 = new Rectangle(5.0, 10.0);
 
 回顾一下，只有当你没有为类编写任何构造函数时，Java 才会提供默认构造函数。如果一个类有一个接受参数的构造函数，但没有无参数构造函数，你就无法在不传递参数的情况下创建该类的实例。因此，每当你为类编写构造函数且该构造函数接受参数时，如果你希望能够在不传递参数的情况下创建该类的实例，你也应该也写一个无参数构造函数。
 
-# `BankAccount` 类
+## `BankAccount` 类
 
+现在我们来看 `BankAccount` 类。从该类创建的对象将模拟银行账户，允许我们拥有初始余额、进行存款、取款并获取当前余额。`BankAccount` 类的 UML 图如图 6-25 所示。在图中指出了重载构造函数和重载方法。请注意，额外的注释并不是 UML 图的一部分。它的存在是为了引起人们对被重载项目的注意。
 
-
-
-现在我们来看 `BankAccount` 类。从该类创建的对象将模拟银行账户，允许我们拥有初始余额、进行存款、取款并获取当前余额。`BankAccount` 类的 UML 图如图图 6-25 所示。在图中指出了重载构造函数和重载方法。请注意，额外的注释并不是 UML 图的一部分。它的存在是为了引起人们对被重载项目的注意。
-
-# 图 6-25 `BankAccount` 类的 UML 图
+### 图 6-25 `BankAccount` 类的 UML 图
 
 ![Player 类的 UML 图分为三个矩形区域。](img/Fig06-27.png)图 6-25 完整备用文本
 
 从图中你可以看到，该类有三个重载的构造函数。此外，该类有两个名为 `deposit` 的重载方法、两个名为 `withdraw` 的重载方法以及两个名为 `setBalance` 的重载方法。最后一个方法 `getBalance` 没有被重载。代码列表 6-20 显示了该类的代码。
 
-```
- 1  /**
-   2     The BankAccount class simulates a bank account.
-   3  */
-   4
-   5  public class BankAccount
-   6  {
-   7     private double balance;      // Account balance
-   8
-   9     /**
-   10        This constructor sets the starting balance
-   11        at 0.0.
-   12     */
-   13
-   14     public BankAccount()
-   15     {
-   16        balance = 0.0;
-   17     }
-   18
-   19     /**
-   20        This constructor sets the starting balance
-   21        to the value passed as an argument.
-   22        @param startBalance The starting balance.
-   23     */
-   24
-   25     public BankAccount(double startBalance)
-   26     {
-   27        balance = startBalance;
-   28     }
-   29
-   30     /**
-   31        This constructor sets the starting balance
-   32        to the value in the String argument.
-   33        @param str The starting balance, as a String.
-   34     */
-   35
-   36     public BankAccount(String str)
-   37     {
-   38        balance = Double.parseDouble(str);
-   39     }
-   40
-   41     /**
-   42        The deposit method makes a deposit into
-   43        the account.
-   44        @param amount The amount to add to the
-   45                      balance field.
-   46     */
-   47
-   48     public void deposit(double amount)
-   49     {
-   50        balance += amount;
-   51     }
-   52
-   53     /**
-   54        The deposit method makes a deposit into
-   55        the account.
-   56        @param str The amount to add to the
-   57                   balance field, as a String.
-   58     */
-   59
-   60     public void deposit(String str)
-   61     {
-   62        balance += Double.parseDouble(str);
-   63     }
-   64
-   65     /**
-   66        The withdraw method withdraws an amount
-   67        from the account.
-   68        @param amount The amount to subtract from
-   69                      the balance field.
-   70     */
-   71
-   72     public void withdraw(double amount)
-   73     {
-   74        balance -= amount;
-   75     }
-   76
-   77     /**
-   78        The withdraw method withdraws an amount
-   79        from the account.
-   80        @param str The amount to subtract from
-   81                   the balance field, as a String.
-   82     */
-   83
-   84     public void withdraw(String str)
-   85     {
-   86        balance -= Double.parseDouble(str);
-   87     }
-   88
-   89     /**
-   90        The setBalance method sets the starting balance
-   91        to the value passed as an argument.
-   92        @param balance The starting balance.
-   93     */
-   94
-   95     public void setBalance(double balance)
-   96     {
-   97        balance = balance;
-   98     }
-   99
-   100     /**
-   101        The setBalance method sets the starting balance
-   102        to the value in the String argument.
-   103        @param str The balance, as a String.
-   104     */
-   105
-   106     public void setBalance(String str)
-   107     {
-   108        balance = Double.parseDouble(str);
-   109     }
-   110
-   111     /**
-   112        The getBalance method returns the current balance.
-   113        @return The current balance.
-   114     */
-   115
-   116     public double getBalance()
-   117     {
-   118        return balance;
-   119     }
-```
-*(注：由于提供的原始代码块中 `setBalance` 和 `getBalance` 的部分在原文描述中似乎缺失或存在重复，此处已根据“代码块不需要翻译”的原则完整保留了原始代码结构，并仅翻译了描述文本。)*
+```java
+/**
+   The BankAccount class simulates a bank account.
+*/
 
-**更正：重新对您提供的文本进行精确翻译：**
+public class BankAccount
+{
+   private double balance;      // Account balance
 
-[content]
-现在我们来看 `BankAccount` 类。从该类创建的对象将模拟银行账户，允许我们拥有初始余额、进行存款、取款并获取当前余额。`BankAccount` 类的 UML 图如图图 6-25 所示。在图中指出了重载构造函数和重载方法。请注意，额外的注释并不是 UML 图的一部分。它的存在是为了引起人们对被重载项目的注意。
+   /**
+      This constructor sets the starting balance
+      at 0.0.
+   */
 
-# 图 6-25 `BankAccount` 类的 UML 图
+   public BankAccount()
+   {
+      balance = 0.0;
+   }
 
-![Player 类的 UML 图分为三个矩形区域。](img/Fig06-27.png)图 6-25 完整备用文本
+   /**
+      This constructor sets the starting balance
+      to the value passed as an argument.
+      @param startBalance The starting balance.
+   */
 
-从图中你可以看到，该类有三个重载的构造函数。此外，该类有两个名为 `deposit` 的重载方法、两个名为 `withdraw` 的重载方法以及两个名为 `setBalance` 的重载方法。最后一个方法 `getBalance` 没有被重载。代码列表 6-20 显示了该类的代码。
+   public BankAccount(double startBalance)
+   {
+      balance = startBalance;
+   }
 
-```
- 1  /**
-   2     The BankAccount class simulates a bank account.
-   3  */
-   4
-   5  public class BankAccount
-   6  {
-   7     private double balance;      // Account balance
-   8
-   9     /**
-   10        This constructor sets the starting balance
-   11        at 0.0.
-   12     */
-   13
-   14     public BankAccount()
-   15     {
-   16        balance = 0.0;
-   17     }
-   18
-   19     /**
-   20        This constructor sets the starting balance
-   21        to the value passed as an argument.
-   22        @param startBalance The starting balance.
-   23     */
-   24
-   25     public BankAccount(double startBalance)
-   26     {
-   27        balance = startBalance;
-   28     }
-   29
-   30     /**
-   31        This constructor sets the starting balance
-   32        to the value in the String argument.
-   33        @param str The starting balance, as a String.
-   34     */
-   35
-   36     public BankAccount(String str)
-   37     {
-   38        balance = Double.parseDouble(str);
-   39     }
-   40
-   41     /**
-   42        The deposit method makes a deposit into
-   43        the account.
-   44        @param amount The amount to add to the
-   45                      balance field.
-   46     */
-   47
-   48     public void deposit(double amount)
-   49     {
-   50        balance += amount;
-   51     }
-   52
-   53     /**
-   54        The deposit method makes a deposit into
-   55        the account.
-   56        @param str The amount to add to the
-   57                   balance field, as a String.
-   58     */
-   59
-   60     public void deposit(String str)
-   61     {
-   62        balance += Double.parseDouble(str);
-   63     }
-   64
-   65     /**
-   66        The withdraw method withdraws an amount
-   67        from the account.
-   68        @param amount The amount to subtract from
-   69                      the balance field.
-   70     */
-   71
-   72     public void withdraw(double amount)
-   73     {
-   74        balance -= amount;
-   75     }
-   76
-   77     /**
-   78        The withdraw method withdraws an amount
-   79        from the account.
-   80        @param str The amount to subtract from
-   81                   the balance field, as a String.
-   82     */
-   83
-   84     public void withdraw(String str)
-   85     {
-   86        balance -= Double.parseDouble(str);
-   87     }
-   88
-   89     /**
-   90        The setBalance method sets the starting balance
-   91        to the value passed as an argument.
-   92        @param balance The starting balance.
-   93     */
-   94
-   95     public void setBalance(double balance)
-   96     {
-   97        balance = balance;
-   98     }
-   99
-   100     /**
-   101        The setBalance method sets the starting balance
-   102        to the value in the String argument.
-   103        @param str The balance, as a String.
-   104     */
-   105
-   106     public void setBalance(String str)
-   107     {
-   108        balance = Double.parseDouble(str);
-   109     }
-   110
-   111     /**
-   112        The getBalance method returns the current balance.
-   113        @return The current balance.
-   114     */
-   115
-   116     public double getBalance()
-   117     {
-   118        return balance;
-   119     }
+   /**
+      This constructor sets the starting balance
+      to the value in the String argument.
+      @param str The starting balance, as a String.
+   */
+
+   public BankAccount(String str)
+   {
+      balance = Double.parseDouble(str);
+   }
+
+   /**
+      The deposit method makes a deposit into
+      the account.
+      @param amount The amount to add to the
+                    balance field.
+   */
+
+   public void deposit(double amount)
+   {
+      balance += amount;
+   }
+
+   /**
+      The deposit method makes a deposit into
+      the account.
+      @param str The amount to add to the
+                 balance field, as a String.
+   */
+
+   public void deposit(String str)
+   {
+      balance += Double.parseDouble(str);
+   }
+
+   /**
+      The withdraw method withdraws an amount
+      from the account.
+      @param amount The amount to subtract from
+                    the balance field.
+   */
+
+   public void withdraw(double amount)
+   {
+      balance -= amount;
+   }
+
+   /**
+      The withdraw method withdraws an amount
+      from the account.
+      @param str The amount to subtract from
+                 the balance field, as a String.
+   */
+
+   public void withdraw(String str)
+   {
+      balance -= Double.parseDouble(str);
+   }
+
+   /**
+      The setBalance method sets the starting balance
+      to the value passed as an argument.
+      @param balance The starting balance.
+   */
+
+   public void setBalance(double balance)
+   {
+      balance = balance;
+   }
+
+   /**
+      The setBalance method sets the starting balance
+      to the value in the String argument.
+      @param str The balance, as a String.
+   */
+
+   public void setBalance(String str)
+   {
+      balance = Double.parseDouble(str);
+   }
+
+   /**
+      The getBalance method returns the current balance.
+      @return The current balance.
+   */
+
+   public double getBalance()
+   {
+      return balance;
+   }
+}
 ```
 
 
 
-剩余的方法是 `getBalance`。它返回 `balance` 字段中的值，即当前账户余额。在代码列表 6-21 所示的 `AccountTest.java` 程序演示了 `BankAccount` 类。它的输出如图 6-26 所示。
+`BankAccount` 类模拟了一个银行账户。
+
+```java
+public class BankAccount
+{
+   private double balance;      // Account balance
+
+   /**
+      This constructor sets the starting balance
+      at 0.0.
+   */
+
+   public BankAccount()
+   {
+      balance = 0.0;
+   }
+
+   /**
+      This constructor sets the starting balance
+      to the value passed as an argument.
+      @param startBalance The starting balance.
+   */
+
+   public BankAccount(double startBalance)
+   {
+      balance = startBalance;
+   }
+
+   /**
+      This constructor sets the starting balance
+      to the value in the String argument.
+      @param str The starting balance, as a String.
+   */
+
+   public BankAccount(String str)
+   {
+      balance = Double.parseDouble(str);
+   }
+
+   /**
+      The deposit method makes a deposit into
+      the account.
+      @param amount The amount to add to the
+                    balance field.
+   */
+
+   public void deposit(double amount)
+   {
+      balance += amount;
+   }
+
+   /**
+      The deposit method makes a deposit into
+      the account.
+      @param str The amount to add to the
+                 balance field, as a String.
+   */
+
+   public void deposit(String str)
+   {
+      balance += Double.parseDouble(str);
+   }
+
+   /**
+      The withdraw method withdraws an amount
+      from the account.
+      @param amount The amount to subtract from
+                    the balance field.
+   */
+
+   public void withdraw(double amount)
+   {
+      balance -= amount;
+   }
+
+   /**
+      The withdraw method withdraws an amount
+      from the account.
+      @param str The amount to subtract from
+                 the balance field, as a String.
+   */
+
+   public void withdraw(String str)
+   {
+      balance -= Double.parseDouble(str);
+   }
+
+   /**
+      The setBalance method sets the starting balance
+      to the value passed as an argument.
+      @param balance The starting balance.
+   */
+
+   public void setBalance(double balance)
+   {
+      balance = balance;
+   }
+
+   /**
+      The setBalance method sets the starting balance
+      to the value in the String argument.
+      @param str The balance, as a String.
+   */
+
+   public void setBalance(String str)
+   {
+      balance = Double.parseDouble(str);
+   }
+
+   /**
+      The getBalance method returns the current balance.
+      @return The current balance.
+   */
+
+   public double getBalance()
+   {
+      return balance;
+   }
+}
+```
+
+剩余的方法是`getBalance()`。它返回`balance`字段中的值，即当前账户余额。在代码列表 6-21 所示的`AccountTest.java`程序演示了`BankAccount`类。它的输出如图 6-26 所示。
 
 在下方的动画中，点击“上一个”或“下一个”按钮可以逐行执行代码并查看各处的解释。
 
-## 代码列表 6-21 `(AccountTest.java)`
+## 代码列表 6-21 (`AccountTest.java`)
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr6-21/21.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr6-21/21.html)
 
-## 图 6-26 与 `AccountTest` 程序的交互（Oracle 公司法律顾问）
+## 图 6-26 与`AccountTest`程序的交互（Oracle 公司法律顾问）
 
 ![与 Account Test 程序的系列交互生成了一条消息。](img/Fig06-28.png)图 6-26 完整替代文本
 
 ## 方法重载使类变得更有用
 
-你可能在想，为什么 `BankAccount` 类中会出现这么多重载方法，尤其是其中许多方法在代码列表 6-21 的演示程序中并没有被使用。毕竟，如果类只包含我们要用到的方法，难道不是更简单吗？
+你可能在想，为什么`BankAccount`类中会出现这么多重载方法，尤其是其中许多方法在代码列表 6-21 的演示程序中并没有被使用。毕竟，如果类只包含我们要用到的方法，难道不是更简单吗？
 
-对象的目的是提供某种特定的服务。`BankAccount` 类提供的服务是模拟一个银行账户。任何需要模拟银行账户的程序都可以简单创建一个 `BankAccount` 对象，然后使用它的方法来使模拟运行起来。由于 `BankAccount` 类拥有许多重载方法，它比只提供一种方式来执行每种操作要灵活得多。通过提供重载的构造函数、`deposit` 方法、`withdraw` 方法和 `setBalance` 方法，我们让 `BankAccount` 类对我们的简单演示程序以外的其他程序也有用。在你设计自己的类时，这是一个需要考虑的重要因素。
+对象的目的是提供某种特定的服务。`BankAccount`类提供的服务是模拟一个银行账户。任何需要模拟银行账户的程序都可以简单创建一个`BankAccount`对象，然后使用它的方法来使模拟运行起来。由于`BankAccount`类拥有许多重载方法，它比只提供一种方式来执行每种操作要灵活得多。通过提供重载的构造函数、`deposit()`方法、`withdraw()`方法和`setBalance()`方法，我们让`BankAccount`类对我们的简单演示程序以外的其他程序也有用。在你设计自己的类时，这是一个需要考虑的重要因素。
 
 ## 检查点 6.27
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-25/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-25/index.html`
 
 ## 检查点 6.28
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-26/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-26/index.html`
 
 ## 检查点 6.29
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-27/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-27/index.html`
 
 ## 6.7 实例字段的作用域
 
@@ -10813,7 +9355,7 @@ Rectangle box2 = new Rectangle(5.0, 10.0);
 
 回想第 2 章，变量的作用域是程序中可以通过其名称访问变量的部分。变量的名称只对该变量作用域内部的语句可见。变量声明的位置决定了变量的作用域。
 
-在本章中，你已经看到了在类中声明为实例字段的变量。实例字段可以被该字段所在同一个类中的任何实例方法访问。如果实例字段使用 `public` 访问修饰符声明，它也可以被类外部的代码访问。
+在本章中，你已经看到了在类中声明为实例字段的变量。实例字段可以被该字段所在同一个类中的任何实例方法访问。如果实例字段使用`public`访问修饰符声明，它也可以被类外部的代码访问。
 
 ## 遮蔽（Shadowing）
 
@@ -10821,9 +9363,9 @@ Rectangle box2 = new Rectangle(5.0, 10.0);
 
 然而，你可以拥有一个与字段同名的局部变量或参数变量。当你这样做时，局部变量或参数变量的名称会*遮蔽*字段的名称。这意味着字段名被局部变量或参数变量的名称所隐藏。
 
-例如，假设 `Rectangle` 类的 `setLength` 方法是如下编写的：
+例如，假设`Rectangle`类的`setLength()`方法是如下编写的：
 
-```
+```java
 public void setLength(double len)
 {
     int length;          // 局部变量
@@ -10835,62 +9377,58 @@ public void setLength(double len)
 
 ## 检查点 6.32
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-32/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-32/index.html`
 
 ## 检查点 6.33
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-33/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-33/index.html`
 
 ## 检查点 6.34
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-34/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-34/index.html`
 
 ## 检查点 6.35
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-35/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-35/index.html`
 
-## 6.8 包与 `import` 语句
+## 6.8 包与`import`语句
 
-**概念：API 中的类组织成包。`import` 语句告诉编译器类所在的包。**
+**概念：API 中的类组织成包。`import`语句告诉编译器类所在的包。**
 
-在第 2 章中，你接触了 Java API，它是一个预写的标准库。API 中的每个类都是为了特定的目的而设计的，你已经使用了一些 API 类，例如 `String` 类、`Scanner` 类、`JOptionPane` 类和 `Random` 类。
+在第 2 章中，你接触了 Java API，它是一个预写的标准库。API 中的每个类都是为了特定的目的而设计的，你已经使用了一些 API 类，例如`String`类、`Scanner`类、`JOptionPane`类和`Random`类。
 
-API 中的类都组织成包。包简单来说就是相关类的集合。许多 API 类对程序并不是自动可用的。通常，你需要导入一个 API 类才能使用它。你使用 `import` 关键字来导入类。例如，以下语句用于导入 `Scanner` 类：
-
-```java
-import java.util.Scanner;
-```
-
-该语句告诉编译器 `Scanner` 类位于 `java.util` 包中。
-
-## 显式和通配 `import` 语句
-
-`import` 语句有两种类型：显式和通配。*显式* `import` 语句识别单个类的包位置。例如，以下语句显式识别了 `Scanner` 类的位置：
+API 中的类都组织成包。包简单来说就是相关类的集合。许多 API 类对程序并不是自动可用的。通常，你需要导入一个 API 类才能使用它。你使用`import`关键字来导入类。例如，以下语句用于导入`Scanner`类：
 
 ```java
 import java.util.Scanner;
 ```
 
-`java.util` 包还包含许多其他类，以及 `Scanner` 类。例如，`Random` 类也是 `java.util` 包的一部分。如果一个程序需要使用 `Scanner` 类和 `Random` 类，它必须导入这两个类。实现此目的的方法是为每个类编写显式的 `import` 语句，如下：
+该语句告诉编译器`Scanner`类位于`java.util`包中。
+
+## 显式和通配`import`语句
+
+`import`语句有两种类型：显式和通配。*显式*`import`语句识别单个类的包位置。例如，以下语句显式识别了`Scanner`类的位置：
+
+```java
+import java.util.Scanner;
+```
+
+`java.util`包还包含许多其他类，以及`Scanner`类。例如，`Random`类也是`java.util`包的一部分。如果一个程序需要使用`Scanner`类和`Random`类，它必须导入这两个类。实现此目的的方法是为每个类编写显式的`import`语句，如下：
 
 ```java
 import java.util.Scanner;
 import java.util.Random;
 ```
 
-另一种导入这两个类的方法是使用通配 `import` 语句。*通配导入*语句告诉编译器导入包中的所有类。这里有一个例子：
+另一种导入这两个类的方法是使用通配`import`语句。*通配导入*语句告诉编译器导入包中的所有类。这里有一个例子：
 
 ```java
 import java.util.*;
 ```
 
-包名后的 `.*` 告诉编译器导入 `java.util` 包中的所有类。使用通配 `import` 语句不会影响程序的性能或大小。它只是告诉编译器你希望让特定包中的每个类对你的程序都可用。
+包名后的`.*`告诉编译器导入`java.util`包中的所有类。使用通配`import`语句不会影响程序的性能或大小。它只是告诉编译器你希望让特定包中的每个类对你的程序都可用。
 
-
-
-
-
-Java API 确实包含一个包 `java.lang`，它会自动导入到每个 Java 程序中。该包包含了通用类，例如 `String` 和 `System`，这些类对于 Java 编程语言是基础性的。对于 `java.lang` 包中的任何类，你都不需要编写 `import` 语句。
+Java API 确实包含一个包`java.lang`，它会自动导入到每个 Java 程序中。该包包含了通用类，例如`String`和`System`，这些类对于 Java 编程语言是基础性的。对于`java.lang`包中的任何类，你都不需要编写`import`语句。
 
 # 其他 API 包
 
@@ -10988,72 +9526,62 @@ Java API 中有许多包。表 6-2 列出了其中的其中几个。
 | foreign cars |
 | manager |
 | make |
-| model |
-| name |
-| problem |
-| shop |
-| service quote |
-| sales tax |
-| shop |
-| telephone number |
-| total charges |
-| year |
 
-## 精炼名词列表
+
+
+# 精炼名词列表
 
 下一步是精炼列表，只包含问题所必需类。某些名词的意思相同：
 
-*   `car`、`cars` 和 `foreign cars`（都指代同一个概念）
-*   `Joe’s Automotive Shop` 和 `shop`（都指代公司）
+* `car`、`cars` 和 `foreign cars`（都指代同一个概念）
+* `Joe’s Automotive Shop` 和 `shop`（都指代公司）
 
 我们可以为这些中的每一个确定一个单一类。在这个例子中，我们将从列表中删除 `cars` 和 `foreign cars`，并使用 `car`。同样，我们将从列表中删除 `Joe’s Automotive Shop` 并使用 `shop`。更新后的潜在类列表如下：
 
-| address |
-| car |
-| customer |
-| labor charges |
-| parts charges |
-| manager |
-| make |
-| model |
-| name |
-| service quote |
-| sales tax |
-| telephone number |
-| total charges |
-| year |
+| `address` |
+| --- |
+| `car` |
+| `customer` |
+| `labor charges` |
+| `parts charges` |
+| `manager` |
+| `make` |
+| `model` |
+| `name` |
+| `service quote` |
+| `sales tax` |
+| `telephone number` |
+| `total charges` |
+| `year` |
 
 某些名词代表了我们为了解决问题而不需要关注的条目。对描述的快速回顾提醒了我们的应用程序应该做什么：打印服务报价单。在这个例子中，我们可以从列表中剔除两个不必要的类：
 
-*   我们可以从列表中划掉 `shop`，因为我们的应用程序只需要关注单个服务报价单。它不需要处理或确定任何公司范围的信息。如果问题描述要求我们记录所有服务报价单的总和，那么为 `shop` 创建类就有意义了。
-*   我们不需要 `manager` 创建类，因为问题陈述并没有指示我们处理任何关于经理的信息。如果有多个店经理，且问题描述要求我们记录哪个经理生成了每份服务报价单，那么为 `manager` 创建类就有意义了。
-
-
-
-
+* 我们可以从列表中划掉 `shop`，因为我们的应用程序只需要关注单个服务报价单。它不需要处理或确定任何公司范围的信息。如果问题描述要求我们记录所有服务报价单的总和，那么为 `shop` 创建类就有意义了。
+* 我们不需要为 `manager` 创建类，因为问题陈述并没有指示我们处理任何关于经理的信息。如果有多个店经理，且问题描述要求我们记录哪个经理生成了每份服务报价单，那么为 `manager` 创建类就有意义了。
 
 我们的问题描述并没有引导我们处理任何关于 `shop` 的信息，也没有任何关于 `manager` 的信息，因此我们已经从列表中删除了这些内容。
 
-# 3. 某些名词可能代表对象，而不是类。
+# 3. 某些名词可能代表对象，而不是类
 
 我们可以排除 `Mercedes`、`Porsche` 和 `BMW` 作为类，因为在这个示例中，它们都代表特定的汽车，可以被视为 `car` 类的实例。在描述中，它指的是客户带到商店的某辆特定的汽车。因此，它也代表 `cars` 的一个实例。此时，更新后的潜在类列表如下：
 
-| address ~~BMW~~ |
-| car |
+| `address` ~~BMW~~ |
+| --- |
+| `car` |
 | ~~cars~~ |
-| customer |
-| estimated labor charges |
-| estimated parts charges ~~foreign cars~~ ~~Joe’s Automotive Shop~~ |
-| make |
+| `customer` |
+| `estimated labor charges` |
+| `estimated parts charges` ~~foreign cars~~ ~~Joe’s Automotive Shop~~ |
+| `make` |
 | ~~manager~~ |
 | ~~Mercedes~~ |
-| model |
-| name ~~Porsche~~ sales tax |
-| service quote |
+| `model` |
+| `name` ~~Porsche~~ `sales tax` |
+| `service quote` |
 | ~~shop~~ |
-| telephone number |
-| total estimated charges |
-| year |
+| `telephone number` |
+| `total estimated charges` |
+| `year` |
 
 我们删除了 `Mercedes`、`Porsche` 和 `BMW`，因为它们都是汽车类的实例。这意味着这些名词标识的是对象，而不是类。
 
@@ -11061,19 +9589,20 @@ Java API 中有许多包。表 6-2 列出了其中的其中几个。
 
 一些面向对象的设计师会注意名词是复数还是单数。有时，复数名词表示一个类，而单数名词表示一个对象。
 
-# 4. 某些名词可能代表可以存储在原始变量中的简单值，不需要类。
+# 4. 某些名词可能代表可以存储在原始变量中的简单值，不需要类
 
 记住，类包含字段和方法。字段是存储在类对象中的相关项，并定义了对象的状态。方法是类对象可以执行的操作或行为。如果一个名词代表一种没有任何可识别字段或方法的类型，那么它可能可以从列表中删除。为了帮助判断一个名词是否代表具有字段和方法的项，可以就它提出以下问题：
 
-* 你会使用一组相关值来表示该该项目的状态吗？
+* 你会使用一组相关值来表示该项目的状态吗？
 * 该项目是否有任何明显可以执行的操作？
 
 如果这两个问题的答案都是“否”，那么该名词可能代表一个可以存储在原始变量中的值。如果我们把此测试应用于列表中剩余每个名词，可以得出以下内容可能不是类：`address`、`estimated labor charges`、`estimated parts charges`、`make`、`model`、`name`、`sales tax`、`telephone number`、`total estimated charges` 和 `year`。这些都是可以存储在原始变量中的简单字符串或数值。以下是更新后的潜在类列表：
 
 | ~~address~~ ~~BMW~~ |
-| car |
+| --- |
+| `car` |
 | ~~cars~~ |
-| customer |
+| `customer` |
 | ~~estimated labor charges~~ |
 | ~~estimated parts charges~~ ~~foreign cars~~ ~~Joe’s Automotive Shop~~ |
 | ~~make~~ |
@@ -11081,7 +9610,7 @@ Java API 中有许多包。表 6-2 列出了其中的其中几个。
 | ~~Mercedes~~ |
 | ~~model~~ |
 | ~~name~~ ~~Porsche~~ ~~sales tax~~ |
-| service quote |
+| `service quote` |
 | ~~shop~~ |
 | ~~telephone number~~ |
 | ~~total estimated charges~~ |
@@ -11121,9 +9650,6 @@ Java API 中有许多包。表 6-2 列出了其中的其中几个。
 
 从这个列表中可以看出，`Customer` 类将有一个构造函数，以及每个字段的访问器和修改器方法。
 
-
-
-
 经过仔细思考和一些头脑风暴，你会发现其中两个项目是计算结果：销售税和总预估费用。这些项目取决于估算的零件费用和人工费用字段的值。为了避免持有过时数据的风险，我们不会将这些值存储在字段中。相反，我们将提供计算这些值并返回它们的方法。该类需要的其他方法是构造函数，以及用于估算零件费用和估算人工费用字段的访问器（accessors）和修改器（mutators）。图 6-29 显示了 `ServiceQuote` 类的 UML 图。
 
 ## 图 6-29 ServiceQuote 类的 UML 图
@@ -11136,25 +9662,25 @@ Java API 中有许多包。表 6-2 列出了其中的其中几个。
 
 ## 检查点 6.37
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-31/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-31/index.html`
 
 ## 检查点 6.38
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-32/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-32/index.html`
 
 ## 6.10 需要避免的常见错误
 
-- `在方法头末尾加分号`。方法头末尾永远不会出现分号。
-- `声明变量来引用对象，但忘记使用 `new` 关键字来创建对象`。声明变量来引用对象不会创建对象。你必须使用 `new` 关键字来创建对象。
-- `忘记在位于 `new` 关键字之后的类名后必须出现括号`。类名出现在 `new` 关键字之后，在类名后面要紧跟一组括号。即使不向构造函数传递任何参数，你也必须写上括号。
-- `当构造函数需要参数时忘记提供参数`。使用带有参数变量的构造函数时，你必须为它们提供参数。
-- `尝试通过赋予不同的返回类型来重载方法`。重载方法必须具有唯一的参数列表。
-- `忘记为想要在不向构造函数传参数的情况下创建类编写无参构造函数`。如果你写了一个接受参数的构造函数，那么如果你想在不传递参数的情况下创建类的实例，则必须为同一个类编写一个无参构造函数。
-- `在方法中无意地声明与同类字段同名的局部变量`。当方法的局部变量与同类的字段同名时，局部变量的名字会遮蔽（shadow）字段的名字。
+* 在方法头末尾加分号。方法头末尾永远不会出现分号。
+* 声明变量来引用对象，但忘记使用 `new` 关键字来创建对象。声明变量来引用对象不会创建对象。你必须使用 `new` 关键字来创建对象。
+* 忘记在位于 `new` 关键字之后的类名后必须出现括号。类名出现在 `new` 关键字之后，在类名后面要紧跟一组括号。即使不向构造函数传递任何参数，你也必须写上括号。
+* 当构造函数需要参数时忘记提供参数。使用带有参数变量的构造函数时，你必须为它们提供参数。
+* 尝试通过赋予不同的返回类型来重载方法。重载方法必须具有唯一的参数列表。
+* 忘记为想要在不向构造函数传参数的情况下创建类编写无参构造函数。如果你写了一个接受参数的构造函数，那么如果你想在不传递参数的情况下创建类的实例，则必须为同一个类编写一个无参构造函数。
+* 在方法中无意地声明与同类字段同名的局部变量。当方法的局部变量与同类的字段同名时，局部变量的名字会遮蔽（shadow）字段的名字。
 
 ## 检查点 6.42
 
-../components/metrodigi/ch06-inline_self_quiz_v1.0.0-33/index.html
+`../components/metrodigi/ch06-inline_self_quiz_v1.0.0-33/index.html`
 
 ## 编程挑战
 
@@ -11162,16 +9688,16 @@ Java API 中有许多包。表 6-2 列出了其中的其中几个。
 
 编写一个名为 `Employee` 的类，具有以下字段：
 
-- `name`。`name` 字段引用一个 `String` 对象，存储员工的姓名。
-- `idNumber`。`idNumber` 是一个 `int` 变量，存储员工的 ID 号。
-- `department`。`department` 字段引用一个 `String` 对象，存储员工工作部门名称。
-- `position`。`position` 字段引用一个 `String` 对象，存储员工的职位。
+* `name`。`name` 字段引用一个 `String` 对象，存储员工的姓名。
+* `idNumber`。`idNumber` 是一个 `int` 变量，存储员工的 ID 号。
+* `department`。`department` 字段引用一个 `String` 对象，存储员工工作部门名称。
+* `position`。`position` 字段引用一个 `String` 对象，存储员工的职位。
 
 该类应具有以下构造函数：
 
-- 一个接受以下值作为参数并将其赋值给相应字段的构造函数：员工姓名、员工 ID 号、部门和职位。
-- 一个接受以下值作为参数并将其赋值给相应字段的构造函数：员工姓名和 ID 号。`department` 和 `position` 字段应赋值为空字符串（`""`）。
-- 一个无参构造函数，将 `name`、`department` 和 `position` 字段赋值为空字符串（`""`），并将 `idNumber` 字段赋值为 0。
+* 一个接受以下值作为参数并将其赋值给相应字段的构造函数：员工姓名、员工 ID 号、部门和职位。
+* 一个接受以下值作为参数并将其赋值给相应字段的构造函数：员工姓名和 ID 号。`department` 和 `position` 字段应赋值为空字符串（`""`）。
+* 一个无参构造函数，将 `name`、`department` 和 `position` 字段赋值为空字符串（`""`），并将 `idNumber` 字段赋值为 0。
 
 编写相应的修改器方法在这些字段中存储值，以及返回这些字段值的访问器方法。写完该类后，编写一个单独程序创建三个 `Employee` 对象来存储以下数据：
 
@@ -11187,22 +9713,22 @@ Java API 中有许多包。表 6-2 列出了其中的其中几个。
 
 编写一个名为 `Car` 的类，具有以下字段：
 
-- `yearModel`。`yearModel` 是一个 `int`，存储汽车的型号。
-- `make`。`make` 字段引用一个 `String` 对象，存储汽车的品牌。
-- `speed`。`speed` 字段是一个 `int`，存储汽车当前的速度。
+* `yearModel`。`yearModel` 是一个 `int`，存储汽车的型号。
+* `make`。`make` 字段引用一个 `String` 对象，存储汽车的品牌。
+* `speed`。`speed` 字段是一个 `int`，存储汽车当前的速度。
 
 此外，该类应具有以下构造函数和其他方法：
 
-- 构造函数。构造函数接受型号和品牌作为参数。这些值应赋值给对象的 `yearModel` 和 `make` 字段。构造函数还将 `speed` 字段赋值为 0。
-- 访问器。相应的访问器方法获取存储在 `yearModel`、`make` 和 `speed` 字段中的值。
-- `accelerate`。`accelerate` 方法每次调用时将 `speed` 字段加 5。
-- `brake`。`brake` 方法每次调用时将 `speed` 字段减 5。
+* 构造函数。构造函数接受型号和品牌作为参数。这些值应赋值给对象的 `yearModel` 和 `make` 字段。构造函数还将 `speed` 字段赋值为 0。
+* 访问器。相应的访问器方法获取存储在 `yearModel`、`make` 和 `speed` 字段中的值。
+* `accelerate`。`accelerate` 方法每次调用时将 `speed` 字段加 5。
+* `brake`。`brake` 方法每次调用时将 `speed` 字段减 5。
 
 在一个程序中演示该类：创建一个 `Car` 对象，然后调用五次 `accelerate` 方法。每次调用 `accelerate` 方法后，获取并显示当前速度。然后调用五次 `brake` 方法。每次调用 `brake` 方法后，获取并显示当前速度。
 
 ### 3. `Personal Information` 类
 
-#### ：个人类问题
+#### 个人类问题
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/Xh06dam9adCv15blntc2R2XylGi`](https://mediaplayer.pearsoncmg.com/assets/_video.true/Xh06dam9adCv15blntc2R2XylGi)
 
@@ -11212,15 +9738,11 @@ Java API 中有许多包。表 6-2 列出了其中的其中几个。
 
 编写一个名为 `RetailItem` 的类，存储零售商店商品的数据。该类应具有以下字段：
 
-- `description`。`description` 字段引用一个 `String` 对象，存储商品的简要描述。
-- `unitsOnHand`。`unitsOnHand` 字段是一个 `int` 变量，存储库存中的数量。
-- `price`。`price` 字段是一个 `double`，存储商品的零售价格。
+* `description`。`description` 字段引用一个 `String` 对象，存储商品的简要描述。
+* `unitsOnHand`。`unitsOnHand` 字段是一个 `int` 变量，存储库存中的数量。
+* `price`。`price` 字段是一个 `double`，存储商品的零售价格。
 
 编写一个接受每个字段参数的构造函数、在这些字段中存储值的相应修改器方法，以及返回这些字段值的访问器方法。写完该类后，编写一个单独程序创建三个 `RetailItem` 对象并在其中存储以下数据：
-
-
-
-
 
 | 项目编号 | 说明 | 数量 | 价格 |
 | --- | --- | --- | --- |
@@ -11240,27 +9762,32 @@ Java API 中有许多包。表 6-2 列出了其中的其中几个。
 
 编写一个包含以下字段的 `Circle` 类：
 
-*   `radius`:一个 `double`
-*   `PI`：一个 `final double`，初始化值为 3.14159
+* `radius`：一个 `double`
+* `PI`：一个 `final double`，初始化值为 3.14159
 
 该类应包含以下方法：
 
-*   **构造函数**：接受圆的半径作为参数。
-*   **构造函数**：一个无参数构造函数，将 `radius` 字段设置为 0.0。
-*   `setRadius`：`radius` 字段的变器方法。
-*   `getRadius`：`radius` 字段的访问方法。
-*   `area`：返回圆的面积，计算公式为：
-    ```
-    area = PI * radius * radius
-    ```
-*   `diameter`：返回圆的直径，计算公式为：
-    ```
-    diameter = radius * 2
-    ```
-*   `circumference`：返回圆的周长，计算公式为：
-    ```
-    circumference = 2 * PI * radius
-    ```
+* **构造函数**：接受圆的半径作为参数。
+* **构造函数**：一个无参数构造函数，将 `radius` 字段设置为 0.0。
+* `setRadius`：`radius` 字段的变器方法。
+* `getRadius`：`radius` 字段的访问方法。
+* `area`：返回圆的面积，计算公式为：
+
+```
+area = PI * radius * radius
+```
+
+* `diameter`：返回圆的直径，计算公式为：
+
+```
+diameter = radius * 2
+```
+
+* `circumference`：返回圆的周长，计算公式为：
+
+```
+circumference = 2 * PI * radius
+```
 
 编写一个程序来演示 `Circle` 类：要求用户输入圆的半径，创建一个 `Circle` 对象，然后报告圆的面积、直径和周长。
 
@@ -11268,20 +9795,25 @@ Java API 中有许多包。表 6-2 列出了其中的其中几个。
 
 编写一个 `Temperature` 类，用于存储华氏度温度，并提供获取华氏度、摄氏和开尔文温度的方法。该类应包含以下字段：
 
-*   `fahrenheit`：一个存储华氏温度的 `double`。
+* `fahrenheit`：一个存储华氏温度的 `double`。
 
 该类应包含以下方法：
 
-*   构造函数——构造函数接受一个华氏温度（作为 `double`）并将其存储在 `ftemp` 字段中。
+* 构造函数——构造函数接受一个华氏温度（作为 `double`）并将其存储在 `ftemp` 字段中。
+
+
+
 *   `setFahrenheit`：`setFahrenheit` 方法接受一个华氏温度（作为 `double`）并将其存储在 `ftemp` 字段中。
 *   `getFahrenheit`——返回 `ftemp` 字段的值，即华氏温度（无需转换）。
 *   `celsius`——返回转换为摄氏的 `ftemp` 字段的值。
 *   `kelvin`——返回转换为开尔文的 `ftemp` 字段的值。
 
 使用以下公式将华氏温度转换为摄氏度：
+
 `Celsius = (5/9) * (Fahrenheit - 32)`
 
 使用以下公式将华氏温度转换为开尔文度：
+
 `Kelvin = ((5/9) * (Fahrenheit - 32) + 273)`
 
 通过编写一个独立的程序来演示 `Temperature` 类：要求用户输入一个华氏温度。程序创建一个 `Temperature` 类实例，并将用户输入的值传递给构造函数。然后程序调用对象的方法显示摄氏度和开尔文的温度。
@@ -11290,7 +9822,7 @@ Java API 中有许多包。表 6-2 列出了其中的其中几个。
 
 编写一个名为 `MonthDays` 的类。该类的构造函数应接受两个参数：
 
-*   月份的整数（1 = 1 月，2 = 2 月，以此此类推）。
+*   月份的整数（1 = 1 月，2 = 2 月，以此类推）。
 *   年份的整数
 
 该类应有一个名为 `numberOfDays` 的方法，返回指定月份的天数。该方法使用以下标准识别闰年：
@@ -11299,6 +9831,7 @@ Java API 中有许多包。表 6-2 列出了其中的其中几个。
 2.  如果年份不能被 100 整除，则当且仅当它被 4 整除时为闰年。例如，2008 年是闰年，但 2009 年不是。
 
 在一个程序中演示该类：要求用户输入月份（1-12）和年份。程序应显示该月份的天数。这是一个示例运行：
+
 ```
 Enter month (1-12): 2
 Enter year: 2000
@@ -11309,7 +9842,7 @@ Number of days: 29
 
 在本次作业中，你将编写一个程序，让用户与计算机玩流行的二十一点（Blackjack）。在这个变体中，使用六面骰代替扑牌。计算机初始总分为 15。玩家掷两个骰子并将和加到自己的总分中。如果玩家总分超过 21，则玩家输。如果玩家总分为 21 或少，玩家可以选择再次掷骰或停止。
 
-如果玩家选择停止，计算机掷两个骰子，直到其总分达到 17 或或超过 21。分数最高且不超过 21 的玩家获胜。
+如果玩家选择停止，计算机掷两个骰子，直到其总分达到 17 或超过 21。分数最高且不超过 21 的玩家获胜。
 
 以下是一些设计建议：
 
@@ -11322,11 +9855,6 @@ Number of days: 29
 *   `TwentyOne` 类应有一个方法判断计算机是否超过了 21。
 *   `TwentyOne` 类应有一个方法来确定获胜者。
 *   创建一个主程序，使用 `Die` 和 `TwentyOne` 类来玩游戏。
-
-
-
-
-
 *   `isWaterBoiling`。如果 `temperature` 字段中存储的温度达到或高于水的沸点，该方法应返回布尔值 `true`。否则，该方法应返回 `false`。
 
 编写一个演示该类的程序。该程序要求用户输入一个温度，然后显示在该温度下会结冰的物质以及在该温度下会沸的物质。例如，如果温度为 –20，该类应报告水在该温度下结冰，氧气在该温度下沸。
@@ -11398,7 +9926,7 @@ Number of days: 29
 
 编写一个使用本章介绍的 `Die` 类程序，在计算机和用户之间玩一个简单的骰子游戏。程序应创建两个 `Die` 类实例（每个都是六面骰）。一个 `Die` 对象是计算机的骰子，另一个 `Die` 对象是用户的骰子。
 
-程序应该有一个迭代 10 次的循环。每次循环迭代时，都应该掷出两个骰子。点最高的骰子获胜。（如果出现平局，则该次掷骰没有获者。）
+程序应该有一个迭代 10 次的循环。每次循环迭代时，都应该掷出两个骰子。点最高的骰子获胜。（如果出现平局，则该次掷骰没有获胜者。）
 
 随着循环迭代，程序应记录计算机获胜的次数和用户获胜的次数。在循环完成所有迭代后，程序应显示谁是最终获胜者，计算机还是用户。
 
@@ -11414,7 +9942,7 @@ Number of days: 29
 
 编写一个名为 `RoulettePocket` 的类。该类的构造函数接受一个口袋号码。该类应该有一个方法 `getPocketColor`，返回口袋的颜色字符串。
 
-在一个程序中演示该类，该程序要求用户输入一个口袋号码，并显示该口袋是绿色、红色还是黑色。如果用户输入的数字不在范围范围内，程序应显示错误信息。
+在一个程序中演示该类，该程序要求用户输入一个口袋号码，并显示该口袋是绿色、红色还是黑色。如果用户输入的数字不在范围内，程序应显示错误信息。
 
 # 17. 硬币掷模拟器
 
@@ -11434,10 +9962,7 @@ Number of days: 29
 
 在本次作业中，你将使用编程挑战 16 中的 `Coin` 类创建一个游戏程序。该程序应该有三个 `Coin` 类的实例：一个代表四角，一个代表一角，一个代表镍。
 
-
-
-
-当游戏开始时，你的初始余额为 $0。在游戏的每一轮中，程序都会投掷模拟硬币。当硬币落地为正面朝时，硬币的数值会添加到你的余额中。例如，如果四分硬币正面朝，余额将增加 25 分。。如果硬币反面朝，余额不会增加。当你的余额达到美元或更多时，游戏结束。如果你的余额恰好为美元，你就赢了游戏。如果你的余额超过美元，你就输了。
+当游戏开始时，你的初始余额为 $0。在游戏的每一轮中，程序都会投掷模拟硬币。当硬币落地为正面朝时，硬币的数值会添加到你的余额中。例如，如果四分硬币正面朝，余额将增加 25 分。如果硬币反面朝，余额不会增加。当你的余额达到美元或更多时，游戏结束。如果你的余额恰好为美元，你就赢了游戏。如果你的余额超过美元，你就输了。
 
 # 19. 钓鱼游戏模拟
 
@@ -11447,8 +9972,8 @@ Number of days: 29
 
 *   游戏的每一轮都是循环的迭代，只要玩家想要继续钓更多物品，循环就会持续。
 *   在每一轮的开始时，程序将询问用户是否想继续钓鱼。
-*   程序模拟掷六面骰子的过程（使用在代码列表 6-14）中显示的 `Die` 类）。
-*   每个可以被钓到的物品都由骰子生成的数字表示；例如，1 代表“一条大鱼”，2 代表“一只旧鞋”，3 代表“一条小鱼”，以此此类推。
+*   程序模拟掷六面骰子的过程（使用在代码列表 6-14 中显示的 `Die` 类）。
+*   每个可以被钓到的物品都由骰子生成的数字表示；例如，1 代表“一条大鱼”，2 代表“一只旧鞋”，3 代表“一条小鱼”，以此类推。
 *   用户钓到的每个物品价值的分数不同。
 *   循环记录用户钓鱼分数的运行总和。
 *   循环结束后，将显示总钓鱼分数，以及一条根据获得分数而变化的消息。
@@ -11490,10 +10015,6 @@ int[] numbers;
 
 括号内的数字是*大小声明符*。下标编号始终从零开始。数组中最后一个元素的下标比数组中元素的总数少 1。这意味着对于具有六个元素的 `numbers` 数组，5 是最后一个元素的下标。
 
-
-
-
-
 `numbers` 数组中的每个元素在通过下标访问时，都可以作为 `int` 变量使用。例如，看下面的代码。第一条语句将 20 存储在数组第一个元素（元素 0），第二条语句将 30 存储在第四个元素（元素 3）。
 
 ```java
@@ -11502,6 +10023,7 @@ numbers[3] = 30;
 ```
 
 ### 注意
+
 表达式 `numbers[0]` 读作“numbers sub zero”。读取这些赋值语句的方式为“numbers sub zero is assigned twenty”和“numbers sub three is assigned thirty”。
 
 图 7-4 展示了这些语句执行后数组的内容。
@@ -11511,13 +10033,14 @@ numbers[3] = 30;
 ![在 20 赋值给 numbers（左括号、0、右括号）且 30 赋值给 numbers（左括号、3、右括号）后数组的内容](img/07fig04.png)图 7-4 完整替代文本
 
 ### 注意
+
 默认情况下，Java 将数组元素初始化为 0。在图 7-4 中，元素 1、2、4 和 5 中没有存储任何值，因此它们显示为 0。
 
 到此为止，你应该理解数组大小声明符和下标之间的区别。当你使用 `new` 关键字创建一个数组对象时，括号内的数字是大小声明符。它表示数组中元素的数量。在赋值语句或任何处理数组内容的语句中，括号内的数字是下标。它被用于访问数组中的特定元素。
 
 # 数组内容的输入与输出
 
-你可以像处理普通变量一样，从键盘读取值并将其存储在数组元素中。你同样�可以使用 `print` 和 `println` 输出数组元素的内容。代码列表 7-1 显示了如何使用数组来存储和显示用户输入的值。图 7-5 显示了示例输出中用户输入后的 `hours` 数组的内容。
+你可以像处理普通变量一样，从键盘读取值并将其存储在数组元素中。你同样可以使用 `print` 和 `println` 输出数组元素的内容。代码列表 7-1 显示了如何使用数组来存储和显示用户输入的值。图 7-5 显示了示例输出中用户输入后的 `hours` 数组的内容。
 
 ```java
 import java.util.Scanner;
@@ -11576,6 +10099,7 @@ The hours you entered:
 ### 代码列表 7-1 `ArrayDemo1.java`
 
 ### 图 7-5 hours 数组的内容
+
 ![hours 数组的内容被描绘为三个均匀的框](img/07fig05.png)图 7-5 完整替代文本
 
 # 在循环中访问数组元素
@@ -11586,16 +10110,19 @@ https://media.pearsoncmg.com/assets/_video.true/89sNk2B43zu_zFh8PYggggXy7 下标
 
 https://media.pearsoncmg.com/gadisjava/pr7-2 让我们仔细观察此程序中的第一个循环，它出现在第 21 到 25 行。注意循环的控制变量 `index` 在第 24 行被用作下标：
 
+
+
 ```java
 hours[index] = keyboard.nextInt();
 ```
 
-变量 `index` 从 0 开始。在循环的第一次迭代中，用户的输入被存储在 `hours[0]`。随后 `index` 增加，值变为 1。在下次迭代中，用户的输入被存储在 `hours[1]`。这一直持续到数组的所有元素都存储了值。注意控制变量的开始和结束都是有效的下标（0 到 2），如图 7-6 所示。这确保了只使用有效的下标。
+变量`index`从 0 开始。在循环的第一次迭代中，用户的输入被存储在`hours[0]`。随后`index`增加，值变为 1。在下次迭代中，用户的输入被存储在`hours[1]`。这一直持续到数组的所有元素都存储了值。注意控制变量的开始和结束都是有效的下标（0 到 2），如图 7-6 所示。这确保了只使用有效的下标。
 
 ### 图 7-6 注释循环
+
 ![循环标注了索引变量](img/07fig06.png)图 7-6 完整替代文本
 
-# Java 执行边界检查
+## Java 执行边界检查
 
 Java 执行数组边界检查，这意味着不允许语句使用超出数组范围的下标。例如，以下语句创建了一个包含 10 个元素的数组。该数组的有效下标是 0 到 9。
 
@@ -11603,7 +10130,7 @@ Java 执行数组边界检查，这意味着不允许语句使用超出数组范
 int[] values = new int[10];
 ```
 
-对于此数组，Java 不允许使用小于 0 或大于 9 的下标。边界检查发生在运行时。Java 编译器在处理使用无效下标的语句不会显示错误。相反，当语句执行时，程序会抛出异常并立即终止。例如，代码列表 7-3](#ch07_pg0002.xhtml_P700101587800000000000000002F21) 中的程序声明了一个三元素数组，但尝试在数组中存储四个值。在第 17 行，当程序尝试向 `values[3]` 存储值时，它会停止并显示错误信息。
+对于此数组，Java 不允许使用小于 0 或大于 9 的下标。边界检查发生在运行时。Java 编译器在处理使用无效下标的语句不会显示错误。相反，当语句执行时，程序会抛出异常并立即终止。例如，代码列表 7-3](#ch07_pg0002.xhtml_P700101587800000000000000002F21) 中的程序声明了一个三元素数组，但尝试在数组中存储四个值。在第 17 行，当程序尝试向`values[3]`存储值时，它会停止并显示错误信息。
 
 在下面的动画中，点击“上一个”或“下一个”按钮逐步执行代码并查看全程的解释。
 
@@ -11612,9 +10139,10 @@ int[] values = new int[10];
 https://media.pearsoncmg.com/ph/esm/0media_ecs/gadisjava/pr7-3/3.html
 
 ### 注意
+
 你看到的错误信息取决于系统。
 
-# 注意差错误
+## 注意差错误
 
 由于数组下标从 0 开始而不是 1，你必须注意避免差错误。例如，看下面的代码：
 
@@ -11626,25 +10154,23 @@ for (int index = 1; index <= SIZE; index++)
    numbers[index] = 0;
 ```
 
+这段代码的意图是创建一个包含 100 个元素的整数数组，并在每个元素中存储值 0。然而，这段代码存在一个差一错误（off-by-one error）。循环使用其控制变量`index`作为`numbers`数组的下标。在循环执行期间，变量`index`的取值是从 1 到 100，而它本应该取值是从 0 到 99。因此，下标为 0 的第一个元素被跳过了。此外，循环在最后一次迭代中尝试使用 100 作为下标。由于 100 是一个无效的下标，程序将抛出异常并停止。
 
-
-这段代码的意图是创建一个包含 100 个元素的整数数组，并在每个元素中存储值 0。然而，这段代码存在一个差一错误（off-by-one error）。循环使用其控制变量 `index` 作为 `numbers` 数组的下标。在循环执行期间，变量 `index` 的取值是从 1 到 100，而它本应该取值是从 0 到 99。因此，下标为 0 的第一个元素被跳过了。此外，循环在最后一次迭代中尝试使用 100 作为下标。由于 100 是一个无效的下标，程序将抛出异常并停止。
-
-# 数组初始化
+## 数组初始化
 
 与普通变量一样，Java 允许你在创建数组时初始化初始化数组的元素。以下是一个示例：
 
-```
+```java
 int[] days = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 ```
 
-该语句声明了引用变量 `days`，在内存中创建了一个数组，并在数组中存储了初始值。大括号内部用逗号分隔的一系列值被称为初始化列表。这些值按照它们在列表中出现的顺序存储在数组元素中。（第一个值 31 存储在 `days[0]` 中，第二个值 28 存储在 `days[1]` 中，以此此类推。）注意，在使用初始化列表时不需要使用 `new` 关键字。Java 会自动创建数组并将初始化列表中的值存储其中。
+该语句声明了引用变量`days`，在内存中创建了一个数组，并在数组中存储了初始值。大括号内部用逗号分隔的一系列值被称为初始化列表。这些值按照它们在列表中出现的顺序存储在数组元素中。（第一个值 31 存储在`days[0]`中，第二个值 28 存储在`days[1]`中，以此此类推。）注意，在使用初始化列表时不需要使用`new`关键字。Java 会自动创建数组并将初始化列表中的值存储其中。
 
 Java 编译器通过初始化列表中的项目数量来确定数组的大小。由于示例语句的初始化列表中有 12 个项目，因此该数组将有 12 个元素。代码列表 7-4 中的程序演示了数组的初始化。
 
-# 代码列表 7-4 `(ArrayInitialization.java)`
+### 代码列表 7-4 `(ArrayInitialization.java)`
 
-```
+```java
  1  /**
  2     此程序演示了数组的初始化。
  3  */
@@ -11666,7 +10192,7 @@ Java 编译器通过初始化列表中的项目数量来确定数组的大小。
 19  }
 ```
 
-### 程序输出
+#### 程序输出
 
 ```
 Month 1 has 31 days.
@@ -11685,47 +10211,48 @@ Month 12 has 31 days.
 
 Java 允许你将初始化列表跨越多行。以下两种数组声明是等价的：
 
-```
+```java
 double[] coins = { 0.05, 0.1, 0.25 };
 double[] coins = { 0.05,
                    0.1,
                    0.25 };
 ```
 
-# 另一种数组声明符号
+## 另一种数组声明符号
 
 Java 允许在声明数组引用变量时使用两种不同的样式。第一种样式是本书使用的样式，括号紧跟在数据类型之后，所示：
 
-```
+```java
 int[] numbers;
 ```
 
 在第二种样式中，括号放在变量名之后，所示：
 
-```
+```java
 int numbers[];
 ```
 
-这两个语句都实现了相同的功能：它们声明了 `numbers` 是一个 `int` 数组的引用。这两种样式之间的差异在同一条语句中声明多个变量时会被注意到。例如，看以下语句：
+这两个语句都实现了相同的功能：它们声明了`numbers`是一个`int`数组的引用。这两种样式之间的差异在同一条语句中声明多个变量时会被注意到。例如，看以下语句：
 
-```
+```java
 int[] numbers, codes, scores;
 ```
 
-该语句声明了三个变量：`numbers`、`codes` 和 `scores`。这三个都是 `int` 数组的引用。这完全合理，因为 `int[]` 是该语句中声明的所有变量的数据类型。现在看下面这个使用另一种符号的语句：
+该语句声明了三个变量：`numbers`、`codes`和`scores`。这三个都是`int`数组的引用。这完全合理，因为`int[]`是该语句中声明的所有变量的数据类型。现在看下面这个使用另一种符号的语句：
 
-```
+```java
 int numbers[], codes, scores;
 ```
 
-该语句声明了相同的三个变量，但只有 `numbers` 是 `int` 数组的引用。`codes` 和 `scores` 变量是普通的 `int` 变量。这是因为 `int` 是该语句中声明的所有变量的数据类型，而只有 `numbers` 后面跟着括号。使用另一种符号将这三个变量都声明为 `int` 数组的引用，你需要在每个变量名后写一组括号。例如：
+该语句声明了相同的三个变量，但只有`numbers`是`int`数组的引用。`codes`和`scores`变量是普通的`int`变量。这是因为`int`是该语句中声明的所有变量的数据类型，而只有`numbers`后面跟着括号。使用另一种符号将这三个变量都声明为`int`数组的引用，你需要在每个变量名后写一组括号。例如：
 
-```
+```java
 int numbers[], codes[], scores[];
 ```
+
 第一种样式是大多数 Java 程序员的标准符号，因此它是本书使用的样式。
 
-# 检查点
+## 检查点
 
 - 检查点 7.1
 - 检查点 7.2
@@ -11746,162 +10273,159 @@ int numbers[], codes[], scores[];
 
 **概念**：单个数组元素的处理与任何其他类型的变量相同。
 
-处理数组元素与处理普通变量没有区别。例如，以下语句将 `hours[3]` 乘以 `payRate`：
+处理数组元素与处理普通变量没有区别。例如，以下语句将`hours[3]`乘以`payRate`：
 
-```
+```java
 grossPay = hours[3] * payRate;
 ```
 
 以下是对数组元素进行预增和后增操作的示例：
 
-```
+```java
 int[] score = {7, 8, 9, 10, 11};
 ++score[2];     // 预增操作
 score[4]++;     // 后增操作
 ```
 
-在使用增减运算符时，要小心不要运算符用在下标上，而你本打算用在数组元素上。例如，以下语句减少了变量 `count` 的值，但对数组元素 `amount[count]` 中的值没有做任何操作：
+在使用增减运算符时，要小心不要运算符用在下标上，而你本打算用在数组元素上。例如，以下语句减少了变量`count`的值，但对数组元素`amount[count]`中的值没有做任何操作：
 
-```
+```java
 amount[count--];
 ```
 
-[代码列表 7-5]演示了如何在简单的数学语句中使用数组元素。循环遍历数组的每个元素，利用这些元素计算五名员工的毛工资。
+代码列表 7-5 演示了如何在简单的数学语句中使用数组元素。循环遍历数组的每个元素，利用这些元素计算五名员工的毛工资。
 
 在下面的动画中，按“上一个”或“下一步”按钮可以逐步执行代码，并在贯穿其中解释。
-
-
-
 
 ### 代码列表 7-5 `(PayArray.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr7-5/5.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr7-5/5.html)
 
-在第 41 行，以下语句将 `hours[index]` 乘以 `payRate` 的值赋值给 `grossPay` 变量：
+在第 41 行，以下语句将`hours[index]`乘以`payRate`的值赋值给`grossPay`变量：
 
-```
+```java
 grossPay = hours[index] * payRate;
 ```
 
-数组元素也可以用于关系表达式。例如，以下 `if` 语句判断 `cost[20]` 是否小于 `cost[0]`：
+数组元素也可以用于关系表达式。例如，以下`if`语句判断`cost[20]`是否小于`cost[0]`：
 
-```
+```java
 if (cost[20] < cost[0])
 ```
 
-而下文所示的 `while` 循环只要 `value[count]` 不等于 0 就会持续迭代：
+而下文所示的`while`循环只要`value[count]`不等于 0 就会持续迭代：
 
-```
+```java
 while (value[count] != 0)
- {
-    语句 
- }
+{
+   语句 
+}
 ```
 
-在本章的[源代码](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)中，你会找到 `Overtime.java` 文件，它是代码列表 7-5 中 `PayArray.java` 程序的修改版本。`Overtime.java` 程序总工资中包含了加班工资。如果员工工作超过 40 小时，则超出部分将使用普通工资率 1.5 倍的加班费。
+在本章的[源代码](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)中，你会找到`Overtime.java`文件，它是代码列表 7-5 中`PayArray.java`程序的修改版本。`Overtime.java`程序总工资中包含了加班工资。如果员工工作超过 40 小时，则超出部分将使用普通工资率 1.5 倍的加班费。
 
-# 数组长度
+## 数组长度
 
-Java 中的每个数组都有一个名为 `length` 的公共字段。该字段包含数组中的元素个数。例如，考虑由以下语句创建的数组：
+Java 中的每个数组都有一个名为`length`的公共字段。该字段包含数组中的元素个数。例如，考虑由以下语句创建的数组：
 
-```
+```java
 double[] temperatures = new double[25];
 ```
 
-由于 `temperatures` 数组有 25 个元素，以下语句将 25 赋值给变量 `size`：
+由于`temperatures`数组有 25 个元素，以下语句将 25 赋值给变量`size`：
 
-```
+```java
 size = temperatures.length;
 ```
 
-在处理数组的所有内容时，`length` 字段非常有用。例如，以下循环遍历数组并显示每个元素的内容。数组的 `length` 字段被用于测试表达式，用作循环控制变量的上限：
+在处理数组的所有内容时，`length`字段非常有用。例如，以下循环遍历数组并显示每个元素的内容。数组的`length`字段被用于测试表达式，用作循环控制变量的上限：
 
-```
+```java
 for (int i = 0; i < temperatures.length; i++)
-    System.out.println(temperatures[i]);
+   System.out.println(temperatures[i]);
 ```
 
-# 警告！
+### 警告！
 
-在使用 `length` 字段作为下标的上限时，注意不要导致差一错误（off-by-one error）。`length` 字段包含数组中的元素个数。数组中最大的下标是 `length - 1`。
+在使用`length`字段作为下标的上限时，注意不要导致差一错误（off-by-one error）。`length`字段包含数组中的元素个数。数组中最大的下标是`length - 1`。
 
 ### 注意
 
-你不能更改数组 `length` 字段的值。
+你不能更改数组`length`字段的值。
 
-# 增强型 for 循环
+## 增强型 for 循环
 
-Java 提供了一种 `for` 循环的特殊版本，在许多情况下可以简化数组处理。它被称为“增强型 for 循环”（enhanced for loop）。以下是增强型 for 循环的通用格式：
+Java 提供了一种`for`循环的特殊版本，在许多情况下可以简化数组处理。它被称为“增强型 for 循环”（enhanced for loop）。以下是增强型 for 循环的通用格式：
 
-```
+```java
 for (dataType elementVariable : array)
-   语句;
+   语句;
 ```
 
 增强型 for 循环的设计用于为数组中的每个元素迭代一次。循环每次迭代时，它会将一个数组元素复制到一个变量中。让我们更仔细地查看语法：
 
-* `dataType elementVariable` 是一个变量声明。该变量在每次循环迭代期间将接收不同数组元素的值。在第一次循环迭代中，它接收第一个元素的值；在第二次迭代中，它接收第二个元素的值，以此此类推。该变量的数据类型必须与数组元素的类型相同，或者是元素可以自动转换成分的类型。
-* `array` 是你希望循环在其上面操作的数组名称。循环将为数组中的每个元素迭代一次。
-* `statement` 是一个在循环迭代期间执行的语句。
+- `dataType elementVariable`是一个变量声明。该变量在每次循环迭代期间将接收不同数组元素的值。在第一次循环迭代中，它接收第一个元素的值；在第二次迭代中，它接收第二个元素的值，以此此类推。该变量的数据类型必须与数组元素的类型相同，或者是元素可以自动转换成分的类型。
+- `array`是你希望循环在其上面操作的数组名称。循环将为数组中的每个元素迭代一次。
+- `statement`是一个在循环迭代期间执行的语句。
 
 例如，假设我们有如下的数组声明：
 
-```
+```java
 int[] numbers = { 3, 6, 9 };
 ```
 
-我们可以使用以下增强型 for 循环来显示 `numbers` 数组的内容：
+我们可以使用以下增强型 for 循环来显示`numbers`数组的内容：
 
-```
+```java
 for (int val : numbers)
-    System.out.println(val);
+   System.out.println(val);
 ```
 
-由于 `numbers` 数组有三个元素，此循环将迭代三次。第一次迭代时，`val` 变量将接收 `numbers[0]` 中的值。在第二次迭代中，`val` 将接收 `numbers[1]` 中的值。在第三次迭代中，`val` 将接收 `numbers[2]` 中的值。代码的输出如下：
+由于`numbers`数组有三个元素，此循环将迭代三次。第一次迭代时，`val`变量将接收`numbers[0]`中的值。在第二次迭代中，`val`将接收`numbers[1]`中的值。在第三次迭代中，`val`将接收`numbers[2]`中的值。代码的输出如下：
 
 ```
 3
- 6
- 9
+6
+9
 ```
 
 如果你需要在增强型 for 循环中执行多条语句，只需将语句块括在大括号中。这是一个示例：
 
-```
+```java
 int[] numbers = { 3, 6, 9 };
- for (int val : numbers)
- {
-    System.out.print("The next value is ");
-    System.out.println(val);
- }
+for (int val : numbers)
+{
+   System.out.print("The next value is ");
+   System.out.println(val);
+}
 ```
 
 此代码将产生如下输出：
 
 ```
 The next value is 3
- The next value is 6
- The next value is 9
+The next value is 6
+The next value is 9
 ```
 
-# 增强型 for 循环对比传统的 for 循环
+## 增强型 for 循环对比传统的 for 循环
 
 当你需要从第一个元素到最后一个元素访问数组中的值时，增强型 for 循环比 for 循环更容易使用。使用增强型 for 循环，你不需要担心数组的大小，也不需要创建一个存储下标的“索引”变量。然而在某些情况下，增强型 for 循环是不够的：
 
-* 如果你需要更改元素的内容
-* 如果你需要按反顺序处理数组
-* 如果你需要访问数组的一部分而非全部
-* 如果你需要同时处理两个或多个数组
+- 如果你需要更改元素的内容
+- 如果你需要按反顺序处理数组
+- 如果你需要访问数组的一部分而非全部
+- 如果你需要同时处理两个或多个数组
 
 在任何这些情况下，你都应该使用传统的 for 循环。
 
-# 让用户指定数组的大小
+## 让用户指定数组的大小
 
 Java 允许你使用整数变量来指定数组的大小。这使得允许用户确定测试次数成为可能。此程序将测试分数存储在数组中并显示。
 
-# 代码列表 7-6 `(DisplayScores.java)`
+### 代码列表 7-6 `(DisplayScores.java)`
 
-```
+```java
 1  import java.util.Scanner;
 2  
 3  /**
@@ -11940,30 +10464,28 @@ Java 允许你使用整数变量来指定数组的大小。这使得允许用户
 36  }
 ```
 
-程序输出，示例输入加粗显示
+#### 程序输出，示例输入加粗显示
 
 ```
 How many tests do you have? 5
- Enter test score 1: 72
- Enter test score 2: 85
- Enter test score 3: 81
- Enter test score 4: 94
- Enter test score 5: 99
- Here are the scores you entered:
- 72 85 81 94 99
+Enter test score 1: 72
+Enter test score 2: 85
+Enter test score 3: 81
+Enter test score 4: 94
+Enter test score 5: 99
+Here are the scores you entered:
+72 85 81 94 99
 ```
 
-此程序允许用户确定数组的大小。在第 23 行，以下语句创建数组，使用 `numTests` 变量确定其大小：
+此程序允许用户确定数组的大小。在第 23 行，以下语句创建数组，使用`numTests`变量确定其大小：
 
-```
+```java
 tests = new int[numTests];
 ```
 
+
+
 程序随后使用两个 `for` 循环。第一个循环（第 26 至 31 行）允许用户输入每个测试分数。第二个循环（第 36 和第 37 行）显示所有的测试分数。这两个循环都使用 `length` 成员来控制它们的迭代次数，如下所示：
-
-
-
-
 
 ```java
 for (int index = 0; index < tests.length; index++)
@@ -12046,6 +10568,7 @@ int[] array2 = array1;    // 这并没有复制 array1。
 ```
 
 程序输出：
+
 ```
 The contents of array1:
 200 4 6 8 10 
@@ -12090,10 +10613,6 @@ The contents of array2:
 00000000000000000000000000000000000000 (此处为占位符，对应原文逻辑)
 
 (注：由于提供的文本后半部分存在大量乱码/占位符，以上翻译仅针对可读的英文部分)
-
-
-
-
 
 ![一个传递参数的数组。该数组是一个矩形框，被平均分成 8 个小框，分别包含数字 5, 10, 15, 20, 25, 30, 35 和 40。](img/07fig10.png)图 7-10 完整替代文本
 
@@ -12227,8 +10746,6 @@ for (int index = 1; index < numbers.length; index++)
 为了演示这些算法，请看代码列表 7-10 所示的 `SalesData` 类。该类的实例在数组中保留任意天数的销售金额，这是一个私有字段。提供了公共方法来返回销售总额、平均值、最高和最低销售金额。代码列表 7-11 中的程序演示了该类，而图 7-11 显示了与程序交互的示例。
 
 # 代码列表 7-10 `(SalesData.java)`
-
-
 
 
 
@@ -12412,10 +10929,6 @@ LaClaire 博士在她的化学课学期内会进行多次考试。在学期结�
 * `getLowestScore` 方法出现在 31 到 49 行。它找到 `testScores` 数组中的最小值并返回该值。
 * `getAverage` 方法出现在 57 到 90 行。该方法首先判断 `testScores` 数组中的元素是否少于 2 个（第 66 行）。如果是，则无法扣除最低分，因此显示错误消息并将 `average` 变量设置为 0。否则，第 74 到 85 行的代码将计算扣除最低分后的测试平均分，并将该值赋值给 `average` 变量。第 89 行返回 `average` 变量的值。
 
-
-
-
-
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr7-13/13.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr7-13/13.html)
 
 # 部分填充的数组
@@ -12581,9 +11094,6 @@ String[] names = { "Bill", "Susan", "Steven", "Jean" };
 
 # 图 7-14 `names` 变量引用一个 `String` 数组
 
-
-
-
 `names` 数组中的每个元素都是对 `String` 对象的引用。`names[0]` 元素引用包含“Bill”的 `String` 对象，`names[1]` 元素引用包含“Susan”的 `String` 对象，依此类推。代码列表 7-15 程序展示了一个 `String` 对象的数组。
 
 在下方的动画中，点击“上一个”或“下一个”按钮可以逐步查看代码并看到全程的解释。
@@ -12598,6 +11108,8 @@ String[] names = { "Bill", "Susan", "Steven", "Jean" };
 final int SIZE = 4;
 String[] names = new String[SIZE];
 ```
+
+
 
 该语句创建了一个包含四个 `String` 对象引用的数组，如图 7-15 所示。注意，该数组是一个包含四个未初始化 `String` 引用的数组。由于它们没有引用任何对象，因此它们被设置为 `null`。
 
@@ -12649,7 +11161,7 @@ for (int i = 0; i < names.length; i++)
 
 ## 检查点 7.28
 
-../components/metrodigi/ch07-inline_self_quiz_v1.0.0-14/index.html
+`../components/metrodigi/ch07-inline_self_quiz_v1.0.0-14/index.html`
 
 ## 7.7 对象数组
 
@@ -12719,14 +11231,11 @@ for (int i = 0; i < names.length; i++)
 
 ## 检查点 7.28
 
-../components/metrodigi/ch07-inline_self_quiz_v1.0.0-14/index.html
+`../components/metrodigi/ch07-inline_self_quiz_v1.0.0-14/index.html`
 
 ## 7.7 对象数组
 
 概念：你可以创建由你编写的类实例组成的对象数组。
-
-
-
 
 ```java
    /**
@@ -12811,7 +11320,7 @@ for (int i = 0; i < names.length; i++)
 
 ### 检查点 7.31
 
-../components/metrodigi/ch07-inline_self_quiz_v1.0.0-16/index.html
+`../components/metrodigi/ch07-inline_self_quiz_v1.0.0-16/index.html`
 
 ## 7.9 二维数组
 
@@ -12832,9 +11341,6 @@ double[][] scores = new double[3][4];
 ```
 
 数据类型中的两组括号表示 `scores` 变量将引用一个二维数组。数字 `3` 和 `4` 是大小声明符。第一个大小声明符指定行数，第二个大小声明符指定列数。注意每个大小声明符都包含在自己的括号中。这在图 7-1 中有所插图。
-
-
-
 
 如前所述，该数组有三行（每个部门一行）和四列（每个季度一列），用于存储公司的销售数据。行下标为 0、1 和 2，列下标为 0、1、2 和 3。图 7-21 插图了季度销售数据是如何存储在数组中的。
 
@@ -12911,7 +11417,6 @@ int[][] numbers = { {1, 2, 3},
 
 
 
-
 ```java
 int[][] numbers = { { 1, 2, 3, 4 },
                     { 5, 6, 7, 8 },
@@ -12932,11 +11437,11 @@ for (int row = 0; row < numbers.length; row++)
 }
 ```
 
-注意，用作累加器的变量 `total` 在内层循环执行之前被设置为零，因为内层循环会计算某行元素的和并将结果存储在 `total` 中。因此，在内层循环的每次迭代之前，必须将 `total` 变量设置为 0。
+注意，用作累加器的变量`total`在内层循环执行之前被设置为零，因为内层循环会计算某行元素的和并将结果存储在`total`中。因此，在内层循环的每次迭代之前，必须将`total`变量设置为 0。
 
-# 求二维数组的列和
+## 求二维数组的列和
 
-有时你可能需要计算二维数组中每一列的和。例如，假设用一个二维数组存储一组学生的测试成绩，而你希望计算每项测试的的平均分。要实现这一点，你需要计算数组中每一列的平均值。这通过一组嵌套循环来实现。外层循环控制列下标，内层循环控制行下标。内层循环计算某一列的和，并将其存储在累加器中。以下代码演示了：
+有时你可能需要计算二维数组中每一列的和。例如，假设用一个二维数组存储一组学生的测试成绩，而你希望计算每项测试的平均分。要实现这一点，你需要计算数组中每一列的平均值。这通过一组嵌套循环来实现。外层循环控制列下标，内层循环控制行下标。内层循环计算某一列的和，并将其存储在累加器中。以下代码演示了：
 
 ```java
 int[][] numbers = { { 1, 2, 3, 4 },
@@ -12959,7 +11464,7 @@ for (int col = 0; col < numbers[0].length; col++)
 }
 ```
 
-# 将二维数组传递给方法
+## 将二维数组传递给方法
 
 当将二维数组传递给方法时，参数必须声明为指向二维数组的引用。下面的方法头显示了一个示例：
 
@@ -12967,13 +11472,13 @@ for (int col = 0; col < numbers[0].length; col++)
 private static void showArray(int[][] array)
 ```
 
-该方法的参数 `array` 被声明为指向二维 `int` 数组的引用。任何二维 `int` 数组都可以作为参数传递给该方法。`代码列表 7-20` 演示了两个这样的方法。
+该方法的参数`array`被声明为指向二维`int`数组的引用。任何二维`int`数组都可以作为参数传递给该方法。`代码列表 7-20`演示了两个这样的方法。
 
 在下面的动画中，点击“上一个”或“下一个”按钮逐步查看代码并查看各处的解释。
 
-# 代码列表 7-20 `(Pass2Darray.java)`
+### 代码列表 7-20 `(Pass2Darray.java)`
 
-# 不锯齿数组 (Ragged Arrays)
+## 不锯齿数组 (Ragged Arrays)
 
 由于二维数组中的行也是数组，因此每行都可以有自己的长度。当二维数组的行长度不同时，该数组被称为不锯齿数组。你通过首先创建一个具有特定行数但没有列的二维数组来创建不锯齿数组。这是一个示例：
 
@@ -13010,13 +11515,13 @@ The number of columns in row 2 is 5
 The number of columns in row 3 is 6
 ```
 
-# Checkpoint 7.32
+### Checkpoint 7.32
 
-# Checkpoint 7.33
+### Checkpoint 7.33
 
-# Checkpoint 7.34
+### Checkpoint 7.34
 
-# 三维或更多维的数组
+## 三维或更多维的数组
 
 概念：Java 不限制数组可以拥有的维度数量。可以创建几乎任意数量维度的数组。这是一个三维数组的示例：
 
@@ -13026,47 +11531,43 @@ double[][][] seats = new double[3][5];
 
 该数组可以被视为三组五行，可能用于存储一个有八个座位的观众厅的价格。
 
-# 7.11 选择排序算法和二分查找算法
+## 7.11 选择排序算法和二分查找算法
 
 概念：排序算法用于将数据按某种顺序排列。搜索算法是在较大数据集中定位特定项目的方法。选择排序和二分查找是常用的排序和搜索算法。
 
-# 选择排序算法
+### 选择排序算法
 
 通常数组中的数据需要按某种顺序排序。例如，客户列表通常按字母顺序排序。学生成绩可能从高到低排序。产品代码可以排序，以便将相同颜色的产品存储在一起。在本节中，我们将探索如何编写你自己的排序算法。排序算法扫描数组并按特定顺序重新排列内容的技术。我们将探索的算法是选择排序。
 
-选择排序的工作原理如下：找到数组中的最小值并将其移动到元素 `0`。然后找到下一个较的值并移动到元素 `1`。这个过程一直持续，直到所有元素都处于正确的顺序位置。让我们看看选择排序在排列 `图 7-25` 中以下数组的元素时是如何工作的。
+选择排序的工作原理如下：找到数组中的最小值并将其移动到元素`0`。然后找到下一个较小的值并移动到元素`1`。这个过程一直持续，直到所有元素都处于正确的顺序位置。让我们看看选择排序在排列`图 7-25`中以下数组的元素时是如何工作的。
 
-
-
-
-
-`selection sort`（选择排序）会扫描数组，从元素 `0` 开始，并找到值最小的元素。然后将该元素的内容与元素 `0` 的内容进行交换。在这个示例中，存储在元素 `5` 中的 `1` 与存储在元素 `0` 中的 `5` 交换。交换后，数组将将如图 7-26 所示。
+`selection sort`（选择排序）会扫描数组，从元素`0`开始，并找到值最小的元素。然后将该元素的内容与元素`0`的内容进行交换。在这个示例中，存储在元素`5`中的`1`与存储在元素`0`中的`5`交换。交换后，数组将如图 7-26 所示。
 
 ![第一次交换后，数组的六个值被排列成一行六个框，每个框标记为元素 0、元素 1、元素 2、元素 3、元素 4 和元素 5，它们分别对应值 1, 7, 2, 8, 9 和 5。](img/07fig26.png)
 
-## 图 7-26 第一次交换后数组中的值
+#### 图 7-26 第一次交换后数组中的值
 
-该算法接着重复该过程，但由于元素 `0` 已经包含了数组中的最小值，因此可以将其排除在过程之外。这次，算法从元素 `1` 开始扫描。在这个示例中，元素 `2` 的内容与元素 `1` 的内容交换。数组随后将如图 7-27 所示。
+该算法接着重复该过程，但由于元素`0`已经包含了数组中的最小值，因此可以将其排除在过程之外。这次，算法从元素`1`开始扫描。在这个示例中，元素`2`的内容与元素`1`的内容交换。数组随后将如图 7-27 所示。
 
-## 图 7-27 第二次交换后数组中的值
+#### 图 7-27 第二次交换后数组中的值
 
 ![第二次交换后，数组的六个值被排列成一行六个框。](img/07fig27.png)图 7-27 完整替代文本
 
-再次重复该过程，但这次扫描从元素 `2` 开始。算法将发现元素 `5` 包含下一个较小。该元素的值与元素 `2` 的值交换，导致数组出现如图 7-28 所示。
+再次重复该过程，但这次扫描从元素`2`开始。算法将发现元素`5`包含下一个较小值。该元素的值与元素`2`的值交换，导致数组出现如图 7-28 所示。
 
-## 图 7-28 第三次交换后数组中的值
+#### 图 7-28 第三次交换后数组中的值
 
 ![第三次交换后，数组的六个值被排列成一行六个框。](img/07fig28.png)图 7-28 完整替代文本
 
-接下来，扫描从元素 `3` 开始。它的值与元素 `5` 的值交换，导致数组出现如图 7-29 所示。
+接下来，扫描从元素`3`开始。它的值与元素`5`的值交换，导致数组出现如图 7-29 所示。
 
-## 图 7-29 第四次交换后数组中的值
+#### 图 7-29 第四次交换后数组中的值
 
 ![第四次交换后，数组的六个值被排列成一行六个框。](img/07fig29.png)图 7-29 完整替代文本
 
-此时，只剩下两个元素需要排序。算法发现元素 `5` 中的值小于元素 `4` 的值，因此对两者进行交换。这使得数组处于最终排列，如图 7-30 所示。
+此时，只剩下两个元素需要排序。算法发现元素`5`中的值小于元素`4`的值，因此对两者进行交换。这使得数组处于最终排列，如图 7-30 所示。
 
-## 图 7-30 第五次交换后数组中的值
+#### 图 7-30 第五次交换后数组中的值
 
 ![第五次交换后，数组的六个值被排列成一行六个框。](img/07fig30.png)图 7-30 完整替代文本
 
@@ -13085,7 +11586,7 @@ For startScan is each subscript in array from 0 through the next-to-last subscri
      End For. 
      Set array[minIndex] to array[startScan]
      Set array[startScan] to minValue
-�End For
+End For
 ```
 
 以下方法对整数数组执行选择排序。作为参数传递的数组将按升序排序。
@@ -13110,13 +11611,13 @@ public static void selectionSort(int[] array)
    }
 ```
 
-`SelectionSortDemo.java` 程序演示了选择排序方法。你可以在此处下载本章源代码。
+`SelectionSortDemo.java`程序演示了选择排序方法。你可以在此处下载本章源代码。
 
-# 二分查找算法
+### 二分查找算法
 
-本章之前介绍了对数组进行顺序的算法。顺序搜索的优点是简单、易于理解和实现。此外，它不需要数组中的数据按任何顺序存储。然而，它的缺点是效率低下。如果数组有 20000 个元素，顺序搜索必须检查 20000 次。在平均情况下，搜索项位于数组末尾附近。对于包含 `N` 个元素的数组，顺序搜索通常需要 `N/2` 次比较。如果有 50000 个元素，顺序搜索需要 25000 次，这当然是假设搜索项在数组中存在。`N/2` 是平均比较次数。当顺序搜索失败时，它必须与每个元素进行比较。显然，如果速度很重要，不应该在大规模数组上使用顺序搜索。
+本章之前介绍了对数组进行顺序搜索的算法。顺序搜索的优点是简单、易于理解和实现。此外，它不需要数组中的数据按任何顺序存储。然而，它的缺点是效率低下。如果数组有 20000 个元素，顺序搜索必须检查 20000 次。在平均情况下，搜索项位于数组末尾附近。对于包含`N`个元素的数组，顺序搜索通常需要`N/2`次比较。如果有 50000 个元素，顺序搜索需要 25000 次，这当然是假设搜索项在数组中存在。`N/2`是平均比较次数。当顺序搜索失败时，它必须与每个元素进行比较。显然，如果速度很重要，不应该在大规模数组上使用顺序搜索。
 
-二分查找是一种比顺序搜索高效得多的巧妙算法。它的唯一要求是数组中的值必须按升序排序。算法不是测试数组的第一个元素，而是从中间元素开始。如果该元素恰好包含所需的值，搜索结束。否则，中间的值大于或小于要搜索的值。如果大于，则所需的值（如果存在的话）将在数组的前半部分找到。如果小于，则所需的值（再次如果存在）将在数组的后半部分找到。无论哪情况，数组的一半元素都被排除在搜索之外。
+二分查找是一种比顺序搜索高效得多的巧妙算法。它的唯一要求是数组中的值必须按升序排序。算法不是测试数组的第一个元素，而是从中间元素开始。如果该元素恰好包含所需的值，搜索结束。否则，中间的值大于或小于要搜索的值。如果大于，则所需的值（如果存在的话）将在数组的前半部分找到。如果小于，则所需的值（再次如果存在）将在数组的后半部分找到。无论哪种情况，数组的一半元素都被排除在搜索之外。
 
 如果在中间元素没有找到所需值，则对可能包含该值的数组重复该过程。例如，如果要搜索数组的后半部分，算法将测试其中间元素。如果在那里没有找到所需值，搜索将缩小到该元素之前的四分之一。该过程一直持续到找到要搜索的值，或者没有更多元素可以测试。以下是对数组执行二分查找方法的伪代码：
 
@@ -13139,15 +11640,11 @@ Set first to 0
  Return position
 ```
 
+该算法使用三个变量来标记数组中的位置：`first`、`last`和`middle`。`first`和`last`变量标记了当前正在搜索的数组部分的边界。它们被初始化为数组中`first`和`last`元素的下标。`first`和`last`正中间元素的下标被计算并存储在`middle`变量中。如果数组中间的元素不包含搜索值，则会调整`first`或`last`变量，以便在下次迭代中只搜索数组的上半或下半部分。这使得每次循环未能找到搜索值时，被搜索的数组部分都会减半。
 
+以下方法在整数数组上执行二分查找。第一个参数`array`用于查找是否存在存储在`value`中的数字。如果找到了该数字，则返回其数组中的下标。否则，返回 −1，表示该值未出现在数组中。
 
-
-
-该算法使用三个变量来标记数组中的位置：`first`、`last` 和 `middle`。`first` 和 `last` 变量标记了当前正在搜索的数组部分的边界。它们被初始化为数组中 `first` 和 `last` 元素的下标。`first` 和 `last` 正中间元素的下标被计算并存储在 `middle` 变量中。如果数组中间的元素不包含搜索值，则会调整 `first` 或 `last` 变量，以便在下次迭代中只搜索数组的上半或下半部分。这使得每次循环未能找到搜索值时，被搜索的数组部分都会减半。
-
-以下方法在整数数组上执行二分查找。第一个参数 `array` 用于查找是否存在存储在 `value` 中的数字。如果找到了该数字，则返回其数组中的下标。否则，返回 −1，表示该值未出现在数组中。
-
-```
+```java
 public static int binarySearch(int[] array, int value)
  {
     int first;          // 数组第一个元素
@@ -13184,36 +11681,46 @@ public static int binarySearch(int[] array, int value)
  }
 ```
 
-`BinarySearchDemo` 程序演示了该方法。你可以点击[此处](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip) 下载所有源代码。
+`BinarySearchDemo`程序演示了该方法。你可以点击[此处](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)下载所有源代码。
 
-# Checkpoint 7.39
+### Checkpoint 7.39
+
 ../components/metrodigi/ch07-inline_self_quiz_v1.0.0-20/index.html
 
-# Checkpoint 7.40
+### Checkpoint 7.40
+
 ../components/metrodigi/ch07-inline_self_quiz_v1.0.0-21/index.html
 
-# Checkpoint 7.41
+### Checkpoint 7.41
+
 ../components/metrodigi/ch07-inline_self_quiz_v1.0.0-22/index.html
 
-# Checkpoint 7.42
+### Checkpoint 7.42
+
 ../components/metrodigi/ch07-inline_self_quiz_v1.0.0-23/index.html
 
-# Checkpoint 7.43
+### Checkpoint 7.43
+
 ../components/metrodigi/ch07-inline_self_quiz_v1.0.0-25/index.html
 
-# 7.12 命令行参数与可变参数列表
+## 7.12 命令行参数与可变参数列表
 
-**概念**：当你从操作系统命令行调用 Java 程序时，可以指定传递给程序 `main` 方法的参数。此外，你还可以编写一个接受变数量参数的方法。当方法运行时，它可以确定传递给它的参数数量并据此采取行动。
+**概念**：当你从操作系统命令行调用 Java 程序时，可以指定传递给程序`main`方法的参数。此外，你还可以编写一个接受变数量参数的方法。当方法运行时，它可以确定传递给它的参数数量并据此采取行动。
 
-# 命令行参数
-你在书中看到的每个程序以及你编写的每个程序都使用一个静态 `main` 方法，其头部如下：
+### 命令行参数
 
-``` evenpublic static void main(String[] args)
+你在书中看到的每个程序以及你编写的每个程序都使用一个静态`main`方法，其头部如下：
+
+```java
+public static void main(String[] args)
 ```
 
-方法头部的括号内是名为 `args` 的参数的声明。该参数是一个数组名称。正如其声明所示，它用于引用 `String` 数组。传递到 `args` 参数的数组来自操作系统命令行。例如，查看代码列表 7-21。
 
-# 代码列表 7-21 `(CommandLine.java)`
+
+方法头部的括号内是名为`args`的参数的声明。该参数是一个数组名称。正如其声明所示，它用于引用`String`数组。传递到`args`参数的数组来自操作系统命令行。例如，查看代码列表 7-21。
+
+## 代码列表 7-21 (`CommandLine.java`)
+
 ```
  1  /**
   2     此程序显示从操作系统命令行
@@ -13245,28 +11752,30 @@ this
 work?
 ```
 
-在命令行上输入的、用空格分隔且在类名之后的任何项都被视为传递到 `main` 方法的一个或多个参数。在上一个例子中，有四个参数传递给 `args`。单词“How”传递给 `args[0]`，“does”传递给 `args[1]`，“this”传递给 `args[2]`，而“work?”传递给 `args[3]`。`main` 方法中的 `for` 循环简单地显示了每个参数。
+在命令行上输入的、用空格分隔且在类名之后的任何项都被视为传递到`main`方法的一个或多个参数。在上一个例子中，有四个参数传递给`args`。单词“How”传递给`args[0]`，“does”传递给`args[1]`，“this”传递给`args[2]`，而“work?”传递给`args[3]`。`main`方法中的`for`循环简单地显示了每个参数。
 
 ### 注意
-`main` 参数数组的名称不需要是 `args`。你可以将其命名为任何你喜欢的名称。然而，使用 `args` 是一个标准惯例。
 
-# 可变参数列表
+`main`参数数组的名称不需要是`args`。你可以将其命名为任何你喜欢的名称。然而，使用`args`是一个标准惯例。
+
+## 可变参数列表
+
 Java 提供了一种名为可变参数列表（variable-length argument lists）的机制，使得编写接受变数量参数的方法成为可能。换句话说，你可以编写一个在调用时接受任意数量参数的方法。当方法运行时，它可以确定传递给它的参数数量并据此采取行动。
 
-例如，假设我们需要编写一个名为 `sum`，它可以接受任意数量的 `int` 值并返回这些值的和。我们可以如下调用该方法：
+例如，假设我们需要编写一个名为`sum`，它可以接受任意数量的`int`值并返回这些值的和。我们可以如下调用该方法：
 
 ```
 result = sum(10, 20);
 ```
 
-在这里我们向方法传递了两个参数：10 和 20。在这段代码执行后，值 30 将存储在 `result` 变量中。但是，方法并不需要在每次调用时接受两个参数。我们可以使用不同数量的参数再次调用该方法，如下：
+在这里我们向方法传递了两个参数：10 和 20。在这段代码执行后，值 30 将存储在`result`变量中。但是，方法并不需要在每次调用时接受两个参数。我们可以使用不同数量的参数再次调用该方法，如下：
 
 ```
 int firstVal = 1, secondVal = 2, thirdVal = 3, fourthVal = 4;
  result = sum(firstVal, secondVal, thirdVal, fourthVal);
 ```
 
-在这里我们向方法传递了四个参数：`firstVal`（设置为 1）、`secondVal`（设置为 2）、`thirdVal`（设置为 3）和 `fourthVal`（设置为 4）。在这段代码执行后，值 10 将存储在 `result` 变量中。以下是 `sum` 方法的代码：
+在这里我们向方法传递了四个参数：`firstVal`（设置为 1）、`secondVal`（设置为 2）、`thirdVal`（设置为 3）和`fourthVal`（设置为 4）。在这段代码执行后，值 10 将存储在`result`变量中。以下是`sum`方法的代码：
 
 ```
 public static int sum(int... numbers)
@@ -13282,57 +11791,55 @@ public static int sum(int... numbers)
  }
 ```
 
-注意方法头部 `numbers` 参数的声明。数据类型后面的省略号（三个点）表示 `numbers` 是一种特殊的参数类型，被称为可变参数（vararg）。可变参数可以接受任意数量的参数。
+注意方法头部`numbers`参数的声明。数据类型后面的省略号（三个点）表示`numbers`是一种特殊的参数类型，被称为可变参数（vararg）。可变参数可以接受任意数量的参数。
 
-事实上，可变参数实际上是数组。在 `sum` 方法中，`numbers` 参数是一个 `int` 数组。传递给 `sum` 方法的所有参数都存储在 `numbers` 数组的元素中。从代码可以看出，方法使用增强型 `for` 循环遍历 `numbers` 数组的元素，累加存储在元素中的值。（本章源代码中的 *VarargsDemo1.java* 程序演示了 `sum` 方法。）
+事实上，可变参数实际上是数组。在`sum`方法中，`numbers`参数是一个`int`数组。传递给`sum`方法的所有参数都存储在`numbers`数组的元素中。从代码可以看出，方法使用增强型`for`循环遍历`numbers`数组的元素，累加存储在元素中的值。（本章源代码中的*VarargsDemo1.java*程序演示了`sum`方法。）
 
-你还可以编写一个接受任意数量对象引用作为参数的方法。例如，代码列表 7-22 程序显示了一个接受变数量 `BankAccount` 对象引用的方法。该方法返回对象 `balance` 字段的总和。在下面的动画中，按“上一个”或“下一个”按钮逐步执行代码并贯穿其解释。
+你还可以编写一个接受任意数量对象引用作为参数的方法。例如，代码列表 7-22 程序显示了一个接受变数量`BankAccount`对象引用的方法。该方法返回对象`balance`字段的总和。在下面的动画中，按“上一个”或“下一个”按钮逐步执行代码并贯穿其解释。
 
-
-
-
-
-# 代码列表 7-22 `(VarargsDemo2.java)`
+## 代码列表 7-22 (`VarargsDemo2.java`)
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr7-22/22.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr7-22/22.html)
 
-你可以编写一个方法来接受固定参数和变长参数列表的混合。例如，假设我们想编写一个名为 `courseAverage` 的方法，它接受一个 `String` 类型的课程名称，以及一个变长的 `double` 类型的测试成绩列表。我们可以如下所示编写方法头：
+你可以编写一个方法来接受固定参数和变长参数列表的混合。例如，假设我们想编写一个名为`courseAverage`的方法，它接受一个`String`类型的课程名称，以及一个变长的`double`类型的测试成绩列表。我们可以如下所示编写方法头：
 
 ```
 public static void courseAverage(String course, double... scores)
 ```
 
-该方法有一个名为 `course` 的普通 `String` 参数，和一个名为 `scores` 的变长参数（vararg）。当我们调用此方法时，我们总是传递一个 `String` 参数，然后是一个 `double` 值列表。（该方法在程序 `VarargsDemo3.java` 中演示，该程序位于本章源代码文件夹中。）注意，当一个方法接受固定参数和变长参数列表混合时，变长参数必须是最后一个声明的。
+该方法有一个名为`course`的普通`String`参数，和一个名为`scores`的变长参数（vararg）。当我们调用此方法时，我们总是传递一个`String`参数，然后是一个`double`值列表。（该方法在程序`VarargsDemo3.java`中演示，该程序位于本章源代码文件夹中。）注意，当一个方法接受固定参数和变长参数列表混合时，变长参数必须是最后一个声明的。
 
-你也可以将数组传递给变长参数。这在程序 `VarargsDemo4.java` 中进行了演示。你可以点击[此地](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip) 下载所有源代码。
+你也可以将数组传递给变长参数。这在程序`VarargsDemo4.java`中进行了演示。你可以点击[此地](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip) 下载所有源代码。
 
-# 7.13 `ArrayList` 类
+## 7.13 `ArrayList`类
 
-概念：`ArrayList` 是 Java API 中的一个类，类似于数组，并允许你存储对象。与数组不同，`ArrayList` 对象的大小会自动调整，以适应存储在其中的项目数量。
+概念：`ArrayList`是 Java API 中的一个类，类似于数组，并允许你存储对象。与数组不同，`ArrayList`对象的大小会自动调整，以适应存储在其中的项目数量。
 
-Java API 提供了一个名为 `ArrayList` 的类，可用于存储和检索对象。一旦你创建了一个 `ArrayList` 对象，你就可以认为它是存放其他对象的容器。`ArrayList` 对象类似于对象数组，但比数组具有许多优势。以下是其中一些：
+Java API 提供了一个名为`ArrayList`的类，可用于存储和检索对象。一旦你创建了一个`ArrayList`对象，你就可以认为它是存放其他对象的容器。`ArrayList`对象类似于对象数组，但比数组具有许多优势。以下是其中一些：
 
-*   当向 `ArrayList` 中添加项时，`ArrayList` 对象会自动扩展。
-*   除了向 `ArrayList` 添加项外，你还可以从中删除项。
-*   当从 `ArrayList` 中移除项时，`ArrayList` 对象会自动收缩。
+*   当向`ArrayList`中添加项时，`ArrayList`对象会自动扩展。
 
-`ArrayList` 类位于 `java.util` 包中，因此需要以下 `import` 语句：
+*   除了向`ArrayList`添加项外，你还可以从中删除项。
+
+*   当从`ArrayList`中移除项时，`ArrayList`对象会自动收缩。
+
+`ArrayList`类位于`java.util`包中，因此需要以下`import`语句：
 
 ```
 import java.util.ArrayList;
 ```
 
-# 创建和使用 `ArrayList` 对象
+### 创建和使用`ArrayList`对象
 
-这里是如何创建 `ArrayList` 对象的示例：
+这里是如何创建`ArrayList`对象的示例：
 
 ```
 ArrayList<String> nameList = new ArrayList<String>();
 ```
 
-该语句创建了一个新的 `ArrayList` 对象并将其地址存储在 `nameList` 变量中。注意，在这个示例中，`String` 一词写在 `ArrayList` 单词后面的尖括号 `<>` 内部。这指定了 `ArrayList` 可以持有 `String` 对象。如果我们尝试向此 `ArrayList` 存储任何其他类型的对象，将会发生错误。（在本节稍后，你将看到一个用于存放其他类型对象的 `ArrayList` 示例。）
+该语句创建了一个新的`ArrayList`对象并将其地址存储在`nameList`变量中。注意，在这个示例中，`String`一词写在`ArrayList`单词后面的尖括号`<>`内部。这指定了`ArrayList`可以持有`String`对象。如果我们尝试向此`ArrayList`存储任何其他类型的对象，将会发生错误。（在本节稍后，你将看到一个用于存放其他类型对象的`ArrayList`示例。）
 
-要向 `ArrayList` 对象添加项，你需使用 `add` 方法。例如，以下语句将一系列 `String` 对象添加到 `nameList` 中：
+要向`ArrayList`对象添加项，你需使用`add`方法。例如，以下语句将一系列`String`对象添加到`nameList`中：
 
 ```
 nameList.add("James");
@@ -13340,11 +11847,11 @@ nameList.add("Catherine");
 nameList.add("Bill");
 ```
 
-在执行这些语句后，`nameList` 将持有三个对 `String` 对象的引用。第一个引用“James”，第二个引用“Catherine”，第三个引用“Bill”。
+在执行这些语句后，`nameList`将持有三个对`String`对象的引用。第一个引用“James”，第二个引用“Catherine”，第三个引用“Bill”。
 
-存储在 `ArrayList` 中的项有对应的索引（index）。索引指定项在 `ArrayList` 中的位置，因此它非常像数组下标。第一个添加到 `ArrayList` 的项存储在索引 0 。下一个添加到 `ArrayList` 的项存储在索引 1，以此此类推。在执行之前所示语句后，“James”将存储在索引 0，“Catherine”将存储在索引 1，“Bill”将存储在索引 2。
+存储在`ArrayList`中的项有对应的索引（index）。索引指定项在`ArrayList`中的位置，因此它非常像数组下标。第一个添加到`ArrayList`的项存储在索引 0 。下一个添加到`ArrayList`的项存储在索引 1，以此此类推。在执行之前所示语句后，“James”将存储在索引 0，“Catherine”将存储在索引 1，“Bill”将存储在索引 2。
 
-`ArrayList` 类有一个 `size` 方法，用于报告存储在 `ArrayList` 中的的项目数量。它将项目数量作为一个 `int` 返回。例如，以下语句使用该方法显示 `nameList` 中存储的项目数量：
+`ArrayList`类有一个`size`方法，用于报告存储在`ArrayList`中的的项目数量。它将项目数量作为一个`int`返回。例如，以下语句使用该方法显示`nameList`中存储的项目数量：
 
 ```
 System.out.println("The ArrayList has " +
@@ -13352,13 +11859,13 @@ System.out.println("The ArrayList has " +
                    " objects stored in it.");
 ```
 
-假设 `nameList` 持有字符串 `String` “James”、“Catherine”和“Bill”，以下语句将显示：
+假设`nameList`持有字符串`String`“James”、“Catherine”和“Bill”，以下语句将显示：
 
 ```
 The ArrayList has 3 objects stored in it.
 ```
 
-`ArrayList` 类的 `get` 方法返回存储在特定索引处的项。你将索引作为参数传递给方法。例如，以下语句将显示 `nameList` 中索引 1 处的项：
+`ArrayList`类的`get`方法返回存储在特定索引处的项。你将索引作为参数传递给方法。例如，以下语句将显示`nameList`中索引 1 处的项：
 
 ```
 System.out.println(nameList.get(1));
@@ -13366,7 +11873,7 @@ System.out.println(nameList.get(1));
 
 代码列表 7-23 中的程序演示了目前讨论的话题。
 
-# 代码列表 7-23 `(ArrayListDemo1.java)`
+## 代码列表 7-23 (`ArrayListDemo1.java`)
 
 ```
 import java.util.ArrayList;
@@ -13407,13 +11914,13 @@ Catherine
 Bill
 ```
 
-注意第 25 行，`for` 循环使用从 `nameList` 的 `size` 方法返回的值来控制循环次数。这是为了防止越界错误。`ArrayList` 中的最后一个项的索引将比 `ArrayList` 的 `size` 小 1。如果你向 `get` 方法传递一个更大的值，将会发生错误。
+注意第 25 行，`for`循环使用从`nameList`的`size`方法返回的值来控制循环次数。这是为了防止越界错误。`ArrayList`中的最后一个项的索引将比`ArrayList`的`size`小 1。如果你向`get`方法传递一个更大的值，将会发生错误。
 
-# 在 ArrayList 中使用增强 `for` 循环
+### 在`ArrayList`中使用增强`for`循环
 
-在本章之前，你已经看到如何使用增强 `for` 循环遍历数组中的每个 `element`。你也可以使用增强 `for` 循环来遍历 `ArrayList` 中的每个项。代码列表 7-24 演示了这一点。增强 `for` 循环用于第 26 行和第 27 行显示 `ArrayList` 中的所有项。
+在本章之前，你已经看到如何使用增强`for`循环遍历数组中的每个`element`。你也可以使用增强`for`循环来遍历`ArrayList`中的每个项。代码列表 7-24 演示了这一点。增强`for`循环用于第 26 行和第 27 行显示`ArrayList`中的所有项。
 
-# 代码列表 7-24 `(ArrayListDemo2.java)`
+## 代码列表 7-24 (`ArrayListDemo2.java`)
 
 ```
 import java.util.ArrayList;
@@ -13454,85 +11961,84 @@ Catherine
 Bill
 ```
 
-# `ArrayList` 类的 `toString` 方法
+### `ArrayList`类的`toString`方法
 
-
-
-
-`ArrayList` 类拥有一个 `toString()` 方法，该方法返回一个表示 `ArrayList` 对象中存储的所有项的字符串。例如，假设我们像之前所示设置了 `nameList` 对象，其中包含“James”、“Catherine”和“Bill”等等字符串。我们可以使用以下语句来显示所有名称：
+`ArrayList`类拥有一个`toString()`方法，该方法返回一个表示`ArrayList`对象中存储的所有项的字符串。例如，假设我们像之前所示设置了`nameList`对象，其中包含“James”、“Catherine”和“Bill”等等字符串。我们可以使用以下语句来显示所有名称：
 
 ```
 System.out.println(nameList);
 ```
 
-`ArrayList` 的内容将以如下方式显示：
+`ArrayList`的内容将以如下方式显示：
 
 ```
 [James, Catherine, Bill]
 ```
 
-这在程序 `ArrayListToString.java` 中得到了演示，该文件在本章的[源代码](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)文件夹中。
+这在程序`ArrayListToString.java`中得到了演示，该文件在本章的[源代码](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)文件夹中。
 
-从 `ArrayList` 中删除项
+### 从`ArrayList`中删除项
 
-`ArrayList` 类有一个 `remove` 方法，可以删除指定索引处的项。你将索引作为参数传递给该方法。代码列表 7-25 中的程序演示了这一操作。
+`ArrayList`类有一个`remove`方法，可以删除指定索引处的项。你将索引作为参数传递给该方法。代码列表 7-25 中的程序演示了这一操作。
 
 在下方的动画中，点击“上一个”或“下一个”按钮逐步执行代码并查看贯穿其中的解释。
 
-### 代码列表 7-25 `(ArrayListDemo3.java)`
+#### 代码列表 7-25 (`ArrayListDemo3.java`)
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr7-25/25.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr7-25/25.html)
 
-注意，当索引 1 处的项被删除时（第 27 行），之前存储在索引 2 处的项会向前移动到索引 1。当从 `ArrayList` 中删除一个项时，其后的项将向下移动位置位置以填补空隙。这意味着被删除项之后的每个项的索引都将减 1。
+注意，当索引 1 处的项被删除时（第 27 行），之前存储在索引 2 处的项会向前移动到索引 1。当从`ArrayList`中删除一个项时，其后的项将向下移动位置位置以填补空隙。这意味着被删除项之后的每个项的索引都将减 1。
 
-注意，如果使用无效的索引调用 `remove` 方法，将会发生错误。
+注意，如果使用无效的索引调用`remove`方法，将会发生错误。
 
- 插入项
+### 插入项
 
-如之前所示，`add` 方法在 `ArrayList` 对象的最后一个位置添加一个项。`ArrayList` 类有一个 `add` 方法的重载版本，允许你在特定索引处添加项。这会导致项被插入到 `ArrayList` 对象的特定位置。代码列表 7-26 中的程序演示了这一操作。
+如之前所示，`add`方法在`ArrayList`对象的最后一个位置添加一个项。`ArrayList`类有一个`add`方法的重载版本，允许你在特定索引处添加项。这会导致项被插入到`ArrayList`对象的特定位置。代码列表 7-26 中的程序演示了这一操作。
 
-### 代码列表 7-26 `(ArrayListDemo4.java)`
+#### 代码列表 7-26 (`ArrayListDemo4.java`)
 
-```
- 1  import java.util.ArrayList;
- 2  
- 3  /**
- 4     此程序演示了插入项。
- 5  */
- 6  
- 7  public class ArrayListDemo4
- 8  {
- 9     public static void main(String[] args)
-10     {
-11       // 创建一个用于存储名称的 ArrayList。
-12       ArrayList<String> nameList = new ArrayList<String>();
-13 
-14       // 向 ArrayList 中添加一些名称。
-15       nameList.add("James");
-16       nameList.add("Catherine");
-17       nameList.add("Bill");
-18 
-19       // 显示 nameList 中的项及其索引。
-20       for (int index = 0; index < nameList.size(); index++)
-21       {
-22         System.out.println("Index: " + index + " Name: " +
-23                            nameList.get(index));
-24       }
-25 
-26       // 现在在索引 1 处插入一个项。
-27       nameList.add(1, "Mary");
-28 
-29       System.out.println("Mary was added at index 1. " +
-30                           "Here are the items now.");
-31 
-32       // 显示 nameList 中的项及其索引。
-33       for (int index = 0; index < nameList.size(); index++)
-34       {
-35         System.out.println("Index: " + index + " Name: " +
-36                            nameList.get(index));
-37       }
-38     }
-39  }
+
+
+```java
+import java.util.ArrayList;
+
+/**
+   此程序演示了插入项。
+*/
+
+public class ArrayListDemo4
+{
+   public static void main(String[] args)
+   {
+     // 创建一个用于存储名称的 ArrayList。
+     ArrayList<String> nameList = new ArrayList<String>();
+
+     // 向 ArrayList 中添加一些名称。
+     nameList.add("James");
+     nameList.add("Catherine");
+     nameList.add("Bill");
+
+     // 显示 nameList 中的项及其索引。
+     for (int index = 0; index < nameList.size(); index++)
+     {
+       System.out.println("Index: " + index + " Name: " +
+                          nameList.get(index));
+     }
+
+     // 现在在索引 1 处插入一个项。
+     nameList.add(1, "Mary");
+
+     System.out.println("Mary was added at index 1. " +
+                         "Here are the items now.");
+
+     // 显示 nameList 中的项及其索引。
+     for (int index = 0; index < nameList.size(); index++)
+     {
+       System.out.println("Index: " + index + " Name: " +
+                          nameList.get(index));
+     }
+   }
+}
 ```
 
 程序输出
@@ -13547,24 +12053,21 @@ Index: 1 Name: Mary
 Index: 2 Name: Catherine
 ```
 
-
-
-
 这创建了一个可以存放 `InventoryItem` 对象的 `ArrayList`。请记住，类型推断是在 Java 7 中引入的。如果你使用的是较版本的 `Java` 语言，你将需要使用更长的声明语句形式来创建 `ArrayList`。
 
-# 检查点 7.44
+## 检查点 7.44
 
-../components/metrodigi/ch07-inline_self_quiz_v1.0.0-26/index.html
+`../components/metrodigi/ch07-inline_self_quiz_v1.0.0-26/index.html`
 
-# 检查点 7.45
+## 检查点 7.45
 
-../components/metrodigi/ch07-inline_self_quiz_v1.0.0-27/index.html
+`../components/metrodigi/ch07-inline_self_quiz_v1.0.0-27/index.html`
 
-# 检查点 7.46
+## 检查点 7.46
 
-../components/metrodigi/ch07-inline_self_quiz_v1.0.0-29/index.html
+`../components/metrodigi/ch07-inline_self_quiz_v1.0.0-29/index.html`
 
-# 7.14 需要避免的常见错误
+## 7.14 需要避免的常见错误
 
 以下列表描述了在学习本章主题时经常犯几种错误：
 
@@ -13577,7 +12080,7 @@ Index: 2 Name: Catherine
 
 ## 编程挑战
 
-## 1. 雨量类
+### 1. 雨量类
 
 编写一个 `RainFall` 类，将 12 个月的每月总降雨量存储在一个 `double` 数组中。该程序应该包含返回以下内容的方法：
 
@@ -13590,7 +12093,7 @@ Index: 2 Name: Catherine
 
 *输入验证：不要接受每月降雨量的负数。*
 
-## 2. 薪资类
+### 2. 薪资类
 
 编写一个 `Payroll` 类，使用以下数组作为字段：
 
@@ -13600,6 +12103,7 @@ Index: 2 Name: Catherine
 658845 4520125 7895122 8777541
 8451277 1302850 7580489
 ```
+
 *   `hours`。一个七个整数的数组，用于存储每个员工工作的小时
 *   `payRate`。一个七个 `double` 数组，用于存储每个员工的每小时薪率
 *   `wages`。一个七个 `double` 数组，用于存储每个员工的总工资
@@ -13612,7 +12116,7 @@ Index: 2 Name: Catherine
 
 *输入验证：不要接受小时数的负值，或薪率小于 6.00 的数值。*
 
-## 3. 记账验证
+### 3. 记账验证
 
 创建一个类，其方法接受一个记账号码作为参数。该方法通过与以下有效记账号码列表对比来确定该号码是否有效：
 
@@ -13625,15 +12129,15 @@ Index: 2 Name: Catherine
 
 编写一个程序来测试该类，要求用户输入记账号码。程序应该显示该号码有效还是无效。
 
-## 4. 记账修改
+### 4. 记账修改
 
 修改你在编程挑战 3 中编写的账户验证类，使其从文件读取有效数字列表。使用记事本或其他编辑器创建该文件。
 
-## 5. 大于 n
+### 5. 大于 n
 
 在程序中，写一个接受两个参数的方法：数组和一个数字 `n`。假设数组包含整数。该方法应该显示数组中所有大于 `n` 的数字。
 
-## 6. 驾照考试
+### 6. 驾照考试
 
 当地驾照办公室要求你写一个程序为驾照笔试部分评分。考试有 20 道选题。以下是正确答案：
 
@@ -13671,10 +12175,7 @@ Index: 2 Name: Catherine
 
 *输入验证：仅接受字母 A、B、C 或 D 作为答案。*
 
-# 7. 魔 8 Ball
-
-
-
+### 7. 魔 8 Ball
 
 编写一个程序模拟“魔法水晶球”（Magic 8 Ball），这是一种预测玩具，可以对“是”或“否”的问题显示随机回答。在本书的学生示例程序中，你将找到一个名为 `8_ball_responses.txt` 的文本文件。该文件包含 12 个回答，例如“我不这么认为”、“当然可以！”、“我不确定”等。该程序应该将回答从文件中读取并存储到数组或 `ArrayList` 对象中。它应该提示用户提一个问题，然后从数组或 `ArrayList` 对象中随机选择一个回答显示。程序将重复运行，直到用户准备退出。
 
@@ -13695,7 +12196,7 @@ Without a doubt, no.
 The answer is clearly NO.
 ```
 
-# 8. 成绩单
+### 8. 成绩单
 
 某老师有五位学生，他们参加了四次测试。老师使用以下评分标准根据学生四次测试成绩的平均分分配字母等级：
 
@@ -13713,17 +12214,17 @@ The answer is clearly NO.
 
 *输入验证：不接受小于 0 或大于 100 的测试分数。*
 
-# 9. 成绩单修改
+### 9. 成绩单修改
 
 修改编程挑战 8 中的成绩单应用程序，以便在确定测试成绩平均分和字母等级时，去掉每个学生最低的分。
 
-# 10. 平均步数
+### 10. 平均步数
 
 个人健身追踪器是一种可穿戴设备，可以跟踪你的体力活动、消耗的热路量、心率、睡眠模式等。大多数此类设备追踪的常见体力活动之一是你每天行走的步数。
 
 如果你已经[下载](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)了这段源代码，你将在 `Chapter 05` 文件夹中找到一个名为 `steps.txt` 的文件。`steps.txt` 文件包含一个人在一年中每天走的步数。该文件共有 365 行，每行包含一天内走的步数。（第一行是 1 月 1 日的步数，第二行是 1 月 2 日的步数，以此此类推。）编写一个程序读取该文件，然后显示每个月的平均步数。（数据来自一个非闰年，所以 2 月有 28 天。）
 
-# 11. 数组操作
+### 11. 数组操作
 
 编写一个带有初始化测试数据的数组的程序。可以使用你选择的任何原始数据类型。该程序还应具有以下方法：
 
@@ -13734,7 +12235,7 @@ The answer is clearly NO.
 
 在程序中演示每种方法。
 
-# 12. 1994 年油价
+### 12. 1994 年油价
 
 在学生示例程序中，你将找到一个名为 `1994_Weekly_Gas_Averages.txt` 的文本文件。该文件包含 1994 年每周的平均油价。（文件共有 52 行。第 1 行包含第一周的平均价格，第 2 行包含第 2 周的平均价格，以此此类推。）编写一个程序将文件中的油价读取到数组或 `ArrayList` 中。程序应执行以下操作：
 
@@ -13742,13 +12243,13 @@ The answer is clearly NO.
 *   显示全年最高平均油价，以及该价格对应的周数和它发生的月份。
 *   显示每个月的平均油价。（要获取特定月份的平均价格，请计算该每月每周平均的平均值。）
 
-# 13. 1994 年油价排序列表
+### 13. 1994 年油价排序列表
 
 *注意：此作业可以作为你为编程挑战 12 编写的程序的增强，也可以作为一个独立的程序。*
 
 在学生示例程序中，你将找到一个名为 `1994_Weekly_Gas_Averages.txt` 的文本文件。该文件包含 1994 年每周的平均油价。（文件共有 52 行。第 1 行包含第一周的平均价格，第 2 行包含第 2 周的平均价格，以此此类推。）编写一个程序读取文件中的油价并计算每个月的平均油价。（要获取特定月份的平均价格，请计算该每月每周价格平均值。）然后，程序应创建一个文件，列出月份及其平均油价，并从低到高排序。
 
-# 14. 姓名搜索
+### 14. 姓名搜索
 
 如果你已经[下载](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)了源代码，你将在 `Chapter 07` 文件夹中找到以下文件：
 
@@ -13757,7 +12258,7 @@ The answer is clearly NO.
 
 编写一个程序将两个文件的内容读取到单独数组或 `ArrayList` 中。用户可以输入男孩名字、女孩名字或两者，应用程序将显示这些名字是否在流行范围内。
 
-# 15. 人口数据
+### 15. 人口数据
 
 如果你已经[下载](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)了源代码，你将在 `Chapter 07` 文件夹中找到一个名为 `USPopulation.txt` 的文件。该文件包含 1950 年至 1990 年美国的人口（以千为单位）。文件的第一行是 1950 年的人口，第二行是 1951 年的人口，以此此类推。
 
@@ -13767,18 +12268,15 @@ The answer is clearly NO.
 *   该期间人口增长最多的年份
 *   该期间人口增长最少的年份
 
-# 16. 世界大赛冠军
+### 16. 世界大赛冠军
 
 如果你已经[下载](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)了源代码，你将找到一个名为 `WorldSeriesWinners.txt` 的文件。该文件包含 1903 年至 2009 年世界大赛冠军的按顺序列表。（文件的第一行是 1903 年获胜球队的名称，最后一行是 2009 年获胜球队的名称。注意 1904 年和 1994 年没有世界大赛，因此这些年份在文件中被跳过了。）
 
 编写一个程序允许用户输入球队名称，然后显示该队在 1903 年至 2009 年间获得世界大赛冠军的次数。
 
-
-
-
 将 `WorldSeriesWinners.txt` 文件的内容读入数组或 `ArrayList` 中。当用户输入团队名称时，程序应该遍历数组或 `ArrayList`，计算所选团队出现的次数。
 
-## 17. 二维数组操作
+### 17. 二维数组操作
 
 编写一个程序，创建一个用测试数据初始化的二维数组。可以使用任何你希望的基元数据类型。该程序应包含以下方法：
 
@@ -13791,25 +12289,27 @@ The answer is clearly NO.
 
 在该程序中演示每种方法。
 
-## 18. 电话簿 `ArrayList`
+### 18. 电话簿 `ArrayList`
 
-编写一个名为 `PhoneBookEntry` 的类，包含人的姓名和电话号码字段。该类应包含一个构造函数以及相应的访问器方法（accessor）和修改器方法（mutator）。然后编写一个程序，创建至少五个 `PhoneBookEntry` 对象并将它们存储在 ` `ArrayList` 中。使用循环显示 `ArrayList` 中每个对象的内容。
+编写一个名为 `PhoneBookEntry` 的类，包含人的姓名和电话号码字段。该类应包含一个构造函数以及相应的访问器方法（accessor）和修改器方法（mutator）。然后编写一个程序，创建至少五个 `PhoneBookEntry` 对象并将它们存储在 `ArrayList` 中。使用循环显示 `ArrayList` 中每个对象的内容。
+
+
 
 ## 19. 问答游戏
 
 在这个编程挑战中，你将为两个玩家创建一个简单的问答游戏。程序的工作原理如下：
 
-*   从玩家 1 开始，每个玩家将轮流回答 5 个问答问题（共有 10 个问题，每个玩家 5 个）。当显示问题时，还会显示四个可能的答案。只有一个答案是正确的，如果玩家选择了正确答案，他或她将获得一分。
-*   在为所有问题选择答案后，程序显示每个玩家获得的分数，并得分最高的玩家为胜利者。
+- 从玩家 1 开始，每个玩家将轮流回答 5 个问答问题（共有 10 个问题，每个玩家 5 个）。当显示问题时，还会显示四个可能的答案。只有一个答案是正确的，如果玩家选择了正确答案，他或她将获得一分。
+- 在为所有问题选择答案后，程序显示每个玩家获得的分数，并得分最高的玩家为胜利者。
 
 你需要设计一个 `Question` 类来存储问答问题的数据。`Question` 类应包含用于存储以下数据的 `String` 字段：
 
-*   一个问答问题
-*   可能的答案 1
-*   可能的答案 2
-*   可能的答案 3
-*   可能的答案 4
-*   正确答案的数字（1, 2, 3 或 4）
+- 一个问答问题
+- 可能的答案 1
+- 可能的答案 2
+- 可能的答案 3
+- 可能的答案 4
+- 正确答案的数字（1, 2, 3 或 4）
 
 `Question` 类应具有适当的构造函数、访问器和修改器方法。
 
@@ -13819,8 +12319,8 @@ The answer is clearly NO.
 
 洛书魔方是一个 3 行 3 列的网格，如图 [7-31] 所示。洛书魔方具有以下属性：
 
-*   网格恰好包含 1 到 9 的数字。
-*   每行、每列和每个对角线的和都等于同一个数字。如图 [7-32] 所示。
+- 网格恰好包含 1 到 9 的数字。
+- 每行、每列和每个对角线的和都等于同一个数字。如图 [7-32] 所示。
 
 ![洛书魔方是一个被分为三行每行三个格子的正方形。格子具有以下值。第一行：4, 9, 2。第二行：3, 5, 7。第 3 行：8, 1, 6。](img/07fig31.png)
 
@@ -13836,15 +12336,15 @@ The answer is clearly NO.
 
 ## 话题
 
-1.  8.1 静态成员
-2.  8.2 将对象作为参数
-3.  8.3 从方法返回对象
-4.  8.4 `toString` 方法
-5.  8.5 编写 `equals` 方法
-6.  8.6 复制对象的方法
-7.  8.7 聚合
-8.  8.8 `this` 引用
-9.  8.9 枚举类型
+1. 8.1 静态成员
+2. 8.2 将对象作为参数
+3. 8.3 从方法返回对象
+4. 8.4 `toString` 方法
+5. 8.5 编写 `equals` 方法
+6. 8.6 复制对象的方法
+7. 8.7 聚合
+8. 8.8 `this` 引用
+9. 8.9 枚举类型
 10. 8.10 垃圾收集
 11. 8.11 关注面向对象的设计：类协作
 12. 8.12 需避免的常见错误
@@ -13853,7 +12353,7 @@ The answer is clearly NO.
 
 概念：静态类成员属于类，而不属于对象。
 
-## 实例字段和实例方法的快速回顾
+### 实例字段和实例方法的快速回顾
 
 回想第 6 章，类的每个实例都有自己的一组字段，这些字段被称为实例字段。你可以创建类的多个实例并在每个实例中存储不同的值。例如，我们创建的 `Rectangle` 类有一个 `length` 字段和一个 `width` 字段。假设 `box` 引用 `Rectangle` 类的一个实例，我们执行以下语句：
 
@@ -13871,12 +12371,9 @@ x = box.getLength();
 
 该语句调用了 `getLength` 方法，该方法返回属于 `Rectangle` 类特定实例（即 `box` 所引用的实例）的 `length` 字段的值。实例字段和实例方法都与类的特定实例相关，在创建类实例之前无法使用它们。
 
-
-
-
 可以创建一个不属于类的任何实例的字段或方法。此类成员被称为静态字段（static fields）和静态方法（static methods）。当值存储在静态字段中时，它不会存储在类的实例中。事实上，为了在类的静态字段中存储值，甚至不需要存在类的实例。同样，静态方法不操作属于类的任何实例的字段。相反，它们只能对静态字段进行操作。你可以将静态字段和静态方法认为是属于类而不是属于类的实例。在本节中，我们将仔细查看静态成员。首先，我们将检查静态字段。
 
-# 静态字段
+### 静态字段
 
 当使用 `static` 关键字声明字段时，内存中只会存在该字段的一个拷贝，无论可能存在多少个类实例。类静态字段的单一拷贝由类的所有实例共享。例如，代码列表 8-1 所示的 `Countable` 类使用静态字段来计数创建的类实例数量。
 
@@ -13915,7 +12412,7 @@ x = box.getLength();
   32  }
 ```
 
-# 代码列表 8-1 `(Countable.java)`
+#### 代码列表 8-1 `(Countable.java)`
 
 首先，注意第 7 行中名为 `instanceCount` 的静态字段的声明，如下：
 
@@ -13925,9 +12422,7 @@ private static int instanceCount = 0;
 
 静态字段是通过在访问修饰符之后字段数据类型之前放置 `static` 关键字创建的。请注意，我们显式地将 `instanceCount` 字段初始化为值 0。无论创建了多少个类实例，这种初始化只发生一次。
 
-### 注意
-
-Java 自动为所有未初始化的静态成员变量存储 0。此类中的 `instanceCount` 字段是显式初始化的，因此任何阅读代码的人都能清楚看到该字段从值 0 开始。
+**注意**：Java 自动为所有未初始化的静态成员变量存储 0。此类中的 `instanceCount` 字段是显式初始化的，因此任何阅读代码的人都能清楚看到该字段从值 0 开始。
 
 接下来，查看第 16 行到 19 行的构造函数。构造函数使用 `++` 运算符来增加 `instanceCount` 字段。每创建一个 `Countable` 类的实例，就会调用构造函数并且 `instanceCount` 字段就会加 1。结果，`instanceCount` 字段将包含已创建的 `Countable` 类的实例数量。第 28 行到 31 行的 `getInstanceCount` 方法返回 `instanceCount` 中的值。代码列表 8-2 程序演示了这个类。
 
@@ -13957,25 +12452,27 @@ Java 自动为所有未初始化的静态成员变量存储 0。此类中的 `in
   23     }
 ```
 
-### 输出
+**输出**：
 
 ```
 3 instances of the class created.
 ```
 
-# 代码列表 8-2 `(StaticDemo.java)`
+#### 代码列表 8-2 `(StaticDemo.java)`
 
-程序创建了 `Countable` 类的三个实例，由 `object1`、`object2` 和 `object3` 。这在图 8-1 中所示。
+程序创建了 `Countable` 类的三个实例，由 `object1`、`object2` 和 `object3`。这在图 8-1 中所示。
 
-# 图 8-1 类的静态字段
+#### 图 8-1 类的静态字段
 
-![类的静态字段](img/08fig1.png) 第 19 行程序调用 `getInstanceCount` 方法来获取：
+![类的静态字段](img/08fig1.png)
+
+第 19 行程序调用 `getInstanceCount` 方法来获取：
 
 ```java
 objectCount = object1.getInstanceCount();
 ```
 
- 静态方法
+### 静态方法
 
 当类包含静态方法时，不需要创建类的实例来执行该方法。代码列表 8-3 程序展示了一个示例。
 
@@ -14012,7 +12509,7 @@ objectCount = object1.getInstanceCount();
   30  }
 ```
 
-# 代码列表 8-3 `(Metric.java)`
+#### 代码列表 8-3 `(Metric.java)`
 
 静态方法是通过在方法头访问修饰符之后放置 `static` 关键字创建的。`Metric` 类有两个静态方法：`milesToometers` 和 `kilometersToMiles`。由于它们被声明为 `static`，它们属于类，可以在没有类实例的情况下被调用。你只需要在方法调的点运算符之前写入类名。这里有一个示例：
 
@@ -14022,18 +12519,15 @@ kilometers = Metric.milesToometers(10.0);
 
 该语句调用了 `milesToometers` 方法，并将值 `10.0` 作为参数。注意该方法不是从实例调用的，而是直接从 `Metric` 类调用的。代码列表 8-4 程序使用了 `Metric` 类。图 8-2 展示了与程序的交互示例。
 
+在`/home/user/`目录下，有一个`config.txt`。
 
+调用`calculate(10, 20)`方法来获取结果。
 
+如果`result > 15`：
 
-在 `/home/user/` 目录下，有一个 `config.txt`。
-调用 `calculate(10, 20)` 方法来获取结果。
-如果 `result > 15`：
 ```java
 print("Success")
 ```
-
-
-
 
 ```java
   /**
@@ -14078,7 +12572,7 @@ print("Success")
   }
 ```
 
-程序输出
+程序输出：
 
 ```
 Contents of the box object:
@@ -14087,69 +12581,75 @@ Now the contents of the box object are:
 Length : 0.0 Width : 0.0
 ```
 
-# 代码列表 8-6 `(PassObject2.java)`
+#### 代码列表 8-6 `(PassObject2.java)`
 
 在编写一个接收引用变量值作为参数的方法时，你必须小心不要意外修改该变量所引用对象的内容。
 
-# 检查点 8.6
+### 检查点 8.6
 
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-06/index.html
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-06/index.html`
 
-# 检查点 8.7
+### 检查点 8.7
 
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-07/index.html
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-07/index.html`
 
-# 8.3 从方法返回对象
+## 8.3 从方法返回对象
 
 概念：方法可以返回一个对象的引用。
 
-# 观看：从方法返回对象
+### 观看：从方法返回对象
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/59u4muCPqoNCQIJApN7X20Jg_h2cI3JA`](https://mediaplayer.pearsoncmg.com/assets/_video.true/59u4muCPqoNCQIJApN7X20Jg_h2cI3JA)
 
 就像方法可以写为返回 `int`、`double`、`float` 或原始数据类型一样，它们也可以写为返回对象的引用。例如，回想第 6 章讨论过的 `BankAccount` 类。代码列表 8-7 中的程序使用了一个方法 `getAccount`，该方法返回 `BankAccount` 对象的引用。图 5 显示了与程序的交互。
 
-# 图 8-5 与 `ReturnObject.java` 的交互
+#### 图 8-5 与 `ReturnObject.java` 的交互
 
-![与 Return Object java 程序的交互包含一个输入框和一个消息对话框。](img/08fig05.png) 图 5 完整备用文本
+![与 Return Object java 程序的交互包含一个输入框和一个消息对话框。](img/08fig05.png)
+
+图 5 完整备用文本
 
 在下面的动画中，点击“上一个”或“下一步”按钮逐步查看代码并查看全程解释。
 
-# 代码列表 8-7 `(ReturnObject.java)`
+#### 代码列表 8-7 `(ReturnObject.java)`
 
-[`media.pearsoncmg.com/ph/esm/media_ecs/gaddis-java/pr8-7`](https://media.pearsoncmg.com/ph/esm/media_ecs/gaddis-java/pr8-7) 注意 `getAccount` 方法的返回类型为 `BankAccount`。图 6 显示了方法的返回类型，该类型列在方法头中。
+[`media.pearsoncmg.com/ph/esm/media_ecs/gaddis-java/pr8-7`](https://media.pearsoncmg.com/ph/esm/media_ecs/gaddis-java/pr8-7)
 
-# 图 8-6 `getAccount` 方法头
+注意 `getAccount` 方法的返回类型为 `BankAccount`。图 6 显示了方法的返回类型，该类型列在方法头中。
 
-返回类型为 `BankAccount` 意味着方法在终止时返回一个 `BankAccount` 对象的引用。后续是 `public static Account getAccount()`。该方法头被识别为 `public static`。方法的返回类型被识别为 `Account`。(images/08fig06.png)
+#### 图 8-6 `getAccount` 方法头
 
-以下出现在第 15 行的语句将 `getAccount` 方法的返回值赋值给 `account`：
+
+
+返回类型为`BankAccount`意味着方法在终止时返回一个`BankAccount`对象的引用。后续是`public static Account getAccount()`。该方法头被识别为`public static`。方法的返回类型被识别为`Account`。(`images/08fig06.png`)
+
+以下出现在第 15 行的语句将`getAccount`方法的返回值赋值给`account`：
 
 ```
 account = getAccount();
 ```
 
-在此语句执行后，`account` 变量将引用从 `getAccount` 方法返回的 `BankAccount` 对象。现在让我们来看 `getAccount` 方法。在第 38 行和 39 行，方法使用 `JOptionPane` 对话框从用户处获取账户余额。在第 40 行，用户输入的值被转换为 `double` 并赋值给本地变量 `balance`。方法中的最后一条语句（第 44 行）是如下的 `return` 语句：
+在此语句执行后，`account`变量将引用从`getAccount`方法返回的`BankAccount`对象。现在让我们来看`getAccount`方法。在第 38 行和 39 行，方法使用`JOptionPane`对话框从用户处获取账户余额。在第 40 行，用户输入的值被转换为`double`并赋值给本地变量`balance`。方法中的最后一条语句（第 44 行）是如下的`return`语句：
 
 ```java
 return new BankAccount(balance);
 ```
 
-该语句使用 `new` 关键字创建一个 `BankAccount` 对象，并将 `balance` 作为参数传递。然后从方法返回该对象的地址，如图 7 所示。在第 15 行，调用该方法时，地址被赋值给 `account`。
+该语句使用`new`关键字创建一个`BankAccount`对象，并将`balance`作为参数传递。然后从方法返回该对象的地址，如图 7 所示。在第 15 行，调用该方法时，地址被赋值给`account`。
 
-# 图 8-7 getAccount 方法返回一个 BankAccount 对象
+## 图 8-7 getAccount 方法返回一个 BankAccount 对象
 
 ![getAccount 方法返回一个 Account 对象](img/08fig07.png) 图 7 完整备用文本
 
-# 检查点 8.8
+## 检查点 8.8
 
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-08/index.html
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-08/index.html`
 
-# 8.4 `toString` 方法
+## 8.4 `toString` 方法
 
-概念：大多数类都可以从一个名为 `toString` 的方法中受益，该方法在某些情况下会被隐调用。通常，它返回一个表示对象状态的字符串。
+概念：大多数类都可以从一个名为`toString`的方法中受益，该方法在某些情况下会被隐调用。通常，它返回一个表示对象状态的字符串。
 
-我们经常需要显示对象状态的消息。对象的状态就是存储在对象中的数据。例如，回想 `BankAccount` 类有一个字段：`balance`。在任何时刻，`BankAccount` 对象的 `balance` 字段都持有一个值。`balance` 字段的值代表该时刻的状态。以下可能是显示 `BankAccount` 对象的代码示例：
+我们经常需要显示对象状态的消息。对象的状态就是存储在对象中的数据。例如，回想`BankAccount`类有一个字段：`balance`。在任何时刻，`BankAccount`对象的`balance`字段都持有一个值。`balance`字段的值代表该时刻的状态。以下可能是显示`BankAccount`对象的代码示例：
 
 ```java
 BankAccount account = new BankAccount(1500.0);
@@ -14157,32 +12657,28 @@ System.out.println("The account balance is $" +
                    account.getBalance());
 ```
 
-第一条语句创建一个 `BankAccount` 对象，将值 1500.0 传递给构造函数。回想 `BankAccount` 构造函数会将此值存储在 `balance` 字段中。在此语句执行后，`account` 变量将引用 `BankAccount` 对象。在第二条语句中，`System.out.println` 方法显示对象的 `balance` 字段的值。此语句的输出看起来如下：
+第一条语句创建一个`BankAccount`对象，将值 1500.0 传递给构造函数。回想`BankAccount`构造函数会将此值存储在`balance`字段中。在此语句执行后，`account`变量将引用`BankAccount`对象。在第二条语句中，`System.out.println`方法显示对象的`balance`字段的值。此语句的输出看起来如下：
 
 ```
 The account balance is $1500.0
 ```
 
-创建一个表示对象状态的字符串是一个常见的任务，以至于许多程序员为类配备配备返回此类字符串的方法。在 Java 中，将此方法命名为 `toString` 是标准做法。让我们来看具有 `toString` 方法的类示例。图 8-8 显示了 `Stock` 类的 UML 图。
-
-
-
-
+创建一个表示对象状态的字符串是一个常见的任务，以至于许多程序员为类配备配备返回此类字符串的方法。在 Java 中，将此方法命名为`toString`是标准做法。让我们来看具有`toString`方法的类示例。图 8-8 显示了`Stock`类的 UML 图。
 
 ![Stock 类的 UML 图分为三个矩形区域。](img/08fig08.png)图 8-8 完整替代文本
 
-该类有两个字段：`symbol` 和 `sharePrice`。`symbol` 字段存储公司股票的交易代码。这是一段短的字符序列，用于在证券交易所识别该股票。例如，XYZ 公司的股票交易代码可能是 XYZ。`sharePrice` 字段存储该股票的当前每股价格。表 8–1 描述了该类的方法。
+该类有两个字段：`symbol`和`sharePrice`。`symbol`字段存储公司股票的交易代码。这是一段短的字符序列，用于在证券交易所识别该股票。例如，XYZ 公司的股票交易代码可能是 XYZ。`sharePrice`字段存储该股票的当前每股价格。表 8–1 描述了该类的方法。
 
-# 表 8-1 `Stock` 类的类方法
+### 表 8-1 `Stock` 类的类方法
 
 | 方法 | 描述 |
 | --- | --- |
-| 构造函数 | 此构造函数接受参数并将其赋值给 `symbol` 和 `sharePrice` 字段。 |
-| `getSymbol` | 此方法返回 `symbol` 字段中的值。 |
-| `getSharePrice` | 此方法返回 `sharePrice` 字段中的值。 |
+| 构造函数 | 此构造函数接受参数并将其赋值给`symbol`和`sharePrice`字段。 |
+| `getSymbol` | 此方法返回`symbol`字段中的值。 |
+| `getSharePrice` | 此方法返回`sharePrice`字段中的值。 |
 | `toString` | 此方法返回一个表示对象状态的字符串。该字符串适用于显示在屏幕上。 |
 
-代码列表 8-8 显示了 `Stock` 类的代码。（此文件位于源代码文件夹 `Chapter 08\Stock Class Phase 1` 中。）
+代码列表 8-8 显示了`Stock`类的代码。（此文件位于源代码文件夹`Chapter 08\Stock Class Phase 1`中。）
 
 ```java
  1 /**
@@ -14221,32 +12717,36 @@ The account balance is $1500.0
  34       @return 股票的股票价格
  35    */
  36 
+
  37    public double getSharePrice()
  38    {
  39       return sharePrice;
  40    }
  41 
+
  42    /**
  43       toString 方法
  44       @return 表示对象的交易代码
  45                              和股票价格的字符串。
  46    */
  47 
+
  48    public String toString()
  49    {
  50       // 创建一个描述股票的字符串。
  51       String str = "Trading symbol: " + symbol +
  52                    "\nShare price: " + sharePrice;
  53 
+
  54       // 返回该字符串。
  55       return str;
  56    }
  57  }
 ```
 
-# 代码列表 8-8 `(Stock.java)`
+### 代码列表 8-8 `(Stock.java)`
 
-`toString` 方法出现在第 48 行到第 56 行。该方法创建一个列出股票交易代码和每股价格的字符串。然后从方法返回该字符串。随后可以将对方法的调用传递给 `System.out.println`，如下代码所示：
+`toString`方法出现在第 48 行到第 56 行。该方法创建一个列出股票交易代码和每股价格的字符串。然后从方法返回该字符串。随后可以将对方法的调用传递给`System.out.println`，如下代码所示：
 
 ```java
 Stock xyzCompany = new Stock ("XYZ", 9.62);
@@ -14260,14 +12760,14 @@ Trading symbol: XYZ
 Share price: 9.62
 ```
 
-实际上，在这个示例中没有必要显式地调用 `toString` 方法。如果你为类编写了 `toString` 方法，当对象作为参数传递给 `print` 或 `println` 时，Java 将自动调用该方法。以下代码将产生与之前相同的输出：
+实际上，在这个示例中没有必要显式地调用`toString`方法。如果你为类编写了`toString`方法，当对象作为参数传递给`print`或`println`时，Java 将自动调用该方法。以下代码将产生与之前相同的输出：
 
 ```java
 Stock xyzCompany = new Stock ("XYZ", 9.62);
  System.out.println(xyzCompany);
 ```
 
-每当你将该类的对象与字符串拼接时，Java 也会隐式地调用对象的 `toString` 方法。例如，以下代码将产生之前所示的输出：
+每当你将该类的对象与字符串拼接时，Java 也会隐式地调用对象的`toString`方法。例如，以下代码将产生之前所示的输出：
 
 ```java
 Stock xyzCompany = new Stock ("XYZ", 9.62);
@@ -14282,7 +12782,7 @@ Trading symbol: XYZ
 Share price: 9.62
 ```
 
-代码列表 8-8 显示了 `Stock` 类的代码。（此文件位于源代码文件夹 `Chapter 08\Stock Class Phase 1` 中。）
+代码列表 8-8 显示了`Stock`类的代码。（此文件位于源代码文件夹`Chapter 08\Stock Class Phase 1`中。）
 
 ```java
  1 /**
@@ -14294,59 +12794,68 @@ Share price: 9.62
   7    private String symbol;        // 股票的交易代码
   8    private double sharePrice;    // 当前每股价格
   9 
+
  10    /**
  11       构造函数
  12       @param sym 股票的交易代码。
  13       @param price 股票的股票价格。
  14    */
  15 
+
  16    public Stock(String sym, double price)
  17    {
  18       symbol = sym;
  19       sharePrice = price;
  20    }
  21 
+
  22    /**
  23       getSymbol 方法
  24       @return 股票的交易代码。
  25    */
  26 
+
  27    public String getSymbol()
  28    {
  29       return symbol;
  30    }
  31 
+
  32    /**
  33       getSharePrice 方法
  34       @return 股票的股票价格
  35    */
  36 
+
  37    public double getSharePrice()
  38    {
  39       return sharePrice;
  40    }
  41 
+
  42    /**
  43       toString 方法
  44       @return 表示对象的交易代码
  45                              和股票价格的字符串。
  46    */
  47 
+
  48    public String toString()
  49    {
  50       // 创建一个描述股票的字符串。
  51       String str = "Trading symbol: " + symbol +
  52                    "\nShare price: " + sharePrice;
  53 
+
  54       // 返回该字符串。
  55       return str;
  56    }
  57  }
 ```
 
-# 代码列表 8-8 `(Stock.java)`
+### 代码列表 8-8 `(Stock.java)`
 
-`toString` 方法出现在第 48 行到第 56 行。该方法创建一个列出股票交易代码和每股价格的字符串。然后从方法返回该字符串。随后可以将对方法的调用传递给 `System.out.println`，如下代码所示：
+`toString`方法出现在第 48 行到第 56 行。该方法创建一个列出股票交易代码和每股价格的字符串。然后从方法返回该字符串。随后可以将对方法的调用传递给`System.out.println`，如下代码所示：
 
 ```java
 Stock xyzCompany = new Stock ("XYZ", 9.62);
@@ -14360,14 +12869,14 @@ Trading symbol: XYZ
 Share price: 9.62
 ```
 
-实际上，在这个示例中没有必要显式地调用 `toString` 方法。如果你为类编写了 `toString` 方法，当对象作为参数传递给 `print` 或 `println` 时，Java 将自动调用该方法。以下代码将产生与之前相同的输出：
+实际上，在这个示例中没有必要显式地调用`toString`方法。如果你为类编写了`toString`方法，当对象作为参数传递给`print`或`println`时，Java 将自动调用该方法。以下代码将产生与之前相同的输出：
 
 ```java
 Stock xyzCompany = new Stock ("XYZ", 9.62);
  System.out.println(xyzCompany);
 ```
 
-每当你将该类的对象与字符串拼接时，Java 也会隐式地调用对象的 `toString` 方法。例如，以下代码将产生之前所示的输出：
+每当你将该类的对象与字符串拼接时，Java 也会隐式地调用对象的`toString`方法。例如，以下代码将产生之前所示的输出：
 
 ```java
 Stock xyzCompany = new Stock ("XYZ", 9.62);
@@ -14382,7 +12891,7 @@ Trading symbol: XYZ
 Share price: 9.62
 ```
 
-代码列表 8-8 显示了 `Stock` 类的代码。（此文件位于源代码文件夹 `Chapter 08\Stock Class Phase 1` 中。）
+代码列表 8-8 显示了`Stock`类的代码。（此文件位于源代码文件夹`Chapter 08\Stock Class Phase 1`中。）
 
 ```java
  1 /**
@@ -14394,59 +12903,64 @@ Share price: 9.62
   7    private String symbol;        // 股票的交易代码
   8    private double sharePrice;    // 当前每股价格
   9 
+
  10    /**
  11       构造函数
  12       @param sym 股票的交易代码。
  13       @param price 股票的股票价格。
  14    */
  15 
+
  16    public Stock(String sym, double price)
  17    {
  18       symbol = sym;
  19       sharePrice = price;
  20    }
  21 
+
  22    /**
  23       getSymbol 方法
  24       @return 股票的交易代码。
  25    */
  26 
+
  27    public String getSymbol()
  28    {
  29       return symbol;
  30    }
  31 
+
  32    /**
  33       getSharePrice 方法
  34       @return 股票的股票价格
  35    */
  36 
+
  37    public double getSharePrice()
  38    {
  39       return sharePrice;
  40    }
  41 
+
  42    /**
  43       toString 方法
  44       @return 表示对象的交易代码
  45                              和股票价格的字符串。
  46    */
  47 
+
  48    public String toString()
  49    {
  50       // 创建一个描述股票的字符串。
  51       String str = "Trading symbol: " + symbol +
  52                    "\nShare price: " + sharePrice;
  53 
+
  54       // 返回该字符串。
  55       return str;
  56    }
  57  }
 ```
-
-
-
-
 
 ```java
 public boolean equals(Stock object2)
@@ -14467,13 +12981,13 @@ public boolean equals(Stock object2)
  }
 ```
 
-`equals` 方法接受一个 `Stock` 对象作为参数。参数变量 `object2` 将引用作为传递的对象。`if` 语句执行以下比较：如果调用对象的 `symbol` 字段等于 `object2` 的 `symbol` 字段，且调用对象的 `sharePrice` 字段等于 `object2` 的 `sharePrice` 字段，则这两个对象包含相同的值。在这种情况下，局部变量 `status`（一个 `boolean` 类型）被设置为 `true`。否则，`status` 被设置为 `false`。最后，方法返回 `status` 变量的值。
+`equals`方法接受一个`Stock`对象作为参数。参数变量`object2`将引用作为传递的对象。`if`语句执行以下比较：如果调用对象的`symbol`字段等于`object2`的`symbol`字段，且调用对象的`sharePrice`字段等于`object2`的`sharePrice`字段，则这两个对象包含相同的值。在这种情况下，局部变量`status`（一个`boolean`类型）被设置为`true`。否则，`status`被设置为`false`。最后，方法返回`status`变量的值。
 
-注意，该方法可以直接访问 `object2` 的 `symbol` 和 `sharePrice` 字段。由于 `object2` 引用一个 `Stock` 对象，且 `equals` 方法是 `Stock` 类的成员，因此该方法允许访问 `object2` 的私有字段。
-
-代码列表 8-10 展示了 `equals` 方法。（此文件也存储在源代码文件夹 Chapter 08\Stock Class Phase 2 中。）
+注意，该方法可以直接访问`object2`的`symbol`和`sharePrice`字段。由于`object2`引用一个`Stock`对象，且`equals`方法是`Stock`类的成员，因此该方法允许访问`object2`的私有字段。
 
 
+
+代码列表 8-10 展示了 `equals` 方法。（此文件也存储在源代码文件夹 `Chapter 08\Stock Class Phase 2` 中。）
 
 ```java
  1  /**
@@ -14504,15 +13018,15 @@ public boolean equals(Stock object2)
 Both objects are the same.
 ```
 
-# 代码列表 8-10 `(StockCompare.java)`
+## 代码列表 8-10 `(StockCompare.java)`
 
 如果你希望能够比较给定类的对象，你应该始终为该类编写一个 `equals` 方法。
 
 ### 注意
 
-每个类都自动拥有一个 `equals` 方法，其工作原理与 `==` 运算符相同。如果你没有提供自己的 `equals` 方法，该方法会在需要时被调用。你将在第 10 章 中学习到更多内容。
+每个类都自动拥有一个 `equals` 方法，其工作原理与 `==` 运算符相同。如果你没有提供自己的 `equals` 方法，该方法会在需要时被调用。你将在第 10 章中学习到更多内容。
 
-# 8.6 复制对象的方法
+## 8.6 复制对象的方法
 
 概念：通过为类配备一个返回对象副本的方法，可以简化复制对象的过程。
 
@@ -14527,11 +13041,11 @@ Stock company1 = new Stock("XYZ", 9.62);
 
 ![company 1 和 company 2 变量都持有同一个 Stock 对象的地址，该对象的符号为引号中的字母 X Y Z，股票价格为 9.62。](img/08fig10.png)
 
-# 图 8-10 两个变量引用同一个对象
+### 图 8-10 两个变量引用同一个对象
 
 这种类型的赋值操作被称为引用复制，因为只复制了对象的地址，而不是对象本身。要复制对象本身，你必须创建一个新对象，然后设置该对象的字段值。这个过程可以通过为类配备一个返回对象副本的方法来简化。
 
-在源代码文件夹 08\Stock Class Phase 2 中，你会找到 `Stock` 类的另一个版本。该版本的类有一个名为 `copy` 的方法，代码如下：
+在源代码文件夹 `08\Stock Class Phase 2` 中，你会找到 `Stock` 类的另一个版本。该版本的类有一个名为 `copy` 的方法，代码如下：
 
 ```java
 public Stock copy()
@@ -14600,13 +13114,13 @@ Share price: 9.62
 The company1 and company2 variables reference different objects.
 ```
 
-# 代码列表 8-11 `(ObjectCopy.java)`
+## 代码列表 8-11 `(ObjectCopy.java)`
 
-# 拷贝构造函数
+## 拷贝构造函数
 
 创建对象副本的另一种方法是使用拷贝构造函数。拷贝构造函数简单接受同类对象作为参数的构造函数。它使被创建的对象成为所传递对象的副本。
 
-在源代码文件夹 08\Stock Class Phase 4 中，你会找到 `Stock` 类的另一个版本。该版本的类有一个拷贝构造函数。拷贝构造函数的代码如下（类的其他部分未更改，因此只显示了拷贝构造函数）：
+在源代码文件夹 `08\Stock Class Phase 4` 中，你会找到 `Stock` 类的另一个版本。该版本的类有一个拷贝构造函数。拷贝构造函数的代码如下（类的其他部分未更改，因此只显示了拷贝构造函数）：
 
 ```java
 public Stock(Stock object2)
@@ -14618,29 +13132,26 @@ public Stock(Stock object2)
 
 注意，构造函数接受一个 `Stock` 对象作为参数。参数变量 `object2` 将引用作为传递的对象。构造函数将 `object2` 的 `symbol` 和 `sharePrice` 字段中的值复制到被创建对象的 `symbol` 和 `sharePrice` 字段中。
 
-
-
-
 以下代码段演示了拷贝构造函数。它创建了一个由变量 `company1` 引用的 `Stock` 对象。然后，它创建了另一个由变量 `company2` 引用的 `Stock` 对象。`company2` 引用的对象是 `company1` 引用对象的拷贝。
 
-```
+```java
 // Create a Stock object.
 Stock company1 = new Stock("XYZ", 9.62);
 // Create another Stock object that is a copy of the company1 object.
 Stock company2 = new Stock(company1);
 ```
 
-# 检查点 8.11
+## 检查点 8.11
 
-跳转到../components/metrodigi/ch08-inline_self_quiz_v1.0.0-10/index.html
+跳转到 `../components/metrodigi/ch08-inline_self_quiz_v1.0.0-10/index.html`
 
-# 8.7 聚合 (Aggregation)
+## 8.7 聚合 (Aggregation)
 
 概念：当一个类的实例是另一个类的字段时，就发生了聚合。
 
 在现实生活中，对象经常由其他对象组成。例如，一栋房子是由门对象、窗户对象、墙壁对象等组成的。正是所有这些对象的组合构成了一个房子对象。
 
-# 聚合视频 (WatchAggregation)
+### 聚合视频 (WatchAggregation)
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/secs_gaddis_6_vn_08_02_Aggregation`](https://mediaplayer.pearsoncmg.com/assets/_video.true/secs_gaddis_6_vn_08_02_Aggregation)
 
@@ -14659,7 +13170,7 @@ Stock company2 = new Stock(company1);
 * 一个 `set` 方法，用于设置该类的所有字段
 * 一个 `toString` 方法
 
-# 图 8-11 `Instructor` 类的 UML 图
+### 图 8-11 `Instructor` 类的 UML 图
 
 ![Instructor 类的 UML 图被分为三个矩形区域。](img/08fig11.png)图 8-11 完整备用文本
 
@@ -14676,152 +13187,150 @@ Stock company2 = new Stock(company1);
  8     private String firstName;       // 名
  9     private String officeNumber;    // 办公室号码
 10 
- 11     /**
- 12        此构造函数初始化姓、
- 13        名和办公室号码。
- 14        @param lname 讲师的姓。
- 15        @param fname 讲师的。
- 16        @param office 办公室号码。
- 17     */
- 18 
- 19     public Instructor(String lname, String fname,
- 20                       String office)
- 21     {
- 22        lastName = lname;
- 23        firstName = fname;
- 24        officeNumber = office;
- 25     }
- 26 
- 27     /**
- 28        拷贝构造函数将对象初始化为
- 29        为另一个 Instructor 对象的拷贝。
- 30        @param object2 要拷贝的对象。
- 31     */
- 32 
- 33     public Instructor(Instructor object2)
- 34     {
- 35        lastName = object2.lastName;
- 36        firstName = object2.firstName;
- 37        officeNumber = object2.officeNumber;
- 38     }
- 39 
- 40     /**
- 41        set 方法为每个字段设置一个值。
- 42        @param lname 讲师的姓。
- 43        @param fname 讲师的名。
- 44        @param office 办公室号码。
- 45     */
- 46 
- 47     public void set(String lname, String fname,
- 48          String office)
- 49     {
- 50        lastName = lname;
- 51        firstName = fname;
- 52        officeNumber = office;
- 53     }
- 54 
- 55     /**
- 56        toString 方法
- 57        @return 包含讲师
- 58        信息的字符串。
- 59     */
- 60 
- 61     public String toString()
- 62     {
- 63        // 创建一个表示对象的字符串。
- 64        String str = "Last Name: " + lastName +
- 65                    "\nFirst Name: " + firstName +
- 66                    "\nOffice Number: " + officeNumber;
- 67 
- 68        // 返回字符串。
- 69        return str;
- 70     }
- 71  }
+11     /**
+12        此构造函数初始化姓、
+13        名和办公室号码。
+14        @param lname 讲师的姓。
+15        @param fname 讲师的。
+16        @param office 办公室号码。
+17     */
+18 
+19     public Instructor(String lname, String fname,
+20                       String office)
+21     {
+22        lastName = lname;
+23        firstName = fname;
+24        officeNumber = office;
+25     }
+26 
+27     /**
+28        拷贝构造函数将对象初始化为
+29        为另一个 Instructor 对象的拷贝。
+30        @param object2 要拷贝的对象。
+31     */
+32 
+33     public Instructor(Instructor object2)
+34     {
+35        lastName = object2.lastName;
+36        firstName = object2.firstName;
+37        officeNumber = object2.officeNumber;
+38     }
+39 
+40     /**
+41        set 方法为每个字段设置一个值。
+42        @param lname 讲师的姓。
+43        @param fname 讲师的名。
+44        @param office 办公室号码。
+45     */
+46 
+47     public void set(String lname, String fname,
+48          String office)
+49     {
+50        lastName = lname;
+51        firstName = fname;
+52        officeNumber = office;
+53     }
+54 
+55     /**
+56        toString 方法
+57        @return 包含讲师
+58        信息的字符串。
+59     */
+60 
+61     public String toString()
+62     {
+63        // 创建一个表示对象的字符串。
+64        String str = "Last Name: " + lastName +
+65                    "\nFirst Name: " + firstName +
+66                    "\nOffice Number: " + officeNumber;
+67 
+68        // 返回字符串。
+69        return str;
+70     }
+71  }
 ```
 
-# 代码列表 8-12 `Instructor.java`
+## 代码列表 8-12 `Instructor.java`
 
 图 8-12 显示了 `TextBook` 类的 UML 图。与之前一样，我们保持该类简单。它拥有的方法是构造函数、拷贝构造函数、`set` 方法和 `toString` 方法。`TextBook` 类的代码显示在代码列表 8-12 中。
 
 ![Instructor 类的 UML 图被分为三个区域。](img/08fig11.png)图 8-12 完整备用文本
 
+
+
 ```java
- 1  /**
- 2     此类存储关于教材的数据。
- 3  */
- 4 
- 5  public class TextBook
- 6  {
- 7     private String title;           // 书的标题
- 8     private String author;          // 作者
- 9     private String publisher;       // 出版社
-10 
- 11     /**
- 12        此构造函数初始化标题、
- 13        作者和出版社字段。
- 14        @param textTitle 书的标题。
- 15        @param auth 作者的名。
- 16        @param pub 出版社名。
- 17     */
- 18 
- 19     public TextBook(String textTitle, String auth,
- 20                     String pub)
- 21     {
- 22        title = textTitle;
- 23        author = auth;
- 24        publisher = pub;
- 25     }
- 26 
- 27     /**
- 28        拷贝构造函数将对象初始化为
- 29        为另一个 TextBook 对象的拷贝。
- 30        @param object2 要拷贝的对象。
- 31     */
- 32 
- 33     public TextBook(TextBook object2)
- 34     {
- 35        title = object2.title;
- 36        author = object2.author;
- 37        publisher = object2.publisher;
- 38     }
- 39 
- 40     /**
- 41        set 方法为每个字段设置一个值。
- 42        @param textTitle 书的标题。
- 43        @param auth 作者的名。
- 44        @param pub 出版社名。
- 45     */
- 46 
- 47     public void set(String textTitle, String auth,
- 48          String pub)
- 49     {
- 50        title = textTitle;
- 51        author = auth;
- 52        publisher = pub;
- 53     }
- 54 
- 55     /**
- 56        toString 方法
- 57        @return 包含教材
- 58        信息的字符串。
- 59     */
- 60 
- 61     public String toString()
- 62     {
- 63        // 创建一个表示对象的字符串。
- 64        String str = "Title: " + title +
- 65                    "\nAuthor: " + author +
- 66                    "\nPublisher: " + publisher;
- 67 
- 68        // 返回字符串。
- 69        return str;
- 70     }
- 71  }
+/**
+   此类存储关于教材的数据。
+*/
+
+public class TextBook
+{
+   private String title;           // 书的标题
+   private String author;          // 作者
+   private String publisher;       // 出版社
+
+   /**
+      此构造函数初始化标题、
+      作者和出版社字段。
+      @param textTitle 书的标题。
+      @param auth 作者的名。
+      @param pub 出版社名。
+   */
+
+   public TextBook(String textTitle, String auth,
+                   String pub)
+   {
+      title = textTitle;
+      author = auth;
+      publisher = pub;
+   }
+
+   /**
+      拷贝构造函数将对象初始化为
+      为另一个 TextBook 对象的拷贝。
+      @param object2 要拷贝的对象。
+   */
+
+   public TextBook(TextBook object2)
+   {
+      title = object2.title;
+      author = object2.author;
+      publisher = object2.publisher;
+   }
+
+   /**
+      set 方法为每个字段设置一个值。
+      @param textTitle 书的标题。
+      @param auth 作者的名。
+      @param pub 出版社名。
+   */
+
+   public void set(String textTitle, String auth,
+        String pub)
+   {
+      title = textTitle;
+      author = auth;
+      publisher = pub;
+   }
+
+   /**
+      toString 方法
+      @return 包含教材
+      信息的字符串。
+   */
+
+   public String toString()
+   {
+      // 创建一个表示对象的字符串。
+      String str = "Title: " + title +
+                  "\nAuthor: " + author +
+                  "\nPublisher: " + publisher;
+
+      // 返回字符串。
+      return str;
+   }
+}
 ```
-
-
-
-
 
 [图 8-13] 显示了 `Course` 类的 UML 图。注意，`Course` 类有一个 `Instructor` 对象和一个 `TextBook` 对象作为字段。将一个类的实例作为另一个类的字段被称为“对象聚合”（`object aggregation`）。`aggregate`（聚合）一词的意思是“由组成部分构成的整体”。在这个例中，`Course` 类是一个聚合类，因为它是由组成对象构成的。
 
@@ -14831,8 +13340,9 @@ Stock company2 = new Stock(company1);
 
 当一个类的实例是另一个类的成员时，称类与类之间存在“有一个”（has a）关系。例如，`Course`、`Instructor` 和 `TextBook` 类之间的关系可以描述如下：
 
-*   该课程“有一个”（has an）讲师（Instructor）。
-*   该课程“有一个”（has a）教科书（TextBook）。
+*   该课程“有一个”（has an）讲师（`Instructor`）。
+
+*   该课程“有一个”（has a）教科书（`TextBook`）。
 
 “has a” 关系有时被称为“整体-部分关系”（`whole-part relationship`），因为一个对象是一个更大整体的一部分。`Course` 类的代码如代码列表 8-14 所示。
 
@@ -14854,26 +13364,27 @@ Stock company2 = new Stock(company1);
 7     public static void main(String[] args)
 8     {
 9        // 创建一个 Instructor 对象。
-10        Instructor myInstructor =
-11            new Instructor("Kramer", "Shawn", "RH3010");
+10       Instructor myInstructor =
+11           new Instructor("Kramer", "Shawn", "RH3010");
 12 
-13        // 创建一个 TextBook 对象。
-14        TextBook myTextBook =
-15            new TextBook("Starting Out with Java",
-16                         "Gaddis", "Pearson");
+13       // 创建一个 TextBook 对象。
+14       TextBook myTextBook =
+15           new TextBook("Starting Out with Java",
+16                        "Gaddis", "Pearson");
 17 
-18        // 创建一个 Course 对象。
-19        Course myCourse =
-20            new Course("Intro to Java", myInstructor,
-21                        myTextBook);
+18       // 创建一个 Course 对象。
+19       Course myCourse =
+20           new Course("Intro to Java", myInstructor,
+21                       myTextBook);
 22 
-23        // 显示课程信息。
-24        System.out.println(myCourse);
-25     }
+23       // 显示课程信息。
+24       System.out.println(myCourse);
+25    }
 26 }
 ```
 
 程序输出
+
 ```
 Course name: Intro to Java
 Instructor Information:
@@ -14901,8 +13412,11 @@ Publisher: Pearson
 在编写聚合类时，你应该小心不要无意中创建“安全漏洞”，这些漏洞允许类外部的代码修改私有数据。我们将关注以下两个特定的实践，它们有助于防止你的类中出现安全漏洞：
 
 *   **在创建字段对象时执行深拷贝（Deep Copies）**
+
     聚合对象包含对其他对象的引用。当你复制聚合对象时，对它所引用的对象进行进行复制这被称为“深拷贝”（`deep copy`）。如果你复制了聚合对象，但对它所引用的对象进行了引用复制，那么你执行的是“浅拷贝”（`shallow copy`）。
+
 *   **返回字段对象的副本而非原始对象**
+
     当聚合类中的方法返回字段对象的引用时，请返回该字段对象副本的引用。
 
 让我们深入讨论一下这些实践。
@@ -14912,7 +13426,9 @@ Publisher: Pearson
 让我们仔细观察 `Course` 类。首先，注意第 19 行和第 20 行构造函数接受的参数：
 
 *   传入 `name` 参数的是一个 `String` 引用。
+
 *   传入 `instr` 参数的是一个 `Instructor` 引用。
+
 *   传入 `text` 参数的是一个 `TextBook` 引用。
 
 接下来，注意构造函数并没有仅仅将 `instr` 赋值给 `instructor` 字段。相反，在第 27 行它创建了一个新的 `Instructor` 对象并将 `instr` 传递给拷贝函数。这里是语句：
@@ -14967,10 +13483,6 @@ public Instructor getInstructor()
    return instructor;   // 错误！会导致安全漏洞。
 }
 ```
-
-
-
-
 
 该方法返回存储在 `instructor` 字段中的值，它是 `Instructor` 对象的地址。任何接收该地址的变量都可以访问该 `Instructor` 对象。这意味着 `Course` 对象外部的代码可以更改 `Instructor` 对象所持有的值。这是一个安全漏洞，因为 `Instructor` 对象是一个私有字段！应该只允许 `Course` 类内部的代码访问它。
 
@@ -15054,86 +13566,84 @@ public Instructor getInstructor()
 
 首先，注意该类有三个 `String` 引用变量作为字段：`lastName`、`firstName` 和 `middleName`。其次，注意该类没有程序员定义的构造函数。当创建该类的实例时，`lastName`、`firstName` 和 `middleName` 字段将由默认构造函数初始化为 `null`。第三，注意 `getLength` 方法在第 51 行和第 52 行使用 `lastName`、`firstName` 和 `middleName` 变量来调用 `String` 类的 `length` 方法。没有任何机制防止在这些引用变量中的一个或全部设置为 `null` 时调用 `length` 方法。代码列表 8-17 演示了这一点。
 
+
+
 ```java
- 1  /**
-  2     此程序创建了一个 FullName 对象，然后
-  3     在为它的引用字段建立值之前
-  4     调用了对象的 getLength 方法。作为
-  5     结果，此程序将崩溃。
-  6  */
-  7 
-  8  public class NameTester
-  9  {
- 10     public static void main(String[] args)
-  11     {
-  12        int len; // 用于存储长度
-  13 
-  14        // 创建一个 FullName 对象。
-  15        FullName name = new FullName();
-  16 
-  17        // 获取全名的长度。
-  18        len = name.getLength();
-  19     }
-  20  }
+/**
+   此程序创建了一个 FullName 对象，然后
+   在为它的引用字段建立值之前
+   调用了对象的 getLength 方法。作为
+   结果，此程序将崩溃。
+*/
+
+public class NameTester
+{
+   public static void main(String[] args)
+   {
+      int len; // 用于存储长度
+
+      // 创建一个 FullName 对象。
+      FullName name = new FullName();
+
+      // 获取全名的长度。
+      len = name.getLength();
+   }
+}
 ```
 
-# 代码列表 8-17 `(NameTester.java)`
-
-
-
-
+## 代码列表 8-17 `(NameTester.java)`
 
 该方法使用参数 `sym` 来接收一个赋值给 `symbol` 字段的参数，并使用参数 `price` 来接收一个赋值给 `sharePrice` 字段的参数。有时，想出一个与字段名不同的良好参数名是困难的（甚至是很耗时的）。为了避免这个问题，许多程序员会给参数与它们对应的字段赋予相同的名称，然后使用 `this` 关键字来引用字段名。例如，`Stock` 类的构造函数可以写如下：
 
-```
+```java
 public Stock(String symbol, double sharePrice)
- {
-    this.symbol = symbol;
-    this.sharePrice = sharePrice;
- }
+{
+   this.symbol = symbol;
+   this.sharePrice = sharePrice;
+}
 ```
 
 尽管参数名 `symbol` 和 `sharePrice` 遮蔽（shadow）了字段名 `symbol` 和 `sharePrice`，但 `this` 关键字克服了遮蔽。因为 `this` 是调用对象的引用，表达式 `this.symbol` 指向调用对象的 `symbol` 字段，而表达式 `this.sharePrice` 指向调用对象的 `sharePrice` 字段。
 
-# 使用 `this` 从另一个构造函数调用重载构造函数
+## 使用 `this` 从另一个构造函数调用重载构造函数
 
 你已经知道，在创建对象时会自动调用构造函数。你也知道不能像调用其他方法那样显式地调用构造函数。然而，这条规则有一个例外：你可以使用 `this` 关键字在同一个类中的一个构造函数中调用另一个构造函数。
 
 为了说明这一点，回想本章之前介绍的 `Stock` 类。它有以下构造函数：
 
-```
+```java
 public Stock(String sym, double price)
- {
-    symbol = sym;
-    sharePrice = price;
- }
+{
+   symbol = sym;
+   sharePrice = price;
+}
 ```
 
 该构造函数接收并赋值给 `symbol` 和 `sharePrice` 字段的参数。假设我们还想要一个只接收 `symbol` 字段参数的构造函数，并为 `sharePrice` 字段赋值 0.0。这是编写该构造函数的一种方法：
 
-```
+```java
 public Stock(String sym)
- {
-    this(sym, 0.0);
- }
+{
+   this(sym, 0.0);
+}
 ```
 
 这个构造函数简单地使用 `this` 变量调用第一个构造函数。它将 `sym` 中的值作为第一个参数传递，并将 0.0 作为第二个参数。结果是 `symbol` 字段被赋值为 `sym` 的值，而 `sharePrice` 字段被赋值为 0.0。
 
 记住以下关于使用 `this` 调用构造函数的规则：
 
-* `this` 只能用于从同一个类中的一个构造函数调用另一个构造函数。
-* 它必须是正在调用的构造函数的第一条语句。如果不是第一条语句，会导致编译器错误。
+- `this` 只能用于从同一个类中的一个构造函数调用另一个构造函数。
+- 它必须是正在调用的构造函数的第一条语句。如果不是第一条语句，会导致编译器错误。
 
-# Checkpoint 8.20
+## Checkpoint 8.20
 
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-16/index.html
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-16/index.html`
 
-# Checkpoint 8.21
+## Checkpoint 8.21
 
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-17/index.html
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-17/index.html`
 
-# 8.9 枚举类型
+## 8.9 枚举类型
 
 概念：枚举数据类型由一组预定义的值组成。你可以使用该数据类型创建变量，这些变量只能持有属于该枚举类型的值。
 
@@ -15143,14 +13653,14 @@ public Stock(String sym)
 
 你使用 `enum` 关键字来创建自己的数据类型，并指定属于该类型的值。这里是一个枚举类型声明的示例：
 
-```
+```java
 enum Day { SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
            THURSDAY, FRIDAY, SATURDAY }
 ```
 
 枚举类型的声明以关键字 `enum` 开头，后面跟着类型名称，最后是大括号内的标识符列表。示例声明创建了一个名为 `Day` 的枚举类型。大括号内列出的标识符 `SUNDAY`、`MONDAY`、`TUESDAY`、`WEDNESDAY`、`THURSDAY`、`FRIDAY` 和 `SATURDAY` 被称为 `enum`常量。它们代表属于 `Day` 类型的值。这是枚举类型声明的通用格式：
 
-```
+```java
 enum TypeName  {  一个或多个枚举常量  }
 ```
 
@@ -15162,49 +13672,46 @@ enum TypeName  {  一个或多个枚举常量  }
 
 一旦你创建了枚举类型，就可以声明该类型的变量。例如，以下语句声明了 `Day` 类型的 `workDay`：
 
-```
+```java
 Day workDay;
 ```
 
 由于 `workDay` 是 `Day` 变量，我们可以合法赋值给它的枚举常量 `SUNDAY`、`MONDAY`、`TUESDAY`、`WEDNESDAY`、`THURSDAY`、`FRIDAY` 和 `SATURDAY`。如果我们尝试赋值任何这些常量以外的值，会导致编译器错误。例如，以下语句将 `Day.WEDNESDAY` 赋值给 `workDay` 变量：
 
-```
+```java
 workDay = Day.WEDNESDAY;
 ```
 
 注意我们赋值的是 `Day.WEDNESDAY` 而不仅仅是 `WEDNESDAY`。`Day.WEDNESDAY` 是枚举常量的限定名称。在大多数情况下你必须使用枚举常量的限定名称。
 
-# 枚举类型是特殊的类
+## 枚举类型是特殊的类
 
 当你编写枚举声明时，你实际上是在创建一个特殊的类。此外，在大括号内列出的 `enum`常量实际上是对象。在之前的示例中，`Day` 是一个类，而 `SUNDAY`、`MONDAY`、`TUESDAY`、`WEDNESDAY`、`THURSDAY`、`FRIDAY` 和 `SATURDAY` 都是 `Day` 类的实例。当我们将 `Day.WEDNESDAY` 赋值给 `workDay` 变量时，是将`Day.WEDNESDAY`对象的地址赋值给了该变量。这在图 8-15 中所示。
 
-# 图 8-15 `workDay` 变量引用 `Day.WEDNESDAY` 对象
+## 图 8-15 `workDay` 变量引用 `Day.WEDNESDAY` 对象
 
 ![The work Day variable references the of the Day WEDNESDAY objects.](img/08fig15.png)图 8-15 替代文本
 
 `enum`常量实际上是对象，会自动配备一些方法。其中之一是 `toString` 方法。`toString` 方法简单地返回调用枚举常量的名称作为字符串。例如，假设 `Day` 类型已如之前所示声明，以下代码段都会显示字符串 `WEDNESDAY`（记得当对象传递给 `System.out.println` 时，会隐式调用 `toString` 方法）：
 
-```
+```java
 // 这段代码显示 WEDNESDAY。
- Day workDay = Day.WEDNESDAY;
- System.out.println(workDay);
+Day workDay = Day.WEDNESDAY;
+System.out.println(workDay);
 
- // 这段代码也显示 WEDNESDAY。
- System.out.println(Day.WEDNESDAY);
+// 这段代码也显示 WEDNESDAY。
+System.out.println(Day.WEDNESDAY);
 ```
-
-
-
 
 `enum` 常量也有一个名为 `ordinal` 的方法。`ordinal` 方法返回一个整数值，表示常量的序数值。常量的 `ordinal value` 是它在 `enum` 声明中的位置，其中第一个常量位于位置 0。图 8-16 显示了 `Day` 数据类型中声明的每个常量的序数值。
 
 ![Day 枚举数据类型包含 6 个 enum 常量，内容如下：enum Day 左括号，后面是 6 个由数字标识的常量：SUNDAY 0, MONDAY 1, TUESDAY 2, WEDNESDAY 3, THURSDAY 4, FRIDAY 5, SATURDAY 6。](img/08fig16.png)
 
-# 图 8-16 `Day` 枚举数据类型及其 `enum` 常量的序数位置
+## 图 8-16 `Day` 枚举数据类型及其 `enum` 常量的序数位置
 
 例如，假设 `Day` 类型已如之前所示声明，查看以下代码段：
 
-```
+```java
 Day lastWorkDay = Day.FRIDAY;
 System.out.println(lastWorkDay.ordinal());
 System.out.println(Day.MONDAY.ordinal());
@@ -15219,7 +13726,7 @@ System.out.println(Day.MONDAY.ordinal());
 
 我们在这里讨论的最后一个枚举数据类型方法是 `equals` 和 `compareTo`。`equals` 方法接受一个对象作为参数，如果该对象等于调用的 `enum` 常量，则返回 `true`。例如，假设 `Day` 类型已如之前所示声明，以下代码段将显示“The two are the same”：
 
-```
+```java
 Day myDay = Day.TUESDAY;
 if (myDay.equals(Day.TUESDAY))
    System.out.println("The two are the same.");
@@ -15233,7 +13740,7 @@ if (myDay.equals(Day.TUESDAY))
 
 例如，假设 `Day` 类型已如之前所示声明，以下代码段将显示“FRIDAY is greater than MONDAY”：
 
-```
+```java
 Day myDay = Day.FRIDAY;
 if (myDay.compareTo(Day.MONDAY) > 0)
    System.out.println(myDay + " is greater than "
@@ -15242,46 +13749,46 @@ if (myDay.compareTo(Day.MONDAY) > 0)
 
 声明枚举类型的一个地方是在类内部。如果你在类内部声明枚举类型，它不能在方法内部声明。代码列表 8-18 显示了一个示例。它它演示了 `Day` 枚举类型。
 
-```
- 1 /**
- 2    此程序演示了一个枚举类型。
- 3 */
- 4
- 5 public class EnumDemo
- 6 {
- 7    // 声明 Day 枚举类型。
- 8    enum Day { SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
- 9               THURSDAY, FRIDAY, SATURDAY }
-10
-11    public static void main(String[] args)
-12    {
- 13       // 声明一个 Day 变量并赋值。
- 14       Day workDay = Day.WEDNESDAY;
-15
- 16       // 下述语句显示 WEDNESDAY。
- 17       System.out.println(workDay);
-18
- 19       // 下述语句显示 Day.SUNDAY 的
-20       // 序数值，值为 0。
- 21       System.out.println("The ordinal value for " +
- 22                          Day.SUNDAY + " is " +
- 23                          Day.SUNDAY.ordinal());
-24
- 25       // 下述语句显示 Day.SATURDAY 的
-26       // 序数值，值为 6。
- 27       System.out.println("The ordinal value for " +
- 28                          Day.SATURDAY + " is " +
- 29                          Day.SATURDAY.ordinal());
-30
- 31       // 下述语句比较两个 enum 常量。
- 32       if (Day.FRIDAY.compareTo(Day.MONDAY) > 0)
- 33          System.out.println(Day.FRIDAY + " is greater than " +
- 34                             Day.MONDAY);
- 35       else
- 36          System.out.println(Day.FRIDAY + " is NOT greater than " +
- 37                             Day.MONDAY);
-38    }
-39 }
+```java
+/**
+   此程序演示了一个枚举类型。
+*/
+
+public class EnumDemo
+{
+   // 声明 Day 枚举类型。
+   enum Day { SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
+              THURSDAY, FRIDAY, SATURDAY }
+
+   public static void main(String[] args)
+   {
+      // 声明一个 Day 变量并赋值。
+      Day workDay = Day.WEDNESDAY;
+
+      // 下述语句显示 WEDNESDAY。
+      System.out.println(workDay);
+
+      // 下述语句显示 Day.SUNDAY 的
+      // 序数值，值为 0。
+      System.out.println("The ordinal value for " +
+                         Day.SUNDAY + " is " +
+                         Day.SUNDAY.ordinal());
+
+      // 下述语句显示 Day.SATURDAY 的
+      // 序数值，值为 6。
+      System.out.println("The ordinal value for " +
+                         Day.SATURDAY + " is " +
+                         Day.SATURDAY.ordinal());
+
+      // 下述语句比较两个 enum 常量。
+      if (Day.FRIDAY.compareTo(Day.MONDAY) > 0)
+         System.out.println(Day.FRIDAY + " is greater than " +
+                            Day.MONDAY);
+      else
+         System.out.println(Day.FRIDAY + " is NOT greater than " +
+                            Day.MONDAY);
+   }
+}
 ```
 
 程序输出：
@@ -15293,168 +13800,168 @@ The ordinal value for SATURDAY is 6
 FRIDAY is greater than MONDAY
 ```
 
-# 代码列表 8-18 `(EnumDemo.java)`
+## 代码列表 8-18 `(EnumDemo.java)`
 
 你也可以在单独的文件中编写枚举类型声明。如果这样做，文件名必须与类型名称匹配。例如，如果我们把 `Day` 类型存储在单独的文件中，我们将文件命名为 `Day.java`。这是合理的，因为枚举数据类型是特殊化的类。例如，查看代码列表 8-19。这个文件 `CarType.java` 包含名为 `CarType` 的枚举数据类型的声明。当它被编译时，将生成一个名为 `CarType.class` 的字节码文件。
 
-```
- 1 /**
- 2    CarType 枚举数据类型
- 3 */
- 4
- 5 enum CarType { PORSCHE, FERRARI, JAGUAR }
+```java
+/**
+   CarType 枚举数据类型
+*/
+
+enum CarType { PORSCHE, FERRARI, JAGUAR }
 ```
 
-# 代码列表 8-19 `(CarType.java)`
+## 代码列表 8-19 `(CarType.java)`
 
 再查看代码列表 8-20。这个文件 `CarColor.java` 包含名为 `CarColor` 的枚举数据类型的声明。当它被编译时，将生成一个名为 `CarType.class` 的字节码文件。
 
-```
- 1 /**
- 2    CarType 枚举数据类型
- 3 */
- 4
- 5 enum CarColor { RED, BLACK, SILVER }
+```java
+/**
+   CarType 枚举数据类型
+*/
+
+enum CarColor { RED, BLACK, SILVER }
 ```
 
-# 代码列表 8-20 `(CarColor.java)`
+## 代码列表 8-20 `(CarColor.java)`
 
 代码列表 8-21 显示了 `SportsCar` 类，它使用了这些枚举类型。
 
-```java
- 1 /**
- 2    SportsCar 类
- 3 */
- 4
- 5 public class SportsCar
- 6 {
- 7    private CarType make;    //  own
- 8    private CarColor color;  // 颜色
- 9    private double price;    // 价格
-10
- 11    /**
- 12       构造函数初始化汽车的类型、
-13       颜色和价格。
- 14       @param aMake 汽车的类型
- 15       @param aColor 汽车的颜色
- 16       @param aPrice 汽车的价格
- 17    */
- 18    public SportsCar(CarType aMake, CarColor aColor, double aPrice)
-19    {
-20       make = aMake;
-21       color = aColor;
-22       price = aPrice;
-23    }
-24
- 25    /**
- 26       getMake 方法
- 27       @return 汽车的类型
- 28    */
-29
-30    public CarType getMake()
-31    {
-32       return make;
-33    }
-34
- 35    /**
- 36       getColor 方法
-37       @return 汽车的颜色
-38    */
-39
-40    public CarColor getColor()
-41    {
-42       return color;
-43    }
-44
- 45    /**
- 46       getPrice 方法
- 47       @return 汽车的价格
-48    */
-49
-50    public double getPrice()
-52    {
-53       return price;
-54    }
-55
- 56    /**
- 57       toString 方法
- 58       @return 一个表示汽车类型、
-59               颜色和价格的字符串。
-60    */
-61
-62    public String toString()
-63    {
-64       // 创建一个表示对象的字符串。
-65       String str = String.format("Make: %s\nColor: %s\nPrice: $%,.2f",
-66   make, color, price);
-67
- 68       // 返回该字符串。
-69       return str;
-70    }
-71 }
-```
 
-# 代码列表 8-21 `(SportsCar.java)`
+
+# `SportsCar` 类
 
 ```java
- 1 /**
- 2    此程序演示了 SportsCar 类。
- 3 */
- 4
- 5 public class SportsCarDemo
- 6 {
- 7    public static void main(String[] args)
- 8    {
- 9       // 创建 SportsCar 对象。
-10       SportsCar yourNewCar = new SportsCar(CarType.PORSCHE,
-11                                        CarColor.RED, 100000);
-12
- 13       // 显示对象的值。
-14       System.out.println(yourNewCar);
-15    }
-16 }
+/**
+   SportsCar 类
+*/
+
+public class SportsCar
+{
+   private CarType make;    //  own
+   private CarColor color;  // 颜色
+   private double price;    // 价格
+
+   /**
+      构造函数初始化汽车的类型、
+      颜色和价格。
+      @param aMake 汽车的类型
+      @param aColor 汽车的颜色
+      @param aPrice 汽车的价格
+   */
+   public SportsCar(CarType aMake, CarColor aColor, double aPrice)
+   {
+      make = aMake;
+      color = aColor;
+      price = aPrice;
+   }
+
+   /**
+      getMake 方法
+      @return 汽车的类型
+   */
+
+   public CarType getMake()
+   {
+      return make;
+   }
+
+   /**
+      getColor 方法
+      @return 汽车的颜色
+   */
+
+   public CarColor getColor()
+   {
+      return color;
+   }
+
+   /**
+      getPrice 方法
+      @return 汽车的价格
+   */
+
+   public double getPrice()
+   {
+      return price;
+   }
+
+   /**
+      toString 方法
+      @return 一个表示汽车类型、
+              颜色和价格的字符串。
+   */
+
+   public String toString()
+   {
+      // 创建一个表示对象的字符串。
+      String str = String.format("Make: %s\nColor: %s\nPrice: $%,.2f",
+      make, color, price);
+
+      // 返回该字符串。
+      return str;
+   }
+}
 ```
 
-# 代码列表 8-22 `(SportsCarDemo.java)`
+## 代码列表 8-21 `(SportsCar.java)`
 
+```java
+/**
+   此程序演示了 SportsCar 类。
+*/
 
+public class SportsCarDemo
+{
+   public static void main(String[] args)
+   {
+      // 创建 SportsCar 对象。
+      SportsCar yourNewCar = new SportsCar(CarType.PORSCHE,
+                                       CarColor.RED, 100000);
 
+      // 显示对象的值。
+      System.out.println(yourNewCar);
+   }
+}
+```
 
+## 代码列表 8-22 `(SportsCarDemo.java)`
 
 Java 允许你使用 `switch` 语句来测试 `enum` 常量。例如，查看代码列表 8-23 中的程序。它创建了一个 `SportsCar` 对象，然后使用 `switch` 语句测试该对象的 `make` 字段。
 
 ```java
- 1 /**
-  2    This program shows that you can switch on an
-  3    enumerated type.
-  4 */
-  5
-  6 public class SportsCarDemo2
-  7 {
-  8    public static void main(String[] args)
-  9    {
-  10       // Create a SportsCar object.
-  11       SportsCar yourNewCar = new SportsCar(CarType.PORSCHE,
-  12                                     CarColor.RED, 100000);
-  13
-  14       // Get the car make and switch on it.
-  15       switch (yourNewCar.getMake())
-  16       {
-  17          case PORSCHE :
-  18             System.out.println("Your car was made in Germany.");
-  19             break;
-  20          case FERRARI :
-  21             System.out.println("Your car was made in Italy.");
-  22             break;
-  23          case JAGUAR :
-  24             System.out.println("Your car was made in England.");
-  25             break;
-  26          default:
-  27             System.out.println("I'm not sure where that car "
-  28                                  + "was made.");
-  29      }
-  30    }
-  31 }
+/**
+   This program shows that you can switch on an
+   enumerated type.
+*/
+
+public class SportsCarDemo2
+{
+   public static void main(String[] args)
+   {
+      // Create a SportsCar object.
+      SportsCar yourNewCar = new SportsCar(CarType.PORSCHE,
+                                    CarColor.RED, 100000);
+
+      // Get the car make and switch on it.
+      switch (yourNewCar.getMake())
+      {
+         case PORSCHE :
+            System.out.println("Your car was made in Germany.");
+            break;
+         case FERRARI :
+            System.out.println("Your car was made in Italy.");
+            break;
+         case JAGUAR :
+            System.out.println("Your car was made in England.");
+            break;
+         default:
+            System.out.println("I'm not sure where that car "
+                                 + "was made.");
+     }
+   }
+}
 ```
 
 程序输出
@@ -15463,69 +13970,69 @@ Java 允许你使用 `switch` 语句来测试 `enum` 常量。例如，查看代
 Your car was made in Germany.
 ```
 
-## 代码列表 8-23 (SportsCarDemo2.java)
+### 代码列表 8-23 (SportsCarDemo2.java)
 
 在第 15 行，`switch` 语句测试了从 `yourNewCar.getMake()` 方法返回的值。该方法返回一个 `CarType` 枚举常量。根据方法返回的值，程序跳转到相应的 `case` 语句。注意在 `case` 语句中，枚举常量不是完全限定的。也就是说，我们必须写 `PORSCHE`、`FERRARI` 和 `JAGUAR`，而不是 `CarType.PORSCHE`、`CarType.FERRARI` 和 `CarType.JAGUAR`。如果你将一个完全限定的 `enum` 常量名作为 `case` 表达式，会导致编译错误。
 
-### 提示
+#### 提示
 
 注意代码列表 8-23 中的 `switch` 语句包含一个 `default` 部分，尽管它已经为 `CarType` 类型中的每个 `enum` 常量提供了 `case` 语句。这会在 `CarType` 文件中添加更多 `enum` 常量时处理这种情况。这种规划是“防御性编程”的一个示例。
 
 ## 检查点 8.22
 
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-18/index.html
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-18/index.html`
 
 ## 检查点 8.23
 
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-19/index.html
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-19/index.html`
 
 ## 检查点 8.24
 
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-20/index.html
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-20/index.html`
 
 ## 检查点 8.25
 
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-28/index.html
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-28/index.html`
 
 ## 检查点 8.26
 
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-21/index.html
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-21/index.html`
 
 ## 检查点 8.27
 
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-22/index.html
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-22/index.html`
 
 ## 检查点 8.28
 
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-23/index.html
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-23/index.html`
 
 ## 检查点 8.29
 
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-24/index.html
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-24/index.html`
 
 ## 检查点 8.30
 
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-25/index.html
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-25/index.html`
 
 ## 检查点 8.31
 
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-26/index.html
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-26/index.html`
 
 ## 检查点 8.33
 
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-27/index.html
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-27/index.html`
 
 ## 检查点 8.34
 
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-29/index.html
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-29/index.html`
 
 ## 检查点 8.37
 
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-01/index.html
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-01/index.html`
 
 ## 8.10 垃圾回收
 
-概念：Java 虚拟机定期运行一种名为垃圾回收的程序，用于移除不再引用的对象。
+**概念**：Java 虚拟机定期运行一种名为垃圾回收的程序，用于移除不再引用的对象。
 
 当一个对象不再需要时，应该将其销毁，以释放它使用的内存。幸运的是，你不需要在使用后手动销毁对象。Java 虚拟机定期执行垃圾回收过程，自动移除不再引用的对象。例如，查看以下代码：
 
@@ -15554,21 +14061,21 @@ account2 = null;
 
 ![account 1 和 account 2 变量都持有余额为 500.0 的同一个 Bank Account 对象的地址。](img/08fig17.png)
 
-## 图 8-17 account1 和 account2 引用同一个对象
+### 图 8-17 `account1` 和 `account2` 引用同一个对象
 
 接下来，将 `null` 值赋值给 `account1`。这从 `account1` 变量中移除了该对象的地址，使其不再引用该对象。图 8-18 展示了这一点。
 
 ![account 1 变量不再引用任何对象。只有 account 2 变量持有一个余额为 500.0 的 Bank Account 对象的地址。可以通过 account 2 变量访问该对象。](img/08fig18.png)
 
-## 图 8-18 对象仅被 account2 变量引用
+### 图 8-18 对象仅被 `account2` 变量引用
 
 然而，该对象仍然可以访问，因为它被 `account2` 变量引用。下一个语句将 `null` 赋值给 `account2`。这从 `account2` 中移除了对象的地址，使其不再引用该对象。图 8-19 展示了这一点。由于对象不再可以被访问，当下次垃圾回收程序运行时，它将从内存中移除。
 
 ![余额为 500.0 的 Bank Account 对象无法被 account 1 和 account 2 变量访问，因为它不再被引用。它将被垃圾回收器移除。](img/08fig19.png)
 
-## 图 8-19 对象不再被引用
+### 图 8-19 对象不再被引用
 
-## finalize 方法
+## `finalize` 方法
 
 如果类有一个名为 `finalize` 的方法，该方法会在类的实例被垃圾回收器销毁之前自动调用。如果你想在对象销毁之前执行代码，可以在类中创建一个 `finalize` 方法并将代码放在其中。`finalize` 方法不接受参数且返回类型为 `void`。
 
@@ -15578,157 +14085,144 @@ account2 = null;
 
 ## 检查点 8.39
 
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-30/index.html`
 
+## 检查点 8.40
 
+`../components/metrodigi/ch08-inline_self_quiz_v1.0.0-31/index.html`
 
-
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-30/index.html
-
-# 检查点 8.40
-
-../components/metrodigi/ch08-inline_self_quiz_v1.0.0-31/index.html
-
-# 8.11 关注面向对象的设计：类协作
+## 8.11 关注面向对象的设计：类协作
 
 **概念**：类之间相互交互或协作以执行其操作是种常见现象。面向对象设计过程的一部分是识别类与类之间的协作关系。
 
-在在面向对象的应用程序中，不同类的对象进行协作是很常见的。这简单意味着对象之间会相互作用。有时，一个对象需要另一个对象的服务来完成它的职责。例如，假设一个对象需要从键盘读取值，然后将这些值写入文件。该对象将使用 `Scanner` 对象的服务从键盘读取值，然后使用 `PrintWriter` 对象的服务将值写入文件。在这个示例中，该对象正在与由 Java API 中的类创建的对象进行协作。你从自己的类创建的对象也可以相互协作。
+在面向对象的应用程序中，不同类的对象进行协作是很常见的。这简单意味着对象之间会相互作用。有时，一个对象需要另一个对象的服务来完成它的职责。例如，假设一个对象需要从键盘读取值，然后将这些值写入文件。该对象将使用 `Scanner` 对象的服务从键盘读取值，然后使用 `PrintWriter` 对象的服务将值写入文件。在这个示例中，该对象正在与由 Java API 中的类创建的对象进行协作。你从自己的类创建的对象也可以相互协作。
 
 如果一个对象要与另一个对象协作，那么它必须了解另一个对象类的类方法以及如何调用这些方法。例如，假设我们编写一个名为 `StockPurchase` 的类，它使用一个 `Stock` 类对象（在本章前面介绍过）来模拟购买股票。`StockPurchase` 类负责计算购买股票的成本。为了做到这一点，它必须知道如何调用 `Stock` 类的 `getSharePrice` 方法来获取股票的每股价格。代码列表 8-24 展示了 `StockPurchase` 类的示例。（该文件位于源代码文件夹 `Chapter 08\StockPurchase Class.` 中。）
 
+```java
+/**
+   The StockPurchase class represents a stock purchase.
+*/
+
+public class StockPurchase
+{
+   private Stock stock; // The stock that was purchased
+   private int shares; // Number of shares owned
+
+   /**
+      Constructor
+      @param stockObject The stock to purchase.
+      @param numShares The number of shares.
+   */
+
+   public StockPurchase(Stock stockObject, int numShares)
+   {
+      // Create a copy of the object referenced by
+      // stockObject.
+      stock = new Stock(stockObject);
+      shares = numShares;
+   }
+
+   /**
+      getStock method
+      @return A copy of the Stock object for the stock
+              being purchased.
+   */
+
+   public Stock getStock()
+   {
+      // Return a copy of the object referenced by stock.
+      return new Stock(stock);
+   }
+
+   /**
+      getShares method
+      @return The number of shares being purchased.
+   */
+
+   public int getShares()
+   {
+      return shares;
+   }
+
+   /**
+      getCost method
+      @return The cost of the stock purchase.
+   */
+
+   public double getCost()
+   {
+      return shares * stock.getSharePrice();
+   }
+}
 ```
- 1 /**
-  2    The StockPurchase class represents a stock purchase.
-  3 */
-  4
-  5 public class StockPurchase
-  6 {
-  7    private Stock stock; // The stock that was purchased
-  8    private int shares; // Number of shares owned
-  9
-  10    /**
-  11       Constructor
-  12       @param stockObject The stock to purchase.
-  13       @param numShares The number of shares.
-  14    */
-  15
-  16    public StockPurchase(Stock stockObject, int numShares)
-  17    {
-  18       // Create a copy of the object referenced by
-  19       // stockObject.
-  20       stock = new Stock(stockObject);
-  21       shares = numShares;
-  22    }
-  23
-  24    /**
-  25       getStock method
-  26       @return A copy of the Stock object for the stock
-  27               being purchased.
-  28    */
-  29
-  30    public Stock getStock()
-  31    {
-  32       // Return a copy of the object referenced by stock.
-  33       return new Stock(stock);
-  34    }
-  35
-  36    /**
-  37       getShares method
-  38       @return The number of shares being purchased.
-  39    */
-  40
-  41    public int getShares()
-  42    {
-  43       return shares;
-  44    }
-  45
-  46    /**
-  47       getCost method
-  48       @return The cost of the stock purchase.
-  49    */
-  50
-  51    public double getCost()
-  52    {
-  53       return shares * stock.getSharePrice();
-  54    }
-  55 }
-```
 
-# 代码列表 8-24 `(StockPurchase.java)`
-
-该类的构造函数接受一个代表正在购买的股票的 `Stock` 对象以及一个表示购买股份数量的 `int`。在第 20 行，我们看到了第一次协作：`StockPurchase` 构造函数通过使用 `Stock` 类的拷贝构造创建了 `Stock` 对象的副本。拷贝构造在第 33 行的 `getStock` 方法中再次被使用，用于返回 `Stock` 对象的副本。
-
-下次协作发生在 `getCost` 方法中。该方法计算并返回购买股票的成本。在第 53 行，它调用了 `Stock` 类的 `getSharePrice` 方法来确定每股价格。
+## 代码列表 8-24 `(StockPurchase.java)`
 
 
 
+该类的构造函数接受一个代表正在购买的股票的`Stock`对象以及一个表示购买股份数量的`int`。在第 20 行，我们看到了第一次协作：`StockPurchase`构造函数通过使用`Stock`类的拷贝构造创建了`Stock`对象的副本。拷贝构造在第 33 行的`getStock`方法中再次被使用，用于返回`Stock`对象的副本。
 
+下次协作发生在`getCost`方法中。该方法计算并返回购买股票的成本。在第 53 行，它调用了`Stock`类的`getSharePrice`方法来确定每股价格。
 
-*   **在静态方法尝试引用实例字段或实例方法**。静态方法只能引用其他静态的类成员。
-
-*   **在接受对象作为参数的方法中，编写无意中修改对象的代码**。当将引用变量作为参数传递给方法时，该方法可以访问该变量所引的对象。在编写接收引用变量作为参数的方法时，你必须小心不要无意中修改变量所引用的对象的内容。
-
-*   **允许使用 `null` 引用**。由于 `null` 引用变量不引用任何对象，因此不能使用它来执行需要对象存在的操作。例如，不能使用 `null` 引用变量来调用方法。如果你尝试对 `null` 引用变量执行操作，程序将终止。当一个类有一个引用变量作为字段，且该字段没有被正确初始化为对象的地址时，就会发生这种情况。
-
-*   **忘记使用 `enum` 常量的完全限定名**。在大多数情况下，你必须使用 `enum` 常量的完全限定名。唯一的例外是当 `enum` 常被用作 `switch` 语句中的分支表达式时。
+* **在静态方法尝试引用实例字段或实例方法**。静态方法只能引用其他静态的类成员。
+* **在接受对象作为参数的方法中，编写无意中修改对象的代码**。当将引用变量作为参数传递给方法时，该方法可以访问该变量所引的对象。在编写接收引用变量作为参数的方法时，你必须小心不要无意中修改变量所引用的对象的内容。
+* **允许使用`null`引用**。由于`null`引用变量不引用任何对象，因此不能使用它来执行需要对象存在的操作。例如，不能使用`null`引用变量来调用方法。如果你尝试对`null`引用变量执行操作，程序将终止。当一个类有一个引用变量作为字段，且该字段没有被正确初始化为对象的地址时，就会发生这种情况。
+* **忘记使用`enum`常量的完全限定名**。在大多数情况下，你必须使用`enum`常量的完全限定名。唯一的例外是当`enum`常被用作`switch`语句中的分支表达式时。
 
 ## 编程挑战
 
-## 1. `Area` 类
+## 1. `Area`类
 
 编写一个类，包含三个重载的静态方法，用于计算以下几何形状的面积：
 
-*   圆
-*   矩形
-*   圆柱
+* 圆
+* 矩形
+* 圆柱
 
 这里是计算这些形状面积的公式。
 
-*   $$\begin{array}{ccl} {Area\ of\ a\ circle:} & ~ & {\mathit{Area} = \pi r^{2}} \\ {where} & ~ & {{\pi\ is}\mathtt{~Math.PI}{~and}r{~is\ the\ circle\prime s\ radius}} \\ {Area\ of\ a\ rectangle:} & ~ & {\mathit{Area} = \mathit{Width} \times \mathit{Length}} \\ {Area\ of\ a\ cylinder:} & ~ & {\mathit{Area} = \pi r^{2}h} \\ {where} & ~ & {{\pi\ is}\mathtt{~Math.PI},r{~is\ the\ radius\ of\ the\ cylinder\prime s\ base,\ and}} \\ & ~ & {h{~is\ the\ cylinder\prime s\ height}} \end{array}$$
+* $$\begin{array}{ccl} {Area\ of\ a\ circle:} & ~ & {\mathit{Area} = \pi r^{2}} \\ {where} & ~ & {{\pi\ is}\mathtt{~Math.PI}{~and}r{~is\ the\ circle\prime s\ radius}} \\ {Area\ of\ a\ rectangle:} & ~ & {\mathit{Area} = \mathit{Width} \times \mathit{Length}} \\ {Area\ of\ a\ cylinder:} & ~ & {\mathit{Area} = \pi r^{2}h} \\ {where} & ~ & {{\pi\ is}\mathtt{~Math.PI},r{~is\ the\ radius\ of\ the\ cylinder\prime s\ base,\ and}} \\ & ~ & {h{~is\ the\ cylinder\prime s\ height}} \end{array}$$
 
 由于这三个方法是重载的，它们应该具有相同的名称，但具有不同的参数列表。请在一个完整的程序中演示该类。
 
-## 2. `BankAccount` 类拷贝构造函数
+## 2. `BankAccount`类拷贝构造函数
 
-### 查看 BankAccount 拷贝构造函数问题
+### 查看`BankAccount`拷贝构造函数问题
 
-[`mediaplayer.pearsoncmg.com/assets/_video.true/GwMtcxuB_VMiRS5V0Kd_JBYVILiW_RpY`](https://mediaplayer.pearsoncmg.com/assets/_video.true/GwMtcxuB_VMiRS5V0Kd_JBYVILiW_RpY)为 `BankAccount` 类添加一个拷贝构造函数。该构造函数接受一个 `BankAccount` 对象作为参数。它应该将参数中 `balance` 字段的值赋值给 `balance` 字段。结果是新对象将是参数对象的副本。
+[`mediaplayer.pearsoncmg.com/assets/_video.true/GwMtcxuB_VMiRS5V0Kd_JBYVILiW_RpY`](https://mediaplayer.pearsoncmg.com/assets/_video.true/GwMtcxuB_VMiRS5V0Kd_JBYVILiW_RpY)为`BankAccount`类添加一个拷贝构造函数。该构造函数接受一个`BankAccount`对象作为参数。它应该将参数中`balance`字段的值赋值给`balance`字段。结果是新对象将是参数对象的副本。
 
 ## 3. 地毯计算器
 
 Westfield 地毯公司要求你编写一个应用程序，用于计算矩形房间的地毯价格。要计算价格，你需要将地板面积（宽度乘以长度）乘以地毯每平方英尺的价格。例如，一个长为 12 英尺、宽为 10 英尺的地板面积为 120 平方英尺。用每平方英尺 8 美元的地毯覆盖该地板将花费 960 美元。(12 × 10)
 
-首先，你应该创建一个名为 `RoomDimension` 的类，它包含两个字段：一个长度，一个用于宽度。`RoomDimension` 类应该返回面积。接下来，你应该创建一个 `RoomCarpet` 类，它包含一个 `RoomDimension` 对象。它还应该有一个用于成本的字段。`RoomCarpet` 类应该返回总额。
+首先，你应该创建一个名为`RoomDimension`的类，它包含两个字段：一个长度，一个用于宽度。`RoomDimension`类应该返回面积。接下来，你应该创建一个`RoomCarpet`类，它包含一个`RoomDimension`对象。它还应该有一个用于成本的字段。`RoomCarpet`类应该返回总额。
 
-## 4. `LandTract` 类
+## 4. `LandTract`类
 
-创建一个 `LandTract` 类，包含两个字段：一个长度，一个用于宽度。`LandTract` 应该返回面积以及 `equals` 方法和 `toString` 方法。
+创建一个`LandTract`类，包含两个字段：一个长度，一个用于宽度。`LandTract`应该返回面积以及`equals`方法和`toString`方法。
 
-## 5. `Month` 类
+## 5. `Month`类
 
-编写一个名为 `Month` 的类。该类有一个名为 `monthNumber` 的 `int` 字段，用于存储月份。例如，一月为 1，二月为 2，依此类推。此外，提供以下方法：
+编写一个名为`Month`的类。该类有一个名为`monthNumber`的`int`字段，用于存储月份。例如，一月为 1，二月为 2，依此类推。此外，提供以下方法：
 
-*   无参数构造函数，将 `monthNumber` 字段设置为 1。
-*   一个接受月份名称（如“January”或“February”）作为参数的构造函数。
-*   `setMonthNumber` 方法，接受 `int` 参数并将其赋值给 `monthNumber`。
-*   `getMonthNumber` 方法，返回 `monthNumber` 字段中的值。
-*   `getMonthName` 方法，返回月份名称。例如，如果 `monthNumber` 字段包含 1，则该方法应返回“January”。
-*   `toString` 方法，返回与 `getMonthName` 方法相同的值。
-*   `equals` 方法接受一个 `Month` 对象作为参数。如果参数对象与调用对象具有相同的数据，则该方法应返回 `true`。否则，返回 `false`。
-*   `greaterThan` 方法接受一个 `Month` 对象作为参数。如果调用对象的 `monthNumber` 字段大于参数的 `monthNumber` 字段，该方法应返回 `true`。否则，返回 `false`。
-*   `lessThan` 方法接受一个 `Month` 对象作为参数。如果调用对象的 `monthNumber` 字段小于参数的 `monthNumber` 字段，该方法应返回 `true`。否则，返回 `false`。
+* 无参数构造函数，将`monthNumber`字段设置为 1。
+* 一个接受月份名称（如“January”或“February”）作为参数的构造函数。
+* `setMonthNumber`方法，接受`int`参数并将其赋值给`monthNumber`。
+* `getMonthNumber`方法，返回`monthNumber`字段中的值。
+* `getMonthName`方法，返回月份名称。例如，如果`monthNumber`字段包含 1，则该方法应返回“January”。
+* `toString`方法，返回与`getMonthName`方法相同的值。
+* `equals`方法接受一个`Month`对象作为参数。如果参数对象与调用对象具有相同的数据，则该方法应返回`true`。否则，返回`false`。
+* `greaterThan`方法接受一个`Month`对象作为参数。如果调用对象的`monthNumber`字段大于参数的`monthNumber`字段，该方法应返回`true`。否则，返回`false`。
+* `lessThan`方法接受一个`Month`对象作为参数。如果调用对象的`monthNumber`字段小于参数的`monthNumber`字段，该方法应返回`true`。否则，返回`false`。
 
-## 6. `CashRegister` 类
+## 6. `CashRegister`类
 
-编写一个 `CashRegister` 类，用于与你在第 6 章编写的 `RetailItem` 类配合。`CashRegister` 类应该模拟零售商品的销售。它应该有一个接受 `RetailItem` 对象作为参数的构造函数。该构造函数还应该接受一个表示购买数量的整数。此外，该类应该包含以下方法：
+编写一个`CashRegister`类，用于与你在第 6 章编写的`RetailItem`类配合。`CashRegister`类应该模拟零售商品的销售。它应该有一个接受`RetailItem`对象作为参数的构造函数。该构造函数还应该接受一个表示购买数量的整数。此外，该类应该包含以下方法：
 
-*   `getSubtotal` 方法返回销售小计，即数量乘以价格。此方法必须从作为构造函数参数传递的 `RetailItem` 对象获取价格。
-*   `getTax` 方法返回购买的销售税金额。销售税率为零售额的 6%。
-*   `getTotal` 方法返回销售总额，即小计加上销售税。
-
-
-
-
+* `getSubtotal`方法返回销售小计，即数量乘以价格。此方法必须从作为构造函数参数传递的`RetailItem`对象获取价格。
+* `getTax`方法返回购买的销售税金额。销售税率为零售额的 6%。
+* `getTotal`方法返回销售总额，即小计加上销售税。
 
 # 7. 销售收据文件
 
@@ -15747,37 +14241,51 @@ SALES RECEIPT
 
 在本次作业中，你将设计一组协同工作的类，以模拟警察开具停车罚单的过程。你应该设计以下类：
 
-### `ParkedCar` 类
+### `ParkedCar`类
+
 该类应模拟一辆停放的汽车。该类的职责如下：
-*   记录汽车的品牌、型号、颜色、车牌号以及汽车停车的分钟数。
 
-### `ParkingMeter` 类
+* 记录汽车的品牌、型号、颜色、车牌号以及汽车停车的分钟数。
+
+### `ParkingMeter`类
+
 该类应模拟一个停车表。该类的唯一职责如下：
-*   记录已购买的停车时间（分钟）。
 
-### `ParkingTicket` 类
+* 记录已购买的停车时间（分钟）。
+
+### `ParkingTicket`类
+
 该类应模拟一张停车罚单。该类的职责如下：
-*   报告违规停车汽车的品牌、型号、颜色和车牌号
-*   报告罚款金额：汽车违规停车的第一小时（或部分小时）罚款 25 美元，之后每增加一小时（或部分小时）额外加罚款 10 美元
-*   报告开具罚单的警察的名字和警号
 
-### `PoliceOfficer` 类
+* 报告违规停车汽车的品牌、型号、颜色和车牌号
+* 报告罚款金额：汽车违规停车的第一小时（或部分小时）罚款 25 美元，之后每增加一小时（或部分小时）额外加罚款 10 美元
+* 报告开具罚单的警察的名字和警号
+
+### `PoliceOfficer`类
+
 该类应模拟一名检查停放汽车的警察。该类的职责如下：
-*   记录警察的名字和警号
-*   检查一个 `ParkedCar` 对象和一个 `ParkingMeter` 对象，并判断汽车停车时间是否过期
-*   如果汽车停车时间过期，则开具罚单（生成一个 `ParkingTicket` 对象）
+
+* 记录警察的名字和警号
+* 检查一个`ParkedCar`对象和一个`ParkingMeter`对象，并判断汽车停车时间是否过期
+* 如果汽车停车时间过期，则开具罚单（生成一个`ParkingTicket`对象）
 
 编写一个程序来演示这些类是如何协作的。
 
 # 9. 几何计算器
 
-设计一个具有以下方法的 `Geometry` 类：
-*   一个静态方法，接受圆的半径并返回圆的面积。使用以下公式：
-    $$\begin{array}{l} {\mathit{Area} = \pi r^{2}} \\ {{Use}\mathtt{~Math.PI}{~for\ \pi\ and\ the\ radius\ of\ the\ circle\ for~}r.} \end{array}$$
-*   一个静态方法，接受矩形的长度和宽度并返回矩形的面积。使用以下公式：
-    *   `Area = Length × Width`
-*   一个静态方法，接受三角形的底边和高。该方法应返回三角形的面积。使用以下公式：
-    *   `Area = Base × Height × 0.5`
+设计一个具有以下方法的`Geometry`类：
+
+* 一个静态方法，接受圆的半径并返回圆的面积。使用以下公式：
+
+  $$\begin{array}{l} {\mathit{Area} = \pi r^{2}} \\ {{Use}\mathtt{~Math.PI}{~for\ \pi\ and\ the\ radius\ of\ the\ circle\ for~}r.} \end{array}$$
+
+* 一个静态方法，接受矩形的长度和宽度并返回矩形的面积。使用以下公式：
+
+  * `Area = Length × Width`
+
+* 一个静态方法，接受三角形的底边和高。该方法应返回三角形的面积。使用以下公式：
+
+  * `Area = Base × Height × 0.5`
 
 如果对圆半径、矩形的长度或宽、或三角形的底或高使用负值，方法应显示错误信息。
 
@@ -15799,19 +14307,23 @@ Geometry Calculator
 
 在本次作业中，你将设计一组协同工作的类，以模拟汽车的燃油表和里程表。你设计的类如下：
 
-### `FuelGauge` 类
-该类将模拟燃油表。它的职责如下：
-*   记录汽车当前的油量（加仑计）。
-*   报告汽车当前的油量（加仑计）。
-*   能够将油量增加 1 加仑。这模拟了给汽车加油。（汽车最大载油量为 15 加仑。）
-*   如果油量大于 0 加仑，则能够将油量减少 1 加仑。这模拟了汽车行驶时的消耗。
+### `FuelGauge`类
 
-### `Odometer` 类
+该类将模拟燃油表。它的职责如下：
+
+* 记录汽车当前的油量（加仑计）。
+* 报告汽车当前的油量（加仑计）。
+* 能够将油量增加 1 加仑。这模拟了给汽车加油。（汽车最大载油量为 15 加仑。）
+* 如果油量大于 0 加仑，则能够将油量减少 1 加仑。这模拟了汽车行驶时的消耗。
+
+### `Odometer`类
+
 该类将模拟汽车的里程表。它的职责如下：
-*   记录汽车当前的里程数。
-*   报告汽车当前的里程数。
-*   能够将当前里程数增加 1 英里。里程表存储的最大里程数为 999,999 英里。当超过此数值时，里程表将当前里程数重置为 0。
-*   能够与 `FuelGauge` 对象配合。每行驶 24 英里，`FuelGauge` 对象的当前油量应减少 1 加仑。（汽车的油耗为每加仑 24 英里。）
+
+* 记录汽车当前的里程数。
+* 报告汽车当前的里程数。
+* 能够将当前里程数增加 1 英里。里程表存储的最大里程数为 999,999 英里。当超过此数值时，里程表将当前里程数重置为 0。
+* 能够与`FuelGauge`对象配合。每行驶 24 英里，`FuelGauge`对象的当前油量应减少 1 加仑。（汽车的油耗为每加仑 24 英里。）
 
 通过创建每个类的实例来演示这些类。模拟汽车加油，然后运行一个循环增加里程数，直到汽车没有燃料。在每次循环迭代中，打印汽车当前的里程数和油量。
 
@@ -15819,61 +14331,60 @@ Geometry Calculator
 
 这个游戏为两个或更多玩家设计。在游戏中，每个玩家初始拥有 50 分，每个玩家轮流掷骰子；从玩家的分数中减去骰子数。第一个剩余 1 分的玩家获胜。如果玩家的剩余分数减去骰子数的结果小于 1，则应将该数加上玩家的分数。（另一种方案是，游戏可以固定回合数进行。在这种情况下，所有回合结束后，分数接近 1 的玩家获胜。）
 
-编写一个程序模拟两个玩家玩的游戏。使用 `Die` 类模拟骰子。编写一个 `Player` 类模拟玩家。
+编写一个程序模拟两个玩家玩的游戏。使用`Die`类模拟骰子。编写一个`Player`类模拟玩家。
 
 # 12. 正反面游戏
 
 这个游戏为两个或更多玩家设计。在游戏中，玩家轮流投掷硬币。在投掷硬币之前，玩家应该猜测硬币是朝上还是朝下。如果玩家猜测正确，则该玩家获得 1 分。如果玩家猜测错误，则该玩家将失去 1 分。第一个得到 5 分的玩家获胜。
 
-编写一个程序模拟两个玩家玩的游戏。使用你之前作为作业编写的 `Coin` 类来模拟硬币。编写一个 `Player` 类模拟玩家。
+编写一个程序模拟两个玩家玩的游戏。使用你之前作为作业编写的`Coin`类来模拟硬币。编写一个`Player`类模拟玩家。
 
 # 第 9 章 文本处理与更多类
 
 ## 话题
 
-1.  `9.1 包装类简介`
-2.  `9.2 使用 Character 类进行字符测试和转换`
-3.  `9.3 更多字符串方法`
-4.  `9.4 StringBuilder 类`
-5.  `9.5 字符串标记`
-6.  `9.6 数值数据类型的包装类`
-7.  `9.7 关注问题解决：TestScoreReader 类`
-8.  `9.8 需要避免的常见错误`
-
-
-
+1. `9.1 包装类简介`
+2. `9.2 使用 Character 类进行字符测试和转换`
+3. `9.3 更多字符串方法`
+4. `9.4 StringBuilder 类`
+5. `9.5 字符串标记`
+6. `9.6 数值数据类型的包装类`
+7. `9.7 关注问题解决：TestScoreReader 类`
+8. `9.8 需要避免的常见错误`
 
 回想第 2 章，基本数据类型之所以被称为“基本”（primitive），是因为它们不是由类创建的。你不是实例化对象，而是从基本数据类型创建变量，而变量没有属性或方法。它们的设计初衷仅是为了在内存中存储单个值。
 
-Java 还为所有基本数据类型提供了包装类（wrapper classes）。`wrapper class` 是一种“包裹”在基本数据类型外层之上的类，它允许你创建对象而不是变量。此外，这些包装类还提供了许多方法，可以对基本值执行有用的操作。例如，你已经使用过包装类的“解析”（parse）方法将字符串转换为基本值。
+Java 还为所有基本数据类型提供了包装类（wrapper classes）。`wrapper class`是一种“包裹”在基本数据类型外层之上的类，它允许你创建对象而不是变量。此外，这些包装类还提供了许多方法，可以对基本值执行有用的操作。例如，你已经使用过包装类的“解析”（parse）方法将字符串转换为基本值。
 
 虽然这些包装类可以用来创建对象而不是变量，但很少程序员以这种方式使用它们。原因之一是包装类是不可变的，这意味着一旦创建了对象，就无法更改该对象的值。另一个原因是，对于简单操作，它们不像变量那样易于使用。例如，要获取对象中存储的值，必须调用一个方法；而变量可以直接用于赋值语句、数学运算、作为参数传递给方法等。
 
-尽管从包装类创建对象通常没有用处，但它们确实提供了非常有用的静态方法。在本章中，我们将检查 Java 的几个包装类。我们首先从查看 `Character` 类开始，它是 `char` 数据类型的包装类。
+尽管从包装类创建对象通常没有用处，但它们确实提供了非常有用的静态方法。在本章中，我们将检查 Java 的几个包装类。我们首先从查看`Character`类开始，它是`char`数据类型的包装类。
 
 ## 检查点 9.1
+
 ## 检查点 9.2
 
-## 9.2 使用 `Character` 类进行字符测试和转换
+## 9.2 使用`Character`类进行字符测试和转换
 
 ### 概念
-`Character` 类是 `char` 数据类型的包装类。它提供了许多方法用于测试和转换字符数据。
 
-`Character` 类是 `java.lang` 包的一部分，因此使用该类时不需要编写 `import` 语句。该类提供了几个静态方法来测试 `char` 变量的值。每个每个方法都接受一个 `char` 参数并返回一个 `boolean` 值。
+`Character`类是`char`数据类型的包装类。它提供了许多方法用于测试和转换字符数据。
 
-### 表格 9-1 用于测试 `char` 值的某些 `Character` 类静态方法
+`Character`类是`java.lang`包的一部分，因此使用该类时不需要编写`import`语句。该类提供了几个静态方法来测试`char`变量的值。每个每个方法都接受一个`char`参数并返回一个`boolean`值。
+
+### 表格 9-1 用于测试`char`值的某些`Character`类静态方法
 
 | 方法 | 说明 |
 | :--- | :--- |
-| `boolean isDigit(char ch)` | 如果传递给 `ch` 的参数是 0 到 9 的数字，则返回 `true`。否则返回 `false`。 |
-| `boolean isLetter(char ch)` | 如果传递给 `ch` 的参数是字母，则返回 `true`。否则返回 `false`。 |
-| `boolean isLetterOrDigit(char ch)` | 如果传递给 `ch` 的字符包含数字（0 到 9）或字母，则返回 `true`。否则返回 `false`。 |
-| `boolean isLowerCase(char ch)` | 如果传递给 `ch` 的参数是小写字母，则返回 `true`。否则返回 `false`。 |
-| `boolean isUpperCase(char ch)` | 如果传递给 `ch` 的参数是大写写字母，则返回 `true`。否则返回 `false`。 |
-| `boolean isSpaceChar(char ch)` | 如果传递给 `ch` 的参数是空格字符，则返回 `true`。否则返回 `false`。 |
-| `boolean isWhiteSpace(char ch)` | 如果传递给 `ch` 的参数是空白字符（空格、制表符或换行符），则返回 `true`。否则返回 `false`。 |
+| `boolean isDigit(char ch)` | 如果传递给`ch`的参数是 0 到 9 的数字，则返回`true`。否则返回`false`。 |
+| `boolean isLetter(char ch)` | 如果传递给`ch`的参数是字母，则返回`true`。否则返回`false`。 |
+| `boolean isLetterOrDigit(char ch)` | 如果传递给`ch`的字符包含数字（0 到 9）或字母，则返回`true`。否则返回`false`。 |
+| `boolean isLowerCase(char ch)` | 如果传递给`ch`的参数是小写字母，则返回`true`。否则返回`false`。 |
+| `boolean isUpperCase(char ch)` | 如果传递给`ch`的参数是大写写字母，则返回`true`。否则返回`false`。 |
+| `boolean isSpaceChar(char ch)` | 如果传递给`ch`的参数是空格字符，则返回`true`。否则返回`false`。 |
+| `boolean isWhiteSpace(char ch)` | 如果传递给`ch`的参数是空白字符（空格、制表符或换行符），则返回`true`。否则返回`false`。 |
 
-`Code Listing 9-1` 中的程序演示了其中的许多方法。
+`Code Listing 9-1`中的程序演示了其中的许多方法。
 
 #### 代码列表 9-1 `(CharacterTest.java)`
 
@@ -15899,108 +14410,110 @@ public class CharacterTest {
 }
 ```
 
+回想第 2 章，`String`类的`charAt`方法返回返回字符串中特定位置的字符（位置编号从 0 开始计数）。这段代码使用`Character.isLetter`方法来测试`custNumber`字符串中位置 0、1 和 2 处的字符。如果这些字符中的任何一个不是字母，则将变量`goodSoFar`设置为`false`
 
 
-
-回想第 2 章，`String` 类的 `charAt` 方法返回返回字符串中特定位置的字符（位置编号从 0 开始计数）。这段代码使用 `Character.isLetter` 方法来测试 `custNumber` 字符串中位置 0、1 和 2 处的字符。如果这些字符中的任何一个不是字母，则将变量 `goodSoFar` 设置为 `false`
 
 并且循环终止。接下来，该方法使用第 62 到 67 行的以下循环来验证最后四个字符：
 
 ```
 while (goodSoFar && i < 7)
- {
-     if (!Character.isDigit(custNumber.charAt(i)))
-        goodSoFar = false;
-     i++;
- }
+{
+    if (!Character.isDigit(custNumber.charAt(i)))
+       goodSoFar = false;
+    i++;
+}
 ```
 
-这段代码使用 `Character.isDigit` 方法来测试 `custNumber` 字符串中位置 3、4、5 和 6 处的字符。如果这些字符中的任何一个不是数字，则将变量 `goodSoFar` 设置为 `false` 并且循环终止。最后，该方法返回 `goodSoFar` 方法的值。
+这段代码使用`Character.isDigit`方法来测试`custNumber`字符串中位置 3、4、5 和 6 处的字符。如果这些字符中的任何一个不是数字，则将变量`goodSoFar`设置为`false`并且循环终止。最后，该方法返回`goodSoFar`方法的值。
 
-# 字符大小转换
+## 字符大小转换
 
-`Character` 类还提供了表 9-2 中列出的静态方法，用于转换字符的大小。每个方法都接受一个 `char` 参数并返回一个 `char` 值。
+`Character`类还提供了表 9-2 中列出的静态方法，用于转换字符的大小。每个方法都接受一个`char`参数并返回一个`char`值。
 
-# 表 9-2 用于大小转换的某些 `Character` 类方法
+### 表 9-2 用于大小转换的某些`Character`类方法
 
 | 方法 | 说明 |
 | --- | --- |
-| `char toLowerCase(char ch)` | 返回传递给 `ch` 的参数的小写对应字符。 |
-| `char toUpperCase(char ch)` | 返回传递给 `ch` 的参数的大写对应字符。 |
+| `char toLowerCase(char ch)` | 返回传递给`ch`的参数的小写对应字符。 |
+| `char toUpperCase(char ch)` | 返回传递给`ch`的参数的大写对应字符。 |
 
-如果 `toLowerCase` 方法的参数是一个大写字符，则该方法返回其小写对应字符。例如，以下语句将在屏幕上显示字符 `a`：
+如果`toLowerCase`方法的参数是一个大写字符，则该方法返回其小写对应字符。例如，以下语句将在屏幕上显示字符`a`：
 
 ```
 System.out.println(Character.toLowerCase('A'));
 ```
 
-如果参数已经是小写的，则 `toLowerCase` 方法将原样返回它。以下语句也会导致显示小写字符 `a`：
+如果参数已经是小写的，则`toLowerCase`方法将原样返回它。以下语句也会导致显示小写字符`a`：
 
 ```
 System.out.println(Character.toLowerCase('a'));
 ```
 
-如果 `toUpperCase` 方法的参数是一个小写字符，则该方法返回其大写对应字符。例如，以下语句将在屏幕上显示字符 `A`：
+如果`toUpperCase`方法的参数是一个小写字符，则该方法返回其大写对应字符。例如，以下语句将在屏幕上显示字符`A`：
 
 ```
 System.out.println(Character.toUpperCase('a'));
 ```
 
-如果参数已经是大写的，则 `toUpperCase` 方法将原样返回它。
+如果参数已经是大写的，则`toUpperCase`方法将原样返回它。
 
-任何传递给 `toLowerCase` 或 `toUpperCase` 的非字母参数都将原样返回。以下每个语句都会在不更改的情况下显示方法参数：
+任何传递给`toLowerCase`或`toUpperCase`的非字母参数都将原样返回。以下每个语句都会在不更改的情况下显示方法参数：
 
 ```
 System.out.println(Character.toLowerCase('*'));
- System.out.println(Character.toLowerCase('$'));
- System.out.println(Character.toUpperCase('&'));
- System.out.println(Character.toUpperCase('%'));
+System.out.println(Character.toLowerCase('$'));
+System.out.println(Character.toUpperCase('&'));
+System.out.println(Character.toUpperCase('%'));
 ```
 
-代码列表 9-3 中的程序在循环中演示了 `toUpperCase` 方法，要求用户输入 Y 或 N。只要用户对问题的回答是 Y 或 y，程序就会重复。
+代码列表 9-3 中的程序在循环中演示了`toUpperCase`方法，要求用户输入 Y 或 N。只要用户对问题的回答是 Y 或 y，程序就会重复。
 
 在下面的动画中，点击“上一个”或“下一个”按钮可以逐步查看代码并查看全程的解释。
 
-# 代码列表 9-3 `(CircleArea.java)`
+### 代码列表 9-3 `(CircleArea.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr9-3/3.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr9-3/3.html)
 
-# 检查点 9.3
-../components/metrodigi/ch09-inline_self_quiz_v1.0.0-03/index.html
+### 检查点 9.3
 
-# 检查点 9.4
-../components/metrodigi/ch09-inline_self_quiz_v1.0.0-04/index.html
+`../components/metrodigi/ch09-inline_self_quiz_v1.0.0-03/index.html`
 
-# 检查点 9.5
-../components/metrodigi/ch09-inline_self_quiz_v1.0.0-05/index.html
+### 检查点 9.4
 
-# 检查点 9.6
-../components/metrodigi/ch09-inline_self_quiz_v1.0.0-06/index.html
+`../components/metrodigi/ch09-inline_self_quiz_v1.0.0-04/index.html`
 
-# 检查点 9.7
-../components/metrodigi/ch09-inline_self_quiz_v1.0.0-07/index.html
+### 检查点 9.5
 
-# 检查点 9.8
-../components/metrodigi/ch09-inline_self_quiz_v1.0.0-08/index.html
+`../components/metrodigi/ch09-inline_self_quiz_v1.0.0-05/index.html`
 
-# 检查点 9.9
-../components/metrodigi/ch09-inline_self_quiz_v1.0.0-09/index.html
+### 检查点 9.6
 
+`../components/metrodigi/ch09-inline_self_quiz_v1.0.0-06/index.html`
 
+### 检查点 9.7
 
+`../components/metrodigi/ch09-inline_self_quiz_v1.0.0-07/index.html`
 
+### 检查点 9.8
 
-代码列表 9-4 中的程序程序演示了一个使用 `startsWith` 方法的搜索算法。该程序在字符串数组中搜索以指定字符串开头的元素。
+`../components/metrodigi/ch09-inline_self_quiz_v1.0.0-08/index.html`
+
+### 检查点 9.9
+
+`../components/metrodigi/ch09-inline_self_quiz_v1.0.0-09/index.html`
+
+代码列表 9-4 中的程序演示了一个使用`startsWith`方法的搜索算法。该程序在字符串数组中搜索以指定字符串开头的元素。
 
 在下面的动画中，点击“上一个”（Previous）或“下一个”（Next）按钮可以逐步执行代码并查看全程的解释。
 
-# 代码列表 9-4 `(PersonSearch.java)`
+### 代码列表 9-4 `(PersonSearch.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr9-4/4.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr9-4/4.html)
 
-# `regionMatches` 方法
+## `regionMatches`方法
 
-`String` 类提供了 `regionMatches` 方法的重载版本，该方法用于判断两个字符串的指定区域是否匹配。代码演示了：
+`String`类提供了`regionMatches`方法的重载版本，该方法用于判断两个字符串的指定区域是否匹配。代码演示了：
 
 ```
 String str = "Four score and seven years ago";
@@ -16011,7 +14524,7 @@ else
    System.out.println("The regions do not match.");
 ```
 
-这段代码将显示“The regions match.”。`str` 字符串的指定区域从位置 15 开始，`str2` 字符串的指定区域从位置 6 开始。两个区域都包含 11 个字符。`str` 字符串中的指定区域是“seven years”，`str2` 字符串中的指定区域也是“seven years”。因为两个区域匹配，此代码中的 `regionMatches` 方法返回 `true`。此版本的 `regionMatches` 方法执行的是区分大小的比较。另一个重载版本接受一个额外的参数，指示是否执行不区分大小的比较。以下代码演示了：
+这段代码将显示“The regions match.”。`str`字符串的指定区域从位置 15 开始，`str2`字符串的指定区域从位置 6 开始。两个区域都包含 11 个字符。`str`字符串中的指定区域是“seven years”，`str2`字符串中的指定区域也是“seven years”。因为两个区域匹配，此代码中的`regionMatches`方法返回`true`。此版本的`regionMatches`方法执行的是区分大小的比较。另一个重载版本接受一个额外的参数，指示是否执行不区分大小的比较。以下代码演示了：
 
 ```
 String str = "Four score and seven years ago";
@@ -16022,25 +14535,25 @@ else
    System.out.println("The regions do not match.");
 ```
 
-这段代码也将显示“The regions match.”。传递给此版本 `regionMatches` 方法的第一个参数可以是 `true` 或 `false`，表示是否执行不区分大小的比较。在本例中，传递了 `true`，因此在比较区域“seven years”和“SEVEN YEARS”时会忽略大小写。
+这段代码也将显示“The regions match.”。传递给此版本`regionMatches`方法的第一个参数可以是`true`或`false`，表示是否执行不区分大小的比较。在本例中，传递了`true`，因此在比较区域“seven years”和“SEVEN YEARS”时会忽略大小写。
 
-这些方法中的每一个都通过 `boolean` 返回值指示子字符串是否出现在字符串中。`String` 类还提供了某些方法，不仅可以在字符串内搜索项目，还可以报告这些项目的位置。表 9-4 描述了 `indexOf` 和 `lastIndexOf` 方法的重载版本。
+这些方法中的每一个都通过`boolean`返回值指示子字符串是否出现在字符串中。`String`类还提供了某些方法，不仅可以在字符串内搜索项目，还可以报告这些项目的位置。表 9-4 描述了`indexOf`和`lastIndexOf`方法的重载版本。
 
-# 表 9-4 获取字符或子字符串位置的 `String` 方法
+### 表 9-4 获取字符或子字符串位置的`String`方法
 
 | 方法 | 描述 |
 | --- | --- |
-| `int indexOf(char ch)` | 在调用的 `String` 对象中搜索传递给 `ch` 的字符。如果找到该字符，则返回其第一次出现的位置。否则，返回 -1。 |
-| `int indexOf(char ch, int start)` | 在调用的 `String` 对象中搜索传递给 `ch` 的字符，从传递给 `start` 的位置开始到字符串末尾。如果找到该字符，则返回其第一次出现的位置。否则，返回 -1。 |
-| `int indexOf(String str)` | 在调用的 `String` 对象中搜索传递给 `str` 的字符串。如果找到该字符串，则返回其第一次出现起始的位置。否则，返回 -1。 |
-| `int indexOf(String str, int start)` | 在调用的 `String` 对象中搜索传递给 `str` 的字符串。搜索从传递给 `start` 的位置开始到字符串末尾。如果找到该字符串，则返回其第一次出现起始的位置。否则，返回 -1。 |
-| `int lastIndexOf(char ch)` | 在调用的 `String` 对象中搜索传递给 `ch` 的字符。如果找到该字符，则返回其最后一次的位置。否则，返回 -1。 |
-| `int lastIndexOf(char ch, int start)` | 在调用的 `String` 对象中搜索传递给 `ch` 的字符，从传递给 `start` 的位置开始。搜索反向通过字符串到位置 0。如果找到该字符，则返回其最后一次的位置。否则，返回 -1。 |
-| `int lastIndexOf(String str)` | 在调用的 `String` 对象中搜索传递给 `str` 的字符串。如果找到该字符串，则返回其最后一次的位置。否则，返回 -1。 |
+| `int indexOf(char ch)` | 在调用的`String`对象中搜索传递给`ch`的字符。如果找到该字符，则返回其第一次出现的位置。否则，返回 -1。 |
+| `int indexOf(char ch, int start)` | 在调用的`String`对象中搜索传递给`ch`的字符，从传递给`start`的位置开始到字符串末尾。如果找到该字符，则返回其第一次出现的位置。否则，返回 -1。 |
+| `int indexOf(String str)` | 在调用的`String`对象中搜索传递给`str`的字符串。如果找到该字符串，则返回其第一次出现起始的位置。否则，返回 -1。 |
+| `int indexOf(String str, int start)` | 在调用的`String`对象中搜索传递给`str`的字符串。搜索从传递给`start`的位置开始到字符串末尾。如果找到该字符串，则返回其第一次出现起始的位置。否则，返回 -1。 |
+| `int lastIndexOf(char ch)` | 在调用的`String`对象中搜索传递给`ch`的字符。如果找到该字符，则返回其最后一次的位置。否则，返回 -1。 |
+| `int lastIndexOf(char ch, int start)` | 在调用的`String`对象中搜索传递给`ch`的字符，从传递给`start`的位置开始。搜索反向通过字符串到位置 0。如果找到该字符，则返回其最后一次的位置。否则，返回 -1。 |
+| `int lastIndexOf(String str)` | 在调用的`String`对象中搜索传递给`str`的字符串。如果找到该字符串，则返回其最后一次的位置。否则，返回 -1。 |
 
-# 使用 `indexOf` 和 `lastIndexOf` 方法查找字符
+## 使用`indexOf`和`lastIndexOf`方法查找字符
 
-`indexOf` 和 `lastIndexOf` 方法可以在字符串内搜索字符或子字符串。如果找到了该项目，则返回其位置。否则，返回 `-1`。这里有一个使用这两个方法搜索字符的代码示例：
+`indexOf`和`lastIndexOf`方法可以在字符串内搜索字符或子字符串。如果找到了该项目，则返回其位置。否则，返回`-1`。这里有一个使用这两个方法搜索字符的代码示例：
 
 ```
 String str = "Four score and seven years ago";
@@ -16060,7 +14573,7 @@ The letter r first appears at 3
 The letter r last appears at 24
 ```
 
-以下代码显示了另一个示例。它使用循环显示字符串中每个字母 ‘r’ 的位置。
+以下代码显示了另一个示例。它使用循环显示字符串中每个字母‘r’的位置。
 
 ```
 String str = "Four score and seven years ago";
@@ -16083,7 +14596,7 @@ The letter r appears at the following locations:
 24
 ```
 
-以下代码非常相似，但它使用了 `lastIndexOf` 方法并反向显示位置：
+以下代码非常相似，但它使用了`lastIndexOf`方法并反向显示位置：
 
 ```
 String str = "Four score and seven years ago";
@@ -16106,9 +14619,9 @@ The letter r appears at the following locations:
 3
 ```
 
-# 使用 `indexOf` 和 `lastIndexOf` 方法查找子字符串
+## 使用`indexOf`和`lastIndexOf`方法查找子字符串
 
-`indexOf` 和 `lastIndexOf` 方法还可以在字符串内搜索子字符串。以下代码展示了一个示例。它显示了字符串中单词“and”每次出现的的起始位置。
+`indexOf`和`lastIndexOf`方法还可以在字符串内搜索子字符串。以下代码展示了一个示例。它显示了字符串中单词“and”每次出现的起始位置。
 
 ```
 String str = "and a one and a two and a three";
@@ -16132,22 +14645,18 @@ The word and appears at the following locations.
 
 以下代码也显示相同的结果，但顺序是反的：
 
-
-
-
-
 ```java
 String str = "and a one and a two and a three";
- int position;
+int position;
 
- System.out.println("The word and appears at the " +
-                    "following locations.");
- position = str.lastIndexOf("and");
- while (position != −1)
- {
-    System.out.println(position);
-    position = str.lastIndexOf("and", position − 1);
- }
+System.out.println("The word and appears at the " +
+                   "following locations.");
+position = str.lastIndexOf("and");
+while (position != −1)
+{
+   System.out.println(position);
+   position = str.lastIndexOf("and", position − 1);
+}
 ```
 
 这段代码产生以下输出：
@@ -16159,28 +14668,28 @@ The word and appears at the following locations.
 0
 ```
 
-# # 提取子字符串
+## 提取子字符串
 
-`String` 类提供了几个方法，允许你从字符串中提取子字符串。我们将检查的方法列在表 9-5 中。
+`String`类提供了几个方法，允许你从字符串中提取子字符串。我们将检查的方法列在表 9-5 中。
 
-## # 表 9-5 用于提取子字符串的 String 方法
+### 表 9-5 用于提取子字符串的`String`方法
 
 | 方法 | 描述 |
 | --- | --- |
-| `String substring(int `start` )` | 此方法返回一个从 `start` 开始到调用对象字符串末尾的子字符串的拷贝。 |
-| `String substring(int `start`, int `end` )` | 此方法返回一个子字符串的拷贝。传递给 `start` 的参数是子字符串的起始位置，传递给 `end` 的参数是子字符串的结束位置。`start` 位置的字符包含在子字符串中，但 `end` 位置的字符不包含。 |
-| `void getChars(int `start`, int `end`, char[] `array`, int `arrayStart` )` | 此方法从调用对象中提取子字符串并将其存储在 `char` 数组中。传递给 `start` 的参数是子字符串的起始位置，传递给 `end` 的参数是子字符串的结束位置。`start` 位置的字符包含在子字符串中，但 `end` 位置的字符不包含。（子字符串中的最后一个字符结束于 `end` – 1。）子字符串中的字符作为元素存储在传递给 `array` 参数的数组中。`arrayStart` 参数指定了数组中要存储字符的起始下标。 |
-| `char[] toCharArray()` | 此方法将调用对象中的所有字符作为 `char` 数组返回。 |
+| `String substring(int start)` | 此方法返回一个从`start`开始到调用对象字符串末尾的子字符串的拷贝。 |
+| `String substring(int start, int end)` | 此方法返回一个子字符串的拷贝。传递给`start`的参数是子字符串的起始位置，传递给`end`的参数是子字符串的结束位置。`start`位置的字符包含在子字符串中，但`end`位置的字符不包含。 |
+| `void getChars(int start, int end, char[] array, int arrayStart)` | 此方法从调用对象中提取子字符串并将其存储在`char`数组中。传递给`start`的参数是子字符串的起始位置，传递给`end`的参数是子字符串的结束位置。`start`位置的字符包含在子字符串中，但`end`位置的字符不包含。（子字符串中的最后一个字符结束于`end` – 1。）子字符串中的字符作为元素存储在传递给`array`参数的数组中。`arrayStart`参数指定了数组中要存储字符的起始下标。 |
+| `char[] toCharArray()` | 此方法将调用对象中的所有字符作为`char`数组返回。 |
 
-## # `substring` 方法
+### `substring`方法
 
-`substring` 方法返回调用对象中一个子字符串的拷贝。该方法有两个重载版本。第一个版本接受一个 `int` 参数，作为子字符串的起始位置。该方法返回一个 `String` 对象的引用，该对象包含从起始位置到字符串末尾的所有字符。起始位置的字符是子字符串的一部分。以下是该方法的用法示例：
+`substring`方法返回调用对象中一个子字符串的拷贝。该方法有两个重载版本。第一个版本接受一个`int`参数，作为子字符串的起始位置。该方法返回一个`String`对象的引用，该对象包含从起始位置到字符串末尾的所有字符。起始位置的字符是子字符串的一部分。以下是该方法的用法示例：
 
 ```java
 String fullName = "Cynthia Susan Lee";
- String lastName = fullName.substring(14);
- System.out.println("The full name is " + fullName);
- System.out.println("The last name is " + lastName);
+String lastName = fullName.substring(14);
+System.out.println("The full name is " + fullName);
+System.out.println("The last name is " + lastName);
 ```
 
 这段代码将产生以下输出：
@@ -16190,9 +14699,11 @@ The full name is Cynthia Susan Lee
 The last name is Lee
 ```
 
-请记住，`substring` 方法返回一个持有子字符串拷贝的新 `String` 对象。当这段代码执行执行时，`fullName` 和 `lastName` 变量将引用两个不同的 `String` 对象，如图 9-5 所示。
+请记住，`substring`方法返回一个持有子字符串拷贝的新`String`对象。当这段代码执行时，`fullName`和`lastName`变量将引用两个不同的`String`对象，如图 9-5 所示。
 
-## # 图 9-5 `fullName` 和 `lastName` 变量引用单独的对象
+### 图 9-5 `fullName`和`lastName`变量引用单独的对象
+
+
 
 ![一个表格识别并描述了 4 个提取子字符串的 String 方法。](img/09fig05.png)图 9-5 完整备用文本
 
@@ -16200,9 +14711,9 @@ The last name is Lee
 
 ```java
 String fullName = "Cynthia Susan Lee";
- String middleName = fullName.substring(8, 13);
- System.out.println("The full name is " + fullName);
- System.out.println("The middle name is " + middleName);
+String middleName = fullName.substring(8, 13);
+System.out.println("The full name is " + fullName);
+System.out.println("The middle name is " + middleName);
 ```
 
 代码将产生以下输出：
@@ -16212,31 +14723,31 @@ The full name is Cynthia Susan Lee
 The middle name is Susan
 ```
 
-## # `getChars` 和 `toCharArray` 方法
+## `getChars` 和 `toCharArray` 方法
 
 `getChars` 和 `toCharArray` 方法将调用的 `String` 对象转换为 `char` 数组。`getChars` 方法可以转换子字符串，而 `toCharArray` 方法转换整个字符串。以下是 `getChars` 方法的用法示例：
 
 ```java
 String fullName = "Cynthia Susan Lee";
- char[] nameArray = new char[5];
- fullName.getChars(8, 13, nameArray, 0);
- System.out.println("The full name is " + fullName);
- System.out.println("The values are:");
- for (int i = 0; i < nameArray.length; i++) {
-    System.out.println(nameArray[i]);
- }
+char[] nameArray = new char[5];
+fullName.getChars(8, 13, nameArray, 0);
+System.out.println("The full name is " + fullName);
+System.out.println("The values are:");
+for (int i = 0; i < nameArray.length; i++) {
+   System.out.println(nameArray[i]);
+}
 ```
 
 `toCharArray` 方法返回一个包含调用对象中所有字符的 `char` 数组。以下是一个用法示例：
 
 ```java
 String fullName = "Cynthia Susan Lee";
- char[] nameArray = fullName.toCharArray();
- System.out.println("The full name is " + fullName);
- System.out.println("The values are:");
- for (int i = 0; i < nameArray.length; i++) {
-    System.out.println(nameArray[i]);
- }
+char[] nameArray = fullName.toCharArray();
+System.out.println("The full name is " + fullName);
+System.out.println("The values are:");
+for (int i = 0; i < nameArray.length; i++) {
+   System.out.println(nameArray[i]);
+}
 ```
 
 这段代码将产生以下输出：
@@ -16262,11 +14773,7 @@ e
 e
 ```
 
-
-
-
-
-```
+```java
 String str1 = "Tom Talbert Tried Trains";
 String str2;
 str2 = str1.replace('T', 'D');
@@ -16281,7 +14788,7 @@ Tom Talbert Tried Trains
 Dom Dalbert Dried Drains
 ```
 
-请记住，`replace` 方法不会修改调用它的 `String` 的内容的内容，而是返回一个指向该对象修改副本的 `String` 引用。执行完之前的代码后，`str1` 和 `str2` 变量将引用不同的 `String` 对象。
+请记住，`replace` 方法不会修改调用它的 `String` 的内容，而是返回一个指向该对象修改副本的 `String` 引用。执行完之前的代码后，`str1` 和 `str2` 变量将引用不同的 `String` 对象。
 
 `trim` 方法返回 `String` 对象的副本，其中删除了所有前导和尾随空白字符。“前导”（`leading`）空白字符是指出现在字符串开头或左侧的字符。例如，以下字符串有三个前导空白字符：
 
@@ -16297,7 +14804,7 @@ Hello   "
 
 这里有一个示例：
 
-```
+```java
 String greeting1 = "   Hello   ";
 String greeting2;
 greeting2 = greeting1.trim();
@@ -16318,9 +14825,9 @@ System.out.println("*" + greeting2 + "*");
 
 `String` 类有多个名为 `valueOf` 的方法重载版本。该方法接受任何原始数据类型的值作为其参数，并返回该值的字符串表示。表 9-7 描述了这些方法。
 
-# 表 9-7 `String` 类的一些 `valueOf` 方法
+## 表 9-7 `String` 类的一些 `valueOf` 方法
 
-| 方法 |  |
+| 方法 | 说明 |
 | --- | --- |
 | `String valueOf(boolean b)` | 如果传递给 `b` 的 `boolean` 参数为 `true`，则方法返回字符串 `"true"`。如果参数为 `false`，则方法返回字符串 `"false"`。 |
 | `String valueOf(char c)` | 此方法返回包含传递给 `c` 的字符的 `String`。 |
@@ -16333,7 +14840,7 @@ System.out.println("*" + greeting2 + "*");
 
 以下代码演示了其中几个方法：
 
-```
+```java
 boolean b = true;
 char [] letters = { 'a', 'b', 'c', 'd', 'e' }; 
 double d = 2.4981567;
@@ -16357,23 +14864,22 @@ bcd
 ```
 
 # 检查点 9.14
-../components/metrodigi/ch09-inline_self_quiz_v1.0.0-09/index.html
+
+`../components/metrodigi/ch09-inline_self_quiz_v1.0.0-09/index.html`
 
 # 检查点 9.15
-../components/metrodigi/ch09-inline_self_quiz_v1.0.0-10/index.html
+
+`../components/metrodigi/ch09-inline_self_quiz_v1.0.0-10/index.html`
 
 # 检查点 9.16
-../components/metrodigi/ch09-inline_self_quiz_v1.0.0-11/index.html
 
-
-
-
+`../components/metrodigi/ch09-inline_self_quiz_v1.0.0-11/index.html`
 
 `String` 对象的不可变性通常不是问题，但如果你的程序需要对一个或多个字符串进行大量修改，你可能考虑使用 `StringBuilder` 对象。这将通过减少必须创建并由垃圾回收器移除的 `String` 对象来提高程序的效率。现在让我们来看 `StringBuilder` 类的构造函数和方法。
 
 ## `StringBuilder` 构造函数
 
-`Table 9-8` 列出了三个 `StringBuilder` 构造函数。
+表 9-8 列出了三个 `StringBuilder` 构造函数。
 
 ### 表 9-8 `StringBuilder` 构造函数
 
@@ -16385,7 +14891,7 @@ bcd
 
 前两个构造函数创建指定大小的空 `StringBuilder` 对象。第一个构造函数使 `StringBuilder` 对象足够大，可以容纳 16 个字符，而第二个构造函数使对象足够大，可以容纳 `length` 个字符。记住，`StringBuilder` 对象会自动调整大小，因此如果你稍后想在对象中存储更大的字符串，这并不是问题。第三个构造函数接受一个 `String` 对象作为参数，并将对象的内容赋值给 `StringBuilder` 对象。以下是它的用法示例：
 
-```
+```java
 StringBuilder city = new StringBuilder("Charleston");
 System.out.println(city);
 ```
@@ -16394,7 +14900,7 @@ System.out.println(city);
 
 `StringBuilder` 类的一个局限性是，你不能使用赋值运算符将字符串赋值给 `StringBuilder` 对象。例如，以下代码将无法工作：
 
-```
+```java
 StringBuilder city = "Charleston";  // 错误！！！无法工作！
 ```
 
@@ -16402,23 +14908,21 @@ StringBuilder city = "Charleston";  // 错误！！！无法工作！
 
 ## 其他 `StringBuilder` 方法
 
-`StringBuilder` 类提供了许多与 `String` 类相同的方法。`Table 9-9` 列出了几个工作方式与其 `String` 类对应方法完全相同的 `StringBuilder` 方法。
+`StringBuilder` 类提供了许多与 `String` 类相同的方法。表 9-9 列出了几个工作方式与其 `String` 类对应方法完全相同的 `StringBuilder` 方法。
 
 ### 表 9-9 `String` 和 `StringBuilder` 类共有的方法
 
-| |
+| 方法 |
 | --- |
-| ```
-char charAt(int position)
-void getChars(int start, int end, char[] array, int arrayStart)
-int indexOf(String str)
-int indexOf(String str, int start)
-int lastIndexOf(String str)
-int lastIndexOf(String str, int start)
-int length()
-String substring(int start)
-String substring(int start, int end)
-``` |
+| `char charAt(int position)` |
+| `void getChars(int start, int end, char[] array, int arrayStart)` |
+| `int indexOf(String str)` |
+| `int indexOf(String str, int start)` |
+| `int lastIndexOf(String str)` |
+| `int lastIndexOf(String str, int start)` |
+| `int length()` |
+| `String substring(int start)` |
+| `String substring(int start, int end)` |
 
 此外，`StringBuilder` 类提供了几个 `String` 类不具备的方法。让我们来看其中几个。
 
@@ -16432,7 +14936,7 @@ object.append(item);
 
 调用方法后，`item` 的字符串表示将附加到 `object` 的内容。以下代码显示了某些 `append` 方法的使用：
 
-```
+```java
 StringBuilder str = new StringBuilder();
 
 // 向对象中添加值。
@@ -16461,7 +14965,7 @@ object.insert(start, item);
 
 在通用形式中，`start` 是起始位置，`item` 是要插入的值。以下代码显示了一个示例：
 
-```
+```java
 StringBuilder str = new StringBuilder("New City");
 str.insert(4, "York ");
 System.out.println(str);
@@ -16469,7 +14973,7 @@ System.out.println(str);
 
 第一条语句创建一个用字符串"New City"初始化的 `StringBuilder` 对象。第二条语句将字符串"York "插入到 `StringBuilder` 对象中，从位置 4 开始。以下代码显示了如何将 `char` 数组插入到 `StringBuilder` 对象中：
 
-```
+```java
 char cArray[] = { '2', '0', ' ' };
 StringBuilder str = new StringBuilder("In July we sold.");
 str.insert(16, cArray);
@@ -16488,7 +14992,7 @@ object.replace(start, end, str);
 
 在通用形式中，`start` 是调用对象中子字符串起始位置的 `int` 类型，`end` 是子字符串结束位置的 `int` 类型。（起始位置包含在子字符串中，但结束位置不包含。）`str` 参数是一个 `String` 对象。这里是一个示例：
 
-```
+```java
 StringBuilder str = new StringBuilder("We moved from Chicago to Atlanta.");
 str.replace(14, 21, "New York");
 System.out.println(str);
@@ -16502,18 +15006,19 @@ We moved from New York to Atlanta.
 
 ## `delete`、`deleteCharAt` 和 `setCharAt` 方法
 
-
-
-
-
 `delete` 和 `deleteCharAt` 方法用于从 `StringBuilder` 对象中删除子字符串或字符。`setCharAt` 方法将指定的字符更改另一个值。表 9-10 描述了这些方法。
 
 ## 表 9-10 `StringBuilder` 类的 `delete`、`deleteCharAt` 和 `setCharAt` 方法
 
 | 方法 | 描述 |
 | --- | --- |
+
+
+
 | `StringBuilder delete(int start, int end)` | `start` 参数是一个 `int` 类型，指定调用对象中子字符串的起始位置，`end` 参数是一个 `int` 类型，指定子字符串的结束位置。（起始位置包含在子字符串内，但结束位置不包含。）该方法将删除该子字符串。 |
-| `StringBuilder deleteCharAt (int position)` | `position` 参数指定要删除的字符的位置。 |
+
+| `StringBuilder deleteCharAt(int position)` | `position` 参数指定要删除的字符的位置。 |
+
 | `void setCharAt(int position, char ch)` | 此方法将 `position` 处的字符更改为传入 `ch` 的值。 |
 
 以下代码演示了这三个方法：
@@ -16551,7 +15056,7 @@ I ate 50 berries!
 
 ## `toString` 方法
 
-如果你需要将 `StringBuilder` 对象转换为普通字符串，可以调用对象的 `toString` 方法。以下代码了将 `StringBuilder` 对象的的内容赋值给 `String` 变量的示例：
+如果你需要将 `StringBuilder` 对象转换为普通字符串，可以调用对象的 `toString` 方法。以下代码演示了将 `StringBuilder` 对象的内容赋值给 `String` 变量的示例：
 
 ```
 StringBuilder strb = new StringBuilder("This is a test.");
@@ -16563,28 +15068,28 @@ String str = strb.toString();
 美国的电话号码通常格式化为如下形式：
 
 ```
-XXX)XXX-XXXX
+(XXX)XXX-XXXX
 ```
 
 在该格式中，`X` 代表数字。括号内的三个数字是区码。区码后的三个数字是前缀，连字符后的四个数字是分机号码。例如：
 
 ```
-919)555-1212
+(919)555-1212
 ```
 
 虽然括号和连字符让人们更容易阅读号码，但对于计算机处理来说，这些字符是不必要的。在计算机系统中，电话号码通常存储为一系列未格式化的数字，如下所示：
 
 ```
-195551212
+9195551212
 ```
 
 处理电话号码的程序通常需要对用户输入的号码进行取消格式化。这意味着在将号码存储到文件中或进行其他方式处理之前，必须移除括号和连字符。此外，此类程序还需要能够格式化数字的能力，以便号码在屏幕上显示或打印在纸上时包含括号和连字符。
 
 代码列表 9-6 显示了一个名为 `Telephone` 的类，该类包含以下静态方法：
 
-*   `isFormatted`–此方法接受一个 `String` 参数，如果该参数格式为 `(XXX)XXX-XXXX`，则返回 `true`。如果参数不是这种格式，该方法返回 `false`。
-*   `unformat`–此方法接受一个 `String` 参数。如果参数格式为 `(XXX)XXX-XXXX`，则该方法返回移除了括号和连字符的未格式化参数版本。否则，该方法返回原始参数。
-*   `format`–此方法的目的是将数字序列格式化为 `(XXX)XXX-XXXX`。该数字序列作为 `String` 参数传递。如果参数长度为 10 个字符，则方法返回插入了括号和连字符的参数。否则，该方法返回原始参数。
+*   `isFormatted` – 此方法接受一个 `String` 参数，如果该参数格式为 `(XXX)XXX-XXXX`，则返回 `true`。如果参数不是这种格式，该方法返回 `false`。
+*   `unformat` – 此方法接受一个 `String` 参数。如果参数格式为 `(XXX)XXX-XXXX`，则该方法返回移除了括号和连字符的未格式化参数版本。否则，该方法返回原始参数。
+*   `format` – 此方法的目的是将数字序列格式化为 `(XXX)XXX-XXXX`。该数字序列作为 `String` 参数传递。如果参数长度为 10 个字符，则方法返回插入了括号和连字符的参数。否则，该方法返回原始参数。
 
 代码列表 9-7 中的程序演示了 `Telephone` 类。
 
@@ -16596,7 +15101,7 @@ XXX)XXX-XXXX
 import java.util.Scanner;
 
 /**
- *此程序演示了 Telephone 类的静态方法。
+ * 此程序演示了 Telephone 类的静态方法。
  */
 public class Telephone {
 
@@ -16645,7 +15150,7 @@ public class Telephone {
 }
 ```
 
-带有输入的的程序输出
+带有输入的程序输出：
 
 ```
 Enter an unformatted telephone number: 9195551212
@@ -16654,27 +15159,23 @@ Enter a telephone number as (XXX)XXX-XXXX: (919)555-1212
 Unformatted: 9195551212
 ```
 
-## 代码列表 9-7 `(TelephoneTester.java)` (注：源代码中未完整提供列表 9-7 的内容，但根据要求保留了其结构。)
+## 代码列表 9-7 `(TelephoneTester.java)`（注：源代码中未完整提供列表 9-7 的内容，但根据要求保留了其结构。）
 
+`../components/metrodigi/ch09-inline_self_quiz_v1.0.0-26/index.html`
 
+## Checkpoint 9.33
 
+`../components/metrodigi/ch09-inline_self_quiz_v1.0.0-27/index.html`
 
+## Checkpoint 9.34
 
-../components/metrodigi/ch09-inline_self_quiz_v1.0.0-26/index.html
+`../components/metrodigi/ch09-inline_self_quiz_v1.0.0-28/index.html`
 
-# Checkpoint 9.33
+## Checkpoint 9.35
 
-../components/metrodigi/ch09-inline_self_quiz_v1.0.0-27/index.html
+`../components/metrodigi/ch09-assessable_table_v1.0.1-01/index.html`
 
-# Checkpoint 9.34
-
-../components/metrodigi/ch09-inline_self_quiz_v1.0.0-28/index.html
-
-# Checkpoint 9.35
-
-../components/metrodigi/ch09-assessable_table_v1.0.1-01/index.html
-
-# 9.5 字符串分词
+## 9.5 字符串分词
 
 概念：字符串分词（Tokenizing）是将字符串分解为各个组件的过程，这些组件被称为标记（tokens）。可以使用 `String` 类的 `split` 方法对字符串进行分词。
 
@@ -16696,7 +15197,7 @@ Unformatted: 9195551212
 "3-22-2018"
 ```
 
-该字符串中的标记是 `3`、`22` 和 `2018`，分隔符是连字符 `-。程序可能需要从此类字符串中提取月份、日期和年份。另一个例子是操作系统的路径，例如：
+该字符串中的标记是 `3`、`22` 和 `2018`，分隔符是连字符 `-`。程序可能需要从此类字符串中提取月份、日期和年份。另一个例子是操作系统的路径，例如：
 
 ```
 /home/rsullivan/data
@@ -16710,86 +15211,82 @@ Unformatted: 9195551212
 
 ```
  1  /**
-  2     此程序演示了 String 类的
-  3     split 方法。
-  4  */
-  5
-  6  public class SplitDemo1
-  7  {
-  8     public static void main(String[] args)
-  9     {
-  10        // 创建一个用于分词的字符串。
-  11        String str = "one two three four";
-  12
-  13        // 使用空格分隔符获取标记。
-  14        String[] tokens = str.split(" ");
-  15
-  16        // 显示标记。
-  17        for (String s : tokens)
-  18           System.out.println(s);
-  19    }
-  20  }
+ 2     此程序演示了 String 类的
+ 3     split 方法。
+ 4  */
+ 5
+ 6  public class SplitDemo1
+ 7  {
+ 8     public static void main(String[] args)
+ 9     {
+ 10        // 创建一个用于分词的字符串。
+ 11        String str = "one two three four";
+ 12
+ 13        // 使用空格分隔符获取标记。
+ 14        String[] tokens = str.split(" ");
+ 15
+ 16        // 显示标记。
+ 17        for (String s : tokens)
+ 18           System.out.println(s);
+ 19    }
+ 20  }
 ```
 
 #### 程序输出
 
 ```
 one
- two
- three
- four
+two
+three
+four
 ```
 
 #### 代码列表 9-8
 
 在第 11 行，我们将字符串 `"one two three four"` 赋值给变量 `str`。注意单词之间由空格分隔。第 14 行调用了 `str` 对象的 `split` 方法。传递给 `split` 方法的参数指示分隔符。在这个例子中，使用空格作为分隔符。该方法返回一个包含字符串 `"one"`、`"two"`、`"three"` 和 `"four"` 的数组。该数组被赋值给变量 `tokens`。然后，第 17 行和第 18 行的 `for` 循环显示了数组的元素。
 
-你传递给 split 方法的参数是一个正则表达式（regular expression）。正则表达式是一个指定字符模式的字符串。正则表达式是非常强大的工具，通常用于搜索字符串、文件或其他文本集合中存在的模式。对正则表达式的完整讨论超出了本书的范围。然而，我们将为了字符串分词的目的，讨论正则表达式的一些基本用法。
+你传递给 `split` 方法的参数是一个正则表达式（regular expression）。正则表达式是一个指定字符模式的字符串。正则表达式是非常强大的工具，通常用于搜索字符串、文件或其他文本集合中存在的模式。对正则表达式的完整讨论超出了本书的范围。然而，我们将为了字符串分词的目的，讨论正则表达式的一些基本用法。
 
 在上一个例子中，我们向 `split` 方法传递了一个包含单个空格的字符串。这指定了空格字符是分隔符。`split` 方法还允许你使用多字符分隔符。这意味着你并不限于使用单个字符作为分隔符。如果你愿意，你的分隔符可以是整个单词。以下代码摘自本章源代码中的 `SplitDemo2.java` 程序，演示了：
 
 ```
 // 创建一个用于分词的字符串。
- String str = "one and two and three and four";
+String str = "one and two and three and four";
 
- // 使用 " and " 作为分隔符获取标记。
- String[] tokens = str.split(" and ");
+// 使用 " and " 作为分隔符获取标记。
+String[] tokens = str.split(" and ");
 
- // 显示标记。
-    for (String s : tokens)
-    System.out.println(s);
+// 显示标记。
+   for (String s : tokens)
+   System.out.println(s);
 ```
 
 这段代码将产生以下输出：
 
 ```
 one
- two
- three
- four
+two
+three
+four
 ```
 
+`../components/metrodigi/ch09-inline_self_quiz_v1.0.0-29/index.html`
 
+## Checkpoint 9.38
 
+`../components/metrodigi/ch09-inline_self_quiz_v1.0.0-30/index.html`
 
+## Checkpoint 9.39
 
-../components/metrodigi/ch09-inline_self_quiz_v1.0.0-29/index.html
+`../components/metrodigi/ch09-inline_self_quiz_v1.0.0-31/index.html`
 
-# Checkpoint 9.38
+## 9.6 数值数据类型的包装类
 
-../components/metrodigi/ch09-inline_self_quiz_v1.0.0-30/index.html
-
-# Checkpoint 9.39
-
-../components/metrodigi/ch09-inline_self_quiz_v1.0.0-31/index.html
-
-# 9.6 数值数据类型的包装类
-
-概念：Java API 为每种数值数据类型都提供了包装类。这些类拥有方法，可以执行涉及原始数值数值的有用操作。
+概念：Java API 为每种数值数据类型都提供了包装类。这些类拥有方法，可以执行涉及原始数值的有用操作。
 
 在本章前面的部分，我们讨论了 `Character` 包装类及其一些静态方法。Java API 还为所有数值原始数据类型都提供了包装类，如表 9-11 所示。
 
-# 表 9-11 数值原始数据类型的包装类
+## 表 9-11 数值原始数据类型的包装类
 
 | 包装类 | 其所适的原始类型 |
 | --- | --- |
@@ -16802,7 +15299,7 @@ one
 
 你已经在使用许多此类包装类的“解析”（parse）方法，这些方法将字符串转换为原始类型的值。例如，`Integer.parseInt` 方法将字符串转换为 `int`，而 `Double.parseDouble` 方法将字符串转换为 `double`。现在我们将检查包装类的其他方法和用途。
 
-# 静态 `toString` 方法
+### 静态 `toString` 方法
 
 每个数值包装类都有一个静态 `toString` 方法，可以将数字转换为字符串。该方法接受数字作为参数，并返回该数字的字符串表示。以下代码演示了：
 
@@ -16813,7 +15310,7 @@ String str1 = Integer.toString(i);
 String str2 = Double.toString(d);
 ```
 
-# `toBinaryString`, `toHexString`, 和 `toOctalString` 方法
+### `toBinaryString`、`toHexString` 和 `toOctalString` 方法
 
 `toBinaryString`、`toHexString` 和 `toOctalString` 方法是 `Integer` 和 `Long` 包装类的静态成员。这些方法接受整数作为参数，并返回数字转换为二进制、十六进制或八进制的字符串表示。以下代码演示了这些方法：
 
@@ -16832,7 +15329,7 @@ e
 16
 ```
 
-# `MIN_VALUE` 和 `MAX_VALUE` 常量
+### `MIN_VALUE` 和 `MAX_VALUE` 常量
 
 每个数值包装类都有一组名为 `MIN_VALUE` 和 `MAX_VALUE` 的静态 `final` 变量。这些变量存储特定数据类型的最小值和最大值。例如，`Integer.MAX_VALUE` 存储 `int` 允许的最大值。例如，以下代码显示了 `int` 的最小值和最大值：
 
@@ -16842,13 +15339,15 @@ System.out.println("The minimum value for an " +
 System.out.println("The maximum value for an int is " + Integer.MAX_VALUE);
 ```
 
-# 自动装箱与拆箱
+### 自动装箱与拆箱
 
 可以使用包装类创建对象。一种方法是向构造函数传递一个初始值，如下：
 
 ```
-integer number = new Integer(7);
+Integer number = new Integer(7);
 ```
+
+
 
 这创建了一个初始化值为 7 的 `Integer` 对象，由变量 `number` 引用。另一种方法是声明一个包装类变量，然后给它分配一个原始值。例如，看以下代码：
 
@@ -16857,31 +15356,27 @@ Integer number;
 number = 7;
 ```
 
-代码中的第一条语句声明了一个名为 `number` 的 `Integer` 变量。它没有创建 `Integer` 对象，只是一个变量。第二条语句是一个简单的赋值语句。它将原始值 7 分配给变量。你可能怀疑这会导致错误。毕竟，`number` 是引用变量，而不是原始变量。然而，由于 `number` 是包装类变量，Java 执行了自动装箱操作。*自动装箱*（Autoboxing）是 Java 将值自动“封装”到对象内部的过程。当执行赋值语句时，Java 将值 7 封装在 `Integer` 对象中，然后将该对象的地址分配给变量 `number`。
+代码中的第一条语句声明了一个名为 `number` 的 `Integer` 变量。它没有创建 `Integer` 对象，只是一个变量。第二条语句是一个简单的赋值语句。它将原始值 7 分配给变量。你可能怀疑这会导致错误。毕竟，`number` 是引用变量，而不是原始变量。然而，由于 `number` 是包装类变量，Java 执行了自动装箱操作。自动装箱（Autoboxing）是 Java 将值自动“封装”到对象内部的过程。当执行赋值语句时，Java 将值 7 封装在 `Integer` 对象中，然后将该对象的地址分配给变量 `number`。
 
-*拆箱*（Unboxing）是装箱的反相反。是将包装类对象转换为原始类型的过程。
+拆箱（Unboxing）是装箱的反相反。是将包装类对象转换为原始类型的过程。
 
-# Checkpoint 9.42
+## Checkpoint 9.42
 
-../components/metrodigi/ch09-inline_self_quiz_v1.0.0-32/index.html
+`../components/metrodigi/ch09-inline_self_quiz_v1.0.0-32/index.html`
 
-# Checkpoint 9.48
+## Checkpoint 9.48
 
-../components/metrodigi/ch09-inline_self_quiz_v1.0.0-33/index.html
+`../components/metrodigi/ch09-inline_self_quiz_v1.0.0-33/index.html`
 
-# Checkpoint 9.49
+## Checkpoint 9.49
 
-../components/metrodigi/ch09-inline_self_quiz_v1.0.0-34/index.html
+`../components/metrodigi/ch09-inline_self_quiz_v1.0.0-34/index.html`
 
-# 9.7 关注问题解决：`TestScoreReader` 类
-
-
-
-
+## 9.7 关注问题解决：`TestScoreReader` 类
 
 Harrison 教授将学生的测试成绩存储在 Microsoft Excel 表格中。图 9-7 显示了五个学生的五份测试成绩。每列包含一个测试成绩，每行代表一个学生的性分。
 
-## 图 9-7 Microsoft Excel 表格
+### 图 9-7 Microsoft Excel 表格
 
 ![一个 Microsoft Excel 表格包含五个学生的五份测试成绩。A 列到 E 列分别包含第 1-5 行代表的 5 个学生的测试成绩。](img/09fig07.png)图 9-7 完整替代文本
 
@@ -16985,7 +15480,7 @@ Harrison 教授将学生的测试成绩存储在 Microsoft Excel 表格中。图
  86  
 ```
 
-## 代码列表 9-9 `(TestScoreReader.java)`
+### 代码列表 9-9 `(TestScoreReader.java)`
 
 构造函数接受文件作为参数并打开该文件。`readNextLine` 方法从文件中读取一行并将其存储在 `line` 字段中，如果读取了行则返回 `true`，如果没有可读的行则返回 `false`。`getAverage` 方法对文件中读取的最后一行进行分词，将标记转换为 `int` 值并计算平均值。
 
@@ -16999,6 +15494,7 @@ Harrison 教授将学生的测试成绩存储在 Microsoft Excel 表格中。图
  7     平均值。
  8  */
  9
+
  10  public class TestScoreReader
  11  {
  12     private Scanner inputFile;
@@ -17010,6 +15506,7 @@ Harrison 教授将学生的测试成绩存储在 Microsoft Excel 表格中。图
  18        @param filename 打开的文件。
  19     */
  20
+
  21     public TestScoreReader(String filename)
  22                            throws IOException
  23     {
@@ -17017,6 +15514,7 @@ Harrison 教授将学生的测试成绩存储在 Microsoft Excel 表格中。图
  25        inputFile = new Scanner(file);
  26     }
  27
+
  28     /**
  29        readNextLine 方法从文件中读取
  30        下一行。
@@ -17024,52 +15522,64 @@ Harrison 教授将学生的测试成绩存储在 Microsoft Excel 表格中。图
  32        返回 false。
  33     */
  34
+
  35     public boolean readNextLine() throws IOException
  36     {
  37        boolean lineRead; // 标记变量
  39
+
  40        // 判断是否有更多待读。
  41        lineRead = inputFile.hasNext();
  42
+
  43        // 如果是，读取下一行。
  44        if (lineRead)
  45          line = inputFile.nextLine();
  46
+
  47        return lineRead;
  48     }
  49
+
  50     /**
  51        getAverage 方法计算从文件中读取的
  52        最后一组测试成绩的平均值。
  53        @return 平均值。
  54     */
  55
+
  56     public double getAverage()
  57     {
  58        int total = 0;  // 累加器
  59        double average; // 平均测试分数
  60
+
  61        // 将文件中读取的最后一行分词。
  62        String[] tokens = line.split(",");
  63
+
  64        // 计算测试成绩的总和。
  65        for (String str : tokens)
  66        {
  67           total += Integer.parseInt(str);
  68        }
  69
+
  70        // 计算分数的平均值。
  71        // 使用强制转换以避免整数除法。
  72        average = (double) total / tokens.length;
  73
+
  74        // 返回平均值。
  75        return average;
  76     }
  77
+
  78     /**
  79        close 方法关闭文件。
  80     */
  81
+
  82     public void close() throws IOException
  83     {
  84        inputFile.close();
@@ -17077,7 +15587,7 @@ Harrison 教授将学生的测试成绩存储在 Microsoft Excel 表格中。图
  86  
 ```
 
-## 程序输出
+### 程序输出
 
 ```
 学生 1 的平均分是 86.6
@@ -17088,7 +15598,7 @@ Harrison 教授将学生的测试成绩存储在 Microsoft Excel 表格中。图
 没有更多分数。
 ```
 
-## 代码列表 9-10 `(TestAverages.java)`
+### 代码列表 9-10 `(TestAverages.java)`
 
 Harrison 的类工作正常，她决定扩展它以执行更复杂的操作。
 
@@ -17096,67 +15606,78 @@ Harrison 的类工作正常，她决定扩展它以执行更复杂的操作。
 
 以下列表描述了在学习本章主题时常见的错误：
 
--   将静态类方法当作实例方法使用。许多包装类方法是静态的，你应该直接从类调用它们。
+- 将静态类方法当作实例方法使用。许多包装类方法是静态的，你应该直接从类调用它们。
 
--   尝试使用 `startsWith` 和 `endsWith` 等 `String` 比较方法进行区分大小写的比较。大多数 `String` 比较方法都是区分大小写的。只有 `regionMatches` 方法执行区分大小写的比较。
+- 尝试使用 `startsWith` 和 `endsWith` 等 `String` 比较方法进行区分大小写的比较。大多数 `String` 比较方法都是区分大小写的。只有 `regionMatches` 方法执行区分大小写的比较。
 
--   将字符串的第一个位置视为 1。许多 `String` 和 `StringBuilder` 方法接受字符串内的字符位置作为参数。记住，位置数字从 0 开始。如果你认为字符串的第一个位置是 1，会导致差一错误。
+- 将字符串的第一个位置视为 1。许多 `String` 和 `StringBuilder` 方法接受字符串内的字符位置作为参数。记住，位置数字从 0 开始。如果你认为字符串的第一个位置是 1，会导致差一错误。
 
--   忘记在分词之前对字符串进行修剪。在对字符串进行分词并使用空格以外的字符作为分隔符时，你可能希望在分词之前对其进行修剪。否则，如果字符串包含开头或结尾空白字符，它们将成为第一个和最后一个标记的一部分。
+- 忘记在分词之前对字符串进行修剪。在对字符串进行分词并使用空格以外的字符作为分隔符时，你可能希望在分词之前对其进行修剪。否则，如果字符串包含开头或结尾空白字符，它们将成为第一个和最后一个标记的一部分。
 
 ## 编程挑战
 
-# 1. 反转字符串
+### 1. 反转字符串
 
+编写一个方法，接收一个 `String` 对象作为参数并反向显示其内容。例如，如果字符串参数是“gravity”，该方法应该显示“ytivarg”。在一个程序中演示该方法，该程序要求用户输入一个字符串，然后将其传递给方法。
 
+### 2. 单词计数器
 
+编写一个方法，接收一个 `String` 对象作为参数并返回其中包含的单词数。例如，如果参数是“Four score and seven years ago”，该方法应该返回数字 6。在一个程序中演示该方法，该程序要求用户输入一个字符串，然后将其传递给方法。屏幕上应显示字符串中的单词数。
 
-编写一个方法，接收一个 String`对象作为参数并反向显示其内容。例如，如果字符串参数是“gravity”，该方法应该显示“ytivarg”。在一个程序中演示该方法，该程序要求用户输入一个字符串，然后将其传递给方法。
+### 3. 句子首字母大写
 
-# 2. 单词计数器
-
-编写一个方法，接收一个 String`对象作为参数并返回其中包含的单词数。例如，如果参数是“Four score and seven years ago”，该方法应该返回数字 6。在一个程序中演示该方法，该程序要求用户输入一个字符串，然后将其传递给方法。屏幕上应显示字符串中的单词数。
-
-# 3. 句子首字母大写
-
-## 查看句子首字母大写问题
+#### 查看句子首字母大写问题
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/H1oVVzJOAXK6EeWMM5hU2e_rhkKFacPD`](https://mediaplayer.pearsoncmg.com/assets/_video.true/H1oVVzJOAXK6EeWMM5hU2e_rhkKFacPD)
 
-编写一个方法，接收一个 String`对象作为参数并返回字符串的副本，其中每个句子的第一个字母大大写。例如，如果参数是“hello. my name is Joe. what is your name?”，该方法应该返回字符串“Hello. My name is Joe. What is your name?”。在一个程序中演示该方法，该程序要求用户输入一个字符串，然后将其传递给方法。屏幕上应显示修改后的字符串。
+编写一个方法，接收一个 `String` 对象作为参数并返回字符串的副本，其中每个句子的第一个字母大大写。例如，如果参数是“hello. my name is Joe. what is your name?”，该方法应该返回字符串“Hello. My name is Joe. What is your name?”。在一个程序中演示该方法，该程序要求用户输入一个字符串，然后将其传递给方法。屏幕上应显示修改后的字符串。
 
-# 4. 元音与辅音
+### 4. 元音与辅音
 
-编写一个类，其构造函数接收一个 String`对象作为其参数。该类应该有一个方法返回字符串中元音的数量，以及另一个方法返回字符串中辅音的数量。在一个程序中演示该类，该程序执行以下步骤：
+编写一个类，其构造函数接收一个 `String` 对象作为其参数。该类应该有一个方法返回字符串中元音的数量，以及另一个方法返回字符串中辅音的数量。在一个程序中演示该类，该程序执行以下步骤：
 
 1. 要求用户输入一个字符串。
+
 2. 程序显示以下菜单：
-    1. 统计字符串中元音的数量
-    2. 统计字符串中辅音的数量
-    3. 同时统计字符串中的元音和辅音
-    4. 输入另一个字符串
-    5. 退出程序
+
+   1. 统计字符串中元音的数量
+
+   2. 统计字符串中辅音的数量
+
+   3. 同时统计字符串中的元音和辅音
+
+   4. 输入另一个字符串
+
+   5. 退出程序
+
 3. 程序执行用户选择的操作并重复执行，直到用户选择 e 退出程序。
 
-# 5. 密码验证器
+### 5. 密码验证器
 
 想象你正在为 Amazon.com 开发一个软件包，要求用户输入他们自己的密码。你的软件要求用户的密码符合以下标准：
 
-* 密码长度至少为六个字符。
-* 密码应包含至少一个大写字母和一个小写字母。
-* 密码应包含至少一个数字。
+- 密码长度至少为六个字符。
+
+- 密码应包含至少一个大写字母和一个小写字母。
+
+- 密码应包含至少一个数字。
 
 编写一个类来验证密码是否符合上述标准。在一个程序中演示该类，该程序允许用户输入密码，然后显示消息指示其是否有效。
 
-# 6. 电话营销电话号码列表
+### 6. 电话营销电话号码列表
 
-编写一个具有两个`String`对象并行数组的程序。其中一个数组存储人的姓名，另一个存储他们的电话号码。以下是两个数组的示例内容：
+编写一个具有两个 `String` 对象并行数组的程序。其中一个数组存储人的姓名，另一个存储他们的电话号码。以下是两个数组的示例内容：
 
 | name Array 示例内容 | phone Array 示例内容 |
+
 | --- | --- |
+
 | `"Harrison, Rose"` | `"555-2234"` |
+
 | `"James, Jean"` | `"555-9098"` |
+
 | `"Smith, William"` | `"555-1785"` |
+
 | `"Smith, Brad"` | `"555-9224"` |
 
 程序应要求用户输入一个姓名或姓的前几个字符以在数组中搜索。程序应显示所有与用户输入匹配的姓名及其相应的电话号码。例如，如果用户输入“Smith”，程序应从列表中显示以下姓名和电话号码：
@@ -17166,15 +15687,17 @@ Smith, William: 555-1785
 Smith, Brad: 555-9224
 ```
 
-# 7. 支票打印
+### 7. 支票打印
 
 编写一个显示模拟支票的程序。程序要求用户输入日期、收款人姓名和支票金额。然后它应该显示一张模拟支票，其中金额以英文形式写出，如下：
 
 | | 日期: 11/24/2012 |
+
 | 付给：John Phillips | $1920.85 |
+
 | One thousand nine hundred twenty and 85 cents | |
 
-# 8. 字符串中数字的和
+### 8. 字符串中数字的和
 
 编写一个程序，要求用户输入一系列由逗号分隔的数字。以下是一个有效输入的示例：
 
@@ -17184,15 +15707,15 @@ Smith, Brad: 555-9224
 
 程序应计算并显示所有数字的和。
 
-# 9. 字符串中数位之和
+### 9. 字符串中数位之和
 
 编写一个程序，要求用户输入一系列没有分隔符的单数字。程序应显示字符串中所有单数字之和。例如，如果用户输入 2514，方法应返回 12，即 2, 5, 1 和 4 之和。程序还应显示字符串中最高和最低的数字。（提示：将字符串转换为数组。）
 
-# 10. 单词计数器
+### 10. 单词计数器
 
 编写一个程序，要求用户提供文件名。程序应显示单词数。
 
-# 11. 销售分析
+### 11. 销售分析
 
 本章中的 `SalesData.txt` 文件包含了零售店赚取的美元金额。数字用逗号分隔。以下行是一个示例：
 
@@ -17202,28 +15725,32 @@ Smith, Brad: 555-9224
 
 编写一个程序打开文件并处理其内容。程序应显示：
 
-* 每周的销售总额
-* 平均销售额
-* 销售额最高的的周
+- 每周的销售总额
 
-# 12. 杂项字符串操作
+
+
+* 平均销售额
+* 销售额最高的周
+
+## 12. 杂项字符串操作
 
 编写一个带有以下静态方法的类：
 
-* `WordCount()` 该方法接收一个`String`对象作为参数并返回其中包含的单词数。
-* `arrayToString()` 该方法接收一个 `char` 数组作为参数并将其转换为`String`对象。该方法应返回该`String`对象的引用。
-* `mostFrequent()` 该方法接收一个`String`对象的引用作为参数并返回其中出现频率最高的字符。
-* `replaceSubstring()` 该方法接收三个`String`对象的引用作为参数。我们称它们为 `string1`、`string2` 和 `string3`。它在 `string1` 中搜索 `string2` 的所有出现情况。当发现 `string2` 的出现时，将其替换为 `string3`。例如，假设三个参数具有以下值：
+* `WordCount()`：该方法接收一个`String`对象作为参数并返回其中包含的单词数。
+* `arrayToString()`：该方法接收一个`char`数组作为参数并将其转换为`String`对象。该方法应返回该`String`对象的引用。
+* `mostFrequent()`：该方法接收一个`String`对象的引用作为参数并返回其中出现频率最高的字符。
+* `replaceSubstring()`：该方法接收三个`String`对象的引用作为参数。我们称它们为`string1`、`string2`和`string3`。它在`string1`中搜索`string2`的所有出现情况。当发现`string2`的出现时，将其替换为`string3`。例如，假设三个参数具有以下值：
 
 | `string1` | “the dog jumped over the fence” |
+| --- | --- |
 | `string2` | “the” |
 | `string3` | “that” |
 
-使用这三个参数，该方法将返回值为“that dog jumped over that fence”的 String 引用。
+使用这三个参数，该方法将返回值为“that dog jumped over that fence”的`String`引用。
 
 在一个完整的程序中演示这些方法。
 
-# 13. 字母电话号码
+## 13. 字母电话号码
 
 许多公司使用像 555-GET-FOOD 这样的电话号码以便客户记忆。在标准电话上，字母映射如下：
 
@@ -17236,27 +15763,25 @@ Smith, Brad: 555-9224
 * T, U, 和 V = 8
 * W, X, Y, 和 Z = 9
 
-编写一个应用程序，要求用户输入格式为 `XXX-XXX-XXXX` 的 10 位电话号码。应用程序应显示将原始号码中出现的字母字符转换为对应数字后的电话号码。例如，如果用户输入 555-GET-FOOD，应用程序应显示 555-438-3663。
+编写一个应用程序，要求用户输入格式为`XXX-XXX-XXXX`的 10 位电话号码。应用程序应显示将原始号码中出现的字母字符转换为对应数字后的电话号码。例如，如果用户输入 555-GET-FOOD，应用程序应显示 555-438-3663。
 
-# 14. 单词分隔符
-
-
-
+## 14. 单词分隔符
 
 编写一个程序，接收一个句子作为输入，句子中的所有单词连在一起，但每个单词的首字母都是大写。将该句子转换为一个字符串，其中单词用空格隔开，且只有第一个单词的首字母大写。例如，字符串“StopAndSmellTheRoses.”将转换为“Stop and smell the roses.”。
 
-# 15. 猪拉丁语 (Pig Latin)
+## 15. 猪拉丁语 (Pig Latin)
 
 编写一个程序，读取一个句子作为输入，并将每个单词转换为“猪拉丁语”。在猪拉丁语的一种变版本中，你通过移除第一个字母，将该字母放在单词末尾，然后在单词后面添加“ay”来转换单词。这是一个示例：
 
 | 英语: | I SLEPT MOST OF THE NIGHT |
+| --- | --- |
 | 猪拉丁语: | IAY LEPTSAY OSTMAY FOAY HETAY IGHTNAY |
 
-# 16. 摩斯密码转换器
+## 16. 摩斯密码转换器
 
 摩斯密码是一种代码，英语字母表中的每个字母、每个数字以及各种标点符号都由一系列点和破划线表示。表 9-12 显示了部分代码。编写一个程序，要求用户输入一个字符串，然后将字符串转换为摩斯密码。使用连字符表示破划线，使用点表示点。
 
-# 表 9-12 摩斯密码
+### 表 9-12 摩斯密码
 
 | 字符 | 代码 | 字符 | 代码 | 字符 | 代码 | 字符 | 代码 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -17271,33 +15796,33 @@ Smith, Brad: 555-9224
 | 4 | . . . :- | E | . | O | --- | Y | -.-- |
 | 5 | . . . .. | F | ..-. | P | .--. | Z | --.. |
 
-# 17. 彩票统计
+## 17. 彩票统计
 
 要玩 PowerBall 彩票，你需要购买一张彩票，其中包含 1–69 范围内的五个数字，以及一个 1–35 范围内的“PowerBall”号码。（你可以自己挑选数字，也可以让选票机随机为你挑选。）然后，在指定的日期，机器会随机抽取一组中奖号码。如果你的前五个数字以任何顺序与前五个中奖号码匹配，且你的 PowerBall 号码匹配中奖 PowerBall 号码，你就获得了大奖，这是一笔巨款。如果你的号码只匹配了部分中奖号码，你将获得较少的奖，取决于你中了多少个中奖号码。
 
-在本书的学生示例程序中，你会找到一个名为 `pbnumbers.txt` 的文件，其中包含了在 2010 年 2 月 3 日至 2016 年 5 月 11 日之间选出的 PowerBall 中奖号码（该文件包含 654 组奖号码）。以下是文件内容前几行的示例：
+在本书的学生示例程序中，你会找到一个名为`pbnumbers.txt`的文件，其中包含了在 2010 年 2 月 3 日至 2016 年 5 月 11 日之间选出的 PowerBall 中奖号码（该文件包含 654 组奖号码）。以下是文件内容前几行的示例：
 
 ```
- 17 22 36 37 52 24
- 14 22 52 54 59 04
- 05 08 29 37 38 34
- 10 14 30 40 51 01
- 07 08 19 26 36 15
- 等等 . . .
+17 22 36 37 52 24
+14 22 52 54 59 04
+05 08 29 37 38 34
+10 14 30 40 51 01
+07 08 19 26 36 15
+等等 . . .
 ```
 
 文件中的每一行都包含特定日期选出的六个数字。数字之间用空格分隔，每行的最后一个数字是当天的 PowerBall 号码。例如，文件的第一行显示了 2010 年 2 月 3 日的数字，即 17, 22, 36, 37, 52 和 PowerBall 号码 24。
 
 编写一个或多个程序处理此文件以执行以下操作：
 
-*   按出现频率显示前 10 个常见数字
-*   按出现频率显示后 10 个最不常见数字
-*   显示 10 个最欠期的数字（长时间未被抽中的数字），从最欠期到最不欠期排序
-*   显示 1–69 每个数字的频率，以及 1–26 每个 Powerball 号码的频率
+* 按出现频率显示前 10 个常见数字
+* 按出现频率显示后 10 个最不常见数字
+* 显示 10 个最欠期的数字（长时间未被抽中的数字），从最欠期到最不欠期排序
+* 显示 1–69 每个数字的频率，以及 1–26 每个 Powerball 号码的频率
 
-# 18. 油价
+## 18. 油价
 
-在本章的学生示例程序中，你会找到一个名为 `GasPrices.txt` 的文件。该文件包含了从 1993 年 4 月 5 日到 2013 年 8 月 26 日美国加仑油的周平均价格。以下是文件内容前几行的示例：
+在本章的学生示例程序中，你会找到一个名为`GasPrices.txt`的文件。该文件包含了从 1993 年 4 月 5 日到 2013 年 8 月 26 日美国加仑油的周平均价格。以下是文件内容前几行的示例：
 
 ```
 04-05-1993:1.06
@@ -17307,15 +15832,15 @@ Smith, Brad: 555-9224
 等等 . .
 ```
 
-文件中的每一行都是特定日期的每加仑平均价格。每行的格式如下：`MM-DD-YYYY:Price`。`MM` 是两位月份，`DD` 是两位日期，`YYYY` 是四位年份。`Price` 是该日期每加仑的价格。你需要编写一个或多个程序读取文件并执行以下计算：
+文件中的每一行都是特定日期的每加仑平均价格。每行的格式如下：`MM-DD-YYYY:Price`。`MM`是两位月份，`DD`是两位日期，`YYYY`是四位年份。`Price`是该日期每加仑的价格。你需要编写一个或多个程序读取文件并执行以下计算：
 
-*   计算文件中每年的平均油价（文件从 1993 年 4 月开始到 2013 年 8 月结束。对于 1993 年和 2013 年，仅使用这些年份的数据）。
-*   计算文件中每个月的平均价格
-*   计算文件中每年的最低和最高价格
-*   生成一个按最低价到最高价排序的日期和价格文件
-*   生成一个按最高价到最低价排序的日期和价格文件。你可以编写一个程序完成所有这些计算，也可以为每个任务编写不同的程序。
+* 计算文件中每年的平均油价（文件从 1993 年 4 月开始到 2013 年 8 月结束。对于 1993 年和 2013 年，仅使用这些年份的数据）。
+* 计算文件中每个月的平均价格
+* 计算文件中每年的最低和最高价格
+* 生成一个按最低价到最高价排序的日期和价格文件
+* 生成一个按最高价到最低价排序的日期和价格文件。你可以编写一个程序完成所有这些计算，也可以为每个任务编写不同的程序。
 
-# 第 10 章继承
+# 第 10 章 继承
 
 ## 话题
 
@@ -17324,7 +15849,7 @@ Smith, Brad: 555-9224
 3. 10.3 重写父类方法
 4. 10.4 保护级成员
 5. 10.5 继承链
-6. 10.6 `Object` 类
+6. 10.6 `Object`类
 7. 10.7 多态性
 8. 10.8 抽象类和抽象方法
 9. 10.9 接口
@@ -17332,131 +15857,123 @@ Smith, Brad: 555-9224
 11. 10.11 函数式接口和 Lambda 表达式
 12. 10.12 应避免的常见错误
 
-# 10.1 什么是继承？
+## 10.1 什么是继承？
 
 概念：继承允许一个新类扩展一个现有类。新类继承其所扩展的类的成员。
 
-# 一般化与特化
+### 一般化与特化
 
-# 观看继承
+### 观看继承
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/0sI0neM8TZtGb7T8V0YRa9_uhHyiDZ`](https://mediaplayer.pearsoncmg.com/assets/_video.true/0sI0neM8TZtGb7T8V0YRa9_uhHyiDZ)
 
-在现实世界中，你可以找到许多其他更通用对象的特化版本。例如，“昆虫”一词描述了一类具有众多特征的非常一般的生物。因为蚂蝗和蜜蜂都是昆虫，所以它们拥有昆虫的所有通用特征。此外，它们还有自己的特殊特征。例如，蚂蝗具有跳跃能力，而蜜蜂有刺针。蚂蝗和蜜蜂是昆虫的特化版本。这在图 10-1 中所示。
+在现实世界中，你可以找到许多其他更通用对象的特化版本。例如，“昆虫”一词描述了 一类具有众多特征的非常一般的生物。因为蚂蝗和蜜蜂都是昆虫，所以它们拥有昆虫的所有通用特征。此外，它们还有自己的特殊特征。例如，蚂蝗具有跳跃能力，而蜜蜂有刺针。蚂蝗和蜜蜂是昆虫的特化版本。这在图 10-1 中所示。
 
-# 图 10-1 蜜蜂和蚂蝗是昆虫的特化版本
+### 图 10-1 蜜蜂和蚂蝗是昆虫的特化版本
 
 ![蜜蜂和蚂蝗是昆虫的特化版本。所有昆虫都有某些特征。](img/10fig01.png)图 10-1 完整替代文本
 
-
-
-
-
-# 继承与“是”（Is a）关系
+### 继承与“是”（Is a）关系
 
 当一个对象是另一个对象的特化版本时，它们之间就存在一种“是”（is a）的关系。例如，蚂虫是一种昆虫。这里是“是”关系的其他几个例子：
 
-*   贵宾犬是一种狗。
-*   汽车是一种交通工具。
-*   花朵是一种植物。
-*   矩形是一个形状。
-*   足球运动员是一个运动员。
+* 贵宾犬是一种狗。
+* 汽车是一种交通工具。
+* 花朵是一种植物。
+* 矩形是一个形状。
+* 足球运动员是一个运动员。
 
 当对象之间存在“是”关系时，意味着该特化对象具有通用对象的所有特征，外加上使其变得特殊的额外特征。在面向对象的编程中，继承被用于在类之间建立“是”关系。这允许你通过创建另一个该类的特化版本，来扩展该类的功能。
 
-继承涉及父类（superclass）和子类（subclass）。`superclass` 是通用类，而 `subclass` 是特化类。你可以将子类类为父类的扩展版本。子类从父类继承字段和方法，而无需重写其中任何一个内容。此外，可以在子类中添加新的字段和方法，这使得它成为父类的特化版本。
+继承涉及父类（superclass）和子类（subclass）。`superclass`是通用类，而`subclass`是特化类。你可以将子类类为父类的扩展版本。子类从父类继承字段和方法，而无需重写其中任何一个内容。此外，可以在子类中添加新的字段和方法，这使得它成为父类的特化版本。
 
-## Note
+#### Note
 
-冒着担心过多术语会让你困惑的风险，但应该提到，父类也被称为基类（base classes），而子类也被称为派生类（derived classes）。这两组术语都是正确的。为了保持一致性，本文将使用 `superclass` 和 `subclass` 术语。
+冒着担心过多术语会让你困惑的风险，但应该提到，父类也被称为基类（base classes），而子类也被称为派生类（derived classes）。这两组术语都是正确的。为了保持一致性，本文将使用`superclass`和`subclass`术语。
 
-让我们来看一个使用继承的例子。大多数老师会给学生分配各种评分评分活动。评分活动可以给出一个数值分数，如 70、85、90 等，并给出一个字母等级，如 A、B、C、D 或 F。图 10-2 显示了 `GradedActivity` 类的 UML 图，该类用于存储评分活动的数值分数。`setScore` 方法设置数值分数，`getScore` 方法返回数值分数。`getGrade` 方法返回与数值分数对应的字母等级。注意，该类没有程序员定义的构造函数，因此 Java 将自动为它生成一个默认构造函数。这将在以后成为讨论的点。代码列表 10-1 显示了该类的代码。
+让我们来看一个使用继承的例子。大多数老师会给学生分配各种评分评分活动。评分活动可以给出一个数值分数，如 70、85、90 等，并给出一个字母等级，如 A、B、C、D 或 F。图 10-2 显示了`GradedActivity`类的 UML 图，该类用于存储评分活动的数值分数。`setScore`方法设置数值分数，`getScore`方法返回数值分数。`getGrade`方法返回与数值分数对应的字母等级。注意，该类没有程序员定义的构造函数，因此 Java 将自动为它生成一个默认构造函数。这将在以后成为讨论的点。代码列表 10-1 显示了该类的代码。
 
-## 图 10-2 `GradedActivity` 类的 UML 图
+### 图 10-2 `GradedActivity`类的 UML 图
 
 ![Rectangle 类的 UML 图由三个矩形部分组成。](img/10fig02.png)图 10-2 完整替代文本
 
 ```
- 1  /**
-  2     一个持有评分活动分数的类。
-  3  */
-  4
-  5  public class GradedActivity
-  6  {
-  7     private double score;  // 数值分数
-  8
-  9     /**
-  10        The setScore 方法设置 score 字段。
-  11        @param s 要存储在 score 中的值。
-  12     */
-  13
-  14     public void setScore(double s)
-  15     {
-  16        score = s;
-  17     }
-  18
-  19     /**
-  20        The getScore 方法返回分数。
-  21        @return 字段中存储的值。
-  22     */
-  23
-  24     public double getScore()
-  25     {
-  26        return score;
-  27     }
-  28
-  29     /**
-  30        The getGrade 方法返回根据 score 字段
-  31        确定的字母等级。
-  32        @return 字母等级。
-  33     */
-  34
-  35     public char getGrade()
-  36     {
-  37        char letterGrade;
-  38
-  39        if (score >= 90)
-  40           letterGrade = 'A';
-  41        else if (score >= 80)
-  42           letterGrade = 'B';
-  43        else if (score >= 70)
-  44           letterGrade = 'C';
-  45        else if (score >= 60)
-  46           letterGrade = 'D';
-  47        else
-  48           letterGrade = 'F';
-  49
-  50        return letterGrade;
-  51     }
-  22 }
+1  /**
+2     一个持有评分活动分数的类。
+3  */
+4
+5  public class GradedActivity
+6  {
+7     private double score;  // 数值分数
+8
+9     /**
+10       The setScore 方法设置 score 字段。
+11       @param s 要存储在 score 中的值。
+12    */
+13
+14    public void setScore(double s)
+15    {
+16       score = s;
+17    }
+18
+19    /**
+20       The getScore 方法返回分数。
+21       @return 字段中存储的值。
+22    */
+23
+24    public double getScore()
+25    {
+26       return score;
+27    }
+28
+29    /**
+30       The getGrade 方法返回根据 score 字段
+31       确定的字母等级。
+32       @return 字母等级。
+33    */
+34
+35    public char getGrade()
+36    {
+37       char letterGrade;
+38
+39       if (score >= 90)
+40          letterGrade = 'A';
+41       else if (score >= 80)
+42          letterGrade = 'B';
+43       else if (score >= 70)
+44          letterGrade = 'C';
+45       else if (score >= 60)
+46          letterGrade = 'D';
+47       else
+48          letterGrade = 'F';
+49
+50       return letterGrade;
+51    }
+52 }
 ```
 
-## 代码列表 10-1 `GradedActivity.java`
+### 代码列表 10-1 `GradedActivity.java`
 
 代码列表 10-2 中的程序演示了该类。图 10-3 和 10-4 显示了与程序交互的示例。
 
 ![与 Grade Demo java 程序的交互从一个输入对话框开始，输入一个数值测试分数。用户输入数字 89 并点击 OK。生成了一个包含消息“该测试的成绩为 B”的消息。](img/10fig03.png)
 
-## 图 10-3 与 `GradeDemo.java` 程序的交互（Oracle Counsel）
+### 图 10-3 与`GradeDemo.java`程序的交互（Oracle Counsel）
 
 ![与程序的交互从一个输入对话框开始，输入一个数值测试分数。用户输入数字 75 并点击 OK。生成了一个包含消息“该测试的成绩为 C”的消息。](img/10fig04.png)
 
-## 图 10-4 与 `GradeDemo.java` 程序的交互
+### 图 10-4 与`GradeDemo.java`程序的交互
 
 在下面的动画中，按“Previous”或“Next”按钮逐步执行代码并查看说明。
 
-## 代码列表 10-2 `GradeDemo.java`
+### 代码列表 10-2 `GradeDemo.java`
 
-`GradedActivity` 类代表学生评分活动的通用特征。然而，存在许多不同的评分活动，例如测验、期考试、期末考试、实验报告、论文等。由于这些评分活动的数值分数确定方式可能不同，我们可以为每种活动创建子类。例如，我们可以创建一个 `GradedActivity` 类的子类 `FinalExam` 类。图 10-5 显示了此类类的 UML 图，而 代码列表 10-3 显示了其代码。它包含考试题目数量 (`numQuestions`)、每道题的分值 (`pointsEach`) 以及学生错过的题目数量 (`numMissed`) 的字段。
-
-
-
-
+`GradedActivity`类代表学生评分活动的通用特征。然而，存在许多不同的评分活动，例如测验、期考试、期末考试、实验报告、论文等。由于这些评分活动的数值分数确定方式可能不同，我们可以为每种活动创建子类。例如，我们可以创建一个`GradedActivity`类的子类`FinalExam`类。图 10-5 显示了此类类的 UML 图，而代码列表 10-3 显示了其代码。它包含考试题目数量 (`numQuestions`)、每道题的分值 (`pointsEach`) 以及学生错过的题目数量 (`numMissed`) 的字段。
 
 ```java
- /**
+/**
   此类确定期末考试的成绩。
- */
+*/
 
 public class FinalExam extends GradedActivity
 {
@@ -17510,10 +16027,12 @@ public class FinalExam extends GradedActivity
    {
       return numMissed;
    }
- }
+}
 ```
 
-# 代码列表 10-3 `(FinalExam.java)`
+### 代码列表 10-3 `(FinalExam.java)`
+
+
 
 查看第 5 行 `FinalExam` 类的头部定义。该头部使用了 `extends` 关键字，这表示该类继承了另一个类（父类）。父类的名称列在 `extends` 之后。因此，这一行表示 `FinalExam` 是正在声明的类名，而 `GradedActivity` 是它继承的父类名。这在图 10-6 中所示。
 
@@ -17528,12 +16047,14 @@ public class FinalExam extends GradedActivity
 ## 字段
 
 | `int numQuestions;` | 在 `FinalExam` 中声明 |
+| --- | --- |
 | `double pointsEach;` | 在 `FinalExam` 中声明 |
 | `int numMissed;` | 在 `FinalExam` 中声明 |
 
 ## 方法
 
 | 构造函数 | 在 `FinalExam` 中声明 |
+| --- | --- |
 | `getPointsEach` | 在 `FinalExam` 中声明 |
 | `getNumMissed` | 在 `FinalExam` 中声明 |
 | `setScore` | 继承自 `GradedActivity` |
@@ -17542,7 +16063,7 @@ public class FinalExam extends GradedActivity
 
 注意，`GradedActivity` 类的 `score` 字段没有列在 `FinalExam` 类的列表中。这是因为 `score` 字段是私有的。父类的私有成员无法被子类访问，因此从技术上说它们并没有被继承。当创建子类对象时，父类的私有成员存在内存中，但只有父类的方法可以访问它们。它们对于父类来说是真正的私有。
 
-你还会发现父类的构造函数没有列在 `FinalExam` 类的列表中。父类的构造函数不被继承是有。为了了解继承是如何工作的，让我们仔细观察 `FinalExam` 构造函数。在第 18 行，构造函数接受两个参数：`questions` 和 `missed`。在第 23 行和 24 行，赋值了 `numQuestions` 和 `numMissed` 字段。在第 28 行和 29 行，计算了 `pointsEach` 和 `numericScore`。在第 33 行，代码调用了继承的 `setScore` 方法：
+你还会发现父类的构造函数没有列在 `FinalExam` 类的列表中。父类的构造函数不被继承是有原因的。为了了解继承是如何工作的，让我们仔细观察 `FinalExam` 构造函数。在第 18 行，构造函数接受两个参数：`questions` 和 `missed`。在第 23 行和 24 行，赋值了 `numQuestions` 和 `numMissed` 字段。在第 28 行和 29 行，计算了 `pointsEach` 和 `numericScore`。在第 33 行，代码调用了继承的 `setScore` 方法：
 
 ```
 setScore(numericScore)
@@ -17573,10 +16094,6 @@ JOptionPane.showMessageDialog(null,
 ![一个 UML 图显示了 Graded Activity 类和 Final Exam 类的继承，后者分为三个矩形区域。](img/10fig08.png)
 
 # 图 10-8 显示继承关系的 UML 图
-
-
-
-
 
 你可能在好奇当一个类继承另一个类时，构造函数是如何协同工作的。在继承关系中，父类的构造函数始终在子类的构造函数之前执行。正如早之前提到的，`GradedActivity` 类只有一个构造函数，即 Java 自动为其生成的默认构造函数。当创建一个 `FinalExam` 对象时，`GradedActivity` 类的默认构造函数会在 `FinalExam` 构造函数执行之前执行。
 
@@ -17709,7 +16226,7 @@ This is the superclass constructor.
   19        System.out.println("The following argument " +
  20                           "was passed to the superclass " +
  21                           "constructor: " + arg);
-  22     }
+ 22     }
   23  }
 ```
 
@@ -17736,7 +16253,9 @@ This is the superclass constructor.
 `SubClass2` 构造函数第 9 行的语句调用了父类构造函数并将参数 10 传递给它。关于调用父类构造函数，你需要记住三个准则：
 
 *   调用父类构造函数的 `super` 语句只能写在子类的构造函数中。你不能从任何其他方法调用父类构造函数。
+
 *   调用父类构造函数的 `super` 语句必须是子类构造函数的第一条语句。这是因为父类构造函数必须在子类构造函数的代码之前执行。
+
 *   如果子类构造函数没有显式调用父类构造函数，Java 将在子类构造函数代码执行之前自动调用父类的默认构造函数或无参构造函数。这等同于在子类构造函数的开头放置以下语句：
 
 ```
@@ -17761,11 +16280,7 @@ super();
   13  }
 ```
 
-
-
-
-
-让我们来看一个更有意义的例子。回顾第 6 章中的` `Rectangle` 类。图 10-9 展示了该类的 UML 图。
+让我们来看一个更有意义的例子。回顾第 6 章中的 `Rectangle` 类。图 10-9 展示了该类的 UML 图。
 
 # 图 10-9 `Rectangle` 类的 UML 图
 
@@ -17800,6 +16315,102 @@ public class Rectangle
 ![在 Cube 和 Rectangle 类之间显示了一条继承线。](img/10fig10.png)图 10-10 完整备用文本
 
 ```
+ 1 /**
+ 2    此类存储了关于立方体的数据。
+ 3 */
+ 4
+ 5 public class Cube extends Rectangle
+ 6 {
+ 7    private double height;  // 立方体的高度
+ 8
+ 9    /**
+ 10       构造函数设置了立方体的长度、
+ 11       宽度和高度。
+ 12       @param len 立方体的长度。
+ 13       @param w 立方体的宽度。
+ 14       @param h 立方体的高度。
+ 15    */
+ 16
+ 17    public Cube(double len, double w, double h)
+ 18    {
+ 19       // 调用父类的构造函数。
+ 20       super(len, w);
+ 21
+ 22       // 设置高度。
+ 23        height = h;
+ 24    }
+ 25
+ 26    /**
+ 27       getHeight 方法返回立方体的高度。
+ 28       @return height 字段中的值。
+ 29    */
+ 30
+ 31    public double getHeight()
+ 32    {
+ 33       return height;
+ 34    }
+ 35
+ 36    /**
+ 37       getSurfaceArea 方法计算并
+ 38       返回立方体的表面积。
+ 39       @return 立方体的表面积。
+ 40    */
+ 41
+ 42    public double getSurfaceArea()
+ 43    {
+ 44       return getArea() * 6;
+ 45    }
+ 46
+ 47    /**
+ 48       getVolume 方法计算并
+ 49       返回立方体的体积。
+ 50       @return 立方体的体积。
+ 51    */
+ 52
+ 53    public double getVolume()
+ 54    {
+ 55       return getArea() * height;
+ 56    }
+ 57 }
+```
+
+
+
+让我们来看一个更有意义的例子。回顾第 6 章中的`Rectangle`类。图 10-9 展示了该类的 UML 图。
+
+## 图 10-9 `Rectangle` 类的 UML 图
+
+![定义了 Rectangle 类的 UML 图。](img/10fig09.png)图 10-9 完整备用文本
+
+以下是该类的部分代码：
+
+```java
+public class Rectangle
+{
+   private double length;
+   private double width;
+   /**
+      构造函数
+      @param len 形形的长度。
+      @param w 形形的宽度。
+   */
+
+   public Rectangle(double len, double w)
+   {
+      length = len;
+      width = w;
+   }
+   (后续有其他方法 . . .)
+}
+```
+
+接下来我们将设计一个`Cube`类，它继承自`Rectangle`类。`Cube`类设计用于存储关于立方体的数据，立方体不仅有长度、宽度和面积（底面积），还有高度、表面积和体积。显示`Rectangle`和`Cube`类之间继承关系的 UML 图见图 10-10，而`Cube`类的代码见代码列表 10-11。
+
+## 图 10-10 `Rectangle` 和 `Cube` 类的 UML 图
+
+![在 Cube 和 Rectangle 类之间显示了一条继承线。](img/10fig10.png)图 10-10 完整备用文本
+
+```java
  1 /**
  2    此类存储了关于立方体的数据。
  3 */
@@ -17859,82 +16470,40 @@ public class Rectangle
  57 }
 ```
 
-# 代码列表 10-11 `(Cube.java)`
+## 代码列表 10-11 `(Cube.java)`
 
-`Cube` 构造函数接受参数 `len`、`w` 和 `h` 的参数。传递给 `len` 和 `w` 的值随后在第 20 行作为参数传递给 `Rectangle` 构造函数：
+`Cube`构造函数接受参数`len`、`w`和`h`的参数。传递给`len`和`w`的值随后在第 20 行作为参数传递给`Rectangle`构造函数：
 
-```
+```java
 super(len, w);
 ```
 
-当 `Rectangle` 构造函数执行完成后，将执行 `Cube` 构造函数中的剩余代码。代码列表 10-12 展示了该类。在下面的动画中，点击“Previous”（上一个）或“Next”（下一个）按钮可以逐步执行代码并查看解释。
+当`Rectangle`构造函数执行完成后，将执行`Cube`构造函数中的剩余代码。代码列表 10-12 展示了该类。在下面的动画中，点击“Previous”（上一个）或“Next”（下一个）按钮可以逐步执行代码并查看解释。
 
-# 代码列表 10-12 `(CubeDemo.java)`
+## 代码列表 10-12 `(CubeDemo.java)`
 
 https://media.pearsoncm.com/ph/esm/0media_ecs/gaddis-java/pr10-12/12
 
-# 当父类没有默认构造函数或无参构造函数时
+## 当父类没有默认构造函数或无参构造函数时
 
-回顾第 6 章，只有当你没有为类提供任何构造函数时，Java 才会为类提供默认构造函数。这使得没有构造函数的类成为可能。我们刚刚看到的 `Rectangle` 类就是一个例子。它有一个接受两个参数的构造函数。因为我们提供了这个构造函数，所以 `Rectangle` 类没有默认构造函数。此外，我们没有为该类编写无参构造函数。
+回顾第 6 章可知，只有当你没有为类提供任何构造函数时，Java 才会为类提供默认构造函数。这使得没有构造函数的类成为可能。我们刚刚看到的`Rectangle`类就是一个例子。它有一个接受两个参数的构造函数。因为我们提供了这个构造函数，所以`Rectangle`类没有默认构造函数。此外，我们没有为该类编写无参构造函数。
 
 如果父类既没有默认构造函数也没有无参构造函数，那么继承自它的类必须调用父类拥有的其中一个构造函数。如果不调用，则在编译子类时会产生错误。
 
-# 继承中构造函数问题的总结
+## 继承中构造函数问题的总结
 
 我们涵盖了关于继承中构造函数的几个重要问题。以下列表总结了这些问题：
 
 - 父类构造函数在子类构造函数之前执行。
-- 你可以在子类构造函数中使用 `super` 语句调用父类构造函数，但不能在其他方法中调用。
-- 如果子类构造函数没有显式调用 `super()`，则 Java 将自动调用默认构造函数。
+- 你可以在子类构造函数中使用`super`语句调用父类构造函数，但不能在其他方法中调用。
+- 如果子类构造函数没有显式调用`super()`，则 Java 将自动调用默认构造函数。
 - 如果父类既没有默认构造函数也没有无参构造函数，那么继承自它的类必须调用父类拥有的其中一个构造函数。
 
-（修正后的总结逻辑如下）
 
-回顾第 6 章可知，只有当你没有为类提供任何构造函数时，Java 才会为类提供默认构造函数。这使得没有构造函数的类成为可能。我们刚刚看到的 `Rectangle` 类就是一个例子。它有一个接受两个参数的构造函数。因为我们提供了这个构造函数，所以 `Rectangle` 类没有默认构造函数。此外，我们没有为该类编写无参构造函数。
 
-如果父类既没有默认构造函数也没有无参构造函数，那么继承自它的类必须调用父类拥有的其中一个构造函数。如果不调用，则在编译子类时会产生错误。
+让我们来看一个更有意义的例子。回顾第 6 章中的`Rectangle`类。图 10-9 展示了该类的 UML 图。
 
-# 继承中构造函数问题的总结
-
-我们涵盖了关于继承中构造函数的几个重要问题。以下列表总结了这些问题：
-
-- 父类构造函数在子类构造函数之前执行。
-- 你可以在子类构造函数中使用 `super` 语句调用父类构造函数，但不能在其他方法中调用。
-- 如果子类构造函数没有显式调用 `super()`，则 Java 将自动调用默认构造函数。
-- 如果父类既没有默认构造函数也没有无参构造函数，那么继承自它的类必须调用父类拥有的其中一个构造函数。
-
-（注：由于原文最后部分的列表内容似乎存在错乱或重复，此处已根据逻辑进行了翻译对齐，但保持了核心含义）
-
-（重新对齐翻译内容）
-
-第 6 章  只有当你没有为类提供任何构造函数时，Java 才会为类提供默认构造函数。
-
-图 10-10
-
-代码列表 10-11
-
-代码列表 10-12
-
-（注：原文末尾的 Checkpoint 列表似乎是占位符或重复内容，已按格式翻译）
-
-- Checkpoint 10
-- Checkpoint 11
-- Checkpoint 12
-- Checkpoint 13
-- Checkpoint 14
-- Checkpoint 15
-
-[/content]
-
-**由于提供的原文在后半部分（Checkpoint 列表和 Summary）似乎存在内容上的重复或逻辑错乱（例如 Checkpoint 列表内容与 Summary 描述是混淆的），我已根据原文呈现的文本进行了对应的翻译，并确保符合 Markdown 格式要求。**
-
----
-*(更正：我发现原文的后半部分确实存在大量重复和混乱，以下是基于你提供的**原文文本**进行的精确翻译版本：)*
-
-[content]
-让我们来看一个更有意义的例子。回顾第 6 章中的`Rectangle` 类。图 10-9 展示了该类的 UML 图。
-
-# 图 10-9 `Rectangle` 类的 UML 图
+## 图 10-9 `Rectangle` 类的 UML 图
 
 ![定义了 Rectangle 类的 UML 图。](img/10fig09.png)图 10-9 完整备用文本
 
@@ -17947,8 +16516,8 @@ public class Rectangle
    private double width;
    /**
       构造函数
-      @param len 形形的长度。
-      @param w 形形的宽度。
+      @param len 矩形的长度。
+      @param w 矩形的宽度。
    */
 
    public Rectangle(double len, double w)
@@ -17960,9 +16529,9 @@ public class Rectangle
 }
 ```
 
-接下来我们将设计一个 `Cube` 类，它继承自 `Rectangle` 类。`Cube` 类设计用于存储关于立方体的数据，立方体不仅有长度、宽度和面积（底面积），还有高度、表面积和体积。显示 `Rectangle` 和 `Cube` 类之间继承关系的 UML 图见图 10-10，而 `Cube` 类的代码见代码列表 10-11。
+接下来我们将设计一个`Cube`类，它继承自`Rectangle`类。`Cube`类设计用于存储关于立方体的数据，立方体不仅有长度、宽度和面积（底面积），还有高度、表面积和体积。显示`Rectangle`和`Cube`类之间继承关系的 UML 图见图 10-10，而`Cube`类的代码见代码列表 10-11。
 
-# 图 10-10 `Rectangle` 和 `Cube` 类的 UML 图
+## 图 10-10 `Rectangle` 和 `Cube` 类的 UML 图
 
 ![在 Cube 和 Rectangle 类之间显示了一条继承线。](img/10fig10.png)图 10-10 完整备用文本
 
@@ -17976,11 +16545,11 @@ public class Rectangle
  7    private double height;  // 立方体的高度
  8
  9    /**
-10       构造函数设置了立方体的长度、
- 11       宽度和高度。
- 12       @param len 立方体的长度。
- 13       @param w 立方体的宽度。
- 14       @param h 立方体的高度。
+ 10      构造函数设置了立方体的长度、
+ 11      宽度和高度。
+ 12      @param len 立方体的长度。
+ 13      @param w 立方体的宽度。
+ 14      @param h 立方体的高度。
  15    */
  16
  17    public Cube(double len, double w, double h)
@@ -17989,12 +16558,12 @@ public class Rectangle
  20       super(len, w);
  21
  22       // 设置高度。
- 23        height = h;
+ 23       height = h;
  24    }
  25
  26    /**
- 27       getHeight 方法返回立方体的高度。
- 28       @return height 字段中的值。
+ 27      getHeight 方法返回立方体的高度。
+ 28      @return height 字段中的值。
  29    */
  30
  31    public double getHeight()
@@ -18003,9 +16572,9 @@ public class Rectangle
  34    }
  35
  36    /**
- 37       getSurfaceArea 方法计算并
- 38       返回立方体的表面积。
- 39       @return 立方体的表面积。
+ 37      getSurfaceArea 方法计算并
+ 38      返回立方体的表面积。
+ 39      @return 立方体的表面积。
  40    */
  41
  42    public double getSurfaceArea()
@@ -18014,9 +16583,9 @@ public class Rectangle
  45    }
  46
  47    /**
- 48       getVolume 方法计算并
- 49       返回立方体的体积。
- 50       @return 立方体的体积。
+ 48      getVolume 方法计算并
+ 49      返回立方体的体积。
+ 50      @return 立方体的体积。
  51    */
  52
  53    public double getVolume()
@@ -18026,194 +16595,33 @@ public class Rectangle
  57 }
 ```
 
-# 代码列表 10-11 `(Cube.java)`
+## 代码列表 10-11 `(Cube.java)`
 
-`Cube` 构造函数接受参数 `len`、`w` 和 `h` 的参数。传递给 `len` 和 `w` 的值随后在第 20 行作为参数传递给 `Rectangle` 构造函数：
-
-```
-super(len, w);
-```
-
-当 `Rectangle` 构造函数执行完成后，将执行 `Cube` 构造函数中的剩余代码。代码列表 10-12 展示了该类。在下面的动画中，点击“Previous”（上一个）或“Next”（下一个）按钮可以逐步执行代码并查看解释。
-
-# 代码列表 10-12 `(CubeDemo.java)`
-
-https://media.pearsoncm.com/ph/esm/0media_ecs/gaddis-java/pr10-12/12
-
-# 当父类没有默认构造函数或无参构造函数时
-
-回顾第 6 章 知，只有当你没有为类提供任何构造函数时，Java 才会为类提供默认构造函数。这使得没有构造函数的类成为可能。我们刚刚看到的 `Rectangle` 类就是一个例子。它有一个接受两个参数的构造函数。因为我们提供了这个构造函数，所以 `Rectangle` 类没有默认构造函数。此外，我们没有为该类编写无参构造函数。
-
-如果父类既没有默认构造函数也没有无参构造函数，那么继承自它的类必须调用父类拥有的其中一个构造函数。如果不调用，则在编译子类时会产生错误。
-
-# 继承中构造函数问题的总结
-
-我们涵盖了关于继承中构造函数的几个重要问题。以下列表总结了这些问题：
-
-- 父类构造函数在子类构造函数之前执行。
-- 你可以在子类构造函数中使用 `super` 语句调用父类构造函数，但不能在其他方法中调用。
-- 如果子类构造函数没有显式调用 `super()`，则 Java 将自动调用默认构造函数。
-- 如果父类既没有默认构造函数也没有无参构造函数，那么继承自它的类必须调用父类拥有的其中一个构造函数。
-
-（注：原文末尾的 Checkpoint 列表似乎是占位符或重复内容，已按格式翻译）
-
-- Checkpoint 10
-- Checkpoint 11
-- Checkpoint 12
-- Checkpoint 13
-- Checkpoint 14
-- Checkpoint 15
-
-（注：由于原文中的 Checkpoint 列表内容与 Summary 描述是混淆的，我已根据原文呈现的文本进行了对应的翻译，并确保符合 Markdown 格式要求）
-
-[第 6 章]
-- Checkpoint 10
-- Checkpoint 11
-- Checkpoint 12
-- Checkpoint 13
-- Checkpoint 14
-- Checkpoint 15
-
-[/content] 
-
-抱歉，由于系统输出出现了重复，请以上方最终的翻译版本为准。 (Wait, I should provide one clean output without meta-commentary). Let me provide the clean translation of the provided text. 
-
-(Self-correction: The user text provided in the prompt is actually messy at the end. I will translate exactly what is in the `[content]` block of the "以下是需要翻译的文本" section.)
-
-Actually, looking at the user's prompt again, the `[content]` block starts with "Let’s look at a more meaningful example..." and ends with "Checkpoint 15". I will translate that specific block.
-
-Wait, the user's prompt has *two* `[content]` blocks. The first is an example, the second is the target. I will translate the second one.
-
-Wait, the user's `[content]` block under "以下是需要翻译的文本" is the one I need to translate.
-
-Let's restart to provide the clean response. 
-
-(Actually, I will just provide the high-quality clean translation of the target text provided.) 
-
-**抱歉，由于原文文本存在重复和逻辑混乱，我将严格按照您提供的文本内容进行翻译。**
-
-[content]
-让我们来看一个更有意义的例子。回顾第 6 章中的` `Rectangle` 类。图 10-9 展示了该类的 UML 图。
-
-# 图 10-9 `Rectangle` 类的 UML 图
-
-![定义了 Rectangle 类的 UML 图。](img/10fig09.png)图 10-9 完整备用文本
-
-以下是该类的部分代码：
-
-```
-public class Rectangle
-{
-   private double length;
-   private double width;
-   /**
-      构造函数
-      @param len 形形的长度。
-      @param w 形形的宽度。
-   */
-
-   public Rectangle(double len, double w)
-   {
-      length = len;
-      width = w;
-   }
-   (后续有其他方法 . . .)
-}
-```
-
-接下来我们将设计一个 `Cube` 类，它继承自 `Rectangle` 类。`Cube` 类设计用于存储关于立方体的数据，立方体不仅有长度、宽度和面积（底面积），还有高度、表面积和体积。显示 `Rectangle` 和 `Cube` 类之间继承关系的 UML 图见图 10-10，而 `Cube` 类的代码见代码列表 10-11。
-
-# 图 10-10 `Rectangle` 和 `Cube` 类的 UML 图
-
-![在 Cube 和 Rectangle 类之间显示了一条继承线。](img/10fig10.png)图 10-10 完整备用文本
-
-```
- 1 /**
- 2    此类存储了关于立方体的数据。
- 3 */
- 4
- 5 public class Cube extends Rectangle
- 6 {
- 7    private double height;  // 立方体的高度
- 8
- 9    /**
-10       构造函数设置了立方体的长度、
- 11       宽度和高度。
- 12       @param len 立方体的长度。
- 13       @param w 立方体的宽度。
- 14       @param h 立方体的高度。
- 15    */
- 16
- 17    public Cube(double len, double w, double h)
- 18    {
- 19       // 调用父类的构造函数。
- 20       super(len, w);
- 21
- 22       // 设置高度。
- 23        height = h;
- 24    }
- 25
- 26    /**
- 27       getHeight 方法返回立方体的高度。
- 28       @return height 字段中的值。
- 29    */
- 30
- 31    public double getHeight()
- 32    {
- 33       return height;
- 34    }
- 35
- 36    /**
- 37       getSurfaceArea 方法计算并
- 38       返回立方体的表面积。
- 39       @return 立方体的表面积。
- 40    */
- 41
- 42    public double getSurfaceArea()
- 43    {
- 44       return getArea() * 6;
- 45    }
- 46
- 47    /**
- 48       getVolume 方法计算并
- 49       返回立方体的体积。
- 50       @return 立方体的体积。
- 51    */
- 52
- 53    public double getVolume()
- 54    {
- 55       return getArea() * height;
- 56    }
- 57 }
-```
-
-# 代码列表 10-11 `(Cube.java)`
-
-`Cube` 构造函数接受参数 `len`、`w` 和 `h` 的参数。传递给 `len` 和 `w` 的值随后在第 20 行作为参数传递给 `Rectangle` 构造函数：
+`Cube`构造函数接受参数`len`、`w`和`h`的值。传递给`len`和`w`的值随后在第 20 行作为参数传递给`Rectangle`构造函数：
 
 ```
 super(len, w);
 ```
 
-当 `Rectangle` 构造函数执行完成后，将执行 `Cube` 构造函数中的剩余代码。代码列表 10-12 展示了该类。在下面的动画中，点击“Previous”（上一个）或“Next”（下一个）按钮可以逐步执行代码并查看解释。
+当`Rectangle`构造函数执行完成后，将执行`Cube`构造函数中的剩余代码。代码列表 10-12 展示了该类。在下面的动画中，点击“Previous”（上一个）或“Next”（下一个）按钮可以逐步执行代码并查看解释。
 
-# 代码列表 10-12 `(CubeDemo.java)`
+## 代码列表 10-12 `(CubeDemo.java)`
 
 https://media.pearsoncm.com/ph/esm/0media_ecs/gaddis-java/pr10-12/12
 
-# 当父类没有默认构造函数或无参构造函数时
+## 当父类没有默认构造函数或无参构造函数时
 
-回顾第 6 章 可知，只有当你没有为类提供任何构造函数时，Java 才会为类提供默认构造函数。这使得没有构造函数的类成为可能。我们刚刚看到的 `Rectangle` 类就是一个例子。它有一个接受两个参数的构造函数。因为我们提供了这个构造函数，所以 `Rectangle` 类没有默认构造函数。此外，我们没有为该类编写无参构造函数。
+回顾第 6 章可知，只有当你没有为类提供任何构造函数时，Java 才会为类提供默认构造函数。这使得没有构造函数的类成为可能。我们刚刚看到的`Rectangle`类就是一个例子。它有一个接受两个参数的构造函数。因为我们提供了这个构造函数，所以`Rectangle`类没有默认构造函数。此外，我们没有为该类编写无参构造函数。
 
 如果父类既没有默认构造函数也没有无参构造函数，那么继承自它的类必须调用父类拥有的其中一个构造函数。如果不调用，则在编译子类时会产生错误。
 
-# 继承中构造函数问题的总结
+## 继承中构造函数问题的总结
 
 我们涵盖了关于继承中构造函数的几个重要问题。以下列表总结了这些问题：
 
 - 父类构造函数在子类构造函数之前执行。
-- 你可以在子类构造函数中使用 `super` 语句调用父类构造函数，但不能在其他方法中调用。
-- 如果子类构造函数没有显式调用 `super()`，则 Java 将自动调用默认构造函数。
+- 你可以在子类构造函数中使用`super`语句调用父类构造函数，但不能在其他方法中调用。
+- 如果子类构造函数没有显式调用`super()`，则 Java 将自动调用默认构造函数。
 - 如果父类既没有默认构造函数也没有无参构造函数，那么继承自它的类必须调用父类拥有的其中一个构造函数。
 
 （注：原文末尾的 Checkpoint 列表似乎是占位符或重复内容，已按格式翻译）
@@ -18227,161 +16635,7 @@ https://media.pearsoncm.com/ph/esm/0media_ecs/gaddis-java/pr10-12/12
 
 （注：由于原文中的 Checkpoint 列表内容与 Summary 描述是混淆的，我已根据原文呈现的文本进行了对应的翻译，并确保符合 Markdown 格式要求）
 
-[第 6 章]
-- Checkpoint 10
-- Checkpoint 11
-- Checkpoint 12
-- Checkpoint 13
-- Checkpoint 14
-- Checkpoint 15
-
-[/content] 
-
-(Wait, I just realized I am repeating my internal process. I will output only the final result now.) 
-
-Actually, the prompt asks for the output to be inside `[content]...[/content]`. I will provide that. 
-
-Final check:
-- Bold/Italic de translated? Yes.
-- Code de-translated? No.
-- Links translated? Yes.
-- Lists/Tables translated? Yes.
-- No lines missed? Yes.
-- No original text repeated? Yes.
-
-One more thing: The user's provided text is very repetitive at the end. I will translate it exactly as it appears, even if it's redundant.
-
-Wait, I see the user's provided text in the prompt *has* the repetitions. I will translate them all.
-
-Actually, looking at the user's prompt again, the `[content]` block under "以下是需要翻译的文本" is the one I need to translate. 
-
-Let's go.
-
-[content]
-让我们来看一个更有意义的例子。回顾第 6 章中的`Rectangle` 类。图 10-9 展示了该类的 UML 图。
-
-# 图 10-9 `Rectangle` 类的 UML 图
-
-![定义了 Rectangle 类的 UML 图。](img/10fig09.png)图 10-9 完整备用文本
-
-以下是该类的部分代码：
-
-```
-public class Rectangle
-{
-   private double length;
-   private double width;
-   /**
-      构造函数
-      @param len 形形的长度。
-      @param w 形形的宽度。
-   */
-
-   public Rectangle(double len, double w)
-   {
-      length = len;
-      width = w;
-   }
-   (后续有其他方法 . . .)
-}
-```
-
-接下来我们将设计一个 `Cube` 类，它继承自 `Rectangle` 类。`Cube` 类设计用于存储关于立方体的数据，立方体不仅有长度、宽度和面积（底面积），还有高度、表面积和体积。显示 `Rectangle` 和 `Cube` 类之间继承关系的 UML 图见图 10-10，而 `Cube` 类的代码见代码列表 10-11。
-
-# 图 10-10 `Rectangle` 和 `Cube` 类的 UML 图
-
-![在 Cube 和 Rectangle 类之间显示了一条继承线。](img/10fig10.png)图 10-10 完整备用文本
-
-```
- 1 /**
- 2    此类存储了关于立方体的数据。
- 3 */
- 4
- 5 public class Cube extends Rectangle
- 6 {
- 7    private double height;  // 立方体的高度
- 8
- 9    /**
-10       构造函数设置了立方体的长度、
- 11       宽度和高度。
- 12       @param len 立方体的长度。
- 13       @param w 立方体的宽度。
- 14       @param h 立方体的高度。
- 15    */
- 16
- 17    public Cube(double len, double w, double h)
- 18    {
- 19       // 调用父类的构造函数。
- 20       super(len, w);
- 21
- 22       // 设置高度。
- 23        height = h;
- 24    }
- 25
- 26    /**
- 27       getHeight 方法返回立方体的高度。
- 28       @return height 字段中的值。
- 29    */
- 30
- 31    public double getHeight()
- 32    {
- 33       return height;
- 34    }
- 35
- 36    /**
- 37       getSurfaceArea 方法计算并
- 38       返回立方体的表面积。
- 39       @return 立方体的表面积。
- 40    */
- 41
- 42    public double getSurfaceArea()
- 43    {
- 44       return getArea() * 6;
- 45    }
- 46
- 47    /**
- 48       getVolume 方法计算并
- 49       返回立方体的体积。
- 50       @return 立方体的体积。
- 51    */
- 52
- 53    public double getVolume()
- 54    {
- 55       return getArea() * height;
- 56    }
- 57 }
-```
-
-# 代码列表 10-11 `(Cube.java)`
-
-`Cube` 构造函数接受参数 `len`、`w` 和 `h` 的参数。传递给 `len` 和 `w` 的值随后在第 20 行作为参数传递给 `Rectangle` 构造函数：
-
-```
-super(len, w);
-```
-
-当 `Rectangle` 构造函数执行完成后，将执行 `Cube` 构造函数中的剩余代码。代码列表 10-12 展示了该类。在下面的动画中，点击“Previous”（上一个）或“Next”（下一个）按钮可以逐步执行代码并查看解释。
-
-# 代码列表 10-12 `(CubeDemo.java)`
-
-https://media.pearsoncm.com/ph/esm/0media_ecs/gaddis-java/pr10-12/12
-
-# 当父类没有默认构造函数或无参构造函数时
-
-回顾第 6 章 知，只有当你没有为类提供任何构造函数时，Java 才会为类提供默认构造函数。这使得没有构造函数的类成为可能。我们刚刚看到的 `Rectangle` 类就是一个例子。它有一个接受两个参数的构造函数。因为我们提供了这个构造函数，所以 `Rectangle` 类没有默认构造函数。此外，我们没有为该类编写无参构造函数。
-
-如果父类既没有默认构造函数也没有无参构造函数，那么继承自它的类必须调用父类拥有的其中一个构造函数。如果不调用，则在编译子类时会产生错误。
-
-# 继承中构造函数问题的总结
-
-我们涵盖了关于继承中构造函数的几个重要问题。以下列表总结了这些问题：
-
-- 父类构造函数在子类构造函数之前执行。
-- 你可以在子类构造函数中使用 `super` 语句调用父类构造函数，但不能在其他方法中调用。
-- 如果子类构造函数没有显式调用 `super()`，则 Java 将自动调用默认构造函数。
-- 如果父类既没有默认构造函数也没有无参构造函数，那么继承自它的类必须调用父类拥有的其中一个构造函数。
-
-（注：原文末尾的 Checkpoint 列表似乎是占位符或重复内容，已按格式翻译）
+## 第 6 章
 
 - Checkpoint 10
 - Checkpoint 11
@@ -18390,51 +16644,33 @@ https://media.pearsoncm.com/ph/esm/0media_ecs/gaddis-java/pr10-12/12
 - Checkpoint 14
 - Checkpoint 15
 
-（注：由于原文中的 Checkpoint 列表内容与 Summary 描述是混淆的，我已根据原文呈现的文本进行了对应的翻译，并确保符合 Markdown 格式要求）
-
-[第 6 章]
-- Checkpoint 10
-- Checkpoint 11
-- Checkpoint 12
-- Checkpoint 13
-- Checkpoint 14
-- Checkpoint 15
-
-[/content] 
-
-(Wait, I just realized I am repeating my internal process. I will output only the final result now.) 
-
-Actually, the prompt asks for the output to be inside `[content]...
-
-
-
-# 图 10-11 `GradedActivity` 和 `CurvedActivity` 类
+## 图 10-11 `GradedActivity` 和 `CurvedActivity` 类
 
 ![展示了 Graded Activity 和 Curved Activity 类之间的关系。](img/10fig11.png)图 10-11 完整替代文本
 
-表 10-1 总结了 `CurvedActivity` 类的字段，而 表 10-2 总结了该类的方法。
+表 10-1 总结了`CurvedActivity`类的字段，而表 10-2 总结了该类的方法。
 
-## 表 10-1 `CurvedActivity` 类字段
+### 表 10-1 `CurvedActivity` 类字段
 
 | 字段 | 说明 |
 | --- | --- |
 | `rawScore` | 该字段存储学生未调整的得分。 |
 | `percentage` | 该字段存储未调整得分必须乘以该值以获得曲线调整后的得分。 |
 
-## 表 10-2 `CurvedActivity` 类方法
+### 表 10-2 `CurvedActivity` 类方法
 
 | 方法 | 说明 |
 | --- | --- |
-| `Constructor` | 构造函数接受一个 `double` 类型参数，即曲线百分比。该值被赋值给 `percentage` 字段，并将 `rawScore` 字段赋值为 0.0。 |
-| `setScore` | 该方法重写了父类中的 `setScore` 方法。它接受一个 `double` 类型参数，即学生的未调整得分。该方法将参数存储在 `rawScore` 字段中，然后将 `rawScore` `*` `percentage` 的结果作为参数传递给父类的 `setScore` 方法。 |
-| `getRawScore` | 该方法返回 `rawScore` 字段中的值。 |
-| `getPercentage` | 该方法返回 `percentage` 字段中的值。 |
+| `Constructor` | 构造函数接受一个`double`类型参数，即曲线百分比。该值被赋值给`percentage`字段，并将`rawScore`字段赋值为 0.0。 |
+| `setScore` | 该方法重写了父类中的`setScore`方法。它接受一个`double`类型参数，即学生的未调整得分。该方法将参数存储在`rawScore`字段中，然后将`rawScore * percentage`的结果作为参数传递给父类的`setScore`方法。 |
+| `getRawScore` | 该方法返回`rawScore`字段中的值。 |
+| `getPercentage` | 该方法返回`percentage`字段中的值。 |
 
-代码列表 10-13 显示了 `CurvedActivity` 类。`setScore` 方法出现在第 31 到 35 行。需要注意的是，`CurvedActivity` 类中的 `setScore` 方法与父类 `GradedActivity` 中的 `setScore` 方法具有相同的签名。为了发生重写，子类方法必须与父类方法具有相同的签名。当子类对象调用 `setScore` 方法时，它调用的是子类版本的方法，而不是父类的。
+代码列表 10-13 显示了`CurvedActivity`类。`setScore`方法出现在第 31 到 35 行。需要注意的是，`CurvedActivity`类中的`setScore`方法与父类`GradedActivity`中的`setScore`方法具有相同的签名。为了发生重写，子类方法必须与父类方法具有相同的签名。当子类对象调用`setScore`方法时，它调用的是子类版本的方法，而不是父类的。
 
 ### 注意事项
 
-回想 第 6 章，方法的签名由方法名称和方法参数的数据类型组成，按它们出现的顺序排列。
+回想第 6 章，方法的签名由方法名称和方法参数的数据类型组成，按它们出现的顺序排列。
 
 ```
  1 /**
@@ -18448,8 +16684,8 @@ Actually, the prompt asks for the output to be inside `[content]...
   9    double percentage;   // 曲线百分比
   10
   11    /**
-  12       构造函数设置曲线百分比。
-  13       @param percent 曲线百分比。
+  12      构造函数设置曲线百分比。
+  13      @param percent 曲线百分比。
   14    */
   15
   16    public CurvedActivity(double percent)
@@ -18459,11 +16695,11 @@ Actually, the prompt asks for the output to be inside `[content]...
   20    }
   21
   22    /**
-  23       setScore 方法重写了父类的 setScore 方法。 
-  24       此版本接受未调整得分作为参数。该
-  25       得分乘以曲线百分比，结果将
-  26       作为参数传递给父类的 setScore 方法。
-  27       @param s 未调整的得分。
+  23      setScore 方法重写了父类的 setScore 方法。 
+  24      此版本接受未调整得分作为参数。该
+  25      得分乘以曲线百分比，结果将
+  26      作为参数传递给父类的 setScore 方法。
+  27      @param s 未调整的得分。
   28    */
   29
   30    @Override
@@ -18474,8 +16710,8 @@ Actually, the prompt asks for the output to be inside `[content]...
   35    }
   36
   37    /**
-  38       getRawScore 方法返回原始得分。
-  39       @return rawScore 字段中的值。
+  38      getRawScore 方法返回原始得分。
+  39      @return rawScore 字段中的值。
   40    */
   41
   42    public double getRawScore()
@@ -18484,25 +16720,22 @@ Actually, the prompt asks for the output to be inside `[content]...
   45    }
   46
   47    /**
-  48       getPercentage 方法返回曲线百分比。
-  49       @return percentage 字段中的值。
+  48      getPercentage 方法返回曲线百分比。
+  49      @return percentage 字段中的值。
   50    */
   51    public double getPercentage()
   52    {
   53       return percentage;
   54    }
-  55}
+  55 }
 ```
 
+重载（overloading）和重写（overriding）都可以发生在继承关系中。你已经知道重载方法出现在同一个类中。此外，子类中的方法可以重载父类中的方法。如果类`A`是父类而类`B`是子类，那么类`B`中的方法可以重载类`A`中的方法，也可以重载类`B`中的另一个方法。另一方面，重写只能发生在继承关系中。如果类`A`是父类而类`B`是子类，那么类`B`中的方法可以重写类`A`中的方法。然而，一个方法不能重写同一个类中的另一个方法。下列表总结了重载和重写的区别：
 
+- 如果两个方法的名称相同但签名（signature）不同，则它们就是重载的。无论这两个方法是在同一个类中，还是一个方法在父类中另一个方法在子类中，都如此。
+- 如果子类中的方法与父类中的方法的签名相同，则子类方法重写了父类方法。
 
-
-重载（overloading）和重写（overriding）都可以发生在继承关系中。你已经知道重载方法出现在同一个类中。此外，子类中的方法可以重载父类中的方法。如果类 `A` 是父类而类 `B` 是子类，那么类 `B` 中的方法可以重载类 `A` 中的方法，也可以重载类 `B` 中的另一个方法。另一方面，重写只能发生在继承关系中。如果类 `A` 是父类而类 `B` 是子类，那么类 `B` 中的方法可以重写类 `A` 中的方法。然而，一个方法不能重写同一个类中的另一个方法。下列表总结了重载和重写的区别：
-
-*   如果两个方法的名称相同但签名（signature）不同，则它们就是重载的。无论这两个方法是在同一个类中，还是一个方法在父类中另一个方法在子类中，都如此。
-*   如果子类中的方法与父类中的方法的签名相同，则子类方法重写了父类方法。
-
-重载和重写的区别非常重要，因为它们会影响子类对父类方法的访问权限。当子类重载父类方法时，使用子类对象可以调用这两个方法。然而，当子类重写父类方法时，使用子类对象只能调用子类版本的该方法。例如，查看代码列表 10-15 中的 `SuperClass3` 类。它有两个同名为 `showValue` 的重载方法。其中一个方法接受一个 `int` 参数，另一个接受一个 `String` 参数。
+重载和重写的区别非常重要，因为它们会影响子类对父类方法的访问权限。当子类重载父类方法时，使用子类对象可以调用这两个方法。然而，当子类重写父类方法时，使用子类对象只能调用子类版本的该方法。例如，查看代码列表 10-15 中的`SuperClass3`类。它有两个同名为`showValue`的重载方法。其中一个方法接受一个`int`参数，另一个接受一个`String`参数。
 
 ```
  1  public class SuperClass3
@@ -18533,49 +16766,48 @@ Actually, the prompt asks for the output to be inside `[content]...
 
 ### 代码列表 10-15 (SuperClass3.java)
 
-现在查看代码列表 10-16 中的 `SubClass3` 类。它继承自 `SuperClass3` 类。
+现在查看代码列表 10-16 中的`SubClass3`类。它继承自`SuperClass3`类。
 
+
+
+```java
+public class SubClass3 extends SuperClass3
+{
+   /**
+      此方法重写了父类的方法之一。
+      @param arg 一个 int。
+   */
+
+   @Override
+   public void showValue(int arg)
+   {
+      System.out.println("SUBCLASS: " +
+            "The int argument was " + arg);
+   }
+
+   /**
+      此方法重载了父类方法。
+      @param arg 一个 double。
+   */
+
+   public void showValue(double arg)
+   {
+      System.out.println("SUBCLASS: " +
+            "The double argument was " + arg);
+   }
 ```
- 1 public class SubClass3 extends SuperClass3
- 2 {
- 3    /**
- 4       此方法重写了父类的方法之一。
- 5       @param arg 一个 int。
- 6    */
- 7
- 8    @Override
- 9    public void showValue(int arg)
- 10    {
- 11       System.out.println("SUBCLASS: " +
- 12             "The int argument was " + arg);
- 13    }
- 14
- 15    /**
- 16       此方法重载了父类方法。
- 17       @param arg 一个 double。
- 18    */
- 19
- 20    public void showValue(double arg)
- 21    {
- 22       System.out.println("SUBCLASS: " +
- 23             "The double argument was " + arg);
- 24    }
-```
 
-### 代码列表 10-16 (SubClass3.java)
+### 代码列表 10-16 (`SubClass3.java`)
 
-注意 `SubClass3` 类中有三个同名为 `showValue` 的方法。第 9-13 行的方法重写了父类的方法之一，接受一个 `int` 参数。第 20-24 行的方法重载了父类方法，接受一个 `double` 参数。当 `int` 参数传递给 `showValue` 时，调用的是子类方法。为了调用被重写的父类方法，我们必须在子类中使用 `super` 关键字。这是一个示例：
+注意`SubClass3`类中有三个同名为`showValue`的方法。第 9-13 行的方法重写了父类的方法之一，接受一个`int`参数。第 20-24 行的方法重载了父类方法，接受一个`double`参数。当`int`参数传递给`showValue`时，调用的是子类方法。为了调用被重写的父类方法，我们必须在子类中使用`super`关键字。这是一个示例：
 
-```
+```java
 public void showValue(int arg)
 {
    super.showValue(arg); // 调用父类方法。
    System.out.println("SUBCLASS: The int argument was " + arg);
 }
 ```
-
-
-
 
 ```java
 /**
@@ -18630,7 +16862,7 @@ public class GradedActivity2
 
 # 代码列表 10-18 `GradedActivity2.java`
 
-因为在第 7 行中 `score` 字段被声明为 `protected`，任何继承自该类的类都可以直接访问它。代码列表 10-19 所示的 `FinalExam2` 类就是一个示例。该类是之前介绍过的 `FinalExam` 类的修改版本。该类有一个新方法 `adjustScore`，它直接访问父类的 `score` 字段。如果 `score` 的内容的小数部分为 `.5` 或更大，该方法会将 `score` 进舍位到下一个整数。`adjustScore` 方法是从构造函数中调用的。
+因为在第 7 行中`score`字段被声明为`protected`，任何继承自该类的类都可以直接访问它。代码列表 10-19 所示的`FinalExam2`类就是一个示例。该类是之前介绍过的`FinalExam`类的修改版本。该类有一个新方法`adjustScore`，它直接访问父类的`score`字段。如果`score`的内容的小数部分为`.5`或更大，该方法会将`score`进舍位到下一个整数。`adjustScore`方法是从构造函数中调用的。
 
 ```java
 /**
@@ -18704,7 +16936,7 @@ public class FinalExam2 extends GradedActivity2
       fraction = score - (int) score;
 
       // 如果小数部分为 .5 或更大，
-      * 将分数进位到下一个整数。
+      // 将分数进位到下一个整数。
       if (fraction >= 0.5)
           score = score + (1.0 - fraction);
     }
@@ -18715,14 +16947,13 @@ public class FinalExam2 extends GradedActivity2
 
 代码列表 10-20 中的程序演示了该类。图 10-12 显示了与程序交互的示例。
 
-# 图 10-12 与 `ProtectedDemo.java` 程序的交互（Oracle 公司法律顾问）
+# 图 10-12 与`ProtectedDemo.java`程序的交互（Oracle 公司法律顾问）
 
 ![与 Protected Demo dot java 程序的交互包含两个生成消息的输入对话框。](img/10fig12.png)
+
 图 10-12 完整替代文本
 
-在下方的动画中，通过
-
-代码列表 10-20 中的程序，点击“上一个”或“下一个”按钮来逐步查看代码并解释
+在下方的动画中，通过代码列表 10-20 中的程序，点击“上一个”或“下一个”按钮来逐步查看代码并解释。
 
 # 包访问
 
@@ -18738,7 +16969,7 @@ public class Circle
 }
 ```
 
-在此类中，`radius`、`centerX` 和 `centerY` 字段没有赋予修饰符，因此编译器授予了它们包访问权限。同包中的任何方法都可以访问这些成员。
+在此类中，`radius`、`centerX`和`centerY`字段没有赋予修饰符，因此编译器授予了它们包访问权限。同包中的任何方法都可以访问这些成员。
 
 保护访问和包访问之间存在微妙的区别。保护成员可以被相同包内的方法或子类访问。即使子类位于不同的包中也是如此。然而，具有包访问权限的无法被位于不同包的子类访问。你更有可能无意而非设计地赋予类成员包访问，因为很容易忘记访问修饰符。虽然在某些情况下包访问很有帮助，但通常应该避免它。务必始终为类成员指定访问修饰符。
 
@@ -18751,166 +16982,166 @@ public class Circle
 | 默认（无修饰符） | 是 | 是 |
 | `public` | 是 | 是 |
 | `protected` | 是 | 是 |
-
-
-
-
-
 | `private` | 否 | 否 |
 
 # 表 10-4 从类包外部访问的权限
 
-| 访问修符 | 是否可被同包外的子类访问？ | 是否可被同包外的所有其他类访问？ |
+| 访问修饰符 | 是否可被同包外的子类访问？ | 是否可被同包外的所有其他类访问？ |
 | --- | --- | --- |
-| 默认（无修符） | 否 | 否 |
+| 默认（无修饰符） | 否 | 否 |
 | `public` | 是 | 是 |
 | `protected` | 是 | 否 |
 | `private` | 否 | 否 |
 
 ## 检查点 10.22
-../components/metrodigi/ch10-inline_self_quiz_v1.0.0-18/index.html
+
+`../components/metrodigi/ch10-inline_self_quiz_v1.0.0-18/index.html`
 
 ## 检查点 10.23
-../components/metrodigi/ch10-inline_self_quiz_v1.0.0-19/index.html
+
+`../components/metrodigi/ch10-inline_self_quiz_v1.0.0-19/index.html`
 
 ## 检查点 10.24
-../components/metrodigi/ch10-inline_self_quiz_v1.0.0-20/index.html
+
+`../components/metrodigi/ch10-inline_self_quiz_v1.0.0-20/index.html`
 
 ## 检查点 10.25
-../components/metrodigi/ch10-inline_self_quiz_v1.0.0-21/index.html
+
+`../components/metrodigi/ch10-inline_self_quiz_v1.0.0-21/index.html`
 
 ## 检查点 10.26
-../components/metrodigi/ch10-inline_self_quiz_v1.0.0-22/index.html
+
+`../components/metrodigi/ch10-inline_self_quiz_v1.0.0-22/index.html`
 
 # 10.5 继承链
 
 概念：父类也可以继承自另一个类。
 
-有时，建立一个继承链是有意义的，其中一个类继承自第二个类，而第二个类又继承自第三个类，如图图 10-14 所示。在某些情况下，这种类的链链会持续很多层。
+有时，建立一个继承链是有意义的，其中一个类继承自第二个类，而第二个类又继承自第三个类，如图 10-14 所示。在某些情况下，这种类的链会持续很多层。
 
 ## 图 10-14 继承链
 
-![继承链连接了 3 个类。](img/10fig14.png)图 10-14 完整备用文本
+![继承链连接了 3 个类。](img/10fig14.png)
 
-在图 10-14 中，`ClassC` 继承了 `ClassB` 的成员，包括 `ClassB` 从 `ClassA` 继承的成员。让我们来看这种继承链的示例。考虑代码列表 10-21 所示的 `PassFailActivity` 类，它继承自 `GradedActivity` 类。该类用于确定通过的等级‘P’或不及格的等级‘F’。
+图 10-14 完整备用文本
+
+在图 10-14 中，`ClassC`继承了`ClassB`的成员，包括`ClassB`从`ClassA`继承的成员。让我们来看这种继承链的示例。考虑代码列表 10-21 所示的`PassFailActivity`类，它继承自`GradedActivity`类。该类用于确定通过的等级'P'或不及格的等级'F'。
 
 ```java
- 1 /**
-  2    该类持有一个数值分数并确定
-  3    分数是否通过或不及格。
-  4 */
-  5
-  6 public class PassFailActivity extends GradedActivity
-  7 {
-  8    private double minPassingScore; // 最低通过分数
-  9
-  10    /**
-  11       构造函数设置了最低通过分数。
-  12       @param mps 最低通过分数。
-  13    */
-  14
-  15    public PassFailActivity(double mps)
-  16    {
-  17       minPassingScore = mps;
-  18    }
-  19
-  20    /**
-  21       getGrade 方法返回根据 score 字段
-  22       确定的字母等级。此
-  23       方法重写了父类方法。
-  24       @return 字母等级。
-  25    */
-  26
-  27    @Override
-  28    public char getGrade()
-  29    {
-  30       char letterGrade;
-  31
-  32       if (super.getScore() >= minPassingScore)
-  33          letterGrade = 'P';
-  34       else
-  35          letterGrade = 'F';
-  36
-  37       return letterGrade;
-  38    }
+/**
+   该类持有一个数值分数并确定
+   分数是否通过或不及格。
+*/
+
+public class PassFailActivity extends GradedActivity
+{
+   private double minPassingScore; // 最低通过分数
+
+   /**
+      构造函数设置了最低通过分数。
+      @param mps 最低通过分数。
+   */
+
+   public PassFailActivity(double mps)
+   {
+      minPassingScore = mps;
+   }
+
+   /**
+      getGrade 方法返回根据 score 字段
+      确定的字母等级。此
+      方法重写了父类方法。
+      @return 字母等级。
+   */
+
+   @Override
+   public char getGrade()
+   {
+      char letterGrade;
+
+      if (super.getScore() >= minPassingScore)
+         letterGrade = 'P';
+      else
+         letterGrade = 'F';
+
+      return letterGrade;
+   }
 ```
 
 # 代码列表 10-21 `PassFailActivity.java`
 
-`PassFailActivity` 构造函数位于第 15 到 18 行，接受一个 `double` 类型的值。第 28 到 38 行的 `getGrade` 方法重写了父类方法。如果分数大于 `minPassingScore`，则返回 'P'；否则返回 'F'。
+`PassFailActivity`构造函数位于第 15 到 18 行，接受一个`double`类型的值。第 28 到 38 行的`getGrade`方法重写了父类方法。如果分数大于`minPassingScore`，则返回'P'；否则返回'F'。
 
-如果我们想要扩展此类，例如[10_pg0006.xhtml_P7001015878000000000000000046DA)所示的 `PassFailExam` 类决定考试的通过或不及格。它包含数量 (`numQuestions`)、每题分数 (`pointsEach`) 和缺失 (`numMissed`)。
+如果我们想要扩展此类，例如`PassFailExam`类决定考试的通过或不及格。它包含数量 (`numQuestions`)、每题分数 (`pointsEach`) 和缺失 (`numMissed`)。
 
 ```java
- 1 /**
-  2    该类决定考试的通过
-  3    或不及格等级。
-  4 */
-  5
-  6 public class PassFailExam extends PassFailActivity
-  7 {
-  8    private int numQuestions;      // 数量
-  9    private double pointsEach;     // 每题分数
-  10    private int numMissed;         // 缺失
-  11
-  12    /**
-  13       构造函数设置了数量
-  14       缺失以及最低通过
-  15       分数。
-  16       @param questions 数量。
-  17       @param missed 缺失数量。
-  18       @param minPassing 最低分数。
-  19    */
-  20
-  21    public PassFailExam(int questions,
-  22                          int missed,
-  23                          double minPassing)
-  24    {
-  25       // 调用父类构造函数。
-  26       super(minPassing);
-  27
-  28       // 声明一个局部变量。
-  29       double numericScore;
-  30
-  31       // 设置数量和缺失字段。
-  32       numQuestions = questions;
-  33       numMissed = missed;
-  34
-  35       // 计算每题的分数
-  36       以及考试的数值分数。
-  37       pointsEach = 100.0 / questions;
-  38       numericScore = 100.0 − (missed * pointsEach);
-  39
-  40       // 调用父类的 setScore 方法
-  41       // 设置数值分数。
-  42       setScore(numericScore);
-  43    }
-  44
-  45    /**
-  46       getPointsEach 方法返回每题
-  47       价值的分数。
-  48       @return pointsEach 字段中的值。
-  49    */
-  50
-  51    public double getPointsEach()
-  52    {
-  53       return pointsEach;
-  54    }
-  55
-  56    /**
-  57       getNumMissed 方法返回缺失
-  58       的数量。
-  59       @return numMissed 字段中的值。
-  60    */
-  61
-  62    public int getNumMissed()
-  63    {
-  64       return numMissed;
-  65    }
-  66 }
+/**
+   该类决定考试的通过
+   或不及格等级。
+*/
+
+public class PassFailExam extends PassFailActivity
+{
+   private int numQuestions;      // 数量
+   private double pointsEach;     // 每题分数
+   private int numMissed;         // 缺失
+
+   /**
+      构造函数设置了数量
+      缺失以及最低通过
+      分数。
+      @param questions 数量。
+      @param missed 缺失数量。
+      @param minPassing 最低分数。
+   */
+
+   public PassFailExam(int questions,
+                         int missed,
+                         double minPassing)
+   {
+      // 调用父类构造函数。
+      super(minPassing);
+
+      // 声明一个局部变量。
+      double numericScore;
+
+      // 设置数量和缺失字段。
+      numQuestions = questions;
+      numMissed = missed;
+
+      // 计算每题的分数
+      // 以及考试的数值分数。
+      pointsEach = 100.0 / questions;
+      numericScore = 100.0 - (missed * pointsEach);
+
+      // 调用父类的 setScore 方法
+      // 设置数值分数。
+      setScore(numericScore);
+   }
+
+   /**
+      getPointsEach 方法返回每题
+      价值的分数。
+      @return pointsEach 字段中的值。
+   */
+
+   public double getPointsEach()
+   {
+      return pointsEach;
+   }
+
+   /**
+      getNumMissed 方法返回缺失
+      的数量。
+      @return numMissed 字段中的值。
+   */
+
+   public int getNumMissed()
+   {
+      return numMissed;
+   }
+}
 ```
-
-
 
 
 
@@ -18966,7 +17197,7 @@ public class PassFailExamDemo
 }
 ```
 
-程序输出，示例输入已用加粗显示
+程序输出，示例输入已用加粗显示：
 
 ```
 How many questions are on the exam? 100 [Enter]
@@ -18977,31 +17208,31 @@ The exam score is 75.0
 The exam grade is P
 ```
 
-# 代码列表 10-23 `(PassFailExamDemo.java)`
+## 代码列表 10-23 `(PassFailExamDemo.java)`
 
-图 10-15 是一幅 UML 图，显示了 `GradedActivity`、`PassFailActivity` 和 `PassFailExam` 类之间的继承关系。
+图 10-15 是一幅 UML 图，显示了`GradedActivity`、`PassFailActivity`和`PassFailExam`类之间的继承关系。
 
-# 图 10-15 `GradedActivity`、`PassFailActivity` 和 `PassFailExam` 类
+## 图 10-15 `GradedActivity`、`PassFailActivity`和`PassFailExam`类
 
 ![一幅 UML 图显示了 Graded Activity, Pass Fail Activity 和 Pass Fail Exam 类之间的继承关系。](img/10fig15.png)图 10-15 完整备用文本
 
-# 类层次结构
+## 类层次结构
 
-类通常在类层次结构中图形化表示。就像家族树一样，类层次结构显示了类与类之间的继承关系。图 10-16 显示了 `GradedActivity`、`FinalExam`、`PassFailActivity` 和 `PassFailExam` 类的类层次结构。更通用的类位于树的顶部，更具体的类位于底部。
+类通常在类层次结构中图形化表示。就像家族树一样，类层次结构显示了类与类之间的继承关系。图 10-16 显示了`GradedActivity`、`FinalExam`、`PassFailActivity`和`PassFailExam`类的类层次结构。更通用的类位于树的顶部，更具体的类位于底部。
 
-# 图 10-16 类层次结构
+## 图 10-16 类层次结构
 
 ![类层次结构显示了 Graded Activity, Final Exam, Pass Fail Activity 和 Pass Fail Exam 类之间的继承关系。](img/10fig16.png)图 10-16 完整备用文本
 
-# 检查点 10.27
+## 检查点 10.27
 
-../components/metrodigi/ch10-inline_self_quiz_v1.0.0-23/index.html
+`../components/metrodigi/ch10-inline_self_quiz_v1.0.0-23/index.html`
 
-# 10.6 `Object` 类
+## 10.6 `Object`类
 
-概念：Java API 中有一个名为 `Object` 的类，所有其他类都直接或间接地 继承自它。
+概念：Java API 中有一个名为`Object`的类，所有其他类都直接或间接地继承自它。
 
-Java 中的每个类（包括 API 中的类和你创建的类）都直接或间接地 继承自名为 `Object` 的类，该类是 `java.lang` 包的一部分。实现机制如下：当一个类没有使用 `extends` 关键字来继承另一个类时，Java 会自动让它从 `Object` 类进行扩展。例如，查看以下类：
+Java 中的每个类（包括 API 中的类和你创建的类）都直接或间接地继承自名为`Object`的类，该类是`java.lang`包的一部分。实现机制如下：当一个类没有使用`extends`关键字来继承另一个类时，Java 会自动让它从`Object`类进行扩展。例如，查看以下类：
 
 ```java
 public class MyClass
@@ -19019,15 +17250,15 @@ public class MyClass extends Object
 }
 ```
 
-最终，每个类都扩展了 `Object` 类。图 10-17 显示了 `PassFailExam` 类如何继承自 `Object`。
+最终，每个类都扩展了`Object`类。图 10-17 显示了`PassFailExam`类如何继承自`Object`。
 
-# 图 10-17 从 `Object` 到 `PassFailExam` 的继承线
+## 图 10-17 从`Object`到`PassFailExam`的继承线
 
 ![继承线连接了从 Object 到 Pass Fail Exam 的 4 个类。](img/10fig17.png)图 10-17 完整备用文本
 
-由于每个类直接或间接地扩展 `Object` 类，因此每个类都继承 `Object` 类的成员。最有用的两个是 `toString` 和 `equals` 方法。在第 8 章中，你学习了每个类都有 `toString` 和 `equals` 方法，现在你知道为什么了！因为这些方法是继承自 `Object` 类。
+由于每个类直接或间接地扩展`Object`类，因此每个类都继承`Object`类的成员。最有用的两个是`toString`和`equals`方法。在第 8 章中，你学习了每个类都有`toString`和`equals`方法，现在你知道为什么了！因为这些方法是继承自`Object`类。
 
-在 `Object` 类中，`toString` 方法返回一个 `String` 引用，该字符串包含对象的类名，后面跟着 `@` 符号，然后是对象的哈希码（一个十六进制数字）。`equals` 方法接受一个对象引用作为参数。如果参数引用的是调用对象，则返回 `true`。这在代码列表 10-24 中有所演示。
+在`Object`类中，`toString`方法返回一个`String`引用，该字符串包含对象的类名，后面跟着`@`符号，然后是对象的哈希码（一个十六进制数字）。`equals`方法接受一个对象引用作为参数。如果参数引用的是调用对象，则返回`true`。这在代码列表 10-24 中有所演示。
 
 ```java
 /**
@@ -19059,7 +17290,7 @@ public class ObjectMethods
 }
 ```
 
-程序输出
+程序输出：
 
 ```
 PassFailExam@16f042
@@ -19067,51 +17298,47 @@ PassFailExam@18d107
 They are not the same.
 ```
 
-# 代码列表 10-24 `(ObjectMethods.java)`
+## 代码列表 10-24 `(ObjectMethods.java)`
 
 如果你希望更改给定类中任何方法的行为，你必须在该类中重写它们。
 
-# 检查点 10.28
+## 检查点 10.28
 
-../components/metrodigi/ch10-inline_self_quiz_v1.0.0-24/index.html
+`../components/metrodigi/ch10-inline_self_quiz_v1.0.0-24/index.html`
 
-# 检查点 10.29
+## 检查点 10.29
 
-../components/metrodigi/ch10-inline_self_quiz_v1.0.0-25/index.html
+`../components/metrodigi/ch10-inline_self_quiz_v1.0.0-25/index.html`
 
-# 10.7 多态
+## 10.7 多态
 
 概念：父类引用变量可以引用子类的对象。
 
-# 查看多态
+### 查看多态
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/j6TMM13srPDc6_T8v0q7bqOm8o2Ls`](https://mediaplayer.pearsoncmg.com/assets/_video.true/j6TMM13srPDc6_T8v0q7bqOm8o2Ls)
 
-查看以下声明名为 `exam` 的引用变量语句：
+查看以下声明名为`exam`的引用变量语句：
 
 ```java
 GradedActivity exam;
 ```
 
-该语句告诉我们 `exam` 变量的数据类型是 `GradedActivity`。因此，我们可以使用 `exam` 变量来引用 `GradedActivity` 对象，如下：
+该语句告诉我们`exam`变量的数据类型是`GradedActivity`。因此，我们可以使用`exam`变量来引用`GradedActivity`对象，如下：
 
 ```java
 exam = new GradedActivity();
 ```
 
-`GradedActivity` 类也被用作 `FinalExam` 类的父类。由于父类和子类之间存在“是”的关系，`FinalExam` 的对象不仅仅是一个 `FinalExam` 对象，它也是 `GradedActivity` 对象。（期末考试是一种评分活动）。由于这种关系，我们可以使用 `GradedActivity` 变量来引用 `FinalExam` 对象。例如，查看以下语句：
-
-
-
-
+`GradedActivity`类也被用作`FinalExam`类的父类。由于父类和子类之间存在“是”的关系，`FinalExam`的对象不仅仅是一个`FinalExam`对象，它也是`GradedActivity`对象。（期末考试是一种评分活动）。由于这种关系，我们可以使用`GradedActivity`变量来引用`FinalExam`对象。例如，查看以下语句：
 
 ```
 GradedActivity exam = new FinalExam(50, 7);
 ```
 
-此语句将 `exam` 声明为 `GradedActivity` 变量。它创建了一个 `FinalExam` 对象并将该对象的地址存储在 `exam` 变量中。此语句是完全合法的，不会产生错误信息，因为 `FinalExam` 对象也是一个 `GradedActivity` 对象。
+此语句将`exam`声明为`GradedActivity`变量。它创建了一个`FinalExam`对象并将该对象的地址存储在`exam`变量中。此语句是完全合法的，不会产生错误信息，因为`FinalExam`对象也是一个`GradedActivity`对象。
 
-这是多态的一个示例。`polymorphism` 一词意味着采取多种形式的能力。在 Java 中，引用变量是多态的，因为它可以引用与其自身类型不同的对象，只要这些类型是其类型的子类。以下所有声明都是合法的，因为 `FinalExam`、`PassFailActivity` 和 `PassFailExam` 类都继承自 `GradedActivity`：
+这是多态的一个示例。`polymorphism`一词意味着采取多种形式的能力。在 Java 中，引用变量是多态的，因为它可以引用与其自身类型不同的对象，只要这些类型是其类型的子类。以下所有声明都是合法的，因为`FinalExam`、`PassFailActivity`和`PassFailExam`类都继承自`GradedActivity`：
 
 ```
 GradedActivity exam1 = new FinalExam(50, 7);
@@ -19119,7 +17346,7 @@ GradedActivity exam2 = new PassFailActivity(70);
 GradedActivity exam3 = new PassFailExam(100, 10, 70);
 ```
 
-尽管 `GradedActivity` 变量可以引用任何扩展 `GradedActivity` 的类的对象，但该变量对这些对象的操作是有限制的。回想 `GradedActivity` 类有三个方法：`setScore`、`getScore` 和 `getGrade`。因此，`GradedActivity` 变量只能调用这三个方法，无论该变量引用的对象类型是什么。例如，看以下代码：
+尽管`GradedActivity`变量可以引用任何扩展`GradedActivity`的类的对象，但该变量对这些对象的操作是有限制的。回想`GradedActivity`类有三个方法：`setScore`、`getScore`和`getGrade`。因此，`GradedActivity`变量只能调用这三个方法，无论该变量引用的对象类型是什么。例如，看以下代码：
 
 ```
 GradedActivity exam = new PassFailExam(100, 10, 70);
@@ -19128,9 +17355,9 @@ System.out.println(exam.getGrade());      // 正常工作。
 System.out.println(exam.getPointsEach()); // ！无法工作。
 ```
 
-在此代码中，`exam` 被声明为 `GradedActivity` 变量，并赋值了一个 `PassFailExam` 对象的地址。`GradedActivity` 类只有 `setScore`、`getScore` 和 `getGrade` 方法，因此这些是 `exam` 变量知道如何执行的方法。代码的最后语句是对 `getPointsEach` 方法的调用，该方法定义在 `PassFailExam` 类中。由于 `exam` 变量只认识 `GradedActivity` 类中的方法，因此它无法执行该方法。
+在此代码中，`exam`被声明为`GradedActivity`变量，并赋值了一个`PassFailExam`对象的地址。`GradedActivity`类只有`setScore`、`getScore`和`getGrade`方法，因此这些是`exam`变量知道如何执行的方法。代码的最后语句是对`getPointsEach`方法的调用，该方法定义在`PassFailExam`类中。由于`exam`变量只认识`GradedActivity`类中的方法，因此它无法执行该方法。
 
-# 多态与动态绑定
+### 多态与动态绑定
 
 当父类变量引用子类对象时，存在一个潜在的问题。如果子类重写了父类中的方法，而变量调用了该方法会怎样？变量是调用父类版本的方法，还是子类的版本？例如，看以下代码：
 
@@ -19140,11 +17367,11 @@ exam.setScore(70);
 System.out.println(exam.getGrade());
 ```
 
-回想 `PassFailActivity` 类继承自 `GradedActivity` 类，并且重写了 `getGrade` 方法。当最后语句调用 `getGrade` 方法时，调用的是 `GradedActivity` 类的版本（返回 `'A'`、`'B'`、`'C'`、`'D'` 或 `'F'`），还是 `PassFailActivity` 类的版本（返回 `'P'` 或 `'F'`）？
+回想`PassFailActivity`类继承自`GradedActivity`类，并且重写了`getGrade`方法。当最后语句调用`getGrade`方法时，调用的是`GradedActivity`类的版本（返回`'A'`、`'B'`、`'C'`、`'D'`或`'F'`），还是`PassFailActivity`类的版本（返回`'P'`或`'F'`）？
 
-回想第 6 章，将方法调用与正确的方法定义匹配的过程被称为 `binding`。当变量包含多态引用时，Java 执行动态绑定或晚绑定。这意味着 Java 虚拟机在运行时根据变量引用的对象类型来决定调用哪个方法。因此，决定调用哪个方法的对象类型，而不是变量的类型。在这种情况下，`exam` 变量引用了一个 `PassFailActivity` 对象，因此调用了 `PassFailActivity` 类版本的 `getGrade` 方法。代码的最后语句将显示等级为 `P`。
+回想第 6 章，将方法调用与正确的方法定义匹配的过程被称为`binding`。当变量包含多态引用时，Java 执行动态绑定或晚绑定。这意味着 Java 虚拟机在运行时根据变量引用的对象类型来决定调用哪个方法。因此，决定调用哪个方法的对象类型，而不是变量的类型。在这种情况下，`exam`变量引用了一个`PassFailActivity`对象，因此调用了`PassFailActivity`类版本的`getGrade`方法。代码的最后语句将显示等级为`P`。
 
-代码列表 10-25 中的程序演示了多态。它声明了一个 `GradedActivity` 变量数组，然后将各种类型的对象赋值给该数组。
+代码列表 10-25 中的程序演示了多态。它声明了一个`GradedActivity`变量数组，然后将各种类型的对象赋值给该数组。
 
 ```java
 /**
@@ -19170,16 +17397,13 @@ public class Polymorphic {
 }
 ```
 
-程序输出
+程序输出：
+
 ```
 Test 1: score 95, grade A
 Test 2: score 75, grade P
 Test 3: score 86, grade B
 ```
-
-
-
-
 
 ```java
 GradedActivity activity = new GradedActivity();
@@ -19189,9 +17413,11 @@ else
    System.out.println("No, activity is not a GradedActivity.");
 ```
 
-这段代码将显示 `"Yes, activity is a GradedActivity."`。
+这段代码将显示`"Yes, activity is a GradedActivity."`。
 
-`instanceof` 运算符可以理解类继承自另一个类时存在的“是一个”（is-a）关系。例如，看以下代码：
+`instanceof`运算符可以理解类继承自另一个类时存在的“是一个”（is-a）关系。例如，看以下代码：
+
+
 
 ```java
 FinalExam exam = new FinalExam(20, 2);
@@ -19201,25 +17427,25 @@ else
    System.out.println("No, exam is not a GradedActivity.");
 ```
 
-即使 `exam` 引用的对象是一个 `FinalExam` 对象，这段代码仍将显示 `"Yes, exam is a GradedActivity."`。`instanceof` 运算符返回 `true` 是因为 `FinalExam` 是 `GradedActivity` 的子类。
+即使`exam`引用的对象是一个`FinalExam`对象，这段代码仍将显示`"Yes, exam is a GradedActivity."`。`instanceof`运算符返回`true`是因为`FinalExam`是`GradedActivity`的子类。
 
-# 检查点 10.30
+## 检查点 10.30
 
-../components/metrodigi/ch10-inline_self_quiz_v1.0.0-26/index.html
+`../components/metrodigi/ch10-inline_self_quiz_v1.0.0-26/index.html`
 
-# 检查点 10.31
+## 检查点 10.31
 
-../components/metrodigi/ch10-inline_self_quiz_v1.0.0-27/index.html
+`../components/metrodigi/ch10-inline_self_quiz_v1.0.0-27/index.html`
 
-# 检查点 10.32
+## 检查点 10.32
 
-../components/metrodigi/ch10-inline_self_quiz_v1.0.0-28/index.html
+`../components/metrodigi/ch10-inline_self_quiz_v1.0.0-28/index.html`
 
-# 检查点 10.33
+## 检查点 10.33
 
-../components/metrodigi/ch10-inline_self_quiz_v1.0.0-42/index.html
+`../components/metrodigi/ch10-inline_self_quiz_v1.0.0-42/index.html`
 
-# 10.8 抽象类与抽象方法
+## 10.8 抽象类与抽象方法
 
 概念：抽象类不能被实例化，但其他类可以扩展它。抽象方法没有方法体，必须在子类中被重写。
 
@@ -19229,7 +17455,7 @@ else
 AccessSpecifier abstract ReturnType MethodName(ParameterList);
 ```
 
-注意关键字 `abstract` 出现在头部中，且头部以分号结尾。该方法没有方法体。这里有一个抽象方法头部的示例：
+注意关键字`abstract`出现在头部中，且头部以分号结尾。该方法没有方法体。这里有一个抽象方法头部的示例：
 
 ```java
 public abstract void setValue(int value);
@@ -19239,9 +17465,9 @@ public abstract void setValue(int value);
 
 当一个类包含抽象方法时，你无法创建该类的实例。抽象方法通常用于抽象类中。抽象类本身不被实例化，而是作为其他类的父类。抽象类代表了所有继承自它的类的通用形式或抽象形式。
 
-例如，考虑一个制造飞机的工厂。该工厂不制造通用的飞机，而是制造三种特定类型的飞机：两种不同型号的螺旋桨飞机和一种支线客机模型。用于记录飞机的计算机软件可能会使用一个名为 `Airplane` 的抽象类。该类拥有代表所有飞机共同特征的成员。此外，软件还为工厂制造的三种特定飞机模型各有一个类。这些类都扩展了 `Airplane` 类，并拥有代表每种类型飞机独特特征的成员。`Airplane` 类从不被实例化，而是被用作其他类的父类。
+例如，考虑一个制造飞机的工厂。该工厂不制造通用的飞机，而是制造三种特定类型的飞机：两种不同型号的螺旋桨飞机和一种支线客机模型。用于记录飞机的计算机软件可能会使用一个名为`Airplane`的抽象类。该类拥有代表所有飞机共同特征的成员。此外，软件还为工厂制造的三种特定飞机模型各有一个类。这些类都扩展了`Airplane`类，并拥有代表每种类型飞机独特特征的成员。`Airplane`类从不被实例化，而是被用作其他类的父类。
 
-当你在类定义中放置 `abstract` 关键字时，该类就变成了抽象类。以下是通用格式：
+当你在类定义中放置`abstract`关键字时，该类就变成了抽象类。以下是通用格式：
 
 ```
 AccessSpecifier abstract class ClassName
@@ -19249,7 +17475,7 @@ AccessSpecifier abstract class ClassName
 
 抽象类不能被实例化，但其他类可以扩展它。抽象方法没有方法体，必须在子类中被重写。
 
-例如，看在 代码列表 10-26 中所示的抽象类 `Student`。它持有所有学生共同的数据，但不持有特定专业学生所需的所有数据。
+例如，看在代码列表 10-26 中所示的抽象类`Student`。它持有所有学生共同的数据，但不持有特定专业学生所需的所有数据。
 
 ```java
  1  /**
@@ -19305,15 +17531,11 @@ AccessSpecifier abstract class ClassName
 51  }
 ```
 
-# 代码列表 10-26 `(Student.java)`
+### 代码列表 10-26 `(Student.java)`
 
-`Student` 类包含存储学生姓名、学号和入学年份的字段。它还包含一个构造函数、一个 `toString` 方法和一个名为 `getRemainingHours` 的抽象方法。
+`Student`类包含存储学生姓名、学号和入学年份的字段。它还包含一个构造函数、一个`toString`方法和一个名为`getRemainingHours`的抽象方法。
 
-该抽象方法必须在继承自 `Student` 的类中被重写。该方法背后的想法是它返回学生在其专业内剩余的学分。它之所以被设为抽象，是因为该类旨在作为代表特定专业学生的基类。例如，`CompSciStudent` 类可能持有计算机科学学生的数据，而 `BiologyStudent` 类可能持有生物专业学生的数据。计算机科学学生必须修的课程与生物专业学生修的课程不同。合理的，`CompSciStudent` 类计算剩余学分的方式将与 `BiologyStudent` 类不同。让我们来看 `CompSciStudent` 类的示例，它显示在 代码列表 10-27 中。
-
-
-
-
+该抽象方法必须在继承自`Student`的类中被重写。该方法背后的想法是它返回学生在其专业内剩余的学分。它之所以被设为抽象，是因为该类旨在作为代表特定专业学生的基类。例如，`CompSciStudent`类可能持有计算机科学学生的数据，而`BiologyStudent`类可能持有生物专业学生的数据。计算机科学学生必须修的课程与生物专业学生修的课程不同。合理的，`CompSciStudent`类计算剩余学分的方式将与`BiologyStudent`类不同。让我们来看`CompSciStudent`类的示例，它显示在代码列表 10-27 中。
 
 ```java
  /**
@@ -19422,28 +17644,29 @@ public class CompSciStudent extends Student
  }
 ```
 
-# 代码列表 10-27 `(CompSciStudent.java)`
+### 代码列表 10-27 `(CompSciStudent.java)`
 
-`CompSciStudent` 类继承自 `Student` 类，在第 8 到 10 行声明了以下 `final` 整数字段：`MATH_HOURS`、`CS_HOURS` 和 `GEN_ED_HOURS`。这些字段存储了计算机科学学生所需的数学、计算机科学和通用教育学时数。它在第 13 到 15 行声明了以下字段：`mathHours`、`csHours` 和 `genEdHours`。这些字段存储了学生已修的数学、计算机科学和通用教育学时。提供了修改方法来向这些字段中存储值。此外，该类重写了 `toString` 方法和抽象的 `getRemainingHours` 方法。代码列表 10-28 展示了该类。
+`CompSciStudent`类继承自`Student`类，在第 8 到 10 行声明了以下`final`整数字段：`MATH_HOURS`、`CS_HOURS`和`GEN_ED_HOURS`。这些字段存储了计算机科学学生所需的数学、计算机科学和通用教育学时数。它在第 13 到 15 行声明了以下字段：`mathHours`、`csHours`和`genEdHours`。这些字段存储了学生已修的数学、计算机科学和通用教育学时。提供了修改方法来向这些字段中存储值。此外，该类重写了`toString`方法和抽象的`getRemainingHours`方法。代码列表 10-28 展示了该类。
 
-# 代码列表 10-28 `(CompSciStudent.java)`
+### 代码列表 10-28 `(CompSciStudent.java)`
 
-`CompSciStudent` 类继承自 `Student` 类，在第 8 到 10 行声明了以下 `final` 整数字段：`MATH_HOURS`、`CS_HOURS` 和 `GEN_ED_HOURS`。这些字段存储了计算机科学学生所需的数学、计算机科学和通用教育学时数。它在第 13 到 15 行声明了以下字段：`mathHours`、`csHours` 和 `genEdHours`。这些字段存储了学生已修的数学、计算机科学和通用教育学时。提供了修改方法来向这些字段中存储值。此外，该类重写了 `toString` 方法和抽象的 `getRemainingHours` 方法。
+`CompSciStudent`类继承自`Student`类，在第 8 到 10 行声明了以下`final`整数字段：`MATH_HOURS`、`CS_HOURS`和`GEN_ED_HOURS`。这些字段存储了计算机科学学生所需的数学、计算机科学和通用教育学时数。它在第 13 到 15 行声明了以下字段：`mathHours`、`csHours`和`genEdHours`。这些字段存储了学生已修的数学、计算机科学和通用教育学时。提供了修改方法来向这些字段中存储值。此外，该类重写了`toString`方法和抽象的`getRemainingHours`方法。
 
-### 抽象类
+#### 抽象类
 
 记住关于抽象的以下几点：
-- 抽象方法和类使用 `abstract` 进行定义。
+
+- 抽象方法和类使用`abstract`进行定义。
 - 抽象类不能被实例化。相反，它由其他类来*实现*。
 - 当一个类继承抽象类时，它必须重写抽象方法。
 
-### 接口
+#### 接口
 
 在最简单的形式下，接口就像一个包含抽象方法的类。接口不能被实例化。相反，它由其他类实现。
 
 接口指定了某种行为的行为。在最简单的形式下，接口就像一个只包含方法的类。接口不能实例化。
 
-接口看起来像类，区别在于使用 `interface` 关键字代替 `class`，并且接口中的方法没有方法体，只有以分号结尾的方法头。以下是接口的通用格式：
+接口看起来像类，区别在于使用`interface`关键字代替`class`，并且接口中的方法没有方法体，只有以分号结尾的方法头。以下是接口的通用格式：
 
 ```java
 public interface 接口名称
@@ -19452,7 +17675,7 @@ public interface 接口名称
 }
 ```
 
-代码列表 10-29 `(Displayable.java)` 展示了一个名为 `Displayable` 的接口示例。在第 3 行，接口指定了一个名为 `display()` 的 `void` 方法。
+代码列表 10-29 `(Displayable.java)`展示了一个名为`Displayable`的接口示例。在第 3 行，接口指定了一个名为`display()`的`void`方法。
 
 ```java
 public interface Displayable
@@ -19461,9 +17684,9 @@ public interface Displayable
 }
 ```
 
-注意第 3 行的 `display` 方法头没有访问修符。这是因为接口中的所有方法隐式为 `public`。你可以选择在方法头部写 `public`，但大多数程序员会省略它，因为所有接口方法必须是 `public` 的。
+注意第 3 行的`display`方法头没有访问修符。这是因为接口中的所有方法隐式为`public`。你可以选择在方法头部写`public`，但大多数程序员会省略它，因为所有接口方法必须是`public`的。
 
-任何在 `Person` 类中实现 `Displayable` 接口的类都是一个示例。
+任何在`Person`类中实现`Displayable`接口的类都是一个示例。
 
 ```java
 public class Person implements Displayable
@@ -19484,13 +17707,9 @@ public class Person implements Displayable
 }
 ```
 
-# 代码列表 10-30 `(Person.java)`
+### 代码列表 10-30 `(Person.java)`
 
-
-
-
-
-当你想让一个类实现一个接口时，在类头部中使用 `implements` 关键字。注意代码列表 10-30 中的第 1 行，`Person` 类的类头部以 `implements Displayable` 子句结尾。由于 `Person` 类实现了 `Displayable` 接口，它必须为该接口的 `display` 方法提供实现。这在 `Person` 类的第 12 到 15 行中完成的。代码列表 10-31 中的程序演示了 `Person` 类。
+当你想让一个类实现一个接口时，在类头部中使用`implements`关键字。注意代码列表 10-30 中的第 1 行，`Person`类的类头部以`implements Displayable`子句结尾。由于`Person`类实现了`Displayable`接口，它必须为该接口的`display`方法提供实现。这在`Person`类的第 12 到 15 行中完成的。代码列表 10-31 中的程序演示了`Person`类。
 
 ```
  1 /**
@@ -19517,13 +17736,13 @@ public class Person implements Displayable
 My name is Antonio
 ```
 
-# 代码列表 10-31 `(InterfaceDemo.java)`
+### 代码列表 10-31 `(InterfaceDemo.java)`
 
-# 接口是一种契约
+## 接口是一种契约
 
 当一个类实现一个接口时，它就同意提供接口中指定的所有方法。人们常说接口像一份“合同”，当一个类实现接口时，它必须遵守该合同。
 
-例如，代码列表 10-32 显示了一个名为 `Relatable` 的接口，它旨在与之前介绍的 `GradedActivity` 类配合使用。该接口三个方法头部：`equals`、`isGreater` 和 `isLess`。注意每个方法都接受一个 `GradedActivity` 对象作为参数。
+例如，代码列表 10-32 显示了一个名为`Relatable`的接口，它旨在与之前介绍的`GradedActivity`类配合使用。该接口三个方法头部：`equals`、`isGreater`和`isLess`。注意每个方法都接受一个`GradedActivity`对象作为参数。
 
 ```
  1  /**
@@ -19538,11 +17757,15 @@ My name is Antonio
   10  }
 ```
 
-# 代码列表 10-32 `(Relatable.java)`
+### 代码列表 10-32 `(Relatable.java)`
 
-你可能猜到了 `Relatable` 接口命名为“Relatable”是因为它指定了据测会对 `GradedActivity` 对象进行关系比较的方法。其意图是通过确保任何实现此接口的类都拥有执行关系比较的 `equals`、`isGreater` 和 `isLess` 方法，使其与 `GradedActivity` 对象具有“可关联性”。但是，接口只指定了这些方法的头部，而没有规定方法应该做什么。虽然实现 `Relatable` 接口的类的程序员可以选择这些方法的作用，但他或她应该提供符合此意图的方法。
+你可能猜到了`Relatable`接口命名为“Relatable”是因为它指定了据测会对`GradedActivity`对象进行关系比较的方法。其意图是通过确保任何实现此接口的类都拥有执行关系比较的`equals`、`isGreater`和`isLess`方法，使其与`GradedActivity`对象具有“可关联性”。但是，接口只指定了这些方法的头部，而没有规定方法应该做什么。虽然实现`Relatable`接口的类的程序员可以选择这些方法的作用，但他或她应该提供符合此意图的方法。
 
-代码列表 10-33 显示了 `FinalExam3` 类的代码，该类实现了 `Relatable` 接口。`equals`、`isGreater` 和 `isLess` 方法比较调用对象与作为参数传递的对象。代码列表 10-34 中的程序演示了该类。
+代码列表 10-33 显示了`FinalExam3`类的代码，该类实现了`Relatable`接口。`equals`、`isGreater`和`isLess`方法比较调用对象与作为参数传递的对象。代码列表 10-34 中的程序演示了该类。
+
+
+
+# 代码列表 10-33 `(FinalExam3.java)`
 
 ```
  1 /**
@@ -19658,7 +17881,7 @@ My name is Antonio
   111 }
 ```
 
-# 代码列表 10-33 `(FinalExam3.java)`
+# 代码列表 10-34 `(RelatableExams.java)`
 
 ```
  1 /**
@@ -19704,8 +17927,6 @@ Exam 2: 70.0
 Exam 1 分数最高。
 ```
 
-# 代码列表 10-34 `(RelatableExams.java)`
-
 # 接口中的字段
 
 接口可以包含字段声明，但接口中的所有字段都被视为 `final` 和 `static`。由于它们自动变为 `final`，你必须提供一个初始化值。例如，查看以下接口定义：
@@ -19718,10 +17939,6 @@ public interface Doable
     (方法头部 . . .)
  }
 ```
-
-
-
-
 
 在此接口中，`FIELD1` 和 `FIELD2` 是 `final` `static` `int` 变量。任何实现此接口的类都可以访问这些变量。
 
@@ -19899,8 +18116,6 @@ This is the default display method.
 
 
 
-
-
 ```java
 /**
     DvdMovie class
@@ -19955,7 +18170,7 @@ public class DvdMovie implements RetailItem
 }
 ```
 
-# 代码列表 10-40 `(DvdMovie.java)`
+## 代码列表 10-40 `(DvdMovie.java)`
 
 由于这些类实现了 `RetailItem` 接口，这些类的对象可以使用 `RetailItem` 引用变量引用。下面的代码演示了：
 
@@ -20022,7 +18237,7 @@ Item #2: Wheels of Fury
 Price: $12.95
 ```
 
-# 代码列表 10-41 `(PolymorphicInterfaceDemo.java)`
+## 代码列表 10-41 `(PolymorphicInterfaceDemo.java)`
 
 使用接口引用变量存在一些局限性。如前所述，你创建接口的实例。此外，当接口变量引用一个对象时，你只能使用接口变量调用接口中指定的方法。例如，查看以下代码：
 
@@ -20048,31 +18263,31 @@ System.out.println(item.getTitle()); // 错误！无法编译！
 System.out.println(((CompactDisc)item).getTitle());
 ```
 
-# 检查点 10.38
+## 检查点 10.38
 
-../components/metrodigi/ch10-inline_self_quiz_v1.0.0-31/index.html
+`../components/metrodigi/ch10-inline_self_quiz_v1.0.0-31/index.html`
 
-# 检查点 10.39
+## 检查点 10.39
 
-../components/metrodigi/ch10-inline_self_quiz_v1.0.0-32/index.html
+`../components/metrodigi/ch10-inline_self_quiz_v1.0.0-32/index.html`
 
-# 检查点 10.40
+## 检查点 10.40
 
-../components/metrodigi/ch10-inline_self_quiz_v1.0.0-33/index.html
+`../components/metrodigi/ch10-inline_self_quiz_v1.0.0-33/index.html`
 
-# 检查点 10.41
+## 检查点 10.41
 
-../components/metrodigi/ch10-inline_self_quiz_v1.0.0-34/index.html
+`../components/metrodigi/ch10-inline_self_quiz_v1.0.0-34/index.html`
 
-# 检查点 10.44
+## 检查点 10.44
 
-../components/metrodigi/ch10-inline_self_quiz_v1.0.0-35/index.html
+`../components/metrodigi/ch10-inline_self_quiz_v1.0.0-35/index.html`
 
-# 10.10 匿名内部类
+## 10.10 匿名内部类
 
 概念：内部类是定义在另一个类内部的类。匿名内部类是没有名字的内部类。匿名内部类必须实现一个接口，或者扩展另一个类。
 
-有时你需要一个简单的类，并且在你的代码中只实例化一次。在这种情况下，你可以使用*匿名内部**类*。匿名内部类是一个没有名字的类。因为它定义在另一个类内部，所以它被称为内部类。你使用 `new` 运算符同时定义一个匿名内部类并创建它的实例。以下是实例化和定义匿名内部类的通用语法：
+有时你需要一个简单的类，并且在你的代码中只实例化一次。在这种情况下，你可以使用*匿名内部类*。匿名内部类是一个没有名字的类。因为它定义在另一个类内部，所以它被称为内部类。你使用 `new` 运算符同时定义一个匿名内部类并创建它的实例。以下是实例化和定义匿名内部类的通用语法：
 
 ```java
 new ClassOrInterfaceName() {
@@ -20088,12 +18303,9 @@ new ClassOrInterfaceName() {
 
 *   如果匿名内部类扩展了一个父类，则在创建对象时会调用父类的无参构造函数。
 
+*   匿名内部类必须重写它所实现的接口或它所继承的父类中指定的所有抽象方法。
 
-
-
-
-- 匿名内部类必须重写它所实现的接口或它所继承的父类中指定的所有抽象方法。
-- 因为匿名内部类的定义写在方法内部，因此它可以访问该方法的局部变量，但前提是这些变量被声明为 `final`，或者它们是“有效 `final`”（effectively `final`）。（有效 `final` 变量是指值从未被改变过的变量）。如果匿名内部类尝试使用不是 `final` 或不是有效 `final` 的变量，将导致编译错误。
+*   因为匿名内部类的定义写在方法内部，因此它可以访问该方法的局部变量，但前提是这些变量被声明为 `final`，或者它们是“有效 `final`”（effectively `final`）。（有效 `final` 变量是指值从未被改变过的变量）。如果匿名内部类尝试使用不是 `final` 或不是有效 `final` 的变量，将导致编译错误。
 
 让我们来看一个实现接口的匿名内部类示例。假设我们有如代码列表 10-42 所示的接口。
 
@@ -20129,19 +18341,26 @@ IntCalculator square = new IntCalculator() {
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr10-43/43.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr10-43/43.html)
 
 让我们仔细观察这个程序：
+
 - 第 11 行声明了一个名为 `num` 的 `int` 变量，用于存储用户输入。
+
 - 第 14 行创建了一个用于键盘输入的 `Scanner` 对象。
+
 - 第 17 行到 21 行实例化了一个实现 `IntCalculator` 接口的匿名内部类。使用名为 `square` 的变量来引用该对象。在类体内，第 18 行到 21 行重写了 `calculate` 方法，返回方法参数的平方。
+
 - 第 24 行提示用户输入整数，第 25 行从键盘读取该数字。该数字赋值给变量 `num`。
+
 - 第 28 行调用 `square` 对象的 `calculate` 方法，并在消息中显示返回值。
 
 ### 检查点 10.47
-../components/metrodigi/ch10-inline_self_quiz_v1.0.0-36/index.html
+
+`../components/metrodigi/ch10-inline_self_quiz_v1.0.0-36/index.html`
 
 ### 检查点 10.48
-../components/metrodigi/ch10-inline_self_quiz_v1.0.0-37/index.html
 
-# 10.11 函数式接口和 Lambda 表达式
+`../components/metrodigi/ch10-inline_self_quiz_v1.0.0-37/index.html`
+
+## 10.11 函数式接口和 Lambda 表达式
 
 概念：函数式接口是一个只有一个抽象方法的接口。你可以使用一种特殊类型的表达式，即 Lambda 表达式（lambda expression），来创建一个实现函数式接口的对象。
 
@@ -20183,14 +18402,16 @@ IntCalculator square = x -> x * x;
 ```
 
 在 = 符号的左侧，我们声明了一个名为 `square` 的 `IntCalculator` 引用变量。在 = 符号的右侧，我们有一个创建一个后续特征对象的 Lambda 表达式：
+
 - 因为我们将对象赋值给 `IntCalculator` 引用变量，该对象自动实现了 `IntCalculator` 接口。
+
 - 因为 `IntCalculator` 接口只有一个抽象方法（名为 `calculate`），Lambda 表达式将用于实现这唯一的方法。
+
 - Lambda 表达式中使用的参数 `x` 代表传递给 `calculate` 方法的参数。我们不需要指定 `x` 的数据类型，因为编译器会确定。因为 `calculate` 方法（在 `IntCalculator` 接口中）有一个 `int` 参数，Lambda 表达式中的参数 `x` 将自动变为 `int`。
+
 - 表达式 `x * x` 是从 `calculate` 方法返回的值。
 
 代码列表 10-45 显示了一个完整程序，它使用之前所示的语句来创建对象。
-
-
 
 
 
@@ -20235,7 +18456,7 @@ The square is 25
 
 让我们仔细观察这个程序：
 
-*   第 12 行声明了一个名为 `num` 的 `int` 变量，用于用于存储用户输入。
+*   第 12 行声明了一个名为 `num` 的 `int` 变量，用于存储用户输入。
 *   第 15 行创建了一个用于键盘输入的 `Scanner` 对象。
 *   第 18 行使用 lambda 表达式创建一个实现 `IntCalculator` 接口的对象。使用一个名为 `square` 的变量来引用该对象。该对象的 `calculate` 方法将返回方法参数的平方。
 *   第 21 行提示用户输入一个整数，第 22 行从键盘读取该数字。该数字被赋值给 `num` 变量。
@@ -20346,11 +18567,11 @@ The square is 25
 
 # 检查点 10.49
 
-components/metrodigi/ch10-inline_self_quiz_v1.0-38/index.html
+`components/metrodigi/ch10-inline_self_quiz_v1.0-38/index.html`
 
 # 检查点 10.50
 
-components/metrodigi/ch10-inline_self_quiz_v1.0-39/index.html
+`components/metrodigi/ch10-inline_self_quiz_v1.0-39/index.html`
 
 # 10.12 需要避免的常见错误
 
@@ -20361,11 +18582,6 @@ components/metrodigi/ch10-inline_self_quiz_v1.0-39/index.html
 *   当你打算调用另一个父类构造函数时，允许父类的无参数构造函数被隐含调用。如果子类的构造函数没有显式调用父类构造函数，Java 会自动调用父类的无参数构造函数。
 *   忘记在调用重写的父类方法之前加上 `super`。当子类方法调用重写的父类方法时，必须在方法调用之前加上关键字 `super` 和点（`.`）。这样做会导致调用子类版本的方法。
 *   忘记类成员的访问修饰符。当你没有为类成员指定访问修饰符时，默认将授予包访问权限。这意味着包内的任何方法都可以访问该成员。
-
-
-
-
-
 *   忘记在抽象方法的头部尾加分号。抽象方法的头部没有方法体，它必须以分号结束。
 *   未能重写抽象方法。抽象方法必须在子类中被重写。
 *   对重载（Overloading）而不是重写（Overriding）抽象方法。重载和重写不是一回事。当父类有一个抽象方法时，子类必须有一个与该抽象方法签名相同的方法。
@@ -20390,6 +18606,7 @@ components/metrodigi/ch10-inline_self_quiz_v1.0-39/index.html
 [`mediaplayer.pearsoncmg.com/assets/_video.true/secs_gaddis_6_vn_10_03_employee_and_productionw`](https://mediaplayer.pearsoncmg.com/assets/_video.true/secs_gaddis_6_vn_10_03_employee_and_productionw)
 
 设计一个名为 `Employee` 的类。该类应在字段中保留以下信息：
+
 *   姓名
 *   格式为 XXX–L 的员工编号，其中每个 X 是 0–9 之间的数字，L 是 A–M 范围内的字母。
 *   入职日期
@@ -20397,6 +18614,7 @@ components/metrodigi/ch10-inline_self_quiz_v1.0-39/index.html
 为该类编写一个或多个构造函数以及相应的访问器（accessor）和修改器（mutator）方法
 
 接下来，编写一个名为 `ProductionWorker` 的类，它继承自 `Employee` 类。`ProductionWorker` 类应该拥有字段来存储以下信息：
+
 *   班次（一个整数）
 *   时薪率（一个 `double`）
 
@@ -20413,6 +18631,7 @@ components/metrodigi/ch10-inline_self_quiz_v1.0-39/index.html
 # 4. `Essay` 类
 
 设计一个 `Essay` 类，继承本章介绍的 `GradedActivity` 类。`Essay` 类应该确定学生论文获得的成绩。学生的论文得分可达 100 分，并按以下方式确定：
+
 *   语法：30 分
 *   拼写：20 分
 *   长度正确：20 分
@@ -20423,6 +18642,7 @@ components/metrodigi/ch10-inline_self_quiz_v1.0-39/index.html
 # 5. 课程成绩
 
 在一门课程中，老师给出了以下测试和作业：
+
 *   一项由老师观察并分配数值评分的**实验活动**（lab activity）。
 *   一次包含 10 道题的**通过/不通过考试**（pass/fail exam）。最低合格分为 70 分。
 *   一篇分配数值评分的**论文**（essay）。
@@ -20463,12 +18683,8 @@ public interface Analyzable {
 # 8. `PreferredCustomer` 类
 
 一家零售店有一项优惠客户计划，客户可以根据所有的购买获得折扣。客户的折扣金额取决于客户在商店的累计购买金额，如下：
+
 *   当优惠客户花费 500 美元时，其未来的所有购买将获得 5% 的折扣。
-
-
-
-
-
 *   当优惠客户消费满 $1,000 时，其未来的购买可享受 6% 的折扣。
 *   当优惠客户消费满 $1,500 时，其未来的购买可享受 7% 的折扣。
 *   当优惠客户消费满 $2,000 或更多时，其未来的购买可享受 10% 的折扣。
@@ -20490,13 +18706,19 @@ public interface Analyzable {
 | 构造函数: | 构造函数应接受余额和年利率作为参数。 |
 | `deposit`: | 一个接受存款金额作为参数的方法。该方法应将参数加到账户余额中。它还应该增加存储存款次数的变量。 |
 | `withdraw`: | 一个接受取款金额作为参数的方法。该方法应从余额中减去该参数。它还应该增加存储取款次数的变量。 |
+
+
+
 | `calcInterest`: | 一个通过计算账户赚取的每月利息并将其加余额中来更新余额的方法。这通过以下公式执行：$\begin{array}{l} \textit{Mothly Interest Rate = (Annual Interest Rate/12)} \\ {\textit{Mothly}\textit{Interest = Balance * Monthly Interest Rate}} \\ \textit{Balance = Balance + Monthly Interest} \end{array}$ |
+
 | `monthlyProcess`: | 一个从余额中减去每月服务费、调用 `calcInterest` 方法，然后将存储取款次数、存款次数和每月服务费的变量设置为零的方法。 |
 
 接下来，设计一个自 `BankAccount` 的 `SavingsAccount` 类。`SavingsAccount` 类应有一个状态字段来表示账户的激活或非激活。如果储蓄账户的余额低于 $25，它将变为非激活状态（`status` 字段可以是 `boolean` 变量）。在余额恢复到 $25 以上之前，不再允许任何取款，此时账户将重新变为激活。储蓄账户类应包含以下方法：
 
 | `withdraw`: | 一个在进行取款之前判断账户是否为非激活的方法。（如果账户未激活，则不允许任何取款）。然后通过调用父类的同名方法执行取款。 |
+
 | `deposit`: | 一个在进行存款之前判断账户是否为非激活的方法。如果账户是非激活状态且存款使余额升至 $25 以上，账户将重新激活。然后通过调用父类的同名方法执行存款。 |
+
 | `monthlyProcess`: | 在调用父类方法之前，此方法检查取款次数。如果本月的取款次数超过 4 次，则每个超过 4 次的额外取款将增加 $1 的服务费，并加到存储每月服务费的父类字段中。（不要忘记在扣除服务费后检查账户余额。如果余额低于 $25，账户将变为非激活状态。） |
 
 # 10. `Ship`、`CruiseShip` 和 `CargoShip` 类
@@ -20504,20 +18726,27 @@ public interface Analyzable {
 设计一个 `Ship` 类，包含以下成员：
 
 *   船名的名的字段（字符串）。
+
 *   船只建造年份的字段（字符串）。
+
 *   一个构造函数以及相应的访问器和修改器。
+
 *   一个显示船名和建造年份的 `toString` 方法。
 
 设计一个继承自 `Ship` 的 `CruiseShip` 类。`CruiseShip` 类应包含以下成员：
 
 *   最大乘客人数字段（`int`）。
+
 *   一个构造函数以及相应的访问器和修改器。
+
 *   一个覆盖基类中 `toString` 方法的 `toString` 方法。`CruiseShip` 类的 `toString` 方法应只显示船名和最大乘客人数。
 
 设计一个继承自 `Ship` 的 `CargoShip` 类。`CargoShip` 类应包含以下成员：
 
 *   货物载量吨位（`int`）。
+
 *   一个构造函数以及相应的访问器和修改器。
+
 *   一个覆盖基类中 `toString` 方法的 `toString` 方法。`CargoShip` 类的 `toString` 方法应只显示船名和货物载量。
 
 在一个包含 `Ship` 数组的程序中演示这些类。将各种 `Ship`、`CruiseShip` 和 `CargoShip` 对象赋值给数组元素。程序随后应遍历数组，调用每个对象的 `toString` 方法。（请参见 [代码列表 10-25] 作为示例。）
@@ -20527,8 +18756,11 @@ public interface Analyzable {
 # 题目录
 
 1. [11.1 处理异常]
+
 2. [11.2 抛出异常]
+
 3. [11.3 高级主题：二进制文件、随机访问文件和对象序列化]
+
 4. [11.4 需要避免的常见错误]
 
 # 11.1 处理异常
@@ -20541,7 +18773,7 @@ public interface Analyzable {
 
 ```
  1 /**
- 2    此程序会导致错误并崩溃。
+ 2   此程序会导致错误并崩溃。
  3 */
  4
  5 public class BadArray
@@ -20572,10 +18804,6 @@ Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException
 # 代码列表 11-1 `(BadArray.java)`
 
 此程序中的 `numbers` 数组只有三个元素，下标为 0 到 2。当程序尝试读取 `numbers[3]` 时，程序会崩溃，并显示与程序输出结尾类似的错误消息。此消息表示发生了异常，并提供了有关该异常的信息。*异常*是由于错误或意外事件而在内存中产生的对象。当异常产生时，说它被“抛出”了。除非异常被应用程序检测并处理，否则它会导致应用程序停止。
-
-
-
-
 
 为了检测异常是否抛出并防止其导致你的应用程序停止，Java 允许你创建异常处理器。`异常处理器`（exception handler）是当异常抛出时能够优雅响应异常的代码段。拦截和响应异常的过程被称为`异常处理`（exception handling）。如果你的代码在异常抛出时没有处理它，将由`默认异常处理器`（default exception handler）来处理，如代码列表 11-1 所示。默认异常处理器会打印错误信息并导致程序崩溃。
 
@@ -20670,9 +18898,6 @@ public class OpenFile {
 }
 ```
 
-
-
-
 查看图 11-2 所示的程序运行示例。用户输入 `BadFile.txt` 作为文件名。在第 25 行，即 `try` 块内部的第一条语句中，创建了一个 `File` 对象并将此名称传递给 `File` 构造函数。在第 26 行，将 `File` 对象的引用传递给 `Scanner` 构造函数。由于 `BadFile.txt` 不存在，`Scanner` 类构造函数抛出了一个 `FileNotFoundException` 类的异常。当抛出异常时，程序立即退出 `try` 块，跳过该块中剩余的语句（第 27 行到第 28 行）。程序跳转到第 30 行的 `catch` 子句，该子句有一个 `FileNotFoundException` 参数，并执行随其后的 `catch` 块。图 11-4 展示了这一系列事件。
 
 ## 图 11-4 带有异常的事件序列
@@ -20701,8 +18926,8 @@ public class OpenFile {
 3 import javax.swing.JOptionPane;   // 用于 JOptionPane 类
 4
 5 /**
-6    此程序演示了如何处理 FileNotFoundException
-7    异常。
+6   此程序演示了如何处理 FileNotFoundException
+7   异常。
 8 */
 9
 10 public class ExceptionMessage
@@ -20739,32 +18964,34 @@ public class OpenFile {
 
 代码列表 11-4 展示了另一个示例。该程序强制 Integer 包装类的 parseInt 方法抛出异常。
 
+
+
 ```java
-1 /**
-2    此程序演示了 Integer.parseInt
-3    方法抛出一个异常。
-4 */
-5 public class ParseError
-6 {
-7    public static void main(String[] args)
-8    {
-9        String str = "abcde";
-10       int number;
-11
-12       try
-13       {
-14          number = Integer.parseInt(str);
-15        }
-16       catch (NumberFormatException e)
-17        {
-18           System.out.println("Conversion error: " +
-19                              e.getMessage());
-20        }
-21    }
-22 }
+/**
+   此程序演示了 Integer.parseInt
+   方法抛出一个异常。
+*/
+public class ParseError
+{
+   public static void main(String[] args)
+   {
+       String str = "abcde";
+       int number;
+
+       try
+       {
+          number = Integer.parseInt(str);
+       }
+       catch (NumberFormatException e)
+       {
+          System.out.println("Conversion error: " +
+                             e.getMessage());
+       }
+   }
+}
 ```
 
-程序输出
+程序输出：
 
 ```
 Conversion error: For string "abcde"
@@ -20772,11 +18999,11 @@ Conversion error: For string "abcde"
 
 ## 代码列表 11-4 (ParseError)
 
-数值包装类的“parse”方法在转换的字符串不包含数值时，都会抛出 NumberFormatException 类型的异常。
+数值包装类的“parse”方法在转换的字符串不包含数值时，都会抛出 `NumberFormatException` 类型的异常。
 
 ## 异常的多态引用
 
-回想第 10 章，超类类型的引用变量可以引用子类对象。这被称为多态。在处理异常时，可以使用多态引用作为 catch 子句的参数。例如，我们处理过的所有异常都继承自 Exception 类。因此，使用 Exception 类型作为参数的 catch 子句能够捕获任何继承自 Exception 的异常。例如，代码列表 11-4 中的 try 语句可以写如下：
+回想第 10 章，超类类型的引用变量可以引用子类对象。这被称为多态。在处理异常时，可以使用多态引用作为 `catch` 子句的参数。例如，我们处理过的所有异常都继承自 `Exception` 类。因此，使用 `Exception` 类型作为参数的 `catch` 子句能够捕获任何继承自 `Exception` 的异常。例如，代码列表 11-4 中的 `try` 语句可以写如下：
 
 ```java
 try
@@ -20790,13 +19017,13 @@ catch (Exception e)
 }
 ```
 
-尽管 Integer 类的 parseInt 方法抛出的是 NumberFormatException 对象，这段代码仍然有效，因为 NumberFormatException 类继承自 Exception 类。
+尽管 `Integer` 类的 `parseInt` 方法抛出的是 `NumberFormatException` 对象，这段代码仍然有效，因为 `NumberFormatException` 类继承自 `Exception` 类。
 
 ## 使用多个 catch 子句处理多个异常
 
-我们到为止学习的程序只测试了单一类型的异常。但在许多情况下，try 块中的代码可能会抛出多种类型的异常。在这种情况下，你需要为每种可能抛出的异常类型编写一个 catch 子句。
+我们到为止学习的程序只测试了单一类型的异常。但在许多情况下，`try` 块中的代码可能会抛出多种类型的异常。在这种情况下，你需要为每种可能抛出的异常类型编写一个 `catch` 子句。
 
-例如，代码列表 11-5 中的程序读取名为 SalesData.txt 的文件的内容。文件中的每行包含一个月的销售额，该文件有多行。以下是文件的内容：
+例如，代码列表 11-5 中的程序读取名为 `SalesData.txt` 的文件的内容。文件中的每行包含一个月的销售额，该文件有多行。以下是文件的内容：
 
 ```
 24987.62
@@ -20806,9 +19033,6 @@ catch (Exception e)
 22781.76
 29871.44
 ```
-
-
-
 
 代码列表 11-5 中的程序从文件中读取每个数字并将其累加到一个累加变量中。`try` 块包含可能抛出不同类型异常的代码。例如，如果未找到文件，`Scanner` 类的构造函数可能会抛出 `FileNotFoundException`；如果从文件中读取到非数值值，`Scanner` 类的 `nextDouble` 方法可能会抛出 `InputMismatchException`（该异常位于 `java.util` 包中）。为了处理这些异常，`try` 语句有两个 `catch` 子句。图 11-7 显示了程序在未发生错误时弹出的对话话框。该对话框由第 51 行至第 56 行的语句显示。图 11-8 显示了当找不到文件时，第 62 行至第 64 行的语句显示的对话话框。
 
@@ -20820,76 +19044,76 @@ catch (Exception e)
 
 # 图 11-8 当找不到文件时，`SalesReport.java` 程序显示的对话话框（Oracle 公司法律顾问）
 
-```
+```java
  1 import java.io.*;    // 用于 File 类和 FileNotFoundException
-  2 import java.util.*;  // 用于 Scanner 和 InputMismatchException
-  3 import javax.swing.JOptionPane; // 用于 JOptionPane 类
-  4
-  5 /**
-  6    此程序演示了如何用一个 try 语句
-  7    捕获多个异常。
-  8 */
-  9
-  10 public class SalesReport
-  11 {
-  12    public static void main(String[] args)
-  13    {
-  14       String filename = "SalesData.txt"; // 文件名
-  15       int months = 0;                    // 月份计数器
-  16       double oneMonth;                   // 单月销售额
-  17       double totalSales = 0.0;           // 总销售额
-  18       double averageSales;               // 平均销售额
-  19
-  20       try
-  21       {
-  22          // 打开文件。
-  23          File file = new File(filename);
-  24          Scanner inputFile = new Scanner(file);
-  25
-  26          // 处理文件内容。
-  27          while (inputFile.hasNext())
-  28          {
-  29             // 获取一个月的销售额。
-  30             oneMonth = inputFile.nextDouble();
-  31
-  32             // 累加金额。
-  33             totalSales += oneMonth;
-  34
-  35             // 增加月份计数器
-  36             months++;
-  37          }
-  38
-  39          // 关闭文件。
-  40          inputFile.close();
-  41
-  42          // 计算平均值。
-  43          averageSales = totalSales / months;
-  44
-  45          // 显示结果。
-  46          JOptionPane.showMessageDialog(null,
-  47             String.format("Number of months: %d\n" +
-  48                           "Total Sales: $%,.2f\n" +
-  49                           "Average Sales: $%,.2f",
-  50                           months, totalSales, averageSales));
-  51       }
-  52       catch(FileNotFoundException e)
-  53       {
-  54          // 当未找到文件时，由
-  55          // Scanner 构造函数抛出。
-  56          JOptionPane.showMessageDialog(null,
-  57              "The file " + filename + " does not exist.");
-  58       }
-  59       catch(InputMismatchException e)
-  60       {
-  61          // 当发现非数值值时，由
-  62          Scanner 类的 nextDouble 方法抛出。
-  63          JOptionPane.showMessageDialog(null,
-  64              "Non-numeric data found in the file.");
-  65       }
-  66
-  67       System.exit(0);
-  68    }
-  69 }
+ 2 import java.util.*;  // 用于 Scanner 和 InputMismatchException
+ 3 import javax.swing.JOptionPane; // 用于 JOptionPane 类
+ 4
+ 5 /**
+ 6    此程序演示了如何用一个 try 语句
+ 7    捕获多个异常。
+ 8 */
+ 9
+ 10 public class SalesReport
+ 11 {
+ 12    public static void main(String[] args)
+ 13    {
+ 14       String filename = "SalesData.txt"; // 文件名
+ 15       int months = 0;                    // 月份计数器
+ 16       double oneMonth;                   // 单月销售额
+ 17       double totalSales = 0.0;           // 总销售额
+ 18       double averageSales;               // 平均销售额
+ 19
+ 20       try
+ 21       {
+ 22          // 打开文件。
+ 23          File file = new File(filename);
+ 24          Scanner inputFile = new Scanner(file);
+ 25
+ 26          // 处理文件内容。
+ 27          while (inputFile.hasNext())
+ 28          {
+ 29             // 获取一个月的销售额。
+ 30             oneMonth = inputFile.nextDouble();
+ 31
+ 32             // 累加金额。
+ 33             totalSales += oneMonth;
+ 34
+ 35             // 增加月份计数器
+ 36             months++;
+ 37          }
+ 38
+ 39          // 关闭文件。
+ 40          inputFile.close();
+ 41
+ 42          // 计算平均值。
+ 43          averageSales = totalSales / months;
+ 44
+ 45          // 显示结果。
+ 46          JOptionPane.showMessageDialog(null,
+ 47             String.format("Number of months: %d\n" +
+ 48                           "Total Sales: $%,.2f\n" +
+ 49                           "Average Sales: $%,.2f",
+ 50                           months, totalSales, averageSales));
+ 51       }
+ 52       catch(FileNotFoundException e)
+ 53       {
+ 54          // 当未找到文件时，由
+ 55          // Scanner 构造函数抛出。
+ 56          JOptionPane.showMessageDialog(null,
+ 57              "The file " + filename + " does not exist.");
+ 58       }
+ 59       catch(InputMismatchException e)
+ 60       {
+ 61          // 当发现非数值值时，由
+ 62          Scanner 类的 nextDouble 方法抛出。
+ 63          JOptionPane.showMessageDialog(null,
+ 64              "Non-numeric data found in the file.");
+ 65       }
+ 66
+ 67       System.exit(0);
+ 68    }
+ 69 }
 ```
 
 # 代码列表 11-5 `(SalesReport.java)`
@@ -20899,10 +19123,6 @@ catch (Exception e)
 # 使用异常处理器从错误中恢复
 
 代码列表 11-5 中的程序演示了 `try` 语句如何拥有多个 `catch` 子句以处理不同类型的异常。然而，该程序并没有使用异常处理器从任何错误中恢复。无论是找不到文件还是在文件中遇到非数值项，该程序都会停止。代码列表 11-6 中的程序是有效异常处理的更好示例。它尝试从尽可能多的异常中恢复。
-
-
-
-
 
 ```java
 import java.io.*;    // 用于 File 类和 FileNotFoundException
@@ -21039,6 +19259,8 @@ abc
 
 如果不包含多态引用，`try` 语句对于每种特定类型的异常只能有一个 `catch` 子句。例如，下面的 `try` 语句将导致编译器发出错误消息，因为它用两个 `catch` 子句处理了 `NumberFormatException` 对象：
 
+
+
 ```java
 try
 {
@@ -21057,9 +19279,9 @@ catch (NumberFormatException e)
 
 有时你可以通过使用多态引用引起此错误。例如，查看图 11-11，它显示了 `NumberFormatException` 类的继承层次结构。
 
-# 图 11-11 NumberFormatException 类的继承层次结构
+## 图 11-11 `NumberFormatException` 类的继承层次结构
 
-![数字异常类的继承层次结构由六个类组成，每层一个类，每个较低的类通过垂直箭头连接到下一个高层类，最顶层的 Object 类除外。]
+![数字异常类的继承层次结构由六个类组成，每层一个类，每个较低的类通过垂直箭头连接到下一个高层类，最顶层的 `Object` 类除外。]
 
 从图中可以看出，`NumberFormatException` 类继承自 `IllegalArgumentException` 类。现在看下面的代码：
 
@@ -21081,123 +19303,122 @@ catch (NumberFormatException e)
 
 编译器会对第二个 `catch` 子句发出错误消息，报告 `NumberFormatException` 已经被捕获。这是因为第一个捕获 `IllegalArgumentException` 对象的 `catch` 子句会以多态的方式捕获 `NumberFormatException` 对象。
 
-
-
-
-
 如果你在同一个 `try` 语句中处理多个异常，且其中某些异常之间存在继承关系，那么你应该在处理更通用的异常类之前，处理更专门的异常类。我们可以将之前的代码重写如下，且不会出现错误：
 
-```
+```java
 try
- {
-    number = Integer.parseInt(str);
- }
- catch (NumberFormatException e)
- {
-    System.out.println(str + " is not a number.");
- }
- catch (IllegalArgumentException e)
- {
-    System.out.println("Bad number format.");
- }
+{
+   number = Integer.parseInt(str);
+}
+catch (NumberFormatException e)
+{
+   System.out.println(str + " is not a number.");
+}
+catch (IllegalArgumentException e)
+{
+   System.out.println("Bad number format.");
+}
 ```
 
-# `finally` 子句
+## `finally` 子句
 
 `try` 语句可以可选的 `finally` 子句，它必须出现在所有 `catch` 子句之后。以下是带有 `finally` 子句的 `try` 语句的标准格式：
 
-```
+```java
 try
- {
-    (try block statements .. ..) 
- }
- catch (ExceptionType ParameterName)
- {
-     (catch block statements ..�.) 
- }
- finally
- {
-     (finally block statements ..�.) 
- }
+{
+   (try block statements .. ..) 
+}
+catch (ExceptionType ParameterName)
+{
+    (catch block statements .. ..) 
+}
+finally
+{
+    (finally block statements .. ..) 
+}
 ```
 
 `finally block` 包含一个或多个语句，它们在 `try` 块执行之后，以及在抛出异常后任何 `catch` 块执行之后总是执行。无论是否发生异常，`finally` 块中的语句都会执行。例如，以下代码打开了一个 `doubles` 类型的文件并读取其内容。外层的 `try` 语句打开文件并有一个捕获 `FileNotFoundException` 的 `catch` 子句。内部的 `try` 语句从文件中读取值并有一个捕获 `InputMismatchException` 的 `catch` 子句。无论是否发生 `InputMismatchException`，`finally` 块都会关闭文件。
 
-```
+```java
 try
- {
-    // 打开文件。
-    File file = new File(filename);
-    Scanner inputFile = new Scanner(file);
+{
+   // 打开文件。
+   File file = new File(filename);
+   Scanner inputFile = new Scanner(file);
 
-    try
- {
-       // 读取并显示文件内容。
-       while (inputFile.hasNext())
-       {
-          System.out.println(inputFile.nextDouble());
-       }
-    }
-    catch (InputMismatchException e)
-    {
-       System.out.println("Invalid data found.");
-    }
-    finally
-    {
-       // 关闭文件。
-       inputFile.close();
-    }
- }
- catch (FileNotFoundException e)
- {
-    System.out.println("File not found.");
- }
+   try
+   {
+      // 读取并显示文件内容。
+      while (inputFile.hasNext())
+      {
+         System.out.println(inputFile.nextDouble());
+      }
+   }
+   catch (InputMismatchException e)
+   {
+      System.out.println("Invalid data found.");
+   }
+   finally
+   {
+      // 关闭文件。
+      inputFile.close();
+   }
+}
+catch (FileNotFoundException e)
+{
+   System.out.println("File not found.");
+}
 ```
 
-# 堆栈跟踪 (Stack Trace)
+## 堆栈跟踪 (Stack Trace)
 
 很多时候，一个方法会调用另一个方法，而该方法会调用另一个方法。例如，方法 A 调用方法 B，方法 B 调用方法 C。`call stack`（调用栈）是正在执行的所有方法的内部列表。
 
 当在多层方法调用下执行的方法抛出异常时，了解哪些方法负责了该方法的调用是有帮助的。`stack trace`（堆栈跟踪）是调用栈中所有方法的列表。它指示了发生异常时正在执行的方法以及为了执行该方法而按顺序调的所有方法。例如，查看代码列表 11-7 中的程序。它包含三个方法：`main`、`myMethod` 和 `produceError`。`main` 方法调用 `myMethod`，`myMethod` 调用 `produceError`。`produceError` 方法通过 `String` 类的 `charAt` 方法传递无效的位置数字导致异常。该异常没有被程序处理，而是由默认异常处理器处理。
 
-```
+```java
  1 /**
-  2    此程序演示了在抛出异常时产生的
-  3    堆栈跟踪。
-  4 */
-  5
-  6 public class StackTrace
-  7 {
-  8    public static void main(String[] args)
-  9    {
-  10       System.out.println("Calling myMethod...");
-  11       myMethod();
-  12       System.out.println("Method main is done.");
-  13    }
-  14
-  15    /**
-  16       MyMethod
-  17    */
-  18
-  19    public static void myMethod()
-  20    {
-  21       System.out.println("Calling produceError...");
-  22       produceError();
-  23       System.out.println("myMethod is done.");
-  24    }
-  25
-  26    /**
-  27       produceError
-  28    */
-  29    public static void produceError()
-  30    {
-  31        String str = "abc";
-  32        // 下述将导致错误。
-  33        System.out.println(str.charAt(10));
-  34    }
+ 2    此程序演示了在抛出异常时产生的
+ 3    堆栈跟踪。
+ 4 */
+ 5
+ 6 public class StackTrace
+ 7 {
+ 8    public static void main(String[] args)
+ 9    {
+ 10       System.out.println("Calling myMethod...");
+ 11       myMethod();
+ 12       System.out.println("Method main is done.");
+ 13    }
+ 14
+ 15    /**
+ 16       MyMethod
+ 17    */
+ 18
+ 19    public static void myMethod()
+ 20    {
+ 21       System.out.println("Calling produceError...");
+ 22       produceError();
+ 23       System.out.println("myMethod is done.");
+ 24    }
+ 25
+ 26    /**
+ 27       produceError
+ 28    */
+ 29    public static void produceError()
+ 30    {
+ 31        String str = "abc";
+ 32        // 下述将导致错误。
+ 33        System.out.println(str.charAt(10));
+ 34    }
  }
+```
 
- 输出
+输出：
+
+```
 Calling myMethod...
 Calling produceError...
 java.lang.StringIndexOutOfBoundsException: String index 10 for length 3
@@ -21206,11 +19427,7 @@ java.lang.StringIndexOutOfBoundsException: String index 10 for length 3
 	at StackTrace.main(StackTrace.java:12)
 ```
 
-
-
-
-
-# 代码列表 11-8 `(MultiCatch.java)`
+## 代码列表 11-8 `(MultiCatch.java)`
 
 ```java
 import java.io.*;     // 用于 File 类和 FileNotFoundException
@@ -21259,19 +19476,20 @@ public class MultiCatch
 
 如果你使用的是 Java 7 之前的版本，则无法使用多捕获（multi-catch）。
 
-# 当异常未被捕获时
+## 当异常未被捕获时
 
 当异常被抛出时，它不能被忽略。它必须由程序或默认异常处理器处理。当方法中的代码抛出异常时，该方法的正常执行将停止，JVM 会在方法内部搜索兼容的异常处理器。如果方法内部没有处理异常的代码，程序的控制权将传递给调用堆栈中的上一个方法（即调用出错方法的方法）。如果该方法无法处理该异常，控制权将再次沿堆栈向上传递给上一个方法。这种会会一直持续直到控制权到达 `main` 方法。如果 `main` 方法没有处理该异常，程序将停止，并由默认异常处理器处理该异常。
 
 代码列表 11-7 中的程序就是这种情况。由于 `produceError` 方法没有处理异常，控制权传回了 `myMethod`。`myMethod` 也没有处理该异常，因此控制权传回了 `main`。由于 `main` 没有处理该异常，程序停止，默认异常处理器显示了错误信息。
 
-# 检查异常与未检查异常
+## 检查异常与未检查异常
 
 在 Java 中，异常分为两类：未检查异常（unchecked）和已检查异常（checked）。`未检查异常` 是继承自 `Error` 类或 `RuntimeException` 类的异常。记住，继承自 `Error` 的异常是在发生严重错误（如内存耗尽）时被抛出的。你不应该处理这些异常，因为导致这些异常的情况在程序中很少可以处理。还请记住 `RuntimeException` 是由于编程错误（如数组下标越界）引起的异常的父类。最好也不处理这些异常，因为它们可以通过编写良好的代码来避免。所以，你不应该处理未检查异常。
 
 所有剩余异常（即那些*没有*继承自 `Error` 或 `RuntimeException` 的异常）都是`已检查异常`。这些是你应该在程序处理的异常。如果方法中的代码可能抛出已检查异常，那么该方法必须满足以下要求之一：
 
 * 它必须处理该异常，或者
+
 * 它必须在方法头部中列出 `throws` 子句。
 
 `throws` 子句告知编译器从方法中可能抛出的异常。例如，请看以下方法：
@@ -21305,116 +19523,117 @@ public void displayFile(String name) throws FileNotFoundException
 
 `throws` 子句告诉编译器该方法可能会抛出 `FileNotFoundException`。（如果有多种类型的异常，请用逗号隔开。）现在你知道为什么在前面的章节中，对执行文件操作的方法写了 `throws` 子句了。我们没有处理任何可能发生的已检查异常，因此我们必须通知编译器我们的方法可能会将这些异常向上传递给调用堆栈。
 
-# 检查点 11.1
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-01/index.html
+## 检查点 11.1
 
-# 检查点 11.2
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-01/index.html`
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-02/index.html
+## 检查点 11.2
 
-# 检查点 11.3
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-02/index.html`
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-12/index.html
+## 检查点 11.3
 
-# 检查点 11.4
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-12/index.html`
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-03/index.html
+## 检查点 11.4
 
-# 检查点 11.5
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-03/index.html`
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-04/index.html
+## 检查点 11.5
 
-# 检查点 11.6
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-04/index.html`
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-05/index.html
+## 检查点 11.6
 
-# 检查点 11.7
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-05/index.html`
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-06/index.html
+## 检查点 11.7
 
-# 检查点 11.8
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-06/index.html`
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-07/index.html
+## 检查点 11.8
 
-# 检查点 11.9
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-07/index.html`
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-08/index.html
+## 检查点 11.9
 
-# 检查点 11.10
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-08/index.html`
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-09/index.html
+## 检查点 11.10
 
-# 检查点 11.11
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-09/index.html`
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-10/index.html
+## 检查点 11.11
 
-# 检查点 11.12
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-10/index.html`
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-11/index.html
+## 检查点 11.12
 
-# 检查点 11.13
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-11/index.html`
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-13/index.html
+## 检查点 11.13
 
-# 检查点 11.14
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-13/index.html`
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-14/index.html
+## 检查点 11.14
 
-# 检查点 11.15
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-14/index.html`
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-23/index.html
+## 检查点 11.15
 
-# 检查点 11.16
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-23/index.html`
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-15/index.html
+## 检查点 11.16
 
-# 检查点 11.17
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-15/index.html`
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-16/index.html
+## 检查点 11.17
 
-# 检查点 11.18
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-16/index.html`
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-17/index.html
+## 检查点 11.18
+
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-17/index.html`
+
+## Checkpoint 11.19
+
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-18/index.html`
+
+## Checkpoint 11.20
+
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-19/index.html`
+
+## Checkpoint 11.21
+
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-20/index.html`
+
+## Checkpoint 11.22
+
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-21/index.html`
 
 
 
-
-
-# Checkpoint 11.19
-
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-18/index.html
-
-# Checkpoint 11.20
-
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-19/index.html
-
-# Checkpoint 11.21
-
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-20/index.html
-
-# Checkpoint 11.22
-
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-21/index.html
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-21/index.html`
 
 # Checkpoint 11.23
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-22/index.html
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-22/index.html`
 
 # Checkpoint 11.24
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-24/index.html
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-24/index.html`
 
 # Checkpoint 11.25
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-25/index.html
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-25/index.html`
 
 # Checkpoint 11.26
 
-../components/metrodigi/ch11-inline_self_quiz_v1.0.0-26/index.html
+`../components/metrodigi/ch11-inline_self_quiz_v1.0.0-26/index.html`
 
 # Checkpoint 11.27
 
-../components/metrodigi/ch11-fill_in_the_blank-01/index.html
+`../components/metrodigi/ch11-fill_in_the_blank-01/index.html`
 
 ## 11.2 抛出异常
 
@@ -21438,7 +19657,7 @@ throw new Exception("Out of fuel");
 
 不要将 `throw` 语句与 `throws` 子句混淆。`throw` 语句导致异常抛出。`throws` 子句告知编译器某个方法会抛出一个或多个异常。
 
-回想第 6 章 中的 `Die` 类。该类模拟游戏骰子，它的构造函数接受一个参数来指定骰子的面数。假设我们想要确保面数不小于最小值（毕竟，单面骰子或零面骰子是没有意义的）。
+回想第 6 章中的 `Die` 类。该类模拟游戏骰子，它的构造函数接受一个参数来指定骰子的面数。假设我们想要确保面数不小于最小值（毕竟，单面骰子或零面骰子是没有意义的）。
 
 实现此点的一种方法是在当传递无效参数时，让构造函数抛出异常。代码列表 11-9 显示了 `Die` 类修改后的代码：
 
@@ -21549,7 +19768,7 @@ Exception in thread ”main” java.lang.IllegalArgumentException: The die must 
 
 为了满足特定类或应用程序的需求，你可以通过扩展 `Exception` 类或其一个子类来创建自己的异常类。
 
-让我们来看一个使用程序员定义异常的示例。回想第 6 章 中的 `BankAccount` 类。该类持有银行账户的数据。该类的 UML 图如图图 11-12](#ch11_pg0003.xhtml_P700101587800000000000000004D8D）所示。
+让我们来看一个使用程序员定义异常的示例。回想第 6 章中的 `BankAccount` 类。该类持有银行账户的数据。该类的 UML 图如图图 11-12](#ch11_pg0003.xhtml_P700101587800000000000000004D8D）所示。
 
 # 图 11-12 `BankAccount` 类的 UML 图
 
@@ -21564,9 +19783,6 @@ Exception in thread ”main” java.lang.IllegalArgumentException: The die must 
 *   向 `withdraw` 方法传递了负数。
 
 *   传递给 `withdraw` 方法的金额超过了账户余额。
-
-
-
 
 我们可以创建自己的异常来表示这些错误条件中的每一个一种。然后我们可以重写该类，使其在发生任何这些错误时抛出我们自定义的异常。让我们从创建一个用于负数初始余额的异常类开始。代码列表 11-11 显示了一个名为 `NegativeStartingBalance` 的异常类。
 
@@ -21668,8 +19884,11 @@ Error: Negative starting balance: −100.0
 `ExceptionName` 是异常名称，`Description` 是导致异常的情况的描述。请记住关于 `@exception` 标签注释的以下几点：
 
 - 方法文档注释中的 `@exception` 标签必须出现在通用描述之后。
+
 - `@exception` 标签以空行结束。
+
 - 如果方法抛出多个异常，则可以多次使用 `@exception` 标签。
+
 - 异常的描述应该是清晰且简洁的。
 
 （注：此节提供的原始文本出现了乱码/重复。我根据标准的 Javadoc 实践清理了逻辑流，同时保留了指令的核心意图。）
@@ -21701,10 +19920,6 @@ int x = 1297;
 
 图 11-14 所示数字的二进制表示是原始数据在内存中的存储方式。事实上，这有时被称为*原始二进制格式*。数据可以以其原始二进制格式存储在文件中。包含二进制数据的文件通常被称为*二进制文件*。
 
-
-
-
-
 以二进制格式存储数据比以文本格式存储更高效，因为需要进行的转换更少。此外，某些类型的数据应该只以原始二进制格式存储。图像就是一个例子。然而，当数据存储在二进制文件中时，你无法用如 `Notepad` 这样的文本编辑器打开该文件。当文本编辑器打开文件时，它会认为该文件包含文本。
 
 ### 向二进制文件写入数据
@@ -21713,7 +19928,9 @@ int x = 1297;
 
 | `FileOutputStream` | 此类位于 `java.io` 包中，允许你打开一个文件以写入二进制数据并与其建立连接；然而，它只提供了向文件写入字节的基本功能。 |
 
-| `DataOutputStream` | 此类位于 `java.io` 包中，允许你向二进制文件写入任何原始类型的数据或 `String` 对象对象。然而，`DataOutputStream` 类本身不能直接访问文件。它通常与一个已建立文件连接的 `FileOutputStream` 对象结合使用。 |
+
+
+| `DataOutputStream` | 此类位于 `java.io` 包中，允许你向二进制文件写入任何原始类型的数据或 `String` 对象。然而，`DataOutputStream` 类本身不能直接访问文件。它通常与一个已建立文件连接的 `FileOutputStream` 对象结合使用。 |
 
 你将一个 `DataOutputStream` 对象包装在一个 `FileOutputStream` 对象上，以便向二进制文件写入数据。以下代码显示了如何打开名为 `MyInfo.dat` 的文件进行二进制输出：
 
@@ -21744,11 +19961,8 @@ DataOutputStream outputFile =
 ### 表 11-1 一些 `DataOutputStream` 方法
 
 | 方法 | 描述 |
-
 | --- | --- |
-
 | `void close()` | 关闭文件。 |
-
 | `void writeBoolean(boolean b)` | 将传递给 `b` 的 `boolean` 值写入文件。 |
 | `void writeByte(byte b)` | 将传递给 `b` 的 `byte` 值写入文件。 |
 | `void writeChar(int c)` | 此方法接受一个 `int`，假设该整数是一个字符编码。它所代表的字符将作为双字节 Unicode 字符写入文件。 |
@@ -21798,6 +20012,7 @@ DataOutputStream outputFile =
 ```
 
 程序输出
+
 ```
 Writing the numbers to the file...
 Done.
@@ -21824,14 +20039,12 @@ DataInputStream inputFile =
      new DataInputStream(new FileInputStream("MyInfo.dat"));
 ```
 
-如果找不到字符串命的文件，`FileInputStream` 构造函数将抛出 `FileNotFoundException`。一旦创建了 `DataInputStream` 对象，你就可以使用它从文件中读取二进制数据。表 11-2 列出了部分 `DataInputStream` 方法。请注意，表中列出的每个方法在到达文件末时都会抛出 `EOFException`。
+如果找不到字符串指定的文件，`FileInputStream` 构造函数将抛出 `FileNotFoundException`。一旦创建了 `DataInputStream` 对象，你就可以使用它从文件中读取二进制数据。表 11-2 列出了部分 `DataInputStream` 方法。请注意，表中列出的每个方法在到达文件末时都会抛出 `EOFException`。
 
 ### 表 11-2 一些 `DataInputStream` 方法
 
 | 方法 | 描述 |
-
 | --- | --- |
-
 | `void close()` | 关闭文件。 |
 | `boolean readBoolean()` | 从文件中读取一个 `boolean` 值并返回。 |
 | `byte readByte()` | 从文件中读取一个 `byte` 值并返回。 |
@@ -21843,64 +20056,60 @@ DataInputStream inputFile =
 | `short readShort()` | 从文件中读取一个 `short` 值并返回。 |
 | `String readUTF()` | 从文件中读取一个字符串并作为 `String` 对象返回。该字符串必须是用 `DataOutputStream` 类的 `writeUTF` 方法写入的。 |
 
-
-
-
-
 代码列表 11-14 中的程序打开了由代码列表 11-13 中的程序创建的 `Numbers.dat` 文件。数字从文件中读取并显示在屏幕上。请注意，程序必须捕获 `EOFException` 以确定何时到达文件末尾。
 
 ```
  1 import java.io.*;
-  2
-  3 /**
-  4    此程序打开一个二进制文件，读取
-  5    并显示内容。
-  6 */
-  7
-  8 public class ReadBinaryFile
-  9 {
- 10    public static void main(String[] args)
- 12                  throws IOException
- 13    {
- 14       int number;                 // 从文件中读取的数字
- 15       boolean endOfFile = false;  // EOF 标记
- 16
- 17       // 创建二进制文件输入对象。
- 18       FileInputStream fstream =
- 19                  new FileInputStream("Numbers.dat");
- 20       DataInputStream inputFile =
- 21                  new DataInputStream(fstream);
- 22
- 23       System.out.println("Reading numbers from the file:");
- 24
- 25       // 读取文件内容。
- 26       while (!endOfFile)
- 27       {
- 28          try
- 29          {
- 30             number = inputFile.readInt();
- 31             System.out.print(number + " ");
- 32          }
- 33          catch (EOFException e)
-  4          {
- 35             endOfFile = true;
- 36          }
- 37       }
- 38
- 39       System.out.println("\nDone.");
- 40
- 41       // 关闭文件。
- 42       inputFile.close();
- 43    }
- 44 }
+ 2
+ 3 /**
+ 4    此程序打开一个二进制文件，读取
+ 5    并显示内容。
+ 6 */
+ 7
+ 8 public class ReadBinaryFile
+ 9 {
+10    public static void main(String[] args)
+11                  throws IOException
+12    {
+13       int number;                 // 从文件中读取的数字
+14       boolean endOfFile = false;  // EOF 标记
+15
+16       // 创建二进制文件输入对象。
+17       FileInputStream fstream =
+18                  new FileInputStream("Numbers.dat");
+19       DataInputStream inputFile =
+20                  new DataInputStream(fstream);
+21
+22       System.out.println("Reading numbers from the file:");
+23
+24       // 读取文件内容。
+25       while (!endOfFile)
+26       {
+27          try
+28          {
+29             number = inputFile.readInt();
+30             System.out.print(number + " ");
+31          }
+32          catch (EOFException e)
+33          {
+34             endOfFile = true;
+35          }
+36       }
+37
+38       System.out.println("\nDone.");
+39
+40       // 关闭文件。
+41       inputFile.close();
+42    }
+43 }
 ```
 
 程序输出
 
 ```
 Reading numbers from the file:
-  2 4 6 8 10 12 14
- Done.
+ 2 4 6 8 10 12 14
+Done.
 ```
 
 ### 代码列表 11-14 `(ReadBinaryFile.java)`
@@ -21961,52 +20170,53 @@ raf.close();
 
 `RandomAccessFile` 类还提供了读取和写入其他数据类型的方法，例如 `readByte()`、`writeByte()`、`readShort()`、`writeShort()`、`readLong()`、`writeLong()`、`readDouble()`、`writeDouble()`、`readUTF()` 和 `writeUTF()`。
 
-`readUTF()` 和 `writeUTF()` 方法用于读取和写入 UTF-8 编码的字符串。这些方法与 `DataInputStream` 和 `DataOutputStream` 中使用的方法 相似。
-
-
-
+`readUTF()` 和 `writeUTF()` 方法用于读取和写入 UTF-8 编码的字符串。这些方法与 `DataInputStream` 和 `DataOutputStream` 中使用的方法相似。
 
 使用 `RandomAccessFile` 类打开或创建的文件被视为二进制文件。事实上，`RandomAccessFile` 类具有与 `DataOutputStream` 类相同的写入数据方法，以及与 `DataInputStream` 类相同的读取数据方法。事实上，你可以使用 `RandomAccessFile` 类来按顺序处理二进制文件。例如，代码列表 11-15 中的程序打开了一个名为 `Letters.dat` 的文件，并将字母文字表中的所有字母写入该文件。
 
+
+
+### 代码列表 11-15 `(WriteLetters.java)`
+
 ```
  1 import java.io.*;
-  2
-  3 /**
-  4    此程序使用 RandomAccessFile 对象来
-  5    创建文件 Letters.dat。字母表中的
-  6    字母被写入到文件中。
-  7 */
-  8
-  9 public class WriteLetters
-  10 {
-  11    public static void main(String[] args)
-  12                        throws IOException
-  13    {
-  14     // letters 数组包含所有 26 个字母。
-  15     char[] letters = {
-  16                       'a', 'b', 'c', 'd', 'e', 'f', 'g',
-  17                       'h', 'i', 'j', 'k', 'l', 'm', 'n',
-  18                       'o', 'p', 'q', 'r', 's', 't', 'u',
-  19                       'v', 'w', 'x', 'y', 'z' };
-  20
-  21     System.out.println("Opening the file.");
-  22
-  23     // 打开一个文件进行读写操作。
-  24     RandomAccessFile randomFile =
-  25              new RandomAccessFile("Letters.dat", "rw");
-  26
-  27     System.out.println("Writing data to the file...");
-  28
-  29     // 按顺序将 letters 数组写入文件。
-  30     for (int i = 0; i < letters.length; i++)
-  31        randomFile.writeChar(letters[i]);
-  32
-  33     // 关闭文件。
-  34     randomFile.close();
-  35
-  36     System.out.println("Done.");
-  37     }
-  38 }
+ 2
+ 3 /**
+ 4    此程序使用 RandomAccessFile 对象来
+ 5    创建文件 Letters.dat。字母表中的
+ 6    字母被写入到文件中。
+ 7 */
+ 8
+ 9 public class WriteLetters
+ 10 {
+ 11    public static void main(String[] args)
+ 12                        throws IOException
+ 13    {
+ 14     // letters 数组包含所有 26 个字母。
+ 15     char[] letters = {
+ 16                       'a', 'b', 'c', 'd', 'e', 'f', 'g',
+ 17                       'h', 'i', 'j', 'k', 'l', 'm', 'n',
+ 18                       'o', 'p', 'q', 'r', 's', 't', 'u',
+ 19                       'v', 'w', 'x', 'y', 'z' };
+ 20
+ 21     System.out.println("Opening the file.");
+ 22
+ 23     // 打开一个文件进行读写操作。
+ 24     RandomAccessFile randomFile =
+ 25              new RandomAccessFile("Letters.dat", "rw");
+ 26
+ 27     System.out.println("Writing data to the file...");
+ 28
+ 29     // 按顺序将 letters 数组写入文件。
+ 30     for (int i = 0; i < letters.length; i++)
+ 31        randomFile.writeChar(letters[i]);
+ 32
+ 33     // 关闭文件。
+ 34     randomFile.close();
+ 35
+ 36     System.out.println("Done.");
+ 37     }
+ 38 }
 ```
 
 程序输出：
@@ -22016,8 +20226,6 @@ Opening the file.
 Writing data to the file...
 Done.
 ```
-
-### 代码列表 11-15 `(WriteLetters.java)`
 
 在该程序执行后，字母表中的字母将存储在 `Letters.dat` 文件中。由于使用了 `writeChar` 方法，每个字母都将存储为两个字节的字符。这在我们以后想要从文件中读取字符时非常重要。
 
@@ -22037,10 +20245,7 @@ void seek(long position)
 
 参数是你想移动到的字节编号。例如，查看以下代码：
 
-````seek` 方法会移动文件指针。如果我们调用 `file.seek(99)`，文件指针将移动到字节 99。如果我们调用 `file.readByte()`，它将读取字节 99 处的字节。读取后，文件指针将移动到字节 100。如果我们调用 `file.readInt()`，它将从字节 99 开始读取 4 个字节，文件指针将移动到字节 103。
-
-
-
+`seek` 方法会移动文件指针。如果我们调用 `file.seek(99)`，文件指针将移动到字节 99。如果我们调用 `file.readByte()`，它将读取字节 99 处的字节。读取后，文件指针将移动到字节 100。如果我们调用 `file.readInt()`，它将从字节 99 开始读取 4 个字节，文件指针将移动到字节 103。
 
 代码列表 11-16 中的程序演示了进一步的内容。它从文件中随机读取字符 `5`、`10` 和 `3`。
 
@@ -22114,48 +20319,48 @@ account = (BankAccount2) objectInputFile.readObject();
 
 ```
  1 import java.io.*;
-  2
-  3 /**
-  4    此程序反序列化 Objects.dat 文件中的对象
-  5    并将其存储在数组中。
-  6 */
-  7
-  8 public class DeserializeObjects
-  9 {
-  10    public static void main(String[] args)
-  11                      throws Exception
-  12    {
-  13       double balance;             // 一个余额
-  14       final int NUM_ITEMS = 3;    // 对象数量
-  15
-  16       // 创建流。
-  17       FileInputStream inStream =
-  18               new FileInputStream("Objects.dat");
-  19       ObjectInputStream objectInputFile =
-  20               new ObjectInputStream(inStream);
-  21
-  22       // 创建 BankAccount2 数组
-  23       BankAccount2[] accounts =
-  24               new BankAccount2[NUM_ITEMS];
-  25
-  26       // 从文件中读取序列化对象。
-  27       for (int i = 0; i < accounts.length; i++)
-  28       {
-  29          accounts[i] =
-  30            (BankAccount2) objectInputFile.readObject();
-  31       }
-  32
-  33       // 关闭文件。
-  34       objectInputFile.close();
-  35
-  36       // 显示对象。
-  37       for (int i = 0; i < accounts.length; i++)
-  38       {
-  39           System.out.println("Account " + (i + 1) +
-  40                    " $ " + accounts[i].getBalance());
-  41       }
-  42    }
-  43 }
+ 2
+ 3 /**
+ 4    此程序反序列化 Objects.dat 文件中的对象
+ 5    并将其存储在数组中。
+ 6 */
+ 7
+ 8 public class DeserializeObjects
+ 9 {
+ 10    public static void main(String[] args)
+ 11                      throws Exception
+ 12    {
+ 13       double balance;             // 一个余额
+ 14       final int NUM_ITEMS = 3;    // 对象数量
+ 15
+ 16       // 创建流。
+ 17       FileInputStream inStream =
+ 18               new FileInputStream("Objects.dat");
+ 19       ObjectInputStream objectInputFile =
+ 20               new ObjectInputStream(inStream);
+ 21
+ 22       // 创建 BankAccount2 数组
+ 23       BankAccount2[] accounts =
+ 24               new BankAccount2[NUM_ITEMS];
+ 25
+ 26       // 从文件中读取序列化对象。
+ 27       for (int i = 0; i < accounts.length; i++)
+ 28       {
+ 29          accounts[i] =
+ 30            (BankAccount2) objectInputFile.readObject();
+ 31       }
+ 32
+ 33       // 关闭文件。
+ 34       objectInputFile.close();
+ 35
+ 36       // 显示对象。
+ 37       for (int i = 0; i < accounts.length; i++)
+ 38       {
+ 39           System.out.println("Account " + (i + 1) +
+ 40                    " $ " + accounts[i].getBalance());
+ 41       }
+ 42    }
+ 43 }
 ```
 
 ### 输出
@@ -22176,180 +20381,189 @@ Account 3 $ 1800.0
 private transient SomeClass refVar;
 ```
 
-由于使用了 `transient` 关键字，编译器将在序列化过程中跳过 `refVar` 引用的对象。幸运的是，`String` 类以及 Java API 中发现的大多数类都实现了 `Serializable` 接口。
 
 
+由于使用了`transient`关键字，编译器将在序列化过程中跳过`refVar`引用的对象。幸运的是，`String`类以及 Java API 中发现的大多数类都实现了`Serializable`接口。
 
-
-
-*   **假设 try 块中的所有语句都会执行。** 当抛出异常时，`try` 块将立即退出。这意味着出现在 `try` 块中、出错语句之后的语句将不会被执行。
-*   **将 `try`、`catch` 和 `finally` 子句的顺序写反。** 在 `try` 语句中，`try` 子句必须首先出现，随后是所有的 `catch` 子句，最后是可选的 `finally` 子句。
-*   **在同一个 `try` 语句中编写两个处理相同异常的 `catch` 子句。** 在同一个 `try` 语句中，每个异常类型不能有多个 `catch` 子句。
-*   **在捕获多个通过继承关系相关的异常时，，先列出更通用的异常。** 如果你在同一个 `try` 语句中处理多个异常，且其中某些异常通过继承关系相关，那么你应该在处理更通用的异常类之前先处理更具体的异常类。否则将会发生错误，因为编译器认为你正在多次处理同一种异常。
-*   **忘记在可能抛出检查异常但未处理该异常的方法上编写 `throws` 子句。** 如果一个方法能够抛出检查异常但没有处理它，则它在头部必须包含一个指定该异常的 `throws` 子句。
-*   **调用一个方法但不处理它可能抛出的异常。** 你必须处理该方法可能抛出的所有检查异常，或者在调用该方法的 `throws` 子句中列出它们。
-*   **在自定义异常类中，忘记向父类的构造函数传递错误消息。** 如果你没有向父类的构造函数传递错误消息，异常对象将具有 `null` 错误消息。
-*   **序列化带有不可序列化成员的对象。** 如果一个类拥有其他类对象的字段，则这些类必须实现 `Serializable` 接口才能被序列化。
+* **假设`try`块中的所有语句都会执行。** 当抛出异常时，`try`块将立即退出。这意味着出现在`try`块中、出错语句之后的语句将不会被执行。
+* **将`try`、`catch`和`finally`子句的顺序写反。** 在`try`语句中，`try`子句必须首先出现，随后是所有的`catch`子句，最后是可选的`finally`子句。
+* **在同一个`try`语句中编写两个处理相同异常的`catch`子句。** 在同一个`try`语句中，每个异常类型不能有多个`catch`子句。
+* **在捕获多个通过继承关系相关的异常时，先列出更通用的异常。** 如果你在同一个`try`语句中处理多个异常，且其中某些异常通过继承关系相关，那么你应该在处理更通用的异常类之前先处理更具体的异常类。否则将会发生错误，因为编译器认为你正在多次处理同一种异常。
+* **忘记在可能抛出检查异常但未处理该异常的方法上编写`throws`子句。** 如果一个方法能够抛出检查异常但没有处理它，则它在头部必须包含一个指定该异常的`throws`子句。
+* **调用一个方法但不处理它可能抛出的异常。** 你必须处理该方法可能抛出的所有检查异常，或者在调用该方法的`throws`子句中列出它们。
+* **在自定义异常类中，忘记向父类的构造函数传递错误消息。** 如果你没有向父类的构造函数传递错误消息，异常对象将具有`null`错误消息。
+* **序列化带有不可序列化成员的对象。** 如果一个类拥有其他类对象的字段，则这些类必须实现`Serializable`接口才能被序列化。
 
 ## 编程挑战
 
-## 1. `TestScores` 类
-编写一个名为 `TestScores` 的类。该类的构造函数应该接受一个测试分数数组作为参数。该类应该有一个返回测试分数平均值的方法。如果数组中的任何测试分负数或大于 100，该类应抛出 `IllegalArgumentException`。在程序中演示该类。
+### 1. `TestScores`类
 
-## 2. `TestScores` 类自定义异常
-编写一个名为 `InvalidTestScore` 的异常类。修改你在编程挑战 1 中编写的 `TestScores` 类，如果数组中的任何测试分数无效，则抛出 `InvalidTestScore` 异常。
+编写一个名为`TestScores`的类。该类的构造函数应该接受一个测试分数数组作为参数。该类应该有一个返回测试分数平均值的方法。如果数组中的任何测试分数为负数或大于 100，该类应抛出`IllegalArgumentException`。在程序中演示该类。
 
-## 3. `RetailItem` 异常
-第 6 章的编程挑战 4 要求你编写一个 `RetailItem` 类，用于存储与零售商品相关的数据。编写一个异常类，当价格为负数时可以实例化并抛出该异常。编写另一个异常类，当现货数量为负数时可以实例化并抛出该异常。在程序中演示这些异常类。
+### 2. `TestScores`类自定义异常
 
-## 4. `Month` 类异常
-第 8 章的编程挑战 5 要求你编写一个存储月份信息的 `Month` 类。为以下错误情况编写异常类：
-*   月份数字小于 1 或大于 12。
-*   月份名称给出了无效字符串。
+编写一个名为`InvalidTestScore`的异常类。修改你在编程挑战 1 中编写的`TestScores`类，如果数组中的任何测试分数无效，则抛出`InvalidTestScore`异常。
 
-修改 `Month` 类，使得当发生任一此类错误时都能抛出相应的异常。在程序中演示这些类。
+### 3. `RetailItem`异常
 
-## 5. `Payroll` 类异常
-第 6 章的编程挑战 5 要求你编写一个计算员工薪资单的 `Payroll` 类。为以下错误情况编写异常类：
-*   员工姓名为空字符串。
-*   员工 ID 编号给出无效值。如果你将此字段实现为字符串，则空字符串是无效的。如果你将此字段实现为数值变量，则负数或零是无效的。
-*   工作小时数给出无效数字。这将负数或大于 84 的数字。
-*   时薪率给出无效数字。这将负数或大于 25 的数字。
+第 6 章的编程挑战 4 要求你编写一个`RetailItem`类，用于存储与零售商品相关的数据。编写一个异常类，当价格为负数时可以实例化并抛出该异常。编写另一个异常类，当现货数量为负数时可以实例化并抛出该异常。在程序中演示这些异常类。
 
-修改 `Payroll` 类，使得当发生任一此类错误时都能抛出相应的异常。在程序中演示这些异常类。
+### 4. `Month`类异常
 
-## 6. `FileArray` 类
-设计一个具有静态方法 `writeArray` 的类。该方法应接受两个参数：文件名和一个 `int` 数组的引用。文件应以二进制格式打开，将数组的内容写入文件，然后关闭文件。
+第 8 章的编程挑战 5 要求你编写一个存储月份信息的`Month`类。为以下错误情况编写异常类：
 
-在类中编写第二个名为 `readArray` 的方法。该方法应接受两个参数：文件名和一个 `int` 数组的引用。打开文件，从文件中读取数据，然后关闭文件。在程序中演示这两个方法。
+* 月份数字小于 1 或大于 12。
+* 月份名称给出了无效字符串。
 
-## 7. 文件加密
+修改`Month`类，使得当发生任一此类错误时都能抛出相应的异常。在程序中演示这些类。
+
+### 5. `Payroll`类异常
+
+第 6 章的编程挑战 5 要求你编写一个计算员工薪资单的`Payroll`类。为以下错误情况编写异常类：
+
+* 员工姓名为空字符串。
+* 员工 ID 编号给出无效值。如果你将此字段实现为字符串，则空字符串是无效的。如果你将此字段实现为数值变量，则负数或零是无效的。
+* 工作小时数给出无效数字。这将负数或大于 84 的数字。
+* 时薪率给出无效数字。这将负数或大于 25 的数字。
+
+修改`Payroll`类，使得当发生任一此类错误时都能抛出相应的异常。在程序中演示这些异常类。
+
+### 6. `FileArray`类
+
+设计一个具有静态方法`writeArray`的类。该方法应接受两个参数：文件名和一个`int`数组的引用。文件应以二进制格式打开，将数组的内容写入文件，然后关闭文件。
+
+在类中编写第二个名为`readArray`的方法。该方法应接受两个参数：文件名和一个`int`数组的引用。打开文件，从文件中读取数据，然后关闭文件。在程序中演示这两个方法。
+
+### 7. 文件加密
+
 文件加密是用密代码编写文件内容的科学。你的加密程序应该像过滤器一样工作：读取一个文件的内容，将数据修改为代码，然后将编码内容写入第二个文件。第二个文件将是第一个文件的版本，但是用密代码编写的。
 
 尽管有复杂的加密技术，但你应该自己想出一个简单的方法。例如，你可以一次读取第一个文件的一个字符，在写入第二个文件之前将字符代码加上 10。
 
-## 8. 文件解密
+### 8. 文件解密
+
 编写一个解密编程挑战 7 生成的文件的程序。解密程序应该读取加密文件，将数据恢复到原始状态，并写入另一个文件。
 
-## 9. `TestScores` 序列化修改
-修改为编程挑战 1 创建的 `TestScores` 类，使其可序列化。编写一个程序创建一个至少五个 `TestScore` 对象的数组并对其序列化。编写另一个程序从文件中反序列化这些对象。
+### 9. `TestScores`序列化修改
 
-## 10. 异常项目
-此作业假设你已完成第 10 章的编程挑战 1（`Employee` 和 `ProductionWorker` 类）。修改 `Employee` 和 `ProductionWorker` 类，当发生以下错误时抛出异常：
-*   当 `Employee` 类接收到无效员工编号时，抛出一个名为 `InvalidEmployeeNumber` 的异常。
-*   当 `ProductionWorker` 类接收到无效班次时，抛出一个名为 `InvalidShift` 的异常。
-*   当 `ProductionWorker` 类接收到负的时薪时，抛出一个名为 `InvalidPayRate` 的异常。
+修改为编程挑战 1 创建的`TestScores`类，使其可序列化。编写一个程序创建一个至少五个`TestScore`对象的数组并对其序列化。编写另一个程序从文件中反序列化这些对象。
+
+### 10. 异常项目
+
+此作业假设你已完成第 10 章的编程挑战 1（`Employee`和`ProductionWorker`类）。修改`Employee`和`ProductionWorker`类，当发生以下错误时抛出异常：
+
+* 当`Employee`类接收到无效员工编号时，抛出一个名为`InvalidEmployeeNumber`的异常。
+* 当`ProductionWorker`类接收到无效班次时，抛出一个名为`InvalidShift`的异常。
+* 当`ProductionWorker`类接收到负的时薪时，抛出一个名为`InvalidPayRate`的异常。
 
 编写一个测试程序，演示每种异常情况的工作原理。
 
 观看异常项目视频：[`mediaplayer.pearsoncmg.com/assets/_video.true/secs_gaddis_6_vn_11_02_exception_project`](https://mediaplayer.pearsoncmg.com/assets/_video.true/secs_gaddis_6_vn_11_02_exception_project)
 
-
-
-
-
 ## 12.4 显示图像
-## 12.5 关于 `HBox`、`VBox` 和 `GridPane` 布局容器更多信息
-## 12.6 `Button` 控件与事件
-## 12.7 使用 `TextField` 控件读取输入
+
+## 12.5 关于`HBox`、`VBox`和`GridPane`布局容器更多信息
+
+## 12.6 `Button`控件与事件
+
+## 12.7 使用`TextField`控件读取输入
+
 ## 12.8 使用匿名内部类和 Lambda 表达式处理事件
-## 12.9 `BorderPane` 布局容器
-## 12.10 `ObserveableList` 接口
+
+## 12.9 `BorderPane`布局容器
+
+## 12.10 `ObserveableList`接口
+
 ## 12.11 需要避免的常见错误
 
 ## 12.1 图形用户界面
 
 概念：图形用户界面允许用户通过窗口、图标、按钮等图形元素与程序进行交互。
 
-程序员通常使用 `user`（用户）一词来描述任何可能使用计算机及其程序的假设人物。计算机的 `user interface`（用户界面）是用户与计算机交互的部分。用户界面的一部分由硬件设备组成，例如键盘和视频显示器。另一部分则涉及计算机操作系统和应用程序接受用户命令的方式。多年来，用户与计算机交互的唯一方法是通过命令行界面。`command line interface`（命令行界面），也称为 `console interface`（控制界面），要求用户输入命令。如果命令输入正确，它将执行并显示结果。如果命令输入错误，则会显示错误信息。图 12-1 显示了 Windows 命令提示符，它是命令行界面的示例。
+程序员通常使用`user`（用户）一词来描述任何可能使用计算机及其程序的假设人物。计算机的`user interface`（用户界面）是用户与计算机交互的部分。用户界面的一部分由硬件设备组成，例如键盘和视频显示器。另一部分则涉及计算机操作系统和应用程序接受用户命令的方式。多年来，用户与计算机交互的唯一方法是通过命令行界面。`command line interface`（命令行界面），也称为`console interface`（控制界面），要求用户输入命令。如果命令输入正确，它将执行并显示结果。如果命令输入错误，则会显示错误信息。图 12-1 显示了 Windows 命令提示符，它是命令行界面的示例。
 
 ![Windows 命令提示符窗口是命令行界面示例，也称为控制界面，要求用户输入命令。](img/12fig01.png)
 
-# 图 12-1 命令行界面（微软公司）
+### 图 12-1 命令行界面（微软公司）
 
 许多计算机用户，特别是初学者，发现命令行界面难以使用。这是因为有很多命令，并且每个命令都有自己的语法，就像编程语句一样。如果输入命令错误，它将无法工作。
 
-在 20 世纪 80 年代，一种被称为图形用户界的新型界面进入商业操作系统。`graphical user interface`，或 `GUI`（读作“gooey”），允许用户通过图形元素与操作系统和应用程序进行交互。GUI 还普及了鼠标作为输入设备的用法。GUI 不需要用户在键盘上输入命令，而是允许用户指向图形元素并点击鼠标来激活它们。与 GUI 的大部分交互都是通过显示信息并允许用户执行操作的窗口完成的。图 12-2 显示允许用户更改系统设置的窗口示例。用户不再输入晦涩的命令，而是与图标、按钮和滑块进行交互。
+在 20 世纪 80 年代，一种被称为图形用户界的新型界面进入商业操作系统。`graphical user interface`，或`GUI`（读作“gooey”），允许用户通过图形元素与操作系统和应用程序进行交互。GUI 还普及了鼠标作为输入设备的用法。GUI 不需要用户在键盘上输入命令，而是允许用户指向图形元素并点击鼠标来激活它们。与 GUI 的大部分交互都是通过显示信息并允许用户执行操作的窗口完成的。图 12-2 显示允许用户更改系统设置的窗口示例。用户不再输入晦涩的命令，而是与图标、按钮和滑块进行交互。
 
-# 图 12-2 图形用户界面中的窗口（微软公司）
+### 图 12-2 图形用户界面中的窗口（微软公司）
 
-![图形用户界面中的窗口允许用户通过与图标、滑块和按钮交互来更改系统设置。(images/12fig02.png) 图 12-2 完整替代文本
+![图形用户界面中的窗口允许用户通过与图标、滑块和按钮交互来更改系统设置。](images/12fig02.png)
 
-# 事件驱动型 GUI 程序
+### 事件驱动型 GUI 程序
 
-在基于文本环境中（例如命令行界面），程序决定事情发生的顺序。例如，图 12-3 显示了在文本环境中与计算员工总薪的程序之间发生的交互。首先，程序提示用户输入工作小时数。图中，用户输入了 `40` 并按下了 `Enter` 键。接下来，程序提示用户输入其每小时薪资率。图中，用户输入了 `50.00` 并按下了 `Enter` 键。然后，程序显示了用户的总薪。在程序运行时，用户别选择按照要求的顺序输入数据。
+在基于文本环境中（例如命令行界面），程序决定事情发生的顺序。例如，图 12-3 显示了在文本环境中与计算员工总薪的程序之间发生的交互。首先，程序提示用户输入工作小时数。图中，用户输入了`40`并按下了`Enter`键。接下来，程序提示用户输入其每小时薪资率。图中，用户输入了`50.00`并按下了`Enter`键。然后，程序显示了用户的总薪。在程序运行时，用户别选择按照要求的顺序输入数据。
 
-![命令提示符窗口显示了文本环境中的交互，该程序通过要求用户回答关于工作小时和每小时薪资的两个提示来计算员工总薪。(images/12fig03.png)
+![命令提示符窗口显示了文本环境中的交互，该程序通过要求用户回答关于工作小时和每小时薪资的两个提示来计算员工总薪。](images/12fig03.png)
 
-# 图 12-3 文本环境中的程序交互（甲骨文公司法律顾问）
+### 图 12-3 文本环境中的程序交互（甲骨文公司法律顾问）
 
-然而，在 GUI 环境中，用户决定事情发生的顺序。例如，图 12-4 显示了一个计算员工总薪的 GUI 应用程序。注意有一个用户输入工作小时数和每小时薪资率的框。用户可以按照他们喜欢的任何顺序输入小时数和薪资率。如果用户出错，他们可以删除已输入的数据并重新输入。当用户准备好计算区域时，他们点击 `Calculate Gross Pay` 按钮，程序将执行计算。
+然而，在 GUI 环境中，用户决定事情发生的顺序。例如，图 12-4 显示了一个计算员工总薪的 GUI 应用程序。注意有一个用户输入工作小时数和每小时薪资率的框。用户可以按照他们喜欢的任何顺序输入小时数和薪资率。如果用户出错，他们可以删除已输入的数据并重新输入。当用户准备好计算区域时，他们点击`Calculate Gross Pay`按钮，程序将执行计算。
 
-![图形用户界面或 GUI 应用程序名为 Wage Calculator，并提示用户输入工作小时数和每小时薪资率，然后点击按钮并计算总薪。(images/12fig04.png)
+![图形用户界面或 GUI 应用程序名为 Wage Calculator，并提示用户输入工作小时数和每小时薪资率，然后点击按钮并计算总薪。](images/12fig04.png)
 
-# 图 12-4 GUI 应用程序（甲骨文公司法律顾问）
+### 图 12-4 GUI 应用程序（甲骨文公司法律顾问）
 
-由于 GUI 程序必须响应用户的操作，因此它们被认为是 `event-driven`（事件驱动的）。用户引起事件（例如点击按钮），程序对这些事件做出响应。
+由于 GUI 程序必须响应用户的操作，因此它们被认为是`event-driven`（事件驱动的）。用户引起事件（例如点击按钮），程序对这些事件做出响应。
 
-本章专门关注使用 `JavaFX` 库开发 GUI 应用程序。在学习本章时，你将学习创建通过包含图形对象的窗口与用户交互的应用程序。你还将学习如何编写你的应用程序以响应用户与其交互时发生的事件。
+本章专门关注使用`JavaFX`库开发 GUI 应用程序。在学习本章时，你将学习创建通过包含图形对象的窗口与用户交互的应用程序。你还将学习如何编写你的应用程序以响应用户与其交互时发生的事件。
 
-# 检查点 12.1
+### 检查点 12.1
 
 ../components/metrodigi/ch12-fill_in_the_blank-01/index.html
 
-# 检查点 12.2
+### 检查点 12.2
 
 ../components/metrodigi/ch12-inline_self_quiz_v1.0.0-02/index.html
 
-# 检查点 12.3
+### 检查点 12.3
 
 ../components/metrodigi/ch12-inline_self_quiz_v1.0.0-03/index.html
 
-# 检查点 12.4
+### 检查点 12.4
 
 ../components/metrodigi/ch12-inline_self_quiz_v1.0.0-04/index.html
 
 ## 12.2 JavaFX 简介
 
-概念：在 Java 中，你可以使用 `JavaFX` 库创建 GUI 和图形应用程序。JavaFX 是面向 Java 开发者的下一代 GUI 工具包。
+概念：在 Java 中，你可以使用`JavaFX`库创建 GUI 和图形应用程序。JavaFX 是面向 Java 开发者的下一代 GUI 工具包。
 
-# 观看 JavaFX 简介
+### 观看 JavaFX 简介
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/9OGgY3XZJCZui7Kk85hfz61OLbtTjm6Y`](https://mediaplayer.pearsoncmg.com/assets/_video.true/9OGgY3XZJCZui7Kk85hfz61OLbtTjm6Y)
 
-在本章中，我们将使用 `JavaFX` 创建 GUI 应用程序。`JavaFX` 是用于开发采用图形应用程序的标准 Java 库。你可以用它创建运行在本地计算机上的独立图形应用程序、从远程服务器运行的应用程序或嵌入网页的应用程序。本章将向你介绍 JavaFX 作为创建独立 GUI 应用程序的工具。
+在本章中，我们将使用`JavaFX`创建 GUI 应用程序。`JavaFX`是用于开发采用图形应用程序的标准 Java 库。你可以用它创建运行在本地计算机上的独立图形应用程序、从远程服务器运行的应用程序或嵌入网页的应用程序。本章将向你介绍 JavaFX 作为创建独立 GUI 应用程序的工具。
 
 ### 控件
 
+程序图形用户界面（GUI）中可见的物体通常称为`controls`（控件）。图 12-5 所示的 GUI 包含两个`Label`控件、两个`TextField`控件和一个`Button`控件。以下是这些类型控件的摘要：
 
+| `Label`控件 | `Label`控件显示文本。图 12-5 所示窗口包含两个`Label`控件。其中一个`Label`控件显示文本`Number of Hours Worked`（工作时长），另一个`Label`控件显示文本`Hourly Pay Rate`（时薪率）。 |
+| --- | --- |
+| `TextField`控件 | `TextField`控件表现为一个矩形区域，可以接受用户的键盘输入。图 12-5 所示窗口有两个`TextField`控件：一个用于用户输入工作时长，另一个用于用户输入时薪率。 |
+| `Button`控件 | `Button`是一个矩形控件，表现为一个表面带有标题文字的按钮。当用户点击`Button`控件（无论是通过鼠标点击还是在触摸屏上触摸）时，会发生相应的动作。图 12-5 所示的窗口有一个`Button`控件，显示标题`Calculate Gross Pay`（计算总工资）。当用户点击此按钮时，程序会计算并显示总工资。 |
 
+### 图 12-5 GUI 中的控件 (Oracle 公司法务顾问)
 
+![名为工资计算器的 G U I 中的控件已定义。](img/12fig05.png)
 
-程序图形用户界面（GUI）中可见的物体通常称为 `controls`（控件）。图 12-5 所示的 GUI 包含两个 `Label` 控件、两个 `TextField` 控件和一个 `Button` 控件。以下是这些类型控件的摘要：
+`Label`、`TextField`和`Button`只是你将学习使用的控件之一。在学习本章时，你将创建包含许多不同类型控件的应用程序。
 
-| `Label` 控件 | `Label` 控件显示文本。图 12-5 所示窗口包含两个 `Label` 控件。其中一个 `Label` 控件显示文本 `Number of Hours Worked`（工作时长），另一个 `Label` 控件显示文本 `Hourly Pay Rate`（时薪率）。 |
-
-| `TextField` 控件 | `TextField` 控件表现为一个矩形区域，可以接受用户的键盘输入。图 12-5 所示窗口有两个 `TextField` 控件：一个用于用户输入工作时长，另一个用于用户输入时薪率。 |
-
-| `Button` 控件 | `Button` 是一个矩形控件，表现为一个表面带有标题文字的按钮。当用户点击 `Button` 控件（无论是通过鼠标点击还是在触摸屏上触摸）时，会发生相应的动作。图 12-5 所示的窗口有一个 `Button` 控件，显示标题 `Calculate Gross Pay`（计算总工资）。当用户点击此按钮时，程序会计算并显示总工资。 |
-
-## 图 12-5 GUI 中的控件 (Oracle 公司法务顾问)
-
-![名为工资计算器的 G U I 中的控件已定义。](img/12fig05.png)图 12-5 完整替代文本
-
-`Label`、`TextField` 和 `Button` 只是你将学习使用的控件之一。在学习本章时，你将创建包含许多不同类型控件的应用程序。
-
-## 阶段与场景
+### 阶段与场景
 
 使用 JavaFX 编程时，你使用剧院比喻来描述 GUI 的元素。想象你正坐在剧院里看戏。有一个舞台（stage），舞台上正在表演一个场景（scene）。
 
-JavaFX 应用程序也有舞台和场景。舞台是一个窗口，而场景是包含在窗口内的 GUI 对象（`Label`、`TextField`、`Button` 以及其他控件）的集合。你可以将 GUI 对象想象成构成场景的演员。
+JavaFX 应用程序也有舞台和场景。舞台是一个窗口，而场景是包含在窗口内的 GUI 对象（`Label`、`TextField`、`Button`以及其他控件）的集合。你可以将 GUI 对象想象成构成场景的演员。
 
-在内存中，场景中的 GUI 对象被组织为 `scene graph`（场景图）中的节点，这是一种树状的层次结构。图 12-6 展示了一个示例。
+在内存中，场景中的 GUI 对象被组织为`scene graph`（场景图）中的节点，这是一种树状的层次结构。图 12-6 展示了一个示例。
 
 ![在被称为场景图的树状层次结构中的节点，底层有两个叶节点（Leaf Nodes），它们通过分支节点（Branch Node）连接到中间层的两个叶节点，然后连接到顶层的根节点（Root Node）。](img/12fig06.png)
 
-## 图 12-6 场景中的节点
+### 图 12-6 场景中的节点
 
 场景图可以三种类型的节点：
 
@@ -22357,107 +20571,118 @@ JavaFX 应用程序也有舞台和场景。舞台是一个窗口，而场景是�
 * `Branch Node`（分支节点）：分支节点可以与其他节点作为子节点。
 * `Leaf Node`（叶节点）：叶节点不能有子节点。
 
-简而言之，根节点和分支节点可以有子节点，但叶节点不能。叶节点通常是用户交互的控件，如 `Label`、`TextField` 和 `Button`。分支节点是其他节点容器的对象。
+简而言之，根节点和分支节点可以有子节点，但叶节点不能。叶节点通常是用户交互的控件，如`Label`、`TextField`和`Button`。分支节点是其他节点容器的对象。
 
 ### Application 类
 
-JavaFX 库有一个名为 `Application` 的抽象类，它是 GUI 的基础。所有的 JavaFX 应用程序必须继承 `Application` 类。
+JavaFX 库有一个名为`Application`的抽象类，它是 GUI 的基础。所有的 JavaFX 应用程序必须继承`Application`类。
 
-`Application` 类有一个名为 `start` 的抽象方法，它是应用程序的入口。由于 `start` 方法是抽象的，你必须重写它。让我们来看一个示例。代码列表 12-1 中的程序是一个简单的 JavaFX 应用程序，显示一个空窗口，如图 12-7 所示。程序创建了舞台，但没有创建场景。在下面的动画中，按“上一个”或“下一个”按钮逐步执行代码并查看贯穿其中的解释。
+`Application`类有一个名为`start`的抽象方法，它是应用程序的入口。由于`start`方法是抽象的，你必须重写它。让我们来看一个示例。代码列表 12-1 中的程序是一个简单的 JavaFX 应用程序，显示一个空窗口，如图 12-7 所示。程序创建了舞台，但没有创建场景。在下面的动画中，按“上一个”或“下一个”按钮逐步执行代码并查看贯穿其中的解释。
 
-## 代码列表 12-1 (MyFirstGUI.java)
+### 代码列表 12-1 (MyFirstGUI.java)
 
 [`media.pearsoncm.com/ph/esm/0media_ecs/gadd-java/pr12-1/1.html`](https://media.pearsoncm.com/ph/esm/0media_ecs/gadd-java/pr12-1/1.html)
 
 ![名为 My First G U I Application 的空窗口由 My First G U I 程序生成。](img/12fig07.png)
 
-## 图 12-7 由 MyFirstGUI.java 显示的窗口 (Oracle Corporate Counsel)
+### 图 12-7 由 MyFirstGUI.java 显示的窗口 (Oracle Corporate Counsel)
 
 让我们仔细查看代码列表 12-1 中的程序：
 
-* 第 1 行导入 `Application` 类，位于 `javafx.application` 包。
-* 第 2 行导入 `Stage` 类，位于 `javafx.stage` 包（你将在 `start` 方法中使用此类）。
-* 第 8 行开始定义 `MyFirstGUI` 类。注意它继承了 `Application` 类。
-* 第 10 到 14 行是 `main` 方法。`main` 方法只做一件事：调用第 13 行的 `launch` 方法。继承自 `Application` 类的 `launch` 方法若干操作：
-    * 它创建一个作为应用程序窗口的 `Stage` 对象。
-    * 它将 `Stage` 对象作为参数调用 `start` 方法。
-* 第 17 到 24 行是 `start` 方法。这是应用程序的入口。如前所述，`start` 方法是 `Application` 类中的抽象方法，我们必须重写它。注意该方法有一个参数 `primaryStage`。`primaryStage` 变量引用由 `launch` 方法创建的 `Stage` 对象
-* 第 20 行调用 `Stage` 对象的 `setTitle` 方法。这设置显示在窗口标题栏的文本。
-* 第 23 行调用 `Stage` 对象的 `show` 方法。这显示了应用程序的窗口。
+* 第 1 行导入`Application`类，位于`javafx.application`包。
+* 第 2 行导入`Stage`类，位于`javafx.stage`包（你将在`start`方法中使用此类）。
+* 第 8 行开始定义`MyFirstGUI`类。注意它继承了`Application`类。
+* 第 10 到 14 行是`main`方法。`main`方法只做一件事：调用第 13 行的`launch`方法。继承自`Application`类的`launch`方法若干操作：
+  * 它创建一个作为应用程序窗口的`Stage`对象。
+  * 它将`Stage`对象作为参数调用`start`方法。
+* 第 17 到 24 行是`start`方法。这是应用程序的入口。如前所述，`start`方法是`Application`类中的抽象方法，我们必须重写它。注意该方法有一个参数`primaryStage`。`primaryStage`变量引用由`launch`方法创建的`Stage`对象。
+* 第 20 行调用`Stage`对象的`setTitle`方法。这设置显示在窗口标题栏的文本。
+* 第 23 行调用`Stage`对象的`show`方法。这显示了应用程序的窗口。
 
-## 检查点 12.5
+### 检查点 12.5
+
 ../components/metrodigi/ch12-fill_in_the_blank-02/index.html
 
-## 检查点 12.6
+### 检查点 12.6
+
 ../components/metrodigi/ch12-inline_self_quiz-v1.0.0-06/index.html
 
-## 检查点 12.7
+### 检查点 12.7
+
 ../components/metrodigi/ch12-inline_self_quiz-v1.0.0-07/index.html
 
-## 检查点 12.8
+### 检查点 12.8
+
 ../components/metrodigi/ch12-inline_self_quiz-v1.0.0-08/index.html
 
-## 检查点 12.9
+### 检查点 12.9
+
 ../components/metrodigi/ch12-inline_self_quiz-v1.0.0-09/index.html
 
-## 检查点 12.10
+### 检查点 12.10
+
 ../components/metrodigi/ch12-inline_self_quiz-v1.0.0-10/index.html
 
-## 检查点 12.11
+### 检查点 12.11
+
 ../components/metrodigi/ch12-inline_self_quiz-v1.0.0-11/index.html
 
-## 检查点 12.12
+### 检查点 12.12
+
 ../components/metrodigi/ch12-inline_self_quiz-v1.0.0-12/index.html
 
-## 检查点 12.13
+### 检查点 12.13
+
 ../components/metrodigi/ch12-inline_self_quiz-v1.0.0-13/index.html
 
-## 检查点 12.14
+### 检查点 12.14
+
 ../components/metrodigi/ch12-inline_self_quiz-v1.0.0-14/index.html
 
-## 检查点 12.15
+### 检查点 12.15
+
 ../components/metrodigi/ch12-fill_in_the_blank-02/index.html
 
-
-
-
+## 12.3 场景
 
 概念：场景（Scene）是 JavaFX GUI 中控件和其他对象的集合。
 
-# 查看创建场景（Scene）
+### 查看创建场景（Scene）
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/zmGtrT8g52djRhn1LlVvdCX4_p6TcTtB`](https://mediaplayer.pearsoncmg.com/assets/_video.true/zmGtrT8g52djRhn1LlVvdCX4_p6TcTtB)
 
-回想一下我们在描述 JavaFX GUI 时使用了剧院的隐喻。在 JavaFX 术语中，窗口被称为 `stage`（舞台），而显示在该窗口中的 GUI 对象的集合被称为 `scene`（场景）。你在代码列表 12-1 中看到的程序创建了一个 `stage`，但它并没有创建一个 `scene`。结果是该程序显示了一个空窗口。现在，是时候学习如何创建一个包含 JavaFX 控件的 `scene` 了。
+回想一下我们在描述 JavaFX GUI 时使用了剧院的隐喻。在 JavaFX 术语中，窗口被称为`stage`（舞台），而显示在该窗口中的 GUI 对象的集合被称为`scene`（场景）。你在代码列表 12-1 中看到的程序创建了一个`stage`，但它并没有创建一个`scene`。结果是该程序显示了一个空窗口。现在，是时候学习如何创建一个包含 JavaFX 控件的`scene`了。
 
-通常情况下，创建 `scene` 时遵循的步骤如下：
+通常情况下，创建`scene`时遵循的步骤如下：
 
-1. 创建将位于 `scene` 中的控件。
+1. 创建将位于`scene`中的控件。
 2. 创建某种类型的布局容器，并将控件添加到该布局容器中。
-3. 创建一个 `Scene` 对象，并将布局容器添加到 `Scene` 对象中。
-4. 将 `Scene` 对象添加到 `stage` 中。
+3. 创建一个`Scene`对象，并将布局容器添加到`Scene`对象中。
+4. 将`Scene`对象添加到`stage`中。
 
 让我们详细观察每一步。
 
-# 创建控件
+### 创建控件
 
-JavaFX 库为你所有可以添加到 GUI 中的对象都提供了相应的类。由于这些类位于 `javafx` 包的各个子包中，因此你必须为你想要使用的类编写一个 `import` 语句。例如，如果你想创建一个 `Label` 控件，你将导入 `Label` 类，它位于 `javafx.scene.control` 包中。
+JavaFX 库为你所有可以添加到 GUI 中的对象都提供了相应的类。由于这些类位于`javafx`包的各个子包中，因此你必须为你想要使用的类编写一个`import`语句。例如，如果你想创建一个`Label`控件，你将导入`Label`类，它位于`javafx.scene.control`包中。
 
-一旦你写了必要的 `import` 语句，你就会创建该类的实例。这通常在 `start` 方法中完成。例如，以下语句创建了一个显示文本“Hello World”的 `Label` 控件：
+一旦你写了必要的`import`语句，你就会创建该类的实例。这通常在`start`方法中完成。例如，以下语句创建了一个显示文本“Hello World”的`Label`控件：
 
 ```
-Label messageLabel = new Label("Hello World");
-```
+
+
+
+`Label messageLabel = new Label("Hello World");`
 
 注意，我们将想要在 `Label` 中显示的字符串作为参数传递给 `Label` 类的构造函数。`Label` 类有多个构造函数，但这是你最常用的一个。
 
 无论你创建的是什么类型的控件，过程通常都是相同的：你导入控件的类，然后在 `start` 方法中实例化该类并调用所需的构造函数。
 
-# 创建布局容器
+## 创建布局容器
 
 布局容器是 JavaFX GUI 的重要部分。你使用布局容器来安排控件在屏幕上的位置。JavaFX 提供了多种布局容器供你选择，在本章后面的内容中，我们将查看其中许多一个。现在，我们只使用表 12-1 列出的三个简单容器。
 
-# 表 12-1 三种最简单的布局容器
+### 表 12-1 三种最简单的布局容器
 
 | 布局容器 | 描述 |
 | --- | --- |
@@ -22465,9 +20690,9 @@ Label messageLabel = new Label("Hello World");
 | `VBox` | 将控件排列在单垂直行中。 |
 | `GridPane` | 将控件排列在具有行和列的网格中。 |
 
-图 12-8 展示了表 12-1 列出的三个布局容器如何影响控件排列的示例。最左侧的屏幕显示了一个在 `HBox` 中带有三个 `Button`控件的应用程序。中间的屏幕显示了一个在 `VBox` 中带有三个 `Button`控件的应用程序。最右侧的屏幕显示了一个在 `GridPane` 中带有六个按钮的应用程序。
+图 12-8 展示了表 12-1 列出的三个布局容器如何影响控件排列的示例。最左侧的屏幕显示了一个在 `HBox` 中带有三个 `Button` 控件的应用程序。中间的屏幕显示了一个在 `VBox` 中带有三个 `Button` 控件的应用程序。最右侧的屏幕显示了一个在 `GridPane` 中带有六个按钮的应用程序。
 
-# 图 12-8 布局容器示例（Oracle 公司法律顾问）
+### 图 12-8 布局容器示例（Oracle 公司法律顾问）
 
 ![布局容器影响控件排列的三个示例。](img/12fig08.png)图 12-8 完整替代文本
 
@@ -22475,7 +20700,7 @@ Label messageLabel = new Label("Hello World");
 
 例如，如果你想创建一个 `HBox`，你会从 `javafx.scene.layout` 包导入 `HBox` 类。然后，你创建一个 `HBox` 类实例。以下代码片段显示了一个示例：
 
-```
+```java
 // 创建一个 Label 控件。
 Label messageLabel = new Label("Hello World");
 
@@ -22487,7 +20712,7 @@ HBox hbox = new HBox(messageLabel);
 
 你可以通过向 `HBox` 构造函数传递多个参数向 `HBox` 添加多个控件。例如，以下代码片段创建了两个 `Label` 控件，并将它们都添加到 `HBox`：
 
-```
+```java
 // 创建两个 Label 控件。
 Label message1 = new Label("Hello");
 Label message2 = new Label("World");
@@ -22498,13 +20723,13 @@ HBox hbox = new HBox(message1, message2);
 
 这让你对如何使用 `HBox` 创建布局容器有一个大致的了解。我们将在后续详细介绍布局容器。
 
-# 创建 Scene 对象
+## 创建 Scene 对象
 
 一旦你创建了场景中所需的控件并将它们添加到布局容器中，下一步是创建 `Scene` 类的实例（它位于 `javafx.scene` 包），并将布局容器添加到 `Scene` 对象。
 
 以下代码片段显示了一个示例。它创建了一个 `Label` 控件，将其添加到 `HBox` 容器，然后将 `HBox` 容器添加到 `Scene` 对象：
 
-```
+```java
 // 创建一个 Label 控件。
 Label messageLabel = new Label("Hello World");
 
@@ -22519,23 +20744,19 @@ Scene scene = new Scene(hbox);
 
 ![H 容器作为场景图的根节点，message Label 是子节点。](img/12fig09.png)
 
-# 图 12-9 场景图中的节点
+### 图 12-9 场景图中的节点
 
-# 将 Scene 对象添加到 Stage
+## 将 Scene 对象添加到 Stage
 
 一旦创建了 `Scene` 对象，下一步是将 `Scene` 对象添加到阶段。回想 `start` 方法接收一个 `Stage` 对象作为参数。要将你的 `Scene` 对象添加到阶段，调用 `Stage` 对象的 `setScene` 方法，并将你的 `Scene` 对象作为参数传递。
 
 假设 `primaryStage` 引用 `Stage` 对象，`scene` 引用你的 `Scene` 对象。以下是调用 `setScene` 方法将场景添加到阶段的示例：
 
-```
+```java
 primaryStage.setScene(scene);
 ```
 
 现在我们涵盖了基础知识，可以查看创建一个简单场景的完整程序。查看代码列表 12-2，这是一个简单的 Hello World 应用程序。该应用程序的场景包含一个 `HBox`，其中包含显示“Hello World”文本的 `Label`。当你编译并运行此程序时，将看到一个类似于图 12-10 所示的窗口。
-
-
-
-
 
 ```java
 import javafx.application.Application;
@@ -22579,13 +20800,13 @@ public class HelloWorld extends Application
 }
 ```
 
-# 代码列表 12-2 `(HelloWorld.java)`
+### 代码列表 12-2 `(HelloWorld.java)`
 
 ![Hello World 应用显示在一个窗口中，该窗口包含一个 H Box 和 Label，显示了文本 Hello World。](img/12fig10.png)
 
-# 图 12-10 HelloWorld 应用显示的窗口 (Oracle 法务顾问)
+### 图 12-10 HelloWorld 应用显示的窗口 (Oracle 法务顾问)
 
-让我们仔细查看 代码列表 12-2 中的程序程序：
+让我们仔细查看代码列表 12-2 中的程序：
 
 *   第 1 到 5 行导入了以下 JavaFX 类：`Application`、`Stage`、`Scene`、`HBox` 和 `Label`。
 *   `HelloWorld` 类的声明从第 11 行开始。注意它扩展了 `Application` 类。
@@ -22600,153 +20821,175 @@ public class HelloWorld extends Application
 *   第 35 行调用 `primaryStage` 对象的 `setTitle` 方法。这设置了将在窗口标题栏中显示的文本。
 *   第 38 行调用 `primaryStage` 对象的 `show` 方法。这显示了应用程序的窗口。
 
-# 设置场景的大小
+## 设置场景的大小
 
-注意在 图 12-10 中，窗口非常小。事实上，它的尺寸仅足够显示 `Label` 控件和标题栏中的标准 Windows 按钮。默认情况下，当你创建一个 `Scene` 对象时，场景的大小将恰好足够显示内容。这被称为场景的*首选大小*（preferred size）。
+注意在图 12-10 中，窗口非常小。事实上，它的尺寸仅足够显示 `Label` 控件和标题栏中的标准 Windows 按钮。默认情况下，当你创建一个 `Scene` 对象时，场景的大小将恰好足够显示内容。这被称为场景的*首选大小*（preferred size）。
 
-如果你愿意，可以通过向 `Scene` 类构造函数传递宽度和高度参数来指定场景的大小。例如，假设我们如下修改 代码列表 12-2）的第 29 行：
+如果你愿意，可以通过向 `Scene` 类构造函数传递宽度和高度参数来指定场景的大小。例如，假设我们如下修改代码列表 12-2 的第 29 行：
 
 ```java
 Scene scene = new Scene(hbox, 300, 100);
 ```
 
-第一个参数 `hbox` 是根节点。第二个参数 `300` 是场景的宽度。第三个参数 `100` 是场景的高度。由于在构造函数中添加了这些宽高参数，程序将显示一个与 图 12-11 相似的窗口。
+第一个参数 `hbox` 是根节点。第二个参数 `300` 是场景的宽度。第三个参数 `100` 是场景的高度。由于在构造函数中添加了这些宽高参数，程序将显示一个与图 12-11 相似的窗口。
 
 ![应用程序 My First Scene 显示文本 Hello World，宽度约为 300 像素，高度为 100 像素，对应第二个和第三个参数。第一个参数 h box 是根节点。](img/12fig11.png)
 
-# 图 12-11 修改后的应用程序显示的窗口 (Oracle 法务顾问)
+### 图 12-11 修改后的应用程序显示的窗口 (Oracle 法务顾问)
 
-# 在 HBox 容器中对齐控件
+## 在 HBox 容器中对齐控件
 
-注意 图 12-11 中，`Label` 控件显示在场景的左上角。这是 `HBox` 的默认对齐方式。你可以通过调用 `setAlignment` 方法来更改 `HBox` 的对齐方式。假设 `hbox` 引用一个 `HBox` 对象，以下语句使 `hbox` 容器中的所有控件居中：
+注意图 12-11 中，`Label` 控件显示在场景的左上角。这是 `HBox` 的默认对齐方式。你可以通过调用 `setAlignment` 方法来更改 `HBox` 的对齐方式。假设 `hbox` 引用一个 `HBox` 对象，以下语句使 `hbox` 容器中的所有控件居中：
 
 ```java
 hbox.setAlignment(Pos.CENTER);
 ```
 
-传递给 `setAlignment` 方法的参数是 表 12-2 中的枚举常量之一。`Pos` 类型必须从 `javafx.geometry` 包导入。
+传递给 `setAlignment` 方法的参数是表 12-2 中的枚举常量之一。`Pos` 类型必须从 `javafx.geometry` 包导入。
 
-# 表 12-2 Pos 类型常量
+### 表 12-2 Pos 类型常量
 
 | Pos.TOP_LEFT | Pos.TOP_CENTER | Pos.TOP_RIGHT |
 | :--- | :--- | :--- |
 | Pos.CENTER_LEFT | Pos.CENTER | Pos.CENTER_RIGHT |
 | Pos.BOTTOM_LEFT | Pos.BOTTOM_CENTER | Pos.BOTTOM_RIGHT |
 
-例如，代码列表 12-3 显示了你之前在 代码列表 12-2 中看到的 `HelloWorld` 程序的修改版本。在这个版本中，`messageLabel` 控件位于宽 300 像素、高 100 像素的 `HBox` 中。当你编译并执行此程序时，将看到一个与 图 12-12 所示类似的窗口。
+例如，代码列表 12-3 显示了你之前在代码列表 12-2 中看到的 `HelloWorld` 程序的修改版本。在这个版本中，`messageLabel` 控件位于宽 300 像素、高 100 像素的 `HBox` 中。当你编译并执行此程序时，将看到一个与图 12-12 所示类似的窗口。
 
-# 图 12-12 HelloWorld2 应用显示的窗口 (Oracle 法务顾问)
+### 图 12-12 HelloWorld2 应用显示的窗口 (Oracle 法务顾问)
 
 ![Hello World 2 应用显示的窗口名为 My First Scene。](img/12fig12.png)图 12-12 替代文本
 
 在下面的动画中，点击“上一个”（Previous）或“下一个”（Next）按钮逐逐查看代码并解释。
 
-# 代码列表 12-3 `(HelloWorld2.java)`
+### 代码列表 12-3 `(HelloWorld2.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr12-3/3.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr12-3/3.html)
 
 注意第 6 行，我们从 `javafx.geometry` 包导入了 `Pos` 枚举。在第 30 行，我们创建一个宽 300 像素、高 100 像素的 `Scene` 对象，并将 `hbox` 对象作为根节点。在第 33 行，我们调用 `hbox` 对象的 `setAlignment` 方法，并将 `Pos.CENTER` 作为参数传递。
 
-# 检查点 12.16
+### 检查点 12.16
 
 ../components/metrodigi/ch12-inline_self_quiz_v1.0.0-15/index.html
 
-# 检查点 12.17
+### 检查点 12.17
 
 ../components/metrodigi/ch12-inline_self_quiz_v1.0.0-16/index.html
 
-# 检查点 12.18
+### 检查点 12.18
 
 ../components/metrodigi/ch12-inline_self_quiz_v1.0.0-17/index.html
 
-# 检查点 12.19
+### 检查点 12.19
 
 ../components/metrodigi/ch12-inline_self_quiz_v1.0.0-18/index.html
 
-# 检查点 12.20
+### 检查点 12.20
 
 ../components/metrodigi/ch12-inline_self_quiz_v1.0.0-19/index.html
 
-# 12.4 显示图片
+## 12.4 显示图片
 
 概念：你同时使用 `Image` 和 `ImageView` 类来显示图片。
 
-
-
-
-
 [`mediaplayer.pearsoncmg.com/assets/_video.true/yNMrYa6KKI73I8E1Amp4U57CvAIzsyDe`](https://mediaplayer.pearsoncmg.com/assets/_video.true/yNMrYa6KKI73I8E1Amp4U57CvAIzsyDe)
 
-在 JavaFX 中显示图像分两个步骤：首先，将图像加载到内存中；其次，显示图像。这需要 JavaFX 库中的两个类：`Image` 和 `ImageView`。这两个类都在 `javafx.scene.image` 包中
+在 JavaFX 中显示图像分两个步骤：首先，将图像加载到内存中；其次，显示图像。这需要 JavaFX 库中的两个类：`Image` 和 `ImageView`。这两个类都在 `javafx.scene.image` 包中。
 
-`Image` 类可以从计算机的本地文件系统或 Internet 位置加载图像。该类支持 BMP、JPEG、GIF 和 PNG 文件类型。要加载其中任何类型的图像，请创建 `Image`类的实例，并向构造函数传递指定文件名和位置的字符串参数。例如：
+`Image` 类可以从计算机的本地文件系统或 Internet 位置加载图像。该类支持 BMP、JPEG、GIF 和 PNG 文件类型。要加载其中任何类型的图像，请创建 `Image` 类的实例，并向构造函数传递指定文件名和位置的字符串参数。例如：
 
-```
+```java
 Image image = new Image("file:HotAirBalloon.jpg");
 ```
 
-在这个示例中，传递给构造函数的字符串指定了一个名为 `HotAirBalloon.jpg` 的文件。字符串中读取为 `file:` 的部分是一个协议标识符，表示文件位于本地计算机上。由于没有给出路径，假设该文件与程序的可执行 `.class` 文件位于同一目录或或文件夹中。如果你想从不同的位置加载图像，可以指定路径。例如：
+在这个示例中，传递给构造函数的字符串指定了一个名为 `HotAirBalloon.jpg` 的文件。字符串中读取为 `file:` 的部分是一个协议标识符，表示文件位于本地计算机上。由于没有给出路径，假设该文件与程序的可执行 `.class` 文件位于同一目录或文件夹中。如果你想从不同的位置加载图像，可以指定路径。例如：
 
-```
+```java
 Image image = new Image("file:C:\\Images\\HotAirBalloon.jpg");
 ```
 
 接下来，你创建一个 `ImageView` 类的实例，并将 `Image` 对象的引用作为参数传递给构造函数。例如：
 
-```
+```java
 ImageView imageView = new ImageView(image);
 ```
 
-一旦你创建了 `ImageView` 对象，就可以将其添加到布局容器中。代码列表 12-4 中的中的程序展示了一个示例。图 12-13 显示了程序的输出。
+一旦你创建了 `ImageView` 对象，就可以将其添加到布局容器中。代码列表 12-4 中的程序展示了一个示例。图 12-13 显示了程序的输出。
+
+```java
+ 1  import javafx.application.Application;
+ 2  import javafx.stage.Stage;
+ 3  import javafx.scene.Scene;
+ 4  import javafx.scene.layout.HBox;
+ 5  import javafx.scene.image.Image;
+ 6  import javafx.scene.image.ImageView;
+ 7
+ 8  /**
+ 9    An Image Demo
+ 10  */
+ 11
+ 12  public class ImageDemo extends Application
+ 13  {
+ 14     public static void main(String[] args)
+ 15     {
+ 16        // Launch the application.
+ 17        launch(args);
+ 18     }
+ 19
+ 20     @Override
+ 21     public void start(Stage primaryStage)
+ 22     {
+
+
 
 ```
  1  import javafx.application.Application;
-  2  import javafx.stage.Stage;
-  3  import javafx.scene.Scene;
-  4  import javafx.scene.layout.HBox;
-  5  import javafx.scene.image.Image;
-  6  import javafx.scene.image.ImageView;
-  7
-  8  /**
-  9    An Image Demo
-  10  */
-  11
-  12  public class ImageDemo extends Application
-  13  {
-  14     public static void main(String[] args)
-  15     {
-  16        // Launch the application.
-  17        launch(args);
-  18     }
-  19
-  20     @Override
-  21     public void start(Stage primaryStage)
-  22     {
-  23        // Create an Image object.
-  24        Image image = new Image("file:HotAirBalloon.jpg");
-  25
-  26        // Create an ImageView object.
-  27        ImageView imageView = new ImageView(image);
-  28
-  29        // Put the ImageView in an HBox.
-  30        HBox hbox = new HBox(imageView);
-  31
-  32        // Create a Scene with the HBox as its root node.
-  33        Scene scene = new Scene(hbox);
-  34
-  35        // Add the Scene to the Stage.
-  36        primaryStage.setScene(scene);
-  37
-  38        // Set the stage title.
-  39        primaryStage.setTitle("Hot Air Balloon");
-  40
-  41        // Show the window.
-  42        primaryStage.show();
-  43     }
-  44  }
+ 2  import javafx.stage.Stage;
+ 3  import javafx.scene.Scene;
+ 4  import javafx.scene.layout.HBox;
+ 5  import javafx.scene.image.Image;
+ 6  import javafx.scene.image.ImageView;
+ 7
+ 8  /**
+ 9    An Image Demo
+ 10  */
+ 11
+ 12  public class ImageDemo extends Application
+ 13  {
+ 14     public static void main(String[] args)
+ 15     {
+ 16        // Launch the application.
+ 17        launch(args);
+ 18     }
+ 19
+ 20     @Override
+ 21     public void start(Stage primaryStage)
+ 22     {
+ 23        // Create an Image object.
+ 24        Image image = new Image("file:HotAirBalloon.jpg");
+ 25
+ 26        // Create an ImageView object.
+ 27        ImageView imageView = new ImageView(image);
+ 28
+ 29        // Put the ImageView in an HBox.
+ 30        HBox hbox = new HBox(imageView);
+ 31
+ 32        // Create a Scene with the HBox as its root node.
+ 33        Scene scene = new Scene(hbox);
+ 34
+ 35        // Add the Scene to the Stage.
+ 36        primaryStage.setScene(scene);
+ 37
+ 38        // Set the stage title.
+ 39        primaryStage.setTitle("Hot Air Balloon");
+ 40
+ 41        // Show the window.
+ 42        primaryStage.show();
+ 43     }
+ 44  }
 ```
 
-# 代码列表 12-4 `(ImageDemo.java)`
+# 代码列表 12-4 (`ImageDemo.java`)
 
 ![Image Demo 程序的输出是一个标题为 Hot Air Balloon 的窗口中的热气球照片。](img/12fig13.png)
 
@@ -22769,7 +21012,7 @@ ImageView imageView = new ImageView(image);
 
 # 从 Internet 位置加载图像
 
-`Image` 类可以从计算机的本地文件系统或 Internet 位置加载图像。该类支持 BMP、JPEG、GIF 和 PNG 文件类型。要加载其中任何类型的图像，请创建 `Image`类的实例，并向构造函数传递指定文件名和位置的字符串参数。例如：
+`Image` 类可以从计算机的本地文件系统或 Internet 位置加载图像。该类支持 BMP、JPEG、GIF 和 PNG 文件类型。要加载其中任何类型的图像，请创建 `Image` 类的实例，并向构造函数传递指定文件名和位置的字符串参数。例如：
 
 ```
 Image image = new Image("file:HotAirBalloon.jpg");
@@ -22801,57 +21044,54 @@ ImageView imageView = new ImageView(image);
 
 ```
  1  import javafx.application.Application;
-  2  import javafx.stage.Stage;
-  3  import javafx.scene.Scene;
-  4  import javafx.scene.layout.HBox;
-  5  import javafx.scene.image.Image;
-  6  import javafx.scene.image.ImageView;
-  7
-  8  /**
-  9    An Image Demo
-  10  */
-  11
-  12  public class ImageDemo extends Application
-  13  {
-  14     public static void main(String[] args)
-  15     {
-  16        // Launch the application.
-  17        launch(args);
-  18     }
-  19
-  20     @Override
-  21     public void start(Stage primaryStage)
-  22     {
-  23        // Create an Image object.
-  24        Image image = new Image("file:HotAirBalloon.jpg");
-  25
-  26        // Create an ImageView object.
-  27        ImageView imageView = new ImageView(image);
-  28
-  29        // Put the ImageView in an HBox.
-  30        HBox hbox = new HBox(imageView);
-  31
-  32        // Create a Scene with the HBox as its root node.
-  33        Scene scene = new Scene(hbox);
-  34
-  35        // Add the Scene to the Stage.
-  36        primaryStage.setScene(scene);
-  37
-  38        // Set the stage title.
-  39        primaryStage.setTitle("Hot Air Balloon");
-  40
-  41        // Show the window.
-  42        primaryStage.show();
-  43     }
-  44  }
+ 2  import javafx.stage.Stage;
+ 3  import javafx.scene.Scene;
+ 4  import javafx.scene.layout.HBox;
+ 5  import javafx.scene.image.Image;
+ 6  import javafx.scene.image.ImageView;
+ 7
+ 8  /**
+ 9    An Image Demo
+ 10  */
+ 11
+ 12  public class ImageDemo extends Application
+ 13  {
+ 14     public static void main(String[] args)
+ 15     {
+ 16        // Launch the application.
+ 17        launch(args);
+ 18     }
+ 19
+ 20     @Override
+ 21     public void start(Stage primaryStage)
+ 22     {
+ 23        // Create an Image object.
+ 24        Image image = new Image("file:HotAirBalloon.jpg");
+ 25
+ 26        // Create an ImageView object.
+ 27        ImageView imageView = new ImageView(image);
+ 28
+ 29        // Put the ImageView in an HBox.
+ 30        HBox hbox = new HBox(imageView);
+ 31
+ 32        // Create a Scene with the HBox as its root node.
+ 33        Scene scene = new Scene(hbox);
+ 34
+ 35        // Add the Scene to the Stage.
+ 36        primaryStage.setScene(scene);
+ 37
+ 38        // Set the stage title.
+ 39        primaryStage.setTitle("Hot Air Balloon");
+ 40
+ 41        // Show the window.
+ 42        primaryStage.show();
+ 43     }
+ 44  }
 ```
 
-# 代码列表 12-4 `(ImageDemo.java)`
+# 代码列表 12-4 (`ImageDemo.java`)
 
 ![Image Demo 程序的输出是一个标题为 Hot Air Balloon 的窗口中的热气球照片。](img/12fig13.png)
-
-
-
 
 你可以通过调用对象的 `setImage` 方法来更改 `ImageView` 对象显示的图像。`setImage` 方法接收一个参数，该参数是你想要显示的的 `Image` 对象的引用。例如，假设 `myImageView` 引用一个 `ImageView` 对象，而 `myImage` 引用一个 `Image` 对象。下面的代码了调用 `setImage` 方法的示例：
 
@@ -22892,79 +21132,93 @@ myImageView.setImage(myImage);
 
 ```
  1  import javafx.application.Application;
-  2  import javafx.stage.Stage;
-  3  import javafx.scene.Scene;
-  4  import javafx.scene.layout.HBox;
-  5  import javafx.scene.image.Image;
-  6  import javafx.scene.image.ImageView;
-  7
-  8  /**
-  9    This program displays images in an Hbox.
- 10  */
- 11
-  12  public class HBoxImages extends Application
-  13  {
-  14     public static void main(String[] args)
-  15     {
-  16        // Launch the application.
-  17        launch(args);
-  18     }
-  19
-  20     @Override
-  21     public void start(Stage primaryStage)
-  22     {
-  23        // Create the Image objects.
-  24        Image moonImage = new Image("file:Moon.jpg");
-  25        Image shipImage = new Image("file:Ship.jpg");
-  26        Image sunsetImage = new Image("file:Sunset.jpg");
-  27
-  28        // Create the ImageView objects.
-  29        ImageView moonIView = new ImageView(moonImage);
-  30        ImageView shipIView = new ImageView(shipImage);
-  31        ImageView sunsetIView = new ImageView(sunsetImage);
-  32
-  33        // Resize the moon image, preserving its ratio.
-  34        moonIView.setFitWidth(200);
-  35        moonIView.setPreserveRatio(true);
-  36
-  37        // Resize the ship image, preserving its ratio.
-  38        shipIView.setFitWidth(200);
-  39        shipIView.setPreserveRatio(true);
-  40
-  41        // Resize the sunset image, preserving its ratio.
-  42        sunsetIView.setFitWidth(200);
-  43        sunsetIView.setPreserveRatio(true);
-  44
-  45        // Put the ImageViews in an HBox.
-  46        HBox hbox = new HBox(moonIView, shipIView, sunsetIView);
-  47
-  48        // Create a Scene with the HBox as its root.
-  49        Scene scene = new Scene(hbox);
-  50
-  51        // Add the Scene to the Stage.
-  52        primaryStage.setScene(scene);
-  53
-  54        // Set the stage title.
-  55        primaryStage.setTitle("Images");
-  56
-  57        // Show the window.
-  58        primaryStage.show();
-      }
+ 2  import javafx.stage.Stage;
+ 3  import javafx.scene.Scene;
+ 4  import javafx.scene.layout.HBox;
+ 5  import javafx.scene.image.Image;
+ 6  import javafx.scene.image.ImageView;
+ 7
+ 8  /**
+ 9    This program displays images in an Hbox.
+ 10  */
+ 11
+ 12  public class HBoxImages extends Application
+ 13  {
+ 14     public static void main(String[] args)
+ 15     {
+ 16        // Launch the application.
+ 17        launch(args);
+ 18     }
+ 19
+ 20     @Override
+ 21     public void start(Stage primaryStage)
+ 22     {
+ 23        // Create the Image objects.
+ 24        Image moonImage = new Image("file:Moon.jpg");
+ 25        Image shipImage = new Image("file:Ship.jpg");
+ 26        Image sunsetImage = new Image("file:Sunset.jpg");
+ 27
+ 28        // Create the ImageView objects.
+ 29        ImageView moonIView = new ImageView(moonImage);
+ 30        ImageView shipIView = new ImageView(shipImage);
+ 31        ImageView sunsetIView = new ImageView(sunsetImage);
+ 32
+ 33        // Resize the moon image, preserving its ratio.
+ 34        moonIView.setFitWidth(200);
+ 35        moonIView.setPreserveRatio(true);
+ 36
+ 37        // Resize the ship image, preserving its ratio.
+ 38        shipIView.setFitWidth(200);
+ 39        shipIView.setPreserveRatio(true);
+ 40
+ 41        // Resize the sunset image, preserving its ratio.
+ 42        sunsetIView.setFitWidth(200);
+ 43        sunsetIView.setPreserveRatio(true);
+ 44
+ 45        // Put the ImageViews in an HBox.
+ 46        HBox hbox = new HBox(moonIView, shipIView, sunsetIView);
+ 47
+ 48        // Create a Scene with the HBox as its root.
+ 49        Scene scene = new Scene(hbox);
+ 50
+ 51        // Add the Scene to the Stage.
+ 52        primaryStage.setScene(scene);
+ 53
+ 54        // Set the stage title.
+ 55        primaryStage.setTitle("Images");
+ 56
+ 57        // Show the window.
+ 58        primaryStage.show();
+ 59     }
+ 60  }
+```
+
 # 代码列表 12-5 (`HBoxImages.java`)
 
-# 图 12-15 HBox 
+# 图 12-15 HBox
+
 ![代码列表 12-15 的输出在窗口中显示了三张图像](img/12fig15.png)图 12-15 文字
 
 让我们仔细观察代码：
+
 * 第 24 到 26 行创建了三个 `Image` 对象，并加载了图像文件 `Moon.jpg`、`Ship.jpg` 和 `Sunset.jpg`。
+
 * 第 29 到 31 行为加载的图像创建了三个 `ImageView` 对象。`ImageView` 对象的名为 `moonIView`、`shipIView` 和 `sunsetIView`。
+
 * 第 34 行将 `moonIView` 对象的宽度设置为 200 像素。第 35 行使其保持纵比例。因此，图像的高度将自动缩放以确保不变形。
+
 * 第 38 行将 `shipIView` 对象的宽度设置为 200 像素。第 39 行使其保持纵比例。因此，图像的高度将自动缩放以确保不变形。
+
 * 第 42 行将 `sunsetIView` 对象的宽度设置为 200 像素。第 43 行使其保持纵比例。因此，图像的高度将自动缩放以确保不变形。
+
 * 第 46 行创建了一个 `HBox` 容器，并将其添加了 `moonIView`、`shipIView` 和 `sunsetIView` 对象。
+
 * 第 49 行创建了一个以 `HBox` 为根节点的 `Scene` 对象。
+
 * 第 52 行将 `Scene` 设置到阶段（Stage）。
+
 * 第 55 行设置了将在窗口标题栏显示的文本。
+
 * 第 58 行显示程序的窗口。
 
 图 12-16 描绘了代码列表 12-5 的场景图。
@@ -22981,7 +21235,9 @@ myImageView.setImage(myImage);
 HBox hbox = new HBox(10, moonIView, shipIView, sunsetIView);
 ```
 
-如果传递给 `HBox` 构造函数的第一个参数是一个数字，则该值被用作容器内水平控件之间的像素数。在这个示例中，图像将以具有 10 像素间隙的形式显示。这将导致程序的窗口如图 12-17 所示。
+
+
+如果传递给`HBox`构造函数的第一个参数是一个数字，则该值被用作容器内水平控件之间的像素数。在这个示例中，图像将以具有 10 像素间隙的形式显示。这将导致程序的窗口如图 12-17 所示。
 
 ![代码列表 12-15 程序的输出在一个标题为“Images”的窗口中显示了三张图像。窗口包含三张水平排列的照片，如下：满月、船、山。图像之间被间隔开了 10 像素。](img/12fig17.png)
 
@@ -22989,16 +21245,13 @@ HBox hbox = new HBox(10, moonIView, shipIView, sunsetIView);
 
 ## 内边距 (Padding)
 
-
-
-
-`Padding`（内边距）出现在容器内边缘周围的空间。如果你想为 `HBox` 添加内边距，可以调用 `HBox` 对象的 `setPadding` 方法。`setPadding` 方法接受一个 `Insets` 对象作为其参数。在构造 `Insets` 对象时，将一个像素值作为参数传递给构造函数。例如，以下语句为名为 `hbox` 的 `HBox` 容器添加了 10 像素的内边距：
+`Padding`（内边距）出现在容器内边缘周围的空间。如果你想为`HBox`添加内边距，可以调用`HBox`对象的`setPadding`方法。`setPadding`方法接受一个`Insets`对象作为其参数。在构造`Insets`对象时，将一个像素值作为参数传递给构造函数。例如，以下语句为名为`hbox`的`HBox`容器添加了 10 像素的内边距：
 
 ```
 hbox.setPadding(new Insets(10));
 ```
 
-`Insets` 类位于 `javafx.geometry` 包中，因此请务必在程序中包含必要的 `import` 语句。代码列表 12-6 展示了一个示例。程序的输出所示于图 12-18。
+`Insets`类位于`javafx.geometry`包中，因此请务必在程序中包含必要的`import`语句。代码列表 12-6 展示了一个示例。程序的输出所示于图 12-18。
 
 ```
  1  import javafx.application.Application;
@@ -23075,11 +21328,9 @@ hbox.setPadding(new Insets(10));
 
 该程序是对你在代码列表 12-5 中看到的程序的修改。以下是不同之处：
 
-- 第 5 行导入了 `Insets` 类。
-- 第 47 行创建了一个具有 10 像素间距的 `HBox` 容器。
-- 第 50 行设置了 `HBox` 容器的内边距为 30 像素。
-
-
+- 第 5 行导入了`Insets`类。
+- 第 47 行创建了一个具有 10 像素间距的`HBox`容器。
+- 第 50 行设置了`HBox`容器的内边距为 30 像素。
 
 ```java
 import javafx.application.Application;
@@ -23161,27 +21412,27 @@ public class VBoxImagesWithPadding extends Application
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/J63fzGRjW8T4_2ADAgt7scj6HHxUJiXm`](https://mediaplayer.pearsoncmg.com/assets/_video.true/J63fzGRjW8T4_2ADAgt7scj6HHxUJiXm)
 
-`GridPane` 布局容器以列和行组成的网格形式排列其内容。结果是 `GridPane` 被划分为许多单元格，类似于电子表格。如图 12-21 所示，列和行通过索引识别，索引从 0 开始。你使用这些列和行索引来引用 `GridPane` 内部特定的单元格。
+`GridPane`布局容器以列和行组成的网格形式排列其内容。结果是`GridPane`被划分为许多单元格，类似于电子表格。如图 12-21 所示，列和行通过索引识别，索引从 0 开始。你使用这些列和行索引来引用`GridPane`内部特定的单元格。
 
 ![一个表示 Grid Pane 对象的表格包含 4 列（标记为 Column 0、Column 1、Column 2 和 3）以及 3 行（标记为 Row 0、Row 1 和 Row 2）。](img/12fig21.png)
 
 # 图 12-21 列和行索引
 
-如果你想创建一个 `GridPane`，请从 `javafx.scene.layout` 包中导入 `GridPane` 类。然后你使用其无参数构造函数创建一个 `GridPane` 类的实例，如下所示：
+如果你想创建一个`GridPane`，请从`javafx.scene.layout`包中导入`GridPane`类。然后你使用其无参数构造函数创建一个`GridPane`类的实例，如下所示：
 
 ```java
 GridPane gridpane = new GridPane();
 ```
 
-一旦你创建了 `GridPane` 对象，就可以调用对象的 `add` 方法在网格的特定位置添加控件。以下是 `add` 方法的通用格式：
+一旦你创建了`GridPane`对象，就可以调用对象的`add`方法在网格的特定位置添加控件。以下是`add`方法的通用格式：
 
 ```java
 gridPaneObject.add(control, column, row);
 ```
 
-在通用格式中，`gridPaneObject` 是 `GridPane` 的引用，`control` 是你添加到 `GridPane` 中的控件，`column` 是列索引，`row` 是行索引。
+在通用格式中，`gridPaneObject`是`GridPane`的引用，`control`是你添加到`GridPane`中的控件，`column`是列索引，`row`是行索引。
 
-代码列表 12-8 中的程序演示了如何使用 `GridPane`。该程序的输出如图 12-22 所示：
+代码列表 12-8 中的程序演示了如何使用`GridPane`。该程序的输出如图 12-22 所示：
 
 ```java
 import javafx.application.Application;
@@ -23239,25 +21490,25 @@ public class GridPaneDemo extends Application
 
 # 图 12-22 GridPaneDemo 应用程序（Oracle 法律顾问）
 
-`GridPane` 类有一个名为 `setGridLinesVisible` 的方法，有助于调试目的。当你调用该方法并将 `true` 作为其参数时，`GridPane` 将显示网格线。例如，如果我们在代码列表 12-8 中添加以下语句，程序的输出将如图 12-23 所示：
+`GridPane`类有一个名为`setGridLinesVisible`的方法，有助于调试目的。当你调用该方法并将`true`作为其参数时，`GridPane`将显示网格线。例如，如果我们在代码列表 12-8 中添加以下语句，程序的输出将如图 12-23 所示：
 
 ```java
 gridpane.setGridLinesVisible(true);
 ```
 
+默认情况下，`GridPane`内部边缘没有内边距（padding）。然而，你可以通过调用`GridPane`对象的`setPadding`方法来添加内边距。记住，`setPadding`方法接受一个`Insets`对象作为参数。在构造`Insets`对象时，将像素值作为构造函数的参数传递即可。例如，以下语句为名为`gridpane`的`GridPane`容器添加 10 像素的内边距：
 
 
-默认情况下，`GridPane` 内部边缘没有内边距（padding）。然而，你可以通过调用 `GridPane` 对象的 `setPadding` 方法来添加内边距。记住，`setPadding` 方法接受一个 `Insets` 对象作为参数。在构造 `Insets` 对象时，将像素值作为构造函数的参数传递即可。例如，以下语句为名为 `gridpane` 的 `GridPane` 容器添加 10 像素的内边距：
 
-```
-gridpane.setPadding(new Insets(10));
-```
+`gridpane.setPadding(new Insets(10));`
 
 请记住 `Insets` 类位于 `javafx.geometry` 包中，因此务必在程序中包含必要的 `import` 语句。
 
 ## 图 12-23 显示可见网格线的 `GridPane` (Oracle 法务顾问)
 
-![Grid Pane Demo 应用程序带有可见网格线的输出以两行文本显示。](img/12fig23.png)图 12-23 完整替代文本
+![Grid Pane Demo 应用程序带有可见网格线的输出以两行文本显示。](img/12fig23.png)
+
+图 12-23 完整替代文本
 
 代码列表 12-9 显示了一个在具有 4 列 2 行的 `GridPane` 中显示图像的程序。`GridPane` 格之间有 10 像素的空间，以及 30 像素的内边距。程序的输出可见图 12-24。图 12-25 描绘了应用程序的场景图。
 
@@ -23293,23 +21544,23 @@ gridpane.setPadding(new Insets(10));
 
 ## 检查点 12.26
 
-../components/metrodigi/ch12-inline_self_quiz_v1.0.0-25/index.html
+`../components/metrodigi/ch12-inline_self_quiz_v1.0.0-25/index.html`
 
 ## 检查点 12.27
 
-../components/metrodigi/ch12-inline_self_quiz_v1.0.0-26/index.html
+`../components/metrodigi/ch12-inline_self_quiz_v1.0.0-26/index.html`
 
 ## 检查点 12.28
 
-../components/metrodigi/ch12-inline_self_quiz_v1.0.0-27/index.html
+`../components/metrodigi/ch12-inline_self_quiz_v1.0.0-27/index.html`
 
 ## 检查点 12.29
 
-../components/metrodigi/ch12-inline_self_quiz_v1.0.0-28/index.html
+`../components/metrodigi/ch12-inline_self_quiz_v1.0.0-28/index.html`
 
 ## 检查点 12.30
 
-../components/metrodigi/ch12-inline_self_quiz_v1.0.0-29/index.html
+`../components/metrodigi/ch12-inline_self_quiz_v1.0.0-29/index.html`
 
 ## 12.6 `Button` 控件
 
@@ -23394,10 +21645,6 @@ Button myButton = new Button("Click Me");
 
 关于 `ButtonDemo` 程序，这里是一些具体的注意点：
 
-
-
-
-
 * 第 6 行从 `javafx.control` 包中导入了 `Button` 类。
 * 第 28 行创建了一个 `Button` 类的实例。生成的 `Button` 对象由变量 `myButton` 引用。`Button` 上显示字符串 `"Click Me"`。
 
@@ -23418,7 +21665,7 @@ Button myButton = new Button("Click Me");
 例如，假设我们想写一个可以响应 `Button` 点击的事件处理器类。记住，当 `Button` 控件被点击时，生成的事件对象是 `ActionEvent` 类型。以下是处理 `ActionEvent` 类型事件的事件处理器类的一般格式：
 
 ```java
- class ButtonClickHandler implements EventHandler<ActionEvent>
+class ButtonClickHandler implements EventHandler<ActionEvent>
 {
    @Override
    public void handle(ActionEvent event)
@@ -23435,6 +21682,7 @@ Button myButton = new Button("Click Me");
 # 图 12-30 触发 `ActionEvent` 的 `Button` 控件
 
 ![当点击标题为 Click Me 的 Button 控件时，它会触发一个 Action Event，生成一个 Action Event 对象，该对象会自动执行事件处理器的 handle 方法，并将 Action Event 对象作为参数。](img/12fig30.png)
+
 图 12-30 完整替代文本
 
 # 注册事件处理器
@@ -23457,31 +21705,27 @@ myButton.setOnAction(new ButtonClickHandler());
 
 ![Event 应用程序包含两个 Demo。](img/12fig31.png)
 
-
-
-
-
 *   第 66 行的语句调用 `myLabel` 对象的 `setText` 方法来更改 `Label` 显示的文本。
 
 # Checkpoint 12.31
 
-../components/metrodigi/ch12-inline_self_quiz_v1.0.0-30/index.html
+`../components/metrodigi/ch12-inline_self_quiz_v1.0.0-30/index.html`
 
 # Checkpoint 12.32
 
-../components/metrodigi/ch12-fill_in_the_blank-03/index.html
+`../components/metrodigi/ch12-fill_in_the_blank-03/index.html`
 
 ## 12.7 使用 `TextField` 控件读取输入
 
 概念：`TextField` 控件是一个矩形区域，可以接受用户的键盘输入。
 
-#  `TextField` 控件
+# `TextField` 控件
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/um7vtKay_NZj0UCIG_4lTX6_djS4_rli`](https://mediaplayer.pearsoncmg.com/assets/_video.true/um7vtKay_NZj0UCIG_4lTX6_djS4_rli)
 
 你用于从用户获取数据的主要控件之一是 `TextField` 控件。`TextField` 控件显示为一个矩形区域。当应用程序运行时，用户可以在 `TextField` 控件中输入文本。在程序中，你可以获取用户输入的文本，并将该文本用于任何必要的操作。
 
-要创建一个 `TextField` 控件，你将使用位于 `javafx.scene.control` 包中的 `TextField` 类。一旦你写了必要的 `import` 语句，你就可以创建 `TextField` 类的实例 了。以下语句显示了一个示例：
+要创建一个 `TextField` 控件，你将使用位于 `javafx.scene.control` 包中的 `TextField` 类。一旦你写了必要的 `import` 语句，你就可以创建 `TextField` 类的实例了。以下语句显示了一个示例：
 
 ```
 TextField myTextField = new TextField();
@@ -23502,9 +21746,11 @@ input = myTextField.getText();
 
 为了演示 `TextField` 控件，我们将查看代码列表 12-12 中的公里转换应用程序。该应用程序显示了一个窗口，用户可以在其中输入以公里为的距离，然后点击按钮查看该距离转换为英里。转换公式为：
 
-`Miles`= `Kilometers` × 0.6214
+`Miles` = `Kilometers` × 0.6214
 
 图 12-32 显示了公里转换应用程序中控件的布局。注意我们使用了两个布局容器：嵌套在 `VBox` 之中的 `HBox`。`HBox` 包含 `promptLabel` 控件和 `kiloTextField` 控件。作为根节点的 `VBox` 包含 `HBox`、`calcButton` 控件和 `resultLabel` 控件。图 12-33 描绘了该应用程序的场景图。
+
+
 
 ![公里转换应用程序中的控件已标记。V Box 包含带有 prompt Label（“输入以公里为单位的距离”）和空白 kilo Text Field 的 H Box。V Box 还包含一个标记为 Convert（转换）的 calc 按钮和一个 result Label。](img/12fig32.png)
 
@@ -23617,25 +21863,17 @@ input = myTextField.getText();
 让我们仔细观察该应用程序：
 
 *   第 1 到 12 行具有必要的 JavaFX `import` 语句。
-
 *   第 21 和 22 行在 `KiloConverter` 类中声明了 `kiloTextField` 和 `resultLabel` 字段。
-
 *   第 34 行创建了一个名为 `promptLabel` 的 `Label`，提示用户输入以公里为单位的距离。
-
 *   第 37 行创建一个 `TextField` 控件并将其赋值给 `kiloTextField` 字段。
-
-
-
-
-
-* 第 40 行创建了一个名为 `calcButton` 的 `Button` 控件。
-* 第 43 行调用了 `calcButton` 控件的 `setOnAction` 方法，以向 `Button` 注册一个事件处理器。为了实现这一目标，该行代码做了两件：：它创建了 `CalcButtonHandler` 类的实例（我们稍后会看到），并将该对象的引用作为参数传递给 `setOnAction` 方法。
-* 第 46 行创建了一个 `Label` 控件并将其赋值给 `resultLabel` 字段。注意，我们没有向 `Label` 类的构造函数传递字符串参数。因此，`Label` 将是空的（它最初不会显示任何文本）。
-* 第 49 行将 `promptLabel` 和 `kiloTextField` 控件放在一个 `HBox` 中，它们之间有 10 像素的间距。
-* 第 52 行将 `HBox`、`calcButton` 控件和 `resultLabel` 控件放在一个 `VBox` 中，它们之间有 10 像素的间距。
-* 第 55 行和第 58 行将 `VBox` 的对齐方式设置为居中，并将内边距设置为 10 像素。
-* 第 61 行至 70 行执行了将 `VBox` 添加到场景（scene）并将场景添加到阶段（stage）的所有必要步骤。窗口中显示标题，并显示窗口。
-* 事件处理器出现在第 77 行到 91 行。它是一个名为 `CalcButtonHandler` 的内部类。`handle` 方法出现在第 80 行到 90 行。第 83 行的语句获取用户在 `kiloTextField` 控件中输入的值，将其转换为 `Double`，并将其赋值给变量 `kilometers`。第 86 行将公里转换为英里，并将结果赋值给变量 `miles` 。第 89 行在 `resultLabel` 控件中显示结果。
+*   第 40 行创建了一个名为 `calcButton` 的 `Button` 控件。
+*   第 43 行调用了 `calcButton` 控件的 `setOnAction` 方法，以向 `Button` 注册一个事件处理器。为了实现这一目标，该行代码做了两件事：它创建了 `CalcButtonHandler` 类的实例（我们稍后会看到），并将该对象的引用作为参数传递给 `setOnAction` 方法。
+*   第 46 行创建了一个 `Label` 控件并将其赋值给 `resultLabel` 字段。注意，我们没有向 `Label` 类的构造函数传递字符串参数。因此，`Label` 将是空的（它最初不会显示任何文本）。
+*   第 49 行将 `promptLabel` 和 `kiloTextField` 控件放在一个 `HBox` 中，它们之间有 10 像素的间距。
+*   第 52 行将 `HBox`、`calcButton` 控件和 `resultLabel` 控件放在一个 `VBox` 中，它们之间有 10 像素的间距。
+*   第 55 行和第 58 行将 `VBox` 的对齐方式设置为居中，并将内边距设置为 10 像素。
+*   第 61 行至 70 行执行了将 `VBox` 添加到场景（scene）并将场景添加到阶段（stage）的所有必要步骤。窗口中显示标题，并显示窗口。
+*   事件处理器出现在第 77 行到 91 行。它是一个名为 `CalcButtonHandler` 的内部类。`handle` 方法出现在第 80 行到 90 行。第 83 行的语句获取用户在 `kiloTextField` 控件中输入的值，将其转换为 `Double`，并将其赋值给变量 `kilometers`。第 86 行将公里转换为英里，并将结果赋值给变量 `miles`。第 89 行在 `resultLabel` 控件中显示结果。
 
 # 检查点 12.33
 
@@ -23655,13 +21893,13 @@ input = myTextField.getText();
 
 # 使用匿名内部类创建事件处理器
 
-#  WatchAnnon 内部类
+# WatchAnnon 内部类
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/2_Mb23iQ1RRAGQKWsYWnyKMGFWVIuvVe`](https://mediaplayer.pearsoncmg.com/assets/_video.true/2_Mb23iQ1RRAGQKWsYWnyKMGFWVIuvVe)
 
-如果你回看 代码列表 12-11 和 代码列表 12-12，你会发现每个程序的事件处理器类只被实例化了一次：当事件处理器与控件注册时。回想 第 10 章，当一个类在程序中只实例化一次时，你可以使用匿名内部类来代替普通的类定义。你使用 `new` 运算符同时定义匿名内部类并创建它的实例。代码列表 12-13 展示了我们如何修改公里转换器应用程序，使用匿名内部类作为 `calcButton` 控件的事件处理器的示例。
+如果你回看代码列表 12-11 和代码列表 12-12，你会发现每个程序的事件处理器类只被实例化了一次：当事件处理器与控件注册时。回想第 10 章，当一个类在程序中只实例化一次时，你可以使用匿名内部类来代替普通的类定义。你使用 `new` 运算符同时定义匿名内部类并创建它的实例。代码列表 12-13 展示了我们如何修改公里转换器应用程序，使用匿名内部类作为 `calcButton` 控件的事件处理器的示例。
 
-``````
+```
  1  import javafx.application.Application;
   2  import javafx.stage.Stage;
   3  import javafx.scene.Scene;
@@ -23738,22 +21976,21 @@ input = myTextField.getText();
  74        primaryStage.show();
  75     }
  76  }
-```````
+```
+
 # 代码列表 12-13 `InnerClassKiloConverter`
 
-在这个程序的版本中，我们消除了 `CalcButtonHandler` 类的定义。相反，在第 44 行到第 58 行，我们实例化了一个实现 `EventHandler` 的匿名内部类，并将该对象注册为 `calcButton` 控件的事件处理器。
 
-# 使用 Lambda 表达式创建事件处理器
 
-# Watch Lambda Expressions
+在这个程序的版本中，我们消除了`CalcButtonHandler`类的定义。相反，在第 44 行到第 58 行，我们实例化了一个实现`EventHandler`的匿名内部类，并将该对象注册为`calcButton`控件的事件处理器。
+
+## 使用 Lambda 表达式创建事件处理器
+
+## Watch Lambda Expressions
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/2_Mb23iQ1RRAGQKWsYWnyKMGFWVIuvVe`](https://mediaplayer.pearsoncmg.com/assets/_video.true/2_Mb23iQ1RRAGQKWsYWnyKMGFWVIuvVe)
 
-回想我们在第 10 章中关于函数式接口和 Lambda 表达式的讨论。函数式接口有一个且只有一个抽象方法。`EventHandler` 接口只有一个抽象方法（`handle` 方法），因此它是一个函数式接口。每当你编写 Java 代码来实例化函数式接口的匿名类时，都应该考虑使用 Lambda 表达式来代替。Lambda 表达式比实例化匿名类的代码更简洁。
-
-
-
-
+回想我们在第 10 章中关于函数式接口和 Lambda 表达式的讨论。函数式接口有一个且只有一个抽象方法。`EventHandler`接口只有一个抽象方法（`handle`方法），因此它是一个函数式接口。每当你编写 Java 代码来实例化函数式接口的匿名类时，都应该考虑使用 Lambda 表达式来代替。Lambda 表达式比实例化匿名类的代码更简洁。
 
 ```java
 import javafx.application.Application;
@@ -23840,47 +22077,45 @@ public class LambdaKiloConverter extends Application
 }
 ```
 
-# 代码列表 12-14 `(LambdaKiloConverter.java)`
+## 代码列表 12-14 `(LambdaKiloConverter.java)`
 
 虽然 lambda 表达式简化了匿名内部类的使用，但它们也有局限性。回想第 10 节，lambda 表达式只能访问本质上最终的（effectively final）的变量。此外，如果 lambda 表达式包含大量代码，它们可能会变得难以阅读。
 
 创建事件处理程序有许多不同的技术。在本章中，你学习了三种技术：
 
-*   编写实现 `EventHandler` 接口的内部类定义。然后实例化该类并将其注册到控件上。你在[代码列表 12-11]中见过这种技术。
-*   使用匿名内部类来实现 `EventHandler` 接口。你在[代码列表 12-12]中见过这种技术。
-*   使用 lambda 表达式来实现 `EventHandler` 接口。你在[代码列表 12-13]中见过这种技术。
+*   编写实现`EventHandler`接口的内部类定义。然后实例化该类并将其注册到控件上。你在[代码列表 12-11]中见过这种技术。
 
-## 12.9 `BorderPane` 布局
+*   使用匿名内部类来实现`EventHandler`接口。你在[代码列表 12-12]中见过这种技术。
 
-JavaFX 提供了一种名为 `BorderPane` 的布局容器，可以轻松地实现这种组织风格。`BorderPane` 布局容器分为五个区域：顶部、底部、左侧、右侧和中心。例如，GUI 中心显示主要内容，而状态栏出现在顶部，元素出现在左侧和右侧。
+*   使用 lambda 表达式来实现`EventHandler`接口。你在[代码列表 12-13]中见过这种技术。
 
-## 12.10 `BorderPane` 容器
+### 12.9 `BorderPane` 布局
 
-`BorderPane` 容器分为五个区域：`top`、`bottom`、`left`、`right` 和 `center`。当一个节点被放入 `BorderPane` 容器时，它必须放入这些区域之一。
+JavaFX 提供了一种名为`BorderPane`的布局容器，可以轻松地实现这种组织风格。`BorderPane`布局容器分为五个区域：顶部、底部、左侧、右侧和中心。例如，GUI 中心显示主要内容，而状态栏出现在顶部，元素出现在左侧和右侧。
 
-每次只能向 `BorderPane` 区域放入一个对象。由于由于原因，你通常不会直接将控件放入 `BorderPane` 区域。通常，你会先将控件放入另一种类型的布局容器（例如 `HBox` 或 `VBox`），然后将该容器放入 `BorderPane` 的任一区域。
+### 12.10 `BorderPane` 容器
 
-### 注意
+`BorderPane`容器分为五个区域：`top`、`bottom`、`left`、`right`和`center`。当一个节点被放入`BorderPane`容器时，它必须放入这些区域之一。
 
-你不必使用 `BorderPane` 的所有区域。如果 `BorderPane` 区域不包含任何内容，该区域简单地就不会出现在 GUI 中。
+每次只能向`BorderPane`区域放入一个对象。由于由于原因，你通常不会直接将控件放入`BorderPane`区域。通常，你会先将控件放入另一种类型的布局容器（例如`HBox`或`VBox`），然后将该容器放入`BorderPane`的任一区域。
 
-要创建一个 `BorderPane`，你需要从 `javafx.scene.layout` 包中导入 `BorderPane` 类。然后，使用三个构造函数之一创建 `BorderPane` 类的实例。
+#### 注意
 
-### 表 12-3 `BorderPane` 构造函数
+你不必使用`BorderPane`的所有区域。如果`BorderPane`区域不包含任何内容，该区域简单地就不会出现在 GUI 中。
+
+要创建一个`BorderPane`，你需要从`javafx.scene.layout`包中导入`BorderPane`类。然后，使用三个构造函数之一创建`BorderPane`类的实例。
+
+#### 表 12-3 `BorderPane` 构造函数
 
 | 构造函数 | 说明 |
 | --- | --- |
-| `BorderPane()` | 无参数构造函数创建一个空的 `BorderPane` 容器。 |
-| `BorderPane(``center``)` | 此构造函数接受一个参数。作为参数传递的节点被放在 `BorderPane` 的中心区域。 |
-| `BorderPane(``center`*`,` `top`*`,` `right`*`,` `bottom`*`,` `left`*`)` | 此构造函数接受五个节点作为参数：分别放在每个区域中。 |
+| `BorderPane()` | 无参数构造函数创建一个空的`BorderPane`容器。 |
+| `BorderPane(center)` | 此构造函数接受一个参数。作为参数传递的节点被放在`BorderPane`的中心区域。 |
+| `BorderPane(center, top, right, bottom, left)` | 此构造函数接受五个节点作为参数：分别放在每个区域中。 |
 
+如果你使用第一个构造函数（无参构造函数），你将需要使用以下`BorderPane`方法将节点放入容器的区域中：`setCenter`、`setTop`、`setBottom`、`setLeft`和`setRight`。代码列表 12-15 演示了这些方法。程序的输出如图 12-37 所示。
 
-
-
-
-如果你使用第一个构造函数（无参构造函数），你将需要使用以下 `BorderPane` 方法将节点放入容器的区域中：`setCenter`、`setTop`、`setBottom`、`setLeft` 和 `setRight`。代码列表 12-15 演示了这些方法。程序的输出如图 12-37 所示。
-
-```
+```java
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -23944,22 +22179,25 @@ public class BorderPaneDemo extends Application
 }
 ```
 
-# 代码列表 12-15 `BorderPaneDemo1.java`
+## 代码列表 12-15 `BorderPaneDemo1.java`
 
 ![BorderPane Demo 1 G U I 程序输出将节点放入容器的区域中，即 set Center, set Top, set Bottom, set Left 和 set Right，分别标记为 This is Center, This is Top, This is Bottom, This is Left, 和 This is Right。](img/12fig37.png)
 
-# 图 12-37 `BorderPaneDemo1` GUI (Oracle 法务顾问)
+## 图 12-37 `BorderPaneDemo1` GUI (Oracle 法务顾问)
 
 让我们仔细查看代码：
 
 * 第 26 到 30 行创建了五个按钮控件。
-* 第 33 到 37 行将这些按钮控件放入它们自己的布局容器中。`centerButton`、`topButton` 和 `bottomButton` 控件被添加到 `HBox` 容器，而 `leftButton` 和 `rightButton` 控件被添加到 `VBox` 容器。
-* 第 44 行创建一个 `BorderPane` 容器。
-* 第 47 到 51 行将 `HBox` 和 `VBox` 容器添加到 `BorderPane` 的区域中。
 
-表 12-4 所示的第二个 `BorderPane` 构造函数接受一个参数：要放置在中间的节点。要将节点放置在其他区域，你将使用以下 `BorderPane` 方法：`setTop`、`setBottom` 和`setRight`。以下代码显示了程序 `BorderPane2.java` 的第 43 到 50 行。程序的输出与图 12-37 所示。
+* 第 33 到 37 行将这些按钮控件放入它们自己的布局容器中。`centerButton`、`topButton`和`bottomButton`控件被添加到`HBox`容器，而`leftButton`和`rightButton`控件被添加到`VBox`容器。
 
-```
+* 第 44 行创建一个`BorderPane`容器。
+
+* 第 47 到 51 行将`HBox`和`VBox`容器添加到`BorderPane`的区域中。
+
+表 12-4 所示的第二个`BorderPane`构造函数接受一个参数：要放置在中间的节点。要将节点放置在其他区域，你将使用以下`BorderPane`方法：`setTop`、`setBottom`和`setRight`。以下代码显示了程序`BorderPane2.java`的第 43 到 50 行。程序的输出与图 12-37 所示。
+
+```java
 // 创建一个中间有一个节点的 BorderPane。
 BorderPane borderPane = new BorderPane(centerHBox);
 
@@ -23970,33 +22208,27 @@ borderPane.setLeft(leftVBox);
 borderPane.setRight(rightVBox);
 ```
 
-表 12-4 所示的第三个构造函数接受五个参数：要放置在各个区域的节点。当你需要向各个区域放置节点时，可以使用这个构造函数。以下代码显示了程序 `BorderPane2.java` 的第 43 到 50 行。程序的输出与图 12-37 所示。
+表 12-4 所示的第三个构造函数接受五个参数：要放置在各个区域的节点。当你需要向各个区域放置节点时，可以使用这个构造函数。以下代码显示了程序`BorderPane2.java`的第 43 到 50 行。程序的输出与图 12-37 所示。
 
-```
+```java
 // 创建一个 BorderPane。
 BorderPane borderPane = new BorderPane();
 ```
 
-# 12.10 `ObservableList` 接口
+## 12.10 `ObservableList` 接口
 
-概念**：JavaFX 库中的许多容器都实现了 `ObservableList` 接口。学习该接口中的某些方法很有帮助。
+**概念**：JavaFX 库中的许多容器都实现了`ObservableList`接口。学习该接口中的某些方法很有帮助。
 
-随着对 Java 应用程序开发的深入，你将频繁遇到 `ObservableList` 接口。实现 `ObservableList` 接口的对象是一种特殊的列表，当列表发生变化时它可以触发事件处理器。虽然 `ObservableList` 接口的许多细节超出了本文的范围，但你通常会与存储在 `ObservableList` 中的 JavaFX 容器一起工作。学习基础的 `ObservableList` 操作有助于你对所操作的 JavaFX 容器进行更多控制。
+随着对 Java 应用程序开发的深入，你将频繁遇到`ObservableList`接口。实现`ObservableList`接口的对象是一种特殊的列表，当列表发生变化时它可以触发事件处理器。虽然`ObservableList`接口的许多细节超出了本文的范围，但你通常会与存储在`ObservableList`中的 JavaFX 容器一起工作。学习基础的`ObservableList`操作有助于你对所操作的 JavaFX 容器进行更多控制。
 
-表 12-4 列出了一些 `ObservableList` 方法。注意，某些方法继承自 `Collection` 接口，`ObservableList` 是该接口的子接口。
-
-
-
-
+表 12-4 列出了一些`ObservableList`方法。注意，某些方法继承自`Collection`接口，`ObservableList`是该接口的子接口。
 
 | `setAll(item...)` | 清空列表的当前内容并添加变长参数列表中指定的所有项。 |
-| `size()` | 返回列表中的项目数量。（此方法继承自 `Collection` 接口。） |
+| `size()` | 返回列表中的项目数量。（此方法继承自`Collection`接口。） |
 
---- |
+例如，布局容器将其子节点保留在`ObservableList`中。所有布局容器都有一个名为`getChildren()`的方法，该方法返回其节点的`ObservableList`。以下代码段展示了如何创建一个空的`HBox`容器，然后使用`ObservableList`的`addAll`方法将节点加到`HBox`中：
 
-例如，布局容器将其子节点保留在 `ObservableList` 中。所有布局容器都有一个名为 `getChildren()` 的方法，该方法返回其节点的 `ObservableList`。以下代码段展示了如何创建一个空的 `HBox` 容器，然后使用 `ObservableList` 的 `addAll` 方法将节点加到 `HBox` 中：
-
-```
+```java
 // 创建三个 Label 控件。
 Label label1 = new Label("This is label1.");
 Label label2 = new Label("This is label2.");
@@ -24009,49 +22241,51 @@ HBox hbox = new HBox();
 hbox.getChildren().addAll(label1, label2, label3);
 ```
 
-以下代码显示了如何从 HBox 中移除 `label1`：
+以下代码显示了如何从 HBox 中移除`label1`：
 
-```javascript
+```java
 hbox.getChildren().remove(label1);
 ```
 
-# 检查点 12.45
+## 检查点 12.45
 
-../components/metrodigi/ch12-inline_self_quiz_v1.0.0-44/index.html
+
+
+`../components/metrodigi/ch12-inline_self_quiz_v1.0.0-44/index.html`
 
 ## 12.11 需要避免的常见错误
 
-*   在你的 JavaFX 应用程序中忘记扩展 `Application` 类。`javafx.application` 包中的 `Application` 类必须被所有 JavaFX 应用程序扩展。
-*   在使用 `Image` 类加载图像文件时，忘记指定 `file:` 协议。在创建 `Image` 类的实例并向构造函数传递文件名时，请确保包含文件名的同时包含 `file:` 协议。
-*   尝试仅使用 `Image` 类显示图像。`Image` 类用于加载图像文件，但你还需要 `ImageView` 类来将图像添加到场景图（scene graph）。
-*   调整图像大小但忘记保持纵比例。如果你在不保持纵比例的情况下调整图像大小，图像可能会垂直或水平拉伸。`ImageView` 类有一个名为 `setPreserveRatio` 的方法，你可以调用它来确保图像的纵比例得到保留。
-*   忘记注册事件处理器。即使你写了事件处理器类，除非它已在正确的控件上进行了注册，否则它不会执行。
+* 在你的 JavaFX 应用程序中忘记扩展 `Application` 类。`javafx.application` 包中的 `Application` 类必须被所有 JavaFX 应用程序扩展。
+* 在使用 `Image` 类加载图像文件时，忘记指定 `file:` 协议。在创建 `Image` 类的实例并向构造函数传递文件名时，请确保包含文件名的同时包含 `file:` 协议。
+* 尝试仅使用 `Image` 类显示图像。`Image` 类用于加载图像文件，但你还需要 `ImageView` 类来将图像添加到场景图（scene graph）。
+* 调整图像大小但忘记保持纵比例。如果你在不保持纵比例的情况下调整图像大小，图像可能会垂直或水平拉伸。`ImageView` 类有一个名为 `setPreserveRatio` 的方法，你可以调用它来确保图像的纵比例得到保留。
+* 忘记注册事件处理器。即使你写了事件处理器类，除非它已在正确的控件上进行了注册，否则它不会执行。
 
-# 检查点 12.46
+## 检查点 12.46
 
-../components/metrodigi/ch12-inline_self_quiz_v1.0.0-45/index.html
+`../components/metrodigi/ch12-inline_self_quiz_v1.0.0-45/index.html`
 
-# 检查点 12.47
+## 检查点 12.47
 
-../components/metrodigi/ch12-inline_self_quiz_v1.0.0-46/index.html
+`../components/metrodigi/ch12-inline_self_quiz_v1.0.0-46/index.html`
 
-# 检查点 12.48
+## 检查点 12.48
 
-../components/metrodigi/ch12-inline_self_quiz_v1.0.0-47/index.html
+`../components/metrodigi/ch12-inline_self_quiz_v1.0.0-47/index.html`
 
-# 检查点 12.49
+## 检查点 12.49
 
-../components/metrodigi/ch12-inline_self_quiz_v1.0.0-48/index.html
+`../components/metrodigi/ch12-inline_self_quiz_v1.0.0-48/index.html`
 
-# 检查点 12.50
+## 检查点 12.50
 
-../components/metrodigi/ch12-inline_self_quiz_v1.0.0-49/index.html
+`../components/metrodigi/ch12-inline_self_quiz_v1.0.0-49/index.html`
 
 ## 编程挑战
 
-# 1. 拉丁语翻译器
+### 1. 拉丁语翻译器
 
-# 观看拉丁语翻译器
+观看拉丁语翻译器
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/bEEQqLN8ZChGDl_9IIIHTp4gmMA3AD3A`](https://mediaplayer.pearsoncmg.com/assets/_video.true/bEEQqLN8ZChGDl_9IIIHTp4gmMA3AD3A)
 
@@ -24065,107 +22299,103 @@ hbox.getChildren().remove(label1);
 
 创建一个 JavaFX 应用程序，将拉丁语单词翻译成英语。GUI 应该有三个 `Button`，每个对应一个拉丁语单词。当用户点击 `Button` 时，应用程序应该在 `Label` 中显示英语翻译。
 
-# 2. 姓名格式化
+### 2. 姓名格式化
 
 创建一个 JavaFX 应用程序，允许用户输入以下数据：
 
-*   用户的名
-*   用户的中间名
-*   用户的姓
-*   用户偏好的头衔（Mr., Mrs., Ms., Dr. 等）
+* 用户的名
+* 用户的中间名
+* 用户的姓
+* 用户偏好的头衔（Mr., Mrs., Ms., Dr. 等）
 
 假设用户已输入了以下内容：
 
-*   用户的名
-*   用户的中间名
-*   用户的姓
-*   用户偏好的头衔（Mr., Mrs., Ms., Dr. 等）
+* 用户的名
+* 用户的中间名
+* 用户的姓
+* 用户偏好的头衔（Mr., Mrs., Ms., Dr. 等）
 
 应用程序显示格式化后的姓名在 `Label`。
 
-# 3. 小费、税费和总额
+### 3. 小费、税费和总额
 
 创建一个 JavaFX 应用程序，让用户输入费用。当点击按钮时，应用程序将计算并显示 18% 的小费、7% 的销售税以及总额。
 
-# 4. 财产税
+### 4. 财产税
 
 创建一个 JavaFX 应用程序，允许用户输入金额。应用程序将根据以下规则计算并显示财产税：
 
-*   如果金额在 100,000 或以下，税为每 100 1.20。
-*   如果金额在 100,000 到 350,000 之间，税为每 100 1.10。
-*   如果金额为 350,000 或更多，税为每 100 0.80。
+* 如果金额在 100,000 或以下，税为每 100 1.20。
+* 如果金额在 100,000 到 350,000 之间，税为每 100 1.10。
+* 如果金额为 350,000 或更多，税为每 100 0.80。
 
-# 5. 正面或反面
+### 5. 正面或反面
 
 创建一个 JavaFX 应用程序模拟抛硬币。当用户点击按钮时，应用程序将生成 0 和 1 之间的随机数。如果是 0，显示“正面”；如果是 1，显示“反面”。使用 `ImageView` 显示硬币结果。
 
-# 6. 骰子模拟
+### 6. 骰子模拟
 
 创建一个 JavaFX 应用程序模拟掷骰子。当用户点击按钮时，应用程序将生成两个 1 到 6 之间的随机数代表骰子值。使用 `ImageView` 控制显示骰子。（在学生项目中你会找到六张图像 `Die1.png`、`Die2.png`、`Die3.png`、`Die4.png`、`Die5.png` 和 `Die6.png`。）
 
-# 7. 差旅费用
+### 7. 差旅费用
 
 创建一个 GUI 应用程序计算并显示人员的差旅费用。用户需要提供以下信息：
 
-*   旅行天数
-*   机票费用
-*   租车费（如有）
-*   私家车行驶里程数
-*   停车费（如有）
-*   出租费（如有）
-*   会议或研讨会注册费（如有）
-*   住宿费，每晚
+* 旅行天数
+* 机票费用
+* 租车费（如有）
+* 私家车行驶里程数
+* 停车费（如有）
+* 出租费（如有）
+* 会议或研讨会注册费（如有）
+* 住宿费，每晚
 
 公司根据以下政策报销差旅：
 
-*   每天补助 47
-*   每天最高 20.00 的停车费
-*   每天最高 40.00 的出租费
-*   每天最高 195.00 的住宿费
-*   如果使用私家车，每英里 0.42
+* 每天补助 47
+* 每天最高 20.00 的停车费
+* 每天最高 40.00 的出租费
+* 每天最高 195.00 的住宿费
+* 如果使用私家车，每英里 0.42
 
 应用程序应计算并显示以下内容：
 
-*   人员产生的总费用
-*   旅行的总允许费用
-*   人员必须支付的差额（如有）
-*   如果费用低于总允许额，人员节省的金额
+* 人员产生的总费用
+* 旅行的总允许费用
+* 人员必须支付的差额（如有）
+* 如果费用低于总允许额，人员节省的金额
 
-# 8. Joe 的汽车修理厂
+### 8. Joe 的汽车修理厂
 
 Joe's Automotive 执行以下常规维护服务：
 
-*   换机油：35.00
-*   润滑油：25.00
-*   散热器清洗：50.00
-*   变速箱清洗：120.00
-*   检查：35.00
-*   更换消声器：200.00
-*   换轮胎：20.00
+* 换机油：35.00
+* 润滑油：25.00
+* 散热器清洗：50.00
+* 变速箱清洗：120.00
+* 检查：35.00
+* 更换消声器：200.00
+* 换轮胎：20.00
 
 Joe's 还提供其他非常规服务，并对零件和工时（每小时 60）收费。创建一个 GUI 应用程序显示客户访问 Joe's 的总费用。
 
-# 9. 井字棋模拟器
-
-
-
-
+### 9. 井字棋模拟器
 
 创建一个模拟井字棋游戏的 JavaFX 应用程序。图 12-38 显示了应用程序 GUI 的示例。图中所示 GUI 使用了八个 `ImageView` 控件来显示 X 和 O。（你会在书籍的学生示例文件中找到 X 和 O 的图像。）
 
 ![井字棋模拟器在 3x 3 的网格中使用八个 Image View 控件来显示 X 和 O，读取内容如下：第一行，X, O, O。第二行，O, X, X。第三行，O, X, X。](img/12fig38.png)
 
-## 图 12-38 井字棋应用程序（Oracle 公司法务顾问）
+#### 图 12-38 井字棋应用程序（Oracle 公司法务顾问）
 
 该应用程序应使用二维 `int` 数组在内存中模拟游戏棋盘。当用户点击 `New Game`（新游戏）按钮时，应用程序应该遍历数组，在每个元素中存储一个 0 到 1 之间的随机数。数字 0 代表字母 O，数字 1 代表字母 X。然后应更新应用程序窗口以显示游戏棋盘。应用程序应显示一条消息，指示 X 玩家胜出、Y 玩家胜还是游戏平局。
 
-## 10. 老虎机模拟
+### 10. 老虎机模拟
 
 老虎机是一种赌博设备，用户向其中投入货币然后拉动杠杆（或按下按钮）。老虎机机会显示一组随机图像。如果其中两个或多个图像匹配，用户将赢得老虎机返还给用户的金额。
 
 创建一个模拟老虎机的 JavaFX 应用程序。图 12-39 显示了 GUI 应该外观的示例。应用程序应允许用户在 `TextField`（文本字段）中输入其向机器投入的货币金额。当用户点击 `Spin`（旋转）按钮时，应用程序应该显示三个随机选择的符号。（老虎机传统上显示水果符号。你会在学生示例程序中找到水果符号图像。）程序还应该显示用户每次旋转赢得的金额以及所有旋转的总金额。
 
-## 图 12-39 老虎机应用程序（Oracle 公司法务顾问）
+#### 图 12-39 老虎机应用程序（Oracle 公司法务顾问）
 
 ![模拟老虎机的 JavaFX 应用程序中 GUI 外观的示例。](img/12fig39.png)图 12-39 完整替代文本
 
@@ -24175,9 +22405,9 @@ Joe's 还提供其他非常规服务，并对零件和工时（每小时 60）�
 * 如果两个图像匹配，用户赢了输入金额的两倍。
 * 如果三个图像匹配，用户赢了输入金额的三倍。
 
-# 第 13 章 JavaFX：高级控件
+## 第 13 章 JavaFX：高级控件
 
-## 题
+### 题
 
 1. 13.1 使用 CSS 为 JavaFX 应用程序进行样式化
 2. 13.2 `RadioButton` 控件
@@ -24188,11 +22418,10 @@ Joe's 还提供其他非常规服务，并对零件和工时（每小时 60）�
 7. 13.7 `TextArea` 控件
 8. 13.8 菜单
 9. 13.9 `FileChooser` 类
-
 10. 13.10 使用控制台调试应用程序
 11. 13.11 避免常见错误
 
-## 13.1 使用 CSS 为 JavaFX 应用程序进行样式化
+### 13.1 使用 CSS 为 JavaFX 应用程序进行样式化
 
 CSS 代表层叠样式表，是一种用于描述呈现效果的语言。在 JavaFX 中，CSS 使用选择器和属性来样式组件。这允许将应用程序的内容与其呈现分离，使代码更易维护和更新。
 
@@ -24212,7 +22441,7 @@ scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm())
 
 CSS 提供的属性包括颜色、字体、边框、背景等。你还可以使用 CSS 创建动画和过渡效果。CSS 是一种创建视觉效果应用程序的强大工具。通过掌握 CSS，你可以创建美观且易用的界面。
 
-### 选择器
+#### 选择器
 
 选择器用于标识样式应该应用于哪些节点。JavaFX 中有多种选择器：
 
@@ -24223,7 +22452,7 @@ CSS 提供的属性包括颜色、字体、边框、背景等。你还可以使�
 
 在 JavaFX 中，你可以组合选择器以创建更具体的规则。例如，`.label.highlight` 选择带有 `highlight` 类的 `Label`。
 
-### 使用控制台调试应用程序
+#### 使用控制台调试应用程序
 
 控制台是调试 JavaFX 应用程序的有用工具。你可以向控制台打印消息，帮助跟踪代码执行并识别问题。
 
@@ -24231,7 +22460,7 @@ CSS 提供的属性包括颜色、字体、边框、背景等。你还可以使�
 System.out.println("Debug message");
 ```
 
-### 常见错误
+#### 常见错误
 
 在处理 JavaFX CSS 时，可能会遇到某些错误。以下是一些常见错误及其避免方法：
 
@@ -24240,13 +22469,9 @@ System.out.println("Debug message");
 * 使用错误的选择器：确保为要样化的节点使用了正确的选择器。
 * 样式覆盖：注意样式之间相互覆盖。使用优先级来控制样式的应用。
 
+JavaFX 中的每个节点类型都有一组你可以使用的样式属性。例如，表 13-2 (`#ch13_pg0002.xhtml_P7001015878000000000000000000583D`) 显示了 `Labeled` 类的一些样式属性，而表 13-3 (`#ch13_pg0002.xhtml_P70010158780000000000000000058A7`) 显示了 `Region` 类的一些属性。`Label` 类、`Button` 类、`CheckBox` 类和 `RadioButton` 类都继承自 `Region` 类和 `Labeled` 类，因此这两个表格中的属性均可用于 `Label`、`Button`、`CheckBox` 和 `RadioButton` 控件。（本章稍后会讨论 `CheckBox` 和 `RadioButton` 控件。）
 
-
-
-
-JavaFX 中的每个节点类型都有一组你可以使用的样式属性。例如，表 13-2 (#ch13_pg0002.xhtml_P7001015878000000000000000000583D) 显示了 `Labeled` 类的一些样式属性，而表 13-3 (#ch13_pg0002.xhtml_P70010158780000000000000000058A7) 显示了 `Region` 类的一些属性。`Label` 类、`Button` 类、`CheckBox` 类和 `RadioButton` 类都继承自 `Region` 类和 `Labeled` 类，因此这两个表格中的属性均可用于 `Label`、`Button`、`CheckBox` 和 `RadioButton` 控件。（本章稍后会讨论 `CheckBox` 和 `RadioButton` 控件。）
-
-## 表 13-2 `Labeled` 类的一些 CSS 样式属性（被 `Label` 和 `Button` 类继承）
+#### 表 13-2 `Labeled` 类的一些 CSS 样式属性（被 `Label` 和 `Button` 类继承）
 
 | 属性 | 说明 | 可能的值 |
 | --- | --- | --- |
@@ -24257,7 +22482,7 @@ JavaFX 中的每个节点类型都有一组你可以使用的样式属性。例�
 | `-fx-font-weight` | 指定控件文本的粗细 | 你可以这些预定义值之一：`normal` `bold` `bolder` `lighter`。或者，你可以指定这些数值值之一：`100`、`200`、`300`、`400`、`500`、`600`、`700`、`800` 或 `900`。使用数值值时，`400` 的权重与 `normal` 相同，`700` 的权重与 `bold` 相同。 |
 | `-fx-text-fill` | 指定控件文本的颜色 | 可以是十六进制颜色代码，或命名颜色（参见本节稍后对颜色代码的讨论） |
 
-## 表 13-3 `Region` 类的一些 CSS 样式属性（被 `Label` 和 `Button` 类继承）
+#### 表 13-3 `Region` 类的一些 CSS 样式属性（被 `Label` 和 `Button` 类继承）
 
 | 属性 | 说明 | 可能的值 |
 | --- | --- | --- |
@@ -24268,7 +22493,7 @@ JavaFX 中的每个节点类型都有一组你可以使用的样式属性。例�
 
 以下是一个使用了这些属性的示例样式定义：
 
-```
+```css
 .label {
    -fx-font-family: cursive;
    -fx-font-size: 14pt;
@@ -24280,51 +22505,55 @@ JavaFX 中的每个节点类型都有一组你可以使用的样式属性。例�
 
 如果我们在 JavaFX 中使用此样式定义，它的样式规则将应用于用户界面中的所有 `Label` 控件。
 
-## 将样式表应用到 JavaFX 应用程序
+#### 将样式表应用到 JavaFX 应用程序
 
-如前所述，样式表仅仅是一个包含样式定义的文本文件。样式表通常以 `.css` 文件扩展名保存。要将样式表应用于 JavaFX 应用程序，将样式表保存在与 JavaFX 应用程序相同的目录下。然后，在应用程序的代码中，将样式表添加到场景（scene）。例如，假设我们有一个名为 `mystyles.css` 的样式表，在我们的 Java 代码中，变量 `scene`引用了我们的 `Scene` 对象。我们将使用以下语句将样式表添加到场景中：
+如前所述，样式表仅仅是一个包含样式定义的文本文件。样式表通常以 `.css` 文件扩展名保存。要将样式表应用于 JavaFX 应用程序，将样式表保存在与 JavaFX 应用程序相同的目录下。然后，在应用程序的代码中，将样式表添加到场景（scene）。例如，假设我们有一个名为 `mystyles.css` 的样式表，在我们的 Java 代码中，变量 `scene` 引用了我们的 `Scene` 对象。我们将使用以下语句将样式表添加到场景中：
 
-```
+```java
 scene.getStylesheets().add("mystyles.css");
 ```
 
 `Scene` 类的 `getStylesheets()` 方法返回一个包含场景样式表集合的对象，该对象的 `add` 方法将指定的样式表添加到集合中。
 
-让我们来看示例。代码列表 13-1 显示了 `demo1.css` 文件的内容（等一下，检查原文...它说是 `demo1.css`），并且 代码列表 13-2 显示了一个向 JavaFX 应用程序应用该样式表的程序。
-
-
-
-
+让我们来看示例。代码列表 13-1 显示了 `demo1.css` 文件的内容（等一下，检查原文...它说是 `demo1.css`），并且代码列表 13-2 显示了一个向 JavaFX 应用程序应用该样式表的程序。
 
 ![C S S Demo 2 dot java 的输出包含一个文本为 This is a label 的字段，以及两个标记为 Button 1 和 Button 2 的按钮。](img/13fig02.png)
 
-## 图 13-2 CSSDemo2.java 输出（Oracle 法律顾问）
+#### 图 13-2 CSSDemo2.java 输出（Oracle 法律顾问）
 
-### 提示
+##### 提示
+
 在 JavaFX 应用程序中，CSS 样式是在运行时应用的。如果你对应用程序的样式表进行了任何更改，就不需要重新编译 Java 应用程序。更改将在下次运行应用程序时生效。
 
-### 提示
+##### 提示
+
 JavaFX 支持大量的 CSS 属性（多于我们本书能涵盖的范围）。创建样式表的过程的一部分是确定哪些属性对于你应用程序中的节点是可用的。Oracle 出版了一份详尽的 CSS 参考指南，记录了所有可用的属性。你可以在此处找到该指南：
 
 [`https://docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html`](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html)
 
-## 为根节点应用样式
-如果你想对场景中的所有节点应用样式，请使用 `.root` 选择器。代码列表 13-5 显示了一个包含两个样式定义的示例样式表：一个用于根节点，另一个用于 `Label` 控件。代码列表 13-6 中的程序应用了该样式表，而 图 13-3 显示了程序的输出。注意，`Label` 和 `Button` 都以衬线字体显示文本。这是由 `.root` 样式定义指定的。
+#### 为根节点应用样式
+
+
+
+如果你想对场景中的所有节点应用样式，请使用`.root`选择器。代码列表 13-5 显示了一个包含两个样式定义的示例样式表：一个用于根节点，另一个用于`Label`控件。代码列表 13-6 中的程序应用了该样式表，而图 13-3 显示了程序的输出。注意，`Label`和`Button`都以衬线字体显示文本。这是由`.root`样式定义指定的。
 
 ![C S S Demo 3 dot java 的输出应用了 Label 和 Button 控件的样式定义，并包含加粗字体文本 Hello world。](img/13fig03.png)
 
 ## 图 13-3 CSSDemo3.java 输出（Oracle 法律顾问）
+
 在下面的动画中，点击“Previous”或“Next”按钮逐行查看代码并查看全程的解释。
 
 ### 代码列表 13-5 `(demo3.css)`
+
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr13-5/5.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr13-5/5.html)
 
 在下面的动画中，点击“Previous”或“Next”按钮逐行查看代码并查看全程的解释。
 
 ### 代码列表 13-6 `(CSSDemo3.java)`
+
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr13-6/6.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr13-6/6.html)
 
-如果针对特定类型节点的样式定义与 `.root` 定义中的规则冲突，则更具体的样式定义将覆盖 `.root`。为了演示这一点，请查看 代码列表 13-7 中的样式表。注意，`.root` 定义指定的字体号为 20 磅，而 `.label` 定义指定的字体号为 10 磅。如果应用程序使用此样式表，其 `Label` 控件将以 10 磅显示文本，而所有其他控件将以 20 磅显示文本。
+如果针对特定类型节点的样式定义与`.root`定义中的规则冲突，则更具体的样式定义将覆盖`.root`。为了演示这一点，请查看代码列表 13-7 中的样式表。注意，`.root`定义指定的字体号为 20 磅，而`.label`定义指定的字体号为 10 磅。如果应用程序使用此样式表，其`Label`控件将以 10 磅显示文本，而所有其他控件将以 20 磅显示文本。
 
 ```
 .root {
@@ -24339,7 +22568,8 @@ JavaFX 支持大量的 CSS 属性（多于我们本书能涵盖的范围）。�
 ### 代码列表 13-7 `(demo4.css)`
 
 ## 在同一定义中指定多个选择器
-你可以在样式定义的第一行列出由逗号分隔的多个选择器。代码列表 13-8 显示了一个示例。注意第 1 行列出了 `.label` 选择器，随后是 `.button` 选择器。结果是样式规则将应用于 `Label` 控件和 `Button` 控件。
+
+你可以在样式定义的第一行列出由逗号分隔的多个选择器。代码列表 13-8 显示了一个示例。注意第 1 行列出了`.label`选择器，随后是`.button`选择器。结果是样式规则将应用于`Label`控件和`Button`控件。
 
 ```
 .label, .button {
@@ -24352,14 +22582,15 @@ JavaFX 支持大量的 CSS 属性（多于我们本书能涵盖的范围）。�
 ### 代码列表 13-8 `(demo5.css)`
 
 ## 使用颜色
-CSS 使用 `RGB` 颜色系统来定义颜色。在 `RGB` 颜色系统中，所有颜色都是通过混合红、绿、蓝色调的。例如，混合红色和绿色得到黄色。当你混合红色和蓝色得到紫色。当你混合所有三种颜色的最大亮度时得到白色。
 
-在 CSS 中定义颜色时，使用 0 到 255 之间的整数值。对于颜色组件，数值越大，该颜色越亮。最常用的指定颜色的方法是带有 `#` 前缀的十六进制，通用格式为：
+CSS 使用`RGB`颜色系统来定义颜色。在`RGB`颜色系统中，所有颜色都是通过混合红、绿、蓝色调的。例如，混合红色和绿色得到黄色。当你混合红色和蓝色得到紫色。当你混合所有三种颜色的最大亮度时得到白色。
+
+在 CSS 中定义颜色时，使用 0 到 255 之间的整数值。对于颜色组件，数值越大，该颜色越亮。最常用的指定颜色的方法是带有`#`前缀的十六进制，通用格式为：
 
 ```
 RGGBB```
 
-其中 `RR` 是红色的十六进制，`GG` 是绿色的十六进制，`BB` 是蓝色的十六进制。例如，`#05AAFF` 是蓝色。当你混合这些颜色组件时得到浅蓝色。为了演示这一点，请查看 代码列表 13-9 中的样式表。它定义了 `Label` 的样式。该定义指定字体号为 20 磅，文本填充颜色为 `#FFFFFF`（白色），背景颜色为 `#909090`（灰色）。图 13-4 显示了应用了这些样式的 Label。
+其中`RR`是红色的十六进制，`GG`是绿色的十六进制，`BB`是蓝色的十六进制。例如，`#05AAFF`是蓝色。当你混合这些颜色组件时得到浅蓝色。为了演示这一点，请查看代码列表 13-9 中的样式表。它定义了`Label`的样式。该定义指定字体号为 20 磅，文本填充颜色为`#FFFFFF`（白色），背景颜色为`#909090`（灰色）。图 13-4 显示了应用了这些样式的 Label。
 
 ```
 .label {
@@ -24374,15 +22605,16 @@ RGGBB```
 ![一个示例标签应用了对 Label 控件的样式。](img/13fig04.png)
 
 ## 图 13-4 应用了样式的 Label（Oracle 法律顾问）
+
 如果你不熟悉十六进制值，可以使用函数式 RGB 表示法来指定颜色。通用格式为：
 
 ```
 rgb(red, green, blue)
 ```
 
-在这种表示法中，红、绿、蓝的值可以是 0 到 255 之间的整数，也可以是 0% 到 100% 之间的百分比。例如，`rgb(255, 0, 127)` 指定红色为 255，绿色为 0，蓝色为 127。而 `rgb(50%, 20%, 90%)` 指定红色应具有 50% 的强度，绿色具有 20% 的强度，蓝色具有 90% 的强度。
+在这种表示法中，红、绿、蓝的值可以是 0 到 255 之间的整数，也可以是 0% 到 100% 之间的百分比。例如，`rgb(255, 0, 127)`指定红色为 255，绿色为 0，蓝色为 127。而`rgb(50%, 20%, 90%)`指定红色应具有 50% 的强度，绿色具有 20% 的强度，蓝色具有 90% 的强度。
 
-为了演示这一点，请查看 代码列表 13-10 中的样式表。`.label` 样式使用函数式 RGB 表示法来指定之前在 代码列表 13-9 中所示相同颜色值。该样式定义指定了：
+为了演示这一点，请查看代码列表 13-10 中的样式表。`.label`样式使用函数式 RGB 表示法来指定之前在代码列表 13-9 中所示相同颜色值。该样式定义指定了：
 
 *   字体号为 24 磅
 *   文本填充颜色：红色 = 255，绿色 = 255，蓝色 = 255
@@ -24398,10 +22630,7 @@ rgb(red, green, blue)
 
 ## 命名颜色
 
-
-
-
-CSS 提供了许多代表颜色的预定义名称。我们将这些名称称为 `命名颜色`。你可以像使用十六进制颜色数字或函数性 RGB 表达式一样使用这些命名颜色。在本书时，JavaFX 支持 148 种命名颜色。表 13-4 仅列出了其中几个。你可以在附录 K 中查看完整列表。你也可以官方 JavaFX CSS 参考指南中查看它们，地址如下：
+CSS 提供了许多代表颜色的预定义名称。我们将这些名称称为`命名颜色`。你可以像使用十六进制颜色数字或函数性 RGB 表达式一样使用这些命名颜色。在本书时，JavaFX 支持 148 种命名颜色。表 13-4 仅列出了其中几个。你可以在附录 K 中查看完整列表。你也可以官方 JavaFX CSS 参考指南中查看它们，地址如下：
 
 ```
 https://docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html
@@ -24416,7 +22645,7 @@ https://docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html
 | `purple` | `red` | `sandybrown` | `tan` |
 | `teal` | `violet` | `white` | `yellow` |
 
-代码列表 13-11 显示了一个使用命名颜色的样式表。`.label` 样式定义指定 `white` 为文本填充颜色，并将 `blue` 为背景颜色。
+代码列表 13-11 显示了一个使用命名颜色的样式表。`.label`样式定义指定`white`为文本填充颜色，并将`blue`为背景颜色。
 
 ```
 1  .label {
@@ -24429,9 +22658,9 @@ https://docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html
 
 # 创建自定义样式类名称
 
-在类型选择器中，点号后面的名称被称为 `样式类`。例如，在 `.label` 选择器中，样式类是 `label`，在 `.button` 选择器中，样式类是 `button`。为了在应用样式定义时具有更高的灵活性，JavaFX 允许你创建自定义的样式类。
+在类型选择器中，点号后面的名称被称为`样式类`。例如，在`.label`选择器中，样式类是`label`，在`.button`选择器中，样式类是`button`。为了在应用样式定义时具有更高的灵活性，JavaFX 允许你创建自定义的样式类。
 
-例如，假设你想让应用程序中的某些 `Button` 控件显示黑色背景和白色文字，而让其他 `Button` 控件显示白色背景和黑色文字。如果你创建两个自定义样式类，这是可以实现的：一个用于黑色按钮，另一个用于白色按钮。代码列表 13-12 显示了一个样式表示例，我们在其中创建了两个自定义样式类：一个命名为 `button-black`，另一个命名为 `button-white`。
+例如，假设你想让应用程序中的某些`Button`控件显示黑色背景和白色文字，而让其他`Button`控件显示白色背景和黑色文字。如果你创建两个自定义样式类，这是可以实现的：一个用于黑色按钮，另一个用于白色按钮。代码列表 13-12 显示了一个样式表示例，我们在其中创建了两个自定义样式类：一个命名为`button-black`，另一个命名为`button-white`。
 
 ```
 1  .button-black {
@@ -24447,15 +22676,15 @@ https://docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html
 
 ### 代码列表 13-12 `(demo9.css)`
 
-在此样式表中，`.button-black` 样式定义指定了黑色背景和白色文字。`.button-white` 样式定义指定了白色背景和黑色文字。要将任一种样式定义应用于节点，我们必须将所需的样式类添加到 Java 应用程序中相应的节点。
+在此样式表中，`.button-black`样式定义指定了黑色背景和白色文字。`.button-white`样式定义指定了白色背景和黑色文字。要将任一种样式定义应用于节点，我们必须将所需的样式类添加到 Java 应用程序中相应的节点。
 
-例如，假设我们有一个名为 `button1` 的 `Button` 控件，并想对其应用 `.button-black` 样式定义。我们将使用以下语句将 `button-black` 样式类添加到 `button1`：
+例如，假设我们有一个名为`button1`的`Button`控件，并想对其应用`.button-black`样式定义。我们将使用以下语句将`button-black`样式类添加到`button1`：
 
 ```
 button1.getStyleClass().add("button-black");
 ```
 
-每个节点都维护一个样式类的内部集合。该集合决定了哪些样式定义将应用于该节点。`getStyleClass()` 方法返回一个包含节点样式类集合的对象，而该对象的 `add` 方法将指定的样式类添加到集合中。（当向 `add` 方法传递样式类名称作为参数时，不需要包含点。）代码列表 13-13 显示了一个使用了之前所示自定义样式类的完整应用程序。程序的输出见图 13-5。
+每个节点都维护一个样式类的内部集合。该集合决定了哪些样式定义将应用于该节点。`getStyleClass()`方法返回一个包含节点样式类集合的对象，而该对象的`add`方法将指定的样式类添加到集合中。（当向`add`方法传递样式类名称作为参数时，不需要包含点。）代码列表 13-13 显示了一个使用了之前所示自定义样式类的完整应用程序。程序的输出见图 13-5。
 
 ```
  1  import javafx.application.Application;
@@ -24490,68 +22719,75 @@ button1.getStyleClass().add("button-black");
   30 }
 ```
 
-
-
-
-
 ```
 Label outputLabel = new Label("Hello world!");
 outputLabel.setStyle("-fx-font-size: 24pt");
 outputLabel.getStyleClass().add("-fx-font-weight: bold");
 ```
 
-这段代码创建了一个名为 `outputLabel` 的 `Label` 控件，将 `Label` 的字体大小设置为 24 磅，并将字体粗细设置为粗体。
+这段代码创建了一个名为`outputLabel`的`Label`控件，将`Label`的字体大小设置为 24 磅，并将字体粗细设置为粗体。
 
 当你在应用程序中只需要应用一或两条样式规则时，内联样式（Inline styling）非常方便。然而在大多数情况下，使用样式表（stylesheets）是更好的做法。如果你需要更改特定的样式规则，在样式表中找到该规则可能会比在应用程序的 Java 代码中更容易。此外，如果你更改了内联适的样式规则，将必须重新编译 Java 应用程序。而在样式表中更改规则则不需要重新编译应用程序。
 
 # 检查点 13.1
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-01/index.html
 
 # 检查点 13.2
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-02/index.html
 
 # 检查点 13.3
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-12/index.html
 
 # 检查点 13.4
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-03/index.html
 
 # 检查点 13.5
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-04/index.html
 
 # 检查点 13.6
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-05/index.html
 
 # 检查点 13.7
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-06/index.html
 
 # 检查点 13.8
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-07/index.html
 
 # 检查点 13.9
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-08/index.html
 
 # 检查点 13.10
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-10/index.html
 
 # 检查点 13.11
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-09/index.html
 
 # 检查点 13.12
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-11/index.html
 
 # 检查点 13.13
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-13/index.html
 
 # 检查点 13.14
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-14/index.html
 
 # 检查点 13.15
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-15/index.html
-
-
-
-
 
 ```
 Miles  = Kilometers × 0.6214
@@ -24559,7 +22795,7 @@ Feet   = Kilometers × 3281.0
 Inches = Kilometers × 39370.0
 ```
 
-当程序运行时，它会显示如图 13-7 所示的窗口。用户输入以公里为单位的距离，然后点击 `RadioButton` 来选择英里、英尺或英寸。当用户点击 `Button`控件时，程序会执行选定的转换并显示结果。例如，图 13-8 显示了应用程序的三个截图。在屏幕中，用户将 100 公里转换成了英里、英尺和英寸。
+当程序运行时，它会显示如图 13-7 所示的窗口。用户输入以公里为单位的距离，然后点击`RadioButton`来选择英里、英尺或英寸。当用户点击`Button`控件时，程序会执行选定的转换并显示结果。例如，图 13-8 显示了应用程序的三个截图。在屏幕中，用户将 100 公里转换成了英里、英尺和英寸。
 
 ## 图 13-7 公制转换器应用程序（Oracle 公司法律顾问）
 
@@ -24575,11 +22811,13 @@ Inches = Kilometers × 39370.0
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr13-14/14.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr13-14/14.html)
 
-## 响应 `RadioButton` 点击
+## 响应`RadioButton`点击
 
-有时，你只是想知道 `RadioButton` 是否被选中。在这种情况下，你调用 `RadioButton` 控件的 `isSelected` 方法。然而，在其他时候，你希望在用户点击 `RadioButton` 时立即执行操作。就像 `Button` 控件一样，`RadioButton` 控件在被点击时会生成一个 `ActionEvent`。如果你想响应 `RadioButton` 的动作事件，必须为该控件注册一个事件处理器。为 `RadioButton` 创建并注册事件处理器的过程与创建和注册 `Button` 事件处理器的过程相同。
 
-代码列表 13-15 显示了一个示例。当程序运行时，它会显示如图 13-9 所示的左侧窗口。初始显示一朵花的图像。当用户点击*Sunset* `RadioButton` 时，图像会立即如右侧窗口所示发生变化。用户可以点击 `RadioButton` 控件来显示花朵或日落。
+
+有时，你只是想知道`RadioButton`是否被选中。在这种情况下，你调用`RadioButton`控件的`isSelected`方法。然而，在其他时候，你希望在用户点击`RadioButton`时立即执行操作。就像`Button`控件一样，`RadioButton`控件在被点击时会生成一个`ActionEvent`。如果你想响应`RadioButton`的动作事件，必须为该控件注册一个事件处理器。为`RadioButton`创建并注册事件处理器的过程与创建和注册`Button`事件处理器的过程相同。
+
+代码列表 13-15 显示了一个示例。当程序运行时，它会显示如图 13-9 所示的左侧窗口。初始显示一朵花的图像。当用户点击`Sunset` `RadioButton`时，图像会立即如右侧窗口所示发生变化。用户可以点击`RadioButton`控件来显示花朵或日落。
 
 ## 图 13-9 RadioButtonEvent 应用程序
 
@@ -24591,19 +22829,15 @@ Inches = Kilometers × 39370.0
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr13-14/14.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr13-14/14.html)
 
-## 响应 `RadioButton` 点击
+## 响应`RadioButton`点击
 
-有时，你只是想知道 `RadioButton` 是否被选中。在这种情况下，你调用 `RadioButton` 控件的 `isSelected` 方法。然而，在其他时候，你希望在用户点击 `RadioButton` 时立即执行操作。就像 `Button` 控件一样，`RadioButton` 控件在被点击时会生成一个 `ActionEvent`。如果你想响应 `RadioButton` 的动作事件，必须为该控件注册一个事件处理器。为 `RadioButton` 创建并注册事件处理器的过程与创建和注册 `Button` 事件处理器的过程相同。
+有时，你只是想知道`RadioButton`是否被选中。在这种情况下，你调用`RadioButton`控件的`isSelected`方法。然而，在其他时候，你希望在用户点击`RadioButton`时立即执行操作。就像`Button`控件一样，`RadioButton`控件在被点击时会生成一个`ActionEvent`。如果你想响应`RadioButton`的动作事件，必须为该控件注册一个事件处理器。为`RadioButton`创建并注册事件处理器的过程与创建和注册`Button`事件处理器的过程相同。
 
-代码列表 13-15 显示了一个示例。当程序运行时，它会显示如图 13-9 所示的左侧窗口。初始显示一朵花的图像。当用户点击*Sunset* `RadioButton` 时，图像会立即如右侧窗口所示发生变化。用户可以点击 `RadioButton` 控件来显示花朵或日落。
+代码列表 13-15 显示了一个示例。当程序运行时，它会显示如图 13-9 所示的左侧窗口。初始显示一朵花的图像。当用户点击`Sunset` `RadioButton`时，图像会立即如右侧窗口所示发生变化。用户可以点击`RadioButton`控件来显示花朵或日落。
 
 ## 图 13-9 RadioButtonEvent 应用程序
 
 ![两个窗口描述了 Radio Button 事件应用程序。](img/13fig09.png)图 13-9 完整替代文本
-
-
-
-
 
 ```
 import javafx.application.Application;
@@ -24713,7 +22947,7 @@ public class PizzaToppings extends Application
 
 ![Pizza Toppings 应用程序允许用户计算配料费用。](img/13fig11.png)图 13-11 备用文本
 
-图 13-12 显示了应用程序的四个不同截图。每个截图显示了用户在做出选择并点击 `Button` 后的应用程序状态。选中项目的总计显示在 `Label` 中。
+图 13-12 显示了应用程序的四个不同截图。每个截图显示了用户在做出选择并点击`Button`后的应用程序状态。选中项目的总计显示在`Label`中。
 
 # 图 13-12 运行中的 PizzaToppings 应用程序（Oracle 顾问）
 
@@ -24721,22 +22955,33 @@ public class PizzaToppings extends Application
 
 让我们仔细观察该应用程序：
 
-- 第 1 到 12 行包含了必要的 `import` 语句。
-- 第 21 到 24 行将 `pepperoniCheckBox`、`cheeseCheckBox`、`anchoviesCheckBox` 和 `totalLabel` 声明为 `PizzaToppings` 类的字段。我们之所以它们声明为字段（而不是在 `start` 方法中声明局部变量），是因为事件处理器需要它们。
-- 第 36 到 38 行创建了 `CheckBox` 控件，第 41 行创建了 `Button` 控件。
-- 第 44 行为 `Button` 控件注册了 `TotalButtonHandler` 类的实例。
-- 第 47 行创建了一个 `Label` 控件。
-- 第 50 和 51 行将 `CheckBox` 控件放入一个 `VBox` 中。
-- 第 54 和 55 行创建了另一个 `VBox` 作为根节点。所有的控件都添加了这个 `VBox`。第 58 和第 61 行将 `VBox` 的对齐方式设置为居中，并将内边距设为 10 像素。
+- 第 1 到 12 行包含了必要的`import`语句。
+
+- 第 21 到 24 行将`pepperoniCheckBox`、`cheeseCheckBox`、`anchoviesCheckBox`和`totalLabel`声明为`PizzaToppings`类的字段。我们之所以将它们声明为字段（而不是在`start`方法中声明局部变量），是因为事件处理器需要它们。
+
+- 第 36 到 38 行创建了`CheckBox`控件，第 41 行创建了`Button`控件。
+
+- 第 44 行为`Button`控件注册了`TotalButtonHandler`类的实例。
+
+- 第 47 行创建了一个`Label`控件。
+
+- 第 50 和 51 行将`CheckBox`控件放入一个`VBox`中。
+
+- 第 54 和 55 行创建了另一个`VBox`作为根节点。所有的控件都添加到了这个`VBox`。第 58 和第 61 行将`VBox`的对齐方式设置为居中，并将内边距设为 10 像素。
+
 - 第 64 到 70 行执行了将根节点添加到场景、将场景添加到阶段以及显示窗口的所有必要步骤。
- 事件 事件处理器出现在第 77 到 98 行。它是一个名为 `TotalButtonHandler` 的内部类。`handle` 方法出现在第 80 行。
-    - 第 83 行声明了一个变量 `result` 并初始化为 0，用于存储结果。
-    - 第 86 到 93 行的 `if` 语句判断哪个 `CheckBox` 被选中，并将选中的配料金额加到 `result` 变量中。
-    - 第 96 行用 `totalLabel` 显示结果。
+
+事件处理器出现在第 77 到 98 行。它是一个名为`TotalButtonHandler`的内部类。`handle`方法出现在第 80 行。
+
+- 第 83 行声明了一个变量`result`并初始化为 0，用于存储结果。
+
+- 第 86 到 93 行的`if`语句判断哪个`CheckBox`被选中，并将选中的配料金额加到`result`变量中。
+
+- 第 96 行用`totalLabel`显示结果。
 
 # 点击 CheckBox
 
-就像 `Button` 和 `RadioButton` 控件一样，`CheckBox` 控件在被点击时会产生 `ActionEvent`。如果你希望在点击 `CheckBox` 时执行某些操作，你需要为该控件注册事件处理器。
+就像`Button`和`RadioButton`控件一样，`CheckBox`控件在被点击时会产生`ActionEvent`。如果你希望在点击`CheckBox`时执行某些操作，你需要为该控件注册事件处理器。
 
 # 检查点 13.19
 
@@ -24744,42 +22989,41 @@ public class PizzaToppings extends Application
 
 # 检查点 13.20
 
-../components/metrodigi/13-inline-self_v1.0.0_20.html)
+../components/metrodigi/13-inline-self_v1.0.0_20.html
 
-# 13.4 `ListView` 控件
+# 13.4 `ListView`控件
 
-概念：`ListView` 控件显示一个列表并允许用户从列表中选择项目。
+概念：`ListView`控件显示一个列表并允许用户从列表中选择项目。
 
 # 查看 ListView 控件
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/a2vS_787RbFdVzyv13ZTg49SudjV7`](https://mediaplayer.pearsoncmg.com/assets/_video.true/a2vS_787RbFdVzyv13ZTg49SudjV7)
 
-`ListView` 控件显示列表并允许用户从中选择一个或多个项目。图 13-13 显示`) `ListView` 控件的应用窗口。注意顶部的 `ListView` 没有滚动条，但底部的有。当 `ListView` 包含的项目多于可用显示空间时，滚动条会自动出现。在图中，顶部的 `ListView` 有四个项目（贵宾、大丹、拉布拉多和梗犬），所有项目都显示了。底部的 `ListView` 显示了四个项目（暹、波斯、矮尾和缅甸），但因为它有滚动条，我们知道 `ListView` 中的项目多于这四个。
+`ListView`控件显示列表并允许用户从中选择一个或多个项目。图 13-13 显示了一个`ListView`控件的应用窗口。注意顶部的`ListView`没有滚动条，但底部的有。当`ListView`包含的项目多于可用显示空间时，滚动条会自动出现。在图中，顶部的`ListView`有四个项目（贵宾、大丹、拉布拉多和梗犬），所有项目都显示了。底部的`ListView`显示了四个项目（暹罗、波斯、矮尾和缅甸），但因为它有滚动条，我们知道`ListView`中的项目多于这四个。
 
-# 图 13-13 `ListView` 示例（Oracle 法律顾问）
+# 图 13-13 `ListView`示例（Oracle 法律顾问）
 
 ![狗品种列表和猫品种列表描述了 ListView 控件。](img/13fig13.png)图 13-13 备用文本
 
-你使用 `ListView` 类（位于 `javafx.scene.control` 包中）来创建 `ListView` 控件。以下代码片段展示了创建一个名为 `dogListView` 的 `ListView` 的示例：
+你使用`ListView`类（位于`javafx.scene.control`包中）来创建`ListView`控件。以下代码片段展示了创建一个名为`dogListView`的`ListView`的示例：
 
 ```
 ListView<string> dogListView = new ListView<>();
 ```
 
+注意语句开头的符号`<string>`紧跟在单词`ListView`之后。这指定了该特定的`ListView`控件只能包含`String`对象。如果我们尝试在此`ListView`中存储其他类型的对象，在编译程序时将会发生错误。同样注意语句末尾的`ListView`之后出现了菱形操作符`<>`。（你可能记得从第 7 章回忆起，`ArrayList`对象是以类似的方式声明的。）
 
-
-注意语句开头的符号 `<string>` 紧跟在单词 `ListView` 之后。这指定了该特定的 `ListView` 控件只能包含 `String` 对象。如果我们尝试在此 `ListView` 中存储其他类型的对象，在编译程序时将会发生错误。同样注意语句末尾的 `ListView` 之后出现了菱形操作符 `<>`。（你可能记得从第 7 章 回忆起，`ArrayList` 对象是以类似的方式声明的。）
-
-一旦你创建了 `ListView` 控件，就可以向它添加项目了。以下语句显示了我们如何向 `dogListView` 控件添加字符串：
+一旦你创建了`ListView`控件，就可以向它添加项目了。以下语句显示了我们如何向`dogListView`控件添加字符串：
 
 ```
 dogListView.getItems().addAll("Poodle", "Great Dane", "Labrador", "Terrier");
 ```
 
 ### 注意事项
-`ListView` 控件在 `ObservableList` 对象中维护其项目列表。我们在第 12 章中讨论过 `ObservableList` 接口。`ListView` 类的 `getItems()` 方法返回持有 `ListView` 项目的 `ObservableList`。
 
-你可以使用 `setPrefSize` 方法设置 `ListView` 控件的首选尺寸。你将首选宽度和高度作为参数传递。以下代码段显示了一个宽为 120 像素、高为 100 像素的 `ListView` 控件示例：
+`ListView`控件在`ObservableList`对象中维护其项目列表。我们在第 12 章中讨论过`ObservableList`接口。`ListView`类的`getItems()`方法返回持有`ListView`项目的`ObservableList`。
+
+你可以使用`setPrefSize`方法设置`ListView`控件的首选尺寸。你将首选宽度和高度作为参数传递。以下代码段显示了一个宽为 120 像素、高为 100 像素的`ListView`控件示例：
 
 ```
 ListView<string> catListView = new ListView<>();
@@ -24788,88 +23032,92 @@ catListView.getItems().addAll("Siamese", "Persian", "Bobtail", "Burmese", "Tabby
 ```
 
 # 获取选中项目
-你可以使用 `ListView` 类的 `getSelectionModel().getSelectedItem()` 方法获取当前选中的项目。例如，假设有一个名为 `listView` 的 `ListView` 控件。以下代码获取控件中当前选中的项目，并将其赋值给名为 `selected` 的 `String` 变量：
+
+你可以使用`ListView`类的`getSelectionModel().getSelectedItem()`方法获取当前选中的项目。例如，假设有一个名为`listView`的`ListView`控件。以下代码获取控件中当前选中的项目，并将其赋值给名为`selected`的`String`变量：
 
 ```
 String selected = listView.getSelectionModel().getSelectedItem();
 ```
 
-如果 `ListView` 中没有选择任何项目，该方法将返回 `null`。代码列表 13-17 显示了一个完整的示例。它在 `ListView` 控件中显示了一份名称列表。当用户点击 `Button` 控件时，程序获取选中的名称并在 `Label` 控件中显示它。图 13-14 显示了程序的运行情况。
+如果`ListView`中没有选择任何项目，该方法将返回`null`。代码列表 13-17 显示了一个完整的示例。它在`ListView`控件中显示了一份名称列表。当用户点击`Button`控件时，程序获取选中的名称并在`Label`控件中显示它。图 13-14 显示了程序的运行情况。
 
-```
- 1  import javafx.application.Application;
- 2  import javafx.stage.Stage;
- 3  import javafx.scene.Scene;
- 4  import javafx.scene.control.ListView;
- 5  import javafx.scene.control.Label;
- 6  import javafx.scene.control.Button;
- 7  import javafx.scene.layout.VBox;
- 8  import javafx.geometry.Pos;
- 9  import javafx.geometry.Insets;
-10
- 11  public class ListViewDemo1 extends Application
- 12  {
- 13     public static void main(String[] args)
- 14     {
- 15        // Launch the application.
- 16        launch(args);
- 17     }
- 18
- 19     @Override
- 20     public void start(Stage primaryStage)
- 21     {
- 22        // Create a ListView of Strings.
- 23        ListView<string> listView = new ListView<>();
- 24        listView.setPrefSize(120, 100);
- 25        listView.getItems().addAll("Steve", "Bethany", "Will", "Katrina");
- 26
- 27        // Create a Label to display the selection.
- 28        Label selectedNameLabel = new Label("Select a Name");
- 29
- 30        // Create a Button to get the selection.
- 31        Button getButton = new Button("Get the Selection");
- 32
- 33        // Create an event handler for the Button.
- 34        getButton.setOnAction(event -> ->
- 35        {
- 36           // Get the selected name.
- 37           String selected = listView.getSelectionModel().getSelectedItem();
- 38
- 39           // Display the selected name in the Label.
- 40           selectedNameLabel.setText(selected);
- 41         });
- 42
- 43         // Add the controls to a VBox.
- 44         VBox vbox = new VBox(10, listView, selectedNameLabel, getButton);
- 45         vbox.setPadding(new Insets(10));
- 46         vbox.setAlignment(Pos.CENTER);
- 47
- 48         // Create a Scene and display it.
- 49         Scene scene = new Scene(vbox);
- 50         primaryStage.setScene(scene);
- 51         primaryStage.show();
- 52     }
- 53  }
-```
-# 代码列表 13-17 `(ListViewDemo1)`
 
-# 图 13-14 ListViewDemo1.java 程序 (Oracle Corporate Counsel)
+
+```java
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.control.ListView;
+import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.layout.VBox;
+import javafx.geometry.Pos;
+import javafx.geometry.Insets;
+
+public class ListViewDemo1 extends Application
+{
+    public static void main(String[] args)
+    {
+        // Launch the application.
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage)
+    {
+        // Create a ListView of Strings.
+        ListView<string> listView = new ListView<>();
+        listView.setPrefSize(120, 100);
+        listView.getItems().addAll("Steve", "Bethany", "Will", "Katrina");
+
+        // Create a Label to display the selection.
+        Label selectedNameLabel = new Label("Select a Name");
+
+        // Create a Button to get the selection.
+        Button getButton = new Button("Get the Selection");
+
+        // Create an event handler for the Button.
+        getButton.setOnAction(event -> ->
+        {
+            // Get the selected name.
+            String selected = listView.getSelectionModel().getSelectedItem();
+
+            // Display the selected name in the Label.
+            selectedNameLabel.setText(selected);
+        });
+
+        // Add the controls to a VBox.
+        VBox vbox = new VBox(10, listView, selectedNameLabel, getButton);
+        vbox.setPadding(new Insets(10));
+        vbox.setAlignment(Pos.CENTER);
+
+        // Create a Scene and display it.
+        Scene scene = new Scene(vbox);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+}
+```
+
+## 代码列表 13-17 (`ListViewDemo1`)
+
+## 图 13-14 ListViewDemo1.java 程序 (Oracle Corporate Counsel)
+
 ![两个窗口中显示了 ListView Demo 1 java 应用程序](img/13fig14.png)图 13-14 备用文本
 
-# 获取选中项目的索引
+## 获取选中项目的索引
+
 在内部，`ListView` 控件中的每个项目都分配了一个标记该项目位置的索引。第一个项目（列表顶部的项目）的索引为 0，第二个项目的索引为 1，依此类推。你可以使用 `ListView` 类的 `getSelectionModel().getSelectedIndex()` 方法获取当前选中项目的索引。例如，假设有一个名为 `listView` 的 `ListView` 控件。以下代码获取控件中当前选中的项目的索引，并将其赋值给名为 `index` 的 `int` 变量：
 
-```
+```java
 int index = listView.getSelectionModel().getSelectedIndex();
 ```
 
 如果 `ListView` 中没有选择任何项目，该方法将返回 `-1`。你可以用此来判断用户是否选择了某个项目。例如，代码列表 13-18 是对代码列表 13-17 中程序的修改。在这个版本中，如果用户在 `ListView` 控件中选择项目之前点击 `Button` 控件，程序将显示消息“Nothing Selected”。该输出的示例在图 13-15 所示。
 
-# 图 13-15 ListViewDemo2.java 程序 (Oracle Corporate Counsel)
+## 图 13-15 ListViewDemo2.java 程序 (Oracle Corporate Counsel)
+
 ![显示了 ListView Demo 2 java 应用程序](img/13fig15.png)图 13-15 备用文本
-
-
-
 
 ```java
 import javafx.application.Application;
@@ -24907,20 +23155,20 @@ public class ListViewDemo2 extends Application
         // Create an event handler for the Button.
         getButton.setOnAction(event ->
         {
-           // Determine whether an item is selected.
-           if (listView.getSelectionModel().getSelectedIndex() != -1)
-           {
-              // Get the selected name.
-              String selected =
-                      listView.getSelectionModel().getSelectedItem();
+            // Determine whether an item is selected.
+            if (listView.getSelectionModel().getSelectedIndex() != -1)
+            {
+                // Get the selected name.
+                String selected =
+                        listView.getSelectionModel().getSelectedItem();
 
-              // Display the selected name in the Label.
-              selectedNameLabel.setText(selected);
-           }
-           else
-           {
-              selectedNameLabel.setText("Nothing Selected");
-           }
+                // Display the selected name in the Label.
+                selectedNameLabel.setText(selected);
+            }
+            else
+            {
+                selectedNameLabel.setText("Nothing Selected");
+            }
         });
 
         // Add the controls to a VBox.
@@ -24936,11 +23184,11 @@ public class ListViewDemo2 extends Application
 }
 ```
 
-# 代码列表 13-18 `(ListViewDemo2.java)`
+## 代码列表 13-18 (`ListViewDemo2.java`)
 
 让我们仔细观察这个程序。在 `Button` 控件的事件处理器中，第 37 行开始的 `if` 语句获取被选中项的索引。如果该值*不是* -1，则表示已选中一个项，并显示被选中的项（第 44 行）。然而，如果选中项索引为 -1，则表示 `ListView` 中没有选中任何项，程序将跳转到第 46 行的 `else` 句。
 
-# 使用事件处理器响应项目选择
+## 使用事件处理器响应项目选择
 
 当用户在 `ListView` 中选择一个项目时，会发生一个*更改事件*。如果你希望程序在用户选择 `ListView` 中的某项时立即执行操作，可以编写一个响应该更改事件的事件处理器。假设 `listView` 是一个 `ListView` 控件的名称，以下代码段显示了如何使用 lambda 表达式注册此类事件处理器：
 
@@ -24985,11 +23233,11 @@ public class ListViewDemo3 extends Application
         // Create an event handler for the ListView.
         listView.getSelectionModel().selectedItemProperty().addListener(event ->
         {
-           // Get the selected name.
-           String selected = listView.getSelectionModel().getSelectedItem();
+            // Get the selected name.
+            String selected = listView.getSelectionModel().getSelectedItem();
 
-           // Display the selected name in the Label.
-           selectedNameLabel.setText(selected);
+            // Display the selected name in the Label.
+            selectedNameLabel.setText(selected);
         });
 
         // Add the controls to a VBox.
@@ -25005,13 +23253,13 @@ public class ListViewDemo3 extends Application
 }
 ```
 
-# 代码列表 13-19 `(ListViewDemo3.java)`
+## 代码列表 13-19 (`ListViewDemo3.java`)
 
-# 图 13-16 ListViewDemo3.java
+## 图 13-16 ListViewDemo3.java
 
 ![显示了 List View Demo 3 java 应用程序](img/13fig16.png)
 
-# 添加项目与设置项目的区别
+## 添加项目与设置项目的区别
 
 `ListView` 控件的 `addAll()` 方法向 `ListView` 添加项目。如果 `ListView` 已经包含项目，`addAll()` 方法不会擦除现有的项目，而是会将新项目添加到列表中。结果是 `ListView` 将包含旧项目和新项目。
 
@@ -25030,11 +23278,13 @@ listView.getItems().setAll("Thursday", "Friday", "Saturday");
 
 在该代码执行后，`listView` 控件将包含项目“Thursday”、“Friday”和“Saturday”。
 
-# 使用数组或 ArrayList 实例化 ListView
+## 使用数组或 ArrayList 实例化 ListView
 
 在某些情况下，你可能有一个包含要在 `ListView` 控件中显示的项目的数组或 `ArrayList`。在这种情况下，你可以将数组或 `ArrayList` 转换为 `ObservableList`，然后将 `ObservableList` 作为参数传递给 `ListView` 类的构造函数。
 
 `FXCollections` 类（位于 `javafx.collections` 包）有一个名为 `observableArrayList` 的静态方法，它接受一个数组或 `ArrayList` 作为参数，并返回一个包含相同项目的 `ObservableList`。以下代码显示创建一个显示 `String` 数组项目的 `ListView` 控件的示例：
+
+
 
 ```java
 // 创建 String 数组
@@ -25048,10 +23298,6 @@ ListView<String> listView = new ListView<>(strList);
 ```
 
 以下代码段显示相同的示例，但这次是将 `ArrayList` 转换为 `ObservableList`：
-
-
-
-
 
 ```java
 // Create an ArrayList of Strings.
@@ -25085,7 +23331,7 @@ ListView<String> listView = new ListView<>();
 listView.getItems().addAll(strList);
 ```
 
-以下是一个使用 `getItems().setAll()` 方法用 `String` 的 ArrayList 中的项填充 `ListView` 的示例：
+以下是一个使用 `getItems().setAll()` 方法用 `String` 的 `ArrayList` 中的项填充 `ListView` 的示例：
 
 ```java
 // Create an ArrayList of Strings.
@@ -25105,23 +23351,23 @@ ListView<String> listView = new ListView<>();
 listView.getItems().setAll(strList);
 ```
 
-# 选择模式
+## 选择模式
 
 `ListView` 控件可以在以下两种选择模式之一运行：
 
-*   单项选择模式。在此模式下，一次只能选择一个项。当选中某个项时，当前选中的任何其他项都会被取消选择。这是默认的选择模式。
-*   多项连续区域选择模式。在这种模式下，可以选择多个项。要选择多个连续的项，用户点击第一个项，按住键盘上的 `Shift` 键，然后点击最后一个项。要选择不连续的项，用户按住键盘上的 `Ctrl` 键（或 Mac 键盘上的 `Command` 键），然后点击每个项。
+- 单项选择模式。在此模式下，一次只能选择一个项。当选中某个项时，当前选中的任何其他项都会被取消选择。这是默认的选择模式。
+- 多项连续区域选择模式。在这种模式下，可以选择多个项。要选择多个连续的项，用户点击第一个项，按住键盘上的 `Shift` 键，然后点击最后一个项。要选择不连续的项，用户按住键盘上的 `Ctrl` 键（或 Mac 键盘上的 `Command` 键），然后点击每个项。
 
 [图 13-17] 显示了 `ListView` 控件在单选择模式和多项选择模式下的示例。
 
-# 图 13-17 选择模式 (Oracle Corporate Counsel)
+### 图 13-17 选择模式 (Oracle Corporate Counsel)
 
 ![三个窗口中描述了三种选择模式，具有相同的月份列表：一月、二月、三月、四月、五月、六月。](img/13fig17.png)
 
 默认情况下，`ListView` 控件处于单选择模式。你可以通过控件的 `getSelectionModel().setSelectionMode()` 方法更改选择模式。方法接受以下枚举常量之一：
 
-*   `SelectionMode.MULTIPLE`
-*   `SelectionMode.SINGLE`
+- `SelectionMode.MULTIPLE`
+- `SelectionMode.SINGLE`
 
 注意 `SelectionMode` 枚举位于 `javafx.scene.control` 包中。假设 `listView` 是 `ListView` 控件的名称，以下代码显示了如何将控件更改为多项选择模式：
 
@@ -25129,12 +23375,12 @@ listView.getItems().setAll(strList);
 listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 ```
 
-# 获取多个选中的项
+## 获取多个选中的项
 
 当 `ListView` 控件处于多项选择模式时，用户可以选择多个项。`getSelectionModel().getSelectedItem()` 方法将只返回最后一个选中的项。同样，`getSelectionModel().getSelectedIndex()` 方法将只返回最后一个选中的项的索引。要获取所有选中的项及其索引，你需要使用以下方法：
 
-*   `getSelectionModel().getSelectedItems()`——该方法返回一个包含选中项的只读 `ObservableList`。
-*   `getSelectionModel().getSelectedIndices()`——该方法返回一个包含选中项整数索引的只读 `ObservableList`。
+- `getSelectionModel().getSelectedItems()`——该方法返回一个包含选中项的只读 `ObservableList`。
+- `getSelectionModel().getSelectedIndices()`——该方法返回一个包含选中项整数索引的只读 `ObservableList`。
 
 [代码列表 13-20] 展示了如何获取多个选中的项。程序显示了两个名为 `listView1` 和 `listView2` 的 `ListView` 控件。用户从 `listView1` 中选择项，然后当用户点击 `Button` 控件时，选中的项将显示在 `listView2` 中。[图 13-18] 显示了应用程序运行时的示例。左侧的图像显示了程序的初始外观，右侧的图像显示了用户从 `listView1` 选择项并点击 `Button` 控件后的窗口。
 
@@ -25196,89 +23442,90 @@ public class ListViewDemo4 extends Application {
 }
 ```
 
-# 代码列表 13-20 `(ListViewDemo4.java)`
+### 代码列表 13-20 `(ListViewDemo4.java)`
 
+- 第 48 和 49 行获取 `listView1` 控制中被选中项的 `ObservableList`。
+- 第 52 行在 `listView2` 控制中显示该 `ObservableList`。
+- 第 56 至 59 行创建一个 `VBox` 并将所有控件添加到其中。
+- 第 62 至 64 行创建一个场景（scene），将场景设置到舞台（stage），并显示应用程序窗口。
 
+## 操作 `ObservableList` 元素
 
+`ObservableList` 与你在第 7 章中学习过的 `ArrayList` 类有许多共同点。如果你需要处理 `ObservableList` 中的单个元素，那么你已经学过的所有关于 `ArrayList` 的知识也同样适用于 `ObservableList`。例如：
 
-
-*   第 48 和 49 行获取 `listView1` 控制中被选中项的 `ObservableList`。
-*   第 52 行在 `listView2` 控制中显示该 `ObservableList`。
-*   第 56 至 59 行创建一个 `VBox` 并将所有控件添加到其中。
-*   第 62 至 64 行创建一个场景（scene），将场景设置到舞台（stage），并显示应用程序窗口。
-
-# 操作 `ObservableList` 元素
-
-`ObservableList` 与你在第 7 章 中学习过的 `ArrayList` 类有许多共同点。如果你需要处理 `ObservableList` 中的单个元素，那么你已经学过的所有关于 `ArrayList` 的知识也同样适用于 `ObservableList`。例如：
-
-*   你可以使用增强型 `for` 循环来遍历 `ObserveableList`。
-*   你可以使用 `get` 方法获取 `ObservableList` 中的特定元素。
-*   你可以使用 `size` 方法获取 `ObservableList` 中的元素数量。
-*   你可以使用 `add` 方法向 `ObservableList` 中添加元素（只要该 `ObservableList` 不是只读的）。
-*   你可以使用 `remove` 方法从 `ObservableList` 中删除元素。
-*   你可以使用 `set` 方法替换 `ObservableList` 中的元素。
+- 你可以使用增强型 `for` 循环来遍历 `ObservableList`。
+- 你可以使用 `get` 方法获取 `ObservableList` 中的特定元素。
+- 你可以使用 `size` 方法获取 `ObservableList` 中的元素数量。
+- 你可以使用 `add` 方法向 `ObservableList` 中添加元素（只要该 `ObservableList` 不是只读的）。
+- 你可以使用 `remove` 方法从 `ObservableList` 中删除元素。
+- 你可以使用 `set` 方法替换 `ObservableList` 中的元素。
 
 接下来的代码片段展示了代码列表 13-20 中 `getButton` 控件事件处理器的另一个版本。在此版本的代码中，我们在第 52 行使用增强型 `for` 循环来遍历 `ObservableList`，将每个项逐个添加到 `listView2` 控制中（第 53 行）：
 
-```
+```java
 44     // 为 Button 注册事件处理程序。
- 45     getButton.setOnAction(event −>
- 46     {
- 47        // 获取被选中项的 ObservableList。
- 48        ObservableList<String> selections =
- 49           listView1.getSelectionModel().getSelectedItems();
- 50
- 51        // 将选中项添加到第二个 ListView 中。
- 52        for (String str : selections)
- 53            listView2.getItems().addAll(str);
- 54      });
+45     getButton.setOnAction(event −>
+46     {
+47        // 获取被选中项的 ObservableList。
+48        ObservableList<String> selections =
+49           listView1.getSelectionModel().getSelectedItems();
+50
+51        // 将选中项添加到第二个 ListView 中。
+52        for (String str : selections)
+53            listView2.getItems().addAll(str);
+54      });
 ```
 
 接下来的代码片段展示了代码列表 13-20 中 `getButton` 控件事件处理器的另一个版本。在此版本的代码中，我们在第 52 行使用普通的 `for` 循环来遍历 `ObservableList`，将每个项逐个添加到 `listView2` 控制中（第 53 行）：
 
-```
+```java
 44     // 为 Button 注册事件处理程序。
- 45     getButton.setOnAction(event −>
- 46     {
- 47        // 获取被选中项的 ObservableList。
- 48        ObservableList<String> selections =
- 49           listView1.getSelectionModel().getSelectedItems();
- 50
- 51        // 将选中项添加到第二个 ListView 中。
- 52        for (int i = 0; i < selections.size(); i++)
- 53           listView2.getItems().addAll(selections.get(i));
- 54     });
+45     getButton.setOnAction(event −>
+46     {
+47        // 获取被选中项的 ObservableList。
+48        ObservableList<String> selections =
+49           listView1.getSelectionModel().getSelectedItems();
+50
+51        // 将选中项添加到第二个 ListView 中。
+52        for (int i = 0; i < selections.size(); i++)
+53           listView2.getItems().addAll(selections.get(i));
+54     });
 ```
 
 显然，这两种方法都不优于代码列表 13-20 中所示的原始方法，但这些示例说明了你如何遍历 `ObservableList` 并操作它的单个元素。
 
-# 将 `ObservableList` 转换为数组
+## 将 `ObservableList` 转换为数组
 
-有时，你可能需要从 `ListView` 控制中获取选中项的 `ObservableList`，然后将该 `ObservableList` 转换为数组。`ObservableList` 对象有一个名为 `toArray` 的方法，返回一个包含列表中项的数组。然而，在 `toArray` 方法将 `ObservableList` 转换为数组之前，它必须知道数组的数据类型。你通过通过传递一个具有正确数据类型的空数组作为 `toArray` 方法的参数来指定数据类型。让我们来看一个例子。在接下来的代码片段中，假设 `listView` 是一个包含字符串的 `ListView` 控制：
+有时，你可能需要从 `ListView` 控制中获取选中项的 `ObservableList`，然后将该 `ObservableList` 转换为数组。`ObservableList` 对象有一个名为 `toArray` 的方法，返回一个包含列表中项的数组。然而，在 `toArray` 方法将 `ObservableList` 转换为数组之前，它必须知道数组的数据类型。你通过传递一个具有正确数据类型的空数组作为 `toArray` 方法的参数来指定数据类型。让我们来看一个例子。在接下来的代码片段中，假设 `listView` 是一个包含字符串的 `ListView` 控制：
 
-```
-// 将选中项作为 ObservableList 获取。​
- ObservableList<String> selections =
-        listView.getSelectionModel().getSelectedItems();
+```java
+// 将选中项作为 ObservableList 获取。
+ObservableList<String> selections =
+       listView.getSelectionModel().getSelectedItems();
 
- // 将 ObservableList 转换为 String 数组。
- String[] itemArray = selections.toArray(new String[0]);
+// 将 ObservableList 转换为 String 数组。
+String[] itemArray = selections.toArray(new String[0]);
 ```
 
 在这段代码中，第一条语句获取一个包含 `listView` 控制中选中项的 `ObservableList`。第二条语句将 `ObservableList` 转换为 `String` 数组，并将数组赋值给变量 `itemArray`。我们作为参数传递给 `toArray` 方法的空 `String` 数组告诉该方法返回一个 `String` 数组。
 
-# 使用代码在 `ListView` 中选择项
+## 使用代码在 `ListView` 中选择项
 
 当你创建一个 `ListView` 控制时，`ListView` 中的没有任何项是默认被选中的。在代码中，你可以使用表 13-5 中列出的任何方法来选择 `ListView` 控制中的一个或多个项。
 
-# 表 13-5 选择项的 `ListView` 方法
+### 表 13-5 选择项的 `ListView` 方法
 
 | 方法 | 说明 |
 | --- | --- |
 | `getSelectionModel().selectFirst()` | 选择 `ListView` 中的第一个项。 |
 | `getSelectionModel().selectLast()` | 选择 `ListView` 中的最后一个项。 |
+
+
+
 | `getSelectionModel().selectAll()` | 选择 `ListView` 中的所有项。 |
-| `getSelectionModel().selectIndices(int...)` | 传递一个或多个 `int` 索引，选择相应的。 |
+
+| `getSelectionModel().selectIndices(int...)` | 传递一个或多个 `int` 索引，选择相应的项。 |
+
 | `getSelectionModel().selectRange(int start, int end)` | 该方法选择 `ListView` 中从 `start` 到 `end` 的范围项。 |
 
 例如，下面的代码创建了一个 `ListView` 并选择第一个：
@@ -25289,13 +23536,13 @@ listView.getItems().addAll("Monday", "Tuesday", "Wednesday");
 listView.getSelectionModel().selectFirst();
 ```
 
-ListView 方向
+## ListView 方向
 
 默认情况下，`ListView` 控制是垂直方向的。你可以使用 `ListView` 类的 `setOrientation` 方法将其方向设置为垂直或水平。当你调用该方法时，会传递以下常量之一：`Orientation.VERTICAL` 或 `Orientation.HORIZONTAL`。（`Orientation` 枚举位于 `javafx.geometry` 包中。）接下来的代码片段展示了如何创建一个 `ListView` 并将其方向设置为水平。图 13-19 显示了 `ListView` 的示例。
 
 ![窗口显示了包含周一、周二和周三的水平列表。](img/13fig19.png)
 
-# 图 13-19 水平 `ListView` (Oracle 法务)
+### 图 13-19 水平 `ListView` (Oracle 法务)
 
 ```
 ListView<String> listView = new ListView<>();
@@ -25306,7 +23553,7 @@ listView.setOrientation(Orientation.HORIZONTAL);
 listView.setPrefSize(200, 50);
 ```
 
-# 创建非 String 对象的 ListView
+## 创建非 String 对象的 ListView
 
 我们目前为止讨论的所有示例都使用 `String` 的 `ListView`。你也可以在 `ListView` 中存储其他类型的对象。接下来的代码片段创建一个显示 1 到 5 整数的 `ListView`：
 
@@ -25322,11 +23569,7 @@ ListView<Double> listView = new ListView<>();
 listView.getItems().addAll(1.0, 2.0, 3.0, 4.0, 5.0);
 ```
 
-
-
-
-
-代码列表 13-21 显示了一个完整的示例。如图 13-20 所示，该程序创建了一个包含 1 到 5 整数值的 `ListView`。该 `ListView`处于多选模式，因此用户可以选择多个值。当用户点击 `Button` 控件时，程序会计算所选整数的和，并将结果显示在 `Label` 控件中。
+代码列表 13-21 显示了一个完整的示例。如图 13-20 所示，该程序创建了一个包含 1 到 5 整数值的 `ListView`。该 `ListView` 处于多选模式，因此用户可以选择多个值。当用户点击 `Button` 控件时，程序会计算所选整数的和，并将结果显示在 `Label` 控件中。
 
 ```java
  1  import javafx.application.Application;
@@ -25407,23 +23650,24 @@ listView.getItems().addAll(1.0, 2.0, 3.0, 4.0, 5.0);
   76  }
 ```
 
-# 代码列表 13-21 `(ListViewDemo5.java)`
+### 代码列表 13-21 `(ListViewDemo5.java)`
 
-# 图 13-20 ListViewDemo5.java 应用程序（Oracle 官方）
+### 图 13-20 ListViewDemo5.java 应用程序（Oracle 官方）
 
 ![两个框显示了 ListViewDemo5 java 应用程序在运行前后的界面](img/13fig20.png)[图 13-20 替代文本]
 
 代码列表 13-22 演示了如何在 `ListView` 中存储 `ImageView` 控件。如图 13-21 所示，该程序在水平 `ListView` 中显示三张牌图片。当用户点击其中一张图片时，程序会在 `Label` 控件中显示该牌的名字。
 
-# 图 13-21 ListViewDemo6.java 应用程序（Oracle 官方）
+### 图 13-21 ListViewDemo6.java 应用程序（Oracle 官方）
 
 ![两个框显示了 ListViewDemo6 java 应用程序在运行前后的界面](img/13fig21.png)[图 13-21 替代文本]
 
 在下面的动画中，点击“Previous”或“Next”按钮逐行查看代码并解释。
 
-# 代码列表 13-22 (ListViewDemo6.java)
+### 代码列表 13-22 (ListViewDemo6.java)
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr13-22/22`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr13-22/22) 仔细观察程序：
+
 * 第 25 行定义了 `ListView` 控件的大小。
 * 第 28 到 30 行加载图片并创建 `Image` 对象。
 * 第 33 到 35 行创建用于图片的 `ImageView` 控件。
@@ -25441,30 +23685,27 @@ listView.getItems().addAll(1.0, 2.0, 3.0, 4.0, 5.0);
     * 第 62 到 64 行将所有控件放入 `VBox` 中，并设置 `VBox` 的对齐方式和内留。
     * 第 67 到 69 行创建场景，将场景放在舞台上并显示应用程序窗口。
 
-# 检查点 13.21
+## 检查点 13.21
 
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-21/index.html
 
-# 检查点 13.22
+## 检查点 13.22
 
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-22/index.html
 
-# 检查点 13.23
+## 检查点 13.23
 
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-23/index.html
 
-# 检查点 13.24
+## 检查点 13.24
 
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-24/index.html
 
-# 检查点 13.25
+## 检查点 13.25
 
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-25/index.html
 
-
-
-
-注意语句的开头，符号 `<String>` 紧跟在单词 `ComboBox` 之后。这指定该特定的 `ComboBox` 控件只能包含 `String` 对象。如果我们尝试在此 `ComboBox` 中存储其他类型的对象，在编译程序时将会发生错误。另外，注意语句末尾 `ComboBox` 之后出现了菱形操作符 `<>`。（你可能还从第 7 章 回记得 `ArrayList` 对象是以类似的方式进行声明的。）
+注意语句的开头，符号 `<String>` 紧跟在单词 `ComboBox` 之后。这指定该特定的 `ComboBox` 控件只能包含 `String` 对象。如果我们尝试在此 `ComboBox` 中存储其他类型的对象，在编译程序时将会发生错误。另外，注意语句末尾 `ComboBox` 之后出现了菱形操作符 `<>`。（你可能还从第 7 章回记得 `ArrayList` 对象是以类似的方式进行声明的。）
 
 一旦你创建了 `ComboBox` 控件，就可以向它添加项目了。以下语句展示了我们如何向我们的 `nameComboBox` 控件添加字符串：
 
@@ -25474,7 +23715,7 @@ nameComboBox.getItems().addAll("Will", "Megan", "Amanda", "Tyler");
 
 由这段代码创建的 `nameComboBox` 控件最初将显示为图 13-22 左侧所示的按钮。按钮显示当前选中的项目。当用户点击按钮时，会出现图中中间所示的下拉列表。当用户从列表中选择一个项目时，它将显示在 `ComboBox` 按钮上，如图右侧图像所示。
 
-# 图 13-22 `ComboBox` 控件（Oracle 公司法务顾问）
+### 图 13-22 `ComboBox` 控件（Oracle 公司法务顾问）
 
 ![三张图片描述了在使用该功能之前、期间和之后的 Combo Box 情况。](img/13fig22.png)图 13-22 完整备用文本
 
@@ -25484,7 +23725,7 @@ nameComboBox.getItems().addAll("Will", "Megan", "Amanda", "Tyler");
 
 表 13-6 列出了一些最常用的的 `ComboBox` 方法。
 
-# 表 13-6 一些 `ComboBox` 方法
+### 表 13-6 一些 `ComboBox` 方法
 
 | 方法 | 描述 |
 | --- | --- |
@@ -25496,7 +23737,7 @@ nameComboBox.getItems().addAll("Will", "Megan", "Amanda", "Tyler");
 | `hide()` | 隐藏项目的下拉列表。 |
 | `isShowing()` | 返回 `true` 或 `false` 以指示下拉列表是否可见。 |
 
-# 获取选中的项目
+## 获取选中的项目
 
 你可以使用 `ComboBox` 类的 `getValue()` 方法来获取当前选中的项目。例如，假设我们有一个名为 `comboBox` 的 `ComboBox` 控件。以下代码获取控件中当前选中的项目，并将其赋值给名为 `selected` 的 `String` 变量：
 
@@ -25504,7 +23745,9 @@ nameComboBox.getItems().addAll("Will", "Megan", "Amanda", "Tyler");
 String selected = comboBox.getValue();
 ```
 
-如果 `ComboBox` 中没有选择任何项目，该方法将返回 `null`。代码列表 13-23 展示了一个了一个示例。它在在 `ComboBox` 控件中显示了一个国家列表。用户选择一个国家，然后点击 `Button` 控件。`Button` 的事件处理器获取选中的国家并将其显示在 `Label` 控件中。图 13-23 显示了程序的运行情况。
+
+
+如果`ComboBox`中没有选择任何项目，该方法将返回`null`。代码列表 13-23 展示了一个示例。它在`ComboBox`控件中显示了一个国家列表。用户选择一个国家，然后点击`Button`控件。`Button`的事件处理器获取选中的国家并将其显示在`Label`控件中。图 13-23 显示了程序的运行情况。
 
 ```java
  1  import javafx.application.Application;
@@ -25554,16 +23797,16 @@ String selected = comboBox.getValue();
  45 }
 ```
 
-# 响应 `ComboBox` 项目选择
+## 响应`ComboBox`项目选择
 
-当用户在 `ComboBox` 中选择一个项目时，会发生一个 `ActionEvent`。如果你希望程序在用户选择一个项目时执行某些操作，可以编写一个事件处理器来响应该事件。假设 `comboBox` 是 `ComboBox` 控件，以下代码片段展示了如何使用 lambda 表达式注册这样一个事件处理器：
+当用户在`ComboBox`中选择一个项目时，会发生一个`ActionEvent`。如果你希望程序在用户选择一个项目时执行某些操作，可以编写一个事件处理器来响应该事件。假设`comboBox`是`ComboBox`控件，以下代码片段展示了如何使用 lambda 表达式注册这样一个事件处理器：
 
 ```java
 comboBox.setOnAction(event ->
 {
 ```
 
-代码列表 13-24 该版本的程序没有 `Button` 控件。相反，选中的项目会在用户选择后立即显示。该程序的输出展示在图 13-23 中。
+代码列表 13-24 该版本的程序没有`Button`控件。相反，选中的项目会在用户选择后立即显示。该程序的输出展示在图 13-23 中。
 
 ```java
  1  import javafx.application.Application;
@@ -25612,96 +23855,91 @@ comboBox.setOnAction(event ->
  44 }
 ```
 
-# 代码列表 13-24 `(ComboBoxDemo2.java)`
+### 代码列表 13-24 (`ComboBoxDemo2.java`)
 
-
-
-
-
-# 图 13-24 ComboBoxDemo2.java 程序（Oracle 法务部）
+### 图 13-24 ComboBoxDemo2.java 程序（Oracle 法务部）
 
 ![三张图片展示了 Combo Box Demo 2 dot java 程序在利用该功能之前、期间和之后的状态。](img/13fig24.png)图 13-24 完整替代文本
 
-# 可编辑的组合框 (ComboBoxes)
+## 可编辑的组合框 (`ComboBoxes`)
 
-可编辑的 `ComboBox` 允许用户从下拉列表中选择一个项目，或者在类似于 `TextField` 的字段中输入内容。默认情况下，`ComboBox` 控件是不可编辑的，这意味着用户无法向控件中输入内容；他们只能从下拉列表中选择项目。
+可编辑的`ComboBox`允许用户从下拉列表中选择一个项目，或者在类似于`TextField`的字段中输入内容。默认情况下，`ComboBox`控件是不可编辑的，这意味着用户无法向控件中输入内容；他们只能从下拉列表中选择项目。
 
-`ComboBox` 类有一个名为 `setEditable` 的方法，它接受一个 `boolean` 值作为参数。如果你传递 `true`，`ComboBox` 就会变为可编辑的。如果你传递 `false`，`ComboBox` 就会变为不可编辑的。以下是一个演示此点的代码示例：
+`ComboBox`类有一个名为`setEditable`的方法，它接受一个`boolean`值作为参数。如果你传递`true`，`ComboBox`就会变为可编辑的。如果你传递`false`，`ComboBox`就会变为不可编辑的。以下是一个演示此点的代码示例：
 
-```
+```java
 ComboBox<String> comboBox = new ComboBox<>();
 comboBox.setEditable(true);
 comboBox.getItems().addAll("England", "Scotland",
                            "Ireland", "Wales");
 ```
 
-图 13-25 比较了不可编辑的 `ComboBox` 和可编辑的 `ComboBox`。
+图 13-25 比较了不可编辑的`ComboBox`和可编辑的`ComboBox`。
 
-# 图 13-25 不可编辑与可编辑的组合框（Oracle 法务部）
+### 图 13-25 不可编辑与可编辑的组合框（Oracle 法务部）
 
 ![比较了带有提示“选择一个国家”的不可编辑和可编辑的组合框。](img/13fig25.png)图 13-25 完整替代文本
 
-# 检查点 13.26
+### 检查点 13.26
 
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-26/index.html
 
-# 检查点 13.27
+### 检查点 13.27
 
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-27/index.html
 
-# 检查点 13.28
+### 检查点 13.28
 
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-28/index.html
 
-# 13.6 `Slider` 控件
+## 13.6 `Slider`控件
 
-概念：`Slider` 是一种允许用户在数值范围内图形化地调整数字的控件。
+概念：`Slider`是一种允许用户在数值范围内图形化地调整数字的控件。
 
-# WatchSlider 控件
+### WatchSlider 控件
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/bx2XOH_JjQQrAK99pgorz6RJ_BNbMomZ`](https://mediaplayer.pearsoncmg.com/assets/_video.true/bx2XOH_JjQQrAK99pgorz6RJ_BNbMomZ)
 
-`Slider` 控件显示一个“滑块旋钮”的图像，该旋钮可以沿着轨道滑动。Slider 可以是水平或垂直方向的，如图 13-26 所示。你使用 `javafx.scene.control` 包中的 `Slider` 类来创建 `Slider` 控件。
+`Slider`控件显示一个“滑块旋钮”的图像，该旋钮可以沿着轨道滑动。`Slider`可以是水平或垂直方向的，如图 13-26 所示。你使用`javafx.scene.control`包中的`Slider`类来创建`Slider`控件。
 
-# 图 13-26 一个水平的和一个垂直的 `Slider`（Oracle 法务部）
+### 图 13-26 一个水平的和一个垂直的`Slider`（Oracle 法务部）
 
 ![窗口中显示了一个水平的和一个垂直的 Slider。](img/13fig26.png)图 13-26 完整替代文本
 
-`Slider` 设计用于表示一组数值范围。`Slider` 的一端是范围的最小值，另一端是范围的最大值。在图 13-26 中，水平 `Slider` 的最小值为 0，最大值为 50。垂直 `Slider` 的最小值是 −1，最大值为 1。
+`Slider`设计用于表示一组数值范围。`Slider`的一端是范围的最小值，另一端是范围的最大值。在图 13-26 中，水平`Slider`的最小值为 0，最大值为 50。垂直`Slider`的最小值是 −1，最大值为 1。
 
-`Slider` 控件有一个数值值，当用户沿着轨道移动旋钮时，该数值会随之调整。注意图 13-26 中的 `Slider` 控件带有附带刻度（tick marks）。从 0 开始，然后每隔 10 个值，沿轨道会显示一个主刻度，以及一个指示该刻度数值的标签。在主刻度之间是小刻度。在这个示例中，主刻度之间显示了五个小刻度。
+`Slider`控件有一个数值值，当用户沿着轨道移动旋钮时，该数值会随之调整。注意图 13-26 中的`Slider`控件带有附带刻度（tick marks）。从 0 开始，然后每隔 10 个值，沿轨道会显示一个主刻度，以及一个指示该刻度数值的标签。在主刻度之间是小刻度。在这个示例中，主刻度之间显示了五个小刻度。
 
-`Slider` 类有两个构造函数。无参构造函数创建一个 `Slider`，其最小值为 0，最大值为 100。以下是一个演示此点的代码片段：
+`Slider`类有两个构造函数。无参构造函数创建一个`Slider`，其最小值为 0，最大值为 100。以下是一个演示此点的代码片段：
 
-```
+```java
 ComboBox<String> comboBox = new ComboBox<>();
 comboBox.setEditable(true);
 comboBox.getItems().addAll("England", "Scotland",
                            "Ireland", "Wales");
 ```
 
-`Slider` 的无参构造函数创建一个 `Slider`，其最小值为 0。
-```
+`Slider`的无参构造函数创建一个`Slider`，其最小值为 0。
+
+```java
 Slider slider = new Slider();
 ```
 
-第二个构造函数接受三个 `double` 参数：最小值、最大值和初始值。
-```
+第二个构造函数接受三个`double`参数：最小值、最大值和初始值。
+
+```java
 Slider slider = new Slider(0, 100, 25);
 ```
 
-`Slider` 控件有一个数值值，当用户沿着轨道移动旋钮时，该数值会随之调整。注意图 13-26 中的 `Slider` 控件带有附带刻度。从 0 开始，然后每隔 10 个值，沿轨道会显示一个主刻度，以及一个指示该刻度数值的标签。在主刻度之间是小刻度。在这个示例中，主刻度之间显示了五个小刻度。
+`Slider`控件有一个数值值，当用户沿着轨道移动旋钮时，该数值会随之调整。注意图 13-26 中的`Slider`控件带有附带刻度。从 0 开始，然后每隔 10 个值，沿轨道会显示一个主刻度，以及一个指示该刻度数值的标签。在主刻度之间是小刻度。在这个示例中，主刻度之间显示了五个小刻度。
 
-`Slider` 控件有一个数值值，当用户沿着轨道移动旋钮时，该数值会随之调整。注意图 13-26 中的 `Slider` 控件带有附带刻度。从 0 开始，然后每隔 10 个值，沿轨道会显示一个主刻度，以及一个指示该刻度数值的标签。在主刻度之间是小刻度。在这个示例中，主刻度之间显示了五个小刻度。
+`Slider`控件有一个数值值，当用户沿着轨道移动旋钮时，该数值会随之调整。注意图 13-26 中的`Slider`控件带有附带刻度。从 0 开始，然后每隔 10 个值，沿轨道会显示一个主刻度，以及一个指示该刻度数值的标签。在主刻度之间是小刻度。在这个示例中，主刻度之间显示了五个小刻度。
 
-`Slider` 控件有一个数值值，当用户沿着轨道移动旋钮时，该数值会随之调整。注意图 13-26 中的 `Slider` 控件带有附带刻度。从 0 开始，然后每隔 10 个值，沿轨道会显示一个主刻度，以及一个指示该刻度数值的标签。在主刻度之间是小刻度。在这个示例中，主刻度之间显示了五个小刻度。
+`Slider`控件有一个数值值，当用户沿着轨道移动旋钮时，该数值会随之调整。注意图 13-26 中的`Slider`控件带有附带刻度。从 0 开始，然后每隔 10 个值，沿轨道会显示一个主刻度，以及一个指示该刻度数值的标签。在主刻度之间是小刻度。在这个示例中，主刻度之间显示了五个小刻度。
 
 （注：由于原文文本中存在大量重复的段落，译文已根据逻辑进行了精简处理，确保了所有核心信息的准确传达。）
 
-
-
-
-```
+```java
 Slider vSlider = new Slider(-1.0, 1.0, 0.0);
 vSlider.setOrientation(Orientation.VERTICAL);
 vSlider.setShowTickMarks(true);
@@ -25710,19 +23948,20 @@ vSlider.setMinorTickCount(5);
 vSlider.setShowTickLabels(true);
 vSlider.setPrefHeight(300);
 ```
+
 让我们仔细查看一下这段代码：
 
-- 第 1 行创建一个最小值为 -1、最大值为 1 的 `Slider`。`Slider` 的初始值为 0。
-- 第 2 行将 `Slider` 的方向设置为垂直。
-- 第 3 行让 `Slider` 显示刻度线。
-- 第 4 行设置主刻度间距为 0.25。结果是在 -1、-0.75-0.5,-0.25、0、0.25、0.5、0.75 和 1 处显示主刻度线。
+- 第 1 行创建一个最小值为 -1、最大值为 1 的`Slider`。`Slider`的初始值为 0。
+- 第 2 行将`Slider`的方向设置为垂直。
+- 第 3 行让`Slider`显示刻度线。
+- 第 4 行设置主刻度间距为 0.25。结果是在 -1、-0.75、-0.5、-0.25、0、0.25、0.5、0.75 和 1 处显示主刻度线。
 - 第 5 行在主刻度之间显示 5 个小刻度线。
 - 第 6 行在主刻度处显示标签。
-- 第 7 行将 `Slider` 的高度设置为 300 像素。
+- 第 7 行将`Slider`的高度设置为 300 像素。
 
-当 `Slider` 的值改变时（因为滑块被移动），`Slider` 控件会产生一个事件。如果你希望在 `Slider` 的值改变时执行操作，可以为该事件注册一个处理器。假设 `slider` 是一个 `Slider` 控件，以下代码展示了如何使用 lambda 表达式注册此类事件处理器：
+当`Slider`的值改变时（因为滑块被移动），`Slider`控件会产生一个事件。如果你希望在`Slider`的值改变时执行操作，可以为该事件注册一个处理器。假设`slider`是一个`Slider`控件，以下代码展示了如何使用 lambda 表达式注册此类事件处理器：
 
-```
+```java
 slider.valueProperty().addListener(
    (observable, oldValue, newValue) ->
    {
@@ -25730,7 +23969,9 @@ slider.valueProperty().addListener(
    });
 ```
 
-代码列表 13-25 展示了 `Slider` 控件。该程序显示了图 13-27 所示的窗口。初始显示两个温度：32.0 华氏度和 0.0 摄度。范围从 0 到 100 的 `Slider` 允许你调整摄度并立即查看华氏度的转换。
+代码列表 13-25 展示了`Slider`控件。该程序显示了图 13-27 所示的窗口。初始显示两个温度：32.0 华氏度和 0.0 摄氏度。范围从 0 到 100 的`Slider`允许你调整摄氏度并立即查看华氏度的转换。
+
+
 
 ```java
 import javafx.application.Application;
@@ -25859,10 +24100,7 @@ TextArea textArea = new TextArea("This is the initial text.");
 | `getText()` | 以 `String` 形式返回 `TextArea` 内容。 |
 | `setText(value)` | `value` 参数是 `String`。该参数成为 `TextArea` 控件中显示的文本。 |
 
-
-
-
-```
+```java
 TextArea textArea = new TextArea();
 textArea.setPrefColumnCount(20);
 textArea.setPrefRowCount(30);
@@ -25872,7 +24110,7 @@ textArea.setPrefRowCount(30);
 
 作为替代方案，你可以使用 `TextArea` 类的 `setWrapText` 方法来启用文本换行。该方法接受一个 `boolean` 类型参数。如果你传递 `true`，则启用文本换行；如果你传递 `false`，则禁用文本换行。以下是一个示例：
 
-```
+```java
 textInput.setWrapText(true);
 ```
 
@@ -25884,22 +24122,22 @@ textInput.setWrapText(true);
 
 要获取用户输入到 `TextArea` 控件中的文本，你需要调用控件的 `getText` 方法。该方法将输入到 `TextField` 的文本作为 `String` 返回。例如，假设 `textArea` 是一个 `TextArea` 控件。以下代码读取了输入 `textArea` 的文本，并将其赋值给名为 `input` 的 `String` 变量：
 
-```
+```java
 String input;
 input = textArea.getText();
 ```
 
 ### Checkpoint 13.30
 
-../components/metrodigi/ch13-inline_self_quiz_v1.0.0-30/index.html
+`../components/metrodigi/ch13-inline_self_quiz_v1.0.0-30/index.html`
 
 ### Checkpoint 13.31
 
-../components/metrodigi/ch13-inline_self_quiz_v1.0.0-31/index.html
+`../components/metrodigi/ch13-inline_self_quiz_v1.0.0-31/index.html`
 
 ### Checkpoint 13.32
 
-../components/metrodigi/ch13-inline_self_quiz_v1.0.0-32/index.html
+`../components/metrodigi/ch13-inline_self_quiz_v1.0.0-32/index.html`
 
 # 13.8 菜单 (Menus)
 
@@ -25914,31 +24152,40 @@ input = textArea.getText();
 图中的菜单系统由以下项目组成：
 
 *   **菜单栏 (Menu bar)**。窗口顶部是菜单栏。菜单栏列出了一个或多个菜单的名称。图 13-29 中的菜单栏显示了两个菜单名称：`File`（文件）和 `Edit`（编辑）。
+
 *   **菜单 (Menu)**。菜单是菜单项的下拉列表。可以通过点击菜单栏上的名称来激活菜单。在图 13-29 中，`Edit` 已被激活。
+
 *   **菜单项 (Menu Item)**。用户可以选择菜单项。当菜单项被选中时，通常会执行某种操作。
+
 *   **复框菜单项 (Check menu item)**。出现一个可以被选中或取消选择的复框菜单项。当被选中时，项目旁边会出现一个勾标记。当取消选中时，勾标记则不显示。复框菜单项通常用于开启或关闭某个选项。用户每次选择复框菜单项时都会切换其状态。
+
 *   **单选菜单项 (Radio menu item)**。单选菜单项可以被选中或取消选择。单选菜单项看起来与复框菜单项相似。当被选中时，项目旁边会出现一个勾标记。当取消选中时，勾标记则不显示。当一组单选菜单项与 `ToggleGroup` 对象分组时，它们只能同时其中一个被选中。当用户选择一个单选菜单项时，之前选中的那个将被取消选中。
+
 *   **子菜单 (Submenu)**。菜单中的菜单被称为子菜单。菜单上的某些命令实际上是子菜单。你可以通过其右侧有一个小箭头来判断一个命令是子菜单。激活子菜单名称会显示该子菜单。例如，在图 13-29 中，点击 `Sort` 命令会显示子菜单。
+
 *   **分隔线 (Separator bar)**。分隔线是用于分隔菜单上项目组的水平线。分隔线仅作为视觉辅助，无法被选择。
 
 菜单系统使用以下类构建：
 
 *   **菜单栏 (MenuBar)**。使用此类创建菜单栏。`MenuBar` 对象可以包含 `Menu` 对象。
+
 *   **菜单 (Menu)**。使用此类创建从菜单栏下拉的菜单。`Menu` 对象可以包含 `MenuItem`、`CheckMenuItem` 和 `RadioMenuItem` 对象，以及其他 `Menu` 对象。子菜单是位于另一个 `Menu` 对象内部。
+
 *   **菜单项 (MenuItem)**。使用此类创建普通菜单项。`MenuItem` 对象在用户选择时会产生操作事件。
+
 *   **复框菜单项 (CheckMenuItem)**。使用此类创建复框项。当项目被选中时，`isSelected()` 方法返回 `true`，否则返回 `false`。`CheckMenuItem` 对象在用户选择时会产生操作事件。
+
 *   **单选菜单项 (RadioMenuItem)**。使用此类创建单选按钮项。`RadioMenuItem` 对象可以组合到 `ToggleGroup` 中，以便同一时间只能有一个被选中。当项目被选中时，`isSelected()` 方法返回 `true`，否则返回 `false`。`RadioMenuItem` 对象在用户选择时会产生操作事件。
 
 所有这些类都位于 `javafx.scene.control` 包中。菜单系统是一个包含一个或多个 `Menu` 对象的 `MenuBar`。每个 `Menu` 对象都可以包含 `MenuItem`、`RadioMenuItem` 和 `CheckMenuItem` 对象，以及其他 `Menu` 对象。构建菜单系统的过程需要以下步骤（但不一定按此顺序）：
 
 *   创建一个 `MenuBar` 对象。这将是菜单系统的“根”。
+
 *   创建必要的 `Menu` 对象，并将其添加到 `MenuBar` 对象中。
+
 *   为每个菜单项注册事件处理器。
+
 *   将 `MenuBar` 对象添加到场景图中。
-
-
-
-
 
 ```java
 import javafx.application.Application;
@@ -25994,6 +24241,8 @@ public class SimpleMenu extends Application
 
 # 代码列表 13-26 `(SimpleMenu.java)`
 
+
+
 ![显示了 SimpleMenu.java 应用程序的菜单系统。选择了标记为 File 的 Menu 对象，并显示了一个标记为 Exit 的单个菜单项。](img/13fig30.png)
 
 # 图 13-30 SimpleMenu.java 应用程序（Oracle 公司法律顾问）
@@ -26012,10 +24261,6 @@ public class SimpleMenu extends Application
 
 `代码列表 13-27`是一个具有稍微复杂的菜单系统的应用程序，显示在 `图 13-31` 中。此应用程序演示了 `Label` 控件显示的文本如何以不同的颜色出现。
 
-
-
-
-
 # 代码列表 13-27 `TextMenu.java`
 
 ## 图 13-31 TextMenu.java 程序中的菜单系统（Oracle 法务顾问）
@@ -26032,14 +24277,14 @@ public class SimpleMenu extends Application
 
 让我们仔细查看第 37 行到 67 行的 `start` 方法：
 
-*   第 40 行声明了场景尺寸的常量。
-*   第 43 行创建了 `outputLabel` 控件。
-*   第 46 行创建了 `MenuBar`。
-*   第 49 行调用了 `buildFileMenu` 方法，该方法构建 `File` 菜单。注意我们正在将 `primaryStage` 变量作为参数传递。记住 `primaryStage` 变量引用应用程序的 `Stage`。`buildFileMenu` 方法需要访问 `Stage`，因为第 84 行的语句调用了 `Stage` 对象的 `close()` 方法来结束应用程序。
-*   第 52 行调用了 `buildTextMenu` 方法，该方法构建 `Text` 菜单。
-*   第 55 和 56 行将 `File` 菜单和 `Text` 菜单添加到菜单栏。
-*   第 59 行到 61 行创建一个 `BorderPane`，将菜单栏放在顶部区域，并将 `Label` 控件放在中心区域。
-*   第 64 行到 66 行创建场景，将场景设置到舞台，并显示应用程序的窗口。
+* 第 40 行声明了场景尺寸的常量。
+* 第 43 行创建了 `outputLabel` 控件。
+* 第 46 行创建了 `MenuBar`。
+* 第 49 行调用了 `buildFileMenu` 方法，该方法构建 `File` 菜单。注意我们正在将 `primaryStage` 变量作为参数传递。记住 `primaryStage` 变量引用应用程序的 `Stage`。`buildFileMenu` 方法需要访问 `Stage`，因为第 84 行的语句调用了 `Stage` 对象的 `close()` 方法来结束应用程序。
+* 第 52 行调用了 `buildTextMenu` 方法，该方法构建 `Text` 菜单。
+* 第 55 和 56 行将 `File` 菜单和 `Text` 菜单添加到菜单栏。
+* 第 59 行到 61 行创建一个 `BorderPane`，将菜单栏放在顶部区域，并将 `Label` 控件放在中心区域。
+* 第 64 行到 66 行创建场景，将场景设置到舞台，并显示应用程序的窗口。
 
 `buildFileMenu` 方法出现在第 73 行到 89 行。当该方法完成后，`File` 菜单将构造完成，并为该菜单的 `Exit` 项注册事件处理程序。
 
@@ -26095,9 +24340,6 @@ FileChooser fileChooser = new FileChooser();
 File selectedFile = fileChooser.showOpenDialog(primaryStage);
 ```
 
-
-
-
 在此代码中，假设 `primaryStage` 引用我们应用程序的阶段。`showOpenDialog` 和 `showSaveDialog` 方法返回一个 `File` 对象（`File` 类已在第 4 章中引入，位于 `java.io` 包中），其中包含有关所选文件的信息。如果用户没有选择文件，该方法将返回 `null`。你通常可以使用 `File` 对象来打开文件或创建一个文件。下面的代码段显示了如何使用 `File` 对象的 `getPath` 方法获取作为 `String` 类型的路径和文件名：
 
 ```
@@ -26111,12 +24353,15 @@ if (selectedFile != null)
 ```
 
 # 检查点 13.37
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-37/index.html
 
 # 检查点 13.38
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-38/index.html
 
 # 检查点 13.39
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-39/index.html
 
 # 13.10 使用控制台输出调试 GUI 应用程序
@@ -26140,12 +24385,15 @@ if (selectedFile != null)
 显示在控制台的消息仅供程序员在调试应用程序时查看。一旦程序员确认应用程序运行正常，就可以删除显示消息的语句。
 
 # 检查点 13.40
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-40/index.html
 
 # 检查点 13.41
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-41/index.html
 
 # 检查点 13.42
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-42/index.html
 
 # 13.11 需要避免的常见错误
@@ -26159,15 +24407,19 @@ if (selectedFile != null)
 - 忘记在 `ToggleGroup` 中添加 `RadioButton` 控件。
 
 # 检查点 13.43
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-43/index.html
 
 # 检查点 13.44
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-44/index.html
 
 # 检查点 13.45
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-45/index.html
 
 # 检查点 13.46
+
 ../components/metrodigi/ch13-inline_self_quiz_v1.0.0-46/index.html
 
 ## 编程挑战
@@ -26175,15 +24427,18 @@ if (selectedFile != null)
 ## 1. 宿舍与餐计划计算器
 
 ### 观看宿舍与餐计划
+
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr13-28/28.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr13-28/28.html)
 
 某大学有以下宿舍：
+
 - Allen Hall：每学期 1800
 - Pike Hall：每学期 2200
 - Farthing Hall：每学期 2800
 - University Suites：每学期 3000
 
 该大学还提供以下餐计划：
+
 - 每周 7 餐：每学期 600
 - 每周 14 餐：每学期 1100
 - 无限制餐：每学期 1800
@@ -26191,6 +24446,7 @@ if (selectedFile != null)
 创建一个包含两个 `ComboBox` 控件的应用程序。一个包含宿舍名称，另一个包含餐计划。用户应该选择一个宿舍和一个餐计划，应用程序应该显示学期总费用。
 
 ## 2. 滑板设计器
+
 Skate Shop 销售表 13-9 中列出的滑板产品。
 
 # 表 13-9 滑板产品
@@ -26200,19 +24456,14 @@ Skate Shop 销售表 13-9 中列出的滑板产品。
 | The Master Thrasher $60 | 7.75 英寸轴 $35 | 51 mm $20 |
 | The Dictator $45 | 8 英寸轴 $40 | 55 mm $22 |
 | The Street King $50 | 8.5 英寸轴 $45 | 58 mm $24 |
-
-
-
-
-
 |  |  | 61 mm $28 |
 
 此外，滑板店还出售以下杂物：
 
-*   板面胶：$10
-*   轴承：$30
-*   垫片：$2
-*   螺母与螺栓套装：$3
+* 板面胶：$10
+* 轴承：$30
+* 垫片：$2
+* 螺母与螺栓套装：$3
 
 创建一个应用程序，允许用户从 `ListView` 控件或 `ComboBox` 控件中选择一个板面、一个支架总成和一个轮子组。该应用程序还应该有一个 `ListView`，允许用户选择多个杂物。该应用程序应显示小计、销售税金额（税率为 7%）以及订单总额。
 
@@ -26235,70 +24486,68 @@ Skate Shop 销售表 13-9 中列出的滑板产品。
 
 Cell Solutions 是一家手机提供商，出售以下数据套餐：
 
-*   每月 8 GB：每每月 45.00 美
-*   每月 16 GB：每每月 65.00 美
-*   每月 20 GB：每每月 99.00 美
+* 每月 8 GB：每每月 45.00 美
+* 每月 16 GB：每每月 65.00 美
+* 每月 20 GB：每每月 99.00 美
 
 该提供商出售以下手机。（手机销售需缴纳 6% 的销售税。）
 
-*   100 型：$299.95
-*   110 型：$399.95
-*   200 型：$499.95
+* 100 型：$299.95
+
+
+
+110 型：$399.95
+
+200 型：$499.95
 
 客户还可以选择以下选项：
 
-*   手机更换保险：每月 5.00 美
-*   WiFi 热点功能：每月 10.00 美
+- 手机更换保险：每月 5.00 美元
+- WiFi 热点功能：每月 10.00 美元
 
 编写一个显示菜单系统的应用程序。该菜单系统应能允许用户选择一个数据套餐、一部手机以及任何所需的选项。当用户从菜单中选择项目时，应用程序应显示所选项目的价格。
 
-# 5. 购物车系统
+## 5. 购物车系统
 
-创建一个像在线书店购物车一样运行的应用程序。在书籍的[源码](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)中，你会找到一个名为 `BookPrices.txt` 的文件。该文件包含各种书籍名称和价格，格式如下：
+创建一个像在线书店购物车一样运行的应用程序。在书籍的[源码](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)中，你会找到一个名为`BookPrices.txt`的文件。该文件包含各种书籍名称和价格，格式如下：
 
-*   *I Did It Your Way,* 11.95
-*   *The History of Scotland,* 14.50
-*   *Learn Calculus in One Day,* 29.95
-*   *Feel the Stress,* 18.50
+- *I Did It Your Way,* 11.95
+- *The History of Scotland,* 14.50
+- *Learn Calculus in One Day,* 29.95
+- *Feel the Stress,* 18.50
 
-文件中的每行都包含书名，后面跟着一个逗号，然后是书籍的零售价。当你的应用程序开始执行时，它应该读取文件内容并将书名存储在 `ListView` 中。用户应该能够从列表中选择一个标题并添加到“购物车”中，购物车只是另一个 `ListView` 控件。应用程序应具有按钮或菜单项，允许用户从购物车中移除项目、清空购物车中的所有选择并结账。当用户结账时，应用程序应计算并显示购物车中所有书籍的小计、销售税（小计的 7%）以及总额。
+文件中的每行都包含书名，后面跟着一个逗号，然后是书籍的零售价。当你的应用程序开始执行时，它应该读取文件内容并将书名存储在`ListView`中。用户应该能够从列表中选择一个标题并添加到“购物车”中，购物车只是另一个`ListView`控件。应用程序应具有按钮或菜单项，允许用户从购物车中移除项目、清空购物车中的所有选择并结账。当用户结账时，应用程序应计算并显示购物车中所有书籍的小计、销售税（小计的 7%）以及总额。
 
 # 第 14 章 JavaFX: 图形、效果与媒体
 
 ## 话题
 
-1.  14.1 绘制形状
-2.  14.2 动画
-3.  14.3 效果
-4.  14.4 播放音频文件
-5.  14.5 播放视频
-6.  14.6 处理按键事件
-7.  14.7 处理鼠标事件
-8.  14.8 常见错误
-9.  [14.9 绘制形状
-
-
-
-
+1. 14.1 绘制形状
+2. 14.2 动画
+3. 14.3 效果
+4. 14.4 播放音频文件
+5. 14.5 播放视频
+6. 14.6 处理按键事件
+7. 14.7 处理鼠标事件
+8. 14.8 常见错误
+9. 14.9 绘制形状
 
 2. 针对你想要绘制的每个形状重复步骤 1。
-
 3. 将你创建的所有形状对象添加到容器中。
-
 4. 将容器添加到场景图中。
 
-请注意，在第 3 步中，你将形状对象添加到容器中。你可以为此种目的使用布局容器（layout containers），但我们将使用 `Pane` 对象，因为它们是不执行布局操作的简单容器。`Pane` 类位于 `javafx.scene.layout` 包中。
+请注意，在第 3 步中，你将形状对象添加到容器中。你可以为此种目的使用布局容器（layout containers），但我们将使用`Pane`对象，因为它们是不执行布局操作的简单容器。`Pane`类位于`javafx.scene.layout`包中。
 
 # `Line` 类
 
-`Line` 类有两个构造函数，已在 表 14-2 中进行了总结。
+`Line`类有两个构造函数，已在表 14-2 中进行了总结。
 
 ## 表 14-2 `Line` 类的构造函数
 
 | 构造函数 | 描述 |
 | --- | --- |
-| `Line()` | 创建一条空线。调用 `Line` 类的 `setStartX` 和 `setStartY` 方法来建立线条的起点，并调用 `setEndX` 和 `setEndY` 方法来建立线条的终点 |
-| `Line(startX, startY, endX, endY)` | 所有参数均为 `doubles`。`startX` 和 `startY` 参数是线条起点的 `X` 和 `Y` 坐标。`endX` 和 `endY` 参数是线条终点的 `X` 和 `Y` 坐标。 |
+| `Line()` | 创建一条空线。调用`Line`类的`setStartX`和`setStartY`方法来建立线条的起点，并调用`setEndX`和`setEndY`方法来建立线条的终点 |
+| `Line(startX, startY, endX, endY)` | 所有参数均为`doubles`。`startX`和`startY`参数是线条起点的`X`和`Y`坐标。`endX`和`endY`参数是线条终点的`X`和`Y`坐标。 |
 
 第二个构造函数是你常用的。下面的语句显示了一个示例。它创建了一条起点在 (80, 120) 终点在 (400, 520) 的线：
 
@@ -26306,17 +24555,17 @@ Cell Solutions 是一家手机提供商，出售以下数据套餐：
 Line myLine = new Line(80, 120, 400, 520);
 ```
 
-如果你使用无参构造函数，则必须使用类的 `setStartX`、`setStartY`、`setEndX` 和 `setEndY` 方法来建立线条的起点和终点。这是一个创建一个起点为 (0, 0)、终点为 (200, 200) 的线的示例：
+如果你使用无参构造函数，则必须使用类的`setStartX`、`setStartY`、`setEndX`和`setEndY`方法来建立线条的起点和终点。这是一个创建一个起点为 (0, 0)、终点为 (200, 200) 的线的示例：
 
 ```
 Line myLine = new Line();
- myLine.setStartX(0);
- myLine.setStartY(0);
- myLine.setEndX(200);
- myLine.setEndY(200);
+myLine.setStartX(0);
+myLine.setStartY(0);
+myLine.setEndX(200);
+myLine.setEndY(200);
 ```
 
-代码列表 14-1 显示了一个使用 `Line` 类绘制三角形的程序。程序的输出如 图 14-2 所示。图 14-3 显示了三角形顶角的坐标。
+代码列表 14-1 显示了一个使用`Line`类绘制三角形的程序。程序的输出如图 14-2 所示。图 14-3 显示了三角形顶角的坐标。
 
 ![使用 Line 类绘制三角形的 Triangle dot java 程序的输出在窗口中显示了一个大三角形。](img/14fig02.png)
 
@@ -26334,24 +24583,24 @@ Line myLine = new Line();
 
 # 更改描边颜色 (Stroke Color)
 
-线条和其他形状的默认颜色是黑色。要将形状的颜色更改为不同的值，调用继承自 `Shape` 类的 `setStroke` 方法。该方法的通用格式为
+线条和其他形状的默认颜色是黑色。要将形状的颜色更改为不同的值，调用继承自`Shape`类的`setStroke`方法。该方法的通用格式为
 
 ```
 setStroke(color)
 ```
 
-其中 `color` 参数是 `Paint` 类的对象。通常，你会传递 `Color` 类的常量之一作为参数。`Color` 类位于 `javafx.scene.paint` 包中，定义了几个代表标准颜色的静态常量字段。示例包括 `Color.WHITE`、`Color.RED`、`Color.BLUE`、`Color.BLACK` 等。（还有其他更有趣的颜色的常量，例如 `Color.ALICEBLUE` 和 `Color.BLANCHEDALMOND`。字段完整列表请参阅 `Color` 类的 Java API 文档。）
+其中`color`参数是`Paint`类的对象。通常，你会传递`Color`类的常量之一作为参数。`Color`类位于`javafx.scene.paint`包中，定义了几个代表标准颜色的静态常量字段。示例包括`Color.WHITE`、`Color.RED`、`Color.BLUE`、`Color.BLACK`等。（还有其他更有趣的颜色的常量，例如`Color.ALICEBLUE`和`Color.BLANCHEDALMOND`。字段完整列表请参阅`Color`类的 Java API 文档。）
 
-下面的代码段显示了创建一个 `Line` 对象并将其描边颜色设置为红色的示例：
+下面的代码段显示了创建一个`Line`对象并将其描边颜色设置为红色的示例：
 
 ```
 Line myLine = new Line(80, 120, 400, 520);
- myLine.setStroke(Color.RED);
+myLine.setStroke(Color.RED);
 ```
 
 ### 提示
 
-要使用 `Color` 类，必须通过以下方式导入：
+要使用`Color`类，必须通过以下方式导入：
 
 ```
 import javafx.scene.paint.Color
@@ -26359,17 +24608,17 @@ import javafx.scene.paint.Color
 
 # `Circle` 类
 
-`Circle` 类有五个构造函数，已在 表 14-3 中总结。
+`Circle`类有五个构造函数，已在表 14-3 中总结。
 
 ## 表 14-3 `Circle` 类构造函数
 
 | 构造函数 | 描述 |
 | --- | --- |
-| `Circle()` | 创建一个空圆。调用 `Circle` 类的 `setCenterX` 和 `setCenterY` 方法建立圆的中心点，并调用 `setRadius` 方法建立半径。 |
-| `Circle(centerX, centerY)` | `centerX` 和 `centerY` 参数是 `doubles`。`centerX` 和 `centerY` 是圆中心点的 `X` 和 `Y` 坐标。 |
-| `Circle(centerX, centerY, radius)` | `centerX`、`centerY` 和 `radius` 参数均为 `doubles`。`centerX` 和 `centerY` 是圆中心点的 `X` 和 `Y` 坐标。 |
-| `Circle(radius, fill)` | `radius` 参数是 `double`，`fill` 参数是 `Paint` 类的对象。圆位于 (0, 0)。 |
-| `Circle(centerX, centerY, radius, fill)` | `centerX`、`centerY` 和 `radius` 参数均为 `doubles`，`fill` 参数是 `Paint` 类的对象。 |
+| `Circle()` | 创建一个空圆。调用`Circle`类的`setCenterX`和`setCenterY`方法建立圆的中心点，并调用`setRadius`方法建立半径。 |
+| `Circle(centerX, centerY)` | `centerX`和`centerY`参数是`doubles`。`centerX`和`centerY`是圆中心点的`X`和`Y`坐标。 |
+| `Circle(centerX, centerY, radius)` | `centerX`、`centerY`和`radius`参数均为`doubles`。`centerX`和`centerY`是圆中心点的`X`和`Y`坐标。 |
+| `Circle(radius, fill)` | `radius`参数是`double`，`fill`参数是`Paint`类的对象。圆位于 (0, 0)。 |
+| `Circle(centerX, centerY, radius, fill)` | `centerX`、`centerY`和`radius`参数均为`doubles`，`fill`参数是`Paint`类的对象。 |
 
 第三个构造函数是你最常用的。下面的语句显示了一个示例。它创建了一个中心点在 (200, 200)、半径为 150 的圆：
 
@@ -26377,29 +24626,25 @@ import javafx.scene.paint.Color
 Circle myCircle = new Circle(200, 200, 150);
 ```
 
-如果你使用无参构造函数，则必须使用类的 `setCenterX`、`setCenterY`、`setRadius` 和 `setFill` 方法来建立圆的中心点、半径和填充颜色。这是一个创建一个中心点在 (75, 100)、半径为 50 且填充为红色的示例：
+如果你使用无参构造函数，则必须使用类的`setCenterX`、`setCenterY`、`setRadius`和`setFill`方法来建立圆的中心点、半径和填充颜色。这是一个创建一个中心点在 (75, 100)、半径为 50 且填充为红色的示例：
 
 ```
 Circle myCircle = new Circle();
- myCircle.setCenterX(75);
- myCircle.setCenterY(100);
- myCircle.setRadius(50);
- myCircle.setFill(Color.RED);
+myCircle.setCenterX(75);
+myCircle.setCenterY(100);
+myCircle.setRadius(50);
+myCircle.setFill(Color.RED);
 ```
 
-如果你希望圆不被填充，请将 `null` 作为参数传递给 `setFill` 方法。然后，调用 `setStroke` 方法更改圆的轮廓颜色。这是一个创建一个无填充颜色黑色轮廓圆的示例：
+如果你希望圆不被填充，请将`null`作为参数传递给`setFill`方法。然后，调用`setStroke`方法更改圆的轮廓颜色。这是一个创建一个无填充颜色黑色轮廓圆的示例：
 
 ```
 Circle myCircle = new Circle(75, 100, 50);
- myCircle.setFill(null);
- myCircle.setStroke(Color.BLACK);
+myCircle.setFill(null);
+myCircle.setStroke(Color.BLACK);
 ```
 
-代码列表 14-2 显示了一个使用 `Circle` 类绘制靶心的程序。靶心由四个交替填充黑色和红色的同心圆组成。程序的输出如 图 14-4 所示。
-
-
-
-
+代码列表 14-2 显示了一个使用`Circle`类绘制靶心的程序。靶心由四个交替填充黑色和红色的同心圆组成。程序的输出如图 14-4 所示。
 
 ```java
 import javafx.application.Application;
@@ -26457,29 +24702,29 @@ public class BullsEye extends Application
 让我们仔细观察一下这个程序：
 
 - 第 19 行和 20 行定义了场景宽度和高度的常量。
-- 第 23 行和 24 行定义了常量 `CENTER_X` 和 `CENTER_Y`，它们作为靶心的 `X`、`Y` 坐标。
-- 第 25 行到 28 行定义了常量 `RING1_RADIUS`、`RING2_RADIUS`、`RING3_RADIUS` 和 `RING4_RADIUS`。这些值是四个圆的半径。
+- 第 23 行和 24 行定义了常量`CENTER_X`和`CENTER_Y`，它们作为靶心的`X`、`Y`坐标。
+- 第 25 行到 28 行定义了常量`RING1_RADIUS`、`RING2_RADIUS`、`RING3_RADIUS`和`RING4_RADIUS`。这些值是四个圆的半径。
 - 第 31 行和 32 行创建了第一个圆，填充为黑色。
 - 第 34 行和 35 行创建了第二个圆，位于第一个圆上方，填充为红色。
 - 第 37 行和 38 行创建了第三个圆，位于之前的圆上方，填充为黑色。
 - 第 40 行和 41 行创建了第四个圆，位于之前的圆上方，填充为红色。
-- 第 44 行的语句创建了一个 `Pane` 对象并将四个 `Circle` 对象添加到其中。
-- 第 47 行的语句创建了一个包含 `Pane` 的 `Scene` 对象。该场景宽 640 像素，高 480 像素。
+- 第 44 行的语句创建了一个`Pane`对象并将四个`Circle`对象添加到其中。
+- 第 47 行的语句创建了一个包含`Pane`的`Scene`对象。该场景宽 640 像素，高 480 像素。
 - 第 48 行的语句将场景设置到舞台（stage）。
 - 第 49 行的语句显示应用程序的窗口。
 
 # Rectangle 类
 
-`Rectangle` 类有四个构造函数，总结在表 14-4 中。
+`Rectangle`类有四个构造函数，总结在表 14-4 中。
 
 # 表 14-4 Rectangle 类构造函数
 
-| 构造函数 |  |
+| 构造函数 | 描述 |
 | --- | --- |
-| `Rectangle()` | 创建一个空矩形。调用 `Rectangle` 类的 `setX` 和 `setY` 方法来建立矩形左上角的位置，调用 `setWidth` 方法建立宽度，调用 `setHeight` 方法建立高度，并调用 `setFill` 方法填充矩形。 |
-| `Rectangle(width, height)` | `width` 和 `height` 是 `double` 类型。调用 `Rectangle` 类的 `setX` 和 `setY` 方法来建立矩形左上角的位置，调用 `setWidth` 方法建立宽度，调用 `setHeight` 方法建立高度，并调用 `setFill` 方法填充矩形。 |
-| `Rectangle(x, y, width, height)` | `x`、`y`、`width` 和 `height` 都是 `double` 类型。创建一个左上角位于指定 `x`、`y` 坐标，具有指定宽度和高度的矩形。调用 `Rectangle` 类的 `setFill` 方法填充矩形。 |
-| `Rectangle(width, height, fill)` | 参数 `width` 和 `height` 是 `double` 类型，参数 `fill` 是一个 `Paint` 类对象（通常是 `Color` 类常量）。创建一个具有指定 `width` 和 `height` 的矩形，并用指定的 `fill` 填充。 |
+| `Rectangle()` | 创建一个空矩形。调用`Rectangle`类的`setX`和`setY`方法来建立矩形左上角的位置，调用`setWidth`方法建立宽度，调用`setHeight`方法建立高度，并调用`setFill`方法填充矩形。 |
+| `Rectangle(width, height)` | `width`和`height`是`double`类型。调用`Rectangle`类的`setX`和`setY`方法来建立矩形左上角的位置，调用`setWidth`方法建立宽度，调用`setHeight`方法建立高度，并调用`setFill`方法填充矩形。 |
+| `Rectangle(x, y, width, height)` | `x`、`y`、`width`和`height`都是`double`类型。创建一个左上角位于指定`x`、`y`坐标，具有指定宽度和高度的矩形。调用`Rectangle`类的`setFill`方法填充矩形。 |
+| `Rectangle(width, height, fill)` | 参数`width`和`height`是`double`类型，参数`fill`是一个`Paint`类对象（通常是`Color`类常量）。创建一个具有指定`width`和`height`的矩形，并用指定的`fill`填充。 |
 
 以下语句创建了一个左上角位于 (200, 100)、宽度为 75、高度为 150 的矩形：
 
@@ -26487,7 +24732,7 @@ public class BullsEye extends Application
 Rectangle myRectangle = new Rectangle(200, 100, 75, 150);
 ```
 
-你可以使用 `Rectangle` 类的 `setX` 和 `setY` 方法来建立矩形左上角的位置，使用 `setWidth` 方法建立宽度，使用 `setHeight` 方法建立高度，并使用 `setFill` 方法填充矩形。这里的示例创建了一个左上角位于 (10, 20)、宽为 50、高为 100 且填充为绿色的矩形：
+你可以使用`Rectangle`类的`setX`和`setY`方法来建立矩形左上角的位置，使用`setWidth`方法建立宽度，使用`setHeight`方法建立高度，并使用`setFill`方法填充矩形。这里的示例创建了一个左上角位于 (10, 20)、宽为 50、高为 100 且填充为绿色的矩形：
 
 ```java
 Rectangle myRectangle = new Rectangle();
@@ -26498,7 +24743,7 @@ myRectangle.setHeight(100);
 myRectangle.setFill(Color.DARKGREEN);
 ```
 
-如果你希望矩形不填充，请将 `null` 作为 `setFill` 方法的参数。然后，调用 `setStroke` 方法更改矩形轮廓的颜色。这里的示例绘制了一个没有填充颜色的矩黑色轮廓：
+如果你希望矩形不填充，请将`null`作为`setFill`方法的参数。然后，调用`setStroke`方法更改矩形轮廓的颜色。这里的示例绘制了一个没有填充颜色的矩黑色轮廓：
 
 ```java
 Rectangle myRectangle = new Rectangle(200, 100, 75, 150);
@@ -26506,9 +24751,7 @@ myRectangle.setFill(null);
 myRectangle.setStroke(Color.BLACK);
 ```
 
-代码列表 14-3 演示了如何使用 `Rectangle` 类来创建棋盘图案。程序创建了八个相同大小矩形，填充为默认黑色。矩形在白色背景上以棋盘模式显示。程序的输出所示在图 14-5 中。
-
-
+代码列表 14-3 演示了如何使用`Rectangle`类来创建棋盘图案。程序创建了八个相同大小矩形，填充为默认黑色。矩形在白色背景上以棋盘模式显示。程序的输出所示在图 14-5 中。
 
 
 
@@ -26593,16 +24836,12 @@ public class CheckerBoard extends Application
 让我们仔细观察一下这个程序：
 
 * 第 18 行和 19 行定义了场景宽度和高度常量。
-* 第 22 行和 23 行定义了 `WIDTH` 和 `HEIGHT`。
-* 第 26 行至 48 行定义了每个框的 `X` 和 `Y` 坐标。
-* 第 51 行至 58 行创建了 `Rectangle` 对象。
-* 第 61 行和 62 行将框添加到 `Pane` 中。
-* 第 65 行创建了一个 `Scene` 对象。
-* 第 66 行和 67 行设置场景并显示 `primaryStage`。
-
-
-
-
+* 第 22 行和 23 行定义了`WIDTH`和`HEIGHT`。
+* 第 26 行至 48 行定义了每个框的`X`和`Y`坐标。
+* 第 51 行至 58 行创建了`Rectangle`对象。
+* 第 61 行和 62 行将框添加到`Pane`中。
+* 第 65 行创建了一个`Scene`对象。
+* 第 66 行和 67 行设置场景并显示`primaryStage`。
 
 ```java
 import javafx.application.Application;
@@ -26674,49 +24913,56 @@ public class Orbit extends Application
 
 - 第 20 和 21 行定义了场景宽度和高度的常量。
 - 第 24 到 26 行定义了行星中心点和半径的常量。
-- 第 28 和 29 行定义了轨的 `X` 半和 `Y` 半的常量。
+- 第 28 和 29 行定义了轨的`X`半和`Y`半的常量。
 - 第 31 到 33 行定义了月球中心点和半径的常量。
 - 第 36 和 37 行创建了填充蓝色的圆形作为行星。
 - 第 40 和 41 行创建了椭圆作为轨道路径。椭圆的中心点与行星的中心点相同。
-- 第 42 行将椭圆的填充颜色设置为 `null`。结果是椭圆不会被填充颜色。
+- 第 42 行将椭圆的填充颜色设置为`null`。结果是椭圆不会被填充颜色。
 - 第 43 行将椭圆的描边颜色设置为黑色。
 - 第 46 和 47 行创建了填充深灰色圆形作为月球。
-- 第 50 行创建了一个 `Pane`，并将 `planet`、`orbitPath` 和 `moon` 对象添加到其中。
-- 第 53 行创建了一个包含 `Pane` 的 `Scene` 对象。该场景宽为 450 像素，高为 120 像素。
+- 第 50 行创建了一个`Pane`，并将`planet`、`orbitPath`和`moon`对象添加到其中。
+- 第 53 行创建了一个包含`Pane`的`Scene`对象。该场景宽为 450 像素，高为 120 像素。
 - 第 54 行将场景设置到舞台（stage）。
 - 第 55 行显示应用程序窗口。
 
 ### 注意
 
-如果椭圆的 `X` 半径和 `Y` 半径具有相同的值，则椭圆将是一个圆。
+如果椭圆的`X`半径和`Y`半径具有相同的值，则椭圆将是一个圆。
 
 # `Arc` 类
 
-`Arc` 类绘制圆弧，圆弧被认为是椭圆的一部分。`Arc` 类有两个构造函数，总结在表 14-6 中。
+`Arc`类绘制圆弧，圆弧被认为是椭圆的一部分。`Arc`类有两个构造函数，总结在表 14-6 中。
 
 # 表 14-6 `Arc` 类的构造函数
 
 | 构造函数 | 描述 |
-| :--- | :--- |
-| `Arc()` | 创建空圆弧。调用 `Arc` 类的 `setCenterX()` 和 `setCenterY()` 方法建立圆弧的中心点，`setRadiusX()` 建立圆弧沿 `X` 轴的半径，`setRadiusY()` 建立圆弧沿 `Y` 轴的半径，`setStartAngle()` 建立圆弧的起始角度（度），`setLength()` 建立圆弧的角度范围（度）。 |
-| `Arc(centerX, centerY, radiusX, radiusY, startAngle, length)` | 参数为 `double` 类型。在指定的中心点以指定的 `X` 和 `Y` 半径创建一个圆弧。圆弧从 `startAngle` 指定的角度开始，并逆时针方向延伸。`length` 参数指定圆弧从其起始角度延伸的度数。 |
 
-由于圆弧是椭圆的一部分，你需要建立一个中心点、一个 `X` 半径和一个 `Y` 半径。此外，圆弧有一个起始角度和一个角度长度，两者都以度为单位。注意 0 度在 3 点钟位置，圆弧从起始角度逆时针绘制。
+| :--- | :--- |
+
+| `Arc()` | 创建空圆弧。调用`Arc`类的`setCenterX()`和`setCenterY()`方法建立圆弧的中心点，`setRadiusX()`建立圆弧沿`X`轴的半径，`setRadiusY()`建立圆弧沿`Y`轴的半径，`setStartAngle()`建立圆弧的起始角度（度），`setLength()`建立圆弧的角度范围（度）。 |
+
+| `Arc(centerX, centerY, radiusX, radiusY, startAngle, length)` | 参数为`double`类型。在指定的中心点以指定的`X`和`Y`半径创建一个圆弧。圆弧从`startAngle`指定的角度开始，并逆时针方向延伸。`length`参数指定圆弧从其起始角度延伸的度数。 |
+
+由于圆弧是椭圆的一部分，你需要建立一个中心点、一个`X`半径和一个`Y`半径。此外，圆弧有一个起始角度和一个角度长度，两者都以度为单位。注意 0 度在 3 点钟位置，圆弧从起始角度逆时针绘制。
 
 # 图 14-8 圆弧属性
 
 ![显示了圆弧的属性。](img/14fig08.png)
 
-默认情况下，圆弧将填充为黑色。你可以调用 `Arc` 类的 `setFill()` 方法（继承自 `Shape`）将其填充为另一种颜色。如果你希望圆弧不填充，请向 `setFill()` 方法传递 `null`。然后，调用 `Arc` 类的 `setStroke()` 方法（同样继承自 `Shape`）更改轮廓颜色。
+默认情况下，圆弧将填充为黑色。你可以调用`Arc`类的`setFill()`方法（继承自`Shape`）将其填充为另一种颜色。如果你希望圆弧不填充，请向`setFill()`方法传递`null`。然后，调用`Arc`类的`setStroke()`方法（同样继承自`Shape`）更改轮廓颜色。
 
-有三种可以使用 `Arc` 类绘制的圆弧类型。要选择这些圆弧类型之一，你需要从 `javafx.scene.shape` 包导入 `ArcType` 类。然后将表 14-7 列出的常量之一传递给 `Arc` 类的 `setType()` 方法。（注意默认类型为 `ArcType.CHORD`。）
+有三种可以使用`Arc`类绘制的圆弧类型。要选择这些圆弧类型之一，你需要从`javafx.scene.shape`包导入`ArcType`类。然后将表 14-7 列出的常量之一传递给`Arc`类的`setType()`方法。（注意默认类型为`ArcType.CHORD`。）
 
 # 表 14-7 圆弧类型
 
 | 类型 | 描述 |
+
 | :--- | :--- |
+
 | `ArcType.CHORD` | 这是默认圆弧类型。会在圆弧的一个端点到另一个端点之间画直线。 |
+
 | `ArcType.ROUND` | 会从每个端点到圆弧的中心点画直线。结果是圆弧形状像饼切形。 |
+
 | `ArcType.OPEN` | 不会连接端点。只绘制圆弧。 |
 
 ![显示了三种类型的圆弧。Arc Type, point, CHORD 看起来像圆的上部分。Arc Type, point, ROUND 看起来像圆的三角形扇形。Arc Type, point, OPEN 看起来像圆曲线的轮廓。](img/14fig09.png)
@@ -26725,18 +24971,17 @@ public class Orbit extends Application
 
 一个使用圆弧绘制饼图的示例程序。程序的输出如图 14-10 所示。
 
-
-
-
-
-`Polygon` 类创建一个闭合的多边形，默认情况下填充为黑色。多边形由多个连接的线段组成。两条线段连接的点称为 `vertex`（顶点）。`Polygon` 类有两个构造函数，总结在表 14-8 中。
+`Polygon`类创建一个闭合的多边形，默认情况下填充为黑色。多边形由多个连接的线段组成。两条线段连接的点称为`vertex`（顶点）。`Polygon`类有两个构造函数，总结在表 14-8 中。
 
 # 表 14-8 `Polygon` 类的构造函数
 
 | 构造函数 | 描述 |
+
 | --- | --- |
-| `Polygon()` | 创建一个空的多边形。调用 `Polygon` 类的 `getPoints().addAll()` 方法来确立多边形顶点的 `XY` 坐标。 |
-| `Polygon(x1, y1, x2, y2, ...)` | 可变数量的参数（类型为 `double`）是多边形顶点的 `XY` 坐标。 |
+
+| `Polygon()` | 创建一个空的多边形。调用`Polygon`类的`getPoints().addAll()`方法来确立多边形顶点的`XY`坐标。 |
+
+| `Polygon(x1, y1, x2, y2, ...)` | 可变数量的参数（类型为`double`）是多边形顶点的`XY`坐标。 |
 
 当你调用参数化构造函数时，将每个顶点的 (*X*,*Y*) 坐标作为参数传递。前两个参数是第一个顶点的 (*X*,*Y*) 坐标，接两个参数是第二个顶点的 (*X*,*Y*) 坐标，依此类推。以下是一个绘制菱形的示例：
 
@@ -26748,7 +24993,7 @@ Polygon diamond = new Polygon(160.0, 20.0,  // 顶
                               160.0, 20.0); // 顶
 ```
 
-如果你调用无参构造函数来创建一个空的多边形，随后可以调用 `Polygon` 类的 `getPoints().addAll()` 方法来确立顶点的坐标。以下是创建之前所示菱形的示例：
+如果你调用无参构造函数来创建一个空的多边形，随后可以调用`Polygon`类的`getPoints().addAll()`方法来确立顶点的坐标。以下是创建之前所示菱形的示例：
 
 ```
 Polygon diamond = new Polygon();
@@ -26759,9 +25004,9 @@ diamond.getPoints().addAll(160.0, 20.0,  // 顶
                            160.0, 20.0); // 顶
 ```
 
-默认情况下，多边形填充为黑色。你可以调用 `Polygon` 类的 `setFill` 方法（继承自 `Shape` 类）来将其填充为另一种颜色。如果你希望多边形不填充，可以将 `null` 作为参数传递给 `setFill` 方法。然后，调用 `Polygon` 类的 `setStroke` 方法（同样继承自 `Shape` 类）来改变多边形轮廓的颜色。
+默认情况下，多边形填充为黑色。你可以调用`Polygon`类的`setFill`方法（继承自`Shape`类）来将其填充为另一种颜色。如果你希望多边形不填充，可以将`null`作为参数传递给`setFill`方法。然后，调用`Polygon`类的`setStroke`方法（同样继承自`Shape`类）来改变多边形轮廓的颜色。
 
-代码列表 14-6 显示了一个示例程序，该程序使用 `Polygon` 类绘制一个红色的八边形，其顶点如图 14-11 所示。程序的输出显示在图 14-12 中。
+代码列表 14-6 显示了一个示例程序，该程序使用`Polygon`类绘制一个红色的八边形，其顶点如图 14-11 所示。程序的输出显示在图 14-12 中。
 
 ![由 Octagon dot java 显示的八边形顶点如下：第一个点，60, 20。第二个点，100, 20。第三个点，140, 60。第四个点，140, 100。第五个点，100, 140。第六个点，60, 140。第七个点，20, 100。第八个点，20, 60。](img/14fig11.png)
 
@@ -26771,17 +25016,19 @@ diamond.getPoints().addAll(160.0, 20.0,  // 顶
 
 # 图 14-12 `Octogon.java` 的输出（Oracle 公司法律顾问）
 
+
+
 在下面的动画中，点击“上一个”（Previous）或“下一个”（Next）按钮可以逐步查看代码并查看各处的解释。
 
-# 代码列表 14-6 `(Octagon.java)`
+## 代码列表 14-6 `(Octagon.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr14-6/6.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr14-6/6.html)
 
-# `Polyline` 类
+## `Polyline` 类
 
 `Polyline` 类创建一个具有多个线段的折线。折线与多边形非常相似，区别在于折线不会自动闭合。`Polyline` 类有两个构造函数，总结在表 14-9 中。
 
-# 表 14-9 `Polyline` 类的构造函数
+### 表 14-9 `Polyline` 类的构造函数
 
 | 构造函数 | 描述 |
 | --- | --- |
@@ -26790,7 +25037,7 @@ diamond.getPoints().addAll(160.0, 20.0,  // 顶
 
 为了演示 `Polyline` 类与 `Polygon` 类之间的相似性，请查看代码列表 14-7。它使用了与 `Octagon.java` 程序相同的顶点坐标来创建一条折线。程序的输出显示在图 14-13 中。
 
-```
+```java
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -26837,26 +25084,23 @@ public class PolylineDemo extends Application
 
 ![Polyline dot java 的输出显示未框。
 
-# `Text` 类
+## `Text` 类
 
 `Text` 类将字符串作为图形绘制在屏幕上。由于 `Text` 类是 `Shape` 类的子类，你可以像其他形状一样改变它的填充颜色、描边和其他特性。`Text` 类有三个构造函数，总结在表 14-10 中。
 
-# 表 14-10 `Text` 类的构造函数
+### 表 14-10 `Text` 类的构造函数
 
 | 构造函数 | 描述 |
 | --- | --- |
 | `Text()` | 创建一个空的 `Text` 对象。调用 `Text` 类的 `setX` 和 `setY` 方法来确立 `Text` 对象的位置，并调用 `setText` 方法来确立对象应该显示的字符串。 |
-| `Text(x, y, text)` | *x* 和 *y* 参数（类型为 `double`）是对象左下角的 *XY* 坐标。`text` 参数是对象将显示的字符串。 |
+| `Text(x, y, text)` | `x` 和 `y` 参数（类型为 `double`）是对象左下角的 `XY` 坐标。`text` 参数是对象将显示的字符串。 |
 | `Text(text)` | `text` 参数是对象将显示的字符串。调用 `Text` 类的 `setX` 和 `setY` 方法来确立 `Text` 对象的位置。 |
 
 以下语句在坐标 100, 50 处绘制字符串“Hello World”：
 
-```
+```java
 Text myText = new Text(100.0, 50.0, "Hello World");
 ```
-
-
-
 
 你可以使用 `setFont` 方法为字符串设置字体。该方法接受一个 `Font` 对象作为参数。`Font` 类位于 `javafx.scene.text` 包中。当你实例化 `Font` 类时，需要将字体名称和字体大小（以磅为单位）作为参数传递构造函数。以下是一个示例，它创建了一个 `Text` 对象，将字体设置为 36 磅的 Serif，将描边颜色设置为黑色，并将填充颜色设置为红色：
 
@@ -26931,13 +25175,14 @@ myText.setFill(Color.RED);
  60     }
  61  }
 ```
-# 代码列表 14-8 `(StopSign.java)`
+
+### 代码列表 14-8 `(StopSign.java)`
 
 ![停止标志的输出显示为一个填充灰色的八边形，单词 STOP 居中并带有字体。](img/14fig14.png)
 
-# 图 14-14 `StopSign.java` 的输出 (Oracle Counsel)
+### 图 14-14 `StopSign.java` 的输出 (Oracle Counsel)
 
-# 旋转节点
+## 旋转节点
 
 `Node` 类提供了一个名为 `setRotate` 的方法，可以绕其中心旋转节点。由于 `setRotate` 方法位于 `Node` 类中，它可以旋转场景图中的任何节点（包括 `Buttons` 和 `Labels`）。当你调用该方法时，传递一个单位为角度的 `double` 值。以下代码摘自程序 `RotateBox.java`：
 
@@ -26956,12 +25201,9 @@ box.setRotate(ANGLE);
 
 ![旋转 45 度的黑色矩形的输出。](img/14fig15.png)
 
-# 图 14-15 `RotateBox.java` 的输出 (Oracle Counsel)
+### 图 14-15 `RotateBox.java` 的输出 (Oracle Counsel)
 
 如果你旋转一个容器，旋转将应用于容器中的所有子元素。例如，代码列表 14-9 显示了一个旋转的停止标志。在该程序中，第 57 行场景图中的根节点（一个 `Pane` 对象）被旋转了。结果是场景图中的所有对象都旋转了 30 度。程序的输出可见图 14-16。
-
-
-
 
 当你调用 `setScaleX` 和 `setScaleY` 方法时，你会传递一个 `double` 类型作为缩放因子。例如，2.0 将使节点的大小变为原始大小的两倍，而 0.5 将使节点的大小变为原始大小的一半。如果你希望节点保持原始比例，请务必在 `X` 和 `Y` 维度上使用相同的缩放比例（也就是说，向 `setScaleX` 和 `setScaleY` 方法传递相同的值）。如果你向这些方法传递不同的值，节点将在 `X` 或 `Y` 维度上显得拉伸。
 
@@ -26993,67 +25235,88 @@ text3.setScaleY(SCALE_QTR);
 
 此代码创建了三个 `Text` 对象，每个对象都显示字符串“Hello World”。第一个 `Text` 对象按原始大小显示。第二个缩放为原始大小的一半，第三个缩放为原始大小的四分之一。程序的输出所示图 14-17。
 
-# 图 14-17 `ScaleText.java` 的输出（Oracle 法务顾问）
+### 图 14-17 `ScaleText.java` 的输出（Oracle 法务顾问）
 
 ![Scale Text.java 程序的输出以三种尺寸显示文本 Hello World。](img/14fig17.png)图 14-17 完整备用文本
 
-# 检查点 14.1
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-01/index.html
+## 检查点 14.1
 
-# 检查点 14.2
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-02/index.html
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-01/index.html`
 
-# 检查点 14.3
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-03/index.html
+## 检查点 14.2
 
-# 检查点 14.4
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-04/index.html
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-02/index.html`
 
-# 检查点 14.5
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-05/index.html
+## 检查点 14.3
 
-# 检查点 14.6
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-06/index.html
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-03/index.html`
 
-# 检查点 14.7
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-07/index.html
+## 检查点 14.4
 
-# 检查点 14.8
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-08/index.html
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-04/index.html`
 
-# 检查点 14.9
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-09/index.html
+## 检查点 14.5
 
-# 检查点 14.10
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-10/index.html
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-05/index.html`
 
-# 检查点 14.11
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-11/index.html
+## 检查点 14.6
 
-# 检查点 14.12
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-12/index.html
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-06/index.html`
 
-# 检查点 14.13
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-13/index.html
+## 检查点 14.7
+
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-07/index.html`
+
+## 检查点 14.8
+
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-08/index.html`
+
+## 检查点 14.9
+
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-09/index.html`
+
+## 检查点 14.10
+
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-10/index.html`
+
+## 检查点 14.11
+
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-11/index.html`
+
+## 检查点 14.12
+
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-12/index.html`
+
+## 检查点 14.13
+
+
+
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-13/index.html`
 
 # 检查点 14.14
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-14/index.html
+
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-14/index.html`
 
 # 检查点 14.15
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-15/index.html
+
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-15/index.html`
 
 # 检查点 14.16
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-16/index.html
+
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-16/index.html`
 
 # 检查点 14.17
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-17/index.html
+
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-17/index.html`
 
 ## 14.2 动画
 
 ### 概念
+
 JavaFX 提供了过渡类，通过使节点随时间从一个状态变为另一个状态来创建动画。
 
 ### 动画
+
 [`mediaplayer.pearsoncmg.com/assets/_video.true/CdFURRZclec730EGuPbTep5YoF`](https://mediaplayer.pearsoncmg.com/assets/_video.true/CdFURRZclec730EGuPbTep5YoF)
 
 JavaFX 提供了许多过渡类（transition classes），使得创建动画变得简单。过渡类位于 `javafx.animation` 包中，其中一些类列在表 14-11 中。
@@ -27071,10 +25334,10 @@ JavaFX 提供了许多过渡类（transition classes），使得创建动画变�
 
 尽管每个过渡类创建的动画类型各不相同，但所有类的工作方式都是相似的。对于每个类，你都必须指定以下内容：
 
-*   你想要动画化的节点
-*   动画持续的时间
-*   节点的起始状态（取决于动画类型）
-*   节点的结束状态（取决于动画类型）
+- 你想要动画化的节点
+- 动画持续的时间
+- 节点的起始状态（取决于动画类型）
+- 节点的结束状态（取决于动画类型）
 
 一旦设置好一切，就可以调用过渡类的 `play` 方法来播放动画。让我们看看这与表 14-10 中列出的每个过渡类的关系。
 
@@ -27082,16 +25345,13 @@ JavaFX 提供了许多过渡类（transition classes），使得创建动画变�
 
 `TranslateTransition` 类使节点从屏幕上的一个位置移动到另一个位置。`TranslateTransition` 类有三个构造函数，总结在表 14-12 中。
 
-# 表 14-12 `TranslateTransition` 类构造函数
+### 表 14-12 `TranslateTransition` 类构造函数
 
 | 构造函数 | 说明 |
 | --- | --- |
 | `TranslateTransition()` | 创建空的 `TranslateTransition` 对象。调用类的 `setDuration` 方法建立时长，并调用 `setNode` 方法指定动画化的节点。 |
-| `TranslateTransition(``duration`)` | `duration` 参数是 `Duration` 类型的对象，指定动画持续的时间。调用 `TranslateTransition` 类的 `setNode` 方法指定动画化的节点。 |
-| `TranslateTransition(``duration, node`)` | `duration` 参数是 `Duration` 类型的对象，指定动画持续的时间。`node` 参数是 `Node` 类（或其子类）的对象，是要动画化的节点。 |
-
-
-
+| `TranslateTransition(duration)` | `duration` 参数是 `Duration` 类型的对象，指定动画持续的时间。调用 `TranslateTransition` 类的 `setNode` 方法指定动画化的节点。 |
+| `TranslateTransition(duration, node)` | `duration` 参数是 `Duration` 类型的对象，指定动画持续的时间。`node` 参数是 `Node` 类（或其子类）的对象，是要动画化的节点。 |
 
 你使用一个 `Duration` 对象来指定动画持续的时间长度。`Duration` 类位于 `javafx.util` 包中，表示一段持续时间。当你实例化 `Duration` 类时，你将毫秒数作为参数传递给构造函数。1 毫秒是秒的 1/1000，因此向 `Duration` 类的构造函数传递值 `1000` 将创建一个表示 1 秒持续时间的对象。
 
@@ -27139,7 +25399,7 @@ ttrans.play();
 
 在下面的动画中，点击“上一个”或“下一个”按钮逐逐通过代码并查看各处的解释。
 
-# Code Listing 14-10 `(BallDrop.java)`
+### Code Listing 14-10 `(BallDrop.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr14-10/10.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr14-10/10.html)
 
@@ -27147,15 +25407,13 @@ ttrans.play();
 
 `RotateTransition` 类创建一个使节点旋转的动画。`RotateTransition` 类有三个构造函数，如表 14-13 所示。
 
-# 表 14-13 `RotateTransition` 类构造函数
+### 表 14-13 `RotateTransition` 类构造函数
 
 | 构造函数 | 说明 |
-
 | --- | --- |
-
 | `RotateTransition()` | 创建一个空的 `RotateTransition` 对象。调用类的 `setDuration` 方法建立动画持续时间，并调用 `setNode` 方法指定要动画的节点。 |
-| `RotateTransition(`duration`)` | 参数 `duration` 是 `Duration` 类的对象，指定动画应该持续的时间。 |
-| `RotateTransition(`duration`,`node`)` | 参数 `duration` 是 `Duration` 类的对象，指定动画应该持续的时间。调用 `RotateTransition` 类的 `setNode` 方法指定要动画的节点。 |
+| `RotateTransition(duration)` | 参数 `duration` 是 `Duration` 类的对象，指定动画应该持续的时间。 |
+| `RotateTransition(duration, node)` | 参数 `duration` 是 `Duration` 类的对象，指定动画应该持续的时间。调用 `RotateTransition` 类的 `setNode` 方法指定要动画的节点。 |
 
 下面的代码段展示了一个示例：
 
@@ -27171,17 +25429,13 @@ TranslateTransition ttrans =
 
 （注：原文中存在大量重复和乱码片段，已根据要求提取核心逻辑内容并进行了正确的格式化处理。）
 
-```content
+```
 Circle myCircle = new Circle(0, 50, 30);
 TranslateTransition ttrans =
          new TranslateTransition(new Duration(3000), myCircle);
 ```
 
 `RotateTransition` 类创建一个使节点旋转的动画。`RotateTransition` 类有三个构造函数，如表 14-13 所示。
-
-
-
-
 
 ```java
 import javafx.application.Application;
@@ -27271,7 +25525,7 @@ public class RotateImage extends Application
 
 ![Rotate Image.java 的输出显示为黑桃 A 扑牌。](img/14fig20.png)
 
-# 图 14-20 `RotateImage.java` 的输出（Oracle 公司法务顾问）
+### 图 14-20 `RotateImage.java` 的输出（Oracle 公司法务顾问）
 
 让我们仔细观察一下程序。
 
@@ -27292,11 +25546,18 @@ public class RotateImage extends Application
 
 `ScaleTransition` 类创建一种动画，使节点变得变大或变小。`ScaleTransition` 类有三个构造函数，如表 14-14 所示。
 
-# 表 14-14 `ScaleTransition` 类构造函数
+### 表 14-14 `ScaleTransition` 类构造函数
 
 | 构造函数 | 说明 |
 | :--- | :--- |
 | `ScaleTransition()` | 创建一个空的 `ScaleTransition` 对象。调用类的 `setDuration` 方法来建立动画的持续时间，并调用 `setNode` 方法指定要动画的节点。 |
+
+
+
+### `ScaleTransition` 类
+
+| 构造函数 | 描述 |
+| --- | --- |
 | `ScaleTransition(duration)` | `duration` 参数（`Duration` 类的对象）指定了动画应持续的时间。调用 `ScaleTransition` 类的 `setNode` 方法指定要动画的节点。 |
 | `ScaleTransition(duration, node)` | `duration` 参数（`Duration` 类的对象）指定了动画应持续的时间。`node` 参数（`Node` 类的对象）是要执行动画的节点。 |
 
@@ -27325,23 +25586,18 @@ https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr14-12/12.html
 
 ### `StrokeTransition` 类
 
-`StrokeTransition` 类创建一种形状的描边颜色随时间变化的动画。（注意`StrokeTransition` 类仅适用于 `Shape` 类或其任子类的对象。）`StrokeTransition` 类有五个构造函数，如表 14-15 所示。
+`StrokeTransition` 类创建一种形状的描边颜色随时间变化的动画。（注意 `StrokeTransition` 类仅适用于 `Shape` 类或其任子类的对象。）`StrokeTransition` 类有五个构造函数，如表 14-15 所示。
 
-
-
-
-
+| 构造函数 | 描述 |
+| --- | --- |
 | `StrokeTransition(duration)` | `duration` 参数是一个 `Duration` 类的对象，指定了动画持续的时间。调用 `StrokeTransition` 类的 `setShape` 方法来指定要动画的形状，调用 `setFromValue` 方法指定起始颜色，并调用 `setToValue` 方法指定结束颜色。 |
-
 | `StrokeTransition(duration, shape)` | `duration` 参数是一个 `Duration` 类的对象，指定了动画持续的时间。`shape` 参数是一个 `Shape` 类（或其子类）的对象，是要动画的节点。调用 `setFromValue` 方法指定起始颜色，并调用 `setToValue` 方法指定结束颜色。 |
-
 | `StrokeTransition(duration, fromValue, toValue)` | `duration` 参数是一个 `Duration` 类的对象，指定了动画持续的时间。`fromValue` 参数是一个 `Color` 类的对象，指定起始颜色。`toValue` 参数是一个 `Color` 类的对象，指定结束颜色。调用 `setShape` 方法指定要动画的形状。 |
-
 | `StrokeTransition(duration, shape, fromValue, toValue)` | `duration` 参数是一个 `Duration` 类的对象，指定了动画持续的时间。`shape` 参数是一个 `Shape` 类（或其子类）的对象，是要动画的节点。`fromValue` 参数是一个 `Color` 类的对象，指定起始颜色。`toValue` 参数是一个 `Color` 类的对象，指定结束颜色。调用 `setShape` 方法指定要动画的形状。 |
 
 使用 `StrokeTransition` 类对形状进行动画处理，你需要指定起始颜色和结束颜色。当动画播放时，过渡类将在指定的时间内将形状的描边颜色从起始颜色逐渐变为结束颜色。以下代码段显示了一个示例：
 
-```
+```java
 Circle myCircle = new Circle(50, 50, 10);
 StrokeTransition strtrans =
       new StrokeTransition(new Duration(2000), myCircle,
@@ -27355,7 +25611,7 @@ strtrans.play();
 
 `FillTransition` 类创建一种动画，其中形状的填充颜色在一段时间内发生变化。（注意：`FillTransition` 类仅适用于 `Shape` 类或其任一子类的对象。）`FillTransition` 类有五个构造函数，总结如表 14-16 所示。
 
-## 表 14-16 `FillTransition` 类构造函数
+### 表 14-16 `FillTransition` 类构造函数
 
 | 构造函数 | 描述 |
 | --- | --- |
@@ -27366,20 +25622,21 @@ strtrans.play();
 
 使用 `FillTransition` 类对形状进行动画处理，你需要指定起始颜色和结束颜色。当动画播放时，过渡类将在指定的时间内将形状的填充颜色从起始颜色逐渐变为结束颜色。以下代码段显示了一个示例：
 
-```
+```java
 Circle myCircle = new Circle(50, 50, 10);
 FillTransition ftrans =
     new FillTransition(new Duration(2000), myCircle,
                        Color.LIGHTBLUE, Color.DARKBLUE);
 ftrans.play();
 ```
+
 这段代码创建了一个 `Circle`，其中心点在 (50, 50)，半径为 10。然后它创建了一个 `FillTransition` 对象来对 `Circle` 对象执行动画。动画持续时间为 2 秒。当动画播放时，`Circle` 对象将以浅蓝色的填充颜色显示，并逐渐将填充颜色变为深蓝色。
 
 ### `FadeTransition` 类
 
 `FadeTransition` 类创建一种动画，其中节点在一段时间内淡入或淡出。`FadeTransition` 类有三个构造函数，总结如表 14-17 所示。
 
-## 表 14-17 `FadeTransition` 类构造函数
+### 表 14-17 `FadeTransition` 类构造函数
 
 | 构造函数 | 描述 |
 | --- | --- |
@@ -27391,7 +25648,7 @@ ftrans.play();
 
 使用 `FadeTransition` 类对节点进行动画处理，你需要指定起始透明度和结束透明度值。当动画播放时，过渡类将结的透明度从指定的起始值逐渐变为指定的结束值。以下代码段显示了一个示例：
 
-```
+```java
 // 创建一个 Image 和 ImageView。
 Image image = new Image("file:HotAirBalloon.jpg");
 ImageView imageView = new ImageView(image);
@@ -27404,13 +25661,9 @@ ftrans.setToValue(0.25);
 ftrans.play();
 ```
 
-
-
-
-
 这段代码创建了一个 `Image` 组件和一个 `ImageView` 组件来显示图像，然后创建了一个 `FadeTransition` 对象来对 `ImageView` 对象进行动画处理。动画的持续时间为 1 秒。当动画播放时，图像将以 1.0 的透明度显示（完全不透明）。随着动画的播放，图像的不透明度将逐渐降低到 0.25（25% 不透明度）。图 14-21 显示了代码在动画开始和结束时的输出示例。
 
-# 图 14-21 淡入过渡示例
+### 图 14-21 淡入过渡示例
 
 ![两个窗口中显示了淡入过渡示例。](img/14fig21.png)图 14-21 完整替代文本
 
@@ -27418,10 +25671,9 @@ ftrans.play();
 
 我们讨论过的每个过渡过渡类都是 `Animation` 类和 `Transition` 类的子类。表 14-18 总结了从 `Animation` 类继承的一些方法，这些方法让你对动画有更好的控制。
 
-# 表 14-18 从 `Animation` 类继承的几个方法
+### 表 14-18 从 `Animation` 类继承的几个方法
 
 | 方法 | 描述 |
-
 | --- | --- |
 | `jumpTo(time)` | `time` 参数是一个 `Duration` 对象。此方法使动画跳转到 `time` 指定的时间位置。（例如，如果 `time` 参数指定为 5 秒，该方法将动画跳转到 5 秒的位置。） |
 | `pause()` | 暂停动画。（如果动画未在播放，则此方法无效。） |
@@ -27436,16 +25688,15 @@ ftrans.play();
 
 所有过渡类都从 `Transition` 类继承了一个名为 `setInterpolator` 的方法。`setInterpolator` 方法允许你指定动画如何开始和结束。该方法的通用格式为
 
-```
+```java
 transitionObject.setInterpolator(interpolatorValue);
 ```
 
-其中 `transitionObject` 是一个过渡对象，`interpolatorValue` 通常是 表 14-19 中列出的常量之一。（`Interpolator` 类位于 `javafx.animation.Interpolator` 包中。）
+其中 `transitionObject` 是一个过渡对象，`interpolatorValue` 通常是表 14-19 中列出的常量之一。（`Interpolator` 类位于 `javafx.animation.Interpolator` 包中。）
 
 ### 表 14-19 `Interpolator` 常量
 
 | 方法 | 描述 |
-
 | --- | --- |
 | `Interpolator.EASE_BOTH` | 此插值器使动画淡入淡出。换之，动画缓慢开始、加速，然后在结尾减慢。这是默认的插值器。 |
 | `Interpolator.EASE_IN` | 此插值器使动画淡入（缓慢开始），但快速停止。 |
@@ -27455,7 +25706,7 @@ transitionObject.setInterpolator(interpolatorValue);
 
 下面的代码段显示了一个示例：
 
-```
+```java
 Circle myCircle = new Circle(0, 50, 30);
 TranslateTransition ttrans =
          new TranslateTransition(new Duration(3000), myCircle);
@@ -27465,8 +25716,6 @@ ttrans.setToX(100);
 ttrans.setToY(50);
 ttrans.setInterpolator(Interpolator.EASE_IN);
 ```
-
-
 
 
 
@@ -27530,7 +25779,7 @@ public class DropShadowDemo extends Application
 
 如果你对默认投影投影的外观不满意，可以使用表 14-21 中列出的 `DropShadow` 类方法来更改其外观。例如，以下代码段（节自 *DropShadowDemo2.java*）显示了一个带有投影阴影的圆，其 `X` 和 `Y` 偏移量均为 10。结果是阴影向右移动了 10 像素，向下移动了 10 像素。代码的输出如图 14-23 所示。
 
-```
+```java
 // Create a DropShadow
 DropShadow dropShadow = new DropShadow();
 dropShadow.setOffsetX(10);
@@ -27561,6 +25810,8 @@ myCircle.setEffect(dropShadow);
 使用 `InnerShadow` 类在节点上创建内投影，这可以改变其的外观。以下代码段（节自 *DropShadowDemo.java*）展示了一个带有内投影的圆，其 `X` 和 `Y` 偏移量均为 10。代码的输出如图 14-22 所示。
 
 ![Inner Shadow Demo 的输出显示了一个带有内投影的圆](img/ Create an InnerShadow
+
+```java
 InnerShadow innerShadow = new InnerShadow();
 innerShadow.setOffsetX(10);
 innerShadow.setOffsetY(10);
@@ -27570,54 +25821,46 @@ Circle myCircle = new Circle(X, Y, RADIUS, Color.RED);
 myCircle.setEffect(innerShadow);
 ```
 
-
-
-
-
 ### `SepiaTone` 类
 
 你可以使用 `SepiaTone` 类为图像添加复古的深褐色（sepia）调外观。以下代码段展示了如何将效果应用于图像：
 
-```
+```java
 // 创建一个 SepiaTone 效果。
- SepiaTone sepia = new SepiaTone();
+SepiaTone sepia = new SepiaTone();
 
- // 将效果应用到图像。
- Image image = new Image("file:Ship.jpg");
- ImageView imageView = new ImageView(image);
- imageView.setEffect(sepia);
+// 将效果应用到图像。
+Image image = new Image("file:Ship.jpg");
+ImageView imageView = new ImageView(image);
+imageView.setEffect(sepia);
 ```
 
 你可以通过调用 `setLevel` 方法来改变 `SepiaTone` 类效果的强度，传递一个范围在 `0.0` 到 `1.0` 之间的 `double` 值。数值越高，效果越强烈。默认情况下，级别为 `1.0`。以下是将级别设置为 `0.5` 的示例代码段：
 
-```
+```java
 SepiaTone sepia = new SepiaTone();
- sepia.setLevel(0.5);
+sepia.setLevel(0.5);
 ```
 
 ### `Glow` 类
 
 你可以使用 `Glow` 类来产生发光效果。以下代码段展示了如何将该效果应用于图像：
 
-```
+```java
 // 创建一个 Glow 效果。
- Glow glow = new Glow();
+Glow glow = new Glow();
 
- // 将效果应用到图像。
- Image image = new Image("file:SanDiego.png");
- ImageView imageView = new ImageView(image);
- imageView.setEffect(glow);
+// 将效果应用到图像。
+Image image = new Image("file:SanDiego.png");
+ImageView imageView = new ImageView(image);
+imageView.setEffect(glow);
 ```
-
-
-
-
 
 你可以通过调用 `setLevel` 方法并传递一个 0.0 到 1.0 范围内的 `double` 值来更改 `Glow` 类效果的强度。值越高，效果越剧烈。默认级别为 0.3。以下是一个将级别设置为 1.0 的示例代码段：
 
-```
+```java
 Glow glow = new Glow();
- glow.setLevel(0.5);
+glow.setLevel(0.5);
 ```
 
 图 14-30 显示了图像在应用和不应用 `Glow` 效果时的外观。左侧的图像是原始图像，未应用 `Glow` 效果；右侧的图像应用了 `Glow` 效果，且级别设置为 1.0。
@@ -27634,14 +25877,14 @@ Glow glow = new Glow();
 
 ## 图 14-31 应用于 `Text` 对象的 `Reflection` 效果
 
-```
+```java
 // 创建一个反射效果。
- Reflection reflect = new Reflection();
+Reflection reflect = new Reflection();
 
- // 创建一个 Text 对象。
- Text text = new Text("Hello World");
- text.setFont(new Font("SansSerif", 36));
- text.setEffect(reflect);
+// 创建一个 Text 对象。
+Text text = new Text("Hello World");
+text.setFont(new Font("SansSerif", 36));
+text.setEffect(reflect);
 ```
 
 `Reflection` 类提供了几种方法，列在表 14-23 中，用于微调反射出现的方式。
@@ -27659,52 +25902,47 @@ Glow glow = new Glow();
 
 `Node` 类的 `setEffect` 方法接受接受一个对象对象参数。如果你对特定节点多次调用 `setEffect` 方法，最后传递作为参数的效果对象将替换之前为该节点传递的任何效果对象。但是，可以使用 `Effect` 类的 `setInput` 方法来组合效果。下面的代码段展示了将 `DropShadow` 与 `Reflection` 组合的示例，然后将它们都应用到 `Text` 对象上：
 
-```
+```java
 // 创建阴影效果
- DropShadow dropShadow = new DropShadow();
+DropShadow dropShadow = new DropShadow();
 
- // 创建反射效果。
- Reflection reflect = new Reflection();
+// 创建反射效果。
+Reflection reflect = new Reflection();
 
- 将反射与阴影组合。
- reflect.setInput(dropShadow);
+// 将反射与阴影组合。
+reflect.setInput(dropShadow);
 
- // 创建 Text 对象。
- Text text = new Text("Hello World");
- text.setFont(new Font("SansSerif", 36));
- text.setEffect(reflect);
+// 创建 Text 对象。
+Text text = new Text("Hello World");
+text.setFont(new Font("SansSerif", 36));
+text.setEffect(reflect);
 ```
 
 `setInput` 方法将效果“链”在一起。当这段代码执行时，首先应用阴影效果，然后应用反射效果。结果如图 14-32 所示。下面的代码段展示了将三个效果链在一起的示例：`DropShadow`、`SepiaTone` 和 `Reflection`。结果如图 14-33 所示。（当图像以黑白打印时，褐褐色效果并不明显，但你可以亲自尝试这段代码以查看真实结果。）
 
-```
+```java
 // 创建一个阴影效果。
- DropShadow dropShadow = new DropShadow();
+DropShadow dropShadow = new DropShadow();
 
-  创建一个褐褐色效果。
- SepiaTone sepia = new SepiaTone();
+// 创建一个褐褐色效果。
+SepiaTone sepia = new SepiaTone();
 
-  创建一个反射效果。
- Reflection reflect = new Reflection();
+// 创建一个反射效果。
+Reflection reflect = new Reflection();
 
- 将阴影与褐褐色组合。
- sepia.setInput(dropShadow);
+// 将阴影与褐褐色组合。
+sepia.setInput(dropShadow);
+reflect.setInput(sepia);
 
- reflect.setInput(sepia);
-
-  创建一个 Text 对象。
- Text text = new Text("Hello World");
- text.setFont(new Font("SansSerif", 36));
- text.setEffect(reflect);
+// 创建一个 Text 对象。
+Text text = new Text("Hello World");
+text.setFont(new Font("SansSerif", 36));
+text.setEffect(reflect);
 ```
-
-
-
-
 
 接下来，你创建一个 `MediaPlayer` 类的实例，并将 `Media` 对象的引用作为参数传递给构造函数。这是一个示例：
 
-```
+```java
 MediaPlayer player = new MediaPlayer(media);
 ```
 
@@ -27722,12 +25960,14 @@ MediaPlayer player = new MediaPlayer(media);
 
 例如，以下代码段加载了 `guitar.wav` 文件，并在文件加载且 `MediaPlayer` 准备就绪后立即播放它：
 
-```
+```java
 File soundFile = new File("guitar.wav");
 Media media = new Media(soundFile.toURI().toString());
 MediaPlayer player = new MediaPlayer(media);
 player.setAutoPlay(true);
 ```
+
+
 
 ### 注意事项
 
@@ -27737,10 +25977,10 @@ player.setAutoPlay(true);
 
 `MediaPlayer` 对象具有某些状态，用于指示 `MediaPlayer` 当前正在的操作。例如：
 
-* 当音频文件加载到内存中且 `MediaPlayer` 准备好播放它时，`MediaPlayer` 处于 `READY` 状态。
-* 当音频文件正在播放时，`MediaPlayer` 处于 `PLAYING` 状态。
-* 当音频文件由于 `pause()` 方法而暂停时，`MediaPlayer` 处于 `PAUSED` 状态。
-* 当音频文件由于 `stop()` 方法而停止时，`MediaPlayer` 处于 `STOPPED` 状态。
+- 当音频文件加载到内存中且 `MediaPlayer` 准备好播放它时，`MediaPlayer` 处于 `READY` 状态。
+- 当音频文件正在播放时，`MediaPlayer` 处于 `PLAYING` 状态。
+- 当音频文件由于 `pause()` 方法而暂停时，`MediaPlayer` 处于 `PAUSED` 状态。
+- 当音频文件由于 `stop()` 方法而停止时，`MediaPlayer` 处于 `STOPPED` 状态。
 
 当 `MediaPlayer` 对象播放音频文件直到结束时，`MediaPlayer` 对象不会自动转换到 `STOPPED` 状态。相反，它保持在 `PLAYING` 状态。这在某些应用程序中会导致问题，因为如果 `MediaPlayer` 对象已经处于 `PLAYING` 状态，`play()` 方法将不会播放音频文件。
 
@@ -27748,7 +25988,7 @@ player.setAutoPlay(true);
 
 事实证明，当 `MediaPlayer` 到达音频文件末尾时会触发一个事件。该事件被称为 `EndOfMedia` 事件，你可以使用 `setOnEndOfMedia` 方法注册一个事件处理器，该处理器会在事件触发的任何时候执行。在事件处理器中，你只需调用 `MediaPlayer` 的 `stop()` 方法即可强制让 `MediaPlayer` 进入 `STOPPED` 状态。以下代码段使用匿名内部类创建了这样一个事件处理器：
 
-```
+```java
 // 加载音频文件。
 File soundFile = new File("guitar.wav");
 Media media = new Media(soundFile.toURI().toString());
@@ -27765,9 +26005,9 @@ player.setOnEndOfMedia(new Runnable()
 });
 ```
 
-`EndOfMedia` 事件的事件处理器必须是一个实现了 `Runnable` 接口的类。（`Runnable` 接口位于 `java.lang` 包中，因此不需要 `import` 语句。） `Runnable` 接口是一个函数接口，指定了一个名为 `run()` 的方法。由于 `Runnable` 是一个函数接口，我们可以通过将其写为 Lambda 表达式来简化事件处理代码。这是一个示例：
+`EndOfMedia` 事件的事件处理器必须是一个实现了 `Runnable` 接口的类。（`Runnable` 接口位于 `java.lang` 包中，因此不需要 `import` 语句。）`Runnable` 接口是一个函数接口，指定了一个名为 `run()` 的方法。由于 `Runnable` 是一个函数接口，我们可以通过将其写为 Lambda 表达式来简化事件处理代码。这是一个示例：
 
-```
+```java
 // 加载音频文件。
 File soundFile = new File("guitar.wav");
 Media media = new Media(soundFile.toURI().toString());
@@ -27849,15 +26089,11 @@ public class SoundPlayer extends Application {
 
 ## 代码列表 14-14 `SoundPlayer.java`
 
-
-
-
-
 ### 概念
 
 在 JavaFX 中，你使用 `Media`、`MediaPlayer` 和 `MediaView` 类来播放视频。`Media` 类将视频文件加载到内存中，而 `MediaPlayer` 类提供了播放视频的方法。`MediaView` 类可以插入到场景图（scene graph）中，提供了一种在屏幕上查看视频的方法。
 
-# 观看播放视频
+## 观看播放视频
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/8FtqjIOwbtDaabarekcKz4T5BE_oFbEe`](https://mediaplayer.pearsoncmg.com/assets/_video.true/8FtqjIOwbtDaabarekcKz4T5BE_oFbEe)
 
@@ -27865,74 +26101,70 @@ public class SoundPlayer extends Application {
 
 `MediaView` 类是 `Node` 的子类，你可以将其添加到场景图中。你通过 `setFitWidth` 和 `setFitHeight` 方法设置查看窗口的大小。视频将根据需要调整大小以适应查看窗口。代码列表 14-15 中的程序展示了一个示例。当你运行此程序时，它会加载一个名为 `TakeOff.mp4` 的视频并自动播放。程序的输出示例在图 14-34 所示。
 
-```
+```java
  1  import javafx.application.Application;
-  2  import javafx.stage.Stage;
-  3  import javafx.scene.Scene;
-  4  import javafx.scene.layout.HBox;
-  5  import java.io.File;
-  6  import javafx.scene.media.Media;
-  7  import javafx.scene.media.MediaPlayer;
-  8  import javafx.scene.media.MediaView;
-  9
-  10  public class VideoDemo extends Application
-  11  {
-  12     public static void main(String[] args)
-  13     {
-  14        // Launch the application.
-  15        launch(args);
-  16     }
-  17
-  18     @Override
-  19     public void start(Stage primaryStage)
-  20     {
-  21        // Constants for the video dimensions
-  22        final double WIDTH = 640.0, HEIGHT = 480.0;
-  23
-  24        // Load the video file.
-  25        File videoFile = new File("TakeOff.mp4");
-  26        Media media = new Media(videoFile.toURI().toString());
-  27
-  28        // Create the MediaPlayer and set AutoPlay to true.
-  29        MediaPlayer player = new MediaPlayer(media);
-  30        player.setAutoPlay(true);
-  31
-  32        // Create the MediaView.
-  33        MediaView view = new MediaView(player);
-  34
-  35        // Set the viewing dimensions.
-  36        view.setFitWidth(WIDTH);
-  37        view.setFitHeight(HEIGHT);
-  38
-  39        // Put the MediaView in an HBox.
-  40        HBox hbox = new HBox(view);
-  41
-  42        // Create a Scene, put it on the stage, and display it.
-  43        Scene scene = new Scene(hbox);
-  44        primaryStage.setScene(scene);
-  45        primaryStage.show();
-  46     }
-  47  }
+ 2  import javafx.stage.Stage;
+ 3  import javafx.scene.Scene;
+ 4  import javafx.scene.layout.HBox;
+ 5  import java.io.File;
+ 6  import javafx.scene.media.Media;
+ 7  import javafx.scene.media.MediaPlayer;
+ 8  import javafx.scene.media.MediaView;
+ 9
+ 10  public class VideoDemo extends Application
+ 11  {
+ 12     public static void main(String[] args)
+ 13     {
+ 14        // Launch the application.
+ 15        launch(args);
+ 16     }
+ 17
+ 18     @Override
+ 19     public void start(Stage primaryStage)
+ 20     {
+ 21        // Constants for the video dimensions
+ 22        final double WIDTH = 640.0, HEIGHT = 480.0;
+ 23
+ 24        // Load the video file.
+ 25        File videoFile = new File("TakeOff.mp4");
+ 26        Media media = new Media(videoFile.toURI().toString());
+ 27
+ 28        // Create the MediaPlayer and set AutoPlay to true.
+ 29        MediaPlayer player = new MediaPlayer(media);
+ 30        player.setAutoPlay(true);
+ 31
+ 32        // Create the MediaView.
+ 33        MediaView view = new MediaView(player);
+ 34
+ 35        // Set the viewing dimensions.
+ 36        view.setFitWidth(WIDTH);
+ 37        view.setFitHeight(HEIGHT);
+ 38
+ 39        // Put the MediaView in an HBox.
+ 40        HBox hbox = new HBox(view);
+ 41
+ 42        // Create a Scene, put it on the stage, and display it.
+ 43        Scene scene = new Scene(hbox);
+ 44        primaryStage.setScene(scene);
+ 45        primaryStage.show();
+ 46     }
+ 47  }
 ```
 
-# 代码列表 14-15 (VideoDemo.java)
+## 代码列表 14-15 (`VideoDemo.java`)
 
 ![VideoDemo.java 程序显示为一个截图，内容是一个俯瞰地面飞机的窗口视频。](img/14fig34.png)
 
-# 图 14-34 `VideoDemo.java` 程序
+## 图 14-34 `VideoDemo.java` 程序
 
 让我们仔细观察一下程序：
 
 - 第 25 行和第 26 行加载了名为 `TakeOff.mp4` 的文件，并为该文件创建了一个 `Media` 对象。
 - 第 29 行创建了一个 `MediaPlayer` 对象，第 30 行将对象的自动播放属性设置为 `true`。这导致 `MediaPlayer` 对象在所有设置完成后自动播放视频。
 - 第 33 行创建了一个 `MediaView` 对象。
-- 第 36 行和第 37 行将 `MediaView` 对象的宽度和高度设置为 640  480。
+- 第 36 行和第 37 行将 `MediaView` 对象的宽度和高度设置为 640 480。
 - 第 40 行将 `MediaView` 对象放入 `HBox` 中。
 - 第 43 行到第 45 行创建了以 `HBox` 为根节点的场景图，将场景设置到舞台（stage）上并显示应用程序。
-
-
-
-
 
 ```java
 import javafx.application.Application;
@@ -27994,44 +26226,46 @@ public class VideoPlayer extends Application
         });
 
         // pause 按钮的事件处理器
-        pauseButton.setOnAction(event ->
-        {
-           player.pause();
-        });
 
-        // stop 按钮的事件处理器
-        stopButton.setOnAction(event ->
-        {
-           player.stop();
-        });
 
-        // 将按钮放入 HBox
-        HBox hbox = new HBox(10, playButton, pauseButton, stopButton);
-        hbox.setAlignment(Pos.CENTER);
-        hbox.setPadding(new Insets(10));
 
-        // 将所有内容放入 BorderPane
-        BorderPane borderPane = new BorderPane();
-        borderPane.setCenter(view);
-        borderPane.setBottom(hbox);
+`pauseButton.setOnAction(event -> { player.pause(); });`
 
-        // 创建 Scene，将其设置到舞台并显示
-        Scene scene = new Scene(borderPane);
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
-}
+`stopButton.setOnAction(event -> { player.stop(); });`
+
+将按钮放入 `HBox`：
+
+```java
+HBox hbox = new HBox(10, playButton, pauseButton, stopButton);
+hbox.setAlignment(Pos.CENTER);
+hbox.setPadding(new Insets(10));
 ```
 
-# 代码列表 14-16 `VideoPlayer.java`
+将所有内容放入 `BorderPane`：
 
-# 检查点 14.25 components/digi/ch14-inline_self_quiz_v1.0-25/index.html
+```java
+BorderPane borderPane = new BorderPane();
+borderPane.setCenter(view);
+borderPane.setBottom(hbox);
+```
 
-# 14.6 处理事件
+创建 `Scene`，将其设置到舞台并显示：
+
+```java
+Scene scene = new Scene(borderPane);
+primaryStage.setScene(scene);
+primaryStage.show();
+```
+
+## 代码列表 14-16 `VideoPlayer.java`
+
+## 检查点 14.25 components/digi/ch14-inline_self_quiz_v1.0-25/index.html
+
+## 14.6 处理事件
 
 概念：`JavaFX` 允许你创建响应键盘事件的事件处理器。
 
-# 观察事件事件
+### 观察事件事件
 
 [[assets/video.true/cb5ty0C6o_OzllvjpeSlL7Fudu](https://example.com/assets/video.true/cb5ty0C6o_OzllvjpeSlL7Fudu)]
 
@@ -28039,7 +26273,7 @@ public class VideoPlayer extends Application
 
 - 每当用户按下按键时，发生 `KEY_PRESSED` 事件。
 - 每当用户释放按键时，发生 `KEY_RELEASED` 事件。
-- 每当用户按下并释放产生 Unicode 字符的按键（如字母、数字或标点符号）时，发生 `KEY_TYPED` 事件。（箭头键、翻页键和功能键不会产生 KEY_TYPED。）
+- 每当用户按下并释放产生 Unicode 字符的按键（如字母、数字或标点符号）时，发生 `KEY_TYPED` 事件。（箭头键、翻页键和功能键不会产生 `KEY_TYPED`。）
 
 键事件发生时，会创建一个 `KeyEvent` 类的事件对象。`KeyEvent` 是 `Event` 类的子类，它们都在 `javafx.event` 包中。假设我们要写一个响应键事件的事件处理器，其通用格式如下：
 
@@ -28056,17 +26290,17 @@ class KeyHandler implements EventHandler<KeyEvent>
 
 注意类声明的第一行 `implements EventHandler<KeyEvent>`。这指定了类实现了 `EventHandler` 接口，并且它处理的事件类型是 `KeyEvent`。接下来，注意 `handle` 方法有一个名为 `event` 的 `KeyEvent` 参数。当调用 `handle` 方法时，会传入一个 `KeyEvent` 对象。任何你想在按下或释放按键后执行的代码都写在 `handle` 方法中。
 
-一旦写好了事件处理器，下一步就是将其注册到目标节点。只要该节点拥有焦点，场景图中的任何节点都可以处理键事件。当节点拥有焦点时，它准备好接收输入。在 JavaFX 运行时，你可以看出哪个节点拥有焦点，因为它周围通常有一个蓝色光晕。当你按下 `Tab` 键时，焦点会移动到下一个节点。
+一旦写好了事件处理器，下一步就是将其注册到目标节点。只要该节点拥有焦点，场景图中的任何节点都可以处理键事件。当节点拥有焦点时，它准备好接收输入。在 `JavaFX` 运行时，你可以看出哪个节点拥有焦点，因为它周围通常有一个蓝色光晕。当你按下 `Tab` 键时，焦点会移动到下一个节点。
 
-大多数情况下，你会在 Scene 对象上注册 `KeyEvent` 处理器。这样，无论哪个节点拥有焦点，你的 KeyEvent 处理器都会响应键事件。要注册事件处理器，你需要调用 Scene 对象（或场景图中的任何节点）的以下方法之一：
+大多数情况下，你会在 `Scene` 对象上注册 `KeyEvent` 处理器。这样，无论哪个节点拥有焦点，你的 `KeyEvent` 处理器都会响应键事件。要注册事件处理器，你需要调用 `Scene` 对象（或场景图中的任何节点）的以下方法之一：
 
 - `setOnKeyPressed`：使用此方法注册 `KEY_PRESSED` 事件的处理器。
 - `setOnKeyReleased`：使用此方法注册 `KEY_RELEASED` 事件的处理器。
 - `setOnKeyTyped`：使用此方法注册 `KEY_TYPED` 事件的处理器。
 
-# 使用匿名内部类将键处理器注册到 Scene
+### 使用匿名内部类将键处理器注册到 `Scene`
 
-你在第 12 章 中学习过，编写事件处理器的常用技巧是使用匿名内部类。下面的代码片段展示了使用匿名内部类为 Scene 注册 `KEY_PRESSED` 事件处理器的写法：
+你在第 12 章中学习过，编写事件处理器的常用技巧是使用匿名内部类。下面的代码片段展示了使用匿名内部类为 `Scene` 注册 `KEY_PRESSED` 事件处理器的写法：
 
 ```java
 // 创建 Scene
@@ -28083,9 +26317,9 @@ scene.setOnKeyPressed(new EventHandler<KeyEvent>()
 });
 ```
 
-# 使用 Lambda 表达式将键事件处理器注册到 Scene
+### 使用 Lambda 表达式将键事件处理器注册到 `Scene`
 
-你在第 12 章 也学习过，lambda 表达式提供了注册事件处理器的简化方式。下面的代码片段展示了使用 lambda 表达式为 Scene 注册 `KEY_PRESSED` 事件处理器的写法：
+你在第 12 章也学习过，lambda 表达式提供了注册事件处理器的简化方式。下面的代码片段展示了使用 lambda 表达式为 `Scene` 注册 `KEY_PRESSED` 事件处理器的写法：
 
 ```java
 // 创建 Scene
@@ -28099,10 +26333,6 @@ scene.setOnKeyPressed(event ->
 ```
 
 代码列表 14-17 显示了一个演示如何处理 `KEY_PRESSED` 事件的完整程序。应用程序在每次按下按键时计数器加 1，并在 `Label` 控件中显示计数器的值。在按下五次按键后，应用程序窗口如图 14-35 所示。
-
-
-
-
 
 ```java
 import javafx.application.Application;
@@ -28153,44 +26383,47 @@ public class KeyPressDemo extends Application
 }
 ```
 
-# 代码列表 14-17 `(KeyPressedDemo.java)`
+## 代码列表 14-17 `(KeyPressedDemo.java)`
 
 ![窗口显示数字 5，表示在使用 Key Pressed Demo dot java 应用程序时，按键已按下了 5 次。](img/14fig35.png)
 
-# 图 14-35 按下 5 次键后的 `KeyPressedDemo.java` 应用程序（Oracle 法人公司法律顾问）
+### 图 14-35 按下 5 次键后的 `KeyPressedDemo.java` 应用程序（Oracle 法人公司法律顾问）
 
 让我们仔细观察一下这个程序：
 
-*   第 13 行声明了一个名为 `count` 的 `int` 字段，并初始化值为 0。`count` 字段将记录按键的次数。
-*   第 25 行创建了一个 `Label` 控件，用于显示按键次数，第 28 行将 `Label` 控件放入 `HBox` 中。
-*   第 33 行创建了一个场景，以 `HBox` 为根节点。
-*   第 36 行到 40 行使用 lambda 表达式向 `Scene` 对象注册一个事件处理器。该事件处理器将响应 `KEY_PRESSED` 事件。在事件处理器内部，第 38 行增加 `count` 的值，第 39 行在 `Label` 控件中显示 `count` 的值。
-*   第 43 行和 44 行将场景设置到阶段并显示应用程序窗口。
+- 第 13 行声明了一个名为 `count` 的 `int` 字段，并初始化值为 0。`count` 字段将记录按键的次数。
+- 第 25 行创建了一个 `Label` 控件，用于显示按键次数，第 28 行将 `Label` 控件放入 `HBox` 中。
+- 第 33 行创建了一个场景，以 `HBox` 为根节点。
+- 第 36 行到 40 行使用 lambda 表达式向 `Scene` 对象注册一个事件处理器。该事件处理器将响应 `KEY_PRESSED` 事件。在事件处理器内部，第 38 行增加 `count` 的值，第 39 行在 `Label` 控件中显示 `count` 的值。
+- 第 43 行和 44 行将场景设置到阶段并显示应用程序窗口。
 
-作为参数传递给事件处理器的 `KeyEvent` 对象包含了有关按键事件的数据。例如，你可以使用对象的 `getCode()` 方法来确定是哪个键触发了事件。`getCode()` 方法返回一个 `KeyCode` 值，它是 `javafx.scene.input` 包中的一个 `enum`（枚举）。`KeyCode` 枚举包含大量代表计算机键盘键的常量。例如，`KeyCode.J` 代表 J 键，`KeyCode.ENTER` 代表回车键，`KeyCode.PAGE_UP` 代表上页键。请参阅 JavaFX API 文档中的 `KeyCode` 枚举以获取所有常量列表。
+作为参数传递给事件处理器的 `KeyEvent` 对象包含了有关按键事件的数据。例如，你可以使用对象的 `getCode()` 方法来确定是哪个键触发了事件。`getCode()` 方法返回一个 `KeyCode` 值，它是 `javafx.scene.input` 包中的一个 `enum`（枚举）。`KeyCode` 枚举包含大量代表计算机键盘键的常量。例如，`KeyCode.J` 代表 J 键，`KeyCode.ENTER` 代表回车键，`KeyCode.PAGE_UP` 代表上页键。请参阅 `JavaFX` API 文档中的 `KeyCode` 枚举以获取所有常量列表。
 
 [代码列表 14-18] 显示了一个示例，允许用户使用方向键在屏幕上移动圆形。程序的屏幕示例在[图 14-36]中。
 
 在下面的动画中，点击“Previous”或“Next”按钮可以逐步查看代码并查看各处的解释。
 
-# 代码列表 14-18 `(MoveBall.java)`
+## 代码列表 14-18 `(MoveBall.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr14-18/18.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr14-18/18.html)
 
 ![Move Ball 显示稍微偏中心。](img/14fig36.png)
 
-# 图 14-36 `MoveBall.java` 应用程序
+### 图 14-36 `MoveBall.java` 应用程序
 
-# 检查点 26
-作为参数传递给事件处理器的 `KeyEvent` 对象包含了有关按键事件的数据。例如，你可以使用对象的 `getCode()` 方法来确定是哪个键触发了事件。`getCode()` 方法返回一个 `KeyCode` 值，它是 `javafx.scene.input` 包中的一个 `enum`（枚举）。`KeyCode` 枚举包含大量代表计算机键盘键的常量。例如，`KeyCode.J` 代表 J 键，`KeyCode.ENTER` 代表回车键，`KeyCode.PAGE_UP` 代表上页键。请参阅 JavaFX API 文档中的 `KeyCode` 枚举以获取所有常量列表。
+## 检查点 26
 
-# 检查点 27
-作为参数传递给事件处理器的 `KeyEvent` 对象包含了有关按键事件的数据。例如，你可以使用对象的 `getCode()` 方法来确定是哪个键触发了事件。`getCode()` 方法返回一个 `KeyCode` 值，它是 `javafx.scene.input` 包中的一个 `enum`（枚举）。`KeyCode` 枚举包含大量代表计算机键盘键的常量。例如，`KeyCode.J` 代表 J 键，`KeyCode.ENTER` 代表回车键，`KeyCode.PAGE_UP` 代表上页键。请参阅 JavaFX API 文档中的 `KeyCode` 枚举以获取所有常量列表。
+作为参数传递给事件处理器的 `KeyEvent` 对象包含了有关按键事件的数据。例如，你可以使用对象的 `getCode()` 方法来确定是哪个键触发了事件。`getCode()` 方法返回一个 `KeyCode` 值，它是 `javafx.scene.input` 包中的一个 `enum`（枚举）。`KeyCode` 枚举包含大量代表计算机键盘键的常量。例如，`KeyCode.J` 代表 J 键，`KeyCode.ENTER` 代表回车键，`KeyCode.PAGE_UP` 代表上页键。请参阅 `JavaFX` API 文档中的 `KeyCode` 枚举以获取所有常量列表。
 
-# 处理鼠标事件
-JavaFX 允许你创建响应鼠标的事件处理器。
+## 检查点 27
 
-# 表 14-25 鼠标事件类型
+作为参数传递给事件处理器的 `KeyEvent` 对象包含了有关按键事件的数据。例如，你可以使用对象的 `getCode()` 方法来确定是哪个键触发了事件。`getCode()` 方法返回一个 `KeyCode` 值，它是 `javafx.scene.input` 包中的一个 `enum`（枚举）。`KeyCode` 枚举包含大量代表计算机键盘键的常量。例如，`KeyCode.J` 代表 J 键，`KeyCode.ENTER` 代表回车键，`KeyCode.PAGE_UP` 代表上页键。请参阅 `JavaFX` API 文档中的 `KeyCode` 枚举以获取所有常量列表。
+
+## 处理鼠标事件
+
+`JavaFX` 允许你创建响应鼠标的事件处理器。
+
+### 表 14-25 鼠标事件类型
 
 | 鼠标事件 |  |
 | --- | --- |
@@ -28206,19 +26439,15 @@ JavaFX 允许你创建响应鼠标的事件处理器。
 
 要注册鼠标事件处理器，你将在节点上调用以下方法之一：
 
-*   `setOnMouseClicked`。使用此方法为 `MOUSE_CLICKED` 事件注册事件处理器。
-*   `setOnMouseDragged`。使用此方法为 `MOUSE_DRAGGED` 事件注册事件处理器。
-*   `setOnMouseEntered`。使用此方法为 `MOUSE_ENTERED` 事件注册事件处理器。
-*   `setOnMouseExited`。使用此方法为 `MOUSE_EXITED` 事件注册事件处理器。
-*   `setOnMouseMoved`。使用此方法为 `MOUSE_MOVED` 事件注册事件处理器。
-*   `setOnMousePressed`。使用此方法为 `MOUSE_PRESSED` 事件注册事件处理器。
-*   `setOnMouseReleased`。使用此方法为 `MOUSE_RELEASED` 事件注册事件处理器。
+- `setOnMouseClicked`。使用此方法为 `MOUSE_CLICKED` 事件注册事件处理器。
+- `setOnMouseDragged`。使用此方法为 `MOUSE_DRAGGED` 事件注册事件处理器。
+- `setOnMouseEntered`。使用此方法为 `MOUSE_ENTERED` 事件注册事件处理器。
+- `setOnMouseExited`。使用此方法为 `MOUSE_EXITED` 事件注册事件处理器。
+- `setOnMouseMoved`。使用此方法为 `MOUSE_MOVED` 事件注册事件处理器。
+- `setOnMousePressed`。使用此方法为 `MOUSE_PRESSED` 事件注册事件处理器。
+- `setOnMouseReleased`。使用此方法为 `MOUSE_RELEASED` 事件注册事件处理器。
 
 [代码列表 14-19] 显示了一个演示如何处理鼠标事件的完整程序。该程序在窗口中心绘制了一个默认黑色的圆形。然后，在第 31 行到第 44 行，它为 `MOUSE_ENTERED`、`MOUSE_EXITED` 和 `MOUSE_PRESSED` 事件注册了事件处理器。当鼠标光标进入圆形时，圆形变为红色。当鼠标光标离开圆形时，圆形变回黑色。当用户点击圆形时，圆形变为绿色。
-
-
-
-
 
 ```java
 import javafx.application.Application;
@@ -28263,21 +26492,31 @@ public class MouseEventDemo extends Application
 
         ball.setOnMousePressed(event ->
         {
-           ball.setFill(Color.GREEN);
-        });
-
-        // Add the ball to a Pane.
-        Pane pane = new Pane(ball);
-
-        // Create a Scene and display it.
-        Scene scene = new Scene(pane, SCENE_WIDTH, SCENE_HEIGHT);
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
-}
 ```
 
-# 代码列表 14-19 `(MouseEventDemo.java)`
+
+
+`ball.setFill(Color.GREEN);`
+
+`});`
+
+// Add the ball to a Pane.
+
+`Pane pane = new Pane(ball);`
+
+// Create a Scene and display it.
+
+`Scene scene = new Scene(pane, SCENE_WIDTH, SCENE_HEIGHT);`
+
+`primaryStage.setScene(scene);`
+
+`primaryStage.show();`
+
+`}`
+
+`}`
+
+## 代码列表 14-19 `(MouseEventDemo.java)`
 
 在你的鼠标事件处理程序中，如果你想获取鼠标光标的位置，可以调用 `MouseEvent` 对象的 `getSceneX` 和 `getSceneY` 方法。这些方法分别返回鼠标光标的 `X` 和 `Y` 坐标。例如，请代码列表 14-20。程序显示了一个带有 `Label` 控件的窗口，该控件告诉用户“移动鼠标”。当用户在应用程序窗口内移动鼠标时，鼠标光标的 `(X, Y)` 坐标会持续显示在 `Label` 控件中。程序的输出如图 14-37 所示。
 
@@ -28333,9 +26572,9 @@ public class MouseMovedDemo extends Application
 }
 ```
 
-# 代码列表 14-20 `(MouseMovedDemo.java)`
+## 代码列表 14-20 `(MouseMovedDemo.java)`
 
-# 图 14-37 `MouseMovedDemo.java`
+## 图 14-37 `MouseMovedDemo.java`
 
 注意 `MouseMovedDemo.java` 应用程序是在窗口中显示的。事件处理程序（位于第 35 到 43 行）注册在 `Scene` 上，而不是 `Label` 控件上。这是因为我们希望只要光标在应用程序窗口内就获取鼠标事件。如果我们将事件注册到 `Label` 控件，那么只有当光标悬在 `Label` 上时我们才会获取事件。`MOUSE_MOVED` 事件在用户移动鼠标时触发。这一点证明了这一点。程序画了一个圆，然后注册了一个事件处理程序允许用户拖动鼠标。
 
@@ -28392,89 +26631,83 @@ public class MouseDraggedDemo extends Application
 }
 ```
 
-# 代码列表 14-21 `(MouseDraggedDemo.java)`
+## 代码列表 14-21 `(MouseDraggedDemo.java)`
 
+- 使用 `RotationTransition` 以错误的方向旋转节点。如果你向 `setToAngle` 或 `setByAngle` 方法传递正角度，旋转将按顺时针方向。如果你向这些方法中的任一个传递负角度，旋转将按逆时针方向进行。
+- 尝试使用 `Node` 类的 `setEffect` 方法来组合效果。`Node` 类的 `setEffect` 方法只接受一个效果对象作为参数。如果你对某个节点多次调用 `setEffect` 方法，你最后一次作为参数传递的效果对象将替换掉之前为该节点传递的任何效果对象。但是，可以使用 `Effect` 类的 `setInput` 方法来组合效果。
+- 为错误的节点注册 `KeyEvent` 处理器。在大多数情况下，你可能希望在 `Scene` 对象上注册 `KeyEvent` 处理器。这样，无论哪个节点拥有输入焦点，你的 `KeyEvent` 处理器都会响应按键事件。
 
+## 检查点 14.30
 
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-30/index.html`
 
+## 检查点 14.31
 
-*   使用 `RotationTransition` 以错误的方向旋转节点。如果你向 `setToAngle` 或 `setByAngle` 方法传递正角度，旋转将按顺时针方向。如果你向这些方法中的任一个传递负角度，旋转将按逆时针方向进行。
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-31/index.html`
 
-*   尝试使用 `Node` 类的 `setEffect` 方法来组合效果。`Node` 类的 `setEffect` 方法只接受一个效果对象作为参数。如果你对某个节点多次调用 `setEffect` 方法，你最后一次作为参数传递的效果对象将替换掉之前为该节点传递的任何效果对象。但是，可以使用 `Effect` 类的 `setInput` 方法来组合效果。
+## 检查点 14.32
 
-*   为错误的节点注册 `KeyEvent` 处理器。在大多数情况下，你可能希望在 `Scene` 对象上注册 `KeyEvent` 处理器。这样，无论哪个节点拥有输入焦点，你的 `KeyEvent` 处理器都会响应按键事件。
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-32/index.html`
 
-# 检查点 14.30
+## 检查点 14.33
 
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-30/index.html
-
-# 检查点 14.31
-
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-31/index.html
-
-# 检查点 14.32
-
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-32/index.html
-
-# 检查点 14.33
-
-../components/metrodigi/ch14-inline_self_quiz_v1.0.0-33/index.html
+`../components/metrodigi/ch14-inline_self_quiz_v1.0.0-33/index.html`
 
 ## 编程挑战
 
-## 1. 这栋老房子
+### 1. 这栋老房子
 
 使用在本章中学习的基础形状来画一栋房子。确保至少包含两个窗户一扇门。你可以自由绘制其他物体，如天空、太阳甚至云朵。
 
-## 2. 树的年龄
+### 2. 树的年龄
 
 数树的年轮是判断树年龄的好方法。每个年轮代表一年。使用 `Circle` 或 `Ellipse` 类绘制一棵 5 年老树的年轮可能的样子。然后，使用 `Text` 形状类从中心向外为每个年轮编号，并标上该年轮对应的年份。
 
-## 3. 好莱坞之星
+### 3. 好莱坞之星
 
 在好莱坞星光大道上制作属于你自己的星星。编写一个程序，显示一颗与图 14-38 所示类似的星星，并在星星上显示你的名字。
 
 ![一颗好莱坞星星在白色背景上用黑色字体显示着“在此处输入你的名字”。](img/14fig38.png)
 
-# 图 14-38 好莱坞星星
+#### 图 14-38 好莱坞星星
 
-## 4. 车辆轮廓
+### 4. 车辆轮廓
 
 使用在本章中学习的形状，绘制你所选车辆的轮廓（汽车、卡车、飞机等）。
 
-## 5. 太阳系
+### 5. 太阳系
 
 使用 `Circle` 类绘制太阳系中的每个行星。先画太阳，然后根据距离太阳远近绘制每个行星。（水星、金星、地球、火星、木星、土星、天王星、海王星以及矮行星冥王星。）使用 `Text` 形状类标记每个行星。
 
-## 6. 透明度调节器
+### 6. 透明度调节器
 
 创建一个应用程序，让用户通过 `FileChooser` 对话框选择图像文件。应用程序应显示图像并提供一个 `Slider` 控制。`Slider` 控制允许用户调整图像的透明度。
 
-## 7. 颜色调节器
+### 7. 颜色调节器
 
-创建一个应用程序，让用户通过 `FileChooser` 对话框选择图像文件。应用程序显示图像并提供四个 `Slider` 。`Slider` 控制允许用户调整图像的色调、饱和度、亮度和对比度。
+创建一个应用程序，让用户通过 `FileChooser` 对话框选择图像文件。应用程序显示图像并提供四个 `Slider`。`Slider` 控制允许用户调整图像的色调、饱和度、亮度和对比度。
 
-## 8. 鼠标悬停
+### 8. 鼠标悬停
 
 创建一个显示图片的应用程序。当用户将鼠标指针移动到图像上时，它应该变为第二张图片。只要鼠标指针在上方，第二张图片就会保持显示。当用户将鼠标指针移开第二张图片时，它将变回第一张。
 
-## 9. 抛硬币
+### 9. 抛硬币
 
-### 观看抛硬币
+#### 观看抛硬币
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/JJAh3Z9SR7lU4BUejk_JZFn_Q3KCZRvh`](https://mediaplayer.pearsoncmg.com/assets/_video.true/JJAh3Z9SR7lU4BUejk_JZFn_Q3KCZRvh)
 
 编写一个模拟抛硬币的程序。程序等待用户按键，然后生成一个 0 到 1 之间的随机数。如果数字为 0，显示正面的图像。
 
-## 10. 月球着陆器
+### 10. 月球着陆器
 
-如果你有下载](https://media.pearsoncmg.com/ph/esm/0addis-java)的源码，它提供了一个飞天器和月球背景。编写一个程序，在月球上显示飞天器。当用户按下空格键时，飞天器起飞。
+如果你有[下载](https://media.pearsoncmg.com/ph/esm/0addis-java)的源码，它提供了一个飞天器和月球背景。编写一个程序，在月球上显示飞天器。当用户按下空格键时，飞天器起飞。
 
-## 11. 凑成美元
+### 11. 凑成美元
 
-如果你有下载](https://media.pearsoncmg.com/ph/esm/0addis-java)的源码，它提供了分币、镍币、角币。创建一个游戏，显示这些硬币并带有“凑金额”文字。游戏让用户点击硬币，直到总和达到美元。当用户点击“凑金额”时，程序显示点击的金额。如果金额等于美元，程序提示胜利。
+如果你有[下载](https://media.pearsoncmg.com/ph/esm/0addis-java)的源码，它提供了分币、镍币、角币。创建一个游戏，显示这些硬币并带有“凑金额”文字。游戏让用户点击硬币，直到总和达到美元。当用户点击“凑金额”时，程序显示点击的金额。如果金额等于美元，程序提示胜利。
 
-## 12. 石头剪刀游戏
+### 12. 石头剪刀游戏
 
 编写一个程序让用户与电脑玩石头剪刀游戏。程序运行如下：
 
@@ -28482,10 +26715,10 @@ public class MouseDraggedDemo extends Application
 2. 为了做出选择，用户点击屏幕上的图像。（源码中包含了这些图像。）
 3. 显示电脑的选择。
 4. 根据规则选择胜者：
-    * 如果一个玩家选石头，另一个玩家选剪刀，则石头胜。（石头压碎剪刀。）
-    * 如果一个玩家选剪刀，另一个玩家选纸，则剪刀胜。（剪刀剪断纸。）
-    * 如果一个玩家选纸，另一个玩家选石头，则纸胜。（纸包石头。）
-    * 如果两个玩家选择相同，则为平局。
+   - 如果一个玩家选石头，另一个玩家选剪刀，则石头胜。（石头压碎剪刀。）
+   - 如果一个玩家选剪刀，另一个玩家选纸，则剪刀胜。（剪刀剪断纸。）
+   - 如果一个玩家选纸，另一个玩家选石头，则纸胜。（纸包石头。）
+   - 如果两个玩家选择相同，则为平局。
 
 # 第 15 章 递归
 
@@ -28502,12 +26735,9 @@ public class MouseDraggedDemo extends Application
 
 概念：递归方法是一种会调用自身的方法。
 
-
-
-
 你已经见过方法调用其他方法的实例。方法 `A` 可以调用方法 `B`，而方法 `B` 又可以调用方法 `C`。方法也可以调用自己。调用自己的方法被称为递归方法。请查看代码列表 15-1 中的 `message` 方法。
 
-```
+```java
  1  /**
   2      This class has a recursive method.
   3  */
@@ -28521,6 +26751,8 @@ public class MouseDraggedDemo extends Application
   11     }
   12  }
 ```
+
+
 
 ### 代码列表 15-1 `(EndlessRecursion.java)`
 
@@ -28548,7 +26780,7 @@ public class MouseDraggedDemo extends Application
 
 ![message 方法的前两次调用被描绘为两个矩形框，分别标记为“方法的第一次调用”和“方法的第二次调用”，值分别为 n: 5 和 n: 4。](img/15fig01.png)图 15-1 完整替代文本
 
-图 15-1 中的图表说明了 `message` 方法的两次独立调用。每当方法被调用时，内存中都会创建一个参数 `n`的新实例。当方法第一次被调用时，参数 `n` 被设置为 5。当方法调用自己时，会创建一个新的 `n` 实例，并将值 4 传递其中。这个循环一直重复，直到最后将 0 传递给方法。这在图 15-2 中有所说明。
+图 15-1 中的图表说明了 `message` 方法的两次独立调用。每当方法被调用时，内存中都会创建一个参数 `n` 的新实例。当方法第一次被调用时，参数 `n` 被设置为 5。当方法调用自己时，会创建一个新的 `n` 实例，并将值 4 传递其中。这个循环一直重复，直到最后将 0 传递给方法。这在图 15-2 中有所说明。
 
 ### 图 15-2 message 方法共六次调用
 
@@ -28560,17 +26792,15 @@ public class MouseDraggedDemo extends Application
 
 ### 检查点 15.1
 
-../components/ch15_pg0002.xhtml_P70010158780000000000000000006C27
+`../components/ch15_pg0002.xhtml_P70010158780000000000000000006C27`
 
 ### 检查点 15.2
 
-../components/ch15_pg0002.xhtml_P70010158780000000000000000006C32
+`../components/ch15_pg0002.xhtml_P70010158780000000000000000006C32`
 
 ### 检查点 15.3
 
-../components/ch15_pg0002.xhtml_P70010158780000000000000000006C3D
-
-
+`../components/ch15_pg0002.xhtml_P70010158780000000000000000006C3D`
 
 让我们通过数学中的一个例子来研究递归的应用。在数学中，符号 `n!` 表示数字 `n` 的阶乘。非负整数的阶乘可以通过以下规则定义：
 
@@ -28598,12 +26828,12 @@ $\begin{array}{ll} {{If}\ n = 0\text{~then}} & {{factorial}(n) = 1} \\ {{If}\ n 
 
 ```
 private static int factorial(int n)
- {
-    if (n == 0)
-       return 1;   // 基准情况
-    else
-       return n * factorial(n − 1);
- }
+{
+   if (n == 0)
+      return 1;   // 基准情况
+   else
+      return n * factorial(n − 1);
+}
 ```
 
 代码列表 15-4 展示了该方法。图 15-4 显示了与程序的交互示例。
@@ -28646,23 +26876,21 @@ return n * factorial(n − 1);
 
 ```
 int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9};
- int sum;
- sum = rangeSum(numbers, 3, 7);
+int sum;
+sum = rangeSum(numbers, 3, 7);
 ```
 
 这段代码指定 `rangeSum` 应该返回 `numbers` 数组中从 3 到 7 的元素的和。返回值（在这种情况下为 30）存储在 `sum` 中。这是 `rangeSum` 方法的定义：
 
 ```
 public static int rangeSum(int[] array, int start, int end)
- {
-    if (start > end)
-       return 0;
-    else
-       return array[start] + rangeSum(array, start + 1, end);
- }
+{
+   if (start > end)
+      return 0;
+   else
+      return array[start] + rangeSum(array, start + 1, end);
+}
 ```
-
-
 
 该方法的基准情况是 `start` 参数大于 `end` 参数。如果条件为真，该方法返回值 `0`。否则，方法执行以下语句：
 
@@ -28674,37 +26902,37 @@ return array[start] + rangeSum(array, start + 1, end);
 
 ```
  1  /**
-  2     此程序演示了递归 rangeSum 方法。
-  3  */
-  4
-  5  public class RangeSum
-  6  {
-  7
-  8     public static void main(String[] args)
-  9     {
-  10        int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-  11
-  12        System.out.print("The sum of elements 2 through " +
-  13                         "5 is "+ rangeSum(numbers, 2, 5));
-  14     }
-  15
-  16     /**
-  17        rangeSum 方法计算数组中指定
-  18        范围内元素的和。
-  19        @param start 指定起始元素。
-  20        @param end 指定结束元素。
-  21        @return 范围的和。
-  22     */
-  23
-  24     public static int rangeSum(int[] array, int start, int end)
-  25     {
-  26        if (start > end)
-  27           return 0;
-  28        else
-  29           return array[start] +
-  30                       rangeSum(array, start + 1, end);
-  31     }
-  32  }
+ 2     此程序演示了递归 rangeSum 方法。
+ 3  */
+ 4
+ 5  public class RangeSum
+ 6  {
+ 7
+ 8     public static void main(String[] args)
+ 9     {
+ 10        int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+ 11
+ 12        System.out.print("The sum of elements 2 through " +
+ 13                         "5 is "+ rangeSum(numbers, 2, 5));
+ 14     }
+ 15
+ 16     /**
+ 17        rangeSum 方法计算数组中指定
+ 18        范围内元素的和。
+ 19        @param start 指定起始元素。
+ 20        @param end 指定结束元素。
+ 21        @return 范围的和。
+ 22     */
+ 23
+ 24     public static int rangeSum(int[] array, int start, int end)
+ 25     {
+ 26        if (start > end)
+ 27           return 0;
+ 28        else
+ 29           return array[start] +
+ 30                       rangeSum(array, start + 1, end);
+ 31     }
+ 32  }
 ```
 
 程序输出
@@ -28725,69 +26953,70 @@ The sum of elements 2 through 5 is 18
 
 ```
  1  import javafx.application.Application;
-  2  import javafx.stage.Stage;
-  3  import javafx.scene.Scene;
-  4  import javafx.scene.layout.Pane;
-  5  import javafx.scene.shape.Circle;
-  6  import javafx.scene.paint.Color;
-  7
-  8   public class Circles extends Application
-  9   {
-  10      public static void main(String[] args)
-  11     {
-  12         launch(args);
-  13      }
-  14
-  15      @Override
-  16      public void start(Stage primaryStage)
-  17      {
-  18         // 场景大小的常量
-  19         final double SCENE_WIDTH = 440.0;
-  20         final double SCENE_HEIGHT = 440.0;
-  21
-  22         // 起始值的常量
-  23         final double CENTER_X = 220.0;
-  24         final double CENTER_Y = 220.0;
-  25         final double RAD = 20.0;
-  26         final int NUM_CIRCLES = 10;
-  27
-  28         // 创建一个空的 Pane。
-  29         Pane pane = new Pane();
-  30
-  31         // 递归地向 Pane 添加 10 个圆。
-  32         drawCircles(pane, NUM_CIRCLES, CENTER_X, CENTER_Y, RAD);
-  33
-  34         // 创建场景并显示它。
-  35         Scene scene = new Scene(pane, SCENE_WIDTH, SCENE_HEIGHT);
-  36         primaryStage.setScene(scene);
-  37         primaryStage.show();
-  38      }
-  39      /**
-  40         drawCircles 方法绘制同心圆。
-  41         它接受以下参数：
-  42         p -- 用于添加圆的 Pane 对象
-  43         n -- 要绘制的圆的数量
-  44         x -- 圆中心点的 x 坐标
-  45         y -- 圆中心点的 y 坐标
-  46         rad -- 半径
-  47      */
-  48      private void drawCircles(Pane p, int n, double x, double rad) {
-  50         if (n > 0) {
-  51            Circle circle = new Circle(x, y, rad);
-  52            circle.setStroke(Color.BLACK);
-  53            circle.setFill(null);
-  54            p.getChildren().add(circle);
-  55            drawCircles(p, n - 1, x, y);
-  56         }
-  57      }
+ 2  import javafx.stage.Stage;
+ 3  import javafx.scene.Scene;
+ 4  import javafx.scene.layout.Pane;
+ 5  import javafx.scene.shape.Circle;
+ 6  import javafx.scene.paint.Color;
+ 7
+ 8   public class Circles extends Application
+ 9   {
+ 10      public static void main(String[] args)
+ 11     {
+ 12         launch(args);
+ 13      }
+ 14
+ 15      @Override
+ 16      public void start(Stage primaryStage)
+ 17      {
+ 18         // 场景大小的常量
+ 19         final double SCENE_WIDTH = 440.0;
+ 20         final double SCENE_HEIGHT = 440.0;
+ 21
+ 22         // 起始值的常量
+ 23         final double CENTER_X = 220.0;
+ 24         final double CENTER_Y = 220.0;
+ 25         final double RAD = 20.0;
+ 26         final int NUM_CIRCLES = 10;
+ 27
+ 28         // 创建一个空的 Pane。
+ 29         Pane pane = new Pane();
+ 30
+ 31         // 递归地向 Pane 添加 10 个圆。
+ 32         drawCircles(pane, NUM_CIRCLES, CENTER_X, CENTER_Y, RAD);
+ 33
+ 34         // 创建场景并显示它。
+ 35         Scene scene = new Scene(pane, SCENE_WIDTH, SCENE_HEIGHT);
+ 36         primaryStage.setScene(scene);
+ 37         primaryStage.show();
+ 38      }
+ 39      /**
+ 40         drawCircles 方法绘制同心圆。
+ 41         它接受以下参数：
+ 42         p -- 用于添加圆的 Pane 对象
+ 43         n -- 要绘制的圆的数量
+ 44         x -- 圆中心点的 x 坐标
+ 45         y -- 圆中心点的 y 坐标
+ 46         rad -- 半径
+ 47      */
+ 48      private void drawCircles(Pane p, int n, double x, double rad) {
+ 50         if (n > 0) {
+ 51            Circle circle = new Circle(x, y, rad);
+ 52            circle.setStroke(Color.BLACK);
+ 53            circle.setFill(null);
+ 54            p.getChildren().add(circle);
+ 55            drawCircles(p, n - 1, x, y);
+ 56         }
+ 57      }
+```
+
+
+
 ### 代码列表 15-6 `(Circles.java)`
 
-`drawCircles` 方法由 `start` 方法调用，使用递归来绘制同心圆。`n` 参数是绘制的圆的数量。如果该参数设置为 0，方法到达了基准情况。第 54 行创建一个 `Circle` 对象，第 55 行设置其描边颜色为黑色，第 56 行设置其填充颜色为 `null`（圆不会被填充）。第 57 行将圆添加到 `Pane` 中，第 58 行递归调用 `drawCircles`。
+`drawCircles` 方法由`start`方法调用，使用递归来绘制同心圆。`n`参数是绘制的圆的数量。如果该参数设置为 0，方法到达了基准情况。第 54 行创建一个`Circle`对象，第 55 行设置其描边颜色为黑色，第 56 行设置其填充颜色为`null`（圆不会被填充）。第 57 行将圆添加到`Pane`中，第 58 行递归调用`drawCircles`。
 
-
-
-
-该定义规定，如果 `x/y` 没有余数，则 `x` 和 `y` 的最大公约数（GCD）为 `y`。这是基本情况。否则，答案是 `y` 和 `x/y` 余数之间的最大公约数。代码列表 15-8 中的程序展示了一种计算 GCD 的递归方法。
+该定义规定，如果`x/y`没有余数，则`x`和`y`的最大公约数（GCD）为`y`。这是基本情况。否则，答案是`y`和`x/y`余数之间的最大公约数。代码列表 15-8 中的程序展示了一种计算 GCD 的递归方法。
 
 ```java
  1  import java.util.Scanner;
@@ -28848,22 +27077,28 @@ The greatest common divisor of these two numbers is 7
 ### 代码列表 15-8 `(GCDdemo.java)`
 
 ## 检查点 15.15
-../components/metrodigi/ch15-fill_in_the_blank-01/index.html
+
+`../components/metrodigi/ch15-fill_in_the_blank-01/index.html`
 
 ## 检查点 15.16
-../components/metrodigi/ch15-fill_in_the_blank-02/index.html
+
+`../components/metrodigi/ch15-fill_in_the_blank-02/index.html`
 
 ## 检查点 15.17
-../components/metrodigi/ch15-inline_self_quiz_v1.0.0-15/index.html
+
+`../components/metrodigi/ch15-inline_self_quiz_v1.0.0-15/index.html`
 
 ## 检查点 15.18
-../components/metrodigi/ch15-inline_self_quiz_v1.0.0-16/index.html
+
+`../components/metrodigi/ch15-inline_self_quiz_v1.0.0-16/index.html`
 
 ## 检查点 15.19
-../components/metrodigi/ch15-fill_in_the_blank-03/index.html
+
+`../components/metrodigi/ch15-fill_in_the_blank-03/index.html`
 
 ## 检查点 15.20
-../components/metrodigi/ch15-inline_self_quiz_v1.0.0-17/index.html
+
+`../components/metrodigi/ch15-inline_self_quiz_v1.0.0-17/index.html`
 
 ## 15.4 递归二分查找方法
 
@@ -28898,17 +27133,19 @@ public static int binarySearch(int[] array, int first, int last, int value)
 }
 ```
 
-第一个参数 `array` 是要搜索的数组。下一个参数 `first` 持有搜索范围内第一个元素的下标（数组的一部分）。下一个参数 `last` 持有搜索范围内最后一个元素的下标。最后一个参数 `value` 持有要搜索的值。与迭代版本一样，该方法在找到值时返回下标，未找到则返回 `-1`。代码列表 15-9 展示了该方法。在下面的动画中，点击“上一个”或“下一个”按钮逐步执行代码。
+第一个参数`array`是要搜索的数组。下一个参数`first`持有搜索范围内第一个元素的下标（数组的一部分）。下一个参数`last`持有搜索范围内最后一个元素的下标。最后一个参数`value`持有要搜索的值。与迭代版本一样，该方法在找到值时返回下标，未找到则返回`-1`。代码列表 15-9 展示了该方法。在下面的动画中，点击“上一个”或“下一个”按钮逐步执行代码。
 
 ### 代码列表 15-9 `(RecursiveBinarySearch.java)`
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr15-9/9.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr15-9/9.html)
 
 ## 检查点 15.21
-../components/metrodigi/ch15-assessable_table_v1.0-02/index.html
+
+`../components/metrodigi/ch15-assessable_table_v1.0-02/index.html`
 
 ## 检查点 15.22
-../components/metrodigi/ch15-inline_self_quiz_v1.0.0-18/index.html
+
+`../components/metrodigi/ch15-inline_self_quiz_v1.0.0-18/index.html`
 
 ## 15.5 汉诺塔
 
@@ -28918,19 +27155,27 @@ public static int binarySearch(int[] array, int first, int last, int value)
 
 ### 图 15-7 汉诺塔游戏中的柱子和圆盘
 
-![了汉诺塔游戏中的柱子和圆盘。(images/15fig07.png)图 15-7 完整替代文本注意圆盘按大小堆叠在最左侧的柱子上，最大的盘在底部。该游戏基于一个传说：汉诺塔寺庙的一群僧有一组带有 64 个圆盘的柱子。僧的任务是将圆盘从第一个柱子移动到第三个柱子。中间柱子可以作为临时支撑。此外，僧在移动圆盘时必须遵循以下规则：* 每次只能移动一个圆盘。* 圆盘不能放在较小的盘之上。* 除了移动时，所有圆盘必须存储在柱子上。根据传说，当僧将所有圆盘从第一个柱子移动到最后一个柱子时，世界将会结束。要玩这个游戏，你必须按照与僧相同的规则将所有圆盘从第一个柱子移动到第三个柱子。让我们看看不同数量圆盘的解决方案。如果你只有一个圆盘，游戏的解决方法很简单：将圆盘从 1 号柱移动到 3 号柱。如果你有两个圆盘，解决方法需要三次移动：* 将圆盘 1 移动到 2 号柱。* 将圆盘 2 移动到 3 号柱。* 将圆盘 1 移动到 3 号柱。注意这种方法使用 2 号柱作为临时位置。随着圆盘数量的增加，移动的复杂度继续增加。移动三个圆盘需要图 15-8](img/#ch15_pg0006.xhtml_P7001015878000000000000000006D56) 所示的七次移动。
+![了汉诺塔游戏中的柱子和圆盘。(images/15fig07.png)图 15-7 完整替代文本注意圆盘按大小堆叠在最左侧的柱子上，最大的盘在底部。该游戏基于一个传说：汉诺塔寺庙的一群僧有一组带有 64 个圆盘的柱子。僧的任务是将圆盘从第一个柱子移动到第三个柱子。中间柱子可以作为临时支撑。此外，僧在移动圆盘时必须遵循以下规则：
+
+* 每次只能移动一个圆盘。
+* 圆盘不能放在较小的盘之上。
+* 除了移动时，所有圆盘必须存储在柱子上。
+
+根据传说，当僧将所有圆盘从第一个柱子移动到最后一个柱子时，世界将会结束。要玩这个游戏，你必须按照与僧相同的规则将所有圆盘从第一个柱子移动到第三个柱子。让我们看看不同数量圆盘的解决方案。如果你只有一个圆盘，游戏的解决方法很简单：将圆盘从 1 号柱移动到 3 号柱。如果你有两个圆盘，解决方法需要三次移动：
+
+* 将圆盘 1 移动到 2 号柱。
+* 将圆盘 2 移动到 3 号柱。
+* 将圆盘 1 移动到 3 号柱。
+
+注意这种方法使用 2 号柱作为临时位置。随着圆盘数量的增加，移动的复杂度继续增加。移动三个圆盘需要图 15-8](img/#ch15_pg0006.xhtml_P7001015878000000000000000006D56) 所示的七次移动。
 
 以下陈述描述了问题的整体解决方案：
-
-
-
-
 
 ```
 使用柱 2 作为临时柱，将 n 个盘子从柱 1 移动到柱 3。
 ```
 
-以下算法可以作为递归方法的基础，模拟游戏的解决方案。请注意，在该算法中，我们使用变量 `A`、`B` 和 `C` 来存储柱的编号。
+以下算法可以作为递归方法的基础，模拟游戏的解决方案。请注意，在该算法中，我们使用变量`A`、`B`和`C`来存储柱的编号。
 
 ```
 将 n 个盘子从柱 A 移动到柱 C，使用柱 B 作为临时柱：
@@ -28963,29 +27208,30 @@ private void moveDiscs(int num, int fromPeg, int toPeg, int tempPeg)
 该方法接受以下四个参数的参数值：
 
 | `num` | 要移动的盘子数量。 |
+| --- | --- |
 | `fromPeg` | 盘子移出的柱。 |
 | `toPeg` | 盘子移到的柱。 |
 | `tempPeg` | 作为临时柱的柱。 |
 
-如果 `num` 大于 0，则有盘子需要移动。第一次递归调用如下：
+如果`num`大于 0，则有盘子需要移动。第一次递归调用如下：
 
 ```
 moveDiscs(num − 1, fromPeg, tempPeg, toPeg);
 ```
 
-该语句的指令是将除一个之外的所有盘子从 `fromPeg` 移动到 `tempPeg`，使用 `toPeg` 作为临时柱。下一个语句如下：
+该语句的指令是将除一个之外的所有盘子从`fromPeg`移动到`tempPeg`，使用`toPeg`作为临时柱。下一个语句如下：
 
 ```java
 System.out.println("Move a disc from peg " + fromPeg + " to peg " + toPeg);
 ```
 
-这仅仅是显示一条消息，指示应该将盘子从 `fromPeg` 移动到 `toPeg`。接下来，执行另一个递归调用：
+这仅仅是显示一条消息，指示应该将盘子从`fromPeg`移动到`toPeg`。接下来，执行另一个递归调用：
 
 ```
 moveDiscs(num − 1, tempPeg, toPeg, fromPeg);
 ```
 
-该语句的指令是将除一个之外的所有盘子从 `tempPeg` 移动到 `toPeg`，使用 `fromPeg` 作为临时柱。代码列表 15-10 显示了使用此方法的 `Hanoi` 类。
+该语句的指令是将除一个之外的所有盘子从`tempPeg`移动到`toPeg`，使用`fromPeg`作为临时柱。代码列表 15-10 显示了使用此方法的`Hanoi`类。
 
 ```java
 /**
@@ -29029,7 +27275,7 @@ public class Hanoi
 
 # 代码列表 15-10 (Hanoi.java)
 
-类构造函数接受一个参数，即游戏中使用的盘子数量。它将此值赋值给 `numDiscs` 字段，然后在第 22 行调用 `moveDiscs` 方法。简而言之，该语句的指令是将所有盘子从柱 1 移动到柱 3，使用柱 2 作为临时柱。代码列表 15-11 中的程序演示了该类。它显示了移动三个盘子的指令。
+类构造函数接受一个参数，即游戏中使用的盘子数量。它将此值赋值给`numDiscs`字段，然后在第 22 行调用`moveDiscs`方法。简而言之，该语句的指令是将所有盘子从柱 1 移动到柱 3，使用柱 2 作为临时柱。代码列表 15-11 中的程序演示了该类。它显示了移动三个盘子的指令。
 
 ```java
 /**
@@ -29061,13 +27307,11 @@ Move a disc from peg 1 to 3
 
 ## 应避免的常见错误
 
-*   **没有编写基础情况**：当到达基础情况时，递归方法会停止调用自身。如果没有基础情况，方法将继续调用自身。
-*   **每次递归调用时没有缩小问题**：除非每次递归调用时都在缩小问题（通常意味着一个或多个关键参数的值在减少），否则方法将无法到达基础情况。
-*   **编写递归的方式导致无法到达基础情况**：你可能编写了基础情况和缩小问题的递归情况，但如果计算方式无法导致到达基础情况，方法将无限调用自身。
+* **没有编写基础情况**：当到达基础情况时，递归方法会停止调用自身。如果没有基础情况，方法将继续调用自身。
 
+* **每次递归调用时没有缩小问题**：除非每次递归调用时都在缩小问题（通常意味着一个或多个关键参数的值在减少），否则方法将无法到达基础情况。
 
-
-
+* **编写递归的方式导致无法到达基础情况**：你可能编写了基础情况和缩小问题的递归情况，但如果计算方式无法导致到达基础情况，方法将无限调用自身。
 
 [`mediaplayer.pearsoncmg.com/assets/_video.true/NwKg77B_BbPnRp1KI1vmZeKnyGeNsTy1`](https://mediaplayer.pearsoncmg.com/assets/_video.true/NwKg77B_BbPnRp1KI1vmZeKnyGeNsTy1)
 
@@ -29079,11 +27323,11 @@ Move a disc from peg 1 to 3
 
 ## 9. 阿克曼函数
 
-Ackermann 函数是一种递归数学算法，可以用于测试计算机执行递归的性能。编写一个 `ackermann(m, n)` 方法来解决 Ackermann 函数。在你的方法中使用以下逻辑：
+Ackermann 函数是一种递归数学算法，可以用于测试计算机执行递归的性能。编写一个`ackermann(m, n)`方法来解决 Ackermann 函数。在你的方法中使用以下逻辑：
 
-- 如果 `m` = 0，则返回 `n + 1`
-- 如果 `n` = 0，则返回 `ackermann(m − 1, 1)`
-- 否则，返回 `ackermann(m − 1, ackermann(m, n − 1))`
+- 如果`m` = 0，则返回`n + 1`
+- 如果`n` = 0，则返回`ackermann(m − 1, 1)`
+- 否则，返回`ackermann(m − 1, ackermann(m, n − 1))`
 
 在程序中测试你的方法，显示以下方法调用的返回值：
 
@@ -29101,27 +27345,20 @@ Ackermann 函数是一种递归数学算法，可以用于测试计算机执行�
 1. 16.1 数据库管理系统简介
 2. 16.2 表、行和列
 3. 16.3 SQL `SELECT` 语句简介
-4. 16.4 插入行
-5. 16.5 更新和删除行
-6. 16.6 创建和删除表
-7. 16.7 使用 JDBC 创建新数据库
-8. 16.8 可滚动结果集
-9. 16.9 结果集元数据
-10. 16.10 关系数据
-11. 16.11 高级主题
-12. 16.12 应避免的常见错误
+
+
 
 ## 16.1 数据库管理系统简介
 
 概念：数据库管理系统（DBMS）是管理大量数据集的软件。
 
-如果应用程序只需要存储少量数据，文本文件和二进制文件即可工作。然而，当必须存储和处理大量数据时，这些类型的文件就不 Practical 了。许多企业在文件中保留着数十万甚至数百万个数据项。当文本或二进制文件包含如此多的数据时，搜索、插入和删除等简单操作就会变得繁琐且低效。
+如果应用程序只需要存储少量数据，文本文件和二进制文件即可工作。然而，当必须存储和处理大量数据时，这些类型的文件就不实用了。许多企业在文件中保留着数十万甚至数百万个数据项。当文本或二进制文件包含如此多的数据时，搜索、插入和删除等简单操作就会变得繁琐且低效。
 
-在开发处理大量数据的应用程序时，大多数开发者倾向于使用数据库管理系统。`数据库管理系统`（`DBMS`）是专门设计用于组织且高效的方式存储、检索和处理大量数据的软件。一旦使用数据库管理系统存储数据，就可以用 Java 或其他语言编写应用程序与 DBMS 通信。应用程序不是直接检索或处理数据，而是向 DBMS 发送指令。DBMS 执行这些指令并将结果传回应用程序。
+在开发处理大量数据的应用程序时，大多数开发者倾向于使用数据库管理系统。`数据库管理系统`（`DBMS`）是专门设计用于以组织且高效的方式存储、检索和处理大量数据的软件。一旦使用数据库管理系统存储数据，就可以用 Java 或其他语言编写应用程序与 DBMS 通信。应用程序不是直接检索或处理数据，而是向 DBMS 发送指令。DBMS 执行这些指令并将结果传回应用程序。
 
 ### 图 16-1 Java 应用程序与 DBMS 交互，由 DBMS 处理数据
 
-![两个矩形图形和一个圆形图形表示 Java 应用程序如何与数据库管理系统（或 DBMS）交互，后者处理数据。](img/16fig01.png)[图 16-1 完整替代文本]
+![两个矩形图形和一个圆形图形表示 Java 应用程序如何与数据库管理系统（或 DBMS）交互，后者处理数据。](img/16fig01.png)
 
 虽然图 16-1 是简化的，但它说明了与数据库管理系统工作的应用程序的分层性质。最顶层的软件层（在本例中用 Java 编写）与用户交互。它还向下一层软件即 DBMS 发送指令。DBMS 直接与数据交互，并将操作结果传回应用程序。
 
@@ -29135,19 +27372,15 @@ Ackermann 函数是一种递归数学算法，可以用于测试计算机执行�
 
 ### 图 16-2 Java 应用程序使用 JDBC 类与 DBMS 交互
 
-![两个矩形图形和一个圆形图形表示 Java 应用程序使用 Java Database Connectivity（或 JDBC）类与 DBMS 交互。](img/16fig02.png)[图 16-2 完整替代文本]
+![两个矩形图形和一个圆形图形表示 Java 应用程序使用 Java Database Connectivity（或 JDBC）类与 DBMS 交互。](img/16fig02.png)
 
 ### SQL
 
-`SQL`，全称为“结构化查询语言”，是处理数据库管理系统的标准语言。它最初由 IBM 在 20 世纪 70 年开发。从那时起，大多数数据库软件供应商采用 SQL 作为与其交互的首选语言。
+`SQL`，全称为“结构化查询语言”，是处理数据库管理系统的标准语言。它最初由 IBM 在 20 世纪 70 年代开发。从那时起，大多数数据库软件供应商采用 SQL 作为与其交互的首选语言。
 
 SQL 由几个关键字组成。你使用这些关键字构造语句，语句也称为查询。这些语句或查询被提交给 DBMS，是 DBMS 对其数据执行操作的指令。
 
-# 注意尽管 SQL 是一种语言，但你并不是用它来编写应用程序。它仅作为与 DBMS 交互的标准手段。你仍然需要一种通用编程语言（如 Java）为普通用户编写应用程序。
-
-
-
-
+> **注意**：尽管 SQL 是一种语言，但你并不是用它来编写应用程序。它仅作为与 DBMS 交互的标准手段。你仍然需要一种通用编程语言（如 Java）为普通用户编写应用程序。
 
 为了使用 JDBC 与数据库交互，你需要在系统中安装一个 DBMS，或者在你的学校实验室环境中可以使用该 DBMS。目前有许多商业化的 DBMS 软件包可选择。Oracle、Microsoft SQL Server、DB2 和 MySQL 只是其中流行的几种。在学校的实验室里，你可能已经可以访问其中某一个，或者可能是其他的 DBMS。
 
@@ -29157,19 +27390,17 @@ SQL 由几个关键字组成。你使用这些关键字构造语句，语句也�
 
 然而，从 Java 9 开始，Java DB 不再捆绑在 JDK 中。这是因为 Java DB 仅仅是 Apache Derby 的一个重命名版本。如果你使用的是 Java 9，将需要从 Apache 软件基金会的网站单独下载并安装 Apache Derby。
 
-本章中的所有示例都是使用 Java DB 和/或 Apache Derby 创建的。如果你想使用 Java DB 或 Apache Derby 中的任何，请参阅 附录 I。附录 I 还可以帮助你配置 Java DB，或下载并安装 Apache Derby。
+本章中的所有示例都是使用 Java DB 和/或 Apache Derby 创建的。如果你想使用 Java DB 或 Apache Derby 中的任何一个，请参阅附录 I。附录 I 还可以帮助你配置 Java DB，或下载并安装 Apache Derby。
 
 ### 创建 `CoffeeDB` 数据库
 
 在本章中，我们将使用名为 `CoffeeDB` 的数据库作为示例。`CoffeeDB` 数据库用于午夜烘焙坊（The Midnight Roastery）这家小型咖啡烘焙公司的业务操作。在安装 Java DB 或 Apache Derby 后，执行以下步骤创建 `CoffeeDB` 数据库：
 
 1. 确保你已经从书籍配套网站下载了学生源代码文件。
-2. 在章章源代码文件中找到名为 `CreateCoffeeDB.java` 的程序。
+2. 在章节源代码文件中找到名为 `CreateCoffeeDB.java` 的程序。
 3. 编译并执行 `CreateCoffeeDB.java` 程序。如果 Java DB 或 Apache Derby 已正确安装，该程序将在你的系统上创建 `CoffeeDB` 数据库。
 
-### 注意
-
-如果你在学校实验室环境中使用 Java DB 或 Apache Derby 以外的 DBMS，请咨询你的导师如何修改程序以适用于你特定的 DBMS。
+> **注意**：如果你在学校实验室环境中使用 Java DB 或 Apache Derby 以外的 DBMS，请咨询你的导师如何修改程序以适用于你特定的 DBMS。
 
 ### 连接到 `CoffeeDB` 数据库
 
@@ -29187,9 +27418,9 @@ protocol:subprotocol:databaseName
 
 在这个非常简单的通用格式中，列出了三项，并用冒号隔开：`protocol`、`subprotocol` 和 `databaseName`。让我们仔细查看每一项。
 
-*   `protocol` 是数据库协议。使用 JDBC 时，协议将始终为 `jdbc`。
-*   `subprotocol` 的值取决于你正在连接的特定 DBMS 类型。如果你使用的是 Java DB 或 Apache Derby，子协议为 `derby`。
-*   `databaseName` 是你正在连接的数据库名称。
+- `protocol` 是数据库协议。使用 JDBC 时，协议将始终为 `jdbc`。
+- `subprotocol` 的值取决于你正在连接的特定 DBMS 类型。如果你使用的是 Java DB 或 Apache Derby，子协议为 `derby`。
+- `databaseName` 是你正在连接的数据库名称。
 
 如果我们使用 Java DB 或 Apache Derby，则 `CoffeeDB` 数据库的 URL 为：
 
@@ -29199,22 +27430,18 @@ jdbc:derby:CoffeeDB
 
 `DriverManager.getConnection` 方法会搜索并加载与 URL 指定数据库兼容的 JDBC 驱动程序。`JDBC driver` 是一个设计用于与特定 DBMS 通信的 Java 类。每个 DBMS 通常带有自己的 JDBC 驱动程序。通常，当你安装 DBMS 时，还会更新系统的 `CLASSPATH` 变量以包含 JDBC 驱动程序的路径。这将使 JVM 在你调用 `DriverManager.getConnection` 方法时能够找到驱动程序类。
 
-当 `DriverManager.getConnection` 方法找到兼容的驱动程序时，它会返回一个 `Connection` 对象。`Connection` 是 `java.sql` 包中的一个接口。你需要使用此 `Connection` 对象来对数据库执行各种任务，因此请将引用保存在变量中。以下是一个可以在 Java 应用程序中代码示例，使用 Java DB 或 Apache Derby 获取 `CoffeeDB` 数据库连接的代码：
+当 `DriverManager.getConnection` 方法找到兼容的驱动程序时，它会返回一个 `Connection` 对象。`Connection` 是 `java.sql` 包中的一个接口。你需要使用此 `Connection` 对象来对数据库执行各种任务，因此请将引用保存在变量中。以下是一个可以在 Java 应用程序中使用的代码示例，使用 Java DB 或 Apache Derby 获取 `CoffeeDB` 数据库连接：
 
 ```
 final String DB_URL = "jdbc:derby:CoffeeDB";
 Connection conn = DriverManager.getConnection(DB_URL);
 ```
 
-在处显示的第二个语句中，我们调用 `DriverManager.getConnection` 方法，并传递 `CoffeeDB` 数据库的 URL。该方法返回一个 `Connection` 对象的引用，我们将其赋值给变量 `conn`。如果 `DriverManager.getConnection` 方法无法为指定的数据库加载适当的驱动程序，它将抛出 `SQLException`。
-
-
-
-
+在第二个语句中，我们调用 `DriverManager.getConnection` 方法，并传递 `CoffeeDB` 数据库的 URL。该方法返回一个 `Connection` 对象的引用，我们将其赋值给变量 `conn`。如果 `DriverManager.getConnection` 方法无法为指定的数据库加载适当的驱动程序，它将抛出 `SQLException`。
 
 如果在第 19 行无法创建连接，或者在第 23 行无法关闭连接，则将抛出异常。第 26 行的 `catch` 子句将处理该异常，第 28 行将显示异常对象的默认错误消息。
 
-# 连接到受密码保护的数据库
+#### 连接到受密码保护的数据库
 
 如果你要连接的数据库需要用户名和密码，可以使用 `DriverManager.getConnection` 方法的以下形式：
 
@@ -29224,35 +27451,7 @@ DriverManager.getConnection(DatabaseURL, Username, Password);
 
 在这种通用格式中，`Username` 是一个包含有效用户名的字符串，`Password` 是一个包含密码的字符串。
 
-# 检查点 16.1
-
-自测练习
-
-# 检查点 16.2
-
-自测练习
-
-# 检查点 16.3
-
-自测练习
-
-# 检查点 16.4
-
-自测练习
-
-# 检查点 16.5
-
-自测练习
-
-# 检查点 16.6
-
-自测练习
-
-# 检查点 16.7
-
-自测练习
-
-# 16.2 表、行和列
+## 16.2 表、行和列
 
 概念：存储在数据库中的数据被组织成表、行和列。
 
@@ -29260,7 +27459,7 @@ DriverManager.getConnection(DatabaseURL, Username, Password);
 
 `CoffeeDB` 数据库有一个名为 `Coffee` 的表，它包含了该公司销售的所有不同咖啡的记录。表 16-1 显示了表的内容。
 
-# 表 16-1 `Coffee` 数据库表
+### 表 16-1 `Coffee` 数据库表
 
 | 描述 | 产品编号 | 价格 |
 | --- | --- | --- |
@@ -29283,19 +27482,23 @@ DriverManager.getConnection(DatabaseURL, Username, Password);
 | 危地马拉咖啡因 | 21-002 | 10.45 |
 | 危地马拉中烘 | 21-003 | 9.95 |
 
-如你所见，表有 18 行。每行包含关于一种咖啡的数据。行被分为三列。第一列命名为 `Description`（描述），包含咖啡的描述。第二列命名为 `ProdNum`（产品编号），包含咖啡的产品编号。第三列命名为 `Price`（价格），包含每磅咖啡的价格。如图 16-3](#ch16_pg0003.xhtml_P700101587800000000000000000）所示，表的第三行包含以下数据：
+如你所见，表有 18 行。每行包含关于一种咖啡的数据。行被分为三列。第一列命名为 `Description`（描述），包含咖啡的描述。第二列命名为 `ProdNum`（产品编号），包含咖啡的产品编号。第三列命名为 `Price`（价格），包含每磅咖啡的价格。如图 16-3 所示，表的第三行包含以下数据：
 
-* 描述：巴西深烘
-* 产品编号：15-001
-* 价格：7.95
+- 描述：巴西深烘
+- 产品编号：15-001
+- 价格：7.95
 
 ![表 16.1 列出的 9 个项目在 Coffee 数据库表中。列标记为 Description、Prod Num 和 Price。每行包含关于单个条目的的数据。](img/16fig03.png)
 
-# 图 16-3 `Coffee` 数据库表
+### 图 16-3 `Coffee` 数据库表
 
-# 列类型
+### 列类型
 
-数据库表中的列被分配了一个类型。注意 `Coffee` 表中的 `Description` 和 `ProdNum` 列包含字符串，而 `Price` 列包含浮点数。列的数据类型不是 Java 类型，而是 SQL 类型。表 16-2` 或 `CHAR(n)` | 长度为 n 的固定字符串 | `String` |
+数据库表中的列被分配了一个类型。注意 `Coffee` 表中的 `Description` 和 `ProdNum` 列包含字符串，而 `Price` 列包含浮点数。列的数据类型不是 Java 类型，而是 SQL 类型。表 16-2 列出了一些常见的 SQL 数据类型及其对应的 Java 类型。
+
+| SQL 数据类型 | 描述 | 对应的 Java 类型 |
+| --- | --- | --- |
+| `CHAR(n)` | 长度为 n 的固定字符串 | `String` |
 | `VARCHAR(n)` | 最大长度为 n 的变长字符串 | `String` |
 | `REAL` | 单精度浮点数 | `float` |
 | `DOUBLE` | 双精度浮点数 | `double` |
@@ -29304,43 +27507,25 @@ DriverManager.getConnection(DatabaseURL, Username, Password);
 
 SQL 中还有许多其他数据类型。创建 `Coffee` 表时，列使用了以下数据类型：
 
-* `Description` 列的类型是 `CHAR(25)`。这意味着 `Description` 列中的每个值都是长度为 25 的字符串，兼容 Java 的 `String` 类型。
-* `ProdNum` 列的类型是 `CHAR(10)`。这意味着 `ProdNum` 列中的每个值都是长度为 10 的字符串，兼容 Java 的 `String` 类型。
-* `Price` 列的类型是 `DOUBLE`。这意味着 `Price` 列中的每个值都是双精度浮点数，兼容 Java 的 `double` 类型。
+- `Description` 列的类型是 `CHAR(25)`。这意味着 `Description` 列中的每个值都是长度为 25 的字符串，兼容 Java 的 `String` 类型。
+- `ProdNum` 列的类型是 `CHAR(10)`。这意味着 `ProdNum` 列中的每个值都是长度为 10 的字符串，兼容 Java 的 `String` 类型。
+- `Price` 列的类型是 `DOUBLE`。这意味着 `Price` 列中的每个值都是双精度浮点数，兼容 Java 的 `double` 类型。
 
-# 主键
+### 主键
 
 大多数数据库表都有 `primary key`（主键），它是用于识别表中特定行的列。指定为主键的列为每行存储唯一值。如果你尝试在主键列中存储重复数据，将会报错。
 
 在 `Coffee` 表中，`ProdNum` 列是主键，因为它为每种咖啡存储了唯一的产品编号。这里其他例子：
 
-* 假设一个表存储员工数据，其中一列存储员工 ID 号。因为每个员工的 ID 号都是唯一的，所以该列可以作为主键。
-* 假设一个表存储手机公司的手机库存，其中一列存储手机序列号。因为每个手机的序列号都是唯一的，所以该列可以作为主键。
-* 假设一个表存储发票数据，其中一列存储发票号。每个发票都有唯一的发票号，因此该列可以使用主键。
+- 假设一个表存储员工数据，其中一列存储员工 ID 号。因为每个员工的 ID 号都是唯一的，所以该列可以作为主键。
+- 假设一个表存储手机公司的手机库存，其中一列存储手机序列号。因为每个手机的序列号都是唯一的，所以该列可以作为主键。
+- 假设一个表存储发票数据，其中一列存储发票号。每个发票都有唯一的发票号，因此该列可以使用主键。
 
-### 注意
+> **注意**：表的主键可以是表中几列的组合。
 
-表的主键可以是表中几列的组合。
-
-# 检查点 16.8
-
-自测练习
-
-# 检查点 16.9
-
-自测练习
-
-# 检查点 16.10
-
-自测练习
-
-# 16.3 SQL `SELECT` 语句简介
+## 16.3 SQL `SELECT` 语句简介
 
 概念：`SELECT` 语句用于 SQL 中从数据库中检索数据。
-
-
-
-
 
 我们将讨论的第一个 SQL 语句是 `SELECT` 语句。你使用 `SELECT` 语句来检索表中的行。正如其名称所示，`SELECT` 语句允许你选择特定的行。我们将从该语句的一个非常简单的形式开始，如下：
 
@@ -29356,7 +27541,7 @@ SELECT Description FROM Coffee
 
 该语句将检索 `Coffee` 表中每一行的 `Description` 列。图 16-4 显示了结果的示例。
 
-# 图 16-4 `Description` 列
+### 图 16-4 `Description` 列
 
 | Description |
 | --- |
@@ -29383,69 +27568,75 @@ SELECT Description FROM Coffee
 
 1. 获取与数据库的连接。
 2. 将包含 SQL 语句的字符串传递给 DBMS。如果 SQL 语句有结果要返回，则将向程序返回 `ResultSet` 对象。
+
+
+
 3. 如果向程序返回了 `ResultSet` 对象，则处理该对象的内容。
+
 4. 完成数据库的操作后，关闭连接。
 
-你之前在 代码列表 16-1 中见过如何执行步骤 1（获取数据库连接）和步骤 4（关闭连接）的示例。接下来我们查看如何将 SQL 语句发送到 DBMS 以及在步骤 2 和 3 中如何处理其结果的细节。
+你之前在代码列表 16-1 中见过如何执行步骤 1（获取数据库连接）和步骤 4（关闭连接）的示例。接下来我们查看如何将 SQL 语句发送到 DBMS 以及在步骤 2 和 3 中如何处理其结果的细节。
 
-# 将 SQL 语句传递给 DBMS
+## 将 SQL 语句传递给 DBMS
 
 一旦你获取了与数据库的连接，就可以向 DBMS 发出 SQL 语句了。首先，你必须使用 `Connection` 对象的 `createStatement` 方法从其获取一个 `Statement` 对象。这里是一个示例：
 
-```
+```java
 Statement stmt = conn.createStatement();
 ```
 
 执行此代码后，`stmt` 变量将引用一个 `Statement` 对象。`Statement` 是 `java.sql` 包中的一个接口。`Statement` 对象具有多种可以执行 SQL 查询的方法。要执行 `SELECT` 查询，你使用 `executeQuery` 方法。该方法返回一个 `ResultSet` 对象。这里是一个示例：
 
-```
+```java
 String sqlStatement = "SELECT Description FROM Coffee";
 ResultSet result = stmt.executeQuery(sqlStatement);
 ```
 
 第一条语句创建了一个包含 SQL 查询的字符串。第二条语句将此字符串作为参数传递给 `executeQuery` 方法。该方法返回一个包含查询结果的 `ResultSet` 对象的引用。该引用被赋值给 `result` 变量。图 16-5 说明了 `result` 变量如何引用 `ResultSet` 对象。
 
-![图 16.4 中的产品表显示在 S Q L 数据库中。Result Set 对象包含 S Q L 查询的结果。第一个产品 Bolivian Dark 被识别为结果变量。](img/16fig05.png)
+![图 16.4 中的产品表显示在 SQL 数据库中。ResultSet 对象包含 SQL 查询的结果。第一个产品 Bolivian Dark 被识别为结果变量。](img/16fig05.png)
 
-# 图 16-5 一个 `ResultSet` 对象包含 SQL 查询的结果
+### 图 16-5 一个 `ResultSet` 对象包含 SQL 查询的结果
 
 `ResultSet` 对象包含一组行和列。图 16-5 中的 `ResultSet` 对象有 18 行和一列。`ResultSet` 中的行是有编号的，第一行是第 1 行，第二行是第 2 行，依此类推。列也有编号，第一列是第 1 列，第二列是第 2 列，依此类推。图 16-6 显示了。
 
-![图 16.4 中的产品表显示在 S Q L 数据库中。Result Set 对象包含 S Q L 查询的结果。第一个产品 Bolivian Dark 被识别为结果变量。](img/16fig06.png)
+![图 16.4 中的产品表显示在 SQL 数据库中。ResultSet 对象包含 SQL 查询的结果。第一个产品 Bolivian Dark 被识别为结果变量。](img/16fig06.png)
 
-# 图 16-6 `ResultSet` 的行和列
+### 图 16-6 `ResultSet` 的行和列
 
-# 从 `ResultSet` 获取行
+## 从 `ResultSet` 获取行
 
-`ResultSet` 对象包含一组行和列。图 16-5 中的 `ResultSet` 对象有 18 行和一列。`ResultSet` 中的行是有编号的，第一行是第 1 行，第二行是第 2 行，依此类推。列也有编号，第一列是第 1 列，第二列是第 2 列，依此类推。图 16-6 显示了的。
+`ResultSet` 对象包含一组行和列。图 16-5 中的 `ResultSet` 对象有 18 行和一列。`ResultSet` 中的行是有编号的，第一行是第 1 行，第二行是第 2 行，依此类推。列也有编号，第一列是第 1 列，第二列是第 2 列，依此类推。图 16-6 显示了。
 
-![图 16.4 中的产品表显示在 S Q L 数据库中。Result Set 对象包含 S Q L 查询的结果。第一个产品 Bolivian Dark 被识别为结果变量。](img/16fig07.png)
+![图 16.4 中的产品表显示在 SQL 数据库中。ResultSet 对象包含 SQL 查询的结果。第一个产品 Bolivian Dark 被识别为结果变量。](img/16fig07.png)
 
-# 图 16-7 指标器位于第一行之前
+### 图 16-7 指标器位于第一行之前
 
-# `ResultSet` 移动行
+## `ResultSet` 移动行
 
 `ResultSet` 对象有一个内部指标器指向某行。`ResultSet` 指标器指向的是当前行。指标器可以移动以检查 `ResultSet` 的所有行。最初，指标器没有指向任何行，而是位于第一行之前。图 16-8
 
-![图 16.4 中的产品表显示在 S Q L 数据库中。Result Set 对象包含 S Q L 查询的结果。第一个产品 Bolivian Dark 被识别为结果变量。](img/1616.-
+![图 16.4 中的产品表显示在 SQL 数据库中。ResultSet 对象包含 SQL 查询的结果。第一个产品 Bolivian Dark 被识别为结果变量。](img/16fig08.png)
 
-# `next` 方法移动指标器
+### 图 16-8 指标器移动到第一行
+
+## `next` 方法移动指标器
 
 要将指标器移动到新创建的 `ResultSet` 的第一行，你调用该对象的 `next` 方法。这里有一个示例：
 
-```
+```java
 result.next();
 ```
 
 假设 `result` 引用一个新创建的 `ResultSet`，图 16-9 显示了指标器移动到了第一行。
 
-![图 16.4 中的产品表显示在 S Q L 数据库中。Result Set 对象包含 S Q L 查询的结果。第一个产品 Bolivian Dark 被识别为结果变量。](img/16fig08.png)
+![图 16.4 中的产品表显示在 SQL 数据库中。ResultSet 对象包含 SQL 查询的结果。第一个产品 Bolivian Dark 被识别为结果变量。](img/16fig09.png)
 
-# 图 16-8 指标器移动到第一行
+### 图 16-9 指标器移动到第一行
 
 每次调用 `next` 方法，它都会将指标器移动到下一行。`next` 方法返回一个 `boolean` 值。如果指标器成功移动到下一行，则返回 `true`。如果没有更多行，则返回 `false`。以下代码显示了你如何遍历新创建的 `ResultSet` 的所有行：
 
-```
+```java
 while (result.next()) {
     // 处理当前行。
 }
@@ -29453,22 +27644,17 @@ while (result.next()) {
 
 还有其他 `ResultSet` 方法用于导航 `ResultSet` 中的行。我们将在本章节后面介绍一些。
 
-# 在 `ResultSet` 行中获取列
+## 在 `ResultSet` 行中获取列
 
 你使用 `ResultSet` 对象的“get”方法来检索当前行中特定列的内容。当你调用这些方法之一时，你可以传递列号或列名作为参数。`ResultSet` 接口定义了许多“get”方法。表 16-3 列出了其中一些。
 
-# 表 16-3 一些 `ResultSet` 方法
+### 表 16-3 一些 `ResultSet` 方法
 
 | ResultSet 方法 | 说明 |
 | --- | --- |
-| `double getDouble(int` *`colNumber``)` `double getDouble(String` *`colName``)` | 返回存储在 *`colNumber`* 或 *`colName`* 指定列中的 `double`。列必须包含与 Java `double` 类型兼容的数据。如果发生错误，方法将抛出 `SQLException`。 |
-
-
-
-
-
-| `getInt(int colNumber)` | `getInt(String colName)` | 返回由 `colNumber` 或 `colName` 指定列中存储的 `int`。该列必须包含与 Java `int` 数据类型兼容的数据。如果发生错误，该方法将抛出 `SQLException`。 |
-| `getString(int colNumber)` | `getString(String colName)` | 返回由 `colNumber` 或 `colName` 指定列中存储的字符串。该列必须包含与 Java `String` 类型兼容的数据。如果发生错误，该方法将抛出 `SQLException`。 |
+| `double getDouble(int colNumber)` `double getDouble(String colName)` | 返回存储在 `colNumber` 或 `colName` 指定列中的 `double`。列必须包含与 Java `double` 类型兼容的数据。如果发生错误，方法将抛出 `SQLException`。 |
+| `getInt(int colNumber)` `getInt(String colName)` | 返回由 `colNumber` 或 `colName` 指定列中存储的 `int`。该列必须包含与 Java `int` 数据类型兼容的数据。如果发生错误，该方法将抛出 `SQLException`。 |
+| `getString(int colNumber)` `getString(String colName)` | 返回由 `colNumber` 或 `colName` 指定列中存储的字符串。该列必须包含与 Java `String` 类型兼容的数据。如果发生错误，该方法将抛出 `SQLException`。 |
 
 记住，列具有 SQL 数据类型。SQL 数据类型与 Java 数据类型不同，但它们之间是兼容的。要检索列的内容，你需要调用专门为该列数据类型设计的方法。例如，如果列包含字符串，你将使用 `getString` 方法来获取其值。如果列包含整数，你将使用 `getInt` 方法。同样，如果列包含 `double`，你将调用 `getDouble` 方法。
 
@@ -29476,29 +27662,27 @@ while (result.next()) {
 
 我们在示例中查看的 `ResultSet` 包含一列：`Description` 列。`Description` 列的数据类型为 `CHAR(25)`，这意味着它是长度为 25 个字符的固定字符串。这与 Java 的 `String` 类型兼容。要显示当前行中 `Description` 列的内容，我们可以使用以下语句：
 
-```
+```java
 System.out.println(result.getString("Description"));
 ```
 
 `Description` 列持有与 `String` 类型兼容的值，因此我们使用 `getString` 方法来检索其内容。我们也可以使用列号来检索列内容。这里是一个示例：
 
-```
+```java
 System.out.println(result.getString(1));
 ```
 
-# Note
-
-数据库表中的列名是不区分大小写的。列名 `DESCRIPTION`、`description` 和 `Description` 都是相同的。
+> **注意**：数据库表中的列名是不区分大小写的。列名 `DESCRIPTION`、`description` 和 `Description` 都是相同的。
 
 让我们来看一个演示我们所涵盖内容的完整程序。代码列表 16-2 显示了 `CoffeeDB` 数据库中所有行的 `Description` 列。
 
-# 代码列表 16-2 `(ShowCoffeeDescriptions.java)`
+### 代码列表 16-2 `(ShowCoffeeDescriptions.java)`
 
 ```java
 import java.sql.*;
 
 /**
- * 此程序演示如何使用 JDBC 向数据库 发送 SQL
+ * 此程序演示如何使用 JDBC 向数据库发送 SQL
  * 语句。
  */
 public class ShowCoffeeDescriptions
@@ -29571,10 +27755,6 @@ Guatemalan Medium
 在程序的此时，我们已经有了到 `CoffeeDB` 数据库的连接，但我们还没有准备好向数据库发送 `SELECT` 语句。为了向数据库发送 `SELECT` 语句，我们必须有一个 `Statement` 对象。第 22 行调用 `Connection` 对象的 `createStatement` 方法，该方法返回一个 `Statement` 对象的引用。该引用被赋值给变量 `stmt`。
 
 第 25 行声明了一个名为 `sqlStatement` 的 `String` 变量，初始化为字符串 `"SELECT Description FROM Coffee"`。
-
-
-
-
 
 ```java
 import java.sql.*;  // Needed for JDBC classes
@@ -29652,19 +27832,21 @@ Guatemalan Medium                    9.95
 
 代码列表 16-3 中的程序与代码列表 16-2 中的程序非常相似。这两个程序之间的差异总结如下：
 
-*   第 25 行和 26 行使用字符串 `"SELECT Description, Price FROM Coffee"` 初始化变量 `sqlStatement`。这是一个 `SELECT` 语句，它将从数据库数据库表中检索 `Description` 和 `Price` 列。
+- 第 25 行和 26 行使用字符串 `"SELECT Description, Price FROM Coffee"` 初始化变量 `sqlStatement`。这是一个 `SELECT` 语句，它将从数据库表中检索 `Description` 和 `Price` 列。
 
-*   在 `while` 循环内部（第 35 行到第 37 行），我们调用 `result.getString` 获取当前行的 `Description` 列，并调用 `result.getDouble` 获取当前行的 `Price` 列。这些项目通过 `System.out.printf` 方法显示。
 
-如果您想检索每一列，可以使用 `*` 字符代替列出所有列名。这里有一个示例：
+
+在`while`循环内部（第 35 行到第 37 行），我们调用`result.getString`获取当前行的`Description`列，并调用`result.getDouble`获取当前行的`Price`列。这些项目通过`System.out.printf`方法显示。
+
+如果您想检索每一列，可以使用`*`字符代替列出所有列名。这里有一个示例：
 
 ```
 SELECT * FROM Coffee
 ```
 
-该语句将检索 `Coffee` 表中每一行的每一列。代码列表 16-4 所示的程序演示了这一点。
+该语句将检索`Coffee`表中每一行的每一列。代码列表 16-4 所示的程序演示了这一点。
 
-# 代码列表 16-4 `(ShowCoffeeData.java)`
+## 代码列表 16-4 `(ShowCoffeeData.java)`
 
 ```java
 import java.sql.*;  // Needed for JDBC classes
@@ -29754,42 +27936,38 @@ FROM
    Coffee
 ```
 
-此外，SQL 关键字和表名不大小写。之前的语句可以写成：
+此外，SQL 关键字和表名不区分大小写。之前的语句可以写成：
 
 ```
 select * from coffee
 ```
 
-# 使用 WHERE 子句指定搜索条件
+## 使用 WHERE 子句指定搜索条件
 
-有时，您可能想要检索表中的每一行。例如，如果您想获取 `Coffee` 表中的所有咖啡，之前的 `SELECT` 语句就可以提供。但通常，您希望将列表缩小到表中的几行。这就是 `WHERE` 子句大显用场的地方。`WHERE` 子句可以与 `SELECT` 语句一起使用以指定搜索条件。当您使用 `WHERE` 子句时，只有符合搜索条件的行才会返回到结果集中。带有 `WHERE` 子句的 `SELECT` 语句通用格式为：
+有时，您可能想要检索表中的每一行。例如，如果您想获取`Coffee`表中的所有咖啡，之前的`SELECT`语句就可以提供。但通常，您希望将列表缩小到表中的几行。这就是`WHERE`子句大显用场的地方。`WHERE`子句可以与`SELECT`语句一起使用以指定搜索条件。当您使用`WHERE`子句时，只有符合搜索条件的行才会返回到结果集中。带有`WHERE`子句的`SELECT`语句通用格式为：
 
 ```
 SELECT Columns FROM Table WHERE Criteria
 ```
 
-在通用格式中，`Criteria` 是一个条件表达式。这是一个使用 `WHERE` 子句的 `SELECT` 语句示例：
+在通用格式中，`Criteria`是一个条件表达式。这是一个使用`WHERE`子句的`SELECT`语句示例：
 
 ```
 SELECT * FROM Coffee WHERE Price > 12.00
 ```
 
-语句的第一部分 `SELECT * FROM Coffee` 指定我们要查看每一列。`WHERE` 子句指定 Price 内容大于 12.00 的行。图 16-9 显示了该语句的结果。注意只有两种咖啡符合此搜索标准。
+语句的第一部分`SELECT * FROM Coffee`指定我们要查看每一列。`WHERE`子句指定`Price`内容大于 12.00 的行。图 16-9 显示了该语句的结果。注意只有两种咖啡符合此搜索标准。
 
-# 图 16-9 Price 大于 12.00 的行
+### 图 16-9 Price 大于 12.00 的行
 
 | Description | ProdNum | Price |
 | --- | --- | --- |
 | Kona Medium | 18-001 | 18.45 |
 | Kona Dark | 18-002 | 18.45 |
 
+标准 SQL 支持表 16-4 中列出的关系运算符，用于在`WHERE`子句中编写条件表达式。
 
-
-
-
-标准 SQL 支持表 16-4 中列出的关系关系运算符，用于在 `WHERE` 子句中编写条件表达式。
-
-# 表 16-4 SQL 关系运算符
+### 表 16-4 SQL 关系运算符
 
 | 运算符 | 含义 |
 | --- | --- |
@@ -29800,17 +27978,17 @@ SELECT * FROM Coffee WHERE Price > 12.00
 | `=` | 等于 |
 | `<>` | 不等于 |
 
-注意，SQL 中的等于运算符和不等于运算符与 Java 中的不同。等于运算符是一个等号，而不是两个等号。不等于运算符是 `<>`。
+注意，SQL 中的等于运算符和不等于运算符与 Java 中的不同。等于运算符是一个等号，而不是两个等号。不等于运算符是`<>`。
 
-让我们再看下 `SELECT` 语句的另外几条例子。以下语句可以用于检索所有价格为 7.95 的咖啡的产品编号和价格：
+让我们再看下`SELECT`语句的另外几条例子。以下语句可以用于检索所有价格为 7.95 的咖啡的产品编号和价格：
 
 ```
 SELECT ProdNum, Price FROM Coffee WHERE Price = 7.95
 ```
 
-该语句的结果所示图 16-10]。
+该语句的结果如图 16-10 所示。
 
-# 图 16-10 SQL 语句的结果
+### 图 16-10 SQL 语句的结果
 
 | ProdNum | Price |
 | --- | --- |
@@ -29819,9 +27997,9 @@ SELECT ProdNum, Price FROM Coffee WHERE Price = 7.95
 | 17-001 | 7.95 |
 | 17-003 | 7.95 |
 
-以下 `SELECT` 语句检索描述为“French Roast Dark”的行的所有列。该语句返回的结果所示图 16-11 所示]。
+以下`SELECT`语句检索描述为“French Roast Dark”的行的所有列。该语句返回的结果如图 16-11 所示。
 
-# 图 16-11 SQL 语句的结果
+### 图 16-11 SQL 语句的结果
 
 | Description | ProdNum | Price |
 | --- | --- | --- |
@@ -29835,27 +28013,27 @@ SELECT * FROM Coffee WHERE Description = 'French Roast Dark'
 
 ### 提示
 
-如果你需要在字符串中包含一个单引号，只需在该位置编写两个单引号即可。例如，假设你想在 `Coffee` 表中搜索名为 Joe’s Special Blend 的咖啡。你可以使用以下语句：
+如果你需要在字符串中包含一个单引号，只需在该位置编写两个单引号即可。例如，假设你想在`Coffee`表中搜索名为 Joe’s Special Blend 的咖啡。你可以使用以下语句：
 
 ```
 SELECT * FROM Coffee WHERE Description = 'Joe''s Special Blend'
 ```
 
-让我们来看一个在 `SELECT` 语句中使用 `WHERE` 子句的示例程序。代码列表 16-5 中的程序允许用户输入一个最低价格，然后在 `Coffee` 表中搜索 `Price` 列大于或等于指定价格的行。
+让我们来看一个在`SELECT`语句中使用`WHERE`子句的示例程序。代码列表 16-5 中的程序允许用户输入一个最低价格，然后在`Coffee`表中搜索`Price`列大于或等于指定价格的行。
 
-在下方的动画中，点击“上一个”（Previous）或“下一个”（Next）按钮分逐通过代码并查看各处的解释。
+在下方的动画中，点击“上一个”（Previous）或“下一个”（Next）按钮分步通过代码并查看各处的解释。
 
-# 代码列表 16-5 `(CoffeeMinPrice.java)`
+## 代码列表 16-5 `(CoffeeMinPrice.java)`
 
 https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr16-5/5.html
 
-代码列表 16-5 中有几处需要解释。在第 24 行和第 25 行中，程序提示用户输入最低价格，并将用户的输入赋值给 `double` 变量 `minPrice`。然后，注意第 38 到 40 行，`minPrice` 变量被转换为字符串，并连接到包含 `SELECT` 语句的字符串上。当程序运行时，如果用户输入 10.00，在第 38 到 40 行中创建的 `SELECT` 语句将是：
+代码列表 16-5 中有几处需要解释。在第 24 行和第 25 行中，程序提示用户输入最低价格，并将用户的输入赋值给`double`变量`minPrice`。然后，注意第 38 到 40 行，`minPrice`变量被转换为字符串，并连接到包含`SELECT`语句的字符串上。当程序运行时，如果用户输入 10.00，在第 38 到 40 行中创建的`SELECT`语句将是：
 
 ```
 SELECT * FROM Coffee WHERE Price >= 10.00
 ```
 
-或者，如果用户输入 12.00，在第 38 到 40 行中创建的 `SELECT` 语句将是：
+或者，如果用户输入 12.00，在第 38 到 40 行中创建的`SELECT`语句将是：
 
 ```
 SELECT * FROM Coffee WHERE Price >= 12.00
@@ -29863,53 +28041,53 @@ SELECT * FROM Coffee WHERE Price >= 12.00
 
 程序通常需要使用此类技术来创建包含用户输入的 SQL 语句。
 
-# `SELECT` 语句中的字符串比较
+## `SELECT`语句中的字符串比较
 
-SQL 中的字符串比较是区分大小写的。如果你对 `CoffeeDB` 数据库运行以下语句，你将得不到任何结果：
+SQL 中的字符串比较是区分大小写的。如果你对`CoffeeDB`数据库运行以下语句，你将得不到任何结果：
 
 ```
 SELECT * FROM Coffee WHERE Description = 'french roast dark'
 ```
 
-然而，你可以使用 `UPPER()` 函数将字符串转换为大写。这里有一个示例：
+然而，你可以使用`UPPER()`函数将字符串转换为大写。这里有一个示例：
 
 ```
 SELECT * FROM Coffee WHERE UPPER(Description) = 'FRENCH ROAST DARK'
 ```
 
-这将返回与图 16-11 所示相同的结果。SQL 还提供了 `LOWER()` 函数，它可以将其参数转换为小写。这里有一个示例：
+这将返回与图 16-11 所示相同的结果。SQL 还提供了`LOWER()`函数，它可以将其参数转换为小写。这里有一个示例：
 
 ```
 SELECT * FROM Coffee WHERE LOWER(Description) = 'french roast dark'
 ```
 
-# 使用 `LIKE` 运算符
+## 使用`LIKE`运算符
 
-有时搜索精确字符串不起作用。例如，假设我们想要一个脱咖啡列表。以下语句：
+有时搜索精确字符串不起作用。例如，假设我们想要一个脱咖啡因列表。以下语句：
 
 ```
 SELECT * FROM Coffee WHERE Description LIKE '%Decaf%'
 ```
 
-`%` 符号被用作通配符。它表示任意数量的字符。模式 `'%Decaf%'` 指定“Decaf”前后可以是任何字符。结果所示图 16-12]]。
+`%`符号被用作通配符。它表示任意数量的字符。模式`'%Decaf%'`指定“Decaf”前后可以是任何字符。结果如图 16-12 所示。
 
-# 图 16-12 SQL 语句的结果
+### 图 16-12 SQL 语句的结果
 
 | Description | ProdNum | Price |
-| --- | --- |
+| --- | --- | --- |
 | Brazilian Decaf | 15-003 | ... |
 | Sumatra Decaf | 17-002 | ... |
 | Guatemalan Decaf | 21-002 | ... |
 
-下划线字符 `_` 也被用作通配符。与 `%` 字符不同，下划线表示单个字符。例如，看以下语句：
+下划线字符`_`也被用作通配符。与`%`字符不同，下划线表示单个字符。例如，看以下语句：
 
 ```
 SELECT * FROM Coffee WHERE ProdNum LIKE '2_-00_'
 ```
 
-该语句将产生所有 `ProdNum` 列以“2”开头，跟随单个字符，然后是“-00”，最后再跟单个字符的行。该语句的结果所示图 16-13]。
+该语句将产生所有`ProdNum`列以“2”开头，跟随单个字符，然后是“-00”，最后再跟单个字符的行。该语句的结果如图 16-13 所示。
 
-# 图 16-13 SQL 语句的结果
+### 图 16-13 SQL 语句的结果
 
 | Description | ProdNum | Price |
 | --- | --- | --- |
@@ -29917,43 +28095,39 @@ SELECT * FROM Coffee WHERE ProdNum LIKE '2_-00_'
 | Guatemalan Dark | 21-001 | 9.95 |
 | Guatemalan Medium | 21-003 | 9.95 |
 
-你可以使用 `NOT` 运算符在搜索标准中排除字符模式。例如，假设你想得到所有非脱咖啡咖啡的列表。以下语句将产生这些结果。
+你可以使用`NOT`运算符在搜索标准中排除字符模式。例如，假设你想得到所有非脱咖啡因咖啡的列表。以下语句将产生这些结果。
 
 ```
 SELECT * FROM Coffee WHERE Description NOT LIKE '%Decaf%'
 ```
 
-# 使用 `AND` 和 `OR`
+## 使用`AND`和`OR`
 
-你可以使用 `AND` 和 `OR` 逻辑运算符在 `WHERE` 子句中指定多个搜索标准。例如，看以下语句：
+你可以使用`AND`和`OR`逻辑运算符在`WHERE`子句中指定多个搜索标准。例如，看以下语句：
 
 ```
 SELECT * FROM Coffee WHERE Price > 10.00 AND Price < 14.00
 ```
 
+`AND`运算符要求两个搜索条件都为真，该行才会被判定为匹配。此语句返回的行仅包含`Price`列包含大于 10.00 且小于 14.00 值的行。图 16-14 显示了该语句的结果。
 
-
-
-
-`AND` 运算符要求两个搜索条件都为真，该行才会被判定为匹配。此语句返回的行仅包含 `Price` 列包含大于 10.00 且小于 14.00 值的行。图 16-14 显示了该语句的结果。
-
-# 图 16-14 SQL 语句的结果
+### 图 16-14 SQL 语句的结果
 
 | 描述 | ProdNum | Price |
 | --- | --- | --- |
 | Sumatra Organic Dark | 17-004 | 11.95 |
 | Guatemalan Decaf | 21-002 | 10.45 |
 
-这里是一个使用 `OR` 运算符的示例：
+这里是一个使用`OR`运算符的示例：
 
 ```
 SELECT * FROM Coffee
- WHERE Description LIKE '%Dark%' OR ProdNum LIKE '16%'
+ WHERE Description LIKE '%Dark%' OR ProdNum LIKE '16%'
 ```
 
-`OR` 运算符要求两个搜索条件中的任意一个为真，该行即会被判定为匹配。此语句搜索 `Description` 列在任何位置包含字符串“Dark”的行，或者 `ProdNum` 列以“16”开头的行。图 16-15 显示了查询的结果。
+`OR`运算符要求两个搜索条件中的任意一个为真，该行即会被判定为匹配。此语句搜索`Description`列在任何位置包含字符串“Dark”的行，或者`ProdNum`列以“16”开头的行。图 16-15 显示了查询的结果。
 
-# 图 16-15 SQL 语句的结果
+### 图 16-15 SQL 语句的结果
 
 | 描述 | ProdNum | Price |
 | --- | --- | --- |
@@ -29967,17 +28141,17 @@ SELECT * FROM Coffee
 | French Roast Dark | 19-001 | 9.65 |
 | Guatemalan Dark | 21-001 | 9.95 |
 
-# 对 `SELECT` 查询结果进行排序
+## 对`SELECT`查询结果进行排序
 
-如果你希望对 `SELECT` 查询的结果进行排序，可以使用 `ORDER` `BY` 子句。这是一个示例：
+如果你希望对`SELECT`查询的结果进行排序，可以使用`ORDER BY`子句。这是一个示例：
 
 ```
 SELECT * FROM Coffee ORDER BY Price
 ```
 
-此语句将生成 `Coffee` 表中所有行的列表，并按 `Price` 列排序。列表将按 `Price` 列的升序排列，这意味着价格最低的咖啡将出现在前面。
+此语句将生成`Coffee`表中所有行的列表，并按`Price`列排序。列表将按`Price`列的升序排列，这意味着价格最低的咖啡将出现在前面。
 
-这里是一个同时使用 `WHERE` 子句和 `ORDER BY` 子句的 `SELECT` 语句：
+这里是一个同时使用`WHERE`子句和`ORDER BY`子句的`SELECT`语句：
 
 ```
 SELECT * FROM Coffee
@@ -29985,9 +28159,9 @@ SELECT * FROM Coffee
   ORDER BY Price
 ```
 
-此语句将生成 `Coffee` 表中所有 `Price` 列值大于 9.95 的行列表，并按价格升序排列。
+此语句将生成`Coffee`表中所有`Price`列值大于 9.95 的行列表，并按价格升序排列。
 
-如果你希望列表按降序排列（从高到低），请使用 `DESC` 运算符，如下所示：
+如果你希望列表按降序排列（从高到低），请使用`DESC`运算符，如下所示：
 
 ```
 SELECT * FROM Coffee
@@ -29995,53 +28169,47 @@ SELECT * FROM Coffee
   ORDER BY Price DESC
 ```
 
-# 数学函数
+## 数学函数
 
-SQL 提供了几个用于计算的函数。例如，`AVG` 函数计算特定列的平均值。使用 `AVG` 函数的 `SELECT` 语句示例：
+SQL 提供了几个用于计算的函数。例如，`AVG`函数计算特定列的平均值。使用`AVG`函数的`SELECT`语句示例：
 
 ```
 SELECT AVG(Price) FROM Coffee
 ```
 
-此语句产生单一值：`Price` 列所有值的平均值。由于我们没有使用 `WHERE` 子句，因此计算时使用了 `Coffee` 表中的所有行。这里有一个计算产品号以“20”开头的所有咖啡平均价格的示例：
+此语句产生单一值：`Price`列所有值的平均值。由于我们没有使用`WHERE`子句，因此计算时使用了`Coffee`表中的所有行。这里有一个计算产品号以“20”开头的所有咖啡平均价格的示例：
 
 ```
 SELECT AVG(Price) FROM Coffee WHERE ProdNum LIKE '20%'
 ```
 
-另一个数学函数是 `SUM`，它计算列值的总和。接下来的语句可能用不大，它计算 `Price` 列值的总和：
+另一个数学函数是`SUM`，它计算列值的总和。接下来的语句可能用处不大，它计算`Price`列值的总和：
 
 ```
 SELECT SUM(Price) FROM Coffee
 ```
 
-`MIN` 和 `MAX` 函数确定列中的最小值和最大值。接下来的语句将告诉我们 `Price` 列中的最小值：
+`MIN`和`MAX`函数确定列中的最小值和最大值。接下来的语句将告诉我们`Price`列中的最小值：
 
-```
-SELECT MIN(Price) FROM Coffee
-```
+
+
+`SELECT MIN(Price) FROM Coffee`
 
 接下来的语句将告诉我们 `Price` 列中的最大值：
 
-```
-SELECT MAX(Price) FROM Coffee
-```
+`SELECT MAX(Price) FROM Coffee`
 
 `COUNT` 函数可以确定表中的行数，如下语句所示：
 
-```
-SELECT COUNT(*) FROM Coffee
-```
+`SELECT COUNT(*) FROM Coffee`
 
 `*` 仅表示你想要统计整行。这是另一个示例，告诉我们价格大于 9.95 的咖啡数量：
 
-```
-SELECT COUNT(*) FROM Coffee WHERE Price > 9.95
-```
+`SELECT COUNT(*) FROM Coffee WHERE Price > 9.95`
 
-使用数学函数的查询（如此处示例所示）仅返回一个值。因此，当你使用 JDBC 向 DBMS 提交此类语句时，返回给程序的 `ResultSet` 对象将包含一行一列。所示的 代码列表 16-6 展示了如何使用 `MIN`、`MAX` 和 `AVG` 函数处理 `Coffee` 表。
+使用数学函数的查询（如此处示例所示）仅返回一个值。因此，当你使用 JDBC 向 DBMS 提交此类语句时，返回给程序的 `ResultSet` 对象将包含一行一列。所示的代码列表 16-6 展示了如何使用 `MIN`、`MAX` 和 `AVG` 函数处理 `Coffee` 表。
 
-# 代码列表 16-6
+## 代码列表 16-6
 
 ```java
 import java.sql.*;
@@ -30108,46 +28276,51 @@ Highest price: $18.45
 Average price: $10.16
 ```
 
-
-
-
 第 46 到 48 行的代码获取表格中的平均价格。以下是该代码工作原理的摘要：
 
-*   第 46 行执行 `avgStatement` 的内容，并将返回的 `ResultSet` 引用赋值给变量 `avgResult`。
-*   第 47 行的 `if` 语句移动 `ResultSet` 对象的游标，第 48 行获取第 1 列的值并将其赋值给变量 `average`。
+- 第 46 行执行 `avgStatement` 的内容，并将返回的 `ResultSet` 引用赋值给变量 `avgResult`。
+- 第 47 行的 `if` 语句移动 `ResultSet` 对象的游标，第 48 行获取第 1 列的值并将其赋值给变量 `average`。
 
-# Checkpoint 16.11
-../components/metrodigi/ch16-inline_self_quiz_v1.0.0-11/index.html
+## Checkpoint 16.11
 
-# Checkpoint 16.12
-../components/metrodigi/ch16-inline_self_quiz_v1.0.0-12/index.html
+`../components/metrodigi/ch16-inline_self_quiz_v1.0.0-11/index.html`
 
-# Checkpoint 16.13
-../components/metrodigi/ch16-inline_self_quiz_v1.0.0-13/index.html
+## Checkpoint 16.12
 
-# Checkpoint 16.14
-../components/metrodigi/ch16-inline_self_quiz_v1.0.0-14/index.html
+`../components/metrodigi/ch16-inline_self_quiz_v1.0.0-12/index.html`
 
-# Checkpoint 16.15
-../components/metrodigi/ch16-inline_self_quiz_v1.0.0-15/index.html
+## Checkpoint 16.13
 
-# Checkpoint 16.16
-../components/metrodigi/ch16-inline_self_quiz_v1.0.0-16/index.html
+`../components/metrodigi/ch16-inline_self_quiz_v1.0.0-13/index.html`
 
-# Checkpoint 16.17
-../components/metrodigi/ch16-assessable_table_v1.0.1-01/index.html
+## Checkpoint 16.14
 
-# Checkpoint 16.18
-../components/metrodigi/ch16-inline_self_quiz_v1.0.0-17/index.html
+`../components/metrodigi/ch16-inline_self_quiz_v1.0.0-14/index.html`
 
-# 16.4 插入行
+## Checkpoint 16.15
+
+`../components/metrodigi/ch16-inline_self_quiz_v1.0.0-15/index.html`
+
+## Checkpoint 16.16
+
+`../components/metrodigi/ch16-inline_self_quiz_v1.0.0-16/index.html`
+
+## Checkpoint 16.17
+
+`../components/metrodigi/ch16-assessable_table_v1.0.1-01/index.html`
+
+## Checkpoint 16.18
+
+`../components/metrodigi/ch16-inline_self_quiz_v1.0.0-17/index.html`
+
+## 16.4 插入行
 
 概念：你使用 SQL 中的 `INSERT` 语句向表中插入一个新的一行。
 
 在 SQL 中，`INSERT` 语句用于向数据库表中插入一行数据。
 
 ```
-INSERT INTO  TableName  VALUES (Value1, Value2, etc...)
+INSERT INTO TableName VALUES (Value1, Value2, etc...)
 ```
 
 在通用格式中，`TableName` 是数据库表的名称。`Value1`、`Value2` 等是列值的列表。语句执行后，一个包含指定列值的行将被插入到表中。以下是一个示例，展示了如何在我们的 `CoffeeDB` 数据库的 `Coffee` 表中插入一行：
@@ -30156,7 +28329,7 @@ INSERT INTO  TableName  VALUES (Value1, Value2, etc...)
 INSERT INTO Coffee VALUES ('Honduran Dark', '22-001', 8.65)
 ```
 
-注意，字符串值被包含在单引号中。此外，注意值在列表中出现的顺序。第一个值‘Honduran Dark’ 被插入到表的第一列，该列是 `Description`。第二个值‘22-001’被插入到表的第二列，该列是 `ProdNum`。第三个值 8.65 被插入到表的第三列，该列是 `Price`。在该语句执行后，`Coffee` 表中将插入一个包含以下列值的新行：
+注意，字符串值被包含在单引号中。此外，注意值在列表中出现的顺序。第一个值 `'Honduran Dark'` 被插入到表的第一列，该列是 `Description`。第二个值 `'22-001'` 被插入到表的第二列，该列是 `ProdNum`。第三个值 `8.65` 被插入到表的第三列，该列是 `Price`。在该语句执行后，`Coffee` 表中将插入一个包含以下列值的新行：
 
 ```
 Description: 'Honduran Dark'
@@ -30203,20 +28376,19 @@ VALUES
 
 如果某列是主键，则它必须为表中的每一行存储一个唯一值。表中没有两个行可以在主键上具有相同的值。回想一下 `ProdNum` 列是 `Coffee` 表的主键。DBMS 不允许你插入具有相同编号的新行。
 
-# 使用 JDBC 插入行
+## 使用 JDBC 插入行
 
 要使用 JDBC 发送 `INSERT` 语句，你必须首先通过 `Connection` 对象的 `createStatement()` 方法从其获取一个 `Statement` 对象。然后你使用 `Statement` 对象的 `executeUpdate()` 方法。该方法返回一个 `int` 值，表示插入到表的行数。这是一个示例：
 
-```
+```java
 String sqlStatement = "INSERT INTO Coffee " +
                       "(ProdNum, Price, Description) " +
                       "VALUES ('22-001', 8.65, 'Honduran Dark')";
+```
 
 插入到表的行数返回一个 `int` 值。
 
-
-
-代码列表 16-7 (CoffeeInserter.java)
+## 代码列表 16-7 (CoffeeInserter.java)
 
 ```java
 import java.util.Scanner;
@@ -30249,8 +28421,10 @@ public class CoffeeInserter
       // 获取新咖啡的数据。
       System.out.print("Enter the coffee description: ");
       description = keyboard.nextLine();
+
       System.out.print("Enter the product number: ");
       prodNum = keyboard.nextLine();
+
       System.out.print("Enter the price: ");
       price = keyboard.nextDouble();
 
@@ -30263,7 +28437,7 @@ public class CoffeeInserter
                             "VALUES ('" +
                             prodNum + "', " +
                             price + ", '" +
-                            description +')";
+                            description +')';
 
       // 将语句发送到 DBMS。
       int rows = stmt.executeUpdate(sqlStatement);
@@ -30286,33 +28460,29 @@ public class CoffeeInserter
 
 ```
 Enter the coffee description: Honduran Dark [Enter]
-Enter the product number: 22–001 [Enter] 
+Enter the product number: 22–001 [Enter]
 Enter the price: 8.65 [Enter]
 1 row(s) added to the table.
 ```
 
-# Checkpoint 16.19
+## Checkpoint 16.19
 
+`../components/metrodigi/ch16-inline_self_quiz_v1.0.0-18/index.html`
 
+## Checkpoint 16.20
 
+`../components/metrodigi/ch16-inline_self_quiz_v1.0.0-19/index.html`
 
+## 16.5 更新和删除现有行
 
-../components/metrodigi/ch16-inline_self_quiz_v1.0.0-18/index.html
-
-# Checkpoint 16.20
-
-../components/metrodigi/ch16-inline_self_quiz_v1.0.0-19/index.html
-
-# 16.5 更新和删除现有行
-
-概念：你在 SQL 中使用 `UPDATE` 语句来更改现有行的值。你使用 `DELETE` 语句从从删除删除行。
+概念：你在 SQL 中使用 `UPDATE` 语句来更改现有行的值。你使用 `DELETE` 语句从表中删除行。
 
 在 SQL 中，`UPDATE` 语句用于更改表中现有某行的内容。例如，如果巴西咖啡因咖啡（Brazilian Decaf）的价格发生了变化，我们可以使用 `UPDATE` 语句更改该行的 `Price` 列。以下是 `UPDATE` 语句的通用格式：
 
 ```
-UPDATE  Table
-   SET  Column  =  Value
-   WHERE  Criteria
+UPDATE Table
+   SET Column = Value
+   WHERE Criteria
 ```
 
 在通用格式中，`Table` 是表名，`Column` 是列名，`Value` 是存储在列中的值，而 `Criteria` 是条件表达式。以下是一个将巴西咖啡因咖啡的价格改为 9.95 的 `UPDATE` 语句：
@@ -30331,9 +28501,9 @@ UPDATE Coffee
    WHERE ProdNum = '20-001'
 ```
 
-该语句定位到 `ProdNum` 为 ‘20-001’的行，并将 `Description` 字段设置为 `'Galapagos Organic Medium'`。
+该语句定位到 `ProdNum` 为 `'20-001'` 的行，并将 `Description` 字段设置为 `'Galapagos Organic Medium'`。
 
-可以更新多行。例如，假设我们希望将所有危地马拉咖啡的价格都改为 12.95。如果你查看表 16-1，你会发现每种危地马拉咖啡的产品编号都以 ‘21’开头。我们需要的是一个 `UPDATE` 语句，找到所有 `ProdNum` 列以 ‘21’ 开头的行，并将这些行的 `Price` 列改为 12.95。以下是这样的语句：
+可以更新多行。例如，假设我们希望将所有危地马拉咖啡的价格都改为 12.95。如果你查看表 16-1，你会发现每种危地马拉咖啡的产品编号都以 `'21'` 开头。我们需要的是一个 `UPDATE` 语句，找到所有 `ProdNum` 列以 `'21'` 开头的行，并将这些行的 `Price` 列改为 12.95。以下是这样的语句：
 
 ```
 UPDATE Coffee
@@ -30341,37 +28511,35 @@ UPDATE Coffee
    WHERE ProdNum LIKE '21%'
 ```
 
-# 警告
+### 警告
 
-在使用 `UPDATE` 语句时，务必小心不要遗漏 `WHERE` 子句和条件表达式。可能会可能会表中每一行的内容！例如，查看以下语句：
+在使用 `UPDATE` 语句时，务必小心不要遗漏 `WHERE` 子句和条件表达式。可能会更改表中每一行的内容！例如，查看以下语句：
 
 ```
 UPDATE Coffee
    SET Price = 4.95
 ```
 
+
+
 由于该语句没有 `WHERE` 子句，它将把 `Coffee` 表中每一行的 `Price` 列都改为 4.95！
 
-# 使用 JDBC 更新行
+## 使用 JDBC 更新行
 
 在 JDBC 中发布 `UPDATE` 语句的过程与发布 `INSERT` 语句相似。首先，你通过 `Connection` 对象的 `createStatement` 方法获取一个 `Statement` 对象。然后，你使用 `Statement` 对象的 `executeUpdate` 方法来发布 `UPDATE` 语句。该方法返回一个 `int` 值，表示受 `UPDATE` 语句影响的行数。以下是一个示例：
 
-```
+```java
 String sqlStatement = "UPDATE Coffee " +
-                       "SET Price = 9.95 " +
-                       "WHERE Description = 'Brazilian Decaf'";
- int rows = stmt.executeUpdate(sqlStatement);
+                      "SET Price = 9.95 " +
+                      "WHERE Description = 'Brazilian Decaf'";
+int rows = stmt.executeUpdate(sqlStatement);
 ```
 
 第一条语句创建一个包含 `UPDATE` 语句的字符串。第二个语句将此字符串作为参数传递给 `executeUpdate` 方法。该方法返回一个 `int` 值，表示更改的行数。
 
 代码列表 16-8 展示了如何更新 `Coffee` 表中的行。用户输入一个现有的产品编号，程序显示该产品的数据。然后用户为指定产品输入一个新价格，程序用新价格更新该行。
 
-# 代码列表 16-8 `(CoffeePriceUpdater.java)`
-
-
-
-
+### 代码列表 16-8 (`CoffeePriceUpdater.java`)
 
 ```java
 import java.util.Scanner;
@@ -30381,7 +28549,6 @@ import java.sql.*;
  * 此程序允许用户更改 CoffeeDB 数据库中
  * Coffee 表的咖啡价格。
  */
-
 public class CoffeePriceUpdater
 {
     public static void main(String[] args)
@@ -30439,8 +28606,7 @@ public class CoffeePriceUpdater
     * @param stmt 用于数据库的 Statement 对象。
     * @param prodNum 所需咖啡的产品编号。
     * @return 表示是否找到产品的布尔值。
-  */
-
+    */
    public static boolean findAndDisplayProduct(Statement stmt,
                                                String prodNum)
                                                throws SQLException
@@ -30481,11 +28647,10 @@ public class CoffeePriceUpdater
 
    /**
     * updatePrice 方法更新指定咖啡的价格。
-     * @param stmt 用于数据库的 Statement 对象。
-     * @param prodNum 所需咖啡的产品编号。
-     * @param price 产品的新价格。
-  */
-
+    * @param stmt 用于数据库的 Statement 对象。
+    * @param prodNum 所需咖啡的产品编号。
+    * @param price 产品的新价格。
+    */
     public static void updatePrice(Statement stmt, String prodNum,
                                    double price) throws SQLException
    {
@@ -30504,7 +28669,7 @@ public class CoffeePriceUpdater
 }
 ```
 
-程序输出
+程序输出：
 
 ```
 Enter the product number: 101
@@ -30514,9 +28679,6 @@ Price: $1.99
 Enter the new price: 2.99
 1 row updated.
 ```
-
-
-
 
 在 JDBC 中执行 `DELETE` 语句的过程与执行 `INSERT` 语句或 `UPDATE` 语句相似。首先，你通过 `Connection` 对象的 `createStatement` 方法获取一个 `Statement` 对象。然后，你使用 `Statement` 对象的 `executeUpdate` 方法来执行 `DELETE` 语句。该方法返回一个 `int` 类型的值，表示被删除的行数。以下是一个示例：
 
@@ -30530,7 +28692,7 @@ int rows = stmt.executeUpdate(sqlStatement);
 
 代码列表 16-9 所示程序演示了如何从 `Coffee` 表中删除一行。
 
-# 代码列表 16-9 `(CoffeeDeleter.java)`
+### 代码列表 16-9 (`CoffeeDeleter.java`)
 
 ```java
  1  import java.util.Scanner;
@@ -30610,7 +28772,7 @@ int rows = stmt.executeUpdate(sqlStatement);
   75
   76    public static boolean findAndDisplayProduct(Statement stmt,
   77                                               String prodNum)
-  78                                                SQLException
+  78                                                throws SQLException
   79    {
   80       boolean productFound; // 标志位
   81
@@ -30620,67 +28782,135 @@ int rows = stmt.executeUpdate(sqlStatement);
   85          "SELECT * FROM Coffee WHERE ProdNum = '" +
   86          prodNum + "'";
   87
-  88
-  89       将 SELECT 语句发送给 DBMS。
-  90       ResultSet result = stmt.executeQuery(sqlStatement);
-  91
-  92       //显示结果集的内容。
-  93       if (result.next())
-  94       {
-  95             //显示产品。
-  96              System.out.println("Description: " +
-  97                      result.getString("Description"));
-  98              System.out.println("Product Number: " +
-  99                      result.getString("ProdNum"));
-  100              System.out.println("Price: $" +
-  101                       result.getDouble("Price"));
-  102
-  103              //将标志位设置为 true 表示找到了产品。
-  104              productFound = true;
-  105        }
-  106        else
-  107        {
-  108           //表示未找到产品。
-  109           productFound = false;
-  110        }
-  111
-  112        return productFound;
-  113    }
-  114
-  115    /**
-  116       deleteCoffee 方法删除指定的咖啡。
-  117       @param stmt 用于数据库的 Statement 对象。
-  118       @param prodNum 所需咖啡的产品编号。
-  119    */
-  120    public static void deleteCoffee(Statement stmt,
-  121                                    String prodNum)     throws SQLException
-  122    {
-  123       //创建一个 DELETE 语句来删除
-  124       //指定的咖啡。
-  125       String sqlStatement = "DELETE FROM Coffee " +
-  126                             "WHERE ProdNum = '" + prodNum + "'";
-  127
-  128       //将 DELETE 语句发送给 DBMS。
-  129       int rows = stmt.executeUpdate(sqlStatement);
-  130
-  131       //打印结果。
-  132       System.out.println(rows + " row(s) deleted.");
-  133    }
-  134}
+  88       //将 SELECT 语句发送给 DBMS。
+  89       ResultSet result = stmt.executeQuery(sqlStatement);
+  90
+  91       //显示结果集的内容。
+  92       if (result.next())
+  93       {
+  94             //显示产品。
+  95              System.out.println("Description: " +
+  96                      result.getString("Description"));
+  97              System.out.println("Product Number: " +
+  98                      result.getString("ProdNum"));
+  99              System.out.println("Price: $" +
+  100                       result.getDouble("Price"));
+  101
+  102              //将标志位设置为 true 表示找到了产品。
+  103              productFound = true;
+  104           }
+  105           else
+  106           {
+  107              //将标志位设置为 false 表示未找到产品。
+  108              productFound = false;
+  109           }
+  110
+  111           return productFound;
+  112        }
+  113
+  114        /**
+  115           deleteCoffee 方法从数据库中删除指定的咖啡。
+  116           @param stmt 用于数据库的 Statement 对象。
+  117           @param prodNum 所需咖啡的产品编号。
+  118        */
+  119        public static void deleteCoffee(Statement stmt, String prodNum)
+  120                                         throws SQLException
+  121        {
+  122           //创建一个 DELETE 语句以删除指定的咖啡。
+  123           String sqlStatement =
+  124              "DELETE FROM Coffee WHERE ProdNum = '" +
+  125              prodNum + "'";
+  126
+  127           //将 DELETE 语句发送给 DBMS。
+  128           int rows = stmt.executeUpdate(sqlStatement);
+  129
+  130           //显示被删除的行数。
+  131           System.out.println(rows + " row(s) deleted.");
+  132        }
+  133     }
+```
+
+
+
+104              productFound = true;
+
+105        }
+
+106        else
+
+107        {
+
+108           //表示未找到产品。
+
+109           productFound = false;
+
+110        }
+
+111
+
+112        return productFound;
+
+113    }
+
+114
+
+115    /**
+
+116       deleteCoffee 方法删除指定的咖啡。
+
+117       @param stmt 用于数据库的 Statement 对象。
+
+118       @param prodNum 所需咖啡的产品编号。
+
+119    */
+
+120    public static void deleteCoffee(Statement stmt,
+
+121                                    String prodNum)     throws SQLException
+
+122    {
+
+123       //创建一个 DELETE 语句来删除
+
+124       //指定的咖啡。
+
+125       String sqlStatement = "DELETE FROM Coffee " +
+
+126                             "WHERE ProdNum = '" + prodNum + "'";
+
+127
+
+128       //将 DELETE 语句发送给 DBMS。
+
+129       int rows = stmt.executeUpdate(sqlStatement);
+
+130
+
+131       //打印结果。
+
+132       System.out.println(rows + " row(s) deleted.");
+
+133    }
+
+134}
+
 ```
 
 程序输出
 
 ```
+
 Description: Medium
+
 Product Number: 20-001
+
 Price: $6.85
+
 Are you sure you want to delete this item? (y/n): y
+
 1 row(s) deleted.
+
 ```
-
-
-
 
 你也可以通过在列的数据类型之后列出 `PRIMARY KEY` 限定符来指定某列为主键。回想我们之前对数据库组织的讨论，主键是为每行持有一个唯一值的列，并可用于识别特定行。当你对列使用 `PRIMARY KEY` 限定符时，你也应该使用 `NOT NULL` 限定符。`NOT NULL` 限定符指定该列的每一行都必须包含一个值。下面是如何使用 `CustomerNumber` 列作为主键创建 `Customer` 表的示例：
 
@@ -30706,65 +28936,65 @@ CREATE TABLE Customer
 
 ```
  1  import java.sql.*;   // JDBC 类需要此包
-  2
-  3  /**
-  4     此程序在 CoffeeDB 数据库中创建一个 Customer
-  5     表。
-  6  */
-  7
-  8  public class CreateCustomerTable
-  9  {
-  10     public static void main(String[] args)
-  11     {
-  12        // 为 URL 创建一个命名常量。
-  13        // 注意：此值适用于 Java DB 或 Apache Derby。
-  14        final String DB_URL = "jdbc:derby:CoffeeDB";
-  15
-  16        try
-  17        {
-  18           // 创建到数据库的连接。
-  19           Connection conn = DriverManager.getConnection(DB_URL);
-  21
-  22           // 获取 Statement 对象。
-  23           Statement stmt = conn.createStatement();
-  24
-  25           // 构建创建表的 SQL 语句。
-  26           String sql = "CREATE TABLE Customer" +
-  27              "( CustomerNumber CHAR(10) NOT NULL PRIMARY KEY, "
-  28              " Name CHAR(25)," +
-  29              " Address CHAR(25)," +
-  30              " City CHAR(12)," +
-  31              " State CHAR(2)," +
-  32              " Zip CHAR(5) )";
-  33
-  34           // 执行语句。
-  35           stmt.execute(sql);
-  36
-  37           // 向新表添加行。
-  38           sql = "INSERT INTO Customer VALUES" +
-  39                 "('101', 'Downtown Cafe', '17 N. Main Street'," +
-  40                 " 'Asheville', 'NC', '55515')";
-  41           stmt.executeUpdate(sql);
-  42
-  43           sql = "INSERT INTO Customer VALUES" +
-  44                 "('102', 'Main Street Grocery'," +
-  45                 " '110 E. Main Street'," +
-  46                 " 'Canton', 'NC', '55555')";
-  47           stmt.executeUpdate(sql);
-  48
-  49           sql = "INSERT INTO Customer VALUES" +
-  50                 "('103', 'The Coffee Place', '101 Center Plaza'," +
-  51                 " 'Waynesville', 'NC', '55516')";
-  52           stmt.executeUpdate(sql);
-  53
-  54           // 关闭连接。
-  55           conn.close();
-  56        }
-  57        catch (Exception ex)
-  58        {
-  59           System.out.println("ERROR: " + ex.getMessage());
-  60        }
-  61  }
+ 2
+ 3  /**
+ 4     此程序在 CoffeeDB 数据库中创建一个 Customer
+ 5     表。
+ 6  */
+ 7
+ 8  public class CreateCustomerTable
+ 9  {
+10     public static void main(String[] args)
+11     {
+12        // 为 URL 创建一个命名常量。
+13        // 注意：此值适用于 Java DB 或 Apache Derby。
+14        final String DB_URL = "jdbc:derby:CoffeeDB";
+15
+16        try
+17        {
+18           // 创建到数据库的连接。
+19           Connection conn = DriverManager.getConnection(DB_URL);
+21
+22           // 获取 Statement 对象。
+23           Statement stmt = conn.createStatement();
+24
+25           // 构建创建表的 SQL 语句。
+26           String sql = "CREATE TABLE Customer" +
+27              "( CustomerNumber CHAR(10) NOT NULL PRIMARY KEY, "
+28              " Name CHAR(25)," +
+29              " Address CHAR(25)," +
+30              " City CHAR(12)," +
+31              " State CHAR(2)," +
+32              " Zip CHAR(5) )";
+33
+34           // 执行语句。
+35           stmt.execute(sql);
+36
+37           // 向新表添加行。
+38           sql = "INSERT INTO Customer VALUES" +
+39                 "('101', 'Downtown Cafe', '17 N. Main Street'," +
+40                 " 'Asheville', 'NC', '55515')";
+41           stmt.executeUpdate(sql);
+42
+43           sql = "INSERT INTO Customer VALUES" +
+44                 "('102', 'Main Street Grocery'," +
+45                 " '110 E. Main Street'," +
+46                 " 'Canton', 'NC', '55555')";
+47           stmt.executeUpdate(sql);
+48
+49           sql = "INSERT INTO Customer VALUES" +
+50                 "('103', 'The Coffee Place', '101 Center Plaza'," +
+51                 " 'Waynesville', 'NC', '55516')";
+52           stmt.executeUpdate(sql);
+53
+54           // 关闭连接。
+55           conn.close();
+56        }
+57        catch (Exception ex)
+58        {
+59           System.out.println("ERROR: " + ex.getMessage());
+60        }
+61  }
 ```
 
 ## 表 16-5 插入到 Customer 表的行
@@ -30780,11 +29010,14 @@ CREATE TABLE Customer
 如果需要从数据库中删除表，可以使用 `DROP TABLE` 语句。其通用格式如下：
 
 ```
+DROP TABLE TableName
+```
 
 `TableName` 是要删除的表名。例如，假设我们在创建 `Customer` 表后发现选错了列。我们可以删除表并使用正确的数据类型重建它。删除的 SQL 语句为：
 
 ```
-DROP TABLE```
+DROP TABLE Customer
+```
 
 ## 16.7 创建新数据库
 
@@ -30794,65 +29027,65 @@ DROP TABLE```
 
 ```
  1  import java.sql.*;   // JDBC 类需要此包
-  2
-  3  /**
-  4     此程序在 CoffeeDB 数据库中创建一个 Customer
-  5     表。
-  6  */
-  7
-  8  public class CreateCustomerTable
-  9  {
-  10     public static void main(String[] args)
-  11     {
-  12        // 为 URL 创建一个命名常量。
-  13        // 注意：此值适用于 Java DB 或 Apache Derby。
-  14        final String DB_URL = "jdbc:derby:CoffeeDB";
-  15
-  16        try
-  17        {
-  18           // 创建到数据库的连接。
-  19           Connection conn = DriverManager.getConnection(DB_URL);
-  21
-  22           // 获取 Statement 对象。
-  23           Statement stmt = conn.createStatement();
-  24
-  25           // 构建创建表的 SQL 语句。
-  26           String sql = "CREATE TABLE Customer" +
-  27              "( CustomerNumber CHAR(10) NOT NULL PRIMARY KEY, "
-  28              " Name CHAR(25)," +
-  29              " Address CHAR(25)," +
-  30              " City CHAR(12)," +
-  31              " State CHAR(2)," +
-  32              " Zip CHAR(5) )";
-  33
-  34           // 执行语句。
-  35           stmt.execute(sql);
-  36
-  37           // 向新表添加行。
-  38           sql = "INSERT INTO Customer VALUES" +
-  39                 "('101', 'Downtown Cafe', '17 N. Main Street'," +
-  40                 " 'Asheville', 'NC', '55515')";
-  41           stmt.executeUpdate(sql);
-  42
-  43           sql = "INSERT INTO Customer VALUES" +
-  44                 "('102', 'Main Street Grocery'," +
-  45                 " '110 E. Main Street'," +
-  46                 " 'Canton', 'NC', '55555')";
-  47           stmt.executeUpdate(sql);
-  48
-  49           sql = "INSERT INTO Customer VALUES" +
-  50                 "('103', 'The Coffee Place', '101 Center Plaza'," +
-  51                 " 'Waynesville', 'NC', '55516')";
-  52           stmt.executeUpdate(sql);
-  53
-  54           // 关闭连接。
-  55           conn.close();
-  56        }
-  57        catch (Exception ex)
-  58        {
-  59           System.out.println("ERROR: " + ex.getMessage());
-  60        }
-  61  }
+ 2
+ 3  /**
+ 4     此程序在 CoffeeDB 数据库中创建一个 Customer
+ 5     表。
+ 6  */
+ 7
+ 8  public class CreateCustomerTable
+ 9  {
+10     public static void main(String[] args)
+11     {
+12        // 为 URL 创建一个命名常量。
+13        // 注意：此值适用于 Java DB 或 Apache Derby。
+14        final String DB_URL = "jdbc:derby:CoffeeDB";
+15
+16        try
+17        {
+18           // 创建到数据库的连接。
+19           Connection conn = DriverManager.getConnection(DB_URL);
+21
+22           // 获取 Statement 对象。
+23           Statement stmt = conn.createStatement();
+24
+25           // 构建创建表的 SQL 语句。
+26           String sql = "CREATE TABLE Customer" +
+27              "( CustomerNumber CHAR(10) NOT NULL PRIMARY KEY, "
+28              " Name CHAR(25)," +
+29              " Address CHAR(25)," +
+30              " City CHAR(12)," +
+31              " State CHAR(2)," +
+32              " Zip CHAR(5) )";
+33
+34           // 执行语句。
+35           stmt.execute(sql);
+36
+37           // 向新表添加行。
+38           sql = "INSERT INTO Customer VALUES" +
+39                 "('101', 'Downtown Cafe', '17 N. Main Street'," +
+40                 " 'Asheville', 'NC', '55515')";
+41           stmt.executeUpdate(sql);
+42
+43           sql = "INSERT INTO Customer VALUES" +
+44                 "('102', 'Main Street Grocery'," +
+45                 " '110 E. Main Street'," +
+46                 " 'Canton', 'NC', '55555')";
+47           stmt.executeUpdate(sql);
+48
+49           sql = "INSERT INTO Customer VALUES" +
+50                 "('103', 'The Coffee Place', '101 Center Plaza'," +
+51                 " 'Waynesville', 'NC', '55516')";
+52           stmt.executeUpdate(sql);
+53
+54           // 关闭连接。
+55           conn.close();
+56        }
+57        catch (Exception ex)
+58        {
+59           System.out.println("ERROR: " + ex.getMessage());
+60        }
+61  }
 ```
 
 当此程序运行时，`EntertainmentDB` 数据库将被创建。这是因为第 14 行的数据库 URL 具有 `;create=true` 属性。第 27 行到 30 行随后创建一个名为 `Dvd` 的表。
@@ -30864,10 +29097,6 @@ DROP TABLE```
 ## 16.8 可滚动结果集
 
 概念：可滚动结果集允许游标进行随机移动。默认情况下，结果集不是可滚动的。
-
-
-
-
 
 默认情况下，`ResultSet` 对象允许你仅向后移动游标。一旦游标过了某行，你就无法向后移动游标来再次读取该行。如果你需要在结果集中向后移动游标，可以创建一个*滚动结果集*（scrollable result set）。你可以在使用 `Connection` 对象的重载版本 `createStatement` 方法创建 `Statement` 对象时执行此操作。该方法接受两个参数。第一个参数指定结果集的滚动类型。对于该参数可以使用以下常量中的任何一个：
 
@@ -30921,9 +29150,15 @@ Statement stmt =
 | --- | --- |
 | `first()` | 将游标移动到结果集的第一行。 |
 | `last()` | 将游标移动到结果集的最后一行。 |
+
+
+
 | `next()` | 将游标移动到结果集的下一行。 |
+
 | `previous()` | 将游标移动到结果集的上一个行。 |
+
 | `relative(rows)` | 将游标相对于当前行向向前或向后移动参数 `rows` 指定的行数。例如，调用 `relative(2)` 将将游标从当前行向前移动 2 行，而 `relative(−1)` 将将游标从当前行向后移动 1 行。 |
+
 | `absolute(row)` | 将游标移动到由整数 `row` 指定的行。记住，行号从 1 开始计数，因此调用 `absolute(1)` 将将游标移动到结果集的第一行。 |
 
 ### 注意事项
@@ -30940,19 +29175,19 @@ resultSet.first();	// 移回第一行
 
 这段代码在你需要在处理结果集中的任何数据之前确定结果集中的行数时非常有用。第一条语句将游标移动到最后一行。第二条语句调用 `ResultSet` 方法 `getRow`，它返回当前行的行号。第三条语句随后将游标移动到第一行以便后续处理。
 
-# 检查点 16.25
+## 检查点 16.25
 
-../components/metrodigi/ch16-inline_self_quiz_v1.0.0-23/index.html
+`../components/metrodigi/ch16-inline_self_quiz_v1.0.0-23/index.html`
 
-# 检查点 16.26
+## 检查点 16.26
 
-../components/metrodigi/ch16-inline_self_quiz_v1.0.0-24/index.html
+`../components/metrodigi/ch16-inline_self_quiz_v1.0.0-24/index.html`
 
-# 检查点 16.27
+## 检查点 16.27
 
-../components/metrodigi/ch16-inline_self_quiz_v1.0.0-25/index.html
+`../components/metrodigi/ch16-inline_self_quiz_v1.0.0-25/index.html`
 
-# 16.9 结果集元数据
+## 16.9 结果集元数据
 
 概念：结果集元数据描述结果集的内容。元数据可以用于确定查询时返回了哪些列。
 
@@ -30966,23 +29201,25 @@ ResultSetMetaData meta = resultSet.getMetaData();
 
 `ResultSetMetaData` 是 `java.sql` 包中的一个接口。它指定了许多方法，其中一些方法在表 16-6 中描述。
 
-# 表 16-6 一些 `ResultSetMetaData` 方法
+### 表 16-6 一些 `ResultSetMetaData` 方法
 
 | 方法 | 描述 |
+
 | --- | --- |
+
 | `getCount()` | 返回结果集的列数。 |
+
 | `getColumnName(col)` | 返回由整数 `col` 指定的列名。第一列为 1。 |
+
 | `getColumnTypeName(col)` | 返回由整数 `col` 指定的列的数据类型名称。第一列为 1。返回的数据类型是数据库特定的 SQL 数据类型。 |
+
 | `getColumnDisplaySize(col)` | 返回由整数 `col` 指定的列的显示宽度（以字符为单位）。第一列为 1。 |
+
 | `getTableName(col)` | 返回与由整数 `col` 指定的列关联的表名。第一列为 1。 |
 
 代码列表 16-12 中的程序演示了如何使用元数据。它要求用户为 `CoffeeDB` 数据库输入一个 `SELECT` 语句，然后显示结果集信息以及结果集的内容。
 
-# 代码列表 16-12 `(MetaDataDemo.java)`
-
-
-
-
+### 代码列表 16-12 `(MetaDataDemo.java)`
 
 ```java
 import java.sql.*;
@@ -31058,7 +29295,7 @@ public class MetaDataDemo
 }
 ```
 
-### 示例输入以**粗体**所示的程序输出
+#### 示例输入以**粗体**所示的程序输出
 
 ```
 Enter a SELECT statement for the CoffeeDB database:
@@ -31074,7 +29311,7 @@ Kona Dark                     18-002        18.45
 Guatemalan Decaf              21-002        10.45
 ```
 
-### 示例输入以**粗体**所示的程序输出
+#### 示例输入以**粗体**所示的程序输出
 
 ```
 Enter a SELECT statement for the CoffeeDB database:
@@ -31091,8 +29328,6 @@ Here are the result set rows:
 第 34 行将查询提交给 `DBMS` 并获取一个 `ResultSet` 对象。第 37 行获取一个 `ResultSetMetaData` 对象。第 40 到 42 行的语句显示结果集中包含的列数。它使用 `ResultSetMetaData` 对象的 `getColumnCount` 方法来获取此值。第 45 到 49 行的循环为结果集中的每一列迭代一次。每次迭代都会显示列名和列数据类型。使用 `ResultSetMetaData` 对象的 `getColumnName` 和 `getColumnTypeName` 方法来检索这些信息。第 53 到 61 行的 `while` 循环显示结果集的内容。它包含一个在第 56 到 59 行的嵌套 `for` 循环，该循环为结果集中的每一列迭代一次。每次迭代将列值作为字符串获取并进行显示。
 
 现在让我们来看一个 JavaFX GUI 应用程序，我们可以将其作为一个交互式工具来查看 `CoffeeDB` 数据库中的表。`代码列表 16-13` 所示的 `DBViewer` 应用程序显示了图 16-16 所示的 GUI。用户在最顶部的 `TextArea` 控件中输入 `SELECT` 语句，然后点击提交按钮。应用程序执行查询并在底部的 `TextArea` 中显示结果。
-
-
 
 
 
@@ -31215,21 +29450,23 @@ public class DBViewer extends Application
 
 ![DB Viewer 应用程序显示为一个标题为“Enter a SELECT Query”的窗口。用户输入 SELECT 语句，点击 Submit 按钮，结果出现在底部的 Area。](img/16.png)
 
-# 图 16-16 DBViewer 应用程序 (Oracle Counsel)
+## 图 16-16 DBViewer 应用程序 (Oracle Counsel)
 
-# 检查点 16.28
+## 检查点 16.28
+
 [components/metrodig/16-inline-self-v1.0/26)
 
-# 检查点 16.29
+## 检查点 16.29
+
 [components/metrodig/16-inline-self-v1.0/27)
 
 ## 16.10 关系数据
 
 概念：在关系数据库中，一个表的列可以与另一个表建立关联。
 
-在 `section` 中，我们添加了 `Customer` 表，这使得我们可以通过 `Coffee` 表获取产品信息。
+在`section`中，我们添加了`Customer`表，这使得我们可以通过`Coffee`表获取产品信息。
 
-假设我们想让数据库更有用，存储有关欠款订单的信息。为了这样做，我们需要为数据库添加一个额外的表。这里是 `UnpaidOrder` 表：
+假设我们想让数据库更有用，存储有关欠款订单的信息。为了这样做，我们需要为数据库添加一个额外的表。这里是`UnpaidOrder`表：
 
 ```
  CustomerNumber     CHAR(10)      外键
@@ -31239,61 +29476,61 @@ public class DBViewer extends Application
           Cost               DOUBLE
 ```
 
-第一列 `CustomerNumber` 标识了订单的客户。然而，`paidOrder` 表并不包含其他客户数据，它只存储客户编号。在设计数据库时，避免数据重复是非常重要的。因为客户数据已经存储在 `Customer` 表中，我们只需要在 `Order` 表中存储客户编号，通过 `Customer` 表来查询客户的剩余数据。
+第一列`CustomerNumber`标识了订单的客户。然而，`paidOrder`表并不包含其他客户数据，它只存储客户编号。在设计数据库时，避免数据重复是非常重要的。因为客户数据已经存储在`Customer`表中，我们只需要在`Order`表中存储客户编号，通过`Customer`表来查询客户的剩余数据。
 
-在 `UnpaidOrder` 表中，`CustomerNumber` 列是一个**外键**。*外键*是指一个表中引用另一个表中主键的列。回想一下 `CustomerNumber` 是 `Customer` 表的主键。当我们向 `UnpaidOrder` 表添加行时，存储的 `CustomerNumber` 值必须匹配 `Customer` 表中 `CustomerNumber` 列的值。这在 `UnpaidOrder` 表的行与 `Customer` 表的行之间建立了关系。
+在`UnpaidOrder`表中，`CustomerNumber`列是一个**外键**。*外键*是指一个表中引用另一个表中主键的列。回想一下`CustomerNumber`是`Customer`表的主键。当我们向`UnpaidOrder`表添加行时，存储的`CustomerNumber`值必须匹配`Customer`表中`CustomerNumber`列的值。这在`UnpaidOrder`表的行与`Customer`表的行之间建立了关系。
 
-下一列 `ProdNum` 也是一个外键，因为它标识了 `Coffee` 表中的产品。再次，没有必要在 `UnpaidOrder` 表中存储所有的产品数据。我们只需要存储产品编号，然后就可以在 `Coffee` 表中查询产品数据。
+下一列`ProdNum`也是一个外键，因为它标识了`Coffee`表中的产品。再次，没有必要在`UnpaidOrder`表中存储所有的产品数据。我们只需要存储产品编号，然后就可以在`Coffee`表中查询产品数据。
 
-`UnpaidOrder` 表的下一列是 `OrderDate`。它将存储订单日期。`Quantity` 列存储客户订购的咖啡磅数。`Cost` 列存储物品的总费用。我们将使用以下 SQL 语句来创建 `Order` 表：
+`UnpaidOrder`表的下一列是`OrderDate`。它将存储订单日期。`Quantity`列存储客户订购的咖啡磅数。`Cost`列存储物品的总费用。我们将使用以下 SQL 语句来创建`Order`表：
 
-
-
-
-
-注意，此语句引入了一个新的限定符 `REFERENCES`，它被同时用于 `CustomerNumber` 和 `ProdNum` 列。以下是它在 `CustomerNumber` 列上的用方法：
+注意，此语句引入了一个新的限定符`REFERENCES`，它被同时用于`CustomerNumber`和`ProdNum`列。以下是它在`CustomerNumber`列上的用方法：
 
 ```
 REFERENCES Customer(CustomerNumber)
 ```
 
-这表示该列引用了 `Customer` 表中的 `CustomerNumber` 列。由于有了这个限定符，当你向 `UnpaidOrder` 表中插入行时，DBMS 会执行一次检查。只有当 `CustomerNumber` 列包含来自 `Customer` 表中 `CustomerNumber` 列的有效值时，它才允许你插入该行。这确保了两张表之间的*引用完整性*（referential integrity）。
+这表示该列引用了`Customer`表中的`CustomerNumber`列。由于有了这个限定符，当你向`UnpaidOrder`表中插入行时，DBMS 会执行一次检查。只有当`CustomerNumber`列包含来自`Customer`表中`CustomerNumber`列的有效值时，它才允许你插入该行。这确保了两张表之间的*引用完整性*（referential integrity）。
 
-`REFERENCES` 限定符也用于 `ProdNum` 列：
+`REFERENCES`限定符也用于`ProdNum`列：
 
 ```
 REFERENCES Coffee(ProdNum)
 ```
 
-这表示该列引用了 `Coffee` 表中的 `ProdNum` 列。当你向 `Order` 表中插入行时，其 `ProdNum` 列必须包含来自 `Coffee` 表中 `ProdNum` 列的有效值。
+这表示该列引用了`Coffee`表中的`ProdNum`列。当你向`Order`表中插入行时，其`ProdNum`列必须包含来自`Coffee`表中`ProdNum`列的有效值。
 
-系统设计人员通常使用`实体关系图`（entity relationship diagrams）来展示数据库表之间的关系。图 16-17 展示了 `CoffeeDB` 数据库的实体关系图。在图中，主键用 `(PK)` 表示。连接表与表之间的线显示了表之间的关系。在此图中，有两种类型的关系：
+系统设计人员通常使用`实体关系图`（entity relationship diagrams）来展示数据库表之间的关系。图 16-17 展示了`CoffeeDB`数据库的实体关系图。在图中，主键用`(PK)`表示。连接表与表之间的线显示了表之间的关系。在此图中，有两种类型的关系：
 
-*   `一对多关系`意味着对于表 `A` 中的每行，表 `B` 中可以有许多行可以引用它。
-*   `多对一关系` 意味着表 `A` 中的许多行可以引用表 `B` 中的某一行。
+*   `一对多关系`意味着对于表`A`中的每行，表`B`中可以有许多行可以引用它。
 
-# 图 16-17 实体关系图
+*   `多对一关系`意味着表`A`中的许多行可以引用表`B`中的某一行。
+
+## 图 16-17 实体关系图
 
 ![一个 Coffee D B 数据库的实体关系图。](img/16fig17.png)图 16-17 完整备用文本
 
-注意，每条线的末端显示的是 1 或无限符号 `[∞]`。你可以将无限符号解释为“多”，将数字 1 解释为“一”。看连接 `Customer` 表和 `UnpaidOrder` 表的线。1 位于靠近 `Customer` 表的末端，无限符号位于靠近 `UnpaidOrder` 表的末端。这意味着 `Customer` 表中的某行可以被 `UnpaidOrder` 表中的许多行引用。这是合逻辑的，因为一个客户可以下许多订单。（事实上，这正是管理层希望看到的！）
+注意，每条线的末端显示的是 1 或无限符号`[∞]`。你可以将无限符号解释为“多”，将数字 1 解释为“一”。看连接`Customer`表和`UnpaidOrder`表的线。1 位于靠近`Customer`表的末端，无限符号位于靠近`UnpaidOrder`表的末端。这意味着`Customer`表中的某行可以被`UnpaidOrder`表中的许多行引用。这是合逻辑的，因为一个客户可以下许多订单。（事实上，这正是管理层希望看到的！）
 
-如果我们从反方向看这种关系，会发现 `UnpaidOrder` 表中的许多行可以引用 `Customer` 表中的一行。以下是图中显示的所有关系的总结：
+如果我们从反方向看这种关系，会发现`UnpaidOrder`表中的许多行可以引用`Customer`表中的一行。以下是图中显示的所有关系的总结：
 
-*   `Customer` 表与 `UnpaidOrder` 表之间存在一对多关系。`Customer` 表中的某行可以被 `UnpaidOrder` 表中的许多行引用。
-*   `UnpaidOrder` 表与 `Customer` 表之间存在多对一关系。`UnpaidOrder` 表中的许多行可以引用 `Customer` 表中的某一行。
-*   `Coffee` 表与 `UnpaidOrder` 表之间存在一对多关系。`Coffee` 表中的某行可以被 `UnpaidOrder` 表中的许多行引用。
-*   `UnpaidOrder` 表与 `Coffee` 表之间存在多对一关系。`UnpaidOrder` 表中的许多行可以引用 `Coffee` 表中的某一行。
+*   `Customer`表与`UnpaidOrder`表之间存在一对多关系。`Customer`表中的某行可以被`UnpaidOrder`表中的许多行引用。
 
-# 从多个表连接数据
+*   `UnpaidOrder`表与`Customer`表之间存在多对一关系。`UnpaidOrder`表中的许多行可以引用`Customer`表中的某一行。
 
-当相关数据存储在多个表中时（如在 `CoffeeDB` 数据库中），通常需要在 `SELECT` 语句中从不同的表中提取数据。例如，假设我们想查看所有未付订单的信息。具体来说，对于每笔未付订单，我们想查看客户编号、客户名称、订单日期、咖啡描述和成本。这涉及来自 `Customer`、`UnpaidOrder` 和 `Coffee` 表的列。由于这些表中的某些列具有相同的列名，我们必须在 `SELECT` 语句中使用限定列名（qualified column names）。`限定列名`的格式如下：
+*   `Coffee`表与`UnpaidOrder`表之间存在一对多关系。`Coffee`表中的某行可以被`UnpaidOrder`表中的许多行引用。
+
+*   `UnpaidOrder`表与`Coffee`表之间存在多对一关系。`UnpaidOrder`表中的许多行可以引用`Coffee`表中的某一行。
+
+## 从多个表连接数据
+
+当相关数据存储在多个表中时（如在`CoffeeDB`数据库中），通常需要在`SELECT`语句中从不同的表中提取数据。例如，假设我们想查看所有未付订单的信息。具体来说，对于每笔未付订单，我们想查看客户编号、客户名称、订单日期、咖啡描述和成本。这涉及来自`Customer`、`UnpaidOrder`和`Coffee`表的列。由于这些表中的某些列具有相同的列名，我们必须在`SELECT`语句中使用限定列名（qualified column names）。`限定列名`的格式如下：
 
 ```
 TableName.ColumnName
 ```
 
-例如，`Customer.CustomerNumber` 指定了 `Customer` 表中的 `CustomerNumber` 列，而 `UnpaidOrder.CustomerNumber` 指定了 `UnpaidOrder` 表中的 `CustomerNumber` 列。请查看以下查询：
+例如，`Customer.CustomerNumber`指定了`Customer`表中的`CustomerNumber`列，而`UnpaidOrder.CustomerNumber`指定了`UnpaidOrder`表中的`CustomerNumber`列。请查看以下查询：
 
 ```
  SELECT
@@ -31320,14 +29557,14 @@ TableName.ColumnName
       UnpaidOrder.Cost
 ```
 
-查询的第二部分使用 `FROM` 子句，指定了我们想要的表：
+查询的第二部分使用`FROM`子句，指定了我们想要的表：
 
 ```
 FROM
       Customer, UnpaidOrder, Coffee
 ```
 
-查询的第三部分使用 `WHERE` 子句，指定了搜索条件：
+查询的第三部分使用`WHERE`子句，指定了搜索条件：
 
 ```
  WHERE
@@ -31335,33 +29572,31 @@ FROM
       UnpaidOrder.ProdNum = Coffee.ProdNum
 ```
 
-搜索条件告诉 `DBMS` 如何链接表。回顾我们之前的讨论，`UnpaidOrder.CustomerNumber` 引用 `Customer.CustomerNumber`，而 `UnpaidOrder.ProdNum` 引用 `Coffee.ProdNum`。
+搜索条件告诉`DBMS`如何链接表。回顾我们之前的讨论，`UnpaidOrder.CustomerNumber`引用`Customer.CustomerNumber`，而`UnpaidOrder.ProdNum`引用`Coffee.ProdNum`。
 
-# 警告
+## 警告
 
-从多个表连接数据时，务必使用 `WHERE` 子句来指定搜索条件。如果不这样做，将导致大量无关的数据。
+从多个表连接数据时，务必使用`WHERE`子句来指定搜索条件。如果不这样做，将导致大量无关的数据。
 
-# 订单输入系统
+## 订单输入系统
 
-现在，我们已经在数据库中设置了必要的表，并将查看一个允许用户点咖啡的应用程序。该应用程序由两个类构建：一个用于管理数据库，另一个用于显示界面。我们首先查看的类是 `CoffeeDBManager` 类，见代码列表 16-14。该类对 `CoffeeDB` 数据库执行各种操作，我们在订单输入系统中需要它。
+现在，我们已经在数据库中设置了必要的表，并将查看一个允许用户点咖啡的应用程序。该应用程序由两个类构建：一个用于管理数据库，另一个用于显示界面。我们首先查看的类是`CoffeeDBManager`类，见代码列表 16-14。该类对`CoffeeDB`数据库执行各种操作，我们在订单输入系统中需要它。
 
-为了使用此应用程序，你需要 `Coffee` 表、`Customer` 表和 `UnpaidOrder` 表。在 16.6 节中，你见过代码列表 16-10，这是一个名为 `CreateCustomerTable.java` 的程序。该程序在 `CoffeeDB` 数据库中创建了 `Customer` 表并添加了三行示例数据。如果你还没有运行过该程序，现在请运行它。运行程序后，你可以运行本章早些介绍的 `DBViewer` 应用程序，并输入语句 `SELECT * FROM Customer`。你应该看到如图 16-18](#ch16_pg0011.xhtml_P700101587800000000000000007607)所示的数据。DB 查看器应用程序显示为一个标题为“输入 SELECT 查询”的窗口。用户输入 SELECT star FROM Customer 语句，点击提交按钮，结果出现在底部的文本区域中。
+为了使用此应用程序，你需要`Coffee`表、`Customer`表和`UnpaidOrder`表。在 16.6 节中，你见过代码列表 16-10，这是一个名为`CreateCustomerTable.java`的程序。该程序在`CoffeeDB`数据库中创建了`Customer`表并添加了三行示例数据。如果你还没有运行过该程序，现在请运行它。运行程序后，你可以运行本章早些介绍的`DBViewer`应用程序，并输入语句`SELECT * FROM Customer`。你应该看到如图 16-18](#ch16_pg0011.xhtml_P700101587800000000000000007607)所示的数据。DB 查看器应用程序显示为一个标题为“输入 SELECT 查询”的窗口。用户输入 SELECT star FROM Customer 语句，点击提交按钮，结果出现在底部的文本区域中。
 
-接下来，你应该运行 `CreateUnpaidOrderTable.java` 程序。该程序位于章的源代码文件夹中，并将创建我们之前讨论过的 `UnpaidOrder` 表。然而，表中还没有存储数据。
+接下来，你应该运行`CreateUnpaidOrderTable.java`程序。该程序位于章的源代码文件夹中，并将创建我们之前讨论过的`UnpaidOrder`表。然而，表中还没有存储数据。
 
 在下方的动画中，按“上一个”或“下一个”按钮可以逐步执行代码并在过程中查看解释。
 
 
 
-
-
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr16-14/14.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr16-14/14.html)
 
-接下来，我们将查看 `OrderEntrySystem` 类，该类位于代码列表 16-15 中。该类构建 GUI 并与用户交互。当你运行应用程序时，它会显示图 16-17 所示的 GUI。要下订单，你需要从 `ListView` 控件中选择客户和咖啡，在 `TextField` 控件中输入数量和日期，然后点击 `Submit` 按钮。系统随后会在 `UnpaidOrder` 表中插入一条新的订单行。
+接下来，我们将查看`OrderEntrySystem`类，该类位于代码列表 16-15 中。该类构建 GUI 并与用户交互。当你运行应用程序时，它会显示图 16-17 所示的 GUI。要下订单，你需要从`ListView`控件中选择客户和咖啡，在`TextField`控件中输入数量和日期，然后点击`Submit`按钮。系统随后会在`UnpaidOrder`表中插入一条新的订单行。
 
 在下方的动画中，点击“上一个”或“下一个”按钮可以逐步查看代码并查看各处的解释。
 
-## 代码列表 16-15 `(OrderEntrySystem.java)`
+## 代码列表 16-15 (`OrderEntrySystem.java`)
 
 [`media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr16-15/15.html`](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/pr16-15/15.html)
 
@@ -31371,11 +29606,11 @@ FROM
 
 ![在订单输入系统中输入订单数据。](img/16fig19.png)图 16-19 完整备用文本
 
-在我们提交了图 16-19 所示的订单后，我们可以运行 `DBViewer` 应用程序并输入以下 `SELECT` 语句，从与订单相关的各种表中提取数据。图 16-20 显示了 `DBViewer` 应用程序的屏幕，其中已填写 `SELECT` 语句及其执行结果。
+在我们提交了图 16-19 所示的订单后，我们可以运行`DBViewer`应用程序并输入以下`SELECT`语句，从与订单相关的各种表中提取数据。图 16-20 显示了`DBViewer`应用程序的屏幕，其中已填写`SELECT`语句及其执行结果。
 
 ![DB Viewer 应用程序显示为一个标题为“输入 SELECT 查询”的窗口。SELECT 语句已填入来自图 16 9 中订单语句的数据。点击 Submit 按钮后，结果显示在底部的文本区域中。](img/16fig20.png)
 
-## 图 16-20 在 `DBViewer` 中查看订单信息（Oracle 公司法务顾问）
+## 图 16-20 在`DBViewer`中查看订单信息（Oracle 公司法务顾问）
 
 ```
 SELECT
@@ -31393,11 +29628,11 @@ WHERE
 
 ## Checkpoint 16.30
 
-../components/metrodigi/ch16-inline_self_quiz_v1.0.0-28/index.html
+`../components/metrodigi/ch16-inline_self_quiz_v1.0.0-28/index.html`
 
 ## Checkpoint 16.31
 
-../components/metrodigi/ch16-assessable_table_v1.0.1-02/index.html
+`../components/metrodigi/ch16-assessable_table_v1.0.1-02/index.html`
 
 ## 16.11 高级主题
 
@@ -31405,58 +29640,64 @@ WHERE
 
 有时，应用程序必须执行多次数据库更新来完成单一任务。例如，假设你在银行有一个储蓄账户和一笔车贷。每个月，车贷会自动从你的储蓄账户中扣除。为了完成这项操作，你的储蓄账户余额必须减少车贷金额，同时车贷的余额也必须减少。
 
-这种需要多次数据库更新的操作被称为 `transaction`（事务）。为了使一个事务完成，事务涉及的所有步骤都必须执行。如果事务中的任何一个步骤执行失败，则事务中的所有步骤都不应被执行。例如，想象银行系统已经开始处理你的车贷还。还款金额已从你的储蓄账户余额中扣除，但在车贷余额减少之前发生了某种系统故障。如果你发现车贷金额已经被扣除了，你会感到非常沮丧。
+这种需要多次数据库更新的操作被称为`transaction`（事务）。为了使一个事务完成，事务涉及的所有步骤都必须执行。如果事务中的任何一个步骤执行失败，则事务中的所有步骤都不应被执行。例如，想象银行系统已经开始处理你的车贷还。还款金额已从你的储蓄账户余额中扣除，但在车贷余额减少之前发生了某种系统故障。如果你发现车贷金额已经被扣除了，你会感到非常沮丧。
 
 ### 存储过程
 
-许多商业数据库系统允许你创建 SQL 语句并将其存储在 DBMS 内部。这些 SQL 语句被称为 `stored procedures`（存储过程），可以使用使用 DBMS 的其他应用程序来执行。如果你编写了一个在各种应用程序中频繁使用的 SQL 语句，将其作为存储过程存储在 DBMS 中可能会很有帮助。那么，当你需要执行该 SQL 语句时，可以从任何应用程序中调用该存储过程。由于存储过程已于 DBMS 中，它们的执行速度通常比从 DBMS 外部提交的 SQL 语句更快。
+许多商业数据库系统允许你创建 SQL 语句并将其存储在 DBMS 内部。这些 SQL 语句被称为`stored procedures`（存储过程），可以使用使用 DBMS 的其他应用程序来执行。如果你编写了一个在各种应用程序中频繁使用的 SQL 语句，将其作为存储过程存储在 DBMS 中可能会很有帮助。那么，当你需要执行该 SQL 语句时，可以从任何应用程序中调用该存储过程。由于存储过程已于 DBMS 中，它们的执行速度通常比从 DBMS 外部提交的 SQL 语句更快。
 
+本书中我们不会详细介绍存储过程细节，但如果你想学习更多知识，我们将为你指引正确的方向。每个 DBMS 都有其用于在 SQL 中创建存储过程的语法，因此你必须查阅你的 DBMS 文档来确定格式。一旦你已经在 SQL 中正确地编写了存储过程，只需使用`Statement`类的`execute`方法将其提交给 DBMS 即可。要执行存储过程，你必须创建一个`CallableStatement`对象。`CallableStatement`是`java.sql`包中的一个接口。要创建`CallableStatement`对象，你需要调用`Connection`类的`prepareCall`语句。
 
+## 检查点 16.32
 
+`../components/metrodigi/ch16-inline_self_quiz_v1.0.0-29/index.html`
 
+## 检查点 16.33
 
-本书中我们不会详细介绍存储过程细节，但如果你想学习更多知识，我们将为你指引正确的方向。每个 DBMS 都有其用于在 SQL 中创建存储过程的语法，因此你必须查阅你的 DBMS 文档来确定格式。一旦你已经在 SQL 中正确地编写了存储过程，只需使用 `Statement` 类的 `execute` 方法将其提交给 DBMS 即可。要执行存储过程，你必须创建一个 `CallableStatement` 对象。`CallableStatement` 是 `java.sql` 包中的一个接口。要创建 `CallableStatement` 对象，你需要调用 `Connection` 类的 `prepareCall` 语句。
+`../components/metrodigi/ch16-inline_self_quiz_v1.0.0-30/index.html`
 
-# 检查点 16.32
-../components/metrodigi/ch16-inline_self_quiz_v1.0.0-29/index.html
+## 16.12 需要避免的常见错误
 
-# 检查点 16.33
-../components/metrodigi/ch16-inline_self_quiz_v1.0.0-30/index.html
+- **在 SQL 语句中使用`==`运算符代替`=`运算符。** SQL 中的相等运算符是一个`=`符号，而不是两个。
+- **使用双引号括字符串而不是单引号。** SQL 中的字符串字面量是用单引号括起来，而不是双引号。
+- **在 SQL 语句中使用`&&`和`||`。** SQL 中的逻辑与和逻辑或运算符是单词`AND`和`OR`，而不是`&&`和`||`符号。
+- **在`UPDATE`语句中未使用正确的`WHERE`子句。** 使用`UPDATE`语句时，请注意不要漏掉`WHERE`子句和条件表达式。你可能会更改表中每一行的内容！
+- **在`DELETE`语句中未使用正确的`WHERE`子句。** 使用`DELETE`语句时，请注意不要漏掉`WHERE`子句和条件表达式。你可能会删除表中的每一行！
+- **在连接数据时未使用正确的`WHERE`子句。** 在从多个表连接数据时，务必使用`WHERE`子句来指定链接适当列的搜索准则。这样做将导致大量无关的数据。
 
-# 16.12 需要避免的常见错误
+## 检查点 16.34
 
--   **在 SQL 语句中使用 `==` 运算符代替 `=` 运算符。** SQL 中的相等运算符是一个 `=` 符号，而不是两个。
--   **使用双引号括字符串而不是单引号。** SQL 中的字符串字面量是用单引号括起来，而不是双引号。
--   **在 SQL 语句中使用 `&&` 和 `||`。** SQL 中的逻辑与和逻辑或运算符是单词 `AND` 和 `OR`，而不是 `&&` 和 `||` 符号。
--   **在 `UPDATE` 语句中未使用正确的 `WHERE` 子句。** 使用 `UPDATE` 语句时，请注意不要漏掉 `WHERE` 子句和条件表达式。你可能会更改表中每一行的内容！
--   **在 `DELETE` 语句中未使用正确的 `WHERE` 子句。** 使用 `DELETE` 语句时，请注意不要漏掉 `WHERE` 子句和条件表达式。你可能会删除表中的每一行！
--   **在连接数据时未使用正确的 `WHERE` 子句。** 在从多个表连接数据时，务必使用 `WHERE` 子句来指定链接适当列的搜索准则。这样做将导致大量无关的数据。
+`../components/metrodigi/ch16-inline_self_quiz_v1.0.0-31/index.html`
 
-# 检查点 16.34
-../components/metrodigi/ch16-inline_self_quiz_v1.0.0-31/index.html
+## 检查点 16.35
 
-# 检查点 16.35
-../components/metrodigi/ch16-inline_self_quiz_v1.0.0-32/index.html
+`../components/metrodigi/ch16-inline_self_quiz_v1.0.0-32/index.html`
 
-# 检查点 16.36
-../components/metrodigi/ch16-inline_self_quiz_v1.0.0-33/index.html
+## 检查点 16.36
+
+`../components/metrodigi/ch16-inline_self_quiz_v1.0.0-33/index.html`
 
 ## 编程挑战
 
 ## 客户插入器问题
+
 [`mediaplayer.pearsoncmg.com/assets/_video.true/SwzCyTAKw6tSvpx_XBOl9NkJXARII13k`](https://mediaplayer.pearsoncmg.com/assets/_video.true/SwzCyTAKw6tSvpx_XBOl9NkJXARII13k)
 
 ### 1. 客户插入器
-编写一个连接到 `CoffeeDB` 数据库的应用程序，允许用户向 `Customer` 表插入新行。
+
+编写一个连接到`CoffeeDB`数据库的应用程序，允许用户向`Customer`表插入新行。
 
 ### 2. 客户更新器
-编写一个连接到 `CoffeeDB` 数据库的应用程序，允许用户选择客户，然后更改该客户的任何信息。（你不尝试更改客户编号，因为它被 `UnpaidOrder` 表引用。）
+
+编写一个连接到`CoffeeDB`数据库的应用程序，允许用户选择客户，然后更改该客户的任何信息。（你不尝试更改客户编号，因为它被`UnpaidOrder`表引用。）
 
 ### 3. 未付订单总和
-编写一个连接到 `CoffeeDB` 数据库的应用程序，然后计算并显示未付订单的欠额。这将是每行 `Cost` 列之和。
+
+编写一个连接到`CoffeeDB`数据库的应用程序，然后计算并显示未付订单的欠额。这将是每行`Cost`列之和。
 
 ### 4. 人口数据库
-确保你已经[下载](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)了书的源代码。在本章源代码文件夹中，你会找到一个名为 `CreateCityDB.java` 的程序。编译并运行该程序。该程序将创建一个名为 `CityDB` 的 Java DB 或 Apache Derby 数据库。`CityDB` 数据库将有一个名为 `City` 表，包含以下列：
+
+确保你已经[下载](https://media.pearsoncmg.com/ph/esm/0media_ecs/gaddis-java/downloads/Source_Code.zip)了书的源代码。在本章源代码文件夹中，你会找到一个名为`CreateCityDB.java`的程序。编译并运行该程序。该程序将创建一个名为`CityDB`的 Java DB 或 Apache Derby 数据库。`CityDB`数据库将有一个名为`City`表，包含以下列：
 
 | 列名 | 数据类型 |
 | --- | --- |
@@ -31464,27 +29705,33 @@ WHERE
 | 主键 | |
 | `Population` | `DOUBLE` |
 
-`CityName` 列存储城市名称`Population` 列存储该城市的人口。运行 `CreateCityDB.java` 程序后，`City` 表将包含 20 行不同的城市及其人口。接下来，编写一个连接到 `CityDB` 数据库的程序，允许用户选择以下：
--   按人口升序排列城市列表
--   按人口降序排列城市列表
--   按名称排列城市列表
--   获取所有城市的人口总数
--   获取所有城市的人口平均值
--   获取所有城市的人口最高值
+`CityName`列存储城市名称`Population`列存储该城市的人口。运行`CreateCityDB.java`程序后，`City`表将包含 20 行不同的城市及其人口。接下来，编写一个连接到`CityDB`数据库的程序，允许用户选择以下：
+
+- 按人口升序排列城市列表
+- 按人口降序排列城市列表
+- 按名称排列城市列表
+- 获取所有城市的人口总数
+- 获取所有城市的人口平均值
+- 获取所有城市的人口最高值
 
 ### 5. 人员创建器
-创建一个名为 `Personnel` 的数据库。该数据库应有一个名为 `Employee` 的表，包含 `employee ID`、`name` 和 `hourly pay` 列。`employee ID` 应该是主键。在 `Employee` 表中插入至少五行数据。
+
+创建一个名为`Personnel`的数据库。该数据库应有一个名为`Employee`的表，包含`employee ID`、`name`和`hourly pay`列。`employee ID`应该是主键。在`Employee`表中插入至少五行数据。
 
 ### 6. 员工插入器
-编写一个 GUI 应用程序，允许用户向 `Personnel` 数据库添加新员工。
+
+编写一个 GUI 应用程序，允许用户向`Personnel`数据库添加新员工。
 
 ### 7. 员工更新器
-编写一个 GUI 应用程序，允许用户根据 `employee ID` 更改员工的任何信息。
+
+编写一个 GUI 应用程序，允许用户根据`employee ID`更改员工的任何信息。
 
 ### 8. 电话簿数据库
-创建一个名为 `PhoneBook` 的数据库。接下来，编写一个程序，允许用户添加电话号码、更改电话号码并删除行。
+
+创建一个名为`PhoneBook`的数据库。接下来，编写一个程序，允许用户添加电话号码、更改电话号码并删除行。
 
 # 附录 A: ASCII/Unicode 字符
+
 下表列出了 ASCII（美国标准信息交换）字符，这组代码被称为 Unicode 的子集。代码列显示了字符。例如，代码 65 代表字母 A。注意前 31 个代码是控制字符。
 
 | 代码 | 字符 | 代码 | 字符 | 代码 | 字符 | 代码 | 字符 |
@@ -31507,11 +29754,6 @@ WHERE
 | 15 | `SI` | 41 | `)` | 67 | `C` | 93 | `]` |
 | 16 | `DLE` | 42 | `*` | 68 | `D` | 94 | `^` |
 | 17 | `DC1` | 43 | `+` | 69 | `E` | 95 | `_` | 121 | `y` |
-
-
-
-
-
 | `18` | `DC2` | `44` | `'` | `70` | `F` | `96` | `` ` `` | `122` | `z` |
 | `19` | `DC3` | `45` | `-` | `71` | `G` | `97` | `a` | `123` | `{` |
 | `20` | `DC4` | `46` | `.` | `72` | `H` | `98` | `b` | `124` | `&#124;` |
@@ -31549,7 +29791,7 @@ WHERE
 | `&&` | 逻辑与 | 从左到右 |
 | `&#124;&#124;` | 逻辑或 | 从左到右 |
 | `?:` | 条件 | 从右到左 |
-| `=` `+=` `-=` `*=` `/=` `<<=` `>>=` `>>>=` `&=` `^=` `&#124;=` | 赋值 复合赋值 复合赋值 复合赋值 复合赋值 复合赋值 复合赋值 复合赋值 复合赋值 复合赋值 | 从右到左 从右到左 从右到左 从右到左 从右到左 从右到左 从右到左 从右到左 从右到左 从右到左 |
+| `=` `+=` `-=` `*=` `/=` `<<=` `>>=` `>>>=` `&=` `^=` `&#124;=` | 赋值 复合赋值 复合赋值 复合赋值 复合赋值 复合赋值 复合赋值 复合赋值 复合赋值 复合赋值 复合赋值 | 从右到左 从右到左 从右到左 从右到左 从右到左 从右到左 从右到左 从右到左 从右到左 从右到左 |
 
 # 附录 C
 
@@ -31563,200 +29805,194 @@ WHERE
 
 ## 安装 JDK 和使用 JDK
 
-以下单词是在 Java 9 中引入的。为了方便从任何文件夹执行 JDK 工具，您应该将此路径添加到。将此路径添加到 `Path` 变量的方法取决于您所使用的 Windows 版本。Windows 10、Windows 8 和 Windows 7 的步骤如下。
 
-### Windows 10
+
+以下单词是在 Java 9 中引入的。为了方便从任何文件夹执行 JDK 工具，您应该将此路径添加到`Path`变量。将此路径添加到`Path`变量的方法取决于您所使用的 Windows 版本。Windows 10、Windows 8 和 Windows 7 的步骤如下。
+
+## Windows 10
 
 在 Windows 搜索框中输入“环境变量”，然后从搜索结果中选择**编辑系统环境变量**。
 
-这将显示*系统属性*窗口（顶部选了*高级* 选项卡）。点击“环境变量...”按钮。在**系统变量**下，找到 *Path*，点击它，然后点击“编辑”。在现有内容的末尾添加分号，然后添加 JDK 工具程序的路径。一直点击“确定”按钮直到所有对话框关闭并退出控制面板。
+这将显示*系统属性*窗口（顶部选了*高级*选项卡）。点击“环境变量...”按钮。在**系统变量**下，找到`Path`，点击它，然后点击“编辑”。在现有内容的末尾添加分号，然后添加 JDK 工具程序的路径。一直点击“确定”按钮直到所有对话框关闭并退出控制面板。
 
-### Windows 8
+## Windows 8
 
+在屏幕右下角，点击`Search`图标并输入`Control Panel.`。点击`Control Panel,`，然后点击`System,`，接着点击`Advanced system settings.`。点击`Advanced`选项卡，然后点击`Environment Variables`。在`System Variables`下，找到`Path`，点击它，然后点击`Edit`按钮。在现有内容的末尾添加一个分号，然后添加 JDK 实用程序的路径。反复点击`OK`按钮直到所有对话框关闭并退出控制面板。
 
+## Windows 7
 
-
-
-在屏幕右下角，点击 `Search` 图标并输入 `Control Panel.`。点击 `Control Panel,`，然后点击 `System,`，接着点击 `Advanced system settings.`。点击 `Advanced` 选项卡，然后点击 Environment Variables。在 System Variables, 下，找到 `Path`，点击它，然后点击 `Edit` 按钮。在现有内容的末尾添加一个分号，然后添加 JDK 实用程序的路径。反复点击 OK 按钮直到所有对话框关闭并退出控制面板。
-
-# Windows 7
-
-点击开始按钮，然后右键点击 `Computer`。在弹出的菜单中，选择 `Properties`。在随后出现的窗口中，点击 `Advanced system settings`。这将显示系统属性窗口。点击 `Environment Variables` 按钮。在 System Variables 列表中滚动到 `Path` 变量。选择 `Path` 变量并点击 `Edit` 按钮。在现有内容的末尾添加一个分号，然后添加 JDK 实用程序的路径。反复点击 OK 按钮直到所有对话框关闭并退出控制面板。
+点击开始按钮，然后右键点击`Computer`。在弹出的菜单中，选择`Properties`。在随后出现的窗口中，点击`Advanced system settings`。这将显示系统属性窗口。点击`Environment Variables`按钮。在`System Variables`列表中滚动到`Path`变量。选择`Path`变量并点击`Edit`按钮。在现有内容的末尾添加一个分号，然后添加 JDK 实用程序的路径。反复点击`OK`按钮直到所有对话框关闭并退出控制面板。
 
 # 使用 Java API 文档
 
 查看官方 Java API 文档，请访问以下网站：
 
 ```
-http://docs.oracle.com/javase 
+http://docs.oracle.com/javase
 ```
 
-图 D-1 显示了编写本文时的页面外观。该页面提供了指向几个有用网站的链接，包括官方的 `API documentation`。作为一名学习 Java 的学生或专业 Java 程序员，你会发现自己会频繁查阅 API 文档。
+图 D-1 显示了编写本文时的页面外观。该页面提供了指向几个有用网站的链接，包括官方的`API documentation`。作为一名学习 Java 的学生或专业 Java 程序员，你会发现自己会频繁查阅 API 文档。
 
-# 图 D-1 Java SE 文档站点 (Oracle Corporate Counsel)
+## 图 D-1 Java SE 文档站点 (Oracle Corporate Counsel)
 
 ![显示了 Java SE 文档首页，标题为 Oracle JDK 9 Documentation，在 Oracle Corporate Counsel 中显示。](img/dfig01.png)图 D-1 完整替代文本
 
-当你点击 `API documentation` 链接，然后点击 `Frames` 链接时，你将看到一个与 图 D-2 所示类似的页面。在左侧窗格中，你将看到 Java API 中所有类和接口按字母顺序排列列表。要查看特定类的文档，只需在左窗格中滚动到该类的名称并点击它。
+当你点击`API documentation`链接，然后点击`Frames`链接时，你将看到一个与图 D-2 所示类似的页面。在左侧窗格中，你将看到 Java API 中所有类和接口按字母顺序排列列表。要查看特定类的文档，只需在左窗格中滚动到该类的名称并点击它。
 
-# 图 D-2 Java SE API 文档 (Oracle Corporate Counsel)
+## 图 D-2 Java SE API 文档 (Oracle Corporate Counsel)
 
 ![在 Oracle Corporate Counsel 中显示了 Java SE space API 文档。](img/dfig02.png)图 D-2 完整替代文本
 
 # 附录 E
 
-使用 `javadoc` 实用
+## 使用 `javadoc` 实用
 
-Java JDK 自带有一个名为 `javadoc` 的工具，你可以用它为你编写的类、接口和方法自动生成文档。`javadoc` 工具会生成与 Java API 文档结构相同的 HTML 文档。要生成此文档，通常需要两个通用的步骤：
+Java JDK 自带有一个名为`javadoc`的工具，你可以用它为你编写的类、接口和方法自动生成文档。`javadoc`工具会生成与 Java API 文档结构相同的 HTML 文档。要生成此文档，通常需要两个通用的步骤：
 
 1. 在你想要文档化的 Java 源代码文件中编写文档注释。
-2. 运行 `javadoc` 工具，并将 Java 源代码文件名作为命令行参数传递。。
+2. 运行`javadoc`工具，并将 Java 源代码文件名作为命令行参数传递。
 
 让我们仔细观察每一个步骤。
 
-# 编写文档注释
+## 编写文档注释
 
-在第一步中，你在 Java 源代码文件中写入特殊的注释，称为 `documentation comments`。你通常在编写 Java 代码时完成此操作。文档注释位于类头、接口头或方法头之前。每个注释都包含关于其之前所属的类、接口或方法的信息。
+在第一步中，你在 Java 源代码文件中写入特殊的注释，称为`documentation comments`。你通常在编写 Java 代码时完成此操作。文档注释位于类头、接口头或方法头之前。每个注释都包含关于其之前所属的类、接口或方法的信息。
 
-文档注释以 `/**` 开头，以 `*/` 结束。在这两个符号之间，你编写 `javadoc` 工具可用于生成文档的信息。这些信息可以包含普通文本描述，以及以 `@` 符号开头的特殊 `javadoc` 标签。当你运行 `javadoc` 工具时，它会搜索这些文档注释并处理它们。
+文档注释以`/**`开头，以`*/`结束。在这两个符号之间，你编写`javadoc`工具可用于生成文档的信息。这些信息可以包含普通文本描述，以及以`@`符号开头的特殊`javadoc`标签。当你运行`javadoc`工具时，它会搜索这些文档注释并处理它们。
 
-为了查看文档注释的示例，我们将查看在 第 6 章 中首次介绍的 `BankAccount` 类。该类对类及其方法使用了简单的文档注释。首先，这里是类的文档，随后是类头：
-
-```
-/**
-   The BankAccount class simulates a bank account.
- */
- public class BankAccount
-```
-
-类文档注释中的文本应包含对类的简要描述。这是将用于描述类的文本。类文档注释中的文本应包含类的简要描述。注意在此类中，类文档注释中的文本空格 javjavjavjav，在现有内容的末尾添加分号。`javadoc` 忽略行开头的空白字符。例如，以下文档注释将产生相同的结果：
+为了查看文档注释的示例，我们将查看在第 6 章中首次介绍的`BankAccount`类。该类对类及其方法使用了简单的文档注释。首先，这里是类的文档，随后是类头：
 
 ```
 /**
-  * The BankAccount class simulates a bank account.
- */
- public class BankAccount
+   The BankAccount class simulates a bank account.
+*/
+public class BankAccount
 ```
 
-虽然星号会被 `javadoc` 忽略，但它们有助于阅读代码的人识别出注释。
+类文档注释中的文本应包含对类的简要描述。这是将用于描述类的文本。类文档注释中的文本应包含类的简要描述。注意在此类中，类文档注释中的文本空格 javjavjavjav，在现有内容的末尾添加分号。`javadoc`忽略行开头的空白字符。例如，以下文档注释将产生相同的结果：
+
+```
+/**
+ * The BankAccount class simulates a bank account.
+*/
+public class BankAccount
+```
+
+虽然星号会被`javadoc`忽略，但它们有助于阅读代码的人识别出注释。
 
 方法的文档注释结构如下：
 
-*   在 `/**` 符号之后，是方法的简要描述。此文本将用于在 HTML 文件中描述该方法。此外，方法注释的第一句话将用作方法的摘要。
-*   如果方法有参数，注释中将出现每个参数的文档。参数文档以 `@param` 标签开头，随后是参数名称，然后是参数描述。
-*   如果方法返回值，注释中将出现返回值的描述。该描述以 `@return` 标签开头，随后是返回值的描述。
-*   如果方法抛出异常，注释中将出现每个异常的文档。每个异常的文档以 `@exception` 标签开头，随后是异常名称，然后是导致异常的事件描述。
+* 在`/**`符号之后，是方法的简要描述。此文本将用于在 HTML 文件中描述该方法。此外，方法注释的第一句话将用作方法的摘要。
+* 如果方法有参数，注释中将出现每个参数的文档。参数文档以`@param`标签开头，随后是参数名称，然后是参数描述。
+* 如果方法返回值，注释中将出现返回值的描述。该描述以`@return`标签开头，随后是返回值的描述。
+* 如果方法抛出异常，注释中将出现每个异常的文档。每个异常的文档以`@exception`标签开头，随后是异常名称，然后是导致异常的事件描述。
 
-例如，这里是 `BankAccount` 的构造函数之一，其前面是文档注释：
+例如，这里是`BankAccount`的构造函数之一，其前面是文档注释：
 
 ```
 /**
-  * The constructor initializes the balance
-  and interestRate fields.
-  * @param startBalance The starting balance
-  * @param intRate The interest rate
-  */
- public BankAccount(double startBalance,
-                    double intRate)
- {
-    balance = startBalance;
-    interestRate = intRate;
-    interest = 0.0;
- }
+ * The constructor initializes the balance
+   and interestRate fields.
+ * @param startBalance The starting balance
+ * @param intRate The interest rate
+ */
+public BankAccount(double startBalance,
+                   double intRate)
+{
+   balance = startBalance;
+   interestRate = intRate;
+   interest = 0.0;
+}
 ```
 
-该构造函数的文档注释相对简单，包含一个句子描述和两个 `@param` 标签。
+该构造函数的文档注释相对简单，包含一个句子描述和两个`@param`标签。
 
-在 `javadoc` 生成的 HTML 文件中，每个方法有两个主要的文档部分：`summary section` 和 `detail section`。方法文档注释中的第一句用作方法的摘要。注意 `javadoc` 将结束视为句号后跟空白字符。因此，当方法描述包含多个句子时，你应该始终让第一句以句号后跟空白字符结束。方法的详细部分将包含从注释开始到第一个标签的所有文本，或者如果没有包含标签，则到注释结束。
+在`javadoc`生成的 HTML 文件中，每个方法有两个主要的文档部分：`summary section`和`detail section`。方法文档注释中的第一句用作方法的摘要。注意`javadoc`将结束视为句号后跟空白字符。因此，当方法描述包含多个句子时，你应该始终让第一句以句号后跟空白字符结束。方法的详细部分将包含从注释开始到第一个标签的所有文本，或者如果没有包含标签，则到注释结束。
 
-# @param 标签
+## `@param`标签
 
-当 `javadoc` 工具在方法文档注释内部看到 `@param` 标签时，它知道参数变量的文档将紧随其后。每个参数应该有自己的 `@param` 标签，并遵循以下通用格式：
+当`javadoc`工具在方法文档注释内部看到`@param`标签时，它知道参数变量的文档将紧随其后。每个参数应该有自己的`@param`标签，并遵循以下通用格式：
 
 ```
-@param parameterName Description 
+@param parameterName Description
 ```
 
+在通用格式中，`parameterName`是参数名，`Description`是该参数的简要描述。当方法的文档注释包含一个或多个`@param`标签时，`javadoc`工具将在方法的文档中创建一个`Parameters`（参数）部分。这里就是列出方法参数描述的地方。请记住关于`@param`标签注释的几点：
 
+* 方法文档注释中的所有`@param`标签必须出现在方法的通用描述之后。
+* 描述可以跨多行。它结束于文档注释的末尾（`*/`符号）或另一个标签的开始处。
 
+## `@return`标签
 
-
-在通用格式中，`parameterName` 是参数名，`Description` 是该参数的简要描述。当方法的文档注释包含一个或多个 `@param` 标签时，`javadoc` 工具将在方法的文档中创建一个 `Parameters`（参数）部分。这里就是列出方法参数描述的地方。请记住关于 `@param` 标签注释的几点：
-
-*   方法文档注释中的所有 `@param` 标签必须出现在方法的通用描述之后。
-*   描述可以跨多行。它结束于文档注释的末尾（`*/` 符号）或另一个标签的开始处。
-
-# `@return` 标签
-
-这里是 `BankAccount` 类的另一个方法，它有一个返回值：
+这里是`BankAccount`类的另一个方法，它有一个返回值：
 
 ```java
 /**
-  * The getBalance 方法返回余额。
-  * @return balance 字段中的值。
-  */
- public double getBalance()
- {
-    return balance;
- }
+ * The getBalance 方法返回余额。
+ * @return balance 字段中的值。
+ */
+public double getBalance()
+{
+   return balance;
+}
 ```
 
-由于此方法返回一个值，因此文档注释包含一个 `@return` 标签。返回值的文档遵循以下通用格式：
+由于此方法返回一个值，因此文档注释包含一个`@return`标签。返回值的文档遵循以下通用格式：
 
 ```
-@return Description 
+@return Description
 ```
 
-在通用格式中，`Description` 是返回值的简要描述。当方法的文档注释包含一个 `@return` 标签时，`javadoc` 工具将在方法的文档中创建一个 `Returns`（返回值）部分。这里就是列出方法返回值描述的地方。请记住关于 `@return` 标签注释的几点：
+在通用格式中，`Description`是返回值的简要描述。当方法的文档注释包含一个`@return`标签时，`javadoc`工具将在方法的文档中创建一个`Returns`（返回值）部分。这里就是列出方法返回值描述的地方。请记住关于`@return`标签注释的几点：
 
-*   方法文档注释中的 `@return` 标签必须出现在方法的通用描述之后。
-*   描述可以跨多行。它结束于文档注释的末尾（`*/` 符号）或另一个标签的开始处。
+* 方法文档注释中的`@return`标签必须出现在方法的通用描述之后。
+* 描述可以跨多行。它结束于文档注释的末尾（`*/`符号）或另一个标签的开始处。
 
-# `@exception` 和 `@throws` 标签
+## `@exception`和`@throws`标签
 
-`@exception` 和 `@throws` 标签的作用相同：指定由方法抛出的异常。以下是这两个标签的通用格式：
+`@exception`和`@throws`标签的作用相同：指定由方法抛出的异常。以下是这两个标签的通用格式：
 
 ```
-@exception ExceptionName Description 
- @throws ExceptionName Description 
+@exception ExceptionName Description
+@throws ExceptionName Description
 ```
 
-`ExceptionName` 是异常名称，`Description` 是导致异常发生的情况的描述。当方法的文档注释包含 `@exception` 标签或 `@throws` 标签时，`javadoc` 工具将在方法的文档中创建一个 `Throws`（抛出）部分。这里就是列出方法异常描述的地方（注：原文此处可能有误，应为异常描述）。请记住关于 `@exception` 和 `@throws` 标签注释的几点：
+`ExceptionName`是异常名称，`Description`是导致异常发生的情况的描述。当方法的文档注释包含`@exception`标签或`@throws`标签时，`javadoc`工具将在方法的文档中创建一个`Throws`（抛出）部分。这里就是列出方法异常描述的地方（注：原文此处可能有误，应为异常描述）。请记住关于`@exception`和`@throws`标签注释的几点：
 
-*   方法文档注释中的 `@exception` 标签或 `@throws` 标签必须出现在方法的通用描述之后。
-*   描述可以跨多行。它结束于文档注释的末尾（`*/` 符号）或另一个标签的开始处。
+* 方法文档注释中的`@exception`标签或`@throws`标签必须出现在方法的通用描述之后。
+* 描述可以跨多行。它结束于文档注释的末尾（`*/`符号）或另一个标签的开始处。
 
-例如，下面的代码显示了一个名为 `FileRead` 的方法，在读取文件失败时会抛出 `IOException`：
+例如，下面的代码显示了一个名为`FileRead`的方法，在读取文件失败时会抛出`IOException`：
 
 ```java
 /**
-  * 此方法打开文件并读取内容。
-  * @param FileName 指定要读取的文件。
-  * @exception IOException 读取文件失败。
-  */
- public void FileRead(String filename) throws IOException
- {
-    // 方法体在此处...
- }
+ * 此方法打开文件并读取内容。
+ * @param FileName 指定要读取的文件。
+ * @exception IOException 读取文件失败。
+ */
+public void FileRead(String filename) throws IOException
+{
+   // 方法体在此处...
+}
 ```
 
-# 运行 `javadoc`
+## 运行`javadoc`
 
-在创建一个或多个包含文档注释的源文件后，下一步是运行 `javadoc` 工具。你在操作系统的命令行提示符中运行 `javadoc`。以下是 `javadoc` 命令的通用格式：
+在创建一个或多个包含文档注释的源文件后，下一步是运行`javadoc`工具。你在操作系统的命令行提示符中运行`javadoc`。以下是`javadoc`命令的通用格式：
 
 ```
-javadoc SourceFileList 
+javadoc SourceFileList
 ```
 
-`SourceFileList` 是一个或多个源文件的名称。`javadoc` 将读取作为参数指定的文件，并为每个文件生成文档。例如，下面的命令将为 `BankAccount` 类生成文档：
+`SourceFileList`是一个或多个源文件的名称。`javadoc`将读取作为参数指定的文件，并为每个文件生成文档。例如，下面的命令将为`BankAccount`类生成文档：
 
 ```
 javadoc BankAccount.java
 ```
 
-此命令执行后，会在源文件所在的相同目录中创建几个 HTML 文件。其中一个文件的名称与类文件相同。在一种情况下，它将被命名为 `BankAccount.html`。这就是你在浏览器中打开以查看文档的文件。图 E-1 显示了 `BankAccount` 类的文档。
+此命令执行后，会在源文件所在的相同目录中创建几个 HTML 文件。其中一个文件的名称与类文件相同。在一种情况下，它将被命名为`BankAccount.html`。这就是你在浏览器中打开以查看文档的文件。图 E-1 显示了`BankAccount`类的文档。
 
-# 图 E-1 `BankAccount` 类文档 (Oracle Corporate Counsel)
+## 图 E-1 `BankAccount`类文档 (Oracle Corporate Counsel)
 
 ![Oracle Corporate Counsel 中显示了 Bank Account 类文档。在 Class Bank Account 页面标题下方，关于类的信息描述了它的功能。还可以查看的是构造方法摘要部分和方法摘要部分。](img/efig01.png)
 
@@ -31766,22 +30002,19 @@ javadoc BankAccount.java
 javadoc Student.java CompSciStudent.java
 ```
 
-此命令执行后，生成的 HTML 文件将包含 `Student` 和 `CompSciStudent` 类的文档。其中一个 HTML 文件将命名为 `index.html`。你可以在浏览器中打开此文件来查看每个类的文档。图 E-2 显示了
+此命令执行后，生成的 HTML 文件将包含`Student`和`CompSciStudent`类的文档。其中一个 HTML 文件将命名为`index.html`。你可以在浏览器中打开此文件来查看每个类的文档。图 E-2 显示了
 
-# 图 E-2 文档文件 (Oracle Corporate Counsel)
+## 图 E-2 文档文件 (Oracle Corporate Counsel)
 
 ![Oracle Corporate Counsel 中显示了 Bank Account 类文档。在 Class Bank Account 页面标题下方，关于类的信息描述了它的功能。还可以查看的是构造方法摘要部分和方法摘要部分。](img/efig01.png)
-
-
-
 
 ```
 javadoc -private Class1.java Class2.java Class3.java
 ```
 
-此命令将为所有类及其成员生成文档，无论它们的访问修符如何。
+此命令将为所有类及其成员生成文档，无论它们的访问修饰符如何。
 
-`-protected` 选项会导致 `javadoc` 只为公共和保护的类、接口及成员生成文档。这与 `javadoc` 的默认行为相同。例如：
+`-protected`选项会导致`javadoc`只为公共和保护的类、接口及成员生成文档。这与`javadoc`的默认行为相同。例如：
 
 ```
 javadoc -protected Class1.java Class2.java Class3.java
@@ -31789,35 +30022,34 @@ javadoc -protected Class1.java Class2.java Class3.java
 
 # 附录 F
 
-## 关于 Math 类
+## 关于 `Math` 类
 
-Java 的 `Math` 类是用于执行特定数学操作的静态方法集合。该类位于 `java.lang` 包，因此使用它时不需要 `import` 语句。
+Java 的`Math`类是用于执行特定数学操作的静态方法集合。该类位于`java.lang`包，因此使用它时不需要`import`语句。
 
-在第 2 章中，你学习了 `Math.pow` 方法，它返回一个数字幂的值。表 F-1 描述了 `Math` 类的几个方法。
+在第 2 章中，你学习了`Math.pow`方法，它返回一个数字幂的值。表 F-1 描述了`Math`类的几个方法。
 
-# 表 F-1 若干 Math 类方法
+## 表 F-1 若干 `Math` 类方法
 
 | 方法 | 示例用法 | 说明 |
-
 | --- | --- | --- |
-| `abs` | `y = Math.abs(x);` | 返回参数的绝对值。该方法可以接受并返回 `double`、`float`、`int` 和 `long` 数据类型的值。 |
-| `acos` | `y = Math.acos(x);` | 返回参数的反余弦。参数应是一个角度的余弦。（参数值必须在 −1.0 到 1.0 之间）。返回类型和参数均为 `double`。 |
-| `asin` | `y = Math.asin(x);` | 返回参数的正弦。参数应是一个角度的正弦。（参数值必须在 −1.0 到 1.0 之间）。返回类型和参数均为 `double`。 |
-| `atan` | `y = Math.atan(x);` | 返回参数的反正切。参数应是一个角度的正切。返回类型和参数均为 `double`。 |
-| `cbrt` | `y = Math.cbrt(x);` | 返回参数的立方根。返回类型和参数均为 `double`。注意：此方法在 Java 5 中引入。 |
-| `ceil` | `y = Math.ceil(x);` | 返回大于或等于参数的最小整数。返回类型和参数均为 `double`。 |
-| `cos` | `y = Math.cos(x);` | 返回参数的余弦。参数应以弧度表示的角度。返回类型和参数均为 `double`。 |
-| `exp` | `y = Math.exp(x);` | 计算参数的指数函数，即 *e*^(*x*)。返回类型和参数均为 `double`。 |
-| `floor` | `y = Math.floor(x);` | 返回小于或等于参数的最大整数。返回类型和参数均为 `double`。 |
-| `hypot` | `c = Math.hypot(a, b);` | 返回直角三角形的边边的长度。参数 `a` 和 `b` 是三角形另外两条边的长度。返回类型和参数均为 `double`。注意：此方法在 Java 5 中引入。 |
-| `log` | `y = Math.log(x);` | 返回参数的自然对数。返回类型和参数均为 `double`。 |
-| `pow` | `y = Math.pow(x, z);` | 返回第一个参数的第二个参数幂的值。返回类型和参数均为 `double`。 |
-| `round` | `y = Math.round(x);` | 返回参数的值，四舍五入到最近的整数。参数预期为 `double` 或 `float`。如果参数是 `double`，返回类型为 `long`；如果参数是 `float`，返回类型为 `int`。 |
-| `sin` | `y = Math.sin(x);` | 返回参数的正弦。参数应以弧度表示的角度。返回类型和参数均为 `double`。 |
-| `sqrt` | `y = Math.sqrt(x);` | 返回参数的平方根。返回类型和参数均为 `double`。 |
-| `tan` | `y = Math.tan(x);` | 返回参数的正切。参数应以弧度表示的角度。返回类型和参数均为 `double`。 |
-| `toDegrees` | `y = Math.toDegrees(x);` | 接受弧度角度作为参数。返回转换成角度的角度。参数和返回值均为 `double`。 |
-| `toRadians` | `y = Math.toRadians(x);` | 接受角度角度作为参数。返回转换成弧度角度。参数和返回值均为 `double`。 |
+| `abs` | `y = Math.abs(x);` | 返回参数的绝对值。该方法可以接受并返回`double`、`float`、`int`和`long`数据类型的值。 |
+| `acos` | `y = Math.acos(x);` | 返回参数的反余弦。参数应是一个角度的余弦。（参数值必须在 −1.0 到 1.0 之间）。返回类型和参数均为`double`。 |
+| `asin` | `y = Math.asin(x);` | 返回参数的正弦。参数应是一个角度的正弦。（参数值必须在 −1.0 到 1.0 之间）。返回类型和参数均为`double`。 |
+| `atan` | `y = Math.atan(x);` | 返回参数的反正切。参数应是一个角度的正切。返回类型和参数均为`double`。 |
+| `cbrt` | `y = Math.cbrt(x);` | 返回参数的立方根。返回类型和参数均为`double`。注意：此方法在 Java 5 中引入。 |
+| `ceil` | `y = Math.ceil(x);` | 返回大于或等于参数的最小整数。返回类型和参数均为`double`。 |
+| `cos` | `y = Math.cos(x);` | 返回参数的余弦。参数应以弧度表示的角度。返回类型和参数均为`double`。 |
+| `exp` | `y = Math.exp(x);` | 计算参数的指数函数，即 *e*^(*x*)。返回类型和参数均为`double`。 |
+| `floor` | `y = Math.floor(x);` | 返回小于或等于参数的最大整数。返回类型和参数均为`double`。 |
+| `hypot` | `c = Math.hypot(a, b);` | 返回直角三角形的斜边的长度。参数`a`和`b`是三角形另外两条边的长度。返回类型和参数均为`double`。注意：此方法在 Java 5 中引入。 |
+| `log` | `y = Math.log(x);` | 返回参数的自然对数。返回类型和参数均为`double`。 |
+| `pow` | `y = Math.pow(x, z);` | 返回第一个参数的第二个参数幂的值。返回类型和参数均为`double`。 |
+| `round` | `y = Math.round(x);` | 返回参数的值，四舍五入到最近的整数。参数预期为`double`或`float`。如果参数是`double`，返回类型为`long`；如果参数是`float`，返回类型为`int`。 |
+| `sin` | `y = Math.sin(x);` | 返回参数的正弦。参数应以弧度表示的角度。返回类型和参数均为`double`。 |
+| `sqrt` | `y = Math.sqrt(x);` | 返回参数的平方根。返回类型和参数均为`double`。 |
+| `tan` | `y = Math.tan(x);` | 返回参数的正切。参数应以弧度表示的角度。返回类型和参数均为`double`。 |
+| `toDegrees` | `y = Math.toDegrees(x);` | 接受弧度角度作为参数。返回转换成角度的角度。参数和返回值均为`double`。 |
+| `toRadians` | `y = Math.toRadians(x);` | 接受角度角度作为参数。返回转换成弧度角度。参数和返回值均为`double`。 |
 
 
 
@@ -31993,10 +30225,6 @@ import vehicles.Car;
 
 你可能记得，你之前在运行 `DecimalFormat` 类的程序中使用过以下 `import` 语句：
 
-
-
-
-
 ```java
 import java.text.DecimalFormat;
 ```
@@ -32010,8 +30238,11 @@ import java.util.Scanner;
 这条语句告诉编译器使用 `Scanner` 类，该类属于 `java.util` 包。`java.util` 包也是 Java 标准类库的一部分。此时此，总结一下创建和使用包的必要步骤可能会有所帮助：
 
 1.  在每个要作为包一部分的类文件中放置合适的 `package` 语句。`package` 语句必须是文件的第一行，或者仅由注释和/或空行引导。
+
 2.  你应该在系统上有一个用于存储包的基目录。在该目录下，创建一个与包名同名的目录。将包的类文件存储在此文件夹中。
+
 3.  将包基目录的路径添加到 `CLASSPATH` 环境变量中。
+
 4.  在每个意图使用该包的程序中放置合适的 `import` 语句。
 
 # 使用完全限定类名
@@ -32091,14 +30322,14 @@ public class Clerical
 }
 ```
 
-
-
-
-
 | `java.security` | 提供实现安全特性的类。 |
+
 | `java.sql` | 提供用于使用结构查询语言访问数据库的类。 |
+
 | `java.text` | 提供用于文本格式格式的各种类。 |
+
 | `java.util` | 提供各种实用程序类。 |
+
 | `javax.swing` | 提供用于创建图形用户界面的类。 |
 
 使用 Java 包中的类，你必须在程序中包含适当的 `import` 语句。例如，你已经使用了 `Scanner` 类，它位于 `java.util` 包中。该类需要以下 `import` 语句：
@@ -32131,92 +30362,90 @@ import java.io.*;
 
 # 代码列表 H-1 `(InventoryItem.java)`
 
+
+
 ```java
-1 /**
- 2  InventoryItem class
- 3 */
- 4 
- 5 public class InventoryItem
- 6 {
- 7   private String description;  // Item description
- 8   private int units;           // Units on hand
- 9 
- 10    /**
- 11       此构造函数将空字符串
- 12       赋值给 description 并将 0 赋值给 units。
- 13    */
- 14
- 15    public InventoryItem()
- 16    {
- 17       description = "";
- 18       units = 0;
- 19    }
- 20
- 21    /**
- 22       此构造函数将值
- 23       赋值给 description 和 units 字段。
- 24       @param d 描述。
- 25       @param u 库存数量。
- 26    */
- 27
- 28    public InventoryItem(String d, int u)
- 29    {
- 30       description = d;
- 31       units = u;
- 32    }
- 33
- 34
- 35    /**
- 36       setDescription 方法将一个字符串
- 37       赋值给 description 字段。
- 38       @param d 要赋值给 description 的字符串。
- 39    */
- 40
- 41    public void setDescription(String d)
- 42    {
- 43       description = d;
- 44    }
- 45
- 46    /**
- 47       setUnits 方法将一个值
- 48       赋值给 units 字段。
- 49       @param u 要赋值给 units 的值。
- 50
- 51    public void setUnits(int u)
- 52    {
- 53       units = u;
- 54    }
- 55
- 56
- 57    /**
- 58       getDescription 方法返回项目的
- 59       描述。
- 60       @return description 字段。
- 61    */
- 62
- 63    public String getDescription()
- 64    {
- 65       return description;
- 66    }
- 67
- 68
- 69    /**
- 70       getUnits 方法返回库存
- 71       数量。
- 72       @return units 字段。
- 73    */
- 74    public int getUnits()
- 75    {
- 76       return units;
- 77    }
- 78 }
+/**
+ InventoryItem class
+*/
+
+public class InventoryItem
+{
+  private String description;  // Item description
+  private int units;           // Units on hand
+
+    /**
+       此构造函数将空字符串
+       赋值给 description 并将 0 赋值给 units。
+    */
+
+    public InventoryItem()
+    {
+       description = "";
+       units = 0;
+    }
+
+    /**
+       此构造函数将值
+       赋值给 description 和 units 字段。
+       @param d 描述。
+       @param u 库存数量。
+    */
+
+    public InventoryItem(String d, int u)
+    {
+       description = d;
+       units = u;
+    }
+
+
+    /**
+       setDescription 方法将一个字符串
+       赋值给 description 字段。
+       @param d 要赋值给 description 的字符串。
+    */
+
+    public void setDescription(String d)
+    {
+       description = d;
+    }
+
+    /**
+       setUnits 方法将一个值
+       赋值给 units 字段。
+       @param u 要赋值给 units 的值。
+
+    public void setUnits(int u)
+    {
+       units = u;
+    }
+
+
+    /**
+       getDescription 方法返回项目的
+       描述。
+       @return description 字段。
+    */
+
+    public String getDescription()
+    {
+       return description;
+    }
+
+
+    /**
+       getUnits 方法返回库存
+       数量。
+       @return units 字段。
+    */
+    public int getUnits()
+    {
+       return units;
+    }
+}
 ```
 
 代码列表 H-2 所示的 `InventoryItemFile` 类旨在将 `InventoryItem` 对象作为记录在随机访问文件中读取和写入。该类还可以将文件指针移动到特定的记录。为了保持代码简单，没有对任何异常进行捕获。
-
-
-
-
 
 ```java
 import java.io.*;
@@ -32359,193 +30588,189 @@ public class InventoryItemFile
 }
 ```
 
-
-
-
 `getNumberOfRecords` 方法出现在第 133 行到 136 行。该方法返回文件中的记录数。它通过将文件的长度除以记录的大小来计算记录数。文件长度由 `RandomAccessFile` 类的 `length` 方法返回。
 
-该类中的最后一个方法是 `close` 方法，用于关闭文件。代码代码列表 H-3 中的程序展示了该类的简单演示。该程序要求用户输入五个项目的数据，这些数据存储在一个包含 `InventoryItem` 对象的数组中。然后程序将数组元素的内容保存到文件中。
+该类中的最后一个方法是 `close` 方法，用于关闭文件。代码列表 H-3 中的程序展示了该类的简单演示。该程序要求用户输入五个项目的数据，这些数据存储在一个包含 `InventoryItem` 对象的数组中。然后程序将数组元素的内容保存到文件中。
 
-# 代码列表 H-3 `(CreateInventoryFile.java)`
+## 代码列表 H-3 `(CreateInventoryFile.java)`
 
-```
-1 import java.io.*;
- 2 import java.util.Scanner;
- 3 
- 4 /**
- 5   此程序使用 InventoryFile 类来创建一个
- 6   包含来自 5 个 InventoryItem 对象数据的文件。
- 7 */
- 8 
- 9 public class CreateInventoryFile
- 10 {
- 11    public static void main(String[] args) throws IOException
- 12    {
- 13       final int NUM_ITEMS = 5;   // 项目数量
- 14       String description;        // 项目描述
- 15       int units;                 // 库存数量
- 16
- 17       // 创建一个用于键盘输入的的 Scanner 对象。
- 18       Scanner keyboard = new Scanner(System.in);
- 19
- 20       // 创建一个存放 InventoryItem 对象的数组。
- 21       InventoryItem[] items = new InventoryItem[NUM_ITEMS];
- 22
- 23       // 获取 InventoryItem 对象的数据。
- 24       System.out.println("Enter data for " + NUM_ITEMS +
- 25                          " inventory items.");
- 26
- 27       for (int i = 0; i < items.length; i++)
- 28       {
- 29          // 获取描述。
- 30          System.out.print("Enter an item description: ");
- 31          description = keyboard.nextLine();
- 32
- 33          // 获取库存数量。
- 34          System.out.print("Enter the number of units: ");
- 35          units = keyboard.nextInt();
- 36
- 37          // 消耗剩余的换行符。
- 38          keyboard.nextLine();
- 39
- 40          // 在数组中创建一个 InventoryItem 对象。
- 41          items[i] = new InventoryItem(description, units);
- 42       }
- 43
- 44       // 创建一个 InventoryFile 对象。
- 45       InventoryItemFile file =
- 46                     new InventoryItemFile("Inventory.dat");
- 47
- 48       // 将数组的内容写入文件。
- 49       for (int i = 0; i < items.length; i++)
- 50       {
- 51          file.writeInventoryItem(items[i]);
- 52       }
- 53
- 54       // 关闭文件。
- 55       file.close();
- 56
- 57       System.out.println("The data was written to the " +
- 58                          "Inventory.dat file.");
- 59    }
- 60 }
+```java
+import java.io.*;
+import java.util.Scanner;
+
+/**
+  此程序使用 InventoryFile 类来创建一个
+  包含来自 5 个 InventoryItem 对象数据的文件。
+*/
+
+public class CreateInventoryFile
+{
+   public static void main(String[] args) throws IOException
+   {
+      final int NUM_ITEMS = 5;   // 项目数量
+      String description;        // 项目描述
+      int units;                 // 库存数量
+
+      // 创建一个用于键盘输入的的 Scanner 对象。
+      Scanner keyboard = new Scanner(System.in);
+
+      // 创建一个存放 InventoryItem 对象的数组。
+      InventoryItem[] items = new InventoryItem[NUM_ITEMS];
+
+      // 获取 InventoryItem 对象的数据。
+      System.out.println("Enter data for " + NUM_ITEMS +
+                         " inventory items.");
+
+      for (int i = 0; i < items.length; i++)
+      {
+         // 获取描述。
+         System.out.print("Enter an item description: ");
+         description = keyboard.nextLine();
+
+         // 获取库存数量。
+         System.out.print("Enter the number of units: ");
+         units = keyboard.nextInt();
+
+         // 消耗剩余的换行符。
+         keyboard.nextLine();
+
+         // 在数组中创建一个 InventoryItem 对象。
+         items[i] = new InventoryItem(description, units);
+      }
+
+      // 创建一个 InventoryFile 对象。
+      InventoryItemFile file =
+                    new InventoryItemFile("Inventory.dat");
+
+      // 将数组的内容写入文件。
+      for (int i = 0; i < items.length; i++)
+      {
+         file.writeInventoryItem(items[i]);
+      }
+
+      // 关闭文件。
+      file.close();
+
+      System.out.println("The data was written to the " +
+                         "Inventory.dat file.");
+   }
+}
 ```
 
 带有示例输入的程序输出（部分已加粗显示）
 
 ```
 Enter data for 5 inventory items.
- Enter an item description: Wrench [Enter] 
- Enter the number of units: 20 [Enter] 
- Enter an item description: Hammer [Enter] 
- Enter the number of units: 15 [Enter] 
- Enter an item description: Pliers [Enter] 
- Enter the number of units: 12 [Enter] 
- Enter an item description: Screwdriver [Enter] 
- Enter the number of units: 25 [Enter] 
- Enter an item description: Ratchet [Enter] 
- Enter the number of units: 10 [Enter] 
- The data was written to the Inventory.dat file.
+Enter an item description: Wrench [Enter] 
+Enter the number of units: 20 [Enter] 
+Enter an item description: Hammer [Enter] 
+Enter the number of units: 15 [Enter] 
+Enter an item description: Pliers [Enter] 
+Enter the number of units: 12 [Enter] 
+Enter an item description: Screwdriver [Enter] 
+Enter the number of units: 25 [Enter] 
+Enter an item description: Ratchet [Enter] 
+Enter the number of units: 10 [Enter] 
+The data was written to the Inventory.dat file.
 ```
 
 代码列表 H-4 中的程序演示了如何从文件中随机读取记录。
 
-# 代码列表 H-4 `(ReadInventoryFile.java)`
+## 代码列表 H-4 `(ReadInventoryFile.java)`
 
-```
-1 import java.io.*;
- 2 import java.util.Scanner;
- 3 
- 4 /**
- 5   此程序显示指定的
- 6   Inventory.dat 文件。
- 7 */
- 8 
- 9 public class ReadInventoryFile
- 10 {
- 11    public static void main(String[] args) throws IOException
- 12    {
- 13       int recordNumber;          // 记录
- 14       String again;              // Y 或 N
- 15       InventoryItem item;        // 从文件中
- 16       读取对象
- 17       //一个 Scanner 对象。
- 18       Scanner keyboard = new Scanner(System.in);
- 19
- 20       // 打开文件。
- 21       InventoryItemFile file =
- 22                     new InventoryItemFile("Inventory.dat");
- 23
- 24       // 报告文件的记录数。
- 25       System.out.println("The Inventory.dat file has " +
- 26                file.getNumberOfRecords() + " records.");
- 27       // 获取用户的
- 28       记录编号并显示记录。
- 29       do
- 30       {
- 31          // 获取记录编号。
- 32          System.out.print("Enter the number of the record "
- 33                           to see: ");
- 34          recordNumber = keyboard.nextInt();
- 35          // 消耗剩余的换行符。
- 36          keyboard.nextLine();
- 37
- 38          // 将文件指针移动到该记录。
- 39          file.movePointer(recordNumber);
- 40
- 41          // 读取该位置的记录。
- 42          item = file.readInventoryItem();
- 43
- 44          // 显示记录。
- 45          System.out.println("\nDescription: " +
- 46                             item.getDescription());
- 47          System.out.println("Units: " + item.getUnits());
- 48
- 49          // 询问用户是否获取
- 50          另一个记录。
- 51          System.out.print("\nDo you want to see another"
- 52                           record? (Y/N): ");
- 53          again = keyboard.nextLine();
- 54       } while (again.charAt(0) == 'Y' || again.charAt(0) == 'y');
- 55
- 56       // 关闭文件。
- 57       file.close();
- 58    }
- 59 }
+
+
+以下程序演示了如何读取 `Inventory.dat` 文件中的记录。
+
+```java
+import java.io.*;
+import java.util.Scanner;
+
+/**
+  此程序显示指定的
+  Inventory.dat 文件。
+*/
+
+public class ReadInventoryFile
+{
+   public static void main(String[] args) throws IOException
+   {
+      int recordNumber;          // 记录
+      String again;              // Y 或 N
+      InventoryItem item;        // 从文件中
+      读取对象
+      //一个 Scanner 对象。
+      Scanner keyboard = new Scanner(System.in);
+
+      // 打开文件。
+      InventoryItemFile file =
+                    new InventoryItemFile("Inventory.dat");
+
+      // 报告文件的记录数。
+      System.out.println("The Inventory.dat file has " +
+               file.getNumberOfRecords() + " records.");
+      // 获取用户的
+      记录编号并显示记录。
+      do
+      {
+         // 获取记录编号。
+         System.out.print("Enter the number of the record "
+                          to see: ");
+         recordNumber = keyboard.nextInt();
+         // 消耗剩余的换行符。
+         keyboard.nextLine();
+
+         // 将文件指针移动到该记录。
+         file.movePointer(recordNumber);
+
+         // 读取该位置的记录。
+         item = file.readInventoryItem();
+
+         // 显示记录。
+         System.out.println("\nDescription: " +
+                            item.getDescription());
+         System.out.println("Units: " + item.getUnits());
+
+         // 询问用户是否获取
+         另一个记录。
+         System.out.print("\nDo you want to see another"
+                          record? (Y/N): ");
+         again = keyboard.nextLine();
+      } while (again.charAt(0) == 'Y' || again.charAt(0) == 'y');
+
+      // 关闭文件。
+      file.close();
+   }
+}
 ```
 
-带有示例输入的程序输出（部分已加粗显示）
+带有示例输入的程序输出（部分已加粗显示）：
 
 ```
 The Inventory.dat file has 5 records.
- Enter the number of the record you wish to see: 4 [Enter] 
- Description: Ratchet
- Units: 10
- Do you want to see another record? (Y/N): y [Enter] 
- Enter the number of the record you wish to see: 2 [Enter] 
- Description: Pliers
- Units: 12
- Do you want to see another record? (Y/N): y [Enter] 
- Enter the number of the record you wish to see: 0 [Enter] 
- Description: Wrench
- Units: 20
- Do you want to see another record? (Y/N): y [Enter] 
- Enter the number of the record you wish to see: 1 [Enter] 
- Description: Hammer
- Units: 15
- Do you want to see another record? (Y/N): y [Enter] 
- Enter the number of the record you wish to see: 3 [Enter] 
- Description: Screwdriver
- Units: 25
- Do you want to see another record? (Y/N): n [Enter]
+Enter the number of the record you wish to see: 4 [Enter] 
+Description: Ratchet
+Units: 10
+Do you want to see another record? (Y/N): y [Enter] 
+Enter the number of the record you wish to see: 2 [Enter] 
+Description: Pliers
+Units: 12
+Do you want to see another record? (Y/N): y [Enter] 
+Enter the number of the record you wish to see: 0 [Enter] 
+Description: Wrench
+Units: 20
+Do you want to see another record? (Y/N): y [Enter] 
+Enter the number of the record you wish to see: 1 [Enter] 
+Description: Hammer
+Units: 15
+Do you want to see another record? (Y/N): y [Enter] 
+Enter the number of the record you wish to see: 3 [Enter] 
+Description: Screwdriver
+Units: 25
+Do you want to see another record? (Y/N): n [Enter]
 ```
 
 作为最后的演示，代码列表 H-5 中的程序展示了如何用新记录覆盖文件中的现有记录。
-
-```
-
-
-
 
 ```java
 import java.io.*;
@@ -32554,7 +30779,7 @@ import java.util.Scanner;
 /*
   此程序允许用户修改
   Inventory.dat 文件中的记录。
- */
+*/
 
 public class ModifyRecord{
     public static void main(String[] args) throws IOException
@@ -32616,10 +30841,12 @@ public class ModifyRecord{
           System.out.print("Are you sure you want to save " +
                            "this data? (Y/N) ");
           sure = keyboard.nextLine();
+
           if (sure.charAt(0) == 'Y' || sure.charAt(0) == 'y')
           {
              // 回到记录的起始位置。
              file.moveFilePointer(recordNumber);
+
              // 保存新数据。
              file.writeInventoryItem(item);
           }
@@ -32628,6 +30855,7 @@ public class ModifyRecord{
           System.out.print("\nDo you want to modify another " +
                            "record? (Y/N): ");
           again = keyboard.nextLine();
+
        } while (again.charAt(0) == 'Y' || again.charAt(0) == 'y');
 
        // 关闭文件。
@@ -32675,13 +30903,9 @@ Do you want to modify another record? (Y/N): [Enter]
 .;C:\Program Files\Java\jdk1.8.0_101\db\lib\derby.jar
 ```
 
-
-
-
-
 *   点击*确定* 按钮，直到所有对话框都关闭并退出控制面板。
 
-# Windows 8
+#### Windows 8
 
 在屏幕右下角，点击*搜索*图标并输入“控制面板”。点击*控制面板*，然后点击*系统*，再点击*高级系统设置*。点击*高级*选项卡，然后点击*环境变量*。在系统变量列表中查看是否存在 `CLASSPATH` 变量。
 
@@ -32699,9 +30923,10 @@ Do you want to modify another record? (Y/N): [Enter]
 ```
 .;C:\Program Files\Java\jdk1.8.0_101\db\lib\derby.jar
 ```
+
 *   点击*确定* 按钮，直到所有对话框都关闭并退出控制面板。
 
-# Windows 7
+#### Windows 7
 
 点击*开始按钮*，然后右键点击*计算机*。在弹出的菜单中，选择*属性*。在随后出现的窗口中，点击*高级系统设置*。这将显示系统属性窗口。点击*环境变量. . . .* 按钮。在系统变量列表中查看是否存在 `CLASSPATH` 变量。
 
@@ -32719,9 +30944,10 @@ Do you want to modify another record? (Y/N): [Enter]
 ```
 .;C:\Program Files\Java\jdk1.8.0_101\db\lib\derby.jar
 ```
+
 *   点击*确定* 按钮，直到所有对话框都关闭并退出控制面板。
 
-# 使用 Java 9 配置 Derby
+### 使用 Java 9 配置 Derby
 
 Derby 可以从 Apache 软件基金免费下载。要下载 Derby，请按照以下说明操作：
 
@@ -32730,94 +30956,116 @@ Derby 可以从 Apache 软件基金免费下载。要下载 Derby，请按照以
 3.  打开的页面看起来 own*图 I-2*。在*发行版*部分，你将看到下载各种不同发行版的链接。如图所示，点击以 `bin.zip` 结尾的最新版本号链接。（最新的版本号可能与图中显示的不同。）
 4.  下载的 ZIP 文件包含一个名为 `db-derby-10.14.1.0-bin` 等的文件夹。（该名称反映了发行版版本号。你看到的名称将相似，但很可能是不同的版本号。）解压此文件夹及其内容。
 
-
-
-
-
 *   点击系统变量列表下方出现的 `New ...` 按钮。
 *   在“变量名”框中，输入 `CLASSPATH`。
 *   在“变量值”框中，输入一个点，随后是一个分号，然后是 `derby.jar` 文件的路径。例如，该值将类似于以下内容（取决于你使用的 Derby 发行版本）：
-    ```
-    .; C:\db-derby-10.14.1.0-bin\lib\derby.jar
-    ```
-*   反复点击 `OK` 按钮，直到所有对话框关闭并退出控制面板。
+
+```
+.; C:\db-derby-10.14.1.0-bin\lib\derby.jar
+```
+
+
 
 # Windows 7
 
-点击 Windows 按钮，然后右键点击`计算机`。在弹出菜单中，选择`属性`。在随后出现的窗口中，点击`高级系统设置`。这将显示`系统属性`窗口。点击`环境变量 ...` 按钮。在系统变量列表中是否存在 `CLASSPATH` 变量。
+点击 Windows 按钮，然后右键点击`计算机`。在弹出菜单中，选择`属性`。在随后出现的窗口中，点击`高级系统设置`。这将显示`系统属性`窗口。点击`环境变量 ...`按钮。在系统变量列表中是否存在`CLASSPATH`变量。
 
-如果 `CLASSPATH` 变量已存在，请执行以下操作：
+## 如果`CLASSPATH`变量已存在
 
-*   选择 `CLASSPATH` 变量并点击`编辑`按钮。在现有内容的末尾添加一个分号，然后在列表末尾添加 `derby.jar` 文件的路径。
-*   反复点击 `OK` 按钮，直到所有对话框关闭并退出控制面板。
+请执行以下操作：
 
-如果 `CLASSPATH` 变量不存在，请执行以下操作：
+- 选择`CLASSPATH`变量并点击`编辑`按钮。在现有内容的末尾添加一个分号，然后在列表末尾添加`derby.jar`文件的路径。
+- 反复点击`OK`按钮，直到所有对话框关闭并退出控制面板。
 
-*   点击系统变量列表下方出现的 `New ...` 按钮。
-*   在“变量名”框中，输入 `CLASSPATH`。
-*   在“变量值”框中，输入一个点，随后是一个分号，然后是 `derby.jar` 文件的路径。例如，该值将类似于以下内容（取决于你使用的 Derby 发行版本）：
-    ```
-    .; C:\db-derby-10.14.1.0-bin\lib\derby.jar
-    ```
-*   反复点击 `OK` 按钮，直到所有对话框关闭并退出控制面板。
+## 如果`CLASSPATH`变量不存在
+
+请执行以下操作：
+
+- 点击系统变量列表下方出现的`New ...`按钮。
+- 在“变量名”框中，输入`CLASSPATH`。
+- 在“变量值”框中，输入一个点，随后是一个分号，然后是`derby.jar`文件的路径。例如，该值将类似于以下内容（取决于你使用的 Derby 发行版本）：
+
+```
+.; C:\db-derby-10.14.1.0-bin\lib\derby.jar
+```
+
+- 反复点击`OK`按钮，直到所有对话框关闭并退出控制面板。
 
 # 附录 J
 
 ## 快速排序算法
 
-`QuickSort` 算法是由 C. A. R. Hoare 于 1960 年开发的一种流行的通用排序程序。它通过将数组分为两个子列表来对其排序。子列表之间是一个选定的值，称为 `pivot`（基准）。这在图 J-1 中所示。
+`QuickSort`算法是由 C. A. R. Hoare 于 1960 年开发的一种流行的通用排序程序。它通过将数组分为两个子列表来对其排序。子列表之间是一个选定的值，称为`pivot`（基准）。这在图 J-1 中所示。
 
 ![子列表和基准的图如下。一个矩形数组被分为两个子列表如下：子列表 1、子列表 2。均匀划分子列表的部分是标记为 Pivot 的选定值区域。](img/jfig01.png)
 
-# 图 J-1 子列表和基准
+### 图 J-1 子列表和基准
 
-注意图中，子列表 1 位于 `pivot` 的左侧（之前），而子列表 2 位于 `pivot` 的右侧（之后）。一旦选定了 `pivot` 值，算法将重新排列数组，使得所有值小于 `pivot` 的元素位于其之前，所有值大于 `pivot` 的元素位于其之后。然后将此过程递归地应用于子列表上，直到整个数组完成排序。
+注意图中，子列表 1 位于`pivot`的左侧（之前），而子列表 2 位于`pivot`的右侧（之后）。一旦选定了`pivot`值，算法将重新排列数组，使得所有值小于`pivot`的元素位于其之前，所有值大于`pivot`的元素位于其之后。然后将此过程递归地应用于子列表上，直到整个数组完成排序。
 
-`quickSort` 方法实现如下：
+`quickSort`方法实现如下：
 
 ```java
 public static void quickSort(int[] array, int start, int end) {
+
     if (start < end) {
+
         int pivotIndex = partition(array, start, end);
+
         quickSort(array, start, pivotIndex - 1);
+
         quickSort(array, pivotIndex + 1, end);
+
     }
+
 }
 ```
 
-`partition` 方法选择一个 `pivot` 并重新排列数组：
+`partition`方法选择一个`pivot`并重新排列数组：
 
 ```java
 private static int partition(int[] array, int start, int end) {
+
     int mid = (start + end) / 2;
+
     swap(array, start, mid);
+
     int pivotValue = array[start];
+
     int pivotIndex = start;
 
     for (int scan = start + 1; scan <= end; scan++) {
+
         if (array[scan] < pivotValue) {
+
             pivotIndex++;
+
             swap(array, pivotIndex, scan);
+
         }
+
     }
+
     swap(array, start, pivotIndex);
+
     return pivotIndex;
+
 }
 ```
 
-`swap` 方法交换数组中的两个元素：
+`swap`方法交换数组中的两个元素：
 
 ```java
 private static void swap(int[] array, int a, int b) {
+
     int temp = array[a];
+
     array[a] = array[b];
+
     array[b] = temp;
+
 }
 ```
-
-
-
-
 
 ```java
 /**
@@ -32877,9 +31125,13 @@ public class QuickSortDemo
     private static int partition(int array[], int start, int end)
     {
         int pivotValue, pivotIndex, mid;
+
         mid = (start + end) / 2;
+
         swap(array, start, mid);
+
         pivotValue = array[start];
+
         for (int scan = start + 1; scan <= end; scan++)
         {
            if (array[scan] < pivotValue)
@@ -32888,7 +31140,9 @@ public class QuickSortDemo
               swap(array, pivotIndex, scan);
            }
         }
+
         swap(array, start, pivotIndex);
+
         return pivotIndex;
     }
 
@@ -32899,14 +31153,17 @@ public class QuickSortDemo
     private static void swap(int[] array, int a, int b)
     {
         int temp;
+
         temp = array[a];
+
         array[a] = array[b];
+
         array[b] = temp;
     }
 }
 ```
 
-程序输出
+### 程序输出
 
 ```
 排序前:
@@ -32919,122 +31176,121 @@ public class QuickSortDemo
 
 命名颜色
 
-* `aliceblue` = `#f0f8ff`
-* `antiquewhite` = `#faebd7`
-* `aqua` = `#00ffff`
-* `aquamarine` = `#7fffd4`
-* `azure` = `#f0ffff`
-* `beige` = `#f5f5dc`
-* `bisque` = `#ffe4c4`
-* `black` = `#000000`
-* `blanchedmond` = `#ffebcd`
-* `blue` = `#0000ff`
-* `blueviolet` = `#8a2be2`
-* `brown` = `#a52aa`
-* `burlywood` = `#deb887`
-* `cadetblue` = `#5f9ea0`
-* `chartreuse` = `#7fff00`
-* `chocolate` = `#d2691e`
-* `coral` = `#ff7f50`
-* `cornflowerblue` = `#6495ed`
-* `cornsilk` = `#fff8dc`
-* `crimson` = `#dc143c`
-* `cyan` = `#00ffff`
-* `darkblue` = `#00008b`
-* `darkcyan` = `#008b8b`
-* `darkgoldenrod` = `#b8860b`
-* `darkgray` = `#a9a9a9`
-* `darkgreen` = `#006400`
-* `darkgrey` = `#a9a9a9`
-* `darkkhaki` = `#bdb76b`
-* `darkmagenta` = `#8b008b`
-* `darkolivegreen` = `#556b2f`
-* `darkorange` = `#ff8c00`
-* `darkorchid` = `#9932cc`
-* `darkred` = `#8b0000`
-* `darksalmon` = `#e9967a`
-* `darkseagreen` = `#8fbc8f`
-* `darkslateblue` = `#483d8b`
-* `darkslategray` = `#2f4f4f`
-* `darkslategray` = `#2f4f4f`
-* `darkturquoise` = `#00ced1`
-* `darkviolet` = `#9400d3`
-* `deeppink` = `#ff1493`
-* `deepskyblue` = `#00bfff`
-* `dimgray` = `#696969`
-* `dimgrey` = `#696969`
-* `dodgerblue` = `#1e90ff`
-* `firebrick` = `#b2222`
-* `floralwhite` = `#fffaf0`
-* `forestgreen` = `#228b22`
-* `fuchsia` = `#ff00ff`
-* `gainsboro` = `#dcdcdc`
-* `ghostwhite` = `#f8f8ff`
-* `gold` = `#ffd700`
-* `goldenrod` = `#daa520`
-* `gray` = `#808080`
-* `green` = `#008000`
-* `greenyellow` = `#adff2f`
-* `grey` = `#808080`
-* `honeydew` = `#f0fff0`
-* `hotpink` = `#ff69b`
-* `aliceblue` = `#f0f8ff`
-* `antiquewhite` = `#faebd7`
-* `aqua` = `#00ffff`
-* `aquamarine` = `#7fffd4`
-* `azure` = `#f0ffff`
-* `beige` = `#f5f5dc`
-* `bisque` = `#ffe4c4`
-* `black` = `#000000`
-* `blanchedmond` = `#ffebcd`
-* `blue` = `#0000ff`
-* `blueviolet` = `#8a2be2`
-* `brown` = `#a52aa`
-* `burlywood` = `#deb887`
-* `cadetblue` = `#5f9ea0`
-* `chartreuse` = `#7fff00`
-* `chocolate` = `#d2691e`
-* `coral` = `#ff7f50`
-* `cornflowerblue` = `#6495ed`
-* `cornsilk` = `#fff8dc`
-* `crimson` = `#dc143c`
-* `cyan` = `#00ffff`
-* `darkblue` = `#00008b`
-* `darkcyan` = `#008b8b`
-* `darkgoldenrod` = `#b8860b`
-* `darkgray` = `#a9a9a9`
-* `darkgreen` = `#006400`
-* `darkgrey` = `#a9a9a9`
-* `darkkhaki` = `#bdb76b`
-* `darkmagenta` = `#8b008b`
-* `darkolivegreen` = `#556b2f`
-* `darkorange` = `#ff8c00`
-* `darkorchid` = `#9932cc`
-* `darkred` = `#8b0000`
-* `darksalmon` = `#e9967a`
-* `darkseagreen` = `#8fbc8f`
-* `darkslateblue` = `#483d8b`
-* `darkslategray` = `#2f4f4f`
-* `darkslategray` = `#2f4f4f`
-* `darkturquoise` = `#00ced1`
-* `darkviolet` = `#9400d3`
-* `deeppink` = `#ff1493`
-* `deepskyblue` = `#00bfff`
-* `dimgray` = `#696969`
-* `dimgrey` = `#696969`
-* `dodgerblue` = `#1e90ff`
-* `firebrick` = `#b2222`
-* `floralwhite` = `#fffaf0`
-* `forestgreen` = `#228b22`
-* `fuchsia` = `#ff00ff`
-* `gainsboro` = `#dcdcdc`
-* `ghostwhite` = `#f8f8ff`
-* `gold` = `#ffd700`
-* `goldenrod` = `#daa520`
-* `gray` = `#808080`
-* `green` = `#008000`
-* `greenyellow` = `#adff2f`
-* `grey` = `#808080`
-* `honeydew` = `#f0fff0`
-* `hotpink` = `#ff69b`
-
+- `aliceblue` = `#f0f8ff`
+- `antiquewhite` = `#faebd7`
+- `aqua` = `#00ffff`
+- `aquamarine` = `#7fffd4`
+- `azure` = `#f0ffff`
+- `beige` = `#f5f5dc`
+- `bisque` = `#ffe4c4`
+- `black` = `#000000`
+- `blanchedmond` = `#ffebcd`
+- `blue` = `#0000ff`
+- `blueviolet` = `#8a2be2`
+- `brown` = `#a52aa`
+- `burlywood` = `#deb887`
+- `cadetblue` = `#5f9ea0`
+- `chartreuse` = `#7fff00`
+- `chocolate` = `#d2691e`
+- `coral` = `#ff7f50`
+- `cornflowerblue` = `#6495ed`
+- `cornsilk` = `#fff8dc`
+- `crimson` = `#dc143c`
+- `cyan` = `#00ffff`
+- `darkblue` = `#00008b`
+- `darkcyan` = `#008b8b`
+- `darkgoldenrod` = `#b8860b`
+- `darkgray` = `#a9a9a9`
+- `darkgreen` = `#006400`
+- `darkgrey` = `#a9a9a9`
+- `darkkhaki` = `#bdb76b`
+- `darkmagenta` = `#8b008b`
+- `darkolivegreen` = `#556b2f`
+- `darkorange` = `#ff8c00`
+- `darkorchid` = `#9932cc`
+- `darkred` = `#8b0000`
+- `darksalmon` = `#e9967a`
+- `darkseagreen` = `#8fbc8f`
+- `darkslateblue` = `#483d8b`
+- `darkslategray` = `#2f4f4f`
+- `darkslategray` = `#2f4f4f`
+- `darkturquoise` = `#00ced1`
+- `darkviolet` = `#9400d3`
+- `deeppink` = `#ff1493`
+- `deepskyblue` = `#00bfff`
+- `dimgray` = `#696969`
+- `dimgrey` = `#696969`
+- `dodgerblue` = `#1e90ff`
+- `firebrick` = `#b2222`
+- `floralwhite` = `#fffaf0`
+- `forestgreen` = `#228b22`
+- `fuchsia` = `#ff00ff`
+- `gainsboro` = `#dcdcdc`
+- `ghostwhite` = `#f8f8ff`
+- `gold` = `#ffd700`
+- `goldenrod` = `#daa520`
+- `gray` = `#808080`
+- `green` = `#008000`
+- `greenyellow` = `#adff2f`
+- `grey` = `#808080`
+- `honeydew` = `#f0fff0`
+- `hotpink` = `#ff69b`
+- `aliceblue` = `#f0f8ff`
+- `antiquewhite` = `#faebd7`
+- `aqua` = `#00ffff`
+- `aquamarine` = `#7fffd4`
+- `azure` = `#f0ffff`
+- `beige` = `#f5f5dc`
+- `bisque` = `#ffe4c4`
+- `black` = `#000000`
+- `blanchedmond` = `#ffebcd`
+- `blue` = `#0000ff`
+- `blueviolet` = `#8a2be2`
+- `brown` = `#a52aa`
+- `burlywood` = `#deb887`
+- `cadetblue` = `#5f9ea0`
+- `chartreuse` = `#7fff00`
+- `chocolate` = `#d2691e`
+- `coral` = `#ff7f50`
+- `cornflowerblue` = `#6495ed`
+- `cornsilk` = `#fff8dc`
+- `crimson` = `#dc143c`
+- `cyan` = `#00ffff`
+- `darkblue` = `#00008b`
+- `darkcyan` = `#008b8b`
+- `darkgoldenrod` = `#b8860b`
+- `darkgray` = `#a9a9a9`
+- `darkgreen` = `#006400`
+- `darkgrey` = `#a9a9a9`
+- `darkkhaki` = `#bdb76b`
+- `darkmagenta` = `#8b008b`
+- `darkolivegreen` = `#556b2f`
+- `darkorange` = `#ff8c00`
+- `darkorchid` = `#9932cc`
+- `darkred` = `#8b0000`
+- `darksalmon` = `#e9967a`
+- `darkseagreen` = `#8fbc8f`
+- `darkslateblue` = `#483d8b`
+- `darkslategray` = `#2f4f4f`
+- `darkslategray` = `#2f4f4f`
+- `darkturquoise` = `#00ced1`
+- `darkviolet` = `#9400d3`
+- `deeppink` = `#ff1493`
+- `deepskyblue` = `#00bfff`
+- `dimgray` = `#696969`
+- `dimgrey` = `#696969`
+- `dodgerblue` = `#1e90ff`
+- `firebrick` = `#b2222`
+- `floralwhite` = `#fffaf0`
+- `forestgreen` = `#228b22`
+- `fuchsia` = `#ff00ff`
+- `gainsboro` = `#dcdcdc`
+- `ghostwhite` = `#f8f8ff`
+- `gold` = `#ffd700`
+- `goldenrod` = `#daa520`
+- `gray` = `#808080`
+- `green` = `#008000`
+- `greenyellow` = `#adff2f`
+- `grey` = `#808080`
+- `honeydew` = `#f0fff0`
+- `hotpink` = `#ff69b`

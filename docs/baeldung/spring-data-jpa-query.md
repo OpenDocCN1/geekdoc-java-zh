@@ -1,3 +1,4 @@
+
 # Spring 数据 JPA @Query
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-data-jpa-query>
@@ -18,7 +19,7 @@ Explore the query derivation mechanism in Spring Data JPA.[Read more](/web/20220
 
 ## [Spring 数据 JPA @修改注释](/web/20220826180223/https://www.baeldung.com/spring-data-jpa-modifying-annotation)
 
-Create DML and DDL queries in Spring Data JPA by combining the @Query and @Modifying annotations[Read more](/web/20220826180223/https://www.baeldung.com/spring-data-jpa-modifying-annotation) →
+Create DML and DDL queries in Spring Data JPA by combining the `@Query` and `@Modifying` annotations[Read more](/web/20220826180223/https://www.baeldung.com/spring-data-jpa-modifying-annotation) →
 
 ## 2。选择查询
 
@@ -36,7 +37,7 @@ Create DML and DDL queries in Spring Data JPA by combining the @Query and @Modif
 
 ```java
 @Query("SELECT u FROM User u WHERE u.status = 1")
-Collection<User> findAllActiveUsers(); 
+Collection<User> findAllActiveUsers();
 ```
 
 ### 2.2。原生
@@ -45,32 +46,32 @@ Collection<User> findAllActiveUsers();
 
 ```java
 @Query(
-  value = "SELECT * FROM USERS u WHERE u.status = 1", 
+  value = "SELECT * FROM USERS u WHERE u.status = 1",
   nativeQuery = true)
-Collection<User> findAllActiveUsersNative(); 
+Collection<User> findAllActiveUsersNative();
 ```
 
 ## 3。在查询中定义订单
 
-我们可以将类型为`Sort `的附加参数传递给具有`@Query`注释的 Spring 数据方法声明。它将被翻译成传递给数据库的`ORDER BY`子句。
+我们可以将类型为`Sort`的附加参数传递给具有`@Query`注释的 Spring 数据方法声明。它将被翻译成传递给数据库的`ORDER BY`子句。
 
 ### 3.1。JPA 提供和派生方法的排序
 
 对于我们开箱即用的方法，比如`findAll(Sort)`或者通过解析方法签名生成的方法，**我们只能使用对象属性来定义我们的排序**:
 
 ```java
-userRepository.findAll(Sort.by(Sort.Direction.ASC, "name")); 
+userRepository.findAll(Sort.by(Sort.Direction.ASC, "name"));
 ```
 
 现在假设我们想按名称属性的长度进行排序:
 
 ```java
-userRepository.findAll(Sort.by("LENGTH(name)")); 
+userRepository.findAll(Sort.by("LENGTH(name)"));
 ```
 
 当我们执行上面的代码时，我们会收到一个异常:
 
-> org . spring framework . data . mapping . propertyreferenceexception:未找到类型 User 的属性长度(名称)!
+> `org.springframework.data.mapping.PropertyReferenceException`:未找到类型 `User` 的属性长度(名称)!
 
 ### 3.2。JPQL
 
@@ -78,7 +79,7 @@ userRepository.findAll(Sort.by("LENGTH(name)"));
 
 ```java
 @Query(value = "SELECT u FROM User u")
-List<User> findAllUsers(Sort sort); 
+List<User> findAllUsers(Sort sort);
 ```
 
 我们可以调用这个方法并传递一个`Sort`参数，它将根据`User`对象的`name`属性对结果进行排序:
@@ -90,7 +91,7 @@ userRepository.findAllUsers(Sort.by("name"));
 因为我们使用了`@Query`注释，所以我们可以使用相同的方法根据名称的长度得到`Users`的排序列表:
 
 ```java
-userRepository.findAllUsers(JpaSort.unsafe("LENGTH(name)")); 
+userRepository.findAllUsers(JpaSort.unsafe("LENGTH(name)"));
 ```
 
 **使用`JpaSort.unsafe()`创建`Sort`对象实例是至关重要的。**
@@ -98,7 +99,7 @@ userRepository.findAllUsers(JpaSort.unsafe("LENGTH(name)"));
 当我们使用:
 
 ```java
-Sort.by("LENGTH(name)"); 
+Sort.by("LENGTH(name)");
 ```
 
 然后我们会收到与上面看到的`findAll()`方法完全相同的异常。
@@ -111,7 +112,7 @@ Sort.by("LENGTH(name)");
 
 如果这样做，我们将收到一个异常:
 
-> org . spring framework . data . JPA . repository . query . invalidjpaquerymethodexception:不能将本机查询用于动态排序和/或分页
+> `org.springframework.data.jpa.repository.query.InvalidJpaQueryMethodException`:不能将本机查询用于动态排序和/或分页
 
 正如异常所说，本机查询不支持排序。错误消息提示我们分页也会导致异常。
 
@@ -129,7 +130,7 @@ Sort.by("LENGTH(name)");
 
 ```java
 @Query(value = "SELECT u FROM User u ORDER BY id")
-Page<User> findAllUsersWithPagination(Pageable pageable); 
+Page<User> findAllUsersWithPagination(Pageable pageable);
 ```
 
 **我们可以通过一个`PageRequest`参数来获取一页数据。**
@@ -144,15 +145,15 @@ Page<User> findAllUsersWithPagination(Pageable pageable);
 
 ```java
 @Query(
-  value = "SELECT * FROM Users ORDER BY id", 
-  countQuery = "SELECT count(*) FROM Users", 
+  value = "SELECT * FROM Users ORDER BY id",
+  countQuery = "SELECT count(*) FROM Users",
   nativeQuery = true)
 Page<User> findAllUsersWithPagination(Pageable pageable);
 ```
 
 ### 4.3。2.0.4 之前的 Spring 数据 JPA 版本
 
-上述原生查询解决方案适用于 Spring Data JPA 2 . 0 . 4 版和更高版本。
+上述原生查询解决方案适用于 Spring Data JPA 2.0.4 版和更高版本。
 
 在该版本之前，当我们试图执行这样的查询时，我们将会收到与上一节中描述的排序相同的异常。
 
@@ -166,7 +167,7 @@ Page<User> findAllUsersWithPagination(Pageable pageable);
 Page<User> findAllUsersWithPagination(Pageable pageable);
 ```
 
-在上面的示例中，我们添加“\ n –# pageable \ n”作为分页参数的占位符。这告诉 Spring Data JPA 如何解析查询并注入可分页参数。这个解决方案适用于`H2`数据库。
+在上面的示例中，我们添加`\n-- #pageable\n`作为分页参数的占位符。这告诉 Spring Data JPA 如何解析查询并注入可分页参数。这个解决方案适用于`H2`数据库。
 
 我们已经介绍了如何通过 JPQL 和原生 SQL 创建简单的选择查询。接下来，我们将展示如何定义附加参数。
 
@@ -185,10 +186,10 @@ Page<User> findAllUsersWithPagination(Pageable pageable);
 User findUserByStatus(Integer status);
 
 @Query("SELECT u FROM User u WHERE u.status = ?1 and u.name = ?2")
-User findUserByStatusAndName(Integer status, String name); 
+User findUserByStatusAndName(Integer status, String name);
 ```
 
-对于上述查询，`status`方法参数将被分配给索引为`1,`的查询参数，`name`方法参数将被分配给索引为`2`的查询参数。
+对于上述查询，`status`方法参数将被分配给索引为`1`的查询参数，`name`方法参数将被分配给索引为`2`的查询参数。
 
 ### 5.2。原生
 
@@ -196,7 +197,7 @@ User findUserByStatusAndName(Integer status, String name);
 
 ```java
 @Query(
-  value = "SELECT * FROM Users u WHERE u.status = ?1", 
+  value = "SELECT * FROM Users u WHERE u.status = ?1",
   nativeQuery = true)
 User findUserByStatusNative(Integer status);
 ```
@@ -216,16 +217,16 @@ User findUserByStatusNative(Integer status);
 ```java
 @Query("SELECT u FROM User u WHERE u.status = :status and u.name = :name")
 User findUserByStatusAndNameNamedParams(
-  @Param("status") Integer status, 
-  @Param("name") String name); 
+  @Param("status") Integer status,
+  @Param("name") String name);
 ```
 
 请注意，在上面的示例中，我们将 SQL 查询和方法参数定义为具有相同的名称，但是只要值字符串相同，这不是必需的:
 
 ```java
 @Query("SELECT u FROM User u WHERE u.status = :status and u.name = :name")
-User findUserByUserStatusAndUserName(@Param("status") Integer userStatus, 
-  @Param("name") String userName); 
+User findUserByUserStatusAndUserName(@Param("status") Integer userStatus,
+  @Param("name") String userName);
 ```
 
 ### 6.2。原生
@@ -233,7 +234,7 @@ User findUserByUserStatusAndUserName(@Param("status") Integer userStatus,
 对于原生查询定义，与 JPQL 相比，我们通过名称向查询传递参数的方式没有区别——我们使用`@Param`注释:
 
 ```java
-@Query(value = "SELECT * FROM Users u WHERE u.status = :status and u.name = :name", 
+@Query(value = "SELECT * FROM Users u WHERE u.status = :status and u.name = :name",
   nativeQuery = true)
 User findUserByStatusAndNameNamedParamsNative(
   @Param("status") Integer status, @Param("name") String name);
@@ -243,24 +244,24 @@ User findUserByStatusAndNameNamedParamsNative(
 
 让我们考虑一下 JPQL 或 SQL 查询的`where`子句包含`IN`(或`NOT IN`)关键字的情况:
 
-```java
+```
 SELECT u FROM User u WHERE u.name IN :names
 ```
 
-在这种情况下，我们可以定义一个以`Collection `为参数的查询方法:
+在这种情况下，我们可以定义一个以`Collection`为参数的查询方法:
 
 ```java
 @Query(value = "SELECT u FROM User u WHERE u.name IN :names")
 List<User> findUserByNameList(@Param("names") Collection<String> names);
 ```
 
-由于参数是一个`Collection`，它可以和`List, HashSet`等一起使用。
+由于参数是一个`Collection`，它可以和`List`, `HashSet`等一起使用。
 
-接下来，我们将展示如何用@ `Modifying`注释修改数据。
+接下来，我们将展示如何用`@Modifying`注释修改数据。
 
-## 8。用`@Modifying` 更新查询
+## 8。用`@Modifying`更新查询
 
-我们可以**使用@ `Query`注释来修改数据库的状态，方法是将@ `Modifying`注释**添加到存储库方法中。
+我们可以**使用`@Query`注释来修改数据库的状态，方法是将`@Modifying`注释**添加到存储库方法中。
 
 ### 8.1。JPQL
 
@@ -269,8 +270,8 @@ List<User> findUserByNameList(@Param("names") Collection<String> names);
 ```java
 @Modifying
 @Query("update User u set u.status = :status where u.name = :name")
-int updateUserSetStatusForName(@Param("status") Integer status, 
-  @Param("name") String name); 
+int updateUserSetStatusForName(@Param("status") Integer status,
+  @Param("name") String name);
 ```
 
 返回值定义查询的执行更新了多少行。索引参数和命名参数都可以在更新查询中使用。
@@ -281,7 +282,7 @@ int updateUserSetStatusForName(@Param("status") Integer status,
 
 ```java
 @Modifying
-@Query(value = "update Users u set u.status = ? where u.name = ?", 
+@Query(value = "update Users u set u.status = ? where u.name = ?",
   nativeQuery = true)
 int updateUserSetStatusForNameNative(Integer status, String name);
 ```
@@ -293,10 +294,10 @@ int updateUserSetStatusForNameNative(Integer status, String name);
 ```java
 @Modifying
 @Query(
-  value = 
+  value =
     "insert into Users (name, age, email, status) values (:name, :age, :email, :status)",
   nativeQuery = true)
-void insertUser(@Param("name") String name, @Param("age") Integer age, 
+void insertUser(@Param("name") String name, @Param("age") Integer age,
   @Param("status") Integer status, @Param("email") String email);
 ```
 
@@ -306,12 +307,12 @@ void insertUser(@Param("name") String name, @Param("age") Integer age,
 
 ### 9.1。动态查询的示例
 
-例如，让我们设想这样一种情况，我们需要从运行时定义的集合中选择电子邮件为`LIKE` one 的所有用户— `email1`、`email2`、…、`emailn`:
+例如，让我们设想这样一种情况，我们需要从运行时定义的集合中选择电子邮件为`LIKE` one 的所有用户 — `email1`、`email2`、…、`emailn`:
 
-```java
-SELECT u FROM User u WHERE u.email LIKE '%email1%' 
+```
+SELECT u FROM User u WHERE u.email LIKE '%email1%'
     or  u.email LIKE '%email2%'
-    ... 
+    ...
     or  u.email LIKE '%emailn%'
 ```
 
@@ -323,7 +324,7 @@ SELECT u FROM User u WHERE u.email LIKE '%email1%'
 
 ### 9.2。定制存储库和 JPA 标准 API
 
-幸运的是， **Spring 提供了一种通过使用定制片段接口来扩展基本存储库的方法。**然后我们可以将它们链接在一起，创建一个[复合存储库](/web/20220826180223/https://www.baeldung.com/spring-data-composable-repositories)。
+幸运的是，**Spring 提供了一种通过使用定制片段接口来扩展基本存储库的方法。**然后我们可以将它们链接在一起，创建一个[复合存储库](/web/20220826180223/https://www.baeldung.com/spring-data-composable-repositories)。
 
 我们将从创建一个自定义片段接口开始:
 
@@ -334,6 +335,8 @@ public interface UserRepositoryCustom {
 ```
 
 然后我们将实现它:
+
+
 
 ```java
 public class UserRepositoryCustomImpl implements UserRepositoryCustom {
@@ -362,39 +365,39 @@ public class UserRepositoryCustomImpl implements UserRepositoryCustom {
 }
 ```
 
-**如上所示，我们利用了 [JPA Criteria API](/web/20220826180223/https://www.baeldung.com/hibernate-criteria-queries) 来构建我们的动态查询。**
+如上所示，我们利用了`JPA Criteria API`来构建我们的动态查询。
 
-**此外，我们需要确保在类名中包含`Impl`后缀。**春将搜索到的`UserRepositoryCustom`实现为`UserRepositoryCustomImpl`。由于片段本身不是存储库，Spring 依靠这种机制来找到片段实现。
+此外，我们需要确保在类名中包含`Impl`后缀。Spring将搜索到的`UserRepositoryCustom`实现为`UserRepositoryCustomImpl`。由于片段本身不是存储库，Spring依靠这种机制来找到片段实现。
 
-### 9.3。扩展现有存储库
+### 9.3 扩展现有存储库
 
-注意，从第 2 节到第 7 节的所有查询方法都在`UserRepository`中。
+注意，从第2节到第7节的所有查询方法都在`UserRepository`中。
 
-因此，现在我们将通过扩展`UserRepository`中的新接口来集成我们的片段:
+因此，现在我们将通过扩展`UserRepository`中的新接口来集成我们的片段：
 
 ```java
 public interface UserRepository extends JpaRepository<User, Integer>, UserRepositoryCustom {
-    //  query methods from section 2 - section 7
+    // query methods from section 2 - section 7
 }
 ```
 
-### 9.4。使用存储库
+### 9.4 使用存储库
 
-最后，我们可以调用我们的动态查询方法:
+最后，我们可以调用我们的动态查询方法：
 
 ```java
 Set<String> emails = new HashSet<>();
 // filling the set with any number of items
 
-userRepository.findUserByEmails(emails); 
+userRepository.findUserByEmails(emails);
 ```
 
 我们已经成功地创建了一个复合存储库，并调用了我们的自定义方法。
 
-## 10。结论
+## 10 结论
 
-在本文中，我们介绍了使用`@Query`注释在 Spring Data JPA 存储库方法中定义查询的几种方式。
+在本文中，我们介绍了使用`@Query`注释在Spring Data JPA存储库方法中定义查询的几种方式。
 
 我们还学习了如何实现一个定制的存储库和创建一个动态查询。
 
-与往常一样，本文中使用的完整代码示例可以在 GitHub 上的[处获得。](https://web.archive.org/web/20220826180223/https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-jpa-query-2)
+与往常一样，本文中使用的完整代码示例可以在GitHub上的[处获得](https://web.archive.org/web/20220826180223/https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-data-jpa-query-2)。

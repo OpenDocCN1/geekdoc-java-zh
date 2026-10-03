@@ -1,16 +1,17 @@
+
 # Java–写入器的字节数组
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-convert-byte-array-to-writer>
 
 ## 1。概述
 
-在这个快速教程中，我们将讨论如何使用普通 Java、Guava 和 Commons IO 将 **byte[]转换为 Writer** 。
+在这个快速教程中，我们将讨论如何使用普通 Java、Guava 和 Commons IO 将 **`byte[]`转换为`Writer`**。
 
 ## 2。用普通 Java
 
-让我们从一个简单的 Java 解决方案开始:
+让我们从一个简单的 Java 解决方案开始：
 
-```java
+```
 @Test
 public void givenPlainJava_whenConvertingByteArrayIntoWriter_thenCorrect() 
   throws IOException {
@@ -27,9 +28,9 @@ public void givenPlainJava_whenConvertingByteArrayIntoWriter_thenCorrect()
 
 ## 3。有番石榴
 
-接下来，让我们看看一个更复杂的番石榴解决方案:
+接下来，让我们看看一个更复杂的番石榴解决方案：
 
-```java
+```
 @Test
 public void givenUsingGuava_whenConvertingByteArrayIntoWriter_thenCorrect() 
   throws IOException {
@@ -55,9 +56,9 @@ public void givenUsingGuava_whenConvertingByteArrayIntoWriter_thenCorrect()
 
 ## 4。带公共 IO
 
-最后，让我们检查一下我们的 Commons IO 解决方案:
+最后，让我们检查一下我们的 Commons IO 解决方案：
 
-```java
+```
 @Test
 public void givenUsingCommonsIO_whenConvertingByteArrayIntoWriter_thenCorrect() 
   throws IOException {
@@ -72,7 +73,7 @@ public void givenUsingCommonsIO_whenConvertingByteArrayIntoWriter_thenCorrect()
 }
 ```
 
-注意:我们使用一个`StringBuilder`将我们的`byte[]`转换为`StringBuilderWriter`。
+注意：我们使用一个`StringBuilder`将我们的`byte[]`转换为`StringBuilderWriter`。
 
 ## 5。结论
 

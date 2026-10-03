@@ -1,3 +1,4 @@
+
 # 2023 年初学者学习的 5 门最佳 Svelte.js 在线课程
 
 > 原文：<https://medium.com/javarevisited/5-best-svelet-js-courses-for-beginners-in-2021-fadf0c4e2bab?source=collection_archive---------0----------------------->
@@ -8,15 +9,15 @@
 
 大家好，如果你想在 2023 年学习 Svelte 或 Svelte.js，并寻找最好的 Svelte 在线课程，那么你来对地方了。早些时候，我已经分享了学习 [Angular](/javarevisited/10-courses-to-learn-angular-for-web-development-6da1bd2856dc) 、 [React](/javarevisited/10-free-angular-and-react-js-courses-from-udemy-and-coursera-best-of-lot-e67f7d811e6b) 和 [Vue.js](/javarevisited/top-5-online-courses-to-learn-vue-js-in-2021-249e66b60646) 的最佳课程，今天，我将分享 2023 年学习 Svelte.js 的最佳在线课程，但是，在此之前，让我们了解一下什么是 Svelte.js 及其提供的好处，以及它在 Angular、React 和 Vue.js 之间的位置你可以使用 Svelte 来构建瘦瘦的但是高度反应的前端应用程序。
 
-Svelte 可以成为[react . js](/javarevisited/top-10-free-courses-to-learn-react-js-c14edbd3b35f)[Angular](https://javarevisited.blogspot.com/2019/04/10-free-angular-and-react-courses-for.html)和 [Vue](/javarevisited/10-javascript-frameworks-and-libraries-to-learn-in-2020-best-of-lot-5f61f86c60b4) 的热门替代品，学习它将使任何前端 web 开发者受益。Svelte 提供了一种全新的构建用户界面的方法。
+Svelte 可以成为 [react.js](/javarevisited/top-10-free-courses-to-learn-react-js-c14edbd3b35f) 、[Angular](https://javarevisited.blogspot.com/2019/04/10-free-angular-and-react-courses-for.html) 和 [Vue](/javarevisited/10-javascript-frameworks-and-libraries-to-learn-in-2020-best-of-lot-5f61f86c60b4) 的热门替代品，学习它将使任何前端 web 开发者受益。Svelte 提供了一种全新的构建用户界面的方法。
 
-传统框架如 [React](/javarevisited/10-free-angular-and-react-js-courses-from-udemy-and-coursera-best-of-lot-e67f7d811e6b) 和 [Vue.js](/javarevisited/10-free-vue-js-nuxt-js-online-courses-for-beginners-in-2021-a347ea2ad144) 在浏览器中完成大部分工作，而 Svelte 将这些工作转变为编译步骤，这发生在你构建你的应用程序的时候
+传统框架如 [React](/javarevisited/10-free-angular-and-react-js-courses-from-udemy-and-coursera-best-of-lot-e67f7d811e6b) 和 [Vue.js](/javarevisited/10-free-vue-js-nuxt-js-online-courses-for-beginners-in-2021-a347ea2ad144) 在浏览器中完成大部分工作，而 Svelte 将这些工作转变为编译步骤，这发生在你构建你的应用程序的时候。
 
 虽然你不需要了解这些框架来学习 Svelte——但是如果你了解它们，你会了解到一种有趣的替代方法，它可以让你用更少的代码构建你的 web 项目(并在此过程中获得更快的应用程序！).
 
-对了，如果你赶时间的话，那么我建议你从 AcadMind 的[**svelte . js——完全指南(含 Sapper.js)**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fsveltejs-the-complete-guide%2F) 课程开始。是 2023 年学苗条最好的课程。
+对了，如果你赶时间的话，那么我建议你从 AcadMind 的[**svelte.js——完全指南(含 Sapper.js)**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fsveltejs-the-complete-guide%2F) 课程开始。是 2023 年学苗条最好的课程。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fsveltejs-the-complete-guide%2F>  
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fsveltejs-the-complete-guide%2F>
 
 # JavaScript 中的 Svelte 或 Svelte.js 是什么？
 
@@ -48,7 +49,7 @@ Svelte.js 或 Svelte，另一个用于构建基于组件的 UI 的 JavaScript �
 
 谈到社会证明，这是 Udemy 在 Svelte.js 上最畅销的课程之一。它得到了近 1359 名学习者的平均 4.7 分。总共有 6，957 名学生注册了这门课程，这充分说明了这门课程的质量。总之大概是[最好的 svelete.js 课程](https://javarevisited.blogspot.com/2020/05/top-3-courses-to-learn-sveltejs-in-2020.html#axzz6j8KhisSX)此刻上线。
 
-如果你仍然想知道 Svelet.js 能做什么，那么让我提醒你，svelet . js 是一个工具(一个 JavaScript 编译器)，用于为 web 构建高度反应性的现代用户界面——它是 JavaScript 框架和库(如 [React.js](/@javinpaul/top-5-courses-to-learn-react-js-in-2019-best-of-lot-fa02cd96cdf0) 、 [Angular](/javarevisited/top-10-angular-books-and-courses-for-beginners-and-experienced-web-developers-best-of-lot-9a2dae87f04c) 或 [Vue](/javarevisited/top-5-online-courses-to-learn-vue-js-in-2021-249e66b60646) )的一个很好的替代品。
+如果你仍然想知道 Svelet.js 能做什么，那么让我提醒你，svelet.js 是一个工具(一个 JavaScript 编译器)，用于为 web 构建高度反应性的现代用户界面——它是 JavaScript 框架和库(如 [React.js](/@javinpaul/top-5-courses-to-learn-react-js-in-2019-best-of-lot-fa02cd96cdf0) 、 [Angular](/javarevisited/top-10-angular-books-and-courses-for-beginners-and-experienced-web-developers-best-of-lot-9a2dae87f04c) 或 [Vue](/javarevisited/top-5-online-courses-to-learn-vue-js-in-2021-249e66b60646) )的一个很好的替代品。
 
 ## 2.[苗条教程和项目课程](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fsvelte-tutorial-and-projects-course%2F)
 
@@ -72,7 +73,7 @@ Svelte.js 或 Svelte，另一个用于构建基于组件的 UI 的 JavaScript �
 
 在本课程《Svelte:入门》中，您将学习使用一个有趣的 JavaScript UI 框架 Svelte 的基础知识。
 
-以下是您将在本课程中学到的内容:
+以下是您将在本课程中学到的内容：
 
 1.  创建 UI 组件
 2.  处理用户交互
@@ -88,7 +89,7 @@ Svelte.js 或 Svelte，另一个用于构建基于组件的 UI 的 JavaScript �
 
 或者，你也可以使用他们的 [**10 天免费通行证**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 免费观看这个课程。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>
 
 ## 4.苗条速成班(免费代码营)
 
@@ -98,20 +99,22 @@ Svelte.js 或 Svelte，另一个用于构建基于组件的 UI 的 JavaScript �
 
 下面是 2023 年学习 Svelte.js 的 youtube 视频课程
 
-## [5。2023 苗条 JS —完全指南](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fsvelte-js-the-complete-guide%2F)
+
+
+## [5. 2023 苗条 JS —完全指南](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fsvelte-js-the-complete-guide%2F)
 
 这是 2023 年学习这个有用的 JavaScript 框架的又一个很棒的课程。在这个 15 个小时的综合课程中，Angad Sharma 将教你如何使用 Svelte 构建健壮且性能卓越的 web 应用程序。
 
-这是一门非常棒的课程，适合初级和高级的 JavaScript 学生或开发人员，他们已经进入了现代框架，如 [Vue](https://javarevisited.blogspot.com/2021/09/top-25-vuejs-interview-questions-and.html) 、 [React](https://javarevisited.blogspot.com/2021/09/reactjs-interview-questions-answers.html) 、 [angular](https://javarevisited.blogspot.com/2021/10/top-20-angular-interview-questions-answers.html) 等，他们还应该学习 Svelte，作为一种轻量级、快速且可用于生产的替代方案
+这是一门非常棒的课程，适合初级和高级的 JavaScript 学生或开发人员，他们已经进入了现代框架，如 [Vue](https://javarevisited.blogspot.com/2021/09/top-25-vuejs-interview-questions-and.html) 、 [React](https://javarevisited.blogspot.com/2021/09/reactjs-interview-questions-answers.html) 、 [angular](https://javarevisited.blogspot.com/2021/10/top-20-angular-interview-questions-answers.html) 等，他们还应该学习 Svelte，作为一种轻量级、快速且可用于生产的替代方案。
 
-这门课程的另一个好处是，它是一门基于项目的课程，这意味着你将使用其他关键技术，如 [GraphQL](/javarevisited/top-5-graphql-tutorials-and-courses-for-beginners-fb5543506fc2) 和 [Node.js](/javarevisited/top-10-online-courses-to-learn-node-js-in-depth-8ef0e31ca139) 来构建令人惊叹的项目
+这门课程的另一个好处是，它是一门基于项目的课程，这意味着你将使用其他关键技术，如 [GraphQL](/javarevisited/top-5-graphql-tutorials-and-courses-for-beginners-fb5543506fc2) 和 [Node.js](/javarevisited/top-10-online-courses-to-learn-node-js-in-depth-8ef0e31ca139) 来构建令人惊叹的项目。
 
-以下是您将在本课程中构建的项目列表:
+以下是您将在本课程中构建的项目列表：
 
-1.  带有 Firebase 的待办事项应用程序
-2.  基于 Firebase 的成熟博客
-3.  Node.js、MongoDB 和 Svelte.js
-4.  使用 AWS 制作电子商务或购物车 Web 应用程序
+1. 带有 Firebase 的待办事项应用程序
+2. 基于 Firebase 的成熟博客
+3. Node.js、MongoDB 和 Svelte.js
+4. 使用 AWS 制作电子商务或购物车 Web 应用程序
 
 如果您对构建运行速度极快的现代高效用户界面感兴趣，Svelte.js 是您应该参考的。
 
@@ -123,24 +126,24 @@ Svelte.js 或 Svelte，另一个用于构建基于组件的 UI 的 JavaScript �
 
 如果你对构建快速加载和运行的现代反应式用户界面感兴趣，Svelte.js 是你今年应该学习的工具。
 
-其他 **Web 开发** **文章和教程**你可能喜欢
+其他 **Web 开发** **文章和教程**你可能喜欢：
 
-*   [2023 年网络开发者路线图](https://javarevisited.blogspot.com/2019/02/the-2019-web-developer-roadmap.html)
-*   [12 门面向网络开发者的免费 JavaScript 课程](/javarevisited/12-free-courses-to-learn-javascript-and-es6-for-beginners-and-experienced-developers-aa35874c9a32)
-*   [面向 Java 开发者的 5 门免费 Spring 框架课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
-*   [2023 年学习 React Native 的 5 门课程](http://javarevisited.blogspot.sg/2018/02/5-react-native-courses-to-learn-mobile-development-using-JavaScript.html)
-*   [我最喜欢的学习网页开发的课程](/better-programming/my-5-favorite-courses-to-learn-web-development-in-2019-a5e74167f8b2)
-*   [10 个免费的初学者角度课程](/javarevisited/top-10-free-courses-to-learn-angular-framework-in-2020-bb62148c73d3)
-*   [2023 年学习 Web 开发的五大课程](https://javarevisited.blogspot.com/2018/02/top-5-online-courses-to-learn-web-development.html)
-*   [学习大数据和 Apache Spark 的 5 门课程](http://javarevisited.blogspot.com/2017/12/top-5-courses-to-learn-big-data-and.html)
-*   [面向 Web 开发人员的十大 JavaScript 教程和课程](https://javarevisited.blogspot.com/2018/06/top-10-courses-to-learn-javascript-in.html)
-*   [2023 年学习 Spring Boot 的 5 大课程](https://javarevisited.blogspot.com/2018/05/top-5-courses-to-learn-spring-boot-in.html)
-*   [2023 年学习 Python 的 5 大课程](http://www.java67.com/2018/02/5-free-python-online-courses-for-beginners.html)
-*   [2023 年 React JS 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
-*   [10 JavaScript 框架 Fullstack 开发者应该知道的](http://www.java67.com/2019/01/top-10-javascript-frameworks-and-libraries-for-web-developers.html)
-*   [学习 Web 开发 Python 的十大课程](/javarevisited/top-10-courses-to-learn-python-for-web-development-in-2020-best-of-lot-efe11fb6d212)
-*   [深入学习 JavaScript 的 10 门最佳课程](/javarevisited/10-best-online-courses-to-learn-javascript-in-2020-af5ed0801645)
-*   [初学者学习打字稿的 7 门最佳课程](/javarevisited/7-best-courses-to-learn-typescript-in-depth-58439e1ce729)
+* [2023 年网络开发者路线图](https://javarevisited.blogspot.com/2019/02/the-2019-web-developer-roadmap.html)
+* [12 门面向网络开发者的免费 JavaScript 课程](/javarevisited/12-free-courses-to-learn-javascript-and-es6-for-beginners-and-experienced-developers-aa35874c9a32)
+* [面向 Java 开发者的 5 门免费 Spring 框架课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
+* [2023 年学习 React Native 的 5 门课程](http://javarevisited.blogspot.sg/2018/02/5-react-native-courses-to-learn-mobile-development-using-JavaScript.html)
+* [我最喜欢的学习网页开发的课程](/better-programming/my-5-favorite-courses-to-learn-web-development-in-2019-a5e74167f8b2)
+* [10 个免费的初学者角度课程](/javarevisited/top-10-free-courses-to-learn-angular-framework-in-2020-bb62148c73d3)
+* [2023 年学习 Web 开发的五大课程](https://javarevisited.blogspot.com/2018/02/top-5-online-courses-to-learn-web-development.html)
+* [学习大数据和 Apache Spark 的 5 门课程](http://javarevisited.blogspot.com/2017/12/top-5-courses-to-learn-big-data-and.html)
+* [面向 Web 开发人员的十大 JavaScript 教程和课程](https://javarevisited.blogspot.com/2018/06/top-10-courses-to-learn-javascript-in.html)
+* [2023 年学习 Spring Boot 的 5 大课程](https://javarevisited.blogspot.com/2018/05/top-5-courses-to-learn-spring-boot-in.html)
+* [2023 年学习 Python 的 5 大课程](http://www.java67.com/2018/02/5-free-python-online-courses-for-beginners.html)
+* [2023 年 React JS 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
+* [10 JavaScript 框架 Fullstack 开发者应该知道的](http://www.java67.com/2019/01/top-10-javascript-frameworks-and-libraries-for-web-developers.html)
+* [学习 Web 开发 Python 的十大课程](/javarevisited/top-10-courses-to-learn-python-for-web-development-in-2020-best-of-lot-efe11fb6d212)
+* [深入学习 JavaScript 的 10 门最佳课程](/javarevisited/10-best-online-courses-to-learn-javascript-in-2020-af5ed0801645)
+* [初学者学习打字稿的 7 门最佳课程](/javarevisited/7-best-courses-to-learn-typescript-in-depth-58439e1ce729)
 
 感谢您阅读本文。如果你喜欢这些最好的 Svelte.js 在线课程，请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
@@ -148,4 +151,4 @@ Svelte.js 或 Svelte，另一个用于构建基于组件的 UI 的 JavaScript �
 
 **P. S.** —如果你是 JavaScript 新手，我建议你先掌握 JavaScript 基础知识和 ES6 和 ES7 中介绍的新概念，然后再学习框架。如果你需要资源，我强烈推荐 Udemy 上 Jonas Schmedtmann 的 [**完整 JavaScript 课程:构建真实项目**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-javascript-course%2F) ，这是学习 JavaScript 的最新实践课程之一。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-javascript-course%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-complete-javascript-course%2F>

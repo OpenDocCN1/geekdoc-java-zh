@@ -1,56 +1,57 @@
-# Java 8–过滤地图示例
+
+# Java 8 – 过滤地图示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java8/java-8-filter-a-map-examples/>
 
 几个 Java 例子向你展示如何用 Java 8 stream API 过滤一个`Map`。
 
-Java 8 之前:
+Java 8 之前：
 
 ```java
- Map<Integer, String> map = new HashMap<>();
-    map.put(1, "linode.com");
-    map.put(2, "heroku.com");
+Map<Integer, String> map = new HashMap<>();
+map.put(1, "linode.com");
+map.put(2, "heroku.com");
 
-	String result = "";
-	for (Map.Entry<Integer, String> entry : map.entrySet()) {
-		if("something".equals(entry.getValue())){
-			result = entry.getValue();
-		}
-	} 
+String result = "";
+for (Map.Entry<Integer, String> entry : map.entrySet()) {
+    if ("something".equals(entry.getValue())) {
+        result = entry.getValue();
+    }
+}
 ```
 
 使用 Java 8，你可以将一个`Map.entrySet()`转换成一个`stream`，然后是一个`filter()`和`collect()` it。
 
 ```java
- Map<Integer, String> map = new HashMap<>();
-    map.put(1, "linode.com");
-    map.put(2, "heroku.com");
+Map<Integer, String> map = new HashMap<>();
+map.put(1, "linode.com");
+map.put(2, "heroku.com");
 
-	//Map -> Stream -> Filter -> String
-	String result = map.entrySet().stream()
-		.filter(x -> "something".equals(x.getValue()))
-		.map(x->x.getValue())
-		.collect(Collectors.joining());
+//Map -> Stream -> Filter -> String
+String result = map.entrySet().stream()
+    .filter(x -> "something".equals(x.getValue()))
+    .map(x -> x.getValue())
+    .collect(Collectors.joining());
 
-	//Map -> Stream -> Filter -> MAP
-	Map<Integer, String> collect = map.entrySet().stream()
-		.filter(x -> x.getKey() == 2)
-		.collect(Collectors.toMap(x -> x.getKey(), x -> x.getValue()));
+//Map -> Stream -> Filter -> MAP
+Map<Integer, String> collect = map.entrySet().stream()
+    .filter(x -> x.getKey() == 2)
+    .collect(Collectors.toMap(x -> x.getKey(), x -> x.getValue()));
 
-	// or like this
-	Map<Integer, String> collect = map.entrySet().stream()
-		.filter(x -> x.getKey() == 3)
-		.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue)); 
+// or like this
+Map<Integer, String> collect = map.entrySet().stream()
+    .filter(x -> x.getKey() == 3)
+    .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 ```
 
-## 1.Java 8–过滤地图
+## 1. Java 8 – 过滤地图
 
 按值过滤地图并返回字符串的完整示例。
 
-TestMapFilter.java
+`TestMapFilter.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -98,25 +99,25 @@ public class TestMapFilter {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- Before Java 8 : aws.amazon.com
+Before Java 8 : aws.amazon.com
 With Java 8 : aws.amazon.com
-With Java 8 : linode.com,heroku.com 
+With Java 8 : linode.com,heroku.com
 ```
 
-## 2.Java 8–过滤地图#2
+## 2. Java 8 – 过滤地图 #2
 
-另一个例子是通过键过滤一个`Map`，但是这次将返回一个`Map`
+另一个例子是通过键过滤一个`Map`，但是这次将返回一个`Map`。
 
-TestMapFilter2.java
+`TestMapFilter2.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -147,24 +148,24 @@ public class TestMapFilter2 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- {2=heroku.com}
-{1=linode.com, 2=heroku.com, 3=digitalocean.com} 
+{2=heroku.com}
+{1=linode.com, 2=heroku.com, 3=digitalocean.com}
 ```
 
-## 3.Java 8–过滤映射# 3–谓词
+## 3. Java 8 – 过滤映射 #3 – 谓词
 
-这一次，试试新的 Java 8 `Predicate`
+这一次，试试新的 Java 8 `Predicate`。
 
-TestMapFilter3.java
+`TestMapFilter3.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -173,7 +174,7 @@ import java.util.stream.Collectors;
 
 public class TestMapFilter3 {
 
-	// Generic Map filterbyvalue, with predicate
+    // Generic Map filterbyvalue, with predicate
     public static <K, V> Map<K, V> filterByValue(Map<K, V> map, Predicate<V> predicate) {
         return map.entrySet()
                 .stream()
@@ -208,22 +209,22 @@ public class TestMapFilter3 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- {1=linode.com}
+{1=linode.com}
 {1=linode.com, 4=aws.amazon.com, 5=aws2.amazon.com}
 {4=aws.amazon.com}
-{1=linode.com, 2=heroku.com} 
+{1=linode.com, 2=heroku.com}
 ```
 
 ## 参考
 
-1.  [用 Java SE 8 流处理数据](http://web.archive.org/web/20210818174137/http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)
-2.  [Java 收集器 JavaDoc](http://web.archive.org/web/20210818174137/https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html)
-3.  [Java 8 流过滤器示例](http://web.archive.org/web/20210818174137/http://www.mkyong.com/java8/java-8-streams-filter-examples/)
+1. [用 Java SE 8 流处理数据](http://web.archive.org/web/20210818174137/http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)
+2. [Java 收集器 JavaDoc](http://web.archive.org/web/20210818174137/https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html)
+3. [Java 8 流过滤器示例](http://web.archive.org/web/20210818174137/http://www.mkyong.com/java8/java-8-streams-filter-examples/)
 
-Tags : [java8](http://web.archive.org/web/20210818174137/https://mkyong.com/tag/java8/) [map](http://web.archive.org/web/20210818174137/https://mkyong.com/tag/map/) [map filter](http://web.archive.org/web/20210818174137/https://mkyong.com/tag/map-filter/) [predicate](http://web.archive.org/web/20210818174137/https://mkyong.com/tag/predicate/) [stream](http://web.archive.org/web/20210818174137/https://mkyong.com/tag/stream/)<input type="hidden" id="mkyong-current-postId" value="13956">
+Tags : [java8](http://web.archive.org/web/20210818174137/https://mkyong.com/tag/java8/) [map](http://web.archive.org/web/20210818174137/https://mkyong.com/tag/map/) [map filter](http://web.archive.org/web/20210818174137/https://mkyong.com/tag/map-filter/) [predicate](http://web.archive.org/web/20210818174137/https://mkyong.com/tag/predicate/) [stream](http://web.archive.org/web/20210818174137/https://mkyong.com/tag/stream/)

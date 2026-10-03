@@ -1,10 +1,10 @@
+
+
 # 解构
 
-## 解构
+解构可以用在一个函数或者宏的参数里面来把一个集合里面的一个或者几个元素抽取到一些本地 binding 里面去。它可以用在由`let` special form 或者`binding`宏所创建的 binding 里面。
 
-解构可以用在一个函数或者宏的参数里面来把一个集合里面的一个或者几个元素抽取到一些本地 binding 里面去。它可以用在由 `let` special form 或者 `binding` 宏所创建的 binding 里面。
-
-比如，如果我们有一个 vector 或者一个 list， 我们想要获取这个集合里面的第一个元素和第三个元素的和。那么可以用下面两种办法， 第二种解构的方法看起来要简单一点。
+比如，如果我们有一个 vector 或者一个 list，我们想要获取这个集合里面的第一个元素和第三个元素的和。那么可以用下面两种办法，第二种解构的方法看起来要简单一点。
 
 ```java
 (defn approach1 [numbers]
@@ -20,7 +20,7 @@
 (approach2 [4 5 6 7]) ; -> 10 
 ```
 
-&符合可以在解构里面用来获取集合里面剩下的元素。比如：
+`&`符合可以在解构里面用来获取集合里面剩下的元素。比如：
 
 ```java
 (defn name-summary [[name1 name2 & others]]
@@ -29,7 +29,7 @@
 (name-summary ["Moe" "Larry" "Curly" "Shemp"]) ; -> Moe, Larry and 2 others 
 ```
 
-`:as` 关键字可以用来获取对于整个被解构的集合的访问。如果我们想要一个函数接受一个集合作为参数，然后要计算它的第一个元素与第三个元素的和占总和的比例，看下面的代码：
+`:as`关键字可以用来获取对于整个被解构的集合的访问。如果我们想要一个函数接受一个集合作为参数，然后要计算它的第一个元素与第三个元素的和占总和的比例，看下面的代码：
 
 ```java
 (defn first-and-third-percentage [[n1 _ n3 :as coll]]
@@ -38,7 +38,7 @@
 (first-and-third-percentage [4 5 6 7]) ; ratio reduced from 10/22 -> 5/11 
 ```
 
-解构也可以用来从 map 里面获取元素。假设我们有一个 map 这个 map 的 key 是月份， value 对应的是这个月的销售额。那么我们可以写一个函数来计算夏季的总销售额占全年销售额的比例：
+解构也可以用来从 map 里面获取元素。假设我们有一个 map，这个 map 的 key 是月份，value 对应的是这个月的销售额。那么我们可以写一个函数来计算夏季的总销售额占全年销售额的比例：
 
 ```java
 (defn summer-sales-percentage
@@ -59,4 +59,5 @@
 (summer-sales-percentage sales) ; ratio reduced from 1000/3300 -> 10/33 
 ```
 
-我们一般使用和 map 里面 key 的名字一样的本地变量来对 map 进行解构，比如上面例子里面我们使用的 `{june :june july :july august :august :as all}` . 这个可以使用 `:keys` 来简化。比如, `{:keys [june july august] :as all}` .
+我们一般使用和 map 里面 key 的名字一样的本地变量来对 map 进行解构，比如上面例子里面我们使用的`{june :june july :july august :august :as all}`。这个可以使用`:keys`来简化。比如，`{:keys [june july august] :as all}`。
+

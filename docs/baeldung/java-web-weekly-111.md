@@ -1,3 +1,4 @@
+
 # Java 网络周刊，第 111 期
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-web-weekly-111>
@@ -6,7 +7,7 @@
 
 **开始了……**
 
-## 1。Spring 和 Java
+## 1. Spring 和 Java
 
 #### [> >无功弹簧](https://web.archive.org/web/20220812065222/https://spring.io/blog/2016/02/09/reactive-spring)Spring . io
 
@@ -61,6 +62,7 @@ Hibernate 5 的一个有趣特性——使用字节码增强来做**脏检查**�
 *   #### [> > The document](https://web.archive.org/web/20220812065222/https://marxsoftware.blogspot.ro/2016/02/improved-documentation-hotspot-8.html) [marxsoftware.com]
 
     of hot options in Java 8 has been improved.
+
 *   #### [> >热点的简单性和值-XshowSettings 标志](https://web.archive.org/web/20220812065222/https://marxsoftware.blogspot.ro/2016/02/hotspot-jvm-XshowSettings.html)【【marxsoftware.com】T4
 
 网络研讨会和演示:
@@ -83,7 +85,7 @@ Hibernate 5 的一个有趣特性——使用字节码增强来做**脏检查**�
 
 *   #### [>焊缝 3 .0 .0 .α15](https://web.archive.org/web/20220812065222/http://weld.cdi-spec.org/news/2016/02/04/weld-300Alpha15/)weld . CDI-spec . org
 
-## 2。技术
+## 2. 技术
 
 #### [> >数据泄露，vBulletin 和弱密码哈希](https://web.archive.org/web/20220812065222/https://www.troyhunt.com/2016/02/data-breaches-vbulletin-and-weak.html)【troyhunt.com】
 
@@ -105,7 +107,7 @@ To the point options to **引导一个 Elasticsearch 集群**。我肯定会很�
 
 *   #### [> > Who is testing your unit test?](https://web.archive.org/web/20220812065222/http://www.kgolev.com/who-is-testing-your-unit-test/) 【 kgolev.com】
 
-## 3。沉思
+## 3. 沉思
 
 #### [> >成本与收益点评](https://web.archive.org/web/20220812065222/http://blog.codefx.org/techniques/documentation/comments-costs-benefits/)【codefx.org】
 
@@ -141,7 +143,7 @@ To the point options to **引导一个 Elasticsearch 集群**。我肯定会很�
 
 *   #### [> > We have adopted the code of conduct of contributors!](https://web.archive.org/web/20220812065222/https://spring.io/blog/2016/02/10/we-have-adopted-a-contributor-code-of-conduct) spring . io
 
-## 4。漫画
+## 4. 漫画
 
 本周我最喜欢的迪尔伯特。
 
@@ -151,7 +153,7 @@ To the point options to **引导一个 Elasticsearch 集群**。我肯定会很�
 
 #### [> >我不那么做](https://web.archive.org/web/20220812065222/http://dilbert.com/strip/2012-01-04)【dilbert.com】
 
-## 5。本周精选
+## 5. 本周精选
 
 经过几个月的紧张写作和录制我最后一门课的大师课后，我终于休息好了，并准备好**宣布我的下一个大项目**:
 

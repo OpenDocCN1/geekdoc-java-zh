@@ -1,14 +1,15 @@
+
 # 用 Java 生成组合
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-combinations-algorithm>
 
-## 1.介绍
+## 1. 介绍
 
 在本教程中，**我们将讨论 Java** 中的 [k 组合](/web/20220920171227/https://www.baeldung.com/cs/generate-k-combinations)问题的解决方案。
 
 首先，我们将讨论并实现递归和迭代算法来生成给定大小的所有组合。然后我们将回顾使用通用 Java 库的解决方案。
 
-## 2.组合概述
+## 2. 组合概述
 
 简单地说，**组合是给定集合**中元素的子集。
 
@@ -28,17 +29,17 @@
 
 接下来，我们将回顾列出组合的各种算法。
 
-## 3.生成组合的递归算法
+## 3. 生成组合的递归算法
 
 [递归算法](/web/20220920171227/https://www.baeldung.com/java-recursion)通常通过将一个问题分割成类似的更小的问题来工作。这个过程一直持续到我们达到终止条件，这也是基本情况。然后我们直接解决基础案例。
 
 我们将讨论两种细分从集合中选择元素的方法。第一种方法根据集合中的元素来划分问题。第二种方法通过只跟踪选定的元素来解决问题。
 
-### 3.1.按整个集合中的元素划分
+### 3.1. 按整个集合中的元素划分
 
-让我们通过逐个检查项目来划分从“`n”`项目中选择“`r”`元素”的任务。对于集合中的每个项目，我们可以将其包含在选择中，也可以将其排除。
+让我们通过逐个检查项目来划分从“`n`”项目中选择“`r`”元素”的任务。对于集合中的每个项目，我们可以将其包含在选择中，也可以将其排除。
 
-**如果我们包含第一项，那么我们需要从剩余的`n – 1″`项**中选择“r `– 1″`个元素。另一方面，**如果我们丢弃第一项，那么我们需要从剩余的`n – 1″`项中选择`r”`元素。**
+**如果我们包含第一项，那么我们需要从剩余的`n – 1`项**中选择“`r – 1`”个元素。另一方面，**如果我们丢弃第一项，那么我们需要从剩余的`n – 1`项中选择`r`”元素。**
 
 这可以用数学方法表示为:
 
@@ -114,13 +115,13 @@ public void givenSetAndSelectionSize_whenCalculatedUsingSetRecursiveAlgorithm_th
 
 因此，如果输入集很大，这种方法就不起作用。
 
-### 3.2.按组合中的元素划分
+### 3.2. 按组合中的元素划分
 
 代替跟踪输入集中的元素，**我们将通过跟踪选择**中的项目来划分任务。
 
-首先，让我们使用索引“1”到“`n”`”对输入集中的项目进行排序。现在，我们可以从第一个"`n-r+1″`项中选择第一项。
+首先，让我们使用索引“1”到“`n`””对输入集中的项目进行排序。现在，我们可以从第一个“`n-r+1`”项中选择第一项。
 
-假设我们选择了`kth `项。然后，我们需要从剩余的`n – k”`项中选择`r – 1″`项，将`k + 1″`项索引为`n”`。
+假设我们选择了`kth`项。然后，我们需要从剩余的`n – k`项中选择`r – 1`项，将`k + 1`项索引为`n`。
 
 我们用数学方法将这一过程表示为:
 
@@ -143,7 +144,7 @@ private void helper(List<int[]> combinations, int data[], int start, int end, in
 }
 ```
 
-在上面的代码中，`for` 循环选择下一项，然后，**递归地调用`helper()`方法来选择剩余的项**。当选择了所需数量的项目时，我们停止。
+在上面的代码中，`for`循环选择下一项，然后，**递归地调用`helper()`方法来选择剩余的项**。当选择了所需数量的项目时，我们停止。
 
 接下来，让我们使用`helper`方法来生成选择:
 
@@ -170,7 +171,7 @@ public void givenSetAndSelectionSize_whenCalculatedUsingSelectionRecursiveAlgori
 
 如果要选择的元素数量也很大，这种方法就行不通了。
 
-## 4.迭代算法
+## 4. 迭代算法
 
 在迭代方法中，我们从初始组合开始。然后，**我们继续从当前组合生成下一个组合，直到我们生成了所有组合**。
 
@@ -221,7 +222,7 @@ public void givenSetAndSelectionSize_whenCalculatedUsingIterativeAlgorithm_thenE
 
 现在，让我们使用一些 Java 库来解决这个问题。
 
-## 5.实现组合的 Java 库
+## 5. 实现组合的 Java 库
 
 我们应该尽可能重用现有的库实现，而不是推出我们自己的库实现。在这一节中，我们将探索以下实现组合的 Java 库:
 
@@ -229,13 +230,13 @@ public void givenSetAndSelectionSize_whenCalculatedUsingIterativeAlgorithm_thenE
 *   番石榴
 *   组合库
 
-### 5.1 .Apache common(Apache 公共)
+### 5.1. Apache common(Apache 公共)
 
 Apache Commons 的`[CombinatoricsUtils](https://web.archive.org/web/20220920171227/https://commons.apache.org/proper/commons-math/javadocs/api-3.6/org/apache/commons/math3/util/CombinatoricsUtils.html)`类提供了许多组合实用函数。特别是， [`combinationsIterator`](https://web.archive.org/web/20220920171227/https://commons.apache.org/proper/commons-math/javadocs/api-3.6/org/apache/commons/math3/util/CombinatoricsUtils.html#combinationsIterator(int,%20int)) 方法返回一个迭代器，它将按字典顺序生成组合。
 
 首先，让我们将 Maven 依赖项`[commons-math3](https://web.archive.org/web/20220920171227/https://search.maven.org/search?q=a:commons-math3)`添加到项目中:
 
-```java
+```xml
 <dependency>
     <groupId>org.apache.commons</groupId>
     <artifactId>commons-math3</artifactId>
@@ -255,13 +256,13 @@ public static void generate(int n, int r) {
 }
 ```
 
-### 5.2.谷歌番石榴
+### 5.2. 谷歌番石榴
 
 Guava 库中的`[Sets](https://web.archive.org/web/20220920171227/https://google.github.io/guava/releases/snapshot/api/docs/com/google/common/collect/Sets.html)`类提供了集合相关操作的实用方法。**`[combinations](https://web.archive.org/web/20220920171227/https://google.github.io/guava/releases/snapshot/api/docs/com/google/common/collect/Sets.html#combinations-java.util.Set-int-)`方法返回给定大小的所有子集**。
 
 首先，让我们将[番石榴库](https://web.archive.org/web/20220920171227/https://search.maven.org/search?q=g:com.google.guava%20a:guava)的 maven 依赖项添加到项目中:
 
-```java
+```xml
 <dependency>
     <groupId>com.google.guava</groupId>
     <artifactId>guava</artifactId>
@@ -277,11 +278,13 @@ Set<Set<Integer>> combinations = Sets.combinations(ImmutableSet.of(0, 1, 2, 3, 4
 
 这里，我们使用`ImmutableSet.of`方法从给定的数字中创建一个集合。
 
-### 5.3.组合库
+### 5.3. 组合库
 
 是一个小而简单的 Java 库，用于排列、组合、子集、整数分割和笛卡尔积。
 
-为了在项目中使用它，让我们添加`[combinatoricslib3](https://web.archive.org/web/20220920171227/https://search.maven.org/search?q=g:com.github.dpaukov%20AND%20a:combinatoricslib3)` Maven 依赖项:
+
+
+为了在项目中使用它，让我们添加`[combinatoricslib3](https://web.archive.org/web/20220920171227/https://search.maven.org/search?q=g:com.github.dpaukov%20AND%20a:combinatoricslib3)` Maven 依赖项：
 
 ```java
 <dependency>
@@ -291,7 +294,7 @@ Set<Set<Integer>> combinations = Sets.combinations(ImmutableSet.of(0, 1, 2, 3, 4
 </dependency>
 ```
 
-接下来，**让我们使用库来打印组合:**
+接下来，让我们使用库来打印组合：
 
 ```java
 Generator.combination(0, 1, 2, 3, 4, 5)
@@ -300,7 +303,7 @@ Generator.combination(0, 1, 2, 3, 4, 5)
   .forEach(System.out::println);
 ```
 
-这将在执行时产生以下输出:
+这将在执行时产生以下输出：
 
 ```java
 [0, 1, 2]
@@ -327,7 +330,7 @@ Generator.combination(0, 1, 2, 3, 4, 5)
 
 更多示例见`[combinatoricslib3-example](https://web.archive.org/web/20220920171227/https://github.com/dpaukov/combinatoricslib3-example)`。
 
-## 6.结论
+## 6. 结论
 
 在本文中，我们实现了一些算法来生成组合。
 

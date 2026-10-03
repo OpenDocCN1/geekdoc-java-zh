@@ -1,104 +1,110 @@
-# GAE+JSF:javax . naming . initial context 是一个受限类
+
+
+# GAE + JSF：`javax.naming.InitialContext` 是一个受限类
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/google-app-engine/gae-jsf-javax-naming-initialcontext-is-a-restricted-class/>
 
 ## 问题
 
-使用 Google App Engine (1.6.3)开发 JSF (2.1.7) web 应用程序时，出现以下错误消息:
+使用 Google App Engine（1.6.3）开发 JSF（2.1.7）Web 应用程序时，出现以下错误消息：
 
 ```java
- java.lang.NoClassDefFoundError: javax.naming.InitialContext is a restricted class. 
-	Please see the Google  App Engine developer's guide for more details.
+java.lang.NoClassDefFoundError: javax.naming.InitialContext is a restricted class. 
+	Please see the Google App Engine developer's guide for more details.
 	at com.google.appengine.tools.development.agent.runtime.Runtime.reject(Runtime.java:51)
 	at com.sun.faces.config.WebConfiguration.processJndiEntries(WebConfiguration.java:687)
 	at com.sun.faces.config.WebConfiguration.<init>(WebConfiguration.java:134)
 	at com.sun.faces.config.WebConfiguration.getInstance(WebConfiguration.java:194)
 	at com.sun.faces.config.ConfigureListener.contextInitialized(ConfigureListener.java:163)
-	//... 
+	//...
 ```
 
- ## 解决办法
+## 解决办法
 
-谷歌应用引擎不支持 Java clsss-`javax.naming.InitialContext`，但 JSF 正在`WebConfiguration.java`中使用它。获得 JSF 源代码的副本，审查方法—`processJndiEntries()`和`canProcessJndiEntries()`。
+谷歌应用引擎不支持 Java 类 `javax.naming.InitialContext`，但 JSF 正在 `WebConfiguration.java` 中使用它。获得 JSF 源代码的副本，审查方法 `processJndiEntries()` 和 `canProcessJndiEntries()`。
 
-*文件:WebConfiguration.java*
+**文件：`WebConfiguration.java`**
 
 ```java
- private void processJndiEntries(String contextName) {
+private void processJndiEntries(String contextName) {
 
-		Context initialContext = null;
-        try {
-            initialContext = new InitialContext();
-        } catch (NamingException ne) {
-            if (LOGGER.isLoggable(Level.WARNING)) {
-                LOGGER.log(Level.WARNING, ne.toString(), ne);
-            }
+    Context initialContext = null;
+    try {
+        initialContext = new InitialContext();
+    } catch (NamingException ne) {
+        if (LOGGER.isLoggable(Level.WARNING)) {
+            LOGGER.log(Level.WARNING, ne.toString(), ne);
         }
+    }
 
-        if (initialContext != null) {
-            // process environment entries
-            for (WebEnvironmentEntry entry : WebEnvironmentEntry.values()) {
-                String entryName = entry.getQualifiedName();
-                String value = null;
+    if (initialContext != null) {
+        // process environment entries
+        for (WebEnvironmentEntry entry : WebEnvironmentEntry.values()) {
+            String entryName = entry.getQualifiedName();
+            String value = null;
 
-                try {
-                    value = (String) initialContext.lookup(entryName);
-                } catch (NamingException root) {
-                    if (LOGGER.isLoggable(Level.FINE)) {
-                        LOGGER.fine(root.toString());
-                    }
+            try {
+                value = (String) initialContext.lookup(entryName);
+            } catch (NamingException root) {
+                if (LOGGER.isLoggable(Level.FINE)) {
+                    LOGGER.fine(root.toString());
                 }
+            }
 
-                if (value != null) {
-                    if (LOGGER.isLoggable(Level.INFO)) {
-                        // special logic for ClientStateSavingPassword
-                        if (!entry
-                              .equals(WebEnvironmentEntry.ClientStateSavingPassword)) {
-                            if (LOGGER
-                                  .isLoggable(loggingLevel)) {
-                                LOGGER.log(loggingLevel,
-                                           "jsf.config.webconfig.enventryinfo",
-                                           new Object[]{contextName,
-                                                        entryName,
-                                                        value});
-                            }
-                        } else {
-                            if (LOGGER
-                                  .isLoggable(loggingLevel)) {
-                                LOGGER.log(loggingLevel,
-                                           "jsf.config.webconfig.enventry.clientencrypt",
-                                           contextName);
-                            }
+            if (value != null) {
+                if (LOGGER.isLoggable(Level.INFO)) {
+                    // special logic for ClientStateSavingPassword
+                    if (!entry
+                          .equals(WebEnvironmentEntry.ClientStateSavingPassword)) {
+                        if (LOGGER
+                              .isLoggable(loggingLevel)) {
+                            LOGGER.log(loggingLevel,
+                                       "jsf.config.webconfig.enventryinfo",
+                                       new Object[]{contextName,
+                                                    entryName,
+                                                    value});
+                        }
+                    } else {
+                        if (LOGGER
+                              .isLoggable(loggingLevel)) {
+                            LOGGER.log(loggingLevel,
+                                       "jsf.config.webconfig.enventry.clientencrypt",
+                                       contextName);
                         }
                     }
-                    envEntries.put(entry, value);
                 }
+                envEntries.put(entry, value);
             }
         }
-
     }
-	private boolean canProcessJndiEntries() {
 
-        try {
-            Util.getCurrentLoader(this).loadClass("javax.naming.InitialContext");
-        } catch (Exception e) {
-            if (LOGGER.isLoggable(Level.FINE)) {
-                LOGGER.fine(
-                      "javax.naming is unavailable.  
-			JNDI entries related to Mojarra configuration will not be processed.");
-            }
-            return false;
+}
+
+private boolean canProcessJndiEntries() {
+
+    try {
+        Util.getCurrentLoader(this).loadClass("javax.naming.InitialContext");
+    } catch (Exception e) {
+        if (LOGGER.isLoggable(Level.FINE)) {
+            LOGGER.fine(
+                  "javax.naming is unavailable.  
+            JNDI entries related to Mojarra configuration will not be processed.");
         }
-        return true;
+        return false;
+    }
+    return true;
 
-    } 
+}
 ```
 
 以上两种方法与 Google App Engine 不兼容。
 
-要解决这个问题，创建一个新的`WebConfiguration.java`文件，注释上面的方法，并将这个文件放在您的源文件夹中，这样它将重载原来的 JSF `WebConfiguration.java`。这是一个临时的解决方案，但它很有效，希望 GAE 团队或 JSF 团队将在未来的版本中解决这个问题。
+要解决这个问题，创建一个新的 `WebConfiguration.java` 文件，注释上面的方法，并将这个文件放在您的源文件夹中，这样它将重载原来的 JSF `WebConfiguration.java`。这是一个临时的解决方案，但它很有效，希望 GAE 团队或 JSF 团队将在未来的版本中解决这个问题。
 
-*文件:见 WebConfiguration.java 全文*
+**文件：见 `WebConfiguration.java` 全文**
+
+
+
 
 ```java
  /*
@@ -1520,21 +1526,18 @@ public class WebConfiguration {
 
         }
 
-    } // END DeferredBooleanParameterLoggingAction
+    } // END DeferredBooleanParameterLogginAction
 
 } // END WebConfiguration 
 ```
 
-**Credit** : Source code is copied from [here](http://web.archive.org/web/20190304032745/http://code.google.com/p/joshjcarrier/source/browse/trunk/Sun%20JSF%20GAE/src/com/sun/faces/config/WebConfiguration.java) ## 参考
-
-1.  [为 GAE 修改 WebConfiguration.java](http://web.archive.org/web/20190304032745/http://code.google.com/p/joshjcarrier/source/browse/trunk/Sun%20JSF%20GAE/src/com/sun/faces/config/WebConfiguration.java)
-2.  [Mojarra JSF 2.0 RC2 和谷歌应用引擎 SDK 1.2.6](http://web.archive.org/web/20190304032745/http://javadocs.wordpress.com/2009/10/17/mojarra-jsf-2-0-rc2-and-google-app-engine-sdk-1-2-6/)
-
-[gae](http://web.archive.org/web/20190304032745/http://www.mkyong.com/tag/gae/) [jsf2](http://web.archive.org/web/20190304032745/http://www.mkyong.com/tag/jsf2/)
 
 
+**Credit**：源代码复制自[这里](http://web.archive.org/web/20190304032745/http://code.google.com/p/joshjcarrier/source/browse/trunk/Sun%20JSF%20GAE/src/com/sun/faces/config/WebConfiguration.java)
 
+## 参考
 
+1. [为 GAE 修改`WebConfiguration.java`](http://web.archive.org/web/20190304032745/http://code.google.com/p/joshjcarrier/source/browse/trunk/Sun%20JSF%20GAE/src/com/sun/faces/config/WebConfiguration.java)
+2. [Mojarra JSF 2.0 RC2 和谷歌应用引擎 SDK 1.2.6](http://web.archive.org/web/20190304032745/http://javadocs.wordpress.com/2009/10/17/mojarra-jsf-2-0-rc2-and-google-app-engine-sdk-1-2-6/)
 
-
-
+[`gae`](http://web.archive.org/web/20190304032745/http://www.mkyong.com/tag/gae/) [`jsf2`](http://web.archive.org/web/20190304032745/http://www.mkyong.com/tag/jsf2/)

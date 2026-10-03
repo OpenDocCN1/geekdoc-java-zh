@@ -1,3 +1,4 @@
+
 # Grafana & Prometheus 的 Springboot 应用程序监控
 
 > 原文：<https://medium.com/javarevisited/springboot-app-monitoring-with-grafana-prometheus-7c723f0dec15?source=collection_archive---------0----------------------->
@@ -14,7 +15,7 @@
 
 ## SpringBoot 应用
 
-使用 [Spring Boot 的首字母](https://start.spring.io/)创建一个简单的 Springboot Maven 应用程序。生成 app 时添加依赖 *Spring Boot 执行器*和 *Spring Boot Web* 。
+使用 [Spring Boot 的首字母](https://start.spring.io/)创建一个简单的 Springboot Maven 应用程序。生成 app 时添加依赖 *Spring Boot 执行器*和 *Spring Boot Web*。
 
 [![](img/10361737d53a485ac2767ad6d2c18694.png)](https://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
 
@@ -28,7 +29,7 @@
 </dependency>
 ```
 
-最终的 pom.xml 应该如下所示。
+最终的 `pom.xml` 应该如下所示。
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -82,7 +83,7 @@
 </project>
 ```
 
-现在将下面的配置添加到您的 *application.yml* 文件*中。*spring*initializr*创建一个 *application.properties* 文件，我更喜欢 YAML 因此有了 *yml* 文件，但是如果你是属性文件格式的粉丝。请放心使用。
+现在将下面的配置添加到您的 `application.yml` 文件*中。*`spring`*initializr*创建一个 `application.properties` 文件，我更喜欢 YAML 因此有了 `yml` 文件，但是如果你是属性文件格式的粉丝。请放心使用。
 
 ```
 management:
@@ -107,7 +108,7 @@ management:
 
 ## 普罗米修斯
 
-既然应用程序公开了度量数据，让我们设置 Prometheus 来使用它。我们将使用普罗米修斯码头形象提出普罗米修斯。为此，让我们确保我们有所需的配置集。用下面的内容创建一个名为 *prometheus.yml* 的文件。该文件可以在任何地方创建，但我们需要在启动 Prometheus 时将文件的路径传递给 docker。请确保用您的系统 IP 替换 SYSTEM_IP。
+既然应用程序公开了度量数据，让我们设置 Prometheus 来使用它。我们将使用普罗米修斯码头形象提出普罗米修斯。为此，让我们确保我们有所需的配置集。用下面的内容创建一个名为 `prometheus.yml` 的文件。该文件可以在任何地方创建，但我们需要在启动 Prometheus 时将文件的路径传递给 docker。请确保用您的系统 IP 替换 `SYSTEM_IP`。
 
 ```
 global:
@@ -136,7 +137,7 @@ docker run -d -p 9090:9090 -v \<absolute_path_to_your_prometheus_file>:/etc/prom
 
 ![](img/831c59c57fe27a5c20db0a60de45a547.png)
 
-在 targets 下，我们应该能够看到我们在状态为`UP`的 *prometheus.yml* 文件中定义的两个端点。
+在 targets 下，我们应该能够看到我们在状态为 `UP` 的 `prometheus.yml` 文件中定义的两个端点。
 
 ![](img/f2914dc0a2c088e7912e8dcf162b4482.png)
 
@@ -150,11 +151,11 @@ Prometheus 还有一个 *graph* 选项，可以用来创建一些度量的图形
 docker run -d -p 3000:3000 grafana/grafana
 ```
 
-一旦映像启动并运行，点击 URL[http://localhost:3000](http://localhost:3000/login)访问 Garafana。您需要提供用户名和密码才能登录。Grafana 的默认用户名和密码是`admin`。用它登录。
+一旦映像启动并运行，点击 URL[http://localhost:3000](http://localhost:3000/login)访问 Garafana。您需要提供用户名和密码才能登录。Grafana 的默认用户名和密码是 `admin`。用它登录。
 
 ![](img/3df52e438b31052af185285766928b63.png)
 
-登录后，点击配置*数据源*将普罗米修斯添加为`Datasource`
+登录后，点击配置*数据源*将普罗米修斯添加为 `Datasource`
 
 ![](img/6e01f98f5785899e59e64000ba870aab.png)![](img/c2460417dbf76da1d3bc217e03bbd990.png)![](img/3eabbd85d1e342e4891aa22595da37aa.png)![](img/959cfc870b5bbff5ae9f2b00bcd8459b.png)
 

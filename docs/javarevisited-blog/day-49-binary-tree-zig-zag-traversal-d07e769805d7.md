@@ -1,8 +1,9 @@
+
 # 第 49 天——二叉树之字形遍历
 
 > 原文：<https://medium.com/javarevisited/day-49-binary-tree-zig-zag-traversal-d07e769805d7?source=collection_archive---------0----------------------->
 
-## **亚马逊 100 天**
+## 亚马逊 100 天
 
 ![](img/2bb85030ebf55142d90cd1f53eecc71f.png)
 

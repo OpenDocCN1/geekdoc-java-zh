@@ -1,3 +1,4 @@
+
 # 第 36 天—合并二叉树
 
 > 原文：<https://medium.com/javarevisited/day-36-merge-binary-tree-8f1b228322ab?source=collection_archive---------1----------------------->

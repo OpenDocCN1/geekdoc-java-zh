@@ -1,4 +1,5 @@
-# 串行通话-将数据从 ESP32(和 Arduino Uno)发送到 cmd 中的 Java
+
+# 串行通话 - 将数据从 ESP32（和 Arduino Uno）发送到 `cmd` 中的 Java
 
 > 原文：<https://medium.com/javarevisited/serial-talk-sending-data-from-esp32-and-arduino-uno-to-java-in-cmd-816ff7d44774?source=collection_archive---------1----------------------->
 

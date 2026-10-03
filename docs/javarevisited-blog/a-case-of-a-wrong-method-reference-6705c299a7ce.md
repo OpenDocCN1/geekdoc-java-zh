@@ -1,3 +1,4 @@
+
 # 避免 Java 中方法引用的这种错误用法
 
 > 原文：<https://medium.com/javarevisited/a-case-of-a-wrong-method-reference-6705c299a7ce?source=collection_archive---------5----------------------->
@@ -25,7 +26,7 @@ at java.base/java.util.concurrent.ThreadLocalRandom.nextInt(ThreadLocalRandom.ja
 
 那么，怎么了？
 
-最初的意图是用[threadlocalrrandom # nextInt()](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ThreadLocalRandom.html#nextInt--)映射每个索引。但是，通过使用方法引用，它实际上调用了[threadlocalrrandom # nextInt(int bound)](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ThreadLocalRandom.html#nextInt-int-)。
+最初的意图是用`ThreadLocalRandom#nextInt()`映射每个索引。但是，通过使用方法引用，它实际上调用了`ThreadLocalRandom#nextInt(int bound)`。
 
 代码实际上是这样工作的，
 

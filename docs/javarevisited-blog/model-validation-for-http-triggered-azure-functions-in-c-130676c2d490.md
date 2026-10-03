@@ -1,4 +1,5 @@
-# C#中 Http 触发 Azure 函数的模型验证
+
+# C# 中 Http 触发 Azure 函数的模型验证
 
 > 原文：<https://medium.com/javarevisited/model-validation-for-http-triggered-azure-functions-in-c-130676c2d490?source=collection_archive---------0----------------------->
 
@@ -6,23 +7,23 @@
 
 本·科尔德在 [Unsplash](https://unsplash.com/s/photos/coding?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 上的照片
 
-**Azure 功能简介**
+## Azure 功能简介
 
 Azure Functions 是一个事件驱动的无服务器解决方案，开发人员可以专注于编写代码片段，而不必为部署和管理其可扩展性的基础架构投入太多精力。
 
-每个函数都有一个触发器，用于执行该函数。以下是使用的一些主要触发器:
+每个函数都有一个触发器，用于执行该函数。以下是使用的一些主要触发器：
 
-1.  超文本传送协议（Hyper Text Transport Protocol 的缩写）
-2.  计时器
-3.  事件网格
-4.  长队
-5.  …
+1. 超文本传送协议（Hyper Text Transport Protocol 的缩写）
+2. 计时器
+3. 事件网格
+4. 长队
+5. …
 
 你可以从他们的官方网站[这里](https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings?tabs=csharp#supported-bindings)找到整个名单。
 
 今天，我们将关注 Http 触发的 Azure 函数，看看我们如何验证输入，比如查询参数和 JSON 主体。
 
-**ASP 中的模型验证。NET Core Web API**
+## ASP 中的模型验证。NET Core Web API
 
 如果您不熟悉 C#，是的，通过模型验证可以很容易地验证 HTTP 请求中的输入。
 
@@ -38,7 +39,9 @@ Azure Functions 是一个事件驱动的无服务器解决方案，开发人员�
 using MyApi.Models;
 using System.Net;
 using System.Net.Http;
-using System.Web.Http;namespace MyApi.Controllers
+using System.Web.Http;
+
+namespace MyApi.Controllers
 {
     public class ProductsController : ApiController
     {
@@ -46,7 +49,8 @@ using System.Web.Http;namespace MyApi.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Do something with the product (not shown).return new HttpResponseMessage(HttpStatusCode.OK);
+                // Do something with the product (not shown).
+                return new HttpResponseMessage(HttpStatusCode.OK);
             }
             else
             {
@@ -57,7 +61,7 @@ using System.Web.Http;namespace MyApi.Controllers
 }
 ```
 
-**Azure 函数中的模型验证**
+## Azure 函数中的模型验证
 
 能够重用 ASP 可用的模型验证的思想。NET /。NET Core 将有助于使我们的代码更加直观和可读。
 
@@ -69,7 +73,7 @@ using System.Web.Http;namespace MyApi.Controllers
 
 接下来，我们用方法`GetBodyAsync()`和`GetQueryParamAsync()`为`HttpRequest`构造一个扩展类，分别验证 HTTP JSON 主体和查询参数。
 
-下面是一个在 HTTP 触发的 Azure 函数中使用 ModelValidationExtension 的例子。
+下面是一个在 HTTP 触发的 Azure 函数中使用`ModelValidationExtension`的例子。
 
 瞧啊。我们现在可以用一种更直观的方式来验证我们的 HTTP 输入，这种方式很容易管理。
 

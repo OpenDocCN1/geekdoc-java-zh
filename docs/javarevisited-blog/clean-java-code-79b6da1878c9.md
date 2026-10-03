@@ -1,3 +1,4 @@
+
 # 如何编写干净的 Java 代码
 
 > 原文：<https://medium.com/javarevisited/clean-java-code-79b6da1878c9?source=collection_archive---------1----------------------->

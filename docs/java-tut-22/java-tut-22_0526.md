@@ -1,3 +1,4 @@
+
 # `Deque`接口
 
 > 原文：[`docs.oracle.com/javase/tutorial/collections/interfaces/deque.html`](https://docs.oracle.com/javase/tutorial/collections/interfaces/deque.html)

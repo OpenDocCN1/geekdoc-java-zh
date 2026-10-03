@@ -1,11 +1,12 @@
+
 # JSF 2 单选按钮示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jsf2/jsf-2-radio-buttons-example/>
 
-在 JSF 中，“ **h:selectOneRadio** 标签用于呈现一组“ **radio** 类型的 HTML 输入元素，并使用 HTML table 和 label 标签对其进行格式化。
+在 JSF 中，`h:selectOneRadio`标签用于呈现一组`radio`类型的 HTML 输入元素，并使用 HTML table 和 label 标签对其进行格式化。
 
 ```java
- //JSF...
+//JSF...
 <h:selectOneRadio value="#{user.favColor1}">
    	<f:selectItem itemValue="Red" itemLabel="Color1 - Red" />
    	<f:selectItem itemValue="Green" itemLabel="Color1 - Green" />
@@ -26,23 +27,23 @@
 	<label for="j_idt6:j_idt8:2"> Color1 - Blue</label>
   </td>
 </tr>
-</table> 
+</table>
 ```
 
-## JSF 2.0“h:selectone radio”示例
+## JSF 2.0 `h:selectOneRadio` 示例
 
-一个 JSF 2.0 示例，展示了如何使用" **h:selectOneRadio** "标记来呈现单选按钮，并以 3 种不同的方式填充数据:
+一个 JSF 2.0 示例，展示了如何使用`h:selectOneRadio`标记来呈现单选按钮，并以 3 种不同的方式填充数据：
 
-1.  “**f:selecti item**标签中的硬核值。
-2.  用 Map 生成值，并将其放入“**f:selecti items**标签中。
-3.  用一个对象数组生成值，放入“ **f:selectItems** ”标签，然后用一个“ **var** 属性表示该值。
+1. `f:selectItem`标签中的硬核值。
+2. 用 Map 生成值，并将其放入`f:selectItems`标签中。
+3. 用一个对象数组生成值，放入`f:selectItems`标签，然后用一个`var`属性表示该值。
 
- ## 1.支撑豆
+## 1. 支撑豆
 
 用于保存提交数据的后备 bean。
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -104,15 +105,15 @@ public class UserBean{
 		return color3List;
 	}
 
-} 
+}
 ```
 
- ## 2.JSF·佩奇
+## 2. JSF 页面
 
-演示“ **h:selectOneRadio** ”标签使用的 JSF 页面。
+演示`h:selectOneRadio`标签使用的 JSF 页面。
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html    
@@ -153,13 +154,13 @@ public class UserBean{
 
     	</h:form>
     </h:body>
-</html> 
+</html>
 ```
 
-result.xhtml…
+`result.xhtml`…
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html    
@@ -177,23 +178,23 @@ result.xhtml…
     		<li>user.favColor3 : #{user.favColor3}</li>
     	</ol>
     </h:body>
-</html> 
+</html>
 ```
 
-## 3.演示
+## 3. 演示
 
 ![jsf2-radio-button-example-1](img/c760030c8bb461aaa063bce317e27d81.png "jsf2-radio-button-example-1")
 
-单击“提交”按钮时，链接到“result.xhtml”并显示提交的单选按钮值。
+单击“提交”按钮时，链接到`result.xhtml`并显示提交的单选按钮值。
 
 ![jsf2-radio-button-example-2](img/8e35648e8d0621da0b7fca690df78392.png "jsf2-radio-button-example-2")
 
 ## 如何默认选择单选按钮值？
 
-在 JSF 中，如果与“ **h:selectOneRadio** ”标签的“值”匹配，则选择“ **f:selectItems** ”标签的单选按钮值。在上面的例子中，如果你设置 favColor2 为“红色”:
+在 JSF 中，如果与`h:selectOneRadio`标签的“值”匹配，则选择`f:selectItems`标签的单选按钮值。在上面的例子中，如果你设置`favColor2`为“红色”：
 
 ```java
- @ManagedBean(name="user")
+@ManagedBean(name="user")
 @SessionScoped
 public class UserBean{
 
@@ -202,7 +203,7 @@ public class UserBean{
 	//... 
 ```
 
-“favColor2”单选按钮，“红色”选项默认选中。
+`favColor2`单选按钮，“红色”选项默认选中。
 
 ## 下载源代码
 
@@ -210,13 +211,6 @@ Download It – [JSF-2-RadioButtons-Example.zip](http://web.archive.org/web/2019
 
 #### 参考
 
-1.  [JSF<h:selectone radio/>JavaDoc](http://web.archive.org/web/20190306135900/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/h/selectOneRadio.html)
+1. [JSF `<h:selectOneRadio/>` JavaDoc](http://web.archive.org/web/20190306135900/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/h/selectOneRadio.html)
 
-[JSF 2](http://web.archive.org/web/20190306135900/http://www.mkyong.com/tag/jsf2/)[单选按钮](http://web.archive.org/web/20190306135900/http://www.mkyong.com/tag/radio-button/)
-
-
-
-
-
-
-
+[JSF 2](http://web.archive.org/web/20190306135900/http://www.mkyong.com/tag/jsf2/) [单选按钮](http://web.archive.org/web/20190306135900/http://www.mkyong.com/tag/radio-button/)

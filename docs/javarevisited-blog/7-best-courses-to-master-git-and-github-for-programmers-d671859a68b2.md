@@ -1,3 +1,4 @@
+
 # 深入学习 Git 和 Github 的 10 个最佳在线课程
 
 > 原文：<https://medium.com/javarevisited/7-best-courses-to-master-git-and-github-for-programmers-d671859a68b2?source=collection_archive---------0----------------------->
@@ -68,11 +69,11 @@ Coursera 上的 Git 版本控制课程为你理解 Git 版本控制系统提供�
 
 除此之外，Google 在 Coursera 上的[**Git 入门和 GitHub 课程**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fintroduction-git-github) 也是很棒的从零开始学习 Git 概念。这也是一门实践课程，是谷歌广受欢迎的 [**谷歌 IT 自动化与 Python 专业证书**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fprofessional-certificates%2Fgoogle-it-automation) 的一部分，这意味着完成这门课程将计入该证书。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fprofessional-certificates%2Fgoogle-it-automation>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fprofessional-certificates%2Fgoogle-it-automation>
 
 顺便说一句，如果你喜欢在 Coursera 上学习，那么我建议你加入 Coursera Plus ，这是 Coursera 的一个订阅计划，让你无限制地访问他们最受欢迎的课程、专业、专业证书和指导项目，包括这个项目。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
 ## 3.[吃了苦头才学会](https://www.educative.io/courses/learn-git-hard-way?affiliate_id=5073518643380224)【教育性最好的课程】
 
@@ -94,7 +95,7 @@ Coursera 上的 Git 版本控制课程为你理解 Git 版本控制系统提供�
 
 此外，如果你找到了教育平台和他们基于文本的互动课程，那么考虑购买 [**教育订阅**](https://www.educative.io/subscription?affiliate_id=5073518643380224) ，每月只需 14.9 美元就可以访问他们的 210 多门课程。非常划算，非常适合准备编码面试。
 
-<https://www.educative.io/subscription?affiliate_id=5073518643380224>  
+<https://www.educative.io/subscription?affiliate_id=5073518643380224>
 
 ## 4. [GitHub 基础知识](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fgithub-fundamentals)【plural sight 最佳课程】
 
@@ -110,80 +111,82 @@ Coursera 上的 Git 版本控制课程为你理解 Git 版本控制系统提供�
 
 在过去的 3 年里，我一直是 Pluralsight 的成员，我学到了很多东西。如果你能在学习上花些钱，那么我强烈建议你加入 Pluralsight，但即使你不能加入，你仍然可以通过利用他们的 [**10 天免费试用**](http://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) **，**免费获得这门课程，该课程提供 200 分钟的所有课程。
 
-<http://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>  
+<http://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>
 
-## 5.Git & GitHub 完全大师班:从初学者到 Git 专家
+
+
+## 5. Git & GitHub 完全大师班：从初学者到 Git 专家
 
 这是在线学习 Git 和 Github 的另一个令人印象深刻的、可能是最全面的课程。本课程将向你介绍几乎所有你在使用 [Git](/javarevisited/top-10-free-courses-to-learn-git-and-github-best-of-lot-967aa314ea) 时需要了解的方面。它有正确的节奏和足够的简短练习来帮助你理解每个概念。谈到社会证明，这门课程在近 8000 名学生中平均获得 4.3 分，这令人印象深刻。
 
 简而言之，从基础水平到高级水平学习 git 的完美课程。非常感谢比巴什·罗伊教练创建了这个优秀的课程。
 
-**这里是加入本课程的链接** — [Git & GitHub 完全大师班:从初学者到 Git 专家](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fgit-basic-concept-fundamentals-github%2F)
+**这里是加入本课程的链接** — [Git & GitHub 完全大师班：从初学者到 Git 专家](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fgit-basic-concept-fundamentals-github%2F)
 
 [![](img/6597c99b70eb047a9814d9a3085b5bc0.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fgit-basic-concept-fundamentals-github%2F)
 
-## 6.[Git:4 小时成为 Git & GitHub 专家](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fgit-expert-4-hours%2F)【免费课程】
+## 6. [Git：4 小时成为 Git & GitHub 专家](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fgit-expert-4-hours%2F)【免费课程】
 
 这是快速学习 Git 和 Github 的免费课程之一。如果你刚加入一家新公司，或者刚开始做一个将要用到 Git 的项目，那么你可以利用这个课程提前学习 Git。
 
 虽然课程只包含 4.5 个小时的内容，但已经足够全面，涵盖了所有关键的 Git 概念。您将了解 Git 理论和工作流、Git 存储库、基本 Git 命令、高级 Git 命令，以及如何一起使用 [Git](https://git-scm.com/) 和 [Github](https://github.com/) 。谈到社会证明，这门课程得到了近 1.6 万名学生的平均 4.3 分的评价，非常优秀。非常感谢 Jad Khalili 老师创建了这个一流的课程。
 
-**以下是加入本课程的链接**—[Git:4 小时内成为 Git & GitHub 专家](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fgit-expert-4-hours%2F)
+**以下是加入本课程的链接**—[Git：4 小时内成为 Git & GitHub 专家](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fgit-expert-4-hours%2F)
 
 [![](img/5f6a9dab1b5cdc9898dda1d88e743b3b.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fgit-expert-4-hours%2F)
 
-## 7. [GitHub 终极版:Git 大师和 GitHub——初学者到专家](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fgithub-ultimate%2F)
+## 7. [GitHub 终极版：Git 大师和 GitHub——初学者到专家](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fgithub-ultimate%2F)
 
 通过循序渐进、无假设的学习，从 Git 和 GitHub 的完全新手变成专家。这是 Udemy 的另一个优秀的关于 Git 的综合课程。该课程从解释 Git 的核心概念开始，然后指导您下载并在您的机器上安装 Git。之后，它继续介绍基本的 git 任务，比如将文件添加到 Git 中，检查状态，提交更改，并将这些更改推送到远程服务器。一路上包含了很多 [Git 命令](https://dev.to/javinpaul/5-free-courses-to-learn-git-and-github-in-depth-jpp)为`git add`、`git status`、`git log`、`git commit`、`git pull`、`git push`。
 
-本课程还涵盖了更高级的主题，如比较差异、使用 git reset 回滚更改以及 git revert 命令。它还解释了分支和合并解析，标记特殊事件，保存正在进行的工作，甚至一点时间旅行。
+本课程还涵盖了更高级的主题，如比较差异、使用`git reset`回滚更改以及`git revert`命令。它还解释了分支和合并解析，标记特殊事件，保存正在进行的工作，甚至一点时间旅行。
 
-**以下是加入本课程的链接** — [GitHub 终极版:Git 大师和 GitHub —初学者到专家](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fgithub-ultimate%2F)
+**以下是加入本课程的链接** — [GitHub 终极版：Git 大师和 GitHub —初学者到专家](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fgithub-ultimate%2F)
 
 [![](img/5fc35cd19b596dd08d84d9dd3d7513f7.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fgithub-ultimate%2F)
 
 总的来说，这是一门极好的课程，可以深入探讨 Git。近 16000 名学生平均给它打了 4.4 分。平均而言，来自近 15000 名学生的 4.3 分的评分，简直令人难以置信。
 
-## 8.[完整的 Git 指南:了解并掌握 Git 和 GitHub](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgit-and-github-complete-guide%2F)
+## 8. [完整的 Git 指南：了解并掌握 Git 和 GitHub](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgit-and-github-complete-guide%2F)
 
 顾名思义，这是学习和掌握编程和开发 Git 的高级课程之一。你将学习提交、分支、合并、重定基础、挤压和其他你作为软件开发人员需要的东西。
 
-这是 Udemy 上的**完整的实用 Git 和 GitHub 指南**之一，包括大量的实践活动。最重要的是，你将学习 g it 是如何工作的，知道了这一点，你将能够更容易地使用 Git 特性，并在你的开发工作流程中修复错误。
+这是 Udemy 上的**完整的实用 Git 和 GitHub 指南**之一，包括大量的实践活动。最重要的是，你将学习 git 是如何工作的，知道了这一点，你将能够更容易地使用 Git 特性，并在你的开发工作流程中修复错误。
 
-**在练习部分，您将进行多次 Git 练习:**
+**在练习部分，您将进行多次 Git 练习：**
 
-1.  初始化新的 Git 储存库
-2.  进行更改，将它们添加到临时区域并提交
-3.  创建分支、签出分支和合并分支
-4.  执行分支的快进和三向合并
-5.  解决合并冲突
-6.  进入分离头状态，并在那里进行实验性提交
-7.  执行分支的重置
+1. 初始化新的 Git 储存库
+2. 进行更改，将它们添加到临时区域并提交
+3. 创建分支、签出分支和合并分支
+4. 执行分支的快进和三向合并
+5. 解决合并冲突
+6. 进入分离头状态，并在那里进行实验性提交
+7. 执行分支的重置
 
 总的来说，这是软件开发人员掌握 Git 和 Github 的完美实践课程。你可以通过这个课程学习最流行的 git 工作流，开始使用它们，成为更好的开发者！
 
-**以下是加入本课程的链接** — <https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgit-and-github-complete-guide%2F>[完整 Git 指南:了解并掌握 Git 和 GitHub](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgit-and-github-complete-guide%2F)
+**以下是加入本课程的链接** — <https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgit-and-github-complete-guide%2F>[完整 Git 指南：了解并掌握 Git 和 GitHub](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgit-and-github-complete-guide%2F)
 
 [![](img/1ea775237cebc33965f87d42edc6d195.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgit-and-github-complete-guide%2F)
 
-## 9. [Git 基础:使用 Bitbucket 和 Sourcetree 学习 Git](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgit-with-bitbucket-and-sourcetree%2F)[Udemy]
+## 9. [Git 基础：使用 Bitbucket 和 Sourcetree 学习 Git](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgit-with-bitbucket-and-sourcetree%2F)[Udemy]
 
 这是在 Udemy 上学习 Git 命令和概念的又一个很棒的课程。本课程将帮助您快速掌握如何使用 Git 进行日常软件开发。
 
-在本课程中，您将学到以下内容:
+在本课程中，您将学到以下内容：
 
-*   什么是版本控制和 Git？
-*   什么是 Git 存储库和通用 Git 词汇表？
-*   如何将 git 与 Sourcetree 和 Bitbucket 结合使用
-*   用于 Github 项目的基本 Git 命令和概念
+* 什么是版本控制和 Git？
+* 什么是 Git 存储库和通用 Git 词汇表？
+* 如何将 git 与 Sourcetree 和 Bitbucket 结合使用
+* 用于 Github 项目的基本 Git 命令和概念
 
 对于任何想学习 Git 和版本控制的人来说，这是一门很好的课程。它不像列表中的前两门课程那么全面，但是如果你需要使用 BitBucker 和 Sourcetree，你可以使用它。
 
-**这里是加入本课程的链接** — [Git 基础知识:使用 Bitbucket 和 Sourcetree 学习 Git](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgit-with-bitbucket-and-sourcetree%2F)
+**这里是加入本课程的链接** — [Git 基础知识：使用 Bitbucket 和 Sourcetree 学习 Git](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgit-with-bitbucket-and-sourcetree%2F)
 
 [![](img/7e78e576f02a421171a144876846e6e8.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgit-with-bitbucket-and-sourcetree%2F)
 
-## 10. [Git 学习之旅——Git(版本控制)学习指南](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgit-learning-journey%2F)
+## 10. [Git 学习之旅——Git（版本控制）学习指南](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgit-learning-journey%2F)
 
 这是一个非常好的 Git 初学者培训课程。它从最基本的到分支、合并、与他人合作以及与远程存储库合作。甚至还包括了一些关于重置基础的课程。
 
@@ -193,7 +196,7 @@ Anna Skoulikari 做了令人难以置信的工作，这可能是为什么该课�
 
 看看这些令人惊叹的评论，了解一下其他学生的想法吧！
 
-**这里是加入本课程的链接**——[Git 学习之旅——学习 Git(版本控制)指南](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgit-learning-journey%2F)
+**这里是加入本课程的链接**——[Git 学习之旅——学习 Git（版本控制）指南](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgit-learning-journey%2F)
 
 [![](img/9d14b3b384f918de261c74962ea67c1d.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgit-learning-journey%2F)
 
@@ -203,21 +206,21 @@ Anna Skoulikari 做了令人难以置信的工作，这可能是为什么该课�
 
 其他**面向程序员的免费在线课程和文章**
 
-*   [完整的 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
-*   [学习 Linux 命令的 5 门免费课程](https://hackernoon.com/top-5-free-linux-courses-for-programmers-4a433b4edade)
-*   [练习 Git 命令的 10 个免费网站](https://javarevisited.blogspot.com/2019/05/10-free-websites-to-learn-git-online.html)
-*   [10 门免费学习数据结构和算法的课程](http://www.java67.com/2019/02/top-10-free-algorithms-and-data.html)
-*   [Java 开发人员学习 Maven 和 Jenkins 的 5 门课程](http://www.java67.com/2018/02/6-free-maven-and-jenkins-online-courses-for-java-developers.html)
-*   [程序员 10 门高级核心 Java 课程](https://javarevisited.blogspot.com/2020/04/top-10-advanced-core-java-courses-for-experienced-developers.html)
-*   [学习 Learn RESTful Web 服务的 3 本书和课程](http://www.java67.com/2018/02/3-books-and-courses-to-learn-restful-web-services-with-spring.html)
-*   [深入学习 Docker 的 10 门免费课程](https://javarevisited.blogspot.com/2018/02/10-free-docker-container-courses-for-Java-Developers.html)
-*   [程序员学习 Bash 脚本的 5 门免费课程](http://www.java67.com/2019/04/top-5-free-course-to-learn-bash-shell-scripting-linux.html)
-*   [面向 Java 开发人员的 10 门高级 Spring 课程](/javarevisited/10-advanced-spring-boot-courses-for-experienced-java-developers-5e57606816bd)
-*   [学习 Oracle 和微软 SQL Server 数据库的 5 门课程](http://www.java67.com/2018/02/5-free-oracle-and-microsoft-sql-server-online-courses.html)
-*   [免费学习区块链技术的 7 门课程](/javarevisited/7-free-courses-to-learn-blockchain-in-2020-764e66b47ebe)
+* [完整的 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
+* [学习 Linux 命令的 5 门免费课程](https://hackernoon.com/top-5-free-linux-courses-for-programmers-4a433b4edade)
+* [练习 Git 命令的 10 个免费网站](https://javarevisited.blogspot.com/2019/05/10-free-websites-to-learn-git-online.html)
+* [10 门免费学习数据结构和算法的课程](http://www.java67.com/2019/02/top-10-free-algorithms-and-data.html)
+* [Java 开发人员学习 Maven 和 Jenkins 的 5 门课程](http://www.java67.com/2018/02/6-free-maven-and-jenkins-online-courses-for-java-developers.html)
+* [程序员 10 门高级核心 Java 课程](https://javarevisited.blogspot.com/2020/04/top-10-advanced-core-java-courses-for-experienced-developers.html)
+* [学习 Learn RESTful Web 服务的 3 本书和课程](http://www.java67.com/2018/02/3-books-and-courses-to-learn-restful-web-services-with-spring.html)
+* [深入学习 Docker 的 10 门免费课程](https://javarevisited.blogspot.com/2018/02/10-free-docker-container-courses-for-Java-Developers.html)
+* [程序员学习 Bash 脚本的 5 门免费课程](http://www.java67.com/2019/04/top-5-free-course-to-learn-bash-shell-scripting-linux.html)
+* [面向 Java 开发人员的 10 门高级 Spring 课程](/javarevisited/10-advanced-spring-boot-courses-for-experienced-java-developers-5e57606816bd)
+* [学习 Oracle 和微软 SQL Server 数据库的 5 门课程](http://www.java67.com/2018/02/5-free-oracle-and-microsoft-sql-server-online-courses.html)
+* [免费学习区块链技术的 7 门课程](/javarevisited/7-free-courses-to-learn-blockchain-in-2020-764e66b47ebe)
 
 感谢您阅读本文。如果你喜欢这些适合初学者和有经验的程序员的最佳 git 在线课程，那么请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
-**P. S. —** 如果你正在寻找一些*免费课程来学习 Git 和 Github* ，那么你也可以在 Udemy 上查看 [**终极 GIT 5 天挑战**](http://bit.ly/2CtQTCW) 课程。它是完全免费的，而且只需几天就能学会 Git。
+**P. S. —** 如果你正在寻找一些*免费课程来学习 Git 和 Github*，那么你也可以在 Udemy 上查看 [**终极 GIT 5 天挑战**](http://bit.ly/2CtQTCW) 课程。它是完全免费的，而且只需几天就能学会 Git。
 
-<http://bit.ly/2CtQTCW> 
+<http://bit.ly/2CtQTCW>

@@ -1,16 +1,17 @@
-# 具有 Spring Security OAuth 的前端应用程序–授权代码流
+
+# 具有 Spring Security OAuth 的前端应用程序 — 授权代码流
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-security-oauth-authorization-code-flow>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将继续我们的 [Spring Security OAuth 系列](/web/20221012100324/https://www.baeldung.com/spring-security-oauth)，为授权代码流构建一个简单的前端。
 
-请记住，这里的重点是客户端；看看[Spring REST API+oauth 2+angular js](/web/20221012100324/https://www.baeldung.com/rest-api-spring-oauth2-angular-legacy)的文章——查看授权和资源服务器的详细配置。
+请记住，这里的重点是客户端；可参阅 [Spring REST API + oauth 2 + angular js](/web/20221012100324/https://www.baeldung.com/rest-api-spring-oauth2-angular-legacy) 的文章——了解授权和资源服务器的详细配置。
 
-## 2。授权服务器
+## 2. 授权服务器
 
-在我们到达前端之前，我们需要在我们的授权服务器配置中添加我们的客户端详细信息:
+在我们到达前端之前，我们需要在我们的授权服务器配置中添加我们的客户端详细信息：
 
 ```java
 @Configuration
@@ -28,19 +29,19 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
 ...
 ```
 
-请注意我们现在是如何启用授权代码授权类型的，具体如下:
+请注意我们现在是如何启用授权代码授权类型的，具体如下：
 
-*   我们的客户 id 是`fooClientId`
-*   我们的范围是`foo`、`read `和`write`
-*   重定向 URI 是`http://localhost:8089/`(对于我们的前端应用程序，我们将使用端口 8089)
+- 我们的客户端 id 是`fooClientId`
+- 我们的范围是`foo`、`read`和`write`
+- 重定向 URI 是`http://localhost:8089/`（对于我们的前端应用程序，我们将使用端口 8089）
 
-## 3。前端
+## 3. 前端
 
 现在，让我们开始构建简单的前端应用程序。
 
-由于我们将在这里的应用程序中使用 Angular 6，我们需要在我们的 Spring Boot 应用程序中使用`frontend-maven-plugin`插件:
+由于我们将在这里的应用程序中使用 Angular 6，我们需要在我们的 Spring Boot 应用程序中使用`frontend-maven-plugin`插件：
 
-```java
+```xml
 <plugin>
     <groupId>com.github.eirslett</groupId>
     <artifactId>frontend-maven-plugin</artifactId>
@@ -81,17 +82,19 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
 </plugin>
 ```
 
-注意，自然地，我们需要首先在我们的机器上安装[node . js](https://web.archive.org/web/20221012100324/https://nodejs.org/en/)；我们将使用 Angular CLI 为我们的应用程序生成基础:
+注意，自然地，我们需要首先在我们的机器上安装 [node.js](https://web.archive.org/web/20221012100324/https://nodejs.org/en/)；我们将使用 Angular CLI 为我们的应用程序生成基础：
 
+```
 ng new authCode
+```
 
-## 4。角度模块
+## 4. 角度模块
 
 现在，让我们详细讨论我们的角度模块。
 
-下面是我们简单的`AppModule`:
+下面是我们简单的`AppModule`：
 
-```java
+```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -118,13 +121,13 @@ import { FooComponent } from './foo.component';
 export class AppModule { }
 ```
 
-我们的模块由三个组件和一个服务组成，我们将在下面的部分中讨论它们
+我们的模块由三个组件和一个服务组成，我们将在下面的部分中讨论它们。
 
-### 4.1。应用组件
+### 4.1. 应用组件
 
-让我们从我们的`AppComponent`开始，它是根组件:
+让我们从`AppComponent`开始，它是根组件：
 
-```java
+```typescript
 import {Component} from '@angular/core';
 
 @Component({
@@ -142,11 +145,11 @@ import {Component} from '@angular/core';
 export class AppComponent {}
 ```
 
-### 4.2。家用组件
+### 4.2. 家用组件
 
-接下来是我们的主要组件，`HomeComponent`:
+接下来是我们的主要组件，`HomeComponent`：
 
-```java
+```typescript
 import {Component} from '@angular/core';
 import {AppService} from './app.service'
 
@@ -168,7 +171,7 @@ export class HomeComponent {
      public isLoggedIn = false;
 
     constructor(
-        private _service:AppService){}
+        private _service: AppService){}
 
     ngOnInit(){
         this.isLoggedIn = this._service.checkCredentials();    
@@ -188,17 +191,17 @@ export class HomeComponent {
 }
 ```
 
-请注意:
+请注意：
 
-*   如果用户未登录，将只显示登录按钮
-*   登录按钮将用户重定向到授权 URL
-*   当用户被重定向回授权代码时，我们使用该代码检索访问令牌
+- 如果用户未登录，将只显示登录按钮
+- 登录按钮将用户重定向到授权 URL
+- 当用户被重定向回授权代码时，我们使用该代码检索访问令牌
 
-### 4.3。Foo 组件
+### 4.3. Foo 组件
 
-我们的第三个也是最后一个组件是`FooComponent`；这将显示从资源服务器获得的`Foo`资源:
+我们的第三个也是最后一个组件是`FooComponent`；这将显示从资源服务器获得的`Foo`资源：
 
-```java
+```typescript
 import { Component } from '@angular/core';
 import {AppService, Foo} from './app.service'
 
@@ -220,13 +223,13 @@ import {AppService, Foo} from './app.service'
 })
 
 export class FooComponent {
-    public foo = new Foo(1,'sample foo');
+    public foo = new Foo(1, 'sample foo');
     private foosUrl = 'http://localhost:8082/spring-security-oauth-resource/foos/';  
 
-    constructor(private _service:AppService) {}
+    constructor(private _service: AppService) {}
 
     getFoo(){
-        this._service.getResource(this.foosUrl+this.foo.id)
+        this._service.getResource(this.foosUrl + this.foo.id)
          .subscribe(
             data => this.foo = data,
             error =>  this.foo.name = 'Error');
@@ -234,9 +237,11 @@ export class FooComponent {
 }
 ```
 
-### 4.4。应用服务
+### 4.4. 应用服务
 
-现在，让我们来看看`AppService`:
+现在，让我们来看看`AppService`：
+
+
 
 ```java
 import {Injectable} from '@angular/core';
@@ -303,16 +308,16 @@ export class AppService {
 
 *   `checkCredentials()`:检查用户是否登录
 *   `retrieveToken()`:使用授权码获取接入令牌
-*   `saveToken()`:将访问令牌保存在 cookie 中
-*   `getResource()`:使用其 ID 获取 Foo 详细信息
-*   `logout()`:删除访问令牌 cookie
+*   `saveToken()`:将访问令牌保存在`cookie`中
+*   `getResource()`:使用其`ID`获取`Foo`详细信息
+*   `logout()`:删除访问令牌`cookie`
 
-## 5。运行应用程序
+## 5. 运行应用程序
 
 为了运行我们的应用程序并确保一切正常运行，我们需要:
 
-*   首先，在端口 8081 上运行授权服务器
-*   然后，在端口 8082 上运行资源服务器
+*   首先，在端口`8081`上运行授权服务器
+*   然后，在端口`8082`上运行资源服务器
 *   最后，运行前端
 
 我们需要首先构建我们的应用程序:
@@ -321,19 +326,19 @@ export class AppService {
 mvn clean install
 ```
 
-然后将目录更改为 src/main/resources:
+然后将目录更改为`src/main/resources`:
 
 ```java
 cd src/main/resources
 ```
 
-然后在端口 8089 上运行我们的应用程序:
+然后在端口`8089`上运行我们的应用程序:
 
 ```java
 npm start
 ```
 
-## 6。结论
+## 6. 结论
 
 我们学习了如何使用 Spring 和 Angular 6 为授权代码流构建一个简单的前端客户端。
 

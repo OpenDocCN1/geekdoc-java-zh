@@ -1,3 +1,4 @@
+
 # 第 70 天——回旋镖的数量
 
 > 原文：<https://medium.com/javarevisited/day-70-number-of-boomerangs-797f6dd7fa2?source=collection_archive---------2----------------------->

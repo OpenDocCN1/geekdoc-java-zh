@@ -1,3 +1,4 @@
+
 # 2023 年 10 门最佳面向对象分析、设计和编程课程
 
 > 原文：<https://medium.com/javarevisited/my-favorite-courses-to-learn-object-oriented-programming-and-design-in-2019-197bab351733?source=collection_archive---------0----------------------->
@@ -8,7 +9,7 @@
 
 你好，伙计们，如果你想学习面向对象的设计、分析和编程，并寻找最好的资源，如书籍和在线课程，那么你来对地方了。
 
-以前我分享过 [**最好的系统设计课程**](/javarevisited/10-best-system-design-courses-for-coding-interviews-949fd029ce65) s，[书籍](/javarevisited/6-best-object-oriented-programming-books-and-courses-for-beginners-d46235cbda49)，还有一些[免费的 OOP 编程课程](/swlh/5-free-object-oriented-programming-online-courses-for-programmers-156afd0a3a73)，而在这篇文章中，我打算将最好的 OOP 设计、分析、编程课程一文。
+以前我分享过[**最好的系统设计课程**](/javarevisited/10-best-system-design-courses-for-coding-interviews-949fd029ce65) s，[书籍](/javarevisited/6-best-object-oriented-programming-books-and-courses-for-beginners-d46235cbda49)，还有一些[免费的 OOP 编程课程](/swlh/5-free-object-oriented-programming-online-courses-for-programmers-156afd0a3a73)，而在这篇文章中，我打算将最好的 OOP 设计、分析、编程课程一文。
 
 毫无疑问**面向对象编程**是软件开发的支柱，也是 Java 取得巨大成功的原因之一。扎实的面向对象编程知识有助于您创建更好的软件。
 
@@ -104,11 +105,13 @@
 
 总的来说，对于想要理解面向对象编程的初学者来说，这是一门很棒的课程。
 
+
+
 **这里是注册本课程的链接—**[Java 面向对象编程绝对入门](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fabsolute-introduction-to-object-oriented-programming-in-java%2F)
 
 [![](img/965706c3f6dcead53152d8aecba85371.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fabsolute-introduction-to-object-oriented-programming-in-java%2F)
 
-## [5。Java —面向对象编程【绝对初学者】](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-object-oriented-programming-for-absolute-beginners%2F)
+## 5. Java —面向对象编程【绝对初学者】
 
 这是另一门[课程](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-object-oriented-programming-for-absolute-beginners%2F)，更侧重于 Java，但它很好地涵盖了面向对象编程。您可以将课程分为两个部分——第一部分是第 1 章，专门介绍 OOP，第二部分重点介绍不同的 Java 特性，如线程、IO、流、Java 垃圾收集和异常处理。
 
@@ -120,7 +123,7 @@
 
 [![](img/fa08f3aa54260e0d31b76d6d6a9c51ba.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-object-oriented-programming-for-absolute-beginners%2F)
 
-## [6。Java 面向对象编程:从头开始](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fobject-oriented-programming-in-java-from-the-beginning%2F)
+## 6. Java 面向对象编程:从头开始
 
 你会发现大多数关于 Java 面向对象编程的课程更多地关注 Java，而较少关注 OOP，但是这个课程是不同的。
 
@@ -140,7 +143,7 @@
 
 简而言之，这是一个很好的学习 Java 面向对象编程和设计的短期课程。也就是说，对于软件工程师和工作中的 Java 专业人员来说，这都是一个不错的选择。
 
-## [6。用 250 个步骤学习面向对象的 Java 编程](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-programming-tutorial-for-beginners%2F)
+## 6. 用 250 个步骤学习面向对象的 Java 编程
 
 这是学习 Java 面向对象编程的一门优秀的最新[课程](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-programming-tutorial-for-beginners%2F)。
 
@@ -156,7 +159,7 @@
 
 [![](img/1f60f59dfd406ca663fdb8c58d93c8c7.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-programming-tutorial-for-beginners%2F)
 
-## [7。钻研系统设计面试](https://www.educative.io/collection/5668639101419520/5649050225344512?affiliate_id=5073518643380224)
+## 7. 钻研系统设计面试
 
 这是教育团队和 Fahim ul Haq 的另一门课程，对你的设计技巧有很大帮助。大多数工程师都在系统设计面试(SDI)中挣扎，部分原因是他们缺乏开发大规模系统的经验，部分原因是 SDI 的非结构化性质。
 
@@ -166,7 +169,7 @@
 
 [![](img/c4cd30b5311cc06d3e3888de65d58741.png)](https://www.educative.io/collection/5668639101419520/5649050225344512?affiliate_id=5073518643380224)
 
-## 8.[面向对象分析，设计&用 UML 编程](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Foo-analysis-design-programming%2F)
+## 8. 面向对象分析，设计&用 UML 编程
 
 这是 Udemy 的另一门非常棒的 OOP 设计课程，它涵盖了面向对象分析、编程和 UML，所有这些都在一门课程中。本课程的讲师 Umar Lone 在简化本课程中的 OOAD 方面做了令人惊叹的工作。
 
@@ -188,17 +191,17 @@
 
 除了这 8 门，还有 3 门面向对象编程课程值得一看:
 
-1.  [**面向对象编程中的 Java 特殊化**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fobject-oriented-programming)**【Coursera】**
+1. [**面向对象编程中的 Java 特殊化**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fobject-oriented-programming)**【Coursera】**
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fjava-object-oriented>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fjava-object-oriented>
 
-**2。** [**面向对象的 Java 编程:数据结构与超越专门化**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fjava-object-oriented)**【Coursera】**
+2. [**面向对象的 Java 编程:数据结构与超越专门化**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fjava-object-oriented)**【Coursera】**
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fjava-object-oriented>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fjava-object-oriented>
 
-**3** 。 [**JavaScript:高级概念**](https://academy.zerotomastery.io/p/advanced-javascript-concepts?affcode=441520_zytgk2dn)**【ZTM 学院】**
+3. [**JavaScript:高级概念**](https://academy.zerotomastery.io/p/advanced-javascript-concepts?affcode=441520_zytgk2dn)**【ZTM 学院】**
 
-<https://academy.zerotomastery.io/p/advanced-javascript-concepts?affcode=441520_zytgk2dn>  
+<https://academy.zerotomastery.io/p/advanced-javascript-concepts?affcode=441520_zytgk2dn>
 
 根据你是喜欢 Java 还是 JavaScript，你可以选择这些课程来学习你最喜欢的编程语言的面向对象编程。
 
@@ -206,22 +209,25 @@
 
 它不仅会教你 OOP 基础，还会向你展示如何使用 OOP 和基本的面向对象设计原则来设计程序，比如接口编码和创建更好的 Java 应用程序的坚实原则。
 
-面向程序员和开发人员的其他 **Java 和 OOP 资源**
 
-[面向 Java 开发者的 5 门免费 Spring 框架课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
-[2023 年学习 Spring Boot 的前 5 门课程](https://javarevisited.blogspot.com/2018/05/top-5-courses-to-learn-spring-boot-in.html)
-[我最喜欢的 2023 年学习 Java 的免费课程](/javarevisited/10-free-courses-to-learn-java-in-2019-22d1f33a3915)
-[2023 年学习 Python 的 10 门课程](/better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
-[5 门免费数据结构和算法课程](https://javarevisited.blogspot.com/2018/01/top-5-free-data-structure-and-algorithm-courses-java--c-programmers.html)
-[5 门面向程序员和开发者的免费 Linux 课程](http://www.java67.com/2018/02/5-free-linux-unix-courses-for-programmers-learn-online.html)
-[5 门免费学习 React JS 框架](http://www.java67.com/2018/02/5-free-react-courses-for-web-developers.html) 2023 年学数据结构
-[2023 年学 Web 开发的前 5 门课程](https://javarevisited.blogspot.com/2018/02/top-5-online-courses-to-learn-web-development.html)
-[2023 年学 Kubernetes 的 7 门免费课程](/javarevisited/7-free-online-courses-to-learn-kubernetes-in-2020-3b8a68ec7abc)
-[2023 年学 FullStack 开发的 10 门 JavaScript 在线课程](/javarevisited/10-best-online-courses-to-learn-javascript-in-2020-af5ed0801645)
-[2023 年学 Spring Boot 的 10 门免费课程](/javarevisited/10-free-spring-boot-tutorials-and-courses-for-java-developers-53dfe084587e?source=collection_home---4------7-----------------------)
+
+# 面向程序员和开发人员的其他 Java 和 OOP 资源
+
+- [面向 Java 开发者的 5 门免费 Spring 框架课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
+- [2023 年学习 Spring Boot 的前 5 门课程](https://javarevisited.blogspot.com/2018/05/top-5-courses-to-learn-spring-boot-in.html)
+- [我最喜欢的 2023 年学习 Java 的免费课程](/javarevisited/10-free-courses-to-learn-java-in-2019-22d1f33a3915)
+- [2023 年学习 Python 的 10 门课程](/better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
+- [5 门免费数据结构和算法课程](https://javarevisited.blogspot.com/2018/01/top-5-free-data-structure-and-algorithm-courses-java--c-programmers.html)
+- [5 门面向程序员和开发者的免费 Linux 课程](http://www.java67.com/2018/02/5-free-linux-unix-courses-for-programmers-learn-online.html)
+- [5 门免费学习 React JS 框架](http://www.java67.com/2018/02/5-free-react-courses-for-web-developers.html)
+- [2023 年学数据结构](https://javarevisited.blogspot.com/2018/02/top-5-online-courses-to-learn-web-development.html)
+- [2023 年学 Web 开发的前 5 门课程](https://javarevisited.blogspot.com/2018/02/top-5-online-courses-to-learn-web-development.html)
+- [2023 年学 Kubernetes 的 7 门免费课程](/javarevisited/7-free-online-courses-to-learn-kubernetes-in-2020-3b8a68ec7abc)
+- [2023 年学 FullStack 开发的 10 门 JavaScript 在线课程](/javarevisited/10-best-online-courses-to-learn-javascript-in-2020-af5ed0801645)
+- [2023 年学 Spring Boot 的 10 门免费课程](/javarevisited/10-free-spring-boot-tutorials-and-courses-for-java-developers-53dfe084587e?source=collection_home---4------7-----------------------)
 
 感谢阅读这篇文章。如果你觉得这些 OOP 课程有用，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请在下面留言！
 
-如果你正在寻找一些免费的面向对象建模和设计课程，你应该看看 Udemy 上的 [**面向对象建模简介&设计**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fintroduction-to-object-oriented-modelling-design%2F) 课程。这个课程是完全免费的，你只需要一个 Udemy 帐户就可以加入这个课程。
+如果你正在寻找一些免费的面向对象建模和设计课程，你应该看看 Udemy 上的[面向对象建模简介&设计](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fintroduction-to-object-oriented-modelling-design%2F)课程。这个课程是完全免费的，你只需要一个 Udemy 帐户就可以加入这个课程。
 
-<https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fintroduction-to-object-oriented-modelling-design%2F> 
+<https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fintroduction-to-object-oriented-modelling-design%2F>

@@ -1,56 +1,58 @@
+
+
 # 如何在 Java 中获取文件扩展名
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/how-to-get-file-extension-in-java/>
 
 本文展示了如何在 Java 中获取文件的文件扩展名。
 
-主题
+## 目录
 
-1.  [获取文件扩展名正常](#get-file-extension-normal-version)
-2.  [获取文件扩展名严格](#get-file-extension-strict-version)
-3.  [获取文件扩展名硬编码](#get-file-extension-hardcode-version)
-4.  [Apache 通用 IO–filename utils](#apache-common-io)
+1. [获取文件扩展名，普通版本](#get-file-extension-normal-version)
+2. [获取文件扩展名，严格版本](#get-file-extension-strict-version)
+3. [获取文件扩展名，硬编码版本](#get-file-extension-hardcode-version)
+4. [Apache 通用 IO–filename utils](#apache-common-io)
 
 ```java
- Path: /path/foo.txt                  -> File Extension: txt
-  Path: .                              -> File Extension:
-  Path: ..                             -> File Extension:
-  Path: /path/run.exe                  -> File Extension: exe
-  Path: /path/makefile                 -> File Extension:
-  Path: /path/.htaccess                -> File Extension: htaccess
-  Path: /path/.tar.gz                  -> File Extension: gz
-  Path: /path/../makefile              -> File Extension:
-  Path: /path/dir.test/makefile        -> File Extension: 
+Path: /path/foo.txt                  -> File Extension: txt
+Path: .                              -> File Extension:
+Path: ..                             -> File Extension:
+Path: /path/run.exe                  -> File Extension: exe
+Path: /path/makefile                 -> File Extension:
+Path: /path/.htaccess                -> File Extension: htaccess
+Path: /path/.tar.gz                  -> File Extension: gz
+Path: /path/../makefile              -> File Extension:
+Path: /path/dir.test/makefile        -> File Extension:
 ```
 
-查看上面从[获取文件扩展名严格示例](#get-file-extension-strict-version)的输出。对于没有扩展名的文件，我们将显示为空。
+查看上面[获取文件扩展名，严格版本](#get-file-extension-strict-version)的输出。对于没有扩展名的文件，我们将显示为空。
 
-## 1。获取文件扩展名，普通版本。
+## 1. 获取文件扩展名，普通版本
 
-这个例子展示了如何使用 [String#lastIndexOf](http://web.archive.org/web/20220619003336/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#lastIndexOf(int)) 来获取文件的文件扩展名，它应该适合大多数情况。
+这个例子展示了如何使用 [`String#lastIndexOf`](http://web.archive.org/web/20220619003336/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#lastIndexOf(int)) 来获取文件的文件扩展名，它应该适合大多数情况。
 
 ```java
- String extension = "";
+String extension = "";
 
-  int index = fileName.lastIndexOf('.');
-  if (index > 0) {
-      extension = fileName.substring(index + 1);
-  } 
+int index = fileName.lastIndexOf('.');
+if (index > 0) {
+    extension = fileName.substring(index + 1);
+}
 ```
 
-但是，对于以下情况，上述方法将失败:目录名或文件路径包含一个点或双点，并且文件没有扩展名。
+但是，对于以下情况，上述方法将失败：目录名或文件路径包含一个点或双点，并且文件没有扩展名。
 
 ```java
- Path: /path/../makefile              -> File Extension: /makefile
-  Path: /path/dir.test/makefile        -> File Extension: test/makefile 
+Path: /path/../makefile              -> File Extension: /makefile
+Path: /path/dir.test/makefile        -> File Extension: test/makefile
 ```
 
 完整的例子。
 
-GetFileExtension1.java
+`GetFileExtension1.java`
 
 ```java
- package com.mkyong.io.howto;
+package com.mkyong.io.howto;
 
 public class GetFileExtension1 {
 
@@ -99,15 +101,15 @@ public class GetFileExtension1 {
 
     }
 
-} 
+}
 ```
 
-输出
+### 输出
 
-Terminal
+`Terminal`
 
 ```java
- Path: /path/foo.txt                  -> File Extension: txt
+Path: /path/foo.txt                  -> File Extension: txt
 Path: .                              -> File Extension:
 Path: ..                             -> File Extension:
 Path: /path/run.exe                  -> File Extension: exe
@@ -115,32 +117,32 @@ Path: /path/makefile                 -> File Extension:
 Path: /path/.htaccess                -> File Extension: htaccess
 Path: /path/.tar.gz                  -> File Extension: gz
 Path: /path/../makefile              -> File Extension: /makefile
-Path: /path/dir.test/makefile        -> File Extension: test/makefile 
+Path: /path/dir.test/makefile        -> File Extension: test/makefile
 ```
 
-## 2。获取文件扩展名，严格版本。
+## 2. 获取文件扩展名，严格版本
 
 这个例子实现了额外的检查，因为目录包含一个点，文件没有扩展名。
 
 ```java
- Path: /path/../makefile              -> File Extension:
-  Path: /path/dir.test/makefile        -> File Extension: 
+Path: /path/../makefile              -> File Extension:
+Path: /path/dir.test/makefile        -> File Extension:
 ```
 
-额外的检查确保最后一个文件扩展名索引(位置)总是在最后一个文件分隔符(Windows 或 Unix)之后。
+额外的检查确保最后一个文件扩展名索引（位置）总是在最后一个文件分隔符（Windows 或 Unix）之后。
 
 ```java
- if (indexOfLastExtension > indexOflastSeparator) {
-      extension = fileName.substring(indexOfLastExtension + 1);
-  } 
+if (indexOfLastExtension > indexOflastSeparator) {
+    extension = fileName.substring(indexOfLastExtension + 1);
+}
 ```
 
 完整的例子。
 
-GetFileExtension2.java
+`GetFileExtension2.java`
 
 ```java
- package com.mkyong.io.howto;
+package com.mkyong.io.howto;
 
 import java.util.Map;
 
@@ -204,15 +206,15 @@ public class GetFileExtension2 {
 
     }
 
-} 
+}
 ```
 
-输出
+### 输出
 
-Terminal
+`Terminal`
 
 ```java
- Path: /path/foo.txt                  -> File Extension: txt
+Path: /path/foo.txt                  -> File Extension: txt
 Path: .                              -> File Extension:
 Path: ..                             -> File Extension:
 Path: /path/run.exe                  -> File Extension: exe
@@ -220,17 +222,20 @@ Path: /path/makefile                 -> File Extension:
 Path: /path/.htaccess                -> File Extension: htaccess
 Path: /path/.tar.gz                  -> File Extension: gz
 Path: /path/../makefile              -> File Extension:
-Path: /path/dir.test/makefile        -> File Extension: 
+Path: /path/dir.test/makefile        -> File Extension:
 ```
 
-## 3。获取文件扩展名，硬编码版本
+## 3. 获取文件扩展名，硬编码版本
 
 这个例子展示了如何硬编码一些文件扩展名并显示预定义的结果。例如，对于文件扩展名`.tar.gz`，我们希望显示`tar.gz`，而不是`gz`。
 
-GetFileExtension3.java
+`GetFileExtension3.java`
+
+
+
 
 ```java
- package com.mkyong.io.howto;
+package com.mkyong.io.howto;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -320,15 +325,13 @@ public class GetFileExtension3 {
         return result;
     }
 
-} 
+}
 ```
 
-输出
+### 输出
 
-Terminal
-
-```java
- Path: /path/foo.txt                  -> File Extension: txt
+```text
+Path: /path/foo.txt                  -> File Extension: txt
 Path: .                              -> File Extension:
 Path: ..                             -> File Extension:
 Path: /path/run.exe                  -> File Extension: exe
@@ -336,29 +339,29 @@ Path: /path/makefile                 -> File Extension: make
 Path: /path/.htaccess                -> File Extension: htaccess
 Path: /path/.tar.gz                  -> File Extension: tar.gz
 Path: /path/../makefile              -> File Extension: make
-Path: /path/dir.test/makefile        -> File Extension: make 
+Path: /path/dir.test/makefile        -> File Extension: make
 ```
 
-## 4。阿帕奇通用 IO
+## 4. 阿帕奇通用 IO
 
-对于 Apache `commons-io`，我们可以使用`FilenameUtils.getExtension(fileName)`来获取一个文件的文件扩展名。
+对于 Apache `commons-io`，我们可以使用 `FilenameUtils.getExtension(fileName)` 来获取一个文件的文件扩展名。
 
-pom.xml
+### pom.xml
 
-```java
- <dependency>
-      <groupId>commons-io</groupId>
-      <artifactId>commons-io</artifactId>
-      <version>2.7</version>
-  </dependency> 
+```xml
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.7</version>
+</dependency>
 ```
 
-完整的例子。
+### 完整的例子
 
-GetFileExtension4.java
+#### GetFileExtension4.java
 
 ```java
- package com.mkyong.io.howto;
+package com.mkyong.io.howto;
 
 import org.apache.commons.io.FilenameUtils;
 
@@ -387,15 +390,13 @@ public class GetFileExtension4 {
 
     }
 
-} 
+}
 ```
 
-输出
+### 输出
 
-Terminal
-
-```java
- Path: /path/foo.txt                  -> File Extension: txt
+```text
+Path: /path/foo.txt                  -> File Extension: txt
 Path: .                              -> File Extension:
 Path: ..                             -> File Extension:
 Path: /path/run.exe                  -> File Extension: exe
@@ -403,21 +404,22 @@ Path: /path/makefile                 -> File Extension:
 Path: /path/.htaccess                -> File Extension: htaccess
 Path: /path/.tar.gz                  -> File Extension: gz
 Path: /path/../makefile              -> File Extension:
-Path: /path/dir.test/makefile        -> File Extension: 
+Path: /path/dir.test/makefile        -> File Extension:
 ```
 
 ## 下载源代码
 
-$ git 克隆[https://github.com/mkyong/core-java](http://web.archive.org/web/20220619003336/https://github.com/mkyong/core-java)
-
-$ cd java-io
+```bash
+git clone https://github.com/mkyong/core-java
+cd java-io
+```
 
 ## 参考文献
 
-*   Apache common me
-*   [FilenameUtils JavaDoc](http://web.archive.org/web/20220619003336/https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FilenameUtils.html)
-*   [String#lastIndexOf JavaDoc](http://web.archive.org/web/20220619003336/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#lastIndexOf(int))
-*   [如何在 Java 中获取文件的文件路径](/web/20220619003336/https://mkyong.com/java/how-to-get-the-filepath-of-a-file-in-java/)
-*   [维基百科–文件扩展名](http://web.archive.org/web/20220619003336/https://en.wikipedia.org/wiki/Filename_extension)
+- Apache common me
+- [FilenameUtils JavaDoc](http://web.archive.org/web/20220619003336/https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FilenameUtils.html)
+- [String#lastIndexOf JavaDoc](http://web.archive.org/web/20220619003336/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#lastIndexOf(int))
+- [如何在 Java 中获取文件的文件路径](/web/20220619003336/https://mkyong.com/java/how-to-get-the-filepath-of-a-file-in-java/)
+- [维基百科–文件扩展名](http://web.archive.org/web/20220619003336/https://en.wikipedia.org/wiki/Filename_extension)
 
 <input type="hidden" id="mkyong-current-postId" value="16372">

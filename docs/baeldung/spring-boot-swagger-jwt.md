@@ -1,14 +1,15 @@
+
 # 用 Spring Boot 和 Swagger UI 设置 JWT
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-boot-swagger-jwt>
 
-## 1.介绍
+## 1. 介绍
 
-在这个简短的教程中，我们将看到如何配置 Swagger UI，使其在调用我们的 API 时包含一个 JSON Web 令牌(JWT)。
+在这个简短的教程中，我们将看到如何配置 Swagger UI，使其在调用我们的 API 时包含一个 JSON Web 令牌（JWT）。
 
-## 2.Maven 依赖性
+## 2. Maven 依赖性
 
-在这个例子中，我们将使用 [springfox-boot-starter](https://web.archive.org/web/20221020153607/https://search.maven.org/search?q=g:io.springfox%20AND%20a:springfox-boot-starter) ，它包含了开始使用 Swagger 和 Swagger UI 所需的所有依赖项。让我们将它添加到我们的`pom.xml`文件中:
+在这个例子中，我们将使用 [`springfox-boot-starter`](https://web.archive.org/web/20221020153607/https://search.maven.org/search?q=g:io.springfox%20AND%20a:springfox-boot-starter)，它包含了开始使用 Swagger 和 Swagger UI 所需的所有依赖项。让我们将它添加到我们的 `pom.xml` 文件中：
 
 ```java
 <dependency>
@@ -22,9 +23,9 @@
 </dependency>
 ```
 
-## 3.摇摆构型
+## 3. Swagger 配置
 
-首先，我们需要定义我们的`ApiKey` 来包含 JWT 作为授权头:
+首先，我们需要定义我们的 `ApiKey` 来包含 JWT 作为授权头：
 
 ```java
 private ApiKey apiKey() { 
@@ -32,7 +33,7 @@ private ApiKey apiKey() {
 }
 ```
 
-接下来，让我们用全局`AuthorizationScope`配置 JWT `SecurityContext`:
+接下来，让我们用全局 `AuthorizationScope` 配置 JWT `SecurityContext`：
 
 ```java
 private SecurityContext securityContext() { 
@@ -47,7 +48,7 @@ private List<SecurityReference> defaultAuth() {
 }
 ```
 
-然后，我们配置我们的 API `Docket` bean 以包含 API 信息、安全上下文和安全方案:
+然后，我们配置我们的 API `Docket` bean 以包含 API 信息、安全上下文和安全方案：
 
 ```java
 @Bean
@@ -77,9 +78,9 @@ private ApiInfo apiInfo() {
 }
 ```
 
-## 4.休息控制器
+## 4. REST 控制器
 
-在我们的`ClientsRestController`中，让我们编写一个简单的`getClients `端点来返回客户端列表:
+在我们的 `ClientsRestController` 中，让我们编写一个简单的 `getClients` 端点来返回客户端列表：
 
 ```java
 @RestController(value = "/clients")
@@ -94,27 +95,27 @@ public class ClientsRestController {
 }
 ```
 
-## 5.Swagger UI
+## 5. Swagger UI
 
-现在，当我们启动应用程序时，我们可以在`http://localhost:8080/swagger-ui/` URL 访问 Swagger UI。
+现在，当我们启动应用程序时，我们可以在 `http://localhost:8080/swagger-ui/` URL 访问 Swagger UI。
 
-下面来看看带有`Authorize`按钮的 Swagger UI:
+下面来看看带有 `Authorize` 按钮的 Swagger UI：
 
 [![](img/4c451293825bc0594a4b8b0c30253041.png)](/web/20221020153607/https://www.baeldung.com/wp-content/uploads/2020/10/swaggerui-1024x516-1.png)
 
-当我们点击`Authorize`按钮时，Swagger UI 会询问 JWT。
+当我们点击 `Authorize` 按钮时，Swagger UI 会询问 JWT。
 
-我们只需要输入我们的令牌并点击`Authorize`，从那时起，所有对我们的 API 的请求将自动在 HTTP 头中包含令牌:
+我们只需要输入我们的令牌并点击 `Authorize`，从那时起，所有对我们的 API 的请求将自动在 HTTP 头中包含令牌：
 
 [![](img/19e6fbbeceb51434f9829039dd5b88d0.png)](/web/20221020153607/https://www.baeldung.com/wp-content/uploads/2020/10/swagger-authorize-1024x499-1.png)
 
-## 6.JWT 的 API 请求
+## 6. JWT 的 API 请求
 
-当向我们的 API 发送请求时，我们可以看到有一个“Authorization”头，其中包含我们的令牌值:
+当向我们的 API 发送请求时，我们可以看到有一个“Authorization”头，其中包含我们的令牌值：
 
 [![](img/09a29cf9a9c5e014ce2aa14d26b32859.png)](/web/20221020153607/https://www.baeldung.com/wp-content/uploads/2020/10/swagger-get-clients-1024x556-1.png)
 
-## 7.结论
+## 7. 结论
 
 在本文中，我们看到了 Swagger UI 如何提供定制配置来设置 JWT，这在处理我们的应用程序授权时很有帮助。在 Swagger UI 中授权后，所有请求将自动包括我们的 JWT。
 

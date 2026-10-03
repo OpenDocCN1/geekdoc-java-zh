@@ -1,31 +1,32 @@
+
 # Spring Boot 文件上传示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-boot-file-upload-example/>
 
 这篇文章向你展示了如何在 Spring Boot 网络应用程序中上传文件。
 
-使用的工具:
+使用的工具：
 
-1.  Spring Boot 1.4.3 版本
-2.  弹簧 4.3.5 .释放
-3.  百里香叶
-4.  专家
-5.  嵌入式 Tomcat 8.5.6
+1. Spring Boot 1.4.3 版本
+2. 弹簧 4.3.5 .释放
+3. 百里香叶
+4. 专家
+5. 嵌入式 Tomcat 8.5.6
 
-## 1.项目结构
+## 1. 项目结构
 
 标准项目结构。
 
 ![spring-boot-file-upload-example-directory](img/538bcb7506f9f15af2f45ebed38990f2.png)
 
-## 2.项目依赖性
+## 2. 项目依赖性
 
 春季启动依赖，不需要额外的文件上传库。
 
-pom.xml
+`pom.xml`
 
 ```java
- <project 
+<project 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
          http://maven.apache.org/maven-v4_0_0.xsd">
@@ -72,19 +73,19 @@ pom.xml
         </plugins>
     </build>
 
-</project> 
+</project>
 ```
 
-## 3.文件上传示例
+## 3. 文件上传示例
 
 春季开机文件上传，零配置。
 
-3.1 在控制器中，将上传的文件映射到`MultipartFile`
+### 3.1 在控制器中，将上传的文件映射到`MultipartFile`
 
-UploadController.java
+`UploadController.java`
 
 ```java
- package com.mkyong.controller;
+package com.mkyong.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -140,15 +141,15 @@ public class UploadController {
         return "uploadStatus";
     }
 
-} 
+}
 ```
 
-3.2 在百里香里，只是一些普通的 HTML 文件标签。
+### 3.2 在百里香里，只是一些普通的 HTML 文件标签。
 
-upload.jsp
+`upload.jsp`
 
 ```java
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
 
@@ -160,15 +161,15 @@ upload.jsp
 </form>
 
 </body>
-</html> 
+</html>
 ```
 
-3.3 上传状态的另一个页面
+### 3.3 上传状态的另一个页面
 
-uploadStatus.jsp
+`uploadStatus.jsp`
 
 ```java
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <body>
 
@@ -179,17 +180,17 @@ uploadStatus.jsp
 </div>
 
 </body>
-</html> 
+</html>
 ```
 
-## 4.超过最大上传大小
+## 4. 超过最大上传大小
 
 为了处理超过最大上传大小的异常，声明一个`@ControllerAdvice`并捕捉`MultipartException`
 
-GlobalExceptionHandler.java
+`GlobalExceptionHandler.java`
 
 ```java
- package com.mkyong.controller;
+package com.mkyong.controller;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -217,17 +218,17 @@ public class GlobalExceptionHandler {
 
     }*/
 
-} 
+}
 ```
 
-## 5.Tomcat 连接重置
+## 5. Tomcat 连接重置
 
-如果你部署到 Tomcat，配置`maxSwallowSize`来避免这个 [Tomcat 连接重置问题](http://web.archive.org/web/20221023054402/http://www.mkyong.com/spring/spring-file-upload-and-connection-reset-issue/)。对于嵌入式 Tomcat，声明如下的`TomcatEmbeddedServletContainerFactory`:
+如果你部署到 Tomcat，配置`maxSwallowSize`来避免这个 [Tomcat 连接重置问题](http://web.archive.org/web/20221023054402/http://www.mkyong.com/spring/spring-file-upload-and-connection-reset-issue/)。对于嵌入式 Tomcat，声明如下的`TomcatEmbeddedServletContainerFactory`：
 
-SpringBootWebApplication.java
+`SpringBootWebApplication.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.apache.coyote.http11.AbstractHttp11Protocol;
 import org.springframework.boot.SpringApplication;
@@ -263,30 +264,32 @@ public class SpringBootWebApplication {
 
     }
 
-} 
+}
 ```
 
-## 6.多部分文件大小
+## 6. 多部分文件大小
 
-默认情况下，Spring Boot 最大文件上传大小为 1MB，您可以通过以下应用程序属性配置该值:
+默认情况下，Spring Boot 最大文件上传大小为 1MB，您可以通过以下应用程序属性配置该值：
 
-application.properties
+`application.properties`
 
 ```java
- #http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#common-application-properties
+#http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#common-application-properties
 #search multipart
 spring.http.multipart.max-file-size=10MB
-spring.http.multipart.max-request-size=10MB 
+spring.http.multipart.max-request-size=10MB
 ```
 
-## 7.演示
+## 7. 演示
 
 用默认的嵌入式 Tomcat `mvn spring-boot:run`启动 Spring Boot。
 
-Terminal
+`Terminal`
+
+
 
 ```java
- $ mvn spring-boot:run
+$ mvn spring-boot:run
  .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -298,10 +301,12 @@ Terminal
 2017-01-21 07:48:53 INFO  com.mkyong.SpringBootWebApplication - Starting SpringBootWebApplication on MKYONG-WIN10 with PID 2384 (E:\spring-boot-file-upload\target\classes started by mkyong in E:\spring-boot-file-upload)
 2017-01-21 07:48:53 DEBUG com.mkyong.SpringBootWebApplication - Running with Spring Boot v1.4.3.RELEASE, Spring v4.3.5.RELEASE
 2017-01-21 07:48:53 INFO  com.mkyong.SpringBootWebApplication - No active profile set, falling back to default profiles: default
-2017-01-21 07:48:55 INFO  com.mkyong.SpringBootWebApplication - Started SpringBootWebApplication in 2.54 seconds (JVM running for 2.924) 
+2017-01-21 07:48:55 INFO  com.mkyong.SpringBootWebApplication - Started SpringBootWebApplication in 2.54 seconds (JVM running for 2.924)
 ```
 
-7.1 访问 *http://localhost:8080/*
+## 7. 测试文件上传
+
+7.1 访问 `http://localhost:8080/`
 
 ![spring-boot-file-upload-example](img/17d81670b0f2ee271324da563a253e7c.png)
 
@@ -313,15 +318,18 @@ Terminal
 
 ![spring-boot-file-upload-example-3](img/44d52f95e952e622ca2a579e23bfae57.png)
 
-## 8.下载源代码
+## 8. 下载源代码
 
 Download – [spring-boot-file-upload-example.zip](http://web.archive.org/web/20221023054402/http://www.mkyong.com/wp-content/uploads/2017/01/spring-boot-file-upload-example.zip) (7 KB)
 
 ## 参考
 
-1.  [Spring Boot 常用应用属性](http://web.archive.org/web/20221023054402/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#common-application-properties)
-2.  [Spring MVC 文件上传示例](http://web.archive.org/web/20221023054402/http://www.mkyong.com/spring-mvc/spring-mvc-file-upload-example/)
-3.  [Spring @ExceptionHandler 和 RedirectAttributes](http://web.archive.org/web/20221023054402/http://www.mkyong.com/spring/spring-exceptionhandler-and-redirectattributes/)
-4.  [Spring Boot Hello World 示例–百里香叶](http://web.archive.org/web/20221023054402/http://www.mkyong.com/spring-boot/spring-boot-hello-world-example-thymeleaf/)
+1. [Spring Boot 常用应用属性](http://web.archive.org/web/20221023054402/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#common-application-properties)
+
+2. [Spring MVC 文件上传示例](http://web.archive.org/web/20221023054402/http://www.mkyong.com/spring-mvc/spring-mvc-file-upload-example/)
+
+3. [Spring @ExceptionHandler 和 RedirectAttributes](http://web.archive.org/web/20221023054402/http://www.mkyong.com/spring/spring-exceptionhandler-and-redirectattributes/)
+
+4. [Spring Boot Hello World 示例–百里香叶](http://web.archive.org/web/20221023054402/http://www.mkyong.com/spring-boot/spring-boot-hello-world-example-thymeleaf/)
 
 <input type="hidden" id="mkyong-current-postId" value="14379">

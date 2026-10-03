@@ -1,4 +1,5 @@
-# 使用 Thread 和 Runnable 的 Java 多线程
+
+# 使用 `Thread` 和 `Runnable` 的 Java 多线程
 
 > 原文：<https://medium.com/javarevisited/java-multithreading-using-thread-and-runnable-c51925b55034?source=collection_archive---------0----------------------->
 

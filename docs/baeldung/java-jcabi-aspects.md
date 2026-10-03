@@ -1,26 +1,25 @@
+
 # jcabi-aspects AOP 注释库简介
 
-> 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-jcabi-aspects>
-
-## 1.概观
+## 1. 概观
 
 在这个快速教程中，我们将探索`jcabi-aspects` Java 库，这是一个使用面向方面编程(AOP)修改 Java 应用程序行为的便利注释集合。
 
-`jcabi-aspects`库提供了类似于`@Async`、`@Loggable`和`@RetryOnFailure`的注释，这些注释对于使用 AOP 高效地执行某些操作非常有用。同时，它们有助于减少应用程序中样板代码的数量。该库要求 [AspectJ](/web/20221126224052/https://www.baeldung.com/aspectj) 将方面编织到编译后的类中。
+`jcabi-aspects`库提供了类似于`@Async`、`@Loggable`和`@RetryOnFailure`的注释，这些注释对于使用 AOP 高效地执行某些操作非常有用。同时，它们有助于减少应用程序中样板代码的数量。该库要求 [AspectJ](https://www.baeldung.com/aspectj) 将方面编织到编译后的类中。
 
-## 2.设置
+## 2. 设置
 
-首先，我们将最新的 [`jcabi-aspects`](https://web.archive.org/web/20221126224052/https://search.maven.org/search?q=g:com.jcabi%20a:jcabi-aspects) Maven 依赖项添加到`pom.xml`:
+首先，我们将最新的 [`jcabi-aspects`](https://search.maven.org/search?q=g:com.jcabi%20a:jcabi-aspects) Maven 依赖项添加到`pom.xml`:
 
 ```java
 <dependency>
     <groupId>com.jcabi</groupId>
     <artifactId>jcabi-aspects</artifactId>
     <version>0.22.6</version>
-</dependency> 
+</dependency>
 ```
 
-`jcabi-aspects`库需要 AspectJ 运行时支持才能运行。因此，让我们添加 [`aspectjrt`](https://web.archive.org/web/20221126224052/https://search.maven.org/search?q=g:org.aspectj%20a:aspectjrt) 美芬依赖:
+`jcabi-aspects`库需要 AspectJ 运行时支持才能运行。因此，让我们添加 [`aspectjrt`](https://search.maven.org/search?q=g:org.aspectj%20a:aspectjrt) 美芬依赖:
 
 ```java
 <dependency>
@@ -31,7 +30,7 @@
 </dependency>
 ```
 
-接下来，让我们添加 **[`jcabi-maven-plugin`](https://web.archive.org/web/20221126224052/https://search.maven.org/search?q=g:com.jcabi%20a:jcabi-maven-plugin) 插件，它在编译时用 AspectJ 方面编织二进制文件**。插件提供了进行自动编织的`ajc`目标:
+接下来，让我们添加 **[`jcabi-maven-plugin`](https://search.maven.org/search?q=g:com.jcabi%20a:jcabi-maven-plugin) 插件，它在编译时用 AspectJ 方面编织二进制文件**。插件提供了进行自动编织的`ajc`目标:
 
 ```java
 <plugin>
@@ -81,9 +80,9 @@ mvn clean package
 
 现在我们知道了如何将库添加到我们的项目中，让我们看看它的注释是如何工作的。
 
-## 3.`@Async`
+## 3. `@Async`
 
-[`@Async`](https://web.archive.org/web/20221126224052/https://aspects.jcabi.com/apidocs-0.22.6/com/jcabi/aspects/Async.html) 注释允许异步执行方法。但是，它只与返回`void`或 [`Future`](/web/20221126224052/https://www.baeldung.com/java-future) 类型的方法兼容。
+[`@Async`](https://aspects.jcabi.com/apidocs-0.22.6/com/jcabi/aspects/Async.html) 注释允许异步执行方法。但是，它只与返回`void`或 [`Future`](https://www.baeldung.com/java-future) 类型的方法兼容。
 
 让我们编写一个`displayFactorial`方法来异步显示一个数字的阶乘:
 
@@ -92,7 +91,7 @@ mvn clean package
 public static void displayFactorial(int number) {
     long result = factorial(number);
     System.out.println(result);
-} 
+}
 ```
 
 然后，我们将重新编译该类，让 Maven 为`@Async`注释编织方面。最后，我们可以运行我们的示例:
@@ -116,9 +115,9 @@ public static Future<Long> getFactorial(int number) {
 
 如果我们在一个不返回`void`或`Future`的方法上使用`@Async`，当我们调用它时，将在运行时抛出一个异常。
 
-## 4.`@Cacheable`
+## 4. `@Cacheable`
 
-[`@Cacheable`](https://web.archive.org/web/20221126224052/https://aspects.jcabi.com/apidocs-0.22.6/com/jcabi/aspects/Cacheable.html) 注释允许缓存方法的结果以避免重复计算。
+[`@Cacheable`](https://aspects.jcabi.com/apidocs-0.22.6/com/jcabi/aspects/Cacheable.html) 注释允许缓存方法的结果以避免重复计算。
 
 例如，让我们编写一个返回最新汇率的`cacheExchangeRates`方法:
 
@@ -163,7 +162,7 @@ jcabi-aspects 0.22.6/3f0a1f7 started new daemon thread jcabi-cacheable-update fo
   cached in 560ms, valid for 2s
 ```
 
-所以，如果再次调用(2 秒内)，`cacheExchangeRates`将从缓存中返回结果:
+所以，如果再次调用（2 秒内），`cacheExchangeRates`将从缓存中返回结果:
 
 ```java
 [main] INFO com.baeldung.jcabi.JcabiAspectJ - #cacheExchangeRates(): 
@@ -173,9 +172,9 @@ jcabi-aspects 0.22.6/3f0a1f7 started new daemon thread jcabi-cacheable-update fo
 
 如果方法抛出异常，结果不会被缓存。
 
-## 5.`@Loggable`
+## 5. `@Loggable`
 
-该库为使用 SLF4J 日志记录工具的简单日志记录提供了 [`@Loggable`](https://web.archive.org/web/20221126224052/https://aspects.jcabi.com/apidocs-0.22.6/com/jcabi/aspects/Loggable.html) 注释。
+该库为使用 SLF4J 日志记录工具的简单日志记录提供了 [`@Loggable`](https://aspects.jcabi.com/apidocs-0.22.6/com/jcabi/aspects/Loggable.html) 注释。
 
 让我们给我们的`displayFactorial`和`cacheExchangeRates`方法添加`@Loggable`注释:
 
@@ -202,9 +201,9 @@ public static String cacheExchangeRates() {
   in 556.92ms
 ```
 
-## 6.`@LogExceptions`
+## 6. `@LogExceptions`
 
-与`@Loggable`类似，我们可以使用 [`@LogExceptions`](https://web.archive.org/web/20221126224052/https://aspects.jcabi.com/apidocs-0.22.6/com/jcabi/aspects/LogExceptions.html) 注释来只记录方法抛出的异常。
+与`@Loggable`类似，我们可以使用 [`@LogExceptions`](https://aspects.jcabi.com/apidocs-0.22.6/com/jcabi/aspects/LogExceptions.html) 注释来只记录方法抛出的异常。
 
 让我们将`@LogExceptions`用在将抛出`ArithmeticException`的方法`divideByZero`上:
 
@@ -226,9 +225,9 @@ java.lang.ArithmeticException: / by zero
     ...
 ```
 
-## 7.`@Quietly`
+## 7. `@Quietly`
 
-[`@Quietly`](https://web.archive.org/web/20221126224052/https://aspects.jcabi.com/apidocs-0.22.6/com/jcabi/aspects/Quietly.html) 注释类似于`@LogExceptions`，除了它**不传播任何由方法**抛出的异常。相反，它只是记录它们。
+[`@Quietly`](https://aspects.jcabi.com/apidocs-0.22.6/com/jcabi/aspects/Quietly.html) 注释类似于`@LogExceptions`，除了它**不传播任何由方法**抛出的异常。相反，它只是记录它们。
 
 让我们将`@Quietly`注释添加到`divideByZero`方法中:
 
@@ -248,9 +247,9 @@ public static void divideByZero() {
 
 `@Quietly`注释只与返回类型为`void`的方法兼容。
 
-## 8.`@RetryOnFailure`
+## 8. `@RetryOnFailure`
 
-[`@RetryOnFailure`](https://web.archive.org/web/20221126224052/https://aspects.jcabi.com/apidocs-0.22.6/com/jcabi/aspects/RetryOnFailure.html) 注释允许我们在出现异常或失败时重复执行一个方法。
+[`@RetryOnFailure`](https://aspects.jcabi.com/apidocs-0.22.6/com/jcabi/aspects/RetryOnFailure.html) 注释允许我们在出现异常或失败时重复执行一个方法。
 
 例如，让我们将`@RetryOnFailure`注释添加到我们的`divideByZero`方法中:
 
@@ -264,6 +263,8 @@ public static void divideByZero() {
 
 因此，如果方法抛出异常，AOP 通知将尝试执行两次:
 
+
+
 ```java
 [main] WARN com.baeldung.jcabi.JcabiAspectJ - 
 #divideByZero(): attempt #1 of 2 failed in 147µs with java.lang.ArithmeticException: / by zero
@@ -271,7 +272,7 @@ public static void divideByZero() {
 #divideByZero(): attempt #2 of 2 failed in 110µs with java.lang.ArithmeticException: / by zero
 ```
 
-此外，我们可以定义其他参数，如`delay`、`unit`和`types`，同时声明`@RetryOnFailure`注释:
+此外，我们可以定义其他参数，如`delay`、`unit`和`types`，同时声明`@RetryOnFailure`注释：
 
 ```java
 @RetryOnFailure(attempts = 3, delay = 5, unit = TimeUnit.SECONDS, 
@@ -280,11 +281,11 @@ public static void divideByZero() {
 
 在这种情况下，只有当方法抛出一个`NumberFormatException`时，AOP 通知才会尝试该方法三次，每次尝试之间有 5 秒的延迟。
 
-## 9.`@UnitedThrow`
+## 9. `@UnitedThrow`
 
-[`@UnitedThrow`](https://web.archive.org/web/20221126224052/https://aspects.jcabi.com/apidocs-0.22.6/com/jcabi/aspects/UnitedThrow.html) 注释允许我们捕捉方法抛出的所有异常，并将其包装在我们指定的异常中。因此，它统一了方法引发的异常。
+[`@UnitedThrow`](https://web.archive.org/web/20221126224052/https://aspects.jcabi.com/apidocs-0.22.6/com/jcabi/aspects/UnitedThrow.html)注释允许我们捕捉方法抛出的所有异常，并将其包装在我们指定的异常中。因此，它统一了方法引发的异常。
 
-例如，让我们创建一个抛出`IOException`和`InterruptedException`的方法`processFile`:
+例如，让我们创建一个抛出`IOException`和`InterruptedException`的方法`processFile`：
 
 ```java
 @UnitedThrow(IllegalStateException.class)
@@ -295,7 +296,7 @@ public static void processFile() throws IOException, InterruptedException {
 }
 ```
 
-在这里，我们添加了注释，将所有异常包装到`IllegalStateException`中。因此，当调用该方法时，异常的堆栈跟踪将如下所示:
+在这里，我们添加了注释，将所有异常包装到`IllegalStateException`中。因此，当调用该方法时，异常的堆栈跟踪将如下所示：
 
 ```java
 java.lang.IllegalStateException: java.io.FileNotFoundException: baeldung.txt (No such file or directory)
@@ -306,7 +307,7 @@ Caused by: java.io.FileNotFoundException: baeldung.txt (No such file or director
     ...
 ```
 
-## 10.结论
+## 10. 结论
 
 在本文中，我们探索了`jcabi-aspects` Java 库。
 

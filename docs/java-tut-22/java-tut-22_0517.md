@@ -1,3 +1,4 @@
+
 # 解决常见绘制问题
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/painting/problems.html`](https://docs.oracle.com/javase/tutorial/uiswing/painting/problems.html)
@@ -24,7 +25,6 @@
     g.setColor(getBackground());
     g.fillRect(0, 0, getWidth(), getHeight());
     g.setColor(getForeground());
-
     ```
 
 **问题：** 我使用`setBackground`设置组件的背景颜色，但似乎没有效果。

@@ -1,3 +1,4 @@
+
 # 是否可以不交换密码或令牌进行身份验证？
 
 > 原文：<https://medium.com/javarevisited/authenticate-without-passwords-or-tokens-cf68eeb4deef?source=collection_archive---------3----------------------->
@@ -313,43 +314,45 @@ Default Kerberos version 5 ***realm***: **KERBEROS.COM**
 
 *![](img/61ea3cb0aee22cd9febae5354daaacea.png)*
 
-*[kinit](#62e6) 和 [klist](#62e6)*
 
-*   ***kerberos-client:** 通过将***/tmp/krb5 cc _ 0***设置为 **KRB5CCNAME** 使其对 kerberos 可见*
 
-```
-*export KRB5CCNAME=/tmp/krb5cc_0*
-```
+# [kinit](#62e6) 和 [klist](#62e6)
 
-## *Kerberos 之后*
-
-*   ***kerberos-client:** 现在试试 **curl** ing 与*[*—negotiate*](https://curl.se/mail/archive-2019-02/0001.html)，**
+- **kerberos-client**: 通过将`/tmp/krb5 cc _ 0`设置为`KRB5CCNAME`使其对 kerberos 可见
 
 ```
-**curl --negotiate -u : apacheserver.kerberos.com**
+export KRB5CCNAME=/tmp/krb5cc_0
 ```
 
-**![](img/b8c66ef16345dc0a7eedfbbb0e2de985.png)**
+## Kerberos 之后
 
-****答对了**现在**通过了认证**，我们可以看到 html 文件了**
+- **kerberos-client**: 现在试试 **curl** ing 与 [—negotiate](https://curl.se/mail/archive-2019-02/0001.html)，
 
-**![](img/a71d652ea6d9f73afde1dd7c214c7499.png)**
+```
+curl --negotiate -u : apacheserver.kerberos.com
+```
 
-**本杰明·戴维斯在 [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral) 上拍摄的照片**
+![](img/b8c66ef16345dc0a7eedfbbb0e2de985.png)
+
+**答对了**现在**通过了认证**，我们可以看到 html 文件了
+
+![](img/a71d652ea6d9f73afde1dd7c214c7499.png)
+
+本杰明·戴维斯在 [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral) 上拍摄的照片
 
 > **问答？**
 
-## **看起来我们在这里使用密码，不是吗？**
+## 看起来我们在这里使用密码，不是吗？
 
-**是的，我们是。但是它只是存储在 **kerberos 客户端**中，用于[加密](https://medium.suriyaprakhash.com/cryptography-algorithms-e86ce7e2bb9b#720a)和[解密](https://medium.suriyaprakhash.com/cryptography-algorithms-e86ce7e2bb9b#720a)，并且在认证过程中不会通过网络传输。**
+是的，我们是。但是它只是存储在 **kerberos 客户端**中，用于[加密](https://medium.suriyaprakhash.com/cryptography-algorithms-e86ce7e2bb9b#720a)和[解密](https://medium.suriyaprakhash.com/cryptography-algorithms-e86ce7e2bb9b#720a)，并且在认证过程中不会通过网络传输。
 
-**检查 [curl 命令](#7366)，我们没有传递任何类似于**令牌**或**密码**的东西，不像 [oauth](/javarevisited/oauth-and-misconceptions-fe2005fecd72) 或其他授权机制。我们只是使用一个[协商](https://curl.se/docs/manpage.html#--negotiate)标志来启用 [SPNEGO](https://en.wikipedia.org/wiki/SPNEGO) 认证机制，该机制又使用 [MIT Kerberos 库的](https://web.mit.edu/kerberos/krb5-1.14/doc/index.html) [GSS-API ***客户端*** 应用程序](https://web.mit.edu/kerberos/krb5-1.14/doc/appdev/gssapi.html#initiator-credentials)与 [MIT Kerberos 库的](https://web.mit.edu/kerberos/krb5-1.14/doc/index.html) [GSS-API ***服务器*** 应用程序](https://web.mit.edu/kerberos/krb5-1.14/doc/appdev/gssapi.html#acceptor-names)进行安全通信**
+检查 [curl 命令](#7366)，我们没有传递任何类似于**令牌**或**密码**的东西，不像 [oauth](/javarevisited/oauth-and-misconceptions-fe2005fecd72) 或其他授权机制。我们只是使用一个[协商](https://curl.se/docs/manpage.html#--negotiate)标志来启用 [SPNEGO](https://en.wikipedia.org/wiki/SPNEGO) 认证机制，该机制又使用 [MIT Kerberos 库的](https://web.mit.edu/kerberos/krb5-1.14/doc/index.html) [GSS-API ***客户端*** 应用程序](https://web.mit.edu/kerberos/krb5-1.14/doc/appdev/gssapi.html#initiator-credentials)与 [MIT Kerberos 库的](https://web.mit.edu/kerberos/krb5-1.14/doc/index.html) [GSS-API ***服务器*** 应用程序](https://web.mit.edu/kerberos/krb5-1.14/doc/appdev/gssapi.html#acceptor-names)进行安全通信
 
-## **如何避免到期时手动输入密码？**
+## 如何避免到期时手动输入密码？
 
-**实现它有不同的方法。一种方法是使用 [ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html) 工具。我在这里有一个单独的帖子来解释它，**
+实现它有不同的方法。一种方法是使用 [ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html) 工具。我在这里有一个单独的帖子来解释它，
 
-**<https://medium.suriyaprakhash.com/avoid-entering-passwords-to-fetch-ticket-granting-ticket-d37704248503>  
+<https://medium.suriyaprakhash.com/avoid-entering-passwords-to-fetch-ticket-granting-ticket-d37704248503>
 
 ## 为什么是 Keytabs？
 
@@ -359,8 +362,9 @@ Default Kerberos version 5 ***realm***: **KERBEROS.COM**
 
 票证是加密的数据块。他们有两把钥匙，
 
-*   票证密钥—在 **Kerberos 基础架构**和**服务**之间共享
-*   会话密钥—在**用户**和**服务**之间共享
+- 票证密钥—在 **Kerberos 基础架构**和**服务**之间共享
+
+- 会话密钥—在**用户**和**服务**之间共享
 
 我们使用 [kinit](#62e6) 或 [ktadd](https://web.mit.edu/kerberos/krb5-1.4/krb5-1.4.1/doc/krb5-admin/Adding-Principals-to-Keytabs.html) 获取它们，并使用 [klist](#62e6) 查看它们。
 
@@ -384,4 +388,4 @@ Default Kerberos version 5 ***realm***: **KERBEROS.COM**
 
 在评论区发表任何问题。我会试着把它们和答案一起放在这里。
 
-祝本地主机运行愉快！**
+祝本地主机运行愉快！

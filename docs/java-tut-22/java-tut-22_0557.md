@@ -1,8 +1,9 @@
+
 # 课程：标准日历
 
 > 原文：[`docs.oracle.com/javase/tutorial/datetime/iso/index.html`](https://docs.oracle.com/javase/tutorial/datetime/iso/index.html)
 
-日期时间 API 的核心是[java.time](https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html)包。`java.time`中定义的类基于 ISO 日历系统，这是代表日期和时间的世界标准。ISO 日历遵循普罗列普提克格里高利规则。格里高利日历于 1582 年引入；在*普罗列普提克*格里高利日历中，日期从那时开始向前延伸，以创建一致的、统一的时间线，并简化日期计算。
+日期时间 API 的核心是`java.time`包。`java.time`中定义的类基于 ISO 日历系统，这是代表日期和时间的世界标准。ISO 日历遵循普罗列普提克格里高利规则。格里高利日历于 1582 年引入；在*普罗列普提克*格里高利日历中，日期从那时开始向前延伸，以创建一致的、统一的时间线，并简化日期计算。
 
 本课程涵盖以下主题：
 

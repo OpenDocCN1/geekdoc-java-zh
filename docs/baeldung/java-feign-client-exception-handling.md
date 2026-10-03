@@ -1,14 +1,15 @@
+
 # 假装客户端异常处理
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-feign-client-exception-handling>
 
-## 1。概述
+## 1. 概述
 
-在本教程中，我们将演示如何在[佯装](/web/20220906000326/https://www.baeldung.com/intro-to-feign)中处理异常。Feign 是微服务开发者的强大工具，支持 **`[ErrorDecoder](https://web.archive.org/web/20220906000326/https://appdoc.app/artifact/com.netflix.feign/feign-core/8.11.0/feign/codec/ErrorDecoder.html)`和`[FallbackFactory](https://web.archive.org/web/20220906000326/https://github.com/OpenFeign/feign/blob/master/hystrix/src/main/java/feign/hystrix/FallbackFactory.java)` 进行异常处理**。
+在本教程中，我们将演示如何在[佯装](/web/20220906000326/https://www.baeldung.com/intro-to-feign)中处理异常。Feign 是微服务开发者的强大工具，支持 `[ErrorDecoder](https://web.archive.org/web/20220906000326/https://appdoc.app/artifact/com.netflix.feign/feign-core/8.11.0/feign/codec/ErrorDecoder.html)` 和 `[FallbackFactory](https://web.archive.org/web/20220906000326/https://github.com/OpenFeign/feign/blob/master/hystrix/src/main/java/feign/hystrix/FallbackFactory.java)` 进行异常处理。
 
-## 2。Maven 依赖关系
+## 2. Maven 依赖关系
 
-首先，让我们通过包含 [`spring-cloud-starter-openfeign`](https://web.archive.org/web/20220906000326/https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign) 来创建一个 [Spring Boot](/web/20220906000326/https://www.baeldung.com/spring-boot) 项目。 **`spring-cloud-starter-openfeign`内包含`feign-core`依赖**:
+首先，让我们通过包含 [`spring-cloud-starter-openfeign`](https://web.archive.org/web/20220906000326/https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign) 来创建一个 [Spring Boot](/web/20220906000326/https://www.baeldung.com/spring-boot) 项目。`spring-cloud-starter-openfeign` 内包含 `feign-core` 依赖：
 
 ```java
 <dependency>
@@ -18,7 +19,7 @@
 </dependency>
 ```
 
-或者我们可以将 [`feign-core`](https://web.archive.org/web/20220906000326/https://search.maven.org/artifact/io.github.openfeign/feign-core) 依赖项添加到我们的`pom.xml`文件中:
+或者我们可以将 [`feign-core`](https://web.archive.org/web/20220906000326/https://search.maven.org/artifact/io.github.openfeign/feign-core) 依赖项添加到我们的 `pom.xml` 文件中：
 
 ```java
 <dependency>
@@ -28,9 +29,9 @@
 </dependency>
 ```
 
-## 3。 **异常处理同`ErrorDecoder`**
+## 3. 异常处理同 `ErrorDecoder`
 
-我们可以通过配置`ErrorDecoder,` 来**处理异常，这也允许我们在需要时定制消息。当错误发生时，Feign 客户端会隐藏原始消息。为了检索它，我们可以编写一个自定义的`ErrorDecoder`。让我们覆盖默认的`ErrorDecoder` 实现:**
+我们可以通过配置 `ErrorDecoder` 来处理异常，这也允许我们在需要时定制消息。当错误发生时，Feign 客户端会隐藏原始消息。为了检索它，我们可以编写一个自定义的 `ErrorDecoder`。让我们覆盖默认的 `ErrorDecoder` 实现：
 
 ```java
 public class RetreiveMessageErrorDecoder implements ErrorDecoder {
@@ -58,9 +59,9 @@ public class RetreiveMessageErrorDecoder implements ErrorDecoder {
 
 在上面的编码器中，我们覆盖了默认行为，以便更好地控制异常。
 
-## 4。 **异常处理同`Fallback`**
+## 4. 异常处理同 `Fallback`
 
-我们还可以通过配置`fallback`来处理异常。让我们首先创建一个客户端并配置`fallback`:
+我们还可以通过配置 `fallback` 来处理异常。让我们首先创建一个客户端并配置 `fallback`：
 
 ```java
 @FeignClient(name = "file", url = "http://localhost:8081", 
@@ -71,7 +72,7 @@ public interface FileUploadClientWithFallBack {
 } 
 ```
 
-现在，让我们创建`FileUploadClientWithFallbackImpl`来根据我们的需求处理异常:
+现在，让我们创建 `FileUploadClientWithFallbackImpl` 来根据我们的需求处理异常：
 
 ```java
 @Component
@@ -96,7 +97,7 @@ public class FileUploadClientWithFallbackImpl implements FileUploadClientWithFal
 } 
 ```
 
-现在让我们创建一个简单的测试来验证`fallback`选项:
+现在让我们创建一个简单的测试来验证 `fallback` 选项：
 
 ```java
 @Test(expected = NotFoundException.class)
@@ -111,9 +112,9 @@ public void whenFileUploadClientFallback_thenFileUploadError() throws IOExceptio
 }
 ```
 
-## 5。 **异常处理同`FallbackFactory`**
+## 5. 异常处理同 `FallbackFactory`
 
-我们还可以通过配置`FallbackFactory`来处理异常。让我们首先创建一个客户端并配置`FallbackFactory`:
+我们还可以通过配置 `FallbackFactory` 来处理异常。让我们首先创建一个客户端并配置 `FallbackFactory`：
 
 ```java
 @FeignClient(name = "file", url = "http://localhost:8081", 
@@ -124,7 +125,7 @@ public interface FileUploadClient {
 }
 ```
 
-现在，让我们创建`FileUploadClientFallbackFactory`来根据我们的需求处理异常:
+现在，让我们创建 `FileUploadClientFallbackFactory` 来根据我们的需求处理异常：
 
 ```java
 @Component
@@ -150,7 +151,7 @@ public class FileUploadClientFallbackFactory implements FallbackFactory<FileUplo
 }
 ```
 
-现在让我们创建一个简单的测试来验证`FallbackFactory`选项:
+现在让我们创建一个简单的测试来验证 `FallbackFactory` 选项：
 
 ```java
 @Test(expected = NotFoundException.class)
@@ -165,7 +166,7 @@ public void whenFileUploadClientFallbackFactory_thenFileUploadError() throws IOE
 } 
 ```
 
-## 6。结论
+## 6. 结论
 
 在本文中，我们展示了如何在 feign 中处理异常。
 

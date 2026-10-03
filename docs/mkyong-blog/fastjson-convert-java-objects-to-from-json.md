@@ -1,38 +1,42 @@
-# fast Json–将 Java 对象转换成 JSON 或从 JSON 转换过来
+
+# FastJson：将 Java 对象转换成 JSON 或从 JSON 转换过来
 
 > 原文：<http://web.archive.org/web/20230101150211/https://www.mkyong.com/java/fastjson-convert-java-objects-to-from-json/>
 
-FastJson 提供了简单的 API 来将 Java 对象与 Json 相互转换
+FastJson 提供了简单的 API 来将 Java 对象与 JSON 相互转换：
 
-*   `JSON.toJSONString`–Java 对象到 JSON
-*   `JSON.parseObject`–JSON 到 Java 对象
-*   `JSON.parseArray`–Java 对象列表的 JSON 数组
+- `JSON.toJSONString`：Java 对象到 JSON
+- `JSON.parseObject`：JSON 到 Java 对象
+- `JSON.parseArray`：Java 对象列表到 JSON 数组
 
-**Note**
-You may have interest to read this [How to parse JSON with Jackson](http://web.archive.org/web/20221117050521/https://www.mkyong.com/java/jackson-how-to-parse-json/)
+> **Note**
+>
+> You may have interest to read this [How to parse JSON with Jackson](http://web.archive.org/web/20221117050521/https://www.mkyong.com/java/jackson-how-to-parse-json/)
 
-总的来说，FastJson 非常简单，很容易将 Json 转换成对象，但是，它缺乏直接的`File`支持，尤其是`JSON.parseArray`方法，它需要额外的努力来读取 JSON 文件。希望将来像`parseObject`和`parseArray`这样的 API 能够直接支持像`File`或`URL`这样的源。
+总的来说，FastJson 非常简单，很容易将 JSON 转换成对象，但是它缺乏直接的 `File` 支持，尤其是 `JSON.parseArray` 方法，它需要额外的努力来读取 JSON 文件。希望将来像 `parseObject` 和 `parseArray` 这样的 API 能够直接支持像 `File` 或 `URL` 这样的源。
 
-*PS 用 FastJson 1.2.57 测试*
+*PS：用 FastJson 1.2.57 测试。*
 
-pom.xml
+## Maven 配置
+
+`pom.xml`
 
 ```java
- <dependency>
-		<groupId>com.alibaba</groupId>
-		<artifactId>fastjson</artifactId>
-		<version>1.2.57</version>
-	</dependency> 
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>fastjson</artifactId>
+    <version>1.2.57</version>
+</dependency>
 ```
 
-## 1.波乔
+## 1. POJO
 
 一个简单的 POJO，用于 JSON 转换。
 
-Staff.java
+`Staff.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
@@ -48,16 +52,16 @@ public class Staff {
     private List<String> skills;
     private Map<String, BigDecimal> salary;
 
-    //getters, setters, toString, constructor
-} 
+    // getters, setters, toString, constructor
+}
 ```
 
-## 2.JSON 的 Java 对象
+## 2. Java 对象到 JSON
 
-FastJsonExample1.java
+`FastJsonExample1.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.alibaba.fastjson.JSON;
 
@@ -106,46 +110,46 @@ public class FastJsonExample1 {
         staff.setName("mkyong");
         staff.setAge(38);
         staff.setPosition(new String[]{"Founder", "CTO", "Writer"});
+
         Map<String, BigDecimal> salary = new HashMap() {{
             put("2010", new BigDecimal(10000));
             put("2012", new BigDecimal(12000));
             put("2018", new BigDecimal(14000));
         }};
+
         staff.setSalary(salary);
         staff.setSkills(Arrays.asList("java", "python", "node", "kotlin"));
         staff.setJoinDate(new Date());
 
         return staff;
-
     }
-
-} 
+}
 ```
 
-输出
+### 输出
 
-```java
- // json
+```json
+// json
 {"age":38,"joinDate":1556870430099,"name":"mkyong","position":["Founder","CTO","Writer"],
 "salary":{"2018":14000,"2012":12000,"2010":10000},"skills":["java","python","node","kotlin"]}
 
 // json2
 {
-	"age":38,
-	"joinDate":1556870430099,
-	"name":"mkyong",
-	"position":["Founder","CTO","Writer"],
-	"salary":{
-		"2018":14000,
-		"2012":12000,
-		"2010":10000
-	},
-	"skills":[
-		"java",
-		"python",
-		"node",
-		"kotlin"
-	]
+    "age":38,
+    "joinDate":1556870430099,
+    "name":"mkyong",
+    "position":["Founder","CTO","Writer"],
+    "salary":{
+        "2018":14000,
+        "2012":12000,
+        "2010":10000
+    },
+    "skills":[
+        "java",
+        "python",
+        "node",
+        "kotlin"
+    ]
 }
 
 // json3 - format date
@@ -154,49 +158,49 @@ public class FastJsonExample1 {
 
 // json4 - JSON Array
 [
-	{
-		"age":38,
-		"joinDate":1556870630615,
-		"name":"mkyong",
-		"position":["Founder","CTO","Writer"],
-		"salary":{
-			"2018":14000,
-			"2012":12000,
-			"2010":10000
-		},
-		"skills":[
-			"java",
-			"python",
-			"node",
-			"kotlin"
-		]
-	},
-	{
-		"age":38,
-		"joinDate":1556870630615,
-		"name":"mkyong",
-		"position":["Founder","CTO","Writer"],
-		"salary":{
-			"2018":14000,
-			"2012":12000,
-			"2010":10000
-		},
-		"skills":[
-			"java",
-			"python",
-			"node",
-			"kotlin"
-		]
-	}
-] 
+    {
+        "age":38,
+        "joinDate":1556870630615,
+        "name":"mkyong",
+        "position":["Founder","CTO","Writer"],
+        "salary":{
+            "2018":14000,
+            "2012":12000,
+            "2010":10000
+        },
+        "skills":[
+            "java",
+            "python",
+            "node",
+            "kotlin"
+        ]
+    },
+    {
+        "age":38,
+        "joinDate":1556870630615,
+        "name":"mkyong",
+        "position":["Founder","CTO","Writer"],
+        "salary":{
+            "2018":14000,
+            "2012":12000,
+            "2010":10000
+        },
+        "skills":[
+            "java",
+            "python",
+            "node",
+            "kotlin"
+        ]
+    }
+]
 ```
 
-## 3.JSON 到 Java 对象
+## 3. JSON 到 Java 对象
 
-FastJsonExample2.java
+`FastJsonExample2.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.alibaba.fastjson.JSON;
 
@@ -228,25 +232,25 @@ public class FastJsonExample2 {
         try (Stream<String> lines = Files.lines(Paths.get("c:\\projects\\staff.json"))) {
 
             String content = lines.collect(Collectors.joining());
-			// Hope parseArray() will support File or Reader in future.
+
+            // Hope parseArray() will support File or Reader in future.
             List<Staff> list = JSON.parseArray(content, Staff.class);
             System.out.println(list);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
-} 
+}
 ```
 
 ## 参考
 
-*   [FastJson 主页](http://web.archive.org/web/20221117050521/https://github.com/alibaba/fastjson)
-*   [FastJson 用户指南](http://web.archive.org/web/20221117050521/https://github.com/alibaba/fastjson/wiki/UserGuid)
-*   [FastJson 数据绑定示例](http://web.archive.org/web/20221117050521/https://github.com/alibaba/fastjson/wiki/Samples-DataBind)
-*   [FastJson 最佳实践(中文)](http://web.archive.org/web/20221117050521/https://kimmking.github.io/2017/06/06/json-best-practice/)
-*   【FastJson 为什么这么快？(中文)
-*   [FastJson 流 API](http://web.archive.org/web/20221117050521/https://github.com/alibaba/fastjson/wiki/Stream-api)
+- [FastJson 主页](http://web.archive.org/web/20221117050521/https://github.com/alibaba/fastjson)
+- [FastJson 用户指南](http://web.archive.org/web/20221117050521/https://github.com/alibaba/fastjson/wiki/UserGuid)
+- [FastJson 数据绑定示例](http://web.archive.org/web/20221117050521/https://github.com/alibaba/fastjson/wiki/Samples-DataBind)
+- [FastJson 最佳实践（中文）](http://web.archive.org/web/20221117050521/https://kimmking.github.io/2017/06/06/json-best-practice/)
+- FastJson 为什么这么快？（中文）
+- [FastJson 流 API](http://web.archive.org/web/20221117050521/https://github.com/alibaba/fastjson/wiki/Stream-api)
 
 <input type="hidden" id="mkyong-current-postId" value="15093">

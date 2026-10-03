@@ -1,4 +1,5 @@
-# 第 1 部分:如何将 OpenAPI 3.0 和 Swagger 添加到 Spring Boot 应用程序中
+
+# 第 1 部分：如何将 OpenAPI 3.0 和 Swagger 添加到 Spring Boot 应用程序中
 
 > 原文：<https://medium.com/javarevisited/part-1-how-to-add-openapi-3-0-and-swagger-to-spring-boot-application-35c96422e94b?source=collection_archive---------0----------------------->
 

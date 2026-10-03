@@ -1,3 +1,4 @@
+
 # 使用 MapStruct & Lombok 让您的生活更轻松
 
 > 原文：<https://medium.com/javarevisited/make-your-life-easier-with-mapstruct-lombok-14225f207191?source=collection_archive---------0----------------------->

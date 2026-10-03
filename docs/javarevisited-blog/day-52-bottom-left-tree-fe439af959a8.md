@@ -1,3 +1,4 @@
+
 # 第 52 天—左下角的树
 
 > 原文：<https://medium.com/javarevisited/day-52-bottom-left-tree-fe439af959a8?source=collection_archive---------2----------------------->

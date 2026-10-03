@@ -1,3 +1,4 @@
+
 # 导出公钥证书
 
 > 原文：[`docs.oracle.com/javase/tutorial/security/toolfilex/step4.html`](https://docs.oracle.com/javase/tutorial/security/toolfilex/step4.html)
@@ -7,7 +8,6 @@
 ```java
 keytool -export -keystore examplestanstore
 -alias signLegal -file StanSmith.cer
-
 ```
 
 系统会提示您输入存储密码。

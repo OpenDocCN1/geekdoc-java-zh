@@ -1,3 +1,4 @@
+
 # 当断点没有中断时
 
 > 原文：<https://medium.com/javarevisited/when-breakpoints-dont-break-72a33577a537?source=collection_archive---------7----------------------->
@@ -10,7 +11,7 @@
 
 说完这些，让我们回到基础。什么是不中断断点？
 
-# 不间断断点
+## 不间断断点
 
 我不喜欢非中断断点这个术语。这是一种矛盾修饰法。在 Lightrun，我们使用术语“快照”,但它对于具有我们提供的上下文信息级别的东西更有意义。谷歌使用术语“捕获”,在这种特定情况下更有意义。
 
@@ -28,7 +29,7 @@
 
 [![](img/42026c5c878ffc9982862e37e5e2de85.png)](https://javarevisited.blogspot.com/2020/04/top-5-courses-to-learn-java-collections-and-streams.html)
 
-# 超越跟踪点
+## 超越跟踪点
 
 痕迹是惊人的。如果您在调试时仍然使用 printlines，那么您应该花点时间重新考虑一下，并研究一下跟踪点。请注意，这不是日志记录的替代品。日志记录是永久且必要的。默认情况下，打印行调试和跟踪点是短暂的，它们需要消失。跟踪点无缝地完成这项工作，而我们经常忘记在代码中打印。
 
@@ -38,7 +39,7 @@
 
 一个重要的特性是堆栈跟踪。我们可以检查对话框中的标志，每次点击跟踪点时，我们都可以看到路径。这会很快变得很吵。为了减少噪音，我们可以使用呼叫者过滤器来帮助我们处理额外的噪音。它们是一个相当大的特性，我将在以后的博客文章中介绍。
 
-冰山一角是这样的，如果调用堆栈包含一个特定的方法(或者不包含它)，你可以跳过断点。过滤器的语法是最难的部分，因为它使用了格式为`packageName.className(paramTypes)returnValueType`的方法签名的 [JVM 内部](/javarevisited/7-best-courses-to-learn-jvm-garbage-collection-and-performance-tuning-for-experienced-java-331705180686)符号。它不使用空格或逗号。例如，这是一个用于`PrimeMain`类的主方法的排除过滤器:
+冰山一角是这样的，如果调用堆栈包含一个特定的方法(或者不包含它)，你可以跳过断点。过滤器的语法是最难的部分，因为它使用了格式为`packageName.className(paramTypes)returnValueType`的方法签名的 [JVM 内部](/javarevisited/7-best-courses-to-learn-jvm-garbage-collection-and-performance-tuning-for-experienced-java-331705180686)符号。它不使用空格或逗号。例如，这是一个用于`PrimeMain`类的主方法的排除过滤器：
 
 ```
 -PrimeMain.main([Ljava/lang/String;)V
@@ -46,7 +47,7 @@
 
 是的。我知道，很难读懂。如果有兴趣的话，我会试着在以后的帖子里写一写。在我即将出版的调试书籍中，我还有第二本书介绍这个特性。
 
-# 禁用直到
+## 禁用直到
 
 不间断断点的一个很酷的特性是我们可以缩放它们。一个[正常断点](https://www.java67.com/2018/01/how-to-remote-debug-java-application-in-Eclipse.html)是痛苦。你添加它，你的应用程序停止。所以你需要反复按下继续键。有了不间断，你就不再有那个问题，你可以把它们分散开来。这是一个很酷的例子。
 
@@ -56,7 +57,7 @@
 
 我不能做的一件事是轻易地改变状态。我希望有一个工具来计算一个方法被调用的次数或执行一个方法的持续时间(以毫秒计)。这对于 println 调试来说并不难，但是据我所知，对于跟踪点来说是不可能的。在一个跟踪点中设置一个变量为当前时间，并在第二个跟踪点中打印 current time 和变量之间的差异，这将是一件非常棒的事情。
 
-# 最后
+## 最后
 
 调试器中有许多隐藏的宝石。近年来，跟踪点得到了更多的关注。我信任 VS 代码。他们使得在 IDE UI 中添加登录点变得非常容易。它们没有不间断断点的其他功能。但他们帮助推动了对这一功能的认识。
 

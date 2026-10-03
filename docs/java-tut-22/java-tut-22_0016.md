@@ -1,3 +1,4 @@
+
 # 什么是类？
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/concepts/class.html`](https://docs.oracle.com/javase/tutorial/java/concepts/class.html)
@@ -7,7 +8,6 @@
 以下的`Bicycle`类是自行车的一种可能实现：
 
 ```java
-
 class Bicycle {
 
     int cadence = 0;
@@ -36,7 +36,6 @@ class Bicycle {
              speed + " gear:" + gear);
     }
 }
-
 ```
 
 Java 编程语言的语法对你来说可能是新的，但这个类的设计是基于之前讨论的自行车对象的。字段`cadence`、`speed`和`gear`代表对象的状态，而方法（`changeCadence`、`changeGear`、`speedUp`等）定义了它与外部世界的交互。
@@ -46,7 +45,6 @@ Java 编程语言的语法对你来说可能是新的，但这个类的设计是
 这里有一个`BicycleDemo`类，它创建了两个独立的`Bicycle`对象并调用它们的方法：
 
 ```java
-
 class BicycleDemo {
     public static void main(String[] args) {
 
@@ -71,7 +69,6 @@ class BicycleDemo {
         bike2.printStates();
     }
 }
-
 ```
 
 这个测试的输出打印了两辆自行车的结束踏板节奏、速度和档位：
@@ -79,5 +76,4 @@ class BicycleDemo {
 ```java
 cadence:50 speed:10 gear:2
 cadence:40 speed:20 gear:3
-
 ```

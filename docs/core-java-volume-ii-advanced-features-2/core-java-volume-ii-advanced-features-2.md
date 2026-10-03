@@ -1,60 +1,19 @@
+
 # 核心 Java 卷二：高级特性 2
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 OceanofPDF.com
-
-
-
-
-
-
-
 
 # 1. 前言
 
 ## 1.1. 读者
 
-你手中的这本书是 Java 21 第 13 版的第二卷。第一卷涵盖了语言的核心特征；本卷则处理程序员在进行专业软件开发时需要的高级主题。因此，与第一卷以及本书的之前的版本一样，我们的目标仍然是那些想要将 Java 技术应用于实际项目中的程序员。
+你手中的这本书是 Java 21 第 13 版的第二卷。第一卷涵盖了语言的核心特征；本卷则处理程序员在进行专业软件开发时需要的高级主题。因此，与第一卷以及本书的之前的版本一样，我们的目标仍然是那些想要将 Java 技术应用到实际项目中的程序员。
 
-随着 Java 类库的爆炸式增长，想要在一卷书中涵盖严谨程序员需要需要的所有 Java 特性来说是不可能的。因此，本书被分为两卷。
+随着 Java 类库的爆炸式增长，想要在一卷书中涵盖严谨程序员需要的所有 Java 特性是不可能的。因此，本书被分为两卷。
 
 第一卷集中在 Java 语言的基础性概念上：
 
-- 面对象编程
+- 面向对象编程
 - 反射与代理
 - 接口与内部类
 - 异常处理
@@ -85,7 +44,7 @@ OceanofPDF.com
 
 在第 1 章中，你将学习关于 Java 流库的所有知识，该库为数据处理带来了现代感，通过指定你想要而不是描述应该如何获取结果。这使得流库能够专注于最优的评估策略，这对于在多核心上并行执行计算特别有利。
 
-第 2 章的主题是输入输出处理（I/O）。在 Java 中，所有的输入和输出都通过输入/输出流处理。这些流（不要与第 1 章中的混淆）允许你以统一的方式处理各种数据源之间的通信，例如文件、网络连接或内存块。我们详细介绍了了 reader 和 writer 类，它们使得处理 Unicode 变得简单。我们向你展示了使用对象序列化机制时底层发生了什么，这使得保存和加载对象变得简单方便。然后我们转向正则表达式以及文件和路径的操作。在整个章节中，你将发现最近 Java 版本中欢迎的改进。
+第 2 章的主题是输入输出处理（I/O）。在 Java 中，所有的输入和输出都通过输入/输出流处理。这些流（不要与第 1 章中的混淆）允许你以统一的方式处理各种数据源之间的通信，例如文件、网络连接或内存块。我们详细介绍了 `reader` 和 `writer` 类，它们使得处理 Unicode 变得简单。我们向你展示了使用对象序列化机制时底层发生了什么，这使得保存和加载对象变得简单方便。然后我们转向正则表达式以及文件和路径的操作。在整个章节中，你将发现最近 Java 版本中欢迎的改进。
 
 第 3 章涵盖 XML。我们向你展示如何解析 XML 文件、如何生成 XML 以及如何使用 XSL 转换。作为一个实用的示例，我们向你展示如何在 XML 中指定 Swing 表单的布局。我们还讨论了 XPath API，它使得在 XML 大海中捞针变得容易得多。
 
@@ -95,7 +54,7 @@ OceanofPDF.com
 
 在第 6 章中，你将学习如何处理日历和时间。第 7 章讨论了一个我们认为重要性只会不断增加的功能：国际化。Java 语言从设计之初就是为了处理 Unicode 而设计的，但 Java 平台上的国际化支持要深入得多。例如，我们向你展示如何编写一个使用德语或中文的计算器。
 
-第 8 章讨论了脚本和编译器 API，这些 允许你的程序调用 JavaScript 或 Groovy 等脚本语言的代码并编译 Java 代码。
+第 8 章讨论了脚本和编译器 API，这些允许你的程序调用 JavaScript 或 Groovy 等脚本语言的代码并编译 Java 代码。
 
 第 9 章涵盖了 Java 安全模型、用户身份验证以及 Java 安全库中的加密函数。你将学习有关消息签名、授权和加密等重要功能。
 
@@ -107,49 +66,40 @@ OceanofPDF.com
 
 第 13 章涵盖了原生方法，它允许你调用为特定机器编写的方法，例如 Microsoft Windows API。显然，这个功能是有争议的：使用原生方法，Java 的跨平台特性就会消失。尽管如此，每个为特定平台编写 Java 程序的严谨程序员都需要这些技术。有时，当你与 Java 不支持的设备或服务交互时，你需要转向目标操作系统的 API。我们通过向你展示如何从 Java 程序访问 Windows 注册表 API 来说明这一点。本章以“Panama” API 的展望结束，该 API 将在未来的 Java 版本中替换当前的 API。
 
-
-
-
-
 ## 1.3. 约定
 
 与许多计算机书籍一样，我使用等宽字体来表示计算机代码。
 
 **注意：** 注释使用了像这样的“note”图标并进行标记。
 
-
 **提示：** 提示使用了像这样的“tip”图标并进行标记。
-
 
 **警告：** 当前方有危险时，我会用“caution”图标警告你。
 
-
 **预览注记：** 计划未来成为核心部分或 API 一部分的特性将用此图标标记。
-
 
 **C++ 注释：** 有许多 C++ 注释解释了 Java 编程语言与 C++ 之间的区别。如果你对 C++ 不感兴趣，可以跳过它们。
 
+Java 自带大型编程库，或者说应用程序接口（API）。第一次使用 API 调用时，我会在章节末尾添加一个简短的总结描述。这些描述稍微随意一些，但希望比官方在线 API 文档更具信息量。接口的名称使用斜体，与官方文档一致。类、接口或方法名称后的数字是引入该功能的 JDK 版本，如下例所示：
 
-Java 自带大型编程库，或者说应用程序接口（API）。第一次使用 API 调用时，我会在章节末尾添加一个简短的总结描述。这些描述稍微随意一些，但希望比官方在线 API 文档更具信息量。接口的名称使用*斜体*，与官方文档一致。类、接口或方法名称后的后的数字是引入该功能的 JDK 版本，如下例所示：
-
-```
+```text
 Application Programming Interface 1.2
 ```
 
-本书配套代码中包含源代码的程序被列为示例，例如
+本书配套代码中包含源代码的程序被列为示例，例如：
 
 ## 列表 1.1 NotHelloWorld.java
 
-```
-1 void main()
-2 {
-3     System.out.println("We will not use 'Hello'");
-4 }
+```java
+void main()
+{
+    System.out.println("We will not use 'Hello'");
+}
 ```
 
 你可以从 https://horstmann.com/corejava 下载配套代码。
 
-## 1. 致谢
+# 1. 致谢
 
 写一本书总是一项艰巨的，重写似乎并不容易，尤其是在 Java 技术变化如此之快的情况下。让一本书成为现实需要许多投入其中的人员，我很荣幸地感谢整个 Core 团队的贡献。
 
@@ -157,31 +107,29 @@ Pearson 的许多个人提供了宝贵的帮助，但他们一直保持在幕后
 
 感谢早期版本的许多读者，他们报告了尴尬的错误，并对改进提出了许多周全的建议。我特别感谢优秀的评审团队，他们以惊人的细节关注审阅了手稿，使我免于许多更多尴尬的错误。
 
-本版及早期版本的评审员包括 Chuck Allison (犹他谷大学),Lance Andersen (Oracle),Gail Anderson (Anderson Software Group),Paul Anderson (Anderson Software Group),Alec Beaton (IBM),Cliff Berg, Andrew Binstock (Oracle),Joshua Bloch... (注：此处原文似乎截断了，已根据提供的文本完成翻译)
-
-
-
+本版及早期版本的评审员包括 Chuck Allison (犹他谷大学), Lance Andersen (Oracle), Gail Anderson (Anderson Software Group), Paul Anderson (Anderson Software Group), Alec Beaton (IBM), Cliff Berg, Andrew Binstock (Oracle), Joshua Bloch...（注：此处原文似乎截断了，已根据提供的文本完成翻译）
 
 `filter` 方法返回另一个流，其中只包含长度大于 12 的单词。`count` 方法将该流归约为结果。
 
 当你处理流（streams）时，这种工作流是典型的。你分三个阶段设置操作流水线：
 
-- 1. 创建一个流。
-- 2. 指定*中间操作*，将初始流转换为其他流，可能分多个步骤完成。
-- 3. 应用*终端操作*来产生结果。该操作会强制执行其之前的惰性操作。此后，该流就无法再次使用。
+1. 创建一个流。
+2. 指定中间操作，将初始流转换为其他流，可能分多个步骤完成。
+3. 应用终端操作来产生结果。该操作会强制执行其之前的惰性操作。此后，该流就无法再次使用。
 
 在列表 1.1 的示例中，流是通过 `stream` 或 `parallelStream` 方法创建的。`filter` 方法对其进行转换，而 `count` 是终端操作。
 
-在下一节中，你将看到如何创建一个流。接下来的三个章节将处理流的转换。。之后是五个关于终端操作的章节。
+在下一节中，你将看到如何创建一个流。接下来的三个章节将处理流的转换。之后是五个关于终端操作的章节。
 
 ## Listing 1.1 streams/CountLongWords.java
 
-```
-1 package streams;
-2 import java.io.*;
-```
+```java
+package streams;
+
+import java.io.*;
 import java.nio.file.*;
 import java.util.*;
+
 /**
  * @version 1.02 2019-08-28
  * @author Cay Horstmann
@@ -192,9 +140,11 @@ public class CountLongWords {
         List<String> words = List.of(contents.split("\\s+"));
 
         long count = 0;
+
         for (String w : words) {
             if (w.length() > 12) count++;
         }
+
         System.out.println(count);
 
         count = words.stream().filter(w -> w.length() > 12).count();
@@ -206,31 +156,32 @@ public class CountLongWords {
 }
 ```
 
-java.util.stream.Stream<T>
+## `java.util.stream.Stream<T>`
 
-- Stream<T> filter(Predicate<? super T> p)
-  产生一个包含此流中所有符合 p 的元素的流。
-- long count()
+- `Stream<T> filter(Predicate<? super T> p)`  
+  产生一个包含此流中所有符合 `p` 的元素的流。
+- `long count()`  
   产生此流元素的数量。这是一个终端操作。
 
-java.util.Collection<E> 1.2
+## `java.util.Collection<E>` 1.2
 
-- default Stream<E> stream()
-- default Stream<E> parallelStream()
+- `default Stream<E> stream()`
+- `default Stream<E> parallelStream()`  
   产生该集合中元素的顺序流或并行流。
 
 ## 1.2. 流的创建
 
-你已经看到可以通过 Collection 接口的 `stream` 方法将任何集合转换为流。如果你有一个数组，请使用静态的 `Stream.of` 方法。
+你已经看到可以通过 `Collection` 接口的 `stream` 方法将任何集合转换为流。如果你有一个数组，请使用静态的 `Stream.of` 方法。
 
-```
+```java
 Stream<String> words = Stream.of(contents.split(
-// split 返回一个 String[] 数组
+    // split 返回一个 String[] 数组
+));
 ```
 
-of 方法有一个可变参数参数，因此你可以从任意数量的参数构造流：
+`of` 方法有一个可变参数参数，因此你可以从任意数量的参数构造流：
 
-```
+```java
 Stream<String> song = Stream.of("gently", "down",
 ```
 
@@ -238,335 +189,414 @@ Stream<String> song = Stream.of("gently", "down",
 
 要创建一个没有任何元素的流，使用静态的 `Stream.empty` 方法：
 
-```
+```java
 Stream<String> silence = Stream.empty();
+
 // 泛型类型 <String> 被推断；等同于
 ```
 
-Stream 接口有两个用于创建无限流静态方法。
-generate 方法接受一个没有参数的函数（技术上讲，是一个 `Supplier<T>` 接口对象）。每当需要流的值时，就会调用该函数产生一个值。你可以获取一个常量值流：
+`Stream` 接口有两个用于创建无限流的静态方法。
 
-```
+`generate` 方法接受一个没有参数的函数（技术上讲，是一个 `Supplier<T>` 接口对象）。每当需要流的值时，就会调用该函数产生一个值。你可以获取一个常量值流：
+
+```java
 Stream<String> echos = Stream.generate(() -> "Ech",
 ```
 
 或者获取一个随机数流：
 
-```
+```java
 Stream<Double> randoms = Stream.generate(Math::random)
 ```
 
 要产生如 0 1 2 3 . . . 的序列，请使用 `iterate` 方法。它接受一个“种子”值和一个函数（技术上讲，是一个 `UnaryOperator<T>`），并重复地将函数应用于上一个结果。例如：
 
-```
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE))
+```java
+Stream<BigInteger> integers = Stream.iterate(
+    BigInteger.ZERO,
+    n -> n.add(BigInteger.ONE)
+)
 ```
 
-序列中的第一个元素是种子 `BigInteger.ZERO`。第二个元素是 $f(seed)$，产生 1（作为一个大整数）。下一个元素是 $f(f(seed))$，产生 2，以此此类推。
+序列中的第一个元素是种子 `BigInteger.ZERO`。第二个元素是 `f(seed)`，产生 1（作为一个大整数）。下一个元素是 `f(f(seed))`，产生 2，以此类推。
 
 要产生一个有限的流，使用 `limit` 方法：
 
-```
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(10)
+```java
+Stream<BigInteger> integers = Stream.iterate(
+    BigInteger.ZERO,
+    n -> n.add(BigInteger.ONE)
+).limit(10)
 ```
 
 （注：此处原文中存在大量重复的 `limit` 示例描述，已按逻辑保留翻译）
 
 产生一个有限的流，使用 `limit` 方法：
 
-```
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(10)
+```java
+Stream<BigInteger> integers = Stream.iterate(
+    BigInteger.ZERO,
+    n -> n.add(BigInteger.ONE)
+).limit(10)
 ```
 
-（重复内容略...）
+（重复内容略……）
 
 产生一个有限的流，使用 `limit` 方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(10)
+Stream<BigInteger> integers = Stream.iterate(
+    BigInteger.ZERO,
+    n -> n.add(BigInteger.ONE)
+).limit(10)
 ```
-（重复内容略...）
+
+（重复内容略……）
 
 产生一个有限的流，使用 `limit` 方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(10)
+Stream<BigInteger> integers = Stream.iterate(
+    BigInteger.ZERO,
+    n -> n.add(BigInteger.ONE)
+).limit(10)
 ```
-（重复内容略...）
+
+（重复内容略……）
 
 产生一个有限的流，使用 `limit` 方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(10)
+Stream<BigInteger> integers = Stream.iterate(
+    BigInteger.ZERO,
+    n -> n.add(BigInteger.ONE)
+).limit(10)
 ```
-（重复内容略...）
+
+（重复内容略……）
 
 产生一个有限的流，使用 `limit` 方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(10)
+Stream<BigInteger> integers = Stream.iterate(
+    BigInteger.ZERO,
+    n -> n.add(BigInteger.ONE)
+).limit(10)
 ```
-（重复内容略...）
+
+（重复内容略……）
 
 产生一个有限的流，使用 `limit` 方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(10)
+Stream<BigInteger> integers = Stream.iterate(
+    BigInteger.ZERO,
+    n -> n.add(BigInteger.ONE)
+).limit(10)
 ```
-（重复内容略...）
+
+（重复内容略……）
 
 产生一个有限的流，使用 `limit` 方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(10)
+Stream<BigInteger> integers = Stream.iterate(
+    BigInteger.ZERO,
+    n -> n.add(BigInteger.ONE)
+).limit(10)
 ```
-（重复内容略...）
+
+（重复内容略……）
 
 产生一个有限的流，使用 `limit` 方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(
+    BigInteger.ZERO,
+    n -> n.add(BigInteger.ONE)
+).limit(1000)
 ```
-（重复内容略...）
+
+（重复内容略……）
 
 产生一个有限的流，使用 `limit` 方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(
+    BigInteger.ZERO,
+    n -> n.add(BigInteger.ONE)
+).limit(1000)
 ```
-（重复内容略...）
+
+（重复内容略……）
 
 产生一个有限的流，使用 `limit` 方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(
+    BigInteger.ZERO,
+    n -> n.add(BigInteger.ONE)
+).limit(1000)
 ```
-（重复内容略...）
+
+（重复内容略……）
 
 产生一个有限的流，使用 `limit` 方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(
+    BigInteger.ZERO,
+    n -> n.add(BigInteger.ONE)
+).limit(1000)
 ```
-（重复内容略...）
+
+（重复内容略……）
 
 产生一个有限的流，使用 `limit` 方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
-```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000)
+Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE)).limit(1000);
 ```
-（重复内容略...）
 
-产生一个有限的流，使用 `limit` 方法：
+（重复内容略……）
+
+产生一个有限的流，使用`limit`方法：
 
 ```java
-Stream<BigInteger> 0 =00000
+Stream<BigInteger> 0 = 00000
 ```
 
-（指定流何时结束的谓词。
+（指定流何时结束的谓词。）
 
 > **警告：** 在执行流操作时，不要修改该集合是非常重要的。请记住，流并不收集数据——数据始终存储在单独的集合中。如果你修改了该集合，流操作的结果将变得未定义。JDK 文档将这一要求称为“非干扰”（noninterference）。
+>
+> 确切地说，由于中间流操作是惰性的，因此在终端操作执行之前，修改集合是可能的。例如，下面的代码虽然不建议，但可以运行：
 
-确切地说，由于中间流操作是惰性的，因此在终端操作执行之前，修改集合是可能的。
-例如，下面的代码虽然不建议，但可以运行：
+```java
+List<String> wordList = . . .;
 
-```
-List<String> wordList = . . . ;
 Stream<String> words = wordList.stream();
+
 wordList.add("END");
+
 long n = words.distinct().count();
 ```
 
 但这段代码是错误的：
 
-```
+```java
 Stream<String> words = wordList.stream();
-words.forEach(s -> {if (s.length() < 12) wordList
-// --干扰
+
+words.forEach(s -> {
+    if (s.length() < 12) wordList
+
+    // --干扰
+});
 ```
 
 列表 1.2 中的示例程序展示了创建流的各种方法。
 
 ## Listing 1.2 streams/CreatingStreams.java
 
-```
+```java
 1 package streams;
+
 2
+
 3 import java.io.*;
+
 4 import java.math.*;
+
 5 import java.nio.file.*;
 ```
-
-
-
 
 ```java
 import java.util.*;
@@ -578,17 +608,21 @@ import java.util.stream.*;
  * @author Cay Horstmann
  */
 public class CreatingStreams {
+
     public static <T> void show(String title) {
         final int SIZE = 10;
         List<T> firstElements = stream
             .limit(SIZE + 1)
             .toList();
+
         System.out.print(title + ": ");
+
         for (int i = 0; i < firstElements.size(); i++) {
             if (i > 0) System.out.print(", ");
-            if (i < SIZE) System.out.print(firstElements.get(i))
+            if (i < SIZE) System.out.print(firstElements.get(i));
             else System.out.print("...");
         }
+
         System.out.println();
     }
 
@@ -599,12 +633,14 @@ public class CreatingStreams {
 
 ```java
 Path path = Path.of("../gutenberg/alice");
+
 String contents = Files.readString(path);
 Stream<String> words = Stream.of(contents);
-
 show("words", words);
+
 Stream<String> song = Stream.of("gentle");
 show("song", song);
+
 Stream<String> silence = Stream.empty();
 show("silence", silence);
 
@@ -614,171 +650,189 @@ show("echos", echos);
 Stream<Double> randoms = Stream.generate(Math::random);
 show("randoms", randoms);
 
-Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE));
+Stream<BigInteger> integers =
+    Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE));
 show("integers", integers);
 
 Stream<String> greetings = "Hello\nWorld".lines();
 show("greetings", greetings);
 
-Stream<String> wordsAnotherWay = Pattern.compile("\\s+").splitAsStream(contents);
+Stream<String> wordsAnotherWay =
+    Pattern.compile("\\s+").splitAsStream(contents);
 show("wordsAnotherWay", wordsAnotherWay);
 
 try (Stream<String> lines = Files.lines(path)) {
     show("lines", lines);
 }
-Iterable<Path> iterable = FileSystems.getDefault().newDirectoryStream(Path.of("."));
-Stream<Path> rootDirectories = Stream.support(iterable.spliterator(), Spliterator.ORDERED);
+
+Iterable<Path> iterable =
+    FileSystems.getDefault().newDirectoryStream(Path.of("."));
+
+Stream<Path> rootDirectories =
+    Stream.support(iterable.spliterator(), Spliterator.ORDERED);
 show("rootDirectories", rootDirectories);
+
 Iterator<Path> iterator = Path.of("/").iterator();
-Stream<Path> pathComponents = Stream.support(iterator, Spliterator.ORDERED);
+
+Stream<Path> pathComponents =
+    Stream.support(iterator, Spliterator.ORDERED);
 show("pathComponents", pathComponents);
 ```
 
-# java.util.stream.Stream 8
+## `java.util.stream.Stream` 8
 
-- static <T> Stream<T> of(T... values)
-  产生一个其元素为给定定值的流。
-- static <T> Stream<T> empty()
+- `static <T> Stream<T> of(T... values)`  
+  产生一个其元素为给定值的流。
+- `static <T> Stream<T> empty()`  
   产生一个不包含元素的流。
-- static <T> Stream<T> generate(Supplier<T> s)
-  产生一个无限流，其元素通过重复调用函数 s 来构建。
-- <T> Stream<T> iterate(T seed, UnaryOperator<T> f)
-- static <T> Stream<T> iterate(T seed, Predicate<? super T> hasNext, UnaryOperator<T> f)
-  产生一个流，其元素为 seed、对 seed 调用 f、对前一个元素调用 f 等，以此此类推。第一种方法产生无限流。第二种方法在遇到第一个不满足 hasNext 的元素之前结束。
-- <T> Stream<T> ofNullable(T t)
-  如果 t 为空则返回空流，否则返回一个包含 t 的流。
-- <T> Spliterator<T> spliterator(Iterator<? extends T> iterator, int characteristics)
-  将迭代器转换为未知大小的可拆分迭代器，并带有 Spliterator.ORDERED 等常量。
-- static <T> Stream<T> stream(T[] array, int startInclusive, int endExclusive)
+- `static <T> Stream<T> generate(Supplier<T> s)`  
+  产生一个无限流，其元素通过重复调用函数`s`来构建。
+- `<T> Stream<T> iterate(T seed, UnaryOperator<T> f)`
+- `static <T> Stream<T> iterate(T seed, Predicate<? super T> hasNext, UnaryOperator<T> f)`  
+  产生一个流，其元素为`seed`、对`seed`调用`f`、对前一个元素调用`f`等，以此类推。第一种方法产生无限流。第二种方法在遇到第一个不满足`hasNext`的元素之前结束。
+- `<T> Stream<T> ofNullable(T t)`  
+  如果`t`为空则返回空流，否则返回一个包含`t`的流。
+- `<T> Spliterator<T> spliterator(Iterator<? extends T> iterator, int characteristics)`  
+  将迭代器转换为未知大小的可拆分迭代器，并带有`Spliterator.ORDERED`等常量。
+- `static <T> Stream<T> stream(T[] array, int startInclusive, int endExclusive)`  
   产生一个其元素为数组指定范围的流。
-- static Stream<String> lines()
+- `static Stream<String> lines()`  
   产生一个其元素为该字符串各行的流。
-- static Stream<String> splitAsStream(CharSequence input)
+- `static Stream<String> splitAsStream(CharSequence input)`  
   产生一个流，其元素为由此模式分隔的输入部分。
-- static Stream<String> lines(Path path)
-- static Stream<String> lines(Path path, Charset cs)
+- `static Stream<String> lines(Path path)`
+- `static Stream<String> lines(Path path, Charset cs)`  
   产生一个其元素为指定文件行的流，使用 UTF-8 编码或给定的编码。
-- static <T> Stream<T> stream(Spliterator<? extends T> iterator, boolean parallel)
+- `static <T> Stream<T> stream(Spliterator<? extends T> iterator, boolean parallel)`  
   产生一个包含由给定可拆分迭代器产生的值的流。
-- Spliterator<T> spliterator()
-  为此 Iterable 产生一个可拆分迭代器。默认实现不拆分且不报告大小。
-- Stream<String> tokens()
-  产生一个通过调用此扫描器的 next 方法返回的字符串流。
-- T get()
+- `Spliterator<T> spliterator()`  
+  为此`Iterable`产生一个可拆分迭代器。默认实现不拆分且不报告大小。
+- `Stream<String> tokens()`  
+  产生一个通过调用此扫描器的`next`方法返回的字符串流。
+- `T get()`  
   提供一个值。
 
-## 1.3. filter, map, 和 flatMap 方法
+## 1.3 `filter`、`map`和`flatMap`方法
 
-流的转换产生一个流，其元素派生自另一个流的元素。你已经见过了 filter 转换，它可以产生一个包含符合特定条件的元素的新流。在这里，我们将一个字符串流转换为另一个只包含长词的流：
+流的转换产生一个流，其元素派生自另一个流的元素。你已经见过了`filter`转换，它可以产生一个包含符合特定条件的元素的新流。在这里，我们将一个字符串流转换为另一个只包含长词的流：
 
 ```java
-List<String> words = ...
+List<String> words = ...;
+
 Stream<String> longWords = words.filter(s -> s.length() > n);
 ```
-`filter` 的参数类型是 `Predicate<T>`——即一个从 T 到布尔值的函数。
+
+
+
+`filter` 的参数类型是 `Predicate<T>`——即一个从 `T` 到布尔值的函数。
 
 通常，你想要以某种方式转换流中的值。可以使用 `map` 方法进行转换。例如，我们可以将所有单词转换为小写：
 
 ```java
 Stream<String> lowercaseWords = words.map(String::toLowerCase);
 ```
+
 你也可以使用 Lambda 表达式：
 
 ```java
 Stream<String> lowercaseWords = words.map(s -> s.toLowerCase());
 ```
+
 或者直接使用方法引用：
 
 ```java
 Stream<String> lowercaseWords = words.map(String::toLowerCase);
 ```
-`map` 方法的参数类型是 `Function<T, R>`——即一个从 T 映射到 R 的函数。
+
+`map` 方法的参数类型是 `Function<T, R>`——即一个从 `T` 映射到 `R` 的函数。
 
 有时，转换函数产生的是另一个流，而你希望将这些流扁平化为单一流。这时可以使用 `flatMap` 方法：
 
 ```java
 Stream<String> flatWords = words.flatMap(s -> Stream.of(s.split(" ")));
 ```
-你你也可以使用方法引用：
+
+你也可以使用方法引用：
 
 ```java
-Stream<String> flatWords = words.flatMap(s -> Stream.of(s.split(" ")))));
+Stream<String> flatWords = words.flatMap(s -> Stream.of(s.split(" "))));
 ```
-`flatMap` 的参数类型是 `Function<T, Stream<? extends R>>`——即一个从 T 映射到流的函数。
+
+`flatMap` 的参数类型是 `Function<T, Stream<? extends R>>`——即一个从 `T` 映射到流的函数。
 
 如果你的转换函数产生的是一个集合，而你希望将其扁平化，可以使用 `flatMap`：
 
 ```java
-Stream<String> flatWords = words.flatMap(s -> Arrays.stream(s.split(" ")))));
+Stream<String> flatWords = words.flatMap(s -> Arrays.stream(s.split(" "))));
 ```
+
 你也可以使用 `Stream.of`：
 
 ```java
-Stream<String> flatWords = words.flatMap(s -> Stream.of(s.split(" ")))));
+Stream<String> flatWords = words.flatMap(s -> Stream.of(s.split(" "))));
 ```
-
-
-
 
 ## 1.4. 提取子流与合并流
 
-调用 `stream.limit(n)` 返回一个新的在 n 个元素后结束的流（如果原始流较短，则在原始流结束时结束）。此方法特别适用于将无限流裁剪为指定。例如，
+调用 `stream.limit(n)` 返回一个新的在 `n` 个元素后结束的流（如果原始流较短，则在原始流结束时结束）。此方法特别适用于将无限流裁剪为指定。例如：
 
-```
-Stream<Double> randoms = Stream.generate(Math::random)
- // 返回一个包含 100 个随机数的流
+```java
+Stream<Double> randoms = Stream.generate(Math::random);
+
+// 返回一个包含 100 个随机数的流
 ```
 
-调用 `stream.skip(n)` 的效果恰恰相反。它丢弃前 n 个元素。这在我们的书籍阅读示例中非常有用，由于 `split` 方法的工作方式，第一个元素是一个不需要的空字符串。我们可以通过调用 `skip:` 让它消失：
+调用 `stream.skip(n)` 的效果恰恰相反。它丢弃前 `n` 个元素。这在我们的书籍阅读示例中非常有用，由于 `split` 方法的工作方式，第一个元素是一个不需要的空字符串。我们可以通过调用 `skip` 让它消失：
 
-```
-Stream<String> words = Stream.of(contents.split(" "))
+```java
+Stream<String> words = Stream.of(contents.split(" "));
 ```
 
 `stream.takeWhile(predicate)` 调用在谓词为 `true` 时获取流中的所有元素，然后停止。
 
 例如，假设我们使用前一节中的 `graphemeClusters` 方法将字符串拆分为字符，并且我们想要收集所有的初始数字。`takeWhile` 方法可以做到这一点：
 
-```
+```java
 Stream<String> initialDigits = graphemeClusters(
- s -> "0123456789".contains(s));
+    s -> "0123456789".contains(s));
 ```
 
-`dropWhile` 方法的作用相反，它在条件为真时丢弃元素，并产生一个从第一个条件为 `false` 的元素开始的所有元素的流。例如，
+`dropWhile` 方法的作用相反，它在条件为真时丢弃元素，并产生一个从第一个条件为 `false` 的元素开始的所有元素的流。例如：
 
-```
+```java
 Stream<String> withoutInitialWhitespace = graphemeClusters(
- s -> s.strip().length() == 0);
+    s -> s.strip().length() == 0);
 ```
 
-你可以使用 Stream 类的静态方法 `concat` 合并两个流：
+你可以使用 `Stream` 类的静态方法 `concat` 合并两个流：
 
-```
+```java
 Stream<String> combined = Stream.concat(
- graphemeClusters("Hello"), graphemeClusters("World")
- // 返回流 ["H", "e", "l", "l", "o", ...]
+    graphemeClusters("Hello"), graphemeClusters("World"));
+
+// 返回流 ["H", "e", "l", "l", "o", ...]
 ```
 
 当然，第一个流不应该是无限的——否则第二个流将永远没有机会被处理。
 
 ```java
 java.util.stream.Stream 8
-``````
+```
 
-- `Stream<T> limit(long maxSize)`
-  返回一个包含此流中最多 maxSize 个初始元素的流。
+- `Stream<T> limit(long maxSize)`  
+  返回一个包含此流中最多 `maxSize` 个初始元素的流。
 
-- `Stream<T> skip(long n)`
-  返回一个包含此流中前 n 个元素的流。
+- `Stream<T> skip(long n)`  
+  返回一个包含此流中前 `n` 个元素的流。
 
-- `Stream<T> takeWhile(Predicate<? super T> predicate)`
+- `Stream<T> takeWhile(Predicate<? super T> predicate)`  
   返回一个包含此流中满足谓词的初始元素的流。
 
-- `Stream<T> dropWhile(Predicate<? super T> predicate)`
+- `Stream<T> dropWhile(Predicate<? super T> predicate)`  
   返回一个包含此流中除满足谓词的初始元素以外的所有元素的流。
 
-- `static <T> Stream<T> concat(Stream<? extends T> a, Stream<? extends T> b)`
-  返回一个元素为 a 的元素后跟 b 的元素的流。
+- `static <T> Stream<T> concat(Stream<? extends T> a, Stream<? extends T> b)`  
+  返回一个元素为 `a` 的元素后跟 `b` 的元素的流。
 
 ## 1.5. 其他流转换
 
@@ -786,17 +840,18 @@ java.util.stream.Stream 8
 
 重复项不需要是相邻的。
 
-```
-Stream<String> uniqueWords
-= Stream.of("merrily", "merrily", "merrily",
- // 只保留了一个 "merrily"
+```java
+Stream<String> uniqueWords =
+    Stream.of("merrily", "merrily", "merrily");
+
+// 只保留了一个 "merrily"
 ```
 
 对于流的排序，`sorted` 方法有几种变体。一种适用于 `Comparator` 元素的流，另一种接受一个 `Comparator`。在这里，我们对字符串进行排序，使得最长的排在前面：
 
-```
-Stream<String> longestFirst
-= words.stream().sorted(Comparator.comparing(
+```java
+Stream<String> longestFirst =
+    words.stream().sorted(Comparator.comparing(
 ```
 
 与所有的流转换一样，`sorted` 方法产生一个新流，其元素是原始流元素按排序后的顺序。
@@ -805,20 +860,20 @@ Stream<String> longestFirst
 
 最后，`peek` 方法产生另一个与原始流元素相同的流，但每当获取一个元素时都会调用一个函数。这对于调试非常有用：
 
-```
+```java
 Object[] powers = Stream.iterate(1.0, p -> p * 2)
-.peek(e -> System.out.println("Fetching " + e))
-.limit(20).toArray();
+    .peek(e -> System.out.println("Fetching " + e))
+    .limit(20)
+    .toArray();
 ```
 
 当元素被实际访问时，会打印一条消息。通过这样你可以验证 `iterate` 返回的无限流是惰性处理的。
 
-**注意：** 当你使用调试器调试流计算时，可以在从某个转换调用的方法中设置断点。在大多数 IDE 中，你也可以在 lambda 表达式中设置断点。只想只想流管道中某个特定点发生了什么，可以添加
+**注意：** 当你使用调试器调试流计算时，可以在从某个转换调用的方法中设置断点。在大多数 IDE 中，你也可以在 Lambda 表达式中设置断点。只想只想流管道中某个特定点发生了什么，可以添加：
 
 ```java
-.peek(x ->
-{
-  return;
+.peek(x -> {
+    return;
 })
 ```
 
@@ -828,13 +883,16 @@ Object[] powers = Stream.iterate(1.0, p -> p * 2)
 java.util.stream.Stream 8
 ```
 
-- `Stream<T> distinct()`
+- `Stream<T> distinct()`  
   返回此流的唯一元素的流。
+
 - `Stream<T> sorted()`
-- `Stream<T> sorted(Comparator<? super T> comparator)`
+
+- `Stream<T> sorted(Comparator<? super T> comparator)`  
   返回一个元素按排序顺序排列此流元素的流。第一个方法要求元素是实现 `Comparable` 接口的类的实例。
-- `Stream<T> peek(Consumer<? super T> action)`
-  返回一个与此流元素相同的流，在消费元素时将其传递给 action。
+
+- `Stream<T> peek(Consumer<? super T> action)`  
+  返回一个与此流元素相同的流，在消费元素时将其传递给 `action`。
 
 ## 1.6. 简单归约
 
@@ -848,60 +906,68 @@ long count = stream.count();
 
 `sum` 方法返回流中所有数值元素的和。这只对原始类型流可用。
 
-```
+```java
 int sum = stream.mapToInt(Integer::intValue).sum();
 ```
 
 `min` 和 `max` 方法分别返回流的最小和最大元素。它们返回 `Optional`，因为流可能是空的。
 
-```
+```java
 Optional<Integer> min = stream.min(Comparator.naturalOrder());
+
 Optional<Integer> max = stream.max(Comparator.naturalOrder());
 ```
 
 `reduce` 方法是最强大的归约。它允许你使用自定义函数将流归约为值。
 
-```
+```java
 Integer sum = stream.reduce(0, (a, b) -> a + b);
 ```
 
 ## 1.7. Optional 类型
 
-`Optional<T>` 对象是类型 T 的对象或无对象的包装器。在前一种情况下，我们说该值存在。`Optional<T>` 类型旨在作为指向对象或为空的类型 T 引用的更安全的替代方案。但只有在你正确使用它时，它才是安全的。接下来的三个节将向你展示如何操作。
+`Optional<T>` 对象是类型 `T` 的对象或无对象的包装器。在前一种情况下，我们说该值存在。`Optional<T>` 类型旨在作为指向对象或为空的类型 `T` 引用的更安全的替代方案。但只有在你正确使用它时，它才是安全的。接下来的三个节将向你展示如何操作。
 
-### 1.7.1 获取 Optional 值
+### 1.7.1. 获取 Optional 值
 
-有效使用 Optional 的关键是使用在值不存在时产生替代方案的方法，或者消费该值
-
-
-仅当它存在时。
+有效使用 `Optional` 的关键是使用在值不存在时产生替代方案的方法，或者仅当它存在时消费该值。
 
 在本节中，我们将查看第一种策略。通常，当没有匹配项时，你想要使用一个默认值，可能是空字符串：
 
 ```java
 String result = optionalString.orElse("");
+
 // 包装的字符串，如果为空则返回
 ```
 
 你也可以调用代码来计算默认值：
 
 ```java
-String result = optionalString.orElseGet(() -> S-
+String result = optionalString.orElseGet(() -> S-);
+
 // 该函数仅在需要时才被调用
 ```
 
 或者，如果没有值，你可以抛出一个异常：
 
 ```java
-String result = optionalString.orElseThrow(Illega-
+String result = optionalString.orElseThrow(Illega-);
+
 // 提供一个会产生异常的方法 o-
 ```
 
+```java
 java.util.Optional 8
+```
 
-- T orElse(T other) 返回此 Optional 的值，如果此 Optional 为空，则返回 other。
-- T orElseGet(Supplier<? extends T> other) 返回此 Optional 的值，如果此 Optional 为空，则返回调用 other 的结果。
-- <X extends Throwable> T orElseThrow(Supplier<? extends X> exceptionSupplier) 返回此 Optional 的值，如果此 Optional 为空，则抛出调用 exceptionSupplier 的结果。
+- `T orElse(T other)`  
+  返回此 `Optional` 的值，如果此 `Optional` 为空，则返回 `other`。
+
+- `T orElseGet(Supplier<? extends T> other)`  
+  返回此 `Optional` 的值，如果此 `Optional` 为空，则返回调用 `other` 的结果。
+
+- `<X extends Throwable> T orElseThrow(Supplier<? extends X> exceptionSupplier)`  
+  返回此 `Optional` 的值，如果此 `Optional` 为空，则抛出调用 `exceptionSupplier` 的结果。
 
 ### 1.7.2. 消费 Optional 值
 
@@ -913,7 +979,7 @@ java.util.Optional 8
 optionalValue.ifPresent(v -> Process v);
 ```
 
-例如，如果你想在值存在时将其添加到集合中，请调用
+例如，如果你想在值存在时将其添加到集合中，请调用：
 
 ```java
 optionalValue.ifPresent(v -> results.add(v));
@@ -925,7 +991,7 @@ optionalValue.ifPresent(v -> results.add(v));
 optionalValue.ifPresent(results::add);
 ```
 
-如果你想在 Optional 有值时执行一个操作，在没有值时执行另一个操作，请使用 `ifPresentOrElse`：
+如果你想在 `Optional` 有值时执行一个操作，在没有值时执行另一个操作，请使用 `ifPresentOrElse`：
 
 ```java
 optionalValue.ifPresentOrElse(
@@ -933,108 +999,65 @@ optionalValue.ifPresentOrElse(
     () -> logger.warning("No match"));
 ```
 
-```
+```java
 java.util.Optional 8
 ```
 
-- void ifPresent(Consumer<? super T> action) 如果此 Optional 不为空，则将其值传递给 action。
-- void ifPresentOrElse(Consumer<? super T> action, Runnable emptyAction) 如果此 Optional 不为空，则将其值传递给 action，否则调用 emptyAction。
+- `void ifPresent(Consumer<? super T> action)`  
+  如果此 `Optional` 不为空，则将其值传递给 `action`。
+
+- `void ifPresentOrElse(Consumer<? super T> action, Runnable emptyAction)`  
+  如果此 `Optional` 不为空，则将其值传递给 `action`，否则调用 `emptyAction`。
 
 ### 1.7.3. Optional 值的管道化
 
-在前面的节中，你已经看到了如何从 Optional 对象中获取值。另一种实用的策略是保持 Optional 的完整性。你可以通过 `map` 方法来转换 Optional 内部的值：
+在前面的节中，你已经看到了如何从 `Optional` 对象中获取值。另一种实用的策略是保持 `Optional` 的完整性。你可以通过 `map` 方法来转换 `Optional` 内部的值：
 
 ```java
 Optional<Path> transformed = optionalString.map(
 ```
 
-如果 optionalString 为空，那么 transformed 也是空的。
+如果 `optionalString` 为空，那么 `transformed` 也是空的。
 
-> **注意：** 这个 map 方法与你在 1.3 节中看到的 Stream 接口的 map 方法类似。只需将可选值想象为一个大小为零或一的流。结果的大小同样为零或一，在后者的情况下，函数已经被应用。
+> **注意：** 这个 `map` 方法与你在 1.3 节中看到的 `Stream` 接口的 `map` 方法类似。只需将可选值想象为一个大小为零或一的流。结果的大小同样为零或一，在后者的情况下，函数已经被应用。
 
-同样，你可以使用 `filter` 方法仅考虑满足某些属性或在转换后的 Optional 值。如果属性满足该属性，管道将产生一个空结果：
+同样，你可以使用 `filter` 方法仅考虑满足某些属性或在转换后的 `Optional` 值。如果属性满足该属性，管道将产生一个空结果：
 
 ```java
 Optional<Path> transformed = optionalString
-.filter(s -> s.endsWith(".txt"))
-.map(Path::of);
+    .filter(s -> s.endsWith(".txt"))
+    .map(Path::of);
 ```
 
-你可以使用 `or` 方法用一个替代的 Optional 替换空的 Optional。该替代方案是惰性计算的。
+你可以使用 `or` 方法用一个替代的 `Optional` 替换空的 `Optional`。该替代方案是惰性计算的。
 
 ```java
 Optional<String> result = optionalString.or(() ->
-alatives.stream().findFirst());
+    alatives.stream().findFirst());
 ```
 
-如果 optionalString 有值，则 result 为 optionalString。否则，将求 lambda 表达式并使用其结果。
+如果 `optionalString` 有值，则 `result` 为 `optionalString`。否则，将求 Lambda 表达式并使用其结果。
 
-```
+```java
 java.util.Optional 8
 ```
 
-- <U> Optional<U> map(Function<? super T,? U> mapper) 返回一个 Optional，其值通过对此 Optional 应用 mapper 获得，如果此 Optional 有值，否则返回空。
-- Optional<T> filter(Predicate<? super T> predicate) 如果此 Optional 满足 predicate，则返回它，否则返回空。
-- Optional<U> or(Supplier<? extends U> supplier) 如果此 Optional 有值，则返回此 Optional，否则返回 supplier 返回的 Optional。
+
+
+### Optional 方法
+
+- `<U> Optional<U> map(Function<? super T,? U> mapper)` 返回一个 `Optional`，其值通过对此 `Optional` 应用 `mapper` 获得；如果此 `Optional` 有值，否则返回空。
+- `Optional<T> filter(Predicate<? super T> predicate)` 如果此 `Optional` 满足 `predicate`，则返回它，否则返回空。
+- `Optional<U> or(Supplier<? extends U> supplier)` 如果此 `Optional` 有值，则返回此 `Optional`，否则返回 `supplier` 返回的 `Optional`。
 
 ### 1.7.4. 如何正确使用 Optional 值
 
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
+如果你不正确使用 `Optional` 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法更安全。
 
 **提示：** 如果你发现自己在使用 `get`、`isPresent` 或 `isEmpty` 方法，请重新思考你的方法并使用 `orElse`、`orElseGet` 或 `orElseThrow`。
 
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。`orElse`、`orElseGet` 和 `orElseThrow` 方法比“使用 null”方法是更安全的。
-
-如果你不正确使用 Optional 值，`get` 方法在没有值时会产生异常。
-
 ```
-value 
+value
 ```
 
 显然，你可以通过链式调用 `flatMap` 来构建一个管道，只有当所有部分都成功时，它才会成功。
@@ -1050,30 +1073,30 @@ public static Optional<Double> squareRoot(Double x) {
 那么你可以计算 `inverse` 的平方根：
 
 ```java
-Optional<Double> result = inverse(arg).flatMap(x)
+Optional<Double> result = inverse(arg).flatMap(x);
 ```
 
-我们可以通过从 Optional 开始来让这样的链看起来更规则：
+我们可以通过从 `Optional` 开始来让这样的链看起来更规则。
 
 ### 1.7.5. 创建 Optional 值
 
-到目前为止，我们讨论了如何消费 Optional。如果你想写一个创建 Optional 的方法，有几个静态方法用于此目的，包括 `Optional.of()` 和 `Optional.empty()`。例如：
+到目前为止，我们讨论了如何消费 `Optional`。如果你想写一个创建 `Optional` 的方法，有几个静态方法用于此目的，包括 `Optional.of()` 和 `Optional.empty()`。例如：
 
 ```java
 public static Optional<Double> inverse(Double x) {
-    return x == 0 ? Optional.empty() : Optional.of(x)
+    return x == 0 ? Optional.empty() : Optional.of(x);
 }
 ```
 
 `ofNullable` 方法旨在作为可能空值到可选值的桥梁。`Optional.ofNullable(obj)` 在 `obj` 不空时返回 `Optional.of(obj)`，否则返回 `Optional.empty()`。
 
-```
+```text
 java.util.Optional 8
 ```
 
-- static <T> Optional<T> of(T value)
-- static <T> Optional<T> ofNullable(T value) 返回一个带有给定值的 Optional。如果 value 为空，第一个方法抛出 `NullPointerException`，第二个方法返回一个空的 Optional。
-- static <T> Optional<T> empty() 返回一个空的 Optional。
+- `static <T> Optional<T> of(T value)`
+- `static <T> Optional<T> ofNullable(T value)` 返回一个带有给定值的 `Optional`。如果 `value` 为空，第一个方法抛出 `NullPointerException`，第二个方法返回一个空的 `Optional`。
+- `static <T> Optional<T> empty()` 返回一个空的 `Optional`。
 
 ### 1.7.6. 使用 flatMap 组合 Optional 值函数
 
@@ -1083,28 +1106,29 @@ java.util.Optional 8
 Optional<U> result = s.f().flatMap(T::g);
 ```
 
-
-Optional<Double> result
-= Optional.of(arg).flatMap(x -> inverse(x)).get();
+```java
+Optional<Double> result =
+    Optional.of(arg).flatMap(x -> inverse(x)).get();
+```
 
 使用方法引用看起来会更整洁：
 
-```
-Optional<Double> result
-= Optional.of(arg).flatMap(MyMath::inverse).get();
+```java
+Optional<Double> result =
+    Optional.of(arg).flatMap(MyMath::inverse).get();
 ```
 
 如果 `inverse` 方法或 `squareRoot` 返回 `Optional.empty()`，则结果为空。
 
-> **注意：** 你已经在 `Stream` 接口中见过过 `flatMap` 方法（见第 1.3 节）。该方法将一个产生流的方法映射到流的所有元素，然后将生成的流之流平坦化。
-`Optional.flatMap` 方法的工作方式相同。通过将一个产生 Optional 的方法映射为 Optional，你将得到一个嵌套的 Optional，然后对其进行平坦化。
+> **注意：** 你已经在 `Stream` 接口中见过 `flatMap` 方法（见第 1.3 节）。该方法将一个产生流的方法映射到流的所有元素，然后将生成的流之流平坦化。  
+> `Optional.flatMap` 方法的工作方式相同。通过将一个产生 `Optional` 的方法映射为 `Optional`，你将得到一个嵌套的 `Optional`，然后对其进行平坦化。
 
-```java
+```text
 java.util.Optional 8
 ```
 
-- `Optional<U> flatMap(Function<? super T,? extends Optional<? extends U>> mapper)`
-如果此 Optional 存在值，则返回将 `mapper` 作用于该值的结果，否则返回一个空的 Optional。
+- `Optional<U> flatMap(Function<? super T,? extends Optional<? extends U>> mapper)`  
+  如果此 `Optional` 存在值，则返回将 `mapper` 作用于该值的结果，否则返回一个空的 `Optional`。
 
 ### 1.7.7. 将 Optional 转换为 Stream
 
@@ -1112,7 +1136,7 @@ java.util.Optional 8
 
 这在处理返回 `Optional` 结果的方法时变得非常有用。假设你有一个用户 ID 的流以及一个方法：
 
-```
+```java
 Optional<User> lookup(String id)
 ```
 
@@ -1120,45 +1144,46 @@ Optional<User> lookup(String id)
 
 当然，你可以过滤掉无效的 ID，然后对剩余部分应用 `get`：
 
-```
+```java
 Stream<String> ids = ...;
+
 Stream<User> users = ids.map(Users::lookup)
-  .filter(Optional::isPresent)
-  .map(Optional::get);
+    .filter(Optional::isPresent)
+    .map(Optional::get);
 ```
 
 但这使用了我们警告过的 `isPresent` 和 `get` 方法。
+
 更优雅的方法是调用：
 
-```
+```java
 Stream<User> users = ids.map(Users::lookup)
-.flatMap(Optional::stream);
+    .flatMap(Optional::stream);
 ```
 
-每次调用 `stream` 都会返回一个包含零或一个元素的流。
-`flatMap` 方法将它们全部合并。这意味着不存在的用户会被直接丢弃。
+每次调用 `stream` 都会返回一个包含零或一个元素的流。`flatMap` 方法将它们全部合并。这意味着不存在的用户会被直接丢弃。
 
-> 注意：在本节中，我们考虑的是理想情况，即我们有一个返回 `Optional` 值的方法。如今，许多方法在没有有效结果时会返回 `null`。假设 `Users.classicLookup(id)` 返回一个 `User` 对象或 `null`，而不是 `Optional<User>`。那么你当然可以过滤掉 `null` 值：
+> **注意：** 在本节中，我们考虑的是理想情况，即我们有一个返回 `Optional` 值的方法。如今，许多方法在没有有效结果时会返回 `null`。假设 `Users.classicLookup(id)` 返回一个 `User` 对象或 `null`，而不是 `Optional<User>`。那么你当然可以过滤掉 `null` 值：
 
-![](img/cb920f692d263682e00dcb1ad7f884cc_69_0.png)
+![示例图片](img/cb920f692d263682e00dcb1ad7f884cc_69_0.png)
 
-```
+```java
 Stream<User> users = ids.map(Users::classicLookup)
-.filter(Objects::nonNull);
+    .filter(Objects::nonNull);
 ```
 
 但如果你更喜欢使用 `flatMap` 方法，可以使用：
 
-```
+```java
 Stream<User> users = ids.flatMap(
-  id -> Stream.ofNullable(Users.lookup(id)));
+    id -> Stream.ofNullable(Users.lookup(id)));
 ```
 
-或者
+或者：
 
-```
+```java
 Stream<User> users = ids.map(Users::lookup)
-  .flatMap(Optional::stream);
+    .flatMap(Optional::stream);
 ```
 
 调用 `Stream.ofNullable(obj)` 在 `obj` 为 `null` 时产生一个空流，否则产生一个仅包含 `obj` 的流。
@@ -1169,29 +1194,40 @@ Stream<User> users = ids.map(Users::lookup)
 
 ```java
 1 package optional;
+
 2
+
 3 import java.io.*;
+
 4 import java.nio.file.*;
+
 5 import java.util.*;
+
 6
+
 7 /**
  * @version 1.02 2019-08-28
  * @author Cay Horstmann
  */
+
 public class OptionalTest {
+
     public static void main(String[] args) {
+
         String contents = Files.readString(Path.of("test.txt"));
         List<String> wordList = List.of(contents.split("\\s"));
-
         Optional<String> optionalValue = wordList.stream()
             .filter(s -> s.contains("fred"))
             .findFirst();
+
         System.out.println(optionalValue.or(() -> "empty"));
 
         Optional<String> optionalString = Optional.empty();
         String result = optionalString.orElse("default");
         System.out.println("result: " + result);
+
         result = optionalString.orElseGet(() -> "default");
+
         try {
             result = optionalString.orElseThrow(() -> new RuntimeException("empty"));
             System.out.println("result: " + result);
@@ -1202,29 +1238,33 @@ public class OptionalTest {
         optionalValue = wordList.stream()
             .filter(s -> s.contains("red"))
             .getFirst();
+
         optionalValue.ifPresent(s -> System.out.println(s));
 
         var results = new HashSet<String>();
         optionalValue.ifPresent(results::add);
+
         Optional<Boolean> added = optionalValue.map(results::add);
         System.out.println(added);
 
         System.out.println(inverse(4.0).flatMap(OptionalTest::inverse).get());
         System.out.println(inverse(-1.0).flatMap(OptionalTest::inverse).get());
         System.out.println(inverse(0.0).flatMap(OptionalTest::inverse));
+
         Optional<Double> result2 = Optional.of(4.0).flatMap(OptionalTest::inverse);
         System.out.println(result2.get());
     }
 
-    public static Optional<Double> inverse(double x)
-    {
+    public static Optional<Double> inverse(double x) {
         return x == 0 ? Optional.empty() : Optional.of(1.0 / x);
     }
+```
 
-    public static Optional<Double> squareRoot(double x)
-    {
-        return x < 0 ? Optional.empty() : Optional.of(Math.sqrt(x));
-    }
+
+
+```java
+public static Optional<Double> squareRoot(double x) {
+    return x < 0 ? Optional.empty() : Optional.of(Math.sqrt(x));
 }
 ```
 
@@ -1236,7 +1276,7 @@ public class OptionalTest {
 Set<String> result = stream.collect(Collectors.toSet());
 ```
 
-这些调用会给你一个列表或集合，但你不能对其任何进一步的假设。该集合可能不是可变的、可序列化的或线程安全的。如果你想控制获取的是哪种集合，请使用以下代码：
+这些调用会给你一个列表或集合，但你不能对其做任何进一步的假设。该集合可能不是可变的、可序列化的或线程安全的。如果你想控制获取的是哪种集合，请使用以下代码：
 
 ```java
 TreeSet<String> result = stream.collect(Collectors.toSet());
@@ -1270,59 +1310,93 @@ String[] result = stream.toArray(String[]::new);
 
 ```java
 IntSummaryStatistics summary = stream.collect(Collectors.summarizingInt(String::length));
+
 double averageWordLength = summary.getAverage();
+
 double maxWordLength = summary.getMax();
 ```
 
 列表 1.4 中的示例程序展示了如何从流中收集元素。
 
-
-
 ```java
 + "]\);
+
 }
+
 public static void main(String[] args) {
+
     Iterator<Integer> iter = Stream.iterate(0).iterator();
+
     while (iter.hasNext()) {
+
         System.out.println(iter.next());
+
     }
+
     Object[] numbers = Stream.iterate(0).toArray();
+
     System.out.println("Object array:" + numbers);
+
     // Note it's an Object[] array
+
     try {
+
         var number = (Integer) numbers[0];
+
         System.out.println("number: " + number);
+
         System.out.println("The following ");
+
         var numbers2 = (Integer[]) numbers;
+
     } catch (ClassCastException e) {
+
         System.out.println(e);
+
     }
+
     Integer[] numbers3 = Stream.iterate(0)
+
         .limit(10)
+
         .toArray(Integer[]::new);
+
     System.out.println("Integer array: " + numbers3);
-    
+
     // Note it's an Integer[] array
 
     Set<String> noVowelSet = noVowels().collect(Collectors.toSet());
+
     show("noVowelSet", noVowelSet);
 
     TreeSet<String> noVowelTreeSet = noVowels().collect(
+
         Collectors.toCollection(TreeSet::new));
+
     show("noVowelTreeSet", noVowelTreeSet);
 
     String result = noVowels().limit(10)
+
         .collect(Collectors.joining(", "));
+
     System.out.println("Joining: " + result);
 
     IntSummaryStatistics summary = noVowels().collect(
+
         Collectors.summarizingInt(String::length));
+
     double averageWordLength = summary.getAverage();
+
     double maxWordLength = summary.getMax();
+
     System.out.println("Average word length: " + averageWordLength);
+
     System.out.println("Max word length: " + maxWordLength);
+
     System.out.println("forEach: ");
+
     noVowels().limit(10).forEach(System.out::println);
+
 }
 ```
 
@@ -1337,10 +1411,10 @@ java.util.stream.Stream 8
 ```
 
 - `List<T> toList()` 16 返回一个包含流中元素的列表。
-- `void forEach(Consumer<? super T> action)` 对流中的每个元素调用 action。
+- `void forEach(Consumer<? super T> action)` 对流中的每个元素调用 `action`。
 - `Object[] toArray()`
-- `<A> A[] toArray(IntFunction<A[]> generator)` 返回一个对象数组，或者在传递构造函数引用 `A[]::new` 时返回类型 A 的数组。这些都是终结操作。
-- `<R,A> R collect(Collector<? super T,A,R> collector)` 使用给定的收集器收集流中的元素。Collectors 类为许多收集器提供了工厂方法。
+- `<A> A[] toArray(IntFunction<A[]> generator)` 返回一个对象数组，或者在传递构造函数引用 `A[]::new` 时返回类型 `A` 的数组。这些都是终结操作。
+- `<R,A> R collect(Collector<? super T,A,R> collector)` 使用给定的收集器收集流中的元素。`Collectors` 类为许多收集器提供了工厂方法。
 
 ```java
 java.util.stream.Collectors 8
@@ -1354,22 +1428,21 @@ java.util.stream.Collectors 8
 - `static Collector<CharSequence,?,String> joining()`
 - `static Collector<CharSequence,?,String> joining(CharSequence delimiter)`
 - `static Collector<CharSequence,?,String> joining(CharSequence delimiter, CharSequence prefix, CharSequence suffix)` 返回一个连接字符串的收集器。分隔符放在字符串之间，前缀和后缀放在第一个字符串之前和最后一个字符串之后。如果未指定，这些将为空。
-
 - `static <T> Collector<T,?,IntSummaryStatistics> summarizingInt(ToIntFunction<? super T> mapper)`
 - `static <T> Collector<T,?,LongSummaryStatistics> summarizingLong(ToLongFunction<? super T> mapper)`
-- `static <T> Collector<T,?,DoubleSummaryStatistics> summarizingDouble(ToDoubleFunction<? super T> mapper)` 返回产生 (Int | Long | Double) 统计统计对象的收集器，从中可以获得对每个元素应用 mapper 结果的计数、总和、平均值、最大值最小值。
+- `static <T> Collector<T,?,DoubleSummaryStatistics> summarizingDouble(ToDoubleFunction<? super T> mapper)` 返回产生 `(Int | Long | Double)` 统计统计对象的收集器，从中可以获得对每个元素应用 `mapper` 结果的计数、总和、平均值、最大值最小值。
 
-IntSummaryStatistics 8
+### `IntSummaryStatistics` 8
 
-LongSummaryStatistics 8
+### `LongSummaryStatistics` 8
 
-DoubleSummaryStatistics 8
+### `DoubleSummaryStatistics` 8
 
 - `long get()` 返回统计元素的计数。
 - `(int | long | double) getSum()`
 - `double getAverage()` 返回统计元素的总和或平均值，如果没有元素则返回零。
 - `(int | long | double) getMax()`
-- `(int | long | double) getMin()` 返回统计元素的最大值或最小值，如果没有元素则返回 (Integer | Long | Double) 的 (MAX | MIN)_VALUE。
+- `(int | long | double) getMin()` 返回统计元素的最大值或最小值，如果没有元素则返回 `(Integer | Long | Double)` 的 `(MAX | MIN)_VALUE`。
 
 ## 1.9. 收集到 Map
 
@@ -1379,11 +1452,12 @@ DoubleSummaryStatistics 8
 public record Person(int id, String name) {
     ...
 }
+
 Map<Integer, String> idToName = people.collect(Collectors.toMap(
     Person::id, Person::name));
 ```
 
-如果存在多个具有相同键的元素，收集器将抛出 `IllegalStateException`。你可以通过提供一个解析冲突的合并函数来覆盖异常。例如，如果我们想知道一个国家所有的语言，我们需要一个 `Map<String, Set<String>>`。首先，我们为种语言存储一个单元素集合。每当为一个国家发现新语言时，我们形成现有集合和新集合的并集：
+如果存在多个具有相同键的元素，收集器将抛出 `IllegalStateException`。你可以通过提供一个解析冲突的合并函数来覆盖异常。例如，如果我们想知道一个国家所有的语言，我们需要一个 `Map<String, Set<String>>`。首先，我们为每种语言存储一个单元素集合。每当为一个国家发现新语言时，我们形成现有集合和新集合的并集：
 
 ```java
 Map<String, Set<String>> countryLanguageSets = people.collect(Collectors.toMap(
@@ -1403,7 +1477,9 @@ Map<String, Set<String>> countryLanguageSets = people.collect(Collectors.toMap(
 Map<Integer, Person> idToPerson = people.collect(Collectors.toMap(
     Person::id,
     Function.identity(),
-    (existingValue, newValue) -> { throw new IllegalStateException(); },
+    (existingValue, newValue) -> {
+        throw new IllegalStateException();
+    },
     TreeMap::new));
 ```
 
@@ -1411,132 +1487,164 @@ Map<Integer, Person> idToPerson = people.collect(Collectors.toMap(
 
 列表 1.5 中的程序给出了将流结果收集到 map 的示例。
 
-
-
 ```java
 System.out.println("idToName: " + idToName);
+
 Map<Integer, Person> idToPerson = Collectors.toMap(Person::id, Function, ...);
+
 System.out.println("idToPerson: " + idToPerson);
-idToPerson = people().collect(Collectors.toMap(Person::id, Function, (existingValue, newValue) -> new TreeMap<())); 
+
+idToPerson = people().collect(Collectors.toMap(
+    Person::id,
+    Function,
+    (existingValue, newValue) -> new TreeMap<>()));
+
 System.out.println("idToPerson: " + idToPerson);
-Map<String, String> languageNames = Collectors.toMap(Locale::getDisplayLanguage, l -> l.getDisplayLanguage(l1), (existingValue, newValue) -> existingValue);
+
+Map<String, String> languageNames = Collectors.toMap(
+    Locale::getDisplayLanguage,
+    l -> l.getDisplayLanguage(l1),
+    (existingValue, newValue) -> existingValue);
+
 System.out.println("languageNames: " + languageNames);
-Map<String, Set<String>> countryLanguages = Collectors.toMap(Locale::getDisplayCountry, l -> Set.of(l.getDisplayLanguage(l)), (a, b) -> { // union of a and b
-    Set<String> union = new HashSet<>();
-    union.addAll(b);
-    return union;
-}));
+
+Map<String, Set<String>> countryLanguages = Collectors.toMap(
+    Locale::getDisplayCountry,
+    l -> Set.of(l.getDisplayLanguage(l)),
+    (a, b) -> { // union of a and b
+        Set<String> union = new HashSet<>();
+        union.addAll(b);
+        return union;
+    }));
+
 System.out.println("countryLanguages");
 ```
 
-java.util.stream.Collectors 8
 
-- static <T,K,U> Collector<T,?,Map<K,U>> toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper)
-- static <T,K,U> Collector<T,?,Map<K,U>> toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction)
-- static <T,K,U,M> extends Map<K,U> Collector<T,?,M> toMap(Function<? super T, Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction, Supplier<M> mapSupplier)
-- static <T,K,U> Collector<T,?,Map<K,U>> toUnmodifiableMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper) 10
 
-- static <T,K,U> Collector<T,?,Map<K,U>> toUnmodifiableMap(Function<? super T,? extends U> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction) 10
+# `java.util.stream.Collectors`（Java 8）
 
-- static <T,K,U> Collector<T,?,ConcurrentMap<K,U>> toConcurrentMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper)
-- static <T,K,U> Collector<T,?,ConcurrentMap<K,U>> toConcurrentMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction)
-- static <T,K,U,M> extends ConcurrentMap<K,U> Collector<T,?,M> toConcurrentMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction, Supplier<M> mapSupplier)
+- `static <T,K,U> Collector<T,?,Map<K,U>> toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper)`
+- `static <T,K,U> Collector<T,?,Map<K,U>> toMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction)`
+- `static <T,K,U,M> extends Map<K,U> Collector<T,?,M> toMap(Function<? super T, Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction, Supplier<M> mapSupplier)`
+- `static <T,K,U> Collector<T,?,Map<K,U>> toUnmodifiableMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper)`（Java 10）
+- `static <T,K,U> Collector<T,?,Map<K,U>> toUnmodifiableMap(Function<? super T,? extends U> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction)`（Java 10）
+- `static <T,K,U> Collector<T,?,ConcurrentMap<K,U>> toConcurrentMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper)`
+- `static <T,K,U> Collector<T,?,ConcurrentMap<K,U>> toConcurrentMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction)`
+- `static <T,K,U,M> extends ConcurrentMap<K,U> Collector<T,?,M> toConcurrentMap(Function<? super T,? extends K> keyMapper, Function<? super T,? extends U> valueMapper, BinaryOperator<U> mergeFunction, Supplier<M> mapSupplier)`
 
-返回一个产生 map、不可修改 map 或并发 map 的收集器。keyMapper 和 valueMapper 函数会被应用于每个收集到的元素，从而生成结果 map 的键/值条目。默认情况下，当两个元素产生相同的键时，会抛出 IllegalStateException。你也可以提供一个 mergeFunction 来合并具有相同键的值。默认情况下，结果是 HashMap 或 ConcurrentHashMap。你也可以提供一个 mapSupplier 来产生所需的 map 实例。
+返回一个产生 map、不可修改 map 或并发 map 的收集器。`keyMapper` 和 `valueMapper` 函数会被应用于每个收集到的元素，从而生成结果 map 的键/值条目。默认情况下，当两个元素产生相同的键时，会抛出 `IllegalStateException`。你也可以提供一个 `mergeFunction` 来合并具有相同键的值。默认情况下，结果是 `HashMap` 或 `ConcurrentHashMap`。你也可以提供一个 `mapSupplier` 来产生所需的 map 实例。
 
-## 1.10. 分组与分区 (Grouping and Partitioning)
+## 1.10 分组与分区（Grouping and Partitioning）
 
-在前面的节中，你已经了如何收集特定国家的所有语言。但这个过程有点繁琐。你必须为每个 map 值生成单例集，然后指定如何合并现有值和新值。将具有相同特征的值分组是非常常见的，因此 `groupingBy` 方法直接支持这一点。
+在前面的节中，你已经了解了如何收集特定国家的所有语言。但这个过程有点繁琐。你必须为每个 map 值生成单例集，然后指定如何合并现有值和新值。将具有相同特征的值分组是非常常见的，因此 `groupingBy` 方法直接支持这一点。
 
-让我们来看按国家分组 locale 的。首先，构建这个 map：
+让我们来看按国家分组 locale。首先，构建这个 map：
 
 ```java
-Map<String, List<Locale>> countryToLocales = Collectors.groupingBy(Locale::getCountry);
+Map<String, List<Locale>> countryToLocales =
+    Collectors.groupingBy(Locale::getCountry);
 ```
 
-函数 Locale::getCountry 是该分组的分类函数。你现在可以根据特定的国家代码查找所有的 locale，例如
+函数 `Locale::getCountry` 是该分组的分类函数。你现在可以根据特定的国家代码查找所有的 locale，例如：
 
 ```java
 List<Locale> swissLocales = countryToLocales.get("CH");
+
 // 产生 de_CH, fr_CH, it_CH 和 may
 ```
 
-注意：语言代码（如代表英语的 en）和国家代码（如代表美国的 US）。locale en_US 描述在美国使用的英语，而 en_IE 是爱尔兰的英语。某些国家有多个 locale。例如，ga_IE 是爱尔兰的盖尔克语，如前面的所示，JDK 知道瑞士至少有三个 locale。
+注意：语言代码（如代表英语的 `en`）和国家代码（如代表美国的 `US`）。locale `en_US` 描述在美国使用的英语，而 `en_IE` 是爱尔兰的英语。某些国家有多个 locale。例如，`ga_IE` 是爱尔兰的盖尔克语，如前面的示例所示，JDK 知道瑞士至少有三个 locale。
 
-当分类函数是一个谓词函数（即返回布尔值的函数）时，流元素被分区两个列表：函数返回 true 的元素和其补集。在这种情况下，使用 `partitioningBy` 而不是 `groupingBy` 更高效。例如，在这里我们将所有 locale 分为使用英语的 locale 和其他所有的 locale：
+当分类函数是一个谓词函数（即返回布尔值的函数）时，流元素被分区为两个列表：函数返回 `true` 的元素和其补集。在这种情况下，使用 `partitioningBy` 而不是 `groupingBy` 更高效。例如，在这里我们将所有 locale 分为使用英语的 locale 和其他所有的 locale：
 
 ```java
-Map<Boolean, List<Locale>> englishAndOtherLocales = Collectors.partitioningBy(l -> l.getLanguage().equals("en"));
+Map<Boolean, List<Locale>> englishAndOtherLocales =
+    Collectors.partitioningBy(l -> l.getLanguage().equals("en"));
 ```
 
-注意：语言代码（如代表英语的 en）和国家代码（如代表美国的 US）。locale en_US 描述在美国使用的英语，而 en_IE 是爱尔兰的英语。某些国家有多个 locale。例如，ga_IE 是爱尔兰的盖尔克语，如前面的所示，JDK 知道瑞士至少有三个 locale。
+注意：语言代码（如代表英语的 `en`）和国家代码（如代表美国的 `US`）。locale `en_US` 描述在美国使用的英语，而 `en_IE` 是爱尔兰的英语。某些国家有多个 locale。例如，`ga_IE` 是爱尔兰的盖尔克语，如前面的示例所示，JDK 知道瑞士至少有三个 locale。
 
-## 1.11. 下游收集器 (Downstream Collectors)
+## 1.11 下游收集器（Downstream Collectors）
 
 `groupingBy` 方法产生一个其值为列表的 map。如果你想以某种方式处理这些列表，请提供一个下游收集器。例如，如果你想要集而不是列表，可以使用：
 
 ```java
-Map<String, Set<Locale>> countryLocaleSet = Collectors.groupingBy(Locale::getCountry, toSet());
+Map<String, Set<Locale>> countryLocaleSet =
+    Collectors.groupingBy(Locale::getCountry, toSet());
 ```
 
 提供了若干收集器将收集到的元素转换为数字：
 
 - `counting` 产生元素的计数。例如：
-```java
-Map<String, Long> countryLocaleCounts = Collectors.groupingBy(Locale::getCountry, counting());
-```
-统计每个国家有多少 locale。
 
-- `summing` (Int | Long | Double) 和 `averaging` (Int | Long | Double) 将提供的函数应用于下游元素，并产生结果的和或平均值。例如：
+  ```java
+  Map<String, Long> countryLocaleCounts =
+      Collectors.groupingBy(Locale::getCountry, counting());
+  ```
 
-```java
-public record City(String name, String state, int population) {}
-Map<String, Integer> stateToPopulation = Collectors.groupingBy(City::state, averagingInt(City::population));
-```
+  统计每个国家有多少 locale。
 
-计算每个州的人平均人口。
+- `summing`（`Int` | `Long` | `Double`）和 `averaging`（`Int` | `Long` | `Double`）将提供的函数应用于下游元素，并产生结果的和或平均值。例如：
+
+  ```java
+  public record City(String name, String state, int population) {}
+
+  Map<String, Integer> stateToPopulation =
+      Collectors.groupingBy(City::state, averagingInt(City::population));
+  ```
+
+  计算每个州的人平均人口。
 
 - `maxBy` 和 `minBy` 接收比较器并产生下游元素的最大值和最小值。例如：
 
-```java
-Map<String, Optional<City>> stateToLargestCity = Collectors.groupingBy(City::state, maxBy(Comparator.comparing(City::population)));
-```
+  ```java
+  Map<String, Optional<City>> stateToLargestCity =
+      Collectors.groupingBy(
+          City::state,
+          maxBy(Comparator.comparing(City::population)));
+  ```
 
-产生每个州最大的城市。
+  产生每个州最大的城市。
 
 `collectingThen` 收集器在收集器之后添加最终的处理步骤。例如，如果你想知道有多少独特结果，将它们收集到集合中，然后计算大小：
 
 ```java
-Map<Character, Integer> stringCountsStartingWith = Collectors.groupingBy(s -> s.charAt(0), collectingAndThen(toSet(), Set::size()));
+Map<Character, Integer> stringCountsStartingWith =
+    Collectors.groupingBy(
+        s -> s.charAt(0),
+        collectingAndThen(toSet(), Set::size()));
 ```
 
 `mapping` 收集器则相反。它对每个收集到的元素应用函数并将结果传递给下游收集器。
 
 ```java
-Map<Character, Set<Integer>> stringLengthsStartingWith = Collectors.groupingBy(s -> s.charAt(0), mapping(String::length, toSet()));
+Map<Character, Set<Integer>> stringLengthsStartingWith =
+    Collectors.groupingBy(
+        s -> s.charAt(0),
+        mapping(String::length, toSet()));
 ```
 
 在这里，我们根据字符串的首字母进行分组。在每个组中，我们产生长度并将其收集到集合中。
 
 `mapping` 方法也为前面节中的问题提供了一个更好的解决方案——收集一个国家所有语言的集。
 
-
-
 ```java
-Map<String, Set<String>> countryToLanguages = Loc.
-    groupingBy(Locale::getDisplayCountry,
-    mapping(Locale::getDisplayLanguage,
-    toSet()));
+Map<String, Set<String>> countryToLanguages =
+    Loc.groupingBy(
+        Locale::getDisplayCountry,
+        mapping(Locale::getDisplayLanguage, toSet()));
 ```
 
 还有一个 `flatMap` 方法，用于返回流的函数。
 
-如果分组（grouping）或映射（mapping）函数的返回类型为 `int`、`long` 或 `double`，可以将元素收集到一个汇总统计对象中，如第 1.8 节所示。例如
+如果分组（grouping）或映射（mapping）函数的返回类型为 `int`、`long` 或 `double`，可以将元素收集到一个汇总统计对象中，如第 1.8 节所示。例如：
 
 ```java
-Map<String, IntSummaryStatistics> stateToCityPop = ...
-    groupingBy(City::state,
-    summarizingInt(City::population));
+Map<String, IntSummaryStatistics> stateToCityPop =
+    groupingBy(
+        City::state,
+        summarizingInt(City::population));
 ```
 
 然后，你可以从每个组的汇总统计对象获取函数值的和、计数、平均值、最小值和最大值。
@@ -1545,20 +1653,23 @@ Map<String, IntSummaryStatistics> stateToCityPop = ...
 
 ```java
 Map<String, Set<City>> largeCitiesByState = cities.collect(
-    groupingBy(City::state,
-    filtering(c -> c.population() > 500000,
-    toSet())); // 没有大城市的州
+    groupingBy(
+        City::state,
+        filtering(c -> c.population() > 500000,
+        toSet()))); // 没有大城市的州
 ```
 
 最后，你可以使用 `teeing` 收集器分支到两个下游收集器。当你需要从一个流中计算多个结果时，这非常有用。假设你想收集城市名称并同时计算它们的平均人口。你不能读取两次流，但 `teeing` 允许你执行两次计算。指定两个下游收集器和一个合并结果的函数。
 
 ```java
 record Pair<S, T>(S first, T second) {}
-Pair<List<String>, Double> result = cities.filter
-    .collect(teeing(
+
+Pair<List<String>, Double> result = cities.filter(
+    ...
+).collect(teeing(
     mapping(City::name, toList()), // 第一个下游
-    averagingDouble(City::population), // 第二
-    (list, avg) -> new Pair(list, avg)); // 合并
+    averagingDouble(City::population), // 第二个下游
+    (list, avg) -> new Pair(list, avg))); // 合并
 ```
 
 > 注意：还有三个版本的规约（reducing）方法，它们应用通用的规约，如下一节所述。
@@ -1567,20 +1678,24 @@ Pair<List<String>, Double> result = cities.filter
 
 Listing 1.6 中的示例程序演示了下游收集器。
 
-## Listing 1.6 collecting/DownstreamCollectors.java
+## Listing 1.6 `collecting/DownstreamCollectors.java`
 
 ```java
 package collecting;
+
 import static java.util.stream.Collectors.*;
+
 import java.io.*;
 import java.nio.file.*;
 import java.util.*;
 import java.util.stream.*;
+
 /**
  * @version 1.02 2023-10-19
  * @author Cay Horstmann
  */
 public class DownstreamCollectors {
+
     public record City(String name, String state, int population) {}
 
     public static Stream<City> readCities(String filename) {
@@ -1590,225 +1705,122 @@ public class DownstreamCollectors {
     }
 
     public static void main(String[] args) {
-        Map<String, Set<Locale>> countryToLoc = Locale.availableLocales().collect(
-            groupingBy(Locale::getCountry, setToSet()));
+        Map<String, Set<Locale>> countryToLoc =
+            Locale.availableLocales().collect(
+                groupingBy(Locale::getCountry, setToSet()));
+
         System.out.println("countryToLoc: " + countryToLoc);
 
-        Map<String, Map<String, List<Locale>>> countryAndLanguageToLocale = Locale.availableLocales().collect(
-            groupingBy(Locale::getCountry,
-            groupingBy(Locale::getLanguage)));
-        System.out.println("Hindi locales in India: " +
-            countryAndLanguageToLocale.get("in"));
+        Map<String, Map<String, List<Locale>>> countryAndLanguageToLocale =
+            Locale.availableLocales().collect(
+                groupingBy(
+                    Locale::getCountry,
+                    groupingBy(Locale::getLanguage)));
 
-        Map<String, Long> countryToLocaleCount = Locale.availableLocales().collect(
-            groupingBy(Locale::getCountry, counting()));
-        System.out.println("countryToLocaleCount: " + countryToLocaleCount);
+        System.out.println("Hindi locales in India: "
+            + countryAndLanguageToLocale.get("in"));
+
+        Map<String, Long> countryToLocaleCount =
+            Locale.availableLocales().collect(
+                groupingBy(Locale::getCountry, counting()));
+
+        System.out.println("countryToLocaleCount: "
+            + countryToLocaleCount);
 
         Stream<City> cities = readCities("cities.txt");
-        Map<String, Integer> stateToCityPop = cities.collect(
-            groupingBy(City::state, summingInt(City::population)));
+
+        Map<String, Integer> stateToCityPop =
+            cities.collect(
+                groupingBy(City::state, summingInt(City::population)));
+
         System.out.println("stateToCityPop: " + stateToCityPop);
 
-        Map<String, Optional<String>> stateToLongestCity = cities.collect(
-            groupingBy(City::state,
-            mapping(City::name, maxBy(Comparator.comparingOrder()))));
-        System.out.println("stateToLongestCity: " + stateToLongestCity);
+        Map<String, Optional<String>> stateToLongestCity =
+            cities.collect(
+                groupingBy(
+                    City::state,
+                    mapping(
+                        City::name,
+                        maxBy(Comparator.comparingOrder()))));
 
-        Map<String, Set<String>> countryToLanguage = Locale.availableLocales().collect(
-            groupingBy(Locale::getDisplayCountry, mapping(Locale::getDisplayLanguage,
-            toSet()));
-        System.out.println("countryToLanguage: " + countryToLanguage);
+        System.out.println("stateToLongestCity: "
+            + stateToLongestCity);
+
+        Map<String, Set<String>> countryToLanguage =
+            Locale.availableLocales().collect(
+                groupingBy(
+                    Locale::getDisplayCountry,
+                    mapping(Locale::getDisplayLanguage, toSet())));
+
+        System.out.println("countryToLanguage: "
+            + countryToLanguage);
 
         cities = readCities("cities.txt");
-        Map<String, IntSummaryStatistics> stateCityPopStats = cities.collect(
-            groupingBy(City::state, summarizingInt(City::population)));
-        System.out.println("stateCityPopStats: " + stateCityPopStats);
+
+        Map<String, IntSummaryStatistics> stateCityPopStats =
+            cities.collect(
+                groupingBy(
+                    City::state,
+                    summarizingInt(City::population)));
+
+        System.out.println("stateCityPopStats: "
+            + stateCityPopStats);
 
         cities = readCities("cities.txt");
-        Map<String, String> stateCityNames = cities.collect(
-            groupingBy(City::state,
-            reducing("", City::name, (s, t) -> s + ", " + t)));
-        System.out.println("stateCityNames: " + stateCityNames);
+```
 
-        cities = readCities("cities.txt");
-        record Pair<S, T>(S first, T second) {}
-        Pair<List<String>, Double> result = cities.filter
-            .collect(teeing(
+
+
+```java
+Map<String, String> stateCityNames = cities.collect(
+    groupingBy(
+        City::state,
+        reducing("", City::name, (s, t) -> s + ", " + t)
+    )
+);
+
+System.out.println("stateCityNames: " + stateCityNames);
+
+cities = readCities("cities.txt");
+
+record Pair<S, T>(S first, T second) {}
+
+Pair<List<String>, Double> result = cities
+    .filter(...)
+    .collect(
+        teeing(
             mapping(City::name, toList()),
             averagingDouble(City::population),
-            (list, avg) -> new Pair(list, avg));
-        System.out.println("result: " + result);
-    }
-}
+            (list, avg) -> new Pair(list, avg)
+        )
+    );
+
+System.out.println("result: " + result);
 ```
 
 此类计算有多次，你需要将它们的结果结合起来。为此，你提供了第二个函数。完整的调用如下：
 
 ```java
-int result = words.reduce(0,
-(total, word) -> total + word.length(),
-(total1, total2) -> total1 + total2);
-```
-
-**注意：** 在实践中，你可能不会频繁使用 `reduce` 方法。通常将其映射到数字流、最大值或最小值会更简单。（我们在我们在第 1.13 节中讨论了数字流。）在这个特定的示例中，你可以调用：
-
-```java
-words.mapToInt(String::length).sum(),
-```
-
-这要简单得多且高效，因为它不涉及装箱（boxing）。
-
-**注意：** 有时 `reduce` 并不足够通用。例如，假设你想将结果收集到一个 `BitSet` 中。如果集合是并行的，你不能直接将元素放入单个 `BitSet`，因为 `BitSet` 对象不是线程安全的。由于这个原因，你不能使用 `reduce`。每个段都需要从它自己的空集合开始，而 `reduce` 只允许你提供一个恒等值（identity value）。相反，使用 `collect` 的三参数形式。你提供三个函数：
-
-- 1. 一个 `supplier`，用于构造目标对象的新实例
-- 2. 一个 `accumulator`，将元素添加到目标中
-- 3. 一个 `combiner`，将两个目标对象合并为一个。
-
-以下是 `collect` 方法处理位集时的工作原理：
-
-```java
-BitSet result = stream.collect(BitSet::new);
-```
-
-- Optional<T> reduce(BinaryOperator<T> accumulator)
-- T reduce(T identity, BinaryOperator<T> accumulator)
-- <U> U reduce(U identity, BiFunction<U,? super T,U> accumulator, BinaryOperator<U> combiner) 使用给定的累加器函数形成流元素的累加总和。如果提供了 `identity`，则它是第一个要累加的值。如果提供了 `combiner`，可以使用它可以来合并单独累加的段的总和。
-- <R> R collect(Supplier<R> supplier, BiConsumer<R,? super T> accumulator, BiConsumer<R, R> combiner) 将元素收集到类型为 R 的结果中。在每个段上，调用 `supplier` 来提供初始结果，调用 `accumulator` 以可变方式添加元素，并调用 `combiner` 来合并两个结果。
-
-## 1.13. 原生类型流
-
-到目前为止，我们一直在 `Stream<Integer>` 中收集整数，尽管将每个整数封装成包装对象显然是低效的。对于其他原始类型——double、float、long、short、char、byte 和 boolean 也是如此。流库有专门的类型 `IntStream`、`LongStream` 和 `DoubleStream`，它们直接存储原始类型值，而不使用包装器。如果你想存储 short、char、byte 和 boolean，请使用 `IntStream`；对于 float，使用 `DoubleStream`。
-
-要创建一个 `IntStream`，调用 `IntStream.of` 和 `Arrays.stream` 方法：
-
-```java
-IntStream stream = IntStream.of(1, 1, 2, 3, 5);
-stream = Arrays.stream(values, from, to);
-```
-
-就像对象流一样，你也可以使用静态的 `generate` 和 `iterate` 方法。此外`IntStream` 和 `LongStream` 拥有静态方法 `range` 和 `rangeClosed`，它们生成步长为一的整数范围：
-
-```java
-IntStream zeroToNinetyNine = IntStream.range(0, 100);
-IntStream zeroToHundred = IntStream.rangeClosed(0, 100);
-```
-
-`CharSequence` 接口拥有 `codePoints` 和 `chars` 方法，产生产生字符 Unicode 编码或 UTF-16 编码中代码单元的 `IntStream`。（细节请见第 2 章。）
-
-```java
-String greeting = "Ciao ";
-IntStream codes = greeting.codePoints();
-// 具有值 67, 105, 97, 111, 3 的流
-```
-
-`RandomGenerator` 接口拥有 `ints`、`longs` 和 `doubles` 方法，返回随机数的原始类型流。
-
-```java
-IntStream randomIntegers = RandomGenerator.random().ints();
-```
-
-当你有一个对象流时，可以使用 `mapToInt`、`mapToLong` 或 `mapToDouble` 方法将其转换为原始流。例如，如果你有一个字符串流并想以整数处理它们的长度，你也可以直接在 `IntStream` 中处理：
-
-```java
-Stream<String> words = ...;
-IntStream lengths = words.mapToInt(String::length);
-```
-
-要将原始类型流转换为对象流，请使用 `boxed` 方法：
-
-```java
-Stream<Integer> integers = IntStream.range(0, 100).boxed();
-```
-
-通常，原始类型流上的方法类似于对象流上的方法。以下是最显著的区别：
-
-- `toArray` 方法返回原始类型数组。
-- 产生可选结果的方法返回 `OptionalInt`、`OptionalLong` 或 `OptionalDouble`。这些类与 `Optional` 类类似，但它们有专门的方法。
-- `findFirst` 和 `findAny` 方法返回 `OptionalInt`、`OptionalLong` 或 `OptionalDouble`。
-- `sum`、`average`、`max` 和 `min` 方法返回原始类型。
-- `summaryStatistics` 方法返回 `IntSummaryStatistics`、`LongSummaryStatistics` 或 `DoubleSummaryStatistics` 对象。
-
-`collect` 方法允许你在一次遍历中执行多次规约：
-
-- <R> R collect(Supplier<R> supplier, BiConsumer<R,? super T> accumulator, BiConsumer<R, R> combiner) 将元素收集到类型为 R 的结果中。在每个段上，调用 `supplier` 提供初始结果，调用 `accumulator` 以可变方式添加元素，并调用 `combiner` 来合并两个结果。
-
-### 原生类型流
-
-到目前为止，我们一直在 `Stream<Integer>` 中收集整数，尽管将每个整数封装成包装对象显然是低效的。对于其他原始类型——double、float、long、short、char、byte 和 boolean 也是如此。流库有专门的类型 `IntStream`、`LongStream` 和 `DoubleStream`，它们直接存储原始类型值，而不使用包装器。如果你想存储 short、char、byte 和 boolean，请使用 `IntStream`；对于 float，使用 `DoubleStream`。
-
-要创建一个 `IntStream`，调用 `IntStream.of` 和 `Arrays.stream` 方法：
-
-```java
-IntStream stream = IntStream.of(1, 1, 2, 3, 5);
-stream = Arrays.stream(values, from, to);
-```
-
-就像对象流一样，你也可以使用静态的 `generate` 和 `iterate` 方法。此外，`IntStream` 和 `LongStream` 拥有静态方法 `range` 和 `rangeClosed`，它们生成步长为一的整数范围：
-
-```java
-IntStream zeroToNinetyNine = IntStream.range(0, 100);
-IntStream zeroToHundred = IntStream.rangeClosed(0, 100);
-```
-
-`CharSequence` 接口拥有 `codePoints` 和 `chars` 方法，产生字符 Unicode 编码或 UTF-16 编码中代码单元的 `IntStream`。（细节请见第 2 章。）
-
-```java
-String greeting = "Ciao ";
-IntStream codes = greeting.codePoints();
-// 具有值 67, 105, 97, 111, 3 的流
-```
-
-`RandomGenerator` 接口拥有 `ints`、`longs` 和 `doubles` 方法，返回随机数的原始类型流。
-
-```java
-IntStream randomIntegers = RandomGenerator.random().ints();
-```
-
-当你有一个对象流时，可以使用 `mapToInt`、`mapToLong` 或 `mapToDouble` 方法将其转换为原始流。例如，如果你有一个字符串流并想以整数处理它们的长度，你也可以直接在 `IntStream` 中处理：
-
-```java
-Stream<String> words = ...;
-IntStream lengths = words.mapToInt(String::length);
-```
-
-要将原始类型流转换为对象流，请使用 `boxed` 方法：
-
-```java
-Stream<Integer> integers = IntStream.range(0, 100).boxed();
-```
-
-通常，原始类型流上的方法类似于对象流上的方法。以下是最显著的区别：
-
-- `toArray` 方法返回原始类型数组。
-- 产生可选结果的方法返回 `OptionalInt`、`OptionalLong` 或 `OptionalDouble`。这些类与 `Optional` 类类似，但它们有专门的方法。
-- `findFirst` 和 `findAny` 方法返回 `OptionalInt`、`OptionalLong` 或 `OptionalDouble`。
-- `sum`、`average`、`max` 和 `min` 方法返回原始类型。
-- `summaryStatistics` 方法返回 `IntSummaryStatistics`、`LongSummaryStatistics` 或 `DoubleSummaryStatistics` 对象。
-
-等待，提供的 OCR 文本包含许多重复和伪影。让我根据提供的逻辑流提供一个去重版本。
-
-[content]
-此类计算有多次，你需要将它们的结果结合起来。为此，你提供了第二个函数。完整的调用如下：
-
-```java
-int result = words.reduce(0,
-(total, word) -> total + word.length(),
-(total1, total2) -> total1 + total2);
+int result = words.reduce(
+    0,
+    (total, word) -> total + word.length(),
+    (total1, total2) -> total1 + total2
+);
 ```
 
 **注意：** 在实践中，你可能不会频繁使用 `reduce` 方法。通常将其映射到数字流、最大值或最小值会更简单。（我们在第 1.13 节中讨论了数字流。）在这个特定的示例中，你可以调用：
 
 ```java
-words.mapToInt(String::length).sum(),
+words.mapToInt(String::length).sum();
 ```
 
 这要简单得多且高效，因为它不涉及装箱。
 
 **注意：** 有时 `reduce` 并不足够通用。例如，假设你想将结果收集到一个 `BitSet` 中。如果集合是并行的，你不能直接将元素放入单个 `BitSet`，因为 `BitSet` 对象不是线程安全的。由于这个原因，你不能使用 `reduce`。每个段都需要从它自己的空集合开始，而 `reduce` 只允许你提供一个恒等值。相反，使用 `collect` 的三参数形式。你提供三个函数：
 
-- 1. 一个 `supplier`，用于构造目标对象的新实例
-- 2. 一个 `accumulator`，将元素添加到目标中
-- 3. 一个 `combiner`，将两个目标对象合并为一个。
+1. 一个 `supplier`，用于构造目标对象的新实例。
+2. 一个 `accumulator`，将元素添加到目标中。
+3. 一个 `combiner`，将两个目标对象合并为一个。
 
 以下是 `collect` 方法处理位集时的工作原理：
 
@@ -1816,10 +1828,10 @@ words.mapToInt(String::length).sum(),
 BitSet result = stream.collect(BitSet::new);
 ```
 
-- Optional<T> reduce(BinaryOperator<T> accumulator)
-- T reduce(T identity, BinaryOperator<T> accumulator)
-- <U> U reduce(U identity, BiFunction<U,? super T,U> accumulator, BinaryOperator<U> combiner) 使用给定的累加器函数形成流元素的累加总和。如果提供了 `identity`，则它是第一个要累加的值。如果提供了 `combiner`，可以使用它可以来合并单独累加的段的总和。
-- <R> R collect(Supplier<R> supplier, BiConsumer<R,? super T> accumulator, BiConsumer<R, R> combiner) 将元素收集到类型为 R 的结果中。在每个段上，调用 `supplier` 来提供初始结果，调用 `accumulator` 以可变方式添加元素，并调用 `combiner` 来合并两个结果。
+- `Optional<T> reduce(BinaryOperator<T> accumulator)`
+- `T reduce(T identity, BinaryOperator<T> accumulator)`
+- `<U> U reduce(U identity, BiFunction<U, ? super T, U> accumulator, BinaryOperator<U> combiner)` 使用给定的累加器函数形成流元素的累加总和。如果提供了 `identity`，则它是第一个要累加的值。如果提供了 `combiner>`，可以使用它可以来合并单独累加的段的总和。
+- `<R> R collect(Supplier<R> supplier, BiConsumer<R, ? super T> accumulator, BiConsumer<R, R> combiner)` 将元素收集到类型为 `R` 的结果中。在每个段上，调用 `supplier` 来提供初始结果，调用 `accumulator` 以可变方式添加元素，并调用 `combiner` 来合并两个结果。
 
 ## 1.13. 原生类型流
 
@@ -1829,6 +1841,7 @@ BitSet result = stream.collect(BitSet::new);
 
 ```java
 IntStream stream = IntStream.of(1, 1, 2, 3, 5);
+
 stream = Arrays.stream(values, from, to);
 ```
 
@@ -1836,6 +1849,7 @@ stream = Arrays.stream(values, from, to);
 
 ```java
 IntStream zeroToNinetyNine = IntStream.range(0, 100);
+
 IntStream zeroToHundred = IntStream.rangeClosed(0, 100);
 ```
 
@@ -1843,7 +1857,9 @@ IntStream zeroToHundred = IntStream.rangeClosed(0, 100);
 
 ```java
 String greeting = "Ciao ";
+
 IntStream codes = greeting.codePoints();
+
 // 具有值 67, 105, 97, 111, 3 的流
 ```
 
@@ -1852,6 +1868,35 @@ IntStream codes = greeting.codePoints();
 ```java
 IntStream randomIntegers = RandomGenerator.random().ints();
 ```
+
+当你有一个对象流时，可以使用 `mapToInt`、`mapToLong` 或 `mapToDouble` 方法将其转换为原始流。例如，如果你有一个字符串流并想以整数处理它们的长度，你也可以直接在 `IntStream` 中处理：
+
+```java
+Stream<String> words = ...;
+
+IntStream lengths = words.mapToInt(String::length);
+```
+
+要将原始类型流转换为对象流，请使用 `boxed` 方法：
+
+```java
+Stream<Integer> integers = IntStream.range(0, 100).boxed();
+```
+
+通常，原始类型流上的方法类似于对象流上的方法。以下是最显著的区别：
+
+- `toArray` 方法返回原始类型数组。
+- 产生可选结果的方法返回 `OptionalInt`、`OptionalLong` 或 `OptionalDouble`。这些类与 `Optional` 类类似，但它们有专门的方法。
+- `findFirst` 和 `findAny` 方法返回 `OptionalInt`、`OptionalLong` 或 `OptionalDouble`。
+- `sum`、`average`、`max` 和 `min` 方法返回原始类型。
+- `summaryStatistics` 方法返回 `IntSummaryStatistics`、`LongSummaryStatistics` 或 `DoubleSummaryStatistics` 对象。
+
+`collect` 方法允许你在一次遍历中执行多次规约：
+
+- `<R> R collect(Supplier<R> supplier, BiConsumer<R, ? super T> accumulator, BiConsumer<R, R> combiner)` 将元素收集到类型为 `R` 的结果中。在每个段上，调用 `supplier` 提供初始结果，调用 `accumulator` 以可变方式添加元素，并调用 `combiner` 来合并两个结果。
+
+
+
 
 当你有一个对象流时，可以使用 `mapToInt`、`mapToLong` 或 `mapToDouble` 方法将其转换为原始流。例如，如果你有一个字符串流并想以整数处理它们的长度，你也可以直接在 `IntStream` 中处理：
 
@@ -1876,11 +1921,11 @@ Stream<Integer> integers = IntStream.range(0, 100).boxed();
 
 `collect` 方法允许你在一次遍历中执行多次规约：
 
-- <R> R collect(Supplier<R> supplier, BiConsumer<R,? super T> accumulator, BiConsumer<R, R> combiner) 将元素收集到类型为 R 的结果中。在每个段上，调用 `supplier` 提供初始结果，调用 `accumulator` 以可变方式添加元素，并调用 `combiner` 来合并两个结果。
+- `<R> R collect(Supplier<R> supplier, BiConsumer<R, ? super T> accumulator, BiConsumer<R, R> combiner)` 将元素收集到类型为 `R` 的结果中。在每个段上，调用 `supplier` 提供初始结果，调用 `accumulator` 以可变方式添加元素，并调用 `combiner` 来合并两个结果。
 
 ### 原生类型流
 
-到目前为止，我们一直在 `Stream<Integer>` 中收集整数，尽管将每个整数封装成包装对象显然是低效的。对于其他原始类型——double、float、long、short、char、byte 和 boolean 也是如此。流库有专门的类型 `IntStream`、`LongStream` 和 `DoubleStream`，它们直接存储原始类型值，而不使用包装器。如果你想存储 short、char、byte 和 boolean，请使用 `IntStream`；对于 float，使用 `DoubleStream`。
+到目前为止，我们一直在 `Stream<Integer>` 中收集整数，尽管将每个整数封装成包装对象显然是低效的。对于其他原始类型——`double`、`float`、`long`、`short`、`char`、`byte` 和 `boolean` 也是如此。流库有专门的类型 `IntStream`、`LongStream` 和 `DoubleStream`，它们直接存储原始类型值，而不使用包装器。如果你想存储 `short`、`char`、`byte` 和 `boolean`，请使用 `IntStream`；对于 `float`，使用 `DoubleStream`。
 
 要创建一个 `IntStream`，调用 `IntStream.of` 和 `Arrays.stream` 方法：
 
@@ -1901,6 +1946,7 @@ IntStream zeroToHundred = IntStream.rangeClosed(0, 100);
 ```java
 String greeting = "Ciao ";
 IntStream codes = greeting.codePoints();
+
 // 具有值 67, 105, 97, 111, 3 的流
 ```
 
@@ -1933,11 +1979,11 @@ Stream<Integer> integers = IntStream.range(0, 100).boxed();
 
 `collect` 方法允许你在一次遍历中执行多次规约：
 
-- <R> R collect(Supplier<R> supplier, BiConsumer<R,? super T> accumulator, BiConsumer<R, R> combiner) 将元素收集到类型为 R 的结果中。在每个段上，调用 `supplier` 提供初始结果，调用 `accumulator` 以可变方式添加元素，并调用 `combiner` 来合并两个结果。
+- `<R> R collect(Supplier<R> supplier, BiConsumer<R, ? super T> accumulator, BiConsumer<R, R> combiner)` 将元素收集到类型为 `R` 的结果中。在每个段上，调用 `supplier` 提供初始结果，调用 `accumulator` 以可变方式添加元素，并调用 `combiner` 来合并两个结果。
 
 （此处省略重复段落，直接进入代码示例）
 
-### PrimitiveStreams.java Example (Based on OCR fragments)
+### `PrimitiveStreams.java` Example (Based on OCR fragments)
 
 ```java
 import java.util.*;
@@ -1947,101 +1993,109 @@ import java.nio.file.*;
 public class PrimitiveStreams {
     public static void main(String[] args) throws Exception {
         int[] values = {1, 2, 3, 4, 5};
+
         IntStream stream = IntStream.of(1, 1, 2, 3, 5);
         stream = Arrays.stream(values, 0, values.length);
-        
+
         IntStream zeroToNinetyNine = IntStream.range(0, 100);
         IntStream zeroToHundred = IntStream.rangeClosed(0, 100);
-        
+
         String greeting = "Ciao ";
         IntStream codes = greeting.codePoints();
-        
+
         IntStream randomIntegers = RandomGenerator.random().ints();
-        
+
         Stream<String> words = Stream.of("apple", "banana", "cherry");
         IntStream lengths = words.mapToInt(String::length);
-        
+
         Stream<Integer> integers = IntStream.range(0, 100).boxed();
     }
 }
 ```
 
-
-
 ```java
 java.lang.CharSequence 1.0
 ```
 
-- - IntStream codePoints() 8
-产生包含所有 Unicode 码点的流。
+- `IntStream codePoints()` 8  
+  产生包含所有 Unicode 码点的流。
 
 ```java
 java.util.random.RandomGenerator 17
 ```
 
-- - IntStream ints()
-- IntStream ints(int randomNumberOrigin, int randomNumberBound)
-- IntStream ints(long streamSize)
-- IntStream ints(long streamSize, int randomNumberOrigin, int randomNumberBound)
-- LongStream longs()
-- LongStream longs(long randomNumberOrigin, long randomNumberBound)
-- LongStream longs(long streamSize)
-- LongStream longs(long streamSize, long randomNumberOrigin, long randomNumberBound)
-- DoubleStream doubles()
-- DoubleStream doubles(double randomNumberOrigin, double randomNumberBound)
-- DoubleStream doubles(long streamSize)
-- DoubleStream doubles(long streamSize, double randomNumberOrigin, double randomNumberBound)
+- `IntStream ints()`
+- `IntStream ints(int randomNumberOrigin, int randomNumberBound)`
+- `IntStream ints(long streamSize)`
+- `IntStream ints(long streamSize, int randomNumberOrigin, int randomNumberBound)`
+- `LongStream longs()`
+- `LongStream longs(long randomNumberOrigin, long randomNumberBound)`
+- `LongStream longs(long streamSize)`
+- `LongStream longs(long streamSize, long randomNumberOrigin, long randomNumberBound)`
+- `DoubleStream doubles()`
+- `DoubleStream doubles(double randomNumberOrigin, double randomNumberBound)`
+- `DoubleStream doubles(long streamSize)`
+- `DoubleStream doubles(long streamSize, double randomNumberOrigin, double randomNumberBound)`
+
 产生随机数流。如果提供了 `streamSize`，则流是具有给定数量元素的有限流。如果提供了边界，元素将在 `randomNumberOrigin`（包含）和 `randomNumberBound`（不包含）之间。
 
-```
+```java
 java.util.Optional(Int | Long | Double) 8
 ```
 
-- * static Optional(Int | Long | Double) ((int | long | double) value)
-产生一个带有所供原始类型值的 Optional 对象。
-- (int | long | double) getAs(Int | Long | Double)()
-返回此 Optional 对象的值，如果它为空则抛出 `NoSuchElementException`。
-- (int | long | double) orElse((int | long | double) other)
-- (int | long | double) orElseGet((Int | Long | Double) Supplier other)
-返回此 Optional 对象的值，如果对象为空则返回备选值。
-- void ifPresent((Int | Long | Double) Consumer consumer)
-如果此 Optional 对象不为空，则将其值传递给消费者。
+- `static Optional(Int | Long | Double) ((int | long | double) value)`  
+  产生一个带有所供原始类型值的 `Optional` 对象。
+- `(int | long | double) getAs(Int | Long | Double)()`  
+  返回此 `Optional` 对象的值，如果它为空则抛出 `NoSuchElementException`。
+- `(int | long | double) orElse((int | long | double) other)`
+- `(int | long | double) orElseGet((Int | Long | Double) Supplier other)`  
+  返回此 `Optional` 对象的值，如果对象为空则返回备选值。
+- `void ifPresent((Int | Long | Double) Consumer consumer)`  
+  如果此 `Optional` 对象不为空，则将其值传递给消费者。
 
-```java.util.(Int | Long | Double)SummaryStatistics 8
+```java
+java.util.(Int | Long | Double)SummaryStatistics 8
 ```
 
-- - long getCount()
-- (int|long|double) getSum()
-- double getAverage()
-- (int |long|double) getMax()
-- (int |long|double) getMin()
+- `long getCount()`
+- `(int | long | double) getSum()`
+- `double getAverage()`
+- `(int | long | double) getMax()`
+- `(int | long | double) getMin()`
+
 返回所收集元素的计数、和、平均值、最大值和最小值。
 
 ## 1.14. 并行流
 
-Stream 使得批量操作并行化变得简单。过程大部分是自动的，但你需要遵循一些规则。首先，你必须有一个并行流。你可以通过 `Collection.parallelStream()` 方法从任何集合获取并行流。
+`Stream` 使得批量操作并行化变得简单。过程大部分是自动的，但你需要遵循一些规则。首先，你必须有一个并行流。你可以通过 `Collection.parallelStream()` 方法从任何集合获取并行流。
 
 ```java
-Stream<String> parallelWords = words.parallelStream()
+Stream<String> parallelWords = words.parallelStream();
 ```
 
 此外，`parallel()` 方法可以将任何顺序流转换为并行流。
 
 ```java
-Stream<String> parallelWords = Stream.of(wordArray)
+Stream<String> parallelWords = Stream.of(wordArray).parallel();
 ```
 
 只要在执行终端方法时流处于并行模式，所有的中间流操作都将是并行化的。
 
-当流操作并行并行运行时，其意图是返回与串行执行时相同的的结果。操作必须是无状态的并且可以按任意顺序执行，这一点非常重要。
+当流操作并行运行时，其意图是返回与串行执行时相同的结果。操作必须是无状态的并且可以按任意顺序执行，这一点非常重要。
 
 这里有一个你不能执行的示例。假设你想统计字符串流中所有的短单词：
 
 ```java
 var shortWords = new int[12];
+
 words.parallelStream().forEach(
- s -> { if (s.length() < 12) shortWords[s.length()]++; // --竞态条件! }
+    s -> {
+        if (s.length() < 12) {
+            shortWords[s.length()]++; // --竞态条件!
+        }
+    }
 );
+
 System.out.println(Arrays.toString(shortWords));
 ```
 
@@ -2050,84 +2104,107 @@ System.out.println(Arrays.toString(shortWords));
 确保你传递给并行流操作的任何函数都是安全的并行执行的是你的责任。最好的方法是远离可变状态。在这个示例中，如果你按长度对字符串分组并计数，就可以安全地并行化计算：
 
 ```java
-Map<Integer, Long> shortWordCounts
-  = words.parallelStream()
-  .filter(s -> s.length() < 12)
-  .collect(groupingBy(
-    String::length,
-    counting()));
+Map<Integer, Long> shortWordCounts =
+    words.parallelStream()
+        .filter(s -> s.length() < 12)
+        .collect(groupingBy(
+            String::length,
+            counting()
+        ));
 ```
 
 默认情况下，来自有序集合（数组和列表）、范围、生成器和迭代器，或调用 `Stream.sorted` 产生的流是有序的。结果按原始元素的顺序累积，并且完全可预测的。如果你运行两次相同的操作，将得到完全相同的结果。
 
-排序并不排除高效的并行化。例如，在计算 `stream.map(fun)` 时，流可以被划分为 n 段，每个段被并发处理。然后结果按顺序重新组装。
+排序并不排除高效的并行化。例如，在计算 `stream.map(fun)` 时，流可以被划分为 `n` 段，每个段被并发处理。然后结果按顺序重新组装。
 
-当丢弃排序要求时，某些操作可以更有效地并行化。通过调用 `Stream.unordered` 方法，你明表示你不在乎顺序。一个可以从中受益的操作是 `Stream.distinct`。
+当丢弃排序要求时，某些操作可以更有效地并行化。通过调用 `Stream.unordered` 方法，你表明你不在乎顺序。一个可以从中受益的操作是 `Stream.distinct`。
 
 在有序流上，`distinct` 保留所有相等元素中的第一个。这阻碍了并行化——处理某个段的线程在上一个段被处理之前，不知道该丢弃哪些元素。如果保留任何唯一元素是可以接受的，则所有段都可以并发处理（使用共享集合来跟踪重复）。
 
-你还可以通过放弃排序来加速 `limit` 方法。如果你只需要任意 n 个元素且不在乎是哪几个，请使用：
+你还可以通过放弃排序来加速 `limit` 方法。如果你只需要任意 `n` 个元素且不在乎是哪几个，请使用：
 
 ```java
 Stream<String> result = stream.unordered().limit(n);
 ```
 
-
-
 ```java
 {
-  String contents = Files.readString(Pa
-  List<String> wordList = List.of(conte
+    String contents = Files.readString(Pa
+    List<String> wordList = List.of(conte
 
-  // 下面是极其糟糕的代码
-  var shortWords = new int[10];
-  wordlist.parallelStream().forEach(s
-    {
-      if (s.length() < 10) shortWords
+    // 下面是极其糟糕的代码
+    var shortWords = new int[10];
+
+    wordlist.parallelStream().forEach(s -> {
+        if (s.length() < 10) {
+            shortWords
+        }
     });
-  System.out.println(Arrays.toString(sh
 
-  // 再次尝试——结果可能会
-  Arrays.fill(shortWords, 0);
-  wordlist.parallelStream().forEach(s
-    {
-      if (s.length() < 10) shortWords
+    System.out.println(Arrays.toString(sh
+
+    // 再次尝试——结果可能会
+    Arrays.fill(shortWords, 0);
+
+    wordlist.parallelStream().forEach(s -> {
+        if (s.length() < 10) {
+            shortWords
+        }
     });
-  System.out.println(Arrays.toString(sh
 
-  // 补救：分组并计数
-  Map<Integer, Long> shortWordCounts =
-    .filter(s -> s.length() < 10)
-    .collect(groupingBy(String::length)
+    System.out.println(Arrays.toString(sh
 
-  System.out.println(shortWordCounts);
+    // 补救：分组并计数
+    Map<Integer, Long> shortWordCounts =
+        wordlist.parallelStream()
+            .filter(s -> s.length() < 10)
+            .collect(groupingBy(String::length));
 
-  // 下游顺序不可确定的
+    System.out.println(shortWordCounts);
+
+    // 下游顺序不可确定的
+}
 ```
 
 ```java
-Map<Integer, List<String>> result = Collectors.groupingByConcurrent(...);
+Map<Integer, List<String>> result =
+    Collectors.groupingByConcurrent(...);
+
 System.out.println(result.get(14));
-result = wordList.parallelStream().collect(Collectors.groupingByConcurrent(...));
+
+result = wordList.parallelStream()
+    .collect(Collectors.groupingByConcurrent(...));
+
 System.out.println(result.get(14));
-Map<Integer, Long> wordCounts = wordList.parallelStream().collect(Collectors.groupingByConcurrent(String::length));
-System.out.println(wordCounts);
+
+Map<Integer, Long> wordCounts =
+    wordList.parallelStream()
+        .collect(Collectors.groupingByConcurrent(String::length));
 ```
+
+
+
+
+`System.out.println(wordCounts);`
 
 ```java
-java.util.stream.BaseStream<T,S extends BaseStream<T,S>> 8
+java.util.stream.BaseStream<T, S extends BaseStream<T, S>> 8
 ```
 
-- - S parallel()
+- `S parallel()`
+
   产生一个与此流具有相同元素的并行流。
-- S unordered()
+
+- `S unordered()`
+
   产生一个与此流具有相同元素的无序流。
 
 ```java
 java.util.Collection<E> 1.2
 ```
 
-- * Stream<E> parallelStream() 8
+- `Stream<E> parallelStream() 8`
+
   产生一个包含该集合元素的并行流。
 
 在本章中，你已经学习了如何使用流库。下一章将涵盖另一个重要主题：输入和输出。
@@ -2150,23 +2227,23 @@ java.util.Collection<E> 1.2
 
 `InputStream` 类有一个抽象方法：
 
-```
+```java
 abstract int read()
 ```
 
-该方法读取一个字节并返回所读取的字节，如果遇到输入源的末尾则返回 -1。具体流类的设计者通过重写此方法来提供有用的功能。例如，在 `FileInputStream` 类中，此方法从文件中读取一个字节。`System.in` 是 `InputStream` 子类的预定义对象，允许你从“标准输入”（即控制台或重定向的文件）读取信息。
+该方法读取一个字节并返回所读取的字节，如果遇到输入源的末尾则返回 `-1`。具体流类的设计者通过重写此方法来提供有用的功能。例如，在 `FileInputStream` 类中，此方法从文件中读取一个字节。`System.in` 是 `InputStream` 子类的预定义对象，允许你从“标准输入”（即控制台或重定向的文件）读取信息。
 
 `InputStream` 有一个非常有用的方法来读取流的所有字节：
 
-```
+```java
 byte[] bytes = in.readAllBytes();
 ```
 
 还有用于读取指定数量字节的方法——请参阅 API 文档。这些方法调用该抽象方法，因此子类只需要重写一个方法。
 
-同样，`OutputStream` 类定义了抽象方法
+同样，`OutputStream` 类定义了抽象方法：
 
-```
+```java
 abstract void write(int b)
 ```
 
@@ -2174,14 +2251,15 @@ abstract void write(int b)
 
 如果你有一个字节数组，可以一次性写入它们：
 
-```
+```java
 byte[] values = . . .;
+
 out.write(values);
 ```
 
 `transferTo` 方法将所有字节从输入流传输到输出流：
 
-```
+```java
 in.transferTo(out);
 ```
 
@@ -2189,163 +2267,172 @@ in.transferTo(out);
 
 ```java
 int bytesAvailable = in.available();
+
 if (bytesAvailable > 0) {
     var data = new byte[bytesAvailable];
+
     in.read(data);
 }
 ```
 
-
-
-
-static OutputStream nullOutputStream() 返回一个丢弃所有字节的输出流。
+`static OutputStream nullOutputStream()` 返回一个丢弃所有字节的输出流。
 
 ### 1.1.2. 完整的流动物园
 
-与 C 仅需单一类型 FILE* 就能运行不同，Java 拥有一整个超过 60 个（！）用于输入输出的类和接口。
+与 C 仅需单一类型 `FILE*` 就能运行不同，Java 拥有一整个超过 60 个（！）用于输入输出的类和接口。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_136_0.png)
 
-图 1.1: 输入输出流层级结构
+图 1.1：输入输出流层级结构
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_137_0.png)
 
-图 1.2: Reader 和 Writer 层级结构
+图 1.2：`Reader` 和 `Writer` 层级结构
 
-让我们根据使用方法对输入/输出动物园中的动物进行分类。处理字节和字符的类有独立的层级结构。正如你所看到的，**InputStream** 和 **OutputStream** 类允许你读和写单个字节以及字节数组。这些类构成了 #ch01fig01 所示层级的基础。为了读写字符串和数字，你需要更强大的子类。例如，**DataInputStream** 和 **DataOutputStream** 允许你以二进制格式读写所有 Java 原始类型。最后，还有用于特殊任务的输入/输出流；例如，`ZipInputStream` 和 ZipOutputStream 允许你以熟悉的 ZIP 压缩格式读和写文件。
+让我们根据使用方法对输入/输出动物园中的动物进行分类。处理字节和字符的类有独立的层级结构。正如你所看到的，`InputStream` 和 `OutputStream` 类允许你读和写单个字节以及字节数组。这些类构成了 `#ch01fig01` 所示层级的基础。为了读写字符串和数字，你需要更强大的子类。例如，`DataInputStream` 和 `DataOutputStream` 允许你以二进制格式读写所有 Java 原始类型。最后，还有用于特殊任务的输入/输出流；例如，`ZipInputStream` 和 `ZipOutputStream` 允许你以熟悉的 ZIP 压缩格式读和写文件。
 
-另一方面，对于 Unicode 文本，你可以使用抽象类 Reader 和 Writer 的子类（参见 #ch01fig02）。Reader 和 Writer 类的基本方法与 InputStream 和 OutputStream 类似。
+另一方面，对于 Unicode 文本，你可以使用抽象类 `Reader` 和 `Writer` 的子类（参见 `#ch01fig02`）。`Reader` 和 `Writer` 类的基本方法与 `InputStream` 和 `OutputStream` 类似。
 
-```
+```java
 abstract int read()
+
 abstract void write(int c)
 ```
 
-`read` 方法返回一个 UTF-16 代码单元（作为 0 到 65535 之间的整数），或在到达文件末尾时返回 -1。`write` 方法带有 Unicode 代码单元被调用。（关于 Unicode 代码单元的讨论，请参阅第一卷第 3 章。）
+`read` 方法返回一个 UTF-16 代码单元（作为 0 到 65535 之间的整数），或在到达文件末尾时返回 `-1`。`write` 方法带有 Unicode 代码单元被调用。（关于 Unicode 代码单元的讨论，请参阅第一卷第 3 章。）
 
-还有四个额外的接口：Closeable、Flushable、Readable 和 Appendable（参见 #ch01fig03）。前两个接口非常简单，分别拥有方法：
+还有四个额外的接口：`Closeable`、`Flushable`、`Readable` 和 `Appendable`（参见 `#ch01fig03`）。前两个接口非常简单，分别拥有方法：
 
-```
+```java
 void close() throws IOException
 ```
 
-和
+和：
 
-```
+```java
 void flush()
 ```
 
-InputStream、OutputStream、Reader 和 Writer 类都实现了 Closeable 接口。
+`InputStream`、`OutputStream`、`Reader` 和 `Writer` 类都实现了 `Closeable` 接口。
 
-> **注意：** java.io.Closeable 接口继承了 java.lang.AutoCloseable 接口。因此，你可以对任何 Closeable 使用 -with-resources 语句。为什么要两个接口？Closeable 接口的 close 方法只抛出 IOException，而 AutoCloseable.close 方法可能会抛出任何异常。
+> **注意：** `java.io.Closeable` 接口继承了 `java.lang.AutoCloseable` 接口。因此，你可以对任何 `Closeable` 使用 `try-with-resources` 语句。为什么要两个接口？`Closeable` 接口的 `close` 方法只抛出 `IOException`，而 `AutoCloseable.close` 方法可能会抛出任何异常。
 
-OutputStream 和 Writer 实现了 Flushable 接口。
+`OutputStream` 和 `Writer` 实现了 `Flushable` 接口。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_140_0.png)
 
-**图 1.3:** Closeable、Flushable、Readable 和 Appendable 接口
+**图 1.3：** `Closeable`、`Flushable`、`Readable` 和 `Appendable` 接口
 
 `Readable` 接口有一个方法：
 
-```
+```java
 int read(CharBuffer cb)
 ```
 
 `CharBuffer` 类具有用于顺序和随机读/写访问的方法。它代表一个内存缓冲区或一个内存映射文件。（详情参见第 2.5.2 节。）
 
-`Appendable` 接口有两个用于追加单个字符和字符序列：
+`Appendable` 接口有两个用于追加单个字符和字符序列的方法：
 
-```
+```java
 Appendable append(char c)
+
 Appendable append(CharSequence s)
 ```
 
-CharSequence 接口描述了 char 值序列的基本属性。它被 String、CharBuffer、StringBuilder 和 StringBuffer 实现。
+`CharSequence` 接口描述了 `char` 值序列的基本属性。它被 `String`、`CharBuffer`、`StringBuilder` 和 `StringBuffer` 实现。
 
-输入/输出流类中，只有 Writer 实现了 Appendable。
+输入/输出流类中，只有 `Writer` 实现了 `Appendable`。
 
-```
+```java
 java.io.Closeable 5.0
 ```
 
-- * * void close()
-关闭此 Closeable。此方法可能会抛出 IOException。
+- `void close()`
 
-```
+  关闭此 `Closeable`。此方法可能会抛出 `IOException`。
+
+```java
 java.io.Flushable 5.0
 ```
 
-- * * void flush()
-刷新此 Flushable。
+- `void flush()`
 
-```
+  刷新此 `Flushable`。
+
+```java
 java.lang.Readable 5.0
 ```
 
-- * * int read(CharBuffer cb)
-尝试向 cb 中读取尽可能容纳的 char 值。返回值的数量，如果从此 Readable 中没有更多可用值，则返回 -1。
+- `int read(CharBuffer cb)`
 
-```
+  尝试向 `cb` 中读取尽可能容纳的 `char` 值。返回值的数量，如果从此 `Readable` 中没有更多可用值，则返回 `-1`。
+
+```java
 java.lang.Appendable 5.0
 ```
 
-- * * Appendable append(char c)
-- * Appendable append(CharSequence cs)
-将给定的代码单元，或给定序列中的所有代码单元追加到此 Appendable；返回此对象。
+- `Appendable append(char c)`
+- `Appendable append(CharSequence cs)`
 
-```
+  将给定的代码单元，或给定序列中的所有代码单元追加到此 `Appendable`；返回此对象。
+
+```java
 java.lang.CharSequence 1.4
 ```
 
-- * * charAt(int index)
-返回指定索引处代码单元。
-- * * int length()
-返回此序列中代码单元的数量。
-- * * CharSequence subsequence(int startIndex, int endIndex)
-返回一个由从索引 startIndex 到 endIndex - 1 存储的代码单元组成的 CharSequence。
+- `charAt(int index)`
 
-- * * String toString()
-返回一个由此序列代码单元组成的字符串。
+  返回指定索引处代码单元。
+
+- `int length()`
+
+  返回此序列中代码单元的数量。
+
+- `CharSequence subsequence(int startIndex, int endIndex)`
+
+  返回一个由从索引 `startIndex` 到 `endIndex - 1` 存储的代码单元组成的 `CharSequence`。
+
+- `String toString()`
+
+  返回一个由此序列代码单元组成的字符串。
 
 ### 1.1.3. 组合输入输出流过滤器
 
-InputStream 和 FileOutputStream 为你提供了连接到磁盘文件的输入流和输出流。你需要将文件名或文件的完整路径名传递给构造函数。例如，
+`InputStream` 和 `FileOutputStream` 为你提供了连接到磁盘文件的输入流和输出流。你需要将文件名或文件的完整路径名传递给构造函数。例如：
 
-```
+```java
 var fin = new FileInputStream("employee.dat");
 ```
 
-查找名为 employee.dat 的文件。
+查找名为 `employee.dat` 的文件。
 
-> **注意：** 相对路径从工作目录开始。你可以通过调用 System.getProperty("user.dir") 获取此目录。它在虚拟机启动时设置，之后无法更改。如果你从命令行启动程序，则工作目录是终端中的当前目录。在 IDE 中，你可以设置工作目录。
-
-
-
-
+> **注意：** 相对路径从工作目录开始。你可以通过调用 `System.getProperty("user.dir")` 获取此目录。它在虚拟机启动时设置，之后无法更改。如果你从命令行启动程序，则工作目录是终端中的当前目录。在 IDE 中，你可以设置工作目录。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_147_0.png)
 
 **注意：** `unread` 方法并不会实际更改流读取字节的源数据。未读取的字节被存储在缓冲区中，并在下一次 `read` 操作时返回。默认情况下，缓冲区长度为 1，但你可以在 `PushbackInputStream` 构造函数中指定更长的缓冲区。
 
-读取（reading）和回退（unreading）是唯一适用于回退输入流的方法。如果你想向向前查看并同时读取数字，那么你同时需要一个回退输入流引用和一个数据输入流引用。
+读取（reading）和回退（unreading）是唯一适用于回退输入流的方法。如果你想向前查看并同时读取数字，那么你同时需要一个回退输入流引用和一个数据输入流引用。
 
 ```java
 var pbin = new PushbackStream(
     new BufferedStream(
-    new FileInputStream("employee.dat")));
+        new FileInputStream("employee.dat")));
+
 var din = new DataInputStream(pbin);
 ```
 
-当然，在其他编程语言的输入/输出库中，缓冲和预读等便利功能会自动被处理——因此在 Java 中，诉助于组合流过滤器会有一点麻烦。然而，混合组合过滤器类以构建有用的输入/输出流序列的能力，为你提供了极大的灵活性。例如，你可以使用以下输入流序列从压缩的 ZIP 文件中读取数字（参见 #ch01fig04）：
+当然，在其他编程语言的输入/输出库中，缓冲和预读等便利功能会自动被处理——因此在 Java 中，诉助于组合流过滤器会有一点麻烦。然而，混合组合过滤器类以构建有用的输入/输出流序列的能力，为你提供了极大的灵活性。例如，你可以使用以下输入流序列从压缩的 ZIP 文件中读取数字（参见 `#ch01fig04`）：
 
 ```java
 var zin = new ZipInputStream(new FileInputStream(file));
+
 var din = new DataInputStream(zin);
 ```
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_148_0.png)
 
-图 1.4: 过滤输入流序列
+图 1.4：过滤输入流序列
 
 （关于 Java 处理 ZIP 文件的更多信息，请参见第 2.2.3 节。）
 
@@ -2353,50 +2440,56 @@ var din = new DataInputStream(zin);
 java.io.FileInputStream 1.0
 ```
 
-- FileInputStream(String name)
-- FileInputStream(File file)
-使用由名称指定的路径名或旧 File 类对象的文件创建一个新的文件输入流。
+- `FileInputStream(String name)`
+- `FileInputStream(File file)`
+
+  使用由名称指定的路径名或旧 `File` 类对象的文件创建一个新的文件输入流。
 
 ```java
 java.io.FileOutputStream 1.0
 ```
 
-- FileOutputStream(String name)
-- FileOutputStream(String name, boolean append)
-- FileOutputStream(File file)
-- FileOutputStream(File file, boolean append)
+- `FileOutputStream(String name)`
+- `FileOutputStream(String name, boolean append)`
+- `FileOutputStream(File file)`
+- `FileOutputStream(File file, boolean append)`
 
-根据指定的名称或文件对象创建一个新的文件流。（File 类在在本章末尾描述）。如果 `append` 参数为 `true`，则同名的现有文件不会被删除，数据将添加到文件末尾。否则，此方法将删除任何同名的现有文件。
+根据指定的名称或文件对象创建一个新的文件流。（`File` 类在本章末尾描述。）如果 `append` 参数为 `true`，则同名的现有文件不会被删除，数据将添加到文件末尾。否则，此方法将删除任何同名的现有文件。
 
 ```java
 java.io.BufferedInputStream 1.0
 ```
 
-- BufferedInputStream(InputStream in)
-创建一个缓冲输入流。缓冲输入流从流中读取字节，而不会每次都导致设备访问。当缓冲区为空时，会将新的一块数据读入缓冲区。
+- `BufferedInputStream(InputStream in)`
+
+  创建一个缓冲输入流。缓冲输入流从流中读取字节，而不会每次都导致设备访问。当缓冲区为空时，会将新的一块数据读入缓冲区。
 
 ```java
 java.io.BufferedOutputStream 1.0
 ```
 
-- BufferedOutputStream(OutputStream out)
-创建一个缓冲输出流。缓冲输出流收集要写入的字节，而不会每次都导致设备访问。当缓冲区满或流刷新时，数据将被写入。
+- `BufferedOutputStream(OutputStream out)`
+
+  创建一个缓冲输出流。缓冲输出流收集要写入的字节，而不会每次都导致设备访问。当缓冲区满或流刷新时，数据将被写入。
 
 ```java
 java.io.PushbackInputStream 1.0
 ```
 
-- PushbackInputStream(InputStream in)
-- PushbackInputStream(InputStream in, int size)
-构建具有单字节预读或指定大小回退缓冲区的输入流。
-- void unread(int b)
-回退一个字节，该字节将在下一次调用 `read` 时再次被。
+- `PushbackInputStream(InputStream in)`
+- `PushbackInputStream(InputStream in, int size)`
+
+  构建具有单字节预读或指定大小回退缓冲区的输入流。
+
+- `void unread(int b)`
+
+  回退一个字节，该字节将在下一次调用 `read` 时再次被。
 
 ### 1.1.4. 文本输入与输出
 
-在保存数据时，你可以在二进制格式和文本格式之间进行选择。例如，如果 1234 以二进制形式保存，它被写入为字节序列 `00 00 04 D2`（十六进制表示）。在文本格式中，它被保存为字符串 "1234"。虽然二进制 I/O 快速且高效，但人类易于阅读。我们首先讨论文本 I/O，并在第 2.2 节介绍二进制 I/O。
+在保存数据时，你可以在二进制格式和文本格式之间进行选择。例如，如果 1234 以二进制形式保存，它被写入为字节序列 `00 00 04 D2`（十六进制表示）。在文本格式中，它被保存为字符串 `"1234"`。虽然二进制 I/O 快速且高效，但人类易于阅读。我们首先讨论文本 I/O，并在第 2.2 节介绍二进制 I/O。
 
-在保存文本时，你需要考虑字符编码。在 Java 内部使用的 UTF-16 编码中，字符串 "José" 被编码为 `00 4A 00 6F 73 00 E9`（十六进制）。然而，许多程序期望文本文件使用不同的编码。在互联网上最常用的 UTF-8 编码中，字符串将是 `4A 6F 73 C3 A9`，前三个字母没有零字节，且字符 é 占用两个字节。
+在保存文本时，你需要考虑字符编码。在 Java 内部使用的 UTF-16 编码中，字符串 `"José"` 被编码为 `00 4A 00 6F 73 00 E9`（十六进制）。然而，许多程序期望文本文件使用不同的编码。在互联网上最常用的 UTF-8 编码中，字符串将是 `4A 6F 73 C3 A9`，前三个字母没有零字节，且字符 é 占用两个字节。
 
 `OutputStream` 类将 Unicode 码单元的输出流转换为字节流。相反，`InputStream` 类将包含字节（指定某种字符编码中的字符）的输入流转换为输出 Unicode 码单元的读取。
 
@@ -2430,6 +2523,7 @@ in.useDelimiter("\\s+");
 if (in.hasNextInt()) {
     int number = in.nextInt();
 }
+
 if (in.hasNext()) {
     String text = in.next();
 }
@@ -2439,8 +2533,10 @@ if (in.hasNext()) {
 
 ```java
 Scanner scanner = new Scanner(System.in);
+
 while (scanner.hasNext()) {
     String token = scanner.next();
+
     System.out.println(token);
 }
 ```
@@ -2457,50 +2553,67 @@ String line = scanner.nextLine();
 Scanner scanner = new Scanner(new File("data.txt"));
 ```
 
+
+
 `Scanner` 类是 `java.util` 包的一部分，因此你必须导入它：
 
 ```java
 import java.util.Scanner;
 ```
 
+`PrintStream` 类简单通过丢弃高字节将所有 Unicode 字符截断为 ASCII 字符。（当时，Unicode 仍然是 16 位编码。）显然，这并不是一种整洁或可移植的方法，在 Java 1.1 引入读取器和写入器后得到了解决。为了与现有代码兼容，`System.in`、`System.out` 和 `System.err` 仍然是输入输出流，而不是读取器和写入器。但现在 `PrintStream` 类内部以与 `PrintWriter` 相同的方式将 Unicode 字符转换为默认字符编码。当你使用 `print` 和 `println` 方法时，`PrintStream` 对象的行为与打印器完全相同，但与打印器不同，它们允许你通过 `write(int)` 和 `write(byte[])` 方法输出原始字节。
 
+- `PrintWriter(OutputStream out)`
+- `PrintWriter(OutputStream out, boolean autoFlush)`
+- `PrintWriter(Writer writer)`
+- `PrintWriter(Writer writer, boolean autoFlush)`
 
-
-
-`PrintStream` 类简单通过丢弃高字节将所有 Unicode 字符截断为 ASCII 字符。（当时，Unicode 仍然是 16 位编码。）显然，这并不是一种整洁或可移植的方法，在 Java 1.1 引入读取器和写入器后得到了解决。为了与现有代码兼容，`System.in`、`System.out` 和 `System.err` 仍然是输入输出流，而不是读取器和写入器。但现在 `PrintStream` 类内部以与 `PrintWriter`相同的方式将 Unicode 字符转换为默认字符编码。当你使用 `print` 和 `println` 方法时，`PrintStream` 对象的行为与打印器完全相同，但与打印器不同，它们允许你通过 `write(int)` 和 `write(byte[])` 方法输出原始字节。
-
-- PrintWriter(OutputStream out)
-- PrintWriter(OutputStream out, boolean autoFlush)
-- PrintWriter(Writer writer)
-- PrintWriter(Writer writer, boolean autoFlush)
 创建一个写入给定输出流或写入器的新 `PrintWriter`。如果 `autoFlush` 指定为 `true`，则 `println` 和 `printf` 会刷新输出。
-- PrintWriter(String filename, String encoding)
-- PrintWriter(File file, String encoding)
+
+- `PrintWriter(String filename, String encoding)`
+- `PrintWriter(File file, String encoding)`
+
 创建一个使用给定字符编码写入给定文件的新 `PrintWriter`。
-- void print(Object obj)
+
+- `void print(Object obj)`
+
 通过打印由 `toString` 产生的字符串来打印对象。
-- void print(String s)
+
+- `void print(String s)`
+
 打印包含 Unicode 编码单元的字符串。
-- void println(String s)
+
+- `void println(String s)`
+
 打印字符串并在后跟一个换行终止符。如果输出流处于自动刷新模式，则会刷新输出流。
-- void print(char[] s)
+
+- `void print(char[] s)`
+
 打印给定数组中的所有 Unicode 编码单元。
-- void print(char c)
+
+- `void print(char c)`
+
 打印一个 Unicode 编码单元。
-- void print(int i)
-- void print(long l)
-- void print(float f)
-- void print(double d)
-- void print(boolean b)
+
+- `void print(int i)`
+- `void print(long l)`
+- `void print(float f)`
+- `void print(double d)`
+- `void print(boolean b)`
+
 以文本格式打印给定的值。
-- void printf(String format, Object... args)
-按照格式字符串指定的格式打印给定值。格式字符串的规范请参见第1卷第 3 章。
-- boolean checkError()
+
+- `void printf(String format, Object... args)`
+
+按照格式字符串指定的格式打印给定值。格式字符串的规范请参见第 1 卷第 3 章。
+
+- `boolean checkError()`
+
 如果发生格式化错误或输出错误，则返回 `true`。一旦输出流遇到错误，它就会被污染，所有对 `checkError` 的调用都返回 `true`。
 
 ### 1.1.7. 以文本格式保存对象
 
-在本节中，我们将讨论一个示例程序，该程序将 `Employee` 记录数组存储在文本文件中。每个记录存储在单独的一行中。实例字段之间用分隔符隔开。使用竖线 (`|`) 作为分隔符。冒号（`:`）是另一个流行的选择。有趣的地方在于，每个人使用的分隔符都不同。）自然地，我们不考虑在我们保存的字符串中实际上出现了 `|` 会发生什么。
+在本节中，我们将讨论一个示例程序，该程序将 `Employee` 记录数组存储在文本文件中。每个记录存储在单独的一行中。实例字段之间用分隔符隔开。使用竖线（`|`）作为分隔符。冒号（`:`）是另一个流行的选择。有趣的地方在于，每个人使用的分隔符都不同。）自然地，我们不考虑在我们保存的字符串中实际上出现了 `|` 会发生什么。
 
 以下是一组示例记录：
 
@@ -2523,13 +2636,21 @@ public static void writeEmployee(PrintWriter out, Employee e)
 public static Employee readEmployee(Scanner in)
 {
     String line = in.nextLine();
+
     String[] tokens = line.split("\\||");");
+
     String name = tokens[0];
+
     double salary = Double.parseDouble(tokens[1]);
+
     LocalDate hireDate = LocalDate.parse(tokens[2]);
+
     int year = hireDate.getYear();
+
     int month = hireDate.getMonthValue();
+
     int day = hireDate.getDayOfMonth();
+
     return new Employee(name, salary, year, month, day);
 }
 ```
@@ -2552,8 +2673,11 @@ Employee[] readData(Scanner in)
 
 ```java
 int n = in.nextInt();
+
 in.nextLine(); // 消耗换行符
+
 var employees = new Employee[n];
+
 for (int i = 0; i < n; i++) {
     employees[i] = readEmployee(in);
 }
@@ -2574,9 +2698,11 @@ import java.util.*;
  * @version 2023-08-16
  * @author Horstmann
  */
+
 public class TextFile {
     public static void main(String[] args) {
         var staff = new Employee[3];
+
         staff[0] = new Employee("Carl Cracker");
         staff[1] = new Employee("Harry Hacker");
         staff[2] = new Employee("Tony Tester");
@@ -2589,6 +2715,7 @@ public class TextFile {
         // 将所有记录到数组
         try (var in = new Scanner(new File("employees.txt"))) {
             Employee[] newStaff = readData(in);
+
             // 打印新的记录
             for (Employee e : newStaff) {
                 System.out.println(e);
@@ -2598,6 +2725,7 @@ public class TextFile {
 
     private static void writeData(Employee[] employees, PrintWriter out) {
         out.println(employees.length);
+
         for (Employee e : employees) {
             out.println(e.getName() + "|" + e.getSalary());
         }
@@ -2605,23 +2733,35 @@ public class TextFile {
 
     private static Employee[] readData(Scanner in) {
         int n = in.nextInt();
+
         in.nextLine(); // 消耗换行符
+
         Employee[] employees = new Employee[n];
+
         for (int i = 0; i < n; i++) {
             employees[i] = readEmployee(in);
         }
+
         return employees;
     }
 
     private static Employee readEmployee(Scanner in) {
         String line = in.nextLine();
+
         String[] tokens = line.split("\\||");
+
         String name = tokens[0];
+
         double salary = Double.parseDouble(tokens[1]);
+
         LocalDate hireDate = LocalDate.parse(tokens[2]);
+
         int year = hireDate.getYear();
+
         int month = hireDate.getMonthValue();
+
         int day = hireDate.getDayOfMonth();
+
         return new Employee(name, salary, year, month, day);
     }
 }
@@ -2646,10 +2786,8 @@ public class TextFile {
 |---|---|
 | 0..FFFF | uuuuuuu |
 | 10000..10FFFF | dddddddd dbbbbbbbb |
-其中 dddddddd dbbbbbbbb = uuuuuuu - 0x10000 |
 
-
-
+其中 dddddddd dbbbbbbbb = uuuuuuu - 0x10000
 
 用于 Java 字符串。实际上，UTF-16 有两种形式，称为“大端序”和“小端序”。考虑 16 位值 0x2122。在大端序格式中，高位字节在前面：0x21 后面跟着 0x22。在小端序格式中，则完全反过来：0x22 0x21。为了指明使用的是哪一种字节序，文件可以以“字节顺序标记”（byte order mark）开头，即 16 位数值 0xFEFF。读取器可以使用该值确定字节顺序并将其丢弃。
 
@@ -2661,7 +2799,7 @@ public class TextFile {
 
 `StandardCharsets` 类具有类型为 `Charset` 的静态变量，对应每个 Java 虚拟机必须支持的字符编码：
 
-```
+```java
 StandardCharsets.UTF_8
 StandardCharsets.UTF_16
 StandardCharsets.UTF_16BE
@@ -2672,7 +2810,7 @@ StandardCharsets.US_ASCII
 
 获取另一种编码的 `Charset`，请使用静态的 `forName` 方法：
 
-```
+```java
 Charset shiftJIS = Charset.forName("Shift-JIS");
 ```
 
@@ -2680,13 +2818,13 @@ Charset shiftJIS = Charset.forName("Shift-JIS");
 
 每当你需要指定字符编码时，请使用 `Charset` 对象。例如，你可以将字节数组转换为字符串：
 
-```
+```java
 var str = new String(bytes, StandardCharsets.ISO_
 ```
 
 **提示：** 许多方法允许你通过 `Charset` 的字符串形式来指定字符编码。对于标准字符编码，请使用 `StandardCharsets` 常量，这样任何拼写错误在编译时就能被发现。
 
-**注意：** 在 Java 17 之前，调用带有名称 "default" 的 `Charset.forName` 会产生 `StandardCharsets.US_ASCII`。这在很长一段时间内显然是个坏主意。现在，该调用会导致 `UnsupportedCharsetException`。
+**注意：** 在 Java 17 之前，调用带有名称 `"default"` 的 `Charset.forName` 会产生 `StandardCharsets.US_ASCII`。这在很长一段时间内显然是个坏主意。现在，该调用会导致 `UnsupportedCharsetException`。
 
 如果你没有指定字符编码，且操作需要在字节和字符串之间进行转换，它将选择一个默认值。对于 `java.nio.file` 包中的许多方法，该默认值是 UTF-8。但其他方法在未指定字符编码时会使用默认字符集。这些包括：
 
@@ -2705,23 +2843,25 @@ var str = new String(bytes, StandardCharsets.ISO_
 - **UTF-8**：将默认字符集设置为 UTF-8。
 - 另一个字符编码如 `US-ASCII`：对于某些未指定的旧字符集名称，它可能会将默认字符集设置为给定的那个。
 
-> > 注意：`file.encoding` 属性必须在命令行上设置，通过 `System.setProperty` 设置不会更新默认字符集。
+> 注意：`file.encoding` 属性必须在命令行上设置，通过 `System.setProperty` 设置不会更新默认字符集。
 
 实际使用的默认字符集由静态方法 `Charset.defaultCharset` 返回。从 Java 17 开始，系统属性 `native.encoding` 产生原生编码的名称，无论是否被使用。
 
-> > 注意：当你在 Windows 终端启动 Java 程序时，`System.out` 和 `System.err` 使用的代码源自终端的“代码页（code page）”，这可能与默认字符集不同。
+> 注意：当你在 Windows 终端启动 Java 程序时，`System.out` 和 `System.err` 使用的代码源自终端的“代码页（code page）”，这可能与默认字符集不同。
 
 你最好的办法是使用 Windows 命令切换到 UTF-8 代码页：
 
-```
+```bash
 chcp 65001
 ```
+
+
 
 或者，从 Java 18 开始，你可以在命令行上将系统属性 `stdout.encoding` 和 `stderr.encoding` 设置为 UTF-8。这些属性的命名可能有些令人困惑。
 
 提示：要快速查看你当前的编码设置，请运行：
 
-```
+```bash
 java -ShowSettings
 ```
 
@@ -2731,12 +2871,15 @@ java -ShowSettings
 
 注意：`Scanner(System.in)` 使用默认字符集。这可能与控制台不同。最好是将终端代码页更改为 UTF-8。
 
-```
+```java
 Console console = System.console();
+
 if (console != null) {
     var in = new Scanner(console.reader());
 }
-```这种情况发生在某些开发环境中。
+```
+
+这种情况发生在某些开发环境中。
 
 ## 1.1.9 读取字符输入
 
@@ -2744,32 +2887,34 @@ if (console != null) {
 
 在需要编写此类解析器的少数情况下，请使用 `BufferedReader` 以提高效率。不断调用其 `read` 方法，该方法返回一个字符值或在输入结束时返回 -1。读取器将输入流的编码转换为 UTF-16。你需要处理 UTF-16 编码：
 
-```
+```java
 int ch = reader.read();
+
 if (ch != -1) {
     int codePoint;
+
     if (Character.isHighSurrogate((char) ch)) {
         int ch2 = reader.read();
+
         if (Character.isLowSurrogate((char) ch2))
             codePoint = Character.toCodePoint(ch, ch2);
         else
             throw new MalformedInputException(2);
     }
-}
-else
+} else {
     codePoint = ch;
 }
 ```
 
-`Character` 类包含用于判断特定代码点是否具有给定属性的方法。例如，
+`Character` 类包含用于判断特定代码点是否具有给定属性的方法。例如：
 
-```
+```java
 Character.isLetter(codePoint)
 ```
 
 如果 `codePoint` 是某种语言中的字母，则它返回 `true`。这里是其他一些分类方法：
 
-```
+```java
 isUpperCase
 isLowerCase
 isDigit
@@ -2779,7 +2924,7 @@ isEmoji
 
 这些方法使用 Unicode 标准的规则。其他的引用 Java 语言的规则：
 
-```
+```java
 isJavaIdentifierStart
 isJavaIdentifierPart
 isWhitespace
@@ -2795,26 +2940,28 @@ isWhitespace
 
 `DataOutput` 接口定义了以下方法，用于二进制格式写入数字、字符、`boolean` 值或字符串：
 
-| writeChars | writeFloat |
-| writeByte | writeDouble |
-| writeInt | writeChar |
-| writeShort | writeBoolean |
-| writeLong | writeUTF |
+| `writeChars` | `writeFloat` |
+|---|---|
+| `writeByte` | `writeDouble` |
+| `writeInt` | `writeChar` |
+| `writeShort` | `writeBoolean` |
+| `writeLong` | `writeUTF` |
 
 例如，`writeInt` 无论数字位数多少，始终将整数写入 4 字节二进制量，而 `writeDouble` 总是将 `double` 写入 8 字节二进制量。生成的输出结果不是人类可读的，但它对于给定类型的值将使用相同的空间，且读取回的速度比解析文本更快。
 
-> **注意：** 在内存中存储整数和浮点数有两种不同的方法，取决于你使用的处理器。假设你你正在处理一个 4 字节的 int，例如十进制 1234，或十六进制的 4D2（1234 = 4 × 256 + 13 × 16 + 2）。该值可以这样存储：内存中四个字节的第一个字节持有该值的最高有效字节（MSB）：00 00 04 D2。这就是所谓的大端（big-endian）方法。或者，我们可以从最低有效字节（LSB）开始：D2 04 00 00。这自然而然被称为小端（little-endian）方法。例如，SPARC 使用大端；Intel 处理器使用小端。这可能会导致问题。当从 C 或 C++ 文件保存文件时，数据将完全按照处理器存储的方式进行保存。这使得即使是最简单的文件移动到另一个平台也具有挑战性。在 Java 中，无论处理器如何，所有值都将以大端方式写入。这使得 Java 数据文件具有平台无关性。
+> **注意：** 在内存中存储整数和浮点数有两种不同的方法，取决于你使用的处理器。假设你你正在处理一个 4 字节的 `int`，例如十进制 1234，或十六进制的 4D2（1234 = 4 × 256 + 13 × 16 + 2）。该值可以这样存储：内存中四个字节的第一个字节持有该值的最高有效字节（MSB）：00 00 04 D2。这就是所谓的大端（big-endian）方法。或者，我们可以从最低有效字节（LSB）开始：D2 04 00 00。这自然而然被称为小端（little-endian）方法。例如，SPARC 使用大端；Intel 处理器使用小端。这可能会导致问题。当从 C 或 C++ 文件保存文件时，数据将完全按照处理器存储的方式进行保存。这使得即使是最简单的文件移动到另一个平台也具有挑战性。在 Java 中，无论处理器如何，所有值都将以大端方式写入。这使得 Java 数据文件具有平台无关性。
 
-`writeUTF` 方法使用修改后的 8 位 Unicode 转换格式写入写入字符串数据。它不是简单地使用标准的 UTF-8 编码，而是首先将 Unicode 代码单元表示为 UTF-16，然后使用 UTF-8 规则对结果进行编码。这种修改后的编码对于代码高于 0xFFFF 的字符不同。它是为了与 Unicode 增长到 16 位之前构建的虚拟机向后兼容。
+`writeUTF` 方法使用修改后的 8 位 Unicode 转换格式写入字符串数据。它不是简单地使用标准的 UTF-8 编码，而是首先将 Unicode 代码单元表示为 UTF-16，然后使用 UTF-8 规则对结果进行编码。这种修改后的编码对于代码高于 0xFFFF 的字符不同。它是为了与 Unicode 增长到 16 位之前构建的虚拟机向后兼容。
 
 由于没有人使用这种 UTF-8 的修改版本，你应该只使用 `writeUTF` 方法写入用于 Java 虚拟机的字符串——例如，在生成字节码的程序中。其他用途请使用 `writeChars` 方法。
 
 要读回数据，请使用 `DataInput` 接口定义的以下方法：
 
-| readInt | readDouble |
-| readShort | readChar |
-| readLong | readBoolean |
-| readFloat | readUTF |
+| `readInt` | `readDouble` |
+|---|---|
+| `readShort` | `readChar` |
+| `readLong` | `readBoolean` |
+| `readFloat` | `readUTF` |
 
 `DataInputStream` 类实现了 `DataInput` 接口。要从文件读取二进制数据，请将 `DataInputStream` 与字节源（如 `FileInputStream`）结合：
 
@@ -2828,47 +2975,48 @@ var in = new DataInputStream(new FileInputStream(
 var out = new DataOutputStream(new FileOutputStream(...))
 ```
 
-#### java.io.DataInput 1.0
+#### `java.io.DataInput` 1.0
 
-- boolean readBoolean()
-- byte readByte()
-- char readChar()
-- double readDouble()
-- float readFloat()
-- int readInt()
-- long readLong()
-- short readShort()
+- `boolean readBoolean()`
+- `byte readByte()`
+- `char readChar()`
+- `double readDouble()`
+- `float readFloat()`
+- `int readInt()`
+- `long readLong()`
+- `short readShort()`
+
 读取给定类型的值。
-- void readFully(byte[] b), 阻塞直到所有字节都被读取。
-- void readFully(byte[] b, int off, int len)
-从 off 开始将最多 len 个字节放入数组 b 中，阻塞直到所有字节都被读取。
-- String readUTF()
-读取以“修改后的 UTF-8”格式的字符字符串。
 
-```java
-int skipBytes(int n)
-跳过 n 个字节，阻塞直到所有字节都被跳过。
-```
+- `void readFully(byte[] b)`，阻塞直到所有字节都被读取。
+- `void readFully(byte[] b, int off, int len)`  
+  从 `off` 开始将最多 `len` 个字节放入数组 `b` 中，阻塞直到所有字节都被读取。
+- `String readUTF()`  
+  读取以“修改后的 UTF-8”格式的字符字符串。
+- `int skipBytes(int n)`  
+  跳过 `n` 个字节，阻塞直到所有字节都被跳过。
 
-#### java.io.DataOutput 1.0
+#### `java.io.DataOutput` 1.0
 
-- void writeBoolean(boolean b)
-- writeByte(int b)
-- writeChar(int c)
-- writeDouble(double d)
-- writeFloat(float f)
-- writeInt(int i)
-- writeLong(long l)
-- writeShort(int s)
+- `void writeBoolean(boolean b)`
+- `writeByte(int b)`
+- `writeChar(int c)`
+- `writeDouble(double d)`
+- `writeFloat(float f)`
+- `writeInt(int i)`
+- `writeLong(long l)`
+- `writeShort(int s)`
+
 写入给定类型的值。
-- writeChars(String s)
-写入字符串中的所有字符。
-- writeUTF(String s)
-写入以“修改后的 UTF-8”格式的字符字符串。
 
-### 1.2.2. RandomAccessFile
+- `writeChars(String s)`  
+  写入字符串中的所有字符。
+- `writeUTF(String s)`  
+  写入以“修改后的 UTF-8”格式的字符字符串。
 
-`RandomAccessFile` 类允许你在文件的任何位置读取或写入数据。磁盘文件是随机访问的，但与网络套接字通信的输入/输出流不是。你可以以只读模式或读写混合模式打开随机访问文件；通过在构造函数的第二个参数中使用字符串 "r”（读取访问）或 "rw”（读写访问）来指定选项。
+### 1.2.2. `RandomAccessFile`
+
+`RandomAccessFile` 类允许你在文件的任何位置读取或写入数据。磁盘文件是随机访问的，但与网络套接字通信的输入/输出流不是。你可以以只读模式或读写混合模式打开随机访问文件；通过在构造函数的第二个参数中使用字符串 `"r"`（读取访问）或 `"rw"`（读写访问）来指定选项。
 
 ```java
 var in = new RandomAccessFile("employee.dat", "r");
@@ -2878,19 +3026,23 @@ var in = new RandomAccessFile("employee.dat", "r");
 var in = new RandomAccessFile("employee.dat", "rw");
 ```
 
-getFilePointer 方法返回当前文件指针。
+`getFilePointer` 方法返回当前文件指针。
 
 `RandomAccessFile` 类实现了 `DataInput` 和 `DataOutput` 接口。要从随机访问文件中读取，使用如 `readInt/writeInt`、`readChar/writeChar` 等方法。
 
 ```java
 long n = 3;
+
 in.seek((n - 1) * RECORD_SIZE);
+
 var e = new Employee();
+
 e.readData(in);
 ```
 
 ```java
 in.seek((n - 1) * RECORD_SIZE);
+
 e.writeData(out);
 ```
 
@@ -2898,10 +3050,11 @@ e.writeData(out);
 
 ```java
 long nbytes = in.length();
+
 long nbytes = in.length();
 ```
 
-整数和浮点值在二进制格式中具有固定大小，但对于字符串我们需要做更多工作。我们提供了两个辅助方法来读写固定大小的字符串。writeFixedString 将字符串写入指定数量的代码单元。如果代码单元较少，该方法将使用零值填充字符串。
+整数和浮点值在二进制格式中具有固定大小，但对于字符串我们需要做更多工作。我们提供了两个辅助方法来读写固定大小的字符串。`writeFixedString` 将字符串写入指定数量的代码单元。如果代码单元较少，该方法将使用零值填充字符串。
 
 ```java
 public static void writeFixedString(String s, int size) throws IOException {
@@ -2913,19 +3066,22 @@ public static void writeFixedString(String s, int size) throws IOException {
 }
 ```
 
-`readFixedString` 方法从输入流读取字符，直到消耗了 size 个代码单元或遇到零字符。然后，它会跳过输入字段中剩余的零值。为了增加效率，此方法使用 `StringBuilder` 类来读取字符串。
+`readFixedString` 方法从输入流读取字符，直到消耗了 `size` 个代码单元或遇到零字符。然后，它会跳过输入字段中剩余的零值。为了增加效率，此方法使用 `StringBuilder` 类来读取字符串。
 
 ```java
 public static String readFixedString(int size) throws IOException {
     var b = new StringBuilder(size);
     int i = 0;
     boolean done = false;
+
     while (!done && i < size) {
         char ch = in.readChar();
         i++;
+
         if (ch == 0) done = true;
         else b.append(ch);
     }
+
     in.skipBytes(2 * (size - i));
     return b.toString();
 }
@@ -2935,8 +3091,11 @@ public static String readFixedString(int size) throws IOException {
 
 ```java
 DataIO.writeFixedString(e.getName(), Employee.NAME);
+
 out.writeDouble(e.getSalary());
+
 LocalDate hireDay = e.getHireDay();
+
 out.writeInt(hireDay.getYear());
 out.writeInt(hireDay.getMonthValue());
 out.writeInt(hireDay.getDayOfMonth());
@@ -2944,13 +3103,11 @@ out.writeInt(hireDay.getDayOfMonth());
 
 读回数据同样简单。
 
-
-
-
-
 ```java
 String name = DataIO.readFixedString(Employee.NAME);
+
 double salary = in.readDouble();
+
 int y = in.readInt();
 int m = in.readInt();
 int d = in.readInt();
@@ -2959,23 +3116,24 @@ int d = in.readInt();
 让我们计算每条记录的大小。我们将使用 40 个字符作为名称字符串。因此，每条记录将包含 100 字节：
 
 - 40 个字符 = 80 字节名称
-- 1 个 double = 8 字节薪水
-- 3 个 int = 12 字节日期
+- 1 个 `double` = 8 字节薪水
+- 3 个 `int` = 12 字节日期
 
 列表 2.2 显示的程序将三条记录写入数据文件，然后按反序从文件中读取它们。为了高效地实现这一操作需要随机访问——我们需要先到达最后一条记录。
 
-## 列表 1.2 randomAccess/RandomAccessTest.java
+## 列表 1.2 `randomAccess/RandomAccessTest.java`
 
 ```java
 package randomAccess;
+
 import java.io.*;
 import java.time.*;
+
 /**
  * @version 1.14 2023-10-05
  * @author Cay Horstmann
  */
-public class RandomAccessTest
-{
+public class RandomAccessTest {
     public static final int NAME_SIZE = 40;
     public static final int RECORD_SIZE = 2;
 
@@ -2994,64 +3152,76 @@ public class RandomAccessTest
         }
 
         try (var in = new RandomAccessFile("
+```
+
+```java
 var newStaff = new Employee[n];
+
 // 按反序读取员工
-for (int i = 0; i < n; i++))
-{
+for (int i = 0; i < n; i++)) {
     in.seek((n - 1 - i) * RECORD_SIZE);
     newStaff[i] = readData(in);
 }
+
 // 打印新读取的员工
 for (Employee e : newStaff) {
     System.out.println(e);
 }
+
 /**
  * 将员工数据写入数据输出
  * @param out 数据输出
  * @param e 员工
  */
-public static void writeData(DataOut)
-{
+public static void writeData(DataOut) {
     DataIO.writeFixedString(e.getName(),
     out.writeDouble(e.getSalary());
 
     LocalDate hireDay = e.getHireDay();
+
     out.writeInt(hireDay.getYear());
     out.writeInt(hireDay.getMonthValue());
-    out.writeInt(hireDay.getDayOfMonth())
+    out.writeInt(hireDay.getDayOfMonth());
 }
+
 /**
  * 从数据输入读取员工数据
  * @param in 数据输入
  * @return 员工
  */
-public static Employee readData(DataInpu
-{
+public static Employee readData(DataInpu) {
     String name = DataIO.readFixedString(
     double salary = in.readDouble();
+
     int y = in.readInt();
     int m = in.readInt();
     int d = in.readInt();
-    return new Employee(name, salary, y,
 
-    }
+    return new Employee(name, salary, y,
 }
 ```
 
-java.io.RandomAccessFile 1.0
 
-- RandomAccessFile(String file, String mode)
-- RandomAccessFile(File file, String mode)
 
-以随机访问模式打开给的文件。模式字符串 "r" 表示只读模式，"rw" 表示读写模式，"rws" 表示读写模式且每次更新都会对数据和元数据进行同步磁盘写入，"rwd" 表示读写模式且仅对数据进行同步磁盘写入。
 
-- long getFilePointer()
+
+# `java.io.RandomAccessFile` 1.0
+
+- `RandomAccessFile(String file, String mode)`
+- `RandomAccessFile(File file, String mode)`
+
+以随机访问模式打开给的文件。模式字符串 `"r"` 表示只读模式，`"rw"` 表示读写模式，`"rws"` 表示读写模式且每次更新都会对数据和元数据进行同步磁盘写入，`"rwd"` 表示读写模式且仅对数据进行同步磁盘写入。
+
+- `long getFilePointer()`
+
 返回文件指针当前的位置。
 
-- void seek(long pos)
-将文件指针设置为距离文件开始处 pos 字节的位置。
+- `void seek(long pos)`
 
-- long length()
+将文件指针设置为距离文件开始处 `pos` 字节的位置。
+
+- `long length()`
+
 返回文件的字节长度。
 
 ## 1.2.3. ZIP 存档
@@ -3059,17 +3229,21 @@ java.io.RandomAccessFile 1.0
 ZIP 存档以（通常是）压缩格式存储一个或多个文件。每个 ZIP 存档都有一个头部，其中包含文件名和所使用的压缩方法等信息。在 Java 中，你可以使用 `ZipInputStream` 读取 ZIP 存档。你需要查看存档中的各个条目。`getNextEntry` 方法返回一个 `ZipEntry` 类型的对象，用于描述该条目。从流读取到末尾，这实际上是当前条目的结束。然后调用 `closeEntry` 读取下一个条目。在读取完最后一个条目之前不要关闭 `ZipInputStream`。这里是遍历 ZIP 文件的典型代码：
 
 ```java
-var zin = new ZipInputStream(new FileInputStream
+var zin = new ZipInputStream(new FileInputStream(...));
+
 boolean done = false;
-while (!done)
-{
-ZipEntry entry = zin.getNextEntry();
-if (entry == null) done = true;
-else
-{
-    // 读取 zin 的内容
-    zin.closeEntry();
+
+while (!done) {
+    ZipEntry entry = zin.getNextEntry();
+
+    if (entry == null) {
+        done = true;
+    } else {
+        // 读取 zin 的内容
+        zin.closeEntry();
+    }
 }
+
 zin.close();
 ```
 
@@ -3078,98 +3252,117 @@ zin.close();
 ```java
 var fout = new FileOutputStream("test.zip");
 var zout = new ZipOutputStream(fout);
-for all files
-{
+
+for all files {
     var ze = new ZipEntry(filename);
     zout.putNextEntry(ze);
+
     // 将数据发送到 zout
+
     zout.closeEntry();
 }
+
 zout.close();
 ```
 
 注意：JAR 文件（在第 4 章讨论过）只是带有清单的 ZIP 文件。使用 `JarInputStream` 和 `JarOutputStream` 来读取和写入它们。
 
-java.util.zip.ZipInputStream 1.1
+### `java.util.zip.ZipInputStream` 1.1
 
-- ZipInputStream(InputStream in)
-创建一个 `ZipInputStream`，允许从给定的 `InputStream` 解胀数据。
+- `ZipInputStream(InputStream in)`
 
-- ZipEntry getNextEntry()
-返回下一个条目，如果没有更多条目则返回 null。
+  创建一个 `ZipInputStream`，允许从给定的 `InputStream` 解胀数据。
 
-- void closeEntry()
-关闭当前条目。
+- `ZipEntry getNextEntry()`
 
-java.util.zip.ZipOutputStream 1.1
+  返回下一个条目，如果没有更多条目则返回 `null`。
 
-- ZipOutputStream(OutputStream)
-创建一个 `ZipOutputStream`，可以使用它向指定的 `OutputStream` 写入压缩数据。
+- `void closeEntry()`
 
-- void putNextEntry(ZipEntry ze)
-将 `ZipEntry` 中的信息写入输出流并定位数据位置。
+  关闭当前条目。
 
-- void closeEntry()
-关闭 ZIP 文件中的条目。
+### `java.util.zip.ZipOutputStream` 1.1
 
-- void setLevel(int level)
-设置后续 DEFLATED 条目的默认压缩级别，范围从 `Deflater.NO_COMPRESSION` 到 `Deflater.BEST_COMPRESSION`。默认值为 `Deflater.DEFAULT_COMPRESSION`。如果级别无效则抛出 `IllegalArgumentException`。
+- `ZipOutputStream(OutputStream)`
 
-java.util.zip.ZipEntry 1.1
+  创建一个 `ZipOutputStream`，可以使用它向指定的 `OutputStream` 写入压缩数据。
 
-- ZipEntry(String name)
-构造一个给定名称 ZIP 条目。
+- `void putNextEntry(ZipEntry ze)`
 
-- long getCrc()
-返回此条目的 CRC32 校验和。
+  将 `ZipEntry` 中的信息写入输出流并定位数据位置。
 
-- String getName()
-返回此条目的名称。
+- `void closeEntry()`
 
-- long getSize()
-返回条目的未压缩大小，如果未知则返回 -1。
+  关闭 ZIP 文件中的条目。
 
-- boolean isDirectory()
-如果此条目是目录则返回 true。
+- `void setLevel(int level)`
 
-- void setMethod(int method)
-设置条目的压缩方法为 DEFLATED 或 STORED。
+  设置后续 DEFLATED 条目的默认压缩级别，范围从 `Deflater.NO_COMPRESSION` 到 `Deflater.BEST_COMPRESSION`。默认值为 `Deflater.DEFAULT_COMPRESSION`。如果级别无效则抛出 `IllegalArgumentException`。
 
-- void getSize(long size)
-设置条目的大小。只有在压缩方法为 STORED 时才需要。
+### `java.util.zip.ZipEntry` 1.1
 
-- void setCrc(long crc)
-设置此条目的 CRC32 校验和。使用 `CRC32` 类计算此校验和。只有在压缩方法为 STORED 时才需要。
+- `ZipEntry(String name)`
 
-java.util.zip.ZipFile 1.1
+  构造一个给定名称 ZIP 条目。
 
-- ZipFile(String name)
-- ZipFile(File file)
-- ZipFile(String name, Charset charset) 1.7
-- ZipFile(File file, Charset charset) 1.7
-从给定的名称或 File 对象创建 `ZipFile` 用于读取。如果提供了 `Charset`，它指示条目名称的编码。否则假设编码为 UTF-8。
+- `long getCrc()`
 
-- Enumeration entries()
-返回一个 `Enumeration` 对象，枚举描述 `ZipFile` 条目的 `ZipEntry` 对象。
+  返回此条目的 CRC32 校验和。
 
-- ZipEntry getEntry(String name)
-返回与给定名称对应的条目，如果没有条目则返回 null。
+- `String getName()`
 
-- InputStream getInputStream(ZipEntry ze)
-返回给定条目的 `InputStream`。
+  返回此条目的名称。
 
-- String getName()
-返回此 ZIP 文件的路径。
+- `long getSize()`
 
+  返回条目的未压缩大小，如果未知则返回 `-1`。
 
+- `boolean isDirectory()`
 
+  如果此条目是目录则返回 `true`。
 
+- `void setMethod(int method)`
+
+  设置条目的压缩方法为 DEFLATED 或 STORED。
+
+- `void getSize(long size)`
+
+  设置条目的大小。只有在压缩方法为 STORED 时才需要。
+
+- `void setCrc(long crc)`
+
+  设置此条目的 CRC32 校验和。使用 `CRC32` 类计算此校验和。只有在压缩方法为 STORED 时才需要。
+
+### `java.util.zip.ZipFile` 1.1
+
+- `ZipFile(String name)`
+- `ZipFile(File file)`
+- `ZipFile(String name, Charset charset)` 1.7
+- `ZipFile(File file, Charset charset)` 1.7
+
+从给定的名称或 `File` 对象创建 `ZipFile` 用于读取。如果提供了 `Charset`，它指示条目名称的编码。否则假设编码为 UTF-8。
+
+- `Enumeration entries()`
+
+  返回一个 `Enumeration` 对象，枚举描述 `ZipFile` 条目的 `ZipEntry` 对象。
+
+- `ZipEntry getEntry(String name)`
+
+  返回与给定名称对应的条目，如果没有条目则返回 `null`。
+
+- `InputStream getInputStream(ZipEntry ze)`
+
+  返回给定条目的 `InputStream`。
+
+- `String getName()`
+
+  返回此 ZIP 文件的路径。
 
 ## 1.3. 对象输入/输出流与序列化
 
 如果你需要存储相同类型的数据，使用固定长度的记录格式是一个很好的选择。然而，你在面向对象的程序中创建的对象很少是同一种类型。例如，你可能有一个 `staff` 数组，它名义上是 `Employee` 记录数组，但它包含的对象实际上是 `Manager` 等子类的实例。
 
-确实可以设计出一种允许存储此类多态集合的数据格式——遗憾的是，我们不必这样做。Java 语言支持一种名为**对象序列化**的通用机制，它使得将任何对象写入输出流并在稍后再次读取成为可能。（将在后续章节中看到“序列化”一词的来源。）
+确实可以设计出一种允许存储此类多态集合的数据格式——遗憾的是，我们不必这样做。Java 语言支持一种名为对象序列化的通用机制，它使得将任何对象写入输出流并在稍后再次读取成为可能。（将在后续章节中看到“序列化”一词的来源。）
 
 ### 1.3.1. 保存和加载可序列化对象
 
@@ -3184,6 +3377,7 @@ var out = new ObjectOutputStream(new FileOutputStream("employees.dat"));
 ```java
 var harry = new Employee("Harry Hacker", 50000, ...);
 var boss = new Manager("Carl Cracker", 80000, 19800);
+
 out.writeObject(harry);
 out.writeObject(boss);
 ```
@@ -3220,51 +3414,58 @@ class Employee implements Serializable { ... }
 ```java
 class Manager extends Employee {
     private Employee secretary;
+
     ...
 }
 ```
 
-每个 `Manager` 对象现在都包含一个描述秘书的 `Employee` 对象的引用。当然，两个经理可以共享同一个秘书，如 #ch01fig06 和以下代码所示：
+每个 `Manager` 对象现在都包含一个描述秘书的 `Employee` 对象的引用。当然，两个经理可以共享同一个秘书，如 `#ch01fig06` 和以下代码所示：
 
 ```java
 var harry = new Employee("Harry Hacker", . . .);
+
 var carl = new Manager("Carl Cracker", . . .);
 carl.setSecretary(harry);
+
 var tony = new Manager("Tony Tester", . . .);
 tony.setSecretary(harry);
 ```
 
-图 **1.5:** 两个经理可以共享一个共同的员工。
+图 1.5：两个经理可以共享一个共同的员工。
 
-保存这样的对象网络是一个挑战。当然，我们无法保存和恢复秘书对象的内存地址。当对象被重新加载时，它可能会 own与原始完全不同的内存地址。
+保存这样的对象网络是一个挑战。当然，我们无法保存和恢复秘书对象的内存地址。当对象被重新加载时，它可能会 own 与原始完全不同的内存地址。
 
 相反，每个对象都带有一个序列号保存——这就是为什么这种机制被称为对象序列化。以下是算法：
 
-- 1. 为遇到的每个对象引用关联一个序列号（如 #ch01fig06 所示）。
-- 2. 第一次遇到对象时，将其数据写入输出流。
-- 3. 如果之前保存过，只需从输入流中检索该对象。
+1. 为遇到的每个对象引用关联一个序列号（如 `#ch01fig06` 所示）。
+2. 第一次遇到对象时，将其数据写入输出流。
+3. 如果之前保存过，只需从输入流中检索该对象。
 
 在读回对象时，过程相反：
 
-- 1. 当输入流中第一次指定对象时，构造它，从流初始化其字段并记住序列号。
-- 2. 当遇到序列号时，检索该对象。
+1. 当输入流中第一次指定对象时，构造它，从流初始化其字段并记住序列号。
+2. 当遇到序列号时，检索该对象。
 
 序列化允许将对象从一台机器传输到另一台机器。**注意：** 正如内存地址在文件中没有意义，与其他处理器通信时也没有意义。如果一个可序列化类的父类不是可序列化的，它必须有一个可访问的无参数构造函数。考虑这个示例：
 
 列表 1.3
+
 ```java
 package serial;
+
 import java.io.*;
 
 /**
  * @version 1.2 2021-09-10
  * @author Cay Horstmann
  */
+
 class ObjectTest {
     public static void main(String[] args) {
         var harry = new Employee("Harry Hacker", 50000);
         var carl = new Manager("Carl Cracker", 80000, 19800);
         carl.setSecretary(harry);
+
         var tony = new Manager("Tony Tester", 70000, 15000);
         tony.setSecretary(harry);
 
@@ -3285,13 +3486,13 @@ class ObjectTest {
             newStaff[1].raiseSalary(10);
 
             // 打印新读入员工
-            for (Employee e : newStaff)
+            for (Employee e : newStaff) {
                 System.out.println(e);
+            }
         }
     }
 }
 ```
-
 
 父类。它执行反序列化操作，以便能够恢复多个对象引用。
 
@@ -3301,13 +3502,13 @@ class ObjectTest {
 
 每个文件都以两个字节的“魔数”开始：
 
-```
+```text
 AC ED
 ```
 
 随后是对象序列化格式的版本号，当前为：
 
-```
+```text
 00 05
 ```
 
@@ -3315,27 +3516,27 @@ AC ED
 
 字符串对象的保存格式如下：
 
-- 74
+- `74`
 - 双字节长度
 - “修改后的 UTF-8”格式的字符
 
 例如，字符串“Harry”被保存为：
 
-```
+```text
 74 00 05 Harry
 ```
 
 当保存一个对象时，该对象的类也必须被保存。类描述具有以下格式：
 
-- 72
-- 类名的 2字节长度
+- `72`
+- 类名的 2 字节长度
 - 类名
 - 8 字节指纹
 - 1 字节标志
 - 实例字段描述符的双字节计数
 - 实例字段描述符
-- 78（结束标记）
-- 父类描述（如果没有则为 70）
+- `78`（结束标记）
+- 父类描述（如果没有则为 `70`）
 
 指纹通过对类、父类、接口、字段类型和方法签名描述进行规范排序，然后对该数据应用安全哈希算法版本 1（SHA-1）得到的。
 
@@ -3349,64 +3550,67 @@ SHA-1 为数据块提供一个“指纹”。无论原始数据的大小如何�
 
 | 名称 | 值 | 描述 |
 | --- | --- | --- |
-| SC_WRITE_METHOD | 1 | 类定义了 writeObject 方法。 |
-| SC_SERIALIZABLE | 2 | 类实现了 Serializable 接口。 |
-| SC_EXTERNALIZABLE | 4 | 类实现了 Externalizable 接口。 |
-| SC_BLOCK_DATA | 8 | 以“块数据”写入的不透明数据（JDK 1.2 起默认）。 |
-| SC_ENUM | 16 | 类是一个枚举。 |
+| `SC_WRITE_METHOD` | 1 | 类定义了 `writeObject` 方法。 |
+| `SC_SERIALIZABLE` | 2 | 类实现了 `Serializable` 接口。 |
+| `SC_EXTERNALIZABLE` | 4 | 类实现了 `Externalizable` 接口。 |
+| `SC_BLOCK_DATA` | 8 | 以“块数据”写入的不透明数据（JDK 1.2 起默认）。 |
+| `SC_ENUM` | 16 | 类是一个枚举。 |
 
 我们编写的类实现了 `Serializable` 接口，其标志值为 02。可序列化的 `java.util.Date` 类的标志为 03，因为它定义了自己的 `writeObject` 方法（见第 2.3.4 节）。我们将在第 2.3.5 节讨论 `Externalizable` 接口。
 
 每个实例字段描述符具有以下格式：
 
 - 1 字节类型代码
-- 字段名的 2字节长度
+- 字段名的 2 字节长度
 - 字段名
 - 类名（如果字段是对象）
 
 类型代码是以下内容之一：
 
-```
+```text
 B byte
 ```
 
-```
+```text
 C char
 ```
 
-```
+```text
 D double
 ```
 
-```
+```text
 F float
 ```
 
-```
+```text
 I int
 ```
 
-```
+```text
 J long
 ```
 
-```
+```text
 L object
 ```
 
-```
+```text
 S short
 ```
 
-```
+```text
 Z boolean
 ```
 
-```
-[ array ]
+```text
+[ array
 ```
 
-当类型代码为 L 时，字段名后面是字段类型。类和字段字段字符串不以代码 74 开头，但字段类型是。字段类型对其名称使用了略不同的编码——即原生方法使用的格式。
+
+
+
+当类型代码为 `L` 时，字段名后面是字段类型。类和字段字符串不以代码 `74` 开头，但字段类型是。字段类型对其名称使用了略不同的编码——即原生方法使用的格式。
 
 例如，`Employee` 类的 `salary` 字段编码为：
 
@@ -3422,24 +3626,33 @@ D 00 06 salary
 
 ```
 74 1E C8 E6 C3 F8 B8 77 02 Fingerprint and fl 00 03
+
 Number of instan fields
+
 D 00 06 salary
+
 Instance field typ name
+
 L 00 07 hireDay
+
 Instance field typ name
+
 74 00 10 Ljava/util/Date;
+
 Instance field cla: java.util.D
+
 L 00 04 name
+
 Instance field typ name
+
 74 00 10 Ljava/util/Date;
+
 Instance field cla: java.util.D
 ```
 
 （注：由于原始文本包含大量 OCR 错误、重复和碎片，上述翻译已根据要求进行了逻辑合并和清理。）
 
-
-
-
+```
 AC ED 00 05
 
 File he
@@ -3616,44 +3829,53 @@ End m
 74 00 0B Tony Tester
 
 71 00 7E 00 0B
+```
 
 当然，研究这些代码可能像读电话簿一样无趣。了解确切的文件格式并不重要（除非你正试图通过修改数据来制造某种恶作剧），但了解序列化格式仍然很有启发性，因为序列化格式对其中包含的所有对象有详细的描述，其细节程度足以允许重构对象和对象数组。
 
 你应该记住的是这些：
 
--   序列化格式包含了所有对象的类型和实例字段。
--   每个对象都被分配了一个序列号。
--   同一个对象的重复出现被存储为对该序列号的引用。
+- 序列化格式包含了所有对象的类型和实例字段。
+- 每个对象都被分配了一个序列号。
+- 同一个对象的重复出现被存储为对该序列号的引用。
 
-### 1.3.3. Transient字段（Transient Fields）
+### 1.3.3. `Transient` 字段（Transient Fields）
 
 某些字段永远不应该被序列化——例如，当对象被重构时没有意义的数据库连接。此外，当一个对象保留了值的缓存时，丢弃缓存并重新计算可能比存储它更好。为了防止字段被序列化，请用 `transient` 修饰符对其进行标记。如果字段持有不可序列化类的实例，请始终将字段标记为 `transient`。在对象序列化时，`transient` 字段会被直接跳过。
 
-### 1.3.4. readObject 和 writeObject 方法
+### 1.3.4. `readObject` 和 `writeObject` 方法
 
-在极少数情况下，你需要微调序列化机制。可序列化类可以通过定义具有以下签名的方法向向默认读取和写入行为中添加任何所需的操作：
+在极少数情况下，你需要微调序列化机制。可序列化类可以通过定义具有以下签名的方法向默认读取和写入行为中添加任何所需的操作：
 
-```
+```java
 @Serial private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException;
+
 @Serial private void writeObject(ObjectOutputStream out) throws IOException;
 ```
 
-然后，对象头将像往常一样写入，但实例变量不再自动序列化。相反，将调用这些方法。请注意 @Serial 注解。微调序列化的方法不属于接口。因此，你可以使用该注解来让编译器检查方法声明。@Serial 注解旨在对序列化方法启用与 IntelliJ IDE 相同的检查功能。`java.awt.geom` 包中的一些类（如 `Point2D.Double`）是不可序列化的。现在，假设你想序列化一个存储了 `String` 和 `Point2D.Double` 的 `LabeledPoint` 类。首先，你需要将 `Point2D.Double` 字段标记为 `transient` 以避免 `SerializableException`。
+然后，对象头将像往常一样写入，但实例变量不再自动序列化。相反，将调用这些方法。请注意 `@Serial` 注解。微调序列化的方法不属于接口。因此，你可以使用该注解来让编译器检查方法声明。`@Serial` 注解旨在对序列化方法启用与 IntelliJ IDE 相同的检查功能。`java.awt.geom` 包中的一些类（如 `Point2D.Double`）是不可序列化的。现在，假设你想序列化一个存储了 `String` 和 `Point2D.Double` 的 `LabeledPoint` 类。首先，你需要将 `Point2D.Double` 字段标记为 `transient` 以避免 `SerializableException`。
 
-```
+```java
 public class LabeledPoint implements Serializable {
+
     private String label;
+
     private transient Point2D.Double point;
+
 }
 ```
 
 在 `writeObject` 方法中，首先通过调用 `defaultWriteObject` 方法写入对象描述符和字符串字段 `label`。这是 `ObjectOutputStream` 类的一个特殊方法，只能在序列化类的 `writeObject` 方法内部调用。然后使用标准的 `DataOutput` 调用写入点坐标。
 
-```
+```java
 private void writeObject(ObjectOutputStream out) {
+
     out.defaultWriteObject();
+
     out.writeDouble(point.getX());
+
     out.writeDouble(point.getY());
+
 }
 ```
 
@@ -3661,30 +3883,39 @@ private void writeObject(ObjectOutputStream out) {
 
 ```java
 private void readObject(ObjectInputStream in)
+
     throws IOException, ClassNotFoundException {
+
     in.defaultReadObject();
+
     double x = in.readDouble();
+
     double y = in.readDouble();
+
     point = new Point2D.Double(x, y);
+
 }
 ```
 
-另一个例子是 `HashSet` 类，它提供了 `readObject` 方法。而不是让序列化机制保存其内部结构，`writeObject` 方法仅保存了容量、负载因子和元素。`readObject` 方法读回容量、负载因子并插入元素。`Date` 类使用这种方法保存自纪元（1970年1月1日）以来的毫秒数。其 `writeObject` 方法保存日历数据。**注意：** 就像构造函数一样，`readObject` 方法作用于已初始对象。如果在子类中重写了 `readObject` 方法，可能会访问未初始化的数据。如果可序列化类定义了字段
+另一个例子是 `HashSet` 类，它提供了 `readObject` 方法。而不是让序列化机制保存其内部结构，`writeObject` 方法仅保存了容量、负载因子和元素。`readObject` 方法读回容量、负载因子并插入元素。`Date` 类使用这种方法保存自纪元（1970年1月1日）以来的毫秒数。其 `writeObject` 方法保存日历数据。
 
-```
+**注意：** 就像构造函数一样，`readObject` 方法作用于已初始对象。如果在子类中重写了 `readObject` 方法，可能会访问未初始化的数据。如果可序列化类定义了字段：
+
+```java
 @Serial static final Object serial
 ```
 
 那么序列化将使用这些字段描述符而非非静态字段。还有在序列化之前设置字段或在反序列化后读取字段的 API。这在类演进后非常有用。例如，`BigDecimal` 类使用这种机制序列化不再反映实例字段。
 
-### 1.3.5. readExternal 和 writeExternal 方法
+### 1.3.5. `readExternal` 和 `writeExternal` 方法
 
 与其让序列化机制保存和恢复对象数据，类可以定义自己的机制。例如，你可以对数据进行加密，或者使用比序列化格式更有效的格式。
 
 要实现这一点，类必须实现 `Externalizable` 接口。这反过来要求定义两个方法：
 
-```
+```java
 public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException
+
 public void writeExternal(ObjectOutput out) throws IOException;
 ```
 
@@ -3692,33 +3923,45 @@ public void writeExternal(ObjectOutput out) throws IOException;
 
 在这个示例中，`LabeledPixel` 类继承序列化的 `Point` 类，但它接管了类及其父类的序列化。对象的字段没有存储在标准的序列化格式中。相反，数据被放在一个透明块中。
 
-```
+```java
 public class LabeledPixel extends Point implements Externalizable {
+
     private String label;
 
     public LabeledPixel() {} // 外部化需要
 
     public void writeExternal(ObjectOutput out) throws IOException {
+
         out.writeInt((int) getX());
+
         out.writeInt((int) getY());
+
         out.writeUTF(label);
+
     }
 
     public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+
         int x = in.readInt();
+
         int y = in.readInt();
+
         point = new Point2D.Double(x, y);
+
     }
+
 }
 ```
 
-
-
-```
+```java
 setLocation(x, y);
-  label = in.readUTF();
+
+label = in.readUTF();
+
 }
-  ..
+
+..
+
 }
 ```
 
@@ -3726,7 +3969,7 @@ setLocation(x, y);
 
 **警告：** 与 `readObject` 和 `writeObject` 方法（是私有的且只能由序列化机制调用）不同，`readExternal` 和 `writeExternal` 方法是公共的。特别是 `readExternal` 允许对现有对象的状态修改。
 
-### 1.3.6. readResolve 和 writeReplace 方法
+### 1.3.6. `readResolve` 和 `writeReplace` 方法
 
 我们理所当然认为对象只能通过构造函数创建。然而，反序列化的对象并不是通过构造函数创建的。它的实例变量仅仅是从一个对象流中恢复的。
 
@@ -3736,10 +3979,13 @@ setLocation(x, y);
 
 ```java
 public enum PersonDatabase {
+
     INSTANCE;
 
     public Person findById(int id) { . . . }
+
     . . .
+
 }
 ```
 
@@ -3749,12 +3995,19 @@ public enum PersonDatabase {
 
 ```java
 public class Person implements Serializable {
+
     private int id;
+
     // 其他实例变量
+
     ...
+
     @Serial private Object writeReplace() {
+
         return new PersonProxy(id);
+
     }
+
 }
 ```
 
@@ -3764,23 +4017,29 @@ public class Person implements Serializable {
 
 ```java
 class PersonProxy implements Serializable {
+
     private int id;
 
     public PersonProxy(int id) {
+
         this.id = id;
+
     }
 
     @Serial private Object readResolve() {
+
         return PersonDatabase.INSTANCE.findById(id)
+
     }
+
 }
 ```
 
 当 `ObjectInputStream` 发现一个 `PersonProxy` 时，它会反序列化该代理，调用其 `readResolve` 方法并返回结果。
 
-> 注意：与 `readObject` 和 `writeObject` 方法不同，`readResolve` 和 `writeReplace` 方法不需要是私有的。
+> **注意：** 与 `readObject` 和 `writeObject` 方法不同，`readResolve` 和 `writeReplace` 方法不需要是私有的。
 
-> 注意：对于枚举和记录（records），不使用 `readObject/writeObject` 或 `readExternal/writeExternal` 方法进行序列化。对于记录（但对于枚举不是），将使用 `writeReplace` 方法。
+> **注意：** 对于枚举和记录（records），不使用 `readObject/writeObject` 或 `readExternal/writeExternal` 方法进行序列化。对于记录（但对于枚举不是），将使用 `writeReplace` 方法。
 
 ### 1.3.7. 版本控制
 
@@ -3788,7 +4047,7 @@ class PersonProxy implements Serializable {
 
 显然，如果对象文件能够处理类的演进将是理想的。
 
-乍一看，这似乎是不可能的。当类定义发生任何变化时，SHA 指纹也会随之变化，而你知道对象输入流将拒绝读取具有不同指纹的对象。然而，类可以标明它与自身的早期版本兼容。要做到这一点，你必须先获取该类早期版本的指纹。使用 JDK 部分的独立程序 `serialver` 来获取此数字。例如，运行
+乍一看，这似乎是不可能的。当类定义发生任何变化时，SHA 指纹也会随之变化，而你知道对象输入流将拒绝读取具有不同指纹的对象。然而，类可以标明它与自身的早期版本兼容。要做到这一点，你必须先获取该类早期版本的指纹。使用 JDK 部分的独立程序 `serialver` 来获取此数字。例如，运行：
 
 ```bash
 serialver serial.Employee
@@ -3796,7 +4055,7 @@ serialver serial.Employee
 
 将打印出：
 
-```
+```text
 serial.Employee: static final long serialVersion
 ```
 
@@ -3806,9 +4065,13 @@ serial.Employee: static final long serialVersion
 class Employee implements Serializable // 版本
 {
   . . .
+
   @Serial public static final long serialVersion
 }
 ```
+
+
+
 
 当类中有一个命名为 `serialVersionUID` 的静态数据成员时，它将不会手动计算指纹，而是使用该值。
 
@@ -3816,30 +4079,28 @@ class Employee implements Serializable // 版本
 
 如果只是类的方法发生了变化，读取新的对象数据没有问题。但是，如果实例字段发生了变化，你可能会遇到问题。例如，旧文件对象的实例字段可能比程序中的对象多或少，或者实例字段的类型可能不同。在这种情况下，对象输入流会尽力将序列化对象转换为类的当前版本。
 
-对象输入流会将类当前版本的实例字段与序列化对象中版本的实例字段进行比较。当然，对象输入流只考虑非瞬态（nontransient）和非静态（nonstatic）的实例字段。如果两个字段名称相同但类型不同，对象输入流不会尝试将一种类型转换为另一种类型——对象是不兼容的。如果序列化对象具有当前版本中不存在的实例字段，对象输入流将忽略额外数据。如果当前版本具有序列化对象中不存在的实例字段，则新增的字段被设置为它们的默认值（对象为 null，数字为 0，布尔值为 false）。
+对象输入流会将类当前版本的实例字段与序列化对象中版本的实例字段进行比较。当然，对象输入流只考虑非瞬态（`nontransient`）和非静态（`nonstatic`）的实例字段。如果两个字段名称相同但类型不同，对象输入流不会尝试将一种类型转换为另一种类型——对象是不兼容的。如果序列化对象具有当前版本中不存在的实例字段，对象输入流将忽略额外数据。如果当前版本具有序列化对象中不存在的实例字段，则新增的字段被设置为它们的默认值（对象为 `null`，数字为 `0`，布尔值为 `false`）。
 
-这里有一个示例。假设我们使用类的原始版本（1.0）在磁盘上保存了一些员工对象。现在我们通过添加一个实例字段将 `Employee` 类更改为 2.0。#01fig9 显示了当 1.0 对象被读入使用 2.0 的程序时发生了什么。部门字段被设置为 null。#01fig10 显示了相反的情况：使用 1.0 的程序读取 2.0 对象。部门字段被忽略。
+这里有一个示例。假设我们使用类的原始版本（1.0）在磁盘上保存了一些员工对象。现在我们通过添加一个实例字段将 `Employee` 类更改为 2.0。#01fig9 显示了当 1.0 对象被读入使用 2.0 的程序时发生了什么。部门字段被设置为 `null`。#01fig10 显示了相反的情况：使用 1.0 的程序读取 2.0 对象。部门字段被忽略。
 
 图 1.7 读取实例字段较少的对象
 
 图 1.8 读取实例字段较的对象
 
-这种过程安全吗？这取决于情况。实例仍然拥有它所能操作的数据。将实例字段设置为 null 可能并不安全。许多类会努力在构造函数中将所有实例字段初始化为非空值，这样方法就不需要处理 null 数据。类设计者负责在 `readObject` 方法中实现额外的代码来修复版本不兼容问题，或者确保方法足够健壮以处理 null 数据。
+这种过程安全吗？这取决于情况。实例仍然拥有它所能操作的数据。将实例字段设置为 `null` 可能并不安全。许多类会努力在构造函数中将所有实例字段初始化为非空值，这样方法就不需要处理 `null` 数据。类设计者负责在 `readObject` 方法中实现额外的代码来修复版本不兼容问题，或者确保方法足够健壮以处理 `null` 数据。
 
 > **提示：** 在向类添加 `serialVersionUID` 字段之前，问问自己为什么要让你的类变为可序列化。如果序列化仅用于短期持久化（例如服务器中的分布式方法调用），则不需要担心版本控制和 `serialVersionUID`。如果你扩展了一个恰好可序列化的类，但你从未打算持久它的实例，情况也一样。如果你的 IDE 给你烦人的警告，请更改 IDE 偏好以关闭它们，或者添加注解 `@SuppressWarnings("serial")`。这比添加一个你可能忘记更改的 `serialVersionUID` 要安全。
 
-注意：枚举和记录忽略 `serialVersionUID` 字段。枚举始终有一个 0L 的 `serialVersionUID`。你可以声明记录的 `serialVersionUID`，但反序列化不需要它们匹配。
+注意：枚举和记录忽略 `serialVersionUID` 字段。枚举始终有一个 `0L` 的 `serialVersionUID`。你可以声明记录的 `serialVersionUID`，但反序列化不需要它们匹配。
 
-注意：在本节中，我们看到了当读取器的类版本具有对象流中不存在的实例字段时会发生什么。在类演进过程中，也可能添加父类。这时使用新版本的读取器可能会读取一个未设置父类实例字段的对象流。默认情况下，这些实例字段将被设置为零/null默认值。这可能让父类处于不安全状态。父类可以通过定义一个初始化方法来防御该问题：
+注意：在本节中，我们看到了当读取器的类版本具有对象流中不存在的实例字段时会发生什么。在类演进过程中，也可能添加父类。这时使用新版本的读取器可能会读取一个未设置父类实例字段的对象流。默认情况下，这些实例字段将被设置为零/`null` 默认值。这可能让父类处于不安全状态。父类可以通过定义一个初始化方法来防御该问题：
 
 ```java
-@Serial private void readObjectNoData(
+@Serial
+private void readObjectNoData()
 ```
 
-
-
-
-该方法应该设置与无参数构造函数相同的状态，或者抛 true一个 `InvalidObjectException`。它只在一种特殊情况下被调用，即读取一个对象流时，该流包含一个缺失父类数据的子类实例。
+该方法应该设置与无参数构造函数相同的状态，或者抛出一个 `InvalidObjectException`。它只在一种特殊情况下被调用，即读取一个对象流时，该流包含一个缺失父类数据的子类实例。
 
 ### 1.3.8. 使用序列化进行克隆
 
@@ -3852,33 +4113,31 @@ class Employee implements Serializable // 版本
 ## Listing 1.4 serialClone/SerialCloneTest.java
 
 ```java
-1 package serialClone;
-2 **
-3 /*
-4 * @version 1.23 2024-01-12
-5 * @author Cay Horstmann
-6 */
-7
-8 import java.io.*;
-9 import java.time.*;
-10
-11 public class SerialCloneTest
-12 {
-13     public static void main(String[] args) {
-14         {
-15             var harry = new Employee("Harry Hacker");
-16             // clone harry
-17             var harry2 = (Employee) harry.clone();
-18
-19             // mutate harry
-20             harry.raiseSalary(10);
-21
-22             // now harry and the clone are different
-23             System.out.println(harry);
-24             System.out.println(harry2);
-25         }
-26 }
-27 }
+package serialClone;
+
+/**
+ * @version 1.23 2024-01-12
+ * @author Cay Horstmann
+ */
+
+import java.io.*;
+import java.time.*;
+
+public class SerialCloneTest {
+    public static void main(String[] args) {
+        var harry = new Employee("Harry Hacker");
+
+        // clone harry
+        var harry2 = (Employee) harry.clone();
+
+        // mutate harry
+        harry.raiseSalary(10);
+
+        // now harry and the clone are different
+        System.out.println(harry);
+        System.out.println(harry2);
+    }
+}
 ```
 
 ```java
@@ -3902,39 +4161,36 @@ class SerialCloneable implements Cloneable {
         } catch (IOException | ClassNotFoundException e) {
             var e2 = new CloneNotSupportedException();
             e2.initCause(e);
-55 throw e2;
-56 }
-57 }
-58 }
-
+            throw e2;
+        }
+    }
+}
 ```
 
 ```java
 /**
  * 重新定义的 Employee 类
  */
-class Employee extends SerialCloneable
-{
+class Employee extends SerialCloneable {
     private String name;
     private double salary;
     private LocalDate hireDay;
+
     public Employee(String n, double s, int year, int month, int day) {
         name = n;
         salary = s;
         hireDay = LocalDate.of(year, month, day);
     }
-    public String getName()
-    {
+
+    public String getName() {
         return name;
     }
 
-    public double getSalary()
-    {
+    public double getSalary() {
         return salary;
     }
 
-    public LocalDate getHireDay()
-    {
+    public LocalDate getHireDay() {
         return hireDay;
     }
 
@@ -3943,14 +4199,12 @@ class Employee extends SerialCloneable
      *
      * @param byPercent 工资的百分比
      */
-    public void raiseSalary(double byPercent)
-    {
+    public void raiseSalary(double byPercent) {
         double raise = salary * byPercent / 100;
         salary += raise;
     }
 
-    public String toString()
-    {
+    public String toString() {
         return getClass().getName() + "[name=" + name;
     }
 }
@@ -3967,8 +4221,7 @@ class Employee extends SerialCloneable
 可序列化类可以选择性实现 `ObjectInputValidation` 并定义 `validateObject` 方法。例如，`Employee` 类可以检查工资是否为负数：
 
 ```java
-public void validateObject() throws InvalidObjectException
-{
+public void validateObject() throws InvalidObjectException {
     System.out.println("validating");
     if (salary < 0)
         throw new InvalidObjectException("salary");
@@ -3978,8 +4231,8 @@ public void validateObject() throws InvalidObjectException
 遗憾的是，该方法不会被自动调用。要调用它，你必须提供：
 
 ```java
-private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException
-{
+private void readObject(ObjectInputStream in)
+        throws IOException, ClassNotFoundException {
     in.defaultReadObject();
     in.registerValidation(this);
 }
@@ -3991,9 +4244,9 @@ private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundE
 
 任何通过网络连接从不可信源接收序列化数据的应用程序都会受到攻击。例如，在会话数据的情况下，服务器应对数据进行签名并仅对有效签名的数据反序列化。JEP 290 和 415 提供了序列化过滤机制来加固应用程序。过滤器可以查看反序列化的类名以及若干指标（流大小、数组大小、引用总数、最引用链）。根据这些数据，可以中止反序列化。
 
-在最简单的形式下，你提供一个描述有效类的类的模式。例如，如果你启动示例程序时使用 `-Djdk.serialFilter='serial.*;java.**;!*'`，则对象会被加载。该过滤器允许 serial 包中的所有类以及所有以 java 开头的包类，但不允许其他类。如果不允许 `java.**` 或至少允许 `java.util.Date`，反序列化将失败。
+在最简单的形式下，你提供一个描述有效类的类的模式。例如，如果你启动示例程序时使用 `-Djdk.serialFilter='serial.*;java.**;!*'`，则对象会被加载。该过滤器允许 `serial` 包中的所有类以及所有以 `java` 开头的包类，但不允许其他类。如果不允许 `java.**` 或至少允许 `java.util.Date`，反序列化将失败。
 
-你可以将过滤器模式放入配置文件并为不同目的指定多个过滤器。你也可以实现自己的过滤器。详情请参阅 https://docs.oracle.com/en/java/javase/21/core/serialization-filtering1.html。
+你可以将过滤器模式放入配置文件并为不同目的指定多个过滤器。你也可以实现自己的过滤器。详情请参阅 <https://docs.oracle.com/en/java/javase/21/core/serialization-filtering1.html>。
 
 ## 1.4. 操作文件
 
@@ -4003,13 +4256,11 @@ private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundE
 
 ### 1.4.1. 路径
 
+`Path` 是一个目录名称的序列，可选地跟一个文件名。路径的第一个组件可以是根组件，例如 `/` 或 `C:\`。允许的根组件取决于文件系统。以根组件开头的路径是绝对路径。否则，它是相对路径。例如，我们构造了一个绝对路径和一个相对路径。对于绝对路径，我们假设使用一个类 UNIX 的文件系统。
 
-
-Path 是一个目录名称的序列，可选地跟一个文件名。路径的第一个组件可以是根组件，例如 `/` 或 `C:\`。允许的根组件取决于文件系统。以根组件开头的路径是绝对路径。否则，它是相对路径。例如，我们构造了一个绝对路径和一个相对路径。对于绝对路径，我们假设使用一个类 UNIX 的文件系统。
-
-```
+```java
 Path absolute = Path.of("/home", "harry");
-Path relative = Path.of("myprog", "conf", "user")
+Path relative = Path.of("myprog", "conf", "user");
 ```
 
 静态方法 `Path.of` 接收一个或多个字符串，并将它们与默认文件系统的路径分隔符连接起来（类 UNIX 文件系统使用 `/`，Windows 使用 `\`）。然后，它会解析结果，如果该结果在给定的文件系统中不是有效路径，则抛出 `InvalidPathException`。结果是一个 `Path` 对象。
@@ -4018,7 +4269,9 @@ Path relative = Path.of("myprog", "conf", "user")
 
 ```java
 String baseDir = props.getProperty("base.dir");
+
 // 可能是一个字符串，如 /opt/myprog 或 c:\
+
 Path basePath = Path.of(baseDir); // 这里的 base 是正确的
 ```
 
@@ -4043,15 +4296,15 @@ Path workPath = basePath.resolve(workRelative);
 Path workPath = basePath.resolve("work");
 ```
 
-**注意：** `resolve` 方法不会简化结果。例如，
+**注意：** `resolve` 方法不会简化结果。例如：
 
 ```java
-Path.of("/usr/bin").resolve("../local")
+Path.of("/usr/bin").resolve("../local");
 ```
 
 是一个路径 `/usr/bin/../local`。
 
-有一个便利方法 `resolveSibling`，它相对于路径的父目录进行解析，产生兄弟路径。例如，如果 `workPath` 是 `/opt/myapp/work`，调用
+有一个便利方法 `resolveSibling`，它相对于路径的父目录进行解析，产生兄弟路径。例如，如果 `workPath` 是 `/opt/myapp/work`，调用：
 
 ```java
 Path tempPath = workPath.resolveSibling("temp");
@@ -4065,14 +4318,19 @@ Path tempPath = workPath.resolveSibling("temp");
 
 `toAbsolutePath` 方法产生给定路径的绝对路径，从根组件开始，例如 `/home/fred/input.txt` 或 `c:\Users\fred\input.txt`。
 
-`Path` 接口有很多拆分路径的有用方法。这段示例代码展示了一些最用的方法：
+`Path` 接口有很多拆分路径的有用方法。这段示例代码展示了一些最有用的方法：
 
 ```java
 Path p = Path.of("/home", "fred", "myprog.properties");
+
 Path parent = p.getParent(); // 路径 /home/fred
 Path file = p.getFileName(); // 路径 myprog.properties
 Path root = p.getRoot(); // 路径 /
 ```
+
+
+
+
 
 注意：`getFileName` 方法简单地返回给定路径的最后一个名称。如果路径描述的是目录，那么它是目录名，而不是文件名。
 
@@ -4088,7 +4346,7 @@ var in = new Scanner(Path.of("/home/fred/input.txt"));
 java.nio.file.Path 7
 ```
 
-- static `Path of(String first, String... more)` 通过连接给定字符串创建一个路径。
+- `static Path of(String first, String... more)` 通过连接给定字符串创建一个路径。
 - `Path resolve(Path other)`
 - `Path resolve(String other)` 如果 `other` 是绝对的，返回 `other`；否则，返回连接此和 `other` 得到的路径。
 - `Path resolveSibling(Path other)`
@@ -4102,21 +4360,21 @@ java.nio.file.Path 7
 - `Path toFile()` 返回表示此路径的 `File` 对象。
 - `File toPath()` 转换 `File` 并返回 `Path`。
 
-
-
-
 如果文件已经存在，该调用将抛出异常。存在性检查和创建是原子的。如果文件不存在，它将在其他人有机会进行相同操作之前被创建。
 
 提供了一些便利方法，可以在给定或系统特定的位置创建临时文件或目录。
 
-```
+```java
 Path newPath = Files.createTempFile(dir, prefix, suffix);
+
 Path newPath = Files.createTempFile(prefix, suffix);
+
 Path newPath = Files.createTempDirectory(dir, prefix);
+
 Path newPath = Files.createTempDirectory(prefix);
 ```
 
-在这里，dir 是一个 `Path`，prefix / suffix 是可能为 `null` 的字符串。例如，调用 `Files.createTempFile(null, ".txt")` 可能会返回如下路径：/tmp/1234405522364837194.txt。
+在这里，`dir` 是一个 `Path`，`prefix` / `suffix` 是可能为 `null` 的字符串。例如，调用 `Files.createTempFile(null, ".txt")` 可能会返回如下路径：`/tmp/1234405522364837194.txt`。
 
 当你创建文件或目录时，可以指定属性，例如所有者或权限。然而，细节取决于文件系统，我们在这里不再介绍这些内容。
 
@@ -4124,16 +4382,16 @@ Path newPath = Files.createTempDirectory(prefix);
 java.nio.file.Files 7
 ```
 
-- static Path Path(Path path, FileAttribute<??>... attrs)
-- static Path createDirectory(Path path, FileAttribute<??>... attrs)
-- static Path createDirectories(Path path, FileAttribute<??>... attrs)
+- `static Path Path(Path path, FileAttribute<??>... attrs)`
+- `static Path createDirectory(Path path, FileAttribute<??>... attrs)`
+- `static Path createDirectories(Path path, FileAttribute<??>... attrs)`
 
 创建一个文件或目录。`createDirectories` 方法还会创建任何中间目录。
 
-- static Path createTempFile(String prefix, String suffix, FileAttribute<??>... attrs)
-- static Path createTempFile(Path parentDir, String prefix, String suffix, FileAttribute<??>... attrs)
-- static Path createTempDirectory(String prefix, FileAttribute<??>... attrs)
-- static Path createTempDirectory(Path parentDir, String prefix, FileAttribute<??>... attrs)
+- `static Path createTempFile(String prefix, String suffix, FileAttribute<??>... attrs)`
+- `static Path createTempFile(Path parentDir, String prefix, String suffix, FileAttribute<??>... attrs)`
+- `static Path createTempDirectory(String prefix, FileAttribute<??>... attrs)`
+- `static Path createTempDirectory(Path parentDir, String prefix, FileAttribute<??>... attrs)`
 
 在适合临时文件的位置或指定的父目录中创建临时文件或目录。返回所创建的文件或目录的路径。
 
@@ -4141,32 +4399,33 @@ java.nio.file.Files 7
 
 要将文件从一个位置复制到另一个位置，只需复制：
 
-```
+```java
 Files.copy(fromPath, toPath);
 ```
 
 如果要移动文件，请调用：
 
-```
+```java
 Files.move(fromPath, toPath);
 ```
 
 如果目标存在，则复制或移动将失败。如果你想覆盖现有目标，请使用 `REPLACE_EXISTING` 选项。如果你想复制所有文件属性，请使用 `COPY_ATTRIBUTES` 选项。你可以这样同时提供两者：
 
-```
+```java
 Files.copy(fromPath, toPath, StandardCopyOption.COPY_ATTRIBUTES);
 ```
 
 你可以指定移动应该是原子的。这样你就能确保要么移动成功完成，要么源文件仍然存在。使用 `ATOMIC_MOVE` 选项：
 
-```
+```java
 Files.move(fromPath, toPath, StandardCopyOption.ATOMIC_MOVE);
 ```
 
-你还可以将输入流复制到 `Path`，这这意味着将输入流保存到磁盘。同样，你可以将 `Path` 复制到输出流。使用以下调用：
+你还可以将输入流复制到 `Path`，这意味着将输入流保存到磁盘。同样，你可以将 `Path` 复制到输出流。使用以下调用：
 
-```
+```java
 Files.copy(inputStream, toPath);
+
 Files.copy(fromPath, outputStream);
 ```
 
@@ -4174,7 +4433,7 @@ Files.copy(fromPath, outputStream);
 
 最后，要删除文件，只需调用：
 
-```
+```java
 Files.delete(path);
 ```
 
@@ -4188,66 +4447,66 @@ boolean deleted = Files.deleteIfExists(path);
 
 查看表 2.9 获取文件操作可用选项的总结。
 
-**表 1.4:** 文件操作的标准选项
+**表 1.4：** 文件操作的标准选项
 
 | 选项 | 说明 |
 | --- | --- |
-| **StandardOpenOption** | 与 **newBufferedWriter, newInputStream, newOutputStream, write.** 使用。 |
-| READ | 用于读取打开。 |
-| WRITE | 用于写入打开。 |
-| APPEND | 如果用于写入打开，则追加到文件末尾。 |
-| TRUNCATE_EXISTING | 如果用于写入，则删除现有内容。 |
-| CREATE_NEW | 创建新文件，如果已存在则失败。 |
-| CREATE | 如果不存在，则原子地创建一个新文件。 |
-| DELETE_ON_CLOSE | 关闭文件时“尽力”删除该文件。 |
-| SPARSE | 给文件系统的提示，该文件将是稀疏文件。 |
-| DSYNC 或 SYNC | 要求每次文件数据或数据和元数据的更新都同步写入存储设备。 |
-| StandardCopyOption | 与 `copy`, `move` 使用。 |
-| ATOMIC_MOVE | 原子地移动文件。 |
-| COPY_ATTRIBUTES | 复制文件属性。 |
-| REPLACE_EXISTING | 如果目标存在，则替换。 |
-| LinkOption | 与上述所有方法以及 `exists`, `isDirectory`, `isRegularFile` 使用。 |
-| NOFOLLOW_LINKS | 不跟随符号链接。 |
-| FileVisitOption | 与 `find`, `walk`, `walkFileTree` 使用。 |
-| FOLLOW_LINKS | 跟随符号链接。 |
+| `StandardOpenOption` | 与 `newBufferedWriter`、`newInputStream`、`newOutputStream`、`write` 使用。 |
+| `READ` | 用于读取打开。 |
+| `WRITE` | 用于写入打开。 |
+| `APPEND` | 如果用于写入打开，则追加到文件末尾。 |
+| `TRUNCATE_EXISTING` | 如果用于写入，则删除现有内容。 |
+| `CREATE_NEW` | 创建新文件，如果已存在则失败。 |
+| `CREATE` | 如果不存在，则原子地创建一个新文件。 |
+| `DELETE_ON_CLOSE` | 关闭文件时“尽力”删除该文件。 |
+| `SPARSE` | 给文件系统的提示，该文件将是稀疏文件。 |
+| `DSYNC` 或 `SYNC` | 要求每次文件数据或数据和元数据的更新都同步写入存储设备。 |
+| `StandardCopyOption` | 与 `copy`、`move` 使用。 |
+| `ATOMIC_MOVE` | 原子地移动文件。 |
+| `COPY_ATTRIBUTES` | 复制文件属性。 |
+| `REPLACE_EXISTING` | 如果目标存在，则替换。 |
+| `LinkOption` | 与上述所有方法以及 `exists`、`isDirectory`、`isRegularFile` 使用。 |
+| `NOFOLLOW_LINKS` | 不跟随符号链接。 |
+| `FileVisitOption` | 与 `find`、`walk`、`walkFileTree` 使用。 |
+| `FOLLOW_LINKS` | 跟随符号链接。 |
 
 ## java.nio.file.Files 7
 
-- * static Path copy(Path from, Path to, CopyOption... options)
-- * static Path move(Path from, Path to, CopyOption... options)
-- * static long copy(InputStream from, Path to, CopyOption... options)
-- * static long copy(Path from, OutputStream to, CopyOption... options)
-- * static void delete(Path)
-- * static boolean deleteIfExists(Path)
+- `static Path copy(Path from, Path to, CopyOption... options)`
+- `static Path move(Path from, Path to, CopyOption... options)`
+- `static long copy(InputStream from, Path to, CopyOption... options)`
+- `static long copy(Path from, OutputStream to, CopyOption... options)`
+- `static void delete(Path)`
+- `static boolean deleteIfExists(Path)`
 
 ### 1.4.5. 获取文件信息
 
 以下静态方法返回以检查文件的属性：
 
-- static boolean exists(Path)
-- static boolean isHidden(Path)
-- static boolean isReadable(Path)
-- static boolean isWritable(Path)
-- static boolean isExecutable(Path)
-- static boolean isRegularFile(Path)
-- static boolean isDirectory(Path)
-- static boolean isSymbolicLink(Path)
+- `static boolean exists(Path)`
+- `static boolean isHidden(Path)`
+- `static boolean isReadable(Path)`
+- `static boolean isWritable(Path)`
+- `static boolean isExecutable(Path)`
+- `static boolean isRegularFile(Path)`
+- `static boolean isDirectory(Path)`
+- `static boolean isSymbolicLink(Path)`
 
 `size` 方法返回字节数：
 
-```
+```java
 long fileSize = Files.size(path);
 ```
 
 要获取这些属性，调用：
 
-```
+```java
 BasicFileAttributes attributes = Files.readAttributes(path);
 ```
 
 如果你知道文件系统符合 POSIX 标准，你可以改为获取 `PosixFileAttributes` 实例：
 
-```
+```java
 PosixFileAttributes attributes = Files.readAttributes(path);
 ```
 
@@ -4255,20 +4514,20 @@ PosixFileAttributes attributes = Files.readAttributes(path);
 
 ## java.nio.file.Files 7
 
-- * static boolean exists(Path)
-- * static boolean isHidden(Path)
-- * static boolean isReadable(Path)
-- * static boolean isWritable(Path)
-- * static boolean isExecutable(Path)
-- * static boolean isRegularFile(Path)
-- * static boolean isDirectory(Path)
-- * static boolean isSymbolicLink(Path)
+- `static boolean exists(Path)`
+- `static boolean isHidden(Path)`
+- `static boolean isReadable(Path)`
+- `static boolean isWritable(Path)`
+- `static boolean isExecutable(Path)`
+- `static boolean isRegularFile(Path)`
+- `static boolean isDirectory(Path)`
+- `static boolean isSymbolicLink(Path)`
 
 ### 1.4.6. 访问目录项
 
 静态 `Files.list` 方法返回一个读取目录项的 `Stream<Path>`。目录是延迟加载的，这使得高效处理包含大量条目的目录成为可能。由于读取目录涉及需要关闭的系统资源，你应该使用 `try` 块：
 
-```
+```java
 try (Stream<Path> entries = Files.list(pathToDir)) {
     // ...
 }
@@ -4276,24 +4535,21 @@ try (Stream<Path> entries = Files.list(pathToDir)) {
 
 `list` 方法不会进入子目录。要处理目录的所有后代，请改用 `Files.walk` 方法。
 
-```
+```java
 try (Stream<Path> entries = Files.walk(pathToRoot)) {
     // 包含所有后代，按深度访问
 }
 ```
 
-这是解压后的 src.zip 树的示例遍历：
+这是解压后的 `src.zip` 树的示例遍历：
 
-```
+```text
 java
 java/nio
 java/nio/DirectByteBufferU.java
 ```
 
-
-
-
-```java
+```text
 java/nio/ByteBufferAsShortBufferRL.java
 java/nio/MappedByteBuffer.java
 ...
@@ -4321,16 +4577,17 @@ java/nio/HeapFloatBufferR.java
 
 ```java
 Files.walk(source).forEach(p -> {
-  try {
-    Path q = target.resolve(source.relativeTo(p));
-    if (Files.isDirectory(p)) {
-      Files.createDirectory(q);
-    } else {
-      Files.copy(p, q);
+    try {
+        Path q = target.resolve(source.relativeTo(p));
+
+        if (Files.isDirectory(p)) {
+            Files.createDirectory(q);
+        } else {
+            Files.copy(p, q);
+        }
+    } catch (IOException e) {
+        throw new UncheckedIOException(e);
     }
-  } catch (IOException e) {
-    throw new UncheckedIOException(e);
-  }
 });
 ```
 
@@ -4340,13 +4597,13 @@ Files.walk(source).forEach(p -> {
 
 ### 1.4.7. 使用目录流
 
-正如你在前一节中所看到的，`Files.walk` 方法产生一个遍历目录后代代的 `Stream<Path>`。有时，你可能对遍历过程需要更细粒度的控制。在这种情况下，请使用 `Files.newDirectoryStream` 对象。它会产生一个 `DirectoryStream`。请注意，它不是 `java.util.stream.Stream` 的子接口，而是一个专门用于目录遍历的接口。它是 `Iterable` 的子接口，因此你可以在增强 for 循环中使用目录流。以下是用法模式：
+正如你在前一节中所看到的，`Files.walk` 方法产生一个遍历目录后代的 `Stream<Path>`。有时，你可能对遍历过程需要更细粒度的控制。在这种情况下，请使用 `Files.newDirectoryStream` 对象。它会产生一个 `DirectoryStream`。请注意，它不是 `java.util.stream.Stream` 的子接口，而是一个专门用于目录遍历的接口。它是 `Iterable` 的子接口，因此你可以在增强 `for` 循环中使用目录流。以下是用法模式：
 
 ```java
-try (DirectoryStream<Path> entries = Files.newDirectoryStream...) {
-  for (Path entry : entries) {
-    // 处理条目
-  }
+try (DirectoryStream<Path> entries = Files.newDirectoryStream(...)) {
+    for (Path entry : entries) {
+        // 处理条目
+    }
 }
 ```
 
@@ -4354,11 +4611,14 @@ try (DirectoryStream<Path> entries = Files.newDirectoryStream...) {
 
 目录条目的访问没有特定的顺序。
 
-你可以使用 glob 模式来过滤文件：
+你可以使用 `glob` 模式来过滤文件：
 
 ```java
 try (DirectoryStream<Path> entries = Files.newDirectoryStream(...)
 ```
+
+
+
 
 表 2.10 显示了所有的 glob 模式。
 
@@ -4380,7 +4640,7 @@ try (DirectoryStream<Path> entries = Files.newDirectoryStream(...)
 - 当遇到文件时：`FileVisitResult visitFile(T path, BasicFileAttributes attrs)`
 - 在处理目录之前：`FileVisitResult preVisitDirectory(T dir, IOException)`
 - 在处理目录之后：`FileVisitResult postVisitDirectory(T dir, IOException)`
-- 在访问文件或目录时发生错误（例如尝试在没有必要权限的情况下打开目录）：`FileVisitFileFailed(T path, IOException)` 
+- 在访问文件或目录时发生错误（例如尝试在没有必要权限的情况下打开目录）：`FileVisitFileFailed(T path, IOException)`
 
 在每种情况下，你都可以指定想要：
 
@@ -4401,12 +4661,14 @@ Files.walkFileTree(Path.of("/"), new SimpleFileVisitor() {
         System.out.println(path);
         return FileVisitResult.CONTINUE;
     }
+
     public FileVisitResult postVisitDirectory(Path dir) {
         return FileVisitResult.CONTINUE;
     }
+
     public FileVisitResult visitFileFailed(Path file, IOException exc) {
-      if (exc != null) throw exc;
-      return FileVisitResult.SKIP_SUBTREE;
+        if (exc != null) throw exc;
+        return FileVisitResult.SKIP_SUBTREE;
     }
 });
 ```
@@ -4419,6 +4681,7 @@ Files.walkFileTree(Path.of("/"), new SimpleFileVisitor() {
 
 ```java
 // 删除从根开始的目录树
+
 Files.walkFileTree(root, new SimpleFileVisitor<Path>() {
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
         Files.delete(file);
@@ -4433,20 +4696,21 @@ Files.walkFileTree(root, new SimpleFileVisitor<Path>() {
 });
 ```
 
-# java.nio.file.Files 7
+# `java.nio.file.Files` 7
 
-- static DirectoryStream<Path> newDirectoryStream(Path path)
-- static DirectoryStream<Path> newDirectoryStream(Path path, String glob)
+- `static DirectoryStream<Path> newDirectoryStream(Path path)`
+- `static DirectoryStream<Path> newDirectoryStream(Path path, String glob)`
 
 获取给定目录内文件和目录的迭代器。第二个方法仅接受匹配 glob 模式的条目。
 
+## 模式
 
+```java
+static Path walkFileTree(
+    Path start,
+    FileVisitor<? super Path> visitor
+)
 
-模式。
-
-```
-static Path walkFileTree(Path start,
-FileVisitor<? super Path> visitor)
 // 遍历给定路径的所有后代节点，并对所有后代节点应用 visitor。
 ```
 
@@ -4455,33 +4719,44 @@ java.nio.file.SimpleFileVisitor<T>
 ```
 
 ```java
-static FileVisitResult visitFile(T path,
-BasicFileAttributes attrs)
+static FileVisitResult visitFile(
+    T path,
+    BasicFileAttributes attrs
+)
+
 // 在访问文件或目录时调用；返回 CONTINUE、SKIP_SUBTREE、SKIP_SIBLINGS 或 TERMINATE 之一。默认实现不执行任何操作并继续。
 ```
 
 ```java
-static FileVisitResult preVisitDirectory(T dir,
-BasicFileAttributes attrs)
+static FileVisitResult preVisitDirectory(
+    T dir,
+    BasicFileAttributes attrs
+)
 ```
 
 ```java
-static FileVisitResult postVisitDirectory(T
-dir, IOException exc)
+static FileVisitResult postVisitDirectory(
+    T dir,
+    IOException exc
+)
+
 // 在访问目录之前和之后调用。默认实现不执行任何操作并继续。但是，如果 exc 不为空，则会抛出，导致访问因该异常终止。
 ```
 
 ```java
-static FileVisitResult visitFileFailed(T path,
-IOException exc)
-// 如果在尝试获取给定文件信息时抛出异常，则调用。默认实现重新抛出异常，
+static FileVisitResult visitFileFailed(
+    T path,
+    IOException exc
+)
+
+// 如果在尝试获取给定文件信息时抛出异常，则调用。默认实现重新抛出异常。
 ```
 
 这会导致访问因该异常终止。如果你想继续，请重写该方法。
 
 ### 1.4.8. ZIP 文件系统
 
-`Paths` 类在默认文件系统（即用户本地磁盘上的文件）中查找路径。你可以拥有其他文件系统，其中一个非常实用的 ZIP 文件系统。如果 `zipname` 是 ZIP 文件的名称，那么调用
+`Paths` 类在默认文件系统（即用户本地磁盘上的文件）中查找路径。你可以拥有其他文件系统，其中一个非常实用的 ZIP 文件系统。如果 `zipname` 是 ZIP 文件的名称，那么调用：
 
 ```java
 FileSystem fs = FileSystems.newFileSystem(Path.of(zipname));
@@ -4499,10 +4774,9 @@ Files.copy(fs.getPath(sourceName), targetPath);
 
 ```java
 FileSystem fs = FileSystems.newFileSystem(Path.of(zipname));
+
 Files.walkFileTree(fs.getPath("/"), new SimpleFileVisitor<Path>() {
-    public FileVisitResult visitFile(Path file,
-    throws IOException
-    {
+    public FileVisitResult visitFile(Path file) throws IOException {
         System.out.println(file);
         return FileVisitResult.CONTINUE;
     }
@@ -4515,7 +4789,7 @@ Files.walkFileTree(fs.getPath("/"), new SimpleFileVisitor<Path>() {
 java.nio.file.FileSystems
 ```
 
-- `static FileSystem newFileSystem(Path path)` 返回由接受给定路径第一个文件系统提供程序创建的文件系统。默认情况下，有一个针对 ZIP 文件系统的提供程序，它接受文件名以 .zip 或 .jar 结尾的文件。
+- `static FileSystem newFileSystem(Path path)` 返回由接受给定路径第一个文件系统提供程序创建的文件系统。默认情况下，有一个针对 ZIP 文件系统的提供程序，它接受文件名以 `.zip` 或 `.jar` 结尾的文件。
 
 ```java
 java.nio.file.FileSystem
@@ -4555,12 +4829,10 @@ FileChannel channel = FileChannel.open(path, StandardOpenOption.READ);
 然后，通过调用 `FileChannel` 类的 `map` 方法从通道获取一个 `ByteBuffer`。指定你想要映射的文件区域和映射模式。支持三种模式：
 
 - `FileChannel.MapMode.READ_ONLY`：生成的缓冲区是只读的。任何向缓冲区写入的尝试都会导致 `ReadOnlyBufferException`。
-
 - `FileChannel.MapMode.READ_WRITE`：生成的缓冲区是可写的，更改将在以后某个时间写回文件。注意，其他映射了相同文件的程序可能不会立即看到这些更改。多个程序同时映射同一文件的确切行为取决于操作系统。
-
 - `FileChannel.MapMode.PRIVATE`：生成的缓冲区是可写的，但任何更改对该缓冲区是私有的，不会传播到文件中。
 
-例如，
+例如：
 
 ```java
 ByteBuffer buffer = channel.map(FileChannel.MapMode.READ_ONLY, 0, size);
@@ -4605,23 +4877,25 @@ Listing 2.5 计算一个文件的 32 位循环冗余校验（CRC32）。`java.ut
 
 ```java
 var crc = new CRC32();
+
 while (more bytes)
     crc.update(next byte);
 ```
 
 该校验和通常用于判断文件是否已损坏。CRC 计算的细节并不重要。我们只是将其作为有用文件操作的示例。（在实际操作中，你会按块读取和更新数据，而不是一个字节一个。这样速度差异就不会那么显著了。）
 
-
-
 ```java
 boolean done = false;
+
 while (!done) {
     int c = in.read();
+
     if (c == -1)
         done = true;
     else
         crc.update(c);
 }
+
 return crc.getValue();
 ```
 
@@ -4630,10 +4904,12 @@ public static long checksumRandomAccessFile(File file) throws IOException {
     try (RandomAccessFile raf = new RandomAccessFile(file, "r")) {
         long length = raf.length();
         var crc = new CRC32();
+
         for (long p = 0; p < length; p++) {
             int c = raf.read();
             crc.update(c);
         }
+
         return crc.getValue();
     }
 }
@@ -4644,44 +4920,73 @@ public static long checksumMappedFile(Path path) throws IOException {
     try (FileChannel channel = FileChannel.open(path, StandardOpenOption.READ)) {
         var crc = new CRC32();
         int length = (int) channel.size();
-        MappedByteBuffer buffer = channel.map(FileChannel.MapMode.READ_ONLY, 0, length);
+        MappedByteBuffer buffer =
+            channel.map(FileChannel.MapMode.READ_ONLY, 0, length);
+
         for (int p = 0; p < length; p++) {
             int c = buffer.get(p);
             crc.update(c);
         }
+
         return crc.getValue();
     }
 }
 
 public static void main(String[] args) throws IOException {
     System.out.println("Input Stream:");
+
     long start = System.nanoTime();
     Path filename = Path.of(args[0]);
     long crcValue = checksumInputStream(Files.newInputStream(filename));
     long end = System.nanoTime();
-    System.out.println(Long.toHexString(crcValue));
-    System.out.printf("%.3f seconds%n", (end - start) / 1e9);
 
-    System.out.println("Buffered Input:");
-    start = System.nanoTime();
-    crcValue = checksumBufferedInputStream(new BufferedInputStream(Files.newInputStream(filename)));
-    end = System.nanoTime();
     System.out.println(Long.toHexString(crcValue));
-    System.out.printf("%.3f seconds%n", (end - start) / 1e9);
+}
+```
 
-    System.out.println("Random Access File:");
-    start = System.nanoTime();
-    crcValue = checksumRandomAccessFile(filename.toFile());
-    end = System.nanoTime();
-    System.out.println(Long.toHexString(crcValue));
-    System.out.printf("%.3f seconds%n", (end - start) / 1e9);
 
-    System.out.println("Mapped File:");
-    start = System.nanoTime();
-    crcValue = checksumMappedFile(filename);
-    end = System.nanoTime();
-    System.out.println(Long.toHexString(crcValue));
-    System.out.printf("%.3f seconds%n", (end - start) / 1e9);
+
+```java
+System.out.printf("%.3f seconds%n", (end - start) / 1e9);
+
+System.out.println("Buffered Input:");
+
+start = System.nanoTime();
+
+crcValue = checksumBufferedInputStream(
+    new BufferedInputStream(Files.newInputStream(filename))
+);
+
+end = System.nanoTime();
+
+System.out.println(Long.toHexString(crcValue));
+
+System.out.printf("%.3f seconds%n", (end - start) / 1e9);
+
+System.out.println("Random Access File:");
+
+start = System.nanoTime();
+
+crcValue = checksumRandomAccessFile(filename.toFile());
+
+end = System.nanoTime();
+
+System.out.println(Long.toHexString(crcValue));
+
+System.out.printf("%.3f seconds%n", (end - start) / 1e9);
+
+System.out.println("Mapped File:");
+
+start = System.nanoTime();
+
+crcValue = checksumMappedFile(filename);
+
+end = System.nanoTime();
+
+System.out.println(Long.toHexString(crcValue));
+
+System.out.printf("%.3f seconds%n", (end - start) / 1e9);
+
 }
 ```
 
@@ -4689,75 +4994,84 @@ public static void main(String[] args) throws IOException {
 
 当你使用内存映射时，你会创建一个跨整个文件或你感兴趣的文件区域的缓冲区。你也可以使用缓冲区来读取和写入适量的信息。
 
-在本节中，我们简要描述了 Buffer 对象的基本操作。Buffer 是一个相同类型值的数组。Buffer 类是一个抽象类，其具体的子类包括 ByteBuffer、CharBuffer、DoubleBuffer、FloatBuffer、IntBuffer、LongBuffer 和 ShortBuffer。
+在本节中，我们简要描述了 `Buffer` 对象的基本操作。`Buffer` 是一个相同类型值的数组。`Buffer` 类是一个抽象类，其具体的子类包括 `ByteBuffer`、`CharBuffer`、`DoubleBuffer`、`FloatBuffer`、`IntBuffer`、`LongBuffer` 和 `ShortBuffer`。
 
-> 注意：StringBuffer 类与这些缓冲区没有关系。
+> 注意：`StringBuffer` 类与这些缓冲区没有关系。
 
-在实践中，你最常用的是 ByteBuffer 和 CharBuffer。如 #ch01fig11 所示，缓冲区具有：
+在实践中，你最常用的是 `ByteBuffer` 和 `CharBuffer`。如 #ch01fig11 所示，缓冲区具有：
 
-- 一个永远改变的容量（capacity）
-- 一个读取或写入下一个值的位置（position）
-- 一个超出后读取和写入没有意义的限制（limit）
-- 可选的，用于重复读取操作的标记（mark）
+- 一个永远改变的容量（`capacity`）
+- 一个读取或写入下一个值的位置（`position`）
+- 一个超出后读取和写入没有意义的限制（`limit`）
+- 可选的，用于重复读取操作的标记（`mark`）
 
-### 图 1.9: 缓冲区
+### 图 1.9：缓冲区
 
-缓冲区的主要目的是一系列“填充，然后消费”的循环。开始时，缓冲区的位置为 0，限制为容量。通过调用 put 或从通道读取来持续填充缓冲区。
+缓冲区的主要目的是一系列“填充，然后消费”的循环。开始时，缓冲区的位置为 0，限制为容量。通过调用 `put` 或从通道读取来持续填充缓冲区。
 
 当数据耗尽或达到容量时，就该切换到消费内容阶段了。调用 `flip` 将限制设置为当前位置，并将位置设置为 0。
 
-现在，通过调用 get 或向通道写入数据来继续消费，只要 `remaining` 方法（计算 $limit - position$）产生正值即可。当你消耗了缓冲区中的所有值时，调用 `compact` 为再次填充缓冲区做好准备。任何未消耗的数据都会被拷贝到缓冲区的开头。位置被设置为紧跟拷贝的数据之后，限制被设置为容量。
-
-
+现在，通过调用 `get` 或向通道写入数据来继续消费，只要 `remaining` 方法（计算 `$limit - position$`）产生正值即可。当你消耗了缓冲区中的所有值时，调用 `compact` 为再次填充缓冲区做好准备。任何未消耗的数据都会被拷贝到缓冲区的开头。位置被设置为紧跟拷贝的数据之后，限制被设置为容量。
 
 ```java
 if (buffer.remaining() == 0) doneWriting = true;
+
 buffer.compact();
+
 }
 ```
 
-## java.nio.Buffer 1.4
+## `java.nio.Buffer` 1.4
 
-- * Buffer flip()
-  通过将 limit 设置为 position 并将 position 设置为 0，为该缓冲区在写入后的读取做好准备；返回此对象。
+- `Buffer flip()`
 
-- * Buffer rewind()
-  通过将 position 设置为 0 并保持 limit 不变，为重新读取相同值做好准备；返回此对象。
+  通过将 `limit` 设置为 `position` 并将 `position` 设置为 0，为该缓冲区在写入后的读取做好准备；返回此对象。
 
-- * Buffer clear()
-  通过将 position 设置为 0 并将 limit 设置为 capacity，为该缓冲区的写入做好准备；返回此对象。
+- `Buffer rewind()`
 
-- * Buffer mark()
-  将此缓冲区的标记（mark）设置为当前 position；返回此对象。
+  通过将 `position` 设置为 0 并保持 `limit` 不变，为重新读取相同值做好准备；返回此对象。
 
-- * Buffer reset()
-  将此缓冲区的 position 设置为 mark，从而允许对标记部分再次读取或写入；返回此对象。
+- `Buffer clear()`
 
-- * int remaining()
-  返回剩余的可读或可写值数量——即 limit 与 position 之间的差。
+  通过将 `position` 设置为 0 并将 `limit` 设置为 `capacity`，为该缓冲区的写入做好准备；返回此对象。
+
+- `Buffer mark()`
+
+  将此缓冲区的标记（`mark`）设置为当前 `position`；返回此对象。
+
+- `Buffer reset()`
+
+  将此缓冲区的 `position` 设置为 `mark`，从而允许对标记部分再次读取或写入；返回此对象。
+
+- `int remaining()`
+
+  返回剩余的可读或可写值数量——即 `limit` 与 `position` 之间的差。
 
 ```java
 java.nio.ByteBuffer 1.4
 ```
 
-- * Buffer compact()
-  将任何未消耗的字节复制到缓冲区的开头，将 position 设置为下一个字节，并将 limit 设置为 capacity；返回此对象。
+- `Buffer compact()`
+
+  将任何未消耗的字节复制到缓冲区的开头，将 `position` 设置为下一个字节，并将 `limit` 设置为 `capacity`；返回此对象。
 
 ```java
 java.nio.ReadableByteChannel 1.4
 ```
 
-- * int read(ByteBuffer dst)
+- `int read(ByteBuffer dst)`
+
   用可用字节填充缓冲区的剩余部分，并返回传输的字节数；如果通道已到达末尾则返回 -1。
 
 ```java
 java.nio.WritableByteChannel 1.4
 ```
 
-- * int write(ByteBuffer src)
+- `int write(ByteBuffer src)`
+
   尝试消耗缓冲区中的剩余字节，并返回传输的字节数。
 
-## 1.6 文件锁 (File Locking)
+## 1.6. 文件锁（File Locking）
 
 当多个同时执行的程序需要修改同一个文件时，它们需要以某种方式进行通信，否则文件很容易损坏。文件锁可以解决这个问题。文件锁可以控制对文件或文件中某个字节范围的访问。
 
@@ -4767,10 +5081,11 @@ java.nio.WritableByteChannel 1.4
 
 ```java
 FileChannel channel = FileChannel.open(path);
+
 FileLock lock = channel.lock();
 ```
 
-或者
+或者：
 
 ```java
 FileLock lock = channel.tryLock();
@@ -4784,17 +5099,17 @@ FileLock lock = channel.tryLock();
 FileLock lock(long start, long size, boolean shared)
 ```
 
-或者
+或者：
 
 ```java
 FileLock tryLock(long start, long size, boolean shared)
 ```
 
-**shared** 标志位为 **false** 时对文件进行读写锁定。标记为 **true** 时表示获取*共享*锁，它允许多个进程从文件中读取，同时防止任何进程获取排他锁。并不是所有的操作系统都支持共享锁。即使你只请求共享锁，也可能获得排他锁。调用 `FileLock` 类的 `isShared` 方法可以确定你拥有的是哪种锁。
+`shared` 标志位为 `false` 时对文件进行读写锁定。标记为 `true` 时表示获取共享锁，它允许多个进程从文件中读取，同时防止任何进程获取排他锁。并不是所有的操作系统都支持共享锁。即使你只请求共享锁，也可能获得排他锁。调用 `FileLock` 类的 `isShared` 方法可以确定你拥有的是哪种锁。
 
 > **注意：** 如果你锁定了文件的尾部区域，并且文件随后增长到了锁定区域之外，则额外的区域不会被锁定。要锁定所有字节，请使用 `Long.MAX_VALUE` 作为大小。
 
-完成后请务必解锁。一如既常，这最好通过 `try`-with-resources` 语句完成：
+完成后请务必解锁。一如既往，这最好通过 `try`-with-resources 语句完成：
 
 ```java
 try (FileLock lock = channel.lock()) {
@@ -4802,46 +5117,53 @@ try (FileLock lock = channel.lock()) {
 }
 ```
 
-
-
-
 ```java
-83      ByteBuffer writeBuffer = ByteBuff
-84      channel.write(writeBuffer);
+83  ByteBuffer writeBuffer = ByteBuff
+
+84  channel.write(writeBuffer);
+
 85  }
+
 86  }
+
 87 }
 ```
 
-java.nio.channels.FileChannel 1.4
+## `java.nio.channels.FileChannel` 1.4
 
-- FileLock lock()
-获取整个文件的排斥锁。此方法会阻塞直到获取锁为止。
+- `FileLock lock()`
 
-- FileLock tryLock()
-尝试获取整个文件的排斥锁，如果无法获取锁则返回 null。
+  获取整个文件的排斥锁。此方法会阻塞直到获取锁为止。
 
-- FileLock lock(long position, long size, boolean shared)
+- `FileLock tryLock()`
 
-- FileLock tryLock(long position, long size, boolean shared)
-获取文件某个区域的锁。第一个方法会阻塞直到获取锁为止，第二个方法在无法获取时返回 null。参数 shared 为 true 时表示共享锁，为 false 时表示排斥锁。
+  尝试获取整个文件的排斥锁，如果无法获取锁则返回 `null`。
 
-- FileChannel truncate(long size)
-如果文件大小大于给定大小，则将其截断为该大小。
+- `FileLock lock(long position, long size, boolean shared)`
+
+- `FileLock tryLock(long position, long size, boolean shared)`
+
+  获取文件某个区域的锁。第一个方法会阻塞直到获取锁为止，第二个方法在无法获取时返回 `null`。参数 `shared` 为 `true` 时表示共享锁，为 `false` 时表示排斥锁。
+
+- `FileChannel truncate(long size)`
+
+  如果文件大小大于给定大小，则将其截断为该大小。
 
 ```java
 java.nio.channels.FileLock 1.4
 ```
 
-- void close() 1.7
-释放此锁。
+- `void close()` 1.7
+
+  释放此锁。
 
 ```java
 java.io.RandomAccessFile 1.0
 ```
 
-- FileChannel getChannel() 1.4
-返回此随机访问文件的通道。
+- `FileChannel getChannel()` 1.4
+
+  返回此随机访问文件的通道。
 
 ## 1.7. 正则表达式
 
@@ -4849,194 +5171,190 @@ java.io.RandomAccessFile 1.0
 
 当然，在指定模式时，`...` 记法并不足够精确。你需要使用特殊的语法来精确指定哪些字符序列是合法的匹配，并使用这种语法来描述模式。
 
-在接下来的章节中，我们将介绍 Java API 使用的正则表达式语法，并讨论如何将正则表达式投入。
+在接下来的章节中，我们将介绍 Java API 使用的正则表达式语法，并讨论如何将正则表达式投入使用。
 
 ## 1.7.1. 正则表达式语法
 
-让我们从一个简单的例子开始。正则表达式
+让我们从一个简单的例子开始。正则表达式：
 
-```
+```text
 [Jj]ava.+
 ```
 
 匹配任何以下形式的字符串：
 
-- 第一个字母是 J 或 j。
-- 接下来三个字母是 ava。
+- 第一个字母是 `J` 或 `j`。
+- 接下来三个字母是 `ava`。
 - 字符串的剩余部分由一个或多个任意字符组成。
 
-例如，字符串 "javanese" 匹配这个特定的正则表达式，但字符串 "Core Java" 并不匹配。
+例如，字符串 `"javanese"` 匹配这个特定的正则表达式，但字符串 `"Core Java"` 并不匹配。
 
 如你所见，你需要了解一些语法才能理解正则表达式的含义。幸运的是，对于大多数用途，几个简单的构造结构就足够了。
 
-在正则表达式中，一个字符表示它本身，除非它是保留字符之一
+在正则表达式中，一个字符表示它本身，除非它是保留字符之一：
 
-```
+```text
 . * + ? { | ( ) [ \ ^ $
 ```
 
-例如，正则表达式 Java 仅匹配字符串 Java。
 
-符号 . 匹配任何单个字符。例如，.a.a 匹配 Java 和 data。
 
-星号 * 表示前面的构造结构可以重复 0 次或多次；对于 +，则是重复 1 次或多次。问号 ? 后缀表示构造结构是可选的（重复 0 次或 1 次）。例如，be+s? 匹配 be、bee 和 bees。你可以用 { } 指定其他倍数——
+例如，正则表达式 `Java` 仅匹配字符串 `Java`。
+
+符号 `.` 匹配任何单个字符。例如，`.a.a` 匹配 `Java` 和 `data`。
+
+星号 `*` 表示前面的构造结构可以重复 0 次或多次；对于 `+`，则是重复 1 次或多次。问号 `?` 后缀表示构造结构是可选的（重复 0 次或 1 次）。例如，`be+s?` 匹配 `be`、`bee` 和 `bees`。你可以用 `{ }` 指定其他倍数——
 
 表 2.12。
 
-A | 表示一种备选方案。(oo|ee) 匹配 beef 或 wo。注意括号——如果没有括号，.oo|ee 将是 .oo 和 eef 之间的备选方案。括号也用于分组——参见第 2.7.4 节。
+`A |` 表示一种备选方案。`(oo|ee)` 匹配 `beef` 或 `wo`。注意括号——如果没有括号，`.oo|ee` 将是 `.oo` 和 `eef` 之间的备选方案。括号也用于分组——参见第 2.7.4 节。
 
-字符类是一组括在括号中的字符备选，例如 [Jj]、[0-9]、[A-Za-z] 或 [0-9]。在字符类内部，- 表示范围（所有 Unicode 值落在两个边界之间的字符）。如果 - 是字符类中的第一个或最后一个字符，则表示它本身。如果 ^ 是字符类中的第一个字符，则表示排除（除指定的以外的所有字符）。
+字符类是一组括在括号中的字符备选，例如 `[Jj]`、`[0-9]`、`[A-Za-z]` 或 `[0-9]`。在字符类内部，`-` 表示范围（所有 Unicode 值落在两个边界之间的字符）。如果 `-` 是字符类中的第一个或最后一个字符，则表示它本身。如果 `^` 是字符类中的第一个字符，则表示排除（除指定的以外的所有字符）。
 
-有许多预定义的字符类，如 \d（数字）或 \s（空格）——参见表 2.12。更复杂的字符类可以使用表 2.13 中的 \p 语法描述。例如，\p{Sc} 是 Unicode 符号类。
+有许多预定义的字符类，如 `\d`（数字）或 `\s`（空格）——参见表 2.12。更复杂的字符类可以使用表 2.13 中的 `\p` 语法描述。例如，`\p{Sc}` 是 Unicode 符号类。
 
-字符 ^ 和 $ 匹配输入的开头和结束。
+字符 `^` 和 `$` 匹配输入的开头和结束。
 
-如果你需要匹配字面意义的 . + ? { | ( ) [ \ ^ $，须在它们前面加一个反斜杠。在字符类内部，你只需要转义 [ 和 \，前提是你要对 ] - ^ 的位置小心。例如，[]\\- 是一个包含这这三个字符的类。
+如果你需要匹配字面意义的 `. + ? { | ( ) [ \ ^ $`，须在它们前面加一个反斜杠。在字符类内部，你只需要转义 `[` 和 `\`，前提是你要对 `]`、`-`、`^` 的位置小心。例如，`[]\\-` 是一个包含这三个字符的类。
 
-# 注意：如果正则表达式在字符串字面量中，每个需要转义的反斜杠都需要另一个反斜杠来转义。如果你忘记了第二个反斜杠，通常会得到错误，因为像 \$ 或 \. 这样的序列在字符串字面量中是无效的。但如果你想匹配单词边界却不小心使用了 \b 而不是 \b，那么你就有问题了：\b 是一个有效的转义序列，表示退格。
+> 注意：如果正则表达式在字符串字面量中，每个需要转义的反斜杠都需要另一个反斜杠来转义。如果你忘记了第二个反斜杠，通常会得到错误，因为像 `\$` 或 `\.` 这样的序列在字符串字面量中是无效的。但如果你想匹配单词边界却不小心使用了 `\b` 而不是 `\\b`，那么你就有问题了：`\b` 是一个有效的转义序列，表示退格。
 
 你的 IDE 可以帮助完成这种转义。将正则表达式字符串粘贴到空字符串中，反斜杠就会双倍。
 
-与其使用反斜杠，你可以用 \Q 和 \E 包围字符串。例如，\(\$0\.99\) 和 \Q($0.99)\E 均匹配字符串 ($0.99)。
+与其使用反斜杠，你可以用 `\Q` 和 `\E` 包围字符串。例如，`\(\$0\.99\)` 和 `\Q($0.99)\E` 均匹配字符串 `($0.99)`。
 
-提示：如果你有一个字符串，它可能包含正则表达式语法中的许多特殊字符之一，你可以通过调用 Parse.quote(str) 来转义所有字符。这仅仅是将字符串括在 \Q 和 \E 之间，但它处理了 str 可能包含 \E 的特殊情况。
+提示：如果你有一个字符串，它可能包含正则表达式语法中的许多特殊字符之一，你可以通过调用 `Parse.quote(str)` 来转义所有字符。这仅仅是将字符串括在 `\Q` 和 `\E` 之间，但它处理了 `str` 可能包含 `\E` 的特殊情况。
 
-## 表 1.7: 正则表达式语法
-
-| 表达式 | 描述 | 示例 |
-|---|---|--|
-| 字符 | c . * + ? { | ( ) [ \ ^ $ | 任意字符 | J |
-| | 任何换行符以外的字符，如果设置了 DOTALL 标志 | |
-| \X | Unicode 字符簇，感知为字符 | |
-| \p{ p } | Unicode 码点或十六进制值 | |
-| \uhhhh | 给定的十六进制值 | \uFEFF |
+## 表 1.7：正则表达式语法
 
 | 表达式 | 描述 | 示例 |
 |---|---|---|
-| \theta 00, \theta | 任意字符或结束符 | \theta 00 |
+| 字符 | `c . * + ? { \| ( ) [ \ ^ $` | 任意字符 | `J` |
+| `.` | 任何换行符以外的字符，如果设置了 `DOTALL` 标志 | |
+| `\X` | Unicode 字符簇，感知为字符 | |
+| `\p{p}` | Unicode 码点或十六进制值 | |
+| `\uhhhh` | 给定的十六进制值 | `\uFEFF` |
 
 | 表达式 | 描述 | 示例 |
 |---|---|---|
-| ( X ) | 捕获 X 的匹配 | '([^']*)' 引用文本 |
-| \n | 第 n 组 | ((['"]).*:'Fred' 或不是 "Fred" |
-| (? < name > X ) | 使用给定名称捕获 X 的匹配 | '(?<id>[A-9]+)' 捕获名称为 id |
-| \k< name > | 给定名称的组 | \k<name> 匹配名称为 id |
-| (: X ) | 使用括号但不捕获 X | 在 (?:http|ft 的匹配后 |
-| (? f1f2 . : X ), (? | 在给定标志开启或关闭的情况下匹配但不捕获 X（在 | (??i:jpe?g) 不敏感 mat |
-
-# 序列与备选方案
-
-| XY | 描述 | 示例 |
-|---|---|---|
-| XY | 来自 X 的任意字符串，后跟来自 Y 的任意字符串 | [1-9][0-9]* 数字无 |
-
-| X | Y | X 或 Y 的任意字符串 | http|ftp |
+| `\theta 00, \theta` | 任意字符或结束符 | `\theta 00` |
 
 | 表达式 | 描述 | 示例 |
 |---|---|---|
-| ( X ) | 捕获 X 的匹配 | '([^']*)' 引用文本 |
+| `(X)` | 捕获 `X` 的匹配 | `'([^']*)'` 引用文本 |
+| `\n` | 第 `n` 组 | `((['"]).*:`Fred` 或不是 `"Fred"` |
+| `(?<name>X)` | 使用给定名称捕获 `X` 的匹配 | `(?<id>[A-9]+)` 捕获名称为 `id` |
+| `\k<name>` | 给定名称的组 | `\k<name>` 匹配名称为 `id` |
+| `(?:X)` | 使用括号但不捕获 `X` | 在 `(?:http|ft` 的匹配后 |
+| `(?f1f2:X)` | 在给定标志开启或关闭的情况下匹配但不捕获 `X` | `(?i:jpe?g)` 不敏感匹配 |
+
+## 序列与备选方案
+
+| 表达式 | 描述 | 示例 |
+|---|---|---|
+| `XY` | 来自 `X` 的任意字符串，后跟来自 `Y` 的任意字符串 | `[1-9][0-9]*` 数字 |
+| `X \| Y` | `X` 或 `Y` 的任意字符串 | `http|ftp` |
+
+| 表达式 | 描述 | 示例 |
+|---|---|---|
+| `(X)` | 捕获 `X` 的匹配 | `'([^']*)'` 引用文本 |
 
 ## 字符类
 
 | 表达式 | 描述 | 示例 |
 |---|---|---|
-| [ C1C2 . . ], 其中 Ci 是字符、范围 c - d 或字符类 | 由 C1, C2 表示的任何字符 | [0-9+--] |
-| [^. . ] | 字符类的补 | [\d\s] |
-| [ . .&&. ] | 字符类的交集 | [\p{L}&&/] |
-| \p{. .}, \P{. . } | 预定义的字符类（参见表 2.13）；其补集 | \p{L} 匹配字母，你可以省略单 |
-| \d, \D | 数字 ([0-9]，在设置 UNICODE_CLASS 标志时为 \p{Digit}) | \d+ 是一个序列 |
+| `[C1C2..]`，其中 `Ci` 是字符、范围 `c-d` 或字符类 | 由 `C1`、`C2` 表示的任何字符 | `[0-9+--]` |
+| `[^..]` | 字符类的补 | `[\d\s]` |
+| `[..&&..]` | 字符类的交集 | `[\p{L}&&/]` |
+| `\p{..}`、`\P{..}` | 预定义的字符类（参见表 2.13）；其补集 | `\p{L}` 匹配字母，你可以省略单 |
+| `\d`、`\D` | 数字（`[0-9]`，在设置 `UNICODE_CLASS` 标志时为 `\p{Digit}`） | `\d+` 是一个序列 |
+| `\w`、`\W` | 字符（`[a-zA-Z0-9_]`，在设置 `UNICODE_CLASS` 标志时为 Unicode 字符） | |
+| `\s`、`\S` | 空格（`\n\r\t\f\x{B}`，在设置 `UNICODE_CLASS` 标志时为 `\p{IsWhite_Space}`） | `\s*,\s*` 被空格围绕 |
+| `\h`、`\v`、`\H`、`\V` | 水平空白、垂直空白、它们的补集 | |
 
 | 表达式 | 描述 | 示例 |
 |---|---|---|
-| \w, \w | 字字符（ [a-zA-Z0-9_ ],在设置 UNICODE_CLASS 标志时为 Unicode 字字符） | |
-| \s, \S | 空格（ \n\r\t\f\x{B} ],在设置 UNICODE_CLASS 标志时为 \p{IsWhite_Space）） | \s*,\s* 被空格围绕 |
-| \h, \v, \H, \V | 水平空白、垂直空白、它们的补集 | |
+| `f₁..fₖ` | `-` | |
+| `(?f1f2:X)`，其中 `fᵢ` 在 `[dimsuUx]` 中 | | |
 
+其他（`?.`）参见 `Pattern` API 文档。
 
+## 量词
 
+| 表达式 | 描述 | 示例 |
+|---|---|---|
+| `X?` | 可选 `X` | `\+` 是一个可选的 |
+| `X*`、`X+` | 0 个或多个 `X`，1 个或多个 `X` | `[1-9][0-9]` 数字 ≥ 10 |
+| `X{n}`、`X{n,}`、`X{m,n}` | `n` 次 `X`，至少 `n` 次 `X`，`m` 到 `n` 次 `X` 之间 | `[0-7]{1,3}` 三位八进制数字 |
 
-| Expression | Description | Example |
-| --- | --- | --- |
-| f₁ . . - . fₖ . . | - ) | |
-| : X ), with fᵢ in [dimsuUx] | | |
+`Q?`，其中 `Q` 是一个量化的懒惰量词（Reluctant quantifier），在尝试更长匹配之前先尝试最短匹配。`*?`（`<.+?>`）最短的匹配。
 
-Other (?. ) 参见 Pattern API 文档
+| 表达式 | 描述 | 示例 |
+|---|---|---|
+| `Q+`，其中 `Q` 是量化的表达式 | 占有量词（Possessive quantifier），在不回溯的情况下获取最长匹配 | `'[^\']*+` 在没有关闭时快速失败 |
 
-# Quantifiers
+| 表达式 | 描述 | 示例 |
+|---|---|---|
+| `expression` | 匹配 | 包含在 `ang` 中 |
 
-| Expression | Description | Example |
-| --- | --- | --- |
-| X ? | 可选 X | \+ 是一个可选的 |
-| X *, X+ | 0 个或多个 X，1 个或多个 X | [1-9][0-9] 数字 ≥ 10 |
+## 边界匹配
 
-| Expression | Description | Example |
-| --- | --- | --- |
-| X { n }, X { n, }, X { m, n } | n 次 X, 至少 n 次 X，m 到 n 次 X 之间 | [0-7]{1,3} 三八进制数字 |
+| 表达式 | 描述 | 示例 |
+|---|---|---|
+| `^`、`$` | 输入的开头、结束（或多行模式下的行首、行尾） | `^Java$` 匹配一行 `Java` |
+| `\A`、`\Z`、`\z` | 输入的开头、输入的结束、输入的绝对结束（多行模式下保持不变） | |
+| `\b`、`\B` | 单词边界、非单词边界 | `\bJava\b` 匹配单词 `Java` |
+| `\b{g}` | 字符簇边界 | 在分解一个字符簇时很有用 |
 
-Q ?, 其中 Q 是一个量化的懒惰量符（Reluctant quantifier），在尝试更长匹配之前先尝试最短匹配。* (<,.+?>) 最短的 sec |
+| 表达式 | 描述 | 示例 |
+|---|---|---|
+| `\R` | Unicode 换行符 | grapheme cluster |
+| `\G` | 上一个匹配的结束 | |
 
-| Expression | Description | Example |
-|---|---|---||
-| expression | 匹配 | 包含在 ang 中 |
-| Q +, 其中 Q 是量化的表达式 | 占有量符（Possessive quantifier），在不回溯的情况下获取最长匹配 | ' [\']']* n 包含在 sin 中快速失败或没有关闭 |
+## 表 1.8：预定义字符类 `\p{..}`
 
-# Boundary Matches
+| 名称 | 描述 |
+|---|---|
+| `posixClass` | `posixClass` 是 `Lower`、`Up`、`Alpha`、`Digit`、`Alnum`、`Punct`、`Graph`、`Print`、`Cntrl`、`XD`、`Space`、`Blank`、`ASCII`、`java`、`POSIX` 或 Unicode 类之一，取决于 `UNICODE_CHARACTER_CLASS` |
+| `Is Script`、`sc=Script`、`script=Script` | `Character.UnicodeScript` 接受的脚本 |
+| `In Block`、`blk=Block`、`block=Block` | `Character.UnicodeBlock` 接受的区块 |
 
-| | Description | Example |
-|---|---|---||
-| ^ $ | 输入的开头、结束（或多行模式下的行首、行尾） | ^Java$ 匹配或行 Java |
-| \A \Z \z | 输入的开头、输入的结束、输入的绝对结束（多行模式下保持不变） | |
-| \b \B | 单词边界、非单词边界 | \bJava\b 单词 Java |
-| \b{g} | 字符簇边界 | 在 S 分解一个 s 时很有用 |
+| 名称 | 描述 |
+|---|---|
+| `Category`、`In Category` | 单元的一个或两个字母的名称 |
+| `gc=Category` | 普通类别 |
+| `general_category=Category` | 属性是 `Alphabetic`、`Ideographic`、`Letter`、`Lo`、`Uppercase`、`Titlecase`、`Punctuation`、`Control`、`White_Space`、`Digit`、`Hex`、`Join_Control`、`Noncharacter_Code_Point`、`Assigned` |
 
-| Expression | Description | Example |
-| --- | --- | --- |
-| \R | Unicode 换行符 | grapheme clust |
-| \G | 上一个匹配的结束 | |
+| 名称 | 描述 |
+|---|---|
+| `javaMethod` | 调用 `Character` 方法（不能是已弃用的） |
 
-Table 1.8: 预定义字符类 \p{ . . }
+遗憾的是，正则表达式语法在各种程序和库之间并没有完全标准；虽然对基本结构有共识，但在细节上存在许多令人抓狂的差异。Java 的正则表达式类使用的语法与 Perl 语言使用的语法相似但不完全相同。表 2.12 显示了 Java 语法的所有结构。更多信息请参考 `Pattern` 类的 API 文档或 Jeffrey E. F. Friedl 的著作《Mastering Regular Expressions》（O'Reilly and Associates, 2006）。
 
-| Name | Description |
-| --- | --- |
-| posixClass | posixClass 是 Lower, Up, Alpha, Digit, Alnum, Pu, Graph, Print, Cntrl, XD, Space, Blank, ASCII, inte, POSIX 或 Unicode 类之一，取决于 UNICODE_CHARACTER_CLAS |
-| Is Script, sc= Script; script= Script | Character.UnicodeScript 接受的脚本 |
-| In Block, blk= Block; block= Block | Character.UnicodeBlock 接受的区块 |
-
-| Name | Description |
-| --- | --- |
-| Category, In Category, | 单元的一个或两个字母的名称 |
-| gc= Category, | 普通类别 |
-| general_category= Category Is | 属性是 Alphabetic, Ideographic, Letter, Lo, Uppercase, Titlecase, Punctuation, Control, White_Space, Digit, Hex, Join_Control, Noncharacter_Code_Point Assigned |
-
-| | |
-| --- | --- |
-| java Method | 调用 Character 方法（不能是已弃用的） |
-
-遗憾的是，正则表达式语法在各种程序和库之间并没有完全标准；虽然对基本结构有共识，但在细节上存在许多令人抓狂的差异。Java 的正则表达式类使用的语法与 Perl 语言使用的语法相似但不完全相同。表 2.12 显示了 Java 语法的所有结构。更多信息请参考 Pattern 类的 API 文档或 Jeffrey E. F. Friedl 的著作《Mastering Regular Expressions》（O'Reilly and Associates, 2006）。
-
-# 1.7.2. 测试匹配
+## 1.7.2. 测试匹配
 
 通常使用正则表达式有两种方法：要么你想确定字符串是否符合表达式，要么你想在字符串中找到正则表达式的所有匹配项。
 
-在第一情况下，直接使用静态 `matches` 方法：
+在第一种情况下，直接使用静态 `matches` 方法：
 
-```
-String regex = "-?\d+";
+```java
+String regex = "-?\\d+";
+
 CharSequence input = . . .;
-if (Pattern.matches(regex, input))
-{
+
+if (Pattern.matches(regex, input)) {
     . . .
 }
 ```
 
-如果你需要多次使用同一个正则表达式，编译它更高效。然后，为每个输入创建一个 Matcher：
+如果你需要多次使用同一个正则表达式，编译它更高效。然后，为每个输入创建一个 `Matcher`：
 
-```
+```java
 Pattern pattern = Pattern.compile(regex);
 Matcher matcher = pattern.matcher(input);
 ```
 
-```
+```java
 if (matcher.matches()) . . .
 ```
 
@@ -5044,18 +5362,21 @@ if (matcher.matches()) . . .
 
 如果你想测试输入是否包含匹配项，请改用 `find` 方法：
 
-```
+```java
 if (matcher.find()) . . .
 ```
 
-`find` 和 `match` 方法会改变 Matcher 对象的状态。如果你只是想知道给定的 Matcher 是否已经找到匹配项，请改用 `hasMatch` 方法。
+`find` 和 `match` 方法会改变 `Matcher` 对象的状态。如果你只是想知道给定的 `Matcher` 是否已经找到匹配项，请改用 `hasMatch` 方法。
 
 你可以将模式转换为谓词：
 
-```
+```java
 Pattern digits = Pattern.compile("[0-9]+");
+
 List<String> strings = List.of("December", "31st");
+
 List<String> matchingStrings = strings.stream().
+
 // ["1999"]
 ```
 
@@ -5063,16 +5384,13 @@ List<String> matchingStrings = strings.stream().
 
 使用 `asPredicate` 方法测试字符串是否包含匹配项：
 
-```
-List<String> sringsContainingMatch = strings.stre // ["31st",
+```java
+List<String> stringsContainingMatch = strings.stream() // ["31st",
 ```
 
-# 1.7.3. 在字符串中查找所有匹配项
+## 1.7.3. 在字符串中查找所有匹配项
 
 （注：OCR 文本 1.7.3 是断裂的。我仅包含存在的内容。）
-
-
-
 
 ```java
 (?<item>\p{Alnum}+(\s+\p{Alnum}+)*)\s+(?<currency
@@ -5102,29 +5420,30 @@ int itemEnd = matcher.end("item");
 提示：你可以为正则表达式添加注释。注释以 `#` 开头，持续到行尾。这在文本块中特别有效：
 
 ```java
-var regex = ""
+var regex = """
 ([1-9]|1[0-2]) #hours
 :([0-5][0-9]) #minutes
-[ap]m";
+[ap]m""";
 ```
 
 列表 2.8 首先提示输入模式，然后提示要匹配的字符串。它会打印输入是否匹配该模式。如果输入包含组，程序将以括号的形式打印组的边界，例如：
 
-```java
+```text
 ((11):(59))am
 ```
 
-# 列表 1.8 regex/RegexTest.java
+## 列表 1.8：`regex/RegexTest.java`
 
 ```java
 1 package regex;
+
 2 /**
-3 * 此程序测试正则表达式
-4 \5 * 或按回车退出。如果模式 co
-5 * 在匹配中。
-6 * @version 1.03 2018-05-01
-7 * @author Cay Horstmann
-*/
+3  * 此程序测试正则表达式
+4  * 或按回车退出。如果模式包含捕获组，
+5  * 则打印匹配中的组。
+6  * @version 1.03 2018-05-01
+7  * @author Cay Horstmann
+8  */
 
 import java.util.*;
 import java.util.regex.*;
@@ -5132,21 +5451,26 @@ import java.util.regex.*;
 public class RegexTest {
     public static void main(String[] args) {
         var in = new Scanner(System.in);
+
         System.out.println("Enter pattern: ");
         String patternString = in.nextLine();
-
         Pattern pattern = Pattern.compile(patternString);
 
         while (true) {
             System.out.println("Enter string to test: ");
             String input = in.nextLine();
+
             if (input == null || input.equals("")) {
                 return;
             }
+
             Matcher matcher = pattern.matcher(input);
+
             if (matcher.matches()) {
                 System.out.println("Match");
+
                 int g = matcher.groupCount();
+
                 if (g > 0) {
                     for (int i = 0; i < input.length(); i++) {
                         // 打印任何空组
@@ -5155,12 +5479,14 @@ public class RegexTest {
                                 System.out.print("(");
                             }
                         }
+
                         // 为非空组打印 (
                         for (int j = 1; j <= g; j++) {
                             if (i == matcher.start(j)) {
                                 System.out.print("(");
                             }
                         }
+
                         // 为非空组打印 )
                         for (int j = 1; j <= g; j++) {
                             if (i + 1 != matcher.start(j)) {
@@ -5168,14 +5494,37 @@ public class RegexTest {
                             }
                         }
                     }
-                    System.out.println();
-                } else {
-                    System.out.println("No match");
                 }
             }
         }
     }
 }
+```
+
+
+
+```
+
+}
+
+}
+
+System.out.println();
+
+} else {
+
+System.out.println("No match");
+
+}
+
+}
+
+}
+
+}
+
+}
+
 ```
 
 ## 1.7.5. 按分隔符分割
@@ -5200,7 +5549,7 @@ Stream<String> tokens = commas.splitAsStream(input);
 tokens = commas.splitWithDelimiters(input, -1);
 ```
 
-如果第二个参数是正数 $n$，则分隔模式最多应用 $n - 1$ 次，最后一个元素是剩余的字符串。否则，模式将尽可能多次应用。如果限制为 0，末尾的空字符串将被丢弃。
+如果第二个参数是正数 `$n$`，则分隔模式最多应用 `$n - 1$` 次，最后一个元素是剩余的字符串。否则，模式将尽可能多次应用。如果限制为 0，末尾的空字符串将被丢弃。
 
 如果你不在意重新编译模式或懒性获取，可以直接使用 `String` 类的 `split` 和 `splitWithDelimiter` 方法：
 
@@ -5275,72 +5624,69 @@ String regex = "(?iU:expression)";
 
 最后两个标志无法在正则表达式内部指定。
 
-
-
-
-
-```
+```java
 Matcher matcher(CharSequence input)
-返回一个匹配器对象，可以使用它在输入字符串中定位模式的匹配项。
 ```
 
-- String[] split(CharSequence input)
-- String[] split(CharSequence input, int limit)
-- String[] splitWithDelimiters(CharSequence input, int limit)
-- Stream<String> splitAsStream(CharSequence input)
+返回一个匹配器对象，可以使用它在输入字符串中定位模式的匹配项。
 
-将输入字符串拆分为标记（tokens），由模式指定分隔符的形式。返回标记的数组或流。分隔符不属于标记的一部分。第二种形式具有一个参数 limit，表示生成的字符串的最大数量。如果找到了 limit - 1 个匹配的分隔符，则返回的数组的最后一项将包含剩余的未拆分输入。如果 limit <= 0，则对整个输入进行拆分。如果 limit 为 0，则末尾的空字符串不会放入返回的数组中。
+- `String[] split(CharSequence input)`
+- `String[] split(CharSequence input, int limit)`
+- `String[] splitWithDelimiters(CharSequence input, int limit)`
+- `Stream<String> splitAsStream(CharSequence input)`
 
-- Map<String, Integer> namedGroups()
+将输入字符串拆分为标记（tokens），由模式指定分隔符的形式。返回标记的数组或流。分隔符不属于标记的一部分。第二种形式具有一个参数 `limit`，表示生成的字符串的最大数量。如果找到了 `limit - 1` 个匹配的分隔符，则返回的数组的最后一项将包含剩余的未拆分输入。如果 `limit <= 0`，则对整个输入进行拆分。如果 `limit` 为 0，则末尾的空字符串不会放入返回的数组中。
+
+- `Map<String, Integer> namedGroups()`
 产生从组名到组索引的不可变映射。
 
-```
+```java
 java.util.regex.Matcher 1.4
 ```
 
-- boolean matches()
-如果输入匹配模式，则返回 true。
+- `boolean matches()`
+如果输入匹配模式，则返回 `true`。
 
-- boolean lookingAt()
-如果输入的开头匹配模式，则返回 true。
-- boolean find()
-- boolean find(int start)
-尝试寻找下一个匹配项，如果发现了另一个匹配项，则返回 true。
-- boolean hasMatch()
-如果此匹配器由于调用 matches 或 find 而处于某个匹配项上，则返回 true。
-- String replaceAll(String replacement)
-- String replaceFirst(String replacement)
-通过将匹配器输入中的所有匹配项或第一个匹配项替换为替换字符串，得到的字符串。替换字符串可以包含对模式组的引用，如 $n。使用 \$ 来包含 $ 符号。
-- static String quoteReplacement(String str) 5.0
-对 str 中所有的 \ 和 $ 进行转义。
-- String replaceAll(Function<MatchResult,String> replacer) 9
-将每个匹配项替换为对 MatchResult 应用 replacer 函数后得到的结果。
-- Stream<MatchResult> results() 9
+- `boolean lookingAt()`
+如果输入的开头匹配模式，则返回 `true`。
+- `boolean find()`
+- `boolean find(int start)`
+尝试寻找下一个匹配项，如果发现了另一个匹配项，则返回 `true`。
+- `boolean hasMatch()`
+如果此匹配器由于调用 `matches` 或 `find` 而处于某个匹配项上，则返回 `true`。
+- `String replaceAll(String replacement)`
+- `String replaceFirst(String replacement)`
+通过将匹配器输入中的所有匹配项或第一个匹配项替换为替换字符串，得到的字符串。替换字符串可以包含对模式组的引用，如 `$n`。使用 `\$` 来包含 `$` 符号。
+- `static String quoteReplacement(String str) 5.0`
+对 `str` 中所有的 `\` 和 `$` 进行转义。
+- `String replaceAll(Function<MatchResult,String> replacer) 9`
+将每个匹配项替换为对 `MatchResult` 应用 `replacer` 函数后得到的结果。
+- `Stream<MatchResult> results() 9`
 产生一个包含所有匹配结果的流。
 
-```
+```java
 java.util.regex.MatchResult 5.0
 ```
 
-- String group()
-- String group(int group)
-- String group(String name) 20
+- `String group()`
+- `String group(int group)`
+- `String group(String name) 20`
 产生匹配到的字符串或由给定组匹配的字符串。
-- int start()
-- int end()
-- int start(int group)
-- int start(String name) 20
-- int end(int group)
-- int end(String name) 20
+- `int start()`
+- `int end()`
+- `int start(int group)`
+- `int start(String name) 20`
+- `int end(int group)`
+- `int end(String name) 20`
 产生匹配字符串或由给定组匹配的字符串的起始和结束偏移。
-- Map<String, Integer> namedGroups() 20
+- `Map<String, Integer> namedGroups() 20`
 产生从组名到底层模式组索引的不可变映射。
 
-```
+```java
 java.util.Scanner 5.0
 ```
 
-- Stream<MatchResult> findAll(Pattern pattern) 9
+- `Stream<MatchResult> findAll(Pattern pattern) 9`
 产生一个由此扫描器产生的输入中给定模式的所有匹配项的流。
 
 你现在已经了解了如何在 Java 中执行输入输出操作，并概述了作为“新 I/O”规范部分的正则表达式包。在下一章中，我们将转向 XML 数据的处理。
@@ -5362,7 +5708,7 @@ windowindowize=400 200
 color=0 50 100
 ```
 
-你可以使用 Properties 类通过单个方法调用来读取此类文件。这是一个很好的特性，但它还远远不够。在许多情况下，你想要描述的信息具有比属性文件格式更方便处理更复杂的结构。考虑示例中的 fontname/fontsize 条目。使用单个条目会更符合面向对象：
+你可以使用 `Properties` 类通过单个方法调用来读取此类文件。这是一个很好的特性，但它还远远不够。在许多情况下，你想要描述的信息具有比属性文件格式更方便处理更复杂的结构。考虑示例中的 `fontname`/`fontsize` 条目。使用单个条目会更符合面向对象：
 
 ```
 font=Times Roman 12
@@ -5417,15 +5763,7 @@ SGML 自 20 世纪 70 年代以来一直用于描述复杂文档的结构。它�
 - 在 HTML 中，可以省略结束标签（如 `</p>` 或 `</li>`），如果从上下文可以看出段落或列表项何时结束。在 XML 中，不能省略结束标签。
 - 在 XML 中，具有单个标签 `/` 而没有匹配标记的元素必须以 `/>` 结束，例如 `<img src="coffeecup.png">`。这样解析器就不知道寻找 `</img>` 标签。
 - 在 XML 中，属性值必须包含在引号内。例如，`<img src="my hamster.png" width=300>` 是合法的 HTML 但不是法的 XML。在 XML 中，你必须使用引号：`width="300"`。
-
-
-
-
-
-- 在 HTML 中，你可以拥有不带值的属性名，例如
-  <input type="radio" name="language" value="Java" checked>。在 XML 中，所有属性必须有值，例如
-  checked="true" 或 checked="checked"。
-
+- 在 HTML 中，你可以拥有不带值的属性名，例如 `<input type="radio" name="language" value="Java" checked>`。在 XML 中，所有属性必须有值，例如 `checked="true"` 或 `checked="checked"`。
 - 有针对 HTML 4 和 5 版本的 XML 表达式，被称为 XHTML。
 
 ## 1.2. XML 文档的结构
@@ -5474,7 +5812,7 @@ DTDs 是确保文档正确性的重要机制，但不是强制要求的。我们
 </config>
 ```
 
-元素可以包含子元素、文本或两者兼有。在前面的示例中，font 元素有两个子元素，即 name 和 size。
+元素可以包含子元素、文本或两者兼有。在前面的示例中，`font` 元素有两个子元素，即 `name` 和 `size`。
 
 `name` 元素包含文本 "Helvetica"。
 
@@ -5510,13 +5848,13 @@ XML 设计者之间对于何时使用元素以及何时使用属性存在一些�
 </font>
 ```
 
-然而，属性的灵活性要差得多。假设你想为 size 值添加单位。如果你使用属性，你将不得不把添加到属性值中：
+然而，属性的灵活性要差得多。假设你想为 `size` 值添加单位。如果你使用属性，你将不得不把添加到属性值中：
 
 ```xml
 <font name="Helvetica" size="36 pt"/>
 ```
 
-哎！现在你必须解析字符串 "36 pt"，这恰恰是 XML 设计之初就想要避免的麻烦。在 size 元素上添加一个属性要干净得多：
+哎！现在你必须解析字符串 "36 pt"，这恰恰是 XML 设计之初就想要避免的麻烦。在 `size` 元素上添加一个属性要干净得多：
 
 ```xml
 <font>
@@ -5530,20 +5868,23 @@ XML 设计者之间对于何时使用元素以及何时使用属性存在一些�
 > **注意：** 在 HTML 中，属性使用的规则非常简单：如果它没有在网页上显示，它就是属性。例如，考虑超链接
 
 ```html
-<a href="http://java.sun.com">Java Technology</a>
 ```
 
-字符串 Java Technology 显示在网页上，而链接的 URL 并不是显示页面的一部分。然而，该规则对于大多数 XML 文件来说并不完全有用，因为 XML 文件中的数据通常不是为了给人类查看的。
+
+
+<a href="http://java.sun.com">Java Technology</a>
+
+字符串`Java Technology`显示在网页上，而链接的 URL 并不是显示页面的一部分。然而，该规则对于大多数 XML 文件来说并不完全有用，因为 XML 文件中的数据通常不是为了给人类查看的。
 
 元素和文本是 XML 文档的“基础和核心”。以下是你可能会遇到的其他一些标记指令：
 
-- 字符引用的形式为 `&#decimalValue;` 或 `&#xValue;`。例如，é 字符可以用以下两种形式表示：
+- 字符引用的形式为`&#decimalValue;`或`&#xValue;`。例如，é 字符可以用以下两种形式表示：
 
 ```xml
 &#233; &#xE9;
 ```
 
-- 实体引用的形式为 `&name;`。实体引用
+- 实体引用的形式为`&name;`。实体引用：
 
 ```xml
 &lt; &gt; &amp; &quot; &apos;
@@ -5551,21 +5892,21 @@ XML 设计者之间对于何时使用元素以及何时使用属性存在一些�
 
 具有预定义的含义：小于、大于、和符号、双引号和单引号字符。你可以在 DTD 中定义任何实体引用。
 
-- CDATA 节由 `<!CDATA[` 和 ]]>` 分隔。它们是字符数据的特殊形式。你可以使用它们包含包含 `< > &` 等字符的字符串，而无需它们被解释为标记，例如：
+- CDATA 节由`<![CDATA[`和`]]>`分隔。它们是字符数据的特殊形式。你可以使用它们包含包含`< > &`等字符的字符串，而无需它们被解释为标记，例如：
 
 ```xml
 <![CDATA[ < > are my favorite delimiters]]>
 ```
 
-CDATA 节不能包含字符串 `]]`。请谨慎使用此功能。
+CDATA 节不能包含字符串`]]`。请谨慎使用此功能。
 
-- 处理指令由 `<?` 和 `?>` 分隔。它们是给应用程序的指令。例如
+- 处理指令由`<?`和`?>`分隔。它们是给应用程序的指令。例如：
 
 ```xml
 <?xml-stylesheet href="style.css"?>
 ```
 
-- 注释由 `<!--` 和 `-->` 分隔。例如
+- 注释由`<!--`和`-->`分隔。例如：
 
 ```xml
 <!-- 这是一个注释 -->
@@ -5575,14 +5916,14 @@ CDATA 节不能包含字符串 `]]`。请谨慎使用此功能。
 
 要处理 XML 文档，你需要解析器。解析器是一个读取文件、确认其格式正确、将其拆分为元素并允许程序员访问这些元素的程序。Java API 提供了两种类型的解析器：
 
-- 树解析器，如文档对象模型 (DOM) 解析器，将 XML 读取为树结构。
-- 流解析器，如简单 XML API (SAX) 解析器，在读取时生成事件。
+- 树解析器，如文档对象模型（DOM）解析器，将 XML 读取为树结构。
+- 流解析器，如简单 XML API（SAX）解析器，在读取时生成事件。
 
 大多数情况下，DOM 解析器更容易使用，因此我们先介绍它们。如果你处理的文档树会占用大量内存，或者你只对某些元素感兴趣，你可以考虑使用流解析器。
 
-DOM 解析器由万网联盟 (W3C) 标准化。org.w3c.dom 包包含了定义。不同的供应商（如 Apache 和 IBM）编写了 DOM 解析器。JDK 也带有一个来自 Apache 的 DOM 解析器。
+DOM 解析器由万维网联盟（W3C）标准化。`org.w3c.dom`包包含了定义。不同的供应商（如 Apache 和 IBM）编写了 DOM 解析器。JDK 也带有一个来自 Apache 的 DOM 解析器。
 
-要读取 XML 文档，你需要一个 DocumentBuilder 对象，通过如下方式获取：
+要读取 XML 文档，你需要一个`DocumentBuilder`对象，通过如下方式获取：
 
 ```java
 DocumentBuilderFactory factory = DocumentBuilderFactory;
@@ -5612,37 +5953,39 @@ Document doc = builder.parse(in);
 
 > **注意：** 如果使用输入流作为输入源，解析器将无法定位相对于文档位置的其他文件，例如位于同一目录下的 DTD。你可以安装一个“实体解析器”来解决这个问题。更多信息请参阅 https://www.xml.com/pub/a/2004/03/03/catalogs.html 和 https://openjdk.org/jeps/268。
 
-**Document** 对象是 XML 文档树结构的内存表示。它由实现 **Node** 接口及其子接口的对象组成。图 3.1 显示了子接口的继承层次结构。
+`Document`对象是 XML 文档树结构的内存表示。它由实现`Node`接口及其子接口的对象组成。图 3.1 显示了子接口的继承层次结构。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_360_png)
 
-通过调用 `getDocumentElement` 方法开始分析文档内容。它返回根元素。
+通过调用`getDocumentElement`方法开始分析文档内容。它返回根元素。
 
 ```java
 Element root = doc.getDocumentElement();
 ```
 
-例如，如果你正在处理一个文档
+例如，如果你正在处理一个文档：
 
 ```xml
 <?xml version="1.0"?>
+
 <font>
+
   .
+
   .
+
 </font>
 ```
 
-那么调用 `getDocumentElement` 将返回 font 元素。
+那么调用`getDocumentElement`将返回`font`元素。
 
+`tagName`方法返回元素的标签名称。在前面的示例中，`root.getTagName()`返回字符串`"font"`。
 
+要获取元素的子节点（可能是子元素、文本、注释或其他节点），请使用`getChildNodes`方法。该方法返回一个类型为`NodeList`的集合。该类型在标准 Java 集合之前就已经标准化了，因此它有不同的访问协议。`item`方法根据给定的索引获取项，`getLength`方法提供项的总数。你可以这样遍历所有子节点：
 
-
-`tagName` 方法返回元素的标签名称。在前面的示例中，`root.getTagName()` 返回字符串 "font"。
-
-要获取元素的子节点（可能是子元素、文本、注释或其他节点），请使用 `getChildNodes` 方法。该方法返回一个类型为 `NodeList` 的集合。该类型在标准 Java 集合之前就已经标准化了，因此它有不同的访问协议。`item` 方法根据给定的索引获取项，`getLength` 方法提供项的总数。你可以这样遍历所有子节点：
-
-```
+```java
 NodeList children = root.getChildNodes();
+
 for (int i = 0; i < children.getLength(); i++) {
     Node child = children.item(i);
     . . .
@@ -5651,129 +5994,134 @@ for (int i = 0; i < children.getLength(); i++) {
 
 在分析子节点时要务必小心。例如，假设你正在处理以下文档：
 
-```
+```xml
 <font>
   <name>Helvetica</name>
   <size>36</size>
 </font>
 ```
 
-你可能认为 `font` 元素有两个子节点，但解析器报告了五个：
+你可能认为`font`元素有两个子节点，但解析器报告了五个：
 
-- `<font>` 和 `<name>` 之间的空白字符
-- `name` 元素
-- `</name>` 和 `<size>` 之间的空白字符
-- `size` 元素
-- `</size>` 和 `</font>` 之间的空白字符
+- `<font>`和`<name>`之间的空白字符
+- `name`元素
+- `</name>`和`<size>`之间的空白字符
+- `size`元素
+- `</size>`和`</font>`之间的空白字符
 
-图 3.2 显示了 DOM 树
+图 3.2 显示了 DOM 树。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_363_0.png)
 
-**图 1.2:** 一个简单的 DOM 树
+**图 1.2：** 一个简单的 DOM 树
 
 如果你只想要子元素，可以忽略空白字符：
 
-```
-for (int i = 0; i < children.getLength(); i++)
-{
+```java
+for (int i = 0; i < children.getLength(); i++) {
     Node child = children.item(i);
-    if (child instanceof Element childElement)
-{
+
+    if (child instanceof Element childElement) {
         ..
     }
 }
 ```
 
-现在你只看两个标签名为 `name` 和 `size` 的元素。
+现在你只看两个标签名为`name`和`size`的元素。
 
 正如你将在下一节中看到的，如果你的文档有 DTD，你可以做得更好。这时解析器知道哪些元素没有文本节点作为子节点，它可以为你抑制掉空白字符。
 
-在分析 `name` 和 `size` 元素时，你想获取它们包含的文本字符串。这些文本字符串本身包含在类型为 `Text` 的子节点中。你知道这些 `Text` 节点是唯一的节点，因此你可以使用 `getFirstChild` 方法而无需遍历另一个 `NodeList`。然后，使用 `getData` 方法获取存储在 `Text` 节点中的字符串：
+在分析`name`和`size`元素时，你想获取它们包含的文本字符串。这些文本字符串本身包含在类型为`Text`的子节点中。你知道这些`Text`节点是唯一的节点，因此你可以使用`getFirstChild`方法而无需遍历另一个`NodeList`。然后，使用`getData`方法获取存储在`Text`节点中的字符串：
 
-```
-for (int i = 0; i < children.getLength(); i++)
-{
+```java
+for (int i = 0; i < children.getLength(); i++) {
     Node child = children.item(i);
-if (child instanceof Element childElement) {
-  var textNode = (Text) childElement.getFirstChild();
-  String text = textNode.getData().strip();
-  if (childElement.getTagName().equals("name")) {
-    name = text;
-  } else if (childElement.getTagName().equals("size")) {
-    size = Integer.parseInt(text);
-  }
+
+    if (child instanceof Element childElement) {
+        var textNode = (Text) childElement.getFirstChild();
+        String text = textNode.getData().strip();
+
+        if (childElement.getTagName().equals("name")) {
+            name = text;
+        } else if (childElement.getTagName().equals("size")) {
+            size = Integer.parseInt(text);
+        }
+    }
 }
 ```
 
-**提示：** 在 `getData` 的返回值上调用 `strip` 是一个好习惯。如果 XML 文件的作者将起始标签和结束标签放在不同的行上，例如：
+**提示：** 在`getData`的返回值上调用`strip`是一个好习惯。如果 XML 文件的作者将起始标签和结束标签放在不同的行上，例如：
 
-```
+```xml
 <size>
 36
 </size>
 ```
 
-解析器会将所有的换行符和空格包含在文本节点数据中。调用 `strip` 方法可以移除实际数据周围的空白字符。
+解析器会将所有的换行符和空格包含在文本节点数据中。调用`strip`方法可以移除实际数据周围的空白字符。
 
-你也可以使用 `getLastChild` 获取最后一个子节点，使用 `getNextSibling` 获取节点的下一个兄弟节点。因此，遍历节点子节点的另一种方法是：
+你也可以使用`getLastChild`获取最后一个子节点，使用`getNextSibling`获取节点的下一个兄弟节点。因此，遍历节点子节点的另一种方法是：
 
-```
+```java
 for (Node childNode = element.getFirstChild();
-  childNode != null;
-  childNode = childNode.getNextSibling())
-{
-  . . .
+     childNode != null;
+     childNode = childNode.getNextSibling()) {
+    . . .
 }
 ```
 
-要遍历节点的属性，调用 `getAttributes` 方法。它返回一个 `NamedNodeMap` 对象，其中包含描述属性的 `Node` 对象。你可以像遍历 `NodeList` 一样遍历 `NamedNodeMap` 中的节点。然后，调用 `getNodeName` 和 `getNodeValue` 方法来获取属性名和属性值。
+要遍历节点的属性，调用`getAttributes`方法。它返回一个`NamedNodeMap`对象，其中包含描述属性的`Node`对象。你可以像遍历`NodeList`一样遍历`NamedNodeMap`中的节点。然后，调用`getNodeName`和`getNodeValue`方法来获取属性名和属性值。
 
-```
+```java
 NamedNodeMap attributes = element.getAttributes();
+
 for (int i = 0; i < attributes.getLength(); i++) {
-  Node attribute = attributes.item(i);
-  String name = attribute.getNodeName();
-  String value = attribute.getNodeValue();
-  . . .
+    Node attribute = attributes.item(i);
+    String name = attribute.getNodeName();
+    String value = attribute.getNodeValue();
+    . . .
 }
 ```
 
 或者，如果你知道属性名称，可以直接获取对应的值：
 
-```
+```java
 String unit = element.getAttribute("unit");
 ```
 
 你现在已经了解如何分析 DOM 树。列表 3.1 中的程序通过将 XML 文档转换为 JSON 格式应用了这些技术。
 
-树形显示清晰地展示了子元素是如何被包含空白和注释的文本包围的。你可以清楚地看到换行符和返回符为 `\n`。
+树形显示清晰地展示了子元素是如何被包含空白和注释的文本包围的。你可以清楚地看到换行符和返回符为`\n`。
 
 你不需要熟悉 JSON 也能理解程序是如何与 DOM 树工作的。只需观察以下：
 
-- 使用 `DocumentBuilder` 从文件读取 `Document`。
+- 使用`DocumentBuilder`从文件读取`Document`。
 - 对于每个元素，我们打印标签名称、属性和元素。
-- 对于字符数据，我们生成一个包含该数据的字符串。如果数据来自注释，我们会添加 "Comment: " 前缀。
+- 对于字符数据，我们生成一个包含该数据的字符串。如果数据来自注释，我们会添加`Comment: `前缀。
 
-# 列表 1.1 dom/JSONConverter.java
+# 列表 1.1 `dom/JSONConverter.java`
 
 ```java
 package dom;
 
 import java.io.*;
 import java.util.*;
+
 import javax.xml.parsers.*;
+
 import org.w3c.dom.*;
 import org.xml.sax.*;
+
 /**
  * 此程序将 XML 文档显示为 JSON
  * @version 1.21 2021-05-30
  * @author Caymann
  */
 public class JSONConverter {
-    public static void main(String[] args) 
+    public static void main(String[] args)
         throws SAException, IOException {
         String filename;
+
         if (args.length == 0) {
             try (Scanner in = new Scanner(System.in)) {
                 System.out.print("Input file: ");
@@ -5782,12 +6130,15 @@ public class JSONConverter {
         } else {
             filename = args[0];
         }
+
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document doc = builder.parse(filename);
         Element root = doc.getDocumentElement();
+
         System.out.println(convert(root, 0));
     }
+
     private static StringBuilder convert(Node node, int level) {
         if (node instanceof Element elem) {
             return elementObject(elem, level);
@@ -5799,122 +6150,170 @@ public class JSONConverter {
             return new StringBuilder();
         }
     }
+
     private static StringBuilder elementObject(Element element, int level) {
         StringBuilder result = new StringBuilder();
+
         pad(result, level).append("{\n");
-        pad(result, level + 1).append("\"name\": \"").append(element.getTagName()).append("\",\n");
+        pad(result, level + 1).append("\"name\": \"")
+            .append(element.getTagName()).append("\",\n");
+
         NamedNodeMap attrs = element.getAttributes();
+
         if (attrs.getLength() > 0) {
             pad(result, level + 1).append("\"attributes\": {\n");
+
             for (int i = 0; i < attrs.getLength(); i++) {
                 Node attribute = attrs.item(i);
-                pad(result, level + 2).append("\"").append(attribute.getNodeName())
-                    .append("\": \"").append(attribute.getNodeValue()).append("\"");
-                if (i < attrs.getLength() - 1) result.append(",");
+
+                pad(result, level + 2).append("\"")
+                    .append(attribute.getNodeName())
+                    .append("\": \"")
+                    .append(attribute.getNodeValue())
+                    .append("\"");
+
+                if (i < attrs.getLength() - 1) {
+                    result.append(",");
+                }
+
                 result.append("\n");
             }
+
             pad(result, level + 1).append("}\n");
         }
+
         NodeList children = element.getChildNodes();
+
         if (children.getLength() > 0) {
             pad(result, level + 1).append("\"children\": [\n");
+
             for (int i = 0; i < children.getLength(); i++) {
-                if (i > 0) result.append(",\n");
-                pad(result, level + 2).append(convert(children.item(i), level + 2).toString());
+                if (i > 0) {
+                    result.append(",\n");
+                }
+
+                pad(result, level + 2)
+                    .append(convert(children.item(i), level + 2).toString());
             }
+
             result.append("\n");
             pad(result, level + 1).append("]\n");
         }
+
         pad(result, level).append("}");
+
         return result;
     }
+
     private static StringBuilder characterString(Text node, int level) {
         String text = node.getData().strip();
-        if (text.isEmpty()) return new StringBuilder();
+
+        if (text.isEmpty()) {
+            return new StringBuilder();
+        }
+
         return new StringBuilder(text);
     }
+
     private static StringBuilder commentString(Comment node, int level) {
-        return new StringBuilder("Comment: " + node.getData().strip());
-    }
-    private static StringBuilder pad(StringBuilder builder, int level) {
-        for (int i = 0; i < level; i++) builder.append("  ");
-        return builder;
-    }
-}
 ```
 
 
 
+```java
+return new StringBuilder("Comment: " + node.getData().strip());
 
-- Node getFirstChild()
-- Node getLastChild()
+}
 
-获取此节点的第一个或最后一个子节点，如果此节点没有子节点则返回 null。
+private static StringBuilder pad(StringBuilder builder, int level) {
 
-- Node getNextSibling()
-- Node getPreviousSibling()
+    for (int i = 0; i < level; i++) builder.append("  ");
 
-获取此节点的下一个或上一个兄弟节点，如果此节点没有兄弟节点则返回 null。
+    return builder;
 
-- Node getParentNode()
-获取此节点的父节点，如果此节点是文档节点则返回 null。
+}
 
-- NamedNodeMap getAttributes()
-返回一个节点映射，其中包含了描述此节点所有属性的 Attr节点。
+}
+```
 
-- String getNodeName()
+- `Node getFirstChild()`
+- `Node getLastChild()`
 
-返回此节点的名称。如果节点是 Attr 节点，则名称为属性名称。
+获取此节点的第一个或最后一个子节点，如果此节点没有子节点则返回 `null`。
 
-- String getNodeValue()
-返回此节点的值。如果节点是 Attr 节点，则值为属性属性值。
+- `Node getNextSibling()`
+- `Node getPreviousSibling()`
+
+获取此节点的下一个或上一个兄弟节点，如果此节点没有兄弟节点则返回 `null`。
+
+- `Node getParentNode()`
+
+获取此节点的父节点，如果此节点是文档节点则返回 `null`。
+
+- `NamedNodeMap getAttributes()`
+
+返回一个节点映射，其中包含了描述此节点所有属性的 `Attr` 节点。
+
+- `String getNodeName()`
+
+返回此节点的名称。如果节点是 `Attr` 节点，则名称为属性名称。
+
+- `String getNodeValue()`
+
+返回此节点的值。如果节点是 `Attr` 节点，则值为属性属性值。
 
 ```
 org.w3c.dom.CharacterData 1.4
 ```
 
-- String getData()
+- `String getData()`
 
 返回存储在此节点中的文本。
 
-## org.w3c.dom.NodeList 1.4
+## `org.w3c.dom.NodeList 1.4`
 
-- int getLength()
+- `int getLength()`
+
 返回列表中节点的数量。
-- Node item(int index)
-返回给定索引的节点。索引范围在 0 到 getLength() - 1 之间。
 
-## org.w3c.dom.NamedNodeMap 1.4
+- `Node item(int index)`
 
-- int getLength()
+返回给定索引的节点。索引范围在 `0` 到 `getLength() - 1` 之间。
+
+## `org.w3c.dom.NamedNodeMap 1.4`
+
+- `int getLength()`
+
 返回映射中节点的数量。
-- Node item(int index)
-返回给定索引的节点。索引范围在 0 到 getLength() - 1 之间。
 
-## 1.4. 验证 XML文档
+- `Node item(int index)`
+
+返回给定索引的节点。索引范围在 `0` 到 `getLength() - 1` 之间。
+
+## 1.4. 验证 XML 文档
 
 在上一节中，你了解了如何遍历 DOM 文档的树结构。然而，使用那种方法，你需要进行大量繁琐的编程和错误检查。你不仅要处理元素之间的空白字符，还需要检查文档是否包含你预期的节点。例如，假设你正在读取这个元素：
 
-```
+```xml
 <font>
   <name>Helvetica</name>
   <size>36</size>
 </font>
 ```
 
-你获取第一个子节点。哎……它是一个包含空白 "\n " 的文本节点。你跳过文本节点并找到第一个元素节点。然后，你需要检查它的标签名是否为 "name"，以及它是否有一个类型为 Text 的子节点。移动到下一个非空白子节点并进行相同的检查。如果文档的作者交换了子节点的顺序或者添加了另一个子元素怎么办？编写所有这些错误检查是非常繁琐的——但跳过检查又是鲁莽的。
+你获取第一个子节点。哎……它是一个包含空白 `"\n "` 的文本节点。你跳过文本节点并找到第一个元素节点。然后，你需要检查它的标签名是否为 `"name"`，以及它是否有一个类型为 `Text` 的子节点。移动到下一个非空白子节点并进行相同的检查。如果文档的作者交换了子节点的顺序或者添加了另一个子元素怎么办？编写所有这些错误检查是非常繁琐的——但跳过检查又是鲁莽的。
 
-幸运的是，XML 解析器的主要优势之一是它可以自动验证文档具有正确的结构。这使得解析变得简单得多。例如，如果你知道 font 片段具有验证，你只需获取两个孙节点，将它们强制转换为 Text 节点并获取文本数据，而无需任何进一步检查。
+幸运的是，XML 解析器的主要优势之一是它可以自动验证文档具有正确的结构。这使得解析变得简单得多。例如，如果你知道 `font` 片段具有验证，你只需获取两个孙节点，将它们强制转换为 `Text` 节点并获取文本数据，而无需任何进一步检查。
 
 要指定文档结构，你可以提供 DTD 或 XML Schema 定义。DTD 或 schema 包含了解释文档应如何构造的规则，通过为每个元素指定合法的子元素和属性。例如，DTD 可能会包含如下规则：
 
-```
+```xml
 <!ELEMENT font (name,size)>
 ```
 
-该规则表示 font 元素必须始终有两个子节点，即 name 和 size 元素。XML Schema 语言以以下方式表达相同的约束：
+该规则表示 `font` 元素必须始终有两个子节点，即 `name` 和 `size` 元素。XML Schema 语言以以下方式表达相同的约束：
 
-```
+```xml
 <xsd:element name="font">
   <xsd:sequence>
     <xsd:element name="name" type="xsd:string">
@@ -5923,7 +6322,7 @@ org.w3c.dom.CharacterData 1.4
 </xsd:element>
 ```
 
-XML Schema 比 DTD 能够表达更复杂的验证条件（例如 size 元素必须包含整数这一事实）。与 DTD 语法不同，XML Schema 语法本身使用 XML，如果你需要处理 schema 文件，那么这将是一个优势。
+XML Schema 比 DTD 能够表达更复杂的验证条件（例如 `size` 元素必须包含整数这一事实）。与 DTD 语法不同，XML Schema 语法本身使用 XML，如果你需要处理 schema 文件，那么这将是一个优势。
 
 在下一节中，我们将详细讨论 DTDs，然后简要介绍 XML Schema 支持的基础知识。最后，我们将展示一个完整的应用程序，演示验证如何简化 XML 编程。
 
@@ -5931,13 +6330,15 @@ XML Schema 比 DTD 能够表达更复杂的验证条件（例如 size 元素必�
 
 提供 DTD 有几种方法。你可以像这样在 XML 文档中包含 DTD：
 
-```
+```xml
 <?xml version="1.0"?>
+
 <!DOCTYPE config [
   <!ELEMENT config . .>
   more rules
   ..
-]
+]>
+
 <config>
   ..
 </config>
@@ -5947,21 +6348,21 @@ XML Schema 比 DTD 能够表达更复杂的验证条件（例如 size 元素必�
 
 在 XML 文档内部提供 DTD 是不常见的，因为 DTD 可能会变得很长。将 DTD 存储在外部更有意义。`SYSTEM` 声明可以用于此目的。指定一个包含 DTD 的 URL，例如：
 
-```
+```xml
 <!DOCTYPE config SYSTEM "config.dtd">
 ```
 
-或者
+或者：
 
-```
+```xml
 <!DOCTYPE config SYSTEM "http://myserver.com/cont"
 ```
 
-**注意：** 如果你为 DTD 使用相对 URL（如 `config.dtd`），请给解析器提供 File 或 URL 对象，而不是 InputStream。如果你必须从输入流进行解析，请提供一个实体解析器（见下文注释）。
+**注意：** 如果你为 DTD 使用相对 URL（如 `config.dtd`），请给解析器提供 `File` 或 `URL` 对象，而不是 `InputStream`。如果你必须从输入流进行解析，请提供一个实体解析器（见下文注释）。
 
 识别已知 DTDs 的机制源于 SGML。这里有一个示例：
 
-```
+```xml
 <!DOCTYPE web-app
 PUBLIC "-Sun Microsystems, DTD Java Web App 2.3//EN"
 "http://www.sun.com/dtd/webappapp2_3.dtd">
@@ -6220,10 +6621,77 @@ PUBLIC "-//Sun Microsystems, DTD Java Web App 2.3//EN"
 ```xml
 <!DOCTYPE web-app
 PUBLIC "-//Sun Microsystems, DTD Java Web App 2.3//EN"
+```
+
+
+
+`"http://www.sun.com/dtd/webappapp2_3.dtd">`
+
+识别已知 DTDs 的机制源于 SGML。这里有一个示例：
+
+```xml
+<!DOCTYPE web-app
+PUBLIC "-//Sun Microsystems, DTD Java Web App 2.3//EN"
+"http://www.sun.com/dtd/webappapp2_3.dtd">
+```
+
+识别已知 DTDs 的机制源于 SGML。这里有一个示例：
+
+```xml
+<!DOCTYPE web-app
+PUBLIC "-//Sun Microsystems, DTD Java Web App 2.3//EN"
+"http://www.sun.com/dtd/webappapp2_3.dtd">
+```
+
+识别已知 DTDs 的机制源于 SGML。这里有一个示例：
+
+```xml
+<!DOCTYPE web-app
+PUBLIC "-//Sun Microsystems, DTD Java Web App 2.3//EN"
+"http://www.sun.com/dtd/webappapp2_3.dtd">
+```
+
+识别已知 DTDs 的机制源于 SGML。这里有一个示例：
+
+```xml
+<!DOCTYPE web-app
+PUBLIC "-//Sun Microsystems, DTD Java Web App 2.3//EN"
+"http://www.sun.com/dtd/webappapp2_3.dtd">
+```
+
+识别已知 DTDs 的机制源于 SGML。这里有一个示例：
+
+```xml
+<!DOCTYPE web-app
+PUBLIC "-//Sun Microsystems, DTD Java Web App 2.3//EN"
+"http://www.sun.com/dtd/webappapp2_3.dtd">
+```
+
+识别已知 DTDs 的机制源于 SGML。这里有一个示例：
+
+```xml
+<!DOCTYPE web-app
+PUBLIC "-//Sun Microsystems, DTD Java Web App 2.3//EN"
+"http://www.sun.com/dtd/webappapp2_3.dtd">
+```
+
+识别已知 DTDs 的机制源于 SGML。这里有一个示例：
+
+```xml
+<!DOCTYPE web-app
+PUBLIC "-//Sun Microsystems, DTD Java Web App 2.3//EN"
+"http://www.sun.com/dtd/webappapp2_3.dtd">
+```
+
+识别已知 DTDs 的机制源于 SGML。这里有一个示例：
+
+```xml
+<!DOCTYPE web-app
+PUBLIC "-//Sun Microsystems, DTD Java Web App 2.3//EN"
 "http://www.sun.com/dtd/webappapp2_3.dtd">
 ```
 
-识别已知 DTDs 的机制源于 SGML.这里有一个示例：
+识别已知 DTDs 的机制源于 SGML。这里有一个示例：
 
 ```xml
 <!DOCTYPE web-app
@@ -6630,6 +7098,16 @@ PUBLIC "-//Sun Microsystems, DTD Java Web App 2.3//EN"
 PUBLIC "-//Sun Microsystems, DTD Java Web App 2.3//EN"
 "http://www.sun.com/dtd/webappapp2_3.dtd">
 ```
+
+识别已知 DTDs 的机制源于 SGML。这里有一个示例：
+
+```xml
+<!DOCTYPE web-app
+PUBLIC "-//Sun Microsystems, DTD Java Web App 2.3//EN"
+
+
+
+`"http://www.sun.com/dtd/webappapp2_3.dtd">`
 
 识别已知 DTDs 的机制源于 SGML。这里有一个示例：
 
@@ -6751,13 +7229,19 @@ PUBLIC "-//Sun Microsystems, DTD Java Web App 2.3//EN"
 "http://www.sun.com/dtd/webappapp2_3.dtd">
 ```
 
+识别已知 DTDs 的机制源于 SGML。这里有一个示例：
 
+```xml
+<!DOCTYPE web-app
+PUBLIC "-//Sun Microsystems, DTD Java Web App 2.3//EN"
+"http://www.sun.com/dtd/webappapp2_3.dtd">
+```
 
 ```xml
 <!ELEMENT para (#PCDATA|em|strong|code)*>
 ```
 
-指定任何其他包含 #PCDATA 的规则都是非法的。例如，以下是非法的：
+指定任何其他包含 `#PCDATA` 的规则都是非法的。例如，以下是非法的：
 
 ```xml
 <!ELEMENT captionedImage (image,#PCDATA)>
@@ -6777,23 +7261,23 @@ PUBLIC "-//Sun Microsystems, DTD Java Web App 2.3//EN"
 <!ATTLIST element attribute type default>
 ```
 
-#ch02table02 显示了合法的属性类型，#ch02table03 显示了默认值的语法。
+`#ch02table02` 显示了合法的属性类型，`#ch02table03` 显示了默认值的语法。
 
 表 1.2: 属性类型
 
 | 类型 | 含义 |
 | --- | --- |
-| CDATA | 任何字符字符串 |
-| $(A_1|A_2|A_n)$ | 字符串属性 $A_1, A_2, \dots, A_n$ 中的之一 |
+| `CDATA` | 任何字符字符串 |
+| `$(A_1|A_2|A_n)$` | 字符串属性 `A_1, A_2, \dots, A_n` 中的之一 |
 
 表 1.3: 属性默认值
 
 | 默认值 | 含义 |
 | --- | --- |
-| #REQUIRED | 属性是必须的。 |
-| #IMPLIED | 属性是可选的。 |
-| A | 属性是可选的；如果没有指定，解析器报告其为 A。 |
-| #FIXED A | 属性必须未指定或为 A；无论何种，解析器都报告其为 A。 |
+| `#REQUIRED` | 属性是必须的。 |
+| `#IMPLIED` | 属性是可选的。 |
+| `A` | 属性是可选的；如果没有指定，解析器报告其为 `A`。 |
+| `#FIXED A` | 属性必须未指定或为 `A`；无论何种，解析器都报告其为 `A`。 |
 
 这里是两个典型的属性规范：
 
@@ -6806,15 +7290,15 @@ PUBLIC "-//Sun Microsystems, DTD Java Web App 2.3//EN"
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_387_0.png)
 
-> **注意：** 通常建议使用元素而不是属性来描述数据。因此，字体的 style 应该是一个独立的元素，例如 `<font><style>plain</style>...</font>`。然而，属性在枚举类型方面具有不可否认的优势，因为解析器可以验证值是否合法。例如，如果字体样式 是一个属性，解析器会检查它是否为四个允许的值之一，并在未给出值时提供默认值。
+> **注意：** 通常建议使用元素而不是属性来描述数据。因此，字体的 style 应该是一个独立的元素，例如 `<font><style>plain</style>...</font>`。然而，属性在枚举类型方面具有不可否认的优势，因为解析器可以验证值是否合法。例如，如果字体样式是一个属性，解析器会检查它是否为四个允许的值之一，并在未给出值时提供默认值。
 
-CDATA 属性值的处理与你之前看到的 #PCDATA 处理有细微不同，并且与 `<![CDATA[...]]>` 区域完全无关。属性值首先被归一化——即解析器处理字符和实体引用（例如 `&#233;` 或 `&lt;`），并将空白替换为空格。
+`CDATA` 属性值的处理与你之前看到的 `#PCDATA` 处理有细微不同，并且与 `<![CDATA[...]]>` 区域完全无关。属性值首先被归一化——即解析器处理字符和实体引用（例如 `&#233;` 或 `&lt;`），并将空白替换为空格。
 
-NMTOKEN（或名称标记）与 CDATA 类似，但不允许大多数字母数字字符和内部空白，且解析器会移除开头和结尾的空白。NMTOKEN 是由空格分隔的名称标记列表。
+`NMTOKEN`（或名称标记）与 `CDATA` 类似，但不允许大多数字母数字字符和内部空白，且解析器会移除开头和结尾的空白。`NMTOKEN` 是由空格分隔的名称标记列表。
 
-ID 结构非常有用。ID 是在文档中唯一的名称标记——解析器会检查其唯一性。你将在下一个示例程序中看到它的应用。IDREF 是同一文档中存在的 ID 的引用，解析器也会对其进行检查。IDREFS 是由空格分隔的 ID 引用列表。
+`ID` 结构非常有用。`ID` 是在文档中唯一的名称标记——解析器会检查其唯一性。你将在下一个示例程序中看到它的应用。`IDREF` 是同一文档中存在的 `ID` 的引用，解析器也会对其进行检查。`IDREFS` 是由空格分隔的 `ID` 引用列表。
 
-ENTITY 属性值引用“未解析的外部实体”。也就是说，它是来自 SGML 的持有者，在实践中很少使用。在 https://www.xml.com/axml/axml.html 的带注释 XML 规范中有一个示例。
+`ENTITY` 属性值引用“未解析的外部实体”。也就是说，它是来自 SGML 的持有者，在实践中很少使用。在 `https://www.xml.com/axml/axml.html` 的带注释 XML 规范中有一个示例。
 
 DTD 可以定义实体期间解析期间期间期间写。你可以在 Firefox 浏览器的用户界面描述中找到使用实体的很好的示例。这些描述以 XML 格式化，并包含如下的实体定义：
 
@@ -6847,8 +7331,10 @@ factory.setIgnoringWhitespace(true);
 ```java
 for (int i = 0; i < children.getLength(); i++) {
     Node child = children.item(i);
+
     if (child instanceof Element) {
         Element childElement = (Element) child;
+
         if (childElement.getTagName().equals("name")) {
             // ...
         } else if (childElement.getTagName().equals("size")) {
@@ -6867,7 +7353,7 @@ var sizeElement = (Element) children.item(1);
 
 这就是为什么 DTD 如此有用。你不需要在程序中加载规则检查代码——当你获取文档时，解析器已经完成了这些工作。
 
-当解析器报告错误时，你的应用程序想要对其进行处理——记录它、显示给用户或抛出异常以放弃解析。因此，每当你使用验证时，都应该安装错误处理程序。提供一个实现 ErrorHandler 接口的对象。该接口有三个方法：
+当解析器报告错误时，你的应用程序想要对其进行处理——记录它、显示给用户或抛出异常以放弃解析。因此，每当你使用验证时，都应该安装错误处理程序。提供一个实现 `ErrorHandler` 接口的对象。该接口有三个方法：
 
 ```java
 void warning(SAXParseException e)
@@ -6881,90 +7367,89 @@ void fatalError(SAXParseException e)
 builder.setErrorHandler(handler);
 ```
 
+### `org.xml.sax.InputSource` 1.4
 
+- `InputSource(InputStream in)`
+- `InputSource(Reader in)`
+- `InputSource(String systemID)` 从流、读取器或系统 ID（通常是相对 URL 或绝对 URL）构造输入源。
 
+### `org.xml.sax.ErrorHandler` 1.4
 
-```
-org.xml.sax.InputSource 1.4
-```
+- `void fatalError(SAXParseException e)`
+- `void error(SAXParseException e)`
+- `void warning(SAXParseException e)` 重写这些方法以为致命错误和警告提供处理器。
 
-- * InputSource(InputStream in)
-- InputSource(Reader in)
-- InputSource(String systemID) 从流、读取器或系统 ID（通常是相对 URL或绝对 URL）构造输入源。
+### `org.xml.sax.SAXParseException` 1.4
 
-```
-org.xml.sax.ErrorHandler 1.4
-```
+- `int getLineNumber()`
+- `int getColumnNumber()` 返回导致异常的处理器结束处的行号和列号。
 
-- * void fatalError(SAXParseException e)
-- void error(SAXParseException e)
-- void warning(SAXParseException e) 重写这些方法以为致命错误和警告提供处理器。
+### `javax.xml.catalog.CatalogManager` 9
 
-```
-org.xml.sax.SAXParseException 1.4
-```
+- `static CatalogResolver catalogResolver(CatalogFeatures features, URI... 使用)` 生成一个使用位于提供的 URI 处的目录文件的解析器。此类实现了 `EntityResolver`，以及供 StAX、架构验证和 XSL 变换使用的解析器类。
 
-- * int getLineNumber()
-- int getColumnNumber() 返回导致异常的处理器结束处的行号和列号。
+### `javax.xml.catalog.CatalogFeatures` 9
 
-```
-javax.xml.catalog.CatalogManager 9
-```
+- `static CatalogFeatures defaults()` 返回一个具有默认设置的实例。
 
-- * static CatalogResolver catalogResolver(CatalogFeatures features, URI... 사용) 生成一个使用位于提供的 URI 处的目录文件的解析器。此类实现了 EntityResolver，以及供 StAX、架构验证和 XSL 变换使用的解析器类。
+### `javax.xml.parsers.DocumentBuilderFactory` 1.4
 
-```
-javax.xml.catalog.CatalogFeatures 9
-```
-
-- * static CatalogFeatures defaults() 返回一个具有默认设置的实例。
-
-```
-javax.xml.parsers.DocumentBuilderFactory 1.4
-```
-
-- * boolean isValidating()
-- void setating(boolean value) 获取或设置工厂的验证属性。如果设置为 true，此工厂生成的解析器将验证它们的输入。
-- * boolean isIgnoringElementContentWhitespace()
-- void setIgnoringElementContentWhitespace(boolean value) 获取或设置工厂的忽略元素内容空白字符的属性。如果设置为 true，此工厂生成的解析器将忽略非混合内容元素节点之间的空白字符（即元素和 #PCDATA 的混合）。
+- `boolean isValidating()`
+- `void setating(boolean value)` 获取或设置工厂的验证属性。如果设置为 `true`，此工厂生成的解析器将验证它们的输入。
+- `boolean isIgnoringElementContentWhitespace()`
+- `void setIgnoringElementContentWhitespace(boolean value)` 获取或设置工厂的忽略元素内容空白字符的属性。如果设置为 `true`，此工厂生成的解析器将忽略非混合内容元素节点之间的空白字符（即元素和 `#PCDATA` 的混合）。
 
 ## 1.4.2. XML Schema
 
-XML Schema 比 DTD 语法要复杂得多，因此我们只介绍基础知识。欲需更多信息，我们建议参考 https://www.w3.org/TR/xmllschema-0 上的教程。
+XML Schema 比 DTD 语法要复杂得多，因此我们只介绍基础知识。欲需更多信息，我们建议参考 `https://www.w3.org/TR/xmllschema-0` 上的教程。
 
 要在文档中引用架构文件，请向根元素添加属性，例如：
 
 ```xml
 <?xml version="1.0"?>
+
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="config.xsd">
+
 ...
+
 </config>
 ```
 
-此声明表示应使用 config.xsd 架构文件来验证文档。如果文档使用了命名空间，语法会复杂一些——详情请参见 XML Schema 教程。（前缀 xsi 是命名空间别名；更多信息请参见第 3.6 节。）
+此声明表示应使用 `config.xsd` 架构文件来验证文档。如果文档使用了命名空间，语法会复杂一些——详情请参见 XML Schema 教程。（前缀 `xsi:` 是命名空间别名；更多信息请参见第 3.6 节。）
 
 架构为每个元素和属性定义了一种类型。简单类型（simple type）是字符串，可能对其内容有限制。其他所有都是复杂类型（complex type）。具有简单类型的元素可以没有属性和子元素。否则，它必须具有复杂类型。相反，属性始终具有简单类型。
 
 一些简单类型是内置在 XML Schema 中的，包括：
 
-```
+```text
 xsd:string
 xsd:int
 xsd:boolean
 ```
 
-> 注意：我们使用前缀 xsd: 来表示 XML Schema 定义命名空间。某些作者使用前缀 xs: 代替。
+> 注意：我们使用前缀 `xsd:` 来表示 XML Schema 定义命名空间。某些作者使用前缀 `xs:` 代替。
 
 你可以定义自己的简单类型。例如，这里是一个枚举类型：
 
 ```xml
 <xsd:simpleType name="StyleType">
-  <xsd:restriction base="xsd:string">
-    <xsd:enumeration value="PLAIN" />
-    <xsd:enumeration value="BOLD" />
-    <xsd:enumeration value="ITALIC" />
-    <xsd:enumeration value="BOLD_ITALIC" />
-  </xsd:restriction>
+```
+
+
+
+```xml
+<xsd:restriction base="xsd:string">
+
+  <xsd:enumeration value="PLAIN" />
+
+  <xsd:enumeration value="BOLD" />
+
+  <xsd:enumeration value="ITALIC" />
+
+  <xsd:enumeration value="BOLD_ITALIC" />
+
+</xsd:restriction>
+
 </xsd:simpleType>
 ```
 
@@ -6972,21 +7457,25 @@ xsd:boolean
 
 ```xml
 <xsd:element name="name" type="xsd:string"/>
+
 <xsd:element name="size" type="xsd:int"/>
+
 <xsd:element name="style" type="StyleType"/>
 ```
 
-该类型限制了元素内容。例如，元素
+该类型限制了元素内容。例如，元素：
 
 ```xml
 <size>10</size>
+
 <style>PLAIN</style>
 ```
 
-将通过验证，但元素
+将通过验证，但元素：
 
 ```xml
 <size>default</size>
+
 <style>SLANTED</style>
 ```
 
@@ -6996,87 +7485,139 @@ xsd:boolean
 
 ```xml
 <xsd:complexType name="FontType">
+
   <xsd:sequence>
+
     <xsd:element ref="name"/>
+
     <xsd:element ref="size"/>
+
     <xsd:element ref="style"/>
+
   </xsd:sequence>
+
 </xsd:complexType>
 ```
 
-FontType 是 name、size 和 style 元素的序列。在此类型定义中，我们使用 ref 属性并引用架构中其他处的定义。你也可以这样嵌套定义：
+`FontType` 是 `name`、`size` 和 `style` 元素的序列。在此类型定义中，我们使用 `ref` 属性并引用架构中其他处的定义。你也可以这样嵌套定义：
 
 ```xml
 <xsd:complexType name="FontType">
+
   <xsd:sequence>
+
     <xsd:element name="name" type="xsd:string"/>
+
     <xsd:element name="size" type="xsd:int"/>
+
     <xsd:element name="style">
+
       <xsd:simpleType>
+
         <xsd:restriction base="xsd:string">
+
           <xsd:enumeration value="PLAIN" />
+
           <xsd:enumeration value="BOLD" />
+
           <xsd:enumeration value="ITALIC" />
+
         </xsd:restriction>
+
       </xsd:simpleType>
+
     </xsd:element>
+
   </xsd:sequence>
+
 </xsd:complexType>
 ```
 
-
-
 这个示例是 XML 的典型用法。XML 格式足够健壮，可以表达复杂的关系。XML 解析器通过接管常规的有效性检查工作并提供默认值增加了价值。
 
-# 列表 1.2 read/XMLReadTest.java
+# 列表 1.2 `read/XMLReadTest.java`
 
 ```java
 1 package read;
+
 2
+
 3 import java.io.*;
+
 4 import java.lang.reflect.*;
+
 5 import java.util.*;
+
 6
+
 7 import javax.xml.parsers.*;
+
 8
+
 9 import org.w3c.dom.*;
+
 10 import org.xml.sax.*;
+
 11
+
 12 /**
+
 13 * 此程序展示了如何使用 XML 文件
+
 14 * @version 1.0 2018-04-03
+
 15 * @author Cay Horstmann
+
 16 */
+
 17 public class XMLReadTest
+
 18 {
+
 19     public static void main(String[] args) throws
+
 20         SAXException, IOException, ReflectiveException
+
 21     {
+
 22         String filename;
 ```
 
 ```java
 if (args.length == 0) {
+
     try (var in = new Scanner(System.in)) {
+
         System.out.print("Input file: ");
+
         filename = in.nextLine();
+
     }
+
 } else {
+
     filename = args[0];
+
 }
 ```
 
 ```java
 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+
 factory.setValidating(true);
 ```
 
 ```java
 if (filename.contains("-schema")) {
+
     factory.setNamespaceAware(true);
+
     final String JAXP_SCHEMA_LANGUAGE = "http://java.sun.com/xml/jaxp";
+
     final String W3C_XML_SCHEMA = "http://www.w3.org/2001/XMLSchema";
+
     factory.setFeature(JAXP_SCHEMA_LANGUAGE, W3C_XML_SCHEMA);
+
 }
 ```
 
@@ -7086,142 +7627,243 @@ factory.setIgnoringElementContentWhitespace(true);
 
 ```java
 DocumentBuilder builder = factory.newDocumentBuilder();
+
 builder.setErrorHandler(new ErrorHandler());
 ```
 
 ```java
 {
+
     public void warning(SAXParseException e) {
+
         System.err.println("Warning: " + e);
+
     }
 
     public void error(SAXParseException e) {
+
         System.err.println("Error: " + e);
+
         System.exit(0);
+
     }
 
     public void fatalError(SAXParseException e) {
+
         System.err.println("Fatal error: " + e);
+
         System.exit(0);
+
     }
+
 }
 
 Document doc = builder.parse(filename);
+
 Map<String, Object> config = parseConfig(doc);
+
 System.out.println(config);
+
 }
 
 private static Map<String, Object> parseConfig() 
+
 throws ReflectiveOperationException {
+
     var result = new HashMap<String, Object>();
+
     NodeList children = e.getChildNodes();
+
     for (int i = 0; i < children.getLength(); i++) {
+
         var child = (Element) children.item(i);
+
         String name = child.getAttribute("name");
+
         Object value = parseObject(child);
+
         result.put(name, value);
+
     }
+
     return result;
+
 }
 
 private static Object parseObject(Element e) throws ReflectiveOperationException {
+
     String tagName = e.getTagName();
+
     if (tagName.equals("factory")) return
+
     else if (tagName.equals("construct")) return
+
     else {
+
         String childData = ((CharacterData)e).getData("");
+
         if (tagName.equals("int"))
+
             return Integer.valueOf(childData);
+
         else if (tagName.equals("boolean"))
+
             return Boolean.valueOf(childData);
+
         else
+
             return childData;
+
     }
+
 }
 
 private static Object parseFactory(Element e) throws ReflectiveOperationException {
+
     String className = e.getAttribute("class");
+
     String methodName = e.getAttribute("method");
+
     Object[] args = parseArgs(e.getChildNodes());
+
     Class<?>[] parameterTypes = getParameterTypes(args);
+
     Method method = Class.forName(className);
+
     return method.invoke(null, args);
+
 }
 
 private static Object parseConstruct(Element e) throws ReflectiveOperationException {
+
     String className = e.getAttribute("class");
+
     Object[] args = parseArgs(e.getChildNodes());
+
     Class<?>[] parameterTypes = getParameterTypes(args);
+
     Constructor<?> constructor = Class.forName(className).getConstructor(parameterTypes);
+
     return constructor.newInstance(args);
+
 }
 
 private static Object[] parseArgs(NodeList elements) throws ReflectiveOperationException {
+
     var result = new Object[elements.getLength()];
+
     for (int i = 0; i < result.length; i++) {
+
         result[i] = parseObject((Element)elements.item(i));
+
     }
+
     return result;
+
 }
 
 private static final Map<Class<?>, Class<?>> TYPES = Map.of(
+
     Integer.class, int.class,
+
     Boolean.class, boolean.class);
 
 private static Class<?>[] getParameterTypes(Object[] args) {
-    var result = new Class<?[]>[args.length];
+
+    var result = new Class<?>[args.length];
+
     for (int i = 0; i < result.length; i++) {
+
         Class<?> cl = args[i].getClass();
+
         result[i] = TYPES.get(cl);
+
         if (result[i] == null) result[i] = cl;
+
     }
+
     return result;
+
 }
 ```
 
-# 列表 1.3 read/config.xml
+# 列表 1.3 `read/config.xml`
+
 ```xml
 <?xml version="1.0"?>
+
 <!DOCTYPE config SYSTEM "config.dtd">
+
 <config>
+
   <entry name="java.awt.Color">
+
     <int>255</int>
+
   </entry>
+
   <entry name="java.util.Currency">
+
     <string>USD</string>
+
   </entry>
+
 </config>
 ```
 
-# 列表 1.4 read/config.dtd
+# 列表 1.4 `read/config.dtd`
+
 ```dtd
 <!ELEMENT config (entry*)>
+
 <!ELEMENT entry (int|boolean|string)>
+
 <!ATTLIST entry name CDATA #REQUIRED>
+
 <!ELEMENT int (#PCDATA)>
+
 <!ELEMENT boolean (#PCDATA)>
+
 <!ELEMENT string (#PCDATA)>
 ```
 
-# 列表 1.5 read/config.xml (XSD version)
+# 列表 1.5 `read/config.xml`（XSD version）
+
 ```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
   <xsd:element name="config">
+
     <xsd:complexType>
+
       <xsd:sequence>
+
         <xsd:element name="entry" maxOccurs="unbounded">
+
           <xsd:complexType>
+
             <xsd:choice>
+
               <xsd:element name="int" type="xsd:integer"/>
+
               <xsd:element name="boolean" type="xsd:boolean"/>
+
               <xsd:element name="string" type="xsd:string"/>
+
             </xsd:choice>
+
             <xsd:ATTLIST name="name" type="xsd:string" use="required"/>
+
           </xsd:complexType>
+
         </xsd:element>
+
       </xsd:sequence>
+
     </xsd:complexType>
+
   </xsd:element>
+
 </xsd:schema>
 ```
 
@@ -7231,15 +7873,25 @@ private static Class<?>[] getParameterTypes(Object[] args) {
 
 ```html
 <html>
+
   <head>
+
     .
+
     .
+
     <title>...</title>
+
     .
+
     .
+
   </head>
+
   .
+
   .
+
 </html>
 ```
 
@@ -7252,18 +7904,18 @@ private static Class<?>[] getParameterTypes(Object[] args) {
 这比纯 DOM 方法简单得多：
 
 1. 获取文档根。
-2. 获取第一个子节点并转换为 Element。
-3. 在其子元素中定位 title 元素。
-4. 获取其第一个子节点并转换为 CharacterData 。
+2. 获取第一个子节点并转换为 `Element`。
+3. 在其子元素中定位 `title` 元素。
+4. 获取其第一个子节点并转换为 `CharacterData`。
 5. 获取其数据。
 
-XPath 可以描述 XML 文档中的一组节点。例如，XPath
+XPath 可以描述 XML 文档中的一组节点。例如，XPath：
 
 ```xpath
 /html/body/form
 ```
 
-描述了所有作为 body 子元素的 form 元素。你可以使用 `[]` 操作符选择特定的元素：
+描述了所有作为 `body` 子元素的 `form` 元素。你可以使用 `[]` 操作符选择特定的元素：
 
 ```xpath
 /html/body/form[1]
@@ -7271,62 +7923,65 @@ XPath 可以描述 XML 文档中的一组节点。例如，XPath
 
 是第一个表单。（索引值从 1 开始。）
 
-使用 `@` 操作符获取属性值。XPath 表达式
+使用 `@` 操作符获取属性值。XPath 表达式：
 
 ```xpath
 /html/body/form[1]/@action
 ```
 
-描述第一个表单的 action 属性。XPath 表达式
+描述第一个表单的 `action` 属性。XPath 表达式：
 
 ```xpath
 /html/body/form@action
 ```
 
-描述所有 body 子元素 form 元素的 action 属性节点。
+描述所有 `body` 子元素 `form` 元素的 `action` 属性节点。
 
-有很多用的 XPath 函数。例如：
+有很多有用的 XPath 函数。例如：
 
 ```xpath
 count(/html/body/form)
 ```
 
-返回 body 子元素的数量。
+返回 `body` 子元素的数量。
 
-
-
-XPathNodes 类类似于 NodeList，但它扩展了 Iterable 接口，允许你使用增强型 `for` 循环。
+`XPathNodes` 类类似于 `NodeList`，但它扩展了 `Iterable` 接口，允许你使用增强型 `for` 循环。
 
 如果结果是单个节点，请使用以下调用方法之一：
 
-```
+```java
 Node node = path.evaluateExpression("/html/body/");
+
 node = (Node) path.evaluate("/html/body/form[1]")
 ```
 
 如果结果是一个数字，请使用：
 
-```
+```java
 int count = path.evaluateExpression("count(/html/");
-count = ((Number) path.evaluate("/html/body/", 
-doc, XPathConstants.NUMBER)).intValue();
+```
+
+
+
+```java
+count = ((Number) path.evaluate("/html/body/", doc, XPathConstants.NUMBER)).intValue();
 ```
 
 你不一定非从文档根节点开始搜索；你可以从任何节点或节点列表开始。例如，如果你有一个从上一次评估得到的节点，可以调用：
 
-```
+```java
 String result = path.evaluate(expression, node);
 ```
 
 如果你不知道评估 XPath 表达式的结果（可能因为结果来自用户），则调用：
 
-```
+```java
 XPathEvaluationResult<?> result = path.evaluate(expression);
 ```
 
 表达式 `result.type()` 是 `XPathEvaluationResult.XPathResultType` 举中的以下常量之一：
 
-```
+```text
 STRING
 NODESET
 NODE
@@ -7338,46 +7993,67 @@ BOOLEAN
 
 列表 3.6 中的程序演示了任意 XPath 表达式的评估。加载一个 XML 文件并输入一个表达式。显示该表达式的结果。
 
-# 列表 1.6 xpath/XPathTest.java
+## 列表 1.6 `xpath/XPathTest.java`
 
-```
+```java
 1 package xpath;
+
 2 import java.nio.file.*;
+
 3 import java.util.*;
+
 4 import java.util.*;
+
 5
+
 6 import javax.xml.catalog.*;
 ```
 
-```
+```java
 import javax.xml.parsers.*;
+
 import javax.xml.xpath.*;
+
 import org.w3c.dom.*;
+
 /**
  * 此程序评估 XPath 表达式
  * @version 1.1 2018-04-06
  * @author Cay Horstmann
  */
+
 public class XPathTest {
+
     public static void main(String[] args) {
+
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+
         DocumentBuilder builder = factory.newDocumentBuilder();
 
         // 避免解析 XHTML 延迟
+
         // Section 3.4.1
+
         builder.setEntityResolver(CatalogManager.defaults().Path.of("xpath/catalog.xml"));
 
         XPathFactory xfactory = XPathFactory.newInstance();
+
         XPath path = xfactory.newXPath();
+
         try (var in = new Scanner(System.in)) {
+
             String filename;
+
 if (args.length == 0)
+
 {
+
     System.out.print("Input file: \n");
+
     filename = in.nextLine();
 ```
 
-```
+```java
 63 else
 64 System.out.println(res);
 65 }
@@ -7389,7 +8065,8 @@ if (args.length == 0)
 71 }
 72 }
 73 }
-74 
+74
+
 75 public static String description(Node n)
 76 {
 77 if (n instanceof Element) return "Element";
@@ -7399,45 +8076,53 @@ if (args.length == 0)
 81 }
 ```
 
-javax.xml.xpath.XPathFactory 5.0
+## `javax.xml.xpath.XPathFactory` 5.0
 
-- - static XPathFactory newInstance()
-返回用于创建 XPath 对象的 XPath 实例。
+- `static XPathFactory newInstance()`
 
-- - XPath newXPath()
-构造评估 XPath 表达式的 XPath 对象。
+  返回用于创建 XPath 对象的 XPath 实例。
 
-- String evaluate(String expression, Object startingPoint)
-从给定的起始点评估表达式。起始点可以是节点或节点列表。如果结果是节点或节点集，返回的字符串由所有文本节点节点的数据组成。
+- `XPath newXPath()`
 
-- - Object evaluate(String expression, Object startingPoint, QName resultType)
-从给定的起始点评估表达式。起始点可以是节点或节点列表。resultType 是 XPathConstants 类中的常量 STRING, NODE, NODESET, NUMBER 或 BOOLEAN 之一。返回值为 String, Node, NodeList, Number 或 Boolean。
+  构造评估 XPath 表达式的 XPath 对象。
 
-- - <T> T evaluateExpression(String expression, Object item, Class<T> type)
-评估给定的表达式并将结果作为给定类型的值产生。
+- `String evaluate(String expression, Object startingPoint)`
 
-- - XPathEvaluationResult<?> evaluateExpression(String expression, InputSource source)
-评估给定的表达式并将结果作为给定类型的值产生。
+  从给定的起始点评估表达式。起始点可以是节点或节点列表。如果结果是节点或节点集，返回的字符串由所有文本节点节点的数据组成。
 
-javax.xml.xpath.XPathEvaluationResult<T>
+- `Object evaluate(String expression, Object startingPoint, QName resultType)`
 
-- - XPathEvaluationResult.XPathResultType type()
-返回常量之一：
+  从给定的起始点评估表达式。起始点可以是节点或节点列表。`resultType` 是 `XPathConstants` 类中的常量 `STRING`、`NODE`、`NODESET`、`NUMBER` 或 `BOOLEAN` 之一。返回值为 `String`、`Node`、`NodeList`、`Number` 或 `Boolean`。
 
-```
-STRING
-NODESET
-NODE
-NUMBER
-BOOLEAN
-```
+- `<T> T evaluateExpression(String expression, Object item, Class<T> type)`
 
-- - Object value()
-返回值。
+  评估给定的表达式并将结果作为给定类型的值产生。
+
+- `XPathEvaluationResult<?> evaluateExpression(String expression, InputSource source)`
+
+  评估给定的表达式并将结果作为给定类型的值产生。
+
+## `javax.xml.xpath.XPathEvaluationResult<T>`
+
+- `XPathEvaluationResult.XPathResultType type()`
+
+  返回常量之一：
+
+  ```text
+  STRING
+  NODESET
+  NODE
+  NUMBER
+  BOOLEAN
+  ```
+
+- `Object value()`
+
+  返回值。
 
 ## 1.6 使用命名空间
 
-命名空间由统一资源标识符 (URI) 标识。这里有三个示例：
+命名空间由统一资源标识符（URI）标识。这里有三个示例：
 
 ```xml
 <table xmlns="http://www.w3.org/1999/xhtml">
@@ -7471,7 +8156,7 @@ BOOLEAN
 
 `http://www.w3.org/1999/xhtml` 命名空间用于该表格。
 
-这种简单的机制在你只需要单个命名空间时效果良好。否则，你将希望使用前缀——你为命名空间选择的短标识符。这里有一个典型的示例——XML Schema 中的 xsd 前缀：
+这种简单的机制在你只需要单个命名空间时效果良好。否则，你将希望使用前缀——你为命名空间选择的短标识符。这里有一个典型的示例——XML Schema 中的 `xsd` 前缀：
 
 ```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
@@ -7479,7 +8164,7 @@ BOOLEAN
 </xsd:schema>
 ```
 
-属性 `xmlns:prefix="namespaceURI"` 定义了一个命名空间和一个缀。在我们的示例中，前缀是字符串 xsd。因此，xsd:schema 表示 http://www.w3.org/2001/XMLSchema 命名空间下的 schema。
+属性 `xmlns:prefix="namespaceURI"` 定义了一个命名空间和一个前缀。在我们的示例中，前缀是字符串 `xsd`。因此，`xsd:schema` 表示 `http://www.w3.org/2001/XMLSchema` 命名空间下的 schema。
 
 > 注意：只有子元素继承其父元素的命名空间。没有显式前缀的属性永远不属于命名空间。考虑这个构造的示例：
 
@@ -7489,103 +8174,109 @@ BOOLEAN
 </configuration>
 ```
 
-在这个示例中，元素 configuration 和 size 属于命名空间 http://www.horstmann.com/corejava。属性 si:unit 属于命名空间 http://www.bipm.fr/en/3_SI/si.html。然而，value 不属于任何命名空间。
+在这个示例中，元素 `configuration` 和 `size` 属于命名空间 `http://www.horstmann.com/corejava`。属性 `si:unit` 属于命名空间 `http://www.bipm.fr/en/3_SI/si.html`。然而，`value` 不属于任何命名空间。
 
 你可以控制解析器如何处理命名空间。默认情况下，Java XML API 的 DOM 解析器不是命名空间感知的。
 
-要启用命名空间处理，调用 DocumentBuilderFactory 的 setNamespaceAware 方法：
+要启用命名空间处理，调用 `DocumentBuilderFactory` 的 `setNamespaceAware` 方法：
 
-```
+```java
 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 factory.setNamespaceAware(true);
 ```
 
-现在，工厂产生的所有器都支持命名空间。
+现在，工厂产生的所有解析器都支持命名空间。
 
 或者，从 Java 13 开始，调用：
 
-```
-DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+```java
+DocumentBuilderFactory factory = DocumentBuilderFactory.newNSInstance();
 ```
 
 由构建器创建的节点具有三个属性：
 
+- 由 `getNodeName`、`getTagName` 等方法返回的带前缀的*限定名*
+- 由 `getNamespaceURI` 方法返回的命名空间 URI
+- 由 `getLocalName` 方法返回的不带前缀或命名空间的*本地名*
 
-- - 由 `getNodeName`、`getTagName` 等方法返回的带前缀的*限定名*
-- - 由 `getNamespaceURI` 方法返回的命名空间 URI
-- - 由 `getLocalName` 方法返回的不带前缀或命名空间的*本地名*
+这里有一个示例用例。假设解析器看到了以下元素：
 
-这里有一个示用例。假设解析器看到了以下元素：
-
-```
-<xsd:schema xmlns="http://www.w3.org/2001/XMLSchema
+```xml
+<xsd:schema xmlns="http://www.w3.org/2001/XMLSchema">
 ```
 
 它随后会报告以下内容：
 
-- - 限定名 = `xsd:schema`
-- - 命名空间 URI = `http://www.w3.org/2001/XMLSchema`
-- - 本地名 = `schema`
+- 限定名 = `xsd:schema`
+- 命名空间 URI = `http://www.w3.org/2001/XMLSchema`
+- 本地名 = `schema`
 
-> 注意：如果关闭命名空间感知，`getNamespaceURI` 和 `getLocalName` 将返回 null。
+> 注意：如果关闭命名空间感知，`getNamespaceURI` 和 `getLocalName` 将返回 `null`。
 
-## org.w3c.dom.Node 1.4
+## `org.w3c.dom.Node` 1.4
 
-* String getLocalName()
-返回本地名（不带前缀），如果解析器不感知命名空间则返回 null。
-* String getNamespaceURI()
-返回命名空间 URI，如果节点不是命名空间的一部分或解析器不感知命名空间，则返回 null。
+- `String getLocalName()`
 
-## javax.xml.parsers.DocumentBuilderFactory 1.4
+  返回本地名（不带前缀），如果解析器不感知命名空间则返回 `null`。
 
-* static DocumentBuilderFactory newNSInstance() 13
-产生一个其构建器具有命名空间能力的工厂。
-* boolean isNamespaceAware()
-* void setNamespaceAware(boolean value)
-获取或设置工厂的 namespaceAware 属性。如果为 true，由此工厂生成的解析器将具有命名空间能力。
+- `String getNamespaceURI()`
 
-## 1.7. 流式解析器
+  返回命名空间 URI，如果节点不是命名空间的一部分或解析器不感知命名空间，则返回 `null`。
+
+## `javax.xml.parsers.DocumentBuilderFactory` 1.4
+
+- `static DocumentBuilderFactory newNSInstance()` 13
+
+  产生一个其构建器具有命名空间能力的工厂。
+
+- `boolean isNamespaceAware()`
+
+- `void setNamespaceAware(boolean value)`
+
+  获取或设置工厂的 `namespaceAware` 属性。如果为 `true`，由此工厂生成的解析器将具有命名空间能力。
+
+## 1.7 流式解析器
 
 DOM 解析器将整个 XML 文档读取到内存树形数据结构中。对于大多数实际应用，DOM 运行良好。然而，如果文档很大，且你的处理算法简单到可以即时分析节点而无需查看整个树结构，那么它的效率可能会低下。在这种情况下，你应该使用流式解析器。
 
 在接下来的章节中，我们将讨论 Java 提供的两种流式解析器。SAX 解析器使用事件回调，而 StAX 解析器提供一个通过解析事件进行迭代器。后者通常更方便。
 
-### 1.7.1. 使用 SAX 解析器
+### 1.7.1 使用 SAX 解析器
 
 SAX 解析器在解析 XML 输入组件时报告事件，但它不会以任何方式存储文档——由事件处理程序来构建数据结构。事实上，DOM 解析器是构建在 SAX 解析器之上的。它在接收解析器事件时构建 DOM 树。
 
 每当你使用 SAX 解析器时，都需要一个处理器来定义各种解析器事件的动作。`ContentHandler` 接口定义了几个解析器在解析文档时执行的回调方法。以下是最重要的几个：
 
-- - startElement 和 endElement 在每次遇到开始标签或结束标签时被调用。
-- - characters 在每次遇到字符数据时被调用。
-- - startDocument 和 endDocument 分别在文档开始和结束时调用一次。
+- `startElement` 和 `endElement` 在每次遇到开始标签或结束标签时被调用。
+- `characters` 在每次遇到字符数据时被调用。
+- `startDocument` 和 `endDocument` 分别在文档开始和结束时调用一次。
 
 例如，当解析片段时：
 
-```
+```xml
 <font>
-<name>Helvetica</name>
-<size units="pt">36</size>
+  <name>Helvetica</name>
+  <size units="pt">36</size>
 </font>
 ```
 
 解析器会产生以下回调：
 
-1. startElement, element name: font
-2. startElement, element name: name
-3. characters, content: Helvetica
-4. endElement, element name: name
-5. startElement, element name: size, attributes: units="pt"
-6. characters, content: 36
-7. endElement, element name: size
-8. endElement, element name: font
+1. `startElement`，element name: `font`
+2. `startElement`，element name: `name`
+3. `characters`，content: `Helvetica`
+4. `endElement`，element name: `name`
+5. `startElement`，element name: `size`，attributes: `units="pt"`
+6. `characters`，content: `36`
+7. `endElement`，element name: `size`
+8. `endElement`，element name: `font`
 
 你的处理器需要重写这些方法，并在解析文件时执行你想要执行的动作。本节末尾的程序打印 HTML 文件中所有如 `<a href="">` 的链接。它简单地重写了处理器的 `startElement` 方法，以检查名称为 `a` 且属性名为 `href` 的元素。这对于实现“网络爬虫”（一个通过遵循链接访问越来越多的网页的程序）可能有用。
 
-**注意：** HTML 不必须是合法的 XML，大多数网页偏离良好的 XML 非常，以至于示例程序无法解析它们。然而，我的网站 https://horstmann.com 上的页面是用 XHTML 编写的（一种符合 XML 的 HTML 方言）。你可以使用这些页面来测试示例程序。例如，如果你运行
+**注意：** HTML 不必须是合法的 XML，大多数网页偏离良好的 XML 非常，以至于示例程序无法解析它们。然而，我的网站 `https://horstmann.com` 上的页面是用 XHTML 编写的（一种符合 XML 的 HTML 方言）。你可以使用这些页面来测试示例程序。例如，如果你运行：
 
-```
-java sax.SAXTest https://horstmann.com;
+```bash
+java sax.SAXTest https://horstmann.com
 ```
 
 你将看到该页面所有链接的 URL 列表。
@@ -7594,23 +8285,23 @@ java sax.SAXTest https://horstmann.com;
 
 以下是获取 SAX 解析器的方法：
 
-```
+```java
 SAXParserFactory factory = SAXParserFactory.newInstance();
 SAXParser parser = factory.newSAXParser();
 ```
 
 你现在可以处理文档了：
 
-```
+```java
 parser.parse(source, handler);
 ```
 
-在这里，source 可以是一个文件、URL 字符串或输入流。handler 是 `DefaultHandler` 的子类。`DefaultHandler` 类为四个接口定义了空方法：
+在这里，`source` 可以是一个文件、URL 字符串或输入流。`handler` 是 `DefaultHandler` 的子类。`DefaultHandler` 类为四个接口定义了空方法：
 
-- ContentHandler
-- DTDHandler
-- EntityResolver
-- ErrorHandler
+- `ContentHandler`
+- `DTDHandler`
+- `EntityResolver`
+- `ErrorHandler`
 
 示例程序定义了一个处理器，重写了 `ContentHandler` 接口的 `startElement` 以监控带有 `href` 属性的元素：
 
@@ -7626,71 +8317,80 @@ var handler = new DefaultHandler()
 };
 ```
 
-`startElement` 方法有三个描述元素的参数：`namespaceURI`、`localName` 和 `qName`。作为 DOM 解析器，命名空间处理默认是关闭的。要激活命名空间处理，请调用工厂的 `setNamespaceAware` 方法。如果设置为 true，由此工厂生成的解析器将具有命名空间能力。
 
 
 
-
+`startElement` 方法有三个描述元素的参数：`namespaceURI`、`localName` 和 `qName`。作为 DOM 解析器，命名空间处理默认是关闭的。要激活命名空间处理，请调用工厂的 `setNamespaceAware` 方法。如果设置为 `true`，由此工厂生成的解析器将具有命名空间能力。
 
 ## javax.xml.parsers.SAXParser 1.4
 
-- * void parse(File f, DefaultHandler handler)
-* void parse(String url, DefaultHandler handler)
-- void parse(InputStream in, DefaultHandler handler)
+- `void parse(File f, DefaultHandler handler)`
+- `void parse(String url, DefaultHandler handler)`
+- `void parse(InputStream in, DefaultHandler handler)`
+
 从给定的文件、URL 或输入流解析 XML 文档，并向给定的处理器报告解析器事件。
 
 ## org.xml.sax.ContentHandler 1.4
 
-- * void startDocument()
-* void endDocument()
+- `void startDocument()`
+- `void endDocument()`
+
 在文档的开始或结束时调用。
-* void startElement(String uri, String lname, String qname, Attributes attr)
-* void endElement(String uri, String lname, String qname)
-在元素的开始或结束时调用。如果解析器是命名空间感知知的，它们将报告命名空间的 URI、不带前缀的本地名称以及带前缀的限定名称。
-* void characters(char[] data, int start, int length)
+
+- `void startElement(String uri, String lname, String qname, Attributes attr)`
+- `void endElement(String uri, String lname, String qname)`
+
+在元素的开始或结束时调用。如果解析器是命名空间感知的，它们将报告命名空间的 URI、不带前缀的本地名称以及带前缀的限定名称。
+
+- `void characters(char[] data, int start, int length)`
+
 当解析器报告字符数据时调用。
 
-```
-org.xml.sax.Attributes 1.4
-```
+## org.xml.sax.Attributes 1.4
 
-- * `int getLength()`
+- `int getLength()`
+
 返回存储在此属性集合中的属性数量。
 
-- * `String getLocalName(int index)`
+- `String getLocalName(int index)`
+
 返回给定索引属性的本地名称（不带前缀），如果解析器不是命名空间感知的，则返回空字符串。
 
-- * `String getURI(int index)`
+- `String getURI(int index)`
+
 返回给定索引属性的命名空间 URI，如果节点不是命名空间的一部分或解析器是命名空间感知的，则返回空字符串。
 
-- * `String getQName(int index)`
+- `String getQName(int index)`
+
 返回给定索引属性的限定名称（带前缀），如果解析器未报告限定名称，则返回空字符串。
 
-- * `String getValue(int index)`
+- `String getValue(int index)`
+- `String getValue(String qname)`
+- `String getValue(String uri, String lname)`
 
-- * `String getValue(String qname)`
-
-- * `String getValue(String uri, String lname)`
-从给定的索引、限定名称或命名空间 URI + 本名称返回属性值。如果值不存在，则返回 null。
+从给定的索引、限定名称或命名空间 URI + 本地名称返回属性值。如果值不存在，则返回 `null`。
 
 ### 1.7.2. 使用 StAX 解析器
 
 StAX 解析器是一个“拉取解析器”（pull parser）。无需安装事件处理器，只需使用这个基础循环遍历事件即可：
 
-```
+```java
 InputStream in = url.openStream();
+
 XMLInputFactory factory = XMLInputFactory.newInstance();
+
 XMLStreamReader parser = factory.createXMLStreamReader(in);
-while (parser.hasNext())
-{
-  int event = parser.next();
-  // 调用解析器方法获取事件
+
+while (parser.hasNext()) {
+    int event = parser.next();
+
+    // 调用解析器方法获取事件
 }
 ```
 
 例如，当解析片段时：
 
-```
+```xml
 <font>
   <name>Helvetica</name>
   <size units="pt">36</size>
@@ -7699,30 +8399,31 @@ while (parser.hasNext())
 
 解析器产生以下事件：
 
-1. START_ELEMENT, 元素名: font
-2. CHARACTERS, 内容: 空格
-3. START_ELEMENT, 元素名: name
-4. CHARACTERS, 内容: Helvetica
-5. END_ELEMENT, 元素名: name
-6. CHARACTERS, 内容: 空格
-7. START_ELEMENT, 元素名: size
-8. CHARACTERS, 内容: 36
-9. END_ELEMENT, 元素名: size
-10. CHARACTERS, 内容: 空格
-11. END_ELEMENT, 元素名: font
+1. `START_ELEMENT`，元素名：`font`
+2. `CHARACTERS`，内容：空格
+3. `START_ELEMENT`，元素名：`name`
+4. `CHARACTERS`，内容：`Helvetica`
+5. `END_ELEMENT`，元素名：`name`
+6. `CHARACTERS`，内容：空格
+7. `START_ELEMENT`，元素名：`size`
+8. `CHARACTERS`，内容：`36`
+9. `END_ELEMENT`，元素名：`size`
+10. `CHARACTERS`，内容：空格
+11. `END_ELEMENT`，元素名：`font`
 
-要分析属性值，请调用 XMLStreamReader 类的适当方法。例如，
+要分析属性值，请调用 `XMLStreamReader` 类的适当方法。例如：
 
+```java
+String units = parser.getAttributeValue(null, "units");
 ```
-String units = parser.getAttributeValue(null, "units")
-```
 
-获取当前元素的 units 属性。
+获取当前元素的 `units` 属性。
 
 默认情况下，启用了命名空间处理。你可以通过修改工厂来禁用它：
 
-```
+```java
 XMLInputFactory factory = XMLInputFactory.newInstance();
+
 factory.setProperty(XMLInputFactory.IS_NAMESPACE_AWARE, false);
 ```
 
@@ -7730,7 +8431,7 @@ factory.setProperty(XMLInputFactory.IS_NAMESPACE_AWARE, false);
 
 ## 列表 1.8 stax/StAXTest.java
 
-```
+```java
 package stax;
 
 import java.io.*;
@@ -7746,24 +8447,30 @@ import javax.xml.stream.*;
 public class StAXTest {
     public static void main(String[] args) {
         String urlString = "";
+
         if (args.length == 0) {
             urlString = "http://www.w3c.org";
             System.out.println("Using " + urlString);
         } else {
             urlString = args[0];
         }
+
         InputStream in = new URI(urlString).openStream();
         XMLInputFactory factory = XMLInputFactory.newInstance();
         XMLStreamReader parser = factory.createXMLStreamReader(in);
+
         while (parser.hasNext()) {
-          int event = parser.next();
-          if (event == XMLStreamConstants.START_ELEMENT) {
-            if (parser.getLocalName().equals("a")) {
-              String href = parser.getAttributeValue(null, "href");
-              if (href != null)
-                System.out.println(href)
+            int event = parser.next();
+
+            if (event == XMLStreamConstants.START_ELEMENT) {
+                if (parser.getLocalName().equals("a")) {
+                    String href = parser.getAttributeValue(null, "href");
+
+                    if (href != null) {
+                        System.out.println(href);
+                    }
+                }
             }
-          }
         }
     }
 }
@@ -7771,52 +8478,74 @@ public class StAXTest {
 
 ## javax.xml.stream.XMLInputFactory 6
 
-- * static XMLInputFactory newInstance()
-返回 XMLInputFactory 类的实例。
-- void setProperty(String name, Object value)
-为此工厂设置属性，如果属性不支持，则抛出 IllegalArgumentException。JDK 支持的布尔属性：
+- `static XMLInputFactory newInstance()`
 
-- XMLInputFactory.IS_NAMESPACE_AWARE
-- XMLInputFactory.IS_COALESC
-- XMLInputFactory.REPLACING_ENTITIES
-- XMLInputFactory.IS_SUPPORTING_EXTERNAL_ENTITIES
+返回 `XMLInputFactory` 类的实例。
 
-- * boolean hasNext()
-如果还有事件则返回 true。
-- int next()
-将解析器状态设置为下一个事件并返回：
+- `void setProperty(String name, Object value)`
 
-- * boolean isStartElement()
+为此工厂设置属性，如果属性不支持，则抛出 `IllegalArgumentException`。JDK 支持的布尔属性：
+
+- `XMLInputFactory.IS_NAMESPACE_AWARE`
+- `XMLInputFactory.IS_COALESC`
+- `XMLInputFactory.REPLACING_ENTITIES`
+- `XMLInputFactory.IS_SUPPORTING_EXTERNAL_ENTITIES`
+
+- `boolean hasNext()`
+
+如果还有事件则返回 `true`。
+
+- `int next()`
+
+将解析器状态设置为下一个事件并返回。
+
+- `boolean isStartElement()`
+
 如果当前事件是起始元素。
-- * boolean isEndElement()
+
+- `boolean isEndElement()`
+
 如果当前事件是结束元素。
-- * boolean isCharacters()
+
+- `boolean isCharacters()`
+
 如果当前事件是字符数据。
-- * boolean isWhiteSpace()
+
+- `boolean isWhiteSpace()`
+
 如果当前事件是空白符。
 
-- * QName getName()
-返回 START_ELEMENT 或 END_ELEMENT 的名称。
-- * String getLocalName()
+- `QName getName()`
+
+返回 `START_ELEMENT` 或 `END_ELEMENT` 的名称。
+
+- `String getLocalName()`
+
 返回元素的本地名称。
-- * String getText()
-返回 CHARACTERS、COMMENT 或 CDATA 事件的字符。
 
+- `String getText()`
+
+返回 `CHARACTERS`、`COMMENT` 或 `CDATA` 事件的字符。
+
+```java
+int getAttributeCount();
+
+QName getAttributeName(int index);
+
+String getAttributeLocalName(int index);
+
+String getAttributeValue(int index);
 ```
-int getAttributeCount()
-QName getAttributeName(int index)
-String getAttributeLocalName(int index)
-String getAttributeValue(int index)
-```
 
-如果当前事件是 START_ELEMENT，获取属性数量、名称和值。
+如果当前事件是 `START_ELEMENT`，获取属性数量、名称和值。
 
-String getAttributeValue(String namespaceURI, String name)
-获取给定名称的属性值，如果当前事件是 START_ELEMENT。如果 namespaceURI 为空，则不检查命名空间。
+`String getAttributeValue(String namespaceURI, String name)`
+
+获取给定名称的属性值，如果当前事件是 `START_ELEMENT`。如果 `namespaceURI` 为空，则不检查命名空间。
 
 ## 1.8. 生成 XML 文档
 
-你现在知道如何编写读取 XML 的 Java 程序。现在让我们转向相反的过程：产生 XML 输出。当然，你可以简单通过一系列打印调用来写入 XML 文件，打印元素、属性和文本内容，但这并不是一个好主意。这种代码相当繁琐，而且如果不注意属性值和文本内容中的特殊符号（例如 " 或 <），很容易出错。
+你现在知道如何编写读取 XML 的 Java 程序。现在让我们转向相反的过程：产生 XML 输出。当然，你可以简单通过一系列打印调用来写入 XML 文件，打印元素、属性和文本内容，但这并不是一个好主意。这种代码相当繁琐，而且如果不注意属性值和文本内容中的特殊符号（例如 `"` 或 `<`），很容易出错。
 
 更好的方法是根据文档内容构建一个 DOM 树，然后输出树的内容。后续章节将讨论细节。
 
@@ -7824,40 +8553,40 @@ String getAttributeValue(String namespaceURI, String name)
 
 要构建 DOM 树，你从空文档开始。你可以通过调用 `DocumentBuilder` 类的 `newDocument` 方法获取一个空文档：
 
-```
+```java
 Document doc = builder.newDocument();
 ```
 
 使用 `Document` 类的 `createElement` 方法构造文档的元素：
 
-```
+```java
 Element rootElement = doc.createElement(rootName);
+
 Element childElement = doc.createElement(childName);
 ```
 
 使用 `Document` 类的 `createTextNodeNode` 方法构造文本节点：
 
-```
+```java
 Text textNode = doc.createTextNodeNode(textContents);
 ```
 
 将根元素添加到文档，并将子节点添加到其父节点中：
 
-```
+```java
 doc.appendChild(rootElement);
+
 rootElement.appendChild(childElement);
 ```
-
-
 
 ```java
 childElement.appendChild(textNode);
 ```
 
-在构建 DOM 树时，你可能还需要设置元素属性。
-只需简单调用 `Element` 类的 `setAttribute` 方法即可：
+在构建 DOM 树时，你可能还需要设置元素属性。只需简单调用 `Element` 类的 `setAttribute` 方法即可：
 
-```javarootElement.setAttribute(name, value);
+```java
+rootElement.setAttribute(name, value);
 ```
 
 ### 1.8.2. 带有命名空间的文档
@@ -7866,9 +8595,11 @@ childElement.appendChild(textNode);
 
 首先，将构建器工厂设置为对命名空间感知的，然后创建构建器：
 
-```
-DocumentBuilderFactory factory = DocumentBuilderFactory
+```java
+DocumentBuilderFactory factory = DocumentBuilderFactory;
+
 factory.setNamespaceAware(true);
+
 build = factory.newDocumentBuilder();
 ```
 
@@ -7876,59 +8607,65 @@ build = factory.newDocumentBuilder();
 
 ```java
 String namespace = "http://www.w3.org/2000/svg";
-Element rootElement = doc.createElementNS(namespace,...
+
+Element rootElement = doc.createElementNS(namespace, ...);
 ```
 
 如果你的节点具有一个带有命名空间前缀的限定名，那么任何必要的 `xmlns` 前缀属性都将自动创建。例如，如果你需要在 XHTML 中使用 SVG，可以这样构造元素：
 
 ```java
-Element svgElement = doc.createElement(namespace,
+Element svgElement = doc.createElement(namespace, ...);
 ```
 
-当元素被写入时，它将变为
+当元素被写入时，它将变为：
 
 ```xml
 <svg:svg xmlns:svg="http://www.w3.org/2000/svg">
 ```
 
-如果你需要设置名称位于命名空间中的元素属性，请使用 Element 类的 `setAttributeNS` 方法：
+如果你需要设置名称位于命名空间中的元素属性，请使用 `Element` 类的 `setAttributeNS` 方法：
 
 ```java
-rootElement.setAttributeNS(namespace, qualifiedNa
+rootElement.setAttributeNS(namespace, qualifiedName, value);
 ```
 
 ### 1.8.3. 写入文档
 
 有些奇怪的是，将 DOM 树写入输出流并不是那么容易的。最简单的方法是使用可扩展样式表转换语言（XSLT）API。有关 XSLT 的更多信息，请参阅[第 3.9 节]。现在，将下面的代码视为产生 XML 输出的魔术咒语。
 
-我们对文档应用“无都不变”转换并捕获其输出。要在输出中包含一个 DOTYPE 节点，我们还需要将 SYSTEM 和 PUBLIC 标识符设置为输出属性。
+我们对文档应用“无都不变”转换并捕获其输出。要在输出中包含一个 `DOCTYPE` 节点，我们还需要将 `SYSTEM` 和 `PUBLIC` 标识符设置为输出属性。
 
 ```java
 // 构造无都不变的转换
-Transformer t = TransformerFactory.newInstance()
+Transformer t = TransformerFactory.newInstance();
+
 // 设置输出属性以获取 DOCTYPE 节点
-t.setOutputProperty(OutputKeys.DOCTYPE_SYSTEM, sys)
-t.setOutputProperty(OutputKeys.DOCTYPE_PUBLIC, pu)
+t.setOutputProperty(OutputKeys.DOCTYPE_SYSTEM, sys);
+t.setOutputProperty(OutputKeys.DOCTYPE_PUBLIC, pub);
+
 // 设置缩进
 t.setOutputProperty(OutputKeys.INDENT, "yes");
 t.setOutputProperty(OutputKeys.METHOD, "xml");
-t.setOutputProperty("{http://xml.apache.org/xslt",
-// 应用无都不变的转换并发送 t
-t.transform(new DOMSource(doc), new StreamResult
+t.setOutputProperty("{http://xml.apache.org/xslt", ...);
+
+// 应用无都不变的转换并发送
+t.transform(new DOMSource(doc), new StreamResult(...));
 ```
 
 另一种方法是使用 `LSerializer` 接口。要获取一个实例，你必须使用以下魔术咒语：
 
 ```java
-DOMImplementation impl = doc.getImplementation(),
-var implLS = (DOMImplementationLS) impl.getFeatu
+DOMImplementation impl = doc.getImplementation();
+
+var implLS = (DOMImplementationLS) impl.getFeature(...);
+
 LSerializer ser = implLS.createLSerializer();
 ```
 
 如果你想要空格和换行，请设置此标志：
 
 ```java
-ser.getDomConfig().setParameter("format-pretty-p
+ser.getDomConfig().setParameter("format-pretty-print", true);
 ```
 
 然后将文档转换为字符串就足够简单了：
@@ -7941,79 +8678,99 @@ String str = ser.writeToString(doc);
 
 ```java
 LSOutput out = implLS.createLSOutput();
+
 out.setEncoding("UTF-8");
+
 out.setOutputStream(Files.newOutputStream(path));
+
 ser.write(doc, out);
 ```
 
-### javax.xml.parsers.DocumentBuilder 1.4
 
-- - Document newDocument()
+
+
+### `javax.xml.parsers.DocumentBuilder` 1.4
+
+- `Document newDocument()`
+
 返回一个空文档。
 
-### org.w3c.dom.Document 1.4
+### `org.w3c.dom.Document` 1.4
 
-- - Element createElement(String name)
-- Element createElementNS(String uri, String qname)
+- `Element createElement(String name)`
+- `Element createElementNS(String uri, String qname)`
+
 根据给定的名称创建元素。
-- - Text createTextNode(String data)
-根据给的数据创建文本节点。
 
-### org.w3c.dom.Node 1.4
+- `Text createTextNode(String data)`
 
-- - Node appendChild(Node child)
+根据给定的数据创建文本节点。
+
+### `org.w3c.dom.Node` 1.4
+
+- `Node appendChild(Node child)`
+
 将节点添加到此节点的子节点列表中。返回被添加的节点。
 
-### org.w3c.dom.Element 1.4
+### `org.w3c.dom.Element` 1.4
 
-- - void setAttribute(String name, String value)
-- void setAttributeNS(String uri, String qname, String value)
-将具有给定名称的属性设置为给定的值。如果限定名具有别名前缀，则 uri 不能为空。
+- `void setAttribute(String name, String value)`
+- `void setAttributeNS(String uri, String qname, String value)`
 
-### javax.xml.transform.TransformerFactory 1.4
+将具有给定名称的属性设置为给定的值。如果限定名具有别名前缀，则 `uri` 不能为空。
 
-- - static TransformerFactory newInstance()
-返回 TransformerFactory 类的实例。
-- - Transformer newTransformer()
-返回执行恒等（无都不变）转换的 Transformer 类的实例。
+### `javax.xml.transform.TransformerFactory` 1.4
 
-### javax.xml.transform.Transformer 1.4
+- `static TransformerFactory newInstance()`
 
-- - void setOutputProperty(String name, String value)
-设置输出属性。参见 https://www.w3.org/TR/xslt#output 获取标准输出属性的列表。这里显示了最有用的：
+返回 `TransformerFactory` 类的实例。
 
-| | |
+- `Transformer newTransformer()`
+
+返回执行恒等（无都不变）转换的 `Transformer` 类的实例。
+
+### `javax.xml.transform.Transformer` 1.4
+
+- `void setOutputProperty(String name, String value)`
+
+设置输出属性。参见 <https://www.w3.org/TR/xslt#output> 获取标准输出属性的列表。这里显示了最有用的：
+
+| 属性 | 说明 |
 | :--- | :--- |
-| doctype-public | 在 DOCTYPE 声明使用的公共 ID |
-| doctype-system | 在 DOCTYPE 声明使用的系统 ID |
-| indent | "yes" 或 "no" |
-| method | "xml", "html", "text" 或自定义字符串 |
+| `doctype-public` | 在 `DOCTYPE` 声明使用的公共 ID |
+| `doctype-system` | 在 `DOCTYPE` 声明使用的系统 ID |
+| `indent` | `"yes"` 或 `"no"` |
+| `method` | `"xml"`、`"html"`、`"text"` 或自定义字符串 |
 
-- - void transform(Source from, Result to)
+- `void transform(Source from, Result to)`
+
 转换 XML 文档。
 
-### javax.xml.transform.dom.DOMSource 1.4
+### `javax.xml.transform.dom.DOMSource` 1.4
 
-- - DOMSource(Node n)
-从给定的节点构造源。通常，n 是文档节点。
+- `DOMSource(Node n)`
 
-### javax.xml.transform.stream.StreamResult 1.4
+从给定的节点构造源。通常，`n` 是文档节点。
 
-- - StreamResult(File f)
-- - StreamResult(OutputStream out)
-- - StreamResult(Writer out)
-- - StreamResult(String systemID)
+### `javax.xml.transform.stream.StreamResult` 1.4
+
+- `StreamResult(File f)`
+- `StreamResult(OutputStream out)`
+- `StreamResult(Writer out)`
+- `StreamResult(String systemID)`
+
 从文件、流或系统 ID（通常是相对或绝对 URL）构造流结果。
 
-## 1.8.4. 使用 StAX  XML 文档
+## 1.8.4 使用 StAX XML 文档
 
-在前面的节中，你看到了如何通过写入 DOM 树来生成 XML档。如果你对 DOM 树没有其他用途，这种方法并不高效。
+在前面的节中，你看到了如何通过写入 DOM 树来生成 XML 文档。如果你对 DOM 树没有其他用途，这种方法并不高效。
 
-StAX API 允许你直接写入 XML 树。从 OutputStream 构建 XMLStreamWriter：
+StAX API 允许你直接写入 XML 树。从 `OutputStream` 构建 `XMLStreamWriter`：
 
 ```java
-XMLOutputFactory factory = XMLOutputFactory.newI
-XMLStreamWriter writer = factory.createXMLStreamWriter(...)
+XMLOutputFactory factory = XMLOutputFactory.newInstance();
+
+XMLStreamWriter writer = factory.createXMLStreamWriter(...);
 ```
 
 产生 XML 头，调用：
@@ -8022,7 +8779,7 @@ XMLStreamWriter writer = factory.createXMLStreamWriter(...)
 writer.writeStartDocument();
 ```
 
-然后调用
+然后调用：
 
 ```java
 writer.writeStartElement(name);
@@ -8049,7 +8806,7 @@ writer.writeEndElement();
 最后，在文档结束时，调用：
 
 ```java
-writer.writeDocument();
+writer.writeEndDocument();
 ```
 
 这会导致当前元素被关闭。
@@ -8060,128 +8817,142 @@ writer.writeEmptyElement(name);
 
 该程序演示了生成 XML 的两种方法：构建 DOM 树以及通过 StAX API。
 
-
-
-
-
-# 列表 1.9 write/XMLWriteTest.java
+## 列表 1.9 `write/XMLWriteTest.java`
 
 ```java
-1 package write;
-2 import java.io.*;
-3 import java.nio.file.*;
-4 import java.util.random.*;
-5 import javax.xml.parsers.*;
-6 import javax.xml.stream.*;
-7 import javax.xml.transform.*;
-8 import javax.xml.transform.dom.*;
-9 import javax.xml.transform.stream.*;
-10
-11 ///**
+package write;
+
+import java.io.*;
+import java.nio.file.*;
+import java.util.random.*;
+import javax.xml.parsers.*;
+import javax.xml.stream.*;
+import javax.xml.transform.*;
+import javax.xml.transform.dom.*;
+import javax.xml.transform.stream.*;
+
+/**
  * 此程序演示了如何写入 XML 格式。
+ *
  * @version 1.14 2023-08-27
  * @author Cay Horstmann
  */
-12 public class XMLWriteTest
- {
+public class XMLWriteTest {
     public static void main(String[] args) {
         Document doc = newDrawing(600, 400);
         writeDocument(doc, "drawing1.svg");
         writeNewDrawing(600, 400, "drawing2.svg");
     }
-private static RandomGenerator generator = new RandomGenerator();
-/**
- * 创建一个新的随机图形。
- * @param drawingWidth 图形的宽度
- * @param drawingHeight 图形的高度
- * @return SVG 文档的 DOM 树
- */
-public static Document newDrawing(int drawingWidth, int drawingHeight)
-throws ParserConfigurationException
-{
-    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-    factory.setNamespaceAware(true);
-    DocumentBuilder builder = factory.newDocumentBuilder();
-    String namespace = "http://www.w3.org/2000/svg";
-    Document doc = builder.newDocument();
-    Element svgElement = doc.createElementElement("svg");
-    doc.appendChild(svgElement);
-    svgElement.setAttribute("width", String.valueOf(drawingWidth));
-    svgElement.setAttribute("height", String.valueOf(drawingHeight));
-    int n = 10 + generator.nextInt(20);
-    for (int i = 1; i <= n; i++) {
-        int x = generator.nextInt(drawingWidth);
-        int y = generator.nextInt(drawingHeight);
-        int width = generator.nextInt(drawingWidth);
-        int height = generator.nextInt(drawingHeight);
-        int r = generator.nextInt(256);
-        int g = generator.nextInt(256);
-        int b = generator.nextInt(256);
-        Element rectElement = doc.createElementElement("rect");
-        rectElement.setAttribute("x", String.valueOf(x));
-        rectElement.setAttribute("y", String.valueOf(y));
-        rectElement.setAttribute("width", String.valueOf(width));
-        rectElement.setAttribute("height", String.valueOf(height));
-        rectElement.setAttribute("fill", "#%02x%02x%02x".formatted(r, g, b));
-        svgElement.appendChild(rectElement);
-    }
-    return doc;
-}
 
-/**
- * 使用 DOM/XSLT 保存文档
- * @param doc 要写入的文档
- * @param filename 目标文件名
- */
-public static void writeDocument(Document doc, String filename)
-throws TransformerException, IOException
-{
-    Transformer t = TransformerFactory.newInstance().newTransformer();
-    t.setOutputProperty(OutputKeys.DOCTYPE_DECL, "http://www.w3.org/TR/2000/CR-SVG-20000101.dtd");
-    t.setOutputProperty(OutputKeys.DOCTYPE_SYSTEM, "//W3C//DTD SVG 2000//EN");
-    t.setOutputProperty(OutputKeys.INDENT, "yes");
-    t.setOutputProperty(OutputKeys.METHOD, "xml");
-    t.transform(new DOMSource(doc), new StreamResult(Files.newOutputStream(Path.of(filename))));
-}
+    private static RandomGenerator generator = new RandomGenerator();
 
-/**
- * 使用 StAX 写入 SVG 文档
- * @param drawingWidth 图形的宽度
- * @param drawingHeight 图形的高度
- * @param filename 目标文件名
- */
-public static void writeNewDrawing(int drawingWidth, int drawingHeight, String filename) throws XMLStreamException {
-    XMLOutputFactory factory = XMLOutputFactory.newInstance();
-    XMLStreamWriter writer = factory.createXMLStreamWriter(
-        Files.newOutputStream(Path.of(filename)));
-    writer.writeStartDocument();
-    writer.writeDTD("""
-    <!DOCTYPE svg PUBLIC "//W3C//DTD SVG 2000"
-    "http://www.w3.org/TR/2000/CR-SVG-20000101.dtd">
-    """);
-    writer.writeStartElement("svg");
-    writer.writeDefaultNamespace("http://www.w3.org/2000/svg");
-    writer.writeAttribute("width", String.valueOf(drawingWidth));
-    writer.writeAttribute("height", String.valueOf(drawingHeight));
-    int n = 10 + generator.nextInt(20);
-    for (int i = 1; i <= n; i++) {
-        int x = generator.nextInt(drawingWidth);
-        int y = generator.nextInt(drawingHeight);
-        int width = generator.nextInt(drawingWidth);
-        int height = generator.nextInt(drawingHeight);
-        int r = generator.nextInt(256);
-        int g = generator.nextInt(256);
-        int b = generator.nextInt(256);
-        writer.writeStartElement("rect");
-        writer.writeAttribute("x", String.valueOf(x));
-        writer.writeAttribute("y", String.valueOf(y));
-        writer.writeAttribute("width", String.valueOf(width));
-        writer.writeAttribute("height", String.valueOf(height));
-        writer.writeAttribute("fill", "#%02x%02x%02x".formatted(r, g, b));
-        writer.writeEndElement();
+    /**
+     * 创建一个新的随机图形。
+     *
+     * @param drawingWidth 图形的宽度
+     * @param drawingHeight 图形的高度
+     * @return SVG 文档的 DOM 树
+     */
+    public static Document newDrawing(int drawingWidth, int drawingHeight)
+            throws ParserConfigurationException {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        factory.setNamespaceAware(true);
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        String namespace = "http://www.w3.org/2000/svg";
+        Document doc = builder.newDocument();
+        Element svgElement = doc.createElementElement("svg");
+        doc.appendChild(svgElement);
+        svgElement.setAttribute("width", String.valueOf(drawingWidth));
+        svgElement.setAttribute("height", String.valueOf(drawingHeight));
+
+        int n = 10 + generator.nextInt(20);
+        for (int i = 1; i <= n; i++) {
+            int x = generator.nextInt(drawingWidth);
+            int y = generator.nextInt(drawingHeight);
+            int width = generator.nextInt(drawingWidth);
+            int height = generator.nextInt(drawingHeight);
+            int r = generator.nextInt(256);
+            int g = generator.nextInt(256);
+            int b = generator.nextInt(256);
+
+            Element rectElement = doc.createElementElement("rect");
+            rectElement.setAttribute("x", String.valueOf(x));
+            rectElement.setAttribute("y", String.valueOf(y));
+            rectElement.setAttribute("width", String.valueOf(width));
+            rectElement.setAttribute("height", String.valueOf(height));
+            rectElement.setAttribute("fill", "#%02x%02x%02x".formatted(r, g, b));
+            svgElement.appendChild(rectElement);
+        }
+
+        return doc;
     }
-    writer.writeEndDocument();
-    writer.flush();
+
+    /**
+     * 使用 DOM/XSLT 保存文档。
+     *
+     * @param doc 要写入的文档
+     * @param filename 目标文件名
+     */
+    public static void writeDocument(Document doc, String filename)
+            throws TransformerException, IOException {
+        Transformer t = TransformerFactory.newInstance().newTransformer();
+        t.setOutputProperty(
+                OutputKeys.DOCTYPE_DECL,
+                "http://www.w3.org/TR/2000/CR-SVG-20000101.dtd");
+        t.setOutputProperty(OutputKeys.DOCTYPE_SYSTEM, "//W3C//DTD SVG 2000//EN");
+        t.setOutputProperty(OutputKeys.INDENT, "yes");
+        t.setOutputProperty(OutputKeys.METHOD, "xml");
+        t.transform(
+                new DOMSource(doc),
+                new StreamResult(Files.newOutputStream(Path.of(filename))));
+    }
+
+    /**
+     * 使用 StAX 写入 SVG 文档。
+     *
+     * @param drawingWidth 图形的宽度
+     * @param drawingHeight 图形的高度
+     * @param filename 目标文件名
+     */
+    public static void writeNewDrawing(
+            int drawingWidth, int drawingHeight, String filename)
+            throws XMLStreamException {
+        XMLOutputFactory factory = XMLOutputFactory.newInstance();
+        XMLStreamWriter writer = factory.createXMLStreamWriter(
+                Files.newOutputStream(Path.of(filename)));
+
+        writer.writeStartDocument();
+        writer.writeDTD("""
+                <!DOCTYPE svg PUBLIC "//W3C//DTD SVG 2000"
+                "http://www.w3.org/TR/2000/CR-SVG-20000101.dtd">
+                """);
+        writer.writeStartElement("svg");
+        writer.writeDefaultNamespace("http://www.w3.org/2000/svg");
+        writer.writeAttribute("width", String.valueOf(drawingWidth));
+        writer.writeAttribute("height", String.valueOf(drawingHeight));
+
+        int n = 10 + generator.nextInt(20);
+        for (int i = 1; i <= n; i++) {
+            int x = generator.nextInt(drawingWidth);
+            int y = generator.nextInt(drawingHeight);
+            int width = generator.nextInt(drawingWidth);
+            int height = generator.nextInt(drawingHeight);
+            int r = generator.nextInt(256);
+            int g = generator.nextInt(256);
+            int b = generator.nextInt(256);
+
+            writer.writeStartElement("rect");
+            writer.writeAttribute("x", String.valueOf(x));
+            writer.writeAttribute("y", String.valueOf(y));
+            writer.writeAttribute("width", String.valueOf(width));
+            writer.writeAttribute("height", String.valueOf(height));
+            writer.writeAttribute("fill", "#%02x%02x%02x".formatted(r, g, b));
+            writer.writeEndElement();
+        }
+
+        writer.writeEndDocument();
+        writer.flush();
+    }
 }
 ```
 
@@ -8191,7 +8962,7 @@ XSL 转换（XSLT）机制允许你指定规则，将 XML 文档转换为其他�
 
 ### 1.4 应用
 
-XSLT 规范非常复杂，关于该主题已有专门的著作。我们只通过一个代表性的示例。你可以在 Don Box 等人写的《Essential XML》书中找到更多信息。XSLT 规范可以在 https://www.w3.org/TR/xslt 获取。
+XSLT 规范非常复杂，关于该主题已有专门的著作。我们只通过一个代表性的示例。你可以在 Don Box 等人写的《Essential XML》书中找到更多信息。XSLT 规范可以在 <https://www.w3.org/TR/xslt> 获取。
 
 假设我们想将带有员工记录的 XML 文件转换为 HTML 文档。考虑以下输入文件：
 
@@ -8239,16 +9010,19 @@ XSLT 规范非常复杂，关于该主题已有专门的著作。我们只通过
 
 
 
-
-
 ```xml
 <?xml version="1.0" encoding="ISO-8859-1"?>
+
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+
 <xsl:output method="html"/>
+
 <template_1>
 
 <template_2>
+
 ...
+
 </xsl:stylesheet>
 ```
 
@@ -8258,15 +9032,17 @@ XSLT 规范非常复杂，关于该主题已有专门的著作。我们只通过
 
 ```xml
 <xsl:template match="/staff/employee">
+
 <tr><xsl:apply-templates/></</tr>
+
 </xsl:template>
 ```
 
 `match` 属性的值是一个 XPath 表达式。该模板规定：每当你在 XPath 集合 `/staff/employee` 中遇到节点时，都执行以下操作：
 
-- 1. 输出字符串 `<tr>`。
-- 2. 在处理其子节点时，继续应用模板。
-- 3. 在完成所有子节点后，输出字符串 `</tr>`。
+1. 输出字符串 `<tr>`。
+2. 在处理其子节点时，继续应用模板。
+3. 在完成所有子节点后，输出字符串 `</tr>`。
 
 换句话说，此模板在每个员工记录周围生成 HTML 表格行标记。
 
@@ -8276,7 +9052,9 @@ XSLT 处理器首先检查根元素。每当节点匹配其中一个模板时，
 
 ```xml
 <xsl:template match="/staff/employee/name">
+
 <td><xsl:apply-templates/></</td>
+
 </xsl:template>
 ```
 
@@ -8286,19 +9064,21 @@ XSLT 处理器首先检查根元素。每当节点匹配其中一个模板时，
 
 ```xml
 <xsl:template match="/staff/employee/hiredate">
+
 <td><xsl:value-of select="@year"/>-<xsl:value-of select="@month"/>-<xsl:value-of select="@day"/></</td>
+
 </xsl:template>
 ```
 
 在处理 `hiredate` 节点时，此模板输出：
 
-- 1. 字符串 `<td>`
-- 2. 年属性的值
-- 3. 一个连字符
-- 4. 月属性的值
-- 5. 一个连字符
-- 6. 日属性的值
-- 7. 字符串 `</td>`
+1. 字符串 `<td>`
+2. 年属性的值
+3. 一个连字符
+4. 月属性的值
+5. 一个连字符
+6. 日属性的值
+7. 字符串 `</td>`
 
 `xsl:value-of` 语句计算节点集（node set）的字符串值。节点集由 `select` 属性的 XPath 值指定。在这种情况下，该路径相对于当前处理的节点。节点集通过所有节点字符串值的拼接被转换为一个字符串。属性节点的字符串值是其属性值。文本节点的字符串值是其内容。元素节点的字符串值是其子节点字符串值的拼接（但不包括其属性的字符串值）。
 
@@ -8308,13 +9088,21 @@ XSLT 处理器首先检查根元素。每当节点匹配其中一个模板时，
 
 ```text
 employee.1.name=Carl Cracker
+
 employee.1.salary=75000.0
+
 employee.1.hiredate=1987-12-15
+
 employee.2.name=Harry Hacker
+
 employee.2.salary=50000.0
+
 employee.2.hiredate=1989-10-1
+
 employee.3.name=Tony Tester
+
 employee.3.salary=40000.0
+
 employee.3.hiredate=1990-3-15
 ```
 
@@ -8324,17 +9112,20 @@ employee.3.hiredate=1990-3-15
 
 ```java
 var styleSheet = new File(filename);
+
 var styleSource = new StreamSource(stylesheet);
+
 Transformer t = TransformerFactory.newInstance();
+
 t.transform(source, result);
 ```
 
 `transform` 方法的参数是实现了 `Source` 和 `Result` 接口的类。有几个类实现了 `Source` 接口：
 
-- DOMSource
-- SAXSource
-- StAXSource
-- StreamSource
+- `DOMSource`
+- `SAXSource`
+- `StAXSource`
+- `StreamSource`
 
 你可以从文件、流、读取器或 URL 构建 `StreamSource`，从 DOM 树的节点构建 `DOMSource`。例如，在前节中，我们这样调用了等标识转换：
 
@@ -8346,10 +9137,6 @@ t.transform(new DOMSource(doc), result);
 
 （注：此处原文缺少输入文件内容描述，根据上下文推断为数据格式。后文省略了关于 SAX XML Reader 的实现逻辑。）
 
-
-
-
-
 ```java
 /**
  * 此程序演示了员工记录的 XSL 转换。
@@ -8360,13 +9147,14 @@ t.transform(new DOMSource(doc), result);
  * @author Cay Horstmann
  */
 public class TransformTest {
+
     public static void main(String[] args) {
         Path path;
         if (args.length > 0) path = Path.of(args[0]);
         else path = Path.of("transform", "employees.xsl");
+
         try (InputStream styleIn = Files.newInputStream(path)) {
             var styleSource = new StreamSource(styleIn);
-
             Transformer t = TransformerFactory.newInstance().newTransformer(styleSource);
             t.setOutputProperty(OutputKeys.INDENT, "yes");
             t.setOutputProperty(OutputKeys.METHOD, "xml");
@@ -8386,39 +9174,51 @@ public class TransformTest {
  * 此类读取扁文件 employee.txt 并解析一个 XML 文件。
  */
 class EmployeeReader implements XMLReader {
+
     private ContentHandler handler;
 
     public void parse(InputSource source) throws SAXException, IOException {
         InputStream stream = source.getInputStream();
         var in = new BufferedReader(new InputStreamReader(stream));
         var atts = new AttributesImpl();
+
         if (handler == null) throw new SAXException("Handler not set");
+
         handler.startDocument();
         handler.startElement("", "staff", "", "");
+
         boolean done = false;
         while (!done) {
             String line = in.readLine();
+
             if (line == null) done = true;
             else {
                 handler.startElement("", "employee", "", "");
+
                 var t = new StringTokenizer(line);
+
                 handler.startElement("", "name", "", "");
                 String s = t.nextToken();
                 handler.characters(s.toCharArray());
                 handler.endElement("", "name");
+
                 handler.startElement("", "salary", "", "");
                 s = t.nextToken();
                 handler.characters(s.toCharArray());
                 handler.endElement("", "salary");
+
                 atts.addAttribute("", "year", "2023");
                 atts.addAttribute("", "month", "10");
                 atts.addAttribute("", "day", "25");
+
                 handler.startElement("", "hiredat", "", "");
                 handler.endElement("", "hiredat");
+
                 atts.clear();
                 handler.endElement("", "employee");
             }
         }
+
         handler.endElement("", "staff");
         handler.endDocument();
     }
@@ -8446,22 +9246,22 @@ class EmployeeReader implements XMLReader {
 }
 ```
 
-## javax.xml.transform.TransformerFactory 1.4
+## `javax.xml.transform.TransformerFactory` 1.4
 
 - `Transformer newTransformer(Source stylesheet)` 返回一个 Transformer 类的实例，该实例从给源读取样式表。
 
-## javax.xml.transform.stream.StreamSource 1.4
+## `javax.xml.transform.stream.StreamSource` 1.4
 
 - `StreamSource(File f)`
 - `StreamSource(InputStream in)`
 - `StreamSource(Reader in)`
 - `StreamSource(String systemID)` 从文件、流、读取器或系统 ID（通常是相对路径或绝对 URL）构建流源。
 
-## javax.xml.transform.sax.SAXSource 1.4
+## `javax.xml.transform.sax.SAXSource` 1.4
 
 - `SAXSource(XMLReader reader, InputSource source)` 构建一个 SAX 源，从给定的输入源获取数据并使用给定的读取器解析输入。
 
-## org.xml.sax.XMLReader 1.4
+## `org.xml.sax.XMLReader` 1.4
 
 ```java
 void setContentHandler(ContentHandler handler) 设置在解析输入时接收解析事件通知的处理器。
@@ -8469,30 +9269,30 @@ void setContentHandler(ContentHandler handler) 设置在解析输入时接收解
 
 - `void parse(InputSource source)` 从给定的输入源解析输入内容，并向内容处理程序发送解析事件。
 
-## javax.xml.transform.dom.DOMResult 1.4
+## `javax.xml.transform.dom.DOMResult` 1.4
 
 - `DOMResult(Node n)` 从给定的节点构建源。通常，n 是一个新的文档节点。
 
-## org.xml.sax.helpers.AttributesImpl 1.4
+## `org.xml.sax.helpers.AttributesImpl` 1.4
 
-- `void addAttribute(String uri, String lname, String qname, String type, String value)` 向此属性集合中添加一个属性。lname 是不带前缀的本地名，qname 是带前缀的限定名。type 参数是 "CDATA"、"ID"、"IDREF"、"IDREFS"、"NMTOKEN"、"NMTOKENS"、"ENTITY"、"ENTITIES" 或 "NOTATION" 之一。`void clear()` 从此属性集合中移除所有属性。
+- `void addAttribute(String uri, String lname, String qname, String type, String value)` 向此属性集合中添加一个属性。`lname` 是不带前缀的本地名，`qname` 是带前缀的限定名。`type` 参数是 `"CDATA"`、`"ID"`、`"IDREF"`、`"IDREFS"`、`"NMTOKEN"`、`"NMTOKENS"`、`"ENTITY"`、`"ENTITIES"` 或 `"NOTATION"` 之一。
+- `void clear()` 从此属性集合中移除所有属性。
 
-
-
-
-将 "a.nist.gov" 解析为其正确的互联网协议 (IP) 地址 129.6.15.28。随后，telnet 软件向该地址发送了连接请求，请求连接到端口 13。一旦连接建立，远程程序返回了一行数据并关闭了连接。通常情况下，客户端和服务器在其中一方关闭连接之前，会进行更广泛的对话。
+将 `"a.nist.gov"` 解析为其正确的互联网协议（IP）地址 `129.6.15.28`。随后，telnet 软件向该地址发送了连接请求，请求连接到端口 `13`。一旦连接建立，远程程序返回了一行数据并关闭了连接。通常情况下，客户端和服务器在其中一方关闭连接之前，会进行更广泛的对话。
 
 这里有另一个类似的实验——但更有趣。输入：
 
-```
+```text
 telnet horstmann.com 80
 ```
 
 然后非常小心地输入以下内容：
 
-```
+```http
 GET /index.html HTTP/1.1
+
 Host: horstmann.com
+
 此处空行
 ```
 
@@ -8500,33 +9300,55 @@ Host: horstmann.com
 
 图 4.3 显示了响应。它看起来应该非常眼熟——你获得了一页 HTML 格式的文本，即 Cay Horstmann 的主页。
 
-```
+```text
 -$ telnet horstmann.com 80
-Trying 68.66.226.114...
-Connected to horstmann.com.
-Escape character is '[^]'
-GET /index.html HTTP/1.1
-Host: horstmann.com
 
+Trying 68.66.226.114...
+
+Connected to horstmann.com.
+
+Escape character is '[^]'
+
+GET /index.html HTTP/1.1
+
+Host: horstmann.com
+```
+
+
+
+```http
 HTTP/1.1 200 OK
+
 Date: Sun, 14 Jan 2024 06:01:44 GMT
+
 Server: Apache
+
 Strict-Transport-Security: max-age=63072000; includeSubDomains
+
 X-Content-Type: nosniff
+
 Last-Modified: Tue, 09 Jan 2024 15:24:22 GMT
+
 Accept-Ranges: bytes
+
 Content-Length: 6706
+
 Vary: Accept-Encoding
+
 Access-Control-Allow-Origin: *
+
 Content-Security-Policy: frame-ancestors https://* file::*
+
 Cache-Control: max-age=3600, must-revalidate
+
 Content-Type: text/html; charset=utf-8
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml/DTD/xhtml1-strict.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 ```
 
-图 1.3: 使用 telnet 访问 HTTP 端口
+图 1.3：使用 telnet 访问 HTTP 端口
 
 这与你的网络浏览器获取网页时所经历的过程完全相同。它使用 HTTP 从服务器请求网页。当然，浏览器会更美观地显示 HTML 代码。
 
@@ -8536,58 +9358,85 @@ Content-Type: text/html; charset=utf-8
 
 我们在列表 4.1 中的第一个网络程序将执行与我们使用 telnet 时相同的操作——连接到端口并打印它发现的内容。
 
-## 列表 1.1 socket/SocketTest.java
+## 列表 1.1 `socket/SocketTest.java`
 
-```
+```java
 1 package socket;
+
 2
+
 3 import java.io.*;
+
 4 import java.net.*;
+
 5 import java.util.*;
+
 6
+
 7 /**
+
 8 * 此程序在服务器发送时间时
+
 9 * 建立一个 socket 连接
+
 10 * @version 1.23 2023-08-16
+
 11 * @author Cay Horstmann
+
 12 */
+
 13 public class SocketTest
+
 14 {
+
 15 public static void main(String[] args) {
+
 16 {
+
 17 try (var s = new Socket("time-a.nist.gov", 13);
+
 var in = new Scanner(s.getInputStream()));
+
 while (in.hasNextLine()) {
+
     String line = in.nextLine();
+
     System.out.println(line);
-}
 
 }
 
+}
 ```
 
-```
+```java
 var s = new Socket("time-a.nist.gov", 13);
+
 InputStream inStream = s.getInputStream();
 ```
 
 第一行代码打开了一个 socket，这是一种网络软件抽象，允许程序内部与外部进行通信。我们将远程地址和端口号传递给 socket 构造函数。如果连接失败，将抛出 `UnknownHostException`，它是 `IOException` 的子类。
 
-java.net.Socket 中的 `getInputStream` 方法返回一个 `InputStream` 对象，你可以像使用其他流一样使用它。如果无法从 socket 读取数据，该方法会抛出 `IOException`。一旦获取了流，此程序只需将输入行打印到标准输出。这个过程一直持续到流结束且服务器断开。
+`java.net.Socket` 中的 `getInputStream` 方法返回一个 `InputStream` 对象，你可以像使用其他流一样使用它。如果无法从 socket 读取数据，该方法会抛出 `IOException`。一旦获取了流，此程序只需将输入行打印到标准输出。这个过程一直持续到流结束且服务器断开。
 
 此程序仅适用于非常简单的服务器，例如“时间”服务。在更复杂的网络程序中，客户端向服务器发送请求，而服务器可能在响应结束并不立即断开。你将在本章的几个示例中看到如何实现这种行为。
 
 `Socket` 类非常友好且易于使用，因为 Java 库隐藏了建立网络连接和在其上方发送数据的复杂性。`java.net` 包本质上为你提供了与处理文件时相同的编程接口。
 
-> **注意：** 在书中，我们只涵盖了传输控制协议 (TCP)。java 也支持数据报协议 (UDP)。其缺点是数据包不需要按顺序交付。
+> **注意：** 在书中，我们只涵盖了传输控制协议（TCP）。Java 也支持数据报协议（UDP）。其缺点是数据包不需要按顺序交付。
 
-```
+```text
 - Socket()
+
 - Socket(String host)
+
 - Socket(SocketAddress address)
+
 - Socket(SocketAddress address, int timeout)
+
 - getInputStream()
+
 - getOutputStream()
+
 - setTimeout(int timeout)
 ```
 
@@ -8595,118 +9444,146 @@ java.net.Socket 中的 `getInputStream` 方法返回一个 `InputStream` 对象�
 
 从 socket 读取数据会阻塞，直到数据可用。如果你在 socket 上设置了超时，当达到时间间隔时将抛出 `SocketTimeoutException`。
 
-```
+```text
 - isConnected()
+
 - isClosed()
 ```
 
-等等，如果客户端简单的请求 localhost 的地址，你总是得到本地回环地址 127.0.0.1，其他人无法通过它连接到你的计算机。相反，使用静态方法 `getHost` 获取你的本地主机地址。
+等等，如果客户端简单的请求 localhost 的地址，你总是得到本地回环地址 `127.0.0.1`，其他人无法通过它连接到你的计算机。相反，使用静态方法 `getHost` 获取你的本地主机地址。
 
 ## 1.1.4. 互联网地址
 
-通常，你不需要担心互联网地址——即由 4 字节（对于 IPv6 则为 16 字节）组成的数值主机地址，例如 129.6.15.28。然而，如果你需要在主机名和互联网地址之间转换，可以使用 `InetAddress` 类。
+通常，你不需要担心互联网地址——即由 4 字节（对于 IPv6 则为 16 字节）组成的数值主机地址，例如 `129.6.15.28`。然而，如果你需要在主机名和互联网地址之间转换，可以使用 `InetAddress` 类。
 
-只要主机操作系统支持，java.net 包支持 IPv6 地址。
+只要主机操作系统支持，`java.net` 包支持 IPv6 地址。
 
-静态方法 `getByName` 返回主机的 `InetAddress` 对象。例如，
+静态方法 `getByName` 返回主机的 `InetAddress` 对象。例如：
 
-```
-InetAddress address = InetAddress.getByName("time-a.nist.gov")
+```java
+InetAddress address = InetAddress.getByName("time-a.nist.gov");
 ```
 
 返回一个封装了四个字节的 `InetAddress` 对象。你可以通过 `getAddress` 方法访问这些字节。
 
-```
+```java
 byte[] addressBytes = address.getAddress();
 ```
 
-一些流量巨大的主机名对应多个互联网地址，以便负载均衡。例如，在写作时，主机名 google.com 对应十二不同的互联网地址。访问主机时会随机选择其中一个。你可以通过 `getAllByName` 方法获取所有主机。
+一些流量巨大的主机名对应多个互联网地址，以便负载均衡。例如，在写作时，主机名 `google.com` 对应十二个不同的互联网地址。访问主机时会随机选择其中一个。你可以通过 `getAllByName` 方法获取所有主机。
 
-```
-Inet[] addresses = InetAddress.getAllByName("google.com")
+```java
+Inet[] addresses = InetAddress.getAllByName("google.com");
 ```
 
-最后，你有时需要本地主机的地址。如果客户端简单的请求 localhost 的地址，你总是得到本地回环地址 127.0.0.1。相反，使用静态方法 `getLocalHost` 获取本地主机的地址。
+最后，你有时需要本地主机的地址。如果客户端简单地请求 `localhost` 的地址，你总是得到本地回环地址 `127.0.0.1`。相反，使用静态方法 `getLocalHost` 获取本地主机的地址。
 
-```
+```java
 Inet address = InetAddress.getLocalHost();
 ```
 
 列表 4.2 是一个简单的程序，如果不指定任何命令行参数，它将打印本地主机的互联网地址；如果你在命令行指定了另一个主机名，它将打印该主机的所有互联网地址，例如：
 
-```
+```bash
 java inetAddress.InetAddressTest www.horstmann.com
 ```
 
-
-
-
-# 列表 1.2 inetAddress/InetAddressTest.java
+## 列表 1.2 `inetAddress/InetAddressTest.java`
 
 ```java
 1 package inetAddress;
+
 2
+
 3 import java.io.*;
+
 4 import java.net.*;
+
 5
+
 6 /**
+
 7 * 此程序演示了使用 InetAddress 参数
+
  * 或在不使用命令行参数的情况下构造 InetAddress
+
  * 或获取给定的主机名的所有 Internet 地址的数组。
+
 9 * @version 1.02 2012-06-05
+
 10 * @author Cay Horstmann
+
 11 */
+
 12 public class InetAddressTest
+
 13 {
+
 14     public static void main(String[] args) throws IOException
+
 15     {
+
 16         if (args.length > 0)
+
 17         {
+
 18             String host = args[0];
+
 19             InetAddress[] addresses = InetAddress.getAllByName(host);
+
 20             for (InetAddress a : addresses)
+
 21                 System.out.println(a);
+
 22         }
+
 23         else
+
 24         {
+
 25             InetAddress localHostAddress = InetAddress.getLocalHost();
+
 26             System.out.println(localHostAddress);
+
 27         }
+
 28     
+
 29 }
 ```
 
-java.net.InetAddress 1.0
+### `java.net.InetAddress` 1.0
 
-- * static InetAddress getByName(String host)
-- * static InetAddress[] getAllByName(String host)
-- * static InetAddress getLocalHost() 为本地主机构造一个 InetAddress。
-- * byte[] getAddress() 返回一个包含数值地址的字节数组。
-- * String getHostAddress() 返回一个用点分隔的十进制数字字符串，例如 "129.6.15.28"。
-- * String getHost() 返回主机名。
+- `static InetAddress getByName(String host)`
+- `static InetAddress[] getAllByName(String host)`
+- `static InetAddress getLocalHost()` 为本地主机构造一个 `InetAddress`。
+- `byte[] getAddress()` 返回一个包含数值地址的字节数组。
+- `String getHostAddress()` 返回一个用点分隔的十进制数字字符串，例如 `"129.6.15.28"`。
+- `String getHost()` 返回主机名。
 
-## 1.2 实现服务器
+## 1.2. 实现服务器
 
 现在我们已经实现了一个可以从 Internet 接收数据的基础网络客户端，让我们来编写一个可以向客户端发送信息的简单服务器。
 
-### 1.2.1. 服务器套字 (Server Sockets)
+### 1.2.1. 服务器套字（Server Sockets）
 
-服务器程序在启动时会等待客户端连接到其端口。对于我们的示例程序，我们选择了端口号 8189，它没有被任何标准服务占用。**ServerSocket** 类建立了一个套接字。在我们的情况下，命令
+服务器程序在启动时会等待客户端连接到其端口。对于我们的示例程序，我们选择了端口号 `8189`，它没有被任何标准服务占用。`ServerSocket` 类建立了一个套接字。在我们的情况下，命令：
 
-```
+```java
 var s = new ServerSocket(8189);
 ```
 
-建立了一个监控 8189 端口的服务器。命令
+建立了一个监控 `8189` 端口的服务器。命令：
 
-```
+```java
 Socket incoming = s.accept();
 ```
 
-告诉程序无限等待，直到客户端连接到该端口。一旦有人通过网络发送正确的请求连接到此端口，该方法将返回一个表示已建立连接的 **Socket** 对象。你可以使用此对象来获取输入和输出流，如下代码所示：
+告诉程序无限等待，直到客户端连接到该端口。一旦有人通过网络发送正确的请求连接到此端口，该方法将返回一个表示已建立连接的 `Socket` 对象。你可以使用此对象来获取输入和输出流，如下代码所示：
 
-```
+```java
 InputStream inStream = incoming.getInputStream();
+
 OutputStream outStream = incoming.getOutputStream();
 ```
 
@@ -8714,8 +9591,9 @@ OutputStream outStream = incoming.getOutputStream();
 
 在本章的所有示例中，我们都通过套接字传输文本。因此，我们将流转换为扫描器（Scanner）和写入器（Writer）。
 
-```
+```java
 var in = new Scanner(inStream);
+
 var out = new PrintWriter(new OutputStreamWriter(outStream), true);
 ```
 
@@ -8725,15 +9603,19 @@ var out = new PrintWriter(new OutputStreamWriter(outStream), true);
 out.println("Hello! Enter BYE to exit.");
 ```
 
-当你使用 telnet 连接到端口 8189 上的服务器程序时，你将在终端屏幕上看到这条问候。
+当你使用 telnet 连接到端口 `8189` 上的服务器程序时，你将在终端屏幕上看到这条问候。
 
 在这个简单的服务器中，我们只是逐行读取客户端的输入并将其回显（echo）。这证明了程序接收了输入。实际服务器显然会根据输入计算并返回答案。
 
 ```java
 String line = in.nextLine();
+
 out.println("Echo: " + line);
+
 if (line.strip().equals("BYE")) {
+
     break;
+
 }
 ```
 
@@ -8745,110 +9627,180 @@ incoming.close();
 
 这就是全部了。每个服务器程序（例如 HTTP Web 服务器）都会持续执行此循环：
 
-1. 通过输入数据流从客户端接收命令（如“get给我这个信息”）。
+1. 通过输入数据流从客户端接收命令（如“get 给我这个信息”）。
 2. 解码客户端命令。
 3. 收集客户端请求的信息。
 4. 通过输出数据流将信息发送给客户端。
 
 列表 4.3 是完整的程序。
 
-# 列表 1.3 server/EchoServer.java
+## 列表 1.3 `server/EchoServer.java`
 
 ```java
 1 package server;
+
 2
+
 3 import java.io.*;
+
 4 import java.net.*;
+
 5 import java.util.*;
+
 6
+
 7 /**
+
 8 * 此程序在参数指定的端口上实现一个简单的服务器
+
  * 并回显（echo）客户端输入。
+
 10 * @version 1.23 2023-08-16
+
 11 * @author Cay Horstmann
+
 12 */
+
 public class EchoServer {
+
     public static void main(String[] args) throws IOException {
+
         int port = args.length >= 1 ? Integer.parseInt(args[0]) : 8189;
+
         try (var s = new ServerSocket(port)) {
+
             Socket incoming = s.accept();
+
             serve(incoming);
+
         }
+
     }
 
     public static void serve(Socket incoming) {
+
         try (var in = new Scanner(incoming.getInputStream())) {
+
             var out = new PrintWriter(incoming.getOutputStream(), true /* autoFlush */);
+
             out.println("Hello! Enter text to echo");
+
             // 回显客户端输入
+
             boolean done = false;
+
             while (!done && in.hasNextLine()) {
+
                 String line = in.nextLine();
+
                 out.println("Echo: " + line);
+
                 if (line.strip().equals("BYE")) {
+
                     done = true;
+
                 }
+
             }
+
         }
+
     }
+
 }
 ```
 
-
-
-
-# 列表 1.4 threaded/EchoServer.java
+## 列表 1.4 `threaded/EchoServer.java`
 
 ```java
 1 package threaded;
+
 2
+
 3 import java.io.*;
+
 4 import java.net.*;
+
 5 import java.util.*;
+
 6 import java.util.concurrent.*;
+
 7
+
 8   /**
+
 9   * 此程序实现了多线程处理
+
 10  * 所有客户端输入。
+
 11  * @author Cay Horstmann
+
 12  * @version 1.24 2023-08-16
+
 13  */
+
 public class EchoServer {
+
     public static void main(String[] args) {
+
         try (var s = new ServerSocket(8189)) {
+
             int i = 1;
+
             ExecutorService service = Executors.newCachedThreadPool();
+
             while (true) {
+
                 Socket incoming = s.accept();
+
                 System.out.println("Spawning ");
+
                 service.submit(() -> serve(incoming));
+
                 i++;
+
             }
+
         } catch (IOException e) {
+
             e.printStackTrace();
+
         }
+
     }
+
     public static void serve(Socket incoming) {
+
         try (var in = new Scanner(incoming.getInputStream());
+
              var out = new PrintWriter(incoming.getOutputStream(), true /* autoFlush */)) {
-            out.println("Hello! Enter BYE to quit");
-            // echo client input
-            boolean done = false;
-            while (!done && in.hasNextLine()) {
-                String line = in.nextLine();
-                out.println("Echo: " + line);
-                if (line.strip().equals("BYE")) {
-                    done = true;
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+```
+
+
+
+```java
+out.println("Hello! Enter BYE to quit");
+
+// echo client input
+
+boolean done = false;
+
+while (!done && in.hasNextLine()) {
+    String line = in.nextLine();
+    out.println("Echo: " + line);
+
+    if (line.strip().equals("BYE")) {
+        done = true;
     }
+}
+} catch (IOException e) {
+    e.printStackTrace();
+}
+}
 }
 ```
 
-## 1.2.3. 半关闭 (Half-Close)
+## 1.2.3. 半关闭（Half-Close）
 
 半关闭允许套接字连接的一端终止输出，同时仍然可以从另一端接收数据。
 
@@ -8859,25 +9811,27 @@ public class EchoServer {
 客户端代码看起来如下：
 
 ```java
-try (var socket = new Socket(host, port))
-{
+try (var socket = new Socket(host, port)) {
     var in = new Scanner(socket.getInputStream());
     var writer = new PrintWriter(socket.getOutputStream());
+
     // 发请求数据
     writer.print(..);
     writer.flush();
+
     socket.shutdownOutput();
+
     // 现在套接字处于半关闭状态
+
     // 读取响应数据
-    while (in.hasNextLine())
-    {
+    while (in.hasNextLine()) {
         String line = in.nextLine();
         ..
     }
 }
 ```
 
-服务器端只需读取输入直到到达输入流的结束。然后发送响应。
+服务器端只需读取输入直到到达输入流的结束，然后发送响应。
 
 当然，这种协议仅适用于一次性服务，例如 HTTP，即客户端连接、发布请求、捕获响应，然后断开连接。
 
@@ -8890,11 +9844,11 @@ try (var socket = new Socket(host, port))
 | `boolean isInputShutdown()` | 如果输入或输出已关闭，则返回 true。 | 1.4 |
 | `boolean isOutputShutdown()` | 如果输入或输出已关闭，则返回 true。 | 1.4 |
 
-## 1.2.4. 可中断套接字 (Interruptible Sockets)
+## 1.2.4. 可中断套接字（Interruptible Sockets）
 
 当你连接到套接字时，当前线程会阻塞，直到连接建立或超时。同样地，当你通过套接字读取数据时，当前线程会阻塞，直到操作成功或超时。（写入数据时没有超时。）
 
-在交互式应用程序中，你希望给用户一个选项，直接取消看似没有产生结果的套接字连接。然而，如果平台线程在无响应的套接字上阻塞，你无法通过调用 interrupt 来解除其阻塞。
+在交互式应用程序中，你希望给用户一个选项，直接取消看似没有产生结果的套接字连接。然而，如果平台线程在无响应的套接字上阻塞，你无法通过调用 `interrupt` 来解除其阻塞。
 
 > **注意：** 使用虚拟线程时，套接字操作是可中断的，你不需要本节讨论的技术。
 
@@ -8922,38 +9876,39 @@ OutputStream outStream = Channels.newOutputStream();
 
 列表 4.5 中的程序对比了可中断套接字和阻塞套接字。
 
-
-
 ```java
 int counter = 0;
-try (var out = new PrintWriter(inc, true /* autoFlush */))
-{
-    while (counter < 100)
-    {
+
+try (var out = new PrintWriter(inc, true /* autoFlush */)) {
+    while (counter < 100) {
         counter++;
-        if (counter <= 10) out.print(counter);
+
+        if (counter <= 10) {
+            out.print(counter);
+        }
+
         Thread.sleep(100);
     }
 }
 ```
 
-## # java.net.InetAddress 1.4
+## `java.net.InetAddress` 1.4
 
-- **InetAddress(String hostname, int port)** 根据给定的主机和端口构造一个地址对象，并在构造期间解析主机名。如果无法解析主机名，则地址对象的 `unresolved` 属性被设置为 `true`。
-- **boolean isUnresolved()** 如果此地址对象无法被解析，则返回 `true`。
+- `InetAddress(String hostname, int port)` 根据给定的主机和端口构造一个地址对象，并在构造期间解析主机名。如果无法解析主机名，则地址对象的 `unresolved` 属性被设置为 `true`。
+- `boolean isUnresolved()` 如果此地址对象无法被解析，则返回 `true`。
 
 ```java
 java.nio.channels.SocketChannel 1.4
 ```
 
-- static SocketChannel open(SocketAddress address) 打开一个套接通道并将其连接到远程地址。
+- `static SocketChannel open(SocketAddress address)` 打开一个套接通道并将其连接到远程地址。
 
 ```java
 java.nio.channels.Channels 1.4
 ```
 
-- static InputStream newInputStream(ReadableByteChannel channel) 构建一个从给定通道读取的输入流。
-- static OutputStream newOutputStream(WritableByteChannel channel) 构建一个向给定通道写入的输出流。
+- `static InputStream newInputStream(ReadableByteChannel channel)` 构建一个从给定通道读取的输入流。
+- `static OutputStream newOutputStream(WritableByteChannel channel)` 构建一个向给定通道写入的输出流。
 
 ## 1.2.5. 安全套接通信
 
@@ -8982,7 +9937,7 @@ SSLServerSocket s = factory.createServerSocket(host, port);
 如果你需要配置客户端或服务器套接字的安全连接参数，将工厂返回的对象强制转换为 `SSLSocket` 或 `SSLServerSocket`：
 
 ```java
-((SSLSocket)s).setNeedClientAuth(true);
+((SSLSocket) s).setNeedClientAuth(true);
 ```
 
 客户端和服务器使用共享加密密钥对流量进行加密。然而，它们需要知道确实是在相互通信，而不是与“中间人”通信。服务器提供一个证书来证明其真实性。该证书需要由客户端知的证书颁发机构签名。JDK 内置了已知证书颁发机构的列表。你通常会从其中一个获取服务器证书并将其安装在服务器中。但是，为了测试，我们将生成自己的证书。
@@ -9020,14 +9975,13 @@ java -Djavax.net.ssl.trustStore=client.jks -Djavax.net.ssl.trustStorePassword=pa
 
 > 提示：如果出现连接问题，请尝试使用 `-Djavax.net.debug=ssl` 命令行选项运行客户端。
 
-## # Listing 1.6 ssl/EchoClient.java
+## Listing 1.6 `ssl/EchoClient.java`
 
 ```java
 package ssl;
 
 import java.io.*;
 import java.util.*;
-
 import java.net.*;
 import javax.net.*;
 import javax.net.ssl.*;
@@ -9043,13 +9997,16 @@ public class EchoClient {
         int port = args.length >= 1 ? Integer.parseInt(args[0]) : 80;
         SSLSocketFactory factory = (SSLSocketFactory) SocketFactory.getDefault();
         String message = "Hello\nWorld\nBYE\n";
+
         try (Socket s = factory.createSocket("localhost", port)) {
             PrintWriter out = new PrintWriter(s.getOutputStream(), true);
             Scanner in = new Scanner(s.getInputStream());
             boolean done = false;
+
             while (!done && in.hasNextLine()) {
                 String line = in.nextLine();
                 System.out.println(line);
+
                 if (line.trim().equals("BYE")) {
                     done = true;
                 }
@@ -9061,14 +10018,13 @@ public class EchoClient {
 }
 ```
 
-## # Listing 1.7 ssl/EchoServer.java
+## Listing 1.7 `ssl/EchoServer.java`
 
 ```java
 package ssl;
 
 import java.io.*;
 import java.util.*;
-
 import java.net.*;
 import javax.net.*;
 import javax.net.ssl.*;
@@ -9084,8 +10040,10 @@ public class EchoServer {
     public static void main(String[] args) {
         int port = args.length >= 1 ? Integer.parseInt(args[0]) : 80;
         SSLServerSocketFactory factory = (SSLServerSocketFactory) SocketFactory.getDefault();
+
         try (ServerSocket s = factory.createServerSocket(port)) {
             ExecutorService service = Executors.newFixedThreadPool(5);
+
             while (true) {
                 // 等待客户端
                 Socket incoming = s.accept();
@@ -9100,9 +10058,11 @@ public class EchoServer {
         try (PrintWriter out = new PrintWriter(incoming.getOutputStream(), true);
              Scanner in = new Scanner(incoming.getInputStream())) {
             boolean done = false;
+
             while (!done && in.hasNextLine()) {
                 String line = in.nextLine();
                 out.println("Echo: " + line);
+
                 if (line.trim().equals("BYE")) {
                     done = true;
                 }
@@ -9114,7 +10074,7 @@ public class EchoServer {
 }
 ```
 
-## 1.3 获取 Web 数据
+## 1.3. 获取 Web 数据
 
 要在 Java 程序中访问 Web 服务器，你希望在比套接字连接和 HTTP 请求更高的级别上工作。在下面的章节中，我们将讨论 Java 为此目的提供的类。
 
@@ -9122,16 +10082,15 @@ public class EchoServer {
 
 `java.net` 包对 URL（统一资源定位符）和 URI（统一资源标识符）做了非常有用的区分。
 
-URI 是一个纯语法上的构造结构，包含了指定 Web 资源的字符串各个部分。URL 是 URI 的特殊类型，即具有足够信息来定位资源的 URI。其他的 URI，例如
+URI 是一个纯语法上的构造结构，包含了指定 Web 资源的字符串各个部分。URL 是 URI 的特殊类型，即具有足够信息来定位资源的 URI。其他的 URI，例如：
 
-```
+```text
 mailto:cay@horstmann
-
 ```
 
 并不是定位符——从此标识符中没有可以被定位的数据。这种 URI 被称为 URN（统一资源名称）。
 
-在 Java 库中，`URI` 类没有访问标识符所指定资源的方法——它的唯一目的是解析。相比之下，`URL` 类可以打开指向资源的流。因此，`URL` 类仅适用于 Java 库知道如何处理的方案，例如 http:、https:、ftp:、本地文件系统 (file:) 以及 JAR 文件 (jar:)。
+在 Java 库中，`URI` 类没有访问标识符所指定资源的方法——它的唯一目的是解析。相比之下，`URL` 类可以打开指向资源的流。因此，`URL` 类仅适用于 Java 库知道如何处理的方案，例如 `http:`、`https:`、`ftp:`、本地文件系统（`file:`）以及 JAR 文件（`jar:`）。
 
 你可以从 URI 构造 URL 对象：
 
@@ -9141,23 +10100,25 @@ var url = new URI(urlString).toURL();
 
 
 
+> **注意：** `URL` 类具有在 Java 中已被弃用的构造函数。它们存在各种技术问题，可能导致构造出无效的 URL。相反，请先构造一个 `URI`，然后获取 `URL`，如上所示。
 
-
-> **注意：** URL 类具有在 Java 中已被弃用的构造函数。它们存在各种技术问题，可能导致构造出无效的 URL。相反，请先构造一个 URI，然后获取 URL，如上所示。
-
-如果你只是想获取资源的内容，请使用 URL 类的 `openStream` 方法。该方法会产生一个 `InputStream` 对象。你可以像平常一样使用它——例如，构造一个 `Scanner`：
+如果你只是想获取资源的内容，请使用 `URL` 类的 `openStream` 方法。该方法会产生一个 `InputStream` 对象。你可以像平常一样使用它——例如，构造一个 `Scanner`：
 
 ```java
 InputStream inStream = url.openStream();
+
 var in = new Scanner(inStream);
 ```
 
-在下一节中，你将看到如何使用 URL 类对连接进行更细致的控制。
+在下一节中，你将看到如何使用 `URL` 类对连接进行更细致的控制。
 
-让我们回到 URI。为了理解为什么解析并非易事，请考虑 URI 可能有多么复杂。例如：
+## URI 的结构
 
-```
+让我们回到 `URI`。为了理解为什么解析并非易事，请考虑 URI 可能有多么复杂。例如：
+
+```text
 https://google.com?q=Beach+Chalet
+
 ftp://username:password@ftp.yourserver.com/pub/f:
 ```
 
@@ -9171,14 +10132,15 @@ URI 规范规定了这些标识符的组成规则。URI 的语法如下：
 
 如果 `schemeSpecificPart` 不以 `/` 开头，则 URI 是透明的（opaque），例如：
 
-```
+```text
 mailto:cay@horstmann.com
 ```
 
 所有非透明绝对 URI 和所有相对 URI 都是层级的。示例包括：
 
-```
+```text
 http://horstmann.com/index.html
+
 ../java/net/Socket.html#Socket()
 ```
 
@@ -9190,7 +10152,7 @@ http://horstmann.com/index.html
 
 对于基于服务器的 URI，`authority` 部分的形式为：
 
-```
+```text
 [user-info@]host[: port]
 ```
 
@@ -9198,35 +10160,45 @@ http://horstmann.com/index.html
 
 标准化 URI 的 RFC 2396 还支持基于注册表的机制，其中 `authority` 具有不同的格式，但这并不常用。
 
-URI 类的目的之一是解析标识符并将其分解为各个组件。你可以通过以下方法获取它们：
+## URI 类的方法
 
-```
+`URI` 类的目的之一是解析标识符并将其分解为各个组件。你可以通过以下方法获取它们：
+
+```text
 getScheme
+
 getSchemeSpecificPart
+
 getAuthority
+
 getUserInfo
+
 getHost
+
 getPort
+
 getPath
+
 getQuery
+
 getFragment
 ```
 
-URI 类的另一个目的是处理绝对和相对的标识符。如果你有一个绝对 URI，例如：
+`URI` 类的另一个目的是处理绝对和相对的标识符。如果你有一个绝对 URI，例如：
 
-```
+```text
 https://docs.mycompany.com/api/java/net/ServerSo
 ```
 
 以及一个相对 URI，例如：
 
-```
+```text
 ../../java/net/Socket.html#Socket()
 ```
 
-那么你可以将两者合并为一个绝对 URI。
+那么你可以将两者合并为一个绝对 URI：
 
-```
+```text
 https://docs.mycompany.com/api/java/net/Socket.html
 ```
 
@@ -9234,83 +10206,95 @@ https://docs.mycompany.com/api/java/net/Socket.html
 
 相反的过程被称为相对化（relativization）。例如，假设你有一个基础 URI：
 
-```
+```text
 https://docs.mycompany.com/api
 ```
 
 以及一个 URI：
 
-```
+```text
 https://docs.mycompany.com/api/java/lang/String.
 ```
 
 那么相对化后的 URI 是：
 
-```
+```text
 java/lang/String.html
 ```
 
-URI 类支持这两种操作：
+`URI` 类支持这两种操作：
 
 ```java
 relative = base.relativize(combined);
+
 combined = base.resolve(relative);
 ```
 
-### 1.3.2. 使用 URLConnection 获取信息
+## 1.3.2 使用 URLConnection 获取信息
 
-如果你想获取有关网络资源的更多信息，应该使用 `URLConnection` 类，它比基础的 URL 类提供了更多的控制。
+如果你想获取有关网络资源的更多信息，应该使用 `URLConnection` 类，它比基础的 `URL` 类提供了更多的控制。
 
 在与 `URLConnection` 对象工作时，你必须仔细安排你的步骤。
 
-- 1. 调用 URL 类的 `openConnection` 方法获取 `URLConnection` 对象：
+1. 调用 `URL` 类的 `openConnection` 方法获取 `URLConnection` 对象：
 
-```java
-URLConnection connection = url.openConnection();
-```
+   ```java
+   URLConnection connection = url.openConnection();
+   ```
 
-- 2. 使用以下方法设置任何请求属性：
+2. 使用以下方法设置任何请求属性：
 
-```
-setDoInput
-setDoOutput
-setIfModifiedSince
-setUseCaches
-setAllowUserInteraction
-setRequestProperty
-setConnectTimeout
-setReadTimeout
-```
+   ```text
+   setDoInput
 
-我们将在本节稍后以及 API 注释中讨论这些方法。
+   setDoOutput
 
-- 3. 通过调用 `connect` 方法连接到远程资源：
+   setIfModifiedSince
 
-```java
-connection.connect();
-```
+   setUseCaches
 
-除了与服务器建立套 连接外，该方法还会查询服务器的“头部信息”（header information）。
+   setAllowUserInteraction
 
-- 4. 连接到服务器后，你可以查询头部信息。两个方法 `getHeaderFieldKey` 和 `getHeaderField` 列出了头部的所有字段。方法 `getHeaderFields` 获取一个包含所有头部字段的标准 `Map` 对象。为了方便起见，以下方法查询标准字段：
+   setRequestProperty
 
-```
-getContentType
-getContentLength
-getContentEncoding
-```
+   setConnectTimeout
 
-```
-getDate
-getExpiration
-getLastModified
-```
+   setReadTimeout
+   ```
 
-- 5. 最后，你可以访问资源数据。使用 `getInputStream` 方法获取用于读取信息的输入流。（这与 URL 类的 `openStream` 方法返回的输入流是同一个。）另一个方法 `getContent` 在实践中并不十分好用。由 `text/plain` 和 `image/gif` 等标准内容类型返回的对象需要 `com.sun` 层次结构中的类进行处理。你可以注册自己的内容处理程序，但我们未在本书书中讨论这种技术。
+   我们将在本节稍后以及 API 注释中讨论这些方法。
 
-> **注意：** 某些程序员在在使用 `URLConnection` 类时会形成错误的心理预期，认为 `getInputStream` 和 `getOutputStream` 方法与 `Socket` 类的方法相似。但事实并非完全如此。`URLConnection` 类在背后做了很多“魔法”——特别是对请求头部的处理。[等等，提示中提供的后半部分 OCR 文本似乎包含大量的重复和乱码。我将根据提供的 Java 文档上下文进行清理。]
+3. 通过调用 `connect` 方法连接到远程资源：
 
-`URLConnection` 类在背后做了很多魔法工作——特别是对请求头部的处理。某些属性没有完备记录，会在程序员之间口口相传。最重要的属性 `setDoInput` 和 `setDoOutput`。默认情况下，连接产生用于读取的输入流。如果你想要输出流（例如向服务器提交数据），你需要调用：
+   ```java
+   connection.connect();
+   ```
+
+   除了与服务器建立套接字连接外，该方法还会查询服务器的“头部信息”（header information）。
+
+4. 连接到服务器后，你可以查询头部信息。两个方法 `getHeaderFieldKey` 和 `getHeaderField` 列出了头部的所有字段。方法 `getHeaderFields` 获取一个包含所有头部字段的标准 `Map` 对象。为了方便起见，以下方法查询标准字段：
+
+   ```text
+   getContentType
+
+   getContentLength
+
+   getContentEncoding
+   ```
+
+   ```text
+   getDate
+
+   getExpiration
+
+   getLastModified
+   ```
+
+5. 最后，你可以访问资源数据。使用 `getInputStream` 方法获取用于读取信息的输入流。（这与 `URL` 类的 `openStream` 方法返回的输入流是同一个。）另一个方法 `getContent` 在实践中并不十分好用。由 `text/plain` 和 `image/gif` 等标准内容类型返回的对象需要 `com.sun` 层次结构中的类进行处理。你可以注册自己的内容处理程序，但我们未在本书中讨论这种技术。
+
+> **注意：** 某些程序员在使用 `URLConnection` 类时会形成错误的心理预期，认为 `getInputStream` 和 `getOutputStream` 方法与 `Socket` 类的方法相似。但事实并非完全如此。`URLConnection` 类在背后做了很多“魔法”——特别是对请求头部的处理。
+
+`URLConnection` 类在背后做了很多魔法工作——特别是对请求头部的处理。某些属性没有完备记录，会在程序员之间口口相传。最重要的属性是 `setDoInput` 和 `setDoOutput`。默认情况下，连接产生用于读取的输入流。如果你想要输出流（例如向服务器提交数据），你需要调用：
 
 ```java
 connection.setDoOutput(true);
@@ -9318,28 +10302,29 @@ connection.setDoOutput(true);
 
 接下来，你可能想设置一些请求头部。请求头部会随请求发送到服务器。这是一个示例：如果你想访问受密码保护的网页，必须执行以下操作：
 
-- 1. 连接用户名、冒号和密码。
+1. 连接用户名、冒号和密码。
 
-```java
-String input = username + ":" + password;
-```
+   ```java
+   String input = username + ":" + password;
+   ```
 
-- 2. 计算结果的 Base64 编码。（Base64 编码将字节序列编码为打印字符序列。）
+2. 计算结果的 Base64 编码。（Base64 编码将字节序列编码为打印字符序列。）
 
-```java
-Base64.Encoder encoder = Base64.getEncoder();
-String encoding = encoder.encodeToString(input);
-```
+   ```java
+   Base64.Encoder encoder = Base64.getEncoder();
 
-- 3. 调用 `setRequestProperty` 方法，名为 "Authorization"，值为 "Basic " + encoding。
+   String encoding = encoder.encodeToString(input);
+   ```
 
-```java
-connection.setRequestProperty("Authorization", "Basic " + encoding);
-```
+3. 调用 `setRequestProperty` 方法，名为 `"Authorization"`，值为 `"Basic " + encoding`。
 
-**提示：** 你刚刚看到了如何访问受密码保护的网页。通过 FTP 访问受密码保护的文件，请使用完全不同的方法：构造格式如下的 URL：
+   ```java
+   connection.setRequestProperty("Authorization", "Basic " + encoding);
+   ```
 
-```
+> **提示：** 你刚刚看到了如何访问受密码保护的网页。通过 FTP 访问受密码保护的文件，请使用完全不同的方法：构造格式如下的 URL：
+
+```text
 ftp://username:password@ftp.yourserver.com/pub/f/
 ```
 
@@ -9349,56 +10334,58 @@ ftp://username:password@ftp.yourserver.com/pub/f/
 String key = connection.getHeaderFieldKey(n);
 ```
 
-获取响应头部的第 n 个键，其中 n 从 1 开始！如果 n 小于 1 或大于头部字段的总数，它将返回 null。没有返回字段数量的方法；你只需一直调用 `getHeaderField` 直到获取 null 为止。同样，调用：
+获取响应头部的第 `n` 个键，其中 `n` 从 1 开始！如果 `n` 小于 1 或大于头部字段的总数，它将返回 `null`。没有返回字段数量的方法；你只需一直调用 `getHeaderField` 直到获取 `null` 为止。同样，调用：
 
 ```java
 String value = connection.getHeaderField(n);
 ```
 
-返回第 n 个值。
+返回第 `n` 个值。
 
-`getHeaderFields` 方法返回响应头部字段的 Map。
+`getHeaderFields` 方法返回响应头部字段的 `Map`：
 
 ```java
-Map<String,List<String>> headerFields = connection.getHeaderFields();
+Map<String, List<String>> headerFields = connection.getHeaderFields();
 ```
-
-
-
-
 
 以下是典型 HTTP 请求中的一组响应头字段：
 
-```
+```text
 Date: Wed, 27 Aug 2008 00:15:48 GMT
+
 Server: Apache/2.2.2 (Unix)
+
 Last-Modified: Sun, 22 Jun 2008 20:53:38 GMT
+
 Accept-Ranges: bytes
+
 Content-Length: 4813
+
 Connection: close
+
 Content-Type: text/html
 ```
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_543_0.png)
 
-> 注意：即使 `connection.getHeaderFieldIndex(0)` 返回 `null`，你也可以调用 `connection.getHeaderField(0)` 来获取响应状态行（例如 "HTTP/1.1 200 OK"）。当你调用 `\headerFields.get(null)` 时也能获取它。
+> **注意：** 即使 `connection.getHeaderFieldIndex(0)` 返回 `null`，你也可以调用 `connection.getHeaderField(0)` 来获取响应状态行（例如 `"HTTP/1.1 200 OK"`）。当你调用 `headerFields.get(null)` 时也能获取它。
 
 为了方便起见，有六个方法可以查询最常见头部的值并在适当时将其转换为数值类型。表 4.1 显示了这些便利方法。返回类型为 `long` 的方法返回自 GMT 1970 年 1 月 1 日以来的秒数。
 
-## 表 1.1: 响应头部值的便利方法
+## 表 1.1：响应头部值的便利方法
 
 | 键名 | 方法名 | 返回类型 |
 |---|---|---|
-| Date | getDate | long |
-| Expires | getExpiration | long |
-| Last-Modified | getLastModified | long |
-| Content-Length | getContentLength | int |
-| Content-Type | getContentType | String |
-| Content-Encoding | getContentEncoding | String |
+| Date | `getDate` | `long` |
+| Expires | `getExpiration` | `long` |
+| Last-Modified | `getLastModified` | `long` |
+| Content-Length | `getContentLength` | `int` |
+| Content-Type | `getContentType` | `String` |
+| Content-Encoding | `getContentEncoding` | `String` |
 
 列表 4.8 中的程序允许你实验 URL 连接。在运行程序时，在命令行提供一个 URL 以及可选的用户名和密码，例如：
 
-```
+```text
 java urlConnection.URLConnectionTest https://horst
 ```
 
@@ -9408,15 +10395,21 @@ java urlConnection.URLConnectionTest https://horst
 - 表 4.1 中六个便利方法的返回值
 - 请求资源的前十行
 
-## 列表 1.8 urlConnection/URLConnectionTest.java
+## 列表 1.8 `urlConnection/URLConnectionTest.java`
 
 ```java
 1 package urlConnection;
+
 2
+
 3 import java.io.*;
+
 4 import java.net.*;
+
 5 import java.util.*;
+
 6
+
 7 /*/**
 8  * 此程序连接到 URL 并显示
 9  * 10 行请求数据。
@@ -9426,115 +10419,123 @@ java urlConnection.URLConnectionTest https://horst
 13  * @version 1.13 2023-08-16
 14  * @author Cay Horstmann
 15  */
+
 16 public class URLConnectionTest
+
 17 {
+
 18     public static void main(String[] args)
+
 19     {
+
 20         try
+
 21         {
+
 22             String urlName;
 23             if (args.length > 0) urlName = args[0];
 24             else urlName = "http://horstmann.com";
+
 25
+
 26             URL url = new URI(urlName).toURL();
 27             URLConnection connection = url.openConnection();
-28
-29             // 如果指定，设置用户名和密码
-30             if (args.length > 2)
-31             {
-32                 String username = args[1];
-33                 String password = args[2];
-34                 String input = username + ":" + password;
-35                 Base64.Encoder encoder = Base64.getEncoder();
-36                 String encoding = encoder.encodeToString(input.getBytes());
-37                 connection.setRequestProperty("Authorization", "Basic " + encoding);
-38             }
-39
-40             connection.connect();
-41
-42             // 打印头部字段
-43             Map<String, List<String>> headers = connection.getHeaderFields();
-44             for (Map.Entry<String, List<String>> entry : headers.entrySet()) {
-45                 String key = entry.getKey();
-46                 for (String value : entry.getValue()) {
-47                     System.out.println(key + ": " + value);
-48                 }
-49             }
-50
-51             // 打印便利函数
-52             System.out.println("-------");
-53             System.out.println("contentType: " + connection.getContentType());
-54             System.out.println("contentLength: " + connection.getContentLength());
-55             System.out.println("content: " + connection.getContent());
-56             System.out.println("date: " + connection.getDate());
-57             System.out.println("expiration:\n" + connection.getExpiration());
-58             System.out.println("lastModified: " + connection.getLastModified());
-59             System.out.println("-------");
-60
-61             String encoding = connection.getContentEncoding();
-62             if (encoding == null) encoding = "identity";
-63             try (var in = new Scanner(connection.getInputStream())) {
-64                 // 打印内容的前十行
-65                 for (int n = 1; n <= 10 && in.hasNextLine(); n++) {
-66                     System.out.println(in.nextLine());
-67                 }
-68             } catch (IOException | URISyntaxException e) {
-69                 e.printStackTrace();
-70             }
-71         } catch (IOException | URISyntaxException e) {
-72             e.printStackTrace();
-73         }
-74     }
-75 }
+
+28             // 如果指定，设置用户名和密码
+29             if (args.length > 2)
+30             {
+31                 String username = args[1];
+32                 String password = args[2];
+33                 String input = username + ":" + password;
+34                 Base64.Encoder encoder = Base64.getEncoder();
+35                 String encoding = encoder.encodeToString(input.getBytes());
+36                 connection.setRequestProperty("Authorization", "Basic " + encoding);
+37             }
+
+38             connection.connect();
+
+39             // 打印头部字段
+40             Map<String, List<String>> headers = connection.getHeaderFields();
+41             for (Map.Entry<String, List<String>> entry : headers.entrySet()) {
+42                 String key = entry.getKey();
+43                 for (String value : entry.getValue()) {
+44                     System.out.println(key + ": " + value);
+45                 }
+46             }
+
+47             // 打印便利函数
+48             System.out.println("-------");
+49             System.out.println("contentType: " + connection.getContentType());
+50             System.out.println("contentLength: " + connection.getContentLength());
+51             System.out.println("content: " + connection.getContent());
+52             System.out.println("date: " + connection.getDate());
+53             System.out.println("expiration:\n" + connection.getExpiration());
+54             System.out.println("lastModified: " + connection.getLastModified());
+55             System.out.println("-------");
+
+56             String encoding = connection.getContentEncoding();
+57             if (encoding == null) encoding = "identity";
+58             try (var in = new Scanner(connection.getInputStream())) {
+59                 // 打印内容的前十行
+60                 for (int n = 1; n <= 10 && in.hasNextLine(); n++) {
+
+
+
+```java
+System.out.println(in.nextLine());
+}
+} catch (IOException | URISyntaxException e) {
+    e.printStackTrace();
+}
+} catch (IOException | URISyntaxException e) {
+    e.printStackTrace();
+}
+}
+}
 ```
 
-### java.net.URL 1.0
+### `java.net.URL` 1.0
 
-- InputStream openStream(): 返回用于读取的流。
-- URLConnection openConnection(): 返回一个管理连接的 URL 对象。
+- `InputStream openStream()`: 返回用于读取的流。
+- `URLConnection openConnection()`: 返回一个管理连接的 `URL` 对象。
 
-### java.net.URLConnection 1.0
+### `java.net.URLConnection` 1.0
 
-- void setDoInput(boolean doInput)
-- boolean getDoInput(): 如果 doInput 为 true，用户可以从此连接接收输入。
-- void setDoOutput(boolean doOutput)
-- boolean getDoOutput(): 如果 doOutput 为 true，用户可以向此连接发送输出。
-- void setModifiedSince(long time)
-- long getModifiedSince()
+- `void setDoInput(boolean doInput)`
+- `boolean getDoInput()`: 如果 `doInput` 为 `true`，用户可以从此连接接收输入。
+- `void setDoOutput(boolean doOutput)`
+- `boolean getDoOutput()`: 如果 `doOutput` 为 `true`，用户可以向此连接发送输出。
+- `void setModifiedSince(long time)`
+- `long getModifiedSince()`
 
-modifiedSince 属性配置此连接获取自给定时间以来的数据。
+`modifiedSince` 属性配置此连接获取自给定时间以来的数据。
 
-- void setConnectTimeout(int timeout)
-- int getConnectTimeout()
-- void setReadTimeout(int timeout)
-- int getReadTimeout()
-
-- void setRequestProperty(String key, String value): 设置请求头部字段。
-- Map<String, List<String>> getRequestProperties(): 返回请求属性映射。
-- Map<String, List<String>> getHeaderFields(): 返回响应头部映射。
-- String getHeaderFieldName(int n): 获取 n 头部字段的键。
-- String getHeaderField(int n): 获取 n 头部字段的值。
-- int getContentLength(): 如果可用则获取长度，否则返回 -1。
-- String getContentType(): 获取内容类型，例如 `text/plain` 或 `image/gif`。
-- String getContentEncoding(): 获取内容编码，如 gzip。
-- long getDate(): 获取资源的创建、过期和最后修改日期。日期以自 GMT 1970 年 1 月 1 日以来的秒数指定。
-- InputStream getInputStream(): 返回读取资源的流。
-- OutputStream getOutputStream(): 返回写入资源的流。
-- Object getContent(): 选择适当的内容处理器来读取资源并转换为对象。除非你安装了自己的内容处理器，否则该方法对于 text/plain 等标准类型没有用处。
+- `void setConnectTimeout(int timeout)`
+- `int getConnectTimeout()`
+- `void setReadTimeout(int timeout)`
+- `int getReadTimeout()`
+- `void setRequestProperty(String key, String value)`: 设置请求头部字段。
+- `Map<String, List<String>> getRequestProperties()`: 返回请求属性映射。
+- `Map<String, List<String>> getHeaderFields()`: 返回响应头部映射。
+- `String getHeaderFieldName(int n)`: 获取 `n` 头部字段的键。
+- `String getHeaderField(int n)`: 获取 `n` 头部字段的值。
+- `int getContentLength()`: 如果可用则获取长度，否则返回 `-1`。
+- `String getContentType()`: 获取内容类型，例如 `text/plain` 或 `image/gif`。
+- `String getContentEncoding()`: 获取内容编码，如 `gzip`。
+- `long getDate()`: 获取资源的创建、过期和最后修改日期。日期以自 GMT 1970 年 1 月 1 日以来的秒数指定。
+- `InputStream getInputStream()`: 返回读取资源的流。
+- `OutputStream getOutputStream()`: 返回写入资源的流。
+- `Object getContent()`: 选择适当的内容处理器来读取资源并转换为对象。除非你安装了自己的内容处理器，否则该方法对于 `text/plain` 等标准类型没有用处。
 
 ## 提交表单数据
 
-在在前面的节中，你了解了如何从 Web 服务器读取数据。现在我们将向你展示程序如何向 Web 服务器以及 Web 服务器调用的程序发送数据。
+在前面的节中，你了解了如何从 Web 服务器读取数据。现在我们将向你展示程序如何向 Web 服务器以及 Web 服务器调用的程序发送数据。
 
 要从 Web 浏览器向 Web 服务器发送信息，用户填写表单，如图 4.6 所示。
 
 当用户点击提交按钮时，文本框中的文本以及复选框、单选按钮和其他输入元素的设置将发送回 Web 服务器。Web 服务器调用处理用户输入的程序。
 
 服务器端程序处理表单数据并产生另一个 HTML 页面，由 Web 服务器发送给浏览器。这一序列如图 4.7 所示。响应页面可以包含新信息（例如在信息搜索程序中），或只是确认。Web 浏览器随后显示响应页面。
-
-
-
-
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_554_0.png)
 
@@ -9544,42 +10545,42 @@ modifiedSince 属性配置此连接获取自给定时间以来的数据。
 
 当表单数据发送到 Web 服务器时，这些数据是由 servlet、CGI 脚本还是其他服务器端技术解析并不重要。客户端以标准格式将数据发送到 Web 服务器，由 Web 服务器负责将其传递给生成响应的程序。
 
-通常使用名为 GET 和 POST 的两个命令向 Web 服务器发送信息。
+通常使用名为 `GET` 和 `POST` 的两个命令向 Web 服务器发送信息。
 
-在 GET 命令中，你只需将查询参数附加到 URL 的末尾。URL 的格式如下：
+在 `GET` 命令中，你只需将查询参数附加到 URL 的末尾。URL 的格式如下：
 
-```
+```text
 https://host/path?query
 ```
 
 每个参数的形式为 `name=value`。参数之间通过 `&` 字符分隔开。参数值使用 URL 编码方案进行编码，遵循以下规则：
 
-- 保持字符 A 到 Z、a 到 z、0 到 9 以及 `,、~` 不变。
+- 保持字符 A 到 Z、a 到 z、0 到 9 以及 `-、_、.、~` 不变。
 - 将所有空格替换为 `+` 字符。
 - 将所有其他字符编码为 UTF-8，并对每个字节使用 `%` 后跟两个十六进制数字进行编码。
 
-例如，为了传输 "San Francisco, CA"，你需要使用 `San+Francisco%2c+CA`，其中十六进制数 `2c` 是逗号 `,` 的 UTF-8 编码。
+例如，为了传输 `"San Francisco, CA"`，你需要使用 `San+Francisco%2c+CA`，其中十六进制数 `2c` 是逗号 `,` 的 UTF-8 编码。
 
 这种编码可以防止任何中间程序破坏空格和其他特殊字符。
 
-在本文编写时，Google Maps 网站（https://www.google.com/maps）接受名为 `q` 和 `h1` 的查询参数，其值值是位置查询和响应的人类语言。若要获取位于旧金山市场街 1 号的地图且响应语言为德语，请使用以下 URL：
+在本文编写时，Google Maps 网站（`https://www.google.com/maps`）接受名为 `q` 和 `hl` 的查询参数，其值是位置查询和响应的人类语言。若要获取位于旧金山市场街 1 号的地图且响应语言为德语，请使用以下 URL：
 
-```
+```text
 https://www.google.com/maps?q=1+Market+Street+San
 ```
 
-非常长的查询字符串在浏览器中看起来并不美观，而且旧版浏览器和代理对你在 GET 请求中包含的字符数量有限制。因此，对于包含大量数据的表单通常使用 POST 请求。在 POST 请求中，你不需要将参数附加到 URL；而是从 `URLConnection` 获取一个输出流，并将名称/值对写入该输出流中。你仍然需要对值进行 URL 编码并用 `&` 字符将它们分隔。
+非常长的查询字符串在浏览器中看起来并不美观，而且旧版浏览器和代理对你在 `GET` 请求中包含的字符数量有限制。因此，对于包含大量数据的表单通常使用 `POST` 请求。在 `POST` 请求中，你不需要将参数附加到 URL；而是从 `URLConnection` 获取一个输出流，并将名称/值对写入该输出流中。你仍然需要对值进行 URL 编码并用 `&` 字符将它们分隔。
 
 让我们详细查看此过程。要向服务器端程序发布数据，首先建立一个 `URLConnection`：
 
-```
+```java
 URL url = new URI("https://host/path").toURL();
 URLConnection connection = url.openConnection();
 ```
 
 然后，调用 `setDoOutput` 方法为输出设置连接：
 
-```
+```java
 connection.setDoOutput(true);
 ```
 
@@ -9591,14 +10592,14 @@ var out = new PrintWriter(connection.getOutputStream());
 
 现在你已经准备好向服务器发送数据了：
 
-```
+```java
 out.print(name1 + "=" + URLEncoder.encode(value1));
 out.print(name2 + "=" + URLEncoder.encode(value2));
 ```
 
 关闭输出流：
 
-```
+```java
 out.close();
 ```
 
@@ -9606,7 +10607,7 @@ out.close();
 
 > **注意：** 静态方法 `URLEncoder.encode` 和 `URLDecoder.decode` 有一个使用默认字符集的版本，它们在 Java 6 中已被弃用，因为它们应该始终配合 UTF-8 使用。遗憾，尽管 Java 18 将默认字符编码更改为 UTF-8，它们仍然被标记弃用。
 
-让我们运行一个实际示例。位于 https://tools.usps.com/zip-code-lookup.htm?byaddress 的网站包含一个用于查找街道地址邮政编码的表单（见图 4.6）。要在 Java 程序中使用此表单，你需要知道 POST 请求的 URL 和参数。
+让我们运行一个实际示例。位于 `https://tools.usps.com/zip-code-lookup.htm?byaddress` 的网站包含一个用于查找街道地址邮政编码的表单（见图 4.6）。要在 Java 程序中使用此表单，你需要知道 `POST` 请求的 URL 和参数。
 
 你可以通过查看表单的 HTML 代码获取这些信息，但通常使用网络监视器“监视”请求更容易。大多数浏览器的开发工具中都包含网络监视器。例如，图 4.8 显示了向我们的示例网站提交数据时 Firefox 网络监视器的屏幕截图。你可以找到提交的 URL 以及参数名称和值。
 
@@ -9614,25 +10615,25 @@ out.close();
 
 在发布表单数据时，HTTP 头部包含内容类型：
 
-```
+```http
 Content-Type: application/x-www-form-urlencoded
 ```
 
-你也可以以其他格式发布数据。例如，当使用 JavaScript 对象表示法（JSON）发送数据时，将内容类型设置为
+你也可以以其他格式发布数据。例如，当使用 JavaScript 对象表示法（JSON）发送数据时，将内容类型设置为：
 
-```
-application/json.
+```http
+application/json
 ```
 
-`POST` 的头部还必须包含内容长度，例如
+`POST` 的头部还必须包含内容长度，例如：
 
-```
+```http
 Content-Length: 124
 ```
 
 位于清单 4.9 中的程序将 `POST` 表单数据发送到任何服务器端程序。将数据放入如下 `.properties` 文件中：
 
-```
+```properties
 url=https://tools.usps.com/tools/app/ziplookup/z
 User-Agent=HTTPPie/0.9.2
 address1=1 Market Street
@@ -9644,75 +10645,9 @@ companyName=
 
 该程序移除 `url` 和 `User-Agent` 条目，并将所有其他项发送到 `doPost` 方法。
 
-在 `doPost` 方法中，我们首先打开连接并设置用户代理。（获取邮政编码，我们首先打开连接并设置用户代理。）在发布表单数据时，HTTP 头部包含内容类型：
+在 `doPost` 方法中，我们首先打开连接并设置用户代理。（获取邮政编码，我们首先打开连接并设置用户代理。）
 
-```
-Content-Type: application/x-www-form-urlencoded
-```
-
-你也可以以其他格式发布数据。例如，当使用 JavaScript 对象表示法（JSON）发送数据时，将内容类型设置为
-
-```
-application/json.
-```
-
-`POST` 的头部还必须包含内容长度，例如
-
-```
-Content-Length: 124
-```
-
-位于清单 4.9 中的程序将 `POST` 表单数据发送到任何服务器端程序。将数据放入如下 `.properties` 文件中：
-
-```
-url=https://tools.usps.com/tools/app/ziplookup/z
-User-Agent=HTTPPie/0.9.2
-address1=1 Market Street
-address2=
-city=San Francisco
-state=CA
-companyName=
-```
-
-该程序移除 `url` 和 `User-Agent` 条目，并将所有其他项发送到 `doPost` 方法。
-
-在 `doPost` 方法中，我们首先打开连接并设置用户代理。（获取邮政编码，我们首先打开连接并设置用户代理。）在发布表单数据时，HTTP 头部包含内容类型：
-
-```
-Content-Type: application/x-www-form-urlencoded
-```
-
-你也可以以其他格式发布数据。例如，当使用 JavaScript 对象表示法（JSON）发送数据时，将内容类型设置为
-
-```
-application/json.
-```
-
-`POST` 的头部还必须包含内容长度，例如
-
-```
-Content-Length: 124
-```
-
-位于清单 4.9 中的程序将 `POST` 表单数据发送到任何服务器端程序。将数据放入如下 `.properties` 文件中：
-
-```
-url=https://tools.usps.com/tools/app/ziplookup/z
-User-Agent=HTTPPie/0.9.2
-address1=1 Market Street
-address2=
-city=San Francisco
-state=CA
-companyName=
-```
-
-该程序移除 `url` 和 `User-Agent` 条目，并将所有其他项发送到 `doPost` 方法。
-
-
-
-
-
-```
+```java
 HttpURLConnection.HTTP_MOVED_PERM
 HttpURLConnection.HTTP_MOVED_TEMP
 HttpURLConnection.HTTP_SEE_OTHER
@@ -9721,7 +10656,8 @@ HttpURLConnection.HTTP_SEE_OTHER
 在这种情况下，获取 `Location` 响应头以获得重定向的 URL。然后断开并对新 URL 建立连接：
 
 ```java
-String location = connection.getHeaderField("Location")
+String location = connection.getHeaderField("Location");
+
 if (location != null) {
     URL base = connection.getURL();
     connection.disconnect();
@@ -9733,7 +10669,7 @@ if (location != null) {
 
 该程序演示的技巧每当你需要从现有网站查询信息时都非常有用。只需找到你需要发送的参数，然后从回复的内容中剥离 HTML 标签和其他不需要的信息即可。
 
-# 列表 1.9 post/PostTest.java
+# 列表 1.9 `post/PostTest.java`
 
 ```java
 package post;
@@ -9752,12 +10688,17 @@ import java.util.*;
 public class PostTest {
     public static void main(String[] args) throws {
         String propsFilename = args.length > ...
+
         var props = new Properties();
+
         try (Reader reader = Files.newBufferedReader(
-            Path.of(propsFilename))) {
+                Path.of(propsFilename))) {
             props.load(in);
         }
-        String urlString = props.remove("url\n        Object userAgent = props.remove("User...
+
+        String urlString = props.remove("url
+        Object userAgent = props.remove("User...
+
 27 Object redirects = props.remove("redi
 28 CookieHandler.setDefault(new CookieMa
 29 String result = doPost(new URI(str
@@ -9765,7 +10706,7 @@ public class PostTest {
 31 redirects == null ? -1 : Integer.p
 32 System.out.println(result);
 33 }
-34 
+34
 35 /**
 36 执行一个 HTTP POST。
  * @param url 要发送 POST 的 URL
@@ -9782,139 +10723,162 @@ public class PostTest {
 48 var connection = (HttpURLConnection)
 49 if (userAgent != null)
 50 connection.setRequestProperty("Use
-51 
+51
 52 if (redirects >= 0)
 53 connection.setInstanceFollowRedire
 54 }
+
 connection.setDoOutput(true);
+
 try (var out = new PrintWriter(connection.getOutputStream())) {
-  boolean first = true;
-  for (Map.Entry<Object, Object> pair : pair) {
-    if (first) first = false;
-    else out.print("&");
-    String name = pair.getKey().toString();
-    String value = pair.getValue().toString();
-    out.print(name);
-    out.print("=");
-    out.print(URLEncoder.encode(value, encoding));
-  }
+    boolean first = true;
+
+    for (Map.Entry<Object, Object> pair : pair) {
+        if (first) first = false;
+        else out.print("&");
+
+        String name = pair.getKey().toString();
+        String value = pair.getValue().toString();
+
+        out.print(name);
+        out.print("=");
+        out.print(URLEncoder.encode(value, encoding));
+    }
 }
 
 if (encoding == null) encoding = "UTF-8";
+
 if (redirects > 0) {
-  int responseCode = connection.getResponseCode();
-  if (responseCode == HttpURLConnection.HTTP_MOVED_TEMP || responseCode == HttpURLConnection.HTTP_MOVED_PERM || responseCode == HttpURLConnection.HTTP_REDIRECT) {
-    String location = connection.getHeaderField("Location");
-    if (location != null))
-{
-  URL base = connection.getUrl()
-  connection.disconnect();
-  return doPost(base.toURI(),
-  redirects - 1);
-}
-else if (redirects == 0) {
-  throw new IOException("Too many requests")
-}
-var response = new StringBuilder();
-try (var in = new Scanner(connection.getInputStream())) {
-  while (in.hasNextLine()) {
-    response.append(in.nextLine());
-    response.append("\n");
-  }
-} catch (IOException err) {
-  InputStream err = connection.getErrorStream();
-  if (err == null) throw e;
-  try (var in = new Scanner(err)) {
-111 response.append(in.nextLine());
-112 response.append("\n");
-113 }
-114 }
-115
-116 return response.toString();
-117 }
-118 }
 ```
 
-# java.net.HttpConnection 1.0
 
-- * InputStream getErrorStream()
-返回一个流，你可以从中读取 Web 服务器的错误消息。
 
-# java.net.URLEncoder 1.0
+```java
+int responseCode = connection.getResponseCode();
 
-- * static String encode(String s, String encoding)
-1.4
-返回字符串 s 的 URL 编码形式，使用给定的字符编码方案。（推荐的方案是 "UTF-8."）。在 URL 编码中，字符 A-Z、a-z、0-9、-、~ 保持不变。空格被编码为 +，所有其他字符被编码为形式如 %XY 的编码字节字节序列，其中 0xXY 是该字节的十六进制值。
+if (responseCode == HttpURLConnection.HTTP_MOVED_TEMP
+        || responseCode == HttpURLConnection.HTTP_MOVED_PERM
+        || responseCode == HttpURLConnection.HTTP_REDIRECT) {
 
-# java.net.URLDecoder 1.0
+    String location = connection.getHeaderField("Location");
 
-- * static String decode(String s, String encoding)
-1.4
-使用给定的字符编码方案返回字符串 s 的 URL 编码形式。
+    if (location != null) {
+        URL base = connection.getUrl();
+
+        connection.disconnect();
+
+        return doPost(base.toURI(), redirects - 1);
+    }
+} else if (redirects == 0) {
+    throw new IOException("Too many requests");
+}
+
+var response = new StringBuilder();
+
+try (var in = new Scanner(connection.getInputStream())) {
+    while (in.hasNextLine()) {
+        response.append(in.nextLine());
+        response.append("\n");
+    }
+} catch (IOException err) {
+    InputStream errorStream = connection.getErrorStream();
+
+    if (errorStream == null) {
+        throw err;
+    }
+
+    try (var in = new Scanner(errorStream)) {
+        response.append(in.nextLine());
+        response.append("\n");
+    }
+}
+
+return response.toString();
+```
+
+# `java.net.HttpConnection` 1.0
+
+- `InputStream getErrorStream()`
+
+  返回一个流，你可以从中读取 Web 服务器的错误消息。
+
+# `java.net.URLEncoder` 1.0
+
+- `static String encode(String s, String encoding)`
+
+  1.4
+
+  返回字符串 `s` 的 URL 编码形式，使用给定的字符编码方案。（推荐的方案是 `"UTF-8"`。）在 URL 编码中，字符 A-Z、a-z、0-9、-、~ 保持不变。空格被编码为 `+`，所有其他字符被编码为形式如 `%XY` 的编码字节序列，其中 `0xXY` 是该字节的十六进制值。
+
+# `java.net.URLDecoder` 1.0
+
+- `static String decode(String s, String encoding)`
+
+  1.4
+
+  使用给定的字符编码方案返回字符串 `s` 的 URL 编码形式。
 
 ## 1.4. The HttpClient
 
 URI 是“统一资源标识符”，在 HTTP 中，它与 URL 类一样，关注的是方案、主机、端口、路径、查询和片段。
 
-## 1.4.1. The HttpClient 类
+### 1.4.1. The HttpClient 类
 
 发送请求时，你需要告诉客户端如何处理响应。如果你只需要字符串形式的响应，可以使用 `HttpResponse.BodyHandlers.ofString()`：
 
 ```java
-HttpClient client = HttpClient.newHttpClient()
+HttpClient client = HttpClient.newHttpClient();
 ```
 
 或者，如果你需要配置客户端，可以使用如下构建器：
 
 ```java
 HttpClient client = HttpClient.newBuilder()
-.followRedirects(Redirect.ALWAYS)
-.build();
+    .followRedirects(Redirect.ALWAYS)
+    .build();
 ```
 
-HttpClient 是可关闭的，因此你可以将其放在 try-resources 中。它的关闭方法会等待提交的请求完成并关闭连接池。
+`HttpClient` 是可关闭的，因此你可以将其放在 try-resources 中。它的关闭方法会等待提交的请求完成并关闭连接池。
 
-## 1.4.2. HttpRequest 类和发布者
+### 1.4.2. `HttpRequest` 类和发布者
 
 你同样使用构建器模式来构建请求。这是一个 GET 请求：
 
 ```java
 HttpRequest request = HttpRequest.newBuilder()
-.uri(new URI(urlString))
-.GET()
-.build();
+    .uri(new URI(urlString))
+    .GET()
+    .build();
 ```
 
 对于 POST 请求，你需要一个“发布者”，将请求数据转换为要发布的数据。存在字符串、字节数组和文件的发布者。例如，如果你的请求是 JSON，只需将 JSON 字符串提供给字符串发布器：
 
 ```java
 HttpRequest request = HttpRequest.newBuilder()
-.uri(new URI(urlString))
-.header("Content-Type", "application/json")
-.POST(HttpRequest.BodyPublishers.ofString(json))
-.build();
+    .uri(new URI(urlString))
+    .header("Content-Type", "application/json")
+    .POST(HttpRequest.BodyPublishers.ofString(json))
+    .build();
 ```
 
 遗憾的是 API 不支持常见内容类型的格式。列表 4.10 中的示例程序提供了表单数据和文件上传的发布者。
 
 在该程序中，你可以看到如何使用发布者发送字符串和文件。文件上传需要两者，并采用 `BodyPublishers.concat` 方法连接多个发布者以生成请求体。
 
-HttpRequest.Builder 类还具有用于较不常用的 PUT、DELETE 和 HEAD 请求的构建方法。
+`HttpRequest.Builder` 类还具有用于较不常用的 PUT、DELETE 和 HEAD 请求的构建方法。
 
-Java 16 添加了一个用于过滤现有 HttpRequest 标头的构建器。你提供请求以及一个接收标头名称和值的函数，该函数对于应该保留的标头返回 true。例如，这里我们修改了内容类型：
+Java 16 添加了一个用于过滤现有 `HttpRequest` 标头的构建器。你提供请求以及一个接收标头名称和值的函数，该函数对于应该保留的标头返回 true。例如，这里我们修改了内容类型：
 
 ```java
-HttpRequest request2 = HttpRequest.newBuilder(re
-(name, value) -> !name.equalsIgnoreCase("C
-.header("Content-Type", "application/xml") //
-.build());
+HttpRequest request2 = HttpRequest.newBuilder(request,
+    (name, value) -> !name.equalsIgnoreCase("Content-Type"))
+    .header("Content-Type", "application/xml")
+    .build();
 ```
 
-## 1.4.3. HttpResponse 接口和 Body Handlers
+### 1.4.3. `HttpResponse` 接口和 Body Handlers
 
 发送请求时，你必须告诉客户端如何处理响应。如果你只需要字符串形式的响应，可以使用 `HttpResponse.BodyHandlers.ofString()`：
-
-
 
 ```java
 HttpResponse<String> response = client.send(request);
@@ -9964,175 +10928,217 @@ Optional<String> lastModified = responseHeaders.lastModified();
 
 ```java
 ExecutorService executor = Executors.newCachedThreadPool();
-HttpClient client = HttpClient.newBuilder().executor(executor).build();
+
+HttpClient client = HttpClient.newBuilder()
+    .executor(executor)
+    .build();
 ```
 
-构建一个请求，然后在客户端上调用 `sendAsync` 方法。你将接收到一个 `CompletableFuture<HttpResponse<T>>`，其中 T 是体处理器的类型。请按照第一卷第 10 章描述的方法使用 `CompletableFuture` API：
+构建一个请求，然后在客户端上调用 `sendAsync` 方法。你将接收到一个 `CompletableFuture<HttpResponse<T>>`，其中 `T` 是体处理器的类型。请按照第一卷第 10 章描述的方法使用 `CompletableFuture` API：
 
 ```java
-HttpRequest request = HttpRequest.newBuilder().uri(URI.create("https://example.com")).build();
+HttpRequest request = HttpRequest.newBuilder()
+    .uri(URI.create("https://example.com"))
+    .build();
+
 client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
-      thenAccept(response -> { . });
+    .thenAccept(response -> {
+        // ...
+    });
 ```
 
-> 提示：要启用 HttpClient 的日志，请在 JDK 的 `net.properties` 文件中添加此行：
+> **提示：** 要启用 `HttpClient` 的日志，请在 JDK 的 `net.properties` 文件中添加此行：
 
-```
+```properties
 jdk.httpclient.HttpClient.log=all
 ```
 
 除了 `all` 之外，你还可以指定以下事件类型的逗号分隔列表：
 
-- channel
-- content
-- errors
-- frames，可选地后跟一个或多个 :control, :data, :window 或 :all
-- headers
-- requests
-- ssl
-- trace
+- `channel`
+- `content`
+- `errors`
+- `frames`，可选地后跟一个或多个 `:control`、`:data`、`:window` 或 `:all`
+- `headers`
+- `requests`
+- `ssl`
+- `trace`
 
 不要使用任何空格：
 
-```
-jdk.httpclient.HttpClient.log=headers, requests,fi
+```properties
+jdk.httpclient.HttpClient.log=headers,requests,frames
 ```
 
 然后，为名为 `jdk.httpclient.HttpClient` 的记录器设置日志级别为 INFO，例如通过在 JDK 的 `logging.properties` 文件中添加此行：
 
-```
+```properties
 jdk.httpclient.HttpClient.level=INFO
 ```
 
-列出列表 4.10 中的程序展示了如何向不同服务发送同步请求。运行方式如下：
+列表 4.10 中的程序展示了如何向不同服务发送同步请求。运行方式如下：
 
-```
+```bash
 java httpClient.HttpClientTest form.properties
 java httpClient.HttpClientTest fileupload.properties
 java httpClient.HttpClientTest json.properties
 ```
 
-每次运行时，“Hello, World”程序都会被发送到 CodeCheck 服务，并显示其运行结果。该服务可以接受表单提交、文件上传和 JSON 提交。注意来自 HttpClient 的日志输出。
+每次运行时，“Hello, World”程序都会被发送到 CodeCheck 服务，并显示其运行结果。该服务可以接受表单提交、文件上传和 JSON 提交。注意来自 `HttpClient` 的日志输出。
 
-# Listing 1.10 httpClient/HttpClientTest.java
+# Listing 1.10 `httpClient/HttpClientTest.java`
 
 ```java
-1 package httpClient;
-2
-3 import java.io.*;
-4 import java.net.*;
-5 import java.nio.charset.*;
-6 import java.nio.file.*;
-7 import java.util.*;
-8 import java.util.stream.Stream;
-9 import java.net.http.*;
-10 import java.net.http.HttpRequest.*;
-11
-12 /*
-13 * 此程序演示 HTTP 客户端
-14 * @version 1.02 2023-08-16
-15 * @author Cay Horstmann
-16 */
+package httpClient;
+
+import java.io.*;
+import java.net.*;
+import java.nio.charset.*;
+import java.nio.file.*;
+import java.util.*;
+import java.util.stream.Stream;
+import java.net.http.*;
+import java.net.http.HttpRequest.*;
+
+/*
+ * 此程序演示 HTTP 客户端
+ * @version 1.02 2023-08-16
+ * @author Cay Horstmann
+ */
+
 /* class MoreBodyPublishers {
     public static BodyPublisher ofFormData(boolean first = true) {
         var builder = new StringBuilder();
+
         for (Map.Entry<Object, Object> entry : /**/) {
             if (first) first = false;
             else builder.append(",");
-            builder.append(URLEncoder.encode(entry.getKey().toString(), StandardCharsets.UTF_8));
+
+            builder.append(URLEncoder.encode(
+                entry.getKey().toString(),
+                StandardCharsets.UTF_8
+            ));
+
             builder.append("=");
-            builder.append(URLEncoder.encode(entry.getValue().toString(), StandardCharsets.UTF_8));
+
+            builder.append(URLEncoder.encode(
+                entry.getValue().toString(),
+                StandardCharsets.UTF_8
+            ));
         }
+
         return BodyPublishers.ofString(builder.toString());
     }
+
     public static BodyPublisher ofMimeMultipart(String boundary) throws IOException {
         var bps = new ArrayList<BodyPublisher>();
         var header = new StringBuilder();
+
         for (Map.Entry<String, List<?>> entry : /**/) {
             for (Object value : entry.getValue()) {
                 if (value instanceof Path path) {
-                    header.append(String.format("--%s\r\nContent-Disposition: form-data; name=\"%s\"; filename=\"%s\"\r\n\r\n", boundary, entry.getKey(), path.getFileName()));
+                    header.append(String.format(
+                        "--%s\r\nContent-Disposition: form-data; name=\"%s\"; filename=\"%s\"\r\n\r\n",
+                        boundary,
+                        entry.getKey(),
+                        path.getFileName()
+                    ));
                 } else {
-                    header.append(String.format("--%s\r\nContent-Disposition: form-data; name=\"%s\"; filename=\"%s\"\r\n\r\n", boundary, entry.getKey(), path.getFileName()));
+                    header.append(String.format(
+                        "--%s\r\nContent-Disposition: form-data; name=\"%s\"; filename=\"%s\"\r\n\r\n",
+                        boundary,
+                        entry.getKey(),
+                        path.getFileName()
+                    ));
                 }
             }
         }
+
         // ...
     }
 }
 ```
 
-
-
-
-
 ```java
-HttpResponse.BodyHandler<T> responseBodyHandler)
+HttpResponse.BodyHandler<T> responseBodyHandler
+```
+
 创建一个同步或异步请求，并使用给定的处理器处理响应体。
-```
 
-```java
-java.net.http.HttpClient.Builder 11
-```
+## `java.net.http.HttpClient` 11
 
-- HttpClient build()
-  返回一个具有由此构建器配置属性的 HttpClient。
+- `HttpClient build()`
 
-- HttpClient.Redirects(HttpClient.Redirect policy)
-  将重定向策略设置为 HttpClient.Redirect 枚举中的值之一：ALWAYS、NEVER 或 NORMAL（仅拒绝从 HTTPS 到 HTTP 的重定向）。
+  返回一个具有由此构建器配置属性的 `HttpClient`。
 
-- HttpClient.Builder executor(Executor executor)
+- `HttpClient.Redirects(HttpClient.Redirect policy)`
+
+  将重定向策略设置为 `HttpClient.Redirect` 枚举中的值之一：`ALWAYS`、`NEVER` 或 `NORMAL`（仅拒绝从 HTTPS 到 HTTP 的重定向）。
+
+- `HttpClient.Builder executor(Executor executor)`
+
   为异步请求设置执行执行器。
 
-```java
-java.net.http.HttpRequest 11
-```
+## `java.net.http.HttpRequest` 11
 
-- HttpRequest.Builder newBuilder()
-  返回一个用于构建 HttpRequest 的构建器。
 
-- HttpRequest.Builder newBuilder(HttpRequest request, BiPredicate<String, String> filter) 11
-  返回一个构建器，用于构建与提供的请求属性相同的请求，仅保留 filter 接受的请求头。
 
-## java.net.http.HttpRequest.Builder 11
+### `java.net.http.HttpRequest.Builder`
 
-- HttpRequest build()
-  返回一个具有由此构建器配置属性的 HttpRequest。
+- `HttpRequest.Builder newBuilder()`
 
-- HttpRequest.Builder uri(URI uri)
+  返回一个用于构建 `HttpRequest` 的构建器。
+
+- `HttpRequest.Builder newBuilder(HttpRequest request, BiPredicate<String, String> filter)` 11
+
+  返回一个构建器，用于构建与提供的请求属性相同的请求，仅保留 `filter` 接受的请求头。
+
+### `java.net.http.HttpRequest.Builder` 11
+
+- `HttpRequest build()`
+
+  返回一个具有由此构建器配置属性的 `HttpRequest`。
+
+- `HttpRequest.Builder uri(URI uri)`
+
   为此请求设置 URI。
 
-- HttpRequest.Builder header(String name, String value)
+- `HttpRequest.Builder header(String name, String value)`
+
   为此请求设置请求头。
 
-- HttpRequest.Builder GET()
+- `HttpRequest.Builder GET()`
 
-- HttpRequest.Builder DELETE()
+- `HttpRequest.Builder DELETE()`
 
-- HttpRequest.Builder POST(HttpRequest.BodyPublisher bodyPublisher)
+- `HttpRequest.Builder POST(HttpRequest.BodyPublisher bodyPublisher)`
 
-- HttpRequest.Builder PUT(HttpRequest.BodyPublisher bodyPublisher)
+- `HttpRequest.Builder PUT(HttpRequest.BodyPublisher bodyPublisher)`
+
   为此请求设置请求方法和请求体。
 
-## java.net.http.HttpResponse<T> 11
+### `java.net.http.HttpResponse<T>` 11
 
-- T body()
+- `T body()`
+
   返回此响应的体。
 
-- int statusCode()
+- `int statusCode()`
+
   返回此响应的状态码。
 
-- HttpHeaders headers()
+- `HttpHeaders headers()`
+
   返回响应头。
 
-```java
-java.net.http.HttpHeaders 11
-```
+### `java.net.http.HttpHeaders` 11
 
-- Map<String,List<String>> map()
-  返回这些头对应的 Map。
+- `Map<String, List<String>> map()`
 
-- Optional<String> firstValue(String name)
+  返回这些头对应的 `Map`。
+
+- `Optional<String> firstValue(String name)`
+
   返回这些头中具有给定名称的第一个值（如果存在）。
 
 ## 1.5. 简单的 HTTP 服务器
@@ -10147,15 +11153,15 @@ java.net.http.HttpHeaders 11
 webserver
 ```
 
-它在端口 8000 上提供当前目录及其子目录中的所有文件服务。当提供文件服务时，会打印一条消息。你可以使用 -d 和 -p 选项更改目录和端口：
+它在端口 8000 上提供当前目录及其子目录中的所有文件服务。当提供文件服务时，会打印一条消息。你可以使用 `-d` 和 `-p` 选项更改目录和端口：
 
 ```
 jwebserver -d /tmp -p 8189
 ```
 
-你还可以使用 -o 命令行选项设置消息输出级别。选项有 info（默认）、verbose（详细）和 none（无）。
+你还可以使用 `-o` 命令行选项设置消息输出级别。选项有 `info`（默认）、`verbose`（详细）和 `none`（无）。
 
-要杀死服务器，请按 Ctrl+C 或使用 kill /pkill 命令。
+要杀死服务器，请按 `Ctrl+C` 或使用 `kill` / `pkill` 命令。
 
 此服务器仅用于提供文件。它类似于 `python -m http.server` 命令。事实上，你也可以通过 `java -m jdk.httpserver` 调用简单的 Java 文件服务器。
 
@@ -10167,19 +11173,20 @@ jwebserver -d /tmp -p 8189
 import com.sun.net.httpserver.*;
 
 HttpServer server = SimpleFileServer.createFileServer(
-Path.of("/tmp"), OutputLevel.VERBOSE);
+    Path.of("/tmp"), OutputLevel.VERBOSE);
+
 server.start();
 ```
 
 现在你可以以各种方式对其进行自定义。或者，如果你不想提供文件服务，可以获取一个什么都不做的服务器：
 
-```
+```java
 HttpServer server = HttpServer.create(new InetSocketAddress
 ```
 
 第二个参数是服务器套接字的“积压量”（即队列中连接请求的最大数量。如果参数为空，则使用默认值。
 
-你可以设置处理请求的执行执行器：
+你可以设置处理请求的执行器：
 
 ```java
 server.setExecutor(Executors.newVirtualThreadPer
@@ -10189,11 +11196,11 @@ server.setExecutor(Executors.newVirtualThreadPer
 
 一个上下文包含：
 
-- 一个必须是请求路径前缀的路径
-- 一个计算响应的处理器
-- 一个可以转换请求或响应的过滤器列表（参见第 4.5.4 节）
+- 一个必须是请求路径前缀的路径；
+- 一个计算响应的处理器；
+- 一个可以转换请求或响应的过滤器列表（参见第 4.5.4 节）。
 
-如果请求匹配多个上下文，则执行路径最长的那个。例如，这里我们为 /static/ 路径安装了两个处理器：
+如果请求匹配多个上下文，则执行路径最长的那个。例如，这里我们为 `/static/` 路径安装了两个处理器：
 
 ```java
 server.createContext("/static/", SimpleFileHandler
@@ -10214,7 +11221,7 @@ HttpHandlers.of(500, Headers.of()), "Bad request
 
 对于更复杂的处理器，你需要提供 `HttpHandler` 子类的实例。详情请见下一节。
 
-### 1.5.3. 处理器 (Handlers)
+### 1.5.3. 处理器（Handlers）
 
 处理器在其方法中产生对 HTTP 请求的响应：
 
@@ -10224,43 +11231,49 @@ public void handle(HttpExchange exchange)
 
 `HttpExchange` 实例持有请求和响应数据。处理器必须按以下顺序使用：
 
-- 1. 读取方法、URI 和头：
+1. 读取方法、URI 和头：
 
-```java
-String method = exchange.getRequestMethod();
-URI uri = exchange.getRequestURI();
-Headers requestHeaders = exchange.getRequestHeaders();
-String userAgent = requestHeaders.getFirst("user-agent");
-```
+   ```java
+   String method = exchange.getRequestMethod();
 
-- 2. 读取 POST、PUT 和 PATCH 请求的体：
+   URI uri = exchange.getRequestURI();
 
-```java
-InputStream in = exchange.getRequestBody();
-String body = new String(in.readAllBytes());
-in.close();
-```
+   Headers requestHeaders = exchange.getRequestHeaders();
 
-- 3. 设置响应头：
+   String userAgent = requestHeaders.getFirst("user-agent");
+   ```
 
-```java
-Headers responseHeaders = exchange.getResponseHeaders();
-responseHeaders.add("Content-type", "text/plain");
-```
+2. 读取 POST、PUT 和 PATCH 请求的体：
 
-- 4. 设置状态码和响应体长度：
+   ```java
+   InputStream in = exchange.getRequestBody();
 
-```
-exchange.sendResponseHeaders(200,
-```
+   String body = new String(in.readAllBytes());
 
-- 5. 如果存在响应体，则写入：
+   in.close();
+   ```
 
-```java
-OutputStream responseBody = exchange.getResponseBody();
-responseBody.write(responseBytes);
-```
-```
+3. 设置响应头：
+
+   ```java
+   Headers responseHeaders = exchange.getResponseHeaders();
+
+   responseHeaders.add("Content-type", "text/plain");
+   ```
+
+4. 设置状态码和响应体长度：
+
+   ```java
+   exchange.sendResponseHeaders(200,
+   ```
+
+5. 如果存在响应体，则写入：
+
+   ```java
+   OutputStream responseBody = exchange.getResponseBody();
+
+   responseBody.write(responseBytes);
+   ```
 
 请求头和响应头是 `Headers` 类的实例，它实现了 `Map<String, List<String>>`。记住每个头可能有多个值。
 
@@ -10270,7 +11283,7 @@ responseBody.write(responseBytes);
 
 示例 4.11 中的程序包含了一个产生请求所有细节文本响应的处理器。
 
-### 1.5.4. 过滤器 (Filters)
+### 1.5.4. 过滤器（Filters）
 
 除了处理器外，上下文还可以持有一个过滤器链。过滤器可以修改请求或响应，也可以执行额外工作如日志记录或验证。例如，简单 Web 服务器使用过滤器来显示请求。
 
@@ -10290,7 +11303,7 @@ public void doFilter(HttpExchange exchange, Filter chain) {
 
 你可以这样添加过滤器：
 
-```
+```java
 context.getFilters().add(filter);
 ```
 
@@ -10308,19 +11321,17 @@ public Filter adaptRequest(String description, Ur
 
 第三种方法使得向请求添加头变得更加方便：
 
-
-
-```
+```java
 Filter f = Filter.adaptRequest("Adding header",
 ```
 
 当然，与 Tomcat 或 Jetty 等成熟的 Web 服务器相比，这个服务器相当基础。但它是 JDK 的一部分，对于原型设计和测试已经足够。
 
-列表 4.11 中的程序显示了一个简单的服务器，它会在纯文本响应中回显每个请求请求数据。启动它并将浏览器指向 http://localhost:8189，即可查看你浏览器的请求头。该服务器也对于观察列表 4.10 中程序的表单提交和文件上传请求非常有用。
+列表 4.11 中的程序显示了一个简单的服务器，它会在纯文本响应中回显每个请求请求数据。启动它并将浏览器指向 `http://localhost:8189`，即可查看你浏览器的请求头。该服务器也对于观察列表 4.10 中程序的表单提交和文件上传请求非常有用。
 
-# 列表 1.11 httpServer.java
+# 列表 1.11 `httpServer.java`
 
-```
+```java
 1 package httpServer;
 2
 3 import java.io.IOException;
@@ -10331,10 +11342,11 @@ Filter f = Filter.adaptRequest("Adding header",
 8 import com.sun.net.httpserver.*;
 9
 10 /**
-11 * 该程序实现了一个 HTTP 服务器，它 * 监听作为参数指定的端口，并回显
+11 * 该程序实现了一个 HTTP 服务器，它
+12 * 监听作为参数指定的端口，并回显
 ```
 
-```
+```java
 * @version 1.0 2023-11-01
 * @author Cay Horstmann
 */
@@ -10363,43 +11375,42 @@ public class EchoServer {
             responseBody.write(responseB
 ```
 
-```
+```java
 responseBody.close();
 }
 );
 server.start();
 }
-
 ```
 
-# 1.6. 发送电子邮件
+## 1.6. 发送电子邮件
 
 过去，通过向邮件服务器的 25 端口（SMTP 端口）建立 socket 连接来编写一个发送电子邮件的程序是简单的。简单邮件传输协议（SMTP）描述了电子邮件消息的格式。一旦连接到服务器，发送一个邮件头（SMTP 格式，这很容易生成），然后是邮件正文。
 
 以下是详情：
 
-- 1. 为你的主机打开一个 socket。
+1. 为你的主机打开一个 socket。
 
-```
-var s = new Socket("mail.yourserver.com", 25);
-var out = new PrintWriter(s.getOutputStream());
-```
+   ```java
+   var s = new Socket("mail.yourserver.com", 25);
+   var out = new PrintWriter(s.getOutputStream());
+   ```
 
-- 2. 向打印流发送以下信息：
+2. 向打印流发送以下信息：
 
-```
-HELO sending host
-MAIL FROM: sender e-mail address
-RCPT TO: recipient e-mail address
-DATA
-Subject: subject
-(空行)
-mail message (任意行数)
-.
-QUIT
-```
+   ```
+   HELO sending host
+   MAIL FROM: sender e-mail address
+   RCPT TO: recipient e-mail address
+   DATA
+   Subject: subject
+   (空行)
+   mail message (任意行数)
+   .
+   QUIT
+   ```
 
-SMTP 规范（RFC 821）规定行必须以 \r 后跟 \n 终止。
+SMTP 规范（RFC 821）规定行必须以 `\r` 后跟 `\n` 终止。
 
 过去，SMTP 服务器通常愿意路由来自任何人的电子邮件。然而，在如今垃圾邮件泛滥的时代，大多数服务器都内置了检查机制，只接受来自其信任的用户或 IP 地址范围的请求。身份验证通常通过安全的 socket 连接进行。
 
@@ -10407,7 +11418,7 @@ SMTP 规范（RFC 821）规定行必须以 \r 后跟 \n 终止。
 
 要使用 Jakarta Mail，你需要设置一些取决于邮件服务器的属性。例如，使用 Gmail 时，使用：
 
-```
+```properties
 mail.transport.protocol=smtps
 mail.smtps.auth=true
 mail.smtps.host=smtp.gmail.com
@@ -10422,26 +11433,26 @@ mail.smtps.user=accountname@gmail.com
 
 从属性文件中读取，然后如下获取邮件会话：
 
-```
+```java
 Session mailSession = Session.getDefaultInstance();
 ```
 
 创建一个带有所需的发送件者、接收者、主题和消息正文的消息：
 
-```
+```java
 var message = new MimeMessage(mailSession);
 message.setFrom(new InternetAddress(from));
 message.addRecipient(RecipientType.TO, new InternetAddress(to));
 message.setSubject(subject);
 ```
 
-```
+```java
 message.setText(builder.toString());
 ```
 
 然后将其发送出去：
 
-```
+```java
 Transport tr = mailSession.getTransport();
 tr.connect(null, password);
 tr.sendMessage(message, message.getAllRecipients());
@@ -10451,18 +11462,20 @@ tr.close();
 列表 4.12 中的程序从格式如下的文本文件中读取消息：
 
 发送者
+
 接收者
+
 主题
+
 消息正文（任意行数）
 
-要运行程序，请从 https://eclipse-ee4j.github.io/angus-mail 下载 Angus Jakarta Mail 实现。你需要四个 JAR 文件：angus-mail.jar、jakarta-mail-api.jar、angus-activation.jar 和 jakarta-activation-api.jar。将它们放置在 `jakarta-mail` 目录中。然后编辑 mail/mail.properties 文件并。
+要运行程序，请从 `https://eclipse-ee4j.github.io/angus-mail` 下载 Angus Jakarta Mail 实现。你需要四个 JAR 文件：`angus-mail.jar`、`jakarta-mail-api.jar`、`angus-activation.jar` 和 `jakarta-activation-api.jar`。将它们放置在 `jakarta-mail` 目录中。然后编辑 `mail/mail.properties` 文件并。
 
 
 
+从起初，Java 技术的开发者就意识到了 Java 在处理数据库方面的巨大潜力。1995 年，他们开始扩展标准 Java 库，以处理对数据库的 SQL 访问。他们最初的希望是扩展 Java，使得程序仅使用“纯”Java 就能与任何随机数据库通信。但他们很快就意识到这是一项无法完成的任务：市上的数据库太多了，使用的协议也多得。。此外，尽管数据库供应商都支持 Java 提供一种标准的数据库访问协议，但只有当 Java 使用他们自己的网络协议时，他们才支持。
 
-从起初，Java 技术的开发者就意识到了 Java 在处理数据库方面的巨大潜力。1995 年，他们开始扩展标准 Java 库，以处理对数据库的 SQL 访问。他们最初的希望是扩展 Java，使得程序仅使用“纯”Java 就能与任何随机数据库通信。但他们很快就意识到这是一项无法完成的任务：市上的数据库太多了，使用的协议也多得。。此外，尽管数据库供应商都支持 Java 提供一种标准的数据库访问协议，但只有当 Java 使用*他们自己*的网络协议时，他们才支持。
-
-所有数据库供应商和工具供应商*一致*认为，如果 Java 能提供一个用于 SQL 访问的纯 Java API，以及一个驱动程序管理器（driver manager），允许第三方驱动连接到特定的数据库，这将非常有用。数据库供应商可以提供自己的驱动程序并插入驱动程序管理器中。这样，就有一个简单的机制可以在驱动程序管理器中注册第三方驱动。
+所有数据库供应商和工具供应商一致认为，如果 Java 能提供一个用于 SQL 访问的纯 Java API，以及一个驱动程序管理器（driver manager），允许第三方驱动连接到特定的数据库，这将非常有用。数据库供应商可以提供自己的驱动程序并插入驱动程序管理器中。这样，就有一个简单的机制可以在驱动程序管理器中注册第三方驱动。
 
 这种组织形式遵循了微软 ODBC 非常成功的模型，ODBC 为数据库访问提供了 C 语言编程接口。JDBC 和 ODBC 都基于同一个理念：根据 API 编写的程序与驱动程序管理器通信，而驱动程序管理器又使用驱动程序与实际数据库通信。
 
@@ -10478,7 +11491,8 @@ JDBC 规范将驱动程序分为以下几种类型：
 - 类型 4 驱动程序是一个纯 Java 库，它将 JDBC 请求直接翻译为特定数据库的协议。
 
 **注意：** JDBC 规范可以在此处获取：
-https://jcp.org/aboutJava/communityprocess/mrel/jsr221/index3.html。
+
+<https://jcp.org/aboutJava/communityprocess/mrel/jsr221/index3.html>
 
 大多数数据库供应商都会随其数据库提供类型 3 或类型 4 驱动程序。此外，许多第三方公司专门生产具有更好标准合规性、更多平台支持、更佳性能或在某些情况下仅比数据库供应商提供的驱动程序更可靠的驱动程序。
 
@@ -10491,6 +11505,7 @@ https://jcp.org/aboutJava/communityprocess/mrel/jsr221/index3.html。
 
 - ODBC 很难学习。
 - ODBC 有一些命令带有大量复杂的选项。
+
 Java 编程语言的优选风格是拥有简单直观的方法，但方法要很多。
 
 - ODBC 依赖于 `void*` 指针和其他 C 语言特性，这些特性在 Java 编程语言中并不自然。
@@ -10502,23 +11517,23 @@ Java 编程语言的优选风格是拥有简单直观的方法，但方法要很
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_610_0.png)
 
-# 图 1.1: 传统的客户端/服务器应用程序
+### 图 1.1：传统的客户端/服务器应用程序
 
-然而，现在更常见的是三层模型，其中客户端应用程序不进行数据库调用。相反，它调用服务器上的中间件层，由中间件层再执行数据库查询。三层模型有几个优势：它将*视觉呈现*（在客户端）与*业务逻辑*（在中间层）以及原始数据（在数据库中）分离开。因此，可以从多个客户端（如 Java 桌面应用程序、网页浏览器或移动应用）访问相同的数据和相同的业务规则。
+然而，现在更常见的是三层模型，其中客户端应用程序不进行数据库调用。相反，它调用服务器上的中间件层，由中间件层再执行数据库查询。三层模型有几个优势：它将视觉呈现（在客户端）与业务逻辑（在中间层）以及原始数据（在数据库中）分离开。因此，可以从多个客户端（如 Java 桌面应用程序、网页浏览器或移动应用）访问相同的数据和相同的业务规则。
 
 客户端与中间层之间的通信通常通过 HTTP 发生。JDBC 管理中间层与后端数据库之间的通信。图 5.2 显示了基本架构。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_611_0.png)
 
-图 1.2: 三层应用程序
+### 图 1.2：三层应用程序
 
 ## 1.2. 结构查询语言
 
 JDBC 让你可以使用 SQL 与数据库通信，SQL 是本质所有关系型数据库的命令语言。像 Access 这样的桌面程序具有查询和更新的 GUI，而 JDBC 则专注于基于服务器的数据库，如 Oracle、PostgreSQL、MySQL、SQL Server 等。JDBC 包可以被看作是通信 SQL 语句的 API。我们将在节中简要介绍 SQL。如果你从未见过 SQL，可能觉得这些材料还不够；如果是，请参考有关主题的许多资源：Alan Beaulieu 写的 *Learning SQL*（O'Reilly，2009）以及在线书籍 *Learn SQL The Way*（learntheway.org）。
 
-你可以将数据库看作一组具有行和列的命名表。每列都有一个*列名*。每行包含一组相关数据。作为本书的示例数据库，我们使用一组描述计算机科学书籍的表。
+你可以将数据库看作一组具有行和列的命名表。每列都有一个列名。每行包含一组相关数据。作为本书的示例数据库，我们使用一组描述计算机科学书籍的表。
 
-### 表 1.1: 作者表
+### 表 1.1：作者表
 
 | Author_Id | Name | Fname |
 |---|---|---|
@@ -10526,14 +11541,14 @@ JDBC 让你可以使用 SQL 与数据库通信，SQL 是本质所有关系型数
 | BROO | Brooks | Frederick P. |
 | . | . | . |
 
-### 表 1.2: 书籍表
+### 表 1.2：书籍表
 
 | Title | ISBN | Publisher_Id | Price |
 |---|---|---|---|
 | A Guide to the SQL Standard | 0-201-96426-0 | 0201 | 47.95 |
 | A Pattern Language: Towns, | 0-19-501919-9 | 019 | 65.00 |
 
-### 表 1.3: 书籍作者表
+### 表 1.3：书籍作者表
 
 | ISBN | Author_Id | Seq_No |
 |---|---|---|
@@ -10541,7 +11556,7 @@ JDBC 让你可以使用 SQL 与数据库通信，SQL 是本质所有关系型数
 | 0-201-96426-0 | DARW | 2 |
 | 0-19-501919-9 | ALEX | 1 |
 
-### 表 1.4: 出版社表
+### 表 1.4：出版社表
 
 | Publisher_Id | Name | URL |
 |---|---|---|
@@ -10551,25 +11566,22 @@ JDBC 让你可以使用 SQL 与数据库通信，SQL 是本质所有关系型数
 
 图 5.3 显示了书籍表的视图。图 5.4 显示了该表与出版社表连接的结果。书籍表和出版社表各包含一个出版商的标识符。当我们根据出版代码连接两张表时，将获得由连接表值组成的查询结果。结果中的每行都包含有关书籍的信息，以及出版商名称和网页 URL。注意，由于我们对同一个出版商有很多书籍，出版商名称和 URL 在多行中重复重复。
 
-
-
-
-COREJAVA：书籍
+### COREJAVA：书籍
 
 文件 编辑 查看 工具 窗口 帮助
 
-| 标题 | ISBN | 出版者ID | 价格 |
+| 标题 | ISBN | 出版者 ID | 价格 |
 |---|---|---|---|
-| 《Unix管理手册》 | 0-13-20001-6 | 017 | 68.00 |
+| 《Unix 管理手册》 | 0-13-20001-6 | 017 | 68.00 |
 | 《C 程序语言》 | 0-13-110362-8 | 013 | 42.00 |
 | 模式语言：城镇、建筑、构造 | 0-19-50199-9 | 019 | 65.00 |
 | 自动机理论、语言与计算导论 | 0-201-74442-4 | 021 | 105.00 |
 | 设计模式 | 0-20-63961-2 | 021 | 54.99 |
 | 《C++ 程序语言》 | 0-201-70573-7 | 021 | 64.99 |
 | 计算机图形学：原理与实践 | 0-201-83895-6 | 021 | 29.95 |
-| 《计算机程序设计》卷1 | 0-20-88440-6 | 021 | 79.99 |
-| 《计算机程序设计》卷2 | 0-20-86984-2 | 021 | 59.99 |
-| 《计算机程序设计》卷3 | 0-20-86905-5 | 021 | 59.99 |
+| 《计算机程序设计》卷 1 | 0-20-88440-6 | 021 | 79.99 |
+| 《计算机程序设计》卷 2 | 0-20-86984-2 | 021 | 59.99 |
+| 《计算机程序设计》卷 3 | 0-20-86905-5 | 021 | 59.99 |
 | 《SQL 标准指南》 | 0-20-96402-7 | 021 | 51.99 |
 | 《算法导论》 | 0-062-03929-7 | 026 | 80.00 |
 | 《JavaScript 权威指南》 | 0-471-11752-4 | 041 | 60.00 |
@@ -10579,34 +11591,34 @@ COREJAVA：书籍
 | 《微积分》 | 0-7434-1163-3 | 0743 | 13.95 |
 | 《Unix 黑客手册》 | 1-5684-203-1 | 0471 | 16.95 |
 
-图 1.3：示例表格内容
+### 图 1.3：示例表格内容
 
-## 查询1
+## 查询 1
 
 文件 编辑 查看 插入 工具 窗口 帮助
 
-| 出版者ID | 价格 | 名称 | URL |
-|---|---|---|---|---|
-| 《Unix管理手册》 | 017 | 68.00 | Prentice Hall | .php |
+| 出版者 ID | 价格 | 名称 | URL |
+|---|---|---|---|
+| 《Unix 管理手册》 | 017 | 68.00 | Prentice Hall | .php |
 | 《C 程序语言》 | 013 | 42.00 | Prentice Hall | .php |
 | 《模式语言：城镇、建筑、构造》 | 019 | 65.00 | O'Reilly | .org |
 | 《自动机理论、语言与计算导论》 | 021 | 105.00 | Addison-Wesley | .aw |
 | 《设计模式》 | 021 | 54.99 | Addison-Wesley | .aw |
 | 《C++ 程序语言》 | 021 | 64.99 | Addison-Wesley | .aw |
 | 《计算机图形学：原理与实践》 | 021 | 29.95 | Addison-Wesley | .aw |
-| 《计算机程序设计》卷1 | 021 | 79.99 | Addison-Wesley | .aw |
-| 《计算机程序设计》卷2 | 021 | 59.99 | Addison-Wesley | .aw |
-| 《计算机程序设计》卷3 | 021 | 59.99 | Addison-Wesley | .aw |
+| 《计算机程序设计》卷 1 | 021 | 79.99 | Addison-Wesley | .aw |
+| 《计算机程序设计》卷 2 | 021 | 59.99 | Addison-Wesley | .aw |
+| 《计算机程序设计》卷 3 | 021 | 59.99 | Addison-Wesley | .aw |
 
-| 字段 | 标题 | 出版者ID | 名称 | URL |
+| 字段 | 标题 | 出版者 ID | 名称 | URL |
 |---|---|---|---|---|
-| 表格 | Books籍 | Books | 出版者 | |
+| 表格 | Books 籍 | Books | 出版者 | |
 | 排序 | | | | |
 | 可视 | | | | |
 | 函数 | | | | |
 | 标准 | | | | |
 
-图 1.4：两个表格的连接
+### 图 1.4：两个表格的连接
 
 连接表格的用处是避免数据库中出现不必要的数据重复。例如，一个朴素的设计可能会在 `Books` 表中直接为出版者名称和 URL 设置列。但这样一来，数据库本身（不仅仅是查询结果）将包含许多重复的条目。显然，这很容易出错。在关系模型中，我们将数据分布到多个表中，以确保没有信息被重复。例如，每个出版者的 URL 仅在出版者表中包含一次。
 
@@ -10618,11 +11630,8 @@ FROM Books, Publishers
 WHERE Books.Publisher_Id = Publishers.Publisher_Id;
 ```
 
-
-
-
 | 数据类型 | 说明 |
-|--- |--- |
+|---|---|
 | CLOB | 字符大对象 |
 
 在本本书中，我们不会讨论用于 `CREATE TABLE` 语句的额外子句，例如键和约束。
@@ -10633,11 +11642,11 @@ WHERE Books.Publisher_Id = Publishers.Publisher_Id;
 
 你还必须为你的实验使用创建一个数据库。我们假设你将其命名为 `COREJAVA`。创建一个新数据库，或者让你的数据库管理员创建一个具有相应权限的数据库。你需要能够在该数据库中创建、更新和删除表。
 
-如果这是你第一次接触数据库，我建议你使用 Apache Derby 数据库，它可以从 https://db.apache.org/derby 获取。
+如果这是你第一次接触数据库，我建议你使用 Apache Derby 数据库，它可以从 <https://db.apache.org/derby> 获取。
 
-或者，如果你熟悉 Docker，那么在 docker 镜像中运行 PostgreSQL 非常简单：
+或者，如果你熟悉 Docker，那么在 Docker 镜像中运行 PostgreSQL 非常简单：
 
-```
+```bash
 docker pull postgres
 docker run -e POSTGRES_PASSWORD=secret -e POSTGRES
 ```
@@ -10650,7 +11659,7 @@ docker run -e POSTGRES_PASSWORD=secret -e POSTGRES
 
 JDBC 使用与普通 URL 类似的语法来描述数据源。以下是语法的示例：
 
-```
+```text
 jdbc:derby://localhost:1527/COREJAVA;create=true
 jdbc:postgresql:COREJAVA
 ```
@@ -10659,7 +11668,7 @@ jdbc:postgresql:COREJAVA
 
 通用语法为：
 
-```
+```text
 jdbc:subprotocol:other stuff
 ```
 
@@ -10669,13 +11678,13 @@ jdbc:subprotocol:other stuff
 
 ### 1.3.2. 驱动 JAR 文件
 
-你需要获取包含你的数据库驱动程序的 JAR 文件。如果你使用 Derby，你需要 `derbyclient.jar` 文件。如果使用其他数据库，你需要找到相应的驱动程序。例如，PostgreSQL 驱动可以在 https://jdbc.postgresql.org 获取。
+你需要获取包含你的数据库驱动程序的 JAR 文件。如果你使用 Derby，你需要 `derbyclient.jar` 文件。如果使用其他数据库，你需要找到相应的驱动程序。例如，PostgreSQL 驱动可以在 <https://jdbc.postgresql.org> 获取。
 
 在运行访问数据库的程序时，将驱动 JAR 文件包含在类路径（class path）中。（编译时不需要该 JAR 文件。）
 
-当从命令行启动程序时，只需使用命令
+当从命令行启动程序时，只需使用命令：
 
-```
+```bash
 java -classpath driverJarPath:. ProgramName
 ```
 
@@ -10689,46 +11698,46 @@ java -classpath driverJarPath:. ProgramName
 
 1. 打开命令行窗口，并切换到存放数据库文件的目录。
 2. 在 Derby 安装目录中找到 `derbyrun.jar` 文件。我们将包含 `lib/derbyrun.jar` 的目录标记为 `derby`。
-3. 运行命令
+3. 运行命令：
 
-```
-java -jar derby/lib/derbyrun.jar server start
-```
+   ```bash
+   java -jar derby/lib/derbyrun.jar server start
+   ```
 
 4. 双重检查数据库是否正常工作。创建一个 `ij.properties` 文件，其中包含以下行：
 
-```
-ij.driver=org.apache.derby.jdbc.ClientDriver
-ij.protocol=jdbc://localhost:1527/
-ij.database=COREJAVA;create=true
-```
+   ```properties
+   ij.driver=org.apache.derby.jdbc.ClientDriver
+   ij.protocol=jdbc://localhost:1527/
+   ij.database=COREJAVA;create=true
+   ```
 
-从另一个命令行窗口，通过执行以下命令运行 Derby 的交互式脚本工具（称为 `ij`）：
+   从另一个命令行窗口，通过执行以下命令运行 Derby 的交互式脚本工具（称为 `ij`）：
 
-```
-java -jar derby/lib/derbyrun.jar ij -p ij.properties
-```
+   ```bash
+   java -jar derby/lib/derbyrun.jar ij -p ij.properties
+   ```
 
-现在你可以发布如下 SQL 命令，例如：
+   现在你可以发布如下 SQL 命令，例如：
 
-```
-CREATE TABLE Greetings (Message VARCHAR(20));
-INSERT INTO Greetings VALUES ('Hello, World!');
-SELECT * FROM Greetings;
-DROP TABLE Greetings;
-```
+   ```sql
+   CREATE TABLE Greetings (Message VARCHAR(20));
+   INSERT INTO Greetings VALUES ('Hello, World!');
+   SELECT * FROM Greetings;
+   DROP TABLE Greetings;
+   ```
 
-注意，每个命令必须以分号结束。要退出，请输入
+   注意，每个命令必须以分号结束。要退出，请输入：
 
-```
-EXIT;
-```
+   ```sql
+   EXIT;
+   ```
 
-5. 当你完成数据库的使用后，使用命令停止服务器
+5. 当你完成数据库的使用后，使用命令停止服务器：
 
-```
-java -jar derby/lib/derbyrun.jar server shutdown
-```
+   ```bash
+   java -jar derby/lib/derbyrun.jar server shutdown
+   ```
 
 如果你使用其他数据库，你需要咨询文档以了解如何启动和停止数据库服务器，以及如何连接它并发布 SQL 命令。
 
@@ -10749,6 +11758,8 @@ Connection conn = DriverManager.getConnection(url, username, password);
 
 要连接到数据库，你需要数据库的用户名和密码。
 
+
+
 > **注意：** 默认情况下，Derby 允许使用任何用户名连接，并且不检查密码。会为每个用户生成一套独立的表。默认用户名是 `app`。
 
 列表 5.1 中的测试程序演示了这些步骤。它从名为 `database.properties` 的文件加载连接参数并连接到数据库。示例代码提供的 `database.properties` 文件包含了数据库的连接信息。如果你使用不同的数据库，请将你特定于数据库的信息放入该文件中。以下是连接 PostgreSQL 的示例：
@@ -10768,23 +11779,23 @@ INSERT INTO Greetings VALUES ('Hello, World!');
 SELECT * FROM Greetings;
 ```
 
-SELECT 语句的结果将被打印，你应该看到 Hello, World！然后通过执行以下命令删除表：
+`SELECT` 语句的结果将被打印，你应该看到 `Hello, World！`。然后通过执行以下命令删除表：
 
 ```sql
 DROP TABLE Greetings;
 ```
 
-要运行此测试，请如前所述启动数据库，并按如下方式启动程序：调试 JDBC 相关问题的一种方法是启用跟踪。使用 `DriverManager.setLogWriter` 方法将消息发送到 `PrintWriter`。大多数驱动实现都提供了额外的跟踪机制。例如，对于 Derby，你可以在 URL 中添加 `traceFile` 选项：`jdbc:derby://localhost:1527/COREJAVA;create=true;traceFile=trace.out.`
+要运行此测试，请如前所述启动数据库，并按如下方式启动程序。
+
+调试 JDBC 相关问题的一种方法是启用跟踪。使用 `DriverManager.setLogWriter` 方法将消息发送到 `PrintWriter`。大多数驱动实现都提供了额外的跟踪机制。例如，对于 Derby，你可以在 URL 中添加 `traceFile` 选项：`jdbc:derby://localhost:1527/COREJAVA;create=true;traceFile=trace.out.`
 
 > **注意：** 从 JDBC 4 开始，驱动 JAR 文件包含 `META-INF/services/java.sql.Driver`，其中包含了类名。
 
 在极少数使用旧版驱动 JAR 文件的情况下，你需要通过你的供应商查找驱动类名。然后在命令行上设置 `jdbc.drivers` 属性：
 
-```
+```bash
 java -Djdbc.drivers=driverClassName -classpath driverJarPath:. ProgramName
 ```
-
-
 
 ```java
 /**
@@ -10808,17 +11819,17 @@ public static Connection getConnection()
 }
 ```
 
-`java.sql.DriverManager` 1.1
+### `java.sql.DriverManager` 1.1
 
-- `static Connection getConnection(String url, String user, String password)` 建立到给定数据库的连接并返回 Connection 对象。
+- `static Connection getConnection(String url, String user, String password)` 建立到给定数据库的连接并返回 `Connection` 对象。
 
-## 1.4. 使用 JDBC Statement
+## 1.4. 使用 JDBC `Statement`
 
-在接下来的章节中，你将看到如何使用 JDBC Statement 来执行 SQL 语句、获取结果以及处理错误。然后我们将向你展示一个用于填充数据库简单程序。
+在接下来的章节中，你将看到如何使用 JDBC `Statement` 来执行 SQL 语句、获取结果以及处理错误。然后我们将向你展示一个用于填充数据库的简单程序。
 
 ### 1.4.1. 执行 SQL 语句
 
-要执行 SQL 语句，你首先需要创建一个 Statement 对象。要创建 statement 对象，请使用从调用 DriverManager.getConnection 获取的 Connection 对象。
+要执行 SQL 语句，你首先需要创建一个 `Statement` 对象。要创建 `Statement` 对象，请使用从调用 `DriverManager.getConnection` 获取的 `Connection` 对象。
 
 ```java
 Statement stat = conn.createStatement();
@@ -10834,7 +11845,7 @@ UPDATE Books
 """;
 ```
 
-然后，调用 Statement 接口的 `executeUpdate` 方法：
+然后，调用 `Statement` 接口的 `executeUpdate` 方法：
 
 ```java
 stat.executeUpdate(command);
@@ -10850,7 +11861,7 @@ stat.executeUpdate(command);
 ResultSet rs = stat.executeQuery("SELECT * FROM ...");
 ```
 
-分析结果集的的基本循环如下：
+分析结果集的基本循环如下：
 
 ```java
 while (rs.next()) {
@@ -10858,7 +11869,7 @@ while (rs.next()) {
 }
 ```
 
-> 注意：ResultSet 接口的迭代协议与 java.util.Iterator 接口的协议略有不同。在这里，迭代器被初始化为第一行之前的位置。你必须调用 `next` 方法将迭代器移动到第一行。此外，没有 `hasNext` 方法；持续调用 `next` 直到它返回 false 为止。
+> **注意：** `ResultSet` 接口的迭代协议与 `java.util.Iterator` 接口的协议略有不同。在这里，迭代器被初始化为第一行之前的位置。你必须调用 `next` 方法将迭代器移动到第一行。此外，没有 `hasNext` 方法；持续调用 `next` 直到它返回 `false` 为止。
 
 结果集中行的顺序是完全随机的。除非你特意使用 `ORDER BY` 子句对结果进行排序，否则你不应该赋予行顺序以任何特殊意义。
 
@@ -10871,50 +11882,47 @@ double price = rs.getDouble("Price");
 
 针对各种类型都有访问器，如 `getString` 和 `getDouble`。每个访问器都有两种形式：一个接收数字参数，另一个接收字符串参数。当你提供数字参数时，你指的是具有该数字编号的列。例如，`rs.getString(1)` 返回当前行第一列的值。
 
-> 注意：与数组索引不同，数据库列号从 1 开始。
+> **注意：** 与数组索引不同，数据库列号从 1 开始。
 
 当你提供字符串参数时，你指的是结果集中具有该名称的列。例如，`rs.getDouble("Price")` 返回标签为 `Price` 的列的值。使用数字参数效率稍高，但字符串参数使代码更易读且易维护。
 
 当方法类型与列类型不匹配时，每个 `get` 方法都会进行合理的类型转换。例如，调用 `rs.getString("Price")` 会将 `Price` 列的浮点值转换为字符串。
 
-`java.sql.Connection` 1.1
+### `java.sql.Connection` 1.1
 
 - `Statement createStatement()` 创建一个 `Statement` 对象，该对象可以执行不带参数的 SQL 查询和更新。
 - `void close()` 立即关闭当前连接及其创建的 JDBC 资源。
 
-`java.sql.Statement` 1.1
+### `java.sql.Statement` 1.1
 
 - `ResultSet executeQuery(String sqlQuery)` 执行字符串中给定的 SQL 语句并返回一个 `ResultSet` 对象以查看查询结果。
 - `int executeUpdate(String sqlStatement)`
-- `long executeLargeUpdate(String sqlStatement)` 执行字符串指定的 SQL INSERT、UPDATE 或 DELETE 语句。也执行数据定义语言（DDL）语句，如 CREATE TABLE。返回受影响的行数，对于没有更新计数的语句返回 0。
-- `boolean execute(String sqlStatement)` 执行字符串指定的 SQL 语句。可能会产生多个结果集和更新计数。如果第一个结果是结果集，则返回 true；如果结果是更新计数，则返回 false。调用 `getResultSet` 或 `getUpdateCount` 获取第一个结果。详见第 5.5.4 节。
-- `ResultSet getResultSet()` 返回上一个语句的结果集，如果上一个语句没有结果集则返回 null。每个语句仅调用一次。
-- `int getUpdateCount()` 返回上一个语句影响的行数，如果上一个语句没有更新计数则返回 -1。每个语句仅调用一次。
+- `long executeLargeUpdate(String sqlStatement)` 执行字符串指定的 SQL `INSERT`、`UPDATE` 或 `DELETE` 语句。也执行数据定义语言（DDL）语句，如 `CREATE TABLE`。返回受影响的行数，对于没有更新计数的语句返回 0。
+- `boolean execute(String sqlStatement)` 执行字符串指定的 SQL 语句。可能会产生多个结果集和更新计数。如果第一个结果是结果集，则返回 `true`；如果结果是更新计数，则返回 `false`。调用 `getResultSet` 或 `getUpdateCount` 获取第一个结果。详见第 5.5.4 节。
+- `ResultSet getResultSet()` 返回上一个语句的结果集，如果上一个语句没有结果集则返回 `null`。每个语句仅调用一次。
+- `int getUpdateCount()` 返回上一个语句影响的行数，如果上一个语句没有更新计数则返回 `-1`。每个语句仅调用一次。
 - `void close()` 关闭此语句及其关联的结果集。
-- `boolean isClosed()` 如果语句已关闭则返回 true。
+- `boolean isClosed()` 如果语句已关闭则返回 `true`。
 
-`java.sql.ResultSet` 1.1
+### `java.sql.ResultSet` 1.1
 
-- `boolean next()` 使结果集的当前行向前移动一位。在最后一行之后返回 false。注意你必须调用此方法移动到第一行。
+- `boolean next()` 使结果集的当前行向前移动一位。在最后一行之后返回 `false`。注意你必须调用此方法移动到第一行。
 - `Xxx getXXX(int columnNumber)`
-- `Xxx getXXX(String columnLabel)`（Xxx 是如 int、double、String 等类型）
+- `Xxx getXXX(String columnLabel)`（`Xxx` 是如 `int`、`double`、`String` 等类型）
 - `<T> getObject(int columnIndex, Class<T> type)`
 - `<T> getObject(String columnLabel, Class<T> type)`
 - `void updateObject(int columnIndex, Object x, SQLException targetSqlType)`
-- `void updateObject(String columnLabel, Object x, SQLException targetSqlType)` 返回或更新指定列索引或标签的列的值。列标签是 SQL AS 子句中指定的标签，如果没有使用 AS 则使用列名。
+- `void updateObject(String columnLabel, Object x, SQLException targetSqlType)` 返回或更新指定列索引或标签的列的值。列标签是 SQL `AS` 子句中指定的标签，如果没有使用 `AS` 则使用列名。
 - `int findColumn(String columnName)` 给与列名相关的列索引。
 - `void close()` 立即关闭当前结果集。
-- `boolean isClosed()` 如果语句已关闭则返回 true。
+- `boolean isClosed()` 如果语句已关闭则返回 `true`。
 - `void closeOnCompletion()` 使此语句在完成后关闭。
 
-每个 Connection 对象可以创建一个或多个 Statement 对象。你可以重用同一个 Statement 对象执行多个不相关的命令和查询。然而，一个语句最多只有一个打开的结果集。如果你并发执行多个需要分析结果的查询，你需要多个 Statement 对象。
+每个 `Connection` 对象可以创建一个或多个 `Statement` 对象。你可以重用同一个 `Statement` 对象执行多个不相关的命令和查询。然而，一个语句最多只有一个打开的结果集。如果你并发执行多个需要分析结果的查询，你需要多个 `Statement` 对象。
 
-但要提前注意，每个连接的语句数量有限制。使用 `DatabaseMetaData` 接口的 `getMaxStatements` 方法可以你的 JDBC 驱动支持的并发语句数量。
+但要提前注意，每个连接的语句数量有限制。使用 `DatabaseMetaData` 接口的 `getMaxStatements` 方法可以查看你的 JDBC 驱动支持的并发语句数量。
 
 在实践中，你可能不需要纠结于多个并发的结果集。如果结果集是相关的，你应该能够发布合并查询并分析单个结果。让数据库合并查询比让 Java 程序遍历多个结果集要高效得多。
-
-
-
 
 在对 `Statement` 对象执行新的查询或更新操作之前，请确保已完成对任何结果集的处理。之前的查询结果集会自动关闭。
 
@@ -10924,14 +11932,14 @@ double price = rs.getDouble("Price");
 
 相反，你可以在 `Statement` 上调用 `closeOnCompletion` 方法，它会在所有结果集关闭后自动关闭语句。
 
-如果你的连接是短生命周的，就不必担心关闭语句和结果集。为了确保连接对象不会可能保持打开状态，请使用 `try-with-resources` 语句：
+如果你的连接是短生命周期的，就不必担心关闭语句和结果集。为了确保连接对象不会可能保持打开状态，请使用 `try-with-resources` 语句：
 
-```
+```java
 try (Connection conn = . . .) {
     Statement stat = conn.createStatement();
 ```
 
-```
+```java
 ResultSet result = stat.executeQuery(queryStr);
 process query result
 }
@@ -10939,9 +11947,9 @@ process query result
 
 ## 1.4.3. 分析 SQL 异常
 
-每个 `SQLException` 都包含一个 `SQLException` 对象链，可以通过 `getNextException` 方法获取。这个异常链是在每个异常都存在的 `Throwable` 对象的“原因”（cause）之外的。（有关 Java 异常的详情请第一卷第 7 章）。需要两个嵌套循环才能完全枚举所有这些异常。幸运的是，`SQLException` 类已经增强并实现了 `Iterable<Throwable>` 接口。`iterator()` 方法产生一个 `Iterator<Throwable>`，它可以遍历这两个链：它首先从第一个 `SQLException` 的原因开始，然后移动到下一个 `SQLException`，依此类推。你可以简单地使用增强 for 循环：
+每个 `SQLException` 都包含一个 `SQLException` 对象链，可以通过 `getNextException` 方法获取。这个异常链是在每个异常都存在的 `Throwable` 对象的“原因”（cause）之外的。（有关 Java 异常的详情请参考第一卷第 7 章。）需要两个嵌套循环才能完全枚举所有这些异常。幸运的是，`SQLException` 类已经增强并实现了 `Iterable<Throwable>` 接口。`iterator()` 方法产生一个 `Iterator<Throwable>`，它可以遍历这两个链：它首先从第一个 `SQLException` 的原因开始，然后移动到下一个 `SQLException`，依此类推。你可以简单地使用增强 `for` 循环：
 
-```
+```java
 for (Throwable t : SQLException) {
     do something with t
 }
@@ -10957,11 +11965,11 @@ SQL 异常组织成一个继承树（如图 5.5 所示）。这允许你以独�
 
 此外，数据库驱动可以将非致命状况报告为警告。你可以从连接、语句和结果集中检索警告。
 
-`SQLWarning` 类是 `SQLException` 的子类（尽管 SQLWarning 不会作为异常抛出）。调用 `getSQLState` 和 `getErrorCode` 获取有关警告的更多信息。
+`SQLWarning` 类是 `SQLException` 的子类（尽管 `SQLWarning` 不会作为异常抛出）。调用 `getSQLState` 和 `getErrorCode` 获取有关警告的更多信息。
 
 与 SQL 异常类似，警告也是链式的。要检索所有警告，请使用此循环：
 
-```
+```java
 SQLWarning w = stat.getWarning();
 while (w != null)
 {
@@ -10972,30 +11980,40 @@ while (w != null)
 
 `SQLWarning` 的子类 `DataTruncation` 用于从数据库读取的数据被意外截断的情况。如果数据更新语句中发生数据截断，则会抛出 `DataTruncation` 异常。
 
-| java.sql.SQLException 1.1 |
-| :--- | :--- |
-| SQLException getNextException() | 获取与此异常链中的下一个 SQL 异常，或在链的末尾返回 null。 |
-| Iterator<Throwable> iterator() | 获取产生链式 SQL 异常及其原因的迭代器。 |
-| String getSQLState() | 获取“SQL state”——一个标准化的错误代码。 |
-| int getErrorCode() | 获取厂商特定的错误代码。 |
+### `java.sql.SQLException` 1.1
 
-| java.sql.SQLWarning 1.1 |
-| :--- | :--- |
-| SQLWarning getNextWarning() | 返回与此警告链中的下一个警告，或在链的末尾返回 null。 |
-| SQLWarning getWarnings() | 返回第一个挂起的警告，如果没有挂起的警告则返回 null。 |
+| 方法 | 描述 |
+| --- | --- |
+| `SQLException getNextException()` | 获取与此异常链中的下一个 SQL 异常，或在链的末尾返回 `null`。 |
+| `Iterator<Throwable> iterator()` | 获取产生链式 SQL 异常及其原因的迭代器。 |
+| `String getSQLState()` | 获取“SQL state”——一个标准化的错误代码。 |
+| `int getErrorCode()` | 获取厂商特定的错误代码。 |
 
-| java.sql.Connection 1.1 |
-| java.sql.Statement 1.1 |
-| java.sql.ResultSet 1.1 |
+### `java.sql.SQLWarning` 1.1
 
-| java.sql.DataTruncation 1.1 |
-| :--- | :--- |
-| boolean getParameter() | 如果数据截断适用于参数，则返回 true；如果适用于列则返回 false。 |
-| int getIndex() | 返回被截断参数或列的索引。 |
-| int getDataSize() | 返回应该传输的字节数，如果值未知则返回 -1。 |
-| int getTransferSize() | 返回实际传输的字节数，如果值未知则返回 -1。 |
+| 方法 | 描述 |
+| --- | --- |
+| `SQLWarning getNextWarning()` | 返回与此警告链中的下一个警告，或在链的末尾返回 `null`。 |
+| `SQLWarning getWarnings()` | 返回第一个挂起的警告，如果没有挂起的警告则返回 `null`。 |
+
+### `java.sql.Connection` 1.1
+
+### `java.sql.Statement` 1.1
+
+### `java.sql.ResultSet` 1.1
+
+### `java.sql.DataTruncation` 1.1
+
+| 方法 | 描述 |
+| --- | --- |
+| `boolean getParameter()` | 如果数据截断适用于参数，则返回 `true`；如果适用于列则返回 `false`。 |
+| `int getIndex()` | 返回被截断参数或列的索引。 |
+| `int getDataSize()` | 返回应该传输的字节数，如果值未知则返回 `-1`。 |
+| `int getTransferSize()` | 返回实际传输的字节数，如果值未知则返回 `-1`。 |
 
 ## 1.4.4. 填充数据库
+
+
 
 我们现在准备好编写第一个真正的 JDBC 程序了。当然，如果能尝试一下之前讨论的一些花哨查询很好，但我们面临一个问题：目前数据库中没有数据。我们需要填充数据库，一种简单的方法是使用一组 SQL 指令来创建表并向其中插入数据。大多数数据库程序可以处理来自文本文件的组 SQL 指令，但在语句终止符和其他语法问题上存在一些差异。
 
@@ -11003,14 +12021,13 @@ while (w != null)
 
 具体来说，程序从格式如下的文本文件中读取数据：
 
-```
+```sql
 CREATE TABLE Publishers (Publisher_Id VARCHAR(6),
 INSERT INTO Publishers VALUES ('0201', 'Addison-W
 INSERT INTO Publishers VALUES ('04711', 'John Wil
 ```
 
 列表 5.2 包含了读取 SQL 指令文件并执行它们的代码。
-
 
 ```java
 Connection conn = getConnection();
@@ -11080,7 +12097,7 @@ while (result.next()) {
 }
 ```
 
-## 1.5. 查询执行
+## 1.5 查询执行
 
 在本节中，我们将编写一个针对 COREJAVA 数据库执行查询的程序。为了让此程序运行，你必须已经按照前一节描述填充了包含表的 COREJAVA 数据库。
 
@@ -11088,18 +12105,18 @@ while (result.next()) {
 
 你还可以更改数据库中的数据。选择一个出版社并输入一个金额。该出版社的所有价格都将根据你输入的金额进行调整，程序将显示更改了多少行数据。在更改价格后，你可能想运行一个查询来验证新价格。
 
-### 1.5.1. 预编译语句 (Prepared Statements)
+### 1.5.1 预编译语句（Prepared Statements）
 
 在这个程序中，我们使用了一个新特性：预编译语句。考虑查询特定出版社的所有书籍的 SQL 查询，无论作者是谁：
 
-```
+```sql
 SELECT Books.Price, Books.Title
 FROM Books, Publishers
 WHERE Books.Publisher_Id = Publishers.Publisher_Id
 AND Publishers.Name = 列表框中的名称
 ```
 
-与其在用户每次启动此类查询时都构建一个查询语句，不如使用带有宿主变量（host variable）预编译查询并多次使用它，每次为该变量填充不同的字符串。这种技术可以提高性能。每当数据库执行查询时，它首先会计算一个高效执行的策略。通过预编译查询并重用它，你确保了规划步骤只执行一次。
+与其在用户每次启动此类查询时都构建一个查询语句，不如使用带有宿主变量（host variable）的预编译查询并多次使用它，每次为该变量填充不同的字符串。这种技术可以提高性能。每当数据库执行查询时，它首先会计算一个高效执行的策略。通过预编译查询并重用它，你确保了规划步骤只执行一次。
 
 预编译查询中的每个宿主变量都用 `?` 表示。如果有多个变量，你必须跟踪这些 `?` 的位置。例如，我们的预编译查询变为：
 
@@ -11145,8 +12162,6 @@ WHERE Books.Publisher_Id = (SELECT Publisher_Id FROM Publishers WHERE Name = ?)
 ```
 
 提示：一些 Java 程序员会避免这种复杂的 SQL 语句，一种出人意料但非常低效的变通方法是编写大量的 Java 代码来遍历多个结果集。但数据库执行查询代码的能力远比 Java 程序强得多——这是数据库的核心竞争力。一个准则是：如果可以在 SQL 中完成，就不要在 Java 中完成。
-
-
 
 
 
@@ -11288,35 +12303,35 @@ public static Connection getConnection() {
 }
 ```
 
-# **java.sql.Connection** 1.1
+## `java.sql.Connection` 1.1
 
-- PreparedStatement prepareStatement(String sql)，返回一个包含预编译语句的 PreparedStatement 对象。字符串 sql 包含一个或多个由 `?` 字符表示的参数占位符的 SQL 语句。
+- `PreparedStatement prepareStatement(String sql)`，返回一个包含预编译语句的 `PreparedStatement` 对象。字符串 `sql` 包含一个或多个由 `?` 字符表示的参数占位符的 SQL 语句。
 
-# **java.sql.paredStatement** 1.1
+## `java.sql.paredStatement` 1.1
 
-- void setString(int parameterIndex, String x) 设置 SQL 语句中参数的值。
+- `void setString(int parameterIndex, String x)` 设置 SQL 语句中参数的值。
 
-# **java.sql.Statement** 1.1
+## `java.sql.Statement` 1.1
 
-- ResultSet executeQuery() 返回一个包含查询结果的 ResultSet 对象。
-- int executeUpdate() 返回受 DML 语句影响的行数或 DDL 语句的行数。
+- `ResultSet executeQuery()` 返回一个包含查询结果的 `ResultSet` 对象。
+- `int executeUpdate()` 返回受 DML 语句影响的行数或 DDL 语句的行数。
 
-# **java.sql.ResultSet** 1.1
+## `java.sql.ResultSet` 1.1
 
-- boolean next() 将游标移动到下一行。
-- getString(int columnIndex) 返回由列索引指定的第一个列的值。
+- `boolean next()` 将游标移动到下一行。
+- `getString(int columnIndex)` 返回由列索引指定的第一个列的值。
 
-# **java.sql.Blob** 1.2
+## `java.sql.Blob` 1.2
 
-- long length() 返回 BLOB 的长度。
-- byte[] getBytes(long startPosition, long length) 返回给定范围内的数据。
-- InputStream getBinaryStream() 返回一个用于从 BLOB 读取数据的流。
+- `long length()` 返回 BLOB 的长度。
+- `byte[] getBytes(long startPosition, long length)` 返回给定范围内的数据。
+- `InputStream getBinaryStream()` 返回一个用于从 BLOB 读取数据的流。
 
 ## 1.5.2. 读取和写入 LOB
 
 除了字符串外，许多数据库还可以存储大对象（LOB）。二进制大对象称为 BLOB，字符大对象称为 CLOB。
 
-要读取 LOB，请使用 SELECT 语句获取 BLOB 或 Clob。取决于应用程序使用二进制数据还是字符数据。例如，以下是获取 BLOB 的方法：
+要读取 LOB，请使用 `SELECT` 语句获取 BLOB 或 Clob，取决于应用程序使用二进制数据还是字符数据。例如，以下是获取 BLOB 的方法：
 
 ```java
 ResultSet rs = stat.executeQuery("SELECT image FROM Books");
@@ -11327,7 +12342,7 @@ if (rs.next()) {
 }
 ```
 
-同样，如果你有一个 Clob，可以获取字符数据。要将 LOB 放入数据库，请在你的连接上使用 createBlob 或 createClob。例如：
+同样，如果你有一个 Clob，可以获取字符数据。要将 LOB 放入数据库，请在你的连接上使用 `createBlob` 或 `createClob`。例如：
 
 ```java
 Blob blob = conn.createBlob();
@@ -11335,8 +12350,7 @@ int offset = 0;
 OutputStream out = blob.setBinaryStream(offset);
 ```
 
-
-如下所示，其中毫秒是可选的。驱动程序将将其转换为原生格式。对于 DATE、TIME 或 TIMESTAMP 值，请使用 d、t、ts：
+如下所示，其中毫秒是可选的。驱动程序将将其转换为原生格式。对于 DATE、TIME 或 TIMESTAMP 值，请使用 `d`、`t`、`ts`：
 
 ```
 {d '2024-01-24'}
@@ -11363,11 +12377,11 @@ SELECT * FROM {oj Books LEFT OUTER JOIN Publisher
 ON Books.Publisher_Id = Publisher.Publisher_Id}
 ```
 
-该查询包含了某些书籍，其 Publisher_Id 在 Publishers 表中没有匹配项，并用 NULL 值表示不存在匹配项。
+该查询包含了某些书籍，其 `Publisher_Id` 在 `Publishers` 表中没有匹配项，并用 `NULL` 值表示不存在匹配项。
 
-你需要 RIGHT OUTER JOIN 来包含没有匹配书籍的出版者，或者使用 FULL OUTER JOIN 同时返回两者。大多数数据库都支持所有形式的外连接，但某些并不支持。`oj` 转义字符允许 JDBC 驱动程序定位并重写任何不支持的外连接操作。如果你的数据库支持所有形式的外连接，则无需要担心这个转义字符。
+你需要 `RIGHT OUTER JOIN` 来包含没有匹配书籍的出版者，或者使用 `FULL OUTER JOIN` 同时返回两者。大多数数据库都支持所有形式的外连接，但某些并不支持。`oj` 转义字符允许 JDBC 驱动程序定位并重写任何不支持的外连接操作。如果你的数据库支持所有形式的外连接，则无需担心这个转义字符。
 
-最后，`_` 和 `%` 字符在 LIKE 子句中具有特殊含义——用于匹配单个字符或字符序列。目前没有标准的方法可以在字面上使用它们。如果你想匹配所有包含 `_` 的字符串，请使用此结构：
+最后，`_` 和 `%` 字符在 `LIKE` 子句中具有特殊含义——用于匹配单个字符或字符序列。目前没有标准的方法可以在字面上使用它们。如果你想匹配所有包含 `_` 的字符串，请使用此结构：
 
 ```
 . . . WHERE ? LIKE !_% {escape '!'}
@@ -11385,7 +12399,7 @@ ON Books.Publisher_Id = Publisher.Publisher_Id}
 
 你需要使用 `CallableStatement` 接口来执行存储过程。设置所有输入参数并指定任何输出的类型。
 
-```
+```java
 CallableStatement cstat = conn.prepareCall("{call ...");
 cstat.setInt(1, id);
 cstat.registerOutParameter(2, java.sql.Types.VAR);
@@ -11395,7 +12409,7 @@ String name = cstat.getString(2);
 
 ## 1.5.4. 多结果
 
-查询可能会返回多个结果集或更新计数。这发生在执行存储过程时，或者在允许单次查询中提交多个 SELECT 语句的数据库中。以下是获取所有结果集的方法：
+查询可能会返回多个结果集或更新计数。这发生在执行存储过程时，或者在允许单次查询中提交多个 `SELECT` 语句的数据库中。以下是获取所有结果集的方法：
 
 1. 使用 `execute` 方法执行 SQL 语句。
 2. 获取第一个结果集或更新计数。
@@ -11426,16 +12440,18 @@ while (!done) {
 }
 ```
 
-## java.sql.Statement 1.1
+## `java.sql.Statement` 1.1
 
-- boolean getMoreResults()
-- boolean getMoreResults(int current)
+- `boolean getMoreResults()`
+- `boolean getMoreResults(int current)`
 
-获取此语句的下一个结果。`current` 参数是 CLOSE_CURRENT_RESULT（默认值）、KEEP_CURRENT_RESULT 或 CLOSE_ALL_RESULTS 之一。如果下一个结果存在且是结果集，则返回 true。
+获取此语句的下一个结果。`current` 参数是 `CLOSE_CURRENT_RESULT`（默认值）、`KEEP_CURRENT_RESULT` 或 `CLOSE_ALL_RESULTS` 之一。如果下一个结果存在且是结果集，则返回 `true`。
 
 ## 1.5.5. 获取自动生成的键
 
 大多数数据库都支持对表中的行进行自动编号的机制。遗憾的是，供应商之间的机制差异很大。自动编号通常用作主键。虽然 JDBC 未提供生成键的独立于供应商的解决方案，但它提供了一种高效获取这些键的方法。当你向表中插入新行并自动生成键时，可以使用以下代码获取它：
+
+
 
 ```java
 stat.executeUpdate(insertStatement, Statement.RETURN_GENERATED_KEYS);
@@ -11446,16 +12462,16 @@ if (rs.next()) {
 }
 ```
 
-## java.sql.Statement 1.1
+## `java.sql.Statement` 1.1
 
-* boolean execute(String statement, int autogenerated) 1.4
-* int executeUpdate(String statement, int autogenerated) 1.4
+- `boolean execute(String statement, int autogenerated)` 1.4
+- `int executeUpdate(String statement, int autogenerated)` 1.4
 
-执行之前描述的给定 SQL 语句。如果 `autogenerated` 设置为 Statement.RETURN_GENERATED_KEYS...
+执行之前描述的给定 SQL 语句。如果 `autogenerated` 设置为 `Statement.RETURN_GENERATED_KEYS`……
 
 ## 1.6. 可滚动和可更新的结果集
 
-正如你所见，`ResultSet` 的 `next` 方法对行进行迭代。默认情况下，结果集既不是可滚的不是可更新的。要获取可滚动的结果集，必须通过以下方式获取 `Statement` 对象：
+正如你所见，`ResultSet` 的 `next` 方法对行进行迭代。默认情况下，结果集既不是可滚动的，也不是可更新的。要获取可滚动的结果集，必须通过以下方式获取 `Statement` 对象：
 
 ```java
 Statement stat = conn.createStatement(type, concurrency);
@@ -11464,23 +12480,23 @@ Statement stat = conn.createStatement(type, concurrency);
 `type` 和 `concurrency` 的可能值列如下：
 
 - 你希望结果集是可滚的吗？如果你只想滚动结果集而不想编辑数据，请使用 `ResultSet.FORWARD_ONLY`。
-- 如果结果集是可滚的，你希望它反映查询之后发生的数据库更改吗？（在讨论中，假设 ResultSet.SCROLL_INSENSITIVE...）
+- 如果结果集是可滚的，你希望它反映查询之后发生的数据库更改吗？（在讨论中，假设 `ResultSet.SCROLL_INSENSITIVE`……）
 - 你希望通过编辑结果集来更新数据库吗？见下一节。
 
-### 表 1.6: ResultSet 类型
+### 表 1.6：ResultSet 类型
 
 | 值 | 解释 |
 | :--- | :--- |
-| TYPE_FORWARD_ONLY | 结果集不可滚动（默认值）。 |
-| TYPE_SCROLL_INSENSITIVE | 结果集可滚动但对数据库更改不敏感。 |
-| TYPE_SCROLL_SENSITIVE | 结果集可滚动且对数据库更改敏感。 |
+| `TYPE_FORWARD_ONLY` | 结果集不可滚动（默认值）。 |
+| `TYPE_SCROLL_INSENSITIVE` | 结果集可滚动但对数据库更改不敏感。 |
+| `TYPE_SCROLL_SENSITIVE` | 结果集可滚动且对数据库更改敏感。 |
 
-### 表 1.6: 并发值
+### 表 1.6：并发值
 
 | 值 | 解释 |
 | :--- | :--- |
-| CONCUR_READ_ONLY | 结果集无法用于更新数据库（默认值）。 |
-| CONCUR_UPDATABLE | 结果集可用于更新数据库。 |
+| `CONCUR_READ_ONLY` | 结果集无法用于更新数据库（默认值）。 |
+| `CONCUR_UPDATABLE` | 结果集可用于更新数据库。 |
 
 例如，如果你只想滚动结果集而不想编辑数据，请使用：
 
@@ -11488,22 +12504,19 @@ Statement stat = conn.createStatement(type, concurrency);
 Statement stat = conn.createStatement(ResultSet.SCROLL_INSENSITIVE, CONCUR_READ_ONLY);
 ```
 
-通过以下方式返回的所有结果集
+通过以下方式返回的所有结果集：
 
 ```java
 ResultSet rs = stat.executeQuery(query);
 ```
 
-现在都是可滚的。可滚动的结果集有一个指示当前位置的游标。滚动非常简单。使用
+现在都是可滚的。可滚动的结果集有一个指示当前位置的游标。滚动非常简单。使用：
 
 ```java
 if (rs.previous()) . . . ;
 ```
 
-向后滚动。如果游标位于实际的行上，则该方法返回 true；如果游标现在移动到第一行之前，则返回 false。
-
-
-
+向后滚动。如果游标位于实际的行上，则该方法返回 `true`；如果游标现在移动到第一行之前，则返回 `false`。
 
 你可以通过调用以下方法将光标向前或向后移动任意行：
 
@@ -11515,17 +12528,17 @@ rs.relative(n);
 
 或者，你可以将光标设置为特定的行号：
 
-```
+```java
 rs.absolute(n);
 ```
 
-要获取当前行号，请调用
+要获取当前行号，请调用：
 
 ```java
 int currentRow = rs.getRow();
 ```
 
-结果集中的第一行编号为 1。如果返回值为 0，则光标当前不在某一行行上——它位于第一行之前或最后一行之后。
+结果集中的第一行编号为 1。如果返回值为 0，则光标当前不在某一行上——它位于第一行之前或最后一行之后。
 
 便利方法 `first`、`last`、`beforeFirst` 和 `afterLast` 分别将光标移动到第一位置、最后位置、第一行之前或最后行之后。
 
@@ -11535,7 +12548,7 @@ int currentRow = rs.getRow();
 
 ## 1.6.2. 可更新的结果集
 
-如果你想编辑结果集中的数据并让更改自动反映到数据库中，请创建一个可更新的结果集。可更新的结果集不非是可滚动的，但如果你向用户展示数据以进行编辑，你通常也希望允许滚动。
+如果你想编辑结果集中的数据并让更改自动反映到数据库中，请创建一个可更新的结果集。可更新的结果集不一定是可滚动的，但如果你向用户展示数据以进行编辑，你通常也希望允许滚动。
 
 要获取可更新的结果集，请按如下方式创建语句：
 
@@ -11546,7 +12559,7 @@ Statement stat = conn.createStatement(
 
 随后调用 `executeQuery` 返回的结果集即将是可更新的。
 
-**注意：** 并不是所有查询都会返回可更新的结果集。如果你的查询是涉及多个表的连接（join），则结果可能是不可更新的。然而，如果你的查询仅涉及单个表，或者通过主键连接了多个表，那么你应该预期结果集是可更新的。调用 `ResultSet` 接口的 `getConcurrency` 方法可以确定这一点。
+**注意：**并不是所有查询都会返回可更新的结果集。如果你的查询是涉及多个表的连接（join），则结果可能是不可更新的。然而，如果你的查询仅涉及单个表，或者通过主键连接了多个表，那么你应该预期结果集是可更新的。调用 `ResultSet` 接口的 `getConcurrency` 方法可以确定这一点。
 
 例如，假设你想提高某些书籍的价格，但你没有一个简单的标准来发布 `UPDATE` 语句。那么，你可以遍历所有的书籍并根据任意条件更新价格。
 
@@ -11585,7 +12598,7 @@ rs.moveToCurrentRow();
 
 注意，你无法影响新数据在结果集或数据库中添加的位置。
 
-如果你未在插入行中指定列值，它将被设置为 SQL NULL。然而，如果该列有 `NOT NULL` 约束，则会抛出异常且该行不会插入。
+如果你未在插入行中指定列值，它将被设置为 SQL `NULL`。然而，如果该列有 `NOT NULL` 约束，则会抛出异常且该行不会插入。
 
 最后，你可以删除光标所在的行：
 
@@ -11597,23 +12610,23 @@ rs.deleteRow();
 
 `ResultSet` 接口的 `updateRow`、`insertRow` 和 `deleteRow` 方法赋予你与执行 `UPDATE`、`INSERT` 和 `DELETE` SQL 语句相同的权力。然而，Java 程序员可能会发现通过构建 SQL 语句并通过结果集来操作数据库内容更为自然。
 
+## `java.sql.DatabaseMetaData` 1.1
 
+- `boolean supportsResultSetType(int type)` 1.2
 
+如果数据库支持给定类型的结果集，则返回 `true`。
 
-java.sql.DatabaseMetaData 1.1
-
-+   * `boolean supportsResultSetType(int type)` 1.2
-如果数据库支持给定类型的结果集，则返回 `true`；
 `type` 是 `ResultSet` 接口中常量 `TYPE_FORWARD_ONLY`、`TYPE_SCROLL_INSENSITIVE` 或 `TYPE_SCROLL_SENSITIVE` 之一。
 
-+   * `boolean supportsResultSetConcurrency(int type, int concurrency)` 1.2
+- `boolean supportsResultSetConcurrency(int type, int concurrency)` 1.2
+
 如果数据库支持给定类型和并发组合的结果集，则返回 `true`。`type` 参数是常量 `TYPE_FORWARD_ONLY`、`TYPE_SCROLL_INSENSITIVE` 或 `TYPE_SCROLL_SENSITIVE` 之一，而 `concurrency` 是常量 `CONCUR_READ_ONLY` 或 `CONCUR_UPDATABLE` 之一，这些常量都定义在 `ResultSet` 接口中。
 
 ## 1.7. 行集（Row Sets）
 
 可滚动的结果集非常强大，但它们也有一个主要的缺点：你需要在整个用户交互期间保持数据库连接。然而，用户可能会离开电脑很长时间，导致连接被占用。这是不好的——数据库连接是稀缺资源。在这种情况下，请使用 `row set`（行集）。
 
-RowSet 接口扩展了 `ResultSet` 接口，但行集不必绑定到数据库连接。
+`RowSet` 接口扩展了 `ResultSet` 接口，但行集不必绑定到数据库连接。
 
 如果你需要将查询结果移动到复杂应用程序的另一个层级，或者移动到另一个设备（如手机），行集也是适用的。你永远不想移动一个结果集——它的数据结构可能是巨大的，而且它是与数据库连接相连的。
 
@@ -11621,22 +12634,19 @@ RowSet 接口扩展了 `ResultSet` 接口，但行集不必绑定到数据库连
 
 `java.sql.rowset` 包提供了以下扩展了 `ResultSet` 接口的接口：
 
-+   - `CachedRowSet` 允许离线操作。我们将在接下来的章节中讨论缓存行。
-
-+   - `WebRowSet` 是一种缓存行集，可以保存到 XML 文件。该 XML 文件可以移动到 Web 应用程序的另一个层级，由另一个 `WebRowSet` 对象打开。
-
-+   - `FilteredRowSet` 和 `JoinRowSet` 接口支持对行集进行轻量级操作，这些操作等同于 SQL SELECT 和 JOIN 操作。这些操作在存储在行集中的数据上执行，而无需建立数据库连接。
-
-+   - `JdbcRowSet` 是 `ResultSet` 的薄封装。它添加了 `ResultSet` 接口的有用方法。
+- `CachedRowSet` 允许离线操作。我们将在接下来的章节中讨论缓存行。
+- `WebRowSet` 是一种缓存行集，可以保存到 XML 文件。该 XML 文件可以移动到 Web 应用程序的另一个层级，由另一个 `WebRowSet` 对象打开。
+- `FilteredRowSet` 和 `JoinRowSet` 接口支持对行集进行轻量级操作，这些操作等同于 SQL `SELECT` 和 `JOIN` 操作。这些操作在存储在行集中的数据上执行，而无需建立数据库连接。
+- `JdbcRowSet` 是 `ResultSet` 的薄封装。它添加了 `ResultSet` 接口的有用方法。
 
 要获取缓存行集，请调用：
 
-```
+```java
 RowSetFactory factory = RowServiceProvider.newFactory();
 CachedRowSet crs = factory.createCachedRowSet();
 ```
 
-获取其他类型行也有类似的方法。
+获取其他类型行集也有类似的方法。
 
 ### 1.7.2. 缓存行集
 
@@ -11646,7 +12656,7 @@ CachedRowSet crs = factory.createCachedRowSet();
 
 你可以从结果集填充 `CachedRowSet`：
 
-```
+```java
 ResultSet result = ...;
 RowSetFactory factory = RowSetProvider.newFactory();
 CachedRowSet crs = factory.createCachedRowSet();
@@ -11656,7 +12666,7 @@ conn.close(); // 现在可以关闭数据库连接了
 
 或者，你可以让 `CachedRowSet` 对象自动建立连接。设置数据库参数：
 
-```
+```java
 crs.setURL("jdbc:derby://localhost:1527/COREJAVA");
 crs.setUsername("dbuser");
 crs.setPassword("secret");
@@ -11664,22 +12674,22 @@ crs.setPassword("secret");
 
 然后设置查询语句和任何参数：
 
-```
+```java
 crs.setCommand("SELECT * FROM Books WHERE Publisher");
 crs.setString(1, publisherId);
 ```
 
 最后，用查询结果填充行集：
 
-```
+```java
 crs.execute();
 ```
 
 此调用会建立数据库连接、发布查询、填充行集并断开连接。
 
-如果你的查询结果非常，你可能不想将其全部放入行集中。毕竟，你的用户可能只看某几行。在这种情况下，请指定页面大小：
+如果你的查询结果非常大，你可能不想将其全部放入行集中。毕竟，你的用户可能只看某几行。在这种情况下，请指定页面大小：
 
-```
+```java
 CachedRowSet crs = ...;
 crs.setCommand(command);
 crs.setPageSize(20);
@@ -11687,99 +12697,117 @@ crs.setPageSize(20);
 crs.execute();
 ```
 
-现在你只会得到 20 行。要获取下一批行，请调用
+现在你只会得到 20 行。要获取下一批行，请调用：
 
-```
+```java
 crs.nextPage();
 ```
 
 你可以使用与处理结果集的相同方法来检查和修改行集。如果你修改了行集的内容，必须通过调用以下方法将其写回数据库：
 
-```
+```java
 crs.acceptChanges(conn);
 ```
 
-或者
+或者：
 
-```
+```java
 crs.acceptChanges();
 ```
 
-第二次调用仅在在你为行集配置了连接数据库所需的信息（如 URL、用户名和密码）时才有效。
+第二次调用仅在你为行集配置了连接数据库所需的信息（如 URL、用户名和密码）时才有效。
 
 在第 5.6.2 节中，你已经看到并不是所有的结果集都是可更新的。为了让驱动程序管理器获取连接，必须设置 URL、用户名和密码。
 
-java.sql.RowSet 1.4
+## `java.sql.RowSet` 1.4
 
-+   * String getURL()
-* void setURL(String url)
+- `String getURL()`
+- `void setURL(String url)`
+
   获取或设置数据库 URL。
-* * String getUsername()
-* void setUsername(String username)
+
+- `String getUsername()`
+- `void setUsername(String username)`
+
   获取或设置连接数据库的用户名。
-* * String getPassword()
-* void setPassword(String password)
+
+- `String getPassword()`
+- `void setPassword(String password)`
+
   获取或设置连接数据库的密码。
-* * String getCommand()
-* void setCommand(String command)
+
+- `String getCommand()`
+- `void setCommand(String command)`
+
   获取或设置用于填充此行集的命令。
-* void execute()
+
+- `void execute()`
+
   通过发布命令填充此行集。
 
-java.sql.rowset.CachedRowSet 5.0
+## `java.sql.rowset.CachedRowSet` 5.0
 
-+   * void execute(Connection conn)
-通过发布命令填充此行集。
-此方法使用给定的连接并将其关闭。
+- `void execute(Connection conn)`
 
-+   - void populate(ResultSet result)
-用结果集的数据填充此缓存行集。
-- String getTableName()
-- void setTableName(String tableName)
+  通过发布命令填充此行集。
+
+  此方法使用给定的连接并将其关闭。
+
+- `void populate(ResultSet result)`
+
+  用结果集的数据填充此缓存行集。
+
+- `String getTableName()`
+- `void setTableName(String tableName)`
+
   获取或设置填充行集的表名。
-- int getPageSize()
-- void setPageSize(int size)
+
+- `int getPageSize()`
+- `void setPageSize(int size)`
+
   获取或设置页面大小。
-- boolean nextPage()
-- boolean previousPage()
-  加载下一页或上一页。如果存在下一页或上一页则返回 true。
-- void acceptChanges()
-- void acceptChanges(Connection conn)
-  重新连接到数据库并写入编辑行集产生的更改。如果数据库已更改无法写回，可能会抛出 SQLException。
 
-```
-java.sql.rowset.RowSetProvider 7
-```
+- `boolean nextPage()`
+- `boolean previousPage()`
 
-+   - static RowSetFactory newFactory()
+  加载下一页或上一页。如果存在下一页或上一页则返回 `true`。
 
-创建一个行集工厂。
+- `void acceptChanges()`
+- `void acceptChanges(Connection conn)`
 
-javax.sql.rowset.RowSetFactory 7
+  重新连接到数据库并写入编辑行集产生的更改。如果数据库已更改无法写回，可能会抛出 `SQLException`。
 
-+   - CachedRowSet createCachedRowSet()
-- FilteredRowSet createFilteredRowSet()
-- JdbcRowSet createJdbcRowSet()
-- JoinRowSet createJoinRowSet()
-- WebRowSet createWebRowSet()
+## `java.sql.rowset.RowSetProvider` 7
+
+- `static RowSetFactory newFactory()`
+
+  创建一个行集工厂。
+
+## `javax.sql.rowset.RowSetFactory` 7
+
+- `CachedRowSet createCachedRowSet()`
+- `FilteredRowSet createFilteredRowSet()`
+- `JdbcRowSet createJdbcRowSet()`
+- `JoinRowSet createJoinRowSet()`
+- `WebRowSet createWebRowSet()`
+
   创建指定类型的行集。
 
 在前面的章节中，你看到了如何填充、查询和更新数据库表。然而，JDBC 可以为你提供有关数据库及其表结构的额外信息。例如，你可以获取特定数据库的表列表，或者表的列名和类型。当你实现一个具有预定义数据库的业务应用程序时，这些信息并没有用。毕竟，如果你设计了表，你自然知道它们的结构。但是，对于编写处理任何数据库的工具的程序员来说，结构性信息非常有用。
 
-在 SQL 中，描述数据库或其部分的数据被称为元数据（为了与数据库中存储的实际数据区分来）。你可以获取三种元数据：关于数据库的、关于结果集的以及关于预编译语句参数的。
-
+在 SQL 中，描述数据库或其部分的数据被称为元数据（为了与数据库中存储的实际数据区分开来）。你可以获取三种元数据：关于数据库的、关于结果集的以及关于预编译语句参数的。
 
 
 
 要获取更多关于数据库的信息，可以从数据库连接请求一个 `DatabaseMetaData` 类型的对象。
 
-```
+```java
 DatabaseMetaData meta = conn.getMetaData();
 ```
 
-使用此对象获取有关数据库的信息。例如，调用该方法
+使用此对象获取有关数据库的信息。例如，调用该方法：
 
-```
+```java
 ResultSet mrs = meta.getTables(null, null, null,
 ```
 
@@ -11787,20 +12815,20 @@ ResultSet mrs = meta.getTables(null, null, null,
 
 结果集中的每行都包含数据库中某个表的信息。第三列是表名。（再次请参见 API 注释获取其他列。）以下循环收集了所有表名：
 
-```
+```java
 while (mrs.next())
     tableNames.add(mrs.getString(3));
 ```
 
-数据库元数据还有第二个重要的用途。数据库是复杂的，SQL 标准为可变性留下了很大的空间。`DatabaseMetaData` 接口中有一百多个方法可以查询数据库，包括具有此类奇特名称的调用，
+数据库元数据还有第二个重要的用途。数据库是复杂的，SQL 标准为可变性留下了很大的空间。`DatabaseMetaData` 接口中有一百多个方法可以查询数据库，包括具有此类奇特名称的调用：
 
-```
+```java
 meta.supportsCatalogsInPrivilegeDefinitions()
 ```
 
-以及
+以及：
 
-```
+```java
 meta.nullPlusNonNullIsNull()
 ```
 
@@ -11808,7 +12836,7 @@ meta.nullPlusNonNullIsNull()
 
 `DatabaseMetaData` 接口提供了有关数据库的数据。第二个元数据接口 `ResultSetMetaData` 报告有关结果集的信息。当你从查询获取结果集时，可以查询列数以及每列的名称、类型和字段宽度。这里是一个典型的循环：
 
-```
+```java
 ResultSet rs = stat.executeQuery("SELECT * FROM '
 ResultSetMetaData rsmd = rs.getMetaData();
 for (int i = 1; i <= rsmd.getColumnCount(); i++) {
@@ -11820,14 +12848,14 @@ for (int i = 1; i <= rsmd.getColumnCount(); i++) {
 
 如果你有一个预编译语句（prepared statement），可以获取执行语句时返回的结果语句的元数据：
 
-```
+```java
 PreparedStatement pstat = conn.prepareStatement(
 ResultSetMetaData rsmd = pstat.getMetaData();
 ```
 
 第三类元数据描述预编译语句的参数：
 
-```
+```java
 ParameterMetaData pmd = pstat.getParameterMetaData();
 for (int i = 1; i <= pmd.getParameterCount())
 {
@@ -11843,9 +12871,9 @@ for (int i = 1; i <= pmd.getParameterCount())
 
 **图 1.6：** ViewDB GUI 应用程序
 
-**注意：** 示例程序展示了如何实现用于处理任意表的工具。许多数据库和 IDE 都带有更复杂的工具来查看和编辑表。如果你倾向于使用独立程序，请查看 DBeaver (https://dbeaver.io) 或 SQuirreL (https://squirrelsqls.org)。程序可以用于任何 JDBC 数据库。
+**注意：** 示例程序展示了如何实现用于处理任意表的工具。许多数据库和 IDE 都带有更复杂的工具来查看和编辑表。如果你倾向于使用独立程序，请查看 DBeaver（https://dbeaver.io）或 SQuirreL（https://squirrelsqls.org）。程序可以用于任何 JDBC 数据库。
 
-### 列表 1.4 view/ViewDB2.java
+### 列表 1.4 `view/ViewDB2.java`
 
 ```java
 package view;
@@ -11856,18 +12884,23 @@ import java.sql.*;
 import java.util.*;
 ```
 
+```java
 import javax.sql.rowset.*;
+
 import util.*;
+
 /**
  * 此程序使用元数据显示a-
  * @version 1.0 2023-08-16
  * @author Cay Horstmann
  */
 public class ViewDB2 {
+
     private CachedRowSet crs;
     private Scanner console;
 
     record Column(String label, int width, S
+
     private List<Column> columns = new Array
 
     public static void main(String[] args) {
@@ -11876,10 +12909,12 @@ public class ViewDB2 {
 
     public void run() {
         try (Connection conn = getConnection(
+
             console = new Scanner(System.in);
             DatabaseMetaData meta = conn.getMe
 ```
 
+```java
 var tableNames = new ArrayList<String>
 try (ResultSet mrs = meta.getTable
 {
@@ -11905,8 +12940,6 @@ catch (IOException e) {
  * 为显示准备好列列表
  * @param tableName the name of the tabl
  * @param conn the database connection
-```
-
 */
 public void showTable(String tableName,
 {
@@ -11923,25 +12956,22 @@ public void showTable(String tableName,
             . . .
         }
     }
-
-
-
-
+```
 
 | 列 | 名称 | 解释 |
 |---|---|---|
-| 5 | REMARKS | 对表格的注释 |
+| 5 | `REMARKS` | 对表格的注释 |
 
-- - int getJDBCMajorVersion() 1.4
-- - int getJDBCMinorVersion() 1.4
+- `int getJDBCMajorVersion()` 1.4
+- `int getJDBCMinorVersion()` 1.4
 
 返回建立数据库连接的驱动程序的主版本或次要版本号。例如，JDBC 4.3 驱动的主版本号为 4，次要版本号为 3。
 
-- - int getMaxConnections()
+- `int getMaxConnections()`
 
 返回此数据库允许的最大并发连接数。
 
-- - int getMaxStatements()
+- `int getMaxStatements()`
 
 返回每个数据库连接允许的最大并发打开的语句数量，如果该数量为无限制或未知。
 
@@ -11949,52 +12979,57 @@ public void showTable(String tableName,
 java.sql.ResultSet MetaData 1.1
 ```
 
-- - ResultSetMetaData getMetaData()
-返回与当前 ResultSet 列相关的元数据。
+- `ResultSetMetaData getMetaData()`
 
-## java.sql.PreparedStatement 1.1
+返回与当前 `ResultSet` 列相关的元数据。
 
-- * ResultSetMetaData getMetaData() 1.2
+## `java.sql.PreparedStatement` 1.1
+
+- `ResultSetMetaData getMetaData()` 1.2
+
 返回与执行此语句时返回的结果集相关的元数据。
 
-- * ParameterMetaData getMetaData() 1.4
+- `ParameterMetaData getMetaData()` 1.4
+
 返回描述此语句参数的元数据。
 
-## java.sql.ResultSetMetaData 1.1
+## `java.sql.ResultSetMetaData` 1.1
 
-- * int getColumnCount()
-返回当前 ResultSet 对象中的列数。
-- * String getColumnName(int column)
-- * String getColumnLabel(int column)
-- * int getColumnDisplayName(int column)
+- `int getColumnCount()`
+
+返回当前 `ResultSet` 对象中的列数。
+
+- `String getColumnName(int column)`
+- `String getColumnLabel(int column)`
+- `int getColumnDisplayName(int column)`
+
 返回给定从 1 开始索引的列名称、建议标题和显示大小。
 
-## java.sql.ParameterMetaData 1.4
+## `java.sql.ParameterMetaData` 1.4
 
-- * int getParameterCount()
+- `int getParameterCount()`
+
 返回预编译语句的参数数量。
 
-- * int getParameterType(int param)
+- `int getParameterType(int param)`
+- `String getParameterTypeName(int param)`
+- `String getParameterClassName(int param)`
 
-- * String getParameterTypeName(int param)
+返回给定从 1 开始索引的参数的类型，格式为 `java.sql.Types` 中定义的常量、特定数据库的类型名称，或完全限定的 Java 类名。
 
-- * String getParameterClassName(int param)
+- `int getParameterMode(int param)`
 
-返回给定从 1 开始索引的参数的类型，格式为 java.sql.Types 中定义的常量、特定数据库的类型名称，或完全限定的 Java 类名。
+返回给定从 1 开始索引的参数的模式，格式为静态常量 `parameterModeIn`、`parameterModeOut` 或 `parameterModeUnknown` 之一。
 
-- * int getParameterMode(int param)
+- `int isNullable(int param)`
 
-返回给定从 1 开始索引的参数的模式，格式为静态常量 parameterModeIn、parameterModeOut 或 parameterModeUnknown 之一。
+返回给定从 1 开始索引的参数的可空模式，格式为静态常量 `parameterNoNulls`、`parameterNullable` 或 `parameterNullableUnknown` 之一。
 
-- * int isNullable(int param)
-
-返回给定从 1 开始索引的参数的可空模式，格式为静态常量 parameterNoNulls、parameterNullable 或 parameterNullableUnknown 之一。
-
-- * int getPrecision(int param)
+- `int getPrecision(int param)`
 
 返回给定从 1 开始索引的参数的最大列大小。对于非数值数据类型，这是字符串或字符串表示的长度，或者是二进制数据的字节数。
 
-- * int getScale(int param)
+- `int getScale(int param)`
 
 返回给定从 1 开始索引的参数的小数点后的数字，对于非数值数据则返回 0。
 
@@ -12035,7 +13070,7 @@ stat.executeUpdate(command3);
 conn.commit();
 ```
 
-然而，如果发生错误，
+然而，如果发生错误：
 
 ```java
 conn.rollback();
@@ -12054,8 +13089,9 @@ Savepoint svpt = conn.setSavepoint(); // 设置保存
 stat.executeUpdate(command2);
 ```
 
+```java
 if ( . . ) conn.rollback(svpt); // 撤销影响
-.
+```
 
 ```java
 conn.commit();
@@ -12069,7 +13105,7 @@ conn.releaseSavepoint(svpt);
 
 ## 1.9.3. 批量更新
 
-假设一个程序需要执行许多 INSERT 语句来填充数据库表。你可以通过使用批量更新来提高程序的性能。**注意：** 使用 DatabaseMetaData 的 `supportsBatchUpdates` 方法来检查你的数据库是否支持此功能。要执行批量操作，首先按通常方式创建 Statement 对象。现在，不再调用 executeUpdate，而是调用 addBatch 方法：一组语句被收集并作为一个单一事务执行。首先关闭自动提交，收集批量，最后恢复自动提交模式。如果批量在中间失败，你可以回滚到批量开始之前的状态。
+假设一个程序需要执行许多 `INSERT` 语句来填充数据库表。你可以通过使用批量更新来提高程序的性能。**注意：** 使用 `DatabaseMetaData` 的 `supportsBatchUpdates` 方法来检查你的数据库是否支持此功能。要执行批量操作，首先按通常方式创建 `Statement` 对象。现在，不再调用 `executeUpdate`，而是调用 `addBatch` 方法：一组语句被收集并作为一个单一事务执行。首先关闭自动提交，收集批量，最后恢复自动提交模式。如果批量在中间失败，你可以回滚到批量开始之前的状态。
 
 ```java
 boolean autoCommit = conn.getCommit();
@@ -12083,12 +13119,12 @@ String command = "INSERT INTO .";
 stat.addBatch(command);
 while ( . . )
 {
-command = "CREATE TABLE .";
-stat.addBatch(command);
+    command = "CREATE TABLE .";
+    stat.addBatch(command);
 }
 ```
 
-executeBatch 的调用返回所有提交语句的行数数组。返回数组中的每个值对应批量语句中的某一个。如果是非负数，则它是行数。如果是值 SUCCESS_NO_INFO，则语句执行成功但无行数可用。如果是 EXECUTE_FAILED，则语句失败。
+`executeBatch` 的调用返回所有提交语句的行数数组。返回数组中的每个值对应批量语句中的某一个。如果是非负数，则它是行数。如果是值 `SUCCESS_NO_INFO`，则语句执行成功但无行数可用。如果是 `EXECUTE_FAILED`，则语句失败。
 
 ```java
 int[] counts = stat.executeBatch();
@@ -12100,86 +13136,102 @@ conn.commit();
 conn.setAutoCommit(autoCommit);
 ```
 
-## java.sql.Connection 1.1
+## `java.sql.Connection` 1.1
 
-- - boolean getAutoCommit()
-- - void setAutoCommit(boolean b)
-获取或设置连接的自动提交模式为 b。如果自动提交，所有语句在执行完成后都会提交。
-- - void commit()
+- `boolean getAutoCommit()`
+- `void setAutoCommit(boolean b)`
+
+获取或设置连接的自动提交模式为 `b`。如果自动提交，所有语句在执行完成后都会提交。
+
+- `void commit()`
+
 提交自上次提交以来的所有语句。
-- - void rollback()
+
+- `void rollback()`
+
 撤销自上次提交以来所有语句的影响。
-- - Savepoint setSavepoint() 1.4
-- - Savepoint setSavepoint(String name) 1.4
+
+- `Savepoint setSavepoint()` 1.4
+- `Savepoint setSavepoint(String name)` 1.4
+
 设置一个未命名或命名的保存点。
-- - void rollback(Savepoint svpt) 1.4
+
+- `void rollback(Savepoint svpt)` 1.4
+
 回滚到指定的保存点。
-- - void releaseSavepoint(Savepoint svpt) 1.4
+
+- `void releaseSavepoint(Savepoint svpt)` 1.4
+
 释放指定的保存点。
 
-## java.sql.Savepoint 1.4
+## `java.sql.Savepoint` 1.4
 
-- - int getSavepointId()
-获取此未命名保存点的 ID，如果是命名的保存点则抛出 SQLException。
-- - String getSavepointName()
-获取此保存点的名称，如果是未命名的保存点则抛出 SQLException。
+- `int getSavepointId()`
 
-## java.sql.Statement 1.1
+获取此未命名保存点的 ID，如果是命名的保存点则抛出 `SQLException`。
 
-- - void addBatch(String command) 1.2
+- `String getSavepointName()`
+
+获取此保存点的名称，如果是未命名的保存点则抛出 `SQLException`。
+
+## `java.sql.Statement` 1.1
+
+- `void addBatch(String command)` 1.2
+
 将命令添加到此语句的当前命令批量中。
-- - int[] executeBatch() 1.2
-- - long[] executeLargeBatch() 8
-  执行当前批量中的所有命令。
 
-## java.sql.DatabaseMetaData 1.1
+- `int[] executeBatch()` 1.2
+- `long[] executeLargeBatch()` 8
 
-- - boolean supportsBatchUpdates() 1.2
-  如果驱动程序支持批量更新，则返回 true。
+执行当前批量中的所有命令。
 
+## `java.sql.DatabaseMetaData` 1.1
 
+- `boolean supportsBatchUpdates()` 1.2
 
-
+如果驱动程序支持批量更新，则返回 `true`。
 
 ## 1.9.4. 高级 SQL 类型
 
 表 5.8 列出了 JDBC 支持的 SQL 数据类型及其在 Java 语言中对应的类型。
 
-**表 1.8:** SQL 数据类型及其对应的 Java 类型
+
+
+**表 1.8：** SQL 数据类型及其对应的 Java 类型
 
 | SQL 数据类型 | Java 数据类型 |
 | :--- | :--- |
-| INTEGER or INT | int |
-| SMALLINT | short |
-| NUMERIC(m,n), DECIMAL(m,n) or DEC(m,n) | java.math.BigDecimal |
-| FLOAT(n) | double |
-| REAL | float |
-| DOUBLE | double |
-| CHARACTER(n) or CHAR(n) | String |
-| VARCHAR(n), LONG VARCHAR | String |
-| BOOLEAN | boolean |
-| DATE | java.sql.Date |
-| TIME | java.sql.Time |
-| TIMESTAMP | java.sql.Timestamp |
-| BLOB | java.sql.Blob |
-| CLOB | java.sql.Clob |
-| ARRAY | java.sql.Array |
-| ROWID | java.sql.RowId |
-| NCHAR(n), NVARCHAR(n), LONG NVARCHAR | String |
-| NCLOB | java.sql.NCLob |
-| SQLXML | java.sql.SQLXML |
+| INTEGER or INT | `int` |
+| SMALLINT | `short` |
+| NUMERIC(m,n), DECIMAL(m,n) or DEC(m,n) | `java.math.BigDecimal` |
+| FLOAT(n) | `double` |
+| REAL | `float` |
+| DOUBLE | `double` |
+| CHARACTER(n) or CHAR(n) | `String` |
+| VARCHAR(n), LONG VARCHAR | `String` |
+| BOOLEAN | `boolean` |
+| DATE | `java.sql.Date` |
+| TIME | `java.sql.Time` |
+| TIMESTAMP | `java.sql.Timestamp` |
+| BLOB | `java.sql.Blob` |
+| CLOB | `java.sql.Clob` |
+| ARRAY | `java.sql.Array` |
+| ROWID | `java.sql.RowId` |
+| NCHAR(n), NVARCHAR(n), LONG NVARCHAR | `String` |
+| NCLOB | `java.sql.NCLob` |
+| SQLXML | `java.sql.SQLXML` |
 
 SQL ARRAY 是一个值的序列。例如，在 Student 表中，你可以有一个 `Scores` 列，它是一个 `ARRAY OF INTEGER`。`getArray` 方法返回一个 `java.sql.Array` 接口的对象。该接口拥有用于获取数组值的方法。
 
-当你从数据库获取 LOB 或数组时，只有在你请求单个值时， 才会从数据库中获取实际内容。这是一项实用的性能增强，因为数据可能非常巨大。
+当你从数据库获取 LOB 或数组时，只有在你请求单个值时，才会从数据库中获取实际内容。这是一项实用的性能增强，因为数据可能非常巨大。
 
 某些数据库支持 ROWID 值，它描述行的位置，以便可以非常快速地检索它。JDBC 4 引入了 `java.sql.RowId` 接口，以及在查询中提供行 ID 并从结果中检索行 ID 方法。
 
-国家字符字符串（NCHAR 及其变体）使用本地字符编码存储字符串，并使用本地排序规则进行排序。JDBC 4 提供了方法，用于在查询和结果的 Java String 对象与国家字符字符串之间进行转换。
+国家字符字符串（NCHAR 及其变体）使用本地字符编码存储字符串，并使用本地排序规则进行排序。JDBC 4 提供了方法，用于在查询和结果的 Java `String` 对象与国家字符字符串之间进行转换。
 
 某些数据库可以存储用户定义的结构化类型。JDBC 3 提供了一种机制，用于自动将结构化 SQL 类型映射到 Java 对象。
 
-某些数据库为 XML 数据提供原生存储。JDBC 4 引入了 SQLXML 接口，它可以在内部表示与 DOM Source/Result 接口以及二进制流之间进行调解。详情请参 SQLXML 类的 API 文档。
+某些数据库为 XML 数据提供原生存储。JDBC 4 引入了 `SQLXML` 接口，它可以在内部表示与 DOM `Source`/`Result` 接口以及二进制流之间进行调解。详情请参 SQLXML 类的 API 文档。
 
 我们不再讨论这些高级 SQL 类型。你可以在 JDBC API 教程和参考以及 JDBC 规范中找到关于这些主题的更多信息。
 
@@ -12212,20 +13264,17 @@ private DataSource source;
 
 然而，这两种方法都不令人满意。数据库连接是有限的资源。如果用户离开应用程序一段时间，连接不应保持开启状态。相反，为每个查询获取连接并在事后关闭它的成本是非常高的。
 
-解决方案是使用连接池。这意味着数据库连接不会被物理关闭，而是保留在队列中并重用。连接池是一项重要的服务，JDBC 规范为实现者提供了挂钩以以提供该服务。
+解决方案是使用连接池。这意味着数据库连接不会被物理关闭，而是保留在队列中并重用。连接池是一项重要的服务，JDBC 规范为实现者提供了钩子以提供该服务。
 
-
-
-
- 133 铯原子的一个内禀属性。从那时起，一个原子钟网络一直维持着官方时间的准确性。
+`133` 铯原子的一个内禀属性。从那时起，一个原子钟网络一直维持着官方时间的准确性。
 
 官方时间计时者经常会将绝对时间与地球自转进行同步。起初，官方秒会进行细微调整，但从 1972 年开始，偶尔会插入“闰秒”（在理论上，偶尔可能需要删除一秒，但这种情况尚未发生过）。目前有关于再次更改该系统的讨论。显然，闰秒是一项麻烦，许多计算机系统转而使用“平滑”处理，即在闰秒发生之前人为地减慢或加速时间，以保持每天 86,400 秒。这种方法之所以有效，是因为计算机的本地时间并不精确，而且计算机习惯于与外部服务时间进行同步。
 
 Java 日期时间 API 规范要求 Java 使用符合条件的时间尺度：
 
--   每天有 86,400 秒
--   每天中午与官方时间精确匹配
--   在其他时间以一种精确定义的方式与官方时间紧密匹配
+- 每天有 86,400 秒
+- 每天中午与官方时间精确匹配
+- 在其他时间以一种精确定义的方式与官方时间紧密匹配
 
 这使得 Java 具有灵活性，可以适应未来官方时间的变化。
 
@@ -12239,7 +13288,7 @@ Java 日期时间 API 规范要求 Java 使用符合条件的时间尺度：
 
 要找出两个 `Instant` 之间的差异，使用静态方法 `Duration.between`。例如，以下是测量算法运行时间的方法：
 
-```
+```java
 Instant start = Instant.now();
 runAlgorithm();
 Instant end = Instant.now();
@@ -12255,24 +13304,24 @@ long millis = timeElapsed.millis();
 
 例如，如果你想检查一个算法是否比另一个快至少十倍，你可以计算：
 
-```
+```java
 Duration elapsedTime2 = Duration.between(start2, end2);
 boolean overTenTimesFaster = elapsedTime.multipliedBy(10).minus(timeElapsed);
 ```
 
 这只是为了展示语法。由于算法不会运行几百年，你可以简单地使用：
 
-```
+```java
 boolean overTenTimesFaster = timeElapsed.toNanos();
 ```
 
-> **注意：** **Instant** 和 **Duration** 类是不可变的，并且所有方法（如 `multipliedBy` 或 `minus`）都会返回一个新实例。
+> **注意：** `Instant` 和 `Duration` 类是不可变的，并且所有方法（如 `multipliedBy` 或 `minus`）都会返回一个新实例。
 
-列表 6.1 中的示例程序使用了 **Instant** 和 **Duration** 类对两个算法进行计时。
+列表 6.1 中的示例程序使用了 `Instant` 和 `Duration` 类对两个算法进行计时。
 
 > **注意：** 示例程序的方法在实践中太简单了，因为它没有处理诸如 JVM 中即时编译器（JIT）的“预热”等问题。如果你需要比较算法，应该使用专门的基准测试工具，如 Java 微基准框架（JMH）。位于 https://www.oracle.com/technical-resources/articles/java/architect-benchmarking.html 的文章提供了有用的建议。
 
-# Listing 1.1 timeline/Timeline.java
+## Listing 1.1 timeline/Timeline.java
 
 ```java
 package timeline;
@@ -12314,13 +13363,9 @@ public class Timeline {
 }
 ```
 
-# 1.2. 本地日期
+## 1.2. 本地日期
 
-现在让我们从绝对时间转向人类时间。Java API 中有两种类人类时间：本地日期/时间（local date/time）和时区时间（zoned time）。本地日期类时间有日期和/或时间，但没有关联的时区信息。本地日期的一个例子是 1903 年 6 月 14 日（Lambda 演算发明者阿隆佐·丘奇的生日）。由于它既没有时间也没有时区信息，因此它不对应一个精确的时间瞬间。相比之下，1969 年 7 月 16 日 09:32:00 EDT（（
-
-
-
-（阿波罗 11 号发射）是一个带时区的日期/时间，代表时间线上的一个精确瞬间。
+现在让我们从绝对时间转向人类时间。Java API 中有两种类人类时间：本地日期/时间（local date/time）和时区时间（zoned time）。本地日期类时间有日期和/或时间，但没有关联的时区信息。本地日期的一个例子是 1903 年 6 月 14 日（Lambda 演算发明者阿隆佐·丘奇的生日）。由于它既没有时间也没有时区信息，因此它不对应一个精确的时间瞬间。相比之下，1969 年 7 月 16 日 09:32:00 EDT（阿波罗 11 号发射）是一个带时区的日期/时间，代表时间线上的一个精确瞬间。
 
 在许多计算中不需要时区，在某些情况下时区甚至会成为障碍。假设你安排了每周 10:00 开一次会议。如果你在上次带时区的时间的基础上增加 7 天（即 $7 \times 24 \times 60 \times 60$ 秒），而你恰好跨越了夏令时边界，那么会议将提前一小时或推迟一小时！
 
@@ -12339,16 +13384,16 @@ alonzosBirthday = LocalDate.of(1903, Month.JUNE, 15);
 
 本节末尾的 API 注显示了处理 `LocalDate` 对象最有用的方法。
 
-例如，*程序员节*是年的第 256 天。以下是你可以轻松计算它的方法：
+例如，程序员节是年的第 256 天。以下是你可以轻松计算它的方法：
 
 ```java
 LocalDate programmersDay = LocalDate.of(2014, 1, 1);
 // 9 月 13 日，但在闰年中应该是
 ```
 
-请记住，两个时间之间的差值是 `Duration`。本地日期的等效物是 `Period`，它表示经过的年、月或天数。你可以调用 `birthday.plus(Period.ofYears(1))` 来明年的生日。当然，你也可以调用 `birthday.plusYears(1)`。但在闰年中，`birthday.plus(Period.ofDays(365))` 不产生正确的结果。
+请记住，两个时间之间的差值是 `Duration`。本地日期的等效物是 `Period`，它表示经过的年、月或天数。你可以调用 `birthday.plus(Period.ofYears(1))` 来计算明年的生日。当然，你也可以调用 `birthday.plusYears(1)`。但在闰年中，`birthday.plus(Period.ofDays(365))` 不产生正确的结果。
 
-`until` 方法产生两个本地日期之间的差值。例如，
+`until` 方法产生两个本地日期之间的差值。例如：
 
 ```java
 independenceDay.until(christmas)
@@ -12360,13 +13405,13 @@ independenceDay.until(christmas)
 independenceDay.until(christmas, ChronoUnit.DAYS)
 ```
 
-**注意：** LocalDate API 中的某些方法可能会产生不存在的日期。例如，在 1 月 31 日增加一个月不应产生 2 月 31 日。这些方法并没有抛出异常，而是返回月份的最后有效一天。例如，
+**注意：** `LocalDate` API 中的某些方法可能会产生不存在的日期。例如，在 1 月 31 日增加一个月不应产生 2 月 31 日。这些方法并没有抛出异常，而是返回月份的最后有效一天。例如：
 
 ```java
 LocalDate.of(2016, 1, 31).plusMonths(1)
 ```
 
-和
+和：
 
 ```java
 LocalDate.of(2016, 3, 31).minusMonths(1)
@@ -12374,7 +13419,7 @@ LocalDate.of(2016, 3, 31).minusMonths(1)
 
 返回 2016 年 2 月 29 日。
 
-`getDayOfWeek` 返回星期几，作为 `DayOfWeek` 枚举的值。`DayOfWeek.MONDAY` 的数值为 1，`DayOfWeek.SUNDAY` 的值为 7。例如，
+`getDayOfWeek` 返回星期几，作为 `DayOfWeek` 枚举的值。`DayOfWeek.MONDAY` 的数值为 1，`DayOfWeek.SUNDAY` 的值为 7。例如：
 
 ```java
 LocalDate.of(1900, 1, 1).getDayOfWeek().getValue()
@@ -12384,7 +13429,7 @@ LocalDate.of(1900, 1, 1).getDayOfWeek().getValue()
 
 > 注意：周末实际上在周的末尾。这与 `java.util.Calendar` 不同，后者周日的值为 1，周六值为 7。
 
-用的 `datesUntil` 产生 `LocalDate` 对象的流：
+`datesUntil` 产生 `LocalDate` 对象的流：
 
 ```java
 LocalDate start = LocalDate.of(2000, 1, 1);
@@ -12394,6 +13439,8 @@ Stream<LocalDate> firstDaysInMonth = start.datesUntil(end);
 ```
 
 除了 `LocalDate`，还有 `MonthDay`、`YearMonth` 和 `Year` 类来描述部分日期。例如，12 月 25 日（未指定年份）可以表示为 `MonthDay`。
+
+
 
 列表 6.2 中的示例程序显示了如何使用 `LocalDate` 类。
 
@@ -12435,23 +13482,27 @@ public class LocalDates
 }
 ```
 
+- `Period (plus|minus)( Days | Months | Years ) (long number)`
 
+  通过加或减指定的时间单位来返回一个 `Period`。
 
+- `Period plus(TemporalAmount amountToDo)`
 
-- Period (plus|minus)( Days | Months | Years ) (long number)
-  通过加或减指定的时间单位来返回一个 Period。
-- Period plus(TemporalAmount amountToDo)
-- Period minus(TemporalAmount amountToSubtract)
-  返回一个从此 Instant 减去给定时间的 instant。
+- `Period minus(TemporalAmount amountToSubtract)`
+
+  返回一个从此 `Instant` 减去给定时间的 `instant`。
+
 `Duration` 和 `Period` 类实现了 `TemporalAmount` 接口。
-- Period with(Days | Months | Years )(int number)
-  返回一个新的 Period，其中天、月或年更改为指定的数字。
 
-## 1.3. 日期调整器 (Date Adjusters)
+- `Period with(Days | Months | Years )(int number)`
 
-在调度应用程序中，你通常需要计算如“每个月的第一个星期二”之类的日期。`TemporalAdjusters` 类提供了许多用于常用调整的静态方法。你将调整方法的的结果传递给 `with` 方法。例如，可以像这样计算一个月的第一个星期二：
+  返回一个新的 `Period`，其中天、月或年更改为指定的数字。
 
-```
+## 1.3. 日期调整器（Date Adjusters）
+
+在调度应用程序中，你通常需要计算如“每个月的第一个星期二”之类的日期。`TemporalAdjusters` 类提供了许多用于常用调整的静态方法。你将调整方法的结果传递给 `with` 方法。例如，可以像这样计算一个月的第一个星期二：
+
+```java
 LocalDate firstTuesday = LocalDate.of(year, month)
 TemporalAdjusters.nextOrSame(DayOfWeek.TUESDAY)
 ```
@@ -12486,18 +13537,26 @@ TemporalAdjuster NEXT_WORKDAY = (TemporalAdjuster) w -> {
 
 ## java.time.LocalDate
 
-- LocalDate with(TemporalAdjuster adjuster)
+- `LocalDate with(TemporalAdjuster adjuster)`
+
   返回通过给定调整器调整此日期的结果。
 
 ## java.time.temporal.TemporalAdjusters
 
-- static TemporalAdjuster next(DayOfWeek dayOfWeek)
-- static TemporalAdjuster nextOrSame(DayOfWeek dayOfWeek)
-- static TemporalAdjuster previous(DayOfWeek dayOfWeek)
-- static TemporalAdjuster previousOrSame(DayOfWeek dayOfWeek)
+- `static TemporalAdjuster next(DayOfWeek dayOfWeek)`
+
+- `static TemporalAdjuster nextOrSame(DayOfWeek dayOfWeek)`
+
+- `static TemporalAdjuster previous(DayOfWeek dayOfWeek)`
+
+- `static TemporalAdjuster previousOrSame(DayOfWeek dayOfWeek)`
+
   返回一个将日期调整到给定星期几的调整器。
-- static TemporalAdjuster dayOfWeekInMonth(int n, DayOfWeek dayOfWeek)
-- static TemporalAdjuster lastInMonth(DayOfWeek dayOfWeek)
+
+- `static TemporalAdjuster dayOfWeekInMonth(int n, DayOfWeek dayOfWeek)`
+
+- `static TemporalAdjuster lastInMonth(DayOfWeek dayOfWeek)`
+
   返回一个将日期调整到每月第 n 个或最后一个给定星期几的调整器。
 
 ```java
@@ -12508,9 +13567,10 @@ static TemporalAdjuster firstDayNextYear()
 static TemporalAdjuster lastDayMonth()
 static TemporalAdjuster lastDayYear()
 ```
+
 返回一个将日期调整到指定日期的调整器。
 
-## 1.4. 本地时间 (Local Time)
+## 1.4. 本地时间（Local Time）
 
 `LocalTime` 代表一天中的某个时间，例如 15:30:00。你可以通过 `now` 或 `of` 方法创建实例：
 
@@ -12533,44 +13593,71 @@ LocalTime wakeup = bedtime.plusHours(8); // 唤醒
 java.time.LocalTime
 ```
 
-- static LocalTime now()
+- `static LocalTime now()`
+
   获取当前的 `LocalTime`。
-- static LocalTime of(int hour, int minute)
-- static LocalTime of(int hour, int minute, int second)
-- static LocalTime of(int hour, int minute, second, int nanoSecond)
+
+- `static LocalTime of(int hour, int minute)`
+
+- `static LocalTime of(int hour, int minute, int second)`
+
+- `static LocalTime of(int hour, int minute, second, int nanoSecond)`
+
   返回一个具有给定小时（0 到 23 之间）、分钟（0 到 59 之间）、秒和纳秒（0 到 999,999,999 之间）的本地时间。
-- LocalTime (plus|minus)(Hours|Minutes|Seconds|Nanos)(long number)
-  通过加或减指定的时间单位返回一个 Local。
 
-- LocalTime plus(TemporalAmount amountToAdd)
-- LocalTime minus(TemporalAmount amountToSubtract)
+- `LocalTime (plus|minus)(Hours|Minutes|Seconds|Nanos)(long number)`
+
+  通过加或减指定的时间单位返回一个 `Local`。
+
+- `LocalTime plus(TemporalAmount amountToAdd)`
+
+- `LocalTime minus(TemporalAmount amountToSubtract)`
+
   返回一个与此 `LocalTime` 相差给定数量的 `LocalTime`。
-- LocalTime with(Hour | Minute | Second | Nano)(int value)
-  返回一个新的 `LocalTime`，其小时、分、秒或纳秒更改为指定值。
-- int getHour()
-  获取小时（0 到 23 之间）。
-- int getMinute()
-  获取分钟（0 到 59 之间）。
-- int getSecond()
-  获取秒（0 到 59 之间）。
-- int getNano()
-  获取纳秒（0 到 999,999,999 之间）。
-- long toSeconds()
-  返回从午夜起的秒。
-- long toNano()
-  返回从午夜起的纳秒。
-- boolean isBefore(LocalTime other)
-  如果此时间在给定时间之前，返回 true。
-- boolean isAfter(LocalTime other)
-  如果此时间在给定时间之后，返回 true。
 
-## 1.5. 时 (Zoned Time)
+- `LocalTime with(Hour | Minute | Second | Nano)(int value)`
+
+  返回一个新的 `LocalTime`，其小时、分、秒或纳秒更改为指定值。
+
+- `int getHour()`
+
+  获取小时（0 到 23 之间）。
+
+- `int getMinute()`
+
+  获取分钟（0 到 59 之间）。
+
+- `int getSecond()`
+
+  获取秒（0 到 59 之间）。
+
+- `int getNano()`
+
+  获取纳秒（0 到 999,999,999 之间）。
+
+- `long toSeconds()`
+
+  返回从午夜起的秒。
+
+- `long toNano()`
+
+  返回从午夜起的纳秒。
+
+- `boolean isBefore(LocalTime other)`
+
+  如果此时间在给定时间之前，返回 `true`。
+
+- `boolean isAfter(LocalTime other)`
+
+  如果此时间在给定时间之后，返回 `true`。
+
+## 1.5. 时区时间（Zoned Time）
 
 `ZonedDateTime` 是带有时区偏移和区域规则的时间。它与 `LocalDateTime` 类似，但包含了 `ZoneId`。这对于表示特定地理位置的时间非常有用。
 
 `ZonedDateTime` 的许多方法与 `LocalDateTime` 相同（参见本节末尾的 API 说明）。大部分都很直接，但夏令时引入了一些复杂性。
 
-夏令时开始时，时快一小时。当你构造一个跳过的时间时会发生什么？例如，2013 年欧洲中部于 3 月 31 日 2:00 跳到夏令时。如果你尝试构造不存在的时间 3 月 31 日 2:30，你实际上会得到 3:30。
+夏令时开始时，时钟快一小时。当你构造一个跳过的时间时会发生什么？例如，2013 年欧洲中部于 3 月 31 日 2:00 跳到夏令时。如果你尝试构造不存在的时间 3 月 31 日 2:30，你实际上会得到 3:30。
 
 ```java
 ZonedDateTime skipped = ZonedDateTime.of(
@@ -12588,8 +13675,6 @@ LocalDate.of(2013, 10, 27), // 夏令时结束
 LocalTime.of(2, 30),
 ZoneId.of("Europe/Berlin"));
 ```
-
-
 
 ```java
 // 2013-10-27T02:30+02:00[Europe/Berlin]
@@ -12614,9 +13699,9 @@ ZonedDateTime nextMeeting = meeting.plus(Period.ofDays(7));
 
 **注意：** 还有一个 `OffsetDateTime` 类，它表示相对于 UTC 的偏移量，但不包含时区规则。该类用于特别要求不需要这些规则的特殊应用程序，例如某些网络协议。对于人类时间，请使用 `ZonedDateTime`。
 
-Listing 6.3 中的示例程序演示了 `ZonedDateTime` 类。
+列表 6.3 中的示例程序演示了 `ZonedDateTime` 类。
 
-# Listing 1.3 zonedTimes/ZonedTimes.java
+# 列表 1.3 zonedTimes/ZonedTimes.java
 
 ```java
 package zonedTimes;
@@ -12634,10 +13719,10 @@ public class ZonedTimes {
         System.out.println("apollo11launch: " + ...);
 
         Instant instant = apollo11launch.toInstant();
-        System.out.println("instant: " + ...);
+        System.out.println("instant: " + instant);
 
         ZonedDateTime zonedDateTime = instant.toZonedDateTime(...);
-        System.out.println("zonedDateTime: " + ...);
+        System.out.println("zonedDateTime: " + zonedDateTime);
     }
 }
 ```
@@ -12666,10 +13751,18 @@ System.out.println("nextMeeting: " + nextMeeting);
 
 `java.time.ZonedDateTime 8`
 
-- `static ZonedDateTime now()` 获取当前的 `ZonedDateTime`。
+- `static ZonedDateTime now()`
+
+  获取当前的 `ZonedDateTime`。
+
 - `static ZonedDateTime of(int year, int month, int dayOfMonth, int hour, int minute, int second, int nanoOfSecond, ZoneId zone)`
+
 - `static ZonedDateTime of(LocalDate date, LocalTime time, ZoneId zone)`
+
 - `static ZonedDateTime of(LocalDateTime dateTime, ZoneId zone)`
+
+
+
 - `static ZonedDateTime ofInstant(Instant instant, ZoneId zone)` 返回一个具有给定参数和时区的 `ZonedDateTime`。
 - `ZonedDateTime (plus | minus) (Days | Weeks | Months | Years | Hours | Minutes | Seconds | Nanos) (long number)` 返回一个通过加或减给定的时间单位得到的 `ZonedDateTime`。
 - `ZonedDateTime plus(TemporalAmount amountToAdd)`
@@ -12698,6 +13791,7 @@ System.out.println("nextMeeting: " + nextMeeting);
 ## 1.6. 格式化与解析
 
 `DateTimeFormatter` 类提供了三种格式化器来打印日期/时间：
+
 - 定义格式化器（见表 1.1）
 - 特定语言格式化器
 - 带有模式的格式化器
@@ -12709,21 +13803,21 @@ String formatted = DateTimeFormatter.ISO_OFFSET_DATE_TIME.format(apollo11launch)
 // 1969-07-16T09:32:00-0400
 ```
 
-### 表 1.1: 定义格式化器
+### 表 1.1：定义格式化器
 
 | 格式化器 | 说明 | 示例 |
 |---|---|---|
-| BASIC_ISO_DATE | 年份、月、日、区域偏移量，无分隔符 | 19690716093200-0400 |
-| ISO_LOCAL_DATE, ISO_LOCAL_TIME, ISO_DATE_TIME | 有分隔符 - 和 T | 1969-07-16T09:32:00 |
-| ISO_OFFSET_DATE, ISO_OFFSET_TIME, ISO_DATE_TIME | 类似于 ISO_LOCAL 但带有区域偏移量 | 1969-07-16T09:32:00-0400 |
-| ISO_ZONED_DATE_TIME | 带有区域偏移量和时区 ID | 1969-07-16T09:32:00-0400[America/New_York] |
-| ISO_INSTANT | 在 UTC 中，以 Z 表示 | 1969-07-16T13:32:00Z |
-| ISO_DATE, ISO_TIME, ISO_DATE_TIME | 类似于 ISO_OFFSET 但时区信息可选的 | 1969-07-16T09:32:00 |
-| ISO_ORDINAL_DATE | 年份和第几天，适用于 LocalDate | 1969197 |
-| ISO_WEEK_DATE | 年份、周和周几，适用于 LocalDate | 1969-W29-7 |
-| RFC_1123_DATE_TIME | 电子邮件时间戳标准，编码 RFC 822，年份为四位 | 16 Jul 1969 |
+| `BASIC_ISO_DATE` | 年份、月、日、区域偏移量，无分隔符 | `19690716093200-0400` |
+| `ISO_LOCAL_DATE`、`ISO_LOCAL_TIME`、`ISO_DATE_TIME` | 有分隔符 `-` 和 `T` | `1969-07-16T09:32:00` |
+| `ISO_OFFSET_DATE`、`ISO_OFFSET_TIME`、`ISO_DATE_TIME` | 类似于 `ISO_LOCAL`，但带有区域偏移量 | `1969-07-16T09:32:00-0400` |
+| `ISO_ZONED_DATE_TIME` | 带有区域偏移量和时区 ID | `1969-07-16T09:32:00-0400[America/New_York]` |
+| `ISO_INSTANT` | 在 UTC 中，以 `Z` 表示 | `1969-07-16T13:32:00Z` |
+| `ISO_DATE`、`ISO_TIME`、`ISO_DATE_TIME` | 类似于 `ISO_OFFSET`，但时区信息可选 | `1969-07-16T09:32:00` |
+| `ISO_ORDINAL_DATE` | 年份和第几天，适用于 `LocalDate` | `1969197` |
+| `ISO_WEEK_DATE` | 年份、周和周几，适用于 `LocalDate` | `1969-W29-7` |
+| `RFC_1123_DATE_TIME` | 电子邮件时间戳标准，编码 RFC 822，年份为四位 | `16 Jul 1969` |
 
-标准格式化器主要用于机器读取的时间戳。要向人类展示日期和时间，请使用特定语言格式化器。日期和时间都有四种样式：SHORT、MEDIUM、LONG 和 FULL——见表 1.2。
+标准格式化器主要用于机器读取的时间戳。要向人类展示日期和时间，请使用特定语言格式化器。日期和时间都有四种样式：`SHORT`、`MEDIUM`、`LONG` 和 `FULL`——见表 1.2。
 
 静态方法 `ofLocalDate`、`ofLocalTime` 和 `ofLocalDateTime` 创建此类格式化器。例如：
 
@@ -12750,18 +13844,18 @@ for (DayOfWeek w : DayOfWeek.values())
 
 关于语言的更多信息请见第 7 章。
 
-# 表 1.2: 特定语言的格式化样式
+### 表 1.2：特定语言的格式化样式
 
 | 样式 | 日期 | 时间 |
 |---|---|---|
-| SHORT | 7/16/69 | 9:32 AM |
-| MEDIUM | Jul 16, 1969 | 9:32:00 AM |
-| LONG | July 16, 1969 | 9:32:00 EDT |
-| FULL | Wednesday, July 16, 1969 | 9:32:00 EDT |
+| `SHORT` | `7/16/69` | `9:32 AM` |
+| `MEDIUM` | `Jul 16, 1969` | `9:32:00 AM` |
+| `LONG` | `July 16, 1969` | `9:32:00 EDT` |
+| `FULL` | `Wednesday, July 16, 1969` | `9:32:00 EDT` |
 
 注意：`java.time.format.DateTimeFormatter` 类旨在取代 `java.util.DateFormat`。如果你为了向后兼容需要后者的实例，请调用 `formatter.toFormat()`。
 
-最后，你可以通过指定模式来自定义自己的日期格式。例如，
+最后，你可以通过指定模式来自定义自己的日期格式。例如：
 
 ```java
 formatter = DateTimeFormatter.ofPattern("E yyyy-M-d HH:mm");
@@ -12769,39 +13863,27 @@ formatter = DateTimeFormatter.ofPattern("E yyyy-M-d HH:mm");
 
 将日期格式化为 `Wed 1969-07-16 09:32`。每个字母代表一个不同的时间字段，字母重复的次数根据特定的规则选择特定的格式，这些规则深奥且似乎随着时间有机生长的。表 6.3 显示了最常用的模式元素。
 
-# 表 1.3: 用于日期/时间格式常用的格式化符号
-
-| ChronoField 或示例 |
-|---|---|
-| ERA Purpose G: AD, GGGGG: Anno Domini, GGGGG: A |
-| YEAR_OF_ERA yy: 69, yyyy: 1969 |
-
-
-
-
+### 表 1.3：用于日期/时间格式常用的格式化符号
 
 | ChronoField 或用途 | 示例 |
-| --- | --- |
-| MONTH_OF_YEAR | M: 7, MM: 07, MMM: Jul, MMMM: July, MMMM: J |
-| DAY_OF_MONTH | d: 6, dd: 06 |
-| DAY_OF_WEEK | e: 3, E: Wed, EEE: Wednesday, EEEE: W |
-| HOUR_OF_DAY | H: 9, HH: 09 |
-| CLOCK_HOUR_OF_AM_PM | h: 9, hh: 09 |
-| AMPM_OF_DAY | a: AM |
-| 天段（自 Java 16 起） | B: 晚上，深夜，午夜 |
-| MINUTE_OF_HOUR | mm: 02 |
-| SECOND_OF_MINUTE | ss: 00 |
-
-## ChronoField 或用途
-
-| ChronoField | 示例 |
 |---|---|
-| NANO_OF_SECOND | nnnnnn: 000000 |
-| 时区 ID | VV: America/New_York |
-| 时区名称 | z: EDT, zzzz: Eastern Daylight Time, v: ET, vvvv: Eastern Time |
-| 区域偏移量 | x: -04, xx: -0400, xxx: -04:00, XXX: 相同，但零时使用 Z |
+| `ERA` | `G: AD`、`GGGGG: Anno Domini`、`GGGGG: A` |
+| `YEAR_OF_ERA` | `yy: 69`、`yyyy: 1969` |
+| `MONTH_OF_YEAR` | `M: 7`、`MM: 07`、`MMM: Jul`、`MMMM: July`、`MMMMM: J` |
+| `DAY_OF_MONTH` | `d: 6`、`dd: 06` |
+| `DAY_OF_WEEK` | `e: 3`、`E: Wed`、`EEE: Wednesday`、`EEEE: W` |
+| `HOUR_OF_DAY` | `H: 9`、`HH: 09` |
+| `CLOCK_HOUR_OF_AM_PM` | `h: 9`、`hh: 09` |
+| `AMPM_OF_DAY` | `a: AM` |
+| 天段（自 Java 16 起） | `B: 晚上，深夜，午夜` |
+| `MINUTE_OF_HOUR` | `mm: 02` |
+| `SECOND_OF_MINUTE` | `ss: 00` |
+| `NANO_OF_SECOND` | `nnnnnn: 000000` |
+| 时区 ID | `VV: America/New_York` |
+| 时区名称 | `z: EDT`、`zzzz: Eastern Daylight Time`、`v: ET`、`vvvv: Eastern Time` |
+| 区域偏移量 | `x: -04`、`xx: -0400`、`xxx: -04:00`、`XXX: 相同，但零时使用 Z` |
 
-**注意：** 注意字母的大小写：**M** 代表月份，**m** 代表分钟。你可能想要月份中的日期 **d**，而不是年的数 **D**，以及是秒 **s** 而不是秒 **S**。最危险的是，**y** 表示普通年份，而 **Y** 是“周年”，如果 1 月 1 日落在周五、周六或周日，这两者会有细微区别。
+**注意：** 注意字母的大小写：`M` 代表月份，`m` 代表分钟。你可能想要月份中的日期 `d`，而不是年的数 `D`，以及是秒 `s` 而不是秒 `S`。最危险的是，`y` 表示普通年份，而 `Y` 是“周年”，如果 1 月 1 日落在周五、周六或周日，这两者会有细微区别。
 
 `LocalizedPattern` 方法产生一个格式化器，它以特定区域的方式组装模式部分，并带有相应的分隔符和部分顺序。例如：
 
@@ -12829,11 +13911,11 @@ ZonedDateTime apollo11launch =
     DateTimeFormatter.ofPattern("yyyy-MM-dd HH"));
 ```
 
-第一个调用使用标准的 ISO_LOCAL_DATE 格式化器，第二个使用自定义格式化器。
+第一个调用使用标准的 `ISO_LOCAL_DATE` 格式化器，第二个使用自定义格式化器。
 
 列表 6.4 中的程序显示了如何格式化和解析日期与时间。
 
-## 列表 1.4 formatting/Formatting.java
+### 列表 1.4：`formatting/Formatting.java`
 
 ```java
 1 package formatting;
@@ -12880,131 +13962,137 @@ ZonedDateTime apollo11launch =
 39 }
 ```
 
-
-
-
 本章以一个完整的示例结束——一个具有英语、德语和中文界面的退休金计算器。
 
-## 1.1. 区域设置 (Locales)
+## 1.1. 区域设置（Locales）
 
 当你观察一个适配国际市场的应用程序时，你发现的最明显的区别是语言。这种观察对于真正的国际化来说其实有些局限，因为不同国家可能共享同一种语言，但你可能仍然需要一些工作来让这两个国家的计算机用户都感到满意。正如奥斯卡·王尔德（Oscar Wilde）所说：“如今我们与美国之间别无共同之处，除了语言之外。”
 
-## 1.1.1. 为什么需要区域设置？
+### 1.1.1. 为什么需要区域设置？
 
 当你提供程序的国际版本时，所有的程序消息都需要翻译成本地语言。然而，仅仅翻译用户界面文本是不够的。还有许多更微妙的差异——例如，英语和德语中数字的格式完全不同。数字
 
-```
+```text
 123,456.78
 ```
 
 对于德国用户来说，应该显示为
 
-```
+```text
 123.456,78
 ```
 
 也就是说，小数点和小数分隔符的作用颠倒了。在日期的显示上也有类似的差异。在美国，日期的显示方式（某种程度上是）是月/日/年。德国使用的是更合理的日/月/年顺序，而在中国，使用习惯是年/月/日。因此，日期
 
+```text
 3/22/61
+```
 
 对德国用户应该呈现为
 
+```text
 22.03.1961
+```
 
 当然，如果完整写出月份，语言之间的差异就会显而易见。英语的
 
+```text
 March 22, 1961
+```
 
 在德语中应该呈现为
 
+```text
 22. März 1961
+```
 
 或者在中文中呈现为
 
+```text
 1961 3 22
+```
 
 区域设置（Locale）捕捉了这些本地偏好。每当你展示数字、日期、货币值和其他格式随语言或位置变化的项目时，都需要使用感知区域设置的 API（locale-aware APIs）。
 
-## 1.1.2. 指定区域设置
+### 1.1.2. 指定区域设置
 
 区域设置由最多五个部分组成：
 
-- 1. 语言，由两个或三个小写字母指定，例如 en（英语）、de（德语）或 zh（中文）。表 7.1 显示了常用代码。
-- 2. 可选的脚本（script），由首字母大写的四个字母指定，例如 Latn（拉丁字母）、Cyrl（西里尔字母）或 Hant（繁体中文）。这非常有用，因为某些语言如塞尔维亚语使用拉丁或西里尔字母书写，而一些中文读者更倾向于繁体字而非简体。
-- 3. 可选的国家或地区，由两个大写字母或三个数字指定，例如 US（美国）或 CH（瑞士）。表 7.2 显示了常用代码。
-- 4. 可选的变体（variant），指定如方言或拼写规则等杂项特征。变体现在很少使用。挪威语曾有一个“尼诺尔什语（Nynorsk）”变体，但现在它用不同的语言代码 nn 表示。曾经用于日本皇历和泰国数字的变体现在被表示为扩展（见下一项）。
-- 5. 可选的扩展（extension）。扩展描述了对日历（如日本历）、数字（使用泰语数字而非阿拉伯数字）等的本地偏好。Unicode 标准规定了其中一些扩展。扩展以 u- 开头，并跟一个两个字母的代码，指定该扩展是否处理日历（ca）、数字（nu）等。例如，扩展 u-nu-thai 表示使用泰语数字。其他扩展完全任意的，并以 x- 开头，例如 x-java。
+1. 语言，由两个或三个小写字母指定，例如 `en`（英语）、`de`（德语）或 `zh`（中文）。表 7.1 显示了常用代码。
+2. 可选的脚本（script），由首字母大写的四个字母指定，例如 `Latn`（拉丁字母）、`Cyrl`（西里尔字母）或 `Hant`（繁体中文）。这非常有用，因为某些语言如塞尔维亚语使用拉丁或西里尔字母书写，而一些中文读者更倾向于繁体字而非简体。
+3. 可选的国家或地区，由两个大写字母或三个数字指定，例如 `US`（美国）或 `CH`（瑞士）。表 7.2 显示了常用代码。
+4. 可选的变体（variant），指定如方言或拼写规则等杂项特征。变体现在很少使用。挪威语曾有一个“尼诺尔什语（Nynorsk）”变体，但现在它用不同的语言代码 `nn` 表示。曾经用于日本皇历和泰国数字的变体现在被表示为扩展（见下一项）。
 
-区域设置的规则制定于互联网工程任务组（IETF）的“最佳当前实践”备录 BCP 47（https://www.rfc-editor.org/info/bcp47）。你可以在 https://www.w3.org/International/articles/language-tags 找到一个更易读的摘要。
 
-**表 1.1:** 常用 ISO 639-1 语言代码
 
-| 语言 | 代码 | 语言 | 代码 |
-| :--- | :--- | :--- | :--- |
-| 中文 | zh | 意大利语 | it |
-| 丹语 | da | 日语 | ja |
-| 荷兰语 | nl | 韩语 | ko |
-| 英语 | en | 挪威语 | no |
+- 5. 可选的扩展（extension）
+
+  扩展描述了对日历（如日本历）、数字（使用泰语数字而非阿拉伯数字）等的本地偏好。Unicode 标准规定了其中一些扩展。扩展以`u-`开头，并跟一个两个字母的代码，指定该扩展是否处理日历（`ca`）、数字（`nu`）等。例如，扩展`u-nu-thai`表示使用泰语数字。其他扩展完全任意的，并以`x-`开头，例如`x-java`。
+
+区域设置的规则制定于互联网工程任务组（IETF）的“最佳当前实践”备录 BCP 47（<https://www.rfc-editor.org/info/bcp47>）。你可以在 <https://www.w3.org/International/articles/language-tags> 找到一个更易读的摘要。
+
+**表 1.1：**常用 ISO 639-1 语言代码
 
 | 语言 | 代码 | 语言 | 代码 |
 | :--- | :--- | :--- | :--- |
-| 法语 | fr | 葡萄牙语 | pt |
-| 芬兰语 | fi | 西班牙语 | es |
-| 德语 | de | 瑞典语 | sv |
-| 希语 | el | 土耳其语 | tr |
+| 中文 | `zh` | 意大利语 | `it` |
+| 丹语 | `da` | 日语 | `ja` |
+| 荷兰语 | `nl` | 韩语 | `ko` |
+| 英语 | `en` | 挪威语 | `no` |
+| 法语 | `fr` | 葡萄牙语 | `pt` |
+| 芬兰语 | `fi` | 西班牙语 | `es` |
+| 德语 | `de` | 瑞典语 | `sv` |
+| 希语 | `el` | 土耳其语 | `tr` |
 
-**表 1.2:** 常用 ISO 3166-1 国家代码
-
-| 国家 | 代码 | 国家 | 代码 |
-| :--- | :--- | :--- | :--- |
-| 奥地利 | AT | 日本 | JP |
-| 比时 | BE | 韩国 | KR |
-| 加拿大 | CA | 荷兰 | NL |
-| 中国 | CN | 挪威 | NO |
-| 丹麦 | DK | 葡萄牙 | PT |
+**表 1.2：**常用 ISO 3166-1 国家代码
 
 | 国家 | 代码 | 国家 | 代码 |
 | :--- | :--- | :--- | :--- |
-| 芬兰 | FI | 西班牙 | ES |
-| 德国 | DE | 瑞典 | SE |
-| 英国 | GB | 瑞士 | CH |
-| 希腊 | GR | 台湾 | TW |
-| 爱尔兰 | IE | 土耳其 | TR |
-| 意大利 | IT | 美国 | US |
+| 奥地利 | `AT` | 日本 | `JP` |
+| 比时 | `BE` | 韩国 | `KR` |
+| 加拿大 | `CA` | 荷兰 | `NL` |
+| 中国 | `CN` | 挪威 | `NO` |
+| 丹麦 | `DK` | 葡萄牙 | `PT` |
+| 芬兰 | `FI` | 西班牙 | `ES` |
+| 德国 | `DE` | 瑞典 | `SE` |
+| 英国 | `GB` | 瑞士 | `CH` |
+| 希腊 | `GR` | 台湾 | `TW` |
+| 爱尔兰 | `IE` | 土耳其 | `TR` |
+| 意大利 | `IT` | 美国 | `US` |
 
-语言和国家代码看起来有些随机，因为它们中的一些源自本地语言。德语在德语中是 Deutsch，中文在中文里是 zhong：因此代码是 de 和 zh。瑞士是 CH，源自拉丁语的（Confederatio Helvetica）。
+语言和国家代码看起来有些随机，因为它们中的一些源自本地语言。德语在德语中是 Deutsch，中文在中文里是 zhong：因此代码是`de`和`zh`。瑞士是`CH`，源自拉丁语的（Confederatio Helvetica）。
 
-不包含晦涩的两个字母代码，而是以可以呈现给用户的形式呈现，例如
+不包含晦涩的两个字母代码，而是以可以呈现给用户的形式呈现，例如：
 
 ## 德语（瑞士）
 
-实际上，这里有一个问题。显示名称是用默认区域设置发出的。这可能并不合适。如果你的用户已经选择了德语作为首选语言，你可能希望以德语显示该字符串。你可以通过将德语区域设置作为参数传递来实现这一点。代码
+实际上，这里有一个问题。显示名称是用默认区域设置发出的。这可能并不合适。如果你的用户已经选择了德语作为首选语言，你可能希望以德语显示该字符串。你可以通过将德语区域设置作为参数传递来实现这一点。代码：
 
 ```java
 Locale locale = Locale.of("de", "CH");
 System.out.println(locale.getDisplayName(Locale.
 ```
 
-打印出
+打印出：
 
 # Deutsch (Schweiz)
 
-这个示例展示了为什么你需要 Locale 对象。你将它们传递给感知区域设置的方法，这些方法会生成呈现给不同位置用户的文本。你将在后面的章节中看到许多此类示例。
+这个示例展示了为什么你需要`Locale`对象。你将它们传递给感知区域设置的方法，这些方法会生成呈现给不同位置用户的文本。你将在后面的章节中看到许多此类示例。
 
-**注意：** 即使是像将字符串转换为小写或大写这种平庸的操作也可能是特定区域设置的。例如，在土耳其区域设置中，字母 I 的小写是不带点的 ı。那些试图通过将字符串存储为小写来尝试规范化字符串的程序在土耳其客户那里神秘地失败了，因为带点的 i 和带点的 I 没有相同的小写版本。始终使用带有 Locale 参数的 toUpperCase 和 toLowerCase 变体是一个好习惯。例如，尝试：
+> **注意：** 即使是像将字符串转换为小写或大写这种平庸的操作也可能是特定区域设置的。例如，在土耳其区域设置中，字母 I 的小写是不带点的`ı`。那些试图通过将字符串存储为小写来尝试规范化字符串的程序在土耳其客户那里神秘地失败了，因为带点的 i 和带点的 I 没有相同的小写版本。始终使用带有`Locale`参数的`toUpperCase`和`toLowerCase`变体是一个好习惯。例如，尝试：
 
 ```java
 String command = "QUIT".toLowerCase(Locale.of("tr")); // 带有无点 i 的 "quit"
 ```
 
-当然，在土耳其，Locale.getDefault() 返回的就是该区域设置，因此 "QUIT".toLowerCase() 不同于 "quit"。
+当然，在土耳其，`Locale.getDefault()`返回的就是该区域设置，因此`"QUIT".toLowerCase()`不同于`"quit"`。
 
-如果你想将英语字符串规范化为小写，你应该向 toLowerCase 方法传递一个英语区域设置。对于语言中性处理，请使用 Locale.ROOT。
+如果你想将英语字符串规范化为小写，你应该向`toLowerCase`方法传递一个英语区域设置。对于语言中性处理，请使用`Locale.ROOT`。
 
-> 注意：你可以显式地为输入和输出操作设置区域设置。
+> **注意：** 你可以显式地为输入和输出操作设置区域设置。
 
-- 从 Scanner 中读取数字时，可以使用 useLocale 方法设置其区域设置。
-- `String.format` 和 `PrintWriter.printf` 方法具有带有 `Locale` 参数的重载形式。
+- 从`Scanner`中读取数字时，可以使用`useLocale`方法设置其区域设置。
+- `String.format`和`PrintWriter.printf`方法具有带有`Locale`参数的重载形式。
 
 ```java
 java.util.Locale 1.1
@@ -13012,41 +14100,69 @@ java.util.Locale 1.1
 
 - `static Locale.of(String language)` 19
 - `static Locale.of(String language, String country)` 19
+
   根据给定的语言和国家创建一个 locale。
+
 - `static Locale forLanguageTag(String languageTag)` 35
+
   创建一个与给定的语言标签对应的 locale。
+
 - `static Locale getDefault()`
+
   返回默认区域设置。
+
 - `static void setDefault(Locale newLocale)`
+
   设置默认区域设置。
+
 - `String getDisplayName()`
+
   返回一个描述 locale 的名称，用当前区域设置表示。
+
 - `String getDisplayName(Locale inLocale)`
+
   返回一个描述 locale 的名称，用给定的区域设置表示。
+
 - `String getLanguage()`
+
   返回语言代码——一个小写的两个字母 ISO 639 代码。
 
 - `String getDisplayLanguage()`
+
   返回语言的名称，用当前区域设置表示。
+
 - `String getDisplayLanguage(Locale inLocale)`
+
   返回语言的名称，用给定的区域设置表示。
+
 - `String getCountry()`
+
   返回国家代码，一个大写的两个字母 ISO 3166 代码。
+
 - `static String[] getISOCountries()`
 - `static Set<String> getISOCountries(Locale.IsoCountryCode type)`
-  返回所有两个字母的国家代码，或任何 2、3 或 4 个字母的国家代码。该类型是枚举常量 PART1_ALPHA2、PART1_ALPHA3 和 PART3 之一。
+
+  返回所有两个字母的国家代码，或任何 2、3 或 4 个字母的国家代码。该类型是枚举常量`PART1_ALPHA2`、`PART1_ALPHA3`和`PART3`之一。
+
 - `String getDisplayCountry(Locale inLocale)`
+
   返回国家的名称，用当前区域设置表示。
+
 - `String getDisplayCountry(Locale inLocale)`
+
   返回国家的名称，用给定的区域设置表示。
+
 - `String toLanguageTag()`
-  返回此 locale 的 IETF BCP 47 语言标签——例如，“de-CH"。
+
+  返回此 locale 的 IETF BCP 47 语言标签——例如，`"de-CH"`。
+
 - `String toString()`
-  返回 locale 的描述，语言和国家之间用下划线分隔（例如，“de_CH"）。仅在调试时使用此方法。
+
+  返回 locale 的描述，语言和国家之间用下划线分隔（例如，`"de_CH"`）。仅在调试时使用此方法。
 
 ## 1.2. 数字格式
 
-我已经提到过数字和货币格式化是高度依赖于区域设置的。Java 库在 `java.text` 包中提供了一组格式化对象，可以对数值进行格式化和解析。
+我已经提到过数字和货币格式化是高度依赖于区域设置的。Java 库在`java.text`包中提供了一组格式化对象，可以对数值进行格式化和解析。
 
 ### 1.2.1. 格式化
 
@@ -13056,7 +14172,7 @@ java.util.Locale 1.1
 2. 使用“工厂方法”获取格式化对象。
 3. 使用该格式化对象进行格式化和解析。
 
-工厂方法是 `NumberFormat` 类中带有 `Locale` 参数的静态方法。共有三个工厂方法：`getInstance`、`getCurrencyInstance` 和 `getPercentInstance`。这些方法返回的对象可以分别格式化和解析数字、货币金额和百分比。例如，这里是如何用德语格式化货币值：
+工厂方法是`NumberFormat`类中带有`Locale`参数的静态方法。共有三个工厂方法：`getInstance`、`getCurrencyInstance`和`getPercentInstance`。这些方法返回的对象可以分别格式化和解析数字、货币金额和百分比。例如，这里是如何用德语格式化货币值：
 
 ```java
 Locale locale = Locale.GERMAN;
@@ -13065,19 +14181,19 @@ double amount = 123456.78;
 String result = formatter.format(amount);
 ```
 
-结果是
+结果是：
 
-123.456,78 €
+`123.456,78 €`
 
-注意货币符号是 €，且它位于字符串末尾。此外，注意小数点和小数逗的对换。
+注意货币符号是`€`，且它位于字符串末尾。此外，注意小数点和小数逗的对换。
 
-Java 12 增加了一种“紧凑”格式，包含两种样式：短格式 (123K) 和长格式 (123 thousand)。以下是获取短格式的方法：
+Java 12 增加了一种“紧凑”格式，包含两种样式：短格式（`123K`）和长格式（`123 thousand`）。以下是获取短格式的方法：
 
 ```java
 formatter = NumberFormat.getCompactInstance()
 ```
 
-相反，要在特定区域设置读取数字，请使用 `parse` 方法。例如，以下代码解析了用户输入的内容：
+相反，要在特定区域设置读取数字，请使用`parse`方法。例如，以下代码解析了用户输入的内容：
 
 ```java
 TextField inputField;
@@ -13086,29 +14202,25 @@ Number input = formatter.parse(inputField.getText());
 double x = input.doubleValue();
 ```
 
-parse 的返回类型是抽象类 Number。根据解析的是浮点数，返回的对象是 Double 或 Long。
+`parse`的返回类型是抽象类`Number`。根据解析的是浮点数，返回的对象是`Double`或`Long`。
 
-> 注意：Number 对象不会自动拆箱——不要将 Number 对象赋值给原始类型。相反，请使用 doubleValue 或 intValue 方法。
+> **注意：** `Number`对象不会自动拆箱——不要将`Number`对象赋值给原始类型。相反，请使用`doubleValue`或`intValue`方法。
 
-如果文本不符合正确格式，该方法将抛出 ParseException。例如，字符串中的前空格是不允许的（调用 strip 来移除）。然而，数字后的任何字符都将被简单忽略，因此不会抛出异常。
+如果文本不符合正确格式，该方法将抛出`ParseException`。例如，字符串中的前空格是不允许的（调用`strip`来移除）。然而，数字后的任何字符都将被简单忽略，因此不会抛出异常。
 
-注意，XXXInstance 工厂方法返回的实例实际上并不是 NumberFormat。NumberFormat 是一个抽象类，实际的格式器属于它的一个子类。工厂方法仅知道如何定位属于特定区域设置的对象。
+注意，`XXXInstance`工厂方法返回的实例实际上并不是`NumberFormat`。`NumberFormat`是一个抽象类，实际的格式器属于它的一个子类。工厂方法仅知道如何定位属于特定区域设置的对象。
 
-你可以使用 getLocales 方法获取当前支持的区域设置列表。该方法返回一个可以获取数字格式化对象的区域设置数组。
+你可以使用`getLocales`方法获取当前支持的区域设置列表。该方法返回一个可以获取数字格式化对象的区域设置数组。
 
-> 注意：你可以使用 Scanner 读取本地化的整数和浮点数。使用 useLocale 方法设置区域设置。
+> **注意：** 你可以使用`Scanner`读取本地化的整数和浮点数。使用`useLocale`方法设置区域设置。
 
-书籍配套代码包含一个 GUI 程序，可以让你实验数字格式器（见图 7.1）。图中顶部的组合框包含所有带有数字格式器的区域设置。你可以在数字、货币和百分比格式器之间切换。每当你做出另一个选择，文本框中的数字就会重新格式化。你还可以输入不同的数字并点击 Parse 按钮来调用 parse 方法，它尝试解析你的输入。如果解析成功，将传递给 format 并显示结果。如果解析失败，文本框中将显示“Parse error”消息。
+书籍配套代码包含一个 GUI 程序，可以让你实验数字格式器（见图 7.1）。图中顶部的组合框包含所有带有数字格式器的区域设置。你可以在数字、货币和百分比格式器之间切换。每当你做出另一个选择，文本框中的数字就会重新格式化。你还可以输入不同的数字并点击 Parse 按钮来调用`parse`方法，它尝试解析你的输入。如果解析成功，将传递给`format`并显示结果。如果解析失败，文本框中将显示“Parse error”消息。
 
 图 1.1：NumberFormat 程序
 
 Listing 7.1 显示了数字格式探索器的文本版本，稍微更容易理解。
 
-
-
-
-
-# Listing 1.1 numberFormat/NumberFormatTest.java
+# Listing 1.1 `numberFormat/NumberFormatTest.java`
 
 ```java
 package numberFormat;
@@ -13154,37 +14266,62 @@ public class NumberFormatTest {
 }
 ```
 
-java.text.NumberFormat 1.1
+## `java.text.NumberFormat` 1.1
 
-- static Locale[] getAvailableLocales() 返回一个 Locale 对象数组，这些 Locale 有对应的 NumberFormat 格式化器。
-- static NumberFormat getNumberInstance() 返回一个用于当前或给定 locale 的数字、货币金额或百分比值的格式化器。
-- static NumberFormat getNumberInstance(Locale inLocale)
-- static NumberFormat getCurrencyInstance()
-- static NumberFormat getCurrencyInstance(Locale inLocale)
-- static NumberFormat getPercentInstance()
-- static NumberFormat getPercentInstance(Locale inLocale)
-- static NumberFormat getCompactNumberInstance()
-- static NumberFormat getCompactNumberInstance(Locale locale, NumberFormat.Style formatStyle) 返回当前 locale 下 SHORT 样式的紧凑数字格式化器，或者返回给定 locale 和样式（SHORT 或 LONG）的紧凑格式化器。
+- `static Locale[] getAvailableLocales()`
 
-- String format(double number) 
-- String format(long number) 返回格式化给定浮点数或整数后的字符串。
-- Number parse(String source) 解析给定字符串并返回数字值；如果输入字符串描述的是浮点数，则返回 `Double`，否则返回 `Long`。字符串开头必须包含数字；不允许有前导空格。数字后面可以跟随其他字符，这些字符会被忽略。如果解析失败，则抛出 `ParseException`。
-- void setParseIntegerOnly(boolean value)
-- boolean isParseIntegerOnly() 设置或获取一个标志，指示此格式化器是否应仅解析整数值。
-- void setGroupingUsed(boolean newValue)
-- boolean isGroupingUsed() 设置或获取一个标志，指示此格式化器是否输出并识别小数分隔符（例如 `100,000`）。
-- void setMinimumIntegerDigits(int newValue)
-- int getMinimumIntegerDigits()
-- void setMaximumIntegerDigits(int newValue)
-- int getMaximumIntegerDigits()
-- void setMinimumFractionDigits(int newValue)
-- int getMinimumFractionDigits()
-- void setMaximumFractionDigits(int newValue)
-- int getMaximumFractionDigits() 设置或获取数字的整数部分或小数部分允许的最大或最小位数。
+  返回一个`Locale`对象数组，这些`Locale`有对应的`NumberFormat`格式化器。
 
-## 1.2.2. DecimalFormat 类
+- `static NumberFormat getNumberInstance()`
 
-在大多数 locale 中，你在上一节中看到的 NumberFormat 工厂方法返回的是一个 `DecimalFormat` 类的实例。该类描述了世界范围内各种格式化变体。你可以修改单个设置，也可以创建一个全新的格式化器。模式语法使得这变得更加方便。
+  返回一个用于当前或给定 locale 的数字、货币金额或百分比值的格式化器。
+
+- `static NumberFormat getNumberInstance(Locale inLocale)`
+- `static NumberFormat getCurrencyInstance()`
+- `static NumberFormat getCurrencyInstance(Locale inLocale)`
+- `static NumberFormat getPercentInstance()`
+- `static NumberFormat getPercentInstance(Locale inLocale)`
+- `static NumberFormat getCompactNumberInstance()`
+- `static NumberFormat getCompactNumberInstance(Locale locale, NumberFormat.Style formatStyle)`
+
+  返回当前 locale 下 SHORT 样式的紧凑数字格式化器，或者返回给定 locale 和样式（SHORT 或 LONG）的紧凑格式化器。
+
+- `String format(double number)`
+- `String format(long number)`
+
+  返回格式化给定浮点数或整数后的字符串。
+
+- `Number parse(String source)`
+
+  解析给定字符串并返回数字值；如果输入字符串描述的是浮点数，则返回`Double`，否则返回`Long`。字符串开头必须包含数字；不允许有前导空格。数字后面可以跟随其他字符，这些字符会被忽略。如果解析失败，则抛出`ParseException`。
+
+- `void setParseIntegerOnly(boolean value)`
+- `boolean isParseIntegerOnly()`
+
+  设置或获取一个标志，指示此格式化器是否应仅解析整数值。
+
+- `void setGroupingUsed(boolean newValue)`
+- `boolean isGroupingUsed()`
+
+  设置或获取一个标志，指示此格式化器是否输出并识别小数分隔符（例如`100,000`）。
+
+- `void setMinimumIntegerDigits(int newValue)`
+- `int getMinimumIntegerDigits()`
+- `void setMaximumIntegerDigits(int newValue)`
+- `int getMaximumIntegerDigits()`
+- `void setMinimumFractionDigits(int newValue)`
+- `int getMinimumFractionDigits()`
+
+
+
+- `void setMaximumFractionDigits(int newValue)`
+- `int getMaximumFractionDigits()`
+
+设置或获取数字的整数部分或小数部分允许的最大或最小位数。
+
+## 1.2.2. `DecimalFormat` 类
+
+在大多数 locale 中，你在上一节中看到的 `NumberFormat` 工厂方法返回的是一个 `DecimalFormat` 类的实例。该类描述了世界范围内各种格式化变体。你可以修改单个设置，也可以创建一个全新的格式化器。模式语法使得这变得更加方便。
 
 模式描述了所需的数字和可选数字的数量，以及正负数的前缀和后缀。还有一些更晦涩的设置——请见表 7.3。
 
@@ -13200,138 +14337,81 @@ var formatter = new DecimalFormat("0.00;(#)");
 
 如果你需要在前缀或后缀中插入特殊字符，请在它前面加一个单引号。例如，`#` 是字面量哈希符号，而 `'o''clock'` 包含一个引号。
 
-# 表 1.3：DecimalFormat 属性
+# 表 1.3：`DecimalFormat` 属性
 
 | 属性名称 | 描述 | 模式 |
 | --- | --- | --- |
-| groupingSize | 组的整数位数 | 最后一个逗号前的数字个数，例如 3 |
-
+| `groupingSize` | 组的整数位数 | 最后一个逗号前的数字个数，例如 3 |
 | 属性名称 | 描述 | 模式 |
-| --- | --- | --- |
-| | (分组的整数位数) | 最后一个逗号前的数字个数，例如 3 |
-| | (最小和最大位数) | 最小和最大位数 |
-| | (整数部分) | 整数部分的 |
-| | (小数部分) | 小数部分的 |
-| | (最小位数) | 最小位数 |
-| | (最大位数) | 最大位数 |
-| | (最小小数位数) | 最小小数位数 |
-| | (最大小数位数) | 最大小数位数 |
+|  | （分组的整数位数） | 最后一个逗号前的数字个数，例如 3 |
+|  | （最小和最大位数） | 最小和最大位数 |
+|  | （整数部分） | 整数部分的 |
+|  | （小数部分） | 小数部分的 |
+|  | （最小位数） | 最小位数 |
+|  | （最大位数） | 最大位数 |
+|  | （最小小数位数） | 最小小数位数 |
+|  | （最大小数位数） | 最大小数位数 |
 
-*(注：由于原文表格内容存在大量重复和错位，翻译时已根据逻辑进行了最小化对齐处理，以保持其核心含义)*
-
-（此处为遵循要求，以下为正文翻译内容）
-
-在大多数 locale 中，你在上一节中看到的 NumberFormat 工厂方法返回的是一个 `DecimalFormat` 类的实例。该类描述了世界范围内各种格式化变体。你可以修改单个设置，也可以创建一个全新的格式化器。模式语法使得这变得更加方便。
-
-模式描述了所需的数字和可选数字的数量，以及正负数的前缀和后缀。这里还有一些更晦涩的设置——请见表 7.3。
-
-考虑这个示例：
-
-```java
-var formatter = new DecimalFormat("0.00;(#)");
-```
-
-分号将正数部分和可选的负数部分隔开。对于正数部分，我们看到整数部分至少有一位，小数部分至少有两个位。这适用于所有数字，无论正负。负数使用会计格式——前缀为 `(` 和后缀为 `)`。
-
-前缀或后缀可能包含一个货币符号（U+00A4），用来表示货币符号应该所在。
-
-如果你需要在前缀或后缀中插入特殊字符，请在它前面加一个单引号。例如，`#` 是字面量哈希符号，而 `'o''clock'` 包含一个引号。
-
-# 表 1.3: DecimalFormat 属性
-
-| 属性名称 | 描述 | 模式 |
-| --- | --- | --- |
-| groupingSize | 组的整数位数 | 最后一个逗号前的数字个数，例如 3 |
-
-*(注：原文示例表格内容存在严重的格式性重复和错位，译文保留其结构并翻译)*
-
-## 1.2.2. DecimalFormat 类
-
-在大多数 locale 中，你在上一节中看到的 NumberFormat 工厂方法返回的是一个 `DecimalFormat` 类的实例。该类描述了世界范围内各种格式化变体。你可以修改单个设置，也可以创建一个全新的格式化器。模式语法使得这变得更加方便。
-
-模式描述了所需的数字和可选数字的数量，以及正负数的前缀和后缀。这里还有一些更晦涩的设置——请见表 7.3。
-
-考虑这个示例：
-
-```java
-var formatter = new DecimalFormat("0.00;(#)");
-```
-
-分号将正数部分和可选的负数部分隔开。对于正数部分，我们看到整数部分至少有一位，小数部分至少有两个位。这适用于所有数字，无论正负。负数使用会计格式——前缀为 `(` 和后缀为 `)`。
-
-前缀或后缀可能包含一个货币符号（U+00A4），用来表示货币符号应该所在。
-
-如果你需要在前缀或后缀中插入特殊字符，请在它前面加一个单引号。例如，`#` 是字面量哈希符号，而 `'o''clock'` 包含一个引号。
-
-# 表 1.3: DecimalFormat 属性
-
-| 属性名称 | 描述 | 模式 |
-| --- | --- | --- |
-| groupingSize | 组的整数位数 | 最后一个逗号前的数字个数，例如 3 |
-
-| 属性名称 | 描述 | 模式 |
-| --- | --- | --- |
-| | (分组的整数位数) | 最后一个逗号前的数字个数，例如 3 |
-| | (最小和最大位数) | 最小和最大位数 |
-| | (整数部分) | 整数部分的 |
-| | (小数部分) | 小数部分的 |
-| | (最小位数) | 最小位数 |
-| | (最大位数) | 最大位数 |
-| | (最小小数位数) | 最小小数位数 |
-| | (最大小数位数) | 最大小数位数 |
+> 注：由于原文表格内容存在大量重复和错位，翻译时已根据逻辑进行了最小化对齐处理，以保持其核心含义。
 
 ## 1.2.3. 货币
 
-要格式化货币值，你可以使用 `NumberFormat.getCurrencyInstance` 方法。然而，该方法并不灵活——它返回一个单一货币的格式化器。假设你正在为美国客户准备发票，其中金额是美元，另一些是欧元。你不能简单地使用两个格式化器：
+要格式化货币值，你可以使用 `NumberFormat.getCurrencyInstance()` 方法。然而，该方法并不灵活——它返回一个单一货币的格式化器。假设你正在为美国客户准备发票，其中金额是美元，另一些是欧元。你不能简单地使用两个格式化器：
 
 ```java
 NumberFormat dollarFormatter = NumberFormat.getCurrencyInstance();
 NumberFormat euroFormatter = NumberFormat.getCurrencyInstance("fr_FR");
 ```
 
-你的发票看起来会很奇怪，某些值显示为 $100,000，而另一些显示为 100.000 €。（注意，欧元值使用小数点，而不是逗号。）
+你的发票看起来会很奇怪，某些值显示为 `$100,000`，而另一些显示为 `100.000 €`。（注意，欧元值使用小数点，而不是逗号。）
 
-相反，使用 `Currency` 类来控制格式化器使用的货币。你可以通过将货币标识符传递给静态方法 `Currency.getInstance` 来获取 `Currency` 对象。然后为每个格式化器调用 `setCurrency` 方法。以下是你如何为美国客户设置欧元格式化器的：
+相反，使用 `Currency` 类来控制格式化器使用的货币。你可以通过将货币标识符传递给静态方法 `Currency.getInstance()` 来获取 `Currency` 对象。然后为每个格式化器调用 `setCurrency()` 方法。以下是你如何为美国客户设置欧元格式化器的：
 
 ```java
 NumberFormat euroFormatter = NumberFormat.getCurrencyInstance("fr_FR");
 euroFormatter.setCurrency(Currency.getInstance("EUR"));
 ```
 
+货币标识符由 ISO 4217 定义（参见 <https://www.iso.org/iso-4217-currency-codes.html>）。表 7.5 提供了部分列表。
 
-
-
-货币标识符由 ISO 4217 定义（参见 https://www.iso.org/iso-4217-currency-codes.html）。表 7.5 提供了部分列表。
-
-## **表 1.5:** 货币标识符
+# 表 1.5：货币标识符
 
 | 货币值 | 标识符 | 数字代码 |
-|---|---|--|
-| 美元 | USD | 840 |
-| 欧元 | EUR | 978 |
-| 英镑 | GBP | 826 |
-| 日元 | JPY | 392 |
-| 人民币（元） | CNY | 156 |
-| 卢比 | INR | 356 |
-| 俄罗斯卢布 | RUB | 643 |
+| --- | --- | --- |
+| 美元 | `USD` | `840` |
+| 欧元 | `EUR` | `978` |
+| 英镑 | `GBP` | `826` |
+| 日元 | `JPY` | `392` |
+| 人民币（元） | `CNY` | `156` |
+| 卢比 | `INR` | `356` |
+| 俄罗斯卢布 | `RUB` | `643` |
 
 ```java
 java.util.Currency 1.4
 ```
 
-- * static Currency getInstance(String currencyCode)
-- static Currency getInstance(Locale locale)
-返回对应给定的 ISO 4217 货币代码或给定 locale 国家的 Currency 实例。
-- String toString()
-- String getNumericCode() 7
-- String getNumericAsString() 9
+- `static Currency getInstance(String currencyCode)`
+- `static Currency getInstance(Locale locale)`
+
+返回对应给定的 ISO 4217 货币代码或给定 locale 国家的 `Currency` 实例。
+
+- `String toString()`
+- `String getNumericCode()`
+- `String getNumericAsString()`
+
 获取此货币的 ISO 4217 字母或数字货币代码。
-- String getSymbol()
-- String getSymbol(Locale locale)
-获取该货币在默认 locale 或给定 locale 下的格式化符号。例如，USD 的符号可以是 "$" 或 "US$"，取决于 locale。
-- int getDefaultFractionDigits()
+
+- `String getSymbol()`
+- `String getSymbol(Locale locale)`
+
+获取该货币在默认 locale 或给定 locale 下的格式化符号。例如，`USD` 的符号可以是 `$` 或 `US$`，取决于 locale。
+
+- `int getDefaultFractionDigits()`
+
 获取该货币的默认小数位数。
-- static Set<Currency> getAvailableCurrencies() 7
+
+- `static Set<Currency> getAvailableCurrencies()`
+
 获取所有可用的货币。
 
 ## 1.3. 日期和时间
@@ -13353,165 +14433,156 @@ DateTimeFormatter dateTime = DateTimeFo
 // or DateTimeFormatter.ofLocalizedDateTime(da
 ```
 
-这些格式化器使用当前的 locale。要使用不同的 locale，请使用 `withLocale` 方法：
+这些格式化器使用当前的 locale。要使用不同的 locale，请使用 `withLocale()` 方法：
 
 ```java
 DateTimeFormatter dateFormatter =
 DateTimeFormatter.ofLocalizedDate(style).with
 ```
 
-现在你可以格式化 LocalDate、LocalDateTime、LocalTime 或 ZonedDateTime：
+现在你可以格式化 `LocalDate`、`LocalDateTime`、`LocalTime` 或 `ZonedDateTime`：
 
 ```java
 ZonedDateTime appointment = . . . .;
 String formatted = formatter.format(appointment),
 ```
 
-表 1.6: 日期和时间格式化样式
-
-| 样式 | 日期 | 时间 |
-|---|---|---|
-| SHORT | 7/16/69 | 9:32 AM |
-| MEDIUM | Jul 16, 1969 | 9:32:00 AM |
-| LONG | July 16, 1969 | 9:32:00 AM EDT in US, 9:32:00 MSZ in DE (仅限 ZonedDateTime ) |
-| FULL | Wednesday, July 16, | 9:32:00 AM EDT in US, 9:32 Uhr MSZ in de- |
+# 表 1.6：日期和时间格式化样式
 
 | 样式 | 日期 | 时间 |
 | --- | --- | --- |
-| | 1969 | DE (仅限 ZonedDateTime) |
+| `SHORT` | 7/16/69 | 9:32 AM |
+| `MEDIUM` | Jul 16, 1969 | 9:32:00 AM |
+| `LONG` | July 16, 1969 | 9:32:00 AM EDT in US, 9:32:00 MSZ in DE（仅限 `ZonedDateTime`） |
+| `FULL` | Wednesday, July 16, 1969 | 9:32:00 AM EDT in US, 9:32 Uhr MSZ in de-DE（仅限 `ZonedDateTime`） |
 
-**注意：** 这里我们使用了 java.time 包中的 `DateTimeFormatter` 类。还有一个 java.text.DateFormat 类可以与 Date 和 Calendar 对象配合工作。
+> **注意：** 这里我们使用了 `java.time` 包中的 `DateTimeFormatter` 类。还有一个 `java.text.DateFormat` 类可以与 `Date` 和 `Calendar` 对象配合工作。
 
-你可以使用 LocalDate、LocalDateTime、LocalTime 或 ZonedDateTime 的其中一个静态 parse 方法来解析字符串中的日期或时间：
+你可以使用 `LocalDate`、`LocalDateTime`、`LocalTime` 或 `ZonedDateTime` 的其中一个静态 `parse()` 方法来解析字符串中的日期或时间：
 
 ```java
 LocalTime time = LocalTime.parse("9:32 AM", DateTimeFormatter.ofPattern);
 ```
 
-这些方法不适用于解析人类输入，至少在没有预处理的情况下不是。例如，美国的短时间格式化器可以解析 "9:32 AM"，但不会解析 "9:32AM" 或 "9:32 am"。
+这些方法不适用于解析人类输入，至少在没有预处理的情况下不是。例如，美国的短时间格式化器可以解析 `"9:32 AM"`，但不会解析 `"9:32AM"` 或 `"9:32 am"`。
 
-**警告：** 日期格式化器解析不存在的日期（例如 11 月 31 日），将其强制调整为该月份的最后一天。
+> **警告：** 日期格式化器解析不存在的日期（例如 11 月 31 日），将其强制调整为该月份的最后一天。
 
-有时，你只需要显示 weekday和月份的名称，例如在日历应用中。调用 DayOfWeek 和 Month 枚举的 `getDisplayName` 方法。
+有时，你只需要显示 weekday 和月份的名称，例如在日历应用中。调用 `DayOfWeek` 和 `Month` 枚举的 `getDisplayName()` 方法。
 
 ```java
 for (Month m : Month.values())
     System.out.println(m.getDisplayName(textStyle));
 ```
 
-表 7.7 显示了文本样式。STANDALONE 版本用于格式化日期之外的显示。例如，在芬兰语中，日期内部的一月份是“tammikuuta”，而独立显示时是“tammikuu”。
+表 7.7 显示了文本样式。`STANDALONE` 版本用于格式化日期之外的显示。例如，在芬兰语中，日期内部的一月份是“tammikuuta”，而独立显示时是“tammikuu”。
 
-**表 1.7:** java.time.format.TextStyle 枚举的值
+# 表 1.7：`java.time.format.TextStyle` 枚举的值
 
 | 样式 | 示例 |
 | --- | --- |
-| FULL / FULL_STANDALONE | January |
-| SHORT / SHORT_STANDALONE | Jan |
-| NARROW / NARROW_STANDALONE | J |
+| `FULL` / `FULL_STANDALONE` | January |
+| `SHORT` / `SHORT_STANDALONE` | Jan |
+| `NARROW` / `NARROW_STANDALONE` | J |
 
-**注意：** 这里我们使用了 java.time 包中的 `DateTimeFormatter` 类。还有一个 java.text.DateFormat 类可以与 Date 和 Calendar 对象配合工作。
+> **注意：** 这里我们使用了 `java.time` 包中的 `DateTimeFormatter` 类。还有一个 `java.text.DateFormat` 类可以与 `Date` 和 `Calendar` 对象配合工作。
 
-![](img/cb920f692d263682e00dcb1ad7f884cc_814_814)
+![图片](img/cb920f692d263682e00dcb1ad7f884cc_814_814)
 
-**注意：** 这里我们使用了 java.time 包中的 `DateTimeFormatter` 类。还有一个 java.text.DateFormat 类可以与 Date 和 Calendar 对象配合工作。
+> **注意：** 这里我们使用了 `java.time` 包中的 `DateTimeFormatter` 类。还有一个 `java.text.DateFormat` 类可以与 `Date` 和 `Calendar` 对象配合工作。
 
-![](img/cb920f692d263682e00dcb1ad7f884cc_814)
+![图片](img/cb920f692d263682e00dcb1ad7f884cc_814)
 
-**注意：** 这里我们使用了 java.time 包中的 `DateTimeFormatter` 类。还有一个 java.text.DateFormat 类可以与 Date 和 Calendar 对象配合工作。
+> **注意：** 这里我们使用了 `java.time` 包中的 `DateTimeFormatter` 类。还有一个 `java.text.DateFormat` 类可以与 `Date` 和 `Calendar` 对象配合工作。
 
-![](img/cb920f69d263682e00dcb1ad7f884cc_814)
+![图片](img/cb920f69d263682e00dcb1ad7f884cc_814)
 
-**注意：** 这里我们使用了 java.time 包中的 `DateTimeFormatter` 类。还有一个 java.text.DateFormat 类可以与 Date 和 Calendar 对象配合工作。
+> **注意：** 这里我们使用了 `java.time` 包中的 `DateTimeFormatter` 类。还有一个 `java.text.DateFormat` 类可以与 `Date` 和 `Calendar` 对象配合工作。
 
-![](img/cb920f69d263682e00dcb1ad7f884cc_814)
+![图片](img/cb920f69d263682e00dcb1ad7f884cc_814)
 
-**注意：** 这里我们使用了 java.time 包中的 `DateTimeFormatter` 类。还有一个 java.text.DateFormat 类可以与 Date 和 Calendar 对象配合工作。
+> **注意：** 这里我们使用了 `java.time` 包中的 `DateTimeFormatter` 类。还有一个 `java.text.DateFormat` 类可以与 `Date` 和 `Calendar` 对象配合工作。
 
-![](img/cb920f69d263682e00dcb1ad7f884cc_814)
+![图片](img/cb920f69d263682e00dcb1ad7f884cc_814)
 
-**注意：** 这里我们使用了 java.time 包中的 `DateTimeFormatter` 类。还有一个 java.text.DateFormat 类可以与 Date 和 Calendar 对象配合工作。
+> **注意：** 这里我们使用了 `java.time` 包中的 `DateTimeFormatter` 类。还有一个 `java.text.DateFormat` 类可以与 `Date` 和 `Calendar` 对象配合工作。
 
-![](img/cb920f69d263682e00dcb1ad7f884cc_814)
+![图片](img/cb920f69d263682e00dcb1ad7f884cc_814)
 
-**注意：** 这里我们使用了 java.time 包中的 `DateTimeFormatter` 类。还有一个 java.text.DateFormat 类可以与 Date 和 Calendar 对象配合工作。
+> **注意：** 这里我们使用了 `java.time` 包中的 `DateTimeFormatter` 类。还有一个 `java.text.DateFormat` 类可以与 `Date` 和 `Calendar` 对象配合工作。
 
-![](img/cb920f69d263682e00dcb1ad7f884cc_814)
+![图片](img/cb920f69d263682e00dcb1ad7f884cc_814)
 
-**注意：** 这里我们使用了 java.time 包中的 `DateTimeFormatter` 类。还有一个 java.text.DateFormat 类可以与 Date 和 Calendar 对象配合工作。
+> **注意：** 这里我们使用了 `java.time` 包中的 `DateTimeFormatter` 类。还有一个 `java.text.DateFormat` 类可以与 `Date` 和 `Calendar` 对象配合工作。
 
-![](img/cb920f69d263682e00dcb1ad7f884cc_814)
+![图片](img/cb920f69d263682e00dcb1ad7f884cc_814)
 
-**注意：** 这里我们使用了 java.time 包中的 `DateTimeFormatter` 类。还有一个 java.text.DateFormat 类可以与 Date 和 Calendar 对象配合工作。
+> **注意：** 这里我们使用了 `java.time` 包中的 `DateTimeFormatter` 类。还有一个 `java.text.DateFormat` 类可以与 `Date` 和 `Calendar` 对象配合工作。
 
-![](img/cb920f69d263682e00dcb1ad7f884cc_814)
+![图片](img/cb920f69d263682e00dcb1ad7f884cc_814)
 
-**注意：** 这里我们使用了 java.time 包中的 `DateTimeFormatter` 类。还有一个 java.text.DateFormat 类可以与 Date 和 Calendar 对象配合工作。
+> **注意：** 这里我们使用了 `java.time` 包中的 `DateTimeFormatter` 类。还有一个 `java.text.DateFormat` 类可以与 `Date` 和 `Calendar` 对象配合工作。
 
-![](img/cb920f69d263682e00dcb1ad7f884cc_814)
+![图片](img/cb920f69d263682e00dcb1ad7f884cc_814)
 
-**注意：** 这里我们使用了 java.time 包中的 `DateTimeFormatter` 类。还有一个 java.text.DateFormat 类可以与 Date 和 Calendar 对象配合工作。
+> **注意：** 这里我们使用了 `java.time` 包中的 `DateTimeFormatter` 类。还有一个 `java.text.DateFormat` 类可以与 `Date` 和 `Calendar` 对象配合工作。
 
-![](img/cb920f69d263682e00dcb1ad7f884cc_814)
+![图片](img/cb920f69d263682e00dcb1ad7f884cc_814)
 
-**注意：** 这里我们使用了 java.time 包中的 `DateTimeFormatter` 类。还有一个 java.text.DateFormat 类可以与 Date 和 Calendar 对象配合工作。
+> **注意：** 这里我们使用了 `java.time` 包中的 `DateTimeFormatter` 类。还有一个 `java.text.DateFormat` 类可以与 `Date` 和 `Calendar` 对象配合工作。
 
-![](img/cb920f69d263682e00dcb1ad7f884cc_814)
+![图片](img/cb920f69d263682e00dcb1ad7f884cc_814)
 
-**注意：** 这里我们使用了 java.time 包中的 `DateTimeFormatter` 类。还有一个 java.text.DateFormat 类可以与 Date 和 Calendar 对象配合工作。
+> **注意：** 这里我们使用了 `java.time` 包中的 `DateTimeFormatter` 类。还有一个 `java.text.DateFormat` 类可以与 `Date` 和 `Calendar` 对象配合工作。
 
-![](img/cb920f69d263682e00dcb1ad7f884cc_814)
+![图片](img/cb920f69d263682e00dcb1ad7f884cc_814)
 
-（等等，让我正确地处理文本。）
+> （等等，让我正确地处理文本。）
+
+
 
 ```java
 ZonedDateTime appointment = . . . .;
 String formatted = formatter.format(appointment),
 ```
 
-表 1.6: 日期和时间格式化样式
+## 表 1.6：日期和时间格式化样式
 
 | 样式 | 日期 | 时间 |
 |---|---|---|
 | SHORT | 7/16/69 | 9:32 AM |
 | MEDIUM | Jul 16, 1969 | 9:32:00 AM |
-| LONG | July 16, 1969 | 9:32:00 AM EDT in US, 9:32:00 MSZ in DE (仅限 ZonedDateTime ) |
-| FULL | Wednesday, July 16, | 9:32:00 AM EDT in US, 9:32 Uhr MSZ in de- |
+| LONG | July 16, 1969 | 9:32:00 AM EDT in US, 9:32:00 MSZ in DE（仅限 `ZonedDateTime`） |
+| FULL | Wednesday, July 16, 1969 | 9:32:00 AM EDT in US, 9:32 Uhr MSZ in de-DE（仅限 `ZonedDateTime`） |
 
-| 样式 | 日期 | 时间 |
-| --- | --- | --- |
-| | 1969 | DE (仅限 ZonedDateTime) |
+**注意：** 这里我们使用了 `java.time` 包中的 `DateTimeFormatter` 类。还有一个 `java.text.DateFormat` 类可以与 `Date` 和 `Calendar` 对象配合工作。
 
-**注意：** 这里我们使用了 java.time 包中的 `DateTimeFormatter` 类。还有一个 java.text.DateFormat 类可以与 Date 和 Calendar 对象配合工作。
-
-你可以使用 LocalDate、LocalDateTime、LocalTime 或 ZonedDateTime 的其中一个静态 parse 方法来解析字符串中的日期或时间：
+你可以使用 `LocalDate`、`LocalDateTime`、`LocalTime` 或 `ZonedDateTime` 的其中一个静态 `parse` 方法来解析字符串中的日期或时间：
 
 ```java
 LocalTime time = LocalTime.parse("9:32 AM", DateTimeFormatter.ofPattern);
 ```
 
-这些方法不适用于解析人类输入，至少在没有预处理的情况下不是。例如，美国的短时间格式化器可以解析 "9:32 AM"，但不会解析 "9:32AM" 或 "9:32 am"。
+这些方法不适用于解析人类输入，至少在没有预处理的情况下不是。例如，美国的短时间格式化器可以解析 `"9:32 AM"`，但不会解析 `"9:32AM"` 或 `"9:32 am"`。
 
 **警告：** 日期格式化器解析不存在的日期（例如 11 月 31 日），将其强制调整为该月份的最后一天。
 
-有时，你只需要显示 weekday和月份的名称，例如在日历应用中。调用 DayOfWeek 和 Month 枚举的 `getDisplayName` 方法。
+有时，你只需要显示 weekday 和月份的名称，例如在日历应用中。调用 `DayOfWeek` 和 `Month` 枚举的 `getDisplayName` 方法。
 
 ```java
 for (Month m : Month.values())
     System.out.println(m.getDisplayName(textStyle));
 ```
 
-表 7.7 显示了文本样式。STANDALONE 版本用于格式化日期之外的显示。例如，在芬兰语中，日期内部的一月份是“tammikuuta”，而独立显示时是“tammikuu”。
+表 7.7 显示了文本样式。`STANDALONE` 版本用于格式化日期之外的显示。例如，在芬兰语中，日期内部的一月份是“tammikuuta”，而独立显示时是“tammikuu”。
 
-**表 1.7:** java.time.format.TextStyle 枚举的值
+## 表 1.7：`java.time.format.TextStyle` 枚举的值
 
 | 样式 | 示例 |
-| --- | --- |
+|---|---|
 | FULL / FULL_STANDALONE | January |
 | SHORT / SHORT_STANDALONE | Jan |
 | NARROW / NARROW_STANDALONE | J |
-
-
-
 
 要获取一个区域敏感的比较器，请调用静态方法 `Collator.getInstance`：
 
@@ -13532,8 +14603,8 @@ words.sort(coll); // Collator 实现了 Comparator
 
 ## 表 1.8：不同强度的排序（英语区域）
 
-| 初级 (Primary) | 次级 (Secondary) | 三级 (Tertiary) |
-| --- | --- | --- |
+| 初级（Primary） | 次级（Secondary） | 三级（Tertiary） |
+|---|---|---|
 | Angstrom = Ångström | Angstrom ≠ Ångström | Angstrom ≠ Ångström |
 | Able = able | Able = able | Able ≠ able |
 
@@ -13541,7 +14612,7 @@ words.sort(coll); // Collator 实现了 Comparator
 
 偶尔，一个字符或字符序列在 Unicode 中可以用多种方式进行描述。例如，“Ä”可以是 Unicode 字符 U+00C5，也可以表示为一个普通的“A”（U+0065）后跟一个“̈”（“组合上圆环”；U+030A）。也许令人惊讶的是，字母序列“ffi”可以使用单个字符“拉丁小写连字 ffi”（代码为 U+FB03）来描述。（有人认为这是一个显示问题，不应该导致不同的 Unicode 字符，但规则不是我们制定的。）
 
-Unicode 标准为字符串定义了四种规范化形式（D、KD、C 和 KC）。详细信息请参阅 https://www.unicode.org/unicode/reports/tr15-23.html。在规范化形式 C 中，带重音的字符总是组合的。例如，一个“A”和一个组合上圆环“°”的序列被组合成单个字符“Å”。在形式 D 中，带重音的字符总是分解为它们的基准字母和组合重音：“Ä”被转换为“A”后跟“¨”。KC 和 KD 形式也会分解连字或商标符号等字符。
+Unicode 标准为字符串定义了四种规范化形式（D、KD、C 和 KC）。详细信息请参阅 <https://www.unicode.org/unicode/reports/tr15-23.html>。在规范化形式 C 中，带重音的字符总是组合的。例如，一个“A”和一个组合上圆环“°”的序列被组合成单个字符“Å”。在形式 D 中，带重音的字符总是分解为它们的基准字母和组合重音：“Ä”被转换为“A”后跟“¨”。KC 和 KD 形式也会分解连字或商标符号等字符。
 
 你可以选择让比较器使用的规范化程度。值 `Collator.NO_DECOMPOSITION` 完全不对字符串进行规范化。此选项速度更快，但可能不适用于以多种形式表示字符的文本。默认 `Collator.CANONICAL_DECOMPOSITION` 使用规范化形式 D。这对于包含重音符号但不包含连字的文本很有用。
 
@@ -13549,11 +14620,10 @@ Unicode 标准为字符串定义了四种规范化形式（D、KD、C 和 KC）�
 
 ## 表 1.9：分解模式之间的差异
 
-| 编号 | 规范分解 (Canonical) | 全分解 (Full) |
+| 编号 | 规范分解（Canonical） | 全分解（Full） |
 |---|---|---|
 | 分解 | 分解 | 分解 |
 | 不分解 | 规范分解 | 全分解 |
-| --- | --- | --- |
 | A ≠ A° | A = A° | A = A° |
 | TM ≠ TM | TM ≠ TM | TM = TM |
 
@@ -13578,14 +14648,15 @@ String normalized = Normalizer.normalize(name, N
 
 然而，这通常不是存储和传输的最佳形式。规范化形式 C 先应用分解，然后按照标准顺序将重音组合回去。根据 W3C 标准，这是在互联网上传输数据的推荐模式。
 
-列表 7.3 中的程序允许你实验排序顺序。书籍配套代码还有一个 GUI。在字段中输入一个单词并点击 Add 将其添加到到列表中。每当你更改区域、强度或分解模式时，列表都会重新排序。
+列表 7.3 中的程序允许你实验排序顺序。书籍配套代码还有一个 GUI。在字段中输入一个单词并点击 Add 将其添加到列表中。每当你更改区域、强度或分解模式时，列表都会重新排序。
 
-img/cb920f692d263682e00dcb1ad7f884cc_821_0.png
+![](img/cb920f692d263682e00dcb1ad7f884cc_821_0.png)
+
 图 1.3：排序程序
 
 区域名称按顺序显示，尽管运行此程序时，挪威语（Norway）的 Unicode 值更大。
 
-##  7.3: collationTest.java
+## 7.3：`collationTest.java`
 
 ```java
 package collation;
@@ -13633,67 +14704,74 @@ public class CollationTest {
 }
 ```
 
-java.text.Collation
+## `java.text.Collation`
 
-+* static Locale[] getAvailableLocales()
-返回可用 Collator 对象的 Locale 数组。
+- `static Locale[] getAvailableLocales()`
 
-+* static Collator getInstance()
+  返回可用 `Collator` 对象的 `Locale` 数组。
 
-+* static Collator getInstance(Locale l)
-返回默认区域或给定区域的比较器。
+- `static Collator getInstance()`
+- `static Collator getInstance(Locale l)`
 
-+* int compare(String a, String b)
-如果 a 在 b 之前返回负值，如果它们被认为是相同的则返回 0，否则返回正值。
+  返回默认区域或给定区域的比较器。
 
-+* boolean equals(String a, String b)
-如果 a 和 b 被认为是相同的返回 true，否则返回 false。
+- `int compare(String a, String b)`
 
-+* void setStrength(int strength)
+  如果 `a` 在 `b` 之前返回负值，如果它们被认为是相同的则返回 `0`，否则返回正值。
 
-+* int getStrength()
-设置或获取比较器的强度。越强的比较器区分的单词越多。强度值为 Collator.PRIMARY、Collator.SECONDARY 和 Collator.TERTIARY。
+- `boolean equals(String a, String b)`
 
-+* void setDecomposition(int decomp)
+  如果 `a` 和 `b` 被认为是相同的返回 `true`，否则返回 `false`。
 
-+* int getDecomposition()
-设置或获取比较器的分解模式。比较器分解字符串得越多，在判断字符串是否应该是相同的时就越严格。分解值为
+- `void setStrength(int strength)`
+- `int getStrength()`
 
+  设置或获取比较器的强度。越强的比较器区分的单词越多。强度值为 `Collator.PRIMARY`、`Collator.SECONDARY` 和 `Collator.TERTIARY`。
 
+- `void setDecomposition(int decomp)`
+- `int getDecomposition()`
+
+  设置或获取比较器的分解模式。比较器分解字符串得越多，在判断字符串是否应该是相同的时就越严格。分解值为：
 
 ```java
 Collator.NO_DECOMPOSITION,
-Collator.CANONICAL_DECOMPOSITION, and
+Collator.CANONICAL_DECOMPOSITION,
 Collator.FULL_DECOMPOSITION(String a)
 ```
 
-- CollationKey getCollationKey 返回一个包含字符分解的排序键，该形式可以与另一个排序键进行快速比较。
+- `CollationKey getCollationKey`
+
+  返回一个包含字符分解的排序键，该形式可以与另一个排序键进行快速比较。
 
 ```java
 java.text.CollationKey 1.1
 ```
 
-- int compareTo(CollationKey b) 如果此键在 b 之前，则返回负值；如果它们被视为相同，则返回零；否则返回正值。
+- `int compareTo(CollationKey b)`
+
+  如果此键在 `b` 之前，则返回负值；如果它们被视为相同，则返回零；否则返回正值。
 
 ```java
 java.text.Normalizer 6
 ```
 
-- static String normalize(CharSequence str, Normalizer.Form form) 返回 str 的规范化形式。form 值可以是 NFD、NFKD、NFC 或 NFKC 之一。
+- `static String normalize(CharSequence str, Normalizer.Form form)`
 
-## 1.5. 消息格式化
+  返回 `str` 的规范化形式。`form` 值可以是 `NFD`、`NFKD`、`NFC` 或 `NFKC` 之一。
 
-Java 库有一个 MessageFormat 类，用于格式化带有变量部分的文本。它与使用 printf 方法进行格式化相似，但支持本地语言以及数字和日期的格式。我们将在后续章节中检查该机制。
+## 1.5 消息格式化
 
-### 1.5.1. 格式化数字和日期
+Java 库有一个 `MessageFormat` 类，用于格式化带有变量部分的文本。它与使用 `printf` 方法进行格式化相似，但支持本地语言以及数字和日期的格式。我们将在后续章节中检查该机制。
+
+### 1.5.1 格式化数字和日期
 
 这是一个典型的消息格式字符串：
 
-```
+```text
 "On {2}, a {0} destroyed {1} houses and caused {
 ```
 
-大括号中的数字是实际名称和值的占位符。静态方法 MessageFormat.format 允许你为变量替换值。它是一个“变长参数”（varargs）方法，因此你只需按照如下方式提供参数：
+大括号中的数字是实际名称和值的占位符。静态方法 `MessageFormat.format` 允许你为变量替换值。它是一个“变长参数”（varargs）方法，因此你只需按照如下方式提供参数：
 
 ```java
 String msg
@@ -13701,59 +14779,59 @@ String msg
 "hurricane", 99, new GregorianCalendar(1999
 ```
 
-在这个示例中，占位符 {0} 被替换为 "hurricane"，{1} 被替换为 99，以此此类推。
+在这个示例中，占位符 `{0}` 被替换为 `"hurricane"`，`{1}` 被替换为 `99`，以此类推。
 
-示例的结果是字符串
+示例的结果是字符串：
 
-```
+```text
 On 1/1/99 12:00 AM, a hurricane destroyed 99 hous
 ```
 
-这是一个开始，但并不完美。我们不希望显示时间 "12:00 AM,”，并且希望将损失金额以货币值的形式打印。我们实现此点的方法为某些占位符提供可选格式：
+这是一个开始，但并不完美。我们不希望显示时间 `"12:00 AM,"`，并且希望将损失金额以货币值的形式打印。我们实现此点的方法为某些占位符提供可选格式：
 
-```
+```text
 "On {2,date,long}, a {0} destroyed {1} houses and
 ```
 
 此示例代码打印：
 
-```
+```text
 On January 1, 1999, a hurricane destroyed 99 houses
 ```
 
 通常，占位符索引后面可以跟一个类型和一个样式。用逗号分隔索引、类型和样式。类型可以是以下任何一个：
 
-- number
-- time
-- date
-- choice
+- `number`
+- `time`
+- `date`
+- `choice`
 
-如果类型是 number，那么样式可以是：
+如果类型是 `number`，那么样式可以是：
 
-- integer
-- currency
-- percent
+- `integer`
+- `currency`
+- `percent`
 
-或者它可以是一个 DecimalFormat 模式，例如 $,##0—参见第 7.2.2 节获取可能的格式。
+或者它可以是一个 `DecimalFormat` 模式，例如 `$,##0`——参见第 7.2.2 节获取可能的格式。
 
-如果类型是 time 或 date，那么样式可以是：
+如果类型是 `time` 或 `date`，那么样式可以是：
 
-```
+```text
 short
 medium
 long
 full
 ```
 
-或者一个日期格式模式，例如 yyyy-MM-dd。（请参 SimpleDateFormat 类的文档获取可能的格式。）
+或者一个日期格式模式，例如 `yyyy-MM-dd`。（请参阅 `SimpleDateFormat` 类的文档获取可能的格式。）
 
-> **注意：** 要在消息格式字符串中包含大括号，请用引号将其括起来，例如："A {0} is enclosed in '{' and '}' symbols."。对于文本，最好使用弯曲的单引号："{0}'s favorite symbols are braces"。但如果你必须使用直的单引号，则需要将它们双写：
+> **注意：** 要在消息格式字符串中包含大括号，请用引号将其括起来，例如：`"A {0} is enclosed in '{' and '}' symbols."`。对于文本，最好使用弯曲的单引号：`"{0}'s favorite symbols are braces"`。但如果你必须使用直的单引号，则需要将它们双写：
 
 ```java
 String template = "<a href='{0}'>{1}</a>";
 ```
 
-静态 MessageFormat.format 方法使用当前本地语言格式化值。要使用任意本地语言进行格式化，你必须多花些，因为没有你可以使用的“变长参数”方法。你需要将要格式化的值放入一个 Object[] 数组中，如下：
+静态 `MessageFormat.format` 方法使用当前本地语言格式化值。要使用任意本地语言进行格式化，你必须多花些，因为没有你可以使用的“变长参数”方法。你需要将要格式化的值放入一个 `Object[]` 数组中，如下：
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_833_0.png)
 
@@ -13762,26 +14840,39 @@ var formatter = new MessageFormat(pattern, locale)
 String message = formatter.format(new Object[] {
 ```
 
-## java.text.MessageFormat 1.1
+## `java.text.MessageFormat` 1.1
 
-- MessageFormat(String pattern, Locale locale)
-- MessageFormat(String pattern, Locale locale)
+- `MessageFormat(String pattern, Locale locale)`
+- `MessageFormat(String pattern, Locale locale)`
+
   使用指定的模式和本地语言构造消息格式对象。
-- void applyPattern(String pattern)
+
+
+
+- `void applyPattern(String pattern)`
+
   将消息格式对象的模式设置为指定的模式。
-- void setLocale(Locale locale)
-- Locale getLocale()
-  设置或获取用于消息中占位符的本地语言。该本地语言仅用于通过调用 applyPattern 方法设置的后续模式。
-- static String format(String pattern, Object... args)
-  使用 args[i] 作为占位符 {i} 的输入格式化模式字符串。
-- StringBuffer format(Object args, StringBuffer result, FieldPosition pos)
-  格式化此 MessageFormat 的模式。args 参数必须是一个对象数组。格式化后的字符串附加到 result 并返回 result。如果 pos 等于 new FieldPosition(MessageFormat.Field.ARGUMENT)，其 beginIndex 和 endIndex 属性设置为替换 {1} 占位符文本的位置。如果你对位置信息感兴趣，请提供 null。
+
+- `void setLocale(Locale locale)`
+
+- `Locale getLocale()`
+
+  设置或获取用于消息中占位符的本地语言。该本地语言仅用于通过调用`applyPattern`方法设置的后续模式。
+
+- `static String format(String pattern, Object... args)`
+
+  使用`args[i]`作为占位符`{i}`的输入格式化模式字符串。
+
+- `StringBuffer format(Object args, StringBuffer result, FieldPosition pos)`
+
+  格式化此`MessageFormat`的模式。`args`参数必须是一个对象数组。格式化后的字符串附加到`result`并返回`result`。如果`pos`等于`new FieldPosition(MessageFormat.Field.ARGUMENT)`，其`beginIndex`和`endIndex`属性设置为替换`{1}`占位符文本的位置。如果你对位置信息感兴趣，请提供`null`。
 
 ```java
 java.text.Format 1.1
 ```
 
-- * String format(Object obj)
+- `String format(Object obj)`
+
   根据规则格式化给定的对象。
 
 ## 1.5.2. Choice Formats
@@ -13792,15 +14883,15 @@ java.text.Format 1.1
 "On {2}, a {0} destroyed {1} houses and
 ```
 
-占位符 {0} 被替换为 "hurricane"，{1} 被替换为 99，以此此类推。
+占位符`{0}`被替换为`"hurricane"`，`{1}`被替换为`99`，以此此类推。
 
-示例的结果是字符串
+示例的结果是字符串：
 
 ```
 On 1/1/99 12:00 AM, a hurricane destroyed 99 hous
 ```
 
-这是一个开始，但并不完美。我们不希望显示时间 "12:00 AM,”，并且希望将损失金额以货币值的形式打印。我们实现此点的方法为某些占位符提供可选格式：
+这是一个开始，但并不完美。我们不希望显示时间`"12:00 AM,”`，并且希望将损失金额以货币值的形式打印。我们实现此点的方法为某些占位符提供可选格式：
 
 ```
 "On {2,date,long}, a {0} destroyed {1} houses and
@@ -13814,37 +14905,37 @@ On January 1, 1999, a hurricane destroyed 99 houses
 
 通常，占位符索引后面可以跟一个类型和一个样式。用逗号分隔索引、类型和样式。类型可以是以下任何一个：
 
-- number
-- time
-- date
-- choice
+- `number`
+- `time`
+- `date`
+- `choice`
 
-如果类型是 number，那么样式可以是：
+如果类型是`number`，那么样式可以是：
 
-- integer
-- currency
-- percent
+- `integer`
+- `currency`
+- `percent`
 
-或者它可以是一个 DecimalFormat 模式，例如 $,##0—参见第 7.2.2 节获取可能的格式。
+或者它可以是一个`DecimalFormat`模式，例如`$,##0`—参见第 7.2.2 节获取可能的格式。
 
-如果类型是 time 或 date，那么样式可以是：
+如果类型是`time`或`date`，那么样式可以是：
 
-```
+```text
 short
 medium
 long
 full
 ```
 
-或者一个日期格式模式，例如 yyyy-MM-dd。（参见 SimpleDateFormat 类文档获取可能的格式。）
+或者一个日期格式模式，例如`yyyy-MM-dd`。（参见`SimpleDateFormat`类文档获取可能的格式。）
 
-> **注意：** 要在消息格式字符串中包含大括号，请用引号将其括起来，例如："A {0} is enclosed in '{' and '}' symbols。"。对于文本，最好使用弯曲的单引号："{0}'s favorite symbols are braces"。但如果你必须使用直的单引号，则需要将它们双写：
+> **注意：** 要在消息格式字符串中包含大括号，请用引号将其括起来，例如：`"A {0} is enclosed in '{' and '}' symbols。"`。对于文本，最好使用弯曲的单引号：`"{0}'s favorite symbols are braces"`。但如果你必须使用直的单引号，则需要将它们双写：
 
 ```java
 String template = "<a href='{0}'>{1}</a>";
 ```
 
-静态 MessageFormat.format 方法使用当前本地语言格式化值。要使用任意本地语言进行格式化，你必须多花些，因为没有你可以使用的“变长参数”方法。你需要将要格式化的值放入一个 Object[] 数组中，如下：
+静态`MessageFormat.format`方法使用当前本地语言格式化值。要使用任意本地语言进行格式化，你必须多花些，因为没有你可以使用的“变长参数”方法。你需要将要格式化的值放入一个`Object[]`数组中，如下：
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_833_0.png)
 
@@ -13853,100 +14944,7 @@ var formatter = new MessageFormat(pattern, locale)
 String message = formatter.format(new Object[]
 ```
 
-## java.text.MessageFormat 1.1
-
-- MessageFormat(String pattern, Locale locale)
-- MessageFormat(String pattern, Locale locale)
-  使用指定的模式和本地语言构造消息格式对象。
-- void applyPattern(String pattern)
-  将消息格式对象的模式设置为指定的模式。
-- void setLocale(Locale locale)
-- Locale getLocale()
-  设置或获取用于消息中占位符的本地语言。该本地语言仅用于通过调用 applyPattern 方法设置的后续模式。
-- static String format(String pattern, Object... args)
-  使用 args[i] 作为占位符 {i} 的输入格式化模式字符串。
-- StringBuffer format(Object args, StringBuffer result, FieldPosition pos)
-  格式化此 MessageFormat 的模式。args 参数必须是一个对象数组。格式化后的字符串附加到 result 并返回 result。如果 pos 等于 new FieldPosition(MessageFormat.Field.ARGUMENT)，其 beginIndex 和 endIndex 属性设置为替换 {1} 占位符文本的位置。如果你对位置信息感兴趣，请提供 null。
-
-```java
-java.text.Format 1.1
-```
-
-- * String format(Object obj)
-  根据规则格式化给定的对象。
-
-## 1.5.2. Choice Formats
-
-让我们仔细查看：
-
-```
-"On {2}, a {0} destroyed {1} houses and
-```
-
-占位符 {0} 被替换为 "hurricane"，{1} 被替换为 99，以此此类推。
-
-示例的结果是字符串
-
-```
-On 1/1/99 12:00 AM, a hurricane destroyed 99 hous
-```
-
-这是一个开始，但并不完美。我们不希望显示时间 "12:00 AM,”，并且希望将损失金额以货币值的形式打印。我们实现此点的方法为某些占位符提供可选格式：
-
-```
-"On {2,date,long}, a {0} destroyed {1} houses and
-```
-
-此示例代码打印：
-
-```
-On January 1, 1999, a hurricane destroyed 99 houses
-```
-
-通常，占位符索引后面可以跟一个类型和一个样式。用逗号分隔索引、类型和样式。类型可以是以下任何一个：
-
-- number
-- time
-- date
-- choice
-
-如果类型是 number，那么样式可以是：
-
-- integer
-- currency
-- percent
-
-或者它可以是一个 DecimalFormat 模式，例如 $,##0—参见第 7.2.2 节获取可能的格式。
-
-如果类型是 time 或 date，那么样式可以是：
-
-```
-short
-medium
-long
-full
-```
-
-或者一个日期格式模式，例如 yyyy-MM-dd。（参见 SimpleDateFormat 类文档获取可能的格式。）
-
-> **注意：** 要在消息格式字符串中包含大括号，请用引号将其括起来，例如："A {0} is enclosed in '{' and '}' symbols。"。对于文本，最好使用弯曲的单引号："{0}'s favorite symbols are braces"。但如果你必须使用直的单引号，则需要将它们双写：
-
-```java
-String template = "<a href='{0}'>{1}</a>";
-```
-
-静态 MessageFormat.format 方法使用当前本地语言格式化值。要使用任意本地语言进行格式化，你必须多花些，因为没有你可以使用的“变长参数”方法。你需要将要格式化的值放入一个 Object[] 数组中，如下：
-
-![](img/cb920f692d263682e00dcb1ad7f884cc_833_0.png)
-
-```java
-var formatter = new MessageFormat(pattern, locale)
-String message = formatter.format(new Object[]
-```
-
-
-
-
+## 1.5.3. 使用不同本地语言格式化
 
 ```java
 String pattern = """
@@ -13955,11 +14953,11 @@ und richtete einen Schaden von {3,number,currency
 """,
 ```
 
-注意，德语中的单词顺序有所不同，但你传递给 `format` 方法的对象数组是相同的。format  字符串中占位符的顺序会自动处理单词顺序的变化。
+注意，德语中的单词顺序有所不同，但你传递给`format`方法的对象数组是相同的。`format`字符串中占位符的顺序会自动处理单词顺序的变化。
 
-## 1.6. 文本边界 (Text Boundaries)
+## 1.6. 文本边界（Text Boundaries）
 
-`BreakIterator` 类可以将文本迭代切分为字符、单词、句子或行。其迭代协议并不优美：
+`BreakIterator`类可以将文本迭代切分为字符、单词、句子或行。其迭代协议并不优美：
 
 ```java
 String s = "A man. A plan. Panama";
@@ -13977,17 +14975,17 @@ while (iter != BreakIterator.DONE) {
 
 这些静态方法返回了四种迭代器：
 
-- `getCharacterInstance` 方法产生一个遍历字形簇（grapheme clusters）的迭代器——即产生一个可见字符的 Unicode 序列。
+- `getCharacterInstance`方法产生一个遍历字形簇（grapheme clusters）的迭代器——即产生一个可见字符的 Unicode 序列。
 
-- `getWordInstance` 方法产生一个产生单词或单词分隔符的迭代器。由你来确定每个段落的类型。
+- `getWordInstance`方法产生一个产生单词或单词分隔符的迭代器。由你来确定每个段落的类型。
 
-- `getSentenceInstance` 方法将文本切分为句子。
+- `getSentenceInstance`方法将文本切分为句子。
 
-- `getLineInstance` 迭代器产生行。
+- `getLineInstance`迭代器产生行。
 
-每个方法都有两个版本：一个是不带参数的（使用默认语言环境），另一个是带有 `Locale` 参数的。
+每个方法都有两个版本：一个是不带参数的（使用默认语言环境），另一个是带有`Locale`参数的。
 
-> **提示：** 与其使用 `BreakIterator` 迭代字形簇，你也可以使用正则表达式：
+> **提示：** 与其使用`BreakIterator`迭代字形簇，你也可以使用正则表达式：
 
 ```java
 String[] clusters = s.split("\\{g}");
@@ -14006,17 +15004,17 @@ Charset windows1252 = Charset.forName("Windows-1252");
 var out = new PrintWriter(filename, windows1252);
 ```
 
-为了猜测用户偏好的编码，可以使用源自执行 Java 虚拟系统的“原生编码”（native encoding）。从 Java 18 开始，它的名称是系统属性 `native.encoding` 的值。
+为了猜测用户偏好的编码，可以使用源自执行 Java 虚拟系统的“原生编码”（native encoding）。从 Java 18 开始，它的名称是系统属性`native.encoding`的值。
 
-在 Java 18 之前，原生编码是默认字符集，你可以通过静态方法 `Charset.defaultCharset()` 获取它。
+在 Java 18 之前，原生编码是默认字符集，你可以通过静态方法`Charset.defaultCharset()`获取它。
 
 ### 1.7.2. 换行符
 
-这不是语言环境的问题，而是平台的问题。在 Windows 上，文本文件期望在每行末尾使用 `\r\n`，而基于 UNIX 的系统只需要一个 `\n` 字符。如今，大多数 Windows 程序可以仅处理 `\n`，但旧的程序和控制台可能会给你的用户带来麻烦。
+这不是语言环境的问题，而是平台的问题。在 Windows 上，文本文件期望在每行末尾使用`\r\n`，而基于 UNIX 的系统只需要一个`\n`字符。如今，大多数 Windows 程序可以仅处理`\n`，但旧的程序和控制台可能会给你的用户带来麻烦。
 
-使用 `println` 方法写入的任何行都会被正确终止。唯一的问题是你打印了包含 `\n` 字符的字符串。它们不会自动修改为平台换行符。
+使用`println`方法写入的任何行都会被正确终止。唯一的问题是你打印了包含`\n`字符的字符串。它们不会自动修改为平台换行符。
 
-与其在字符串中使用 `\n`，你不如使用 `printf` 和 `%n` 格式说明符来产生取决于平台的换行符。例如，
+与其在字符串中使用`\n`，你不如使用`printf`和`%n`格式说明符来产生取决于平台的换行符。例如：
 
 ```java
 out.printf("Hello%nWorld%n");
@@ -14036,7 +15034,7 @@ Hello\nWorld\n
 
 ### 1.7.3. 控制台
 
-如果你编写了通过 `System.in` / `System.out` 或 `System.console()` 与用户通信的程序，你就必须面对控制台使用的字符编码与默认字符集不同的可能性。这在 Windows 上使用 cmd 壳时尤为明显。在美版 Windows 11 中，命令壳仍然使用陈旧的 IBM437 编码，该编码源于 1982 年的 IBM 个人电脑。`Charset.defaultCharset()` 方法将返回 Windows-1252 字符集，这非常不同。例如，欧元符号存在于 Windows-1252 中，但在 IBM437 中不存在。当你调用：
+如果你编写了通过`System.in`/`System.out`或`System.console()`与用户通信的程序，你就必须面对控制台使用的字符编码与默认字符集不同的可能性。这在 Windows 上使用`cmd`壳时尤为明显。在美版 Windows 11 中，命令壳仍然使用陈旧的 IBM437 编码，该编码源于 1982 年的 IBM 个人电脑。`Charset.defaultCharset()`方法将返回 Windows-1252 字符集，这非常不同。例如，欧元符号存在于 Windows-1252 中，但在 IBM437 中不存在。当你调用：
 
 ```java
 System.out.println("100 €");
@@ -14050,44 +15048,45 @@ System.out.println("100 €");
 
 理想情况下，你的用户应该将控制台切换到 UTF-8。在 Windows 中，命令是：
 
-```chcp 65001```
+```text
+chcp 65001
+```
 
-从 Java 18 开始，这就足够让 Java 在控制台中使用 UTF-8 了。在之前的版本中，还有必要通过系统属性 `file.encoding` 设置平台编码：
+从 Java 18 开始，这就足够让 Java 在控制台中使用 UTF-8 了。在之前的版本中，还有必要通过系统属性`file.encoding`设置平台编码：
 
 ```bash
 java -file.encoding=UTF-8 MyProg
 ```
 
-如果你无法让你的用户更改控制台的字符编码，你可以查出它是什么。从 Java 18 开始，系统属性 `stdout.encoding` 和 `stderr.encoding` 提供了这些信息。你也可以在命令行上更改这些设置。
+如果你无法让你的用户更改控制台的字符编码，你可以查出它是什么。从 Java 18 开始，系统属性`stdout.encoding`和`stderr.encoding`提供了这些信息。你也可以在命令行上更改这些设置。
 
-> **注意：** 如果它们不匹配，输入功能将不起。请使用 `new Scanner(System.in, charset())`。
+> **注意：** 如果它们不匹配，输入功能将不起。请使用`new Scanner(System.in, charset())`。
 
-### 1.7.4. UTF-8 字节顺序标记 (BOM)
+### 1.7.4. UTF-8 字节顺序标记（BOM）
 
 正如前面提到的，尽可能使用 UTF-8 是一个好主意。然而，如果你的应用程序必须读取其他程序创建的文件，就会遇到另一个潜在问题。在文件开头添加“字节顺序标记”字符 U+FEFF 是完全允许。在 UTF-16 编码中，每个代码单元是两个字节，字节顺序标记告诉读取器使用的是大端序还是小端序。UTF-8 是单字节编码，因此不需要指定字节顺序。但如果文件以 0xEF 0xBB 0BF（UTF-8 编码的 U+FEFF）开头，这强烈表明它使用的是 UTF-8。出于这个原因，Unicode 标准鼓励这种做法。任何读取器应该忽略初始字节标记。
 
 只有一个障碍。Java 实现执意拒绝遵循 Unicode 标准，理由是兼容性问题。这意味着你，程序员必须完成平台不愿完成的工作。当你读取文本文件并遇到 U+FEFF 时，请忽略它。
 
-> **注意：** 遗憾的是 JDK 没有遵循这一建议。如果你向 javac 传递一个带有字节顺序标记的有效 UTF-8 源文件，编译将报错：“illegal character: \65279”。
+> **注意：** 遗憾的是 JDK 没有遵循这一建议。如果你向`javac`传递一个带有字节顺序标记的有效 UTF-8 源文件，编译将报错：“illegal character: \65279”。
 
 ### 1.7.5. 源文件的字符编码
 
 你，程序员，需要与 Java 编译器通信——你通过本地系统的工具来实现。例如，如果你使用中文或日文版的 Windows，你的源代码可能是用本地字符编码的。此类源文件是*不可移植的*。（只有编译后的类文件是移植的——它们对标识符和字符串使用“修改 UTF-8”编码。）
 
-不可移植的源文件并不理想。如今配置文本编辑器和开发环境使用 UTF-8 源码很容易。从 Java 18 开始，`javac` 编译器默认期望 UTF-8 编码源文件。对于之前的版本，运行编译器：
+不可移植的源文件并不理想。如今配置文本编辑器和开发环境使用 UTF-8 源码很容易。从 Java 18 开始，`javac`编译器默认期望 UTF-8 编码源文件。对于之前的版本，运行编译器：
 
 ```bash
 javac -encoding UTF-8 Myfile.java
 ```
 
+
+
 编译非 UTF-8 的旧源文件时，同样的方式指定编码。
 
-## 1.8. 资源包 (Resource Bundles)
+## 1.8 资源包（Resource Bundles）
 
-在本地化应用程序时，你可能会面临大量的消息字符串、按钮标签等，所有内容都需要翻译。为了使这项任务可行，你可能希望将这些消息字符串定义在外部位置，通常称为*资源*。执行翻译的人员只需编辑资源文件即可，而无需触碰程序源码。
-
-
-
+在本地化应用程序时，你可能会面临大量的消息字符串、按钮标签等，所有内容都需要翻译。为了使这项任务可行，你可能希望将这些消息字符串定义在外部位置，通常称为资源。执行翻译的人员只需编辑资源文件即可，而无需触碰程序源码。
 
 在 Java 中，你可以使用属性文件来指定字符串资源，并为其他类型的资源实现类。
 
@@ -14095,31 +15094,35 @@ javac -encoding UTF-8 Myfile.java
 
 > **注意：** 第一卷第 5 章描述了 JAR 文件资源的概念，其中数据文件、声音和图像可以放置在 JAR 文件中。`Class` 类的 `getResource` 方法查找文件并返回资源的 URL。通过将文件放入 JAR 文件，你将查找文件的工作交给了类加载器——它已经知道如何定位 JAR 文件中的项。然而，这种机制不支持 locale。(img/cb920f92d26368e00d848_1.png)
 
-## 1.8.1 资源包 (Resource Bundles)
+### 1.8.1 资源包（Resource Bundles）
 
-在本地化应用程序时，你会产生一组*资源包*。每个资源包都是一个属性文件或一个类，描述特定 locale 的项（如消息、标签等）。对于每个资源包，你需要为你想要支持的所有 locale 提供版本。你需要使用特定的命名约定命名这些资源包。例如，针对德国的资源进入 `baseName_de`，而所有德语国家共享的资源进入 `baseName_de`。通常使用
+在本地化应用程序时，你会产生一组资源包。每个资源包都是一个属性文件或一个类，描述特定 locale 的项（如消息、标签等）。对于每个资源包，你需要为你想要支持的所有 locale 提供版本。
 
-```
+你需要使用特定的命名约定命名这些资源包。例如，针对德国的资源进入 `baseName_de`，而所有德语国家共享的资源进入 `baseName_de`。通常使用：
+
+```text
 baseName_language_country
 ```
 
-用于特定国家的资源，以及
+用于特定国家的资源，以及：
 
-```
+```text
 baseName_language
 ```
 
-用于特定语言的资源。最后，作为备份，你可以将默认值放在没有任何后缀的文件中。要加载包，使用命令：
+用于特定语言的资源。最后，作为备份，你可以将默认值放在没有任何后缀的文件中。
 
-```
-ResourceBundle currentResources = ResourceBundle.getBundle("baseName")
+要加载包，使用命令：
+
+```java
+ResourceBundle currentResources = ResourceBundle.getBundle("baseName");
 ```
 
 `getBundle` 方法尝试加载匹配当前语言和国家的包。如果不成功，国家和语言会被忽略。然后对默认 locale 应用相同的搜索，最后查询默认包文件。如果该尝试失败，方法将抛出 `MissingResourceException`。
 
 也就是说，`getBundle` 方法尝试加载以下包：
 
-```
+```text
 baseName_language_country
 baseName_language
 baseName_defaultlanguage_country
@@ -14135,11 +15138,11 @@ baseName
 
 > **提示：** 不需要将应用程序的所有资源放在一个包中。你可以为标签准备一个包，为错误消息准备另一个包。
 
-## 1.8.2 属性文件 (Property Files)
+### 1.8.2 属性文件（Property Files）
 
 字符串国际化非常简单。你将所有字符串放入诸如 `MyProgramStrings.properties` 之类的属性文件中。这只是每行一个键值对的文本文件。一个典型的文件如下：
 
-```
+```properties
 computeButton=Rechnen
 colorName=black
 defaultPaperSize=210×297
@@ -14147,7 +15150,7 @@ defaultPaperSize=210×297
 
 然后按照上一节描述命名你的属性文件，例如：
 
-```
+```text
 MyProgramStrings.properties
 MyProgramStrings_en.properties
 MyProgramStrings_de_DE.properties
@@ -14155,29 +15158,29 @@ MyProgramStrings_de_DE.properties
 
 你可以简单地加载包：
 
-```
-ResourceBundle bundle = ResourceBundle.getBundle("MyProgramStrings")
+```java
+ResourceBundle bundle = ResourceBundle.getBundle("MyProgramStrings");
 ```
 
 要查找特定字符串，调用：
 
-```
-String computeButtonLabel = bundle.getString("computeButton")
+```java
+String computeButtonLabel = bundle.getString("computeButton");
 ```
 
 属性文件采用 UTF-8 编码。
 
-> **注意：** 在 Java 9 之前，存储属性的文件必须是 ASCII 文件，非 ASCII 字符必须使用 `uxxxx` 表示法进行编码。例如，“colorName=Grün" 必须指定为：
+> **注意：** 在 Java 9 之前，存储属性的文件必须是 ASCII 文件，非 ASCII 字符必须使用 `\uxxxx` 表示法进行编码。例如，“colorName=Grün”必须指定为：
 
-```
+```properties
 colorName=Gr\u00FCn
 ```
 
-## 1.8.3 包类 (Bundle Classes)
+### 1.8.3 包类（Bundle Classes）
 
-为了提供不是字符串的资源，请定义自自 `ResourceBundle` 类。使用标准命名约定命名你的类，例如：
+为了提供不是字符串的资源，请定义自 `ResourceBundle` 类。使用标准命名约定命名你的类，例如：
 
-```
+```text
 MyProgramResources.java
 MyProgramResources_en.java
 MyProgramResources_de_DE.java
@@ -14185,8 +15188,8 @@ MyProgramResources_de_DE.java
 
 使用相同的 `getBundle` 方法加载类：
 
-```
-ResourceBundle bundle = ResourceBundle.getBundle("MyProgramResources")
+```java
+ResourceBundle bundle = ResourceBundle.getBundle("MyProgramResources");
 ```
 
 实现资源包类简单的方法是扩展 `ListResourceBundle`。`ListResourceBundle` 让你将所有资源放入数组中，然后为你执行查找。遵循此大纲：
@@ -14198,6 +15201,7 @@ public class ProgramResources_de extends ListResourceBundle {
         {"colorName", "black"},
         {"defaultPaperSize", new double[]{210, 297}}
     };
+
     protected Object[][] getContents() {
         return contents;
     }
@@ -14206,18 +15210,18 @@ public class ProgramResources_de extends ListResourceBundle {
 
 或者，你的资源包类可以扩展 `ResourceBundle` 类。这时你需要实现两个方法，用于枚举所有键并查找给定键的值：
 
-```
+```java
 Enumeration<String> getKeys()
 Object handleGetObject(String key)
 ```
 
 `ResourceBundle` 类的 `getObject` 方法会调用你提供的 `handleGetObject` 方法。
 
+- `Object handleGetObject(String key)`
 
-- *Object handleGetObject(String key)*
   如果你定义了自身的资源查找机制，则应该重写此方法以查找与给定键值关联的资源值。
 
-## 1.9. 完整示例
+## 1.9 完整示例
 
 在本节中，我们将本章的材料应用于一个退休计算器的本地化处理中。该程序用于计算你为退休储蓄的资金是否足够。你需要输入年龄、每月储蓄金额等（参见图 7.4）。
 
@@ -14230,13 +15234,9 @@ Object handleGetObject(String key)
 该退休计算器支持三种语言区域（英语、德语和中文）。以下是国际化的一些亮点：
 
 - 标签、按钮和消息被翻译成了德语和中文。你可以在 `RetireResources_de` 和 `RetireResources_zh` 类中找到它们。英语作为备用语言——参见 `RetireResources` 文件。
-
 - 每当语言区域更改时，我们会重置标签并重新格式化文本字段的内容。
-
 - 文本字段以本地格式处理数字、货币金额和百分比。
-
 - 计算字段使用了 `MessageFormat`。格式字符串存储在每种语言的资源包中。
-
 - 仅仅为了证明可行性，我们为柱状图使用了不同的颜色，取决于用户选择的语言。
 
 图 7.5 显示了德语输出。要查看中文字符（如图 7.6 所示），请确保你的 Java 运行时已安装并配置了中文字。否则，中文字符将显示为“缺失字符”图标。
@@ -14247,18 +15247,19 @@ Object handleGetObject(String key)
 
 Applet 已启动。
 
-## 图 1.5：德语版的退休计算器
+### 图 1.5：德语版的退休计算器
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_859_1.png)
 
 Applet 已启动。
 
-## 图 1.6：中文版的退休计算器
+### 图 1.6：中文版的退休计算器
 
-## 代码 1.4 retire2/Retire.java
+### 代码 1.4 `retire2/Retire.java`
 
 ```java
 1 package retire2;
+
 2
 3 import java.text.*;
 4 import java.util.*;
@@ -14266,7 +15267,7 @@ Applet 已启动。
 6 import util.Choices;
 7
 8 /**
-9 * 此程序展示了一个中文
+9  * 此程序展示了一个中文
 10 * 退休计算器。
 11 * @version 1.3 2023-11-07
 12 * @author Caymann
@@ -14310,73 +15311,78 @@ Applet 已启动。
 }
 ```
 
-## 代码 1.5 retire2/RetireStrings.properties
+### 代码 1.5 `retire2/RetireStrings.properties`
 
 | Key | Value |
 | :--- | :--- |
-| language | Language |
-| computeButton | Compute |
-| savings | Prior Savings |
-| contributions | Annual Contribution |
-| income | Retirement Income |
-| currentAge | Current Age |
-| retireAge | Retirement Income |
-| deathAge | Life Expectancy |
-| inflationPercent | Inflation |
-| investPercent | Investment Return |
-| retire = Age:{0,number} Balance:{1,number} |
+| `language` | Language |
+| `computeButton` | Compute |
+| `savings` | Prior Savings |
+| `contributions` | Annual Contribution |
+| `income` | Retirement Income |
+| `currentAge` | Current Age |
+| `retireAge` | Retirement Income |
+| `deathAge` | Life Expectancy |
+| `inflationPercent` | Inflation |
+| `investPercent` | Investment Return |
+| `retire` = Age:{0,number} Balance:{1,number} |
 
-## 代码 1.6 retire2/RetireStrings_de.properties
-
-| Key | Value |
-| :--- | :--- |
-| language | Sprache |
-| computeButton | Rechnen |
-| savings | Vorherige Erarnisse |
-| contributions | Jährliche Einzahlung |
-| income | Einkommen nach Ruhestand |
-| currentAge | Jetziges Alter |
-| retireAge | Ruhestandalter |
-| deathAge | Lebenserwartung |
-| inflationPercent | Inflation |
-| investPercent | Investitionsgewinn |
-| retire=Alter:{0,number} Guthaben:{1,number} |
-
-## 代码 1.7 retire2/RetireStrings_zh.properties
+### 代码 1.6 `retire2/RetireStrings_de.properties`
 
 | Key | Value |
 | :--- | :--- |
-| language | |
-| computeButton | |
-| savings | |
-| contributions | |
-| income | |
-| currentAge | |
-| retireAge | |
-| deathAge | |
-| inflationPercent | |
-| investPercent | |
-| retire=: {0,number} : {1,number,currency} |
+| `language` | Sprache |
+| `computeButton` | Rechnen |
+| `savings` | Vorherige Erarnisse |
+| `contributions` | Jährliche Einzahlung |
+| `income` | Einkommen nach Ruhestand |
+| `currentAge` | Jetziges Alter |
+| `retireAge` | Ruhestandalter |
+| `deathAge` | Lebenserwartung |
+| `inflationPercent` | Inflation |
+| `investPercent` | Investitionsgewinn |
+| `retire` = Alter:{0,number} Guthaben:{1,number} |
+
+### 代码 1.7 `retire2/RetireStrings_zh.properties`
+
+| Key | Value |
+| :--- | :--- |
+| `language` |  |
+| `computeButton` |  |
+| `savings` |  |
+| `contributions` |  |
+| `income` |  |
+| `currentAge` |  |
+| `retireAge` |  |
+| `deathAge` |  |
+| `inflationPercent` |  |
+| `investPercent` |  |
+| `retire` = : {0,number} : {1,number,currency} |
 
 你已经了解了如何使用 Java 语言的国际化功能。你现在可以使用资源包来提供多语言支持。在接下来的章节中，我们将深入探讨编译和脚本。
 
-## 1.1. 编译器
+## 1.1 编译器
 
 有很多工具需要编译 Java 代码。显然，开发环境和构建工具都在其中。另一个例子是嵌入 Java 语句的 Java 页面。脚本 API 允许使用 JavaScript 或 Groovy 等语言。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_857_0.png)
 
-### 1.1.1. 调用编译器
+### 1.1.1 调用编译器
 
 直接调用编译器非常简单。这里有一个示例调用：
 
 ```java
 JavaCompiler compiler = ToolProvider.getSystemCompiler();
+
 OutputStream outStream = System.out;
+
 OutputStream errStream = System.err;
+
 int result = compiler.run(null, outStream, errStream,
       "-sourcepath", "src", "Test.java");
 ```
+
+
 
 `result` 值为 0 表示编译成功。编译器将其输出和错误消息发送到提供的流中。你可以将这些参数设置为 `null`，此时将使用 `System.out` 和 `System.err`。`run` 方法的第一个参数是输入流。由于编译器不接受输入，你可以将其留空为 `null`。（`run` 方法继承自通用的 `javax.tools.Tool` 接口，允许工具读取输入。）
 
@@ -14389,13 +15395,13 @@ int result = compiler.run(null, outStream, errStream,
 要获取 `CompilationTask`，从如章节所示的 `compiler` 对象开始。然后调用：
 
 ```java
-JavaCompiler.CompilationTask task = compiler.get
-      errorWriter, // 如果为 null 则使用 System.err
-      file, // 如果为 null 则使用标准文件管理器
-      diagnosticListener, // 如果为 null 则使用 System.err
-      options, // 如果没有选项则设为 null
-      classes, // 用于注解处理；若无则设为 null
-      sources);
+JavaCompiler.CompilationTask task = compiler.getTask(
+    errorWriter, // 如果为 null 则使用 System.err
+    file, // 如果为 null 则使用标准文件管理器
+    diagnosticListener, // 如果为 null 则使用 System.err
+    options, // 如果没有选项则设为 null
+    classes, // 用于注解处理；若无则设为 null
+    sources);
 ```
 
 最后三个参数是 `Iterable` 实例。例如，一组选项可以被指定为：
@@ -14407,15 +15413,14 @@ Iterable<String> options = List.of("-d", "bin");
 `sources` 参数是一个 `JavaObject` 实例的迭代。如果你想编译磁盘文件，请获取 `StandardJavaFileManager` 并调用其 `getJavaObjects` 方法：
 
 ```java
-StandardJavaFileManager stdFileManager = compile
-Iterable<JavaObject> sources
-= stdFileManager.getJavaObjectsFromStrings
-JavaCompiler.CompilationTask task = compiler.get
-null, null, null, options, null, sources);
+StandardJavaFileManager stdFileManager = compile;
+
+Iterable<JavaObject> sources =
+    stdFileManager.getJavaObjectsFromStrings;
+
+JavaCompiler.CompilationTask task = compiler.getTask(
+    null, null, null, options, null, sources);
 ```
-
-
-
 
 带有一个 `Processor` 对象的列表。请参阅第一卷第 11 章获取关于注解处理的示例。
 
@@ -14431,6 +15436,7 @@ Boolean result = task.call();
 
 ```java
 var collector = new DiagnosticCollector<JavaFile>(compiler.getTask(null, fileManager, collector, null);
+
 for (Diagnostic<? extends JavaObject> d : collector) {
     System.out.println(d);
 }
@@ -14441,7 +15447,8 @@ for (Diagnostic<? extends JavaObject> d : collector) {
 你也可以为标准文件管理器安装 `DiagnosticListener`，以防你需要捕获关于缺失文件的消息：
 
 ```java
-StandardJavaFileManager stdFileManager = compiler.getStandardFileManager(diagnosticsListener)
+StandardJavaFileManager stdFileManager =
+    compiler.getStandardFileManager(diagnosticsListener);
 ```
 
 ## 1.1.4. 从内存读取源文件
@@ -14470,7 +15477,8 @@ List<StringSource> sources = List.of(
     new StringSource(className1, class1CodeString),
     new StringSource(className2, class2CodeString)
 );
-task = compiler.getTask(null, fileManager, diagna
+
+task = compiler.getTask(null, fileManager, diagna);
 ```
 
 ## 1.1.5. 将字节码写入内存
@@ -14502,18 +15510,24 @@ public class ByteArrayClass extends SimpleJavaFi {
 
 ```java
 var classes = new ArrayList<ByteArrayClass>();
-StandardJavaFileManager stdFileManager = compiler.getStandardFileManager(null, null,
-JavaFileManager fileManager = new ForwardingJavaFileManager<stdFileMana> {
-    public JavaFileObject getFileForOut(String className, Kind kind, File file) throws IOException {
-        if (kind == Kind.CLASS) {
-            ByteArrayClass outfile = new ByteArray(className);
-            classes.add(outfile);
-            return outfile;
-        } else {
-            return super.getJavaFileForOutput;
+
+StandardJavaFileManager stdFileManager =
+    compiler.getStandardFileManager(null, null);
+
+JavaFileManager fileManager =
+    new ForwardingJavaFileManager<stdFileMana> {
+        public JavaFileObject getFileForOut(
+                String className, Kind kind, File file)
+                throws IOException {
+            if (kind == Kind.CLASS) {
+                ByteArrayClass outfile = new ByteArray(className);
+                classes.add(outfile);
+                return outfile;
+            } else {
+                return super.getJavaFileForOutput;
+            }
         }
-    }
-}
+    };
 ```
 
 要加载类，你需要一个类加载器（见第 9 章）：
@@ -14526,7 +15540,8 @@ public class ByteArrayClassLoader extends ClassLoader {
         this.classes = classes;
     }
 
-    public Class<?> findClass(String name) throws ClassNotFoundException {
+    public Class<?> findClass(String name)
+            throws ClassNotFoundException {
         for (ByteArrayClass cl : classes) {
             if (cl.getName().equals("/" + name)) {
                 byte[] bytes = cl.getCode();
@@ -14541,7 +15556,9 @@ public class ByteArrayClassLoader extends ClassLoader {
 编译完成后，使用该类加载器调用 `Class.forName` 方法：
 
 ```java
-ByteArrayClassLoader loader = new ByteArrayClassLoader(classes);
+ByteArrayClassLoader loader =
+    new ByteArrayClassLoader(classes);
+
 Class<?> cl = Class.forName(className, true, loader);
 ```
 
@@ -14549,37 +15566,37 @@ Class<?> cl = Class.forName(className, true, loader);
 
 在用于动态网页页面的 Jakarta Server Pages (JSP) 技术中，你可以将 HTML 与 Java 代码段混合使用，例如：
 
-<p>当前日期和时间是 <b><%= LocalDate
-
-</p>
-
-JSP 引擎将 Java 代码动态编译为 servlet。在我们的示例应用程序中，我们使用一个简单的示例并为非常简单的的工作表格式生成代码。作者将文本、Java 表达式（用反引号包含）和 Java 语句（用三个反引号包含）引入工作表中。该工作表被编译为一个 Java 类，该类打印文本和表达式的值并执行 Java 语句。这是一个示例工作表：
-
+```html
+<p>当前日期和时间是 <b><%= LocalDate</b></p>
 ```
+
+JSP 引擎将 Java 代码动态编译为 servlet。在我们的示例应用程序中，我们使用一个简单的示例并为非常简单的工作表格式生成代码。作者将文本、Java 表达式（用反引号包含）和 Java 语句（用三个反引号包含）引入工作表中。该工作表被编译为一个 Java 类，该类打印文本和表达式的值并执行 Java 语句。这是一个示例工作表：
+
+```text
 What is your name?
 ```
+
 ```java
 var in = new Scanner(System.in);
 String name = in.nextLine();
 ```
-```
+
+```text
 How old are you?
 ```
+
 ```java
 int age = in.nextInt();
 ```
+
+```text
 Hello, `name`! Next year, you will be `age + 1`.
 ```
 
 这是一个关于使用内存源文件和类文件进行动态编译的极简版本。工作表被编译为一个 Java 类，该类打印文本和表达式的值并执行 Java 语句。程序中的 `buildSource` 方法构建一个 `ByteArrayClass` 并将其放入 `StringSource` 对象中。`DiagnosticCollector` 类实现了此接口。它只是收集所有的诊断信息，以便你在编译完成后对它们进行迭代。你也可以为标准文件管理器安装 `DiagnosticListener`，以防你需要捕获关于缺失文件的消息。
 
-
-
-
-
 ```java
-else
-{
+else {
     String[] fragments = line.split(" ");
     for (int i = 0; i < fragments.length; i++) {
         builder.append("System.out.print(");
@@ -14599,51 +15616,73 @@ else
 ```
 
 - `int run(InputStream in, OutputStream out, OutputStream err, String... arguments)`
+
   使用给定的输入、输出、错误流以及指定的参数运行工具。成功返回 0，失败返回非零值。
 
-# javax.tools.JavaCompiler 6
+## `javax.tools.JavaCompiler` 6
 
 - `StandardJavaFileManager getStandardFileManager(DiagnosticListener<? super JavaObject> diagnosticListener, Locale locale, Charset charset)`
+
   获取此编译器的标准文件管理器。你可以为默认错误报告、区域和字符集提供 `null`。
+
 - `JavaCompiler.CompilationTask getTask(Writer out, JavaFileManager fileManager, DiagnosticListener<? super JavaObject> diagnosticListener, Iterable<String> options, Iterable<String> classesForAnnotationProcessing, Iterable<? extends JavaObject> sourceFiles)`
+
   获取一个编译任务，调用该任务时将编译给定的源文件。详情请参见前述一节的讨论。
 
-# javax.tools.StandardJavaFileManager 6
+## `javax.tools.StandardJavaFileManager` 6
 
 - `Iterable<? extends JavaFileObject getJavaFileObjectsFromStrings(Iterable<String> fileNames)`
+
 - `Iterable<? extends JavaFileObject getJavaFileObjectsFromPaths(Collection<? extends Path> paths)`
+
 - `Iterable<? extends JavaFileObject getJavaFileObjectsFromFiles(Iterable<? extends File> files)`
+
   将文件名或文件序列转换为 `JavaFileObject` 实例序列。
 
-# javax.tools.JavaCompiler.CompilationTask 6
+## `javax.tools.JavaCompiler.CompilationTask` 6
 
 - `Boolean call()`
+
   执行编译任务。
 
-# javax.tools.DiagnosticCollector<S> 6
+## `javax.tools.DiagnosticCollector<S>` 6
 
 - `DiagnosticCollector()`
+
   构造一个空的收集器。
+
 - `List<Diagnostic<? extends S>> getDiagnostics()`
+
   获取收集到的诊断信息。
 
-javax.tools.Diagnostic<S> 6
+## `javax.tools.Diagnostic<S>` 6
 
 - `S getSource()`
+
   获取与此诊断信息相关的源对象。
+
 - `Diagnostic.Kind getKind()`
+
   获取此诊断信息的类型——ERROR、WARNING、MANDATORY_WARNING、NOTE 或 OTHER 之一。
+
 - `String getMessage(Locale locale)`
+
   获取默认区域设置下描述此诊断信息中提出的问题的消息。
+
 - `long getLineNumber()`
+
 - `long getLineNumber()`
+
   获取此诊断信息中提出的问题的位置。
 
-javax.tools.SimpleJavaObject 6
+## `javax.tools.SimpleJavaObject` 6
 
 - `CharSequence getCharContent(boolean ignoreEncodingErrors)`
+
   对于代表源文件的文件对象，重写此方法以产生源代码。
+
 - `OutputStream openOutputStream()`
+
   对于代表类文件的文件对象，重写此方法以产生一个可以写入字节码的流。
 
 ```java
@@ -14651,137 +15690,143 @@ javax.tools.ForwardingJavaFileManager<M extends JavaFileManager> 6
 ```
 
 - `protected ForwardingJavaFileManager(M fileManager)`
-  构造一个 JavaFileManager，将所有调用委托给给定的管理器。
+
+  构造一个 `JavaFileManager`，将所有调用委托给给定的管理器。
+
 - `FileFileOutput(JavaFileManager.Location location, String className, JavaObject.Kind kind, FileObject sibling)`
+
   如果你想用文件对象替换用于类文件的对象，请拦截此调用；`kind` 是 SOURCE、CLASS、HTML 或 OTHER 之一。
 
-
-
-
-- "STATELESS"无状态）：除了“THREAD-ISOLATED”（线程隔离）外，脚本不会更改变量绑定。
+- `"STATELESS"`（无状态）：除了“THREAD-ISOLATED”（线程隔离）外，脚本不会更改变量绑定。
 
 你通常希望向引擎添加变量绑定。绑定由一个名称和一个关联的 Java 对象组成。例如，考虑以下语句：
 
-```
+
+
+```java
 engine.put("k", 1728);
 Object result = engine.eval("k + 1");
 ```
 
-脚本代码从“引擎作用域”中的绑定中读取 `k` 的定义。这特别重要，因为大多数脚本语言都可以访问 Java 对象，且其语法通常比 Java 语法更简单。例如，
+脚本代码从“引擎作用域”中的绑定中读取`k`的定义。这特别重要，因为大多数脚本语言都可以访问 Java 对象，且其语法通常比 Java 语法更简单。例如：
 
-```
+```java
 engine.put("d", LocalDate.now());
 Object result = engine.eval("d.month"); // 调用
 ```
 
 相反，你可以检索由脚本语句绑定的变量：
 
-```
+```java
 engine.eval("n = 1728");
 Object result = engine.get("n");
 ```
 
-除了引擎作用域外，还有一个全局作用域。你添加到 `ScriptEngineManager` 的任何绑定对所有引擎都是可见的。
+除了引擎作用域外，还有一个全局作用域。你添加到`ScriptEngineManager`的任何绑定对所有引擎都是可见的。
 
-与其向引擎或全局作用域添加绑定，不如你可以将它们收集在一个 `Bindings` 类型的对象中，并将其传递给 `eval` 方法：
+与其向引擎或全局作用域添加绑定，不如你可以将它们收集在一个`Bindings`类型的对象中，并将其传递给`eval`方法：
 
-```
+```java
 Bindings scope = engine.createBindings();
 scope.put("d", LocalDate.now());
 engine.eval(scriptString, scope);
 ```
 
-如果一组绑定不需要持久到后续对 `eval` 方法的调用，这种方法非常用。
+如果一组绑定不需要持久到后续对`eval`方法的调用，这种方法非常有用。
 
-> **注意：** 你可能希望拥有引擎和全局作用域之外的作用域。例如，Web 容器可能需要请求作用域和会话作用域。但是，你需要自己处理。你需要编写一个实现 `ScriptContext` 接口的类来管理作用域集合。每个作用域由一个整数标识，数字较小的作用域应优先搜索。（标准库提供了一个 `SimpleScriptContext` 类，但它只持有全局和引擎作用域。）
+> **注意：** 你可能希望拥有引擎和全局作用域之外的作用域。例如，Web 容器可能需要请求作用域和会话作用域。但是，你需要自己处理。你需要编写一个实现`ScriptContext`接口的类来管理作用域集合。每个作用域由一个整数标识，数字较小的作用域应优先搜索。（标准库提供了一个`SimpleScriptContext`类，但它只持有全局和引擎作用域。）
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_890_0.png)
 
-javascript.script.ScriptEngine 6
+## `javascript.script.ScriptEngine`
 
-- - Object eval(String script)
-- Object eval(Reader reader)
-- Object eval(String script, Bindings bindings)
-- Object eval(Reader reader, Bindings bindings)
+- `Object eval(String script)`
+- `Object eval(Reader reader)`
+- `Object eval(String script, Bindings bindings)`
+- `Object eval(Reader reader, Bindings bindings)`
 
 根据给定的绑定，评估字符串或 reader 提供的脚本。
 
-- - Object get(String key)
-- void put(String key, Object value)
+- `Object get(String key)`
+- `void put(String key, Object value)`
 
 在引擎作用域中获取或存入绑定。
 
-- - Bindings createBindings()
+- `Bindings createBindings()`
 
-创建一个适用于此引擎的空 Bindings 对象。
+创建一个适用于此引擎的空`Bindings`对象。
 
-javascript.script.ScriptEngineManager 6
+## `javascript.script.ScriptEngineManager`
 
-- - Object get(String key)
-- void put(String key, Object value)
+- `Object get(String key)`
+- `void put(String key, Object value)`
 
 在全局作用域中获取或存入绑定。
 
-javascript.Bindings 6
+## `javascript.Bindings`
 
-- - Object get(String key)
-- void put(String key, Object value)
-将绑定放入由此 Bindings 对象表示的作用域中。
+- `Object get(String key)`
+- `void put(String key, Object value)`
 
-# 1.2.3. 重定向输入和输出
+将绑定放入由此`Bindings`对象表示的作用域中。
 
-你可以通过调用脚本上下文的 `setReader` 和 `setWriter` 方法来重定向脚本的标准输入和输出。例如，
+## 1.2.3. 重定向输入和输出
 
-```
+你可以通过调用脚本上下文的`setReader`和`setWriter`方法来重定向脚本的标准输入和输出。例如：
+
+```java
 var writer = new StringWriter();
 engine.getContext().getWriter(new PrintWriter(writer));
 ```
 
-使用 JavaScript `print` 或 `println` 函数写入任何输出都会发送到 writer。
+使用 JavaScript `print`或`println`函数写入任何输出都会发送到 writer。
 
-`setReader` 和 `setWriter` 方法只影响脚本引擎的标准输入和输出源。例如，如果你执行 JavaScript 代码
+`setReader`和`setWriter`方法只影响脚本引擎的标准输入和输出源。例如，如果你执行 JavaScript 代码：
 
-```
+```javascript
 println("Hello");
 ```
 
-```
+```java
 java.lang.System.out.println("World");
 ```
 
 只有第一个输出被重定向了。
 
 Rhino 引擎没有标准输入源的概念。
-调用 `setReader` 没有效果。
 
-```
-javax.script.ScriptEngine 6
+调用`setReader`没有效果。
+
+```java
+javax.script.ScriptEngine
 ```
 
-- - ScriptContext getContext()
+- `ScriptContext getContext()`
+
 获取此引擎的默认脚本上下文。
 
-```
-javax.script.ScriptContext 6
+```java
+javax.script.ScriptContext
 ```
 
-- - Reader getReader()
-- void setReader(Reader reader)
-- Writer getWriter()
-- void setWriter(Writer writer)
-- Writer getErrorWriter()
-- void setErrorWriter(Writer writer)
+- `Reader getReader()`
+- `void setReader(Reader reader)`
+- `Writer getWriter()`
+- `void setWriter(Writer writer)`
+- `Writer getErrorWriter()`
+- `void setErrorWriter(Writer writer)`
+
 获取或设置用于输入的 reader 或用于正常或错误输出的 writer。
 
-# 1.2.4. 调用脚本函数和方法
+## 1.2.4. 调用脚本函数和方法
 
-对于某些脚本引擎，你可以直接在 Java 代码中调用脚本语言函数，而无需评估执行该调用的脚本代码段。如果你允许用户使用选择的脚本语言实现服务，这样你就可以从 Java 调用它，这非常非常有用。
+对于某些脚本引擎，你可以直接在 Java 代码中调用脚本语言函数，而无需评估执行该调用的脚本代码段。如果你允许用户使用选择的脚本语言实现服务，这样你就可以从 Java 调用它，这非常有用。
 
-提供此功能的脚本引擎实现了 **Invocable** 接口。特别是，Rhino 引擎实现了 **Invocable**。
+提供此功能的脚本引擎实现了`Invocable`接口。特别是，Rhino 引擎实现了`Invocable`。
 
-要调用函数，请带上函数名调用 **invokeFunction** 方法，随后是函数参数：
+要调用函数，请带上函数名调用`invokeFunction`方法，随后是函数参数：
 
-```
+```javascript
 // 在 JavaScript 中定义 greet 函数
 engine.eval("function greet(how, whom) { return H
 
@@ -14789,7 +15834,7 @@ engine.eval("function greet(how, whom) { return H
 result = ((Invocable) engine).invokeFunction("gre
 ```
 
-如果脚本语言是面向对象的，调用 **invokeMethod**：
+如果脚本语言是面向对象的，调用`invokeMethod`：
 
 ```javascript
 // 在 JavaScript 中定义 Greeter 类
@@ -14800,7 +15845,7 @@ Greeter.prototype.welcome =
 """);
 ```
 
-```
+```java
 // 创建实例
 Object yo = engine.eval("new Greeter('Yo')");
 
@@ -14810,8 +15855,6 @@ result = ((Invocable) engine).invokeMethod(yo, "welcome",
 
 （注：由于提供的原始文本存在大量重复和乱码，翻译已根据要求提取并清理了核心逻辑和技术说明部分。）
 
-
-
 请查看程序列表 8.2，它执行了一个与 8.1.6 节中示例格式相同的工作表。然而，这次代码使用的是脚本语言，并在程序运行时进行求值。
 
 类路径（classpath）必须包含一个脚本引擎。按如下方式启动程序：
@@ -14820,13 +15863,13 @@ result = ((Invocable) engine).invokeMethod(yo, "welcome",
 java -classpath .:/engineDir\* ScriptTest engineName
 ```
 
-例如，
+例如：
 
 ```bash
 java -classpath ::rhino\* script.ScriptTest rhi
 ```
 
-# Listing 1.2 script/ScriptTest.java
+## Listing 1.2 `script/ScriptTest.java`
 
 ```java
 1 package script;
@@ -14840,7 +15883,6 @@ java -classpath ::rhino\* script.ScriptTest rhi
 9 * @author Cay Horstmann
 10 *
 11 *
-```
 12 从下处下载 Rhino 和 Rhino 引擎 JAR
 13 https://mvnrepository.com/artifact/org.mozi
 14 https://mvnrepository.com/artifact/org.mozi
@@ -14865,7 +15907,7 @@ java -classpath ::rhino\* script.ScriptTest rhi
 33             return;
 34         }
 35         else language = args[0];
-36 
+36
 37         ScriptEngine engine = manager.getEngineEngine(language);
 38         if (engine == null) 
 39         {
@@ -14889,84 +15931,81 @@ java -classpath ::rhino\* script.ScriptTest rhi
 57     }
 58 }
 59
-
 ```
 
 # 1 安全
 
-当 Java 技术首次出现时，人们兴奋的并不是因为一种精良的编程语言，而是由于通过互联网安全地执行小程序（applets）的可能性。显然，只有当接收者能够确定代码不会对其机器造成破坏时，提供可执行的小程序才是切实际的。因此，安全一直是 Java 技术设计者和用户关注的重点。这意味着与其他语言和系统不同（在那些系统中，安全是作为事后补救或对入侵的反应来实现的），安全机制是 Java 技术不可或的一部分。
+当 Java 技术首次出现时，人们兴奋的并不是因为一种精良的编程语言，而是由于通过互联网安全地执行小程序（applets）的可能性。显然，只有当接收者能够确定代码不会对其机器造成破坏时，提供可执行的小程序才是切实际的。因此，安全一直是 Java 技术设计者和用户关注的重点。这意味着与其他语言和系统不同（在那些系统中，安全是作为事后补救或对入侵的反应来实现的），安全机制是 Java 技术不可或缺的一部分。
 
 安全架构由三部分组成：
 
-- 1. 语言和虚拟机设计特性（数组的边界检查、无未经检查的类型转换、无指针算术等）。
-- 2. 安全管理器，用于控制代码可以的操作（文件访问、网络访问等）。
-- 3. 代码签名，代码作者可以使用标准加密算法对 Java 代码进行身份验证。然后，代码用户可以确定具体是谁创建了代码，并确保代码在签名后没有被篡改。
+1. 语言和虚拟机设计特性（数组的边界检查、无未经检查的类型转换、无指针算术等）。
+2. 安全管理器，用于控制代码可以执行的操作（文件访问、网络访问等）。
+3. 代码签名，代码作者可以使用标准加密算法对 Java 代码进行身份验证。然后，代码用户可以确定具体是谁创建了代码，并确保代码在签名后没有被篡改。
 
-第一部分取得了巨大的成功。C++ 程序经常受到缓冲区溢出等攻击，但 Java 提供了强大的保护。遗憾的是，另外两个部分的情况并不理想。安全管理器非常复杂且攻击面很大。从 Java 17 开始它正被弃用。随着小程序和 Java Web Start 的终结——这两种安全交付客户端应用程序的机制——代码签名架构实际上也被放弃了。
+第一部分取得了巨大的成功。C++程序经常受到缓冲区溢出等攻击，但 Java 提供了强大的保护。遗憾的是，另外两个部分的情况并不理想。安全管理器非常复杂且攻击面很大。从 Java 17 开始它正被弃用。随着小程序和 Java Web Start 的终结——这两种安全交付客户端应用程序的机制——代码签名架构实际上也被放弃了。
 
 在本书的之前的版本中，安全管理器和代码签名是本章的亮点，显然这种涵盖的需求已经不再了。我们将首先讨论类加载器，它们在类文件加载到虚拟机时会检查类文件的完整性。我将演示该机制如何检测对类文件的篡改。然后，你将学习一种身份验证框架和加密算法，它们对于许多安全相关的操作非常有用。
 
 ## 1.1. 类加载器
 
-Java 编译器将源指令转换为 Java 虚拟机的代码。虚拟机代码存储在带有 .class 扩展名的类文件中。每个类文件包含一个类或接口的定义和实现代码。在接下来的章节中，你将看到虚拟机如何加载这些类文件。
+Java 编译器将源指令转换为 Java 虚拟机的代码。虚拟机代码存储在带有`.class`扩展名的类文件中。每个类文件包含一个类或接口的定义和实现代码。在接下来的章节中，你将看到虚拟机如何加载这些类文件。
 
-## 1.1.1. 类加载过程
+### 1.1.1. 类加载过程
 
-虚拟机只加载执行程序所需的类文件。例如，假设程序执行从 `MyProgram.class` 开始。以下是虚拟机执行的步骤：
+虚拟机只加载执行程序所需的类文件。例如，假设程序执行从`MyProgram.class`开始。以下是虚拟机执行的步骤：
 
-- 1. 虚拟机有一种加载类文件的机制——例如，从磁盘读取它们或从 Web 请求它们；它使用这种机制加载 `MyProgram` 的内容。
-- 2. 如果 MyProgram 有字段或超类，这些也会被加载。（加载给定类所依赖的所有类的过程被称为解析。）
-- 3. 虚拟机随后执行 `main` 方法。
-- 4. 如果 `main` 方法调用了额外的类，这些类将被加载。然而，类加载机制并不使用单个加载器。每个 Java 程序至少有三个加载器：
-    - 启动加载器（bootstrap class loader）
-    - 平台加载器（platform class loader）
-    - 系统加载器（system class loader，有时称为应用加载器）
+1. 虚拟机有一种加载类文件的机制——例如，从磁盘读取它们或从 Web 请求它们；它使用这种机制加载`MyProgram`的内容。
+2. 如果`MyProgram`有字段或超类，这些也会被加载。（加载给定类所依赖的所有类的过程被称为解析。）
+3. 虚拟机随后执行`main`方法。
+4. 如果`main`方法调用了额外的类，这些类将被加载。然而，类加载机制并不使用单个加载器。每个 Java 程序至少有三个加载器：
+   - 启动加载器（bootstrap class loader）
+   - 平台加载器（platform class loader）
+   - 系统加载器（system class loader，有时称为应用加载器）
 
 平台加载器加载所有并非由启动加载器加载的 Java 类。
 
-没有与启动加载器对应的 `ClassLoader` 对象。例如，
+没有与启动加载器对应的`ClassLoader`对象。例如：
 
 ```java
 StringBuilder.class.getClassLoader()
 ```
 
-返回 `null`。
+返回`null`。
 
 在 Java 9 之前是非模块化的。系统加载器从模块路径和类路径加载类。
 
-## 1.1.2. 类加载器层次
+### 1.1.2. 类加载器层次
 
-类加载器之间存在父子关系。除了启动加载器外，每个加载器都有一个父加载器。类加载器会给其父加载任何给定类的机会，只有当父加载失败时才会自己加载。例如，当要求系统加载器加载平台类（例如 `java.lang.StringBuilder`），它首先询问平台加载器。该加载器首先询问启动加载器。启动加载器找到并加载了该类，因此另外两个加载器都不会继续搜索。
+类加载器之间存在父子关系。除了启动加载器外，每个加载器都有一个父加载器。类加载器会给其父加载任何给定类的机会，只有当父加载失败时才会自己加载。例如，当要求系统加载器加载平台类（例如`java.lang.StringBuilder`），它首先询问平台加载器。该加载器首先询问启动加载器。启动加载器找到并加载了该类，因此另外两个加载器都不会继续搜索。
 
-某些程序具有插件架构，代码的部分被封装为可选插件。如果插件被封装为 JAR 文件，你可以简单使用 `URLClassLoader` 实例来加载插件类。
+某些程序具有插件架构，代码的部分被封装为可选插件。如果插件被封装为 JAR 文件，你可以简单使用`URLClassLoader`实例来加载插件类：
 
 ```java
 var url = new URL("file:///path/to/plugin.jar");
+
 var pluginLoader = new URLClassLoader(new URL[]{url});
+
 Class<?> cl = pluginLoader.loadClass("mypackage. ");
 ```
 
-由于 `URLClassLoader` 构造函数中没有指定父类，`pluginLoader` 的父加载器是系统加载器。图 9.1 显示了层次结构。
-
-
-
-
+由于`URLClassLoader`构造函数中没有指定父类，`pluginLoader`的父加载器是系统加载器。图 9.1 显示了层次结构。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_909_0.png)
 
-**图 1.1:** 类加载器层级结构
+**图 1.1：**类加载器层级结构
 
-**注意：** 在 Java 9 之前，系统类加载器是 `URLClassLoader` 的一个实例。某些程序员使用强制类型转换来访问 `getURLs` 方法，或者通过反射调用受保护的 `addURLs` 方法将 JAR 文件添加到类路径中。这现在已经是不可能的了。
+**注意：**在 Java 9 之前，系统类加载器是`URLClassLoader`的一个实例。某些程序员使用强制类型转换来访问`getURLs`方法，或者通过反射调用受保护的`addURLs`方法将 JAR 文件添加到类路径中。这现在已经是不可能的了。
 
 大多数时候，你不需要担心类加载器的层级结构。通常，类的加载是因为它们被其他类需要，而这个过程对你来说是透明的。
 
 然而，有时你需要干预并指定一个类加载器。考虑这个示例：
 
-- *你的应用程序代码包含一个调用 `Class.forName(classNameString)` 的辅助方法。*
-- *该方法从插件类中被调用。*
-- *`classNameString` 指定了一个包含在插件 JAR 中的类。*
+- 你的应用程序代码包含一个调用`Class.forName(classNameString)`的辅助方法。
+- 该方法从插件类中被调用。
+- `classNameString`指定了一个包含在插件 JAR 中的类。
 
-插件的作者希望该类被加载。然而，辅助方法的类是由系统类加载器加载的，而这正是 `Class.forName` 使用的类加载器。插件 JAR 中的类是不可见的。这种现象被称为类加载器反转（classloader inversion）。
+插件的作者希望该类被加载。然而，辅助方法的类是由系统类加载器加载的，而这正是`Class.forName`使用的类加载器。插件 JAR 中的类是不可见的。这种现象被称为类加载器反转（classloader inversion）。
 
 为了解决这个问题，辅助方法需要使用正确的类加载器。它可以将类加载器作为参数传递。或者，它可以要求将正确的类加载器设置为当前线程的上下文类加载器。这种策略被许多框架（如 JAXP 和 JNDI）使用。
 
@@ -14974,15 +16013,21 @@ Class<?> cl = pluginLoader.loadClass("mypackage. ");
 
 然而，你可以通过调用以下代码设置任何类加载器：
 
-```
+```java
 Thread t = Thread.currentThread();
+
 t.setContextClassLoader(loader);
 ```
 
 辅助方法随后可以获取上下文类加载器：
 
-```
+```java
 Thread t = Thread.currentThread();
+```
+
+
+
+```java
 ClassLoader loader = t.getContextClassLoader();
 Class<?> cl = loader.loadClass(className);
 ```
@@ -14997,7 +16042,7 @@ Class<?> cl = loader.loadClass(className);
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_913_0.png)
 
-**图 1.2:** 两个类加载器加载了同名的不同类。
+**图 1.2：** 两个类加载器加载了同名的不同类。
 
 ## 1.1.4. 编写你自己的类加载器
 
@@ -15005,7 +16050,7 @@ Class<?> cl = loader.loadClass(className);
 
 要编写你自己的类加载器，只需扩展 `ClassLoader` 类并重写方法：
 
-```
+```java
 findClass(String className)
 ```
 
@@ -15023,8 +16068,6 @@ findClass(String className)
 > **注意：** David Kahn 的名著《密码破译》（Macmillan, 1967, p. 84）提到苏埃提尼乌是凯撒密码的历史来源。凯撒将罗马罗马字母表中的 24 个字母移动了 3 个字母，这在当时让对手手足无措。
 
 当本章首次写就时，美国政府限制强加密方法的出口。因此，我在示例中使用凯撒方法，因为它在出口上显然是合法的。
-
-
 
 ```java
 {
@@ -15064,10 +16107,12 @@ public class Caesar {
             System.out.println("USAGE: java class");
             return;
         }
+
         try (var in = new FileInputStream(args[0]);
              var out = new FileOutputStream(args[1])) {
             int key = Integer.parseInt(args[2]);
             boolean done = false;
+
             while (!done) {
                 int ch = in.read();
                 if (ch == -1) done = true;
@@ -15078,37 +16123,46 @@ public class Caesar {
 }
 ```
 
-java.lang.Class 1.0
+## `java.lang.Class` 1.0
 
-- ClassLoader getClassLoader()
-获取加载此类的类加载器。
+- `ClassLoader getClassLoader()`
 
-java.lang.ClassLoader 1.0
+  获取加载此类的类加载器。
 
-- ClassLoader getParent() 1.2
-返回类加载器，如果父类加载器是引导类加载器（bootstrap）则返回 null。
+## `java.lang.ClassLoader` 1.0
 
-- static ClassLoader getSystemClassLoader() 1.2
-获取系统类加载器——即用于加载第一个应用程序类的类加载器。
+- `ClassLoader getParent()` 1.2
 
-- protected Class findClass(String name) 1.2
-应该由类加载器重写，以查找某个类的字节码并通过调用 `defineClass` 方法将其呈现给虚拟机。在类名中，使用 . 作为包名分隔符，并且不要使用 .class 后缀。
+  返回类加载器，如果父类加载器是引导类加载器（bootstrap）则返回 `null`。
 
-- Class defineClass(String name, byte[] bytecodeData, int offset, int length)
-向虚拟机添加一个新类，其字节码由给定数据范围提供。
+- `static ClassLoader getSystemClassLoader()` 1.2
 
-java.net.URLClassLoader 1.2
+  获取系统类加载器——即用于加载第一个应用程序类的类加载器。
 
-- URLClassLoader(URL[] urls)
-- URLClassLoader(URL[] urls, ClassLoader parent)
-构造一个从给定 URL 加载类的类加载器。如果 URL 以 / 结尾，则假设是一个目录，否则假设是一个 JAR 文件。
+- `protected Class findClass(String name)` 1.2
 
-java.lang.Thread 1.0
+  应该由类加载器重写，以查找某个类的字节码并通过调用 `defineClass` 方法将其呈现给虚拟机。在类名中，使用 `.` 作为包名分隔符，并且不要使用 `.class` 后缀。
 
-- ClassLoader getContextClassLoader() 1.2
-获取此线程的创建者指定的类加载器，该加载器被认为是执行此线程时最合理的。
-- void setContextClassLoader(ClassLoader loader) 1.2
-为此线程中的代码设置一个用于加载类的类加载器。如果在线程启动时没有显式设置上下文类加载器，则使用父线程的上下文类加载器。
+- `Class defineClass(String name, byte[] bytecodeData, int offset, int length)`
+
+  向虚拟机添加一个新类，其字节码由给定数据范围提供。
+
+## `java.net.URLClassLoader` 1.2
+
+- `URLClassLoader(URL[] urls)`
+- `URLClassLoader(URL[] urls, ClassLoader parent)`
+
+  构造一个从给定 URL 加载类的类加载器。如果 URL 以 `/` 结尾，则假设是一个目录，否则假设是一个 JAR 文件。
+
+## `java.lang.Thread` 1.0
+
+- `ClassLoader getContextClassLoader()` 1.2
+
+  获取此线程的创建者指定的类加载器，该加载器被认为是执行此线程时最合理的。
+
+- `void setContextClassLoader(ClassLoader loader)` 1.2
+
+  为此线程中的代码设置一个用于加载类的类加载器。如果在线程启动时没有显式设置上下文类加载器，则使用父线程的上下文类加载器。
 
 # 1.1.5. 字节码验证
 
@@ -15124,15 +16178,11 @@ java.lang.Thread 1.0
 
 如果这些检查中的任何一个失败，该类将被认为已损坏且不会被加载。
 
-**注意：** 如果你熟悉哥德尔定理（Gödel’s theorem），你可能会疑惑验证器如何证明类文件没有类型不匹配、未初始化的变量和栈溢出。哥德尔定理指出，无法设计出一种算法来处理程序并判断其是否具有特定属性（例如不产生栈溢出）。这难道不是 Oracle 的公关部门与逻辑法则之间的冲突吗？事实上，验证器在哥德尔的意义上*不是*决策算法。如果验证器接受了一个程序，它确实是安全的。然而，验证器可能会拒绝某些虚拟机指令，尽管它们实际上是安全的。（当你被迫使用占位值初始化变量时，可能遇到过这个问题，因为验证器无法看到它之后会被正确初始化的。）
+> **注意：** 如果你熟悉哥德尔定理（Gödel’s theorem），你可能会疑惑验证器如何证明类文件没有类型不匹配、未初始化的变量和栈溢出。哥德尔定理指出，无法设计出一种算法来处理程序并判断其是否具有特定属性（例如不产生栈溢出）。这难道不是 Oracle 的公关部门与逻辑法则之间的冲突吗？事实上，验证器在哥德尔的意义上*不是*决策算法。如果验证器接受了一个程序，它确实是安全的。然而，验证器可能会拒绝某些虚拟机指令，尽管它们实际上是安全的。（当你被迫使用占位值初始化变量时，可能遇到过这个问题，因为验证器无法看到它之后会被正确初始化的。）
 
 这种严格的验证是一项重要的安全考量。如果不捕获，意外错误（如未初始化的变量）很容易造成灾难。更重要的是，在互联网的开放世界中，你必须防止创建恶意影响的恶意程序员。例如，通过修改运行时栈上的值或向对象的私有字段写入数据，程序可以突破安全系统。然而，你可能会想，为什么需要一个特殊的验证器来检查这些特征？毕竟，编译器永远不允许你生成一个使用了未初始化变量或从另一个类访问私有字段的类文件。事实上，为 Java 语言编译器生成的类文件可以通过验证。但是，类文件中使用的字节码格式有详尽的文档，对于熟悉汇编编程和十六进制编辑器的人来说，手动制作类文件要容易得多。
 
-
-
-
-
-```
+```bash
 java -noverify verifier.VerifierTest
 ```
 
@@ -15140,11 +16190,11 @@ java -noverify verifier.VerifierTest
 
 以下是一个典型的输出：
 
-```
+```text
 1 + 2 == 15102330
 ```
 
-> 注意：`-noverify` 和 `-Xverify:none` 选项已过用并可能会被移除，但在它们可用期间，它们展示了损坏造成的影响。
+> **注意：** `-noverify` 和 `-Xverify:none` 选项已过用并可能会被移除，但在它们可用期间，它们展示了损坏造成的影响。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_929_0.png)
 
@@ -15152,38 +16202,45 @@ java -noverify verifier.VerifierTest
 
 ```java
 1 package verifier;
-2 
-3 /**
-4 * 此应用程序演示了如何使用字节码
-5 * 十进制编辑器修改类文件，这里
-6 * @version 1.10 2018-05-05
-7 * @author Cay Horstmann
-8 */
-9 public class VerifierTest
-```
 
-```java
-10 {
-11 public static void main(String[] args)
-12 {
-13 System.out.println("1 + 2 == " + fun(
-14 }
-15 
-16 /**
-17 * 计算 1 + 2 的函数。
-18 * @return 3，如果代码没有被
-19 */
-20 public static int fun()
-21 {
-22 int m;
-23 int n;
-24 m = 1;
-25 n = 2;
-26 // 使用十六进制编辑器更改为 "m = 2
-27 int r = m + n;
-28 return r;
-29 }
-30 }
+2
+
+3 import java.security.*;
+
+4 import javax.security.*;
+
+5 import javax.security.auth.*;
+
+6
+
+7 /**
+8  * 此程序演示了如何使用字节码
+9  * 十进制编辑器修改类文件，这里
+10  * @version 1.10 2018-05-05
+11  * @author Cay Horstmann
+12  */
+13 public class VerifierTest
+14 {
+15     public static void main(String[] args)
+16     {
+17         System.out.println("1 + 2 == " + fun(
+18     }
+19
+20     /**
+21      * 计算 1 + 2 的函数。
+22      * @return 3，如果代码没有被
+23      */
+24     public static int fun()
+25     {
+26         int m;
+27         int n;
+28         m = 1;
+29         n = 2;
+30         // 使用十六进制编辑器更改为 "m = 2
+31         int r = m + n;
+32         return r;
+33     }
+34 }
 ```
 
 ## 1.2. 用户身份验证
@@ -15198,35 +16255,39 @@ JAAS 是一个“可插的”API，它将 Java 应用程序与实现认证的特
 
 以下是登录代码的基本结构：
 
-```
+```java
 try {
   System.setSecurityManager(new SecurityManager());
+
   var context = new LoginContext("Login1", // callback);
   context.login();
+
   // 获取经过认证的 Subject
   Subject subject = context.getSubject();
+
   ..
   context.logout();
-} catch (LoginException e) // 如果登录失败则抛出异常
-{
-    exception.printStackTrace();
+} catch (LoginException e) { // 如果登录失败则抛出异常
+  exception.printStackTrace();
 }
 ```
 
-现在，subject 表示经过认证的个人。
+现在，`subject` 表示经过认证的个人。
 
-LoginContext 构造函数中的字符串参数 "Login1" 指向 JAAS 文件中具有同名的条目。以下是一个示例配置文件：
+`LoginContext` 构造函数中的字符串参数 `"Login1"` 指向 JAAS 文件中具有同名的条目。以下是一个示例配置文件：
 
-```
+```text
 Login1
 {
     com.sun.security.auth.module.UnixLoginModule
     com.whizzbang.auth.module.RetinaScanModule sut
 }
+
 Login2
 {
     ...
 ;}
+
 other
 {
     ...
@@ -15239,7 +16300,7 @@ other
 
 当然，JDK 并不包含任何生物识别登录模块。以下模块由 `com.sun.security.auth.module` 包提供：
 
-```
+```text
 UnixLoginModule
 NTLLoginModule
 Krb5LoginModule
@@ -15249,14 +16310,14 @@ KeyStoreLoginModule
 
 一个登录策略由一系列登录模块组成，每个模块被标记为 `required`、`sufficient`、`requisite` 或 `optional`。这些关键字的含义由以下算法给出：
 
-- 1. 依次执行模块，直到某个 `sufficient` 模块成功、某个 `requisite` 模块失败，或到达模块列表末尾。
-- 2. 如果所有 `required` 和 `requisite` 模块都成功，或者它们中没有被执行，且至少有一个 `sufficient` 或 `optional` 模块成功，则认证成功。
+1. 依次执行模块，直到某个 `sufficient` 模块成功、某个 `requisite` 模块失败，或到达模块列表末尾。
+2. 如果所有 `required` 和 `requisite` 模块都成功，或者它们中没有被执行，且至少有一个 `sufficient` 或 `optional` 模块成功，则认证成功。
 
-登录认证的是一个 *subject*（主体），它可能有多个 *principal*（主体成员）。principal 描述了 subject 的某些属性，例如用户名、组 ID 或角色。`com.sun.security.auth.UnixPrincipal` 描述 UNIX 登录名，`UnixNumericGroupPrincipal` 可以测试是否属于 UNIX 组。
+登录认证的是一个 *subject*（主体），它可能有多个 *principal*（主体成员）。`principal` 描述了 `subject` 的某些属性，例如用户名、组 ID 或角色。`com.sun.security.auth.UnixPrincipal` 描述 UNIX 登录名，`UnixNumericGroupPrincipal` 可以测试是否属于 UNIX 组。
 
-[列表 9.4] 中的程序显示了当前登录用户的 principals。以以下方式运行程序：
+[列表 9.4] 中的程序显示了当前登录用户的 `principals`。以以下方式运行程序：
 
-```
+```bash
 java -Djava.security.auth.login.config=auth/jaas
 ```
 
@@ -15268,16 +16329,22 @@ java -Djava.security.auth.login.config=auth/jaas
 
 ```java
 1 package auth;
+
 2
+
 3 import java.security.*;
+
 4 import javax.security.*;
+
 5 import javax.security.auth.*;
+
 6
+
 7 /**
-8 * 此程序获取一个
-9 * @version 1.0 29
-10 * @author Cay Horstmann
-11 */
+8  * 此程序获取一个
+9  * @version 1.0 29
+10  * @author Cay Horstmann
+11  */
 12 public class AuthTest {
 13     public static void main(String[] args) {
 14         try {
@@ -15298,38 +16365,39 @@ java -Djava.security.auth.login.config=auth/jaas
 
 # 列表 1.5 auth/jaas.config
 
-```
+```text
 1 Login1
+
 2 {
+
 3 com.sun.security.auth.module.UnixLoginModule
+
 4 };
 ```
 
+
+
 - `LoginContext(String name)` 构建登录上下文。名称对应 JAAS 配置中的描述。
-- `void login()` 建立登录，如果登录失败则抛出 LoginException。调用 JAAS 配置中模块的 方法。
-- `void logout()` 注销 subject。调用 JAAS 配置中模块的 方法。
-- `Subject getSubject()` 返回认证的 subject。
-- `Set<Principal> getPrincipals()` 获取此 subject 的 principals。
-- `String getName()` 返回此 principal 的标识名称。
+- `void login()` 建立登录，如果登录失败则抛出 `LoginException`。调用 JAAS 配置中模块的方法。
+- `void logout()` 注销 `subject`。调用 JAAS 配置中模块的方法。
+- `Subject getSubject()` 返回认证的 `subject`。
+- `Set<Principal> getPrincipals()` 获取此 `subject` 的 `principals`。
+- `String getName()` 返回此 `principal` 的标识名称。
 
 ## 1.2.2. JAAS 登录模块
 
-在本节中，我们将查看一个 JAAS 示例，展示如何实现基于角色的授权。登录模块的工作之一是填充经过认证 subject 的 principal 集合。如果登录模块支持角色，它会添加描述角色的 Principal 对象。Java 库没有提供为此目的的类，所以我自己写了一个（参见列表 9.6）。
+在本节中，我们将查看一个 JAAS 示例，展示如何实现基于角色的授权。登录模块的工作之一是填充经过认证 `subject` 的 `principal` 集合。如果登录模块支持角色，它会添加描述角色的 `Principal` 对象。Java 库没有提供为此目的的类，所以我自己写了一个（参见列表 9.6）。
 
 登录模块并不收集用户名和密码；这种分离使得我们可以使用同一个登录模块，而不必担心登录信息来自 GUI 对话框、控制提示还是配置文件。
 
-在构造 LoginContext 时指定处理器，例如：
+在构造 `LoginContext` 时指定处理器，例如：
 
-```
+```java
 var context = new LoginContext("Login1",
-new com.sun.security.auth.callback.TextCallback
+    new com.sun.security.auth.callback.TextCallbackHandler());
 ```
 
-
-
-
-
-TextCallbackHandler 类会在控制台提示输入用户名和密码。
+`TextCallbackHandler` 类会在控制台提示输入用户名和密码。
 
 然而，你通常会有自己的用户界面来收集用户名和密码。在这种情况下，使用回调机制显得多此一举，但没有其他方法可以传输这些信息。列表 9.8 中的示例应用程序使用了一个简单的处理器，它仅存储并返回这些信息。
 
@@ -15345,7 +16413,6 @@ public void handle(Callback[] callbacks) {
         }
     }
 }
-}
 ```
 
 `SimpleLoginModule` 的 `login` 方法准备了它身份验证所需的回调数组：
@@ -15353,41 +16420,42 @@ public void handle(Callback[] callbacks) {
 ```java
 var nameCallback = new NameCallback("username: ");
 var passwordCallback = new PasswordCallback("pass");
+
 callbackHandler.handle(new Callback[] { nameCallback });
 ```
 
 根据处理器的不同，`handle` 方法可以询问用户或从某处获取信息。当 `handle` 方法返回时，`nameCallback` 和 `passwordCallback` 对象已经被设置完毕。然后，`login` 方法获取用户名和密码并检查它们是否有效。
 
-列表 9.9 中的程序使用了 `TextCallbackHandler` 或自定义登录方式，其中用户名位于命令行中，并提示输入密码。当登录成功时，将显示主体（principals）。以如下方式运行程序：
+列表 9.9 中的程序使用了 `TextCallbackHandler` 或自定义登录方式，其中用户名位于命令行中，并提示输入密码。当登录成功时，将显示主体（`principals`）。以如下方式运行程序：
 
 ```bash
 java -Djava.security.auth.login.config=jaas/jaas
-java -Djava.security.auth.login.config=jaas/jaas 
+java -Djava.security.auth.login.config=jaas/jaas
 ```
 
 > **注意：** 支持更复杂的两阶段协议是可能的，如果登录配置中的所有模块都执行成功，则登录将被*提交*（committed）。有关更多信息，请参阅登录模块开发者指南：https://docs.oracle.com/javaase/8/docs/technotes/guides/security/jaas/JAASLMDevGuide.html。
 
-## Listing 1.6 jaas/RolePrincipal.java
+## Listing 1.6 `jaas/RolePrincipal.java`
 
 ```java
-1 package jaas;
-2
-3 import java.security.*;
-5 /**
-6 * 一个具有具名角色的主体。
-7 */
-8 public record RolePrincipal(String name) in
-9 {
-10 /**
-11 * @return 角色名称。
-12 */
-public String getName()
-{
-    return name;
+package jaas;
+
+import java.security.*;
+
+/**
+ * 一个具有具名角色的主体。
+ */
+public record RolePrincipal(String name) {
+    /**
+     * @return 角色名称。
+     */
+    public String getName() {
+        return name;
+    }
 }
 ```
 
-**Listing 1.7** jaas/SimpleLoginModule.java
+## Listing 1.7 `jaas/SimpleLoginModule.java`
 
 ```java
 package jaas;
@@ -15408,75 +16476,89 @@ import javax.security.auth.spi.*;
 public class SimpleLoginModule implements LoginModule {
     private Subject subject;
     private CallbackHandler callbackHandler;
-private boolean debug;
+    private boolean debug;
     private String passwordFile;
-public void initialize(Subject subject,
-Map<String, ?> sharedState, Map<String, ?> options)
-{
-    this.subject = subject;
-    this.callbackHandler = callbackHandler;
-    debug = options.get("debug").equals("true");
-    passwordFile = "" + options.get("passwordFile");
-}
-public boolean login() throws LoginException
-{
-    var nameCallback = new NameCallback("username: ");
-    var passwordCallback = new PasswordCallback("password: ", true);
-    try {
-        if (debug) {
-            System.Logger logger = System.getLogger("");
-            logger.log(System.Logger.Level.INFO, "Logging in");
-        }
-        if (callbackHandler == null) throw new LoginException("CallbackHandler is null");
-        callbackHandler.handle(new Callback[] { nameCallback, passwordCallback });
-        return checkLogin(nameCallback.getName(), new String(passwordCallback.getPassword()));
-    } catch (UnsupportedCallbackException e) {
-    var e2 = new LoginException();
-    e2.initCause(e);
-    throw e2;
-}
-}/**/**
- * 检查用于用户名和角色的
- * 主体的身份信息
- * @param username 用户名
- * @param password 字符数组 co
- * @return 如果身份验证通过 true
- */
-private boolean checkLogin(String username, char[] password)
-throws IOException
-{
-    try (var in = new Scanner(Path.of(passwordFile))) {
-        while (in.hasNextLine()) {
-            String[] inputs = in.nextLine().split(", ");
-            if (inputs[0].equals(username) && Arrays.equals(inputs[1].toCharArray(), password)) {
-                String role = inputs[2];
-                Set<Principal> principals = new HashSet<>();
-                principals.add(new UserPrincipal(username));
-                principals.add(new RolePrincipal(role));
-                return true;
+
+    public void initialize(
+        Subject subject,
+        Map<String, ?> sharedState,
+        Map<String, ?> options
+    ) {
+        this.subject = subject;
+        this.callbackHandler = callbackHandler;
+        debug = options.get("debug").equals("true");
+        passwordFile = "" + options.get("passwordFile");
+    }
+
+    public boolean login() throws LoginException {
+        var nameCallback = new NameCallback("username: ");
+        var passwordCallback = new PasswordCallback("password: ", true);
+
+        try {
+            if (debug) {
+                System.Logger logger = System.getLogger("");
+                logger.log(System.Logger.Level.INFO, "Logging in");
             }
+
+            if (callbackHandler == null) {
+                throw new LoginException("CallbackHandler is null");
+            }
+
+            callbackHandler.handle(new Callback[] { nameCallback, passwordCallback });
+            return checkLogin(
+                nameCallback.getName(),
+                new String(passwordCallback.getPassword())
+            );
+        } catch (UnsupportedCallbackException e) {
+            var e2 = new LoginException();
+            e2.initCause(e);
+            throw e2;
         }
     }
-}
-return false;
-}
- 
-public boolean logout()
-{
-    return true;
-}
 
-public boolean abort()
-{
-    return true;
-}
-public boolean commit()
-{
-    return true;
+    /**
+     * 检查用于用户名和角色的
+     * 主体的身份信息
+     *
+     * @param username 用户名
+     * @param password 字符数组 co
+     * @return 如果身份验证通过 true
+     */
+    private boolean checkLogin(String username, char[] password)
+        throws IOException {
+        try (var in = new Scanner(Path.of(passwordFile))) {
+            while (in.hasNextLine()) {
+                String[] inputs = in.nextLine().split(", ");
+
+                if (inputs[0].equals(username)
+                    && Arrays.equals(inputs[1].toCharArray(), password)) {
+                    String role = inputs[2];
+                    Set<Principal> principals = new HashSet<>();
+                    principals.add(new UserPrincipal(username));
+                    principals.add(new RolePrincipal(role));
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public boolean logout() {
+        return true;
+    }
+
+    public boolean abort() {
+        return true;
+    }
+
+    public boolean commit() {
+        return true;
+    }
 }
 ```
 
-## Listing 1.8 jaas/SimpleCallbackHandler.java
+## Listing 1.8 `jaas/SimpleCallbackHandler.java`
 
 ```java
 package jaas;
@@ -15492,6 +16574,7 @@ public class SimpleCallbackHandler implements CallbackHandler {
 
     /**
      * 构造回调处理器。
+     *
      * @param username 用户名
      * @param password 字符数组 co
      */
@@ -15500,19 +16583,19 @@ public class SimpleCallbackHandler implements CallbackHandler {
         this.password = password;
     }
 
-public void handle(Callback[] callbacks) {
-      for (Callback callback : callbacks) {
-        switch (callback) {
-            case NameCallback c -> c.setName(username);
-            case PasswordCallback c -> c.setPassword(password);
-            default -> {};
+    public void handle(Callback[] callbacks) {
+        for (Callback callback : callbacks) {
+            switch (callback) {
+                case NameCallback c -> c.setName(username);
+                case PasswordCallback c -> c.setPassword(password);
+                default -> {}
+            }
         }
-      }
     }
 }
 ```
 
-## Listing 1.9 jaas/JAAest.java
+## Listing 1.9 `jaas/JAAest.java`
 
 ```java
 package jaas;
@@ -15526,12 +16609,14 @@ import javax.security.auth.login.*;
 
 /**
  * 此程序展示了如何使用 JAAS 进行身份验证。
+ *
  * @version 2023-11-12
  * @author Caymann
  */
 public class JAASTest {
     public static void main(final[] args) {
         CallbackHandler handler;
+
         if (args.length > 0) {
             // 在大多数应用中，你有自己的接口
             // 这里，用户提供用户名
@@ -15547,61 +16632,70 @@ public class JAASTest {
         try {
             var context = new LoginContext("jaas", handler);
             context.login();
+
             Subject subject = context.getSubject();
             for (Principal p : subject.getPrincipals()) {
                 System.out.println(p.getClass().getName());
             }
+
             context.logout();
         } catch (LoginException e) {
             e.printStackTrace();
             Throwable cause = e.getCause();
-            if (cause != null) cause.printStackTrace();
+            if (cause != null) {
+                cause.printStackTrace();
+            }
         }
     }
 }
 ```
 
-## Listing 1.10 jaas/jaas.config
+## Listing 1.10 `jaas/jaas.config`
 
 ```config
 LoginContext {
-  jaas.SimpleLoginModule required
+    jaas.SimpleLoginModule required
 };
 ```
 
 
 
+```java
+sharedState, Map<String, ?> options
+```
 
+初始化此 `LoginModule` 以对指定的 `subject` 进行身份验证。在登录处理期间，使用指定的 `handler` 收集登录信息。使用 `sharedState` 映射与其他登录模块进行通信。`options` 映射包含登录配置中为此模块实例指定的键/值对。
 
-sharedState, Map<String,?> options
-初始化此 LoginModule 以对指定的 subject 进行身份验证。在登录处理期间，使用指定的 handler 收集登录信息。使用 sharedState 映射与其他登录模块进行通信。options 映射包含登录配置中为此模块实例指定的键/值对。
+- `boolean login()`
 
-- - boolean login()
-  执行验证过程并填充 subject 的 principals。如果登录成功，则返回 true。
+  执行验证过程并填充 `subject` 的 `principals`。如果登录成功，则返回 `true`。
 
-- - boolean commit()
-  在所有登录模块都成功后调用，用于需要两阶段提交的登录场景。如果操作成功，则返回 true。
+- `boolean commit()`
 
-- - boolean abort()
-  如果另一个登录模块的失败导致登录过程中止，则调用。如果操作成功，则返回 true。
+  在所有登录模块都成功后调用，用于需要两阶段提交的登录场景。如果操作成功，则返回 `true`。
 
-- - boolean logout()
-  注销此 subject。如果操作成功，则返回 true。
+- `boolean abort()`
+
+  如果另一个登录模块的失败导致登录过程中止，则调用。如果操作成功，则返回 `true`。
+
+- `boolean logout()`
+
+  注销此 `subject`。如果操作成功，则返回 `true`。
 
 ## 1.3. 数字签名
 
-如前所述，applet 是引发 Java 热潮的开端。在实践中，人们发现虽然他们可以编写动画化的 applet（例如著名的“神经文本”），但在 JDK 1.0 安全模型中，applet 无法做很多实用的事情。例如，由于 JDK 1.0 下的 applet 受到严格监控，即使从公司安全的内部网执行 applet 的风险相对较小，它们在企业内部网中也做不了什么。。Sun 公司很快意识到，要让 applet 变得真正有用，用户需要能够根据 applet 的来源分配不同级别的安全权限。如果 applet 来自受信任的供应商且未被篡改，那么该 applet 的用户可以决定是否赋予 applet 更多权限。
+如前所述，`applet` 是引发 Java 热潮的开端。在实践中，人们发现虽然他们可以编写动画化的 `applet`（例如著名的“神经文本”），但在 JDK 1.0 安全模型中，`applet` 无法做很多实用的事情。例如，由于 JDK 1.0 下的 `applet` 受到严格监控，即使从公司安全的内部网执行 `applet` 的风险相对较小，它们在企业内部网中也做不了什么。。Sun 公司很快意识到，要让 `applet` 变得真正有用，用户需要能够根据 `applet` 的来源分配不同级别的安全权限。如果 `applet` 来自受信任的供应商且未被篡改，那么该 `applet` 的用户可以决定是否赋予 `applet` 更多权限。
 
-为了给 applet 更多信任，我们需要知道两点：
+为了给 `applet` 更多信任，我们需要知道两点：
 
-- applet 来自于哪里？
+- `applet` 来自于哪里？
 - 代码在传输过程中是否被损坏？
 
-在过去的 50 年里，数学家和计算机科学家已经开发了复杂的算法来确保数据的完整性并创建电子签名。java.security 包包含了许多此类算法的实现。幸运的是，你不需要理解底层的数学原理即可使用 java.security 包中的算法。在接下来的章节中，我将向你展示消息摘要（message digests）如何检测数据文件的变化，以及数字签名如何证明签名者的身份。
+在过去的 50 年里，数学家和计算机科学家已经开发了复杂的算法来确保数据的完整性并创建电子签名。`java.security` 包包含了许多此类算法的实现。幸运的是，你不需要理解底层的数学原理即可使用 `java.security` 包中的算法。在接下来的章节中，我将向你展示消息摘要（message digests）如何检测数据文件的变化，以及数字签名如何证明签名者的身份。
 
 ### 1.3.1. 消息摘要
 
-消息摘要是数据块的数字指纹。例如，所谓的 SHA-1（安全哈希算法 #1）可以将任何数据块（无论多长）压缩成一个 160 位（20 字节）序列。就像真实的指纹一样，人们希望两个不同的消息具有相同的 SHA-1 指纹。当然，这并不可能的——只有 $2^{160}$ 个 SHA-1 指纹，必然存在某些具有相同指纹的消息。$2^{160}$ 是一个巨大的数字，碰撞概率微忽略不微。微忽略到什么程度？根据 James Walsh 在《True Odds: How Risks Affect Your Everyday Life》（Merritt Publishing, 1996）中的说法，你被雷劈死的概率是 30,000 分之一。现在，想想另外九个人——例如你最不喜欢的经理或教授。你和他们所有人被雷劈死的概率比一个伪造消息与原始消息具有相同 SHA-1 指纹的概率还要高。（当然，会有超过十个人（你可能一个都不认识他们）被雷劈死。然而，我们讨论的是你所选的这特定这些人被消灭的极微得多的可能性。）
+消息摘要是数据块的数字指纹。例如，所谓的 SHA-1（安全哈希算法 #1）可以将任何数据块（无论多长）压缩成一个 160 位（20 字节）序列。就像真实的指纹一样，人们希望两个不同的消息具有相同的 SHA-1 指纹。当然，这并不可能的——只有 `2^160` 个 SHA-1 指纹，必然存在某些具有相同指纹的消息。`2^160` 是一个巨大的数字，碰撞概率微忽略不微。微忽略到什么程度？根据 James Walsh 在《True Odds: How Risks Affect Your Everyday Life》（Merritt Publishing, 1996）中的说法，你被雷劈死的概率是 30,000 分之一。现在，想想另外九个人——例如你最不喜欢的经理或教授。你和他们所有人被雷劈死的概率比一个伪造消息与原始消息具有相同 SHA-1 指纹的概率还要高。（当然，会有超过十个人（你可能一个都不认识他们）被雷劈死。然而，我们讨论的是你所选的这特定这些人被消灭的极微得多的可能性。）
 
 消息摘要有两个基本属性：
 
@@ -15614,13 +16708,13 @@ sharedState, Map<String,?> options
 
 这条消息（带有最后的换行符）的 SHA-1 指纹为：
 
-```
+```text
 12 5F 09 03 E7 31 30 19 2E A6 E7 E4 90 43 84 B4
 ```
 
 不信任的父亲将消息留给了一个律师，将指纹给了另一位律师。现在，假设 George 贿赂了持有消息的律师。他想修改消息让 Bill 一无所获。当然，这会让指纹变成一个完全不同的模式：
 
-```
+```text
 7D F6 08 08 EC EB 40 CD AB 74 ED E9 86 F9 ED 99
 ```
 
@@ -15628,17 +16722,19 @@ George 能找到某些匹配指纹的措辞吗？如果他从地球形成起就�
 
 已有许多算法被设计用于计算此类消息摘要。其中包括 SHA-1（美国国家标准与技术研究院开发的安全哈希算法）和 MD5（麻省理工学院的 Ronald Rivest 发明的算法）。这两种算法都以巧妙的方式打乱消息的位。有关这些算法的细节，请参见 William Stallings 编写的《Cryptography and Network Security, Seventh Edition》（Pearson, 2017）。然而，两种算法中都发现了细微的规律性，NIST 建议切换到更强大的替代方案。Java 支持 SHA-2 和 SHA-3。
 
-MessageDigest 类是创建封装指纹算法对象的工厂。它有一个静态方法 `getInstance`，返回一个实现消息摘要算法的子类对象。例如，这里是如何获取一个实现消息摘要算法的对象：
+`MessageDigest` 类是创建封装指纹算法对象的工厂。它有一个静态方法 `getInstance`，返回一个实现消息摘要算法的子类对象。例如，这里是如何获取一个实现消息摘要算法的对象：
 
 ```java
 MessageDigest alg = MessageDigest.getInstance("SHA-1");
 ```
 
-一旦获得 MessageDigest 对象，通过反复调用 `update` 方法喂入字节。例如，以下代码将文件中的所有字节传递给创建的对象以进行指纹处理：
+一旦获得 `MessageDigest` 对象，通过反复调用 `update` 方法喂入字节。例如，以下代码将文件中的所有字节传递给创建的对象以进行指纹处理：
 
 ```java
 InputStream in = new FileInputStream(filename);
+
 int ch;
+
 while ((ch = in.read()) != -1)
     alg.update((byte) ch);
 ```
@@ -15647,6 +16743,7 @@ while ((ch = in.read()) != -1)
 
 ```java
 byte[] bytes = ...;
+
 alg.update(bytes);
 ```
 
@@ -15662,7 +16759,7 @@ Listing 1.11 计算消息摘要。你可以在命令行指定文件和算法：
 
 如果你不提供命令行参数，将提示输入文件和算法。
 
-# Listing 1.11 hash/Digest.java
+## Listing 1.11 `hash/Digest.java`
 
 ```java
 package hash;
@@ -15677,14 +16774,20 @@ import java.util.*;
  * @version 1.2 2018-04-10
  * @author Cay Horstmann
  */
+
 public class Digest {
+
     /**
      * @param args args[0] 是文件名，
      * (SHA-1, SHA-256 或 MD5)
      */
+
     public static void main(String[] args) {
+
         var in = new Scanner(System.in);
+
         String filename;
+
         if (args.length >= 1)
             filename = args[0];
         else
@@ -15692,66 +16795,80 @@ public class Digest {
             System.out.print("File name: ");
             filename = in.nextLine();
         }
+
         String algname;
+
         if (args.length >= 2)
             algname = args[1];
         else
         {
             System.out.println("Select one of\n    for (Provider p : Security.getProviders()) {
+
                 for (Provider.Service s : p.getServices()) {
+
                     if (s.getType().equals("MessageDigest"))
                         System.out.println(s.getAlgorithm());
+
                 }
+
             }
+
             ");
+
             System.out.print("Algorithm: ");
             algname = in.nextLine();
         }
+
         MessageDigest alg = MessageDigest.getInstance(algname);
         byte[] input = Files.readAllBytes(Paths.get(filename));
         byte[] hash = alg.digest(input);
+
         for (byte h : hash)
             System.out.printf("%02X ", h & 0xFF);
+
         System.out.println();
     }
 }
 ```
 
+## `java.security.MessageDigest` 1.1
 
+- `static MessageDigest getInstance(String algorithmName)` 返回一个实现指定算法的 `MessageDigest` 对象。如果未提供算法，则抛出 `NoSuchAlgorithmException`。
+- `void update(byte input)`
+- `void update(byte[] input)`
+- `void update(byte[] input, int offset, int len)` 使用指定的字节更新摘要计算。
+- `byte[] digest()` 完成哈希计算，返回计算出的摘要结果，并重置算法对象。
+- `void reset()` 重置摘要状态。
 
-
-```java
-java.security.MessageDigest 1.1
-```
-
-* `static MessageDigest getInstance(String algorithmName)` 返回一个实现指定算法的 MessageDigest 对象。如果未提供算法，则抛出 NoSuchAlgorithmException。
-* `void update(byte input)`
-* `void update(byte[] input)`
-* `void update(byte[] input, int offset, int len)` 使用指定的字节更新摘要计算。
-* `byte[] digest()` 完成哈希计算，返回计算出的摘要结果，并重置算法对象。
-* `void reset()` 重置摘要状态。
-
-## 1.3.2. 消息签名
+### 1.3.2. 消息签名
 
 在上一节中，你已经了解了如何计算消息摘要——即原始消息的指纹。如果消息被篡改，篡改后消息的指纹将与原始消息的指纹不匹配。如果消息和指纹分开投送，接收者可以检查消息是否被篡改。然而，如果消息和指纹都被截获，修改消息并重新计算指纹是一件易事。毕竟，消息摘要算法是公开已知的，它们不需要密钥密钥。在这种情况下，伪造消息和重新计算指纹的接收者永远不会知道消息已被篡改。
 
-为了帮助你理解数字签名的工作原理，让我们来看来自*公钥密码学*领域的几个概念。公钥密码学基于*公钥*和*私钥*的概念。其核心思想是向世界上所有人公布你的公钥。然而，只有你持有私钥，妥善保护它且不泄露给他人至关重要。密钥之间通过数学关系进行匹配，尽管这些关系的精确性质对我们并不重要。（如果你感兴趣，可以在[应用密码学手册 (The Handbook of Applied Cryptography)](https://cacr.uwaterloo.ca/hac/) 中查找。）
+为了帮助你理解数字签名的工作原理，让我们来看来自公钥密码学领域的几个概念。公钥密码学基于公钥和私钥的概念。其核心思想是向世界上所有人公布你的公钥。然而，只有你持有私钥，妥善保护它且不泄露给他人至关重要。密钥之间通过数学关系进行匹配，尽管这些关系的精确性质对我们并不重要。（如果你感兴趣，可以在[应用密码学手册 (The Handbook of Applied Cryptography)](https://cacr.uwaterloo.ca/hac/) 中查找。）
 
 密钥非常长且复杂。例如，这里有一对匹配的数字签名算法（DSA）公私钥。
 
 公钥：
-```
+
+```text
 p: fca682ce8e1caba26ecf7110e26db078b05edecbc0889bcd132acd5099151bdc43ee737592e17
+
 q: 962eddcc369cba8ebb260ee6b6a126d9346e38c5
+
 g: 678471b27a9cf44ee91a49c5147db1a9aaf244f05a4340935630e1c2062354d0da206c416e50be794ca4
+
 y: c0b6e67b4ac098eb1a32c5f8c4c1f0e7e6fb908325322e340b927281ddb22cb4bcdf596d7de4d1b977d50
 ```
 
 私钥：
-```
+
+```text
 p: fca682ce8e12caba26efccf7110e526db078b05edecbc0ed089bcd132acd5099151bdc43ee737592e17
+
 q: 962eddcc39cba8ebb260ee6b6a126d9346e385
+
 g: 678471b27a9cf44ee91a49c5147db1a9aaf244f05a4340935630e1c2062354d0da206c416e50be794ca4
+
 x: 146c09f881656cc6c51f27ea6c3a91b85ed1d70a
 ```
 
@@ -15761,9 +16878,7 @@ x: 146c09f881656cc6c51f27ea6c3a91b85ed1d70a
 
 图 9.4 展示了该过程在实践中是如何运作的。
 
-![](img/cb92f69d26362e00d7f88cc964_0.png)
-
- 图 1.4：公钥交换
+![图 1.4：公钥交换](img/cb92f69d26362e00d7f88cc964_0.png)
 
 假设 Alice 想要发送一条消息，Bob 想要确认这条消息确实来自 Alice。Alice 使用她的私钥对消息进行签名，然后将消息和签名发送给 Bob。Bob 使用 Alice 的公钥验证签名。如果消息被篡改，篡改后消息的指纹将与原始消息的指纹不匹配。如果消息和指纹分开投送，接收者可以检查消息是否被篡改。然而，如果消息和指纹都被截获，修改消息并重新计算指纹是一件易事。毕竟，消息摘要算法是公开已知的，它们不需要密钥密钥。在这种情况下，伪造消息和重新计算指纹的接收者永远不会知道消息已被篡改。
 
@@ -15777,17 +16892,27 @@ keytool -genkey -alias alice -keyalg RSA -keysize 2048 -keystore alice.jks
 
 执行该命令后，会提示你输入以下信息：
 
-```
+```text
 Enter keystore password:
+
 Enter new keystore password:
+
 Enter new keystore password:
+
 What is your first and last name <Alice> Alice
+
 What is the name of your unit [Engineering]> Engineering
+
 What is the name of your organization [ Corp Corp
+
 What is your City or Locality [San Francisco]> San Francisco
+
 What is your State or Province [CA]> CA
+
 What is two letter code [US]> US
+
 Is this answer correct?
+
 yes
 ```
 
@@ -15799,23 +16924,39 @@ keytool -list -v -keystore alice.jks
 
 输出大致如下：
 
-```
+```text
 Keystore type: PKCS12
+
 Certificate chain type: PKCS12
+
 Certificate chain length: 1
+
 Entry type: PrivateKey
+
 Alias name: alice
+
 Creation date: Jan 16, 2024
+
 Entry algorithm: RSA
+
 Key size: 2048 bits
+
 Certificate details:
+
 Owner: CN=Alice, OU=Engineering, O=Corp, L=San Francisco, ST=CA, C=US
+
 Certificate D9:
+
 ...
+
 Signature algorithm name: SHA256WithRSA
+
 Signature hash algorithm: SHA256
+
 Public key algorithm: RSA
+
 2048 bits
+
 Version: 3
 ```
 
@@ -15829,10 +16970,14 @@ keytool -exportcert -alias alice -keystore alice.jks -file alice.cer
 
 ```bash
 echo "Hello Bob" > message.txt
+
 keytool -signalg -alias alice -keystore alice.jks -file message.sig -infile message.txt
 ```
 
 然后，Bob 使用 Alice 的公钥证书验证签名：
+
+
+
 
 ```bash
 keytool -verifycert -alias alice -keystore keystore -file message.sig -infile message.txt
@@ -15840,45 +16985,43 @@ keytool -verifycert -alias alice -keystore keystore -file message.sig -infile me
 
 如果签名有效，输出将显示：
 
-```
+```text
 Signature properly verified
 ```
 
-
-
-你可以通过访问网站 https://www.digicert.com/kb/digicert-root-certificates.htm 来检查证书是否有效。
+你可以通过访问网站 <https://www.digicert.com/kb/digicert-root-certificates.htm> 来检查证书是否有效。
 
 一旦 Bob 信任了该证书，他就可以将其导入自己的密钥库。
 
-```
+```bash
 keytool -importcert -keystore bob.jks -alias alice
 ```
 
-> **注意：** 永远不要向密钥库导入你不完全信任的证书。一旦证书被密钥库，任何使用该密钥库的程序都会认为该证书可以用于验证签名。
+> **注意：** 永远不要向密钥库导入你不完全信任的证书。一旦证书被密钥库接受，任何使用该密钥库的程序都会认为该证书可以用于验证签名。
 
 现在 Alice 可以开始向 Bob 发送签名的文档了。`jarsigner` 工具用于签名和验证 JAR 文件。Alice 只需将要签名的文档添加到 JAR 文件中。
 
-```
+```bash
 jar cvf document.jar document.txt
 ```
 
 然后，她使用 `jarsigner` 工具为文件添加签名。她需要指定密钥库、JAR 文件以及要使用的密钥别名。
 
-```
+```bash
 jarsigner -keystore alice.jks document.jar alice
 ```
 
 当 Bob 接收文件时，他使用 `jarsigner` 程序的 `-verify` 选项。
 
-```
+```bash
 jarsigner -verify -keystore bob.jks document.jar
 ```
 
 Bob 不需要指定密钥别名。`jarsigner` 程序会在数字签名中找到密钥所有者的 X.500 名称，并在密钥库中查找匹配的证书。
 
-如果 JAR 文件未损坏且签名匹配，`jarsigner` 程序将打印出
+如果 JAR 文件未损坏且签名匹配，`jarsigner` 程序将打印出：
 
-```
+```text
 jar verified.
 ```
 
@@ -15886,31 +17029,33 @@ jar verified.
 
 ## 1.3.4. 身份验证问题
 
-假设你收到来自朋友 Alice 的消息，该消息使用我刚刚向你展示的方法用她的私钥签名。你可能已经有了她的公钥，或者你可以向她索要副本或从她的网页上轻松获取。然后，你可以验证该消息确实是由 Alice 编写的且没有被篡改。现在，假设你收到来自一个陌生人的消息，对方声称代表某著名软件公司，敦促你运行消息附带的程序。该陌生人甚至给你发了他的公钥副本，以便你验证消息是由他编写的。
+假设你收到来自朋友 Alice 的消息，该消息使用我刚刚向你展示的方法用她的私钥签名。你可能已经有了她的公钥，或者你可以向她索要副本或从她的网页上轻松获取。然后，你可以验证该消息确实是由 Alice 编写的且没有被篡改。
+
+现在，假设你收到来自一个陌生人的消息，对方声称代表某著名软件公司，敦促你运行消息附带的程序。该陌生人甚至给你发了他的公钥副本，以便你验证消息是由他编写的。
 
 你检查签名是否有效。这证明消息是用匹配的私钥签名的，且没有损坏。
 
-小心：*你仍然不知道是谁写了这条消息。* 任何人都可以生成一对公私钥，用私钥签名消息，并将签过名的消息和公钥发送给你。确定发送者身份的问题被称为*身份验证问题*。
+小心：你仍然不知道是谁写了这条消息。任何人都可以生成一对公私钥，用私钥签名消息，并将签过名的消息和公钥发送给你。确定发送者身份的问题被称为身份验证问题。
 
 解决身份验证问题的通常方法很简单。假设你和陌生人有一个都信任的共同熟人。假设陌生人面见过你的熟人，并交给他一个包含公钥的磁盘。你的熟人随后与你见面，向你保证他见过那个陌生人，且陌生人确实在那家著名软件公司工作，然后把磁盘给你（见图 9.5）。这样，你的熟人就为陌生人的真实性背了书。
 
-![](img/cb920f692d263682e00dcb1ad7f884cc_972_0.png)
-
-图 1.5：通过信任的中介进行身份验证
+![图 1.5：通过信任的中介进行身份验证](img/cb920f692d263682e00dcb1ad7f884cc_972_0.png)
 
 事实上，你的熟人并不真的需要见面。相反，他可以使用他的私钥对陌生人的公钥文件进行签名（见图 9.6）。
 
-![](img/cb920f692d263682e00dcb1ad7f884cc_973_0.png)
-
-图 1.6：通过信任的中介的签名进行身份验证
+![图 1.6：通过信任的中介的签名进行身份验证](img/cb920f692d263682e00dcb1ad7f884cc_973_0.png)
 
 当你获得公钥文件时，你验证了朋友的签名，因为你信任他，你确信他在签署签名之前确实检查过陌生人的身份。
 
-然而，你可能没有共同的熟人。某些信任模型假设始终存在一条“信任链”——一条相互认识的链——以便你信任该链中的每一个成员。在实践中，这并不总是如此。你可能信任你的朋友 Alice，你知道 Alice 信任 Bob，但你不认识 Bob，也不确定是否信任他。其他信任模型假设存在一个仁慈的大哥——一家我们都信任的公司。像 DigiCert、GlobalSign 和 Entrust 这样具有启发性名称的公司提供了验证服务。
+然而，你可能没有共同的熟人。某些信任模型假设始终存在一条“信任链”——一条相互认识的链——以便你信任该链中的每一个成员。在实践中，这并不总是如此。你可能信任你的朋友 Alice，你知道 Alice 信任 Bob，但你不认识 Bob，也不确定是否信任他。
+
+其他信任模型假设存在一个仁慈的大哥——一家我们都信任的公司。像 DigiCert、GlobalSign 和 Entrust 这样具有启发性名称的公司提供了验证服务。
 
 你经常会遇到由一个或多个证明真实性的实体签署数字签名，你需要评估你对这些身份验证者的信任程度。你可能对某个特定的证书机构赋予极大的信任，也许因为你在许多网页上看到了他们的标志，或者因为你听说每当要铸新的主密钥时，他们要求多位提黑色公文包的人聚集在一个安全的密室里。
 
-然而，你对实际正在验证的内容应该保持现实的预期。你只需通过填写网络表单并支付少额费用即可获得“1级”ID。密钥将寄到证书中包含的电子邮箱地址。因此，你可以合理地认为该邮箱地址是真实的，但请求者可能填写任何姓名和组织。有更严格的 ID 类。例如，对于“3级”ID，证书机构将要求个人请求者出现在公证员面前，并会检查企业请求者的财务状况。其他身份验证者将有不同的程序。
+然而，你对实际正在验证的内容应该保持现实的预期。你只需通过填写网络表单并支付少额费用即可获得“1级”ID。密钥将寄到证书中包含的电子邮箱地址。因此，你可以合理地认为该邮箱地址是真实的，但请求者可能填写任何姓名和组织。
+
+有更严格的 ID 类。例如，对于“3级”ID，证书机构将要求个人请求者出现在公证员面前，并会检查企业请求者的财务状况。其他身份验证者将有不同的程序。
 
 因此，当你收到证书时，理解它是“什么”是非常重要的。
 
@@ -15918,35 +17063,39 @@ jar verified.
 
 在上一节中，我们使用密钥库和 `CertificateSigner` 工具模拟了一个 CA。然而，大多数 CA 运行更复杂的软件来管理证书，并且使用的证书格式略有不同。本节展示了与这些软件包交互所需的额外步骤。
 
-假设 Alice 想给 Bob 发送消息，但 Bob 不想处理证书指纹。现在假设有一个 信任的证书机构（CA）。Alice 的所有人都信任这个 CA。CA 签署密钥。以下是你可以模拟这一过程的方法。创建一个 acmesoft.jks。生成密钥对并导出公钥：
+假设 Alice 想给 Bob 发送消息，但 Bob 不想处理证书指纹。现在假设有一个信任的证书机构（CA）。Alice 的所有人都信任这个 CA。CA 签署密钥。以下是你可以模拟这一过程的方法。
 
-```
+创建一个 `acmesoft.jks`。生成密钥对并导出公钥：
+
+```bash
 keytool -genpair -keystore acmesoft.jks -alias
 ```
 
-```
+```bash
 keytool -exportcert -keystore acmesoft.jks -alias
 ```
 
 公钥被导出为“自签名”证书。然后，将其添加到每个人的密钥库中：
 
-```
+```bash
 keytool -importcert -keystore cindy.jks -alias
 ```
 
-为了让 Alice 向 Cindy 及其他人发送消息，她需要将证书带到信息部门进行签名。不幸的是，`keytool` 程序缺少此功能。在书中配套的代码中，我提供了一个 `CertificateSigner` 类来填补这一空白。ACME 公司的授权人员将验证 Alice 的身份并生成签名证书：
+为了让 Alice 向 Cindy 及其他人发送消息，她需要将证书带到信息部门进行签名。不幸的是，`keytool` 程序缺少此功能。在书中配套的代码中，我提供了一个 `CertificateSigner` 类来填补这一空白。
 
-```
+ACME 公司的授权人员将验证 Alice 的身份并生成签名证书：
+
+```bash
 java CertificateSigner -keystore acmesoft.jks -a -infile alice.cer -outfile alice_signed_by_acme
 ```
 
 证书签名程序必须能够访问 ACME 的密钥库，且人员必须知道密码。显然，这是一个敏感操作。
 
-Alice 将 alice_signedbyacme.cer 给 Cindy 和 ACME 内的其他人。或者，ACME 公司可以将该文件存储在公司目录中。记住，该文件包含 Alice 的公钥以及 ACME 公司对该密钥确实属于 Alice 的断言。
+Alice 将 `alice_signedbyacme.cer` 给 Cindy 和 ACME 内的其他人。或者，ACME 公司可以将该文件存储在公司目录中。记住，该文件包含 Alice 的公钥以及 ACME 公司对该密钥确实属于 Alice 的断言。
 
 现在 Cindy 将签名证书导入她的密钥库：
 
-```
+```bash
 keytool -importcert -keystore cindy.jks -alias a
 ```
 
@@ -15954,50 +17103,47 @@ keytool -importcert -keystore cindy.jks -alias a
 
 一旦 Cindy 添加了根证书以及经常向她发送文档的证书，在证书过期之前，她就不需要再担心这些证书了。
 
-
-
-
-我们将使用 OpenSSL 软件软件包作为示例。该软件预装在许多 Linux 系统和 Mac OS X 中，同时也提供了适用于 Windows 的 Cygwin 版本。你可以在 https://www.openssl.org 下载该软件。
+我们将使用 OpenSSL 软件包作为示例。该软件预装在许多 Linux 系统和 Mac OS X 中，同时也提供了适用于 Windows 的 Cygwin 版本。你可以在 <https://www.openssl.org> 下载该软件。
 
 要创建一个 CA（证书机构），请运行 CA 脚本。具体位置取决于你的操作系统。在 Ubuntu 上，运行：
 
-```
+```bash
 /usr/lib/ssl/misc/CA.pl -newca
 ```
 
-该脚本会在当前目录下创建一个名为 demoCA 的子目录。该目录包含一个根密钥对以及用于存储证书和证书吊销列表的存储。
+该脚本会在当前目录下创建一个名为 `demoCA` 的子目录。该目录包含一个根密钥对以及用于存储证书和证书吊销列表的存储。
 
-你可能需要将公钥导入到所有员工的 Java 密钥库中，但它是隐私增强邮件（PEM）格式，而不是密钥库易于接受的 DER 格式。将文件 demoCA/cacert.pem 复制并命名为 acmeroot.pem，然后用文本编辑器打开该文件。删除该行之前的所有内容：
+你可能需要将公钥导入到所有员工的 Java 密钥库中，但它是隐私增强邮件（PEM）格式，而不是密钥库易于接受的 DER 格式。将文件 `demoCA/cacert.pem` 复制并命名为 `acmeroot.pem`，然后用文本编辑器打开该文件。删除该行之前的所有内容：
 
-```
+```text
 -----BEGIN CERTIFICATE-----
 ```
 
-以及该行之后的所有内容
+以及该行之后的所有内容。
 
-现在你可以按照通常方式将 acmeroot.pem 导入到每个密钥库中：
+现在你可以按照通常方式将 `acmeroot.pem` 导入到每个密钥库中：
 
-```
+```bash
 keytool -importcert -keystore cindy.jks -alias a
 ```
 
-keytool 竟然无法执行这种编辑操作，这似乎非常不可思议。
+`keytool` 竟然无法执行这种编辑操作，这似乎非常不可思议。
 
 要对 Alice 的公钥签名，首先生成一个包含 PEM 格式证书的证书请求：
 
-```
+```bash
 keytool -certreq -keystore alice.jks -alias alice
 ```
 
 要对证书签名，运行：
 
-```
+```bash
 openssl -in alice.pem -out alice_signedby_acm
 ```
 
-和之前一样，从 alice_signedby_acmeroot.pem 中剪掉 BEGIN CERTIFICATE/END CERTIFICATE 标记之外的所有内容。然后将其导入到 Cindy 的密钥库中：
+和之前一样，从 `alice_signedby_acmeroot.pem` 中剪掉 `BEGIN CERTIFICATE`/`END CERTIFICATE` 标记之外的所有内容。然后将其导入到 Cindy 的密钥库中：
 
-```
+```bash
 keytool -importcert -keystore cindy.jks -alias a
 ```
 
@@ -16005,7 +17151,7 @@ keytool -importcert -keystore cindy.jks -alias a
 
 ## 1.3.7. 代码签名
 
-身份验证技术的常见用途是对可执行程序进行签名。如果你下载了一个程序，你自然会担心它可能造成的破坏。例如，该程序可能感染了病毒。如果你知道代码的来源*并且知道*它自源地后没有被篡改，那么你的安全感会比没有这些信息时高得多。
+身份验证技术的常见用途是对可执行程序进行签名。如果你下载了一个程序，你自然会担心它可能造成的破坏。例如，该程序可能感染了病毒。如果你知道代码的来源并且知道它自源地后没有被篡改，那么你的安全感会比没有这些信息时高得多。
 
 在本节中，我将向你展示如何签名 JAR 文件，以及如何配置 Java 来验证签名。这种功能是为 applet 和 Java Web Start 应用设计的。这些已不再是常用技术，但你可能仍需要在遗留产品中支持它们。
 
@@ -16013,15 +17159,13 @@ keytool -importcert -keystore cindy.jks -alias a
 
 这是一个具体的示例。假设在浏览网页时，你遇到一个网站提供运行来自未知供应商的 applet，前提是你授予其运行权限（见图 9.7）。此类程序使用由证书机构颁发的软件开发者证书进行签名，该证书机构是 Java 运行时信任的。弹出的对话框识别了软件开发者和证书颁发者。现在你需要决定是否授权该程序。
 
-![](img/cb920f692d263682e00dcb1ad7f884cc_981_0.png)
-
-图 1.7：启动已签名的 applet
+![图 1.7：启动已签名的 applet](img/cb920f692d263682e00dcb1ad7f884cc_981_0.png)
 
 你有哪些可能影响你决定的事实？以下是你所知的信息：
 
 - Thawte 向该软件开发者出售了一份证书。
 - 程序确实是用该证书签名的，并且在传输过程中没有被修改过。
-- 该证书确实是由 Thawte 签名的——它通过本地 cacerts 文件中的公钥进行了验证。
+- 该证书确实是由 Thawte 签名的——它通过本地 `cacerts` 文件中的公钥进行了验证。
 
 当然，这些信息无都不能告诉你代码运行起来是否安全。如果你所知的只是供应商的名字以及 Thawte 向他们出售了软件开发者证书这一事实，你能信任该供应商吗？这种方法从来没有多大意义。
 
@@ -16029,7 +17173,7 @@ keytool -importcert -keystore cindy.jks -alias a
 
 ## 1.3.8. 密码哈希
 
-出于明显的安全考虑，绝不应以明文形式存储密码。相反，应该存储它们的哈希值。当用户登录时，用户的密码输入也也应进行哈希处理。如果值匹配，则用户通过身份验证。
+出于明显的安全考虑，绝不应以明文形式存储密码。相反，应该存储它们的哈希值。当用户登录时，用户的密码输入也应进行哈希处理。如果值匹配，则用户通过身份验证。
 
 然而，你目前看到的哈希算法并不适用于密码哈希。为了防止暴力破解攻击，哈希机制应该使用多轮计算。此外，为了避免预计算密码表，每个密码都应该用随机的“盐”（salt）值进行修改。
 
@@ -16040,24 +17184,27 @@ Java 提供了 PBKDF2 算法用于密码哈希。该算法有四个参数：
 - 迭代次数
 - 输出的位数
 
-加了盐的密码不是消息，因此你不需要使用 MessageDigest 接口。相反，使用如下的 SecretKeyFactory：
+加了盐的密码不是消息，因此你不需要使用 `MessageDigest` 接口。相反，使用如下的 `SecretKeyFactory`：
 
-```
+```java
 var spec = PBEKeySpec(password, salt, ITERATIONS, KEY_LENGTH);
+
 SecretKeyFactory skf = SecretKeyFactory.getInstance(ALGORITHM);
+
 byte[] hash = skf.generateSecret(spec).getEncoded();
 ```
 
 缩写 PBE 代表“基于密码的加密”，因为它将短密码转换为密钥。PBKDF 是一种“基于密码的派生函数”，它将密码转换为加密。我们感兴趣的是加密并直接存储生成的字节。对于密码验证，随着处理器的增强，你应该增加迭代次数。
 
-```
+```java
 Base64.Encoder encoder = Base64.getEncoder();
+
 String hashedPassword = ITERATIONS + "|" + encoder.encodeToString(hash);
 ```
 
 ## 1.4. 加密
 
-到为止，我们讨论了 Java 实现的一种加密技术——即通过数字签名实现的身份验证。安全的另一个方面是*加密*。即使经过认证，信息本身是可见的。数字签名仅验证信息没有更改。相反，当信息加密时，它是不可见的。只能通过匹配的密钥进行解密。
+到目前为止，我们讨论了 Java 实现的一种加密技术——即通过数字签名实现的身份验证。安全的另一个方面是加密。即使经过认证，信息本身是可见的。数字签名仅验证信息没有更改。相反，当信息加密时，它是不可见的。只能通过匹配的密钥进行解密。
 
 身份验证对于代码签名，不需要隐藏代码。但在应用程序传输敏感信息（如信用卡号和个人数据）时，加密是必要的。
 
@@ -16065,74 +17212,93 @@ String hashedPassword = ITERATIONS + "|" + encoder.encodeToString(hash);
 
 ### 1.4.1. 对称密码
 
-Java 加密扩展包含一个 Cipher 类，它是所有加密算法的父类。要获取加密对象，调用 getInstance 方法：
+Java 加密扩展包含一个 `Cipher` 类，它是所有加密算法的父类。要获取加密对象，调用 `getInstance` 方法：
 
-```
+```java
 Cipher cipher = Cipher.getInstance(algorithmName);
 ```
 
-或者
+或者：
 
-```
+```java
 Cipher cipher = Cipher.getInstance(algorithmName);
 ```
 
-JDK 带有由 "SunJCE" 提供者提供的加密算法。这是未指定其他提供者名称时使用的默认提供者。如果你需要 Oracle 不支持的特殊算法，你可能需要另一个提供者。
+JDK 带有由 `"SunJCE"` 提供者提供的加密算法。这是未指定其他提供者名称时使用的默认提供者。如果你需要 Oracle 不支持的特殊算法，你可能需要另一个提供者。
 
-算法名称是一个如 "AES" 或 "DES/CBC/PKCS5Padding" 的字符串。
+算法名称是一个如 `"AES"` 或 `"DES/CBC/PKCS5Padding"` 的字符串。
 
-数据加密标准 (DES) 是一种长度为 56 位的经典分组密码。现在，DES 算法被认为已经过时，因为可以通过暴力破解破解。一种更好的替代方案是它的继任者高级加密标准 (AES)。关于 AES 算法的详细描述，请参 https://nvpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197.pdf。我在示例中使用了 AES。
+数据加密标准（DES）是一种长度为 56 位的经典分组密码。现在，DES 算法被认为已经过时，因为可以通过暴力破解破解。一种更好的替代方案是它的继任者高级加密标准（AES）。关于 AES 算法的详细描述，请参阅 <https://nvpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197.pdf>。我在示例中使用了 AES。
 
 一旦获得了加密对象，通过设置模式和密钥对其进行初始化：
 
-```
-int mode = . . ;\nKey key = . . ;;
+```java
+int mode = . . ;
+Key key = . . ;
+
 cipher.init(mode, key);
 ```
 
-模式是以下之一
+模式是以下之一：
 
-```
-Cipher.ENCRYPT_MODE\nCipher.DECRYPT_MODE\nCipher.WRAP_MODE\nCipher.UNWRAP_MODE
+```java
+Cipher.ENCRYPT_MODE
+Cipher.DECRYPT_MODE
+Cipher.WRAP_MODE
+Cipher.UNWRAP_MODE
 ```
 
-wrap（封装）和 unwrap（解封装）模式用一个密钥加密另一个密钥——示例请参见下一节。
+`wrap`（封装）和 `unwrap`（解封装）模式用一个密钥加密另一个密钥——示例请参见下一节。
 
 现在，你可以反复调用 `update` 方法来加密数据块：
 
-```
+```java
 int blockSize = cipher.getBlockSize();
+
 var inBytes = new byte[blockSize];
+
 .. .. inBytes
+
 int outputSize = cipher.getOutputSize(blockSize);
+
 var outBytes = new byte[outputSize];
+
 int outLength = cipher.update(inBytes, 0, outputSize);
+
 .. // write outBytes
 ```
 
 完成后，你必须调用一次 `doFinal` 方法。如果存在最后的输入数据块（其字节数少于 `blockSize`），则调用：
 
-```
+```java
 outBytes = cipher.doFinal(inBytes, 0, inLength);
 ```
 
 如果所有输入数据都已加密，则改调用：
 
-```
+```java
 outBytes = cipher.doFinal();
 ```
 
-调用 `doFinal` 是为了对最后一个数据块进行填充。考虑 DES 加密算法。它的块大小为八字节。假设输入数据的最后一个块少于八字节。当然，我们可以用 0 填充剩余的字节，以获得一个八字节的最后一个块并对其进行加密。但当这些块被解密时，结果末尾会附加几个 0 字节，因此将与原始输入文件略有不同。为了避免这个问题，我们需要一种填充方案。一种常用的填充方案是 RSA Security, Inc. 在《公钥密码标准 (PKCS) #5 中描述的方案：(https://datatracker.ietf.org/doc/html/rfc2898)。
+调用 `doFinal` 是为了对最后一个数据块进行填充。考虑 DES 加密算法。它的块大小为八字节。假设输入数据的最后一个块少于八字节。当然，我们可以用 0 填充剩余的字节，以获得一个八字节的最后一个块并对其进行加密。但当这些块被解密时，结果末尾会附加几个 0 字节，因此将与原始输入文件略有不同。
 
-在该方案中，最后一个块不是使用 0 作为填充值，而是使用一个等于于填充字节数的填充值进行填充。换句话说，如果 L 是最后一个（不完全的）块，其填充方式如下：
+为了避免这个问题，我们需要一种填充方案。一种常用的填充方案是 RSA Security, Inc. 在《公钥密码标准（PKCS）#5》中描述的方案：<https://datatracker.ietf.org/doc/html/rfc2898>。
 
-```
+在该方案中，最后一个块不是使用 0 作为填充值，而是使用一个等于填充字节数的填充值进行填充。换句话说，如果 `L` 是最后一个（不完全的）块，其填充方式如下：
+
+```text
 L 01                          if length(L)
+
 L 02 02                       if length(L)
+
 L 03 03 03                    if length(L)
-.\.
+
+. . .
+
 L 07 07 07 07 07 07 07       if length(L)
 ```
+
+
 
 最后，如果输入的长度实际上能被 8 整除，则会在输入后追加并加密一个块：
 
@@ -16144,26 +17310,29 @@ L 07 07 07 07 07 07 07       if length(L)
 
 ## 1.4.2. 密钥生成
 
-为了加密，你需要生成一个密钥。每个加密算法的密钥格式不同，你需要确保密钥生成是随机的。
-按照以下步骤操作：
+为了加密，你需要生成一个密钥。每个加密算法的密钥格式不同，你需要确保密钥生成是随机的。按照以下步骤操作：
 
-- 1. 为你的算法获取一个 `KeyGenerator`。
-- 2. 使用随机源初始化生成器。如果加密器的块长度是变量，还要指定所需的块长度。
-- 3. 调用 `generateKey` 方法。
+1. 为你的算法获取一个 `KeyGenerator`。
+2. 使用随机源初始化生成器。如果加密器的块长度是变量，还要指定所需的块长度。
+3. 调用 `generateKey` 方法。
 
 例如，这里是生成 AES 密钥的方法：
 
-```
-KeyGenerator keygen = KeyGenerator.getInstance("AES")
+```java
+KeyGenerator keygen = KeyGenerator.getInstance("AES");
+
 var random = new SecureRandom(); // 见下文
+
 keygen.init(random);
+
 Key key = keygen.generateKey();
 ```
 
 或者，你可以从固定的原始数据集（可能派生自密码或击键计时）产生密钥。如下所示构造 `SecretKeySpec`（它实现了 `SecretKey` 接口）：
 
-```
+```java
 byte[] keyData = . . .; // AES 使用 16 字节
+
 var key = new SecretKeySpec(keyData, "AES");
 ```
 
@@ -16171,10 +17340,13 @@ var key = new SecretKeySpec(keyData, "AES");
 
 `SecureRandom` 类生成的随机数比 `Random` 类生成的安全得多。你仍然需要提供一个起始值，在随机位置为数字序列设置种子。实现此点的最佳方法是从硬件设备（如白噪声生成器）获取随机输入。另一个合理的随机输入源是让用户在键盘上随意敲击，每次击键只为随机种子贡献一个或两个位。一旦你在字节数组中收集了随机位，将其传递给 `setSeed` 方法：
 
-```
+```java
 var random = new SecureRandom();
+
 var b = new byte[20];
+
 // 填充真正的随机位
+
 random.setSeed(b);
 ```
 
@@ -16184,60 +17356,64 @@ random.setSeed(b);
 
 本节末尾的示例演示了 AES 加密（参见列表 9.12）。列表 9.13 中的 `crypt` 工具方法将在其他示例中重用。
 
+### `javax.crypto.Cipher` 1.4
 
-```java
-String providerName)
-返回一个实现了指定算法的 Cipher 对象。
-如果未提供算法，则抛出 NoSuchAlgorithmException。
+- `Cipher getInstance(String providerName)`
 
-- int getBlock()
-返回加密块的大小（以为字节），如果加密器不是分组加密器，则返回 0。
+  返回一个实现了指定算法的 Cipher 对象。
 
-- int getOutputType(int inputLength)
-如果下一次输入具有给定字节数，则返回所需的输出缓冲区的大小。此方法考虑了加密对象中任何缓冲的字节。
+  如果未提供算法，则抛出 `NoSuchAlgorithmException`。
 
-- void init(int mode, Key key)
-初始化加密算法对象。模式为 `CRYPT_MODE`、`DECRYPT_MODE`、`WRAP_MODE` 或 `UNWRAP_MODE` 之一。
+- `int getBlock()`
 
-- byte[] update(byte[] in)
+  返回加密块的大小（以字节），如果加密器不是分组加密器，则返回 0。
 
-- byte[] update(byte[] in, int offset, int
-length)
+- `int getOutputType(int inputLength)`
 
-- int update(byte[] in, int offset, int length,
-byte[] out)
-转换一个块输入数据。前两个方法返回输出。第三个方法返回放入 out 中的字节数。
+  如果下一次输入具有给定字节数，则返回所需的输出缓冲区的大小。此方法考虑了加密对象中任何缓冲的字节。
 
-- byte[] doFinal()
-- byte[] doFinal(byte[] in)
-- byte[] doFinal(byte[] in, int offset, int length)
-- int doFinal(byte[] in, int offset, int length, byte[] out)
-转换最后一个块输入数据并冲空算法对象的缓冲区。前三个方法返回输出。第四个方法返回放入 out 中的字节数。
+- `void init(int mode, Key key)`
 
-# javax.crypto.KeyGenerator 1.4
+  初始化加密算法对象。模式为 `CRYPT_MODE`、`DECRYPT_MODE`、`WRAP_MODE` 或 `UNWRAP_MODE` 之一。
 
-- static KeyGenerator getInstance(String algorithmName)
-- void init(SecureRandom random)
-- void init(int keySize, SecureRandom random)
-- SecretKey generateKey()
+- `byte[] update(byte[] in)`
+- `byte[] update(byte[] in, int offset, int length)`
+- `int update(byte[] in, int offset, int length, byte[] out)`
 
-返回一个实现了指定算法的 KeyGenerator 对象。如果未提供算法，则抛出 NoSuchAlgorithmException。
+  转换一个块输入数据。前两个方法返回输出。第三个方法返回放入 `out` 中的字节数。
+
+- `byte[] doFinal()`
+- `byte[] doFinal(byte[] in)`
+- `byte[] doFinal(byte[] in, int offset, int length)`
+- `int doFinal(byte[] in, int offset, int length, byte[] out)`
+
+  转换最后一个块输入数据并冲空算法对象的缓冲区。前三个方法返回输出。第四个方法返回放入 `out` 中的字节数。
+
+### `javax.crypto.KeyGenerator` 1.4
+
+- `static KeyGenerator getInstance(String algorithmName)`
+- `void init(SecureRandom random)`
+- `void init(int keySize, SecureRandom random)`
+- `SecretKey generateKey()`
+
+返回一个实现了指定算法的 KeyGenerator 对象。如果未提供算法，则抛出 `NoSuchAlgorithmException`。
 
 初始化密钥生成器。
 
 生成新密钥。
 
-# javax.crypto.spec.SecretKeySpec 1.4
+### `javax.crypto.spec.SecretKeySpec` 1.4
 
-- * SecretKeySpec(byte[] key, String algorithmName)
+- `SecretKeySpec(byte[] key, String algorithmName)`
+
 构造密钥规范。
 
 ### 1.4.3. 加密流
 
-JCE 库提供了一组方便的流类，可以自动加密或解密流数据。例如，以下是加密数据加密到文件的方法：
+JCE 库提供了一组方便的流类，可以自动加密或解密流数据。例如，以下是加密数据并写入文件的方法：
 
-```
-Cipher cipher = . . . ;
+```java
+Cipher cipher = . . .;
 cipher.init(Cipher.ENCRYPT_MODE, key);
 var out = new CipherOutputStream(new FileOutputStream(file));
 var bytes = new byte[blockSize];
@@ -16250,10 +17426,10 @@ while (inLength != -1)
 out.flush();
 ```
 
-同样地，你可以使用 CipherInputStream 从文件读取并解密数据：
+同样地，你可以使用 `CipherInputStream` 从文件读取并解密数据：
 
-```
-Cipher cipher = . . ;
+```java
+Cipher cipher = . . .;
 cipher.init(Cipher.DECRYPT_MODE, key);
 var in = new CipherInputStream(new FileInputStream(file));
 var bytes = new byte[BLOCKSIZE];
@@ -16265,27 +17441,33 @@ while (inLength != -1)
 }
 ```
 
-加密流类透明地处理了对 update 和 doFinal 的调用，这显然是一种便利。
+加密流类透明地处理了对 `update` 和 `doFinal` 的调用，这显然是一种便利。
 
-javax.crypto.CipherInputStream 1.4
+### `javax.crypto.CipherInputStream` 1.4
 
-- CipherInputStream(InputStream in, Cipher cipher)
-构造一个输入流，从 in 读取数据并使用给定的 cipher对其进行解密或加密。
-- int read()
-- int read(byte[] b, int off, int len)
-从输入流读取数据，数据会自动被解密或加密。
+- `CipherInputStream(InputStream in, Cipher cipher)`
 
-```java
-javax.crypto.CipherOutputStream 1.4
-```
+  构造一个输入流，从 `in` 读取数据并使用给定的 `cipher` 对其进行解密或加密。
 
-- * CipherOutputStream(OutputStream out, Cipher cipher)
-构造一个输出流，将数据写入 out 并使用给定的 cipher对其进行加密或解密。
-- void write(int ch)
-- void write(byte[] b, int off, int len)
-将数据写入输出流，数据会自动被加密或解密。
-- void flush()
-冲空加密缓冲区并在必要时执行填充。
+- `int read()`
+- `int read(byte[] b, int off, int len)`
+
+  从输入流读取数据，数据会自动被解密或加密。
+
+### `javax.crypto.CipherOutputStream` 1.4
+
+- `CipherOutputStream(OutputStream out, Cipher cipher)`
+
+  构造一个输出流，将数据写入 `out` 并使用给定的 `cipher` 对其进行加密或解密。
+
+- `void write(int ch)`
+- `void write(byte[] b, int off, int len)`
+
+  将数据写入输出流，数据会自动被加密或解密。
+
+- `void flush()`
+
+  冲空加密缓冲区并在必要时执行填充。
 
 ### 1.4.4. 公钥加密算法
 
@@ -16301,11 +17483,7 @@ javax.crypto.CipherOutputStream 1.4
 4. Bob 使用他的私钥解密对称密钥。
 5. Bob 使用对称密钥解密消息。
 
-最常用的公钥算法是是由 Rivest、Shamir 和 Adleman 发明的 RSA。
-
-
-
-
+最常用的公钥算法是由 Rivest、Shamir 和 Adleman 发明的 RSA。
 
 ```java
 try (var in = new DataInputStream(
@@ -16342,17 +17520,17 @@ Java 诞生时，大多数计算机用户通过图形用户界面（GUI）与桌
 
 当 Java 1.0 发布时，它包含一个名为抽象窗口工具包（AWT）的类库用于基本的 GUI 编程。基础 AWT 库通过将用户界面元素的创建和行为委托给每个目标平台原生 GUI 工具包（Windows、Linux、Macintosh 等）来处理用户界面元素。例如，如果你使用原始 AWT 在 Java 窗口上放置一个文本框，底层的“对等”（peer）文本框实际上处理了文本输入。生成的程序理论上可以在这些平台中的任何一个上运行，并具有目标平台的“外观和感觉”（look-and-feel）。
 
-基于对等的方法对于简单应用程序效果良好，但很快发现，要编写一个依赖原生用户界面元素的高质量可移植图形库是*极其困难*的。菜单、滚动条和文本字段等用户界面元素在不同平台上的行为可能会有细微差异。因此，要通过这种方法为用户提供一致且可预测的体验非常困难。此外，某些图形环境（如 X11/Motif）并不具备像 Windows 或 Macintosh 那样丰富的用户界面组件集合。这进一步限制了基于“最小公约数”方法的可移植库。结果，用 AWT 构建的 GUI 应用程序看起来并不像原生 Windows 或 Macintosh 应用程序那样美观，也不具备这些平台用户所期待的功能。更令人沮丧的是，不同平台上的 AWT 用户界面库存在不同的 bug。开发者抱怨说，他们必须在每个平台上测试自己的应用程序——这种做法被衍生地称为“一次编写，随处调试”。
+基于对等的方法对于简单应用程序效果良好，但很快发现，要编写一个依赖原生用户界面元素的高质量可移植图形库是极其困难的。菜单、滚动条和文本字段等用户界面元素在不同平台上的行为可能会有细微差异。因此，要通过这种方法为用户提供一致且可预测的体验非常困难。此外，某些图形环境（如 X11/Motif）并不具备像 Windows 或 Macintosh 那样丰富的用户界面组件集合。这进一步限制了基于“最小公约数”方法的可移植库。结果，用 AWT 构建的 GUI 应用程序看起来并不像原生 Windows 或 Macintosh 应用程序那样美观，也不具备这些平台用户所期待的功能。更令人沮丧的是，不同平台上的 AWT 用户界面库存在不同的 bug。开发者抱怨说，他们必须在每个平台上测试自己的应用程序——这种做法被衍生地称为“一次编写，随处调试”。
 
 1996 年，Netscape 创建了一个他们称为 IFC（互联网基础类）的 GUI 库，它采用了一种完全不同的方法。用户界面元素（如按钮、菜单等）被绘制在空白窗口上。底层窗口系统所需的功能仅仅提供一种放置窗口并在其上进行绘制的方法。因此，Netscape 的 IFC 控件无论程序运行在哪个平台上，其外观和行为都是完全相同的。Sun Microsystems 与 Netscape 合作完善了这种方法，创建了一个代号为“Swing”的用户界面库。
 
 Swing 作为 Java 1.1 的扩展可用，并在 Java 1.2 中成为标准库的一部分。
 
-Swing 现在是这种**非对等** GUI 工具包的官方名称。
+Swing 现在是这种非对等 GUI 工具包的官方名称。
 
 > **注意：** Swing 并不是 AWT 的完全替代品——它是构建在 AWT 架构之上的。Swing 只是为你提供了功能更强大的用户界面组件。每当你编写 Swing 程序时，你都会使用 AWT 的基础——特别是事件处理。从现在起，当我指的是“绘制”的用户界面类时，我会说“Swing”，当我指的是窗口工具包的底层机制（如事件处理）时，我会说“AWT”。
 
-Swing 必须辛苦地绘制用户界面的每一个像素。当 Swing 首次发布时，用户抱怨它很慢。（如果你在树莓派等硬件上运行 Swing ，仍然能感受到这个问题。）过了一段时间，桌面电脑变得越来越快，用户又抱怨 Swing 很丑——事实上，它已经落后于经过动画和华丽特效修饰的原生控件。更不安的是，Adobe Flash 越来越多地用于创建更闪炫特效的用户界面，这些界面完全不使用原生控件。
+Swing 必须辛苦地绘制用户界面的每一个像素。当 Swing 首次发布时，用户抱怨它很慢。（如果你在树莓派等硬件上运行 Swing，仍然能感受到这个问题。）过了一段时间，桌面电脑变得越来越快，用户又抱怨 Swing 很丑——事实上，它已经落后于经过动画和华丽特效修饰的原生控件。更不安的是，Adobe Flash 越来越多地用于创建更闪炫特效的用户界面，这些界面完全不使用原生控件。
 
 2007 年，Sun Microsystems 引入了一个新的工具包 JavaFX 作为 Flash 的竞争对手。从 Java 7 开始，它被废弃了。
 
@@ -16362,7 +17540,7 @@ Swing 必须辛苦地绘制用户界面的每一个像素。当 Swing 首次发�
 
 ### 1.2.1. 创建帧
 
-在本节中，我们将介绍处理 JFrame 的常用方法。列表 10.1 列出了一个显示空帧的简单程序，如图 10.1 所示。
+在本节中，我们将介绍处理 `JFrame` 的常用方法。列表 10.1 列出了一个显示空帧的简单程序，如图 10.1 所示。
 
 **图 10.1** 最简单的可见帧
 
@@ -16401,13 +17579,11 @@ class SimpleFrame extends JFrame {
 
 Swing 类位于 `javax.swing` 包中。包名 `javax` 表示这是一个 Java 扩展包，而不是核心包。由于历史原因，Swing 被视为一种扩展。
 
-默认情况下，帧的大小是无用的 0×0 像素。我们定义了一个 `SimpleFrame` 子类，其构造函数将大小设置为 300×200。这是 SimpleFrame 与 JFrame 之间的唯一区别。
+默认情况下，帧的大小是无用的 0×0 像素。我们定义了一个 `SimpleFrame` 子类，其构造函数将大小设置为 300×200。这是 `SimpleFrame` 与 `JFrame` 之间的唯一区别。
 
 在每个 Swing 程序中，我们需要解决两个技术问题。
 
 首先，所有的 Swing 组件都必须从事件分发线程进行配置，该线程是负责用户界面组件传递事件（如鼠标点击和击键事件）的控制线程。以下代码片段用于在事件分发线程中执行语句：
-
-
 
 ```java
 EventQueue.invokeLater(() -> 
@@ -16418,13 +17594,15 @@ EventQueue.invokeLater(() ->
 
 **注意：** 你会看到许多 Swing 程序并没有在事件分发线程（event dispatch thread）中初始化用户界面。过去在主线程中进行初始化是完全可以的。遗憾的是，随着 Swing 组件变得越来越复杂，JDK 开发者已经无法保证这种方法的安全性。虽然出错的概率极低，但你不想成为那少数遇到间歇性问题的倒幸运儿之一。即使代码看起来有些神秘，最好还是做正确的事情。
 
+
+
 接下来，我们定义当用户关闭应用程序窗口时应该发生什么。对于这个特定的程序，我们希望程序退出。为了选择这种行为，我们使用语句：
 
 ```
 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
 ```
 
-在其他具有多个窗口的程序中，你不希望程序仅仅用户关闭了其中一个窗口就退出。默认情况下，用户关闭窗口时，窗口会被隐藏，但程序不会终止。（如果程序在最后一个窗口变得不可见时就终止，那就好了，但这并不是 Swing 的工作方式。）
+在其他具有多个窗口的程序中，你不希望程序仅仅因为用户关闭了其中一个窗口就退出。默认情况下，用户关闭窗口时，窗口会被隐藏，但程序不会终止。（如果程序在最后一个窗口变得不可见时就终止，那就好了，但这并不是 Swing 的工作方式。）
 
 仅仅构造窗口并不会自动显示它。窗口在创建时是不可见的。这为程序员提供了机会在第一次显示窗口之前向窗口添加组件。要显示窗口，`main` 方法调用了窗口的 `setVisible` 方法。
 
@@ -16453,7 +17631,7 @@ frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
 setLocation(x, y)
 ```
 
-左上角将位于向右 x 像素、向下 y 像素处，其中 (0, 0) 是屏幕的左上角。同样，`Component` 中的 `setBounds` 方法允许你一步到位调整组件的大小并移动位置（特别是 `JFrame`），如下如下：
+左上角将位于向右 `x` 像素、向下 `y` 像素处，其中 `(0, 0)` 是屏幕的左上角。同样，`Component` 中的 `setBounds` 方法允许你一步到位调整组件的大小并移动位置（特别是 `JFrame`），如下所示：
 
 ```
 setBounds(x, y, width, height)
@@ -16494,46 +17672,65 @@ Image img = new ImageIcon("icon.gif").getImage()
 setIconImage(img);
 ```
 
-java.awt.Component
+`java.awt.Component`
 
-- boolean isVisible()
-- void setVisible(boolean b)
+- `boolean isVisible()`
+- `void setVisible(boolean b)`
+
 获取或设置可见属性。组件初始是可见的，顶层组件除外。
-- void setSize(int width, int height)
-将组件调整为指定的宽度和高度。
-- void setLocation(int x, int y)
-将组件移动到新位置。如果组件不是顶层的，则使用容器的 x 和 y 坐标；如果组件是顶层的（例如 `JFrame`），则使用屏幕的坐标。
 
-- void setBounds(int x, int y, int width, int height)
+- `void setSize(int width, int height)`
+
+将组件调整为指定的宽度和高度。
+
+- `void setLocation(int x, int y)`
+
+将组件移动到新位置。如果组件不是顶层的，则使用容器的 `x` 和 `y` 坐标；如果组件是顶层的（例如 `JFrame`），则使用屏幕的坐标。
+
+- `void setBounds(int x, int y, int width, int height)`
+
 移动并调整此组件的大小。
-- Dimension getSize()
-- void setState(Dimension d)
+
+- `Dimension getSize()`
+- `void setState(Dimension d)`
+
 获取或设置此组件的尺寸属性。
 
-java.awt.Frame
+`java.awt.Frame`
 
-- boolean isResizable()
-- void setResizable(boolean b)
+- `boolean isResizable()`
+- `void setResizable(boolean b)`
+
 获取或设置可调整大小属性。当属性被设置时，用户可以调整窗口大小。
-- String getTitle()
-- void setTitle(String s)
+
+- `String getTitle()`
+- `void setTitle(String s)`
+
 获取或设置标题属性，用于确定窗口标题栏中的文本。
-- Image getIconImage()
-- void setIconImage(Image image)
+
+- `Image getIconImage()`
+- `void setIconImage(Image image)`
+
 获取或设置图标属性，用于确定窗口的图标。窗口系统可以将图标作为窗口装饰或其他位置显示。
 
-java.awt.Toolkit
+`java.awt.Toolkit`
 
-- static Toolkit getDefaultToolkit()
+- `static Toolkit getDefaultToolkit()`
+
 返回平台的默认工具包。
-- Dimension getScreenSize()
+
+- `Dimension getScreenSize()`
+
 获取用户屏幕的尺寸。
 
-javax.swing.ImageIcon
+`javax.swing.ImageIcon`
 
-- ImageIcon(String filename)
+- `ImageIcon(String filename)`
+
 构造一个存储在文件中的图标。
-- Image getImage()
+
+- `Image getImage()`
+
 获取此图标的图像。
 
 ## 1.3. 在组件中显示信息
@@ -16548,14 +17745,14 @@ javax.swing.ImageIcon
 
 `JFrame` 的结构惊地复杂。看图 10.4，它展示了 `JFrame` 的组成。正如你看到的，`JFrame` 中分了四个面板。根面板（root pane）、叠加面板（layered pane）和玻璃面板（glass pane）对我们并不感兴趣；它们用于组织菜单栏和内容面板并实现外观（look-and-feel）。Swing 程序员关注的部分是*内容面板*（content pane）。你添加到窗口的任何组件都会被自动放置在内容面板中：
 
-
-
+```
 Component c = . . . ;
 frame.add(c); // 添加到内容面板
+```
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1025_0.png)
 
-**图 1.4:** JFrame 的内部结构
+**图 1.4:** `JFrame` 的内部结构
 
 在我们的案例中，我们想要在框架上添加单个组件，并在其上绘制消息。要在组件上进行绘图，你需要定义一个扩展 `JPanel` 的类，并重写该类中的 `paintComponent` 方法。
 
@@ -16571,7 +17768,7 @@ class MyComponent extends JComponent {
 }
 ```
 
-每当窗口需要重绘时，无论原因何，事件处理程序都会通知组件。这会导致所有组件的 `paintComponent` 方法被执行。
+每当窗口需要重绘时，无论原因如何，事件处理程序都会通知组件。这会导致所有组件的 `paintComponent` 方法被执行。
 
 永远不要自己调用 `paintComponent` 方法。每当应用程序的某部分需要重绘时，它都会被自动调用，你不应该干预这个自动过程。
 
@@ -16579,7 +17776,7 @@ class MyComponent extends JComponent {
 
 **提示：** 如果你需要强制重绘屏幕，请调用 `repaint` 而不是 `paintComponent`。`repaint` 方法会导致所有组件都调用 `paintComponent`，并传入一个配置适当的 `Graphics` 对象。
 
-正如你在上面的代码片段所示，`paintComponent` 方法有一个类型为 `Graphics` 的单一参数。在 `Graphics` 对象上进行的屏幕显示测量是以像素为单位的。(0, 0) 坐标表示你正在绘制的组件的左上角。
+正如你在上面的代码片段所示，`paintComponent` 方法有一个类型为 `Graphics` 的单一参数。在 `Graphics` 对象上进行的屏幕显示测量是以像素为单位的。`(0, 0)` 坐标表示你正在绘制的组件的左上角。
 
 `Graphics` 类有各种方法，而显示文本被视为一种特殊的绘制。我们的 `paintComponent` 方法看起来像这样：
 
@@ -16610,7 +17807,7 @@ public class NotHelloWorldComponent extends JComponent
 }
 ```
 
-当你用一个或多个组件填充框架时，如果你只是想使用它们的首选大小，请调用 `pack` 方法而不是
+当你用一个或多个组件填充框架时，如果你只是想使用它们的首选大小，请调用 `pack` 方法而不是：
 
 ```java
 class NotHelloWorldFrame extends JFrame {
@@ -16679,11 +17876,11 @@ class NotHelloWorldComponent extends JComponent {
 
 | 类 | 版本 | 方法 |  |
 | :--- | :--- | :--- | :--- |
-| java.awt.Component | | add(Component c) | 将指定的组件添加到内容面板。 |
-| java.awt.Component | 1.0 | repaint() | 导致重绘此组件。 |
-| javax.swing.JComponent | 1.2 | getPreferredSize() | 返回组件的首选大小。 |
-| javax.swing.JComponent | 1.2 | paintComponent(Graphics g) | 描述组件如何被绘制。 |
-| java.awt.Window | 1.0 | pack() | 调整窗口大小，考虑到组件的首选大小。 |
+| `java.awt.Component` | | `add(Component c)` | 将指定的组件添加到内容面板。 |
+| `java.awt.Component` | 1.0 | `repaint()` | 导致重绘此组件。 |
+| `javax.swing.JComponent` | 1.2 | `getPreferredSize()` | 返回组件的首选大小。 |
+| `javax.swing.JComponent` | 1.2 | `paintComponent(Graphics g)` | 描述组件如何被绘制。 |
+| `java.awt.Window` | 1.0 | `pack()` | 调整窗口大小，考虑到组件的首选大小。 |
 
 ## 1.3.1 使用 2D 形状
 
@@ -16716,22 +17913,24 @@ g2.draw(rect);
 
 2D 库使用浮点坐标而不是整数。内部计算使用单精度浮点数进行。单精度足够了——毕竟几何计算的最终目的是在屏幕或打印机上设置像素。
 
-然而，操作浮点值有时并不方便，因为 Java 在将 double 值转换为 float 值时强制转换。例如，考虑以下语句：
+然而，操作浮点值有时并不方便，因为 Java 在将 `double` 值转换为 `float` 值时强制转换。例如，考虑以下语句：
 
 ```java
 float f = 1.2; // 错误可能丢失精度
 ```
 
-此语句无法编译，因为常量 1.2 的类型为 double，且编译器担心丢失精度。解决方法是在浮点常量后添加 F 后缀：
+此语句无法编译，因为常量 `1.2` 的类型为 `double`，且编译器担心丢失精度。解决方法是在浮点常量后添加 `F` 后缀：
 
 ```java
 float f = 1.2F; // 正确
 ```
 
+
+
 现在考虑这个语句：
 
 ```java
-float f = r.getWidth(); // 
+float f = r.getWidth(); //
 ```
 
 此语句也无法编译，原因相同。`getWidth` 方法返回 `double`。这一次，解决方法是提供强制转换：
@@ -16740,16 +17939,14 @@ float f = r.getWidth(); //
 float f = (float) r.getWidth(); // 正确
 ```
 
-这些后缀和强制转换有点麻烦，2D 库的设计者决定为每个形状类提供*两个版本*：一个使用 `float` 坐标用于节省内存的程序员，另一个使用 `double` 坐标用于懒的程序员。（在本书中，我们属于第二个阵营，尽可能使用 `double` 坐标）。
+这些后缀和强制转换有点麻烦，2D 库的设计者决定为每个形状类提供**两个版本**：一个使用 `float` 坐标用于节省内存的程序员，另一个使用 `double` 坐标用于懒的程序员。（在本书中，我们属于第二个阵营，尽可能使用 `double` 坐标）。
 
 库的设计者选择了一种奇特的机制来封装这些选择。考虑 `Rectangle2D` 类。这是一个抽象类，有两个具体的子类，它们也是静态嵌套类：
 
-```
+```text
 Rectangle2D.Float
 Rectangle2D.Double
 ```
-
-
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1036_0.png)
 
@@ -16759,47 +17956,47 @@ Rectangle2D.Double
 
 当你构造一个 `Rectangle2D.Float` 对象时，你以 `float` 类型数字提供坐标。对于 `Rectangle2D.Double` 对象，你以 `double` 类型数字提供坐标。
 
-```
+```java
 var floatRect = new Rectangle2D.Float(10.0F, 25.0F);
 var doubleRect = new Rectangle2D.Double(10.0, 25.0);
 ```
 
 构造函数参数表示矩形的左上角、宽度和高度。
 
-Rectangle2D 方法具有双精度类型的参数和返回类型。例如，`getWidth` 方法返回一个 `double` 值，即使宽度在 `Rectangle2D.Float` 对象中是以 `float` 形式存储的。
+`Rectangle2D` 方法具有双精度类型的参数和返回类型。例如，`getWidth` 方法返回一个 `double` 值，即使宽度在 `Rectangle2D.Float` 对象中是以 `float` 形式存储的。
 
-> 提示：直接使用 Double 形状类可以完全避免处理 float 值。然而，如果你正在构造成千上万形状对象，请考虑使用 Float 类以节省内存。
+> 提示：直接使用 `Double` 形状类可以完全避免处理 `float` 值。然而，如果你正在构造成千上万形状对象，请考虑使用 `Float` 类以节省内存。
 
-我们刚刚讨论的 Rectangle2D 类适用于其他形状类。此外，还有一个 `Point2D` 类，其子类为 `Point2D.Float` 和 `Point2D.Double`。以下是创建点对象的方法：
+我们刚刚讨论的 `Rectangle2D` 类适用于其他形状类。此外，还有一个 `Point2D` 类，其子类为 `Point2D.Float` 和 `Point2D.Double`。以下是创建点对象的方法：
 
-```
+```java
 var p = new Point2D.Double(10, 20);
 ```
 
-Rectangle2D 类和 Ellipse2D 类都继承自共同的父类 `RectangularShape`。诚然，椭圆不是矩形，但它们有一个外接矩形（见图 10.6）。
+`Rectangle2D` 类和 `Ellipse2D` 类都继承自共同的父类 `RectangularShape`。诚然，椭圆不是矩形，但它们有一个外接矩形（见图 10.6）。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1038_0.png)
 
-**图 1.6：** 椭圆的外接矩形
+图 1.6：椭圆的外接矩形
 
-RectangularShape 类定义了 20 多个这些形状通用的方法，其中包含如 `getWidth`、`getHeight`、`getCenterX` 和 `getCenterY` 等非常用的方法（但遗憾的是，在本文写作时，还没有一个返回 `Point2D` 对象作为中心的 `getCenter` 方法）。
+`RectangularShape` 类定义了 20 多个这些形状通用的方法，其中包含如 `getWidth`、`getHeight`、`getCenterX` 和 `getCenterY` 等非常用的方法（但遗憾的是，在本文写作时，还没有一个返回 `Point2D` 对象作为中心的 `getCenter` 方法）。
 
 最后，来自 Java 1.0 的几个遗留类被放入形状类层次结构中。存储具有整数坐标的矩形和点的 `Rectangle` 和 `Point` 类扩展了 `Rectangle2D` 和 `Point2D` 类。
 
-图 10.7 显示了形状类之间的关系。然而，省略了 Double 和 Float 子类。遗留类用灰色填充标记。
+图 10.7 显示了形状类之间的关系。然而，省略了 `Double` 和 `Float` 子类。遗留类用灰色填充标记。
 
 ![](img/img/cb920f692d263682e00dcb1ad7f884cc_1039_0.png)
 
 图 1.7：形状类之间的关系
 
-Rectangle2D 和 Ellipse2D 对象很容易构造。你需要指定：
+`Rectangle2D` 和 `Ellipse2D` 对象很容易构造。你需要指定：
 
-- 左上角的 x 和 y 坐标
+- 左上角的 `x` 和 `y` 坐标
 - 宽度和高度
 
-对于椭圆，这些指的是外接矩形。例如，
+对于椭圆，这些指的是外接矩形。例如：
 
-```
+```java
 var e = new Ellipse2D.Double(150, 200, 100, 50);
 ```
 
@@ -16807,20 +18004,20 @@ var e = new Ellipse2D.Double(150, 200, 100, 50);
 
 构造椭圆时，你通常知道中心、宽度和高度，但不知道外接矩形的角点（这些角点甚至不在椭圆上）。`setFrameFromCenter` 方法使用中心点，但它仍然需要四个角点之一。因此，你通常会如下构造椭圆：
 
-```
+```java
 var ellipse =
 new Ellipse2D.Double(centerX - width / 2, centerY);
 ```
 
 要构造一条直线，你提供起点和终点，可以是 `Point2D` 对象也可以是数字对：
 
-```
+```java
 var line = new Line2D.Double(start, end);
 ```
 
-或者
+或者：
 
-```
+```java
 var line = new Line2D.Double(startX, startY, end);
 ```
 
@@ -16828,7 +18025,7 @@ var line = new Line2D.Double(startX, startY, end);
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1041_0.png)
 
-# 列表 1.3 draw/DrawTest.java
+## 列表 1.3：`draw/DrawTest.java`
 
 ```java
 package draw;
@@ -16899,39 +18096,53 @@ import javax.swing.*;
 66 }
 ```
 
-### java.awt.geom.RectangularShape
-- double getCenterX()
-- double getCenterY()
-- double getMinX()
-- double getMinY()
-- double getMaxX()
-- double getMaxY()
-返回矩形的中心、最小或最大 x 或 y 值。
-- double getWidth()
-- double getHeight()
-返回矩形的宽度或高度。
-- double getX()
-- double getY()
-返回矩形左上角的 x 或 y 坐标。
+### `java.awt.geom.RectangularShape`
 
-### java.awt.geom.Rectangle2D.Double
-- Rectangle2D.Double(double x, y, w, h)
+- `double getCenterX()`
+- `double getCenterY()`
+- `double getMinX()`
+- `double getMinY()`
+- `double getMaxX()`
+- `double getMaxY()`
+
+返回矩形的中心、最小或最大 `x` 或 `y` 值。
+
+- `double getWidth()`
+- `double getHeight()`
+
+返回矩形的宽度或高度。
+
+- `double getX()`
+- `double getY()`
+
+返回矩形左上角的 `x` 或 `y` 坐标。
+
+### `java.awt.geom.Rectangle2D.Double`
+
+- `Rectangle2D.Double(double x, y, w, h)`
+
 构造一个具有给定左上角、宽度和高度的矩形。
 
-### java.awt.geom.Ellipse2D.Double
-- Ellipse2D.Double(double x, y, w, h)
+### `java.awt.geom.Ellipse2D.Double`
+
+- `Ellipse2D.Double(double x, y, w, h)`
+
 构造一个外接矩形具有给定左上角、宽度和高度的椭圆。
 
-### java.awt.geom.Point2D.Double
-- Point2D.Double(double x, y)
+### `java.awt.geom.Point2D.Double`
+
+- `Point2D.Double(double x, y)`
+
 构造一个具有给定坐标的点。
 
-### java.awt.geom.Line2D.Double
-- Line2D.Double(Point2D start, Point2D end)
-- Line2D.Double(double startX, double startY, double endY)
+### `java.awt.geom.Line2D.Double`
+
+- `Line2D.Double(Point2D start, Point2D end)`
+- `Line2D.Double(double startX, double startY, double endY)`
+
 使用给定的起点和终点构造一条直线。
 
-## 1.3.2. 使用 Color
+## 1.3.2. 使用 `Color`
 
 `Graphics2D` 类的 `setPaint` 方法允许你选择一种用于图形上下文所有绘制操作的颜色。例如：
 
@@ -16956,7 +18167,7 @@ g2.fill(rect); // 用红色填充 rect
 
 使用 `Color` 类定义颜色。`java.awt.Color` 类提供了以下 13 种标准色的预定义常量：
 
-```
+```text
 BLACK, BLUE, CYAN, DARK_GRAY, GRAY, GREEN, LIGHT_MAGENTA, ORANGE, PINK, RED, WHITE, YELLOW
 ```
 
@@ -16971,7 +18182,7 @@ g2.drawString("Welcome!", 75, 125);
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1048_0.png)
 
-要设置组件的背景色，请使用 `Component` 类（JComponent 的祖类）的 `setBackground` 方法。
+要设置组件的背景色，请使用 `Component` 类（`JComponent` 的祖类）的 `setBackground` 方法。
 
 ```java
 var component = new MyComponent();
@@ -16980,42 +18191,39 @@ component.setBackground(Color.PINK);
 
 还有一个 `setForeground` 方法。它指定了用于组件绘制的默认颜色。
 
+### `java.awt.Color 1.0`
 
+- `Color(int r, int g, int b)`
 
-```java
-java.awt.Color 1.0
-```
-
-+   - Color(int r, int g, int b)
 根据给定的红色、绿色和蓝色分量创建一个颜色对象，范围在 0 到 255 之间。
 
-```java
-java.awt.Graphics2D 1.2
-```
+### `java.awt.Graphics2D 1.2`
 
-+   - Paint getPaint()
-- void setPaint(Paint p)
+- `Paint getPaint()`
+- `void setPaint(Paint p)`
+
 获取或设置此图形上下文的绘制属性。`Color` 类实现了 `Paint` 接口。因此，你可以使用此方法将绘制属性设置为纯色（solid color）。
-- void fill(Shape s)
 
-```java
-java.awt.Component 1.0
-```
+- `void fill(Shape s)`
 
-+   - Color getForeground()
-- Color getBackground()
-- void setForeground(Color c)
-- void setBackground(Color c)
+### `java.awt.Component 1.0`
+
+- `Color getForeground()`
+- `Color getBackground()`
+- `void setForeground(Color c)`
+- `void setBackground(Color c)`
+
 获取或设置前景颜色或背景颜色。
 
 ## 1.3.3. 使用字体
 
-本章开头的“不是 Hello World”的程序使用默认字体显示了一个字符串。有时，你可能希望用不同的字体显示文本。你可以通过*字体脸名称*（font face name）来指定字体。字体名称由一个*字体族名称*（font family name，如“Helvetica”）和一个可选的后缀（如“Bold”）组成。例如，“Helvetica”字体脸和“Helvetica Bold”字体脸都被认为是名为“Helvetica”的字体族的一部分。
+本章开头的“不是 Hello World”的程序使用默认字体显示了一个字符串。有时，你可能希望用不同的字体显示文本。你可以通过**字体脸名称**（font face name）来指定字体。字体名称由一个**字体族名称**（font family name，如“Helvetica”）和一个可选的后缀（如“Bold”）组成。例如，“Helvetica”字体脸和“Helvetica Bold”字体脸都被认为是名为“Helvetica”的字体族的一部分。
 
 要查找特定计算机上可用的字体，请调用 `GraphicsEnvironment` 类的 `getAvailableFontNames` 方法。该方法返回一个包含所有可用字体名称的字符串数组。要获取一个描述用户系统图形环境的 `GraphicsEnvironment` 类的实例，请使用静态方法 `getLocalGraphicsEnvironment`。以下程序将打印你系统上所有的字体名称：
 
 ```java
 import java.awt.*;
+
 public class ListFonts {
     public static void main(String[] args) {
         String[] fontNames = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
@@ -17031,13 +18239,13 @@ for (String fontName : fontNames) {
 
 AWT 定义五个逻辑字体名称：
 
-- SansSerif
-- Serif
-- Monospaced
-- Dialog
-- DialogInput
+- `SansSerif`
+- `Serif`
+- `Monospaced`
+- `Dialog`
+- `DialogInput`
 
-这些名称始终映射到客户端机器上实际存在的字体。例如，在 Windows 系统上，SansSerif 映射到 Arial。
+这些名称始终映射到客户端机器上实际存在的字体。例如，在 Windows 系统上，`SansSerif` 映射到 Arial。
 
 此外，Oracle JDK 始终包含三个名为“Lucida Sans”、“Lucida Bright”和“Lucida Sans Typewriter”的字体族。
 
@@ -17051,7 +18259,67 @@ var sansbold14 = new Font("SansSerif", Font.BOLD,
 
 你可以在 `Font` 构造函数中使用逻辑字体名称代替字体脸名称。通过将 `Font` 构造函数的第二个参数设置为以下值之一，可以指定样式（普通、粗体、斜体或粗斜体）：
 
+```java
+Font.PLAIN
+Font.BOLD
+Font.ITALIC
+Font.BOLD + Font.ITALIC
 ```
+
+以下代码使用你系统上的标准无衬线字体（sans serif），以 14 磅粗体显示字符串“Hello, World!”：
+
+```java
+var sansbold14 = new Font("SansSerif", Font.BOLD,
+g2.setFont(sansbold14);
+var message = "Hello, World!"
+g2.drawString(message, 75, 100);
+```
+
+
+
+接下来，让我们让字符串在其组件中居中，而不是在任意位置绘制它。我们需要知道字符串以像素为单位的宽度高度。这些维度取决于三个因素：
+
+- 使用的字体（在本例中，是无衬线字体、粗体、14 磅）；
+- 字符串（在本例中，是“Hello, World!”）；以及
+- 绘制字体设备（在本例中，是用户的屏幕）。
+
+要获取代表设备字体特征的对象，请调用`Graphics2D`类的`getFontRenderContext`方法。它返回一个`FontRenderContext`类的对象。只需将该对象传递给`Font`类的`getStringBounds`方法：
+
+```java
+FontRenderContext context = g2.getFontRenderContext()
+Rectangle2D bounds = sansbold14.getStringBounds(r
+```
+
+`getStringBounds`方法返回一个包含字符串的矩形。
+
+为了解释该矩形的尺寸，你应该了解一些基础排版术语（见图 10.9）。基线（baseline）是一条想象的线，例如字符‘e’的底部就落在其上。升部（ascent）是从基线到字母升部（ascender）顶部的距离，升部是字母‘b’或‘k’的上部，或者是大写字母。下降部（descent）是从基线到下降部（descender）的距离，下降部是像‘p’或‘g’这样的字母的底部。
+
+![](img/cb920f692d263682e00dcb1ad7f884cc_1054_0.png)
+
+## 图 1.9：排版术语图
+
+行距（Leading）一行下降部与下一行升部之间的空间。（用于分隔行的术语。）矩形的高度是升部 + 下降部 + 行距之和。矩形的宽度是字符串的水平跨度。矩形的 y 坐标是。
+
+要获取一个代表设备字体特征的对象，调用`Graphics2D`类的`getFontRenderContext`方法。它返回一个`FontRenderContext`类的对象。只需将该对象传递给`Font`类的`getStringBounds`方法：
+
+```java
+FontRenderContext context = g2.getFontRenderContext()
+Rectangle2D bounds = sansbold14.getStringBounds(r
+```
+
+`getStringBounds`方法返回一个包含字符串的矩形。
+
+为了解释该矩形的尺寸，你应该了解一些基础排版术语（见图 10.9）。基线（baseline）是一条想象的线，例如字符‘e’的底部就落在其上。升部（ascent）是从基线到字母升部（ascender）顶部的距离，升部是字母‘b’或‘k’的上部，或者是大写字母。下降部（descent）是从基线到下降部（descender）的距离，下降部是像‘p’或‘g’这样的字母的底部。
+
+![](img/cb920f692d263682e00dcb1ad7f884cc_1054_0.png)
+
+## 图 1.9：排版术语图
+
+行距（Leading）一行下降部与下一行升部之间的空间。（用于分隔行的术语。）矩形的高度是升部 + 下降部 + 行距之和。矩形的宽度是字符串的水平跨度。矩形的 y 坐标是。
+
+你可以在`Font`构造函数中使用逻辑字体名称代替字体脸名称。通过将`Font`构造函数的第二个参数设置为以下值之一，可以指定样式（普通、粗体、斜体或粗斜体）：
+
+```java
 Font.PLAIN
 Font.BOLD
 Font.ITALIC
@@ -17073,14 +18341,14 @@ g2.drawString(message, 75, 100);
 - 字符串（在本例中，是“Hello, World!”）；以及
 - 绘制字体设备（在本例中，是用户的屏幕）。
 
-要获取代表设备字体特征的对象，请调用 `Graphics2D` 类的 `getFontRenderContext` 方法。它返回一个 `FontRenderContext` 类的对象。只需将该对象传递给 `Font` 类的 `getStringBounds` 方法：
+要获取一个代表设备字体特征的对象，调用`Graphics2D`类的`getFontRenderContext`方法。它返回一个`FontRenderContext`类的对象。只需将该对象传递给`Font`类的`getStringBounds`方法：
 
 ```java
 FontRenderContext context = g2.getFontRenderContext()
 Rectangle2D bounds = sansbold14.getStringBounds(r
 ```
 
-`getStringBounds` 方法返回一个包含字符串的矩形。
+`getStringBounds`方法返回一个包含字符串的矩形。
 
 为了解释该矩形的尺寸，你应该了解一些基础排版术语（见图 10.9）。基线（baseline）是一条想象的线，例如字符‘e’的底部就落在其上。升部（ascent）是从基线到字母升部（ascender）顶部的距离，升部是字母‘b’或‘k’的上部，或者是大写字母。下降部（descent）是从基线到下降部（descender）的距离，下降部是像‘p’或‘g’这样的字母的底部。
 
@@ -17090,14 +18358,22 @@ Rectangle2D bounds = sansbold14.getStringBounds(r
 
 行距（Leading）一行下降部与下一行升部之间的空间。（用于分隔行的术语。）矩形的高度是升部 + 下降部 + 行距之和。矩形的宽度是字符串的水平跨度。矩形的 y 坐标是。
 
-要获取一个代表设备字体特征的对象，调用 `Graphics2D` 类的 `getFontRenderContext` 方法。它返回一个 `FontRenderContext` 类的对象。只需将该对象传递给 `Font` 类的 `getStringBounds` 方法：
+注意：当你需要计算下降部或行距，可以使用`Font`类的`getMetrics`方法。它返回一个`LineMetrics`对象，从中可以获取这些值：
+
+```java
+LineMetrics metrics = f.getMetrics(message);
+float descent = metrics.getDescent();
+float leading = metrics.getLeading();
+```
+
+要获取一个代表设备字体特征的对象，调用`Graphics2D`类的`getFontRenderContext`方法。它返回一个`FontRenderContext`类的对象。只需将该对象传递给`Font`类的`getStringBounds`方法：
 
 ```java
 FontRenderContext context = g2.getFontRenderContext()
 Rectangle2D bounds = sansbold14.getStringBounds(r
 ```
 
-`getStringBounds` 方法返回一个包含字符串的矩形。
+`getStringBounds`方法返回一个包含字符串的矩形。
 
 为了解释该矩形的尺寸，你应该了解一些基础排版术语（见图 10.9）。基线（baseline）是一条想象的线，例如字符‘e’的底部就落在其上。升部（ascent）是从基线到字母升部（ascender）顶部的距离，升部是字母‘b’或‘k’的上部，或者是大写字母。下降部（descent）是从基线到下降部（descender）的距离，下降部是像‘p’或‘g’这样的字母的底部。
 
@@ -17107,9 +18383,34 @@ Rectangle2D bounds = sansbold14.getStringBounds(r
 
 行距（Leading）一行下降部与下一行升部之间的空间。（用于分隔行的术语。）矩形的高度是升部 + 下降部 + 行距之和。矩形的宽度是字符串的水平跨度。矩形的 y 坐标是。
 
-你可以在 `Font` 构造函数中使用逻辑字体名称代替字体脸名称。通过将 `Font` 构造函数的第二个参数设置为以下值之一，可以指定样式（普通、粗体、斜体或粗斜体）：
+注意：当你需要计算下降部或行距，可以使用`Font`类的`getMetrics`方法。它返回一个`LineMetrics`对象，从中可以获取这些值：
 
+```java
+LineMetrics metrics = f.getMetrics(message);
+float descent = metrics.getDescent();
+float leading = metrics.getLeading();
 ```
+
+要获取一个代表设备字体特征的对象，调用`Graphics2D`类的`getFontRenderContext`方法。它返回一个`FontRenderContext`类的对象。只需将该对象传递给`Font`类的`getStringBounds`方法：
+
+```java
+FontRenderContext context = g2.getFontRenderContext()
+Rectangle2D bounds = sansbold14.getStringBounds(r
+```
+
+`getStringBounds`方法返回一个包含字符串的矩形。
+
+为了解释该矩形的尺寸，你应该了解一些基础排版术语（见图 10.9）。基线（baseline）是一条想象的线，例如字符‘e’的底部就落在其上。升部（ascent）是从基线到字母升部（ascender）顶部的距离，升部是字母‘b’或‘k’的上部，或者是大写字母。下降部（descent）是从基线到下降部（descender）的距离，下降部是像‘p’或‘g’这样的字母的底部。
+
+![](img/cb920f692d263682e00dcb1ad7f884cc_1054_0.png)
+
+## 图 1.9：排版术语图
+
+行距（Leading）一行下降部与下一行升部之间的空间。（用于分隔行的术语。）矩形的高度是升部 + 下降部 + 行距之和。矩形的宽度是。的是。
+
+你可以在`Font`构造函数中使用逻辑字体名称代替字体脸名称。通过将`Font`构造函数的第二个参数设置为以下值之一，可以指定样式（普通、粗体、斜体或粗斜体）：
+
+```java
 Font.PLAIN
 Font.BOLD
 Font.ITALIC
@@ -17131,64 +18432,14 @@ g2.drawString(message, 75, 100);
 - 字符串（在本例中，是“Hello, World!”）；以及
 - 绘制字体设备（在本例中，是用户的屏幕）。
 
-要获取一个代表设备字体特征的对象，调用 `Graphics2D` 类的 `getFontRenderContext` 方法。它返回一个 `FontRenderContext` 类的对象。只需将该对象传递给 `Font` 类的 `getStringBounds` 方法：
+要获取一个代表设备字体特征的对象，调用`Graphics2D`类的`getFontRenderContext`方法。它返回一个`FontRenderContext`类的对象。只需将该对象传递给`Font`类的`getStringBounds`方法：
 
 ```java
 FontRenderContext context = g2.getFontRenderContext()
 Rectangle2D bounds = sansbold14.getStringBounds(r
 ```
 
-`getStringBounds` 方法返回一个包含字符串的矩形。
-
-为了解释该矩形的尺寸，你应该了解一些基础排版术语（见图 10.9）。基线（baseline）是一条想象的线，例如字符‘e’的底部就落在其上。升部（ascent）是从基线到字母升部（ascender）顶部的距离，升部是字母‘b’或‘k’的上部，或者是大写字母。下降部（descent）是从基线到下降部（descender）的距离，下降部是像‘p’或‘g’这样的字母的底部。
-
-![](img/cb920f692d263682e00dcb1ad7f884cc_1054_0.png)
-
-## 图 1.9：排版术语图
-
-行距（Leading）一行下降部与下一行升部之间的空间。（用于分隔行的术语。）矩形的高度是升部 + 下降部 + 行距之和。矩形的宽度是字符串的水平跨度。矩形的 y 坐标是。
-
-注意：当你需要计算下降部或行距，可以使用 `Font` 类的 `getMetrics` 方法。它返回一个 `LineMetrics` 对象，从中可以获取这些值：
-
-```java
-LineMetrics metrics = f.getMetrics(message);
-float descent = metrics.getDescent();
-float leading = metrics.getLeading();
-```
-
-要获取一个代表设备字体特征的对象，调用 `Graphics2D` 类的 `getFontRenderContext` 方法。它返回一个 `FontRenderContext` 类的对象。只需将该对象传递给 `Font` 类的 `getStringBounds` 方法：
-
-```java
-FontRenderContext context = g2.getFontRenderContext()
-Rectangle2D bounds = sansbold14.getStringBounds(r
-```
-
-`getStringBounds` 方法返回一个包含字符串的矩形。
-
-为了解释该矩形的尺寸，你应该了解一些基础排版术语（见图 10.9）。基线（baseline）是一条想象的线，例如字符‘e’的底部就落在其上。升部（ascent）是从基线到字母升部（ascender）顶部的距离，升部是字母‘b’或‘k’的上部，或者是大写字母。下降部（descent）是从基线到下降部（descender）的距离，下降部是像‘p’或‘g’这样的字母的底部。
-
-![](img/cb920f692d263682e00dcb1ad7f884cc_1054_0.png)
-
-## 图 1.9：排版术语图
-
-行距（Leading）一行下降部与下一行升部之间的空间。（用于分隔行的术语。）矩形的高度是升部 + 下降部 + 行距之和。矩形的宽度是字符串的水平跨度。矩形的 y 坐标是。
-
-注意：当你需要计算下降部或行距，可以使用 `Font` 类的 `getMetrics` 方法。它返回一个 `LineMetrics` 对象，从中可以获取这些值：
-
-```java
-LineMetrics metrics = f.getMetrics(message);
-float descent = metrics.getDescent();
-float leading = metrics.getLeading();
-```
-
-要获取一个代表设备字体特征的对象，调用 `Graphics2D` 类的 `getFontRenderContext` 方法。它返回一个 `FontRenderContext` 类的对象。只需将该对象传递给 `Font` 类的 `getStringBounds` 方法：
-
-```java
-FontRenderContext context = g2.getFontRenderContext()
-Rectangle2D bounds = sansbold14.getStringBounds(r
-```
-
-`getStringBounds` 方法返回一个包含字符串的矩形。
+`getStringBounds`方法返回一个包含字符串的矩形。
 
 为了解释该矩形的尺寸，你应该了解一些基础排版术语（见图 10.9）。基线（baseline）是一条想象的线，例如字符‘e’的底部就落在其上。升部（ascent）是从基线到字母升部（ascender）顶部的距离，升部是字母‘b’或‘k’的上部，或者是大写字母。下降部（descent）是从基线到下降部（descender）的距离，下降部是像‘p’或‘g’这样的字母的底部。
 
@@ -17198,48 +18449,7 @@ Rectangle2D bounds = sansbold14.getStringBounds(r
 
 行距（Leading）一行下降部与下一行升部之间的空间。（用于分隔行的术语。）矩形的高度是升部 + 下降部 + 行距之和。矩形的宽度是。的是。
 
-你可以在 `Font` 构造函数中使用逻辑字体名称代替字体脸名称。通过将 `Font` 构造函数的第二个参数设置为以下值之一，可以指定样式（普通、粗体、斜体或粗斜体）：
-
-```
-Font.PLAIN
-Font.BOLD
-Font.ITALIC
-Font.BOLD + Font.ITALIC
-```
-
-以下代码使用你系统上的标准无衬线字体（sans serif），以 14 磅粗体显示字符串“Hello, World!”：
-
-```java
-var sansbold14 = new Font("SansSerif", Font.BOLD,
-g2.setFont(sansbold14);
-var message = "Hello, World!"
-g2.drawString(message, 75, 100);
-```
-
-接下来，让我们让字符串在其组件中居中，而不是在任意位置绘制它。我们需要知道字符串以像素为单位的宽度高度。这些维度取决于三个因素：
-
-- 使用的字体（在本例中，是无衬线字体、粗体、14 磅）；
-- 字符串（在本例中，是“Hello, World!”）；以及
-- 绘制字体设备（在本例中，是用户的屏幕）。
-
-要获取一个代表设备字体特征的对象，调用 `Graphics2D` 类的 `getFontRenderContext` 方法。它返回一个 `FontRenderContext` 类的对象。只需将该对象传递给 `Font` 类的 `getStringBounds` 方法：
-
-```java
-FontRenderContext context = g2.getFontRenderContext()
-Rectangle2D bounds = sansbold14.getStringBounds(r
-```
-
-`getStringBounds` 方法返回一个包含字符串的矩形。
-
-为了解释该矩形的尺寸，你应该了解一些基础排版术语（见图 10.9）。基线（baseline）是一条想象的线，例如字符‘e’的底部就落在其上。升部（ascent）是从基线到字母升部（ascender）顶部的距离，升部是字母‘b’或‘k’的上部，或者是大写字母。下降部（descent）是从基线到下降部（descender）的距离，下降部是像‘p’或‘g’这样的字母的底部。
-
-![](img/cb920f692d263682e00dcb1ad7f884cc_1054_0.png)
-
-## 图 1.9：排版术语图
-
-行距（Leading）一行下降部与下一行升部之间的空间。（用于分隔行的术语。）矩形的高度是升部 + 下降部 + 行距之和。矩形的宽度是。的是。
-
-注意：当你需要计算下降部或行距，可以使用 `Font` 类的 `getMetrics` 方法。它返回一个 `LineMetrics` 对象，从中可以获取这些值：
+注意：当你需要计算下降部或行距，可以使用`Font`类的`getMetrics`方法。它返回一个`LineMetrics`对象，从中可以获取这些值：
 
 ```java
 LineMetrics metrics = f.getMetrics(message);
@@ -17247,14 +18457,14 @@ float descent = metrics.getDescent();
 float leading = metrics.getLeading();
 ```
 
-要获取一个代表设备字体特征的对象，调用 `Graphics2D` 类的 `getFontRenderContext` 方法。它返回一个 `FontRenderContext` 类的对象。只需将该对象传递给 `Font` 类的 `getStringBounds` 方法：
+要获取一个代表设备字体特征的对象，调用`Graphics2D`类的`getFontRenderContext`方法。它返回一个`FontRenderContext`类的对象。只需将该对象传递给`Font`类的`getStringBounds`方法：
 
 ```java
 FontRenderContext context = g2.getFontRenderContext()
 Rectangle2D bounds = sansbold14.getStringBounds(r
 ```
 
-`getStringBounds` 方法返回一个包含字符串的矩形。
+`getStringBounds`方法返回一个包含字符串的矩形。
 
 为了解释该矩形的尺寸，你应该了解一些基础排版术语（见图 10.9）。基线（baseline）是一条想象的线，例如字符‘e’的底部就落在其上。升部（ascent）是从基线到字母升部（ascender）顶部的距离，升部是字母‘b’或‘k’的上部，或者是大写字母。下降部（descent）是从基线到下降部（descender）的距离，下降部是像‘p’或‘g’这样的字母的底部。
 
@@ -17264,6 +18474,30 @@ Rectangle2D bounds = sansbold14.getStringBounds(r
 
 行距（Leading）一行下降部与下一行升部之间的空间。（用于分隔行的术语。）矩形的高度是升部 + 下降部 + 行距之和。矩形的宽度是。的是。
 
+注意：当你需要计算下降部或行距，可以使用`Font`类的`getMetrics`方法。它返回一个`LineMetrics`对象，从中可以获取这些值：
+
+```java
+LineMetrics metrics = f.getMetrics(message);
+float descent = metrics.getDescent();
+float leading = metrics.getLeading();
+```
+
+要获取一个代表设备字体特征的对象，调用`Graphics2D`类的`getFontRenderContext`方法。它返回一个`FontRenderContext`类的对象。只需将该对象传递给`Font`类的`getStringBounds`方法：
+
+```java
+FontRenderContext context = g2.getFontRenderContext()
+Rectangle2D bounds = sansbold14.getStringBounds(r
+```
+
+`getStringBounds`方法返回一个包含字符串的矩形。
+
+为了解释该矩形的尺寸，你应该了解一些基础排版术语（见图 10.9）。基线（baseline）是一条想象的线，例如字符‘e’的底部就落在其上。升部（ascent）是从基线到字母升部（ascender）顶部的距离，升部是字母‘b’或‘k’的上部，或者是大写字母。下降部（descent）是从基线到下降部（descender）的距离，下降部是像‘p’或‘g’这样的字母的底部。
+
+![](img/cb920f692d263682e00dcb1ad7f884cc_1054_0.png)
+
+## 图 1.9：排版术语图
+
+行距（Leading）一行下降部与下一行升部之间的空间。（用于分隔行的术语。）矩形的高度是升部 + 下降部 + 行距之和。矩形的宽度是。
 
 ```java
 g2.drawString(message, (int) x, (int) y);
@@ -17282,75 +18516,83 @@ public Dimension getPreferredSize() {
 }
 ```
 
-java.awt.Font 1.0
+### `java.awt.Font` 1.0
 
-+ *Font(String name, int style, int size)*
-创建一个新的字体对象。字体名称可以是字体名称（例如 "Helvetica Bold"）或逻辑字体名称（例如 "Serif", "SansSerif"）。样式可以是 Font.PLAIN、Font.BOLD、Font.ITALIC 或 Font.BOLD + Font.ITALIC 之一。
+- `Font(String name, int style, int size)`
 
-+ - *String getFontName()*
-获取字体名称（例如 "Helvetica Bold"）。
+  创建一个新的字体对象。字体名称可以是字体名称（例如 `"Helvetica Bold"`）或逻辑字体名称（例如 `"Serif"`、`"SansSerif"`）。样式可以是`Font.PLAIN`、`Font.BOLD`、`Font.ITALIC`或`Font.BOLD + Font.ITALIC`之一。
 
-+ - *String getFamily()*
-获取字体族名称（例如 "Helvetica"）。
+- `String getFontName()`
 
-+ - *String getName()*
-如果字体是用逻辑名称创建的，则获取逻辑名称（例如 "Sans Serif"）；否则，获取字体名称。
+  获取字体名称（例如 `"Helvetica Bold"`）。
 
-+ - *Rectangle2D getString(String s, FontRenderContext context)* 1.2
-返回一个包含字符串的矩形。矩形的起点位于基线处。矩形的顶部 y 坐标等于等高（ascent）的负值。矩形的高度等于等高、下降（descent）和行间距（leading）之和。宽度等于字符串宽度。
+- `String getFamily()`
 
-+ - *LineMetrics getLineMetrics(String s, FontRenderContext context)* 1.2
-返回一个度量对象以确定的范围。
+  获取字体族名称（例如 `"Helvetica"`）。
 
-```java
-java.awt.font.LineMetrics 1.2
-```
+- `String getName()`
 
-+ - *float getAscent()*
-获取字体等高——从基线到大写字母顶部的距离。
+  如果字体是用逻辑名称创建的，则获取逻辑名称（例如 `"Sans Serif"`）；否则，获取字体名称。
 
-+ - *float getDescent()*
-获取字体下降——从基线到下降字母（descenders）底部的距离。
+- `Rectangle2D getString(String s, FontRenderContext context)` 1.2
 
-+ - *float getLeading()*
-获取字体行间距——一行文本底部与下一行顶部之间的空间。
+  返回一个包含字符串的矩形。矩形的起点位于基线处。矩形的顶部 y 坐标等于等高（ascent）的负值。矩形的高度等于等高、下降（descent）和行间距（leading）之和。宽度等于字符串宽度。
 
-+ - *float getHeight()*
-获取字体的总高度——文本两条基线之间的距离（下降 + 行间距 + 等高）。
+- `LineMetrics getLineMetrics(String s, FontRenderContext context)` 1.2
 
-```java
-java.awt.Graphics2D 1.2
-```
+  返回一个度量对象以确定的范围。
 
-+ - *FontRenderContext getFontContext()*
-获取字体渲染上下文，该上下文在图形上下文中指定字体特征。
+### `java.awt.font.LineMetrics` 1.2
 
-+ - *void drawString(String str, float x, float y)*
-用当前字体和颜色绘制字符串。
+- `float getAscent()`
 
-```java
-javax.swing.JComponent 1.2
-```
+  获取字体等高——从基线到大写字母顶部的距离。
 
-+ - *FontMetrics getFontMetrics(Font f)* 5.0
-获取给定字体的字体度量。FontMetrics 类是 LineMetrics 类的前身。
+- `float getDescent()`
 
-```java
-java.awt.FontMetrics 1.0
-```
+  获取字体下降——从基线到下降字母（descenders）底部的距离。
 
-+ - *FontRenderContext getFontRenderContext()* 1.2
-获取字体的字体渲染上下文。
+- `float getLeading()`
 
-## 1.3.4. 显示图像
+  获取字体行间距——一行文本底部与下一行顶部之间的空间。
 
-你可以使用 `ImageIcon` 类从文件读取图像：
+- `float getHeight()`
+
+  获取字体的总高度——文本两条基线之间的距离（下降 + 行间距 + 等高）。
+
+### `java.awt.Graphics2D` 1.2
+
+- `FontRenderContext getFontContext()`
+
+  获取字体渲染上下文，该上下文在图形上下文中指定字体特征。
+
+- `void drawString(String str, float x, float y)`
+
+  用当前字体和颜色绘制字符串。
+
+### `javax.swing.JComponent` 1.2
+
+- `FontMetrics getFontMetrics(Font f)` 5.0
+
+  获取给定字体的字体度量。`FontMetrics`类是`LineMetrics`类的前身。
+
+### `java.awt.FontMetrics` 1.0
+
+- `FontRenderContext getFontRenderContext()` 1.2
+
+  获取字体的字体渲染上下文。
+
+## 1.3.4 显示图像
+
+你可以使用`ImageIcon`类从文件读取图像：
 
 ```java
 Image image = new ImageIcon(filename).getImage()
 ```
 
-现在变量 `image` 包含一个封装图像数据的对象的引用。使用 `Graphics` 类的 `drawImage` 方法显示图像。
+
+
+现在变量`image`包含一个封装图像数据的对象的引用。使用`Graphics`类的`drawImage`方法显示图像。
 
 ```java
 public void paintComponent(Graphics g)
@@ -17360,7 +18602,7 @@ public void paintComponent(Graphics g)
 }
 ```
 
-我们可以更进一步，用图形图像对窗口进行平铺处理。结果如图 10.11 所示。我们在 `paintComponent` 方法中执行平铺操作。我们首先在左上角绘制一个图像的副本，然后使用 `copyArea` 调用将其复制到整个窗口：
+我们可以更进一步，用图形图像对窗口进行平铺处理。结果如图 10.11 所示。我们在`paintComponent`方法中执行平铺操作。我们首先在左上角绘制一个图像的副本，然后使用`copyArea`调用将其复制到整个窗口：
 
 ```java
 for (int i = 0; i * imageWidth <= getWidth(); i++)
@@ -17373,7 +18615,7 @@ for (int i = 0; i * imageWidth <= getWidth(); i++)
 
 图 1.11: 带有平铺图形图像的窗口
 
-# 列表 1.5 image/ImageTest.java
+## 列表 1.5 image/ImageTest.java
 
 ```java
 1 package image;
@@ -17440,10 +18682,7 @@ for (int i = 0; i * imageWidth <= getWidth(); i++)
 62 }
 ```
 
-
-
-
-事件源（如按钮）可以有多个监听器。在这种情况下，每当用户点击按钮时，按钮都会调用所有监听器的 `actionPerformed` 方法。
+事件源（如按钮）可以有多个监听器。在这种情况下，每当用户点击按钮时，按钮都会调用所有监听器的`actionPerformed`方法。
 
 图 10.13 显示了事件源、事件监听器和事件对象之间的交互。
 
@@ -17455,7 +18694,7 @@ for (int i = 0; i * imageWidth <= getWidth(); i++)
 
 为了熟悉委托模型，让我们处理响应按钮点击简单示例所需细节。在这个示例中，我们将显示一个包含三个按钮的面板。将三个监听器对象作为动作监听器添加到按钮中。
 
-在这种场景下，用户每次点击面板上的任何按钮，关联的监听器对象都会接收到一个指示按钮点击的 `ActionEvent`。在我们的示例程序中，监听器对象将改变面板的背景颜色。
+在这种场景下，用户每次点击面板上的任何按钮，关联的监听器对象都会接收到一个指示按钮点击的`ActionEvent`。在我们的示例程序中，监听器对象将改变面板的背景颜色。
 
 在向展示监听按钮点击的程序之前，我需要解释如何创建按钮以及如何将它们添加到面板。
 
@@ -17466,7 +18705,7 @@ var yellowButton = new JButton("Yellow");
 var blueButton = new JButton(new ImageIcon("blue");
 ```
 
-调用 `add` 方法将按钮添加到面板中：
+调用`add`方法将按钮添加到面板中：
 
 ```
 var yellowButton = new JButton("Yellow");
@@ -17484,13 +18723,13 @@ buttonPanel.add(redButton);
 
 图 1.14：填充了按钮的面板
 
-接下来，我们需要添加监听这些按钮的代码。这需要实现 `ActionListener` 接口的类，正如我刚才提到的，它有一个方法：`actionPerformed`，其签名如下：
+接下来，我们需要添加监听这些按钮的代码。这需要实现`ActionListener`接口的类，正如我刚才提到的，它有一个方法：`actionPerformed`，其签名如下：
 
 ```java
 public void actionPerformed(ActionEvent event) {
 ```
 
-使用 `ActionListener` 接口的方法在所有情况下都是相同的：`actionPerformed` 方法（`ActionListener` 中唯一的方法）接收一个类型为 `ActionEvent` 的对象作为参数。这个事件对象为你提供了关于所发生事件的信息。
+使用`ActionListener`接口的方法在所有情况下都是相同的：`actionPerformed`方法（`ActionListener`中唯一的方法）接收一个类型为`ActionEvent`的对象作为参数。这个事件对象为你提供了关于所发生事件的信息。
 
 当按钮被点击时，我们希望面板的背景颜色变为特定的颜色。我们将所需的颜色存储在监听器类中。
 
@@ -17520,9 +18759,9 @@ blueButton.addActionListener(blueAction);
 redButton.addActionListener(redAction);
 ```
 
-例如，如果用户点击标记为“Yellow”的按钮，`yellowAction` 对象的 `actionPerformed` 方法将被调用。它的 `backgroundColor` 实例被设置为 `Color.YELLOW`，现在它可以继续设置面板的背景颜色了。
+例如，如果用户点击标记为“Yellow”的按钮，`yellowAction`对象的`actionPerformed`方法将被调用。它的`backgroundColor`实例被设置为`Color.YELLOW`，现在它可以继续设置面板的背景颜色了。
 
-只剩下一个问题。`ColorAction` 对象无法访问 `buttonPanel` 变量。你可以通过两种方式解决这个问题。你可以将面板存储在 `ColorAction` 对象中并在 `ColorAction` 构造函数中设置它。或者更方便地，可以将 `ColorAction` 变成 `ButtonFrame` 类的内部类。这样它的方法就可以自动访问外部面板。
+只剩下一个问题。`ColorAction`对象无法访问`buttonPanel`变量。你可以通过两种方式解决这个问题。你可以将面板存储在`ColorAction`对象中并在`ColorAction`构造函数中设置它。或者更方便地，可以将`ColorAction`变成`ButtonFrame`类的内部类。这样它的方法就可以自动访问外部面板。
 
 列表 10.6 包含了完整的框架类。每当你点击其中一个按钮时，相应的动作监听器就会改变面板的背景颜色。
 
@@ -17598,7 +18837,7 @@ makeButton("blue", Color.BLUE);
 makeButton("red", Color.RED);
 ```
 
-在这里，我们为每种颜色构造了监听器对象，而无需显式定义类。每当调用辅助方法时，它都会创建一个 `ActionListener` 接口的实例。它的 `actionPerformed` 动作引用了存储在监听器对象中的 `backgroundColor` 值。然而，这一切都不需要你显式定义类或构造函数。
+在这里，我们为每种颜色构造了监听器对象，而无需显式定义类。每当调用辅助方法时，它都会创建一个`ActionListener`接口的实例。它的`actionPerformed`动作引用了存储在监听器对象中的`backgroundColor`值。然而，这一切都不需要你显式定义类或构造函数。
 
 > 注意：在旧代码中，你经常会看到匿名类的使用：
 
@@ -17613,22 +18852,21 @@ exitButton.addActionListener(new ActionListener() {
 ```
 
 当然，这种相当冗长的代码不再需要了。
+
 使用 lambda 表达式更加简单清晰。
 
 ## 1.4.4. 适配器类
 
 并不是所有的事件都像处理按钮点击那样简单。假设你想监控用户何时关闭主框架，以便弹出一个对话框，并在用户同意后才退出程序。
 
-当用户尝试关闭窗口时，`JFrame` 对象是 `WindowEvent` 的源。如果你想捕获该事件，必须有一个适当的监听器对象并将其添加到框架的窗口监听器列表中。
+当用户尝试关闭窗口时，`JFrame`对象是`WindowEvent`的源。如果你想捕获该事件，必须有一个适当的监听器对象并将其添加到框架的窗口监听器列表中。
 
 ```java
 WindowListener listener = . . .;
 frame.addWindowListener(listener);
 ```
 
-
-
-窗口监听器必须是一个实现了 `WindowListener` 接口类的对象。`WindowListener` 接口中实际上有七个方法。框架将它们称为对窗口可能发生的七种不同事件的响应。这些名称自言自易，只是“iconified”在 Windows 下通常被称为“minimized”（最小化）。以下是完整的 `WindowListener` 接口：
+窗口监听器必须是一个实现了`WindowListener`接口类的对象。`WindowListener`接口中实际上有七个方法。框架将它们称为对窗口可能发生的七种不同事件的响应。这些名称自言自易，只是“iconified”在 Windows 下通常被称为“minimized”（最小化）。以下是完整的`WindowListener`接口：
 
 ```
 public interface WindowListener {
@@ -17642,9 +18880,9 @@ public interface WindowListener {
 }
 ```
 
-当然，我们可以定义一个实现接口的类，在 `windowClosing` 方法中添加对 `System.exit(0)` 的调用，并为其他六个方法编写空函数。然而，为六个无无作用的方法编写代码是没人喜欢的枯燥重复工作。为了简化这项任务，每个具有多个方法的 AWT 监听器接口都带有一个配套的适配器类（adapter class），该类实现了接口中的所有方法，但对它们不做任何操作。例如，`WindowAdapter` 类拥有空操作方法。你通过扩展适配器类来指定对接口中某些（但不是所有）事件类型预期的响应。（像 `ActionListener` 这样只有一个方法的接口就不需要适配器类。）
+当然，我们可以定义一个实现接口的类，在`windowClosing`方法中添加对`System.exit(0)`的调用，并为其他六个方法编写空函数。然而，为六个无无作用的方法编写代码是没人喜欢的枯燥重复工作。为了简化这项任务，每个具有多个方法的 AWT 监听器接口都带有一个配套的适配器类（adapter class），该类实现了接口中的所有方法，但对它们不做任何操作。例如，`WindowAdapter`类拥有空操作方法。你通过扩展适配器类来指定对接口中某些（但不是所有）事件类型预期的响应。（像`ActionListener`这样只有一个方法的接口就不需要适配器类。）
 
-以下是我们如何定义一个重写了 `windowClosing` 方法的窗口监听器：
+以下是我们如何定义一个重写了`windowClosing`方法的窗口监听器：
 
 ```
 class Terminator extends WindowAdapter {
@@ -17656,39 +18894,48 @@ class Terminator extends WindowAdapter {
 }
 ```
 
-现在，你可以将 `Terminator` 类型的对象注册为事件监听器：
+现在，你可以将`Terminator`类型的对象注册为事件监听器：
 
 ```
 var listener = new Terminator();
 frame.addWindowListener(listener);
 ```
 
-**注意：** 如今，人们会将 `WindowListener` 接口的空方法实现为默认方法（default methods）。然而，Swing 的发明于默认方法出现多年。
+**注意：** 如今，人们会将`WindowListener`接口的空方法实现为默认方法（default methods）。然而，Swing 的发明于默认方法出现多年。
 
 ```
 java.awt.event.WindowListener 1.1
 ```
 
 - `void windowOpened(WindowEvent e)` 在窗口打开后被调用。
-- `void windowClosing(WindowEvent e)` 在用户发出关闭窗口的管理器命令时被调用。请注意，只有当调用了 `hide` 或 `dispose` 方法时，窗口才会关闭。
+
+- `void windowClosing(WindowEvent e)` 在用户发出关闭窗口的管理器命令时被调用。请注意，只有当调用了`hide`或`dispose`方法时，窗口才会关闭。
+
 - `void windowClosed(WindowEvent e)` 在窗口关闭后被调用。
+
 - `void windowIconified(WindowEvent e)` 在窗口最小化后被调用。
+
 - `void windowDeiconified(WindowEvent e)` 在窗口取消最小化后被调用。
+
+
+
 - `void windowActivated(WindowEvent e)` 在窗口变为激活后被调用。只有框架或对话框可以是激活状态。通常，窗口管理器会对激活的窗口进行装饰——例如，通过高亮标题栏。
 
-```
+```java
 void windowDeactivated(WindowEvent e)
-在窗口变为非激活后被调用。
 ```
 
-```
+在窗口变为非激活后被调用。
+
+```java
 java.awt.event.WindowStateListener 1.4
 ```
 
-```
+```java
 void windowStateChanged(WindowEvent event)
-在窗口最大化、最小化或恢复到正常尺寸后被调用。
 ```
+
+在窗口最大化、最小化或恢复到正常尺寸后被调用。
 
 # 1.4.5. Actions
 
@@ -17702,12 +18949,12 @@ void windowStateChanged(WindowEvent event)
 
 Swing 包提供了一个非常有用的机制来封装命令并将其附加到多个事件源上：`Action` 接口。一个动作（action）是一个封装以下内容的对象：
 
-- 命令的描述（作为文本字符串和可选图标）；
-- 执行命令所需的参数（例如我们示例中请求的颜色）。
+- 命令的描述（作为文本字符串和可选图标）
+- 执行命令所需的参数（例如我们示例中请求的颜色）
 
 `Action` 接口具有以下方法：
 
-```
+```java
 void actionPerformed(ActionEvent event)
 void setEnabled(boolean b)
 boolean isEnabled()
@@ -17723,7 +18970,7 @@ void removePropertyChangeListener(PropertyChangeListener)
 
 `putValue` 和 `getValue` 方法允许你在动作对象中存储和检索任意的名称/值对。两个重要的预定义字符串，即 `Action.NAME` 和 `Action.SMALL_ICON`，用于将动作名称和图标存储到动作对象中：
 
-```
+```java
 action.putValue(Action.NAME, "Blue");
 action.putValue(Action.SMALL_ICON, new ImageIcon());
 ```
@@ -17767,13 +19014,11 @@ public class ColorAction extends AbstractAction {
 
 我们的测试程序创建该类的三个对象，例如：
 
-```
+```java
 var blueAction = new ColorAction("Blue", new ImageIcon(), Color.BLUE);
 ```
 
 接下来，让我们这个动作与按钮关联。这很容易，因为我们可以使用接收 `Action` 对象的 `JButton` 构造函数。
-
-
 
 ```java
 var blueButton = new JButton(blueAction);
@@ -17809,9 +19054,9 @@ KeyStroke ctrlBKey = KeyStroke.getKeyStroke("ctrlB
 
 按键处理按以下顺序检查这些映射：
 
-- 1. 检查具有输入焦点的组件的 `WHEN_FOCUSED` 映射。如果按键存在且其对应的 action 已启用，则执行该 action 并停止处理。
-- 2. 从具有焦点的组件开始，检查其父组件的 `WHEN_ANCESTOR_OF_FOCUSED_COMPONENT` 映射。一旦发现带有该按键和对应 action 的映射，立即执行该 action 并停止处理。
-- 3. 查找具有输入焦点的窗口中所有可见的（visible）且启用的（enabled）的组件，这些组件在 `WHEN_IN_FOCUSED_WINDOW` 映射中注册了该按键。给这些组件（按照按键注册的顺序）机会执行对应的 action。一旦执行了第一个启用的 action，即停止处理。
+1. 检查具有输入焦点的组件的 `WHEN_FOCUSED` 映射。如果按键存在且其对应的 action 已启用，则执行该 action 并停止处理。
+2. 从具有焦点的组件开始，检查其父组件的 `WHEN_ANCESTOR_OF_FOCUSED_COMPONENT` 映射。一旦发现带有该按键和对应 action 的映射，立即执行该 action 并停止处理。
+3. 查找具有输入焦点的窗口中所有可见的（visible）且启用的（enabled）的组件，这些组件在 `WHEN_IN_FOCUSED_WINDOW` 映射中注册了该按键。给这些组件（按照按键注册的顺序）机会执行对应的 action。一旦执行了第一个启用的 action，即停止处理。
 
 要从组件获取输入映射，请使用 `getInputMap` 方法。这里有一个示例：
 
@@ -17823,7 +19068,7 @@ InputMap imap = panel.getInputMap(Component.WHEN
 
 `InputMap` 不直接将 `KeyStroke` 对象映射到 `Action` 对象。相反，它映射到任意对象，然后由 `ActionMap` 类实现的第二个映射将这些对象映射到 action。这使得在来自不同输入映射的按键之间共享相同的 action 变得更容易。
 
-因此，每个组件都有三个输入映射和一个 action 映射。为了将它们结合起来，你需要为 action 命名。以下是你可以将按键绑定到 action的方法：
+因此，每个组件都有三个输入映射和一个 action 映射。为了将它们结合起来，你需要为 action 命名。以下是你可以将按键绑定到 action 的方法：
 
 ```java
 imap.put(KeyStroke.getKeyStroke("ctrl y"), "pane
@@ -17831,7 +19076,7 @@ ActionMap imap = panel.getActionMap();
 imap.put("panel.yellow", yellowAction);
 ```
 
-习惯上使用字符串 "none" 用于什么都不执行的 action。这使得禁用某个按键变得简单：
+习惯上使用字符串 `"none"` 用于什么都不执行的 action。这使得禁用某个按键变得简单：
 
 ```java
 imap.put(KeyStroke.getKeyStroke("ctrl C"), "none")
@@ -17841,32 +19086,29 @@ imap.put(KeyStroke.getKeyStroke("ctrl C"), "none")
 
 总结一下，为了响应按钮、菜单项或以下操作执行相同的 action，你需要：
 
-- 1. 实现一个扩展 `AbstractAction` 的类。
-- 2. 从人类可读的描述构造 `KeyStroke`。
-- 3. 从描述构造 `KeyStroke`。
-- 4. 然后，获取窗口的 `WHEN_ANCESTOR_OF_FOCUSED_COMPONENT` 映射。
-- 5. 当你点击未绘制的像素时，会添加一个新的正方形。
-- 6. 最后，获取组件的 `WHEN_IN_FOCUSED_WINDOW` 映射。
-- 7. 使用 `getClickCount` 方法区分单击、双击和三击。
-- 8. 使用 `MouseEvent` 参数上的 `getX` 和 `getY` 方法获取鼠标点击时的 x 和 y 坐标。
-- 9. 使用 `getActionMap` 方法返回关联 action 键与 Action 对象的映射。
-- 10. 使用 `getInputMap` 方法获取映射按键到 action 键的输入映射。
-- 11. 定位键盘焦点。
-- 12. 使用 `getKeyStroke` 方法从空格分隔的字符串构造 `KeyStroke`。
-- 13. 使用 `putValue` 方法放置键值对。
-- 14. 使用 `getValue` 方法返回该键的值。
-- 15. 使用 `setEnabled` 方法设置启用属性。
-- 16. 使用 `isEnabled` 方法检查是否已启用。
-- 17. 使用 `ActionMap` 方法返回 action 映射。
-- 18. 使用 `getInputMap` 方法获取输入映射。
-- 19. 使用 `getAction` 方法返回键的 action。
-- 20. 使用 `getActionMap` 方法返回映射。
-- 21. 使用 `setEnabled` 方法设置启用属性。
-- 22. 使用 `isEnabled` 方法检查是否已启用。
-- 23. 使用 `putValue` 方法放置键值对。
-
-
-
+1. 实现一个扩展 `AbstractAction` 的类。
+2. 从人类可读的描述构造 `KeyStroke`。
+3. 从描述构造 `KeyStroke`。
+4. 然后，获取窗口的 `WHEN_ANCESTOR_OF_FOCUSED_COMPONENT` 映射。
+5. 当你点击未绘制的像素时，会添加一个新的正方形。
+6. 最后，获取组件的 `WHEN_IN_FOCUSED_WINDOW` 映射。
+7. 使用 `getClickCount` 方法区分单击、双击和三击。
+8. 使用 `MouseEvent` 参数上的 `getX` 和 `getY` 方法获取鼠标点击时的 x 和 y 坐标。
+9. 使用 `getActionMap` 方法返回关联 action 键与 Action 对象的映射。
+10. 使用 `getInputMap` 方法获取映射按键到 action 键的输入映射。
+11. 定位键盘焦点。
+12. 使用 `getKeyStroke` 方法从空格分隔的字符串构造 `KeyStroke`。
+13. 使用 `putValue` 方法放置键值对。
+14. 使用 `getValue` 方法返回该键的值。
+15. 使用 `setEnabled` 方法设置启用属性。
+16. 使用 `isEnabled` 方法检查是否已启用。
+17. 使用 `ActionMap` 方法返回 action 映射。
+18. 使用 `getInputMap` 方法获取输入映射。
+19. 使用 `getAction` 方法返回键的 action。
+20. 使用 `getActionMap` 方法返回映射。
+21. 使用 `setEnabled` 方法设置启用属性。
+22. 使用 `isEnabled` 方法检查是否已启用。
+23. 使用 `putValue` 方法放置键值对。
 
 即时反馈，且不需要等待释放鼠标按钮。当用户在现有正方形内部双击时，该正方形会被擦除。我们在 `mouseClicked` 方法中实现了这一功能，因为我们需要获取点击计数。
 
@@ -17890,10 +19132,10 @@ public void mouseClicked(MouseEvent event) {
 
 我们的应用程序捕获鼠标移动事件，以便在鼠标悬在正方形上方时将光标更改为不同的形状（十字准）。这是通过 `Cursor` 类的 `getPredefinedCursor` 方法实现的。表 10.3 列出了与此方法使用的常量以及这些光标在 Windows 下的外。
 
-## 表 1.3: 示例光标形状
+## 表 1.3：示例光标形状
 
 | 图标 | 常量 | 图标 | 常量 |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | ⬈ | DEFAULT_CURSOR | ↘ | NE_RESIZE_CURSOR |
 | + | CROSSHAIR_CURSOR | ↔ | E_RESIZE_CURSOR |
 | 👆 | HAND_CURSOR | ↗ | SE_RESIZE_CURSOR |
@@ -17933,9 +19175,11 @@ public void mouseDragged(MouseEvent event) {
 
 还有两个鼠标事件方法：`mouseEntered` 和 `mouseExited`。这些方法在鼠标进入或离开组件时被调用。
 
-最后，让我们看看如何监听鼠标事件。鼠标点击通过 `mouseClicked` 方法报告，它是 `ActionListener` 接口的一部分。许多应用程序只对鼠标点击感兴趣而不对鼠标移动感兴趣由于鼠标移动非常频繁，鼠标移动和拖动事件被定义在一个名为 `MouseMotionListener` 的独立接口中。
 
-在我们的程序中，对这两种类型的鼠标事件都感兴趣。我们定义了两个内部类：`MessageHandler` 和 `MouseMotionHandler`。`MessageHandler` 类继承了 `MouseAdapter` 类，因为它只定义了五个 `MouseListener` 方法中的两个。（`MouseAdapter` 将所有五个方法都定义为什么都不做的方法）。`MessageHandler` 实现了 `MouseMotionListener` 并定义了该接口的两个方法。Listing 10.7 是程序源码。
+
+最后，让我们看看如何监听鼠标事件。鼠标点击通过`mouseClicked`方法报告，它是`ActionListener`接口的一部分。许多应用程序只对鼠标点击感兴趣而不对鼠标移动感兴趣，由于鼠标移动非常频繁，鼠标移动和拖动事件被定义在一个名为`MouseMotionListener`的独立接口中。
+
+在我们的程序中，对这两种类型的鼠标事件都感兴趣。我们定义了两个内部类：`MessageHandler`和`MouseMotionHandler`。`MessageHandler`类继承了`MouseAdapter`类，因为它只定义了五个`MouseListener`方法中的两个。（`MouseAdapter`将所有五个方法都定义为什么都不做的方法）。`MessageHandler`实现了`MouseMotionListener`并定义了该接口的两个方法。Listing 10.7 是程序源码。
 
 ## Listing 1.7 mouse/MouseComponent.java
 
@@ -18014,23 +19258,21 @@ public class MouseComponent extends JComponent {
 }
 ```
 
-
-
 使用空格键激活它。同样，调整滚动条是一个语义事件，但移动鼠标是一个低级事件。
 
-以下是 `java.awt.event` 包中通常用的语义事件类：
+以下是`java.awt.event`包中通常用的语义事件类：
 
-- ActionEvent（用于按钮点击、菜单选择、选择列表项或在文本字段中输入 Enter 键）
-- AdjustmentEvent（用户调整了滚动条）
-- ItemEvent（用户从一组复选框或列表项中进行了选择）
+- `ActionEvent`（用于按钮点击、菜单选择、选择列表项或在文本字段中输入 Enter 键）
+- `AdjustmentEvent`（用户调整了滚动条）
+- `ItemEvent`（用户从一组复选框或列表项中进行了选择）
 
 通常还会使用的五类低级事件类是：
 
-- KeyEvent（按键被按下或释放）
-- MouseEvent（鼠标按键被按下、释放、移动或拖动）
-- MouseWheelEvent（鼠标滚轮被旋转）
-- FocusEvent（组件获得或失去焦点）
-- WindowEvent（窗口状态发生变化）
+- `KeyEvent`（按键被按下或释放）
+- `MouseEvent`（鼠标按键被按下、释放、移动或拖动）
+- `MouseWheelEvent`（鼠标滚轮被旋转）
+- `FocusEvent`（组件获得或失去焦点）
+- `WindowEvent`（窗口状态发生变化）
 
 表 10.4 显示了最重要的 AWT 监听接口、事件和事件源。
 
@@ -18038,83 +19280,79 @@ public class MouseComponent extends JComponent {
 
 | 接口 | 方法 | P |
 | --- | --- | --- |
-| ActionListener | actionPerformed | |
-| AdjustmentListener | adjustmentValueChanged | | |
-| ItemListener | itemStateChanged | |
-| FocusListener | focusGained, focusLost | P |
-| Interface | Methods | P... |
-| --- | --- | --- |
-| KeyListener | keyPressed | |
-| | keyReleased | |
-| | keyTyped | |
-| MouseListener | mousePressed | |
-| | mouseReleased | |
-| | mouseEntered | |
-| | mouseExited | |
-| | mouseClicked | |
-| MouseMotionListener | mouseDragged | |
-| | mouseMoved | |
-| MouseWheelListener | mouseWheelMoved | |
-| Interface | Methods | | |
-| --- | --- | | |
-| WindowListener | windowClosing<br>windowOpened<br>windowIconified<br>windowDeIconified<br>windowClosed<br>windowActivated<br>windowDeactivated | | |
-| WindowFocusListener | windowGainedFocus<br>windowLostFocus | | |
-| WindowListener | windowStateChanged | | |
+| `ActionListener` | `actionPerformed` | |
+| `AdjustmentListener` | `adjustmentValueChanged` | |
+| `ItemListener` | `itemStateChanged` | |
+| `FocusListener` | `focusGained`, `focusLost` | P |
+| `KeyListener` | `keyPressed` | |
+| | `keyReleased` | |
+| | `keyTyped` | |
+| `MouseListener` | `mousePressed` | |
+| | `mouseReleased` | |
+| | `mouseEntered` | |
+| | `mouseExited` | |
+| | `mouseClicked` | |
+| `MouseMotionListener` | `mouseDragged` | |
+| | `mouseMoved` | |
+| `MouseWheelListener` | `mouseWheelMoved` | |
+| `WindowListener` | `windowClosing`<br>`windowOpened`<br>`windowIconified`<br>`windowDeIconified`<br>`windowClosed`<br>`windowActivated`<br>`windowDeactivated` | |
+| `WindowFocusListener` | `windowGainedFocus`<br>`windowLostFocus` | |
+| `WindowListener` | `windowStateChanged` | |
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1114_0.png)
 
 ## 1.5. Preferences API
 
-我将通过讨论 `java.util.prefs` API 来结束本章。在桌面程序中，你通常希望存储用户偏好，例如用户最后处理的文件、上一次窗口位置等。
+我将通过讨论`java.util.prefs` API 来结束本章。在桌面程序中，你通常希望存储用户偏好，例如用户最后处理的文件、上一次窗口位置等。
 
-正如你在第一卷第 9 章中所看到的，`Properties` 类可以非常方便地加载和保存程序的配置信息。然而，使用属性文件有以下缺点：
+正如你在第一卷第 9 章中所看到的，`Properties`类可以非常方便地加载和保存程序的配置信息。然而，使用属性文件有以下缺点：
 
 - 某些操作系统没有“主目录”的概念，这使得很难为配置文件找到统一的位置。
 - 配置文件的命名没有标准规范，当用户安装多个 Java 应用程序时，增加了名称冲突的概率。
 
-某些操作系统拥有一个配置信息的中央仓库。最为人知的例子是 Microsoft Windows 中的注册表（registry）。`Preferences` 类以平台无关的方式提供了这样一个中央仓库。在 Windows 中，`Preferences` 类使用注册表存储；而在 Linux 中，信息存储在本地文件系统中。当然，对于使用 `Preferences` 类的程序员来说，仓库的实现是透明的。
+某些操作系统拥有一个配置信息的中央仓库。最为人知的例子是 Microsoft Windows 中的注册表（registry）。`Preferences`类以平台无关的方式提供了这样一个中央仓库。在 Windows 中，`Preferences`类使用注册表存储；而在 Linux 中，信息存储在本地文件系统中。当然，对于使用`Preferences`类的程序员来说，仓库的实现是透明的。
 
-Preferences 仓库具有树形结构，节点路径名称如 `/com/mycompany/myapp`。与包名一样，只要程序员以反向域名作为路径开头，就可以避免名称冲突。事实上，API 的设计者建议配置节点路径与你程序中的包名相匹配。
+Preferences 仓库具有树形结构，节点路径名称如`/com/mycompany/myapp`。与包名一样，只要程序员以反向域名作为路径开头，就可以避免名称冲突。事实上，API 的设计者建议配置节点路径与你程序中的包名相匹配。
 
 仓库中的每个节点都有一个独立的键值对表，你可以用它存储名称、字符串或字节数组。该 API 未提供存储可序列化对象的机制。API 设计者认为序列化格式对于长期存储来说太脆弱了。如果你有不同意见，可以将序列化对象保存在字节数组中。
 
-为了增加灵活性，存在多个并行的树。每个程序用户拥有一棵树；还有一个称为“系统树”的树，适用于所有用户的公共设置。`Preferences` 类使用操作系统的“当前用户”概念来访问相应的用户树。
+为了增加灵活性，存在多个并行的树。每个程序用户拥有一棵树；还有一个称为“系统树”的树，适用于所有用户的公共设置。`Preferences`类使用操作系统的“当前用户”概念来访问相应的用户树。
 
 要访问树中的节点，从用户根或系统根开始：
 
-```
+```java
 Preferences root = Preferences.userRoot();
 ```
 
 或者
 
-```
+```java
 Preferences root = Preferences.systemRoot();
 ```
 
 然后访问节点。你可以直接提供节点路径名称：
 
-```
+```java
 Preferences node = root.node("/com/mycompany/myapp")
 ```
 
 有一个方便的快捷方法可以获取路径名等于类包名的节点。只需获取该类的对象并调用
 
-```
+```java
 Preferences node = Preferences.userNodeForPackage
 ```
 
 或者
 
-```
+```java
 Preferences node = Preferences.systemNodeForPackage
 ```
 
-通常，`obj` 将是 `this` 引用。
+通常，`obj`将是`this`引用。
 
 一旦拥有节点，你可以使用以下方法访问键值表：
 
-```
+```java
 String get(String key, String def)
 int getInt(String key, int def)
 long getLong(String key, long def)
@@ -18125,9 +19363,6 @@ byte[] getByteArray(String key, byte[] def)
 ```
 
 注意，在读取信息时必须指定默认值，以防仓库数据不可用。默认值是必须的。如果你有不同意见，可以将序列化对象保存在字节数组中。
-
-
-
 
 ```java
 frame.setVisible(true);
@@ -18199,63 +19434,76 @@ addListener(new WindowAdapter() {
 }
 ```
 
-java.util.prefs.Preferences 1.4
+`java.util.prefs.Preferences` 1.4
 
-+ * Preferences userRoot()
++ `Preferences userRoot()`
+
 返回调用程序的用户的根属性节点。
 
-+ * Preferences systemRoot()
++ `Preferences systemRoot()`
+
 返回系统级的根属性节点。
 
-+ * Preferences node(String path)
-返回一个可以通过给定路径从当前节点到达的节点。如果路径是绝对的（即以 / 开头），则该节点从包含此属性节点的树的根开始定位。如果不存在给定路径的节点，则创建它。
++ `Preferences node(String path)`
 
-+ * Preferences userNodeForPackage(Class cl)
+返回一个可以通过给定路径从当前节点到达的节点。如果路径是绝对的（即以`/`开头），则该节点从包含此属性节点的树的根开始定位。如果不存在给定路径的节点，则创建它。
 
-+ * Preferences systemNodeForPackage(Class cl)
++ `Preferences userNodeForPackage(Class cl)`
 
-返回当前用户树中的节点，或者绝对路径对应于类 cl 包名的树中的节点。
++ `Preferences systemNodeForPackage(Class cl)`
 
-+ * String[] keys()
+返回当前用户树中的节点，或者绝对路径对应于类`cl`包名的树中的节点。
+
++ `String[] keys()`
 
 返回所有属于此节点的键。
 
-+ * String get(String key, String def)
++ `String get(String key, String def)`
 
-+ * int getInt(String key, long def)
++ `int getInt(String key, long def)`
 
-+ * long getLong(String key, long def)
++ `long getLong(String key, long def)`
 
-+ * float getFloat(String key, float def)
++ `float getFloat(String key, float def)`
 
-+ * double getDouble(String key, double def)
++ `double getDouble(String key, double def)`
 
-+ * boolean getBoolean(String key, boolean def)
++ `boolean getBoolean(String key, boolean def)`
 
-+ * byte[] getByteArray(String key, byte[] def)
++ `byte[] getByteArray(String key, byte[] def)`
 
 返回与给定键关联的值——如果没有与该键关联的值、关联的值类型不正确，或者属性存储器不可用，则返回提供的默认值。
 
-+ - void put(String key, String value)
-- void putInt(String key, int value)
-- void putLong(String key, long value)
-- void putFloat(String key, float value)
-- void putDouble(String key, double value)
-- void putBoolean(String key, boolean value)
-- void putByteArray(String key, byte[] value)
++ `void put(String key, String value)`
+
+- `void putInt(String key, int value)`
+
+- `void putLong(String key, long value)`
+
+- `void putFloat(String key, float value)`
+
+
+
+- `void putDouble(String key, double value)`
+- `void putBoolean(String key, boolean value)`
+- `void putByteArray(String key, byte[] value)`
 
 在此节点中存储一个键/值对。
 
-+ - void exportSubtree(OutputStream out)
+- `void exportSubtree(OutputStream out)`
+
 将此节点及其子节点的属性写入指定的流中。
 
-+ - void exportNode(OutputStream out)
+- `void exportNode(OutputStream out)`
+
 将此节点的属性（但不包括其子节点）写入指定的流中。
 
-+ - void importPreferences(InputStream in)
+- `void importPreferences(InputStream in)`
+
 导入指定流中包含的属性。
 
 我们对图形用户界面编程的介绍结束。
+
 下一章将向你展示如何使用最常用的 Swing 组件。
 
 # 1. 使用 Swing 的用户界面组件
@@ -18270,9 +19518,9 @@ java.util.prefs.Preferences 1.4
 
 让我们退一步，思考一下组成用户界面的部分。显然，每个组件都有三个独立的对象：
 
-- *模型*（model）存储内容
-- *视图*（view）显示内容
-- *控制器*（controller）处理输入
+- 模型（model）存储内容
+- 视图（view）显示内容
+- 控制器（controller）处理输入
 
 即使是像这样简单的组件也表现出某些特性：
 
@@ -18283,18 +19531,16 @@ java.util.prefs.Preferences 1.4
 为了实现这一点，Swing 设计者采用了一种著名的设计模式：模型-视图-控制器（MVC）模式。这种设计模式规定了这三个对象如何交互。模型存储内容，视图提供其视觉表示。对于按钮，内容非常简单——只需一组指示它是激活还是未激活的标志。对于文本字段，内容更有趣。它是一个持有当前文本的字符串对象。这不等同于视图——如果内容大于文本字段，用户只能看到显示的部分（见图 11.1）。
 
 | 模型 | The quick brown fox jumps over the lazy dog |
+| --- | --- |
 | 视图 | brown fox jump |
 
-**图 11.1:** 文本字段的模型和视图
+**图 11.1：** 文本字段的模型和视图
 
 模型必须实现更改内容和发现内容的方法。例如，文本模型具有在当前文本中添加或删除字符的方法，以及返回当前文本字符串的方法。再次记住，模型完全是非视觉化的。绘制模型中存储的数据是视图的工作。
 
-**注意：“模型”一词可能并不理想，因为我们经常将模型视为抽象概念的表示。汽车和飞机设计师建立模型来模拟真实的汽车和飞机。但这种类比在思考模型-视图-控制器模式时实际上会误导你。一个更好的类比可能是为艺术家摆姿的模特。由艺术家观察模特并创建视图。取决于艺术家的风格，该视图可能是正式的肖像、印象派绘画，或是一幅肢体扭曲的立体主义画。
+**注意：**“模型”一词可能并不理想，因为我们经常将模型视为抽象概念的表示。汽车和飞机设计师建立模型来模拟真实的汽车和飞机。但这种类比在思考模型-视图-控制器模式时实际上会误导你。一个更好的类比可能是为艺术家摆姿的模特。由艺术家观察模特并创建视图。取决于艺术家的风格，该视图可能是正式的肖像、印象派绘画，或是一幅肢体扭曲的立体主义画。
 
-模型-视图-控制器模式的优势之一是模型可以拥有多个视图，每个视图显示完整内容的不同部分或方面。例如，HTML 编辑器可以为同一内容同时提供两个视图：WYSIWYG 视图和“原始标签”视图（见图 11.2）。当通过其中一个视图的控制器更新模型时，它会通知两个视图发生了更改。当视图收到通知时，它们会自动刷新。当然，对于一个简单的用户
-
-
-对于像按钮这样的接口，你不会拥有同一个模型的多个视图。
+模型-视图-控制器模式的优势之一是模型可以拥有多个视图，每个视图显示完整内容的不同部分或方面。例如，HTML 编辑器可以为同一内容同时提供两个视图：WYSIWYG 视图和“原始标签”视图（见图 11.2）。当通过其中一个视图的控制器更新模型时，它会通知两个视图发生了更改。当视图收到通知时，它们会自动刷新。当然，对于一个简单的用户界面，像按钮这样的组件不会拥有同一个模型的多个视图。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1131_0.png)
 
@@ -18308,25 +19554,25 @@ java.util.prefs.Preferences 1.4
 
 图 1.3：模型、视图和控制器对象之间的交互
 
-对于大多数 Swing 组件，模型类实现了一个以 Model 结尾的接口；在这种情况下，该接口被称为 ButtonModel。实现该接口的类可以定义各种按钮的状态。实际上，按钮并没有那么复杂，Swing 包含一个名为 DefaultButtonModel 的单类，它实现了此接口。
+对于大多数 Swing 组件，模型类实现了一个以 `Model` 结尾的接口；在这种情况下，该接口被称为 `ButtonModel`。实现该接口的类可以定义各种按钮的状态。实际上，按钮并没有那么复杂，Swing 包含一个名为 `DefaultButtonModel` 的单类，它实现了此接口。
 
-你可以通过查看 ButtonModel 接口的属性来了解按钮模型维护的此类数据——请参见表 11.1。
+你可以通过查看 `ButtonModel` 接口的属性来了解按钮模型维护的此类数据——请参见表 11.1。
 
-## 表 11.1：ButtonModel 接口的属性
+## 表 11.1：`ButtonModel` 接口的属性
 
 | 属性名称 | 值 |
 | --- | --- |
-| actionCommand | 与此按钮关联的动作命令字符串 |
-| mnemonic | 此按钮的键盘快捷键 |
-| armed | 如果按钮被按下且鼠标悬停在按钮上，则为 true |
-| enabled | 如果按钮可选，则为 true |
-| pressed | 如果按钮被按下但鼠标按钮尚未释放，则为 true |
-| rollover | 如果鼠标悬停在按钮上，则为 true |
-| selected | 如果按钮已切换（用于复选框和单选按钮），则为 true |
+| `actionCommand` | 与此按钮关联的动作命令字符串 |
+| `mnemonic` | 此按钮的键盘快捷键 |
+| `armed` | 如果按钮被按下且鼠标悬停在按钮上，则为 true |
+| `enabled` | 如果按钮可选，则为 true |
+| `pressed` | 如果按钮被按下但鼠标按钮尚未释放，则为 true |
+| `rollover` | 如果鼠标悬停在按钮上，则为 true |
+| `selected` | 如果按钮已切换（用于复选框和单选按钮），则为 true |
 
 每个 `JButton` 对象都存储了一个你可以获取的按钮模型对象。
 
-```
+```java
 var button = new JButton("Blue");
 ButtonModel model = button.getModel();
 ```
@@ -18335,9 +19581,9 @@ ButtonModel model = button.getModel();
 
 再次查看 `ButtonModel` 接口，看看其中缺少了什么。模型并不存储按钮标签或图标。无法仅通过查看模型来发现按钮表面显示的内容。（实际上，你将在第 11.4.2 节中看到，这种设计的纯洁性也给程序员带来了一些麻烦。）
 
-同样值得注意的是，同一个模型（即 DefaultButtonModel）被用于推送按钮、单选按钮、复选框甚至菜单项。当然，每种类型的按钮都有不同的视图和控制器。在使用 Metal 视图和感觉时，JButton 使用名为 BasicButtonUI 的类作为视图，使用名为 ButtonEventListener 的类作为控制器。通常情况下，每个 Swing 组件都有一个以 UI 结尾的关联视图对象。但并不是所有的 Swing 组件都有特定的控制器对象。
+同样值得注意的是，同一个模型（即 `DefaultButtonModel`）被用于推送按钮、单选按钮、复选框甚至菜单项。当然，每种类型的按钮都有不同的视图和控制器。在使用 Metal 视图和感觉时，`JButton` 使用名为 `BasicButtonUI` 的类作为视图，使用名为 `ButtonEventListener` 的类作为控制器。通常情况下，每个 Swing 组件都有一个以 `UI` 结尾的关联视图对象。但并不是所有的 Swing 组件都有特定的控制器对象。
 
-所以，在阅读了这段关于 JButton 内部机制的简短介绍后，你可能会想：JButton 到底是什么？它仅仅是一个继承自 JComponent 的包装类，持有 DefaultButtonModel 对象、一些数据（如按钮标签和图标），以及一个负责按钮视图并安装了带有特定控制器功能的 BasicButtonListener 的 BasicButtonUI 对象。
+所以，在阅读了这段关于 `JButton` 内部机制的简短介绍后，你可能会想：`JButton` 到底是什么？它仅仅是一个继承自 `JComponent` 的包装类，持有 `DefaultButtonModel` 对象、一些数据（如按钮标签和图标），以及一个负责按钮视图并安装了带有特定控制器功能的 `BasicButtonListener` 的 `BasicButtonUI` 对象。
 
 ## 1.2. 布局管理（Layout Management）
 
@@ -18345,9 +19591,9 @@ ButtonModel model = button.getModel();
 
 当然，Java 开发环境具有拖放式的 GUI 生成器。尽管如此，准确了解“内部”发生了什么是非常重要的，因为即使是这些工具通常也需要手动微调。
 
-## 1.2.1. 布局管理器
+### 1.2.1. 布局管理器
 
-让我们从复习第 10 章中用于按钮更改框架背景色的程序开始。按钮包含在一个 JPanel 对象中，并由流布局管理器（flow layout manager）管理，这是面板的默认布局管理器。图 11.4 显示了当向面板添加更多按钮时会发生什么。如你所看到的，当没有空间时，会开始新的一行。
+让我们从复习第 10 章中用于按钮更改框架背景色的程序开始。按钮包含在一个 `JPanel` 对象中，并由流布局管理器（flow layout manager）管理，这是面板的默认布局管理器。图 11.4 显示了当向面板添加更多按钮时会发生什么。如你所看到的，当没有空间时，会开始新的一行。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1136_0.png)
 
@@ -18357,28 +19603,25 @@ ButtonModel model = button.getModel();
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1137_0.png)
 
-**图 11.5：**更改面板大小
+**图 11.5：** 更改面板大小
 
 通常，组件被放置在容器内部，由布局管理器决定位置和大小。
 
 [注：由于源文本严重的 OCR 损坏，第 1138-1141 页已省略。]
 
-
-
-
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1142_0.png)
 
-**图 1.8:** 由边界布局管理的单个按钮
+**图 1.8：** 由边界布局管理的单个按钮
 
 为了解决这个问题，可以使用额外的面板（panel）。例如，查看图 11.9。屏幕底部的三个按钮都包含面板中。该面板被放置在内容区的南部（southern region）。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1142_1.png)
 
-**图 11.9:** 放置在框架南部的面板
+**图 11.9：** 放置在框架南部的面板
 
 要实现这种配置，首先创建一个新的 `JPanel` 对象，然后将各个按钮添加到面板中。面板的默认布局管理器是 `FlowLayout`，这对于这种情况来说是一个很好的选择。使用你之前见过的 `add` 方法将各个按钮添加到面板中。按钮的位置和大小由 `FlowLayout` 管理器控制。这意味着按钮在面板内居中显示，而不会扩展填充整个面板区域。最后，将面板添加到框架的内容区。
 
-```
+```java
 var panel = new JPanel();
 panel.add(yellow);
 panel.add(blueButton);
@@ -18388,82 +19631,87 @@ frame.add(panel, BorderLayout.SOUTH);
 
 边界布局会扩展面板的大小以填充整个区域。
 
-```
+```text
 java.awt.BorderLayout 1.0
 ```
 
-- BorderLayout()
-- BorderLayout(int hgap, int vgap)
-  构造一个新的 BorderLayout。
+- `BorderLayout()`
+- `BorderLayout(int hgap, int vgap)`
 
-## 1.2.3. 网格布局 (Grid Layout)
+  构造一个新的 `BorderLayout`。
+
+### 1.2.3. 网格布局（Grid Layout）
 
 网格布局像电子表格一样按行和列排列所有组件。所有组件都具有相同的大小。图 11.10 中的计算器程序使用网格布局来排列计算器按钮。当你调整窗口大小时，按钮会增大或缩小，但所有按钮的大小完全相同。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1144_0.png)
 
-**图 11.10:** 一个计算器
+**图 11.10：** 一个计算器
 
 在网格布局对象的构造函数中，你指定所需的行和列数。
 
-```
+```java
 panel.setLayout(new GridLayout(4, 4));
 ```
 
 添加组件，从第一行的第一个项目开始，然后是第一行的第二个项目，依此类推。
 
-```
+```java
 panel.add(new JButton("1"));
 panel.add(new JButton("2"));
 ```
 
 当然，很少有应用程序的布局像计算器界面那样僵化。在实践中，较小的网格（通常只有一行或一列）可以用于组织窗口的部分区域。例如，如果你想有一行大小完全相同的按钮，可以将按钮放在一个由单行网格布局控制的面板中。
 
-```
+```text
 java.awt.GridLayout 1.0
 ```
 
-- GridLayout(int rows, int columns)
-- GridLayout(int rows, int columns, int hgap, int vgap)
-  构造一个新的 GridLayout。行或列中其中一个可以零（但不能全为），表示每行或每列任意数量的组件。
+- `GridLayout(int rows, int columns)`
+- `GridLayout(int rows, int columns, int hgap, int vgap)`
 
-## 1.3. 文本输入 (Text Input)
+  构造一个新的 `GridLayout`。行或列中其中一个可以零（但不能全为），表示每行或每列任意数量的组件。
+
+## 1.3. 文本输入（Text Input）
 
 我们终于准备好引入 Swing 用户界面组件了。让我们从允许用户输入和编辑文本的组件开始。你可以使用 `JTextField` 和 `JTextArea` 组件进行文本输入。文本字段只能接受一行；文本区域可以接受多行文本。`JPasswordField` 接受一行文本但不显示内容。
 
 这三个类都继承自一个名为 `JComponent` 的类。你将无法自己构造 `JComponent`，因为它是一个抽象类。另一方面，正如 Java 中常见的情况一样，当你查询 API 文档时，可能会发现你寻找的方法实际上在父类 `JComponent` 中，而不是派生类。例如，获取或设置文本字段或文本区域文本的方法实际上在 `JComponent` 中。
 
-```
+```text
 javax.swing.text.JComponent 1.2
 ```
 
-- String getText()
-- void setText(String text)
+- `String getText()`
+- `void setText(String text)`
+
   获取或设置此文本组件的文本。
-- boolean isEditable()
-- void setEditable(boolean b)
+
+- `boolean isEditable()`
+- `void setEditable(boolean b)`
+
   获取或设置可编辑属性，该属性决定用户是否可以编辑此文本组件的内容。
 
-### 1.3.1. 文本字段 (Text Fields)
+### 1.3.1. 文本字段（Text Fields）
 
 向窗口添加文本字段的常用方法是将其添加到面板或其他容器中——就像添加按钮一样：
 
-```
+```java
 var panel = new JPanel();
 var textField = new JTextField("Default input", );
 panel.add(textField);
 ```
 
-这段代码添加了一个文本字段，并通过通过在其中放置字符串 "Default input" 来对其初始化。该构造函数的第二个参数设置宽度。在这种情况下，宽度为 20 个“列”。遗憾的是，“列”是一个相当精确的测量单位。一列是你所使用的字体中一个字符的预期宽度。其想法是，如果你预计输入少于或等于 $n$ 个字符，你应该指定 $n$ 为列宽。在实践中，这种测量方法并不太理想，你应该在最大输入基础上加上 1 或 2。
+这段代码添加了一个文本字段，并通过在其中放置字符串 `"Default input"` 来对其初始化。该构造函数的第二个参数设置宽度。在这种情况下，宽度为 20 个“列”。遗憾的是，“列”是一个相当精确的测量单位。一列是你所使用的字体中一个字符的预期宽度。其想法是，如果你预计输入少于或等于 `n` 个字符，你应该指定 `n` 为列宽。在实践中，这种测量方法并不太理想，你应该在最大输入基础上加上 1 或 2。
 
 **提示：** 在更改列数后，调用 `revalidate` 方法。
 
-```
+```java
 textField.setColumns(10);
 panel.revalidate();
 ```
 
-`revalidate` 方法属于 `JTextField`。它不会立即调整大小，而是将其标记为需要调整。这种方法避免了多个组件请求调整大时的重复计算。如果你想重新计算容器内的所有组件，必须调用 `validate` 方法。
+`revalidate` 方法属于 `JTextField`。它不会立即调整大小，而是将其标记为需要调整。这种方法避免了多个组件请求调整时的重复计算。如果你想重新计算容器内的所有组件，必须调用 `validate` 方法。
 
 通常，用户会在字段中添加文本或编辑现有文本。这些文本字段通常是空白的。创建一个空白文本字段，只需为 `JTextField` 构造函数提供一个参数：
 
@@ -18485,78 +19733,88 @@ String text = textField.getText().strip();
 
 要更改用户文本显示的字体，请使用 `setFont` 方法。
 
-## javax.swing.JTextField 1.2
+## `javax.swing.JTextField` 1.2
 
-- JTextField(int columns)
-- JTextField(String text, int columns)
-  构造带有初始字符串和指定列数的 JTextField。
+- `JTextField(int columns)`
+- `JTextField(String text, int columns)`
 
-- int getColumns()
-- void setColumns(int columns)
+  构造带有初始字符串和指定列数的 `JTextField`。
+
+- `int getColumns()`
+- `void setColumns(int columns)`
+
   获取或设置此文本字段应使用的列数。
 
-- void revalidate()
+- `void revalidate()`
+
   标记组件的位置需要重新计算。
 
-- void setFont(Font f)
+- `void setFont(Font f)`
+
   设置此组件的字体。
 
-## java.awt.Component 1.0
+## `java.awt.Component` 1.0
 
-- void validate()
+- `void validate()`
+
   重新计算组件的位置和大小。如果组件是容器，则其组件的位置和大小将重新计算。
 
-- Font getFont()
+- `Font getFont()`
+
   获取此组件的字体。
 
-## 1.3.2. 标签与标记组件 (Labels and Labeling Components)
+### 1.3.2. 标签与标记组件（Labels and Labeling Components）
 
-标签是持有文本的组件。它们没有装饰（例如，没有边界）。它们也不会对用户输入做出反应。你可以使用
+标签是持有文本的组件。它们没有装饰（例如，没有边界）。它们也不会对用户输入做出反应。你可以使用标签用于标识组件。例如，按钮不同，文本字段没有标签来标识它们。要为一个本身不带标识符的组件添加标签：
 
-用于标识组件的标签。例如，按钮不同，文本字段没有标签来标识它们。要为一个本身不带标识符的组件添加标签：
+1. 创建一个具有正确文本的 `JLabel` 组件。
+2. 将其放置在你想要标识的组件足够的位置，以便用户可以看到该标签标识的是正确的组件。
 
-- 1. 创建一个具有正确文本的 `JLabel` 组件。
-- 2. 将其放置在你想要标识的组件足够的位置，以便用户可以看到该标签标识的是正确的组件。
+`JLabel` 的构造函数允许你指定初始文本或图标，以及可选的内容对齐方式。使用 `SwingConstants` 接口中的常量来指定对齐。该接口定义了许多常量，如 `LEFT`、`RIGHT`、`CENTER`、`NORTH`、`EAST` 等。`JLabel` 类是实现此接口的多个 Swing 类之一。因此，你可以通过以下方式指定右对齐标签：
 
-`JLabel` 的构造函数允许你指定初始文本或图标，以及可选的内容对齐方式。使用 `SwingConstants` 接口中的常量来指定对齐。该接口定义了许多有常量，如 LEFT、RIGHT、CENTER、NORTH、EAST 等。`JLabel` 类是实现此接口的多个 Swing 类之一。因此，你可以通过以下方式指定右对齐标签：
-
-```
+```java
 var label = new JLabel("User name: ", SwingConstants.RIGHT)
 ```
 
-或
+或：
 
-```
+```java
 var label = new JLabel("User name: ", JLabel.RIGHT)
 ```
 
 `setText` 和 `setIcon` 方法允许你在运行时设置标签的文本和图标。
 
-提示：你可以在按钮、标签和菜单中同时使用纯文本和 HTML 。我不建议在按钮中使用 HTML——因为它会干扰外观效果。但在标签中使用 HTML 可以非常有效。只需将标签字符串包在 `<html>` . . `</html>` 中即可：
+**提示：** 你可以在按钮、标签和菜单中同时使用纯文本和 HTML。我不建议在按钮中使用 HTML——因为它会干扰外观效果。但在标签中使用 HTML 可以非常有效。只需将标签字符串包在 `<html>`……`</html>` 中即可：
 
-```
+```java
 label = new JLabel("<html><b>Required</b></html> entry:");
 ```
 
 注意，第一个带有 HTML 标签的组件可能需要一些时间才能显示，因为必须加载复杂的 HTML 渲染代码。
 
+
+
 标签可以像其他组件一样放置在容器内部。这意味着你可以使用之前见过的技术将标签放置在需要的地方。
 
-```
+```java
 javax.swing.JLabel 1.2
 ```
 
-- JLabel(String text)
-- JLabel(Icon icon)
-- JLabel(String text, int align)
-- JLabel(String text, Icon icon, int align)
-构造一个标签。`align` 参数是 `SwingConstants` 中的 LEFT（默认值）、CENTER 或 RIGHT 之一。
+- `JLabel(String text)`
+- `JLabel(Icon icon)`
+- `JLabel(String text, int align)`
+- `JLabel(String text, Icon icon, int align)`
 
-- String getText()
-- void setText(String text)
+构造一个标签。`align` 参数是 `SwingConstants` 中的 `LEFT`（默认值）、`CENTER` 或 `RIGHT` 之一。
+
+- `String getText()`
+- `void setText(String text)`
+
 获取或设置此标签的文本。
-- Icon getIcon()
-- void setIcon(Icon icon)
+
+- `Icon getIcon()`
+- `void setIcon(Icon icon)`
+
 获取或设置此标签的图标。
 
 ## 1.3.3. 密码字段
@@ -18565,30 +19823,33 @@ javax.swing.JLabel 1.2
 
 密码字段是模型视图-控制器架构模式能力的另一个例子。密码字段使用与普通文本字段相同的模型来存储数据，但它的视图已被更改，将所有字符显示为回显字符。
 
-```
+```java
 javax.swing.PasswordField 1.2
 ```
 
-- JPasswordField(String text, int columns)
+- `JPasswordField(String text, int columns)`
+
 构造一个新的密码字段。
 
-- void setEchoChar(char echo)
+- `void setEchoChar(char echo)`
+
 设置此密码字段的回显字符。这是建议性的；特定的外观和效果可能会坚持使用自己选择的回显字符。值 0 可将回显字符重置为默认值。
 
-- char[] getPassword()
-返回此密码字段中包含的文本。为了更强的安全性，你应该在使用后覆盖返回的数组的内容。（密码不会以 String 的形式返回，因为字符串将留在虚拟机中直到它被垃圾回收）。
+- `char[] getPassword()`
+
+返回此密码字段中包含的文本。为了更强的安全性，你应该在使用后覆盖返回的数组的内容。（密码不会以 `String` 的形式返回，因为字符串将留在虚拟机中直到它被垃圾回收）。
 
 ## 1.3.4. 文本区域
 
-有时，你需要收集超过一行的用户输入。如前面提到的，你可以使用 `JTextArea` 组件来实现此目标。当你在程序中放置文本区域组件时，用户可以输入任意行的文本，使用 Enter 键分隔它们。每行都以 '\n' 结束（即使在 Windows 上也是如此）。图 11.11 显示了工作中的文本区域。
+有时，你需要收集超过一行的用户输入。如前面提到的，你可以使用 `JTextArea` 组件来实现此目标。当你在程序中放置文本区域组件时，用户可以输入任意行的文本，使用 Enter 键分隔它们。每行都以 `'\n'` 结束（即使在 Windows 上也是如此）。图 11.11 显示了工作中的文本区域。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1155_0.png)
 
 图 1.11：文本组件
 
-在 **JTextArea** 组件的构造函数中，指定 textArea 的行数和列数。例如，
+在 `JTextArea` 组件的构造函数中，指定 `textArea` 的行数和列数。例如：
 
-```
+```java
 textArea = new JTextArea(8, 40); // 8行40列
 ```
 
@@ -18596,24 +19857,24 @@ textArea = new JTextArea(8, 40); // 8行40列
 
 如果文本多于文本区域可以显示的内容，剩余文本将直接裁剪。你可以通过开启换行来避免裁剪长行：
 
-```
+```java
 textArea.setLineWrap(true); // 长行将折行
 ```
 
-这种折行仅视觉效果；文档中的文本不会改变——不会在文本中自动插入 '\n' 字符。
+这种折行仅视觉效果；文档中的文本不会改变——不会在文本中自动插入 `'\n'` 字符。
 
 ## 1.3.5. 滚动面板
 
 在 Swing 中，文本区域没有滚动条。如果你需要滚动条，必须将文本区域放置在滚动面板内部。
 
-```
+```java
 textArea = new JTextArea(8, 40);
 var scrollPane = new JScrollPane(textArea);
 ```
 
 滚动面板管理文本区域的视图。如果文本多于区域可以的内容，滚动条会自动出现。这是一个适用于任何组件的通用机制，而不只是文本区域。要为组件添加滚动条，将其放在滚动面板内部。滚动面板显示带有滚动条的文本字段、密码字段和文本区域。
 
-注意：JTextArea 组件只显示文本。要显示格式化文本（如 HTML），你可以使用第 12 章讨论的 `JEditorPane` 类。
+注意：`JTextArea` 组件只显示文本。要显示格式化文本（如 HTML），你可以使用第 12 章讨论的 `JEditorPane` 类。
 
 ```java
 package text;
@@ -18664,60 +19925,65 @@ public class TextComponentFrame extends JFrame {
 }
 ```
 
-javax.swing.JTextArea 1.2
+### `javax.swing.JTextArea 1.2`
 
-- JTextArea()
-- JTextArea(int rows, int columns)
-- JTextArea(String text, int rows, int columns)
+- `JTextArea()`
+- `JTextArea(int rows, int columns)`
+- `JTextArea(String text, int rows, int columns)`
+
   构造一个新的文本区域。
 
-- void setColumns(int columns)
+- `void setColumns(int columns)`
+
 告诉文本区域它应该使用的理想列数。
 
-- void setRows(int rows)
+- `void setRows(int rows)`
+
 告诉文本区域它应该使用的理想行数。
 
-- void append(String newText)
+- `void append(String newText)`
+
 将文本追加到文本区域已有文本的末尾。
 
-- void setLineWrap(boolean wrap)
+- `void setLineWrap(boolean wrap)`
+
 开启或关闭换行。
 
-- void wrapStyleWord(boolean wrap)
- 如果 wrap 为 true，长行将在单词边界处折行。如果为 false，长行将在不考虑单词边界的情况下断开。
+- `void wrapStyleWord(boolean wrap)`
 
-- void setTabSize(int c)
- 设置每 c 列一个制表停止。注意制表符不会转换为空格，而是会导致与下一个制表停止对齐。
+如果 `wrap` 为 `true`，长行将在单词边界处折行。如果为 `false`，长行将在不考虑单词边界的情况下断开。
 
-javax.swing.JScrollPane 1.2
+- `void setTabSize(int c)`
 
-- JScrollPane(Component c)
- 创建一个滚动面板，显示指定组件的内容。当组件大于视图时，将提供滚动条。
+设置每 `c` 列一个制表停止。注意制表符不会转换为空格，而是会导致与下一个制表停止对齐。
 
+### `javax.swing.JScrollPane 1.2`
 
+- `JScrollPane(Component c)`
 
+创建一个滚动面板，显示指定组件的内容。当组件大于视图时，将提供滚动条。
 
 你现在已经知道如何从用户那里收集文本输入，但在很多情况下，你更愿意给用户一组有限的选项，而不是让他们在文本组件中输入数据。使用一组按钮或项目列表可以告诉他们有哪些哪些选择。（这可以省去你进行错误检查的麻烦。）在本节节中，你将学习如何编写复选框、单选按钮、选择列表和滑块。
 
-## 1.4.1. 复选框 (Checkboxes)
+## 1.4.1. 复选框（Checkboxes）
 
 如果你只想收集“是”或“否”输入，请使用复选框组件。复选框会自动带有标识它们的标签。用户可以通过点击框内部来勾选框，并通过再次点击框内部来取消勾选。当复选框获得焦点时，按下空格键也可以切换勾选。
 
-图 11.12 显示了一个带有两个复选框的简单程序，一个用于开启或关闭字体的*斜体*属性，另一个用于**加粗**。注意第二个复选框具有焦点，如标签周围的矩形所示。每当用户点击其中一个复选框时，屏幕都会使用新的字体属性进行刷新。
+图 11.12 显示了一个带有两个复选框的简单程序，一个用于开启或关闭字体的斜体属性，另一个用于加粗。注意第二个复选框具有焦点，如标签周围的矩形所示。每当用户点击其中一个复选框时，屏幕都会使用新的字体属性进行刷新。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1162_0.png)
 
-**图 1.12：** 复选框
+图 1.12：复选框
 
 复选框旁边需要一个标签来标识它们的用途。在构造函数中提供标签文本：
 
-```
+```java
 bold = new JCheckBox("Bold");
 ```
 
 使用 `setSelected` 方法来开启或关闭复选框。例如：
 
-```
+```java
 bold.setSelected(true);
 ```
 
@@ -18725,15 +19991,15 @@ bold.setSelected(true);
 
 当用户点击复选框时，会触发一个动作事件。一如既往，你为复选框添加一个动作监听器。在我们的程序中，两个复选框共享同一个动作监听器。
 
-```
+```java
 ActionListener listener = . . .;
 bold.addActionListener(listener);
 italic.addActionListener(listener);
 ```
 
-监听器查询**加粗**和**斜体**复选框的状态，并将面板的字体设置为普通、加粗、斜体或同时加粗和斜体。
+监听器查询加粗和斜体复选框的状态，并将面板的字体设置为普通、加粗、斜体或同时加粗和斜体。
 
-```
+```java
 ActionListener listener = event ->
 {
     int mode = 0;
@@ -18745,9 +20011,9 @@ ActionListener listener = event ->
 
 **Listing 11.2** 是复选框示例的程序列表。
 
-# Listing 1.2 checkBox/CheckBoxFrame.java
+# Listing 1.2 `checkBox/CheckBoxFrame.java`
 
-```
+```java
 1 package checkBox;
 2
 3 import java.awt.*;
@@ -18776,7 +20042,7 @@ ActionListener listener = event ->
 26 // 这个监听器设置字体属性
 ```
 
-```
+```java
 // 将标签与复选框状态同步
 ActionListener listener = event ->
 {
@@ -18802,29 +20068,29 @@ add(buttonPanel, BorderLayout.SOUTH);
 pack();
 ```
 
-```
+```java
 javax.swing.JCheckBox 1.2
 ```
 
-- *JCheckBox(String label)*：构造一个初始未勾选的复选框。
-- *JCheckBox(String label, Icon icon)*
-- *JCheckBox(String label, boolean state)*：构造带有给定标签和初始状态的复选框。
-- *boolean isSelected()*
-- *void setSelected(boolean state)*：获取或设置复选框的选中状态。
+- `JCheckBox(String label)`：构造一个初始未勾选的复选框。
+- `JCheckBox(String label, Icon icon)`
+- `JCheckBox(String label, boolean state)`：构造带有给定标签和初始状态的复选框。
+- `boolean isSelected()`
+- `void setSelected(boolean state)`：获取或设置复选框的选中状态。
 
-## 1.4.2. 单选按钮 (Radio Buttons)
+## 1.4.2. 单选按钮（Radio Buttons）
 
-在在上一个示例中，用户可以勾选两个复选框中的一个、两个或都不。在很多情况下，我们希望用户只选择几个框中的一个。当另一个框被勾选时，之前的框会自动取消勾选。这样一组框通常被称为单选按钮组，因为这些按钮的工作原理就像收音机上的台台选择按钮。当你按下一个按钮时，之前按下的按钮会弹出。图 11.13 显示了一个典型的例子。我们允许用户从选项（小、中等、大或特大）中选择字体大小——但当然，我们只允许一次选择一种大小。
+在上一个示例中，用户可以勾选两个复选框中的一个、两个或都不。在很多情况下，我们希望用户只选择几个框中的一个。当另一个框被勾选时，之前的框会自动取消勾选。这样一组框通常被称为单选按钮组，因为这些按钮的工作原理就像收音机上的台台选择按钮。当你按下一个按钮时，之前按下的按钮会弹出。图 11.13 显示了一个典型的例子。我们允许用户从选项（小、中等、大或特大）中选择字体大小——但当然，我们只允许一次选择一种大小。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1166_0.png)
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1167_0.png)
 
-**图 1.13：** 单选按钮组
+图 1.13：单选按钮组
 
-实现单选按钮组在 Swing 中非常简单。为每组按钮创建一个 `ButtonGroup` 对象。然后，将 `JRadioButton` 类型的对象添加到按钮组中。按钮组对象负责在当按钮被点击时取消之前按钮的勾选。
+实现单选按钮组在 Swing 中非常简单。为每组按钮创建一个 `ButtonGroup` 对象。然后，将 `JRadioButton` 类型的对象添加到按钮组中。按钮组对象负责在按钮被点击时取消之前按钮的勾选。
 
-```
+```java
 var group = new ButtonGroup();
 
 var smallButton = new JRadioButton("Small", false);
@@ -18834,29 +20100,31 @@ var mediumButton = new JRadioButton("Medium", true);
 group.add(mediumButton);
 ```
 
-构造函数的第二个参数对于初始勾选的按钮为 true，其他为 false。注意，按钮组只控制按钮的行为；为了布局目的，你还需要将它们添加到 `JPanel` 等容器中。
+构造函数的第二个参数对于初始勾选的按钮为 `true`，其他为 `false`。注意，按钮组只控制按钮的行为；为了布局目的，你还需要将它们添加到 `JPanel` 等容器中。
 
 单选按钮的事件机制与其他按钮相同。当用户勾选单选按钮时，按钮会产生一个动作事件。在我们的示例中，我们定义了一个动作监听器将字体设置为特定的值：
 
-```
+```java
 ActionListener listener = event ->
 label.setFont(new Font("Serif", s
 ```
 
 在这里可以使用同样的方法吗？我们可以通过同一个监听器按如下方式计算大小：
 
-```
+```java
 if (smallButton.isSelected()) size = 8;
 else if (mediumButton.isSelected()) size = 12;
 ```
 
-**注意：** 如果有一组单选按钮，你已知其中一个被勾选了。如果能快速查出而不需要查询组中的所有按钮就好了。`ButtonGroup` 对象控制所有按钮，因此如果这个对象能给我们一个被选中按钮的引用就很方便。事实上，`ButtonGroup` 类有一个 `Selection` 方法，但该方法返回的并不是被选中的单选按钮。相反，它返回的是按钮的模型。遗憾的是，`ButtonModel` 的方法一个都不好用。`ButtonModel` 继承自 `ItemSelectable` 接口的方法非常没用，返回 `null`。`getActionCommand` 方法看起来很有前景，因为单选按钮的“动作命令”是它的文本标签。但模型的动作命令是 `null`。只有当你显式使用 `setActionCommand` 方法为所有单选按钮设置动作命令时，模型的动作命令值也会被设置。然后你可以通过 `buttonGroup.getSelection().getActionCommand 获取当前选中按钮的动作命令。
+**注意：** 如果有一组单选按钮，你已知其中一个被勾选了。如果能快速查出而不需要查询组中的所有按钮就好了。`ButtonGroup` 对象控制所有按钮，因此如果这个对象能给我们一个被选中按钮的引用就很方便。事实上，`ButtonGroup` 类有一个 `Selection` 方法，但该方法返回的并不是被选中的单选按钮。相反，它返回的是按钮的模型。遗憾的是，`ButtonModel` 的方法一个都不好用。`ButtonModel` 继承自 `ItemSelectable` 接口的方法非常没用，返回 `null`。`getActionCommand` 方法看起来很有前景，因为单选按钮的“动作命令”是它的文本标签。但模型的动作命令是 `null`。只有当你显式使用 `setActionCommand` 方法为所有单选按钮设置动作命令时，模型的动作命令值也会被设置。然后你可以通过 `buttonGroup.getSelection().getActionCommand` 获取当前选中按钮的动作命令。
 
 **Listing 11.3** 是用于字体大小选择的完整程序，它将一组单选按钮投入使用。
 
-# Listing 1.3 radioButton/RadioButtonFrame.java
+# Listing 1.3 `radioButton/RadioButtonFrame.java`
 
-```
+
+
+```java
 1 package radioButton;
 2
 3 import java.awt.*;
@@ -18870,8 +20138,6 @@ else if (mediumButton.isSelected()) size = 12;
 11 public class RadioButtonFrame extends JFran
 12 {
 ```
-
-
 
 ```java
 private JPanel buttonPanel;
@@ -18916,48 +20182,47 @@ public void addRadioButton(String name, int size) {
 }
 ```
 
-javax.swing.JRadioButton 1.2
+## `javax.swing.JRadioButton` 1.2
 
-- JRadioButton(String label, Icon icon) 构造一个初始未选中的单选按钮。
-- JRadioButton(String label, boolean state) 构造一个具有给定标签和初始状态的单选按钮。
+- `JRadioButton(String label, Icon icon)` 构造一个初始未选中的单选按钮。
+- `JRadioButton(String label, boolean state)` 构造一个具有给定标签和初始状态的单选按钮。
 
-javax.swing.ButtonGroup 1.2
+## `javax.swing.ButtonGroup` 1.2
 
-- void add(AbstractButton b) 将按钮添加到组中。
-- ButtonModel getSelection() 返回被选中按钮的按钮模型。
+- `void add(AbstractButton b)` 将按钮添加到组中。
+- `ButtonModel getSelection()` 返回被选中按钮的按钮模型。
 
-javax.swing.ButtonModel 1.2
+## `javax.swing.ButtonModel` 1.2
 
-- String getActionCommand() 返回此按钮模型的动作命令。
+- `String getActionCommand()` 返回此按钮模型的动作命令。
 
-javax.swing.AbstractButton 1.2
+## `javax.swing.AbstractButton` 1.2
 
-- void setActionCommand(String s) 设置此按钮及其模型的动作命令。
+- `void setActionCommand(String s)` 设置此按钮及其模型的动作命令。
 
-## 1.4.3. 边框 (Borders)
+## 1.4.3. 边框（Borders）
 
-如果你在窗口中有多组单选按钮，你可能希望在视觉上指示哪些按钮是一组的。Swing 为此目的提供了一组实用的边框。你可以将边框应用到任何扩展 JComponent 的组件上。最常见的用法是在面板周围放置边框，并在面板中填充其他用户界面元素，例如单选按钮。
+如果你在窗口中有多组单选按钮，你可能希望在视觉上指示哪些按钮是一组的。Swing 为此目的提供了一组实用的边框。你可以将边框应用到任何扩展 `JComponent` 的组件上。最常见的用法是在面板周围放置边框，并在面板中填充其他用户界面元素，例如单选按钮。
 
 你可以选择许多边框，但对所有边框都需要遵循相同的步骤。
 
-1. 调用 BorderFactory 的静态方法创建边框。你可以从以下样式中选择（见图 11.14）：
-
-   - 1. 凹斜角 (Lowered bevel)
-   - 2. 凸斜角 (Raised bevel)
-   - 3. 刻蚀 (Etched)
-   - 4. 线条 (Line)
-   - 5. 哑光 (Matte)
+1. 调用 `BorderFactory` 的静态方法创建边框。你可以从以下样式中选择（见图 11.14）：
+   - 1. 凹斜角（Lowered bevel）
+   - 2. 凸斜角（Raised bevel）
+   - 3. 刻蚀（Etched）
+   - 4. 线条（Line）
+   - 5. 哑光（Matte）
    - 6. 空白（Empty，仅在组件周围留出一些空白）
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1174_0.png)
 
 **图 11.14：** 测试边框类型
 
-2. 如果需要，可以通过将边框传递给 BorderFactory.createTitledBorder 为你的边框添加标题。
+2. 如果需要，可以通过将边框传递给 `BorderFactory.createTitledBorder` 为你的边框添加标题。
 
-3. 如果你想做得彻底，可以调用 BorderFactory.createCompoundBorder 组合多个边框。
+3. 如果你想做得彻底，可以调用 `BorderFactory.createCompoundBorder` 组合多个边框。
 
-4. 通过调用 JComponent 类的 setBorder 方法将生成的边框添加到你的组件中。
+4. 通过调用 `JComponent` 类的 `setBorder` 方法将生成的边框添加到你的组件中。
 
 例如，这里是如何向面板添加带标题的刻蚀边框的：
 
@@ -18967,26 +20232,26 @@ Border titled = BorderFactory.createTitledBorder(etched);
 panel.setBorder(titled);
 ```
 
-不同的边框在设置边框宽度和颜色上有不同的选项；详情请 API 注释。真正的边框爱好者会发现，还有一个 SoftBevelBorder 类用于具有圆角的斜角边框，且 LineBorder 也可以具有圆角。你只能通过使用构造函数之一来构建这些边框——它们没有对应的 BorderFactory 方法。
+不同的边框在设置边框宽度和颜色上有不同的选项；详情请 API 注释。真正的边框爱好者会发现，还有一个 `SoftBevelBorder` 类用于具有圆角的斜角边框，且 `LineBorder` 也可以具有圆角。你只能通过使用构造函数之一来构建这些边框——它们没有对应的 `BorderFactory` 方法。
 
-javax.swing.BorderFactory 1.2
+## `javax.swing.BorderFactory` 1.2
 
-- static Border createLineBorder(Color color)
-- static Border createLineBorder(Color color, int thickness) 创建一个简单的线条边框。
-- static MatteBorder createMatteBorder(int top, int left, int bottom, int right, Color color)
-- static MatteBorder createMatteBorder(int top, int left, int bottom, int right, Icon tileIcon) 创建一个用颜色或重复图标填充的厚边框。
-- static Border createEmptyBorder()
-- static Border createEmptyBorder(int top, int left, int bottom, int right) 创建一个空边框。
-- static Border createEtchedBorder()
-- static Border createEtchedBorder(Color highlight, Color shadow)
-- static Border createEtchedBorder(int type)
-- static Border createEtchedBorder(int type, Color highlight, Color shadow) 创建具有 3D 效果的线条边框。type 参数是 EtchedBorder.RAISED 或 EtchedBorder.LOWERED 之一。
-- static Border createBevelBorder(int type)
-- static Border createBevelBorder(int type, Color highlight, Color shadow)
-- static Border createLoweredBevelBorder()
-- static Border createRaisedBevelBorder()
+- `static Border createLineBorder(Color color)`
+- `static Border createLineBorder(Color color, int thickness)` 创建一个简单的线条边框。
+- `static MatteBorder createMatteBorder(int top, int left, int bottom, int right, Color color)`
+- `static MatteBorder createMatteBorder(int top, int left, int bottom, int right, Icon tileIcon)` 创建一个用颜色或重复图标填充的厚边框。
+- `static Border createEmptyBorder()`
+- `static Border createEmptyBorder(int top, int left, int bottom, int right)` 创建一个空边框。
+- `static Border createEtchedBorder()`
+- `static Border createEtchedBorder(Color highlight, Color shadow)`
+- `static Border createEtchedBorder(int type)`
+- `static Border createEtchedBorder(int type, Color highlight, Color shadow)` 创建具有 3D 效果的线条边框。`type` 参数是 `EtchedBorder.RAISED` 或 `EtchedBorder.LOWERED` 之一。
+- `static Border createBevelBorder(int type)`
+- `static Border createBevelBorder(int type, Color highlight, Color shadow)`
+- `static Border createLoweredBevelBorder()`
+- `static Border createRaisedBevelBorder()`
 
-## 1.4.4. 组合框 (Combo Boxes)
+## 1.4.4. 组合框（Combo Boxes）
 
 如果你有多个备选项，单选按钮不是一个好选择，因为它们占据了太多的屏幕空间。相反，你可以使用组合框。当用户点击此组件时，会弹出一个选项列表，用户随后可以选择其中一个（见图 11.15）。
 
@@ -18994,13 +20259,13 @@ javax.swing.BorderFactory 1.2
 
 图 11.15：一个组合框
 
-如果下拉列表框设置为可编辑，你就可以像编辑文本字段一样编辑当前选择。正如此，此组件被称为组合框——它结合了文本字段的灵活性和一组预定义的选项。JComboBox 类提供了组合框组件。
+如果下拉列表框设置为可编辑，你就可以像编辑文本字段一样编辑当前选择。正如此，此组件被称为组合框——它结合了文本字段的灵活性和一组预定义的选项。`JComboBox` 类提供了组合框组件。
 
-从 Java 7 开始，JComboBox 类是一个泛型类。例如，JComboBox<String> 存储 String 类型的对象，而 JComboBox<Integer> 存储整数。
+从 Java 7 开始，`JComboBox` 类是一个泛型类。例如，`JComboBox<String>` 存储 `String` 类型的对象，而 `JComboBox<Integer>` 存储整数。
 
-调用 setEditable 方法使组合框变为可编辑。请注意，编辑只会影响选中的项。它不会以任何方式更改选项列表。
+调用 `setEditable` 方法使组合框变为可编辑。请注意，编辑只会影响选中的项。它不会以任何方式更改选项列表。
 
-你可以通过 getSelectedItem 方法获取当前选择，如果组合框是可编辑的，该选择可能经过编辑。但是对于可编辑的组合框，该项可以是任何类型，取决于用户使用的编辑器以及将结果转换为对象的方式。（参见第 12 章关于编辑器的讨论）。如果你的组合框不可编辑，那么最好调用
+你可以通过 `getSelectedItem` 方法获取当前选择，如果组合框是可编辑的，该选择可能经过编辑。但是对于可编辑的组合框，该项可以是任何类型，取决于用户使用的编辑器以及将结果转换为对象的方式。（参见第 12 章关于编辑器的讨论）。如果你的组合框不可编辑，那么最好调用：
 
 ```java
 combo.getItemAt(combo.getSelectedItemIndex())
@@ -19008,9 +20273,7 @@ combo.getItemAt(combo.getSelectedItemIndex())
 
 这会给你正确类型的被选中项。
 
-使用 addItem 方法添加选择项。在我们的程序中，addItem 只在构造函数中被调用，但你可以随时调用它。
-
-
+使用 `addItem` 方法添加选择项。在我们的程序中，`addItem` 只在构造函数中被调用，但你可以随时调用它。
 
 ```java
 var faceCombo = new JComboBox<String>();
@@ -19026,7 +20289,7 @@ faceCombo.insertAt("Monospaced", 0); // 添加
 
 你可以添加任何类型的项目——组合框会调用每个项目的 `toString` 方法来显示它。
 
-如果你需要在在运行时删除项目，请使用 `removeItem` 或 `removeItemAt` 方法，这取决于你提供的是要删除的项还是其位置。
+如果你需要在运行时删除项目，请使用 `removeItem` 或 `removeItemAt` 方法，这取决于你提供的是要删除的项还是其位置。
 
 ```java
 faceCombo.removeItem("Monospaced");
@@ -19049,7 +20312,7 @@ ActionListener listener = event ->
 
 Listing 11.4 显示了完整的程序。
 
-#  1.4 comboBox/ComboBoxFrame.java
+# 1.4 `comboBox/ComboBoxFrame.java`
 
 ```java
 1 package comboBox;
@@ -19091,7 +20354,7 @@ faceCombo.addItem("Dialog");
 faceCombo.addItem("InputDialog");
 
 // 组合框监听器更改字体
-faceCombo.addActionListener(event -> 
+faceCombo.addActionListener(event ->
     label.setFont(
         new Font(faceCombo.getItemAt(faceCombo.getSelectedItem(
             Font.PLAIN, DEFAULT_SIZE))));
@@ -19103,20 +20366,20 @@ add(comboPanel, BorderLayout.SOUTH);
 pack();
 ```
 
-## javax.swing.JComboBox 1.2
+## `javax.swing.JComboBox` 1.2
 
 | 方法 | 说明 |
 | :--- | :--- |
-| - boolean isEditable() | 获取或设置此组合框的可编辑属性。 |
-| - void setEditable(boolean b) | 获取或设置此组合框的可编辑属性。 |
-| - void addItem(Object item) | 向项目列表添加一个项目。 |
-| - void insertItemAt(Object item, int index) | 在指定的索引处向项目列表插入项目。 |
-| - void removeItem(Object item) | 从项目列表中移除一个项目。 |
-| - void removeItemAt(int index) | 移除索引处的项目。 |
-| - void removeAllItems() | 从项目列表中的所有项目。 |
-| - Object getSelectedItem() | 返回当前选中的项目。 |
+| `boolean isEditable()` | 获取或设置此组合框的可编辑属性。 |
+| `void setEditable(boolean b)` | 获取或设置此组合框的可编辑属性。 |
+| `void addItem(Object item)` | 向项目列表添加一个项目。 |
+| `void insertItemAt(Object item, int index)` | 在指定的索引处向项目列表插入项目。 |
+| `void removeItem(Object item)` | 从项目列表中移除一个项目。 |
+| `void removeItemAt(int index)` | 移除索引处的项目。 |
+| `void removeAllItems()` | 从项目列表中的所有项目。 |
+| `Object getSelectedItem()` | 返回当前选中的项目。 |
 
-### 1.4.5. 滑块 (Sliders)
+### 1.4.5. 滑块（Sliders）
 
 组合框允许用户从一组离散的值中选择。滑块则从连续的值中提供选择——例如，1 到 100 之间的任何数字。
 
@@ -19138,7 +20401,7 @@ var slider = new JSlider(SwingConstants.VERTICAL,
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1187_0.png)
 
-**图 11.16:** 滑块
+**图 11.16：** 滑块
 
 当用户滑动滑块时，滑块的*值*会在最小值和最大值之间移动。当值改变时，一个 `ChangeEvent` 会发送给所有的更改监听器。要接收更改通知，请调用 `addChangeListener`。
 
@@ -19261,36 +20524,43 @@ public void addSlider(JSlider slider, String description) {
 }
 ```
 
-# javax.swing.JSlider 1.2
+# `javax.swing.JSlider` 1.2
 
-- JSlider()
-- JSlider(int direction)
-- JSlider(int min, int max)
-- JSlider(int min, int max, int initialValue)
-- JSlider(int direction, int min, int max, int initialValue)
+- `JSlider()`
+- `JSlider(int direction)`
+- `JSlider(int min, int max)`
+- `JSlider(int min, int max, int initialValue)`
+- `JSlider(int direction, int min, int max, int initialValue)`
 
-根据给定的方向、最小值和最大值创建一个滑块。direction 参数为 SwingConstants.HORIZONTAL 或 SwingConstants.VERTICAL 之一。默认为水平方向，最小值和最大值均为 100。
+根据给定的方向、最小值和最大值创建一个滑块。`direction` 参数为 `SwingConstants.HORIZONTAL` 或 `SwingConstants.VERTICAL` 之一。默认为水平方向，最小值和最大值均为 100。
 
-- void setPaintTicks(boolean b)
-如果 b 为 true，则显示刻度。
+- `void setPaintTicks(boolean b)`
 
-- void setMajorTickSpacing(int units)
+如果 `b` 为 `true`，则显示刻度。
+
+- `void setMajorTickSpacing(int units)`
+
 在给定单位的倍数处设置主刻度线。
 
-- void setMinorTickSpacing(int units)
+- `void setMinorTickSpacing(int units)`
+
 在给定单位的倍数处设置小刻度线。
 
-- void setPaintLabels(boolean b)
-如果 b 为 true，则显示刻度标签。
+- `void setPaintLabels(boolean b)`
 
-- void setLabelTable(Hasable table)
+如果 `b` 为 `true`，则显示刻度标签。
+
+- `void setLabelTable(Hasable table)`
+
 设置用于刻度标签的组件。
 
-- void setSnapToTicks(boolean b)
-如果 b 为 true，滑块在每次调整后将吸附到最邻的刻度上。
+- `void setSnapToTicks(boolean b)`
 
-- void setPaintTrack(boolean b)
-如果 b 为 true，则显示轨道。
+如果 `b` 为 `true`，滑块在每次调整后将吸附到最邻的刻度上。
+
+- `void setPaintTrack(boolean b)`
+
+如果 `b` 为 `true`，则显示轨道。
 
 ## 1.5 菜单
 
@@ -19304,7 +20574,7 @@ public void addSlider(JSlider slider, String description) {
 var menuBar = new JMenuBar();
 ```
 
-菜单栏只是一个可以添加到任何地方的组件。通常情况下，你希望它出现在框架的顶部。你可以通过 setMenuBar 方法将其添加到那里。对于每个菜单，创建一个菜单对象：
+菜单栏只是一个可以添加到任何地方的组件。通常情况下，你希望它出现在框架的顶部。你可以通过 `setMenuBar` 方法将其添加到那里。对于每个菜单，创建一个菜单对象：
 
 ```java
 var editMenu = new JMenu("Edit");
@@ -19332,7 +20602,7 @@ ActionListener listener = ...;
 pasteItem.addActionListener(listener);
 ```
 
-通常情况下，菜单项可以通过其他用户界面元素（如工具栏按钮）激活。第 10 章你已经看到如何通过 Action 对象指定命令。定义一个实现 Action 接口的类，通常通过扩展 AbstractAction 类，在 Action 对象的构造函数中指定菜单项标签，并重写 actionPerformed 方法来持有菜单处理器。例如：
+通常情况下，菜单项可以通过其他用户界面元素（如工具栏按钮）激活。第 10 章你已经看到如何通过 `Action` 对象指定命令。定义一个实现 `Action` 接口的类，通常通过扩展 `AbstractAction` 类，在 `Action` 对象的构造函数中指定菜单项标签，并重写 `actionPerformed` 方法来持有菜单处理器。例如：
 
 ```java
 var exitAction = new AbstractAction("Exit") {
@@ -19352,46 +20622,40 @@ fileMenu.add(exitItem);
 
 此命令使用 action 名称将菜单项添加到菜单。
 
-# javax.swing.JMenu 1.2
+# `javax.swing.JMenu` 1.2
 
-- JMenuItem(String label) 根据给定的标签构造菜单。
-- add(JMenuItem item) 添加菜单项（或菜单）。
-- add(String label) 将给定标签的菜单项添加到此菜单并返回该项。
-
-- add(Action a) 将给定动作的菜单项添加到此菜单并返回该项。
-
-- addSeparator() 向菜单添加分隔符线。
-
-- insert(JMenuItem menu, int index) 在特定索引处向菜单添加新的菜单项（或子菜单）。
-- insert(Action a, int index) 在特定索引处添加带有给定动作的新菜单项。
-
-- insertSeparator(int index) 向菜单添加分隔符。
-
-- remove(int index)
-
-- remove(JMenuItem item) 从菜单中移除特定项。
+- `JMenuItem(String label)` 根据给定的标签构造菜单。
+- `add(JMenuItem item)` 添加菜单项（或菜单）。
+- `add(String label)` 将给定标签的菜单项添加到此菜单并返回该项。
+- `add(Action a)` 将给定动作的菜单项添加到此菜单并返回该项。
+- `addSeparator()` 向菜单添加分隔符线。
+- `insert(JMenuItem menu, int index)` 在特定索引处向菜单添加新的菜单项（或子菜单）。
+- `insert(Action a, int index)` 在特定索引处添加带有给定动作的新菜单项。
+- `insertSeparator(int index)` 向菜单添加分隔符。
+- `remove(int index)`
+- `remove(JMenuItem item)` 从菜单中移除特定项。
 
 ```java
 javax.swing.JMenuItem 1.2
 ```
 
-- JMenuItem(String label) 根据给定标签构造菜单项。
-- JMenuItem(Action a) 1.3 为给定的动作构造菜单项。
-
-
-
-
+- `JMenuItem(String label)` 根据给定标签构造菜单项。
+- `JMenuItem(Action a)` 1.3 为给定的动作构造菜单项。
 
 ```java
 javax.swing.AbstractButton 1.2
 ```
-- void setAction(Action a) 1.3
+
+- `void setAction(Action a)` 1.3
+
   为此按钮或菜单项设置动作。
 
 ```java
 javax.swing.JFrame 1.2
 ```
-- void setJMenuBar(JMenuBar menubar)
+
+- `void setJMenuBar(JMenuBar menubar)`
+
   为此框架设置菜单栏。
 
 ## 1.5.2 菜单项中的图标
@@ -19432,22 +20696,28 @@ cutAction = new AbstractAction("Cut", new ImageIcon("cut.gif")
 ```java
 javax.swing.JMenuItem 1.2
 ```
-- JMenuItem(String label, Icon icon)
+
+- `JMenuItem(String label, Icon icon)`
+
   使用指定的标签和图标构造菜单项。
 
 ```java
 javax.swing.AbstractButton 1.2
 ```
-- void setHorizontalTextPosition(int pos)
+
+- `void setHorizontalTextPosition(int pos)`
+
   设置文本相对于图标的水平位置。`pos` 参数为 `SwingConstants.RIGHT`（文本在图标右侧）或 `SwingConstants.LEFT`。
 
 ```java
 javax.swing.AbstractAction 1.2
 ```
-- AbstractAction(String name, Icon smallIcon)
+
+- `AbstractAction(String name, Icon smallIcon)`
+
   使用指定的名称和图标构造抽象动作。
 
-## 1.5.3. 复选框和单选按钮菜单项
+## 1.5.3 复选框和单选按钮菜单项
 
 复选框和单选按钮菜单项在名称旁边显示复选框或单选按钮（见图 11.17）。当用户选择菜单项时，该项会自动在选中和未选中之间切换。
 
@@ -19476,28 +20746,33 @@ optionsMenu.add(overtypeItem);
 ```java
 javax.swing.JCheckBoxMenuItem 1.2
 ```
-- JCheckBoxMenuItem(String label) 使用指定的标签构造复选框菜单项。
-- JCheckBoxMenuItem(String label, boolean state) 使用指定的标签和初始状态（true 为选中）构造复选框菜单项。
+
+- `JCheckBoxMenuItem(String label)` 使用指定的标签构造复选框菜单项。
+- `JCheckBoxMenuItem(String label, boolean state)` 使用指定的标签和初始状态（`true` 为选中）构造复选框菜单项。
 
 ```java
 javax.swing.JRadioButtonMenuItem 1.2
 ```
-- JRadioButtonMenuItem(String label) 使用指定的标签构造单选按钮菜单项。
-- JRadioButtonMenuItem(String label, boolean state) 使用指定的标签和指定的初始状态（true 为选中）构造单选按钮菜单项。
+
+- `JRadioButtonMenuItem(String label)` 使用指定的标签构造单选按钮菜单项。
+- `JRadioButtonMenuItem(String label, boolean state)` 使用指定的标签和指定的初始状态（`true` 为选中）构造单选按钮菜单项。
 
 ```java
 javax.swing.AbstractButton 1.2
 ```
-- boolean isSelected()
-- void setSelected(boolean state) 获取或设置此项的选中状态（true 为选中）。
 
-## 1.5.4. 弹出菜单
+- `boolean isSelected()`
+- `void setSelected(boolean state)` 获取或设置此项的选中状态（`true` 为选中）。
+
+## 1.5.4 弹出菜单
 
 弹出菜单是一种未附加到菜单栏而是悬浮在某处的菜单（见图 11.18）。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1208_0.png)
 
-图 11.18: 弹出菜单
+
+
+## 图 11.18: 弹出菜单
 
 创建弹出菜单就像创建普通菜单一样，只是弹出菜单没有标题。
 
@@ -19516,36 +20791,48 @@ item.addActionListener(...);
 popup.add(item);
 ```
 
-与始终显示在框架顶部的普通菜单不同，你必须使用 `show` 方法显式显示弹出菜单。例如，如果你想在用户点击按钮时弹出菜单，调用
+与始终显示在框架顶部的普通菜单不同，你必须使用`show`方法显式显示弹出菜单。例如，如果你想在用户点击按钮时弹出菜单，调用
 
 ```java
 popup.show(panel);
 ```
 
-通常，通过调用 `setPopupMenu` 为组件附加弹出菜单。如果该属性被设置为 `null`，则将使用父组件的弹出菜单。
+通常，通过调用`setPopupMenu`为组件附加弹出菜单。如果该属性被设置为`null`，则将使用父组件的弹出菜单。
 
 ```java
 javax.swing.JPopupMenu 1.2
 ```
-- void show(Component c, int x, int y)
-  在 (x, y) 处显示弹出菜单。
-- boolean isPopupTrigger(MouseEvent event)
-  如果事件是弹出触发，则返回 true。
+
+- `void show(Component c, int x, int y)`
+
+  在`(x, y)`处显示弹出菜单。
+
+- `boolean isPopupTrigger(MouseEvent event)`
+
+  如果事件是弹出触发，则返回`true`。
 
 ```java
 java.awt.event.MouseEvent 1.1
 ```
-- boolean isPopupTrigger()
-  如果这是弹出触发，则返回 true。
+
+- `boolean isPopupTrigger()`
+
+  如果这是弹出触发，则返回`true`。
 
 ```java
 javax.swing.JComponent 1.2
 ```
-- JPopupMenu getComponentPopupMenu()
-- void setComponentPopupMenu(JPopupMenu popup)
+
+- `JPopupMenu getComponentPopupMenu()`
+
+- `void setComponentPopupMenu(JPopupMenu popup)`
+
   获取或设置组件的弹出菜单。
-- boolean getInheritsPopupMenu()
-- void setInheritsPopupMenu(boolean b)
+
+- `boolean getInheritsPopupMenu()`
+
+- `void setInheritsPopupMenu(boolean b)`
+
   获取或设置继承属性。
 
 ## 1.5.5. 快捷键和加速器
@@ -19556,28 +20843,26 @@ javax.swing.JComponent 1.2
 var aboutItem = new JMenuItem("About", 'A');
 ```
 
-快捷键会自动显示在菜单中，快捷键字母带有下划线（见图 11.19）。例如，在上一个示例中，标签将是带有下划线的“About”。当菜单显示时，用户只需按下 A 键即可选择该菜单项。（如果快捷键字母不在菜单字符串中，输入它仍然可以选择该项，但菜单中不会显示快捷键。自然地，这种隐形快捷键用处不大。）
+快捷键会自动显示在菜单中，快捷键字母带有下划线（见图 11.19）。例如，在上一个示例中，标签将是带有下划线的“About”。当菜单显示时，用户只需按下`A`键即可选择该菜单项。（如果快捷键字母不在菜单字符串中，输入它仍然可以选择该项，但菜单中不会显示快捷键。自然地，这种隐形快捷键用处不大。）
 
-有时，你不希望下划菜单项中匹配快捷键的字母。例如，如果你为菜单项“Save As”设置快捷键“A”，那么下划第二个“A”更有意义。你可以通过调用 `setDisplayedMnemonicIndex` 方法指定要下线的字符。
+有时，你不希望下划菜单项中匹配快捷键的字母。例如，如果你为菜单项“Save As”设置快捷键“A”，那么下划第二个“A”更有意义。你可以通过调用`setDisplayedMnemonicIndex`方法指定要下线的字符。
 
-如果你有一个动作对象，可以将快捷键作为 `Action.MNEMONIC_KEY` 键的值，如下：
+如果你有一个动作对象，可以将快捷键作为`Action.MNEMONIC_KEY`键的值，如下：
 
 ```java
 aboutAction.putValue(Action.MNEMONIC_KEY, Integer)
 ```
 
-你只能在菜单项的构造函数中提供快捷键，而不能在菜单的构造函数中提供。要为菜单附加快捷键，请调用 `setMnemonic` 方法。
-
-
+你只能在菜单项的构造函数中提供快捷键，而不能在菜单的构造函数中提供。要为菜单附加快捷键，请调用`setMnemonic`方法。
 
 ```java
 var helpMenu = new JMenu("Help");
 helpMenu.setMnemonic('H');
 ```
 
-要从菜单栏选择顶层菜单，请按下 Alt 键配合助记字母。例如，按下 Alt+H 可从菜单栏选择“帮助”菜单。
+要从菜单栏选择顶层菜单，请按下`Alt`键配合助记字母。例如，按下`Alt+H`可从菜单栏选择“帮助”菜单。
 
-键盘助记（mnemonics）允许您从当前打开的菜单中选择子菜单或菜单项。相比之下，加速键（accelerators）是快捷键，允许您无需打开菜单即可选择菜单项。例如，许多程序为“文件”菜单中的“打开”和“保存”项目绑定了加速键 Ctrl+O 和 Ctrl+S。使用 `setAccelerator` 方法可以将加速键绑定到菜单项上。`setAccelerator` 方法接收一个类型 `Keystroke` 类型的对象。例如，以下调用将加速键 Ctrl+O 绑定到 `openItem` 菜单项：
+键盘助记（mnemonics）允许您从当前打开的菜单中选择子菜单或菜单项。相比之下，加速键（accelerators）是快捷键，允许您无需打开菜单即可选择菜单项。例如，许多程序为“文件”菜单中的“打开”和“保存”项目绑定了加速键`Ctrl+O`和`Ctrl+S`。使用`setAccelerator`方法可以将加速键绑定到菜单项上。`setAccelerator`方法接收一个类型`Keystroke`类型的对象。例如，以下调用将加速键`Ctrl+O`绑定到`openItem`菜单项：
 
 ```java
 openItem.setAccelerator(KeyStroke.getKeyStroke("Ctrl-O"));
@@ -19587,43 +20872,45 @@ openItem.setAccelerator(KeyStroke.getKeyStroke("Ctrl-O"));
 
 您只能将加速键绑定到菜单项，而不能绑定到菜单。加速键实际上不会打开菜单。相反，它们会直接触发与菜单关联的动作。
 
-从概念上讲，向菜单项添加加速键类似于向 Swing 组件添加加速键的技术。然而，当加速键被添加到菜单项时，该键组合将会自动显示在菜单中（见图 11.20）。
+从概念上讲，向菜单项添加加速键类似于向`Swing`组件添加加速键的技术。然而，当加速键被添加到菜单项时，该键组合将会自动显示在菜单中（见图 11.20）。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1214_0.png)
 
-# 图 1.20: 加速键
+### 图 1.20: 加速键
 
-> 注意：在 Windows 下，Alt+F4 会关闭窗口。但这并不是要在 Java 中编写的加速键。它是由操作系统定义的快捷键。无论菜单上是否有“关闭”项，此键组合始终会触发活动窗口的 WindowClosing 事件。
+> 注意：在 Windows 下，`Alt+F4`会关闭窗口。但这并不是要在 Java 中编写的加速键。它是由操作系统定义的快捷键。无论菜单上是否有“关闭”项，此键组合始终会触发活动窗口的`WindowClosing`事件。
 
 ```java
 javax.swing.JMenuItem 1.2
 ```
 
-- JMenuItem(String label, int mnemonic) 使用给定的标签和助记符构造菜单项。
-- void setAccelerator(KeyStroke k) 将按键 `k` 设置为此菜单项的加速键。加速键将显示在标签旁边。
+- `JMenuItem(String label, int mnemonic)` 使用给定的标签和助记符构造菜单项。
+
+- `void setAccelerator(KeyStroke k)` 将按键`k`设置为此菜单项的加速键。加速键将显示在标签旁边。
 
 ```java
 javax.swing.AbstractButton 1.2
 ```
 
-- void setMnemonic(int mnemonic) 设置按钮的助记符字符。该字符在标签中将带有下划线。
-- void setDisplayedMnemonic(int index) 1.4 设置按钮文本中带划线的字符索引。如果您不想让助记符字符的第一次出现带有下划线，请使用此方法。
+- `void setMnemonic(int mnemonic)` 设置按钮的助记符字符。该字符在标签中将带有下划线。
+
+- `void setDisplayedMnemonic(int index)` 1.4 设置按钮文本中带划线的字符索引。如果您不想让助记符字符的第一次出现带有下划线，请使用此方法。
 
 ## 1.5.6. 启用和禁用菜单项
 
-有时，特定的菜单项应仅在某些上下文中被选择。例如，当以只读模式打开文档时，“保存”菜单项是没有意义的。当然，我们可以使用 `JMenu.remove` 方法从菜单中移除该项，但用户对内容不断变化的菜单会感到惊讶。相反，禁用那些导致临时不当命令的菜单项更好。被禁用的菜单项以灰色显示且无法选择（见图 11.21）。
+有时，特定的菜单项应仅在某些上下文中被选择。例如，当以只读模式打开文档时，“保存”菜单项是没有意义的。当然，我们可以使用`JMenu.remove`方法从菜单中移除该项，但用户对内容不断变化的菜单会感到惊讶。相反，禁用那些导致临时不当命令的菜单项更好。被禁用的菜单项以灰色显示且无法选择（见图 11.21）。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1216_0.png)
 
-图 1.21: 禁用的菜单项
+### 图 1.21: 禁用的菜单项
 
-要启用或禁用菜单项，使用 `setEnabled` 方法：
+要启用或禁用菜单项，使用`setEnabled`方法：
 
 ```java
 saveItem.setEnabled(false);
 ```
 
-启用和禁用菜单项有两种策略。每当情况发生变化时，您都可以在相关的菜单项或动作上调用 `setEnabled`。例如，一旦文档被设置为只读模式，您就可以找到“保存”和“另存为”菜单项并禁用它们。另一种方法是在可以在显示菜单之前禁用项。要实现此点，您必须为“菜单被选择（menu selected）”事件注册一个监听器。`javax.swing.event` 包定义了一个 `MenuListener` 接口，其中包含三个方法：
+启用和禁用菜单项有两种策略。每当情况发生变化时，您都可以在相关的菜单项或动作上调用`setEnabled`。例如，一旦文档被设置为只读模式，您就可以找到“保存”和“另存为”菜单项并禁用它们。另一种方法是在可以在显示菜单之前禁用项。要实现此点，您必须为“菜单被选择（menu selected）”事件注册一个监听器。`javax.swing.event`包定义了一个`MenuListener`接口，其中包含三个方法：
 
 ```java
 void menuSelected(MenuEvent event)
@@ -19631,7 +20918,7 @@ void menuDeselected(MenuEvent event)
 void menuCanceled(MenuEvent event)
 ```
 
-`menuSelected` 方法在菜单显示之前调用。它可以用于禁用或启用菜单项。以下代码显示了当选择“只读”复选框菜单项时，如何禁用“保存”和“另存为”动作：
+`menuSelected`方法在菜单显示之前调用。它可以用于禁用或启用菜单项。以下代码显示了当选择“只读”复选框菜单项时，如何禁用“保存”和“另存为”动作：
 
 ```java
 public void menuSelected(MenuEvent event) {
@@ -19655,8 +20942,6 @@ javax.swing.event.ActionListener 1.2
 - void menuDeselected(MouseEvent e) 在菜单被取消选择时调用。
 - void menuCanceled(MouseEvent e) 在菜单被取消时调用。
 ```
-
-
 
 ```java
 var aboutAction = new TestAction("Abc");
@@ -19700,7 +20985,7 @@ add(panel);
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1226_0.png)
 
-图 1.25：分离工具栏
+### 图 1.25：分离工具栏
 
 工具栏的编程非常简单。向工具栏中添加组件即可：
 
@@ -19709,7 +20994,7 @@ var toolbar = new JToolBar();
 toolbar.add(blueButton);
 ```
 
-JToolBar 类还有一个用于添加 Action 对象的方法。只需用 Action 对象填充工具栏即可，如下所示：
+`JToolBar`类还有一个用于添加`Action`对象的方法。只需用`Action`对象填充工具栏即可，如下所示：
 
 ```java
 toolbar.add(blueAction);
@@ -19757,38 +21042,41 @@ toolbar = new JToolBar(titleString, SwingConstants.VERTICAL)
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1229_0.png)
 
-在 Swing 中，你只需调用 `setToolTipText` 方法即可为任何 JComponent 添加提示：
+在 Swing 中，你只需调用`setToolTipText`方法即可为任何`JComponent`添加提示：
 
 ```java
 exitButton.setToolTipText("Exit");
 ```
 
-或者，如果你使用 Action 对象，可以将提示与 `SHORT_DESCRIPTION` 键关联：
+或者，如果你使用`Action`对象，可以将提示与`SHORT_DESCRIPTION`键关联：
 
 ```java
 exitAction.putValue(Action.SHORT_DESCRIPTION, "Exit");
 ```
 
-## javax.swing.JToolBar 1.2
+### javax.swing.JToolBar 1.2
 
-- JToolbar()
-- JToolbar(String titleString)
-- JToolbar(int orientation)
-- JToolbar(String titleString, int orientation)
+- `JToolbar()`
 
-使用给定的标题字符串和方向构造工具栏。orientation 是 `SwingConstants.HORIZONTAL`（默认值）或 `SwingConstants.VERTICAL` 之一。
+- `JToolbar(String titleString)`
 
-- void add(Action a)
+- `JToolbar(int orientation)`
+
+- `JToolbar(String titleString, int orientation)`
+
+使用给定的标题字符串和方向构造工具栏。`orientation`是`SwingConstants.HORIZONTAL`（默认值）或`SwingConstants.VERTICAL`之一。
+
+- `void add(Action a)`
 
 根据给定的 action 在工具栏内部创建一个带有名称、图标、短描述和 action 回调的新按钮，并将该按钮添加到工具栏的末尾。
 
-- void addSeparator()
+- `void addSeparator()`
 
 在工具栏末尾添加一个分隔符。
 
-## javax.swing.JComponent 1.2
+### javax.swing.JComponent 1.2
 
-- void setToolTipText(String text)
+- `void setToolTipText(String text)`
 
 设置当鼠标悬停时应显示为提示的文本。
 
@@ -19803,32 +21091,36 @@ exitAction.putValue(Action.SHORT_DESCRIPTION, "Exit");
 考虑图 11.27 中的字体选择器。它由以下部分组成：
 
 - 指定字体和大小的组合框
+
 - 这组合框的标签
+
 - 选择加粗和斜体的复选框
+
 - 用于示例字符串的文本区域
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1233_0.png)
 
-图 1.27：字体选择器
+### 图 1.27：字体选择器
 
 现在，将容器划分为网格单元，如图 11.28 所示。（行和列不需要相等。）每个复选框跨越两列，文本区域跨越四行。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1234_0.png)
 
-图 1.28：设计时使用的对话框
+### 图 1.28：设计时使用的对话框
 
 向网格管理器描述布局，请使用以下步骤：
 
-1. 创建一个 **GridBagLayout** 对象。你不需要告诉它底层网格有多少行多少列。相反，布局管理器将尝试根据你之后提供的信息来推断。
-2. 将此 **GridBagLayout** 对象设置为组件的布局管理器。
-3. 对于每个组件，创建一个 `GridBagConstraints` 对象。设置 `GridBagConstraints` 对象的字段值，以指定组件在网格包中的布局方式。
+1. 创建一个`GridBagLayout`对象。你不需要告诉它底层网格有多少行多少列。相反，布局管理器将尝试根据你之后提供的信息来推断。
+
+2. 将此`GridBagLayout`对象设置为组件的布局管理器。
+
+3. 对于每个组件，创建一个`GridBagConstraints`对象。设置`GridBagConstraints`对象的字段值，以指定组件在网格包中的布局方式。
+
 4. 最后，使用调用带有其约束添加每个组件：
 
 ```java
 add(component, constraints);
 ```
-
-
 
 这是一个所需的代码示例。（我们将在接后的章节中详细介绍各种约束条件——所以如果你不知道某些约束条件的作用，请不要担心。）
 
@@ -19845,11 +21137,13 @@ constraints.gridheight = 1;
 panel.add(component, constraints);
 ```
 
-关键在于知道如何设置 `GridBagConstraints` 对象的状态。我们将在接下来的章节中讨论这个对象。
+关键在于知道如何设置`GridBagConstraints`对象的状态。我们将在接下来的章节中讨论这个对象。
 
 ## 1.6.2. gridx, grid, gridwidth, 和 gridheight 参数
 
-`gridx`、`grid`、`gridwidth` 和 `gridheight` 约束定义了组件在网格中的位置。`gridx` 和 `grid` 值指定了要添加的组件左上角的列和行位置。`gridwidth` 和 `gridheight` 值决定了组件占据的列数和行数。
+`gridx`、`grid`、`gridwidth`和`gridheight`约束定义了组件在网格中的位置。`gridx`和`grid`值指定了要添加的组件左上角的列和行位置。`gridwidth`和`gridheight`值决定了组件占据的列数和行数。
+
+
 
 网格坐标从 0 开始。特别地，`gridx = 0` 和 `gridy = 0` 表示左上角。我们示例中的文本区域 `gridx = 2`，`gridy = 0`，因为它从第 0 行的第 2 列（即第三列）开始。它的 `gridwidth = 1`，`gridheight = 4`，因为它跨越了一列和四行。
 
@@ -19902,8 +21196,7 @@ AWT 文档建议，与其设置 `gridx` 和 `gridy` 值，不如将它们设置�
 - 有两个构造函数可以设置常用的参数：`gridx`、`gridy`、`gridwidth` 和 `gridheight`。
 - 对于成对出现的字段，提供了方便的 setter 方法。
 - setter 方法返回 `this`，因此你可以进行链式调用。
-- `setInsets` 方法为你构造 `Insets` 对象。要获得1 像素的内边距，只需调用 `setInsets(1, 1, 1, 1)`。
-
+- `setInsets` 方法为你构造 `Insets` 对象。要获得 1 像素的内边距，只需调用 `setInsets(1, 1, 1, 1)`。
 
 ```java
 private static final int TEXT_ROWS = 10;
@@ -19959,7 +21252,7 @@ public void updateSample()
 }
 ```
 
-###  1.8 gridbag/GBC.java
+### 1.8 gridbag/GBC.java
 
 ```java
 package gridbag;
@@ -20072,9 +21365,9 @@ public class GBC extends GridBagConstraints
 ```
 
 
+
 ```java
-{
-  public void setSizes(Container parent) {
+public void setSizes(Container parent) {
     if (sizesSet) return;
     int n = parent.getComponentCount();
     preferredWidth = 0;
@@ -20087,37 +21380,37 @@ public class GBC extends GridBagConstraints
     // compute the maximum component width
     // and set the preferred size to the total
     for (int i = 0; i < n; i++) {
-      Component c = parent.getComponent(i);
-      if (c.isVisible()) {
-        Dimension d = c.getPreferredSize();
-        maxComponentWidth = Math.max(maxComponentWidth, d.width);
-        maxComponentHeight = Math.max(maxComponentHeight, d.height);
-        preferredWidth += d.width;
-        preferredHeight += d.height;
-      }
+        Component c = parent.getComponent(i);
+        if (c.isVisible()) {
+            Dimension d = c.getPreferredSize();
+            maxComponentWidth = Math.max(maxComponentWidth, d.width);
+            maxComponentHeight = Math.max(maxComponentHeight, d.height);
+            preferredWidth += d.width;
+            preferredHeight += d.height;
+        }
     }
     minWidth = preferredWidth / 2;
     minHeight = preferredHeight / 2;
     sizesSet = true;
-  }
+}
 
-  public Dimension preferredLayoutSize(Constraints constraints) {
+public Dimension preferredLayoutSize(Constraints constraints) {
     setSizes(parent);
     Insets insets = parent.getInsets();
     int width = preferredWidth + insets.left;
     int height = preferredHeight + insets.top;
     return new Dimension(width, height);
-  }
+}
 
-  public Dimension minimumLayoutSize(Constraints constraints) {
+public Dimension minimumLayoutSize(Constraints constraints) {
     setSizes(parent);
     Insets insets = parent.getInsets();
     int width = minWidth + insets.left;
     int height = minHeight + insets.top;
     return new Dimension(width, height);
-  }
+}
 
-  public void layoutContainer(Container parent) {
+public void layoutContainer(Container parent) {
     setSizes(parent);
     // compute center of the circle
     Insets insets = parent.getInsets();
@@ -20146,7 +21439,6 @@ public class GBC extends GridBagConstraints
             c.setBounds(x - d.width / 2, y - d.height / 2, d.width, d.height);
         }
     }
-  }
 }
 ```
 
@@ -20160,41 +21452,46 @@ import javax.swing.*;
  */
 public class CircleLayoutFrame extends JFrame
 {
-  public CircleLayoutFrame()
-  {
-    setLayout(new CircleLayout());
-    add(new JButton("Yellow"));
-    add(new JButton("Blue"));
-    add(new JButton("Red"));
-    add(new JButton("Green"));
-    add(new JButton("Orange"));
-    add(new JButton("Fuchsia"));
-    add(new JButton("Indigo"));
-    pack();
-  }
+    public CircleLayoutFrame()
+    {
+        setLayout(new CircleLayout());
+        add(new JButton("Yellow"));
+        add(new JButton("Blue"));
+        add(new JButton("Red"));
+        add(new JButton("Green"));
+        add(new JButton("Orange"));
+        add(new JButton("Fuchsia"));
+        add(new JButton("Indigo"));
+        pack();
+    }
 }
 ```
 
-### java.awt.LayoutManager 1.0
+## java.awt.LayoutManager 1.0
 
-- void addLayoutComponent(String name, Component comp)
+- `void addLayoutComponent(String name, Component comp)`
+
   将组件添加到布局中。
 
-- void removeLayoutComponent(Component comp)
+- `void removeLayoutComponent(Component comp)`
+
   从布局中移除组件。
 
-- Dimension preferredLayoutSize(Container cont)
-  返回在该布局下容器的优选尺寸 de。
+- `Dimension preferredLayoutSize(Container cont)`
 
-- Dimension minimumLayoutSize(Container cont)
-  返回在该布局下容器的最小尺寸 de。
+  返回在该布局下容器的优选尺寸。
 
-- void layoutContainer(Container cont)
+- `Dimension minimumLayoutSize(Container cont)`
+
+  返回在该布局下容器的最小尺寸。
+
+- `void layoutContainer(Container cont)`
+
   对容器中的组件进行布局。
 
 # 1.8. 对话框
 
-在 GUI 应用程序中，你通常希望弹出出一个独立的对话框来向用户提供信息，或从用户那里获取信息。
+在 GUI 应用程序中，你通常希望弹出一个独立的对话框来向用户提供信息，或从用户那里获取信息。
 
 与大多数窗口系统一样，AWT 区分了模态（modal）和非模态（modeless）对话框。模态对话框在用户处理它之前，不允许用户与应用程序的其余窗口进行交互。当你需要在继续执行之前获取用户信息时，请使用模态对话框。例如，当用户想要读取文件时，就会弹出一个模态对话框。用户在程序开始操作之前必须指定文件名。只有用户关闭模态对话框后，应用程序才能继续。
 
@@ -20204,17 +21501,15 @@ public class CircleLayoutFrame extends JFrame
 
 ## 1.8.1. 选项面板 (Option Panes)
 
-JOptionPane 有一系列静态方法，足以请求信息。模态对话框在用户处理它之前，不允许用户与应用程序的其余窗口进行交互。当你需要在继续执行之前获取用户信息时，请使用模态对话框。例如，当用户想要读取文件时，就会弹出一个模态对话框。用户在程序开始操作之前必须指定文件名。只有用户关闭模态对话框后，应用程序才能继续。非模态对话框允许用户在对话框和应用程序的其余部分同时输入信息。非模态对话框的一个例子是工具栏。工具栏可以根据需要留在原地，用户可以同时与应用程序窗口和工具栏进行交互。
+`JOptionPane` 有一系列静态方法，足以请求信息。模态对话框在用户处理它之前，不允许用户与应用程序的其余窗口进行交互。当你需要在继续执行之前获取用户信息时，请使用模态对话框。例如，当用户想要读取文件时，就会弹出一个模态对话框。用户在程序开始操作之前必须指定文件名。只有用户关闭模态对话框后，应用程序才能继续。非模态对话框允许用户在对话框和应用程序的其余部分同时输入信息。非模态对话框的一个例子是工具栏。工具栏可以根据需要留在原地，用户可以同时与应用程序窗口和工具栏进行交互。
 
 让我们从简单的对话框开始本节——仅带有单个消息的模态对话框。Swing 有一个方便的 `JOptionPane` 类，让你无需编写任何特殊代码即可弹出简单的对话框。
 
+这听起来是一组令人困惑的选择，但在实践中非常简单。
 
-
-
-这听起来是一组令人困的选择，但在实践中非常简单。
 请按照以下步骤操作：
 
-- 1. 选择对话框类型（消息、确认、选项或输入）。
+1. 选择对话框类型（消息、确认、选项或输入）。
 2. 选择图标（错误、信息、警告、问题、无或自定义）。
 3. 选择消息（字符串、图标、自定义组件或它们的组合）。
 4. 对于确认对话框，选择选项类型（默认、是/否、是/否/取消，或确定/取消）。
@@ -20232,19 +21527,20 @@ int selection = JOptionPane.showConfirmDialog(
 if (selection == JOptionPane.OK_OPTION) . . .
 ```
 
-**提示：** 消息字符串可以包含换行符（'\n'）。此类换行符将以多行形式显示。
+**提示：** 消息字符串可以包含换行符（`'\n'`）。此类换行符将以多行形式显示。
 
 ```java
 javax.swing.JOptionPane 1.2
 ```
 
-- static void showMessageDialog(Component parent, Object message, String title, int messageType, Icon icon)
-- static void showMessageDialog(Component parent, Object message, String title, int messageType)
-- static void showMessageDialog(Component parent, Object message)
-- static void showInternalMessageDialog(Component parent, Object message, String title, int messageType, Icon icon)
-- static void showInternalMessageDialog(Component parent, Object message, String title, int messageType)
-- static void showInternalMessageDialog(Component parent, Object message)
-显示消息对话框或内部消息对话框。（内部对话框完全在在其所有者的框架内渲染。）父组件可以为 `null`。在对话框上显示的消息可以是字符串、图标、组件或它们的数组。`messageType` 参数是 ERROR_MESSAGE、INFORMATION_MESSAGE、WARNING_MESSAGE、QUESTION_MESSAGE 或 PLAIN_MESSAGE 之一。
+- `static void showMessageDialog(Component parent, Object message, String title, int messageType, Icon icon)`
+- `static void showMessageDialog(Component parent, Object message, String title, int messageType)`
+- `static void showMessageDialog(Component parent, Object message)`
+- `static void showInternalMessageDialog(Component parent, Object message, String title, int messageType, Icon icon)`
+- `static void showInternalMessageDialog(Component parent, Object message, String title, int messageType)`
+- `static void showInternalMessageDialog(Component parent, Object message)`
+
+显示消息对话框或内部消息对话框。（内部对话框完全在在其所有者的框架内渲染。）父组件可以为 `null`。在对话框上显示的消息可以是字符串、图标、组件或它们的数组。`messageType` 参数是 `ERROR_MESSAGE`、`INFORMATION_MESSAGE`、`WARNING_MESSAGE`、`QUESTION_MESSAGE` 或 `PLAIN_MESSAGE` 之一。
 
 ```java
 static int showConfirmDialog(Component parent,
@@ -20290,25 +21586,30 @@ optionType)
 static int showInternalConfirmDialog(Component
 parent, Object message)
 ```
-显示确认对话框或内部确认对话框。（内部对话框完全在在其所有者的框架内渲染。）返回用户选择的选项（OK_OPTION、CANCEL_OPTION、YES_OPTION、NO_OPTION 之一），如果用户关闭了对话框则返回 CLOSED_OPTION。父组件可以为 `null`。在对话框上显示的消息可以是字符串、图标、组件或它们的数组。`messageType` 参数是 ERROR_MESSAGE、INFORMATION_MESSAGE、WARNING_MESSAGE、QUESTION_MESSAGE 或 PLAIN_MESSAGE 之一，`optionType` 是 DEFAULT_OPTION、YES_NO_OPTION、YES_NO_CANCEL_OPTION 或 OK_CANCEL_OPTION 之一。
 
-- static int showOptionDialog(Component parent, Object message, String title, int optionType, int messageType, Icon icon, Object[] options, Object default)
-- static int showInternalOptionDialog(Component parent, Object message, String title, int optionType, int messageType, Icon icon, Object[] options, Object default)
-显示选项对话框或内部选项对话框。（内部对话框完全在在其所有者的框架内渲染。）返回用户选择的选项索引，如果用户取消了对话框则返回 CLOSED_OPTION。父组件可以为 `null`。在对话框上显示的消息可以是字符串、图标、组件或它们的数组。`messageType` 参数是 ERROR_MESSAGE、INFORMATION_MESSAGE、WARNING_MESSAGE、QUESTION_MESSAGE 或 PLAIN_MESSAGE 之一，`optionType` 是 DEFAULT_OPTION、YES_NO_OPTION、YES_NO_CANCEL_OPTION 或 OK_CANCEL_OPTION 之一。`options` 参数是字符串、图标或组件的数组。
+显示确认对话框或内部确认对话框。（内部对话框完全在在其所有者的框架内渲染。）返回用户选择的选项（`OK_OPTION`、`CANCEL_OPTION`、`YES_OPTION`、`NO_OPTION` 之一），如果用户关闭了对话框则返回 `CLOSED_OPTION`。父组件可以为 `null`。在对话框上显示的消息可以是字符串、图标、组件或它们的数组。`messageType` 参数是 `ERROR_MESSAGE`、`INFORMATION_MESSAGE`、`WARNING_MESSAGE`、`QUESTION_MESSAGE` 或 `PLAIN_MESSAGE` 之一，`optionType` 是 `DEFAULT_OPTION`、`YES_NO_OPTION`、`YES_NO_CANCEL_OPTION` 或 `OK_CANCEL_OPTION` 之一。
 
-- static Object showInputDialog(Component parent, Object message, String title, int messageType, Icon icon, Object[] values, Object default)
-- static String showInputDialog(Component parent, Object message, String title, int messageType)
-- static String showInputDialog(Object message)
-- static Object showInputDialog(Component parent, Object message, String title, int messageType)
-显示内部对话框。（内部对话框完全在在其所有者的框架内渲染。）返回用户选择的选项，如果用户关闭了对话框则返回 CLOSED_OPTION。父组件可以为 `null`。在对话框上显示的消息可以是字符串、图标、组件或它们的数组。`messageType` 参数是 ERROR_MESSAGE、INFORMATION_MESSAGE、WARNING_MESSAGE、QUESTION_MESSAGE 或 PLAIN_MESSAGE 之一。
+- `static int showOptionDialog(Component parent, Object message, String title, int optionType, int messageType, Icon icon, Object[] options, Object default)`
+- `static int showInternalOptionDialog(Component parent, Object message, String title, int optionType, int messageType, Icon icon, Object[] options, Object default)`
+
+显示选项对话框或内部选项对话框。（内部对话框完全在在其所有者的框架内渲染。）返回用户选择的选项索引，如果用户取消了对话框则返回 `CLOSED_OPTION`。父组件可以为 `null`。在对话框上显示的消息可以是字符串、图标、组件或它们的数组。`messageType` 参数是 `ERROR_MESSAGE`、`INFORMATION_MESSAGE`、`WARNING_MESSAGE`、`QUESTION_MESSAGE` 或 `PLAIN_MESSAGE` 之一，`optionType` 是 `DEFAULT_OPTION`、`YES_NO_OPTION`、`YES_NO_CANCEL_OPTION` 或 `OK_CANCEL_OPTION` 之一。`options` 参数是字符串、图标或组件的数组。
+
+- `static Object showInputDialog(Component parent, Object message, String title, int messageType, Icon icon, Object[] values, Object default)`
+- `static String showInputDialog(Component parent, Object message, String title, int messageType)`
+- `static String showInputDialog(Object message)`
+- `static Object showInputDialog(Component parent, Object message, String title, int messageType)`
+
+
+
+显示内部对话框。（内部对话框完全在在其所有者的框架内渲染。）返回用户选择的选项，如果用户关闭了对话框则返回`CLOSED_OPTION`。父组件可以为`null`。在对话框上显示的消息可以是字符串、图标、组件或它们的数组。`messageType`参数是`ERROR_MESSAGE`、`INFORMATION_MESSAGE`、`WARNING_MESSAGE`、`QUESTION_MESSAGE`或`PLAIN_MESSAGE`之一。
 
 ## 8.2 创建对话框
 
-在上一节中，你看到了如何使用 `JOptionPane` 显示简单的对话框。在本节中，你将学习如何创建一个对话框。
+在上一节中，你看到了如何使用`JOptionPane`显示简单的对话框。在本节中，你将学习如何创建一个对话框。
 
-要实现对话框，你需要扩展 `JDialog`。具体来说：
+要实现对话框，你需要扩展`JDialog`。具体来说：
 
-1. 在对话框的构造函数中，调用父类 `JDialog`。
+1. 在对话框的构造函数中，调用父类`JDialog`。
 2. 向对话框添加界面组件。
 3. 添加事件处理器。
 4. 设置对话框的大小。
@@ -20334,16 +21635,13 @@ public class AboutDialog extends JDialog {
 }
 ```
 
-当你调用父类构造函数时，你需要提供所有者框架、对话框标题和模态。你可以提供 `null` 作为所有者；则该对话框由一个隐藏框架所有。
+当你调用父类构造函数时，你需要提供所有者框架、对话框标题和模态。你可以提供`null`作为所有者；则该对话框由一个隐藏框架所有。
 
-
-
-
-当用户点击关闭按钮关闭对话框时，对话框也会隐藏。就像 `JFrame` 一样，你可以通过 `setDefaultCloseOperation` 方法来覆盖此行为。
+当用户点击关闭按钮关闭对话框时，对话框也会隐藏。就像`JFrame`一样，你可以通过`setDefaultCloseOperation`方法来覆盖此行为。
 
 列表 11.11 是测试程序的框架类代码。列表 11.12 显示了对话框类。
 
-# 列表 11.11 dialog/DialogFrame.java
+## 列表 11.11 dialog/DialogFrame.java
 
 ```java
 package dialog;
@@ -20386,7 +21684,7 @@ public class DialogFrame extends JFrame
 }
 ```
 
-# 列表 11.12 dialog/AboutDialog.java
+## 列表 11.12 dialog/AboutDialog.java
 
 ```java
 1 package dialog;
@@ -20428,21 +21726,21 @@ public class DialogFrame extends JFrame
 }
 ```
 
-javax.swing.JDialog 2
+`javax.swing.JDialog` 2
 
 `public JDialog(Frame parent, String title, boolean modal)` 构建一个对话框。在显式显示之前它是不可见的。
 
 ## 1.8.3 数据交换
 
-弹出对话框最常见的原因是从用户那里获取信息。你已经看到如何创建一个对话框对象：提供初始数据并调用 `setVisible(true)` 在屏幕上显示对话框。现在让我们看看如何在对话框中进行数据交换。
+弹出对话框最常见的原因是从用户那里获取信息。你已经看到如何创建一个对话框对象：提供初始数据并调用`setVisible(true)`在屏幕上显示对话框。现在让我们看看如何在对话框中进行数据交换。
 
 考虑图 11.32 中的对话框，它可以用于获取用户名和密码以连接某些在线服务。
 
 ![](img/cb920f9d26368e00dcb1ad7f88cc_179.png)
 
-# 图 32：密码对话框
+### 图 32：密码对话框
 
-你的对话框应该提供设置默认数据的方法。例如，示例程序的 `PasswordChooser` 类有一个 `setUser` 方法来将默认值填充到字段中：
+你的对话框应该提供设置默认数据的方法。例如，示例程序的`PasswordChooser`类有一个`setUser`方法来将默认值填充到字段中：
 
 ```java
 public void setUser(User u)
@@ -20451,17 +21749,17 @@ public void setUser(User u)
 }
 ```
 
-一旦设置了默认值（如果需要），调用 `setVisible(true)` 显示对话框。现在对话框已显示。
+一旦设置了默认值（如果需要），调用`setVisible(true)`显示对话框。现在对话框已显示。
 
-用户填写信息并点击 OK 或取消按钮。事件处理器都会调用 `setVisible(false)`，这将终止 `setVisible(true)` 的调用。或者，用户可能会关闭对话框。如果你没有为对话框安装窗口监听器，默认窗口关闭操作将：对话框变为不可见，这也会终止 `setVisible(true)` 的调用。
+用户填写信息并点击 OK 或取消按钮。事件处理器都会调用`setVisible(false)`，这将终止`setVisible(true)`的调用。或者，用户可能会关闭对话框。如果你没有为对话框安装窗口监听器，默认窗口关闭操作将：对话框变为不可见，这也会终止`setVisible(true)`的调用。
 
-重要的问题是 `setVisible(true)` 的调用会阻塞直到用户关闭对话框。这使得实现模态对话框变得简单。你想知道用户是接受还是取消了对话框。我们的示例代码在显示对话框之前将 `ok` 标记设置为 `false`。只有 OK 按钮的事件处理器会将 `ok` 标记设置为 `true`；这就是你从对话框检索用户输入的方法。
+重要的问题是`setVisible(true)`的调用会阻塞直到用户关闭对话框。这使得实现模态对话框变得简单。你想知道用户是接受还是取消了对话框。我们的示例代码在显示对话框之前将`ok`标记设置为`false`。只有 OK 按钮的事件处理器会将`ok`标记设置为`true`；这就是你从对话框检索用户输入的方法。
 
-> **注意：** 从非模型对话框传输数据并不简单。当显示非模型对话框时，`setVisible(true)` 调用不会阻塞，程序会继续运行。如果用户在非模型对话框上选择项目并点击 OK，对话框需要向程序的某些监听器发送事件。
+> **注意：** 从非模型对话框传输数据并不简单。当显示非模型对话框时，`setVisible(true)`调用不会阻塞，程序会继续运行。如果用户在非模型对话框上选择项目并点击 OK，对话框需要向程序的某些监听器发送事件。
 
-示例程序包含了另一个改进。当你构造对象时，需要指定所有者。然而，你经常希望使用不同的所有者显示同一个对话框。在准备*显示对话框*时选择所有者，而不是在构造 `PasswordChooser` 对象时。
+示例程序包含了另一个改进。当你构造对象时，需要指定所有者。然而，你经常希望使用不同的所有者显示同一个对话框。在准备*显示对话框*时选择所有者，而不是在构造`PasswordChooser`对象时。
 
-技巧是让 `PasswordChooser` 继承 `JPanel` 而不是 `JDialog`。在 `showDialog` 方法中动态构建 `JDialog` 对象：
+技巧是让`PasswordChooser`继承`JPanel`而不是`JDialog`。在`showDialog`方法中动态构建`JDialog`对象：
 
 ```java
 public boolean showDialog(Frame owner, String title) {
@@ -20478,7 +21776,7 @@ public boolean showDialog(Frame owner, String title) {
 }
 ```
 
-注意，`owner` 为 `null` 是安全的。
+注意，`owner`为`null`是安全的。
 
 你可以做得更好。有时所有者框架不可用。从任何组件计算它都是容易的，如下：
 
@@ -20490,7 +21788,7 @@ else
     owner = SwingUtilities.getAncestorFrame(parent);
 ```
 
-我们在示例程序使用了这种增强。`JOptionPane` 类也使用了这种机制。许多对话框都有默认按钮，如果用户按下触发键（在大多数外观实现中为 Enter 键），该按钮会被选中。默认按钮会有特别标记，通常是粗轮廓。
+我们在示例程序使用了这种增强。`JOptionPane`类也使用了这种机制。许多对话框都有默认按钮，如果用户按下触发键（在大多数外观实现中为 Enter 键），该按钮会被选中。默认按钮会有特别标记，通常是粗轮廓。
 
 在对话框的根容器中设置默认按钮：
 
@@ -20502,7 +21800,7 @@ dialog.getRootPane().setDefaultButton(okButton);
 
 列表 11.13 是说明数据流出对话框的程序的框架类。列表 11.14 显示了对话框类。
 
-# 列表 11.13 dataExchange/DataExchangeFrame.java
+## 列表 11.13 dataExchange/DataExchangeFrame.java
 
 ```java
 1 package dataExchange;
@@ -20566,15 +21864,11 @@ dialog.getRootPane().setDefaultButton(okButton);
 }
 ```
 
-}
-}
-}
-```
-
-# **Listing 1.14** dataExchange/PasswordChooser.java
+## 列表 11.14 dataExchange/PasswordChooser.java
 
 ```java
 package dataExchange;
+
 import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.Frame;
@@ -20586,13 +21880,13 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
+
 /**
  * 一个显示在内部的密码选择器
  */
 public class PasswordChooser extends JPanel {
     private JTextField username;
     private JPasswordField password;
-
     private JButton okButton;
     private boolean ok;
     private JDialog dialog;
@@ -20607,67 +21901,113 @@ public class PasswordChooser extends JPanel {
         panel.add(username = new JTextField());
         panel.add(new JLabel("Password:"));
         panel.add(password = new JPasswordField());
-        add(panel, BorderLayout.CENTER);
-
-        // 创建确定和取消按钮
-        okButton = new JButton("Ok");
-        okButton.addActionListener(event -> {
-            ok = true;
-            dialog.setVisible(false);
-        });
-
-        var cancelButton = new JButton("Cancel");
-        cancelButton.addActionListener(event -> {
-            // 将按钮添加到南部边框
-            var buttonPanel = new JPanel();
-            buttonPanel.add(okButton);
-            buttonPanel.add(cancelButton);
-            add(buttonPanel, BorderLayout.SOUTH);
-        });
-    }
-
-    /**
-     * 设置对话框默认值。
-     * @param u 默认用户信息
-     */
-    public void setUser(User u) {
-        username.setText(u.getName());
-    }
-
-    /**
-     * 获取对话框条目。
-     * @return 一个表示状态的 User 对象
-     */
-    public User getUser() {
-        return new User(username.getText(), password.getText());
-    }
-
-    /**
-     * 在对话框中显示选择器面板。
-     * @param parent 所有者中的组件
-     * @param title 对话框标题
-     */
-    public boolean showDialog(Component parent, String title) {
-        ok = false;
-
-        // 定位所有者帧
-        Frame owner = (Frame) SwingUtilities.getWindowWindow(parent);
-
-        // 如果是第一次，或者所有者发生了变化
-        if (dialog == null || dialog.getOwner() != owner) {
-            dialog = new JDialog(owner, true);
-            dialog.add(this);
-            dialog.getRootPane().setDefaultButton(okButton);
-            dialog.pack();
-        }
-
-        // 设置标题并显示对话框
-        dialog.setTitle(title);
-        dialog.setVisible(true);
-        return ok;
-    }
-}
 ```
+
+
+
+`add(panel, BorderLayout.CENTER);`
+
+// 创建确定和取消按钮
+
+`okButton = new JButton("Ok");`
+
+`okButton.addActionListener(event -> {`
+
+`ok = true;`
+
+`dialog.setVisible(false);`
+
+`});`
+
+`var cancelButton = new JButton("Cancel");`
+
+`cancelButton.addActionListener(event -> {`
+
+// 将按钮添加到南部边框
+
+`var buttonPanel = new JPanel();`
+
+`buttonPanel.add(okButton);`
+
+`buttonPanel.add(cancelButton);`
+
+`add(buttonPanel, BorderLayout.SOUTH);`
+
+`});`
+
+`}`
+
+/**
+
+ * 设置对话框默认值。
+
+ * @param u 默认用户信息
+
+ */
+
+`public void setUser(User u) {`
+
+`username.setText(u.getName());`
+
+`}`
+
+/**
+
+ * 获取对话框条目。
+
+ * @return 一个表示状态的 User 对象
+
+ */
+
+`public User getUser() {`
+
+`return new User(username.getText(), password.getText());`
+
+`}`
+
+/**
+
+ * 在对话框中显示选择器面板。
+
+ * @param parent 所有者中的组件
+
+ * @param title 对话框标题
+
+ */
+
+`public boolean showDialog(Component parent, String title) {`
+
+`ok = false;`
+
+// 定位所有者帧
+
+`Frame owner = (Frame) SwingUtilities.getWindowWindow(parent);`
+
+// 如果是第一次，或者所有者发生了变化
+
+`if (dialog == null || dialog.getOwner() != owner) {`
+
+`dialog = new JDialog(owner, true);`
+
+`dialog.add(this);`
+
+`dialog.getRootPane().setDefaultButton(okButton);`
+
+`dialog.pack();`
+
+`}`
+
+// 设置标题并显示对话框
+
+`dialog.setTitle(title);`
+
+`dialog.setVisible(true);`
+
+`return ok;`
+
+`}`
+
+`}`
 
 # javax.swing.SwingUtilities 1.2
 
@@ -20687,13 +22027,13 @@ public class PasswordChooser extends JPanel {
 
 # 1.8.4 文件对话框
 
-在应用程序中，你通常希望能够打开和保存文件。编写一个能够显示文件和目录并允许用户浏览文件系统的良好文件对话框是很的，而且你绝对不需要重复造轮子。幸运的是，Swing 提供了 JFileChooser 类，它允许你显示一个与大多数原生应用程序使用的类似的文件对话框。请注意，JFileChooser 对话框不是 JDialog 的子类。不要调用 `setVisible(true)`，而是要调用 `showOpenDialog` 来显示打开文件的对话框，或调用 `showSaveDialog` 来显示保存文件的对话框。接受文件的按钮将自动标记为“打开”或“保存”。你也可以通过 `showDialog` 方法提供自己的按钮标签。图 11.33 显示文件选择器对话框的示例。
+在应用程序中，你通常希望能够打开和保存文件。编写一个能够显示文件和目录并允许用户浏览文件系统的良好文件对话框是很的，而且你绝对不需要重复造轮子。幸运的是，Swing 提供了 `JFileChooser` 类，它允许你显示一个与大多数原生应用程序使用的类似的文件对话框。请注意，`JFileChooser` 对话框不是 `JDialog` 的子类。不要调用 `setVisible(true)`，而是要调用 `showOpenDialog` 来显示打开文件的对话框，或调用 `showSaveDialog` 来显示保存文件的对话框。接受文件的按钮将自动标记为“打开”或“保存”。你也可以通过 `showDialog` 方法提供自己的按钮标签。图 11.33 显示文件选择器对话框的示例。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1292_0.png)
 
 以下是建立文件对话框并从框中恢复用户选择内容的步骤：
 
-- 1. 创建一个 JFileChooser 对象。与 JDialog 类的类的构造函数不同，你不需要提供父组件。这允许你在多个帧中复用文件选择器对话框。
+1. 创建一个 `JFileChooser` 对象。与 `JDialog` 类的类的构造函数不同，你不需要提供父组件。这允许你在多个帧中复用文件选择器对话框。
 
 例如：
 
@@ -20701,39 +22041,39 @@ public class PasswordChooser extends JPanel {
 var chooser = new JFileChooser();
 ```
 
-> 提示：复用文件选择器是一个好主意，因为 JFileChooser 对话框不是 JDialog 的子类。
+> 提示：复用文件选择器是一个好主意，因为 `JFileChooser` 对话框不是 `JDialog` 的子类。
 
-- 2. 通过 `setCurrentDirectory` 设置目录。例如，你需要一个 `File` 对象：
+2. 通过 `setCurrentDirectory` 设置目录。例如，你需要一个 `File` 对象：
 
 ```java
 chooser.setCurrentDirectory(new File(""));
 ```
 
-- 3. 如果你预期文件名，使用 `setSelectedFile` 方法：
+3. 如果你预期文件名，使用 `setSelectedFile` 方法：
 
 ```java
 chooser.setSelectedFile(new File(""));
 ```
 
-- 4. 要允许用户选择多个文件，调用 `setSelectionMode`：
+4. 要允许用户选择多个文件，调用 `setSelectionMode`：
 
 ```java
 chooser.setSelectionMode(true);
 ```
 
-- 5. 如果你想将显示的文件限制为特定类型，使用 `setFileMode`：
+5. 如果你想将显示的文件限制为特定类型，使用 `setFileMode`：
 
 ```java
 chooser.setFileMode(FileChooser.FILES_ONLY);
 ```
 
-- 6. 默认情况下文件选择器显示所有文件。如果你想选择目录，使用 `setFileMode`：
+6. 默认情况下文件选择器显示所有文件。如果你想选择目录，使用 `setFileMode`：
 
 ```java
 chooser.setFileMode(FileChooser.DIRECTORIES_ONLY);
 ```
 
-- 7. 通过 `showInputDialog` 或 `showSaveDialog` 方法显示对话框。你必须提供父组件和确认按钮的明确文本：
+7. 通过 `showInputDialog` 或 `showSaveDialog` 方法显示对话框。你必须提供父组件和确认按钮的明确文本：
 
 ```java
 int result = chooser.showInputDialog(parent, "Select File:");
@@ -20745,27 +22085,23 @@ int result = chooser.showInputDialog(parent, "Select File:");
 int result = chooser.showDialog(parent, "Save File:");
 ```
 
-- 8. 使用 `getSelectedFile()` 或 `getSelectedFiles()` 获取选定的文件或文件。如果你只需要文件名，调用其 `getPath()` 方法。例如：
+8. 使用 `getSelectedFile()` 或 `getSelectedFiles()` 获取选定的文件或文件。如果你只需要文件名，调用其 `getPath()` 方法。例如：
 
 ```java
 String filename = chooser.getSelectedFile().getPath();
 ```
 
-
-
-
-
 如果你同时导入 `java.io` 和 `javax.swing.filechooser` 包，你将需要解决这两个同名类型之间的命名冲突。简单的解决办法是导入 `javax.swing.filechooser.FileFilter`，而不是 `javax.swing.filechooser.*`。
 
 一旦你获得了一个过滤器对象，就可以使用 `JFileChooser` 类的 `setFileFilter` 方法将其安装到文件选择器对象中：
 
-```
+```java
 chooser.setFileFilter(new FileNameExtensionFilter
 ```
 
 你可以通过调用以下方法为文件选择器安装多个过滤器：
 
-```
+```java
 chooser.addChoosableFileFilter(filter1);
 chooser.addChoosableFileFilter(filter2);
 ..
@@ -20773,13 +22109,13 @@ chooser.addChoosableFileFilter(filter2);
 
 用户从文件对话框底部的组合框中选择过滤器。默认情况下，“所有文件（All files）”过滤器始终出现在组合框中。这是一个好主意——以防你的程序需要选择具有非标准扩展名的文件。然而，如果你想抑制“所有文件”过滤器，可以调用：
 
-```
+```java
 chooser.setAcceptAllFileFilterUsed(false);
 ```
 
 **注意：** 如果你重用用一个文件选择器来加载和保存不同的文件，请调用：
 
-```
+```java
 chooser.resetChoosableFilters();
 ```
 
@@ -20787,7 +22123,7 @@ chooser.resetChoosableFilters();
 
 最后，你可以通过为文件选择器显示的每个文件提供特殊的图标和文件描述来定制文件选择器。通过提供一个扩展 `javax.swing.filechooser` 包中 `FileView` 类的对象来实现。这绝对是一项高级技术。通常情况下，你不需要为自己提供文件视图——可插的外观（look-and-feel）会为你提供一个。但如果你想为特殊文件类型显示不同的图标，你可以安装自己的文件视图。你需要扩展 `FileView` 类并实现五个方法：
 
-```
+```java
 Icon getIcon(File f)
 String getName(File f)
 String getDescription(File f)
@@ -20803,19 +22139,18 @@ Boolean isTraversable(File f)
 
 示例程序包含一个简单的文件视图类。该类每当文件匹配过滤器时，就会显示特定的图标。我们使用它为所有图像文件显示调色板图标。
 
-```
+```java
 class FileIconView extends FileView{
     private FileFilter filter;
     private Icon icon;
 ```
 
-```
+```java
 public FileIconView(FileFilter aFilter, Icon aIcon)
 {
     filter = aFilter;
     icon = aIcon;
 }
-
 public Icon getIcon(File f)
 {
     if (!f.isDirectory() && filter.accept(f))
@@ -20826,7 +22161,7 @@ public Icon getIcon(File f)
 
 使用 `setFileView` 方法将此文件视图安装到你的文件选择器：
 
-```
+```java
 chooser.setLayerView(new FileIconView(filter, new ImageIcon("palette.gif")));
 ```
 
@@ -20840,7 +22175,7 @@ chooser.setLayerView(new FileIconView(filter, new ImageIcon("palette.gif")));
 
 配件可以是任何 Swing 组件。在案例中，我们扩展了 `JLabel` 类并将其图标设置为图形图像缩放副本：
 
-```
+```java
 class ImagePreviewer extends JLabel
 {
     public ImagePreviewer(JFileChooser chooser)
@@ -20851,7 +22186,7 @@ class ImagePreviewer extends JLabel
 }
 ```
 
-```
+```java
 public void loadImage(File f) {
     var icon = new ImageIcon(f.getPath());
     if(icon.getIconWidth() > getWidth()) {
@@ -20864,7 +22199,7 @@ public void loadImage(File f) {
 
 挑战在于：我们希望在用户每选择一个不同的文件时更新预览图像。文件选择器使用“JavaBeans”机制，当它的任何属性发生变化时通知感兴趣的监听器。选中的文件是一个属性，你可以通过安装 `PropertyChangeListener` 来监控该属性：
 
-```
+```java
 chooser.addChangeListener(event -> {
     if ("selectedFile".equals(event.getPropertyName())) {
         File newFile = (File) event.getNewValue();
@@ -20873,17 +22208,16 @@ chooser.addChangeListener(event -> {
 });
 ```
 
-
 图形技术。
 
 ## 1. 高级 Swing 与图形处理
 
-在本章中，我们将继续讨论第一卷中介绍的 Swing 用户界面工具包和 AWT 图形处理。我们将重点关注既适用于客户端用户界面，也适用于服务端图形和图像生成的技巧。Swing 拥有复杂的组件，用于渲染表格和树形。通过 2D 图形 API，你可以生成任意复杂度的矢量艺术图形。ImageIO API 则允许你操作位图图像。
+在本章中，我们将继续讨论第一卷中介绍的 Swing 用户界面工具包和 AWT 图形处理。我们将重点关注既适用于客户端用户界面，也适用于服务端图形和图像生成的技巧。Swing 拥有复杂的组件，用于渲染表格和树形。通过 2D 图形 API，你可以生成任意复杂度的矢量艺术图形。`ImageIO` API 则允许你操作位图图像。
 最后，你可以使用打印 API 来生成打印输出和 PostScript 文件。
 
 ## 1.1. 表格
 
-`JTable` 组件显示一个对象的二维网格。。表格在用户界面中非常常见，Swing 团队在表格控件上投入了大量精力。表格本身是复杂的，但——可能比其他 Swing 类更成功的是——`JTable` 组件隐藏了大部分这种复杂性。你只需要编写几行代码，就可以创建具有丰富行为的完全功能表格。你也可以编写更多代码，为你的特定应用程序自定义显示效果和行为。
+`JTable` 组件显示一个对象的二维网格。表格在用户界面中非常常见，Swing 团队在表格控件上投入了大量精力。表格本身是复杂的，但——可能比其他 Swing 类更成功的是——`JTable` 组件隐藏了大部分这种复杂性。你只需要编写几行代码，就可以创建具有丰富行为的完全功能表格。你也可以编写更多代码，为你的特定应用程序自定义显示效果和行为。
 
 在接下来的章节中，我将解释如何创建简单的表格、用户如何与表格交互，以及如何进行一些最常见的调整。与其他复杂的 Swing 控件一样，不可能完全详细地涵盖所有方面。欲了解更多信息，请参阅 David M. Geary 写的《Graphic Java™, Third Edition》（Prentice Hall, 1999）或 Kim Topley 编写的《Core Swing》（Prentice Hall, 1999）。
 
@@ -20906,20 +22240,32 @@ chooser.addChangeListener(event -> {
 
 图 1.1: 简单表格
 
-如代码列表 12.1 中的代码所示，表格数据存储在 Object 值的值的二维数组中：
+如代码列表 12.1 中的代码所示，表格数据存储在 `Object` 值的值的二维数组中：
 
-```
+```java
 Object[][] cells =
 {
   { "Mercury", 2440.0, 0, false, Color.YELLOW },
   { "Venus", 6052.0, 0, false, Color.YELLOW },
-  . . .
-}
 ```
 
-**注意：** 这里，我们利用了自动装箱（autoboxing）。第二、第三和第四列的条目会自动转换为 `Double`、`Integer` 和 `Boolean` 类型的对象。
 
-表格简单地调用每个对象的 `toString` 方法来显示它。这就是为什么颜色显示为 `java.awt.Color[r=., g=., b=.].`。
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`。
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+**注意：** 这里，我们利用了自动装箱（autoboxing）。第二、第三和第四列的条目会自动转换为`Double`、`Integer`和`Boolean`类型的对象。
+
+表格简单地调用每个对象的`toString`方法来显示它。这就是为什么颜色显示为`java.awt.Color[r=., g=., b=.].`。
 
 通过单独的字符串数组提供列名：
 
@@ -20933,7 +22279,7 @@ String[] columnNames = { "Planet", "Radius", "Mo. . . . }
 var table = new JTable(cells, columnNames);
 ```
 
-你可以按照通常的方式添加滚动条——将表格封装在 `JScrollPane` 中：
+你可以按照通常的方式添加滚动条——将表格封装在`JScrollPane`中：
 
 ```
 var pane = new JScrollPane(table);
@@ -20941,7 +22287,7 @@ var pane = new JScrollPane(table);
 
 当滚动表格时，表格表头不会滚出视图。
 
-接下来，点击其中一个列头并向左或向右拖动。整个列将将分离（见图 12.2）。你可以将其掉在不同的位置。这只会重新排列视图中的列，不会影响数据模型。
+接下来，点击其中一个列头并向左或向右拖动。整个列将分离（见图 12.2）。你可以将其拖到不同的位置。这只会重新排列视图中的列，不会影响数据模型。
 
 **图 12.2：** 移动列
 
@@ -20949,15 +22295,16 @@ var pane = new JScrollPane(table);
 
 **图 12.3：** 调整列宽
 
-如代码列表 12.1 中的代码所示，表格数据存储在 Object 值的值的二维数组中：
+如代码列表 12.1 中的代码所示，表格数据存储在`Object`值的二维数组中：
 
-**注意：** 这里，我们利用了自动装箱。第二、第三和第四列的条目会自动转换为 `Double`、`Integer` 和 `Boolean` 类型的对象。
+**注意：** 这里，我们利用了自动装箱。第二、第三和第四列的条目会自动转换为`Double`、`Integer`和`Boolean`类型的对象。
 
-表格简单地调用每个对象的 `toString` 方法来显示它。这就是为什么颜色显示为 `java.awt.Color[r=., g=., b=.].`。
+表格简单地调用每个对象的`toString`方法来显示它。这就是为什么颜色显示为`java.awt.Color[r=., g=., b=.].`。
 
 **注意：** 如果你没有将表格封装到滚动面板中，你需要手动添加表头：
 
 **列表 1.1**
+
 ```java
 package table;
 
@@ -21011,18 +22358,18 @@ public class TableTest {
 
 ## 1.2. JTable
 
-- JTable(Object[][] entries, Object[] columnNames) 使用默认表格模型构建表格。
-- void print() 显示打印对话框并打印表格。
-- boolean getAutoRowSorter()
-- void setAutoCreateRowSorter(boolean newValue) 设置 autoCreateRowSorter 属性。默认为 false。设置后，每当模型更改时会自动设置默认行排序器。
-- boolean getFillsViewportHeight()
-- void setFillsViewportHeight(boolean newValue) 设置 fillsViewportHeight 属性。默认为 false。设置后，表格始终填充整个视口。
+- `JTable(Object[][] entries, Object[] columnNames)` 使用默认表格模型构建表格。
+- `void print()` 显示打印对话框并打印表格。
+- `boolean getAutoRowSorter()`
+- `void setAutoCreateRowSorter(boolean newValue)` 设置`autoCreateRowSorter`属性。默认为`false`。设置后，每当模型更改时会自动设置默认行排序器。
+- `boolean getFillsViewportHeight()`
+- `void setFillsViewportHeight(boolean newValue)` 设置`fillsViewportHeight`属性。默认为`false`。设置后，表格始终填充整个视口。
 
 ### 1.1.2. 表格模型
 
 在之前的示例中，表格数据存储在二维数组中。然而，通常你不应该在自己的代码中使用这种策略。与其将数据转入数组以作为表格，不如考虑实现你自己的表格模型。
 
-实现表格模型非常简单，因为你可以利用已经实现了大部分所需方法的 `AbstractTableModel` 类。你只需要提供三个方法：
+实现表格模型非常简单，因为你可以利用已经实现了大部分所需方法的`AbstractTableModel`类。你只需要提供三个方法：
 
 ```
 public int getRowCount();
@@ -21030,8 +22377,7 @@ public int getColumnCount();
 public Object getValueAt(int row, int column);
 ```
 
-
-实现 `getValueAt` 方法有许多方法。例如，如果你想显示包含数据库查询结果的 `RowSet` 内容，只需提供此方法即可：
+实现`getValueAt`方法有许多方法。例如，如果你想显示包含数据库查询结果的`RowSet`内容，只需提供此方法即可：
 
 ```java
 public Object getValueAt(int r, int c) {
@@ -21068,7 +22414,7 @@ public Object getValueAt(int r, int c) {
 
 图 1.4: 投资的增长
 
-`getValue` 方法计算适当的值并对其格式化：
+`getValue`方法计算适当的值并对其格式化：
 
 ```java
 public Object getValue(int r, int c) {
@@ -21079,14 +22425,14 @@ public Object getValue(int r, int c) {
 }
 ```
 
-`getRowCount` 和 `getColCount` 方法简单地返回行和列数：
+`getRowCount`和`getColCount`方法简单地返回行和列数：
 
 ```java
 public int getRowCount() { return years; }
 public int getColCount() { return maxRate - minRate; }
 ```
 
-如果不提供列名，`AbstractTableModel` 的 `getColumnName` 方法将返回 A、B、C 等列名。要更改默认列名，请重写 `getColumnName` 方法。在这个示例中，我们简单地为每列标记了利率：
+如果不提供列名，`AbstractTableModel`的`getColumnName`方法将返回 A、B、C 等列名。要更改默认列名，请重写`getColumnName`方法。在这个示例中，我们简单地为每列标记了利率：
 
 ```java
 public String getColumnName(int c) { return (c + minRate) + "%"; }
@@ -21171,12 +22517,11 @@ class InvestmentTableModel extends AbstractTableModel {
 }
 ```
 
-
 ```java
 void setAutoResizeMode(int mode)
 ```
 
-属于 `JTable` 类。
+属于`JTable`类。
 
 **表 1.2:** 缩放模式
 
@@ -21190,7 +22535,7 @@ void setAutoResizeMode(int mode)
 
 ### 1.2.4. 调整行高
 
-行高由 `JTable` 类直接管理。如果你的单元格比默认值要高，你可能想要设置行高：
+行高由`JTable`类直接管理。如果你的单元格比默认值要高，你可能想要设置行高：
 
 ```java
 table.setRowHeight(height);
@@ -21218,19 +22563,22 @@ table.setRowSelectionAllowed(false);
 
 来禁用行选择。
 
-当启用行选择时，你可以控制是否允许用户选择单行行、一组连续的行或任意一组行。你需要获取选择模型并使用其 `setSelectionMode` 方法：
+当启用行选择时，你可以控制是否允许用户选择单行、一组连续的行或任意一组行。你需要获取选择模型并使用其`setSelectionMode`方法：
 
 ```java
 table.getSelectionModel().setSelectionMode(mode);
 ```
 
-在这里，`mode` 是以下三个值之一：
+在这里，`mode`是以下三个值之一：
 
 ```
 ListSelectionModel.SINGLE_SELECTION
 ListSelectionModel.SINGLE_INTERVAL_SELECTION
-ListSelectionModel.MULTIPLE_INTERVAL_SELECTION
 ```
+
+
+
+`ListSelectionModel.MULTIPLE_INTERVAL_SELECTION`
 
 列选择默认已禁用。你可以通过调用以下方法开启它：
 
@@ -21246,7 +22594,7 @@ table.setCellSelectionEnabled(true);
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1331_0.png)
 
-**图 1.7:** 选择单元格范围
+**图 1.7：** 选择单元格范围
 
 运行列表 12.3 中的程序以观察单元格选择的操作。在“选择（Selection）”菜单中启用行、列或单元格选择，观察选择行为如何变化。
 
@@ -21254,12 +22602,13 @@ table.setCellSelectionEnabled(true);
 
 如果你需要将表格索引值转换为表格模型值，请使用 `JTable` 方法 `convertRowToIndexModel` 和 `convertColumnIndexToModel`。
 
-### 1.2.6. 行排序
+### 1.2.6 行排序
 
 正如我们在第一个表格示例中看到的，只需调用 `setAutoRowSorter` 方法即可轻松地为 `JTable` 添加行排序。然而，为了对排序行为进行更细粒度的控制，可以将一个 `TableRowSorter<M>` 对象安装到 `JTable` 并对其进行自定义。类型参数 `M` 表示表格模型；它需要是 `TableModel` 接口的子类型。
 
 ```java
-var sorter = new TableRowSorter<TableModel>(mode);
+var sorter = new TableRowSorter<TableModel>(model);
+
 table.setRowSorter(sorter);
 ```
 
@@ -21287,18 +22636,21 @@ sorter.setComparator(COLOR_COLUMN, new Comparator
 
 如果你没有为列指定比较器，排序顺序将如下所示：
 
-- 1. 如果列类是 `String`，则使用默认的排序器（collator）。
-- 2. 如果列类实现了 `Comparable`，则使用它的 `compareTo` 方法。
-- 3. 如果为排序器设置了 `TableStringConverter`，则使用它的 `toString` 方法：
-```java
-sorter.setStringConverter(new TableStringConverter() {
-    public String toString(TableModel model) {
-```
-- 4. 否则，使用默认排序器对值进行排序。
+1. 如果列类是 `String`，则使用默认的排序器（collator）。
+2. 如果列类实现了 `Comparable`，则使用它的 `compareTo` 方法。
+3. 如果为排序器设置了 `TableStringConverter`，则使用它的 `toString` 方法：
 
-### 1.2.7. 过滤行
+   ```java
+   sorter.setStringConverter(new TableStringConverter() {
 
-除了排序，`TableRowSorter` 还可以选择性地隐藏行——这一过程被称为过滤。要激活过滤，设置 `RowFilter`。例如，为了包含至少有一个月的行，调用
+       public String toString(TableModel model) {
+   ```
+
+4. 否则，使用默认排序器对值进行排序。
+
+### 1.2.7 过滤行
+
+除了排序，`TableRowSorter` 还可以选择性地隐藏行——这一过程被称为过滤。要激活过滤，设置 `RowFilter`。例如，为了包含至少有一个月的行，调用：
 
 ```java
 sorter.setRowFilter(RowFilter.
@@ -21306,7 +22658,7 @@ sorter.setRowFilter(RowFilter.
 
 在这里，我们使用预定义的数字过滤器。要构造数字过滤器，提供比较类型（`EQUAL`、`NOT_EQUAL`、`AFTER` 或 `BEFORE`）、一个 `Number` 子类对象以及或多个列索引值。静态 `RowFilter.dateFilter` 方法同样的方式构造日期过滤器；你需要提供 `Date` 对象而不是 `Number` 对象。
 
-最后，静态 `RowFilter.regexFilter` 方法构造一个匹配正则表达式的过滤器。例如，
+最后，静态 `RowFilter.regexFilter` 方法构造一个匹配正则表达式的过滤器。例如：
 
 ```java
 sorter.setRowFilter(RowFilter.regexFilter
@@ -21314,7 +22666,7 @@ sorter.setRowFilter(RowFilter.regexFilter
 
 你可以这样做。（关于正则表达式的更多信息请参见第 2 章。）
 
-你还可以通过 `andFilter`、`orFilter` 和 `notFilter` 方法组合过滤器。为了过滤不以 "s" 结尾且月数为偶数的行星，你可以使用此过滤器组合：
+你还可以通过 `andFilter`、`orFilter` 和 `notFilter` 方法组合过滤器。为了过滤不以 `"s"` 结尾且月数为偶数的行星，你可以使用此过滤器组合：
 
 ```java
 sorter.setRowFilter(RowFilter.andFilter(List.of(RowFilter.regexFilter(".*[^s]$", PLANET_COLUMN), RowFilter.numberFilter(ComparisonType.NOT_EQUAL))));
@@ -21322,7 +22674,7 @@ sorter.setRowFilter(RowFilter.andFilter(List.of(RowFilter.regexFilter(".*[^s]$",
 
 要实现自己的过滤器，提供 `RowFilter` 的子类并实现 `include` 方法以指示哪些行应该显示。这很容易，但 `RowFilter` 类的巨大通用性使其看起来有些令人畏。`RowFilter<M, I>` 类有两个类型参数——模型类型和行标识符类型。在处理表格时，模型总是 `TableModel` 的子类，标识符类型是 `Integer`。（在未来的某个时刻，其他组件可能也支持行过滤。例如，过滤 `JTree` 中的行，可能会使用 `RowFilter<TreeModel, TreePath>`。）
 
-行过滤器必须实现方法
+行过滤器必须实现方法：
 
 ```java
 public boolean include(RowFilter.Entry<? extends ?>
@@ -21341,9 +22693,7 @@ var filter = new RowFilter<TableModel, Integer>(n{
 );
 ```
 
-如果你只想包含月数为偶数的行星，你将将测试为
-
-
+如果你只想包含月数为偶数的行星，你将将测试为：
 
 ```java
 ((Integer) entry.getValue(MOONS_COLUMN)) % 2 == (
@@ -21359,7 +22709,7 @@ sorter.setRowFilter(filter);
 
 设置过滤器会使其立即生效。
 
-## 1.2.8 隐藏和显示列
+### 1.2.8 隐藏和显示列
 
 正如你在上一节中看到的，你可以根据内容或行标识符对表格行进行过滤。隐藏表格列则使用完全不同的机制。
 
@@ -21367,7 +22717,9 @@ sorter.setRowFilter(filter);
 
 ```java
 TableColumnModel columnModel = table.getColumnModel(column);
+
 TableColumn column = columnModel.getColumn(i);
+
 table.removeColumn(column);
 ```
 
@@ -21389,17 +22741,25 @@ table.addColumn(new TableColumn(modelColumnIndex, columnName));
 
 列表 12.3 中的程序演示了行和列的选择与过滤。
 
-## 列表 1.3 tableRowColumn/PlanetTableFrame.java
+## 列表 1.3 `tableRowColumn/PlanetTableFrame.java`
 
 ```java
 1 package tableRowColumn;
+
 2
+
 3 import java.awt.*;
+
 4 import java.util.*;
+
 5
+
 6 import javax.swing.*;
+
 7 import javax.swing.table.*;
+
 8
+
 9 /**
 10  * 此框架包含一个包含行星数据的表格
 11  */
@@ -21419,18 +22779,21 @@ table.addColumn(new TableColumn(modelColumnIndex, columnName));
 25     private JCheckBoxMenuItem cellsItem;
 26     private String[] columnNames = { "Planet", "Mass", "Distance", "Visible" };
 27     private Object[][] cells = {
-  { "Mercury", 2440.0, 0, false, Color.GRAY, new ImageIcon(getClass()).getResource("mercury.png") },
-  { "Venus", 6052.0, 0, false, Color.YELLOW, new ImageIcon(getClass()).getResource("venus.png") },
-  { "Earth", 6378.0, 1, false, Color.BLUE, new ImageIcon(getClass()).getResource("earth.png") },
-  { "Mars", 3397.0, 2, false, Color.RED, new ImageIcon(getClass()).getResource("mars.png") },
-  { "Jupiter", 71492.0, 16, true, Color.ORANGE, new ImageIcon(getClass()).getResource("jupiter.png") },
-  { "Saturn", 60268.0, 18, true, Color.GOLD, new ImageIcon(getClass()).getResource("saturn.png") },
-  { "Uranus", 25559.0, 17, true, Color.CYAN, new ImageIcon(getClass()).getResource("uranus.png") },
-  { "Neptune", 24766.0, 8, true, Color.BLUE, new ImageIcon(getClass()).getResource("neptune.png") },
-  { "Pluto", 1137.0, 1, false, Color.PURPLE, new ImageIcon(getClass()).getResource("pluto.png") }
-  };
+     { "Mercury", 2440.0, 0, false, Color.GRAY, new ImageIcon(getClass()).getResource("mercury.png") },
+     { "Venus", 6052.0, 0, false, Color.YELLOW, new ImageIcon(getClass()).getResource("venus.png") },
+     { "Earth", 6378.0, 1, false, Color.BLUE, new ImageIcon(getClass()).getResource("earth.png") },
+     { "Mars", 3397.0, 2, false, Color.RED, new ImageIcon(getClass()).getResource("mars.png") },
+     { "Jupiter", 71492.0, 16, true, Color.ORANGE, new ImageIcon(getClass()).getResource("jupiter.png") },
+     { "Saturn", 60268.0, 18, true, Color.GOLD, new ImageIcon(getClass()).getResource("saturn.png") },
+     { "Uranus", 25559.0, 17, true, Color.CYAN, new ImageIcon(getClass()).getResource("uranus.png") },
+     { "Neptune", 24766.0, 8, true, Color.BLUE, new ImageIcon(getClass()).getResource("neptune.png") },
+     { "Pluto", 1137.0, 1, false, Color.PURPLE, new ImageIcon(getClass()).getResource("pluto.png") }
+     };
+
 29
+
 20 public PlanetTableFrame()
+
 31 {
 32     setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 33 }
@@ -21485,156 +22848,159 @@ table.addColumn(new TableColumn(modelColumnIndex, columnName));
         }
         table.setRowFilter(filter);
     });
+
 76
+
 77     columnsItem.addActionListener(e -> {
         for (int i = 0; i < table.getColumnCount(); i++) {
             TableColumn col = table.getColumnModel().getColumn(i);
-            if (removedColumns.contains(col)) {
-                removedColumns.remove(col);
-            } else {
-                removedColumns.add(col);
-            }
-        }
-        // 隐藏列的逻辑...
-    });
-78
-79     cellsItem.addActionListener(e -> {
-        // 隐藏单元格的逻辑...
-    });
-80 }
-81 }
+
+
+
+```java
+if (removedColumns.contains(col)) {
+    removedColumns.remove(col);
+} else {
+    removedColumns.add(col);
+}
+// 隐藏列的逻辑...
+});
+
+cellsItem.addActionListener(e -> {
+    // 隐藏单元格的逻辑...
+});
 ```
-*注：由于原文文本中的代码块存在严重的行号混乱和逻辑断层（如第 29-40 行重复定义以及第 75-78 行的逻辑不完整），根据“代码块不需要翻译”的原则，我保留了原始代码结构并仅对非代码注释进行了翻译。*
 
+> 注：由于原文文本中的代码块存在严重的行号混乱和逻辑断层（如第 29～40 行重复定义以及第 75～78 行的逻辑不完整），根据“代码块不需要翻译”的原则，我保留了原始代码结构并仅对非代码注释进行了翻译。
 
+- `void addUser(TableColumn column)`  
+  将列作为表格视图的最后一列添加。
 
+- `void moveColumn(int from, int to)`  
+  移动表格索引为 `from` 的列，使其索引变为 `to`。此操作仅影响视图。
 
+- `void removeColumn(TableColumn column)`  
+  从视图中移除指定的列。
 
-- void addUser(TableColumn column)
-将列作为表格视图的最后一列添加。
+- `int convertRowToIndexModel(int index)`
 
-- void moveColumn(int from, int to)
-移动表格索引为 `from` 的列，使其其索引变为 `to`。此操作仅影响视图。
+- `int convertColumnToIndexModel(int index)`  
+  返回给定索引的行或列对应的模型索引。当行被排序或过滤，或者当列被移动或删除时，该值与索引不同。
 
-- void removeColumn(TableColumn column)
-从视图中移除指定的列。
-
-- int convertRowToIndexModel(int index)
-
-- int convertColumnToIndexModel(int index)
-返回给定索引的行或列对应的模型索引。当行被排序或过滤，或者当列被移动或删除时，该值与索引不同。
-
-- void setRowSorter(RowSorter<? extends TableModel> sorter)
-设置行排序器。
+- `void setRowSorter(RowSorter<? extends TableModel> sorter)`  
+  设置行排序器。
 
 ```java
 java.swing.table.TableColumnModel 1.2
 ```
 
-- TableColumn getColumn(int index)
-获取描述给定视图索引列的表格列对象。
+- `TableColumn getColumn(int index)`  
+  获取描述给定视图索引列的表格列对象。
 
 ```java
 javax.swing.table.TableColumn 1.2
 ```
 
-- TableColumn(int modelColumnIndex)
+- `TableColumn(int modelColumnIndex)`  
   为具有给定索引的模型列构造一个用于显示的表格列。
-- void setPreferredWidth(int width)
-- void setMinWidth(int width)
-- void setMaxWidth(int width)
+
+- `void setPreferredWidth(int width)`
+- `void setMinWidth(int width)`
+- `void setMaxWidth(int width)`  
   设置此表格列的首选、最小和最大宽度为 `width`。
-- void setWidth(int width)
+
+- `void setWidth(int width)`  
   设置此列的实际宽度为 `width`。
-- void setResizable(boolean b)
-  如果 `b` 为 true，则该列可调整大小。
+
+- `void setResizable(boolean b)`  
+  如果 `b` 为 `true`，则该列可调整大小。
 
 ```java
 javax.swing.ListSelectionModel 1.2
 ```
 
-- void setSelectionMode(int mode)
-  将选择模式设为 SINGLE_SELECTION、SINGLE_INTERVAL_SELECTION 或 MULTIPLE_INTERVAL_SELECTION 之一。
+- `void setSelectionMode(int mode)`  
+  将选择模式设为 `SINGLE_SELECTION`、`SINGLE_INTERVAL_SELECTION` 或 `MULTIPLE_INTERVAL_SELECTION` 之一。
 
 ```java
 java.swing.DefaultRowSorter<M, I> = 6
 ```
 
-- void setComparator(int column, Comparator<?> comparator)
+- `void setComparator(int column, Comparator<?> comparator)`  
   设置用于给定列的比较器。
-- void setSortable(int column, boolean enabled)
+
+- `void setSortable(int column, boolean enabled)`  
   启用或禁用给定列的排序功能。
-- void setRowFilter(RowFilter<? super M,? super I> filter)
+
+- `void setRowFilter(RowFilter<? super M, ? super I> filter)`  
   设置行过滤器。
 
 ```java
 javax.swing.table.TableRowSorter<M extends TableModel> = 6
 ```
 
-- void setStringConverter(TableStringConverter stringConverter)
+- `void setStringConverter(TableStringConverter stringConverter)`  
   设置用于排序和过滤的字符串转换器。
 
 ```java
 javax.swing.table.TableStringConverter = 6
 ```
 
-- abstract String toString(TableModel model, int row, int column)
+- `abstract String toString(TableModel model, int row, int column)`  
   将给定位置的模型值转换为字符串；你可以重写此方法。
 
 ```java
 javax.swing.RowFilter<M, I> = 6
 ```
 
-- boolean include(RowFilter.Entry<? extends M?, extends I> entry)
+- `boolean include(RowFilter.Entry<? extends M?, extends I> entry)`  
   指定要保留的行；你可以重写此方法。
 
-- static <M, I> RowFilter<M, I>
-numberFilter(RowFilter.ComparisonType type,
-Number number, int... indices)
+- `static <M, I> RowFilter<M, I> numberFilter(RowFilter.ComparisonType type, Number number, int... indices)`
 
-- static <M, I> RowFilter<M, I>
-dateFilter(RowFilter.ComparisonType type, Date
-date, int... indices)
-返回一个过滤器，其包含包含与给定数字或日期匹配比较值的行。比较类型为 EQUAL、NOT_EQUAL、AFTER 或 BEFORE 之一。如果给定了任何列索引，则只搜索这些列；否则，搜索所有列。对于数字过滤器，单元格值的类必须与 `number` 的类匹配。
+- `static <M, I> RowFilter<M, I> dateFilter(RowFilter.ComparisonType type, Date date, int... indices)`  
+  返回一个过滤器，其包含与给定数字或日期匹配比较值的行。比较类型为 `EQUAL`、`NOT_EQUAL`、`AFTER` 或 `BEFORE` 之一。如果给定了任何列索引，则只搜索这些列；否则，搜索所有列。对于数字过滤器，单元格值的类必须与 `number` 的类匹配。
 
-- static <M, I> RowFilter<M, I> regexFilter(String
-regex, int... indices)
-返回一个过滤器，其包含匹配正则表达式的字符串值的行。如果给定了任何列索引，则只搜索这些列；否则，搜索所有列。注意，匹配的是 RowFilter.Entry 的 `getStringValue` 方法的字符串。
+- `static <M, I> RowFilter<M, I> regexFilter(String regex, int... indices)`  
+  返回一个过滤器，其包含匹配正则表达式的字符串值的行。如果给定了任何列索引，则只搜索这些列；否则，搜索所有列。注意，匹配的是 `RowFilter.Entry` 的 `getStringValue` 方法的字符串。
 
 ```java
 static <M, I> RowFilter<M, I>
-andFilter(Iterable<? extends RowFilter<? super M,? super I>>) filters)
+andFilter(Iterable<? extends RowFilter<? super M, ? super I>> filters)
 ```
 
+```java
+static <M, I> RowFilter<M, I>
+orFilter(Iterable<? extends RowFilter<? super M, ? super I>> filters)
 ```
-static <M, I> RowFilter<M, I> orFilter(Iterable<? extends RowFilter<? super M,? super I>>) filters)
-```
+
 返回一个包含所有过滤器包含的条目的过滤器，或者至少包含一个过滤器的过滤器。
 
-```
+```java
 static <M, I> RowFilter<M, I>
 notFilter(RowFilter<M, I> filter)
 ```
+
 返回一个包含给定过滤器未包含的条目的过滤器。
 
-```
+```java
 javax.swing.RowFilter.Entry<M, I> = 6
 ```
 
-- getIdentifier()
+- `getIdentifier()`  
   返回此行条目的标识符。
-- getModel()
-  返回此行条目的模型。
-- getValue(int index)
-  返回存储在此行给定索引处的值。
-- getValueCount()
-  返回此行中存储的值的数量。
-- getStringValue(int index)
-  返回此行给定索引处存储的值，并转换为字符串。TableRowSorter 产生的条目其
 
-```java
-getStringValue calls sorter’s string converter.
-```
+- `getModel()`  
+  返回此行条目的模型。
+
+- `getValue(int index)`  
+  返回存储在此行给定索引处的值。
+
+- `getValueCount()`  
+  返回此行中存储的值的数量。
+
+- `getStringValue(int index)`  
+  返回此行给定索引处存储的值，并转换为字符串。`TableRowSorter` 产生的条目其 `getStringValue` 调用排序器的字符串转换器。
 
 ## 1.3. 单元格渲染与编辑
 
@@ -21646,13 +23012,20 @@ getStringValue calls sorter’s string converter.
 
 ```java
 class ColorTableCellRenderer extends JPanel implements TableRenderer {
-    public Component getTableCellComponent(JTable table, boolean isSelected, boolean hasFocus) {
+
+    public Component getTableCellComponent(
+        JTable table,
+        boolean isSelected,
+        boolean hasFocus
+    ) {
         setBackground((Color) value);
+
         if (hasFocus) {
             setBorder(UIManager.getBorder("TextField"));
         } else {
             setBorder(null);
         }
+
         return this;
     }
 }
@@ -21673,12 +23046,12 @@ class ColorTableCellRenderer extends JPanel implements TableRenderer {
 你需要告诉表格使用某种类型的对象。提供一个类对象和渲染器：
 
 ```java
-table.setDefaultRenderer(Color.class, new ColorTa
+table.setDefaultRenderer(Color.class, new ColorTableCellRenderer());
 ```
 
 该渲染器现在适用于表中所有该类型的对象。
 
-如果你想根据其他标准选择渲染器，你需要子类 Table 并重写 `getRenderer` 方法。
+如果你想根据其他标准选择渲染器，你需要子类化 `Table` 并重写 `getRenderer` 方法。
 
 ### 1.3.2. 渲染表头
 
@@ -21688,10 +23061,10 @@ table.setDefaultRenderer(Color.class, new ColorTa
 moonColumn.setHeaderValue(new ImageIcon("Moons.gif"));
 ```
 
-然而，表格头并不智能足以为表头值选择合适的渲染器。你必须手动安装渲染器。例如，要在列头中显示图像图标，调用
+然而，表格头并不智能足以为表头值选择合适的渲染器。你必须手动安装渲染器。例如，要在列头中显示图像图标，调用：
 
 ```java
-moonColumn.setHeaderRenderer(table.getDefaultRenderer
+moonColumn.setHeaderRenderer(table.getDefaultRenderer(Object.class));
 ```
 
 ### 1.3.3. 编辑单元格
@@ -21700,46 +23073,45 @@ moonColumn.setHeaderRenderer(table.getDefaultRenderer
 
 ```java
 public boolean isCellEditable(int r, int c) {
-    return c == PLANET_COLUMN || c == MOONS_COLUM
-    || c == COLOR_COLUMN;
+    return c == PLANET_COLUMN
+        || c == MOONS_COLUMN
+        || c == COLOR_COLUMN;
 }
 ```
 
 **注意：** `AbstractTableModel` 定义 `isCellEditable` 方法始终返回 `false`。`DefaultTableModel` 重写了该方法并始终返回 `true`。
 
-
-
-
-
 最后，点击第一列中的一个单元格。该单元格获得焦点。你可以开始输入，单元格的内容会随之改变。
 
 你刚刚看到的演示是 `DefaultCellEditor` 类的三种变体。`DefaultCellEditor` 可以用 `JTextField`、`JComboBox` 或 `JCheckBox` 来构造。`JTable` 类会自动为 `Boolean` 单元格安装复选框编辑器，并为所有未提供渲染器的可编辑单元格安装文本字段编辑器。文本字段允许用户编辑字符串，这些字符串是通过对表格模型中 `getValueAt` 方法的返回值应用 `toString` 得到的。
 
-当编辑完成时，将通过调用你的编辑器的 `getCellEditor` 方法来获取编辑后的值。该方法应该返回正确类型的值（即由模型的 `getColumnType` 方法返回的类型）。
+当编辑完成时，将通过调用你的编辑器的 `getCellEditorValue` 方法来获取编辑后的值。该方法应该返回正确类型的值，即由模型的 `getColumnType` 方法返回的类型。
 
 要获取组合框编辑器，请手动设置单元格编辑器——`JTable` 组件并不知道特定类型可能适用哪些值。对于“Moons（月球数量）”列，我们希望让用户能够选择 0 到 20 之间的任何值。以下是初始化组合框的代码：
 
-```
+```java
 var moonCombo = new JComboBox();
-for (int i = 0; i <= 20; i++)
-  moonCombo.addItem(i);
+
+for (int i = 0; i <= 20; i++) {
+    moonCombo.addItem(i);
+}
 ```
 
 要构造 `DefaultCellEditor`，请在构造函数中提供组合框：
 
-```
+```java
 var moonEditor = new DefaultCellEditor(moonCombo);
 ```
 
 接下来，我们需要安装编辑器。与颜色单元格渲染器不同，此编辑器依赖于对象 `type`——我们并不一定想将它用于所有 `Integer` 类型的对象。相反，我们需要将其安装到特定的列中：
 
-```
+```java
 moonColumn.setCellEditor(moonEditor);
 ```
 
 ### 1.3.4. 自定义编辑器
 
-再次运行示例程序并点击颜色。弹出一个颜色选择器，允许你为行星选择新颜色。选择一种颜色并点击确定。单元格颜色随被更新（见图 12.10）。
+再次运行示例程序并点击颜色。弹出一个颜色选择器，允许你为行星选择新颜色。选择一种颜色并点击确定。单元格颜色随即被更新（见图 12.10）。
 
 | 行星 | 半径 | 气态 | 颜色 | 图像 |
 | --- | --- | --- | --- | --- |
@@ -21747,7 +23119,7 @@ moonColumn.setCellEditor(moonEditor);
 | 金星 | 6,052 | | | |
 | 地球 | 6,378 | | | |
 
-### 图 11.10: 使用颜色选择器编辑单元格颜色
+### 图 11.10：使用颜色选择器编辑单元格颜色
 
 颜色单元格编辑器不是标准的表格单元格编辑器，而是一个自定义实现。要创建自定义单元格编辑器，请实现 `TableCellEditor` 接口。该接口有点繁琐，因此提供了一个 `AbstractCellEditor` 类来处理事件处理细节。
 
@@ -21757,9 +23129,8 @@ moonColumn.setCellEditor(moonEditor);
 
 `JTable` 类会带事件（如鼠标点击）调用你的编辑器，以确定该事件是否可以启动编辑过程。`AbstractCellEditor` 类定义了接受所有事件的方法。
 
-```
-public boolean isCellEditable(EventObject anEvent)
-{
+```java
+public boolean isCellEditable(EventObject anEvent) {
     return true;
 }
 ```
@@ -21769,8 +23140,7 @@ public boolean isCellEditable(EventObject anEvent)
 一旦安装了编辑器组件，就会调用 `shouldSelectCell` 方法，假设传入的是同一个事件。你应该在该方法中启动编辑——例如，弹出一个外部编辑对话框。
 
 ```java
-public boolean shouldSelectCell(EventObject anEvent)
-{
+public boolean shouldSelectCell(EventObject anEvent) {
     colorDialog.setVisible(true);
     return true;
 }
@@ -21781,8 +23151,7 @@ public boolean shouldSelectCell(EventObject anEvent)
 此外，你还应该调用处理事件触发的父类方法——否则编辑将无法正常取消。
 
 ```java
-public void cancelCellEditing()
-{
+public void cancelCellEditing() {
     colorDialog.setVisible(false);
     super.cancelCellEditing();
 }
@@ -21791,22 +23160,17 @@ public void cancelCellEditing()
 最后，你需要一个方法来产生用户在编辑过程中提供的值：
 
 ```java
-public Object getCellEditorValue()
-{
+public Object getCellEditorValue() {
     return colorChooser.getColor();
 }
 ```
 
 总结一下，你的自定义编辑器应该执行以下操作：
 
-- 1. 扩展 `AbstractCellEditor` 类并实现 `TableCellEditor` 接口。
-- 2. 定义 `getTableCellEditorComponent` 方法以提供组件。它可以是一个占位组件（如果你弹出对话框），也可以用于原地编辑的组件（如组合框或文本字段）。
-- 3. 定义 `shouldSelectCell`、`stopCellEditing` 和 `cancelCellEditing` 方法来处理编辑过程的开始、完成和取消。`stopCellEditing` 和 `cancelCellEditing` 方法应该调用父类方法以确保通知监听器。
-- 4. 定义 `getCellEditorValue` 方法返回用户在编辑过程中提供的值。
-
-
-
-
+1. 扩展 `AbstractCellEditor` 类并实现 `TableCellEditor` 接口。
+2. 定义 `getTableCellEditorComponent` 方法以提供组件。它可以是一个占位组件（如果你弹出对话框），也可以用于原地编辑的组件（如组合框或文本字段）。
+3. 定义 `shouldSelectCell`、`stopCellEditing` 和 `cancelCellEditing` 方法来处理编辑过程的开始、完成和取消。`stopCellEditing` 和 `cancelCellEditing` 方法应该调用父类方法以确保通知监听器。
+4. 定义 `getCellEditorValue` 方法返回用户在编辑过程中提供的值。
 
 ```java
 /**
@@ -21814,61 +23178,69 @@ public Object getCellEditorValue()
  * 行星数据。
  */
 public class PlanetTableModel extends AbstractTableModel {
+
     public static final int PLANET_COLUMN = 0;
     public static final int MOONS_COLUMN = 1;
     public static final int GASEOUS_COLUMN = 2;
     public static final int COLOR_COLUMN = 3;
 
     private Object[][] cells = {
-        { "Mercury", 2440.0, 0, false, Color.GRAY, new ImageIcon(getClass()).getResource("mercury.png") },
-        { "Venus", 6052.0, 0, false, Color.YELLOW, new ImageIcon(getClass()).getResource("venus.png") },
-        { "Earth", 6378.0, 1, false, Color.BLUE, new ImageIcon(getClass()).getResource("earth.png") },
-        { "Mars", 3397.0, 2, false, Color.RED, new ImageIcon(getClass()).getResource("mars.png") },
-        { "Jupiter", 71492.0, 16, true, Color.ORANGE, new ImageIcon(getClass()).getResource("jupiter.png") },
-        { "Saturn", 60268.0, 18, true, Color.YELLOW, new ImageIcon(getClass()).getResource("saturn.png") },
-        { "Uranus", 25559.0, 17, true, Color.CYAN, new ImageIcon(getClass()).getResource("uranus.png") },
-        { "Neptune", 24766.0, 8, true, Color.BLUE, new ImageIcon(getClass()).getResource("neptune.png") },
-        { "Pluto", 1137.0, 1, false, Color.LIGHTGRAY, new ImageIcon(getClass()).getResource("pluto.png") }
-    };
+```
 
-    private String[] columnNames = { "Planet", "Color", "Image" };
 
-    public String getColumnName(int c) {
-        return columnNames[c];
-    }
 
-    public Class<?> getColumnClass(int c) {
-        return cells[0][c].getClass();
-    }
+```java
+{ "Mercury", 2440.0, 0, false, Color.GRAY, new ImageIcon(getClass()).getResource("mercury.png") },
+{ "Venus", 6052.0, 0, false, Color.YELLOW, new ImageIcon(getClass()).getResource("venus.png") },
+{ "Earth", 6378.0, 1, false, Color.BLUE, new ImageIcon(getClass()).getResource("earth.png") },
+{ "Mars", 3397.0, 2, false, Color.RED, new ImageIcon(getClass()).getResource("mars.png") },
+{ "Jupiter", 71492.0, 16, true, Color.ORANGE, new ImageIcon(getClass()).getResource("jupiter.png") },
+{ "Saturn", 60268.0, 18, true, Color.YELLOW, new ImageIcon(getClass()).getResource("saturn.png") },
+{ "Uranus", 25559.0, 17, true, Color.CYAN, new ImageIcon(getClass()).getResource("uranus.png") },
+{ "Neptune", 24766.0, 8, true, Color.BLUE, new ImageIcon(getClass()).getResource("neptune.png") },
+{ "Pluto", 1137.0, 1, false, Color.LIGHTGRAY, new ImageIcon(getClass()).getResource("pluto.png") }
+};
 
-    public int getColumnCount() {
-        return cells[0].length;
-    }
+private String[] columnNames = { "Planet", "Color", "Image" };
 
-    public int getRowCount() {
-        return cells.length;
-    }
+public String getColumnName(int c) {
+    return columnNames[c];
+}
 
-    public Object getValueAt(int r, int c) {
-        return cells[r][c];
-    }
+public Class<?> getColumnClass(int c) {
+    return cells[0][c].getClass();
+}
 
-    public void setValueAt(Object obj, int r, int c) {
-        cells[r][c] = obj;
-    }
+public int getColumnCount() {
+    return cells[0].length;
+}
 
-    public boolean isCellEditable(int r, int c) {
-        return c == PLANET_COLUMN || c == MOONS_COLUMN || c == COLOR_COLUMN;
-    }
+public int getRowCount() {
+    return cells.length;
+}
+
+public Object getValueAt(int r, int c) {
+    return cells[r][c];
+}
+
+public void setValueAt(Object obj, int r, int c) {
+    cells[r][c] = obj;
+}
+
+public boolean isCellEditable(int r, int c) {
+    return c == PLANET_COLUMN || c == MOONS_COLUMN || c == COLOR_COLUMN;
 }
 ```
 
-# 列表 1.6
-tableCellRender/ColorTableCellRenderer.java
+## 列表 1.6
+
+`tableCellRender/ColorTableCellRenderer.java`
 
 ```java
 package tableCellRender;
+
 import java.awt.*;
+
 import javax.swing.*;
 import javax.swing.table.*;
 
@@ -21877,28 +23249,41 @@ import javax.swing.table.*;
  */
 public class ColorTableCellRenderer extends DefaultTableCellRenderer {
     @Override
-    public Component getTableCellRendererComponent(JTable table, Object value,
-            boolean isSelected, boolean hasFocus, int row, int column) {
-        Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+    public Component getTableCellRendererComponent(
+            JTable table,
+            Object value,
+            boolean isSelected,
+            boolean hasFocus,
+            int row,
+            int column) {
+        Component c = super.getTableCellRendererComponent(
+                table, value, isSelected, hasFocus, row, column);
+
         setBackground((Color) value);
+
         if (hasFocus) {
             setBorder(UIManager.getBorder("TextField.border"));
         } else {
             setBorder(null);
         }
+
         return this;
     }
 }
 ```
 
-列表 1.7 tableCellRender/ColorTableCellEditor.java
+## 列表 1.7
+
+`tableCellRender/ColorTableCellEditor.java`
 
 ```java
 package tableCellRender;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.beans.*;
 import java.util.*;
+
 import javax.swing.*;
 import javax.swing.table.*;
 
@@ -21912,15 +23297,22 @@ public class ColorTableCellEditor extends DefaultCellEditor {
 
     public ColorTableCellEditor() {
         panel = new JPanel();
+
         // 准备颜色对话框
         colorChooser = new JColorChooser();
-        colorDialog = JColorChooser.createDialog(null, "Pick Color", colorChooser);
+        colorDialog = JColorChooser.createDialog(
+                null, "Pick Color", colorChooser);
     }
 
     @Override
-    public Component getTableCellEditorComponent(JTable table, Object value,
-            boolean isSelected, int row, int column) {
+    public Component getTableCellEditorComponent(
+            JTable table,
+            Object value,
+            boolean isSelected,
+            int row,
+            int column) {
         // 这里是我们获取当前...
+
         // 用户开始编辑
         colorChooser.setColor((Color) value);
         return panel;
@@ -21930,6 +23322,7 @@ public class ColorTableCellEditor extends DefaultCellEditor {
     public boolean stopCellEditing(EventObject event) {
         // 开始编辑
         colorDialog.setVisible(true);
+
         // 告诉调用者可以选择此
         return true;
     }
@@ -21946,6 +23339,7 @@ public class ColorTableCellEditor extends DefaultCellEditor {
         // 编辑完成--隐藏对话框
         colorDialog.setVisible(false);
         super.stopCellEditing();
+
         // 告诉调用者可以使用该颜色
         return true;
     }
@@ -21957,19 +23351,19 @@ public class ColorTableCellEditor extends DefaultCellEditor {
 }
 ```
 
-
-
-
-
 **注意：** 还有一些根据元素集合构建树的构造函数：
 
 ```java
 JTree(Object[] nodes)
+
 JTree(Vector<?> nodes)
+
 JTree(Hashtable<?, ?> nodes) // 值是 JTree 节点
 ```
 
 这些构造函数并没有什么用。它们只是构建了一个树森林，每个树只有一个节点。第三个构造函数看起来特别没用，因为节点是根据键的哈希值决定的看似随机的顺序。
+
+## 构建树模型
 
 如何获取树模型？你可以通过创建一个实现 `TreeModel` 接口的类来构建自己的模型。你将在本章稍后的部分看到如何这样做。目前，我们将坚持使用 Swing 库提供的 `DefaultTreeModel`。
 
@@ -21977,6 +23371,7 @@ JTree(Hashtable<?, ?> nodes) // 值是 JTree 节点
 
 ```java
 TreeNode root = new DefaultMutableTreeNode();
+
 var model = new DefaultTreeModel(root);
 ```
 
@@ -21994,7 +23389,9 @@ var model = new DefaultTreeModel(root);
 
 ```java
 var node = new DefaultMutableTreeNode("Texas");
+
 ...
+
 node.setUserObject("California");
 ```
 
@@ -22002,9 +23399,13 @@ node.setUserObject("California");
 
 ```java
 var root = new DefaultMutableTreeNode("World");
+
 var country = new DefaultMutableTreeNode("USA");
+
 root.add(country);
+
 var state = new DefaultMutableTreeNode("California");
+
 country.add(state);
 ```
 
@@ -22018,6 +23419,7 @@ country.add(state);
 
 ```java
 var treeModel = new DefaultTreeModel(root);
+
 var tree = new JTree(treeModel);
 ```
 
@@ -22029,54 +23431,60 @@ var tree = new JTree(root);
 
 Listing 12.8 包含了完整的代码。
 
-# Listing 1.8 tree/SimpleTreeFrame.java
+## 列表 1.8
+
+`tree/SimpleTreeFrame.java`
 
 ```java
-1 package tree;
-2
-3 import javax.swing.*;
-4 import javax.swing.tree.*;
-5
-6 /**
-7  * 此框架包含一个简单的树
-8  */
-9 public class SimpleTreeFrame extends JFrame
-10 {
-11     private static final int DEFAULT_WIDTH = 300;
-12     private static final int DEFAULT_HEIGHT = 300;
-13
-14     public SimpleTreeFrame()
-15     {
-16         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
-17
-18         // 设置树模型数据
-19
-20         var root = new DefaultMutableTreeNode("World");
-21         var country = new DefaultMutableTreeNode("USA");
-22         root.add(country);
-23         var state = new DefaultMutableTreeNode("California");
-24         country.add(state);
-25         var city = new DefaultMutableTreeNode("New York");
-26         state.add(city);
-27         city = new DefaultMutableTreeNode("Los Angeles");
-28         state.add(city);
-29         state = new DefaultMutableTreeNode("Texas");
-30         country.add(state);
-31         city = new DefaultMutableTreeNode("Austin");
-32         state.add(city);
-33         country = new DefaultMutableTreeNode("Canada");
-34         root.add(country);
-35         state = new DefaultMutableTreeNode("Florida");
-36         country.add(state);
-37         city = new DefaultMutableTreeNode("Miami");
-38         state.add(city);
-39
-40         // 构建树并将其放入滚动面板
-41
-42         var tree = new JTree(root);
-43         add(new JScrollPane(tree));
-44 
-45     }
+package tree;
+
+import javax.swing.*;
+import javax.swing.tree.*;
+
+/**
+ * 此框架包含一个简单的树
+ */
+public class SimpleTreeFrame extends JFrame {
+    private static final int DEFAULT_WIDTH = 300;
+    private static final int DEFAULT_HEIGHT = 300;
+
+    public SimpleTreeFrame() {
+        setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
+
+        // 设置树模型数据
+        var root = new DefaultMutableTreeNode("World");
+        var country = new DefaultMutableTreeNode("USA");
+        root.add(country);
+
+        var state = new DefaultMutableTreeNode("California");
+        country.add(state);
+
+        var city = new DefaultMutableTreeNode("New York");
+        state.add(city);
+
+        city = new DefaultMutableTreeNode("Los Angeles");
+        state.add(city);
+
+        state = new DefaultMutableTreeNode("Texas");
+        country.add(state);
+
+        city = new DefaultMutableTreeNode("Austin");
+        state.add(city);
+
+        country = new DefaultMutableTreeNode("Canada");
+        root.add(country);
+
+        state = new DefaultMutableTreeNode("Florida");
+        country.add(state);
+
+        city = new DefaultMutableTreeNode("Miami");
+        state.add(city);
+
+        // 构建树并将其放入滚动面板
+        var tree = new JTree(root);
+        add(new JScrollPane(tree));
+    }
+}
 ```
 
 当你运行程序时，树首先看起来如图 12.15 所示。只有根节点及其子节点是可见的。点击圆形图标（手柄）来打开子树。从手柄图标伸出的线条在子树折叠时指向右侧，在子树展开时指向（参见图 12.16）。我们不知道设计者是怎么想的，但我们觉得很直观。
@@ -22089,12 +23497,11 @@ Listing 12.8 包含了完整的代码。
 
 **图 16：** 折叠和展开的子树
 
+## 设置叶子节点图标
 
+然后，告诉树模型查询“允许子节点”属性的值，以确定是否应该用叶子图标显示节点。使用 `DefaultTreeModel` 类的 `setAsksAllowsChildren` 方法来设置此行为：
 
-
-然后，告诉树模型查询“允许子节点”属性的值，以确定是否应该用叶子图标显示节点。使用 `DefaultTreeModel`类的 `setAsksAllowsChildren` 方法来设置此行为：
-
-```
+```java
 model.setAsksAllowsChildren(true);
 ```
 
@@ -22102,72 +23509,71 @@ model.setAsksAllowsChildren(true);
 
 或者，如果你从根节点构造树，请在构造函数中提供“询问子节点”属性的设置。
 
-```
+```java
 var tree = new JTree(root, true); // nodes that ...
 ```
 
-```
-javax.swing.JTree 1.2
-```
+## `javax.swing.JTree` 1.2
 
-- JTree(TreeModel model) 从树模型构造树。
-- JTree(TreeNode root)
-- JTree(TreeNode root, boolean asksAllowChildren) 使用默认树模型构造树，显示根节点及其子节点。
+- `JTree(TreeModel model)`：从树模型构造树。
+- `JTree(TreeNode root)`
+- `JTree(TreeNode root, boolean asksAllowChildren)`：使用默认树模型构造树，显示根节点及其子节点。
+- `void setShowsRootHandles(boolean b)`：如果 `b` 为 true，根节点有一个用于折叠或展开子节点的句柄。
+- `void setRootVisible(boolean b)`：如果 `b` 为 true，则显示根节点。否则，将其隐藏。
 
-- void setShowsRootHandles(boolean b)
-如果 b 为 true，根节点有一个用于折叠或展开子节点的句柄。
-- void setRootVisible(boolean b)
-如果 b 为 true，则显示根节点。否则，将其隐藏。
+## `javax.swing.tree.TreeNode` 1.2
 
-```
-javax.swing.tree.TreeNode 1.2
-```
 
-- boolean isLeaf()
-如果此节点在概念上是叶子，则返回 true。
-- boolean getAllowsChildren()
-如果此节点可以拥有子节点，则返回 true。
 
-```
-javax.swing.tree.MutableTreeNode 1.2
-```
+### `javax.swing.tree.TreeNode` 1.2
 
-- void setUserObject(Object userObject)
-设置树节点用于渲染的“用户对象”。
+- `boolean isLeaf()`
 
-```
-javax.swing.tree.TreeModel 1.2
-```
+  如果此节点在概念上是叶子，则返回 `true`。
 
-- boolean isLeaf(Object node)
-如果节点应该被显示为叶子节点，则返回 true。
+- `boolean getAllowsChildren()`
 
-```
-javax.swing.tree.DefaultTreeModel 1.2
-```
+  如果此节点可以拥有子节点，则返回 `true`。
 
-- void setAsksAllowsChildren(boolean b)
-如果 b 为 true，当内部的 `getAllChildren` 方法返回 false 时，节点被显示为叶子。否则，当它们的 `isLeaf` 方法返回 true 时，它们被显示为叶子。
+### `javax.swing.tree.MutableTreeNode` 1.2
 
-```
-javax.swing.tree.DefaultMutableTreeNode 1.2
-```
+- `void setUserObject(Object userObject)`
 
-- DefaultMutableTreeNode(Object userObject)
-使用给定的用户对象构造一个可变的树节点。
-- void add(MutableNode child)
-将一个节点作为此节点的最后一个子添加。
-- void setAllowsChildren(boolean b)
-如果 b 为 true，可以向此节点添加子节点。
+  设置树节点用于渲染的“用户对象”。
 
-```
-javax.swing.JComponent 1.2
-```
+### `javax.swing.tree.TreeModel` 1.2
 
-- void clientProperty(Object key, Object value)
-将键/值对添加到每个组件管理的小表中。这是某些 Swing 组件使用的一种“逃生口”机制，用于存储特定于外观（look-and-feel）的属性。
+- `boolean isLeaf(Object node)`
 
-## 1.4.2. 编辑树和树路径
+  如果节点应该被显示为叶子节点，则返回 `true`。
+
+### `javax.swing.tree.DefaultTreeModel` 1.2
+
+- `void setAsksAllowsChildren(boolean b)`
+
+  如果 `b` 为 `true`，当内部的 `getAllChildren` 方法返回 `false` 时，节点被显示为叶子。否则，当它们的 `isLeaf` 方法返回 `true` 时，它们被显示为叶子。
+
+### `javax.swing.tree.DefaultMutableTreeNode` 1.2
+
+- `DefaultMutableTreeNode(Object userObject)`
+
+  使用给定的用户对象构造一个可变的树节点。
+
+- `void add(MutableNode child)`
+
+  将一个节点作为此节点的最后一个子添加。
+
+- `void setAllowsChildren(boolean b)`
+
+  如果 `b` 为 `true`，可以向此节点添加子节点。
+
+### `javax.swing.JComponent` 1.2
+
+- `void clientProperty(Object key, Object value)`
+
+  将键/值对添加到每个组件管理的小表中。这是某些 Swing 组件使用的一种“逃生口”机制，用于存储特定于外观（look-and-feel）的属性。
+
+## 1.4.2 编辑树和树路径
 
 在下一个示例程序中，你将看到如何编辑树。图 12.23 显示了用户界面。如果你点击“添加兄弟”（Add Sibling）或“添加子节点”（Add Child）按钮，程序会在树中添加一个新节点（标题为 New）。如果你点击“删除”（Delete）按钮，程序将删除当前选中的节点。
 
@@ -22175,35 +23581,31 @@ javax.swing.JComponent 1.2
 
 **图 1.23：** 编辑树
 
-要实现这一行为，你需要找到当前选中了哪个树节点。JTree 类识别树中节点有一种非常出人意料的方法。它不处理树节点，而是处理*对象的路径*，称为*树路径*（tree paths）。一个树路径从根节点开始，由一系列子节点组成（参见图 12.24）。
+要实现这一行为，你需要找到当前选中了哪个树节点。`JTree` 类识别树中节点有一种非常出人意料的方法。它不处理树节点，而是处理对象的路径，称为树路径（tree paths）。一个树路径从根节点开始，由一系列子节点组成（参见图 12.24）。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1396_0.png)
 
-# 图 1.24：树路径
+### 图 1.24：树路径
 
 你可能会奇怪为什么 `JTree` 类需要整个路径。难道它不能只获取一个 `TreeNode` 并不断调用 `getParent` 方法吗？事实上，`JTree` 类对 `TreeNode` 接口一无所知。该接口从未被 `TreeModel` 接口使用；它只被 `DefaultTreeModel` 的实现使用，而在该实现中，节点根本没有实现 `TreeNode` 接口。如果你使用管理其他类型对象的树模型，这些对象可能没有 `getParent` 和 `getChild` 方法。它们当然需要彼此之间有某种联系。将节点连接在一起是树模型的工作。`JTree` 类本身对它们连接的性质一无所知。出于这个原因，`JTree` 类始终需要处理完整的路径。
 
-`TreePath` 类管理一组 `Object`（不是 `TreeNode!`！）引用。许多 `JTree` 方法返回 `TreePath` 对象。当你有一个树路径时，你通常只需要知道末端节点，可以通过 `getLastPathComponent` 方法获取它。例如，要找到树中当前选中的节点，使用 `JTree` 类的 `getSelectionPath` 方法。你将得到一个 `TreePath` 对象，从那里你可以检索实际节点。
+`TreePath` 类管理一组 `Object`（不是 `TreeNode`！）引用。许多 `JTree` 方法返回 `TreePath` 对象。当你有一个树路径时，你通常只需要知道末端节点，可以通过 `getLastPathComponent` 方法获取它。例如，要找到树中当前选中的节点，使用 `JTree` 类的 `getSelectionPath` 方法。你将得到一个 `TreePath` 对象，从那里你可以检索实际节点。
 
-```
-TreePath selectionPath = tree.getSelectionPath()
-var selectedNode = (DefaultMutableTreeNode)selected
+```java
+TreePath selectionPath = tree.getSelectionPath();
+
+var selectedNode = (DefaultMutableTreeNode) selected;
 ```
 
 实际上，由于这种特定查询非常常见，有一个方便方法可以直接给出选中的节点：
 
+```java
+var selectedNode = (DefaultMutableTreeNode) tree.getSelectionPath().getLastPathComponent();
 ```
-var selectedNode = (DefaultMutableTreeNode)
-```
-
-（注：原文文本存在大量重复和错误，已根据逻辑进行了清理并提供了修正后的翻译。）
-
-
-
 
 现在，假设你的树包含在一个滚动面板（scroll pane）中。展开树节点后，新节点可能仍然不可见，因为超出了视口。为了解决这个问题，请调用：
 
-```
+```java
 tree.scrollPathToVisible(path);
 ```
 
@@ -22211,11 +23613,11 @@ tree.scrollPathToVisible(path);
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1401_0.png)
 
-**图 1.25:** 滚动面板滚动以显示新节点。
+**图 1.25：** 滚动面板滚动以显示新节点。
 
 默认情况下，树节点是不可编辑的。但是，如果你调用：
 
-```
+```java
 tree.setEditable(true);
 ```
 
@@ -22223,65 +23625,97 @@ tree.setEditable(true);
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1402_0.png)
 
-**图 1.26:** 默认单元格编辑器
+**图 1.26：** 默认单元格编辑器
 
 Listing 12.9 显示了树编辑程序的完整源代码。运行该程序，添加几个节点并通过双击进行编辑。观察折叠节点如何展开以显示添加的子节点，以及滚动面板如何保持添加的节点在视口内。
 
-## Listing 1.9 treeEdit/TreeEditFrame.java
+## Listing 1.9 `treeEdit/TreeEditFrame.java`
 
 ```java
 package treeEdit;
 
 import java.awt.*;
+
 import javax.swing.*;
+
 import javax.swing.tree.*;
 
 /**
  * 一个带有树和编辑按钮的框架
  */
 public class TreeEditFrame extends JFrame {
-    private static final int DEFAULT_WIDTH = ...
+
+    private static final int DEFAULT_WIDTH = ...;
+
     private static final int DEFAULT_HEIGHT = ...;
 
     private DefaultTreeModel model;
+
     private JTree tree;
 
     public TreeEditFrame() {
+
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
         // construct tree
+
         TreeNode root = makeSampleTree();
+
         model = new DefaultTreeModel(root);
+
         tree = new JTree(model);
+
         tree.setEditable(true);
 
         // add scroll pane with tree
+
         var scrollPane = new JScrollPane(tree);
+
         add(scrollPane, BorderLayout.CENTER);
 
         makeButtons();
     }
 
     public TreeNode makeSampleTree() {
+
         var root = new DefaultMutableTreeNode();
+
         var country = new DefaultMutableTreeNode();
+
         root.add(country);
+
         var state = new DefaultMutableTreeNode();
+
         country.add(state);
+
         var city = new DefaultMutableTreeNode();
+
         state.add(city);
+
         city = new DefaultMutableTreeNode("Sa");
+
         state.add(city);
+
         state = new DefaultMutableTreeNode("M");
+
         country.add(state);
+
         city = new DefaultMutableTreeNode("Ar");
+
         state.add(city);
+
         country = new DefaultMutableTreeNode();
+
         root.add(country);
+
         state = new DefaultMutableTreeNode("S");
+
         country.add(state);
+
         city = new DefaultMutableTreeNode("K");
+
         state.add(city);
+
         return root;
     }
 
@@ -22289,67 +23723,101 @@ public class TreeEditFrame extends JFrame {
      * Makes the buttons to add a sibling, e
      */
     public void makeButtons() {
+
         var panel = new JPanel();
+
         var addSiblingButton = new JButton("+");
+
         addSiblingButton.addActionListener(ev -> {
+
             var selectedNode = (DefaultMutableTreeNode) tree.getSelectedPathComponent();
+
             if (selectedNode == null) return;
+
             var parent = (DefaultTreeNode) selectedNode.getParent();
+
             if (parent == null) return;
+
             var newNode = new DefaultMutableTreeNode();
+
             int selectedIndex = parent.getIndex();
+
             model.insertNodeInto(newNode, selectedIndex);
+
             // now display new node
+
             TreeNode[] nodes = model.getPath();
+
             var path = new TreePath(nodes);
+
             tree.scrollPathToVisible(path);
         });
+
         panel.add(addSiblingButton);
 
         var addChildButton = new JButton("Add");
+
         addChildButton.addActionListener(event -> {
+
             var selectedNode = (DefaultMutableTreeNode) tree.getSelectedPathComponent();
+
             if (selectedNode == null) return;
+
             var newNode = new DefaultMutableTreeNode();
+
             selectedNode.add(newNode);
+
             // now display new node
+
             TreeNode[] nodes = model.getPath();
+
             var path = new TreePath(nodes);
+
             tree.scrollPathToVisible(path);
         });
+
         panel.add(addChildButton);
 
         var deleteButton = new JButton("Delete");
+
         deleteButton.addActionListener(event -> {
+
             var selectedNode = (DefaultMutableTreeNode) tree.getSelectedPathComponent();
+
             if (selectedNode != null) {
+
                 model.removeNode(selectedNode);
             }
         });
+
         panel.add(deleteButton);
     }
 }
 ```
 
-
-
 在这个示例中，我们利用了树节点的用户对象（user objects）可以是任意类型的这一事实。由于我们的节点描述的是类，我们在节点中存储了 `Class` 对象。
 
 我们不希望重复添加同一个类对象，因此需要检查类是否已经存在于树中。以下方法可以在树中找到给定用户对象的节点（如果它存在）：
 
-```
+```java
 public DefaultMutableTreeNode findUserObject(Object obj) {
+
     Enumeration e = root.breadthFirstEnumeration();
+
     while (e.hasMoreElements()) {
+
         DefaultMutableTreeNode node = (DefaultMutableTreeNode) e.nextElement();
+
         if (node.getUserObject().equals(obj))
+
             return node;
     }
+
     return null;
 }
 ```
 
-## 1.4.4. 渲染节点
+## 1.4.4 渲染节点
 
 在应用程序中，你经常需要更改树组件绘制节点的方式。最常见的更改当然是为节点和叶子节点选择不同的图标。其他更改可能涉及更改节点标签的字体或在节点处绘制图像。所有这些更改都可以向树中安装新的树单元格渲染器（tree cell renderer）来实现。默认情况下，`JTree` 类使用 `DefaultTreeCellRenderer` 对象来绘制每个节点。`DefaultTreeCellRenderer` 类继承了 `JLabel` 类。标签包含了节点图标和节点标签。
 
@@ -22360,18 +23828,20 @@ public DefaultMutableTreeNode findUserObject(Object obj) {
 你可以通过三种方式自定义显示：
 
 - 你可以更改 `DefaultTreeCellRenderer` 使用的图标、字体和背景颜色。这些设置适用于树中的所有节点。
-
 - 你可以安装扩展 `DefaultTreeCellRenderer` 类的渲染器，并为每个节点设置不同的图标、字体和背景颜色。
-
 - 你可以安装实现 `TreeCellRenderer` 接口的渲染器，为每个节点绘制自定义图像。
 
 让我们逐一查看这些可能性。最简单的自定义是构造一个 `DefaultTreeCellRenderer` 对象，更改图标并将其安装到树中：
 
-```
+```java
 var renderer = new DefaultTreeCellRenderer();
+
 renderer.setLeafIcon(new ImageIcon("blue-ball.gif"));
+
 renderer.setClosedIcon(new ImageIcon("red-ball.gif"));
+
 renderer.setOpenIcon(new ImageIcon("yellow-ball.gif"));
+
 tree.setCellRenderer(renderer);
 ```
 
@@ -22379,41 +23849,57 @@ tree.setCellRenderer(renderer);
 
 我们不建议你更改整棵树的字体或背景颜色——这实际上是外观（look-and-feel）的工作。
 
-然而，更改树中某些节点的字体以突出显示它们可能是很有用的。如果你仔细观察图 12.28，你会发现抽象类被设置为了*斜体*。
+然而，更改树中某些节点的字体以突出显示它们可能是很有用的。如果你仔细观察图 12.28，你会发现抽象类被设置为了斜体。
 
 要更改单个节点的外观，请安装树单元格渲染器。树单元格渲染器与我们在本章早些时候讨论的列表单元格渲染器非常相似。`TreeCellRenderer` 接口有一个单一方法：
 
-```
-Component getCellRendererComponent(JTree tree, boolean expanded, boolean leaf, int row, boolean col);
+```java
+Component getCellRendererComponent(
+    JTree tree,
+    boolean expanded,
+    boolean leaf,
+    int row,
+    boolean col
+);
 ```
 
-`DefaultTreeCellRenderer` 类的 `getCellCellRendererComponent` 方法返回这个——换句话说，一个标签。（`DefaultTreeCellRenderer` 类继承了 `JLabel` 类）。要自定义组件，请扩展 `DefaultTreeCellRenderer` 类。重写 `getTreeCellRendererComponent` 方法如下：调用父类方法以便它可以准备标签数据，自定义属性，并最后返回它。
 
-```
+
+`DefaultTreeCellRenderer` 类的 `getCellCellRendererComponent` 方法返回这个——换句话说，一个标签。（`DefaultTreeCellRenderer` 类继承了 `JLabel` 类。）要自定义组件，请扩展 `DefaultTreeCellRenderer` 类。重写 `getTreeCellRendererComponent` 方法如下：调用父类方法，以便它可以准备标签数据，自定义属性，并最后返回它。
+
+```java
 class MyTreeCellRenderer extends DefaultTreeCellRenderer {
+
     public Component getTreeCellRendererComponent(boolean expanded, boolean leaf, int row, boolean hasFocus) {
+
         Component comp = super.getTreeCellRendererComponent(expanded, leaf, row, hasFocus);
+
         DefaultMutableTreeNode node = (DefaultMutableTreeNode) node.getUserObject();
+
         Font font = appropriate font;
+
         comp.setFont(font);
+
         return comp;
+
     }
+
 }
 ```
 
-注意：`getTableCellRendererComponent` 方法的 `value` 参数是节点对象，而不是用户对象！记住 `TreeNode` 是 `DefaultMutableTreeNode` 的特性，且 `JTree` 可以包含任意类型的节点。如果你的树使用 `DefaultMutableTreeNode` 节点，你必须像我们在之前的代码示例那样在第二步中获取用户对象。
+注意：`getTableCellRendererComponent` 方法的 `value` 参数是节点对象，而不是用户对象！记住，`TreeNode` 是 `DefaultMutableTreeNode` 的特性，且 `JTree` 可以包含任意类型的节点。如果你的树使用 `DefaultMutableTreeNode` 节点，你必须像我们在之前的代码示例那样，在第二步中获取用户对象。
 
-`DefaultTableCellRenderer` 为所有节点使用相同的标签，仅更改每个节点的标签文本。如果你更改了特定节点的字体，在再次调用该方法时必须将其恢复默认值。否则，所有后续节点都将用更改后的字体绘制！查看列表 12.10 中的代码，了解如何将字体恢复为默认。
+`DefaultTableCellRenderer` 为所有节点使用相同的标签，仅更改每个节点的标签文本。如果你更改了特定节点的字体，在再次调用该方法时必须将其恢复默认值。否则，所有后续节点都将用更改后的字体绘制！查看列表 12.10 中的代码，了解如何将字体恢复为默认值。
 
 列表 12.10 中的 `ClassNameTableCellRenderer` 根据 `Class` 对象的 `ABSTRACT` 修饰符将名称设置为普通字体或斜体字体。我们不想设置特定的字体，因为我们不想更改外观通常用于标签的任何字体。出于这个原因，我们派生了它。记住，所有调用都返回单个共享的 `JLabel` 对象。我们需要保留原始字体并恢复它。
 
-## 1.4.5. 监听树事件
+## 1.4.5 监听树事件
 
 最常见的情况是树组件与某些组件配合。当用户选择树节点时，某些信息会在另一个组件中显示。参见图 12.29。当用户选择类时，该类的实例和静态变量将会显示。
 
 要获得这种行为，你需要安装树选择监听器。监听器必须实现 `TreeSelectionListener` 接口——该接口有一个方法：
 
-```
+```java
 void valueChanged(TreeSelectionEvent event)
 ```
 
@@ -22421,19 +23907,19 @@ void valueChanged(TreeSelectionEvent event)
 
 以标准方式将监听器添加到树：
 
-```
+```java
 tree.addTreeSelectionListener(listener);
 ```
 
 你可以指定允许用户选择单个节点、连续范围节点或任意可能不连续的节点集。`JTree` 类使用 `TreeSelection` 来管理选择。你需要获取模型并将选择状态设置为 `SINGLE_TREE_SELECTION`、`CONTIGUOUS_TREE_SELECTION` 或 `DISCONTUOUS_TREE_SELECTION`。（不连续选择是默认值。）例如，在我们的类浏览器中，我们允许选择单个类：
 
-```
+```java
 int mode = TreeSelectionModel.SINGLE_TREE_SELECTION;
+
 tree.getSelectionModel().setSelectionMode(mode);
 ```
 
 除了设置选择模式外，你不需要担心树选择模型。
-
 
 ```java
 TreeView[] selectedPaths = tree.getSelectionPaths();
@@ -22443,21 +23929,27 @@ TreeView[] selectedPaths = tree.getSelectionPaths();
 
 > 注意：`TreeSelectionEvent` 类有一个 `getPaths` 方法，返回一个 `TreePath` 对象的数组，但该数组描述的是选择的变化，而不是当前的选择状态。
 
-列表 12.10 显示了类树程序的框架类。该程序显示继承层次结构，并自定义了显示方式，用*斜体*显示抽象类。（单元格渲染器请参见列表 12.11）。你可以在框架底部的文本字段中输入任何类的名称。按 Enter 键或点击 Add 按钮即可将该类及其父类添加到树树中。你必须输入完整的包名，例如 `java.util.ArrayList`。
+列表 12.10 显示了类树程序的框架类。该程序显示继承层次结构，并自定义了显示方式，用斜体显示抽象类。（单元格渲染器请参见列表 12.11。）你可以在框架底部的文本字段中输入任何类的名称。按 Enter 键或点击 Add 按钮即可将该类及其父类添加到树树中。你必须输入完整的包名，例如 `java.util.ArrayList`。
 
-这个程序有点复杂，因为它使用反射来构建类树。这项工作是在 `addClass` 方法内部完成的。（细节并不重要。我们在这个示例中使用类树是因为继承可以提供丰富的树数据源，而无需编写复杂的代码。当你在应用程序中显示树时，你将会有自己的层次结构数据源。）该方法使用广度优先搜索算法，通过调用我们在上一节中实现的 `findUserObject` 方法来查找当前类是否已经在树中。如果该类不在树中，我们将父类添加到树中，然后将新类节点变为子节点并使该节点可见。
+这个程序有点复杂，因为它使用反射来构建类树。这项工作是在 `addClass` 方法内部完成的。（细节并不重要。我们在这个示例中使用类树，是因为继承可以提供丰富的树数据源，而无需编写复杂的代码。当你在应用程序中显示树时，你将会有自己的层次结构数据源。）该方法使用广度优先搜索算法，通过调用我们在上一节中实现的 `findUserObject` 方法来查找当前类是否已经在树中。如果该类不在树中，我们将父类添加到树中，然后将新类节点变为子节点并使该节点可见。
 
 当你选择一个树时，右侧的文本区域将填充所选类的字段。在框架的构造函数中，我们将用户限制为单项选择，并添加了一个树选择监听器。当 `valueChanged` 方法被调用时，我们忽略它的事件参数，直接向树请求当前的选择路径。一如既往，我们需要获取路径的最后一个节点并查找其用户对象。然后我们调用 `getFieldDescription` 方法，该方法使用反射来汇包含所选类所有字段的字符串。
 
-# 列表 1.10 treeRender/ClassTreeFrame.java
+# 列表 1.10 `treeRender/ClassTreeFrame.java`
 
 ```java
 package treeRender;
+
 import java.awt.*;
+
 import java.awt.event.*;
+
 import java.lang.reflect.*;
+
 import java.util.*;
+
 import javax.swing.*;
+
 import javax.swing.tree.*;
 ```
 
@@ -22466,85 +23958,138 @@ import javax.swing.tree.*;
  * 此框架显示类树，一个树
  * 到树中。
  */
+
 public class ClassTreeFrame extends JFrame {
+
     private static final int DEFAULT_WIDTH = 500;
+
     private static final int DEFAULT_HEIGHT = 400;
+
     private DefaultMutableTreeNode root;
+
     private DefaultTreeModel model;
+
     private JTree tree;
+
     private JTextField textField;
+
     private JTextArea textArea;
 
     public ClassTreeFrame() {
+
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
         // 类树的根是 Object
+
         root = new DefaultMutableTreeNode(Object.class);
+
         model = new DefaultTreeModel(root);
+
         tree = new JTree(model);
 
         // 添加此类以填充树
+
         addClass(getClass());
 
         // 设置节点图标
+
         var renderer = new ClassNameTreeCellRenderer();
+
         renderer.setClosedIcon(new ImageIcon("closed.png"));
+
         renderer.setOpenIcon(new ImageIcon("open.png"));
+
         renderer.setLeafIcon(new ImageIcon("leaf.png"));
+
         tree.setCellRenderer(renderer);
 
         // 设置选择模式
+
         tree.getSelectionModel().setSelectionMode(TreeSelectionModel.SINGLE_SELECTION);
+
         tree.addTreeChangeListener(event -> {
+
             // 用户选择了不同的
+
             TreePath path = tree.getSelectionPath();
+
             if (path == null) return;
+
             var selectedNode = (DefaultMutableTreeNode) path.getLastPathComponent();
+
             Class<?> c = (Class<?>) selectedNode.getUserObject();
+
             String description = getFieldDescription(c);
+
             textArea.setText(description);
+
         });
 
         // 此区域持有类描述
+
         textArea = new JTextArea();
+
         // 添加树和文本区域
+
         var panel = new JPanel();
-        panel.setLayout(new GridLayout(1,2));
+
+        panel.setLayout(new GridLayout(1, 2));
+
         panel.add(new JScrollPane(tree));
+
         panel.add(new JScrollPane(textArea));
+
         add(panel, BorderLayout.CENTER);
 
         addTextField();
+
     }
 
     /**
      * 将文本字段和 "Add" 按钮到
      */
+
     public void addTextField() {
+
         var panel = new JPanel();
 
         ActionListener addListener = event -> {
+
             // 添加名称为的类
+
             try {
+
                 String text = textField.getText();
+
                 addClass(Class.forName(text));
+
                 textField.setText("");
+
             }
             catch (ClassNotFoundException e) {
+
                 JOptionPane.showMessageDialog(this, "Class not found");
+
             }
+
         };
 
         // 新类名输入到这里
+
         textField = new JTextField(20);
+
         textField.addActionListener(addListener);
+
         panel.add(textField);
 
         var addButton = new JButton("Add");
+
         addButton.addActionListener(addListener);
+
         panel.add(addButton);
 
         add(panel, BorderLayout.SOUTH);
+
     }
 
     /**
@@ -22552,43 +24097,70 @@ public class ClassTreeFrame extends JFrame {
      * @param obj 要查找的对象
      * @return 包含对象的节点
      */
+
     public DefaultMutableTreeNode findUserObject(Object obj) {
+
         // 查找包含用户对象的节点
+
         var e = (Enumeration<TreeNode>) root.nodes();
+
         while (e.hasMoreElements()) {
-            var node = (DefaultMutableTreeNode)e.nextElement();
+
+            var node = (DefaultMutableTreeNode) e.nextElement();
+
             if (node.getUserObject().equals(obj)) return node;
+
         }
+
         return null;
+
     }
 
     /**
      * 将类添加到树。
      * @param c 要添加的类
      */
+
     public DefaultMutableTreeNode addClass(Class c) {
+
         // 将类添加到树
+
         // 跳过非类
+
         if (c.isInterface() || c.isPrimitive()) {
+
             // 如果类已经在树中
+
             DefaultMutableTreeNode node = findUserObject(c);
+
             if (node != null) return node;
+
         }
 
         // 如果类不在--首先添加
+
         Class<?> s = c.getSuperclass();
 
         DefaultMutableTreeNode parent;
+
         if (s == null) parent = root;
+
         else parent = addClass(s);
 
         // 将类作为子节点
+
         var newNode = new DefaultMutableTreeNode(c);
+
         model.insertNodeInto(newNode, parent, parent.getChildCount());
+
         // 使节点可见
+
         var path = new TreePath(newNode);
+
         tree.makePath(path);
+
         return newNode;
+
     }
 
     /**
@@ -22596,74 +24168,101 @@ public class ClassTreeFrame extends JFrame {
      * @param c 要描述的类
      * @return 包含所有字段的字符串
      */
+
     public static String getFieldDescription(Class<?> c) {
+
         // 使用反射查找类型和字段
+
         var r = new StringBuilder();
+
         Field[] fields = c.getDeclaredFields();
+
         for (int i = 0; i < fields.length; i++) {
+
             Field f = fields[i];
+
             if (Modifier.isStatic(f.getModifiers())) {
+
                 r.append(f.getType().getName());
+
                 r.append(" ");
+
             }
+
             r.append(f.getName());
+
             r.append("\n");
+
         }
+
         return r.toString();
+
     }
+
 }
 ```
 
 ```java
 package treeRender;
+
 import java.awt.*;
+
 import java.lang.reflect.*;
+
 import javax.swing.*;
+
 import javax.swing.tree.*;
 
 /**
  * 此类渲染类名或是
  */
+
 public class ClassNameTreeCellRenderer extends DefaultTreeCellRenderer {
+
     private Font plainFont = null;
+
     private Font italicFont = null;
 
     @Override
+
     public Component getTreeCellComponent(JTree tree, Object value, boolean expanded, boolean leaf, int row, boolean hasFocus) {
+
         super.getTreeCellComponent(tree, value, expanded, leaf, row, hasFocus);
+
         // 获取用户对象
-        var node = (DefaultMutableTreeNode) value;
-        Class<?> c = (Class<?>) node.getUserObject();
-        // 第一次时，导出斜体字体
-        if (plainFont == null) {
-            plainFont = getFont();
-            // 树单元渲染器是
-            italicFont = plainFont.deriveFont(Font.ITALIC);
-        }
+```
 
-        // 如果类是抽象的，则设置字体为斜体
-        if (Modifier.isAbstract(c.getModifiers())) {
-            setFont(italicFont);
-        } else setFont(plainFont);
-        return this;
-    }
+
+
+`var node = (DefaultMutableTreeNode) value;`
+
+`Class<?> c = (Class<?>) node.getUserObject();`
+
+```java
+// 第一次时，导出斜体字体
+if (plainFont == null) {
+    plainFont = getFont();
+    // 树单元渲染器是
+    italicFont = plainFont.deriveFont(Font.ITALIC);
 }
+
+// 如果类是抽象的，则设置字体为斜体
+if (Modifier.isAbstract(c.getModifiers())) {
+    setFont(italicFont);
+} else setFont(plainFont);
+
+return this;
 ```
 
+`javax.swing.event.TreeSelectionListener` 1.2
 
-```
-javax.swing.event.TreeSelectionListener 1.2
-```
-
-- void valueChanged(TreeSelectionEvent event)
+- `void valueChanged(TreeSelectionEvent event)`
   每当节点被选择或取消选择时，都会调用此方法。
 
-```
-javax.swing.event.TreeSelectionEvent 1.2
-```
+`javax.swing.event.TreeSelectionEvent` 1.2
 
-- TreePath getPath()
-- TreePath[] getPaths()
+- `TreePath getPath()`
+- `TreePath[] getPaths()`
 获取在此选择事件中发生变化的第一个路径或所有路径。如果你想知道当前的选择而非选择的变化，请调用 `JTree.getSelectionPaths`。
 
 ## 1.4.6. 自定义树模型
@@ -22680,7 +24279,7 @@ javax.swing.event.TreeSelectionEvent 1.2
 
 `TreeModel` 接口只有几个方法。第一组方法允许 `JTree` 通过首先获取根节点，然后获取子节点来查找树节点。`JTree` 类仅在用户实际展开节点时才调用这些方法。
 
-```
+```java
 Object getRoot()
 int getChildCount(Object parent)
 Object getChild(Object parent, int index)
@@ -22690,7 +24289,7 @@ Object getChild(Object parent, int index)
 
 `TreeModel` 接口的下一个方法是 `getChild` 的反向操作：
 
-```
+```java
 int getIndexOfOfChild(Object parent, Object child)
 ```
 
@@ -22698,13 +24297,13 @@ int getIndexOfOfChild(Object parent, Object child)
 
 树模型负责告诉 `JTree` 哪些节点应该显示为叶子节点：
 
-```
+```java
 boolean isLeaf(Object node)
 ```
 
 如果你的代码更改了树模型，则需要通知树以便它可以重绘自己。树将自己作为 `TreeModelListener` 添加到模型中。因此，模型必须支持常用的监听器管理方法：
 
-```
+```java
 void addTreeModelListener(TreeModelListener l)
 void removeTreeModelListener(TreeModelListener l)
 ```
@@ -22713,7 +24312,7 @@ void removeTreeModelListener(TreeModelListener l)
 
 当模型修改树的内容时，它会调用 `TreeModelListener` 接口的四个方法之一：
 
-```
+```java
 void treeNodesChanged(TreeModelEvent e)
 void treeNodesInserted(TreeModelEvent e)
 void treeNodesRemoved(TreeModelEvent e)
@@ -22726,7 +24325,7 @@ void treeStructureChanged(TreeModelEvent e)
 
 最后，如果用户编辑了树节点，你的模型将被调用并传入该更改：
 
-```
+```java
 void valueForPathChanged(TreePath path, Object newValue)
 ```
 
@@ -22734,7 +24333,7 @@ void valueForPathChanged(TreePath path, Object newValue)
 
 如果你不需要支持编辑，构建树模型是非常简单的。实现这三个方法：
 
-```
+```java
 Object getRoot()
 int getChildCount(Object parent)
 Object getChild(Object parent, int index)
@@ -22748,19 +24347,19 @@ Object getChild(Object parent, int index)
 
 例如，假设你正在检查变量
 
-```
+```java
 Employee joe;
 ```
 
 该变量类型为 `Employee.class`，名称为 `"joe"`，并且有一个值——对象引用 `joe` 的值。在列表 12.14 中，我们定义了一个 `Variable` 类来描述程序中的变量：
 
-```
+```java
 var v = new Variable(Employee.class, "joe", joe);
 ```
 
 如果变量的类型是基本类型，你必须为值使用对象包装类。
 
-```
+```java
 new Variable(double.class, "salary", salary);
 ```
 
@@ -22772,7 +24371,7 @@ new Variable(double.class, "salary", salary);
 
 让我们继续树模型。前两个方法非常简单。
 
-```
+```java
 public Object getRoot()
 {
     return root;
@@ -22788,7 +24387,7 @@ public int getChildCount(Object parent)
 
 以下是 `getChild` 方法的完整代码：
 
-```
+```java
 public Object getChild(Object parent, int index)
 {
     ArrayList fields = ((Variable) parent).getFields();
@@ -22804,8 +24403,6 @@ public Object getChild(Object parent, int index)
 
 这三个方法向 `JTree` 组件揭示了树的结构。其余方法是常规的——见列表 12.13 中的源码。
 
-
-
 ```java
 public ObjectInspectorFrame() 
 {
@@ -22814,7 +24411,6 @@ public ObjectInspectorFrame()
     var v = new Variable(getClass(), "this");
     var model = new ObjectTableModel();
     model.setRoot(v);
-
     // 构建并显示树
     tree = new JTree(model);
     add(new JScrollPane(tree), BorderLayout.CENTER);
@@ -22825,10 +24421,12 @@ public ObjectInspectorFrame()
 
 ```java
 package treeModel;
+
 import java.lang.reflect.*;
 import java.util.*;
 import javax.swing.event.*;
 import javax.swing.tree.*;
+
 /**
  * 此树模型描述了存储在
  * 实例变量中的树结构。
@@ -22883,32 +24481,27 @@ public class ObjectTreeModel implements Tree {
         return -1;
     }
 
-    public boolean isLeaf(Object node)
-    {
+    public boolean isLeaf(Object node) {
         return getChildCount(node) == 0;
     }
 
-    public void valueForPathChanged(TreePath path)
-    {
+    public void valueForPathChanged(TreePath path) {
     }
 
-    public void addTreeModelListener(TreeModel listener)
-    {
+    public void addTreeModelListener(TreeModel listener) {
         if (listenerList == null) {
             listenerList = new EventListenerList();
         }
         listenerList.add(TreeModelListener.class, listener);
     }
 
-    public void removeTreeModelListener(TreeModel listener)
-    {
+    public void removeTreeModelListener(TreeModel listener) {
         if (listenerList != null) {
             listenerList.remove(TreeModelListener.class, listener);
         }
     }
 
-    protected void fireTreeStructureChanged(TreeModelEvent event)
-    {
+    protected void fireTreeStructureChanged(TreeModelEvent event) {
         for (TreeModelListener listener : (TreeModelListener[]) listenerList.getListenerListeners(TreeModelListener.class)) {
             listener.treeStructureChanged(event);
         }
@@ -22927,8 +24520,7 @@ import java.util.*;
 /**
  * 具有类型、名称和值的变量。
  */
-public class Variable
-{
+public class Variable {
     private Class<?> type;
     private String name;
     private Object value;
@@ -22940,20 +24532,16 @@ public class Variable
      * @param aName 名称
      * @param aValue 值
      */
-    public Variable(Class<?> aType, String aName, Object value)
-    {
+    public Variable(Class<?> aType, String aName, Object value) {
         type = aType;
         name = aName;
         value = aValue;
         fields = new ArrayList<>();
-
         // 如果有类，则查找所有字段
         // 空值处理
-        if (!type.isPrimitive() && !type.isArray() && value != null)
-        {
+        if (!type.isPrimitive() && !type.isArray() && value != null) {
             // 从类及其祖类中获取字段
-            for (Class<?> c = value.getClass())
-            {
+            for (Class<?> c = value.getClass()) {
                 Field[] fs = c.getDeclaredFields();
                 for (Field f : fs) {
                     // 获取所有静态字段
@@ -22962,33 +24550,35 @@ public class Variable
                         fields.add(f);
                     }
                 }
-                if (c.getSuperclass() == Object.class) break;
             }
         }
-    }
-
-    /**
-     * 获取此变量的值。
-     * @return 值
-     */
-    public Object getValue()
-    {
-        return value;
-    }
-
-    /**
-     * 获取此变量的所有非静态字段
-     * @return 变量的列表
-     */
-    public ArrayList<Field> getFields()
-    {
-        return fields;
     }
 }
 ```
 
 
 
+```java
+if (c.getSuperclass() == Object.class) break;
+```
+
+```java
+/**
+ * 获取此变量的值。
+ * @return 值
+ */
+public Object getValue() {
+    return value;
+}
+
+/**
+ * 获取此变量的所有非静态字段
+ * @return 变量的列表
+ */
+public ArrayList<Field> getFields() {
+    return fields;
+}
+```
 
 ```java
 g2.draw(shape);
@@ -23007,11 +24597,11 @@ g2.fill(shape);
 
 在渲染流水线中，会执行以下步骤来渲染形状：
 
-- 1. 对形状的路径进行描边。
-- 2. 对形状进行变换。
-- 3. 对形状进行裁剪。如果形状与裁剪区域之间没有交集，则停止处理。
-- 4. 填充裁剪后的形状剩余部分。
-- 5. 将填充形状的像素与现有像素进行合成。（在图 12.31 中，圆是现有像素的一部分，杯形形状叠加在其上方。）
+1. 对形状的路径进行描边。
+2. 对形状进行变换。
+3. 对形状进行裁剪。如果形状与裁剪区域之间没有交集，则停止处理。
+4. 填充裁剪后的形状剩余部分。
+5. 将填充形状的像素与现有像素进行合成。（在图 12.31 中，圆是现有像素的一部分，杯形形状叠加在其上方。）
 
 在在节节中，你将看到如何定义形状。然后，我们将转向 2D 图形文上下文的设置。
 
@@ -23019,14 +24609,14 @@ g2.fill(shape);
 java.awt.Graphics2D 1.2
 ```
 
-- void draw(Shape s) 使用当前画笔绘制给定形状的轮廓。
-- void fill(Shape s) 使用当前画笔填充给定形状的内部。
+- `void draw(Shape s)` 使用当前画笔绘制给定形状的轮廓。
+- `void fill(Shape s)` 使用当前画笔填充给定形状的内部。
 
-## # 1.5.2. Shape 类层次结构
+## 1.5.2. Shape 类层次结构
 
-这里是 Graphics 类中用于绘制形状的一些方法。
+这里是 `Graphics` 类中用于绘制形状的一些方法：
 
-```
+```text
 drawLine
 drawRectangle
 drawRoundRect
@@ -23037,9 +24627,9 @@ drawOval
 drawArc
 ```
 
-还有对应的填充方法。这些方法自 JDK 1.0 以来一直存在于 Graphics 类中。Java 2D API 使用了完全不同的面向对象的方法。取而代之的方法是类：
+还有对应的填充方法。这些方法自 JDK 1.0 以来一直存在于 `Graphics` 类中。Java 2D API 使用了完全不同的面向对象的方法。取而代之的方法是类：
 
-```
+```text
 Line2D
 Rectangle2D
 RoundRect2D
@@ -23050,43 +24640,43 @@ CubicCurve2D
 GeneralPath
 ```
 
-这些类都实现了 Shape 接口，我们将在接下来的章节中检查该接口。
+这些类都实现了 `Shape` 接口，我们将在接下来的章节中检查该接口。
 
-Line2D、Rectangle2D、RoundRectangle2D、Ellipse2D 和 Arc2D 类分别对应 drawLine、drawRectangle、drawRoundRect、drawOval 和 drawArc 方法。（“3D 矩形”的概念已经走向了它应得的死亡——没有 draw3DRect 方法对应的方法。）Java 2D API 还提供了两个额外的类，即二次曲线和三次曲线，我们将在本节中讨论它们。并没有 Polygon2D 类；相反，GeneralPath 类描述了由直线、二次曲线和三次曲线组成的路径。你可以使用 GeneralPath 来描述多边形；我们将在本节稍后展示。
+`Line2D`、`Rectangle2D`、`RoundRectangle2D`、`Ellipse2D` 和 `Arc2D` 类分别对应 `drawLine`、`drawRectangle`、`drawRoundRect`、`drawOval` 和 `drawArc` 方法。（“3D 矩形”的概念已经走向了它应得的死亡——没有 `draw3DRect` 方法对应的方法。）Java 2D API 还提供了两个额外的类，即二次曲线和三次曲线，我们将在本节中讨论它们。并没有 `Polygon2D` 类；相反，`GeneralPath` 类描述了由直线、二次曲线和三次曲线组成的路径。你可以使用 `GeneralPath` 来描述多边形；我们将在本节稍后展示。
 
-要绘制形状，首先创建一个实现 Shape 接口类的对象，然后调用 Graphics2D 类的 draw 方法。
+要绘制形状，首先创建一个实现 `Shape` 接口类的对象，然后调用 `Graphics2D` 类的 `draw` 方法。
 
-这些类
+这些类：
 
-- Rectangle2D
-- RoundRectangle2D
-- Ellipse2D
-- Arc2D
+- `Rectangle2D`
+- `RoundRectangle2D`
+- `Ellipse2D`
+- `Arc2D`
 
-都继承自共同父类 RectangularShape。诚然，椭圆和弧不是矩形，但它们有一个边界矩形（见图 12.32）。
+都继承自共同父类 `RectangularShape`。诚然，椭圆和弧不是矩形，但它们有一个边界矩形（见图 12.32）。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1456_0.png)
 
 **图 1.32：** 椭圆和弧的边界矩形
 
-每个以“2D”结尾的类都有两个子类，用于指定 **float** 或 **double** 类型的坐标。在第一卷中，你已经遇到过 `Rectangle2D.Float` 和 `Rectangle2D.Double`。
+每个以“2D”结尾的类都有两个子类，用于指定 `float` 或 `double` 类型的坐标。在第一卷中，你已经遇到过 `Rectangle2D.Float` 和 `Rectangle2D.Double`。
 
-其他类也使用了相同的方案，例如 **Arc2D.Float** 和 **Arc2D.Double**。
+其他类也使用了相同的方案，例如 `Arc2D.Float` 和 `Arc2D.Double`。
 
-内部，所有图形类都使用 **float** 坐标，因为 **float** 数字使用的存储空间较少，但对于几何计算来说具有足够的精度。然而，Java 编程语言处理 **float** 数字变得稍微繁琐。因此，图形类的大多数方法使用 **double** 参数和返回值。在构造 2D 对象时，你需要在带有 **float** 坐标和 **double** 坐标的构造函数之间选择。例如，
+内部，所有图形类都使用 `float` 坐标，因为 `float` 数字使用的存储空间较少，但对于几何计算来说具有足够的精度。然而，Java 编程语言处理 `float` 数字变得稍微繁琐。因此，图形类的大多数方法使用 `double` 参数和返回值。在构造 2D 对象时，你需要在带有 `float` 坐标和 `double` 坐标的构造函数之间选择。例如：
 
 ```java
 var floatRect = new Rectangle2D.Float(5F, 10F, 7);
 var doubleRect = new Rectangle2D.Double(5, 10, 7);
 ```
 
-Xxx2D.Float 和 Xxx2D.Double 类是 Xxx2D 类的子类。在对象构造后，记住子类几乎没有任何好处，你可以像代码示例那样，将构造的对象存储在父类变量中。
+`Xxx2D.Float` 和 `Xxx2D.Double` 类是 `Xxx2D` 类的子类。在对象构造后，记住子类几乎没有任何好处，你可以像代码示例那样，将构造的对象存储在父类变量中。
 
-如你从这些奇怪的名字中所示，Xxx2D.Float 和 Xxx2D.Double 类是 Xxx2D 类的子类。最后，Point2D 类描述了一个具有 x 和 y 坐标的点。Point2D.Float 和 Point2D.Double 类是 Point2D 类的子类。
+如你从这些奇怪的名字中所示，`Xxx2D.Float` 和 `Xxx2D.Double` 类是 `Xxx2D` 类的子类。最后，`Point2D` 类描述了一个具有 `x` 和 `y` 坐标的点。`Point2D.Float` 和 `Point2D.Double` 类是 `Point2D` 类的子类。
 
-## ### 1.5.3. 构造形状
+## 1.5.3. 构造形状
 
-你已经在之前的章节学习了如何使用 Rectangle2D、Ellipse2D 和 Line2D 类。在本节中，你将学习如何处理剩余的类。对于 Rectangle2D，指定左上角坐标、宽度和高度（见图 12.34）。例如，调用
+你已经在之前的章节学习了如何使用 `Rectangle2D`、`Ellipse2D` 和 `Line2D` 类。在本节中，你将学习如何处理剩余的类。对于 `Rectangle2D`，指定左上角坐标、宽度和高度（见图 12.34）。例如，调用：
 
 ```java
 var r = new Rectangle2D(150, 200, 100, 20);
@@ -23094,7 +24684,7 @@ var r = new Rectangle2D(150, 200, 100, 20);
 
 产生一个矩形。
 
-要构造弧，指定边界框、起始角度、弧的范围（见图 12.35）以及闭合类型——Arc2D.OPEN、Arc2D.PIE 或 Arc2D.CHORD。
+要构造弧，指定边界框、起始角度、弧的范围（见图 12.35）以及闭合类型——`Arc2D.OPEN`、`Arc2D.PIE` 或 `Arc2D.CHORD`。
 
 ```java
 var a = new Arc2D(x, y, width, height, startAngle, extent, Arc2D.OPEN);
@@ -23106,7 +24696,7 @@ var a = new Arc2D(x, y, width, height, startAngle, extent, Arc2D.OPEN);
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1459_0.png)
 
-**图 12.34：** 构造 Rectangle2D
+**图 12.34：** 构造 `Rectangle2D`
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1460_0.png)
 
@@ -23118,7 +24708,7 @@ var a = new Arc2D(x, y, width, height, startAngle, extent, Arc2D.OPEN);
 
 > **注意：如果弧是椭圆，角度的计算并不简单。** API 文档指出：“角度相对于非正方形框架指定，使得 45 度始终落在从椭圆中心到框架框右上角的直线上。因此，如果框架框在某个轴上明显长于另一个轴，弧的起始和结束角度将沿长轴倾斜。”遗憾的是，文档没有说明如何计算这种“倾斜”。细节如下：
 
-假设弧的中心为原点，点 (x, y) 在弧上。你可以使用以下公式获取倾斜角：
+假设弧的中心为原点，点 `(x, y)` 在弧上。你可以使用以下公式获取倾斜角：
 
 ```java
 skewedAngle = Math.toDegrees(Math.atan2(-y * height, x));
@@ -23130,10 +24720,6 @@ skewedAngle = Math.toDegrees(Math.atan2(-y * height, x));
 
 Java 2D API 支持二次曲线和三次曲线。在本章中，我们不涉及这些曲线的数学原理。你可以通过运行列表 12.15 中的程序来感受曲线的外观。二次曲线由两个端点和一个控制点指定（见图 12.37）。三次曲线（图 12.38）有两个控制点。移动控制点会改变曲线的形状。
 
-
-
-
-
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1463_0.png)
 
 图 1.37：二次曲线
@@ -23144,25 +24730,27 @@ Java 2D API 支持二次曲线和三次曲线。在本章中，我们不涉及�
 
 要构造二次曲线和三次曲线，需要提供端点的坐标和控制点。例如：
 
-```
-var q = new QuadCurve2D.Double(startX, startY, c, endY)
-var c = new CubicCurve2D.Double(startX, startY, 
-control2X, control2Y, endX, endY);
+```java
+var q = new QuadCurve2D.Double(startX, startY, c, endY);
+
+var c = new CubicCurve2D.Double(startX, startY,
+    control2X, control2Y, endX, endY);
 ```
 
 二次曲线并不十分灵活，在实践中并不常用。然而，三次曲线（例如由 `CubicCurve2D` 类绘制的贝塞尔曲线）非常常见。通过组合三次曲线并使连接处的斜率匹配，你可以创建复杂的、视觉上平滑的曲线形状。更多信息请参阅 John F. Hughes 等人编写的《计算机图形学：原理与实践（第三版）》。
 
 你可以构建线段、二次曲线和三次曲线的任意序列，并将它们存储在 `GeneralPath` 对象中。使用 `moveTo` 方法指定路径的第一个坐标，例如：
 
-```
+```java
 var path = new GeneralPath();
 path.moveTo(10, 20);
 ```
 
 然后你可以调用 `lineTo`、`quadTo` 或 `curveTo` 中的任意方法来扩展路径。这些方法分别通过直线、二次曲线或三次曲线来扩展路径。调用 `lineTo` 时，提供端点。对于两个曲线方法，先提供控制点，然后提供端点。例如：
 
-```
+```java
 path.lineTo(20, 30);
+
 path.curveTo(control1X, control1Y, control2X, control2Y,
 ```
 
@@ -23174,14 +24762,14 @@ path.curveTo(control1X, control1Y, control2X, control2Y,
 
 最后，你可以使用 `append` 方法将任意的 `Shape` 对象添加到通用路径中。如果新形状应该连接到路径上的最后一个点，则 `append` 方法的第二个参数设为 `true`，否则为 `false`。例如，以下调用：
 
-```
+```java
 Rectangle2D r = . . ;
 path.append(r, false);
 ```
 
-会将矩形的轮廓添加到路径末尾，但不会将其与现有路径连接。但是
+会将矩形的轮廓添加到路径末尾，但不会将其与现有路径连接。但是：
 
-```
+```java
 path.append(r, true);
 ```
 
@@ -23199,9 +24787,9 @@ path.append(r, true);
 
 该程序有点复杂，因为它处理了多种形状并支持控制点的拖拽。
 
-抽象父类 `ShapeMaker` 封装了形状生成器类的共性部分。每个形状都有固定数量的控制点，用户可以移动这些点。`getPointCount` 方法返回该值。抽象方法
+抽象父类 `ShapeMaker` 封装了形状生成器类的共性部分。每个形状都有固定数量的控制点，用户可以移动这些点。`getPointCount` 方法返回该值。抽象方法：
 
-```
+```java
 Shape makeShape(Point2D[] points)
 ```
 
@@ -23217,13 +24805,21 @@ Shape makeShape(Point2D[] points)
 
 ```java
 1 package shape;
-2 
+
+2
+
 3 import java.awt.*;
+
 4 import java.awt.event.*;
+
 5 import java.awt.geom.*;
+
 6 import java.util.*;
+
 7 import java.util.random.*;
+
 8 import javax.swing.*;
+
 9
 
 /**
@@ -23263,23 +24859,28 @@ class ShapeComponent extends JComponent {
         addMouseListener(new MouseAdapter() {
             public void mousePressed(MouseEvent event) {
                 Point p = event.getPoint();
+
                 for (int i = 0; i < points.length; i++) {
                     double x = points[i].getX();
                     double y = points[i].getY();
                     var r = new Rectangle2D.Double(x, y);
+
                     if (r.contains(p)) {
                         current = i;
                         return;
                     }
                 }
             }
+
             public void mouseReleased(MouseEvent event) {
                 current = -1;
             }
         });
+
         addMouseMotionListener(new MouseAdapter() {
             public void mouseDragged(MouseEvent event) {
                 if (current == -1) return;
+
                 points[current] = event.getPoint();
                 repaint();
             }
@@ -23291,27 +24892,39 @@ class ShapeComponent extends JComponent {
      * @param aShapeMaker 创建形状的生成器
      */
     public void setShapeMaker(ShapeMaker aShapeMaker) {
-        shapeMaker = aShapeMaker;
-        int n = shapeMaker.getPointCount();
-        points = new Point2D[n];
-        for (int i = 0; i < n; i++) {
-            double x = generator.nextDouble() * 200;
-            double y = generator.nextDouble() * 200;
-            points[i] = new Point2D.Double(x, y);
-        }
-        repaint();
+```
+
+
+
+```java
+shapeMaker = aShapeMaker;
+
+int n = shapeMaker.getPointCount();
+
+points = new Point2D[n];
+
+for (int i = 0; i < n; i++) {
+    double x = generator.nextDouble() * 200;
+    double y = generator.nextDouble() * 200;
+    points[i] = new Point2D.Double(x, y);
+}
+
+repaint();
+}
+
+public void paintComponent(Graphics g) {
+    if (points == null) return;
+
+    var g2 = (Graphics2D) g;
+
+    for (int i = 0; i < points.length; i++) {
+        double x = points[i].getX() - SIZE;
+        double y = points[i].getY() - SIZE;
+        g2.fill(new Rectangle2D.Double(x, y));
     }
 
-    public void paintComponent(Graphics g) {
-        if (points == null) return;
-        var g2 = (Graphics2D) g;
-        for (int i = 0; i < points.length; i++) {
-            double x = points[i].getX() - SIZE;
-            double y = points[i].getY() - SIZE;
-            g2.fill(new Rectangle2D.Double(x, y));
-        }
-        g2.draw(shapeMaker.makeShape(points));
-    }
+    g2.draw(shapeMaker.makeShape(points));
+}
 }
 
 /**
@@ -23320,14 +24933,14 @@ class ShapeComponent extends JComponent {
  */
 abstract class ShapeMaker {
     private int pointCount;
+
     public int getPointCount() {
         return pointCount;
     }
+
     abstract Shape makeShape(Point2D[] points);
 }
 ```
-
-
 
 ```java
 /**
@@ -23367,35 +24980,38 @@ public String toString()
 }
 ```
 
-178 }
-179 }
-180 
-181 /**
-182  * 创建一条连接两个给定点的线
-183 */
-184 class LineMaker extends ShapeMaker
-185 {
-186   public LineMaker()
-187   {
-188      super(2);
-189   }
-190 
-191   public Shape makeShape(Point2D[] p)
-192   {
-193      return new Line2D.Double(p[0], p[1]);
-194   }
-195 }
-196 
-197 /**
-198  * 创建一个连接两个给定点的矩形
-199 */
-200 class RectangleMaker extends ShapeMaker
-201 {
-202   public RectangleMaker()
-203   {
-204      super(2);
-205   }
-206 }
+```java
+}
+}
+
+/**
+ * 创建一条连接两个给定点的线
+ */
+class LineMaker extends ShapeMaker
+{
+    public LineMaker()
+    {
+        super(2);
+    }
+
+    public Shape makeShape(Point2D[] p)
+    {
+        return new Line2D.Double(p[0], p[1]);
+    }
+}
+
+/**
+ * 创建一个连接两个给定点的矩形
+ */
+class RectangleMaker extends ShapeMaker
+{
+    public RectangleMaker()
+    {
+        super(2);
+    }
+}
+```
+
 ```java
 public Shape makeShape(Point2D[] p)
 {
@@ -23413,44 +25029,50 @@ class RoundRectangleMaker extends ShapeMaker {
     public RoundRectangleMaker() {
         super(2);
     }
+
     public Shape makeShape(Point2D[] p)
-{
-    var s = new Rectangle2D.Double();
-    s.setFrameFromDiagonal(p[0], p[1]);
-    return s;
+    {
+        var s = new Rectangle2D.Double();
+        s.setFrameFromDiagonal(p[0], p[1]);
+        return s;
+    }
 }
+```
+
+```java
 /**
-```java
-234   * 创建一个包含在边界框内的椭圆
-235   */
-236 class EllipseMaker extends ShapeMaker
-237  {
-238     public EllipseMaker()
-239   {
-240       super(2);
-241     }
-242 
-243   public Shape makeShape(Point2D[] p)
-244     {
-245       var s = new Ellipse2D.Double();
-246       s.setFrameFromDiagonal(p[0], p[1]);
-247       return s;
-248     }
-249 }
-250 
-251   /**
-252   * 创建一个包含在边界框内，并由
-253   * 从两个给定点发出的线定义的起始和结束角度
-254   * 的弧。为了显示正确的-
-255   * 包含弧、边界框和
-256   */
-227 class ArcMaker extends ShapeMaker
-258  {
-259   public ArcMaker()
-260   {
-261     super(4);
-```java
+ * 创建一个包含在边界框内的椭圆
+ */
+class EllipseMaker extends ShapeMaker
+{
+    public EllipseMaker()
+    {
+        super(2);
+    }
+
+    public Shape makeShape(Point2D[] p)
+    {
+        var s = new Ellipse2D.Double();
+        s.setFrameFromDiagonal(p[0], p[1]);
+        return s;
+    }
 }
+
+/**
+ * 创建一个包含在边界框内，并由
+ * 从两个给定点发出的线定义的起始和结束角度
+ * 的弧。为了显示正确的-
+ * 包含弧、边界框和
+ */
+class ArcMaker extends ShapeMaker
+{
+    public ArcMaker()
+    {
+        super(4);
+    }
+```
+
+```java
 public Shape makeShape(Point2D[] p)
 {
     double centerX = (p[0].getX() + p[1].getX()) / 2.0;
@@ -23458,26 +25080,41 @@ public Shape makeShape(Point2D[] p)
     double width = Math.abs(p[1].getX() - p[0].getX());
     double height = Math.abs(p[1].getY() - p[0].getY());
 
-    double skewedStartAngle = Math.atan2(p[2].getY() - centerY, p[2].getX() - centerX) * height;
-    double skewedEndAngle = Math.atan2(p[3].getY() - centerY, p[3].getX() - centerX) * height;
+    double skewedStartAngle =
+        Math.atan2(p[2].getY() - centerY, p[2].getX() - centerX) * height;
+
+    double skewedEndAngle =
+        Math.atan2(p[3].getY() - centerY, p[3].getX() - centerX) * height;
+
     if (skewedStartAngle < 0) skewedStartAngle += 2 * Math.PI;
+
     if (skewedAngleDifference < 0) skewedAngleDifference += 2 * Math.PI;
 
-    var s = new Arc2D.Double(0, 0, 0, 0, skewedStartAngle, skewedAngleDifference);
+    var s = new Arc2D.Double(
+        0, 0, 0, 0, skewedStartAngle, skewedAngleDifference
+    );
+
     s.setFrameFromDiagonal(p[0], p[1]);
 
     var g = new GeneralPath();
     g.append(s, false);
+
     var r = new Rectangle2D.Double();
     r.setFrameFromDiagonal(p[0], p[1]);
     g.append(r, false);
+
     var center = new Point2D.Double(centerX, centerY);
     g.append(new Line2D.Double(center, p[0]));
+```
+
 ```java
 g.append(new Line2D.Double(center, p[
-  return g;
+return g;
 }
 }
+```
+
+```java
 /**
  * 创建一个由六个角点定义的多边形
  */
@@ -23485,17 +25122,21 @@ class PolygonMaker extends ShapeMaker {
     public PolygonMaker() {
         super(6);
     }
+
     public Shape makeShape(Point2D[] p)
     {
         var s = new GeneralPath();
         s.moveTo((float) p[0].getX(), (float) p[0].getY());
+
         for (int i = 1; i < p.length; i++) {
             s.lineTo((float) p[i].getX(), (float) p[i].getY());
         }
+
         s.closePath();
         return s;
     }
 }
+
 /**
  * 创建由两个点定义的二次贝曲线
  */
@@ -23505,9 +25146,12 @@ class QuadCurveMaker extends ShapeMaker {
     }
 
     public Shape makeShape(Point2D[] p) {
-        return new Quad2D.Double(p[0].getX(), p[2].getX(), p[2].getY());
+        return new Quad2D.Double(
+            p[0].getX(), p[2].getX(), p[2].getY()
+        );
     }
 }
+
 /**
  * 创建由两个点定义的三次贝曲线
  */
@@ -23517,37 +25161,50 @@ class CubicCurveMaker extends ShapeMaker {
     }
 
     public Shape makeShape(Point2D[] p) {
-        return new Cubic2D.Double(p[0].getX(), p[2].getX(), p[2].getY());
+        return new Cubic2D.Double(
+            p[0].getX(), p[2].getX(), p[2].getY()
+        );
     }
 }
-346 p[2].getX(), p[2].getY(), 
-347 }
-348 }
+```
 
-## java.awt.geom.RoundRect2D 1.2
-- RoundRectangleD.Double(double x, double y, double width, double height, double arcWidth, double arcHeight) 根据给定的边界框和弧尺寸创建一个圆角矩形。关于 arcWidth 和 arcHeight 请见图12.3。
+```java
+p[2].getX(), p[2].getY(),
+}
+}
+```
 
-## java.awt.geom.Arc2D 1.2
-- Arc2D.Double(double x, double y, double w, double h, double startAngle, double arcAngle, int type) 根据给定的边界框、起始角度和类型创建一个弧。startAngle 和 arcAngle 如图12.3所示。type 是 Arc2D.OPEN、Arc2D.PIE 或 Arc2D.CHORD 之一。
+## `java.awt.geom.RoundRect2D` 1.2
 
-## java.awt.geom.QuadCurveD.Double 1.2
-- QuadCurveD.Double(double x1, double y1, double ctrlx, double ctrly, x2, double y2) 从起始点、控制点和终点创建一个二次曲线。
+- `RoundRectangleD.Double(double x, double y, double width, double height, double arcWidth, double arcHeight)` 根据给定的边界框和弧尺寸创建一个圆角矩形。关于 `arcWidth` 和 `arcHeight` 请见图 12.3。
 
-## java.awt.geom.CubicCurveD.Double 1.2
-- CubicCurveD.Double(double x1, double y1, double ctrlx1, double ctrly1, x2, double y2) 从起始点、两个控制点和终点创建一个三次曲线。
+## `java.awt.geom.Arc2D` 1.2
 
-## java.awt.geom.GeneralPath 1.2
-- GeneralPath() 创建一个空路径。
+- `Arc2D.Double(double x, double y, double w, double h, double startAngle, double arcAngle, int type)` 根据给定的边界框、起始角度和类型创建一个弧。`startAngle` 和 `arcAngle` 如图 12.3 所示。`type` 是 `Arc2D.OPEN`、`Arc2D.PIE` 或 `Arc2D.CHORD` 之一。
 
-## java.awt.geom.Path2D.Float 6
-- moveTo(float x, float y) 将 (x, y) 设置为当前点——即下一个线段的起点。
-- lineTo(float x, float y)
-- quadTo(float ctrl1x, float ctrly, float x, float y)
-- curveTo(float ctrl1x, float ctrl1y, float ctrl2x, float ctrl2y, float x, float y) 从当前点到终点 (x, y) 绘制线、二次曲线或三次曲线，并将该终点设置为当前点。
+## `java.awt.geom.QuadCurveD.Double` 1.2
 
-## java.awt.geom.Path2D 6
-- void append(Shape s, boolean connect) 将给定形状的轮廓添加到通用路径。如果 connect 为 true，则通过直线将通用路径的当前点连接到添加形状的起点。
-- void closePath() 通过从当前点到路径中的第一个点绘制直线来关闭路径。
+- `QuadCurveD.Double(double x1, double y1, double ctrlx, double ctrly, x2, double y2)` 从起始点、控制点和终点创建一个二次曲线。
+
+## `java.awt.geom.CubicCurveD.Double` 1.2
+
+- `CubicCurveD.Double(double x1, double y1, double ctrlx1, double ctrly1, x2, double y2)` 从起始点、两个控制点和终点创建一个三次曲线。
+
+## `java.awt.geom.GeneralPath` 1.2
+
+- `GeneralPath()` 创建一个空路径。
+
+## `java.awt.geom.Path2D.Float` 6
+
+- `moveTo(float x, float y)` 将 `(x, y)` 设置为当前点——即下一个线段的起点。
+- `lineTo(float x, float y)`
+- `quadTo(float ctrl1x, float ctrly, float x, float y)`
+- `curveTo(float ctrl1x, float ctrl1y, float ctrl2x, float ctrl2y, float x, float y)` 从当前点到终点 `(x, y)` 绘制线、二次曲线或三次曲线，并将该终点设置为当前点。
+
+## `java.awt.geom.Path2D` 6
+
+- `void append(Shape s, boolean connect)` 将给定形状的轮廓添加到通用路径。如果 `connect` 为 `true`，则通过直线将通用路径的当前点连接到添加形状的起点。
+- `void closePath()` 通过从当前点到路径中的第一个点绘制直线来关闭路径。
 
 # 1.5.4. Areas
 
@@ -23555,16 +25212,18 @@ class CubicCurveMaker extends ShapeMaker {
 
 有时，通过组合区域（如矩形、多边形或椭圆）来描述形状更容易。Java 2D API 支持四个区域几何操作，可以将两个区域合并为一个新区域。
 
-- add: 合并区域包含第一个或第二个区域的所有点。
-- subtract: 合并区域包含第一个但不在第二个区域的所有点。
-- intersect: 合并区域包含第一个和第二个区域的所有点。
-- exclusiveOr: 合并区域包含位于第一个或第二个区域中但不在两者之中的点。
+- `add`：合并区域包含第一个或第二个区域的所有点。
+- `subtract`：合并区域包含第一个但不在第二个区域的所有点。
+- `intersect`：合并区域包含第一个和第二个区域的所有点。
+- `exclusiveOr`：合并区域包含位于第一个或第二个区域中但不在两者之中的点。
 
-图12.40 显示了这些操作。
+图 12.40 显示了这些操作。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1484.png)
+
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1485.png)
-图12.40: 区域构造操作
+
+图 12.40：区域构造操作
 
 要构造复杂的区域，请从默认区域对象开始。
 
@@ -23576,6 +25235,7 @@ var a = new Area();
 
 ```java
 a.add(new Rectangle2D.Double(. .));
+
 a.subtract(path);
 
 . . .
@@ -23583,11 +25243,9 @@ a.subtract(path);
 
 # 1.5.5. Strokes
 
-Graphics2D 类的 draw 操作使用当前选择的笔画绘制形状的边界。默认情况下，笔画是宽度为 1 像素的实线。可以通过调用 stroke 方法并提供实现 Stroke 接口的类的对象来选择不同的笔画。Java 2D API 只定义了一个这样的类，称为 BasicStroke。在本节中，我们将查看 BasicStroke 类的功能。
+`Graphics2D` 类的 `draw` 操作使用当前选择的笔画绘制形状的边界。默认情况下，笔画是宽度为 1 像素的实线。可以通过调用 `stroke` 方法并提供实现 `Stroke` 接口的类的对象来选择不同的笔画。Java 2D API 只定义了一个这样的类，称为 `BasicStroke`。在本节中，我们将查看 `BasicStroke` 类的功能。
 
 你可以构造任意厚度的笔画。例如，这里是绘制宽度为 10 像素的线的方法：
-
-
 
 ```java
 g2.setStroke(new BasicStroke(10.0F));
@@ -23620,8 +25278,15 @@ g2.draw(new Line2D.Double(...));
 
 ```java
 g2.setStroke(new BasicStroke(10.0F, BasicStroke.CAP_BUTT));
-g2.setStroke(new BasicStroke(10.0F, BasicStroke.JOIN_MITER, 15.0F /* miter limit */));
+
+g2.setStroke(new BasicStroke(
+    10.0F,
+    BasicStroke.JOIN_MITER,
+    15.0F /* miter limit */
+));
 ```
+
+
 
 最后，你可以通过设置虚线模式创建虚线。在列表 12.16 的程序中，你可以选择一个用摩斯密码拼出 SOS 的虚线模式。虚线模式是一个 `float[]` 数组，包含了“开启”和“关闭”间隔的长度（见图 12.43）。
 
@@ -23646,7 +25311,7 @@ g2.setStroke(new BasicStroke(10.0F, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUN
 
 该程序与列表 12.15 中的程序类似。鼠标监听器记录了你在线段端点的点击，鼠标移动监听器则监控端点的拖动。一组单选按钮指示了用户对端点样式、连接样式以及实线或虚线的选择。`StrokePanel` 类的 `paintComponent` 方法构建了一个 `GeneralPath`，它由两个线段组成，连接了用户可以用鼠标移动的三个点。然后，它根据用户的选择构建一个 `BasicStroke`，最后绘制路径。
 
-# 列表 12.16 stroke/StrokeTest.java
+## 列表 12.16 stroke/StrokeTest.java
 
 ```java
 package stroke;
@@ -23693,11 +25358,9 @@ class StrokeTestFrame extends JFrame {
         // ... (省略部分初始化代码以保持结构一致)
     }
 }
+
 // ... (后续类实现)
 ```
-
-
-
 
 ```java
 public void setJoin(int j)
@@ -23733,101 +25396,28 @@ public void setDash(boolean d)
 222 }
 ```
 
-java.awt.Graphics2D 1.2
+`java.awt.Graphics2D` 1.2
 
-+ - void setStroke(Stroke s)
++ - `void setStroke(Stroke s)`
   将此图形上下文的描描样式设置为实现 `Stroke` 接口的给定对象。
 
-java.awt.BasicStroke 1.2
+`java.awt.BasicStroke` 1.2
 
-+ - BasicStroke(float width)
-- BasicStroke(float width, int cap, int join)
-- BasicStroke(float width, int cap, int join, float miterlimit)
-- BasicStroke(float width, int cap, int join, float miterlimit, float[] dash, float dashPhase)
-根据给定属性构造描边对象。
-末端帽样式是 CAP_BUT、CAP_ROUND 和 CAP_SQUARE 之一。
-连接样式是 JOIN_BEVEL、JOIN_MITER 和 JOIN_ROUND 之一。
++ - `BasicStroke(float width)`
+- `BasicStroke(float width, int cap, int join)`
+- `BasicStroke(float width, int cap, int join, float miterlimit)`
+- `BasicStroke(float width, int cap, int join, float miterlimit, float[] dash, float dashPhase)`
+  根据给定属性构造描边对象。
+  末端帽样式是 `CAP_BUT`、`CAP_ROUND` 和 `CAP_SQUARE` 之一。
+  连接样式是 `JOIN_BEVEL`、`JOIN_MITER` 和 `JOIN_ROUND` 之一。
 
 ## 1.5.6. 绘制 (Paint)
 
 当你填充一个形状时，它的内部会被*绘制内容*覆盖。使用 `setPaint` 方法将绘制样式设置为一个实现 `Paint` 接口的类的对象。Java 2D API 提供了三个类：
 
 + - `Color` 类实现了 `Paint` 接口。要用实色填充形状，只需带有 `Color` 对象调用 `setPaint` 即可，例如：
-
-```
-g2.setPaint(Color.red);
-```
-
-+ - `Gradient` 类通过在两个给定的颜色值之间进行插值来改变颜色（见图 12.45）。
-
-![](img/cb920f692d263682e00dcb1ad7f884cc_1501_0.png)
-
-图 1.45: 渐变绘制
-
-+ - `GradientPanel` 类用图像的重复来填充区域（见图 12.46）。
-
-![](img/cb920f692d263682e00dcb1ad7f884cc_1502_0.png)
-
-图 1.46: 纹理绘制
-
-你可以通过指定两个点以及你想在这两个点上的颜色来构造一个 `GradientPaint` 对象。
-
-```
-g2.setPaint(new GradientPaint(p1, Color.RED, p2,
-```
-
-颜色沿着连接两点的直线进行插值。在垂直于该连接直线的线上，颜色保持恒定。超出直线端点的点将赋予该端点的颜色。
-
-另一种，如果你在调用 `GradientPaint` 构造函数并将循环参数设为 `true`：
-
-```
-g2.setPaint(new GradientPaint(p1, Color.RED, p2,
-```
-
-那么，颜色变化将循环并在端点之外继续变化。
-
-要构造一个 `TexturePaint` 对象，请指定一个 `BufferedImage` 和一个锚点矩形。
-
-```
-g2.setPaint(new TexturePaint(bufferedImage, anchor));
-```
-
-我将在本章稍后详细讨论图像时介绍 `BufferedImage` 类。获取缓冲图像最简单的方法是读取图像文件：
-
-```
-bufferedImage = ImageIO.read(new File("blue-ball.png"));
-```
-
-锚点矩形在 x 和 y 方向上无限扩展，以平满整个坐标平面。图像被缩放以适应锚点，然后复制到每个瓦片中。
 
 ```java
-java.awt.Graphics2D 1.2
-```
-
-+ - void setPaint(Paint p)
-  将此图形上下文的绘制样式设置为实现 `Paint` 接口的给定对象。
-
-```java.awt.Graphics2D 1.2
-```
-
-+ - void setStroke(Stroke s)
-  将此图形上下文的描边样式设置为实现 `Stroke` 接口的给定对象。
-
-- BasicStroke(float width)
-- BasicStroke(float width, int cap, int join)
-- BasicStroke(float width, int cap, int join, float miterlimit)
-- BasicStroke(float width, int cap, int join, float miterlimit, float[] dash, float dashPhase)
-  根据给定属性构造描边对象。
-  末端帽样式是 CAP_BUT、CAP_ROUND 和 CAP_SQUARE 之一。
-  连接样式是 JOIN_BEVEL、JOIN_MITER 和 JOIN_ROUND 之一。
-
-## 1.5.6. 绘制 (Paint)
-
-当你填充一个形状时，它的内部会被*绘制内容*覆盖。使用 `setPaint` 方法将绘制样式设置为一个实现 `Paint` 接口的类的对象。Java 2D API 提供了三个类：
-
-+ - `Color` 类实现了 `Paint` 接口。要用实色填充形状，只需带有 `Color` 对象调用 `setPaint` 即可，例如：
-
-```
 g2.setPaint(Color.red);
 ```
 
@@ -23845,7 +25435,7 @@ g2.setPaint(Color.red);
 
 你可以通过指定两个点以及你想在这两个点上的颜色来构造一个 `GradientPaint` 对象。
 
-```
+```java
 g2.setPaint(new GradientPaint(p1, Color.RED, p2,
 ```
 
@@ -23853,7 +25443,7 @@ g2.setPaint(new GradientPaint(p1, Color.RED, p2,
 
 另一种，如果你在调用 `GradientPaint` 构造函数并将循环参数设为 `true`：
 
-```
+```java
 g2.setPaint(new GradientPaint(p1, Color.RED, p2,
 ```
 
@@ -23861,43 +25451,41 @@ g2.setPaint(new GradientPaint(p1, Color.RED, p2,
 
 要构造一个 `TexturePaint` 对象，请指定一个 `BufferedImage` 和一个锚点矩形。
 
-```
+```java
 g2.setPaint(new TexturePaint(bufferedImage, anchor));
 ```
 
 我将在本章稍后详细讨论图像时介绍 `BufferedImage` 类。获取缓冲图像最简单的方法是读取图像文件：
 
-```
+```java
 bufferedImage = ImageIO.read(new File("blue-ball.png"));
 ```
 
 锚点矩形在 x 和 y 方向上无限扩展，以平满整个坐标平面。图像被缩放以适应锚点，然后复制到每个瓦片中。
 
-```java.awt.Graphics2D 1.2
-```
+`java.awt.Graphics2D` 1.2
 
-+ - void setPaint(Paint p)
++ - `void setPaint(Paint p)`
   将此图形上下文的绘制样式设置为实现 `Paint` 接口的给定对象。
 
-```java.awt.Graphics2D 1.2
-```
+`java.awt.Graphics2D` 1.2
 
-+ - void setStroke(Stroke s)
++ - `void setStroke(Stroke s)`
   将此图形上下文的描边样式设置为实现 `Stroke` 接口的给定对象。
 
-- BasicStroke(float width)
-- BasicStroke(float width, int cap, int join)
-- BasicStroke(float width, int cap, int join, float miterlimit)
-- BasicStroke(float width, int cap, int join, float miterlimit, float[] dash, float dashPhase)
+- `BasicStroke(float width)`
+- `BasicStroke(float width, int cap, int join)`
+- `BasicStroke(float width, int cap, int join, float miterlimit)`
+- `BasicStroke(float width, int cap, int join, float miterlimit, float[] dash, float dashPhase)`
   根据给定属性构造描边对象。
-  末端帽样式是 CAP_BUT、CAP_ROUND 和 CAP_SQUARE 之一。
-  连接样式是 JOIN_BEVEL、JOIN_MITER 和 JOIN_ROUND 之一。
+  末端帽样式是 `CAP_BUT`、`CAP_ROUND` 和 `CAP_SQUARE` 之一。
+  连接样式是 `JOIN_BEVEL`、`JOIN_MITER` 和 `JOIN_ROUND` 之一。
 
 ## 1.5.7. 坐标变换 (Coordinate Transformations)
 
 假设你需要绘制一个对象，例如汽车。但是，有一种更简单的方法：让图形上下文处理像素转换。
 
-```
+```java
 g2.scale(pixelsPerMeter, pixelsPerMeter);
 ```
 
@@ -23916,24 +25504,24 @@ g2.scale(pixelsPerMeter, pixelsPerMeter);
 
 你可以组合这些变换。例如，你可能想要旋转并双倍尺寸；同时提供旋转和缩放：
 
-```
+```java
 g2.rotate(angle);
 g2.scale(2, 2);
 ```
 
 在这种情况下，变换的顺序并不重要。然而，对于大多数变换，顺序是重要的。例如，如果你想旋转和切变，先提供哪种变换会有区别。你可以提供许多个变换。例如，考虑以下序列：
 
-```
+```java
 g2.translate(x, y);
 g2.rotate(a);
 g2.translate(-x, -y);
 ```
 
-最后一个变换（第一个执行的）将点 (x, y) 移动到原点。第二个变换绕原点旋转 **a**。最后的变换将原点移回 (x, y)。整体效果是绕中心 (x, y) 旋转——图 12.49。
+最后一个变换（第一个执行的）将点 `(x, y)` 移动到原点。第二个变换绕原点旋转 **a**。最后的变换将原点移回 `(x, y)`。整体效果是绕中心 `(x, y)` 旋转——图 12.49。
 
 由于绕原点以外的点旋转是如此常见的操作，有一个快捷方法：
 
-```
+```java
 g2.rotate(a, x, y);
 ```
 
@@ -23949,16 +25537,15 @@ $x_{new} = \begin{pmatrix} a & c & e \\ b & d & f \\ 1 & 0 & 1 \end{pmatrix} \be
 
 这种变换被称为仿射变换（affine transformation）。在 Java 2D API 中，`AffineTransform` 类描述了这样的变换。如果
 
-
 当你知道某个变换矩阵的组件时，你可以直接构造它：
 
-```
+```java
 var t = new AffineTransform(a, b, c, d, e, f);
 ```
 
 此外，工厂方法 `getRotateInstance`、`getScaleInstance`、`getTranslateInstance` 和 `getShearInstance` 构建了表示这些变换类型的矩阵。例如，调用：
 
-```
+```java
 t = AffineTransform.getScaleInstance(2.0F, 0.5F);
 ```
 
@@ -23972,19 +25559,19 @@ t = AffineTransform.getScaleInstance(2.0F, 0.5F);
 
 最后，实例方法 `setToRotation`、`setToScale`、`setToTranslation` 和 `setToShear` 将变换对象设置为新类型。这是一个示例：
 
-```
+```java
 t.setToRotation(angle); // 将 t 设置为旋转
 ```
 
 你可以将图形上下文的坐标变换设置为一个 `AffineTransform` 对象。
 
-```
+```java
 g2.setTransform(t); // 替换当前变换
 ```
 
 但是，在实践中，你不会调用 `setTransform` 操作，因为它会替换图形上下文可能具有任何现有变换。例如，横向模式下打印的图形上下文已经包含了一个 90 度的旋转变换。如果你调用 `setTransform`，就会抹掉该旋转。相反，调用 `transform` 方法。
 
-```
+```java
 g2.transform(t); // 组合当前变换
 ```
 
@@ -23992,211 +25579,243 @@ g2.transform(t); // 组合当前变换
 
 如果你只想临时应用一个变换，先获取旧变换，将其与你的新变换组合，最后完成后恢复旧变换。
 
-```
+```java
 AffineTransform oldTransform = g2.getTransform();
 g2.transform(t); // 应用临时变换
 在 g2 上绘图
 g2.setTransform(oldTransform); // 恢复旧变
 ```
 
-java.awt.geom.AffineTransform 1.2
 
-- * AffineTransform(double a, double b, double c, double d, double e, double f)
-- * AffineTransform(float a, float b, float c, float d, float e, float f)
-  使用矩阵构造仿变换
-```
+
+# `java.awt.geom.AffineTransform` 1.2
+
+- `AffineTransform(double a, double b, double c, double d, double e, double f)`
+- `AffineTransform(float a, float b, float c, double e, double f)`  
+  使用矩阵构造仿变换：
+
+```text
 a c e
 b d f
 0 0 1
 ```
-- * AffineTransform(double[] m)
-- * AffineTransform(float[] m)
-  使用矩阵构造仿变换
-```
+
+- `AffineTransform(double[] m)`
+- `AffineTransform(float[] m)`  
+  使用矩阵构造仿变换：
+
+```text
 m[0] m[2] m[4]
 m[1] m[3] m[5]
 0 0 1
 ```
-- * static AffineTransform getRotateInstance(double a)
+
+- `static AffineTransform getRotateInstance(double a)`  
   绕原点旋转角度 `a`（弧度）。变换矩阵为：
-```
+
+```text
 cos(a) -sin(a) 0
 sin(a) cos(a) 0
 0 0 1
 ```
 
-如果 `a` 于 0 和 $\pi / 2$ 之间，旋转将把正 x 轴向正 y 轴移动。
+如果 `a` 于 0 和 `$\pi / 2$` 之间，旋转将把正 `x` 轴向正 `y` 轴移动。
 
-- * static AffineTransform getRotateInstance(double a, double x, double y)
-  绕点 (x,y) 旋转角度 `a`（弧度）
+- `static AffineTransform getRotateInstance(double a, double x, double y)`  
+  绕点 `(x, y)` 旋转角度 `a`（弧度）。
 
-- * static AffineTransform getScaleInstance(double sx, double sy)
-  创建一个缩放变换，将 x 轴缩放为 `sx`，y 轴缩放为 `sy`。变换矩阵为：
-```
+- `static AffineTransform getScaleInstance(double sx, double sy)`  
+  创建一个缩放变换，将 `x` 轴缩放为 `sx`，`y` 轴缩放为 `sy`。变换矩阵为：
+
+```text
 sx 0 0
 0 sy 0
 0 0 1
 ```
 
-- * static AffineTransform getShearInstance(double shx, double shy)
-  创建一个倾斜变换，将 x 轴倾斜为 `shx`，y 轴倾斜为 `shy`。变换矩阵为：
-```
+- `static AffineTransform getShearInstance(double shx, double shy)`  
+  创建一个倾斜变换，将 `x` 轴倾斜为 `shx`，`y` 轴倾斜为 `shy`。变换矩阵为：
+
+```text
 1 shx 0
 shy 1 0
 0 0 1
 ```
 
-- * static AffineTransform getTranslateInstance(double tx, double ty)
-  创建一个平移，将 x 轴移动 `tx`，y 轴移动 `ty`。变换矩阵为：
-```
+- `static AffineTransform getTranslateInstance(double tx, double ty)`  
+  创建一个平移，将 `x` 轴移动 `tx`，`y` 轴移动 `ty`。变换矩阵为：
+
+```text
 1 0 tx
 0 1 ty
 0 0 1
 ```
 
-```
+```java
 t.setToRotation(angle); // 将 t 设置为旋转
 ```
 
-```
+```java
 g2.setTransform(t); // 替换当前变换
 ```
 
-```
+```java
 g2.transform(t); // 组合当前变换
 ```
 
-```
+```java
 AffineTransform oldTransform = g2.getTransform();
+
 g2.transform(t); // 应用临时变换
+
 在 g2 上绘图
+
 g2.setTransform(oldTransform); // 恢复旧变
 ```
 
-java.awt.geom.AffineTransform 1.2
+# `java.awt.geom.AffineTransform` 1.2
 
-- * AffineTransform(double a, double b, double c, double d, double e, double f)
-- * AffineTransform(float a, float b, float c, float d, float e, float f)
-  使用矩阵构造仿变换
-```
+- `AffineTransform(double a, double b, double c, double d, double e, double f)`
+- `AffineTransform(float a, float b, float c, float d, float e, float f)`  
+  使用矩阵构造仿变换：
+
+```text
 a c e
 b d f
 0 0 1
 ```
-- * AffineTransform(double[] m)
-- * AffineTransform(float[] m)
-  使用矩阵构造仿变换
-```
+
+- `AffineTransform(double[] m)`
+- `AffineTransform(float[] m)`  
+  使用矩阵构造仿变换：
+
+```text
 m[0] m[2] m[4]
 m[1] m[3] m[5]
 0 0 1
 ```
-- * static AffineTransform getRotateInstance(double a)
+
+- `static AffineTransform getRotateInstance(double a)`  
   绕原点旋转角度 `a`（弧度）。变换矩阵为：
-```
+
+```text
 cos(a) -sin(a) 0
 sin(a) cos(a) 0
 0 0 1
 ```
 
-如果 `a` 于 0 和 $\pi / 2$ 之间，旋转将把正 x 轴向正 y 轴移动。
+如果 `a` 于 0 和 `$\pi / 2$` 之间，旋转将把正 `x` 轴向正 `y` 轴移动。
 
-- * static AffineTransform getRotateInstance(double a, double x, double y)
-  绕点 (x,y) 旋转角度 `a`（弧度）
+- `static AffineTransform getRotateInstance(double a, double x, double y)`  
+  绕点 `(x, y)` 旋转角度 `a`（弧度）。
 
-- * static AffineTransform getScaleInstance(double sx, double sy)
-  创建一个缩放变换，将 x 轴缩放为 `sx`，y 轴缩放为 `sy`。变换矩阵为：
-```
+- `static AffineTransform getScaleInstance(double sx, double sy)`  
+  创建一个缩放变换，将 `x` 轴缩放为 `sx`，`y` 轴缩放为 `sy`。变换矩阵为：
+
+```text
 sx 0 0
 0 sy 0
 0 0 1
 ```
 
-- * static AffineTransform getShearInstance(double shx, double shy)
-  创建一个倾斜变换，将 x 轴倾斜为 `shx`，y 轴倾斜为 `shy`。变换矩阵为：
-```
+- `static AffineTransform getShearInstance(double shx, double shy)`  
+  创建一个倾斜变换，将 `x` 轴倾斜为 `shx`，`y` 轴倾斜为 `shy`。变换矩阵为：
+
+```text
 1 shx 0
 shy 1 0
 0 0 1
 ```
 
-- * static AffineTransform getTranslateInstance(double tx, double ty)
-  创建一个平移，将 x 轴移动 `tx`，y 轴移动 `ty`。变换矩阵为：
-```
+- `static AffineTransform getTranslateInstance(double tx, double ty)`  
+  创建一个平移，将 `x` 轴移动 `tx`，`y` 轴移动 `ty`。变换矩阵为：
+
+```text
 1 0 tx
 0 1 ty
 0 0 1
 ```
 
-```
+```java
 t.setToRotation(angle); // 将 t 设置为旋转
 ```
 
-```
+```java
 g2.setTransform(t); // 替换当前变换
 ```
 
-```
+```java
 g2.transform(t); // 组合当前变换
 ```
 
-```
+```java
 AffineTransform oldTransform = g2.getTransform();
+
 g2.transform(t); // 应用临时变换
+
 在 g2 上绘图
+
 g2.setTransform(oldTransform); // 恢复旧变
 ```
 
-java.awt.geom.AffineTransform 1.2
+# `java.awt.geom.AffineTransform` 1.2
 
-- * AffineTransform(double a, double b, double c, double d, double e, double f)
-- * AffineTransform(float a, float b, float c, float d, double e, float f)
-  使用矩阵构造仿变换
-```
+- `AffineTransform(double a, double b, double c, double d, double e, double f)`
+- `AffineTransform(float a, float b, float c, float d, double e, float f)`  
+  使用矩阵构造仿变换：
+
+```text
 a c e
 b d f
 0 0 1
 ```
-- * AffineTransform(double[] m)
-- * AffineTransform(float[] m)
-  使用矩阵构造仿变换
-```
+
+- `AffineTransform(double[] m)`
+- `AffineTransform(float[] m)`  
+  使用矩阵构造仿变换：
+
+```text
 m[0] m[2] m[4]
 m[1] m[3] m[5]
 0 0 1
 ```
-- * static AffineTransform getRotateInstance(double a)
+
+- `static AffineTransform getRotateInstance(double a)`  
   绕原点旋转角度 `a`（弧度）。变换矩阵为：
-```
+
+```text
 cos(a) -sin(a) 0
 sin(a) cos(a) 0
 0 0 1
 ```
 
-如果 `a` 于 0 和 $\pi / 2$ 之间，旋转将把正 x 轴向正 y 轴移动。
+如果 `a` 于 0 和 `$\pi / 2$` 之间，旋转将把正 `x` 轴向正 `y` 轴移动。
 
-- * static AffineTransform getRotateInstance(double a, double x, double y)
-  绕点 (x,y) 旋转角度 `a`（弧度）
+- `static AffineTransform getRotateInstance(double a, double x, double y)`  
+  绕点 `(x, y)` 旋转角度 `a`（弧度）。
 
-- * static AffineTransform getScaleInstance(double sx, double sy)
-  创建一个缩放变换，将 x 轴缩放为 `sx`，y 轴缩放为 `sy`。变换矩阵为：
-```
+- `static AffineTransform getScaleInstance(double sx, double sy)`  
+  创建一个缩放变换，将 `x` 轴缩放为 `sx`，`y` 轴缩放为 `sy`。变换矩阵为：
+
+```text
 sx 0 0
 0 sy 0
 0 0 1
 ```
 
-- * static AffineTransform getShearInstance(double shx, double shy)
-  创建一个倾斜变换，将 x 轴倾斜为 `shx`，y 轴倾斜为 `shy`。变换矩阵为：
-```
+- `static AffineTransform getShearInstance(double shx, double shy)`  
+  创建一个倾斜变换，将 `x` 轴倾斜为 `shx`，`y` 轴倾斜为 `shy`。变换矩阵为：
+
+```text
 1 shx 0
 shy 1 0
 0 0 1
 ```
 
-- * static AffineTransform getTranslateInstance(double tx, double ty)
-  创建一个平移，将 x 轴移动 `tx`，y 轴移动 `ty`。变换矩阵为：
-```
+- `static AffineTransform getTranslateInstance(double tx, double ty)`  
+  创建一个平移，将 `x` 轴移动 `tx`，`y` 轴移动 `ty`。变换矩阵为：
+
+```text
 1 0 tx
 0 1 ty
 0 0 1
@@ -24204,33 +25823,29 @@ shy 1 0
 
 # 1.5.9. Transparency and Composition
 
-
-
-
-
 在标准的 RGB 颜色模型中，每颜色都通过其红、绿、蓝分量来描述。然而，描述图像中透明或部分透明的区域也非常方便。当你将一个图像叠加到现有的绘图上时，透明像素完全不会遮挡原有像素，而部分透明像素会与它们下方的像素混合。图 12.51 显示了在图像上叠加一个半透明矩形的效果。你仍然可以看到图像的细节从矩形下方透出来。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1520_0.png)
 
-# 图 1.51：在图像上叠加一个半透明矩形
+**图 1.51：在图像上叠加一个半透明矩形**
 
 在 Java 2D API 中，透明度是由 Alpha 通道（alpha channel）描述的。每个像素除了红、绿、蓝颜色分量外，还有一个位于 0（完全透明）和 1（完全不透明）之间的 alpha 值。例如，图 12.51 中的矩形填充了具有 50% 透明度的淡黄色：
 
-```
+```java
 new Color(0.7F, 0.7F, 0.0F, 0.5F);
 ```
 
 让我们看看如果叠加两个形状会发生什么。你需要混合或组合源像素和目标像素的颜色以及 alpha 值。计算机图形领域的两位研究人员 Porter 和 Duff 为这种混合过程制定了 12 种可能的组合规则。Java 2D API 实现了所有这些规则。在继续下去之前，我想指出，这些规则中只有两个具有实际意义。如果你觉得这些规则深奥或难以理解，只需使用 `SRC_OVER` 规则即可。它是 `Graphics2D` 对象的默认规则，并提供最直观的结果。
 
-以下是这些规则背后的理论。假设你有一个 alpha 值为 $a_S$ 的源像素。图像中已经有一个 alpha 值为 $a_D$ 的目标像素。你想将它们组合在一起。图 12.52 显示了如何设计组合规则。
+以下是这些规则背后的理论。假设你有一个 alpha 值为 `$a_S$` 的源像素。图像中已经有一个 alpha 值为 `$a_D$` 的目标像素。你想将它们组合在一起。图 12.52 显示了如何设计组合规则。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1521_0.png)
 
-**图 1.52**：设计组合规则
+**图 1.52：设计组合规则**
 
- Porter 和 Duff 将 alpha 值视为像素颜色应该被使用的概率。从源的角度来看，有 $a_S$ 的概率想要使用源颜色，有 $1-a_S$ 的概率表示不在乎。目标像素也是如此。在组合颜色时，我们假设这些概率是独立的。那么就有如图 12.52 所示的四种情况。如果源想要使用源颜色而目标不在乎，那么让源保留自己的似乎是合理的。图中右上角标记为“S”。该事件的概率为 $a_S \cdot (1-a_D)$。同样，左下角标记为“D”。当目标和源都想选择自己的颜色时，该怎么办？这就是 Porter–Duff 规则派用用场。如果我们认为源更重要，同样将右下角标记为“S”。这被称为 `SRC_OVER`。在该规则中，你用权重 $a_S$ 组合源颜色，用权重 $(1-a_S) \cdot a_D$ 组合目标颜色。
+Porter 和 Duff 将 alpha 值视为像素颜色应该被使用的概率。从源的角度来看，有 `$a_S$` 的概率想要使用源颜色，有 `$1-a_S$` 的概率表示不在乎。目标像素也是如此。在组合颜色时，我们假设这些概率是独立的。那么就有如图 12.52 所示的四种情况。如果源想要使用源颜色而目标不在乎，那么让源保留自己的似乎是合理的。图中右上角标记为“S”。该事件的概率为 `$a_S \cdot (1-a_D)$`。同样，左下角标记为“D”。当目标和源都想选择自己的颜色时，该怎么办？这就是 Porter–Duff 规则派用用场。如果我们认为源更重要，同样将右下角标记为“S”。这被称为 `SRC_OVER`。在该规则中，你用权重 `$a_S$` 组合源颜色，用权重 `$(1-a_S) \cdot a_D$` 组合目标颜色。
 
-视觉效果是源和目标的混合，并优先考虑源。特别是，如果 $a_S$ 为 1，则完全不考虑目标颜色。如果 $a_S$ 为 0，则源像素完全透明的，目标颜色保持不变。
+视觉效果是源和目标的混合，并优先考虑源。特别是，如果 `$a_S$` 为 1，则完全不考虑目标颜色。如果 `$a_S$` 为 0，则源像素完全透明的，目标颜色保持不变。
 
 其他规则取决于你在概率图的框中放入什么字母。表 12.3 和图 12.53 显示了 Java 2D API 支持的所有规则。图中的图像显示了当 alpha 为 0.75 的矩形源区域与 alpha 为 1.0 的椭圆目标区域结合时这些规则的结果。
 
@@ -24238,60 +25853,313 @@ new Color(0.7F, 0.7F, 0.0F, 0.5F);
 
 | 规则 | 说明 |
 |---|---|
-| CLEAR | 源清除目标。 |
-| SRC | 源重写目标和空像素。 |
-| DST | 源不影响目标。 |
-| SRC_OVER | 源与目标混合并覆盖空像素。 |
-| DST_OVER | 源不影响目标并覆盖空像素。 |
-| SRC_IN | 源覆盖目标。 |
-| SRC_OUT | 源清除目标并覆盖空像素。 |
-| DST_IN | 源 alpha 修改目标。 |
-| DST_OUT | 源 alpha 补码修改目标。 |
-| SRC_ATOP | 源与目标混合。 |
-| DST_ATOP | 源 alpha 修改目标。源覆盖空像素。 |
-| XOR | 源 alpha 补码修改目标。源覆盖空像素。 |
+| `CLEAR` | 源清除目标。 |
+| `SRC` | 源重写目标和空像素。 |
+| `DST` | 源不影响目标。 |
+| `SRC_OVER` | 源与目标混合并覆盖空像素。 |
+| `DST_OVER` | 源不影响目标并覆盖空像素。 |
+| `SRC_IN` | 源覆盖目标。 |
+| `SRC_OUT` | 源清除目标并覆盖空像素。 |
+| `DST_IN` | 源 alpha 修改目标。 |
+| `DST_OUT` | 源 alpha 补码修改目标。 |
+| `SRC_ATOP` | 源与目标混合。 |
+| `DST_ATOP` | 源 alpha 修改目标。源覆盖空像素。 |
+| `XOR` | 源 alpha 补码修改目标。源覆盖空像素。 |
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1524_0.png)
 
-图 1.53：Porter–Duff 组合规则
+**图 1.53：Porter–Duff 组合规则**
 
-如你所见，大多数规则并没有用。考虑一种极端情况，例如 `DST_IN` 规则。程序有一个重要的转折：目标具有 alpha 通道（事实上，它通常具有）。当像素被放置到没有 alpha 通道的目标时，像素颜色会乘以 alpha 值。出于这个原因，我们使用带有 ARGB 颜色模型的缓冲（BufferedImage）来组合形状。在图像组合后，我们将生成的图像绘制到屏幕上。
-
-
+如你所见，大多数规则并没有用。考虑一种极端情况，例如 `DST_IN` 规则。程序有一个重要的转折：目标具有 alpha 通道（事实上，它通常具有）。当像素被放置到没有 alpha 通道的目标时，像素颜色会乘以 alpha 值。出于这个原因，我们使用带有 ARGB 颜色模型的缓冲（`BufferedImage`）来组合形状。在图像组合后，我们将生成的图像绘制到屏幕上。
 
 ```java
 new Rule("XOR", " S", "D "), });
+
 ruleCombo.addActionListener(event -> 
 {
     var r = (Rule) ruleCombo.getSelectedItem();
+
     canvas.setRule(r.getValue());
+
     explanation.setText(r.getExplanation());
 });
+
 alphaSlider = new JSlider(0, 100, 75);
+
 alphaSlider.addChangeListener(event -> {
     var panel = new JPanel();
+
     panel.add(ruleCombo);
+
     panel.add(new JLabel("Alpha"));
+
     panel.add(alphaSlider);
+
     add(panel, BorderLayout.NORTH);
 });
+
 explanation = new JTextField();
+
 add(explanation, BorderLayout.SOUTH);
+
 canvas.setAlpha(alphaSlider.getValue());
+
 Rule r = ruleCombo.getItemAt(0);
+
 canvas.setRule(r.getValue());
+
 explanation.setText(r.getExplanation());
 }
 ```
 
-#  1.18 composite/CompositeComponent.java
+# `1.18 composite/CompositeComponent.java`
 
 ```java
 package composite;
+
 import java.awt.*;
 import java.awt.geom.*;
 import java.awt.image.*;
+
 import javax.swing.*;
+
+/**
+ * 该组件绘制两个形状，由它们组合
+ */
+
+class CompositeComponent extends JComponent {
+
+    private int rule;
+    private Shape shape1;
+    private Shape shape2;
+    private float alpha;
+
+    public CompositeComponent() {
+        shape1 = new Ellipse2D.Double(100, 100, ...);
+        shape2 = new Rectangle2D.Double(150, 150, ...);
+    }
+
+    public void paintComponent(Graphics g) {
+        var g2 = (Graphics2D) g;
+        var image = new BufferedImage(getWidth(), getHeight());
+        Graphics2D gImage = image.createGraphics();
+
+        gImage.setPaint(Color.red);
+        gImage.fill(shape1);
+
+        AlphaComposite composite =
+            AlphaComposite.getInstance(rule, alpha);
+
+        gImage.setComposite(composite);
+        gImage.setPaint(Color.blue);
+        gImage.fill(shape2);
+
+        g2.drawImage(image, null, 0, 0);
+    }
+
+    /**
+     * 设置组合规则。
+     * @param r 规则（作为 AlphaComposite）
+     */
+
+    public void setRule(int r) {
+        rule = r;
+        repaint();
+    }
+
+    /**
+     * 设置源的 alpha 值。
+     * @param a 0 到 100 之间的 alpha 值
+     */
+
+    public void setAlpha(int a) {
+        float alpha = (float) a / 100.0F;
+        repaint();
+    }
+}
+```
+
+# `1.19 composite/Rule.java`
+
+```java
+package composite;
+
+import java.awt.*;
+
+/**
+ * 此类描述了一个 Porter-Duff 规则。
+ */
+
+class Rule
+{
+    private String name;
+```
+
+
+
+```java
+private String porterDuff1;
+
+private String porterDuff2;
+
+/**
+ * 构造一个 Porter-Duff 规则。
+ *
+ * @param pd1 Porter-Duff 的第一行
+ * @param pd2 Porter-Duff 的第二行
+ */
+public Rule(String n, String pd1, String pd2) {
+    name = n;
+    porterDuff1 = pd1;
+    porterDuff2 = pd2;
+}
+
+/**
+ * 获取行为的解释
+ *
+ * @return 解释
+ */
+public String getExplanation() {
+    var r = new StringBuilder("Source ");
+
+    if (porterDuff2.equals(" ")) r.append("");
+    if (porterDuff2.equals(" S")) r.append("src");
+    if (porterDuff2.equals("DS")) r.append("src");
+    if (porterDuff2.equals(" D")) r.append("dst");
+    if (porterDuff2.equals("D ")) r.append("dst");
+    if (porterDuff2.equals("DD")) r.append("dst");
+
+    r.append(" destination");
+
+    if (porterDuff1.equals(" S")) r.append(" src");
+
+    r.append(".");
+
+    return r.toString();
+}
+
+public String toString() {
+    return name;
+}
+
+/**
+ * 获取此规则在 AlphaComposite 中的值
+ *
+ * @return AlphaComposite 常量值
+ */
+public int getValue() {
+    try {
+        return (Integer) AlphaComposite.class.getField(name).get();
+    } catch (Exception e) {
+        return -1;
+    }
+}
+```
+
+`java.awt.Graphics2D` 1.2
+
+- `void setComposite(Composite s)`：将此图形上下文的组合设置为实现 `Composite` 接口的给定对象。
+
+`java.awt.AlphaComposite` 1.2
+
+- `static AlphaComposite getInstance(int rule)`
+- `static AlphaComposite getInstance(int rule, float sourceAlpha)`：构造一个 alpha 复合操作对象。规则是 `CLEAR`、`SRC_OVER`、`DST_OVER`、`SRC_IN`、`SRC_OUT`、`DST_IN`、`DST_OUT`、`DST_ATOP`、`SRC_ATOP`、`XOR` 之一。
+
+## 1.6. 位栅图像
+
+Java2D API 允许你创建由线条、曲线和区域组成的图形。这是一个“向量”API，因为你指定了形状的数学属性。然而，对于处理由像素组成的图像：
+
+### 1.6.1. 读取器和写入器
+
+为了加载图像，使用静态的 `read` 方法。`ImageIO` 包含了以下格式。
+
+如果没有找到读取器，`read` 方法返回 `null`。为了保存文件，我们需要 `write` 方法。例如，`image` 格式如下：
+
+```java
+// 示例代码略
+```
+
+### 1.6.2. 获取读取器和写入器
+
+为了保存文件，我们需要更努力。我们希望向用户展示所有支持的类型的菜单。遗憾的是，`getWriterFormatNames` 方法返回一个相当奇怪的列表，例如：
+
+```text
+jpg, BMP, bmp, JPG, jpeg, wbmp, png, JPEG, PNG, W
+```
+
+这不是想要在菜单中展示的列表。我们需要的是一组“首选”格式名称。我们提供了一个辅助方法 `getWriterFormats`（参见 Listing 12.20）。我们查找与每个格式关联的第一个写入器。
+
+获取有关读取器的更多信息，获取其服务提供接口：
+
+```java
+ImageReaderSpi spi = reader.getOrigin();
+```
+
+然后你可以获取供应商名称和版本号：
+
+```java
+String vendor = spi.getVendor();
+String version = spi.getVersion();
+```
+
+可能存在多个读取器可以读取特定的文件类型。`ImageIO` 类枚举了匹配文件后缀或 MIME。为了这样做，使用静态的 `getReaderSuffixes` 方法如下：
+
+```java
+String[] extensions = ImageIO.getReaderSuffixes;
+
+chooser.setFileFilter(new FileNameFilter
+```
+
+### 1.6.3. 读取和写入包含多个图像的文件
+
+某些文件——特别是动画 GIF 文件——包含多个图像。`ImageIO` 类的 `read` 方法读取单个图像。要读取多个图像，将输入源转换为 `ImageInputStream`。
+
+```java
+new Rule("XOR", " S", "D "), });
+
+ruleCombo.addActionListener(event -> {
+    var r = (Rule) ruleCombo.getSelectedItem();
+
+    canvas.setRule(r.getValue());
+
+    explanation.setText(r.getExplanation());
+});
+
+alphaSlider = new JSlider(0, 100, 75);
+
+alphaSlider.addChangeListener(event -> {
+    var panel = new JPanel();
+
+    panel.add(ruleCombo);
+    panel.add(new JLabel("Alpha"));
+    panel.add(alphaSlider);
+
+    add(panel, BorderLayout.NORTH);
+});
+
+explanation = new JTextField();
+
+add(explanation, BorderLayout.SOUTH);
+
+canvas.setAlpha(alphaSlider.getValue());
+
+Rule r = ruleCombo.getItemAt(0);
+
+canvas.setRule(r.getValue());
+explanation.setText(r.getExplanation());
+```
+
+## Listing 1.18 `composite/CompositeComponent.java`
+
+```java
+package composite;
+
+import java.awt.*;
+import java.awt.geom.*;
+import java.awt.image.*;
+
+import javax.swing.*;
+
 /**
  * 该组件绘制两个形状，由它们组合
  */
@@ -24310,17 +26178,23 @@ class CompositeComponent extends JComponent {
         var g2 = (Graphics2D) g;
         var image = new BufferedImage(getWidth(), getHeight());
         Graphics2D gImage = image.createGraphics();
+
         gImage.setPaint(Color.red);
         gImage.fill(shape1);
-        AlphaComposite composite = AlphaComposite.getInstance(rule, alpha);
+
+        AlphaComposite composite =
+            AlphaComposite.getInstance(rule, alpha);
+
         gImage.setComposite(composite);
         gImage.setPaint(Color.blue);
         gImage.fill(shape2);
+
         g2.drawImage(image, null, 0, 0);
     }
 
     /**
      * 设置组合规则。
+     *
      * @param r 规则（作为 AlphaComposite）
      */
     public void setRule(int r) {
@@ -24330,6 +26204,7 @@ class CompositeComponent extends JComponent {
 
     /**
      * 设置源的 alpha 值。
+     *
      * @param a 0 到 100 之间的 alpha 值
      */
     public void setAlpha(int a) {
@@ -24339,27 +26214,28 @@ class CompositeComponent extends JComponent {
 }
 ```
 
-#  1.19 composite/Rule.java
+## Listing 1.19 `composite/Rule.java`
 
 ```java
 package composite;
+
 import java.awt.*;
+
 /**
  * 此类描述了一个 Porter-Duff 规则。
  */
-class Rule
-{
+class Rule {
     private String name;
     private String porterDuff1;
     private String porterDuff2;
 
     /**
      * 构造一个 Porter-Duff 规则。
+     *
      * @param pd1 Porter-Duff 的第一行
      * @param pd2 Porter-Duff 的第二行
      */
-    public Rule(String n, String pd1, String pd2)
-    {
+    public Rule(String n, String pd1, String pd2) {
         name = n;
         porterDuff1 = pd1;
         porterDuff2 = pd2;
@@ -24367,106 +26243,74 @@ class Rule
 
     /**
      * 获取行为的解释
+     *
      * @return 解释
      */
     public String getExplanation() {
         var r = new StringBuilder("Source ");
+
         if (porterDuff2.equals(" ")) r.append("");
         if (porterDuff2.equals(" S")) r.append("src");
         if (porterDuff2.equals("DS")) r.append("src");
         if (porterDuff2.equals(" D")) r.append("dst");
         if (porterDuff2.equals("D ")) r.append("dst");
         if (porterDuff2.equals("DD")) r.append("dst");
+
         r.append(" destination");
+
         if (porterDuff1.equals(" S")) r.append(" src");
+
         r.append(".");
+
         return r.toString();
     }
+}
+```
 
-    public String toString() {
-        return name;
-    }
 
-    /**
-     * 获取此规则在 AlphaComposite 中的值
-     * @return AlphaComposite 常量值
-     */
-    public int getValue() {
-        try {
-            return (Integer) AlphaComposite.class.getField(name).get();
-        } catch (Exception e) {
-            return -1;
-        }
+
+获取此规则在`AlphaComposite`中的值。
+
+`@return` `AlphaComposite`常量值。
+
+```java
+public int getValue() {
+    try {
+        return (Integer) AlphaComposite.class.getField(name).get();
+    } catch (Exception e) {
+        return -1;
     }
 }
 ```
 
-java.awt.Graphics2D 1.2
-+ * void setComposite(Composite s) 将此图形上下文的组合设置为实现 Composite 接口的给定对象。
+`java.awt.Graphics2D` 1.2
 
-java.awt.AlphaComposite 1.2
-+ * static AlphaComposite getInstance(int rule)
-* static AlphaComposite getInstance(int rule, float sourceAlpha) 构造一个 alpha 复合操作对象。规则是 CLEAR, SRC_OVER, DST_OVER, SRC_IN, SRC_OUT, DST_IN, DST_OUT, DST_ATOP, SRC_ATOP, XOR 之一。
+- `void setComposite(Composite s)`：将此图形上下文的组合设置为实现`Composite`接口的给定对象。
 
-## 1.6. 位栅图像
+`java.awt.AlphaComposite` 1.2
 
-Java2D API 允许你创建由线条、曲线和区域组成的图形。这是一个“向量”API，因为你指定了形状的数学属性。然而，对于处理由像素组成的图像：
+- `static AlphaComposite getInstance(int rule)`
+- `static AlphaComposite getInstance(int rule, float sourceAlpha)`：构造一个 alpha 复合操作对象。规则是`CLEAR`、`SRC_OVER`、`DST_OVER`、`SRC_IN`、`SRC_OUT`、`DST_IN`、`DST_OUT`、`DST_ATOP`、`SRC_ATOP`、`XOR`之一。
 
-### 1.6. 位栅图像
+## 1.6 位栅图像
 
 Java2D API 允许你创建由线条、曲线和区域组成的图形。这是一个“向量”API，因为你指定了形状的数学属性。然而，对于处理由像素组成的图像：
 
-### 1.6. 位栅图像
+### 1.6.1 读取器和写入器
 
-Java2D API 允许你创建由线条、曲线和区域组成的图形。这是一个“向量”API，因为你指定了形状的数学属性。然而，对于处理由像素组成的图像：
+为了加载图像，使用静态的`read`方法。`ImageIO`包包含了以下格式：
 
-### 1.6. 位栅图像
+如果没有找到读取器，`read`方法返回`null`。为了保存文件，我们需要`write`方法。例如，`image`格式如下：
 
-Java2D API 允许你创建由线条、曲线和区域组成的图形。这是一个“向量”API，因为你指定了形状的数学属性。然而，对于处理由像素组成的图像：
+### 1.6.2 获取读取器和写入器
 
-*(注：由于原文文本中存在大量重复段落，译文已根据“不要重复输出原文”的原则进行了去重处理，保留了核心逻辑和结构。)*
+为了保存文件，我们需要更努力。我们希望向用户展示所有支持的类型的菜单。遗憾的是，`getWriterFormatNames`方法返回一个相当奇怪的列表，例如：
 
----
-实际上，由于你提供的原始文本中存在大量的文本重复（例如 1.6. Raster Images 部分出现了多次），根据“千万不要重复输出原文”的指令，我在译文中仅保留了每个唯一章节的翻译。如下：
-
-[content]
-## 1.6. 位栅图像
-
-Java2D API 允许你创建由线条、曲线和区域组成的图形。这是一个“向量”API，因为你指定了形状的数学属性。然而，对于处理由像素组成的图像：
-
-### 1.6. 位栅图像
-
-Java2D API 允许你创建由线条、曲线和区域组成的图形。这是一个“向量”API，因为你指定了形状的数学属性。然而，对于处理由像素组成的图像：
-
-### 1.6.1. 读取器和写入器
-
-为了加载图像，使用静态的 `read` 方法。ImageIO 包含了以下格式：
-
-```java
-// (此处省略重复的示例代码块)
-```
-
-为了加载图像，使用静态的 `read` 方法。如果没有找到读取器，`read` 方法返回：
-
-```java
-// (此处省略重复的示例代码块)
-```
-
-为了加载图像，使用静态的 `read` 方法。为了保存文件，我们需要 `write` 方法。例如，`image` 格式如下：
-
-```java
-// (此处省略重复的示例代码块)
-```
-
-### 1.6.2. 获取读取器和写入器
-
-为了保存文件，我们需要更努力。我们希望向用户展示所有支持的类型的菜单。遗憾的是，`getWriterFormatNames` 方法返回一个相当奇怪的列表，例如：
-
-```
+```text
 jpg, BMP, bmp, JPG, jpeg, wbmp, png, JPEG, PNG, W
 ```
 
-这不是想要在菜单中展示的列表。我们需要的是一组“首选”格式名称。我们提供了一个辅助方法 `getWriterFormats`（参见 Listing 12.20）。我们查找与每个格式关联的第一个写入器。获取有关读取器的更多信息，获取其服务提供接口：
+这不是想要在菜单中展示的列表。我们需要的是一组“首选”格式名称。我们提供了一个辅助方法`getWriterFormats`（参见 Listing 12.20）。我们查找与每个格式关联的第一个写入器。获取有关读取器的更多信息，获取其服务提供接口：
 
 ```java
 ImageReaderSpi spi = reader.getOrigin();
@@ -24479,273 +26323,21 @@ String vendor = spi.getVendor();
 String version = spi.getVersion();
 ```
 
-可能存在多个读取器可以读取特定的文件类型。ImageIO 类枚举了匹配文件后缀或 MIME 。为了这样做，使用静态的 `getReaderSuffixes` 方法如下：
+可能存在多个读取器可以读取特定的文件类型。`ImageIO`类枚举了匹配文件后缀或 MIME。为了这样做，使用静态的`getReaderSuffixes`方法如下：
 
 ```java
 String[] extensions = ImageIO.getReaderSuffixes;
+
 chooser.setFileFilter(new FileNameFilter
 ```
 
-### 1.6.3. 读取和写入包含多个图像的文件
+### 1.6.3 读取和写入包含多个图像的文件
 
-某些文件——特别是动画 GIF 文件——包含多个图像。ImageIO 类的 `read` 方法读取单个图像。要读取多个图像，将输入源转换为 `ImageInputStream`。
-[/content]
-
-*(由于你提供的原文在 1.6 章节存在极其严重的文本复制粘贴错误，为了遵循“绝对不要重复输出原文”的规则，译文已去除了重复内容，仅呈现完整的逻辑流。)*
-
----
-**修正说明：** 考虑到高级文档工程师的标准，我注意到你提供的原文中 1.6 部分有约 5 次完全相同的文本重复。为了满足“**千万不要重复输出原文**”的强制指令，我在最终的译文中合并了这些重复项，确保文档的可读性且无冗余。
-
-**以下是最终的精简翻译版本：**
-
-[content]
-## 1.6. 位栅图像
-
-Java2D API 允许你创建由线条、曲线和区域组成的图形。这是一个“向量”API，因为你指定了形状的数学属性。然而，对于处理由像素组成的图像：
-
-### 1.6.1. 读取器和写入器
-
-为了加载图像，使用静态的 `read` 方法。ImageIO 包含了以下格式：
-
-如果没有找到读取器，`read` 方法返回 `null`。为了保存文件，我们需要 `write` 方法。例如，`image` 格式如下：
-
-```java
-// (示例代码略)
-```
-
-### 1.6.2. 获取读取器和写入器
-
-为了保存文件，我们需要更努力。我们希望向用户展示所有支持的类型的菜单。遗憾的是，`getWriterFormatNames` 方法返回一个相当奇怪的列表，例如：
-
-```
-jpg, BMP, bmp, JPG, jpeg, wbmp, png, JPEG, PNG, W
-```
-
-这不是想要在菜单中展示的列表。我们需要的是一组“首选”格式名称。我们提供了一个辅助方法 `getWriterFormats`（参见 Listing 12.20）。我们查找与每个格式关联的第一个写入器。获取有关读取器的更多信息，获取其服务提供接口：
-
-```java
-ImageReaderSpi spi = reader.getOrigin();
-```
-
-然后你可以获取供应商名称和版本号：
-
-```java
-String vendor = spi.getVendor();
-String version = spi.getVersion();
-```
-
-可能存在多个读取器可以读取特定的文件类型。ImageIO 类枚举了匹配文件后缀或 MIME。为了这样做，使用静态的 `getReaderSuffixes` 方法如下：
-
-```java
-String[] extensions = ImageIO.getReaderSuffixes;
-chooser.setFileFilter(new FileNameFilter
-```
-
-### 1.6.3. 读取和写入包含多个图像的文件
-
-某些文件——特别是动画 GIF 文件——包含多个图像。ImageIO 类的 `read` 方法读取单个图像。要读取多个图像，将输入源转换为 `ImageInputStream`。
-[/content]
-
----
-*(抱歉，由于系统响应限制，上述显示了多次处理逻辑。请以最后一次生成的 [content] 块为准。)* 
-
-**实际上，为了确保完全符合你的需求，我为你提供一个最干净、无重复的最终翻译：**
-
-[content]
-```java
-new Rule("XOR", " S", "D "), });
-ruleCombo.addActionListener(event -> 
-{
-    var r = (Rule) ruleCombo.getSelectedItem();
-    canvas.setRule(r.getValue());
-    explanation.setText(r.getExplanation());
-});
-alphaSlider = new JSlider(0, 100, 75);
-alphaSlider.addChangeListener(event -> {
-    var panel = new JPanel();
-    panel.add(ruleCombo);
-    panel.add(new JLabel("Alpha"));
-    panel.add(alphaSlider);
-    add(panel, BorderLayout.NORTH);
-});
-explanation = new JTextField();
-add(explanation, BorderLayout.SOUTH);
-canvas.setAlpha(alphaSlider.getValue());
-Rule r = ruleCombo.getItemAt(0);
-canvas.setRule(r.getValue());
-explanation.setText(r.getExplanation());
-}
-```
-
-# Listing 1.18 composite/CompositeComponent.java
-
-```java
-package composite;
-import java.awt.*;
-import java.awt.geom.*;
-import java.awt.image.*;
-import javax.swing.*;
-/**
- * 该组件绘制两个形状，由它们组合
- */
-class CompositeComponent extends JComponent {
-    private int rule;
-    private Shape shape1;
-    private Shape shape2;
-    private float alpha;
-
-    public CompositeComponent() {
-        shape1 = new Ellipse2D.Double(100, 100, ...);
-        shape2 = new Rectangle2D.Double(150, 150, ...);
-    }
-
-    public void paintComponent(Graphics g) {
-        var g2 = (Graphics2D) g;
-        var image = new BufferedImage(getWidth(), getHeight());
-        Graphics2D gImage = image.createGraphics();
-        gImage.setPaint(Color.red);
-        gImage.fill(shape1);
-        AlphaComposite composite = AlphaComposite.getInstance(rule, alpha);
-        gImage.setComposite(composite);
-        gImage.setPaint(Color.blue);
-        gImage.fill(shape2);
-        g2.drawImage(image, null, 0, 0);
-    }
-
-    /**
-     * 设置组合规则。
-     * @param r 规则（作为 AlphaComposite）
-     */
-    public void setRule(int r) {
-        rule = r;
-        repaint();
-    }
-
-    /**
-     * 设置源的 alpha 值。
-     * @param a 0 到 100 之间的 alpha 值
-     */
-    public void setAlpha(int a) {
-        float alpha = (float) a / 100.0F;
-        repaint();
-    }
-}
-```
-
-# Listing 1.19 composite/Rule.java
-
-```java
-package composite;
-import java.awt.*;
-/**
- * 此类描述了一个 Porter-Duff 规则。
- */
-class Rule
-{
-    private String name;
-    private String porterDuff1;
-    private String porterDuff2;
-
-    /**
-     * 构造一个 Porter-Duff 规则。
-     * @param pd1 Porter-Duff 的第一行
-     * @param pd2 Porter-Duff 的第二行
-     */
-    public Rule(String n, String pd1, String pd2)
-    {
-        name = n;
-        porterDuff1 = pd1;
-        porterDuff2 = pd2;
-    }
-
-    /**
-     * 获取行为的解释
-     * @return 解释
-     */
-    public String getExplanation() {
-        var r = new StringBuilder("Source ");
-        if (porterDuff2.equals(" ")) r.append("");
-        if (porterDuff2.equals(" S")) r.append("src");
-        if (porterDuff2.equals("DS")) r.append("src");
-        if (porterDuff2.equals(" D")) r.append("dst");
-        if (porterDuff2.equals("D ")) r.append("dst");
-        if (porterDuff2.equals("DD")) r.append("dst");
-        r.append(" destination");
-        if (porterDuff1.equals(" S")) r.append(" src");
-        r.append(".");
-        return r.toString();
-    }
-
-    public String toString() {
-        return name;
-    }
-
-    /**
-     * 获取此规则在 AlphaComposite 中的值
-     * @return AlphaComposite 常量值
-     */
-    public int getValue() {
-        try {
-            return (Integer) AlphaComposite.class.getField(name).get();
-        } catch (Exception e) {
-            return -1;
-        }
-    }
-}
-```
-
-java.awt.Graphics2D 1.2
-+ * void setComposite(Composite s) 将此图形上下文的组合设置为实现 Composite 接口的给定对象。
-
-java.awt.AlphaComposite 1.2
-+ * static AlphaComposite getInstance(int rule)
-* static AlphaComposite getInstance(int rule, float sourceAlpha) 构造一个 alpha 复合操作对象。规则是 CLEAR, SRC_OVER, DST_OVER, SRC_IN, SRC_OUT, DST_IN, DST_OUT, DST_ATOP, SRC_ATOP, XOR 之一。
-
-## 1.6. 位栅图像
-
-Java2D API 允许你创建由线条、曲线和区域组成的图形。这是一个“向量”API，因为你指定了形状的数学属性。然而，对于处理由像素组成的图像：
-
-### 1.6.1. 读取器和写入器
-
-为了加载图像，使用静态的 `read` 方法。ImageIO 包含了以下格式：
-
-如果没有找到读取器，`read` 方法返回 `null`。为了保存文件，我们需要 `write` 方法。例如，`image` 格式如下：
-
-### 1.6.2. 获取读取器和写入器
-
-为了保存文件，我们需要更努力。我们希望向用户展示所有支持的类型的菜单。遗憾的是，`getWriterFormatNames` 方法返回一个相当奇怪的列表，例如：
-
-```
-jpg, BMP, bmp, JPG, jpeg, wbmp, png, JPEG, PNG, W
-```
-
-这不是想要在菜单中展示的列表。我们需要的是一组“首选”格式名称。我们提供了一个辅助方法 `getWriterFormats`（参见 Listing 12.20）。我们查找与每个格式关联的第一个写入器。获取有关读取器的更多信息，获取其服务提供接口：
-
-```java
-ImageReaderSpi spi = reader.getOrigin();
-```
-
-然后你可以获取供应商名称和版本号：
-
-```java
-String vendor = spi.getVendor();
-String version = spi.getVersion();
-```
-
-可能存在多个读取器可以读取特定的文件类型。ImageIO 类枚举了匹配文件后缀或 MIME。为了这样做，使用静态的 `getReaderSuffixes` 方法如下：
-
-```java
-String[] extensions = ImageIO.getReaderSuffixes;
-chooser.setFileFilter(new FileNameFilter
-```
-
-### 1.6.3. 读取和写入包含多个图像的文件
-
-某些文件——特别是动画 GIF 文件——包含多个图像。ImageIO 类的 `read` 方法读取单个图像。要读取多个图像，将输入源转换为 `ImageInputStream`。
-
+某些文件——特别是动画 GIF 文件——包含多个图像。`ImageIO`类的`read`方法读取单个图像。要读取多个图像，将输入源转换为`ImageInputStream`。
 
 ```java
 InputStream in = ...;
+
 ImageInputStream imageIn = ImageIO.createImageInputStream(in);
 ```
 
@@ -24761,7 +26353,9 @@ reader.setInput(imageIn, true);
 
 ```java
 File f = ...;
+
 ImageInputStream imageIn = ImageIO.createImageInputStream(f);
+
 reader.setInput(imageIn);
 ```
 
@@ -24771,15 +26365,15 @@ reader.setInput(imageIn);
 BufferedImage image = reader.read(index);
 ```
 
-其中 index 是图像索引，从 0 开始。
+其中`index`是图像索引，从 0 开始。
 
-如果输入处于“仅向前寻”模式，你继续读取图像，直到读取方法抛出 `IndexOfBoundsException`。否则，你可以调用 `getNumImages` 方法：
+如果输入处于“仅向前寻”模式，你继续读取图像，直到读取方法抛出`IndexOfBoundsException`。否则，你可以调用`getNumImages`方法：
 
 ```java
 int n = reader.getNumImages(true);
 ```
 
-在这里，参数表示你允许搜索输入以确定图像数量。如果输入处于“仅向前寻”模式，该方法将抛出 `IllegalStateException`。或者，你可以将“允许搜索”参数设置为 `false`。那么如果 `getImages` 方法无法在不搜索的情况下确定图像数量，将返回 -1。在这种情况下，你必须切换到方案 B 并继续读取图像直到获取 `IndexOfBoundsException`。
+在这里，参数表示你允许搜索输入以确定图像数量。如果输入处于“仅向前寻”模式，该方法将抛出`IllegalStateException`。或者，你可以将“允许搜索”参数设置为`false`。那么如果`getImages`方法无法在不搜索的情况下确定图像数量，将返回 -1。在这种情况下，你必须切换到方案 B 并继续读取图像直到获取`IndexOfBoundsException`。
 
 某些文件包含缩略图——用于预览的图像较小版本。你可以通过调用获取图像的缩略图数量：
 
@@ -24797,35 +26391,41 @@ BufferedImage thumbnail = reader.getThumbnail(index);
 
 ```java
 int width = reader.getWidth(index);
+
 int height = reader.getHeight(index);
 ```
 
 来获取给定索引的图像尺寸。
 
-要写入包含多幅图像的文件，首先你需要 `ImageWriter`。`ImageIO` 类可以列出能够写入特定图像格式的写入器：
+要写入包含多幅图像的文件，首先你需要`ImageWriter`。`ImageIO`类可以列出能够写入特定图像格式的写入器：
 
 ```java
 String format = ...;
+
 ImageWriter writer = null;
+
 Iterator<ImageWriter> iter = ImageIO.getImageWritersByFormatName(format);
+
 if (iter.hasNext()) writer = iter.next();
 ```
 
-接下来，将输出流或文件转换为 `ImageOutputStream` 并将其附加到写入器。例如：
+接下来，将输出流或文件转换为`ImageOutputStream`并将其附加到写入器。例如：
 
 ```java
 File f = ...;
+
 ImageOutputStream imageOut = ImageIO.createImageOutputStream(f);
+
 writer.setOut(imageOut);
 ```
 
-你必须将每幅图像封装进 `IIOImage` 对象。你可以选择提供缩略图列表和图像元数据（如压缩算法和颜色信息）。在示例中，我们对两者都使用 `null`；更多信息请参见 API 文档。
+你必须将每幅图像封装进`IIOImage`对象。你可以选择提供缩略图列表和图像元数据（如压缩算法和颜色信息）。在示例中，我们对两者都使用`null`；更多信息请参见 API 文档。
 
 ```java
 var iioImage = new IIOImage(images[i], null, null);
 ```
 
-要写入第一幅图像，使用 `write` 方法：
+要写入第一幅图像，使用`write`方法：
 
 ```java
 writer.write(new IIOImage(images[0], null, null));
@@ -24838,9 +26438,9 @@ if (writer.canInsertImage(i))
     writer.writeInsert(i, iioImage, null);
 ```
 
-第三个参数可以包含一个 `ImageWriteParam` 对象，用于设置图像写入细节，如分块和压缩；使用 `null` 使用默认值。
+第三个参数可以包含一个`ImageWriteParam`对象，用于设置图像写入细节，如分块和压缩；使用`null`使用默认值。
 
-并不是所有文件格式都能处理多幅图像。在这种情况下，`canInsertImage` 方法对于 `i > 0` 会返回 `false`，且只保存单幅图像。
+并不是所有文件格式都能处理多幅图像。在这种情况下，`canInsertImage`方法对于`i > 0`会返回`false`，且只保存单幅图像。
 
 列表 12.20 中的程序允许你加载和保存 Java 库提供读取器和写入器的格式的文件。该程序显示了多幅图像（见图 12.55），但没有显示缩略图。
 
@@ -24852,260 +26452,322 @@ if (writer.canInsertImage(i))
 
 ```java
 1 package imageIO;
+
 2
+
 3 import java.awt.image.*;
+
 4 import java.io.*;
+
 5 import java.util.*;
+
 6
+
 7 import javax.imageio.*;
+
 8 import javax.imageio.stream.*;
+
 9 import javax.swing.*;
+
 10 import javax.swing.filechooser.*;
+
 11
+
 12 /*
+
 13 * 此框架显示加载的图像。
+
 14 */
+
 15 public class ImageIOFrame extends JFrame
+
 16 {
+
 17    private static final int DEFAULT_WIDTH = 600;
+
 18    private static final int DEFAULT_HEIGHT = 400;
+
 19
+
 20    private static Set<String> writerFormats = new TreeSet<>();
+
 22
+
 23    private BufferedImage[] images;
+
 24
+
 25    public ImageIOFrame()
+
 26    {
+
 27        setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 ```
 
 ```java
-        27        JMenuBar menuBar = new JMenuBar();
-        28        JMenu fileMenu = new JMenu("File");
-        29        JMenuItem openItem = new JMenuItem("Open");
-        30        JMenuItem saveItem = new JMenuItem("Save");
-        31        JMenuItem formatItem = new JMenuItem("Format");
-        32        JMenuItem exitItem = new JMenuItem("Exit");
-        33
-        34        fileMenu.add(openItem);
-        35        fileMenu.add(saveItem);
-        36        fileMenu.add(formatItem);
-        37        fileMenu.addSeparator();
-        38        fileMenu.add(exitItem);
-        39
-        40        menuBar.add(fileMenu);
-        41        setMenuBar(menuBar);
-        42
-        43        openItem.addActionListener(e -> openFile());
-        44        saveItem.addActionListener(e -> saveFile(null));
-        45        formatItem.addActionListener(e -> showFormats());
-        46        exitItem.addActionListener(e -> System.exit(0));
-        47
-        48        Box box = Box.createVerticalBox();
-        49        add(new JScrollPane(box));
-        50        setVisible(true);
-        51    }
-        52
-        53    /**
-        54 * 打开文件并加载图像。
-        55 * */
-        56    public openFile() {
-        57        FileChooser chooser = new JFileChooser();
-        58        chooser.setCurrentDirectory(new File("."));
-        59        chooser.setFileFilter(new FileNameExtensionFilter("Images", "jpg", "png", "gif"));
-        60        int r = chooser.showDialog(this);
-        61        if (r == JFileChooser.APPROVE_OPTION) {
-        62            File f = chooser.getSelectedFile();
-        63            try {
-        64                ImageInputStream imageIn = ImageIO.createImageInputStream(f);
-        65                Iterator<ImageReader> iter = ImageIO.getImageReaders(imageIn);
-        66                if (iter.hasNext()) {
-        67                    ImageReader reader = iter.next();
-        68                    reader.setInput(imageIn);
-        69                    int count = reader.getNumImages(true);
-        70                    images = new BufferedImage[count];
-        71                    for (int i = 0; i < count; i++) {
-        72                        images[i] = reader.read(i);
-        73                        box.add(new JLabel(new ImageIcon(images[i])));
-        74                    }
-        75                }
-        76            } catch (IOException e) {
-        77                JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
-        78            }
-        79        }
-        80    }
+27        JMenuBar menuBar = new JMenuBar();
+28        JMenu fileMenu = new JMenu("File");
+29        JMenuItem openItem = new JMenuItem("Open");
+30        JMenuItem saveItem = new JMenuItem("Save");
+31        JMenuItem formatItem = new JMenuItem("Format");
+32        JMenuItem exitItem = new JMenuItem("Exit");
+33
+34        fileMenu.add(openItem);
+35        fileMenu.add(saveItem);
+36        fileMenu.add(formatItem);
+37        fileMenu.addSeparator();
+38        fileMenu.add(exitItem);
+39
+40        menuBar.add(fileMenu);
+41        setMenuBar(menuBar);
+42
+43        openItem.addActionListener(e -> openFile());
+44        saveItem.addActionListener(e -> saveFile(null));
+45        formatItem.addActionListener(e -> showFormats());
+46        exitItem.addActionListener(e -> System.exit(0));
+47
+48        Box box = Box.createVerticalBox();
+49        add(new JScrollPane(box));
+50        setVisible(true);
+51    }
+52
+53    /**
+54 * 打开文件并加载图像。
+55 * */
+56    public openFile() {
+57        FileChooser chooser = new JFileChooser();
+58        chooser.setCurrentDirectory(new File("."));
+59        chooser.setFileFilter(new FileNameExtensionFilter("Images", "jpg", "png", "gif"));
+60        int r = chooser.showDialog(this);
+61        if (r == JFileChooser.APPROVE_OPTION) {
+62            File f = chooser.getSelectedFile();
+63            try {
+64                ImageInputStream imageIn = ImageIO.createImageInputStream(f);
+65                Iterator<ImageReader> iter = ImageIO.getImageReaders(imageIn);
+66                if (iter.hasNext()) {
+67                    ImageReader reader = iter.next();
+68                    reader.setInput(imageIn);
+69                    int count = reader.getNumImages(true);
+70                    images = new BufferedImage[count];
+71                    for (int i = 0; i < count; i++) {
+72                        images[i] = reader.read(i);
+73                        box.add(new JLabel(new ImageIcon(images[i])));
+74                    }
+75                }
+76            } catch (IOException e) {
+77                JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
+78            }
+79        }
+80    }
 ```
 
 ```java
-        81    /**
-        82 * 将当前图像保存到文件。
-        83 * @param format 文件格式
-        84 * */
-        85    public void saveFile(String format) {
-        86        if (images == null) return;
-        87        FileChooser chooser = new JFileChooser();
-        88        chooser.setCurrentDirectory(new File("."));
-        89        chooser.setFileFilter(new FileNameExtensionFilter("Images", "jpg", "png", "gif"));
-        90        int r = chooser.showSaveDialog(this);
-        91        if (r == JFileChooser.APPROVE_OPTION) {
-        92            File f = chooser.getSelectedFile();
-        93            try {
-        94                ImageOutputStream imageOut = ImageIO.createImageOutputStream(f);
-        95                Iterator<ImageWriter> iter = ImageIO.getImageWritersByFormatName("jpg");
-        96                if (iter.hasNext()) {
-        97                    ImageWriter writer = iter.next();
-        98                    writer.setOutput(imageOut);
-        99                    writer.write(new IIOImage(images[0], null, null));
-        100                }
-        101            } catch (IOException e) {
-        102                JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
-        103            }
-        104        }
-        105    }
-        106
-        107    /**
-        108     * 获取“首选”格式名称集合
-        109     * 是写入器的第一个格式名称
-        110     * @return 格式名称集合
-        111     */
-        112    public static Set<String> getWriterFormats() {
-        113        Set<String> writerFormats = new TreeSet<>();
-        114        List<String> formatNames = new ArrayList<>(ImageIO.getWriterFormatNames());
-        115        while (formatNames.size() > 0) {
-        116            String name = formatNames.iterator().next();
-        117            Iterator<ImageWriter> iter = ImageIO.getImageWritersByFormatName(name);
-        118            if (iter.hasNext()) {
-        119                ImageWriter writer = iter.next();
-        120                String[] suffixes = writer.getOutputExtensions();
-        121                for (String s : suffixes) {
-        122                    writerFormats.add(s);
-        123                }
-        124            }
-        125            formatNames.remove(name);
-        126        }
-        127        return writerFormats;
-        128    }
-        129
-        130    private void showFormats() {
-        131        JOptionPane.showMessageDialog(this, getWriterFormats().toString());
-        132    }
-        133}
-        134
+81    /**
+82 * 将当前图像保存到文件。
+83 * @param format 文件格式
+84 * */
+85    public void saveFile(String format) {
+86        if (images == null) return;
+87        FileChooser chooser = new JFileChooser();
+88        chooser.setCurrentDirectory(new File("."));
+89        chooser.setFileFilter(new FileNameExtensionFilter("Images", "jpg", "png", "gif"));
+90        int r = chooser.showSaveDialog(this);
+91        if (r == JFileChooser.APPROVE_OPTION) {
+92            File f = chooser.getSelectedFile();
+93            try {
+
+
+
+```java
+ImageOutputStream imageOut = ImageIO.createImageOutputStream(f);
+
+Iterator<ImageWriter> iter = ImageIO.getImageWritersByFormatName("jpg");
+
+if (iter.hasNext()) {
+    ImageWriter writer = iter.next();
+    writer.setOutput(imageOut);
+    writer.write(new IIOImage(images[0], null, null));
+}
 ```
 
+```java
+catch (IOException e) {
+    JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
+}
+```
 
+获取“首选”格式名称集合，即写入器的第一个格式名称。
+
+```java
+public static Set<String> getWriterFormats() {
+    Set<String> writerFormats = new TreeSet<>();
+    List<String> formatNames = new ArrayList<>(ImageIO.getWriterFormatNames());
+
+    while (formatNames.size() > 0) {
+        String name = formatNames.iterator().next();
+        Iterator<ImageWriter> iter = ImageIO.getImageWritersByFormatName(name);
+
+        if (iter.hasNext()) {
+            ImageWriter writer = iter.next();
+            String[] suffixes = writer.getOutputExtensions();
+
+            for (String s : suffixes) {
+                writerFormats.add(s);
+            }
+        }
+
+        formatNames.remove(name);
+    }
+
+    return writerFormats;
+}
+
+private void showFormats() {
+    JOptionPane.showMessageDialog(this, getWriterFormats().toString());
+}
+```
 
 ```java
 static Iterator<ImageReader>
 getImageReadersByFormatName(String formatName)
+
 static Iterator<ImageReader>
 getImageReadersBySuffix(String fileSuffix)
+
 static Iterator<ImageReader>
 getImageReadersByMIMEType(String mimeType)
+
 static Iterator<ImageWriter>
 getImageWritersByFormatName(String formatName)
+
 static Iterator<ImageWriter>
 getImageWritersBySuffix(String fileSuffix)
+
 static Iterator<ImageWriter>
 getImageWritersByMIMEType(String mimeType)
 ```
 
-获取所有能够处理给定格式（例如 "JPEG"）、文件后缀（例如 "jpg"）或 MIME 类型（例如 "image/jpeg"）的读取器和写入器。
+获取所有能够处理给定格式（例如 `"JPEG"`）、文件后缀（例如 `"jpg"`）或 MIME 类型（例如 `"image/jpeg"`）的读取器和写入器。
 
 ```java
 static String[] getReaderFormatNames()
+
 static String[] getReaderMIMETypes()
+
 static String[] getWriterFormatNames()
+
 static String[] getWriterMIMETypes()
+
 static String[] getReaderFileSuffixes()
+
 static String[] getWriterFileSuffixes()
 ```
 
 获取读取器和写入器支持的所有格式名称、MIME 类型名称和文件后缀。
 
-- ImageInputStream createImageInputStream(Object input)
-- ImageOutputStream createImageOutputStream(Object output)
+- `ImageInputStream createImageInputStream(Object input)`
+- `ImageOutputStream createImageOutputStream(Object output)`
 
-从给定对象创建图像输入流或图像输出流。该对象可以是文件、流、RandomAccessFile 或其他存在服务提供者的其他对象。如果没有已注册的服务提供者可以处理该对象，则返回 null。
+从给定对象创建图像输入流或图像输出流。该对象可以是文件、流、`RandomAccessFile` 或其他存在服务提供者的对象。如果没有已注册的服务提供者可以处理该对象，则返回 `null`。
 
-```
-javax.imageio.ImageReader 1.4
-```
+## `javax.imageio.ImageReader` 1.4
 
-- void setInput(Object input)
-- void setInput(Object input, boolean seekForwardOnly)
+- `void setInput(Object input)`
+- `void setInput(Object input, boolean seekForwardOnly)`
 
-设置读取器的输入源。输入参数是 `ImageIconInputStream` 或此读取器可以接受的其他对象。如果读取器应仅向前读取，则 `seekForwardOnly` 参数为 true。默认情况下，读取器使用随机访问，并在必要时缓冲图像数据。
+设置读取器的输入源。输入参数是 `ImageIconInputStream` 或此读取器可以接受的其他对象。如果读取器应仅向前读取，则 `seekForwardOnly` 参数为 `true`。默认情况下，读取器使用随机访问，并在必要时缓冲图像数据。
 
-- BufferedImage read(int index)
-- int getNumImages(boolean allowSearch)
+- `BufferedImage read(int index)`
+- `int getNumImages(boolean allowSearch)`
 
-读取给定图像索引（从 @ 开始）的图像。如果没有此类可用图像，则抛出 `IndexOutOfBoundsException`。获取此读取器中的图像数量。如果 `allowSearch` 为 false 且在不向前读取的情况下无法确定数量，则返回 -1。如果 `allowSearch` 为 true 且读取器处于“仅向前查找”模式，则会抛出 `IllegalStateException`。
+读取给定图像索引（从 `0` 开始）的图像。如果没有此类可用图像，则抛出 `IndexOutOfBoundsException`。获取此读取器中的图像数量。如果 `allowSearch` 为 `false` 且在不向前读取的情况下无法确定数量，则返回 `-1`。如果 `allowSearch` 为 `true` 且读取器处于“仅向前查找”模式，则会抛出 `IllegalStateException`。
 
-- int getNumThumbnails(int index)
+- `int getNumThumbnails(int index)`
+
 获取给定索引图像的缩略图数量。
 
-- BufferedImage readThumbnail(int index, int thumbnailIndex)
+- `BufferedImage readThumbnail(int index, int thumbnailIndex)`
+
 获取给定索引图像具有指定 `thumbnailIndex` 的缩略图。
 
-- int getWidth(int index)
-- int getHeight(int index)
+- `int getWidth(int index)`
+- `int getHeight(int index)`
+
 获取图像宽度和高度。如果没有此类图像，则抛出 `IndexOutOfBoundsException`。
 
-- ImageReaderSpi getOriginatingProvider()
+- `ImageReaderSpi getOriginatingProvider()`
+
 获取构造此读取器的服务提供者。
 
-```
-javax.imageio.spi.IIOServiceProvider 1.4
-```
+## `javax.imageio.spi.IIOServiceProvider` 1.4
 
-- String getVendorName()
-- String getVersion()
+- `String getVendorName()`
+- `String getVersion()`
+
 获取此服务提供者的名称和版本。
 
-## javax.imageio.spi.ImageReaderWriterSpi 1.4
+## `javax.imageio.spi.ImageReaderWriterSpi` 1.4
 
-- String[] getFormatNames()
-- String[] getFileSuffixes()
-- String[] getMIMETypes()
+- `String[] getFormatNames()`
+- `String[] getFileSuffixes()`
+- `String[] getMIMETypes()`
+
 获取此服务提供者创建的读取器或写入器支持的格式名称、文件后缀和 MIME 类型。
 
-## javax.imageio.ImageWriter 1.4
+## `javax.imageio.ImageWriter` 1.4
 
-- void setOutput(Object output)
+- `void setOutput(Object output)`
+
 设置写入器的输出目标。输出参数是 `ImageOutputStream` 对象或此写入器可以接受的其他对象。
-- void write(IIOImage image)
-- write(RenderedImage image)
+
+- `void write(IIOImage image)`
+- `write(RenderedImage image)`
+
 将单张图像写入输出。
-- void writeInsert(int index, IIOImage image, ImageWriteParam param)
+
+- `void writeInsert(int index, IIOImage image, ImageWriteParam param)`
+
 将图像写入多图像文件。
-- boolean canInsertImage(int index)
-如果可以在给定的索引处插入图像，则返回 true。
-- ImageWriterSpi getOriginatingProvider()
+
+- `boolean canInsertImage(int index)`
+
+如果可以在给定的索引处插入图像，则返回 `true`。
+
+- `ImageWriterSpi getOriginatingProvider()`
+
 获取构造此写入器的服务提供者。
 
-## javax.imageio.IIOImage 1.4
+## `javax.imageio.IIOImage` 1.4
 
-- IIOImage(RenderedImage image, List thumbnails, IIOMetadata metadata)
-从图像、可选缩略图和可选元数据构造 IIOImage。
+- `IIOImage(RenderedImage image, List thumbnails, IIOMetadata metadata)`
+
+从图像、可选缩略图和可选元数据构造 `IIOImage`。
 
 ## 1.6.4. 图像处理
 
 假设你有一张图像并想要改进它的外观。这时你需要访问图像的单个像素并将它们替换为其他像素。或者，你可能想从头计算图像的像素——例如为了显示物理测量或数学计算的结果。`BufferedImage` 类让你对图像中的像素进行控制，而实现 `BufferedImageOp` 接口的类则让你能够转换图像。
 
-> 注意：JDK 1.0 有一个完全不同且远复杂的图像框架，该框架针对从网络下载的图像进行增量渲染进行了优化（一次处理扫描线）。然而，那些图像很难进行操作。我们在此书中不讨论该框架。
+> **注意：** JDK 1.0 有一个完全不同且远复杂的图像框架，该框架针对从网络下载的图像进行增量渲染进行了优化（一次处理扫描线）。然而，那些图像很难进行操作。我们在此书中不讨论该框架。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1555_0.png)
 
 你操作的大多数图像仅仅是从图像文件中读取的——它们是由数字相机或扫描仪等设备产生的，或者是由绘图程序构建的。在本节中，我们将展示如何访问和修改像素。要创建图像，使用以下技术：
 
 ```java
-BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+BufferedImage image = new BufferedImage(
+    width,
+    height,
+    BufferedImage.TYPE_INT_RGB
+);
+
 WritableRaster raster = image.getRaster();
+
 for (int y = 0; y < height; y++) {
     for (int x = 0; x < width; x++) {
         int color = image.getRGB(x, y);
+
         // 处理颜色 ...
+
         image.setRGB(x, y, color);
     }
 }
@@ -25115,7 +26777,9 @@ for (int y = 0; y < height; y++) {
 
 ```java
 int[] sample = new int[4];
+
 raster.getPixel(x, y, sample);
+
 Color color = new Color(sample[0], sample[1], sample[2]);
 ```
 
@@ -25123,6 +26787,7 @@ Color color = new Color(sample[0], sample[1], sample[2]);
 
 ```java
 int[] pixels = new int[4 * width];
+
 raster.getPixels(0, 0, width, height, pixels);
 ```
 
@@ -25130,10 +26795,7 @@ raster.getPixels(0, 0, width, height, pixels);
 
 如果你需要处理任意未知的图像类型，你需要付出更多努力。每种图像类型都有颜色模型，可以在值数组和标准 RGB 模型之间进行转换。
 
-
-
-
-ICC 配置文件是复杂的。一个更简单的建议标准被称为 sRGB (https://www.w3.org/Graphics/Color/sRGB.html)，它规定了 RGB 值与 1931 CIE XYZ 值之间的精确映射，该映射旨在与典型的颜色显示器良好地工作。Java 2D API 在在 RGB 和其他颜色空间之间转换时会使用该映射。
+ICC 配置文件是复杂的。一个更简单的建议标准被称为 sRGB（https://www.w3.org/Graphics/Color/sRGB.html），它规定了 RGB 值与 1931 CIE XYZ 值之间的精确映射，该映射旨在与典型的颜色显示器良好地工作。Java 2D API 在 RGB 和其他颜色空间之间转换时会使用该映射。
 
 `getColorModel` 方法返回颜色模型：
 
@@ -25153,6 +26815,7 @@ Object data = raster.getDataElements(x, y, null);
 
 ```java
 int argb = model.getRGB(data);
+
 var color = new Color(argb, true);
 ```
 
@@ -25160,7 +26823,9 @@ var color = new Color(argb, true);
 
 ```java
 int argb = color.getRGB();
+
 Object data = model.getDataElements(argb, null);
+
 raster.setDataElements(x, y, data);
 ```
 
@@ -25172,41 +26837,44 @@ raster.setDataElements(x, y, data);
 
 曼德博罗集的思想是平面上的每个点都与一个序列相关。如果该序列是有界的，则给该点上色。如果它“逃逸到无穷大”，则保持透明。
 
-以下是构建简单的曼德博罗集的方法。对于每个点 (a, b)，查看从 (x, y) = (0, 0) 开始的序列并迭代：
+以下是构建简单的曼德博罗集的方法。对于每个点 `(a, b)`，查看从 `(x, y) = (0, 0)` 开始的序列并迭代：
 
-$x_{new} = x^2 - y^2 + a$
+$$
+x_{new} = x^2 - y^2 + a
+$$
 
-$y_{new} = 2 \cdot x \cdot y + b$
+$$
+y_{new} = 2 \cdot x \cdot y + b
+$$
 
-事实证明，如果 x y 任何时候大于 2，序列就会逃逸到无穷大。只有那些对应于导致有界序列的点 (a, b) 的像素会被上色。（数字序列的公式最终源于复数数学；我们直接认为它们成立。）
+事实证明，如果 `x`、`y` 任何时候大于 2，序列就会逃逸到无穷大。只有那些对应于导致有界序列的点 `(a, b)` 的像素会被上色。（数字序列的公式最终源于复数数学；我们直接认为它们成立。）
 
 列表 12.21 显示了代码。该程序演示了如何使用 `ColorModel` 类将 `Color` 值转换为像素数据。该过程独立于图像类型。为了好玩，将缓冲区图像的类型更改为 `TYPE_BYTE_GRAY`。你不需要更改任何其他代码——图像的颜色模型会自动处理从颜色到采样值的转换。
 
-# 列表 1.21 rasterImage/RasterImageFrame.java
+# 列表 1.21 `rasterImage/RasterImageFrame.java`
 
 ```java
-1 package rasterImage;
-2
-3 import java.awt.*;
-4 import java.awt.image.*;
-5 import javax.swing.*;
-6
-7 /****
-8 * 此框架显示了一个带有曼德博罗
-9 */
-10 public class RasterImageFrame extends JFrame
-11 {
+package rasterImage;
+
+import java.awt.*;
+import java.awt.image.*;
+import javax.swing.*;
+
+/****
+ * 此框架显示了一个带有曼德博罗
+ */
+public class RasterImageFrame extends JFrame {
+    private static final double XMIN = -2;
+    private static final double XMAX = 2;
+    private static final double YMIN = -2;
+    private static final double YMAX = 2;
+    private static final int MAX_ITERATIONS = 4;
+    private static final int IMAGE_WIDTH = 4;
+    private static final int IMAGE_HEIGHT = 4;
+}
 ```
 
-```java
-private static final double XMIN = -2;
-private static final double XMAX = 2;
-private static final double YMIN = -2;
-private static final double YMAX = 2;
-private static final int MAX_ITERATIONS = 4;
-private static final int IMAGE_WIDTH = 4;
-private static final int IMAGE_HEIGHT = 4;
-```
+
 
 ```java
 public RasterImageFrame() {
@@ -25233,52 +26901,57 @@ public BufferedImage makeMandelbrot(int width, int height) {
 ```java
 int argb = fractalColor.getRGB();
 Object colorData = model.getDataElements(argb);
+
 for (int i = 0; i < width; i++) {
     for (int j = 0; j < height; j++) {
         double a = XMIN + i * (XMAX - XMIN) / width;
         double b = YMIN + j * (YMAX - YMIN) / height;
+
         if (!escapesToInfinity(a, b)) {
             raster.setDataElements(i, j, colorData);
         }
     }
 }
+
 return image;
 }
 
 private boolean escapesToInfinity(double a, double b) {
     double x = 0;
     double y = 0;
+
     for (int i = 0; i < MAX_ITERATIONS; i++) {
         double xNew = x * x - y * y + a;
         y = 2 * x * y + b;
         x = xNew;
+
         if (x * x + y * y > 4) return true;
     }
+
     return false;
 }
 ```
 
+在上一节中，你已经了解了如何从零开始构建图像。然而，通常你可能想出于其他原因访问图像数据：你已经有一张图像，并想以某种方式对其进行改进。
 
+当然，你可以使用上一节中看到的`getPixel/getDataElements`方法来读取图像数据、对其进行处理并写回。幸运的是，Java 2D API 提供了许多过滤器，可以为你执行常见的图像处理操作。
 
+所有的图像操作都实现了`BufferedImageOp`接口。在你构造好操作后，只需调用过滤器方法将一个图像转换为另一个。
 
-在上一节中，你已经了如何从零开始构建图像。然而，通常你可能想出于其他原因访问图像数据：你已经有一张图像，并想以某种方式对其进行改进。
-
-当然，你可以使用上一节中看到的 `getPixel/getDataElements` 方法来读取图像数据、对其进行处理并写回。幸运的是，Java 2D API 提供了许多过滤器，可以为你执行常见的图像处理操作。
-
-所有的图像操作都实现了 `BufferedImageOp` 接口。在你构造好操作后，只需调用过滤器方法将一个图像转换为另一个。
-
-```
+```java
 BufferedImageOp op = . . .;
+
 BufferedImage filteredImage
     = new BufferedImage(image.getWidth(), image.getHeight());
+
 op.filter(image, filteredImage);
 ```
 
-某些操作可以原位变换图像（`op.filter(image, image)`），但大多数不能的。
+某些操作可以原位变换图像（`op.filter(image, image)`），但大多数不能。
 
-有五个类实现了 `BufferedImageOp` 接口：
+有五个类实现了`BufferedImageOp`接口：
 
-```
+```text
 AffineTransformOp
 RescaleOp
 LookupOp
@@ -25286,16 +26959,19 @@ ColorConvertOp
 ConvolveOp
 ```
 
-`AffineTransformOp` 对像素执行仿射变换。例如，以下是如何绕图像中心旋转图像：
+`AffineTransformOp`对像素执行仿射变换。例如，以下是如何绕图像中心旋转图像：
 
-```
+```java
 AffineTransform transform = AffineTransform.getRT(
     image.getWidth() / 2, image.getHeight() / 2);
+
 var op = new AffineTransformOp(transform, interp);
 op.filter(image, filteredImage);
 ```
 
-`AffineTransformOp` 构造函数需要一个仿射变换和一个插值策略。如果源像素被变换到目标像素之间的某个位置，则需要插值来确定目标图像像素。例如，如果你旋转了源像素，它们通常不会恰好地落在目标像素上。有三种插值策略：`AffineTransformOp.TYPE_BICUBIC`、`AffineTransformOp.TYPE_BILINEAR` 和 `AffineTransformOp.TYPE_NEAREST_NEIGHBOR`。双三次插值（Bicubic）需要的时间稍长，但视觉效果比另外两种更好。
+`AffineTransformOp`构造函数需要一个仿射变换和一个插值策略。如果源像素被变换到目标像素之间的某个位置，则需要插值来确定目标图像像素。例如，如果你旋转了源像素，它们通常不会恰好地落在目标像素上。
+
+有三种插值策略：`AffineTransformOp.TYPE_BICUBIC`、`AffineTransformOp.TYPE_BILINEAR`和`AffineTransformOp.TYPE_NEAREST_NEIGHBOR`。双三次插值（Bicubic）需要的时间稍长，但视觉效果比另外两种更好。
 
 列表 12.22 中的程序允许你将图像旋转 5 度（参见图 1.57）。
 
@@ -25303,48 +26979,53 @@ op.filter(image, filteredImage);
 
 **图 1.57：** 旋转后的图像
 
-**RescaleOp** 对图像中的每个颜色组件执行缩放操作：
+`RescaleOp`对图像中的每个颜色组件执行缩放操作：
 
 $x_{new} = a \cdot x + b$
 
-（Alpha 分量不受影响）。使用 $a > 1$ 进行缩放的效果是调亮图像。通过指定缩放参数和可选的渲染提示来构造 **RescaleOp**。在列表 12.22 中，我们使用：
+（Alpha 分量不受影响）。使用$a > 1$进行缩放的效果是调亮图像。通过指定缩放参数和可选的渲染提示来构造`RescaleOp`。在列表 12.22 中，我们使用：
 
-```
+```java
 float a = 1.1f;
 float b = 20.0f;
+
 var op = new RescaleOp(a, b, null);
 ```
 
 你也可以为每个颜色组件提供单独的缩放值——参见 API 说明。
 
-`LookupOp` 操作允许你指定样本值的任意映射。提供一个指定每个值应如何映射的表。在示例程序中，我们计算了所有颜色的反色，将颜色 $c$ 变为 $255 - c$。
+`LookupOp`操作允许你指定样本值的任意映射。提供一个指定每个值应如何映射的表。在示例程序中，我们计算了所有颜色的反色，将颜色$c$变为$255 - c$。
 
-`LookupOp` 构造函数需要一个类型为 `LookupTable` 的对象和一个可选提示的映射。`LookupTable` 是一个抽象类，有两个具体的子类：`ByteLookupTable` 和 `ShortLookupTable`。由于 RGB 颜色值是字节，因此 `ByteLookupTable` 就足够了。然而，由于 https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6183251 中描述的错误，我们将使用 `ShortLookupTable`。以下是为示例程序构造 `LookupOp` 的方式：
+`LookupOp`构造函数需要一个类型为`LookupTable`的对象和一个可选提示的映射。`LookupTable`是一个抽象类，有两个具体的子类：`ByteLookupTable`和`ShortLookupTable`。由于 RGB 颜色值是字节，因此`ByteLookupTable`就足够了。然而，由于 https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6183251 中描述的错误，我们将使用`ShortLookupTable`。以下是为示例程序构造`LookupOp`的方式：
 
-```
+```java
 var negative = new short[256];
-for (int i = 0; i < 256; i++) negative[i] = (short)(255 - i);
+
+for (int i = 0; i < 256; i++) {
+    negative[i] = (short) (255 - i);
+}
+
 var table = new ShortLookupTable(0, negative);
 var op = new LookupOp(table, null);
 ```
 
-查找分别应用于每个颜色组件，但不会应用于 alpha 分量。你也可以为每个颜色组件提供不同的查找查找表——参见 API 说明。
+查找分别应用于每个颜色组件，但不会应用于 alpha 分量。你也可以为每个颜色组件提供不同的查找表——参见 API 说明。
 
-> 注意：你不能对带有索引颜色模型的图像应用 `LookupOp`（在这些图像中，每个样本值都是指向颜色调色板的偏移量。）
+> 注意：你不能对带有索引颜色模型的图像应用`LookupOp`（在这些图像中，每个样本值都是指向颜色调色板的偏移量）。
 
-`ColorConvertOp` 用于颜色空间转换。我们在这里不讨论它。
+`ColorConvertOp`用于颜色空间转换。我们在这里不讨论它。
 
-变换中最强大的是 `ConvolveOp`，它执行数学卷积。在不深入探讨数学细节的情况下，其基本思想非常简单。例如，考虑模糊滤波器（参见图 12.58）。
+变换中最强大的是`ConvolveOp`，它执行数学卷积。在不深入探讨数学细节的情况下，其基本思想非常简单。例如，考虑模糊滤波器（参见图 12.58）。
 
 # 图 12.58：模糊图像
 
 模糊通过将每个像素替换为该像素与其八个相邻像素的平均值来实现。从直觉上来说，这种操作会让图片模糊是合理的。在数学上，平均值可以表示为具有以下卷积核的卷积操作：
 
-```
+```text
 $\begin{matrix} 1/9 & 1/9 & 1/9 \\ 1/9 & 1/9 & 1/9 \\ 1/9 & 1/9 & 1/9 \end{matrix}$
 ```
 
-卷积的核是一个矩阵，它告诉应对邻居值应用哪些权重。上面的核产生一个模糊的图像。不同的核执行边缘检测，用于确定颜色变化的区域：
+卷积的核是一个矩阵，它告诉应对邻居值应用哪些权重。上面的核产生一个模糊的图像。不同的核执行边缘检测，用于确定颜色变化的区域。
 
 边缘检测是分析图像的重要技术（参见图 12.59）。
 
@@ -25354,42 +27035,53 @@ $\begin{matrix} 1/9 & 1/9 & 1/9 \\ 1/9 & 1/9 & 1/9 \\ 1/9 & 1/9 & 1/9 \end{matri
 
 边缘检测是分析图像的一种重要技术（参见图 12.59）。
 
-
-
-
-
 ```java
 var transform = new AffineTransform(image.getWidth() / 2, ima);
-var op = new AffineTransformOp(transform, AffineTransformOp.TYPE_BILINEAR);
+
+var op = new AffineTransformOp(
+    transform,
+    AffineTransformOp.TYPE_BILINEAR
+);
+
 filter(op);
+
 editMenu.add(rotateItem);
+
 var menuBar = new JMenuBar();
+
 menubar.add(fileMenu);
 menubar.add(editMenu);
+
 setJMenuBar(menubar);
 }
+
 /**
  * 打开一个文件并加载图像。
  */
-public void openFile()
-{
+public void openFile() {
     var chooser = new JFileChooser(".");
     chooser.setCurrentDirectory(new File("."));
+
     String[] extensions = ImageIO.getReadExtensions();
     chooser.setFileFilter(new FileNameExtFilter());
+
     int r = chooser.showDialog(this);
-    if (r != JFileChooser.APPROVE_OPTION)
-    {
-        try
-        {
+
+    if (r != JFileChooser.APPROVE_OPTION) {
+        try {
             Image img = ImageIO.read(chooser.getSelectedFile());
-            image = new BufferedImage(img.getWidth(), img.getHeight(), BufferedImage.TYPE_INT_RGB);
+
+            image = new BufferedImage(
+                img.getWidth(),
+                img.getHeight(),
+                BufferedImage.TYPE_INT_RGB
+            );
+
             image.getGraphics().drawImage(img, 0, 0, null);
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
+
         repaint();
     }
 }
@@ -25398,9 +27090,9 @@ public void openFile()
  * 应用过滤器并重绘。
  * @param op 要应用的图像操作
  */
-private void filter(BufferedOp op)
-{
+private void filter(BufferedOp op) {
     if (image == null) return;
+
     image = op.filter(image, null);
     repaint();
 }
@@ -25409,154 +27101,161 @@ private void filter(BufferedOp op)
  * 应用卷积操作并重绘。
  * @param elements 卷积核元素
  */
-private void convolve(float[] elements)
-{
-  var kernel = new Kernel(3, 3, elements);
-  var op = new ConvolveOp(kernel);
-  filter(op);
+private void convolve(float[] elements) {
+    var kernel = new Kernel(3, 3, elements);
+    var op = new ConvolveOp(kernel);
+
+    filter(op);
 }
 ```
 
-## java.awt.image.BufferedImageOp 1.2
+## `java.awt.image.BufferedImageOp` 1.2
 
-- BufferedImage filter(BufferedImage source, BufferedImage dest)
-将图像操作应用到源图像，并将结果存储在目标图像中。如果 dest 为 null，则会创建一个新的目标图像。返回该目标图像。
+- `BufferedImage filter(BufferedImage source, BufferedImage dest)`
 
-## java.awt.image.AffineTransformOp 1.2
+  将图像操作应用到源图像，并将结果存储在目标图像中。如果`dest`为 null，则会创建一个新的目标图像。返回该目标图像。
 
-- AffineTransformOp(AffineTransform t, int interpolationType)
-构造一个仿变换算符。插值类型为 TYPE_BILINEAR（双线性插值）、TYPE_BICUBIC（双立方插值）或 TYPE_NEAREST_NEIGHBOR（最近邻插值）。
+## `java.awt.image.AffineTransformOp` 1.2
 
-## java.awt.image.RescaleOp 1.2
+- `AffineTransformOp(AffineTransform t, int interpolationType)`
 
-- RescaleOp(float a, float b, RenderingHints hints)
-- RescaleOp(float[] as, float[] bs, RenderingHints hints)
-构造一个执行缩放操作 $x_{new} = a \cdot x + b$ 的缩放算符。使用第一个构造函数时，所有颜色分量（但不包括 alpha 分量）都使用相同的系数进行缩放。使用第二个构造函数时，你为每个颜色分量提供的值。
+  构造一个仿变换算符。插值类型为`TYPE_BILINEAR`（双线性插值）、`TYPE_BICUBIC`（双立方插值）或`TYPE_NEAREST_NEIGHBOR`（最近邻插值）。
 
-## java.awt.image.LookupOp 1.2
+## `java.awt.image.RescaleOp` 1.2
 
-- LookupOp(LookupTable table, RenderingHints hints)
-为给定的查找表构造一个查找算符。
+- `RescaleOp(float a, float b, RenderingHints hints)`
+- `RescaleOp(float[] as, float[] bs, RenderingHints hints)`
 
-## java.awt.image.ByteLookupTable 1.2
+  构造一个执行缩放操作$x_{new} = a \cdot x + b$的缩放算符。使用第一个构造函数时，所有颜色分量（但不包括 alpha 分量）都使用相同的系数进行缩放。使用第二个构造函数时，你为每个颜色分量提供的值。
 
-- ByteLookupTable(int offset, byte[] data)
-- ByteLookupTable(int offset, byte[][] data)
-构造一个用于转换字节值的查找表。在查找之前，输入值会减去偏移量。第一个构造函数中的值应用于所有颜色分量，但不包括 alpha 分量。使用第二个构造函数时，为每个颜色分量提供值，或同时提供 alpha 和颜色分量的值。
+## `java.awt.image.LookupOp` 1.2
 
-## java.awt.image.ShortLookupTable 1.2
+- `LookupOp(LookupTable table, RenderingHints hints)`
 
-- ShortLookupTable(int offset, short[] data)
-- ShortLookupTable(int offset, short[][])
-构造一个用于转换 short 值的查找表。在查找之前，输入值会减去偏移量。第一个构造函数中的值应用于所有颜色分量，但不包括 alpha 分量。使用第二个构造函数时，为每个颜色分量提供值，或同时提供 alpha 和颜色分量的值。
+  为给定的查找表构造一个查找算符。
 
-## java.awt.image.ConvolveOp 1.2
+## `java.awt.image.ByteLookupTable` 1.2
 
-- ConvolveOp(Kernel kernel)
-- ConvolveOp(Kernel kernel, int edgeCondition, RenderingHints hints)
-构造一个卷积运算符。指定的边缘条件为 EDGE_NO_OP（不操作）或 EDGE_ZERO_FILL（零填充）之一。边缘值需要特殊处理，因为它们没有足够的相邻像素来计算卷积。默认值是 EDGE_ZERO_FILL。
+- `ByteLookupTable(int offset, byte[] data)`
+- `ByteLookupTable(int offset, byte[][] data)`
 
-## java.awt.image.Kernel 1.2
+  构造一个用于转换字节值的查找表。在查找之前，输入值会减去偏移量。第一个构造函数中的值应用于所有颜色分量，但不包括 alpha 分量。使用第二个构造函数时，为每个颜色分量提供值，或同时提供 alpha 和颜色分量的值。
 
-- Kernel(int width, int height, float[] matrixElements)
-为定的矩阵构造一个内核。
+## `java.awt.image.ShortLookupTable` 1.2
 
-## 1.7. 打印
+- `ShortLookupTable(int offset, short[] data)`
+- `ShortLookupTable(int offset, short[][])`
+
+  构造一个用于转换 short 值的查找表。在查找之前，输入值会减去偏移量。第一个构造函数中的值应用于所有颜色分量，但不包括 alpha 分量。使用第二个构造函数时，为每个颜色分量提供值，或同时提供 alpha 和颜色分量的值。
+
+## `java.awt.image.ConvolveOp` 1.2
+
+- `ConvolveOp(Kernel kernel)`
+- `ConvolveOp(Kernel kernel, int edgeCondition, RenderingHints hints)`
+
+  构造一个卷积运算符。指定的边缘条件为`EDGE_NO_OP`（不操作）或`EDGE_ZERO_FILL`（零填充）之一。边缘值需要特殊处理，因为它们没有足够的相邻像素来计算卷积。默认值是`EDGE_ZERO_FILL`。
+
+## `java.awt.image.Kernel` 1.2
+
+- `Kernel(int width, int height, float[] matrixElements)`
+
+  为给定的矩阵构造一个内核。
+
+# 1.7. 打印
 
 在接下来的章节中，我将向你展示如何轻松地在单页上打印图形、如何管理多页打印以及如何将打印输出保存为 PostScript 文件。
 
-### 1.7.1. 图形打印
+## 1.7.1. 图形打印
 
 在本节中，我们将处理最常见的打印情况：打印 2D 图形。当然，图形可以包含各种字体的文本，甚至可以完全由文本组成。
 
 要生成打印输出，你需要处理这两个任务：
 
-- 提供一个实现 Printable 接口的对象
-- 开始打印
+- 提供一个实现`Printable`接口的对象。
+- 开始打印。
 
-Printable 接口有一个独有的方法：
+`Printable`接口有一个独有的方法：
 
 ```java
 int print(Graphics g, PageFormat format, int pageIndex)
 ```
 
-每当需要渲染打印时，就会调用该方法。pageFormat 告诉你页面尺寸和页边。pageIndex 告诉你要打印哪页。
+每当需要渲染打印时，就会调用该方法。`pageFormat`告诉你页面尺寸和页边。`pageIndex`告诉你要打印哪页。
 
-要启动打印作业，请使用 PrinterJob 类。首先，调用静态方法 getPrinter 获取打印作业。然后设置要打印的 Printable 对象。
+要启动打印作业，请使用`PrinterJob`类。首先，调用静态方法`getPrinter`获取打印作业。然后设置要打印的`Printable`对象。
 
 ```java
 Printable canvas = ...;
 PrinterJob job = PrinterJob.getPrinter();
+
 job.setPrintable(canvas);
 ```
 
 对话框允许用户选择打印机（见图 1.60）、打印范围以及各种设置。
 
-printDialog 方法在用户点击 OK 时返回 true，在取消对话框时返回 false。如果用户接受，调用 PrinterJob 的 print 方法。以下是打印代码的结构：
+`printDialog`方法在用户点击 OK 时返回 true，在取消对话框时返回 false。如果用户接受，调用`PrinterJob`的`print`方法。以下是打印代码的结构：
 
 ```java
 if (job.printDialog(attributes)) {
-  try {
-    job.print(attributes);
-  } catch (PrinterException e) {
-    // 处理异常
-  }
+    try {
+        job.print(attributes);
+    } catch (PrinterException e) {
+        // 处理异常
+    }
 }
 ```
 
-**注意：** 在 JDK 1.4 之前，打印系统使用平台的原生打印和页面设置对话框。要显示原生对话框，请不带参数调用 dialogDialog。（无法在属性集中收集用户设置。）
+**注意：** 在 JDK 1.4 之前，打印系统使用平台的原生打印和页面设置对话框。要显示原生对话框，请不带参数调用`dialogDialog`。（无法在属性集中收集用户设置。）
 
-在打印期间，PrinterJob 类的 print 方法会反复调用与作业关联的 Printable 对象的 print 方法。
+在打印期间，`PrinterJob`类的`print`方法会反复调用与作业关联的`Printable`对象的`print`方法。
 
-由于不知道你想打印多少页，它一直调用 print 方法。只要 print 方法返回 Printable.PAGE_EXISTS 值，打印作业就会继续生成页面。当 print 方法返回
+由于不知道你想打印多少页，它一直调用`print`方法。只要`print`方法返回`Printable.PAGE_EXISTS`值，打印作业就会继续生成页面。当`print`方法返回：
 
 ```java
 Printable.NO_SUCH_PAGE
 ```
 
-注意：打印作业传递给 print 的页码从 0 开始。因此，在打印完成之前，打印作业无法获得准确的页数。由于由于，打印对话框无法显示正确的页范围——它显示“第 1 到 1 页”。你将在下一节中看到如何通过向打印作业提供 Book 对象来避免这种缺陷。
 
 
+注意：打印作业传递给`print`的页码从 0 开始。因此，在打印完成之前，打印作业无法获得准确的页数。由于打印对话框无法显示正确的页范围——它显示“第 1 到 1 页”。你将在下一节中看到如何通过向打印作业提供`Book`对象来避免这种缺陷。
 
+如果打印作业需要`Printable`对象来打印某个带（band），它会将图形上下文的裁剪区域设置为请求的带，并调用`print`方法。它的绘图操作将根据该带的矩形进行裁剪，只有显示在带内的绘图元素会被渲染。你的`print`方法不需要感知该过程，但有一点例外：它不干扰裁剪区域。
 
+**注意：** 你的`print`方法获取的`Graphics`对象也是受页边距限制的。如果你替换了裁剪区域，你就可以在页边距之外进行绘图。特别是在打印机图形上下文中，必须尊重裁剪区域。调用`clip`而不是`setClip`来进一步限制裁剪区域。如果你删除了裁剪区域，请确保在`print`方法开始时调用`getClip`并恢复裁剪区域。
 
-如果打印作业需要 `Printable` 对象来打印某个带（band），它会将图形上下文的裁剪区域设置为请求的带，并调用 `print` 方法。它的绘图操作将根据该带的矩形进行裁剪，只有显示在带内的绘图元素会被渲染。你的 `print` 方法不需要感知该过程，但有一点例外：它`不`（not）干扰裁剪区域。
-
-**注意：** 你的 `print` 方法获取的 `Graphics` 对象也是受页边距限制的。如果你替换了裁剪区域，你就可以在页边距之外进行绘图。特别是在打印机图形上下文中，必须尊重裁剪区域。调用 `clip` 而不是 `setClip` 来进一步限制裁剪区域。如果你删除了裁剪区域，请确保在 `print` 方法开始时调用 `getClip` 并恢复裁剪区域。
-
-`print` 方法的 `PageFormat` 参数包含有关打印页的信息。`getWidth` 和 `getHeight` 方法返回以 `points`（点）为单位的纸张尺寸。（1 点等于 1/72 英寸；每个点等于 25.4 毫米）。例如，A4 纸约为 595 × 842 点，US Letter 纸约为 612 × 792 点。
+`print`方法的`PageFormat`参数包含有关打印页的信息。`getWidth`和`getHeight`方法返回以`points`（点）为单位的纸张尺寸。（1 点等于 1/72 英寸；每个点等于 25.4 毫米）。例如，A4 纸约为 595 × 842 点，US Letter 纸约为 612 × 792 点。
 
 点是美国打印行业中常用的测量单位。令世界其他地区遗憾的是，打印包使用了点单位。这样做有两个目的：纸张尺寸和页边距是以点为单位的，且点是所有打印图形上下文的默认单位。你可以在本节末尾的示例程序中验证这一点。程序打印了两行间距为 72 单位的文本。运行示例程序并测量基线之间的距离；它们恰好是 1 英寸或 25.4 毫米。
 
-`PageFormat` 类的 `getWidth` 和 `getHeight` 方法提供完整的纸张尺寸。并不是所有的纸张区域都是可打印的。用户通常会选择边距，即使他们没有选择，打印机也需要某种方式夹住打印纸张，因此边缘会有一个小小的不可打印区域。
+`PageFormat`类的`getWidth`和`getHeight`方法提供完整的纸张尺寸。并不是所有的纸张区域都是可打印的。用户通常会选择边距，即使他们没有选择，打印机也需要某种方式夹住打印纸张，因此边缘会有一个小小的不可打印区域。
 
-`getImageableWidth` 和 `getImageableHeight` 方法告诉你实际上可以填充的区域尺寸。然而，边距并不一定对称，因此你还必须知道可打印区域的左上角（见图 12.61），你可以通过 `getImageableX` 和 `getImageableY` 方法获取它。
+`getImageableWidth`和`getImageableHeight`方法告诉你实际上可以填充的区域尺寸。然而，边距并不一定对称，因此你还必须知道可打印区域的左上角（见图 12.61），你可以通过`getImageableX`和`getImageableY`方法获取它。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1593_0.png)
 
-**提示：** 你在 `print` 方法中接收到的图形上下文排除了页边距，但坐标系的原点仍然是纸张的左上角。将坐标系平移到可打印区域的左上角是有意义的。在 `print` 方法开头开始
+**提示：** 你在`print`方法中接收到的图形上下文排除了页边距，但坐标系的原点仍然是纸张的左上角。将坐标系平移到可打印区域的左上角是有意义的。在`print`方法开头开始：
 
-```
+```java
 g.translate(pageFormat.getImageableX(), pageFormat)
 ```
 
-如果你想让用户选择页边距设置，或者在不设置其他打印属性的情况下切换纵向和横向，请调用 `PrinterJob` 类的 `pageDialog` 方法：
+如果你想让用户选择页边距设置，或者在不设置其他打印属性的情况下切换纵向和横向，请调用`PrinterJob`类的`pageDialog`方法：
 
-```
+```java
 PageFormat format = job.pageDialog(attributes);
 ```
 
-![](img/cb920f692d263682e00dcb1ad7f884cc_1594_0.png)
+![](img/cb920f692d263682e00dcb1ad7f884cc_1593_0.png)
 
-**注意：** 打印对话框的一个选项卡包含页面设置对话框（见图 12.62）。你可能仍希望给用户一个在打印前设置页面格式的选项，特别是当你的程序对待打印页面提供“所见即所得”的显示时。`pageDialog` 方法返回一个带有用户设置的 `PageFormat` 对象。
+**注意：** 打印对话框的一个选项卡包含页面设置对话框（见图 12.62）。你可能仍希望给用户一个在打印前设置页面格式的选项，特别是当你的程序对待打印页面提供“所见即所得”的显示时。`pageDialog`方法返回一个带有用户设置的`PageFormat`对象。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1595_0.png)
 
 **图 1.62：** 跨平台页面设置对话框
 
-本节末尾的程序展示了如何在屏幕和打印页面上渲染同一组形状。`JPanel` 的子类实现了 `Printable` 接口。`paintComponent` 和 `print` 方法都调用同一个方法来执行实际绘图。
+本节末尾的程序展示了如何在屏幕和打印页面上渲染同一组形状。`JPanel`的子类实现了`Printable`接口。`paintComponent`和`print`方法都调用同一个方法来执行实际绘图。
 
-```
+```java
 class PrintPanel extends JPanel implements Printable
 {
     public void paintComponent(Graphics g)
@@ -25586,56 +27285,64 @@ class PrintPanel extends JPanel implements Printable
 
 此示例显示并打印了图 12.50 所示图像——即“Hello, World”消息的轮廓，它用作线条图案的裁剪区域。
 
-点击打印按钮开始打印，或点击页面设置按钮打开页面对话框。**注意：** 要显示原生对话框，请向 `pageDialog` 方法传递一个 `PageFormat` 对象。该方法根据用户的选择对其进行克隆，并返回克隆后的对象。
+点击打印按钮开始打印，或点击页面设置按钮打开页面对话框。**注意：** 要显示原生对话框，请向`pageDialog`方法传递一个`PageFormat`对象。该方法根据用户的选择对其进行克隆，并返回克隆后的对象。
 
-
-
-
-
+```java
 PageFormat pageDialog(PrintRequestAttributeSet attributes)
 
-PageFormat pageDialog(PageFormat defaults) 显示一个页面设置对话框。第一个方法显示一个跨平台对话框，第二个方法显示原生对话框。两种方法都返回一个 `PageFormat` 对象，其中包含用户在对话框中请求的格式。第一个方法修改 `attributes` 对象，第二个方法不修改 `defaults` 对象。
+PageFormat pageDialog(PageFormat defaults)
+```
 
-- void setPrintable(Printable p)
-- void setPrintable(Printable p, PageFormat format)
-  设置此打印任务的 `Printable` 和可选的页格式。
+显示一个页面设置对话框。第一个方法显示一个跨平台对话框，第二个方法显示原生对话框。两种方法都返回一个`PageFormat`对象，其中包含用户在对话框中请求的格式。第一个方法修改`attributes`对象，第二个方法不修改`defaults`对象。
 
-- void print()
-- void print(PrintRequestAttributeSet attributes)
-  通过重复调用当前 `Printable` 的 `print` 方法并将渲染后的页面发送到打印机，直到没有可用页面。
+- `void setPrintable(Printable p)`
+- `void setPrintable(Printable p, PageFormat format)`
+
+  设置此打印任务的`Printable`和可选的页格式。
+
+- `void print()`
+- `void print(PrintRequestAttributeSet attributes)`
+
+  通过重复调用当前`Printable`的`print`方法并将渲染后的页面发送到打印机，直到没有可用页面。
 
 ```java
 java.awt.print.PageFormat 1.2
 ```
 
-- double getWidth()
-- double getHeight()
+- `double getWidth()`
+- `double getHeight()`
+
   返回页宽和高度。
 
-- double getImageableWidth()
-- double getImageableHeight()
-- double getImageableX()
-- double getImageableY()
+- `double getImageableWidth()`
+- `double getImageableHeight()`
+- `double getImageableX()`
+- `double getImageableY()`
+
   返回页面可打印区域的宽度和高度。
 
   返回图像区域左上角的位置。
 
-- int getOrientation()
-  返回 `PORTRAIT`、`LANDSCAPE` 或 `REVERSE_LANDSCAPE` 之一。页面方向对程序员来说是透明的，因为页格式和图形上下文设置会自动反映页面方向。
+- `int getOrientation()`
+
+  返回`PORTRAIT`、`LANDSCAPE`或`REVERSE_LANDSCAPE`之一。页面方向对程序员来说是透明的，因为页格式和图形上下文设置会自动反映页面方向。
 
 ## 1.7.2. 多页打印
 
-在实践中，你通常不会将原始的 `Printable` 对象传递给打印任务。相反，你应该获取一个实现了 `Pageable` 接口的类对象。Java 平台提供了这样一个类，称为 `Book`。一本书由多个部分组成，每个部分都是一个 `Printable` 对象。要制作一本书，请添加 `Printable` 对象及其页数。
+在实践中，你通常不会将原始的`Printable`对象传递给打印任务。相反，你应该获取一个实现了`Pageable`接口的类对象。Java 平台提供了这样一个类，称为`Book`。一本书由多个部分组成，每个部分都是一个`Printable`对象。要制作一本书，请添加`Printable`对象及其页数。
 
 ```java
 var book = new Book();
+
 Printable coverPage = . . .;
+
 Printable bodyPages = . . .;
+
 book.append(coverPage, pageFormat); // 添加 1 页
 book.append(bodyPages, pageFormat, pageCount);
 ```
 
-然后，使用 `setPageable` 方法将 `Book` 对象传递给打印任务。
+然后，使用`setPageable`方法将`Book`对象传递给打印任务。
 
 ```java
 printJob.setPageable(book);
@@ -25643,9 +27350,9 @@ printJob.setPageable(book);
 
 现在，打印任务确切知道要打印多少页，因此打印对话框会显示准确的页范围，用户可以选择整个范围或子范围。
 
-**注意：** 当打印任务调用 `Printable` 部分的 `print` 方法时，它传递的是*书*的当前页码，而不是每个*部分*的当前页码作为当前页码。这是一个非常痛苦的问题——每个部分都必须知道之前部分的页数，才能使页码参数具有意义。
+**注意：** 当打印任务调用`Printable`部分的`print`方法时，它传递的是*书*的当前页码，而不是每个*部分*的当前页码作为当前页码。这是一个非常痛苦的问题——每个部分都必须知道之前部分的页数，才能使页码参数具有意义。
 
-从程序员的角度来看，使用 `Book` 类面临最大的挑战在于，你必须在打印时知道每个部分将会有多少页。你的 `Printable` 类需要一个 `layout` 算法，用于计算打印页面上材料的布局。在打印开始之前，调用该算法来计算分页符和总页数。你可以保留布局信息，以便在打印过程中方便地随取使用。
+从程序员的角度来看，使用`Book`类面临最大的挑战在于，你必须在打印时知道每个部分将会有多少页。你的`Printable`类需要一个`layout`算法，用于计算打印页面上材料的布局。在打印开始之前，调用该算法来计算分页符和总页数。你可以保留布局信息，以便在打印过程中方便地随取使用。
 
 你必须防范用户可能更改了页格式的情况。如果发生了这种情况，即使你想要打印的内容没有变化，也必须重新计算布局。
 
@@ -25655,23 +27362,19 @@ printJob.setPageable(book);
 
 图 1.63：横幅
 
-`Banner` 类的 `layoutPages` 方法计算布局。我们首先用 72 磅字体布局消息字符串。然后我们计算结果字符串的高度，并与页面的预期高度进行比较。我们从这两个测量值中导出比例因子。在打印字符串时，我们按该比例因子对其放大。
+`Banner`类的`layoutPages`方法计算布局。我们首先用 72 磅字体布局消息字符串。然后我们计算结果字符串的高度，并与页面的预期高度进行比较。我们从这两个测量值中导出比例因子。在打印字符串时，我们按该比例因子对其放大。
 
-> 注意：为了精确布局你的信息，你通常需要访问打印机图形上下文。遗憾的是，在打印实际开始之前没有方法获取该图形上下文。在我们的示例程序中，我们使用屏幕图形上下文并并屏幕和打印机的字体度量匹配。
+> **注意：** 为了精确布局你的信息，你通常需要访问打印机图形上下文。遗憾的是，在打印实际开始之前没有方法获取该图形上下文。在我们的示例程序中，我们使用屏幕图形上下文并使屏幕和打印机的字体度量匹配。
 
-`Banner` 类的 `getPageCount` 方法首先调用 `layout` 方法。然后它放大字符串的宽度并将其除以每页的可打印宽度。商向上取整到下一个整数，即为页数。
+`Banner`类的`getPageCount`方法首先调用`layout`方法。然后它放大字符串的宽度并将其除以每页的可打印宽度。商向上取整到下一个整数，即为页数。
 
-听起来打印横幅可能很困难，因为字符可能会跨多个页面。然而，得益于 Java 2D API 的强大，这证明完全不是问题。当请求特定页面时，我们只需使用 `Graphics2D` 类的 `translate` 方法将字符串的左上角向左移动。然后，我们设置一个等于当前页面的裁剪区域（见图 12.64）。最后，我们使用 `layout` 方法计算的比例因子对图形上下文进行缩。
+听起来打印横幅可能很困难，因为字符可能会跨多个页面。然而，得益于 Java 2D API 的强大，这证明完全不是问题。当请求特定页面时，我们只需使用`Graphics2D`类的`translate`方法将字符串的左上角向左移动。然后，我们设置一个等于当前页面的裁剪区域（见图 12.64）。最后，我们使用`layout`方法计算的比例因子对图形上下文进行缩放。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1608_0.png)
 
 图 1.64：打印横幅页
 
 此示例展示了变换的力量。绘制代码保持简单，而变换完成了将绘制放在适当位置的所有工作。最后，裁剪切掉了落在页面外的图像部分。此程序展示了变换的另一个引人注用途——显示内容。
-
-
-
-
 
 ```java
 /**
@@ -25681,6 +27384,7 @@ printJob.setPageable(book);
  */
 public int getPageCount(Graphics2D g2, PageFormat pf) {
     if (message.equals("")) return 0;
+
     FontRendererContext context = g2.getFontRendererContext();
     var f = new Font("Serif", Font.PLAIN, 12);
     Rectangle2D bounds = f.getStringBounds(message);
@@ -25694,19 +27398,19 @@ public int print(Graphics g, PageFormat pf) {
     var g2 = (Graphics2D) g;
     if (page > getPageCount(g2, pf)) return Printable.NO_SUCH;
     g2.translate(pf.getImageableX(), pf.getImageableY());
-
     drawPage(g2, pf, page);
     return Printable.PAGE_EXISTS;
 }
 
 public void drawPage(Graphics2D g2, PageFormat pf, int page) {
     if (message.equals("")) return;
-    page--; // 考虑封面页
 
+    page--; // 考虑封面页
     drawCropMarks(g2, pf);
     g2.clip(new Rectangle2D.Double(0, 0, pf.getImageableWidth(), pf.getImageableHeight()));
     g2.translate(-page * pf.getImageableWidth(), -pf.getImageableY());
     g2.scale(scale, scale);
+
     FontRenderContext context = g2.getFontRendererContext();
     var f = new Font("Serif", Font.PLAIN, 12);
     var layout = new TextLayout(message, f, context);
@@ -25724,6 +27428,7 @@ public void drawCropMarks(Graphics2D g2, PageFormat pf) {
     final double C = 36; //裁剪线长度
     double w = pf.getImageableWidth();
     double h = pf.getImageableHeight();
+
     g2.draw(new Line2D.Double(0, 0, 0, C));
     g2.draw(new Line2D.Double(0, 0, C, 0));
     g2.draw(new Line2D.Double(w, 0, w, C));
@@ -25750,14 +27455,17 @@ class CoverPage implements Printable {
 
     public int print(Graphics g, PageFormat pf) {
         if (page >= 1) return Printable.NO_SUCH;
+
         var g2 = (Graphics2D) g;
         g2.setPaint(Color.black);
         g2.translate(pf.getImageableX(), pf.getImageableY());
+
         FontRenderContext context = g2.getFontRendererContext();
         Font f = g2.getFont();
         var layout = new TextLayout(title, f, context);
         float ascent = layout.getAscent();
         g2.drawString(title, 0, ascent);
+
         return Printable.PAGE_EXISTS;
     }
 }
@@ -25772,11 +27480,19 @@ import java.awt.*;
 import java.awt.print.*;
 
 /**
- * 此类实现了一个通用打印对话框
- */
+```
+
+
+
+此类实现了一个通用打印对话框。
+
+```java
 public class PrintPreviewDialog extends JFrame {
+
     private static final int DEFAULT_WIDTH = 800;
+
     private static final int DEFAULT_HEIGHT = 600;
+
     private PrintPreviewCanvas canvas;
 
     /**
@@ -25786,9 +27502,13 @@ public class PrintPreviewDialog extends JFrame {
      * @param pages p 中的页数
      */
     public PrintPreviewDialog(Printable p, PageFormat pf, int pages) {
+
         var book = new Book();
+
         book.append(p, pf, pages);
+
         layoutUI(book);
+
     }
 
     /**
@@ -25796,7 +27516,9 @@ public class PrintPreviewDialog extends JFrame {
      * @param b 一个 Book
      */
     public PrintPreviewDialog(Book b) {
+
         layoutUI(b);
+
     }
 
     /**
@@ -25804,22 +27526,39 @@ public class PrintPreviewDialog extends JFrame {
      * @param book 要预览的书籍
      */
     public void layoutUI(Book book) {
+
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
+
         var canvas = new PrintPreviewCanvas(book);
+
         add(canvas, BorderLayout.CENTER);
+
         var buttonPanel = new JPanel();
+
         var nextButton = new JButton("Next");
+
         buttonPanel.add(nextButton);
+
         nextButton.addActionListener(event -> {});
+
         var previousButton = new JButton("Previous");
+
         buttonPanel.add(previousButton);
+
         previousButton.addActionListener(event -> {});
+
         var closeButton = new JButton("Close");
+
         buttonPanel.add(closeButton);
+
         closeButton.addActionListener(event -> {});
+
         add(buttonPanel, BorderLayout.SOUTH);
+
     }
+
 }
+```
 
 # Listing 1.28 book/PrintPreviewCanvas.java
 
@@ -25905,9 +27644,9 @@ class PrintPreviewCanvas extends JComponent {
 - GIF、JPEG 或 PNG 格式的图像
 - 文本、HTML、PostScript 或 PDF 格式的文档
 - 原始打印机代码
-- 实现 Printable、Pageable 或 RenderableImage 的对象
+- 实现 `Printable`、`Pageable` 或 `RenderableImage` 的对象
 
-数据本身可以存储在字节或字符源中，例如输入流、URL 或数组。文档口味（flavor）描述数据源和数据类型的组合。`DocFlavor` 类为各种数据源定义了多个内部类。每个内部类都定义了指定口味的常量。例如，`DocFlavor.INPUT_STREAM.GIF`常量描述从输入流读取的 GIF 图像。表 1.4 列出了这些组合。
+数据本身可以存储在字节或字符源中，例如输入流、URL 或数组。文档口味（flavor）描述数据源和数据类型的组合。`DocFlavor` 类为各种数据源定义了多个内部类。每个内部类都定义了指定口味的常量。例如，`DocFlavor.INPUT_STREAM.GIF` 常量描述从输入流读取的 GIF 图像。表 1.4 列出了这些组合。
 
 # 表 1.4：打印服务的文档口味
 
@@ -25920,9 +27659,6 @@ class PrintPreviewCanvas extends JComponent {
 | | PDF | application/pdf |
 | | TEXT_HTML_HOST | text/html;encoding |
 | | TEXT_HTML_US_ASCII | text/html;ascii |
-
-| 数据源 | 数据类型 | MIME 类型 |
-| --- | --- | --- |
 | | TEXT_HTML_UTF_8 | text/html;charset=utf-8 |
 | | TEXT_HTML_UTF_16 | text/html;charset=utf-16 |
 | | TEXT_HTML_UTF_16LE | text/html;charset=utf-16le |
@@ -25933,26 +27669,18 @@ class PrintPreviewCanvas extends JComponent {
 | | TEXT_PLAIN_UTF_16 | text/plain charset |
 | | TEXT_PLAIN_UTF_16LE | text/plain charset (endian) |
 | | TEXT_PLAIN_UTF_16BE | text/plain charset (endian) |
-
-| 数据源 | 数据类型 | MIME 类型 |
-| --- | --- | --- |
-| PCL | application/x-hewlettlanguage |
+| | PCL | application/x-hewlettlanguage |
 | | AUTOSENSE | application/octet |
 | READER | TEXT_HTML | text/html charset |
-
-
-
-| 数据源 | 数据类型 | MIME 类型 |
-| --- | --- | --- |
 | STRING | TEXT_PLAIN | text/plain |
 | CHAR_ARRAY | | |
 | SERVICE_FORMATTED | PRINTABLE | N/A |
-| PAGEABLE | N/A |
-| RENDERABLE_IMAGE | N/A |
+| | PAGEABLE | N/A |
+| | RENDERABLE_IMAGE | N/A |
 
 假设你想打印位于文件中的 GIF 图像。首先，查找是否存在一个能够处理该任务的打印服务。`PrintServiceLookup` 的静态方法 `lookupPrintServices` 返回一个 `PrintService` 对象的数组，这些对象可以处理指定的文档味型（document flavor）。
 
-```
+```java
 DocFlavor flavor = DocFlavor.INPUT_STREAM.GIF;
 PrintService[] services = PrintServiceLookup.lookup
 ```
@@ -25963,20 +27691,20 @@ PrintService[] services = PrintServiceLookup.lookup
 
 接下来，从该服务获取一个文档打印作业：
 
-```
+```java
 DocPrintJob job = services[i].createPrintJob();
 ```
 
 为了打印，你需要一个实现 `Doc` 接口的对象。Java 库提供了一个 `SimpleDoc` 类用于此目的。`SimpleDoc` 的构造函数需要数据源对象、文档味型以及可选的属性集。例如：
 
-```
+```java
 var in = new FileInputStream(fileName);
 var doc = new SimpleDoc(in, flavor, null);
 ```
 
 最后，你就可以准备好打印了：
 
-```
+```java
 job.print(doc, null);
 ```
 
@@ -25984,27 +27712,19 @@ job.print(doc, null);
 
 注意，这个打印过程与上一节的过程非常不同。它没有通过打印对话框进行用户交互。例如，你可以实现一种服务器端打印机制，用户通过 Web 表单提交打印作业。
 
-```
-javax.print.PrintServiceLookup 1.4
-```
+`javax.print.PrintServiceLookup` 1.4
 
 - `PrintService[] lookupPrintServices(DocFlavor flavor, AttributeSet attributes)` 查找可以处理给定文档味型和属性的打印服务。如果没有需要考虑的属性，`attributes` 参数可以为 `null`。
 
-```
-javax.print.PrintService 1.4
-```
+`javax.print.PrintService` 1.4
 
 - `DocPrintJob createPrintJob()` 为实现 `Doc` 接口的类对象（如 `SimpleDoc`）创建一个打印作业。
 
-```
-javax.print.DocPrintJob 1.4
-```
+`javax.print.DocPrintJob` 1.4
 
 - `void print(Doc doc, PrintAttributeSet attributes)` 使用给定的属性打印指定的文档。如果不需要打印属性，`attributes` 参数可以为 `null`。
 
-```
-javax.print.SimpleDoc 1.4
-```
+`javax.print.SimpleDoc` 1.4
 
 - `SimpleDoc(Object data, DocFlavor flavor, DocAttributeSet attributes)` 创建一个可以使用 `DocPrintJob` 打印的 `SimpleDoc` 对象。`data` 参数是带有打印数据的对象，例如输入流或 `Printable`。如果不需要属性，`attributes` 参数可以为 `null`。
 
@@ -26014,7 +27734,7 @@ javax.print.SimpleDoc 1.4
 
 枚举流打印服务比定位普通打印服务要繁琐一点。你需要被打印的对象的 `DocFlavor` 以及流输出的 MIME 类型。然后你得到一个 `StreamPrintServiceFactory` 工厂数组。
 
-```
+```java
 DocFlavor flavor = DocFlavor.SERVICE_FORMATTED_PDF;
 String mimeType = "application/postscript";
 StreamPrintServiceFactory[] factories = StreamPrintServiceFactory.lookupStreamPrints
@@ -26022,7 +27742,7 @@ StreamPrintServiceFactory[] factories = StreamPrintServiceFactory.lookupStreamPr
 
 `StreamPrintServiceFactory` 类没有可以帮助我们区分任何工厂的方法，因此我们直接取 `factories[0]`。我们带有输出流参数调用 `getPrintService` 方法来获取一个 `StreamPrintService` 对象。
 
-```
+```java
 var out = new FileOutputStream(fileName);
 StreamPrintService service = factories[0].getPrintService
 ```
@@ -26032,12 +27752,13 @@ StreamPrintService service = factories[0].getPrintService
 ## javax.print.StreamPrintServiceFactory 1.4
 
 - `StreamPrintServiceFactory[] lookupStreamPrintServiceFactories(DocFlavor flavor, String mimeType)` 查找可以打印给定文档味型并产生给定 MIME 类型输出流的流打印服务。
-
 - `StreamPrintService getPrintService(OutputStream out)` 获取一个将打印输出发送到给定流的打印服务。
 
 列表 12.29 中的程序演示了如何使用流打印服务将 Java 2D 形状打印到 PostScript 文件。你可以用示例绘图代码替换为生成任何 Java 2D 形状的代码，并将形状转换为 PostScript。然后你可以使用外部工具将结果转换为 PDF 或 EPS。（遗憾的是，Java 不支持直接打印到 PDF。）
 
 > 注意：在例例中，我们调用了一个 `draw` 方法，在表面上画出 Java 2D 形状。
+
+
 
 ```java
 package printService;
@@ -26107,19 +27828,19 @@ public class PrintTest {
 
 ## 1.7.5. 打印属性
 
-打印服务 API 包含了一组复杂的接口和类，用于指定各种属性。有四组重要的属性。前两组指定对打印机的请求。
+打印服务 API 包含了一组复杂的接口和类，用于指定各种属性。有四组重要的属性。前两组指定对打印机的请求：
 
-- 打印请求属性对打印作业中的所有 doc 对象请求特定的功能，例如双面打印或纸张。
-- *Doc 属性*是适用于单个 doc 对象的请求属性。
+- 打印请求属性对打印作业中的所有 `doc` 对象请求特定的功能，例如双面打印或纸张。
+- `Doc` 属性是适用于单个 `doc` 对象的请求属性。
 
-另外两个属性包含了打印机和作业的状态。
+另外两个属性包含了打印机和作业的状态：
 
-- *打印服务属性* 提供有关打印服务的信息，例如打印机型号或打印机当前是否接受作业。
-- *打印作业属性* 提供有关特定打印作业状态的信息，例如作业是否完成。
+- 打印服务属性提供有关打印服务的信息，例如打印机型号或打印机当前是否接受作业。
+- 打印作业属性提供有关特定打印作业状态的信息，例如作业是否完成。
 
-为了描述各种属性，有一个 **Attribute** 接口，它有子接口：
+为了描述各种属性，有一个 `Attribute` 接口，它有以下子接口：
 
-```
+```java
 PrintRequestAttribute
 DocAttribute
 PrintServiceAttribute
@@ -26127,10 +27848,7 @@ PrintJobAttribute
 SupportedValuesAttribute
 ```
 
-具体的属性类实现这些接口中的一个或多个。例如，`Copies` 类的对象描述副本的数量。该类同时实现了 `PrintRequestAttribute` 和 `PrintJobAttribute` 接口。显然，一个打印请求可以包含对多个副本的请求。相反，一个打印属性的
-
-
-打印任务可能是这些副本中实际打印了多少份。这个数字可能较低，也许因为打印机的限制，或者打印机缺纸了。
+具体的属性类实现这些接口中的一个或多个。例如，`Copies` 类的对象描述副本的数量。该类同时实现了 `PrintRequestAttribute` 和 `PrintJobAttribute` 接口。显然，一个打印请求可以包含对多个副本的请求。相反，一个打印属性的打印任务可能是这些副本中实际打印了多少份。这个数字可能较低，也许因为打印机的限制，或者打印机缺纸了。
 
 `SupportedValuesAttribute` 接口表示属性值并不反映实际的请求或状态数据，而是服务的能力。例如，`CopiesSupported` 类实现了 `SupportedValuesAttribute` 接口。该类的对象可能会描述打印机支持 1 到 99 份打印副本。
 
@@ -26138,11 +27856,11 @@ SupportedValuesAttribute
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1637_0.png)
 
-# 图 1.65：属性层次结构
+### 图 1.65：属性层次结构
 
 除了用于单个属性的接口和类外，打印服务 API 还定义了属性集的接口和类。一个超接口 `AttributeSet` 具有四个子接口：
 
-```
+```java
 PrintRequestAttributeSet
 DocAttributeSet
 PrintServiceAttributeSet
@@ -26151,7 +27869,7 @@ PrintJobAttributeSet
 
 这些接口每个都有一个实现类，产生了五个类：
 
-```
+```java
 HashAttributeSet
 HashPrintRequestAttributeSet
 HashDocAttributeSet
@@ -26163,11 +27881,11 @@ HashPrintJobAttributeSet
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1639_0.png)
 
-# 图 1.66：属性集层次结构
+### 图 1.66：属性集层次结构
 
 例如，你可以这样构造打印请求属性集：
 
-```
+```java
 var attributes = new HashPrintRequestAttributeSet;
 ```
 
@@ -26177,13 +27895,13 @@ var attributes = new HashPrintRequestAttributeSet;
 
 属性集是一种特殊的映射（map），其键的类型为 `Class`，值属于实现 `Attribute` 接口的类。例如，如果你将一个对象
 
-```
+```java
 new Copies(10)
 ```
 
-插入到属性集中，那么它的键就是 `Class` 对象 `Copies.class`。该键被称为属性的类别（category）。`Attribute` 接口声明了一个方法
+插入到属性集中，那么它的键就是 `Class` 对象 `Copies.class`。该键被称为属性的类别（category）。`Attribute` 接口声明了一个方法：
 
-```Class
+```java
 Class getCategory()
 ```
 
@@ -26191,7 +27909,7 @@ Class getCategory()
 
 当属性被添加到属性集中时，类别会被自动提取。只需添加属性值即可：
 
-```
+```java
 attributes.add(new Copies(10));
 ```
 
@@ -26199,30 +27917,28 @@ attributes.add(new Copies(10));
 
 要检索属性，你需要使用类别作为键，例如：
 
-```
+```java
 AttributeSet attributes = job.getAttributes();
 var copies = (Copies) attribute.get(Copies.class)
 ```
 
 最后，属性根据它们可以拥有的值进行组织。`Copies` 属性可以是任何整数值。`Copies` 类继承自 `IntegerSyntax` 类，该类处理所有整数值型属性。`getValue` 方法返回属性的整数值，例如：
 
-```
+```java
 int n = copies.getValue();
 ```
 
-这些类
+以下这些类封装了一个字符串、一个日期时间值或一个 URI：
 
-- TextSyntax
-- DateTimeSyntax
-- URISyntax
-
-封装了一个字符串、一个日期时间值或一个 URI。
+- `TextSyntax`
+- `DateTimeSyntax`
+- `URISyntax`
 
 最后，许多属性可以取有限数量的值。例如，`PrintQuality` 属性有三个设置：草稿（draft）、普通（normal）和高质量（high）。
 
 它们由三个常量表示：
 
-```
+```java
 PrintQuality.DRAFT
 PrintQuality.NORMAL
 PrintQuality.HIGH
@@ -26230,19 +27946,19 @@ PrintQuality.HIGH
 
 具有有限数量值的属性类继承自 `EnumSyntax` 类，该类提供了许多便利方法，以类型安全的方式设置枚举。在使用此类属性时，你不需要担心其内部机制。只需将命名值添加到属性集中即可：
 
-```
+```java
 attributes.add(PrintQuality.HIGH);
 ```
 
 以下是如何检查属性的值：
 
-```
+```java
 if (attributes.get(PrintQuality.class) == PrintQuality)
 ```
 
-表 12.5 列出了打印属性。第二列列出了属性类的父类（例如，对于 `Copies` 属性是 `IntegerSyntax`，或者对于具有有限值集的属性是枚举值）。最后四列指示该属性类是否实现了 `DocAttribute` (DA)、`PrintJobAttribute` (PJA)、`PrintRequestAttribute` (PRA) 和 `PrintServiceAttribute` (PSA) 接口。
+表 12.5 列出了打印属性。第二列列出了属性类的父类（例如，对于 `Copies` 属性是 `IntegerSyntax`，或者对于具有有限值集的属性是枚举值）。最后四列指示该属性类是否实现了 `DocAttribute`（DA）、`PrintJobAttribute`（PJA）、`PrintRequestAttribute`（PRA）和 `PrintServiceAttribute`（PSA）接口。
 
-# 表 1.5：打印属性
+### 表 1.5：打印属性
 
 | Attribute | 父类或枚举 |
 | --- | --- |
@@ -26255,9 +27971,6 @@ if (attributes.get(PrintQuality.class) == PrintQuality)
 | DateTimeAtProcessing | DateTimeSyntax |
 | Destination | URISyntax |
 | DocumentName | TextSyntax |
-
-| Attribute | 父类或枚举 |
-|---|---|---|
 | Fidelity | FIDELITY_TRUE, FID |
 | Finishings | NONE, STAPLE, EDGE, SADDLE_STITCH, COV |
 | JobHoldUntil | DateTimeSyntax |
@@ -26268,18 +27981,12 @@ if (attributes.get(PrintQuality.class) == PrintQuality)
 | JobMediaSheets | IntegerSyntax |
 | MediaSheetsCompleted | IntegerSyntax |
 | MessageFromOperator | TextSyntax |
-
-| Attribute | 父类或枚举 |
-| --- | --- |
 | JobName | TextSyntax |
 | OriginatingUserName | TextSyntax |
 | JobPriority | IntegerSyntax |
 | JobState | ABORTED, CANCELED, PENDING, STOPPED |
 | JobStateReason | ABORTED_BY_SYSTEM, COVER_OPEN, FUSER_JAM |
 | JobStateReasons | HashMap |
-
-| Attribute | 父类或枚举 |
-| --- | --- |
 | IsAcceptingJobs | ACCEPTING_JOBS, NO |
 | Location | TextSyntax |
 | MakeAndModel | TextSyntax |
@@ -26289,9 +27996,6 @@ if (attributes.get(PrintQuality.class) == PrintQuality)
 | Name | TextSyntax |
 | Resolution | ResolutionSyntax |
 | State | PROCESSING, IDLE |
-
-| Attribute | 父类或枚举 |
-| --- | --- |
 | OrientationRequested | PORTRAIT, LANDSCAPE |
 | OutputDeviceAssigned | |
 | PageRanges | SetOfInteger |
@@ -26300,9 +28004,6 @@ if (attributes.get(PrintQuality.class) == PrintQuality)
 | PDLSupported | ATTEMPTED, NOT_ALLOWED |
 | PresentationDirection | RIGHT_TOBOTTOM, BOTTOM_TOIGHT, LEFT_TOBOTTOM, TOP_TOIGHT |
 | PrinterInfo | TextSyntax |
-
-| Attribute | 父类或枚举 |
-| --- | --- |
 | PrinterURI | URISyntax |
 | PrintQuality | DRAFT, NORMAL, HIGH |
 | QueuedJobCount | IntegerSyntax |
@@ -26311,9 +28012,6 @@ if (attributes.get(PrintQuality.class) == PrintQuality)
 | Severity | ERROR, REPORT, WARNING |
 | SheetCollate | COLLATED, UNCOLLATED |
 | Sides | ONE_SIDED, DUPLEX TWO_SIDED_LONG_EDGE, TWO_SIDED_SHORT_EDGE |
-
-| Attribute | 父类或枚举 |
-| --- | --- |
 | MediaSize | ISO_A4_WHITE, NA_LETTER |
 | MediaSizeName | ISO_A4_WHITE, ISO_10, |
 | MediaTray | LARGE, LARGE_CAPACITY |
@@ -26322,28 +28020,30 @@ if (attributes.get(PrintQuality.class) == PrintQuality)
 | NumberInterveningJobs | IntegerSyntax |
 | NumberUp | IntegerSyntax |
 
+- `boolean remove(Attribute attr)`
 
+- `boolean remove(Class category)`
 
+从集合中删除指定的属性，或指定类别的属性。如果由于此操作集合发生了变化，则返回 `true`。
 
+- `Attribute[] toArray()`
 
-- - boolean remove(Attribute attr)
-- boolean remove(Class category)
-从集合中删除指定的属性，或指定类别的属性。如果由于此操作集合发生了变化，则返回 true。
-- Attribute[] toArray()
 返回包含此集合中所有属性的数组。
 
-```
+```java
 javax.print.PrintService 1.4
 ```
 
-- - PrintServiceAttributeSet getAttributes()
+- `PrintServiceAttributeSet getAttributes()`
+
 获取此打印服务的属性。
 
-```
+```java
 javax.print.DocPrintJob 1.4
 ```
 
-- - PrintJobAttributeSet getAttributes()
+- `PrintJobAttributeSet getAttributes()`
+
 获取此打印作业的属性。
 
 你现在已经读完了这个涵盖高级 Swing 和 AWT 特性的长章节。在最后一章中，我们将转向 Java 编程的另一个方面：在同一台机器上与使用不同编程语言的“原生”代码进行交互。
@@ -26351,6 +28051,8 @@ javax.print.DocPrintJob 1.4
 # 1. 原生方法
 
 虽然在原则上，“100% 纯 Java”方案是很好，但在某些情况下，你可能希望编写（或使用）另一种语言的代码。这种代码通常被称为原生代码（native code）。
+
+
 
 特别在 Java 早期，许多人认为使用 C 或 C++ 来加速 Java 应用的关键部分是一个好主意。然而，在实践中这很少有用。1996 年 JavaOne 大会的一场演讲清晰地展示了这一点。Sun Microsystems 加密库的开发者报告说，他们加密函数的纯 Java 平台实现已经绰绰有余。代码确实没有 C 实现那么快，但事实证明这并不重要。Java 平台的实现远比网络 I/O 快得多，而这才是真正的瓶颈。
 
@@ -26364,11 +28066,11 @@ javax.print.DocPrintJob 1.4
 
 Java 平台有一个与原生代码交互的 API，称为 Java 原生接口（JNI）。我们将在本章讨论 JNI 编程。
 
-> C++ 注意：你也可以使用 C++ 代替 C 来编写原生方法。它有几个优势——类型检查稍微严格，且访问 JNI 函数会稍微方便一点。然而，JNI 不支持 Java 和 C++ 类之间的任何映射。
+> **C++ 注意：** 你也可以使用 C++ 代替 C 来编写原生方法。它有几个优势——类型检查稍微严格，且访问 JNI 函数会稍微方便一点。然而，JNI 不支持 Java 和 C++ 类之间的任何映射。
 
 正如你将看到的，在 Java 和原生代码之间提供绑定层会涉及相当的繁琐工作。Java 17 作为一个预览功能，提供了一个访问“外部”函数和内存的 API，这比 JNI 要方便得多。在本章结束处，你将领略这个 API。
 
-## 1.1. 从 Java 程序中调用 C 函数
+## 1.1 从 Java 程序中调用 C 函数
 
 假设你有一个 C 函数执行着某些操作，并且由于某种原因，你不想费精力去在 Java 中重新实现它。为了说明起见，我们将从一个打印问候语的简单 C 函数开始。
 
@@ -26376,7 +28078,7 @@ Java 编程语言使用 `native` 关键字来表示原生方法，你显然需�
 
 `native` 关键字提醒编译器该方法将在外部定义。当然，原生方法不包含任何 Java 代码，且方法头后面紧跟着一个终止分号。因此，原生方法的声明看起来类似于抽象方法的声明。
 
-# 列表 1.1 helloNative/HelloNative.java
+### 列表 1.1：helloNative/HelloNative.java
 
 ```java
 /**
@@ -26407,7 +28109,7 @@ javac -h . HelloNative.java
 
 该命令在当前目录下创建一个头文件 `HelloNative.h`，如列表 1.2 所示。
 
-# 列表 1.2 helloNative/HelloNative.h
+### 列表 1.2：helloNative/HelloNative.h
 
 ```c
 /* 请勿编辑此文件 - 它是自动生成的 */
@@ -26431,11 +28133,11 @@ JNIEXPORT void JNICALL Java_HelloNative_greeting(
 #endif
 ```
 
-如你所见，此文件包含了函数 `Java_HelloNative_greeting` 的声明。（JNIEXPORT` 和 `JNICALL` 宏定义在头文件 `jni.h` 中。它们表示来自加载库的编译器限定符。）
+如你所见，此文件包含了函数 `Java_HelloNative_greeting` 的声明。（`JNIEXPORT` 和 `JNICALL` 宏定义在头文件 `jni.h` 中。它们表示来自加载库的编译器限定符。）
 
 现在，将函数原型复制到源文件中并提供函数的实现代码，如列表 13.3 所示。
 
-# 列表 1.3 helloNative/HelloNative.c
+### 列表 1.3：helloNative/HelloNative.c
 
 ```c
 /*
@@ -26453,7 +28155,7 @@ JNIEXPORT void JNICALL Java_HelloNative_greeting(JNIEnv *env, jclass cl)
 
 在这个简单的函数中，忽略 `env` 和 `cl` 参数。稍后你会看到用法。
 
-C++ 注意：你可以使用 C++ 实现原生方法。然而，你在 C++ 中声明实现原生方法时使用 `extern "C"`。（这阻止了 C++ 编译器对方法名进行“修饰”。）例如：
+**C++ 注意：** 你可以使用 C++ 实现原生方法。然而，你在 C++ 中声明实现原生方法时使用 `extern "C"`。（这阻止了 C++ 编译器对方法名进行“修饰”。）例如：
 
 ```cpp
 extern "C"
@@ -26479,19 +28181,15 @@ cl -I jdk\include -I jdk\include\win32 -LD HelloNative.dll
 
 这里，`jdk` 是包含 JDK 的目录。
 
-
-
-
-
-提示：如果你从命令行 shell 程序中使用 Microsoft 编译器，请先运行如 `vsvars.bat` 或 `vcvarsall.bat` 等文件。该批处理会设置编译器所需的路径和环境变量。你可以在 `c:\Program Files\Microsoft Visual Studio 14.0\Common7\Tools` 或类似的巨型目录下找到它。详情请参阅 Visual Studio 文档。
+**提示：** 如果你从命令行 shell 程序中使用 Microsoft 编译器，请先运行如 `vsvars.bat` 或 `vcvarsall.bat` 等文件。该批处理会设置编译器所需的路径和环境变量。你可以在 `c:\Program Files\Microsoft Visual Studio 14.0\Common7\Tools` 或类似的巨型目录下找到它。详情请参阅 Visual Studio 文档。
 
 你也可以使用来自 `https://www.cygwin.com` 的免费 Cygwin 编程环境。它包含了 GNU C 编译器以及用于在 Windows 上进行 UNIX 风格编程的库。使用 Cygwin 时，使用命令：
 
-```
+```bash
 gcc -mno-cygwin -D __int64="long long" -I jdk/inc. -shared -Wl,--add-stdcall-alias -o HelloNative
 ```
 
-注意：Windows 头文件 `jni_md.h` 包含以下类型声明
+**注意：** Windows 头文件 `jni_md.h` 包含以下类型声明：
 
 ```c
 typedef __int64 jlong;
@@ -26509,7 +28207,7 @@ typedef __int64 jlong;
 
 或者，如示例编译器调用所示，使用 `-D __int64="long long"` 进行编译。
 
-最后，在你的程序程序中添加对 `System.loadLibrary` 方法的调用。为了确保虚拟机在第一次使用类之前加载库，请使用静态初始化块，如 [Listing 13.4](#) 所示。
+最后，在你的程序程序中添加对 `System.loadLibrary` 方法的调用。为了确保虚拟机在第一次使用类之前加载库，请使用静态初始化块，如列表 13.4 所示。
 
 [图 13.1](#) 提供了原生代码处理的摘要。
 
@@ -26517,7 +28215,7 @@ typedef __int64 jlong;
 
 图 1.1：处理原生代码
 
-# 列表 1.4 helloNative/HelloNativeTest.java
+### 列表 1.4：helloNative/HelloNativeTest.java
 
 ```java
 /**
@@ -26555,29 +28253,28 @@ java -Djava.library.path=.HelloNative
 
 总结来说，按照以下步骤将原生方法链接到 Java 程序中：
 
-- 1. 在 Java 类中声明原生方法。
-- 2. 运行 `javac -h` 以获取包含该方法 C 声明的头文件。
-- 3. 在 C 中实现原生方法。
-- 4. 将代码放在共享库中。
-- 5. 在你的 Java 程序中加载该库。
+1. 在 Java 类中声明原生方法。
+2. 运行 `javac -h` 以获取包含该方法 C 声明的头文件。
+3. 在 C 中实现原生方法。
+4. 将代码放在共享库中。
+5. 在你的 Java 程序中加载该库。
 
-```
-java.lang.System 1.0
-```
+### `java.lang.System` 1.0
 
-> void loadLibrary(String libname)
+> `void loadLibrary(String libname)`
+
 加载指定名称的库。库位于库搜索路径中。定位库的精确方法取决于操作系统。
 
 ![](img/cb920f692d263682e00dcb1ad7f884cc_1666_0.png)
 
-注意：某些原生代码的共享库必须执行某些初始化。你可以将任何初始化代码放入 `JNI_OnLoad` 方法中。同样，当虚拟机（VM）关闭时，如果你提供了它，它将调用 `JNI_OnUnload` 方法。原型如下：
+**注意：** 某些原生代码的共享库必须执行某些初始化。你可以将任何初始化代码放入 `JNI_OnLoad` 方法中。同样，当虚拟机（VM）关闭时，如果你提供了它，它将调用 `JNI_OnUnload` 方法。原型如下：
 
 ```c
 int JNI_OnLoad(JavaVM* vm, void* reserved);
 void JNI_OnUnload(JavaVM* vm, void* reserved);
 ```
 
-`JNI_OnLoad` 方法需要返回它所需的虚拟机最小版本，例如 `JNI_VERSION_1_2`
+`JNI_OnLoad` 方法需要返回它所需的虚拟机最小版本，例如 `JNI_VERSION_1_2`。
 
 ## 1.2 数值参数和返回值
 
@@ -26589,18 +28286,18 @@ void JNI_OnUnload(JavaVM* vm, void* reserved);
 
 | Java 编程语言 | C 编程语言 | 字节 |
 | :--- | :--- | :--- |
-| boolean | jboolean | 1 |
-| byte | jbyte | 1 |
-| char | jchar | 2 |
-| short | jshort | 2 |
-| int | jint | 4 |
-| long | jlong | 8 |
-| float | jfloat | 4 |
-| double | jdouble | 8 |
+| `boolean` | `jboolean` | 1 |
+| `byte` | `jbyte` | 1 |
+| `char` | `jchar` | 2 |
+| `short` | `jshort` | 2 |
+| `int` | `jint` | 4 |
+| `long` | `jlong` | 8 |
+| `float` | `jfloat` | 4 |
+| `double` | `jdouble` | 8 |
 
 在头文件 `jni.h` 中，这些类型通过 `typedef` 语句声明。JNI 还定义了常量 `JNI_FALSE = 0` 和 `JNI_TRUE = 1`。在 Java 5 之前，Java 没有 `printf` 的直接对应物。在下面的示例中，我们将假设你使用的是 Java 4 并使用原生方法打印浮点数。
 
-# 列表 1.5 printf1/Printf1.java
+### 列表 1.5：printf1/Printf1.java
 
 ```java
 /**
@@ -26612,7 +28309,7 @@ class Printf1 {
 }
 ```
 
-# 列表 1.6 printf1/Printf1.c
+### 列表 1.6：printf1/Printf1.c
 
 ```c
 /**
@@ -26632,7 +28329,7 @@ JNIEXPORT jint JNICALL Java_Printf1_print(JNIEnv *env, jclass clazz, jint width,
 }
 ```
 
-# 列表 1.7 printf1/Printf1Test.java
+### 列表 1.7：printf1/Printf1Test.java
 
 ```java
 /**
@@ -26652,20 +28349,17 @@ class Printf1Test {
 
 ## 1.3 字符串参数
 
-接下来，让我们如何在原生方法之间传输字符串。字符串在两种语言中非常不同：在 Java 中是 UTF-16 代码序列，而 C 字符串是空结尾的字节序列。JNI 有两套处理字符串的方法：一组将 Java 字符串转换为“修改后的 UTF-8”字节序列，另一组将它们转换为 UTF-16 数组——即 jchar 数组。（UTF-8、修改后的 UTF-8 和 UTF-16 格式在第 2 章讨论过。）
+接下来，让我们如何在原生方法之间传输字符串。字符串在两种语言中非常不同：在 Java 中是 UTF-16 代码序列，而 C 字符串是空结尾的字节序列。JNI 有两套处理字符串的方法：一组将 Java 字符串转换为“修改后的 UTF-8”字节序列，另一组将它们转换为 UTF-16 数组——即 `jchar` 数组。（UTF-8、修改后的 UTF-8 和 UTF-16 格式在第 2 章讨论过。）
 
-> **注意：** 标准 UTF-8 编码和修改后的 UTF-8 编码仅对于高于 `0xFFFF` 的字符不同。在标准 UTF-8 编码中，这些字符被编码为 4 字节序列。在“修改”编码中，每个此类字符首先被编码为 UTF-16 编码中的一对“代理”，然后每个代理都用 UTF-8 编码，从而产生 6 个字节。这很笨拙，但这是一个历史意外——JVM 规范编写时 Unicode 仍然被限制为16 位。
+> **注意：** 标准 UTF-8 编码和修改后的 UTF-8 编码仅对于高于 `0xFFFF` 的字符不同。在标准 UTF-8 编码中，这些字符被编码为 4 字节序列。在“修改”编码中，每个此类字符首先被编码为 UTF-16 编码中的一对“代理”，然后每个代理都用 UTF-8 编码，从而产生 6 个字节。这很笨拙，但这是一个历史意外——JVM 规范编写时 Unicode 仍然被限制为 16 位。
 
 如果你的 C 代码已经使用了 Unicode，你可能想使用第二组转换函数。另一方面，如果你所有的字符串都限于 ASCII 字符，你可以使用“修改后的 UTF-8”转换函数。
 
-带有 String 参数的原生方法实际上接收一个名为 jstring 的不透明类型的值。返回值为 String 类型的原生方法必须返回一个类型为 jstring 的值。JNI 函数读取并构造这些 jstring 对象。例如，`NewStringUTF`
-
-
-根据包含 ASCII 字符的字符数组（或更广义地说，经过“修改后的 UTF-8”编码的字节序列）创建一个新的字符串对象。
+带有 String 参数的原生方法实际上接收一个名为 `jstring` 的不透明类型的值。返回值为 String 类型的原生方法必须返回一个类型为 `jstring` 的值。JNI 函数读取并构造这些 `jstring` 对象。例如，`NewStringUTF` 根据包含 ASCII 字符的字符数组（或更广义地说，经过“修改后的 UTF-8”编码的字节序列）创建一个新的字符串对象。
 
 JNI 函数的调用约定略显奇异。以下是一个调用 `NewStringUTF` 函数的示例：
 
-```
+```c
 JNIEXPORT string JNICALL Java_HelloNative_getGreeting(JNIEnv *env) {
     jstring jstr;
     char greeting[] = "Hello, Native World\n";
@@ -26674,13 +28368,15 @@ JNIEXPORT string JNICALL Java_HelloNative_getGreeting(JNIEnv *env) {
 }
 ```
 
-> 注意：除非另有说明，本章中的所有代码均为 C 代码。
+> **注意：** 除非另有说明，本章中的所有代码均为 C 代码。
 
 所有对 JNI 函数的调用都使用 `env` 指针，它是每个原生方法的第一个参数。`env` 指针是一个指向函数指针列表的指针（见图 13.2）。因此，你必须在每个 JNI 调用前加上 `(*env)->` 才能实际上对函数指针进行解引用。此外，`env` 是每个 JNI 函数的第一个参数。
 
 **C++ 注意：** 在 C++ 中访问 JNI 函数更简单。C++ 版本的 `JNIEnv` 类拥有内联成员函数，可以为你处理函数指针查找。例如，你可以这样调用 `NewStringUTF` 函数：
 
-```
+
+
+```c
 jstr = env->NewStringUTF(greeting);
 ```
 
@@ -26694,24 +28390,34 @@ jstr = env->NewStringUTF(greeting);
 
 最后，`GetStringUTFLength` 函数返回字符串的“修改后的 UTF-8”编码所需的字符数。
 
-> **注意：** 你可以在 https://docs.oracle.com/javase/7/docs/technotes/guides/jni 找到 JNI API。
+> **注意：** 你可以在 <https://docs.oracle.com/javase/7/docs/technotes/guides/jni> 找到 JNI API。
 
 # 从 C 代码访问 Java 字符串
 
-- * `* jstring NewStringUTF(JNIEnv* env, const char bytes[])` 从一个零字节终止的“修改后的 UTF-8”字节序列返回一个新的 Java 字符串对象，如果无法构建字符串则返回 NULL。
-- * `jsize GetStringUTFLength(JNIEnv* env, jstring string)` 返回“修改后的 UTF-8”编码所需的字节数（不包括零字节终止符）。
-- * `const jbyte* GetStringUTFChars(JNIEnv* env, jstring string, jboolean* isCopy)` 返回一个指向字符串的“修改后的 UTF-8”编码的指针，如果无法构建字符数组则返回 NULL。该指针在调用 `ReleaseStringUTFChars` 之前有效。`isCopy` 指向一个 `jboolean`，如果进行了复制则填充为 `JNI_TRUE`，否则填充为 `JNI_FALSE`。
-- * `void ReleaseStringUTFChars(JNIEnv* env, jstring string, const jbyte bytes[])` 通知虚拟机原生代码不再需要通过 `bytes`（由 `GetStringUTFChars` 返回的指针）访问该 Java 字符串。
-- * `void GetStringRegion(JNIEnv *env, jstring string, jsize start, jsize length, jchar buffer)` 将字符串中的序列 UTF-16 双字节复制到用户提供的、大小至少为 length 的 2 倍的缓冲区中。
-- * `void GetCStringRegion(JNIEnv *env, jstring string, jsize size, jsize length, jbyte *buffer)` 将字符串中的序列“修改后的 UTF-8”字节复制到用户提供的缓冲区中。缓冲区必须足够长以容纳这些字节。在最坏情况下，将拷贝 3 × length 字节。
-- * `jstring NewString(JNIEnv *env, const jchar chars[], jsize length)` 从 Unicode 字符串返回一个新的 Java 字符串对象，如果无法构建字符串则返回 NULL。
-- * `jsize GetStringLength(JNIEnv *env, jstring string)` 返回字符串中的字符数。
-- * `const jchar* GetCStringChars(JNIEnv* env, jstring string, jboolean* isCopy)` 返回一个指向字符串 Unicode 编码的指针，如果无法构建字符数组则返回 NULL。该指针在调用 `ReleaseStringChars` 之前有效。`isCopy` 为 NULL 或指向一个 `jboolean`，如果进行了复制则填充为 `JNI_TRUE`，否则填充为 `JNI_FALSE`。
-- * `void ReleaseStringChars(JNIEnv *env, jstring string, const jchar chars[])` 通知虚拟机原生代码不再需要通过 `chars`（由 `GetCStringChars` 返回的指针）访问该 Java 字符串。
+- `jstring NewStringUTF(JNIEnv* env, const char bytes[])` 从一个零字节终止的“修改后的 UTF-8”字节序列返回一个新的 Java 字符串对象，如果无法构建字符串则返回 `NULL`。
 
-让我们这些函数这些起来，编写一个调用 C 函数的类。我们希望像 13.8 所示调用该函数。
+- `jsize GetStringUTFLength(JNIEnv* env, jstring string)` 返回“修改后的 UTF-8”编码所需的字节数（不包括零字节终止符）。
 
-# 列表 13.8 printf2
+- `const jbyte* GetStringUTFChars(JNIEnv* env, jstring string, jboolean* isCopy)` 返回一个指向字符串的“修改后的 UTF-8”编码的指针，如果无法构建字符数组则返回 `NULL`。该指针在调用 `ReleaseStringUTFChars` 之前有效。`isCopy` 指向一个 `jboolean`，如果进行了复制则填充为 `JNI_TRUE`，否则填充为 `JNI_FALSE`。
+
+- `void ReleaseStringUTFChars(JNIEnv* env, jstring string, const jbyte bytes[])` 通知虚拟机原生代码不再需要通过 `bytes`（由 `GetStringUTFChars` 返回的指针）访问该 Java 字符串。
+
+- `void GetStringRegion(JNIEnv *env, jstring string, jsize start, jsize length, jchar buffer)` 将字符串中的序列 UTF-16 双字节复制到用户提供的、大小至少为 `length` 的 2 倍的缓冲区中。
+
+- `void GetCStringRegion(JNIEnv *env, jstring string, jsize size, jsize length, jbyte *buffer)` 将字符串中的序列“修改后的 UTF-8”字节复制到用户提供的缓冲区中。缓冲区必须足够长以容纳这些字节。在最坏情况下，将拷贝 `3 × length` 字节。
+
+- `jstring NewString(JNIEnv *env, const jchar chars[], jsize length)` 从 Unicode 字符串返回一个新的 Java 字符串对象，如果无法构建字符串则返回 `NULL`。
+
+- `jsize GetStringLength(JNIEnv *env, jstring string)` 返回字符串中的字符数。
+
+- `const jchar* GetCStringChars(JNIEnv* env, jstring string, jboolean* isCopy)` 返回一个指向字符串 Unicode 编码的指针，如果无法构建字符数组则返回 `NULL`。该指针在调用 `ReleaseStringChars` 之前有效。`isCopy` 为 `NULL` 或指向一个 `jboolean`，如果进行了复制则填充为 `JNI_TRUE`，否则填充为 `JNI_FALSE`。
+
+- `void ReleaseStringChars(JNIEnv *env, jstring string, const jchar chars[])` 通知虚拟机原生代码不再需要通过 `chars`（由 `GetCStringChars` 返回的指针）访问该 Java 字符串。
+
+让我们把这些函数组合起来，编写一个调用 C 函数的类。我们希望像列表 13.8 所示调用该函数。
+
+# 列表 13.8：`printf2`
+
 ```java
 class PrintfTest {
     static {
@@ -26726,7 +28432,8 @@ class PrintfTest {
 }
 ```
 
-# 2.8
+# `Printf2`
+
 ```java
 class Printf2 {
     public native String print(String format, double x);
@@ -26734,6 +28441,7 @@ class Printf2 {
 ```
 
 # 列表 13.9
+
 ```c
 /*
  * @version 1997-01
@@ -26794,11 +28502,10 @@ return ret;
 ```
 
 # 列表 13.10
+
 上述 C 代码显示了浮点数的实现。注意调用 `GetStringUTFChars` 读取格式参数，`NewStringUTF` 生成返回值，以及 `ReleaseStringChars` 通知虚拟机不再需要该字符串。
 
-因此，C 函数格式化浮点数的原型
-
-对象。作为一个练习，我们将第一卷第 4 章中引入的 `Employee` 类重新实现为类的原生方法（native method）。再次，这通常不是你想要的操作，但它说明了当你需要从原生方法访问字段时该如何操作。
+因此，C 函数格式化浮点数的原型对象。作为一个练习，我们将第一卷第 4 章中引入的 `Employee` 类重新实现为类的原生方法（native method）。再次，这通常不是你想要的操作，但它说明了当你需要从原生方法访问字段时该如何操作。
 
 ## 1.4.1. 访问实例字段
 
@@ -26813,48 +28520,48 @@ public void raiseSalary(double byPercent)
 
 让我们将其重写为原生方法。与之前的原生方法示例不同，这不是一个静态方法。运行 `javac -h` 会得到以下原型声明：
 
-```
+```c
 JNIEXPORT void JNICALL Java_Employee_raiseSalary
 ```
 
 注意第二个参数。它不再是 `jclass` 类型，而是 `object` 类型。事实上，它等同于 `this` 引用。静态方法获取对类的引用，而非静态方法获取对隐式 `this` 参数对象的引用。
 
-现在我们访问隐式参数的 `salary` 字段。在 Java 1.0 的“原始”Java 到 C 绑定中，这是很容易的——程序员可以直接访问实例字段。然而，直接访问要求所有虚拟机都暴露其内部数据布局。出于原因，JNI 要求程序员通过调用特殊的 JNI 函数来获取和设置实例字段的值。
+现在我们访问隐式参数的 `salary` 字段。在 Java 1.0 的“原始”Java 到 C 绑定中，这是很容易的——程序员可以直接访问实例字段。然而，直接访问要求所有虚拟机都暴露其内部数据布局。出于此原因，JNI 要求程序员通过调用特殊的 JNI 函数来获取和设置实例字段的值。
 
-在我们案例中，由于 `salary` 的类型是 `double`，我们需要使用 `GetDoubleField` 和 `SetDoubleField` 函数。对于其他字段类型还有其他函数——GetIntField/SetIntField、GetObjectField/SetObjectField 等。通用语法为：
+在我们案例中，由于 `salary` 的类型是 `double`，我们需要使用 `GetDoubleField` 和 `SetDoubleField` 函数。对于其他字段类型还有其他函数——`GetIntField`/`SetIntField`、`GetObjectField`/`SetObjectField` 等。通用语法为：
 
-```
+```c
 x = (*env)->GetXxxField(env, this_obj, fieldID);
 (*env)->SetXxxField(env, this_obj, fieldID, x);
 ```
 
-在这里，`fieldID` 是特殊类型 `jfieldID` 的值，用于标识结构中的字段，Xxx 代表 Java 数据类型（Object、Boolean、Byte 等）。要获取 `fieldID`，你必须首先获取一个表示类的值，你可以通过两种方式之一来实现。
+在这里，`fieldID` 是特殊类型 `jfieldID` 的值，用于标识结构中的字段，`Xxx` 代表 Java 数据类型（`Object`、`Boolean`、`Byte` 等）。要获取 `fieldID`，你必须首先获取一个表示类的值，你可以通过两种方式之一来实现。
 
 `GetObjectClass` 函数返回任何对象的类。例如：
 
-```
+```c
 jclass class_Employee = (*env)->GetObjectClass(obj)
 ```
 
 `FindClass` 函数允许你用字符串指定类名（有趣的是，它使用 `/` 字符而不是点作为包名分隔符）。
 
-```
+```c
 jclass class_String = (*env)->FindClass(env, "java")
 ```
 
 使用 `GetFieldID` 函数获取 `fieldID`。你必须提供字段名称及其 `signature`（签名），即类型的编码。例如，这里是获取 `salary` 字段 ID 的代码：
 
-```
+```c
 jfieldID id_salary = (*env)->GetFieldID(env, class)
 ```
 
-字符串 "D" 表示类型 `double`。你将在下一节中学习签名编码的完整规则。
+字符串 `"D"` 表示类型 `double`。你将在下一节中学习签名编码的完整规则。
 
 你可能认为访问实例字段非常复杂。JNI 的设计者并不希望直接暴露实例字段，因此他们必须提供获取和设置字段值的函数。为了最小化这些函数的开销，从字段名计算字段 ID（这是最开销的一步）被提取出来作为一个单独的步骤来处理。也就是说，如果你反复获取和设置特定字段的值，你只需要承担一次计算字段标识符的成本。
 
 让我们将所有部分组合在一起。以下代码将 `raiseSalary` 方法重新实现为原生方法：
 
-```
+```c
 JNIEXPORT void JNICALL Java_Employee_raiseSalary(
     double byPercent)
 {
@@ -26878,7 +28585,7 @@ JNIEXPORT void JNICALL Java_Employee_raiseSalary(
 
 不要存储类引用以便在后续的方法调用中重用。你必须在每次原生方法执行时调用 `GetObjectClass`。如果这无法忍受，你可以通过调用 `NewGlobalRef` 来锁定引用：
 
-```
+```c
 static jclass class_X = 0;
 static jfieldID id_a;
 .
@@ -26892,9 +28599,9 @@ if (class_X == 0)
 }
 ```
 
-现在你可以在后续调用中使用类引用和字段 ID。当你使用完该类后，确保调用
+现在你可以在后续调用中使用类引用和字段 ID。当你使用完该类后，确保调用：
 
-```
+```c
 (*env)->DeleteGlobalRef(env, class_X);
 ```
 
@@ -26902,14 +28609,14 @@ if (class_X == 0)
 
 ## 1.4.2. 访问静态字段
 
-访问静态字段与访问非静态字段类似。使用 `GetStaticIDField` 和 `GetStaticXxxField/SetStaticXxxField` 函数，这些函数与其非静态对应的函数完全相同，但有两个区别：
+访问静态字段与访问非静态字段类似。使用 `GetStaticIDField` 和 `GetStaticXxxField`/`SetStaticXxxField` 函数，这些函数与其非静态对应的函数完全相同，但有两个区别：
 
 - 因为你没有对象，你必须使用 `FindClass` 而不是 `GetObjectClass` 来获取类引用。
 - 在访问字段时，必须提供类而不是实例对象。
 
 例如，这里是如何获取 `System.out` 引用的方法：
 
-```
+```c
 /* 获取类 */
 jclass class_System = (*env)->FindClass(env, "java/lang/System");
 
@@ -26920,55 +28627,40 @@ jfieldID id_out = (*env)->GetStaticIDField(env, class_System, "out", "Ljava/io/P
 object obj_out = (*env)->GetStaticObjectField(env, class_System, id_out);
 ```
 
+- `Xxx GetStaticXxxField(JNIEnv *env, jclass cl, jfieldID id)`
 
+  返回静态字段的值。字段类型 `Xxx` 是 `Object`、`Boolean`、`Byte`、`Char`、`Short`、`Int`、`Long`、`Float` 或 `Double` 之一。
 
+- `void SetStaticXxxField(JNIEnv *env, jclass cl, jfieldID id, Xxx value)`
 
-- * Xxx GetStaticXxxField(JNIEnv *env, jclass cl, jfieldID id) 
-返回静态字段的值。字段类型 Xxx 是 Object、Boolean、Byte、Char、Short、Int、Long、
-Float 或 Double 之一。
-- * void SetStaticXxxField(JNIEnv *env, jclass cl, jfieldID id, Xxx value)
-将静态字段设置为新值。字段类型 Xxx 是 Object、Boolean、Byte、Char、Short、Int、Long、
-Float 或 Double 之一。
+  将静态字段设置为新值。字段类型 `Xxx` 是 `Object`、`Boolean`、`Byte`、`Char`、`Short`、`Int`、`Long`、`Float` 或 `Double` 之一。
 
 ## 1.5. 签名的编码（Encoding Signatures）
 
-为了访问 Java 编程语言中定义的实例字段并调用方法，你需要学习对数据类型名称和方法签名（signatures）进行“混淆（mangling）”处理的规则。（方法签名描述了方法的参数和返回类型）。以下是编码方案：
+为了访问 Java 编程语言中定义的实例字段并调用方法，你需要学习对数据类型名称和方法签名（signatures）进行“混淆（mangling）”处理的规则。（方法签名描述了方法的参数和返回类型。）以下是编码方案：
 
-| B | byte |
+| 编码 | 类型 |
 |---|---|
-| C | char |
-| D | double |
-| F | float |
+| `B` | `byte` |
+| `C` | `char` |
+| `D` | `double` |
+| `F` | `float` |
+| `I` | `int` |
+| `J` | `long` |
+| `Lclassname;` | 一个类类型 |
+| `S` | `short` |
+| `V` | `void` |
+| `Z` | `boolean` |
 
-```
-int
-```
 
-```
-long
-```
 
-Lclassname; 一个类类型
-
-```
-short
-```
-
-```
-void
-```
-
-```
-boolean
-```
-
-为了描述数组类型，使用 [ . 。例如，一个字符串数组是：
+为了描述数组类型，使用`[`。例如，一个字符串数组是：
 
 ```
 [L/lang/String;
 ```
 
-一个 `float[][]` 被混淆为：
+一个`float[][]`被混淆为：
 
 ```
 [[F
@@ -26980,15 +28672,15 @@ boolean
 (II)I
 ```
 
-第 13.3 节中的 sprint 方法的混淆签名为：
+第 13.3 节中的`sprint`方法的混淆签名为：
 
 ```
 (Ljava/lang/String;D)Ljava/lang/String;
 ```
 
-即该方法接收一个 String 和一个 double 并返回一个 String。
+即该方法接收一个`String`和一个`double`并返回一个`String`。
 
-注意 L 表达式末尾的分号是类型表达式的终止符，而不是参数之间的分隔符。例如，构造函数
+注意`L`表达式末尾的分号是类型表达式的终止符，而不是参数之间的分隔符。例如，构造函数：
 
 ```
 Employee(java.lang.String, double, java.util.Date
@@ -27000,9 +28692,9 @@ Employee(java.lang.String, double, java.util.Date
 (Ljava/lang/String;DLjava/util/Date;)V
 ```
 
-注意 D 和 Ljava/util/Date; 之间没有分隔符。同样注意，在此编码方案中，你必须使用 `/` 而不是 `.` 来分隔包和类名。末尾的 V 表示返回类型为 `void`。尽管在 Java 中你不需要为构造函数指定返回类型，但需要在虚拟机签名中添加一个 V。
+注意`D`和`Ljava/util/Date;`之间没有分隔符。同样注意，在此编码方案中，你必须使用`/`而不是`.`来分隔包和类名。末尾的`V`表示返回类型为`void`。尽管在 Java 中你不需要为构造函数指定返回类型，但需要在虚拟机签名中添加一个`V`。
 
-**提示：** 你可以使用带有 `-s` 选项的 `javap` 命令从类文件中生成签名。例如，运行
+**提示：**你可以使用带有`-s`选项的`javap`命令从类文件中生成签名。例如，运行：
 
 ```
 javap -s -private Employee
@@ -27024,23 +28716,24 @@ Signature: (D)V
 public void print();
 Signature: ()V
 
-```
 static {};
+
   Signature: ()V
+
 }
 ```
 
-**注意：** 强制程序员对签名使用这种混淆方案没有任何理由。原生调用机制的设计者完全可以同样容易地编写一个按照 Java 编程语言风格读取签名的函数，例如 `void(int, java.lang.String)`，并将其编码为他们喜欢的任何内部表示。尽管如此，使用混淆签名可以让你参与到接近虚拟机编程的神秘感中。
+**注意：**强制程序员对签名使用这种混淆方案没有任何理由。原生调用机制的设计者完全可以同样容易地编写一个按照 Java 编程语言风格读取签名的函数，例如`void(int, java.lang.String)`，并将其编码为他们喜欢的任何内部表示。尽管如此，使用混淆签名可以让你参与到接近虚拟机编程的神秘感中。
 
-## 1.6. 调用 Java 方法
+## 1.6 调用 Java 方法
 
-当然，Java 编程语言函数可以调用 C 函数——这正是原生方法（native methods）的作用。我们可以反过来操作吗？我们为什么要这样做呢？通常情况下，原生方法需要从传递给它的对象请求服务。我将首先向你展示如何实现实例方法，然后是静态方法。
+当然，Java 编程语言函数可以调用 C 函数——这正是原生方法（`native methods`）的作用。我们可以反过来操作吗？我们为什么要这样做呢？通常情况下，原生方法需要从传递给它的对象请求服务。我将首先向你展示如何实现实例方法，然后是静态方法。
 
-### 1.6.1. 实例方法
+### 1.6.1 实例方法
 
-作为从原生代码调用 Java 方法的示例，让我们增强 Printf 类并添加一个工作原理与 C 函数 `printf` 类似的方法。也就是说，它能够在任意 `PrintWriter` 对象上打印字符串。以下是该方法在 Java 中的定义：
+作为从原生代码调用 Java 方法的示例，让我们增强`Printf`类并添加一个工作原理与 C 函数`printf`类似的方法。也就是说，它能够在任意`PrintWriter`对象上打印字符串。以下是该方法在 Java 中的定义：
 
-```
+```java
 class Printf3
 {
     public native static void fprintf(PrintWriter (
@@ -27049,79 +28742,89 @@ class Printf3
 }
 ```
 
-我们首先将要打印的字符串组装成 String 对象 `str`，就像我们已经实现的 sprint 方法一样。然后，从实现原生方法的 C 函数中，我们将调用 `PrintWriter` 类的 `print` 方法。
+我们首先将要打印的字符串组装成`String`对象`str`，就像我们已经实现的`sprint`方法一样。然后，从实现原生方法的 C 函数中，我们将调用`PrintWriter`类的`print`方法。
 
 你可以通过使用函数调用从 C 调用任何 Java 方法：
 
-```
+```c
 (*env)->CallXxxMethod(env, implicit argument, methodID,
 ```
 
-根据方法的返回类型将 Xxx 替换为 `Void`、`Int`、`Object` 等。就像你需要 `fieldID` 来访问对象的字段一样，你需要一个 `method ID` 来调用方法。要获取方法 ID，调用 JNI 函数 `GetMethodID` 并提供类、方法名和方法签名。
+根据方法的返回类型将`Xxx`替换为`Void`、`Int`、`Object`等。就像你需要`fieldID`来访问对象的字段一样，你需要一个`method ID`来调用方法。要获取方法 ID，调用 JNI 函数`GetMethodID`并提供类、方法名和方法签名。
 
-在我们的示例中，我们想要获取 `PrintWriter` 类 `print` 方法的 ID。我们要获取 `PrintWriter` 类 `print` 方法的 ID。`PrintWriter` 类有多个重载方法。例如，我们想要获取 `PrintWriter` 类 `print` 方法的 ID。该方法的签名是 `(Ljava/lang/String;)V`，因为参数和返回类型都是字符串。
+在我们的示例中，我们想要获取`PrintWriter`类`print`方法的 ID。我们要获取`PrintWriter`类`print`方法的 ID。`PrintWriter`类有多个重载方法。例如，我们想要获取`PrintWriter`类`print`方法的 ID。该方法的签名是`(Ljava/lang/String;)V`，因为参数和返回类型都是字符串。
 
 以下是该调用的完整代码：
 
-```
+```c
 /* 获取类 */
+
 class_PrintWriter = (*env)->GetObjectClass(env, implicit);
+
 /* 获取方法 ID */
+
 id_print = (*env)->GetMethodID(class_PrintWriter, "print", "(Ljava/lang/String;)V");
+
 /* 调用方法 */
+
 str = (*env)->CallMethod(env, implicit, id_print, str);
 ```
 
 （注：原文此处存在部分重复和逻辑混乱，译文已根据上下文进行了逻辑梳理处理）
 
-### 1.6.2. 静态方法
+### 1.6.2 静态方法
 
-作为此点的示例，让我们从原生方法进行静态方法的调用。该调用的返回值是当前类路径的字符串。首先，我们需要找到要使用的类。由于没有该类的可用对象，我们使用 `FindClass` 而不是 `ObjectClass`。接下来，我们需要静态方法 `getProperty` 的 ID。该方法的签名是 `(Ljava/lang/String;)Ljava/lang/String;`，因为参数和返回类型都是字符串。因此，我们如下获取方法 ID：
+作为此点的示例，让我们从原生方法进行静态方法的调用。该调用的返回值是当前类路径的字符串。首先，我们需要找到要使用的类。由于没有该类的可用对象，我们使用`FindClass`而不是`ObjectClass`。接下来，我们需要静态方法`getProperty`的 ID。该方法的签名是`(Ljava/lang/String;)Ljava/lang/String;`，因为参数和返回类型都是字符串。因此，我们如下获取方法 ID：
 
-```
+```c
 /* 获取类 */
+
 class_System = (*env)->FindClass(env, "java/System");
+
 /* 获取方法 ID */
+
 id_getProperty = (*env)->GetStaticMethodID(class_System, "getProperty", "(Ljava/lang/String;)Ljava/lang/String;");
+
 /* 调用方法 */
+
 obj_ret = (*env)->CallStaticObjectMethod(env, class_System, id_getProperty, (*env)->NewStringUTF(env, "class.path"));
 ```
 
-该方法的返回值是 `object` 类型。如果我们想将其作为字符串处理，必须将其转换为 `jstring`：
+该方法的返回值是`object`类型。如果我们想将其作为字符串处理，必须将其转换为`jstring`：
 
-```
+```c
 jstring str_ret = (jstring) obj_ret;
 ```
 
-**C++ 注意：** 在 C 中，`jstring` 和 `jclass` 类型以及之后引入的类型与 `object` 类型等效。因此，前述示例的转换在 C 中并不是严格必要的。但在 C++ 中，这些类型被定义为指向具有正确继承层次的“哑类”的指针。例如，在 C++ 中将 `jstring` 赋值给 `object` 是允许，但从 `object` 赋值给 `jstring` 需要转换。
+**C++ 注意：**在 C 中，`jstring`和`jclass`类型以及之后引入的类型与`object`类型等效。因此，前述示例的转换在 C 中并不是严格必要的。但在 C++ 中，这些类型被定义为指向具有正确继承层次的“哑类”的指针。例如，在 C++ 中将`jstring`赋值给`object`是允许的，但从`object`赋值给`jstring`需要转换。
 
-### 1.6.3. 构造函数
+### 1.6.3 构造函数
 
-原生方法可以通过调用构造函数来创建新的 Java 对象。通过调用 `NewObject` 函数来调用构造函数。
+原生方法可以通过调用构造函数来创建新的 Java 对象。通过调用`NewObject`函数来调用构造函数。
 
+你可以通过`GetMethodID`函数获取此调用所需的方法 ID，只需将方法名指定为`"<init>"`以及构造函数的编码签名（返回类型为`void`）。例如，这里是原生方法如何创建`FileOutputStream`对象的：
 
-
-
-你可以通过 `GetMethodID` 函数获取此调用所需的方法 ID，只需将方法名指定为 `"<init>"` 以及构造函数的编码签名（返回类型为 `void`）。例如，这里是原生方法如何创建 `FileOutputStream` 对象的：
-
-```
+```c
 const char[] fileName = ". ";
+
 jstring str_fileName = (*env)->NewStringUTF(env, fileName);
+
 jclass class_FileOutputStream = (*env)->FindClass(env, "java/io/FileOutputStream");
+
 methodID id_FileFileOutputStream = (*env)->GetMethodID(env, class_FileOutputStream, "<init>", "(Ljava/lang/String;)V");
 ```
 
-注意，构造函数的签名包含一个类型为 `java.lang.String` 的参数，且返回类型为 `void`。
+注意，构造函数的签名包含一个类型为`java.lang.String`的参数，且返回类型为`void`。
 
-## 1.6.4. 替代方法调用
+### 1.6.4 替代方法调用
 
 可以使用 JNI 函数的几种变体来从原生代码调用 Java 方法。这些函数不像我们已经讨论过的函数那么重要，但在某些情况下有用。
 
-`CallNonvirtualXxxMethod` 函数接收一个隐式参数（方法 ID）、一个类对象（必须对应隐式参数的父类）以及显式参数。该函数调用指定类中的方法版本，绕过了正常的动态分发机制。
+`CallNonvirtualXxxMethod`函数接收一个隐式参数（方法 ID）、一个类对象（必须对应隐式参数的父类）以及显式参数。该函数调用指定类中的方法版本，绕过了正常的动态分发机制。
 
-所有调用函数都有带有后缀“A”和“V”的版本，它们分别在数组或 `va_list`（由 C 头文件 `stdarg.h` 定义）中接收显式参数。
+所有调用函数都有带有后缀`A`和`V`的版本，它们分别在数组或`va_list`（由 C 头文件`stdarg.h`定义）中接收显式参数。
 
-# 列表 1.14 printf3/Printf3Test.java
+# 列表 1.14 `printf3/Printf3Test.java`
 
 ```java
 import java.io.*;
@@ -27130,6 +28833,7 @@ import java.io.*;
  * @version 1.11 2018-05-01
  * @author Cay Horstmann
  */
+
 class Printf3Test {
     public static void main(String[] args) {
         double price = 44.95;
@@ -27142,15 +28846,18 @@ class Printf3Test {
 }
 ```
 
-# 列表 1.15 printf3/Printf3.java*
+# 列表 1.15 `printf3/Printf3.java`
 
 ```java
 1 import java.io.*;
-2 
+
+2
+
 3 /**
 4 * @version 1.10 1997-07-01
 5 * @author Cay Horstmann
 6 */
+
 7 class Printf3
 8 {
 9     public static native void fprintf(PrintWriter out, String format, Object... args);
@@ -27159,82 +28866,114 @@ class Printf3Test {
 12        System.loadLibrary("Printf3");
 13    }
 14 } }
+```
 
-# 列表 1.16 printf3/Printf3.c
+# 列表 1.16 `printf3/Printf3.c`
+
+
 
 ```c
-1 /**
-2 @version 1.10 1997-07-01
-3 @author Cay Horstmann
-4  */
-5 
-6 #include "Printf3.h"
-7 #include <string.h>
-8 #include <stdlib.h>
-9 #include <float.h>
-10
-11 /**
-12 @param format 一个包含原始格式的字符串
-13 (例如 "%8.2f"）。子字符串 "%%" 会被转义
-14 @return 指向格式说明符的指针，
-15 如果没有唯一的格式，则返回 NULL
-16 */
-17 char* find_format(const char format[])
-18 {
-19     char* p;
-20     char* q;
-21
-22     p = strchr(format, '%');
-23     while (p != NULL && *(p + 1) == '%') { /*
-24         p = strchr(p + 2, '%');
-25     if (p == NULL) return NULL;
-26     /* 现在检查 % 是否是唯一的 */
-27     p++;
-28     q = strchr(p, '%');
-29     while (q != NULL && *(q + 1) == '%') { /*
-30         q = strchr(q + 2, '%');
-31     if (q != NULL) return NULL; /* % 不唯一 */
-32 q = p + strspn(p, " -0+#"); /* 跳过 */
-33 q += strspn(q, "0123456789"); /* 跳过 */
-34 if (*q == '.') { q += strspn(q, "0123456789"); /* 跳过精度 *//
-35 if (strstr("eEfFgG", *q) == NULL) return
-36 /* 不是浮点数格式 */
-37 return p;
-38 }
-NIEXPORT void JNICALL Java_Printf3_fprint(jobject out, jstring format, jdouble x)
-{
-const char* cformat;
-char* fmt;
-jstring str;
-jclass class_PrintWriter;
-methodID id_print;
+/**
+@version 1.10 1997-07-01
+@author Cay Horstmann
+*/
 
-cformat = (*env)->GetStringUTFChars(env, format, NULL);
-fmt = find_format(cformat);
-if (fmt == NULL)
-    str = format;
-else
+#include "Printf3.h"
+#include <string.h>
+#include <stdlib.h>
+#include <float.h>
+
+/**
+@param format 一个包含原始格式的字符串
+（例如 "%8.2f"）。子字符串 "%%" 会被转义
+@return 指向格式说明符的指针，
+如果没有唯一的格式，则返回 NULL
+*/
+char* find_format(const char format[])
 {
-char* cstr;
-int width = atoi(fmt);
-if (width == 0) width = DBL_DIG + 10;
-cstr = (char*)malloc(strlen(cformat) + 1);
-60 sprintf(cstr, cformat, x);
-61 str = (*env)->NewStringUTF(env, cstr);
-62 free(cstr);
-63 }
-64 (*env)->ReleaseStringChars(env, format, cformat);
-65 /* 获取类 */
-66 class_PrintWriter = (*env)->FindClass(env, "java/io/PrintWriter");
-67 id_print = (*env)->GetMethodID(env, class_PrintWriter, "print", "(Ljava/io/String;)V");
-68 /* 调用方法 */
-69 (*env)->CallVoidMethod(env, out, id_print, str);
-70 }
+    char* p;
+    char* q;
+
+    p = strchr(format, '%');
+    while (p != NULL && *(p + 1) == '%') {
+        p = strchr(p + 2, '%');
+    }
+
+    if (p == NULL) return NULL;
+
+    /* 现在检查 % 是否是唯一的 */
+    p++;
+    q = strchr(p, '%');
+
+    while (q != NULL && *(q + 1) == '%') {
+        q = strchr(q + 2, '%');
+    }
+
+    if (q != NULL) return NULL; /* % 不唯一 */
+
+    q = p + strspn(p, " -0+#"); /* 跳过 */
+    q += strspn(q, "0123456789"); /* 跳过 */
+
+    if (*q == '.') {
+        q += strspn(q, "0123456789"); /* 跳过精度 */
+    }
+
+    if (strstr("eEfFgG", *q) == NULL) {
+        return NULL; /* 不是浮点数格式 */
+    }
+
+    return p;
+}
+
+NIEXPORT void JNICALL Java_Printf3_fprint(
+    jobject out,
+    jstring format,
+    jdouble x
+)
+{
+    const char* cformat;
+    char* fmt;
+    jstring str;
+    jclass class_PrintWriter;
+    methodID id_print;
+
+    cformat = (*env)->GetStringUTFChars(env, format, NULL);
+    fmt = find_format(cformat);
+
+    if (fmt == NULL) {
+        str = format;
+    } else {
+        char* cstr;
+        int width = atoi(fmt);
+
+        if (width == 0) width = DBL_DIG + 10;
+
+        cstr = (char*)malloc(strlen(cformat) + 1);
+        sprintf(cstr, cformat, x);
+        str = (*env)->NewStringUTF(env, cstr);
+        free(cstr);
+    }
+
+    (*env)->ReleaseStringChars(env, format, cformat);
+
+    /* 获取类 */
+    class_PrintWriter = (*env)->FindClass(env, "java/io/PrintWriter");
+    id_print = (*env)->GetMethodID(
+        env,
+        class_PrintWriter,
+        "print",
+        "(Ljava/io/String;)V"
+    );
+
+    /* 调用方法 */
+    (*env)->CallVoidMethod(env, out, id_print, str);
+}
+```
 
 ## 执行 Java 方法
 
 - `jmethodID GetMethodID(JNIEnv*, jclass, const char*, const char*)` returns the identifier of a method.
-- `void CallMethod(JNIEnv*, jobject, methodID, ...)` calls a method. The type Xxx is one of primitive types, or Object.
+- `void CallMethod(JNIEnv*, jobject, methodID, ...)` calls a method. The type `Xxx` is one of primitive types, or Object.
 - `CallNonvirtualXxxMethod` functions receive an implicit argument, method ID, a class object (which must correspond to a superclass of the implicit argument), and explicit arguments. The function calls the version of the method in the specified class, bypassing the normal dynamic dispatch mechanism.
 - All call functions have versions with suffixes “A” and “V” that receive the explicit arguments in an array or a `va_list` (as defined in the C header `stdarg.h`). These are not as important as the functions that we already discussed, but they are occasionally useful.
 
@@ -27242,101 +28981,112 @@ cstr = (char*)malloc(strlen(cformat) + 1);
 
 All array types of the Java language have corresponding C types, as shown in Table 13.2.
 
-表 13.2：Java 数组类型与 C类型的对应关系
+表 13.2：Java 数组类型与 C 类型的对应关系
 
 | Java 类型 | C 类型 | Java 类型 | C 类型 |
 | --- | --- | --- | --- |
-| boolean[] | jbooleanArray | long[] | jlongArray |
-| byte[] | jbyteArray | float[] | jfloatArray |
-| char[] | jcharArray | double[] | jdoubleArray |
-| int[] | jintArray | Object[] | jobject |
-| short[] | jshortArray | | |
+| `boolean[]` | `jbooleanArray` | `long[]` | `jlongArray` |
+| `byte[]` | `jbyteArray` | `float[]` | `jfloatArray` |
+| `char[]` | `jcharArray` | `double[]` | `jdoubleArray` |
+| `int[]` | `jintArray` | `Object[]` | `jobject` |
+| `short[]` | `jshortArray` |  |  |
 
-> **C++ 注意:** 在 C 中，所有数组类型实际上都是 type synonyms of object. In C++, however, they are arranged in the inheritance hierarchy shown in Figure 13.3. The type `j` denotes a generic array.
+> **C++ 注意：** 在 C 中，所有数组类型实际上都是 type synonyms of object。在 C++ 中，它们则按照图 13.3 所示的继承层次结构排列。类型 `j` 表示通用数组。
 
 ![](img/cb920f692d263682e0dcb1ad7f884cc_1713_0.png)
 
-The `GetArrayLength` function returns the length of an array.
+`GetArrayLength` 函数返回数组的长度。
 
-```
-jarray array = . . .;
+```c
+jarray array = ...;
 ```
 
-```
+```c
 jsize length = (*env)->GetArrayLength(env, array);
 ```
 
-How you access elements in an array depends on whether the array stores objects or values of a primitive type. To access elements in an object array, use the `GetObjectArrayElement` and `SetObjectArrayElement` methods.
+如何访问数组中的元素，取决于数组存储的是对象还是基本类型的值。要访问对象数组中的元素，请使用 `GetObjectArrayElement` 和 `SetObjectArrayElement` 方法。
 
-```
-objectArray array = . .;
+```c
+objectArray array = ...;
+
 int i, j;
+
 object x = (*env)->GetObjectArrayElement(env, array);
+
 (*env)->SetObjectArrayElement(env, array, j, x);
 ```
 
-Although simple, this approach is also clearly inefficient; you want to be able to access array elements directly, especially when doing vector and matrix computations.
+虽然这种方法很简单，但显然效率也很低；尤其是在进行向量和矩阵计算时，你需要能够直接访问数组元素。
 
-The `GetArrayElements` function returns a C pointer to the starting element of an array. With ordinary strings, you must remember to call the corresponding `ReleaseXxArrayElements` function to tell the virtual machine when you no longer need that pointer. Here, the type Xxx must be a primitive type—that is, not Object. You can read and write the array elements directly. However, since the pointer might point to a copy, any changes you make are guaranteed to be reflected in
+`GetArrayElements` 函数返回一个指向数组起始元素的 C 指针。对于普通字符串，必须记住调用相应的 `ReleaseXxArrayElements` 函数，以告知虚拟机何时不再需要该指针。这里，类型 `Xxx` 必须是基本类型，而不能是 `Object`。你可以直接读取和写入数组元素。但是，由于该指针可能指向副本，因此你所做的任何更改都保证会反映在原始数组中！
 
+只有在调用了相应的 `ReleaseXxxArrayElements` 函数后，才会释放原始数组！
 
+> **注意：** 你可以通过向 `GetXxxArrayElements` 方法的第三个参数传递一个 `jboolean` 变量的指针，来判断数组是否为副本。如果数组是副本，该变量将被填充为 `JNI_TRUE`。如果你对该信息感兴趣，只需传递 `NULL` 指针即可。
 
+这是一个示例，用于将 `double` 类型数组中的所有元素乘以一个常数。我们获取一个指向 Java 数组的 C 指针，然后通过 `a[i]` 访问单个元素。
 
-只有在调用了相应的 ReleaseXxxArrayElements 函数后，才会释放原始数组！
+```c
+jdoubleArray array_a = ...;
 
-> **注意：** 你可以通过向 GetXxxArrayElements 方法的第三个参数传递一个 jboolean 变量的指针，来判断数组是否为副本。如果数组是副本，该变量将被填充为 JNI_TRUE。如果你对该信息感兴趣，只需传递 NULL 指针即可。
+double scaleFactor = ...;
 
-这是一个示例，用于将 double 类型数组中的所有元素乘以一个常数。我们获取一个指向 Java 数组的 C 指针，然后通过 a[i] 访问单个元素。
+double* a = (*env)->GetDoubleArrayElements(env, array_a);
 
+for (i = 0; i < (*env)->GetArrayLength(env, array_a); i++)
+    a[i] = a[i] * scaleFactor;
+
+(*env)->ReleaseDoubleArrayElements(env, array_a, a, 0);
 ```
-jdoubleArray array_a = . . . ;
-double scaleFactor = . . . ;
-double* a = (*env)->GetDoubleArrayElements(env, a);
-for (i = 0; i < (*env)->GetArrayLength(env, array);
-a[i] = a[i] * scaleFactor;
-(*env)->ReleaseDoubleArrayElements(env, array_a,
-```
 
-虚拟机实际上是否复制数组取决于它如何分配数组以及垃圾回收机制。某些“复制型”垃圾器会定期移动对象并更新对象引用。这种策略与将数组“固定”在特定位置是不兼容的，因为收集器无法更新原生代码中的指针值。
+虚拟机实际上是否复制数组，取决于它如何分配数组以及垃圾回收机制。某些“复制型”垃圾器会定期移动对象并更新对象引用。这种策略与将数组“固定”在特定位置是不兼容的，因为收集器无法更新原生代码中的指针值。
 
 > **注意：** 在 Oracle JVM 实现中，`boolean` 数组被表示为 32 位字的压缩数组。`GetBooleanArrayElements` 方法将它们复制到解包的 `jboolean` 取值数组中。
 
-要访问大数组的少数几个元素，请使用 GetXxxArrayRegion 和 SetXxxArrayRegion 方法，这些方法可以将范围元素从 Java 数组复制到 C 数组并反之。
+要访问大数组的少数几个元素，请使用 `GetXxxArrayRegion` 和 `SetXxxArrayRegion` 方法。这些方法可以将范围元素从 Java 数组复制到 C 数组，反之亦然。
 
-你可以使用 NewXxxArray 函数在原生方法中创建新的 Java 数组。要创建一个新的对象数组，请指定长度、数组元素的类型以及所有条目的初始元素（通常为 `NULL`）。这里有一个示例：
+你可以使用 `NewXxxArray` 函数在原生方法中创建新的 Java 数组。要创建一个新的对象数组，请指定长度、数组元素的类型以及所有条目的初始元素（通常为 `NULL`）。这里有一个示例：
 
-```
-jclass class_Employee = (*env)->FindClass(env,"Employee");
-jobjectArray array_e = (*env)->NewObjectArray(env,class_Employee,...);
+```c
+jclass class_Employee = (*env)->FindClass(env, "Employee");
+
+jobjectArray array_e = (*env)->NewObjectArray(
+    env,
+    class_Employee,
+    ...
+);
 ```
 
 基本类型数组更为简单：只需提供数组的长度。
 
-```
-jdoubleArray array_d = (*env)->NewDoubleArray(env,...)
+```c
+jdoubleArray array_d = (*env)->NewDoubleArray(env, ...);
 ```
 
 然后数组将被填充为零。
 
 > **注意：** 以下方法用于处理“直接缓冲区”：
 
-```
-jobject NewDirectByteBuffer(JNIEnv* env)
-void* GetDirectBufferAddress(JNIEnv* env)
-jlong GetDirectBufferCapacity(JNIEnv* env)
+```c
+jobject NewDirectByteBuffer(JNIEnv* env);
+
+void* GetDirectBufferAddress(JNIEnv* env);
+
+jlong GetDirectBufferCapacity(JNIEnv* env);
 ```
 
-直接缓冲区用于 java.nio 包，以支持更高效的输入/输出操作，并尽量减少原生数组与 Java 数组之间的数据拷贝。
+直接缓冲区用于 `java.nio` 包，以支持更高效的输入/输出操作，并尽量减少原生数组与 Java 数组之间的数据拷贝。
 
 # 操作 Java 数组
 
-- jsize GetArrayLength(JNIEnv *env, jarray array) 返回数组中的个数。
-- object GetObjectArrayElement(JNIEnv *env, objectArray array, jsize index) 返回数组元素的值。
-- void SetObjectArrayElement(JNIEnv *env, objectArray array, jsize index, object value) 将数组元素设置为新值。
-- * Xxx* GetXxxArrayElements(JNIEnv *env, jarray array, jboolean* isCopy) 产生一个指向 Java 数组元素的 C 指针。字段类型 Xxx 是 Boolean, Byte, Char, Short, Int, Long, Float 或 Double 之一。当指针不再被需要时，必须将其传递给 ReleaseXxxArrayElements。isCopy 为 NULL 或指向一个 jboolean 指针，如果是副本，则被填充为 JNI_TRUE，否则填充为 JNI_FALSE。
-- * void ReleaseXxxArrayElements(JNIEnv *env, jarray array, jint mode) 通知虚拟机通过 GetXxxArrayElements 获取的指针不再被需要。mode 可为 0（在更新数组元素后释放 elems 缓冲区）、JNI_COMMIT（在更新数组元素后不释放 elems 缓冲区）或 JNI_ABORT（在不更新数组元素的情况下释放 elems 缓冲区）。
-- * void GetXxxArrayRegion(JNIEnv *env, jarray array, jint start, int length, Xxx elems[]) 将元素从 Java 数组复制到 C 数组。字段类型 Xxx 是 Boolean, Byte, Char, Short, Int, Long, Float 或 Double 之一。
-- * void SetXxxArrayRegion(JNIEnv *env, jarray array, jint start, jint length, Xxx elems[]) 将元素从 C 数组复制到 Java 数组。字段类型 Xxx 是 Boolean, Byte, Char, Short, Int, Long, Float 或 Double 之一。
+- `jsize GetArrayLength(JNIEnv* env, jarray array)` 返回数组中的个数。
+- `object GetObjectArrayElement(JNIEnv* env, objectArray array, jsize index)` 返回数组元素的值。
+- `void SetObjectArrayElement(JNIEnv* env, objectArray array, jsize index, object value)` 将数组元素设置为新值。
+- `Xxx* GetXxxArrayElements(JNIEnv* env, jarray array, jboolean* isCopy)` 产生一个指向 Java 数组元素的 C 指针。字段类型 `Xxx` 是 `Boolean`、`Byte`、`Char`、`Short`、`Int`、`Long`、`Float` 或 `Double` 之一。当指针不再被需要时，必须将其传递给 `ReleaseXxxArrayElements`。`isCopy` 为 `NULL` 或指向一个 `jboolean` 指针；如果是副本，则被填充为 `JNI_TRUE`，否则填充为 `JNI_FALSE`。
+- `void ReleaseXxxArrayElements(JNIEnv* env, jarray array, jint mode)` 通知虚拟机，通过 `GetXxxArrayElements` 获取的指针不再被需要。`mode` 可为 `0`（在更新数组元素后释放 `elems` 缓冲区）、`JNI_COMMIT`（在更新数组元素后不释放 `elems` 缓冲区）或 `JNI_ABORT`（在不更新数组元素的情况下释放 `elems` 缓冲区）。
+- `void GetXxxArrayRegion(JNIEnv* env, jarray array, jint start, int length, Xxx elems[])` 将元素从 Java 数组复制到 C 数组。字段类型 `Xxx` 是 `Boolean`、`Byte`、`Char`、`Short`、`Int`、`Long`、`Float` 或 `Double` 之一。
+- `void SetXxxArrayRegion(JNIEnv* env, jarray array, jint start, jint length, Xxx elems[])` 将元素从 C 数组复制到 Java 数组。字段类型 `Xxx` 是 `Boolean`、`Byte`、`Char`、`Short`、`Int`、`Long`、`Float` 或 `Double` 之一。
 
 ## 1.8. 处理错误
 
@@ -27346,9 +29096,7 @@ jlong GetDirectBufferCapacity(JNIEnv* env)
 
 要使用 `Throw` 函数，请调用 `Throw` 或 `ThrowNew` 创建一个新的异常对象。当原生方法退出时，Java 虚拟机会抛出该异常。
 
-
-
-Listing 13.19 中的测试程序演示了当格式字符串无效时，原生方法是如何抛出异常的。
+`Listing 13.19` 中的测试程序演示了当格式字符串无效时，原生方法是如何抛出异常的。
 
 # Listing 11.17 printf4/Printf4.c
 
@@ -27365,89 +29113,113 @@ Listing 13.19 中的测试程序演示了当格式字符串无效时，原生方
 
 /**
  * @param format 一个包含格式的字符串
- * (例如 "%8.2f"）。包含 "%%" 的子字符串会被忽略。
+ * （例如 "%8.2f"）。包含 "%%" 的子字符串会被忽略。
  * @return 指向格式说明的指针
  * 如果没有唯一的格式则返回 NULL
  */
-char* find_format(const char format[]) {
+
+char* find_format(const char format[])
+{
     char* p;
     char* q;
 
     p = strchr(format, '%');
-    while (p != NULL && *(p + 1) == '%') /* ... */
-    24 p = strchr(p + 2, '%');
-    25 if (p == NULL) return NULL;
-    26 /* 现在检查 % 是否唯一 */
-    27 p++;
-    28 q = strchr(p, '%');
-    29 while (q != NULL && *(q + 1) == '%') /*
-    30 q = strchr(q + 2, '%');
-    31 if (q != NULL) return NULL; /* % 不唯一 */
-    32 q = p + strcspn(q, " -0+#"); /* 跳过
-    33 q += strcspn(q, "0123456789"); /* * 跳过部分 pa
-    34 if (*q == '.') { q++; q += strcspn(q, "03
-    35 /* 跳过精度 *//
-    36 if (strchr("eEfFgG", *q) == NULL) return;
-    37 /* 不是浮点数格式 *//
-    38 return p;
-    39 }
 
-    41 JNIEXPORT void JNICALL JavaPrintf4_fprintf(
-    42 jject out, jstring format, jdouble x)
-    43 {
-    44 const char* cformat;
-    45 char* fmt;
-    46 jclass class_PrintWriter;
-    47 jmethodID id_print;
-    48 char* cstr;
-    49 int width;
-    50 int i;
+    while (p != NULL && *(p + 1) == '%') {
+        p = strchr(p + 2, '%');
+    }
 
-    if (format == NULL)
-    {
-        (*env)->ThrowNew(env,
-            (*env)->FindClass(env,
-            "java/lang/NullPointerException",
-            "Printf4.fprintf: format is null");
-        return;
-    }
-    cformat = (*env)->GetStringUTFChars(env, format);
-    fmt = find_format(cformat);
-    if (fmt == NULL)
-    {
-        (*env)->ThrowNew(env,
-            (*env)->FindClass(env,
-            "java/lang/IllegalArgumentException",
-            "Printf4.fprintf: format is invalid");
-        return;
-    }
-    width = atoi(fmt);
-    if (width == 0) width = DBL_DIG + 10;
-    cstr = (char*)malloc(strlen(cformat) + 1);
-    if (cstr == NULL)
-    {
-        (*env)->ThrowNew(env,
-            (*env)->FindClass(env, "java/lang/MemoryError"),
-            "Printf4.fprintf: malloc failed");
-        return;
-    }
-    sprintf(cstr, cformat, x);
+    if (p == NULL) return NULL;
 
-    (*env)->ReleaseStringUTFChars(env, format, cformat);
-    /* 现在调用 ps.print(str) */
-    /* 获取类 */
-    class_PrintWriter = (*env)->GetObjectClass(env, "java/io/PrintWriter");
-    /* 获取方法 ID */
-    id_print = (*env)->GetMethodID(env, class_PrintWriter, "print", "(Ljava/lang/String;)V");
-    /* 调用方法 */
-    for (i = 0; cstr[i] != 0 && !(*env)->ExceptionCheck(env); i++) {
-        /* 为了简洁起见省略了逻辑 */
+    /* 现在检查 % 是否唯一 */
+    p++;
+
+    q = strchr(p, '%');
+
+    while (q != NULL && *(q + 1) == '%') {
+        q = strchr(q + 2, '%');
     }
-    free(cstr);
+
+    if (q != NULL) return NULL; /* % 不唯一 */
 }
 ```
 
-# Listing 1.18 printf4/Printf4.java
+
+
+```c
+32 q = p + strcspn(q, " -0+#"); /* 跳过
+33 q += strcspn(q, "0123456789"); /* 跳过部分 pa
+34 if (*q == '.') { q++; q += strcspn(q, "03
+35 /* 跳过精度 */
+36 if (strchr("eEfFgG", *q) == NULL) return;
+37 /* 不是浮点数格式 */
+38 return p;
+39 }
+
+41 JNIEXPORT void JNICALL JavaPrintf4_fprintf(
+42 jject out, jstring format, jdouble x)
+43 {
+44 const char* cformat;
+45 char* fmt;
+46 jclass class_PrintWriter;
+47 jmethodID id_print;
+48 char* cstr;
+49 int width;
+50 int i;
+
+if (format == NULL)
+{
+    (*env)->ThrowNew(env,
+        (*env)->FindClass(env,
+        "java/lang/NullPointerException",
+        "Printf4.fprintf: format is null");
+    return;
+}
+
+cformat = (*env)->GetStringUTFChars(env, format);
+fmt = find_format(cformat);
+
+if (fmt == NULL)
+{
+    (*env)->ThrowNew(env,
+        (*env)->FindClass(env,
+        "java/lang/IllegalArgumentException",
+        "Printf4.fprintf: format is invalid");
+    return;
+}
+
+width = atoi(fmt);
+if (width == 0) width = DBL_DIG + 10;
+
+cstr = (char*)malloc(strlen(cformat) + 1);
+if (cstr == NULL)
+{
+    (*env)->ThrowNew(env,
+        (*env)->FindClass(env, "java/lang/MemoryError"),
+        "Printf4.fprintf: malloc failed");
+    return;
+}
+
+sprintf(cstr, cformat, x);
+(*env)->ReleaseStringUTFChars(env, format, cformat);
+
+/* 现在调用 ps.print(str) */
+/* 获取类 */
+class_PrintWriter = (*env)->GetObjectClass(env, "java/io/PrintWriter");
+
+/* 获取方法 ID */
+id_print = (*env)->GetMethodID(env, class_PrintWriter, "print", "(Ljava/lang/String;)V");
+
+/* 调用方法 */
+for (i = 0; cstr[i] != 0 && !(*env)->ExceptionCheck(env); i++) {
+    /* 为了简洁起见省略了逻辑 */
+}
+
+free(cstr);
+}
+```
+
+# Listing 1.18 `printf4/Printf4.java`
 
 ```java
 1 import java.io.*;
@@ -27456,16 +29228,16 @@ char* find_format(const char format[]) {
 4  * @author Cay Horstmann
 5  */
 6 class Printf4
-7  {
+7 {
 8    public static native void fprintf(PrintWriter out, String format);
 9    static
-10  {
+10 {
 11    System.loadLibrary("Printf4");
-12  }
+12 }
 13 }
 ```
 
-# Listing 1.19 printf4/PrintfTest.java
+# Listing 1.19 `printf4/PrintfTest.java`
 
 ```java
 1 import java.io.*;
@@ -27480,6 +29252,7 @@ char* find_format(const char format[]) {
         double tax = 7.75;
         double amountDue = price * (1 + tax);
         var out = new PrintWriter(System.out);
+
         /* 这将抛出异常 */
         Printf4.fprintf(out, "Amount due = %s\n");
         out.flush();
@@ -27489,37 +29262,48 @@ char* find_format(const char format[]) {
 
 # 处理 Java 异常
 
-- `jint Throw(JNIEnv *env, throwable obj)`
-  在原生代码退出时抛出一个异常。
-  成功返回 0，失败返回负值。
-- `jint ThrowNew(JNIEnv *env, jclass cl, const char msg[])`
-  在原生代码退出时抛出一个类型为 cl 的异常。
-  成功返回 0，失败返回负值。msg 是异常信息的修改 UTF-8 字节序列。
-- `jtable Exception(JNIEnv *env)`
-  如果存在异常则返回异常对象，否则返回 NULL。
-- `boolean ExceptionCheck(JNIEnv *env)`
-  如果存在异常则返回 true。
-- `void ExceptionClear(JNIEnv *env)`
+- `jint Throw(JNIEnv *env, throwable obj)`  
+  在原生代码退出时抛出一个异常。  
+  成功返回 `0`，失败返回负值。
+
+- `jint ThrowNew(JNIEnv *env, jclass cl, const char msg[])`  
+  在原生代码退出时抛出一个类型为 `cl` 的异常。  
+  成功返回 `0`，失败返回负值。`msg` 是异常信息的修改 UTF-8 字节序列。
+
+- `jtable Exception(JNIEnv *env)`  
+  如果存在异常则返回异常对象，否则返回 `NULL`。
+
+- `boolean ExceptionCheck(JNIEnv *env)`  
+  如果存在异常则返回 `true`。
+
+- `void ExceptionClear(JNIEnv *env)`  
   清除任何待处理异常。
 
-# 9. 使用调用 API (Invocation API)
+# 9. 使用调用 API（Invocation API）
 
 现在我们考虑在 Java 语言中无法访问的功能。假设你处于相反的情况：你有一个 C 或 C++ 程序并想要调用 Java 代码。调用 API 允许你将虚拟机嵌入到 C 或 C++ 程序中。以下是初始化虚拟机的最小代码：
 
 ```c
 JavaVMOption options[1];
+
 JavaVMInArgs vm_args;
+
 JavaVM *jvm;
+
 JNIEnv *env;
 
 options[0].optionString = "-java.classpath.";
+
 memset(&vm_args, 0, sizeof(vm_args));
+
 vm_args.version = JNI_VERSION_1_2;
+
 vm_args.nOptions = 1;
+
 vm_args.options = options;
 ```
 
-对 `JNI_CreateVM` 的调用会创建虚拟机并填充虚拟机 jvm 指针和环境 env 指针。你可以为虚拟机提供任意数量的选项。只需增加 `options` 数组的大小和 `vm_args.nOptions` 的值。例如，`options[i].optionString = "-java.compiler=NONE"` 会激活即时编译器。
+对 `JNI_CreateVM` 的调用会创建虚拟机并填充虚拟机 `jvm` 指针和环境 `env` 指针。你可以为虚拟机提供任意数量的选项。只需增加 `options` 数组的大小和 `vm_args.nOptions` 的值。例如，`options[i].optionString = "-java.compiler=NONE"` 会激活即时编译器。
 
 **提示：** 当你遇到问题、崩溃、拒绝初始化 JVM 或无法加载类时，开启 JNI 调试模式。设置选项 `options[i].optionString = "-verbose:jni"`。你会看到大量初始化 JVM 的信息。如果没有看到加载类，请检查你的路径和类设置。
 
@@ -27531,9 +29315,9 @@ vm_args.options = options;
 
 遗憾的是，在 Windows 上，由于 Vista 链接规则的变化以及对旧运行时库的依赖，动态链接 `jre/bin/client/jvm.dll` 中的 `JNI_CreateVM` 函数变得困难。我们的示例程序通过手动加载库解决了这个问题。Java 程序也使用了这种方法——参见 `src.jar` 文件中的 `launcher/java_md.c`。
 
-Listing 13.20 中的 C 程序设置了虚拟机并调用了 `Welcome` 类的 `main` 方法，该方法在第一卷第二章讨论过。（在启动调用程序之前，确保已编译 Welcome.java 文件。）
+Listing 13.20 中的 C 程序设置了虚拟机并调用了 `Welcome` 类的 `main` 方法，该方法在第一卷第二章讨论过。（在启动调用程序之前，确保已编译 `Welcome.java` 文件。）
 
-# Listing 1.20 invocation/InvocationTest.c
+# Listing 1.20 `invocation/InvocationTest.c`
 
 ```c
 /**
@@ -27546,6 +29330,7 @@ Listing 13.20 中的 C 程序设置了虚拟机并调用了 `Welcome` 类的 `ma
 
 #ifdef _WINDOWS
 #include <windows.h>
+
 static HINSTANCE loadJVMLibrary(void);
 typedef jint (JNICALL CreateJavaVM_t)(JavaVM**);
 #endif
@@ -27557,7 +29342,6 @@ int main()
     JavaVM *jvm;
     JNIEnv *env;
     long status;
-
     jclass class_Welcome;
     jclass class_String;
     objectArray args;
@@ -27569,7 +29353,9 @@ int main()
 #endif
 
     options[0].optionString = "-Djava.class";
+
     memset(&vm_args, 0, sizeof(vm_args));
+
     vm_args.version = JNI_VERSION_1_2;
     vm_args.nOptions = 1;
     vm_args.options = options;
@@ -27589,20 +29375,22 @@ int main()
     }
 
     class_Welcome = (*env)->FindClass(env, "Welcome");
-    id_main = (*env)->GetStaticMethodID(env, class_Welcome, "main", "([Ljava/lang/String;)V");
+    id_main = (*env)->GetStaticMethodID(
+        env,
+        class_Welcome,
+        "main",
+        "([Ljava/lang/String;)V"
+    );
+
     class_String = (*env)->FindClass(env, "java/lang/String");
     args = (*env)->NewObjectArray(env, 0, class_String, NULL);
 
     (*env)->CallStaticVoidMethod(env, class_Welcome, id_main, args);
-
     (*jvm)->DestroyJVM(jvm);
+
     return 0;
 }
 ```
-
-
-
-
 
 ```c
 80 static void GetPublicJREHome(char *buf, jir)
@@ -27612,6 +29400,7 @@ int main()
 
   /* 查找当前 JRE 的版本 */
   char *JRE_KEY = "Software\\JavaSoft\\Java";
+
   if (RegOpenKeyEx(HKEY_LOCAL_MACHINE, JRE_KEY)
   {
      fprintf(stderr, "Error opening registry");
@@ -27643,20 +29432,25 @@ int main()
 
   RegCloseKey(key);
   RegCloseKey(subkey);
+}
 
 static HINSTANCE loadJVMLibrary(void)
 {
   INSTANCE h1, h2;
   char msvdll[MAX_PATH];
   char jadvill[MAX_PATH];
+
   GetPublicJREHome(msvdll, MAX_PATH);
   strcpy(jadvill, msvdll);
+
   strncat(msvdll, "\\bin\\msvcr71.dll",
   msvdll[MAX_PATH - 1] = '\0';
+
   strncat(jadvill, "\\bin\\client\\jvm.dll",
   jadvill[MAX_PATH - 1] = '\0';
 
   h1 = LoadLibrary(msvdll);
+
   if (h1 == NULL)
   {
     fprintf(stderr, "Can't load library\n");
@@ -27664,18 +29458,19 @@ static HINSTANCE loadJVMLibrary(void)
   }
 
   h2 = LoadLibrary(jadvll);
+
   if (h2 == NULL)
   {
     fprintf(stderr, "Can't load library\n");
     exit(1);
   }
+
   return h2;
 }
-
 #endif
 ```
 
-在 Linux 下编译此程序，请使用
+在 Linux 下编译此程序，请使用：
 
 ```bash
 gcc -I jdk/include -I jdk/include/linux -o InvocationTest -L jdk/jre/lib/i386/client -ljvm InvocationTest
@@ -27695,16 +29490,18 @@ cl -D_WINDOWS -I jdk\include -I jdk\include\win32 jdk\lib\jvm.lib advapi32.lib
 gcc -DWINDOWS -mno-cygwin -I jdk/include -I jdk/include -I c:\cygwin\usr\w32api -o InvocationTest
 ```
 
-在 Linux/UNIX 下下运行程序之前，请确保 `LD_LIBRARY_PATH` 包含共享库的目录。例如，如果你在 Linux 上使用 bash shell，请执行以下命令：
+在 Linux/UNIX 下运行程序之前，请确保 `LD_LIBRARY_PATH` 包含共享库的目录。例如，如果你在 Linux 上使用 bash shell，请执行以下命令：
 
 ```bash
 export LD_LIBRARY_PATH=jdk/jre/lib/i386/client:$LD_LIBRARY_PATH
 ```
 
+
+
 # Invocation API Functions
 
-- jint JNI_CreateJavaVM(JVM** p_jvm, void** p_env, JVMInitArgs* vm_args) 初始化 Java 虚拟机。如果成功则返回 0，失败返回 JNI_ERR。`p_jvm` 参数被填充为指向调用 API 函数句表的指针，而 `p_env` 被填充为指向 JNI 函数表的指针。
-- jint DestroyJavaVM(JavaVM* jvm) 销毁虚拟机。成功返回 0，失败返回负数。此函数必须通过虚拟机指针调用，即 `(*jvm)->DestroyJavaVM(jvm)`。
+- `jint JNI_CreateJavaVM(JVM** p_jvm, void** p_env, JVMInitArgs* vm_args)`：初始化 Java 虚拟机。如果成功则返回 `0`，失败返回 `JNI_ERR`。`p_jvm` 参数被填充为指向调用 API 函数表的指针，而 `p_env` 被填充为指向 JNI 函数表的指针。
+- `jint DestroyJavaVM(JavaVM* jvm)`：销毁虚拟机。成功返回 `0`，失败返回负数。此函数必须通过虚拟机指针调用，即 `(*jvm)->DestroyJavaVM(jvm)`。
 
 # 1.10. 完整示例：访问 Windows 注册表
 
@@ -27746,9 +29543,7 @@ Windows 注册表是一个数据存储库，存储了 Windows 操作系统和应
 
 Windows 注册表是一个数据存储库，存储了 Windows 操作系统和应用程序的配置信息。它为系统偏好的管理和备份提供了单一点。Windows 注册表也是配置和运行应用程序的单一点。
 
-Windows 注册表是一个数据存储库，存储了 Windows 操作系统和应用程序的配置信息。它为系统偏好的管理和备份提供了单一点。Windows 注册表也是配置和运行应用程序的单一点。
-
-检查注册表的工具是注册编辑器。由于可能出现错误，你不应该使用注册表来存储数据。（查看 regedit）。它为系统偏好的管理和备份提供了单一点。Windows 注册表
+检查注册表的工具是注册编辑器。由于可能出现错误，你不应该使用注册表来存储数据。（查看 `regedit`）。它为系统偏好的管理和备份提供了单一点。Windows 注册表
 
 检查注册表的工具是注册编辑器。由于可能出现错误，你不应该使用注册表来存储数据。
 
@@ -27784,76 +29579,72 @@ Windows 注册表是一个数据存储库，存储了 Windows 操作系统和应
 
 检查注册表的工具是注册编辑器。由于可能出现错误，你不应该使用注册表来存储数据。
 
-检查注册表的工具是注册编辑器。由于可能出现错误，你不应该使用注册表来存储数据。
-
 ## 1.10.2. 完整示例：访问 Windows 注册表
 
 我们需要实现三个操作：
+
 - 获取名称的值
 - 设置名称的值
 - 遍历所有名称
 
 ## 1.10.3. 以原生方法实现注册表函数
 
-
-
-
 通过查询值对象的类，找到 `java.lang.String`、`java.lang.Integer` 和 `byte[]` 的类引用，并将它们与 `IsAssignableFrom` 函数进行比较。
 
-如果 `class1` 和 `class2` 是两个类引用，那么调用
+如果 `class1` 和 `class2` 是两个类引用，那么调用：
 
-```
+```c
 (env*)->IsAssignableFrom(env, class1, class2)
 ```
 
-当 `class1` 和 `class2` 是同一个类，或者 `class1` 是 `class2` 的子类时，返回 `JNI_TRUE`。在任何情况下，`class1` 类对象的引用都可以转换为 `class2`。例如，当
+当 `class1` 和 `class2` 是同一个类，或者 `class1` 是 `class2` 的子类时，返回 `JNI_TRUE`。在任何情况下，`class1` 类对象的引用都可以转换为 `class2`。例如，当：
 
-```
+```c
 (env*)->IsAssignableFrom(env, (*env*))->GetObjectClass
-(*env*)->FindClass(env, "[B]")
+(*env)->FindClass(env, "[B]")
 ```
 
-真时，我们知道该值是一个字节数组。
+为真时，我们知道该值是一个字节数组。
 
 以下是 `setValue` 方法的步骤概述：
 
-- 1. 打开写入注册表键。
-- 2. 找到要写入的 `valueUTF` 的类型。
-- 3. 如果类型是 `String`，调用 `GetStringUTFChars` 获取字符指针。
-- 4. 如果类型是 `Integer`，调用 `intValue` 方法获取包装对象中存储的整数。
-- 5. 如果类型是 `byte[]`，调用 `GetByteArrayElements` 获取字节指针。
-- 6. 将数据和长度传递给注册表。
-- 7. 关闭键。
-- 8. 如果类型是 `String` 或 `byte[]`，释放数据指针。
+1. 打开写入注册表键。
+2. 找到要写入的 `valueUTF` 的类型。
+3. 如果类型是 `String`，调用 `GetStringUTFChars` 获取字符指针。
+4. 如果类型是 `Integer`，调用 `intValue` 方法获取包装对象中存储的整数。
+5. 如果类型是 `byte[]`，调用 `GetByteArrayElements` 获取字节指针。
+6. 将数据和长度传递给注册表。
+7. 关闭键。
+8. 如果类型是 `String` 或 `byte[]`，释放数据指针。
 
 最后，让我们转向枚举键的本地方法。这些方法属于 `Win32RegNameEnumeration` 类（参见列表 13.21）。当枚举过程开始时，我们必须打开该键。在整个枚举期间，我们必须保留键句柄——也就是说，键句柄必须存储在枚举对象中。键句柄的类型为 `DWORD`（一个 32 位数值），因此它可以存储在 Java 整数中。我们将其存储在枚举类的 `hkey` 字段中。当枚举开始时，使用 `SetIntField` 初始化该字段。随后的调用使用 `GetIntField` 读取该值。
 
-在这个示例中，我们与枚举对象一起存储了三个数据数据。当枚举首次启动时，我们查询注册表以名称/值对的数量以及最长名称的长度，我们需要这些信息，以便分配 C 字符数组来存放名称。这些值被存储在枚举对象的 `count` 和 `maxsize` 字段中。最后，`index` 字段初始化为 -1 以表示枚举开始，一旦其他实例字段初始化完成，它被设置为 0，并在每个枚举步骤后递增。
+在这个示例中，我们与枚举对象一起存储了三个数据数据。当枚举首次启动时，我们查询注册表以名称/值对的数量以及最长名称的长度，我们需要这些信息，以便分配 C 字符数组来存放名称。这些值被存储在枚举对象的 `count` 和 `maxsize` 字段中。最后，`index` 字段初始化为 `-1` 以表示枚举开始，一旦其他实例字段初始化完成，它被设置为 `0`，并在每个枚举步骤后递增。
 
 让我们遍历支持枚举的本地方法。`hasMoreElements` 方法非常简单：
 
-- 1. 获取 `index` 和 `count` 字段。
-- 2. 如果 `index` 为 -1，调用 `startNameEnumeration` 函数，该函数打开键、查询数量和最大长度，并初始化 `hkey`、`count`、`maxsize` 和 `index` 字段。
-- 3. 如果 `index` 小于 `count`，返回 `JNI_TRUE`，否则返回 `JNI_FALSE`。
+1. 获取 `index` 和 `count` 字段。
+2. 如果 `index` 为 `-1`，调用 `startNameEnumeration` 函数，该函数打开键、查询数量和最大长度，并初始化 `hkey`、`count`、`maxsize` 和 `index` 字段。
+3. 如果 `index` 小于 `count`，返回 `JNI_TRUE`，否则返回 `JNI_FALSE`。
 
 `nextElement` 方法需要承担更多的工作：
 
-- 1. 获取 `index` 和 `count` 字段。
-- 2. 如果 `index` 为 -1，调用 `startNameEnumeration` 函数，该函数打开键、查询数量和最大长度，并初始化 `hkey`、`count`、`maxsize` 和 `index` 字段。
-- 3. 如果 `index` 等于 `count`，抛出 `NoSuchElementException`。
-- 4. 从注册表读取下一个名称。
-- 5. 递增 `index`。
-- 6. 如果 `index` 等于 `count`，关闭键。
+1. 获取 `index` 和 `count` 字段。
+2. 如果 `index` 为 `-1`，调用 `startNameEnumeration` 函数，该函数打开键、查询数量和最大长度，并初始化 `hkey`、`count`、`maxsize` 和 `index` 字段。
+3. 如果 `index` 等于 `count`，抛出 `NoSuchElementException`。
+4. 从注册表读取下一个名称。
+5. 递增 `index`。
+6. 如果 `index` 等于 `count`，关闭键。
 
 在编译之前，记得对 `Win32RegKey` 和 `Win32RegNameEnumeration` 运行 `javac -h`。微软编译器的完整命令行为：
 
-```
+```bat
 cl -I jdk\include -I jdk\include\win32 -LD Win32Re
 ```
 
 使用 Cygwin 时，使用：
 
-```
+```bash
 gcc -mno-cygwin -D __int64="long long" -I jdk\inc.
 -I c:\cywin\usr\include\w32api -shared -w1,
 Win32RegKey.c
@@ -27863,13 +29654,13 @@ Win32RegKey.c
 
 列表 13.23 显示了一个测试我们新注册表函数的程序。我们在键中添加三个名称/值对：一个字符串、一个整数和一个字节数组：
 
-```
+```text
 HKEY_CURRENT_USER\Software\JavaSoft\Java Runtime
 ```
 
 然后我们枚举该键的所有名称并检索它们的值。程序将打印：
 
-```
+```text
 Default user=Harry Hacker
 Lucky number=13
 Small primes=2 3 5 7 11 13
@@ -27877,7 +29668,7 @@ Small primes=2 3 5 7 11 13
 
 虽然向该键添加这些名称/值对可能没有害，但你可能想在运行此程序后使用注册表编辑器删除它们。
 
-# 列表 1.21 win32reg/Win32RegKey.java
+# 列表 1.21 `win32reg/Win32RegKey.java`
 
 ```java
 import java.util.*;
@@ -27887,289 +29678,484 @@ import java.util.*;
  * @version 1.00 1997-07-01
  * @author Cay Horstmann
  */
+
 public class Win32RegKey {
+
     public static final int HKEY_CLASSES_ROOT
+
     public static final int HKEY_CURRENT_USER
+
     public static final int HKEY_LOCAL_MACHINE
+
     public static final int HKEY_USERS = 0x
+
     public static final int HKEY_CURRENT_CONFIG
+
     public static final int HKEY_DYN_DATA =
 
     private int root;
+
     private String path;
 
     /**
      * 获取注册表项的值。
      */
+
     public Object getValue(String name);
 
     /**
      * 设置注册表项的值。
      */
+
     public void setValue(String name, Object value);
 
     /**
      * 枚举注册表键的所有名称。
      */
+
     public Iterable<String> names();
+
 }
 ```
-
 
 ```c
 (*env)->ThrowNew(env, (*env)->FindClass
 "Unsupported value type");
+
 ret = NULL;
+
 }
+
 free(cret);
+
 RegCloseKey(hkey);
+
 (*env)->ReleaseStringUTFChars(env, name);
+
 return ret;
 
 }
 
 JNIEXPORT void JNICALL Java_Win32RegKey_setString(jstring name, object value)
 {
+
     const char* cname;
+
     string path;
+
     const char* cpath;
+
     HKEY hkey;
+
     DWORD type;
+
     DWORD size;
+
     jclass this_class;
+
     jclass class_value;
+
     jclass class_Integer;
+
     jfieldID id_root; jfieldID id_path;
+
     HKEY root;
+
     const char* cvalue;
 
     int ival;
 
     /* 获取类 */
+
     this_class = (*env)->GetObjectClass(env, this_class);
 
     /* 获取字段 ID */
+
     id_root = (*env)->GetFieldID(env, this_class, "root", "J");
+
     id_path = (*env)->GetFieldID(env, this_class, "path", "Ljava/lang/String;");
 
     /* 获取字段 */
+
     root = (HKEY)(*env)->GetIntField(env, this_class, "root");
+
     path = (jstring)(*env)->GetObjectField(env, this_class, "path");
+
     cpath = (*env)->GetStringUTFChars(env, path);
 
     /* 打开注册表项 */
+
     if (RegOpenKeyEx(root, cpath, 0, KEY_WRITE_ACCESS, &hkey) != ERROR_SUCCESS) {
+
         (*env)->ThrowNew(env, (*env)->FindClass(env, "java/lang/RuntimeException"),
         "打开键失败");
+
         (*env)->ReleaseStringUTFChars(env, path);
+
         return;
+
     }
 
     (*env)->ReleaseStringUTFChars(env, path);
+
     cname = (*env)->GetStringUTFChars(env, name);
 
     class_value = (*env)->GetObjectClass(env, value);
+
     class_Integer = (*env)->FindClass(env, "java/lang/Integer");
 
     /* 确定值对象的类型 */
+
     if ((*env)->IsAssignableFrom(env, class_value, class_String)) {
+
         /* 这是一个字符串--获取它的指针 */
+
         cvalue = (*env)->GetStringUTFChars(env, (jstring)value);
+
         type = REG_SZ;
-        size = (*env)->GetStringLength(env, (jstring)value);
-    } else if ((*env)->IsAssignableFrom(env, class_value, class_Integer)) {
-        /* 这是一个整数--调用 intValue 获取其值 */
-        jmethodID id_intValue = (*env)->GetMethodID(env, class_Integer, "intValue", "()I");
-        ivalue = (*env)->CallIntMethod(env, value, id_intValue);
-        type = REG_DWORD;
-        cvalue = (char*)&ivalue;
-        size = 4;
-    } else if ((*env)->IsAssignableFrom(env, class_value, class_ByteArray)) {
-        /* 这是一个字节数组--获取它的指针 */
-        type = REG_BINARY;
-        cvalue = (char*)(*env)->GetByteArrayElements(env, (jbyteArray)value, NULL);
-        size = (*env)->GetArrayLength(env, (jbyte)value);
-    } else {
-        /* 我们不知道如何处理这种类型 */
-        (*env)->ThrowNew(env, (*env)->FindClass(env, "java/lang/RuntimeException"),
-        "不支持的值类型");
-        RegCloseKey(hkey);
-        (*env)->ReleaseStringUTFChars(env, name);
-        return;
-    }
+```
 
-    /* 设置值 */
-    if (RegSetValueEx(hkey, cname, 0, type, (const BYTE*)cvalue, size) != ERROR_SUCCESS) {
-        (*env)->ThrowNew(env, (*env)->FindClass(env, "java/lang/RuntimeException"),
-        "设置值失败");
-    }
-    RegCloseKey(hkey);
-    (*env)->ReleaseStringUTFChars(env, name);
 
-    /* 如果该值是字符串或字节数组 */
-    if (type == REG_SZ) {
-        (*env)->ReleaseStringUTFChars(env, (jstring)value);
-    } else if (type == REG_BINARY) {
-        (*env)->ReleaseByteArrayElements(env, (jbyteArray)value, NULL);
-    }
+
+```c
+size = (*env)->GetStringLength(env, (jstring)value);
+
+} else if ((*env)->IsAssignableFrom(env, class_value, class_Integer)) {
+
+/* 这是一个整数--调用 intValue 获取其值 */
+
+jmethodID id_intValue = (*env)->GetMethodID(env, class_Integer, "intValue", "()I");
+
+ivalue = (*env)->CallIntMethod(env, value, id_intValue);
+
+type = REG_DWORD;
+
+cvalue = (char*)&ivalue;
+
+size = 4;
+
+} else if ((*env)->IsAssignableFrom(env, class_value, class_ByteArray)) {
+
+/* 这是一个字节数组--获取它的指针 */
+
+type = REG_BINARY;
+
+cvalue = (char*)(*env)->GetByteArrayElements(env, (jbyteArray)value, NULL);
+
+size = (*env)->GetArrayLength(env, (jbyte)value);
+
+} else {
+
+/* 我们不知道如何处理这种类型 */
+
+(*env)->ThrowNew(env, (*env)->FindClass(env, "java/lang/RuntimeException"),
+
+"不支持的值类型");
+
+RegCloseKey(hkey);
+
+(*env)->ReleaseStringUTFChars(env, name);
+
+return;
+
+}
+
+/* 设置值 */
+
+if (RegSetValueEx(hkey, cname, 0, type, (const BYTE*)cvalue, size) != ERROR_SUCCESS) {
+
+(*env)->ThrowNew(env, (*env)->FindClass(env, "java/lang/RuntimeException"),
+
+"设置值失败");
+
+}
+
+RegCloseKey(hkey);
+
+(*env)->ReleaseStringUTFChars(env, name);
+
+/* 如果该值是字符串或字节数组 */
+
+if (type == REG_SZ) {
+
+(*env)->ReleaseStringUTFChars(env, (jstring)value);
+
+} else if (type == REG_BINARY) {
+
+(*env)->ReleaseByteArrayElements(env, (jbyteArray)value, NULL);
+
+}
+
 }
 
 /* 用于开始名称枚举的辅助函数 */
+
 static int startNameEnumeration(JNIEnv* env, jobject this_obj) {
-    jfieldID id_index;
-    jfieldID id_count;
-    jfieldID id_root;
-    jfieldID id_path;
-    jfieldID id_hkey;
-    jfieldID id_maxsize;
 
-    HKEY root;
-    jstring path;
-    const char* cpath;
-    HKEY hkey;
-    DWORD maxsize = 0;
-    DWORD count = 0;
+jfieldID id_index;
 
-    /* 获取字段 ID */
-    id_root = (*env)->GetFieldID(env, this_class, "root", "J");
-    id_path = (*env)->GetFieldID(env, this_class, "path", "Ljava/lang/String;");
-    id_hkey = (*env)->GetFieldID(env, this_class, "hkey", "J");
-    id_maxsize = (*env)->GetFieldID(env, this_class, "maxsize", "J");
-    id_index = (*env)->GetFieldID(env, this_class, "index", "J");
-    id_count = (*env)->GetFieldID(env, this_class, "count", "J");
+jfieldID id_count;
 
-    /* 获取字段值 */
-    root = (HKEY)(*env)->GetIntField(env, this_class, "root");
-    path = (jstring)(*env)->GetObjectField(env, this_class, "path");
-    cpath = (*env)->GetStringUTFChars(env, path);
+jfieldID id_root;
 
-    /* 打开注册表项 */
-    if (RegOpenKeyEx(root, cpath, 0, KEY_ENUM_ACCESS, &hkey) != ERROR_SUCCESS) {
-        (*env)->ThrowNew(env, (*env)->FindClass(env, "java/lang/RuntimeException"),
-        "打开键失败");
-        (*env)->ReleaseStringUTFChars(env, path);
-        return -1;
-    }
-    (*env)->ReleaseStringUTFChars(env, path);
+jfieldID id_path;
 
-    /* 查询名称的数量和最大长度 */
-    if (RegQueryInfoKey(hkey, NULL, NULL, &count, &maxsize) != ERROR_SUCCESS) {
-        (*env)->ThrowNew(env, (*env)->FindClass(env, "java/lang/RuntimeException"),
-        "查询键信息失败");
-        RegCloseKey(hkey);
-        return -1;
-    }
-    /* 设置字段值 */
-    (*env)->setIntField(env, this_obj, id_hkey, (jint)hkey);
-    (*env)->setIntField(env, this_obj, id_maxsize, maxsize);
-    // ... 为了简便省略了重构逻辑
-    (*env)->setIntField(env, this_obj, id_count, count);
-    return count;
+jfieldID id_hkey;
+
+jfieldID id_maxsize;
+
+HKEY root;
+
+jstring path;
+
+const char* cpath;
+
+HKEY hkey;
+
+DWORD maxsize = 0;
+
+DWORD count = 0;
+
+/* 获取字段 ID */
+
+id_root = (*env)->GetFieldID(env, this_class, "root", "J");
+
+id_path = (*env)->GetFieldID(env, this_class, "path", "Ljava/lang/String;");
+
+id_hkey = (*env)->GetFieldID(env, this_class, "hkey", "J");
+
+id_maxsize = (*env)->GetFieldID(env, this_class, "maxsize", "J");
+
+id_index = (*env)->GetFieldID(env, this_class, "index", "J");
+
+id_count = (*env)->GetFieldID(env, this_class, "count", "J");
+
+/* 获取字段值 */
+
+root = (HKEY)(*env)->GetIntField(env, this_class, "root");
+
+path = (jstring)(*env)->GetObjectField(env, this_class, "path");
+
+cpath = (*env)->GetStringUTFChars(env, path);
+
+/* 打开注册表项 */
+
+if (RegOpenKeyEx(root, cpath, 0, KEY_ENUM_ACCESS, &hkey) != ERROR_SUCCESS) {
+
+(*env)->ThrowNew(env, (*env)->FindClass(env, "java/lang/RuntimeException"),
+
+"打开键失败");
+
+(*env)->ReleaseStringUTFChars(env, path);
+
+return -1;
+
+}
+
+(*env)->ReleaseStringUTFChars(env, path);
+
+/* 查询名称的数量和最大长度 */
+
+if (RegQueryInfoKey(hkey, NULL, NULL, &count, &maxsize) != ERROR_SUCCESS) {
+
+(*env)->ThrowNew(env, (*env)->FindClass(env, "java/lang/RuntimeException"),
+
+"查询键信息失败");
+
+RegCloseKey(hkey);
+
+return -1;
+
+}
+
+/* 设置字段值 */
+
+(*env)->setIntField(env, this_obj, id_hkey, (jint)hkey);
+
+(*env)->setIntField(env, this_obj, id_maxsize, maxsize);
+
+// ... 为了简便省略了重构逻辑
+
+(*env)->setIntField(env, this_obj, id_count, count);
+
+return count;
+
 }
 
 JNIEXPORT jboolean Java_Win32RegKey_hasNext(jobject this_obj) {
-    jclass this_class = (*env)->GetObjectClass(env, this_obj);
-    jfieldID id_index;
-    jfieldID id_count;
-    int index;
-    int count;
 
-    // ... (获取字段值)
-    index = (*env)->GetIntField(env, this_obj, id_index);
-    if (index == -1) /* 第一次调用 */
-        count = startNameEnumeration(env, this_obj);
-        index = 0;
-    } else
-        count = (*env)->GetIntField(env, this_obj, id_count);
-    return index < count;
+jclass this_class = (*env)->GetObjectClass(env, this_obj);
+
+jfieldID id_index;
+
+jfieldID id_count;
+
+int index;
+
+int count;
+
+// ... (获取字段值)
+
+index = (*env)->GetIntField(env, this_obj, id_index);
+
+if (index == -1) /* 第一次调用 */
+
+count = startNameEnumeration(env, this_obj);
+
+index = 0;
+
+} else
+
+count = (*env)->GetIntField(env, this_obj, id_count);
+
+return index < count;
+
 }
 
 JNIEXPORT object Java_Win32RegKey_next(jobject this_obj) {
-    jclass this_class = (*env)->GetObjectClass(env, this_obj);
-    jfieldID id_index;
-    jfieldID id_hkey;
-    jfieldID id_count;
-    jfieldID id_maxsize;
 
-    HKEY hkey;
-    int index;
-    int count;
-    DWORD maxsize;
+jclass this_class = (*env)->GetObjectClass(env, this_obj);
 
-    char* cret;
-    jstring ret;
+jfieldID id_index;
 
-    // ... (获取字段值)
-    index = (*env)->GetIntField(env, this_obj, id_index);
-    if (index == -1) /* 第一次调用 */
-        count = startNameEnumeration(env, this_obj);
-        index = 0;
-    } else
-        count = (*env)->GetIntField(env, this_obj, id_count);
+jfieldID id_hkey;
 
-    if (index >= count) /* 已到末尾 */
-        (*env)->ThrowNew(env, (*env)->FindClass(env, "java/lang/RuntimeException"),
-        "超出枚举范围");
-        return NULL;
-    }
-    maxsize = (*env)->GetIntField(env, this_obj, id_maxsize);
-    hkey = (HKEY)(*env)->GetIntField(env, this_obj, id_hkey);
-    cret = (char*)malloc(maxsize);
+jfieldID id_count;
 
-    /* 查找下一个名称 */
-    if (RegEnumValue(hkey, index, cret, &maxsize) != ERROR_SUCCESS) {
-        (*env)->ThrowNew(env, (*env)->FindClass(env, "java/lang/RuntimeException"),
-        "枚举失败");
-        free(cret);
-        RegCloseKey(hkey);
-        (*env)->setIntField(env, this_obj, id_index, -1);
-        return NULL;
-    }
+jfieldID id_maxsize;
 
-    ret = (*env)->NewStringUTF(env, cret);
-    free(cret);
-    /* 增加索引 */
-    index++;
-    (*env)->setIntField(env, this_obj, id_index, index);
-    if (index == count) /* 到末尾 */ {
-        RegCloseKey(hkey);
-    }
-    return ret;
+HKEY hkey;
+
+int index;
+
+int count;
+
+DWORD maxsize;
+
+char* cret;
+
+jstring ret;
+
+// ... (获取字段值)
+
+index = (*env)->GetIntField(env, this_obj, id_index);
+
+if (index == -1) /* 第一次调用 */
+
+count = startNameEnumeration(env, this_obj);
+
+index = 0;
+
+} else
+
+count = (*env)->GetIntField(env, this_obj, id_count);
+
+if (index >= count) /* 已到末尾 */
+
+(*env)->ThrowNew(env, (*env)->FindClass(env, "java/lang/RuntimeException"),
+
+"超出枚举范围");
+
+return NULL;
+
+}
+
+maxsize = (*env)->GetIntField(env, this_obj, id_maxsize);
+
+hkey = (HKEY)(*env)->GetIntField(env, this_obj, id_hkey);
+
+cret = (char*)malloc(maxsize);
+
+/* 查找下一个名称 */
+
+if (RegEnumValue(hkey, index, cret, &maxsize) != ERROR_SUCCESS) {
+
+(*env)->ThrowNew(env, (*env)->FindClass(env, "java/lang/RuntimeException"),
+
+"枚举失败");
+
+free(cret);
+
+RegCloseKey(hkey);
+
+(*env)->setIntField(env, this_obj, id_index, -1);
+
+return NULL;
+
+}
+
+ret = (*env)->NewStringUTF(env, cret);
+
+free(cret);
+
+/* 增加索引 */
+
+index++;
+
+(*env)->setIntField(env, this_obj, id_index, index);
+
+if (index == count) /* 到末尾 */ {
+
+RegCloseKey(hkey);
+
+}
+
+return ret;
+
 }
 ```
 
-# 列表 1.23 win32reg/Win32RegTest.java
+## 列表 1.23 `win32reg/Win32RegTest.java`
 
 ```java
 import java.util.*;
+
 /**
  * @version 1.04 2021-05-30
  * @author Cay Horstmann
  */
+
 public class Win32RegTest {
+
     public static void main(String[] args) {
+
         var key = new Win32RegKey(Win32RegKey.HKEY_CURRENT_USER, "Software");
+
         key.setString("Default user", "Harry H");
+
         key.setValue("Lucky number", 42);
+
         key.setValue("Small primes", new byte[]{2, 3, 5, 7, 11});
+
         Enumeration<String> e = key.names();
+
         while (e.hasElements()) {
+
             String name = e.nextElement();
+
             System.out.print(name + "=");
+
             Object value = key.getValue(name);
+
             if (value instanceof byte[] bytes) {
+
                 for (byte b : bytes) System.out.print(b + " ");
+
             } else
+
                 System.out.print(value);
+
             }
+
             System.out.println();
+
         }
+
     }
+
 }
+
 ```
-
-
-
 
 该程序仅调用了 `printf` 函数。不需要额外的 C 代码。该函数通过 Java `MethodHandle` 被调用，而这通常用于调用 Java 函数。
 
@@ -28177,19 +30163,19 @@ public class Win32RegTest {
 
 该 API 提供了相关方法，可以将 Java 对象转换为内存块，并将这些内存块传递给 C 函数。在演示中，你需要提供一个包含 Java String 字符的 `char*`。
 
-内存在 `Arena` 中分配，以便管理其释放过程。在这里，我们使用了一个受限的（confined） arena。它是可关闭的，`close` 方法会释放所有分配的内存。
+内存在 `Arena` 中分配，以便管理其释放过程。在这里，我们使用了一个受限的（confined）`arena`。它是可关闭的，`close` 方法会释放所有分配的内存。
 
 如你所见，这个 API 比 JNI 简单且方便得多。这个演示仅触了该 API 的冰一角。有许多方法用于读取、写入和管理内存块。你还可以将 Java 函数作为回调传递给 C 函数。
 
 编译演示程序，请使用以下选项：
 
-```
+```bash
 javac --enable-preview --source 21 panama/Panama
 ```
 
 由于外部函数和内存 API 提供了对未托管内存的访问，因此它本质上是不安全的。你使用运行时标志来允许模块使用该 API。通常，人们会将 Java API 与 C 库之间的桥接代码放在单独的模块中。但在演示中，原生访问发生在未命名模块中。以下是运行它的命令：
 
-```
+```bash
 java --enable-preview --enable-native-access=ALL
 ```
 
@@ -28197,16 +30183,21 @@ java --enable-preview --enable-native-access=ALL
 
 目前，你仍然需要使用 JNI 作为与原生代码互操作的稳定 API。随着外部函数和内存 API 的成熟，它将为 JNI 提供更优的替代方案。
 
-# 列表 1.24 panama/PanamaDemo.java
+## 列表 1.24 `panama/PanamaDemo.java`
 
 ```java
 1 package panama;
+
 2
+
 3 import java.lang.invoke.*;
+
 4 import java.lang.foreign.*;
+
 5
+
 6 /*
-```
+
 7  javac --enable-preview --source 21 panama/F
 8  java --enable-preview --enable-native-access
 9

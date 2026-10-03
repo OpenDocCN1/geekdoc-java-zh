@@ -1,3 +1,4 @@
+
 # 环境变量
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/environment/env.html`](https://docs.oracle.com/javase/tutorial/essential/environment/env.html)
@@ -6,10 +7,9 @@
 
 ## 查询环境变量
 
-在 Java 平台上，应用程序使用[`System.getenv`](https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#getenv--)来检索环境变量的值。没有参数时，`getenv`返回一个只读的`java.util.Map`实例，其中映射键是环境变量名称，映射值是环境变量值。这在``EnvMap``示例中有所展示：
+在 Java 平台上，应用程序使用[`System.getenv`](https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#getenv--)来检索环境变量的值。没有参数时，`getenv`返回一个只读的`java.util.Map`实例，其中映射键是环境变量名称，映射值是环境变量值。这在`EnvMap`示例中有所展示：
 
 ```java
-
 import java.util.Map;
 
 public class EnvMap {
@@ -22,13 +22,11 @@ public class EnvMap {
         }
     }
 }
-
 ```
 
-使用`String`参数，`getenv`返回指定变量的值。如果未定义变量，则`getenv`返回`null`。``Env``示例以这种方式使用`getenv`来查询在命令行上指定的特定环境变量：
+使用`String`参数，`getenv`返回指定变量的值。如果未定义变量，则`getenv`返回`null`。`Env`示例以这种方式使用`getenv`来查询在命令行上指定的特定环境变量：
 
 ```java
-
 public class Env {
     public static void main (String[] args) {
         for (String env: args) {
@@ -43,7 +41,6 @@ public class Env {
         }
     }
 }
-
 ```
 
 ## 将环境变量传递给新进程

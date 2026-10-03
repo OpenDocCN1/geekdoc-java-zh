@@ -1,3 +1,4 @@
+
 # 2023 年给初学者和有经验的网站开发者的 5 门最佳 WordPress 课程
 
 > 原文：<https://medium.com/javarevisited/5-best-wordpress-courses-for-beginners-and-experienced-website-developers-b45f7976ee40?source=collection_archive---------0----------------------->
@@ -30,10 +31,10 @@ WordPress 是创建网站最简单的方法之一。它也是网页设计者和�
 
 在教程中，您将学习以下技能:
 
-*   在你的电脑上配置并安装 WordPress，以便在本地使用网站。
-*   理解 WordPress 的主要特点
-*   创建自定义菜单、自定义帖子和页面
-*   知道如何配置一切来响应，看起来专业，并使网页免受网络攻击。
+- 在你的电脑上配置并安装 WordPress，以便在本地使用网站。
+- 理解 WordPress 的主要特点
+- 创建自定义菜单、自定义帖子和页面
+- 知道如何配置一切来响应，看起来专业，并使网页免受网络攻击。
 
 该课程的重点是有一个被动的，经常性收入的附属网站。它包括许多资源，有 8.5 小时的视频教程、14 篇文章和 29 个可供下载的资源。
 
@@ -47,8 +48,8 @@ WordPress 是创建网站最简单的方法之一。它也是网页设计者和�
 
 以下是您将在本课程中学到的关键技能:
 
-*   如何创建一个完全定制的网站？
-*   许多插件增加了网站的功能，使其达到非常专业的水平。
+- 如何创建一个完全定制的网站？
+- 许多插件增加了网站的功能，使其达到非常专业的水平。
 
 当然，你不需要了解任何关于 [HTML](https://www.java67.com/2020/08/5-best-online-courses-to-learn-html-5.html) 、 [CSS](/javarevisited/top-5-advanced-css-courses-to-learn-flexbox-grid-and-sass-da8e37b09b1d) 或者任何网络编程语言的知识来参加这个课程。教程的重点是在本地工作的网站，所以然后，你可以张贴到互联网上。它包含超过 7 小时的视频和 12 篇文章来补充信息。
 
@@ -62,8 +63,8 @@ WordPress 是创建网站最简单的方法之一。它也是网页设计者和�
 
 以下是您将在本课程中学到的关键技能:
 
-*   如何从头开始创建一个具有现代风格的网站
-*   如何掌握 Elementor 页面生成器？
+- 如何从头开始创建一个具有现代风格的网站
+- 如何掌握 Elementor 页面生成器？
 
 该课程很快就能完成，因为它只包含一个半小时的流媒体视频和两篇文章。就像学习 WordPress 的速成班。如果你想快速了解 WordPress，那么这个在线课程就是为你准备的。
 
@@ -75,9 +76,9 @@ WordPress 是创建网站最简单的方法之一。它也是网页设计者和�
 
 这是在 2 小时内从 Coursera 学习 WordPress 的最佳指导和基于项目的课程之一。由 Stacey Shanklin-Langford 创建的这个 Coursera 指导项目将教你如何使用 WordPress，这样你将能够:
 
-*   创建一个完整的、有吸引力的、用户友好的网站。
-*   学习如何通过使用 web 创建工具，利用主题和插件创建网站。
-*   拥有一个虚拟空间，向希望保持联系的客户展示您的业务。
+- 创建一个完整的、有吸引力的、用户友好的网站。
+- 学习如何通过使用 web 创建工具，利用主题和插件创建网站。
+- 拥有一个虚拟空间，向希望保持联系的客户展示您的业务。
 
 本课程结束时，您将能够向网页添加和组织小部件，如社交按钮等。课程时长只有 2 个小时的视频。
 
@@ -95,10 +96,10 @@ WordPress 是创建网站最简单的方法之一。它也是网页设计者和�
 
 设计、构建和发布一个包含文本、声音、图像、超链接、插件和社交媒体互动的基本网站。
 
-*   设置域名
-*   为你的页面创建一个吸引人的布局
-*   正确组织你的内容
-*   保护你的网站安全
+- 设置域名
+- 为你的页面创建一个吸引人的布局
+- 正确组织你的内容
+- 保护你的网站安全
 
 和列表上的其他课程一样，你不需要有网页设计的前期知识。感谢 Margaret Anne Schedel 博士和 Melissa Clarke 创建了这个精彩的课程。
 
@@ -108,33 +109,35 @@ WordPress 是创建网站最简单的方法之一。它也是网页设计者和�
 
 顺便说一句，如果你觉得 Coursera 课程有用，因为它们是由谷歌和 IB 等知名公司创建的，由世界各地的知名大学提供，我建议你加入 [**Coursera Plus**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus) ，这是 Coursera 的一个订阅计划，让你无限制地访问他们最受欢迎的课程、专业、专业证书和指导项目。它每年花费大约 399 美元，但它完全值得你的钱，因为你可以获得无限的证书。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
 以上是关于初学者和有经验的开发者学习 WordPress 的最佳在线课程。我们已经看到，WordPress 是一个非常强大的工具，可以在对编程或网页设计一无所知的情况下创建一个网站。这是对这个世界的一个很好的介绍，它允许我们免费创建任何类型的页面。如果你一直想创建一个网页，却不知道如何创建，或者从哪里开始，现在你可以开始创建你一直想要的东西了。选择你喜欢的课程，并开始创建你的精彩网页！
 
 其他**网页设计与开发文章**你可能喜欢
 
-*   [成为全栈式 Web 开发人员的 10 大在线课程](/@javinpaul/top-10-online-courses-to-become-a-fullstack-web-developer-in-2020-d608a6b63232)
-*   [Java 和 Web 开发人员应该学习的 10 个框架](http://javarevisited.blogspot.sg/2018/01/10-frameworks-java-and-web-developers-should-learn.html)
-*   [网站开发者学习 Angular 的 10 门免费课程](https://javarevisited.blogspot.com/2019/04/10-free-angular-and-react-courses-for.html)
-*   [2023 年前端开发者路线图](https://javarevisited.blogspot.com/2019/02/the-2019-web-developer-roadmap.html)
-*   [2023 年学习 JavaScript 的 12 门免费课程](/javarevisited/12-free-courses-to-learn-javascript-and-es6-for-beginners-and-experienced-developers-aa35874c9a32)
-*   [学习 Node.js 和 Express.js 框架的前 5 门课程](http://javarevisited.blogspot.sg/2018/01/top-5-nodejs-and-express-js-online-courses-for-web-developers.html)
-*   [10 JavaScript 教程 Web 开发者应该查看](https://javarevisited.blogspot.com/2018/06/top-10-courses-to-learn-javascript-in.html)
-*   [在线学习 React.js 的 5 大课程](https://javarevisited.blogspot.com/2018/08/top-5-react-js-and-redux-courses-to-learn-online.html)
-*   [2023 年学习 Web 开发的十大课程](https://dev.to/javinpaul/top-6-courses-to-learn-web-development-best-of-lot-2fae)
-*   [学习 Web 开发 TypeScript 的 10 门免费课程](/javarevisited/top-10-free-typescript-courses-to-learn-online-best-of-lot-44bce9da41d1)
-*   [每个 Fullstack 开发者都应该知道的 10 个框架](https://javarevisited.blogspot.com/2019/01/10-web-development-frameworks-fullstack-developer-should-learn.html)
-*   [2023 react . js 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
-*   [2023 年学习 Web 开发的五大课程](https://javarevisited.blogspot.com/2018/02/top-5-online-courses-to-learn-web-development.html)
-*   [2023 年 Java 开发者应该学会的 10 件事](https://javarevisited.blogspot.com/2017/12/10-things-java-programmers-should-learn.html#axzz5atl0BngO)
-*   [Web 开发的五大 Python 框架](https://javarevisited.blogspot.com/2019/04/top-5-python-web-development-frameworks.html)
-*   [面向开发者的 15 门最佳 JavaScript 在线课程](/javarevisited/10-best-online-courses-to-learn-javascript-in-2020-af5ed0801645)
-*   Web 开发人员的 10 门最佳 NodeJS 课程
-*   [成为全栈 Java 开发人员的 10 门免费课程](/javarevisited/10-free-full-stack-java-development-courses-for-beginners-and-experienced-programmers-8473390bec03?source=---------6------------------)
+
+
+* [成为全栈式 Web 开发人员的 10 大在线课程](/@javinpaul/top-10-online-courses-to-become-a-fullstack-web-developer-in-2020-d608a6b63232)
+* [Java 和 Web 开发人员应该学习的 10 个框架](http://javarevisited.blogspot.sg/2018/01/10-frameworks-java-and-web-developers-should-learn.html)
+* [网站开发者学习 Angular 的 10 门免费课程](https://javarevisited.blogspot.com/2019/04/10-free-angular-and-react-courses-for.html)
+* [2023 年前端开发者路线图](https://javarevisited.blogspot.com/2019/02/the-2019-web-developer-roadmap.html)
+* [2023 年学习 JavaScript 的 12 门免费课程](/javarevisited/12-free-courses-to-learn-javascript-and-es6-for-beginners-and-experienced-developers-aa35874c9a32)
+* [学习 Node.js 和 Express.js 框架的前 5 门课程](http://javarevisited.blogspot.sg/2018/01/top-5-nodejs-and-express-js-online-courses-for-web-developers.html)
+* [10 JavaScript 教程 Web 开发者应该查看](https://javarevisited.blogspot.com/2018/06/top-10-courses-to-learn-javascript-in.html)
+* [在线学习 React.js 的 5 大课程](https://javarevisited.blogspot.com/2018/08/top-5-react-js-and-redux-courses-to-learn-online.html)
+* [2023 年学习 Web 开发的十大课程](https://dev.to/javinpaul/top-6-courses-to-learn-web-development-best-of-lot-2fae)
+* [学习 Web 开发 TypeScript 的 10 门免费课程](/javarevisited/top-10-free-typescript-courses-to-learn-online-best-of-lot-44bce9da41d1)
+* [每个 Fullstack 开发者都应该知道的 10 个框架](https://javarevisited.blogspot.com/2019/01/10-web-development-frameworks-fullstack-developer-should-learn.html)
+* [2023 react . js 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
+* [2023 年学习 Web 开发的五大课程](https://javarevisited.blogspot.com/2018/02/top-5-online-courses-to-learn-web-development.html)
+* [2023 年 Java 开发者应该学会的 10 件事](https://javarevisited.blogspot.com/2017/12/10-things-java-programmers-should-learn.html#axzz5atl0BngO)
+* [Web 开发的五大 Python 框架](https://javarevisited.blogspot.com/2019/04/top-5-python-web-development-frameworks.html)
+* [面向开发者的 15 门最佳 JavaScript 在线课程](/javarevisited/10-best-online-courses-to-learn-javascript-in-2020-af5ed0801645)
+* Web 开发人员的 10 门最佳 NodeJS 课程
+* [成为全栈 Java 开发人员的 10 门免费课程](/javarevisited/10-free-full-stack-java-development-courses-for-beginners-and-experienced-programmers-8473390bec03?source=---------6------------------)
 
 感谢您阅读本文。如果你喜欢这些*最好的 WordPress 在线培训课程*，那么请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
 **p . s .**——如果你热衷于学习 WordPress 并寻找免费的在线培训课程，那么你也可以在 Udemy 上查看这个免费课程— [**如何使用 WordPress 创建一个网站(一步一步)**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fhow-to-create-a-website-using-wordpress-step-by-step%2F) 。这是掌握 WordPress 的一个很好的课程，而且完全免费。你只需要一个免费的 Udemy 帐户就可以参加这个课程。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fhow-to-create-a-website-using-wordpress-step-by-step%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fhow-to-create-a-website-using-wordpress-step-by-step%2F>

@@ -1,3 +1,4 @@
+
 # Java 插装——一个简单的 Java 工作示例
 
 > 原文：<https://medium.com/javarevisited/java-instrumentation-a-simple-working-example-in-java-a2c549024d9c?source=collection_archive---------0----------------------->
@@ -10,8 +11,8 @@
 
 在本文中，我们将探讨如何对 Java 程序进行测试。
 
-提供允许插装的服务的 Java 包是 java.lang.instrument。
+提供允许插装的服务的 Java 包是`java.lang.instrument`。
 
 ## 什么是仪器仪表？
 
-> 从文件中—“的机制…
+> 从文件中——“的机制…

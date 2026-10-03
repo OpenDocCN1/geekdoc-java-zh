@@ -1,3 +1,4 @@
+
 # 使用日志回溯屏蔽日志中的敏感数据
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/logback-mask-sensitive-data>
@@ -10,9 +11,9 @@
 
 ## 2.回溯
 
-[Logback](/web/20221208143830/https://www.baeldung.com/logback) 是 Java 社区中使用最广泛的日志框架之一。它是其前身 Log4j 的替代产品。它提供了比 Log4j 更快的实现，并且在归档旧日志文件时提供了更多的配置选项和更大的灵活性。
+`Logback`是 Java 社区中使用最广泛的日志框架之一。它是其前身 `Log4j` 的替代产品。它提供了比 `Log4j` 更快的实现，并且在归档旧日志文件时提供了更多的配置选项和更大的灵活性。
 
-敏感数据是任何旨在防止未经授权的访问的信息。这可能包括从个人身份信息(PII)到银行信息、登录凭证、地址、电子邮件等任何信息。
+敏感数据是任何旨在防止未经授权的访问的信息。这可能包括从个人身份信息(`PII`)到银行信息、登录凭证、地址、电子邮件等任何信息。
 
 在我们的应用程序中登录时，我们将屏蔽属于用户的敏感数据。
 
@@ -28,17 +29,17 @@
     "city":"Chicago",
     "Country":"U.S.",
     "ip_address":"192.168.1.1",
-    "email_id":"[[email protected]](/web/20221208143830/https://www.baeldung.com/cdn-cgi/l/email-protection)"
+    "email_id":"[[email protected]](/web/20221208143830/https://www.baeldung.com/cdn-cgi/l/email-protection)"
  }
 ```
 
 在这里，我们可以看到我们有敏感数据，如`ssn`、`address`、`ip_address`和`email_id`。因此，我们必须在记录时屏蔽这些数据。
 
-我们将通过为 Logback 生成的所有日志条目配置屏蔽规则来集中屏蔽日志。**为了做到这一点，我们必须实现一个自定义`ch.qos.logback.classic.PatternLayout`** 。
+我们将通过为 Logback 生成的所有日志条目配置屏蔽规则来集中屏蔽日志。**为了做到这一点，我们必须实现一个自定义`ch.qos.logback.classic.PatternLayout`**。
 
 ### 3.1.`PatternLayout`
 
-这个配置背后的想法是**用一个定制的布局**扩展我们需要的每一个 Logback appender。在我们的例子中，我们将编写一个`MaskingPatternLayout`类作为`PatternLayout.`的实现，每个掩码模式代表匹配一种类型的敏感数据的正则表达式。
+这个配置背后的想法是**用一个定制的布局**扩展我们需要的每一个 Logback appender。在我们的例子中，我们将编写一个`MaskingPatternLayout`类作为`PatternLayout`的实现。每个掩码模式代表匹配一种类型的敏感数据的正则表达式。
 
 让我们构建`MaskingPatternLayout` 类:
 
@@ -84,7 +85,7 @@ public class MaskingPatternLayout extends PatternLayout {
 
 一般来说，我们可以**使用正则表达式模式来屏蔽敏感的用户信息**。
 
-例如，对于 SSN，我们可以使用这样的正则表达式:
+例如，对于 `SSN`，我们可以使用这样的正则表达式:
 
 ```java
 \"SSN\"\s*:\s*\"(.*)\"
@@ -93,10 +94,10 @@ public class MaskingPatternLayout extends PatternLayout {
 对于地址，我们可以使用:
 
 ```java
-\"address\"\s*:\s*\"(.*?)\" 
+\"address\"\s*:\s*\"(.*?)\" 
 ```
 
-此外，对于 IP 地址数据模式(192.169.0.1)，我们可以使用正则表达式:
+此外，对于 IP 地址数据模式(`192.169.0.1`)，我们可以使用正则表达式:
 
 ```java
 (\d+\.\d+\.\d+\.\d+)
@@ -105,7 +106,7 @@ public class MaskingPatternLayout extends PatternLayout {
 最后，对于电子邮件，我们可以这样写:
 
 ```java
-(\[[email protected]](/web/20221208143830/https://www.baeldung.com/cdn-cgi/l/email-protection)\w+\.\w+)
+(\[[email protected]](/web/20221208143830/https://www.baeldung.com/cdn-cgi/l/email-protection)\w+\.\w+)
 ```
 
 现在，我们将把这些正则表达式模式添加到我们的`logback.xml`文件中的`maskPattern`标签中:
@@ -118,7 +119,7 @@ public class MaskingPatternLayout extends PatternLayout {
 	       <maskPattern>\"SSN\"\s*:\s*\"(.*?)\"</maskPattern> <!-- SSN JSON pattern -->
 	       <maskPattern>\"address\"\s*:\s*\"(.*?)\"</maskPattern> <!-- Address JSON pattern -->
 	       <maskPattern>(\d+\.\d+\.\d+\.\d+)</maskPattern> <!-- Ip address IPv4 pattern -->
-	       <maskPattern>(\[[email protected]](/web/20221208143830/https://www.baeldung.com/cdn-cgi/l/email-protection)\w+\.\w+)</maskPattern> <!-- Email pattern -->
+	       <maskPattern>(\[[email protected]](/web/20221208143830/https://www.baeldung.com/cdn-cgi/l/email-protection)\w+\.\w+)</maskPattern> <!-- Email pattern -->
 	       <pattern>%-5p [%d{ISO8601,UTC}] [%thread] %c: %m%n%rootException</pattern>
             </layout>
         </encoder>
@@ -138,7 +139,7 @@ user.put("address", "22 Street");
 user.put("city", "Chicago");
 user.put("Country", "U.S.");
 user.put("ip_address", "192.168.1.1");
-user.put("email_id", "[[email protected]](/web/20221208143830/https://www.baeldung.com/cdn-cgi/l/email-protection)");
+user.put("email_id", "[[email protected]](/web/20221208143830/https://www.baeldung.com/cdn-cgi/l/email-protection)");
 JSONObject userDetails = new JSONObject(user);
 
 logger.info("User JSON: {}", userDetails);
@@ -169,6 +170,6 @@ INFO  [2021-06-01 16:04:12,059] [main] com.baeldung.logback.MaskingPatternLayout
 
 ## 4.结论
 
-在本教程中，我们介绍了如何使用`PatternLayout `特性通过 Logback 屏蔽应用程序日志中的敏感数据。此外，我们看到了如何在`logback.xml`中添加正则表达式模式来屏蔽特定的数据。
+在本教程中，我们介绍了如何使用`PatternLayout` 特性通过 Logback 屏蔽应用程序日志中的敏感数据。此外，我们看到了如何在`logback.xml`中添加正则表达式模式来屏蔽特定的数据。
 
 像往常一样，代码片段可以在 GitHub 上找到[。](https://web.archive.org/web/20221208143830/https://github.com/eugenp/tutorials/tree/master/logging-modules/logback)

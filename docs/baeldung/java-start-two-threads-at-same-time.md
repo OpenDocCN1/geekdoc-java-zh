@@ -1,8 +1,9 @@
+
 # 在 Java 中同时启动两个线程
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-start-two-threads-at-same-time>
 
-## 1.概观
+## 1. 概观
 
 多线程编程允许我们并发运行线程，每个线程可以处理不同的任务。因此，它可以最大限度地利用资源，尤其是当我们的计算机拥有多个多核 CPU 时。
 
@@ -10,9 +11,9 @@
 
 在本教程中，我们将首先理解需求，尤其是“完全相同的时间”的含义。此外，我们将讨论如何在 Java 中同时启动两个线程。
 
-## 2.了解需求
+## 2. 了解需求
 
-我们的要求是:“同时启动两个线程。”
+我们的要求是：“同时启动两个线程。”
 
 这个要求看起来很容易理解。然而，如果我们仔细想想，甚至有可能在`EXACT`同时启动两个线程吗？
 
@@ -22,7 +23,7 @@
 
 这是因为当我们在 Java 中使用线程时，**Java 线程调度依赖于操作系统**的线程调度。因此，不同的操作系统可能会有不同的处理方式。
 
-此外，如果我们以更严格的方式讨论“完全相同的时间”，根据爱因斯坦的[狭义相对论](https://web.archive.org/web/20220526054156/https://en.wikipedia.org/wiki/Special_relativity "Special relativity"):
+此外，如果我们以更严格的方式讨论“完全相同的时间”，根据爱因斯坦的[狭义相对论](https://web.archive.org/web/20220526054156/https://en.wikipedia.org/wiki/Special_relativity "Special relativity")：
 
 > 如果两个截然不同的事件在空间上是分开的，就不可能绝对地说它们同时发生。
 
@@ -32,37 +33,37 @@
 
 不。这是一个有效的要求。即使我们不能让两个线程同时开始，我们也可以通过一些同步技术让它们非常接近。
 
-在大多数实际情况下，当我们需要两个线程“同时”启动时，这些技术可能会有所帮助
+在大多数实际情况下，当我们需要两个线程“同时”启动时，这些技术可能会有所帮助。
 
-在本教程中，我们将探索两种方法来解决这个问题:
+在本教程中，我们将探索三种方法来解决这个问题：
 
-*   使用`[CountDownLatch](/web/20220526054156/https://www.baeldung.com/java-countdown-latch)`类
-*   使用`[CyclicBarrier](/web/20220526054156/https://www.baeldung.com/java-cyclic-barrier)`类
-*   使用 [`Phaser`](/web/20220526054156/https://www.baeldung.com/java-phaser) 类
+- 使用`CountDownLatch`类
+- 使用`CyclicBarrier`类
+- 使用`Phaser`类
 
-所有的方法都遵循同样的想法:我们不会真的同时启动两个线程。相反，我们在线程启动后立即阻塞线程，并试图同时恢复它们的执行。
+所有的方法都遵循同样的想法：我们不会真的同时启动两个线程。相反，我们在线程启动后立即阻塞线程，并试图同时恢复它们的执行。
 
-因为我们的测试将与线程调度相关，所以在本教程中有必要提到运行测试的环境:
+因为我们的测试将与线程调度相关，所以在本教程中有必要提到运行测试的环境：
 
-*   CPU:英特尔酷睿 i7-8850H CPU。处理器时钟在 2.6 到 4.3 GHz 之间(4 个内核时为 4.3 GHz，6 个内核时为 4 GHz)
-*   操作系统:内核版本为 5.12.12 的 64 位 Linux
-*   Java: Java 11
+- CPU：英特尔酷睿 i7-8850H CPU。处理器时钟在 2.6 到 4.3 GHz 之间（4 个内核时为 4.3 GHz，6 个内核时为 4 GHz）
+- 操作系统：内核版本为 5.12.12 的 64 位 Linux
+- Java：Java 11
 
 现在，让我们来看看`CountDonwLatch`和`CyclicBarrier`的动作。
 
-## 3.使用`CountDownLatch`类
+## 3. 使用`CountDownLatch`类
 
-`CountDownLatch`是 Java 5 中引入的同步器，作为 `java.util.concurrent`包的一部分。通常，**我们使用一个`CountDownLatch`来阻塞线程，直到其他线程完成它们的任务。**
+`CountDownLatch`是 Java 5 中引入的同步器，作为`java.util.concurrent`包的一部分。通常，**我们使用一个`CountDownLatch`来阻塞线程，直到其他线程完成它们的任务。**
 
 简单地说，我们在一个`latch`对象中设置一个`count`，并将`latch`对象关联到一些线程。当我们启动这些线程时，它们将被阻塞，直到闩锁的计数变为零。
 
 另一方面，在其他线程中，我们可以控制在什么条件下减少`count`并让阻塞的线程恢复，例如，当主线程中的一些任务完成时。
 
-### 3.1.工作线程
+### 3.1. 工作线程
 
 现在，让我们看看如何使用`CountDownLatch`类来解决我们的问题。
 
-首先，我们将创建我们的`Thread`类。姑且称之为`WorkerWithCountDownLatch`:
+首先，我们将创建我们的`Thread`类。姑且称之为`WorkerWithCountDownLatch`：
 
 ```java
 public class WorkerWithCountDownLatch extends Thread {
@@ -85,19 +86,19 @@ public class WorkerWithCountDownLatch extends Thread {
     } 
 ```
 
-我们已经在我们的`WorkerWithCountDownLatch `类中添加了一个`latch`对象。首先，让我们了解一下`latch`对象的功能。
+我们已经在我们的`WorkerWithCountDownLatch`类中添加了一个`latch`对象。首先，让我们了解一下`latch`对象的功能。
 
-在`run()`方法中，我们称之为`latch.await(). `方法，这意味着，如果我们启动了`worker`线程，它将检查`latch's count. `线程将被阻塞，直到`count`为零。
+在`run()`方法中，我们称之为`latch.await()`方法，这意味着，如果我们启动了`worker`线程，它将检查`latch`的`count`。线程将被阻塞，直到`count`为零。
 
-这样，我们可以在主线程中用`count=1` 创建一个`CountDownLatch(1)`锁，并将`latch`对象关联到我们想要同时启动的两个工作线程。
+这样，我们可以在主线程中用`count=1`创建一个`CountDownLatch(1)`锁，并将`latch`对象关联到我们想要同时启动的两个工作线程。
 
 当我们希望两个线程继续做它们的实际工作时，我们通过调用主线程中的`latch.countDown()`来释放闩锁。
 
 接下来，让我们看看主线程是如何控制两个工作线程的。
 
-### 3.2.主线程
+### 3.2. 主线程
 
-我们将在`usingCountDownLatch()`方法中实现主线程:
+我们将在`usingCountDownLatch()`方法中实现主线程：
 
 ```java
 private static void usingCountDownLatch() throws InterruptedException {
@@ -122,7 +123,7 @@ private static void usingCountDownLatch() throws InterruptedException {
 } 
 ```
 
-现在，让我们从我们的`main()`方法调用上面的`usingCountDownLatch()`方法。当我们运行`main()`方法时，我们将看到输出:
+现在，让我们从我们的`main()`方法调用上面的`usingCountDownLatch()`方法。当我们运行`main()`方法时，我们将看到输出：
 
 ```java
 ===============================================
@@ -137,17 +138,17 @@ private static void usingCountDownLatch() throws InterruptedException {
 [ Worker with latch 1 ] starts at: 2021-06-27T16:00:52.268533787Z 
 ```
 
-如上面的输出所示，**两个工作线程同时启动`almost`。两个开始时间之间的差异小于两微秒**。
+如上面的输出所示，**两个工作线程同时启动`almost`。两个开始时间之间的差异小于两微秒。**
 
-## 4.使用`CyclicBarrier`类
+## 4. 使用`CyclicBarrier`类
 
-`CyclicBarrier`类是 Java 5 中引入的另一个同步器。本质上， **`CyclicBarrier`允许固定数量的线程在继续执行**之前等待彼此到达一个公共点。
+`CyclicBarrier`类是 Java 5 中引入的另一个同步器。本质上，**`CyclicBarrier`允许固定数量的线程在继续执行**之前等待彼此到达一个公共点。
 
 接下来，让我们看看如何使用`CyclicBarrier`类解决我们的问题。
 
-### 4.1.工作线程
+### 4.1. 工作线程
 
-让我们先来看看我们的 worker 线程的实现:
+让我们先来看看我们的 worker 线程的实现：
 
 ```java
 public class WorkerWithCyclicBarrier extends Thread {
@@ -171,13 +172,13 @@ public class WorkerWithCyclicBarrier extends Thread {
 } 
 ```
 
-实现非常简单。我们将一个`barrier`对象与工作线程相关联。当线程启动时，我们立即调用`barrier.await() `方法。
+实现非常简单。我们将一个`barrier`对象与工作线程相关联。当线程启动时，我们立即调用`barrier.await()`方法。
 
 这样，工作线程将被阻塞，并等待各方调用`barrier.await()`来恢复。
 
-### 4.2.主线程
+### 4.2. 主线程
 
-接下来，让我们看看如何控制两个工作线程在主线程中恢复:
+接下来，让我们看看如何控制两个工作线程在主线程中恢复：
 
 ```java
 private static void usingCyclicBarrier() throws BrokenBarrierException, InterruptedException {
@@ -208,9 +209,9 @@ private static void usingCyclicBarrier() throws BrokenBarrierException, Interrup
 
 正如我们前面所讨论的，这两个工作线程被阻塞，并等待屏障的打开恢复。
 
-在主线程中，我们可以做一些实际工作。当我们决定打开屏障时，我们调用方法`barrier.await() `让两个工人继续执行。
+在主线程中，我们可以做一些实际工作。当我们决定打开屏障时，我们调用方法`barrier.await()`让两个工人继续执行。
 
-如果我们在`main()`方法中调用`usingCyclicBarrier()`，我们将得到输出:
+如果我们在`main()`方法中调用`usingCyclicBarrier()`，我们将得到输出：
 
 ```java
 ===============================================
@@ -225,19 +226,21 @@ private static void usingCyclicBarrier() throws BrokenBarrierException, Interrup
 [ Worker with barrier 2 ] starts at: 2021-06-27T16:00:52.311348874Z
 ```
 
-我们可以比较工人的两个开始时间。即使两个工人不是在完全相同的时间开始，我们也非常接近我们的目标:两个开始时间之间的差异小于 3 微秒。
+我们可以比较工人的两个开始时间。即使两个工人不是在完全相同的时间开始，我们也非常接近我们的目标：两个开始时间之间的差异小于 3 微秒。
 
-## 5.使用`Phaser`类
+## 5. 使用`Phaser`类
 
-`Phaser`类是 Java 7 中引入的同步器。类似于`CyclicBarrier`和`CountDownLatch`。不过`Phaser`类更灵活。
+`Phaser`类是 Java 7 中引入的同步器，类似于`CyclicBarrier`和`CountDownLatch`。不过`Phaser`类更灵活。
 
-比如`CyclicBarrier`和`CountDownLatch`不同， **`Phaser`允许我们动态注册线程方。**
+比如`CyclicBarrier`和`CountDownLatch`不同，**`Phaser`允许我们动态注册线程方。**
 
 接下来，我们用`Phaser`来解题。
 
-### 5.1.工作线程
+### 5.1. 工作线程
 
-像往常一样，我们先看一下实现，然后理解它是如何工作的:
+像往常一样，我们先看一下实现，然后理解它是如何工作的：
+
+
 
 ```java
 public class WorkerWithPhaser extends Thread {
@@ -266,9 +269,9 @@ public class WorkerWithPhaser extends Thread {
 
 接下来，当工作线程启动时，我们立即调用`phaser.arriveAndAwaitAdvance()`。因此，我们告诉`phaser`当前线程已经到达，将等待其他线程方的到达来继续。当然，在其他线程方到达之前，当前线程被阻塞。
 
-### 5.2.主线程
+### 5.2. 主线程
 
-接下来，让我们继续，看看主线程的实现:
+接下来，让我们继续，看看主线程的实现：
 
 ```java
 private static void usingPhaser() throws InterruptedException {
@@ -294,11 +297,11 @@ private static void usingPhaser() throws InterruptedException {
 }
 ```
 
-在上面的代码中，我们可以看到，**主线程将自己注册为`Phaser`对象**的线程方。
+在上面的代码中，我们可以看到，主线程将自己注册为`Phaser`对象的线程方。
 
-在我们创建并阻塞了两个`worker`线程之后，主线程也调用`phaser.arriveAndAwaitAdvance()`。这样，我们打开 phaser 屏障，这样两个`worker`线程可以同时恢复。
+在我们创建并阻塞了两个`worker`线程之后，主线程也调用`phaser.arriveAndAwaitAdvance()`。这样，我们打开`phaser`屏障，这样两个`worker`线程可以同时恢复。
 
-最后，我们调用`main()`方法中的`usingPhaser()`方法:
+最后，我们调用`main()`方法中的`usingPhaser()`方法：
 
 ```java
 ===============================================
@@ -313,15 +316,15 @@ private static void usingPhaser() throws InterruptedException {
 [ Worker with phaser 1 ] starts at: 2021-07-18T17:39:27.063523827Z 
 ```
 
-同样，**两个工作线程同时启动`almost`。两个开始时间之间的差异小于两微秒**。
+同样，两个工作线程同时启动`almost`。两个开始时间之间的差异小于两微秒。
 
-## 6.结论
+## 6. 结论
 
-在本文中，我们首先讨论了需求:“同时启动两个线程。”
+在本文中，我们首先讨论了需求：“同时启动两个线程。”
 
-接下来，我们讨论了同时启动三个线程的两种方法:使用`CountDownLatch`、`CyclicBarrier`和`Phaser`。
+接下来，我们讨论了同时启动三个线程的两种方法：使用`CountDownLatch`、`CyclicBarrier`和`Phaser`。
 
-**他们的想法很相似，阻塞两个线程，试图让它们同时恢复执行。**
+他们的想法很相似，阻塞两个线程，试图让它们同时恢复执行。
 
 尽管这些方法不能保证两个线程同时启动，但对于现实世界中的大多数情况来说，结果已经非常接近和足够了。
 

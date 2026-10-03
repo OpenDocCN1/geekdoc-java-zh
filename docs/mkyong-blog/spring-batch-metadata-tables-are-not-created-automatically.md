@@ -1,10 +1,11 @@
+
 # Spring 批量元数据表不是自动创建的？
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring-batch/spring-batch-metadata-tables-are-not-created-automatically/>
 
-如果使用`MapJobRepositoryFactoryBean`(内存中的元数据)创建了`jobRepository`，则 Spring 批处理作业正在成功运行。
+如果使用`MapJobRepositoryFactoryBean`（内存中的元数据）创建了`jobRepository`，则 Spring 批处理作业正在成功运行。
 
-spring-config.xml
+`spring-config.xml`
 
 ```java
  <bean id="jobRepository"
@@ -15,9 +16,9 @@ spring-config.xml
 
 ## 问题
 
-更改`jobRepository`将元数据存储到数据库后:
+更改`jobRepository`将元数据存储到数据库后：
 
-spring-config.xml
+`spring-config.xml`
 
 ```java
  <bean id="jobRepository"
@@ -52,15 +53,15 @@ spring-config.xml
 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) 
 ```
 
- ## 解决办法
+## 解决办法
 
 元表的脚本存储在`spring-batch.jar`中，您需要手动创建它。
 
 ![spring-batch-meta-data-tables](img/a1476d2569e1a7796013f71071c696b2.png)
 
-通常，您可以通过 Spring XML 配置文件自动创建表脚本。举个例子，
+通常，您可以通过 Spring XML 配置文件自动创建表脚本。举个例子：
 
-spring-config.xml
+`spring-config.xml`
 
 ```java
  <beans 
@@ -91,15 +92,8 @@ spring-config.xml
 
 再次运行 Spring 批处理作业，这些元表将被自动创建。
 
- ## 参考
+## 参考
 
-1.  [Spring 批处理–元数据模式](http://web.archive.org/web/20190226173225/http://static.springsource.org/spring-batch/reference/html/metaDataSchema.html)
+1. [Spring 批处理–元数据模式](http://web.archive.org/web/20190226173225/http://static.springsource.org/spring-batch/reference/html/metaDataSchema.html)
 
 [spring batch](http://web.archive.org/web/20190226173225/http://www.mkyong.com/tag/spring-batch/)
-
-
-
-
-
-
-

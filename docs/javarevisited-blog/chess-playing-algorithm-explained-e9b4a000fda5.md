@@ -1,8 +1,9 @@
+
 # 下棋算法讲解
 
 > 原文：<https://medium.com/javarevisited/chess-playing-algorithm-explained-e9b4a000fda5?source=collection_archive---------2----------------------->
 
-## 极大极小在 Java 中的实现。
+## 极大极小在 Java 中的实现
 
 ![](img/e5c66186982ce2acd3e586cf5d6b1d0f.png)
 

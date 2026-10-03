@@ -1,61 +1,21 @@
+
 # JavaParser：分析、转换并生成你的 Java 代码库
 
-
-
-
-
-
-
-![](img/ff30983b7326e5199d4352dda9432912_0_0.png)
-
-
-
-
 Nicholas Smith, Danny van Bruggen 和 Federico Tomassetti
-
-
-
-![](img/ff30983b7326e5199d4352dda9432912_1_0.png)
-
-
 
 # 推特此本书！
 
 请通过在 Twitter 上传播这本书来为 Nicholas Smith, Danny van Bruggen 和 Federico Tomassetti 提供帮助！
 
-本书建议使用的标签为 #JavaParser。
+本书建议使用的标签为 `#JavaParser`。
 
 点击此链接在 Twitter 上搜索该标签，了解其他人对这本书的评价：
 
 #JavaParser
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # 前言
 
-# 什么是 JavaParser？
+## 什么是 JavaParser？
 
 在最形式的形式，JavaParser 库允许你在 Java 环境中将 Java 源代码作为 Java 对象表示进行交互。更正式地说，我们将这种对象表示称为抽象语法树（AST）。
 
@@ -63,7 +23,7 @@ Nicholas Smith, Danny van Bruggen 和 Federico Tomassetti
 
 该库的最后一个核心特性是操纵源代码的底层结构。这些结构随后可以写入文件，为开发者提供了构建自己的生成软件的便利。
 
-# JavaParser 不是
+## JavaParser 不是
 
 尽管该库可以作为某些工具的一部分使用，但它并不是一个代码重构工具包。这可能是我们看到的关于该库最流行的误解。
 
@@ -71,7 +31,7 @@ Nicholas Smith, Danny van Bruggen 和 Federico Tomassetti
 
 它还不是编译器。语法上正确且可以被库解析的代码并不意味着它能成功编译。虽然成功编译的代码本质上在语法是正确的，但解析只是编译过程的一个阶段。例如，如果你在没有定义变量的情况下引用了变量 `v`，这在语法上是正确的，但在编译过程中会导致语义错误。
 
-# 它是给谁准备的？
+## 它是给谁准备的？
 
 说得直白一点：大多数 Java 开发者。即使不使用 JavaParser 库，他们可能也会从理解解析器在日常工作中能提供的功能中获益。
 
@@ -87,7 +47,7 @@ Nicholas Smith, Danny van Bruggen 和 Federico Tomassetti
 
 作为一个 Java 库，我们假设你已经对 Java 有相当的了解。
 
-# 这本书不是给谁的
+## 这本书不是给谁的
 
 那些想要学习 Java 的人（通过上述内容的延伸）并不会教读者 Java。
 
@@ -97,7 +57,7 @@ Nicholas Smith, Danny van Bruggen 和 Federico Tomassetti
 
 也许最有争议的是，对于那些对缺乏测试感到不安的人。和大多数事情一样，测试方法是主观的，本书的目标并不是对该主题提供意见。因此，书中的示例主要通过 `main` 方法进行演示。
 
-# 如何使用这本书？
+## 如何使用这本书？
 
 本书旨在为那些为此目的而使用 [JavaDoc](http://www.javadoc.io/doc/com.github.javaparser/javaparser-core/) 的人员提供学习指南。如果你发现文档缺失，请在 GitHub 上提出问题。
 
@@ -105,10 +65,7 @@ Nicholas Smith, Danny van Bruggen 和 Federico Tomassetti
 
 书的第二部分是用例集，提供了更详细地展示了我们认为该库的使用方式。这些用例可以乱序阅读，也许可以从用户相关的某一个开始。尽管阅读所有内容也并没有坏处。
 
-> https://docs.oracle.com/javase/specs/jls/se8/
-http://www.javadoc.io/doc/com.github.javaparser/javaparser-core/
-
-# 书中使用的惯例
+## 书中使用的惯例
 
 *斜体* - 用于介绍主题中的某个重要概念。
 
@@ -116,7 +73,7 @@ http://www.javadoc.io/doc/com.github.javaparser/javaparser-core/
 
 `代码` - 用于高亮内联的程序代码。
 
-# 代码示例
+## 代码示例
 
 你可以自由无限制地使用书中的所有代码示例。
 
@@ -124,7 +81,7 @@ http://www.javadoc.io/doc/com.github.javaparser/javaparser-core/
 
 我们对署名表示感谢，但并不强制要求。这通常包括书名及其作者。例如：JavaParser: by Smith, Tomassetti
 
-# 如何与我们联系
+## 如何与我们联系
 
 任何问题、意见或疑虑，请在 Gitter 上访问我们。
 
@@ -144,7 +101,7 @@ Nicholas 是一位经验软件工程师和架构师，目前在伦敦工作。�
 
 ## Federico Tomassetti
 
-Federico 是一位独立的软件架构师，专注于构建语言：解析器、编译器、编辑器、模拟器和其他类似的工具。他在博客 tomassetti.me 上分享他关于语言工程的思考。
+Federico 是一位独立的软件架构师，专注于构建语言：解析器、编译器、编辑器、模拟器和其他类似的工具。他在博客 [tomassetti.me](http://tomassetti.me) 上分享他关于语言工程的思考。
 
 此前，他获得了语言工程博士学位，曾在各处工作过（包括 TripAdvisor 和 Groupon），现在他专注于咨询以及为 JavaParser 和 JavaSymbolSolver 等开源项目做出贡献。
 
@@ -154,12 +111,6 @@ Federico 是一位独立的软件架构师，专注于构建语言：解析器�
 
 此外，最重要的是，我们要感谢所有贡献者以及围绕 JavaParser 成长的奇妙社区。今天，有几十人发送了补丁，数百人在论坛、Stack Overflow、GitHub 和 Gitter 上提过问题。他们的讨论对于理解 JavaParser 如何被使用以及哪些部分需要澄清起了巨大的帮助。
 
-> *http://tomassetti.me*
-
-
-
-
-
 # 抽象语法树简析
 
 如果不是先理解语法树的概念，实际上无法考虑 Java 语言解析器将如何发挥作用。
@@ -168,11 +119,11 @@ Federico 是一位独立的软件架构师，专注于构建语言：解析器�
 
 代表 Java 代码的树将有一个代表整个文件的根节点，连接到根节点的节点是文件中所有的顶级元素，如 `import` 或 `class` 声明。从一个单一的类声明，我们可以到达多个节点，代表该类的字段和方法。
 
-![](img/ff30983b7326e5199d4352dda9432912_9_0.png)
-
-图 1.1 - 抽象语法树初探
+![图 1.1 - 抽象语法树初探](img/ff30983b7326e5199d4352dda9432912_9_0.png)
 
 正如真实树上的分支除了其起源外，与其他分支之间没有连接一样，表示源代码的树也是如此。人类或编译器可以理解变量引用或方法调用与代码的另一个部分相关，但语法树并不能，这是一个重要的区别。
+
+> *添加相关元素之间的连接（例如方法调用到方法声明，或字段引用到字段）是“符号解析器”（Symbol Solver）完成的工作。JavaSymbolSolver 是为了与 JavaParser 配合而创建的符号解析器。*
 
 ## 一切皆为节点
 
@@ -180,9 +131,7 @@ Federico 是一位独立的软件架构师，专注于构建语言：解析器�
 
 在经典计算机科学的意义上，当我们谈论具有顶点和边的图时（在树的情况下是有向图），取决于你所阅读的文献，这些也可以是节点和关系的同义词。为了本书的目的，我们使用“节点”（node）一词，因为它被认为不复杂，并且与库类保持一致。
 
-> *添加相关元素之间的连接（例如方法调用到方法声明，或字段引用到字段）是“符号解析器”（Symbol Solver）完成的工作。JavaSymbolSolver 是为了与 JavaParser 配合而创建的符号解析器。*
-
-# 抽象语法树简析
+## 抽象语法树的结构规则
 
 有几个简单的规则规定了什么是树。除了根节点外，所有节点将恰好有一个入度关系。根节点将为零。所有节点可以有多个出度关系。那些零出度关系的节点被认为是叶子节点而不是父节点。相反，那些具有出度关系的节点被认为既是分支也是一个或多个子节点的父节点。
 
@@ -208,7 +157,7 @@ Federico 是一位独立的软件架构师，专注于构建语言：解析器�
 
 > *https://docs.oracle.com/java/specs/jsp/se7/html/ls-18.html*
 
-# 抽象语法树简析
+### 示例：TimePrinter
 
 ```java
 package com.github.javaparser;
@@ -220,27 +169,17 @@ public class TimePrinter {
 }
 ```
 
-## 示例：TimePrinter
-
 上面的内容显示：
 
-![](img/ff30983b7326e5199d4352dda9432912_11_0.png)
-
-图 1.2 - 编译单元
+![图 1.2 - 编译单元](img/ff30983b7326e5199d4352dda9432912_11_0.png)
 
 该图显示编译单元有三个子节点：一个用于包声明，一个用于导入，最后一个用于类声明。上面的树代表了 `ClassDeclaration` 的很大一部分，它可以进一步分叉。
 
-![](img/ff30983b7326e5199d4352dda9432912_11_1.png)
-
-图 1.3 - 类声明
+![图 1.3 - 类声明](img/ff30983b7326e5199d4352dda9432912_11_1.png)
 
 最后，我们可以看到名称、返回类型和参数以及 `BlockStmt`，后者再次代表了单行。
 
-# 抽象语法树简析
-
-![](img/ff30983b7326e5199d4352dda9432912_12_0.png)
-
-图 1.4 - 语句
+![图 1.4 - 语句](img/ff30983b7326e5199d4352dda9432912_12_0.png)
 
 在几句话中，我们希望通过这个例子看到语法树会很快变得复杂！
 
@@ -250,7 +189,7 @@ public class TimePrinter {
 
 在支持 JavaParser 库的过程中，我们却意识到许多人需要注释。默认情况下，在解析时，JavaParser 库会记录注释信息并包含在树中。团队还在研究在编写类时保留空白的方法。
 
-## 快速巡览
+# 快速巡览
 
 在本章中，我们将对 JavaParser 库提供的关键功能进行快速巡览。你可以将其视为一个快速上手指南，让你在本地机器上运行起来。
 
@@ -272,9 +211,6 @@ public class TimePrinter {
 - `Visitor` 类是用于查找 AST 特定部分的类。
 
 一如既常，在使用 Java 库时，JavaDoc 是你的好朋友，尽管本书将尽可能涵盖，但不可避免地会跳过某些领域。
-
-
-
 
 # 快速浏览
 
@@ -312,7 +248,7 @@ Statement statement = StaticJavaParser.parseStatement("int a = 0;");
 
 > *https://github.com/javaparser/javaparser-visited
 
-# 快速浏览
+### 环境搭建
 
 首先，在你喜爱的 IDE 中创建一个新项目，并将 JavaParser 库添加到类路径中。如果你倾向于使用依赖管理工具，只需在构建脚本中添加几行即可。对于 Maven，这些行是：
 
@@ -331,21 +267,24 @@ compile group: 'com.github.javaparser', name: 'javaparser-symbol-solver-core', v
 ```
 
 在编写时，3.18.0 是该库的最新版本。如果你在此某些示例处遇到问题，请恢复到此版本。
+
 上面的依赖项包含了 Java 解析和求解能力。本书涵盖了这两个库；我们建议你都包含它们。
+
 如果你只需要解析功能，可以将 `artifactId` 标签更改为 `javaparser-core`。
 
 现在是写一些代码了。你可以查看附录 A 并创建 `ReversePolishNotation.java` 类。包将为 `org.javaparser.examples`。
 
 接下来，创建第二个类，名称和包名由你决定。我们将使用 `org.javaparser.examples.VoidVisitorStarter.java`。
+
 现在我们已经完成了所有设置，是时候创建一个 `CompilationUnit` 了：即 `ReversePolishNotation` 类的解析脚本。可以复制下面的代码。
 
-![](img/ff30983b7326e5199d4352dda9432912_15_0.png)
-
-# 快速浏览
+![图示](img/ff30983b7326e5199d4352dda9432912_15_0.png)
 
 这里有几行代码，让我们过一遍它们：
 
 我们创建一个常量 String，指向我们的 Java 文件的路径。由于两个文件都存在于项目中，为了简洁，我们使用了相对路径而不是文件系统根路径。
+
+
 
 在 `main` 方法内部，我们通过调用 `StaticJavaParser` 类的静态 `parse` 方法来实例化 `CompilationUnit` 类型，该方法使用之前定义的路径的 `InputStream`。
 
@@ -353,16 +292,13 @@ compile group: 'com.github.javaparser', name: 'javaparser-symbol-solver-core', v
 
 一旦我们有了可以工作的 `CompilationUnit`，我们就可以定义第一个 visitor。我们的 visitor 目标是找到所有特定类型的节点。使用 visitor 可以很容易地找到所有特定类型的节点，例如方法声明或所有的乘法表达式。
 
-
-
-
 ## 快速访问
 
 `visit` 方法的第二个参数用于提供一种简单的状态机制，该机制在树的遍历过程中会被传递。这让我们可以选择让访问者执行某种操作，而访问者的责任将是收集项（即方法名）。然后，调用类如何处理这些收集到的方法名则取决于他们自己。
 
 让我们在实践中来看这一点，创建一个另一个访问者类，这次它将用 `List<String>` 进行参数化。
 
-```
+```java
 private static class MethodNameCollector extends VisitorAdapter<List<String>> {
     @Override
     public void visit(MethodDeclaration md, List<String> collector) {
@@ -402,7 +338,7 @@ methodNames.forEach(n -> System.out.println("Method Name Collected: " + n));
 
 虽然在第二个例子中以这种方式分离关注点被认为是一种良好实践，但我们也愿意务实一些，第一种方法也没有问题。作为一名语言工程师，你可能想快速编写一些在代码库中只使用一次的一次性代码。在这种情况下，也许更快速、不那么整洁的方案是更好的选择。
 
-这些是两个简单的例子，但我们希望你能看到从这里扩展出去的巨大潜力。在这里，我们可以轻松地调整，以收集长度超过 50 行的方法。我们用于收集代码名称的 String 可以扩展为使用 DTO¹* 风格的对象，该对象可以收集行数以及该方法是否有 JavaDoc。这样，我们就走在了编写自己的源码分析器的道路上。
+这些是两个简单的例子，但我们希望你能看到从这里扩展出去的巨大潜力。在这里，我们可以轻松地调整，以收集长度超过 50 行的方法。我们用于收集代码名称的 String 可以扩展为使用 DTO¹ 风格的对象，该对象可以收集行数以及该方法是否有 JavaDoc。这样，我们就走在了编写自己的源码分析器的道路上。
 
 ## 简单的修改访问者
 
@@ -439,6 +375,7 @@ public class ModifyingVisitorStarter {
 ### ModifyingVisitorStarter.java
 
 之前我们在 `VisitorComplete_java` 中创建的访问者是以 `VoidVisitorAdaptor` 为基础的，因为我们不想更改 AST。这次，我们想要更改底层 AST，所以我们将创建一个 `ModifierVisitor` 的子类并命名为 `IntegerLiteralModifier`。
+
 简单起见，我们在这个例子中只关注整数数字。
 
 ```java
@@ -454,6 +391,7 @@ private static class IntegerLiteralModifier extends ModifierVisitor<Void> {
 ### ModifyingVisitorComplete.java
 
 由于该类像我们的第一个例子一样是参数化的，我们并不关心在遍历之间传递状态，因此我们将将其设为 `Void`。
+
 我们看到的与之前的 `VoidVisitorAdapter` 示例相比的区别是，我们的方法现在有一个返回类型 `FieldDeclaration`。这与我们 `visit` 方法的第一个参数类型相匹配。
 
 ## 快速访问
@@ -467,10 +405,6 @@ private static class IntegerLiteralModifier extends ModifierVisitor<Void> {
 我们在这里执行的第一件事是遍历字段声明中的变量。这看起来很奇怪，请记住虽然罕见，但我们会声明类似 `int a, b, c;` 的变量；
 
 接下来我们将确定变量是否初始化了值。`getInitializer` 方法返回一个 Java `Optional`，因此我们使用 `ifPresent` 方法，并在情况下传递一个 lambda 表达式。这反会检查变量是否是 `IntegerLiteralExpr` 的实例。我们可以根据需要扩展此以涵盖其他数值类型，以作为一个完整的案例。
-
-
-
-
 
 ## 快速概览
 
@@ -525,7 +459,7 @@ private static class CommentReportEntry {
 }
 ```
 
-CommentReporterComplete.java
+### CommentReporterComplete.java
 
 这里没有什么特别不凡的，它只是对报告中感兴趣的注释属性的简单容器。`toString` 方法创建了一个管道符分隔的表示形式。它还删除了注释中的一些空格，使其更适合控制台输出。
 
@@ -542,7 +476,7 @@ List<CommentReportEntry> comments = cu.getAllContainedComments()
 comments.forEach(System.out::println);
 ```
 
-CommentReporterComplete.java
+### CommentReporterComplete.java
 
 ## 快速概览
 
@@ -617,58 +551,53 @@ public void doAllTheThings(){
 
 考虑以下：
 
+
+
+```java
+// Orphaned 1
+// Attributed 1
+public class TimePrinterWithComments {
+
+    // Orphaned 2
+    // Attributed 2
+    public static void main(String args[]) {
+        System.out.print(LocalDateTime.now());
+    }
+    // Orphaned 3
+}
 ```
-1 // Orphaned 1
-2 // Attributed 1
-3 public class TimePrinterWithComments {
-4
-5 // Orphaned 2
-6 // Attributed 2
-7 public static void main(String args[]){
-8     System.out.print(LocalDateTime.now());
-9 }
-10 // Orphaned 3
-11 }
-```
-
-
-
-
 
 # 注释 - 此处有龙
 
-24
-
-![](img/ff30983b7326e5199d4352dda9432912_28_0.png)
-
-所有的 Node 对象都通过 `getOrphanedComments` 特别暴露它们的孤立注释；它们也会作为 `getAllContainedComments` 的一部分被返回。
+所有的 `Node` 对象都通过 `getOrphanedComments` 特别暴露它们的孤立注释；它们也会作为 `getAllContainedComments` 的一部分被返回。
 
 ## 使用注释
 
-在大多数情况下，我们建议使用访问者（visitor）来满足你的需求，我们之前在快速入门章节中介绍过相关的示例：快速访问（A Flying Visit）。如果你跳到了这一章，应该返回查看那里。
+在大多数情况下，我们建议使用访问者来满足你的需求，我们之前在快速入门章节中介绍过相关的示例：快速访问。如果你跳到了这一章，应该返回查看那里。
 
-在代码中处理注释，除了访问者之外，另一个很好的选择是 `CompilationUnit` 的 `getAllContainedComments` 方法。如果你正在进行的任务主要关注注释，该方法可以为你提供一个以注释为中心的代码视图。从返回的列表中，你可以导航到 AST 中属于该注释 `commentedNode` 关系的 Node。
+在代码中处理注释，除了访问者之外，另一个很好的选择是 `CompilationUnit` 的 `getAllContainedComments` 方法。如果你正在进行的任务主要关注注释，该方法可以为你提供一个以注释为中心的代码视图。从返回的列表中，你可以导航到 AST 中属于该注释 `commentedNode` 关系的 `Node`。
 
-此外，注释本身也是 `Node` 类型，因此它们是编译单元中的一等公民。它们包含的信息与任何 AST 节点关于位置的信息大部分相同。尽管有一些不同之处；它们不能被赋予属性（attributed）且没有子节点，但这应该是直观的。因此，总的来说，你可以以处理其他节点类似的方式对它们进行检查和操作。
+此外，注释本身也是 `Node` 类型，因此它们是编译单元中的一等公民。它们包含的信息与任何 AST 节点关于位置的信息大部分相同。尽管有一些不同之处；它们不能被赋予属性且没有子节点，但这应该是直观的。因此，总的来说，你可以以处理其他节点类似的方式对它们进行检查和操作。
 
 # 解析选项
 
-到为止，我们通常通过直接调用 `StaticJavaParser` 类上的静态 `parse` 方法来创建 `CompilationUnit`。这是因为假设解析器有一许多合理的默认值；然而，在处理注释解析时，有几个参数可以进行调优。
+到为止，我们通常通过直接调用 `StaticJavaParser` 类上的静态 `parse` 方法来创建 `CompilationUnit`。这是因为假设解析器有许多合理的默认值；然而，在处理注释解析时，有几个参数可以进行调优。
 
 注释解析默认开启，如果你决定希望禁用它，可以提供一个将 `setAttributeComments` 设置为 `false` 的 `ParserConfiguration` 实例。这将导致解析速度更快，尽管在处理单个源文件时可能感知不到，但如果你打算解析大量文件，这值得记住。
 
-```
+```java
 ParserConfiguration parserConfiguration = new ParserConfiguration()
-.setAttributeComments(false);
+    .setAttributeComments(false);
 StaticJavaParser.setConfiguration(parserConfiguration);
 ```
 
 ## ConfigurationOptions.java
 
 第二个选项允许你控制是否考虑行首之前的注释。
+
 考虑以下代码：
 
-```
+```java
 class A {
   // Blah
   boolean f() { return false }
@@ -676,26 +605,29 @@ class A {
 ```
 
 在此实例中，如果启用了注释属性，注释 `// Blah` 将被分配给方法 `f`。
-它是属于该方法，还是在描述后续行将要发生什么？像许多事情一样，答案可能是“取决于情况”。
-JavaParser 提供的另一种行为是将注释分配给包含它的节点（containing node）。在类 A 的情况下，它将作为 `orphanComments` 列表中的一个项出现。
-默认情况下，解析器将使用前一种行为，即将注释分配给下一个节点。如果你希望将其视为孤立注释（orphan），请使用以下配置。
 
-```
+它是属于该方法，还是在描述后续行将要发生什么？像许多事情一样，答案可能是“取决于情况”。
+
+JavaParser 提供的另一种行为是将注释分配给包含它的节点。在类 `A` 的情况下，它将作为 `orphanComments` 列表中的一个项出现。
+
+默认情况下，解析器将使用前一种行为，即将注释分配给下一个节点。如果你希望将其视为孤立注释，请使用以下配置。
+
+```java
 ParserConfiguration parserConfiguration = new ParserConfiguration()
-.setDoNotAssignCommentsPrecedingEmptyLines(true);
+    .setDoNotAssignCommentsPrecedingEmptyLines(true);
 ```
 
 ## ConfigurationOptions.java
 
 ## 注释的实践
 
-这里有一个我们组合编写的有趣类，用来夸大之前关于代码注释是“监狱规则”的观点，即在这种情况下可以随心所欲。信不否，这些实际上是我们见过的一些比较理性的示例了。
+这里有一个我们组合编写的有趣类，用来夸大之前关于代码注释是“监狱规则”的观点，即在这种情况下可以随心所欲。信不信由你，这些实际上是我们见过的一些比较理性的示例了。
 
 让我们解释一下这个类本身，以免分散我们真正关注的重点（注释）。为了对应我们的类比，我们使用线程来竞争谁最先/最后写入控制台。我们定义了一个简单的类，其中包含一个字段，该字段将是每个线程的个人口号。当为线程调用 `run` 时，它将打印自己的口号。`main` 方法启动了三个具有不同执行阶段的不同线程，然后调用了 `start` 方法。大多数情况下，这段代码将按照你预期的方式执行，但这不是保证的！
 
 尽管在单个类中拥有各种注释特别令人反感，但这些情况确实会出现，而且看起来可能有些反直觉。
 
-```
+```java
 package com.github.javascript;
 public class PrisonRules /* Maybe be Runnable? */ extends Thread {
     @Deprecated
@@ -721,9 +653,9 @@ public class PrisonRules /* Maybe be Runnable? */ extends Thread {
         t1/**("_+")*/.start();
         t2/**(@_)*//*(~)*/.start();
         /** We need more JavaDocs! */
-28 t3.start();
-29 }
-30 }
+        t3.start();
+    }
+}
 ```
 
 ## PrisonRules.java
@@ -731,97 +663,85 @@ public class PrisonRules /* Maybe be Runnable? */ extends Thread {
 由于我们要以此制作一个测验，所有极好的学习材料都需要测验。对于每个注释，尝试判断该注释将分配给 AST 的哪个节点。之后我们将更详细地查看答案。
 
 - 1. `/* Maybe Runnable? */` 分配给：
-1. ClassOrInterfaceDeclaration
-2. ClassOrInterfaceType "Thread"
-3. SimpleName "PrisonRules"
-4. 都没有，它应该是空的
+  1. `ClassOrInterfaceDeclaration`
+  2. `ClassOrInterfaceType` "Thread"
+  3. `SimpleName` "PrisonRules"
+  4. 都没有，它应该是空的
 
 - 2. `// What is` 分配给：
-1. FieldDeclaration
-2. Deprecated
-3. final String dibbs
+  1. `FieldDeclaration`
+  2. `Deprecated`
+  3. `final String dibbs`
 
 - 3. `// dibbs?` 分配给：
-1. Variableator
-2. LineComment
-3. String dibbs
+  1. `VariableDeclarator`
+  2. `LineComment`
+  3. `String dibbs`
 
 - 4. `// Is this really overridden?` 分配给：
-1. MarkerAnnotation
-2. MethodDeclaration
-3. void run
+  1. `MarkerAnnotation`
+  2. `MethodDeclaration`
+  3. `void run`
 
 - 5. `/* We should pass arguments in here * */` 分配给：
-1. ArrayType
-2. BlockStmt
-3. String args
+  1. `ArrayType`
+  2. `BlockStmt`
+  3. `String args`
 
 - 6. `/* This should run first */` 分配给：
-1. ObjectCreationExpression
-2. new Thread("mine!")
-3. t1
+  1. `ObjectCreationExpression`
+  2. `new Thread("mine!")`
+  3. `t1`
 
 - 7. `// Here Be Dragons` 分配给：
-1. NameExpr t1
-2. MethodCallExpr t1.start()
-3. ExpressionStmt t1.start()
+  1. `NameExpr` t1
+  2. `MethodCallExpr` t1.start()
+  3. `ExpressionStmt` t1.start()
 
 - 8. `/*("_+")*/` 分配给：
-1. NameExpr t1
-2. MethodCallExpr t1.start()
+  1. `NameExpr` t1
+  2. `MethodCallExpr` t1.start()
 
-- 9. `/*(@_)*//*(~)*` 分配给：
-1. NameExpr t2
-2. MethodCallExpr t2.start()
+- 9. `/*(@_)*//*(~)*/` 分配给：
+  1. `NameExpr` t2
+  2. `MethodCallExpr` t2.start()
 
 - 10. `/* We need more JavaDocs! */` 分配给：
-1. MethodDeclaration public void main
-2. ExpressionStmt t3.start()
+  1. `MethodDeclaration` public void main
+  2. `ExpressionStmt` t3.start()
 
 # 答案：
 
-问题 1，答案是 1，ClassInterface "Thread"。当寻找分配块注释时，我们寻找的是后续节点。在此实例中，ClassInterfaceDeclaration 是包含节点。SimpleName 是前一个节点。extends 关键字通过类上的 extendedType 引用进行建模，而不是节点本身。
+问题 1，答案是 1，`ClassOrInterfaceDeclaration` "Thread"。当寻找分配块注释时，我们寻找的是后续节点。在此实例中，`ClassOrInterfaceDeclaration` 是包含节点。`SimpleName` 是前一个节点。`extends` 关键字通过类上的 `extendedType` 引用进行建模，而不是节点本身。
 
-问题 2，答案是 4，它是孤立的。MarkerAnnotationExpr 位于上一行的注释之前，因此不会分配给它。注释节点本身不能被赋予注释，所以它不是 LineComment。
+问题 2，答案是 4，它是孤立的。`MarkerAnnotationExpr` 位于上一行的注释之前，因此不会分配给它。注释节点本身不能被赋予注释，所以它不是 `LineComment`。
 
-问题 3，答案是 1，VariableDeclarator，它是在此实例中 SimpleName 和 ClassInterface 类型的父节点。
+问题 3，答案是 1，`VariableDeclarator`，它是在此实例中 `SimpleName` 和 `ClassOrInterfaceType` 类型的父节点。
 
-问题 4，答案是 1，MarkerAnnotation "Override"。与块注释不同，行注释会寻找同一行中之前的节点，然后再考虑后续节点。
+问题 4，答案是 1，`MarkerAnnotation` "Override"。与块注释不同，行注释会寻找同一行中之前的节点，然后再考虑后续节点。
 
-问题 5，答案是 4，注释定义在 ArrayType 标记内部；因此它是父节点，也是找到孤立注释的地方。在树的这一层级没有后续节点来
+问题 5，答案是 4，注释定义在 `ArrayType` 标记内部；因此它是父节点，也是找到孤立注释的地方。在树的这一层级没有后续节点来归属于。`Parameter` 节点是 `ArrayType` 的父节点，尽管 `BlockStmt` 在词法上之后，但它是 `Parameter` 的兄弟节点。
 
+问题 6，答案是 1，`ObjectCreationExpression` "new Thread" 的孤立节点。由于与问题 5 类似的原因，树的同一层级没有后续节点可以关联该注释。因此，它是包含节点中的一个孤立注释。
 
-
-注释 - 龙之所在
-
-29
-
-归属于。`Parameter` 节点是 `ArrayType` 的父节点，尽管 `BlockStmt` 在词法上之后，但它是 `Parameter` 的兄弟节点。
-
-3，是 `ObjectCreationExpression` "new Thread." 的孤立节点。由于与问题 5 类似的原因，树的同一层级没有后续节点可以关联该注释。因此，它是包含节点中的一个孤立注释。
-
-3，是 `BlockStmt` 的兄弟节点，在词法上之后，是 `Parameter` 的兄弟节点。
-
-问题 6，答案是 3，`ExpressionStmt` "t1.start()"。当 `LineComment` 没有前置节点时，它将寻找下一个节点。`NameExpr` 和 `MethodCallExpr` 都是 `ExpressionStmt` 的子节点。
-
-问题 7，答案是 3，`SimpleName` "start"。如果你一直很关注，你应该能做出这道题。`NameExpr` 位于块注释之前，因此不被考虑。`MethodCallExpr` 是包含该节点的父节点。`SimpleName` "start" 是后续节点，并被赋予了注释。
+问题 7，答案是 3，`ExpressionStmt` "t1.start()"。当 `LineComment` 没有前置节点时，它将寻找下一个节点。`NameExpr` 和 `MethodCallExpr` 都是 `ExpressionStmt` 的子节点。
 
 问题 8，答案是 3，`SimpleName` "start"。如果你一直很关注，你应该能做出这道题。`NameExpr` 位于块注释之前，因此不被考虑。`MethodCallExpr` 是包含该节点的父节点。`SimpleName` "start" 是后续节点，并被赋予了注释。
 
-问题 9，答案是 4，一个孤立节点。与上一行代码不同，有两个注释竞争关联到 `SimpleName` 上。随后的注释 "(¬‿" 使它变成了孤立状态（坏掉的 Lenny！），`SimpleName` 成为它的父节点。记住——从节点到注释的关系是 1:1。
+问题 9，答案是 4，一个孤立节点。与上一行代码不同，有两个注释竞争关联到 `SimpleName` 上。随后的注释 "(\~)" 使它变成了孤立状态（坏掉的 Lenny！），`SimpleName` 成为它的父节点。记住——从节点到注释的关系是 1:1。
 
 问题 10，答案是 3，`ExpressionStmt` "t3.start()"。Javadoc 注释的关联方式与块注释相同；尽管有一种惯例将其应用于类、接口和方法，但这种做法并不是强制执行的。
 
 # 美化打印与词法保留
 
-你可以将 JavaParser 用于不同的目的。最常见的两种两种是代码生成和代码转换。在这两种情况下，你最终都会生成 Java 代码，可能将其存储在扩展名为 `java` 的文件中。
+你可以将 JavaParser 用于不同的目的。最常见的两种是代码生成和代码转换。在这两种情况下，你最终都会生成 Java 代码，可能将其存储在扩展名为 `java` 的文件中。
 
 对你的 `CompilationUnit` 简单调用 `toString()` 将返回一个你可以用于写入源码的 `String`。我们面临的问题是：*它将如何格式化来自 AST 的代码？*
 
 答案有两种方式之一：
 
-- 使用美化打印（pretty-printing）
-- 使用词法保留打印（lexical-preserving printing）
+- 使用美化打印
+- 使用词法保留打印
 
 所以让我们考虑它们之间的区别。
 
@@ -841,7 +761,7 @@ int a;
 
 ```java
 class A {
-int a;
+    int a;
 }
 ```
 
@@ -853,80 +773,28 @@ int a;
 
 如果你解析了一些代码，修改它，然后使用词法保留打印将其打印回来，你将得到非常接近原始代码，更改仅限于你显式修改的节点。
 
-你可以使用词法保留打印，即使是在一个你通过程序构建而非从源码解析而的 AST 上。在这种情况下，没有原始布局需要保留，且代码将默认为美化打印形式。当你解析代码并在 AST 中添加一些程序化创建的新节点时也是如此：你解析的代码部分将附带布局信息，而你创建的节点将不会，它们将被美化打印。
+你可以使用词法保留打印，即使是在一个你通过程序构建而非从源码解析而来的 AST 上。在这种情况下，没有原始布局需要保留，且代码将默认为美化打印形式。当你解析代码并在 AST 中添加一些程序化创建的新节点时也是如此：你解析的代码部分将附带布局信息，而你创建的节点将不会，它们将被美化打印。
 
 ## 在美化打印和词法保留打印之间选择
 
 我们已经看到，在生成代码时，有两种样式可以使用。
 
-美化打印与词法保留打印之间的选择
+### 使用美化打印
 
-我们已经看到，在生成代码时，有两种样式可以使用。
+- 美化打印是强制的。
+- 在转换代码时，美化打印是一个良好的选择。
+- 美化打印允许我们处理复杂的布局。
 
-在很多情况下，美化打印允许我们处理复杂的布局。
+### 使用词法保留打印
 
-美化打印与词法保留打印之间的选择
+- 词法保留打印可用于保留代码在解析时的原始布局。
 
-我们已经看到，在生成代码时，有两种样式可以使用。
-
-美化打印是强制的。
-
-在转换代码时，美化打印是一个良好的选择。
-
-美化打印与词法保留打印之间的选择
-
-我们已经看到，在生成代码时，有两种样式可以使用。
-
-美化打印允许我们处理复杂的布局。
-
-美化打印与词法保留打印之间的选择
-
-我们已经看到，在生成代码时，有两种样式可以使用。
-
-美化打印是强制的。
-
-在转换代码时，美化打印是一个良好的选择的。
-
-美化打印与词法保留打印之间的选择
-
-我们已经看到，在生成代码时，有两种样式可以使用。
-
-美化打印允许我们处理复杂的布局。
-
-美化打印与词法保留打印之间的选择
-
-我们已经看到，在生成代码时，有两种样式可以使用。
-
-美化打印是强制的。
-
-在转换代码时，美化打印是一个良好的选择的。
-
-美化打印与词法保留打印之间的选择
-
-我们已经看到，在生成代码时，有两种样式可以使用。
-
-## 打印打印我们处理复杂的布局。
-
-，，
-
-
-
-使用美化打印的。
-
-- 化。
-
-[/的。
-
-
-
-
-
-# 美化打印与词法保留
+## 美化打印与词法保留
 
 ```java
 @Override
 public void visit(NormalAnnotationExpr n, Void arg) {
-  // ignore
+    // ignore
 }
 Printer prettyPrinter = new DefaultPrettyPrinter(prettyPrinterFactory, conf);
 System.out.println(prettyPrinter.print(myClass));
@@ -938,7 +806,7 @@ System.out.println(prettyPrinter.print(myClass));
 
 ```java
 class MyClass {
-  String foo;
+    String foo;
 }
 ```
 
@@ -946,8 +814,8 @@ class MyClass {
 
 ```java
 class MyClass {
-  @MySecretAnnotation
-  String foo;
+    @MySecretAnnotation
+    String foo;
 }
 ```
 
@@ -960,8 +828,6 @@ class MyClass {
 设置词法保留打印的最简单方法是使用 `LexicalPreservingPrinter` 的 `setup` 方法。这将完成解析、注册初始文本并在 AST 上添加一个观察者。当你对 AST 进行操作时，观察者会在每次修改时调整文本。
 
 在下面的示例中，你可以看到如何使用词法保留打印解析某些代码并将其打印：
-
-# 美化打印与词法保留
 
 ```java
 public static void main(String[] args) {
@@ -986,7 +852,11 @@ class A ()
 ```
 
 我们将得到完全相同的结果。这就是词法保留的全部意义，不是吗？
-不，实现词法保留的困难之处在于支持在保留并演进原始布局的同时更改 AST 的能力。
+
+
+
+不，实现词法保留的困难之处在于支持在保留并演进原始布局的同时更改 `AST` 的能力。
+
 如果我们更改类名呢？
 
 ```java
@@ -1049,7 +919,7 @@ package org.javaparser.lexicalpreservation.examples;
 public class MyNewClassName {}
 ```
 
-其理念是，除了初始设置外，你只需要正常使用 JavaParser，在后台，原始文本会使用词法保留以一种完全透明的方式更新。
+其理念是，除了初始设置外，你只需要正常使用 `JavaParser`，在后台，原始文本会使用词法保留以一种完全透明的方式更新。
 
 你不需要理解它内部是如何工作的，除非你对此很好奇；如果是那样，下一节就是为你准备的。
 
@@ -1071,32 +941,28 @@ void foo(int a) { }
 
 如果我们对不同的元素进行排序：
 
-- child(void)
-- 2. token(space)
-- 3. child(name)
-- 4. token(lparen)
-- 5. child(param#0)
-- 6. token(rparen)
-- 7. token(space)
-- 8. child(body)
+- child(`void`)
+- 2. token(`space`)
+- 3. child(`name`)
+- 4. token(`lparen`)
+- 5. child(`param#0`)
+- 6. token(`rparen`)
+- 7. token(`space`)
+- 8. child(`body`)
 
 现在假设你向此方法添加了一个参数。会发生什么？我们需要更新 `NodeText`。
 
 ## 什么是语法模型？
 
-具体语法模型（CSM）是代码的表示，包含了所有信息，包括空格和注释。它比 AST 更详细，AST 只包含代码的结构元素。对于 AST 中的每个节点，CSM 存储了代表该节点的标记列表。
-
-
-
-
+具体语法模型（`CSM`）是代码的表示，包含了所有信息，包括空格和注释。它比 `AST` 更详细，`AST` 只包含代码的结构元素。对于 `AST` 中的每个节点，`CSM` 存储了代表该节点的标记列表。
 
 ## 解析符号与引用
 
-JavaParser 与其他解析器一样，会获取源代码中存在的信息并将其组织成一棵树，即抽象语法树（Abstract Syntax Tree）。
+`JavaParser` 与其他解析器一样，会获取源代码中存在的信息并将其组织成一棵树，即抽象语法树（`Abstract Syntax Tree`）。
 
-在很多情况下，AST 中存在的信息已经足够满足用户需求。但在其他情况下，你需要详化 AST 并计算额外信息。特别是，你可能想要解析引用并找到节点之间的关系。从某种意义上说，这是在追踪新的链接并将树转换为图。
+在很多情况下，`AST` 中存在的信息已经足够满足用户需求。但在其他情况下，你需要详化 `AST` 并计算额外信息。特别是，你可能想要解析引用并找到节点之间的关系。从某种意义上说，这是在追踪新的链接并将树转换为图。
 
-当我们在 Java 代码中发现一个使用的名称时，我们将其识别为一个符号（symbol）。符号是我们用来指代任何可能由名称表示的元素的术语。符号可以是一个变量，也可以是一个字段或类型。
+当我们在 `Java` 代码中发现一个使用的名称时，我们将其识别为一个符号（`symbol`）。符号是我们用来指代任何可能由名称表示的元素的术语。符号可以是一个变量，也可以是一个字段或类型。
 
 当我们遇到这个表达式时：
 
@@ -1104,9 +970,9 @@ JavaParser 与其他解析器一样，会获取源代码中存在的信息并将
 container.element
 ```
 
-container 是什么？element 是什么？也许 container 是一个变量，而 element 是该变量的字段。或者 container 是一个类名，element 是该类的静态字段。在这一阶段我们并不知道，所以我们泛泛地谈论符号。
+`container` 是什么？`element` 是什么？也许 `container` 是一个变量，而 `element` 是该变量的字段。或者 `container` 是一个类名，`element` 是该类的静态字段。在这一阶段我们并不知道，所以我们泛泛地谈论符号。
 
-JavaParser Solver 是库的一部分，它负责检查这些符号并告诉我们它们究竟是什么，为我们找到这些符号所代表的变量声明、参数声明或类型声明。
+`JavaParser Solver` 是库的一部分，它负责检查这些符号并告诉我们它们究竟是什么，为我们找到这些符号所代表的变量声明、参数声明或类型声明。
 
 考虑以下示例：
 
@@ -1117,7 +983,7 @@ void aMethod() {
 }
 ```
 
-通过查看 AST，我们知道 a = a + 1 对应于一个赋值。我们还知道正在将加 1 的结果赋值给 a 的值。
+通过查看 `AST`，我们知道 `a = a + 1` 对应于一个赋值。我们还知道正在将加 1 的结果赋值给 `a` 的值。
 
 有些事情是我们明确知道的：
 
@@ -1125,7 +991,7 @@ void aMethod() {
 - 该符号可以被赋值吗？
 - 该符号的类型是什么？
 
-考虑最后一点：如果 `a` 是一个 `int`，那么 `a + 1` 的结果将是一个 `int`。然而 `a` 也可能是一个 `String`，在这种情况下，我们不是在相加 1，而是将其字符串表示连接到由 `a` 表示的字符串上。换句话说，仅通过 AST 无法判断我们正在执行什么样的操作：代数和还是字符串拼接？这取决于 `a` 的类型。为了回答这些问题，我们必须解析引用。我们必须将 `a + 1` 中对 `a` 的引用连接到被引用的 `a` 的声明上。
+考虑最后一点：如果 `a` 是一个 `int`，那么 `a + 1` 的结果将是一个 `int`。然而 `a` 也可能是一个 `String`，在这种情况下，我们不是在相加 1，而是将其字符串表示连接到由 `a` 表示的字符串上。换句话说，仅通过 `AST` 无法判断我们正在执行什么样的操作：代数和还是字符串拼接？这取决于 `a` 的类型。为了回答这些问题，我们必须解析引用。我们必须将 `a + 1` 中对 `a` 的引用连接到被引用的 `a` 的声明上。
 
 现在考虑以下情况：
 
@@ -1144,15 +1010,15 @@ class Bar {
 
 Bar.java
 
-有很多符号。解析引用意味着找到正确的符号，这可能很困难。请相信我们，情况可能会变得非常复杂。幸运的是，你只需要使用 JavaParser Solver 来解析 JavaParser AST 中元素之间的引用即可。
+有很多符号。解析引用意味着找到正确的符号，这可能很困难。请相信我们，情况可能会变得非常复杂。幸运的是，你只需要使用 `JavaParser Solver` 来解析 `JavaParser AST` 中元素之间的引用即可。
 
-### 如何设置 JavaParser符号解析器？
+### 如何设置 JavaParser 符号解析器？
 
-从现在开始，我们将 JavaParser Symbol Solver 称为 'JavaSymbolSolver'，命名是一件困难的事，而且我们并不总是第一次就能做对。未来的版本可能会重构该类名。
+从现在开始，我们将 `JavaParser Symbol Solver` 称为 `JavaSymbolSolver`，命名是一件困难的事，而且我们并不总是第一次就能做对。未来的版本可能会重构该类名。
 
-JavaSymbolSolver 与 JavaParser 核心库捆绑。这是因为每个版本的 JavaSymbolSolver 都能保证与特定版本的 JavaParser 兼容。在历史上，并非如此，库是分开分发的。
+`JavaSymbolSolver` 与 `JavaParser` 核心库捆绑。这是因为每个版本的 `JavaSymbolSolver` 都能保证与特定版本的 `JavaParser` 兼容。在历史上，并非如此，库是分开分发的。
 
-如果你之前选择不包含 JavaSymbolSolver 而仅在依赖中引入了 `javaparser-core` get，那么你需要更新到捆绑的版本。
+如果你之前选择不包含 `JavaSymbolSolver` 而仅在依赖中引入了 `javaparser-core` get，那么你需要更新到捆绑的版本。
 
 ## 解析符号与引用
 
@@ -1165,7 +1031,7 @@ dependencies {
 }
 ```
 
-或者如果你更习惯 Maven 的冗长写法，这里有提供：
+或者如果你更习惯 `Maven` 的冗长写法，这里有提供：
 
 ```xml
 <dependency>
@@ -1178,6 +1044,7 @@ dependencies {
 ### 如何获取引用的类型：第一个示例
 
 让我们考虑我们的初始示例。我们如何获取被赋值值的类型？
+
 这是我们想要解析的代码：
 
 ```
@@ -1217,18 +1084,19 @@ public class GetTypeOfReference {
 
 GetTypeOfReference.java
 
-输出将是：a+1 is a: PrimitiveType(name='int')
+输出将是：`a+1 is a: PrimitiveType(name='int')`
+
 这一行可能是：
 
 ```java
 TypeSolver typeSolver = new CombinedSolver();
 ```
 
-我们将接下来查看 TypeSolver 是什么。
+我们将接下来查看 `TypeSolver` 是什么。
 
 ### 指定查找类型的位置
 
-在之前的示例中，我们看到了同一个 AST 中的元素引用。即在源文件中。情况通常比这复杂，并且涉及到其他文件。考虑这个：
+在之前的示例中，我们看到了同一个 `AST` 中的元素引用。即在源文件中。情况通常比这复杂，并且涉及到其他文件。考虑这个：
 
 ```java
 class MyClass extends SuperClass {
@@ -1238,48 +1106,45 @@ class MyClass extends SuperClass {
 }
 ```
 
-`aField` 来自哪里？我们不知道，它可能是 `SuperClass` 中的一个字段。所以我们需要检查。嗯，这就是 JavaSolver 为我们所做的。为了实现，JavaSolver 需要知道去哪里查找。类可能位于：
+`aField` 来自哪里？我们不知道，它可能是 `SuperClass` 中的一个字段。所以我们需要检查。嗯，这就是 `JavaSolver` 为我们所做的。为了实现，`JavaSolver` 需要知道去哪里查找。类可能位于：
 
 - 在源文件中，如果我们正在编译它们
-- 在某些库的类文件或 JAR 中
-- 在 JDK 中
+- 在某些库的类文件或 `JAR` 中
+- 在 `JDK` 中
 
-根据上述情况，有不同的 TypeSolver 需要传递给 JavaSolver。
-JarTypeSolver：该解析器在 JAR 文件内部查找类。你只需要指定 JAR 文件的位置。
+根据上述情况，有不同的 `TypeSolver` 需要传递给 `JavaSolver`。
 
-JavaParserSolver：该解析器在源文件中查找类。你只需要指定根目录。例如 `src` 目录。它将在与包对应的目录中查找源文件。因此，它会在 `a/b` 目录下查找类 `C`。
+`JarTypeSolver`：该解析器在 `JAR` 文件内部查找类。你只需要指定 `JAR` 文件的位置。
 
-ReflectionTypeSolver：某些类是作为语言的一部分定义的，没有 JAR。例如 `java.lang.Object` 等类。为了查找此类类的定义，我们可以使用反射。
+`JavaParserSolver`：该解析器在源文件中查找类。你只需要指定根目录。例如 `src` 目录。它将在与包对应的目录中查找源文件。因此，它会在 `a/b` 目录下查找类 `C`。
 
-MemoryTypeSolver：该解析器返回我们记录在其中的类。它主要用于测试。
+`ReflectionTypeSolver`：某些类是作为语言的一部分定义的，没有 `JAR`。例如 `java.lang.Object` 等类。为了查找此类类的定义，我们可以使用反射。
 
-CombinedTypeSolver：你通常想要将多个 TypeSolver 合并为一个。为了这一点，你使用 `CombinedSolver`。
+`MemoryTypeSolver`：该解析器返回我们记录在其中的类。它主要用于测试。
+
+`CombinedTypeSolver`：你通常想要将多个 `TypeSolver` 合并为一个。为了这一点，你使用 `CombinedSolver`。
 
 ### 使用绝对名称解析类型
 
-如果你愿意，可以直接使用 TypeSolver。它执行的操作是根据给定的限定名称查找元素。
+如果你愿意，可以直接使用 `TypeSolver`。它执行的操作是根据给定的限定名称查找元素。
 
 考虑这个示例：
 
 在这个示例中，我们获取了三种类型的定义：
 
-- java.lang.Object
-- java.lang.String
-- java.util.List
+- `java.lang.Object`
+- `java.lang.String`
+- `java.util.List`
 
 这些每一个项都是 `ReferenceTypeDeclaration` 的实例。该类有许多方法可以访问丰富的类型模型。你可以找到所有的祖类、继承的方法和字段、注解、它可以赋值的类型并进行管理。
 
-注意，无论你使用哪种 TypeSolver：如果你的类是通过反射、解析源文件或从 JAR 中找到的，JavaSymbolSolver 都会提供一个具有相同接口的模型，即它总是返回一个 `ReferenceTypeDeclaration` 实例。
-
-
-
-
+注意，无论你使用哪种 `TypeSolver`：如果你的类是通过反射、解析源文件或从 `JAR` 中找到的，`JavaSymbolSolver` 都会提供一个具有相同接口的模型，即它总是返回一个 `ReferenceTypeDeclaration` 实例。
 
 ## 解决符号与引用
 
 ## 在上下文中解析类型
 
-TypeSolver 仅在提供全限定名时才能找到类型；然而，JavaSolver 可以利用上下文来查找哪个实际的全限定名对应特定的声明。考虑以下情况：
+`TypeSolver` 仅在提供全限定名时才能找到类型；然而，`JavaSolver` 可以利用上下文来查找哪个实际的全限定名对应特定的声明。考虑以下情况：
 
 ```java
 package org.javaparser.examples.chapter5;
@@ -1292,13 +1157,14 @@ class Foo {
 Foo.java
 
 字段的类型是什么？
-它可能是 `org.javaparser.examples.chapter5.Bar`，也可能是 `org.javaparser.examples.chapter4.Bar`。JavaSolver 将通过查看上下文并考虑以下因素为你解决这个问题：
+
+它可能是 `org.javaparser.examples.chapter5.Bar`，也可能是 `org.javaparser.examples.chapter4.Bar`。`JavaSolver` 将通过查看上下文并考虑以下因素为你解决这个问题：
 
 - 使用该类型的类名
 - 导入指令
 - 当前包
 
-你如何告诉 JavaSolver 使用哪个上下文呢？嗯，它是通过查看包含你感兴趣的节点所在的 AST（抽象语法树）来确定的。
+你如何告诉 `JavaSolver` 使用哪个上下文呢？嗯，它是通过查看包含你感兴趣的节点所在的 `AST`（抽象语法树）来确定的。
 
 ```java
 public class ResolveTypeInContext {
@@ -1332,12 +1198,12 @@ public class ResolveTypeInContext {
 
 我们在这里做什么？
 
-- 我们获取在 FieldDeclaration 中定义的第一个（也是唯一的）变量的类型
-- 我们将该类型转换为 JavaSymbolSolver 类型，为此我们传递了 JavaParser 类型和要使用的上下文
+- 我们获取在 `FieldDeclaration` 中定义的第一个（也是唯一的）变量的类型
+- 我们将该类型转换为 `JavaSymbolSolver` 类型，为此我们传递了 `JavaParser` 类型和要使用的上下文
 
-JavaSymbolSolver ResolvedType 是包含你可能需要的关于该类型的所有信息的类型。
+`JavaSymbolSolver ResolvedType` 是包含你可能需要的关于该类型的所有信息的类型。
 
-在这种情况下，我们使用的上下文是 `fieldDeclaration`。这意味着我们希望 JavaSymbolSolver 考虑当引用类型 `Bar` 用于指向该特定节点时，它是如何定义的。
+在这种情况下，我们使用的上下文是 `fieldDeclaration`。这意味着我们希望 `JavaSymbolSolver` 考虑当引用类型 `Bar` 用于指向该特定节点时，它是如何定义的。
 
 考虑以下情况：
 
@@ -1352,21 +1218,23 @@ class Zum {
 }
 ```
 
-从 JavaParser 的角度来看，两个 FieldDeclaration 具有相同的类型：名为 `Bar` 的类型。但该名称在不同的上下文中含义不同。通过传递该 JavaParser 类型和上下文（第一个或第二个 FieldDeclaration），JavaSymbolSolver 将为我们不同的答案，并确定每种情况下实际使用的真实类型。
+
+
+从 JavaParser 的角度来看，两个 `FieldDeclaration` 具有相同的类型：名为 `Bar` 的类型。但该名称在不同的上下文中含义不同。通过传递该 JavaParser 类型和上下文（第一个或第二个 `FieldDeclaration`），`JavaSymbolSolver` 将为我们不同的答案，并确定每种情况下实际使用的真实类型。
 
 很酷，对吧？
 
 ## 解析方法调用
 
-JavaSymbolSolver 可以帮助你解决的另一个问题是解析方法调用。正如你可能知道的，Java 允许方法重载，即不同的方法具有相同的名称但不同的签名。然而，这使得特定的调用执行了哪个方法变得不再直观。
+`JavaSymbolSolver` 可以帮助你解决的另一个问题是解析方法调用。正如你可能知道的，Java 允许方法重载，即不同的方法具有相同的名称但不同的签名。然而，这使得特定的调用执行了哪个方法变得不再直观。
 
 考虑这种情况：
 
-A.java
+**A.java**
 
 我们有三个调用，这三个调用指向三个恰好具有相同的不同方法。
 
-以下是我们可以使用 JavaSymbolSolver 查找每种情况下调用的方法的方法：
+以下是我们可以使用 `JavaSymbolSolver` 查找每种情况下调用的方法的方法：
 
 ```java
 public class ResolveMethodCalls {
@@ -1399,7 +1267,7 @@ java.io.PrintStream.println(java.lang.String)
 java.io.PrintStream.println(java.lang.Object)
 ```
 
-注意，TypeSolver 也会确定在特定上下文中哪些方法是可见，它确定了方法调用作用域的类型（在此情况下为 `System.out`）等。这是一项大量工作，你可能不想自己完成它，尤其是当你可以使用这个库并继续处理下一个问题时。
+注意，`TypeSolver` 也会确定在特定上下文中哪些方法是可见，它确定了方法调用作用域的类型（在此情况下为 `System.out`）等。这是一项大量工作，你可能不想自己完成它，尤其是当你可以使用这个库并继续处理下一个问题时。
 
 ## 使用 CombinedTypeSolver
 
@@ -1430,7 +1298,7 @@ public class CombinedSolver {
 
 ### 使用 MemoryTypeSolver
 
-正如我们预期的，这种 TypeSolver 通常不用于实际应用程序；它而是旨在用于测试。让我们考虑 JavaSolver 项目中的一个真实测试：
+正如我们预期的，这种 `TypeSolver` 通常不用于实际应用程序；它而是旨在用于测试。让我们考虑 JavaSolver 项目中的一个真实测试：
 
 ```java
 public class MemoryTypeSolverComplete {
@@ -1473,13 +1341,9 @@ public class MemoryTypeSolverComplete {
 
 ## 总结
 
-到此时，你应该对 JavaSymbolSolver 可以为你解决什么类型的问题有了了解。我们并不期望已经回答了你关于该库的所有问题，而且还没有探索整个 API，但我们应该为你提供了一个起点。Javadoc 也可以帮助你解决剩余的一些问题。对于其他问题，请随时联系我们。
+到此时，你应该对 `JavaSymbolSolver` 可以为你解决什么类型的问题有了了解。我们并不期望已经回答了你关于该库的所有问题，而且还没有探索整个 API，但我们应该为你提供了一个起点。Javadoc 也可以帮助你解决剩余的一些问题。对于其他问题，请随时联系我们。
 
-请记住，与 JavaParser 相比，JavaSymbolSolver 还很年轻，它的 API 可能会随着时间的推移而演变变得更易使用。然而，这是一个增长非常快速的项目，得益于出色的 JavaParser 社区，并且已经在商业产品中使用。
-
-
-
-
+请记住，与 `JavaParser` 相比，`JavaSymbolSolver` 还很年轻，它的 API 可能会随着时间的推移而演变变得更易使用。然而，这是一个增长非常快速的项目，得益于出色的 `JavaParser` 社区，并且已经在商业产品中使用。
 
 # 附录 A - ReversePolishNotation.java
 
@@ -1515,51 +1379,52 @@ public class ReversePolishNotation {
             double b;
             switch(t) {
                 case "+":
-b = numbers.pop();
-a = numbers.pop();
-numbers.push(a + b);
-break;
-case "/":
-b = numbers.pop();
-a = numbers.pop();
-numbers.push(a / b);
-break;
-case "-":
-b = numbers.pop();
-a = numbers.pop();
-numbers.push(a - b);
-break;
-case "*":
-b = numbers.pop();
-a = numbers.pop();
-numbers.push(a * b);
-break;
-default:
-numbers.push(Double.valueOf(t));
-}
-));
-return numbers.pop();
-}
-/**
- * 内存召回使用存储在内存中的数字，默认为 0。
- * @return double 类型
- */
-public double memoryRecall(){
-  return memory;
-}
-/**
- * 内存清除将内存置为 0。
- */
-public void memoryClear(){
-  memory = 0;
-}
-```
+                    b = numbers.pop();
+                    a = numbers.pop();
+                    numbers.push(a + b);
+                    break;
+                case "/":
+                    b = numbers.pop();
+                    a = numbers.pop();
+                    numbers.push(a / b);
+                    break;
+                case "-":
+                    b = numbers.pop();
+                    a = numbers.pop();
+                    numbers.push(a - b);
+                    break;
+                case "*":
+                    b = numbers.pop();
+                    a = numbers.pop();
+                    numbers.push(a * b);
+                    break;
+                default:
+                    numbers.push(Double.valueOf(t));
+            }
+        });
+        return numbers.pop();
+    }
 
-```java
-public void memoryStore(double value){
-    memory = value;
+    /**
+     * 内存召回使用存储在内存中的数字，默认为 0。
+     * @return double 类型
+     */
+    public double memoryRecall(){
+        return memory;
+    }
+
+    /**
+     * 内存清除将内存置为 0。
+     */
+    public void memoryClear(){
+        memory = 0;
+    }
+
+    public void memoryStore(double value){
+        memory = value;
+    }
+    /* EOF */
 }
-/* EOF */
 ```
 
 # 附录 B - 可访问节点
@@ -1568,92 +1433,90 @@ public void memoryStore(double value){
 
 | 解析器类型 | 源码示例 |
 | --- | --- |
-| AnnotationDeclaration | @interface X { ... } |
-| AnnotationMemberDeclaration | @interface X { int i(); } |
-| ArrayAccessExpr | getName() { 15*15 } |
-| ArrayCreationExpr | new int[5] |
-| ArrayCreationLevel | new int[1][2] |
-| ArrayInitializerExpr | new int[][] { 1, 1, 2, } |
-| ArrayType | int[] |
-| AssertStmt | assert |
-| AssignExpr | a=5 |
-| BinaryExpr | a && b |
-| BlockComment | /* My Comment */ |
-| BlockStmt | { ... } |
-| BooleanLiteralExpr | false |
-| BreakStmt | break |
-| CastExpr | (long)15 |
-| CatchClause | catch (Exception e) { ... } |
-| CharLiteralExpr | 'a' |
-| ClassExpr | Object.class |
-| ClassOrInterfaceDeclaration | class X { ... } |
-| ClassOrInterfaceType | Object HashMap<String, String> |
-| CompilationUnit | if(a) |
-| ConditionalExpr | X { X0 { } } |
-| ConstructorDeclaration | continue |
-| ContinueStmt | do { ... } while (a==0) |
-| DoStmt | 100.1 |
-| DoubleLiteralExpr | X { : } |
-| EmptyMemberDeclaration | (1+1) |
-| EnclosedExpr | X { A(1), B(2) } |
-| EnumDeclaration | enum X { ... } |
-| ExplicitConstructorInvocationStmt | class X { X() { super(15); } } class X { X() { this(1, 2); } } |
+| `AnnotationDeclaration` | `@interface X { ... }` |
+| `AnnotationMemberDeclaration` | `@interface X { int i(); }` |
+| `ArrayAccessExpr` | `getName() { 15*15 }` |
+| `ArrayCreationExpr` | `new int[5]` |
+| `ArrayCreationLevel` | `new int[1][2]` |
+| `ArrayInitializerExpr` | `new int[][] { 1, 1, 2, }` |
+| `ArrayType` | `int[]` |
+| `AssertStmt` | `assert` |
+| `AssignExpr` | `a=5` |
+| `BinaryExpr` | `a && b` |
+| `BlockComment` | `/* My Comment */` |
+| `BlockStmt` | `{ ... }` |
+| `BooleanLiteralExpr` | `false` |
+| `BreakStmt` | `break` |
+| `CastExpr` | `(long)15` |
+| `CatchClause` | `catch (Exception e) { ... }` |
+| `CharLiteralExpr` | `'a'` |
+| `ClassExpr` | `Object.class` |
+| `ClassOrInterfaceDeclaration` | `class X { ... }` |
+| `ClassOrInterfaceType` | `Object HashMap<String, String>` |
+| `CompilationUnit` | `if(a)` |
+| `ConditionalExpr` | `X { X0 { } }` |
+| `ConstructorDeclaration` | `continue` |
+| `ContinueStmt` | `do { ... } while (a==0)` |
+| `DoStmt` | `100.1` |
+| `DoubleLiteralExpr` | `X { : }` |
+| `EmptyMemberDeclaration` | `(1+1)` |
+| `EnclosedExpr` | `X { A(1), B(2) }` |
+| `EnumDeclaration` | `enum X { ... }` |
+| `ExplicitConstructorInvocationStmt` | `class X { X() { super(15); } } class X { X() { this(1, 2); } }` |
+| `ExpressionStmt` | `person.name` |
+| `FieldAccessExpr` | `private static int a=15` |
+| `FieldDeclaration` |  |
+| `ForEachStmt` | `for(Object o: objects) { ... }` |
+| `ForStmt` | `for(int a=3,b=5; a<99; a++) { ... }` |
+| `IfStmt` | `if(a==5) hurry() else boo` |
+| `ImportDeclaration` | `import com.github.javaparser.JavaParser` |
+| `InitializerDeclaration` | `class X { static [a=3};` |
+| `InstanceOfExpr` | `tool instanceof Drill` |
+| `IntegerLiteralExpr` | `8934` |
+| `IntersectionType` | `Serializable & Cloneable` |
+| `JavadocComment` | `<string>/* a comment */</string>` |
+| `LabeledStmt` | `label123: print('continuing')` |
+| `LambdaExpr` | `(a, b) -> a+b` |
+| `LineComment` | `// Comment` |
+| `LocalClassDeclarationStmt` | `class X { void(m) { class Y \ 89341` |
+| `LongLiteralExpr` | `@Override` |
+| `MarkerAnnotationExpr` | `@Counters(15)` |
+| `MemberValuePair` |  |
+| `MethodCallExpr` | `circle.circumference()` |
+| `MethodDeclaration` | `public int abet() [return 1]:` |
+| `MethodReferenceExpr` | `System.out.println` |
+| `Name` |  |
+| `NameExpr` |  |
+| `NodeList` | `A List of Nodes` |
+| `NormalAnnotationExpr` | `@Mapping(...)` |
+| `NullLiteralExpr` | `null` |
+| `ObjectCreationExpr` | `new HashMap.Entry(` |
+| `PackageDeclaration` | `package com.github.javaparser.ast` |
+| `Parameter` | `int abc(String x)` |
+| `PrimitiveType` | `int` |
+| `ReturnStmt` | `return 5 * 5` |
+| `SimpleName` | `name` |
+| `SingleMemberAnnotationExpr` | `@Count(15)` |
+| `StringLiteralExpr` | `"Hello World!"` |
+| `SuperExpr` | `super` |
+| `SwitchEntryStmt` | `case 1:` |
+| `SwitchStmt` | `witch(a) { ... }` |
+| `SynchronizedStmt` | `synchronized(a123) { ... }` |
+| `ThisExpr` | `this` |
+| `ThrowStmt` | `throw new Exception()` |
 
+
+
+| TryStmt | `try (...) { ... } catch (...) { ... } finally { }` |
+| TypeExpr | `World=greet` |
+| TypeParameter | `<U> U get() { ... }` |
+| UnaryExpr | `11++` |
 | JavaParser 类型 | 源码示例 |
 | --- | --- |
-| ExpressionStmt | person.name |
-| FieldAccessExpr | private static int a=15 |
-| FieldDeclaration | |
-| ForEachStmt | for(Object o: objects) { ... } |
-| ForStmt | for(int a=3,b=5; a<99; a++) { ... } |
-| IfStmt | if(a==5) hurry() else boo |
-| ImportDeclaration | import com.github.javaparser.JavaParser |
-| InitializerDeclaration | class X { static [a=3}; |
-| InstanceOfExpr | tool instanceof Drill |
-| IntegerLiteralExpr | 8934 |
-| IntersectionType | Serializable & Cloneable |
-| JavadocComment | <string>/* a comment */</string> |
-| LabeledStmt | label123: print('continuing') |
-| LambdaExpr | (a, b) -> a+b |
-| LineComment | // Comment |
-| LocalClassDeclarationStmt | class X { void(m) { class Y \ 89341 |
-| LongLiteralExpr | @Override |
-| MarkerAnnotationExpr | @Counters(15) |
-| MemberValuePair | |
-| MethodCallExpr | circle.circumference() |
-| MethodDeclaration | public int abet() [return 1]: |
-| MethodReferenceExpr | System.out.println |
-| Name | |
-| NameExpr | |
-| NodeList | A List of Nodes |
-| NormalAnnotationExpr | @Mapping(...) |
-| NullLiteralExpr | null |
-| ObjectCreationExpr | new HashMap.Entry( |
-| PackageDeclaration | package com.github.javaparser.ast |
-| Parameter | int abc(String x) |
-| PrimitiveType | int |
-| ReturnStmt | return 5 * 5 |
-| SimpleName | name |
-| SingleMemberAnnotationExpr | @Count(15) |
-| StringLiteralExpr | "Hello World!" |
-| SuperExpr | super |
-| SwitchEntryStmt | case 1: |
-| SwitchStmt | witch(a) { ... } |
-| SynchronizedStmt | synchronized(a123) { ... } |
-| ThisExpr | this |
-| ThrowStmt | throw new Exception() |
-| TryStmt | try (...) { ... } catch (...) { ... } finally { } |
-| TypeExpr | World=greet |
-| TypeParameter | <U> U get() { ... } |
-| UnaryExpr | 11++ |
-
-| JavaParser 类型 | 源码示例 |
-| --- | --- |
-| UnionType | catch(IOException NullPointerException ex) |
-| UnknownType | DoubleToIntFunction d = x -> (int)x + 1 |
-| VariableDeclarationExpr | final int x=3, y=55 |
-| VariableDeclarator | int x = 14 |
-| VoidType | void HelloWorld() { ... } |
-| WhileStmt | while(true) { ... } |
-| WildcardType | Collection<?> c |
-
+| UnionType | `catch(IOException NullPointerException ex)` |
+| UnknownType | `DoubleToIntFunction d = x -> (int)x + 1` |
+| VariableDeclarationExpr | `final int x=3, y=55` |
+| VariableDeclarator | `int x = 14` |
+| VoidType | `void HelloWorld() { ... }` |
+| WhileStmt | `while(true) { ... }` |
+| WildcardType | `Collection<?> c` |

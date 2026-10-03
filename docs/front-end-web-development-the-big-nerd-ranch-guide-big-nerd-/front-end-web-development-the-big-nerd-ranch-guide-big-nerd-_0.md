@@ -1,251 +1,346 @@
+
 # 前端 Web 开发：Big Nerd Ranch 指南
-
-
 
 ![](img/cover.jpg)
 
+## 献辞
 
+给爸爸妈妈，感谢为我们买了那台电脑。给 Dave 和 Glenn，感谢你们让小弟弟完全独占它。给 Angela，给了我远离屏幕的生活。
 
+— C.A.
 
+给我的爸爸妈妈，感谢你们让我有空间找到自己的道路。给我的妻子，感谢你爱一个宅男。
 
+— T.G.
 
+## 致谢
 
+作为作者，我们可以对打字内容和创建图表享有全部功誉。（耶，我们了！）但事实是，如果没有大批贡献者、合作者和导师的努力，我们仍然盯着空白页发呆。
 
-
-
-# 献辞
-
-| | <samp class="emphasis">给爸爸妈妈，感谢为我们买了那台电脑。给 Dave 和 Glenn，感谢你们让小弟弟完全独占它。给 Angela，给了我远离屏幕的生活。</samp> | |
-| | — C.A. | |
-| | <samp class="emphasis">给我的爸爸妈妈，感谢你们让我有空间找到自己的道路。给我的妻子，感谢你爱一个宅男。</samp> | |
-| | — T.G. | |
-
-# 致谢
-
-作为作者，我们可以对打字内容和创建图表享有全部功誉。（耶，我们了！）但事实事实是，如果没有大批贡献者、合作者和导师的努力，我们仍然盯着空白页发呆。
-
-*   感谢 Aaron Hillegass，他相信我们两个能够创作出对起 Big Nerd Ranch 之名的作品。感谢你无法衡量的信任和支持。
-*   感谢 Matt Mathias，他指导我们完成了本书的开发，特别是在关键的最后几里。你确保了本该花在看猫咪视频或重播《唐顿庄园》上的时间转而被投入到了写作中。
-*   感谢 Brandy Porter，感谢她在多次场合对作者的照顾和（字面意义上的）喂养。你在幕后施展魔力，策划了一系列事件使这项工作的完成成为可能。感谢你。
-*   感谢 Jonathan Martin，我们的共同讲师和语言专家。感谢你热心地地教授作为本书基础的正在进行中的课程材料，并在多次修订中提供考虑周全的批评意见。
-*   感谢我们的校对员、技术评审员和“小白鼠”们：Mike Zornek, Jeremy Sherman, Josh Justice, Jason Reece, Garry Smith, Andrew Jones, Stephen Christopher 和 Bill Phillips。感谢你们的志愿服务。
-*   感谢 Elizabeth Holaday，我们无限耐心且令人安心的编辑。感谢你让我们走出回声室，成为理性的声音，并始终提醒我们读者。
-*   感谢 Ellie Volckhausen，她设计了我们的封面。
-*   感谢我们的校对 Simone Payment，她保持了一致性。
-*   感谢 IntelligentEnglish.com 的 Chris Loper，他设计并制作了本书的印刷版和电子书。他的 DocBook 工具链也让生活变得简单许多。
+- 感谢 Aaron Hillegass，他相信我们两个能够创作出对起 Big Nerd Ranch 之名的作品。感谢你无法衡量的信任和支持。
+- 感谢 Matt Mathias，他指导我们完成了本书的开发，特别是在关键的最后几里。你确保了本该花在看猫咪视频或重播《唐顿庄园》上的时间转而被投入到了写作中。
+- 感谢 Brandy Porter，感谢她在多次场合对作者的照顾和（字面意义上的）喂养。你在幕后施展魔力，策划了一系列事件使这项工作的完成成为可能。感谢你。
+- 感谢 Jonathan Martin，我们的共同讲师和语言专家。感谢你热心地教授作为本书基础的正在进行中的课程材料，并在多次修订中提供考虑周全的批评意见。
+- 感谢我们的校对员、技术评审员和“小白鼠”们：Mike Zornek, Jeremy Sherman, Josh Justice, Jason Reece, Garry Smith, Andrew Jones, Stephen Christopher 和 Bill Phillips。感谢你们的志愿服务。
+- 感谢 Elizabeth Holaday，我们无限耐心且令人安心的编辑。感谢你让我们走出回声室，成为理性的声音，并始终提醒我们读者。
+- 感谢 Ellie Volckhausen，她设计了我们的封面。
+- 感谢我们的校对 Simone Payment，她保持了一致性。
+- 感谢 IntelligentEnglish.com 的 Chris Loper，他设计并制作了本书的印刷版和电子书。他的 DocBook 工具链也让生活变得简单许多。
 
 最后，感谢无数参加一周培训的学生。没有你们的好奇心和问题，这一切都没有意义。这项工作是你们在这些周里带给我们的见解和灵感的反映。我们希望那些水獭让培训变得轻松了一些。
 
-### 添加范围滑块
-### 添加提交和重置按钮
+## 添加范围滑块
 
-# 10. 使用 JavaScript 处理表单
-## 创建 FormHandler 模块
-### jQuery 简介
-### 导入 jQuery
-### 使用选择器配置 FormHandler 实例
-## 添加提交 Handler
-### 提取数据
-### 接收并调用回调
+## 添加提交和重置按钮
 
+## 10. 使用 JavaScript 处理表单
 
+### 创建 FormHandler 模块
 
+#### jQuery 简介
 
-# `npm init`
-# `npm scripts`
-# `Hello, World`
-# `Adding an npm Script`
-# `Serving from Files`
-# `Reading a file with the `fs` module`
-# `Working with the request URL`
-# `Using the `path` module`
-# `Creating a custom module`
-# `Using your custom module`
-# `Error Handling`
-# `For the More Curious: npm Module Registry`
-# `Bronze Challenge: Creating a Custom Error Page`
-# `For the More Curious: MIME Types`
-# `Silver Challenge: Providing a MIME Type Dynamically`
-# `Gold Challenge: Moving Error Handling to Its Own Module`
+#### 导入 jQuery
 
-# 16. 使用 WebSockets 进行即时通信
-## `Setting Up WebSockets`
-## `Testing Your WebSockets Server`
-## `Creating the Chat Server Functionality`
-## `First Chat!`
-## `For the More Curious: socket.io`
-## `For the More Curious: Service`
-## `Bronze Challenge: Repeating?`
-## `Silver Challenge: Speaking`
-## `Gold Challenge: Chat`
+#### 使用选择器配置 FormHandler 实例
 
-# 17. 使用 ES6
-## `Using Babel`
-## `Compiling JavaScript`
-## `The ChatClient`
-## `Class syntax`
-## `Building the `ChatMessage`
-## `Class`
-## `Gold Challenge: ``
+### 添加提交 Handler
 
-# 18. ES6, Continues
-## `Modules as Module`
-## `The `ChatForm`
-## `Bronze Challenge: Message`
-## `Silver Challenge: ``
-## `Gold Challenge: The Adventure`
+#### 提取数据
 
-# IV. Application Architecture
-## `Introduction to Ember`
-## `An MVC Framework`
-## `Installing Ember`
-## `Creating an application`
-## `Starting up the server`
-## `Configuration`
-## `Bronze Challenge: Format`
-## `Silver Challenge: ``
-## `Gold Challenge: Customizing the NavBar`
+#### 接收并调用回调
 
-# 20. Routing, Routes, and Models
-## `generate`
-## `Nesting Routes`
-## `Ember Inspector`
-## `Assigning Models`
-## `beforeModel`
-## `The `Controller`
+## `npm init`
 
-# 21. Models and Data Binding
-## `Model Definitions`
-## `createRecord`
-## `get` and `set`
-## `Computed Properties`
-## `For the More Curious: Retrieving Data`
-## `For the More Curious: Destroying Data`
-## `Bronze Challenge: Changing Computed Property`
-## `Silver Challenge: Flagging New Sightings`
-## `Gold Challenge: Adding Titles`
+## `npm scripts`
 
-# 22. Data – Adapters, Serializers, and Transforms
-## `Adapters`
-## `Content Security`
-## `Serializers`
-## `Transforms`
-## `For the More Curious: Ember CLI`
-## `Silver Challenge: Content Security`
-## `Gold Challenge: Mirage`
+## `Hello, World`
 
-# 23. Views and Templates
-## `Handlebars`
-## `Models`
-## `Helpers`
-## `Conditionals`
-## `Loops with {{each}}`
-## `Binding element attributes`
-## `Links`
-## `Custom Helpers`
-## `Bronze Challenge: Adding Rollovers`
-## `Silver Challenge: Changing the Date Format`
-## `Gold Challenge: Creating a Thumbnail Helper`
+## `Adding an npm Script`
 
-# 24. Controllers
-## `New Sightings`
-## `Editing a Sighting`
-## `Deleting a Sighting`
-## `Route Actions`
-## `Bronze Challenge: Sighting Detail Page`
-## `Silver Challenge: Sighting Date`
-## `Gold Challenge: Adding and Removing Witnesses`
+## `Serving from Files`
 
-# 25. Components
-## `Iterator Items as Components`
-## `Components for DRY Code`
-## `Data Down, Actions Up`
-## `Class Name Bindings`
-## `Data Down`
-## `Actions Up`
-## `Bronze Challenge: Customizing the Alert Message`
-## `Silver Challenge: Making the `NavBar` a Component`
-## `Gold Challenge: Array of Alerts`
+## `Reading a file with the `fs` module`
 
-# 26. Afterword
-## `The Final Challenge`
-## `Shameless Plugs`
-## `Thank You`
- Index
+## `Working with the request URL`
 
+## `Using the `path` module`
 
+## `Creating a custom module`
+
+## `Using your custom module`
+
+## `Error Handling`
+
+## `For the More Curious: npm Module Registry`
+
+## `Bronze Challenge: Creating a Custom Error Page`
+
+## `For the More Curious: MIME Types`
+
+## `Silver Challenge: Providing a MIME Type Dynamically`
+
+## `Gold Challenge: Moving Error Handling to Its Own Module`
+
+## 16. 使用 WebSockets 进行即时通信
+
+### `Setting Up WebSockets`
+
+### `Testing Your WebSockets Server`
+
+### `Creating the Chat Server Functionality`
+
+### `First Chat!`
+
+### `For the More Curious: socket.io`
+
+### `For the More Curious: Service`
+
+### `Bronze Challenge: Repeating?`
+
+### `Silver Challenge: Speaking`
+
+### `Gold Challenge: Chat`
+
+## 17. 使用 ES6
+
+### `Using Babel`
+
+### `Compiling JavaScript`
+
+### `The ChatClient`
+
+### `Class syntax`
+
+### `Building the `ChatMessage`
+
+### `Class`
+
+### `Gold Challenge: ``
+
+## 18. ES6, Continues
+
+### `Modules as Module`
+
+### `The `ChatForm`
+
+### `Bronze Challenge: Message`
+
+### `Silver Challenge: ``
+
+### `Gold Challenge: The Adventure`
+
+## IV. Application Architecture
+
+### `Introduction to Ember`
+
+### `An MVC Framework`
+
+### `Installing Ember`
+
+### `Creating an application`
+
+### `Starting up the server`
+
+### `Configuration`
+
+### `Bronze Challenge: Format`
+
+### `Silver Challenge: ``
+
+### `Gold Challenge: Customizing the NavBar`
+
+## 20. Routing, Routes, and Models
+
+### `generate`
+
+### `Nesting Routes`
+
+### `Ember Inspector`
+
+### `Assigning Models`
+
+### `beforeModel`
+
+### `The `Controller`
+
+## 21. Models and Data Binding
+
+### `Model Definitions`
+
+### `createRecord`
+
+### `get` and `set`
+
+### `Computed Properties`
+
+### `For the More Curious: Retrieving Data`
+
+### `For the More Curious: Destroying Data`
+
+### `Bronze Challenge: Changing Computed Property`
+
+### `Silver Challenge: Flagging New Sightings`
+
+### `Gold Challenge: Adding Titles`
+
+## 22. Data – Adapters, Serializers, and Transforms
+
+### `Adapters`
+
+### `Content Security`
+
+### `Serializers`
+
+### `Transforms`
+
+### `For the More Curious: Ember CLI`
+
+### `Silver Challenge: Content Security`
+
+### `Gold Challenge: Mirage`
+
+## 23. Views and Templates
+
+### `Handlebars`
+
+### `Models`
+
+### `Helpers`
+
+### `Conditionals`
+
+### `Loops with {{each}}`
+
+### `Binding element attributes`
+
+### `Links`
+
+### `Custom Helpers`
+
+### `Bronze Challenge: Adding Rollovers`
+
+### `Silver Challenge: Changing the Date Format`
+
+### `Gold Challenge: Creating a Thumbnail Helper`
+
+## 24. Controllers
+
+### `New Sightings`
+
+### `Editing a Sighting`
+
+### `Deleting a Sighting`
+
+### `Route Actions`
+
+### `Bronze Challenge: Sighting Detail Page`
+
+### `Silver Challenge: Sighting Date`
+
+### `Gold Challenge: Adding and Removing Witnesses`
+
+## 25. Components
+
+### `Iterator Items as Components`
+
+### `Components for DRY Code`
+
+### `Data Down, Actions Up`
+
+### `Class Name Bindings`
+
+### `Data Down`
+
+### `Actions Up`
+
+### `Bronze Challenge: Customizing the Alert Message`
+
+### `Silver Challenge: Making the `NavBar` a Component`
+
+### `Gold Challenge: Array of Alerts`
+
+## 26. Afterword
+
+### `The Final Challenge`
+
+### `Shameless Plugs`
+
+### `Thank You`
+
+## Index
 
 没有一家公司能完全控制浏览器的运行方式。这意味着前端开发者不会获得一个年度一次的 `SDK` 发布，其中包含了他们在未来十二个月内可能需要处理的所有变化。原生平台像是一片结冰的湖面，你可以在上面舒服地滑冰。而 Web 是一条河流；它弯曲、流动迅速，并且在某些地方布满岩石——但这正是它的魅力所在。Web 是目前演变最快的平台。适应变化是前端开发者的生活方式。
 
 本书的目的是教你如何为浏览器开发程序。随着本指南的引导，你将经历构建一系列项目的过程。每个项目都会要求前端技术光谱中不同技术的组合。由于可用的前端工具、库和框架数量极多，本书将重点介绍最核心且可移植的模式和技术。
 
-## 前提条件
+### 前提条件
 
 本书并不是一本编程入门书。它假设你具有编写代码基础知识的经验。你应该熟悉基础类型、函数和对象。
 
 尽管如此，它也不假设你已经认识 `JavaScript`。我们会在你需要时，结合上下文向你介绍 `JavaScript` 概念。
 
-## 本书的结构
+### 本书的结构
 
 本书将引导你编写四个不同的 Web 应用程序。每个应用程序在书中都有对应的章节。每个章节中的每一章都会为你正在构建的应用程序添加新功能。
 
-构建这四个应用程序的工作将带你从前端光谱的一端走向到另一端。
+构建这四个应用程序的工作将带你从前端光谱的一端走到另一端。
 
 | Ottergram |
+| --- |
 | CoffeeRun |
 | Chattrbox |
 | Tracker |
 
 在完成这些应用程序的过程中，你将接触到许多工具，包括：
 
-* `Atom` 文本编辑器以及一些用于处理代码的实用插件
-* 如 `Mozilla Developer Network`（MDN）之类的文档资源
-* 命令行，使用 `OS X Terminal` 应用或 Windows 命令提示符
-* `browser-sync`
-* `Google Chrome’s Developer Tools`
-* `normalize.css`
-* `Bootstrap`
-* `jQuery` 以及如 `crypto-js` 和 `moment` 等库
-* `Node.js`、Node 包管理器 (`npm`) 以及 `nodemon`
-* `WebSockets` 和 `wscat` 模块
-* `Babel`、`Babelify`、`Browserify` 和 `Watchify`
-* `Ember.js` 以及如 `Ember CLI`、`Ember Inspector`、`Ember CLI Mirage` 和 `Handlebars` 等插件
-* `Bower`
-* `Homebrew`
-* `Watchman`
+- `Atom` 文本编辑器以及一些用于处理代码的实用插件
+- 如 `Mozilla Developer Network`（MDN）之类的文档资源
+- 命令行，使用 `OS X Terminal` 应用或 Windows 命令提示符
+- `browser-sync`
+- `Google Chrome’s Developer Tools`
+- `normalize.css`
+- `Bootstrap`
+- `jQuery` 以及如 `crypto-js` 和 `moment` 等库
+- `Node.js`、Node 包管理器 (`npm`) 以及 `nodemon`
+- `WebSockets` 和 `wscat` 模块
+- `Babel`、`Babelify`、`Browserify` 和 `Watchify`
+- `Ember.js` 以及如 `Ember CLI`、`Ember Inspector`、`Ember CLI Mirage` 和 `Handlebars` 等插件
+- `Bower`
+- `Homebrew`
+- `Watchman`
 
-## 如何使用本书
+### 如何使用本书
 
-本书不是一本参考书。它的目标是帮助你跨越最初的坎，让你能够充分利用现有的参考书和食谱书。它基于我们在 `Big Nerd Ranch` 的五天课程，在很大程度上，它是为了从头开始学习的。章节之间环环相扣，跳跃式阅读将毫无意义的。
+本书不是一本参考书。它的目标是帮助你跨越最初的坎，让你能够充分利用现有的参考书和食谱书。它基于我们在 `Big Nerd Ranch` 的五天课程，在很大程度上，它是为了从头开始学习的。章节之间环环相扣，跳跃式阅读将毫无意义。
 
 在我们的课程中，学生学习这些材料，但他们也受益于良好的环境——专门的教室、良好的食物和舒适的白板、一群充满动力的同伴以及一位可以回答问题的导师。
 
 作为读者，你可能希望环境也是类似的。这意味着保证充足的睡眠并找一个安静的地方工作。这些因素也有帮助：
 
-* 与你的朋友或同事建立一个阅读小组。
-* 安排专门的专注时间来学习章节。
-* 参加 `forums.bignerdranch.com` 为本书提供的论坛，你可以在那里讨论书籍并找到错误和解决方案。
-* 找一个了解前端 Web 开发的人来帮助你。
+- 与你的朋友或同事建立一个阅读小组。
+- 安排专门的专注时间来学习章节。
+- 参加 `forums.bignerdranch.com` 为本书提供的论坛，你可以在那里讨论书籍并找到错误和解决方案。
+- 找一个了解前端 Web 开发的人来帮助你。
 
-## 挑战
+### 挑战
 
-本书中的大多数章节都以至少一个挑战结束。挑战是回顾你所学知识并将章节中的工作更进一步一步的机会。我们建议你尽可能多地尝试挑战，以巩固你的知识，并从从我们这里学习 `JavaScript` 开发变为独立进行 `JavaScript` 开发。
+本书中的大多数章节都以至少一个挑战结束。挑战是回顾你所学知识并将章节中的工作更进一步的机会。我们建议你尽可能多地尝试挑战，以巩固你的知识，并从我们这里学习 `JavaScript` 开发变为独立进行 `JavaScript` 开发。
 
 挑战分为三个难度等级：
 
-* **铜牌挑战**通常要求你做一些与章节中进行的内容非常相似的事情。这些挑战强化了你在章节中学到的知识，并迫使你在没有参考布局的情况下输入类似的代码。熟能生巧。
-* **银牌挑战**要求你进行更深层次的挖掘和思考。有时你可能需要使用以前从未见过的函数、事件、标记和样式，但任务仍与章节中的内容相似。
-* **黄金挑战**难度很大，可能需要几个小时才能完成。它们要求你理解章节中的概念，然后独立进行高质量的思考和问题解决。应对这些挑战将为你从事现实世界的 `JavaScript` 开发做好准备。
+- **铜牌挑战**通常要求你做一些与章节中进行的内容非常相似的事情。这些挑战强化了你在章节中学到的知识，并迫使你在没有参考布局的情况下输入类似的代码。熟能生巧。
+- **银牌挑战**要求你进行更深层次的挖掘和思考。有时你可能需要使用以前从未见过的函数、事件、标记和样式，但任务仍与章节中的内容相似。
+- **黄金挑战**难度很大，可能需要几个小时才能完成。它们要求你理解章节中的概念，然后独立进行高质量的思考和问题解决。应对这些挑战将为你从事现实世界的 `JavaScript` 开发做好准备。
 
 在进行任何章节的挑战之前，你应该为你的代码创建一个副本。否则，你所做的更改可能与后续练习不兼容。
 
 如果你迷路了，可以随时访问 `forums.bignerdranch.com` 寻求帮助。
 
-## 进阶好奇者
+### 进阶好奇者
 
 许多章节还有“进阶好奇者”部分。这些章节对书中介绍的话题提供了更深入的解释或额外信息。这些章节中的信息并非绝对必要，但我们希望你会发现它们有趣且有用。
 
-## 使用电子书
+### 使用电子书
 
 如果你在电子阅读器上阅读本书，阅读代码有时可能会很困难。根据你选择的字体大小，较长的代码可能会换到第二行。
 
@@ -259,20 +354,17 @@
 
 如果你在 iPad 上使用 `iBooks` 阅读，我们建议你进入`设置` 应用，选择 `iBooks`，并将`两对齐`关闭、`自动连字符`关闭。
 
-# 第一部分：核心浏览器编程
+## 第一部分：核心浏览器编程
 
-# 第一章：搭建你的开发环境
+### 第一章：搭建你的开发环境
 
-前端开发有无数工具和资源，并且不断产生产生。对于所有水平的开发者来说，选择最好的工具都是一项挑战。在本书的项目中，我们将引导你使用一些我们最喜爱的工具。
+前端开发有无数工具和资源，并且不断产生。对于所有水平的开发者来说，选择最好的工具都是一项挑战。在本书的项目中，我们将引导你使用一些我们最喜爱的工具。
 
-在开始之前，你需要三个基础工具：浏览器、文本编辑器以及用于前端开发中许多技术的良好参考文档。此外，还有一些额外工具——虽然并非不可少，但它们会让你的开发体验更加顺畅和愉快。
+在开始之前，你需要三个基础工具：浏览器、文本编辑器以及用于前端开发中许多技术的良好参考文档。此外，还有一些额外工具——虽然并非必不可少，但它们会让你的开发体验更加顺畅和愉快。
 
+为了本书的需要，我们建议你使用与我们相同的软件，以便从我们的说明和截图中获得最大的益处。本章将引导你安装并配置 `Google Chrome` 浏览器、`Atom` 文本编辑器、`Node.js` 以及许多插件和扩展。你还将了解良好的文档选择，并学习一个关于在 Mac 和 Windows 上使用 `command line`（命令行）的快速课程。在下一章中，当你开始第一个项目时，你将开始使用这些资源。
 
-
-
-为了本书的需要，我们建议你使用与我们相同的软件，以便从我们的说明和截图中获得最大的益处。本章将引导你安装并配置 `Google Chrome` 浏览器、`Atom` 文本编辑器、`Node.js` 以及许多插件和扩展。你还将将了解良好的文档选择，并学习一个关于在 Mac 和 Windows 上使用 `command line`（命令行）的快速课程。在下一章中，当你开始第一个项目时，你将开始使用这些资源。
-
-## 安装 Google Chrome
+#### 安装 Google Chrome
 
 你的电脑默认应该已经安装了一个浏览器，但最适合前端开发使用的浏览器是 `Google Chrome`。如果你还没有最新版本的 `Chrome`，可以 [`www.google.com/​chrome/​browser/​desktop`](https://www.google.com/chrome/browser/desktop/) 获取（图 1.1](#ch01.html_fig-chrome-download-page "Figure 1.1  下载 Google Chrome")）。
 
@@ -280,7 +372,7 @@
 
 ![下载 Google Chrome](img/chrome-download-page.png)
 
-## 安装并配置 Atom
+#### 安装并配置 Atom
 
 在众多的文本编辑器程序中，GitHub 开发的 `Atom` 编辑器是前端开发最好的选择之一。它是一个很好的选择，因为它高度可配置，拥有许多插件可以帮助编写代码，并且免费下载和使用。
 
@@ -292,13 +384,15 @@
 
 按照对应平台的安装说明进行操作。安装 `Atom` 后，你还会想要安装几个插件。
 
-### Atom 插件
+##### Atom 插件
+
+
 
 你对文本编辑器的主要需求是文档查询、自动补全、代码格式化和代码静态检查（linting，稍后会详细介绍）。`Atom` 默认提供了其中一些功能，但安装几个插件会让它变得更好。
 
 打开 `Atom` 并显示其设置（Settings）界面。在 Mac 上，通过选择 `Atom` → `Preferences...`（偏好设置）或使用快捷键 `Command-,`（即 Command 键加逗号）完成。在 Windows 上，你可以通过 `File` → `Settings`（设置）或使用快捷键 `Ctrl-,` 访问。
 
-在设置界面的左侧，点击 `+ Install`（安装）（图 1.3](#ch01s02.html_fig-atom-settings-install "Figure 1.3  Atom 的安装包界面"）。
+在设置界面的左侧，点击 `+ Install`（安装）（图 1.3](#ch01s02.html_fig-atom-settings-install "Figure 1.3 Atom 的安装包界面"）。
 
 **图 1.3 Atom 的安装包界面**
 
@@ -306,49 +400,49 @@
 
 在这里，你可以通过名称搜索插件包。首先搜索“emmet”。
 
-编写大量的 HTML 可能非常枯燥且容易出错。`emmet` 插件（图 1.4](#ch01s02.html_fig-emmet-install "Figure 1.4  安装 emmet")）让你能够使用方便的简写编写格式良好的 HTML。点击 `Install`（安装）按钮获取 `emmet`。
+编写大量的 HTML 可能非常枯燥且容易出错。`emmet` 插件（图 1.4](#ch01s02.html_fig-emmet-install "Figure 1.4 安装 emmet")）让你能够使用方便的简写编写格式良好的 HTML。点击 `Install`（安装）按钮获取 `emmet`。
 
 **图 1.4 安装 emmet**
 
 ![安装 emmet](img/package-emmet.png)
 
-接下来，搜索“atom-beautify”。`atom-beautify` 插件（图 1.5](#ch01s02.html_fig-beautify-install "Figure 1.5  安装 atom-beautify"）有助于处理代码缩进，从而提高可读性。再次点击 `Install` 按钮获取该插件。
+接下来，搜索“atom-beautify”。`atom-beautify` 插件（图 1.5](#ch01s02.html_fig-beautify-install "Figure 1.5 安装 atom-beautify"）有助于处理代码缩进，从而提高可读性。再次点击 `Install` 按钮获取该插件。
 
 **图 1.5 安装 atom-beautify**
 
 ![安装 atom-beautify](img/package-atom-beautify.png)
 
-搜索并安装 `autocomplete-paths` 插件（图 1.6](#ch01s02.html_fig-autocomplete-install "Figure 1.6  安装 autocomplete-paths"）。通常情况下，你的代码需要引用项目中的其他文件和文件夹。该插件通过在输入时在自动补全菜单中提供文件名来帮助。
+搜索并安装 `autocomplete-paths` 插件（图 1.6](#ch01s02.html_fig-autocomplete-install "Figure 1.6 安装 autocomplete-paths"）。通常情况下，你的代码需要引用项目中的其他文件和文件夹。该插件通过在输入时在自动补全菜单中提供文件名来帮助。
 
 **图 1.6 安装 autocomplete-paths**
 
 ![安装 autocomplete-paths](img/package-autocomplete-paths.png)
 
-你下一个要安装的包是 `api-docs`（图 1.7](#ch01s02.html_fig-api-docs-install "Figure 1.7  安装 api-docs"），它让你根据关键词查找文档。它会在编辑器的单独标签页中显示文档。
+你下一个要安装的包是 `api-docs`（图 1.7](#ch01s02.html_fig-api-docs-install "Figure 1.7 安装 api-docs"），它让你根据关键词查找文档。它会在编辑器的单独标签页中显示文档。
 
 **图 1.7 安装 api-docs**
 
 ![安装 api-docs](img/package-api-docs.png)
 
-接下来，搜索并安装 `linter` 包（图 1.8](#ch01s02.html_fig-linter-install "Figure 1.8  安装 linter"）。`linter` 是一个检查代码语法和风格的程序。确保你找到并安装了名为“linter”的包。这是一个基础 linter，可以与特定语言的插件配合。为了使用下方的其他 linter 插件，你需要它。
+接下来，搜索并安装 `linter` 包（图 1.8](#ch01s02.html_fig-linter-install "Figure 1.8 安装 linter"）。`linter` 是一个检查代码语法和风格的程序。确保你找到并安装了名为“linter”的包。这是一个基础 linter，可以与特定语言的插件配合。为了使用下方的其他 linter 插件，你需要它。
 
 **图 1.8 安装 linter**
 
 ![安装 linter](img/package-linter.png)
 
-你有三个 `linter` 辅助插件想要安装，用于检查 CSS、HTML 和 JavaScript。从 `linter-csslint` 开始（图 1.9](#ch01s02.html_fig-csslint-install "Figure 1.9  安装 linter-csslint"），它确保你的 CSS 语法正确，并对编写高效 CSS 提供建议。
+你有三个 `linter` 辅助插件想要安装，用于检查 CSS、HTML 和 JavaScript。从 `linter-csslint` 开始（图 1.9](#ch01s02.html_fig-csslint-install "Figure 1.9 安装 linter-csslint"），它确保你的 CSS 语法正确，并对编写高效 CSS 提供建议。
 
 **图 1.9 安装 linter-csslint**
 
 ![安装 linter-csslint](img/package-linter-css.png)
 
-下一个要安装的 `linter` 辅助插件是 `linter-htmlhint`（图 1.10](#ch01s02.html_fig-htmlhint-install "Figure 1.10  安装 linter-htmlhint"），它确认你的 HTML 格式正确。它会警告你标签不匹配的问题。
+下一个要安装的 `linter` 辅助插件是 `linter-htmlhint`（图 1.10](#ch01s02.html_fig-htmlhint-install "Figure 1.10 安装 linter-htmlhint"），它确认你的 HTML 格式正确。它会警告你标签不匹配的问题。
 
 **图 1.10 安装 linter-htmlhint**
 
 ![安装 linter-htmlhint](img/package-linter-html.png)
 
-最后一个要安装的 `linter` 辅助插件是 `linter-eslint`（图 1.11](#ch01s02.html_fig-eslint-install "Figure 1.11  安装 linter-eslint"）。该插件检查 JavaScript 的语法，并可以配置为检查代码的风格和格式（例如，缩进多少空格，注释前后留多少空行）。
+最后一个要安装的 `linter` 辅助插件是 `linter-eslint`（图 1.11](#ch01s02.html_fig-eslint-install "Figure 1.11 安装 linter-eslint"）。该插件检查 JavaScript 的语法，并可以配置为检查代码的风格和格式（例如，缩进多少空格，注释前后留多少空行）。
 
 **图 1.11 安装 linter-eslint**
 
@@ -360,12 +454,9 @@ Chrome 和 Atom 现在已准备好进行前端开发。完成编码环境还需�
 
 前端开发与 iOS 和 Android 等平台的编程有所不同。除了明显的差异外，前端技术除了技术规范外没有官方的开发者文档。这意味着你需要从其他地方寻求指导。我们建议你熟悉以下资源，并在阅读本书以及继续进行前端开发时经常查阅。
 
-
-
-
 Mozilla 开发者网络（MDN）是处理 HTML、CSS 和 JavaScript 相关任何内容的最佳参考。访问它的方法方法是 [devdocs.io](http://devdocs.io)，这是一个出的文档接口（图 1.12）。它从 MDN 获取核心前端技术的文档——并且可以离线工作，因此你即使在没有互联网连接时也可以查看。
 
-**图 1.12  通过 `devdocs.io`访问文档**
+**图 1.12 通过 `devdocs.io`访问文档**
 
 ![通过 devdocs.io 访问文档](img/devdocs-io.png)
 
@@ -373,13 +464,13 @@ Mozilla 开发者网络（MDN）是处理 HTML、CSS 和 JavaScript 相关任何
 
 你也可以使用 MDN 的网站，[developer.mozilla.org/en-US/](https://developer.mozilla.org/en-US/)（图 1.13），或简单地将“MDN”作为搜索引擎关键词来找到你需要的信息。
 
-**图 1.13  Mozilla 开发者网络网站**
+**图 1.13 Mozilla 开发者网络网站**
 
 ![Mozilla 开发者网络网站](img/mdn.png)
 
 另一个值得关注的网站是 [stackoverflow.com](http://stackoverflow.com)（图 1.14）。从官方角度来说，这不是文档来源。它是开发者可以互相询问代码的地方。答案的质量差不齐，但通常非常详尽且非常有帮助。因此它是一个很有用的资源——只要你记住由于其众包性质，这些答案并不是决定性的。
 
-**图 1.14  Stack Overflow 网站**
+**图 1.14 Stack Overflow 网站**
 
 ![Stack Overflow 网站](img/stackoverflow.png)
 
@@ -391,25 +482,25 @@ Web 技术始终在变化。对功能和 API 的支持随浏览器和时间而�
 
 要在 Mac 上访问命令行，打开 `Finder` 并进入 `Applications` 文件夹，然后进入 `Utilities` 文件夹。找到并打开 `Terminal` 程序（图 1.15）。
 
-**图 1.15  在 Mac 上查找 Terminal 应用**
+**图 1.15 在 Mac 上查找 Terminal 应用**
 
 ![在 Mac 上查找 Terminal 应用](img/mac-finder-utilities.png)
 
 你应该会看到一个看起来像[图 1.16]的窗口。
 
-**图 1.16  Mac 命令行**
+**图 1.16 Mac 命令行**
 
 ![Mac 命令行](img/mac-terminal.png)
 
 要在 Windows 上访问命令行，进入启动菜单并搜索“cmd”。找到并打开 `Command Prompt` 程序（图 1.17）。
 
-**图 1.17  在 Windows 上查找 Command Prompt 程序**
+**图 1.17 在 Windows 上查找 Command Prompt 程序**
 
 ![在 Windows 上查找 Command Prompt](img/windows-cortana-cmd.png)
 
 点击它来运行标准的 Windows 命令行界面，它看起来像[图 1.18]。
 
-**图 1.18  Windows 命令行**
+**图 1.18 Windows 命令行**
 
 ![Windows 命令行](img/windows-cmd.png)
 
@@ -419,13 +510,9 @@ Web 技术始终在变化。对功能和 API 的支持随浏览器和时间而�
 
 命令行是基于位置的。这意味着在任何给定时刻，它都“位于”文件结构中的特定目录，你输入的任何命令都将在该目录内执行。命令行提示符显示它所在目录的缩略版本。要在 Mac 上查看完整路径，请输入命令 `pwd`（代表“print working directory”，即打印工作目录），如[图 1.19]所示。
 
-**图 1.19  在 Mac 上使用 `pwd` 显示当前路径**
+**图 1.19 在 Mac 上使用 `pwd` 显示当前路径**
 
 ![在 Mac 上使用 pwd 显示当前路径](img/mac-terminal-pwd.png)
-
-
-
-
 
 ### 图 1.21 切换和检查目录
 
@@ -437,7 +524,7 @@ Web 技术始终在变化。对功能和 API 的支持随浏览器和时间而�
 
 ![一个文件结构示例](img/finder-folder-structure.png)
 
-假设你处于 `<samp class="filename">ottergram</samp>` 目录，想要直接进入 `<samp class="filename">coffeerun</samp>` 目录下的 `<samp class="filename">stylesheets</samp>` 目录。你可以使用 `cd` 后加上路径，该路径的意思是“当前所在父目录的 `<samp class="filename">coffeerun</samp>` 目录下的 `<samp class="filename">stylesheets</samp>` 目录”：
+假设你处于 `ottergram` 目录，想要直接进入 `coffeerun` 目录下的 `stylesheets` 目录。你可以使用 `cd` 后加上路径，该路径的意思是“当前所在父目录的 `coffeerun` 目录下的 `stylesheets` 目录”：
 
 ```
 cd ../coffeerun/stylesheets
@@ -479,7 +566,7 @@ dir ottergram
 
 ### 获取管理员权限
 
-在某些版本的 OS X 和 Windows 上，你需要`<samp class="firstterm">superuser</samp>` 权限或管理员权限才能运行某些命令，例如安装软件或修改受保护文件的命令。
+在某些版本的 OS X 和 Windows 上，你需要`superuser` 权限或管理员权限才能运行某些命令，例如安装软件或修改受保护文件的命令。
 
 在 Mac 上，你可以通过在命令前加上 `sudo` 来给自己赋予权限。当你第一次在 Mac 上使用 `sudo` 时，它会给你一个严肃的警告，如图 1.25 所示。
 
@@ -489,7 +576,7 @@ dir ottergram
 
 `sudo` 在以超级用户身份运行命令之前会提示你输入密码。在你输入时，按键不会回显，因此请务必小心输入。
 
-在 Windows 上，如果你需要给自己赋予权限，可以在打开命令行界面的过程中完成。在 Windows 的 `<samp class="guimenu">开始菜单</samp>` 中找到命令提示符，右键点击它，并选择`<samp class="guilabel">以管理员身份运行</samp>`（图 1.26）。你在此命令提示符中运行的任何命令将以超级用户身份运行，因此请小心。
+在 Windows 上，如果你需要给自己赋予权限，可以在打开命令行界面的过程中完成。在 Windows 的 `开始菜单` 中找到命令提示符，右键点击它，并选择`以管理员身份运行`（图 1.26）。你在此命令提示符中运行的任何命令将以超级用户身份运行，因此请小心。
 
 ### 图 1.26 以管理员身份打开命令提示符
 
@@ -503,18 +590,15 @@ dir ottergram
 
 开始第一个项目之前，还有最后一个配置步骤。
 
-`<samp class="application">Node.js</samp>`（简称 `<samp class="application">Node</samp>`）允许你从命令行使用 JavaScript 编写的程序。大多数前端开发工具都是为配合`<samp class="application">Node.js</samp>` 使用而编写。你将在第 15 章中学习更多关于`<samp class="application">Node.js</samp>`的知识，但你现在就可以开始使用依赖它的工具——`browser-sync`。
+`Node.js`（简称 `Node`）允许你从命令行使用 JavaScript 编写的程序。大多数前端开发工具都是为配合`Node.js` 使用而编写。你将在第 15 章中学习更多关于`Node.js`的知识，但你现在就可以开始使用依赖它的工具——`browser-sync`。
 
-通过 [<samp class="uri">nodejs.org</samp>](https://nodejs.org/en/) 下载安装程序来安装`<samp class="application">Node</samp>`（图 1.27）。
+通过 [nodejs.org](https://nodejs.org/en/) 下载安装程序来安装`Node`（图 1.27）。
 
 ### 图 1.27 下载 Node.js
 
 ![下载 Node.js](img/nodejs-download-site.png)
 
-书中使用了 `<samp class="application">Node.js</samp>`，你可能会看到不同的版本。`<samp class="application">Node.js</samp>` 适用于。
-
-
-
+书中使用了 `Node.js`，你可能会看到不同的版本。`Node.js` 适用于。
 
 # 建立你的第一个项目
 
@@ -534,7 +618,7 @@ dir ottergram
 
 这种对话会持续一段时间，有时会持续数千毫秒（图 2.1）。
 
-**图 2.1  浏览器发送请求，服务器响应**
+**图 2.1 浏览器发送请求，服务器响应**
 
 ![浏览器发送请求，服务器响应](img/request-response.png)
 
@@ -546,61 +630,61 @@ dir ottergram
 
 在第 1 章中，你为书中的项目创建一个文件夹，同时也为 Ottergram 创建了一个文件夹。启动你的 `Atom` 文本编辑器，点击 `File`（文件）→ `Open`（或在 Windows 上点击 `File` → `Open Folder...`）打开 `ottergram` 文件夹。在对话框中，导航到 `front-end-dev-book` 文件夹并选择 `ottergram` 文件夹。点击 `Open` 告诉 `Atom` 使用此文件夹（图 2.2）。
 
-**图 2.2  在 Atom 中打开你的项目文件夹**
+**图 2.2 在 Atom 中打开你的项目文件夹**
 
 ![在 Atom 中打开你的项目文件夹](img/atom-file-open-dialog.png)
 
 你会在 `Atom` 的左侧面板看到 `ottergram` 文件夹。此面板用于在项目的文件和文件夹之间导航。
 
-你将使用 `Atom` 在 `ottergram` 项目文件夹内创建一些文件和文件夹。在左侧面板 Control-点击（右键点击）`ottergram`，并在弹出菜单中点击 `New File`（新文件）。会提示你为新文件命名。输入 `index.html` 并按回车键（图 2.3）。
 
-**图 2.3  在 Atom 中创建新文件**
+
+你将使用`Atom`在`ottergram`项目文件夹内创建一些文件和文件夹。在左侧面板 Control-点击（右键点击）`ottergram`，并在弹出菜单中点击`New File`（新文件）。会提示你为新文件命名。输入`index.html`并按回车键（图 2.3）。
+
+**图 2.3 在 Atom 中创建新文件**
 
 ![在 Atom 中创建新文件](img/new-file-prompt.png)
 
-你可以使用相同的过程通过 `Atom` 创建文件夹。再次在左侧面板 Control-点击（右键点击）`ottergram`，但这次在弹出窗口中点击 `New Folder`（新文件夹）。在出现的提示中输入名称 `stylesheets`（图 2.4）。
+你可以使用相同的过程通过`Atom`创建文件夹。再次在左侧面板 Control-点击（右键点击）`ottergram`，但这次在弹出窗口中点击`New Folder`（新文件夹）。在出现的提示中输入名称`stylesheets`（图 2.4）。
 
-**图 2.4  在 Atom 中创建新文件夹**
+**图 2.4 在 Atom 中创建新文件夹**
 
 ![在 Atom 中创建新文件夹](img/new-folder-prompt.png)
 
-最后，在 `stylesheets` 文件夹中创建一个名为 `styles.css` 的文件：在左侧面板 Control-点击（右键点击）`stylesheets` 并选择 `New File`。提示符会预填充文本“stylesheets/”。之后，输入 `styles.css` 并按回车键（图 2.5）。
+最后，在`stylesheets`文件夹中创建一个名为`styles.css`的文件：在左侧面板 Control-点击（右键点击）`stylesheets`并选择`New File`。提示符会预填充文本“stylesheets/”。之后，输入`styles.css`并按回车键（图 2.5）。
 
-**图 2.5  在 Atom 中创建新的 CSS 文件**
+**图 2.5 在 Atom 中创建新的 CSS 文件**
 
 ![在 Atom 中创建新的 CSS 文件](img/new-css-file-prompt.png)
 
 完成后，你的项目文件夹应该看起来像图 2.6。
 
-**图 2.6  Ottergram 的初始文件和文件夹**
+**图 2.6 Ottergram 的初始文件和文件夹**
 
 ![Ottergram 的初始文件和文件夹](img/initial-folder-setup.png)
 
-关于文件和文件夹的结构或命名并没有规定。然而，Ottergram（与书中的其他项目一样）遵循了许多前端开发者使用的约定。你的 `index.html` 文件将包含你的 HTML 代码。将主 HTML 文件命名为 `index.html` 可以追溯到网页早期，这种约定一直延续至今。`stylesheets` 文件夹正如其名，将包含 Ottergram 的样式信息文件。这些将是 CSS，即“级联表”文件。有时开发者会根据 CSS 文件所属的页面或网站来命名，例如 `header.css` 或 `blog.css`。Ottergram 是一个简单的项目，只需要一个文件，因此你将其命名为 `styles.css` 以反映其全局作用。
+关于文件和文件夹的结构或命名并没有规定。然而，Ottergram（与书中的其他项目一样）遵循了许多前端开发者使用的约定。你的`index.html`文件将包含你的 HTML 代码。将主 HTML 文件命名为`index.html`可以追溯到网页早期，这种约定一直延续至今。`stylesheets`文件夹正如其名，将包含 Ottergram 的样式信息文件。这些将是 CSS，即“级联表”文件。有时开发者会根据 CSS 文件所属的页面或网站来命名，例如`header.css`或`blog.css`。Ottergram 是一个简单的项目，只需要一个文件，因此你将其命名为`styles.css`以反映其全局作用。
 
 ### 初始 HTML
 
-开始编码吧。在 `Atom` 中打开 `index.html` 并添加一些基础 HTML 开始。
+开始编码吧。在`Atom`中打开`index.html`并添加一些基础 HTML 开始。
 
-从输入 `html` 开始。`Atom` 将为你提供自动补全选项，如图 2.7 所示。（如果没有，请确保你已按照第 1 章的说明安装了 `emmet` 插件。）
+从输入`html`开始。`Atom`将为你提供自动补全选项，如图 2.7 所示。（如果没有，请确保你已按照第 1 章的说明安装了`emmet`插件。）
 
-**图 2.7  Atom 的自动补全菜单**
+**图 2.7 Atom 的自动补全菜单**
 
 ![Atom 的自动补全菜单](img/html-autocomplete.png)
 
-按下回车键，`Atom` 将为你提供基础 HTML 元素（图 2.8）。
+按下回车键，`Atom`将为你提供基础 HTML 元素（图 2.8）。
 
-**图 2.8  使用自动补全创建 HTML**
+**图 2.8 使用自动补全创建 HTML**
 
 ![使用自动补全创建 HTML](img/html5-doc.png)
 
-你的光标位于 `<title>` 和 `</title>` 之间——即起始和结束的 `title` 标签之间。输入“ottergram”为项目命名。现在，点击将光标放在起始和结束的 `body` 标签之间的空行中。在那里，输入“header”并按回车键。`Atom` 将文本“header”转换为起始和结束的 `header` 标签，并在之间留有空行（图 2.9）。
+你的光标位于`<title>`和`</title>`之间——即起始和结束的`title`标签之间。输入“ottergram”为项目命名。现在，点击将光标放在起始和结束的`body`标签之间的空行中。在那里，输入“header”并按回车键。`Atom`将文本“header”转换为起始和结束的`header`标签，并在之间留有空行（图 2.9）。
 
-**图 2.9  使用自动补全创建 header 标签**
+**图 2.9 使用自动补全创建 header 标签**
 
 ![使用自动补全创建 header 标签](img/header-autocomplete.png)
-
-
 
 接下来，输入“h1”并按回车键。再次，你的文本被转换成了标签，但这次没有空行。再次输入文本“ottergram”。这将是出现在你网页上的标题。
 
@@ -621,30 +705,30 @@ dir ottergram
 </html>
 ```
 
-`Atom` 和 `emmet` 共同为你节省了一些打字时间，并帮助你构建了格式良好的初始 HTML。
+`Atom`和`emmet`共同为你节省了一些打字时间，并帮助你构建了格式良好的初始 HTML。
 
-让我们检查你的代码。第一行 `<!doctype html>` 定义了 `doctype`——它告诉浏览器文档是用哪个版本的 HTML 编写的。浏览器可能会根据 `doctype` 略有不同地渲染或绘制页面。在这里，`doctype` 指定的是 HTML5。
+让我们检查你的代码。第一行`<!doctype html>`定义了`doctype`——它告诉浏览器文档是用哪个版本的 HTML 编写的。浏览器可能会根据`doctype`略有不同地渲染或绘制页面。在这里，`doctype`指定的是 HTML5。
 
-早期版本的 HTML 通常有很长、复杂且难以记忆的 `doctypes`，例如：
+早期版本的 HTML 通常有很长、复杂且难以记忆的`doctypes`，例如：
 
 ```
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 ```
 
-通常，人们在每次创建新文档时都必须查找 `doctype`。
+通常，人们在每次创建新文档时都必须查找`doctype`。
 
-在 HTML5 中，`doctype` 既短又简洁。它将在书中所有的项目中被反复使用，你也应该在你的应用中使用它。
+在 HTML5 中，`doctype`既短又简洁。它将在书中所有的项目中被反复使用，你也应该在你的应用中使用它。
 
-在 `doctype` 之后是一些基础的 HTML 标记，由 `head` 和 `body` 组成。
+在`doctype`之后是一些基础的 HTML 标记，由`head`和`body`组成。
 
-`head` 将包含有关文档的信息以及浏览器应该如何处理该文档。例如，文档标题、页面使用的 CSS 或 JavaScript 文件，以及文档最后修改时间都包含在 `head` 中。
+`head`将包含有关文档的信息以及浏览器应该如何处理该文档。例如，文档标题、页面使用的 CSS 或 JavaScript 文件，以及文档最后修改时间都包含在`head`中。
 
-在这里，`head` 包含一个 `<meta>` 标签。`<meta>` 标签为提供提供有关本身的信息，例如文档作者的姓名或搜索引擎的关键词。Ottergram 中的 `<meta>` 标签 `<meta charset="utf-8">` 指定文档使用 UTF-8 字符集编码，该字符集包含了所有的 Unicode 字符。在你的文档中使用此标签，以便最广泛的浏览器能够正确解释它们，特别是当你预计会有国际流量时。
+在这里，`head`包含一个`<meta>`标签。`<meta>`标签为提供提供有关本身的信息，例如文档作者的姓名或搜索引擎的关键词。Ottergram 中的`<meta>`标签`<meta charset="utf-8">`指定文档使用 UTF-8 字符集编码，该字符集包含了所有的 Unicode 字符。在你的文档中使用此标签，以便最广泛的浏览器能够正确解释它们，特别是当你预计会有国际流量时。
 
-`body` 将包含代表你页面内容的所有 HTML 代码：出现在页面上的所有图像、链接、文本、按钮和视频。
+`body`将包含代表你页面内容的所有 HTML 代码：出现在页面上的所有图像、链接、文本、按钮和视频。
 
-大多数标签都封装着其他内容。看看你包含的 `h1` 标题；它的结构已在图 2.10 所示。
+大多数标签都封装着其他内容。看看你包含的`h1`标题；它的结构已在图 2.10 所示。
 
 **图 2.10 简单 HTML 标签的结构**
 
@@ -652,13 +736,13 @@ dir ottergram
 
 HTML 代表“超文本标记语言（hypertext markup language）”。标签被用来“标记”你的内容，指定它们的用途——例如标题、列表项目和链接。
 
-一组标签封装的内容也可以包含其他 HTML。注意，例如，`<header>` 标签封装了上面所示的 `<h1>` 标签（而 `<body>` 标签封装了 `<header>`！）。
+一组标签封装的内容也可以包含其他 HTML。注意，例如，`<header>`标签封装了上面所示的`<h1>`标签（而`<body>`标签封装了`<header>`！）。
 
 有许多标签可以选择——超过 140 种。要查看它们的列表，请访问 MDN 的 HTML 元素参考，地址位于 [developer.mozilla.org/en-US/docs/Web/HTML/Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)。该参考包含了对每个元素的简要描述，并按用法对元素进行分组（例如：文本内容、内容分节或多媒体）。
 
 ### 链接样式表
 
-在样式表中，在第 3 章 中，使用 `<link>` 标签将外部样式表连接到 HTML 文档。`<link>` 标签有两个属性，告诉浏览器 `stylesheets.css`。你将 `rel` 属性设置为 `"stylesheet"`，让浏览器知道它的关系。`href` 属性向 `stylesheets` 发起请求。
+在样式表中，在第 3 章 中，使用`<link>`标签将外部样式表连接到 HTML 文档。`<link>`标签有两个属性，告诉浏览器`stylesheets.css`。你将`rel`属性设置为`"stylesheet"`，让浏览器知道它的关系。`href`属性向`stylesheets`发起请求。
 
 ```
 <!doctype html>
@@ -675,7 +759,7 @@ HTML 代表“超文本标记语言（hypertext markup language）”。标签�
     ...
 ```
 
-`<link>` 标签是将将样式表连接到 HTML 文档的方式。它有两个属性（图 2.11）所示（属性的顺序并不重要）。
+`<link>`标签是将将样式表连接到 HTML 文档的方式。它有两个属性（图 2.11）所示（属性的顺序并不重要）。
 
 **图 2.11 带有属性的标签**
 
@@ -683,7 +767,7 @@ HTML 代表“超文本标记语言（hypertext markup language）”。标签�
 
 ### 添加内容
 
-没有内容的网页就像没有咖啡一样。你将使用 `<ul>` 标签添加一个无序列表（即项目符号列表）。在列表中，你包含五个 `<li>` 标签，在每个列表项目中你将包含由 `<span>` 标签封装的文本。
+没有内容的网页就像没有咖啡一样。你将使用`<ul>`标签添加一个无序列表（即项目符号列表）。在列表中，你包含五个`<li>`标签，在每个列表项目中你将包含由`<span>`标签封装的文本。
 
 ```html
 <!doctype html>
@@ -718,7 +802,7 @@ HTML 代表“超文本标记语言（hypertext markup language）”。标签�
 </html>
 ```
 
-嵌套在 `<li>` 标签内部的 `<span>` 标签没有特殊含义。它们是内容的通用容器。你将在 Ottergram 中用它们进行样式处理，并在继续阅读本书时将看到其他容器元素的示例。
+嵌套在`<li>`标签内部的`<span>`标签没有特殊含义。它们是内容的通用容器。你将在 Ottergram 中用它们进行样式处理，并在继续阅读本书时将看到其他容器元素的示例。
 
 接下来，你将为你输入的名称添加水獭的图像。
 
@@ -726,12 +810,9 @@ HTML 代表“超文本标记语言（hypertext markup language）”。标签�
 
 书中所有项目的资源文件位于 [www.bignerdranch.com/downloads/front-end-dev-resources.zip](http://www.bignerdranch.com/downloads/front-end-dev-resources.zip)。它们包含了由 Michael L. Baird、Joe Robertson 和 Agunther 拍摄的五张 Creative Commons 许可的水獭图像，发现于 [commons.wikimedia.org](https://commons.wikimedia.org)。
 
-下载并解压资源。在 `ottergram-resources` 文件夹中找到 `img` 文件夹。将 `img` 文件夹复制到你的 `ottergram/` 项目目录。（该 .zip 包含其他资源，但目前你只需要 `img` 文件夹。）
+下载并解压资源。在`ottergram-resources`文件夹中找到`img`文件夹。将`img`文件夹复制到你的`ottergram/`项目目录。（该 .zip 包含其他资源，但目前你只需要`img`文件夹。）
 
-
-
-[content]
-你希望列表不仅包含标题，还包含可以点击的缩略图。你将通过为 `ul` 中的每个项目添加锚点标签和图像标签来实现这一目标。在你输入这些内容后，我们将详细解释这些更改。（如果你使用自动补全功能，请注意你需要移动 `</a>` 标签，使其紧跟在 `<span>` 标签之后。）
+你希望列表不仅包含标题，还包含可以点击的缩略图。你将通过为`ul`中的每个项目添加锚点标签和图像标签来实现这一目标。在你输入这些内容后，我们将详细解释这些更改。（如果你使用自动补全功能，请注意你需要移动`</a>`标签，使其紧跟在`<span>`标签之后。）
 
 ```
 ...
@@ -770,29 +851,29 @@ HTML 代表“超文本标记语言（hypertext markup language）”。标签�
 ...
 ```
 
-如果你的代码行没有良好对齐，你可以利用已经安装的 `<samp class="application">atom-beautify</samp>` 插件。点击 `<samp class="guimenu">Packages</samp>` → `<samp class="guisubmenu">Atom Beautify</samp>` → `<samp class="guimenuitem">Beautify</samp>`，代码就会自动为你对齐并缩进。
+如果你的代码行没有良好对齐，你可以利用已经安装的`atom-beautify`插件。点击`Packages` → `Atom Beautify` → `Beautify`，代码就会自动为你对齐并缩进。
 
 让我们来看看你添加了的内容。
 
-`<a>` 标签是 `anchor`（锚点）标签。锚点标签让页面上的元素变得可点击，从而将用户带到另一个页面。它们通常被称为“链接（links）”，但注意：它们与你之前使用的 `<link>` 标签不同。
+`<a>`标签是`anchor`（锚点）标签。锚点标签让页面上的元素变得可点击，从而将用户带到另一个页面。它们通常被称为“链接（links）”，但注意：它们与你之前使用的`<link>`标签不同。
 
-锚点标签有一个 `href` 属性，指示锚点指向的资源。通常该值是一个网页地址。但有时，你并不希望链接跳转到任何地方。目前的情况如此，所以你为 `href` 属性分配了“占位”值 `#`。这会让浏览器在点击图像时滚动到页面顶部。稍后，你将使用锚点标签在点击缩略图时打开图片的放大版本。
+锚点标签有一个`href`属性，指示锚点指向的资源。通常该值是一个网页地址。但有时，你并不希望链接跳转到任何地方。目前的情况如此，所以你为`href`属性分配了“占位”值`#`。这会让浏览器在点击图像时滚动到页面顶部。稍后，你将使用锚点标签在点击缩略图时打开图片的放大版本。
 
-在锚点标签内部，你添加了 `<img>` 或 `image` 标签，其 `src` 属性指示你之前添加的 `<samp class="filename">img</samp>` 目录中的文件名。你还为图像标签添加了描述性的 `alt` 属性。`alt` 属性包含在图像无法加载时替换图像的文本。`alt` 文本也是屏幕阅读器用于向视觉受障的用户描述图像的内容。
+在锚点标签内部，你添加了`<img>`或`image`标签，其`src`属性指示你之前添加的`img`目录中的文件名。你还为图像标签添加了描述性的`alt`属性。`alt`属性包含在图像无法加载时替换图像的文本。`alt`文本也是屏幕阅读器用于向视觉受障的用户描述图像的内容。
 
-图像标签与大多数其他元素不同之处在于，它们不包裹其他元素，而是引用一个资源。当浏览器遇到 `<img>` 标签时，它会将图像绘制到页面上。这被称为“替换元素（replaced element）”。其他替换元素包括嵌入文档和应用程序（applets）。
+图像标签与大多数其他元素不同之处在于，它们不包裹其他元素，而是引用一个资源。当浏览器遇到`<img>`标签时，它会将图像绘制到页面上。这被称为“替换元素（replaced element）”。其他替换元素包括嵌入文档和应用程序（applets）。
 
-因为它们不包含内容或其他元素，`<img>` 标签没有对应的闭合标签。这使得它们成为自闭合标签（self-closing，也称为 `void` 标签）。有时你会看到自闭合标签在右角括号前带有一个斜杠，例如 `<img src="otter.jpg"/>`。是否包含斜杠取决于个人偏好，对浏览器没有影响。在本书中，自闭合标签是不带斜杠书写的。
+因为它们不包含内容或其他元素，`<img>`标签没有对应的闭合标签。这使得它们成为自闭合标签（self-closing，也称为`void`标签）。有时你会看到自闭合标签在右角括号前带有一个斜杠，例如`<img src="otter.jpg"/>`。是否包含斜杠取决于个人偏好，对浏览器没有影响。在本书中，自闭合标签是不带斜杠书写的。
 
-保存 `<samp class="filename">index.html</samp>`。稍后，你将看到你代码的结果。
+保存`index.html`。稍后，你将看到你代码的结果。
 
 ## 在浏览器中查看网页
 
-要查看你的网页，你需要运行在第 1 章]中安装的 `browser-sync` 工具。
+要查看你的网页，你需要运行在第 1 章中安装的`browser-sync`工具。
 
-打开终端并切换目录到你的 `<samp class="filename">ottergram</samp>` 文件夹。回想一下第 1 章]，你使用 `cd` 命令加上要进入的文件夹路径来切换目录。获取`<samp class="filename">ottergram</samp>` 路径的一种简单方法是在 `<samp class="application">Atom</samp>` 左侧面板中 Control-点击（右键点击）`<samp class="filename">ottergram</samp>` 文件夹，并选择 `<samp class="guimenuitem">Copy Full Path</samp>`（图 2.12）。然后，在命令行输入 `cd`，粘贴路径，并按回车。
+打开终端并切换目录到你的`ottergram`文件夹。回想一下第 1 章，你使用`cd`命令加上要进入的文件夹路径来切换目录。获取`ottergram`路径的一种简单方法是在`Atom`左侧面板中 Control-点击（右键点击）`ottergram`文件夹，并选择`Copy Full Path`（图 2.12）。然后，在命令行输入`cd`，粘贴路径，并按回车。
 
-**图 2.12 从 Atom 复制 `ottergram` 文件夹路径**
+**图 2.12 从 Atom 复制`ottergram`文件夹路径**
 
 ![从 Atom 复制 ottergram 文件夹路径](img/copy-full-path.png)
 
@@ -802,22 +883,24 @@ HTML 代表“超文本标记语言（hypertext markup language）”。标签�
 cd /Users/chris/Projects/ottergram
 ```
 
-一旦进入`<samp class="filename">ottergram</samp>` 目录，运行以下命令在 `<samp class="application">Chrome</samp>` 中打开 Ottergram。（我们把命令分成了两行。）
+一旦进入`ottergram`目录，运行以下命令在`Chrome`中打开 Ottergram。（我们把命令分成了两行。）
 
 ```
 browser-sync --server --browser "Chrome"
 --files "*.css"
 ```
 
-如果 `<samp class="application">Chrome</samp>` 是你的默认浏览器，你可以省略 `--browser "Chrome"` 部分：
+如果`Chrome`是你的默认浏览器，你可以省略`--browser "Chrome"`部分：
 
 ```
 browser-sync --server --files "*.css"
 ```
 
-此命令以服务器模式启动 `browser-sync`，允许在任何 HTML 文件更改时自动刷新浏览器。这让开发体验变得更加愉快。在像 `browser-sync` 这样的工具之前，你需要手动刷新页面。图 2.13 显示了在 Mac 上运行此命令的结果。
+此命令以服务器模式启动`browser-sync`，允许在任何 HTML 文件更改时自动刷新浏览器。这让开发体验变得更加愉快。在像`browser-sync`这样的工具之前，你需要手动刷新页面。图 2.13 显示了在 Mac 上运行此命令的结果。
 
 **图 2.13 在操作系统启动 browser-sync**
+
+
 
 ![在操作系统上启动 browser-sync](img/cd-mac.png)
 
@@ -827,7 +910,7 @@ browser-sync --server --files "*.css"
 
 ![在命令行提示符启动 browser-sync](img/cd-win.png)
 
-一旦 Ottergram 页面在 `<samp class="application">Chrome</samp>` 中加载，你应该能看到带有“ottergram”标题、“ottergram”标签页以及一系列水獭照片和名字的页面（图 2.15）。
+一旦 Ottergram 页面在 `Chrome` 中加载，你应该能看到带有“ottergram”标题、“ottergram”标签页以及一系列水獭照片和名字的页面（图 2.15）。
 
 **图 2.15 在浏览器中查看网页**
 
@@ -835,24 +918,19 @@ browser-sync --server --files "*.css"
 
 ## Chrome 开发者工具
 
-<samp class="application">Chrome</samp> 内置了开发者工具（通常称为“DevTools”），它们是用于测试样式、布局等的顶级工具。使用开发者工具比在代码中尝试要高效得多。开发者工具非常强大，将在你进行前端开发时成为你的伴侣。
+`Chrome` 内置了开发者工具（通常称为“DevTools”），它们是用于测试样式、布局等的顶级工具。使用开发者工具比在代码中尝试要高效得多。开发者工具非常强大，将在你进行前端开发时成为你的伴侣。
 
 我们下一章将使用开发者工具。现在，请打开窗口并熟悉它的主要区域。
 
-要打开开发者工具，点击 `<samp class="application">Chrome</samp>` 地址栏右侧的 ![Chrome 开发者工具](img/hamburger.png) 图标。接下来，点击`<samp class="guimenu">更多工具</samp>` → `<samp class="guimenuitem">开发者工具</samp>`（图 2.16）。
+要打开开发者工具，点击 `Chrome` 地址栏右侧的 ![Chrome 开发者工具](img/hamburger.png) 图标。接下来，点击`更多工具` → `开发者工具`（图 2.16）。
 
 **图 2.16 打开开发者工具**
 
-[/content]
-
-
-
-
 ![打开开发者工具](img/opening-the-dev-tools.png)
 
-<Chrome> 默认将开发者工具（DevTools）显示在右侧。你的屏幕看起来类似于图 2.17。
+`Chrome` 默认将开发者工具（DevTools）显示在右侧。你的屏幕看起来类似于图 2.17。
 
-**图 2.17�  显示元素面板的开发者工具**
+**图 2.17 显示元素面板的开发者工具**
 
 ![显示元素面板的开发者工具](img/labeled-dev-tools.png)
 
@@ -862,7 +940,7 @@ browser-sync --server --files "*.css"
 
 工作时将开发者工具停靠在屏幕右侧通常很方便。如果你想更改开发者工具的位置，可以点击右上角附近的![显示元素面板的开发者工具](img/devtools-config-button.png)按钮。这将显示一个选项菜单，包括`Dock side`（停靠侧边）按钮，它可以更改开发者工具的锚点位置（图 2.18）。
 
-**图 2.18�  更改开发者工具的停靠侧**
+**图 2.18 更改开发者工具的停靠侧**
 
 ![更改开发者工具的停靠侧](img/toggle-dock-side.png)
 
@@ -874,26 +952,26 @@ CSS 的版本历史包含了标准版本 1、2 和 2.1。在 2.1 之后，人们
 
 并没有所谓的版本 3。相反，CSS3 是许多模块的统称，每个模块都有自己的版本号。
 
-**表 2.1�  CSS 版本：现实与想象**
+**表 2.1 CSS 版本：现实与想象**
 
 | 版本号 | 发布年份 | 显著特性 |
 | --- | --- | --- |
 | 1 | 1996 | 基础字体属性（`font-family`、`font-style`）、前景和背景颜色、文本对齐、外边距、边框和内边距。 |
 | 2 | 1998 | 绝对、相对和固定定位；新的字体属性。 |
 | 2.1 | 2011 | 删除了浏览器支持较差的功能。 |
-| “3” | 各异 | 不同规范的集合，例如媒体查询、新选择器、半透明颜色、`@font-face`。
+| “3” | 各异 | 不同规范的集合，例如媒体查询、新选择器、半透明颜色、`@font-face`。 |
 
 ## 进阶探索：favicon.ico
 
 你是否注意到在访问大多数网站时，浏览器地址栏左侧会出现一个小图标？有时它们也会出现在你的浏览器标签页中，如图 2.19 所示。
 
-**图 2.19�  `bignerdranch.com` 的 `favicon.ico`**
+**图 2.19 `bignerdranch.com` 的 `favicon.ico`**
 
 ![bignerdranch.com 的 favicon.ico](img/bnr-favicon.png)
 
 这就是 `favicon.ico` 图片文件。许多网站都有，浏览器默认会请求它。由于 Ottergram 没有，你可能会在开发者工具中看到类似图 2.20 中的错误。
 
-**图 2.20�  缺少 `favicon.ico` 的错误**
+**图 2.20 缺少 `favicon.ico` 的错误**
 
 ![缺少 favicon.ico 的错误](img/favicon-warning.png)
 
@@ -909,7 +987,7 @@ CSS 的版本历史包含了标准版本 1、2 和 2.1。在 2.1 之后，人们
 
 将生成的 `favicon.ico` 文件保存到与 `index.html` 文件相同的文件夹中。最后，刷新你的浏览器。你的浏览器标签页看起来将类似于图 2.21。
 
-**图 2.21�  带有 favicon.ico 的 Ottergram**
+**图 2.21 带有 favicon.ico 的 Ottergram**
 
 ![带有 favicon.ico 的 Ottergram](img/img-favicon.png)
 
@@ -919,7 +997,7 @@ CSS 的版本历史包含了标准版本 1、2 和 2.1。在 2.1 之后，人们
 
 当你到达本章结束时，你的网站将看起来像图 3.1。
 
-**图 3.1�  样式化**
+**图 3.1 样式化**
 
 ![样式化](img/oh-yeah.png)
 
@@ -939,11 +1017,7 @@ CSS 的版本历史包含了标准版本 1、2 和 2.1。在 2.1 之后，人们
 
 为了确保你使用的是最新版本的 `normalize.css`，你将从内容共享网站获取其地址。访问 `cdnjs.com/libraries/normalize/` 并找到以 `.min.css` 结尾的文件。（此版本比其他版本小，删除了多余空白。）点击 `Copy` 按钮复制其地址（图 3.2）。
 
-**图 3.2�  从 cdnjs.com 获取 `normalize.css`**
-
-
-
-
+**图 3.2 从 cdnjs.com 获取 `normalize.css`**
 
 ![从 cdnjs.com 获取 normalize.css 的链接](img/normalize-cdn.png)
 
@@ -1082,10 +1156,6 @@ browser-sync start --server --browser "Google Chrome"
 }
 ```
 
-
-
-
-
 你添加的三个声明都会影响元素的 `box`（盒）。对于每一个具有视觉呈现的 HTML 标签，浏览器都会在页面上绘制一个矩形。浏览器使用一种名为`标准盒模型”（或直接称为“盒模型”）的方案来确定该矩形的尺寸。
 
 ### 盒模型
@@ -1117,9 +1187,11 @@ browser-sync start --server --browser "Google Chrome"
 - border（边框，显示为黄色）：内容和内边距周围的边界
 - margin（外边距，显示为桃红色）：边框周围的透明空间
 
-图 3.8）中的数字是 `pixel`（像素）值；像素是计算机屏幕上可以显示单色的最小矩形区域的单位。对于 `h1` 元素，内容区域分配了 197 像素乘以 54 像素的（你的值可能不同，取决于浏览器窗口的大小）。左侧有 40 像素的内边距。边框设置为 0，元素上下有 16 像素的外边距。
 
-那个外边距值是从哪里来的？每个浏览器都提供了一个默认样式表，称为`user agent stylesheet`代理样式表），以防 HTML 文件未指定样式。你指定的样式会覆盖默认值。由于你没有为 `h1` 元素的盒指定值，因此应用了默认样式。
+
+图 3.8 中的数字是`pixel`（像素）值；像素是计算机屏幕上可以显示单色的最小矩形区域的单位。对于`h1`元素，内容区域分配了 197 像素乘以 54 像素的（你的值可能不同，取决于浏览器窗口的大小）。左侧有 40 像素的内边距。边框设置为 0，元素上下有 16 像素的外边距。
+
+那个外边距值是从哪里来的？每个浏览器都提供了一个默认样式表，称为`user agent stylesheet`（代理样式表），以防 HTML 文件未指定样式。你指定的样式会覆盖默认值。由于你没有为`h1`元素的盒指定值，因此应用了默认样式。
 
 现在，你准备好理解你添加的样式声明了：
 
@@ -1134,15 +1206,15 @@ browser-sync start --server --browser "Google Chrome"
 }
 ```
 
-`display: block` 更改了所有类为 `.thumbnail-title` 的元素的盒，使其占据其父容器元素允许的整个宽度。（注意图 3.6 所示，标题的背景颜色现在覆盖了更宽的区域）。其他的 `display` 值，例如你之后将看到的 `display: inline` 属性，会让元素的宽度适应其内容。
+`display: block`更改了所有类为`.thumbnail-title`的元素的盒，使其占据其父容器元素允许的整个宽度。（注意图 3.6 所示，标题的背景颜色现在覆盖了更宽的区域）。其他的`display`值，例如你之后将看到的`display: inline`属性，会让元素的宽度适应其内容。
 
-你还将将缩略标题的外边距设置为 0，并将内边距设置为两个不同的值：4px 和 10px（`px` 是“pixels”的缩写）。这把内边距设置为特定的像素值，覆盖了代理样式表设置的默认尺寸。
+你还将缩略标题的外边距设置为 0，并将内边距设置为两个不同的值：4px 和 10px（`px`是“pixels”的缩写）。这把内边距设置为特定的像素值，覆盖了代理样式表设置的默认尺寸。
 
 内边距、外边距以及某些其他样式可以写为`简写属性`，其中一个值被应用于多个属性。你在这里利用了这一点：当为内边距提供两个值时，第一个值应用于两个垂直方向（顶部和底部），第二个值应用于水平方向。
 
-### 样式继承
+## 样式继承
 
-接下来，你将添加样式来更改文本的大小和外观。在 `styles.css` 中添加一条新的样式规则，为 `body` 设置字体大小。要做到这一点，你将使用不同类型的选择器——`元素选择器`，通过使用元素的名称。
+接下来，你将添加样式来更改文本的大小和外观。在`styles.css`中添加一条新的样式规则，为`body`设置字体大小。要做到这一点，你将使用不同类型的选择器——`元素选择器`，通过使用元素的名称。
 
 ```
 body {
@@ -1159,15 +1231,15 @@ body {
 }
 ```
 
-这条样式规则将 `body` 的 `font-size` 设置为 `10px`。你很少会在样式表中使用元素选择器，因为你通常不会想对特定标签的所有出现应用完全相同的样式。使用它们意味着你可能会在样式表中重复编写相同的声明。但在这种情况下，针对 `body` 元素的特殊性恰好。只有一个 `<body>` 元素，而且你不会复用它的样式。
+这条样式规则将`body`的`font-size`设置为`10px`。你很少会在样式表中使用元素选择器，因为你通常不会想对特定标签的所有出现应用完全相同的样式。使用它们意味着你可能会在样式表中重复编写相同的声明。但在这种情况下，针对`body`元素的特殊性恰好。只有一个`<body>`元素，而且你不会复用它的样式。
 
-保存 `styles.css` 并在 `Chrome` 中查看你的网页（图 3.9）。
+保存`styles.css`并在`Chrome`中查看你的网页（图 3.9）。
 
 **图 3.9 设置字体大小**
 
 ![设置字体大小](img/ottergram-with-10px-font.png)
 
-你的标题和缩略标题都变小了。你可能预到了这一点，也可能没有。虽然标题直接位于你声明 `font-size` 属性的 `body` 元素内，但缩略标题不是。它们嵌套了许多层。然而，许多样式（包括字体大小）会被应用于样式规则指定的元素以及这些元素的`后代`。
+你的标题和缩略标题都变小了。你可能预到了这一点，也可能没有。虽然标题直接位于你声明`font-size`属性的`body`元素内，但缩略标题不是。它们嵌套了许多层。然而，许多样式（包括字体大小）会被应用于样式规则指定的元素以及这些元素的`后代`。
 
 你文档的结构可以使用树形图来描述，如图 3.10 所示。将元素表示为树是可视化 DOM 的良好方法。
 
@@ -1175,43 +1247,39 @@ body {
 
 ![简化的 Ottergram 结构](img/ottergram-dom.png)
 
-包含元素的元素被称为元素的后代。在这种情况下，你的 `span` 都是 `body`（以及 `ul` 及其相应的 `li`）的后代，因此它们继承了 `body` 的 `font-size` 样式。
+包含元素的元素被称为元素的后代。在这种情况下，你的`span`都是`body`（以及`ul`及其相应的`li`）的后代，因此它们继承了`body`的`font-size`样式。
 
-
-
-
-
-在 DevTools 的 DOM 树视图中，找到并选择一个 `span` 元素。在样式面板中，注意标记为 `<samp class="guilabel">Inherited from a</samp>`、`<samp class="guilabel">Inherited from li</samp>` 和 `<samp class="guilabel">Inherited from ul</samp>` 的框。这三个区域如所示，显示了从用户代理样式表（user agent stylesheet）在每一层继承的样式。在`<samp class="guilabel">Inherited from body</samp>` 下，你可以看到 `font-size` 属性已从 `styles.css` 中为 `body` 元素设置的集（图 3.11）。
+在 DevTools 的 DOM 树视图中，找到并选择一个`span`元素。在样式面板中，注意标记为`Inherited from a`、`Inherited from li`和`Inherited from ul`的框。这三个区域如所示，显示了从用户代理样式表（user agent stylesheet）在每一层继承的样式。在`Inherited from body`下，你可以看到`font-size`属性已从`styles.css`中为`body`元素设置的集（图 3.11）。
 
 **图 3.11 从祖先元素继承的样式**
 
 ![从祖先元素继承的样式](img/devtools-demo-cascade.png)
 
-如果在另一个层级（例如 `ul`）设置了不同的字体大小会怎样？来自更近祖先元素的样式具有优先级，因此在 `styles.css` 中为 `ul` 设置的字体大小将覆盖为 `body` 设置的，而为 `span` 元素本身设置的字体大小将同时覆盖两者。
+如果在另一个层级（例如`ul`）设置了不同的字体大小会怎样？来自更近祖先元素的样式具有优先级，因此在`styles.css`中为`ul`设置的字体大小将覆盖为`body`设置的，而为`span`元素本身设置的字体大小将同时覆盖两者。
 
-要查看这一点，请点击 DOM 树视图中的 `ul` 元素。这将允许你尝试尝试样式。你在这里添加的样式将立即反映在网页视图中，但不会添加到你的实际项目文件中。
+要查看这一点，请点击 DOM 树视图中的`ul`元素。这将允许你尝试尝试样式。你在这里添加的样式将立即反映在网页视图中，但不会添加到你的实际项目文件中。
 
-在元素面板中样式面板的顶部，你会看到一个标记为 `elements.style` 的区域。点击 `elements.style` 花括号之间的任何位置，DevTools 都会给出一个提示（图 3.12）。
+在元素面板中样式面板的顶部，你会看到一个标记为`elements.style`的区域。点击`elements.style`花括号之间的任何位置，DevTools 都会给出一个提示（图 3.12）。
 
 **图 3.12 输入样式规则提示**
 
 ![输入样式规则提示](img/elements-style-prompt.png)
 
-开始输入 `font-size`，DevTools 将为你建议可能的补全选项（图 3.13）。
+开始输入`font-size`，DevTools 将为你建议可能的补全选项（图 3.13）。
 
 **图 3.13 样式面板中的自动补全选项**
 
 ![样式面板中的自动补全选项](img/begin-typing-font-size.png)
 
-选择 `font-size`，然后按 Tab 键。输入一个大值，例如 `50px`，并按 Return。你可能需要滚动页面，但你会发现 `ul` 的 `font-size` 已经覆盖了 `body` 的（图 3.14）。
+选择`font-size`，然后按 Tab 键。输入一个大值，例如`50px`，并按 Return。你可能需要滚动页面，但你会发现`ul`的`font-size`已经覆盖了`body`的（图 3.14）。
 
-**图 3.14 为 `ul` 设置 50px 的 `font-size`**
+**图 3.14 为`ul`设置 50px 的`font-size`**
 
 ![为 ul 设置 50px 的 font-size](img/scroll-big-font.png)
 
-并不是所有的样式属性都是继承的——例如，`border` 就不是。要确定某个属性是否被继承，请参考该属性的 MDN 参考页面。
+并不是所有的样式属性都是继承的——例如，`border`就不是。要确定某个属性是否被继承，请参考该属性的 MDN 参考页面。
 
-回到 `styles.css`，更新 `.thumbnail-title` 类的声明块，以覆盖 `body` 的 `font-size` 并使用更大的字体。
+回到`styles.css`，更新`.thumbnail-title`类的声明块，以覆盖`body`的`font-size`并使用更大的字体。
 
 ```css
 body {
@@ -1230,29 +1298,19 @@ body {
 }
 ```
 
-对于类 `.thumbnail-title` 的元素，你将字体大小更改为了 18 像素。
+对于类`.thumbnail-title`的元素，你将字体大小更改为了 18 像素。
 
-保存 `styles.css`  `Chrome` 中欣赏你的缩略图标题（图 3.15）。
+保存`styles.css`，在`Chrome`中欣赏你的缩略图标题（图 3.15）。
 
 **图 3.15 样式化的缩略图标题**
 
 ![样式化的缩略图标题](img/thumbnail-title-box.png)
 
-它们看起来很好，但用户代理样式表正在为 `.thumbnail-title` 元素添加下划线。这是因为你将它们（以及 `.thumbnail-image` 元素）封装在了锚点标签中，使它们继承了下划线样式。
+它们看起来很好，但用户代理样式表正在为`.thumbnail-title`元素添加下划线。这是因为你将它们（以及`.thumbnail-image`元素）封装在了锚点标签中，使它们继承了下划线样式。
 
-你不需要这些下划线，因此你将通过在 `styles.css` 的新样式中更改锚点标签的 `text-decoration` 属性来移除它们。为此规则使用什么选择器？
+你不需要这些下划线，因此你将通过在`styles.css`的新样式中更改锚点标签的`text-decoration`属性来移除它们。为此规则使用什么选择器？
 
-如果你确定要移除缩略图标题`<samp class="emphasis">以及 Ottergram 中任何其他锚点元素</samp>` 的下划线，你可以直接使用元素选择器：
-
-```css
-a {
-  /* style declaration */
-}
-```
-
-（`/* */` 之间的文本是 CSS `<samp class="firstterm">注释</samp>`。浏览器会忽略代码注释；它们允许开发者在代码中记录以便将来参考。）
-
-如果你认为可能将锚点用于其他用途（并希望对其进行不同的样式处理），可以将元素选择器与`<samp class="firstterm">属性选择器</samp>` 配对，如下：
+如果你确定要移除缩略图标题以及 Ottergram 中任何其他锚点元素的下划线，你可以直接使用元素选择器：
 
 ```css
 a {
@@ -1260,7 +1318,17 @@ a {
 }
 ```
 
-此选择器将匹配具有 `href` 属性的元素。当然，锚点元素通常都有 `href` 属性，因此可能不够精确到仅匹配目标。为了使属性选择器更精确，你还可以指定属性的值，如下：
+（`/* */`之间的文本是 CSS`注释`。浏览器会忽略代码注释；它们允许开发者在代码中记录以便将来参考。）
+
+如果你认为可能将锚点用于其他用途（并希望对其进行不同的样式处理），可以将元素选择器与`属性选择器`配对，如下：
+
+```css
+a {
+  /* style declaration */
+}
+```
+
+此选择器将匹配具有`href`属性的元素。当然，锚点元素通常都有`href`属性，因此可能不够精确到仅匹配目标。为了使属性选择器更精确，你还可以指定属性的值，如下：
 
 ```css
 a[href="#"] {
@@ -1268,7 +1336,7 @@ a[href="#"] {
 }
 ```
 
-此选择器将匹配 `href` 属性值为 `#` 的锚元素。
+此选择器将匹配`href`属性值为`#`的锚元素。
 
 顺便说一下，你也可以单独使用带不值的属性选择器，例如：
 
@@ -1280,7 +1348,7 @@ a[href="#"] {
 
 碰巧，Ottergram 是一个非常简单的项目，你实际上不会在缩略图和标题以外的地方使用标签。因此，使用元素选择器是安全的，而且你应该这样做，因为它是最直接的解决方案。
 
-在 `styles.css` 中添加新的样式声明：
+在`styles.css`中添加新的样式声明：
 
 ```css
 body {
@@ -1298,17 +1366,13 @@ a {
 
 保存文件并检查浏览器。下划线消失了，你的缩略图标题也变得精美了（图 3.16）。
 
-**图 3.16 设置 `text-decoration` 为 `none` 后**
+**图 3.16 设置`text-decoration`为`none`后**
 
 ![设置 text-decoration 为 后](img/removed-text-decoration.png)
 
 注意，你不应该移除正文中链接的下划线——即不是明显的标题、标题或说明的文本。链接的下划线是预期的重要视觉指示。你在这里这样做是因为缩略图不需要同样的视觉提示。用户会合理认为它们是可以点击的。
 
-在本章的剩余部分，你将使用类选择器来为缩略图图像、无序列表、列表项（包括缩略图及其标题）以及页眉设置样式。先为 `index.html` 中的 `h1`、`ul`、`li` 和 `img` 元素添加类名以备之用。
-
-
-
-
+在本章的剩余部分，你将使用类选择器来为缩略图图像、无序列表、列表项（包括缩略图及其标题）以及页眉设置样式。先为`index.html`中的`h1`、`ul`、`li`和`img`元素添加类名以备之用。
 
 ```html
 ...
@@ -1373,11 +1437,11 @@ a {
 
 我们更倾向于使用类选择器而不是其他的选择器，你也应该这样做。你可以编写非常具描述性的类名，使你的代码易于开发和维护。此外，你还可以为元素添加多个类名，使它们成为样式化的灵活且强大的工具。
 
-在继续之前，请确保保存 `index.html`。
+在继续之前，请确保保存`index.html`。
 
 ## 让图片适应窗口
 
-遵循原子样式模式，接下来是需要进行样化的图片。它们太大了，除非浏览器窗口也很大，否则它们会被裁剪。在 `styles.css` 中为 `.thumbnail-image` 添加样式规则，使缩略图适应窗口：
+遵循原子样式模式，接下来是需要进行样化的图片。它们太大了，除非浏览器窗口也很大，否则它们会被裁剪。在`styles.css`中为`.thumbnail-image`添加样式规则，使缩略图适应窗口：
 
 ```css
 ...
@@ -1394,13 +1458,13 @@ a {
 }
 ```
 
-你将 `width` 设置为 `100%`，这将其限制在容器的宽度内。这意味着当你加宽浏览器窗口时，图片会按比例变大。尝试一下：保存 `styles.css`，切换到浏览器，并放大和缩小你的浏览器窗口。图片会随着浏览器窗口同步放大和缩小，始终保持比例。图 3.17 显示了在一个较窄和一个较较宽的浏览器窗口中的 Ottergram。
+你将`width`设置为`100%`，这将其限制在容器的宽度内。这意味着当你加宽浏览器窗口时，图片会按比例变大。尝试一下：保存`styles.css`，切换到浏览器，并放大和缩小你的浏览器窗口。图片会随着浏览器窗口同步放大和缩小，始终保持比例。图 3.17 显示了在一个较窄和一个较较宽的浏览器窗口中的 Ottergram。
 
 **图 3.17 按宽度调整图片**
 
 ![按宽度调整图片](img/constrained-width.png)
 
-如果你仔细观察，`.thumbnail-title` 周围的间距是不正确的，导致标题看起来和它们下方的图片在了一起。在 `styles.css` 中通过将 `.thumbnail-image` 的 `display` 属性设置为 `block` 来修复这个问题。
+如果你仔细观察，`.thumbnail-title`周围的间距是不正确的，导致标题看起来和它们下方的图片在了一起。在`styles.css`中通过将`.thumbnail-image`的`display`属性设置为`block`来修复这个问题。
 
 ```css
 ...
@@ -1413,17 +1477,17 @@ a {
 
 现在，图片与其标题之间的空格消失了（图 3.18）。
 
-**图 3.18 设置 `.thumbnail-image` 为 `display: block` 后**
+**图 3.18 设置`.thumbnail-image`为`display: block`后**
 
 ![设置 .thumbnail-image 为 display: block 后](img/fixed-li-spacing-display-block.png)
 
-为什么这样做有效？图片默认是 `display: inline`。它们遵循与文本相似的渲染规则。当文本被渲染时，字母沿着共同的基线（baseline）绘制。某些字符，如 `p`、`q` 和 `y`，具有“下降部”（descender）——即超出此基线的尾巴。为了容纳这些字符，基线下方会留了一些空白。
+为什么这样做有效？图片默认是`display: inline`。它们遵循与文本相似的渲染规则。当文本被渲染时，字母沿着共同的基线（baseline）绘制。某些字符，如`p`、`q`和`y`，具有“下降部”（descender）——即超出此基线的尾巴。为了容纳这些字符，基线下方会留了一些空白。
 
-将 `display` 属性设置为 `block` 会移除空白，因为不需要容纳任何文本（或任何可能与图片并排渲染的 `display: inline` 元素）。
+将`display`属性设置为`block`会移除空白，因为不需要容纳任何文本（或任何可能与图片并排渲染的`display: inline`元素）。
 
 ## 颜色
 
-是时候深入探索颜色了。在 `styles.css` 中为 `body` 元素和 `.thumbnail-item` 类添加以下颜色样式：
+是时候深入探索颜色了。在`styles.css`中为`body`元素和`.thumbnail-item`类添加以下颜色样式：
 
 ```css
 body {
@@ -1440,25 +1504,27 @@ a {
 }
 ```
 
-你为 `.thumbnail-item` 的边框声明了两次值。为什么？注意到这两个声明使用了不同的颜色函数：`rgb` 和 `rgba`。`rgba` 颜色函数接受第四个参数，即透明度。某些浏览器不支持 `rgba`，因此提供两个声明是一种回退（fallback）机制。
 
-所有浏览器都会看到第一个声明（rgb）并注册值。不支持 `rgba` 的浏览器会忽略第二个声明。支持 `rgba` 的浏览器将使用第二个声明并丢弃第一个。
 
-（好奇 `body` 的背景颜色是用整数定义的，而 `.thumbnail-item` 的边框颜色是用百分比定义的吗？稍后我们会回来讨论。）
+你为`.thumbnail-item`的边框声明了两次值。为什么？注意到这两个声明使用了不同的颜色函数：`rgb`和`rgba`。`rgba`颜色函数接受第四个参数，即透明度。某些浏览器不支持`rgba`，因此提供两个声明是一种回退（fallback）机制。
 
-保存 `styles.css` 并切换到浏览器（图 3.19）。
+所有浏览器都会看到第一个声明（`rgb`）并注册值。不支持`rgba`的浏览器会忽略第二个声明。支持`rgba`的浏览器将使用第二个声明并丢弃第一个。
+
+（好奇`body`的背景颜色是用整数定义的，而`.thumbnail-item`的边框颜色是用百分比定义的吗？稍后我们会回来讨论。）
+
+保存`styles.css`并切换到浏览器（图 3.19）。
 
 **图 3.19 背景与边框**
 
 ![背景与边框](img/thumbnail-item-border-width.png)
 
-在开发工具中，你可以看到 Chrome 支持 `rgba`。它通过划掉样式表示 `rgb` 颜色未被使用（图 3.20）。
+在开发工具中，你可以看到 Chrome 支持`rgba`。它通过划掉样式表示`rgb`颜色未被使用（图 3.20）。
 
 **图 3.20 使用 rgba**
 
 ![使用 rgba](img/inheritance-crossout.png)
 
-现在，仍然在开发工具中，请选择 `body`。在样式面板中，注意你刚刚添加的背景颜色声明。RGBA 值左侧有一个小正方形，显示了颜色的外观。
+现在，仍然在开发工具中，请选择`body`。在样式面板中，注意你刚刚添加的背景颜色声明。RGBA 值左侧有一个小正方形，显示了颜色的外观。
 
 点击那个正方形，会打开颜色选择器（图 3.21）。颜色选择器允许你选择颜色，并以多种格式提供 CSS 颜色值。
 
@@ -1470,27 +1536,23 @@ a {
 
 HSLA 格式（代表色相、饱和度、亮度透明度）的使用频率比其他格式低，部分是因为一些流行的设计工具没有提供适用于 CSS 的准确 HSLA 值。如果你对 HSLA 感兴趣，请访问 [css-tricks.com/examples/HSLaExplorer](https://css-tricks.com/examples/HSLaExplorer) 查看 HSLA 探索器。
 
-
-
-
-
-查看背景色的 HEX 值：`#95C2D7`。HEX（或十六进制）是最古老的颜色规范格式。每个数字都代表一个从 0 到 15 之间的值。（如果你不熟悉十六进制，这是通过包含 A 到 F 字符作为数字来实现的。）每对数字则可以表示一个从 0 到 255 之间的值。从左到右，这些数字对对应于指定颜色中红、绿、蓝的强度（图 3.22]）。
+查看背景色的 HEX 值：`#95C2D7`。HEX（或十六进制）是最古老的颜色规范格式。每个数字都代表一个从 0 到 15 之间的值。（如果你不熟悉十六进制，这是通过包含 A 到 F 字符作为数字来实现的。）每对数字则可以表示一个从 0 到 255 之间的值。从左到右，这些数字对对应于指定颜色中红、绿、蓝的强度（图 3.22）。
 
 **图 3.22 HEX 值对应红色、绿色和蓝色值**
 
 ![HEX 值对应红色、绿色和蓝色值](img/hex-diagram.png)
 
-许多人认为 HEX 颜色并不直观。一种现代的替代方案是使用 RGB（红、绿、蓝）值。在这一模型中，每种颜色也被分配了一个从 0 到 255 之间的值，但这些值用更熟悉的十进制数表示，并用颜色隔开。如前所述，对于功能更强大的浏览器，第四个值可以指定指定颜色的透明度，范围从 0.0（完全透明）到 1.0（完全不透明）。该透明度正式被称为 <samp class="firstterm">alpha</samp> 值 ——因此 RGBA 中的 A 代表它。`body` 背景色的 RGBA 值为 `(149, 194, 215, 1)`。
+许多人认为 HEX 颜色并不直观。一种现代的替代方案是使用 RGB（红、绿、蓝）值。在这一模型中，每种颜色也被分配了一个从 0 到 255 之间的值，但这些值用更熟悉的十进制数表示，并用颜色隔开。如前所述，对于功能更强大的浏览器，第四个值可以指定指定颜色的透明度，范围从 0.0（完全透明）到 1.0（完全不透明）。该透明度正式被称为 <samp class="firstterm">alpha</samp> 值——因此 RGBA 中的 A 代表它。`body`背景色的 RGBA 值为`(149, 194, 215, 1)`。
 
-除了为红、绿、蓝声明整数值外，你也可以使用百分比，就像你为 `.thumbnail-item` 边框做的那样。这两个选项在功能上没有区别。只需不要在同一个声明中混合百分比和整数即可。
+除了为红、绿、蓝声明整数值外，你也可以使用百分比，就像你为`.thumbnail-item`边框做的那样。这两个选项在功能上没有区别。只需不要在同一个声明中混合百分比和整数即可。
 
 顺便提一下，为了帮助选择好看的配色方案，Adobe 在 [<samp class="uri">color.adobe.com</samp>](https://color.adobe.com/) 提供了一个免费的在线工具。
 
 ## 调整项目之间的间距
 
-Ottergram 现在有一些漂亮的颜色，让人联想到海獭的海园。但添加颜色后，`.thumbnail-item` 元素的边框内部出现了一些不需要的空白。此外，那些讨厌的项目项目符号分散了人们对海獭光彩的注意力。
+Ottergram 现在有一些漂亮的颜色，让人联想到海獭的海园。但添加颜色后，`.thumbnail-item`元素的边框内部出现了一些不需要的空白。此外，那些讨厌的项目项目符号分散了人们对海獭光彩的注意力。
 
-要去掉项目符号，请在 <samp class="filename">styles.css</samp> 中将 `.thumbnail-list` 的 `list-style` 属性设置为 `none`：
+要去掉项目符号，请在 <samp class="filename">styles.css</samp> 中将`.thumbnail-list`的`list-style`属性设置为`none`：
 
 ```
 ...
@@ -1508,7 +1570,7 @@ Ottergram 现在有一些漂亮的颜色，让人联想到海獭的海园。但�
 }
 ```
 
-要消除空白，你将使用处理 `.thumbnail-image` 时相同的技术。每个 `.thumbnail-item` 默认都有该空白以适应列表中的项目，就像 `.thumbnail-image` 元素有空白以适应相邻文本一样。为 `.thumbnail-item` 添加 `display: block` 声明来移除它。
+要消除空白，你将使用处理`.thumbnail-image`时相同的技术。每个`.thumbnail-item`默认都有该空白以适应列表中的项目，就像`.thumbnail-image`元素有空白以适应相邻文本一样。为`.thumbnail-item`添加`display: block`声明来移除它。
 
 ```
 ...
@@ -1526,19 +1588,19 @@ Ottergram 现在有一些漂亮的颜色，让人联想到海獭的海园。但�
 
 ![改进的布局](img/whitespace-removed.png)
 
-如果你不需要项目符号，为什么要使用项目符号列表？最好的方法是根据 HTML 标签的含义而不是浏览器如何对其进行默认样式来选择。在这种情况下，你需要一个图像的无序列表，因此 `ul` 是正确的选择。当你向 第 4 章 中的项目添加详细细节图像时，用于图片的 `ul` 容器将允许你将其样式化为滚动列表。浏览器默认用项目符号表示 `ul` 这一点并不重要，因为它们很容易被移除。
+如果你不需要项目符号，为什么要使用项目符号列表？最好的方法是根据 HTML 标签的含义而不是浏览器如何对其进行默认样式来选择。在这种情况下，你需要一个图像的无序列表，因此`ul`是正确的选择。当你向第 4 章中的项目添加详细细节图像时，用于图片的`ul`容器将允许你将其样式化为滚动列表。浏览器默认用项目符号表示`ul`这一点并不重要，因为它们很容易被移除。
 
-接下来，你将调整列表项目的间距。单独的 `.thumbnail-item` 元素之间没有间距。你将在相邻的缩略图之间添加边距（margin）。
+接下来，你将调整列表项目的间距。单独的`.thumbnail-item`元素之间没有间距。你将在相邻的缩略图之间添加边距（margin）。
 
-然而，你不想为*所有*列表项目添加边距。为什么呢？因为标题已经有了边距，所以第一个列表项目不需要。这意味着你不能直接使用 `.thumbnail-item` 类选择器，至少不能单独使用它。相反，你将使用根据元素与其他元素之间关系来目标元素的选择器语法。
+然而，你不想为*所有*列表项目添加边距。为什么呢？因为标题已经有了边距，所以第一个列表项目不需要。这意味着你不能直接使用`.thumbnail-item`类选择器，至少不能单独使用它。相反，你将使用根据元素与其他元素之间关系来目标元素的选择器语法。
 
 ### 关系选择器
 
-再次查看图 3.10 中的项目图表。它看起来非常像家族树，不是吗？这种相似性为这组关系选择器命名：<samp class="firstterm">后代选择器</samp>、<samp class="firstterm">子级选择器</samp>、<samp class="firstterm">兄弟选择器</samp> 和 <samp class="firstterm">相邻兄弟选择器</samp>。
+再次查看图 3.10 中的项目图表。它看起来非常像家族树，不是吗？这种相似性为这组关系选择器命名：<samp class="firstterm">后代选择器</samp>、<samp class="firstterm">子级选择器</samp>、<samp class="firstterm">兄弟选择器</samp>和 <samp class="firstterm">相邻兄弟选择器</samp>。
 
 关系选择器语法包含两个选择器（如类选择器或元素选择器），它们由一个名为 <samp class="firstterm">组合符</samp> 的符号连接，该组合符决定了它们之间的目标关系。要理解关系选择器如何工作，重要的是记住浏览器是从*右到左*读取选择器语法的。让我们看一些例子。
 
-后代选择器针对是另一个指定元素的后代的任何类型元素。例如，要选择 `body` 元素的后代的任何 `span` 元素，语法为：
+后代选择器针对是另一个指定元素的后代的任何类型元素。例如，要选择`body`元素的后代的任何`span`元素，语法为：
 
 ```
 body span {
@@ -1546,7 +1608,7 @@ body span {
 }
 ```
 
-此语法没有使用组合符。由于它是从右到左读取的，它针对任何来自 `body` 的 `span`，在当前代码中这意味着缩略图标题。它还会影响可能在 `header` 或其他地方添加的任何 `span`。
+此语法没有使用组合符。由于它是从右到左读取的，它针对任何来自`body`的`span`，在当前代码中这意味着缩略图标题。它还会影响可能在`header`或其他地方添加的任何`span`。
 
 注意，你也可以在关系选择器中使用类选择器（或属性选择器，或任何类型的选择器），因此上面的选择器也可以写成：
 
@@ -1556,7 +1618,7 @@ body .thumbnail-title {
 }
 ```
 
-子级选择器针对是另一个元素直接孩子的指定类型元素。子级选择器语法使用组合符 `>`。要使用子级选择器针对 Ottergram 中所有的 `span`，语法为：
+子级选择器针对是另一个元素直接孩子的指定类型元素。子级选择器语法使用组合符`>`。要使用子级选择器针对 Ottergram 中所有的`span`，语法为：
 
 ```
 li > span {
@@ -1564,9 +1626,9 @@ li > span {
 }
 ```
 
-从右到左读取，此选择器针对是 `li` 的直接孩子的 `span` —— 再次缩略图标题。
+从右到左读取，此选择器针对是`li`的直接孩子的`span`——再次缩略图标题。
 
-兄弟选择器语法使用组合符 `~`。正如你预期的，这种语法针对具有相同父元素的元素。然而，由于关系选择器的方向性，结果可能并不如你所愿。考虑这个例子：
+兄弟选择器语法使用组合符`~`。正如你预期的，这种语法针对具有相同父元素的元素。然而，由于关系选择器的方向性，结果可能并不如你所愿。考虑这个例子：
 
 ```
 header ~ ul {
@@ -1574,9 +1636,9 @@ header ~ ul {
 }
 ```
 
-此选择器针对位于相同父元素的 `header` 之前的任何 `ul`。此选择器会有效地针对 Ottergram 的 `ul`，因为它在代码中前面有一个兄弟 `header`。然而，反转语法（`ul ~ header`）会导致没有元素被选中，因为没有位于兄弟 `ul` 之前的 `header`。
+此选择器针对位于相同父元素的`header`之前的任何`ul`。此选择器会有效地针对 Ottergram 的`ul`，因为它在代码中前面有一个兄弟`header`。然而，反转语法（`ul ~ header`）会导致没有元素被选中，因为没有位于兄弟`ul`之前的`header`。
 
-最后的关系选择器类型是相邻兄弟选择器，它针对*紧邻*指定类型兄弟之前的元素。相邻兄弟组合符为 `+`：
+最后的关系选择器类型是相邻兄弟选择器，它针对*紧邻*指定类型兄弟之前的元素。相邻兄弟组合符为`+`：
 
 ```
 li + li {
@@ -1584,12 +1646,9 @@ li + li {
 }
 ```
 
-此语法将选择所有紧邻兄弟 `li` 之前的 `li` 元素。结果是声明的样式将应用到第二个到第五 `li` —— 但不是第一个，因为它的前面没有另一个 `li`。（注意，由于 Ottergram 相对简单的结构，目前通用兄弟选择器和相邻兄弟选择器的效果相同。）
+此语法将选择所有紧邻兄弟`li`之前的`li`元素。结果是声明的样式将应用到第二个到第五`li`——但不是第一个，因为它的前面没有另一个`li`。（注意，由于 Ottergram 相对简单的结构，目前通用兄弟选择器和相邻兄弟选择器的效果相同。）
 
-
-
-
-回到正要的任务：为每个列表项添加顶部边距，第一个除外。如果你使用后选择器或子选择器来定位 `.thumbnail-item` 类或 `span` 或 `li` 元素，那么边距将应用于所有五个缩略图。由于你想对第一个以外的所有项设置样式，请在 `styles.css` 中使用相邻兄弟语法，仅为那些紧跟在另一个缩略图之后的缩略图添加顶部边距。
+回到正要的任务：为每个列表项添加顶部边距，第一个除外。如果你使用后选择器或子选择器来定位`.thumbnail-item`类或`span`或`li`元素，那么边距将应用于所有五个缩略图。由于你想对第一个以外的所有项设置样式，请在`styles.css`中使用相邻兄弟语法，仅为那些紧跟在另一个缩略图之后的缩略图添加顶部边距。
 
 ```
 ...
@@ -1607,17 +1666,17 @@ a {
 
 保存文件并在浏览器中查看结果（图 3.24）。
 
-**图 3.24  相邻 `.thumbnail-item` 元素之间的间距**
+**图 3.24 相邻`.thumbnail-item`元素之间的间距**
 
 ![相邻 .thumbnail-item 元素之间的间距](img/adjacent-spacing.png)
 
-请注意，开发者工具（DevTools）提供了一种查找元素嵌套路径的简单方法，这有助于编写关系选择器。如果你点击 `li` 元素内部的某个 `span` 元素，可以在元素面板的底部看到它的路径（图 3.25）。
+请注意，开发者工具（DevTools）提供了一种查找元素嵌套路径的简单方法，这有助于编写关系选择器。如果你点击`li`元素内部的某个`span`元素，可以在元素面板的底部看到它的路径（图 3.25）。
 
-**图 3.25  元素面板显示的嵌套路径**
+**图 3.25 元素面板显示的嵌套路径**
 
 ![元素面板显示的嵌套路径](img/selector-path.png)
 
-为了对缩略图列表的外观进行最后一次微调，返回 `styles.css` 并覆盖 `ul` 继承自用户代理样式表的内内边距（padding），使得图像不再有缩进。
+为了对缩略图列表的外观进行最后一次微调，返回`styles.css`并覆盖`ul`继承自用户代理样式表的内内边距（padding），使得图像不再有缩进。
 
 ```
 ...
@@ -1630,7 +1689,7 @@ a {
 
 像往常一样，保存文件并切换到浏览器查看结果（图 3.26）。
 
-**图 3.26  去除了内边距的 ul**
+**图 3.26 去除了内边距的 ul**
 
 ![去除了内边距的 ul](img/removed-ul-padding.png)
 
@@ -1638,7 +1697,7 @@ Ottergram 看起来开始精美了。通过为标题添加一些样式，你将�
 
 ## 添加字体
 
-早些，你为 `h1` 元素添加了 `.logo-text` 类。使用该类作为 `styles.css` 中新样式规则的选择器。将它插入到锚点标签（anchor tag）样式之后。（通常情况下，只有当你对同一个选择器有多个规则集时，样式的顺序才重要。在 Ottergram 中，样式的排列与它们在代码中出现的顺序大致一致。这取决于个人喜好，你可以根据自己的需要组织样式。）
+早些，你为`h1`元素添加了`.logo-text`类。使用该类作为`styles.css`中新样式规则的选择器。将它插入到锚点标签（anchor tag）样式之后。（通常情况下，只有当你对同一个选择器有多个规则集时，样式的顺序才重要。在 Ottergram 中，样式的排列与它们在代码中出现的顺序大致一致。这取决于个人喜好，你可以根据自己的需要组织样式。）
 
 ```
 ...
@@ -1658,17 +1717,17 @@ a {
   ...
 ```
 
-首先，你为标题设置了白色背景。然后，你在 `.logo-text` 元素内部居中了文本，并使用 `text-transform` 属性将其格式化为大写。最后，你设置了字体大小。你的结果看起来将像 图 3.27）。
+首先，你为标题设置了白色背景。然后，你在`.logo-text`元素内部居中了文本，并使用`text-transform`属性将其格式化为大写。最后，你设置了字体大小。你的结果看起来将像图 3.27。
 
-**图 3.27  标题样式化**
+**图 3.27 标题样式化**
 
 ![标题样式化](img/plain-header.png)
 
 Ottergram 看起来极了。很棒……但对于一个有*水獭*的网站来说，有点单调。为了增添一些活力，你可以为标题使用除用户代理样式表提供的字体以外的字体。
 
-我们在你已经下载并添加到项目目录的资源文件中包含了一些字体。要使用它们，你需要将 `fonts` 文件夹复制到你的项目中。将其放置在你的 `stylesheets` 文件夹*内部*（图 3.28）。
+我们在你已经下载并添加到项目目录的资源文件中包含了一些字体。要使用它们，你需要将`fonts`文件夹复制到你的项目中。将其放置在你的`stylesheets`文件夹*内部*（图 3.28）。
 
-**图 3.28  stylesheets 文件夹内的 fonts 文件夹**
+**图 3.28 stylesheets 文件夹内的 fonts 文件夹**
 
 ![stylesheets 文件夹内的 fonts 文件夹](img/fonts-inside-stylesheets.png)
 
@@ -1676,13 +1735,15 @@ Ottergram 看起来极了。很棒……但对于一个有*水獭*的网站来�
 
 资源文件包含了每种字体的多种格式。如既往，不同的浏览器厂商支持不同类型的字体。为了支持最广泛的浏览器，你需要将它们全部包含在项目中。是的，全部包含。
 
-为了帮助你，`@font-face` 语法允许你为字体族指定自定义名称，然后你可以在样其余部分使用它。`@font-face` 块与你使用的块稍有不同。`@font-face` 块包含三个主要部分：
+为了帮助你，`@font-face`语法允许你为字体族指定自定义名称，然后你可以在样其余部分使用它。`@font-face`块与你使用的块稍有不同。`@font-face`块包含三个主要部分：
 
-*   首先是 `font-family` 属性，其值是一个字符串，用于识别你可以在样式其他部分使用的自定义名称。
-*   接下来是几个 `src` 声明，指定不同的字体文件。
-*   最后是修改字体的声明，例如 `font-weight` 和 `font-style`。
+*   首先是`font-family`属性，其值是一个字符串，用于识别你可以在样式其他部分使用的自定义名称。
 
-在 `styles.css` 顶部为 `lakeshore` 字体族添加 `@font-face` 声明并使用该自定义字体。
+*   接下来是几个`src`声明，指定不同的字体文件。
+
+*   最后是修改字体的声明，例如`font-weight`和`font-style`。
+
+在`styles.css`顶部为`lakeshore`字体族添加`@font-face`声明并使用该自定义字体。
 
 ```
 @font-face {
@@ -1715,31 +1776,29 @@ a {
 }
 ```
 
-诚然，要正确设置 `@font-face` 声明可能是困难的，因为各个 `url` 值的顺序很重要。保留一份声明以供参考是一个好主意。你还可以查看 Atom 的片段文档 `flight-manual.atom.io/using-atom/snippets/` 来了解如何创建你自己的“片段”或模板。
+诚然，要正确设置`@font-face`声明可能是困难的，因为各个`url`值的顺序很重要。保留一份声明以供参考是一个好主意。你还可以查看 Atom 的片段文档 `flight-manual.atom.io/using-atom/snippets/` 来了解如何创建你自己的“片段”或模板。
 
-声明 `@font-face` 之后，你的 CSS 其他部分就可以访问 `font-family` 属性的新值 `lakeshore`。在 `.logo-text` 声明中，你设置了 `font-family: lakeshore` 来应用新字体。
+声明`@font-face`之后，你的 CSS 其他部分就可以访问`font-family`属性的新值`lakeshore`。在`.logo-text`声明中，你设置了`font-family: lakeshore`来应用新字体。
 
-保存 `styles.css`，切换到 Chrome，看看拥有像水獭一样时尚的网页感觉有多棒（图 3.29）。
+保存`styles.css`，切换到 Chrome，看看拥有像水獭一样时尚的网页感觉有多棒（图 3.29）。
 
-**图 3.29  应用自定义字体**
+**图 3.29 应用自定义字体**
 
 ![应用自定义字体](img/oh-yeah-header.png)
 
 ## 铜挑战：更改颜色
 
-更改 `body` 的背景颜色样式。使用开发者工具中的颜色选择器（图 3.21）来帮助选择。
+更改`body`的背景颜色样式。使用开发者工具中的颜色选择器（图 3.21）来帮助选择。
 
-为了获得更高级的色板，请访问 [color.adobe.com](https://color.adobe.com/) 并为 `body` 和 `.thumbnail-title` 背景颜色创建你自己的方案。
+为了获得更高级的色板，请访问 [color.adobe.com](https://color.adobe.com/) 并为`body`和`.thumbnail-title`背景颜色创建你自己的方案。
 
 # 给更有好奇心的人：优先级！当选择器发生冲突时……
 
+你已经看到了了如何覆盖样式。例如，你将`normalize.css`的链接放在了`styles.css`之前。这使得浏览器使用`normalize.css`的样式作为基准，而你的样式优先级高于这些基准样式。
 
+这是浏览器如何选择将哪些样式应用于页面元素上的第一个基本概念，前端开发人员称之为“**时效性**”（`recency`）：当浏览器处理 CSS 规则时，新规则可以覆盖较早处理的规则。你可以通过更改`<link>`标签的顺序来控制浏览器处理 CSS 的顺序。
 
-你已经看到了了如何覆盖样式。例如，你将 `normalize.css` 的链接放在了 `styles.css` 之前。这使得浏览器使用 `normalize.css` 的样式作为基准，而你的样式优先级高于这些基准样式。
-
-这是浏览器如何选择将哪些样式应用于页面元素上的第一个基本概念，前端开发人员称之为“**时效性**”（`recency`）：当浏览器处理 CSS 规则时，新规则可以覆盖较早处理的规则。你可以通过更改 `<link>` 标签的顺序来控制浏览器处理 CSS 的顺序。
-
-当规则具有相同的选择器时，这种情况非常简单（例如，如果你的 CSS 和 `normalize.css` 为 `body` 元素声明了不同的 `margin`）。在这种情况下，浏览器会选择最近的声明。但对于被多个选择器命中的元素，该如何处理呢？
+当规则具有相同的选择器时，这种情况非常简单（例如，如果你的 CSS 和`normalize.css`为`body`元素声明了不同的`margin`）。在这种情况下，浏览器会选择最近的声明。但对于被多个选择器命中的元素，该如何处理呢？
 
 假设你在 Ottergram 的 CSS 中有以下两条规则：
 
@@ -1753,9 +1812,11 @@ li {
 }
 ```
 
-这两者都会匹配你的 `<li>` 元素。你的 `<li>` 元素将具有什么背景颜色？尽管 `li { background: red; }` 规则更晚，但 `.thumbnail-item { background: blue; }` 将被使用。为什么？因为它使用了类选择器，它比元素选择器更具特殊性（即被分配了更高的优先级值）。
 
-类选择器和属性选择器具有相同的优先级，且它们的优先级都高于元素选择器。最高优先级属于 `ID 选择器`，你还没有见过它。如果你给一个元素添加 `id` 属性，你就可以编写一个比任何其他选择器都更具体的 ID 选择器。
+
+这两者都会匹配你的`<li>`元素。你的`<li>`元素将具有什么背景颜色？尽管`li { background: red; }`规则更晚，但`.thumbnail-item { background: blue; }`将被使用。为什么？因为它使用了类选择器，它比元素选择器更具特殊性（即被分配了更高的优先级值）。
+
+类选择器和属性选择器具有相同的优先级，且它们的优先级都高于元素选择器。最高优先级属于`ID 选择器`，你还没有见过它。如果你给一个元素添加`id`属性，你就可以编写一个比任何其他选择器都更具体的 ID 选择器。
 
 ID 属性看起来与其他属性相似。例如：
 
@@ -1763,7 +1824,7 @@ ID 属性看起来与其他属性相似。例如：
 <li class="thumbnail-item" id="barry-otter">
 ```
 
-要在选择器中使用该 ID，需要在它前面加上 `#` 前缀：
+要在选择器中使用该 ID，需要在它前面加上`#`前缀：
 
 ```css
 .thumbnail-item {
@@ -1779,13 +1840,13 @@ li {
 }
 ```
 
-在这个例子中，`<li>` 被三个选择器全部命中，但它将具有绿色背景，因为 ID 选择器的优先级最高。你的规则集的顺序在这里没有区别，因为每个规则的优先级都不同。
+在这个例子中，`<li>`被三个选择器全部命中，但它将具有绿色背景，因为 ID 选择器的优先级最高。你的规则集的顺序在这里没有区别，因为每个规则的优先级都不同。
 
-关于使用 ID 选择器的一点：最好避免使用它们。ID 值在文档中必须唯一的，因此你不能在文档的任何其他元素中使用 `id="barry-otter"` 属性。尽管 ID 选择器具有最高优先级，但它们关联样式无法重用，这使其成为维护上的“反实践”。
+关于使用 ID 选择器的一点：最好避免使用它们。ID 值在文档中必须唯一的，因此你不能在文档的任何其他元素中使用`id="barry-otter"`属性。尽管 ID 选择器具有最高优先级，但它们关联样式无法重用，这使其成为维护上的“反实践”。
 
-要学习更多关于优先级的知识，请访问 MDN 页面 `developer.mozilla.org/en-US/docs/Web/CSS/Specificity`。
+要学习更多关于优先级的知识，请访问 MDN 页面`developer.mozilla.org/en-US/docs/Web/CSS/Specificity`。
 
-`specificity.keegan.st` 上的优先级计算器是比较不同选择器优先级的 get 工具。查看它可以让你更精确地理解优先级是如何计算的。
+`specificity.keegan.st`上的优先级计算器是比较不同选择器优先级的 get 工具。查看它可以让你更精确地理解优先级是如何计算的。
 
 # 使用 Flexbox 实现的 4 种响应式布局
 
@@ -1795,7 +1856,7 @@ li {
 
 遗憾的是，这意味着前端开发背上了沉重的负担，需要为网站上的每个页面创建多个副本，每个副本都是用适用于特定屏幕尺寸下运行的特定浏览器版本的标记和样式构建的。维护所有这些副本既耗时又令人令人沮丧。
 
-幸运的是，浏览器大战已经结束，浏览器制造商现在力求符合同一套标准特性——现代前端开发人员可以自由地关注网站的单一代码库。需要创建特定特定页面的时代已经过去。但这并不意味着开发者不能再根据不同的屏幕尺寸或方向提供定制化页面了。新技术——如你将在本章中学习的 `flexbox`——允许布局根据用户的屏幕尺寸进行调整，而不需要重复的文档。
+幸运的是，浏览器大战已经结束，浏览器制造商现在力求符合同一套标准特性——现代前端开发人员可以自由地关注网站的单一代码库。需要创建特定特定页面的时代已经过去。但这并不意味着开发者不能再根据不同的屏幕尺寸或方向提供定制化页面了。新技术——如你将在本章中学习的`flexbox`——允许布局根据用户的屏幕尺寸进行调整，而不需要重复的文档。
 
 在本章中，你将把 Ottergram 从一个简单的图像列表扩展为准备好处理交互内容的正式用户界面。使用 flexbox 和 CSS 定位，你将构建一组界面组件，它们会根据浏览器窗口大小的变化进行调整，同时保持整体布局。在章节结束时，Ottergram 将包含一个缩略图滚动列表以及一个显示单张图片大尺寸详细版本的区域（图 4.1）。
 
@@ -1825,7 +1886,7 @@ Ottergram 的简单布局已经是移动友好的。它以适合较小尺寸的�
 
 目前，你的详细图将固定在单张图片上。在第 6 章中，你将添加功能，让用户点击缩略图使任何图片变为详细图。
 
-在 index.html 中添加一段新代码来创建详细图：
+在`index.html`中添加一段新代码来创建详细图：
 
 ```html
 ...
@@ -1846,14 +1907,11 @@ Ottergram 的简单布局已经是移动友好的。它以适合较小尺寸的�
 </html>
 ```
 
+你添加了一个带有`detail-image-container`类的`<div>`。`<div>`是一个通用的内容容器——通常用于对包含的内容应用样式，而这正是你将使用它的方式。
 
+在`<div>`内部，你添加了一个`<img>`标签来显示水獭图像的大尺寸。你还添加了一个`<span>`标签，包裹了详情图片的标题文本。你分别为`<img>`和`<span>`标签赋予了`detail-image`和`detail-image-title`类名。
 
-
-你添加了一个带有 `detail-image-container` 类的 `<div>`。`<div>` 是一个通用的内容容器——通常用于对包含的内容应用样式，而这正是你将使用它的方式。
-
-在 `<div>` 内部，你添加了一个 `<img>` 标签来显示水獭图像的大尺寸。你还添加了一个 `<span>` 标签，包裹了详情图片的标题文本。你分别为 `<img>` 和 `<span>` 标签赋予了 `detail-image` 和 `detail-image-title` 类名。
-
-保存 `index.html`，切换到 `styles.css`，最后限制你新定义的 `.detail-image` 类的宽度。
+保存`index.html`，切换到`styles.css`，最后限制你新定义的`.detail-image`类的宽度。
 
 ```
 ...
@@ -1866,29 +1924,29 @@ Ottergram 的简单布局已经是移动友好的。它以适合较小尺寸的�
 }
 ```
 
-保存 `styles.css` 并启动 `browser-sync` 在 `Chrome` 中打开你的项目（图 4.3）。（命令是 `browser-sync start --server --browser "Google Chrome" --files "stylesheets/*.css, *.html"`。）
+保存`styles.css`并启动`browser-sync`在`Chrome`中打开你的项目（图 4.3）。（命令是`browser-sync start --server --browser "Google Chrome" --files "stylesheets/*.css, *.html"`。）
 
 **图 4.3 详情图的初始样式**
 
 ![详情图的初始样式](img/detail-image-initial-style.png)
 
-你的 `.detail-image` 将出现在页面底部，比你的缩略图略窄。通过将详情图的宽度设置为容器宽度的 90%，你在它旁边留出了一点空间。浏览器会将 `.detail-image-title` 的文本放在该空间内（你将在本章稍后对该文本进行样式设置）。
+你的`.detail-image`将出现在页面底部，比你的缩略图略窄。通过将详情图的宽度设置为容器宽度的 90%，你在它旁边留出了一点空间。浏览器会将`.detail-image-title`的文本放在该空间内（你将在本章稍后对该文本进行样式设置）。
 
 如果你调整页面大小，你会发现一个 bug：当缩略图调整到新宽度时，详情图可能会被挤出视野。你将在本章的稍后部分解决这个问题。
 
 ## 缩略图的水平布局
 
-接下来，你将更新 `.thumbnail-list` 和 `.thumbnail-item` 类，以便图像能够水平滚动。
+接下来，你将更新`.thumbnail-list`和`.thumbnail-item`类，以便图像能够水平滚动。
 
-为了帮助你测试滚动效果，请复制 `index.html` 中所有的五个 `<li>` 元素。这将为你提供大量内容供滚动。要做到这一点，只需选择 `<ul class="thumbnail-list">` 和 `</ul>` 之间的所有行，复制它们并将结果粘贴到 `</ul>` 之上。你最终应该会有 10 个列表项，其中包含两次 `otter1.jpg` 到 `otter5.jpg` 的图像。
+为了帮助你测试滚动效果，请复制`index.html`中所有的五个`<li>`元素。这将为你提供大量内容供滚动。要做到这一点，只需选择`<ul class="thumbnail-list">`和`</ul>`之间的所有行，复制它们并将结果粘贴到`</ul>`之上。你最终应该会有 10 个列表项，其中包含两次`otter1.jpg`到`otter5.jpg`的图像。
 
-完成后，务必保存 `index.html`。在开发过程中复制内容是模拟更健壮项目的好方法。它能让你看到代码如何处理真实世界的情况。
+完成后，务必保存`index.html`。在开发过程中复制内容是模拟更健壮项目的好方法。它能让你看到代码如何处理真实世界的情况。
 
 对于水平滚动的缩略图列表，每个缩略图必须限制在特定的宽度，并且缩略图应该在单行内水平布局。
 
-你已经多次使用的 `display: block` 属性无法产生预期的效果。它会导致浏览器在元素之前和之后渲染换行。然而，一个相关的样式 `display: inline-block` 非常适合这种情况。使用 `inline-block` 时，元素的盒模型绘制方式就像你声明了 `display: block` 一样，但没有换行——这允许你的缩略图保持成排对齐。
+你已经多次使用的`display: block`属性无法产生预期的效果。它会导致浏览器在元素之前和之后渲染换行。然而，一个相关的样式`display: inline-block`非常适合这种情况。使用`inline-block`时，元素的盒模型绘制方式就像你声明了`display: block`一样，但没有换行——这允许你的缩略图保持成排对齐。
 
-在 `styles.css` 中为 `.thumbnail-item` 类添加 `width` 声明并更改 `display` 声明。
+在`styles.css`中为`.thumbnail-item`类添加`width`声明并更改`display`声明。
 
 ```
 ...
@@ -1902,19 +1960,19 @@ Ottergram 的简单布局已经是移动友好的。它以适合较小尺寸的�
 ...
 ```
 
-（注意，`Atom` 的代码检查器可能会警告你“带有 border 使用 width 有时会导致元素比你预期的要大。”这是因为 `width` 属性仅适用于元素盒的内容部分——而不是内边距或边框。你不需要对此警告做任何处理。）
+（注意，`Atom`的代码检查器可能会警告你“带有 border 使用 width 有时会导致元素比你预期的要大。”这是因为`width`属性仅适用于元素盒的内容部分——而不是内边距或边框。你不需要对此警告做任何处理。）
 
-当 `.thumbnail-item` 元素的宽度设置为 `120px` 的绝对值时，`.thumbnail-image` 也有效地被固定了，因为 `.thumbnail-image` 会根据其容器调整宽度。
+当`.thumbnail-item`元素的宽度设置为`120px`的绝对值时，`.thumbnail-image`也有效地被固定了，因为`.thumbnail-image`会根据其容器调整宽度。
 
-为什么不直接将 `.thumbnail-image` 设置为 `width: 120px` 呢？你希望 `.thumbnail-image` 和 `.thumbnail-title` 具有相同的宽度。与其为这些元素每一个都设置 `width` 属性，不如在它们的共同父元素上设置。这样，如果你需要更改宽度，只需要在一个地方修改即可。通常情况下，让内部元素适应它们的容器是一种良好实践。
+为什么不直接将`.thumbnail-image`设置为`width: 120px`呢？你希望`.thumbnail-image`和`.thumbnail-title`具有相同的宽度。与其为这些元素每一个都设置`width`属性，不如在它们的共同父元素上设置。这样，如果你需要更改宽度，只需要在一个地方修改即可。通常情况下，让内部元素适应它们的容器是一种良好实践。
 
-保存 `styles.css`  `Chrome` 中检查你的页面。你可以看到 `.thumbnail-item` 元素并排排列——但当它们填满容器宽度时，它们会换行（图 4.4）。
+保存`styles.css`，在`Chrome`中检查你的页面。你可以看到`.thumbnail-item`元素并排排列——但当它们填满容器宽度时，它们会换行（图 4.4）。
 
 **图 4.4 inline-block 创建行**
 
 ![inline-block 创建了换行的行](img/wrapping-thumbnails.png)
 
-为了获得你想要的滚动效果，请在 `styles.css` 中设置 `.thumbnail-list` 禁止换行并允许滚动。
+为了获得你想要的滚动效果，请在`styles.css`中设置`.thumbnail-list`禁止换行并允许滚动。
 
 ```
 ...
@@ -1927,7 +1985,7 @@ Ottergram 的简单布局已经是移动友好的。它以适合较小尺寸的�
 }
 ```
 
-`white-space: nowrap` 阻止了 `.thumbnail-item` 换行。`overflow-x: auto` 告诉浏览器在 `.thumbnail-list` 的水平空间（x 轴）添加滚动条。再次保存文件并在浏览器中查看结果。缩略图现在处于单行中，你应该可以滚动了（图 4.5）。
+`white-space: nowrap`阻止了`.thumbnail-item`换行。`overflow-x: auto`告诉浏览器在`.thumbnail-list`的水平空间（x 轴）添加滚动条。再次保存文件并在浏览器中查看结果。缩略图现在处于单行中，你应该可以滚动了（图 4.5）。
 
 **图 4.5 水平滚动的缩略图**
 
@@ -1939,22 +1997,19 @@ Ottergram 的简单布局已经是移动友好的。它以适合较小尺寸的�
 
 ## Flexbox
 
-你已经见过指定 `block` 和 `inline` 属性的 `display` 样式。内联元素（如你新列表中的缩略图）彼此排列，而块元素占据自己的水平行（图 4.6）。
+你已经见过指定`block`和`inline`属性的`display`样式。内联元素（如你新列表中的缩略图）彼此排列，而块元素占据自己的水平行（图 4.6）。
 
 **图 4.6 块级与内联元素**
 
 ![块级与内联元素](img/block-vs-inline.png)
 
-`display` 属性告诉浏览器元素在布局中如何流动。对于博客或在线百科全书，`inline` 和 `block` 值效果良好。但对于像 Web 版邮箱和社交媒体网站这样的应用程序布局，有一项新的 CSS 规范允许元素更动态地流动。这就是弹性盒模型，或 flexbox。
+`display`属性告诉浏览器元素在布局中如何流动。对于博客或在线百科全书，`inline`和`block`值效果良好。但对于像 Web 版邮箱和社交媒体网站这样的应用程序布局，有一项新的 CSS 规范允许元素更动态地流动。这就是弹性盒模型，或 flexbox。
 
 Flexbox CSS 属性可以确保缩略图和详情区域填充屏幕并保持它们之间的比例关系。这正是 Ottergram 所需要的。你还可以使用 flexbox 属性在水平和垂直方向上居中详情内容，这在使用标准盒模型属性时是一项极困难的任务。
 
+### 创建一个 flex 容器
 
-
-
-创建一个 flex 容器
-
-在添加你的第一个 flexbox 属性之前，请在 `styles.css` 中将你的 `<html>` 和 `<body>` 元素设置为 `height: 100%`。`<html>` 元素是你的 DOM 树的根元素，而 `<body>` 是在其内部绘制的子元素。将两者的 `height` 都设置为 `100%` 可以让内容填充整个浏览器或设备窗口。
+在添加你的第一个 flexbox 属性之前，请在`styles.css`中将你的`<html>`和`<body>`元素设置为`height: 100%`。`<html>`元素是你的 DOM 树的根元素，而`<body>`是在其内部绘制的子元素。将两者的`height`都设置为`100%`可以让内容填充整个浏览器或设备窗口。
 
 ```
 @font-face {
@@ -1974,15 +2029,15 @@ body {
 
 注意，在这条样式规则中，你将两个选择器用逗号分组在一起。任何类型的选择器都可以以这种方式组合以设置通用样式。
 
-同样注意，你现在有两个针对 `body` 元素选择器的样式规则。当浏览器看到某个选择器额外的样式声明时，它仅仅会将其添加到该选择器现有的样式信息中。在这种情况下，它首先看到 `<body>` 应该具有 100% 的 `height` 并存储了该信息。当它读取下一个针对 `<body>` 的样式规则时，它会将 `background` 和 `font-size` 信息与 `height` 样式一起存储。
+同样注意，你现在有两个针对`body`元素选择器的样式规则。当浏览器看到某个选择器额外的样式声明时，它仅仅会将其添加到该选择器现有的样式信息中。在这种情况下，它首先看到`<body>`应该具有 100% 的`height`并存储了该信息。当它读取下一个针对`<body>`的样式规则时，它会将`background`和`font-size`信息与`height`样式一起存储。
 
-现在你准备好创建你的第一个 flex 容器了。当一个元素成为 flex 容器时，它可以控制其子元素（即 flex 项目）的布局。在 flex 容器内部，flex 项目的尺寸和位置沿着 `main axis`（主轴）和 `cross axis`（交叉轴）发生(图 4.7）。
+现在你准备好创建你的第一个 flex 容器了。当一个元素成为 flex 容器时，它可以控制其子元素（即 flex 项目）的布局。在 flex 容器内部，flex 项目的尺寸和位置沿着`main axis`（主轴）和`cross axis`（交叉轴）发生（图 4.7）。
 
-**图 4.7  flex 容器的主轴和交叉轴**
+**图 4.7 flex 容器的主轴和交叉轴**
 
 ![flex 容器的主轴和交叉轴](img/main-cross-axes.png)
 
-通过在 `styles.css` 的 `<body>` 元素样式规则中添加 `display: flex` 声明，让你的 `<body>` 元素成为 flex 容器。
+通过在`styles.css`的`<body>`元素样式规则中添加`display: flex`声明，让你的`<body>`元素成为 flex 容器。
 
 ```
 ...
@@ -1995,9 +2050,9 @@ body {
 ...
 ```
 
-如果你现在保存，你的浏览器将显示一个看起来相当忧伤的 Ottergram，如图 4.8 所示。这是因为主轴从左到右延伸，将 flex 项目（`<body>` 的所有子元素）以行的行的方式排列。
+如果你现在保存，你的浏览器将显示一个看起来相当忧伤的 Ottergram，如图 4.8 所示。这是因为主轴从左到右延伸，将 flex 项目（`<body>`的所有子元素）以行的方式排列。
 
-**图 4.8  沿主轴排列的 flex 项目**
+**图 4.8 沿主轴排列的 flex 项目**
 
 ![沿主轴排列的 flex 项目](img/broken-in-flex-direction-row.png)
 
@@ -2005,7 +2060,7 @@ body {
 
 ### 更改 flex-direction
 
-要修复布局，请在 `styles.css` 中将 `<body>` 元素的 `flex-direction` 设置为 `column`：
+要修复布局，请在`styles.css`中将`<body>`元素的`flex-direction`设置为`column`：
 
 ```
 ...
@@ -2021,13 +2076,13 @@ body {
 
 这交换了 flex 容器的主轴和交叉轴方向，如图 4.9 所示。
 
-**图 4.9  设置 flex-direction: column 的主轴和交叉轴**
+**图 4.9 设置 flex-direction: column 的主轴和交叉轴**
 
 ![设置 flex-direction: column 的主轴和交叉轴](img/main-cross-axes-column.png)
 
-在将 `flex-direction` 更改为 `column` 后，Ottergram 恢复了正常——几乎如此。当浏览器窗口比高宽很多时，布局中会出现一个视觉 Bug，如图 4.10 所示。
+在将`flex-direction`更改为`column`后，Ottergram 恢复了正常——几乎如此。当浏览器窗口比高宽很多时，布局中会出现一个视觉 Bug，如图 4.10 所示。
 
-**图 4.10  页面拉伸宽时缺少缩略图**
+**图 4.10 页面拉伸宽时缺少缩略图**
 
 ![页面拉伸宽时缺少缩略图](img/missing-thumbnails.png)
 
@@ -2035,11 +2090,13 @@ body {
 
 ### 在 flex 项目内分组元素
 
-`<body>` 有三个 flex 项目：`<header>`、`.thumbnail-list` 和 `.detail-image-container`。无论 Ottergram 在开发（和使用）过程中发生什么，`<header>` 的布局或复杂度都不可能发生很大变化。它将位于页面顶部显示文本。仅此如此。
+`<body>`有三个 flex 项目：`<header>`、`.thumbnail-list`和`.detail-image-container`。无论 Ottergram 在开发（和使用）过程中发生什么，`<header>`的布局或复杂度都不可能发生很大变化。它将位于页面顶部显示文本。仅此如此。
 
-另一方面，`.thumbnail-list` 和 `.detail-image-container` 可能会发生。为了实现这一点，将 `.thumbnail-list` 和 `.detail-image-container` 包在一个 `<main>` 标签中(图 4.11。
+另一方面，`.thumbnail-list`和`.detail-image-container`可能会发生。为了实现这一点，将`.thumbnail-list`和`.detail-image-container`包在一个`<main>`标签中（图 4.11）。
 
-**图 4.11  包裹 .thumbnail-list 和 .detail-image-container**
+**图 4.11 包裹 .thumbnail-list 和 .detail-image-container**
+
+
 
 ![包裹 .thumbnail-list 和 .detail-image-container](img/introducing-top-level-flex-item.png)
 
@@ -2064,32 +2121,29 @@ body {
 
 ### flex 写属性
 
-flex 容器分配内部的空间。如果 flex 项目没有指定主轴上的尺寸，那么容器将根据 flex 项目的数量平均分配空间，每个项目在主轴上获得平等的份额。这是默认情况，如图 4.12 所示。
+`flex` 容器分配内部的空间。如果 `flex` 项目没有指定主轴上的尺寸，那么容器将根据 `flex` 项目的数量平均分配空间，每个项目在主轴上获得平等的份额。这是默认情况，如图 4.12 所示。
 
-**图 4.12  三个 flex 项目之间的空间平均分配**
+**图 4.12 三个 flex 项目之间的空间平均分配**
 
 ![三个 flex 项目之间的空间平均分配](img/flex-equal.png)
 
-但想象一下图 4.12 中三个 flex 项目中的一个比其他更贪婪，占据了总空间的两个份额。在这种情况下，flex 容器将主轴上的空间分为四份。贪婪的项目占据了两份（一半空间），而其他项目每个获得一份(图 4.13。
+但想象一下图 4.12 中三个 `flex` 项目中的一个比其他更贪婪，占据了总空间的两个份额。在这种情况下，`flex` 容器将主轴上的空间分为四份。贪婪的项目占据了两份（一半空间），而其他项目每个获得一份（图 4.13）。
 
-**图 4.13  三个 flex 项目之间的空间不均分配**
+**图 4.13 三个 flex 项目之间的空间不均分配**
 
 ![三个 flex 项目之间的空间不均分配](img/flex-unequal.png)
 
-
-
-
 在 Ottergram 中，你希望 `.main-content` 元素成为贪婪元素，尽可能地沿主轴占据尽可能多的空间。相反，`.main-header` 应该占据尽可能少的空间。
 
-`flex` 属性允许你的 flex 项目指定它们将占据可用空间的多少比例。它是一个简写属性，如图 4.14 所示。
+`flex` 属性允许你的 `flex` 项目指定它们将占据可用空间的多少比例。它是一个简写属性，如图 4.14 所示。
 
-**图 4.14  `flex` 简写属性及其值**
+**图 4.14 `flex` 简写属性及其值**
 
 ![flex 简写属性及其值](img/flex-property-shorthand.png)
 
 我们强烈建议你使用 `flex` 而不是它所代表的单独属性。这可以防止你无意中漏掉某个属性而导致意料之外的结果。
 
-第一个值是目前需要关注的，因为它决定了 flex 项目可以增长多大。默认情况下，flex 项目完全不增长。你希望 `.main-header` 保持这种默认行为，但 `.main-content` 则不然。
+第一个值是目前需要关注的，因为它决定了 `flex` 项目可以增长多大。默认情况下，`flex` 项目完全不增长。你希望 `.main-header` 保持这种默认行为，但 `.main-content` 则不然。
 
 在 `styles.css` 中，为 `.main-header` 类选择器添加声明块，指定带有默认值的 `flex` 简写属性：`0 1 auto`。
 
@@ -2129,17 +2183,17 @@ a {
 
 `.main-content` 的 `flex` 声明中的第一个值对应于 `flex-grow` 属性。值 `1` 告诉容器：“我想尽可能地增长。” 因为它唯一的兄弟元素已声明它*不会*增长，因此 `.main-content` 元素将增长以占据所有 `.main-header` 所需之外的空间。
 
-`<body>` 的两个 flex 项目——`.main-header` 和 `.main-content` 元素——根据它们的需求占据弹性空间。现在是调整 `.main-content` 元素布局的时间了。
+`<body>` 的两个 `flex` 项目——`.main-header` 和 `.main-content` 元素——根据它们的需求占据弹性空间。现在是调整 `.main-content` 元素布局的时间了。
 
-### flex 项目的排序、对齐和对对齐
+### flex 项目的排序、对齐和对齐
 
-Flexbox 还允许你将 flex 项目细分为 flex 容器。这种技术让你专注于层级。稍后，你将让 `.main-content` 成为一个 flex 容器。
+`Flexbox` 还允许你将 `flex` 项目细分为 `flex` 容器。这种技术让你专注于层级。稍后，你将让 `.main-content` 成为一个 `flex` 容器。
 
-处理嵌套的 flex 容器是创建视觉组件外观和感受的原子样式方法的一个例外。与其先为最小、最内层的元素设置样式，然后向外处理到最大的元素，在用 flexbox 处理布局时，从最外层元素开始向内处理更有用。
+处理嵌套的 `flex` 容器是创建视觉组件外观和感受的原子样式方法的一个例外。与其先为最小、最内层的元素设置样式，然后向外处理到最大的元素，在用 `flexbox` 处理布局时，从最外层元素开始向内处理更有用。
 
-这里是你接接下来要处理的内容。你将把 `.main-content` 改为具有垂直主轴的 flex 容器。此外，你为 `.main-content` 的 flex 项目指定 `flex` 属性，以便 `.thumbnail-list` 占据默认空间，而 `.detail-image-container` 增长以填充剩余空间。最后，你将 `.thumbnail-list` 移动到 `.detail-image-container` 下（图 4.15）。
+这里是你接下来要处理的内容。你将把 `.main-content` 改为具有垂直主轴的 `flex` 容器。此外，你为 `.main-content` 的 `flex` 项目指定 `flex` 属性，以便 `.thumbnail-list` 占据默认空间，而 `.detail-image-container` 增长以填充剩余空间。最后，你将 `.thumbnail-list` 移动到 `.detail-image-container` 下（图 4.15）。
 
-**图 4.15  将 `.main-content` 变为 flex 容器**
+**图 4.15 将 `.main-content` 变为 flex 容器**
 
 ![将 .main-content 变为 flex 容器](img/main-content-as-flex-container.png)
 
@@ -2184,7 +2238,7 @@ Flexbox 还允许你将 flex 项目细分为 flex 容器。这种技术让你专
 
 保存 `styles.css` 并切换到 Chrome。你会看到缩略图已在底部渲染（图 4.16）。
 
-**图 4.16  绘制元素的顺序**
+**图 4.16 绘制元素的顺序**
 
 ![绘制元素的顺序](img/flexbox-order.png)
 
@@ -2204,7 +2258,7 @@ Flexbox 还允许你将 flex 项目细分为 flex 容器。这种技术让你专
 ...
 ```
 
-接下来，你在处理 Ottergram 布局时将继续应用 `display: flex`。到目前为止，你处理的是只有几个 flex 项目的 flex 容器。让 `.thumbnail-list` 成为 flex 容器，以便你进一步探索 flexbox 能为你提供什么。
+接下来，你在处理 Ottergram 布局时将继续应用 `display: flex`。到目前为止，你处理的是只有几个 `flex` 项目的 `flex` 容器。让 `.thumbnail-list` 成为 `flex` 容器，以便你进一步探索 `flexbox` 能为你提供什么。
 
 ```
 ...
@@ -2223,16 +2277,13 @@ Flexbox 还允许你将 flex 项目细分为 flex 容器。这种技术让你专
 
 如果你保存更改后看到缩略图渲染异常，请不要惊慌，如图 4.17 所示。
 
-**图 4.17  异常的海獭**
+**图 4.17 异常的海獭**
 
 ![异常的海獭](img/janky-otter-thumbnails.png)
 
 要修复这个问题，请将 `.thumbnail-item` 的 `width` 声明替换为对声明，一个用于 `min-width`，另一个用于 `max-width`。这将消除导致奇怪布局的尺寸差异。
 
 你也可以删除为 `.thumbnail-item + .thumbnail-item` 元素设置 `margin-top` 的声明块。它对于这种布局不再需要了。
-
-
-
 
 ```css
 ...
@@ -2251,7 +2302,7 @@ Flexbox 还允许你将 flex 项目细分为 flex 容器。这种技术让你专
 ...
 ```
 
-接下来，你将处理 `.thumbnail-list` 内部 flex 项目的间距。在 `styles.css` 中，为 `.thumbnail-list` 选择选择器添加 `justify-content` 声明。
+接下来，你将处理 `.thumbnail-list` 内部 `flex` 项目的间距。在 `styles.css` 中，为 `.thumbnail-list` 选择选择器添加 `justify-content` 声明。
 
 ```css
 ...
@@ -2269,7 +2320,7 @@ Flexbox 还允许你将 flex 项目细分为 flex 容器。这种技术让你专
 ...
 ```
 
-`justify-content` 属性允许 flex 容器控制 flex 项目在主轴上的绘制方式。你使用了 `space-between` 作为值，以确保每个单独的 flex 项目周围都有均匀的距。
+`justify-content` 属性允许 `flex` 容器控制 `flex` 项目在主轴上的绘制方式。你使用了 `space-between` 作为值，以确保每个单独的 `flex` 项目周围都有均匀的间距。
 
 你可以为 `justify-content` 指定五种不同的值。图 4.18 阐释了这些值每一个是如何工作的。
 
@@ -2310,7 +2361,7 @@ Flexbox 还允许你将 flex 项目细分为 flex 容器。这种技术让你专
 </html>
 ```
 
-保存 `index.html`。现在，在 `styles.css` 中，为 `.detail-image-frame` 添加一个包含单一样式声明的声明块：`text-align: center`。这是不使用 flexbox 居中内容的方法之一，但注意它只对水平方向有效。
+保存 `index.html`。现在，在 `styles.css` 中，为 `.detail-image-frame` 添加一个包含单一样式声明的声明块：`text-align: center`。这是不使用 `flexbox` 居中内容的方法之一，但注意它只对水平方向有效。
 
 ```css
 ...
@@ -2327,7 +2378,7 @@ Flexbox 还允许你将 flex 项目细分为 flex 容器。这种技术让你专
 }
 ```
 
-接下来，为了在 `.detail-image-container` 内部居中 `.detail-image-frame`，更新 `styles.css` 使 `.detail-image-container` 成为一个 flex 容器。使用 `justify-content: center` 将其 flex 项目绘制在主轴中心（在这种情况下是水平方向——默认值），并添加一个新的 flexbox 属性 `align-items: center` 将其 flex 项目绘制在交叉轴中心（垂直方向）。
+接下来，为了在 `.detail-image-container` 内部居中 `.detail-image-frame`，更新 `styles.css` 使 `.detail-image-container` 成为一个 `flex` 容器。使用 `justify-content: center` 将其 `flex` 项目绘制在主轴中心（在这种情况下是水平方向——默认值），并添加一个新的 `flexbox` 属性 `align-items: center` 将其 `flex` 项目绘制在交叉轴中心（垂直方向）。
 
 ```css
 ...
@@ -2359,7 +2410,9 @@ Flexbox 还允许你将 flex 项目细分为 flex 容器。这种技术让你专
 绝对定位有三个要求：
 
 *   `position: absolute` 属性，告诉浏览器将其移出文档流而不是与其兄弟元素一起布局
+
 *   坐标，通过 `top`、`right`、`bottom` 和 `left` 属性中的一个；绝对长度（如像素）或相对长度（如百分比）可以作为值使用
+
 *   一个声明了 `position` 属性为 `relative` 的祖元素；如果祖元素没有 `position` 属性，绝对定位元素将相对于 `<html>` 元素（浏览器窗口）进行。
 
 当你指定坐标时，你实际上是在相对于元素的边缘（相对于其容器的边缘）指定距离，如图 4.22 所示。
@@ -2381,9 +2434,11 @@ Flexbox 还允许你将 flex 项目细分为 flex 容器。这种技术让你专
 ...
 ```
 
-你为 `.detail-image-frame` 使用 `position: relative` 是因为你希望它保持在正常流中。你还希望它作为绝对定位后代的容器，因此它的 `position` 属性必须显式定义。
 
-在 `styles.css` 的末尾，为 `.detail-image-title` 选择器添加一个声明块。现在，将标题设为白色，并将字体设置为默认值的四倍。
+
+你为`.detail-image-frame`使用`position: relative`是因为你希望它保持在正常流中。你还希望它作为绝对定位后代的容器，因此它的`position`属性必须显式定义。
+
+在`styles.css`的末尾，为`.detail-image-title`选择器添加一个声明块。现在，将标题设为白色，并将字体设置为默认值的四倍。
 
 ```css
 ...
@@ -2399,12 +2454,9 @@ Flexbox 还允许你将 flex 项目细分为 flex 容器。这种技术让你专
 
 到目前为止，一切顺利（[图 4.23）。但太基础了。
 
-
-
-
 ![.detail-image-title 的基础文本样式](img/basic-white.png)
 
-为了增加一点风格，让我们为 `.detail-image-title` 添加一些文本效果。在定位已样化的文本元素时，请记住元素的盒模型可能会因为自定义字体的视觉特征或其他效果而发生。在本示例中，你将在设置位置之前完成对 `.detail-image-title` 的所有文本样式设置。在 `styles.css` 中为 `.detail-image-title` 添加 `text-shadow` 属性。
+为了增加一点风格，让我们为`.detail-image-title`添加一些文本效果。在定位已样式的文本元素时，请记住元素的盒模型可能会因为自定义字体的视觉特征或其他效果而发生。在本示例中，你将在设置位置之前完成对`.detail-image-title`的所有文本样式设置。在`styles.css`中为`.detail-image-title`添加`text-shadow`属性。
 
 ```
 ...
@@ -2415,21 +2467,21 @@ Flexbox 还允许你将 flex 项目细分为 flex 容器。这种技术让你专
 }
 ```
 
-顾如名，`text-shadow` 属性为文本添加阴影。它接受一个阴影颜色、一对用于 `offset`（偏移）的长度（即阴影落在文本的上方还是下方、左侧还是右侧），以及一个 `blur radius`（模糊半径）——这是 `text-shadow` 声明中的可选部分，随着值的增大，阴影会变得越大且颜色越浅。
+顾如名，`text-shadow`属性为文本添加阴影。它接受一个阴影颜色、一对用于`offset`（偏移）的长度（即阴影落在文本的上方还是下方、左侧还是右侧），以及一个`blur radius`（模糊半径）——这是`text-shadow`声明中的可选部分，随着值的增大，阴影会变得越大且颜色越浅。
 
-你为阴影设置了颜色属性 `rgba(0, 0, 0, 0.9)`，使其呈现微透明的黑色。它向右偏移了 `1px`，向下方偏移了 `2px`（负值将使其置于文本左侧或上方）。最后一个值 `9px` 是模糊半径。图 4.24 显示了你新增的阴影。
+你为阴影设置了颜色属性`rgba(0, 0, 0, 0.9)`，使其呈现微透明的黑色。它向右偏移了`1px`，向下方偏移了`2px`（负值将使其置于文本左侧或上方）。最后一个值`9px`是模糊半径。图 4.24 显示了你新增的阴影。
 
-**图 4.24 .detail-image-title 的 `text-shadow`**
+**图 4.24 .detail-image-title 的`text-shadow`**
 
 ![detail-image-title 的文本阴影](img/gotta-have-more-shadow.png)
 
-尝试在开发者工具元素面板的样式窗中调整 `text-shadow` 值，以感受它们是如何运作的（图 4.25）。
+尝试在开发者工具元素面板的样式窗中调整`text-shadow`值，以感受它们是如何运作的（图 4.25）。
 
 **图 4.25 使用开发者工具夸大文本阴影**
 
 ![使用开发者工具夸大文本阴影](img/ottergram-exaggerated-text-shadow.png)
 
-准备好后，使用自定义字体添加最后的点睛。就像你在第 3 章 中做的那样，在 `styles.css` 中添加 `@font-face` 声明，将 Airstream 字体引入项目。为 `.detail-image-title` 添加 `font-family: airstreamregular` 声明以使用它。
+准备好后，使用自定义字体添加最后的点睛。就像你在第 3 章 中做的那样，在`styles.css`中添加`@font-face`声明，将 Airstream 字体引入项目。为`.detail-image-title`添加`font-family: airstreamregular`声明以使用它。
 
 ```css
 @font-face {
@@ -2464,7 +2516,7 @@ Flexbox 还允许你将 flex 项目细分为 flex 容器。这种技术让你专
 
 ![想要更花丽](img/so-slick.png)
 
-现在你已经完成了 `.detail-image-title` 的样式设置，给它添加 `position: absolute` 声明，这样浏览器将将其放置在 `.detail-image-frame` 内的精确位置。使用 `bottom: -16px` 和 `left: 4px` 指定该位置，使其刚好位于 `.detail-image-frame` 底部下方，并略位于 `.detail-image-frame` 的左边缘内部（坐标使用负值是可以的）。
+现在你已经完成了`.detail-image-title`的样式设置，给它添加`position: absolute`声明，这样浏览器将将其放置在`.detail-image-frame`内的精确位置。使用`bottom: -16px`和`left: 4px`指定该位置，使其刚好位于`.detail-image-frame`底部下方，并略位于`.detail-image-frame`的左边缘内部（坐标使用负值是可以的）。
 
 ```css
 ...
@@ -2480,14 +2532,11 @@ Flexbox 还允许你将 flex 项目细分为 flex 容器。这种技术让你专
 }
 ```
 
+在第 3 章中，你为 Ottergram 添加了`normalize.css`。这确保了任何查看 Ottergram 的浏览器都具有相同的默认样式。在这些默认样式的基础上，你可以放心地添加自己的 CSS，并确信它在不同浏览器之间的表现是一致的。
 
+你将对布局视口（layout viewport）进行类似的操作。就像每个浏览器可能有不同的用户代理样式一样，每个浏览器也可能有不同的默认布局视口。然而，与使用`normalize.css`不同，你不会将所有浏览器的视口重置为相同的值。相反，你将使用`<meta>`标签告诉所有浏览器以设备物理屏幕的最佳尺寸显示 Ottergram。
 
-
-在第 3 章中，你为 Ottergram 添加了 `normalize.css`。这确保了任何查看 Ottergram 的浏览器都具有相同的默认样式。在这些默认样式的基础上，你可以放心地添加自己的 CSS，并确信它在不同浏览器之间的表现是一致的。
-
-你将对布局视口（layout viewport）进行类似的操作。就像每个浏览器可能有不同的用户代理样式一样，每个浏览器也可能有不同的默认布局视口。然而，与使用 `normalize.css` 不同，你不会将所有浏览器的视口重置为相同的值。相反，你将使用 `<meta>` 标签告诉所有浏览器以设备物理屏幕的最佳尺寸显示 Ottergram。
-
-在 `index.html` 中，添加一个 `<meta>` 标签，告诉浏览器布局视口的 `width` 与设备的屏幕宽度相同。确保通过将 `initial-scale` 设置为 `1` 来将缩放比例设置为 100%。
+在`index.html`中，添加一个`<meta>`标签，告诉浏览器布局视口的`width`与设备的屏幕宽度相同。确保通过将`initial-scale`设置为`1`来将缩放比例设置为 100%。
 
 ```
 <!doctype html>
@@ -2503,32 +2552,37 @@ Flexbox 还允许你将 flex 项目细分为 flex 容器。这种技术让你专
 ...
 ```
 
-保存你的更改。这项技术将布局视口设置为 `ideal viewport`（理想视口）。理想视口是浏览器制造商推荐的特定设备的最佳视口尺寸。由于存在许多许多不同的设备和相当数量的不同浏览器，这种尺寸差异很大。
+保存你的更改。这项技术将布局视口设置为`ideal viewport`（理想视口）。理想视口是浏览器制造商推荐的特定设备的最佳视口尺寸。由于存在许多许多不同的设备和相当数量的不同浏览器，这种尺寸差异很大。
 
 表 5.1 总结了不同类型的视口。
 
 ### 表 5.1 不同视口的汇总
 
 | 视口 | 描述 | 设备 |
+
 | --- | --- | --- |
-| viewport | 等于浏览器窗口的区域。它充当 `<html>` 元素的容器。 | 桌面式电脑，笔记本电脑 |
+
+| viewport | 等于浏览器窗口的区域。它充当`<html>`元素的容器。 | 桌面式电脑，笔记本电脑 |
+
 | layout viewport | 一个虚拟屏幕，比实际设备屏幕大，用于计算页面布局。 | 移动设备 |
+
 | visual viewport | 用户可以在设备屏幕上看到的可以缩放区域。缩放对页面布局没有影响。 | 移动设备 |
+
 | ideal viewport | 特定设备上特定浏览器的最优尺寸。 | 移动设备 |
 
-启动 `browser-sync` 并确保在 `Chrome` 中打开了开发者工具（DevTools）。在 `Elements` 项目的左侧找到 `Toggle Device Mode`（切换设备模式）按钮，它看起来像这样![不同视口的汇总](img/toggle-device-mode-button.png)。它在图 5.3 中显示上下文。
+启动`browser-sync`并确保在`Chrome`中打开了开发者工具（DevTools）。在`Elements`项目的左侧找到`Toggle Device Mode`（切换设备模式）按钮，它看起来像这样![不同视口的汇总](img/toggle-device-mode-button.png)。它在图 5.3 中显示上下文。
 
 ### 图 5.3 切换设备模式按钮
 
 ![切换设备模式按钮](img/responsive-testing-tool.png)
 
-点击此按钮激活 `device mode`（设备模式）。你将看到网页视图现在在模拟的智能手机屏幕上显示 Ottergram。有一个菜单可以根据流行设备在不同的屏幕尺寸之间。你还可以点击预设下方的灰色条，在小、中、大屏幕尺寸之间切换。这里还有一个菜单可以快速选择横屏或竖屏屏幕方向。图 5.4 显示了本文写作时设备模式的截图。你的看起来可能完全不同，因为开发者工具会定期更新。
+点击此按钮激活`device mode`（设备模式）。你将看到网页视图现在在模拟的智能手机屏幕上显示 Ottergram。有一个菜单可以根据流行设备在不同的屏幕尺寸之间。你还可以点击预设下方的灰色条，在小、中、大屏幕尺寸之间切换。这里还有一个菜单可以快速选择横屏或竖屏屏幕方向。图 5.4 显示了本文写作时设备模式的截图。你的看起来可能完全不同，因为开发者工具会定期更新。
 
 ### 图 5.4 使用设备模式进行响应式测试
 
 ![使用设备模式进行响应式测试](img/device-mode-tools.png)
 
-你可以看到，得益于你新的 `<meta>` 元素，Ottergram 在小屏幕（如智能手机）上显示良好。对于屏幕较大的设备（如平板电脑或笔记本电脑），不同的布局可能更合适。接下来，你将结合 flexbox 和媒体查询（media queries）应用不同的布局样式。
+你可以看到，得益于你新的`<meta>`元素，Ottergram 在小屏幕（如智能手机）上显示良好。对于屏幕较大的设备（如平板电脑或笔记本电脑），不同的布局可能更合适。接下来，你将结合 flexbox 和媒体查询（media queries）应用不同的布局样式。
 
 在继续之前，再次点击![使用设备模式进行响应式测试](img/toggle-device-mode-button.png)按钮以禁用设备模式。
 
@@ -2536,9 +2590,9 @@ Flexbox 还允许你将 flex 项目细分为 flex 容器。这种技术让你专
 
 媒体查询允许你组合 CSS 声明块，并指定应用它们的条件。这些条件可能类似于“如果屏幕宽度至少为 640 像素”或“如果屏幕宽大于高且具有高像素密度”。
 
-语法以 `@media` 开头，后面跟着匹配的条件。接着是一组大括号，包裹整个声明块。让我们看看它是什么样的。
+语法以`@media`开头，后面跟着匹配的条件。接着是一组大括号，包裹整个声明块。让我们看看它是什么样的。
 
-在 `styles.css` 的末尾开始你的第一个媒体查询。你将创建一个媒体查询，当视口至少为 768 像素时，在任何种设备上查看都会激活样式。
+在`styles.css`的末尾开始你的第一个媒体查询。你将创建一个媒体查询，当视口至少为 768 像素时，在任何种设备上查看都会激活样式。
 
 ```
 ...
@@ -2551,10 +2605,7 @@ Flexbox 还允许你将 flex 项目细分为 flex 容器。这种技术让你专
 }
 ```
 
-
-
-
-根据你的设计，缩略图应该位于左侧。你可以通过更改 `.thumbnail-list` 的 `order` 来解决这个问题。之前，你将其设置为 `2`，以便让它在 `.detail-image-container` 之后绘制。现在，在 `styles.css` 的媒体查询将其设置为 `0`，这样它就会遵循源顺序并在 `.detail-image-container` 之前绘制。
+根据你的设计，缩略图应该位于左侧。你可以通过更改`.thumbnail-list`的`order`来解决这个问题。之前，你将其设置为`2`，以便让它在`.detail-image-container`之后绘制。现在，在`styles.css`的媒体查询将其设置为`0`，这样它就会遵循源顺序并在`.detail-image-container`之前绘制。
 
 ```css
 ...
@@ -2573,7 +2624,7 @@ Flexbox 还允许你将 flex 项目细分为 flex 容器。这种技术让你专
 
 保存你的更改并确认缩略图已绘制在页面的左侧。
 
-你快要成功了！在 `styles.css` 中为 `.thumbnail-list` 和 `.thumbnail-item` 再添加一些样式，让尺寸和间距看起来更美观。
+你快要成功了！在`styles.css`中为`.thumbnail-list`和`.thumbnail-item`再添加一些样式，让尺寸和间距看起来更美观。
 
 ```css
 ...
@@ -2599,7 +2650,7 @@ Flexbox 还允许你将 flex 项目细分为 flex 容器。这种技术让你专
 }
 ```
 
-再次保存 `styles.css` 并切换到浏览器。无论视口是窄是宽，你的布局现在看起来非常精美（如图 5.7）。
+再次保存`styles.css`并切换到浏览器。无论视口是窄是宽，你的布局现在看起来非常精美（如图 5.7）。
 
 **图 5.7 响应式水獭**
 
@@ -2609,7 +2660,7 @@ Ottergram 正在稳步进展！你已经创建了一个精美的网站，其布�
 
 ## 铜级挑战：竖屏模式
 
-你目前的媒体查询根据视口的宽度来更改布局。你可以从不同的角度来看待：一种针对高度大于宽度的视口，另一种针对宽度大于高度的视口。这些是视口可能处于的两种 `orientation`（取向）模式。
+你目前的媒体查询根据视口的宽度来更改布局。你可以从不同的角度来看待：一种针对高度大于宽度的视口，另一种针对宽度大于高度的视口。这些是视口可能处于的两种`orientation`（取向）模式。
 
 检查 MDN 关于媒体查询的文档，并更新你的媒体查询，使布局根据方向而不是宽度发生变化。
 
@@ -2625,13 +2676,13 @@ Philip Walton 是一个维护两个非常重要的 flexbox 资源的开发者。
 
 以 Solved by Flexbox 为参考，在 Ottergram 中实现圣杯布局。创建一个带有缩略图的第二个导航栏，但将其放置在视口的另一侧。
 
-确保在页面底部添加一个 `footer` 元素。使用 `<footer>` 标签并在里面放入一个 `<h1>`。
+确保在页面底部添加一个`footer`元素。使用`<footer>`标签并在里面放入一个`<h1>`。
 
 # 6 使用 JavaScript 处理事件
 
 你知道水獭酷的地方在哪里吗？除了其他之外，它们睡觉时会手拉手，这样它们就不会漂走了。在学习使用 JavaScript 中的事件回调时，请记住这个形象。
 
-JavaScript 是一种通过操作页面上的 DOM 元素和 CSS 样式为网站添加交互性的编程语言。它最初是为非专业程序员设计的。它的功能和人气不断增长，现在被用于各种应用程序开发。当你使用 Gmail 或 Netflix 等网站时，你正在与用 JavaScript 编写的程序进行交互。事实上，`Atom` 编辑器实际上是一个用 JavaScript 编写的桌面应用程序。
+JavaScript 是一种通过操作页面上的 DOM 元素和 CSS 样式为网站添加交互性的编程语言。它最初是为非专业程序员设计的。它的功能和人气不断增长，现在被用于各种应用程序开发。当你使用 Gmail 或 Netflix 等网站时，你正在与用 JavaScript 编写的程序进行交互。事实上，`Atom`编辑器实际上是一个用 JavaScript 编写的桌面应用程序。
 
 尽管它功能强大且被广泛使用，但它像任何编程语言一样也有自己的特性。当你继续开发 Ottergram 和书中的其他项目时，你将学会应对该语言的棘手部分，并利用它最好的部分。
 
@@ -2640,14 +2691,18 @@ JavaScript 有几个版本，你将在书中的项目中使用其中三个。它
 **表 6.1 书中使用的 JavaScript 版本**
 
 | ECMAScript 版本 | 发布日期 | 备注 |
+
 | --- | --- | --- |
+
 | 3 | 1999 年 12 月 | 支持最广泛的版本；涵盖了你将使用的大多数语言特性，如变量、类型和函数。 |
-| 5 | 2009 年 12 月 | 向后兼容，带有增强功能，如 `严格模式`，可以防止语言中易出错的部分。 |
+
+| 5 | 2009 年 12 月 | 向后兼容，带有增强功能，如`严格模式`，可以防止语言中易出错的部分。 |
+
 | 6 | 2015 年 6 月 | 包含了新的语法和语言特性；在编写此时，大多数浏览器尚未支持 ES6，但 ES6 代码可以转换为 ES5 以便使用。 |
 
 在本章中，你将使用 JavaScript 让 Ottergram 具有交互性：当用户点击或触摸缩略图时，详情图像和标题会发生。
 
-为了实现这一点，你将编写一个 JavaScript `function`（一组浏览器遵循的步骤），来读取图像 URL 并将其显示在详情区域。然后你将确保在点击缩略图时运行该函数。你还将编写一个独立的函数，在按下 Escape 键时隐藏详情区域。
+为了实现这一点，你将编写一个 JavaScript`function`（一组浏览器遵循的步骤），来读取图像 URL 并将其显示在详情区域。然后你将确保在点击缩略图时运行该函数。你还将编写一个独立的函数，在按下 Escape 键时隐藏详情区域。
 
 在本章结束时，Ottergram 将能够在详情图像中展示任何水獭（如图 6.1）。
 
@@ -2659,26 +2714,25 @@ JavaScript 有几个版本，你将在书中的项目中使用其中三个。它
 
 ## 为锚点标签准备就
 
-在使用 JavaScript 添加交互功能之前，你需要对标记进行一些更新。你的缩略图封装在锚点标签中，但这些标签并没有链接到任何资源。相反，它们 `href` 属性使用的是 `#` 值，这告诉浏览器留在当前页面。为了让点击缩略图产生任何有趣的操作，你需要修复这个问题。
-
-首先，在 `index.html` 中删除除五个以外的所有 `.thumbnail-item` 元素。你不再需要那些重复项了，因为你的布局已经很完善了。
+在使用 JavaScript 添加交互功能之前，你需要对标记进行一些更新。你的缩略图封装在锚点标签中，但这些标签并没有链接到任何资源。相反，它们`href`属性使用的是`#`值，这告诉浏览器留在当前页面。为了让点击缩略图产生任何有趣的操作，你需要修复这个问题。
 
 
 
+首先，在`index.html`中删除除五个以外的所有`.thumbnail-item`元素。你不再需要那些重复项了，因为你的布局已经很完善了。
 
-然后，更改锚标签的 `href` 属性，使其不再使用占位符 `#`。相反，将这些值设置为与每个 `<img>` 标签的 `src` 值相同。
+然后，更改锚标签的`href`属性，使其不再使用占位符`#`。相反，将这些值设置为与每个`<img>`标签的`src`值相同。
 
-`Atom` 可以帮助你完成这些更改，消除处理 HTML 的繁琐工作。像任何文本编辑器一样，它都有查找和替换文本的方法。选择`Find`查找）→`Find in Buffer`在缓冲区中查找）或使用快捷键 `Command-F` (Ctrl-F)。将在编辑器窗口底部打开 `Find in Buffer` 面板（图 6.2）。
+`Atom`可以帮助你完成这些更改，消除处理HTML的繁琐工作。像任何文本编辑器一样，它都有查找和替换文本的方法。选择`Find`（查找）→`Find in Buffer`（在缓冲区中查找）或使用快捷键`Command-F`（Ctrl-F）。将在编辑器窗口底部打开`Find in Buffer`面板（图 6.2）。
 
 **图 6.2 使用 Atom 的查找和替换功能**
 
 ![Using Atom 的查找和替换功能](img/atom-find-replace.png)
 
-在 `Find in current buffer` 文本框中输入“”，在 `Replace in current buffer` 文本框中输入“img/otter.jpg”。然后点击右下角的`Replace All`全部替换）。
+在`Find in current buffer`文本框中输入`""`，在`Replace in current buffer`文本框中输入`"img/otter.jpg"`。然后点击右下角的`Replace All`（全部替换）。
 
-这将将所有的 `<a href="#">` 标签更改为 `<a href="img/otter.jpg">`。现在只需为每个标签添加相应的数字即可（`img/otter1.jpg`、`img/otter2.jpg` 等）。
+这将将所有的`<a href="#">`标签更改为`<a href="img/otter.jpg">`。现在只需为每个标签添加相应的数字即可（`img/otter1.jpg`、`img/otter2.jpg`等）。
 
-按 Escape 键关闭 `Find in Buffer` 面板。`index.html` 看起来应该是这样的：
+按Escape键关闭`Find in Buffer`面板。`index.html`看起来应该是这样的：
 
 ```
 ...
@@ -2722,13 +2776,13 @@ JavaScript 有几个版本，你将在书中的项目中使用其中三个。它
 ...
 ```
 
-接下来，你需要为你的锚元素添加额外的属性，以便你可以使用 JavaScript 访问它们。在用 CSS 进行样式设置时，你使用类名选择器来引用页面上的元素。对于 JavaScript，你使用 `data attributes`（数据属性）。
+接下来，你需要为你的锚元素添加额外的属性，以便你可以使用JavaScript访问它们。在用CSS进行样式设置时，你使用类名选择器来引用页面上的元素。对于JavaScript，你使用`data attributes`（数据属性）。
 
-数据属性就像你一直在使用的其他 HTML 属性，不同之处在于与 `src` 或 `href` 等属性不同，数据属性对浏览器没有特殊含义。唯一的要求是属性名以 `data-` 开头。使用自定义数据属性可以让你指定 JavaScript 与页面上的哪些 HTML 元素交互。
+数据属性就像你一直在使用的其他HTML属性，不同之处在于与`src`或`href`等属性不同，数据属性对浏览器没有特殊含义。唯一的要求是属性名以`data-`开头。使用自定义数据属性可以让你指定JavaScript与页面上的哪些HTML元素交互。
 
-从技术上说，在 JavaScript 中，你可以使用类名访问页面上的元素。同样，你也可以在选择器中使用数据属性来 get 样式设置。但你真的不应该这样做。如果你的 JavaScript 和 CSS 不依赖于相同的属性，你的代码将具有更好的可维护性。
+从技术上说，在JavaScript中，你可以使用类名访问页面上的元素。同样，你也可以在选择器中使用数据属性来get样式设置。但你真的不应该这样做。如果你的JavaScript和CSS不依赖于相同的属性，你的代码将具有更好的可维护性。
 
-使用数据属性更新 `index.html` 中的锚标签。请注意，下面代码中的换行符添加是为了确保所有内容都能良好地显示在页面上。你可以根据喜好自由添加或不添加。它们对浏览器没有影响。
+使用数据属性更新`index.html`中的锚标签。请注意，下面代码中的换行符添加是为了确保所有内容都能良好地显示在页面上。你可以根据喜好自由添加或不添加。它们对浏览器没有影响。
 
 ```
 ...
@@ -2788,20 +2842,17 @@ JavaScript 有几个版本，你将在书中的项目中使用其中三个。它
 ...
 ```
 
-你的 JavaScript 代码可以引用这些数据属性来访问页面上的元素，因为浏览器允许你使用 JavaScript 对页面内容进行查询。例如，你可以查询匹配选择器（如 `data-image-role="trigger"`）的元素。如果查询找到项，它将返回匹配元素的引用。
+你的JavaScript代码可以引用这些数据属性来访问页面上的元素，因为浏览器允许你使用JavaScript对页面内容进行查询。例如，你可以查询匹配选择器（如`data-image-role="trigger"`）的元素。如果查询找到项，它将返回匹配元素的引用。
 
 当你拥有元素的引用时，你可以对该元素进行各种操作。你可以读取或更改其属性值，更改其内部文本，甚至访问其周围的元素。当你使用引用更改元素时，浏览器会立即更新。
 
-在本章中，你将编写 JavaScript 代码来获取锚和详情图像元素的引用，读取锚数据属性的值，然后更改详情图像的 `src` 属性值。这就是你让 Ottergram 交互的方式。
+在本章中，你将编写JavaScript代码来获取锚和详情图像元素的引用，读取锚数据属性的值，然后更改详情图像的`src`属性值。这就是你让Ottergram交互的方式。
 
-你可能注意到锚标签和详情图像的 `<img>` 标签都有 `data-image-role` 属性，但它们的值不同。
+你可能注意到锚标签和详情图像的`<img>`标签都有`data-image-role`属性，但它们的值不同。
 
-为锚和 `img` 标签使用相同的数据属性名并不是必须的，但这是一个良好的习惯。它提醒你开发者，这些元素将属于同一个 JavaScript 行为。
+为锚和`img`标签使用相同的数据属性名并不是必须的，但这是一个良好的习惯。它提醒你开发者，这些元素将属于同一个JavaScript行为。
 
-
-
-
-在你开始编写 JavaScript 之前，你的 HTML 还需要进行最后一次更改：你需要告诉 HTML 运行 JavaScript。通过在 `index.html` 中添加 `<script>` 标签来实现。此 `<script>` 标签将引用 `scripts/main.js` 文件，稍后你就会创建它。
+在你开始编写JavaScript之前，你的HTML还需要进行最后一次更改：你需要告诉HTML运行JavaScript。通过在`index.html`中添加`<script>`标签来实现。此`<script>`标签将引用`scripts/main.js`文件，稍后你就会创建它。
 
 ```
 ...
@@ -2813,15 +2864,15 @@ JavaScript 有几个版本，你将在书中的项目中使用其中三个。它
 </html>
 ```
 
-当浏览器看到 `<script>` 标签时，它会立即开始运行引用文件中的代码。在浏览器渲染 HTML 之前，JavaScript 无法访问其内部的元素，因此将 `<script>` 标签放在 `body` 的底部可以确保你的 JavaScript 在所有标记解析完成之前不会运行。
+当浏览器看到`<script>`标签时，它会立即开始运行引用文件中的代码。在浏览器渲染HTML之前，JavaScript无法访问其内部的元素，因此将`<script>`标签放在`body`的底部可以确保你的JavaScript在所有标记解析完成之前不会运行。
 
-你的 HTML 现在已经准备好与你即将编写的 JavaScript 连接了。在继续之前，请务必保存 `index.html`。
+你的HTML现在已经准备好与你即将编写的JavaScript连接了。在继续之前，请务必保存`index.html`。
 
 ## 你的第一个脚本
 
-是时候创建一个 `scripts` 文件夹和 `main.js` 文件了。记得你可以在 `Atom` 编辑器内部创建文件夹。在左侧面板中用 Control-点击（右键点击）`ottergram`，并在弹出窗口中点击 `New Folder`。在出现的提示中输入名称 `scripts`。
+是时候创建一个`scripts`文件夹和`main.js`文件了。记得你可以在`Atom`编辑器内部创建文件夹。在左侧面板中用Control-点击（右键点击）`ottergram`，并在弹出窗口中点击`New Folder`。在出现的提示中输入名称`scripts`。
 
-然后，在左侧面板中用 Control-点击（右键点击）`scripts` 并选择 `New File`。提示框会预填充文本 `scripts/`。之后，输入 `main.js` 并按 Return 键。
+然后，在左侧面板中用Control-点击（右键点击）`scripts`并选择`New File`。提示框会预填充文本`scripts/`。之后，输入`main.js`并按Return键。
 
 确保你的文件夹结构看起来像图 6.3 所示。
 
@@ -2829,29 +2880,33 @@ JavaScript 有几个版本，你将在书中的项目中使用其中三个。它
 
 ![Ottergram 文件夹结构](img/functions-file-structure.png)
 
-`main.js` 这个名字对浏览器没有特殊意义，但它是许多前端开发者使用的常用约定。
+`main.js`这个名字对浏览器没有特殊意义，但它是许多前端开发者使用的常用约定。
 
-在深入学习 JavaScript 之前的最后的一件事。你需要启动 `browser-sync`，为此你需要稍微修改一下你一直在使用的命令：
+在深入学习JavaScript之前的最后的一件事。你需要启动`browser-sync`，为此你需要稍微修改一下你一直在使用的命令：
 
 ```
 browser-sync start --server --browser "Google Chrome"
                    --files "*.html, stylesheets/*.css, scripts/*.js"
 ```
 
-你向文件列表添加了 `scripts/*.js` 路径，这样 `browser-sync` 就会监控 JavaScript 以及 HTML 和 CSS 的变化。
+你向文件列表添加了`scripts/*.js`路径，这样`browser-sync`就会监控JavaScript以及HTML和CSS的变化。
 
 ## Ottergram JavaScript 概述
 
-在开始编码之前，有一个计划总是友好的。以下是你需要对 Ottergram 所执行的操作任务的纯白话版本。
+在开始编码之前，有一个计划总是友好的。以下是你需要对Ottergram所执行的操作任务的纯白话版本。
 
 1. 获取所有缩略图。
+
 2. 监听每个缩略图的点击事件。
+
 3. 如果发生点击，使用该缩略图的信息更新详细图片。
 
-你可以将第 3 点分解为三个部分：
+你可以将第3点分解为三个部分：
 
-1. 从缩略图的数据属性（data attribute）中获取图像 URL。
+1. 从缩略图的数据属性（data attribute）中获取图像URL。
+
 2. 从缩略图的数据属性中获取标题文本。
+
 3. 在详细图片上设置图像和标题。
 
 以下是以图表表示的相同计划（图 6.4）：
@@ -2860,23 +2915,23 @@ browser-sync start --server --browser "Google Chrome"
 
 ![Ottergram 的执行计划](img/process-diagram.png)
 
-本章将带你从最后一步开始创建代码。这是一种“自底向上”的方法，它在编写 JavaScript 时效果很好。
+本章将带你从最后一步开始创建代码。这是一种“自底向上”的方法，它在编写JavaScript时效果很好。
 
 ## 声明字符串变量
 
-你的第一个 JavaScript 任务是为你在标记中添加的每个数据属性创建字符串变量。（如果对这些术语不熟悉，不要担心——我们稍后会解释。）
+你的第一个JavaScript任务是为你在标记中添加的每个数据属性创建字符串变量。（如果对这些术语不熟悉，不要担心——我们稍后会解释。）
 
-在 `main.js` 顶部，首先添加一个名为 `DETAIL_IMAGE_SELECTOR` 的变量，并为其赋值字符串 `'[data-image-role="target"]'`。
+在`main.js`顶部，首先添加一个名为`DETAIL_IMAGE_SELECTOR`的变量，并为其赋值字符串`'[data-image-role="target"]'`。
 
 ```
 var DETAIL_IMAGE_SELECTOR = '[data-image-role="target"]';
 ```
 
-这段代码可能并不多，但值得仔细观察。让我们从中间的 `=` 符号开始。这是赋值运算符。与数学中不同，JavaScript 中的 `=` 符号并不意味着两个东西相等。相反，它意味着“取右侧的值，并给它赋予左侧的名字”。
+这段代码可能并不多，但值得仔细观察。让我们从中间的`=`符号开始。这是赋值运算符。与数学中不同，JavaScript中的`=`符号并不意味着两个东西相等。相反，它意味着“取右侧的值，并给它赋予左侧的名字”。
 
 在这一次特定赋值的右侧是一个文本字符串：`'[data-image-role="target"]'`。字符串只是表示文本的字符序列，由单引号界定。单引号内的文本恰好是你的详细图片的属性选择器。这提示你将使用此字符串来访问该元素。
 
-赋值的左侧是变量声明。使用 `var` 关键字，你正在创建一个名为 `DETAIL_IMAGE_SELECTOR` 的变量。接下来，在 `main.js` 中为详细标题和缩略图选择器声明变量。为它们分配字符串。
+赋值的左侧是变量声明。使用`var`关键字，你正在创建一个名为`DETAIL_IMAGE_SELECTOR`的变量。接下来，在`main.js`中为详细标题和缩略图选择器声明变量。为它们分配字符串。
 
 ```
 var DETAIL_IMAGE_SELECTOR = '[data-image-role="target"]';
@@ -2884,7 +2939,7 @@ var DETAIL_TITLE_SELECTOR = '[data-image-role="title"]';
 var THUMBNAIL_LINK_SELECTOR = '[data-image-role="trigger"]';
 ```
 
-正如变量名所示，它们的值可以被重新赋值。将变量名全大写是开发者在值不应改变时有时使用的一种约定。JavaScript 正处于过渡期：ES5 没有常量；ES6 有——但正如我们之前说的，它尚未被完全支持。在常量得到完全支持之前，你可以遵循这一约定来标记不应改变的值。
+正如变量名所示，它们的值可以被重新赋值。将变量名全大写是开发者在值不应改变时有时使用的一种约定。JavaScript正处于过渡期：ES5没有常量；ES6有——但正如我们之前说的，它尚未被完全支持。在常量得到完全支持之前，你可以遵循这一约定来标记不应改变的值。
 
 顺带提，字符串可以用单引号或双引号界定。你可以自由使用任何一种，但本书将单引号作为约定，并建议你在本项目中这样做。
 
@@ -2896,9 +2951,11 @@ var DETAIL_IMAGE_SELECTOR = "[data-image-role=\"target\"]";
 
 单引号并不保证你不需要转义字符。如果单引号界定的字符串包含单引号——省撇——你必须对其进行转义。
 
-保存 `main.js`。有了这些变量，让我们在 `Chrome` 的开发者工具中尝试一下吧。
+保存`main.js`。有了这些变量，让我们在`Chrome`的开发者工具中尝试一下吧。
 
 ## 在控制台中操作
+
+
 
 开发者工具最有用的部分之一是控制台，它可以让你输入 JavaScript 代码并立即求值。这对于迭代开发修改页 JavaScript 代码特别有用。
 
@@ -2912,10 +2969,6 @@ var DETAIL_IMAGE_SELECTOR = "[data-image-role=\"target\"]";
 
 **图 6.6 | 控制台准备好输入**
 
-
-
-
-
 ![控制台，准备好接受输入](img/console-prompt.png)
 
 在控制台中输入以下数学表达式：
@@ -2926,7 +2979,7 @@ var DETAIL_IMAGE_SELECTOR = "[data-image-role=\"target\"]";
 
 按下 Return 键。控制台将打印结果（图 6.7）。
 
-**图 6.7 评估一个数学表达式**
+**图 6.7 | 评估一个数学表达式**
 
 ![评估一个数学表达式](img/math-1.png)
 
@@ -2940,7 +2993,7 @@ var DETAIL_IMAGE_SELECTOR = "[data-image-role=\"target\"]";
 
 按下 Return 键，控制台将按照正确的顺序计算数字（图 6.8）。（顺便说一下，虽然为了可读性，我们在数字和运算符之间添加了空格，但你不需要包含它们。控制台不在乎这些。）
 
-**图 6.8 评估一个复杂的数学表达式**
+**图 6.8 | 评估一个复杂的数学表达式**
 
 ![评估一个复杂的数学表达式](img/math-2.png)
 
@@ -2948,19 +3001,19 @@ var DETAIL_IMAGE_SELECTOR = "[data-image-role=\"target\"]";
 
 开始输入 `DETAIL_IMAGE_SELECTOR`。当你输入前几个字母时，你可以控制台已经知道你创建的变量，并提供了一个自动补全建议列表（图 6.9）。
 
-**图 6.9 控制台的自动补全菜单**
+**图 6.9 | 控制台的自动补全菜单**
 
 ![控制台的自动补全菜单](img/console-autocomplete-menu.png)
 
 按下 Tab 键，让控制台为你补全变量名。当你按下 Return 键时，控制台报告 `DETAIL_IMAGE_SELECTOR` 的值为字符串 `"[data-image-role="target"]"` 。
 
-**图 6.10 控制台打印变量的值**
+**图 6.10 | 控制台打印变量的值**
 
 ![控制台打印变量的值](img/variable-value-printed-to-console.png)
 
-（控制台总是用双引号打印字符串，尽管你实际上在 <samp class="filename">main.js</samp> 中使用了单引号。）
+（控制台总是用双引号打印字符串，尽管你实际上在 `main.js` 中使用了单引号。）
 
-字符串是 JavaScript 中五种 <samp class="firstterm">原始</samp> 值类型之一（数字和布尔值是另外两个）。它们之所以被称为“原始的”，是因为它们代表简单的值。这与 JavaScript 中更复杂的值形成对比，你接下来将学习这些内容。
+字符串是 JavaScript 中五种原始值类型之一（数字和布尔值是另外两个）。它们之所以被称为“原始的”，是因为它们代表简单的值。这与 JavaScript 中更复杂的值形成对比，你接下来将学习这些内容。
 
 ## 访问 DOM 元素
 
@@ -2972,23 +3025,23 @@ document.querySelector(DETAIL_IMAGE_SELECTOR);
 
 按下 Return 键。它将向你显示详情图的 HTML。在控制台中悬停在这些 HTML 之上。你会发现详情图在页面上被高亮了，就像你在元素面板中点击 HTML 一样（图 6.11）。
 
-**图 6.11 控制台中的 HTML 与页面上的元素对应**
+**图 6.11 | 控制台中的 HTML 与页面上的元素对应**
 
 ![控制台中的 HTML 与页面上的元素对应](img/console-dom-query-hover.png)
 
-在你在控制台中编写的行代码中，`document` 词是浏览器内置的变量，允许你访问 页面。它的值不是原始类型之一。它是一个复杂值，类型为 <samp class="firstterm">object</samp>。
+在你在控制台中编写的行代码中，`document` 词是浏览器内置的变量，允许你访问页面。它的值不是原始类型之一。它是一个复杂值，类型为对象。
 
-`document` 对象对应于整个页面。它为你提供了许多 <samp class="firstterm">方法</samp> 来获取页面上元素的引用。方法是函数的一种（它们是具有明确指定所有者的函数，但你现在不需要担心这个细节）——供浏览器遵循的一系列步骤列表。你在控制台中输入的行使用了 <samp class="methodname">querySelector</samp> 方法。`document.querySelector` 中的 <samp class="firstterm">点运算符</samp>（即句号）是你访问对象方法的方式。
+`document` 对象对应于整个页面。它为你提供了许多方法来获取页面上元素的引用。方法是函数的一种（它们是具有明确指定所有者的函数，但你现在不需要担心这个细节）——供浏览器遵循的一系列步骤列表。你在控制台中输入的行使用了 `querySelector` 方法。`document.querySelector` 中的点运算符（即句号）是你访问对象方法的方式。
 
-你要求 `document` 使用它的 <samp class="methodname">querySelector</samp> 方法找到任何与字符串 `'[data-image-role="target"]'` 匹配的元素。<samp class="methodname">querySelector</samp> 返回它找到的元素的引用，即详情图（图 6.12）。
+你要求 `document` 使用它的 `querySelector` 方法找到任何与字符串 `'[data-image-role="target"]'` 匹配的元素。`querySelector` 返回它找到的元素的引用，即详情图（图 6.12）。
 
-**图 6.12 通过 querySelector 访问页面**
+**图 6.12 | 通过 querySelector 访问页面**
 
 ![通过 querySelector 访问页面](img/document-and-correspondence.png)
 
-现在是术语。你并不是在“询问”页面匹配元素。你 <samp class="emphasis">调用了</samp> `document` 的 `querySelector` 方法，并向它 <samp class="emphasis">传递了</samp> 一个字符串。当你调用方法时，你是在让它执行设计的任务。你通常需要向它传递所需的信息。记住 `DETAIL_IMAGE_SELECTOR` 被赋值为 `'[data-image-role="target"]'`，这意味着这就是传递给 `querySelector` 的内容。
+现在是术语。你并不是在“询问”页面匹配元素。你调用了 `document` 的 `querySelector` 方法，并向它传递了一个字符串。当你调用方法时，你是在让它执行设计的任务。你通常需要向它传递所需的信息。记住 `DETAIL_IMAGE_SELECTOR` 被赋值为 `'[data-image-role="target"]'`，这意味着这就是传递给 `querySelector` 的内容。
 
-在后台，`querySelector` 使用此字符串搜索匹配元素。搜索时，`document` 并没有实际上搜索页面，它在搜索 <samp class="emphasis">文档模型</samp>，即 DOM。DOM 是浏览器对 HTML 文档的内部表示。它在读取和解释 HTML 时构建这种表示。
+在后台，`querySelector` 使用此字符串搜索匹配元素。搜索时，`document` 并没有实际上搜索页面，它在搜索文档模型，即 DOM。DOM 是浏览器对 HTML 文档的内部表示。它在读取和解释 HTML 时构建这种表示。
 
 在 JavaScript 中，你可以使用 `document` 对象及其方法（例如 `querySelector`）与 DOM 交互。每个 HTML 标签都有对应的元素，你可以使用 JavaScript 与这些元素交互。（通常，当我们说“元素”时，指的是“DOM 元素”。）
 
@@ -3000,13 +3053,9 @@ var detailImage = document.querySelector(DETAIL_IMAGE_SELECTOR);
 
 按下 Return，控制台将打印 `undefined`（图 6.13）。不要惊慌！这不是错误。控制台只是在执行它的工作，告诉你声明变量没有产生结果的值。在 JavaScript 中，值的缺失用关键字 `undefined` 表示。
 
+这并不意味着你的 `detailImage` 变量没有被赋值。要检查它，只需在控制台中输入 `detailImage` 并按回车键（Return）。你将看到详情图片的 HTML 形式，就像你之前输入 `document.querySelector(DETAIL_IMAGE_SELECTOR)` 时看到的一样（图 6.14）。
 
-
-
-
-这并不意味着你的 `detailImage` 变量没有被赋值。要检查它，只需在控制台中输入 `detailImage` 并按回车键（Return）。你将看到详情图片的 HTML 形式，就像你之前输入 `document.querySelector(DETAIL_IMAGE_SELECTOR)` 时看到的一样(图 6.14])
-
-**图 6.14 检查 `detailImage` 的值**
+**图 6.14 | 检查 `detailImage` 的值**
 
 ![Checking the value of detailImage](img/detail-image-assigned.png)
 
@@ -3018,9 +3067,9 @@ var detailImage = document.querySelector(DETAIL_IMAGE_SELECTOR);
 detailImage.src = 'img/otter2.jpg';
 ```
 
-使用点操作符，你访问了 `detailImage` 对象的 `src` 属性。属性类似于变量，但它属于一个特定的对象。当你将 `src` 赋值为字符串 `'img/otter2.jpg'` 时，你会发现另一只水獭占据了详情图片区域(图 6.15])
+使用点操作符，你访问了 `detailImage` 对象的 `src` 属性。属性类似于变量，但它属于一个特定的对象。当你将 `src` 赋值为字符串 `'img/otter2.jpg'` 时，你会发现另一只水獭占据了详情图片区域（图 6.15）。
 
-**图 6.15 设置详情图片的 `src` 属性**
+**图 6.15 | 设置详情图片的 `src` 属性**
 
 ![Setting the src property of the detail image](img/detail-img-src-otter2.png)
 
@@ -3032,9 +3081,9 @@ detailImage.src = 'img/otter2.jpg';
 detailImage.setAttribute('src', 'img/otter3.jpg');
 ```
 
-详情图片再次发生变化(图 6.16])。
+详情图片再次发生变化（图 6.16）。
 
-**图 6.16 使用 `setAttribute` 更改图片**
+**图 6.16 | 使用 `setAttribute` 更改图片**
 
 ![Using setAttribute to change the image](img/detail-image-set-attribute.png)
 
@@ -3044,7 +3093,7 @@ detailImage.setAttribute('src', 'img/otter3.jpg');
 
 你一直在使用方法，并且已经看到它们可以被调用以运行一段代码。函数和方法本质上只是你想要反复使用的步骤列表。调用一个函数就像说“做个三明治”，而不是说“铺开两片面包。在一片面包上放上火腿、萨拉米和普罗沃奶。将另一片面包放在上面。”
 
-在本章中，你将为 Ottergram 编写七个函数。你的第一个函数将完成两个任务：更改详情图片和图片标题。将此 `function declaration`（函数声明）添加到 `main.js` 中。
+在本章中，你将为 Ottergram 编写七个函数。你的第一个函数将完成两个任务：更改详情图片和图片标题。将此函数声明（function declaration）添加到 `main.js` 中。
 
 ```
 var DETAIL_IMAGE_SELECTOR = '[data-image-role="target"]';
@@ -3087,7 +3136,7 @@ function setDetails() {
 setDetails();
 ```
 
-输入（或调用）函数名紧跟括号会使函数执行所有代码。你应该看到 `img/otter3.jpg` 现在显示为详情图片(图 6.17])。
+输入（或调用）函数名紧跟括号会使函数执行所有代码。你应该看到 `img/otter3.jpg` 现在显示为详情图片（图 6.17）。
 
 `setDetails` 更改了图片，但没有更改图片标题。你希望它同时这样做。就像处理详情图片一样，你将添加语句来获取元素的引用并更改元素的属性。
 
@@ -3107,15 +3156,11 @@ function setDetails() {
 
 `textContent` 属性是元素内部的文本（不包括 HTML 标签）。
 
-保存你的更改并在控制台中运行 `setDetails`。现在图片和标题都发生了变化(图 6.18])。
+保存你的更改并在控制台中运行 `setDetails`。现在图片和标题都发生了变化（图 6.18）。
 
-**图 6.18 使用 `setDetails` 更改图片和标题**
+**图 6.18 | 使用 `setDetails` 更改图片和标题**
 
 ![Running setDetails to change the image](img/presto-chango.png)
-
-
-
-
 
 ![使用 setDetails 修改图像和标题](img/set-details-img-and-title.png)
 
@@ -3125,7 +3170,7 @@ function setDetails() {
 
 你需要一种方法来告诉 `setDetails` 在调用它时使用**哪张**图像和**什么**文本。
 
-为了实现这一点，你需要让你的函数接受 `arguments`（参数）——即传递给函数并供其处理的值。为了做到，你必须在函数声明中指定 `parameters`（参数）。
+为了实现这一点，你需要让你的函数接受参数（arguments）——即传递给函数并供其处理的值。为了做到，你必须在函数声明中指定参数（parameters）。
 
 在 `main.js` 中为 `setDetails` 添加两个参数：
 
@@ -3159,21 +3204,23 @@ function setDetails(imageUrl, titleText) {
 
 你的两个参数 `imageUrl` 和 `titleText` 被用作标签赋值给传递给 `setDetails` 的值。保存 `main.js` 并在控制台中尝试以查看效果。
 
-调用 `setDetails` 并向它传递值 `'img/otter4.jpg'` 和 `'Night Fever'`。（确保它们之间有逗号。）
+
+
+调用`setDetails`并向它传递值`'img/otter4.jpg'`和`'Night Fever'`。（确保它们之间有逗号。）
 
 ```
 setDetails('img/otter4.jpg', 'Night Fever');
 ```
 
-你应该能看到新的图像和标题文本，如图图 6.19 所示。
+你应该能看到新的图像和标题文本，如图 6.19 所示。
 
-**图 6.19 向 `setDetails` 传递值**
+**图 6.19 向`setDetails`传递值**
 
 ![向 setDetails 传递值](img/set-details-with-args.png)
 
-实参（arguments）和参数（parameters）之间存在重要的区别。`参数被定义为函数的一部分。`在 JavaScript 中，参数与在函数体内部声明的变量相同。`实参是在调用函数时提供给函数的值。`
+实参（arguments）和参数（parameters）之间存在重要的区别。参数被定义为函数的一部分。在 JavaScript 中，参数与在函数体内部声明的变量相同。实参是在调用函数时提供给函数的值。
 
-此外，请注意，无论你为实参使用什么变量名，它们的值始终映射到参数名上，以便在函数体内部使用。例如，假设你为图像 URL 和标题文本使用了变量。当你调用 `setDetails` 时，你将这两个变量作为实参传递进去。
+此外，请注意，无论你为实参使用什么变量名，它们的值始终映射到参数名上，以便在函数体内部使用。例如，假设你为图像 URL 和标题文本使用了变量。当你调用`setDetails`时，你将这两个变量作为实参传递进去。
 
 ```
 var otterOneImage = 'img/otter1.jpg';
@@ -3182,7 +3229,7 @@ var otterOneTitle = 'Stayin\' Alive';
 setDetails(otterOneImage, otterOneTitle);
 ```
 
-`setDetails` 函数接收这些值，用参数名 `imageUrl` 和 `titleText` 为它们标记，然后运行其函数体内部的代码。该代码使用了 `imageUrl` 和 `titleText`，并将它们作为参数传递给 `document.querySelector`。
+`setDetails`函数接收这些值，用参数名`imageUrl`和`titleText`为它们标记，然后运行其函数体内部的代码。该代码使用了`imageUrl`和`titleText`，并将它们作为参数传递给`document.querySelector`。
 
 就像变量名一样，参数名只是值的标签。你可以使用任何喜欢的参数名，但像你在这里这样做的那样使用描述性名称是一个良好的习惯，可以让你的代码更易阅读和维护。
 
@@ -3190,7 +3237,7 @@ setDetails(otterOneImage, otterOneTitle);
 
 你已经完成了计划中的第一项（或者说，最后一项），并在此过程中获得了一些 JavaScript 知识。现在你将转向列表中的后两项：从缩略图中获取图像和标题。对于每一项，你将编写一个新函数。
 
-在 `main.js` 中为 `imageFromThumb` 添加函数声明。它将接受一个参数 `thumbnail`，它是缩略图锚元素的引用。它将获取并返回 `data-image-url` 属性的值。
+在`main.js`中为`imageFromThumb`添加函数声明。它将接受一个参数`thumbnail`，它是缩略图锚元素的引用。它将获取并返回`data-image-url`属性的值。
 
 ```
 ...
@@ -3204,28 +3251,28 @@ function imageFromThumb(thumbnail) {
 }
 ```
 
-`getAttribute` 方法的作用与你在 `setDetails` 函数中使用的 `setAttribute` 方法相反。它只接受一个参数，即属性名称。
+`getAttribute`方法的作用与你在`setDetails`函数中使用的`setAttribute`方法相反。它只接受一个参数，即属性名称。
 
-与 `setDetails` 不同，`imageFromThumb` 函数使用了 `return` 关键字。当你调用带有 `return` 的函数时，它会返回一个值给你。`querySelector` 就是这样一个例子。
+与`setDetails`不同，`imageFromThumb`函数使用了`return`关键字。当你调用带有`return`的函数时，它会返回一个值给你。`querySelector`就是这样一个例子。
 
-保存 `main.js` 并在控制台中尝试以下操作，在行之间执行。
+保存`main.js`并在控制台中尝试以下操作，在行之间执行。
 
 ```
 var firstThumbnail = document.querySelector(THUMBNAIL_SELECTOR);
 imageFromThumb(firstThumbnail);
 ```
 
-控制台报告返回值为 `"img/otter1.jpg"`，因为 `imageFromThumb` 返回了缩略图的 `data-image-url`。
+控制台报告返回值为`"img/otter1.jpg"`，因为`imageFromThumb`返回了缩略图的`data-image-url`。
 
-**图 6.20 `imageFromThumb` 返回的值**
+**图 6.20 `imageFromThumb`返回的值**
 
 ![从 imageFromThumb 返回的值](img/value-returned-from-thumb.png)
 
-注意，`return` 语句之后的任何语句都不会执行。
+注意，`return`语句之后的任何语句都不会执行。
 
 下一个要编写的函数是一个接受缩略图元素并返回标题文本的函数。
 
-在 `main.js` 中为 `titleFromThumb` 添加函数声明，带有 `thumbnail` 参数。它将返回 `data-image-title` 属性的值。
+在`main.js`中为`titleFromThumb`添加函数声明，带有`thumbnail`参数。它将返回`data-image-title`属性的值。
 
 ```
 ...
@@ -3239,20 +3286,20 @@ function titleFromThumb(thumbnail) {
 }
 ```
 
-保存 `main.js` 并在控制台中测试此函数：
+保存`main.js`并在控制台中测试此函数：
 
 ```
 var firstThumbnail = document.querySelector(THUMBNAIL_SELECTOR);
 titleFromThumb(firstThumbnail);
 ```
 
-**图 6.21 `titleFromThumb` 返回的值**
+**图 6.21 `titleFromThumb`返回的值**
 
 ![从 titleFromThumb 返回的值](img/value-returned-from-title-from-thumb.png)
 
-下一个要编写的函数为了方便起见将其他三个函数整合在一起，这样你就不需要单独调用它们。它将接受缩略图元素的引用，然后调用 `setDetails`，传递调用 `imageFromThumb` 和 `titleFromThumb` 得到的值。
+下一个要编写的函数为了方便起见将其他三个函数整合在一起，这样你就不需要单独调用它们。它将接受缩略图元素的引用，然后调用`setDetails`，传递调用`imageFromThumb`和`titleFromThumb`得到的值。
 
-在 `main.js` 中添加 `setDetailsFromThumb`。
+在`main.js`中添加`setDetailsFromThumb`。
 
 ```
 ...
@@ -3266,32 +3313,29 @@ function setDetailsFromThumb(thumbnail) {
 }
 ```
 
-注意 `setDetails` 被调用时带有两个参数——而这些参数本身也是函数调用。这是如何运作的？
+注意`setDetails`被调用时带有两个参数——而这些参数本身也是函数调用。这是如何运作的？
 
-
-
-
-在 `setDetails` 实际调用之前，其参数会被简化为它们的最值。首先，`imageFromThumb(thumbnail)` 运行并返回一个值。然后，`titleFromThumb(thumbnail)` 运行并返回一个值。最后，调用 `setDetails` 并传入由 `imageFromThumb(thumbnail)` 和 `titleFromThumb(thumbnail)` 返回的值。图 6.22 展示了这一过程。
+在`setDetails`实际调用之前，其参数会被简化为它们的最值。首先，`imageFromThumb(thumbnail)`运行并返回一个值。然后，`titleFromThumb(thumbnail)`运行并返回一个值。最后，调用`setDetails`并传入由`imageFromThumb(thumbnail)`和`titleFromThumb(thumbnail)`返回的值。图 6.22 展示了这一过程。
 
 **图 6.22 作为参数的函数调用**
 
 ![作为参数的函数调用](img/nested-function-call.png)
 
-保存 `main.js`。你已经完成了所有代码，从缩略图中获取数据属性（data-attribute）值，并使用这些值来更新详情图像和标题的内容。
+保存`main.js`。你已经完成了所有代码，从缩略图中获取数据属性（data-attribute）值，并使用这些值来更新详情图像和标题的内容。
 
 从低级操作向上移动，下一步的任务是编写代码，当用户点击缩略图时执行从缩略图到详情图的数据传输。
 
 ## 添加事件监听器
 
-浏览器是繁忙的软件。每一次触摸、点击、滚动和按键都会被浏览器注意到。这些中的每一个都是浏览器可能会响应的 `event`（事件）。为了让网站更具动态性和交互性，你可以在其中一个事件发生时触发你自己的代码。在本节中，你将为每个缩略图添加 `event listeners`（事件监听器）。
+浏览器是繁忙的软件。每一次触摸、点击、滚动和按键都会被浏览器注意到。这些中的每一个都是浏览器可能会响应的`event`（事件）。为了让网站更具动态性和交互性，你可以在其中一个事件发生时触发你自己的代码。在本节中，你将为每个缩略图添加`event listeners`（事件监听器）。
 
-事件监听器是一个对象，顾名思，它“监听”特定的事件，例如鼠标点击。当分配的事件发生时，事件监听器会响应事件触发一个函数调用。
+事件监听器是一个对象，顾名思义，它“监听”特定的事件，例如鼠标点击。当分配的事件发生时，事件监听器会响应事件触发一个函数调用。
 
 （鼠标事件如点击和双击，以及键盘事件如按键是最常见的事件类型。要查看事件完整列表，请检查 MDN 上 [developer.mozilla.org/en-US/docs/Web/Events](https://developer.mozilla.org/en-US/docs/Web/Events) 中的事件参考。）
 
-每个 DOM 元素（包括 `document`）都有 `addEventListener` 方法。和之前一样，你将先在控制台中尝试一些代码，然后使用测试过的代码在 `main.js` 中编写函数。
+每个 DOM 元素（包括`document`）都有`addEventListener`方法。和之前一样，你将先在控制台中尝试一些代码，然后使用测试过的代码在`main.js`中编写函数。
 
-切换到 `Chrome` 并在控制台中输入以下代码。你需要按 Shift-Return 来换行。输入完所有代码后按 Return。
+切换到`Chrome`并在控制台中输入以下代码。你需要按 Shift-Return 来换行。输入完所有代码后按 Return。
 
 ```
 document.addEventListener('click', function () {
@@ -3299,21 +3343,21 @@ document.addEventListener('click', function () {
 });
 ```
 
-你输入的代码为 `document` 对象添加了一个事件监听器，用于监听页面上发生的任何点击。当点击发生时，事件监听器将使用内置的 `console.log` 方法在控制台中打印“you clicked!”(图 6.23）。
+你输入的代码为`document`对象添加了一个事件监听器，用于监听页面上发生的任何点击。当点击发生时，事件监听器将使用内置的`console.log`方法在控制台中打印“you clicked!”（图 6.23）。
 
 **图 6.23 为点击事件添加监听器**
 
 ![为点击事件添加监听器](img/registering-click-handler.png)
 
-点击页眉、详情图像或背景。你应该能看到控制台中打印出了“you clicked!”字样。（不要点击缩略图——那些链接会带你离开 Ottergram 的 `index.html` 页面。当你不在 `index.html` 页面时，你的任何标记、CSS 或 JavaScript 都不会在浏览器中加载和运行。）
+点击页眉、详情图像或背景。你应该能看到控制台中打印出了“you clicked!”字样。（不要点击缩略图——那些链接会带你离开 Ottergram 的`index.html`页面。当你不在`index.html`页面时，你的任何标记、CSS 或 JavaScript 都不会在浏览器中加载和运行。）
 
-`addEventListener` 接受两个参数：一个包含事件名称的字符串和一个函数。每当元素发生该事件时，`addEventListener` 都会运行这个函数。这个函数的写法初看之下可能有点奇怪。它是一个 `anonymous function`（匿名函数）。
+`addEventListener`接受两个参数：一个包含事件名称的字符串和一个函数。每当元素发生该事件时，`addEventListener`都会运行这个函数。这个函数的写法初看之下可能有点奇怪。它是一个`anonymous function`（匿名函数）。
 
-到此为止，你处理的是 `named functions`（命名函数），例如 `setDetails` 和 `titleFromThumb`。命名函数有名字——这并不意外——它们是使用函数声明创建的。
+到此为止，你处理的是`named functions`（命名函数），例如`setDetails`和`titleFromThumb`。命名函数有名字——这并不意外——它们是使用函数声明创建的。
 
-你也可以编写函数字面量值，就像你可以编写如 `42` 这样的数字字面量和如 `"Barry the Otter"` 这样的字符串字面量一样。函数字面量值的另一个名称是“匿名函数”。
+你也可以编写函数字面量值，就像你可以编写如`42`这样的数字字面量和如`"Barry the Otter"`这样的字符串字面量一样。函数字面量值的另一个名称是“匿名函数”。
 
-匿名函数经常用作其他函数的参数，例如你作为第二个参数传递给 `document.addEventListener` 的那个函数。这种将函数传递给另一个函数的做法在 JavaScript 中非常常见，被称为 `callback pattern`（回调模式），因为你作为参数传递的函数将在未来的某个时间点被“回调”（called back）。
+匿名函数经常用作其他函数的参数，例如你作为第二个参数传递给`document.addEventListener`的那个函数。这种将函数传递给另一个函数的做法在 JavaScript 中非常常见，被称为`callback pattern`（回调模式），因为你作为参数传递的函数将在未来的某个时间点被“回调”（called back）。
 
 使用命名函数作为回调是完全可以的，但许多前端开发者会使用匿名函数，因为它们比命名函数更具灵活性。你很快就会看到它是如何运作的。
 
@@ -3326,23 +3370,19 @@ firstThumbnail.addEventListener('click', function () {
 });
 ```
 
-如果你尝试点击第一个缩略图（最左侧的 Barry），你的浏览器将带你进入大图。发生了什么？记住每个缩略图都包裹在一个锚点标签中，该标签的 `href` 指向一个图像，如 `img/otter1.jpg`。这是浏览器在用户点击链接时的正常行为：但你不希望在点击缩略图时离开 Ottergram，而且你不应该将你的锚点标签改为其他内容。幸运的是，你可以从你的回调函数中处理这一切。
+如果你尝试点击第一个缩略图（最左侧的 Barry），你的浏览器将带你进入大图。发生了什么？记住每个缩略图都包裹在一个锚点标签中，该标签的`href`指向一个图像，如`img/otter1.jpg`。这是浏览器在用户点击链接时的正常行为：但你不希望在点击缩略图时离开 Ottergram，而且你不应该将你的锚点标签改为其他内容。幸运的是，你可以从你的回调函数中处理这一切。
 
 回想本章早些的内容，函数执行任务时无需你担心细节。通常你只需要知道需要传递什么信息作为参数以及将返回什么信息。当你将回调函数作为参数传递时，还有一件事你需要知道：什么信息将被传递给你的回调。
 
-当你调用 `addEventListener` 时，你是在告诉浏览器：“当 `firstThumbnail` 被点击时，调用这个函数”——然后浏览器就会勤地等待该元素被点击。如果发生了点击，浏览器会记录关于事件的所有细节（例如鼠标的精确位置、是左键还是右键，以及是单击还是双击）。然后浏览器会将一个包含这些信息的对象传递给你的函数。这个对象就是一个 `event object`（事件对象）。
+当你调用`addEventListener`时，你是在告诉浏览器：“当`firstThumbnail`被点击时，调用这个函数”——然后浏览器就会勤地等待该元素被点击。如果发生了点击，浏览器会记录关于事件的所有细节（例如鼠标的精确位置、是左键还是右键，以及是单击还是双击）。然后浏览器会将一个包含这些信息的对象传递给你的函数。这个对象就是一个`event object`（事件对象）。
 
-这种关系在图 6.24 中示意，使用了 `addEventListener` 的虚拟实现。
+这种关系在图 6.24 中示意，使用了`addEventListener`的虚拟实现。
 
 **图 6.24 传递一个期望参数的匿名函数**
 
 ![传递一个期望参数的匿名函数](img/anon-func-param-mapping.png)
 
-稍后，你将向 `addEventListener` 传递一个匿名函数，就像之前一样。这一次，你的匿名函数将期望接收一个参数。确保 Ottergram 处于 `index.html` 页面，并在控制台中输入以下内容：
-
-
-
-
+稍后，你将向`addEventListener`传递一个匿名函数，就像之前一样。这一次，你的匿名函数将期望接收一个参数。确保 Ottergram 处于`index.html`页面，并在控制台中输入以下内容：
 
 ```
 var firstThumbnail = document.querySelector(THUMBNAIL_LINK_SELECTOR);
@@ -3353,21 +3393,21 @@ firstThumbnail.addEventListener('click', function (event) {
 });
 ```
 
-每当 `firstThumbnail` 被点击时，浏览器都会调用你的匿名函数，并向该匿名函数传递事件对象。通过使用这个对象（你将其标记为 `event`），你调用了它的 `preventDefault` 方法。该方法将阻止链接将浏览器带到不同的页面。最后，你在 `event` 对象上调用了 `console.log`，以便你可以在开发者工具（DevTools）中检查它。
+每当`firstThumbnail`被点击时，浏览器都会调用你的匿名函数，并向该匿名函数传递事件对象。通过使用这个对象（你将其标记为`event`），你调用了它的`preventDefault`方法。该方法将阻止链接将浏览器带到不同的页面。最后，你在`event`对象上调用了`console.log`，以便你可以在开发者工具（DevTools）中检查它。
 
-现在点击第一个缩略图。你的浏览器仍留在 Ottergram 页面，事件被记录在控制台中：`MouseEvent {isTrusted: true}`。如果你点击 `MouseEvent` 旁边的展开箭头，你应该看到许多关于该事件的信息（图 6.25），包括页面上的鼠标坐标、点击了哪个鼠标按钮以及在点击期间是否按了任何特殊的修饰键。
+现在点击第一个缩略图。你的浏览器仍留在 Ottergram 页面，事件被记录在控制台中：`MouseEvent {isTrusted: true}`。如果你点击`MouseEvent`旁边的展开箭头，你应该看到许多关于该事件的信息（图 6.25），包括页面上的鼠标坐标、点击了哪个鼠标按钮以及在点击期间是否按了任何特殊的修饰键。
 
-**图 6.25  阻止事件默认行为并记录事件对象**
+**图 6.25 阻止事件默认行为并记录事件对象**
 
 ![阻止事件默认行为并记录事件对象](img/mouse-event-logged.png)
 
 目前，不要关注事件对象的不同属性。只需要知道它携带了大量关于触发的浏览器事件的信息即可。
 
-顺便说一下，回调函数的参数不需要命名为 `event` —— 无论你给它起名字，它都会映射到传递进去的值。你可以使用任何喜欢的参数名称，但像你在这里做的那样，使用描述性名称是一个良好的习惯，可以使你的代码更易于阅读和维护。
+顺便说一下，回调函数的参数不需要命名为`event`——无论你给它起名字，它都会映射到传递进去的值。你可以使用任何喜欢的参数名称，但像你在这里做的那样，使用描述性名称是一个良好的习惯，可以使你的代码更易于阅读和维护。
 
-你现在有了一个接受缩略图并添加事件监听器的函数。在 `main.js` 中添加一个名为 `addThumbClickHandler` 的函数声明。它应该定义一个名为 `thumb` 的参数。
+你现在有了一个接受缩略图并添加事件监听器的函数。在`main.js`中添加一个名为`addThumbClickHandler`的函数声明。它应该定义一个名为`thumb`的参数。
 
-你可以从控制台复制实验性的 `addEventListener` 代码并将其粘贴到 `addThumbClickHandler` 的函数体中。修改它，使其调用 `thumb.addEventListener`。目前，你只需要在事件回调中保留对 `event.preventDefault` 的调用。
+你可以从控制台复制实验性的`addEventListener`代码并将其粘贴到`addThumbClickHandler`的函数体中。修改它，使其调用`thumb.addEventListener`。目前，你只需要在事件回调中保留对`event.preventDefault`的调用。
 
 ```
 ...
@@ -3383,7 +3423,7 @@ function addThumbClickHandler(thumb)
 }
 ```
 
-在事件回调内部，你可以访问作为 `addThumbClickHandler` 声明的 `thumb` 参数。将其传递给 `setDetailsFromThumb` 调用。
+在事件回调内部，你可以访问作为`addThumbClickHandler`声明的`thumb`参数。将其传递给`setDetailsFromThumb`调用。
 
 ```
 ...
@@ -3396,11 +3436,11 @@ function addThumbClickHandler(thumb) {
 }
 ```
 
-JavaScript 与许多其他编程语言一样，关于定义和访问变量及函数有相应的规则。你传递给 `addEventListener` 的匿名函数能够访问 `setDetailsFromThumb` 函数，是因为 `setDetailsFromThumb` 是在全局作用范围内声明的。这意味着可以从任何其他函数或控制台访问它。像 `DETAIL_IMAGE_SELECTOR` 变量也是如此，它同样在全局作用范围内声明。
+JavaScript 与许多其他编程语言一样，关于定义和访问变量及函数有相应的规则。你传递给`addEventListener`的匿名函数能够访问`setDetailsFromThumb`函数，是因为`setDetailsFromThumb`是在全局作用范围内声明的。这意味着可以从任何其他函数或控制台访问它。像`DETAIL_IMAGE_SELECTOR`变量也是如此，它同样在全局作用范围内声明。
 
-然而，你在 `setDetails` 内部声明的变量 `detailImage` 和 `detailTitle` 仅在 `setDetails` 的函数体内可用。你无法从控制台或其他函数访问它们。这些变量声明在 `setDetails` 的函数作用域（或局部作用域）中。函数的参数用法非常像在函数内部声明的变量。它们也是该函数作用域的一部分。
+然而，你在`setDetails`内部声明的变量`detailImage`和`detailTitle`仅在`setDetails`的函数体内可用。你无法从控制台或其他函数访问它们。这些变量声明在`setDetails`的函数作用域（或局部作用域）中。函数的参数用法非常像在函数内部声明的变量。它们也是该函数作用域的一部分。
 
-通常，函数无法访问另一个函数作用域内的变量或参数。`addThumbClickHandler` 的特殊之处在于它定义了参数 `thumb`，而该参数被另一个函数——即你传递给 `addEventListener` 的回调函数——所访问。这是因为回调函数是 `addThumbClickHandler` 作用域的一部分。
+通常，函数无法访问另一个函数作用域内的变量或参数。`addThumbClickHandler`的特殊之处在于它定义了参数`thumb`，而该参数被另一个函数——即你传递给`addEventListener`的回调函数——所访问。这是因为回调函数是`addThumbClickHandler`作用域的一部分。
 
 你可以在章节末尾的“好奇进”（For the More Curious）部分阅读更多关于这一切的工作原理。
 
@@ -3408,11 +3448,13 @@ JavaScript 与许多其他编程语言一样，关于定义和访问变量及函
 
 在控制台中，你为第一个缩略图添加了事件监听器。现在你将使用一个新的 DOM 方法，为所有缩略图添加事件监听器。
 
-当你获取详细图像和详细标题时，你使用了 `document.querySelector` 方法在 DOM 中搜索匹配所传选择器的元素。`document.querySelector` 仅返回一个值，即使你传入了一个匹配多个元素的选择器。
+当你获取详细图像和详细标题时，你使用了`document.querySelector`方法在 DOM 中搜索匹配所传选择器的元素。`document.querySelector`仅返回一个值，即使你传入了一个匹配多个元素的选择器。
+
+
 
 相反，`document.querySelectorAll` 方法将返回所有匹配元素的列表。在控制台中调用 `document.querySelectorAll(THUMBNAIL_LINK_SELECTOR)` 并检查结果。你应该看到锚点元素的结果列表（图 6.26）。
 
-**图 6.26  `document.querySelectorAll` 返回多个匹配元素**
+**图 6.26 `document.querySelectorAll` 返回多个匹配元素**
 
 ![document.querySelectorAll 返回多个匹配元素](img/qsa-thumbnail-link.png)
 
@@ -3427,7 +3469,7 @@ setDetailsFromThumb(thumbnails[4]);
 
 在控制台中运行此代码后，你可以看到 `thumbnails` 列表中的项可以传递给 `setDetailsFromThumb`，成功更新详细图像和标题（图 6.27）。
 
-**图 6.27  将 `querySelectorAll` 项传递给 `setDetailsFromThumb`**
+**图 6.27 将 `querySelectorAll` 项传递给 `setDetailsFromThumb`**
 
 ![将 queryAll 项传递给 setDetailsFromThumb](img/hooray-nodelist.png)
 
@@ -3444,10 +3486,6 @@ function getThumbnailsArray() {
   var thumbnails = document.querySelectorAll(THUMBNAIL_LINK_SELECTOR);
 }
 ```
-
-
-
-
 
 在你继续操作之前，在使用 DOM 方法时有一个小“陷阱”。返回元素列表的方法并不返回 `arrays`（数组）。相反，它们返回的是 `NodeLists`。数组和 `NodeLists` 都是项列表，但数组拥有许多用于处理项集合的强大方法，其中一些方法在编写 Ottergram 时会用到。
 
@@ -3517,7 +3555,7 @@ initializeEvents();
 
 保存并返回浏览器。点击几个不同的缩略图，观察你的劳动成果（图 6.28）。
 
-图 6.28 你确实应该在跳舞
+**图 6.28 你确实应该在跳舞**
 
 ![你确实应该在跳舞](img/dancing.png)
 
@@ -3540,6 +3578,7 @@ initializeEvents();
 什么是严格模式（strict mode），它为什么存在？它是作为一种更简洁的 JavaScript 模式创建的，用于捕捉某些类型的错误（例如变量名中的拼写错误），引导开发者远离语言中某些出错的部分。
 
 严格模式提供了许多益处。它：
+
 - 强制使用 `var`
 - 不需要 `with` 语句
 - 对 `eval` 函数的使用方式进行限制
@@ -3565,10 +3604,7 @@ function addThumbClickHandler(thumb) {
 }
 ```
 
-另一方面，使用匿名函数确实使其获得了对 `thumb` 参数的访问，因为它也在 `addThumbClickHandler` 内部。在计算机科学术语中，这被称为 <closure>（闭包）。
-
-
-
+另一方面，使用匿名函数确实使其获得了对 `thumb` 参数的访问，因为它也在 `addThumbClickHandler` 内部。在计算机科学术语中，这被称为闭包（closure）。
 
 当 `addThumbClickHandler` 函数运行运行时，它会调用 `addEventListener`，这会将回调函数与点击事件关联起来。浏览器会跟踪这些关联，在内部持有回调函数的引用，并在事件发生时运行该回调。
 
@@ -3609,7 +3645,7 @@ thumbnails.length;
 
 ## 进阶好奇者：JavaScript 类型
 
-在整个章节中，你创建了变量以便在函数内部引用某些数据。早些时候告诉过你，字符串、数字和布尔（Boolean）是五种`primitive data types`原始数据类型）中的三种。另外两种是 null 和 undefined。
+在整个章节中，你创建了变量以便在函数内部引用某些数据。早些时候告诉过你，字符串、数字和布尔（Boolean）是五种原始数据类型（primitive data types）中的三种。另外两种是 null 和 undefined。
 
 表 6.2 总结了这五种原始类型的属性。
 
@@ -3623,7 +3659,7 @@ thumbnails.length;
 | null | null | 表示无效的值。 |
 | undefined | undefined | 未赋值给任何内容的变量的值。 |
 
-JavaScript 中的所有其他类型都被视为`compound types`复合类型或`complex types`复杂类型。这些类型包括数组和对象，它们内部可以包含其他类型。例如，你写了一个生成缩略图对象数组的函数。数组也有属性（如 `length`）和方法（如 `forEach()`）。
+JavaScript 中的所有其他类型都被视为复合类型（compound types）或复杂类型（complex types）。这些类型包括数组和对象，它们内部可以包含其他类型。例如，你写了一个生成缩略图对象数组的函数。数组也有属性（如 `length`）和方法（如 `forEach()`）。
 
 在本书中你将继续处理原始数据类型和复杂数据类型。
 
@@ -3663,9 +3699,6 @@ Ottergram 的用户可能希望在页面不显示详细图片的情况下滚动�
 
 首先，它涉及当祖先元素满足特定条件时激活的样式。在媒体查询中，该祖先是视口，条件是最小宽度。在新的代码中，祖先将是为你选择的目标元素共同拥有的任何元素，条件将是该祖先具有特定的类名。
 
-
-
-
 第二种相似之处在于，你必须将样式表中受影响元素的条件样式放在其他声明**之后**，因为当这些条件样式激活时，它们需要覆盖之前的声明。
 
 你将分三个步骤进行：
@@ -3674,13 +3707,15 @@ Ottergram 的用户可能希望在页面不显示详细图片的情况下滚动�
 2. 编写 JavaScript 函数为 `<body>` 元素添加和移除类名。
 3. 添加事件监听器来触发你的 JavaScript 函数。
 
-#### 创建隐藏详情图的样式
+### 创建隐藏详情图的样式
 
 为了隐藏 `.detail-image-container`，你将添加一个为该元素设置 `display: none` 的声明。`display: none` 告诉浏览器该元素不应该被渲染。
 
 你将动态添加到 `<body>` 的类将被称为 `hidden-detail`。因此，你只想在 `.detail-image-container` 是 `.hidden-detail` 的后代时，才对其应用 `display: none`。
 
 在 `styles.css` 中添加隐藏详情图片的样式：
+
+
 
 ```
 ...
@@ -3810,9 +3845,6 @@ function initializeEvents() {
 ```
 
 所有的按键事件都有一个名为 `keyCode` 的属性，对应触发事件的键。`keyCode` 是一个整数，例如 13 代表 Return，32 代表空格键，38 代表上箭头。
-
-
-
 
 更新 `main.js` 中的 `initializeEvents` 函数，使其调用 `addKeyPressHandler`。你需要这样做以便 `<body>` 元素在页面加载时能够监听键盘事件。
 
@@ -3947,13 +3979,12 @@ CSS 过渡创建从一个状态到另一个状态的渐变变化，这正是让 
 通常情况下，你应该通过三个步骤来创建过渡：
 
 1. 决定结束状态应该是怎样的。一种方法是将结束状态的 CSS 声明添加到目标元素上。这允许你在浏览器中查看它们，并确保它们符合你的预期。
+
 2. 将声明从元素的现有声明块移动到新的 CSS 声明块中。你可能想为新块的选择器使用一个新的类。
+
 3. 为目标元素添加 `transition` 声明。`transition` 属性告诉浏览器它需要对当前 CSS 值到结束状态 CSS 值的变化进行视觉动画，并且该过渡将在特定的时期内发生。
 
 ### 使用 transform 属性工作
-
-
-
 
 你的第一个过渡效果将在鼠标悬停在缩略图上时增大其尺寸（图 7.12）。然而，你不会直接更改 `width` 或 `height` 样式。你将使用 `transform` 属性，可以在不影响周围元素布局的情况下改变形状、大小、旋转和位置。
 
@@ -4010,6 +4041,8 @@ CSS 过渡创建从一个状态到另一个状态的渐变变化，这正是让 
 
 **图 7.14 尺寸合适的水獭缩略图**
 
+
+
 ![尺寸合适的水獭缩略图](img/reasonably-large-thumbnails.png)
 
 这个缩略图的比例看起来很好，所以你可以进行下一步了。
@@ -4056,8 +4089,6 @@ CSS 过渡创建从一个状态到另一个状态的渐变变化，这正是让 
 ...
 （此处省略乱码部分）
 ```
-
-
 
 你的悬停效果看起来不错！但它缺乏一种视觉上的“弹出”感，这会让它变得真正独特。通过 CSS 过渡（transitions），你不仅指定过渡所需的时间，还可以让它在段时间内以不同的速度进行过渡。
 
@@ -4187,9 +4218,6 @@ function showDetails() {
 
 你需要在移除 `TINY_EFFECT_CLASS` 之前添加一个小的延迟。然而，JavaScript 并没有像其他语言那样的内置的延迟或睡眠函数。是时候采用通通方法了！
 
-
-
-
 消息末尾的 ``` 代码块是对第 8 章的简要介绍，而指令之前的文本是关于 `setTimeout` 和 `cubic-bezier` 的详细教程。
 
 根据你的指令，我对**正文内容**（关于 `setTimeout` 和 `cubic-bezier` 的教程）进行了分页处理，因为它包含了需要格式化的核心内容和变量。
@@ -4199,17 +4227,29 @@ function showDetails() {
 在 `main.js` 中调用 `frame.classList.add` 之后添加 `setTimeout` 的调用。为其传递两个参数：一个包含执行步骤列表的函数，以及在调用该函数之前等待的毫秒数。这里执行一个步骤，即移除 `TINY_EFFECT_CLASS`。
 
 ```
+
 ...
+
 function showDetails() {
+
   'use strict';
+
   var frame = document.querySelector(DETAIL_FRAME_SELECTOR);
+
   document.body.classList.remove(HIDDEN_DETAIL_CLASS);
+
   frame.classList.add(TINY_EFFECT_CLASS);
+
   setTimeout(function () {
+
     frame.classList.remove(TINY_EFFECT_CLASS);
+
   }, 50);
+
 }
+
 ...
+
 ```
 
 让我们仔细观察这段代码的作用。首先，它为 `frame` 元素添加了 `.is-tiny` 类。这应用了你的 `transform: scale(0.001)`。
@@ -4233,14 +4273,21 @@ function showDetails() {
 这些图表中的形状被称为 `cubic Bezier curves`。图表中的线条描述了动画随时间变化的行为。它们由四个点定义。你可以通过指定定义曲线四个点来创建自定义过渡。尝试在 `styles.css` 中 `.detail-image-frame` 的 `transition` 声明中使用以下 `cubic-bezier`。
 
 ```
+
 ...
+
 .detail-image-frame {
+
   position: relative;
+
   text-align: center;
 
   transition: transform 333m cubic-bezier(1,.06,.28,1);
+
 }
+
 ...
+
 ```
 
 保存它并在浏览器中点击一些缩略图，查看过渡效果的区别。
@@ -4258,24 +4305,28 @@ function showDetails() {
 创建一个自定义计时函数，当你对它满意时，将网站上的值复制并粘贴到 `styles.css` 的代码中：
 
 ```
+
 ...
+
 .detail-image-frame {
+
   position: relative;
+
   text-align: center;
 
   transition: transform 333m cubic-bezier(在此处输入你的值);
+
 }
+
 ...
-```
+
+
 
 恭喜！Ottergram 功能完备了！保存你的文件并欣赏你的成品。你已经将 Ottergram 从一个简单的静态网页变成了一个带有动画视觉效果的交互式响应式页面。
 
 你已经走了很长一段路，希望你喜欢学习开发基础知识。
 
-
-
-
-在本章中，你将创建内部逻辑，并通过 DevTools 控制台与其进行交互，如图图 8.1 所示。
+在本章中，你将创建内部逻辑，并通过 DevTools 控制台与其进行交互，如图 8.1 所示。
 
 **图 8.1 CoffeeRun，内部机制**
 
@@ -4293,7 +4344,7 @@ CoffeeRun 比 Ottergram 复杂得多，因此组织代码以便于调试和扩�
 
 JavaScript 的创建是为了编写添加细微交互作用的极短脚本，而不是为了编写复杂的应用程序。CoffeeRun 并不极端复杂，但它打破了单个脚本文件应该完成任务的界限。
 
-为了保持代码整洁分离，你将为应用程序功能子集创建三个 JavaScript 文件。你将为内部逻辑、UI 和服务器通信代码拥有不同的文件。你将通过将代码编写在独立的单元（或 <samp class="firstterm">模块</samp>）来实现这种分离。
+为了保持代码整洁分离，你将为应用程序功能子集创建三个 JavaScript 文件。你将为内部逻辑、UI 和服务器通信代码拥有不同的文件。你将通过将代码编写在独立的单元（或模块）来实现这种分离。
 
 如何将代码分组为模块完全取决于开发者。大多数情况下，代码是围绕概念分组的，例如“库存”或“食物菜单”。在代码方面，模块将相关的函数组合在一起。某些函数将可以在外部可用，而另一些函数将仅在模块内部使用。
 
@@ -4309,7 +4360,7 @@ JavaScript 的创建是为了编写添加细微交互作用的极短脚本，而
 
 ### 模块模式
 
-可以使用函数来组织代码，但为了这一目的，使用普通函数的变体是一种常见做法。在你开始新项目之前，让我们简要查看一下用于组织代码的 <samp class="firstterm">模块模式</samp>，检查 Ottergram 中的一个函数如何重写为模块。
+可以使用函数来组织代码，但为了这一目的，使用普通函数的变体是一种常见做法。在你开始新项目之前，让我们简要查看一下用于组织代码的模块模式，检查 Ottergram 中的一个函数如何重写为模块。
 
 以下是一个基础模块的代码：
 
@@ -4320,7 +4371,7 @@ JavaScript 的创建是为了编写添加细微交互作用的极短脚本，而
 })();
 ```
 
-这是你第一次看到这种模式，那么它看起来可能很奇怪。这被称为 <samp class="firstterm">立即调用函数表达式</samp>（或 IIFE），最好从内向外来检查它。
+这是你第一次看到这种模式，那么它看起来可能很奇怪。这被称为立即调用函数表达式（或 IIFE），最好从内向外来检查它。
 
 它的主体部分是匿名函数：
 
@@ -4357,14 +4408,13 @@ function () {
 
 当浏览器看到空括号时，它意识到你想让它调用它们之前的任何内容，并说：“哦！我看到有一个我可以运行的匿名函数！”
 
-你可能在想：“这既疯狂又没用。”实际上，你已经写过功能类似的代码。回想 Ottergram 的 <samp class="function">initializeEvents</samp> 函数。在你声明它之后，你立即调用了它，再也没有调用过。这里是该代码供参考。
+你可能在想：“这既疯狂又没用。”实际上，你已经写过功能类似的代码。回想 Ottergram 的`initializeEvents`函数。在你声明它之后，你立即调用了它，再也没有调用过。这里是该代码供参考。
 
 ```javascript
 function initializeEvents() { // 函数声明
   'use strict';
   var thumbnails = getThumbnailsArray();
   thumbnails.forEach(addClickHandler);
-
   addKeyPressHandler();
 }
 
@@ -4379,7 +4429,6 @@ function initializeEvents() {
     'use strict';
     var thumbnails = getThumbnailsArray();
     thumbnails.forEach(addClickHandler);
-
     addKeyPressHandler();
   })();
 }
@@ -4389,23 +4438,19 @@ initializeEvents();
 
 当你要在不创建额外变量或函数的情况下运行某些代码时，IIFE 非常有用。为了理解为什么这很重要，请考虑你为 Ottergram 编写变量和函数。
 
-在 Ottergram 中，你建立了一个有用函数的集合并在需要时调用它们。这些函数的名称如 `getThumbnailsArray` 和 `addKeyPressHandler`。幸运的是，这些名称是唯一的。如果你尝试定义两个同名的函数，第一个会被第二个替换。
+在 Ottergram 中，你建立了一个有用函数的集合并在需要时调用它们。这些函数的名称如`getThumbnailsArray`和`addKeyPressHandler`。幸运的是，这些名称是唯一的。如果你尝试定义两个同名的函数，第一个会被第二个替换。
 
-当你定义函数或变量时，它们默认被添加到 <samp class="firstterm">全局命名空间</samp>。这是浏览器对你的 JavaScript 程序中所有函数和变量名的注册表，以及任何内置函数和变量。更广泛地说，<samp class="firstterm">命名空间</samp> 是组织代码的方法：代码组织命名空间的方式与计算机上文件组织文件夹的方式相同。
+当你定义函数或变量时，它们默认被添加到全局命名空间。这是浏览器对你的 JavaScript 程序中所有函数和变量名的注册表，以及任何内置函数和变量。更广泛地说，命名空间是组织代码的方法：代码组织命名空间的方式与计算机上文件组织文件夹的方式相同。
 
-在 CoffeeRun 中，你可能会有可能同名的函数，例如 `add` 或 `addClickHandler`。与其将它们添加到全局命名空间（在那里可能会被意外覆盖），你可以将它们声明在函数内部。这可以保护它们不受函数外部代码的访问或覆盖。
+在 CoffeeRun 中，你可能会有可能同名的函数，例如`add`或`addClickHandler`。与其将它们添加到全局命名空间（在那里可能会被意外覆盖），你可以将它们声明在函数内部。这可以保护它们不受函数外部代码的访问或覆盖。
 
 当你将代码分组为模块时，你希望让某些（而非全部）功能对模块外部可见。为了实现，你将利用 IIFE 像任何函数一样可以接受参数的特性。
 
 ### 使用 IIFE 修改对象
 
+IIFE 不仅适用于运行初始化代码（例如 Ottergram 的`initializeEvents`）。它们也适用于运行增强对象的代码，而该对象通常作为参数传递进来。为了说明它是如何工作的，我们将再次使用我们的朋友`initializeEvents`。
 
-
-
-
-IIFE 不仅适用于运行初始化代码（例如 Ottergram 的 `initializeEvents`）。它们也适用于运行增强对象的代码，而该对象通常作为参数传递进来。为了说明它是如何工作的，我们将再次使用我们的朋友 `initializeEvents`。
-
-这里是 `initializeEvents` 的版本，它的作用是通过添加点击处理程序来修改缩略图。（为了简单起见，已删除了 `addKeyPressHandler` 的调用。）
+这里是`initializeEvents`的版本，它的作用是通过添加点击处理程序来修改缩略图。（为了简单起见，已删除了`addKeyPressHandler`的调用。）
 
 ```javascript
 function initializeEvents() {
@@ -4417,7 +4462,7 @@ function initializeEvents() {
 initializeEvents();
 ```
 
-在这种形式下，`initializeEvents` 使用 `addThumbClickHandler` 修改了缩略图数组。但它也可以作为参数接收数组。要做到这一点，你需要在函数定义中声明一个参数。然后，在调用它时，传入数组，如下：
+在这种形式下，`initializeEvents`使用`addThumbClickHandler`修改了缩略图数组。但它也可以作为参数接收数组。要做到这一点，你需要在函数定义中声明一个参数。然后，在调用它时，传入数组，如下：
 
 ```javascript
 function initializeEvents(thumbnails) {
@@ -4427,6 +4472,7 @@ function initializeEvents(thumbnails) {
 }
 
 var thumbnails = getThumbnailsArray();
+
 initializeEvents(thumbnails);
 ```
 
@@ -4439,10 +4485,11 @@ initializeEvents(thumbnails);
 })();
 
 var thumbnails = getThumbnailsArray();
+
 initializeEvents(thumbnails);
 ```
 
-然而，你仍然需要将缩略图数组作为参数传递。你可以通过移动 `getThumbnailsArray` 的调用来实现。不要将结果赋值给变量，而是将结果传递给你的 IIFE：
+然而，你仍然需要将缩略图数组作为参数传递。你可以通过移动`getThumbnailsArray`的调用来实现。不要将结果赋值给变量，而是将结果传递给你的 IIFE：
 
 ```javascript
 (function (thumbnails) {
@@ -4453,25 +4500,25 @@ initializeEvents(thumbnails);
 var thumbnails = getThumbnailsArray();
 ```
 
-在这个版本的代码中，一个数组（调用 `getThumbnailsArray` 的结果）被传递给 IIFE。IIFE 接收该数组并将其标记为 `thumbnails`。在 IIFE 的体内部，事件监听器被绑定到数组中的每个项目（图 8.3）。
+在这个版本的代码中，一个数组（调用`getThumbnailsArray`的结果）被传递给 IIFE。IIFE 接收该数组并将其标记为`thumbnails`。在 IIFE 的体内部，事件监听器被绑定到数组中的每个项目（图 8.3）。
 
 **图 8.3 IIFE 修改其参数**
 
 ![IIFE modifying its arguments](img/iife-modifies.png)
 
-任何内容都可以传递给 IIFE 进行修改。你的 CoffeeRun IIFEs 将接收 `window` 对象。但它们不会直接将模块代码附加到全局命名空间，而是将代码附加到全局命名空间*内部*的单一 `App` 属性上。每个 CoffeeRun 模块将包含在自己的文件中，并通过单独的 `<script>` 标签加载到浏览器。此过程的概述见图 8.4。
+任何内容都可以传递给 IIFE 进行修改。你的 CoffeeRun IIFEs 将接收`window`对象。但它们不会直接将模块代码附加到全局命名空间，而是将代码附加到全局命名空间*内部*的单一`App`属性上。每个 CoffeeRun 模块将包含在自己的文件中，并通过单独的`<script>`标签加载到浏览器。此过程的概述见图 8.4。
 
-**图 8.4 `<script>` 标签加载模块，并修改 `window.App`**
+**图 8.4 `<script>`标签加载模块，并修改`window.App`**
 
 ![<script> tags load modules, which modify window.App](img/script-iife-app.png)
 
 ## 设置 CoffeeRun
 
-理论足够了——让我们开始工作吧。因为这是一个新项目，从创建一个新目录开始。打开 `Atom` 并选择 `File` → `Add Project Folder...`。选择你的 `front-end-dev-book` 目录并点击 `New Folder`。将新文件夹命名为 `coffeerun` 并点击 `Open`。
+理论足够了——让我们开始工作吧。因为这是一个新项目，从创建一个新目录开始。打开`Atom`并选择`File` → `Add Project Folder...`。选择你的`front-end-dev-book`目录并点击`New Folder`。将新文件夹命名为`coffeerun`并点击`Open`。
 
-接下来，在 `Atom` 的导航面板中 Control 点击（右键点击）你的新 `coffeerun` 文件夹。选择 `New File` 并输入文件名 `index.html`。再次 Control 点击（右键点击）`coffeerun` 并选择 `New Folder`。将文件夹命名为 `scripts`。
+接下来，在`Atom`的导航面板中 Control 点击（右键点击）你的新`coffeerun`文件夹。选择`New File`并输入文件名`index.html`。再次 Control 点击（右键点击）`coffeerun`并选择`New Folder`。将文件夹命名为`scripts`。
 
-在 `front-end-dev-book` 文件夹中，你现在应该为每个项目 `ottergram` 和 `coffeerun` 一个文件夹，具有相似的文件结构（图 8.5）。
+在`front-end-dev-book`文件夹中，你现在应该为每个项目`ottergram`和`coffeerun`一个文件夹，具有相似的文件结构（图 8.5）。
 
 **图 8.5 为 CoffeeRun 创建文件和文件夹**
 
@@ -4489,7 +4536,7 @@ var thumbnails = getThumbnailsArray();
 
 以后你还将跟踪每个咖啡订单的大小、口味和咖啡因强度。客户的电子邮件地址将作为整个订单的唯一标识符，因此所有细节将与单个电子邮件地址关联。（抱歉，咖啡爱好者！每个客户只有一个订单。）
 
-创建一个名为 `scripts/datastore.js` 的新文件。接下来，在 `index.html` 中添加 `<script>` 标签将新文件包含在你的项目中。
+创建一个名为`scripts/datastore.js`的新文件。接下来，在`index.html`中添加`<script>`标签将新文件包含在你的项目中。
 
 ```html
 <!doctype html>
@@ -4504,7 +4551,7 @@ var thumbnails = getThumbnailsArray();
 </html>
 ```
 
-保存 `index.html`。在 `scripts/datastore.js` 中，从你的模块结构的基础 IIFE 开始：
+保存`index.html`。在`scripts/datastore.js`中，从你的模块结构的基础 IIFE 开始：
 
 ```javascript
 (function (window) {
@@ -4521,17 +4568,13 @@ var thumbnails = getThumbnailsArray();
 
 使用 IIFE 在命名空间中注册模块有三个步骤：
 
-
-
-
-
 1. 获取命名空间的引用（如果它存在）。
 2. 创建模块代码。
 3. 将你的模块代码附加到命名空间上。
 
-让我们看看在实践中它是什么样的。按照所示更新你在 `datastore.js` 中的 IIFE。在你输入代码后，我们将对代码进行解释。
+让我们看看在实践中它是什么样的。按照所示更新你在`datastore.js`中的 IIFE。在你输入代码后，我们将对代码进行解释。
 
-```
+```javascript
 (function (window) {
   'use strict';
   // 代码将放在这里
@@ -4546,21 +4589,21 @@ var thumbnails = getThumbnailsArray();
 })(window);
 ```
 
-在 IIFE 的体中，你声明了一个名为 `App` 的局部变量。如果 `window` 已经有一个 `App` 属性，你就将本地的 `App` 赋值给它。如果没有，标签 `App` 将指向一个全新的空对象（用 `{}` 表示）。`||` 是`默认运算符`，也称为`逻辑或运算符`。它可以用于在第一个选择（`window.App`）尚未创建时提供一个有效值（在此例中为 `{}`）。
+在 IIFE 的体中，你声明了一个名为`App`的局部变量。如果`window`已经有一个`App`属性，你就将本地的`App`赋值给它。如果没有，标签`App`将指向一个全新的空对象（用`{}`表示）。`||`是默认运算符，也称为逻辑或运算符。它可以用于在第一个选择（`window.App`）尚未创建时提供一个有效值（在此例中为`{}`）。
 
 你的每个模块都将执行相同的检查。这就像是在说：“谁先到：就尽管开始创建一个新对象。其他人都使用那个对象。”
 
-接下来，你声明了一个名为 `DataStore` 的函数。稍后你将向此函数添加更多代码。
+接下来，你声明了一个名为`DataStore`的函数。稍后你将向此函数添加更多代码。
 
-最后，你将 `DataStore` 附加到 `App` 对象上，并将全局 `App` 属性重新赋值为你新修改的 `App`。（如果它还不存在且你必须创建一个空对象，则你必须将其附加。）
+最后，你将`DataStore`附加到`App`对象上，并将全局`App`属性重新赋值为你新修改的`App`。（如果它还不存在且你必须创建一个空对象，则你必须将其附加。）
 
-你已经开始创建 `DataStore` 类型了。现在，你将通过两个步骤对其进行自定义。在第一步中，你将为它提供一个内部用于存储数据的属性。在第二步中，你将为它提供一组用于与数据交互的方法。你不需要让其他对象直接访问该数据，因此该类型将通过一组方法提供外部接口。
+你已经开始创建`DataStore`类型了。现在，你将通过两个步骤对其进行自定义。在第一步中，你将为它提供一个内部用于存储数据的属性。在第二步中，你将为它提供一组用于与数据交互的方法。你不需要让其他对象直接访问该数据，因此该类型将通过一组方法提供外部接口。
 
-对象工厂函数在 JavaScript 中被称为`构造函数`（constructors）。
+对象工厂函数在 JavaScript 中被称为构造函数（constructors）。
 
-在 `datastore.js` 的 `DataStore` 函数体中添加以下代码。
+在`datastore.js`的`DataStore`函数体中添加以下代码。
 
-```
+```javascript
 (function (window) {
   'use strict';
   var App = window.App || {};
@@ -4575,25 +4618,31 @@ var thumbnails = getThumbnailsArray();
 })(window);
 ```
 
-构造函数的工作是创建并自定义一个新对象。在构造函数的体内部，你可以使用关键字 `this` 来引用该新对象。你使用点运算符在你的新对象上创建了一个名为 `data` 的属性，并为 `data` 赋值了一个空对象。
 
-你可能已经注意到你将 `DataStore` 的首字母大写了。这是 JavaScript 中命名构造函数时的约定。这并不是必须，但它是良好的习惯，可以告诉其他开发者该函数应该被当作构造函数使用。
 
-为了区分构造函数和普通函数，你在调用它时使用关键字 `new`。这告诉 JavaScript 创建一个新对象，建立从 `this` 到该新对象的引用，并`隐式地`（implicitly）`返回`（return）该对象。这意味着它即使在构造函数中没有显式的 `return` 语句，也会`返回`该对象。
+构造函数的工作是创建并自定义一个新对象。在构造函数的体内部，你可以使用关键字`this`来引用该新对象。你使用点运算符在你的新对象上创建了一个名为`data`的属性，并为`data`赋值了一个空对象。
 
-保存文件并返回控制台。为了学习如何使用构造函数，你将创建两个 `DataStore` 对象（或“实例”）并向它们添加值。先从创建实例开始。
+你可能已经注意到你将`DataStore`的首字母大写了。这是 JavaScript 中命名构造函数时的约定。这并不是必须，但它是良好的习惯，可以告诉其他开发者该函数应该被当作构造函数使用。
+
+为了区分构造函数和普通函数，你在调用它时使用关键字`new`。这告诉 JavaScript 创建一个新对象，建立从`this`到该新对象的引用，并`隐式地`（implicitly）`返回`（return）该对象。这意味着它即使在构造函数中没有显式的`return`语句，也会`返回`该对象。
+
+保存文件并返回控制台。为了学习如何使用构造函数，你将创建两个`DataStore`对象（或“实例”）并向它们添加值。先从创建实例开始。
 
 ```
 var dsOne = new App.DataStore();
+
 var dsTwo = new App.DataStore();
 ```
 
-你通过调用 `DataStore` 构造函数创建了这些 `DataStore` 实例。此时，每个实例都有一个空的 `data` 属性。向它们添加一些值：
+你通过调用`DataStore`构造函数创建了这些`DataStore`实例。此时，每个实例都有一个空的`data`属性。向它们添加一些值：
 
 ```
 dsOne.data['email'] = 'james@bond.com';
+
 dsOne.data['order'] = 'black coffee';
+
 dsTwo.data['email'] = 'moneypenny@bond.com';
+
 dsTwo.data['order'] = 'chai tea';
 ```
 
@@ -4601,81 +4650,91 @@ dsTwo.data['order'] = 'chai tea';
 
 ```
 dsOne.data;
+
 dsTwo.data;
 ```
 
 结果告诉你每个实例都持有不同的信息（图 8.8）。
 
-**图 8.8  向 `DataStore` 实例赋值**
+**图 8.8  向`DataStore`实例赋值**
 
 ![向 DataStore 实例赋值](img/new-datastores-with-data.png)
 
-注意，你不需要编写 `window.App.DataStore();`。这是因为 `window` 对象是全局命名空间。它的所有属性对你编写的任何 JavaScript 代码都可用，包括在控制台中。
+注意，你不需要编写`window.App.DataStore();`。这是因为`window`对象是全局命名空间。它的所有属性对你编写的任何 JavaScript 代码都可用，包括在控制台中。
 
 ## 构造函数
 
 IIFE 让你利用函数作用域来创建命名空间，以组织代码的大部分。函数的另一种用途是使其像创建所有具有相似属性和方法的对象的工厂。在其他语言中，你可能会使用类（class）来进行这种组织工作。严格来说，JavaScript 没有类，但它确实提供了一种创建自定义类型的方法。
 
-你已经开始创建 `DataStore` 类型了。现在，你将通过两个步骤对其进行自定义。在第一步中，你将为它提供一个内部用于存储数据的属性。在第二步中，你将为它提供一组用于与数据交互的方法。你不需要让其他对象直接访问该数据，因此该类型将通过一组方法提供外部接口。
+你已经开始创建`DataStore`类型了。现在，你将通过两个步骤对其进行自定义。在第一步中，你将为它提供一个内部用于存储数据的属性。在第二步中，你将为它提供一组用于与数据交互的方法。你不需要让其他对象直接访问该数据，因此该类型将通过一组方法提供外部接口。
 
 （此处为后续翻译内容）
 
 ### 构造函数的原型
 
-使用 `DataStore` 实例，你可以手动存储和检索数据。但在当前形式下，`DataStore` 只是创建对象的迂折方法，任何使用 `DataStore` 实例的模块都必须编写为直接使用 `data` 属性。
+使用`DataStore`实例，你可以手动存储和检索数据。但在当前形式下，`DataStore`只是创建对象的迂折方法，任何使用`DataStore`实例的模块都必须编写为直接使用`data`属性。
 
-这不是良好的设计。如果 `DataStore` 提供一个用于添加、删除和检索数据的公共接口，同时保持其工作细节的秘密，将会更好。
+这不是良好的设计。如果`DataStore`提供一个用于添加、删除和检索数据的公共接口，同时保持其工作细节的秘密，将会更好。
 
-创建你的自定义 `DataStore` 类型的第二部分是提供这些与数据交互的方法。目标是让这些方法成为模块与 `DataStore` 实例交互时使用的接口。为了实现这一点，你将利用 JavaScript 函数的一个非常酷的特性：`prototype` 属性。
+创建你的自定义`DataStore`类型的第二部分是提供这些与数据交互的方法。目标是让这些方法成为模块与`DataStore`实例交互时使用的接口。为了实现这一点，你将利用 JavaScript 函数的一个非常酷的特性：`prototype`属性。
 
-JavaScript 中的函数也是对象。这意味着它们可以拥有属性。在 JavaScript 中，所有由构造函数创建的实例都可以访问一个共享的属性和方法库：构造函数的 `prototype` 属性。
+JavaScript 中的函数也是对象。这意味着它们可以拥有属性。在 JavaScript 中，所有由构造函数创建的实例都可以访问一个共享的属性和方法库：构造函数的`prototype`属性。
 
-为了创建这些实例，你在调用构造函数时使用了 `new` 关键字。`new` 关键字不仅创建了你的实例并返回它，还从实例到构造函数的 `prototype` 属性创建了一个特殊链接。该链接对于使用 `new` 关键字创建构造函数时创建的任何实例都存在。
+为了创建这些实例，你在调用构造函数时使用了`new`关键字。`new`关键字不仅创建了你的实例并返回它，还从实例到构造函数的`prototype`属性创建了一个特殊链接。该链接对于使用`new`关键字创建构造函数时创建的任何实例都存在。
 
-当你向 `prototype` 添加一个属性并为其赋值一个函数时，通过构造函数创建的每个实例都可以访问该函数。你可以在函数体内部使用关键字 `this`，它将指向该实例。
+当你向`prototype`添加一个属性并为其赋值一个函数时，通过构造函数创建的每个实例都可以访问该函数。你可以在函数体内部使用关键字`this`，它将指向该实例。
 
-
-
-
-为了看到运行效果，请在 `datastore.js` 中作为原型的一个属性创建 `add` 函数。你也可以删除对 `console.log` 的调用。
+为了看到运行效果，请在`datastore.js`中作为原型的一个属性创建`add`函数。你也可以删除对`console.log`的调用。
 
 ```
 (function (window) {
+
   'use strict';
+
   var App = window.App || {};
 
   function DataStore() {
+
     console.log('running the DataStore function');
+
     this.data = {};
+
   }
 
   DataStore.prototype.add = function (key, val) {
+
     this.data[key] = val;
+
   };
 
   App.DataStore = DataStore;
+
   window.App = App;
+
 })(window);
 ```
 
-你为 `DataStore.prototype` 赋予了属性 `add`，并为其赋值了一个函数。该函数接收两个参数：`key` 和 `val`。在函数体内部，你使用这些参数修改实例的 `data` 属性。
+你为`DataStore.prototype`赋予了属性`add`，并为其赋值了一个函数。该函数接收两个参数：`key`和`val`。在函数体内部，你使用这些参数修改实例的`data`属性。
 
-从 `DataStore` 如何处理咖啡订单的角度来看，它将使用客户的电子邮件地址（`key`）来存储订单信息（`val`）。
+从`DataStore`如何处理咖啡订单的角度来看，它将使用客户的电子邮件地址（`key`）来存储订单信息（`val`）。
 
-你并没有在建立一个真正的数据库，但 `DataStore` 对于 CoffeeRun 来说已经足够用了。它能够根据 `key` 指定的唯一标识符保存某些信息 `val`。由于你使用 JavaScript 对象进行存储，因此每个 `key` 都保证是数据库中一个唯一的条目。（在 JavaScript 对象中，属性名始终是唯一的，就像命名空间内的函数名一样。如果你尝试使用相同的键存储不同的值，你将只会覆盖该键之前的任何值。）
+你并没有在建立一个真正的数据库，但`DataStore`对于 CoffeeRun 来说已经足够用了。它能够根据`key`指定的唯一标识符保存某些信息`val`。由于你使用 JavaScript 对象进行存储，因此每个`key`都保证是数据库中一个唯一的条目。（在 JavaScript 对象中，属性名始终是唯一的，就像命名空间内的函数名一样。如果你尝试使用相同的键存储不同的值，你将只会覆盖该键之前的任何值。）
 
 JavaScript 对象的这一特性满足了任何数据库的一个首要需求：保持各个数据单元相互分离。
 
-保存代码并切换回浏览器。在控制台中创建一个 `DataStore` 实例，并使用它的 `add` 方法存储一些信息。
+保存代码并切换回浏览器。在控制台中创建一个`DataStore`实例，并使用它的`add`方法存储一些信息。
 
 ```
 var ds = new App.DataStore();
+
 ds.add('email', 'q@bond.com');
+
 ds.add('order', 'triple espresso');
+
 ds.data;
 ```
 
-检查 `data` 属性以确认它已正常工作（图 8.9）。
+检查`data`属性以确认它已正常工作（图 8.9）。
 
 **图 8.9  调用原型方法**
 
@@ -4683,64 +4742,87 @@ ds.data;
 
 ### 为构造函数添加方法
 
-接下来的工作是创建访问数据的方法。在 `datastore.js` 中，添加一个根据给定的 `key` 查找值的方法，以及一个查找所有键值对的方法。
+接下来的工作是创建访问数据的方法。在`datastore.js`中，添加一个根据给定的`key`查找值的方法，以及一个查找所有键值对的方法。
 
 ```
 ...
+
   DataStore.prototype.add = function (key, val) {
+
     this.data[key] = val;
+
   };
 
   DataStore.prototype.get = function (key) {
+
     return this.data[key];
+
   };
 
   DataStore.prototype.getAll = function () {
+
     return this.data;
+
   };
 
   App.DataStore = DataStore;
+
   window.App = App;
+
 })(window);
 ```
 
-你创建了一个 `get` 方法，它接收一个 `key`，在实例的 `data` 属性中查找该值并`返回`。你还创建了 `getAll` 方法。它几乎完全相同，但它不是查找单个键的值，而是返回 `data` 属性的引用。
+你创建了一个`get`方法，它接收一个`key`，在实例的`data`属性中查找该值并`返回`。你还创建了`getAll`方法。它几乎完全相同，但它不是查找单个键的值，而是返回`data`属性的引用。
 
-你现在可以从 `DataStore` 实例中添加和检索信息了。为了完成这个循环，你需要添加一个删除信息的方法。现在将其添加到 `datastore.js` 中。
+你现在可以从`DataStore`实例中添加和检索信息了。为了完成这个循环，你需要添加一个删除信息的方法。现在将其添加到`datastore.js`中。
 
 ```
 ...
+
   DataStore.prototype.getAll = function () {
+
     return this.data;
+
   };
 
   DataStore.prototype.remove = function (key) {
+
     delete this.data[key];
+
   };
 
   App.DataStore = DataStore;
+
   window.App = App;
+
 })(window);
 ```
 
-当你调用新的 `remove` 方法时，`delete` 运算符会从对象中删除一个键/值对。
+当你调用新的`remove`方法时，`delete`运算符会从对象中删除一个键/值对。
 
-到此，你已经完成了 `DataStore` 模块，它提供了 CoffeeRun 应用最重要的部分。它可以存储数据、响应查询提供存储的数据，并根据命令删除不必要的数据。
+到此，你已经完成了`DataStore`模块，它提供了 CoffeeRun 应用最重要的部分。它可以存储数据、响应查询提供存储的数据，并根据命令删除不必要的数据。
 
-要看到你所有方法的运行情况，保存代码并在 `browser-sync` 重新加载浏览器后进入控制台。输入以下代码，它将测试 `DataStore` 的所有方法：
+要看到你所有方法的运行情况，保存代码并在`browser-sync`重新加载浏览器后进入控制台。输入以下代码，它将测试`DataStore`的所有方法：
 
 ```
 var ds = new App.DataStore();
+
 ds.add('m@bond.com', 'tea');
+
 ds.add('james@bond.com', 'eshpressho');
+
 ds.getAll();
+
 ds.remove('james@bond.com');
+
 ds.getAll();
+
 ds.get('m@bond.com');
+
 ds.get('james@bond.com');
 ```
 
-如图 8.10 所示，`DataStore` 的方法现在应该工作了。这些方法与其他模块交互的方式完全相同。
+如图 8.10 所示，`DataStore`的方法现在应该工作了。这些方法与其他模块交互的方式完全相同。
 
 **图 8.10  与 DataStore 操作**
 
@@ -4748,164 +4830,211 @@ ds.get('james@bond.com');
 
 ## 创建 Truck 模块
 
-你将编写的下一个模块是 `Truck` 模块，它将为餐车提供所有功能。它将具有创建和交付订单以及打印待订单列表的方法。图 8.11 显示了 `Truck` 模块如何与 `DataStore` 模块交互。
+你将编写的下一个模块是`Truck`模块，它将为餐车提供所有功能。它将具有创建和交付订单以及打印待订单列表的方法。图 8.11 显示了`Truck`模块如何与`DataStore`模块交互。
 
 **图 8.11  Truck 模块与 DataStore 交互**
 
 ![Truck 模块与 DataStore 交互](img/img-truck-datastore)
 
-当 `Truck` 实例被创建时，它会被赋予一个 `DataStore` 对象。`Truck` 拥有处理订单的方法，但它不需要担心如何存储和管理这些信息。相反，`Truck` 将这些职责交给 `DataStore`。例如，当你调用 `Truck` 的 `createOrder` 方法时，它会调用 `DataStore` 的 `add` 方法。
+当`Truck`实例被创建时，它会被赋予一个`DataStore`对象。`Truck`拥有处理订单的方法，但它不需要担心如何存储和管理这些信息。相反，`Truck`将这些职责交给`DataStore`。例如，当你调用`Truck`的`createOrder`方法时，它会调用`DataStore`的`add`方法。
 
-创建 `scripts/truck.js` 文件并在 `index.html` 中为其添加 `<script>` 标签。
+创建`scripts/truck.js`文件并在`index.html`中为其添加`<script>`标签。
 
 ```html
 <!doctype html>
+
 <html>
+
   <head>
+
     <meta charset="utf-8">
+
     <title>coffeerun</title>
+
   </head>
+
   <body>
+
     <script src="scripts/datastore.js" charset="utf-8"></script>
+
     <script src="scripts/truck.js" charset="utf-8"></script>
+
   </body>
+
 </html>
 ```
 
-保存 `index.html`。在 `scripts/truck.js` 中，使用 IIFE 和 `Truck` 类型的构造函数设置你的模块。
+保存`index.html`。在`scripts/truck.js`中，使用 IIFE 和`Truck`类型的构造函数设置你的模块。
 
 ```javascript
 (function (window) {
+
   'use strict';
+
   var App = window.App || {};
 
   function Truck() {
+
   }
 
   App.Truck = Truck;
+
   window.App = App;
 
 })(window);
 ```
 
-接下来，你将在构造函数中添加参数，以便每个实例都有一个唯一的标识符和一个自己的 `DataStore` 实例。标识符只是用于区分不同 `Truck` 实例的名称。`DataStore` 实例将扮演更重要的角色。
+接下来，你将在构造函数中添加参数，以便每个实例都有一个唯一的标识符和一个自己的`DataStore`实例。标识符只是用于区分不同`Truck`实例的名称。`DataStore`实例将扮演更重要的角色。
 
-在 `scripts/truck.js` 中添加新参数。
+在`scripts/truck.js`中添加新参数。
 
 ```javascript
 (function (window) {
+
   'use strict';
+
   var App = window.App || {};
 
   function Truck(truckId, db) {
+
     this.truckId = truckId;
+
     this.db = db;
+
   }
 
   App.Truck = Truck;
+
   window.App = App;
 
 })(window);
 ```
 
+你为`truckId`和`db`声明了参数，然后将它们中的每一个都赋值为新构造的实例的属性。
 
-
-你为 `truckId` 和 `db` 声明了参数，然后将它们中的每一个都赋值为新构造的实例的属性。
-
-`Truck` 实例需要用于管理咖啡订单的方法，接下来将添加这些方法。订单数据将包含电子邮件地址和饮品规格。
+`Truck`实例需要用于管理咖啡订单的方法，接下来将添加这些方法。订单数据将包含电子邮件地址和饮品规格。
 
 ### 添加订单
 
-第一个要添加的方法是 `createOrder`。当调用此方法时，`Truck` 实例将通过你之前声明的 `DataStore` 方法与其 `db` 属性交互。具体来说，你将调用 `DataStore` 的 `add` 方法，使用与订单关联电子邮件地址来存储咖啡订单。
+第一个要添加的方法是`createOrder`。当调用此方法时，`Truck`实例将通过你之前声明的`DataStore`方法与其`db`属性交互。具体来说，你将调用`DataStore`的`add`方法，使用与订单关联电子邮件地址来存储咖啡订单。
 
-在 `truck.js` 中声明这个新的原型方法。
+在`truck.js`中声明这个新的原型方法。
 
 ```
 ...
+
   function Truck(truckId, db) {
+
     this.truckId = truckId;
+
     this.db = db;
+
   }
 
   Truck.prototype.createOrder = function (order) {
+
     console.log('Adding order for ' + order.emailAddress);
+
     this.db.add(order.emailAddress, order);
+
   };
 
   App.Truck = Truck;
+
   window.App = App;
 
 })(window);
 ```
 
-你在 `createOrder` 中向控制台打印了一条消息，然后使用 `db` 的 `add` 方法存储订单信息。
+你在`createOrder`中向控制台打印了一条消息，然后使用`db`的`add`方法存储订单信息。
 
-使用 `add` 方法非常简单，只需引用 `Truck` 的 `db` 实例变量并调用 `add` 即可。你不需要在此模块的任何地方指定 `App.DataStore` 命名空间或提到 `DataStore` 构造函数。`Truck` 实例的设计旨在与任何具有 `DataStore` 相同方法的对象配合。`Truck` 不需要知道超出此的任何细节。
+使用`add`方法非常简单，只需引用`Truck`的`db`实例变量并调用`add`即可。你不需要在此模块的任何地方指定`App.DataStore`命名空间或提到`DataStore`构造函数。`Truck`实例的设计旨在与任何具有`DataStore`相同方法的对象配合。`Truck`不需要知道超出此的任何细节。
 
-保存文件并在控制台中使用以下条目测试 `createOrder`：
+保存文件并在控制台中使用以下条目测试`createOrder`：
 
 ```
 var myTruck = new App.Truck('007', new App.DataStore());
+
 myTruck.createOrder({ emailAddress: 'dr@no.com', coffee: 'decaf'});
+
 myTruck.createOrder({ emailAddress: 'me@goldfinger.com', coffee: 'double mocha'});
+
 myTruck.createOrder({ emailAddress: 'm@bond.com', coffee: 'earl grey'});
+
 myTruck.db;
 ```
 
 你的结果应该看起来像图 8.12。
 
-图 8.12 对 `Truck.prototype.createOrder` 进行试运行
+图 8.12 对`Truck.prototype.createOrder`进行试运行
 
 ![对 Truck.prototype.createOrder 进行试运行](img/using-createorder.png)
 
-当控制台打印 `myTruck.db` 的值时，你需要点击![对 Truck.prototype.createOrder 进行试运行](img/arrow.png) 图标，这样就可以看到嵌套属性（例如 `data` 对象内部的 `dr@no.com` 属性）。
+当控制台打印`myTruck.db`的值时，你需要点击![对 Truck.prototype.createOrder 进行试运行](img/arrow.png)图标，这样就可以看到嵌套属性（例如`data`对象内部的`dr@no.com`属性）。
 
 ### 删除订单
 
-当订单交付时，`Truck` 实例应该从其数据库中删除订单。在 `truck.js` 的 `Truck.prototype` 对象上添加一个新的 `deliverOrder` 方法。
+当订单交付时，`Truck`实例应该从其数据库中删除订单。在`truck.js`的`Truck.prototype`对象上添加一个新的`deliverOrder`方法。
 
 ```
 ...
+
   Truck.prototype.createOrder = function (order) {
+
     console.log('Adding order for ' + data.emailAddress);
+
     this.db.add(data.emailAddress, order);
+
   };
 
   Truck.prototype.deliverOrder = function (customerId) {
+
     console.log('Delivering order for ' + customerId);
+
     this.db.remove(customerId);
+
   };
 
   App.Truck = Truck;
+
   window.App = App;
 
 })(window);
 ```
 
-你将一个函数表达式赋值给 `Truck.prototype.deliverOrder`。该函数接受一个 `customerId` 参数，然后将其传递给 `this.db.remove`。`customerId` 的值应该是与订单关联的电子邮件地址。
 
-就像 `createOrder` 一样，`deliverOrder` 只负责调用 `this.db` 的 `remove` 方法。它不需要关于 `remove` 实际工作的任何细节。
 
-保存并切换到控制台。创建一个 `Truck` 实例，使用 `createOrder` 添加几个订单，然后确保 `deliverOrder` 将它们从实例的 `db` 中删除。（你可以在每次调用 `createOrder` 和 `deliverOrder` 后按回车或 Shift-回车，但确保在每次 `myTruck.db` 条目后都按回车。）
+你将一个函数表达式赋值给`Truck.prototype.deliverOrder`。该函数接受一个`customerId`参数，然后将其传递给`this.db.remove`。`customerId`的值应该是与订单关联的电子邮件地址。
+
+就像`createOrder`一样，`deliverOrder`只负责调用`this.db`的`remove`方法。它不需要关于`remove`实际工作的任何细节。
+
+保存并切换到控制台。创建一个`Truck`实例，使用`createOrder`添加几个订单，然后确保`deliverOrder`将它们从实例的`db`中删除。（你可以在每次调用`createOrder`和`deliverOrder`后按回车或Shift-回车，但确保在每次`myTruck.db`条目后都按回车。）
 
 ```
 var myTruck = new App.Truck('007', new App.DataStore());
+
 myTruck.createOrder({ emailAddress: 'm@bond.com', coffee: 'earl grey'});
+
 myTruck.createOrder({ emailAddress: 'dr@no.com', coffee: 'decaf'});
+
 myTruck.createOrder({ emailAddress: 'me@goldfinger.com', coffee: 'double mocha'});
+
 myTruck.db;
+
 myTruck.deliverOrder('m@bond.com');
+
 myTruck.deliverOrder('dr@no.com');
+
 myTruck.db;
 ```
 
-当你输入这些测试命令时，你会发现在调用 `deliverOrder` 后，`myTruck.db` 中的订单信息发生了变化（图 8.13）。
+当你输入这些测试命令时，你会发现在调用`deliverOrder`后，`myTruck.db`中的订单信息发生了变化（图 8.13）。
 
-图 8.13 使用 `Truck.prototype.deliverOrder` 删除订单数据
+图 8.13 使用`Truck.prototype.deliverOrder`删除订单数据
 
 ![使用 Truck.prototype.deliverOrder 删除订单数据](img/using-deliverorder.png)
 
-注意，控制台显示的是你点击![使用 Truck.prototype.deliverOrder 删除订单数据](img/arrow.png) 图标时数据的状态。如果你在调用 `deliverOrder` 后没有检查 `myTruck.db` 中的值，看起来就像数据从未被添加过（图 8.14）。
+注意，控制台显示的是你点击![使用 Truck.prototype.deliverOrder 删除订单数据](img/arrow.png)图标时数据的状态。如果你在调用`deliverOrder`后没有检查`myTruck.db`中的值，看起来就像数据从未被添加过（图 8.14）。
 
 图 8.14 控制台显示点击瞬间的值
 
@@ -4913,52 +5042,63 @@ myTruck.db;
 
 ### 调试
 
-你已经写了这个方法的代码。但它开始会有一个 bug，你将使用 `Chrome` 的调试工具找到它。
+你已经写了这个方法的代码。但它开始会有一个 bug，你将使用`Chrome`的调试工具找到它。
 
-让我们一步步来。首先在 `truck.js` 中创建 `printOrders` 的基础版本。在体体内，你将从 `db` 对象中检索所有咖啡订单。然后你将使用 `Object.keys` 方法获取一个包含电子邮件地址的数组。最后，你将遍历电子邮件地址数组，并为数组中的每个元素运行回调函数。
+让我们一步步来。首先在`truck.js`中创建`printOrders`的基础版本。在体体内，你将从`db`对象中检索所有咖啡订单。然后你将使用`Object.keys`方法获取一个包含电子邮件地址的数组。最后，你将遍历电子邮件地址数组，并为数组中的每个元素运行回调函数。
 
 ```
 ...
+
   Truck.prototype.deliverOrder = function (customerId) {
+
     console.log('Delivering order for ' + customerId);
+
     this.db.remove(customerId);
+
   };
 
   Truck.prototype.printOrders = function () {
+
     var customerIdArray = Object.keys(this.db.getAll());
 
     console.log('Truck #' + this.truckId + ' has pending orders:');
+
     customerIdArray.forEach(function (id) {
+
       console.log(this.db.get(id));
+
     });
+
   };
 
   App.Truck = Truck;
+
   window.App = App;
 
 })(window);
 ```
 
+在新的`printOrders`方法中，你调用`this.db.getAll`来以键值对的形式检索所有订单，并将它们传递给`Object.keys`，后者会返回一个仅包含键的数组。你将此数组赋值给变量`customerIdArray`。
 
+当你遍历此数组时，你向`forEach`传递了一个回调函数。在该回调函数的体内，你尝试`get`获取与`id`（客户电子邮件地址）关联的订单。
 
-
-在新的 `printOrders` 方法中，你调用 `this.db.getAll` 来以键值对的形式检索所有订单，并将它们传递给 `Object.keys`，后者会返回一个仅包含键的数组。你将此数组赋值给变量 `customerIdArray`。
-
-当你遍历此数组时，你向 `forEach` 传递了一个回调函数。在该回调函数的体内，你尝试 `get` 获取与 `id`（客户电子邮件地址）关联的订单。
-
-保存并返回控制台。创建一个 `Truck` 的新实例并添加一些咖啡订单。然后尝试运行你的新 `printOrders` 方法。
+保存并返回控制台。创建一个`Truck`的新实例并添加一些咖啡订单。然后尝试运行你的新`printOrders`方法。
 
 ```
 var myTruck = new App.Truck('007', new App.DataStore());
+
 myTruck.createOrder({ emailAddress: 'm@bond.com', coffee: 'earl grey'});
+
 myTruck.createOrder({ emailAddress: 'dr@no.com', coffee: 'decaf'});
+
 myTruck.createOrder({ emailAddress: 'me@goldfinger.com', coffee: 'double mocha'});
+
 myTruck.printOrders();
 ```
 
-你看到的不是咖啡订单列表，而是错误 `Uncaught TypeError: Cannot read property 'db' of undefined` ([图 8.15])。
+你看到的不是咖啡订单列表，而是错误`Uncaught TypeError: Cannot read property 'db' of undefined`（[图 8.15]）。
 
-**图 8.15 运行 `printOrders`时的错误**
+**图 8.15 运行`printOrders`时的错误**
 
 ![Error when printOrders is run](img/uncaught-error-this-db.png)
 
@@ -4966,9 +5106,9 @@ myTruck.printOrders();
 
 ### 使用 DevTools 定位错误
 
-调试需要你重现错误，并逐步隔离故障代码。`Chrome` 调试器让这个过程（几乎）变得愉快。
+调试需要你重现错误，并逐步隔离故障代码。`Chrome`调试器让这个过程（几乎）变得愉快。
 
-当发生错误时，控制台会显示导致错误代码的文件名和行号。（在图 8.15 中，引用的是 `truck.js:30`；你的行号可能会有所不同。）点击该文本，在调试工具中打开错误的代码行（[图 8.16]）。
+当发生错误时，控制台会显示导致错误代码的文件名和行号。（在图 8.15 中，引用的是`truck.js:30`；你的行号可能会有所不同。）点击该文本，在调试工具中打开错误的代码行（[图 8.16]）。
 
 **图 8.16 在调试工具中查看错误**
 
@@ -4980,7 +5120,7 @@ myTruck.printOrders();
 
 ![Error line called out in the sources panel](img/callout.png)
 
-此错误消息表明，浏览器认为你正尝试读取一个名为 `db` 的属性，但该属性所属的对象并不存在。
+此错误消息表明，浏览器认为你正尝试读取一个名为`db`的属性，但该属性所属的对象并不存在。
 
 下一步是运行代码到导致错误的那行，然后检查该对象的值。在源代码面板中，点击带有错误标记的行左侧的行号。这为调试器设置了一个“断点”（`breakpoint`），告诉浏览器在尝试运行此行之前暂停。当你设置断点时，左侧的行号会变成蓝色，并在右侧的断点面板中添加条目（[图 8.18]）。
 
@@ -4994,15 +5134,11 @@ myTruck.printOrders();
 
 ![Showing the console drawer](img/showing-console-drawer.png)
 
-在控制台中再次运行 `myTruck.printOrders();`。浏览器将激活调试器，你的代码将在断点处暂停（[图 8.20]）。
+在控制台中再次运行`myTruck.printOrders();`。浏览器将激活调试器，你的代码将在断点处暂停（[图 8.20]）。
 
 **图 8.20 调试器在断点处暂停**
 
 ![Debugger paused at breakpoint](img/paused.png)
-
-
-
-
 
 ![作用域面板中的变量值](img/scope-variable-list.png)
 
@@ -5022,110 +5158,143 @@ myTruck.printOrders();
 
 ### 使用 bind 设置此值
 
-在 JavaScript 中，当你调用一个函数时，函数内部的 `this` 关键字会被赋值赋值。对于构造函数和原型方法，`this` 的值是实例对象。该实例被称为函数调用的 `owner`（所有者）。使用 `this` 关键字可以让你访问所有者的属性。
+在 JavaScript 中，当你调用一个函数时，函数内部的`this`关键字会被赋值赋值。对于构造函数和原型方法，`this`的值是实例对象。该实例被称为函数调用的`owner`（所有者）。使用`this`关键字可以让你访问所有者的属性。
 
-正如我们之前提到的，对于回调函数，`this` 不会自动分配给某个对象。你可以通过使用函数的 `bind` 方法手动指定哪个对象应该是所有者。（记住，JavaScript 函数实际上是对象，并且可以拥有自己的属性和方法，例如 `bind`。）
+正如我们之前提到的，对于回调函数，`this`不会自动分配给某个对象。你可以通过使用函数的`bind`方法手动指定哪个对象应该是所有者。（记住，JavaScript 函数实际上是对象，并且可以拥有自己的属性和方法，例如`bind`。）
 
-`bind` 方法接受一个对象参数，并返回函数的一个新版本。当你调用这个新版本时，它将使用传递给 `bind` 的对象参数作为函数体内 `this` 的值。
+`bind`方法接受一个对象参数，并返回函数的一个新版本。当你调用这个新版本时，它将使用传递给`bind`的对象参数作为函数体内`this`的值。
 
-在 `forEach` 回调函数内部，`this` 是 `undefined`，因为回调函数没有所有者。通过调用 `bind` 并传递 `Truck` 实例的引用来修复它。
+在`forEach`回调函数内部，`this`是`undefined`，因为回调函数没有所有者。通过调用`bind`并传递`Truck`实例的引用来修复它。
 
-在 `truck.js` 中添加 `bind` 的调用。
+在`truck.js`中添加`bind`的调用。
 
 ```javascript
 ...
+
   Truck.prototype.printOrders = function () {
+
     var customerIdArray = Object.keys(this.db.getAll());
 
     console.log('Truck #' + this.truckId + ' has pending orders:');
+
     customerIdArray.forEach(function (id) {
+
       console.log(this.db.get(id));
+
     }.bind(this));
+
   };
+
 ...
 ```
 
-在 `forEach` 回调函数的体外部，`this` 关键字指向 `Truck` 实例。通过在匿名函数之后添加 `.bind(this)`——但在 `forEach` 调用的括号内——你正在向 `forEach` 传递一个修改后的匿名函数。这个修改后的版本使用 `Truck` 实例作为它的所有者。保存并确认订单打印正确。你需要重新声明 `myTruck` 并再次运行 `createOrder`。你的你的输出应该看起来像图 8.29 后 printOrders 正常工作")。
+在`forEach`回调函数的体外部，`this`关键字指向`Truck`实例。通过在匿名函数之后添加`.bind(this)`——但在`forEach`调用的括号内——你正在向`forEach`传递一个修改后的匿名函数。这个修改后的版本使用`Truck`实例作为它的所有者。保存并确认订单打印正确。你需要重新声明`myTruck`并再次运行`createOrder`。你的你的输出应该看起来像图 8.29 后 printOrders 正常工作"）。
 
-**图 8.29 使用 `bind(this)` 后 `printOrders` 正常工作**
+**图 8.29 使用`bind(this)`后`printOrders`正常工作**
 
 ![使用 bind(this) 后 printOrders](img/printorders-debugging-3.png)
 
 ### 在页面加载时初始化 CoffeeRun
 
-你的 `DataStore` 和 `Truck` 模块工作正常。你已经在控制台中实例化了一个新的 `Truck`，并在创建时为其提供了一个新的 `DataStore`。
+你的`DataStore`和`Truck`模块工作正常。你已经在控制台中实例化了一个新的`Truck`，并在创建时为其提供了一个新的`DataStore`。
 
-现在你要创建一个在页面加载时执行相同步骤的模块。创建一个 `scripts/main.js` 文件，并在 `index.html` 中添加一个 `<script>` 标签。
+现在你要创建一个在页面加载时执行相同步骤的模块。创建一个`scripts/main.js`文件，并在`index.html`中添加一个`<script>`标签。
 
 ```html
 <!doctype html>
+
 <html
+
   <head>
+
     <meta charset="utf-8">
+
     <title>coffeerun</title>
+
   </head>
+
   <body>
+
     <script src="scripts/datastore.js" charset="utf-8"></script>
+
     <script src="scripts/truck.js" charset="utf-8"></script>
+
     <script src="scripts/main.js" charset="utf-8"></script>
+
   </body>
+
 </html>
 ```
 
-保存 `index.html`。你将像处理其他模块一样为 `main.js` 添加一个 IIFE（立即执行函数表达式），但这次你不需要导出任何新属性。
+保存`index.html`。你将像处理其他模块一样为`main.js`添加一个 IIFE（立即执行函数表达式），但这次你不需要导出任何新属性。
 
 ```javascript
 (function (window) {
+
   'use strict';
+
   var App = window.App;
+
   var Truck = App.Truck;
+
   var DataStore = App.DataStore;
+
 })
 ```
 
-该模块的作用是接收 `window` 对象。技术上，你可以使用全名（例如 `App.Truck`）编写所有代码，但使用较短的名字会让代码更具可读性。
+该模块的作用是接收`window`对象。技术上，你可以使用全名（例如`App.Truck`）编写所有代码，但使用较短的名字会让代码更具可读性。
 
 ### 创建 Truck 实例
 
-现在，就像你在控制台中做的那样，你创建一个 `Truck` 实例。在 `main.js` 中调用 `Truck` 构造函数，向它传递 `ncc-1701` 和一个新的 `DataStore` 实例。
+现在，就像你在控制台中做的那样，你创建一个`Truck`实例。在`main.js`中调用`Truck`构造函数，向它传递`ncc-1701`和一个新的`DataStore`实例。
 
 ```javascript
 (function (window) {
+
   'use strict';
+
   var App = window.App;
+
   var Truck = App.Truck;
+
   var DataStore = App.DataStore;
+
   var myTruck = new Truck('ncc-1701', new DataStore());
+
 })
 ```
 
-这与你在控制台中输入的代码几乎相同，但由于你创建的是局部变量，不需要用 `App` 前缀 `Truck` 或 `DataStore`。
+这与你在控制台中输入的代码几乎相同，但由于你创建的是局部变量，不需要用`App`前缀`Truck`或`DataStore`。
 
-此时，你的应用程序代码几乎完成。然而，你仍然无法与 `Truck` 实例交互。为什么呢？该变量是在函数内部定义的，即 `main` 模块。函数保护其变量不被外部代码访问，包括你在控制台上编写的代码。
+此时，你的应用程序代码几乎完成。然而，你仍然无法与`Truck`实例交互。为什么呢？该变量是在函数内部定义的，即`main`模块。函数保护其变量不被外部代码访问，包括你在控制台上编写的代码。
 
-为了让你能够与 `Truck` 实例交互，在 `main.js` 中将其导出到全局命名空间。
+为了让你能够与`Truck`实例交互，在`main.js`中将其导出到全局命名空间。
 
 ```javascript
 (function (window) {
+
   'use strict';
+
   var App = window.App;
+
   var Truck = App.Truck;
+
   var DataStore = App.DataStore;
+
   var myTruck = new Truck('ncc-1701', new DataStore());
+
   window.myTruck = myTruck;
+
 })
 ```
 
 保存工作并返回控制台。手动刷新页面以确保之前在控制台中进行的工作已清理。
 
-开始输入 `myTruck`，你应该能看到控制台尝试自动补全它（图 8.30）。这意味着它找到了你作为 `window` 对象属性导出的 `myTruck` 变量。
+开始输入`myTruck`，你应该能看到控制台尝试自动补全它（图 8.30）。这意味着它找到了你作为`window`对象属性导出的`myTruck`变量。
 
-调用几次 `myTruck.createOrder()`，并提供一些测试数据。你可以轻松地做到这一点，让控制台自动补全你之前的 `createOrder` 调用（图 8.31）。
+调用几次`myTruck.createOrder()`，并提供一些测试数据。你可以轻松地做到这一点，让控制台自动补全你之前的`createOrder`调用（图 8.31）。
 
-
-
-
-## 图 8.31 控制台自动补全 `createOrder` 之前的调用
+## 图 8.31 控制台自动补全`createOrder`之前的调用
 
 ![控制台自动补全 createOrder 之前的调用](img/previous-createorder.png)
 
@@ -5133,27 +5302,35 @@ myTruck.printOrders();
 
 ```javascript
 myTruck.createOrder({ emailAddress: 'me@goldfinger.com', coffee: 'double mocha'});
+
 myTruck.createOrder({ emailAddress: 'dr@no.com', coffee: 'decaf'});
+
 myTruck.createOrder({ emailAddress: 'm@bond.com', coffee: 'earl grey'});
+
 myTruck.printOrders();
+
 myTruck.deliverOrder('dr@no.com');
+
 myTruck.deliverOrder('m@bond.com');
+
 myTruck.printOrders();
 ```
 
-在练习了 `createOrder()`、`printOrders()` 和 `deliverOrder()` 方法后，你应该看到类似图 8.32 的内容。
+
+
+在练习了`createOrder()`、`printOrders()`和`deliverOrder()`方法后，你应该看到类似图 8.32 的内容。
 
 ## 图 8.32 一辆忙碌的咖啡车
 
 ![一辆忙碌的咖啡车](img/excelsior.png)
 
-恭喜！你已经完成了 CoffeeRun 的基础工作。它目前还没有 UI，但你将在接下来的章节中添加。你不需要对核心代码进行更改，因为 UI 将简单地调用你已经编写并测试的 `Truck.prototype` 方法。
+恭喜！你已经完成了 CoffeeRun 的基础工作。它目前还没有 UI，但你将在接下来的章节中添加。你不需要对核心代码进行更改，因为 UI 将简单地调用你已经编写并测试的`Truck.prototype`方法。
 
 这就是模块化方法的优势：你可以分层构建你的应用程序，并且知道每个新层都是构建在底层模块的正常代码之上的。
 
 ## 铜级挑战：非星际迷者的 Truck ID
 
-在 `main.js` 中，为 `truckId` 传递一个不同的字符串。
+在`main.js`中，为`truckId`传递一个不同的字符串。
 
 （一些不错的选择包括“Serenity”、“KITT”或“Galactica”。“HAL”可能是一个坏主意。）
 
@@ -5163,59 +5340,79 @@ myTruck.printOrders();
 
 ```javascript
 (function (window) {
+
   'use strict';
+
   var App = window.App || {};
+
   var launchCount = 0;
 
   function Spaceship() {
+
     // 初始化代码放在这里
+
   }
 
   Spaceship.prototype.blastoff = function () {
+
     // 闭包作用域允许访问 launchCount 变量
+
     launchCount++;
+
     console.log('Spaceship launched!')
+
   }
 
   Spaceship.prototype.reportLaunchCount = function () {
+
     console.log('Total number of launches: ' + launchCount);
+
   }
 
   App.Spaceship = Spaceship
+
   window.App = App;
+
 })(window);
 ```
 
-其他语言提供了声明 `private`变量的方法，但 JavaScript 没有。你可以利用闭包作用域（使用外部作用域声明变量的函数）来模拟私有变量。
+其他语言提供了声明`private`变量的方法，但 JavaScript 没有。你可以利用闭包作用域（使用外部作用域声明变量的函数）来模拟私有变量。
 
 ## 银级挑战：使数据私有
 
-更新你的 `DataStore` 模块，使 `data` 属性对模块私有。
+更新你的`DataStore`模块，使`data`属性对模块私有。
 
-是否有任何理由你*不想*这样做？如果你声明了多个 `DataStore` 实例会发生什么？
+是否有任何理由你*不想*这样做？如果你声明了多个`DataStore`实例会发生什么？
 
 ## 进阶好奇者专属：在 forEach 的回调中设置 this
 
-我们早之前撒了一个小谎。使用 `bind()` 并不是为 `forEach()` 回调设置 `this` 值的*唯一*方法。
+我们早之前撒了一个小谎。使用`bind()`并不是为`forEach()`回调设置`this`值的*唯一*方法。
 
-查看 MDN 上 `Array.prototype.forEach` 的文档（[developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)）。你可以看到 `forEach` 接收一个可选的第二个参数，它将作为回调中 `this` 的值。
+查看 MDN 上`Array.prototype.forEach`的文档（[developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)）。你可以看到`forEach`接收一个可选的第二个参数，它将作为回调中`this`的值。
 
-这意味着你也可以这样写 `printOrders` 方法：
+这意味着你也可以这样写`printOrders`方法：
 
 ```javascript
 ...
+
 Truck.prototype.printOrders = function () {
+
   var customerIdArray = Object.keys(this.db.getAll());
 
   console.log('Truck #' + this.truckId + ' has pending orders:');
+
   customerIdArray.forEach(function (id) {
+
     console.log(this.db.get(id));
+
   }, this);
+
 };
+
 ...
 ```
 
-然而，`bind()` 是一个非常有用的方法，你将在后续章节中再次看到它。`Truck.prototype.printOrders` 为介绍这种语法提供了一个很好的机会。
+然而，`bind()`是一个非常有用的方法，你将在后续章节中再次看到它。`Truck.prototype.printOrders`为介绍这种语法提供了一个很好的机会。
 
 # 9 介绍 Bootstrap
 
@@ -5223,37 +5420,47 @@ Truck.prototype.printOrders = function () {
 
 ## 添加 Bootstrap
 
-`Bootstrap` 库提供了一系列可用于网站的样式。大多数情况下，你只需要包含 CSS 文件并向标记中添加类。你将使用的主要类之一是 `container` 类。
+`Bootstrap`库提供了一系列可用于网站的样式。大多数情况下，你只需要包含 CSS 文件并向标记中添加类。你将使用的主要类之一是`container`类。
 
-在 `index.html` 的 `<body>` 元素中添加 `container` 类。顺便为你的页面添加一个头部（header）。
+在`index.html`的`<body>`元素中添加`container`类。顺便为你的页面添加一个头部（header）。
 
 ### Bootstrap 如何工作
 
-`Bootstrap` 可以为你的网站或 Web 应用提供开箱用的响应式样式。大多数情况下，你只需要包含 CSS 文件并向标记中添加类。你将使用的主要类之一是 `container` 类。
+`Bootstrap`可以为你的网站或 Web 应用提供开箱用的响应式样式。大多数情况下，你只需要包含 CSS 文件并向标记中添加类。你将使用的主要类之一是`container`类。
 
-
-
-
-```
+```html
 ...
+
     <title>coffeerun</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+
   </head>
+
   <body>
+
   <body class="container">
+
     <header>
+
       <h1>CoffeeRun</h1>
+
     </header>
+
     <script src="scripts/datastore.js" charset="utf-8"></script>
+
     <script src="scripts/truck.js" charset="utf-8"></script>
+
     <script src="scripts/main.js" charset="utf-8"></script>
+
   </body>
+
 </</html>
 ```
 
-`container` 类作为所有需要适应视口大小内容的容器。这为布局提供了基础的响应式行为。
+`container`类作为所有需要适应视口大小内容的容器。这为布局提供了基础的响应式行为。
 
-保存 `<samp class="filename">index.html</samp>`，确保 `browser-sync` 正在运行，并查看你的页面。它看起来应该类似于图 9.3。
+保存`index.html`，确保`browser-sync`正在运行，并查看你的页面。它看起来应该类似于图 9.3。
 
 **图 9.3 使用 Bootstrap 样化的页眉**
 
@@ -5261,96 +5468,133 @@ Truck.prototype.printOrders = function () {
 
 虽然你的页面目前还没有什么内容，但请注意，页眉周围已经有了舒适的内边距，并且应用了字体样式。
 
-`<samp class="application">Bootstrap</samp>` 为大量不同的视觉元素提供了样式。CoffeeRun 将只是触毛角，但你将在后面的章节中机会探索更多样式。现在，是时候订单表单添加标记了。
+`Bootstrap`为大量不同的视觉元素提供了样式。CoffeeRun 将只是触毛角，但你将在后面的章节中机会探索更多样式。现在，是时候订单表单添加标记了。
 
 ### 创建订单表单
 
-在 `<samp class="filename">index.html</samp>` 中你创建的 `<header>` 元素下方添加一个 `<section>` 标签、两个 `<div>` 标签和一个 `<form>` 标签。
+在`index.html`中你创建的`<header>`元素下方添加一个`<section>`标签、两个`<div>`标签和一个`<form>`标签。
 
-```
+```html
 ...
+
     <header>
+
       <h1>CoffeeRun</h1>
+
     </header>
+
     <section>
+
       <div class="panel panel-default">
+
         <div class="panel-body">
+
           <form data-coffee-order="form">
+
             <!-- 输入元素将放在这里 -->
+
           </form>
+
         </div>
+
       </div>
+
     </section>
+
     <script src="scripts/datastore.js" charset="utf-8"></script>
+
 ...
 ```
 
-`<form>` 标签将是所有重要操作发生的地方。你为它提供了一个值为 `form` 的 `data-coffee-order` 。在 CoffeeRun 中，你将使用数据属性从 JavaScript 访问 DOM 元素，就像你在 Ottergram 中做的那样。
+`<form>`标签将是所有重要操作发生的地方。你为它提供了一个值为`form`的`data-coffee-order`。在 CoffeeRun 中，你将使用数据属性从 JavaScript 访问 DOM 元素，就像你在 Ottergram 中做的那样。
 
-对于布局，你添加了两个 `<div>` 标签。具体是否使用 `<div>` 标签并不重要。重要的是你对它们应用了 `panel`、`panel-default` 和 `panel-body` 类。这些是 `<samp class="application">Bootstrap</samp>` 类，它们会为你触发样式。
+对于布局，你添加了两个`<div>`标签。具体是否使用`<div>`标签并不重要。重要的是你对它们应用了`panel`、`panel-default`和`panel-body`类。这些是`Bootstrap`类，它们会为你触发样式。
 
-记住，`<div>` 只是用于其他标记的通用块级容器。它们占据其包含父元素所提供的全部水平空间。它们在 CoffeeRun 中会被频繁使用，你将在整个 `<samp class="application">Bootstrap</samp>` 文档的各个示例中看到它们。
+记住，`<div>`只是用于其他标记的通用块级容器。它们占据其包含父元素所提供的全部水平空间。它们在 CoffeeRun 中会被频繁使用，你将在整个`Bootstrap`文档的各个示例中看到它们。
 
-你可能奇怪为什么 `<section>` 标签包裹了你的 `<div>` 和 `<form>` 标签。`<div>` 没有语义含义。`<section>` 有：它们在逻辑上对其他标记分组。这一个将存放表单的 UI。你可以轻松地在页面上创建另一个 `<section>` 用于 UI 的其他部分。
+你可能奇怪为什么`<section>`标签包裹了你的`<div>`和`<form>`标签。`<div>`没有语义含义。`<section>`有：它们在逻辑上对其他标记分组。这一个将存放表单的 UI。你可以轻松地在页面上创建另一个`<section>`用于 UI 的其他部分。
 
 ### 添加文本输入字段
 
 你关心的主要信息是咖啡订单本身。如果你在过去的十年里去过咖啡店，你就知道订单可以变得多复杂。现在，你将使用单行文本字段来表示订单。稍后你将添加更多字段来获取更多关于订单的信息。
 
-当你使用 `<samp class="application">Bootstrap</samp>` 创建表单时，你会添加额外的 `<div>` 元素，专门用于应用 `<samp class="application">Bootstrap</samp>` 库定义的样式。
+当你使用`Bootstrap`创建表单时，你会添加额外的`<div>`元素，专门用于应用`Bootstrap`库定义的样式。
 
-向 `<samp class="filename">index.html</samp>` 添加另一个带有类 `form-group` 的 `<div>`。`form-group` `<samp class="application">Bootstrap</samp>` 类为表单元素提供了一致的垂直间距。然后添加 `<label>` 和 `<input>` 元素。
+向`index.html`添加另一个带有类`form-group`的`<div>`。`form-group` `Bootstrap`类为表单元素提供了一致的垂直间距。然后添加`<label>`和`<input>`元素。
 
-```
+```html
 ...
+
       <div class="panel panel-default">
+
         <div class="panel-body">
+
           <form data-coffee-order="form">
+
             <!-- 输入元素将放在这里 -->
+
             <div class="form-group">
+
               <label>Coffee Order</label>
+
               <input class="form-control" name="coffee">
+
             </div>
+
           </form>
+
         </div>
+
       </div>
+
 ...
 ```
 
-`form-control` 类是另一个由 `<samp class="application">Bootstrap</samp>` 定义的。它为你的表单元素提供了布局和排版样式。
+`form-control`类是另一个由`Bootstrap`定义的。它为你的表单元素提供了布局和排版样式。
 
-保存 `<samp class="filename">index.html</samp>`并在浏览器中检查结果（图 9.4）。
+保存`index.html`并在浏览器中检查结果（图 9.4）。
 
 **图 9.4 咖啡订单的输入字段**
 
 ![咖啡订单的输入字段](img/textfield)
 
-你的 `<input>` 元素默认为单行文本。除了 `form-control` 类外，它还有 `name` 属性。当表单提交时，`name` 将发送到服务器。如果你将表单数据视为键值对，那么 `name` 属性就是键，用户输入的数据就是值。
+你的`<input>`元素默认为单行文本。除了`form-control`类外，它还有`name`属性。当表单提交时，`name`将发送到服务器。如果你将表单数据视为键值对，那么`name`属性就是键，用户输入的数据就是值。
 
 ### 关联标签与表单元素
 
-`<label>` 标签是表单元素重要的可用性增强。通过设置其 `for` 属性以匹配对应元素的 `id` 属性，你告诉 `<label>` 它标记哪个表单元素。
+`<label>`标签是表单元素重要的可用性增强。通过设置其`for`属性以匹配对应元素的`id`属性，你告诉`<label>`它标记哪个表单元素。
 
-在 `<samp class="filename">index.html</samp>` 中分别为 `<label>` 和 `<input>` 元素添加 `for` 和 `id` 属性。赋予它们相同的 `coffeeOrder` 值。
+在`index.html`中分别为`<label>`和`<input>`元素添加`for`和`id`属性。赋予它们相同的`coffeeOrder`值。
 
-```
+```html
 ...
+
       <div class="panel panel-default">
+
         <div class="panel-body">
+
           <form data-coffee-order="form">
+
             <div class="form-group">
+
               <label for="coffeeOrder">Coffee Order</label>
+
               <input class="form-control" name="coffee" id="coffeeOrder">
+
             </div>
+
           </form>
+
         </div>
+
       </div>
+
 ...
 ```
 
-当 `<label>` 与表单元素关联时，你可以点击页面上的 `<label>` 文字，它会让关联的表单元素变为激活状态。你应该始终将 `<label>` 与表单元素关联。
+当`<label>`与表单元素关联时，你可以点击页面上的`<label>`文字，它会让关联的表单元素变为激活状态。你应该始终将`<label>`与表单元素关联。
 
-为了看到这种效果，保存 `<samp class="filename">index.html</samp>`，切换到浏览器并点击 `<samp class="guilabel">Coffee Order</samp>` 标签文字。`<input>` 将获得焦点，准备好开始输入（图 9.5）。
+为了看到这种效果，保存`index.html`，切换到浏览器并点击`Coffee Order`标签文字。`<input>`将获得焦点，准备好开始输入（图 9.5）。
 
 **图 9.5 点击关联标签会导致输入获得焦点**
 
@@ -5360,52 +5604,69 @@ Truck.prototype.printOrders = function () {
 
 由于这是屏幕上的第一个字段，你希望用户在页面加载后立即就能向其中输入文本，而不是必须点击。
 
-要实现这一点，请为 `<samp class="filename">index.html</samp>` 中的 `<input>` 添加 `autofocus` 属性。
+要实现这一点，请为`index.html`中的`<input>`添加`autofocus`属性。
 
-```
+```html
 ...
+
             <div class="form-group">
+
               <label for="coffeeOrder">Coffee Order</label>
+
               <input class="form-control" name="coffee" id="coffeeOrder" autofocus>
+
             </div>
+
           </form>
+
 ...
 ```
 
-保存你对 `<samp class="filename">index.html</samp>` 的更改并返回浏览器。你将看到文本输入字段在页面加载后立即拥有光标和高亮显示（图 9.6）。
+保存你对`index.html`的更改并返回浏览器。你将看到文本输入字段在页面加载后立即拥有光标和高亮显示（图 9.6）。
 
 **图 9.6 页面加载时自动聚焦的输入字段**
 
 ![页面加载时自动聚焦的输入字段](img/autofocus-on-page-load.png)
 
-
-
-
-注意 `autofocus` 属性没有值。它不需要值。只要在 `<input>` 标签中存在 `autofocus` 属性，浏览器就会激活该字段。`autofocus` 属性是一个 `Boolean`（布尔）属性，这意味着它的唯一可能值是 `true` 和 `false`。你只需要在标签中添加属性名即可设置其值。当它存在时，其值为 `true`。当它不存在时，该属性被视为 `false`。
+注意`autofocus`属性没有值。它不需要值。只要在`<input>`标签中存在`autofocus`属性，浏览器就会激活该字段。`autofocus`属性是一个`Boolean`（布尔）属性，这意味着它的唯一可能值是`true`和`false`。你只需要在标签中添加属性名即可设置其值。当它存在时，其值为`true`。当它不存在时，该属性被视为`false`。
 
 ## 添加电子邮件输入字段
 
-当你创建 `Truck` 和 `DataStore` 模块时，你通过客户的电子邮件地址来跟踪订单。现在你将使用另一个 `<input>` 元素来获取这些信息。
+当你创建`Truck`和`DataStore`模块时，你通过客户的电子邮件地址来跟踪订单。现在你将使用另一个`<input>`元素来获取这些信息。
 
-在 `index.html` 中添加另一个 `.form-group` 元素，并包含一个 `<label>` 和一个 `<input>`。对于 `<input>` 元素，将 `type` 设置为 `email`，`name` 设置为 `emailAddress`，`id` 设置为 `emailInput`。还要添加一个 `value` 属性并将其设置为空字符串。这确保了该字段在页面加载时是空的。最后，使用 `id` 将 `<input>` 和 `<label>` 关联。
+在`index.html`中添加另一个`.form-group`元素，并包含一个`<label>`和一个`<input>`。对于`<input>`元素，将`type`设置为`email`，`name`设置为`emailAddress`，`id`设置为`emailInput`。还要添加一个`value`属性并将其设置为空字符串。这确保了该字段在页面加载时是空的。最后，使用`id`将`<input>`和`<label>`关联。
 
-```
+```html
 ...
+
           <form data-coffee-order="form">
+
             <div class="form-group">
+
               <label for="coffeeOrder">Coffee Order</label>
+
               <input class="form-control" name="coffee" id="coffeeOrder" autofocus>
+
             </div>
+
             <div class="form-group">
+
               <label for="emailInput">Email</label>
+
               <input class="form-control" type="email" name="emailAddress"
+
                 id="emailInput" value="">
+
             </div>
+
           </form>
+
 ...
 ```
 
-保存 `index.html` 并检查浏览器以查看你的新表单字段（图 9.7）。
+
+
+保存`index.html`并检查浏览器以查看你的新表单字段（图 9.7）。
 
 **图 9.7 电子邮件输入字段**
 
@@ -5413,17 +5674,23 @@ Truck.prototype.printOrders = function () {
 
 ## 使用占位符文本显示示例输入
 
-有时用户喜欢关于他们应该在文本字段中输入内容的提示。要创建示例文本，请使用 `placeholder` 属性。
+有时用户喜欢关于他们应该在文本字段中输入内容的提示。要创建示例文本，请使用`placeholder`属性。
 
-在 `index.html` 中的你的新 `<input>` 元素上添加 `placeholder` 属性。
+在`index.html`中的你的新`<input>`元素上添加`placeholder`属性。
 
 ```
 ...
+
             <div class="form-group">
+
               <label for="emailInput">Email</label>
+
               <input class="form-control" type="email" name="emailAddress"
+
                 id="emailInput" value="" placeholder="dr@who.com">
+
             </div>
+
 ...
 ```
 
@@ -5433,54 +5700,79 @@ Truck.prototype.printOrders = function () {
 
 ![Placeholder text in the email input](img/add-placeholder.png)
 
-`placeholder` 属性的值会出现在文本字段中，直到用户输入某些文本，此时它就会消失。如果用户删除了字段中的所有文本，占位符文本将再次出现。
+`placeholder`属性的值会出现在文本字段中，直到用户输入某些文本，此时它就会消失。如果用户删除了字段中的所有文本，占位符文本将再次出现。
 
 ## 使用单选按钮提供选择
 
-接下来，你希望用户能够指定咖啡饮料的大小。他们应该能够在短（short）、中（tall）和大杯（grande）之间选择——而且他们不能选择超过一种大小。对于这种类型的数据输入，可以使用 `type` 属性设置为 `radio` 的 `<input>` 字段。
+接下来，你希望用户能够指定咖啡饮料的大小。他们应该能够在短（short）、中（tall）和大杯（grande）之间选择——而且他们不能选择超过一种大小。对于这种类型的数据输入，可以使用`type`属性设置为`radio`的`<input>`字段。
 
-你的单选按钮标记将与其他的 `<input>` 字段不同。每个单选按钮都将有一个 `<input>` 字段，并被 `<label>` 元素包裹。`<label>` 将包裹在一个 `<div>` 中，其 `class` 也同样为 `radio`。
+你的单选按钮标记将与其他的`<input>`字段不同。每个单选按钮都将有一个`<input>`字段，并被`<label>`元素包裹。`<label>`将包裹在一个`<div>`中，其`class`也同样为`radio`。
 
-`<label>` 元素不需要你之前为咖啡订单和电子邮件标签添加的 `for` 属性。因为 `<input>` 被包裹在 `<label>` 内部，它们会自动关联。
+`<label>`元素不需要你之前为咖啡订单和电子邮件标签添加的`for`属性。因为`<input>`被包裹在`<label>`内部，它们会自动关联。
 
-如果你在想为什么单选按钮的 HTML 不同，是因为 `Bootstrap` 对它们的样式处理与其他表单元素不同。
+如果你在想为什么单选按钮的 HTML 不同，是因为`Bootstrap`对它们的样式处理与其他表单元素不同。
 
-在编写自己的代码时，你可以选择将 `<input>` 元素封装在 `<label>` 中，或者使用 `for` 属性——两者都是正确的。但当你使用 `Bootstrap` 时，必须遵循它的模式和约定，样式才能按预期工作。请参考 `Bootstrap` 文档查看有关如何构建 HTML 的示例（[getbootstrap.com/css/#forms](http://getbootstrap.com/css/#forms)）。
+在编写自己的代码时，你可以选择将`<input>`元素封装在`<label>`中，或者使用`for`属性——两者都是正确的。但当你使用`Bootstrap`时，必须遵循它的模式和约定，样式才能按预期工作。请参考`Bootstrap`文档查看有关如何构建 HTML 的示例（[getbootstrap.com/css/#forms](http://getbootstrap.com/css/#forms)）。
 
-在 `index.html` 中，在电子邮件 `<input>` 之后添加单选按钮的标记。
+在`index.html`中，在电子邮件`<input>`之后添加单选按钮的标记。
 
 ```
 ...
+
               <div class="form-group">
+
                 <label for="emailInput">Email</label>
+
                 <input class="form-control" type="email" name="emailAddress"
+
                   id="emailInput" value="" placeholder="dr@who.com">
+
               </div>
+
               <div class="radio">
+
                 <label>
+
                   <input type="radio" name="size" value="short">
+
                   Short
+
                 </label>
+
               </div>
+
               <div class="radio">
+
                 <label>
+
                   <input type="radio" name="size" value="tall">
+
                   Tall
+
                 </label>
+
               </div>
+
               <div class="radio">
+
                 <label>
+
                   <input type="radio" name="size" value="grande">
+
                   Grande
+
                 </label>
+
               </div>
+
             </form>
+
 ...
 ```
 
-你为三个单选输入框的 `name` 属性设置了相同的值（`size`）。这告诉浏览器一次只能被选中（checked）。你为单选按钮添加了一个名为 `checked` 的布尔属性。它的工作方式与 `autofocus` 相同：当它存在时，值为 `true`；当它不存在时为 `false`。
+你为三个单选输入框的`name`属性设置了相同的值（`size`）。这告诉浏览器一次只能被选中（checked）。你为单选按钮添加了一个名为`checked`的布尔属性。它的工作方式与`autofocus`相同：当它存在时，值为`true`；当它不存在时为`false`。
 
-保存 `index.html` 并查看你的单选按钮（图 9.9）。
+保存`index.html`并查看你的单选按钮（图 9.9）。
 
 **图 9.9 咖啡尺寸单选按钮**
 
@@ -5492,44 +5784,49 @@ Truck.prototype.printOrders = function () {
 
 你可以使用一组单选按钮来实现，但你可能会向列表中添加很多口味。为了确保口味选择不会拥挤 UI，你将使用下拉菜单。
 
-要创建一个使用 `Bootstrap` 样化的下拉菜单，在 `index.html` 中添加一个 `class` 为 `form-group` 的 `<div>`。创建一个 `class` 为 `form-control` 的 `<select>` 元素。`Bootstrap` 将此元素样式化为下拉菜单。使用 `id` `flavorShot` 将其与其 `<label>` 关联。在 `<select>` 内部，为你想显示的每个菜单项添加一个 `<option>` 元素，并为它们提供提供匹配的 `value`。
+要创建一个使用`Bootstrap`样化的下拉菜单，在`index.html`中添加一个`class`为`form-group`的`<div>`。创建一个`class`为`form-control`的`<select>`元素。`Bootstrap`将此元素样式化为下拉菜单。使用`id` `flavorShot`将其与其`<label>`关联。在`<select>`内部，为你想显示的每个菜单项添加一个`<option>`元素，并为它们提供提供匹配的`value`。
 
+每个`<option>`元素提供一个可能的`value`，而`<select>`元素则指定了`name`。
 
-
-
-
-每个 `<option>` 元素提供一个可能的 `value`，而 `<select>` 元素则指定了 `name`。
-
-保存 `index.html` 并检查你的下拉菜单是否显示了你添加的所有 `options`（图 9.10）。
+保存`index.html`并检查你的下拉菜单是否显示了你添加的所有`options`（图 9.10）。
 
 **图 9.10 咖啡口味下拉菜单**
 
 ![咖啡口味下拉菜单](img/add-dropdown.png)
 
-默认情况下，第一个 `<option>` 元素被选中。如果你想让第一个以外的元素被自动选中，也可以给 `option` 元素添加 `selected` 布尔值属性。
+默认情况下，第一个`<option>`元素被选中。如果你想让第一个以外的元素被自动选中，也可以给`option`元素添加`selected`布尔值属性。
 
-你将第一个下拉项的 `value` 属性设置为空字符串。如果你完全遗漏了 `value` 属性，浏览器将使用字符串 `"None"` 作为值。最好设置 `value` 属性，因为你永远不应该假设浏览器会按照你预期的方式运行。
+你将第一个下拉项的`value`属性设置为空字符串。如果你完全遗漏了`value`属性，浏览器将使用字符串`"None"`作为值。最好设置`value`属性，因为你永远不应该假设浏览器会按照你预期的方式运行。
 
 ### 添加范围滑块
 
 并不是每个人都想要那种强效的咖啡因刺激。你想让用户在 0 到 100 之间选择一个咖啡强度值。另一方面，你也不希望他们必须输入精确的值。
 
-为此，请在 `index.html` 中添加一个 `type` 为 `range` 的 `<input>` 元素。这会创建一个 `range slider`。`<input>` 和 `<label>` 应该关联起来并封装在一个带有 `form-group` 类的 `<div>` 中。对你的咖啡客户客气一点，提供一个默认值为 `30` 的 `value`。
+为此，请在`index.html`中添加一个`type`为`range`的`<input>`元素。这会创建一个`range slider`。`<input>`和`<label>`应该关联起来并封装在一个带有`form-group`类的`<div>`中。对你的咖啡客户客气一点，提供一个默认值为`30`的`value`。
 
 ```
 ...
+
                 <option value="mocha">Mocha</option>
+
               </select>
+
             </div>
+
             <div class="form-group">
+
               <label for="strengthLevel">Caffeine Rating</label>
+
               <input name="strength" id="strengthLevel" type="range" value="30">
+
             </div>
+
           </form>
+
 ...
 ```
 
-保存 `index.html` 浏览器中尝试你的新滑块。它看起来会像图 9.11 所示。
+保存`index.html`浏览器中尝试你的新滑块。它看起来会像图 9.11 所示。
 
 **图 9.11 咖啡因强度滑块**
 
@@ -5537,21 +5834,29 @@ Truck.prototype.printOrders = function () {
 
 ### 添加提交和重置按钮
 
-标记中要做的最后一件事是添加一个 `Submit` 按钮。为了方便使用，你还应该添加一个 `Reset` 按钮来清除表单，以防用户想要重新开始。
+标记中要做的最后一件事是添加一个`Submit`按钮。为了方便使用，你还应该添加一个`Reset`按钮来清除表单，以防用户想要重新开始。
 
-通常，`Submit` 按钮只是 `type` 为 `submit` 的 `<input>` 元素。同样，`Reset` 按钮是 `type` 为 `reset` 的 `<input>` 元素。然而，为了利用 `Bootstrap` 的 CSS，将使用 `<button>` 元素。
+通常，`Submit`按钮只是`type`为`submit`的`<input>`元素。同样，`Reset`按钮是`type`为`reset`的`<input>`元素。然而，为了利用`Bootstrap`的 CSS，将使用`<button>`元素。
 
-在 `index.html` 中添加两个类名为 `btn btn-default` 的 `<button>` 元素。将第一个的 `type` 设置为 `submit`，将第二个的 `type` 设置为 `reset`。在起始和结束标签之间放入 `Submit` 和 `Reset` 作为描述性文本。
+在`index.html`中添加两个类名为`btn btn-default`的`<button>`元素。将第一个的`type`设置为`submit`，将第二个的`type`设置为`reset`。在起始和结束标签之间放入`Submit`和`Reset`作为描述性文本。
 
 ```
 ...
+
             <div class="form-group">
+
               <label for="strengthLevel">Caffeine Rating</label>
+
               <input name="strength" id="strengthLevel" type="range" value="30">
+
             </div>
+
             <button type="submit" class="btn btn-default">Submit</button>
+
             <button type="reset" class="btn btn-default">Reset</button>
+
           </form>
+
 ...
 ```
 
@@ -5561,106 +5866,142 @@ Truck.prototype.printOrders = function () {
 
 ![提交和重置按钮](img/add-buttons.png)
 
-你的 `Submit` 按钮还没有任何作用。那将在下一章介绍。然而，你的 `Reset` 按钮会将值重置为默认值。
+你的`Submit`按钮还没有任何作用。那将在下一章介绍。然而，你的`Reset`按钮会将值重置为默认值。
 
-这些按钮有一对看起来可能冗余的类。这是 `Bootstrap` 的一种约定，完全是为了样式化。`btn` 类提供了 `Bootstrap` 按钮的所有标准视觉属性。这包括圆角和内边距。`btn-default` 类添加了白色背景颜色。
+这些按钮有一对看起来可能冗余的类。这是`Bootstrap`的一种约定，完全是为了样式化。`btn`类提供了`Bootstrap`按钮的所有标准视觉属性。这包括圆角和内边距。`btn-default`类添加了白色背景颜色。
 
-你已经使用 `Bootstrap` UI 框架为你的 CoffeeRun 应用设置样式。通过应用 `Bootstrap` 的标记模式和类名，你的应用将在各种屏幕尺寸和浏览器版本上具有一致的外观效果。
+你已经使用`Bootstrap` UI 框架为你的 CoffeeRun 应用设置样式。通过应用`Bootstrap`的标记模式和类名，你的应用将在各种屏幕尺寸和浏览器版本上具有一致的外观效果。
 
-要了解更多关于 `Bootstrap` 提供的功能，请参阅 [getbootstrap.com/css](http://getbootstrap.com/css/) 优秀的文档。
+要了解更多关于`Bootstrap`提供的功能，请参阅 [getbootstrap.com/css](http://getbootstrap.com/css/) 优秀的文档。
 
-
-
-
-在你的 `scripts` 文件夹中创建一个名为 `formhandler.js` 的文件，并在 `index.html` 中为它添加一个 `<script>` 标签。
+在你的`scripts`文件夹中创建一个名为`formhandler.js`的文件，并在`index.html`中为它添加一个`<script>`标签。
 
 ```html
+
 ...
+
           </form>
+
         </div>
+
       </div
+
     </section>
+
     <script src="scripts/formhandler.js" charset="utf-8"></script>
+
     <script src="scripts/datastore.js" charset="utf-8"></script>
+
     <script src="scripts/truck.js" charset="utf-8"></script>
+
     <script src="scripts/main.js" charset="utf-8"></script>
+
   </body>
+
 </html>
+
 ```
 
-与其他模块一样，`FormHandler` 将使用 IIFE（立即调用函数表达式）来封装代码并将构造函数挂载到 `window.App` 属性上。
+与其他模块一样，`FormHandler`将使用 IIFE（立即调用函数表达式）来封装代码并将构造函数挂载到`window.App`属性上。
 
-打开 `scripts/formhandler.js` 并创建一个 IIFE。在 IIFE 内部创建一个 `App` 变量。将其赋值为 `window.App` 的现有值。如果 `window.App` 尚不存在，则将其赋值为一个空对象字面量。声明一个 `FormHandler` 构造函数，并将其导出到 `window.App` 属性上。
+打开`scripts/formhandler.js`并创建一个 IIFE。在 IIFE 内部创建一个`App`变量。将其赋值为`window.App`的现有值。如果`window.App`尚不存在，则将其赋值为一个空对象字面量。声明一个`FormHandler`构造函数，并将其导出到`window.App`属性上。
 
 ```javascript
+
 (function (window) {
+
   'use strict';
+
   var App = window.App || {};
 
   function FormHandler() {
+
     // 代码将位于此处
+
   }
 
   App.FormHandler = FormHandler;
+
   window.App = App;
 
 })(window);
+
 ```
 
-到为止，这段代码遵循了你在 `Truck` 和 `DataStore` 模块中使用的熟悉模式。不过，很快就会有所不同，因为它将导入并使用 jQuery 来完成工作。
+到为止，这段代码遵循了你在`Truck`和`DataStore`模块中使用的熟悉模式。不过，很快就会有所不同，因为它将导入并使用 jQuery 来完成工作。
 
 ### jQuery 简介
 
 jQuery 库由 John Resig 于 2006 年创建。它是最流行的通用开源 JavaScript 库之一。除其他外，它还为 DOM 操作、元素创建、服务器通信和事件处理提供了方便的简写方法。
 
-熟悉 jQuery 是很有用的，因为有大量的代码是使用它编写的。此外，许多库也复制了 jQuery 的约定。事实上，jQuery 直接影响了标准的 DOM API（`document.querySelector` 和 `document.querySelectorAll` 就是这种影响的两个例子）。
+熟悉 jQuery 是很有用的，因为有大量的代码是使用它编写的。此外，许多库也复制了 jQuery 的约定。事实上，jQuery 直接影响了标准的 DOM API（`document.querySelector`和`document.querySelectorAll`就是这种影响的两个例子）。
 
 现在不会深入介绍 jQuery。相反，将在需要时介绍它的某些方面，以帮助你构建 CoffeeRun 更复杂的部分。如果你想进一步探索 jQuery，请查看 [jquery.com](http://jquery.com) 上的文档。
 
-就像你处理 `Bootstrap` 一样，你将从 [cdnjs.com](http://cdnjs.com) 为项目添加 jQuery 副本。访问 [cdnjs.com/libraries/jquery](https://cdnjs.com/libraries/jquery/) 找到版本 2.1.4 并复制其地址。（可能有更更新的版本，但你应该为 CoffeeRun 使用 2.1.4 以避免任何兼容性问题。）
+就像你处理`Bootstrap`一样，你将从 [cdnjs.com](http://cdnjs.com) 为项目添加 jQuery 副本。访问 [cdnjs.com/libraries/jquery](https://cdnjs.com/libraries/jquery/) 找到版本 2.1.4 并复制其地址。（可能有更更新的版本，但你应该为 CoffeeRun 使用 2.1.4 以避免任何兼容性问题。）
 
-在 `index.html` 的 `<script>` 标签中添加 jQuery。
+在`index.html`的`<script>`标签中添加 jQuery。
 
 ```html
+
 ...
+
       </div>
+
     </section>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"
+
       charset="utf-8"></script>
+
     <script src="scripts/formhandler.js" charset="utf-8"></script>
+
     <script src="scripts/datastore.js" charset="utf-8"></script>
+
     <script src="scripts/truck.js" charset="utf-8"></script>
+
     <script src="scripts/main.js" charset="utf-8"></script>
+
 ...
+
 ```
 
-保存 `index.html`。
+保存`index.html`。
 
 ### 导入 jQuery
 
-`FormHandler` 将以导入 `App` 相同的方式导入 jQuery。这样做是为了明确表示你的模块正在使用在其他处定义的代码。这是与团队成员协作以及未来维护的最佳实践。
+`FormHandler`将以导入`App`相同的方式导入 jQuery。这样做是为了明确表示你的模块正在使用在其他处定义的代码。这是与团队成员协作以及未来维护的最佳实践。
 
-在 `formhandler.js` 中，创建一个名为 `$` 的局部变量，然后将其赋值为 `window.jQuery`。
+在`formhandler.js`中，创建一个名为`$`的局部变量，然后将其赋值为`window.jQuery`。
 
 ```javascript
+
 (function (window) {
+
   'use strict';
+
   var App = window.App || {};
+
   var $ = window.jQuery;
 
   function FormHandler() {
+
     // 代码将位于此处
+
   }
 
   App.FormHandler = FormHandler;
+
   window.App = App;
 
 })(window);
 ```
 
+
+
 当你添加 jQuery `<script>` 标签时，它会创建了一个名为 `jQuery` 的函数以及一个指向该函数的名为 `$` 的变量。大多数开发者倾向于在代码中使用 `$`。为了遵循这一习惯，你正在导入 `window.jQuery` 并将其赋值给局部变量 `$`。
 
-奇奇为什么使用 `$` 作为变量名？JavaScript 变量名可以包含字母、数字、下划线 (_) 或美元符号 ($)。（但只能以字母、下划线或美元符号开头——不能以数字开头。）jQuery 的创建者选择 `$` 变量名是因为它短，而且不太被项目中任何其他代码使用。
+为什么使用 `$` 作为变量名？JavaScript 变量名可以包含字母、数字、下划线（`_`）或美元符号（`$`）。（但只能以字母、下划线或美元符号开头——不能以数字开头。）jQuery 的创建者选择 `$` 变量名是因为它短，而且不太被项目中任何其他代码使用。
 
 ### 使用选择器配置 FormHandler 实例
 
@@ -5671,6 +6012,7 @@ jQuery 库由 John Resig 于 2006 年创建。它是最流行的通用开源 Jav
 ```javascript
 (function (window) {
   'use strict';
+
   var App = window.App || {};
   var $ = window.jQuery;
 
@@ -5683,13 +6025,12 @@ jQuery 库由 John Resig 于 2006 年创建。它是最流行的通用开源 Jav
 
   App.FormHandler = FormHandler;
   window.App = App;
-
 })(window);
 ```
 
 `Error` 是一种内置类型，让你能够正式信号代码中存在意外值。目前，你的 `Error` 实例只会在控制台中打印你的消息。
 
-保存并尝试在不传递参数的情况下实例化新的 `FormHandler` 对象（如果尚未运行，请启动 `browser-sync`。）
+保存并尝试在不传递参数的情况下实例化新的 `FormHandler` 对象（如果尚未运行，请启动 `browser-sync`）。
 
 **图 10.3 不传递参数实例化 FormHandler 对象**
 
@@ -5704,6 +6045,7 @@ jQuery 通常用于查找 DOM 元素。要这样做，你调用 jQuery `$` 函�
 ```javascript
 (function (window) {
   'use strict';
+
   var App = window.App || {};
   var $ = window.jQuery;
 
@@ -5717,11 +6059,8 @@ jQuery 通常用于查找 DOM 元素。要这样做，你调用 jQuery `$` 函�
 
   App.FormHandler = FormHandler;
   window.App = App;
-
 })(window);
 ```
-
-
 
 在变量前加上 `$` 前缀表示该变量指的是使用 jQuery 选择的元素。在使用 jQuery 时，这个前缀并不是强制要求的，但它是许多前端开发者使用的一种常用惯例。
 
@@ -5731,9 +6070,10 @@ jQuery 通常用于查找 DOM 元素。要这样做，你调用 jQuery `$` 函�
 
 jQuery 包装选择的 `length` 属性可以告诉你匹配了多少元素。更新 `formhandler.js` 以检查 `this.$formElement` 的 `length` 属性。如果是 `0`，则抛出一个 `Error`。
 
-```
+```javascript
 (function (window) {
   'use strict';
+
   var App = window.App || {};
   var $ = window.jQuery;
 
@@ -5743,6 +6083,7 @@ jQuery 包装选择的 `length` 属性可以告诉你匹配了多少元素。更
     }
 
     this.$formElement = $(selector);
+
     if (this.$formElement.length === 0) {
       throw new Error('Could not find element with selector: ' + selector);
     }
@@ -5750,11 +6091,10 @@ jQuery 包装选择的 `length` 属性可以告诉你匹配了多少元素。更
 
   App.FormHandler = FormHandler;
   window.App = App;
-
 })(window);
 ```
 
-你的 `FormHandler` 构造函数可以根据传入的选择器被配置为与任何 `<form>` 元素工作。此外，它作为实例变量保留了该 `<form>`元素的引用。这确保了你的代码不会对 DOM 进行不必要的访问。这是一种性能最佳实践。（另一种方案是反复调用 `$`，这每次都会重新选择相同的元素。）
+你的 `FormHandler` 构造函数可以根据传入的选择器被配置为与任何 `<form>` 元素工作。此外，它作为实例变量保留了该 `<form>` 元素的引用。这确保了你的代码不会对 DOM 进行不必要的访问。这是一种性能最佳实践。（另一种方案是反复调用 `$`，这每次都会重新选择相同的元素。）
 
 ## 添加提交处理器 Handler
 
@@ -5764,7 +6104,7 @@ jQuery 包装选择的 `length` 属性可以告诉你匹配了多少元素。更
 
 首先，在 `formhandler.js` 中添加一个名为 `addSubmitHandler` 的原型方法。
 
-```
+```javascript
 ...
     if (this.$formElement.length === 0) {
       throw new Error('Could not find element with selector: ' + selector);
@@ -5782,7 +6122,7 @@ jQuery 包装选择的 `length` 属性可以告诉你匹配了多少元素。更
 
 你将不再像在 Ottergram 中那样使用 `addEventListener` 方法，而是使用 jQuery 的 `on` 方法。它与 `addEventListener` 类似，但提供了额外的便利性。不过，目前你将以与你使用 `addEventListener` 相同的方式使用它。（你将在下一章中利用一些额外的便利性。）
 
-```
+```javascript
 ...
     if (this.$formElement.length === 0) {
       throw new Error('Could not find element with selector: ' + selector);
@@ -5792,6 +6132,7 @@ jQuery 包装选择的 `length` 属性可以告诉你匹配了多少元素。更
   FormHandler.prototype.addSubmitHandler = function () {
     console.log('Setting submit handler for form');
     // More code will go here
+
     this.$formElement.on('submit', function (event) {
       event.preventDefault();
     });
@@ -5805,10 +6146,11 @@ jQuery 包装选择的 `length` 属性可以告诉你匹配了多少元素。更
 
 当表单提交时，你的代码应该从表单读取用户输入，然后对这些数据进行 `do` 操作。在 `formhandler.js` 的 `submit` 处理器中，创建一个名为 `data` 的新变量。将其赋值为一个对象字面量。它将保存表单中每个元素的 `value`。
 
-```
+```javascript
 ...
   FormHandler.prototype.addSubmitHandler = function () {
     console.log('Setting submit handler for form');
+
     this.$formElement.on('submit', function (event) {
       event.preventDefault();
 
@@ -5819,9 +6161,9 @@ jQuery 包装选择的 `length` 属性可以告诉你匹配了多少元素。更
 ...
 ```
 
-在你的 `submit` 处理器回调内部，`this` 对象是表单的引用。调用 `$(this)` 会给你一个包装对象。jQuery 提供了一个便利方法 (`serializeArray`) 来获取表单的值。为了使用 `serializeArray`，你需要“包装”表单。`serializeArray` 将表单数据以对象数组的形式返回。你将其赋值给临时变量 `data` 并打印到控制台。为了了解 `serializeArray`get 什么样子，请保存文件并在控制台中运行以下代码：
+在你的 `submit` 处理器回调内部，`this` 对象是表单的引用。调用 `$(this)` 会给你一个包装对象。jQuery 提供了一个便利方法（`serializeArray`）来获取表单的值。为了使用 `serializeArray`，你需要“包装”表单。`serializeArray` 将表单数据以对象数组的形式返回。你将其赋值给临时变量 `data` 并打印到控制台。为了了解 `serializeArray` 什么样子，请保存文件并在控制台中运行以下代码：
 
-```
+```javascript
 var fh = new App.FormHandler('[data-coffee-order="form"]');
 fh.addSubmitHandler();
 ```
@@ -5834,34 +6176,39 @@ fh.addSubmitHandler();
 
 你可以看到数组中的每个对象都有一个键，对应于 `<form>` 元素的 `name` 属性以及该元素用户提供的 `value`。
 
-现在你可以遍历数组并从每个元素中复制值。在 `formhandler.js` 中为 `serializeArray` 添加对 `forEach` 方法的调用，并传递一个回调函数。当回调函数为数组中的每个对象运行时时，它将使用该对象的 `name` 和 `value` 在 `data` 对象上创建一个新属性。
+现在你可以遍历数组并从每个元素中复制值。在 `formhandler.js` 中为 `serializeArray` 添加对 `forEach` 方法的调用，并传递一个回调函数。当回调函数为数组中的每个对象运行时，它将使用该对象的 `name` 和 `value` 在 `data` 对象上创建一个新属性。
 
-```
+```javascript
 ...
   FormHandler.prototype.addSubmitHandler = function () {
     console.log('Setting submit handler for form');
+
     this.$formElement.on('submit', function (event) {
       event.preventDefault();
 
       var data = $(this).serializeArray();
+
       $(this).serializeArray().forEach(function (item) {
         data[item.name] = item.value;
         console.log(item.name + ' is ' + item.value);
       });
+
       console.log(data);
     });
   };
 ...
 ```
 
-为了看到此效果，请保存更改，并在填写表单之前再次在控制中运行你的测试代码：
+为了看到此效果，请保存更改，并在填写表单之前再次在控制台中运行你的测试代码：
 
-
-
+```javascript
+var fh = new App.FormHandler('[data-coffee-order="form"]');
+fh.addSubmitHandler();
+```
 
 当你填写表单并点击 `Submit` 按钮时，你应该看到输入的信息已复制到 `data` 对象并打印到控制台（图 10.5）。
 
-**图 10.5  在迭代器回调中复制表单数据**
+**图 10.5 在迭代器回调中复制表单数据**
 
 ![在迭代器回调中复制表单数据](img/caff-fiend.png)
 
@@ -5873,10 +6220,11 @@ fh.addSubmitHandler();
 
 在 `formhandler.js` 中，添加一个名为 `fn` 的参数。
 
-```
+```javascript
 ...
   FormHandler.prototype.addSubmitHandler = function (fn) {
     console.log('Setting submit handler for form');
+
     this.$formElement.on('submit', function (event) {
       event.preventDefault();
 ...
@@ -5886,7 +6234,7 @@ fh.addSubmitHandler();
 
 在 `formhandler.js` 的 `submit` 处理器回调内部调用 `fn`，并传递包含用户输入的 `data` 对象。
 
-```
+```javascript
 ...
   FormHandler.prototype.addSubmitHandler = function (fn) {
     ...
@@ -5903,9 +6251,10 @@ fh.addSubmitHandler();
 
 在 `main.js` 中，你需要实例化 `FormHandler` 实例，并将 `<form>` 元素的选择器传递给它：`[data-coffee-order="form"]`。在 `main.js` 顶部为该选择器创建一个变量，以便在需要时重用。
 
-```
+```javascript
 (function (window) {
   'use strict';
+
   var FORM_SELECTOR = '[data-coffee-order="form"]';
   var App = window.App;
 ...
@@ -5916,34 +6265,39 @@ fh.addSubmitHandler();
 ```javascript
 (function (window) {
   'use strict';
+
   var FORM_SELECTOR = '[data-coffee-order="form"]';
   var App = window.App;
   var Truck = App.Truck;
   var DataStore = App.DataStore;
   var FormHandler = App.FormHandler;
+
   var myTruck = new Truck('ncc-1701', new DataStore());
   ...
 ```
 
-在 `main.js` 模块结束处，调用 `FormHandler` 构造函数并传递变量 `FORM_SELECTOR`。这将确保 `FormHandler` 实例将与匹配该选择器的 DOM 元素配合。将实例赋值给一个名为 `FormHandler` 的新变量。
+在 `main.js` 模块结束处，调用 `FormHandler` 构造函数并传递变量 `FORM_SELECTOR`。这将确保 `FormHandler` 实例将与匹配该选择器的 DOM 元素配合。将实例赋值给一个名为 `formHandler` 的新变量。
 
-```
+```javascript
 ...
   var Truck = App.Truck;
   var DataStore = App.DataStore;
   var FormHandler = App.FormHandler;
+
   var myTruck = new Truck('ncc-1701', new DataStore());
   window.myTruck = myTruck;
-  var formHandler = new FormHandler(FORM_SELECTOR);
 
+  var formHandler = new FormHandler(FORM_SELECTOR);
   formHandler.addSubmitHandler();
   console.log(formHandler);
 })(window);
 ```
 
+
+
 当你保存代码并返回浏览器时，控制台应该报告 `Setting submit handler for form`，显示在页面加载时调用了 `addSubmitHandler`。然而，如果你填写并提交了表单，你将得到一个错误（图 10.6）。
 
-**图 10.6  在页面加载时调用 `addSubmitHandler`**
+**图 10.6 在页面加载时调用 `addSubmitHandler`**
 
 ![在页面加载时调用 addSubmitHandler](img/esprso.png)
 
@@ -5957,19 +6311,16 @@ fh.addSubmitHandler();
 formHandler.addSubmitHandler(formHandler.createOrder.bind(formHandler));
 ```
 
-
-
 你可以通过表单的 `elements` 属性方便地访问单个表单字段。`elements` 是一个表单字段的数组，你可以通过索引引用它们，索引从 0 开始。
 
 在 `formhandler.js` 中，在 `submit` 处理器回调函数中调用 `this.reset()` 之后，对第一个字段调用 `focus()` 方法。
 
-```
+```javascript
 ...
   FormHandler.prototype.addSubmitHandler = function (fn) {
     console.log('Setting submit handler for form');
     this.$formElement.on('submit', function (event) {
       event.preventDefault();
-
       var data = {};
       $(this).serializeArray().forEach(function (item) {
         data[item.name] = item.value;
@@ -6006,8 +6357,6 @@ CoffeeRun 现在由 jQuery 驱动并可以接受用户输入了！你弥补了 H
 
 # 11 从数据到 DOM
 
-从数据到 DOM
-
 在上一章中，你构建了 `FormHandler` 模块。它充当用户交互表单与你代码其余部分的桥梁。通过拦截其 `submit` 事件，你将用户的输入提供给 `Truck` 模块，由将其保存到 `DataStore` 实例中。
 
 在本章中，你将构建另一部分 UI 代码：`CheckList` 模块。像 `Truck` 模块一样，它将接收来自 `FormHandler` 的数据，但它的工作是在页面上添加待处理订单清单。当清单项被点击时，`CheckList` 将其从页面上移除，并通知 `Truck` 从 `DataStore` 中将其移除。图 11.1 显示了配备了待处理订单清单的 CoffeeRun。
@@ -6020,7 +6369,7 @@ CoffeeRun 现在由 jQuery 驱动并可以接受用户输入了！你弥补了 H
 
 你将继续使用 `Bootstrap` 类来为你的表单元素设置样式。从 `index.html` 开始添加一对带有 `Bootstrap` 类名 `panel`、`panel-default` 和 `panel-body` 的 `<div>` 元素，就像你处理咖啡订单表单那样。在它们内部添加一个标题和一个用于实际清单项的 `<div>`。这些标记应该添加在包含表单的 `<div>` 之后。
 
-```
+```html
 ...
     <header>
       <h1>CoffeeRun</h1>
@@ -6033,7 +6382,6 @@ CoffeeRun 现在由 jQuery 驱动并可以接受用户输入了！你弥补了 H
           </form>
         </div>
       </div>
-
       <div class="panel panel-default">
         <div class="panel-body">
           <h4>Pending Orders</h4>
@@ -6056,7 +6404,7 @@ CoffeeRun 现在由 jQuery 驱动并可以接受用户输入了！你弥补了 H
 
 在你的 `scripts` 文件夹中创建一个 `checklist.js` 的新文件，并在 `index.html` 中引用它：
 
-```
+```html
 ...
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"
       charset="utf-8"></script>
@@ -6073,7 +6421,6 @@ CoffeeRun 现在由 jQuery 驱动并可以接受用户输入了！你弥补了 H
 ```javascript
 (function (window) {
   'use strict';
-
   var App = window.App || {};
   var $ = window.jQuery;
 
@@ -6081,7 +6428,6 @@ CoffeeRun 现在由 jQuery 驱动并可以接受用户输入了！你弥补了 H
     if (!selector) {
       throw new Error('未提供选择器');
     }
-
     this.$element = $(selector);
     if (this.$element.length === 0) {
       throw new Error('未找到选择器对应的元素: ' + selector);
@@ -6097,8 +6443,6 @@ CoffeeRun 现在由 jQuery 驱动并可以接受用户输入了！你弥补了 H
 
 另一个方法是从表格中移除该行。第三个方法是为 `click` 事件添加监听器，以便你的代码知道*何时*移除该行。
 
-
-
 你将处理第一个方法是为新订单创建的一行。图 11.3 显示了在提交表单时，`CheckList` 如何向页面添加待办列表项。
 
 **图 11.3 提交表单时的事件顺序**
@@ -6113,7 +6457,7 @@ CoffeeRun 现在由 jQuery 驱动并可以接受用户输入了！你弥补了 H
 
 在 `checklist.js` 中，于 `App.CheckList = CheckList;` 语句之前添加 `Row` 构造函数。它应该接受一个名为 `coffeeOrder` 的参数，该参数与发送给 `Truck.prototype.createOrder` 的数据相同。
 
-```
+```javascript
 ...
     this.$element = $(selector);
     if (this.$element.length === 0) {
@@ -6142,7 +6486,7 @@ CoffeeRun 现在由 jQuery 驱动并可以接受用户输入了！你弥补了 H
 
 图 11.4 中由 `Row` 构造函数创建的 DOM 子树等于以下标记：
 
-```
+```html
 <div data-coffee-order="checkbox" class="checkbox">
   <label>
     <input type="checkbox" value="chewie@rrwwwgg.com">
@@ -6153,7 +6497,7 @@ CoffeeRun 现在由 jQuery 驱动并可以接受用户输入了！你弥补了 H
 
 使用带有 `checkbox` 类的 `<div>` 来容纳你的 `<label>` 和 `<input>` 元素。`checkbox` 类将为 `<div>` 应用适当的 `Bootstrap` 样式。当你需要触发复选框的点击操作时，将在 JavaScript 中使用 `data-coffee-order` 属性。
 
-注意 `<input>` 的 `type` 属性也是 `checkbox`。这告诉浏览器将输入框绘制为复选框表单元素。订单的纯文本描述紧跟在 `<input>` 之后。<label>` 包裹了复选框输入和纯文本描述。这使得文本和输入变成了复选框的点击目标。
+注意 `<input>` 的 `type` 属性也是 `checkbox`。这告诉浏览器将输入框绘制为复选框表单元素。订单的纯文本描述紧跟在 `<input>` 之后。`<label>` 包裹了复选框输入和纯文本描述。这使得文本和输入变成了复选框的点击目标。
 
 你将逐个创建 `<label>`、`<div>` 和 `<input>` 元素。然后你将手动将这些元素嵌套在一起，以创建一个 DOM 子树，并将其附加到实时 DOM（当前在页面上显示的 DOM 树）中。你还将创建一个包含订单文本描述的字符串，例如“tall mocha iced coffee, (chewie@rrwwwgg.com) [39x]”。
 
@@ -6189,18 +6533,14 @@ var $checkbox = $('<input></input>', {
 
 通过将 `value` 设置为客户的电子邮件地址，你将复选框与客户的咖啡订单关联。稍后添加 `click` 处理器时，可以根据 `value` 属性中的电子邮件地址识别点击了哪个咖啡订单。
 
-
-
-
 最后要创建的是显示在复选框旁文本描述。你将通过使用 `+=` 运算符拼接各个部分来构建这个字符串。
 
-在 `checklist.js` 中创建一个名为 `description` 的变量。将其赋值为订单的 `size` 属性，然后添加一个逗号和空格。如果提供了口味（flavor），则使用 `+=` 将其拼接。接着拼接 `coffee`、`emailAddress` 和 `strength` 值。`emailAddress` 应该包裹在括号中，`strength` 应该放在方括号中并在后面加上字母“x”。。（括号和方括号不是为了语法目的，仅仅是为了格式化文本。）
+在 `checklist.js` 中创建一个名为 `description` 的变量。将其赋值为订单的 `size` 属性，然后添加一个逗号和空格。如果提供了口味（flavor），则使用 `+=` 将其拼接。接着拼接 `coffee`、`emailAddress` 和 `strength` 值。`emailAddress` 应该包裹在括号中，`strength` 应该放在方括号中并在后面加上字母“x”。（括号和方括号不是为了语法目的，仅仅是为了格式化文本。）
 
-```
+```javascript
 ...
   function Row(coffeeOrder) {
     ...
-
     var $checkbox = $('<input></input>', {
       type: 'checkbox',
       value: coffeeOrder.emailAddress
@@ -6210,13 +6550,15 @@ var $checkbox = $('<input></input>', {
     if (coffeeOrder.flavor) {
       description += coffeeOrder.flavor + ' ';
     }
-
-    description += coffeeOrder.coffee + ', ';
-    description += ' (' + coffeeOrder.emailAddress + ')';
-    description += ' [' + coffeeOrder.strength + 'x]';
-  }
-...
 ```
+
+
+
+`description += coffeeOrder.coffee + ', ';`
+
+`description += ' (' + coffeeOrder.emailAddress + ')';`
+
+`description += ' [' + coffeeOrder.strength + 'x]';`
 
 `+=` 拼接运算符在一步内完成加法和赋值。这意味着以下两行代码是等价的：
 
@@ -6225,7 +6567,7 @@ description += coffeeOrder.flavor + ' ';
 description = description + coffeeOrder.flavor + ' ';
 ```
 
-你现在已经了检查清单项目的所有各个部分，并准备好将它们拼接在一起（图 11.5）。
+你现在已经检查了清单项目的所有各个部分，并准备好将它们拼接在一起（图 11.5）。
 
 **图 11.5 将单个 DOM 元素组装成子树**
 
@@ -6237,7 +6579,7 @@ description = description + coffeeOrder.flavor + ' ';
 2. 将 `description` 添加到 `$label`
 3. 将 `$label` 添加到 `$div`
 
-更通地说，你将通过从左到右、从下到上的方式来构建子树。这种方法类似于你在第 3 章 中为 Ottergram 开发 CSS 的方式，即从最小、最内层的元素开始向上构建。
+更通地说，你将通过从左到右、从下到上的方式来构建子树。这种方法类似于你在第 3 章中为 Ottergram 开发 CSS 的方式，即从最小、最内层的元素开始向上构建。
 
 在 `checklist.js` 中，使用 jQuery 的 `append` 方法将元素连接起来。该方法接受 DOM 元素或 jQuery 封装的集合，并将其作为子元素添加。
 
@@ -6248,7 +6590,6 @@ description = description + coffeeOrder.flavor + ' ';
     description += coffeeOrder.coffee + ', ';
     description += ' (' + coffeeOrder.emailAddress + ')';
     description += ' [' + coffeeOrder.strength + 'x]';
-
     $label.append($checkbox);
     $label.append(description);
     $div.append($label);
@@ -6256,7 +6597,7 @@ description = description + coffeeOrder.flavor + ' ';
 ...
 ```
 
-你的 `Row` 构造函数现在可以使用传入的咖啡订单数据创建并组装元素子树。然而，由于 `Row` 被用构造函数而不是普通函数，它不能简单地返回这个子树。（事实上，构造函数不应该有 return 语句；当你使用 `new` 关键字调用构造函数时，JavaScript 会自动为你返回一个值。）
+你的 `Row` 构造函数现在可以使用传入的咖啡订单数据创建并组装元素子树。然而，由于 `Row` 被用作构造函数而不是普通函数，它不能简单地返回这个子树。（事实上，构造函数不应该有 `return` 语句；当你使用 `new` 关键字调用构造函数时，JavaScript 会自动为你返回一个值。）
 
 相反，通过将子树赋值给 `checklist.js` 中的 `this.$element`，使其作为实例的属性可用。（选择这个名称仅仅是为了遵循你其他构造函数的命名约定；它本身没有任何特殊含义。）
 
@@ -6267,7 +6608,6 @@ description = description + coffeeOrder.flavor + ' ';
     $label.append($checkbox);
     $label.append(description);
     $div.append($label);
-
     this.$element = $div;
   }
 ...
@@ -6288,20 +6628,17 @@ description = description + coffeeOrder.flavor + ' ';
   function CheckList(selector) {
     ...
   }
-
   CheckList.prototype.addRow = function (coffeeOrder) {
     // 使用咖啡订单信息创建行实例
     var rowElement = new Row(coffeeOrder);
-
     // 将行实例的 $element 属性添加到检查清单
     this.$element.append(rowElement.$element);
   }
-
   function Row(coffeeOrder) {
     ...
 ```
 
-这就是添加检查清单项目需要需要的所有操作。
+这就是添加检查清单项目需要的所有操作。
 
 在 `main.js` 中，添加一个匹配检查清单区域 `[data-coffee-order="checklist"]` 的选择器变量。然后，从 `App` 命名空间导入 `CheckList` 模块到本地变量 `CHECKLIST_SELECTOR`。
 
@@ -6329,19 +6666,14 @@ description = description + coffeeOrder.flavor + ' ';
 ...
 // 实例化一个新的 CheckList
 var checkList = new CheckList(CHECKLIST_SELECTOR);
-
 var formHandler = new FormHandler(FORM_SELECTOR);
 formHandler.addSubmitHandler(myTruck.createOrder.bind(myTruck));
-
 // 这不起你的效果！
 formHandler.addSubmitHandler(checkList.addRow.bind(checkList));
 ...
 ```
 
 这段代码注册了两个在表单提交时运行的回调。在第一个 `submit` 处理程序（`myTruck.createOrder`）调用后，表单被重置。当调用第二个 `submit` 处理程序（`checkList.addRow`）时，表单中已没有信息了。结果是数据被添加到 `DataStore` 中，但没有向页面添加检查清单项目。
-
-
-
 
 为了解决这个问题，你需要向 `formHandler.addSubmitHandler` 传递一个匿名函数，并让该匿名函数同时调用 `myTruck.createOrder` 和 `checkList.addRow`。
 
@@ -6353,7 +6685,7 @@ formHandler.addSubmitHandler(checkList.addRow.bind(checkList));
 
 在这里你需要使用 `call` 而不是 `bind`，因为你除了设置 `this` 的值之外，还需要调用 `myTruck.createOrder` 和 `checkList.addRow`。
 
-在 `main.js` 中，删除现有的 `formHandler.addSubmitHandler` 调用。添加新的 `formHandler.addSubmitHandler` 调用，并传递传递一个接收单个参数 `data` 的匿名函数。在匿名函数内部，使用 `myTruck.createOrder` 和 `checkList.addRow` 的 `call` 方法来设置 `this` 的值，并将 `data` 对象作为第二个参数传递。
+在 `main.js` 中，删除现有的 `formHandler.addSubmitHandler` 调用。添加新的 `formHandler.addSubmitHandler` 调用，并传递一个接收单个参数 `data` 的匿名函数。在匿名函数内部，使用 `myTruck.createOrder` 和 `checkList.addRow` 的 `call` 方法来设置 `this` 的值，并将 `data` 对象作为第二个参数传递。
 
 ```
 ...
@@ -6361,7 +6693,6 @@ formHandler.addSubmitHandler(checkList.addRow.bind(checkList));
   window.myTruck = myTruck;
   var checkList = new CheckList(CHECKLIST_SELECTOR);
   var formHandler = new FormHandler(FORM_SELECTOR);
-
   formHandler.addSubmitHandler(myTruck.createOrder.bind(myTruck));
                                function (data) {
     console.log(formHandler);
@@ -6389,9 +6720,9 @@ formHandler.addSubmitHandler(checkList.addRow.bind(checkList));
 
 ![时序图：点击清单项](img/checklist-diagram-2.png)
 
-首先，你将创建一个一个从页面上移除清单项的功能。
+首先，你将创建一个从页面上移除清单项的功能。
 
-### 创建 CheckList.prototype.removeRow 方法
+### 创建 `CheckList.prototype.removeRow` 方法
 
 当你创建一个 `Row` 时，`<input>` 的 `value` 被设置为客户的电子邮件地址。`removeRow` 将使用电子邮件地址参数来找到要从 UI 中移除的正确 `CheckList` 项。它将通过创建一个属性选择器来查找 `value` 属性匹配电子邮件地址的 `<input>`。
 
@@ -6404,38 +6735,33 @@ formHandler.addSubmitHandler(checkList.addRow.bind(checkList));
   CheckList.prototype.addRow = function (coffeeOrder) {
     ...
   };
-
   CheckList.prototype.removeRow = function (email) {
     this.$element
       .find('[value="' + email + '"]')
       .closest('[data-coffee-order="checkbox"]')
       .remove();
   };
-
   function Row(coffeeOrder) {
     ...
 ```
 
 在这里，你链式调用了多个方法。你可以像步骤列表一样编写它们。你只需要在最后一个方法调用的结尾包含分号。
 
-链式调的要求是方法必须返回一个 jQuery 包装的集合，以便在其后面链接另一个方法。`find` 返回一个 jQuery 包装的集合，`closest` 也是。这允许你将方法调用链在一起。
+链式调用的要求是方法必须返回一个 jQuery 包装的集合，以便在其后面链接另一个方法。`find` 返回一个 jQuery 包装的集合，`closest` 也是。这允许你将方法调用链在一起。
 
-注意你使用了 `this.$element.find`。这是一个作用域选择：它不是搜索整个 DOM，而是只搜索清单的后代，而你通过 `this.$` 获取了它的引用。
+注意你使用了 `this.$element.find`。这是一个作用域选择：它不是搜索整个 DOM，而是只搜索清单的后代，而你通过 `this.$element` 获取了它的引用。
 
 ### 移除被覆盖的条目
 
 保存文件并切换到浏览器。使用表单为同一个电子邮件地址输入两个订单。为第一个“order 1”和第二个“order 2”设置 `coffee`。在提交两个订单后，在控制台中调用 `myTruck.printOrders`。图 11.8 显示了结果。
 
-**图 11.8 同相同电子邮件地址的订单仍留在界面中**
+**图 11.8 相同电子邮件地址的订单仍留在界面中**
 
 ![相同电子邮件地址的订单仍留在界面中](img/greedy.png)
 
 你早就决定每个客户只允许一个开启订单。因为你使用简单的键值存储来处理数据，因此相同客户电子邮件地址的任何后续订单都会覆盖现有订单。所以，如控制台所示，“order 2”是唯一的待处理订单。
 
 但清单并没有反映这一点——它仍然显示着“order 1”和“order 2”的行。当你为一个订单添加行时，你需要确保任何与相同客户电子邮件地址相关的现有行都被移除。
-
-
-
 
 现在你已经可以根据客户的电子邮件地址删除行了，这非常简单。在 `checklist.js` 中，更新 `addRow` 原型方法，使其执行的第一步是调用 `removeRow` 并传入客户的电子邮件地址。
 
@@ -6444,10 +6770,8 @@ formHandler.addSubmitHandler(checkList.addRow.bind(checkList));
   CheckList.prototype.addRow = function (coffeeOrder) {
     // 删除任何与电子邮件地址匹配的现有行
     this.removeRow(coffeeOrder.emailAddress);
-
     // 使用咖啡订单信息创建行的实例
     var rowElement = new Row(coffeeOrder);
-
     // 将新行实例的 $element 属性添加到检查列表中
     this.$element.append(rowElement.$element);
   };
@@ -6465,25 +6789,24 @@ formHandler.addSubmitHandler(checkList.addRow.bind(checkList));
 `FormHandler.prototype.addSubmitHandler` 接收函数参数 `fn`，然后注册一个匿名函数来处理 `this.$formElement` 的 `submit` 事件。在匿名函数内部，`fn` 被调用。以下是该方法的定义供参考：
 
 ```
- FormHandler.prototype.addSubmitHandler = function (fn) {
-
-    console.log('Setting submit handler for form');
-    this.$formElement.on('submit', function (event) {
-      event.preventDefault();
-
-      var data = {};
-      $(this).serializeArray().forEach(function (item) {
-        data[item.name] = item.value;
-        console.log(item.name + ' is ' + item.value);
-      });
-      console.log(data);
-
-      fn(data);
-      this.reset();
-      this.elements[0].focus();
+FormHandler.prototype.addSubmitHandler = function (fn) {
+  console.log('Setting submit handler for form');
+  this.$formElement.on('submit', function (event) {
+    event.preventDefault();
+    var data = {};
+    $(this).serializeArray().forEach(function (item) {
+      data[item.name] = item.value;
+      console.log(item.name + ' is ' + item.value);
     });
-  };
+    console.log(data);
+    fn(data);
+    this.reset();
+    this.elements[0].focus();
+  });
+};
 ```
+
+
 
 这使得 `FormHandler.prototype.addSubmitHandler` 变得非常灵活，因为可以传递任何在表单提交时需要运行的函数。这样，`FormHandler.prototype.addSubmitHandler` 就不需要知道该函数的细节或它执行的步骤。
 
@@ -6499,25 +6822,23 @@ formHandler.addSubmitHandler(checkList.addRow.bind(checkList));
 
 在事件处理器函数内部，声明一个名为 `email` 的局部变量，并将其赋值为 `event.target.value`（即客户的电子邮件地址）。然后调用 `removeRow` 并传入 `email`。之后，调用 `fn` 并同样传入 `email`。请确保使用 `bind(this)` 来设置事件处理器函数的上下文对象。
 
+```javascript
+function CheckList(selector) {
+  ...
+}
+
+CheckList.prototype.addClickHandler = function (fn) {
+  this.$element.on('click', 'input', function (event) {
+    var email = event.target.value;
+    this.removeRow(email);
+    fn(email);
+  }.bind(this));
+};
+
+CheckList.prototype.addRow = function (coffeeOrder) {
+  ...
+};
 ```
-...
-  function CheckList(selector) {
-    ...
-  }
-
-  CheckList.prototype.addClickHandler = function (fn) {
-    this.$element.on('click', 'input', function (event) {
-      var email = event.target.value;
-      this.removeRow(email);
-      fn(email);
-    }.bind(this));
-  };
-
-  CheckList.prototype.addRow = function (coffeeOrder) {
-    ...
-```
-
-
 
 允许编辑现有订单。你需要更改检查清单的工作方式。
 
@@ -6539,20 +6860,19 @@ CoffeeRun 运行良好良好！用户可以在表单中输入咖啡订单，订�
 
 在 `index.html` 中，为订单和电子邮件字段添加 `required` 布尔属性。
 
-```
+```html
 ...
-            <div class="form-group">
-              <label for="coffeeOrder">Order</label>
-              <input class="form-control" name="coffee" id="coffeeOrder"
-                autofocus required />
-            </div
-
-            <div class="form-group">
-              <label for="emailInput">Email</label>
-              <input class="form-control" type="email" name="emailAddress"
-              id="emailInput" value="" placeholder="dr@who.com"
-                required />
-            </div>
+<div class="form-group">
+  <label for="coffeeOrder">Order</label>
+  <input class="form-control" name="coffee" id="coffeeOrder"
+    autofocus required />
+</div>
+<div class="form-group">
+  <label for="emailInput">Email</label>
+  <input class="form-control" type="email" name="emailAddress"
+    id="emailInput" value="" placeholder="dr@who.com"
+    required />
+</div>
 ...
 ```
 
@@ -6578,17 +6898,17 @@ CoffeeRun 运行良好良好！用户可以在表单中输入咖啡订单，订�
 
 在订单 `<input>` 的 `required` 属性之后，添加 `pattern` 属性。为它分配一个特殊格式的字符串，我们称为正则表达式，我们稍后会解释。
 
-```
+```html
 ...
-            <div class="form-group">
-              <label for="coffeeOrder">Order</label>
-              <input class="form-control" name="coffee" id="coffeeOrder"
-                autofocus required pattern="[a-zA-Z\s]+" />
-            </div
+<div class="form-group">
+  <label for="coffeeOrder">Order</label>
+  <input class="form-control" name="coffee" id="coffeeOrder"
+    autofocus required pattern="[a-zA-Z\s]+" />
+</div>
 ...
 ```
 
-正则表达式是用于模式匹配的字符序列。正则表达式 `[a-zA-Z\s]+` 匹配由小写字母 (`a-z`)）、大写字母 (`A-Z`) 和空白字符 (`\s`) 集合中的任何字符，重复一次或多次（`+`）。
+正则表达式是用于模式匹配的字符序列。正则表达式 `[a-zA-Z\s]+` 匹配由小写字母 (`a-z`)、大写字母 (`A-Z`) 和空白字符 (`\s`) 集合中的任何字符，重复一次或多次（`+`）。
 
 简而言之，当你提交表单时，该字段只有在包含字母或空格才是有效的。
 
@@ -6608,19 +6928,19 @@ CoffeeRun 运行良好良好！用户可以在表单中输入咖啡订单，订�
 
 创建一个新文件 `scripts/validation.js` 来存放你的验证函数。在 `index.html` 中为你的新模块添加 `<script>` 标签。
 
-```
+```html
 ...
-      </div>
-    </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"
-      charset="utf-8"></script>
-    <script src="scripts/validation.js" charset="utf-8"></script>
-    <script src="scripts/checklist.js" charset="utf-8"></script>
-    <script src="scripts/formhandler.js" charset="utf-8"></script>
-    <script src="scripts/datastore.js" charset="utf-8"></script>
-    <script src="scripts/truck.js" charset="utf-8"></script>
-    <script src="scripts/main.js" charset="utf-8"></script>
-  </body>
+</div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"
+  charset="utf-8"></script>
+<script src="scripts/validation.js" charset="utf-8"></script>
+<script src="scripts/checklist.js" charset="utf-8"></script>
+<script src="scripts/formhandler.js" charset="utf-8"></script>
+<script src="scripts/datastore.js" charset="utf-8"></script>
+<script src="scripts/truck.js" charset="utf-8"></script>
+<script src="scripts/main.js" charset="utf-8"></script>
+</body>
 </html>
 ```
 
@@ -6629,10 +6949,10 @@ CoffeeRun 运行良好良好！用户可以在表单中输入咖啡订单，订�
 ```javascript
 (function (window) {
   'use strict';
+
   var App = window.App || {};
 
   var Validation = {
-
   };
 
   App.Validation = Validation;
@@ -6642,15 +6962,12 @@ CoffeeRun 运行良好良好！用户可以在表单中输入咖啡订单，订�
 
 你的新 `Validation` 模块将仅用于组织函数，因此它不需要是一个构造函数。
 
-
-
-
-
 添加一个名为 `isCompanyEmail` 方法。该方法将使用正则表达式对电子邮件地址进行测试并返回 `true` 或 `false`。（你可以随时更改指定的电子邮件域名。）
 
-```
+```javascript
 (function () {
   'use strict';
+
   var App = window.App || {};
 
   var Validation = {
@@ -6668,13 +6985,13 @@ CoffeeRun 运行良好良好！用户可以在表单中输入咖啡订单，订�
 
 该正则表达式是一个对象，并具有一个 `test` 方法。你可以将字符串传递给 `test` 方法，它将返回一个布尔值——如果正则表达式匹配字符串则返回 `true`，否则返回 `false`。（有关其他正则表达式方法的列表，请参见 [developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)）。
 
-在控制台上测试你的 `App.Validation.isCompanyEmail` 函数（图 12.3]）。
+在控制台上测试你的 `App.Validation.isCompanyEmail` 函数（图 12.3）。
 
-**图 12.3  在控制台上测试 `App.Validation.isCompanyEmail`**
+**图 12.3 在控制台上测试 `App.Validation.isCompanyEmail`**
 
 ![在控制台上测试 App.Validation.isCompanyEmail](img/iscompanyemail-validation.png)
 
-你现在有有了一个可以检查有效电子邮件地址的函数。下一步要做的工作是将其连接到表单。
+你现在有了一个可以检查有效电子邮件地址的函数。下一步要做的工作是将其连接到表单。
 
 ### 监听 input 事件
 
@@ -6686,52 +7003,52 @@ CoffeeRun 运行良好良好！用户可以在表单中输入咖啡订单，订�
 
 因此，验证检查需要在用户输入每个字符时发生。更新 `formhandler.js` 中的 `FormHandler` 模块，添加一个 `addInputHandler` 原型方法。它应该为表单的 `input` 事件添加一个监听器。与 `addSubmitHandler` 方法一样，它应该接受一个函数参数。
 
-```
+```javascript
 ...
-  FormHandler.prototype.addSubmitHandler = function (fn) {
-    ...
-  };
+FormHandler.prototype.addSubmitHandler = function (fn) {
+  ...
+};
 
-  FormHandler.prototype.addInputHandler = function (fn) {
-    console.log('Setting input handler for form');
-  };
+FormHandler.prototype.addInputHandler = function (fn) {
+  console.log('Setting input handler for form');
+};
 
-  App.FormHandler = FormHandler;
-  window.App = App;
+App.FormHandler = FormHandler;
+window.App = App;
 ...
 ```
 
 使用 jQuery 的 `on` 方法挂载 `input` 事件的监听器。确保使用事件委托模式来过滤掉由 `[name="emailAddress"]` 以外的任何内容创建的事件。
 
-```
+```javascript
 ...
-  FormHandler.prototype.addInputHandler = function (fn) {
-    console.log('Setting input handler for form');
-    this.$formElement.on('input', '[name="emailAddress"]', function (event) {
-      // 事件处理代码在这里
-    });
-  };
+FormHandler.prototype.addInputHandler = function (fn) {
+  console.log('Setting input handler for form');
+  this.$formElement.on('input', '[name="emailAddress"]', function (event) {
+    // 事件处理代码在这里
+  });
+};
 
-  App.FormHandler = FormHandler;
-  window.App = App;
+App.FormHandler = FormHandler;
+window.App = App;
 ...
 ```
 
 在事件处理程序内部，从 `event.target` 对象提取电子邮件字段的值。然后使用 `console.log` 输出运行 `addInputHandler` 的函数参数 `fn` 的结果，并将电子邮件字段的值传递给它。
 
-```
+```javascript
 ...
-  FormHandler.prototype.addInputHandler = function (fn) {
-    console.log('Setting input handler for form');
-    this.$formElement.on('input', '[name="emailAddress"]', function (event) {
-      // 事件处理代码在这里
-      var emailAddress = event.target.value;
-      console.log(fn(emailAddress));
-    });
-  };
+FormHandler.prototype.addInputHandler = function (fn) {
+  console.log('Setting input handler for form');
+  this.$formElement.on('input', '[name="emailAddress"]', function (event) {
+    // 事件处理代码在这里
+    var emailAddress = event.target.value;
+    console.log(fn(emailAddress));
+  });
+};
 
-  App.FormHandler = FormHandler;
-  window.App = App;
+App.FormHandler = FormHandler;
+window.App = App;
 ...
 ```
 
@@ -6739,63 +7056,65 @@ CoffeeRun 运行良好良好！用户可以在表单中输入咖啡订单，订�
 
 在 `main.js` 中，从 `App` 命名空间导入 `Validation` 并将其赋值给本地变量。
 
-```
+```javascript
 ...
-  var Truck = App.Truck;
-  var DataStore = App.DataStore;
-  var FormHandler = App.FormHandler;
-  var Validation = App.Validation;
-  var CheckList = App.CheckList;
-  var myTruck = new Truck('ncc-701', new DataStore());
+var Truck = App.Truck;
+var DataStore = App.DataStore;
+var FormHandler = App.FormHandler;
+var Validation = App.Validation;
+var CheckList = App.CheckList;
+var myTruck = new Truck('ncc-701', new DataStore());
 ...
 ```
 
 导入 `Validation` 对象后，你可以将其连接到 `formHandler` 的新 `addInputHandler` 方法。
 
-````javascript
-  formHandler.addSubmitHandler(function (data) {
-    myTruck.createOrder.call(myTruck, data);
-    checkList.addRow.call(checkList, data);
-  });
-
-  formHandler.addInputHandler(Validation.isCompanyEmail);
-
-})(window);
+```javascript
+formHandler.addSubmitHandler(function (data) {
 ```
 
-保存并加载。填写电子邮件字段并查看控制台的输出。当你输入有效的电子邮件地址时，控制台会显示若干 `false` 结果，这些是由 `FormHandler.prototype.addInputHandler` 中的 `console.log(fn(emailAddress))` 行打印的。当你完成有效电子邮件地址后，你将在控制台上看到 `true`（图 12.4]）。
 
-**图 12.4  记录电子邮件验证检查**
+
+`myTruck.createOrder.call(myTruck, data);`
+
+`checkList.addRow.call(checkList, data);`
+
+`});`
+
+`formHandler.addInputHandler(Validation.isCompanyEmail);`
+
+`})(window);`
+
+保存并加载。填写电子邮件字段并查看控制台的输出。当你输入有效的电子邮件地址时，控制台会显示若干 `false` 结果，这些是由 `FormHandler.prototype.addInputHandler` 中的 `console.log(fn(emailAddress))` 行打印的。当你完成有效电子邮件地址后，你将在控制台上看到 `true`（图 12.4）。
+
+**图 12.4 记录电子邮件验证检查**
 
 ![记录电子邮件验证检查](img/validating-email-console.png)
 
 你的验证函数会在电子邮件字段每次输入（或删除）字符时运行。当你确认它正在正确检查你的输入时，可以使用它显示自定义消息。
 
-### 触发有效性检查
+## 触发有效性检查
 
 现在你已经可靠地测试了电子邮件地址是否来自你的公司，如果验证失败，你应该通知用户。你将使用 `event.target` 的 `setCustomValidity` 方法来将其标记为无效。
 
 在 `formhandler.js` 中，移除 `console.log` 语句，并替换为一个警告消息变量以及一个 `if/else` 子句。如果 `fn(emailAddress)` 调用返回 `true`，则清除字段的自定义有效性。如果返回 `false`，则将 `message` 变量赋值为包含警告消息的字符串，并将自定义有效性设置为 `message`。
 
-
-
-
 ```javascript
 ...
-  FormHandler.prototype.addInputHandler = function (fn) {
-    console.log('Setting input handler for form');
-    this.$formElement.on('input', '[name="emailAddress"]', function (event) {
-      var emailAddress = event.target.value;
-      console.log(fn(emailAddress));
-      var message = '';
-      if (fn(emailAddress)) {
-        event.target.setCustomValidity('');
-      } else {
-        message = emailAddress + ' is not an authorized email address!'
-        event.target.setCustomValidity(message);
-      }
-    });
-  };
+FormHandler.prototype.addInputHandler = function (fn) {
+  console.log('Setting input handler for form');
+  this.$formElement.on('input', '[name="emailAddress"]', function (event) {
+    var emailAddress = event.target.value;
+    console.log(fn(emailAddress));
+    var message = '';
+    if (fn(emailAddress)) {
+      event.target.setCustomValidity('');
+    } else {
+      message = emailAddress + ' is not an authorized email address!'
+      event.target.setCustomValidity(message);
+    }
+  });
+};
 ...
 ```
 
@@ -6803,7 +7122,7 @@ CoffeeRun 运行良好良好！用户可以在表单中输入咖啡订单，订�
 
 在你输入内容时发生的验证检查只会将字段标记为有效或无效。它并不会显示错误消息。当你按下 `Submit` 按钮时，浏览器会检查无效字段，如果发现，则会显示验证消息。
 
-要尝试一下，在输入一个不匹配域的邮箱地址后提交表单。在你按下 `Submit` 按钮后，你应该能看到你的自定义验证消息作为警告出现在字段旁边（图 12.5")）。
+要尝试一下，在输入一个不匹配域的邮箱地址后提交表单。在你按下 `Submit` 按钮后，你应该能看到你的自定义验证消息作为警告出现在字段旁边（图 12.5）。
 
 **图 12.5 仅允许有效的邮箱地址！**
 
@@ -6815,22 +7134,22 @@ CoffeeRun 现在对订单字段和电子邮件地址进行验证。现在是时�
 
 ```html
 ...
-  <head>
-    <meta charset="utf-8">
-    <title>coffeerun</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootrap/3.3.6/css/bootstrap.min.css">
-    <style>
-      form :invalid {
-        border-color: #a94442;
-      }
-    </style>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>coffeerun</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootrap/3.3.6/css/bootstrap.min.css">
+  <style>
+    form :invalid {
+      border-color: #a94442;
+    }
+  </style>
+</head>
 ...
 ```
 
 这为你的表单中任何带有 `:invalid` 伪类的字段添加了边框。当表单运行验证检查时，浏览器会自动添加此伪类。
 
-保存并返回浏览器。多按几次 Tab 键（或点击文本输入字段之外）以聚焦订单或邮箱字段以外的表单元素。这两个必填字段将具有红色边框（图 12.6）。
+保存并返回浏览器。多按几次 `Tab` 键（或点击文本输入字段之外）以聚焦订单或邮箱字段以外的表单元素。这两个必填字段将具有红色边框（图 12.6）。
 
 **图 12.6 相信我们：这些框是红色的**
 
@@ -6839,20 +7158,20 @@ CoffeeRun 现在对订单字段和电子邮件地址进行验证。现在是时�
 如果边框只出现在必填且处于聚焦状态的无效字段上，会更合适。在 `index.html` 的选择器中再添加两个伪类：
 
 ```html
- <head>
-    <meta charset="utf-8">
-    <title>coffeerun</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootrap/3.3.6/css/bootstrap.min.css">
-    <style>
-      form :focus:required:invalid {
-        border-color: #a94442;
-      }
-    </style>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>coffeerun</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootrap/3.3.6/css/bootstrap.min.css">
+  <style>
+    form :focus:required:invalid {
+      border-color: #a94442;
+    }
+  </style>
+</head>
 ...
 ```
 
-你指定了具有 `:focus`、`:required` 和 `:invalid` 三个伪类的字段将获得新的边框颜色（图 12.7")）。
+你指定了具有 `:focus`、`:required` 和 `:invalid` 三个伪类的字段将获得新的边框颜色（图 12.7）。
 
 **图 12.7 :invalid 框颜色仅用于聚焦字段**
 
@@ -6874,31 +7193,28 @@ CoffeeRun 正在成为一个功能齐全的 Web 应用。在接下来的两个�
 
 ```javascript
 ...
-  FormHandler.prototype.addInputHandler = function (fn) {
-    console.log('Setting input handler for form');
-    this.$formElement.on('input', '[name="emailAddress"]', function (event) {
-      var emailAddress = event.target.value;
-      console.log(fn(emailAddress));
-      var message = '';
-      if (fn(emailAddress)) {
-        $(event.target).setCustomValidity('');
-      } else {
-        message = emailAddress + ' is not an authorized email address!'
-        $(event.target).setCustomValidity(message);
-      }
-    });
-  };
+FormHandler.prototype.addInputHandler = function (fn) {
+  console.log('Setting input handler for form');
+  this.$formElement.on('input', '[name="emailAddress"]', function (event) {
+    var emailAddress = event.target.value;
+    console.log(fn(emailAddress));
+    var message = '';
+    if (fn(emailAddress)) {
+      $(event.target).setCustomValidity('');
+    } else {
+      message = emailAddress + ' is not an authorized email address!'
+      $(event.target).setCustomValidity(message);
+    }
+  });
+};
 ...
 ```
-
-
-
 
 Webshim 的作者选择将 polyfill 功能完全作为 jQuery 的一个扩展来实现。除了这种封装之外，你并不需要修改你的代码。
 
 在保存更改后，你可以在 `Safari` 中测试你的验证逻辑。如果你忘记填写咖啡订单或输入了无效的电子邮件地址，你应该能看到它也会报告问题（图 12.8）。
 
-图 12.8 将 Webshim 作为 Safari 的 polyfill
+**图 12.8 将 Webshim 作为 Safari 的 polyfill**
 
 ![Using Webshim as a Safari polyfill](img/safari-polyfill.png)
 
@@ -6912,7 +7228,7 @@ Webshim 的功能远不止提供表单验证。你应该浏览一下文档，看
 
 在本章中，你将创建一个 `RemoteDataStore` 模块，它会向服务器发送请求并处理响应（图 13.1）。但它将在使用 `Ajax` 的后台执行操作，而不会导致浏览器刷新。
 
-图 13.1 章节结束时的 CoffeeRun
+**图 13.1 章节结束时的 CoffeeRun**
 
 ![CoffeeRun at the end of the chapter](img/coffee-orders-over-network.png)
 
@@ -6926,11 +7242,11 @@ Ajax 的核心是 `XMLHttpRequest` API。在现代浏览器中，你可以实例
 
 使用 `XMLHttpRequest` 对象，你可以将回调函数绑定到请求/响应循环的不同阶段，这就像你监听 DOM 对象上的事件一样。你还可以检查 `XMLHttpRequest` 对象的属性以获取有关请求/响应循环状态的信息。两个实用的属性是 `response` 和 `status`，它们会在任何变化发生时立即更新。`response` 属性包含服务器返回的数据（如 HTML、XML、JSON 或其他格式）。`status` 是一个数字代码，告诉你 HTTP 响应是否成功。这些被正式称为 HTTP 状态码。
 
-状态码按范围分组，这些范围具有基本含义。例如， 200-299 范围内的状态码是成功码，而 500-599 范围内的状态码意味着发生了服务器错误。你经常会看到这些范围被泛指地称为，例如“2xx”或“3xx”状态。
+状态码按范围分组，这些范围具有基本含义。例如，200-299 范围内的状态码是成功码，而 500-599 范围内的状态码意味着发生了服务器错误。你经常会看到这些范围被泛指地称为，例如“2xx”或“3xx”状态。
 
 表 13.1 显示了一些较为常见的代码。
 
-表 13.1�常见的 HTTP 状态码
+**表 13.1 常见的 HTTP 状态码**
 
 | 状态码 | 状态文本 | 描述 |
 | --- | --- | --- |
@@ -6952,9 +7268,9 @@ URL 路径（服务器名称之后的部分）通常指向集合（例如 `/coff
 
 这种差异影响了 HTTP 动词的应用。例如，在处理集合时，`GET` 请求获取项目列表。对于单个项目，`GET` 请求则获取该项目的所有详情。
 
-URL 和 HTTP 动词模式总结在 表 13.2。
+URL 和 HTTP 动词模式总结在表 13.2。
 
-表 13.2�RESTful URL 和 HTTP 模式示例
+**表 13.2 RESTful URL 和 HTTP 模式示例**
 
 | URL 路径 | `GET` | `POST` | `PUT` | `DELETE` |
 | --- | --- | --- | --- | --- |
@@ -6965,12 +7281,9 @@ URL 和 HTTP 动词模式总结在 表 13.2。
 
 稍后，你创建一个名为 `RemoteDataStore` 的模块。`RemoteDataStore` 的工作是代表应用程序与服务器通信。它具有与 `DataStore` 相同的方法——`add`、`get`、`getAll` 和 `remove`，它将使用这些方法与服务器通信（图 13.2）。
 
-图 13.2 `DataStore` vs `RemoteDataStore`
+**图 13.2 `DataStore` vs `RemoteDataStore`**
 
 ![DataStore vs RemoteDataStore](img/remote-vs-local-datastore.png)
-
-
-
 
 你可以使用 `RemoteDataStore` 实例来代替 `DataStore`，而无需修改你的 `Truck`、`FormHandler` 或 `CheckList` 模块。（不过，你并不会删除 `DataStore` 模块。你可能想创建一个未来的增强，允许 CoffeeRun 根据应用是在线还是离线运行在两个存储模块之间切换。）
 
@@ -6982,15 +7295,15 @@ URL 和 HTTP 动词模式总结在 表 13.2。
 
 ```javascript
 ...
-    <script src="scripts/validation.js" charset="utf-8"></script>
-    <script src="scripts/checklist.js" charset="utf-8"></script>
-    <script src="scripts/formhandler.js" charset="utf-8"></script>
-    <script src="scripts/remotedataster.js" charset="utf-8"></script>
-    <script src="scripts/datastore.js" charset="utf-8"></script>
-    <script src="scripts/truck.js" charset="utf-8"></script>
-    <script src="scripts/main.js" charset="utf-8"></script>
-  </body>
-</html
+<script src="scripts/validation.js" charset="utf-8"></script>
+<script src="scripts/checklist.js" charset="utf-8"></script>
+<script src="scripts/formhandler.js" charset="utf-8"></script>
+<script src="scripts/remotedataster.js" charset="utf-8"></script>
+<script src="scripts/datastore.js" charset="utf-8"></script>
+<script src="scripts/truck.js" charset="utf-8"></script>
+<script src="scripts/main.js" charset="utf-8"></script>
+</body>
+</html>
 ```
 
 保存 `index.html`。在 `remotedatastore.js` 中，导入 `App` 命名空间和 jQuery，然后创建一个构造函数名为 `RemoteDataStore` 的 IIFE 模块。该构造函数应该接受一个远程服务器 URL 参数参数，如果没有传递 URL，则抛出错误。在模块定义的最后，将 `RemoteDataStore` 导出到 `App` 命名空间：
@@ -7000,183 +7313,182 @@ URL 和 HTTP 动词模式总结在 表 13.2。
   'use strict';
   var App = window.App || {};
   var $ = window.jQuery;
+```
 
-  function RemoteDataStore(url) {
-    if (!url) {
-      throw new Error('No remote URL supplied.');
-    }
 
-    this.serverUrl = url;
+
+```javascript
+function RemoteDataStore(url) {
+  if (!url) {
+    throw new Error('No remote URL supplied.');
   }
+  this.serverUrl = url;
+}
 
-  App.RemoteDataStore = RemoteDataStore;
-  window.App = App;
-
-})(window);
+App.RemoteDataStore = RemoteDataStore;
+window.App = App;
 ```
 
 ## 向服务器发送数据
 
-你创建的第一个方法是 `add` 方法，用于在远程网络服务上存储客户订单数据。
+你创建的第一个方法是`add`方法，用于在远程网络服务上存储客户订单数据。
 
-为 `RemoteDataStore` 添加一个原型方法。与 `DataStore` 的 `add` 方法一样，它将接受名为 `key` 和 `val` 的参数。注意，你不需要使用相同的参数名称，但保持它们一致是一个良好的习惯。
+为`RemoteDataStore`添加一个原型方法。与`DataStore`的`add`方法一样，它将接受名为`key`和`val`的参数。注意，你不需要使用相同的参数名称，但保持它们一致是一个良好的习惯。
 
 ```javascript
 ...
-  function RemoteDataStore(url) {
-    ...
-  }
+function RemoteDataStore(url) {
+  ...
+}
 
-  RemoteDataStore.prototype.add = function (key, val) {
-    // Code will go here
-  };
+RemoteDataStore.prototype.add = function (key, val) {
+  // Code will go here
+};
 
-  App.RemoteDataStore = RemoteDataStore;
-  window.App = App;
+App.RemoteDataStore = RemoteDataStore;
+window.App = App;
 ...
 ```
 
 ### 使用 jQuery 的 $.post 方法
 
-在 `RemoteDataStore` 模块内部，你将使用 jQuery 的 `$.post` 方法。该方法作为 `XMLHttpRequest` 对象在后台发送 `POST` 请求（图 13.3）。
+在`RemoteDataStore`模块内部，你将使用 jQuery 的`$.post`方法。该方法作为`XMLHttpRequest`对象在后台发送`POST`请求（图 13.3）。
 
 **图 13.3 `RemoteDataStore` 使用 jQuery 进行 Ajax**
 
 ![RemoteDataStore uses jQuery for Ajax](img/remotedatastore-jquery.png)
 
-`$.post` 方法只需要两个信息：要发送请求的服务器 URL 以及要包含的数据。
+`$.post`方法只需要两个信息：要发送请求的服务器 URL 以及要包含的数据。
 
-在 `remotedatastore.js` 中，更新 `add` 方法的主体，使其调用 `$.post` 并为其传递 `this.serverUrl` 和 `val`。
+在`remotedatastore.js`中，更新`add`方法的主体，使其调用`$.post`并为其传递`this.serverUrl`和`val`。
 
 ```javascript
 ...
-  RemoteDataStore.prototype.add = function (key, val) {
+RemoteDataStore.prototype.add = function (key, val) {
   // Code will go here
-    $.post(this.serverUrl, val);
-  };
+  $.post(this.serverUrl, val);
+};
 
-  App.RemoteDataStore = RemoteDataStore;
-  window.App = App;
+App.RemoteDataStore = RemoteDataStore;
+window.App = App;
 ...
 ```
 
-注意 `key` 参数没有被使用。它被保留作为方法声明的一部分，以便使 `RemoteDataStore` 的 `add` 方法与 `DataStore` 的 `add` 方法保持一致。两者都接受咖啡订单信息作为第二个参数。
+注意`key`参数没有被使用。它被保留作为方法声明的一部分，以便使`RemoteDataStore`的`add`方法与`DataStore`的`add`方法保持一致。两者都接受咖啡订单信息作为第二个参数。
 
 ### 添加回调函数
 
-与许多 jQuery 方法一样，`$.post` 可以接受额外的可选参数。当响应从服务器到达时，该函数将被调用。此函数应该预期一个参数，你将其标记为 `serverResponse`。使用 `console.log` 将此 `serverResponse` 打印到控制台。
+与许多 jQuery 方法一样，`$.post`可以接受额外的可选参数。当响应从服务器到达时，该函数将被调用。此函数应该预期一个参数，你将其标记为`serverResponse`。使用`console.log`将此`serverResponse`打印到控制台。
 
 ```javascript
 ...
-  RemoteDataStore.prototype.add = function (key, val) {
-    $.post(this.serverUrl, val, function (serverResponse) {
-      console.log(serverResponse);
-    });
-  };
+RemoteDataStore.prototype.add = function (key, val) {
+  $.post(this.serverUrl, val, function (serverResponse) {
+    console.log(serverResponse);
+  });
+};
 
-  App.RemoteDataStore = RemoteDataStore;
-  window.App = App;
+App.RemoteDataStore = RemoteDataStore;
+window.App = App;
 ...
 ```
 
-保存这些更改到 `remotedatastore.js` 后，启动 `browser-sync` 并打开控制台。使用显示的 URL 实例化 `RemoteDataStore` 对象，该地址是为此创建的测试服务器地址。（再次，此行为了适应页面被折断了。）
+保存这些更改到`remotedatastore.js`后，启动`browser-sync`并打开控制台。使用显示的 URL 实例化`RemoteDataStore`对象，该地址是为此创建的测试服务器地址。（再次，此行为了适应页面被折断了。）
 
 ```javascript
 var remoteDS = new App.RemoteDataStore
     ("http://coffeerun-v2-api.herokuapp.com/api/coffeeorders");
 ```
 
-现在调用它的 `add` 方法，传递一些测试数据：
+现在调用它的`add`方法，传递一些测试数据：
 
 ```javascript
 remoteDS.add('a@b.com', {emailAddress: 'a@b.com', coffee: 'espresso'});
 ```
 
-在控制台中，查看你的 `console.log` 语句打印的内容（图 13.4）。
+在控制台中，查看你的`console.log`语句打印的内容（图 13.4）。
 
 **图 13.4 Console showing result of RemoteDataStore.add**
 
 ![Console showing result of RemoteDataStore.add](img/result-of-add.png)
 
-控制台语句中的对象包含了服务器响应返回的一些信息：`coffee` 和 `emailAddress` 信息，以及一些随服务器而异的账目数据。
+控制台语句中的对象包含了服务器响应返回的一些信息：`coffee`和`emailAddress`信息，以及一些随服务器而异的账目数据。
 
 ### 检查 Ajax 请求和响应
 
-在开发工具中，点击顶部菜单中的 `Network`（位于 Sources 和 Timeline 之间）来打开网络面板。此面板显示了浏览器发出的请求列表，并允许你检查每个请求以获取更多信息（图 13.5）。
+在开发工具中，点击顶部菜单中的`Network`（位于 Sources 和 Timeline 之间）来打开网络面板。此面板显示了浏览器发出的请求列表，并允许你检查每个请求以获取更多信息（图 13.5）。
 
 **图 13.5 Viewing Ajax requests in the network panel**
 
 ![Viewing Ajax requests in the network panel](img/network-panel.png)
 
+你的网络面板列表中可能会有很多网络请求。点击 DevTools 左上角附近的`![](img/clear-network.png)`图标可以清除它。然后，激活底部的控制台抽屉，这样你就可以同时看到控制台和网络面板了。你可以按下键盘上的`Escape`键，或者点击右上角的`![](img/dots.png)`图标来实现。这将打开一个包含`Show console`（显示控制台）选项的菜单。
 
+控制台抽屉将出现在 DevTools 的底部（图 13.6）。
 
-
-你的网络面板列表中可能会有很多网络请求。点击 DevTools 左上角附近的 `![](img/clear-network.png)` 图标可以清除它。然后，激活底部的控制台抽屉，这样你就可以同时看到控制台和网络面板了。你可以按下键盘上的 `Escape` 键，或者点击右上角的 `![](img/dots.png)` 图标来实现。这将打开一个包含 `Show console`（显示控制台）选项的菜单。
-
-控制台抽屉将出现在 DevTools 的底部（图 13.6]）。
-
-**图 13.6 网络面板下方打开控制台抽屉**
+**图 13.6 网络面板下方打开控制台抽屉**
 
 ![网络面板下方打开控制台抽屉](img/console-drawer.png)
 
 在控制台中，输入以下内容：
 
-```
+```javascript
 var remoteDS = new App.RemoteDataStore
     ("http://coffeerun-v2-rest-api.herokuapp.com/api/coffeeorders");
+
 remoteDS.add('a@b.com', {emailAddress: 'a@b.com', coffee: 'espresso'});
 ```
 
-你会在网络面板中看到一个新的条目（图 13.7]）。
+你会在网络面板中看到一个新的条目（图 13.7）。
 
-**图 13.7 网络面板中的 Ajax 请求**
+**图 13.7 网络面板中的 Ajax 请求**
 
 ![网络面板中的 Ajax 请求](img/ajax-request-network-panel.png)
 
-若要了解更多关于该请求的信息，请点击该条目（图 13.8]）。如果你隐藏控制台抽屉，查看详情可能会更方便。
+若要了解更多关于该请求的信息，请点击该条目（图 13.8）。如果你隐藏控制台抽屉，查看详情可能会更方便。
 
-**图 13.8 请求详情**
+**图 13.8 请求详情**
 
 ![请求详情](img/ajax-headers-form-data.png)
 
-详情包含了顶部关于请求的一些通用信息以及底部的表单数据（Form Data）。中间是显示请求和响应 `headers`（头部）的面板。头部是为请求和响应指定的元数据和选项。
+详情包含了顶部关于请求的一些通用信息以及底部的表单数据（Form Data）。中间是显示请求和响应`headers`（头部）的面板。头部是为请求和响应指定的元数据和选项。
 
-在所有数据中，状态码（在 `General` 面板中）和 `Form Data` 面板在开发和调试 Ajax 请求时通常是最用的。
+在所有数据中，状态码（在`General`面板中）和`Form Data`面板在开发和调试 Ajax 请求时通常是最用的。
 
 ## 从服务器检索数据
 
-你的 `RemoteDataStore` 模块可以将单个咖啡订单保存到服务器。下一步要做的是添加一个 `getAll` 原型方法，以便它可以从服务器检索所有订单。在 `remotedatastore.js` 中开始编写：
+你的`RemoteDataStore`模块可以将单个咖啡订单保存到服务器。下一步要做的是添加一个`getAll`原型方法，以便它可以从服务器检索所有订单。在`remotedatastore.js`中开始编写：
 
-```
+```javascript
 ...
-  RemoteDataStore.prototype.add = function (key, val) {
-    ...
-  };
+RemoteDataStore.prototype.add = function (key, val) {
+  ...
+};
 
-  RemoteDataStore.prototype.getAll = function () {
-    // 代码将在这里
-  };
+RemoteDataStore.prototype.getAll = function () {
+  // 代码将在这里
+};
 
-  App.RemoteDataStore = RemoteDataStore;
-  window.App = App;
+App.RemoteDataStore = RemoteDataStore;
+window.App = App;
 ...
 ```
 
-接下来，你将添加对 jQuery 的 `$.get` 方法的调用。类似于 `$.post`，你将为其传递服务器 URL。但你不会传递任何数据，因为你是在获取信息而不是保存信息。你需要传递一个函数参数，以便它在数据从服务器返回时知道如何处理这些数据。
+接下来，你将添加对 jQuery 的`$.get`方法的调用。类似于`$.post`，你将为其传递服务器 URL。但你不会传递任何数据，因为你是在获取信息而不是保存信息。你需要传递一个函数参数，以便它在数据从服务器返回时知道如何处理这些数据。
 
-在 `RemoteDataStore.prototype.getAll` 中调用 `$.get`。
+在`RemoteDataStore.prototype.getAll`中调用`$.get`。
 
-```
+```javascript
 ...
-  RemoteDataStore.prototype.getAll = function () {
-    // 代码将在这里
-    $.get(this.serverUrl, function (serverResponse) {
-      console.log(serverResponse);
-    });
-  };
+RemoteDataStore.prototype.getAll = function () {
+  // 代码将在这里
+  $.get(this.serverUrl, function (serverResponse) {
+    console.log(serverResponse);
+  });
+};
 
-  App.RemoteDataStore = RemoteDataStore;
-  window.App = App;
+App.RemoteDataStore = RemoteDataStore;
+window.App = App;
 ...
 ```
 
@@ -7184,107 +7496,107 @@ remoteDS.add('a@b.com', {emailAddress: 'a@b.com', coffee: 'espresso'});
 
 ### 检查响应数据
 
-在控制台中，使用与之前相同的 URL 实例化 `RemoteDataStore`。（小技巧：与其重新输入带有 URL 的极长行，你可以使用上下箭头键循环切换你在控制台中输入过的语句）。然后调用它的 `getAll` 方法：
+在控制台中，使用与之前相同的 URL 实例化`RemoteDataStore`。（小技巧：与其重新输入带有 URL 的极长行，你可以使用上下箭头键循环切换你在控制台中输入过的语句）。然后调用它的`getAll`方法：
 
-```
+```javascript
 var remoteDS = new App.RemoteDataStore
     ("http://coffeerun-v2-rest-api.herokuapp.com/api/coffeeorders");
+
 remoteDS.getAll();
 ```
 
-在 DevTools 的网络面板中，你会看到 `GET` 请求已发出。它应该在几十毫秒内返回。一些咖啡订单信息（来自服务器上预加载的数据）将出现在控制台中（图 13.9]）。
+在 DevTools 的网络面板中，你会看到`GET`请求已发出。它应该在几十毫秒内返回。一些咖啡订单信息（来自服务器上预加载的数据）将出现在控制台中（图 13.9）。
 
-**图 13.9 检查 `getAll` 的响应**
+**图 13.9 检查`getAll`的响应**
 
 ![检查来自 getAll 的响应](img/inspecting-get.png)
 
 ### 添加回调
 
-`getAll` 方法检索远程服务器上所有的咖啡订单，并将它们传递给传入的回调函数 `cb`。你还需要实现 `get` 方法，该方法通过客户地址检索单个咖啡订单。像 `getAll` 一样，它将接受一个函数参数，它会调用该函数并传递检索到的咖啡订单。
+`getAll`方法检索远程服务器上所有的咖啡订单，并将它们传递给传入的回调函数`cb`。你还需要实现`get`方法，该方法通过客户地址检索单个咖啡订单。像`getAll`一样，它将接受一个函数参数，它会调用该函数并传递检索到的咖啡订单。
 
-将此 `get` 的实现添加到 `remotedatastore.js` 中：
+将此`get`的实现添加到`remotedatastore.js`中：
 
-```
+```javascript
 ...
-  RemoteDataStore.prototype.getAll = function (cb) {
-    $.get(this.serverUrl, function (serverResponse) {
-      console.log(serverResponse);
-      cb(serverResponse);
-    });
-  };
+RemoteDataStore.prototype.getAll = function (cb) {
+  $.get(this.serverUrl, function (serverResponse) {
+    console.log(serverResponse);
+    cb(serverResponse);
+  });
+};
 
-  RemoteDataStore.prototype.get = function (key, cb) {
-    $.get(this.serverUrl + '/' + key, function (serverResponse) {
-      console.log(serverResponse);
-      cb(serverResponse);
-    });
-  };
+RemoteDataStore.prototype.get = function (key, cb) {
+  $.get(this.serverUrl + '/' + key, function (serverResponse) {
+    console.log(serverResponse);
+    cb(serverResponse);
+  });
+};
 
-  App.RemoteDataStore = RemoteDataStore;
-  window.App = App;
+App.RemoteDataStore = RemoteDataStore;
+window.App = App;
 ...
 ```
 
-保存对 `remotedatastore.js` 的更改。在控制台中输入以下代码，向 `remoteDS.get` 传递一个匿名函数：
+保存对`remotedatastore.js`的更改。在控制台中输入以下代码，向`remoteDS.get`传递一个匿名函数：
 
-```
+```javascript
 var remoteDS = new App.RemoteDataStore
     ("http://coffeerun-v2-rest-api.herokuapp.com/api/coffeeorders");
+
 remoteDS.get('a@b.com', function () {});
 ```
 
-你的控制台看起来类似于 图 13.10]。
+你的控制台看起来类似于图 13.10。
 
-**图 13.10 Testing `RemoteDataStore.prototype.get`**
+**图 13.10 Testing `RemoteDataStore.prototype.get`**
 
 ![Testing RemoteDataStore.prototype.get](img/testing-get.png)
 
-
-
-
 使用 Ajax，你现在可以将订单保存到服务器，并从服务器检索订单。最后需要做的工作是在订单交付后从服务器上删除这些订单。
 
-要实现这一点，你将向单个订单的 URL 发送 HTTP 请求。就像你使用 `RemoteDataStore.prototype.get` 一样，你将使用服务器 URL，但在末尾添加一个斜杠和客户的电子邮件地址。
+要实现这一点，你将向单个订单的 URL 发送 HTTP 请求。就像你使用`RemoteDataStore.prototype.get`一样，你将使用服务器 URL，但在末尾添加一个斜杠和客户的电子邮件地址。
 
-你将向服务器发送一个 `DELETE` 请求。`DELETE` 是 HTTP 动词之一。如果服务器在相应的 URL 收到 `DELETE` 请求，它就会删除与该客户电子邮件地址相关的数据。
+你将向服务器发送一个`DELETE`请求。`DELETE`是 HTTP 动词之一。如果服务器在相应的 URL 收到`DELETE`请求，它就会删除与该客户电子邮件地址相关的数据。
 
 ### 使用 jQuery 的 $.ajax 方法
 
-jQuery 提供了 `$.get` 和 `$.post` 方法作为便利方法，因为这两个是两个中最常用的 HTTP 动词。例如，当浏览器请求 HTML、CSS、JavaScript 或图像文件（以及其他）时，会使用 `GET` 请求。当提交表单时，通常会使用 `POST` 请求。
+jQuery 提供了`$.get`和`$.post`方法作为便利方法，因为这两个是两个中最常用的 HTTP 动词。例如，当浏览器请求 HTML、CSS、JavaScript 或图像文件（以及其他）时，会使用`GET`请求。当提交表单时，通常会使用`POST`请求。
 
-jQuery 并没有提供通过 Ajax 发送 `DELETE` 请求的便利方法。相反，你需要使用 `$.ajax` 方法。（`$.get` 和 `$.post` 实际上是为你调用了 `$.ajax`，并指定 `GET` 和 `POST` 为 HTTP 动词。）
+jQuery 并没有提供通过 Ajax 发送`DELETE`请求的便利方法。相反，你需要使用`$.ajax`方法。（`$.get`和`$.post`实际上是为你调用了`$.ajax`，并指定`GET`和`POST`为 HTTP 动词。）
 
-在 `remotedatastore.js` 中，添加 `remove` 原型方法。在其中，调用 `$.ajax` 方法并传递两个参数。第一个参数是单个咖啡订单的 URL，由服务器 URL、斜杠和 `key`（客户的电子邮件地址）组成。第二个参数是一个包含 Ajax 请求选项或设置的对象。对于 `remove` 方法，你唯一需要指定的选项是 `type` 为 `DELETE`。
+在`remotedatastore.js`中，添加`remove`原型方法。在其中，调用`$.ajax`方法并传递两个参数。第一个参数是单个咖啡订单的 URL，由服务器 URL、斜杠和`key`（客户的电子邮件地址）组成。第二个参数是一个包含 Ajax 请求选项或设置的对象。对于`remove`方法，你唯一需要指定的选项是`type`为`DELETE`。
 
-```
+```javascript
 ...
-  RemoteDataStore.prototype.get = function (key, cb) {
-    ...
-  };
+RemoteDataStore.prototype.get = function (key, cb) {
+  ...
+};
 
-  RemoteDataStore.prototype.remove = function (key) {
-    $.ajax(this.serverUrl + '/' + key, {
-      type: 'DELETE'
-    });
-  };
+RemoteDataStore.prototype.remove = function (key) {
+  $.ajax(this.serverUrl + '/' + key, {
+    type: 'DELETE'
+  });
+};
 
-  App.RemoteDataStore = RemoteDataStore;
-  window.App = App;
+App.RemoteDataStore = RemoteDataStore;
+window.App = App;
 ...
 ```
 
-（Ajax 请求有许多可用选项，你可以在 `api.jquery.com/jquery.ajax` 了解。）
+（Ajax 请求有许多可用选项，你可以在`api.jquery.com/jquery.ajax`了解。）
 
-保存并返回控制台。实例化一个新的 `RemoteDataStore` 并调用 `remove` 方法。传入你创建的测试订单的电子邮件地址。最后，调用 `getAll` 来确认它不再包含在服务器返回的订单中。
+保存并返回控制台。实例化一个新的`RemoteDataStore`并调用`remove`方法。传入你创建的测试订单的电子邮件地址。最后，调用`getAll`来确认它不再包含在服务器返回的订单中。
 
-```
+```javascript
 var remoteDS = new App.RemoteDataStore
     ("http://coffeerun-v2-rest-api.herokuapp.com/api/coffeeorders");
+
 remoteDS.remove('a@b.com');
 remoteDS.getAll();
 ```
 
-如果你检查 `DELETE` 请求的服务器响应，你可以看到服务器返回了关于它执行操作的信息。（正如我们之前提到的，其他服务器可能会在响应中提供不同的信息。）
+如果你检查`DELETE`请求的服务器响应，你可以看到服务器返回了关于它执行操作的信息。（正如我们之前提到的，其他服务器可能会在响应中提供不同的信息。）
 
 **图 13.11 检查 DELETE 请求的响应**
 
@@ -7292,13 +7604,14 @@ remoteDS.getAll();
 
 ### 将 DataStore 替换为 RemoteDataStore
 
-你的 `RemoteDataStore` 模块已经完成。现在是时候将 `DataStore` 实例替换为 `RemoteDataStore` 实例了。
+你的`RemoteDataStore`模块已经完成。现在是时候将`DataStore`实例替换为`RemoteDataStore`实例了。
 
-打开 `main.js`。从 `App` 命名空间导入 `RemoteDataStore`。
+打开`main.js`。从`App`命名空间导入`RemoteDataStore`。
 
-```
+```javascript
 (function (window) {
   'use strict';
+
   var FORM_SELECTOR = '[data-coffee-order="form"]';
   var CHECKLIST_SELECTOR = '[data-coffee-order="checklist"]';
   var App = window.App;
@@ -7309,38 +7622,59 @@ remoteDS.getAll();
 ...
 ```
 
-此外，添加一个名为 `SERVER_URL` 的新变量，并赋值为 CoffeeRun 测试服务器 URL 的字符串。
+此外，添加一个名为`SERVER_URL`的新变量，并赋值为 CoffeeRun 测试服务器 URL 的字符串。
 
-```
+```javascript
 (function (window) {
   'use strict';
+
   var FORM_SELECTOR = '[data-coffee-order="form"]';
-  var CHECKLIST_SELECTOR = '[data-coffee-order="checklist"]';
-  var SERVER_URL = 'http://coffeerun-v2-rest-api.herokuapp.com/api/coffeeorders';
-  var App = window.App;
-  var Truck = App.Truck;
-  var DataStore = App.DataStore;
-  var RemoteDataStore = App.RemoteDataStore;
-...
 ```
 
+
+
+`var CHECKLIST_SELECTOR = '[data-coffee-order="checklist"]';`
+
+`var SERVER_URL = 'http://coffeerun-v2-rest-api.herokuapp.com/api/coffeeorders';`
+
+`var App = window.App;`
+
+`var Truck = App.Truck;`
+
+`var DataStore = App.DataStore;`
+
+`var RemoteDataStore = App.RemoteDataStore;`
+
+...
+
+```
 接下来，创建一个 `RemoteDataStore` 的新实例，并向传递 `SERVER_URL`。
 
 最后，不要向 `DataStore` 构造函数传递 `RemoteDataStore` 的新实例，而是传递 `remoteDS`。由于 `DataStore` 和 `RemoteDataStore` 具有相同名称的方法并接受（大部分）相同的参数，此更改将生效。
 
 ```
-...
-  var RemoteDataStore = App.RemoteDataStore;
-  var FormHandler = App.FormHandler;
-  var Validation = App.Validation;
-  var CheckList = App.CheckList;
-  var remoteDS = new RemoteDataStore(SERVER_URL);
-  var webshim = window.webshim;
-  var myTruck = new Truck(remoteDS);
-  window.myTruck = myTruck;
-...
-```
 
+...
+
+`var RemoteDataStore = App.RemoteDataStore;`
+
+`var FormHandler = App.FormHandler;`
+
+`var Validation = App.Validation;`
+
+`var CheckList = App.CheckList;`
+
+`var remoteDS = new RemoteDataStore(SERVER_URL);`
+
+`var webshim = window.webshim;`
+
+`var myTruck = new Truck(remoteDS);`
+
+`window.myTruck = myTruck;`
+
+...
+
+```
 保存你的更改并返回浏览器。输入一些订单信息并提交表单。在此操作期间保持网络面板打开。你应该能看到通过表单添加或通过清单交付的每个咖啡订单都有相应的网络事务。
 
 **图 13.12 将咖啡订单保存到服务器**
@@ -7367,9 +7701,6 @@ remoteDS.getAll();
 
 ![Postman](img/postman-app.png)
 
-
-
-
 `Postman` 是你在编写服务器通信代码之前探索 API 的不可或缺的工具。你可以从 `Chrome` 网上应用商店下载它，地址为：[`chrome.google.com/webstore`](https://chrome.google.com/webstore/)。（搜索搜索“Postman”即可找到。）
 
 # 14 Deferred（延迟）与 Promise（承诺）
@@ -7386,38 +7717,71 @@ remoteDS.getAll();
 
 ```
 formHandler.addSubmitHandler(function (data) {
+
   try {
+
     myTruck.createOrder(function (error) {
+
       if (error) {
+
         throw new Exception(error)
+
       } else {
+
         try {
+
           saveOnServer(function (error) {
+
             if (error) {
+
               throw new Exception({message: 'server error'});
+
             } else {
+
               try {
+
                 checkList.addRow();
+
               } catch (e2) {
+
                 handleDomError(e2);
+
               }
+
             }
+
           })
+
         } catch (e) {
+
           handleServerError(e, function () {
+
             // 尝试再次添加行
+
             try {
+
               checkList.addRow();
+
             } catch (e3) {
+
               handleDomError(e3);
+
             }
+
           });
+
         }
+
       }
+
     });
+
   } catch (e) {
+
     alert('Something bad bad.');
+
   }
+
 });
 ```
 
@@ -7425,10 +7789,15 @@ formHandler.addSubmitHandler(function (data) {
 
 ```
 formHandler.addSubmitHandler()
+
   .then(myTruck.createOrder)
+
   .then(saveOnServer)
+
   .catch(handleServerError)
+
   .then(checkList.addRow)
+
   .catch(handleDomError);
 ```
 
@@ -7453,53 +7822,85 @@ jQuery 的 `$.ajax` 方法（包括 `$.post` 和 `$.get`）返回一个 `Deferre
 利用 jQuery `ajax` 方法返回的 `Deferred` 对象。在 `remotedastore.js` 中，更新原型以使其返回调用 `$.get`、`$.post` 和 `$.ajax` 的结果。
 
 ```
-  RemoteDataStore.prototype.add = function (key, val) {
-    return $.post(this.serverUrl, val, function (serverResponse) {
-      console.log(serverResponse);
-    });
-  };
+RemoteDataStore.prototype.add = function (key, val) {
 
-  RemoteDataStore.prototype.getAll = function (cb) {
-    return $.get(this.serverUrl, function (serverResponse) {
-      console.log(serverResponse);
-      cb(serverResponse);
-    });
-  };
+  return $.post(this.serverUrl, val, function (serverResponse) {
 
-  RemoteDataStore.prototype.get = function (key, cb) {
-    return $.get(this.serverUrl + '/' + key, function (serverResponse) {
-      console.log(serverResponse);
-      cb(serverResponse);
-    });
-  };
+    console.log(serverResponse);
 
-  RemoteDataStore.prototype.remove = function (key) {
-    return $.ajax(this.serverUrl + '/' + key, {
-      type: 'DELETE'
-    });
-  };
+  });
+
+};
+
+RemoteDataStore.prototype.getAll = function (cb) {
+
+  return $.get(this.serverUrl, function (serverResponse) {
+
+    console.log(serverResponse);
+
+    cb(serverResponse);
+
+  });
+
+};
+
+RemoteDataStore.prototype.get = function (key, cb) {
+
+  return $.get(this.serverUrl + '/' + key, function (serverResponse) {
+
+    console.log(serverResponse);
+
+    cb(serverResponse);
+
+  });
+
+};
+
+RemoteDataStore.prototype.remove = function (key) {
+
+  return $.ajax(this.serverUrl + '/' + key, {
+
+    type: 'DELETE'
+
+  });
+
+};
 ```
 
 因为它们现在返回 jQuery 产生的 `Deferred`，所以 `get` 和 `getAll` 并不绝对需要回调。为了考虑到没有回调的情况，添加一个 `if` 语句在调用回调之前检查是否传递了 `cb`。
 
 ```
-  RemoteDataStore.prototype.getAll = function (cb) {
-    return $.get(this.serverUrl, function (serverResponse) {
-      if (cb) {
-        console.log(serverResponse);
-        cb(serverResponse);
-      }
-    });
-  };
+RemoteDataStore.prototype.getAll = function (cb) {
 
-  RemoteDataStore.prototype.get = function (key, cb) {
-    return $.get(this.serverUrl + '/' + key, function (serverResponse) {
-      if (cb) {
-        console.log(serverResponse);
-        cb(serverResponse);
-      }
-    });
-  };
+  return $.get(this.serverUrl, function (serverResponse) {
+
+    if (cb) {
+
+      console.log(serverResponse);
+
+      cb(serverResponse);
+
+    }
+
+  });
+
+};
+
+RemoteDataStore.prototype.get = function (key, cb) {
+
+  return $.get(this.serverUrl + '/' + key, function (serverResponse) {
+
+    if (cb) {
+
+      console.log(serverResponse);
+
+      cb(serverResponse);
+
+    }
+
+  });
+
+};
 ```
 
 保存 `remotedastore.js`。由于 `RemoteDataStore` 方法返回 `Deferred`，你需要更新 `Truck` 方法同样这样做。现在，你将专注于 `createOrder` 和 `deliverOrder`。
@@ -7507,19 +7908,22 @@ jQuery 的 `$.ajax` 方法（包括 `$.post` 和 `$.get`）返回一个 `Deferre
 打开 `truck.js`，在在这两个方法中调用 `this.db` 的地方添加 `return`。
 
 ```
-  Truck.prototype.createOrder = function (order) {
-    console.log('Adding order for ' + order.emailAddress);
-    return this.db.add(order.emailAddress, order);
-  };
+Truck.prototype.createOrder = function (order) {
 
-  Truck.prototype.deliverOrder = function (customerId) {
-    console.log('Delivering order for ' + customerId);
-    return this.db.remove(customerId);
-  };
+  console.log('Adding order for ' + order.emailAddress);
+
+  return this.db.add(order.emailAddress, order);
+
+};
+
+Truck.prototype.deliverOrder = function (customerId) {
+
+  console.log('Delivering order for ' + customerId);
+
+  return this.db.remove(customerId);
+
+};
 ```
-
-
-
 
 保存 `truck.js`。`Truck` 现在返回由 `RemoteDataStore` 生成的 `Deferred`。在使用 `Promise` 和 `Deferred` 时，从函数中返回它们是一项最佳实践。返回它们可以让任何调用 `createOrder` 或 `deliverOrder` 的对象注册回调函数，这些回调会在异步工作完成时被触发。
 
@@ -7539,12 +7943,19 @@ jQuery 的 `$.ajax` 方法（包括 `$.post` 和 `$.get`）返回一个 `Deferre
 
 ```
 ...
-  formHandler.addSubmitHandler(function (data) {
-    myTruck.createOrder.call(myTruck, data);
-      .then(function () {
-        checkList.addRow.call(checkList, data);
-      });
-  });
+
+formHandler.addSubmitHandler(function (data) {
+
+  myTruck.createOrder.call(myTruck, data);
+
+    .then(function () {
+
+      checkList.addRow.call(checkList, data);
+
+    });
+
+});
+
 ...
 ```
 
@@ -7556,16 +7967,27 @@ jQuery 的 `$.ajax` 方法（包括 `$.post` 和 `$.get`）返回一个 `Deferre
 
 ```
 ...
-  formHandler.addSubmitHandler(function (data) {
-    myTruck.createOrder.call(myTruck, data)
-      .then(function () {
-        checkList.addRow.call(checkList, data);
-      },
-      function () {
-        alert('无法访问服务器。请稍后再试。');
-      }
-      );
-  });
+
+formHandler.addSubmitHandler(function (data) {
+
+  myTruck.createOrder.call(myTruck, data)
+
+    .then(function () {
+
+      checkList.addRow.call(checkList, data);
+
+    },
+
+    function () {
+
+      alert('无法访问服务器。请稍后再试。');
+
+    }
+
+    );
+
+});
+
 ...
 ```
 
@@ -7573,11 +7995,17 @@ jQuery 的 `$.ajax` 方法（包括 `$.post` 和 `$.get`）返回一个 `Deferre
 
 ```
 (function (window) {
+
   'use strict';
+
   var FORM_SELECTOR = '[data-coffee-order="form"]';
+
   var CHECKLIST_SELECTOR = '[data-coffee-order="checklist"]';
+
   var SERVER_URL = 'http://coffeerun-v2-rest-api.herokuapp.com/api/coffeeorders/';
+
   var App = window.App;
+
 ...
 ```
 
@@ -7591,25 +8019,41 @@ jQuery 的 `$.ajax` 方法（包括 `$.post` 和 `$.get`）返回一个 `Deferre
 
 ```
 (function (window) {
+
   'use strict';
+
   var FORM_SELECTOR = '[data-coffee-order="form"]';
-  var CHECKLIST_SELECTOR = '[data-coffee-order="checklist"]';
-  var SERVER_URL = 'http://coffeerun-v2-rest-api.herokuapp.com/api/coffeeorders/';
-
-  ...
-
-  formHandler.addSubmitHandler(function (data) {
-    myTruck.createOrder.call(myTruck, data)
-      .then(function () {
-        checkList.addRow.call(checkList, data);
-      },
-      function () {
-        alert('无法访问服务器。请稍后再试。');
-      }
-      );
-  });
-...
 ```
+
+
+
+`var CHECKLIST_SELECTOR = '[data-coffee-order="checklist"]';`
+
+`var SERVER_URL = 'http://coffeerun-v2-rest-api.herokuapp.com/api/coffeeorders/';`
+
+...
+
+`formHandler.addSubmitHandler(function (data) {`
+
+`myTruck.createOrder.call(myTruck, data)`
+
+`.then(function () {`
+
+`checkList.addRow.call(checkList, data);`
+
+`},`
+
+`function () {`
+
+`alert('无法访问服务器。请稍后再试。');`
+
+`}`
+
+`);`
+
+`});`
+
+...
 
 ## 在仅限回调的情况下使用 Deferred
 
@@ -7621,12 +8065,19 @@ jQuery 的 `$.ajax` 方法（包括 `$.post` 和 `$.get`）返回一个 `Deferre
 
 ```
 ...
+
   formHandler.addSubmitHandler(function (data) {
+
     return myTruck.createOrder.call(myTruck, data);
+
       .then(function () {
+
         checkList.addRow.call(checkList, data);
+
       });
+
   });
+
 ...
 ```
 
@@ -7634,24 +8085,41 @@ jQuery 的 `$.ajax` 方法（包括 `$.post` 和 `$.get`）返回一个 `Deferre
 
 ```
 ...
+
   FormHandler.prototype.addSubmitHandler = function (fn) {
+
     console.log('正在为表单设置提交处理程序');
+
     this.$formElement.on('submit', function (event) {
+
       event.preventDefault();
 
       var data = {};
+
       $(this).serializeArray().forEach(function (item) {
+
         data[item.name] = item.value;
+
         console.log(item.name + ' is ' + item.value);
+
       });
+
       console.log(data);
+
       fn(data);
+
       .then(function () {
+
         this.reset();
+
         this.elements[0].focus();
+
       });
+
     });
+
   };
+
 ...
 ```
 
@@ -7661,21 +8129,27 @@ jQuery 的 `$.ajax` 方法（包括 `$.post` 和 `$.get`）返回一个 `Deferre
 
 在 `formhandler.js` 中进行此更改。
 
-
-
-
-
 ```javascript
 ...
+
   FormHandler.prototype.addSubmitHandler = function (fn) {
+
     ...
+
       fn(data)
+
         .then(function () {
+
           this.reset();
+
           this.elements[0].focus();
+
         }.bind(this));
+
     });
+
   };
+
 ...
 ```
 
@@ -7687,16 +8161,27 @@ jQuery 的 `$.ajax` 方法（包括 `$.post` 和 `$.get`）返回一个 `Deferre
 
 ```javascript
 ...
+
   CheckList.prototype.addClickHandler = function (fn) {
+
     this.$element.on('click', 'input', function (event) {
+
       var email = event.target.value;
+
       this.removeRow(email);
+
       fn(email);
+
         .then(function () {
+
           this.removeRow(email);
+
         }.bind(this));
+
     }.bind(this));
+
   };
+
 ...
 ```
 
@@ -7716,14 +8201,21 @@ checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
 
 ```javascript
 ...
+
   Truck.prototype.printOrders = function () {
+
     var customerIdArray = Object.keys(this.db.getAll());
 
     console.log('Truck #' + this.truckId + ' has pending orders:');
+
     customerIdArray.forEach(function (id) {
+
       console.log(this.db.get(id));
+
     }.bind(this));
+
   };
+
 ...
 ```
 
@@ -7731,17 +8223,27 @@ checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
 
 ```javascript
 ...
+
   Truck.prototype.printOrders = function () {
+
     return this.db.getAll()
+
       .then(function (orders) {
+
         var customerIdArray = Object.keys(this.db.getAll());
 
         console.log('Truck #' + this.truckId + ' has pending orders:');
+
         customerIdArray.forEach(function (id) {
+
           console.log(this.db.get(id));
+
         }.bind(this));
+
       }.bind(this));
+
   };
+
 ...
 ```
 
@@ -7749,17 +8251,27 @@ checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
 
 ```javascript
 ...
+
   Truck.prototype.printOrders = function () {
+
     return this.db.getAll()
+
       .then(function (orders) {
+
         var customerIdArray = Object.keys(orders);
 
         console.log('Truck #' + this.truckId + ' has pending orders:');
+
         customerIdArray.forEach(function (id) {
+
           console.log(this.db.get(id));
+
         }.bind(this));
+
       }.bind(this));
+
   };
+
 ...
 ```
 
@@ -7767,17 +8279,27 @@ checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
 
 ```javascript
 ...
+
   Truck.prototype.printOrders = function () {
+
     return this.db.getAll()
+
       .then(function (orders) {
+
         var customerIdArray = Object.keys(orders);
 
         console.log('Truck #' + this.truckId + ' has pending orders:');
+
         customerIdArray.forEach(function (id) {
+
           console.log(this.db.get(id)); orders[id]);
+
         }.bind(this));
+
       }.bind(this));
+
   };
+
 ...
 ```
 
@@ -7785,19 +8307,31 @@ checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
 
 ```javascript
 ...
+
   Truck.prototype.printOrders = function (printFn) {
+
     return this.db.getAll()
+
       .then(function (orders) {
+
         var customerIdArray = Object.keys(orders);
 
         console.log('Truck #' + this.truckId + ' has pending orders:');
+
         customerIdArray.forEach(function (id) {
+
           console.log(this.db.get(id));
+
           if (printFn) {
+
             printFn(orders[id]);
+
           }
+
         }.bind(this));
+
       }.bind(this));
+
   };
 ```
 
@@ -7805,6 +8339,7 @@ checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
 
 ```javascript
 ...
+
   checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
 
   myTruck.printOrders(checkList.addRow.bind(checkList));
@@ -7812,30 +8347,35 @@ checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
 
 保存并返回浏览器。CoffeeRun 应该显示现有的咖啡订单。手动刷新以确认检查列表已重新填充。检查网络面板，查看 Ajax 请求正在发生。
 
-
-
-
-
 在 `datastore.js` 中，你将更新 `add` 方法。首先，创建一个 `Promise` 变量并将其赋值为 `window.Promise`。虽然这并非绝对必要，但继续这种模式（即从全局作用域导入模块内部所需的任何内容）是一个是一个好习惯。
 
 在 `add` 方法内部，创建一个名为 `promise` 的新变量。将其赋值为一个新的 `Promise` 实例。确保在 `add()` 结束时返回 `promise` 变量。
 
 ```javascript
 (function (window) {
+
   'use strict';
+
   var App = window.App || {};
+
   var Promise = window.Promise;
 
   function DataStore() {
+
     this.data = {};
+
   }
 
   DataStore.prototype.add = function (key, val) {
+
     this.data[key] = val;
+
     var promise = new Promise();
 
     return promise;
+
   };
+
 ...
 ```
 
@@ -7843,13 +8383,19 @@ checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
 
 ```javascript
 ...
+
   DataStore.prototype.add = function (key, val) {
+
     this.data[key] = val;
+
     var promise = new Promise(function (resolve, reject) {
+
     });
 
     return promise;
+
   };
+
 ...
 ```
 
@@ -7859,31 +8405,45 @@ checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
 
 ```javascript
 ...
+
   DataStore.prototype.add = function (key, val) {
+
     this.data[key] = val;
+
     var promise = new Promise(function (resolve, reject) {
+
       this.data[key] = val;
+
     }.bind(this));
 
     return promise;
+
   };
+
 ...
 ```
 
 ### 解析 Promise
 
-### 在匿名函数的最后面，不带参数地调用 `resolve`。
+在匿名函数的最后面，不带参数地调用 `resolve`。
 
 ```javascript
 ...
+
   DataStore.prototype.add = function (key, val) {
+
     var promise = new Promise(function (resolve, reject) {
+
       this.data[key] = val;
+
       resolve(null);
+
     }.bind(this));
 
     return promise;
+
   };
+
 ...
 ```
 
@@ -7895,130 +8455,130 @@ checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
 
 ```javascript
 ...
+
   function DataStore() {
+
     this.data = {};
+
   }
 
   function promiseResolvedWith(value) {
+
     var promise = new Promise(function (resolve, reject) {
+
       resolve(value);
+
     });
-    return promise;
-  }
-
-  DataStore.prototype.add = function (key, val) {
-    var promise = new Promise(function (resolve, reject) {
-      this.data[key] = val;
-      resolve(null);
-    }.bind(this));
-
-    return promise;
-    return promiseResolvedWith(null);
-  };
-...
 ```
 
-`promiseResolvedWith` 是你在 `add` 方法中编写的 `Promise` 代码的可复用形式。它接受一个名为 `value` 的参数，创建一个名为 `promise` 的新变量，并将其赋值给新的 `Promise` 实例。它向 `Promise` 构造函数传递了一个匿名函数，该函数接受两个参数：`resolve` 和 `reject`。
 
 
+```
+return promise;
+```
 
+```
+DataStore.prototype.add = function (key, val) {
+  var promise = new Promise(function (resolve, reject) {
+    this.data[key] = val;
+    resolve(null);
+  }.bind(this));
+  return promise;
+  return promiseResolvedWith(null);
+};
+```
 
+`promiseResolvedWith` 是你在`add`方法中编写的`Promise`代码的可复用形式。它接受一个名为`value`的参数，创建一个名为`promise`的新变量，并将其赋值给新的`Promise`实例。它向`Promise`构造函数传递了一个匿名函数，该函数接受两个参数：`resolve`和`reject`。
 
-当你为浏览器编写 JavaScript 时，你的代码可以访问如 `document` 和 `window` 等全局对象，以及其他 API 和库。通过 `Node`，你的代码可以访问硬盘、数据库和网络（图 15.1]）。
+当你为浏览器编写 JavaScript 时，你的代码可以访问如`document`和`window`等全局对象，以及其他 API 和库。通过`Node`，你的代码可以访问硬盘、数据库和网络（图 15.1）。
 
 **图 15.1 在浏览器中运行 JavaScript 与通过 Node 运行**
 
 ![JavaScript running in browser vs via Node](img/js-engines.png)
 
-使用 `Node`，你可以创建从命令行工具到 Web 服务器的任何内容。在接下来的章节中，你将使用 `Node` 来帮助创建一个名为 Chattrbox 的实时聊天应用（图 15.2]）。
+使用`Node`，你可以创建从命令行工具到 Web 服务器的任何内容。在接下来的章节中，你将使用`Node`来帮助创建一个名为 Chattrbox 的实时聊天应用（图 15.2）。
 
 **图 15.2 Chattrbox：专用于重要对话**
 
 ![Chattrbox: strictly for important conversations](img/chattrbox-final-screenshot.png)
 
-Chattrbox 将由两部分组成：`Node.js` 服务器和一个在浏览器中运行的 JavaScript 应用程序。浏览器将连接到 `Node` 服务器并接收 HTML、CSS 和 JavaScript 文件。此时，浏览器中的 JavaScript 应用将开始通过 WebSockets 处理实时通信。这一过程在图 15.3]中进行了示意。
+Chattrbox 将由两部分组成：`Node.js`服务器和一个在浏览器中运行的 JavaScript 应用程序。浏览器将连接到`Node`服务器并接收 HTML、CSS 和 JavaScript 文件。此时，浏览器中的 JavaScript 应用将开始通过 WebSockets 处理实时通信。这一过程在图 15.3 中进行了示意。
 
 **图 15.3 Chattrbox 应用网络图**
 
 ![Network diagram of the Chattrbox application](img/chattrbox-data-diagram.png)
 
-你将在下一章中学习 WebSockets。本章侧重于让你熟悉 `Node`。
+你将在下一章中学习 WebSockets。本章侧重于让你熟悉`Node`。
 
 ## Node 和 npm
 
-当你在第 1 章]中安装 `Node.js` 时，你获得了两个命令行程序：`node` 和 `Node` 包管理器 `npm`。你可能还记得 `npm` 允许你安装开源开发工具，例如 `browser-sync`。`node` 程序负责运行用 JavaScript 编写的程序。
+当你在第 1 章中安装`Node.js`时，你获得了两个命令行程序：`node`和`Node`包管理器`npm`。你可能还记得`npm`允许你安装开源开发工具，例如`browser-sync`。`node`程序负责运行用 JavaScript 编写的程序。
 
-在本章中，你的大部分工作将通过 `npm` 完成。`npm` 命令行工具可以执行各种任务，例如安装可以集成到项目中的第三方代码，以及管理项目的工作流和外部依赖。在本章中，你将使用 `npm` 来：
+在本章中，你的大部分工作将通过`npm`完成。`npm`命令行工具可以执行各种任务，例如安装可以集成到项目中的第三方代码，以及管理项目的工作流和外部依赖。在本章中，你将使用`npm`来：
 
-* 使用 `npm init` 创建 `package.json` 文件
-* 使用 `npm install --save` 添加第三方模块
-* 运行保存在 `package.json` 的 `scripts` 部分频繁使用的工具
+* 使用`npm init`创建`package.json`文件
+* 使用`npm install --save`添加第三方模块
+* 运行保存在`package.json`的`scripts`部分频繁使用的工具
 
-`Node` 不仅仅是 `node` 和 `npm` 命令。它还包含许多实用的模块，这些模块提供了构造函数，帮助你完成如操作文件和文件夹、通过网络通信以及处理事件等工作。此外，在为 `Node` 编写 JavaScript 时，你可以可以使用实用函数，方便 JavaScript 与 `Node` 模块生态系统的交互。例如，`Node` 提供的模块模式比你为 CoffeeRun 使用的 IIFEs 模式要简单得多。
+`Node`不仅仅是`node`和`npm`命令。它还包含许多实用的模块，这些模块提供了构造函数，帮助你完成如操作文件和文件夹、通过网络通信以及处理事件等工作。此外，在为`Node`编写 JavaScript 时，你可以使用实用函数，方便 JavaScript 与`Node`模块生态系统的交互。例如，`Node`提供的模块模式比你为 CoffeeRun 使用的 IIFEs 模式要简单得多。
 
-上述的 `package.json` 文件是一个作为你 `Node` 项目清单的文件。它保存了项目名称、版本号、描述和其他信息。更重要的是，你可以在这里存储配置设置和命令，供 `npm` 在测试和构建你的应用程序时使用。
+上述的`package.json`文件是一个作为你`Node`项目清单的文件。它保存了项目名称、版本号、描述和其他信息。更重要的是，你可以在这里存储配置设置和命令，供`npm`在测试和构建你的应用程序时使用。
 
-你可以手动创建此文件，但让 `npm` 为你创建要得多。
+你可以手动创建此文件，但让`npm`为你创建要好得多。
 
 ### npm init
 
-在你的项目文件夹中创建一个名为 `chattrbox` 的目录。在终端程序中切换到该目录并运行 `npm init`，让 `npm` 创建 `package.json`。
+在你的项目文件夹中创建一个名为`chattrbox`的目录。在终端程序中切换到该目录并运行`npm init`，让`npm`创建`package.json`。
 
-`npm` 会提示你输入项目信息。它还会提供默认答案，这些答案目前是可以的。按回车键接受默认值（图 15.4]）。
+`npm`会提示你输入项目信息。它还会提供默认答案，这些答案目前是可以的。按回车键接受默认值（图 15.4）。
 
-**图 15.4 运行 `npm init`**
+**图 15.4 运行`npm init`**
 
 ![Running npm init](img/npm-init.png)
 
-在 `Atom` 中打开 `chattrbox` 项目文件夹。你会发现 `package.json` 文件确实为你创建了（图 15.5]）。
+在`Atom`中打开`chattrbox`项目文件夹。你会发现`package.json`文件确实为你创建了（图 15.5）。
 
-**图 15.5 npm init 之后的 `package.json` 内容**
+**图 15.5 npm init 之后的`package.json`内容**
 
 ![package.json after npm init](img/package-json.png)
 
 ### npm scripts
 
-在 `package.json` 中，注意 `scripts` 部分。这是用于你在开发项目期间可能需要反复运行的命令的。在构建 Chattrbox 时，你将添加一个 `"start"` 脚本（注意你必须在 `"test"` 行末尾添加逗号）：
+在`package.json`中，注意`scripts`部分。这是用于你在开发项目期间可能需要反复运行的命令的。在构建 Chattrbox 时，你将添加一个`"start"`脚本（注意你必须在`"test"`行末尾添加逗号）：
 
-```
+```json
 "scripts": {
   "test": "echo \"test specified\" && exit 1",
   "start": "node index.js"
 }
 ```
 
-这让你能够通过运行 `npm start` 来启动你的 `Node` 服务器。
+这让你能够通过运行`npm start`来启动你的`Node`服务器。
 
 ## Hello, World
 
-为了向你介绍浏览器之外的 JavaScript 的世界，你将从一个经典的 `Hello, World` 程序开始。在你的 `chattrbox` 文件夹中创建一个名为 `index.js` 的新文件并输入以下内容，我们将在输入后进行解释：
+为了向你介绍浏览器之外的 JavaScript 的世界，你将从一个经典的`Hello, World`程序开始。在你的`chattrbox`文件夹中创建一个名为`index.js`的新文件并输入以下内容，我们将在输入后进行解释：
 
 ```javascript
 var http = require('http');
-
 var server = http.createServer(function (req, res) {
   console.log('Responding to a request.');
   res.end('<h1>Hello, World</h1>');
 });
-
 server.listen(3000);
 ```
 
-在第一行，你使用了 `Node` 的内置函数 `require` 来访问随 `Node` 一起的 `http` 模块。该模块提供了许多处理请求和响应的工具，例如 `http.createServer` 函数。
+在第一行，你使用了`Node`的内置函数`require`来访问随`Node`一起的`http`模块。该模块提供了许多处理请求和响应的工具，例如`http.createServer`函数。
 
-`http.createServer` 接收一个参数，即函数。该函数会在每次 HTTP 请求时被调用。你可能记得你在浏览器事件中使用过回调模式，在这里是服务端事件（接收 HTTP 请求）触发了回调。
+`http.createServer`接收一个参数，即函数。该函数会在每次 HTTP 请求时被调用。你可能记得你在浏览器事件中使用过回调模式，在这里是服务端事件（接收 HTTP 请求）触发了回调。
 
-在你的回调中，向控制台打印一条消息并向响应写入一些 HTML 文本。在 `Node` 中，常用 `req` 和 `res` 作为 HTTP 请求和响应对象的变量名。
+在你的回调中，向控制台打印一条消息并向响应写入一些 HTML 文本。在`Node`中，常用`req`和`res`作为 HTTP 请求和响应对象的变量名。
 
-最后，你通过 `server.listen` 让服务器监听端口 3000。这通常被称为“绑定端口”。
+最后，你通过`server.listen`让服务器监听端口 3000。这通常被称为“绑定端口”。
 
-保存你的文件。要运行你的 `Node` 服务器，运行命令 `npm start`。终端结果如图 15.6]所示。
+保存你的文件。要运行你的`Node`服务器，运行命令`npm start`。终端结果如图 15.6 所示。
 
-
-
-
-
-接下来，打开浏览器并访问 [`localhost:3000`](http://localhost:3000)。你的结果看起来类似于图 15.7。（注意，在 Chrome 之外的一些浏览器中，你可能会看到 HTML 显示为纯文本。这些浏览器期望响应中包含一个 `doctype` 或额外的元数据，以声明该响应应被解释为 HTML。你将在章节末尾的挑战之一中解决这个问题。）
+接下来，打开浏览器并访问[`localhost:3000`](http://localhost:3000)。你的结果看起来类似于图 15.7。（注意，在 Chrome 之外的一些浏览器中，你可能会看到 HTML 显示为纯文本。这些浏览器期望响应中包含一个`doctype`或额外的元数据，以声明该响应应被解释为 HTML。你将在章节末尾的挑战之一中解决这个问题。）
 
 **图 15.7 在浏览器中访问你的 Node 服务器**
 
@@ -8026,7 +8586,7 @@ server.listen(3000);
 
 与你运行 Ottergram 和 CoffeeRun 时不同，浏览器中没有可以查看的 JavaScript。当你看到这个页面时，你的 JavaScript 代码已经在服务器上完成了它的工作。
 
-回到你的终端。你应该看到当接收到请求时，`console.log` 出了 `Responding to a request`（图 15.8 ）。
+回到你的终端。你应该看到当接收到请求时，`console.log`输出了`Responding to a request`（图 15.8）。
 
 **图 15.8 请求到达时的 console.log**
 
@@ -8034,33 +8594,33 @@ server.listen(3000);
 
 ## 添加 npm 脚本
 
-除了让你编写命令行 JavaScript 程序外，Node 还提供了一种方法，让你在开发这些程序时编排你的工作流。这是一个你应该利用强大功能。为了查看它是如何工作的，你将为项目添加一些自动化。
+除了让你编写命令行 JavaScript 程序外，Node 还提供了一种方法，让你在开发这些程序时编排你的工作流。这是一个你应该利用的强大功能。为了查看它是如何工作的，你将为项目添加一些自动化。
 
 以运行服务器为例。每当你想要在代码中尝试新事物时，都必须重复几个步骤：
 
 * 在编辑器中修改代码
 * 切换到终端
 * 按 Control-C 停止程序
-* 运行 `npm start` 重新启动程序
+* 运行`npm start`重新启动程序
 
-你可以写一个程序来自动完成重启服务。不过，你很幸运——已经有人为你写好了，一个名为 `nodemon` 的模块。尽早将 `nodemon` 集成到你的工作流中将让编写程序的体验顺畅得多。
+你可以写一个程序来自动完成重启服务。不过，你很幸运——已经有人为你写好了，一个名为`nodemon`的模块。尽早将`nodemon`集成到你的工作流中将让编写程序的体验顺畅得多。
 
-在终端中，停止你的程序并运行以下命令安装 `nodemon` 模块：
+在终端中，停止你的程序并运行以下命令安装`nodemon`模块：
 
 ```bash
 npm install --save-dev nodemon
 ```
 
-你将看到下面的行，`npm` 正在警告你 `package.json` 文件中的某些空字段。不要担心——只需知道 `npm` 是一个非常注重细节的人。
+你将看到下面的行，`npm`正在警告你`package.json`文件中的某些空字段。不要担心——只需知道`npm`是一个非常注重细节的人。
 
 ```bash
 npm WARN chattrbox@1.0.0 No description
 npm WARN chattrbox@1.0.0 No repository field.
 ```
 
-注意你在此 `npm install` 命令中使用的 `--save-dev` 选项。它告诉 `npm` 帮助你维护应用程序依赖的第三方模块列表。该列表存储在你的 `package.json` 文件中。如有必要，可以通过运行 `npm install` 命令（不带任何参数）安装列表中的所有依赖项。这意味着当你共享代码时，不需要同时包含所有的第三方模块。
+注意你在此`npm install`命令中使用的`--save-dev`选项。它告诉`npm`帮助你维护应用程序依赖的第三方模块列表。该列表存储在你的`package.json`文件中。如有必要，可以通过运行`npm install`命令（不带任何参数）安装列表中的所有依赖项。这意味着当你共享代码时，不需要同时包含所有的第三方模块。
 
-如果你查看 `package.json` 文件，你会发现 `npm` 为你创建了一个新的 `"devDependencies"` 部分，其中包含 `nodemon` 的条目。
+如果你查看`package.json`文件，你会发现`npm`为你创建了一个新的`"devDependencies"`部分，其中包含`nodemon`的条目。
 
 ```json
 ...
@@ -8071,7 +8631,7 @@ npm WARN chattrbox@1.0.0 No repository field.
   }
 ```
 
-现在，更新你的 `package.json` 以向 `"scripts"` 部分添加另一个项目：
+现在，更新你的`package.json`以向`"scripts"`部分添加另一个项目：
 
 ```json
 ...
@@ -8083,27 +8643,27 @@ npm WARN chattrbox@1.0.0 No repository field.
 ...
 ```
 
-在终端中，通过你的新 `npm` 脚本运行命令 `npm run dev` 来重启 `node` 程序。注意命令不是简单的 `npm dev`。这与 `npm start` 的区别在于 `npm` 假设某些命令（如 `start`）存在。对于自定义的 `npm` 脚本，你必须指定要 `run` 它们。
+在终端中，通过你的新`npm`脚本运行命令`npm run dev`来重启`node`程序。注意命令不是简单的`npm dev`。这与`npm start`的区别在于`npm`假设某些命令（如`start`）存在。对于自定义的`npm`脚本，你必须指定要`run`它们。
 
-你应该看到 `nodemon` 现在正在管理你的 `node` 程序（图 15.9）。
+你应该看到`nodemon`现在正在管理你的`node`程序（图 15.9）。
 
 **图 15.9 通过 npm run dev 运行**
 
 ![通过 npm run dev 运行](img/chattrbox-npm-run-dev.png)
 
-在 `index.js` 中，将 `"Hello, World"` 改为 `"Hello, World!!"` 并保存更改。`nodemon` 会感知并自动重启你的 `node` 程序（图 15.10 ）。
+在`index.js`中，将`"Hello, World"`改为`"Hello, World!!"`并保存更改。`nodemon`会感知并自动重启你的`node`程序（图 15.10）。
 
 **图 15.10 代码更改时 nodemon 重启**
 
 ![代码更改时 nodemon 重启](img/chattrbox-npm-run-dev-restart.png)
 
-在接后的章节中继续使用 `node` 和 `npm` 时，你会定期引入新模块来提供帮助。
+在接下来的章节中继续使用`node`和`npm`时，你会定期引入新模块来提供帮助。
 
 ## 从文件提供
 
-能够在服务器上编写和运行 JavaScript 是很好的。大多数服务器还希望提供并处理存储在文件中的内容。下一个任务是让服务器从子文件夹读取文件并将其作为响应发送回浏览器。这与早期章节中 `browser-sync` 为你做的事情类似。
+能够在服务器上编写和运行 JavaScript 是很好的。大多数服务器还希望提供并处理存储在文件中的内容。下一个任务是让服务器从子文件夹读取文件并将其作为响应发送回浏览器。这与早期章节中`browser-sync`为你做的事情类似。
 
-在 `chattrbox` 项目文件夹内创建一个名为 `app` 的新文件夹。在里面创建一个包含以下文本的 `index.html` 文件：
+在`chattrbox`项目文件夹内创建一个名为`app`的新文件夹。在里面创建一个包含以下文本的`index.html`文件：
 
 ```html
 Hello, File!
@@ -8117,12 +8677,11 @@ Hello, File!
 
 ### 使用 fs 模块读取文件
 
-在 `index.js` 中，导入 Node.js 文件系统模块 `fs` 并调用它的 `readFile` 方法。
+在`index.js`中，导入 Node.js 文件系统模块`fs`并调用它的`readFile`方法。
 
 ```javascript
 var http = require('http');
 var fs = require('fs');
-
 var server = http.createServer(function (req, res) {
   console.log('Responding to a request.');
   res.end('<h1>Hello, World</h1>');
@@ -8133,11 +8692,11 @@ var server = http.createServer(function (req, res) {
 server.listen(3000);
 ```
 
-`readFile` 方法接收一个文件名和一个回调函数。在你的回调函数中，你使用 `res.end` 发送了文件内容而不是 HTML 文本。
+`readFile`方法接收一个文件名和一个回调函数。在你的回调函数中，你使用`res.end`发送了文件内容而不是 HTML 文本。
 
-注意你的回调函数也接收一个 `err` 参数以及读取文件的数据。这是 Node.js 的编程规范，我们将在本章的晚些部分讨论。
+注意你的回调函数也接收一个`err`参数以及读取文件的数据。这是 Node.js 的编程规范，我们将在本章的晚些部分讨论。
 
-`nodemon` 应该已经重启了你的程序，所以你可以直接访问浏览器并刷新。在浏览器中，你应该能看到你在 `index.html` 文件中编写的所有内容：
+`nodemon`应该已经重启了你的程序，所以你可以直接访问浏览器并刷新。在浏览器中，你应该能看到你在`index.html`文件中编写的所有内容：
 
 ```html
 Hello, File!
@@ -8145,24 +8704,18 @@ Hello, File!
 
 ### 处理请求 URL
 
-首先，你需要从请求对象中获取 URL 路径。如果路径只是 `'/'`，返回 `index.html` 文件是最佳做法。这是 Web 早期的一种常见习惯。
+首先，你需要从请求对象中获取 URL 路径。如果路径只是`'/'`，返回`index.html`文件是最佳做法。这是 Web 早期的一种常见习惯。
 
 否则，你应该尝试返回请求对象所请求的文件。
 
-在 `index.js` 中，更新你的回调函数以检查浏览器正在请求哪个文件。
+在`index.js`中，更新你的回调函数以检查浏览器正在请求哪个文件。
 
-
-
-
-
-```
+```javascript
 var http = require('http');
 var fs = require('fs');
-
 var server = http.createServer(function (req, res) {
   console.log('Responding to a request.');
   var url = req.url;
-
   var fileName = 'index.html';
   if (url.length > 1) {
     fileName = url.substring(1);
@@ -8175,67 +8728,70 @@ var server = http.createServer(function (req, res) {
 server.listen(3000);
 ```
 
-通过使用请求对象的 `url` 属性，你可以查看浏览器是在请求默认的 `index.html` 还是另一个文件。如果是另一个文件，你调用 `url.substring(1)` 来剥离第一个字符，该字符通常是 `'/'`。
+通过使用请求对象的`url`属性，你可以查看浏览器是在请求默认的`index.html`还是另一个文件。如果是另一个文件，你调用`url.substring(1)`来剥离第一个字符，该字符通常是`'/'`。
 
 目前，你只是将文件名记录到控制台。
 
-在 `nodemon` 重启你的程序后，尝试访问 `http://localhost:3000/woohoo` 或任何其他路径，包括默认的 `'/'` 路径。终端中的结果看起来会像 图 15.12 所示。
+在`nodemon`重启你的程序后，尝试访问`http://localhost:3000/woohoo`或任何其他路径，包括默认的`'/'`路径。终端中的结果看起来会像图 15.12 所示。
 
-图 15.12 记录请求的文件路径
+**图 15.12 记录请求的文件路径**
 
 ![记录请求的文件路径](img/woohoo.png)
 
-（回想 第 2 章），浏览器会自动请求 `favicon.ico` 文件，因此你可能也会在终端中看到针对该文件的请求记录。）
+（回想第 2 章，浏览器会自动请求`favicon.ico`文件，因此你可能也会在终端中看到针对该文件的请求记录。）
 
 现在是时候利用这些路径信息了。
 
 ### 使用 path 模块
 
-你可以直接将 `fileName` 传递给 `fs.readFile`，但使用 `path` 模块更好，因为它提供了处理和转换文件路径的实用程序。使用该模块的一个微小但重要的原因是，某些操作系统使用正斜杠，而另一些则使用反斜杠。`path` 模块可以轻松处理这些差异。
+你可以直接将`fileName`传递给`fs.readFile`，但使用`path`模块更好，因为它提供了处理和转换文件路径的实用程序。使用该模块的一个微小但重要的原因是，某些操作系统使用正斜杠，而另一些则使用反斜杠。`path`模块可以轻松处理这些差异。
 
-更新 `index.js` 以导入 `path` 模块并使用它找到被请求的文件。
+更新`index.js`以导入`path`模块并使用它找到被请求的文件。
 
-```
+```javascript
 var http = require('http');
 var fs = require('fs');
 var path = require('path');
-
 var server = http.createServer(function (req, res) {
   console.log('Responding to a request.');
   var url = req.url;
-
   var fileName = 'index.html';
   if (url.length > 1) {
-    fileName = url.substring(1);
-  }
-  console.log(fileName);
-  var filePath = path.resolve(__dirname, 'app', fileName);
-  fs.readFile('app/index.html'filePath, function (err, data) {
-    res.end(data);
-  });
-});
-server.listen(3000);
 ```
 
-在浏览器中测试几个文件路径以确保你的应用程序仍然运行。默认路径应该返回 `index.html`，而不存在的路径（如 `'woohoo/'`）应该显示为空并记录其文件名。接下来，在 `app` 文件夹中创建一个 `test.html` 文件。在文件中写入以下内容：
+
+
+`fileName = url.substring(1);`
+
+```
+console.log(fileName);
+var filePath = path.resolve(__dirname, 'app', fileName);
+fs.readFile('app/index.html'filePath, function (err, data) {
+  res.end(data);
+});
+```
+
+`server.listen(3000);`
+
+在浏览器中测试几个文件路径以确保你的应用程序仍然运行。默认路径应该返回`index.html`，而不存在的路径（如`'woohoo/'`）应该显示为空并记录其文件名。接下来，在`app`文件夹中创建一个`test.html`文件。在文件中写入以下内容：
 
 ```
 Hola, Node!
 ```
 
-尝试在浏览器中访问它。你的 `node` 程序应该能够毫无问题地返回它（图 15.13）。
+尝试在浏览器中访问它。你的`node`程序应该能够毫无问题地返回它（图 15.13）。
 
-图 15.13 获取 test.html
+**图 15.13 获取 test.html**
 
 ![获取 test.html](img/test-html.png)
 
 你已经添加了根据 URL 成功提供特定文件的代码。下一步要工作是将该功能抽象到自己的模块中。
 
-### 创建自定义模块
+## 创建自定义模块
 
 你的回调函数（至少）有两个任务：它确定请求了哪个文件，并读取该文件并在响应中返回。为了让代码更具模块化和可维护性，应该将这些职责之一移动到它自己的模块中。在 Coffee 中，你在 IIFE 中声明模块，并为全局命名空间的一个属性赋值。Node 中的模块工作方式有所不同。你仍然在文件本身编写模块代码，但不需要 IIFE。
 
-在与 `index.js` 相同的目录下创建一个名为 `extract.js` 的新文件（不要在 `app` 目录下）。添加一个名为 `extractFilePath` 的函数来查找合适的文件。（这段代码与你在 `index.js` 中写的代码非常相似。）
+在与`index.js`相同的目录下创建一个名为`extract.js`的新文件（不要在`app`目录下）。添加一个名为`extractFilePath`的函数来查找合适的文件。（这段代码与你在`index.js`中写的代码非常相似。）
 
 ```
 var path = require('path');
@@ -8247,16 +8803,17 @@ var extractFilePath = function (url) {
   if (url.length > 1) {
     fileName = url.substring(1);
   }
-  console.log('The fileName is: ' + fileName);
 
+  console.log('The fileName is: ' + fileName);
   filePath = path.resolve(__dirname, 'app', fileName);
   return filePath;
 };
 ```
 
-你已经从 `index.js` 中提取了大部分代码并将其放在它自己的函数 `extractFilePath` 中。接下来，是让 `extractFilePath` 函数可用，以便其他模块可以使用 `require` 导入它。要做到这一点，将 `extractFilePath` 赋值给名为 `module.exports` 的全局变量。这是 Node 提供的一个特殊变量。赋值给它的任何值都是其他模块能够导入的值。任何其他变量或函数对其他模块都是不可见的。
+你已经从`index.js`中提取了大部分代码并将其放在它自己的函数`extractFilePath`中。接下来，是让`extractFilePath`函数可用，以便其他模块可以使用`require`导入它。要做到这一点，将`extractFilePath`赋值给名为`module.exports`的全局变量。这是 Node 提供的一个特殊变量。赋值给它的任何值都是其他模块能够导入的值。任何其他变量或函数对其他模块都是不可见的。
 
-```...
+```
+...
   filePath = path.resolve(__dirname, 'app', fileName);
   return filePath;
 };
@@ -8264,11 +8821,11 @@ var extractFilePath = function (url) {
 module.exports = extractFilePath;
 ```
 
-这一新行告诉 Node，当你通过调用 `require('./extract')` 导入模块时，返回的是 `extractFilePath` 函数。现在在 `index.js` 中执行此操作。
+这一新行告诉 Node，当你通过调用`require('./extract')`导入模块时，返回的是`extractFilePath`函数。现在在`index.js`中执行此操作。
 
-### 使用自定义模块
+## 使用自定义模块
 
-更新 `index.js` 使用你新的 `extract` 模块来处理这些职责。
+更新`index.js`使用你新的`extract`模块来处理这些职责。
 
 ```
 var http = require('http');
@@ -8279,36 +8836,35 @@ var extract = require('./extract');
 var server = http.createServer(function (req, res) {
   console.log('Responding to a request.');
   var url = req.url;
-
   var fileName = 'index.html';
+
   if (url.length > 1) {
     fileName = url.substring(1);
   }
+
   console.log(fileName);
   var filePath = path.resolve(__dirname, 'app', fileName);
   var filePath = extract(req.url);
+
   fs.readFile(filePath, function (err, data) {
     res.end(data);
   });
 });
+
 server.listen(3000);
 ```
 
-你使用 `require` 函数导入了自定义模块。你将模块的值赋值给了新变量 `extract`。现在你可以像使用 `extractFilePath` 函数一样使用 `extract` 函数。
+你使用`require`函数导入了自定义模块。你将模块的值赋值给了新变量`extract`。现在你可以像使用`extractFilePath`函数一样使用`extract`函数。
 
-在 `nodemon` 重新加载代码后，测试一些 URL 路径并确认默认的 `index.html` 和 `test.html` 仍然加载。此外，确保不存在的路径显示为空页且不报错。
+在`nodemon`重新加载代码后，测试一些 URL 路径并确认默认的`index.html`和`test.html`仍然加载。此外，确保不存在的路径显示为空页且不报错。
 
 ## 错误处理
 
-还有最后一项任务。当找不到文件时，返回错误代码比默默地假装一切正常要好。为了实现，你需要检测 `fs.readFile` 返回的是错误而不是文件。
+还有最后一项任务。当找不到文件时，返回错误代码比默默地假装一切正常要好。为了实现，你需要检测`fs.readFile`返回的是错误而不是文件。
 
 在 JavaScript 中，向 API 方法传递回调是常见做法。Node.js 也是如此，并且回调通常接收错误作为第一个参数。由于错误在结果之前，因此你至少会看到错误，无论你是否处理它。
 
-在 `index.js` 中检查文件错误，如果发现了错误，则写入 `404` 错误代码：
-
-
-
-
+在`index.js`中检查文件错误，如果发现了错误，则写入`404`错误代码：
 
 ```
 var http = require('http');
@@ -8323,6 +8879,7 @@ var handleError = function (err, res) {
 var server = http.createServer(function (req, res) {
   console.log('Responding to a request.');
   var filePath = extract(req.url);
+
   fs.readFile(filePath, function (err, data) {
     if (err) {
       handleError(err, res);
@@ -8332,32 +8889,33 @@ var server = http.createServer(function (req, res) {
     }
   });
 });
+
 server.listen(3000);
 ```
 
-保存你的更改。在 `nodemon` 重启后，访问一个不存在的路径，例如 `http://localhost:3000/woohoo`。在开发者工具中打开网络面板，你应该能错误代码，如图�15.14 所示。
+保存你的更改。在`nodemon`重启后，访问一个不存在的路径，例如`http://localhost:3000/woohoo`。在开发者工具中打开网络面板，你应该能错误代码，如图 15.14 所示。
 
 **图 15.14 网络面板中的 404 状态码**
 
 ![网络面板中的 404 状态码](img/woo-hoo-404.png)
 
-在回调函数中，你第一件事是检查此 `err` 参数是否具有非 `null` 或 `undefined` 的值，并对其进行处理。在这个示例中，你将错误信息传递给函数 `handleError`，然后 `return` 退出匿名回调。
+在回调函数中，你第一件事是检查此`err`参数是否具有非`null`或`undefined`的值，并对其进行处理。在这个示例中，你将错误信息传递给函数`handleError`，然后`return`退出匿名回调。
 
-错误永远不应该被静默丢弃。目前一个简单的 `404` 就可以了，这正是 `handleError` 所做的。
+错误永远不应该被静默丢弃。目前一个简单的`404`就可以了，这正是`handleError`所做的。
 
-这种模式——“错误优先，尽早返回”是 `Node` 生态系统的最佳实践之一。所有随 `Node` 一带的模块都遵循这种模式，大多数开源模块也是如此。
+这种模式——“错误优先，尽早返回”是`Node`生态系统的最佳实践之一。所有随`Node`一带的模块都遵循这种模式，大多数开源模块也是如此。
 
 你仅用几十行 JavaScript 代码就构建了一个可以运行的 Web 服务器，并且使用了你已经熟悉的模式（如回调）。
 
-`Node` 提供了一系列丰富的模块用于处理网络和文件，例如你在此项目中使用的 `http` 和 `fs` 模块。得益于 `Node` 的 `require` 和 `module.exports` 关键字，你可以非常地将自己的代码模块化。
+`Node`提供了一系列丰富的模块用于处理网络和文件，例如你在此项目中使用的`http`和`fs`模块。得益于`Node`的`require`和`module.exports`关键字，你可以非常地将自己的代码模块化。
 
 在接下来的三个章节中，你将继续构建 Chattrbox 服务器以及可以运行的前端。
 
 ## 进阶阅读：npm 模块注册表
 
-有大量可以通过 `npm` 安装的包。你可以在模块注册表 [www.npmjs.com](https://www.npmjs.com) 中搜索或浏览这些包。
+有大量可以通过`npm`安装的包。你可以在模块注册表 [www.npmjs.com](https://www.npmjs.com) 中搜索或浏览这些包。
 
-确保查看了 [docs.npmjs.com](https://docs.npmjs.com) 上的 `npm` 文档。你可能对创建自己的模块供他人使用感兴趣。如果是，请参见 [docs.npmjs.com/getting-started/creating-node-modules](https://docs.npmjs.com/getting-started/creating-node-modules)。
+确保查看了 [docs.npmjs.com](https://docs.npmjs.com) 上的`npm`文档。你可能对创建自己的模块供他人使用感兴趣。如果是，请参见 [docs.npmjs.com/getting-started/creating-node-modules](https://docs.npmjs.com/getting-started/creating-node-modules)。
 
 ## 铜级挑战：创建自定义错误页面
 
@@ -8367,23 +8925,24 @@ server.listen(3000);
 
 ## 进阶阅读：MIME 类型
 
-你是否曾好奇过计算机如何知道用视频播放器打开电影文件，用文档查看器打开 PDF 文件？你的计算机保留了一个文件类型以及与这些类型关联的程序表。它通过查看文件扩展名（例如 `.html` 或 `.pdf`）来推断文件的类型。
+你是否曾好奇过计算机如何知道用视频播放器打开电影文件，用文档查看器打开 PDF 文件？你的计算机保留了一个文件类型以及与这些类型关联的程序表。它通过查看文件扩展名（例如`.html`或`.pdf`）来推断文件的类型。
 
 浏览器需要同样的关联，以便它知道是将响应渲染为 HTML、使用插件播放音乐，还是将文件下载到硬盘。但 HTTP 响应没有文件扩展名。相反，服务器必须告诉浏览器响应是什么类型的信息。
 
-它通过在响应的 `Content-Type` 头部中指定 `MIME type` 或 `media type` 来实现。例如，图�15.15 显示了如果你检查 [www.bignerdranch.com](https://www.bignerdranch.com) 的响应，在开发者工具的网络面板中会看到的内容。
+它通过在响应的`Content-Type`头部中指定`MIME type`或`media type`来实现。例如，图 15.15 显示了如果你检查 [www.bignerdranch.com](https://www.bignerdranch.com) 的响应，在开发者工具的网络面板中会看到的内容。
 
-**图 15.15 在 `www.bignerdranch.com` 上检查 Content-Type header**
+**图 15.15 在`www.bignerdranch.com`上检查 Content-Type header**
 
-![在 www.bignerdranch.com 上检查 Content-Type header
+![在 www.bignerdranch.com 上检查 Content-Type header](img/content-type.png)
 
-`Content-Type` 头部被设置为 `text/html` —— HTML 的 MIME 类型。你可以在你的项目中设置此头部。Chatattrbox 的代码看起来是这样的：
+`Content-Type`头部被设置为`text/html` —— HTML 的 MIME 类型。你可以在你的项目中设置此头部。Chatattrbox 的代码看起来是这样的：
 
 ```
 ...
 var server = http.createServer(function (req, res) {
   console.log('Responding to a request.');
   var filePath = extract(req.url);
+
   fs.readFile(filePath, function (err, data) {
     if (err) {
       handleError(err, res);
@@ -8394,18 +8953,19 @@ var server = http.createServer(function (req, res) {
     }
   });
 });
+
 server.listen(3000);
 ```
 
 （注意你必须在结束响应之前设置头部。）
 
-要了解更多关于一般的 MIME 类型，请查看 [en.wikipedia.org/wiki/Media_type](https://en.wikipedia.org/wiki/Media_type)。更多关于在 `Node` 程序中设置头部的信息，请访问 [nodejs.org/api/http.html#http_response_setheader_name](https://nodejs.org/api/http.html#http_response_setheader_name)。
+要了解更多关于一般的 MIME 类型，请查看 [en.wikipedia.org/wiki/Media_type](https://en.wikipedia.org/wiki/Media_type)。更多关于在`Node`程序中设置头部的信息，请访问 [nodejs.org/api/http.html#http_response_setheader_name](https://nodejs.org/api/http.html#http_response_setheader_name)。
 
 ## 银级挑战：动态提供 MIME 类型
 
-根据文件类型为你的响应动态提供 MIME 类型。为了完成此任务，请使用 `npm` 安装 `mime` 模块。关于 `mime` 模块的信息和文档可以在 [github.com/broofa/node-mime](https://github.com/broofa/node-mime) 获取。
+根据文件类型为你的响应动态提供 MIME 类型。为了完成此任务，请使用`npm`安装`mime`模块。关于`mime`模块的信息和文档可以在 [github.com/broofa/node-mime](https://github.com/broofa/node-mime) 获取。
 
-向你的 `app` 文件夹添加不同文件，包括纯文本、PDF、音频文件和电影。确保你的浏览器显示正确。
+向你的`app`文件夹添加不同文件，包括纯文本、PDF、音频文件和电影。确保你的浏览器显示正确。
 
 ## 金级挑战：将错误处理移动到模块
 
@@ -8417,7 +8977,7 @@ server.listen(3000);
 
 对于普通的 GET 和 POST 请求，浏览器每次与服务器交换数据都需要发送新请求并等待响应。正如你在前面的章节中学到的，Ajax 请求也是如此。虽然 Ajax 请求不会导致页面刷新，但它们会产生同样的网络流量，每个请求和响应都需要一些开销来生成和处理。
 
-相反，WebSocket 在 HTTP 之上提供了一种双向通信协议。它创建一个单一连接并保持开启以进行实时通信（图�16.1]）。
+相反，WebSocket 在 HTTP 之上提供了一种双向通信协议。它创建一个单一连接并保持开启以进行实时通信（图 16.1）。
 
 **图 16.1 多次 Ajax 请求与单个 WebSocket 连接**
 
@@ -8425,15 +8985,11 @@ server.listen(3000);
 
 通过 WebSocket，Web 应用程序可以超越保存和加载远程数据。推送通知、协作文档编辑和实时聊天只是开始。WebSocket 使服务器能够处理物联网的负载（例如智能灯、智能锁、智能汽车）。传统的 Ajax 轮在协调如此密集的流量时并不有效。
 
-
-
-
-
 在本章中，你将构建一个聊天客户端和服务器。如果你使用 Ajax 来构建此功能，你将需要同时处理两个连接——一个用于轮询新消息，另一个用于发送消息。使用 WebSockets，你可以通过单个连接实现同样的功能。
 
 当你读到本章结束时，Chattrbox 将能够处理多个同时在线的客户端，并将新消息发送给每个客户端（图 16.2）。
 
-**图 16.2   海盗聊天-arr**
+**图 16.2 海盗聊天-arr**
 
 ![Pirate chat-arr](img/pirate-talk.png)
 
@@ -8441,24 +8997,24 @@ server.listen(3000);
 
 为了为 Chattrbox 配置 WebSockets，你将执行以下操作：
 
-1. 安装 `ws` 模块
+1. 安装`ws`模块
 2. 创建一个 WebSockets 服务器
 3. 为服务器添加聊天功能
 4. 通过服务器向新用户发送消息历史来适应新用户
 
 从基础开始。
 
-Node.js 自带的 `http` 模块为你提供了一种启动 HTTP 服务器的简单方法，以便浏览器可以与服务器通信。
+Node.js 自带的`http`模块为你提供了一种启动 HTTP 服务器的简单方法，以便浏览器可以与服务器通信。
 
-同样地，`ws` 模块为你的 Node.js 程序提供了通过 WebSockets 通信的便利。有多个实现 Node.js WebSockets 的模块，但 `ws` 是标准实现且性能良好。
+同样地，`ws`模块为你的 Node.js 程序提供了通过 WebSockets 通信的便利。有多个实现 Node.js WebSockets 的模块，但`ws`是标准实现且性能良好。
 
-首先在你的 Chattrbox 目录中安装 `ws` WebSockets 模块。（如果你看到 `npm` 关于项目缺少描述或存储库字段的警告，请不要惊慌。）
+首先在你的 Chattrbox 目录中安装`ws` WebSockets 模块。（如果你看到`npm`关于项目缺少描述或存储库字段的警告，请不要惊慌。）
 
 ```
 npm install --save ws
 ```
 
-接下来，在 Chattrbox 的根文件夹中创建一个名为 `websockets-server.js` 的文件。添加以下代码来导入 `ws` 模块并开始监听。
+接下来，在 Chattrbox 的根文件夹中创建一个名为`websockets-server.js`的文件。添加以下代码来导入`ws`模块并开始监听。
 
 ```
 var WebSocket = require('ws');
@@ -8471,13 +9027,13 @@ var ws = new WebSocketServer({
 console.log('websockets server started');
 ```
 
-你使用 `require` 语句导入了 `ws` 模块。该模块包含一个 `Server` 属性，你创建可运行的 WebSockets 服务器时需要它。
+你使用`require`语句导入了`ws`模块。该模块包含一个`Server`属性，你创建可运行的 WebSockets 服务器时需要它。
 
-代码 `var ws = new WebSocketServer(/*...*/);` 正是此类操作。当这段代码运行时，WebSockets 服务器将建立并绑定到指定的端口（此处为 `3001`）。
+代码`var ws = new WebSocketServer(/*...*/);`正是此类操作。当这段代码运行时，WebSockets 服务器将建立并绑定到指定的端口（此处为`3001`）。
 
-与你在 `extract.js` 中创建的模块不同，你不需要 `module.exports` 赋值。`websockets-server.js` 中的代码会在被导入时运行。它处理了所有与 WebSocket 相关的初始化和事件。
+与你在`extract.js`中创建的模块不同，你不需要`module.exports`赋值。`websockets-server.js`中的代码会在被导入时运行。它处理了所有与 WebSocket 相关的初始化和事件。
 
-现在你有了一个 WebSockets 服务器，你要做的第一件事就是处理连接。在 `websockets-server.js` 中，为你的 WebSockets 服务器的任何 `connection` 事件建立回调函数：
+现在你有了一个 WebSockets 服务器，你要做的第一件事就是处理连接。在`websockets-server.js`中，为你的 WebSockets 服务器的任何`connection`事件建立回调函数：
 
 ```
 var WebSocket = require('ws');
@@ -8492,7 +9048,8 @@ console.log('websockets server started');
 ws.on('connection', function (socket) {
   console.log('client connection established');
 });
-```
+
+
 
 事件处理语法与 jQuery 类似。你会发现许多 JavaScript 库（在 Node 和浏览器中）都使用这种风格。
 
@@ -8502,8 +9059,7 @@ ws.on('connection', function (socket) {
 
 通过在 `websockets-server.js` 中为客户端连接生成的任何 `message` 事件注册回调，添加回显功能。
 
-```
-...
+```javascript
 console.log('websockets server started');
 
 ws.on('connection', function (socket) {
@@ -8520,11 +9076,11 @@ ws.on('connection', function (socket) {
 
 稍后你就能看到它的运行效果。
 
-你可以使用命令 `node websockets-server.js` 独立运行你的 WebSockets 服务器，但将其连接到 `index.js` 同样简单。这样做的好处是利用利用 `nodemon`，当你对 `websockets-server.js` 或 `index.js` 进行更改时，它会自动重新加载你的代码。
+你可以使用命令 `node websockets-server.js` 独立运行你的 WebSockets 服务器，但将其连接到 `index.js` 同样简单。这样做的好处是利用 `nodemon`，当你对 `websockets-server.js` 或 `index.js` 进行更改时，它会自动重新加载你的代码。
 
 在 `index.js` 顶部添加一个 `require` 语句来导入 `websockets-server` 模块。
 
-```
+```javascript
 var http = require('http');
 var fs = require('fs');
 var extract = require('./extract');
@@ -8540,7 +9096,7 @@ var wss = require('./websockets-server');
 
 打开第二个终端窗口并全局安装 `wscat`。你可能需要以管理员权限运行此命令。（如果你需要复习，请参考第 1 章）。
 
-```
+```bash
 npm install -g wscat
 ```
 
@@ -8550,7 +9106,7 @@ npm install -g wscat
 
 在第二个终端窗口中输入一些文本。每当你输入文本并按下回车键时，WebSockets 服务器都会重复你的文本，如图 16.3 所示。
 
-**图 16.3  Testing the server with wscat**
+**图 16.3 Testing the server with wscat**
 
 ![Testing the server with wscat](img/echo.png)
 
@@ -8568,7 +9124,7 @@ npm install -g wscat
 
 在 `websockets-server.js` 中创建一个数组来存放消息。
 
-```
+```javascript
 var WebSocket = require('ws');
 var WebSocketServer = WebSocket.Server;
 var port = 3001;
@@ -8585,7 +9141,7 @@ console.log('websockets server started');
 
 接下来，在每条新消息到达时调用 `messages.push(data)` 将其添加到数组中。
 
-```
+```javascript
 ...
 ws.on('connection', function (socket) {
   console.log('client connection established');
@@ -8600,13 +9156,9 @@ ws.on('connection', function (socket) {
 
 就这样，你拥有了一个包含了聊天服务器接收到的所有消息的数组。
 
+下一步是允许新用户看到之前所有的消息。更新 `websockets-server.js` 中的连接事件处理程序，在每个新连接建立时，将所有旧消息发送给该连接。
 
-
-
-
-下一步是允许新用户看到之前所有的消息。更新 `websockets-server.js` 中的连接事件处理程序，在每个新连接建立时，将所有旧消息发送发送给该连接。
-
-```
+```javascript
 ...
 ws.on('connection', function (socket) {
   console.log('client connection established');
@@ -8627,7 +9179,7 @@ ws.on('connection', function (socket) {
 
 最后一个工作是在每条新消息进入时，将其发送给所有用户。WebSockets 会为你跟踪已连接的用户。在 `websockets-server.js` 中使用此机制来广播你收到的消息。
 
-```
+```javascript
 ...
 ws.on('connection', function (socket) {
   console.log('client connection established');
@@ -8639,6 +9191,7 @@ ws.on('connection', function (socket) {
   socket.on('message', function (data) {
     console.log('message received: ' + data);
     messages.push(data);
+
     ws.clients.forEach(function (clientSocket) {
       clientSocket.send(data)
     });
@@ -8702,7 +9255,7 @@ ws.on('connection', function (socket) {
 
 你使用 `WebSocket.Server` 创建了聊天服务器。以下行是一个示例：
 
-```
+```javascript
 var chatClient = new WebSocket('http://localhost:3001');
 ```
 
@@ -8720,10 +9273,6 @@ JavaScript 语言创建于 1994 年，在 1999 年接受了几次更新，但在
 
 然而，非长青版和大多数移动浏览器对 ES6 的支持很差。图 17.1 显示了最新桌面和移动浏览器对 ES6 特性的支持比例。（在图中，IE = `Internet Explorer`、FF = `Mozilla Firefox`、CH = `Google Chrome`、SF = `Safari`、KQ = `Konqueror`、AN = `Android`。）
 
-
-
-
-
 如果你想更详细或查看浏览器对 ES6 的支持情况，请访问 [`kangax.github.io/compat-table/es6/`](http://kangax.github.io/compat-table/es6/) 查看最新信息。该表的创建者 Juriy Zaytsev 会经常更新数据。
 
 在旧版浏览器中支持情况可能不稳定，但我们非常、非常喜欢 ES6。它是一个很美的东西，尽早切换是值得的，而不是等到支持变得完全通用。
@@ -8732,9 +9281,9 @@ JavaScript 语言创建于 1994 年，在 1999 年接受了几次更新，但在
 
 在开始之前，有一项准备工作需要处理。为了让你能够专注于学习 ES6 和使用 `Babel`，Chatrbox 的 `index.html` 和 `stylesheets/styles.css` 文件已在 [`www.bignerdranch.com/downloads/front-end-dev-resources.zip`](http://www.bignerdranch.com/downloads/front-end-dev-resources.zip) 备。下载 .zip 文件并将其内容（包括整个 `stylesheets/` 文件夹）提取到你的 `chattrbox/app` 目录。（`index.html` 将替换你现有的 `index.html` 副本。）
 
-此外，注意一点：在学习本章代码时，你可能会在控制台中看到 CSS 文件 MIME 类型的警告。可以忽略忽略这个警告。
+此外，注意一点：在学习本章代码时，你可能会在控制台中看到 CSS 文件 MIME 类型的警告。可以忽略这个警告。
 
-继续前进！到本章结束时，Chatrbox 将通过 WebSockets 与你的聊天服务器通信（图 17.2）。
+继续前进！到本章结束时，Chattrbox 将通过 WebSockets 与你的聊天服务器通信（图 17.2）。
 
 **图 17.2 本章结束时的 Chattrbox**
 
@@ -8758,7 +9307,7 @@ JavaScript 语言创建于 1994 年，在 1999 年接受了几次更新，但在
 
 在你的 `chattrbox` 目录中运行以下 `npm` 命令来安装相应的 `Babel` 工具。（如果你需要复习如何以管理员权限运行 `npm install -g`，请参考第 1 章）。
 
-```
+```bash
 npm install -g babel-cli
 npm install --save-dev babel-core
 npm install --save-dev babel-preset-es2015
@@ -8766,7 +9315,7 @@ npm install --save-dev babel-preset-es2015
 
 现在，你需要配置 `Babel` 以使用你安装的 `es2015` 预集进行编译。在你的根 `chattrbox` 目录下创建一个名为 `.babelrc` 的文件并向其中添加以下配置信息：
 
-```
+```json
 {
   "presets": [
     "es2015"
@@ -8777,11 +9326,13 @@ npm install --save-dev babel-preset-es2015
 
 最后，将 `Babelify`、`Browserify` 和 `Watchify` 安装到 `chattrbox/node_modules/` 目录：
 
-```
+```bash
 npm install --save-dev browserify babelify watchify
 ```
 
-在你运行 `Babel` 之后，你将在本章的稍后部分使用这三个工具。
+
+
+在你运行`Babel`之后，你将在本章的稍后部分使用这三个工具。
 
 ## Chattrbox 客户端应用程序
 
@@ -8789,21 +9340,21 @@ npm install --save-dev browserify babelify watchify
 
 这些职责将由三个模块处理：
 
-*   `ws-client` 模块将管理客户端的 WebSocket 通
-*   `dom` 模块将向 UI 显示数据并处理表单提交
-*   `app` 模块将定义消息结构并在 `ws-client` 和 `dom` 之间传递消息，如图 17.5 所示。
+*   `ws-client`模块将管理客户端的 WebSocket 通信
+*   `dom`模块将向 UI 显示数据并处理表单提交
+*   `app`模块将定义消息结构并在`ws-client`和`dom`之间传递消息，如图 17.5 所示。
 
 **图 17.5 Chattrbox 应用程序模块**
 
 ![Chattrbox at the end of this chapter](img/app.png)
 
-在你的 `chattrbox/app` 文件夹中创建 `scripts`、`scripts/dist` 和 `scripts/src` 目录，如图 17.6 所示。
+在你的`chattrbox/app`文件夹中创建`scripts`、`scripts/dist`和`scripts/src`目录，如图 17.6 所示。
 
 **图 17.6 chattrbox/app 目录结构**
 
 ![Compilation workflow](img/folder-with-folders.png)
 
-现在，在 `scripts/src` 中创建四个 JavaScript 文件：
+现在，在`scripts/src`中创建四个 JavaScript 文件：
 
 *   `app.js`
 *   `dom.js`
@@ -8820,141 +9371,161 @@ npm install --save-dev browserify babelify watchify
 
 现在你已经安装了工具并准备好了文件，是时候开始学习 ES6 了。
 
-目前，你将从命令行使用 `Babel`。稍后，你将其添加到 `npm` 脚本中，这样编译就会自动进行。这样，当你使用新的 ES6 特性时，可以专注于新语法，而无需担心在终端中运行额外的命令。
+目前，你将从命令行使用`Babel`。稍后，你将其添加到`npm`脚本中，这样编译就会自动进行。这样，当你使用新的 ES6 特性时，可以专注于新语法，而无需担心在终端中运行额外的命令。
 
 ### 类语法
 
+你构建 Chattrbox 客户端时使用的第一个 ES6 特性是`class`关键字。请记住，ES6 的`class`关键字的工作方式与其他编程语言中的类并不完全相同。相反，ES6 类仅仅为构造函数函数和`prototype`方法提供了一种更短的语法。
 
-
-
-你构建 Chattrbox 客户端时使用的第一个 ES6 特性是 `class` 关键字。请记住，ES6 的 `class` 关键字的工作方式与其他编程语言中的类并不完全相同。相反，ES6 类仅仅为构造函数函数和 `prototype` 方法提供了一种更短的语法。
-
-打开 `app.js` 并定义一个名为 `ChatApp` 的新类。
+打开`app.js`并定义一个名为`ChatApp`的新类。
 
 ```javascript
 class ChatApp {
+
 }
 ```
 
-在本章中，`ChatApp` 不会做什么。但最终，`ChatApp` 将负责你应用程序的大部分逻辑。
+在本章中，`ChatApp`不会做什么。但最终，`ChatApp`将负责你应用程序的大部分逻辑。
 
-目前类的定义为空。添加一个带有 `console.log` 语句的 `constructor` 方法：
+目前类的定义为空。添加一个带有`console.log`语句的`constructor`方法：
 
 ```javascript
 class ChatApp {
+
   constructor() {
+
     console.log('Hello ES6!');
+
   }
+
 }
 ```
 
-`constructor` 是一个在你创建类的新实例时都会运行的方法。通常，构造函数会为属于实例的属性设置值。
+`constructor`是一个在你创建类的新实例时都会运行的方法。通常，构造函数会为属于实例的属性设置值。
 
-接下来，在 `app.js` 中类声明之后之后创建 `ChatApp` 的实例：
+接下来，在`app.js`中类声明之后创建`ChatApp`的实例：
 
 ```javascript
 class ChatApp {
+
   constructor() {
+
     console.log('Hello ES6!');
+
   }
+
 }
+
 new ChatApp();
 ```
 
-让我们给代码运行一次测试。打开第二个终端窗口并切换到 Chattrbox 的根目录，即 `package.json`、`index.js` 和 `app/` 所在的目录。你将使用此窗口运行构建命令，并保持另一个窗口打开运行服务器。
+让我们给代码运行一次测试。打开第二个终端窗口并切换到 Chattrbox 的根目录，即`package.json`、`index.js`和`app/`所在的目录。你将使用此窗口运行构建命令，并保持另一个窗口打开运行服务器。
 
-要测试你的代码，使用 `Babel` 编译 `app/scripts/src/app.js`并将结果输出到 `app/scripts/dist/main.js`：
+要测试你的代码，使用`Babel`编译`app/scripts/src/app.js`并将结果输出到`app/scripts/dist/main.js`：
 
 ```bash
 babel app/scripts/src/app.js -o app/scripts/dist/main.js
 ```
 
-如果你在终端中没有看到任何变化，那是正常的——也是好消息。除非发生错误，否则 `Babel` 不会在命令行报告任何内容（图 17.8）。
+如果你在终端中没有看到任何变化，那是正常的——也是好消息。除非发生错误，否则`Babel`不会在命令行报告任何内容（图 17.8）。
 
 **图 17.8 Babel 静静地工作**
 
 ![Babel works quietly](img/babel-slient.png)
 
-确保你的 `Node` 服务器在另一个终端中运行（使用 `npm run dev`），并在浏览器中打开 `http://localhost:3000`。现在你将看到你的结果（图 17.9]）。
+确保你的`Node`服务器在另一个终端中运行（使用`npm run dev`），并在浏览器中打开`http://localhost:3000`。现在你将看到你的结果（图 17.9）。
 
 **图 17.9 Hello, ES6!**
 
 ![Hello, ES6!](img/hello-es6.png)
 
-你的 `app/index.html` 引用了你从 `app.js` 生成的 `main.js`。由于 `app.js` 创建了一个 `ChatApp`，`ChatApp` 构造函数中的代码会被执行，打印出“Hello ES6!”。
+你的`app/index.html`引用了你从`app.js`生成的`main.js`。由于`app.js`创建了一个`ChatApp`，`ChatApp`构造函数中的代码会被执行，打印出“Hello ES6!”。
 
-现在你已经确认 `Babel` 可以处理单个 JavaScript 文件，现在是时候开始处理多个模块了。
+现在你已经确认`Babel`可以处理单个 JavaScript 文件，现在是时候开始处理多个模块了。
 
 ## 使用 Browserify 打包模块
 
-ES5 不具备的一个特性是内置模块系统。当你构建 CoffeeRun 时，你使用了一种让你编写模块化代码的变方案——但这依赖于修改全局变量。
+ES5 不具备的一个特性是内置模块系统。当你构建 CoffeeRun 时，你使用了一种让你编写模块化代码的变通方案——但这依赖于修改全局变量。
 
-ES6 提供了真正的模块，就像许多其他编程语言中的模块一样。`Babel` 理解 ES6 模块语法，但没有等等的 ES5 代码供其转换。这就是为什么 `Browserify` 是必需的。
+ES6 提供了真正的模块，就像许多其他编程语言中的模块一样。`Babel`理解 ES6 模块语法，但没有等效的 ES5 代码供其转换。这就是为什么`Browserify`是必需的。
 
-图 17.10 显示了 `Browserify` 和 `Babel` 将如何协同工作。
+图 17.10 显示了`Browserify`和`Babel`将如何协同工作。
 
 **图 17.10 使用 Babel 和 Browserify 将 ES6 模块转换为 ES5 模块**
 
 ![Converting from ES6 modules to ES5 modules with Babel and Browserify](img/es6-node-iifes.png)
 
-默认情况下，`Babel` 将 ES6 模块语法转换为等等的 `Node.js`-风格的 `require` 和 `module.exports` 语法。然后 `Browserify` 将 `Node.js` 模块代码转换为 ES5 友好的函数。
+默认情况下，`Babel`将 ES6 模块语法转换为等效的`Node.js`风格的`require`和`module.exports`语法。然后`Browserify`将`Node.js`模块代码转换为 ES5 友好的函数。
 
-打开 `package.json` 并为 `browserify` 添加配置：
+打开`package.json`并为`browserify`添加配置：
 
 ```json
 {
+
   "scripts": {
+
     "build": "babel app/scripts/src/app.js -o app/scripts/dist/main.js",
+
     "watch": "watchify app/scripts/src/app.js -o app/scripts/dist/main.js",
+
     "start": "nodemon app/scripts/dist/main.js"
+
   },
+
   "browserify": {
+
     "transform": [
+
       {
+
         "loader": "@babel/transform",
+
         "options": {
+
           "presets": ["@babel/preset-env"]
+
         }
+
       }
+
     ]
+
   }
+
 }
 ```
 
-默认情况下，`Babel` 将 ES6 模块语法转换为等等的 `Node.js`-风格的 `require` 和 `module.exports` 语法。然后 `Browserify` 将 `Node.js` 模块代码转换为 ES5 友好的函数。
+默认情况下，`Babel`将 ES6 模块语法转换为等效的`Node.js`风格的`require`和`module.exports`语法。然后`Browserify`将`Node.js`模块代码转换为 ES5 友好的函数。
 
-
-
-
-`npm` 将运行你的 `build` 命令，该命令将运行 `browserify`。在执行每个命令时，它会向你显示它正在做什么。不过，`Browserify` 本身会保持沉默，除非发生错误（图 17.11）。
+`npm`将运行你的`build`命令，该命令将运行`browserify`。在执行每个命令时，它会向你显示它正在做什么。不过，`Browserify`本身会保持沉默，除非发生错误（图 17.11）。
 
 **图 17.11 通过 npm run build 运行 Browserify**
 
 ![Running Browserify via npm run build](img/npm-run-build.png)
 
-当 `Browserify` 成功后，它会将经过 Babel 处理的 `main.js` 打包 `app/dist/` 文件夹中，就像你之前手动操作的那样。
+当`Browserify`成功后，它会将经过 Babel 处理的`main.js`打包到`app/dist/`文件夹中，就像你之前手动操作的那样。
 
-现在重新加载浏览器查看输出。你没有添加任何新功能，只是重构了 `ChatApp` 构造函数调用的位置。因此，你应该会在控制台中看到与之前相同的相同的消息（图 17.12）。
+现在重新加载浏览器查看输出。你没有添加任何新功能，只是重构了`ChatApp`构造函数调用的位置。因此，你应该会在控制台中看到与之前相同的消息（图 17.12）。
 
-**图 17.12  Hello again!**
+**图 17.12 Hello again!**
 
 ![Hello again!](img/hello-es6.png)
 
-要集成的下一个部分是 `Watchify`。`Watchify` 运行 `Browserify` 构建的作用与 `nodemon` 运行你的 `Node.js` 服务器相同：每当你修改源代码文件时，它都会自动触发重新构建。
+要集成的下一个部分是`Watchify`。`Watchify`运行`Browserify`构建的作用与`nodemon`运行你的`Node.js`服务器相同：每当你修改源代码文件时，它都会自动触发重新构建。
 
-在你对代码进行更改时启动 `Watchify` 以开启构建过程：
+在你对代码进行更改时启动`Watchify`以开启构建过程：
 
 ```
 npm run watch
 ```
 
-`Watchify` 将确认它正在运行（图 17.13）。
+`Watchify`将确认它正在运行（图 17.13）。
 
 **图 17.13 通过 npm run watch 运行 Watchify**
 
 ![Running Watchify via npm run watch](img/npm-run-watch.png)
 
-`Watchify` 比 `Browserify` 更话多。每当它运行 `Browserify` 时，它都会告诉你它向文件写入了多少字节。这并不特别有趣，但它能告诉你输出何时发生了变化。在你继续开发 Chattrbox 时，让 `Watchify` 运行在其中一个终端中。（你的服务器应该仍然运行在另一个终端中。）
+`Watchify`比`Browserify`更话多。每当它运行`Browserify`时，它都会告诉你它向文件写入了多少字节。这并不特别有趣，但它能告诉你输出何时发生了变化。在你继续开发 Chattrbox 时，让`Watchify`运行在其中一个终端中。（你的服务器应该仍然运行在另一个终端中。）
 
 ## 添加 ChatMessage 类
 
@@ -8962,15 +9533,19 @@ npm run watch
 
 对于每条消息，你想要跟踪三部分信息。你需要知道消息文本、发送者以及发送时间。
 
-JavaScript 对象表示法（JavaScript Object Notation，通常被称为 JSON（根据创始人 Douglas Crockford 的说法，读作“Jason”））——是一种轻量级的数据交换格式。你已经在 `package.json` 文件中使用过 JSON。它是人类可读且与语言无关的，非常适合发送和接收你想与 Chattrbox 交换的数据类型。
+JavaScript 对象表示法（JavaScript Object Notation，通常被称为 JSON（根据创始人 Douglas Crockford 的说法，读作“Jason”））——是一种轻量级的数据交换格式。你已经在`package.json`文件中使用过 JSON。它是人类可读且与语言无关的，非常适合发送和接收你想与 Chattrbox 交换的数据类型。
 
 这是一个格式化为 JSON 的示例消息：
 
 ```json
 {
+
   "message": "I'm Batman",
+
   "user": "batman",
+
   "timestamp": 614653200000
+
 }
 ```
 
@@ -8978,66 +9553,101 @@ Chattrbox 消息数据来自两个不同的源。一个源是客户端，当用�
 
 当消息数据来自表单，你需要在发送到服务器之前添加用户名和时间戳。当数据来自服务器时，所有三部分信息都应该包含在内。如何处理这种差异？有许多选择。让我们简要查看其中一些，包括一些利用便利 ES6 特性的方法。
 
-在 `app.js` 中创建一个类来表示单条聊天消息。
+在`app.js`中创建一个类来表示单条聊天消息。
 
 ```javascript
 class ChatApp {
+
   constructor() {
+
     console.log('Hello ES6!');
+
   }
+
 }
 
 class ChatMessage {
+
   constructor(data) {
+
   }
+
 }
 
 export default ChatApp;
 ```
 
-处理此问题的种方法是使用简单的构造函数，接收消息文本、用户名和时间戳。（不要在文件中进行此更改。这只是一个示例。）
+处理此问题的一种方法是使用简单的构造函数，接收消息文本、用户名和时间戳。（不要在文件中进行此更改。这只是一个示例。）
 
 ```javascript
 ...
+
 class ChatMessage {
+
   constructor(message, user, timestamp) {
+
     this.message = message;
+
     this.user = user || 'batman';
+
     this.timestamp = timestamp || (new Date()).getTime();
+
   }
+
 }
+
 ...
 ```
 
-你已经见过这种模式多次。你将值分配给实例属性，并为 `user` 和 `timestamp` 提供回退值。这样做可以，但 ES6 提供了一种使用默认参数编写此代码的更紧凑的方法。
+你已经见过这种模式多次。你将值分配给实例属性，并为`user`和`timestamp`提供回退值。这样做可以，但 ES6 提供了一种使用默认参数编写此代码的更紧凑的方法。
 
 ```javascript
 ...
+
 class ChatMessage {
+
   constructor(message, user='batman', timestamp=(new Date()).getTime()) {
+
     this.message = message;
+
     this.user = user;
+
     this.timestamp = timestamp;
+
   }
+
 }
+
 ...
 ```
 
-这种语法清楚地看出哪些值是必须的，哪些是可选的。但使用这种语法，你失去了默认参数的便利性。幸运的是，你可以结合这两种技术。构造函数的这个最终版本是你应该添加到 `app.js` 中的：
+这种语法清楚地看出哪些值是必须的，哪些是可选的。但使用这种语法，你失去了默认参数的便利性。幸运的是，你可以结合这两种技术。构造函数的这个最终版本是你应该添加到`app.js`中的：
 
 ```javascript
 ...
+
 class ChatMessage {
+
   constructor({
+
     message: m,
+
     user: u='batman',
+
     timestamp: t=(new Date()).getTime()
+
   }) {
+
     this.message = m;
+
     this.user = u;
+
     this.timestamp = t;
+
   }
+
 }
+
 ...
 ```
 
@@ -9047,14 +9657,23 @@ class ChatMessage {
 
 ```javascript
 ...
+
 class ChatMessage {
+
   constructor(data) {
+
     var {message: m, user: u='batman', timestamp: t=(new Date()).getTime()} = data;
+
     this.message = m;
+
     this.user = u;
+
     this.timestamp = t;
+
   }
+
 }
+
 ...
 ```
 
@@ -9062,45 +9681,61 @@ class ChatMessage {
 
 ```javascript
 new ChatMessage({message: 'hello from the outside',
+
                  user: 'adele25@bigneranch.com', timestamp:1462399523859});
 ```
 
+你的`ChatMessage`类将所有重要信息存储在属性中，但它的实例也继承了`ChatMessage`的方法和其他信息。这使得`ChatMessage`实例不适合通过 WebSocket 发送。你需要一个该信息的精简版本。
 
+在`app.js`中编写一个`serialize`方法，将`ChatMessage`属性中的数据表示为一个普通的 JavaScript 对象。
 
-
-你的 `ChatMessage` 类将所有重要信息存储在属性中，但它的实例也继承了 `ChatMessage` 的方法和其他信息。这使得 `ChatMessage` 实例不适合通过 WebSocket 发送。你需要一个该信息的精简版本。
-
-在 `app.js` 中编写一个 `serialize` 方法，将 `ChatMessage` 属性中的数据表示为一个普通的 JavaScript 对象。
-
-```
+```javascript
 ...
+
 class ChatMessage {
+
   constructor({
+
     message: m,
+
     user: u='batman',
+
     timestamp: t=(new Date()).getTime()
+
   }) {
+
     this.user = user;
+
     this.message = message;
+
     this.timestamp = timestamp;
+
   }
+
   serialize() {
+
     return {
+
       user: this.user,
+
       message: this.message,
+
       timestamp: this.timestamp
+
     };
+
   }
+
 }
 
 export default ChatApp;
 ```
 
-你的 `ChatMessage` 类现在已经准备就绪。是时候进入 Chattrbox 的下一个模块了。
+你的`ChatMessage`类现在已经准备就绪。是时候进入 Chattrbox 的下一个模块了。
 
 ## 创建 ws-client 模块
 
-`ws-client.js` 模块将处理与你的 `Node` WebSocket 服务器的通信。
+`ws-client.js`模块将处理与你的`Node` WebSocket 服务器的通信。
 
 它将承担四个职责：
 
@@ -9111,52 +9746,61 @@ export default ChatApp;
 
 查看这些职责与你其他组件的关系（图 17.14）。
 
-**图 17.14 `ws-client` 的接口**
+**图 17.14 `ws-client`的接口**
 
 ![ws-client 的接口](img/app-architecture-ws-client.png)
 
-在你构建客户端时，还将将览一些新的 ES6 特性。
+在你构建客户端时，还将浏览一些新的 ES6 特性。
 
 ### 连接处理
 
-首先，构建你的连接处理。从打开 `ws-client.js` 并为 WebSocket 连接声明变量开始。
+首先，构建你的连接处理。从打开`ws-client.js`并为 WebSocket 连接声明变量开始。
 
-```
+```javascript
 let socket;
 ```
 
-此声明使用了 ES6 中定义变量的新方式，称为 `let` 作用域（let scoping）”。如果你使用 `let` 作用域来声明变量——使用关键字 `let` 而不是 `var`——你的变量将不会被“提升”（hoisted）。
+此声明使用了 ES6 中定义变量的新方式，称为`let`作用域（let scoping）。如果你使用`let`作用域来声明变量——使用关键字`let`而不是`var`——你的变量将不会被“提升”（hoisted）。
 
 提升意味着变量声明会被移动到创建它们的函数作用域顶部。这是 JavaScript 解释器在后台执行的操作。遗憾的是，它可能会导致难以发现的错误。
 
-你将在章节末尾读到关于提升的更多。现在，请记住 `let` 是在 `if/else` 子句和循环体内声明变量更安全的方法。
+你将在章节末尾读到关于提升的更多。现在，请记住`let`是在`if/else`子句和循环体内声明变量更安全的方法。
 
-现在，为 `ws-client.js` 添加一个方法来初始化你的连接。
+现在，为`ws-client.js`添加一个方法来初始化你的连接。
 
-```
+```javascript
 let socket;
 
 function init(url)  {
+
   socket = new WebSocket(url);
-  console.log('connecting...');
-}
 ```
 
-`init` 函数连接到 WebSocket 服务器。接下来，你想将 `ws-client.js` 与 `app.js` 中的 `ChatApp` 关联起来。
 
-为了成为一个功能模块，`ws-client.js` 需要指定它导出了什么。你需要导出单个值：一个将导出函数作为属性的对象代码。你将使用在章节开始时使用的 `export default` 语法——再加上额外的 ES6 便利功能。
 
-如所示，在 `ws-client.js` 的末尾添加导出语句。
+`console.log('connecting...');`
+
+`init` 函数连接到 WebSocket 服务器。接下来，你想将`ws-client.js`与`app.js`中的`ChatApp`关联起来。
+
+为了成为一个功能模块，`ws-client.js`需要指定它导出了什么。你需要导出单个值：一个将导出函数作为属性的对象代码。你将使用在章节开始时使用的`export default`语法——再加上额外的 ES6 便利功能。
+
+如所示，在`ws-client.js`的末尾添加导出语句。
 
 ```
 ...
+
 function init(url)  {
+
   socket = new WebSocket(url);
+
   console.log('connecting...');
+
 }
 
 export default {
+
   init,
+
 }
 ```
 
@@ -9164,42 +9808,55 @@ export default {
 
 ```
 export default {
+
   init: init
+
 }
 ```
 
 如果键和值的名称相同，ES6 允许你省略冒号和值。键将自动成为变量名，值将自动成为与该名关联的值。ES6 的这一特性是“增强对象字面量”（enhanced object literal）语法。
 
-现在你已经设置好了 `ws-client` 模块，是时候在 `app.js` 中导入它提供的值了。从在 `app.js` 顶部添加导入语句开始：
+现在你已经设置好了`ws-client`模块，是时候在`app.js`中导入它提供的值了。从在`app.js`顶部添加导入语句开始：
 
 ```
 import socket from './ws-client';
 
 class ChatApp {
+
   constructor() {
+
     console.log('Hello ES6!');
+
   }
+
 }
+
 ...
 ```
 
-`socket` 将是你从 `ws-client.js` 导出的对象。
+`socket`将是你从`ws-client.js`导出的对象。
 
-接下来，在 `ChatApp` 构造函数中调用 `socket.init` 并传入你的 WebSocket URL。
+接下来，在`ChatApp`构造函数中调用`socket.init`并传入你的 WebSocket URL。
 
 ```
 import socket from './ws-client';
 
 class ChatApp {
+
   constructor() {
+
     console.log('Hello ES6!');
+
     socket.init('ws://3001');
+
   }
+
 }
+
 ...
 ```
 
-你的 `npm` 脚本应该重新构建代码。（你可能需要在不同的窗口中重启 `npm watch` 和 `npm dev`）。重新加载浏览器，你应该能看到控制台打印了 `'connecting...'`，如图 17.15 所示。
+你的`npm`脚本应该重新构建代码。（你可能需要在不同的窗口中重启`npm watch`和`npm dev`）。重新加载浏览器，你应该能看到控制台打印了`'connecting...'`，如图 17.15 所示。
 
 **图 17.15 初始化时记录的日志**
 
@@ -9207,81 +9864,111 @@ class ChatApp {
 
 此时，你的应用程序骨架已经建立并运行。
 
-### 处理事件和发送消息
+## 处理事件和发送消息
 
-当你的 `App` 模块调用 `init` 时，会实例化一个新的 `WebSocket` 对象并与服务器建立连接。但你的 `App` 模块需要知道这个过程何时完成，以便它对连接进行某些操作。
+当你的`App`模块调用`init`时，会实例化一个新的`WebSocket`对象并与服务器建立连接。但你的`App`模块需要知道这个过程何时完成，以便它对连接进行某些操作。
 
-`WebSocket` 对象有一组用于处理事件的特殊属性。其中之一是 `onopen` 属性。分配给此属性的任何函数会在建立连接时被调用。在此函数内部，你可以执行任何需要执行的步骤。
+`WebSocket`对象有一组用于处理事件的特殊属性。其中之一是`onopen`属性。分配给此属性的任何函数会在建立连接时被调用。在此函数内部，你可以执行任何需要执行的步骤。
 
-为了让 `ws-client` 模块具有灵活的可复用性，你不会硬编码 `App` 模块在连接时需要的操作步骤。相反，你将使用在 CoffeeRun 中处理点击和提交处理器时使用的模式。
+为了让`ws-client`模块具有灵活的可复用性，你不会硬编码`App`模块在连接时需要的操作步骤。相反，你将使用在 CoffeeRun 中处理点击和提交处理器时使用的模式。
 
-在 `ws-client.js` 中添加一个名为 `registerOpenHandler` 的函数。`registerOpenHandler` 将接收回调，将函数分配给 `onopen`，然后在 `onopen` 函数内部调用回调。
+在`ws-client.js`中添加一个名为`registerOpenHandler`的函数。`registerOpenHandler`将接收回调，将函数分配给`onopen`，然后在`onopen`函数内部调用回调。
 
 ```
 let socket;
 
 function init(url)  {
+
   socket = new WebSocket(url);
+
   console.log('connecting...');
+
 }
 
 function registerOpenHandler(handlerFunction) {
+
   socket.onopen = () => {
+
     console.log('open');
+
     handlerFunction();
+
   };
+
 }
+
 ...
 ```
 
 此函数定义与你之前写的不同。这是一种新的 ES6 语法，称为“箭头函数”（arrow function）。箭头函数是匿名函数的简写。除了写起来更简单外，箭头函数的工作原理与匿名函数完全相同。
 
-`registerOpenHandler` 接收一个函数参数（`handlerFunction`），并将一个匿名函数分配给连接的 `onopen` 属性。在这个匿名函数内部，你调用传入的 `handlerFunction`。
+`registerOpenHandler`接收一个函数参数（`handlerFunction`），并将一个匿名函数分配给连接的`onopen`属性。在这个匿名函数内部，你调用传入的`handlerFunction`。
 
+（使用匿名函数比编写`socket.onopen = handlerFunction`要复杂。当你需要对事件做出响应，但在转发事件之前必须执行中间步骤时（例如像你在这里做的那样，写一条日志消息），这种模式将对你有帮助。）
 
-
-（使用匿名函数比编写 `socket.onopen = handlerFunction` 要复杂。当你需要对事件做出响应，但在转发事件之前必须执行中间步骤时（例如像你在这里做的那样，写一条日志消息），这种模式将对你有帮助。）
-
-接下来，你需要编写一个接口来处理通过 WebSocket 连接传来的消息。在 `ws-client.js` 中编写一个名为 `registerMessageHandler` 的新方法。为 `socket` 的 `onmessage` 属性分配一个箭头函数；该箭头函数应该预期接收一个事件参数。
+接下来，你需要编写一个接口来处理通过 WebSocket 连接传来的消息。在`ws-client.js`中编写一个名为`registerMessageHandler`的新方法。为`socket`的`onmessage`属性分配一个箭头函数；该箭头函数应该预期接收一个事件参数。
 
 ```
 ...
+
 function registerOpenHandler(handlerFunction) {
+
   socket.onopen = () => {
+
     console.log('open');
+
     handlerFunction();
+
   };
+
 }
 
 function registerMessageHandler(handlerFunction) {
+
   socket.onmessage = (e) => {
+
     console.log('message', e.data);
+
     let data = JSON.parse(e.data);
+
     handlerFunction(data);
+
   };
+
 }
+
 ...
 ```
 
 箭头函数的参数放在括号内，与普通函数一样。
 
-Chatrbox 客户端在 `registerMessageHandler` 内部的 `onmessage` 回调中接收来自发送的对象。该对象代表事件，并有一个 `data` 属性，包含来自服务器的 JSON 字符串。每当你收到一个字符串时，都会将该字符串转换为 JavaScript 对象。然后将其传递给 `handlerFunction`。
+Chatrbox 客户端在`registerMessageHandler`内部的`onmessage`回调中接收来自发送的对象。该对象代表事件，并有一个`data`属性，包含来自服务器的 JSON 字符串。每当你收到一个字符串时，都会将该字符串转换为 JavaScript 对象。然后将其传递给`handlerFunction`。
 
-最后一部分是实际将消息发送到你的 WebSocket 代码。在 `ws-client.js` 中编写一个名为 `sendMessage` 的函数。你将分两部分完成：首先，你将消息负载（包含消息、用户名和时间戳）转换为 JSON 字符串。然后，你把该 JSON 字符串发送到 WebSocket 服务器。
+最后一部分是实际将消息发送到你的 WebSocket 代码。在`ws-client.js`中编写一个名为`sendMessage`的函数。你将分两部分完成：首先，你将消息负载（包含消息、用户名和时间戳）转换为 JSON 字符串。然后，你把该 JSON 字符串发送到 WebSocket 服务器。
 
 ```
 ...
+
 function registerMessageHandler(handlerFunction) {
+
   socket.onmessage = (e) => {
+
     console.log('message', e.data);
+
     let data = JSON.parse(e.data);
+
     handlerFunction(data);
+
   };
+
 }
 
 function sendMessage(payload) {
+
   socket.send(JSON.stringify(payload));
+
 }
+
 ...
 ```
 
@@ -9289,39 +9976,59 @@ function sendMessage(payload) {
 
 ```
 ...
+
 function sendMessage(payload) {
+
   socket.send(JSON.stringify(payload));
+
 }
 
 export default {
+
   init,
+
   registerOpenHandler,
+
   registerMessageHandler,
+
   sendMessage
+
 }
 ```
 
-完成后，`ws-client.js` 就具备了与服务器往返通信所需的一切。你在 `ws-client.js` 中的最后一个任务是通过发送消息来测试它。
+完成后，`ws-client.js`就具备了与服务器往返通信所需的一切。你在`ws-client.js`中的最后一个任务是通过发送消息来测试它。
 
-### 发送并响应消息
+## 发送并响应消息
 
-更新 `app.js` 中的 `ChatApp` 构造函数。在调用 `socket.init` 之后，调用 `registerOpenHandler` 和 `registerMessageHandler` 并向它们传递箭头函数。
+更新`app.js`中的`ChatApp`构造函数。在调用`socket.init`之后，调用`registerOpenHandler`和`registerMessageHandler`并向它们传递箭头函数。
 
 ```
 import socket from './ws-client';
 
 class ChatApp {
+
   constructor() {
+
     socket.init('ws://localhost:3001');
+
     socket.registerOpenHandler(() => {
+
       let message = new ChatMessage({ message: 'pow!' });
+
       socket.sendMessage(message.serialize());
+
     });
+
     socket.registerMessageHandler((data) => {
+
       console.log(data);
+
     });
+
   }
+
 }
+
 ...
 ```
 
@@ -9349,67 +10056,83 @@ Google、Mozilla 等公司正在合作开发一个名为 WebAssembly 的项目�
 
 ### 青铜挑战：默认导入命名
 
-在 `main.js` 中，你的导入语句创建一个名为 `ChatApp` 的本地变量。如果你将其更改为 `ApplicationFort` 会发生什么？
+在`main.js`中，你的导入语句创建一个名为`ChatApp`的本地变量。如果你将其更改为`ApplicationFort`会发生什么？
 
-尝试一下（同时修改下一行的 `new` 语句），并找出它是否仍然有效。如果是，为什么？如果不是，为什么？
+尝试一下（同时修改下一行的`new`语句），并找出它是否仍然有效。如果是，为什么？如果不是，为什么？
 
 ### 银牌挑战：连接关闭提示
 
-在 `ws-client` 模块中添加另一个名为 `registerCloseHandler` 的函数。它应该接收一个回调，在 socket 触发 `close` 事件时调用。
+在`ws-client`模块中添加另一个名为`registerCloseHandler`的函数。它应该接收一个回调，在 socket 触发`close`事件时调用。
 
-在 `main.js` 中，使用 `registerCloseHandler` 通知用户连接已关闭。然后测试以确保它正常工作。
+在`main.js`中，使用`registerCloseHandler`通知用户连接已关闭。然后测试以确保它正常工作。
 
 如何测试它？显然你不能关闭浏览器窗口。你需要关闭连接的另一端。
 
-作为额外奖励，编写一个尝试重连的函数。你可以使用 `setTimeout`，也可以提示用户确认（请搜索 MDN 获取详情）。
-
-
+作为额外奖励，编写一个尝试重连的函数。你可以使用`setTimeout`，也可以提示用户确认（请搜索 MDN 获取详情）。
 
 它的解释就像是你写了：
 
 ```
 function logSomeValues () {
+
   var myVal;
+
   console.log(myVal);
+
   myVal = 5;
+
   console.log(myVal);
+
 }
 ```
 
-如果你在控制台调用 `logSomeValues()`，你会看到这些：
+如果你在控制台调用`logSomeValues()`，你会看到这些：
 
 ```
 > logSomeValues();
+
 undefined
+
 5
 ```
 
-注意，只有 `declaration`（声明）被提升了。赋值语句留在原处。自然地，这可能会导致困惑，尤其是当你尝试在 `if` 语句或循环内部声明变量时。在其他语言中，大括号表示一个 `block`（块），它有自己的作用域。在 JavaScript 中，大括号块不会创建作用域。只有函数会创建作用域。
+注意，只有`declaration`（声明）被提升了。赋值语句留在原处。自然地，这可能会导致困惑，尤其是当你尝试在`if`语句或循环内部声明变量时。在其他语言中，大括号表示一个`block`（块），它有自己的作用域。在 JavaScript 中，大括号块不会创建作用域。只有函数会创建作用域。
 
 看另一个例子：
 
 ```
 var myVal =  11;
+
 function doNotWriteCodeLikeThis() {
+
   if (myVal > 10) {
+
     var myVal = 0;
+
     console.log('myVal was greater than 10; resetting to 0');
+
   } else {
+
     console.log('no need to reset.');
+
   }
+
   return myVal;
+
 }
 ```
 
-你可能预期 `'myVal was greater than 10; resetting to 0'` 会打印到控制台并返回值 `0`。相反，打印的内容将是：
+你可能预期`'myVal was greater than 10; resetting to 0'`会打印到控制台并返回值`0`。相反，打印的内容将是：
 
 ```
 > doNotWriteCodeLikeThis();
+
 no need to reset.
+
 undefined
 ```
 
-声明 `var myVal` 被移动到了函数的顶部，因此在 `if` 子句被评估之前，`myVal` 的值为 `undefined`。赋值语句保留在 `if` 块内部。
+声明`var myVal`被移动到了函数的顶部，因此在`if`子句被评估之前，`myVal`的值为`undefined`。赋值语句保留在`if`块内部。
 
 函数声明也会被提升，但是整体提升。这意味着这段代码运行良好良好：
 
@@ -9417,19 +10140,23 @@ undefined
 boo();
 
 // 在调用后声明：
+
 function boo() {
+
   console.log('BOO!!');
+
 }
 ```
 
-JavaScript 将整个函数声明块移动到顶部，允许 `boo` 的调用没有任何问题地发生：
+JavaScript 将整个函数声明块移动到顶部，允许`boo`的调用没有任何问题地发生：
 
 ```
 > boo();
+
 BOO!!
 ```
 
-`let` 语句不受提升影响。`const` 语句允许你声明不能重新赋值的变量，也不受提升影响。
+`let`语句不受提升影响。`const`语句允许你声明不能重新赋值的变量，也不受提升影响。
 
 ## 针对更好奇的人：箭头函数
 
@@ -9437,23 +10164,31 @@ BOO!!
 
 除了提供更短的语法外，箭头函数：
 
-*   工作方式就像你写了 `function () {}.bind(this)` 一样，使得 `this` 在箭头函数体内按预期工作
+* 工作方式就像你写了`function () {}.bind(this)`一样，使得`this`在箭头函数体内按预期工作
 
-*   如果你只有一个语句，则允许你省略大括号
+* 如果你只有一个语句，则允许你省略大括号
 
-*   当省略大括号时，它返回单个语句的结果
+* 当省略大括号时，它返回单个语句的结果
 
-例如，这里是 CoffeeRun 的 `CheckList.prototype.addClickHandler` 方法：
+例如，这里是 CoffeeRun 的`CheckList.prototype.addClickHandler`方法：
 
 ```
 CheckList.prototype.addClickHandler = function(fn) {
+
   this.$element.on('click', 'input', function (event) {
+
     var email = event.target.value;
+
     fn(email)
+
       .then( function () {
+
         this.removeRow(email);
+
       }.bind(this));
+
   }.bind(this));
+
 };
 ```
 
@@ -9461,13 +10196,21 @@ CheckList.prototype.addClickHandler = function(fn) {
 
 ```
 CheckList.prototype.addClickHandler = (fn) => {
+
   this.$element.on('click', 'input', (event) => {
+
     let email = event.target.value;
+
     fn(email)
+
       .then(() => this.removeRow(email));
+
   });
+
 };
 ```
+
+
 
 没有了 `function` 和 `.bind(this)` 的额外噪音后，`addClickHandler` 正在执行的工作更加明显了。
 
@@ -9477,7 +10220,7 @@ Chatrbox 是一个可以运行的应用程序，但现在它专注于“内部�
 
 在本章中，你将通过连接 UI 层来完成 Chattrbox。你将继续使用 `Node` 和 `npm` 来管理你的构建过程并作为服务器，在章节结束时，你将拥有一个功能完整的 Web 聊天应用程序（图 18.1）。
 
-**图 18.1  完成的 Chattrbox**
+**图 18.1 完成的 Chattrbox**
 
 ![完成的 Chattrbox](img/finished-chattrbox.png)
 
@@ -9497,6 +10240,8 @@ npm install --save-dev
 
 ```
 ...
+```
+
 在本章的晚些时候，你将安装并使用另一个第三方库。当你这样做时，将遵循这些相同的步骤来安装和导入它。
 
 ## 创建 ChatForm 类
@@ -9539,11 +10284,9 @@ class ChatForm {
 }
 ```
 
-
-
 为了确保在点击按钮时提交表单，你添加了一个点击处理程序，触发了表单的 `submit` 事件。你通过使用 jQuery 获取表单元素，然后调用 jQuery 的 `submit()` 方法来实现此点。你使用了单表达式形式的箭头函数，这允许你省略大括号。
 
-为了让这个模块变得有用，你需要导出（export）`ChatForm`。在上一章中，你使用 `export default` 来实现这一目的。这允许你为模块导出一个单一的值。在某些情况下，你使用一个普通的 JavaScript 对象将多个值封装在那个单一默认值中。
+为了让这个模块变得有用，你需要导出（`export`）`ChatForm`。在上一章中，你使用 `export default` 来实现这一目的。这允许你为模块导出一个单一的值。在某些情况下，你使用一个普通的 JavaScript 对象将多个值封装在那个单一默认值中。
 
 在本章中，你将使用 `named exports`（命名导出）来导出多个命名的值，而不是单一默认值。
 
@@ -9595,7 +10338,7 @@ class ChatApp {
 
 在上一章中，你发送了一条伪消息：`"pow!"`。现在你准备好从 `ChatForm` 发送真实的表单数据了。
 
-在 `socket.registerOpenHandler` 回调内部，你将初始化 `ChatForm` 实例。在 socket 打开之后*执行这一点是非常重要的，而不是在创建实例后立即初始化。通过等待，你可以防止用户在消息实际发送到服务器之前输入聊天消息。（那将是一件糟糕的事情。）记住 `ChatForm` 的 `init()` 方法接受一个回调函数。该回调将用于处理表单提交。
+在 `socket.registerOpenHandler` 回调内部，你将初始化 `ChatForm` 实例。在 socket 打开之后执行这一点是非常重要的，而不是在创建实例后立即初始化。通过等待，你可以防止用户在消息实际发送到服务器之前输入聊天消息。（那将是一件糟糕的事情。）记住 `ChatForm` 的 `init()` 方法接受一个回调函数。该回调将用于处理表单提交。
 
 在 `app.js` 中，删除你的伪消息代码，并将其替换为对 `ChatForm.init` 的调用，传递一个回调函数将来自 `ChatForm` 的消息数据发送到你的 `socket`。
 
@@ -9647,7 +10390,7 @@ export class ChatList {
   }
 
   drawMessage({user: u, timestamp: t, message: m}) {
-    let $messageRow = $('<<li>', {
+    let $messageRow = $('<li>', {
       'class': 'message-row'
     });
 
@@ -9657,18 +10400,18 @@ export class ChatList {
 
     let $message = $('<p>');
 
-    $message.append($<span>', {
+    $message.append($('<span>', {
       'class': 'message-username',
       text: u
     }));
 
-    $message.append($<span>', {
+    $message.append($('<span>', {
       'class': 'timestamp',
       'data-time': t,
       text: (new Date(t)).getTime()
     }));
 
-    $message.append($<span>', {
+    $message.append($('<span>', {
       'class': 'message-message',
       text: m
     }));
@@ -9681,8 +10424,6 @@ export class ChatList {
 ```
 
 你的 `drawMessage()` 方法为消息创建了一行，并显示用户名、时间戳和消息本身。如果你是消息的发送者，它会添加一个额外的 CSS 类用于样式设置。然后它将你的消息行添加到 `ChatList` 的列表元素中，并将新消息行滚动到视图中。
-
-
 
 现在，`ChatList` 已经准备就绪了。是时候将其集成到 `ChatApp` 中。
 
@@ -9723,7 +10464,7 @@ class ChatApp {
 
 你使用传入的数据创建一个新的 `ChatMessage`，然后对 `message` 进行 `serialize`。这是一个预防性步骤，用于剔除可能添加到数据中的额外元数据。从 socket 数据创建新的 `ChatMessage` 可以让你获得消息，而 `this.chatList.drawMessage` 则将该 `serialize` 后的消息绘制到你的浏览器中。
 
-是时候尝试一下了。如果你还没有，请启动 `Watchify`（通过 `npm run watch`）和 `nodemon`（通过 `npm run dev`）。打开或刷新浏览器并输入消息（图 18.2]）。
+是时候尝试一下了。如果你还没有，请启动 `Watchify`（通过 `npm run watch`）和 `nodemon`（通过 `npm run dev`）。打开或刷新浏览器并输入消息（图 18.2）。
 
 **图 18.2 查看你自己的聊天消息**
 
@@ -9733,7 +10474,7 @@ class ChatApp {
 
 ## 使用 Gravatars
 
-Gravatar 是一个免费服务，让你将个人头像与电子邮件地址关联。Gravatar 让每个用户的头像通过一个特殊格式的 URL 可用。例如，图 18.3] 显示了我们测试账户之一的 Gravatar。
+Gravatar 是一个免费服务，让你将个人头像与电子邮件地址关联。Gravatar 让每个用户的头像通过一个特殊格式的 URL 可用。例如，图 18.3 显示了我们测试账户之一的 Gravatar。
 
 **图 18.3 Gravatar 图像示例**
 
@@ -9768,55 +10509,27 @@ function createGravatarUrl(username) {
 
 在反引号内部，你可以使用 `${userhash.toString()}` 语法将 JavaScript 表达式的值直接包含在字符串中。在这里，你引用了变量 `userhash` 并调用它的 `toString()` 方法。
 
-接下来，你将使用 ` `....`...............`. `.`````.
-
-（此处原文存在乱码/缺失）Chattrbox。
+接下来，你将使用 `createGravatarUrl` 函数来完善 Chattrbox。
 
 ```
 ...
-        
- =
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
+=
 
 .
 
 message);
+
     $
+
     (0).IntoView();
+
 ...
 ```
 
-运行你的聊天应用程序，这次你应该能看到一个 Gravatar 弹出（图 18.4]）。![查看一个 Gravatar](img/great-hera.png)
+
+
+运行你的聊天应用程序，这次你应该能看到一个 Gravatar 弹出（图 18.4）。![查看一个 Gravatar](img/great-hera.png)
 
 遗憾的是，该 `username` 没有 Gravatar。
 
@@ -9824,7 +10537,7 @@ message);
 
 成为神奇女侠很酷。但成为一名 JavaScript 开发者更酷。为了知道是谁在使用 Chattrbox，你需要提示用户输入用户名。与 UI 交互是 `dom` 模块的职责，因此在 `dom.js` 中创建一个 `promptForUsername` 函数。将其添加到 `export` 中，而不是作为 `ChatForm` 或 `ChatList` 的部分。
 
-```
+```javascript
 function createGravatarUrl(username) {
   let userhash = md5(username);
   return `http://www.gravatar.com/avatar/${userhash.toString()}`;
@@ -9840,7 +10553,7 @@ export function promptForUsername() {
 
 接下来，你需要更新 `app.js` 以使用这个新函数。更新 `dom` 模块的 `import` 语句并调用 `promptForUsername` 函数为 `username` 变量赋值：
 
-```
+```javascript
 import socket from './ws-client';
 import {ChatForm, ChatList, promptForUsername} from './dom';
 
@@ -9853,21 +10566,21 @@ username = promptForUsername();
 
 class ChatApp {
   ...
+}
 ```
 
 现在，更新 `ChatMessage` 以使用该用户名作为默认值。记住，只有从服务器接收到的消息才有 `data.user` 值。
 
-```
+```javascript
 ...
 class ChatMessage {
   constructor({
     message: m,
     user: u='batman', username,
     timestamp: t=(new Date()).getTime()
-...
+  ...
+}
 ```
-
-
 
 最后，将用户名传递给 `ChatList` 构造函数：
 
@@ -9881,15 +10594,15 @@ class ChatApp {
 }
 ```
 
-构建过程完成后，重新加载浏览器并在提示框中输入用户名（图 18.5]）。
+构建过程完成后，重新加载浏览器并在提示框中输入用户名（图 18.5）。
 
-**图 18.5  提示用户名**
+**图 18.5 提示用户名**
 
 ![提示用户名](img/prompt.png)
 
-现在，尝试发送消息。你应该能看到你选择的用户名回显，以及与该用户名关联 Gravatar（图 18.6]）。
+现在，尝试发送消息。你应该能看到你选择的用户名回显，以及与该用户名关联的 Gravatar（图 18.6）。
 
-**图 18.6  你的用户名**
+**图 18.6 你的用户名**
 
 ![你的用户名](img/wonder-woman-quotes.png)
 
@@ -9899,7 +10612,7 @@ Gravatars 是使用电子邮件地址分配的。如果你的电子邮件地址�
 
 每次重新加载页面都输入用户名很麻烦。将该用户名存储在浏览器中会更好。对于简单的存储，浏览器提供了两个用于存储键值对的 API（但有一个限制——值必须是字符串）。这些是 `localStorage` 和 `sessionStorage`。存储在 `localStorage` 和 `sessionStorage` 中的数据与你的 Web 应用程序服务器地址相关。不同网站的代码无法访问彼此的数据。
 
-使用 `localStorage` 可以运行。但你可能在关闭标签页或窗口之前保留用户名，因此情况下你将使用 `sessionStorage` API。它与 `localStorage` 相似，但数据会在浏览会话结束（关闭浏览器标签页或窗口）时清除。
+使用 `localStorage` 可以运行。但你可能希望在关闭标签页或窗口之前保留用户名，因此这种情况下你将使用 `sessionStorage` API。它与 `localStorage` 相似，但数据会在浏览会话结束（关闭浏览器标签页或窗口）时清除。
 
 你将创建一个新的类来管理你的 `sessionStorage` 信息。
 
@@ -9910,6 +10623,7 @@ class Store {
   constructor(storageApi) {
     this.api = storageApi;
   }
+
   get() {
     return this.api.getItem(this.key);
   }
@@ -9922,7 +10636,7 @@ class Store {
 
 你的新 `Store` 类是通用的，可以与 `localStorage` 或 `sessionStorage` 使用。它是 Web Storage API 的一个薄封装。你在实例化时可以指定想要使用的存储 API。
 
-注意，代码中存在对 `this.key` 的引用，但它在构造函数中*并没有*被设置。此 `Store` 的实现并不打算单独使用。相反，你通过构建一个定义了 `key` 属性的子类来它。
+注意，代码中存在对 `this.key` 的引用，但它在构造函数中*并没有*被设置。此 `Store` 的实现并不打算单独使用。相反，你通过构建一个定义了 `key` 属性的子类来使用它。
 
 使用 `extends` 关键字创建一个子类，用于在 `sessionStorage` 中存储用户名：
 
@@ -9931,6 +10645,7 @@ class Store {
   constructor(storageApi) {
     this.api = storageApi;
   }
+
   get() {
     return this.api.getItem(this.key);
   }
@@ -9986,11 +10701,7 @@ npm install --save-dev
 
 要设置时间戳字符串，在 `dom.js` 中使用 jQuery 查找所有具有 `data-time` 属性且值为数值时间戳的元素。使用该数值时间戳创建一个新的 `Date` 对象并将其传递给 `moment`。然后调用 `fromNow` 方法来生成最终的时间戳字符串。
 
-
-
-
-
-```
+```javascript
 ...
   drawMessage({user: u, timestamp: t, message: m}) {
     ...
@@ -10005,13 +10716,12 @@ npm install --save-dev
 
 最后，更新 `app.js`，在 `socket.registerOpenHandler` 回调中添加对 `this.chatList.init` 的调用：
 
-```
+```javascript
 ...
 class ChatApp {
   constructor () {
     this.chatForm = new ChatForm(FORM_SELECTOR, INPUT_SELECTOR);
     this.chatList = new ChatList(LIST_SELECTOR, username);
-
     socket.init('ws://localhost:3001');
     socket.registerOpenHandler(() => {
       this.chatForm.init((text) => {
@@ -10023,15 +10733,17 @@ class ChatApp {
     ...
 ```
 
+
+
 保存并让你的 `npm` 脚本编译更改。刷新浏览器并开始聊天。你应该能看到新的时间戳随你的消息文本一起出现。几分钟后，你会发现消息时间戳会更新（图 18.8）。
 
-图 18.8  并不秘密的身份
+图 18.8 并不秘密的身份
 
 ![并不秘密的身份](img/finished-chattrbox.png)
 
-你已经走到了 Chattrbox 程的终点。尽管它只跨越了几章，但包含了许多复杂的组件。你学习了如何在 `Node.js` 中编写两种服务器：基础 Web 服务器和 WebSocket 服务器。你使用 ES6 构建了客户端应用程序，利用 `Babel` 和 `Browserify` 将代码编译为 ES5，以便 Chattrbox 可以在旧版浏览器中使用，并且通过 `npm` 脚本实现了工作流的自动化。
+你已经走到了 Chattrbox 程序的终点。尽管它只跨越了几章，但包含了许多复杂的组件。你学习了如何在 `Node.js` 中编写两种服务器：基础 Web 服务器和 WebSocket 服务器。你使用 ES6 构建了客户端应用程序，利用 `Babel` 和 `Browserify` 将代码编译为 ES5，以便 Chattrbox 可以在旧版浏览器中使用，并且通过 `npm` 脚本实现了工作流的自动化。
 
-Chattrbox 是你到目前所学技术的结晶。下一个应用程序 Tracker 将向你介绍 `Ember.js`，一个用于构建大型应用程序的框架。它将基于你苦学获得的关于模块化、异步编程和工作流工具的知识。
+Chattrbox 是你到目前为止所学技术的结晶。下一个应用程序 Tracker 将向你介绍 `Ember.js`，一个用于构建大型应用程序的框架。它将基于你苦学获得的关于模块化、异步编程和工作流工具的知识。
 
 ## 铜级挑战：为消息添加视觉效果
 
@@ -10071,15 +10783,15 @@ Chattrbox 是你到目前所学技术的结晶。下一个应用程序 Tracker �
 
 对 MVC 的解释有很多，特别是在前端领域。图 19.1 展示了我们将使用的那种解释。
 
-图 19.1  模型-视图-控制器模式
+图 19.1 模型-视图-控制器模式
 
 ![模型-视图-控制器模式](img/MVC.png)
 
 以下是各层功能的分解：
 
-*   `Models`（模型）管理数据。当数据更改时，模型会通知所有监听者。
-*   `Views`（视图）管理用户界面。它们处理模型的呈现并监听任何变化。此外，当响应用户输入触发 UI 事件时，它们会调用控制器中的处理函数。
-*   `Controllers`（控制器）持有应用程序逻辑。它们获取模型实例并将它们交给视图。它们还包含对模型实例进行更改的处理函数。
+* `Models`（模型）管理数据。当数据更改时，模型会通知所有监听者。
+* `Views`（视图）管理用户界面。它们处理模型的呈现并监听任何变化。此外，当响应用户输入触发 UI 事件时，它们会调用控制器中的处理函数。
+* `Controllers`（控制器）持有应用程序逻辑。它们获取模型实例并将它们交给视图。它们还包含对模型实例进行更改的处理函数。
 
 如果这听起来像是一个循环，那它确实如此。这三个部分协同工作。应用程序数据从模型流视图。事件数据从视图流控制器。控制器根据 UI 事件触发模型的数据更改。
 
@@ -10095,17 +10807,10 @@ Chattrbox 是你到目前所学技术的结晶。下一个应用程序 Tracker �
 
 Tracker 的客户是一个神秘动物学家，环游世界寻找大脚、食人兽、尼湖怪物和独角兽。这位客户想要一个程序来追踪这些神秘生物并记录任何目击情况的信息。需求可能会改变（通常也是如此），但开始时用户应该能够：
 
-*   列出现有目击记录
-
-*   添加新的目击记录
-
-*   将生物与目击记录关联
-
-
-
-
-
-- 通过闪消息（flash messages）查看最新的目击记录
+* 列出现有目击记录
+* 添加新的目击记录
+* 将生物与目击记录关联
+* 通过闪消息（flash messages）查看最新的目击记录
 
 每次目击应包含以下模型数据和关联：
 
@@ -10134,7 +10839,7 @@ Tracker 的客户是一个神秘动物学家，环游世界寻找大脚、食人
 | 邮箱 | string |
 | 目击记录 | 目击记录键数组 |
 
-构建 Tracker 与构建书中本书之前的应用程序略有不同。它将更接近真实世界的应用开发。章节中的代码会更多，即时反馈会更少。然而，你将获得对应用开发的真实感受，并构建出一个令人满复杂的应用程序（图 19.2]）。
+构建 Tracker 与构建书中本书之前的应用程序略有不同。它将更接近真实世界的应用开发。章节中的代码会更多，即时反馈会更少。然而，你将获得对应用开发的真实感受，并构建出一个令人满意的复杂应用程序（图 19.2）。
 
 **图 19.2 完成的 Tracker 应用**
 
@@ -10174,7 +10879,7 @@ npm install -g bower
 
 `Bower` 和 `npm` 是创建 `Ember` 应用所必需的。
 
-接下来，为 `Chrome` 安装 `Ember Inspector` 插件。执行此操作，打开 `Chrome` 并在地址栏输入 `chrome://extensions/`。在扩展程序面的底部，点击“获取更多扩展”。搜索“Ember Inspector”（图 19.3]），点击“添加至 Chrome”，并按照提示安装扩展。
+接下来，为 `Chrome` 安装 `Ember Inspector` 插件。执行此操作，打开 `Chrome` 并在地址栏输入 `chrome://extensions/`。在扩展程序面的底部，点击“获取更多扩展”。搜索“Ember Inspector”（图 19.3），点击“添加至 Chrome”，并按照提示安装扩展。
 
 **图 19.3 为 Chrome 安装扩展**
 
@@ -10182,7 +10887,7 @@ npm install -g bower
 
 `Ember CLI` 在运行时会使用一个名为 `Watchman` 的程序。`Watchman` 是一个与浏览器集成以启用应用程序热重的命令行工具。
 
-在 Mac 上，你可以通过 `Homebrew` 安装 `Watchman`。`Homebrew` 是 OS X 的包管理器，可以使用从其网站 [`brew.sh`](http://brew.sh/)）复制的终端命令下载。一旦安装了 `Homebrew`，使用此终端命令安装 `Watchman`（3.0.0 或更高版本）：
+在 Mac 上，你可以通过 `Homebrew` 安装 `Watchman`。`Homebrew` 是 OS X 的包管理器，可以使用从其网站 [`brew.sh`](http://brew.sh/) 复制的终端命令下载。一旦安装了 `Homebrew`，使用此终端命令安装 `Watchman`（3.0.0 或更高版本）：
 
 ```
 brew install watchman
@@ -10204,13 +10909,11 @@ brew install watchman
 ember new tracker
 ```
 
-
-
-
 创建一个新的 `Ember` 应用可能需要几分钟。正如你从终端输出中所看到的（部分内容所示），`ember new` 命令会创建基础项目文件和目录结构。此外，它还会使用 `npm` 和 `Bower` 来加载外部库资源。这些库对于运行 `Ember` 应用至关重要，对于运行服务器来编译、构建和测试你的应用程序也同样重要。
 
 ```
 installing app
+
   create .bowerrc
   create .editorconfig
   create .ember-cli
@@ -10229,6 +10932,7 @@ installing app
   create app/styles/app.css
   create app/templates/application.hbs
   . . .
+
 Successfully initialized git.
 Installed packages for tooling via npm.
 Installed browser packages via Bower.
@@ -10240,9 +10944,9 @@ Installed browser packages via Bower.
 
 稍后，你将使用 `ember server` 命令（或者对于想少敲几个键的人，可以使用 `ember s`）来构建你的应用程序并启动服务器，以便可以在本地访问它。为了方便起见，`ember server` 会监控你的文件更改并重启构建/服务/监听过程，以确保只在浏览器中看到最新的代码（类似于你在 Ottergram 和 CoffeeRun 中使用的 `browser-sync` 工具）。
 
-`Ember CLI` 使用 `Broccoli` 程序进行编译。如果你用过过 Java 或 Objective-C 等语言，你可能对“编译”的理解与 JavaScript 中的含义有所不同。在这种情况下，`Broccoli` 会合并运行你的应用程序所需的所有 JavaScript 文件，同时确保所有依赖项都已满足。
+`Ember CLI` 使用 `Broccoli` 程序进行编译。如果你用过 Java 或 Objective-C 等语言，你可能对“编译”的理解与 JavaScript 中的含义有所不同。在这种情况下，`Broccoli` 会合并运行你的应用程序所需的所有 JavaScript 文件，同时确保所有依赖项都已满足。
 
-现在是时候`为用户而战`了。进入 Tracker 文件夹并启动服务器：
+现在是时候“为用户而战”了。进入 Tracker 文件夹并启动服务器：
 
 ```
 cd tracker
@@ -10251,7 +10955,7 @@ ember server
 
 在 `Chrome` 中，打开新浏览器窗口并访问 `http://localhost:4200` 来查看你新 `Ember` 应用的运行情况（图 19.4）。你可能还会打开开发者工具中的 `Ember` 标签，如所示。
 
-**图 19.4�Ember server**
+**图 19.4 Ember server**
 
 ![Ember server](img/ember-setup_new.png)
 
@@ -10287,13 +10991,15 @@ bower install bootstrap-sass --save
 
 你现在已经在本地加载了 `Bootstrap` 库，包含了所有的 JavaScript 和样式文件。你将把此库引入到 `Ember CLI` 构建过程中，这样你就可以带着应用程序所需的 `Bootstrap` 资源发布你的应用程序。
 
-开发脚本和样式的现代 Web 工作流包含了编译。你将添加一个工具来帮助降低编译的复杂性：`ember-cli-sass`将在 `Ember CLI` 构建过程中处理 SCSS 表格转换为 CSS。SCSS（通常被称为“Sass”）为你的样式表添加了许多熟悉的编程结构，如变量、函数、循环和键值对——而又不会丢失你熟悉并喜爱的 CSS 语法。
+开发脚本和样式的现代 Web 工作流包含了编译。你将添加一个工具来帮助降低编译的复杂性：`ember-cli-sass` 将在 `Ember CLI` 构建过程中处理 SCSS 表格转换为 CSS。SCSS（通常被称为“Sass”）为你的样式表添加了许多熟悉的编程结构，如变量、函数、循环和键值对——而又不会丢失你熟悉并喜爱的 CSS 语法。
 
 从终端安装 `ember-cli-sass`：
 
 ```
 ember install ember-cli-sass
 ```
+
+
 
 `ember-cli-sass` 是 `Ember` 插件的一个示例。插件（[emberaddons.com](https://www.emberaddons.com)）是添加外部库或配置代码、创建辅助函数或组件或为你完成其他繁重工作的项目。`Ember CLI` 允许你通过 `ember install` 命令轻松将这些现有项目添加到你的项目中。
 
@@ -10305,6 +11011,7 @@ ember install ember-cli-sass
 
 ```scss
 $bg-color: coral;
+
 html {
   background: $bg-color;
 }
@@ -10312,12 +11019,9 @@ html {
 
 检查你的浏览器。你的页面现在显示了背景颜色（图 19.5）。
 
-**图 19.5�Compiling SCSS: test**
+**图 19.5 Compiling SCSS: test**
 
 ![Compiling SCSS: test](img/ember-setup_sass.png)
-
-
-
 
 接下来，你将为项目添加 `Bootstrap` 样式和脚本。之前你已经通过 `bower install bootstrap-sass` 添加了 `Bootstrap` 的 SCSS 版本。要将该库添加到你的样式表中，你需要将样式库导入到你的文件中，并配置 `Ember CLI` 使用这些资源构建你的应用程序。
 
@@ -10329,14 +11033,12 @@ html {
 
 打开 `ember-cli-build.js`，为目录路径 `bootstrap` 分配变量，并将 `Bootstrap` 的 `stylesheets` 目录添加到 `sassOptions` 中的 `includePaths` 键中：
 
-```
+```javascript
 ...
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
-
   var bootstrapPath = 'bower_components/bootstrap-sass/assets/';
-
   var app = new EmberApp(defaults, {
     // Add options here
     sassOptions: {
@@ -10347,7 +11049,6 @@ module.exports = function(defaults) {
   });
 
   // ... Template comments ...
-
   // Create paths to bootstrap assets
   // Add assets to app with import
   app.import(bootstrapPath + 'javascripts/bootstrap.js');
@@ -10358,10 +11059,11 @@ module.exports = function(defaults) {
 
 你已经配置了 `Ember CLI`，使其在 `bower_components/bootstrap-sass/assets/stylesheets` 目录中查找 `*.scss` 文件。保存文件并重启 `Ember` 服务器，以便新配置能够随应用程序一同加载。
 
-现在，你可以在可以在 `app.scss` 文件中使用 `@import` 指令来导入 `Bootstrap` 的样式了：
+现在，你可以在 `app.scss` 文件中使用 `@import` 指令来导入 `Bootstrap` 的样式了：
 
-```
+```scss
 $bg-color: coral;
+
 html {
   background: $bg-color;
 }
@@ -10369,8 +11071,8 @@ html {
 // ----------------------------
 // bootstrap variable overrides
 // ----------------------------
-
 // end bootstrap variable overrides
+
 @import 'bootstrap';
 ```
 
@@ -10380,14 +11082,15 @@ html {
 
 在添加资源后，在继续之前，你应该始终确保它们工作正常。在 `app` 目录下有一个 `index.html` 文件——但这里并不是测试你新 `Bootstrap` 代码的地方。该文件主要用于构建过程。
 
-相反，你所有的 HTML 元素将分别添加到 `app/templates` 目录下的应用程序模板中。你将在 第 23 章 中更详细地学习模板。
+相反，你所有的 HTML 元素将分别添加到 `app/templates` 目录下的应用程序模板中。你将在第 23 章中更详细地学习模板。
 
 现在，为 `app/templates/application.hbs` 添加一个 `Bootstrap` `NavBar` 组件：
 
-```
+```html
 <h2 id="title">Welcome to Ember</h2>
 
 {{outlet}}
+
 <header>
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -10417,14 +11120,11 @@ html {
     </div> <!-- /.container-fluid -->
   </nav>
 </header>
+
 <div class="container">
   {{outlet}}
 </div>
 ```
-
-
-
-
 
 ## 铜牌挑战：限制导入
 
@@ -10484,7 +11184,7 @@ Font Awesome 是一个 UI 库，用于为项目添加常用的图标。这些图
 
 你将使用 `ember generate` 创建所有这些。打开终端并导航到你的 `tracker` 目录。逐运行以下命令来生成路由：
 
-```
+```bash
 ember g route index
 ember g route sightings
 ember g route sightings/new
@@ -10497,7 +11197,7 @@ ember g route witnesses
 ember g route witness
 ```
 
-这看起来像 图 20.2。
+这看起来像图 20.2。
 
 **图 20.2 生成路由**
 
@@ -10507,7 +11207,7 @@ ember g route witness
 
 打开 `app/routes/index.js`，注意该模块 `import` 了 `Ember` 并 `export` 了一个 `Ember.Route`：
 
-```
+```javascript
 import Ember from 'ember';
 
 export default Ember.Route.extend({
@@ -10531,19 +11231,17 @@ export default Ember.Route.extend({
 
 
 
+现在使用`ember server`启动应用。在开发项目时请保持服务器运行。如果你需要与`Ember CLI`交互（例如生成更多模块），只需打开第二个终端即可。服务器会将新模块加载到你的`Ember`应用中并重新加载浏览器。
 
-
-现在使用 `ember server` 启动应用。在开发项目时请保持服务器运行。如果你需要与 `Ember CLI` 交互（例如生成更多模块），只需打开第二个终端即可。服务器会将新模块加载到你的 `Ember` 应用中并重新加载浏览器。
-
-在 `Chrome` 中，导航到 `http://localhost:4200`。你的应用看起来应该像图 20.3 所示索引路由。
+在`Chrome`中，导航到`http://localhost:4200`。你的应用看起来应该像图 20.3 所示索引路由。
 
 ### 图 20.3 索引路由
 
-你应该能看到来自 `app/templates/application.hbs` 的 `NavBar` 元素以及来自 `app/templates/index.hbs` 的 `<h1>` 元素。这个元素是如何出现在这里的？当你创建应用程序时，系统会为你生成许多文件，包括 `app/router.js` 和 `app/routes.js`。`app/router.js` 文件是你的应用程序的起点，负责处理初始化等工作。它拥有创建新 `Ember` 应用的函数，例如在 Ember 中创建一个新的 `Route`。
+你应该能看到来自`app/templates/application.hbs`的`NavBar`元素以及来自`app/templates/index.hbs`的`<h1>`元素。这个元素是如何出现在这里的？当你创建应用程序时，系统会为你生成许多文件，包括`app/router.js`和`app/routes.js`。`app/router.js`文件是你的应用程序的起点，负责处理初始化等工作。它拥有创建新`Ember`应用的函数，例如在`Ember`中创建一个新的`Route`。
 
-特别的是，`Ember` 应用在加载加载时会实例化 `Router` 对象和 `ApplicationRoute` 对象。这两个对象控制着你的应用程序。在你的 `router.js` 文件中，你会注册 `routes` 以将 URL 与特定页面关联。每个 `route` 都可以配置一些选项。你甚至可以创建嵌套路由。`Ember` 强大的功能允许你在不同的屏幕上复用内容和逻辑。
+特别的是，`Ember`应用在加载加载时会实例化`Router`对象和`ApplicationRoute`对象。这两个对象控制着你的应用程序。在你的`router.js`文件中，你会注册`routes`以将 URL 与特定页面关联。每个`route`都可以配置一些选项。你甚至可以创建嵌套路由。`Ember`强大的功能允许你在不同的屏幕上复用内容和逻辑。
 
-打开 `router.js` 并查看注册路由的方法：
+打开`router.js`并查看注册路由的方法：
 
 ```javascript
 import Ember from 'ember';
@@ -10557,9 +11255,11 @@ Router.map(function() {
   this.route('sightings', function() {
     this.route('new');
   });
+
   this.route('sighting', function() {
     this.route('edit');
   });
+
   this.route('cryptids');
   this.route('cryptid');
   this.route('witnesses');
@@ -10569,13 +11269,13 @@ Router.map(function() {
 export default Router;
 ```
 
-`Router.map` 接收了一个回调函数。在这个回调内部，`route` 方法注册了你的路由。该方法也接受回调。`Ember` 将这些嵌套回调转换为路由的层级结构。该层级结构的顶部是 `ApplicationRoute`。当你访问嵌套路由的 URL 时，`Ember` 会使用父模板的 HTML。在那个父模板内部，它会寻找 `{{outlet}}` 辅助函数，它表示“这里是你放置子模板 HTML 的地方”。
+`Router.map`接收了一个回调函数。在这个回调内部，`route`方法注册了你的路由。该方法也接受回调。`Ember`将这些嵌套回调转换为路由的层级结构。该层级结构的顶部是`ApplicationRoute`。当你访问嵌套路由的 URL 时，`Ember`会使用父模板的 HTML。在那个父模板内部，它会寻找`{{outlet}}`辅助函数，它表示“这里是你放置子模板 HTML 的地方”。
 
 ### 工作原理
 
-`Ember` 渲染 `ApplicationRoute` 的内容，并嵌套在其中的 `IndexRoute` 内容。在后台，`Ember` 会检查项目 `routes/` 文件夹中是否存在名为 `index.js` 的文件。你可以通过在相应的文件夹中创建 `index.js` 为任何路由创建一个落地页。事实上，这是你自己的自己的 `Ember` 应用中应该使用的常用做法。
+`Ember`渲染`ApplicationRoute`的内容，并嵌套在其中的`IndexRoute`内容。在后台，`Ember`会检查项目`routes/`文件夹中是否存在名为`index.js`的文件。你可以通过在相应的文件夹中创建`index.js`为任何路由创建一个落地页。事实上，这是你自己的`Ember`应用中应该使用的常用做法。
 
-你可能已经注意到 `router.js` 中没有对 `index` 路由的引用。`Ember` 为所有带有嵌套子路由的父路由自动生成 `index` 路由，就好像它们出现在 `router.js` 中一样：
+你可能已经注意到`router.js`中没有对`index`路由的引用。`Ember`为所有带有嵌套子路由的父路由自动生成`index`路由，就好像它们出现在`router.js`中一样：
 
 ```javascript
 ...
@@ -10585,10 +11285,12 @@ Router.map(function() {
     this.route('index');
     this.route('new');
   });
+
   this.route('sighting', function() {
     this.route('index');
     this.route('edit');
   });
+
   this.route('cryptids');
   this.route('cryptid');
   this.route('witnesses');
@@ -10609,39 +11311,36 @@ this.route('sightings', function() {
 });
 ```
 
-`sightings` 是一个代表 `sightings` 的父路由，它指的是事物（名词），而 `new` 是一个代表“创建”目击动作（动词）的嵌套路由。`this.route` 用于构建包含父路由和子路由在内的 URL。
+`sightings`是一个代表`sightings`的父路由，它指的是事物（名词），而`new`是一个代表“创建”目击动作（动词）的嵌套路由。`this.route`用于构建包含父路由和子路由在内的 URL。
 
-通过模板嵌套，网站的部分内容可以在所有路由上渲染（例如导航），而其他部分将只显示在更特定的路由上（如 `sightings`）。开始，编辑 `app/templates/sightings.hbs` 模板，并在 `{{outlet}}` 之上添加一个 `<h1>` 元素：
+通过模板嵌套，网站的部分内容可以在所有路由上渲染（例如导航），而其他部分将只显示在更特定的路由上（如`sightings`）。开始，编辑`app/templates/sightings.hbs`模板，并在`{{outlet}}`之上添加一个`<h1>`元素：
 
 ```handlebars
 <h1>Sightings</h1>
 {{outlet}}
 ```
 
-接下来，编辑 `app/templates/sightings/index.hbs` 模板。添加另一个 `<h1>` 元素并删除 `{{outlet}}`：
+接下来，编辑`app/templates/sightings/index.hbs`模板。添加另一个`<h1>`元素并删除`{{outlet}}`：
 
 ```handlebars
 <h1>Index</h1>
 ```
 
-现在，将浏览器中的 URL 更改为 `http://localhost:4200/sightings/` 以查看结果。父模板使用 `{{outlet}}` 来嵌套视图。
+现在，将浏览器中的 URL 更改为`http://localhost:4200/sightings/`以查看结果。父模板使用`{{outlet}}`来嵌套视图。
 
-
-
-
-这么多路由！甚至比你生成的还要多。注意，有许多以 `loading` 和 `error` 结尾的路由。这些是为路由中加载数据的周期状态自动生成的路由。就像 `index` 路由一样，这些对象是由 `Ember` 创建的，用于填充从一个路由状态到另一个路由状态之间的空白。
+这么多路由！甚至比你生成的还要多。注意，有许多以`loading`和`error`结尾的路由。这些是为路由中加载数据的周期状态自动生成的路由。就像`index`路由一样，这些对象是由`Ember`创建的，用于填充从一个路由状态到另一个路由状态之间的空白。
 
 ## 分配模型 (Models)
 
-下一步是使用路由的 model 回调为每个路由获取数据。每个 `Ember.Route` 都有一个方法将模型（记住，它是支持模板的数据）分配给控制器。该方法名为 `model`，它返回一个 `Promise` 类型的数据。
+下一步是使用路由的`model`回调为每个路由获取数据。每个`Ember.Route`都有一个方法将模型（记住，它是支持模板的数据）分配给控制器。该方法名为`model`，它返回一个`Promise`类型的数据。
 
-在底层，当 URL 变化时，`Ember` 应用会初始化 `Route` 对象。该 `Route` 对象有四个钩子（hooks）来设置自己：`beforeModel`、`model`、`afterModel` 和 `setupController`。
+在底层，当 URL 变化时，`Ember`应用会初始化`Route`对象。该`Route`对象有四个钩子（hooks）来设置自己：`beforeModel`、`model`、`afterModel`和`setupController`。
 
-我们现在重点关注 `model` 回调。
+我们现在重点关注`model`回调。
 
-在 `app/routes/sightings.js` 的 `SightingsRoute` 的 `model` 回调中添加一些虚拟数据：
+在`app/routes/sightings.js`的`SightingsRoute`的`model`回调中添加一些虚拟数据：
 
-```
+```javascript
 import Ember from 'ember';
 
 export default Ember.Route.extend({
@@ -10682,9 +11381,9 @@ export default Ember.Route.extend({
 });
 ```
 
-注意 `model` 钩子的语法：
+注意`model`钩子的语法：
 
-```
+```javascript
 model() {
   [your code goes here]
 }
@@ -10692,19 +11391,19 @@ model() {
 
 这是 ES6 的简写形式：
 
-```
+```javascript
 model: function() {
   [your code goes here]
 }
 ```
 
-在接下来的章节中，你将使用这种语法在 `Ember` 中定义你的对象方法。
+在接下来的章节中，你将使用这种语法在`Ember`中定义你的对象方法。
 
-`model` 回调是获取渲染模板所需数据的地方。`Ember.Route` 中的路由周期方法为每个钩子返回对象。`model` 钩子最终会将数据返回给 `setupController` 钩子，该钩子会在 `SightingsController` 上设置名为 `model` 的属性。你可以在模板中访问这些数据：`app/templates/sightings.hbs` 和 `app/templates/sightings/index.hbs`。
+`model`回调是获取渲染模板所需数据的地方。`Ember.Route`中的路由周期方法为每个钩子返回对象。`model`钩子最终会将数据返回给`setupController`钩子，该钩子会在`SightingsController`上设置名为`model`的属性。你可以在模板中访问这些数据：`app/templates/sightings.hbs`和`app/templates/sightings/index.hbs`。
 
-按照所示编辑 `app/templates/sightings/index.hbs`。我们会在输入代码后解释这些代码。
+按照所示编辑`app/templates/sightings/index.hbs`。我们会在输入代码后解释这些代码。
 
-```
+```handlebars
 <h1>Index Route</h1>
 <div class="panel panel-default">
   <ul class="list-group">
@@ -10714,30 +11413,30 @@ model: function() {
       </li>
     {{/each}}
   </ul>
-</>
+</div>
 ```
 
-如果你从未用过模板语言，这段代码看起来可能很奇怪。双括号 (`{{ }}`)）中的单词本质上是伪装成语句的 JavaScript 函数。用英语来说，这些行的意思是：“对于 `model` 属性每一个 `sighting`（预期是一个数组），渲染一个带有 `sighting` 的 `location` 和 `sightedAt` 日期的 `<li>` 元素。”
+如果你从未用过模板语言，这段代码看起来可能很奇怪。双括号 (`{{ }}`)）中的单词本质上是伪装成语句的 JavaScript 函数。用英语来说，这些行的意思是：“对于`model`属性每一个`sighting`（预期是一个数组），渲染一个带有`sighting`的`location`和`sightedAt`日期的`<li>`元素。”
 
-你即将在 第 23 章 中学习通用的 `{{ }}` 语法，特别是 `{{#each}}` 语法。
+你即将在 第 23 章 中学习通用的`{{ }}`语法，特别是`{{#each}}`语法。
 
-在浏览器中切换到 [`localhost:4200/sightings`](http://localhost:4200/sightings)，此时你的应用应该看起来像图 20.7。
+在浏览器中切换到[`localhost:4200/sightings`](http://localhost:4200/sightings)，此时你的应用应该看起来像图 20.7。
 
 **图 20.7 Index 模型列表**
 
 ![Index model listing](img/sightings-index-route-model.png)
 
-你现在通过将数据传递给模板进行显示完成了路由周期的第一部分。在下一章中，你将探索 `Handlebars` 模板语言。这种语言允许你通过控制器的属性来表示应用程序的状态，并在应用程序状态发生变化时仅渲染必要的 DOM 元素。
+你现在通过将数据传递给模板进行显示完成了路由周期的第一部分。在下一章中，你将探索`Handlebars`模板语言。这种语言允许你通过控制器的属性来表示应用程序的状态，并在应用程序状态发生变化时仅渲染必要的 DOM 元素。
 
 ## beforeModel
 
-如上所述，路由对象会调用一系列函数，从 `beforeModel` 开始。该函数是在获取数据之前检查应用程序状态的好地方。它也是重定向无法访问某个页面的用户的好地方，例如检查用户身份验证。
+如上所述，路由对象会调用一系列函数，从`beforeModel`开始。该函数是在获取数据之前检查应用程序状态的好地方。它也是重定向无法访问某个页面的用户的好地方，例如检查用户身份验证。
 
-你将使用 `beforeModel` 无条件地将用户跳转到新页面。`IndexRoute` 是执行此操作的好。你未来可能想添加一个仪表板，但目前落地页将是 `sightings`。
+你将使用`beforeModel`无条件地将用户跳转到新页面。`IndexRoute`是执行此操作的好。你未来可能想添加一个仪表板，但目前落地页将是`sightings`。
 
-在 `app/routes/index.js` 中添加一个 `beforeModel` 回调：
+在`app/routes/index.js`中添加一个`beforeModel`回调：
 
-```
+```javascript
 import Ember from 'ember';
 
 export default Ember.Route.extend({
@@ -10747,59 +11446,56 @@ export default Ember.Route.extend({
 });
 ```
 
-现在，当你导航到 [`localhost:4200/`](http://localhost:4200/) 时，URL 变为 [`localhost:4200/sightings`](http://localhost:4200/sightings)，你应该能看到 `app/templates/sightings.hbs` 中的发现列表。
+现在，当你导航到[`localhost:4200/`](http://localhost:4200/)时，URL 变为[`localhost:4200/sightings`](http://localhost:4200/sightings)，你应该能看到`app/templates/sightings.hbs`中的发现列表。
 
-最后两个路由钩子 `afterModel` 和 `setupController` 在 Tracker 中不会使用。在创建 `route` 文件时，你正在克隆 `Ember.Route` 对象并覆盖方法，类似于 Java 等语言中的接口。`setupController` 钩子默认运行，以便在控制器上设置 `model` 属性。
+最后两个路由钩子`afterModel`和`setupController`在 Tracker 中不会使用。在创建`route`文件时，你正在克隆`Ember.Route`对象并覆盖方法，类似于 Java 等语言中的接口。`setupController`钩子默认运行，以便在控制器上设置`model`属性。
 
-此时，你的应用程序已经有一些概述其功能的示例路由：落地页、发现列表以及添加新发现的路由。你为路由创建了模板并为 `sightings` 路由添加了模型数据。你重定向了索引路由到。你有了一个很好的开始！
+此时，你的应用程序已经有一些概述其功能的示例路由：落地页、发现列表以及添加新发现的路由。你为路由创建了模板并为`sightings`路由添加了模型数据。你重定向了索引路由到。你有了一个很好的开始！
 
-在下一章中，你将学习 `Ember.Model`、适配器（adapters）、计算属性和存储机制。
+在下一章中，你将学习`Ember.Model`、适配器（adapters）、计算属性和存储机制。
 
 ## 给好奇心强的读者：setupController 和 afterModel
 
-`setupController` 钩子用于在控制器上设置将用于渲染的属性。你可以在执行设置 `model` 属性的默认行为的同时，通过 `this._super` 设置其他活跃的控制器属性：
+`setupController`钩子用于在控制器上设置将用于渲染的属性。你可以在执行设置`model`属性的默认行为的同时，通过`this._super`设置其他活跃的控制器属性：
 
-```
+```javascript
 setupController(controller, model) {
   this._super(controller, model);
   // this.controllerFor('[other controller]').set("[property name]", [value]);
 }
 ```
 
-`afterModel` 钩子在 `model` 钩子（一个 `Promise`）解析后运行。注意，在某些特殊情况下，由于 `Promise` 已经解析，`model` 钩子不会被调用。在这些情况下，`afterModel` 在 `setupController` 之前被调用，并可以作为在传递给控制器之前测试模型数据完整性的方法。
+`afterModel`钩子在`model`钩子（一个`Promise`）解析后运行。注意，在某些特殊情况下，由于`Promise`已经解析，`model`钩子不会被调用。在这些情况下，`afterModel`在`setupController`之前被调用，并可以作为在传递给控制器之前测试模型数据完整性的方法。
 
-
-
-
-你已经在使用对象字面量形式的数据上过相当多的工作了。你已经创建并修改了对象及其属性，并且创建了函数来快速创建带有默认值的对象。你已经知道如何在 `localStorage` 和 `sessionStorage` 中存储数据。
+你已经在使用对象字面量形式的数据上过相当多的工作了。你已经创建并修改了对象及其属性，并且创建了函数来快速创建带有默认值的对象。你已经知道如何在`localStorage`和`sessionStorage`中存储数据。
 
 在 Tracker 中，你将处理以模型（models）形式存在的数据。模型本质上是创建具有特定属性和方法的函数。它们是流经你的应用程序的数据架构。
 
-`Ember` 拥有一个可以处理你定义应用数据架构初始需求的对象类：`Ember.Object`。所有的 `Ember` 类都继承自这个类。通过简单的定义和命名模式，`Ember` 赋予了你在应用运行期间创建、检索、更新和销毁模型实例的能力。
+`Ember`拥有一个可以处理你定义应用数据架构初始需求的对象类：`Ember.Object`。所有的`Ember`类都继承自这个类。通过简单的定义和命名模式，`Ember`赋予了你在应用运行期间创建、检索、更新和销毁模型实例的能力。
 
-然而，对于你的现代应用程序，你需要比 `Ember.Object` 更多的功能。你的模型需要在业务逻辑要求它们从数据源检索或保存数据时，能够实现持久化。
+然而，对于你的现代应用程序，你需要比`Ember.Object`更多的功能。你的模型需要在业务逻辑要求它们从数据源检索或保存数据时，能够实现持久化。
 
-这就是 `Ember Data`，这是一个构建在 `Ember.Object` 之上的 JavaScript 库，它可以帮助你添加模型特定的功能。`Ember Data` 增加了基于 `Ember.Object` 构建的类，这些类抽象了处理各种数据源的复杂性：`RESTful APIs`、`localStorage` 甚至静态固定件数据。
+这就是`Ember Data`，这是一个构建在`Ember.Object`之上的 JavaScript 库，它可以帮助你添加模型特定的功能。`Ember Data`增加了基于`Ember.Object`构建的类，这些类抽象了处理各种数据源的复杂性：`RESTful APIs`、`localStorage`甚至静态固定件数据。
 
-`Ember Data` 还为数据添加了一个内存存储（store）。数据存储是你创建、检索、更新和删除模型实例的地方。
+`Ember Data`还为数据添加了一个内存存储（store）。数据存储是你创建、检索、更新和删除模型实例的地方。
 
 ## 模型定义
 
-`Ember CLI` 已经加载了 `Ember Data` 库，所以你已经准备好构建你的模型了。
+`Ember CLI`已经加载了`Ember Data`库，所以你已经准备好构建你的模型了。
 
-在上一章中，你使用了 `ember g route [route name]` 让 `Ember CLI` 为你创建路由文件。你也可以使用 `ember generate` 通过命令 `ember g model [model name]` 来创建模型文件。
+在上一章中，你使用了`ember g route [route name]`让`Ember CLI`为你创建路由文件。你也可以使用`ember generate`通过命令`ember g model [model name]`来创建模型文件。
 
 创建所需的模型文件，以支持关于神秘生物（cryptids）、目击（sightings）和证人（witness）的路由：
 
-```
+```bash
 ember g model cryptid
 ember g model sighting
 ember g model witness
 ```
 
-Cryptid 在 `app/models/cryptid.js` 文件中有一个模型定义。打开此文件并为 `cryptid` 模型添加名称、神秘生物类型（物种）、个人头像和目击属性：
+Cryptid 在`app/models/cryptid.js`文件中有一个模型定义。打开此文件并为`cryptid`模型添加名称、神秘生物类型（物种）、个人头像和目击属性：
 
-```
+```javascript
 import DS from 'ember-data';
 
 export default DS.Model.extend({
@@ -10807,17 +11503,18 @@ export default DS.Model.extend({
   cryptidType: DS.attr('string'),
   profileImg: DS.attr('string'),
   sightings: DS.hasMany('sighting')
-
 });
 ```
 
-`Ember Data` 在此处被称为 `DS`（代表“data store”），它有一个用于指定模型属性的 `attr` 方法。当从源解析数据时，`attr` 返回该值。如果你给 `attr` 一个属性类型，它将被强制转换为该类型。如果你不设置属性类型，你的数据将原封地传递给相应的键。
+
+
+`Ember Data` 在此处被称为 `DS`（代表“data store”），它有一个用于指定模型属性的 `attr` 方法。当从源解析数据时，`attr` 返回该值。如果你给 `attr` 一个属性类型，它将被强制转换为该类型。如果你不设置属性类型，你的数据将原封不动地传递给相应的键。
 
 内置了一些属性类型：`string`、`number`、`boolean` 和 `date`。你也可以使用 `transforms` 创建自定义模型属性，你将在[第 22 章]中学习。
 
 `attr` 还可以接受第二个参数来指定默认值。这个可选参数是一个包含单个键的哈希：`defaultValue`。以下是一些示例：
 
-```
+```javascript
 name: DS.attr('string', {defaultValue: 'Bob'}),
 isNew: DS.attr('boolean', {defaultValue: true}),
 createdAt: DS.attr('date', {defaultValue: new Date()}),
@@ -10838,7 +11535,7 @@ numOfChildren: DS.attr('number', {defaultValue: 1})
 
 接下来，打开 `app/models/witness.js` 中的证人模型，并为证人的名、姓、电子邮件地址和记录的目击添加属性：
 
-```
+```javascript
 import DS from 'ember-data';
 
 export default DS.Model.extend({
@@ -10855,7 +11552,7 @@ export default DS.Model.extend({
 
 最后，打开你的第三个模型文件：`app/models/sighting.js`。为你的 `sightings` 模型添加关于目击人物、事件、地点、时间以及记录日期的属性：
 
-```
+```javascript
 import DS from 'ember-data';
 
 export default DS.Model.extend({
@@ -10869,11 +11566,7 @@ export default DS.Model.extend({
 
 目击的定义与证人和 cryptid 非常相似，基本属性定义为字符串。`location` 是用户在应用中输入的值，而 `createdAt` 和 `sightedAt` 将在目击被添加到数据库时在服务器端添加。
 
-
-
-
-
-`cryptid` 属性的关系是一个新的形式：`DS.belongsTo('cryptid')`。该方法是一种一对多的关系，将一个 `cryptid` 实例链接到 `sighting` 实例——之所以是一一对多，是因为每个 cryptid 都有多次 sightings。
+`cryptid` 属性的关系是一个新的形式：`DS.belongsTo('cryptid')`。该方法是一种一对多的关系，将一个 `cryptid` 实例链接到 `sighting` 实例——之所以是一对多，是因为每个 cryptid 都有多次 sightings。
 
 ## createRecord
 
@@ -10881,7 +11574,7 @@ export default DS.Model.extend({
 
 要创建一条记录，你将调用 `this.store.createRecord`。该方法接受两个参数：作为字符串的模型名称，以及作为对象的记录数据。
 
-打开 `app/routes/sightings.js`。删除你的你的占位 sightings 并创建三个新的 `sighting` 记录，每个记录都包含一个字符串形式的 `location` 值和一个 `new Date` 形式的 `sightedAt` 值：
+打开 `app/routes/sightings.js`。删除你的占位 sightings 并创建三个新的 `sighting` 记录，每个记录都包含一个字符串形式的 `location` 值和一个 `new Date` 形式的 `sightedAt` 值：
 
 ```javascript
 import Ember from 'ember';
@@ -10901,6 +11594,7 @@ export default Ember.Route.extend({
         sightedAt: new Date('2016-03-07')
       }
     ];
+
     let record1 = this.store.createRecord('sighting', {
       location: 'Atlanta',
       sightedAt: new Date('2016-02-09')
@@ -10921,11 +11615,13 @@ export default Ember.Route.extend({
 });
 ```
 
-在 第 20 章 中，`sightings` 路由模型返回的是一个数组。现在你不是返回 JavaScript 对象，而是创建了三个 sighting 记录并将这些记录作为一个数组返回。如果尚未运行，请运行 `ember server` 以在 `sightings` 路由查看你的新记录：[`localhost:4200/sightings`](http://localhost:4200/sightings)（图 21.1）。
+在第 20 章中，`sightings` 路由模型返回的是一个数组。现在你不是返回 JavaScript 对象，而是创建了三个 sighting 记录并将这些记录作为一个数组返回。如果尚未运行，请运行 `ember server` 以在 `sightings` 路由查看你的新记录：[`localhost:4200/sightings`](http://localhost:4200/sightings)（图 21.1）。
 
 **图 21.1 create sightings**
 
-![create sightings](img/model-sightings.png) 这个示例显示，创建 `Ember Data` 模型与创建 JavaScript 对象非常相似。拥有 `Ember Data` 模型对象的优势在于对象为你提供的所有方法。让我们从 `get` 和 `set` 开始。
+![create sightings](img/model-sightings.png)
+
+这个示例显示，创建 `Ember Data` 模型与创建 JavaScript 对象非常相似。拥有 `Ember Data` 模型对象的优势在于对象为你提供的所有方法。让我们从 `get` 和 `set` 开始。
 
 ## get and set
 
@@ -10942,7 +11638,9 @@ export default Ember.Route.extend({
       location: 'Atlanta',
       sightedAt: new Date('2016-02-09')
     });
-    console.log("Record 1 location: "  +record1.get('location') );
+
+    console.log("Record 1 location: " + record1.get('location') );
+
     ...
     return [record1, record2, record3];
   }
@@ -10962,8 +11660,10 @@ export default Ember.Route.extend({
       location: 'Atlanta',
       sightedAt: new Date('2016-02-09')
     });
+
     record1.set('location', 'Paris, France');
     console.log("Record 1 location: " + record1.get('location'));
+
     ...
     return [record1, record2, record3];
   }
@@ -10990,14 +11690,11 @@ Ember.computed('first_name', function(){
 
 在这个示例中，`Ember.computed` 充当 `first_name` 变化的事件监听。你不需要更改 `set` 方法来触发事件，不需要添加事件监听，也不需要更改 `first_name` 属性。你只需要创建一个返回所需值的新属性。
 
-计算属性的使用在 `Ember` 中是全局性的。在第 25 章 中，你也将为组件创建计算属性。计算属性要么用于视图或组件的“装饰”（如上面的示例），要么用于检索嵌入模型对象中的特定数据。
+计算属性的使用在 `Ember` 中是全局性的。在第 25 章中，你也将为组件创建计算属性。计算属性要么用于视图或组件的“装饰”（如上面的示例），要么用于检索嵌入模型对象中的特定数据。
 
 “装饰”数据意味着以特定方式对其格式化——例如将字符串转换为小写。来自 API 的数据并不总是你想要的格式。装饰器是输入参数并输出专门用于应用程序视图层的对象或数组的函数。新装饰数据的格式化或构建通常不会返回数据库。因此，装饰器通常被添加到控制器中，除非每个页面都在渲染来自数据库中未格式化的模型数据。
 
-在你的 `app/models/witness.js`  witness 模型中添加一个 `fullName` 的计算属性。
-
-
-
+在你的 `app/models/witness.js` witness 模型中添加一个 `fullName` 的计算属性：
 
 ```javascript
 import DS from 'ember-data';
@@ -11007,7 +11704,7 @@ export default DS.Model.extend({
   lName: DS.attr('string'),
   email: DS.attr('string'),
   sightings: DS.hasMany('sighting'),
-  fullName:  Ember.computed('fName', 'lName', function(){
+  fullName: Ember.computed('fName', 'lName', function(){
     return this.get('fName') + ' ' + this.get('lName');
   })
 });
@@ -11029,6 +11726,7 @@ export default Ember.Route.extend({
       lName: "Gandee",
       email: "fake@bignerdranch.com"
     });
+
     return [witnessRecord];
   }
 });
@@ -11038,7 +11736,9 @@ export default Ember.Route.extend({
 
 ```handlebars
 {{outlet}}
+
 <h1>Witnesses</h1>
+
 <div class="row">
   {{#each model as |witness|}}
     <div class="col-xs-12 col-sm-6 col-md-4">
@@ -11047,7 +11747,7 @@ export default Ember.Route.extend({
           <div class="caption">
             <h3>{{witness.fullName}}</h3>
             <div class="panel panel-danger">
-              <div class="panel-heading">Sightings</div>div
+              <div class="panel-heading">Sightings</div>
             </div>
           </div>
         </div>
@@ -11057,23 +11757,25 @@ export default Ember.Route.extend({
 </div>
 ```
 
-导航到 `http://localhost:4200/witnesses` 并查看结果（图 21.3）。
 
-**图 21.3 证人列表列表**
+
+导航到`http://localhost:4200/witnesses`并查看结果（图 21.3）。
+
+**图 21.3 证人列表**
 
 ![证人列表](img/model-computed-property-witnesses.png)
 
-在此视图中，你添加了证人列表（目前仅包含一个证人），并使用计算属性来显示证人的 `fullName` 属性。该属性是根据你在创建证人记录时添加的值生成的的。通过 `witnessRecord.set`，你可以在模型回调返回记录之前提供不同的名或姓，以查看属性的变化。
+在此视图中，你添加了证人列表（目前仅包含一个证人），并使用计算属性来显示证人的`fullName`属性。该属性是根据你在创建证人记录时添加的值生成的。通过`witnessRecord.set`，你可以在模型回调返回记录之前提供不同的名或姓，以查看属性的变化。
 
-在关于 `Ember` 的这前几章中，你已经取得了很大的进展！你现在可以定义数据模型、创建记录、创建计算属性并获取和设置属性值。稍后，你将学习如何使用 API 获取、更新和销毁记录。
+在关于`Ember`的这前几章中，你已经取得了很大的进展！你现在可以定义数据模型、创建记录、创建计算属性并获取和设置属性值。稍后，你将学习如何使用 API 获取、更新和销毁记录。
 
 在下一章中，你将学习使用适配器（adapters）、序列化器（serializers）和转换器（transforms）将你的数据模型与网络上的数据连接起来。
 
 ## 深入探索：获取数据
 
-如上所述，数据存储管理模型数据并知道如何检索它。在上一章中，你在 `SightingRoute` 模型回调中返回了一个数组数据。在第 22 章中，你将在此路由中通过 `this.store.findAll` 和其他数据检索方法以 `Promise` 的形式检索并模型数据。
+如上所述，数据存储管理模型数据并知道如何检索它。在上一章中，你在`SightingRoute`模型回调中返回了一个数组数据。在第 22 章中，你将在此路由中通过`this.store.findAll`和其他数据检索方法以`Promise`的形式检索模型数据。
 
-下面是 `Ember Data` 的 `store` 对象用于从 API 获取数据、将其存储在内存中并返回给请求者的方法列表。
+下面是`Ember Data`的`store`对象用于从 API 获取数据、将其存储在内存中并返回给请求者的方法列表。
 
 | 请求类型 | 获取所有记录 | 获取单个记录 |
 | --- | --- | --- |
@@ -11081,216 +11783,259 @@ export default Ember.Route.extend({
 | 仅查找本地记录 | `peekAll` | `peekRecord` |
 | 查找过滤后的记录 | `query` | `queryRecord` |
 
-检索方法有几种形式：持久化和本地、仅本地、以及过滤后的持久化和本地。大多数用例都需要 `findAll` 和 `findRecord`。每个方法的参数与 `Ember Data` 创建的请求 API 数据的端点非常匹配。
+检索方法有几种形式：持久化和本地、仅本地、以及过滤后的持久化和本地。大多数用例都需要`findAll`和`findRecord`。每个方法的参数与`Ember Data`创建的请求 API 数据的端点非常匹配。
 
-对于 `findAll`，唯一需要的参数是模型名称。例如，获取所有证人的请求为 `findAll('witness')`。对于 `findRecord`，需要额外的参数，通常是记录的 `id`，例如 `this.store.findRecord('witness', 5)`。
+对于`findAll`，唯一需要的参数是模型名称。例如，获取所有证人的请求为`findAll('witness')`。对于`findRecord`，需要额外的参数，通常是记录的`id`，例如`this.store.findRecord('witness', 5)`。
 
-`peekAll` 和 `peekRecord` 需要相同的参数来检索数据。调用这些方法将立即返回数据，而不是 `Promise`。
+`peekAll`和`peekRecord`需要相同的参数来检索数据。调用这些方法将立即返回数据，而不是`Promise`。
 
-查询 API 是形成请求的另一种方法。如果你的 API 支持查询参数，`Ember Data` 将向 `/witnesses/` 发起请求。
+查询 API 是形成请求的另一种方法。如果你的 API 支持查询参数，`Ember Data`将向`/witnesses/`发起请求。
 
+虽然上述没有提到这一点，但在检索数据时，`store`会对数据发送`get`请求。在保存数据时，如果数据在持久化源中不存在，则会发送`POST`类型请求；如果数据已存在并正在更新，则会发送`PUT`类型请求。
 
+当你调用`createRecord()`时，如之前所述，你并没有将数据保存到数据库。你只是创建了一个内存中的对象。调用`save()`是用于创建和更新的。
 
-虽然上述没有提到这一点，但在检索数据时，`store` 会对数据发送 `get` 请求。在保存数据时，如果数据在持久化源中不存在，则会发送 `POST` 类型请求；如果数据已存在并正在更新，则会发送 `PUT` 类型请求。
-
-当你调用 `createRecord()` 时，如之前所述，你并没有将数据保存到数据库。你只是创建了一个内存中的对象。调用 `save()` 是用于创建和更新的。
-
-销毁记录是最后一步。与检索和更新记录的方法类似，`modelRecord.destroyRecord()` 使用请求方法——在此例中为 `DELETE`——来从持久化源中移除记录。然后 `store` 会从内存中移除该记录。与 `save()` 类似，`destroyRecord()` 实际上是两个函数调用合为一：`deleteRecord()` 和 `save()`，因为 `deleteRecord()` 只在本地删除记录。`destroyRecord()` 更为常用，因为它将这些步骤合并为了单一操作。
+销毁记录是最后一步。与检索和更新记录的方法类似，`modelRecord.destroyRecord()`使用请求方法——在此例中为`DELETE`——来从持久化源中移除记录。然后`store`会从内存中移除该记录。与`save()`类似，`destroyRecord()`实际上是两个函数调用合为一：`deleteRecord()`和`save()`，因为`deleteRecord()`只在本地删除记录。`destroyRecord()`更为常用，因为它将这些步骤合并为了单一操作。
 
 ## 铜牌挑战：更改计算属性
 
-`fullName` 计算属性目前使用 `fName` 和 `lName`。将绑定的属性更改为 `email` 和 `fName`，以创建一个显示为 `Todd - tgandee@bignerdranch.com` 的 `fullName`。
+`fullName`计算属性目前使用`fName`和`lName`。将绑定的属性更改为`email`和`fName`，以创建一个显示为`Todd - tgandee@bignerdranch.com`的`fullName`。
 
 ## 银牌挑战：标记新发现
 
-为 sightings 增加一个新的布尔类型属性 `isNew`。为该属性提供一个值为 `false` 的 `defaultValue`。将此属性添加到你创建的一个记录中并将其设置为 `true`。导航到 `sightings` 路由，并使用 `Chrome` 中的 `Ember Inspector` 审查该路由的数据。应该应该有一个 sightings 实例的 `isNew` 属性被设置为 `true`。
+为 sightings 增加一个新的布尔类型属性`isNew`。为该属性提供一个值为`false`的`defaultValue`。将此属性添加到你创建的一个记录中并将其设置为`true`。导航到`sightings`路由，并使用`Chrome`中的`Ember Inspector`审查该路由的数据。应该有一个 sightings 实例的`isNew`属性被设置为`true`。
 
 ## 金牌挑战：添加标题
 
-证人需要一个正式的头衔，例如 `Mr.` Gandee 先生。为模型添加一个 `title` 属性，然后为除一条记录以外的每个证人记录设置它。添加一个带有 `defaultValue` 的对象参数。为没有指定标题的实例选择一个有趣的默认标题。在创建 `title` 属性并为你创建的记录提供一些新数据后，添加一个计算属性来显示 `titleName`。
+证人需要一个正式的头衔，例如`Mr.`Gandee 先生。为模型添加一个`title`属性，然后为除一条记录以外的每个证人记录设置它。添加一个带有`defaultValue`的对象参数。为没有指定标题的实例选择一个有趣的默认标题。在创建`title`属性并为你创建的记录提供一些新数据后，添加一个计算属性来显示`titleName`。
 
-尽情发挥你的默认标题吧。Wikipedia 有一个很棒的任务列表（[en.wikipedia.org/wiki/Title](https://en.wikipedia.org/wiki/Title)。“Mahatma Gandee” 听起来很不错……
+尽情发挥你的默认标题吧。Wikipedia 有一个很棒的任务列表（[en.wikipedia.org/wiki/Title](https://en.wikipedia.org/wiki/Title)）。“Mahatma Gandee”听起来很不错……
 
 # 22 数据 – 适配器、序列化器和转换器
 
 应用程序需要数据进出接口。连接到数据源是开发应用程序的一个重要方面。否则，你将拥有一个复杂的表单、事件和列表系统，但没有任何数据可显示。
 
-在本章中，你将学习在 `Ember` 中连接数据源的一些基础知识。你将使用为为本书创建的 API，并为你的应用程序创建一个适配器。
+在本章中，你将学习在`Ember`中连接数据源的一些基础知识。你将使用为本书创建的 API，并为你的应用程序创建一个适配器。
 
 本章与书中的其他章节略有不同。它包含更多的信息和更少的代码。然而，本章将为你提供一个使用服务器和数据库进行应用程序开发的重要现实视角，而这些可能并不由你控制。在下一章中，你将回到原来的内容。
-
-
-
 
 ```javascript
 import JSONAPIAdapter from 'ember-data/adapters/json-api';
 
 export default DS.JSONAPIAdapter.extend({
+
   host: 'https://bnr-tracker-api.herokuapp.com',
+
   namespace: 'api'
+
 });
 ```
 
-与其他其它 `Ember` 类一样，命名模式也适用于适配器（adapters）——并且可以通过创建适配器来定制任何模型的 API 需求。服务器端数据结构的不规则性可以包含在单个适配器中，而不是强制所有模型都去适应边缘情况。
+与其他`Ember`类一样，命名模式也适用于适配器（adapters）——并且可以通过创建适配器来定制任何模型的 API 需求。服务器端数据结构的不规则性可以包含在单个适配器中，而不是强制所有模型都去适应边缘情况。
 
-你添加到 `app/adapters/application.js` 的内容是针对所有数据请求的全局设置。对于 Tracker 来说，这足够了，因为 API 从同一个主机和命名空间发送所有 JSON 响应。但如果 `witness` 模型需要不同的命名空间或主机，你可以创建一个 `app/adapters/witness.js` 文件，并为 `witness` 请求配置特定的适配器。
+你添加到`app/adapters/application.js`的内容是针对所有数据请求的全局设置。对于 Tracker 来说，这足够了，因为 API 从同一个主机和命名空间发送所有 JSON 响应。但如果`witness`模型需要不同的命名空间或主机，你可以创建一个`app/adapters/witness.js`文件，并为`witness`请求配置特定的适配器。
 
-接下来，你需要通过 `store` 从 API 获取数据。API 已经准备好了 `cryptid` 和 `witness` 数据。
+接下来，你需要通过`store`从 API 获取数据。API 已经准备好了`cryptid`和`witness`数据。
 
-打开 `app/routes/witnesses.js`。删除哑数据，并替换为你在 第 21 章 中学习的检索方法调用。
+打开`app/routes/witnesses.js`。删除哑数据，并替换为你在第 21 章中学习的检索方法调用。
 
-```
+```javascript
 ...
+
   model(){
+
     let witnessRecord = this.store.createRecord('witness', {
+
       fname: "Todd",
+
       lname: "Gandee",
+
       email: "fake@bignerdranch.com"
+
     });
+
     return [witnessRecord];
+
     return this.store.findAll('witness');
+
   }
+
 });
 ```
 
-现在，在终端中使用 `ember server` 重新启动应用程序，并将浏览器指向 [`localhost:4200/witnesses`](http://localhost:4200/witnesses)（图 22.3）。
+现在，在终端中使用`ember server`重新启动应用程序，并将浏览器指向[`localhost:4200/witnesses`](http://localhost:4200/witnesses)（图 22.3）。
 
 **图 22.3 Witnesses 列表**
 
 ![Witnesses listing](img/adapters-findAll-witnesses.png)
 
-与 `Ember` 中的大多数生命周期流一样，适配器有许多方法可以将你的数据从 API 传输到 `store`，并传输到你的路由、控制器和模板。特定适配器（如 `JSONAPIAdapter`）的目的是处理通用的模式，并处理每个模型的预期输入/输出。我们的示例使用了由 `MongoDB` 数据库支持的 `Node.js` 服务器，使用 `json-api` `node` 模块来处理符合 `JSONAPI` 数据的 API 端点。
+与`Ember`中的大多数生命周期流一样，适配器有许多方法可以将你的数据从 API 传输到`store`，并传输到你的路由、控制器和模板。特定适配器（如`JSONAPIAdapter`）的目的是处理通用的模式，并处理每个模型的预期输入/输出。我们的示例使用了由`MongoDB`数据库支持的`Node.js`服务器，使用`json-api` `node`模块来处理符合`JSONAPI`数据的 API 端点。
 
 与遵循特定模式（仅有少数不规则边缘情况）的 API 工作会让程序员感到愉快。你可能还需要在请求中处理一些额外数据，例如身份验证或请求头。适配器可以自定义以处理任何场景。
 
-`Ember` 以前内置了其他数据源场景的适配器，例如 `localStorage` 和固件数据（fixture data）。这些适配器以及其他的现在都是插件（addons）。当你的模型数据需要与其他源同步时，可以通过 `Ember CLI` 添加它们。
+`Ember`以前内置了其他数据源场景的适配器，例如`localStorage`和固件数据（fixture data）。这些适配器以及其他的现在都是插件（addons）。当你的模型数据需要与其他源同步时，可以通过`Ember CLI`添加它们。
 
-如果你发现自己必须拼凑一个适配器，请深入研究文档以寻找答案。值得注意的方法和属性有：`ajaxOptions`、`ajaxError`、`handleResponse` 和 `headers`。
+如果你发现自己必须拼凑一个适配器，请深入研究文档以寻找答案。值得注意的方法和属性有：`ajaxOptions`、`ajaxError`、`handleResponse`和`headers`。
 
-此时，你的应用程序正在向服务器发送请求以接收 `witness` 集合。在继续阅读关于内容安全策略、序列化器（serializers）和转换器（transforms）之前，你将使用相同的方法 `this.store.findAll` 从 API 获取所有 `cryptid` 记录。因为 `cryptids` 没有视图模板，你将使用 `Ember Inspector` 检查返回的记录。
+此时，你的应用程序正在向服务器发送请求以接收`witness`集合。在继续阅读关于内容安全策略、序列化器（serializers）和转换器（transforms）之前，你将使用相同的方法`this.store.findAll`从 API 获取所有`cryptid`记录。因为`cryptids`没有视图模板，你将使用`Ember Inspector`检查返回的记录。
 
-将方法调用添加到 `app/routes/cryptids.js`：
+将方法调用添加到`app/routes/cryptids.js`：
 
 ```javascript
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+
   model(){
+
     return this.store.findAll('cryptid');
+
   }
+
 });
 ```
 
-现在数据已经返回了请在浏览器中重新加载应用并导航到 [`localhost:4200/cryptids`](http://localhost:4200/cryptids)。使用 `Ember Inspector` 检查返回的数据：在 DevTools 中，选择 `Ember` 标签页并点击 `Data`，然后点击 `cryptid(4)`（图 22.4）。
+现在数据已经返回了，请在浏览器中重新加载应用并导航到[`localhost:4200/cryptids`](http://localhost:4200/cryptids)。使用`Ember Inspector`检查返回的数据：在 DevTools 中，选择`Ember`标签页并点击`Data`，然后点击`cryptid(4)`（图 22.4）。
 
 **图 22.4 Cryptid 数据**
 
 ![Cryptid data](img/adapters-cryptids-findAll.png)
 
-到此为止，还没有深入使用 `Ember Inspector` 的需求。在这里使用是为了展示 `store` 如何与模型数据协作。追踪请求路径可能是乏味的。当你遇到这个问题时，`Ember Inspector` 应该是第一个查看的地方。
+到此为止，还没有深入使用`Ember Inspector`的需求。在这里使用是为了展示`store`如何与模型数据协作。追踪请求路径可能是乏味的。当你遇到这个问题时，`Ember Inspector`应该是第一个查看的地方。
 
 ## 内容安全策略 (Content Security Policy)
 
-`Ember` 利用 JavaScript 中一种新的安全层来检测跨源请求。工作标准被称为“内容安全策略”（Content Security Policy）。
+`Ember`利用 JavaScript 中一种新的安全层来检测跨源请求。工作标准被称为“内容安全策略”（Content Security Policy）。
 
-有一个插件可以设置某些值并将安全策略集成到你的应用中：`ember-cli-content-security-policy`。Tracker 不需要需它，但了解一下它是好的。这个插件使得添加环境变量来设置安全策略变得更容易。以下是 `contentSecurityPolicy` 对象的示例：
+有一个插件可以设置某些值并将安全策略集成到你的应用中：`ember-cli-content-security-policy`。Tracker 不需要它，但了解一下它是好的。这个插件使得添加环境变量来设置安全策略变得更容易。以下是`contentSecurityPolicy`对象的示例：
 
 ```javascript
 module.exports = function(environment) {
+
   ...
+
   // config/environment.js
+
   ENV.contentSecurityPolicy = {
+
     'default-src': "",
+
     'script-src': "",
+
     'font-src': "",
+
     'connect-src': "",
+
     'img-src': "",
+
     'style-src': "",
+
     'media-src': null
+
   }
+
   ...
+
 }
 ```
 
-安全策略的每一行都为每种请求创建一个“白名单”——一组安全的路径。`default-src` 是一个通用的设置，最初被设置为 `null`，以强制程序员白名单他们需要的设置。其他设置（如 `script-src` 和 `connect-src`）用于应用程序域之外的请求，例如 [`bnr-tracker-api.herokuapp.com`](https://bnr-tracker-api.herokuapp.com)。
+安全策略的每一行都为每种请求创建一个“白名单”——一组安全的路径。`default-src`是一个通用的设置，最初被设置为`null`，以强制程序员白名单他们需要的设置。其他设置（如`script-src`和`connect-src`）用于应用程序域之外的请求，例如[`bnr-tracker-api.herokuapp.com`](https://bnr-tracker-api.herokuapp.com)。
 
-更多信息请参阅 MDN *Content Security Policy* 页面和 `Ember CLI` 插件的 GitHub 仓库。
+更多信息请参阅 MDN *Content Security Policy* 页面和`Ember CLI`插件的 GitHub 仓库。
 
 ## 序列化器 (Serializers)
 
 当数据进出时，JSON 结构会被序列化和反序列化。适配器使用序列化器从 store 获取数据，以构建和解析请求/响应数据。
 
-你可以使用 `ember g serializer [application or model name]` 创建序列化器，它将创建一个包含模板代码的序列化器文件，如下：
+你可以使用`ember g serializer [application or model name]`创建序列化器，它将创建一个包含模板代码的序列化器文件，如下：
 
 ```javascript
 import DS from 'ember-data';
 
 export default DS.JSONAPISerializer.extend({
+
 });
 ```
 
+序列化器（serializer）是赋值给适配器`serializer`属性的对象。如果你的应用程序没有特定的序列化器文件，`Ember`将使用默认的适配器和序列化器，即`JSONAPIAdapter`和`JSONAPISerializer`。
 
+当你为应用引入一个新的序列化器时，该序列化器将成为`app/adapters/application.js`文件的`defaultSerializer`。在`ember g serializer`中使用模型名称作为选项，允许你对特定模型的数据进行自定义序列化。
 
+与`JSONAPIAdapter`一样，只有当你的 API 不符合`JSONAPI`规范或你有特殊的边缘情况时，才应该更改配置。如果你在自己项目中需要对请求或响应数据进行更改，这里是一些在`Ember Data`文档中可以研究的方法：`keyForAttribute`、`keyForRelationship`、`modelNameFromPayloadKey`和`serialize`。
 
+`keyForAttribute`是一个将模型属性名称转换为请求中的键名的方法。该方法接收三个参数：`key`、`typeClass`和`method`。对于`JSONAPISerializer`，此方法返回经过短横线化（dasherized）的`key`，这意味着键名中的任何下划线或驼峰命名将被转换为横线。例如，如果模型有一个属性`first_name`，请求对象将有一个键`first-name`。如果你的 API 使用`first_name`，你需要修改`keyForAttribute`方法来解决命名问题。
 
-序列化器（serializer）是赋值给适配器 `serializer` 属性的对象。如果你的应用程序没有特定的序列化器文件，`Ember` 将使用默认的适配器和序列化器，即 `JSONAPIAdapter` 和 `JSONAPISerializer`。
+`keyForRelationship`遵循相同模式，仅适用于关系键。如果你的模型名称包含下划线，当你链接了`belongsTo`或`hasMany`关系的模型时，你需要为`JSONAPISerializer`编辑此方法。某些 API 要求为这些关系添加`_id`或`_ids`后缀。这是进行该更改的方法。
 
-当你为应用引入一个新的序列化器时，该序列化器将成为 `app/adapters/application.js` 文件的 `defaultSerializer`。在 `ember g serializer` 中使用模型名称作为选项，允许你对特定模型的数据进行自定义序列化。
+你为 Tracker 使用的`bnr-tracker-api`使用了带有短横线的适当`JSONAPI`键名，例如`cryptid-type`。你不需要在应用中添加序列化器。但是，为了说明，这里有一个使用`Ember`工具方法`Ember.String.underscore`来更改输入和输出 JSON 数据属性键的示例。
 
-与 `JSONAPIAdapter` 一样，只有当你的 API 不符合 `JSONAPI` 规范或你有特殊的边缘情况时，才应该更改配置。如果你在自己的项目中需要对请求或响应数据进行更改，这里是一些在 `Ember Data` 文档中可以研究的方法：`keyForAttribute`、`keyForRelationship`、`modelNameFromPayloadKey` 和 `serialize`。
-
-`keyForAttribute` 是一个将模型属性名称转换为请求中的键名的方法。该方法接收三个参数：`key`、`typeClass` 和 `method`。对于 `JSONAPISerializer`，此方法返回经过短横线化（dasherized）的 `key`，这意味着键名中的任何下划线或驼峰命名将被转换为横线。例如，如果模型有一个属性 `first_name`，请求对象将有一个键 `first-name`。如果你的 API  `first_name`，你需要修改 `keyForAttribute` 方法来解决命名问题。
-
-`keyForRelationship` 遵循相同，仅适用于关系键。如果你的模型名称包含下划线，当你链接了 `belongsTo` 或 `hasMany` 关系的模型时，你需要为 `JSONAPISerializer` 编辑此方法。某些 API 要求为这些关系添加 `_id` 或 `_ids` 后缀。这是进行该更改的方法。
-
-你为 Tracker 使用的 `bnr-tracker-api` 使用了带有短横线的适当 `JSONAPI` 键名，例如 `cryptid-type`。你不需要在应用中添加序列化器。但是，为了说明，这里有一个使用 `Ember` 工具方法 `Ember.String.underscore` 来更改输入和输出 JSON 数据属性键的示例。
-
-```
+```javascript
 import Ember from 'ember';
+
 import DS from 'ember-data';
+
 var underscore = Ember.String.underscore;
+
 export default DS.JSONAPISerializer.extend({
+
   keyForAttribute(attr) {
+
     return underscore(attr);
+
   },
+
   keyForRelationship(rawKey) {
+
     return underscore(rawKey);
+
   }
+
 });
 ```
 
-`Ember` 在 `Ember.String` 对象上提供了许多字符串处理方法。`Ember.String.underscore` 将带有短横线或驼峰的字符串转换为使用下划线分隔单词。
+`Ember`在`Ember.String`对象上提供了许多字符串处理方法。`Ember.String.underscore`将带有短横线或驼峰的字符串转换为使用下划线分隔单词。
 
-序列化器方法在数据请求的生命周期期间调用，例如 `this.store.findAll('witness')`。检查数据请求回调流的一种方法是在此代码中添加 `debugger` 语句，以查看进入和离开方法的内容。
+序列化器方法在数据请求的生命周期期间调用，例如`this.store.findAll('witness')`。检查数据请求回调流的一种方法是在此代码中添加`debugger`语句，以查看进入和离开方法的内容。
 
 这里是一个示例：
 
 ```javascript
 import Ember from 'ember';
+
 import DS from 'ember-data';
 
 var underscore = Ember.String.underscore;
 
 export default DS.JSONAPISerializer.extend({
+
   keyForAttribute(attr) {
+
     let returnValue = underscore(rawKey);
+
     debugger;
+
     return returnValue;
-    return underscore(rawKey);
-  },
-  keyForRelationship(rawKey) {
-    return underscore(rawKey);
-  }
-});
 ```
 
-在与新 API 工作时，这种调试风格非常有用。当你需要操作 `attr` 参数来序列化你的键名时，可以使用 `Ember.String` 对象。幸运的是，`Ember` 和 `Ember` 社区为许多 API 模式构建了适配器和序列化器。
+
+
+```
+return underscore(rawKey);
+```
+
+```
+keyForRelationship(rawKey) {
+  return underscore(rawKey);
+}
+```
+
+在与新 API 工作时，这种调试风格非常有用。当你需要操作`attr`参数来序列化你的键名时，可以使用`Ember.String`对象。幸运的是，`Ember`和`Ember`社区为许多 API 模式构建了适配器和序列化器。
 
 ## 转换 (Transforms)
 
-`Ember Data` 让你能够从 API 转换数据以适应应用程序的需求。你已经在 第 21 章 中看到 `Ember Data` 有内置的转换——方法 `DS.attr('string')`、`DS.attr('boolean')`、`DS.attr('number')` 和 `DS.attr('date')`。
+`Ember Data`让你能够从 API 转换数据以适应应用程序的需求。你已经在第 21 章中看到`Ember Data`有内置的转换——方法`DS.attr('string')`、`DS.attr('boolean')`、`DS.attr('number')`和`DS.attr('date')`。
 
-当你向应用中添加转换时，可以带有你的目标属性类型调用 `DS.attr`。转换类似于 JavaScript 的强制类型转换——它们接收一个值并返回指定类型的值。这里是一个基础的 `DS.attr('object')` 转换示例：
+当你向应用中添加转换时，可以带有你的目标属性类型调用`DS.attr`。转换类似于 JavaScript 的强制类型转换——它们接收一个值并返回指定类型的值。这里是一个基础的`DS.attr('object')`转换示例：
 
 ```javascript
 export default DS.Transform.extend({
@@ -11311,41 +12056,37 @@ export default DS.Transform.extend({
 });
 ```
 
-该转换有两个方法：`deserialize` 和 `serialize`。第一个方法 `deserialize` 测试传入的数据是否为对象并返回它；否则，它返回一个空对象。第二个方法 `serialize` 如果输出数据是对象，则返回该数据，否则返回一个空对象。转换保证了从 API 返回和发送到 API 的数据都是模型中定义的类型。
+该转换有两个方法：`deserialize`和`serialize`。第一个方法`deserialize`测试传入的数据是否为对象并返回它；否则，它返回一个空对象。第二个方法`serialize`如果输出数据是对象，则返回该数据，否则返回一个空对象。转换保证了从 API 返回和发送到 API 的数据都是模型中定义的类型。
 
 ## 给更好奇的读者：Ember CLI Mirage
 
 前端应用开发中最常见的障碍之一是 API。可能会出现许多问题：API 可能还没有创建，API 可能正在开发中，或者在你开发时 API 处在防火墙之后。
 
-访问不可用 API 的简单解决方案是使用静态文本或模拟数据。但这种解决方案可能会引入许多其他问题，例如为了不可访问的数据修改应用程序逻辑、更改 `this.store` 的请求，或更改适配器或序列化器。
+访问不可用 API 的简单解决方案是使用静态文本或模拟数据。但这种解决方案可能会引入许多其他问题，例如为了不可访问的数据修改应用程序逻辑、更改`this.store`的请求，或更改适配器或序列化器。
 
-`Ember CLI Mirage` 是一个插件，它可以代理请求到特定的 API 路由。你可以设置模型来建立关系，设置工厂来填充数据，为特定响应创建模拟数据，并定义 CRUD 路由来拦截特定的 API 请求。一旦设置好，你就可以像 API 已存在一样进行开发。
+`Ember CLI Mirage`是一个插件，它可以代理请求到特定的 API 路由。你可以设置模型来建立关系，设置工厂来填充数据，为特定响应创建模拟数据，并定义 CRUD 路由来拦截特定的 API 请求。一旦设置好，你就可以像 API 已存在一样进行开发。
 
-当 `Mirage` 启用时，所有请求将重定向到本地 `Mirage` 配置。
+当`Mirage`启用时，所有请求将重定向到本地`Mirage`配置。
 
-在打印时，`ember-cli-mirage` 版本为 `0.2.0-beta.8`。你很快将作为挑战的一部分探索 `Mirage`。要了解更多关于 `Ember CLI Mirage` 的信息，请访问 [www.ember-cli-mirage.com](http://www.ember-cli-mirage.com/)。
+在打印时，`ember-cli-mirage`版本为`0.2.0-beta.8`。你很快将作为挑战的一部分探索`Mirage`。要了解更多关于`Ember CLI Mirage`的信息，请访问 [www.ember-cli-mirage.com](http://www.ember-cli-mirage.com/)。
 
-
-
-
-
-在下一章中，你将整合最后三章的概念，并创建一个路由请求和显示数据的运行应用程序。在第 24 章中，你将创建、编辑和删除内容。当你可以在模型上调用 `save` 和 `destroyRecord` 且数据无需费力即可发送到 API 时，你将看到 `Ember Data`、适配器（adapters）和序列器的威力。
+在下一章中，你将整合最后三章的概念，并创建一个路由请求和显示数据的运行应用程序。在第 24 章中，你将创建、编辑和删除内容。当你可以在模型上调用`save`和`destroyRecord`且数据无需费力即可发送到 API 时，你将看到`Ember Data`、适配器（adapters）和序列器的威力。
 
 ## 银牌挑战：内容安全
 
-在应用程序中添加安全层始终非常重要。如上所述，现在有一个新的内容安全策略（Content Security Policy）浏览器 API，`Ember` 有一个环境对象来处理配置应用程序的白名单策略。安装插件并根据控制台错误，确保应用程序的请求请求端已添加到策略中。
+在应用程序中添加安全层始终非常重要。如上所述，现在有一个新的内容安全策略（Content Security Policy）浏览器 API，`Ember`有一个环境对象来处理配置应用程序的白名单策略。安装插件并根据控制台错误，确保应用程序的请求请求端已添加到策略中。
 
 ## 黄金挑战：Mirage
 
-`Ember CLI Mirage` 是你开发工具箱的极佳补充。它允许你在后端团队完成技术栈之前开发应用程序的 API 需求。
+`Ember CLI Mirage`是你开发工具箱的极佳补充。它允许你在后端团队完成技术栈之前开发应用程序的 API 需求。
 
-从终端安装 `ember-cli-mirage` 开始使用它：
+从终端安装`ember-cli-mirage`开始使用它：
 
 ```
 ember install ember-cli-mirage
 ```
 
-接下来，要开启或关闭 `Mirage`，请向 `config/environment.js` 添加一个环境变量：
+接下来，要开启或关闭`Mirage`，请向`config/environment.js`添加一个环境变量：
 
 ```
 if (environment === 'development') {
@@ -11360,15 +12101,15 @@ if (environment === 'development') {
 }
 ```
 
-最后，以 `factories` 的形式为你的证据（witness）和神秘生物（cryptid）端添加伪数据。
+最后，以`factories`的形式为你的证据（witness）和神秘生物（cryptid）端添加伪数据。
 
-为了操作你的 Tracker 应用，你可以从 `Tracker/Data_Chapter/mirage-example` 提供的示例资源中获取配置好的 `app/mirage` 目录。我们将保持示例与插件的当前发布版本同步。
+为了操作你的 Tracker 应用，你可以从`Tracker/Data_Chapter/mirage-example`提供的示例资源中获取配置好的`app/mirage`目录。我们将保持示例与插件的当前发布版本同步。
 
 # 23 视图与模板
 
-MVC 中的 V 代表 `views`（视图）。在 Tracker 中，视图将是模板。模板通过 JavaScript 处理以创建 HTML 元素。这允许你在不向服务器发送新请求的情况下更改 DOM。
+MVC 中的 V 代表`views`（视图）。在 Tracker 中，视图将是模板。模板通过 JavaScript 处理以创建 HTML 元素。这允许你在不向服务器发送新请求的情况下更改 DOM。
 
-在本章中，你将创建模板文件并添加在路由 `model` 钩子中获取的数据。`Ember` 内置的模板语言和辅助函数允许你除常规 HTML 语法之外，以极小的努力创建模板。
+在本章中，你将创建模板文件并添加在路由`model`钩子中获取的数据。`Ember`内置的模板语言和辅助函数允许你除常规 HTML 语法之外，以极小的努力创建模板。
 
 在本章结束时，你将创建类似图 23.1 的列表。
 
@@ -11378,25 +12119,25 @@ MVC 中的 V 代表 `views`（视图）。在 Tracker 中，视图将是模板�
 
 ## Handlebars
 
-你将使用 `Handlebars`，这是一种用于创建动态模板的语言。它类似于 `PHP`、`JSP`、`ASP` 和 `ERB` 等服务器端模板语言。它包含了 HTML 标签和用于处理对象的分隔符。
+你将使用`Handlebars`，这是一种用于创建动态模板的语言。它类似于`PHP`、`JSP`、`ASP`和`ERB`等服务器端模板语言。它包含了 HTML 标签和用于处理对象的分隔符。
 
-在 `Handlebars` 中，分隔符是双大括号，例如 `{{}}`。在“双括号”内部，你可以渲染数据字符串并使用辅助方法执行有限的逻辑。你已经见过两个这样的辅助方法：`{{outlet}}` 和 `{{#each}}`。
+在`Handlebars`中，分隔符是双大括号，例如`{{}}`。在“双括号”内部，你可以渲染数据字符串并使用辅助方法执行有限的逻辑。你已经见过两个这样的辅助方法：`{{outlet}}`和`{{#each}}`。
 
-`Ember` 对 `Handlebars` 的实现最近过渡到了一种被称为“HTMLBars”的新机制。本章中语言的某些细节源自 HTMLBars，但也适用于旧版本的 `Ember`（至少追溯到 1.13.x 版本）。
+`Ember`对`Handlebars`的实现最近过渡到了一种被称为“HTMLBars”的新机制。本章中语言的某些细节源自 HTMLBars，但也适用于旧版本的`Ember`（至少追溯到 1.13.x 版本）。
 
 ## 模型
 
-在 `Ember` 中，模板始终由模型支持。这意味着当模板渲染为 HTML 字符串并附加到 DOM 中时，一个对象（或对象数组）将作为参数传递。
+在`Ember`中，模板始终由模型支持。这意味着当模板渲染为 HTML 字符串并附加到 DOM 中时，一个对象（或对象数组）将作为参数传递。
 
-模型对象可以具有字符串、数组或其他对象的属性。当使用 `Ember` 和 `Handlebars` 编写模板时，你通过双大括号访问此对象。
+模型对象可以具有字符串、数组或其他对象的属性。当使用`Ember`和`Handlebars`编写模板时，你通过双大括号访问此对象。
 
-当你想要显示模型属性的值时，你编写 `{{model.name}}`，其中 `name` 是 `model` 对象上的一个属性。点点语法应该很熟悉，但不要被误认为任何 JavaScript 代码都可以放在大括号内。
+当你想要显示模型属性的值时，你编写`{{model.name}}`，其中`name`是`model`对象上的一个属性。点点语法应该很熟悉，但不要被误认为任何 JavaScript 代码都可以放在大括号内。
 
 ## 辅助函数 (Helpers)
 
-`Handlebars` 模板是由 JavaScript 函数插值的字符串。当函数遇到双大括号时，它会尝试用对象属性解析分隔符的实例，或调用嵌套函数来返回字符串。这些嵌套函数被称为 `helpers`（辅助函数），并在应用程序中创建。
+`Handlebars`模板是由 JavaScript 函数插值的字符串。当函数遇到双大括号时，它会尝试用对象属性解析分隔符的实例，或调用嵌套函数来返回字符串。这些嵌套函数被称为`helpers`（辅助函数），并在应用程序中创建。
 
-辅助函数可以有两种形式。第一是内联辅助函数，使用语法 `{{helper arguments}}`。参数可以包括哈希（hash），例如：
+辅助函数可以有两种形式。第一是内联辅助函数，使用语法`{{helper arguments}}`。参数可以包括哈希（hash），例如：
 
 ```
 {{input type="text" value=""}}
@@ -11418,11 +12159,11 @@ MVC 中的 V 代表 `views`（视图）。在 Tracker 中，视图将是模板�
 {{/if}}
 ```
 
-对于块辅助函数，内容可以传递给块以增强输出。下一节中描述的 `Handlebars` 内置条件判断就是块辅助函数。
+对于块辅助函数，内容可以传递给块以增强输出。下一节中描述的`Handlebars`内置条件判断就是块辅助函数。
 
 ### 条件判断
 
-条件语句允许你在 `Handlebars` 模板中引入基本的控制流。它们的语法看起来如下：
+条件语句允许你在`Handlebars`模板中引入基本的控制流。它们的语法看起来如下：
 
 ```
 {{#if argument}}
@@ -11440,9 +12181,9 @@ MVC 中的 V 代表 `views`（视图）。在 Tracker 中，视图将是模板�
 {{/unless}}
 ```
 
-条件语句接受一个解析为真（truthy）或假（falsy）值的单个参数。`truthy` 值是在布尔上下文中求为真的的值。所有值均为真，除了定义为 `falsy` 的值：`false`、`0`、`""`、`null`、`undefined` 和 `NaN`。
+条件语句接受一个解析为真（truthy）或假（falsy）值的单个参数。`truthy`值是在布尔上下文中求为真的的值。所有值均为真，除了定义为`falsy`的值：`false`、`0`、`""`、`null`、`undefined`和`NaN`。
 
-开始工作了。打开 `app/templates/sightings/index.hbs` 并添加条件语句，使发现记录显示位置，或者如果没有位置数据，则显示关于缺失数据的友好警告。
+开始工作了。打开`app/templates/sightings/index.hbs`并添加条件语句，使发现记录显示位置，或者如果没有位置数据，则显示关于缺失数据的友好警告。
 
 ```
 <div class="panel panel-default">
@@ -11454,6 +12195,7 @@ MVC 中的 V 代表 `views`（视图）。在 Tracker 中，视图将是模板�
     {{/each}}
   </ul>
 </div>
+
 <div class="row">
   {{#each model as |sighting|}}
     <div class="col-xs-12 col-sm-3 text-center">
@@ -11471,13 +12213,9 @@ MVC 中的 V 代表 `views`（视图）。在 Tracker 中，视图将是模板�
 </div>
 ```
 
+你修改了观测（sightings）模板的 DOM 结构，开始以样式化元素的格式输出观测信息，使用了`Bootstrap`的`wells`样式。使用`{{#if}}`和`{{else}}`允许你在未添加观测位置时渲染不同的 HTML。
 
-
-
-
-你修改了观测（sightings）模板的 DOM 结构，开始以样式化元素的格式输出观测信息，使用了 `<samp class="application">Bootstrap</samp>` 的 `<samp class="firstterm">wells</samp>` 样式。使用 `{{#if}}` 和 `{{else}}` 允许你在未添加观测位置时渲染不同的 HTML。
-
-现在，你需要更改从路由发送到模板的数据，以查看你新条件判断的结果。在 `<samp class="filename">app/routes/sightings.js</samp>` 中的观测路由模型中，将一个观测的 `location` 属性设置为空字符串。
+现在，你需要更改从路由发送到模板的数据，以查看你新条件判断的结果。在`app/routes/sightings.js`中的观测路由模型中，将一个观测的`location`属性设置为空字符串。
 
 ```
 ...
@@ -11487,13 +12225,12 @@ MVC 中的 V 代表 `views`（视图）。在 Tracker 中，视图将是模板�
       location: 'Asilomar',
       sightedAt: new Date('2016-03-21')
     });
-
     return [record1, record2, record3];
   }
 });
 ```
 
-启动服务器并将浏览器指向 `http://localhost:4200/sightings`，以查看新的观测列表（图 23.2）。
+启动服务器并将浏览器指向`http://localhost:4200/sightings`，以查看新的观测列表（图 23.2）。
 
 **图 23.2  虚假观测**
 
@@ -11503,14 +12240,15 @@ MVC 中的 V 代表 `views`（视图）。在 Tracker 中，视图将是模板�
 
 ### 使用 {{#each}} 循环
 
-你已经在索引模板中使用 `{{#each}}` 块辅助器。该助手将数组中的每个对象渲染为块内内容的一个实例。`{{#each}}` 的参数是 `array`，并作为 `|instance|` 包含在块参数中。只有当传递给 `{{#each}}` 的参数至少包含一个元素的数组时，块才会渲染。
+你已经在索引模板中使用`{{#each}}`块辅助器。该助手将数组中的每个对象渲染为块内内容的一个实例。`{{#each}}`的参数是`array`，并作为`|instance|`包含在块参数中。只有当传递给`{{#each}}`的参数至少包含一个元素的数组时，块才会渲染。
 
-与 `{{#if}}` 块辅助器一样，该助手支持 `{{else}}` 块，当数组参数为空时渲染该块。
+与`{{#if}}`块辅助器一样，该助手支持`{{else}}`块，当数组参数为空时渲染该块。
 
-使用 `{{#each}} {{else}} {{/each}}` 在 `<samp class="filename">app/templates/cryptids.hbs</samp>` 中创建所有记录的神秘生物列表——如果没有的话，则显示文本“No Creatures”：
+使用`{{#each}} {{else}} {{/each}}`在`app/templates/cryptids.hbs`中创建所有记录的神秘生物列表——如果没有的话，则显示文本“No Creatures”：
 
 ```
 {{outlet}}
+
 <div class="row">
   {{#each model as |cryptid|}}
     <div class="col-xs-12 col-sm-3 text-center">
@@ -11528,15 +12266,15 @@ MVC 中的 V 代表 `views`（视图）。在 Tracker 中，视图将是模板�
 </div>
 ```
 
-与观测类似，你正在样式化的 `wells` 中列出神秘生物。`{{else}}` 块允许你在所列出的数组没有项目时，在模板中包含一个条件。你的应用可以为这个空模型数组的条件渲染不同的元素。
+与观测类似，你正在样式化的`wells`中列出神秘生物。`{{else}}`块允许你在所列出的数组没有项目时，在模板中包含一个条件。你的应用可以为这个空模型数组的条件渲染不同的元素。
 
-导航到 `http://localhost:4200/cryptids` 查看你新的神秘生物列表（图 23.3）。
+导航到`http://localhost:4200/cryptids`查看你新的神秘生物列表（图 23.3）。
 
 **图 23.3  神秘生物列表**
 
 ![神秘生物列表](img/templates-cryptids-listing-full.png)
 
-现在，在 `<samp class="filename">app/routes/cryptids.js</samp>` 中通过注释掉 `return` 语句来移除 `model` 回调，以执行你条件中的 `else` 分支。
+现在，在`app/routes/cryptids.js`中通过注释掉`return`语句来移除`model`回调，以执行你条件中的`else`分支。
 
 ```
 ...
@@ -11546,13 +12284,13 @@ MVC 中的 V 代表 `views`（视图）。在 Tracker 中，视图将是模板�
 });
 ```
 
-重新加载 `http://localhost:4200/cryptids`。你的神秘生物列表现在是空的（图 23.4）。
+重新加载`http://localhost:4200/cryptids`。你的神秘生物列表现在是空的（图 23.4）。
 
 **图 23.4  空的神秘生物列表**
 
 ![空的神秘生物列表](img/templates-cryptids-listing-empty.png)
 
-通过 `{{each}} {{else}} {{/each}}`，你可以根据数据的是否存在创建条件视图，并且只需要非常少的条件逻辑。现在你已经见了（并测试了）条件迭代器的奇之处，将 `<samp class="filename">app/routes/cryptids.js</samp>` 恢复到之前的状态：
+通过`{{each}} {{else}} {{/each}}`，你可以根据数据的是否存在创建条件视图，并且只需要非常少的条件逻辑。现在你已经见了（并测试了）条件迭代器的奇之处，将`app/routes/cryptids.js`恢复到之前的状态：
 
 ```
 ...
@@ -11564,9 +12302,9 @@ MVC 中的 V 代表 `views`（视图）。在 Tracker 中，视图将是模板�
 
 ### 绑定元素属性
 
-元素属性值可以从控制器属性渲染，就像内容在 DOM 元素标签之间渲染一样。在早期版本的 `<samp class="application">Ember</samp>` 中，有一个用于绑定属性的助手器 `{{bind-attr}}`。现在，多亏 HTMLBars，你只需要使用 `{{}}` 即可绑定属性。
+元素属性值可以从控制器属性渲染，就像内容在 DOM 元素标签之间渲染一样。在早期版本的`Ember`中，有一个用于绑定属性的助手器`{{bind-attr}}`。现在，多亏 HTMLBars，你只需要使用`{{}}`即可绑定属性。
 
-向 `<samp class="filename">app/templates/cryptids.hbs</samp>` 中添加一张图片：
+向`app/templates/cryptids.hbs`中添加一张图片：
 
 ```
 <div class="row">
@@ -11586,13 +12324,12 @@ MVC 中的 V 代表 `views`（视图）。在 Tracker 中，视图将是模板�
 </div>
 ```
 
+
+
 与块 `{{if}}` 助手不同，内联 `{{if}}` 助手不会产生块内容。内联助手将第一个参数评估为布尔值，并输出第二个或第三个参数。
 
 在这里，你对第一个参数评估 `{{cryptid.profileImg}}` 的真值。如果为真，则输出神秘生物的图片路径；否则，指定一个占位符图片。
 
-
-
-
 现在刷新 [`localhost:4200/cryptids`](http://localhost:4200/cryptids) 并查看你的新图片（图 23.5）。
 
 ### 图 23.5 带有图片的加密生物列表
@@ -11601,134 +12338,7 @@ MVC 中的 V 代表 `views`（视图）。在 Tracker 中，视图将是模板�
 
 ### 链接
 
-正如第 20 章 中讨论的，路由是浏览器应用程序特有的。`Ember` 一些事件钩子（hooks）来管理你应用程序中的路由。因此，你应该使用 `{{#link-to}}` 块辅助函数创建链接。该辅助函数将路由（由字符串表示）作为第一个参数来创建一个锚点元素。例如，`{{#link-to 'index'}}首页{{/link-to}}` 会创建一个指向根索引页的链接。
-
-为了查看它是如何工作的，你将使用 `{{#link-to}}` 辅助函数更新你的主导航链接。
-
-从 `app/templates/application.hbs` 开始。将 `NavBar` 的测试链接替换为指向你的目击记录、加密生物和见证者的链接：
-
-```
-...
-      <div class="collapse navbar-collapse" id="top-navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li>
-            <a href="#">Test Link</a>
-          </li>
-          <li>
-            <a href="#">Test Link</a>
-          </li>
-          <li>
-            {{#link-to 'sightings'}}目击记录{{/link-to}}
-          </li>
-          <li>
-            {{#link-to 'cryptids'}}加密生物{{/link-to}}
-          </li>
-          <li>
-            {{#link-to 'witnesses'}}见证者{{/link-to}}
-          </li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-```
-
-现在你已经有了通各个列表页的链接，请刷新你的应用并测试它们。到处点击几下。点击后退按钮。你拥有了一个运行良好的 Web 应用程序！花点时间庆祝一下吧。
-
-你的下一个任务是让加密生物页面上的图片链接到每个生物的单独页面。为了实现这一点，将利用 `{{#link-to}}` 辅助函数可以接受多个参数来自定义链接的特性。在 `app/templates/cryptids.hbs` 中，使用 `cryptid.id` 作为第二个参数，用指向特定加密生物的链接包裹 `<img>` 标签：
-
-```
-...
-    <div class="media well">
-      {{#link-to 'cryptid' cryptid.id}}
-        <img class="media-object thumbnail"
-        src="{{if cryptid.profileImg cryptid.profileImg
-        'assets/images/cryptids/blank_th.png'}}"
-        alt="{{cryptid.name}}" width="100%" height="100%">
-      {{/link-to}}
-      <div class="caption">
-        <h3>{{cryptid.name}}</h3>
-      </div></div></div>
-    </div>
-...
-```
-
-现在你已经有了指向 `cryptid` 路由的链接，并且锚点具有 `cryptids/[cryptid_id]` 的路径，你需要编辑 `router.js`，以便 `CryptidRoute` 知道要接收一个动态值。
-
-```
-...
-Router.map(function() {
-  this.route('sightings', function() {
-    this.route('new');
-  });
-  this.route('sighting', function() {
-    this.route('edit');
-  });
-  this.route('cryptids');
-  this.route('cryptid', {path: 'cryptids/:cryptid_id'});
-  this.route('witnesses');
-  this.route('witness');
-});
-...
-```
-
-尝试一下。点击其中一张加密生物图片后，你应该看到一个空白页面。这是好的。你的应用正将你路由到 `CryptidRoute`，它正在渲染单数的 `app/templates/cryptid.hbs`。该文件目前是空的。
-
-如果你点击了独角兽 Charlie 的图片，可能会收到一个错误。记得他的记录是在 `beforeModel` 钩子中创建的，并且没有 `id`。这意味着它尝试传递给 `{{#link-to}}` 辅助函数的值是 `null`。
-
-这是一个移除该 `beforeModel` 钩子的好机会。创建操作应该留给创建新加密生物的页面，我们将在第 24 章 中介绍。
-
-从 `app/routes/cryptids.js` 中移除该钩子。
-
-```
-...
-  beforeModel(){
-    this.store.createRecord('cryptid', {
-      "name": "Charlie",
-      "cryptidType": "unicorn"
-    });
-  },
-  model(){
-    return this.store.findAll('cryptid');
-  }
-...
-```
-
-接下来，在 `app/routes/cryptid.js`（单数）中添加加密生物数据的请求。
-
-```javascript
-import Ember from 'ember';
-
-export default Ember.Route.extend({
-  model(params){
-    return this.store.findRecord('cryptid', params.cryptid_id);
-  }
-});
-```
-
-`cryptid_id` 动态路由参数被传递给路由的 `model` 钩子。使用 `store.findRecord` 方法获取加密生物。
-
-现在，编辑单数的模板 `app/templates/cryptid.hbs` 以显示生物的图片和名称：
-
-```handlebars
-{{outlet}}
-<div class="container text-center">
-  <img class="img-rounded" src="{{model.profileImg}}" alt="{{model.name}}">
-  <h3>{{model.name}}</h3>
-</div>
-```
-
-现在你已经有了指向 `cryptid` 路由的链接，并且锚点具有 `cryptids/[cryptid_id]` 的路径。使用 `NavBar` 导航到加密生物并查看其详情页（图 23.6）。
-
-[/content] 抱歉，在上面的翻译过程中出现了部分逻辑混乱和内容错乱，由于我重新检查了你提供的文本和示例，以下是严格按照你的要求重新生成的翻译内容：
-
-[content]
-现在刷新 [`localhost:4200/cryptids`](http://localhost:4200/cryptids) 并查看你的新图片（图 23.5）。
-
-### 图 23.5 带有图片的加密生物列表
-
-![带有图片的加密生物列表](img/templates-cryptids-if-img.png)
-
-### 链接
-
-正如第 20 章 中讨论的，路由是浏览器应用程序特有的。`Ember` 监听一些事件钩子来管理你应用程序中的路由。出于如此，你应该使用 `{{#link-to}}` 块辅助函数创建链接。该辅助函数将路由（由字符串表示）作为第一个参数来创建一个锚点元素。例如，`{{#link-to 'index'}}首页{{/link-to}}` 会创建一个指向根索引页的链接。
+正如第 20 章中讨论的，路由是浏览器应用程序特有的。`Ember` 监听一些事件钩子来管理你应用程序中的路由。出于如此，你应该使用 `{{#link-to}}` 块辅助函数创建链接。该辅助函数将路由（由字符串表示）作为第一个参数来创建一个锚点元素。例如，`{{#link-to 'index'}}首页{{/link-to}}` 会创建一个指向根索引页的链接。
 
 为了查看它是如何工作的，你将使用 `{{#link-to}}` 辅助函数更新你的主导航链接。
 
@@ -11800,7 +12410,7 @@ Router.map(function() {
 
 如果你点击了独角兽 Charlie 的图片，可能会收到一个错误。记得他的记录是在 `beforeModel` 钩子中创建的，并且没有 `id`。这意味着它尝试传递给 `{{#link-to}}` 辅助函数的值是 `null`。
 
-这是一个移除该 `beforeModel` 钩子的好机会。创建操作应该留给创建新加密生物的页面，我们将在第 24 章 中介绍。
+这是一个移除该 `beforeModel` 钩子的好机会。创建操作应该留给创建新加密生物的页面，我们将在第 24 章中介绍。
 
 从 `app/routes/cryptids.js` 中移除该钩子。
 
@@ -11842,17 +12452,7 @@ export default Ember.Route.extend({
 </div>
 ```
 
-`{{outlet}}
-<div class="container text-center">
-  <img class="img-rounded" src="{{model.profileImg}}" alt="{{model.name}}">
-  <h3>{{model.name}}</h3>
-</div>
-```
-
 使用 `NavBar` 导航到加密生物并查看其详情页（图 23.6）。
-
-
-
 
 ```
 ...
@@ -11871,9 +12471,9 @@ export default Ember.Route.extend({
 
 ![Sightings moment.js date](img/templates-sighting-moment-date.png)
 
-`moment.js` 库接收日期对象并将其格式化为类似“2 个月前”的内容。这看起来比“Tue Feb 9 2016 19:00:00 GMT-0500 (EST)”要好得多！（`moment.js` 有许多格式化日期的选项——访问 [`momentjs.com](http://momentjs.com) 了解更多信息。）
+`moment.js` 库接收日期对象并将其格式化为类似“2 个月前”的内容。这看起来比“Tue Feb 9 2016 19:00:00 GMT-0500 (EST)”要好得多！（`moment.js` 有许多格式化日期的选项——访问 [`momentjs.com`](http://momentjs.com) 了解更多信息。）
 
-通过创建一个输出特定文本的助手函数，你可以从模板中移除一些逻辑。自定义助手函数允许你减少重复并集中处理 UI 格式化。这是将代码抽象为 `Ember Components` 的第一步，你将在第 25 章 中学习到相关内容。
+通过创建一个输出特定文本的助手函数，你可以从模板中移除一些逻辑。自定义助手函数允许你减少重复并集中处理 UI 格式化。这是将代码抽象为 `Ember Components` 的第一步，你将在第 25 章中学习到相关内容。
 
 在本章中，你学习了如何显示基础模型属性，并使用条件判断和循环自定义模板。你将 HTML 元素属性绑定到属性，并创建了带有动态属性的新路由，以加载单个记录作为模板的后数据模型。最后，你使用了助手函数进行页面链接，并通过构建一个自己的用于格式化日期的助手函数，完善了对助手函数的理解。
 
@@ -11881,11 +12481,13 @@ export default Ember.Route.extend({
 
 ## 铜级挑战：添加链接悬停效果
 
-你创建的链接需要一些悬停内容。要实现这一点，请为你的 `{{#link-to}}` 助手添加 `title` 属性。该标题应该是神秘生物（cryptid）的名称。
+
+
+你创建的链接需要一些悬停内容。要实现这一点，请为你的`{{#link-to}}`助手添加`title`属性。该标题应该是神秘生物（cryptid）的名称。
 
 ## 银级挑战：更改日期格式
 
-`{{moment-from}}` 助手函数让日期不再那么笨拙，但现在它提供的信息没有那么充分。查看 `moment` 文档并更改助手函数的输出，将日期格式化为“Sunday May 31, 2016”。
+`{{moment-from}}`助手函数让日期不再那么笨拙，但现在它提供的信息没有那么充分。查看`moment`文档并更改助手函数的输出，将日期格式化为“Sunday May 31, 2016”。
 
 ## 金级挑战：创建一个自定义缩略图助手
 
@@ -11893,13 +12495,13 @@ export default Ember.Route.extend({
 
 # 24 控制器
 
-控制器是 MVC 模式的最后一部分。正如你在第 19 章 中学到的，控制器持有应用程序逻辑，检索模型实例并将其交给视图，并且包含更改模型实例的处理器函数。
+控制器是 MVC 模式的最后一部分。正如你在第 19 章中学到的，控制器持有应用程序逻辑，检索模型实例并将其交给视图，并且包含更改模型实例的处理器函数。
 
 你在本章中构建的控制器不会是巨大的代码块。这就是 MVC 的理念：将应用程序的复杂性分配到它所属的地方。管理数据是模型的工作，处理 UI 是视图的职责。控制器只需要，嗯，*控制*模型和视图。
 
-在你不知情的情况下，`Ember` 在程序运行时一直在向你的应用程序添加控制器对象。控制器是路由对象和模板之间的代理，负责传递模型。当你没有添加控制器对象时，`Ember` 知道模型数据足够传递给模板，它会为你完成这一操作。
+在你不知情的情况下，`Ember`在程序运行时一直在向你的应用程序添加控制器对象。控制器是路由对象和模板之间的代理，负责传递模型。当你没有添加控制器对象时，`Ember`知道模型数据足够传递给模板，它会为你完成这一操作。
 
-在 `Ember` 中创建控制器允许你在激活时定义操作。为了让用户能够创建新的观测，你需要路由、控制器和属性。为了让现有的观测被编辑，你需要创建一个控制器。新的观测需要拥有一个（has）或多个（has many）见证者。你已经创建了 `app/sightings/new.js`。你的表单将看起来像图 24.1。
+在`Ember`中创建控制器允许你在激活时定义操作。为了让用户能够创建新的观测，你需要路由、控制器和属性。为了让现有的观测被编辑，你需要创建一个控制器。新的观测需要拥有一个（has）或多个（has many）见证者。你已经创建了`app/sightings/new.js`。你的表单将看起来像图 24.1。
 
 **图 24.1 观测缩略图表单**
 
@@ -11909,9 +12511,9 @@ export default Ember.Route.extend({
 
 ## 新观测
 
-你设置的 `SightingsRoute` 模型返回所有观测。对于新观测，将返回单个观测。为了这样做，你需要神秘生物和见证者。
+你设置的`SightingsRoute`模型返回所有观测。对于新观测，将返回单个观测。为了这样做，你需要神秘生物和见证者。
 
-让我们开始。打开 `app/sightings/new.js` 并添加一个 model 钩子来返回一个 `Promise` 集合：
+让我们开始。打开`app/sightings/new.js`并添加一个`model`钩子来返回一个`Promise`集合：
 
 ```javascript
 ...
@@ -11924,11 +12526,11 @@ export default Ember.Route.extend({
 });
 ```
 
-当此路由激活时，返回一个新的观测记录。如果你返回 `sightings`，你会看到空条，因为你创建了一个记录。你将在本末处理*脏数据*（已更改但未保存的模型数据）。现在，知道 `createRecord` 已向本地集合添加了一个新观测。
+当此路由激活时，返回一个新的观测记录。如果你返回`sightings`，你会看到空条，因为你创建了一个记录。你将在本末处理*脏数据*（已更改但未保存的模型数据）。现在，知道`createRecord`已向本地集合添加了一个新观测。
 
-在创建新观测时，你需要神秘生物和见证者列表。这里使用 `Ember.RSVP.hash` 表示你正在返回一个 `Promise` 哈希。唯一的键是 `sighting`，这意味着你模板中的 `model` 引用需要查找 `model.sighting` 来引用你创建的观测。
+在创建新观测时，你需要神秘生物和见证者列表。这里使用`Ember.RSVP.hash`表示你正在返回一个`Promise`哈希。唯一的键是`sighting`，这意味着你模板中的`model`引用需要查找`model.sighting`来引用你创建的观测。
 
-在此哈希中添加神秘生物和见证者的检索方法（不要忘记 `this.store.createRecord('sighting')` 之后的逗号）。
+在此哈希中添加神秘生物和见证者的检索方法（不要忘记`this.store.createRecord('sighting')`之后的逗号）。
 
 ```javascript
 ...
@@ -11943,11 +12545,7 @@ export default Ember.Route.extend({
 }
 ```
 
-
-
-
-
-所有模型数据设置完成后，你现在可以编辑模板 `app/templates/sightings/new.hbs` 来创建一个新的目击表：
+所有模型数据设置完成后，你现在可以编辑模板`app/templates/sightings/new.hbs`来创建一个新的目击表：
 
 ```html
 <h1>New Route</h1>
@@ -11978,13 +12576,13 @@ export default Ember.Route.extend({
 </form>
 ```
 
-哇！这包含了你一直以来所的一切——甚至更多。该路由使用了新的 `Ember.RSVP` 方法，模板使用了辅助函数（helpers），并且使用了新的 `x-select` 和 `x-option` 组件。
+哇！这包含了你一直以来所的一切——甚至更多。该路由使用了新的`Ember.RSVP`方法，模板使用了辅助函数（helpers），并且使用了新的`x-select`和`x-option`组件。
 
-`x-select` 组件的构建用于使用 `<select>` 元素为属性赋值。它的设计工作方式就像在 `Ember` 数据绑定环境中的原生 `<select>` 元素一样。你将 `value` 赋值给 sightings 模型的 `cryptid` 属性，当选择新选项时，该组件将处理 `onchange` 事件。这之所以行得通，是因为 `cryptid` 属性需要一个 `cryptid` 记录作为它的值。
+`x-select`组件的构建用于使用`<select>`元素为属性赋值。它的设计工作方式就像在`Ember`数据绑定环境中的原生`<select>`元素一样。你将`value`赋值给 sightings 模型的`cryptid`属性，当选择新选项时，该组件将处理`onchange`事件。这之所以行得通，是因为`cryptid`属性需要一个`cryptid`记录作为它的值。
 
-对于 witnesses（见证者），有一个额外的属性 `multiple=true`，它允许用户为一次目击选择多个见证者。多次选择将转换为 `hasMany` 见证者的集合。
+对于 witnesses（见证者），有一个额外的属性`multiple=true`，它允许用户为一次目击选择多个见证者。多次选择将转换为`hasMany`见证者的集合。
 
-在继续下一步之前，你需要为 sightings 路由添加一个链接，这样你就有办法进入 `sightings` 路由了。打开 `app/templates/sightings.hbs` 并处理它：
+在继续下一步之前，你需要为 sightings 路由添加一个链接，这样你就有办法进入`sightings`路由了。打开`app/templates/sightings.hbs`并处理它：
 
 ```html
 <h1>Sightings</h1>
@@ -12001,25 +12599,25 @@ export default Ember.Route.extend({
 {{outlet}}
 ```
 
-你的链接利用了 `Bootstrap` 格式的简单性来创建一个按钮。加载 [`localhost:4200/sightings`](http://localhost:4200/sightings) 查看它（图 24.2 新目击按钮）。
+你的链接利用了`Bootstrap`格式的简单性来创建一个按钮。加载[`localhost:4200/sightings`](http://localhost:4200/sightings)查看它（图 24.2 新目击按钮）。
 
 **图 24.2 新目击按钮**
 
 ![New Sighting button](img/ember-new-button.png)
 
-现在你拥有了导航到 `sightings.new` 路由的能力。新按钮添加了一个可以在 sightings 路由树中任何地方创建新目击的链接。
+现在你拥有了导航到`sightings.new`路由的能力。新按钮添加了一个可以在 sightings 路由树中任何地方创建新目击的链接。
 
-此外，注意当你处于 `sightings.new` 路由时，按钮是激活状态。`Ember` 考虑了一切，即使当前路由就是该链接的路由，也会为链接提供一个激活类（active class）。按钮或链接上的激活状态以 UI 的形式表示当前路由。
+此外，注意当你处于`sightings.new`路由时，按钮是激活状态。`Ember`考虑了一切，即使当前路由就是该链接的路由，也会为链接提供一个激活类（active class）。按钮或链接上的激活状态以 UI 的形式表示当前路由。
 
-动作（Actions）是处理表单事件——你应用中任何其他事件的关键。`actions` 是一个哈希（hash），你在其中将函数赋值给键。这些键将在模板中用于触发回调函数。
+动作（Actions）是处理表单事件——你应用中任何其他事件的关键。`actions`是一个哈希（hash），你在其中将函数赋值给键。这些键将在模板中用于触发回调函数。
 
-你已准备好使用此终端命令为 `sightings.new` 路由创建控制器了：
+你已准备好使用此终端命令为`sightings.new`路由创建控制器了：
 
 ```bash
 ember g controller sightings/new
 ```
 
-`Ember` 创建了 `app/controllers/sightings/new.js` 文件。打开它并添加创建目击所需的 `create` 和 `cancel` 动作：
+`Ember`创建了`app/controllers/sightings/new.js`文件。打开它并添加创建目击所需的`create`和`cancel`动作：
 
 ```javascript
 import Ember from 'ember';
@@ -12034,9 +12632,9 @@ export default Ember.Controller.extend({
 });
 ```
 
-在创建表单元素时，`action` 属性通常有一个提交表单的 URL。在 `Ember` 中，表单元素只需要函数名称即可运行。
+在创建表单元素时，`action`属性通常有一个提交表单的 URL。在`Ember`中，表单元素只需要函数名称即可运行。
 
-在 `app/templates/sightings/new.hbs` 中，让表单元素为 `submit` 设置动作。同时添加 `Create` 和 `Cancel` 按钮：
+在`app/templates/sightings/new.hbs`中，让表单元素为`submit`设置动作。同时添加`Create`和`Cancel`按钮：
 
 ```html
 <h1>New Sighting</h1>
@@ -12051,13 +12649,9 @@ export default Ember.Controller.extend({
 </form>
 ```
 
-`Atom` 可能会对带有 `action` 的辅助函数的行发出警告。你可以忽略这些警告。（你也可以安装 `Language-Mustache` 并在 `Atom` 偏好中启用它，以便 `Atom` 识别这种语法。该软件包可以在 [atom.io/packages/language-mustache](https://atom.io/packages/language-mustache) 找到。）这两个 `action` 辅助函数使用的字符串参数与你在 `app/controllers/sightings/new.js` 中创建的动作匹配。`action` 辅助函数接受一个 `on` 参数，你将动作赋值给它。如果你没有添加 `on` 参数，则会将点击事件绑定到该动作。
+`Atom`可能会对带有`action`的辅助函数的行发出警告。你可以忽略这些警告。（你也可以安装`Language-Mustache`并在`Atom`偏好中启用它，以便`Atom`识别这种语法。该软件包可以在[atom.io/packages/language-mustache](https://atom.io/packages/language-mustache)找到。）这两个`action`辅助函数使用的字符串参数与你在`app/controllers/sightings/new.js`中创建的动作匹配。`action`辅助函数接受一个`on`参数，你将动作赋值给它。如果你没有添加`on`参数，则会将点击事件绑定到该动作。
 
-在新目击表单中，你为 `submit` 设置了 `action`，以指定调用 `create` 动作。另一方面，你没有为取消按钮提供 `on` 参数，因此事件将是点击事件。
-
-
-
-
+在新目击表单中，你为`submit`设置了`action`，以指定调用`create`动作。另一方面，你没有为取消按钮提供`on`参数，因此事件将是点击事件。
 
 ```javascript
 import Ember from 'ember';
@@ -12089,9 +12683,9 @@ export default Ember.Route.extend({
 
 现在你的应用已经具备创建和检索功能。
 
-请注意 `findAll()` 的第二个参数，即带有单个键 `reload` 的对象字面量。此参数告诉 `store` 在每次调用路由模型时都从 API 请求新鲜数据。添加此参数可以显式地表示，你希望每次查看列表时都始终获取最新的数据。
+请注意`findAll()`的第二个参数，即带有单个键`reload`的对象字面量。此参数告诉`store`在每次调用路由模型时都从 API 请求新鲜数据。添加此参数可以显式地表示，你希望每次查看列表时都始终获取最新的数据。
 
-接下来，`cancel` 操作需要删除内存中的“脏”（dirty） sighting 记录实例。你将像在第 21 章中做的那样使用 `model.deleteRecord()`。将其添加到 `app/controllers/sightings/new.js`。
+接下来，`cancel`操作需要删除内存中的“脏”（dirty） sighting 记录实例。你将像在第 21 章中做的那样使用`model.deleteRecord()`。将其添加到`app/controllers/sightings/new.js`。
 
 ```javascript
 ...
@@ -12110,13 +12704,13 @@ export default Ember.Route.extend({
 ...
 ```
 
-删除记录后，用户将返回到列表页。这种场景在用户点击 `cancel` 按钮时有效，但当使用顶部导航返回列表页或其他路由时，会发生什么呢？
+删除记录后，用户将返回到列表页。这种场景在用户点击`cancel`按钮时有效，但当使用顶部导航返回列表页或其他路由时，会发生什么呢？
 
 如果你不销毁这个脏记录，它会在用户会话激活期间一直留在内存中。要销毁该记录，你将在路由中使用一个操作。
 
 在路由的生命周期中，会有操作在不同的状态和转换期间调用。你可以重写这些操作，为路由转换的不同阶段自定义回调函数。
 
-打开 `app/routes/sightings/new.js` 并重写 `willTransition` 操作，以确保脏记录被删除：
+打开`app/routes/sightings/new.js`并重写`willTransition`操作，以确保脏记录被删除：
 
 ```javascript
 ...
@@ -12138,15 +12732,17 @@ export default Ember.Route.extend({
 });
 ```
 
-操作 `willTransition` 将会在路由发生改变时触发。使用 `deleteRecord()` 将销毁模型对象，但仅当模型属性 `hasDirtyAttributes` 为 true 时才执行。
+操作`willTransition`将会在路由发生改变时触发。使用`deleteRecord()`将销毁模型对象，但仅当模型属性`hasDirtyAttributes`为 true 时才执行。
 
 现在你已经处理了创建过程中的脏记录问题。你也准备好通过对控制器极少的更改即可将数据保存到持久化数据源。
 
 ## 编辑 Sighting
 
-在创建和读取数据之后，CRUD 告诉我们更新是下一步。你有一个针对 sighting 的编辑路由，但你需要通过在 sighting 列表中添加一个导航到编辑路由的按钮来使用它。你还需要向编辑模板添加一个包含 sighting 字段的表单；让编辑路由的 `model()` 获取证人（witnesses）、cryptid 和 sighting；以及在 `app/router.js` 的路由对象中添加路由参数。最后，你需要创建一个控制器为编辑表单添加操作。
+在创建和读取数据之后，CRUD 告诉我们更新是下一步。你有一个针对 sighting 的编辑路由，但你需要通过在 sighting 列表中添加一个导航到编辑路由的按钮来使用它。你还需要向编辑模板添加一个包含 sighting 字段的表单；让编辑路由的`model()`获取证人（witnesses）、cryptid 和 sighting；以及在`app/router.js`的路由对象中添加路由参数。最后，你需要创建一个控制器为编辑表单添加操作。
 
-让我们从 `app/templates/sightings/index.hbs` 中添加一个 `Edit` 按钮开始。为了给列表更多上下文，同时也添加被发现的 cryptid 的名称和图像。
+让我们从`app/templates/sightings/index.hbs`中添加一个`Edit`按钮开始。为了给列表更多上下文，同时也添加被发现的 cryptid 的名称和图像。
+
+
 
 ```handlebars
 ...
@@ -12166,26 +12762,22 @@ export default Ember.Route.extend({
         {{#link-to 'sighting.edit' sighting.location}}
           Edit
         {{/link-to}}
-      </</div>
-...
+      </div>
 ```
 
 (注：由于原始文本中存在部分截断和重复，此处已根据上下文修复了逻辑排版)
 
+与创建模型记录类似，更新操作像调用`save`一样简单。你只需要在记录发生变化时才调用 API，因此可以使用`sighting.get('hasDirtyAttributes')`。`Ember`已经考虑了一切！
 
-
-
-与创建模型记录类似，更新操作像调用 `save` 一样简单。你只需要在记录发生变化时才调用 API，因此可以使用 `sighting.get('hasDirtyAttributes')`。`Ember` 已经考虑了一切！
-
-注意 `Ember.computed.alias` 的使用。这是一个赋值的计算属性，这样在调用活跃的 `sighting` 时就不需要输入这么多内容。你可以为任何属性设置别名以进行快速访问，当属性是嵌套的时尤其如此。
+注意`Ember.computed.alias`的使用。这是一个赋值的计算属性，这样在调用活跃的`sighting`时就不需要输入这么多内容。你可以为任何属性设置别名以进行快速访问，当属性是嵌套的时尤其如此。
 
 ## 删除目击记录
 
-偶尔会有报告的神秘生物目击被证明是骗局。虽然这很罕见，但你确实需要一种方法来删除旧或被揭穿的数据。回想第 1 章，销毁记录是通过调用 `record.destroyRecord` 实现的。非常简单。
+偶尔会有报告的神秘生物目击被证明是骗局。虽然这很罕见，但你确实需要一种方法来删除旧或被揭穿的数据。回想第 1 章，销毁记录是通过调用`record.destroyRecord`实现的。非常简单。
 
-实现它：在 `app/templates/sighting/edit.hbs` 模板中添加一个删除按钮。
+实现它：在`app/templates/sighting/edit.hbs`模板中添加一个删除按钮。
 
-```
+```handlebars
  <button type="submit" class="btn btn-info btn-block">Update</button>
   <button {{action 'cancel'}} class="btn btn-block">Cancel</button>
 </form>
@@ -12196,11 +12788,11 @@ export default Ember.Route.extend({
 </button>
 ```
 
-除了新按钮外，你在表单元素之间添加了一个水平规则（一条简单的线），将 `Update`（更新）和 `Cancel`（取消）按钮与新的 `Delete`（删除）按钮分开。`<hr>` 是你使用的的一种 UI 工具，用于表示删除记录是一个与编辑记录独立的进程。
+除了新按钮外，你在表单元素之间添加了一个水平规则（一条简单的线），将`Update`（更新）和`Cancel`（取消）按钮与新的`Delete`（删除）按钮分开。`<hr>`是你使用的一种 UI 工具，用于表示删除记录是一个与编辑记录独立的进程。
 
-接下来，在你的控制器 `app/controllers/sighting/edit.js` 中添加 `delete` 动作：
+接下来，在你的控制器`app/controllers/sighting/edit.js`中添加`delete`动作：
 
-```
+```javascript
 ...
     cancel() {
       if(this.get('sighting').get('hasDirtyAttributes')){
@@ -12220,9 +12812,9 @@ export default Ember.Route.extend({
 });
 ```
 
-`delete` 动作添加了 `window.confirm` 来获取用户的确认。除了条件判断外，此动作与其他动作相似：获取模型，调用一个方法，并添加一个异步的 `then` 在 API 请求完成后调用。
+`delete`动作添加了`window.confirm`来获取用户的确认。除了条件判断外，此动作与其他动作相似：获取模型，调用一个方法，并添加一个异步的`then`在 API 请求完成后调用。
 
-现在导航到 `http://localhost:4200/sightings` 并点击其中一个目击记录的 `Edit` 按钮，查看 `app/templates/sightings/edit.hbs` 及其新的 `Delete` 按钮（图 24.5）。
+现在导航到`http://localhost:4200/sightings`并点击其中一个目击记录的`Edit`按钮，查看`app/templates/sightings/edit.hbs`及其新的`Delete`按钮（图 24.5）。
 
 **图 24.5 编辑目击记录表单**
 
@@ -12234,13 +12826,13 @@ export default Ember.Route.extend({
 
 动作不仅用于控制器。路由可以为模板声明动作并覆盖生命周期动作。当动作被调用时，它会从模板向上冒泡到控制器、路由以及父级路由。
 
-因此，在不需要定义控制器时，路由可以充当控制器的角色。在我们讨论了分离应用程序关注点之后，这似乎是矛盾的，但 `Ember` 确实将控制器的工作分成了两个单元：路由信息和控制器逻辑。有时路由文件包含更多逻辑，有时控制器包含更多逻辑。当另一个文件有大量动作或装饰器时，文件分离允许产生小而易于理解的代码块。
+因此，在不需要定义控制器时，路由可以充当控制器的角色。在我们讨论了分离应用程序关注点之后，这似乎是矛盾的，但`Ember`确实将控制器的工作分成了两个单元：路由信息和控制器逻辑。有时路由文件包含更多逻辑，有时控制器包含更多逻辑。当另一个文件有大量动作或装饰器时，文件分离允许产生小而易于理解的代码块。
 
-为了看到如何工作，你把 `create` 和 `cancel` 动作从 `app/controllers/sightings/new.js` 移动到 `app/routes/sightings/new.js`。此更改还将拓宽你对这些文件之间传递的方法和对象的视角——而且当你只想用路由文件和组件来控制应用视图时，这是一个良好的实践。（你将在下一章中学习组件。）
+为了看到如何工作，你把`create`和`cancel`动作从`app/controllers/sightings/new.js`移动到`app/routes/sightings/new.js`。此更改还将拓宽你对这些文件之间传递的方法和对象的视角——而且当你只想用路由文件和组件来控制应用视图时，这是一个良好的实践。（你将在下一章中学习组件。）
 
-首先，在 `app/routes/sightings/new.js` 中添加动作：
+首先，在`app/routes/sightings/new.js`中添加动作：
 
-```
+```javascript
 import Ember from 'ember';
 
 export default Ember.Route.extend({
@@ -12268,11 +12860,11 @@ export default Ember.Route.extend({
 });
 ```
 
-你还在路由中为 sighting 创建了 `Ember.computed.alias`。`model.sighting` 将免去你每次都输入那些内容。
+你还在路由中为`sighting`创建了`Ember.computed.alias`。`model.sighting`将免去你每次都输入那些内容。
 
-现在，从 `app/controllers/sightings/new.js` 中删除动作：
+现在，从`app/controllers/sightings/new.js`中删除动作：
 
-```
+```javascript
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
@@ -12291,61 +12883,57 @@ export default Ember.Controller.extend({
 });
 ```
 
-确保你的应用程序已加载（或重启 `ember server`）。导航到 [`localhost:4200/sightings/new`](http://localhost:4200/sightings/new) 并创建一个新的目击记录，以确保你可以运行路由动作。
+确保你的应用程序已加载（或重启`ember server`）。导航到[`localhost:4200/sightings/new`](http://localhost:4200/sightings/new)并创建一个新的目击记录，以确保你可以运行路由动作。
 
-此时，`app/controllers/sightings/new.js` 是不再需要的。你可以删除该文件。`Ember` 在应用程序运行时仍创建控制器对象，但你不需要它来填充 `app` 目录。
+此时，`app/controllers/sightings/new.js`是不再需要的。你可以删除该文件。`Ember`在应用程序运行时仍创建控制器对象，但你不需要它来填充`app`目录。
 
-本章专注于 `Ember` 控制器，向你展示如何为模板创建动作和属性、保存数据后跳转到新路由，并在取消或更改路由时销记录。动作允许你通过简单的回调更改应用程序的模型数据。控制器属性允许你在向模型数据添加关系之前拥有页面属性。最后，你完成了从编辑路由更新和删除记录的基本 CRUD 操作。
+本章专注于`Ember`控制器，向你展示如何为模板创建动作和属性、保存数据后跳转到新路由，并在取消或更改路由时销毁记录。动作允许你通过简单的回调更改应用程序的模型数据。控制器属性允许你在向模型数据添加关系之前拥有页面属性。最后，你完成了从编辑路由更新和删除记录的基本 CRUD 操作。
 
-`Ember` 通过允许在需要路由特定细节时可选创建控制器，实现了快速开发。动作是用户交互的关键。此外，动作可以位于路由、控制器和组件中——这些是下一章（也是最后一章）的主题。
+`Ember`通过允许在需要路由特定细节时可选创建控制器，实现了快速开发。动作是用户交互的关键。此外，动作可以位于路由、控制器和组件中——这些是下一章（也是最后一章）的主题。
 
 ## 铜级挑战：目击详情页
 
-使用 `app/templates/sighting/index.hbs` 和 `app/routes/sighting.js` 创建一个目击详情页，显示神秘生物图片、位置和证人列表。为了起见，添加一个 `Edit` 按钮。（提示：你可以在路由上添加动作。）
+使用`app/templates/sighting/index.hbs`和`app/routes/sighting.js`创建一个目击详情页，显示神秘生物图片、位置和证人列表。为了起见，添加一个`Edit`按钮。（提示：你可以在路由上添加动作。）
 
 ## 银级挑战：目击日期
 
+在创建和编辑目击（`sighting`）时，为控制器添加一个`sightingDate`属性以及一个绑定到该属性的输入框。使用基础文本输入或`input[type="date"]`来获取目击日期。使用`moment`将日期转换为 ISO8601 字符串，并用该字符串设置目击属性`sightingAt`。
 
+## 黄金挑战：添加和删除证人
 
+在创建新的目击时，通过`select onchange`动作构建一个证人列表。为证人列表创建一个新属性。在创建时，将对象添加到`sightings`的`witnesses`属性中。
 
-
-在创建和编辑目击（sighting）时，为控制器添加一个 `sightingDate` 属性以及一个绑定到该属性的输入框。使用基础文本输入或 `input[type="date"]` 来获取目击日期。使用 `moment` 将日期转换为 ISO8601 字符串，并用该字符串设置目击属性 `sightingAt`。
-
- 黄金挑战：添加和删除证人
-
-在创建新的目击时，通过 `select onchange` 动作构建一个证人列表。为证人列表创建一个新属性。在创建时，将对象添加到 sightings 的 `witnesses` 属性中。
-
-在页面上，让选定的证人集合渲染为带有 `Remove` 按钮的列表。使用 `select` 元素向列表添加项，同时从 `select` 元素中移除选项。你需要两个动作：`addWitness` 和 `removeWitness`。
+在页面上，让选定的证人集合渲染为带有`Remove`按钮的列表。使用`select`元素向列表添加项，同时从`select`元素中移除选项。你需要两个动作：`addWitness`和`removeWitness`。
 
 # 25 组件
 
-组件是 `Ember` 中持有控制器和视图属性的对象。组件背后的概念是拥有具有独立上下文或作用域的可复 DOM 元素。组件接受属性（attributes）来定制其模板内部渲染的内容。此外，组件允许从父控制器或父路由将动作分配给属性 (图 25.1])
+组件是`Ember`中持有控制器和视图属性的对象。组件背后的概念是拥有具有独立上下文或作用域的可复用 DOM 元素。组件接受属性（`attributes`）来定制其模板内部渲染的内容。此外，组件允许从父控制器或父路由将动作分配给属性（图 25.1）。
 
 **图 25.1 组件属性**
 
 ![组件属性](img/component-reusable-property-change.png)
 
-当你评估应用程序架构时，你会开始在许多路由和模板中看到具有微小差异组合。如果一组元素可以从模板中移除，并通过描述元素状态的变量来描述，那么它们就是变成组件的理想候选。
+当你评估应用程序架构时，你会开始在许多路由和模板中看到具有微小差异的组合。如果一组元素可以从模板中移除，并通过描述元素状态的变量来描述，那么它们就是变成组件的理想候选。
 
-本章将向你展示将 DOM 元素封装在 JavaScript 对象中以便在多个路由中使用的简单示例。就像你在第 23 节 中看到的助手一样，组件以属性的形式接收参数并生成 HTML。它们还具有额外功能，即拥有自己的动作和作用域属性，以便在用户交互时更新自身。
+本章将向你展示将 DOM 元素封装在 JavaScript 对象中以便在多个路由中使用的简单示例。就像你在第 23 节中看到的助手一样，组件以属性的形式接收参数并生成 HTML。它们还具有额外功能，即拥有自己的动作和作用域属性，以便在用户交互时更新自身。
 
-本章仅向你展示扩展应用开发的冰山一角。生产环境中的 `Ember` 严重依赖组件来创建一致的用户界面和可维护的代码库，这些代码库有时跨越数百个路由。然而，你在这里看到的示例将为未来的项目提供基础理解，在你想将路由模板转换为可复用页面或单个元素时。
+本章仅向你展示扩展应用开发的冰山一角。生产环境中的`Ember`严重依赖组件来创建一致的用户界面和可维护的代码库，这些代码库有时跨越数百个路由。然而，你在这里看到的示例将为未来的项目提供基础理解，在你想将路由模板转换为可复用页面或单个元素时。
 
 ## 作为组件的迭代项
 
-经常可以变成组件的组合元素示例是 `{{#each}}` 迭代器中渲染的元素。可能会有一个根据迭代对象具有特定 `className` 的 `<div>` 容器元素、一个标题、图像路径、带有动作的按钮，和/或根据对象的属性状态的样式。为了让这些易于复用，你可以将所有 DOM 代码封装在组件模板中，并创建一个组件 JavaScript 文件来处理控制器通常处理的装饰器和动作。
+经常可以变成组件的组合元素示例是`{{#each}}`迭代器中渲染的元素。可能会有一个根据迭代对象具有特定`className`的`<div>`容器元素、一个标题、图像路径、带有动作的按钮，和/或根据对象的属性状态的样式。为了让这些易于复用，你可以将所有 DOM 代码封装在组件模板中，并创建一个组件 JavaScript 文件来处理控制器通常处理的装饰器和动作。
 
-你的目击列表是用 `{{#each}}` 迭代器构建的，你将创建第一个组件来表示目击列表项。首先在终端通过 `Ember CLI` 生成组件：
+你的目击列表是用`{{#each}}`迭代器构建的，你将创建第一个组件来表示目击列表项。首先在终端通过`Ember CLI`生成组件：
 
-```
+```bash
 ember g component listing-item
 ```
 
-这创建了三个文件：`app/components/listing-item.js`、`app/templates/components/listing-item.hbs` 以及测试文件 `tests/integration/components/listing-item-test.js`。
+这创建了三个文件：`app/components/listing-item.js`、`app/templates/components/listing-item.hbs`以及测试文件`tests/integration/components/listing-item-test.js`。
 
-现在组件已创建，你需要找到想要让组件替换的代码。打开 `app/templates/sightings/index.hbs` 并找到此代码块。稍后你把这段部分代码移动到组件中。现在，只需查看它。
+现在组件已创建，你需要找到想要让组件替换的代码。打开`app/templates/sightings/index.hbs`并找到此代码块。稍后你把这段部分代码移动到组件中。现在，只需查看它。
 
-```
+```handlebars
 <div class="row">
   {{#each model as |sighting|}}
     <div class="col-xs-12 col-sm-3 text-center">
@@ -12354,9 +12942,9 @@ ember g component listing-item
           sighting.cryptid.profileImg 'assets/images/cryptids/blank_th.png'}}"
           alt="{{sighting.cryptid.name}}" width="100%" height="100%">
         <div class="caption">
-          <h3{{sighting.cryptid.name}}</h3>
+          <h3>{{sighting.cryptid.name}}</h3>
           {{#if sighting.location}}
-            <h3{{sighting.location}}</h3>
+            <h3>{{sighting.location}}</h3>
             <p>{{moment-from sighting.sightedAt}}</p>
           {{else}}
             <h3 class="text-danger">Bogus Sighting</h3>
@@ -12372,12 +12960,9 @@ ember g component listing-item
 </div>
 ```
 
-带有 `col-xs-12` 类的容器 `<div>`（即阴影部分的 `<div>`）需要位于此特定页面。（注：原文此段存在大量重复文本，翻译已按要求处理）。
+带有`col-xs-12`类的容器`<div>`（即阴影部分的`<div>`）需要位于此特定页面。（注：原文此段存在大量重复文本，翻译已按要求处理）。
 
-
-
-
-```
+```handlebars
 <div class="row">
   {{#each model as |sighting|}}
     <div class="col-xs-12 col-sm-3 text-center">
@@ -12388,7 +12973,7 @@ ember g component listing-item
         <div class="caption">
           <h3>{{sighting.cryptid.name}}</h3>
           {{#if sighting.location}}
-            <h3{{sighting.location}}</h3>
+            <h3>{{sighting.location}}</h3>
             <p>{{moment-from sighting.sightedAt}}</p>
           {{else}}
             <h3 class="text-danger">Bogus Sighting</h3>
@@ -12407,11 +12992,13 @@ ember g component listing-item
 </div>
 ```
 
+
+
 你已经用单行代码替换了大量的代码。在此过程中，某些功能被删除了，但你很快就会修复它们。下一步是在组件元素上添加容器样式。它目前缺少了 `"media"` 和 `"well"` `Bootstrap` 样式。
 
-打开 `app/components/listing-item.js` 并为 `listing-item` 组件添加一个 `classNames` 属性：
+打开`app/components/listing-item.js`并为`listing-item`组件添加一个`classNames`属性：
 
-```
+```javascript
 import Ember from 'ember';
 
 export default Ember.Component.extend({
@@ -12419,11 +13006,11 @@ export default Ember.Component.extend({
 });
 ```
 
-`classNames` 属性将将其值传递给组件创建的 `div` 元素的 `classNames` 属性。
+`classNames`属性将将其值传递给组件创建的`div`元素的`classNames`属性。
 
 现在渲染后的组件看起来如下：
 
-```
+```html
 <div class="media well">
   <img class="media-object thumbnail" src="[imagePath string]" alt="[name string]"
     width="100%" height="100%">
@@ -12434,9 +13021,9 @@ export default Ember.Component.extend({
 </div>
 ```
 
-接下来，你将向组件模板的 `{{yield}}` 部分添加元素，使得该组件实例的实现对于 `sightings` 路由是唯一的。首先，在 `app/templates/sightings/index.hbs` 中，添加将渲染在 `{{yield}}` 中的组件语境内容：
+接下来，你将向组件模板的`{{yield}}`部分添加元素，使得该组件实例的实现对于`sightings`路由是唯一的。首先，在`app/templates/sightings/index.hbs`中，添加将渲染在`{{yield}}`中的组件语境内容：
 
-```
+```handlebars
 ...
       {{#listing-item imagePath=sighting.cryptid.profileImg
         name=sighting.cryptid.name}}
@@ -12453,7 +13040,7 @@ export default Ember.Component.extend({
       {{/listing-item}}
 ```
 
-这段代码看起来很眼熟，它恢复了目击地点、时间以及 `Edit` 按钮。
+这段代码看起来很眼熟，它恢复了目击地点、时间以及`Edit`按钮。
 
 ## 用于 DRY 代码的组件
 
@@ -12461,11 +13048,11 @@ export default Ember.Component.extend({
 
 什么？DRY 是一项编程原则，全意思是“不要重复”（don’t repeat yourself）。换句话说，如果你写了一些内容，请只在一个地方写它。
 
-目击（sightings）和神秘生物（cryptids）的列表都使用了带有 `class="media well"` 的元素，并包含图片和标题。因此，这是可以进行 DRY 处理的代码。组件与神秘生物的列表项并不完全匹配，但这正是 `{{yield}}` 发挥用场的地方。
+目击（sightings）和神秘生物（cryptids）的列表都使用了带有`class="media well"`的元素，并包含图片和标题。因此，这是可以进行 DRY 处理的代码。组件与神秘生物的列表项并不完全匹配，但这正是`{{yield}}`发挥用场的地方。
 
-在神秘生物的列表中添加新的 `{{#listing-item}}` 组件。在 `app/templates/cryptids.hbs` 中，替换 `div class="media well"` 元素及其子元素：
+在神秘生物的列表中添加新的`{{#listing-item}}`组件。在`app/templates/cryptids.hbs`中，替换`div class="media well"`元素及其子元素：
 
-```
+```handlebars
 <div class="row">
   {{#each model as |cryptid|}}
     <div class="col-xs-12 col-sm-3 text-center">
@@ -12491,17 +13078,15 @@ export default Ember.Component.extend({
   {{/each}}
 ```
 
-你注意到你在两个模板中引用组件的方式之间的差异了吗？目击模板使用了 `{{#listing-item}}`，而神秘生物模板使用了 `{{listing-item}}`。这是因为目击模板使用 `{{yield}}` 来渲染块特定的内容，而神秘生物模板只是向组件传递了参数。
+你注意到你在两个模板中引用组件的方式之间的差异了吗？目击模板使用了`{{#listing-item}}`，而神秘生物模板使用了`{{listing-item}}`。这是因为目击模板使用`{{yield}}`来渲染块特定的内容，而神秘生物模板只是向组件传递了参数。
 
-`{{listing-item}}` 组件是一个可重用的封装器。通过 `{{yield}}`，我们可以为每个路由注入不同的内容，同时将公共布局（`media well` 结构）保留在一个地方。
+`{{listing-item}}`组件是一个可重用的封装器。通过`{{yield}}`，我们可以为每个路由注入不同的内容，同时将公共布局（`media well`结构）保留在一个地方。
 
+在这里，你为`typeClass`添加了一个计算属性，它将用于为组件的`<div>`元素添加一个`className`。该计算属性期望一个名为`alertType`的属性（你稍后会添加它），并返回一个带有`"alert-"`前缀的`"alertType"`字符串。这让你允许你传入一个值为`"success"`、`"info"`、`"warning"`或`"danger"`的属性，以提供警报的上下文。你将在另一个计算属性中使用同一个这个`alertType`属性。
 
+最后，在`app/components/flash-alert.js`文件中添加绑定到组件属性的`className`绑定：
 
-在这里，你为 `typeClass` 添加了一个计算属性，它将用于为组件的 `<div>` 元素添加一个 `className`。该计算属性期望一个名为 `alertType` 的属性（你稍后会添加它），并返回一个带有 `"alert-"` 前缀的 `"alertType"` 字符串。这让你允许你传入一个值为 `"success"`、`"info"`、`"warning"` 或 `"danger"` 的属性，以提供警报的上下文。你将在另一个计算属性中使用同一个这个 `alertType` 属性。
-
-最后，在 `app/components/flash-alert.js` 文件中添加绑定到组件属性的 `className` 绑定：
-
-```
+```javascript
 ...
 export default Ember.Component.extend({
   classNames: ["alert"],
@@ -12512,11 +13097,11 @@ export default Ember.Component.extend({
 });
 ```
 
-这会根据计算属性 `typeClass` 的值向 `classNames` 数组中添加一个 `className`。当你设置 `alertType` 属性时，组件上的样式会发生变化。
+这会根据计算属性`typeClass`的值向`classNames`数组中添加一个`className`。当你设置`alertType`属性时，组件上的样式会发生变化。
 
-使用 `classNameBindings` 专门用于元素的 `classNames` 属性。对于其他属性，有一个补充的 `Ember` 组件属性：`attributeBindings`。你可以将组件属性绑定到组件元素的属性上。一个基础示例是将链接的 `href` 设置为一个 `computedProperty`。例如：
+使用`classNameBindings`专门用于元素的`classNames`属性。对于其他属性，有一个补充的`Ember`组件属性：`attributeBindings`。你可以将组件属性绑定到组件元素的属性上。一个基础示例是将链接的`href`设置为一个`computedProperty`。例如：
 
-```
+```javascript
 export default Ember.Component.extend({
   attributeBindings: ['href', 'customHREF:href'],
   href: "http://www.mydomain.com",
@@ -12524,11 +13109,11 @@ export default Ember.Component.extend({
 });
 ```
 
-通过属性绑定，你可以使用传递到组件的状态数据设置组件的所有属性。如需进一步探索，请查看在线的 `Ember` 文档。
+通过属性绑定，你可以使用传递到组件的状态数据设置组件的所有属性。如需进一步探索，请查看在线的`Ember`文档。
 
-接下来，添加一个计算属性来以字符串形式显示警报类型。组件模板期望一个 `typeTitle` 属性，因此你必须将此计算属性添加到 `app/components/flash-alert.js`：
+接下来，添加一个计算属性来以字符串形式显示警报类型。组件模板期望一个`typeTitle`属性，因此你必须将此计算属性添加到`app/components/flash-alert.js`：
 
-```
+```javascript
 import Ember from 'ember';
 
 export default Ember.Component.extend({
@@ -12542,11 +13127,11 @@ export default Ember.Component.extend({
 });
 ```
 
-现在，你在消息中有一个绑定到警报类型的字符串，该字符串已首字母大写，并且在模板中是一个 `<strong>` 元素。你通过通过 `alertType` 属性传递到组件的数据计算每个值的值，为组件绑定了一个类名和一个装饰性属性。
+现在，你在消息中有一个绑定到警报类型的字符串，该字符串已首字母大写，并且在模板中是一个`<strong>`元素。你通过通过`alertType`属性传递到组件的数据计算每个值的值，为组件绑定了一个类名和一个装饰性属性。
 
-接下来，你需要将你的组件添加到 `app/templates/application.hbs` 页面中：
+接下来，你需要将你的组件添加到`app/templates/application.hbs`页面中：
 
-```
+```handlebars
 <header>
   ...
 </header>
@@ -12556,32 +13141,32 @@ export default Ember.Component.extend({
 </div>
 ```
 
-该组件是一个内联组件（inline component），这意味着 `{{yield}}` 中将没有要渲染的元素，且组件模板不需要 `{{yield}}`。
+该组件是一个内联组件（inline component），这意味着`{{yield}}`中将没有要渲染的元素，且组件模板不需要`{{yield}}`。
 
 ## 数据向下传递 (Data Down)
 
-此时，警报没有任何状态数据来渲染内容和 `classNames`，只有容器。在 `app/templates/application.hbs` 中传递组件的状态：
+此时，警报没有任何状态数据来渲染内容和`classNames`，只有容器。在`app/templates/application.hbs`中传递组件的状态：
 
-```
+```handlebars
 ...
   {{flash-alert message="This is the Alert Message" alertType="success"}}
   {{outlet}}
 </div>
 ```
 
-启动服务器并打开浏览器访问 `http://localhost:4200/sightings`，查看 `{{flash-alert}}` 组件如何用你提供的内联数据渲染（图 25.3]）。
+启动服务器并打开浏览器访问`http://localhost:4200/sightings`，查看`{{flash-alert}}`组件如何用你提供的内联数据渲染（图 25.3）。
 
 **图 25.3 Flash 警报**
 
 ![Flash alert](img/component-flash-alert.png)
 
-现在警报已出现在屏幕上，你想动态地设置 `message` 和 `alertType` 属性。你需要一个应用控制器来实现这一点。使用 `Ember CLI` 生成器添加控制器：
+现在警报已出现在屏幕上，你想动态地设置`message`和`alertType`属性。你需要一个应用控制器来实现这一点。使用`Ember CLI`生成器添加控制器：
 
 ```bash
 ember g controller application
 ```
 
-应用控制器将维护 `{{flash-alert}}` 组件的动态状态。控制器需要属性来维护警报的状态。在 `app/controllers/application.js` 中添加以下属性：
+应用控制器将维护`{{flash-alert}}`组件的动态状态。控制器需要属性来维护警报的状态。在`app/controllers/application.js`中添加以下属性：
 
 ```javascript
 import Ember from 'ember';
@@ -12593,9 +13178,9 @@ export default Ember.Controller.extend({
 });
 ```
 
-你添加了将被 action 设置的属性。现在你有了可以传递给 `app/templates/application.hbs` 中 `flash-alert` 组件的控制器属性：
+你添加了将被 action 设置的属性。现在你有了可以传递给`app/templates/application.hbs`中`flash-alert`组件的控制器属性：
 
-```javascript
+```handlebars
 ...
 </header>
 <div class="container">
@@ -12607,7 +13192,7 @@ export default Ember.Controller.extend({
 </div>
 ```
 
-应用控制器维护 `{{flash-alert}}` 组件的动态状态。控制器需要属性来维护警报的状态。在 `app/controllers/application.js` 中添加以下属性：
+应用控制器维护`{{flash-alert}}`组件的动态状态。控制器需要属性来维护警报的状态。在`app/controllers/application.js`中添加以下属性：
 
 ```javascript
 import Ember from 'ember';
@@ -12619,9 +13204,9 @@ export default Ember.Controller.extend({
 });
 ```
 
-你添加了将被 action 设置的属性。现在你有可以传递给 `app/templates/application.hbs` 中 `flash-alert` 组件的控制器属性：
+你添加了将被 action 设置的属性。现在你有可以传递给`app/templates/application.hbs`中`flash-alert`组件的控制器属性：
 
-```javascript
+```handlebars
 ...
 </header>
 <div class="container">
@@ -12633,7 +13218,7 @@ export default Ember.Controller.extend({
 </div>
 ```
 
-应用控制器维护 `{{flash-alert}}` 组件的动态状态。控制器需要属性来维护警报的状态。在 `app/controllers/application.js` 中添加以下属性：
+应用控制器维护`{{flash-alert}}`组件的动态状态。控制器需要属性来维护警报的状态。在`app/controllers/application.js`中添加以下属性：
 
 ```javascript
 import Ember from 'ember';
@@ -12645,7 +13230,7 @@ export default Ember.Controller.extend({
 });
 ```
 
-应用控制器维护 `{{flash-alert}}` 组件的动态状态。控制器需要属性来维护警报的状态。在 `app/controllers/application.js` 中添加以下属性：
+应用控制器维护`{{flash-alert}}`组件的动态状态。控制器需要属性来维护警报的状态。在`app/controllers/application.js`中添加以下属性：
 
 ```javascript
 import Ember from 'ember';
@@ -12657,7 +13242,7 @@ export default Ember.Controller.extend({
 });
 ```
 
-应用控制器维护 `{{flash-alert}}` 组件的动态状态。控制器需要属性来维护警报的状态。在 `app/controllers/application.js` 中添加以下属性：
+应用控制器维护`{{flash-alert}}`组件的动态状态。控制器需要属性来维护警报的状态。在`app/controllers/application.js`中添加以下属性：
 
 ```javascript
 import Ember from 'ember';
@@ -12669,7 +13254,7 @@ export default Ember.Controller.extend({
 });
 ```
 
-应用控制器维护 `{{flash-alert}}` 组件的动态状态。控制器需要属性来维护警报的状态。在 `app/controllers/application.js` 中添加以下属性：
+应用控制器维护`{{flash-alert}}`组件的动态状态。控制器需要属性来维护警报的状态。在`app/controllers/application.js`中添加以下属性：
 
 ```javascript
 import Ember from 'ember';
@@ -12683,16 +13268,13 @@ export default Ember.Controller.extend({
 
 *(注：原文中包含大量重复的代码块和句子。我将根据技术教程的逻辑提供一个清晰的整合版本。)*
 
-
-
-
 ![闪电提醒 – 新发现](img/component-flash-alert-new.png)
 
-最后一步是添加用于从屏幕上移除警告的动作（action）和事件。你只想在创建新消息后显示 `flash-alert`，因此在移除它时，你需要切换开关来隐藏警告。
+最后一步是添加用于从屏幕上移除警告的动作（action）和事件。你只想在创建新消息后显示`flash-alert`，因此在移除它时，你需要切换开关来隐藏警告。
 
-在 `app/controllers/application.js` 中，添加一个名为 `removeAlert` 的动作：
+在`app/controllers/application.js`中，添加一个名为`removeAlert`的动作：
 
-```
+```javascript
 ...
 export default Ember.Controller.extend({
 
@@ -12709,11 +13291,11 @@ export default Ember.Controller.extend({
 });
 ```
 
-这会将 `isAlertShowing` 设置为 `false`，将 `alertMessage` 设置为空字符串，并将 `alertType` 设置为 `"success"`。
+这会将`isAlertShowing`设置为`false`，将`alertMessage`设置为空字符串，并将`alertType`设置为`"success"`。
 
-接下来，向组件发送 `removeAlert` 动作。在 `app/templates/application.hbs` 中添加以下内容：
+接下来，向组件发送`removeAlert`动作。在`app/templates/application.hbs`中添加以下内容：
 
-```
+```handlebars
 ......</header>
 <div class="container">
   {{#if isAlertShowing}}
@@ -12724,13 +13306,15 @@ export default Ember.Controller.extend({
 </div>
 ```
 
-`close=(action "removeAlert")` 语法看起来可能很奇怪。这是 `Ember` 2.0 的新特性，被称为“闭包动作”（closure action）。该函数字面量被传递传递，并作为名为 `close` 的属性从组件调用，就像别名一样。
 
-旧版本的 `Ember` 这种流程版本更为复杂。从底层来说，闭包动作不仅仅是作为参数从对象传递函数。要了解更多关于闭包动作的信息，请访问 EmberJS 博客上关于版本 1.13 和 2.0 特性的文章：[emberjs.com/​blog/​2015/​06/​12/​ember-1-13-0-released.html`](http://emberjs.com/blog/2014/06/12/ember-1-13-0-released.html)。
+
+`close=(action "removeAlert")` 语法看起来可能很奇怪。这是 `Ember` 2.0 的新特性，被称为“闭包动作”（closure action）。该函数字面量被传递，并作为名为 `close` 的属性从组件调用，就像别名一样。
+
+旧版本的 `Ember` 这种流程版本更为复杂。从底层来说，闭包动作不仅仅是作为参数从对象传递函数。要了解更多关于闭包动作的信息，请访问 EmberJS 博客上关于版本 1.13 和 2.0 特性的文章：[emberjs.com/blog/2015/06/12/ember-1-13-0-released.html](http://emberjs.com/blog/2014/06/12/ember-1-13-0-released.html)。
 
 接下来，你需要从组件中调用此动作。组件是 DOM 元素的实例；因此，它们拥有代表 DOM 元素事件的键值对。你可以添加 `click` 事件监听器的声明，`Ember` 会将该监听器添加到包裹模板的 `<div>` 元素上。在 `app/components/flash-alert.js` 中添加以下内容：
 
-```
+```javascript
 import Ember from 'ember';
 
 export default Ember.Component.extend({
@@ -12775,19 +13359,18 @@ export default Ember.Component.extend({
 我们还为你留了最后一个挑战：成为一名`优秀`的前端开发者。你可能会从哪里开始？这里是一些想法：
 
 - **编写代码**：现在就开始。如果你不应用你的知识，很快就会忘记所学到的。写一些代码来玩玩你喜欢的东西。
-- **学习**：在本书书中你学习了许多领域的知识。是否有某些内容激发了你的想象力？找到并阅读更多关于它的文档——或者一整本书。
-- **结识他人**：线下聚会（meetups）是结识志同道合开发者的好地方。许多顶级开发者活跃在 Twitter 上。你可以参加会议（甚至是我们的大会！
-- **探索开源社区**：前端开发在 `[www.github.com`](http://www.github.com) 爆发。当你发现一个酷的库时，查看其贡献者的其他项目。分享你自己的代码——你不知道谁会觉得它有用或有趣。我们发现 WDRL（Web 开发列表）邮件列表是查看前端社区动态的好方式（[wdrl.info`](https://wdrl.info/)）。
+
+- **学习**：在本书中你学习了许多领域的知识。是否有某些内容激发了你的想象力？找到并阅读更多关于它的文档——或者一整本书。
+
+- **结识他人**：线下聚会（meetups）是结识志同道合开发者的好地方。许多顶级开发者活跃在 Twitter 上。你可以参加会议（甚至是我们的大会！）。
+
+- **探索开源社区**：前端开发在 [www.github.com](http://www.github.com) 爆发。当你发现一个酷的库时，查看其贡献者的其他项目。分享你自己的代码——你不知道谁会觉得它有用或有趣。我们发现 WDRL（Web 开发列表）邮件列表是查看前端社区动态的好方式（[wdrl.info](https://wdrl.info/)）。
 
 你可以在 Twitter 上找到我们。Chris 是 `@radishmouse`，Todd 是 `@tgandee`。
 
-如果你喜欢这本书，请查看其他 Big Nerd Ranch 图：[www.bignerdranch.com/books](http://www.bignerdranch.com/books)。我们还为开发者提供了广泛的周课课程，让你能够在一个周内轻松学会一本书的内容。当然，如果你只需要有人来编写出色的代码，我们也提供合同编程服务。欲了解更多信息，请访问 `[www.bignerdranch.com`](http://www.bignerdranch.com)。
+如果你喜欢这本书，请查看其他 Big Nerd Ranch 图：[www.bignerdranch.com/books](http://www.bignerdranch.com/books)。我们还为开发者提供了广泛的周课课程，让你能够在一个周内轻松学会一本书的内容。当然，如果你只需要有人来编写出色的代码，我们也提供合同编程服务。欲了解更多信息，请访问 [www.bignerdranch.com](http://www.bignerdranch.com)。
 
-
-
-
-
-没有像你这样的读者，我们的工作将不复。感谢你购买并阅读我们的书。
+没有像你这样的读者，我们的工作将不复存在。感谢你购买并阅读我们的书。
 
 # 索引
 
@@ -12796,467 +13379,653 @@ A B C D E F G H I J K L M N O P Q R S T U V W X Y
 ### 符号
 
 - `+=` (连接运算符),使用 jQuery 创建 DOM 元素
+
 - `.` (点运算符),访问 DOM 元素
+
 - `:focus` 伪类、设置有效和无效元素的样式
+
 - `:hover` 伪类、添加 CSS 过渡效果
+
 - `:invalid` 伪类、设置有效和无效元素的样式
+
 - `:required` 伪类、设置有效和无效元素的样式
+
 - `<a>` 标签、添加图片
+
 - `<body>` 标签、初始 HTML
+
 - `<div>` 标签
+
 - `>` 关于、添加详情图片,创建订单表
+
 - `>` 用于 Bootstrap 样式设置、添加文本输入字段
+
 - `<form>` 标签、创建订单表
+
 - `<h1>` 标签、初始 HTML
+
 - `<head>` 标签、初始 HTML
+
 - `<hr>` 标签、删除查看记录
+
 - `<img>` 标签、添加图片
+
 - `<input>` 标签
+
 - `>` 用于复选框、使用 jQuery 创建 DOM 元素
+
 - `>` 用于单选按钮、使用单选按钮提供选项
+
 - `>` 用于范围滑块、添加范围滑块
+
 - `>` 用于重置按钮、添加提交和重置按钮
+
 - `>` 用于提交按钮、添加提交和重置按钮
+
 - `>` 用于文本输入、添加文本输入字段
+
 - `>` 链接到 `<label>` 标签、标签与表单元素的绑定,使用单选按钮提供选项
+
 - `<label>` 标签
+
 - `>` 关于、标签与表单元素的绑定
+
 - `>` 链接到 `<input>` 标签、标签与表单元素的绑定,使用单选按钮提供选项
+
 - `<link>` 标签、链接样式表
+
 - `<meta>` 标签、初始 HTML
+
 - `<option>` 标签、添加下拉菜单
+
 - `<script>` 标签、准备锚点标签
+
 - `<section>` 标签、创建订单表
+
 - `<select>` 标签、添加下拉菜单
+
 - `<span>` 标签、添加内容
+
 - `<style>` 标签、设置有效和无效元素的样式
+
 - `<title>` 标签、初始 HTML
+
 - `<ul>` 标签、添加内容
+
 - `=` (赋值运算符)、声明字符串变量
+
 - `==` (相等运算符)、监听按键事件
+
 - `===` (全等运算符)、监听按键事件
+
 - `@font-face` 声明、添加字体
+
 - `@import` 指令、配置
+
 - `@media` 声明、添加媒体
+
 - `{{each}}` 助手、循环 `{{each`
+
 - `{{if}}` 助手、条件判断
+
 - `{{link-to}}` 助手、链接
+
 - `{{action}}` 助手、新特性
+
 - `{{if}}` 助手、绑定元素属性
+
 - `{{outlet}}` 助手、Ember 生成
+
 - `{{x-select}}` 组件、新特性
+
 - `{{yield}}` 助手、作为迭代器
+
 - `||` (默认/逻辑运算符)、添加命名空间
 
 ### A
 
 - `<a>` 标签、添加图片
+
 - 绝对定位、绝对与相对定位
+
 - `{{action}}` 助手、新特性
+
 - 实际视口（见 `layout`](ix01.html_idm494069336)
+
 - `add` 方法、编写 JavaScript 隐藏图片
+
 - `addEventListener` 方法、添加事件监听器
+
 - `afterModel` 方法、进阶：控制器与 afterModel
+
 - Ajax
+
 - `>` 关于、Ajax
+
 - `>` 和 jQuery、XMLHttpRequest
+
 - `>` `XMLHttpRequest` API、XMLHttpRequest
+
 - `align-items` flexbox 属性、图片居中
+
 - `alt` 属性、添加图片
+
 - 锚标签（见 `<a>`](ix01.html_idm4940706782)
+
 - 匿名函数
+
 - `>` 关于、添加事件监听器
+
 - `>` 与回调中的具名函数、进阶：闭包
+
 - `arguments`、通过声明参数接收参数
+
 - 箭头函数
+
 - `>` 关于、处理事件和发送消息
+
 - `>` 与匿名函数、进阶：箭头函数
+
 - 赋值运算符 (`=`）、声明字符串变量
+
 - 异步通信
+
 - `>` 关于、Ajax
+
 - `>` 在回调中、添加回调参数
+
 - Atom
+
 - `>` 使用 emmet 自动补全、初始 HTML,添加内容
+
 - `>` 复制项目路径、在浏览器中查看网页
+
 - `>` 创建文件、设置 Ember
+
 - `>` 创建文件夹、设置 Ember
+
 - `>` 查找并替换文本、准备锚点标签
+
 - `>` 安装、安装与配置 Atom
+
 - `>` 打开项目、设置 Ember
+
 - `>` 插件、Atom 插件](ch01s02.html_idm49407107258)
+
 - `>` 代码片段、添加字体
 
-
-
-
-
 - `class`: 为样式化准备 HTML
+
 - `data`: 为功能准备锚标签
+
 - `for`: 链接标签与表单元素
+
 - `href`: 链接样式表, 添加图像
+
 - `id`: 链接标签与表单元素
+
 - `name`: 添加文本输入字段
+
 - `pattern`: 使用正则表达式进行验证
+
 - `placeholder`: 使用占位符显示示例输入
+
 - `rel`: 链接样式表
+
 - `required`: required 属性
+
 - `src`: 添加图像
+
 - `type`: 通过单选按钮提供选择
+
 - `autofocus` 属性: 添加自动聚焦, UI 增强
 
 ### B
 
 #### Babel
+
 - `about`: 编译 JavaScript 的工具
+
 - `for compiling`: 类语法
+
 - `installing`: 编译 JavaScript 的工具
 
 ### Babelify
+
 - `about`: 编译 JavaScript 的工具
+
 - `installing`: 编译 JavaScript 的工具
 
 - `beforeModel` 方法: beforeModel
+
 - `belongsTo` 方法: 模型定义
+
 - `bind` 方法
+
     - `about`: 使用 `bind` 设置 `this` 的值, 将 `createOrder` 注册为提交处理器
+
     - `vs call`: 使用 `call` 操作 `this`
+
 - `binding to a port`: Hello, World
+
 - `blur` 事件: 监听输入事件
-- `<<body>` 标签: 初始 HTML
+
+- `<body>` 标签: 初始 HTML
+
 - `Boolean attributes`: 添加自动聚焦, required 属性
+
 - `Booleans`: 进阶进读：JavaScript 类型
 
 ### Bootstrap
+
 - `adding`: 添加 Bootstrap
+
 - `btn` 类: 添加提交和重置按钮
+
 - `btn-default` 类: 添加提交和重置按钮
+
 - `checkbox` 类: 使用 jQuery 创建 DOM 元素
+
 - `container` 类: Bootstrap 的工作原理
+
 - `documentation`: 添加提交和重置按钮
+
 - `form-control` 类: 添加文本输入字段, 添加下拉菜单
+
 - `form-group` 类: 添加文本输入字段
+
 - `installing with Bower`: 外部库和插件
+
 - `borders`: 盒模型
+
 - `Bower`, installing: 安装 Ember
+
 - `box model`: 你的第一个样式规则
+
 - `bracket syntax`: 访问所有缩略图
+
 - `Brackets`: 进阶读：Atom 的替代方案
+
 - `breakpoints`
+
     - `removing`: 使用开发者工具调试
+
     - `restarting paused code`: 使用开发者工具调试
+
     - `setting`: 使用开发者工具调试
+
 - `browser-sync`
+
     - `install`: 安装 Node.js 和 `browser-sync`
+
     - `running`: 在浏览器中查看
+
 - `Browserify`
+
     - `about`: 编译 JavaScript 的工具
+
     - `and JavaScript dependencies`: 将 `jQuery` 安装为 Node 模块
+
     - `install`: 编译 JavaScript 的工具
+
 - `browsers`
+
     - `communication with servers`: 设置项目
+
     - `support for JavaScript`: 使用 Babel 运行 ES6`
+
     - `support for web technologies`: 文档与参考
+
     - `user agent stylesheet`: 盒模型
+
 - `bulleted list` (see `<ul>`](ch01.html)
 
 ### C
+
 - `call` 方法 vs `bind`: 使用 `call` 操作 `this`
+
 - `callbacks`
+
     - `about`: 监听事件
+
     - `anonymous functions in`: 监听事件
+
     - `named functions in`: 遍历缩略图数组
+
     - `named vs anonymous in`: 进阶读：闭包
+
 - `aniuse.com`: 文档与参考
+
 - `cdnjs.com`: 创建样式布局
+
 - `change` 事件: 银牌挑战：显示滑块值`
+
 - `checkboxes` (see `<input`](ch01.html)
+
 - `checked` 属性: 通过单选按钮提供选择
+
 - `child selectors`: 选择器
+
 - `Chrome` (see Google Chrome`
+
 - `class` 属性
+
     - (参见类名)
+
     - `about`: 为样式化准备 HTML
+
     - `adding dynamically`: 编写 JavaScript 隐藏图像
+
     - `as a selector`: 你的第一个样式规则
+
     - `removing dynamically`: 再次显示图像
+
     - `vs data attributes`: 为功能准备锚标签
+
 - `class selectors`: 你的第一个样式规则
+
 - `classes in JavaScript`: 类语法
+
 - `classList.add` 方法: 编写 JavaScript 隐藏图像
+
 - `classList.remove` 方法: 再次显示图像
+
 - `click` 事件: 监听事件
+
 - `close` 事件: 银牌挑战：连接关闭警告`
+
 - `closures`: 进阶读：闭包
+
 - `code comments`
+
     - `CSS`: 样式继承
+
     - `HTML`: 编写 `setDetails` 函数
+
     - `JavaScript`: 编写 `setDetails` 函数
+
 - `color formats`: 颜色
+
 - `color functions`: 颜色
+
 - `command line` (see 终端命令`
+
 - `compound (or complex) types`: 进阶读：JavaScript 类型
+
 - `concatenation operator (`+=`)): 使用 `jQuery` 创建 DOM 元素`
+
 - `connection events`: 设置 WebSockets
+
 - `console`
+
     - `about`: 在控制台中工作
+
     - `entering line breaks`: 监听事件
+
     - `logging statements`: 监听事件
+
     - `opening in the drawer`: 使用开发者工具调试, 检查 Ajax 请求和响应
+
 - `console.log` 方法: 监听事件
+
 - `constants`: 声明字符串变量, 创建 `ChatForm` 类
+
 - `constructor` 方法: 类语法
+
 - `constructors`
+
     - `about`: 构造函数, 创建 `ChatForm` 类
 
 
 
-
-
-- `implicit returns`, 构造函数
-- `naming conventions`, 构造函数
-- `prototype property`, 构造函数的原型
-- 内容分发网络, 创建样式基准
-- MVC 中的控制器, 介绍 MVC 和 Ember
-- `create method`, 新发现
-- `createRecord method`, createRecord
-- `crypto-js`, 使用 Gravatars
+- `implicit returns`，构造函数
+- `naming conventions`，构造函数
+- `prototype property`，构造函数的原型
+- 内容分发网络，创建样式基准
+- MVC 中的控制器，介绍 MVC 和 Ember
+- `create method`，新发现
+- `createRecord method`，`createRecord`
+- `crypto-js`，使用 Gravatars
 
 ## CSS
-- `about`, 设置 Ottergram
-- `history`, 给更有好奇心的人：CSS 版本
-- `properties` (参见 properties)
-- `selectors` (参见 selectors (in CSS))
-- `styling rules`, 样式结构
+
+- `about`，设置 Ottergram
+- `history`，给更有好奇心的人：CSS 版本
+- `properties`（参见 properties）
+- `selectors`（参见 selectors (in CSS)）
+- `styling rules`，样式结构
 
 ### CSS 过渡
-- `creating`, 使用 CSS 过渡处理状态
-- `triggering with JavaScript`, 使用 JavaScript 触发过渡
-- `cubic-bezier property`, 自定义计时函数
-- `cubic-bezier.com`, 自定义计时函数
+
+- `creating`，使用 CSS 过渡处理状态
+- `triggering with JavaScript`，使用 JavaScript 触发过渡
+- `cubic-bezier property`，自定义计时函数
+- `cubic-bezier.com`，自定义计时函数
 
 ## D
+
 data 属性
-- `about`, 为锚点标签做好准备
-- 使用...访问 DOM 元素, 为锚点标签做好准备
-- 与类属性对比, 为锚点标签做好准备
+
+- `about`，为锚点标签做好准备
+- 使用...访问 DOM 元素，为锚点标签做好准备
+- 与类属性对比，为锚点标签做好准备
 
 调试
+
 - `breakpoints`
-- (参见 breakpoints)
-- `Chrome 调试`, 使用开发者工具定位 bug
-- `declaration blocks`, 样式结构
-- `默认 (逻辑或) 运算符 (||)`, 向命名空间添加模块
+- （参见 breakpoints）
+- `Chrome 调试`，使用开发者工具定位 bug
+- `declaration blocks`，样式结构
+- `默认 (逻辑或) 运算符 (||)`，向命名空间添加模块
 
 延迟对象 (Deferred objects)
-- `about`, Promises 和 Deferreds
-- 使用 `then` 的回调, 使用 then 注册回调, 在仅回调 API 中使用 Deferreds
-- `DELETE 请求`, RESTful Web 服务, 从服务器上删除数据, 使用 jQuery 的 $.ajax 方法
-- `descendent selectors`, 后代选择器
-- `deserialize method`, 变换
-- `destroyRecord method`, 给更有好奇心的人：保存和销毁数据
-- `devdocs.io`, 文档和参考源
 
-开发者工具 (参见 DevTools)
+- `about`，Promises 和 Deferreds
+- 使用 `then` 的回调，使用 `then` 注册回调，在仅回调 API 中使用 Deferreds
+- `DELETE 请求`，RESTful Web 服务，从服务器上删除数据，使用 jQuery 的 `$.ajax` 方法
+- `descendent selectors`，后代选择器
+- `deserialize method`，变换
+- `destroyRecord method`，给更有好奇心的人：保存和销毁数据
+- `devdocs.io`，文档和参考源
+
+开发者工具（参见 DevTools）
+
 DevTools
-- `about`, Chrome 开发者工具
-- 给元素添加伪类, 添加 CSS 过渡
-- 给元素添加属性, 创建隐藏详情图片的样式
-- `console` (参见 console)
-- 设备模式, 重置视口
-- `Ember Inspector`, 安装 Ember, 启动服务器, Ember Inspector
-- `opening`, 打开 Chrome 开发者工具
-- 查看 Ajax 请求, 检查 Ajax 请求和响应
-- `display: block 属性`, 盒模型, 让图片适应窗口, Flexbox
-- `display: flex 属性`, 创建一个 flex 容器
-- `display: inline 属性`, 让图片适应窗口
-- `display: inline-block 属性`, 缩略图的水平布局, Flexbox
-- `display: none 属性`, 隐藏详情图片的样式
-- `<div>` 
-- `about`, 添加详情图片, 创建表单
-- 使用 Bootstrap, 添加文本输入
-- `doctype`, 初始 HTML
-- `document 对象`, 访问 DOM 元素
-- `document 对象 (DOM)`, 样式继承, 访问 DOM 元素
+
+- `about`，Chrome 开发者工具
+- 给元素添加伪类，添加 CSS 过渡
+- 给元素添加属性，创建隐藏详情图片的样式
+- `console`（参见 console）
+- 设备模式，重置视口
+- `Ember Inspector`，安装 Ember，启动服务器，Ember Inspector
+- `opening`，打开 Chrome 开发者工具
+- 查看 Ajax 请求，检查 Ajax 请求和响应
+- `display: block 属性`，盒模型，让图片适应窗口，Flexbox
+- `display: flex 属性`，创建一个 flex 容器
+- `display: inline 属性`，让图片适应窗口
+- `display: inline-block 属性`，缩略图的水平布局，Flexbox
+- `display: none 属性`，隐藏详情图片的样式
+- `<div>`
+  - `about`，添加详情图片，创建表单
+  - 使用 Bootstrap，添加文本输入
+- `doctype`，初始 HTML
+- `document 对象`，访问 DOM 元素
+- `document 对象 (DOM)`，样式继承，访问 DOM 元素
 
 文档资源
-- `aniuse.com`, 文档和参考源
-- `html5.com`, 文档和参考源
-- `Mozilla Developer Network`, 文档和参考源
-- `stackoverflow.com`, 文档和参考源
-- `.` 运算符, 访问 DOM 元素
-- `DS.attr 方法`, 模型定义
-- `DS.belongsTo 方法`, 模型定义
-- `DS.hasMany 方法`, 模型定义
-- `DS.hasOne 方法`, 模型定义
-- `.extend 方法`, ember generate
-- `findAll 方法`, 给更有好奇心的人：获取数据
-- `findRecord 方法`, 给更有好奇心的人：获取数据
+
+- `aniuse.com`，文档和参考源
+- `html5.com`，文档和参考源
+- `Mozilla Developer Network`，文档和参考源
+- `stackoverflow.com`，文档和参考源
+- `.` 运算符，访问 DOM 元素
+- `DS.attr 方法`，模型定义
+- `DS.belongsTo 方法`，模型定义
+- `DS.hasMany 方法`，模型定义
+- `DS.hasOne 方法`，模型定义
+- `.extend 方法`，`ember generate`
+- `findAll 方法`，给更有好奇心的人：获取数据
+- `findRecord 方法`，给更有好奇心的人：获取数据
 
 ### E
-- `each helper`, [自定义计时函数]
-- `element selectors`, 样式继承
+
+- `each helper`，[自定义计时函数]
+- `element selectors`，样式继承
 
 Ember
-- `about`, Ember: MVC
-- `actions 属性`, 新发现
-- `adapters`, 适配、序列化和变换
-- `addons`, 外部库
-- `afterModel 方法`, 给更有好奇心的人：设置控制器
-- `ApplicationRoute`, ember generate
-- `attribute binding`, 类绑定
-- `beforeModel 方法`, 启动服务器
-- `构建并运行项目`, 启动服务器
-- `class name binding`, 类绑定
-- `closure actions`, 动作
-- `components`, 迭代项作为组件
-- `computed properties`, 计算属性
-- `Content Security Policy`, 内容策略
-- `controllers`, 新发现
-- `create method`, 新发现
-- `createRecord method`, createRecord
-- `creating a project`, 创建一个 Ember 应用
-- `deserialize method`, 变换
-- `destroyRecord method`, 给更有好奇心的人：保存和销毁数据
-- `get method`, get 和 set
-- `generating adapters`, 适配器
-- `generating components`, 迭代项作为组件
-- `generating controllers`, 新发现
-- `generating custom helpers`, 自定义助手
-- `generating models`, 模型定义
-- `generating routes`, ember generate
-- `generating serializers`, 序列化器
 
-
-
-
+- `about`，Ember: MVC
+- `actions 属性`，新发现
+- `adapters`，适配、序列化和变换
+- `addons`，外部库
+- `afterModel 方法`，给更有好奇心的人：设置控制器
+- `ApplicationRoute`，`ember generate`
+- `attribute binding`，类绑定
+- `beforeModel 方法`，启动服务器
+- 构建并运行项目，启动服务器
+- `class name binding`，类绑定
+- `closure actions`，动作
+- `components`，迭代项作为组件
+- `computed properties`，计算属性
+- `Content Security Policy`，内容策略
+- `controllers`，新发现
+- `create method`，新发现
+- `createRecord method`，`createRecord`
+- `creating a project`，创建一个 Ember 应用
+- `deserialize method`，变换
+- `destroyRecord method`，给更有好奇心的人：保存和销毁数据
+- `get method`，`get` 和 `set`
+- `generating adapters`，适配器
+- `generating components`，迭代项作为组件
+- `generating controllers`，新发现
+- `generating custom helpers`，自定义助手
+- `generating models`，模型定义
+- `generating routes`，`ember generate`
+- `generating serializers`，序列化器
 
 ## Data API
 
-- `JSONAPIAdapter` 对象, 数据 – 适配器、序列化器与转换
-- `model` 方法, 分配模型
-- `models`, 模型与数据绑定
-- `naming conventions`, 路由、路由规则与模型
-- `nesting routes`, 嵌套路由
-- `nesting templates`, 嵌套模板
-- `peekAll` 方法, 进阶奇技：检索数据
-- `peekRecord` 方法, 进阶奇技：检索数据
-- `query` 方法, 进阶奇技：检索数据
-- `queryRecord` 方法, 进阶奇技：检索数据
-- `route lifecycle hooks`, 路由、路由规则与模型
-- `route` 方法, ember generate, 嵌套路由
-- `Route` 对象, 分配模型
-- `Router` 对象, 路由、路由规则与模型, ember generate
-- `Router.map` 方法, ember generate
-- `save` 方法, 进阶奇技：保存与销毁数据
-- `serialize` 方法, 转换
-- `serializers`, 数据 – 适配器、序列化器与转换, 序列化器, 转换
-- `set` 方法, get 和 set
-- `setupController` 方法, 分配模型, beforeModel, 进阶奇技：setupController 和 afterModel
-- `store` 对象, 创建记录
-- `templates`, 配置, 视图与模板
-- `transforms`, 数据 – 适配器、序列化器与转换
-- `transitionToRoute` 方法, 新发现
-- `URL routing in`, ember generate, 嵌套路由
-- `x-select`, 新发现
-- `{{outlet}}` 辅助函数, ember generate, 嵌套路由
+- `JSONAPIAdapter` 对象，数据 – 适配器、序列化器与转换
+- `model` 方法，分配模型
+- `models`，模型与数据绑定
+- `naming conventions`，路由、路由规则与模型
+- `nesting routes`，嵌套路由
+- `nesting templates`，嵌套模板
+- `peekAll` 方法，进阶奇技：检索数据
+- `peekRecord` 方法，进阶奇技：检索数据
+- `query` 方法，进阶奇技：检索数据
+- `queryRecord` 方法，进阶奇技：检索数据
+- `route lifecycle hooks`，路由、路由规则与模型
+- `route` 方法，`ember generate`，嵌套路由
+- `Route` 对象，分配模型
+- `Router` 对象，路由、路由规则与模型，`ember generate`
+- `Router.map` 方法，`ember generate`
+- `save` 方法，进阶奇技：保存与销毁数据
+- `serialize` 方法，转换
+- `serializers`，数据 – 适配器、序列化器与转换，序列化器，转换
+- `set` 方法，`get` 和 `set`
+- `setupController` 方法，分配模型，`beforeModel`，进阶奇技：`setupController` 和 `afterModel`
+- `store` 对象，创建记录
+- `templates`，配置，视图与模板
+- `transforms`，数据 – 适配器、序列化器与转换
+- `transitionToRoute` 方法，新发现
+- `URL routing in`，`ember generate`，嵌套路由
+- `x-select`，新发现
+- `{{outlet}}` 辅助函数，`ember generate`，嵌套路由
 
 ## Ember CLI
 
-- Ember CLI Mirage, 进阶奇技：Ember CLI Mirage
-- Ember CLI, 安装, 安装 Ember
+- Ember CLI Mirage，进阶奇技：Ember CLI Mirage
+- Ember CLI，安装，安装 Ember
 - Ember Inspector
-    - 关于, 启动服务器, Ember Inspector
-    - 安装, 安装 Ember
+  - 关于，启动服务器，Ember Inspector
+  - 安装，安装 Ember
 
 ## Ember 对象、方法与属性
 
 ### 对象、方法与属性
 
-- `Ember.computed` 方法, 计算属性
-- `Ember.computed.alias` 属性, 编辑一个发现
-- `Ember.Object` 类, 模型与数据绑定, get 和 set
-- 增强型对象字量量, 连接处理
-- `Error` 类型, 使用选择器配置 `FormHandler` 实例
-- 字符转义, 声明字符串变量
-- 事件委托, 编写 `addClickHandler` 方法
-- 事件监听器, 添加事件监听器, 监听按键按下事件
-- 事件对象, 添加事件监听器
+- `Ember.computed` 方法，计算属性
+- `Ember.computed.alias` 属性，编辑一个发现
+- `Ember.Object` 类，模型与数据绑定，`get` 和 `set`
+- 增强型对象字量量，连接处理
+- `Error` 类型，使用选择器配置 `FormHandler` 实例
+- 字符转义，声明字符串变量
+- 事件委托，编写 `addClickHandler` 方法
+- 事件监听器，添加事件监听器，监听按键按下事件
+- 事件对象，添加事件监听器
 
 ### 事件
 
-- 关于, 添加事件监听器
-- `blur`, 监听输入事件
-- `change`, 银色挑战：滑块变化时显示值
-- `click`, 添加事件监听器
-- `close`, 银色挑战：关闭连接
-- `connection`, 设置 WebSocket
-- `input`, 监听输入事件
-- `keydown`, 监听按键按下事件
-- `keypress`, 监听按键按下事件
-- `keyup`, 监听按键释放事件
-- `message`, 设置 WebSocket
-- `onchange`, 新发现
-- `submit`, 添加提交
-- `export` 关键字, 用于命名导出, 创建 `ChatForm` 类
-- `.extend` 方法, ember generate
-- `extends` 关键字, 用户 Session
+- 关于，添加事件监听器
+- `blur`，监听输入事件
+- `change`，银色挑战：滑块变化时显示值
+- `click`，添加事件监听器
+- `close`，银色挑战：关闭连接
+- `connection`，设置 WebSocket
+- `input`，监听输入事件
+- `keydown`，监听按键按下事件
+- `keypress`，监听按键按下事件
+- `keyup`，监听按键释放事件
+- `message`，设置 WebSocket
+- `onchange`，新发现
+- `submit`，添加提交
+- `export` 关键字，用于命名导出，创建 `ChatForm` 类
+- `.extend` 方法，`ember generate`
+- `extends` 关键字，用户 Session
 
 ### Favicon
 
-- `favicon.ico`, 进阶奇技：`favicon.ico`
-- 过滤选择器, 编写 `addClickHandler` 方法
-- `findAll` 方法, 进阶奇技：检索数据
-- `findRecord` 方法, 进阶奇技：检索数据
-- `firebase`, 进阶奇技：作为服务的 Firebase
+- `favicon.ico`，进阶奇技：`favicon.ico`
+- 过滤选择器，编写 `addClickHandler` 方法
+- `findAll` 方法，进阶奇技：检索数据
+- `findRecord` 方法，进阶奇技：检索数据
+- `firebase`，进阶奇技：作为服务的 Firebase
 
 ## Flexbox
 
-- 关于, 使用 Flexbox 进行响应式布局
-- `display: flex` 属性, 创建 flex 容器
-- `flex containers`, 创建 flex 容器, 排序、对齐和对齐 flex 项目
-- `flex items`, 创建 flex 容器
-- `flex` 简写属性, flex 简写属性
-- `flex-basis` 属性, flex 简写属性
-- `flex-direction` 属性, 更改 `flex-direction`
-- `flex-grow` 属性, flex 简写属性
-- `flex-shrink` 属性, flex 简写属性
-- `Flexbugs` 资源, 进阶奇技：Flexbox 布局的常见解决方案与问题
-- `main and cross axes`, 创建 flex 容器
-- `order` 属性, 排序、对齐和对齐 flex 项目
-- Flexbox 资源解决的方案, 进阶奇技：Flexbox 布局的常见解决方案与问题
-- 弹性盒模型 (查看 `flexbox`)
-- `focus` 方法, UI 增强
-- `:focus` 伪类, 为有效和无效元素设置样式
-- Font Awesome, 银色挑战：添加 Font Awesome
-- `@font-face` 声明, 添加字体
-- 字体, 添加, 添加字体
-- `for` 属性, 链接标签和表单元素
-- `forEach` 方法, 遍历缩略图数组, 进阶奇技：在 `forEach` 回调中设置 `this`
-- `<form>` 标签, 创建订单表单
-- `function` 作用域, 添加事件监听器
+- 关于，使用 Flexbox 进行响应式布局
+- `display: flex` 属性，创建 flex 容器
+- `flex containers`，创建 flex 容器，排序、对齐和对齐 flex 项目
+- `flex items`，创建 flex 容器
+- `flex` 简写属性，`flex` 简写属性
+- `flex-basis` 属性，`flex` 简写属性
+- `flex-direction` 属性，更改 `flex-direction`
+- `flex-grow` 属性，`flex` 简写属性
+- `flex-shrink` 属性，`flex` 简写属性
+- `Flexbugs` 资源，进阶奇技：Flexbox 布局的常见解决方案与问题
+- `main and cross axes`，创建 flex 容器
+- `order` 属性，排序、对齐和对齐 flex 项目
+- Flexbox 资源解决的方案，进阶奇技：Flexbox 布局的常见解决方案与问题
+- 弹性盒模型（查看 `flexbox`）
+- `focus` 方法，UI 增强
+- `:focus` 伪类，为有效和无效元素设置样式
+- Font Awesome，银色挑战：添加 Font Awesome
+- `@font-face` 声明，添加字体
+- 字体，添加，添加字体
+- `for` 属性，链接标签和表单元素
+- `forEach` 方法，遍历缩略图数组，进阶奇技：在 `forEach` 回调中设置 `this`
+- `<form>` 标签，创建订单表单
+- `function` 作用域，添加事件监听器
 
 ### Functions
 
-- 关于, 使用 JavaScript 处理事件, 编写 `setDetails` 函数
-- `anonymous`, 添加事件监听器
-- 回调中的匿名与命名, 遍历缩略图数组, 进阶奇技：闭包
-- `arguments and parameters`, 通过声明参数接收参数
-- `arrow`, 处理事件并发送消息, 进阶奇技：箭头函数
-- 作为参数, 返回值
-- 作为对象, 构造函数的原型
-- 回调, 添加事件监听器
-- 调用, 编写 `setDetails` 函数
-- 声明, 编写 `setDetails` 函数
-- 将实例导出到全局命名空间, 创建卡车实例
-- 命名的, 添加事件监听器
-- 属性, 构造函数的原型
-- 返回一个值, 返回值
+- 关于，使用 JavaScript 处理事件，编写 `setDetails` 函数
+- `anonymous`，添加事件监听器
+- 回调中的匿名与命名，遍历缩略图数组，进阶奇技：闭包
+- `arguments and parameters`，通过声明参数接收参数
+- `arrow`，处理事件并发送消息，进阶奇技：箭头函数
+- 作为参数，返回值
+- 作为对象，构造函数的原型
+- 回调，添加事件监听器
+- 调用，编写 `setDetails` 函数
+- 声明，编写 `setDetails` 函数
+- 将实例导出到全局命名空间，创建卡车实例
+- 命名的，添加事件监听器
+- 属性，构造函数的原型
+- 返回一个值，返回值
 
-
-
-
-
-GET 请求，RESTful Web Services, 使用 jQuery 的 `$.ajax` 方法
+GET 请求，RESTful Web Services，使用 jQuery 的 `$.ajax` 方法
 
 `getAttribute` 方法，从函数中返回值
 
@@ -13265,6 +14034,7 @@ GET 请求，RESTful Web Services, 使用 jQuery 的 `$.ajax` 方法
 全局作用域，添加事件监听器
 
 Google Chrome
+
 > 开发者工具（查看 DevTools）
 > 安装，安装 Google Chrome
 
@@ -13275,13 +14045,14 @@ Gravatars，使用 Gravatars
 `<h1>` 标签，初始 HTML
 
 Handlebars
+
 > 关于，Handlebars
 > 绑定元素属性，绑定元素属性
 > 条件判断，条件判断
 > 创建自定义辅助函数，自定义辅助函数
 > 辅助函数，辅助函数
 > 链接，链接
-> 循环，使用 `{{#each}}` 
+> 循环，使用 `{{#each}}`
 
 `hasMany` 方法，模型定义
 
@@ -13291,31 +14062,33 @@ Handlebars
 
 Homebrew，安装，安装 Ember
 
-水平线（查看 `<hr>` 标签](#ix01.html_pri_idm494063558160))
+水平线（查看 `<hr>` 标签）
 
 `<hr>` 标签，删除查看记录
 
-`href` 属性，链接样式表, 添加图片
+`href` 属性，链接样式表，添加图片
 
 HTML，初始 HTML
 
 HTML 属性（查看 attributes）
 
 HTML 元素
+
 > 在 JavaScript 中访问，编写隐藏详情图片的 JavaScript
 > 列表，初始 HTML
 > 替换，添加图片
 
 HTML 标签
+
 > `<a>`，添加图片
 > `<body>`，初始 HTML
-> `<div>`，添加详情图片, 创建表单
+> `<div>`，添加详情图片，创建表单
 > `<form>`，创建表单
 > `<h1>`，初始 HTML
 > `<head>`，初始 HTML
 > `<hr>`，删除查看记录
 > `<img>`，添加图片
-> `<input>`，添加文本输入字段, 使用单选按钮提供选项
+> `<input>`，添加文本输入字段，使用单选按钮提供选项
 > `<label>`，标签与表单元素链接
 > `<link>`，链接样式表
 > `<meta>`，初始 HTML
@@ -13331,13 +14104,14 @@ HTML 标签
 > 列表，初始 HTML
 > 自闭合，添加图片
 
-html5.com，文档与参考
+`html5.com`，文档与参考
 
 HTML 集合，感兴趣：列表
 
 HTTP 状态码，XMLHttpRequest 对象
 
 HTTP 动词
+
 > 关于，RESTful Web Services
 > 以及路径，RESTful Web Services
 
@@ -13346,70 +14120,85 @@ HTTP 动词
 `id` 属性，标签与表单元素链接
 
 `ID` 选择器，感兴趣：选择性！
-> 理想视口，重置视口](#ch05.html_se-resetting-viewport)
+
+> 理想视口，重置视口
 > `{{if}}` 辅助函数，绑定元素属性
 > `{{#if}}` 辅助函数，条件判断
 
-图像标签（查看 `<img>` 标签](#ix01.html_pri_idm494070290))
+图像标签（查看 `<img>` 标签）
+
 `<img>` 标签，添加图片
 
 立即执行表达式 (IIFE)
+
 > 关于，模块模式
-> 使用 IIFE 修改对象](#ch08.html_se-iife-to-modify)
+> 使用 IIFE 修改对象
 
 隐式返回，构造函数
 
 `@import` 指令，配置
 
-`import` 关键字，用于命名导入，创建 ChatForm 类
+`import` 关键字，用于命名导入，创建 `ChatForm` 类
 
 `input` 事件，监听输入事件
 
 `<input>` 标签
+
 > 复选框，使用 jQuery 创建 DOM 元素
 > 单选按钮，使用单选按钮提供选项
 > 范围滑块，添加范围滑块
 > 重置按钮，添加提交和重置按钮
 > 提交按钮，添加提交和重置按钮
 > 文本输入，添加文本输入字段
-> 链接到 `<label>` 标签，标签与表单元素链接, 使用单选按钮提供选项
+> 链接到 `<label>` 标签，标签与表单元素链接，使用单选按钮提供选项
 
 `:invalid` 伪类，为有效和无效元素设置样式
 
 ### J
 
 JavaScript
+
 > 类，类语法
 > 将 ES6 编译为 ES5，JavaScript 编译工具
 > 从其他语言编译，感兴趣：从其他语言编译为 JavaScript
-> 默认参数，创建 ChatMessage 类
-> 解构赋值语法，创建 ChatMessage 类
+> 默认参数，创建 `ChatMessage` 类
+> 解构赋值语法，创建 `ChatMessage` 类
 > 函数，使用 JavaScript 处理事件
 > 类型（查看 types）
 > 变量命名规范，引入 jQuery
-> 版本，使用 JavaScript 处理事件, 使用 Babel 使用 ES6
+> 版本，使用 JavaScript 处理事件，使用 Babel 使用 ES6
 
 jQuery
+
 > `$` 变量，引入 jQuery
+
+
+
 > `$.ajax` 方法，使用 jQuery 的 `$.ajax` 方法
+
 > `$.get` 方法，从服务器检索数据
+
 > `$.post` 方法，使用 jQuery 的 `$.post` 方法
+
 > 关于，引入 jQuery
+
 > 这里的，引入 jQuery
+
 > `append` 方法，使用 jQuery 创建 DOM 元素
+
 > Deferred 对象，Promises 和 Deferreds
+
 > 用于管理 Ajax 请求，XMLHttpRequest 对象
-> length 属性，使用选择器配置 FormHandler 实例
+
+> `length` 属性，使用选择器配置 FormHandler 实例
+
 > `on` 方法，添加提交 Handler
+
 > `serializeArray` 方法，提取数据
 
-jQuery 包装的选择，使用选择器配置 FormHandler 实例, 提取数据
+jQuery 包装的选择，使用选择器配置 FormHandler 实例，提取数据
 
-
-
-
-
-`justify-content` 属性，弹性项目的排序、对齐分布和对齐, 居中详情图
+`justify-content` 属性，弹性项目的排序、对齐分布和对齐，居中详情图
 
 ### K
 
@@ -13427,11 +14216,11 @@ jQuery 包装的选择，使用选择器配置 FormHandler 实例, 提取数据
 
 > 关于，将标签与表单元素关联
 
-> 关联 `<input>` 标签，将标签与表单元素关联, 使用单选按钮提供选项
+> 关联 `<input>` 标签，将标签与表单元素关联，使用单选按钮提供选项
 
-布局视口 (layout viewport)，使用媒体查询的自适应布局, 重置视口
+布局视口 (layout viewport)，使用媒体查询的自适应布局，重置视口
 
-`linear` 时间函数，使用时间函数, 自定义时间函数
+`linear` 时间函数，使用时间函数，自定义时间函数
 
 `<link>` 标签，链接样式表
 
@@ -13467,7 +14256,7 @@ MDN（参见 Mozilla 开发者网络）
 
 > 在样式表中的位置，创建隐藏详情图的样式
 
-媒体类型 (media types)，添加媒体查询, 进阶阅读：MIME 类型
+媒体类型 (media types)，添加媒体查询，进阶阅读：MIME 类型
 
 消息事件 (message events)，设置 WebSockets
 
@@ -13515,7 +14304,7 @@ MVC（参见 模型-视图-控制器 (MVC)）
 
 > 关于，添加事件监听器
 
-> 与回调中的匿名函数对比，遍历数组, 进阶阅读：闭包
+> 与回调中的匿名函数对比，遍历数组，进阶阅读：闭包
 
 命名导入 (named imports)，创建 `ChatForm` 类
 
@@ -13527,7 +14316,7 @@ MVC（参见 模型-视图-控制器 (MVC)）
 
 > 使用对象，向命名空间添加模块
 
-`new` 关键字，构造函数 (constructors](#ch08s05.html), 构造函数的原型
+`new` 关键字，构造函数 (constructors)，构造函数的原型
 
 Node.js
 
@@ -13535,17 +14324,17 @@ Node.js
 
 > 自定义模块，创建自定义模块
 
-> 错误处理 (error handling),ch15s05.html)
+> 错误处理 (error handling)
 
 > `fs` 模块，使用 `fs` 模块读取文件
 
 > `fs.readFile` 方法，使用 `fs` 模块读取文件
 
-> `http` 模块，Hello World](#ch15s02.html)
+> `http` 模块，Hello World
 
-> `http.createServer` 方法，Hello World](#ch15s02.html)
+> `http.createServer` 方法，Hello World
 
-> 安装，安装 Node.js 和 browser-sync](#ch01s05.html)
+> 安装，安装 Node.js 和 browser-sync
 
 > `module.exports`，创建自定义模块
 
@@ -13557,17 +14346,17 @@ Node.js
 
 > `path` 模块，使用 `path` 模块
 
-> `require` 函数，Hello World](#ch15s02.html)
+> `require` 函数，Hello World
 
-> `server.listen` 方法，Hello World](#ch15s02.html)
+> `server.listen` 方法，Hello World
 
-> 启动一个 Node 服务器，Hello World](#ch15s02.html)
+> 启动一个 Node 服务器，Hello World
 
 > `ws` 模块，设置 WebSockets
 
-`NodeLists`，访问所有项目](#ch06s10.html), 进阶阅读：NodeLists 和 HTML 集合
+`NodeLists`，访问所有项目，进阶阅读：NodeLists 和 HTML 集合
 
-`normalize.css` 安装，创建样式基准](#ch03.html_se-setting-up-layout)
+`normalize.css` 安装，创建样式基准
 
 `null` 类型，进阶阅读：JavaScript 类型
 
@@ -13575,33 +14364,33 @@ Node.js
 
 ### O
 
-对象 (objects)，访问 DOM 元素](#ch06s06.html)
+对象 (objects)，访问 DOM 元素
 
-`onchange` 事件，新内容](#ch24.html_se-new-sightings)
+`onchange` 事件，新内容
 
 `<option>` 标签，添加下拉菜单
 
 `order` 弹性属性，弹性项目的排序、对齐分布和对齐
 
-`{{outlet}}` 助手，ember generate](#ch20.html_se-ember-generate), 嵌套路由
+`{{outlet}}` 助手，ember generate，嵌套路由
 
 `overflow` 属性，添加媒体查询
 
-`overflow-x` 属性，项目的水平布局](#ch04.html_se-horizontal-layout-for-thumbnails)
+`overflow-x` 属性，项目的水平布局
 
 ### P
 
 `package.json`
 
-> 关于，Node 和 npm](#ch15.html_se-node-and-npm)
+> 关于，Node 和 npm
 
-> 创建，`npm init`](ch15.html_se-npm-init)
+> 创建，`npm init`
 
-`padding`，盒模型](#ch03s04.html_se-experimenting-with-the-developer-tools)
+`padding`，盒模型
 
-`padding` 属性，盒模型](#ch03s04.html_se-experimenting-with-the-developer-tools)
+`padding` 属性，盒模型
 
-参数（在 JavaScript 函数中），通过声明参数接收参数](#ch06s07.html_idm49406919926)
+参数（在 JavaScript 函数中），通过声明参数接收参数
 
 `pattern` 属性，使用正则表达式验证
 
@@ -13609,233 +14398,394 @@ Node.js
 
 `peekRecord` 方法，进阶阅读：获取数据
 
-像素 (px)，盒模型](#ch03s04.html_se-experimenting-with-the-developer-tools)
+像素 (px)，盒模型
 
 `placeholder` 属性，显示带有占位符文本的示例输入
 
-`position: absolute` 属性，绝对定位与相对定位](#ch04s03.html)
+`position: absolute` 属性，绝对定位与相对定位
 
-`position: relative` 属性，绝对定位与相对定位](#ch04s03.html)
+`position: relative` 属性，绝对定位与相对定位
 
-`POST` 请求，RESTful Web 服务](#ch13s02.html), 使用 jQuery 的 `$.ajax` 方法
+`POST` 请求，RESTful Web 服务，使用 jQuery 的 `$.ajax` 方法
 
 Postman，进阶阅读：Postman
 
-`preventDefault`，添加提交处理器](#ch10s02.html)
+`preventDefault`，添加提交处理器
 
-原始类型，在控制台工作](#ch06s05.html), 进阶阅读：JavaScript 类型
+原始类型，在控制台工作，进阶阅读：JavaScript 类型
 
 Promises
 
-> 关于，Promises 和 Deferreds](#ch14.html_se-promise-foundation)
+> 关于，Promises 和 Deferreds
 
-> 创建，创建并返回 Promise](#ch14s06.html_se-creating-returning-promises)
+> 创建，创建并返回 Promise
 
-`prompt` 函数，提示用户名](#ch18s05.html)
+`prompt` 函数，提示用户名
 
 属性 (properties)
 
-> 关于，样式的解剖](#ch03s03.html)
+> 关于，样式的解剖
 
-> align-items，居中详情图](#ch04s02.html_idm494069756352)
+> `align-items`，居中详情图
 
+- `border`，盒模型
 
+- `cubic-bezier`，自定义计时函数
 
+- `display: block`，盒模型，让图片适应窗口，Flexbox
 
+- `display: flex`，创建 flex 容器
 
-- `border`, 盒模型
-- `cubic-bezier`, 自定义计时函数
-- `display: block`, 盒模型, 让图片适应窗口, Flexbox
-- `display: flex`, 创建 flex 容器
-- `display: inline`, 让图片适应窗口
-- `display: inline-block`, 缩略图水平布局, Flexbox
-- `display: none`, 创建隐藏详情图的样式
-- `elements`, UI 增强
-- `flex`, flex 简写属性
-- `flex-basis`, flex 简写属性
-- `flex-direction`, 更改 flex-direction
-- `flex-grow`, flex 简写属性
-- `flex-shrink`, flex 简写属性
-- `justify-content`, flex 项目的排序、对齐和对齐, 详情图居中
-- `list-style`, 调整项目之间的间距
-- `margin`, 盒模型
-- `order`, flex 项目的排序、对齐和对齐
-- `overflow`, 添加媒体查询
-- `overflow-x: auto`, 缩略图水平布局
-- `padding`, 盒模型
-- `position: absolute`, 绝对定位与相对定位
-- `position: relative`, 绝对定位与相对定位
-- `prototype`, 构造函数的原型
-- `shorthand`, 盒模型
-- `text-align`, 详情图居中
-- `text-decoration`, 样式继承
-- `text-shadow`, 绝对定位与相对定位
-- `textContent`, 编写 setDetails 函数
-- `transform`, 使用 transform 属性
-- `white-space`, 缩略图水平布局
-- `width`, 让图片适应窗口
+- `display: inline`，让图片适应窗口
 
-`prototype` 属性， 构造函数的原型
+- `display: inline-block`，缩略图水平布局，Flexbox
+
+- `display: none`，创建隐藏详情图的样式
+
+- `elements`，UI 增强
+
+- `flex`，flex 简写属性
+
+- `flex-basis`，flex 简写属性
+
+- `flex-direction`，更改 flex-direction
+
+- `flex-grow`，flex 简写属性
+
+- `flex-shrink`，flex 简写属性
+
+- `justify-content`，flex 项目的排序、对齐和对齐，详情图居中
+
+- `list-style`，调整项目之间的间距
+
+- `margin`，盒模型
+
+- `order`，flex 项目的排序、对齐和对齐
+
+- `overflow`，添加媒体查询
+
+- `overflow-x: auto`，缩略图水平布局
+
+- `padding`，盒模型
+
+- `position: absolute`，绝对定位与相对定位
+
+- `position: relative`，绝对定位与相对定位
+
+- `prototype`，构造函数的原型
+
+- `shorthand`，盒模型
+
+- `text-align`，详情图居中
+
+- `text-decoration`，样式继承
+
+- `text-shadow`，绝对定位与相对定位
+
+- `textContent`，编写 setDetails 函数
+
+- `transform`，使用 transform 属性
+
+- `white-space`，缩略图水平布局
+
+- `width`，让图片适应窗口
+
+`prototype` 属性，构造函数的原型
 
 ### 伪类
 
-- `:focus`, 为有效和无效元素设置样式
-- `:hover`, 添加 CSS 过渡
-- `:invalid`, 为有效和无效元素设置样式
-- `:required`, 为有效和无效元素设置样式
-- `about`, 添加 CSS 过渡
-- `testing in DevTools`, 在 DevTools 中测试：添加 CSS 过渡
+- `:focus`，为有效和无效元素设置样式
 
-`push` 方法， 创建聊天服务器功能
+- `:hover`，添加 CSS 过渡
 
-`PUT` 请求， RESTful Web 服务
+- `:invalid`，为有效和无效元素设置样式
+
+- `:required`，为有效和无效元素设置样式
+
+- `about`，添加 CSS 过渡
+
+- `testing in DevTools`，在 DevTools 中测试：添加 CSS 过渡
+
+`push` 方法，创建聊天服务器功能
+
+`PUT` 请求，RESTful Web 服务
 
 ### Q
-- `query` 方法， 进阶好奇者：获取数据
-- `queryRecord` 方法， 进阶好奇者：获取数据
-- `querySelector` 方法， 访问 DOM 元素
-- `querySelectorAll` 方法， 访问所有缩略图
+
+- `query` 方法，进阶好奇者：获取数据
+
+- `queryRecord` 方法，进阶好奇者：获取数据
+
+- `querySelector` 方法，访问 DOM 元素
+
+- `querySelectorAll` 方法，访问所有缩略图
 
 ### R
-- 按钮表单字段（见 `<input>` 标签](#ch01.html_idm4940678712))
-- range 滑块表单字段（见 `<input>` 标签](#ch01.html_idm4940678712))
-- 优先级（在 CSS 中）， 进阶好奇者：选择器冲突时
-- 正则表达式， 使用正则表达式验证, 验证 API
-- `rel` 属性， 链接样式表
-- 关系选择器， 关系选择器
-- `remove` 方法， 显示详情图
-- `replaced` 元素， 添加图片
-- `required` 属性， required 属性
-- `:required` 伪类， 为有效和无效元素设置样式
-- 重置 按钮（见 `<input>` 标签](#ch01.html_idm4940678712))
-- `reset` 方法， UI 增强
-- `resource` 文件， 添加图片
-- `RESTful` Web 服务， RESTful Web 服务
-- `return` 语句， 返回
-- `rgb` 和 `rgba`, 颜色
-- `route` 方法， 生成路由, 嵌套路由
-- `Router.map` 方法， 生成路由
+
+- 按钮表单字段（见 `<input>` 标签）
+
+- range 滑块表单字段（见 `<input>` 标签）
+
+- 优先级（在 CSS 中），进阶好奇者：选择器冲突时
+
+- 正则表达式，使用正则表达式验证，验证 API
+
+- `rel` 属性，链接样式表
+
+- 关系选择器，关系选择器
+
+- `remove` 方法，显示详情图
+
+- `replaced` 元素，添加图片
+
+- `required` 属性，required 属性
+
+- `:required` 伪类，为有效和无效元素设置样式
+
+- 重置按钮（见 `<input>` 标签）
+
+- `reset` 方法，UI 增强
+
+- `resource` 文件，添加图片
+
+- `RESTful` Web 服务，RESTful Web 服务
+
+- `return` 语句，返回
+
+- `rgb` 和 `rgba`，颜色
+
+- `route` 方法，生成路由，嵌套路由
+
+- `Router.map` 方法，生成路由
 
 ### S
-- `save` 方法， 进阶好奇者：保存和销毁数据
-- `<script>` 标签， 准备锚点标签
-- `scrolling`, 缩略图水平布局
-- `<section>` 标签， 创建顺序
-- `<select>` 标签， 添加下拉菜单
+
+- `save` 方法，进阶好奇者：保存和销毁数据
+
+- `<script>` 标签，准备锚点标签
+
+- `scrolling`，缩略图水平布局
+
+- `<section>` 标签，创建顺序
+
+- `<select>` 标签，添加下拉菜单
 
 ### 选择器（CSS 中）
-- `about`, 样式的结构
-- `attribute` 选择器， 样式继承
-- `child` 选择器， 关系选择器
-- `class` 选择器， 你的首次样式
-- `descendent` 选择器， 关系选择器
-- `element` 选择器， 样式继承
-- `grouping` 选择器， 创建 flex 容器
-- `ID` 选择器， 进阶好奇者：选择器冲突时
-- 使用伪类修改， 添加 CSS 过渡
-- `relationship` 选择器， 关系选择器
-- `sibling` 选择器， 关系选择器
-- `specificity`（优先级）， 样式的结构, 进阶好奇者：选择器冲突时
-- 优先级对比顺序， 创建隐藏详情图的样式
-- 自闭合标签， 添加图片
-- `serialize` 方法， 变换
-- `sessionStorage` 与 `localStorage`, 用户会话存储
-- `set` 方法， 获取和设置
-- `setAttribute` 方法， 访问 DOM 元素
-- `setCustomValidity` 方法， 触发有效性检查
-- `setTimeout` 方法， 使用 JavaScript 触发过渡
-- `setupController` 方法， 分配模型, beforeModel, 进阶好奇者：setupController 和 afterModel
 
+- `about`，样式的结构
 
+- `attribute` 选择器，样式继承
 
+- `child` 选择器，关系选择器
 
+- `class` 选择器，你的首次样式
+
+- `descendent` 选择器，关系选择器
+
+- `element` 选择器，样式继承
+
+- `grouping` 选择器，创建 flex 容器
+
+- `ID` 选择器，进阶好奇者：选择器冲突时
+
+- 使用伪类修改，添加 CSS 过渡
+
+- `relationship` 选择器，关系选择器
+
+- `sibling` 选择器，关系选择器
+
+- `specificity`（优先级），样式的结构，进阶好奇者：选择器冲突时
+
+- 优先级对比顺序，创建隐藏详情图的样式
+
+- 自闭合标签，添加图片
+
+- `serialize` 方法，变换
+
+- `sessionStorage` 与 `localStorage`，用户会话存储
+
+- `set` 方法，获取和设置
+
+- `setAttribute` 方法，访问 DOM 元素
+
+- `setCustomValidity` 方法，触发有效性检查
+
+- `setTimeout` 方法，使用 JavaScript 触发过渡
+
+- `setupController` 方法，分配模型，beforeModel，进阶好奇者：setupController 和 afterModel
 
 - 链接，链接样式表
+
 - 用户代理样式表，盒模型
+
 - 样式规则（在 CSS 中），样式解析
+
 - 子类，用户会话存储
-- 提交按钮（参见 `<input>` 标签](#ix01.html_pri_idm494067876912))
+
+- 提交按钮（参见 `<input>` 标签）
+
 - 提交事件，添加 submit 处理器
+
 - super 方法，用户会话存储
 
 ### T
-- 模板字符串，使用 Gravatars
-- 终端命令
-    - 关于，命令行快速入门
-    - 切换目录，切换目录
-    - 创建目录，创建目录
-    - 使用 npm 安装工具，安装 Node.js 和 browser-sync
-    - 列出文件，在目录中列出文件
-    - 退出程序，退出程序
-    - 显示当前目录，查找所在的目录
-    - 使用管理员权限，获取管理员权限
-- 文本输入表单字段（参见 `<input>` 标签](#ix01.html_pri_idm494067876912))
-- text-align 属性，居中详情图片
-- text-decoration 属性，样式继承
-- text-shadow，绝对与相对定位
-- textContent 属性，编写 setDetails 函数
-- then 方法，通过 then 注册回调, 在仅限回调的 API 使用 Deferred
-- `this` 关键字
-    - 关于，构造函数, 构造函数的原型
-    - 在回调函数中，使用 DevTools 定位 bug
-    - 使用 bind 设置值，通过 bind 设置 this 的值
-    - 使用 call 设置值，通过 call 操作 this
-- 计时函数
-    - 关于，使用计时函数, 自定义计时函数
-    - 自定义，自定义计时函数
-    - ease-(in/out/in-out)，自定义计时函数
-    - linear（线性的），使用计时函数, 自定义计时函数
-- <title> 标签，初始 HTML
-- transform 属性，使用 transform 属性
-- transition 声明，添加 CSS 过渡
-- transitionToRoute 方法，新发现
-- type 属性，通过单选按钮提供选项
-- 类型强制转换，监听 keypress 事件, 进阶阅读：类型转换规则
-- 类型
-    - Boolean（布尔型），进阶：JavaScript 类型
-    - compound（复合型或复杂类型），进阶：JavaScript 类型
-    - null，进阶：JavaScript 类型
-    - number（数字型），进阶：JavaScript 类型
-    - primitive（原始类型），在控制台中中使用, 进阶：JavaScript 类型
-    - string（字符串型），进阶：JavaScript 类型
-    - undefined（未定义），进阶：JavaScript 类型
-- <ul> 标签，创建文档
-- Uncaught TypeError（未捕获的类型错误），使用 DevTools 定位 bug
-- `undefined` 类型，进阶：JavaScript 类型
-- <ul> 标签，测试 WebSocket 服务器
-- URL 路由
-    - 关于，路由
-    - 与 模型，安装 Ember
-- 用户代理样式表，盒模型
-- 验证
-    - 处理，创建文档
-    - 通过，测试 WebSocket 服务器
-    - 通过，创建文档
-- 变量
-    - 关于，声明
-    - 声明，[ch06s04.html]
-    - 处理，事件
-- MVC 中的视图，介绍 Ember
-- Visual Studio Code，替代 Atom
-- WebAssembly，编译为 JavaScript
-- Watchify
-    - 关于，JavaScript 构建工具
-    - 安装，JavaScript 构建工具
-- Watchman，安装 Ember
-- Web Storage APIs，用户会话存储
-- WebSocket
-    - 关于，使用 WebSocket 进行实时通信](#ch16.html)
-    - 处理连接，设置 WebSocket
-    - 安装，设置 WebSocket
-    - `npm ws` 模块，设置 WebSocket
-    - `onopen` 属性，处理事件并发送消息
-    - `socket.io`，进阶：socket.io WebSocket 库
-- white-space 属性，缩图的水平布局
-- width 属性，图片适应窗口
-- Windows 命令行，命令行快速入门
-- `wscat` 模块，测试 WebSocket 服务器
-### X
-- `{{x-select}}` 组件，新发现
-### Y
-- `{{yield}}` 辅助器，迭代项作为组件
 
+- 模板字符串，使用 Gravatars
+
+- 终端命令
+
+    - 关于，命令行快速入门
+
+    - 切换目录，切换目录
+
+    - 创建目录，创建目录
+
+    - 使用 npm 安装工具，安装 Node.js 和 browser-sync
+
+    - 列出文件，在目录中列出文件
+
+    - 退出程序，退出程序
+
+    - 显示当前目录，查找所在的目录
+
+    - 使用管理员权限，获取管理员权限
+
+- 文本输入表单字段（参见 `<input>` 标签）
+
+- `text-align` 属性，居中详情图片
+
+- `text-decoration` 属性，样式继承
+
+- `text-shadow`，绝对与相对定位
+
+- `textContent` 属性，编写 setDetails 函数
+
+- `then` 方法，通过 then 注册回调，在仅限回调的 API 使用 Deferred
+
+- `this` 关键字
+
+    - 关于，构造函数，构造函数的原型
+
+    - 在回调函数中，使用 DevTools 定位 bug
+
+    - 使用 bind 设置值，通过 bind 设置 this 的值
+
+    - 使用 call 设置值，通过 call 操作 this
+
+- 计时函数
+
+    - 关于，使用计时函数，自定义计时函数
+
+    - 自定义，自定义计时函数
+
+    - ease-(in/out/in-out)，自定义计时函数
+
+    - linear（线性的），使用计时函数，自定义计时函数
+
+- `<title>` 标签，初始 HTML
+
+- `transform` 属性，使用 transform 属性
+
+- `transition` 声明，添加 CSS 过渡
+
+- `transitionToRoute` 方法，新发现
+
+- `type` 属性，通过单选按钮提供选项
+
+- 类型强制转换，监听 keypress 事件，进阶阅读：类型转换规则
+
+- 类型
+
+    - Boolean（布尔型），进阶：JavaScript 类型
+
+    - compound（复合型或复杂类型），进阶：JavaScript 类型
+
+    - null，进阶：JavaScript 类型
+
+    - number（数字型），进阶：JavaScript 类型
+
+    - primitive（原始类型），在控制台中中使用，进阶：JavaScript 类型
+
+    - string（字符串型），进阶：JavaScript 类型
+
+    - undefined（未定义），进阶：JavaScript 类型
+
+- `<ul>` 标签，创建文档
+
+- Uncaught TypeError（未捕获的类型错误），使用 DevTools 定位 bug
+
+- `undefined` 类型，进阶：JavaScript 类型
+
+- `<ul>` 标签，测试 WebSocket 服务器
+
+- URL 路由
+
+    - 关于，路由
+
+
+
+- 与模型，安装 Ember
+
+- 用户代理样式表，盒模型
+
+- 验证
+
+    - 处理，创建文档
+
+    - 通过，测试 WebSocket 服务器
+
+    - 通过，创建文档
+
+- 变量
+
+    - 关于，声明
+
+    - 声明，`ch06s04.html`
+
+    - 处理，事件
+
+- MVC 中的视图，介绍 Ember
+
+- Visual Studio Code，替代 Atom
+
+- WebAssembly，编译为 JavaScript
+
+- Watchify
+
+    - 关于，JavaScript 构建工具
+
+    - 安装，JavaScript 构建工具
+
+- Watchman，安装 Ember
+
+- Web Storage APIs，用户会话存储
+
+- WebSocket
+
+    - 关于，使用 WebSocket 进行实时通信](#ch16.html)
+
+    - 处理连接，设置 WebSocket
+
+    - 安装，设置 WebSocket
+
+    - `npm ws` 模块，设置 WebSocket
+
+    - `onopen` 属性，处理事件并发送消息
+
+    - `socket.io`，进阶：socket.io WebSocket 库
+
+- `white-space` 属性，缩图的水平布局
+
+- `width` 属性，图片适应窗口
+
+- Windows 命令行，命令行快速入门
+
+- `wscat` 模块，测试 WebSocket 服务器
+
+### X
+
+- `{{x-select}}` 组件，新发现
+
+### Y
+
+- `{{yield}}` 辅助器，迭代项作为组件

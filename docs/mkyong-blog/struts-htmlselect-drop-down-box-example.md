@@ -1,23 +1,27 @@
-# Struts <select>下拉框示例</select>
+
+
+# Struts `<select>`下拉框示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts/struts-htmlselect-drop-down-box-example/>
 
-Download this Struts select option (drop down box) example – [Struts-Select-Option-Example.zip](http://web.archive.org/web/20190224154622/http://www.mkyong.com/wp-content/uploads/2010/04/Struts-Select-Option-Example.zip)
+下载此 Struts 选择选项（下拉框）示例 – [Struts-Select-Option-Example.zip](http://web.archive.org/web/20190224154622/http://www.mkyong.com/wp-content/uploads/2010/04/Struts-Select-Option-Example.zip)
 
-在这个 Struts 示例中，您将学习如何用 Struts `<select>`和`<option>`标签创建一个 HTML 选择选项(下拉框)。`<select>`标签用于创建一个选择列表(下拉列表)；而 select 元素中的`<option>`标签定义了列表中的可用选项。
+在这个 Struts 示例中，您将学习如何用 Struts `<select>`和`<option>`标签创建一个 HTML 选择选项（下拉框）。`<select>`标签用于创建一个选择列表（下拉列表）；而 select 元素中的`<option>`标签定义了列表中的可用选项。
 
-## 1.文件夹结构
+## 1. 文件夹结构
 
 这是 Maven 创建的最终项目结构。请创建相应的文件夹。
 
-![Struts-select-option-folder](img/2a93c80b185be70dcb9191d68ba817a2.png "Struts-select-option-folder") ## 2.动作类
+![Struts-select-option-folder](img/2a93c80b185be70dcb9191d68ba817a2.png "Struts-select-option-folder")
+
+## 2. 动作类
 
 创建一个 Action 类，除了转发请求什么也不做。
 
-**html 选择选项 Action.java**
+**HtmlSelectOptionAction.java**
 
 ```java
- package com.mkyong.common.action;
+package com.mkyong.common.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -40,33 +44,33 @@ public class HtmlSelectOptionAction extends Action{
 	  return mapping.findForward("success");
 	}
 
-} 
+}
 ```
 
- ## 3.属性文件
+## 3. 属性文件
 
 创建一个属性文件，并声明错误和标签消息。
 
-**公共属性**
+**Common.properties**
 
 ```java
- #error message
+#error message
 error.common.html.select.required = Please select a year.
 
 #label message
 label.common.html.select.name = Select a year 
 label.common.html.select.button.submit = Submit
-label.common.html.select.button.reset = Reset 
+label.common.html.select.button.reset = Reset
 ```
 
-## 4.动作形式
+## 4. 动作表单
 
-创建一个 ActionForm，包含一个 year 变量来保存选择选项值。
+创建一个 ActionForm，包含一个`year`变量来保存选择选项值。
 
 **HtmlSelectOptionForm.java**
 
 ```java
- package com.mkyong.common.form;
+package com.mkyong.common.form;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -108,12 +112,12 @@ public class HtmlSelectOptionForm extends ActionForm{
 		year = "";
 	}
 
-} 
+}
 ```
 
-## 5.JSP 页面
+## 5. JSP 页面
 
-使用 Struts 的 HTML 标签<select>和<option>创建一个 HTML 下拉列表。</option></select>
+使用 Struts 的 HTML 标签`<select>`和`<option>`创建一个 HTML 下拉列表。
 
 **select.jsp**
 
@@ -125,9 +129,25 @@ Struts html:选择示例
 
 ```
 
-<form action="/Select"><messages id="err_name" property="common.select.err"></messages><message key="label.common.html.select.name">: <select property="year"><option value="">-- None --</option> <option value="1980">1980</option> <option value="1981">1981</option> <option value="1982">1982</option> <option value="1983">1983</option> <option value="1984">1984</option> <option value="1985">1985</option></select></message><submit><message key="label.common.html.select.button.submit"></message></submit><reset><message key="label.common.html.select.button.reset"></message></reset></form>
+```html
+<html:form action="/Select">
+  <html:errors property="common.select.err"/>
+  <bean:message key="label.common.html.select.name"/>:
+  <html:select property="year">
+    <html:option value="">-- None --</html:option>
+    <html:option value="1980">1980</html:option>
+    <html:option value="1981">1981</html:option>
+    <html:option value="1982">1982</html:option>
+    <html:option value="1983">1983</html:option>
+    <html:option value="1984">1984</html:option>
+    <html:option value="1985">1985</html:option>
+  </html:select>
+  <html:submit><bean:message key="label.common.html.select.button.submit"/></html:submit>
+  <html:reset><bean:message key="label.common.html.select.button.reset"/></html:reset>
+</html:form>
+```
 
-从 htmlSelectOptionForm 表单中获取选定的下拉框值并显示它
+从`htmlSelectOptionForm`表单中获取选定的下拉框值并显示它。
 
 **display.jsp**
 
@@ -135,15 +155,15 @@ Struts html:选择示例
 <%@taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
 
 您选择的年份是:
-
+<bean:write name="htmlSelectOptionForm" property="year"/>
 ```
 
-## 6.struts-config.xml
+## 6. struts-config.xml
 
 创建一个 Struts 配置文件，并将它们链接在一起。
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts-config PUBLIC 
 "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" 
 "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
@@ -179,15 +199,15 @@ Struts html:选择示例
 	<message-resources
 		parameter="com.mkyong.common.properties.Common" />
 
-</struts-config> 
+</struts-config>
 ```
 
-## 7.web.xml
+## 7. web.xml
 
-最后一步，创建一个 web.xml 并集成 Struts 框架。
+最后一步，创建一个`web.xml`并集成 Struts 框架。
 
-```java
- <!DOCTYPE web-app PUBLIC
+```xml
+<!DOCTYPE web-app PUBLIC
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
@@ -213,26 +233,22 @@ Struts html:选择示例
        <url-pattern>*.do</url-pattern>
   </servlet-mapping>
 
-</web-app> 
+</web-app>
 ```
 
-访问它
+访问它：
 
 > http://localhost:8080/struts example/select page . do
 
 ![Struts-select-option-example1](img/3b58e680f0728b031eaac135e8480327.png "Struts-select-option-example1")
 
-选择一年并按下提交按钮，它将转发到
+选择一年并按下提交按钮，它将转发到：
 
 > http://localhost:8080/struts example/select . do
 
 并显示选定的下拉框值。
 
-![Struts-select-option-example2](img/7447ce9dcf82e07d1757d85bdb49766c.png "Struts-select-option-example2")[dropdown](http://web.archive.org/web/20190224154622/http://www.mkyong.com/tag/dropdown/) [struts](http://web.archive.org/web/20190224154622/http://www.mkyong.com/tag/struts/)
+![Struts-select-option-example2](img/7447ce9dcf82e07d1757d85bdb49766c.png "Struts-select-option-example2")
 
-
-
-
-
-
+[dropdown](http://web.archive.org/web/20190224154622/http://www.mkyong.com/tag/dropdown/) [struts](http://web.archive.org/web/20190224154622/http://www.mkyong.com/tag/struts/)
 

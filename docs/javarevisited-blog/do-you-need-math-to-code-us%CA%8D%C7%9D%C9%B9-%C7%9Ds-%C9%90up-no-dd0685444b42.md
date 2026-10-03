@@ -1,3 +1,4 @@
+
 # 为什么你需要数学来编码
 
 > 原文：<https://medium.com/javarevisited/do-you-need-math-to-code-us%CA%8D%C7%9D%C9%B9-%C7%9Ds-%C9%90up-no-dd0685444b42?source=collection_archive---------0----------------------->

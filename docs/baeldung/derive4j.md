@@ -1,22 +1,23 @@
+
 # Derive4J 简介
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/derive4j>
 
-## 1.介绍
+## 1. 介绍
 
-Derive4J 是一个注释处理器，支持 Java 8 中的各种功能概念。
+`Derive4J`是一个注释处理器，支持 Java 8 中的各种功能概念。
 
-在本教程中，我们将介绍 Derive4J 和该框架支持的最重要的概念:
+在本教程中，我们将介绍`Derive4J`和该框架支持的最重要的概念:
 
 *   代数数据类型
 *   结构模式匹配
 *   一流的懒惰
 
-## 2.Maven 依赖性
+## 2. Maven 依赖性
 
-要使用 Derive4J，我们需要将[依赖项](https://web.archive.org/web/20221128043333/https://search.maven.org/search?q=g:org.derive4j%20AND%20a:derive4j)包含到我们的项目中:
+要使用`Derive4J`，我们需要将[依赖项](https://web.archive.org/web/20221128043333/https://search.maven.org/search?q=g:org.derive4j%20AND%20a:derive4j)包含到我们的项目中:
 
-```java
+```xml
 <dependency>
     <groupId>org.derive4j</groupId>
     <artifactId>derive4j</artifactId>
@@ -25,9 +26,9 @@ Derive4J 是一个注释处理器，支持 Java 8 中的各种功能概念。
 </dependency>
 ```
 
-## 3.代数数据类型
+## 3. 代数数据类型
 
-### 3.1.描述
+### 3.1. 描述
 
 代数数据类型(ADT)是一种复合类型——它们是其他类型或泛型的组合。
 
@@ -38,13 +39,13 @@ ADT 通常分为两大类:
 
 代数数据类型默认出现在许多语言中，比如 Haskell 和 Scala。
 
-### 3.2.总和类型
+### 3.2. 总和类型
 
 **Sum 是表示逻辑 OR 运算的数据类型。**这意味着它可以是一件事或另一件事，但不能两者都是。简单来说，sum 类型就是一组不同的 cases。“sum”这个名称来源于这样一个事实，即不同值的总数就是事例的总数。
 
-`Enum `是 Java 中最接近 sum 类型的东西。`Enum`有一组可能的值，但一次只能有一个。但是，**在 Java 中我们不能将任何额外的数据与`Enum`相关联，这是代数数据类型相对于`Enum`的主要优势。**
+`Enum`是 Java 中最接近 sum 类型的东西。`Enum`有一组可能的值，但一次只能有一个。但是，**在 Java 中我们不能将任何额外的数据与`Enum`相关联，这是代数数据类型相对于`Enum`的主要优势。**
 
-### 3.3.产品类型
+### 3.3. 产品类型
 
 **Product 是表示逻辑 AND 运算的数据类型。**是几个值的组合。
 
@@ -52,13 +53,13 @@ ADT 通常分为两大类:
 
 我们可以在这篇维基百科文章中找到更多关于 ADTs [的信息。](https://web.archive.org/web/20221128043333/https://en.wikipedia.org/wiki/Algebraic_data_type)
 
-### 3.4.使用
+### 3.4. 使用
 
-常用的代数数据类型之一是`Either. `,我们可以把`Either`看作是一个更复杂的`Optional`,当有可能丢失值或者操作可能导致异常时，可以使用它。
+常用的代数数据类型之一是`Either`。我们可以把`Either`看作是一个更复杂的`Optional`，当有可能丢失值或者操作可能导致异常时，可以使用它。
 
-我们需要用至少一个抽象方法来注释一个`abstract class`或`interface`，Derive4J 将使用该方法来生成我们的 ADT 的结构。
+我们需要用至少一个抽象方法来注释一个`abstract class`或`interface`，`Derive4J`将使用该方法来生成我们的 ADT 的结构。
 
-为了在 Derive4J 中创建`Either` 数据类型，我们需要创建一个`interface`:
+为了在`Derive4J`中创建`Either`数据类型，我们需要创建一个`interface`:
 
 ```java
 @Data
@@ -67,7 +68,7 @@ interface Either<A, B> {
 }
 ```
 
-我们的`interface`用`@Data`注释，这将允许 Derive4J 为我们生成适当的代码。生成的代码包含工厂方法、惰性构造函数和各种其他方法。
+我们的`interface`用`@Data`注释，这将允许`Derive4J`为我们生成适当的代码。生成的代码包含工厂方法、惰性构造函数和各种其他方法。
 
 默认情况下，生成的代码获得带注释的名称`class`，但是是复数形式。但是，有可能通过`inClass`参数进行配置。
 
@@ -83,7 +84,7 @@ public void testEitherIsCreatedFromRight() {
 }
 ```
 
-我们还可以使用生成的`match() `方法来执行一个函数，这取决于`Either` 的哪一侧存在:
+我们还可以使用生成的`match()`方法来执行一个函数，这取决于`Either`的哪一侧存在:
 
 ```java
 public void testEitherIsMatchedWithRight() {
@@ -96,7 +97,7 @@ public void testEitherIsMatchedWithRight() {
 }
 ```
 
-## 4.模式匹配
+## 4. 模式匹配
 
 通过使用代数数据类型实现的特性之一是**模式匹配。**
 
@@ -109,7 +110,7 @@ public void testEitherIsMatchedWithRight() {
 *   删除
 *   放
 
-让我们将我们的请求类建模为 Derive4J 中的 ADT，从`HTTPRequest`接口开始:
+让我们将我们的请求类建模为`Derive4J`中的 ADT，从`HTTPRequest`接口开始:
 
 ```java
 @Data
@@ -127,9 +128,9 @@ interface HTTPRequest {
 
 生成的类`HttpRequests`(注意复数形式)，现在将允许我们基于请求的类型执行模式匹配。
 
-为此，我们将创建一个非常简单的`HTTPServer `类，它将根据请求的类型用不同的`Status`进行响应。
+为此，我们将创建一个非常简单的`HTTPServer`类，它将根据请求的类型用不同的`Status`进行响应。
 
-首先，让我们创建一个简单的`HTTPResponse `类，它将作为服务器对客户端的响应:
+首先，让我们创建一个简单的`HTTPResponse`类，它将作为服务器对客户端的响应:
 
 ```java
 public class HTTPResponse {
@@ -162,7 +163,7 @@ public class HTTPServer {
 }
 ```
 
-我们的`class`的`acceptRequest() `方法对请求的类型使用模式匹配，并将根据请求的类型返回不同的响应:
+我们的`class`的`acceptRequest()`方法对请求的类型使用模式匹配，并将根据请求的类型返回不同的响应:
 
 ```java
 @Test
@@ -175,9 +176,9 @@ public void whenRequestReachesServer_thenProperResponseIsReturned() {
 }
 ```
 
-## 5.一流的懒惰
+## 5. 一流的懒惰
 
-Derive4J 允许我们引入惰性的概念，这意味着我们的对象在我们对它们执行一个操作之前不会被初始化。让我们将`interface`声明为`LazyRequest `，并将生成的类配置为命名为`LazyRequestImpl`:
+`Derive4J`允许我们引入惰性的概念，这意味着我们的对象在我们对它们执行一个操作之前不会被初始化。让我们将`interface`声明为`LazyRequest`，并将生成的类配置为命名为`LazyRequestImpl`:
 
 ```java
 @Data(value = @Derive(
@@ -218,10 +219,10 @@ class LazyRequestSupplier implements Supplier<LazyRequest> {
 
 我们可以在 Scala 文档中找到更多关于一流懒惰和例子[的信息。](https://web.archive.org/web/20221128043333/https://www.scala-lang.org/blog/2017/11/28/view-based-collections.html)
 
-## 6.结论
+## 6. 结论
 
-在本教程中，我们介绍了 Derive4J 库，并使用它来实现一些函数概念，如代数数据类型和模式匹配，这些在 Java 中通常是不可用的。
+在本教程中，我们介绍了`Derive4J`库，并使用它来实现一些函数概念，如代数数据类型和模式匹配，这些在 Java 中通常是不可用的。
 
-我们可以在官方 Derive4J 文档中找到关于该库的更多信息[。](https://web.archive.org/web/20221128043333/https://github.com/derive4j/derive4j)
+我们可以在这篇官方`Derive4J`文档中找到关于该库的更多信息[。](https://web.archive.org/web/20221128043333/https://github.com/derive4j/derive4j)
 
 和往常一样，所有代码样本都可以在 GitHub 上找到[。](https://web.archive.org/web/20221128043333/https://github.com/eugenp/tutorials/tree/master/libraries-data-2)

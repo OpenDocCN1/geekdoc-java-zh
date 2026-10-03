@@ -1,3 +1,4 @@
+
 # Spring REST API 异常处理与 GraphQL API 异常处理
 
 > 原文：<https://medium.com/javarevisited/spring-rest-api-exception-handling-vs-graphql-api-exception-handling-2a8486f2c15f?source=collection_archive---------1----------------------->

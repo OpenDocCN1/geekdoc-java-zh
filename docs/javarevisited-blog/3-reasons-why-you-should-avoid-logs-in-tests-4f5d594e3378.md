@@ -1,3 +1,4 @@
+
 # 测试中应该避免日志的 3 个原因
 
 > 原文：<https://medium.com/javarevisited/3-reasons-why-you-should-avoid-logs-in-tests-4f5d594e3378?source=collection_archive---------1----------------------->

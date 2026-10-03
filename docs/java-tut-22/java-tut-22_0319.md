@@ -1,3 +1,4 @@
+
 # 打包自包含应用程序的先决条件
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/selfContainedApps/prereqs.html`](https://docs.oracle.com/javase/tutorial/deployment/selfContainedApps/prereqs.html)
@@ -12,5 +13,5 @@
 | Windows | MSI | WiX Toolset 3.8 或更高版本 |
 | Linux | RPM | RPMBuild |
 | Linux | DEB | Debian 打包工具 |
-| OS X | DMG |   |
-| OS X | PKG |   |
+| OS X | DMG |  |
+| OS X | PKG |  |

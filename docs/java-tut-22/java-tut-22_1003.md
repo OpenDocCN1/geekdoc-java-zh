@@ -1,3 +1,4 @@
+
 # 安全性
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/ldap/security.html`](https://docs.oracle.com/javase/tutorial/jndi/ldap/security.html)

@@ -1,3 +1,4 @@
+
 # 用 Java 将 RGB 图像转换成灰度图像
 
 > 原文：<https://medium.com/javarevisited/converting-rgb-image-to-the-grayscale-image-in-java-9e1edc5bd6e7?source=collection_archive---------0----------------------->

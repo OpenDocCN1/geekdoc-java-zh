@@ -1,30 +1,15 @@
-# Javascript：从初学者到专家的 Javascript 编程
 
-
-
-
-
-
+# JavaScript：从初学者到专家的 JavaScript 编程
 
 *Nick Goddard*
-
-
-
-
-
-
-
-
-
-
 
 # 第1章
 
 ## JavaScript 语言简介
 
-欢迎来到 JavaScript 世界，它由 Brendan Eich 仍然是目前最常用的解释型、跨平台开源脚本语言。在本教程系列中，我们将通过实际示例学习 JavaScript。在开始之前，让我们先回顾一些基础知识。
+欢迎来到 JavaScript 世界，它由 Brendan Eich 创建，仍然是目前最常用的解释型、跨平台开源脚本语言。在本教程系列中，我们将通过实际示例学习 JavaScript。在开始之前，让我们先回顾一些基础知识。
 
-JavaScript 是一种主要用于 Web 编程的 OOP 脚本语言。它负责让网页交互；简单来说，“它告诉网页该做什么”。就像 HTML 定义网页内容、CSS 定义布局一样，JavaScript 则让网页正常工作。JavaScript 程序是按照编写的顺序执行的指令集，因此在编码时，我们需要注意逻辑顺序。不要混淆 Java 和 JavaScript，它们在设计上是两种不同的语言，但它们的标准库和语法是相同的。
+JavaScript 是一种主要用于 Web 编程的 OOP 脚本语言。它负责让网页交互；简单来说，“它告诉网页该做什么”。就像 HTML 定义网页内容、CSS 定义布局一样，JavaScript 则让网页正常工作。JavaScript 程序是按照编写的顺序执行的指令集，因此在编码时，我们需要注意逻辑顺序。不要混淆 Java 和 JavaScript，它们在设计上是两种不同的语言，但它们的标准库和语法是相似的。
 
 现在，让我们学习如何在计算机上安装这种神奇语言并编写我们的第一个 JavaScript 程序。
 
@@ -36,27 +21,27 @@ JavaScript 是一种主要用于 Web 编程的 OOP 脚本语言。它负责让�
 
 - 从下方链接下载 Eclipse。选择最新的稳定版 Eclipse，如果你的机器是 64 位的，请选择 64 位的 Eclipse。本教程使用的是 Mars.1 版本。
 
-https://eclipse.org/downloads
+  https://eclipse.org/downloads
 
-- 点击 eclipse.exe 打开 Eclipse，它将要求如下所示选择一个本地目录作为工作空间。
+- 点击 `eclipse.exe` 打开 Eclipse，它将要求如下所示选择一个本地目录作为工作空间。
 
 - 在任何可用驱动器上选择或创建一个目录，点击 OK 按钮启动 Eclipse。
 
-![](img/80ff2aec61ff33d32cd503fad02658a7_9_0.png)
+  ![](img/80ff2aec61ff33d32cd503fad02658a7_9_0.png)
 
-- 在 Eclipse 中导航到 File -> New -> Static Web Project。点击下方链接。
+- 在 Eclipse 中导航到 `File -> New -> Static Web Project`。点击下方链接。
 
 - 会弹出一个对话框要求输入项目名称。请输入项目名称并点击下方的“Finish”按钮。
 
-![](img/80ff2aec61ff33d32cd503fad02658a7_11_0.png)
+  ![](img/80ff2aec61ff33d32cd503fad02658a7_11_0.png)
 
-- 在 Eclipse 的左侧（项目资源管理器），展开项目目录，并右键点击“WebContent”文件夹。要在当前项目中添加 HTML 文件，如下所示导航到 New -> HTML File。
+- 在 Eclipse 的左侧（项目资源管理器），展开项目目录，并右键点击“WebContent”文件夹。要在当前项目中添加 HTML 文件，如下所示导航到 `New -> HTML File`。
 
-会弹出一个对话框要求输入文件名。请输入文件名并点击下方的“Finish”按钮。这将一个 HTML 文件添加到当前的静态 Web 项目中。
+  会弹出一个对话框要求输入文件名。请输入文件名并点击下方的“Finish”按钮。这将一个 HTML 文件添加到当前的静态 Web 项目中。
 
-![](img/80ff2aec61ff33d32cd503fad02658a7_12_0.png)
+  ![](img/80ff2aec61ff33d32cd503fad02658a7_12_0.png)
 
-![](img/80ff2aec61ff33d32cd503fad02658a7_13_0.png)
+  ![](img/80ff2aec61ff33d32cd503fad02658a7_13_0.png)
 
 此时，你已成功完成 JavaScript 编程的开发设置。在下一章，我们将使用此设置开发第一个 JavaScript 程序。
 
@@ -70,13 +55,12 @@ JavaScript 是一种脚本语言，可以注入网页中任何位置的 `<script
 
 在解析网页上的标记文本（HTML）时，当浏览器遇到 `<script>` 标签，它开始解释这些标签（直到 `</script>`）之间的所有文本。标签接受以下两个属性：
 
-Language：该属性指定我们使用的脚本类型。对于 JavaScript，值为“javascript”。在最新的 HTML 版本中，该属性已废弃。
-
-Type：该属性指示正在使用的脚本类型，对于 JavaScript，值设置为“text/javascript”。
+- **Language**：该属性指定我们使用的脚本类型。对于 JavaScript，值为“javascript”。在最新的 HTML 版本中，该属性已废弃。
+- **Type**：该属性指示正在使用的脚本类型，对于 JavaScript，值设置为“text/javascript”。
 
 ## 我的第一个 JavaScript 程序
 
-在上一章中，我们创建了一个 HTML 文件（MyJavaScriptProgram.html）。让我们用它来编写第一个 JavaScript 程序，如下所示：
+在上一章中，我们创建了一个 HTML 文件（`MyJavaScriptProgram.html`）。让我们用它来编写第一个 JavaScript 程序，如下所示：
 
 ```html
 <!DOCTYPE html>
@@ -93,7 +77,7 @@ document.write("Welcome to JavaScript First Program");
 </html>
 ```
 
-## JavaScript 代码解释 <body> ...
+## JavaScript 代码解释 `<body> ...`
 
 在这里，我们将 JavaScript 代码注入到 HTML 的 `<body> ... </body>` 标签之间。在 JavaScript 代码/脚本中，我们首先声明了之前讨论过的两个属性，然后通过 `document` 对象在网页上写入“Welcome to JavaScript First Program”消息。
 
@@ -109,9 +93,7 @@ document.write("Welcome to JavaScript First Program");
 
 ### 可选分号
 
-
-
-通常，所有的 JavaScript 语句都以分号结尾。但当每个 JavaScript 语句都放置在单独的一运行时，这些分号是可选的。在每个 JavaScript 语句的末尾使用分号被认为良好的编程习惯。
+通常，所有的 JavaScript 语句都以分号结尾。但当每个 JavaScript 语句都放置在单独的一行时，这些分号是可选的。在每个 JavaScript 语句的末尾使用分号被认为良好的编程习惯。
 
 ## 大小写敏感
 
@@ -123,14 +105,14 @@ JavaScript 语言是一种大小写敏感的语言。这意味着，关键字、
 
 - 单行注释声明为 `//`（双斜杠）。
 - 多行注释声明为 `/* 多行中的 JavaScript 语句 */`。它也适用于单行注释。
-- 它还能识别 HTML 注释（起始序列）`<!--`。JavaScript 将其视为单行注释，就像处理 // 注释一样。
+- 它还能识别 HTML 注释（起始序列）`<!--`。JavaScript 将其视为单行注释，就像处理 `//` 注释一样。
 - HTML 的结束序列 `-->` 不被 JavaScript 识别，因此应该写成 `//->`。
 
 以下是一个涵盖各种 JavaScript 注释的示例。
 
-```
+```html
 <!DOCTYPE html>
-<html
+<html>
 <head>
 <meta charset="ISO-8859-1">
 <title>JavaScript Comments</title>
@@ -148,7 +130,7 @@ JavaScript 语言是一种大小写敏感的语言。这意味着，关键字、
 </html>
 ```
 
-输出
+### 输出
 
 当我们执行上述 HTML 程序时，输出将是以下内容（空白），因为 JavaScript 解释器忽略了所有的注释。
 
@@ -156,7 +138,7 @@ JavaScript 语言是一种大小写敏感的语言。这意味着，关键字、
 
 ## JavaScript 语法
 
-和其他任何其他编程语言一样，JavaScript 语法有一套特定的规则来构建它们。
+和其他任何编程语言一样，JavaScript 语法有一套特定的规则来构建它们。
 
 ## JavaScript 中的程序
 
@@ -166,9 +148,9 @@ JavaScript 是一种基于对象的编程语言。
 
 JavaScript 语句通常用分号分隔，然而在语句末尾放置分号是可选的。
 
-```
+```html
 <!DOCTYPE html>
-<html
+<html>
 <head>
 <meta charset="ISO-8859-1">
 <title>JavaScript Syntax</title>
@@ -230,9 +212,8 @@ JavaScript 语言使用 `var` 关键字来声明变量。
 
 以下是 JavaScript 语言中使用的运算符。
 
-**赋值运算符 (=)** 用于给变量赋值。
-
-**算术运算符 (+-\*)** 用于加法、减法、乘法和除法等算术运算。
+- **赋值运算符 (`=`)** 用于给变量赋值。
+- **算术运算符 (`+`、`-`、`*`、`/`)** 用于加法、减法、乘法和除法等算术运算。
 
 ## JavaScript 中的表达式
 
@@ -242,16 +223,11 @@ JavaScript 语言中的任何表达式都是值、变量和运算符的组合。
 
 让我们通过以下示例理解这一点。
 
-```
+```html
 <!DOCTYPE html>
-<html
+<html>
 <head>
 <meta charset="ISO-8859-1">
-```
-
-### JS 表达式
-
-```
 <title>JS Expressions</title>
 <script type="text/javascript">
   var a = 101; //变量，赋值运算符和数字字面量。
@@ -265,7 +241,7 @@ JavaScript 语言中的任何表达式都是值、变量和运算符的组合。
 <body>
 <script type="text/javascript">
   document.write("Addition of a + b = "+addition);
-  document.write("<br>Concat of str1 + str2 = "+str3");
+  document.write("<br>Concat of str1 + str2 = "+str3);
 </script>
 </body>
 </html>
@@ -277,17 +253,17 @@ JavaScript 语言中的任何表达式都是值、变量和运算符的组合。
 
 ## JavaScript 中的关键字
 
-JavaScript 语言中的关键字用于标识需要执行的操作。`var` 关键字引导浏览器创建一个作为 JavaScript 标识符的新变量。在 JavaScript 语言中，标识符用于用于命名变量（以及关键字、函数和标签）。
+JavaScript 语言中的关键字用于标识需要执行的操作。`var` 关键字引导浏览器创建一个作为 JavaScript 标识符的新变量。在 JavaScript 语言中，标识符用于命名变量（以及关键字、函数和标签）。
 
-在 JavaScript 语言中，第一个字符必须是字母、下划线 (_) 或美元符号 ($)。随后的字符可以是字母、数字、下划线或美元符号。
+在 JavaScript 语言中，第一个字符必须是字母、下划线 (`_`) 或美元符号 (`$`)。随后的字符可以是字母、数字、下划线或美元符号。
 
 ## 驼峰命名法与 JavaScript
 
 以下是将多个单词组合为一个变量名的三种方法。
 
-- 连字符 — 例如，first-address，second-address，visa-passport，city-name 等。
-- 下划线 — 例如，first_address，second_address，visa_passport，city_name 等。
-- 驼峰命名法 — 例如，FirstAddress，SecondAddress，VisaPassport，InterName 等。在 JavaScript 编程语言中，驼峰命名法以小写字母开始，例如 firstName，secondAddress，visaPassport，cityName 等。
+- 连字符 — 例如，`first-address`，`second-address`，`visa-passport`，`city-name` 等。
+- 下划线 — 例如，`first_address`，`second_address`，`visa_passport`，`city_name` 等。
+- 驼峰命名法 — 例如，`FirstAddress`，`SecondAddress`，`VisaPassport`，`InterName` 等。在 JavaScript 编程语言中，驼峰命名法以小写字母开始，例如 `firstName`，`secondAddress`，`visaPassport`，`cityName` 等。
 
 ## JavaScript 中的字符集
 
@@ -318,7 +294,7 @@ Internet Explorer、Mozilla Firefox、Google Chrome、Opera 等网络浏览器�
 
 以下是在 Mozilla Firefox 中开启或启用 JavaScript 支持的步骤。
 
-打开新标签页并在地址栏中输入 *about:config*。
+打开新标签页并在地址栏中输入 `about:config`。
 
 在那里我们将发现如下警告对话框，选择并点击按钮“我会小心的，我保证！”所示。
 
@@ -330,7 +306,7 @@ Internet Explorer、Mozilla Firefox、Google Chrome、Opera 等网络浏览器�
 
 在这里，我们可以通过右键点击选项的值来切换启用或禁用 JavaScript。
 
-点击切换后，如果 javascript.enabled 为 true，它将转换为 false。这将禁用 Mozilla Firefox 浏览器的 JavaScript 支持。
+点击切换后，如果 `javascript.enabled` 为 `true`，它将转换为 `false`。这将禁用 Mozilla Firefox 浏览器的 JavaScript 支持。
 
 ### 在 Mozilla Firefox 中禁用 JavaScript
 
@@ -340,51 +316,39 @@ Internet Explorer、Mozilla Firefox、Google Chrome、Opera 等网络浏览器�
 
 以下是在 Google Chrome 中启用或禁用 JavaScript 支持的步骤。
 
-点击 Chrome 右角的 Chrome 菜单
+- 点击 Chrome 右角的 Chrome 菜单。
 
+  ![](img/80ff2aec61ff33d32cd503fad02658a7_28_0.png)
 
+- 选择“设置”（Settings），然后点击页面底部的“显示高级设置”（Show advanced settings）。
 
-如浏览器所示所示。
+  ![](img/80ff2aec61ff33d32cd503fad02658a7_28_1.png)
 
-![](img/80ff2aec61ff33d32cd503fad02658a7_28_0.png)
+- 在“隐私”（Privacy）部分下，点击所示的“内容设置”（Content settings）按钮。
 
-选择“设置”（Settings），然后点击页面底部的“显示高级设置”（Show advanced settings）。
+  ![](img/80ff2aec61ff33d32cd503fad02658a7_29_0.png)
 
-![](img/80ff2aec61ff33d32cd503fad02658a7_28_1.png)
+- 在内容设置中的“Javascript”部分，选择“不允许网站运行 JavaScript”或“允许所有网站运行 JavaScript（推荐）”，分别禁用或启用 Chrome 浏览器的 JavaScript 支持。内容设置页面所示。
 
-在“隐私”（Privacy）部分下，点击所示的“内容设置”（Content settings）按钮。
-
-## 设置
-
-## 隐私
-
-关于
-
-![](img/80ff2aec61ff33d32cd503fad02658a7_29_0.png)
-
-## 密码和表单
-
-## 内容
-
-在内容设置中的“Javascript”部分，选择“不允许网站运行 JavaScript”或“允许所有网站运行 JavaScript（推荐）”，分别禁用或启用 Chrome 浏览器的 JavaScript 支持。内容设置页面所示。
-
-![](img/80ff2aec61ff33d32cd503fad02658a7_30_0.png)
+  ![](img/80ff2aec61ff33d32cd503fad02658a7_30_0.png)
 
 ### 在 Opera 中启用或禁用 JavaScript 支持
 
 以下是在 Opera 中启用或禁用 JavaScript 支持的步骤。
 
-- 打开 Opera 浏览器，并从菜单进入**工具**（Tools）*偏好设置*（Preferences）。
+- 打开 Opera 浏览器，并从菜单进入**工具**（Tools）> **偏好设置**（Preferences）。
 - 然后，从对话框中选择**高级选项**（Advanced option）。
 - 接下来，从列出的项目中选择内容（Content）。
-- 从那里，选择**启用 JavaScript**（Enable JavaScript）复框。
-- 最后，点击 OK 按钮启用 Opera 器的 JavaScript 支持。
+- 从那里，选择**启用 JavaScript**（Enable JavaScript）复选框。
+- 最后，点击 OK 按钮启用 Opera 浏览器的 JavaScript 支持。
 
-同样，要禁用 Opera 浏览器的 JavaScript 支持，我们不应勾选**启用 JavaScript**复框并点击 OK 按钮。
+同样，要禁用 Opera 浏览器的 JavaScript 支持，我们不应勾选**启用 JavaScript**复选框并点击 OK 按钮。
 
 ### 非 JavaScript 浏览器的警告
 
 当我们需要使用 JavaScript 执行非常重要的操作时，可以使用 `<noscript>` 标签向用户显示警告消息。我们可以像下面所示在脚本块之后添加一个 noscript 块。
+
+
 
 ```html
 <!DOCTYPE html>
@@ -407,11 +371,12 @@ Please enable JavaScript support on your browser.
 如果上述任何浏览器不支持 JavaScript 或 JavaScript 支持被禁用，则 `<noscript></noscript>` 标签之间的消息将显示在屏幕上。
 
 # 第 6 章
+
 ## JavaScript 的放置位置
 
 JavaScript 代码在 HTML 文档中的放置非常灵活，可以以以下方式放置。
 
-**在 <head>...</head> 部分中放置 JavaScript** —— 这是在 HTML 文档的头部部分包含 JavaScript 代码的最优选方式。我们可以将 JavaScript 代码或函数放置在头部部分，并可以在网页元素事件上访问这些函数，如下所示。
+**在 `<head>...</head>` 部分中放置 JavaScript** —— 这是在 HTML 文档的头部部分包含 JavaScript 代码的最优选方式。我们可以将 JavaScript 代码或函数放置在头部部分，并可以在网页元素事件上访问这些函数，如下所示。
 
 ```html
 <!DOCTYPE html>
@@ -437,7 +402,7 @@ JavaScript 代码在 HTML 文档中的放置非常灵活，可以以以下方式
 
 ![](img/80ff2aec61ff33d32cd503fad02658a7_34_0.png)
 
-**在 <body>...</body> 部分中放置 JavaScript** —— 我们也可以将 JavaScript 代码放置在 HTML 代码的 body 部分，但这种方法并不被首选的，因为我们从 body 部分调用的 JavaScript 函数，而这些函数最好定义在 HTML 文档的 head 部分。
+**在 `<body>...</body>` 部分中放置 JavaScript** —— 我们也可以将 JavaScript 代码放置在 HTML 代码的 body 部分，但这种方法并不被首选的，因为我们从 body 部分调用的 JavaScript 函数，而这些函数最好定义在 HTML 文档的 head 部分。
 
 ```html
 <!DOCTYPE html>
@@ -461,7 +426,7 @@ document.write("Welcome to JavaScript Tutorials!")
 
 ![](img/80ff2aec61ff33d32cd503fad02658a7_35_0.png)
 
-**在 <body>...</body> 和 <head>...</head> 部分中放置 JavaScript** —— 在这种方法中，JavaScript 代码放置在 HTML 文档的头部和 body 部分，如下例所示。
+**在 `<body>...</body>` 和 `<head>...</head>` 部分中放置 JavaScript** —— 在这种方法中，JavaScript 代码放置在 HTML 文档的头部和 body 部分，如下例所示。
 
 ```html
 <!DOCTYPE html>
@@ -491,7 +456,9 @@ alert("This is an alert from Head section!");
 
 ![](img/80ff2aec61ff33d32cd503fad02658a7_36_0.png)
 
-# 外部文件和 <head>...</head> 部分中的 JavaScript —— 在这种方法中，JavaScript 代码放置在 HTML 文档的头部和 body 部分，如下例所示。在下面的示例中，我们在名为 demo.js 的文件中定义了 showAlert() 函数，并可以在 HTML 文档的 body 部分调用这些网页元素。
+## 外部文件和 `<head>...</head>` 部分中的 JavaScript
+
+在这种方法中，JavaScript 代码放置在 HTML 文档的头部和 body 部分，如下例所示。在下面的示例中，我们在名为 `demo.js` 的文件中定义了 `showAlert()` 函数，并可以在 HTML 文档的 body 部分调用这些网页元素。
 
 ```javascript
 function showAlert(){
@@ -520,13 +487,14 @@ function showAlert(){
 当我们执行上述 HTML 程序时，将会有如下输出。在输出中，我们可以看到带有“This is an alert from Head section”消息的警报框，这是在按钮点击事件上调用的、定义在头部部分的 JavaScript 函数。这与我们将 JavaScript 代码包含在 HTML 文档的头部部分的方式相同。
 
 # 第 7 章
+
 ## JavaScript 变量
 
 JavaScript 数据类型是每个编程语言对数据类型集合的操作支持。这些是在任何编程语言中定义和处理的实际值。与其他编程语言一样，JavaScript 语言允许我们处理以下原始数据类型：
 
-- 数字（Numbers），例如 1, 23, 10.50, 23.8990 等。
-- 字符串（Strings）或文本数据，例如“JavaScript”、“This is my language”等。
-- 布尔（Boolean），可以是 true 或 false。
+- 数字（Numbers），例如 `1`、`23`、`10.50`、`23.8990` 等。
+- 字符串（Strings）或文本数据，例如 `"JavaScript"`、`"This is my language"` 等。
+- 布尔（Boolean），可以是 `true` 或 `false`。
 
 除了这三种原始数据类型，JavaScript 语言还定义了以下两个平凡类型。每个类型只定义了一个值：
 
@@ -539,13 +507,11 @@ JavaScript 数据类型是每个编程语言对数据类型集合的操作支持
 
 ### JavaScript 中的变量
 
-正如之前讨论的，JavaScript 语言具有变量数据容器，我们可以将数据放入这些容器中，然后通过命名容器来引用这些数据。如下所示使用 var 关键字声明 JavaScript 变量。
+正如之前讨论的，JavaScript 语言具有变量数据容器，我们可以将数据放入这些容器中，然后通过命名容器来引用这些数据。如下所示使用 `var` 关键字声明 JavaScript 变量。
 
-
-
-```
+```html
 <!DOCTYPE html>
-<html
+<html>
 <head>
 <meta charset="ISO-8859-1">
 <title>JavaScript Variables</title>
@@ -554,12 +520,12 @@ JavaScript 数据类型是每个编程语言对数据类型集合的操作支持
   var age = 21;
   var salary = 10000, expenses = 12000;
 
-  alert ("Name: "+name+" Age: "+age+"\nSalary: "+salary+" Expenses: "+expenses+");
+  alert ("Name: "+name+" Age: "+age+"\nSalary: "+salary+" Expenses: "+expenses);
 </script>
 </head>
 <body>
 </body>
-</</html>
+</html>
 ```
 
 ### JavaScript 代码说明
@@ -574,7 +540,7 @@ JavaScript 数据类型是每个编程语言对数据类型集合的操作支持
 
 ![](img/80ff2aec61ff33d32cd503fad02658a7_42_0.png)
 
-需要注意的是，`var` 关键字仅用于声明或初始化，在 HTML 文档中变量名的生命周期内使用一次。我们不应该多次声明同一个变量。在 JavaScript 中，由于它是无类型语言，变量可以持有任何数据类型的值（数字、字符串等）。与强类型语言（如 C++, JAVA 等）不同，我们不需要在变量声明期间告诉 JavaScript 编译器变量将持有什么类型的值。此外，变量的值在程序执行过程中可以改变，JavaScript 解析器会自动处理。
+需要注意的是，`var` 关键字仅用于声明或初始化，在 HTML 文档中变量名的生命周期内使用一次。我们不应该多次声明同一个变量。在 JavaScript 中，由于它是无类型语言，变量可以持有任何数据类型的值（数字、字符串等）。与强类型语言（如 C++、JAVA 等）不同，我们不需要在变量声明期间告诉 JavaScript 编译器变量将持有什么类型的值。此外，变量的值在程序执行过程中可以改变，JavaScript 解析器会自动处理。
 
 ## JavaScript 中的作用域
 
@@ -586,7 +552,7 @@ JavaScript 数据类型是每个编程语言对数据类型集合的操作支持
 
 需要注意的是，在函数体内，如果定义了同名的局部和全局变量，则局部变量优先级始终高于全局变量。让我们通过以下示例以最好的方式理解这个概念。
 
-```
+```html
 <!DOCTYPE html>
 <head>
 <meta charset="ISO-8859-1">
@@ -599,10 +565,9 @@ var demoVar = "local scope"; // 一个局部变量
 document.write(demoVar);
 }
 </script>
-<body onload = checkVariableScope();
-
+<body onload = checkVariableScope();>
 </body>
-</</html>
+</html>
 ```
 
 ### 输出
@@ -613,11 +578,9 @@ document.write(demoVar);
 
 在 JavaScript 语言中命名变量时必须遵守遵守规则。
 
-不能使用保留关键字作为变量名。这些关键字在本章的最后一节中提到。例如 `finally`、`goto` 等变量名是无效的。
-
-JavaScript 语言中的变量名不能以数字（0-9）开头。然而，它们可以是字母或下划线字符开头。例如，`10name` 是无效的变量，但 `_10name` 是合法的名称。
-
-JavaScript 中的变量名是区分大小写的。例如，`Address` 和 `address` 在 JavaScript 语言中被视为两个不同的变量。
+- 不能使用保留关键字作为变量名。这些关键字在本章的最后一节中提到。例如 `finally`、`goto` 等变量名是无效的。
+- JavaScript 语言中的变量名不能以数字（0-9）开头。然而，它们可以是字母或下划线字符开头。例如，`10name` 是无效的变量，但 `_10name` 是合法的名称。
+- JavaScript 中的变量名是区分大小写的。例如，`Address` 和 `address` 在 JavaScript 语言中被视为两个不同的变量。
 
 ## JavaScript 中的保留字
 
@@ -634,7 +597,7 @@ JavaScript 中的变量名是区分大小写的。例如，`Address` 和 `addres
 | const | extends | import | private | Throw |
 | continue | FALSE | In | protected | Throws |
 
-# 第8 章
+# 第 8 章
 
 ## JavaScript 运算符
 
@@ -646,13 +609,13 @@ JavaScript 中的变量名是区分大小写的。例如，`Address` 和 `addres
 
 | 序号 | 算术运算符 | 说明 | 示例 |
 |---|---|---|---|
-| 1. | + (加法) | 用于加两个操作数。 | X + Y |
-| 2. | - (减法) | 用于从第一个操作数中减去第二个操作数。 | X - Y |
-| 3. | * (乘法) | 用于乘两个操作数。 | X * Y |
-| 4. | / (除法) | 用于除两个操作数，即被除数除以除数。 | X / Y |
-| 5. | % (模) | 该运算符输出整数除法的余数。 | X % Y |
-| 6. | ++ (自增) | 通过 X++ 将整数值加1。 | |
-| 7. | -- (自减) | 通过 Y-- 将整数值减1。 |
+| 1. | `+` (加法) | 用于加两个操作数。 | `X + Y` |
+| 2. | `-` (减法) | 用于从第一个操作数中减去第二个操作数。 | `X - Y` |
+| 3. | `*` (乘法) | 用于乘两个操作数。 | `X * Y` |
+| 4. | `/` (除法) | 用于除两个操作数，即被除数除以除数。 | `X / Y` |
+| 5. | `%` (模) | 该运算符输出整数除法的余数。 | `X % Y` |
+| 6. | `++` (自增) | 通过 `X++` 将整数值加1。 | |
+| 7. | `--` (自减) | 通过 `Y--` 将整数值减1。 | |
 
 ### 比较运算符
 
@@ -660,12 +623,12 @@ JavaScript 中的变量名是区分大小写的。例如，`Address` 和 `addres
 
 | 序号 | 比较运算符 | 说明 | 示例 |
 |---|---|---|---|
-| 1 | == (等于) | 该运算符用于检查两个操作数的值是否相等，如果两个值都为真，则条件变为真。 | 例: (X == Y) |
-| 2 | != (不等于) | 该运算符用于检查两个操作数的值是否相等，如果值不相等，则条件变为真。 | 例: (X != Y) |
-| 3 | > (大于) | 该运算符用于检查左操作数的值是否大于右操作数的值，如果是这样，则条件变为真。 | 例: (X > Y) |
-| 4 | < (小于) | 该运算符用于检查左操作数的值是否小于右操作数的值。 | 例: (X < Y) |
-| 5 | >= (大于或等于) | 该运算符用于检查左操作数的值是否大于或等于右操作数的值。 | 例: (X >= Y) |
-| 6 | <= (小于或等于) | 该运算符用于检查左操作数的值是否小于或等于右操作数。 | 例: (X <= Y) |
+| 1 | `==` (等于) | 该运算符用于检查两个操作数的值是否相等，如果两个值都为真，则条件变为真。 | 例: `(X == Y)` |
+| 2 | `!=` (不等于) | 该运算符用于检查两个操作数的值是否相等，如果值不相等，则条件变为真。 | 例: `(X != Y)` |
+| 3 | `>` (大于) | 该运算符用于检查左操作数的值是否大于右操作数的值，如果是这样，则条件变为真。 | 例: `(X > Y)` |
+| 4 | `<` (小于) | 该运算符用于检查左操作数的值是否小于右操作数的值。 | 例: `(X < Y)` |
+| 5 | `>=` (大于或等于) | 该运算符用于检查左操作数的值是否大于或等于右操作数的值。 | 例: `(X >= Y)` |
+| 6 | `<=` (小于或等于) | 该运算符用于检查左操作数的值是否小于或等于右操作数。 | 例: `(X <= Y)` |
 
 ### 逻辑（或关系）运算符
 
@@ -673,10 +636,10 @@ JavaScript 中的变量名是区分大小写的。例如，`Address` 和 `addres
 
 | 序号 | 逻辑运算符 | 说明 | 示例 |
 |---|---|---|---|
-| 1 | && (逻辑与) | 如果两个操作数都非零，则该运算符使条件变为真。 | 例: (X && Y) 为真。 |
-| 2 | || (逻辑或) | 如果两个操作数中的任意一个非零，则该运算符为真。 | 例: (X || Y) |
+| 1 | `&&` (逻辑与) | 如果两个操作数都非零，则该运算符使条件变为真。 | 例: `(X && Y)` 为真。 |
+| 2 | `||` (逻辑或) | 如果两个操作数中的任意一个非零，则该运算符为真。 | 例: `(X || Y)` |
 
-### ! (逻辑非)
+### `!` (逻辑非)
 
 该运算符反转其操作数的逻辑状态。如果条件为真，则逻辑非运算符将使其为假，反之亦然。
 
@@ -686,25 +649,22 @@ JavaScript 中的变量名是区分大小写的。例如，`Address` 和 `addres
 
 | 序号 | 赋值运算符 | 说明 | 示例 |
 |---|---|---|---|
-| 1. | =(简单赋值) | 该运算符用于将右侧操作数的值赋值给左侧 X - Y 操作数的值。 | 例: Z = X - Y 将赋值给变量 Z |
-| 2. | += (加赋值) | 该运算符用于将右操作数加到左侧 Z 操作数上，并将结果 Z + X 赋值给左操作数。 | 例: Z += X |
-| 3. | -= (减赋值) | 该运算符用于从左侧 Z 操作数中减去右操作数，并将结果 Z - X 赋值给左操作数。 | 例: Z -= X |
-| 4. | *= (乘赋值) | 该运算符用于将右操作数乘以左侧的 Z 操作数，并将结果 Z * X 赋值给左操作数。 | 例: Z *= X |
-
-
-
-
-
-| 5. /= (除法并赋值) | 此运算符用于除法。例如：Z /= X 是左操作数，右侧等同于 Z 操作数，并将结果 Z / X 赋值给左操作数。 |
-| 6. %= (取模并赋值) | 此运算符用于取模。例如：Z %= X 是使用两个等效的操作数取模，并将结果 Z= Z % X 赋值给左操作数。 |
+| 1. | `=` (简单赋值) | 该运算符用于将右侧操作数的值赋值给左侧操作数。 | 例: `Z = X - Y` 将赋值给变量 `Z` |
+| 2. | `+=` (加赋值) | 该运算符用于将右操作数加到左侧操作数上，并将结果赋值给左操作数。 | 例: `Z += X` |
+| 3. | `-=` (减赋值) | 该运算符用于从左侧操作数中减去右操作数，并将结果赋值给左操作数。 | 例: `Z -= X` |
+| 4. | `*=` (乘赋值) | 该运算符用于将右操作数乘以左侧的操作数，并将结果赋值给左操作数。 | 例: `Z *= X` |
+| 5. | `/=` (除法并赋值) | 此运算符用于除法。例如：`Z /= X` 等同于 `Z = Z / X`。 | 例: `Z /= X` |
+| 6. | `%=` (取模并赋值) | 此运算符用于取模。例如：`Z %= X` 等同于 `Z = Z % X`。 | 例: `Z %= X` |
 
 ### 条件运算符（或三元运算符）
 
 以下是 JavaScript 语言支持的条件运算符或三元运算符。
 
+
+
 | 序号 | 条件运算符 | 描述 | 示例 |
 |---|---|---|---|
-| 1. | ? : (条件运算符) | 如果条件为真？例如：(X > Y) 值为 X：否则值为 Y。 | "是" : "否" |
+| 1. | `? :` (条件运算符) | 如果条件为真？例如：`(X > Y)` 值为 X：否则值为 Y。 | `"是" : "否"` |
 
 ### 位运算运算符
 
@@ -712,14 +672,14 @@ JavaScript 中的变量名是区分大小写的。例如，`Address` 和 `addres
 
 | 序号 | 位运算运算符 | 描述 | 示例 |
 |---|---|---|---|
-| 1. | & (位与) | 此运算符用于对其每个整数参数的每个位执行布尔与操作。 | 例如：(X & Y) |
-| 2. | | (位或) | 此运算符用于对其每个整数参数的每个位执行布尔或操作。 | 例如：(X | Y) |
-| 3. | ^ (位异或) | 此运算符用于对其每个整数参数的每个位执行布尔异或操作。异或意味着操作数为真或操作二为真，但不同时都为真。 | 例如：(X ^ Y) |
-| 4. | ~ (位取反) | 位取反是一个一元运算符 ~，通过反转操作数中的所有位来操作。 | 例如：(~B) 是 -4 |
-| 5. | << (左移) | 此运算符用于将其第一个操作数的所有位向第二个操作数指定的位数向左移动。 | 例如：(X << Y) 是 4 |
-| | | 新位用零填充。将值向左移动一位等同于乘以 2，移动二位等同于乘以 4，依此类推。 |
-| 6. | >> (右移) | 在二进制右移运算符中，例如：(X >> 左操作数的值为 1) 是 1。根据右操作数指定的位数向右移动。 | |
-| 7. | >>> (零右移) | 此运算符类似于 >>。例如：(X >>> 运算符，但左侧移入的位始终为 0) 结果是 1。 | |
+| 1. | `&` (位与) | 此运算符用于对其每个整数参数的每个位执行布尔与操作。 | 例如：`(X & Y)` |
+| 2. | `|` (位或) | 此运算符用于对其每个整数参数的每个位执行布尔或操作。 | 例如：`(X | Y)` |
+| 3. | `^` (位异或) | 此运算符用于对其每个整数参数的每个位执行布尔异或操作。异或意味着操作数为真或操作二为真，但不同时都为真。 | 例如：`(X ^ Y)` |
+| 4. | `~` (位取反) | 位取反是一个一元运算符 `~`，通过反转操作数中的所有位来操作。 | 例如：`(~B)` 是 -4 |
+| 5. | `<<` (左移) | 此运算符用于将其第一个操作数的所有位向第二个操作数指定的位数向左移动。 | 例如：`(X << Y)` 是 4 |
+| | | 新位用零填充。将值向左移动一位等同于乘以 2，移动二位等同于乘以 4，依此类推。 | |
+| 6. | `>>` (右移) | 在二进制右移运算符中，例如：`(X >> 1)` 是 1。根据右操作数指定的位数向右移动。 | |
+| 7. | `>>>` (零右移) | 此运算符类似于 `>>`。例如：`(X >>> 1)` 结果是 1。 | |
 
 # 第 9 章
 
@@ -727,22 +687,24 @@ JavaScript 中的变量名是区分大小写的。例如，`Address` 和 `addres
 
 在编写程序时，我们大多数时候都会面临必须做决策的情况。决策是对程序执行过程中可能发生的条件的预测，并需要根据这些条件指定某些操作。
 
-在决策结构中，有一个条件，可以是单个表达式也可以是多个表达式。该条件在求值时产生 TRUE 或 FALSE 结果。根据结果，我们需要确定要采取什么操作以及执行哪些语句。请参考下图以清晰理解。
+在决策结构中，有一个条件，可以是单个表达式也可以是多个表达式。该条件在求值时产生 `TRUE` 或 `FALSE` 结果。根据结果，我们需要确定要采取什么操作以及执行哪些语句。请参考下图以清晰理解。
 
 ![](img/80ff2aec61ff33d32cd503fad02658a7_55_0.png)
 
 与其他任何编程语言一样，JavaScript 语言支持条件语句，用于根据不同的条件执行不同的操作。以下是 JavaScript 语言支持的条件语句。
 
-- if 语句。
-- if...else 语句。
-- if...else if... 语句。
-- Switch case 语句。
+- `if` 语句。
+- `if...else` 语句。
+- `if...else if...` 语句。
+- `Switch case` 语句。
 
 让我们通过 JavaScript 程序来理解这些语句。
 
-**if 语句** — if 语句是一种基础控制语句，允许 JavaScript 代码根据所需的条件做出决策并执行语句。以下是其语法。
+### if 语句
 
-## 语法与示例
+`if` 语句是一种基础控制语句，允许 JavaScript 代码根据所需的条件做出决策并执行语句。以下是其语法。
+
+#### 语法与示例
 
 ```html
 <!DOCTYPE html>
@@ -756,21 +718,25 @@ JavaScript 中的变量名是区分大小写的。例如，`Address` 和 `addres
 var salary = 10000;
 var expenses = 12000;
 if (expenses > salary) {
-document.write("<b>请开始增加收入或减少开支!</body>");
+document.write("<b>请开始增加收入或减少开支!</b>");
 }
 </script>
 <p>我们处于 body 区域内部...</p>
+</body>
+</html>
 ```
 
-## ## 输出
+#### 输出
 
-当我们执行上述 HTML 程序时，输出将是如下所示。由于 "if" 语句中的条件为真，因此它会在 HTML 页面上写入给文本。
+当我们执行上述 HTML 程序时，输出将是如下所示。由于 `if` 语句中的条件为真，因此它会在 HTML 页面上写入给文本。
 
 ![](img/80ff2aec61ff33d32cd503fad02658a7_57_0.png)
 
-if...else 语句 – ‘if...else’语句是控制语句的另一种形式，允许 JavaScript 代码以更受控的方式执行语句。以下是语法和示例。
+### if...else 语句
 
-## 语法与示例
+`if...else` 语句是控制语句的另一种形式，允许 JavaScript 代码以更受控的方式执行语句。以下是语法和示例。
+
+#### 语法与示例
 
 ```html
 <!DOCTYPE html>
@@ -794,13 +760,15 @@ if...else 语句 – ‘if...else’语句是控制语句的另一种形式，�
 </html>
 ```
 
-## ## 输出
+#### 输出
 
-当我们执行上述 HTML 程序时，输出将是如下所示。由于 "if" 语句中的条件为假，因此它进入了 else 块并在 HTML 页面上写入了给定的文本。
+当我们执行上述 HTML 程序时，输出将是如下所示。由于 `if` 语句中的条件为假，因此它进入了 `else` 块并在 HTML 页面上写入了给定的文本。
 
 ![](img/80ff2aec61ff33d32cd503fad02658a7_58_0.png)
 
-if...else if... 语句 — if...else if...语句是 if...else 代码的另一种高级形式，允许 JavaScript 代码在定义的多个条件中做出正确的决策。它有一系列的 if 语句，其中每个 if 语句都是上一个语句 else 子句的一部分。这些语句根据真条件执行，如果发现没有任何条件为真，则将执行 else 块中的代码。以下是语法示例。
+### if...else if... 语句
+
+`if...else if...` 语句是 `if...else` 代码的另一种高级形式，允许 JavaScript 代码在定义的多个条件中做出正确的决策。它有一系列的 `if` 语句，其中每个 `if` 语句都是上一个语句 `else` 子句的一部分。这些语句根据真条件执行，如果发现没有任何条件为真，则将执行 `else` 块中的代码。以下是语法示例。
 
 ```html
 <!DOCTYPE html>
@@ -819,33 +787,28 @@ document.write("<b>请开始增加收入或减少开支!</b>");
 else if (salary > 13000){
 document.write("<b>你有足够的钱花了!</b>");
 }
-</script>
-</body>
-</html>
-```
-
-```html
 else {
   document.write("<b>你有足够的钱花了但需要小心!</b>");
 }
+</script>
 <p>我们处于 body 区域内部...</p>
 </body>
 </html>
 ```
 
-## ## 输出
+#### 输出
 
-当我们执行上述 HTML 程序时，输出将是如下所示。由于 "if" 语句中的条件为假，因此它进入了 else 块，且条件恰好为假。它在 HTML 页面上写入了文本。
+当我们执行上述 HTML 程序时，输出将是如下所示。由于 `if` 语句中的条件为假，因此它进入了 `else` 块，且条件恰好为假。它在 HTML 页面上写入了文本。
 
 ### Switch case 语句
 
-从 JavaScript 1.2 版本开始，它开始支持 switch 语句，处理与重复 if...else 语句相同的情况。
+从 JavaScript 1.2 版本开始，它开始支持 `switch` 语句，处理与重复 `if...else` 语句相同的情况。
 
-switch 语句用于根据表达式的值提供不同的语句。JavaScript 解释器会检查每个 case 是否匹配表达式的值，直到找到匹配。如果没有找到匹配，则使用 default 条件。
+`switch` 语句用于根据表达式的值提供不同的语句。JavaScript 解释器会检查每个 `case` 是否匹配表达式的值，直到找到匹配。如果没有找到匹配，则使用 `default` 条件。
 
-此外，在 case 代码语句末尾存在 break 语句。如果在这里没有声明 break，解释器将继续执行后续 case 中的语句。
+此外，在 `case` 代码语句末尾存在 `break` 语句。如果在这里没有声明 `break`，解释器将继续执行后续 `case` 中的语句。
 
-以下是 switch case 语句的语法示例。
+以下是 `switch case` 语句的语法示例。
 
 ```html
 <!DOCTYPE html>
@@ -864,7 +827,7 @@ case 'X': document.write("<b>请开始增加收入或减少开支!</b>");
 break;
 case 'Y': document.write("<b>你有足够的钱花了!</b>");
 break;
-case 'Z': document.write("<b>虽然你有足够的钱但需要小心!</br>");
+case 'Z': document.write("<b>虽然你有足够的钱但需要小心!</b>");
 break;
 default: document.write("未找到匹配!<br/>");
 }
@@ -875,17 +838,14 @@ document.write("<br>退出 switch块<br/>");
 </html>
 ```
 
-## ## 输出
+#### 输出
 
-当我们执行上述 HTML 程序时，输出将是如下所示。程序在 HTML 页面上写入了 case 字符 ('X') 匹配的文本。
+当我们执行上述 HTML 程序时，输出将是如下所示。程序在 HTML 页面上写入了 `case` 字符 (`'X'`) 匹配的文本。
 
-![]((img/80ff2aec61ff33d32cd503fad02658a7_62_0.png)
-
-
-
-
+![](img/80ff2aec61ff33d32cd503fad02658a7_62_0.png)
 
 # 第 10 章
+
 ## JavaScript 循环
 
 当任何程序执行时，它都是按顺序运行的。出现在序列中第一条语句首先执行，然后是下一条语句，依此类推，直到程序的最后一条语句。很多时候，需要在程序中多次运行相同的代码块，这时就产生了被称为“循环”的控制结构的需求。
@@ -896,20 +856,20 @@ document.write("<br>退出 switch块<br/>");
 
 与任何其他编程语言一样，JavaScript 也支持循环，以及以下类型的循环和循环控制语句。
 
-- While 循环
-- Do...while 循环
-- For 循环
-- for...in 循环
+- `While` 循环
+- `Do...while` 循环
+- `For` 循环
+- `for...in` 循环
 
 ### 循环控制语句
 
 ### While 循环语句
 
-While 循环是 JavaScript 语言中最基础的循环。只要表达式保持为真，该循环就会重复执行一条语句或代码块。一旦表达式为假，循环就会终止。以下是 while 循环语句的语法和示例。
+`While` 循环是 JavaScript 语言中最基础的循环。只要表达式保持为真，该循环就会重复执行一条语句或代码块。一旦表达式为假，循环就会终止。以下是 `while` 循环语句的语法和示例。
 
 ```html
 <!DOCTYPE html>
-<html
+<html>
 <head>
 <meta charset="ISO-8859-1">
 <title>While Loop</title>
@@ -929,7 +889,7 @@ document.write("Exiting while Loop!");
 </html>
 ```
 
-### 输出
+#### 输出
 
 当我们执行上述 HTML 程序时，输出将如下所示。计数器会在 HTML 页面上写入 5 次，因为它的条件保持了 5 次真。
 
@@ -937,11 +897,11 @@ document.write("Exiting while Loop!");
 
 ### Do...while 循环语句
 
-do...while 循环与 while 循环相似，不同在于 do...while 循环中的条件检查发生在循环的末尾。这意味着即使条件为假，循环内部的代码块也至少会被执行一次。以下是 while 循环语句的语法和示例（注：原文此处误写为 while loop statement）。
+`do...while` 循环与 `while` 循环相似，不同在于 `do...while` 循环中的条件检查发生在循环的末尾。这意味着即使条件为假，循环内部的代码块也至少会被执行一次。以下是 `do...while` 循环语句的语法和示例。
 
 ```html
 <!DOCTYPE html>
-<html
+<html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Do While Loop</title>
@@ -954,16 +914,15 @@ do {
   document.write("Current Counter is : " + counter + "<br/>");
   counter++;
 }
-while (counter < 5) {
-  document.write("Exiting while Loop!");
-}
+while (counter < 5);
+document.write("Exiting while Loop!");
 </script>
 <p>We are inside body section...</p>
 </body>
 </html>
 ```
 
-### 输出
+#### 输出
 
 当我们执行上述 HTML 程序时，输出将如下所示。计数器会在 HTML 页面上写入 5 次，包括第一次没有检查条件，它的条件保持了 5 次真。
 
@@ -971,7 +930,7 @@ while (counter < 5) {
 
 ### For 循环语句
 
-‘for’循环是 JavaScript 编程中非常重要且常用的循环语句。该命令包含以下三个重要部分：
+`for` 循环是 JavaScript 编程中非常重要且常用的循环语句。该命令包含以下三个重要部分：
 
 - **循环初始化** — 这是我们初始化计数器值为一个起始值的地方。该语句在循环开始之前执行。
 - **测试语句** — 它包含实际的条件，该条件会被评估为真或假。如果该条件评估为真，则将执行循环内部的代码块；否则，如果为假，控制流将退出循环。
@@ -981,7 +940,7 @@ while (counter < 5) {
 
 ```html
 <!DOCTYPE html>
-<html
+<html>
 <head>
 <meta charset="ISO-8859-1">
 <title>For Loop</title>
@@ -989,7 +948,7 @@ while (counter < 5) {
 <body>
 <script type="text/javascript">
 document.write("Entering while Loop!");
-for(counter = 0;counter < 5; counter++) {
+for(counter = 0; counter < 5; counter++) {
 document.write("Current Counter is : " + counter + "<br />");
 }
 document.write("Exiting while Loop!");
@@ -999,15 +958,15 @@ document.write("Exiting while Loop!");
 </html>
 ```
 
-### 输出
+#### 输出
 
 当我们执行上述 HTML 程序时，输出将如下所示。计数器会在 HTML 页面上写入 5 次，因为它在循环结束前其条件保持了 5 次真。
 
-![](img/80ff2aec61ff33d32cd503fad02658a7_69_0)
+![](img/80ff2aec61ff33d32cd503fad02658a7_69_0.png)
 
 ### for...in 循环
 
-for...in 循环用于遍历对象的属性。以下是 for...in 循环的语法和示例。
+`for...in` 循环用于遍历对象的属性。以下是 `for...in` 循环的语法和示例。
 
 ```html
 <!DOCTYPE html>
@@ -1029,13 +988,11 @@ document.write("Exiting while Loop!");
 </html>
 ```
 
-### 输出
+#### 输出
 
 当我们执行上述 HTML 程序时，输出将如下所示。计数器会在 HTML 页面上写入 5 次，因为它的条件保持了 5 次真。
 
 ![](img/80ff2aec61ff33d32cd503fad02658a7_70.png)
-
-
 
 ```javascript
 function sayHelloToJavaScript() {
@@ -1044,8 +1001,7 @@ function sayHelloToJavaScript() {
 </script>
 </head>
 <body>
-
-</</body>>
+</body>
 </html>
 ```
 
@@ -1079,6 +1035,8 @@ function sayHelloToJavaScript() {
 ## 函数参数
 
 到为止，我们使用的是没有输入参数的函数。在 JavaScript 函数中，我们可以在调用时传递不同的参数。传递的参数值可以在函数内部使用，我们可以对这些参数进行操作。一个函数可以接受零到多个参数。函数中的多个参数之间用逗号分隔。以下是参数化函数的语法和示例。
+
+
 
 ```html
 <!DOCTYPE html>
@@ -1247,10 +1205,6 @@ onmouseout="hoverMouseOut();">
 
 ![](img/80ff2aec61ff33d32cd503fad02658a7_85_0.png)
 
-
-
-
-
 ### HTML 5 中存在的标准事件
 
 以下是标准的 HTML 5 事件属性。所有这些属性的值均为脚本，表示在触发事件时要调用并执行的 JavaScript 函数。
@@ -1353,9 +1307,6 @@ function validation() {
 if(document.form1.textbox1.value != "") {
 alert('验证通过');
 return false;
-```
-
-```html
 }
 else{
     alert("文本框不能为空!");
@@ -1384,6 +1335,8 @@ else{
 
 当用户点击 OK 按钮时，窗口方法 `confirm()` 将返回一个真值。否则，如果用户点击取消按钮，`confirm()` 方法将返回一个假值。以下是确认对话框的示例。
 
+
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -1403,10 +1356,6 @@ confirm("这是一个确认对话框示例!");
 </html>
 ```
 
-
-
-
-
 ### 输出
 
 当我们执行上述 HTML 程序时，将输出以下内容。在这里，我们看到了一个确认对话框。
@@ -1417,7 +1366,7 @@ confirm("这是一个确认对话框示例!");
 
 在 JavaScript 语言中，当我们想要弹出一个接受用户输入的文本框时，就会使用提示对话框（prompt dialog box）。因此，它允许系统与用户进行交互。用户需要在一个字段中输入所需的数据，然后点击 OK 按钮。
 
-此类对话框通过名为“prompt()”的方法显示。它接受以下两个参数：
+此类对话框通过名为 `prompt()` 的方法显示。它接受以下两个参数：
 
 - 我们想在文本框中显示的标签。
 - 一个显示在文本框中的默认字符串。
@@ -1427,13 +1376,13 @@ confirm("这是一个确认对话框示例!");
 - OK 按钮。
 - 取消（Cancel）按钮。
 
-当用户点击 OK 按钮时，窗口方法“prompt()”将返回用户在文本框中输入的值。否则，如果用户点击取消按钮，窗口方法“prompt()”将返回一个 `null` 值。
+当用户点击 OK 按钮时，窗口方法 `prompt()` 将返回用户在文本框中输入的值。否则，如果用户点击取消按钮，窗口方法 `prompt()` 将返回一个 `null` 值。
 
 以下是一个关于提示对话框的示例。
 
-```
+```html
 <!DOCTYPE html>
-<html
+<html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Prompt Box</title>
@@ -1466,9 +1415,9 @@ Prompt dialogue box demo example.
 
 以下是 `void` 关键字的语法和示例。
 
-```
+```html
 <!DOCTYPE html>
-<html
+<html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Void Keyword Example 1</title>
@@ -1488,9 +1437,9 @@ Prompt dialogue box demo example.
 
 或者，JavaScript 中的 `void` 关键字也用于生成 `undefined` 值，如下例所示。
 
-```
+```html
 <!DOCTYPE html>
-<html
+<html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Void Example 2</title>
@@ -1505,7 +1454,7 @@ document.write('x = ' + x + ' y = ' + y + ' z = ' + z );
 <body>
 <p>Click to get the Result...</p>
 <form>
-<input type="button" value="Get Result" onclick="getVoidDemo(); />
+<input type="button" value="Get Result" onclick="getVoidDemo();" />
 </form>
 </body>
 </html>
@@ -1571,11 +1520,11 @@ document.write("Welcome to JavaScript!");
 
 ### JavaScript 中的自定义对象
 
-在 JavaScript 语言中，所有的自定义对象以及内置对象继承自 Object。
+在 JavaScript 语言中，所有的自定义对象以及内置对象继承自 `Object`。
 
 ### JavaScript 中的 new 运算符
 
-`new` 运算符用于创建对象的实例。在 JavaScript 中创建一个对象，需要使用 `new` 运算符，后面跟着构造方法如下所示。这里的构造函数有“Object()”、“Array()和“Date()”。这些构造函数是内置函数。
+`new` 运算符用于创建对象的实例。在 JavaScript 中创建一个对象，需要使用 `new` 运算符，后面跟着构造方法如下所示。这里的构造函数有 `Object()`、`Array()` 和 `Date()`。这些构造函数是内置函数。
 
 ```html
 <!DOCTYPE html>
@@ -1602,13 +1551,13 @@ alert(day);
 
 ### 输出
 
-当我们执行上述 HTML 程序时，将输出以下内容。在这里，我们在告警对话框中显示了 Date 对象的属性。
+当我们执行上述 HTML 程序时，将输出以下内容。在这里，我们在告警对话框中显示了 `Date` 对象的属性。
 
 ![](img/80ff2aec61ff33d32cd503fad02658a7_107_0.png)
 
 ### “Object ()”构造函数
 
-正如之前提到的，构造函数是创建并初始化 JavaScript 对象的函数。特殊的构造函数“Object”用于构建 JavaScript 对象。构造函数返回的值被赋值给一个对象引用变量。以下示例演示了 JavaScript 中对象的创建。
+正如之前提到的，构造函数是创建并初始化 JavaScript 对象的函数。特殊的构造函数 `Object` 用于构建 JavaScript 对象。构造函数返回的值被赋值给一个对象引用变量。以下示例演示了 JavaScript 中对象的创建。
 
 ```html
 <!DOCTYPE html>
@@ -1622,8 +1571,7 @@ student.name = "Appy";
 student.age = "21";
 student.course = "JavaScript";
 function showDetails() {
- alert("Name: "+student.name + " Age: "+student.age+"
-Course: "+student.course);
+ alert("Name: "+student.name + " Age: "+student.age+" Course: "+student.course);
 }
 </script>
 </head>
@@ -1632,10 +1580,6 @@ Course: "+student.course);
 </body>
 </html>
 ```
-
-
-
-
 
 需要注意的是，对象的属性变量并不是使用 `var` 关键字定义的。
 
@@ -1664,15 +1608,22 @@ this.name = name;
 this.course = course;
 
 }
-```
 </script>
+
 </head>
+
 <body>
+
   <script type="text/javascript">
+
     var record = new student("Appy", "JavaScript");
+
     alert("name is : " + record.name + "Course is " + record.course );
+
   </script>
+
 </body>
+
 </html>
 ```
 
@@ -1695,8 +1646,8 @@ this.course = course;
 <meta charset="ISO-8859-1">
 <title>With Keyword</title>
 <script type="text/javascript">
-// 一个作为方法工作的函数
 
+// 一个作为方法工作的函数
 function addAge(years) {
   with(this) {
     age = years;
@@ -1709,18 +1660,16 @@ function student(name, course) {
   this.age = 0;
   this.addAge = addAge; // 作为方法的属性。
 }
+
 </script>
 </head>
+
 <body>
 <script type="text/javascript">
 var record = new student("Appy", "JavaScript");
 record.addAge(21);
-alert("Name is : " + record.name + \
-Course is : " + record.course + ");
-
-"\nAge is : " + record.age);
-
-<script>
+alert("Name is : " + record.name + " Course is : " + record.course + "\nAge is : " + record.age);
+</script>
 </body>
 </html>
 ```
@@ -1753,22 +1702,19 @@ JavaScript 语言有许多内置或原生对象。这些原生对象可以在程
 
 # Python 编程预览
 
-<!-- no content -->
-
-## 第一章
-## Python 编程语言简介
+## 第一章 Python 编程语言简介
 
 你知道 YouTube 和 Dropbox 等网站在源码中使用了 Python 吗？Python 是一种易于理解和应用的语言。你可以使用 Python 开发任何内容。除了 Windows 之外，大多数操作系统（Mac, Linux, UNIX 等）默认安装了 Python。它是一种开源且免费的语言。在本电子书中，我们将学习这种很强大的代码语言并将其应用于各种示例中。Python 中没有方法、参数、函数或变量的类型声明（像其他语言那样），这使得它的代码简洁简单。正如前面提到的，这种语言可以用于任何地方，无论你想构建网站、游戏还是搜索引擎。使用 Python 的主要优势是你不需要显式地运行编译器，它是一种像 Perl 或 Shell 一样的纯解释型语言。
 
-Python 源文件使用的扩展名为 “.py”，它是一种区分大小写的语言，因此“P”和“p”被视为两个不同的变量。此外，Python 会自动确定变量类型，例如，如果你设置 x=4 和 y='Python'，它将认为 x 为整数，y 为字符串。我们将在后面的章节中详细学习所有这些基础知识。在继续之前，有几点重要的内容需要记住：
+Python 源文件使用的扩展名为 `.py`，它是一种区分大小写的语言，因此“P”和“p”被视为两个不同的变量。此外，Python 会自动确定变量类型，例如，如果你设置 `x=4` 和 `y='Python'`，它将认为 `x` 为整数，`y` 为字符串。我们将在后面的章节中详细学习所有这些基础知识。在继续之前，有几点重要的内容需要记住：
 
-- 1. 赋值使用 "="，比较使用 “==”。例如，x=4, y=8, x==y。
-- 2. 使用 “print” 来打印结果。
-- 3. 所有的数学运算如 +, -, *, / 都用于数字。
-- 4. 给变量赋值值时会创建变量。例如，a=5 将创建一个名为“a”的变量，其值为整数 5。不需要提前定义它。
-- 5. “+” 也可以用于连接两个字符串。例如，z=“Hi”, z= z + “Python"。
-- 6. 逻辑操作使用 “and”、“or”、“not” 代替符号。
+1. 赋值使用 `=`，比较使用 `==`。例如，`x=4, y=8, x==y`。
+2. 使用 `print` 来打印结果。
+3. 所有的数学运算如 `+`, `-`, `*`, `/` 都用于数字。
+4. 给变量赋值值时会创建变量。例如，`a=5` 将创建一个名为 `a` 的变量，其值为整数 5。不需要提前定义它。
+5. `+` 也可以用于连接两个字符串。例如，`z="Hi"`, `z= z + "Python"`。
+6. 逻辑操作使用 `and`、`or`、`not` 代替符号。
 
-有三种基本数据类型：整数（数字的默认类型）、浮点数（a=3.125）和
+有三种基本数据类型：整数（数字的默认类型）、浮点数（`a=3.125`）和
 
 或访问：http://amzn.to/2auRjNy

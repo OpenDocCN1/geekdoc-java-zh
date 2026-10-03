@@ -1,16 +1,17 @@
+
 # 用 Java 创建一个简单的“石头剪子布”游戏
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-rock-paper-scissors>
 
-## 1.概观
+## 1. 概观
 
 在这个简短的教程中，我们将看到如何用 Java 创建一个简单的“石头剪子布”游戏。
 
-## 2.创建我们的“石头剪子布”游戏
+## 2. 创建我们的“石头剪子布”游戏
 
 我们的游戏将允许玩家输入“石头”、“布”或“剪刀”作为每次移动的值。
 
-首先，让我们为移动创建一个枚举:
+首先，让我们为移动创建一个枚举：
 
 ```java
 enum Move {
@@ -24,7 +25,7 @@ enum Move {
 }
 ```
 
-然后，让我们创建一个生成随机整数并返回计算机移动的方法:
+然后，让我们创建一个生成随机整数并返回计算机移动的方法：
 
 ```java
 private static String getComputerMove() {
@@ -36,7 +37,7 @@ private static String getComputerMove() {
 }
 ```
 
-以及检查玩家是否获胜的方法:
+以及检查玩家是否获胜的方法：
 
 ```java
 private static boolean isPlayerWin(String playerMove, String computerMove) {
@@ -46,7 +47,7 @@ private static boolean isPlayerWin(String playerMove, String computerMove) {
 }
 ```
 
-最后，我们将使用它们来形成一个完整的程序:
+最后，我们将使用它们来形成一个完整的程序：
 
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -85,9 +86,9 @@ while (true) {
 }
 ```
 
-从上面可以看出，我们使用 Java [`Scanner`](/web/20220524070222/https://www.baeldung.com/java-scanner) 来读取用户输入的值。
+从上面可以看出，我们使用 Java `Scanner` 来读取用户输入的值。
 
-让我们玩一会儿，看看输出结果:
+让我们玩一会儿，看看输出结果：
 
 ```java
 Welcome to Rock-Paper-Scissors! Please enter "rock", "paper", "scissors", or "quit" to exit.
@@ -105,8 +106,8 @@ You won 1 times and lost 0 times.
 Thanks for playing! See you again. 
 ```
 
-## 3.结论
+## 3. 结论
 
 在这个快速教程中，我们学习了如何用 Java 创建一个简单的“石头剪子布”游戏。
 
-和往常一样，本文的示例代码可以在 GitHub 上找到[。](https://web.archive.org/web/20220524070222/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-8-2)
+和往常一样，本文的示例代码可以在 GitHub 上找到。

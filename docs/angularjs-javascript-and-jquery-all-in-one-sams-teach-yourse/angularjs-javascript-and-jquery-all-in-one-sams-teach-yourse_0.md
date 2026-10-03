@@ -1,285 +1,316 @@
-# AngularJS、JavaScript 和 JQuery 一通通：Sams 自学指南
 
+# AngularJS、JavaScript 和 jQuery 一通通：Sams 自学指南
 
-
-![](img/cover02140.jpeg)
+![Image](img/cover02140.jpeg)
 
 ## 关于本书
 
 ePUB 是一种开放的行业标准电子书格式。然而，不同的设备和应用程序对 ePUB 及其许多功能的支持程度不同。请使用您的设备或应用设置根据您的喜好自定义显示效果。您可以自定义的设置通常包括字体、字号、单栏或双栏、横屏或竖屏模式，以及可以点击或触摸放大的图片。有关您的阅读设备或应用设置和功能的更多信息，请访问设备制造商的网站。
 
-许多书籍包含编程代码或配置示例。为了优化这些元素的显示效果，请在单栏横屏模式下查看电子书，并将字体调整为最小设置。除了以重流文本格式呈现代码和配置外，我们还包含了代码图像，以模仿印刷本中的呈现效果；因此，当重流格式可能会损害代码列表的显示效果时，您将看到“点击此处查看代码图像”链接。点击链接即可高保真代码图像。要返回之前过的页面，请点击设备或应用上的“返回”按钮。
-
-
+许多书籍包含编程代码或配置示例。为了优化这些元素的显示效果，请在单栏横屏模式下查看电子书，并将字体调整为最小设置。除了以重流文本格式呈现代码和配置外，我们还包含了代码图像，以模仿印刷本中的呈现效果；因此，当重流格式可能会损害代码列表的显示效果时，您将看到“点击此处查看代码图像”链接。点击链接即可获得高保真代码图像。要返回之前阅读的页面，请点击设备或应用上的“返回”按钮。
 
 ![Image](img/image00766.jpeg) 800 East 96th Street Indianapolis, IN 46240 USA
 
+## 目录
 
+- [第 2 节 | 在网页中调试 JavaScript](#part0013.xhtml_ch02)
+- [第 4 节 | 添加 CSS/CSS3 样式以实现动态设计和布局](#part0015.xhtml_ch04)
+- [第 5 节 | 深入学习 jQuery 和 JavaScript 语法](#part0016.xhtml_ch05)
+- [第 8 节 | 使用 jQuery 导航和操作 jQuery 对象及 DOM 元素](#part0020.xhtml_ch08)
+- [第 9 节 | 应用 JavaScript 和 jQuery 事件实现丰富交互的网页](#part0021.xhtml_ch21)
+- [第 10 节 | 使用 jQuery 动态访问和操作网页](#part0022.xhtml_ch10)
+- [第 13 节 | 与网页表单交互](#part0026.xhtml_ch13)
+- [第 14 节 | 创建网页](#part0027.xhtml_ch14)
+- [第 17 节 | 使用 jQuery UI 效果](#part0031.xhtml_ch17)
+- [第 18 节 | 高级 jQuery UI 组件](#part0032.xhtml_ch18)
+- [第 19 节 | 使用 jQuery UI 组件为网页添加丰富交互](#part0033.xhtml_ch19)
+- [第 28 节 | 创建自定义 AngularJS 服务](#part0043.xhtml_ch28)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-介绍
-
-
-- [第 2 节] 在网页中调试 JavaScript](#part0013.xhtml_ch02)
-- [第 4 节] 添加 CSS/CSS3 样式以实现动态设计和布局](#part0015.xhtml_ch04)
-- [第 5 节] 深入学习 jQuery 和 JavaScript 语法](#part0016.xhtml_ch05)
-
-## 第二部分：在网页中实现 jQuery 和 JavaScript
-
-- [第 8 节] 使用 jQuery 导航和操作 jQuery 对象及 DOM 元素](#part0020.xhtml_ch08)
-- [第 9 节] 应用 JavaScript 和 jQuery 事件实现丰富交互的网页](#part0021.xhtml_ch21)
-- [第 10 节] 使用 jQuery 动态访问和操作网页](#part0022.xhtml_ch10)
-
-## 第三部分：使用 jQuery 构建丰富交互的网页
-
-- [第 13 节] 与网页表单交互](#part0026.xhtml_ch13)
-- [第 14 节] 创建网页](#part0027.xhtml_ch14)
-
-
-- [第 17 节] 使用 jQuery UI 效果](#part0031.xhtml_ch17)
-- [第 18 节] 高级 jQuery UI 组件](#part0032.xhtml_ch18)
-- [第 19 节] 使用 jQuery UI 组件为网页添加丰富交互](#part0033.xhtml_ch19)
-
-
-- [第 28 节] 创建自定义 AngularJS 服务](#part0043.xhtml_ch28)
-
-
-
-
-
+## 课程列表
 
 ### 工作坊
 
 ### 使用 HTML/HTML5 元素构建动态网页
+
 ### 理解 HTML 结构
+
 ### 实现 HTML Head 元素
+
 ### 添加 HTML Body 元素
+
 ### 添加一些高级 HTML5 元素
+
 ### 总结
+
 ### 问答
 
 ### 总结
+
 ### 问答
 
 ### 在网页中引入 jQuery 和 JavaScript
+
 ### 访问 DOM
+
 ### 总结
+
 ### 问答
+
 ### 工作坊
 
 ### 使用对象语法
+
 ## 理解内置对象
+
 ### 创建自定义对象
+
 ### 总结
+
 ### 问答
+
 ### 工作坊
 
 ### 理解 DOM 对象与 jQuery 对象的区别
+
 ### 从 JavaScript 访问 DOM 对象
+
 ### 使用 jQuery 选择器
+
 ### 问答
 
 ### 链式 jQuery 对象操作
+
 ### 过滤 jQuery 对象结果
+
 ### 使用 jQuery 对象遍历 DOM
+
 ### 总结
+
 ### 问答
+
 ### 工作坊
+
 ## 课程 9：应用 JavaScript 和 jQuery 事件实现丰富交互的网页
+
 ### 使用页面加载事件进行初始化
+
 ### 手动触发事件
+
 ### 实现回调函数
+
 ### 问答
+
 ### 工作坊
 
 ### 访问浏览器和页面元素值
+
 ### 在网页上动态调整元素
+
 ### 问答
 
 ### 理解 Screen 对象
+
 ### 使用 Window 对象
+
 ### 使用 Browser 对象
+
 ### 控制外部链接
+
 ### 设置定时器
+
 ### 总结
+
 ### 工作坊
+
 ## 课程 12：通过 jQuery 动画和其他特效增强用户交互
+
 ### 显示与隐藏动画
+
 ### 滑动元素
+
 ### 创建缩放动画
+
 ### 总结
+
 ### 问答
 
 ### 访问表单元素
+
 ### 智能表单流控制
+
 ### 表单验证
+
 ### 总结
+
 ### 问答
 
 ### 添加图片库
+
 ### 创建树形视图
+
 ### 实现图形均衡器显示
+
 ### 添加折线图图形
+
 ### 问答
 
 ### 让 AJAX 简单化
+
 ### 实现 AJAX
+
 ### 总结
+
 ### 工作坊
+
 ## 课程 16：引入 jQuery UI
+
 ### 在脚本中使用 jQuery UI
+
 ### 问答
 
 ### 应用 jQuery UI 效果
+
 ### 为元素可见性添加效果
+
 ### 问答
 
 ### 引入 jQuery UI 交互
+
 ### 使用可缩放组件调整大小
+
 ### 使用可排序组件排序元素
+
 ### 问答
 
 ### 回顾组件
 
-
-
 ## 将 jQuery UI 按钮应用于表单控件
+
 ## 使用 jQuery UI 生成样式化对话框
+
 ## 实现滑动条
+
 ## 为页面元素添加工具提示
+
 ### 总结
 
 ### 为什么选择 AngularJS？
+
 ### 职责分离
+
 ### 在你的环境中添加 AngularJS
+
 ### 使用全局 API
+
 ### 问答
 
 ### 定义 AngularJS `Module` 对象
+
 ### 实现提供者和依赖注入
+
 ### 总结
+
 ### 问答
 
 ### 实现作用层级结构
+
 ### 问答
 
 ### 理解模板
+
 ### 使用过滤器 (Filters)
+
 ### 总结
+
 ### 问答
 
 ### 理解指令
+
 ### 总结
+
 ### 工作坊
 
 ### 理解指令定义
+
 ### 问答
 
 ### 用户交互事件
+
 ### 发布和广播自定义事件
+
 ### 问答
 
 ### 理解服务 (Services)
+
 ### 使用 `$q` 服务提供响应
+
 ### 问答
 
-将自定义服务集成到 AngularJS 应用中
+### 将自定义服务集成到 AngularJS 应用中
+
 ### 问答
 
 ### 总结
 
+## 致谢
 
+我想借此机会感谢所有让这本书成为可能的人。首先，感谢我出色的妻子和儿子们，他们给了我所需的灵感和支持。没有你们，我无法走这么远。
 
-
-给 D!
-我的我的唯一
-我想借此机会感谢所有让这本书成为的人。首先，感谢我出色的妻子和儿子们，他们给了我所需的灵感和支持。没有你们，我无法走这么远。
 感谢 Mark Taber 让本书朝着正确的方向推进，感谢 Jesse Smith 通过技术评审让我保持严谨，感谢 Barbara Hacha 将我脑海中的技术性乱语变成精妙的文字，以及感谢 Andy Beaster 管理生产端的所有事务并确保了书籍具有最高质量。
+
 作为本书的读者，你是我们最重要的评论家和评稿人。我们非常重视你的意见，并想知道我们做得好的地方、可以做得更好的地方、你希望我们出版哪些领域的内容，以及任何你愿意分享的智慧。
+
 请注意，我们无法帮助你解决与本书主题相关的技术问题。
+
 写信时，请务必写上书名、作者以及你的姓名和邮箱。我们会仔细审核你的意见，并将其与负责本书的作者和编辑分享。
 
-800 East 96th Street
-
+## 注册与支持
 
 访问我们的网站并在 [informit.com/register](http://informit.com/register) 注册此书，以便方便获取本书可能提供的任何更新、下载或错误列表。
 
+![Image](img/image00767.jpeg) **可扩展性**——AngularJS 架构允许你轻松扩展语言的几乎每个方面，以提供自己的自定义实现。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-![Image](img/image00767.jpeg) `可扩展性`——AngularJS 架构允许你轻松扩展语言的几乎每个方面，以提供自己的自定义实现。
 本书的内容不仅限于 jQuery 和 JavaScript，因为要创建真正实用的 Web 应用，你需要了解比语言结构更多的知识。本书的目标是提供基础技能，让你只需通过 29 个短小易懂的课程就能创建功能完备且交互式的 Web 应用。本书涵盖了以下关键技能和技术：
+
 ![Image](img/image00767.jpeg) AJAX 是 Web 应用与 Web 服务器和其他服务的交互的标准方法。本书包含了几个使用 AJAX 与服务器、Google、Facebook 以及其他流行的 Web 服务交互的示例。
-![Image](img/image00767.jpeg) `CSS 代码`——正确格式化网页元素所需的代码。
+
+![Image](img/image00767.jpeg) **CSS 代码**——正确格式化网页元素所需的代码。
 
 ![Image](img/image00767.jpeg) 你不需要理解像 `PHP`、`Python` 等后端脚本语言。
 
-
+## 搭建 Node.js/Express 服务器
 
 点击此处查看代码图像
-27 
 
+27
 
+### 步骤 4：刷新项目
 
+回到 Eclipse，右键点击项目并选择 Refresh（刷新）。你应该能看到 `node_modules` 文件夹，其中包含 `body-parser` 和 `express` 子文件夹。
 
+### 步骤 5：创建服务器文件
 
+在项目目录根目录下创建一个名为 `server.js` 的文件，将 Listing 1.5 中的内容放入其中并保存。这是一个基础的 Node.js/Express Web 服务器，它将使用项目根目录作为网站根位置来提供静态文件服务。
 
+### 步骤 6：运行服务器
 
-
-
-## 4. 回到 Eclipse，右键点击项目并选择 Refresh（刷新）。你应该能看到 `node_modules` 文件夹，其中包含 `body-parser` 和 `express` 子文件夹。
-
-## 5. 在项目目录根目录下创建一个名为 `server.js` 的文件，将 Listing 1.5 中的内容放入其中并保存。这是一个基础的 Node.js/Express Web 服务器，它将使用项目根目录作为网站根位置来提供静态文件服务。
-
-## 6. 验证你的 Node.js Web 服务器可以正常运行。右键点击 `server.js` 文件并从菜单中选择 Run As, Node Application（运行方式，Node 应用程序）来启动 Web 服务器。图 1.12 中显示的 Console 窗口应显示 `server.js` 文件正在运行，并提供一个用于停止服务器的红色框。如果你在 Eclipse 中运行多个应用程序，可以点击 Console Select（选择控制台）按钮来选择特定的控制台，如图图 1.12 所示。
+验证你的 Node.js Web 服务器可以正常运行。右键点击 `server.js` 文件并从菜单中选择 Run As, Node Application（运行方式，Node 应用程序）来启动 Web 服务器。图 1.12 中显示的 Console 窗口应显示 `server.js` 文件正在运行，并提供一个用于停止服务器的红色框。如果你在 Eclipse 中运行多个应用程序，可以点击 Console Select（选择控制台）按钮来选择特定的控制台，如图 1.12 所示。
 
 ![Image](img/image0077.jpeg)
 
 **图 1.12** 在 Eclipse 中运行 JavaScript 应用程序。
 
-## 7. 在浏览器中通过以下地址访问服务器。由于 Web 服务器使用 `./` 路径提供静态文件，`server.js` 文件的实际内容应显示在浏览器中：
+### 步骤 7：访问服务器
+
+在浏览器中通过以下地址访问服务器。由于 Web 服务器使用 `./` 路径提供静态文件，`server.js` 文件的实际内容应显示在浏览器中：
 
 `localhost/server.js`
 
-## 8. 点击 Console 窗口中的红色框停止服务器。
+### 步骤 8：停止服务器
 
-***
+点击 Console 窗口中的红色框停止服务器。
 
-注意
-如果你不熟悉 Eclipse，应该花一点时间练习启动和停止 `first.js` 应用程序，以及如何在控制台中在它们之间导航。
-
-***
+**注意：** 如果你不熟悉 Eclipse，应该花一点时间练习启动和停止 `first.js` 应用程序，以及如何在控制台中在它们之间导航。
 
 你现在已成功在 Eclipse 中设置了 Node.js/Express 服务器。你将在书中的大多数示例中使用此 Web 服务器。部分课程需要 AJAX 交互，并将为这些课程创建一个独立的服务器。
 
@@ -287,29 +318,18 @@ ePUB 是一种开放的行业标准电子书格式。然而，不同的设备和
 
 点击此处查看代码
 
-***
-
-```
+```javascript
 01 var express = require('express');
 02 var app = express();
 03 app.use('/', express.static('./'));
 04 app.listen(80);
 ```
 
-***
-
-***
-
 ## 动手尝试：使用 jQuery 和 JavaScript 创建动态页面
 
 现在你已经创建了项目和一个可以运行的 Web 服务器，准备好创建动态页面了。在本节中，按照以下步骤创建一个简单的动态页面。完成后，你将拥有基于 HTML 并通过 jQuery 和 JavaScript 进行交互的动态页面。
 
-***
-
-注意
-书中的所有示例图像和代码文件都可以从 Github 下载。
-
-***
+**注意：** 书中的所有示例图像和代码文件都可以从 Github 下载。
 
 ### 添加 HTML
 
@@ -320,8 +340,6 @@ ePUB 是一种开放的行业标准电子书格式。然而，不同的设备和
 3. 从弹出菜单中选择 New, File（新建文件）。
 4. 将文件命名为 `first.html` 并点击 OK。为你打开一个空白文档。
 5. 输入以下 HTML 代码。如果你不熟悉 HTML，不用担心，稍后你会学到足够的知识：
-
-点击此处查看代码图像
 
 ```html
 <!DOCTYPE html>
@@ -338,19 +356,17 @@ ePUB 是一种开放的行业标准电子书格式。然而，不同的设备和
 6. 保存文件。
 7. 在浏览器中打开以下 URL，你应该能看到“Click Me”字样：
 
-点击此处查看代码图像
-
 `http://localhost/lesson01/first.html`
 
-好了。所有的基础 HTML 元素现在已就位。在下一节中，我们将样式化 <span> 元素，让 Click Me 看起来更像一个按钮。
+好了。所有的基础 HTML 元素现在已就位。在下一节中，我们将样式化 `<span>` 元素，让 Click Me 看起来更像一个按钮。
 
 ### 添加 CSS
 
 浏览器渲染的简单文本非常单调，可以通过添加 CSS 样式快速解决。在本节中，你使用 CSS 让文本看起来更像一个按钮。
 
-使用以下步骤为 <span> 元素添加 CSS 样式。作为参考，你在这些步骤中进行的样式更改将在 Listing 1.6 的最后的脚本所示：
+使用以下步骤为 `<span>` 元素添加 CSS 样式。作为参考，你在这些步骤中进行的样式更改将在 Listing 1.6 的最后的脚本所示：
 
-1. 在网页的 `<head>` 标签内添加以下代码，包含适用于所有 <span> 元素的 CSS `<style>` 元素：
+1. 在网页的 `<head>` 标签内添加以下代码，包含适用于所有 `<span>` 元素的 CSS `<style>` 元素：
 
 ```html
 <style>
@@ -360,20 +376,25 @@ ePUB 是一种开放的行业标准电子书格式。然而，不同的设备和
 ```
 
 2. 为 span 样式添加以下属性设置，将文本背景改为深蓝色：
+
 `background-color: #0000FF;`
 
 3. 为 span 样式添加以下属性设置，将颜色改为白色并将字体加粗：
+
 `color: #FFFFFF;`
+
 `font-weight: bold;`
 
 4. 为 span 样式添加以下属性设置，在文本周围添加边框：
+
 `border: 1px solid #000000;`
 
 5. 为 span 样式添加以下属性设置，设置绝对位置：
+
 `position: absolute;`
 
 6. 保存文件。
-7. 在浏览器中打开以下 URL，你应该能看到“Click Me”文本，如图图 1.12 所示：
+7. 在浏览器中打开以下 URL，你应该能看到“Click Me”文本，如图 1.12 所示：
 
 `http://localhost/lesson01/first.html`
 
@@ -383,9 +404,9 @@ ePUB 是一种开放的行业标准电子书格式。然而，不同的设备和
 
 ### 编写脚本
 
-现在 HTML 已经按照你想要的方式样式化，你可以开始添加动态交互了。在本节中，你将 jQuery 添加到你的中：
+现在 HTML 已经按照你想要的方式样式化，你可以开始添加动态交互了。在本节中，你将 jQuery 添加到你的页面中：
 
-1. 修改 <span> 元素以包含一个 `id`，以便你可以引用它，并为 `mouseover` 事件添加一个处理器：
+1. 修改 `<span>` 元素以包含一个 `id`，以便你可以引用它，并为 `mouseover` 事件添加一个处理器：
 
 ```html
 <span id="elusiveText" onmouseover="moveIt()">Click Me</span>
@@ -409,16 +430,14 @@ function moveIt() {
 ```
 
 4. 保存文件。
-5. 在浏览器中打开以下 URL，你应该能看到样式化的文本 Click Me，如图图 1.13 所示：
+5. 在浏览器中打开以下 URL，你应该能看到样式化的文本 Click Me，如图 1.13 所示：
 
 `http://localhost/lesson01/first.html`
 
 6. 现在尝试点击 Click Me 按钮。按钮会在每次鼠标悬停在它上时移动，导致你无法点击它。
 7. 找一个让你讨厌的人，并让他们点击这个按钮。
 
-
-
-
+**完整代码示例：**
 
 ```html
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -450,14 +469,13 @@ function moveIt() {
   <span id="elusiveText" onmouseover="moveIt()">Click Me</span>
 </body>
 </html>
-```html
 ```
 
-***
+
 
 ### 总结
 
-在本节中，你学习了 Web 服务器与浏览器之间通信的基础知识。你学习了 `GET` 和 `POST` 请求之间的区别，以及服务器端脚本和客户端脚本的作用。你还学习了 `DOM` 以及浏览器如何利用它来渲染显示给用户的网页。
+在本节中，你学习了 Web 服务器与浏览器之间通信的基础知识。你学习了`GET`和`POST`请求之间的区别，以及服务器端脚本和客户端脚本的作用。你还学习了`DOM`以及浏览器如何利用它来渲染显示给用户的网页。
 
 你已经建立了一个良好的 Web 开发环境并创建了你的第一个项目。作为创建第一个项目的一部分，你创建了一个结合了 HTML、CSS、jQuery 和 JavaScript 的动态网页。
 
@@ -469,7 +487,7 @@ function moveIt() {
 
 **Q. 为什么所有的浏览器处理 JavaScript 的方式不同？**
 
-**A.** 为了渲染 HTML 并与 JavaScript 交互，浏览器使用引擎来解析来自服务器的数据、构建对象，然后将其输入图形渲染引擎并写在屏幕上。由于由于种浏览器使用的引擎不同，因此它们对脚本的解释方式略有不同，特别是对于尚未尚未标准化的边缘元素。如果你想支持所有浏览器，需要在每个浏览器中测试你的网页，以验证它们是否运行正常。
+**A.** 为了渲染 HTML 并与 JavaScript 交互，浏览器使用引擎来解析来自服务器的数据、构建对象，然后将其输入图形渲染引擎并写在屏幕上。由于不同浏览器使用的引擎不同，因此它们对脚本的解释方式略有不同，特别是对于尚未标准化的边缘元素。如果你想支持所有浏览器，需要在每个浏览器中测试你的网页，以验证它们是否运行正常。
 
 ### 工作坊
 
@@ -477,7 +495,7 @@ function moveIt() {
 
 ### 测验
 
-**1.** 你会向 Web 服务器发送 `GET` 还是 `POST` 请求来打开网页？
+**1.** 你会向 Web 服务器发送`GET`还是`POST`请求来打开网页？
 
 **2.** 哪种脚本可以访问浏览器鼠标事件：服务器端还是客户端？
 
@@ -489,40 +507,30 @@ function moveIt() {
 
 **1.** `GET`
 
-**2.** 客户端 
+**2.** 客户端
 
 **3.** 正确
 
 **4.** 客户端
 
-
-
-
-
 注意在图 2.1 中的消息部分，有两种类型的消息。一种是日志语句（log statement），另一种是错误。两者在右侧都显示行号。点击行号，将直接跳转到代码处。
 
 注意在错误消息中，顶部文本部分指向发生的错误，底部显示实际的 JavaScript 行。这在调试时非常有用，因为你通常可以通过查看错误和单行代码来发现问题。
-
-***
 
 ### 动手尝试：使用 JavaScript 控制台查找错误
 
 理解控制台的最简单方法是调试一个实际脚本。考虑列表 2.1 中的 HTML 代码，它包含几个错误。按照以下步骤将列表添加到你的 Eclipse 项目中：
 
-1. 右键点击项目，并从菜单中选择 `New`（新建）、`Folder`（文件夹）。
-2. 将文件夹命名为 `lesson02` 并点击 `Finish`（完成）。
-3. 右键点击新文件夹，并从菜单中选择 `New`（新建）、`File`（文件）。
-4. 将文件命名为 `js_errors.html`。
+1. 右键点击项目，并从菜单中选择`New`（新建）、`Folder`（文件夹）。
+2. 将文件夹命名为`lesson02`并点击`Finish`（完成）。
+3. 右键点击新文件夹，并从菜单中选择`New`（新建）、`File`（文件）。
+4. 将文件命名为`js_errors.html`。
 5. 输入列表 2.1 的内容，或者如果你有网站上的文件，将其内容剪切并粘贴到新文件中。
 6. 保存文件。
-
-***
 
 **列表 2.1 js_errors.html 一个带有 JavaScript 错误的非常简单的 HTML 文档**
 
 点击此处查看代码图像
-
-***
 
 ```html
 01 <!DOCTYPE html>
@@ -544,9 +552,7 @@ function moveIt() {
 17 </html>
 ```
 
-***
-
-列表 2.1 中的代码本应在页面在浏览器加载后在控制台中显示消息 `Page Is Loaded`。每当用户点击浏览器中的 `Click Me` 时，就会显示另一个消息 `User Clicked`。问题是该脚本有几个 bug。
+列表 2.1 中的代码本应在页面在浏览器加载后在控制台中显示消息`Page Is Loaded`。每当用户点击浏览器中的`Click Me`时，就会显示另一个消息`User Clicked`。问题是该脚本有几个 bug。
 
 文件现在就绪后，使用以下步骤使用 JavaScript 控制台调试错误：
 
@@ -554,29 +560,29 @@ function moveIt() {
 2. 在 Chrome 中打开以下 URL 以加载新创建的网页：
    点击此处查看代码图像
    http://localhost/lesson02/js_errors.html
-3. 点击 `Console`（控制台）选项卡，显示图 2.2 所示的 JavaScript 控制台。
+3. 点击`Console`（控制台）选项卡，显示图 2.2 所示的 JavaScript 控制台。
 
 ![Image](img/image00782.jpeg)
 
 **图 2.2** 显示页面加载期间发生的两个错误的 JavaScript 控制台。
 
-4. 注意控制台中显示的错误，如图 2.2 所示。第一个错误显示文件第 6 行有一个意外的标识符。点击行号将在第 6 行打开 `Sources`（源代码）选项卡，你可以看到 `function` 被误写为 `fnction`，如图 2.3 所示。
+4. 注意控制台中显示的错误，如图 2.2 所示。第一个错误显示文件第 6 行有一个意外的标识符。点击行号将在第 6 行打开`Sources`（源代码）选项卡，你可以看到`function`被误写为`fnction`，如图 2.3 所示。
 
 ![Image](img/image00783.jpeg)
 
 **图 2.3** 显示 JavaScript 代码语法错误的 Sources 控制台。
 
-5. 在 Eclipse 中，将第 6 行的 `fnction` 改为 `function`。
-6. 回到 Chrome 并刷新网页。现在在 `Console` 中，你应该能在控制台中看到 `Page Is Loaded`（在 `loadedFunction()` 函数中记录的文本），但没有错误。
-7. 点击 `Click Me` 文本。控制台中增加了一个错误，如图 2.4 所示。错误提示 `clickItNow` 未定义。当你查看 HTML 文件并搜索 `clickItw` 时，你可以在第 15 行看到一个 `onclick` 事件链接到了 `clickItNot()`，但 JavaScript 函数的名称是 `clickItNow()`。
+5. 在 Eclipse 中，将第 6 行的`fnction`改为`function`。
+6. 回到 Chrome 并刷新网页。现在在`Console`中，你应该能在控制台中看到`Page Is Loaded`（在`loadedFunction()`函数中记录的文本），但没有错误。
+7. 点击`Click Me`文本。控制台中增加了一个错误，如图 2.4 所示。错误提示`clickItNow`未定义。当你查看 HTML 文件并搜索`clickItw`时，你可以在第 15 行看到一个`onclick`事件链接到了`clickItNot()`，但 JavaScript 函数的名称是`clickItNow()`。
 
 ![Image](img/image00784.jpeg)
 
 **图 2.4** 显示一个错误的 JavaScript 控制台。
 
-8. 在 Eclipse 中，将 `clickItw` 改为 `clickIt`。
+8. 在 Eclipse 中，将`clickItw`改为`clickIt`。
 9. 回到 Chrome 并刷新网页。
-10. 点击 `Click Me` 文本。错误应该已经解决了。
+10. 点击`Click Me`文本。错误应该已经解决了。
 
 ### 调试 HTML 元素
 
@@ -586,22 +592,19 @@ function moveIt() {
 这是树的简单视图。你可以点击箭头图标来展开和收叠树的部分。
 
 ### 更改断点（Break on Changes）
-右键点击元素并选择 `Break On`（断点）允许你在元素更改、删除或子元素被修改时设置不同类型的断点。每当 DOM 元素更改时，浏览器将中断。
+右键点击元素并选择`Break On`（断点）允许你在元素更改、删除或子元素被修改时设置不同类型的断点。每当 DOM 元素更改时，浏览器将中断。
 
 ### 编辑为 HTML（Edit as HTML）
-右键点击元素并选择 `Edit as HTML` 允许你直接编辑浏览器中的 HTML 代码。虽然这不会更改项目中的代码，但使用此功能进行测试要方便得多。
+右键点击元素并选择`Edit as HTML`允许你直接编辑浏览器中的 HTML 代码。虽然这不会更改项目中的代码，但使用此功能进行测试要方便得多。
 
 ### 悬停（Hover）
-当你悬停在 DOM 树中的 HTML 代码上时，元素会在浏览器中突出显示。元素检查器的悬停功能是我最喜欢的功能之一，因为它提供了一种视觉方式来查看 DOM 树节点与渲染网页之间的关系。注意图 2.6，当悬停在 `h1` 元素上时，标题会在网页中突出显示。
+当你悬停在 DOM 树中的 HTML 代码上时，元素会在浏览器中突出显示。元素检查器的悬停功能是我最喜欢的功能之一，因为它提供了一种视觉方式来查看 DOM 树节点与渲染网页之间的关系。注意图 2.6，当悬停在`h1`元素上时，标题会在网页中突出显示。
 
-### 面包屑（Breadcrumbs）
-面包屑显示了从根节点 `html` 到当前在树或编辑视图中选中节点的层级结构。这使得导航变得简单，特别是在编辑视图中。
+### 面包屑(Breadcrumbs)
+面包屑显示了从根节点`html`到当前在树或编辑视图中选中节点的层级结构。这使得导航变得简单，特别是在编辑视图中。
 
 **注意**
 当悬停在 DOM 树上的元素时，该元素会在网页上突出显示。悬停高亮是颜色编码的，浅蓝色表示内容，紫色表示内边距（padding），黄色表示 HTML 元素的外边距（margin）。
-
-
-
 
 为了说明如何使用元素检查器（Element inspector），请考虑列表 2.2 中的代码。一个包含电影列表且标题中带有“Favorite（收藏）”一词的基础 HTML 文档应该是斜体。然而，请看图 2.7 中的渲染版本。显然存在一些问题：所有内容都是斜体，且第一个列表项没有项目符号。这些问题是由整个文本中的仅两个字符引起的。
 
@@ -609,15 +612,11 @@ function moveIt() {
 
 **图 2.7** 该网页有两个问题：只有“Favorite”一词应该是斜体，且第一个列表项没有项目符号。
 
-* *
-
-**列表 2.2** `html_errors.html` 这是一个带有某些 HTML 语法错误的非常简单的 HTML 文档，正如图图 2.6 所示。
+**列表 2.2** `html_errors.html` 这是一个带有某些 HTML 语法错误的非常简单的 HTML 文档，正如图 2.6 所示。
 
 点击此处查看代码图像
 
- * *
-
-```
+```html
 01 <!DOCTYPE html>
 02 <html>
 03   <head>
@@ -635,13 +634,11 @@ function moveIt() {
 15 </html>
 ```
 
-* *
-
 按照以下步骤操作，使用元素检查器查找并修复 HTML 语法问题：
 
-**1.** 将列表 2.2 中的代码添加到项目 `lesson02` 文件夹中的新文件 `html_errors.html` 中，并保存文档。到你现在应该已经熟悉这个过程了。
+**1.** 将列表 2.2 中的代码添加到项目`lesson02`文件夹中的新文件`html_errors.html`中，并保存文档。到你现在应该已经熟悉这个过程了。
 
-**2.** 打开 `Chrome` 并加载开发者工具。
+**2.** 打开`Chrome`并加载开发者工具。
 
 **3.** 打开以下 URL；网页看起来应该像图 2.7：
 
@@ -649,27 +646,27 @@ function moveIt() {
 
 http://localhost/lesson02/html_errors.html
 
-**4.** 点击开发者工具中的 `Elements` 标签页，展开 `<html>`、`<body>`，然后是 `<i>` 标签，如图图 2.8 所示。注意，“Favorite”一词没有包含 `<i>` 标签内。这是不对的。
+**4.** 点击开发者工具中的`Elements`标签页，展开`<html>`、`<body>`，然后是`<i>`标签，如图 2.8 所示。注意，“Favorite”一词没有包含`<i>`标签内。这是不对的。
 
 ![Image](img/image00788.jpeg)
 
-**图 2.8** 此元素检查器显示 DOM 中有第二个 `<i>`。
+**图 2.8** 此元素检查器显示 DOM 中有第二个`<i>`。
 
-**5.** 回到 `Eclipse`，将“Favorite”一词移动到第 7 行 `<i>` 标签内部并保存文档。
+**5.** 回到`Eclipse`，将“Favorite”一词移动到第 7 行`<i>`标签内部并保存文档。
 
-**6.** 在浏览器中刷新文档。注意，“Favorite”一词现在是斜体（正如它应该是的那样），但项目符号仍然缺失，如图图 2.9 所示。
+**6.** 在浏览器中刷新文档。注意，“Favorite”一词现在是斜体（正如它应该是的那样），但项目符号仍然缺失，如图 2.9 所示。
 
 ![Image](img/image00789.jpeg)
 
 **图 2.9** 该网页现在只有一个问题——第一个列表项没有项目符号。
 
-**7.** 回到元素检查器并展开 `<html>`、`<body>`、`<ul>`，然后是 `<ll>`，如图图 2.10 所示。在 `<ul>` 元素下不是一组 `<li>` 元素，而是一个 `<ll>` 元素，下面包含着 `<li>` 元素。我们还没有介绍 HTML 标签，但如果你熟悉 HTML 列表，你会识别出 `ll` 不是一个有效的 HTML 标签。它应该是 `<li>`。
+**7.** 回到元素检查器并展开`<html>`、`<body>`、`<ul>`，然后是`<ll>`，如图 2.10 所示。在`<ul>`元素下不是一组`<li>`元素，而是一个`<ll>`元素，下面包含着`<li>`元素。我们还没有介绍 HTML 标签，但如果你熟悉 HTML 列表，你会识别出`ll`不是一个有效的 HTML 标签。它应该是`<li>`。
 
 ![Image](img/image00790.jpeg)
 
-**图 2.10** 查看 DOM 发现浏览器在 `<ul>` 标签下看到一个 `<ll>` 标签，而不是一组 `<li>` 标签。
+**图 2.10** 查看 DOM 发现浏览器在`<ul>`标签下看到一个`<ll>`标签，而不是一组`<li>`标签。
 
-**8.** 回到 `Eclipse`，将第 9 行的 `<ll>` 标签更改为 `<li>` 并保存页面。
+**8.** 回到`Eclipse`，将第 9 行的`<ll>`标签更改为`<li>`并保存页面。
 
 **9.** 在浏览器中重新加载网页。列表现在显示正常了。
 
@@ -677,10 +674,7 @@ http://localhost/lesson02/html_errors.html
 
 调试 HTML 的另一个重要工具是 DOM 属性编辑器。DOM 属性编辑器非常强大。它允许你查看和编辑 DOM 中每个 HTML 元素的属性、属性、函数、子元素、父元素以及其他所有内容。信息以树的形式显示，因此你可以展开和折叠组。
 
-通过点击开发者工具控制台中的 `Elements` 标签页并选择 `Properties` 标签页可以访问 DOM 编辑器。信息以树的形式显示...图 2.8。注意，“Favorite”一词没有包含在 `<i>` 标签内。这是不对的。
-
-
-
+通过点击开发者工具控制台中的`Elements`标签页并选择`Properties`标签页可以访问 DOM 编辑器。信息以树的形式显示...图 2.8。注意，“Favorite”一词没有包含在`<i>`标签内。这是不对的。
 
 ![Image](img/image00767.jpeg) **切换元素状态**——切换元素状态按钮会加载图 2.14 所示的菜单，允许你将元素状态设置为`active`（激活）、`hover`（悬停）、`focus`（聚焦）或`visited`（访问），以便查看适用于这些状态的 CSS 样式。
 
@@ -702,8 +696,6 @@ http://localhost/lesson02/html_errors.html
 
 ![Image](img/image00767.jpeg) **内容 (Content)**——内容是布局编辑器中最内层的框。它有两个值（长度和宽度），你通过更改这些值来设置 HTML 元素的 CSS 长度和宽度属性。
 
-***
-
 ### 动手尝试：编辑 CSS 布局
 
 为了帮助你理解使用开发者工具调试和编辑 CSS 布局，请考虑列表 2.3 中的代码。该代码设计用于显示一个简单的标签框来展示信息。CSS 属性存在一些问题导致其显示效果不好，如图 2.16 所示。注意标签页堆叠在一起，并且它们之间存在空间。
@@ -715,8 +707,6 @@ http://localhost/lesson02/html_errors.html
 **列表 2.3 css_errors.html 一个非常简单的 HTML 文档，并在图 2.16 中展示了某些 HTML 语法错误**
 
 点击此处查看代码图像
-
-***
 
 ```html
 01 <!DOCTYPE html>
@@ -772,6 +762,12 @@ http://localhost/lesson02/html_errors.html
 51          <p>Brad</p>
 52          <p>Contact</p>
 53          <p>Author</p>
+```
+
+
+
+
+```html
 54       </div>
 55     </div>
 56   </body>
@@ -821,11 +817,11 @@ http://localhost/lesson02/html_errors.html
 
 ***
 
-### 调试 JavaScript
+## 调试 JavaScript
 
 你已经学会了在 JavaScript 控制台中查找 JavaScript 和其他脚本的异常错误。如果你的脚本没有引起任何浏览器错误，但运行方式不符合你的预期呢？所有的浏览器都提供了非常好的集成调试器来帮助。接下来的部分介绍如何使用 Chrome 开发者工具调试 JavaScript。
 
-#### 导航 JavaScript 调试器
+### 导航 JavaScript 调试器
 
 JavaScript 调试器允许你查看随网页加载的 JavaScript 脚本。除了查看脚本之外，你还可以设置断点、观察变量值并查看调用栈，就像使用任何其他调试器一样。
 
@@ -833,28 +829,15 @@ JavaScript 调试器允许你查看随网页加载的 JavaScript 脚本。除了
 
 - **JavaScript 视图**——显示实际的 JavaScript 代码。
 - **源选择菜单**——此菜单列出了随网页加载的所有源文件列表。你可以点击此菜单来选择要在视图中加载的 JavaScript 文件。
-
-
-
-
-
-![Image](img/image00767.jpeg) **异常暂停**—当选择此选项时，如果发生 JavaScript 异常，浏览器将进入调试器并停止执行。
-
-![Image](img/image00767.jpeg) **监视**—图 2.21 中显示的监视面板列出了在代码当前执行时可用的函数、变量、属性等。这是一个非常有价值的窗口。在这里，你可以看到代码执行过程中变量和对象的值。此外，你可以通过点击监视列表顶部的加号图标向监视面板添加自己的表达式。监视面板的一个非常棒的功能是，你可以双击变量值并更改执行时使用的值。这是测试“假设”场景的极佳方法。
-
-![Image](img/image00767.jpeg) **调用堆栈**—调用堆栈面板提供了导致当前执行代码行的函数调用历史。调用堆栈面板最有价值的方面之一是通过展开函数名称查看传递给每个函数的参数值。你还可以点击函数名，该文件将在 JavaScript 视图中加载并高亮显示该行代码。
-
-![Image](img/image00767.jpeg) **断点**—断点允许你指定执行 JavaScript 时何时停止。当你设置了断点时，浏览器会在执行该行代码之前停止执行并进入调试器。你可以通过点击 JavaScript 视图中代码行左侧来设置断点。它们由红点表示。要删除断点，只需点击它。断点面板显示已设置的断点列表。你可以通过取消旁边的复选框来禁用断点。你可以点击“禁用断点”按钮来禁用断点。
-
-![Image](img/image00767.jpeg) **当前执行行**—当前正在执行的代码行由黄色箭头表示。
-
-![Image](img/image00767.jpeg) **恢复**—这允许脚本继续执行，直到遇到另一个断点（如果有的话）。
-
-![Image](img/image00767.jpeg) **进入**—当你点击此图标时，代码将前进一行。如果该行代码正在执行另一个函数，你将进入该函数的第一行代码。
-
-![Image](img/image00767.jpeg) **跳过**—当你点击此图标时，代码将前进一行。如果该行代码正在执行另一个函数，该函数将被执行，然后你将进入当前函数中的下一行代码。如果在跳过函数时遇到断点，浏览器将在脚本的该位置停止执行。
-
-![Image](img/image00767.jpeg) **跳出**—当你点击此图标时，当前函数执行完毕，你将回到调用函数中的下一行代码。
+- ![Image](img/image00767.jpeg) **异常暂停**——当选择此选项时，如果发生 JavaScript 异常，浏览器将进入调试器并停止执行。
+- ![Image](img/image00767.jpeg) **监视**——图 2.21 中显示的监视面板列出了在代码当前执行时可用的函数、变量、属性等。这是一个非常有价值的窗口。在这里，你可以看到代码执行过程中变量和对象的值。此外，你可以通过点击监视列表顶部的加号图标向监视面板添加自己的表达式。监视面板的一个非常棒的功能是，你可以双击变量值并更改执行时使用的值。这是测试“假设”场景的极佳方法。
+- ![Image](img/image00767.jpeg) **调用堆栈**——调用堆栈面板提供了导致当前执行代码行的函数调用历史。调用堆栈面板最有价值的方面之一是通过展开函数名称查看传递给每个函数的参数值。你还可以点击函数名，该文件将在 JavaScript 视图中加载并高亮显示该行代码。
+- ![Image](img/image00767.jpeg) **断点**——断点允许你指定执行 JavaScript 时何时停止。当你设置了断点时，浏览器会在执行该行代码之前停止执行并进入调试器。你可以通过点击 JavaScript 视图中代码行左侧来设置断点。它们由红点表示。要删除断点，只需点击它。断点面板显示已设置的断点列表。你可以通过取消旁边的复选框来禁用断点。你可以点击“禁用断点”按钮来禁用断点。
+- ![Image](img/image00767.jpeg) **当前执行行**——当前正在执行的代码行由黄色箭头表示。
+- ![Image](img/image00767.jpeg) **恢复**——这允许脚本继续执行，直到遇到另一个断点（如果有的话）。
+- ![Image](img/image00767.jpeg) **进入**——当你点击此图标时，代码将前进一行。如果该行代码正在执行另一个函数，你将进入该函数的第一行代码。
+- ![Image](img/image00767.jpeg) **跳过**——当你点击此图标时，代码将前进一行。如果该行代码正在执行另一个函数，该函数将被执行，然后你将进入当前函数中的下一行代码。如果在跳过函数时遇到断点，浏览器将在脚本的该位置停止执行。
+- ![Image](img/image00767.jpeg) **跳出**——当你点击此图标时，当前函数执行完毕，你将回到调用函数中的下一行代码。
 
 ![Image](img/image00801.jpeg)
 
@@ -868,13 +851,11 @@ JavaScript 调试器允许你查看随网页加载的 JavaScript 脚本。除了
 
 JavaScript 应该在每次点击按钮时数字加 1。然而，JavaScript 代码存在一个问题；数字不会超过 2。
 
-**列表 2.4 debug.html 带有 JavaScript 错误的极简 HTML 文档示例**
+**列表 2.4 `debug.html` 带有 JavaScript 错误的极简 HTML 文档示例**
 
-点击此处查看代码图像
+点击此处查看代码图像。
 
-***
-
-```
+```html
 01 <!DOCTYPE html>
 02 <html
 03    <head>
@@ -917,31 +898,23 @@ JavaScript 应该在每次点击按钮时数字加 1。然而，JavaScript 代�
 6. 逐行执行代码。
 7. 观察 `cnt` 如何每次点击时被重置。
 8. 要修复这个问题，请在 Eclipse 原始文件中交换第 7 行和第 8 行，使 `cnt` 的定义出现在 `countIt()` 的定义之前。这会在脚本加载时定义变量 `cnt` 并仅设置一次值。保存文件。
-
-
-
-
-
-17. 无需每次在调试时都展开 Window（窗口）元素，只需点击图 2.24 所示监视列表顶部的 `New Watch Expression`（新建监视表达式），输入 `cnt` 并按 `Enter`。这会在 `cnt` 变量的最上方直接添加一个新的监视表达式，如图图 2.24 所示。
-
-18. 点击 `Step Over`（单步）图标，`cnt` 将变为 2。然后点击 `Continue`（继续）按钮恢复执行。
-
-19. 点击网页上的按钮，此时 `cnt` 变量将显示为 2。当你点击 `Step Over` 按钮时，`cnt` 变量将变为 3。
-
-20. 程序似乎运行正常，因此点击第 9 行上的断点以移除断点，然后点击 `Continue` 按钮恢复执行。
-
-21. 现在每当你点击按钮时，数字都会递增。你刚刚调试了 JavaScript。
+9. 无需每次在调试时都展开 Window（窗口）元素，只需点击图 2.24 所示监视列表顶部的 `New Watch Expression`（新建监视表达式），输入 `cnt` 并按 `Enter`。这会在 `cnt` 变量的最上方直接添加一个新的监视表达式，如图 2.24 所示。
+10. 点击 `Step Over`（单步）图标，`cnt` 将变为 2。然后点击 `Continue`（继续）按钮恢复执行。
+11. 点击网页上的按钮，此时 `cnt` 变量将显示为 2。当你点击 `Step Over` 按钮时，`cnt` 变量将变为 3。
+12. 程序似乎运行正常，因此点击第 9 行上的断点以移除断点，然后点击 `Continue` 按钮恢复执行。
+13. 现在每当你点击按钮时，数字都会递增。你刚刚调试了 JavaScript。
 
 这是一个非常基础的示例，但为了方便跟进步骤并熟悉调试器的工作原理，我们做了简化处理。在完成书中的练习时，你可能会多次回到调试器。请记住这些基本步骤：设置断点并在单步执行代码时观察变量。
 
-###那么如何调试 jQuery 或 AngularJS？
+### 那么如何调试 jQuery 或 AngularJS？
 
 这是一个经常出现的问题，即使对于那些具有 JavaScript 调试经验的人来说，也是如何调试 jQuery 或 AngularJS。答案很简单：AngularJS、jQuery 以及许多 JavaScript 插件和版本仅仅是额外的 JavaScript 代码。要调试 AngularJS 或 jQuery，请在项目中使用未压缩（nonminified）格式的库文件。你将在本书的后后部分学习如何操作。
 
 你下载未压缩版本的原因是压缩后的版本是不可读的。所有内容都挤在了一行中，在调试器中显示效果很差。未压缩的版本以可读的格式格式化。
 
-注意
-即使你无法获取 JavaScript 文件的未压缩版本，也可以在 Eclipse 中打开该文件，并从主菜单选择 `File`（文件）-> `Format`（格式化）。Eclipse 会自动将文件格式化为可读的形式。大多数 IDE 都有此类功能。
+> **注意**
+>
+> 即使你无法获取 JavaScript 文件的未压缩版本，也可以在 Eclipse 中打开该文件，并从主菜单选择 `File`（文件）-> `Format`（格式化）。Eclipse 会自动将文件格式化为可读的形式。大多数 IDE 都有此类功能。
 
 格式化了 AngularJS、jQuery 或任何其他 JavaScript 库后，你就可以像调试其他 JavaScript 文件一样调试它了。
 
@@ -951,42 +924,32 @@ JavaScript 应该在每次点击按钮时数字加 1。然而，JavaScript 代�
 
 ![Image](img/image00805.jpeg)
 
-**图 2.25** 加载 [amazon.com](http://amazon.com)所需的网络流量。
+**图 2.25** 加载 [amazon.com](http://amazon.com) 所需的网络流量。
 
 图 2.25 显示了加载 [amazon.com](http://amazon.com) 网页涉及的流量。有许多请求，每个请求对应流量列表中的一行。对于每个请求，流量中显示以下内容：
 
-![Image](img/image00767.jpeg) **URL Path**——请求的 URL 非常有用。你可以右键点击 URL 并复制它，甚至在另一个标签页或窗口中打开它。这允许你调试单个请求，而不是整个网页加载。
+- ![Image](img/image00767.jpeg) **URL Path**——请求的 URL 非常有用。你可以右键点击 URL 并复制它，甚至在另一个标签页或窗口中打开它。这允许你调试单个请求，而不是整个网页加载。
+- ![Image](img/image00767.jpeg) **Method**——请求中使用的 HTTP 方法类型。
+- ![Image](img/image00767.jpeg) **Status**——你可以使用状态来确定请求是否成功以及是否仍在运行。例如，网页看起来可能正常可能是因为某个图像请求加载失败，这在开发者工具的 `Net` 标签中非常容易诊断。
+- ![Image](img/image00767.jpeg) **Type**——请求获取的数据类型。
+- ![Image](img/image00767.jpeg) **Initiator**——请求发起的来源。
+- ![Image](img/image00767.jpeg) **Size**——大小可能很有用，因为它允许你快速找到需要大量磁盘空间和网络带宽的请求。
+- ![Image](img/image00767.jpeg) **Latency**——显示请求以毫秒为单位的延迟。
+- ![Image](img/image00767.jpeg) **Timeline**——显示请求花费的毫秒时间。这在诊断响应缓慢的网页和其他速度相关问题时非常有用。
 
-![Image](img/image00767.jpeg) **Method**——请求中使用的 HTTP 方法类型。
-
-![Image](img/image00767.jpeg) **Status**——你可以使用状态来确定请求是否成功以及是否仍在运行。例如，网页看起来可能正常可能是因为某个图像请求加载失败，这在开发者工具的 `Net` 标签中非常容易诊断。
-
-![Image](img/image00767.jpeg) **Type**——请求获取的数据类型。
-
-![Image](img/image00767.jpeg) **Initiator**——请求发起的来源。
-
-![Image](img/image00767.jpeg) **Size**——大小可能很有用，因为它允许你快速找到需要大量磁盘空间和网络带宽的请求。
-
-![Image](img/image00767.jpeg) **Latency**——显示请求以毫秒为单位的延迟。
-
-![Image](img/image00767.jpeg) **Timeline**——显示请求花费的毫秒时间。这在诊断响应缓慢的网页和其他速度相关问题时非常有用。
-
-注意
-`Network` 标签顶部的选项允许你禁用浏览器缓存。当你更新 Web 服务器上的文件以调试和修复问题时，此选项非常有用。当勾选此选项时，浏览器将始终从 Web 服务器获取最新内容。
+> **注意**
+>
+> `Network` 标签顶部的选项允许你禁用浏览器缓存。当你更新 Web 服务器上的文件以调试和修复问题时，此选项非常有用。当勾选此选项时，浏览器将始终从 Web 服务器获取最新内容。
 
 对于某些复杂的网页，流量可能太多，无法调试所有请求。`Net` 标签中的过滤选项允许你只查看某些类型的请求，例如 HTML、CSS 或 JS。`XHR` 过滤器代表 `XMLHttpRequest`，它是 AJAX 中使用的通信方式。
 
 当你展开一个请求时（如图 2.26 所示），你可以获得关于该请求的大量信息。可用标签取决于请求类型，这里是一些实用的：
 
-![Image](img/image00767.jpeg) **Headers**——显示发送的请求头。如果你通过 AJAX 访问特定的头，这非常有用。
-
-![Image](img/image00767.jpeg) **Preview**——显示数据的预览。如果这是一个 POST 请求，它会显示发送的参数。
-
-![Image](img/image00767.jpeg) **Response**——取决于响应的内容。例如，如果你正在从服务器下载 JavaScript 文件，它显示原始 JavaScript；对于 HTML 文件，它显示 HTML。
-
-![Image](img/image00767.jpeg) **Cookies**——显示请求涉及的 Cookie 值。
-
-![Image](img/image00767.jpeg) **Timing**——显示请求的时间信息，包括发送时间、等待时间和下载时间。
+- ![Image](img/image00767.jpeg) **Headers**——显示发送的请求头。如果你通过 AJAX 访问特定的头，这非常有用。
+- ![Image](img/image00767.jpeg) **Preview**——显示数据的预览。如果这是一个 POST 请求，它会显示发送的参数。
+- ![Image](img/image00767.jpeg) **Response**——取决于响应的内容。例如，如果你正在从服务器下载 JavaScript 文件，它显示原始 JavaScript；对于 HTML 文件，它显示 HTML。
+- ![Image](img/image00767.jpeg) **Cookies**——显示请求涉及的 Cookie 值。
+- ![Image](img/image00767.jpeg) **Timing**——显示请求的时间信息，包括发送时间、等待时间和下载时间。
 
 ![Image](img/image806.jpeg)
 
@@ -996,55 +959,45 @@ JavaScript 应该在每次点击按钮时数字加 1。然而，JavaScript 代�
 
 在本节中，你学习了调试动态网页问题的多种方法。你学习了如何将脚本信息输出到 JavaScript 控制台。你学习了如何使用元素检查器查看浏览器在加载网页时构建的 HTML 元素。
 
-你还遵循了 HTML、CSS 和 JavaScript 问题的多个示例。在本节中中学的方法对于你完成本书以及未来的项目将非常有帮助，因为它们可以节省你调试那些总是出现的简单语法问题产生的时间和精力。
+你还遵循了 HTML、CSS 和 JavaScript 问题的多个示例。本节中学到的方法对于你完成本书以及未来的项目将非常有帮助，因为它们可以节省你调试那些总是出现的简单语法问题所产生的时间和精力。
 
 ### 问答
 
-Q 有方法调试服务器端脚本吗？]
+**Q：** 有方法调试服务器端脚本吗？
 
-A 有，这种方法。这真的超出了本书的范围；但大多数优秀的语言都有远程调试问题的方法。如果你正在尝试调试 PHP 服务器端脚本，请查看 ZEND 的功能（www.zend.com/en/community/pdt）。如果你正在使用 Python 服务器端脚本，请检查并使用 PyDev（pydev.org）。]
+**A：** 有，这种方法。这真的超出了本书的范围；但大多数优秀的语言都有远程调试问题的方法。如果你正在尝试调试 PHP 服务器端脚本，请查看 ZEND 的功能（www.zend.com/en/community/pdt）。如果你正在使用 Python 服务器端脚本，请检查并使用 PyDev（pydev.org）。
 
-Q 有方法调试 Cookie 吗？]
+**Q：** 有方法调试 Cookie 吗？
 
+**A：** 在调试 cookie 时，你只需要知道 cookie 是否已启用、浏览器中设置了哪些 cookie、cookie 的值是什么以及它们何时过期。所有这些信息可以在开发者工具的 Cookies 标签页中找到。Chrome 和 Internet Explorer 的开发者控制台中也有类似的功能。
 
-
-
-
-## A
-
-在调试 cookie 时，你只需要知道 cookie 是否已启用、浏览器中设置了哪些 cookie、cookie 的值是什么以及它们何时过期。所有这些信息可以在开发者工具的 Cookies 标签页中找到。Chrome 和 Internet Explorer 的开发者控制台中也有类似的功能。
-
-### 工作坊 (Workshop)
+## 工作坊（Workshop）
 
 工作坊由一组问答组成，旨在巩固你对本节涵盖内容的理解。在查看答案之前，尝试回答这些问题。
 
-### 测验 (Quiz)
+### 测验（Quiz）
 
-**1.** 在开发者工具的哪里可以找到特定 `<div>` 标签的 `background-color` CSS 属性值是什么的？
+1. 在开发者工具的哪里可以找到特定 `<div>` 标签的 `background-color` CSS 属性值是什么的？
+2. 在开发者工具的哪里可以查看浏览器窗口的可用尺寸？
+3. 如何让你的 JavaScript 在特定的代码行上停止执行？
+4. 当 JavaScript 执行停止时，如何找到变量的值？
 
-**2.** 在开发者工具的哪里可以查看浏览器窗口的可用尺寸？
+### 测验答案（Quiz Answers）
 
-**3.** 如何让你的 JavaScript 在特定的代码行上停止执行？
+1. 选中该 `<div>` 标签后，元素检查器（Element inspector）的样式（Styles）标签页中。
+2. 在控制台（Console）视图中输入 `window`。
+3. 在源（Sources）调试器标签页中设置断点。
+4. 在源调试器的监视（Watch）标签页中查看。
 
-**4.** 当 JavaScript 执行停止时，如何找到变量的值？
+### 练习题（Exercises）
 
-### 测验答案 (Quiz Answers)
-
-**1.** 选中该 `<div>` 标签后，元素检查器（Element inspector）的样式（Styles）标签页中。
-
-**2.** 在控制台（Console）视图中输入 `window`。
-
-**3.** 在源（Sources）调试器标签页中设置断点。
-
-**4.** 在源调试器的监视（Watch）标签页中查看。
-
-### 练习题 (Exercises)
-
-**1.** 修改 `debug.html` 代码，在第 10 行添加以下代码将 `cnt` 的值输出到 JavaScript 控制台：
+1. 修改 `debug.html` 代码，在第 10 行添加以下代码将 `cnt` 的值输出到 JavaScript 控制台：
 
 ```javascript
-console.log("cnt=%d",cnt);
+console.log("cnt=%d", cnt);
 ```
+
+
 
 **2.** 在浏览不同页面的流量时，使用网络（Net）流量。展开一些请求并查看某些标签页中表示的数据。这可以帮助你更好地理解浏览器与 Web 服务器之间流量的起伏。
 
@@ -1052,15 +1005,15 @@ console.log("cnt=%d",cnt);
 
 你将在本节中学习到：
 
-![Image](img/image00767.jpeg) 如何构建基础的动态网页
-![Image](img/image00767.jpeg) 在网页的哪里添加 CSS 和 JavaScript
-![Image](img/image00767.jpeg) 块元素（block）和行内元素（inline）之间的区别
-![Image](img/image00767.jpeg) 如何在网页中添加图像
-![Image](img/image00767.jpeg) 如何构建表单
-![Image](img/image00767.jpeg) 如何在网页的特定位置添加链接
-![Image](img/image00767.jpeg) 如何在网页中构建表格
-![Image](img/image00767.jpeg) HTML5 SVG 图形可以做什么
-![Image](img/image00767.jpeg) 使用 HTML5 为动态音频和视频做准备的方法
+- 如何构建基础的动态网页
+- 在网页的哪里添加 CSS 和 JavaScript
+- 块元素（block）和行内元素（inline）之间的区别
+- 如何在网页中添加图像
+- 如何构建表单
+- 如何在网页的特定位置添加链接
+- 如何在网页中构建表格
+- HTML5 SVG 图形可以做什么
+- 使用 HTML5 为动态音频和视频做准备的方法
 
 在本书的其余部分中，你将使用大量的 HTML、CSS、jQuery 和 JavaScript。为了这一目的，本节设计用于完成两个任务。第一个是让你熟悉（如果你还不熟悉的话）一些 HTML 的重要基础知识，以便你能够轻松理解示例。
 
@@ -1068,63 +1021,56 @@ console.log("cnt=%d",cnt);
 
 接下来的章节将讨论 HTML 的基础以及它们与 jQuery 和 JavaScript 的关系。
 
-### 使用 HTML/HTML5 元素构建动态网页
+## 使用 HTML/HTML5 元素构建动态网页
 
-你已经在 第 1  和 第 2  中看了一些 HTML 代码示例。现在是时候深入理解语法，以及哪些 HTML 元素和属性对动态网页很重要了。
+你已经在第 1 和第 2 节中看了一些 HTML 代码示例。现在是时候深入理解语法，以及哪些 HTML 元素和属性对动态网页很重要了。
 
 要正确构建动态网页，你需要理解 HTML 语法、一些基础 HTML 元素以及如何组织和结构这些元素。接下来的章节涵盖了这些主题。
 
-### 理解 HTML 结构
+## 理解 HTML 结构
 
-HTML 文档由三个主要部分组成：`<!DOCTYPE>` 标签、头部（head）和正体（body）。这些部分部分在帮助浏览器将 HTML 文档渲染为网页方面都起着特定的作用。
+HTML 文档由三个主要部分组成：`<!DOCTYPE>` 标签、头部（head）和正体（body）。这些部分在帮助浏览器将 HTML 文档渲染为网页方面都起着特定的作用。
 
 `<!DOCTYPE>` 标签必须是 HTML 文件中的第一个语句；它告诉浏览器如何读取文件的其余部分。虽然此标签不是强制要求的，但在你的 HTML 文档中包含它是一个好主意。`<!DOCTYPE>` 元素有几种形式，下面列出了其中：
 
-![Image](img/image00767.jpeg) **HTML5**——用于 HTML5 文档的版本：
+- **HTML5**——用于 HTML5 文档的版本：
 
 ```html
 <!DOCTYPE html>
 ```
 
-![Image](img/image00767.jpeg) **HTML 4.01 Strict**——强制遵守 HTML 4.01 标准，并将移除如 `<font>` 等弃用元素：
-
-点击此处查看代码图像
+- **HTML 4.01 Strict**——强制遵守 HTML 4.01 标准，并将移除如 `<font>` 等弃用元素：
 
 ```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/HTML401/strict.dtd">
 ```
 
-
-
-
-
-点击此处查看代码图片
-
 <p align="center">这是一段居中文字。</p>
 
 ### 注意事项
 
-如果属性的值需要双引号，则普通的 `attribute=“value”` 赋值将无法正常工作。在这种情况下，你可以在赋值中使用单引号。例如，`attribute=’some “quoted” value’`。
+如果属性的值需要双引号，则普通的 `attribute="value"` 赋值将无法正常工作。在这种情况下，你可以在赋值中使用单引号。例如，`attribute='some "quoted" value'`。
 
 如果一个元素没有结束标签，你可以在第一个标签的末尾包含一个 `/` 并完全省略结束标签。例如，以下两种方式对浏览器来说都是可以的：
 
+```html
 <p align="center"></p>
-
 <p align="center" />
+```
 
-### 实现 HTML Head 元素
+## 实现 HTML Head 元素
 
 HTML `<head>` 元素被设计为网页非视觉元素的容器。`<head>` 元素中的标签会被浏览器解析为 DOM，但它们不会被渲染到浏览器窗口中。
 
 接下来的章节描述了一些较重要的 `<head>` 元素以及它们如何与使用 jQuery 和 JavaScript 关联。
 
-### <title>
+### `<title>`
 
 `<title>` 元素在所有 HTML 文档中都应该是要求的。即使没有它，浏览器仍然会渲染页面，但有许多理由要在网页中包含标题元素，其中包括 `<title>` 元素具有以下功能：
 
-- ![Image](img/image00767.jpeg) 定义显示在浏览器工具栏/标签页上的标题。
-- ![Image](img/image00767.jpeg) 提供网页被添加到收藏夹时列出的标题。
-- ![Image](img/image00767.jpeg) 决定当网页由搜索引擎显示时显示的标题内容。
+- 定义显示在浏览器工具栏/标签页上的标题。
+- 提供网页被添加到收藏夹时列出的标题。
+- 决定当网页由搜索引擎显示时显示的标题内容。
 
 以下代码展示了为网页添加标题的示例：
 
@@ -1137,12 +1083,10 @@ HTML `<head>` 元素被设计为网页非视觉元素的容器。`<head>` 元素
 
 可以使用 jQuery 和 JavaScript 轻松地更改 `<title>` 元素的值。例如，列表 3.1 中的代码使用了 JavaScript 在网页加载后更改页面标题。
 
-**列表 3.1 page_title.html 在页面加载后使用 JavaScript 更改 <title> 值的值**
-
-点击此处查看代码图片
+**列表 3.1 page_title.html 在页面加载后使用 JavaScript 更改 `<title>` 值**
 
 ```html
-01 <!DOCTYPE html
+01 <!DOCTYPE html>
 02 <html>
 03   <head>
 04      <title>Page</title>
@@ -1158,13 +1102,11 @@ HTML `<head>` 元素被设计为网页非视觉元素的容器。`<head>` 元素
 14 </html>
 ```
 
-注意在 图 3.1 中标签页中的标题已更改为 Page...Loaded。
-
-![Image](img/image00807.jpeg)
+注意在图 3.1 中标签页中的标题已更改为 Page...Loaded。
 
 **图 3.1** JavaScript 函数更改了在浏览器标签页中显示的网页标题。
 
-### <meta>
+### `<meta>`
 
 `<meta>` 标签有许多用途。浏览器使用 `<meta>` 标签来确定诸如渲染网页时使用何种字符集等事宜。搜索引擎爬虫使用 `<meta>` 标签来确定网页内容的目的，以便更好地优化搜索。介绍它的最好方法是向你展示一些语法示例。
 
@@ -1176,15 +1118,11 @@ HTML `<head>` 元素被设计为网页非视觉元素的容器。`<head>` 元素
 
 在 HTML 4 网页中设置字符集所需的 `<meta>` 标签如下：
 
-点击此处查看代码图片
-
 ```html
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 ```
 
 用于定义搜索引擎关键词的 `<meta>` 标签如下，其中 `content` 的值即是你希望搜索引擎在查找网页时使用的关键词：
-
-点击此处查看代码图片
 
 ```html
 <meta name="keywords" content="HTML, CSS, jQuery, JavaScript">
@@ -1192,25 +1130,19 @@ HTML `<head>` 元素被设计为网页非视觉元素的容器。`<head>` 元素
 
 告诉浏览器每 60 秒刷新一次网页的 `<meta>` 标签如下：
 
-点击此处查看代码图片
-
 ```html
 <meta http-equiv="refresh" content="300">
 ```
 
-### <style>
+### `<style>`
 
 `<style>` 标签允许你直接在 HTML 文档中添加 CSS 代码。包含 `<style>` 标签内部的所有内容都被视为 CSS 文档，并被浏览器用于渲染网页。
 
-作为语法的示例，列表 3.2 HTML 文件包含了 CSS，将 `<h1>` 元素的背景变为黑色，前景变为白色，如 图 3.2 所示。
-
-![Image](img/image0808.jpeg)
+作为语法的示例，列表 3.2 HTML 文件包含了 CSS，将 `<h1>` 元素的背景变为黑色，前景变为白色，如图 3.2 所示。
 
 **图 3.2** 该 `<h1>` 元素的样式已被 HTML 文档中的 CSS 脚本反转。
 
-**列表 3.2 reversed_text.html 在 HTML 文档中使用 <style> 标签添加 CSS**
-
-点击此处查看代码图片
+**列表 3.2 reversed_text.html 在 HTML 文档中使用 `<style>` 标签添加 CSS**
 
 ```html
 01 <html>
@@ -1229,21 +1161,17 @@ HTML `<head>` 元素被设计为网页非视觉元素的容器。`<head>` 元素
 14 </html>
 ```
 
-### <script>
+### `<script>`
 
 `<script>` 标签允许你直接在 HTML 文档中添加 JavaScript 代码或链接到外部文件。包含 `<script>` 标签内部的所有内容都被视为 JavaScript 文档，并在 HTML 文档解析时由浏览器加载。
 
 **注意**
 
-在使用 `<script>` 标签时，脚本按照它们的解析顺序加载。这意味着后续具有相同全局变量或函数名的脚本将覆盖已有的脚本。例如，列表 3.3 两个 `<script>` 元素：一个用于加载 jQuery 库，另一个使用简单的 JavaScript 函数将 `<h1>` 元素的背景变为黑色，前景变为白色，如 图 3.3 所示。
-
-![Image](img/image0809.jpeg)
+在使用 `<script>` 标签时，脚本按照它们的解析顺序加载。这意味着后续具有相同全局变量或函数名的脚本将覆盖已有的脚本。例如，列表 3.3 两个 `<script>` 元素：一个用于加载 jQuery 库，另一个使用简单的 JavaScript 函数将 `<h1>` 元素的背景变为黑色，前景变为白色，如图 3.3 所示。
 
 **图 3.3** 该 `<h1>` 元素的样式已被 HTML 文档中直接使用的 JavaScript 函数反转。
 
-**列表 3.3 js_text.html 在 HTML 文档中使用 <script> 标签添加 JavaScript 和 jQuery**
-
-点击此处查看代码图片
+**列表 3.3 js_text.html 在 HTML 文档中使用 `<script>` 标签添加 JavaScript 和 jQuery**
 
 ```html
 01 <!DOCTYPE html>
@@ -1264,15 +1192,13 @@ HTML `<head>` 元素被设计为网页非视觉元素的容器。`<head>` 元素
 16 </html>
 ```
 
-### <noscript>
+### `<noscript>`
 
 虽然这种情况现在并不经常发生，但偶尔人们会在他们的浏览器中禁用 JavaScript。如果 JavaScript 被禁用，任何 JavaScript 以及相应的 jQuery 脚本将不会执行。这会给用户带来非常糟糕的体验。
 
 `<noscript>` 标签允许你在 `<body>` 元素之前提供将被渲染的元素。这允许你在 JavaScript 被禁用的情况下显示警告信息或替代形式页面。
 
 `<noscript>` 标签支持 `<body>` 标签支持的所有子元素类型。例如，以下代码在 JavaScript 启用时加载 JavaScript 文件，但如果未启用，它会在网页顶部添加一个 `<h3>` 标题，警告用户网页无法正常工作：
-
-点击此处查看代码图片
 
 ```html
 <head>
@@ -1284,12 +1210,7 @@ HTML `<head>` 元素被设计为网页非视觉元素的容器。`<head>` 元素
 </head>
 ```
 
-
-
-
 `<link>` 标签允许将单独的资源链接到当前文档。大多数情况下，它用于 CSS 文件。这意味着当浏览器加载 HTML 文档时，链接的 CSS 文件也会从 Web 服务器下载并加载。例如，下面的 `head` 块将加载两个不同的 CSS 文档：
-
-点击此处查看代码图像
 
 ```html
 <head>
@@ -1300,13 +1221,11 @@ HTML `<head>` 元素被设计为网页非视觉元素的容器。`<head>` 元素
 
 除了 CSS 文件外，你还可以将图标、帮助文档、许可证和搜索等链接到网页。例如，下面的代码链接了一个在网页加载时显示在浏览器标签页中的图标：
 
-点击此处查看代码图像
-
 ```html
 <link rel="icon" type="image/png" href="http://example.com/myicon.png">
 ```
 
-### 添加 HTML 主体元素
+## 添加 HTML 主体元素
 
 大多数添加到 `body` 块的 HTML 元素由浏览器渲染并显示在用户的屏幕上。每个 HTML 主体元素标签都提供了不同的选项，帮助你以有意义且优雅的方式在网页上显示信息。
 
@@ -1314,26 +1233,23 @@ HTML `<head>` 元素被设计为网页非视觉元素的容器。`<head>` 元素
 
 ### 使用重要的主体元素属性
 
-每个不同的主体元素都有某些对该元素特有的属性。然而，某些属性对于所有元素都是重要且通。这些标签如下：
+每个不同的主体元素都有某些对该元素特有的属性。然而，某些属性对于所有元素都是重要且通用的。这些标签如下：
 
-![Image](img/image00767.jpeg) `id`——这是一个字符串标识符，在网页上的所有元素中必须是唯一的。CSS、JavaScript 和 jQuery 使用它来识别、访问和修改网页上的特定元素。
-
-![Image](img/image00767.jpeg) `class`——`class` 属性允许你指定多个元素的分组。该选项在 CSS 样式设置中被广泛使用，用于同时为多个 HTML 元素设置样式（如 `background-color`）。在 jQuery 中，它也用于根据元素的 `class` 值选择多个元素。
-
-![Image](img/image00767.jpeg) `style`——`style` 属性允许你将 CSS 定义直接放在 HTML 对象内部 HTML 代码中。`style` 中的值会覆盖所有其他 CSS 指。
+- `id`——这是一个字符串标识符，在网页上的所有元素中必须是唯一的。CSS、JavaScript 和 jQuery 使用它来识别、访问和修改网页上的特定元素。
+- `class`——`class` 属性允许你指定多个元素的分组。该选项在 CSS 样式设置中被广泛使用，用于同时为多个 HTML 元素设置样式（如 `background-color`）。在 jQuery 中，它也用于根据元素的 `class` 值选择多个元素。
+- `style`——`style` 属性允许你将 CSS 定义直接放在 HTML 对象内部 HTML 代码中。`style` 中的值会覆盖所有其他 CSS 指定。
 
 下面的代码说明了向 HTML 元素添加 `id`、`class` 和 `style` 属性的语法。注意类 `heading` 和 `content` 被多次使用，但每个元素的 `id` 属性都是不同的。还要注意对于第一个标题，添加了额外的 `style` 属性以强制第一个标题始终加粗：
-
-点击此处查看代码图像
 
 ```html
 <div id="Div1">
   <p id="Div1Heading" class="heading" style="font-weight:bold">Heading Text</p>
-  <p id ="Div1Content" class="content">Some Content</p>
+  <p id="Div1Content" class="content">Some Content</p>
 </div>
+
 <div id="Div2">
   <p id="Div2Heading" class="heading">Another Heading Text</p>
-  <p id ="Div2Content" class="content">Some More Content</p>
+  <p id="Div2Content" class="content">Some More Content</p>
 </div>
 ```
 
@@ -1343,7 +1259,7 @@ HTML `<head>` 元素被设计为网页非视觉元素的容器。`<head>` 元素
 
 块级元素获得可用的全宽度来在浏览器中渲染项目。这意味着任何之前的元素都将显示在上方，随后的元素将显示在下方。`<div>` 和 `<p>` 是块级元素的示例。
 
-内行元素仅获得在页面上显示元素所需的宽度。这意味着只要空间足够，多个内行元素就会浏览器中并排显示。`<span>`、`<a>` 和 `<img>` 是内行元素的某些示例。
+内行元素仅获得在页面上显示元素所需的宽度。这意味着只要空间足够，多个内行元素就会在浏览器中并排显示。`<span>`、`<a>` 和 `<img>` 是内行元素的某些示例。
 
 下面的代码和图 3.4 所示的渲染版本说明了块级标签和内行标签之间的区别。注意 `<p>` 标签占据了浏览器屏幕的全宽度，而 `<span>` 标签仅占据足够显示文本和外边距的空间：
 
@@ -1351,49 +1267,43 @@ HTML `<head>` 元素被设计为网页非视觉元素的容器。`<head>` 元素
 <p>Paragraph A</p>
 <p>Paragraph B</p>
 <p>Paragraph C</p>
-<<span>>Span A</span>
-<<span>>Span B</span>
-<<span>>Span CA</span>
+<span>Span A</span>
+<span>Span B</span>
+<span>Span C</span>
 ```
-
-![Image](img/image00810.jpeg)
 
 **图 3.4** 块级元素 `<p>` 占据了整个宽度，但内行元素 `<span>` 只使用它需要的宽度。
 
-虽然元素默认是块级或内行的，但你始终可以通过设置 `display` CSS 样式来更改它们。例如，如下所示将 `<span>` 的 display 设置为 block，将使其行为得像一个 `<div>` 元素：
-
-点击此处查看代码图像
+虽然元素默认是块级或内行的，但你始终可以通过设置 `display` CSS 样式来更改它们。例如，如下所示将 `<span>` 的 `display` 设置为 `block`，将使其行为得像一个 `<div>` 元素：
 
 ```html
-<span style="{display:block;}">Span Text</span>
+<span style="display:block;">Span Text</span>
 ```
 
-以下是你可以设置给 `display` 的值列表：
 
-![Image](img/image00767.jpeg) `block`——将元素渲染为块级。
 
-![Image](img/image00767.jpeg) `inline`——将元素渲染为内行。
+以下是你可以设置给`display`的值列表：
 
-![Image](img/image00767.jpeg) `none`——不渲染该元素。
+- `block`——将元素渲染为块级。
+- `inline`——将元素渲染为内行。
+- `none`——不渲染该元素。
 
-这些标签不需要闭合标签。例如，下面的代码创建了一组由 `<br>` 和 `<hr>` 分隔的 `<span>` 元素，如图 3.5 所示：
+这些标签不需要闭合标签。例如，下面的代码创建了一组由`<br>`和`<hr>`分隔的`<span>`元素，如图 3.5 所示：
 
 ```html
-<span>Text on</span></span>
-<span>Line 1</span></span><br>
-<span>Text on Line 2</span></span><hr>
-<span>New section on Line 3</span></span
+<span>Text on</span>
+<span>Line 1</span><br>
+<span>Text on Line 2</span><hr>
+<span>New section on Line 3</span>
 ```
 
-![Image](img/image0811.jpeg)
-
-**图 3.5** 使用 `<br>` 和 `<hr>`
+**图 3.5** 使用`<br>`和`<hr>`
 
 ### 创建容器元素
 
-容器元素用于各种目的，例如分组和格式化元素或文本。这允许你对容器应用格式和尺寸，并影响其内部的所有项目。虽然任何 HTML 元素都可以作为容器，但主要的三个是 `<p>`、`<div>` 和 `<span>`。
+容器元素用于各种目的，例如分组和格式化元素或文本。这允许你对容器应用格式和尺寸，并影响其内部的所有项目。虽然任何 HTML 元素都可以作为容器，但主要的三个是`<p>`、`<div>`和`<span>`。
 
-容器元素本身不会改变内部文本的外。例如，以下所有内容的渲染效果是相同的：
+容器元素本身不会改变内部文本的外观。例如，以下所有内容的渲染效果是相同的：
 
 ```text
 Some Text
@@ -1406,10 +1316,10 @@ Some Text
 
 容器元素通常用于布局和样式设置的分组。下面的练习创建了列表 3.4 中的代码。该代码旨在向你介绍分组和样式：
 
-1. 首先在你的 Eclipse 项目中创建一个名为 `lesson03` 的文件夹。
-2. 在 `lesson03` 文件夹中创建一个名为 `css_styling.html` 的新 HTML 文档（匹配书籍网站上的文件名）。
-3. 添加适当的 `<html>、`<head>` 和 `<body>` 标签。
-4. 添加下面的 `<div>` 元素，将其 `class` 属性设置为 `heading`。
+1. 首先在你的 Eclipse 项目中创建一个名为`lesson03`的文件夹。
+2. 在`lesson03`文件夹中创建一个名为`css_styling.html`的新 HTML 文档（匹配书籍网站上的文件名）。
+3. 添加适当的`<html>`、`<head>`和`<body>`标签。
+4. 添加下面的`<div>`元素，将其`class`属性设置为`heading`。
 
 这将标题项的容器：
 
@@ -1420,17 +1330,11 @@ Some Text
 </div>
 ```
 
-
-
-
-
 ### 标题 C
 
 <p>Heading C</p>
 
-5. 添加以下第二个 `<<div>>` 元素，并将 `class` 属性设置为“`content`”。这是你内容项目的容器：
-
-点击此处查看代码图像
+5. 添加以下第二个`<div>`元素，并将`class`属性设置为`content`。这是你内容项目的容器：
 
 ```html
 <div class="content">
@@ -1440,21 +1344,14 @@ Some Text
 </div>
 ```
 
-6. 保存文件并在 浏览器中加载以下 URL 以查看未格式化的代码，如 图 3.6 所示：
+6. 保存文件并在浏览器中加载以下 URL 以查看未格式化的代码，如图 3.6 所示：
 
-点击此处查看代码图像
+`http://localhost/lesson03/css_styling.html`
 
-http://localhost/lesson03/css_styling.html
+**图 3.6** 使用`<div>`容器元素可以轻松更改网页不同区域`<p>`元素的外观和行为。
 
-![Image](img/image00812.jpeg)
-
-**图 3.6** 使用 `<div>` 容器元素可以轻松更改网页不同区域 `<p>` 元素的外观和行为。
-
-7. 返回 Eclipse 并在文件头部添加一个 `<style>` 标签。
-
-8. 在 `<style>` 标签内部，添加以下代码将内容元素格式化为灰色背景并在边缘留一些内边距：
-
-点击此处查看代码图像
+7. 返回 Eclipse 并在文件头部添加一个`<style>`标签。
+8. 在`<style>`标签内部，添加以下代码将内容元素格式化为灰色背景并在边缘留一些内边距：
 
 ```css
 .content p{
@@ -1463,9 +1360,7 @@ http://localhost/lesson03/css_styling.html
 }
 ```
 
-9. 添加以下附加规则来设置头部元素。此规则将标题容器中的 `<p>` 元素更改为内联，并带有加粗白色文本和黑色背景：
-
-点击此处查看代码图像
+9. 添加以下附加规则来设置头部元素。此规则将标题容器中的`<p>`元素更改为内联，并带有加粗白色文本和黑色背景：
 
 ```css
 .heading p{
@@ -1477,11 +1372,9 @@ http://localhost/lesson03/css_styling.html
 }
 ```
 
-10. 保存文档并在浏览器中重新加载。注意 图 3.6 中，“heading”类 `<div>` 元素中的元素被渲染为内联、黑色背景和白色文本，而“content”类 `<div>` 元素中的元素被渲染为灰色背景并保持块级样式。
+10. 保存文档并在浏览器中重新加载。注意图 3.6 中，“heading”类`<div>`元素中的元素被渲染为内联、黑色背景和白色文本，而“content”类`<div>`元素中的元素被渲染为灰色背景并保持块级样式。
 
-**列表 3.4 css_styling.html 使用 <style> 标签向 HTML 文档添加 CSS**
-
-点击此处查看代码图像
+**列表 3.4 css_styling.html 使用`<style>`标签向 HTML 文档添加 CSS**
 
 ```html
 <html>
@@ -1521,39 +1414,31 @@ http://localhost/lesson03/css_styling.html
 
 #### 添加链接元素
 
-网页中通常包含一组指向其他页面的链接。使用锚点标签 `<a>` 可以很容易地在网页上添加链接。`<a>` 标签有三个用途：
+网页中通常包含一组指向其他页面的链接。使用锚点标签`<a>`可以很容易地在网页上添加链接。`<a>`标签有三个用途：
 
-![Image](img/image00767.jpeg) **到外部网页的链接**——在网页上显示一个链接。当用户点击链接时，浏览器会从服务器请求网页。以下是向外部网页添加链接的示例：
-
-点击此处查看代码图像
+- **到外部网页的链接**——在网页上显示一个链接。当用户点击链接时，浏览器会从服务器请求网页。以下是向外部网页添加链接的示例：
 
 ```html
 <a href="http://www.dayleycreations.com/">Dayley Creations
 ```
 
-![Image](img/image00767.jpeg) **到当前网页位置的链接**——在网页上显示一个链接。当用户点击链接时，浏览器将向下滚动到该位置，使链接的锚点可见：
-
-点击此处查看代码图像
+- **到当前网页位置的链接**——在网页上显示一个链接。当用户点击链接时，浏览器将向下滚动到该位置，使链接的锚点可见：
 
 ```html
 <a href="#local link">Link to Some Text
 ```
 
-![Image](img/image00767.jpeg) **网页锚点**——在网页内部添加一个可以直接链接到当前页面或另一个网页的链接。要定义锚点，你需要使用 `id` 属性。例如，要为前面的链接添加锚点，请使用以下代码：
-
-点击此处查看代码图像
+- **网页锚点**——在网页内部添加一个可以直接链接到当前页面或另一个网页的链接。要定义锚点，你需要使用`id`属性。例如，要为前面的链接添加锚点，请使用以下代码：
 
 ```html
 <a id="local_link">Page Anchor
 ```
 
-在使用 JavaScript 构建链接元素时，网页锚点非常有用。例如。
+在使用 JavaScript 构建链接元素时，网页锚点非常有用。
 
 ### 使用图像元素
 
-网页锚点在 ways JavaScript 构建链接元素时非常有用。图像的一个优势是可以使用 `<img>` 标签来显示。图像的显示取决于定义，需要使用 `height` 和 `width` 属性。以下代码显示了具有不同 `height` 和 `width` 属性的图像，如 图 3.7 所示：
-
-点击此处查看代码图像
+网页锚点在用 JavaScript 构建链接元素时非常有用。图像的一个优势是可以使用`<img>`标签来显示。图像的显示取决于定义，需要使用`height`和`width`属性。以下代码显示了具有不同`height`和`width`属性的图像，如图 3.7 所示：
 
 ```html
 <img src="peak.jpg" height="200">
@@ -1561,13 +1446,11 @@ http://localhost/lesson03/css_styling.html
 <img src="peak.jpg" height="200" width="200">
 ```
 
-![Image](img/image00813.jpeg)
-
-**图 3.7** 使用 `<img>` 添加图像并指定 `height` 和 `width`
+**图 3.7** 使用`<img>`添加图像并指定`height`和`width`
 
 #### 应用列表元素
 
-列表元素允许将项目分组并带有编号或符号。有序列表使用 `<ol>` 标签创建，无序列表使用 `<ul>` 标签创建。列表项目包含在 `<li>` 标签中。例如，以下代码如 图 3.8 所示：
+列表元素允许将项目分组并带有编号或符号。有序列表使用`<ol>`标签创建，无序列表使用`<ul>`标签创建。列表项目包含在`<li>`标签中。例如，以下代码如图 3.8 所示：
 
 ```html
 <ul>
@@ -1579,66 +1462,49 @@ http://localhost/lesson03/css_styling.html
 </ul>
 ```
 
-![Image](img/image00814.jpeg)
-
-**图 3.8** 使用 `<ul>` 和 `<li>` 标签向网页添加列表
+**图 3.8** 使用`<ul>`和`<li>`标签向网页添加列表
 
 #### 创建表格元素
 
-表格元素是最复杂的 HTML 元素之一。它们用于以行列的形式组织屏幕上的其他元素。它们可以多种用途，从布局整个网页到简单的数据表格。本节涵盖了你所需的基础知识。
+表格元素是最复杂的 HTML 元素之一。它们用于以行列的形式组织屏幕上的其他元素。它们可以有多种用途，从布局整个网页到简单的数据表格。本节涵盖了你所需的基础知识。
 
 表格使用一系列定义表格、头部、主体和单元格的标签来构建。以下列出了构建表格时使用的各种标签：
 
+- `<tr>`—定义表格中的单行。它作为`<th>`和/或`<td>`元素或单元格元素的容器。
+- `<caption>`—为标题内容提供容器。标题内容可以是文本或其他 HTML 元素。
+- `<colgroup>`—允许你将表格中的一个或多列放入一组中，并对它们进行统一格式化。如果你想通过`id`属性从 jQuery 或 JavaScript 访问特定的列集，这也非常有用。
+- `<col>`—指定`<colgroup>`元素中单列的列属性。
+- `<tfoot>`—该元素不是必须的，但它非常有用，因为它允许你对表格中的页脚元素进行分组和定义，或者通过`id`属性直接从 jQuery 或 JavaScript 引用页脚元素的父级元素。
 
+在 HTML 4 中，可以在表格元素上设置几个属性。其中许多在 HTML5 中已被弃用，因为它们曾用于格式化大小、对齐和颜色，而这些应该通过 CSS 样式来完成。以下是你仍需要在表格元素上的一些重要属性列表：
 
-
-
-![Image](img/image00767.jpeg) `<tr>`—定义表格中的单行。它作为 `<th>` 和/或 `<td>` 元素或单元格元素的容器。
-
-![Image](img/image00767.jpeg) `<caption>`—为标题内容提供容器。标题内容可以是文本或其他 HTML 元素。
-
-![Image](img/image00767.jpeg) `<colgroup>`—允许你将表格中的一个或多列放入一组中，并对它们进行统一格式化。如果你想通过 `id` 属性从 jQuery 或 JavaScript 访问特定的列集，这也非常有用。
-
-![Image](img/image00767.jpeg) `<col>`—指定 `<colgroup>` 元素中单列的列属性。
-
-![Image](img/image00767.jpeg) `<tfoot>`—该元素不是必须的，但它非常有用，因为它允许你对表格中的页脚元素进行分组和定义，或者通过 `id` 属性直接从 jQuery 或 JavaScript 引用页脚元素的父级元素。
-
-在 HTML 4 中，可以在表格元素上设置几个属性。其中许多在 HTML5 中已被弃用，因为它们曾用于格式化大小、对齐和颜色，而这些应该通过 CSS 样式来完成。以下是你仍需要在表格元素上的一些的重要属性列表：
-
-![Image](img/image00767.jpeg) `border`—指定表格单元格是否具有边框。
-
-![Image](img/image00767.jpeg) `colspan`—指定单元格应跨越的列数。这允许单个 `<td>` 或 `<th>` 元素占据表格中的多列。
-
-![Image](img/image00767.jpeg) `rowspan`—指定单元格应跨越的数。这允许单个 `<td>` 或 `<th>` 元素占据表格中的多行。
-
-![Image](img/image00767.jpeg) `headers`—添加到 `<td>` 或 `<th>` 元素上。允许你指定一个或多个 `<th>` 元素的 `id` 值。这创建了与表头元素的关联，可以通过 jQuery 和 JavaScript 进行访问。
+- `border`—指定表格单元格是否具有边框。
+- `colspan`—指定单元格应跨越的列数。这允许单个`<td>`或`<th>`元素占据表格中的多列。
+- `rowspan`—指定单元格应跨越的行数。这允许单个`<td>`或`<th>`元素占据表格中的多行。
+- `headers`—添加到`<td>`或`<th>`元素上。允许你指定一个或多个`<th>`元素的`id`值。这创建了与表头元素的关联，可以通过 jQuery 和 JavaScript 进行访问。
 
 ***
 
 ## 动手尝试：创建 HTML 表格
 
-解释表格最简单的方法是向你展示创建一个基础表格的示例。使用以下步骤在 列表 3.5 中创建表格代码：
+解释表格最简单的方法是向你展示创建一个基础表格的示例。使用以下步骤在列表 3.5 中创建表格代码：
 
-1. **在 lesson03 文件夹中创建一个名为 `tables.html` 的新 HTML 文档**（以与书籍网站上的文件名匹配）。
-2. **添加相应的 `<html>`、`<head>` 和 `<body>` 标签。**
-3. **添加以下 `<table>` 元素**，并将 `border` 属性设置为 1：
-
-点击此处查看代码图片
+1. **在`lesson03`文件夹中创建一个名为`tables.html`的新 HTML 文档**（以与书籍网站上的文件名匹配）。
+2. **添加相应的`<html>`、`<head>`和`<body>`标签。**
+3. **添加以下`<table>`元素**，并将`border`属性设置为 1：
 
 ```html
-08      <table border=1></<table>
+08      <table border=1></table>
 ```
 
-4. **在 `<table>` 元素内部添加以下 `<caption>` 元素**，以为表格添加标题：
+4. **在`<table>`元素内部添加以下`<caption>`元素**，以为表格添加标题：
 
-点击此处查看代码图片
 ```html
 09      <caption>Favorite World Sites</caption>
 ```
 
-5. **通过向 `<table>` 元素添加以下 `<thead>` 元素来创建表头**。注意第三个 `<th>` 将 `colspan` 设置为 2，以便它将覆盖最后两列，如图 3.9](#part0014.xhtml_ch03fig09) 所示：
+5. **通过向`<table>`元素添加以下`<thead>`元素来创建表头**。注意第三个`<th>`将`colspan`设置为 2，以便它将覆盖最后两列，如图 3.9 所示：
 
-点击此处查看代码图片
 ```html
 10      <thead>
 11          <th>Monument</th>
@@ -1647,31 +1513,24 @@ http://localhost/lesson03/css_styling.html
 14      </thead>
 ```
 
-![Image](img/image00815.jpeg)
-
 **图 3.9** 一个 HTML 表格示例，显示了行列表头以及标题。
 
-6. **添加以下 `<tr>` 元素**。注意接下来的示例，这些 `<tr>` 元素每一个都包含四个单元格。第一个单元格是行头，因为它使用了 `<th>` 标签。接下来的两个单元格是 `<td>` 元素中的简单文本，但在第四个单元格中，`<td>` 元素包含一个 `<img>` 元素（.jpg 文件可以在书籍网站上找到）：
+6. **添加以下`<tr>`元素**。注意接下来的示例，这些`<tr>`元素每一个都包含四个单元格。第一个单元格是行头，因为它使用了`<th>`标签。接下来的两个单元格是`<td>`元素中的简单文本，但在第四个单元格中，`<td>`元素包含一个`<img>`元素（.jpg 文件可以在书籍网站上找到）：
 
-点击此处查看代码图片
 ```html
 15      <tr>
 16          <th>Delicate Arch</th>
 17          <td>Utah</td>
 18          <td>March 1, 1872</td>
-19          <td><img src="/images/arch.jpg" width="100" />
+19          <td><img src="/images/arch.jpg" width="100" /></td>
 20      </tr>
 ```
 
-7. **保存文档**并在网页浏览器中打开以下 URL，以在图 3.9](#part0014.xhtml_ch03fig09) 中查看结果：
-
-点击此处查看代码图片
+7. **保存文档**并在网页浏览器中打开以下 URL，以在图 3.9 中查看结果：
 
 `http://localhost/lesson03/tables.html`
 
 **列表 3.5 tables.html 生成带有表头的表格**
-
-点击此处查看代码图片
 
 ```html
 01 <!DOCTYPE html>
@@ -1711,7 +1570,7 @@ http://localhost/lesson03/css_styling.html
 35 </html>
 ```
 
-***
+
 
 ## 实现表单元素
 
@@ -1719,13 +1578,13 @@ http://localhost/lesson03/css_styling.html
 
 ![Image](img/image00767.jpeg) `<form>`—这是表单的根元素。所有其他元素都包含其中。
 
-![Image](img/image00767.jpeg) `<fieldset>`—作为一组表单元素的容器。在 HTML5 中，你可以通过设置 fieldset 的 `disabled` 属性来禁用输入。你也可以使用 jQuery 和 JavaScript 访问并修改其子元素。
+![Image](img/image00767.jpeg) `<fieldset>`—作为一组表单元素的容器。在 HTML5 中，你可以通过设置 `fieldset` 的 `disabled` 属性来禁用输入。你也可以使用 jQuery 和 JavaScript 访问并修改其子元素。
 
-![Image](img/image00767.jpeg) `<legend>`—告诉浏览器为 fieldset 添加一个标题。
+![Image](img/image00767.jpeg) `<legend>`—告诉浏览器为 `fieldset` 添加一个标题。
 
 ![Image](img/image00767.jpeg) `<label>`—通过将 `for` 属性设置为 `<input>` 元素的 `id` 值，将标签元素与表单中的 `<input>` 元素绑定。这样做的好处是，点击标签也会触发输入元素的鼠标事件。
 
-![Image](img/image00767.jpeg) `<input>`—input 标签实际上是多种类型输入组件的封装。浏览器渲染的输入取决于 `type` 属性的值。以下是可以在 input 标签中指定的类型元素列表：`button`, `checkbox`, `color`, `date`, `datetime`, `email`, `file`, `hidden`, `image`, `month`, `number`, `password`, `radio`, `range`, `reset`, `search`, `submit`, `tel`, `text`, `time`, `url`, `week`。
+![Image](img/image00767.jpeg) `<input>`—`input` 标签实际上是多种类型输入组件的封装。浏览器渲染的输入取决于 `type` 属性的值。以下是可以在 `input` 标签中指定的类型元素列表：`button`、`checkbox`、`color`、`date`、`datetime`、`email`、`file`、`hidden`、`image`、`month`、`number`、`password`、`radio`、`range`、`reset`、`search`、`submit`、`tel`、`text`、`time`、`url`、`week`。
 
 ![Image](img/image00767.jpeg) `<textarea>`—与其他输入不同，它提供了一个允许用户输入多行文本的可调整区域。`cols` 和 `rows` 属性定义了初始大小。
 
@@ -1735,21 +1594,15 @@ http://localhost/lesson03/css_styling.html
 
 ![Image](img/image00767.jpeg) `<button>`—定义一个点击的按钮元素。按钮的 `type` 属性告诉浏览器使用该按钮提交 `submit` 表单、重置 `reset` 值，还是作为简单的输入 `button`。
 
+![Image](img/image00767.jpeg) `name`—此选项指定了提交表单时使用的名称。
 
+![Image](img/image00767.jpeg) `value`—此选项指定表单元素的值。对于如 `text <input>` 等元素，你为 `value` 指定的内容将作为文本添加到渲染后的文本框中。`value` 属性也可以通过 JavaScript 访问，因此你可以直接从 JavaScript 获取任何表单元素的值。
 
+![Image](img/image00767.jpeg) `disabled`—当添加此属性时，元素将会被显示；但它将显示为禁用状态，使用户无法与表单元素进行交互。当你从 JavaScript 或 jQuery 启用或禁用元素时，此值会被动态修改。`disabled` 属性是一个布尔值，因此你不需要包含一个值。以下显示了包含 `disabled` 属性的示例：
 
-
-![Image](img/image00767.jpeg) name—此选项指定了提交表单时使用的名称。
-
-![Image](img/image00767.jpeg) value—此选项指定表单元素的值。对于如 `text <input>` 等元素，你为 `value` 指定的内容将作为文本添加到渲染后的文本框中。`value` 属性也可以通过 JavaScript 访问，因此你可以直接从 JavaScript 获取任何表单元素的值。
-
-![Image](img/image00767.jpeg) disabled—当添加此属性时，元素将会被显示；但它将显示为禁用状态，使用户无法与表单元素进行交互。当你从 JavaScript 或 jQuery 启用或禁用元素时，此值会被动态修改。`disabled` 属性是一个布尔值，因此你不需要包含一个值。以下显示了包含 `disabled` 属性的示例：
-
-```
+```html
 <input type="text" disabled />
 ```
-
-***
 
 # 动手尝试一下：在网页中添加表单
 
@@ -1846,8 +1699,6 @@ http://localhost/lesson03/css_styling.html
 </html>
 ```
 
-***
-
 ### 添加一些高级 HTML5 元素
 
 HTML5 添加了许多更高级的元素，你可以使用它们来增强动态网页。一些图形和媒体元素将在后续章节中介绍，因为它们与 JavaScript/jQuery 编程之间存在直接关系。
@@ -1857,10 +1708,6 @@ HTML5 添加了许多更高级的元素，你可以使用它们来增强动态�
 两个主要的 HTML5 图形元素是 `<svg>` 和 `<canvas>`。这两个元素可以通过 jQuery 和 JavaScript 添加并操作。这允许你通过脚本直接在浏览器窗口中绘图，动态改变复杂的图形。
 
 ##### 在 HTML5 中创建 SVG 图形
-
-
-
-
 
 `<svg>` 元素允许你在网页中添加可缩放矢量图形。可缩放矢量图形是由一系列构成路径的线、弧和填充组成的。当由浏览器渲染时，这些路径可以生成从简单到复杂的图形。使用矢量图形的优势是，即使在浏览器中进行缩放，它们也能保持锐利的边缘。它们在屏幕上和打印时看起来都更加清晰。
 
@@ -1886,67 +1733,73 @@ HTML5 添加了许多更高级的元素，你可以使用它们来增强动态�
 </svg>
 ```
 
+
+
 ![Image](img/image00817.jpeg)
-**图 3.11** 使用 SVG 图形可以轻松地向网页添加基础几何形状。
+
+图 3.11 使用 SVG 图形可以轻松地向网页添加基础几何形状。
 
 ### 添加路径
 
 另一个示例是使用路径绘制一些复杂的形状。路径是所有连接的线的集合。这些线可以是直线、抛物线弧或贝塞尔曲线。要创建路径，向 `<svg>` 元素中添加一个 `<path>` 元素并定义 `d` 属性。`d` 属性包含一系列指令，告诉浏览器如何在屏幕上渲染该路径。以下是更常用的命令列表：
 
-![Image](img/image00767.jpeg) `M x,y`: 指定移动到坐标 `x,y`。大写的 `M` 指定绝对坐标；小写的 `m` 指定相对坐标。
-
-![Image](img/image00767.jpeg) `h n`: 指定绘制长度为 `n` 像素的水平线。此值可以是正也可以是负。负数表示左侧。大写的 `H` 是绝对的，小写的 `h` 是相对的。
-
-![Image](img/image00767.jpeg) `v n`: 指定绘制长度为 `n` 像素的垂直线。此值可以是正也可以是负。负数表示向上。大写的 `V` 是绝对的，小写的 `v` 是相对的。
-
-![Image](img/image00767.jpeg) `l x,y`: 从当前坐标到坐标 `x,y` 画一条线。你可以指定用空格分隔的额外坐标来添加线段。大写的 `L` 是绝对的，小写的 `l` 是相对的。
-
-![Image](img/image00767.jpeg) `c x1 y1 y2 y2 x`: 从当前坐标到 `x,y` 绘制一条贝塞尔曲线，使用 `x1,y1` 作为曲线起点的控制点，并使用 `x2,y2` 作为曲线终点的控制点。图 3.12 阐了控制点是如何工作的。大写的 `C` 是绝对的，小写的 `c` 是相对的。
-
-![Image](img/image00818.jpeg)
-**图 3.12** 控制点定义曲线的形状。
-
-![Image](img/image00767.jpeg) `a rx ry x-axis-rotation large-arc-flag sweep-flag x y`: 从当前坐标到 `x,y` 绘制一条弧。椭圆的大小和方向由两个半径 `rx, ry` 以及 `x-axis-rotation` 值定义，该值指定了弧的 x 轴的角度。`large-arc-flag` 和 `sweep-flag` 设置为 `0` 或 `1`，定义了抛物线的哪部分被渲染到屏幕上。大写的 `A` 是绝对的，小写的 `a` 是相对的。
-
-![Image](img/image00767.jpeg) `z`: 关闭路径，这意味着最后一个坐标将连接到路径的起点。
+- ![Image](img/image00767.jpeg) `M x,y`：指定移动到坐标 `x,y`。大写的 `M` 指定绝对坐标；小写的 `m` 指定相对坐标。
+- ![Image](img/image00767.jpeg) `h n`：指定绘制长度为 `n` 像素的水平线。此值可以是正也可以是负。负数表示左侧。大写的 `H` 是绝对的，小写的 `h` 是相对的。
+- ![Image](img/image00767.jpeg) `v n`：指定绘制长度为 `n` 像素的垂直线。此值可以是正也可以是负。负数表示向上。大写的 `V` 是绝对的，小写的 `v` 是相对的。
+- ![Image](img/image00767.jpeg) `l x,y`：从当前坐标到坐标 `x,y` 画一条线。你可以指定用空格分隔的额外坐标来添加线段。大写的 `L` 是绝对的，小写的 `l` 是相对的。
+- ![Image](img/image00767.jpeg) `c x1 y1 y2 y2 x`：从当前坐标到 `x,y` 绘制一条贝塞尔曲线，使用 `x1,y1` 作为曲线起点的控制点，并使用 `x2,y2` 作为曲线终点的控制点。图 3.12 阐了控制点是如何工作的。大写的 `C` 是绝对的，小写的 `c` 是相对的。
+- ![Image](img/image00767.jpeg) `a rx ry x-axis-rotation large-arc-flag sweep-flag x y`：从当前坐标到 `x,y` 绘制一条弧。椭圆的大小和方向由两个半径 `rx, ry` 以及 `x-axis-rotation` 值定义，该值指定了弧的 x 轴的角度。`large-arc-flag` 和 `sweep-flag` 设置为 `0` 或 `1`，定义了抛物线的哪部分被渲染到屏幕上。大写的 `A` 是绝对的，小写的 `a` 是相对的。
+- ![Image](img/image00767.jpeg) `z`：关闭路径，这意味着最后一个坐标将连接到路径的起点。
 
 列表 3.7 中的后续代码说明了如何利用几个路径，如图 3.13 所示。注意 `<path>` 元素以 `M` 指令开始移动到绝对坐标。然后 `h50` 命令向右绘制 50 像素的线；接下来，`a` 命令绘制一个半径为 50 像素且跨越两个方向的弧。最后，`z` 命令关闭弧。
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="200">
+
   <path d="M100,90 h50 a50,50 0 1,0 50,-50 z" stroke="purple" stroke-width="1" fill="none" />
+
   <path d="M90,80 v-50 a50,50 0 0,0 -50,50 z" stroke="violet" stroke-width="2" fill="none" />
+
 </svg>
 ```
 
 ![Image](img/image00819.jpeg)
-**图 13** 使用路径创建饼图。
+
+图 13 使用路径创建饼图。
 
 除了使用路径创建图形元素外，你还可以使用路径创建一些文本效果。例如，以下代码在 `<defs>` 容器中添加了一个无填充的路径。该路径使用两个弧绘制了一个完整的圆。`id` 属性设置为 `path1`。接下来，创建了一个 SVG `<text>` 元素来定义文本。注意 `<text>` 元素内部有一个引用 `path1` 的 `<textPath>`。结果是文本绘制在路径上，如图 3.14 所示。我们还向 `<svg>` 标签添加了一个路径，使用几个线段绘制了指针。
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="350">
+
   <defs>
+
     <path id="path1" d="M 77,210 a 1,1 0 1,1 200,0 a 1,1 0 1,1 -200,1"/>
+
   </defs>
+
   <text x="10" y="10" style="fill:blue;font-size:31px;">
+
     <textPath xlink:href="#path1">
+
       Teach Yourself AngularJS JavaScript and jQuery
+
     </textPath>
+
   </text>
+
   <path d="M 175,130 v90 h60" stroke="black" stroke-width="5" fill="none"/>
+
 </svg>
 ```
 
 ![Image](img/image00820.jpeg)
-**图 3.14** 使用矢量路径，你可以将文本链接到路径以创建酷酷的视觉效果。
 
-
-
+图 3.14 使用矢量路径，你可以将文本链接到路径以创建酷酷的视觉效果。
 
 SVG 示例可以在网站上的 `code/lesson03/html_svg.html` 文件中找到。使用这些技术，你可以创建大量的图形形状。
 
-### 列表 3.7 使用 <svg> 元素创建饼图和时钟周围文本框的 JavaScript 和 HTML 代码
+### 列表 3.7 使用 `<svg>` 元素创建饼图和时钟周围文本框的 JavaScript 和 HTML 代码
 
 点击此处查看代码图像
 
@@ -1954,64 +1807,123 @@ SVG 示例可以在网站上的 `code/lesson03/html_svg.html` 文件中找到。
 
 ```html
 01 <!DOCTYPE html>
+
 02 <html>
+
 03   <head>
+
 04     <title>html 5 graphics</title>
+
 05     <meta charset="UTF-8" />
+
 06   </head>
+
 07   <body><body>
+
 08     <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+
 09             height="200">
+
 10       <ellipse   cx="100" cy="100" rx="80" ry="50"
+
 11                    stroke="black" stroke-width="2"
+
 12                        fill="transparent" />
+
 13       <ellipse   cx="100" cy="100" rx="50" ry="80"
+
 14                    stroke="black" stroke-width="2"
+
 15                        fill="transparent"
+
 16                        transform="rotate(30, 100, 100)" />
+
 17       <ellipse   cx="100" cy="100" rx="80" ry="50"
+
 18                    stroke="black" stroke-width="2"
+
 19                        fill="transparent"
+
 20                        transform="rotate(60, 100, 100)" />
+
 21       <ellipse   cx="100" cy="100" rx="8" ry="2"
+
 22                    stroke="crimson" stroke-width="2"
+
 23                        fill="crimson"
+
 24                        transform="rotate(45, 100, 100)" />
+
 25       <ellipse   cx="100" cy="100" rx="2" ry="8"
+
 26                    stroke="crimson" stroke-width="2"
+
 27                        fill="crimson"
+
 28                        transform="rotate(45, 100, 100)" />
+
 29       <ellipse   cx="100" cy="100" rx="2" ry="8"
+
 30                    stroke="crimson" stroke-width="2"
+
 31                        fill="crimson" />
+
 32       <ellipse   cx="100" cy="100" rx="8" ry="2"
+
 33                    stroke="crimson" stroke-width="2"
+
 34                        fill="crimson" />
+
 35       <circle   cx="100" cy="100" r="6"
+
 36                    stroke="red" stroke-width="4" fill="Dark"/>
+
 37     </svg>
+
 38     <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+
 39             height="200">
+
 40       <path d="M100,90 h-50 a50,50 0 1,0 50,-50 z"
+
 41               fill="none" stroke="purple" stroke-width="1" />
+
 42       <path d="M90,80 v-50 a50,50 0 0,0 -50,50 z"
+
 43               fill="violet" stroke="none" stroke-width="2" />
+
 44     </svg>
+
 45     <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+
 46             height="350">
+
 47       <defs>
+
 48         <path id="path1"
+
 49               d="M 77,210 a 1,1 0 1,1 200,0 a 1,1 0 1,1 -200,1"/>
+
 50       </defs>
+
 51       <text x="10" y="10" style="fill:blue;font-size:31px;">
+
 52         <textPath xlink:href="#path1">
+
 53           Teach Yourself AngularJS JavaScript and jQuery
+
 54         </textPath>
+
 55       </text>
+
 56       <path d="M 175,130 v90 h60" stroke="black"
+
 57             stroke-width="5" fill="none"/>
+
 58     </svg>
+
 59   </body>
+
 60 </html>
 ```
 
@@ -2021,18 +1933,19 @@ SVG 示例可以在网站上的 `code/lesson03/html_svg.html` 文件中找到。
 
 ### 添加 Canvas 用于动态设计
 
-`<canvas>` 元素也允许你动态地向网页页面中添加和操作图像类型的图形。canvas 允许你通过 JavaScript 在浏览器屏幕的区域上绘制颜色、线条、文本和图像。
+`<canvas>` 元素也允许你动态地向网页页面中添加和操作图像类型的图形。`canvas` 允许你通过 JavaScript 在浏览器屏幕的区域上绘制颜色、线条、文本和图像。
 
 `<svg>` 元素和 `<canvas>` 元素区别在于，后者不是作为路径存储，而是以逐像素映射的形式存储，其中每个像素都有不同的颜色和透明度。
 
-使用 `<canvas>` 元素的大部分工作将在 jQuery 和 JavaScript 脚本中完成。在 HTML 中，你只需要添加一个带有 `id` 的 canvas 元素，你可以从脚本中访问它。为了了解 `<canvas>` 元素与 JavaScript 之间的关系，请考虑 `Listing 3.8` 中的代码。
+使用 `<canvas>` 元素的大部分工作将在 jQuery 和 JavaScript 脚本中完成。在 HTML 中，你只需要添加一个带有 `id` 的 `canvas` 元素，你可以从脚本中访问它。为了了解 `<canvas>` 元素与 JavaScript 之间的关系，请考虑 `Listing 3.8` 中的代码。
 
-canvas 元素只定义了一个可以进行绘制的容器。所有工作都在 `<script>` 元素中完成。在脚本内部，前两行获取了 `myCanvas` 元素和一个 `2d` 上文对象。上下文对象是提供图形功能的图形对象。
+`canvas` 元素只定义了一个可以进行绘制的容器。所有工作都在 `<script>` 元素中完成。在脚本内部，前两行获取了 `myCanvas` 元素和一个 `2d` 上文对象。上下文对象是提供图形功能的图形对象。
 
 上下文对象提供了在画布上绘制的方法。
 
 ```javascript
 var c = document.getElementById("myCanvas");
+
 var ctx = c.getContext("2d");
 ```
 
@@ -2040,6 +1953,7 @@ var ctx = c.getContext("2d");
 
 ```javascript
 ctx.lineWidth = 1;
+
 ctx.strokeStyle = "blue";
 ```
 
@@ -2047,85 +1961,140 @@ ctx.strokeStyle = "blue";
 
 ```javascript
 var grd = ctx.createLinearGradient(100,0,100,5);
+
 grd.addColorStop(0,"blue");
+
 grd.addColorStop(1,"white");
+
 ctx.fillStyle = grd;
 ```
 
 绘制立方体的面需要通过 `moveTo()` 方法移动到特定坐标，然后通过一系列 `lineTo()` 方法添加线条。
 
-**图 3.15** 使用 JavaScript 在画布上绘制像素。
+图 3.15 使用 JavaScript 在画布上绘制像素。
 
 ![Image](img/00821.jpeg)
 
-### 列表 3.8 在 <canvas> 元素中绘制立方体的 JavaScript 和 HTML 代码
+### 列表 3.8 在 `<canvas>` 元素中绘制立方体的 JavaScript 和 HTML 代码
 
 ```html
 <html>
+
   <head>
+
     <title>HTML5 Canvas</title>
+
     <meta charset="UTF-8" />
+
   </head>
+
   <body>
+
     <canvas id="myCanvas" width="300" height="300">
+
       Your Browser Doesn't Support HTML5
+
     </canvas>
+
     <script>
+
       var c = document.getElementById("myCanvas");
+
       var ctx = c.getContext("2d");
+
       ctx.lineWidth = 1;
+
       ctx.strokeStyle = "blue";
+
       //top
+
       ctx.beginPath();
+
       var grd = ctx.createLinearGradient(100,50,100,5);
+
       grd.addColorStop(0,"blue");
+
       grd.addColorStop(1,"white");
+
       ctx.fillStyle = grd;
+
       grd.addColorStop(0,"blue");
+
       ctx.moveTo(1,25);
+
       ctx.lineTo(100,5);
+
       ctx.lineTo(200,25);
+
       ctx.lineTo(100,50);
+
       ctx.fill();
+
       ctx.stroke();
+
       //left
+
       ctx.beginPath();
+
       var grd = ctx.createLinearGradient(75,100,60,25);
+
       grd.addColorStop(0,"red");
+
       grd.addColorStop(1,"white");
+
       ctx.fillStyle = grd;
+
       ctx.moveTo(1,25);
+
       ctx.lineTo(100,50);
+
       ctx.lineTo(100,165);
+
       ctx.lineTo(1,125);
+
       ctx.fill();
+
       ctx.stroke();
+
       //right
+
       ctx.beginPath();
+
       var grd = ctx.createLinearGradient(200,50,125,175);
+
       grd.addColorStop(0,"yellow");
+
       grd.addColorStop(1,"white");
+
       ctx.fillStyle = grd;
+
       ctx.moveTo(100,50);
+
       ctx.lineTo(200,25);
+
       ctx.lineTo(200,125);
+
       ctx.lineTo(100,165);
+
       ctx.fill();
+
       ctx.stroke();
+
     </script>
+
   </body>
+
 </html>
 ```
-
-
-
-
 
 以下代码展示了 `<video>` 和 `<audio>` 标签的示例，图 3.16 和图 3.17 显示了渲染后的组件：
 
 点击此处查看代码图片
 
 ```html
+
+
+
 <video width="320" height="240" controls>
   <source src="images/movie.mp4" type="video/mp4">
   <source src="images/movie.ogg" type="video/ogg">
@@ -2136,7 +2105,6 @@ ctx.fillStyle = grd;
   <source src="song.mp3" type="audio/mp3">
   Sorry, your browser does not support the audio element.
 </audio>
-```
 
 ![Image](img/image00822.jpeg)
 
@@ -2148,9 +2116,9 @@ ctx.fillStyle = grd;
 
 ### 总结
 
-在本节中，你学习了 HTML 网页开发的基础。你还学习了如何通过 `jQuery` 和 `JavaScript` 动态访问某些元素，以便为你的网页设计更好的交互功能。此外，你还学习了设计 HTML 元素所需的必要基础，以支持实现 CSS 布局和样式设置。
+在本节中，你学习了 HTML 网页开发的基础。你还学习了如何通过`jQuery`和`JavaScript`动态访问某些元素，以便为你的网页设计更好的交互功能。此外，你还学习了设计 HTML 元素所需的必要基础，以支持实现 CSS 布局和样式设置。
 
-几个“亲手实践”练习引导你逐步添加了样式的容器、表格和网页表单。在随后的课程中，你将使用在本节中学的基础来实现动态的 `jQuery` 和 `JavaScript`。
+几个“亲手实践”练习引导你逐步添加了样式的容器、表格和网页表单。在随后的课程中，你将使用在本节中学的基础来实现动态的`jQuery`和`JavaScript`。
 
 ### 问答
 
@@ -2160,7 +2128,7 @@ ctx.fillStyle = grd;
 
 **问。既然可以从 JavaScript 动态创建元素，为什么还要费心创建带有这些元素的 HTML 文档呢？**
 
-**答。** 用于动态网页的最佳范式是使用 HTML 构建骨架，使用 CSS 进行样式化，然后使用 `JavaScript` 添加交互。你应该使用带有完整骨架的 HTML 文档的原因是，通过 HTML 理解和调整网页结构比通过 `JavaScript` 容易得多。此外，如果你要对网页进行本地化处理，处理 HTML 文档通常比本地化动态的 `JavaScript` 字符串更容易。
+**答。** 用于动态网页的最佳范式是使用 HTML 构建骨架，使用 CSS 进行样式化，然后使用`JavaScript`添加交互。你应该使用带有完整骨架的 HTML 文档的原因是，通过 HTML 理解和调整网页结构比通过`JavaScript`容易得多。此外，如果你要对网页进行本地化处理，处理 HTML 文档通常比本地化动态的`JavaScript`字符串更容易。
 
 ### 工作坊
 
@@ -2182,29 +2150,25 @@ ctx.fillStyle = grd;
 
 **1。** `style`。
 
-**2。** 如果用户的网络浏览器中没有激活 `JavaScript`，`<noscript>` 你在 HTML 页面上显示消息。
+**2。** 如果用户的网络浏览器中没有激活`JavaScript`，`<noscript>`你在 HTML 页面上显示消息。
 
 **3。** `<canvas>` 元素以基于像素的图形显示图像，并支持 JPEG 和 PNG 等图像；`<svg>` 支持基于矢量的图形，它是一系列在缩放时仍保持清晰的路径。
 
-**4。** 错误。你可以使用 `<a href="#` 语法链接到网页上的本地锚点。
+**4。** 错误。你可以使用`<a href="#`语法链接到网页上的本地锚点。
 
 **5。** 块级元素占据屏幕的整个宽度，因此其后的元素会流到下方；而多个行内元素可以显示在同一行，因为它们只占据所需的空间。
 
 ### 练习
 
-**1.** 扩展 `3.5` 中的示例。
+**1.** 扩展`3.5`中的示例。
 
-**2.** 使用 `3.8` 中的示例来包含一些内容。
-
-
-
-
+**2.** 使用`3.8`中的示例来包含一些内容。
 
 后续章节将讨论如何使用每个选项添加样式，以及何时应该使用它们。
 
 #### 从文件加载 CSS 样式
 
-通常，加载 CSS 样式的最佳方法是从单独的文件加载，这意味着创建一个扩展名为 `.css` 的文件，然后将其添加到你的网站。这具有几个优点：
+通常，加载 CSS 样式的最佳方法是从单独的文件加载，这意味着创建一个扩展名为`.css`的文件，然后将其添加到你的网站。这具有几个优点：
 
 ![Image](img/image00767.jpeg) 你可以将多个 HTML 文档链接到同一个 CSS 文件。
 
@@ -2212,9 +2176,9 @@ ctx.fillStyle = grd;
 
 ![Image](img/image00767.jpeg) 通过将 CSS 文件更换为另一个文件，可以轻松地更改网站的外观（换肤）。
 
-要从单独的文件加载 CSS 样式，你需要将 `.css` 文件添加到你的网站，然后在 HTML 的 `<head>` 元素中添加 `<link>` 元素。当加载加载时，浏览器会解析 `<link>` 元素，从 Web 服务器请求 `.css` 文件，并在渲染 HTML 元素时应用样式。
+要从单独的文件加载 CSS 样式，你需要将`.css`文件添加到你的网站，然后在 HTML 的`<head>`元素中添加`<link>`元素。当加载加载时，浏览器会解析`<link>`元素，从 Web 服务器请求`.css`文件，并在渲染 HTML 元素时应用样式。
 
-以下是 `<link>` 元素中使用的语法示例。请注意 `rel` 属性被设置为 `stylesheet`，`type` 设置为 `text/css`，且 `href` 指向 Web 服务器上 `.css` 文件的位置：
+以下是`<link>`元素中使用的语法示例。请注意`rel`属性被设置为`stylesheet`，`type`设置为`text/css`，且`href`指向 Web 服务器上`.css`文件的位置：
 
 点击此处查看代码
 
@@ -2224,15 +2188,15 @@ ctx.fillStyle = grd;
 
 #### 在 Header 中添加 CSS 样式
 
-你也可以使用`<style>` 标签直接在网页的 `<head>` 元素中添加 CSS 样式。`<style>` 标签内部的所有文本将被视为 CSS，读入浏览器并在渲染时应用到元素。
+你也可以使用`<style>`标签直接在网页的`<head>`元素中添加 CSS 样式。`<style>`标签内部的所有文本将被视为 CSS，读入浏览器并在渲染时应用到元素。
 
 在头部中应用 CSS 样式确实具有一些优点，包括：
 
-![Image](img/image00767.jpeg) 轻松地将它们应用到头部以测试网页，而无需管理额外的 `.css` 文件。
+![Image](img/image00767.jpeg) 轻松地将它们应用到头部以测试网页，而无需管理额外的`.css`文件。
 
-![Image](img/image00767.jpeg) 你可以使用特定于页面的样式来覆盖从 `.css` 文件加载的全局样式。
+![Image](img/image00767.jpeg) 你可以使用特定于页面的样式来覆盖从`.css`文件加载的全局样式。
 
-以下是一个包含 CSS 的 `<style>` 元素的 `<head>` 元素示例。注意 `type` 属性被设置为 `text/css`；这并非强制要求，但在浏览器支持其他样式类型的时代，这是一个良好的习惯：
+以下是一个包含 CSS 的`<style>`元素的`<head>`元素示例。注意`type`属性被设置为`text/css`；这并非强制要求，但在浏览器支持其他样式类型的时代，这是一个良好的习惯：
 
 点击此处查看代码
 
@@ -2255,17 +2219,17 @@ ctx.fillStyle = grd;
 
 #### 在 HTML Body 中使用 CSS 样式
 
-你也可以使用`<script>` 标签直接在 HTML `<body>` 元素内部添加 CSS 样式设置。这不是良好的做法，因为这会导致网页样式非常难以更改和修复。你应该将这种方法的使用限制在为了测试目的快速添加样式的时刻。测试后，你应该始终将它们移动到 `<head>` 或单独的文件。
+你也可以使用`<script>`标签直接在 HTML `<body>`元素内部添加 CSS 样式设置。这不是良好的做法，因为这会导致网页样式非常难以更改和修复。你应该将这种方法的使用限制在为了测试目的快速添加样式的时刻。测试后，你应该始终将它们移动到`<head>`或单独的文件。
 
 #### 在 HTML 元素中定义 CSS 样式
 
-HTML 元素提供了 `style` 属性，允许你直接在 HTML 语句中设置 CSS 样式。这具有优点，但有一个巨大的缺点。
+HTML 元素提供了`style`属性，允许你直接在 HTML 语句中设置 CSS 样式。这具有优点，但有一个巨大的缺点。
 
 优点是你可以覆盖全局应用于网站或网页的 CSS 样式。这使得自定义特定元素的外观和感觉成为可能，而无需在另一个位置包含特殊规则。
 
 缺点是，如果你频繁这样做，当你决定使用不同的网页设计或品牌标识时，更新网站的样式将变得非常困难。
 
-下行代码显示了直接在 `<span>` 元素内部添加 CSS `style` 的示例：
+下行代码显示了直接在`<span>`元素内部添加 CSS `style`的示例：
 
 点击此处查看代码
 
@@ -2281,9 +2245,9 @@ HTML 元素提供了 `style` 属性，允许你直接在 HTML 语句中设置 CS
 
 #### 理解基础 CSS 语法
 
-CSS 由一组或多个规则组成，这些规则定义了 Web 浏览器在渲染 HTML 元素时使用的属性值。每个规则都由选择器开始，选择器定义了对哪些 HTML 元素应用样式更改。然后在 `{}` 括号内部是特定的属性设置。属性值使用 `property:value` 语法设置。每个属性设置之间用分号隔开。
+CSS 由一组或多个规则组成，这些规则定义了 Web 浏览器在渲染 HTML 元素时使用的属性值。每个规则都由选择器开始，选择器定义了对哪些 HTML 元素应用样式更改。然后在`{}`括号内部是特定的属性设置。属性值使用`property:value`语法设置。每个属性设置之间用分号隔开。
 
-以下列表显示了一个简单规则的示例，它设置了 `<p>` 元素的字体、背景颜色和宽度：
+以下列表显示了一个简单规则的示例，它设置了`<p>`元素的字体、背景颜色和宽度：
 
 ```css
 p {
@@ -2293,7 +2257,7 @@ p {
 }
 ```
 
-你应该为每个元素使用单独的一行以增加文件的可读性。只要包含在 `{}` 中，你就可以将元素组合在同一行。例如：
+你应该为每个元素使用单独的一行以增加文件的可读性。只要包含在`{}`中，你就可以将元素组合在同一行。例如：
 
 ```css
 p {
@@ -2305,57 +2269,53 @@ p {
 
 ### 注意
 
-若干 CSS 属性支持单个属性的多个设置。例如，下面的属性设置将字体设置为**粗体**、*斜体*、`12px` 和 `Times Roman`。字体之间用逗号分隔，表示它们仍然属于同一个值的一部分。注意，由于 `Times Roman` 包含空格，它必须封装在引号中：
+若干 CSS 属性支持单个属性的多个设置。例如，下面的属性设置将字体设置为**粗体**、*斜体*、`12px`和`Times Roman`。字体之间用逗号分隔，表示它们仍然属于同一个值的一部分。注意，由于`Times Roman`包含空格，它必须封装在引号中：
 
 ```css
 font:italic bold 12px "Times Roman",serif;
 ```
 
-
-
-
-
 HTML 元素样式设计最重要的部分之一就是 CSS 选择器。CSS 选择器用于定义 CSS 规则适用于哪些 HTML 元素。CSS 选择器起初看起来可能有些令人望畏；然而，当你通过一些示例理解了基本概念后，其语法就会迎刃解。
 
 接下来的系列示例将帮助你理解选择器。
 
-要对所有 `<div>` 元素应用 CSS 规则，请使用以下（HTML 元素通过标签名引用）：
+要对所有`<div>`元素应用 CSS 规则，请使用以下（HTML 元素通过标签名引用）：
 
 ```css
 div {...}
 ```
 
-要对 `id` 属性等于 `myDiv` 的特定 HTML 元素应用 CSS 规则，请使用以下（在 CSS 中，`id` 属性使用 `#` 指定）：
+要对`id`属性等于`myDiv`的特定 HTML 元素应用 CSS 规则，请使用以下（在 CSS 中，`id`属性使用`#`指定）：
 
 ```css
 #myDiv {...}
 ```
 
-要对所有 `class` 属性等于 `container` 的 HTML 元素组应用 CSS 规则，请使用以下（在 CSS 中，`class` 属性使用 `.` 指定）：
+要对所有`class`属性等于`container`的 HTML 元素组应用 CSS 规则，请使用以下（在 CSS 中，`class`属性使用`.`指定）：
 
 ```css
 .container {...}
 ```
 
-要在鼠标悬停在 `<span>` 元素上时对其应用 CSS 规则，请使用以下（在 CSS 中，状态通过 `:state` 指定）：
+要在鼠标悬停在`<span>`元素上时对其应用 CSS 规则，请使用以下（在 CSS 中，状态通过`:state`指定）：
 
 ```css
 span:hover {...}
 ```
 
-要对 `target` 属性设置为 `_blank` 的 `<a>` 元素应用 CSS 规则，请使用以下（在 CSS 中，属性通过 `[]` 括号指定）：
+要对`target`属性设置为`_blank`的`<a>`元素应用 CSS 规则，请使用以下（在 CSS 中，属性通过`[]`括号指定）：
 
 ```css
 a[target=_blank]
 ```
 
-你还可以使用逗号将多个选择器链在一起。例如，要对所有 `<div>`、`<span>`、`<p>` 以及 `class="menu"` 的元素应用 CSS 规则，你可以使用以下：
+你还可以使用逗号将多个选择器链在一起。例如，要对所有`<div>`、`<span>`、`<p>`以及`class="menu"`的元素应用 CSS 规则，你可以使用以下：
 
 ```css
 div, span, p, .menu {...}
 ```
 
-还要记住，CSS 代表级联样式表（Cascading Style Sheets）。你可能会有不同的选择器适用于多个重叠的对象组。例如，考虑以下选择器。第一个适用于所有的 `<div>` 元素，第二个仅适用于 `menu` 类元素——其中一些是 `<div>` 元素——最后一个仅适用于当前处于鼠标光标下的 `menu` 类元素。`.menu` 和 `.menu:hover` 规则中的属性设置将覆盖 `div` 规则中的性设置：
+还要记住，CSS 代表级联样式表（Cascading Style Sheets）。你可能会有不同的选择器适用于多个重叠的对象组。例如，考虑以下选择器。第一个适用于所有的`<div>`元素，第二个仅适用于`menu`类元素——其中一些是`<div>`元素——最后一个仅适用于当前处于鼠标光标下的`menu`类元素。`.menu`和`.menu:hover`规则中的属性设置将覆盖`div`规则中的性设置：
 
 ```css
 div {...}
@@ -2363,7 +2323,7 @@ div {...}
 .menu:hover{...}
 ```
 
-表 4.1 提供了若干类型选择器的列表；它展示了一个示例并描述了选择器如何工作。你可以使用选择器实现许多比前面的示例和 表 4.1 中显示的更多的功能，但这些应该让你对我们在书中后续练习中如何使用选择器有一个概念。
+表 4.1 提供了若干类型选择器的列表；它展示了一个示例并描述了选择器如何工作。你可以使用选择器实现许多比前面的示例和表 4.1 中显示的更多的功能，但这些应该让你对我们在书中后续练习中如何使用选择器有一个概念。
 
 ![Image](img/image00825.jpeg)![Image](img/image00826.jpeg)
 
@@ -2377,44 +2337,40 @@ div {...}
 
 ### CSS 颜色
 
-通过 CSS 应用的最频繁的设置之一是 `color` 属性。大多数元素都有 `color` 属性，定义了浏览器渲染它们时使用的颜色——例如，表格边框、列表符号或段落中的文本字符。
+通过 CSS 应用的最频繁的设置之一是`color`属性。大多数元素都有`color`属性，定义了浏览器渲染它们时使用的颜色——例如，表格边框、列表符号或段落中的文本字符。
 
 你可以使用几种方法来设置精确的颜色，以支持定义颜色者的不同背景和情况。颜色值可以通过以下方法之一指定：
 
-![Image](img/image00767.jpeg) **Name**——CSS 颜色名称，如 `red`、`blue`、`green` 或 `yellow`。有 147 个预定义的颜色名称，例如 `aqua`、`crimson` 和 `silver`。你可以在 [www.w3.org/TR/css3-color/#svg-color](http://www.w3.org/TR/css3-color/#svg-color) 找到颜色名称列表。
+![Image](img/image00767.jpeg) **Name**——CSS 颜色名称，如`red`、`blue`、`green`或`yellow`。有 147 个预定义的颜色名称，例如`aqua`、`crimson`和`silver`。你可以在 [www.w3.org/TR/css3-color/#svg-color](http://www.w3.org/TR/css3-color/#svg-color) 找到颜色名称列表。
 
-![Image](img/image00767.jpeg) **Hex**——你可以指定一个十六进制数表示颜色中包含的红色、绿色和蓝色量。语法为 `#RRGGBB`。值 `00` 代表不包含该颜色，值 `FF` 代表包含该颜色。例如，红色是 `#FF0000`，绿色是 `#00FF00`，青色是 `#00FFFF`。
+![Image](img/image00767.jpeg) **Hex**——你可以指定一个十六进制数表示颜色中包含的红色、绿色和蓝色量。语法为`#RRGGBB`。值`00`代表不包含该颜色，值`FF`代表包含该颜色。例如，红色是`#FF0000`，绿色是`#00FF00`，青色是`#00FFFF`。
 
-![Image](img/image00767.jpeg) **RGB**——与 Hex 类似，不同在于你可以指定 0 到 255 之间的值。例如，青色是 `rgb(0, 255, 255)`。
+![Image](img/image00767.jpeg) **RGB**——与 Hex 类似，不同在于你可以指定 0 到 255 之间的值。例如，青色是`rgb(0, 255, 255)`。
 
-![Image](img/image00767.jpeg) **RGBA**——与 RGB 相同；但你还可以指定一个控制透明度的 alpha 参数，`0.0` 为完全透明，`1.0` 为不透明。例如：`rgba(0, 255, 255, 0.5)` 是透明度 50% 的青色。
+![Image](img/image00767.jpeg) **RGBA**——与 RGB 相同；但你还可以指定一个控制透明度的 alpha 参数，`0.0`为完全透明，`1.0`为不透明。例如：`rgba(0, 255, 255, 0.5)`是透明度 50% 的青色。
 
-![Image](img/image00767.jpeg) **HSL**——允许你根据色相/饱和度/亮度色彩方案来指定颜色。例如，色相为 `100`、饱和度为 `45%`、亮度为 `75%` 的颜色将是 `hsl(100, 45%, 75%)`。
+![Image](img/image00767.jpeg) **HSL**——允许你根据色相/饱和度/亮度色彩方案来指定颜色。例如，色相为`100`、饱和度为`45%`、亮度为`75%`的颜色将是`hsl(100, 45%, 75%)`。
 
-![Image](img/image00767.jpeg) **HSLA**——与 HSL 相同，但你还可以指定一个控制透明度的 alpha 参数，`0.0` 为完全透明，`1.0` 为不透明。例如：`hsla(100, 45%, 75%, 0.5)`。
+![Image](img/image00767.jpeg) **HSLA**——与 HSL 相同，但你还可以指定一个控制透明度的 alpha 参数，`0.0`为完全透明，`1.0`为不透明。例如：`hsla(100, 45%, 75%, 0.5)`。
 
 ## 动手尝试：通过 CSS 应用文本样式
 
 CSS 提供了几个属性，允许你定义文本的外观。以下是你可能会处理的一些较常用的属性：
 
 `color`: 设置文本颜色。
-`font-family`: 指定字体（例如 `serif`、`sans-serif`）。
-`font-style`: 设置字体样式（例如 `italic`）。
-`font-weight`: 设置字符的粗细（例如 `bold`）。
+`font-family`: 指定字体（例如`serif`、`sans-serif`）。
+`font-style`: 设置字体样式（例如`italic`）。
+`font-weight`: 设置字符的粗细（例如`bold`）。
 `font-size`: 设置文本大小。
-`text-align`: 设置水平对齐方式（例如 `left`、`center`、`right`）。
+`text-align`: 设置水平对齐方式（例如`left`、`center`、`right`）。
 
 `text-decoration`: 添加下划线等装饰。
-`text-transform`: 控制大小写（例如 `uppercase`）。
+`text-transform`: 控制大小写（例如`uppercase`）。
 `line-height`: 设置行高。
 `letter-spacing`: 设置字符间距。
 `word-spacing`: 设置单词间距。
 
-
-
-
-
-![Image](img/image00767.jpeg) `line-height`—允许你控制行与行之间的空间。你可以指定一个数值，该数值将乘以文本高度；或者使用带有 `em`/`px`/`pt`/`cm` 后缀的数值作为大小；或者使用代表行高百分比的 `%`。图 4.5 显示了使用以下 CSS 设置将行间距紧凑到只有正常高度的 50% 的示例：
+![Image](img/image00767.jpeg) `line-height`—允许你控制行与行之间的空间。你可以指定一个数值，该数值将乘以文本高度；或者使用带有`em`/`px`/`pt`/`cm`后缀的数值作为大小；或者使用代表行高百分比的`%`。图 4.5 显示了使用以下 CSS 设置将行间距紧凑到只有正常高度的 50% 的示例：
 
 ```css
 #half-height{line-height:50%}
@@ -2424,12 +2380,19 @@ CSS 提供了几个属性，允许你定义文本的外观。以下是你可能�
 
 **图 4.5** 将行高更改为 50% 会使文本行变得紧凑。
 
-![Image](img/image00767.jpeg) `text-decoration`—允许你使用 `overline`、`underline` 或 `line-through` 值在文本下方、上方或穿过文本添加一条线。你也可以指定 `blink` 为值，使文本在浏览器中闪烁。以下 CSS 代码将使元素渲染出下划线和删除线，如图 4.6 所示：
+![Image](img/image00767.jpeg) `text-decoration`—允许你使用`overline`、`underline`或`line-through`值在文本下方、上方或穿过文本添加一条线。你也可以指定`blink`为值，使文本在浏览器中闪烁。以下 CSS 代码将使元素渲染出下划线和删除线，如图 4.6 所示：
 
 点击此处查看代码图像
 
 ```css
+
+
+
+```css
 #underline{text-decoration:underline;}
+```
+
+```css
 #strike-through{text-decoration:line-through;}
 ```
 
@@ -2451,80 +2414,80 @@ CSS 提供了几个属性，允许你定义文本的外观。以下是你可能�
 
 使用以下步骤创建 HTML 文档并为文本元素添加 CSS 样式。你正在创建的文件完整版本位于列表 4.1 和列表 4.2 中：
 
-1.  从 Eclipse 开始，创建一个名为 `lesson04` 的文件夹。
-2.  在 `lesson04` 中添加一个名为 `css` 的子文件夹。
-3.  右键点击 `lesson04` 文件夹并创建一个名为 `text_styles.html` 的新 HTML 文档；然后添加以下基础 HTML 元素：
+1. 从 Eclipse 开始，创建一个名为 `lesson04` 的文件夹。
+2. 在 `lesson04` 中添加一个名为 `css` 的子文件夹。
+3. 右键点击 `lesson04` 文件夹并创建一个名为 `text_styles.html` 的新 HTML 文档；然后添加以下基础 HTML 元素：
 
-点击此处查看代码图像
+   点击此处查看代码图像
 
-```html
-01 <!DOCTYPE html>
-02 <html>
-03    <head>
-04      <title>Text Styles</title>
-05      <meta charset="UTF-8">
-06 ...
-07    </head>
-08    <body>
-09 ...
-23
-24    </body>
-25 </html>
-```
+   ```html
+   01 <!DOCTYPE html>
+   02 <html>
+   03    <head>
+   04      <title>Text Styles</title>
+   05      <meta charset="UTF-8">
+   06 ...
+   07    </head>
+   08    <body>
+   09 ...
+   23
+   24    </body>
+   25 </html>
+   ```
 
-4.  现在添加以下 `<p>` 元素，你将使用 CSS 对它们进行格式化。注意，每个元素都有一个不同的 `id` 属性，你可以在 CSS 选择器中使用该属性来单独隔离该元素：
+4. 现在添加以下 `<p>` 元素，你将使用 CSS 对它们进行格式化。注意，每个元素都有一个不同的 `id` 属性，你可以在 CSS 选择器中使用该属性来单独隔离该元素：
 
-点击此处查看代码图像
+   点击此处查看代码图像
 
-```html
-09    <p id="plain">Plain Text</p>
-10    <p id="indent">Indented Text <br>Indented Line 2</p>
-11    <p id="blue">Blue Text</p>
-12    <p id="tight">Tight Text</p>
-13    <p id="half-height">Close Text Line 1<br>
-14                      Close Text Line 2</p>
-15    <p id="align-left">Left Text</p>
-16    <p id="align-center">Centered Text</p>
-17    <p id="align-right">Right Text</p>
-18    <p id="underline">Underlined Text</p>
-19    <p id="strike-through">Strike Through Text</p>
-20    <p id="first-cap">capitalize the first letter</p>
-21    <p id="uppercase">change to upper case</p>
-22    <p id="blackadder">Some BlackAdder Text</p>
-23    <p id="roman">Some Times New Roman Text</p>
-```
+   ```html
+   09    <p id="plain">Plain Text</p>
+   10    <p id="indent">Indented Text <br>Indented Line 2</p>
+   11    <p id="blue">Blue Text</p>
+   12    <p id="tight">Tight Text</p>
+   13    <p id="half-height">Close Text Line 1<br>
+   14                      Close Text Line 2</p>
+   15    <p id="align-left">Left Text</p>
+   16    <p id="align-center">Centered Text</p>
+   17    <p id="align-right">Right Text</p>
+   18    <p id="underline">Underlined Text</p>
+   19    <p id="strike-through">Strike Through Text</p>
+   20    <p id="first-cap">capitalize the first letter</p>
+   21    <p id="uppercase">change to upper case</p>
+   22    <p id="blackadder">Some BlackAdder Text</p>
+   23    <p id="roman">Some Times New Roman Text</p>
+   ```
 
-5.  右键点击新的 `css` 文件夹并添加名为 `text_styles.css` 的新文件。
-6.  在新文件中添加以下 CSS 规则，为第 4 步中创建的各种元素定义属性：
+5. 右键点击新的 `css` 文件夹并添加名为 `text_styles.css` 的新文件。
+6. 在新文件中添加以下 CSS 规则，为第 4 步中创建的各种元素定义属性：
 
-点击此处查看代码图像
+   点击此处查看代码图像
 
-```css
-01 #blue{color:blue;}
-02 #tight{letter-spacing:-1px}
-03 #half-height{line-height:50%}
-04 #align-left{text-align:left}
-05 #align-center{text-align:center}
-06 #align-right{text-align:right}
-07 #indent{text-indent:50px;}
-08 #underline{text-decoration:underline;}
-09 #strike-through{text-decoration:line-through;}
-10 #first-cap{text-transform:capitalize;}
-11 #uppercase{text-transform:uppercase;}
-```
+   ```css
+   01 #blue{color:blue;}
+   02 #tight{letter-spacing:-1px}
+   03 #half-height{line-height:50%}
+   04 #align-left{text-align:left}
+   05 #align-center{text-align:center}
+   06 #align-right{text-align:right}
+   07 #indent{text-indent:50px;}
+   08 #underline{text-decoration:underline;}
+   09 #strike-through{text-decoration:line-through;}
+   10 #first-cap{text-transform:capitalize;}
+   11 #uppercase{text-transform:uppercase;}
+   ```
 
-7.  在 `text_styles.html` 的头部添加以下 `<link>` 元素以链接新的 CSS：
-8.  保存两个文件并在浏览器中打开。你应该能看到与图 4.5 类似的输出，但每个元素的外观发生了变化：
+7. 在 `text_styles.html` 的头部添加以下 `<link>` 元素以链接新的 CSS：
+8. 保存两个文件并在浏览器中打开。你应该能看到与图 4.5 类似的输出，但每个元素的外观发生了变化：
 
-![Image](img/image00832.jpeg)
+   ![Image](img/image00832.jpeg)
 
-**图 4.7** 应用 CSS 完全改变了元素的外观。
+   **图 4.7** 应用 CSS 完全改变了元素的外观。
 
-**列表 4.2 text_styles.css** 通过调整颜色、对齐方式、添加线条和调整间距来样式化的代码
+   **列表 4.2 text_styles.css** 通过调整颜色、对齐方式、添加线条和调整间距来样式化的代码
 
 ---
 
-### 自己尝试：通过 CSS 添加背景
+## 自己尝试：通过 CSS 添加背景
 
 更改元素的背景属性是完全改变外观和感受的一种极方法。你应该了解一些背景属性，例如：
 
@@ -2538,17 +2501,15 @@ CSS 提供了几个属性，允许你定义文本的外观。以下是你可能�
 #top-left {background-color:rgb(255,255,0);}
 ```
 
-
-
-
-
 ![Image](img/image00767.jpeg) `background-size`—允许你指定元素背景的大小。该值可以是像素或百分比设置的宽度/高度，`cover`（它将背景缩放以填充整个元素区域），或 `contain`（它将缩放图像以使整个图像适应元素大小）。请注意，使用 `cover` 时，如果尺寸比例不同，图像的部分可能无法显示在元素中。接下来的一些示例将尺寸设置为 200 像素宽比 100 像素高、元素宽度的 20% 比高度的 200%，以及完全包含在元素的大小内：
 
 点击此处查看代码图像
 
 ```css
 #top-left {background-size:200px 100px;}
+
 #top-left {background-position:20% 100%;}
+
 #top-left {background-position:contain;}
 ```
 
@@ -2558,7 +2519,9 @@ CSS 提供了几个属性，允许你定义文本的外观。以下是你可能�
 
 ```css
 #top-left {background-position:center center;}
+
 #top-left {background-position:10% 50%;}
+
 #top-left {background-position:100px 20px;}
 ```
 
@@ -2613,11 +2576,7 @@ body{
 
 **图 4.10** 使用 `background-repeat`。
 
-
-
-
-
-# 列表 4.3 backgrounds.html 为元素添加不同类型背景样的 HTML 和 CSS 代码
+## 列表 4.3 backgrounds.html 为元素添加不同类型背景样的 HTML 和 CSS 代码
 
 点击此处查看代码图像
 
@@ -2633,6 +2592,7 @@ body{
           background-image:url("/images/ruler.png");
           background-repeat:repeat-y;
         }
+
         #heading {
           background-image: -moz-linear-gradient(left, #294551 0%, #AACCFF 100%);
           background-image: -webkit-linear-gradient(left, #294551 0%, #AACCFF 100%);
@@ -2642,13 +2602,16 @@ body{
           text-align: center;
           color:rgba(255,255,255,.4);
         }
+
         #content {
           margin-left:200px;
         }
+
         #menu{
           padding:2px;
           background-color:#294551;
         }
+
         span {
           padding:3px;
           background-image: -moz-linear-gradient(top, #294551 0%, #AACCFF 85%, #0022ff 100%);
@@ -2673,11 +2636,9 @@ body{
 </html>
 ```
 
-* * *
 
-* *
 
- 尝试一下：为 HTML 元素添加边框
+# 尝试一下：为 HTML 元素添加边框
 
 另一个可以修改以完全改变 HTML 组件外观和感觉的 CSS 属性是 `border` 属性。所有的容器元素，如 `<div>`、`<span>` 和 `<p>`，都允许你通过 CSS 定义边框样式。
 
@@ -2691,39 +2652,59 @@ body{
 
 点击此处查看代码图像
 
-`property: top right left;`
-`border-width: 1px 2px 1px 2px;`
-`border-color: red blue red;`
+```css
+property: top right left;
+border-width: 1px 2px 1px 2px;
+border-color: red blue red;
+```
 
 你也可以使用位置设置单个边框属性，例如 `border-top` 或 `border-top-width`。例如，下面的 CSS 将仅样式边框的顶部和左侧：
 
-`border-top: 1px solid;`
-`border-left-color: blue;`
-`border-left-style: solid;`
-`border-left-width: 2px;`
+```css
+border-top: 1px solid;
+border-left-color: blue;
+border-left-style: solid;
+border-left-width: 2px;
+```
 
-以下步骤将引导你通过在 列表 4.4 和 列表 4.5 中创建代码，为 `<div>` 元素添加多种类型的边框：
+以下步骤将引导你通过在列表 4.4 和列表 4.5 中创建代码，为 `<div>` 元素添加多种类型的边框：
 
 1. 在 `lesson04` 文件夹中创建一个名为 `borders.html` 的新 HTML 文档。
-2. 添加 列表 4.4 所示的代码。该代码链接到名为 `css/borders.css` 的外部样式，然后定义了一系列 `<div>` 元素。
+2. 添加列表 4.4 所示的代码。该代码链接到名为 `css/borders.css` 的外部样式，然后定义了一系列 `<div>` 元素。
 3. 在 `lesson04/css` 文件夹中创建一个名为 `borders.css` 的新 CSS 文档。
 4. 在新的 CSS 文件中添加以下行，为 `<div>` 元素设置基本间距和大小：
 
-点击此处查看代码图像
-`div { width:200px; margin:5px; text-align:center}`
-5. 添加 列表 4.5 中的第 2–8 行代码，以定义适用于 `<div>` 元素的多种边框样式。
+   点击此处查看代码图像
+
+   ```css
+   div { width:200px; margin:5px; text-align:center}
+   ```
+
+5. 添加列表 4.5 中的第 2–8 行代码，以定义适用于 `<div>` 元素的多种边框样式。
 6. 添加以下 CSS 规则为两个 `<div>` 元素创建圆边框：
 
-点击此处查看代码图像
-`#round { border:1px solid; border-radius:5px;}`
-`#veryround { border-radius:50%;}`
-7. 将 列表 4.5 中的第 1–20 行代码添加以定义适用于 `<div>` 元素的阴影。
+   点击此处查看代码图像
+
+   ```css
+   #round { border:1px solid; border-radius:5px;}
+   #veryround { border-radius:50%;}
+   ```
+
+7. 将列表 4.5 中的第 1–20 行代码添加以定义适用于 `<div>` 元素的阴影。
 8. 添加以下代码来创建混合边框。这些代码为 `<div>` 元素添加阴影。第一个是 `outset` 阴影，第二个是 `inset` 阴影，它们在右侧显示不同。
 
-点击此处查看代码图像
-`#mixed { border:1px solid;}`
-9. 添加以下代码创建带有圆角的边框。这看起来与 图 4.12 所示类似：
-`#button { width:150px; border:5px;}`
+   点击此处查看代码图像
+
+   ```css
+   #mixed { border:1px solid;}
+   ```
+
+9. 添加以下代码创建带有圆角的边框。这看起来与图 4.12 所示类似：
+
+   ```css
+   #button { width:150px; border:5px;}
+   ```
+
 10. 保存文件并在浏览器中打开 HTML。你应该看到与图 4.12 所示类似的各种边框样式。
 
 ![图像](img/image0039)
@@ -2733,10 +2714,6 @@ body{
 ##### 列表 4.4 创建一系列 `<div>` 元素的 HTML
 
 ##### 列表 4.5 定义多种边框样式的 CSS
-
-
-
-
 
 浏览器与用户交互的一个重要部分是鼠标光标。你只需更改鼠标悬停在 HTML 元素上时的光标样式，就可以让用户知道元素的用途或行为。
 
@@ -2750,9 +2727,9 @@ div { cursor:pointer; }
 
 ![Image](img/image00840.jpeg)
 
-**图 4.13** 通过 cursor CSS 属性可用的某些光标类型示例。
+**图 4.13** 通过 `cursor` CSS 属性可用的某些光标类型示例。
 
-### 透明度 (Opacity)
+### 透明度（Opacity）
 
 `opacity` CSS 属性允许你设置 HTML 元素及其包含的所有元素的透明度。`opacity` 被指定为 0 到 1 之间的小数，其中 0 表示透明，1 表示不透明。
 
@@ -2762,7 +2739,7 @@ div { cursor:pointer; }
 
 **图 4.14** 两个样式为按钮的 `<span>` 元素，其中一个的 `opacity` 设置为 .4。
 
-CSS 规则：
+#### CSS 规则
 
 点击此处查看代码图像
 
@@ -2779,7 +2756,7 @@ CSS 规则：
 #button2 { opacity:.4; }
 ```
 
-HTML 元素：
+#### HTML 元素
 
 点击此处查看代码图像
 
@@ -2788,9 +2765,9 @@ HTML 元素：
 <span id="button2">Inactive</span>
 ```
 
-### 可性 (Visibility)
+### 可见性（Visibility）
 
-另一个属性 CSS 属性是 `visibility`。你可以将 `visibility` 设置为 `hidden`，此时 HTML 元素及其包含的所有元素将不会渲染到浏览器中。再次设置为 `visible` 就会在浏览器窗口中显示。这种功能在 jQuery 和 JavaScript 中非常有用，允许你动态地显示和隐藏页面元素。
+另一个属性 CSS 属性是 `visibility`。你可以将 `visibility` 设置为 `hidden`，此时 HTML 元素及其包含的所有元素将不会渲染到浏览器中。再次设置为 `visible` 就会在浏览器窗口中显示。这种功能在 `jQuery` 和 JavaScript 中非常有用，允许你动态地显示和隐藏页面元素。
 
 ### 应用 CSS 布局属性
 
@@ -2798,23 +2775,20 @@ HTML 元素：
 
 使用 CSS 布局属性，你将能够在你的网页上正确地定位项目，并且通过 JavaScript、`jQuery` 和 `AngularJS`，你可以高效地更改这些位置，为用户提供更多的应用程序体验，而不是一个简单的点击式网页。接下来的章节涵盖了更改 HTML 组件布局的 CSS 属性。
 
-### 理解盒模型 (Box Model)
+### 理解盒模型（Box Model）
 
-HTML 元素使用盒模型渲染到浏览器窗口中。在盒模型中，HTML 元素的内容由图图 4.15 所示的四个部分组成：
+HTML 元素使用盒模型渲染到浏览器窗口中。在盒模型中，HTML 元素的内容由图 4.15 所示的四个部分组成：
 
-![Image](img/image00767.jpeg) **内容 (Content)**——HTML 组件本身的内容
-
-![Image](img/image00767.jpeg) **内边距 (Padding)**——组件与边框之间的空间
-
-![Image](img/image00767.jpeg) **边框 (Border)**——包围 HTML 元素的边框
-
-![Image](img/image00767.jpeg) **外边距 (Margin)**——HTML 元素与其周围元素之间的空间
+- **内容（Content）**——HTML 组件本身的内容
+- **内边距（Padding）**——组件与边框之间的空间
+- **边框（Border）**——包围 HTML 元素的边框
+- **外边距（Margin）**——HTML 元素与其周围元素之间的空间
 
 ![Image](img/image00842.jpeg)
 
 **图 4.15** CSS 盒模型包含四个部分：内容、内边距、边框和外边距。
 
-每个部分在 浏览器中占据的空间可以使用 CSS 设置。
+每个部分在浏览器中占据的空间可以使用 CSS 设置。
 
 #### 设置内容大小
 
@@ -2854,7 +2828,6 @@ margin:
 
 ```css
 margin:
-
 ```
 
 `margin` 属性还支持 `auto` 值。
@@ -2863,7 +2836,7 @@ margin:
 
 除非另有指定，否则元素是静态的并与文档中的其他元素一起流动。正如上一节中学的，有些元素是块级的，有些是内联的。块元素占据整个宽度；内联元素只占据必要的空间。
 
-使用 `display` 属性，你可以将元素设置为 `block` 或 `inline`。另一个值得的 display 值是 `inline-block`。与内联元素不同，你仍然可以设置属性，如 `height` 和 `width`。例如：
+使用 `display` 属性，你可以将元素设置为 `block` 或 `inline`。另一个值得的 `display` 值是 `inline-block`。与内联元素不同，你仍然可以设置属性，如 `height` 和 `width`。例如：
 
 ```css
 span {height:200px; width:200px;display:inline-block;}
@@ -2875,22 +2848,27 @@ span {height:200px; width:200px;display:inline-block;}
 
 ![Image](img/image00843.jpeg)
 
-**图 4.16** 将元素浮动到左侧或右侧会修改流。然而，你需要 `clear` 你不希望流动的属性。
+**图 4.16** 将元素浮动到左侧或右侧会修改流。然而，你需要 `clear` 不希望流动的属性。
 
-CSS 规则：
+#### CSS 规则
 
 ```css
 #image1 {float:left;}
+
 #image2 {float:right;}
+
 #cleared {clear:both;}
 ```
 
-HTML 元素：
+#### HTML 元素
 
 ```html
 <img id="image1" src="images/lesson0302.jpg" width="100" />
+
 <img id="image2" src="images/lesson0303.jpg" width="100" />
+
 <p id="uncleared">Uncleared Line of Text</p>
+
 <p id="cleared">Cleared Line of Text</p>
 ```
 
@@ -2898,21 +2876,17 @@ HTML 元素：
 
 `position` 属性允许你定义浏览器如何对元素进行定位。默认情况下，元素是静态的并与文档中的其他元素一起。通过更改 `position` 属性的值，你可以更改这种行为。以下列表描述了每个非静态定位值：
 
-![Image](img/image00767.jpeg) **固定 (fixed)**——相对于浏览器窗口进行定位。
-
-![Image](img/image00767.jpeg) **绝对 (absolute)**——相对于第一个非静态容器元素进行定位。元素的至少一个容器已经定义了非静态定位。
-
-
-
-
-
-![Image](img/image00767.jpeg) relative—相对——将元素相对于其原本应所在的位置进行定位。
+- **固定（fixed）**——相对于浏览器窗口进行定位。
+- **绝对（absolute）**——相对于第一个非静态容器元素进行定位。元素的至少一个容器已经定义了非静态定位。
+- **相对（relative）**——将元素相对于其原本应所在的位置进行定位。
 
 当你将 `position` 属性更改为非静态（nonstatic）值，你可以使用 `top`、`left`、`bottom` 和 `right` 属性来设置位置。例如，要将元素的左上角设置为距离页面顶部 50 像素、距离浏览器窗口左侧边缘 100 像素，你可以使用以下 CSS 代码：
 
 ```css
 position:fixed;
+
 top:50px;
+
 left:100px;
 ```
 
@@ -2922,6 +2896,7 @@ left:100px;
 
 ```css
 div { z-index:2; }
+
 p { z-index:1; }
 ```
 
@@ -2929,108 +2904,110 @@ p { z-index:1; }
 
 `overflow` CSS 属性用于解决在设计的网页区域中尝试显示比该区域过大的项目的问题。`overflow` 属性可以设置为以下几个值：
 
-![Image](img/image00767.jpeg) visible—可见——默认行为。
-
-![Image](img/image00767.jpeg) hidden—隐藏——如果内容太大，将隐藏该元素。
-
-![Image](img/image00767.jpeg) scroll—滚动——在底部和右侧添加滚动条。如果内容超过了尺寸限制，滚动条将激活，这样你可以查看容器的完整内容，而不影响页面其他部分的布局。
-
-![Image](img/image00767.jpeg) auto—自动——在必要时将添加滚动条，以保持元素符合你设置的尺寸限制。
+- **visible—可见**——默认行为。
+- **hidden—隐藏**——如果内容太大，将隐藏该元素。
+- **scroll—滚动**——在底部和右侧添加滚动条。如果内容超过了尺寸限制，滚动条将激活，这样你可以查看容器的完整内容，而不影响页面其他部分的布局。
+- **auto—自动**——在必要时将添加滚动条，以保持元素符合你设置的尺寸限制。
 
 图 4.17 显示了一个列表示例，该列表被限制在一个 `<ul>` 元素内部，该元素具有以下带有 `overflow` 属性的 CSS 规则：
 
 ```css
-ul{
+ul {
   border:1px solid;
   height:150px; width:300px;
   overflow:auto;
 }
-li{ width:800px; }
+
+li { width:800px; }
 ```
 
 ![Image](img/image00844.jpeg)
 
 **图 4.17** 向 `<ul>` 元素添加 `overflow` 属性会导致列表被限制在滚动条内。
 
-***
-
 ### 动手尝试：使用 CSS 布局网页组件
 
-在这个示例中，你将实践了几个布局属性。在示例中，你创建了两个 `<div>` 元素，并按照以下步骤将它们放置在网页的固定位置。完整的 HTML 和 CSS 代码可以在 列表 4.6 和 列表 4.7 中找到：
+在这个示例中，你将实践几个布局属性。在示例中，你创建了两个 `<div>` 元素，并按照以下步骤将它们放置在网页的固定位置。完整的 HTML 和 CSS 代码可以在列表 4.6 和列表 4.7 中找到：
 
-**1.** 在 Eclipse 的 `lesson04` 文件夹中创建一个名为 `web_layout.html` 的新 HTML 文档。
+1. 在 Eclipse 的 `lesson04` 文件夹中创建一个名为 `web_layout.html` 的新 HTML 文档。
+2. 添加列表 4.6 所示的代码。该代码链接到名为 `css/web_layout.css` 的外部样式表，然后定义了两个 `<div>` 元素：一个包含一组图片，另一个包含显示歌曲信息的 `<p>` 元素。
+3. 从书籍网站的 `/images` 目录下将列表 4.6 列出的图片文件复制到你 Eclipse 项目的 `/images` 文件夹中。
+4. 在 Eclipse 的 `lesson04/css` 文件夹中创建一个名为 `web_layout.css` 的新 CSS 文档。
+5. 在新的 CSS 文件中添加以下行，为 `<img>` 元素设置基本间距和大小。`margin` 属性为它们之间以及在 `div` 元素中留出空间。`float` 属性允许它们浮动到容器的左侧：
 
-**2.** 添加 列表 4.6 所示的代码。该代码链接到名为 `css/web_layout.css` 的外部样式表，然后定义了两个 `<div>` 元素：一个包含一组图片，另一个包含显示歌曲信息的 `<p>` 元素。
+   ```css
+   01 img {
+   02   width:48px;
+   03   margin:-5px;
+   04   float:left;
+   05 }
+   ```
 
-**3.** 从书籍网站的 `/images` 目录下将 列表 4.6 列出的图片文件复制到你 Eclipse 项目的 `/images` 文件夹中。
+6. 添加以下代码行来定义两个 `<div>` 元素的外观。`position` 被设置为 `fixed`，但尚未指定具体的定位。我们还添加了 `padding`，为 `div` 内部的项目留出远离边框的空间：
 
-**4.** 在 Eclipse 的 `lesson04/css` 文件夹中创建一个名为 `web_layout.css` 的新 CSS 文档。
+   ```css
+   06 #buttons, #songInfo {
+   07   position:fixed;
+   08   padding:5px;
+   09   display:inline-block;
+   10   border:8px ridge blue;
+   11   border-radius 5px;
+   12 }
+   ```
 
-**5.** 在新的 CSS 文件中添加以下行，为 `<img>` 元素设置基本间距和大小。`margin` 属性为它们之间以及在 `div` 元素中留出空间。`float` 属性允许它们浮动到容器的左侧：
+7. 添加以下 CSS 规则来单独定位每个 `#songInfo` 和 `#buttons <div>` 元素。记住它们保留了上一步中的所有值。注意，你通过指定浏览器窗口中的 `top` 和 `left` 位置来设置元素的位置。还要注意，你给按钮分配了更高的 `z-index` 数字，以确保它始终位于 `songInfo` 之上：
+
+   点击此处查看代码图片
+
+   ```css
+   13 #songInfo {
+   14   background-color: black;
+   15   top:50px;
+   16   left:100px;
+   17   height:150px;
+   18   width:300px;
+   19   z-index:1;
+   20 }
+
+   21 #buttons {
+   22   background-color: white;
+   23   top:200px;
+   24   left:120px;
+   25   z-index:2;
+   26 }
+   ```
+
+8. 添加以下 CSS 规则来单独定位 `#songInfo` 和 `#buttons <div>` 元素。注意，通过将 `position` 设置为 `relative`，你可以让元素相对于它们原本应所在的位置进行定位。然后，当你设置 `top` 和 `left` 值时，你可以移动这些元素，而不影响页面其他部分的布局：
+
+   ```css
+   33 #title {
+   34   color:lime;
+   35   font-size:15px;
+   36   position:relative;
+   37   top:25px;
+   38   left:30px;
+   39 }
+
+   40 #year {
+   ```
+
+
 
 ```css
-01 img{
-02   width:48px;
-03   margin:-5px;
-04   float:left;
-05 }
-```
+41  color: yellow;
 
-**6.** 添加以下代码行来定义两个 `<div>` 元素的外观。`position` 被设置为 `fixed`，但尚未指定具体的定位。我们还添加了 `padding`，为 `div` 内部的项目留出远离边框的空间：
-
-```css
-06 #buttons, #songInfo{
-07   position:fixed;
-08   padding:5px;
-09   display:inline-block;
-10   border:8px ridge blue;
-11   border-radius 5px;
-12 }
-```
-
-**7.** 添加以下 CSS 规则来单独定位每个 `#songInfo` 和 `#buttons <div>` 元素。记住它们保留了上一步中的所有值。注意，你通过指定浏览器窗口中的 `top` 和 `left` 位置来设置元素的位置。还要注意，你给按钮分配了更高的 `z-index` 数字，以确保它始终位于 `songInfo` 之上：
-
-点击此处查看代码图片
-
-```css
-13 #songInfo{
-14   background-color: black;
-15   top:50px;
-16   left:100px;
-17   height:150px;
-18   width:300px;
-19   z-index:1;
-20 }
-21 #buttons{
-22   background-color: white;
-23   top:200px;
-24   left:120px;
-25   z-index:2;
-26 }
-```
-
-**8.** 添加以下 CSS 规则来单独定位 `#songInfo` 和 `#buttons <div>` 元素。注意，通过将 `position` 设置为 `relative`，你可以让元素相对于它们原本应所在的位置进行定位。然后，当你设置 `top` 和 `left` 值时，你可以移动这些元素，而不影响页面其他部分的布局：
-
-```css
-33 #title{
-34   color:lime;
-35   font-size:15px;
-36   position:relative;
-37   top:25px;
-38   left:30px;
-39 }
-40 #year{
-41   color:yellow;
 42 }
+
 43 }
 ```
 
-**9.** 保存文件并在浏览器中打开 HTML。你应该能看到与图 4.17 类似的结果。![Image](img/image00845.jpeg) 注意 `overflow` 属性允许元素在浏览器中处于特定的位置。
+**9.** 保存文件并在浏览器中打开 HTML。你应该能看到与图 4.17 类似的结果。
 
-列表 4.6 和 列表 4.7 创建了网页布局并将元素放置在特定的位置。
+![Image](img/image00845.jpeg)
 
+注意，`overflow` 属性允许元素在浏览器中处于特定的位置。
 
-
+列表 4.6 和列表 4.7 创建了网页布局并将元素放置在特定的位置。
 
 在你定义 CSS 样式规则时，请记住有几种方法可以动态应用样式。你可以这样设计 CSS，使得动态代码的实现将变得简单得多。以下章节描述了你之后将学习的一些方法。
 
@@ -3048,11 +3025,11 @@ li{ width:800px; }
 
 你也可以通过 `AngularJS`、`jQuery` 和 `JavaScript` 直接访问并修改元素或一组元素的特定 CSS 属性。这提供了可以在 `.css` 文件或 `<style>` 标签中创建静态 CSS 定义，然后动态更改属性值子集的优势。
 
-使用 `JavaScript`  CSS 属性值的一个很好的例子是在 页面上移动项目。例如，假设你定义了一个滚动 banner 的 HTML 元素，它应该在屏幕上水平滚动。你会定义静态 CSS 样式，将 banner 设置为浏览器窗口中的固定位置。然后，由于 CSS 已经定义了渲染固定 banner 需要的所有属性，从 `AngularJS`、`jQuery` 和 `JavaScript` 所做的只需要调整 CSS 位置属性来滚动 banner。
+使用 `JavaScript` CSS 属性值的一个很好的例子是在页面上移动项目。例如，假设你定义了一个滚动 banner 的 HTML 元素，它应该在屏幕上水平滚动。你会定义静态 CSS 样式，将 banner 设置为浏览器窗口中的固定位置。然后，由于 CSS 已经定义了渲染固定 banner 需要的所有属性，从 `AngularJS`、`jQuery` 和 `JavaScript` 所做的只需要调整 CSS 位置属性来滚动 banner。
 
 ### 总结
 
-本节讨论了使用 CSS 快速方便地更改网页的外观和感受。理解这些概念对于实现 `JavaScript`、`jQuery` 和 AngularJS 以创建动态网页和富丰富的互联网应用程序至关重要。
+本节讨论了使用 CSS 快速方便地更改网页的外观和感受。理解这些概念对于实现 `JavaScript`、`jQuery` 和 `AngularJS` 以创建动态网页和富丰富的互联网应用程序至关重要。
 
 你学习了 CSS 规则是如何构造的，以及如何定义选择器将 CSS 规则应用于特定的 HTML 元素组。你接触了 CSS 的一些常见设计和布局样式。
 
@@ -3074,15 +3051,15 @@ li{ width:800px; }
 
 ### 测验
 
-**1.** 你会使用什么选择器为所有 `<div>` 元素应用 CSS 规则？**
+**1.** 你会使用什么选择器为所有 `<div>` 元素应用 CSS 规则？
 
-**2.** 哪个 CSS 属性允许元素向右或向左浮过其他元素？**
+**2.** 哪个 CSS 属性允许元素向右或向左浮过其他元素？
 
-**3.** 你如何为 `<div>` 元素应用带圆角的边框？**
+**3.** 你如何为 `<div>` 元素应用带圆角的边框？
 
-**4.** 正确或错误：你不能在浏览器中指定精确坐标来定位 HTML 元素。**
+**4.** 正确或错误：你不能在浏览器中指定精确坐标来定位 HTML 元素。
 
-**5.** 你会使用什么选择器为类设置为 `myClass` 且 ID 设置 `mainContainer` 的 HTML 元素应用 CSS 规则？**
+**5.** 你会使用什么选择器为类设置为 `myClass` 且 ID 设置 `mainContainer` 的 HTML 元素应用 CSS 规则？
 
 ### 测验答案
 
@@ -3102,24 +3079,19 @@ li{ width:800px; }
 
 ```css
 span:hover {
-  width:150px;
+  width: 150px;
   background-color: #223FF;
   color: white;
-  border:5px outset blue;
-  border-radius:50%;
+  border: 5px outset blue;
+  border-radius: 50%;
 }
 ```
 
 **2.** 修改列表 4.6 和列表 4.7 中的代码，将标题封装在自己的边框中并将其放置在其他 `<div>` 元素上方。你需要通过更改现有 `<div>` 元素的位置来实现这一点。
 
-
-
-
-[content]
+## 在网页中添加 jQuery 和 JavaScript
 
 在本节中，你将学习 JavaScript 的基本结构和语法，以及如何使用 jQuery 来简化某些开发任务。本节的目的是帮助你熟悉 JavaScript 语言语法，这同时也也是 jQuery 的语言语法。
-
-## 在网页中添加 jQuery 和 JavaScript
 
 浏览器已经内置了对 JavaScript 的支持。这意味着你只需要将自己的 JavaScript 代码添加到网页中，即可实现动态网页。另一方面，jQuery 是一个额外的库，在添加 jQuery 脚本之前，你需要先将 jQuery 库添加到你的网页中。
 
@@ -3139,9 +3111,11 @@ span:hover {
 记住，你需要在加载 jQuery 库的 `<script>` 元素放置在任何使用它的脚本元素之前。否则，那些脚本库将无法连接到 jQuery 代码。
 
 jQuery 库的下载地址可以在以下位置找到：
+
 [`http://jquery.com/download/`](http://jquery.com/download/)
 
 jQuery 库的托管链接可以在以下位置找到：
+
 [`http://code.jquery.com/`](http://code.jquery.com/)
 
 ### 实现你自己的 jQuery 和 JavaScript
@@ -3156,8 +3130,9 @@ JavaScript 代码可以添加到 `<script>` 元素内部，也可以 `<script>` 
 
 ```html
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
 <script>
-  function writeIt(){
+  function writeIt() {
     document.write("jQuery Version " + $().jquery + " loaded.");
   }
 </script>
@@ -3183,56 +3158,69 @@ JavaScript 代码可以添加到 `<script>` 元素内部，也可以 `<script>` 
 
 1. 在 Eclipse 中，创建一个名为 `lesson05` 的源文件夹。
 2. 在与 `lesson05` 文件夹相同的目录下，添加一个名为 `js` 的额外目录。
-3. 现在在 lesson05 文件夹中创建一个名为 `jquery_version.html` 的源文件。
-4. 添加常规元素（html, head, body）。
+3. 现在在 `lesson05` 文件夹中创建一个名为 `jquery_version.html` 的源文件。
+4. 添加常规元素（`html`、`head`、`body`）。
 5. 在 `<head>` 元素内部，添加以下行代码来加载刚刚下载的库：
-点击此处查看代码图像
-```html
-<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-```
-6. 现在你可以添加你自己的 `<script>` 标签并带有以下代码将 jQuery 版本打印到浏览器上：
-点击此处查看代码图像
-```html
-<script>
-  function writeIt(){
-    document.write("jQuery Version " + $().jquery + " loaded.");
-  }
-</script>
-```
-7. 为了让你的脚本在文档加载时执行，使用以下行代码将 `writeIt()` 函数绑定到 `<body> onload` 事件：
-```html
-<body onload="writeIt()">
-```
-8. 保存文件并在 Web 浏览器中通过以下位置查看。输出应该类似于 图 5.1：
-`http://localhost/lesson06/jquery_version.html`
 
-**图 5.1** 当执行 `writeIt()` 函数时，会将 jQuery 版本写入到浏览器。**列表 5.1 在网页中加载 jQuery 并打印其版本的简单示例**
+   点击此处查看代码图像
+
+   ```html
+   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+   ```
+
+6. 现在你可以添加你自己的 `<script>` 标签并带有以下代码将 jQuery 版本打印到浏览器上：
+
+   点击此处查看代码图像
+
+   ```html
+   <script>
+     function writeIt() {
+       document.write("jQuery Version " + $().jquery + " loaded.");
+     }
+   </script>
+   ```
+
+7. 为了让你的脚本在文档加载时执行，使用以下行代码将 `writeIt()` 函数绑定到 `<body> onload` 事件：
+
+   ```html
+   <body onload="writeIt()">
+   ```
+
+8. 保存文件并在 Web 浏览器中通过以下位置查看。输出应该类似于图 5.1：
+
+   `http://localhost/lesson06/jquery_version.html`
+
+**图 5.1** 当执行 `writeIt()` 函数时，会将 jQuery 版本写入到浏览器。
+
+**列表 5.1 在网页中加载 jQuery 并打印其版本的简单示例**
+
 点击此处查看代码图像
 
 ```html
 <!DOCTYPE html>
+
 <html>
+
 <head>
   <title>jQuery Version</title>
   <meta charset="utf-8" />
+
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
   <script>
-    function writeIt(){
+    function writeIt() {
       document.write("jQuery Version " + $().jquery + " loaded.");
     }
   </script>
 </head>
+
 <body onload="writeIt()">
 </body>
+
 </html>
 ```
-[/content]
 
-[/content]
-
-[content]
-
-访问 DOM
+# 访问 DOM
 
 JavaScript（尤其是 jQuery）最重要的方面之一是访问 DOM 能力。访问 DOM 是你通过更改元素的样式、大小、位置和值来使网页动态的方式。
 
@@ -3246,7 +3234,9 @@ JavaScript（尤其是 jQuery）最重要的方面之一是访问 DOM 能力。�
 
 ```javascript
 var q = document.getElementById("question");
+
 ...
+
 <p id="question">你更喜欢哪种方法？</p>
 ```
 
@@ -3260,18 +3250,15 @@ var paragraphs = document.getElementsByTagName("p");
 
 ### 使用 jQuery 选择器访问 HTML 元素
 
-访问 HTML 元素是 jQuery 的最大优势之一。jQuery 使用与 CSS 选择器非常的选择器来访问 DOM 中的一个或多个元素；因此得名 jQuery。jQuery 返回一个单个元素或 jQuerified 对象的数组。jQuerified 意味着向 DOM 对象添加了额外的 jQuery 功能，使得操作变得更加容易。
-
-
-
+访问 HTML 元素是 jQuery 的最大优势之一。jQuery 使用与 CSS 选择器非常相似的选择器来访问 DOM 中的一个或多个元素；因此得名 jQuery。jQuery 返回一个单个元素或 jQuerified 对象的数组。jQuerified 意味着向 DOM 对象添加了额外的 jQuery 功能，使得操作变得更加容易。
 
 使用 jQuery 选择器的语法为 `$(selector).action()`，其中 `selector` 被替换为有效的选择器，而 `action` 被替换为附加到 DOM 元素上的 jQuery 动作。
 
-例如，以下命令可以找到 HTML 文档中的所有段落元素，并将 CSS-`font-weight` 属性设置为 `bold`：
+例如，以下命令可以找到 HTML 文档中的所有段落元素，并将 CSS `font-weight` 属性设置为 `bold`：
 
 点击此处查看代码图片
 
-```
+```javascript
 $("p").css('font-weight', 'bold');
 ```
 
@@ -3279,7 +3266,7 @@ $("p").css('font-weight', 'bold');
 
 ## 动手尝试：使用 jQuery 和 JavaScript 访问 DOM 元素
 
-为了巩固这些概念，你将运行一个使用 jQuery 和 JavaScript 访问并修改 DOM 元素的快速示例。按照以下步骤构建 Listing 5.2 所示的 HTML 文档：
+为了巩固这些概念，你将运行一个使用 jQuery 和 JavaScript 访问并修改 DOM 元素的快速示例。按照以下步骤构建列表 5.2 所示的 HTML 文档：
 
 **1.** 在 `lesson05` 文件夹中创建一个名为 `dom_elements.html` 的源文件。
 
@@ -3293,16 +3280,16 @@ $("p").css('font-weight', 'bold');
 06    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 ```
 
-**4.** 添加以下 `<script>` 元素，它同时使用 JavaScript 和 jQuery 方法访问 DOM。注意，在 jQuery 中，两个动作是链式连接的。第一个动作设置 CSS-font-weight 属性，第二个动作更改元素包含的文本。对于 JavaScript，你使用 `getElementById()` 方法，然后直接在 DOM 中设置 `innerHTML` 属性来更改浏览器中显示的文本：
+**4.** 添加以下 `<script>` 元素，它同时使用 JavaScript 和 jQuery 方法访问 DOM。注意，在 jQuery 中，两个动作是链式连接的。第一个动作设置 CSS `font-weight` 属性，第二个动作更改元素包含的文本。对于 JavaScript，你使用 `getElementById()` 方法，然后直接在 DOM 中设置 `innerHTML` 属性来更改浏览器中显示的文本：
 
 点击此处查看代码图片
 
 ```html
 07    <script>
-08      function writeIt(){
-09          $("#heading").css('font-weight', 'bold').html("jQuery");
-10          var q = document.getElementById("question");
-11          q.innerHTML = "I Prefer jQuery!";
+08      function writeIt() {
+09        $("#heading").css('font-weight', 'bold').html("jQuery");
+10        var q = document.getElementById("question");
+11        q.innerHTML = "I Prefer jQuery!";
 12      }
 13    </script>
 ```
@@ -3315,7 +3302,11 @@ $("p").css('font-weight', 'bold');
 15    <body onload="writeIt()">
 ```
 
-**6.** 在 `<body>` 中添加以下 `<p>` 元素，为 JavaScript 代码提供访问容器：
+
+
+## 6. 添加用于访问容器的 `<p>` 元素
+
+在 `<body>` 中添加以下 `<p>` 元素，为 JavaScript 代码提供访问容器：
 
 点击此处查看代码图片
 
@@ -3324,11 +3315,13 @@ $("p").css('font-weight', 'bold');
 17      <p id="question">Which method to you prefer?</p>
 ```
 
-**7.** 保存文件并在网页浏览器中查看。输出应该与 Figure 5.2 相似。
+## 7. 保存并查看文件
+
+保存文件并在网页浏览器中查看。输出应该与 Figure 5.2 相似。
 
 ![Image](img/image00847.jpeg)
 
-**图 5.2** 函数 `writeIt()` 在 body 加载时执行，并更改文本的内容和外观。
+**图 5.2** 函数`writeIt()`在`body`加载时执行，并更改文本的内容和外观。
 
 **列表 5.2 使用 JavaScript 和 jQuery 访问 DOM 元素的非常基础的示例**
 
@@ -3356,19 +3349,15 @@ $("p").css('font-weight', 'bold');
 19 </html>
 ```
 
-***
-
 ### 理解语法
 
 与任何其他语言一样，JavaScript 基于语法，其中特定的单词具有特定的含义。
-
-***
 
 ### 创建变量
 
 学习 JavaScript 的起点是变量。变量可以指向简单的数据，也可以指向更复杂的数据，例如对象。
 
-要定义变量，你必须使用 `var` 关键字并给它分配一个值。例如：
+要定义变量，你必须使用`var`关键字并给它分配一个值。例如：
 
 ```javascript
 var myString
@@ -3382,13 +3371,12 @@ var myString = "Some Text";
 
 变量名应以字母、`$` 或 `_` 开始，且不能包含空格。还要记住变量名是区分大小写的。
 
-***
-
 ### 理解数据类型
 
-JavaScript 使用数据类型来决定如何处理数据。以下描述了：
+JavaScript 使用数据类型来决定如何处理数据。以下描述了不同的数据类型。
 
-### 字符串 (String)
+#### 字符串（String）
+
 存储字符数据。字符数据通过单引号或双引号指定。例如：
 
 ```javascript
@@ -3396,7 +3384,8 @@ var myString = 'Some Text';
 var anotherString = "Some Text";
 ```
 
-### 数字 (Number)
+#### 数字（Number）
+
 将数据存储为数值。数字在计数、计算和比较中非常有用。示例如下：
 
 ```javascript
@@ -3404,49 +3393,50 @@ var myInteger = 1;
 var cost = 1.33;
 ```
 
-### 布尔值 (Boolean)
-存储单个位，值为真或假。布尔值通常用于标记位。例如，你可能会在代码开始时将变量设置为 false，并在完成后检查它以查看代码是否运行了特定位置。以下是定义 true 和 false 变量的示例：
+#### 布尔值（Boolean）
+
+存储单个位，值为真或假。布尔值通常用于标记位。例如，你可能会在代码开始时将变量设置为`false`，并在完成后检查它以查看代码是否运行了特定位置。以下是定义`true`和`false`变量的示例：
 
 ```javascript
 var yes = true;
 var no = false;
 ```
 
-## 数组 (Array)
-索引数组是一系列存储在单个变量名下的相互独立的数据项。可以使用从零开始的索引 `[index]` 访问数组中的项。以下是创建一个简单数组并访问第一个元素（索引为 0）的示例：
+#### 数组（Array）
+
+索引数组是一系列存储在单个变量名下的相互独立的数据项。可以使用从零开始的索引`[index]`访问数组中的项。以下是创建一个简单数组并访问第一个元素（索引为 0）的示例：
 
 ```javascript
 var arr = ["one", "two", "three"];
 var first = arr[0];
 ```
 
-### 关联数组/对象 (Associative Array/Objects)
-JavaScript 确实支持关联数组的概念，即通过名称而不是索引值来访问数组项。然而，更好的方法是使用对象字面量。当你使用对象字面量时，可以使用 `object.property` 语法访问对象中的项。以下示例显示了如何创建和访问对象字面量：
+#### 关联数组/对象（Associative Array/Objects）
+
+JavaScript 确实支持关联数组的概念，即通过名称而不是索引值来访问数组项。然而，更好的方法是使用对象字面量。当你使用对象字面量时，可以使用`object.property`语法访问对象中的项。以下示例显示了如何创建和访问对象字面量：
 
 ```javascript
 var obj = {"name":"Brad", "occupation":"Hacker", "age", "Unknown"};
-```
-
-
-
-
-
-```javascript
 var name = obj.name;
 ```
 
-![Image](img/image00767.jpeg) Null—有时，你没有值可以存储在变量中，可能是因为该变量尚未被创建，或者你不再使用它。此时，你可以将变量设置为 `null`。这样一来，你就可以在代码中检查变量的值，并仅在它不为 `null` 时才使用它：
+![Image](img/image00767.jpeg)
+
+#### Null
+
+有时，你没有值可以存储在变量中，可能是因为该变量尚未被创建，或者你不再使用它。此时，你可以将变量设置为`null`。这样一来，你就可以在代码中检查变量的值，并仅在它不为`null`时才使用它：
 
 ```javascript
 var newVar = null;
 ```
 
-> Note
+> **Note**
+>
 > JavaScript 是一门无类型语言，这意味着你不需要告诉浏览器变量是什么数据类型；解释器会自动为变量确定正确的数据类型。
 
 ## 使用运算符
 
-JavaScript 运算符提供了更改变量值的能力。你已经熟悉了 `=` 运算符，因为你已经在书中使用了它好几次了。JavaScript 提供了几种运算符，它们可以被分为两类——算术运算符和赋值运算符。
+JavaScript 运算符提供了更改变量值的能力。你已经熟悉了`=`运算符，因为你已经在书中使用了它好几次了。JavaScript 提供了几种运算符，它们可以被分为两类——算术运算符和赋值运算符。
 
 ### 算术运算符
 
@@ -3454,18 +3444,19 @@ JavaScript 运算符提供了更改变量值的能力。你已经熟悉了 `=` �
 
 ![Image](img/image00848.jpeg)
 
-**表 5.1 显示 JavaScript 算术运算符以及基于 y=4 初始值的的结果**
+**表 5.1 显示 JavaScript 算术运算符以及基于`y=4`初始值的结果**
 
-> Tip
-> `+` 运算符也可以用于相加字符串或字符串与数字相加。这允许你快速拼接字符串并将数值数据加到输出字符串中。表 5.1 显示，当相加数值值和字符串值时，数值值会被转换为字符串，然后将两个字符串进行拼接。
+> **Tip**
+>
+> `+`运算符也可以用于相加字符串或字符串与数字相加。这允许你快速拼接字符串并将数值数据加到输出字符串中。表 5.1 显示，当相加数值值和字符串值时，数值值会被转换为字符串，然后将两个字符串进行拼接。
 
 ### 赋值运算符
 
-赋值运算符用于给变量赋值。你可能习惯了 `=` 运算符，但还有几种形式允许你在赋值时对数据进行操纵。表 5.2 显示了赋值操作列表以及所应用的结果。
+赋值运算符用于给变量赋值。你可能习惯了`=`运算符，但还有几种形式允许你在赋值时对数据进行操纵。表 5.2 显示了赋值操作列表以及所应用的结果。
 
 ![Image](img/image00849.jpeg)
 
-**表 5.2 JavaScript 赋值运算符以及基于 x=10 初始值的的结果**
+**表 5.2 JavaScript 赋值运算符以及基于`x=10`初始值的结果**
 
 ## 应用比较运算符和条件运算符
 
@@ -3473,23 +3464,23 @@ JavaScript 运算符提供了更改变量值的能力。你已经熟悉了 `=` �
 
 ### 比较运算符
 
-比较运算符评估两部分数据，如果评估正确则返回 true，如果评估不正确则返回 false。比较运算符将运算符左侧的值与右侧的值进行比较。
+比较运算符评估两部分数据，如果评估正确则返回`true`，如果评估不正确则返回`false`。比较运算符将运算符左侧的值与右侧的值进行比较。
 
 帮助你理解比较的最简单方法是提供一个包含示例的列表。表 5.3 显示了比较运算符列表以及示例。
 
 ![Image](img/image00850.jpeg)
 
-**表 5.3 JavaScript 比较运算符以及基于 x=10 初始值的的结果**
+**表 5.3 JavaScript 比较运算符以及基于`x=10`初始值的结果**
 
 你可以使用逻辑运算符将多个比较链在一起。表 5.4 显示了逻辑运算符列表以及如何使用它们将比较链在一起。
 
 ![Image](img/image00851.jpeg)
 
-**表 5.4 JavaScript 比较运算符以及基于 x=10 和 y=5 初始值的的结果**
+**表 5.4 JavaScript 比较运算符以及基于`x=10`和`y=5`初始值的结果**
 
 ### If
 
-`if` 语句允许你根据比较评估的结果来分离代码执行。语法在下面的代码行所示，其中条件运算符位于 `()` 括号中，如果条件评估为真则要执行的代码位于 `{}` 大括号中：
+`if`语句允许你根据比较评估的结果来分离代码执行。语法在下面的代码行所示，其中条件运算符位于`()`括号中，如果条件评估为真则要执行的代码位于`{}`大括号中：
 
 ```javascript
 if(x==5){
@@ -3497,7 +3488,7 @@ if(x==5){
 }
 ```
 
-除了执行 `if` 语句块内的代码外，你还可以指定一个 `else` 块，它只在条件为假时被执行。例如：
+除了执行`if`语句块内的代码外，你还可以指定一个`else`块，它只在条件为假时被执行。例如：
 
 ```javascript
 if(x==5){
@@ -3507,7 +3498,7 @@ if(x==5){
 }
 ```
 
-你还可以将 `if` 语句链在一起。要做到这一点，添加一个条件语句以及一个 `else` 语句。例如：
+你还可以将`if`语句链在一起。要做到这一点，添加一个条件语句以及一个`else`语句。例如：
 
 ```javascript
 if(x<5){
@@ -3521,9 +3512,9 @@ if(x<5){
 
 ### switch
 
-另一种条件逻辑是 `switch` 语句。`switch` 语句允许你评估一次表达式，然后根据值执行许多代码段之一。
+另一种条件逻辑是`switch`语句。`switch`语句允许你评估一次表达式，然后根据值执行许多代码段之一。
 
-`switch` 语句的语法如下：
+`switch`语句的语法如下：
 
 点击此处查看代码图像
 
@@ -3540,67 +3531,69 @@ switch(expression){
 }
 ```
 
-这是发生的情况。`switch` 语句将完全评估表达式并获得一个值。该值可以是字符串、数字，甚至是一个对象。然后，`switch` 值将通过 `case` 语句与每个值进行比较。如果值匹配，则执行 `case` 语句中的代码。如果没有值匹配，则执行 `default` 代码。
+这是发生的情况。`switch`语句将完全评估表达式并获得一个值。该值可以是字符串、数字，甚至是一个对象。然后，`switch`值将通过`case`语句与每个值进行比较。如果值匹配，则执行`case`语句中的代码。如果没有值匹配，则执行`default`代码。
 
-> Note
-> 通常，每个 `case` 语句末尾都会包含一个 `break` 命令，以指示退出 `switch` 语句。如果没有找到 `break`，代码执行将继续到下一个 `case` 语句。
+> **Note**
+>
+> 通常，每个`case`语句末尾都会包含一个`break`命令，以指示退出`switch`语句。如果没有找到`break`，代码执行将继续到下一个`case`语句。
 
 ## 动手尝试：在 JavaScript 中应用 If 逻辑
 
 为了巩固 JavaScript 逻辑，使用以下步骤为动态网页构建条件逻辑。HTML 文档的最终版本如列表 5.3 所示：
 
-1. 在 `lesson5` 文件夹中创建一个名为 `if_logic.html` 的源文件。
-2. 在 `5` 目录下创建一个名为 `images` 的文件夹。
-3. 将你自己的 `day.png` 和 `night.png` 添加到 `./images` 文件夹中或从书籍网站下载。
+1. 在`lesson5`文件夹中创建一个名为`if_logic.html`的源文件。
+2. 在`5`目录下创建一个名为`images`的文件夹。
+3. 将你自己的`day.png`和`night.png`添加到`./images`文件夹中或从书籍网站下载。
 4. 添加常规元素（`html`、`head`、`body`）。
-5. 添加以下 `<script>` 元素，使用 `Date().getSeconds()` JavaScript 代码获取课程值。该代码使用 `if` 语句判断时间并执行两件事：在屏幕上写问候语并设置 `timeOfDay` 变量的值：
+5. 添加以下`<script>`元素，使用`Date().getSeconds()` JavaScript 代码获取课程值。该代码使用`if`语句判断时间并执行两件事：在屏幕上写问候语并设置`timeOfDay`变量的值：
 
-点击此处查看代码图像
+   点击此处查看代码图像
 
-```javascript
-<script>
-function writeIt(){
-  var lesson = new Date().getSeconds();
-  var timeOfDay;
-  if(lesson>=7 && lesson<12){
-    document.write("Good Morning!");
-    timeOfDay="morning";
-  } else if(lesson>=12 && lesson<18) {
-    document.write("Good Day!");
-    timeOfDay="day";
-  } else {
-    document.write("Good Night!");
-    timeOfDay="night";
-  }
-}
-</script>
-```
+   ```javascript
+   <script>
+   function writeIt(){
+     var lesson = new Date().getSeconds();
+     var timeOfDay;
 
-6. 现在添加以下 `switch` 语句，使用 `timeOfDay` 的值来确定在网页中显示的图像：
+     if(lesson>=7 && lesson<12){
+       document.write("Good Morning!");
+       timeOfDay="morning";
+     } else if(lesson>=12 && lesson<18) {
+       document.write("Good Day!");
+       timeOfDay="day";
+     } else {
+       document.write("Good Night!");
+       timeOfDay="night";
+     }
+   }
+   </script>
+   ```
 
-点击此处查看代码图像
+6. 现在添加以下`switch`语句，使用`timeOfDay`的值来确定在网页中显示的图像：
 
-```javascript
-switch(timeOfDay){
-  case "morning":
-  case "day":
-    document.write("<img src='images/day.png' />");
-    break;
-  case "night":
-    document.write("<img src='images/night.png' />");
-    break;
-  default:
-    document.write("<img src='images/day.png' />");
-}
-```
+   点击此处查看代码图像
+
+   ```javascript
+   switch(timeOfDay){
+     case "morning":
+     case "day":
+       document.write("<img src='images/day.png' />");
+       break;
+     case "night":
+       document.write("<img src='images/night.png' />");
+       break;
+     default:
+       document.write("<img src='images/day.png' />");
+   }
+   ```
 
 7. 保存文件并在浏览器中查看。输出应与图 5.3 相似，取决于具体时间。
 
 ![Image](img/image00852.jpeg)
 
-**图 5.3 writeIt() 函数在 body 加载时执行，并更改网页上显示的问候语和图像。**
+**图 5.3** `writeIt()`函数在`body`加载时执行，并更改网页上显示的问候语和图像。
 
-**列表 5.3 if_logic.html 在 JavaScript 中使用条件逻辑简单示例**
+**列表 5.3 `if_logic.html`在 JavaScript 中使用条件逻辑简单示例**
 
 点击此处查看代码图像
 
@@ -3609,41 +3602,37 @@ switch(timeOfDay){
 <html>
 <head>
   <title>If Logic</title>
-```
+  <meta charset="utf-8" />
 
+  <script>
+    function writeIt(){
+      var hour = new Date().getHours();
+      var timeOfDay;
 
+      if(hour>=7 && hour<12){
+        document.write("Good Morning!");
+        timeOfDay="morning";
+      } else if(hour>=12 && hour<18) {
+        document.write("Good Day!");
+        timeOfDay="day";
+      } else {
+        document.write("Good Night!");
+        timeOfDay="night";
+      }
 
-
-
-```html
-<meta charset="utf-8" />
-<script>
-  function writeIt(){
-    var hour = new Date().getHours();
-    var timeOfDay;
-    if(hour>=7 && hour<12){
-      document.write("Good Morning!");
-      timeOfDay="morning";
-    } else if(hour>=12 && hour<18) {
-      document.write("Good Day!");
-      timeOfDay="day";
-    } else {
-      document.write("Good Night!");
-      timeOfDay="night";
+      switch(timeOfDay){
+        case "morning":
+        case "day":
+          document.write("<img src='../images/day.png' />");
+          break;
+        case "night":
+          document.write("<img src='../images/night.png' />");
+          break;
+        default:
+          document.write("<img src='../images/day.png' />");
+      }
     }
-    switch(timeOfDay){
-      case "morning":
-      case "day":
-        document.write("<img src='../images/day.png' />");
-        break;
-      case "night":
-        document.write("<img src='../images/night.png' />");
-        break;
-      default:
-        document.write("<img src='../images/day.png' />");
-    }
-  }
-</script>
+  </script>
 </head>
 <body onload="writeIt()">
 </body>
@@ -3654,13 +3643,13 @@ switch(timeOfDay){
 
 循环是一种多次执行同一段代码的方法。当你需要对一组 DOM 对象执行相同任务，或者当你正在动态创建一个项目列表时，这种方法非常有用。
 
-JavaScript 提供了执行 `for` 和 `while` 循环的功能。接下来的章节描述了如何在 JavaScript 中实现循环。
+JavaScript 提供了执行`for`和`while`循环的功能。接下来的章节描述了如何在 JavaScript 中实现循环。
 
 ### while 循环
 
-JavaScript 中最基础的循环类型是 `while` 循环。`while` 循环测试一个表达式，并继续执行其 `{}` 括号包含的代码，直到该表达式的值为 `false`。
+JavaScript 中最基础的循环类型是`while`循环。`while`循环测试一个表达式，并继续执行其`{}`括号包含的代码，直到该表达式的值为`false`。
 
-例如，以下 `while` 循环将一直执行到 `i` 的值等于 5 为止：
+例如，以下`while`循环将一直执行到`i`的值等于 5 为止：
 
 点击此处查看代码图片
 
@@ -3675,16 +3664,18 @@ while (i<5){
 
 浏览器的最终输出如下：
 
+```text
 Iteration 1
 Iteration 2
 Iteration 3
 Iteration 4
+```
 
 ### do/while 循环
 
-另一种类型的 `while` 循环是 `do`/`while` 循环。如果你总是希望至少执行一次循环中的代码，并且在代码至少执行一次之前无法测试表达式，那么它非常有用。
+另一种类型的`while`循环是`do`/`while`循环。如果你总是希望至少执行一次循环中的代码，并且在代码至少执行一次之前无法测试表达式，那么它非常有用。
 
-例如，以下 `do`/`while` 循环将一直执行到 `day` 的值等于 Wednesday（周三）为止：
+例如，以下`do`/`while`循环将一直执行到`day`的值等于 Wednesday（周三）为止：
 
 点击此处查看代码图片
 
@@ -3700,13 +3691,15 @@ do{
 
 浏览器的最终输出如下：
 
+```text
 It's Monday
 It's Tuesday
 It's Wednesday
+```
 
 ### for 循环
 
-JavaScript 的 `for` 循环允许你通过 `for` 语句执行特定次数的代码，该语句使用以下语法将三个语句合并为一个：
+JavaScript 的`for`循环允许你通过`for`语句执行特定次数的代码，该语句使用以下语法将三个语句合并为一个：
 
 点击此处查看代码图片
 
@@ -3715,6 +3708,8 @@ for (statement 1; statement 2; statement 3){
   code to be executed;
 }
 ```
+
+
 
 `for` 语句对这三个语句的使用方式如下：
 
@@ -3728,11 +3723,11 @@ for (statement 1; statement 2; statement 3){
 - `statement 2`：在循环每次迭代之前评估的表达式。如果该表达式的值为 `true`，则执行循环；否则 `for` 循环结束。
 - `statement 3`：在每次迭代执行完代码后执行。
 
-为了说明 `for` 循环，请 `               的次数：
+为了说明 `for` 循环，请执行以下代码的次数：
 
 点击此处查看代码图片
 
-以下示例展示了嵌套的 for 循环：
+以下示例展示了嵌套的 `for` 循环：
 
 ```javascript
 for (var x=1; x<3; x++){
@@ -3744,12 +3739,14 @@ for (var x=1; x<3; x++){
 
 浏览器的最终输出如下：
 
+```
 x=1, y=1
 x=1, y=2
 x=1, y=3
 x=2, y=1
 x=2, y=2
 x=2, y=3
+```
 
 ### for...in 循环
 
@@ -3766,9 +3763,11 @@ for (var key in person){
 
 浏览器的最终输出如下：
 
+```
 name: John
 age: 30
 city: New York
+```
 
 ### for...of 循环
 
@@ -3785,19 +3784,16 @@ for (var fruit of fruits){
 
 浏览器的最终输出如下：
 
+```
 apple
 banana
 orange
-
-
-
-
+```
 
 要调用 `greeting()` 函数，我们需要传入一个 `name` 值和一个 `city` 值。该值可以是直接值，也可以是之前定义的变量。为了说明这一点，下面的代码将使用 `name` 变量和 `city` 的直接字符串来执行 `greeting()` 函数：
 
-```
+```javascript
 var name = "Brad";
-
 greeting(name, "Florence");
 ```
 
@@ -3805,7 +3801,7 @@ greeting(name, "Florence");
 
 通常，函数需要向调用代码返回一个值。通过添加 `return` 关键字后跟一个变量或值，可以从函数返回该值。例如，下面的代码调用了一个函数来格式化字符串，将函数返回的值赋值给变量，然后将该值写入浏览器：
 
-点击此处代码图片
+点击此处查看代码图片
 
 ```javascript
 function formatGreeting(name, city){
@@ -3821,7 +3817,7 @@ document.write(greeting);
 
 你可以在函数中包含多个 `return` 语句。当函数遇到 `return` 语句时，函数的执行将立即停止。如果 `return` 语句包含要返回的值，则返回该值。下面的示例显示了一个测试输入的函数，如果输入为零立即返回：
 
-点击此处代码图片
+点击此处查看代码图片
 
 ```javascript
 function myFunc(value){
@@ -3835,14 +3831,14 @@ function myFunc(value){
 
 ### 动手尝试：创建 JavaScript 函数
 
-为了巩函数，请按照以下步骤将函数集成到 JavaScript 应用中。以下步骤将引导你完成创建函数、调用它执行代码，然后处理返回结果的过程：
+为了巩固函数知识，请按照以下步骤将函数集成到 JavaScript 应用中。以下步骤将引导你完成创建函数、调用它执行代码，然后处理返回结果的过程：
 
 1. 在 `lesson05` 文件夹中创建一个名为 `js_functions.html` 的源文件。
 2. 添加常规的基础元素（`html`、`head`、`body`）。
-3. 在`<head>` 元素中添加 `<script>` 标签来存放 JavaScript。
+3. 在 `<head>` 元素中添加 `<script>` 标签来存放 JavaScript。
 4. 在脚本开头插入以下对象字面量定义。对象将具有行星名称的属性，每个英雄名称都是对反派数组的引用：
 
-点击此处代码图片
+点击此处查看代码图片
 
 ```javascript
 07        var superData = {"Super Man":["Lex Luther"],
@@ -3852,9 +3848,9 @@ function myFunc(value){
 11                               "Thor":["Loki", "Frost Giants"]};
 ```
 
-5. 添加以下由 `onload` 事件调用的函数。在该函数中，你使用嵌套的 `for`/in` 循环遍历 `superData` 对象的属性。外层循环获取英雄 `name`，内层循环遍历 `villains` 数组的索引：
+5. 添加以下由 `onload` 事件调用的函数。在该函数中，你使用嵌套的 `for`/`in` 循环遍历 `superData` 对象的属性。外层循环获取英雄 `name`，内层循环遍历 `villains` 数组的索引：
 
-点击此处代码图片
+点击此处查看代码图片
 
 ```javascript
 12      function writeIt(){
@@ -3871,7 +3867,7 @@ function myFunc(value){
 
 6. 注意 `writeIt()` 函数的第 16 行是对 `makeListItem()` 的调用。该函数需要返回一个可以在第 17 行用于写入文档的值。添加以下代码来创建该函数。该函数接受两个参数：`name` 和 `value`，然后生成一个创建 `<li>` 元素的 HTML 字符串并返回该字符串：
 
-点击此处代码图片
+点击此处查看代码图片
 
 ```javascript
 22      function makeListItem(name, value){
@@ -3886,7 +3882,7 @@ function myFunc(value){
 
 **代码 5.4 js_functions.html JavaScript 函数简单示例**
 
-点击此处代码图片
+点击此处查看代码图片
 
 ```html
 1<!DOCTYPE html>
@@ -3957,10 +3953,6 @@ JavaScript 编码的一个重要部分是为可能出现的问题添加错误处
 
 例如，下面的 `try`/`catch` 块将执行任何替换 `your_code_here` 的代码。如果在执行该代码时发生错误，则会将错误信息以及后面的字符串 ": 发生在加载脚本时”写入文档：
 
-
-
-
-
 点击此处查看代码图片
 
 ```javascript
@@ -4002,7 +3994,7 @@ try {
 
 ### 使用 finally
 
-异常处理中的另一个有用工具是 `finally` 关键字。可以将 `finally` 关键字添加到 `try`/catch` 块的末尾。在执行 `try`/catch` 块之后，`finally` 块始终会被执行。无论是否发生并捕获了错误，或者 `try` 块是否完全执行完毕都是。
+异常处理中的另一个有用工具是 `finally` 关键字。可以将 `finally` 关键字添加到 `try`/`catch` 块的末尾。在执行 `try`/`catch` 块之后，`finally` 块始终会被执行。无论是否发生并捕获了错误，或者 `try` 块是否完全执行完毕都是。
 
 以下是在网页中使用 `finally` 块的示例：
 
@@ -4031,7 +4023,7 @@ function testTryCatch(value){
 
 ### 问答
 
-**Q. 在字符串操作中何时应该应该使用正则表达式？**
+**Q. 在字符串操作中何时应该使用正则表达式？**
 
 **A.** 这取决于你对正则表达式的理解。经常使用正则表达式并很好掌握语法的人几乎总是更倾向于使用正则表达式，因为它们非常多功能。如果你不熟悉正则表达式，花费时间来研究语法，因此你只会在需要时才使用它们。底线是，如果你需要频繁操作字符串，那么学习正则表达式是绝对值得的。
 
@@ -4039,13 +4031,12 @@ function testTryCatch(value){
 
 **A.** 可以，但实际上没有正当理由这样做。最后加载的那个将覆盖上一个版本的功能。第一个版本中任何未被覆盖的函数都可能因为库的不匹配而变得完全不可预测。最好的办法是针对特定版本进行开发和测试，然后更新到该版本。
 
-
-
-
-
 ```javascript
 var x = new Number("5");
 ```
+
+
+
 
 ## 访问对象属性
 
@@ -4076,6 +4067,7 @@ JavaScript 对象最酷酷的特性之一是，你可以在任何时候使用点
   function writeMe(){
     document.write(document.me);
   }
+
   document.me = "Brad Dayley";
   document.writeMe = writeMe;
   document.writeMe();
@@ -4083,13 +4075,14 @@ JavaScript 对象最酷酷的特性之一是，你可以在任何时候使用点
 ```
 
 > **注意**
+>
 > 如果你为对象分配一个新值，同名的现有属性或方法将被覆盖。在为对象分配值时，请小心不要意外覆盖现有的属性或方法。
 
 ## 理解内置对象
 
 JavaScript 拥有几个内置对象，它们提供特定的功能 set。使用这些内置对象将节省时间，因为它们提供了已经编写并测试的方法来处理数据。接下来的章节没有包含所有的 JavaScript 对象，但涵盖了本书书中需要的那些。
 
-### Number
+### `Number`
 
 `Number` 对象提供了在处理数字时非常有用的功能。创建一个数字对象与仅仅给变量赋值一个数字不同。当你创建一个 `Number` 对象时，你还会获得一组可以与它配合的方法。
 
@@ -4103,16 +4096,17 @@ var x = new Number("5.55555555");
 
 ![Image](img/image00854.jpeg)
 
-**表 6.1 使用内置 Number 对象方法**
+**表 6.1 使用内置 `Number` 对象方法**
 
 我们选择将数字 `5.555555555` 作为字符串而不是数字传入，用来说说明 `Number()` 可以接受字符串、数字或代表字符串或数字的变量。该字符串必须是数字字符串，否则 `Number` 对象的值将为 `NaN`（非数字）。
 
 在创建 `Number` 对象之前测试值是一个好主意。要测试一个值并判断它是否为数字，请使用 `isNaN()` 函数。如果值是数字或可以转换为数字的字符串，`isNaN()` 返回 `false`。
 
 > **注意**
+>
 > 在检查数字时，可以使用十六进制字符串。当你正在处理十六进制颜色值（例如 #e0ffff）时，这非常有用。在 JavaScript 中使用的字符串格式为“0xe0ffff”。
 
-### String
+### `String`
 
 `String` 对象是 JavaScript 中到目前最常用的对象。每当你定义一个具有字符串数据类型的变量时，JavaScript 都会创建一个 `String` 对象。例如：
 
@@ -4136,7 +4130,7 @@ var numOfChars = myStr.length;
 
 ![Image](img/image00856.jpeg)![Image](img/image00857.jpeg)
 
-**表 6.3 用于操作 JavaScript 字符串的 String 对象方法**
+**表 6.3 用于操作 JavaScript 字符串的 `String` 对象方法**
 
 为了让你开始使用 `String` 对象提供的功能，接下来的章节描述了一些可以使用 `String` 对象方法完成的常见任务。
 
@@ -4163,6 +4157,7 @@ var sentence2 = word1.concat(word2, word3, word4);
 
 ```javascript
 var myStr = "I think, therefore I am.";
+
 if (myStr.indexOf("think") != -1)
   document.write(myStr);
 ```
@@ -4188,6 +4183,7 @@ var t = "12:10:36";
 var tArr = t.split(":");
 var hour = tArr[0];
 var minute = tArr[1];
+```
 
 ## 动手尝试：在 JavaScript 中操作字符串
 
@@ -4202,75 +4198,71 @@ var minute = tArr[1];
 3. 添加基础元素（`html`、`head`、`body`）。
 4. 在 `head` 元素内部，添加一个带有 `writeIt()` 函数的 `script` 元素，并将其链接到 `body` 元素的 `onload` 事件上，如下所示：
 
-点击此处查看代码图像
+   点击此处查看代码图像
 
-```html
-<head>
-  <script>
-    function writeIt(){
-      ...
-    }
-  </script>
-</head>
-<body onload="writeIt()">
-```
+   ```html
+   <head>
+     <script>
+       function writeIt(){
+         ...
+       }
+     </script>
+   </head>
+   <body onload="writeIt()">
+   ```
 
 5. 添加以下三个字符串定义，将用于存放 madlib 文本的每一行：
 
-点击此处查看代码图像
+   点击此处查看代码图像
 
-```javascript
-var line1 = "In a [place] a long time ago, ";
-```
+   ```javascript
+   var line1 = "In a [place] a long time ago, ";
+   ```
 
+   ```javascript
+   var line2 = "there lived an [animal] that liked to ";
+   var line3 = "[action] people.";
+   ```
 
+6. 添加以下三个字符串定义，用于填充 madlib 中的空项：
 
+   点击此处查看代码图像
 
+   ```javascript
+   var place = "crater";
+   var animal = "elephant";
+   var action = "smell";
+   ```
 
-```javascript
-var line2 = "there lived an [animal] that liked to ";
-var line3 = "[action] people.";
-```
+7. 添加以下行以将多行文本合并为单个字符串：
 
-### 6. 添加以下三个字符串定义，用于填充 madlib 中的空项：
+   点击此处查看代码图像
 
-点击此处查看代码图像
+   ```javascript
+   var madlib = line1.concat(line2, line3);
+   ```
 
-```javascript
-var place = "crater";
-var animal = "elephant";
-var action = "smell";
-```
+8. 通过将变量替换为相应的变量的值来填充 madlib 字符串中的空位。以下行使用 `replace()` 方法将变量的值替换为字符串中正确的位置：
 
-### 7. 添加以下行以将多行文本合并为单个字符串：
+   点击此处查看代码图像
 
-点击此处查看代码图像
+   ```javascript
+   madlib = madlib.replace("[place]", place);
+   madlib = madlib.replace("[animal]", animal);
+   madlib = madlib.replace("[action]", action);
+   ```
 
-```javascript
-var madlib = line1.concat(line2, line3);
-```
+9. 添加以下命令将完全处理过的 madlib 字符串写入浏览器：
 
-### 8. 通过将变量替换为相应的变量的值来填充 madlib 字符串中的空位。以下行使用 `replace()` 方法将变量的值替换为字符串中正确的位置：
+   点击此处查看代码图像
 
-点击此处查看代码图像
+   ```javascript
+   document.write(madlib);
+   ```
 
-```javascript
-madlib = madlib.replace("[place]", place);
-madlib = madlib.replace("[animal]", animal);
-madlib = madlib.replace("[action]", action);
-```
+10. 在浏览器中打开页面，字符串的格式应如图 6.1 所示。
 
-### 9. 添加以下命令将完全处理过的 madlib 字符串写入浏览器：
-
-点击此处查看代码图像
-
-```javascript
-document.write(madlib);
-```
-
-### 10. 在浏览器中打开页面，字符串的格式应如图 6.1 所示。
-
-**列表 6.1 string_manipulation.html 示例：将多行文本合并为单个字符串并使用 `replace()` 用变量值填充字符串的特定格式部分**
+**列表 6.1 `string_manipulation.html` 示例：将多行文本合并为单个字符串并使用 `replace()` 用变量值填充字符串的特定格式部分**
 
 点击此处查看代码图像
 
@@ -4301,7 +4293,7 @@ document.write(madlib);
 </html>
 ```
 
-## 数组 (Array)
+## 数组（`Array`）
 
 `Array` 对象提供了一种和处理一组其他对象的方法。数组可以存储数字、字符串或其他 JavaScript 对象。你可以使用几种方法来创建 JavaScript 数组；例如，以下语句创建了三个相同的数组版本：
 
@@ -4395,23 +4387,27 @@ function message(day){
 在这个练习中，你将学习使用附加到 `Array` 对象上的各种方法创建和操作数组。使用以下步骤构建列表 6.2：
 
 1. 在 `lesson06` 文件夹创建一个名为 `array_manipulation.html` 的源文件。
-2. 添加常规的基础元素（`html`, `head`, `body`）。
+2. 添加常规的基础元素（`html`、`head`、`body`）。
 3. 在 `<head>` 元素内部添加一个带有 `writeIt()` 函数的 `<script>` 元素，并将其链接到 `<body>` 元素的 `onload` 事件，如下：
 
-点击此处查看代码图像
+   点击此处查看代码图像
 
-```html
-<script>
-    function writeIt(){
-        ...
-    }
-</script>
-</head>
-<body onload="writeIt()">
-```
+   ```html
+   <script>
+       function writeIt(){
+           ...
+       }
+   </script>
+   </head>
+   <body onload="writeIt()">
+   ```
+
 4. 添加以下 JavaScript 函数，它接收一个消息和一个数组参数作为 `msg` 和 `arr`。数组使用 `join()` 方法转换为字符串。该方法还将消息和连接后的数组字符串写入浏览器，并带有一些 HTML 格式：
 
-点击此处查看代码图像
+   点击此处查看代码图像
+
+
+
 
 ```javascript
 function writeArray(msg, arr){
@@ -4420,11 +4416,7 @@ function writeArray(msg, arr){
 }
 ```
 
-
-
-
-
-## 5. 在 `writeIt()` 函数中添加以下代码行，以创建两个数组并调用 `writeArray()` 函数将它们写入浏览器。`weekDays` 数组是通过声明创建的；`weekEnd` 数组是通过创建一个空数组并向推入项目生成的：
+## 5. 在`writeIt()`函数中添加以下代码行，以创建两个数组并调用`writeArray()`函数将它们写入浏览器。`weekDays`数组是通过声明创建的；`weekEnd`数组是通过创建一个空数组并向推入项目生成的：
 
 点击此处查看代码图片
 
@@ -4437,7 +4429,7 @@ function writeArray(msg, arr){
 17      writeArray("Weekend", weekEnd);
 ```
 
-## 6. 使用以下几行通过结合 `weekEnd` 创建一个包含完整周的数组的新数组。在第 18 行中，`concat([])` 是创建 `weekDays` 副本的方法。我们希望周日在第一个，周六在最后，因此我们使用 `unshift()` 将周日推到数组前端，并使用 `push()` 将周六附加到末：
+## 6. 使用以下几行通过结合`weekEnd`创建一个包含完整周的数组的新数组。在第 18 行中，`concat([])`是创建`weekDays`副本的方法。我们希望周日在第一个，周六在最后，因此我们使用`unshift()`将周日推到数组前端，并使用`push()`将周六附加到末：
 
 点击此处查看代码图片
 
@@ -4448,7 +4440,7 @@ function writeArray(msg, arr){
 21      writeArray("Week", week);
 ```
 
-## 7. 使用 `slice()` 函数创建一个 `midWeek` 数组，如下：
+## 7. 使用`slice()`函数创建一个`midWeek`数组，如下：
 
 点击此处查看代码图片
 
@@ -4457,7 +4449,7 @@ function writeArray(msg, arr){
 23      writeArray("Mid Week", midWeek);
 ```
 
-## 8. 使用以下代码创建完整周的排序版本，然后遍历 `sortedWeek` 数组中的每个项目并将其写入浏览器：
+## 8. 使用以下代码创建完整周的排序版本，然后遍历`sortedWeek`数组中的每个项目并将其写入浏览器：
 
 点击此处查看代码图片
 
@@ -4475,7 +4467,7 @@ function writeArray(msg, arr){
 
 **图 6.2** 列表 6.2 的输出。
 
-**列表 6.2 array_manipulation.html 在 JavaScript 中创建和操作 `Array` 对象的示例**
+**列表 6.2 `array_manipulation.html` 在 JavaScript 中创建和操作`Array`对象的示例**
 
 点击此处查看代码图片
 
@@ -4522,7 +4514,7 @@ function writeArray(msg, arr){
 
 ### 日期
 
-`Date` 对象提供了对当前时间的访问。这可以非常有用，例如在页面上显示时间、与服务器比较时间、对某些事件计时等。要获取系统当前时间，请使用以下语法：
+`Date`对象提供了对当前时间的访问。这可以非常有用，例如在页面上显示时间、与服务器比较时间、对某些事件计时等。要获取系统当前时间，请使用以下语法：
 
 ```javascript
 var cDate = new Date();
@@ -4532,26 +4524,32 @@ document.write(cDate);
 日期的字符串版本将类似于以下：
 
 点击此处查看代码图片
-Mon 10 2012 17:30 GMT-0700 (Mountain Standard Time)
 
-你可以使用以下语法通过字符串或一组值来创建 `Date` 对象：
+```text
+Mon 10 2012 17:30 GMT-0700 (Mountain Standard Time)
+```
+
+你可以使用以下语法通过字符串或一组值来创建`Date`对象：
 
 点击此处查看代码图片
+
 ```javascript
 Date(year, month, day, minutes, seconds, milliseconds)
 ```
 
-例如，以下代码将创建相同的 `Date` 对象：
+例如，以下代码将创建相同的`Date`对象：
 
 点击此处查看代码图片
+
 ```javascript
 var d1 = Date("2012, 12, 12, 12, 12, 00");
 var d2 = Date("December 12, 2012 12:12");
 ```
 
-JavaScript 允许你使用普通的逻辑比较（`<`, `>`, `==` 等）来比较日期。例如，你可以使用以下代码将浏览器的当前时间与从服务器发送的时间戳“December 12, 2012 12:12”进行比较：
+JavaScript 允许你使用普通的逻辑比较（`<`、`>`、`==`等）来比较日期。例如，你可以使用以下代码将浏览器的当前时间与从服务器发送的时间戳“December 12, 2012 12:12”进行比较：
 
 点击此处查看代码图片
+
 ```javascript
 var currentTime = new Date();
 var serverTime = new Date("December 12, 2012 12:12");
@@ -4562,7 +4560,7 @@ if (currentTime > serverTime){
 
 ### 数学
 
-`Math` 对象提供了对数学函数的访问。这在很多方面都很有用，例如在页面上显示计算结果、生成随机数、计算平方根等。
+`Math`对象提供了对数学函数的访问。这在很多方面都很有用，例如在页面上显示计算结果、生成随机数、计算平方根等。
 
 ```javascript
 var x = Math.sqrt(16); // x 为 4
@@ -4580,9 +4578,6 @@ console.log(pattern.test(str)); // 输出 true
 ```
 
 正则表达式可以用来执行复杂的搜索、替换和提取任务。
-
-
-
 
 前两个选项对于你以后不需要重用的简单对象非常有效。更好的方法是将对象封装在它自己的函数块中。这样做的优点可以让你将所有与对象相关的代码都保持在对象内部。例如：
 
@@ -4629,9 +4624,9 @@ function makeFullName(){
 document.write(user.getFullName());
 ```
 
-函数 `makeFullName()` 将对象的 `first` 和 `last` 属性合并并返回字符串。注意，该函数使用 `this` 关键字访问属性。`this` 指对象的当前实例。还要注意，将 `makeFullName()` 赋值给 `getFullName` 时省略了括号()`；这会将 `user.getFullName` 设置为函数本身，而不是它返回的值。
+函数`makeFullName()`将对象的`first`和`last`属性合并并返回字符串。注意，该函数使用`this`关键字访问属性。`this`指对象的当前实例。还要注意，将`makeFullName()`赋值给`getFullName`时省略了括号`()`；这会将`user.getFullName`设置为函数本身，而不是它返回的值。
 
-如果你使用更好的封装方法创建了对象，可以使用以下语法在对象内部定义函数。注意 `getFullName` 被设置为一个新定义的函数，该函数返回值的方式与静态函数 `makeFullName()` 相同：
+如果你使用更好的封装方法创建了对象，可以使用以下语法在对象内部定义函数。注意`getFullName`被设置为一个新定义的函数，该函数返回值的方式与静态函数`makeFullName()`相同：
 
 点击此处查看代码图像
 
@@ -4647,9 +4642,9 @@ function User(first, last){
 
 ### 使用原型对象模式
 
-创建对象的更高级的方法是使用原型模式。原型模式通过在对象的 `prototype` 属性中定义函数而不是在对象本身中定义函数来实现。原型之所以更好的原因是，在原型中定义的函数在 JavaScript 加载时只创建一次，而不是每次创建新对象时都创建。
+创建对象的更高级的方法是使用原型模式。原型模式通过在对象的`prototype`属性中定义函数而不是在对象本身中定义函数来实现。原型之所以更好的原因是，在原型中定义的函数在 JavaScript 加载时只创建一次，而不是每次创建新对象时都创建。
 
-下面的示例显示了实现原型模式所需的代码。注意你定义了对象 `UserP`，然后将 `UserP.prototype` 设置为包含 `getFullName()` 函数。你可以根据需要在此 `prototype` 中包含任意数量的函数。每创建一个新对象，这些函数都可用：
+下面的示例显示了实现原型模式所需的代码。注意你定义了对象`UserP`，然后将`UserP.prototype`设置为包含`getFullName()`函数。你可以根据需要在此`prototype`中包含任意数量的函数。每创建一个新对象，这些函数都可用：
 
 点击此处查看代码图像
 
@@ -4666,7 +4661,7 @@ UserP.prototype = {
 };
 ```
 
-要调用 `getFullName()` 函数，你将使用类似下面的代码：
+要调用`getFullName()`函数，你将使用类似下面的代码：
 
 点击此处查看代码图像
 
@@ -4679,11 +4674,13 @@ var myFullName = me.getFullName();
 
 ### 动手尝试：创建和使用自定义对象
 
-在本节中，你将使用原型模式创建并使用自定义 JavaScript 对象的数组。使用以下步骤构建 列表 6.3 中的文件：
+在本节中，你将使用原型模式创建并使用自定义 JavaScript 对象的数组。使用以下步骤构建列表 6.3 中的文件：
 
-1. **在 lesson06 文件夹中创建一个名为** `custom_objects.html` 的源文件。
+1. **在 `lesson06` 文件夹中创建一个名为**`custom_objects.html`的源文件。
+
 2. **添加常规的基础元素**（`html`、`head`、`body`）。
-3. **在 `<head>` 元素内部**，添加一个带有 `writeIt()` 函数函数的 `<script>` 元素，并将其链接到 `<body>` 元素的 `onload` 事件，如下所示：
+
+3. **在 `<head>` 元素内部**，添加一个带有`writeIt()`函数的`<script>`元素，并将其链接到`<body>`元素的`onload`事件，如下所示：
 
 点击此处查看代码图像
 
@@ -4697,7 +4694,7 @@ var myFullName = me.getFullName();
 43   <body onload="writeIt()">
 ```
 
-4. **在 `writeIt()` 下方添加函数**。此函数将用于创建自定义的 `Character` 对象。该函数接受 `first` 和 `last` 姓名、角色所在的 `land` 以及 `race`：
+4. **在 `writeIt()` 下方添加函数**。此函数将用于创建自定义的`Character`对象。该函数接受`first`和`last`姓名、角色所在的`land`以及`race`：
 
 点击此处查看代码图像
 
@@ -4710,7 +4707,7 @@ var myFullName = me.getFullName();
 32   }
 ```
 
-5. **在第 33 行添加原型定义**，它包含两个函数 `getFullName()` 和 `getDetails()`：
+5. **在第 33 行添加原型定义**，它包含两个函数`getFullName()`和`getDetails()`：
 
 点击此处查看代码图像
 
@@ -4725,7 +4722,7 @@ var myFullName = me.getFullName();
 40   };
 ```
 
-6. **在 `writeIt()` 函数内部**，添加以下代码来创建并填充数组。对象使用 `new` 关键字创建：
+6. **在 `writeIt()` 函数内部**，添加以下代码来创建并填充数组。对象使用`new`关键字创建：
 
 点击此处查看代码图像
 
@@ -4736,7 +4733,7 @@ var myFullName = me.getFullName();
 44   characters.push(new Character("Gravemind", "", "Halo", "Flood"));
 ```
 
-7. **添加以下代码**来创建 `sgJohnson` 对象。注意我们只传递了 `first` 姓名。第 47 行和 48 行分配了 `land` 和 `race` 值。这提供了对对象的赋值示例：
+7. **添加以下代码**来创建`sgJohnson`对象。注意我们只传递了`first`姓名。第 47 行和 48 行分配了`land`和`race`值。这提供了对对象的赋值示例：
 
 ```javascript
 47   sgJohnson = new Character("Sgt", "");
@@ -4745,7 +4742,7 @@ var myFullName = me.getFullName();
 50   characters.push(sgJohnson);
 ```
 
-8. **添加 `for` 循环**，遍历数组中的每个元素并将字符信息写入浏览器。第 51 行为 `Character` 对象分配了一个新属性 `number`。注意在赋值后，我们可以将其作为字符串的一部分写入：
+8. **添加 `for` 循环**，遍历数组中的每个元素并将字符信息写入浏览器。第 51 行为`Character`对象分配了一个新属性`number`。注意在赋值后，我们可以将其作为字符串的一部分写入：
 
 ```javascript
 52   for (var i=0; i<characters.length; i++){
@@ -4757,26 +4754,33 @@ var myFullName = me.getFullName();
 58   }
 ```
 
-9. **在浏览器中打开页面**，你应该看到你创建的对象输出，如 图 6.3 所示。
+9. **在浏览器中打开页面**，你应该看到你创建的对象输出，如图 6.3 所示。
 
 ![Image](img/image0863.jpeg)
 
 **图 6.3** 列表 6.3 的输出。
 
-**列表 6.3 custom_objects.html JavaScript 中创建和操作自定义对象的示例**
+**列表 6.3 `custom_objects.html` JavaScript 中创建和操作自定义对象的示例**
 
 点击此处查看代码图像
 
-* * *
+***
 
+```html
 01 <!DOCTYPE html>
-02 <html>
-03   <head>
-04     <title>Custom Objects</title>
-05     <meta charset="utf-8" />
-06 <script>
-07   function writeIt(){
 
+02 <html>
+
+03   <head>
+
+04     <title>Custom Objects</title>
+
+05     <meta charset="utf-8" />
+
+06 <script>
+
+07   function writeIt(){
+```
 
 
 
@@ -4818,7 +4822,7 @@ Character.prototype = {
 </html
 ```
 
-### 总结
+## 总结
 
 在本节中，我们讨论了 JavaScript 对象如何提供创建更简洁、更高效代码的方法。你学习了对象如何支持在单个变量名上附加属性和方法。
 
@@ -4826,39 +4830,39 @@ Character.prototype = {
 
 最后，你获得了一个机会创建并操作自己的带有属性和方法的自定义 JavaScript 对象。创建自定义对象将帮助你更有效地组织脚本。
 
-### 问答 (Q&A)
+## 问答（Q&A）
 
-**问. 内置对象、自定义对象、DOM 对象和 jQuery 对象之间有什么区别？**
+**问：** 内置对象、自定义对象、DOM 对象和 jQuery 对象之间有什么区别？
 
-**答.** 区别仅在于它们是如何被定义的。内置对象是自动定义的，并且有时作为语言的一部分直接可用；就像数组或字符串一样，它们在赋值语句执行期间会被自动实例化。DOM 对象也是内置在 JavaScript 语言中的。你可以在 JavaScript 中创建它们的实例，但它们也是根据 HTML 文件中的标签创建的。jQuery 对象是在 jQuery 库内部定义并创建的。在底层，它们都只是 JavaScript 对象。每个对象都拥有可以简化 JavaScript 任务的属性和方法。
+**答：** 区别仅在于它们是如何被定义的。内置对象是自动定义的，并且有时作为语言的一部分直接可用；就像数组或字符串一样，它们在赋值语句执行期间会被自动实例化。DOM 对象也是内置在 JavaScript 语言中的。你可以在 JavaScript 中创建它们的实例，但它们也是根据 HTML 文件中的标签创建的。jQuery 对象是在 jQuery 库内部定义并创建的。在底层，它们都只是 JavaScript 对象。每个对象都拥有可以简化 JavaScript 任务的属性和方法。
 
-**问. `new` 关键字会创建一个对象的新实例，但我如何移除对象实例以释放内存等资源呢？**
+**问：** `new` 关键字会创建一个对象的新实例，但我如何移除对象实例以释放内存等资源呢？
 
-**答.** 当变量超出作用范围时，JavaScript 会自动为你清理内存。要清理 JavaScript 对象的实例，请将引用设置为 `null`。要清理 JavaScript 对象的实例，请将引用设置为 `null`。（等一下，原文此处有重复，我将保留提供的核心逻辑）。
+**答：** 当变量超出作用范围时，JavaScript 会自动为你清理内存。要清理 JavaScript 对象的实例，请将引用设置为 `null`。要清理 JavaScript 对象的实例，请将引用设置为 `null`。（等一下，原文此处有重复，我将保留提供的核心逻辑）。
 
 最后，你获得了一个机会创建并操作自己的带有属性和方法的自定义 JavaScript 对象。创建自定义对象将帮助你更有效地组织脚本。
 
-### 工作坊 (Workshop)
+## 工作坊（Workshop）
 
 该工作坊由一组旨在巩固你理解的问答组成。在查看答案之前，尝试回答这些问题。
 
-### 测试 (Quiz)
+## 测试（Quiz）
 
-**问. 内置对象、自定义对象、DOM 对象和 jQuery 对象之间有什么区别？**
+**问：** 内置对象、自定义对象、DOM 对象和 jQuery 对象之间有什么区别？
 
-**答.** 区别仅在于它们是如何被定义的。内置对象是自动定义的，并且有时作为语言的一部分直接可用；就像数组或字符串一样，它们在赋值语句执行期间会被自动实例化。DOM 对象也是内置在 JavaScript 语言中的。你可以在 JavaScript 中创建它们的实例，但它们也是根据 HTML 文件中的标签创建的。jQuery 对象是在 jQuery 库内部定义并创建的。在底层，它们都只是 JavaScript 对象。每个对象都拥有可以简化 JavaScript 任务的属性和方法。
+**答：** 区别仅在于它们是如何被定义的。内置对象是自动定义的，并且有时作为语言的一部分直接可用；就像数组或字符串一样，它们在赋值语句执行期间会被自动实例化。DOM 对象也是内置在 JavaScript 语言中的。你可以在 JavaScript 中创建它们的实例，但它们也是根据 HTML 文件中的标签创建的。jQuery 对象是在 jQuery 库内部定义并创建的。在底层，它们都只是 JavaScript 对象。每个对象都拥有可以简化 JavaScript 任务的属性和方法。
 
-**问. `new` 关键字会创建一个对象的新实例，但我如何移除对象实例以释放内存等资源呢？**
+**问：** `new` 关键字会创建一个对象的新实例，但我如何移除对象实例以释放内存等资源呢？
 
-**答.** 当变量超出作用范围时，JavaScript 会自动为你清理内存。要清理 JavaScript 对象的实例，请将引用设置为 `null`。
+**答：** 当变量超出作用范围时，JavaScript 会自动为你清理内存。要清理 JavaScript 对象的实例，请将引用设置为 `null`。
 
-### 练习 (Exercises)
+## 练习（Exercises）
 
-**1.** 扩展 `Listing 6.1` 中的代码以添加更多字符。
-**2.** 扩展 `Listing 6.2` 中的代码以添加更多属性。
-**3.** 扩展 `Listing 6.3` 中的代码以添加更多方法。
+1. 扩展 `Listing 6.1` 中的代码以添加更多字符。
+2. 扩展 `Listing 6.2` 中的代码以添加更多属性。
+3. 扩展 `Listing 6.3` 中的代码以添加更多方法。
 
-## 第二部分：在网页中实现 jQuery 和 JavaScript
+# 第二部分：在网页中实现 jQuery 和 JavaScript
 
 ## 第 7 节 使用 JavaScript 和 jQuery 访问 DOM 元素
 
@@ -4884,8 +4888,6 @@ jQuery 对象基本上是围绕一组 DOM 元素的封装对象。jQuery 对象�
 
 最需要记住的一点是，jQuery 对象可能代表单个 DOM 对象，也可能代表多个 DOM 对象。因此，如果你对 jQuery 对象执行某个操作，该操作可能会应用于多个 DOM 对象上。
 
-
-
 `jQuery` 对象的最大优势在于在网页中搜索 HTML 元素非常简单。另一个优势是 `jQuery` 库专门封装了方法和属性，使得 JavaScript 和 `jQuery` 开发者能够更方便地操作和处理不同组的对象。在 `jQuery` 对象上调用方法可以同时应用于一个或多个 DOM 元素，而无需遍历列表。
 
 表 7.2 提供了你应该注意的一些 `jQuery` 对象的重要方法列表。该列表并不是详尽的；其目的是让你对可以从 `jQuery` 对象访问的内容有一个大致的了解。
@@ -4900,7 +4902,8 @@ jQuery 对象基本上是围绕一组 DOM 元素的封装对象。jQuery 对象�
 
 要判断一个对象是否为 `jQuery` 对象，请使用以下 `if` 语法检查该对象是否具有 `jquery` 属性：
 
-```javascriptif( obj.jquery ) {
+```javascript
+if( obj.jquery ) {
   ...
 }
 ```
@@ -4921,13 +4924,13 @@ if( obj.nodeType ) {
 
 点击此处查看代码图像
 
-```
+```javascript
 var domObj = jqueryObj.get();
 ```
 
 相反，`$()` 或 `jquery()` 方法可以从 JavaScript 创建新的 `jQuery` 对象。使用以下代码执行 `$()` 函数，将 DOM 对象封装为 `jQuery` 对象：
 
-```
+```javascript
 var jqueryObj = $(domObj);
 ```
 
@@ -4943,7 +4946,7 @@ var jqueryObj = $(domObj);
 
 点击此处查看代码图像
 
-```
+```javascript
 var containerObj = document.getElementById("container");
 ```
 
@@ -4955,7 +4958,7 @@ var containerObj = document.getElementById("container");
 
 点击此处查看代码图像
 
-```
+```javascript
 var objs = document.getElementsByClassName("myClass");
 
 for (var i=0; i<objs.length; i++){
@@ -4972,7 +4975,7 @@ for (var i=0; i<objs.length; i++){
 
 点击此处查看代码图像
 
-```
+```javascript
 var objs = document.getElementsByTagName("div");
 
 for (var i=0; i<objs.length; i++){
@@ -4981,26 +4984,23 @@ for (var i=0; i<objs.length; i++){
 }
 ```
 
-***
+---
 
 ### 动手试一下：使用 JavaScript 访问 DOM 对象
 
-在这个示例中，你使用 JavaScript 查找不同的元素并读取值以及向它们写入值。这是一个基础示例，旨在让你有机会使用 JavaScript 访问 DOM 对象。示例中使用的完整脚本显示在 列表 7.1、7.2 和 7.3 中：
+在这个示例中，你使用 JavaScript 查找不同的元素并读取值以及向它们写入值。这是一个基础示例，旨在让你有机会使用 JavaScript 访问 DOM 对象。示例中使用的完整脚本显示在列表 7.1、7.2 和 7.3 中：
 
-**1.** 在 Eclipse 中，创建一个名为 `lesson07` 的源文件夹。在 `lesson07` 文件夹内创建 `js` 和 `css` 文件夹。
-
-**2.** 在 `lesson07` 文件夹中创建一个名为 `dom_objects.html` 的源文件。
-
-**3.** 添加常规的基础元素（`html`、`head`、`body`）。
-
-**4.** 在 `<head>` 元素内部，添加以下 `<script>` 和 `<link>` 元素，如列表 7.1
+1. 在 Eclipse 中，创建一个名为 `lesson07` 的源文件夹。在 `lesson07` 文件夹内创建 `js` 和 `css` 文件夹。
+2. 在 `lesson07` 文件夹中创建一个名为 `dom_objects.html` 的源文件。
+3. 添加常规的基础元素（`html`、`head`、`body`）。
+4. 在 `<head>` 元素内部，添加以下 `<script>` 和 `<link>` 元素，如列表 7.1：
 
 ```html
 <script type="text/javascript" src="js/dom_objects.js"></script>
 <link rel="stylesheet" type="css" href="css/dom_objects.css">
 ```
 
-**5.** 添加以下 `<input>` 元素来定义文本框和按钮。注意在按钮上，你需要添加 `onclick` 处理程序，这允许你运行动态脚本。文本输入具有 `id="text"`：
+5. 添加以下 `<input>` 元素来定义文本框和按钮。注意在按钮上，你需要添加 `onclick` 处理程序，这允许你运行动态脚本。文本输入具有 `id="text"`：
 
 点击此处查看代码图像
 
@@ -5008,7 +5008,7 @@ for (var i=0; i<objs.length; i++){
 <input id="text" />
 ```
 
-**6.** 添加以下 `<span>` 和 `<p>` 元素。现在它们是空的；动态代码将更新它们：
+6. 添加以下 `<span>` 和 `<p>` 元素。现在它们是空的；动态代码将更新它们：
 
 点击此处查看代码图像
 
@@ -5017,27 +5017,19 @@ for (var i=0; i<objs.length; i++){
 <p></p>
 ```
 
-**7.** 创建名为 `lesson07/js/dom_objects.js` 的文件。
-
-**8.** 创建一个函数 `textChange()`，如列表 7.2 所示。该将在点击按钮时被调用。
-
-**9.** 在 `textChange()` 函数中添加以下变量定义，通过 `id="text"` 查找文本输入：
+7. 创建名为 `lesson07/js/dom_objects.js` 的文件。
+8. 创建一个函数 `textChange()`，如列表 7.2 所示。该函数将在点击按钮时被调用。
+9. 在 `textChange()` 函数中添加以下变量定义，通过 `id="text"` 查找文本输入：
 
 ```javascript
 var inElement = document.getElementById("text");
 ```
 
-**10.** 添加以下变量定义以通过标签名获取所有的 `<p>` 元素：
-
-**11.** 添加 `for` 循环，遍历文档中找到的元素。对于每个元素，你将 `innerHTML` 文本设置为 `inElement.value`，即在文本框中输入的内容。
-
-**12.** 创建名为 `lesson07/css/dom_objects.css` 的文件，并添加如列表 7.3
+10. 添加以下变量定义以通过标签名获取所有的 `<p>` 元素。
+11. 添加 `for` 循环，遍历文档中找到的元素。对于每个元素，你将 `innerHTML` 文本设置为 `inElement.value`，即在文本框中输入的内容。
+12. 创建名为 `lesson07/css/dom_objects.css` 的文件，并添加如列表 7.3。
 
 **图 7.1** 一个允许用户输入文本并更新组件的简单 JavaScript 网页。
-
-
-
-
 
 ```html
 <link rel="stylesheet" type="text/css" href="css/dom_objects.css">
@@ -5053,11 +5045,11 @@ var inElement = document.getElementById("text");
 </html>
 ```
 
-***
+---
 
-## 列表 7.2 dom_objects.js JavaScript 文件包含一个显示通过 id、标签和类属性访问变量的函数
+## 列表 7.2 `dom_objects.js` JavaScript 文件包含一个显示通过 id、标签和类属性访问变量的函数
 
-点击此处查看代码图片
+点击此处查看代码图像
 
 ```javascript
 function textChange(){
@@ -5073,9 +5065,9 @@ function textChange(){
 }
 ```
 
-***
+---
 
-## 列表 7.3 dom_objects.css 样式化 <p> 元素的 CSS
+## 列表 7.3 `dom_objects.css` 样式化 `<p>` 元素的 CSS
 
 ```css
 p{
@@ -5086,7 +5078,7 @@ p{
 }
 ```
 
-***
+---
 
 ### 使用 jQuery 选择器
 
@@ -5098,27 +5090,29 @@ jQuery 选择器语法非常直观。在加载 jQuery 库后，使用 `$(selecto
 
 `$("#myElement")`
 
-***
+---
 
 ### 注意事项
 
-jQuery 选择器语法中使用了几个元字符。如果你想将任何元字符（如 ``!"#$%&'()*+,./:;<=>?@[\]^`{|}~ )``）作为类/id/名称的一部分，你需要使用双反斜杠 `\\` 对该字符进行转义。例如，如果你有一个具有 `id="my.element"` 的元素，你将使用选择器 `$("#my\\.element")`。
+jQuery 选择器语法中使用了几个元字符。如果你想将任何元字符（如 ``!"#$%&'()*+,./:;<=>?@[\]^`{|}~ )``）作为类、id 或名称的一部分，你需要使用双反斜杠 `\\` 对该字符进行转义。例如，如果你有一个具有 `id="my.element"` 的元素，你将使用选择器 `$("#my\\.element")`。
 
-***
+---
 
 与 CSS 选择器一样，向你介绍 jQuery 选择器的最佳方法是展示一些示例。以下章节将带你通过不同类型的 jQuery 选择器的示例。这些章节仅触及皮毛。你有空时，可以去以下位置查看选择器文档：
 
+
+
 [`http://api.jquery.com/category/selectors/`](http://api.jquery.com/category/selectors/)
 
-#### 应用基础选择器
+### 应用基础选择器
 
-最常用的选择器是基础选择器。基础选择器侧重于 HTML 元素的 id 属性、类属性和标签名。表 7.3 列出了一些示例，向你展示如何定义一些基础选择器。
+最常用的选择器是基础选择器。基础选择器侧重于 HTML 元素的 `id` 属性、类属性和标签名。表 7.3 列出了一些示例，向你展示如何定义一些基础选择器。
 
 ![图像](img/image00868.jpeg)
 
 **表格 7.3 使用基础 jQuery 选择器的示例**
 
-#### 应用属性选择器
+### 应用属性选择器
 
 使用 jQuery 选择器的另一种方法是通过它们的属性值选择 HTML 元素。这可以是默认属性，也可以是你添加到 HTML 元素中的属性。属性值在选择器语法中用 `[]` 括号表示。表 7.4 显示了属性选择器应用的一些方式。
 
@@ -5126,7 +5120,7 @@ jQuery 选择器语法中使用了几个元字符。如果你想将任何元字�
 
 **表格 7.4 使用属性 jQuery 选择器的示例**
 
-#### 应用内容选择器
+### 应用内容选择器
 
 另一组有用的 jQuery 选择器是内容过滤选择器。这些选择器允许你根据 HTML 元素内部的内容选择 HTML 元素。表 7.5 显示了内容选择器的示例。
 
@@ -5134,7 +5128,7 @@ jQuery 选择器语法中使用了几个元字符。如果你想将任何元字�
 
 **表格 7.5 使用内容选择器的示例**
 
-#### 应用层级选择器
+### 应用层级选择器
 
 一组重要的 jQuery 选择器是层级选择器。这些选择器允许你根据 HTML 元素的父元素、子元素或 DOM 中的元素元素选择 HTML 元素。表 7.6 显示了层级示例。
 
@@ -5142,15 +5136,11 @@ jQuery 选择器语法中使用了几个元字符。如果你想将任何元字�
 
 **表格 7.6 层级选择器的示例**
 
-***
+> **注意**
+>
+> 在设计选择器时，尽可能具体总是是最好的。例如，如果你想选择 `div` 下所有 `class="menu"` 的 `span` 元素，那么 `$("div .menu")` 会比 `$(".menu")` 高效得多。
 
-### 注意
-
-在设计选择器时，尽可能具体总是是最好的。例如，如果你想选择 `div` 下所有 `class="menu"` 的 `span` 元素，那么 `$("div .menu")` 会比 `$(".menu")` 高效得多。
-
-***
-
-#### 应用表单选择器
+### 应用表单选择器
 
 另一组有用的选择器是表单。表 7.7 显示了表单选择器的示例。
 
@@ -5158,7 +5148,7 @@ jQuery 选择器语法中使用了几个元字符。如果你想将任何元字�
 
 **表格 7.7 使用表单选择器的示例**
 
-#### 应用可见性选择器
+### 应用可见性选择器
 
 如果你使用可见性来控制网页的流程和交互，使用可见性选择器可以简单地选择隐藏或显示的元素。表 7.8 显示了可见性的示例。
 
@@ -5166,7 +5156,7 @@ jQuery 选择器语法中使用了几个元字符。如果你想将任何元字�
 
 **表格 7.8 使用可见性选择器的示例**
 
-#### 应用过滤选择器
+### 应用过滤选择器
 
 你通常需要将选择器缩小到更具体的子集。实现此点的方法是使用过滤选择器。过滤选择器在选择语句末尾添加过滤器以限制选择器的结果。表 7.9 显示了向选择器添加过滤器。
 
@@ -5174,11 +5164,9 @@ jQuery 选择器语法中使用了几个元字符。如果你想将任何元字�
 
 **表格 7.9 使用过滤选择器的示例**
 
-***
-
 ### 动手尝试：使用 jQuery 访问 DOM 对象
 
-在这个示例中，你使用 jQuery 找到元素并读取值。这是另一个有助于巩选择器如何访问 DOM 对象的概念示例。在本节的后面你将看到更多高级的示例。示例中使用的完整脚本显示在列表 7.4、7.5 和 7.6 中：
+在这个示例中，你使用 jQuery 找到元素并读取值。这是另一个有助于巩固选择器如何访问 DOM 对象的概念示例。在本节的后面你将看到更多高级的示例。示例中使用的完整脚本显示在列表 7.4、7.5 和 7.6 中：
 
 1. 在 `07` 文件夹中创建源文件 `jquery_selectors.html`、`js/jquery_selectors.js` 和 `css/jquery_selectors.css`。
 2. 打开 `jquery_selectors.html` 并添加常规元素（`html`、`head`、`body`）。
@@ -5198,17 +5186,10 @@ jQuery 选择器语法中使用了几个元字符。如果你想将任何元字�
 <span onclick="setFirst4()">First 4</span>
 ```
 
-
-
-
 5. 将列表 7.4 中所示的 `<p>` 和 `<ul>` 元素添加到页面中，以添加古代神列表。
-
 6. 打开 `jquery_selectors.css` 文件，并添加列表 7.6 中的内容，这些内容将 `<span>` 元素样式为按钮，并将 `<p>` 元素样式为列表头。
-
 7. 打开 `jquery_selectors.js` 文件，以便为 `<span>` 元素添加事件处理程序。
-
 8. 添加一个名为 `setEven()` 的 JavaScript 函数作为事件处理程序。
-
 9. 添加以下行，该行使用 jQuery 选择所有 `<li>` 和 `<span>` 元素，并清空 CSS 的 `font-weight` 值：
 
 点击此处查看代码图片
@@ -5226,7 +5207,7 @@ var $evenItems = $("li:even");
 $evenItems.css("font-weight","bold");
 ```
 
-11. 添加以下行，该行使用 jQuery 选择内容包含 "Even" 的 `<span>` 元素，并将 CSS `font-weight` 属性设置为 `bold`：
+11. 添加以下行，该行使用 jQuery 选择内容包含 `"Even"` 的 `<span>` 元素，并将 CSS `font-weight` 属性设置为 `bold`：
 
 点击此处查看代码图片
 
@@ -5243,14 +5224,13 @@ $(".label").html("Even");
 ```
 
 13. 添加列表 7.5 中所示的两个事件处理程序 `setOdd()` 和 `setFirst4()`，它们基本上在做相同的事情，但针对的是不同的列表项。
-
 14. 保存这三个文件并在网页浏览器中打开 `jquery_selectors.html` 文件，以检查图 7.2 所示的网页。尝试点击不同的按钮，并观察按钮、标题和列表项的变化。
 
 ![Image](img/image00877.jpeg)
 
 **图 7.2** 一个简单的 JavaScript Web 页面，使用 jQuery 根据用户交互动态更改页面元素。
 
-**列表 7.4 jquery_selectors.html 加载 jQuery 和 JavaScript 并附加事件处理程序元素以提供用户交互的 HTML 文件**
+**列表 7.4 `jquery_selectors.html` 加载 jQuery 和 JavaScript 并附加事件处理程序元素以提供用户交互的 HTML 文件**
 
 点击此处查看代码图片
 
@@ -5283,7 +5263,7 @@ $(".label").html("Even");
 26 </html>
 ```
 
-**列表 7.5 jquery_selectors.js 包含以各种方式使用 jQuery 选择和修改的事件处理函数的 JavaScript 文件**
+**列表 7.5 `jquery_selectors.js` 包含以各种方式使用 jQuery 选择和修改的事件处理函数的 JavaScript 文件**
 
 点击此处查看代码图片
 
@@ -5311,7 +5291,7 @@ $(".label").html("Even");
 21 }
 ```
 
-**列表 7.6 jquery_selectors.css 将 <span> 元素样式为按钮并将 <p> 元素样式为列表头的 CSS**
+**列表 7.6 `jquery_selectors.css` 将 `<span>` 元素样式为按钮并将 `<p>` 元素样式为列表头的 CSS**
 
 ```css
 01 span {
@@ -5332,41 +5312,46 @@ $(".label").html("Even");
 ```
 
 ### 总结
+
 在本节中，你学习了使用 jQuery 查找和访问 DOM 元素。这对于动态操作它们至关重要。
 
 ### 问答
-[Q] 我什么时候应该使用[getElementById()` 而不是 `$("#")`？
-[A] 你可能很少使用 `getElementById()`。唯一可能使用它的情况是你不想将 jQuery 库链接到你的 HTML 中。
+
+**[Q]** 我什么时候应该使用 `getElementById()` 而不是 `$("#")`？
+
+**[A]** 你可能很少使用 `getElementById()`。唯一可能使用它的情况是你不想将 jQuery 库链接到你的 HTML 中。
 
 ### 练习
+
 练习由问题和答案组成，旨在巩固你对本节内容的理解。在查看答案之前请尝试回答问题。
 
-#### 测
-[1] 如何将名为 `myDiv` 的 DOM 对象转换为 jQuery 对象？
-[2] 对或错：jQuery 选择器返回的是 DOM 元素的列表。
-[3] 如何判断一个对象是否是 jQuery 对象？
-[4] 如果你想获取所有 `class="heading"` 的元素，应该使用什么 jQuery 选择器？
-[5] 获取 `<div>` 元素的子元素 `<p>` 元素，应该使用什么 jQuery 选择器？
-[6] 如何获取 jQuery 对象所表示的 DOM 元素的 JavaScript 数组？
+#### 测试
 
-#### 测答案
-[1] 使用 `$(myDiv)` 创建一个以该 DOM 元素为唯一项的新 jQuery 对象。
-[2] 错。jQuery 选择器返回的是一个包含一组 DOM 元素的 jQuery 对象。
-[3] 测试它是否设置了 `jquery` 属性。
-[4] `$(".heading")`
-[5] `$(div p)`
-[6] 在 jQuery 对象上使用 `get()` 方法。
+1. 如何将名为 `myDiv` 的 DOM 对象转换为 jQuery 对象？
+2. 对或错：jQuery 选择器返回的是 DOM 元素的列表。
+3. 如何判断一个对象是否是 jQuery 对象？
+4. 如果你想获取所有 `class="heading"` 的元素，应该使用什么 jQuery 选择器？
+5. 获取 `<div>` 元素的子元素 `<p>` 元素，应该使用什么 jQuery 选择器？
+6. 如何获取 jQuery 对象所表示的 DOM 元素的 JavaScript 数组？
+
+#### 测试答案
+
+1. 使用 `$(myDiv)` 创建一个以该 DOM 元素为唯一项的新 jQuery 对象。
+2. 错。jQuery 选择器返回的是一个包含一组 DOM 元素的 jQuery 对象。
+3. 测试它是否设置了 `jquery` 属性。
+4. `$(".heading")`
+5. `$(div p)`
+6. 在 jQuery 对象上使用 `get()` 方法。
 
 ### 练习
+
 1. 为 `jquery_selectors.html` 示例添加一个额外的按钮，用于选择列表中的第一个和最后一个项。你需要添加所需的 HTML 和 JavaScript 代码。
-
-
 
 jQuery 对象提供了额外的功能，通过允许你轻松地精炼所代表的 DOM 元素列表、导航 DOM 树寻找其他元素以及操作 HTML 元素的值，增强了选择器的结果。以下章节将介绍如何将 jQuery 操作链在一起，以便高效地查找、过滤和遍历网页中的 DOM 元素。
 
 ### 链式 jQuery 对象操作
 
-jQuery 对象的强大之处之一是你可以将多个 jQuery 操作链成一个单一语句。每个连续的语句都将在链中上一个操作的结果上进行操作。这可以有助于减少并简化你的选择器，并减少 CSS 中所需的类（class）和 ID 定义。
+jQuery 对象的强大之处之一是你可以将多个 jQuery 操作链成一个单一语句。每个连续的语句都将在链中上一个操作的结果上进行操作。这可以有助于减少并简化你的选择器，并减少 CSS 中所需的类（`class`）和 ID 定义。
 
 将链式 jQuery 操作的结果想象成一栈 jQuery 对象，其中每个对象代表一组 DOM 元素。链中的每个操作都会将一个 jQuery 对象放入栈中，但当前操作仅应用于栈顶的 jQuery 对象。
 
@@ -5374,7 +5359,7 @@ jQuery 对象的强大之处之一是你可以将多个 jQuery 操作链成一�
 
 点击此处查看代码
 
-```
+```javascript
 var $contentDiv = $("div#content");
 var $firstP = $contentDiv.children("p:first");
 $firstP.css("font-weight","bold");
@@ -5386,8 +5371,8 @@ $spans.css("color","red");
 
 点击此处查看代码
 
-```
-$("div#content").children("p:first").css("font-weight","bold").children("span"). css("color","red");
+```javascript
+$("div#content").children("p:first").css("font-weight","bold").children("span").css("color","red");
 ```
 
 由于每个操作都返回一个 jQuery 对象，因此你可以根据需要链接任意数量的 jQuery 操作。即使 `.css()` 操作设计用于修改 DOM 对象而不是查找它们，它仍然会返回相同的 jQuery 对象，因此你可以在结果上执行其他操作。
@@ -5400,19 +5385,17 @@ jQuery 对象提供了一组良好的方法，允许你修改查询中所代表�
 
 **表 8.1 过滤所代表的 DOM 元素的 jQuery 对象方法及示例**
 
-***
-
-提示
-
-与 CSS 选择器相同的 jQuery 选择器能够使用原生 DOM 方法 `querySelectorAll()`，该方法在 DOM 对象上具有一些高级优化。其他 jQuery 选择器无法利用该优化，因此最好先使用基于 CSS 的选择器，然后将过滤器作为链式选择器添加。例如，与其使用 `$("div:animated")`，不如你应该使用 `$("div").filter(":animated")`：[`api.jquery.com/category/selectors/jquery-selector-extensions/`](http://api.jquery.com/category/selectors/jquery-selector-extensions/)
-
-***
+> **提示**
+>
+> 与 CSS 选择器相同的 jQuery 选择器能够使用原生 DOM 方法 `querySelectorAll()`，该方法在 DOM 对象上具有一些高级优化。其他 jQuery 选择器无法利用该优化，因此最好先使用基于 CSS 的选择器，然后将过滤器作为链式选择器添加。例如，与其使用 `$("div:animated")`，不如你应该使用 `$("div").filter(":animated")`：[`api.jquery.com/category/selectors/jquery-selector-extensions/`](http://api.jquery.com/category/selectors/jquery-selector-extensions/)
 
 ### 使用 jQuery 对象遍历 DOM
 
 附加到 jQuery 对象的另一组重要方法是 DOM 遍历方法。DOM 遍历允许你根据元素与其他元素之间的关系来选择元素。
 
 DOM 有时被称为 DOM 树，因为它是以树结构组织的，以文档为根，节点可以同时具有父元素、兄弟元素和子元素。为了更好地视觉化，请查看以下 HTML 代码：
+
+
 
 ```html
 <<body>
@@ -5433,29 +5416,35 @@ jQuery DOM 遍历方法允许你从 DOM 的某一层移动到另一层以选择�
 
 jQuery 对象提供了一组惊不起的方法，允许你以几乎无法数的方法遍历 DOM，因为它允许你使用 jQuery 对象中当前的 DOM 元素选择来选择树中的其他 DOM 元素。表 8.2 列出了你可以用于遍历 DOM 的方法。
 
-![图像](img/image00879.jpeg)![图像](img/image00880.jpeg)![图像](img/image00881.jpeg)![图像](img/image00882.jpeg)
+![图像](img/image00879.jpeg)
 
-**表 8.2 允许你遍历元素的 jQuery 对象方法及示例**
+![图像](img/image00880.jpeg)
+
+![图像](img/image00881.jpeg)
+
+![图像](img/image00882.jpeg)
+
+**表 8.2** 允许你遍历元素的 jQuery 对象方法及示例
 
 ### 查看一些额外方法
 
 在使用遍历 DOM 的 jQuery 方法的函数时，你应该注意某些方法。表 8.3 列出了你随着代码变得自然而会频繁使用的方法。
 
-![图像](img/image0083.jpeg)![图像](img/image0084.jpeg)
+![图像](img/image0083.jpeg)
 
-**表 8.3 允许你处理对象的额外方法及示例**
+![图像](img/image0084.jpeg)
 
-***
+**表 8.3** 允许你处理对象的额外方法及示例
 
-注意
+---
 
-在使用遍历 DOM 的函数时，你可以使用 `this` 关键字来访问正在迭代的元素。这是一个 DOM 对象，而不是 jQuery 对象。如果你需要 jQuery 格式，请使用 `$(this)`。但请记住，构建格式需要一些工作。
+> **注意**
+>
+> 在使用遍历 DOM 的函数时，你可以使用 `this` 关键字来访问正在迭代的元素。这是一个 DOM 对象，而不是 jQuery 对象。如果你需要 jQuery 格式，请使用 `$(this)`。但请记住，构建格式需要一些工作。
 
-***
+#### 使用 `.each()`
 
-#### 使用 .each()
-
-`.each(function)` 方法最重要的 jQuery 方法之一，因为它允许你遍历集合中的所有元素并对它们单独执行操作。这与仅对所有项目执行相同的操作不同。
+`.each(function)` 方法是最重要的 jQuery 方法之一，因为它允许你遍历集合中的所有元素并对它们单独执行操作。这与仅对所有项目执行相同的操作不同。
 
 `.each()` 方法允许你指定一个在 jQuery 对象的每个元素上运行的函数。该函数将索引数字作为第一个参数。在函数内部，`this` 变量指向当前的 DOM 元素。
 
@@ -5471,96 +5460,98 @@ $("p").each(function (idx){
 
 注意 `idx` 作为索引传入；第一个 `<p>` 元素为 0，第二个为 1，依此类推。还要注意 `this` 已通过 `$(this)` 转换为 jQuery 对象，以便调用 `.html()` 方法。
 
-#### 使用 .map()
+#### 使用 `.map()`
 
 `.map(function)` 方法同样遍历 jQuery 对象集合中的每个元素。虽然与 `.each()` 非常相似，但有一个巨大的区别，即 `.each()` 将返回相同的 jQuery 对象，而 `.map()` 将返回一个包含每次迭代返回值的新的 jQuery 对象。
-
-
-
-
 
 ```javascript
 var liValues = $("li").map(function (idx){
     return $(this).html();
 }).get().join(",");
 ```
+
 注意，在每次迭代中，该函数都会返回 `<li>` 元素中的 HTML 内容。你调用 `.get()` 将 `.map()` 返回的新型 jQuery 对象转换为 JavaScript 数组版本，然后对该数组调用 `.join(",")` 以构建成一个以逗号分隔的字符串。
 
-***
+---
 
-## 尝试自己动手：使用 jQuery 的 .map() 和 .each() 方法来导航、访问和操作 DOM 元素
+## 尝试自己动手：使用 jQuery 的 `.map()` 和 `.each()` 方法来导航、访问和操作 DOM 元素
 
-在本示例中，你将学习如何使用 jQuery 选择器找到所有段落元素（`<p>`）的过程。然后，你使用 `.map()` 函数读取内容，并用它创建一个新的 `<span>` 框。你还使用 `.each()` 遍历 `<p>` 元素并对它们进行重新样式。完整的示例文件可以在 列表 8.1、8.2 和 8.3 中找到。使用以下步骤实现该示例：
+在本示例中，你将学习如何使用 jQuery 选择器找到所有段落元素（`<p>`）的过程。然后，你使用 `.map()` 函数读取内容，并用它创建一个新的 `<span>` 框。你还使用 `.each()` 遍历 `<p>` 元素并对它们进行重新样式。完整的示例文件可以在列表 8.1、8.2 和 8.3 中找到。使用以下步骤实现该示例：
 
 1. 在 Eclipse 中，创建一个名为 `lesson08` 的源文件夹。在 `lesson08` 文件夹内部，创建 `js` 和 `css` 文件夹。
+
 2. 在 `lesson08` 文件夹中，创建命名为 `dom_manipulation.html`、`js/dom_manipulation.js` 和 `css/dom_manipulation.css` 的源文件。
-3. 打开 `dom_manipulation.html` 并添加基础元素（html, head, body）。
-4. 在 `<head>` 元素内部，添加 列表 8.1 所示的 `<script>` 和 `<link>` 元素，这些元素将用于加载 jQuery、JavaScript 和 CSS：
 
-点击此处查看代码图像
+3. 打开 `dom_manipulation.html` 并添加基础元素（`html`、`head`、`body`）。
 
-```html
-06    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-07    <script type="text/javascript" src="js/dom_manipulation.js"></script>
-08    <link rel="stylesheet" type="text/css" href="css/dom_manipulation.css">
-```
+4. 在 `<head>` 元素内部，添加列表 8.1 所示的 `<script>` 和 `<link>` 元素，这些元素将用于加载 jQuery、JavaScript 和 CSS：
 
-5. 将 列表 8.1 中第 11–19 行的代码添加到 `css/dom_manipulation.css` 文件中。这段代码定义了两个输入按钮、一组 `<p>` 元素和一个用于放置内容的 `<div>`。
-6. 将 列表 8.3 中的样式代码添加到 `dom_manipulation.css` 文件中。该样式代码将为 `<span>` 元素设置样式使其以行内块（inline-block）的形式显示，以便设置它们的大小。
+   点击此处查看代码图像
+
+   ```html
+   06    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+   07    <script type="text/javascript" src="js/dom_manipulation.js"></script>
+   08    <link rel="stylesheet" type="text/css" href="css/dom_manipulation.css">
+   ```
+
+5. 将列表 8.1 中第 11–19 行的代码添加到 `css/dom_manipulation.css` 文件中。这段代码定义了两个输入按钮、一组 `<p>` 元素和一个用于放置内容的 `<div>`。
+
+6. 将列表 8.3 中的样式代码添加到 `dom_manipulation.css` 文件中。该样式代码将为 `<span>` 元素设置样式使其以行内块（inline-block）的形式显示，以便设置它们的大小。
+
 7. 打开 `js/dom_manipulation.js` 文件并添加以下行，这些行将创建一个在页面加载时执行的 `.ready()` 函数：
 
-点击此处查看代码图像
+   点击此处查看代码图像
 
-```javascript
-01 $(document).ready(function (){
-. . .
-21 });
-```
+   ```javascript
+   01 $(document).ready(function (){
+   . . .
+   21 });
+   ```
 
 8. 添加以下代码，为第一个按钮添加 `click` 事件处理程序。该函数使用一个简单的 `.each()` 函数来遍历 `<p>` 元素；它获取字符串，将其拆分为颜色和大小，然后设置 `font-size` 和 `color` CSS 属性：
 
-点击此处查看代码图像
+   点击此处查看代码图像
 
-```javascript
-02    $("input:eq(0)").click(function (){
-03      $("p").each(function(){
-04        var parts = $(this).html().split(" ");
-05        $(this).css({"font-size":parts[1]+"px", color:parts[0]});
-06      });
-07    });
-```
+   ```javascript
+   02    $("input:eq(0)").click(function (){
+   03      $("p").each(function(){
+   04        var parts = $(this).html().split(" ");
+   05        $(this).css({"font-size":parts[1]+"px", color:parts[0]});
+   06      });
+   07    });
+   ```
 
 9. 添加以下代码，为第二个按钮添加 `click` 事件处理程序。该函数使用一个简单的 `.map()` 函数来遍历 `<p>` 元素；它获取字符串并将其拆分为颜色和大小。然而，这次函数返回一个带有 `color` 和 `size` 属性的 JavaScript 对象。末的 `.get()` 将 `.map()` 的结果转换为名为 `items` 的 JavaScript 数组：
 
-点击此处查看代码图像
+   点击此处查看代码图像
 
-```javascript
-08    $("input:eq(1)").click(function (){
-09      var items = $("p").map(function(){
-10          var parts = $(this).html().split(" ");
-11          return {color:parts[0], size:parts[1]};
-12      }).get();
-```
+   ```javascript
+   08    $("input:eq(1)").click(function (){
+   09      var items = $("p").map(function(){
+   10          var parts = $(this).html().split(" ");
+   11          return {color:parts[0], size:parts[1]};
+   12      }).get();
+   ```
 
 10. 添加以下 `for` 循环，该循环遍历 `items` 并根据从 `<p>` 元素读取的颜色和大小创建一个新的 `<span>` 元素：
 
-点击此处查看代码图像
+    点击此处查看代码图像
 
-```javascript
-13  for (var idx in items){
-14    var item = items[idx];
-15    var span = $("<span>" + item.color + "</span>");
-16    var size = item.size*5;
-17    span.css({"background-color":item.color, "font-size": item.size+"px", width:size, height:size});
-18    $("div").append(span);
-19  }
-```
+    ```javascript
+    13  for (var idx in items){
+    14    var item = items[idx];
+    15    var span = $("<span>" + item.color + "</span>");
+    16    var size = item.size*5;
+    17    span.css({"background-color":item.color, "font-size": item.size+"px", width:size, height:size});
+    18    $("div").append(span);
+    19  }
+    ```
 
-11. 保存三个文件并在浏览器中打开 HTML 文件。当你点击 `.each()` 按钮时，`<p>` 元素的文本会如 图 8.1 所示发生变化。当你点击 `.map()` 按钮时，`<div>` 中将显示新的 `<span>` 元素。
+11. 保存三个文件并在浏览器中打开 HTML 文件。当你点击 `.each()` 按钮时，`<p>` 元素的文本会如图 8.1 所示发生变化。当你点击 `.map()` 按钮时，`<div>` 中将显示新的 `<span>` 元素。
 
 **图 8.1** 使用 `.each()` 和 `.map()` 读取 `<p>` 元素的文本并对页面进行动态变化。
 
-**列表 8.1** dom_manipulation.html 加载 jQuery 和 JavaScript
+**列表 8.1** `dom_manipulation.html` 加载 jQuery 和 JavaScript
 
 点击此处查看代码图像
 
@@ -5589,7 +5580,7 @@ var liValues = $("li").map(function (idx){
 22 </html>
 ```
 
-**列表 8.2** dom_manipulation.js jQuery 和 JavaScript 代码获取 <p> 元素并使用 .map() 和 .each() 遍历它们以为每个元素应用不同的变化
+**列表 8.2** `dom_manipulation.js` jQuery 和 JavaScript 代码获取 `<p>` 元素并使用 `.map()` 和 `.each()` 遍历它们以为每个元素应用不同的变化
 
 点击此处查看代码图像
 
@@ -5617,7 +5608,7 @@ var liValues = $("li").map(function (idx){
 21 });
 ```
 
-**列表 8.3** dom_manipulation.css CSS 代码为 <span> 和 <p> 元素设置样式
+**列表 8.3** `dom_manipulation.css` CSS 代码为 `<span>` 和 `<p>` 元素设置样式
 
 点击此处查看代码图像
 
@@ -5630,11 +5621,7 @@ var liValues = $("li").map(function (idx){
 06 }
 ```
 
-
-
-
-
-### 3. 在 `<head>` 元素中，添加以下 `<script>` 和 `<link>` 元素，如列表 8.4 所示，这些元素将用于加载 jQuery、JavaScript 和 CSS：
+### 3. 在 `<head>` 元素中添加以下 `<script>` 和 `<link>` 元素，如列表 8.4 所示。这些元素将用于加载 jQuery、JavaScript 和 CSS：
 
 点击此处查看代码图片
 
@@ -5644,13 +5631,17 @@ var liValues = $("li").map(function (idx){
 08      <link rel="stylesheet" type="text/css" href="css/traverse_dom.css">
 ```
 
-### 4. 添加列表 8.4 中 11–25 行所示的代码。这段代码定义了一组 `<div>` 元素，其中包含一个标签、一个文本输入和一组五个 `<span>` 元素。`<input>` 元素的 `onkeyup="update()"` 属性在用户向文本框输入内容时提供了动态交互。
+### 4. 添加列表 8.4 中 11–25 行所示的代码
 
-### 5. 将列表 8.6 中的样式代码添加到 `traverse_dom.css` 文件中。该样式代码为 `<span>` 元素设置了特定的 `height` 和 `width`，并增加了必要的 `margin` 和 `padding`。
+这段代码定义了一组 `<div>` 元素，其中包含一个标签、一个文本输入和一组五个 `<span>` 元素。`<input>` 元素的 `onkeyup="update()"` 属性在用户向文本框输入内容时提供了动态交互。
 
-### 6. 在 Eclipse 中打开 `traverse_dom.js` 文件，并创建一个名为 `update()` 的 JavaScript 函数，供 `onkeyup` 事件处理器调用。
+### 5. 将列表 8.6 中的样式代码添加到 `traverse_dom.css` 文件中
 
-### 7. 添加以下行以将所有 `<span>` 元素的 `background-color` 设置为 `lightgrey`：
+该样式代码为 `<span>` 元素设置了特定的 `height` 和 `width`，并增加了必要的 `margin` 和 `padding`。
+
+### 6. 在 Eclipse 中打开 `traverse_dom.js` 文件，并创建一个名为 `update()` 的 JavaScript 函数，供 `onkeyup` 事件处理器调用
+
+### 7. 添加以下行以将所有 `<span>` 元素的 `background-color` 设置为 `lightgrey`
 
 点击此处查看代码图片
 
@@ -5658,7 +5649,7 @@ var liValues = $("li").map(function (idx){
 02    $("span").css("background-color","lightgrey");
 ```
 
-### 8. 添加以下 jQuery 代码以选择所有 `<div>` 元素，然后使用 `.each()` 对每个元素进行迭代并应用一个函数：
+### 8. 添加以下 jQuery 代码以选择所有 `<div>` 元素，然后使用 `.each()` 对每个元素进行迭代并应用一个函数
 
 点击此处查看代码图片
 
@@ -5668,7 +5659,7 @@ var liValues = $("li").map(function (idx){
 8    })
 ```
 
-### 9. 在函数内部，添加以下行以获取 `<div>` 元素的第一个 `<input>` 子元素：
+### 9. 在函数内部，添加以下行以获取 `<div>` 元素的第一个 `<input>` 子元素
 
 点击此处查看代码图片
 
@@ -5676,7 +5667,7 @@ var liValues = $("li").map(function (idx){
 04      var $input = $(this).children("input:first");
 ```
 
-### 10. 添加以下行，以获取 `<input>` 元素的值，并创建一个 jQuery 选择器字符串，用于过滤出前 *n* 个 `<span>` 元素，其中 *n* 是 `<input>` 的值：
+### 10. 添加以下行，以获取 `<input>` 元素的值，并创建一个 jQuery 选择器字符串，用于过滤出前 *n* 个 `<span>` 元素，其中 *n* 是 `<input>` 的值
 
 点击此处查看代码图片
 
@@ -5685,7 +5676,9 @@ var liValues = $("li").map(function (idx){
 06      var filter = "span:lt(" + $value + ")";
 ```
 
-### 11. 添加以下行，使用 `$input` jQuery 对象根据步骤 10 中定义的 `filter` 搜索兄弟元素。`css()` 方法将将背景颜色更改为蓝色。注意该函数的简单性。你可以根据需要添加任意数量的 `<div>` 部分。只要它们遵循相同的结构 `<<div>><input><<span>...</span></span></div>`，jQuery 代码 就能作用于所有这些元素：
+### 11. 添加以下行，使用 `$input` jQuery 对象根据步骤 10 中定义的 `filter` 搜索兄弟元素
+
+`css()` 方法将将背景颜色更改为蓝色。注意该函数的简单性。你可以根据需要添加任意数量的 `<div>` 部分。只要它们遵循相同的结构 `<<div>><input><<span>...</span></span></div>`，jQuery 代码就能作用于所有这些元素：
 
 点击此处查看代码图片
 
@@ -5693,15 +5686,19 @@ var liValues = $("li").map(function (idx){
 07      $input.siblings(filter).css("background-color","blue");
 ```
 
-### 12. 保存文件并在 浏览器中打开 `traverse_dom.html`。注意，当你在文本框中输入内容时，`<span>` 元素会变为蓝色以匹配输入的值。
+### 12. 保存文件并在浏览器中打开 `traverse_dom.html`
+
+注意，当你在文本框中输入内容时，`<span>` 元素会变为蓝色以匹配输入的值。
+
+
 
 ![图像](img/image00886.jpeg)
 
 **图 8.2** 一个简单的 JavaScript 网页，允许用户输入评分，并根据输入的值进行动态变化。
 
-**列表 8.4 traverse_dom.html，用于加载 jQuery 和 JavaScript 并附加事件处理器元素以提供用户交互的 HTML 文件**
+**列表 8.4** `traverse_dom.html`，用于加载 jQuery 和 JavaScript 并附加事件处理器元素以提供用户交互的 HTML 文件。
 
-点击此处查看代码图片
+点击此处查看代码图片：
 
 ```html
 01 <!DOCTYPE html>
@@ -5734,7 +5731,7 @@ var liValues = $("li").map(function (idx){
 28 </html>
 ```
 
-**列表 8.5 traverse_dom.js，用于根据输入值处理 <span> 颜色的 JavaScript 代码**
+**列表 8.5** `traverse_dom.js`，用于根据输入值处理 `<span>` 颜色的 JavaScript 代码。
 
 ```javascript
 function update() {
@@ -5748,7 +5745,7 @@ function update() {
 }
 ```
 
-**列表 8.6 traverse_dom.css，用于设置 <span> 元素的 CSS 代码**
+**列表 8.6** `traverse_dom.css`，用于设置 `<span>` 元素的 CSS 代码。
 
 ```css
 span {
@@ -5760,10 +5757,6 @@ span {
 }
 ```
 
-
-
-
-
 `.map()` 用于遍历元素集合并返回一个包含每次迭代中指定函数结果的新对象。`.each()` 则仅遍历元素并应用指定的函数。
 
 ### 练习
@@ -5774,19 +5767,13 @@ span {
 
 你将在本节中学习到：
 
-![Image](img/image00767.jpeg) 用户和浏览器触发事件的方式
-
-![Image](img/image00767.jpeg) 事件对象上可以访问属性
-
-![Image](img/image00767.jpeg) 如何添加能够动态响应事件的处理程序
-
-![Image](img/image00767.jpeg) 向事件处理程序传递额外数据的方式
-
-![Image](img/image00767.jpeg) 手动触发事件的方法
-
-![Image](img/image00767.jpeg) 创建自定义事件的方法
-
-![Image](img/image00767.jpeg) 如何在代码中实现并触发回调函数
+- 用户和浏览器触发事件的方式
+- 事件对象上可以访问属性
+- 如何添加能够动态响应事件的处理程序
+- 向事件处理程序传递额外数据的方式
+- 手动触发事件的方法
+- 创建自定义事件的方法
+- 如何在代码中实现并触发回调函数
 
 AngularJS、jQuery 和 JavaScript 的主要目标之一是为开发者提供创建极其复杂且交互丰富的网页的能力。这种交互式网页的核心是事件。事件基本上是浏览器环境中发生的任何事情，从页面加载、鼠标移动或点击、键盘输入，到窗口大小的调整等。
 
@@ -5808,17 +5795,15 @@ AngularJS 利用了本节讨论的底层 JavaScript 和 jQuery 事件功能，�
 
 3. **浏览器为事件创建对象**——Web 浏览器为触发的每个事件创建一个单独的对象。这些对象包含了有关事件的信息，可供处理程序使用。
 
-4. **调用用户事件处理程序**——调用用户定义的事件处理程序。你有能力在 JavaScript 中创建处理程序，这些处理程序将与事件对象和或页面元素交互，为 HTML 元素提供交互性。事件处理程序可以处于三个阶段。以下描述了 [图 9.1] 所示的三个阶段。
+4. **调用用户事件处理程序**——调用用户定义的事件处理程序。你有能力在 JavaScript 中创建处理程序，这些处理程序将与事件对象和页面元素交互，为 HTML 元素提供交互性。事件处理程序可以处于三个阶段。以下描述了图 9.1 所示的三个阶段。
 
-![Image](img/image00767.jpeg) **捕获 (Capturing)**——捕获阶段是从文档直接通过每个父元素向下到达目标 HTML 元素的路径阶段。默认情况下，捕获阶段的事件处理程序行为是禁用的。
+   - ![Image](img/image00767.jpeg) **捕获（Capturing）**——捕获阶段是从文档直接通过每个父元素向下到达目标 HTML 元素的路径阶段。默认情况下，捕获阶段的事件处理程序行为是禁用的。
+   - ![Image](img/image00767.jpeg) **目标（Target）**——当事件处于最初触发它的 HTML 元素中时，即进入目标阶段。
+   - ![Image](img/image00767.jpeg) **冒泡（Bubbling）**——冒泡阶段是经过目标 HTML 元素的每个父元素向上移动，一直回到文档。默认情况下，事件的冒泡阶段是启用的。
 
-![Image](img/image00767.jpeg) **目标 (Target)**——当事件处于最初触发它的 HTML 元素中时，即进入目标阶段。
+   ![Image](img/image00887.jpeg)
 
-![Image](img/image00767.jpeg) **冒泡 (Bubbling)**——冒泡阶段是经过目标 HTML 元素的每个父元素向上移动，一直回到文档。默认情况下，事件的冒泡阶段是启用的。
-
-![Image](img/image00887.jpeg)
-
-**图 9.1** 事件在捕获阶段从文档向下到目标处理，然后在目标阶段处理，最后在冒泡阶段从目标向上通过文档进行处理。
+   **图 9.1** 事件在捕获阶段从文档向下到目标处理，然后在目标阶段处理，最后在冒泡阶段从目标向上通过文档进行处理。
 
 5. **调用浏览器处理程序**——除了用户事件处理程序外，浏览器还有默认处理程序，它们根据触发的事件执行不同的操作。例如，当用户点击链接时，浏览器会调用一个事件处理程序，并导航到链接中指定的 `href` 位置。
 
@@ -5826,44 +5811,41 @@ AngularJS 利用了本节讨论的底层 JavaScript 和 jQuery 事件功能，�
 
 当浏览器检测到事件发生时，会创建事件对象。如果事件处理程序是由 AngularJS 或 jQuery 定义的，事件对象会被转换为 jQuery 事件对象，该对象具有更多的属性和方法。因此，你需要意识到你正在处理哪种类型的事件对象。
 
-事件对象为你提供了有关事件的额外信息，例如事件的类型（例如 `click` 或 `keypress`）、按了哪些键、鼠标位置、事件发生在哪个 HTML 元素上等。[表 9.1] 描述了你将使用的最常用的事件属性。
+事件对象为你提供了有关事件的额外信息，例如事件的类型（例如 `click` 或 `keypress`）、按了哪些键、鼠标位置、事件发生在哪个 HTML 元素上等。表 9.1 描述了你将使用的最常用的事件属性。
 
 ![Image](img/image00888.jpeg)![Image](img/image00889.jpeg)
 
-**表 9.1** JavaScript 和 jQuery 事件属性
+**表 9.1** JavaScript 和 jQuery 事件属性。
 
-事件还提供了一些方法，允许你控制事件的行为——例如停止传播和默认行为。[表 9.2] 描述了事件对象上的重要方法。
+事件还提供了一些方法，允许你控制事件的行为——例如停止传播和默认行为。表 9.2 描述了事件对象上的重要方法。
 
 ![Image](img/image00890.jpeg)
 
-**表 9.2** JavaScript 和 jQuery 事件属性
+**表 9.2** JavaScript 和 jQuery 事件属性。
 
 #### 回顾事件类型
 
 事件类型是 JavaScript、jQuery 和 AngularJS 用于识别发生的物理事件的关键字。这些关键字用于附加处理程序以指定事件类型。此外，正如你之后将看到的，这些关键字也用于方法名称中，用于附加事件处理程序或手动触发事件。
 
-JavaScript 提供了多种对应动态页面交互期间发生的不同事件类型。jQuery 事件处理支持所有的 JavaScript 事件，并增加了自己的事件。[表 9.3] 列出了 JavaScript 和 jQuery 支持的不同事件类型。
+JavaScript 提供了多种对应动态页面交互期间发生的不同事件类型。jQuery 事件处理支持所有的 JavaScript 事件，并增加了自己的事件。表 9.3 列出了 JavaScript 和 jQuery 支持的不同事件类型。
 
 ![Image](img/image00891.jpeg)![Image](img/image00892.jpeg)
 
-**表 9.3** JavaScript 和 jQuery 事件类型
+**表 9.3** JavaScript 和 jQuery 事件类型。
 
 ### 使用页面加载事件进行初始化
 
-当 HTML 文档加载时，`<script>`标签中指定的 JavaScript 代码将被加载并执行。通常，JavaScript 和 jQuery 逻辑将位于以后执行的函数内部。然而，会有一些代码执行初始化工作，例如向页面元素附加事件处理程序，甚至向现有元素中添加额外的元素。
+当 HTML 文档加载时，`<script>` 标签中指定的 JavaScript 代码将被加载并执行。通常，JavaScript 和 jQuery 逻辑将位于以后执行的函数内部。然而，会有一些代码执行初始化工作，例如向页面元素附加事件处理程序，甚至向现有元素中添加额外的元素。
 
 问题是，在 JavaScript 代码加载时，HTML 元素对象可能尚未被浏览器构建。如果你在 HTML 对象创建之前引用它，将抛出异常，因此，你需要等待页面完全加载。
 
-
-
-
 这就是 `load` 事件非常有用的地方。将初始化代码放置在页面加载时触发的事件处理程序内部，可以确保所有的 HTML 对象都已创建，并且 DOM 已完全就绪。
 
-## 使用 JavaScript onload 事件
+## 使用 JavaScript `onload` 事件
 
 若要在 JavaScript 中添加在页面加载时运行的初始化代码，请在 JavaScript 中创建一个执行初始化的函数。例如，考虑以下展示了简单骨架结构初始化函数的 JavaScript 代码：
 
-点击此处查看代码图片
+点击此处查看代码图片：
 
 ```javascript
 function onloadHandler(){
@@ -5873,7 +5855,7 @@ function onloadHandler(){
 
 现在你有两种方法可以确保在页面完全加载时触发 `onloadHandler()`。第一种是将你的初始化代码绑定到 HTML 中 `<body>` 元素的 `onload` 属性上。例如：
 
-点击此处查看代码图片
+点击此处查看代码图片：
 
 ```html
 <body onload="onloadHandler()">
@@ -5881,7 +5863,7 @@ function onloadHandler(){
 
 第二种方法是将其直接赋值给 JavaScript 代码中的 `window` 对象。例如：
 
-点击此处查看代码图片
+点击此处查看代码图片：
 
 ```javascript
 window.onload = onloadHandler;
@@ -5893,7 +5875,7 @@ window.onload = onloadHandler;
 
 使用 jQuery 的 `.ready()` 方法将在 DOM 完全就绪时触发初始化代码运行。此时所有的 DOM 对象都已创建，页面将显示给用户。然而，此时所有的页面资源（如图像）可能尚未完全下载。这种选项允许你尽早地添加交互和功能。下面的示例展示了如何使用 `.ready()` 绑定简单初始化函数的用法：
 
-点击此处查看代码图片
+点击此处查看代码图片：
 
 ```javascript
 $(document).ready(function(){
@@ -5901,9 +5883,9 @@ $(document).ready(function(){
 })
 ```
 
-使用 jQuery 的 `.load()` 方法将在所有页面资源加载并渲染给用户后触发初始化代码。在有时，如果你需要在初始化代码中使用如图像之类的资源，则可能会使用此选项。下面的示例展示了使用 `load()` 绑定简单初始化函数的用法：
+使用 jQuery 的 `.load()` 方法将在所有页面资源加载并渲染给用户后触发初始化代码。在有时，如果你需要在初始化代码中使用如图像之类的资源，则可能会使用此选项。下面的示例展示了使用 `.load()` 绑定简单初始化函数的用法：
 
-点击此处查看代码图片
+点击此处查看代码图片：
 
 ```javascript
 $(window).load(function(){
@@ -5914,6 +5896,7 @@ $(window).load(function(){
 ***
 
 > **注意**
+>
 > `.ready()` 和 `.load()` 方法与 `<body>` 标签中使用 `onload="..."` 属性不兼容。如果你在使用 jQuery，请使用 `.ready()` 或 `.load()`；如果没有使用，请使用 `onload` 属性。
 
 ***
@@ -5934,11 +5917,11 @@ function clickHandler(){
 
 向 DOM 元素添加事件处理程序最基本的方法是直接在 HTML 代码中编写。这种方法的优点是简单，并且易于查看哪个事件处理程序被分配给了特定的 DOM 对象。
 
-通过在标签语句中设置 handler 属性的值，可以将事件处理程序添加到 HTML 的 DOM 对象中。对于元素支持的每个事件，都有一个以“on”开头并跟跟事件名称的属性。例如，`click` 事件属性是 `onclick`，`load` 事件属性是 `onload`。要查看事件列表，请参阅 表 9.1。
+通过在标签语句中设置 handler 属性的值，可以将事件处理程序添加到 HTML 的 DOM 对象中。对于元素支持的每个事件，都有一个以“on”开头并跟跟事件名称的属性。例如，`click` 事件属性是 `onclick`，`load` 事件属性是 `onload`。要查看事件列表，请参阅表 9.1。
 
 下面的示例展示了在 HTML 代码中为 DOM 元素添加 `click` 事件处理程序是多么简单：
 
-点击此处查看代码图片
+点击此处查看代码图片：
 
 ```html
 <div onclick="clickHandler()">Click Here</div
@@ -5952,7 +5935,7 @@ function clickHandler(){
 }
 ```
 
-你还可以使用 `event` 关键字将 DOM 事件对象作为参数包含在事件处理程序中。这允许你在事件处理程序中访问事件信息；
+你还可以使用 `event` 关键字将 DOM 事件对象作为参数包含在事件处理程序中。这允许你在事件处理程序中访问事件信息：
 
 ```html
 <div onclick="clickHandler(event)">Click Here</div
@@ -5965,9 +5948,10 @@ function clickHandler(event){
   $("div").html("clicked");
 }
 ```
+
 *(等待，原文在此处有些重复/重叠，我将根据提供的文本维持其逻辑)*：
 
-你还可以使用 `event` 关键字将 DOM 事件对象作为参数包含在事件处理程序中。这允许你在事件处理程序中访问事件信息；
+你还可以使用 `event` 关键字将 DOM 事件对象作为参数包含在事件处理程序中。这允许你在事件处理程序中访问事件信息：
 
 ```html
 <div onclick="clickHandler(event)">Click Here</div
@@ -5980,9 +5964,6 @@ function clickHandler(event){
   $("div").html("clicked");
 }
 ```
-
-
-
 
 ```javascript
 document.getElementById("div1").addEventListener('click',
@@ -5990,11 +5971,12 @@ document.getElementById("div1").addEventListener('click',
     clickHandler (e, "heading", 1, "yes");
   },false);
 ```
-所以，这就是前面代码中 `addEventListener()` 调用所发生的情况。指定了事件类型 `'click'`，然后定义了一个没有名称的新匿名 `function`，它接受事件对象作为唯一参数，并用 `e` 表示。在包装器函数内部，使用自定义参数调用了实际的事件处理器，包括用于传递事件对象的 `e` 变量。在示例中，使用 `false` 表示该句处理器应只在冒泡阶段被调用。
+
+所以，这就是前面代码中 `addEventListener()` 调用所发生的情况。指定了事件类型 `'click'`，然后定义了一个没有名称的新匿名 `function`，它接受事件对象作为唯一参数，并用 `e` 表示。在包装器函数内部，使用自定义参数调用了实际的事件处理器，包括用于传递事件对象的 `e` 变量。在示例中，使用 `false` 表示该处理器应只在冒泡阶段被调用。
 
 你也可以使用 DOM 对象上的 `removeEventListener()` 函数从事件中移除事件处理器。你需要指定要移除的事件类型和事件处理器的名称。例如，以下代码先添加了事件处理器，然后将其移除：
 
-点击此处查看代码图片
+点击此处查看代码图片：
 
 ```javascript
 var obj = document.getElementById("div1");
@@ -6003,16 +5985,20 @@ obj.removeEventListener('click', clickHandler);
 ```
 
 ### 提示
-你也可以使用 `handler` 属性在 DOM 对象本身设置访问事件处理器。`handler` 属性将是“on”加上事件类型。例如，对于点击事件，该属性为 `obj.onclick`。你可以通过 `obj.onclick()` 调用事件处理器，或直接使用 `obj.onclick= function handler(){ ...};` 为其赋值。
+
+
+
+你也可以使用`handler`属性在 DOM 对象本身设置访问事件处理器。`handler`属性将是“on”加上事件类型。例如，对于点击事件，该属性为`obj.onclick`。你可以通过`obj.onclick()`调用事件处理器，或直接使用`obj.onclick = function handler(){ ...};`为其赋值。
 
 ## 尝试自己：通过 JavaScript 为 DOM 对象添加事件处理器
-在此示例中，你将使用 JavaScript 方法动态地为 DOM 对象附加事件处理器。请按照以下步骤创建 列表 9.1、9.2 和 9.3 所示的文件：
 
-1. **在 Eclipse 中**，创建 `lesson09`、`lesson09/js` 和 `lesson09/css` 文件夹。
-2. **创建** `lesson09/broken_event.html`、`lesson09/js/broken_event.js` 和 `lesson09/css/broken_event.css` 文件。
-3. **将** 来自 列表 9.1 所示的代码添加到 HTML 文件中。你应该能识别该文件中的几乎所有内容。注意 `<body>` 标签的 `onload` 事件处理器设置为 `onloadHandler()`。
-4. **将** 来自 列表 9.3 的 CSS 添加到 CSS 文件中。现在你也应该能识别这些 CSS 语句了。
-5. **打开** `broken_event.js` 文件以及将用于处理点击事件的后续函数。注意它接受多个参数。第一个参数是 DOM 事件对象，用于通过 `e.screenX` 获取 x 坐标。它还接受一个对象 `objId`，用于获取应该写入的对象。其余参数用于向由 `objId` 指定的对象的 `innerHTML` 中写入消息：
+在此示例中，你将使用 JavaScript 方法动态地为 DOM 对象附加事件处理器。请按照以下步骤创建列表 9.1、9.2 和 9.3 所示的文件：
+
+1. **在 Eclipse 中**，创建`lesson09`、`lesson09/js`和`lesson09/css`文件夹。
+2. **创建**`lesson09/broken_event.html`、`lesson09/js/broken_event.js`和`lesson09/css/broken_event.css`文件。
+3. **将**来自列表 9.1 所示的代码添加到 HTML 文件中。你应该能识别该文件中的几乎所有内容。注意`<body>`标签的`onload`事件处理器设置为`onloadHandler()`。
+4. **将**来自列表 9.3 的 CSS 添加到 CSS 文件中。现在你也应该能识别这些 CSS 语句了。
+5. **打开**`broken_event.js`文件以及将用于处理点击事件的后续函数。注意它接受多个参数。第一个参数是 DOM 事件对象，用于通过`e.screenX`获取 x 坐标。它还接受一个对象`objId`，用于获取应该写入的对象。其余参数用于向由`objId`指定的对象的`innerHTML`中写入消息：
 
 点击此处查看代码图片
 
@@ -6023,7 +6009,7 @@ obj.removeEventListener('click', clickHandler);
 04 }
 ```
 
-6. **创建** 以下包装器函数，用于将参数传递给实际的事件处理器。包装器函数仅接受事件对象作为参数 `e`。它们使用适当的值调用 `clickHandler()` 函数。在示例中，通过调用 `removeEventListener()` 从目标对象移除事件处理器。移除事件处理器并不是常见做法，这只是为了提供一个示例：
+6. **创建**以下包装器函数，用于将参数传递给实际的事件处理器。包装器函数仅接受事件对象作为参数`e`。它们使用适当的值调用`clickHandler()`函数。在示例中，通过调用`removeEventListener()`从目标对象移除事件处理器。移除事件处理器并不是常见做法，这只是为了提供一个示例：
 
 点击此处查看代码图片
 
@@ -6038,7 +6024,7 @@ obj.removeEventListener('click', clickHandler);
 12 }
 ```
 
-7. **添加** 以下 `onloadHandler()` 函数，该函数调用 `addEventListener()` 为每个 `<div>` 元素添加 `click` 事件处理器：
+7. **添加**以下`onloadHandler()`函数，该函数调用`addEventListener()`为每个`<div>`元素添加`click`事件处理器：
 
 点击此处查看代码图片
 
@@ -6049,11 +6035,14 @@ obj.removeEventListener('click', clickHandler);
 16 }
 ```
 
-8. **保存** 所有三个文件，然后在网页浏览器中打开 HTML 文档，并尝试 图 9.2 所示的“Say Yes”和“Say No”按钮。注意按钮只会生效一次，因为事件处理器已被移除。如果我们没有移除事件处理器，按钮将继续更改 `<h1>`。
+8. **保存**所有三个文件，然后在网页浏览器中打开 HTML 文档，并尝试图 9.2 所示的“Say Yes”和“Say No”按钮。注意按钮只会生效一次，因为事件处理器已被移除。如果我们没有移除事件处理器，按钮将继续更改`<h1>`。
 
-![图 9.2](https://example.com/083.jpeg) **图 9.2** 一个为元素 添加事件处理器并响应点击的简单网页。
+![图 9.2](https://example.com/083.jpeg)
 
-### 列表 9.1 broken_event.html HTML 文件 加载 jQuery、并将事件处理器附加到 <div>
+**图 9.2** 一个为元素添加事件处理器并响应点击的简单网页。
+
+### 列表 9.1 `broken_event.html` HTML 文件：加载 jQuery 并将事件处理器附加到`<div>`
+
 点击此处查看代码图片
 
 ```html
@@ -6074,7 +6063,8 @@ obj.removeEventListener('click', clickHandler);
 15 </html>
 ```
 
-### 列表 9.2 broken_event.js JavaScript 代码 定义事件处理器并动态地附加到 <div>
+### 列表 9.2 `broken_event.js` JavaScript 代码：定义事件处理器并动态地附加到`<div>`
+
 点击此处查看代码图片
 
 ```javascript
@@ -6096,7 +6086,8 @@ obj.removeEventListener('click', clickHandler);
 16 }
 ```
 
-### 列表 9.3 broken_event.css CSS 代码 样式 <div> 元素
+### 列表 9.3 `broken_event.css` CSS 代码：样式`<div>`元素
+
 点击此处查看代码图片
 
 ```css
@@ -6112,11 +6103,12 @@ obj.removeEventListener('click', clickHandler);
 ```
 
 ## 在 jQuery 中应用事件处理器
+
 为 DOM 元素附加事件处理器的最佳方法是使用 jQuery。使用 jQuery 对象可以轻松选择不同的集合并同时为它们应用相同的事件处理器。
 
-在过去，jQuery 有几种方法添加和移除事件处理器，包括 `bind()/unbind()` 和 `delegate()`/`undelegate()`。`bind()` 方法模仿了 `addEventListener()` 的行为，而 `delegate()` 允许向 jQuery 对象添加事件，然后当添加额外的子元素时，也会自动将其委托给这些元素。
+在过去，jQuery 有几种方法添加和移除事件处理器，包括`bind()/unbind()`和`delegate()/undelegate()`。`bind()`方法模仿了`addEventListener()`的行为，而`delegate()`允许向 jQuery 对象添加事件，然后当添加额外的子元素时，也会自动将其委托给这些元素。
 
-从 jQuery 1.7 版本开始，这些方法都由一组简单的对方法 `on()` 和 `off()` 取代。使用 `on()` 方法在 jQuery 对象上附加事件处理器。`on()` 方法可以以以下两种格式之一调用：
+从 jQuery 1.7 版本开始，这些方法都由一组简单的对方法`on()`和`off()`取代。使用`on()`方法在 jQuery 对象上附加事件处理器。`on()`方法可以以以下两种格式之一调用：
 
 点击此处查看代码图片
 
@@ -6126,179 +6118,182 @@ on(events [, selector] [, data], handler(eventObject))
 on(events-map [, selector][, data])
 ```
 
+以下列表描述了在向 jQuery 对象添加事件处理程序时，可以添加到`on()`方法的每个参数的用途：
 
+![Image](img/image00767.jpeg)
 
+`events`—一个或多个由空格分隔的事件类型，以及用点语法表示的可选命名空间；例如，`"click"`、`"mouseenter mouseleave"`或`"keydown.myPlugin"`。事件类型列表可以在表 9.1 中找到。
 
+![Image](img/image00767.jpeg)
 
-以下列表描述了在向 jQuery 对象添加事件处理程序时，可以添加到 `on()` 方法的每个参数的用途：
+`events-map`—一个映射对象，其中字符串键指定一个或多个由空格分隔的事件类型，而值指定在事件触发时将调用的处理程序函数；例如，`{'click':myhandler}`或`{'click':function myHandler(e){return true;}}`。
 
-![Image](img/image00767.jpeg) `events`—一个或多个由空格分隔的事件类型，以及用点语法表示的可选命名空间；例如，`"click"`、`"mouseenter mouseleave"` 或 `"keydown.myPlugin"`。事件类型列表可以在 表 9.1 中找到。
+![Image](img/image00767.jpeg)
 
-![Image](img/image00767.jpeg) `events-map`—一个映射对象，其中字符串键指定一个或多个由空格分隔的事件类型，而值指定在事件触发时将调用的处理程序函数；例如，`{'click':myhandler}` 或 `{'click':function myHandler(e){return true;}}`。
+`selector`—可选。选择器字符串，指定当事件触发时，哪些后代元素也应该调用事件处理程序。这取代了`delegate()`方法的功能。如果你向事件始终存在于页面父对象集添加事件处理程序，那么任何匹配选择器的后代元素在事件触发时也会调用该处理程序，即使它们是在绑定事件之后才添加的。
 
-![Image](img/image00767.jpeg) `selector`—可选。选择器字符串，指定当事件触发时，哪些后代元素也应该调用事件处理程序。这取代了 `delegate()` 方法的功能。如果你向事件始终存在于页面父对象集添加事件处理程序，那么任何匹配选择器的后代元素在事件触发时也会调用该处理程序，即使它们是在绑定事件之后才添加的。
+![Image](img/image00767.jpeg)
 
-![Image](img/image00767.jpeg) `data`—可选。它可以是一个数字、字符串或对象，当事件触发时将作为 `event` 的数据部分通过 `event.data` 传递给处理程序。
+`data`—可选。它可以是一个数字、字符串或对象，当事件触发时将作为`event`的数据部分通过`event.data`传递给处理程序。
 
-![Image](img/image00767.jpeg) `handler(eventObject)`—如果你没有使用 `events-map`，则需要指定在事件触发时执行的处理程序函数。
+![Image](img/image00767.jpeg)
 
-要从元素中移除 jQuery 事件处理程序，请在 jQuery 对象上调用 `off()` 方法。`off` 方法的语法是以下之一：
+`handler(eventObject)`—如果你没有使用`events-map`，则需要指定在事件触发时执行的处理程序函数。
+
+要从元素中移除 jQuery 事件处理程序，请在 jQuery 对象上调用`off()`方法。`off`方法的语法是以下之一：
 
 点击此处查看代码图像
 
-```
-off(events [, selector] [, handler(eventObject]))
+```javascript
+off(events [, selector] [, handler(eventObject)])
 
 off(events-map [, selector])
 ```
 
-如果没有指定处理程序，`off()` 函数将移除所有指定事件的处理程序。接下来的示例展示了如何使用 `on()` 向所有 `<div>` 元素添加事件处理程序，然后使用 `off()` 移除它：
+如果没有指定处理程序，`off()`函数将移除所有指定事件的处理程序。接下来的示例展示了如何使用`on()`向所有`<div>`元素添加事件处理程序，然后使用`off()`移除它：
 
 点击此处查看代码图像
 
-```
+```javascript
 $("div").on("click",clickHandler);
 
 $("div").off("click",clickHandler);
 ```
 
-***
+---
 
-注意
+> **注意**
+>
+> `on()`和`off()`方法适用于所有的 jQuery 事件类型，包括你自定义的事件。jQuery 还提供了一些简单的辅助函数（将在课程稍后部分讨论），以便更容易地为某些事件附加处理程序。
 
-`on()` 和 `off()` 方法适用于所有的 jQuery 事件类型，包括你自定义的事件。jQuery 还提供了一些简单的辅助函数（将在课程稍后部分讨论），以便更容易地为某些事件附加处理程序。
+---
 
-***
+> **提示**
+>
+> 你通常希望事件处理程序只在事件第一次发生时运行一次。jQuery 提供了非常有用的`one()`方法，它会添加一个事件并在第一次触发后自动将其移除。`one()`方法与`on()`方法使用相同的语法。
 
-提示
-
-你通常希望事件处理程序只在事件第一次发生时运行一次。jQuery 提供了非常有用的 `one()` 方法，它会添加一个事件并在第一次触发后自动将其移除。`one()` 方法与 `on()` 方法使用相同的语法。
-
-***
+---
 
 ### 尝试自己：使用 jQuery 添加事件处理程序
 
-在本示例中，你使用 jQuery 方法动态地为 DOM 对象附加事件处理程序。使用以下步骤创建 列表 9.4、9.5 和 9.6 所示的文件：
+在本示例中，你使用 jQuery 方法动态地为 DOM 对象附加事件处理程序。使用以下步骤创建列表 9.4、9.5 和 9.6 所示的文件：
 
-**1.** 在 Eclipse 中，创建 `lesson09/working_event.html`、`lesson09/js/working_event.js` 和 `lesson09/css/working_event.css` 文件。
-
-**2.** 将 列表 9.4 所示的代码添加到 HTML 文件中。你应该能识别该文件中的几乎所有内容。
-
-**3.** 将 列表 9.6 中的 CSS 添加到 CSS 文件中。
-
-**4.** 打开 `working_event.js` 文件并查看将用于处理点击事件的函数。该事件仅接受事件对象 `e` 作为参数。它依赖事件对象的数据部分来提供应添加文本的元素的 `objId`。它还使用 `e.target.id`、`e.screenX` 和 `e.data.answer` 值作为写入 `<h1>` 元素的消息的一部分：
+1. 在 Eclipse 中，创建`lesson09/working_event.html`、`lesson09/js/working_event.js`和`lesson09/css/working_event.css`文件。
+2. 将列表 9.4 所示的代码添加到 HTML 文件中。你应该能识别该文件中的几乎所有内容。
+3. 将列表 9.6 中的 CSS 添加到 CSS 文件中。
+4. 打开`working_event.js`文件并查看将用于处理点击事件的函数。该事件仅接受事件对象`e`作为参数。它依赖事件对象的数据部分来提供应添加文本的元素的`objId`。它还使用`e.target.id`、`e.screenX`和`e.data.answer`值作为写入`<h1>`元素的消息的一部分：
 
 点击此处查看代码图像
 
-```
+```javascript
 01 function clickHandler(e){
 02    $("#"+e.data.objId).html(e.target.id + " says " + e.data.answer +
 03                                     " at X postion: " + e.screenX);
 04 }
 ```
 
-**5.** 创建以下 `ready()` 函数，当文档加载并就绪时将自动调用：
+5. **创建**以下`ready()`函数，当文档加载并就绪时将自动调用：
 
 点击此处查看代码图像
 
-```
+```javascript
 05 $(document).ready(function(){
 ...
 12 });
 ```
 
-**6.** 添加以下 jQuery 代码，该代码找到 `#div1` 元素并使用 `on()` 添加事件处理程序。在本示例中，一个 `events-map` 对象将找到 `#div1` 元素并然后使用 `on()` 添加事件处理程序。在本示例中，一个 `events-map` 传递了第 4 步使用的值：
+6. **添加**以下 jQuery 代码，该代码找到`#div1`元素并使用`on()`添加事件处理程序。在本示例中，一个`events-map`对象将找到`#div1`元素并然后使用`on()`添加事件处理程序。在本示例中，一个`events-map`传递了第 4 步使用的值：
 
 点击此处查看代码图像
 
-```
+```javascript
 06 $("#div1").on({"click",
 7{"objId":"heading",
 8"yes"});
 ```
 
-**7.** 添加以下 jQuery 代码，它获取 `document` 对象并向 `#div2` 添加事件处理程序。与第 6 步的差异在于我们使用了选择器。通过使用选择器，即使重新添加 `div2`，当事件触发时它也会调用处理程序。此外，而不是 `events-map`，我们使用选择器作为最后的参数：
+7. **添加**以下 jQuery 代码，它获取`document`对象并向`#div2`添加事件处理程序。与第 6 步的差异在于我们使用了选择器。通过使用选择器，即使重新添加`div2`，当事件触发时它也会调用处理程序。此外，而不是`events-map`，我们使用选择器作为最后的参数：
 
 点击此处查看代码图像
 
-```
+```javascript
 08 $(document).on("click",
 9             "#div2",
 10                {"objId":"heading",
 11                "no"});
 ```
 
-**8.** 保存所有文件并在浏览器中打开图 9.3 所示的 Say Yes 和 Say No 按钮。
+8. **保存**所有文件并在浏览器中打开图 9.3 所示的 Say Yes 和 Say No 按钮。
 
 ![Image](img/image0894.jpeg)
 
-**图 9.3** 使用 jQuery 为 `<div>` 元素动态添加事件处理程序并响应点击。
+**图 9.3** 使用 jQuery 为`<div>`元素动态添加事件处理程序并响应点击。
 
-**列表 9.4** HTML 文件，加载 jQuery 和 JavaScript，并为 `<h1>` 元素附加事件处理程序。
+### 列表 9.4 HTML 文件：加载 jQuery 和 JavaScript，并为`<h1>`元素附加事件处理程序
 
+除了使用`addEventListener()`方法添加事件处理器外，jQuery 还提供了许多辅助函数，允许你设置事件处理器。这些辅助函数以事件命名，因此可以让你的代码看起来更整洁。
 
-
-
-
-除了使用 `addEventListener()` 方法添加事件处理器外，jQuery 还提供了许多辅助函数，允许你设置事件处理器。这些辅助函数以事件命名，因此可以让你的代码看起来更整洁。
-
-这些辅助函数使用与 `addEventListener()` 类似的语法，但不需要指定事件类型：
+这些辅助函数使用与`addEventListener()`类似的语法，但不需要指定事件类型：
 
 点击此处查看代码图像
 
-.<event type>([ [eventData], handler(eventObject))`
-
-`eventData` 参数是可选的，与 `addEventListener()` 一样，它会为事件对象设置 `data` 值。`handler` 参数是必须的，用于指定要调用的函数。将 `<event type>` 替换为表 9.3 列出的事件名称。例如，以下两个 jQuery 语句是为点击事件分配处理器的等方式：
-
-点击此处查看代码图像
-
+```javascript
+.<event type>([ [eventData], handler(eventObject))
 ```
+
+`eventData`参数是可选的，与`addEventListener()`一样，它会为事件对象设置`data`值。`handler`参数是必须的，用于指定要调用的函数。将`<event type>`替换为表 9.3 列出的事件名称。例如，以下两个 jQuery 语句是为点击事件分配处理器的等方式：
+
+点击此处查看代码图像
+
+```javascript
 obj.click( dataObj, function myHandler(e){...});
 obj.addEventListener("click", dataObj, function myHandler(e){...});
 ```
 
-除了基于事件名称的辅助函数外，jQuery 还额外了一个对鼠标悬停事件非常有用的辅助函数。`hover()` 辅助函数允许你同时设置 `mouseenter` 和 `mouseleave` 事件的处理器。例如：
+除了基于事件名称的辅助函数外，jQuery 还额外了一个对鼠标悬停事件非常有用的辅助函数。`hover()`辅助函数允许你同时设置`mouseenter`和`mouseleave`事件的处理器。例如：
 
 点击此处查看代码图像
 
-```
+```javascript
 obj.hover(function enterHandler(e){...}, function leaveHandler(e){...});
 ```
 
-等同于
+等同于：
 
 点击此处查看代码图像
 
-```
+```javascript
 obj.addEventListener("mouseenter", function enterHandler(e){...});
 obj.addEventListener("mouseleave", function leaveHandler (e){...});
 ```
 
-你也可以通过仅指定一个处理器来为 `mouseenter` 和 `mouseleave` 设置同一个处理器。例如：
+你也可以通过仅指定一个处理器来为`mouseenter`和`mouseleave`设置同一个处理器。例如：
 
 点击此处查看代码图像
 
-```
+```javascript
 obj.hover(function hoverHandler(e){...});
 ```
 
 ### 手动触发事件
 
+
+
 JavaScript 和 jQuery 允许你手动触发事件。这提供了许多优势，例如模拟用户交互、将页面元素交互结合在一起，或与自定义自定义事件进行交互。
 
 以下章节描述了如何在 JavaScript 和 jQuery 中触发事件。
 
-#### 在 JavaScript 中触发事件
+## 在 JavaScript 中触发事件
 
-在 JavaScript 中触发事件最简单的方法是使用附加在 DOM 对象上的方法（如果有）。对于 `click`、`select`、`blur` 和 `focus` 等简单事件，支持它们的 DOM 对象上都有相应的方法。例如，你可以使用以下语法在大多数 DOM 对象上触发 `click` 事件：
+在 JavaScript 中触发事件最简单的方法是使用附加在 DOM 对象上的方法（如果有）。对于`click`、`select`、`blur`和`focus`等简单事件，支持它们的 DOM 对象上都有相应的方法。例如，你可以使用以下语法在大多数 DOM 对象上触发`click`事件：
 
 ```
 obj.click();
 ```
 
-JavaScript 中触发事件的更高级的方法是创建一个事件对象，然后使用 `document.dispatchEvent()` 调用来触发事件机制。这种方法对事件信息提供了更多的控制，并且是触发许多事件的唯一方法。`dispatchEvent()` 方法涉及三个步骤。
+JavaScript 中触发事件的更高级的方法是创建一个事件对象，然后使用`document.dispatchEvent()`调用来触发事件机制。这种方法对事件信息提供了更多的控制，并且是触发许多事件的唯一方法。`dispatchEvent()`方法涉及三个步骤。
 
-第一步是使用 `document.createEvent()` 方法创建一个事件对象。`createEvent()` 方法要求你为正在创建的对象指定事件 `type`。表 9.4 列出了 `createEvent()` 接受的一些常见事件类型。例如，要创建一个鼠标 `click` 事件对象，请使用以下语句：
+第一步是使用`document.createEvent()`方法创建一个事件对象。`createEvent()`方法要求你为正在创建的对象指定事件`type`。表 9.4 列出了`createEvent()`接受的一些常见事件类型。例如，要创建一个鼠标`click`事件对象，请使用以下语句：
 
 点击此处查看代码图像
 
@@ -6308,11 +6303,11 @@ var clickEvent = document.createEvent("MouseEvents");
 
 ![Image](img/image0089.jpeg)
 
-**表 9.4 `createEvent()` 支持的常见事件类型**
+**表 9.4 `createEvent()`支持的常见事件类型**
 
 下一步是通过调用事件的初始化函数为事件对象初始化值。表 9.4 列出了事件类型对应的初始化函数以及支持的参数。
 
-例如，要初始化点击事件对象，请使用以下语句。类型指定为 `"click"`，且 `bubbling` 和 `cancelable` 属性均 true `true`。这里，`window` 被用作 `view` 。坐标并不重要，所以它们保持为 0，额外的键盘键也不重要，因此它们被设置为 `false`。`button` 参数设置为 0 以表示左键，且没有指定相关的 target：
+例如，要初始化点击事件对象，请使用以下语句。类型指定为`"click"`，且`bubbling`和`cancelable`属性均`true`。这里，`window`被用作`view`。坐标并不重要，所以它们保持为 0，额外的键盘键也不重要，因此它们被设置为`false`。`button`参数设置为 0 以表示左键，且没有指定相关的 target：
 
 点击此处查看代码图像
 
@@ -6322,15 +6317,15 @@ clickEvent.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, 0, false, 
 
 在大多数情况下，初始化函数的参数应该是自显其意的。然而，你可能需要检查某些特定的参数。你可以在 [www.w3.org/TR/DOM-Level-2-Events/events.html](http://www.w3.org/TR/DOM-Level-2-Events/events.html) 找到事件对象和方法的定义。
 
-最后一步是在你想触发的元素上调用 `dispatchEvent()`。
+最后一步是在你想触发的元素上调用`dispatchEvent()`。
 
 ### 动手尝试：手动触发事件
 
 在这个示例中，你将逐步了解使用事件触发点击事件的过程。
 
-**1.** 在 `manual_event.html` 中，将列表 9.7 所示的代码添加到 HTML 文件。这是一个包含两个复选框的基础 HTML 文件。
+**1.** 在`manual_event.html`中，将列表 9.7 所示的代码添加到 HTML 文件。这是一个包含两个复选框的基础 HTML 文件。
 
-**2.** 打开 `manual_event.js` 并编写以下 `onloadHandler()` 初始化函数，它为两个 `<span>` 元素附加事件监听器：
+**2.** 打开`manual_event.js`并编写以下`onloadHandler()`初始化函数，它为两个`<span>`元素附加事件监听器：
 
 点击此处查看代码图像
 
@@ -6343,9 +6338,9 @@ function onloadHandler(){
 }
 ```
 
-**3.** 将列表 9.9 中的 CSS 添加 CSS 文件。这段代码将 `<span>` 元素的样式使其像按钮。
+**3.** 将列表 9.9 中的 CSS 添加 CSS 文件。这段代码将`<span>`元素的样式使其像按钮。
 
-**4.** 为第一个按钮创建 `simpleClick()` 处理函数。该代码使用事件的 `target.id` 寻找对应的复选框元素。然后在复选框对象上调用 `click()` 函数，从而触发 `click` 事件，就像鼠标点击了它一样：
+**4.** 为第一个按钮创建`simpleClick()`处理函数。该代码使用事件的`target.id`寻找对应的复选框元素。然后在复选框对象上调用`click()`函数，从而触发`click`事件，就像鼠标点击了它一样：
 
 点击此处查看代码图像
 
@@ -6356,7 +6351,7 @@ function simpleClick(e){
 }
 ```
 
-**5.** 为第二个按钮添加以下 `eventClick()` 处理函数。该代码首先创建一个 `"MouseEvents"` 对象，然后使用相应的参数将其初始化为 `"click"` 类型。该代码还使用事件的 `target.id` 寻找对应的复选框元素，然后在复选框元素对象上调用 `dispatchEvent()`，触发鼠标 `click` 事件：
+**5.** 为第二个按钮添加以下`eventClick()`处理函数。该代码首先创建一个`"MouseEvents"`对象，然后使用相应的参数将其初始化为`"click"`类型。该代码还使用事件的`target.id`寻找对应的复选框元素，然后在复选框元素对象上调用`dispatchEvent()`，触发鼠标`click`事件：
 
 点击此处查看代码图像
 
@@ -6368,10 +6363,6 @@ function eventClick(e){
 }
 ```
 
-
-
-
-
 ```javascript
 var event = document.createEvent("MouseEvents");
 
@@ -6382,13 +6373,15 @@ var cb = document.getElementById("check"+e.target.id);
 cb.dispatchEvent(event);
 ```
 
-7. 保存所有三个文件，然后在网络浏览器中打开 HTML 文档，如图 9.4 所示。尝试操作复选框和按钮。注意，按钮提供的交互效果与直接点击复选框是相同的。
+**7.** 保存所有三个文件，然后在网络浏览器中打开 HTML 文档，如图 9.4 所示。尝试操作复选框和按钮。注意，按钮提供的交互效果与直接点击复选框是相同的。
 
 ![Image](img/image00896.jpeg)
 
-**图 9.4** 一个简单的网页，它可以从来自 `<span>` 元素触发复选框的点击事件。
+**图 9.4** 一个简单的网页，它可以从来自`<span>`元素触发复选框的点击事件。
 
-**代码列表 9.7 manual_event.html 载入了 CSS 和 JavaScript 并定义了复选框和 `<span>` 元素的 HTML 文件**
+### 代码列表 9.7 manual_event.html
+
+载入了 CSS 和 JavaScript 并定义了复选框和`<span>`元素的 HTML 文件
 
 点击此处查看代码图片
 
@@ -6412,7 +6405,9 @@ cb.dispatchEvent(event);
 </html>
 ```
 
-**代码列表 9.8 manual_event.js 这里的 JavaScript 代码，用于从来自 `<span>` 元素手动触发复选框元素的点击事件**
+### 代码列表 9.8 manual_event.js
+
+这里的 JavaScript 代码，用于从来自`<span>`元素手动触发复选框元素的点击事件
 
 点击此处查看代码图片
 
@@ -6439,7 +6434,9 @@ function eventClick(e){
 }
 ```
 
-**代码列表 9.9 manual_event.css 用于设置 `<span>` 元素样 CSS 代码**
+### 代码列表 9.9 manual_event.css
+
+用于设置`<span>`元素样 CSS 代码
 
 ```css
 span{
@@ -6453,15 +6450,15 @@ span{
 }
 ```
 
-#### 使用 jQuery 手动触发事件
+## 使用 jQuery 手动触发事件
 
-现在你已经有机会从 JavaScript 触发事件了，你已经准备好发现如果你能够使用 jQuery，它将如何让你的生活变得多么简单了。jQuery 还支持两种手动触发事件的方法。与 JavaScript 类似，jQuery 对象也有许多与你可以调用的许多事件类型对应的方法。例如，大多数元素都有 `click()` 和 `dblclick()` 方法。表单元素增加了额外的方法，如 `blur()`、`focus()`、`keypress()`、`keydown()` 和 `keyup()`，可以调用它们来触发特定事件。例如，以下语句会触发所有 `<span>` 元素的 `click` 事件：
+现在你已经有机会从 JavaScript 触发事件了，你已经准备好发现如果你能够使用 jQuery，它将如何让你的生活变得多么简单了。jQuery 还支持两种手动触发事件的方法。与 JavaScript 类似，jQuery 对象也有许多与你可以调用的许多事件类型对应的方法。例如，大多数元素都有`click()`和`dblclick()`方法。表单元素增加了额外的方法，如`blur()`、`focus()`、`keypress()`、`keydown()`和`keyup()`，可以调用它们来触发特定事件。例如，以下语句会触发所有`<span>`元素的`click`事件：
 
 ```javascript
 $("span").click();
 ```
 
-jQuery 还提供了一种通过 `trigger()` 方法在指定事件对象值的同时触发事件的方法。`trigger()` 方法有两种不同的语法，如下所示：
+jQuery 还提供了一种通过`trigger()`方法在指定事件对象值的同时触发事件的方法。`trigger()`方法有两种不同的语法，如下所示：
 
 ```javascript
 trigger(eventType [, extraParameters])
@@ -6471,30 +6468,31 @@ trigger(eventType [, extraParameters])
 trigger(eventObject)
 ```
 
-以下是使用第一种方法触发所有 `class="checkbox"` 元素的 `click` 事件的示例：
+以下是使用第一种方法触发所有`class="checkbox"`元素的`click`事件的示例：
 
 ```javascript
 $(".checkbox").trigger("click");
 ```
 
-以下是在所有具有 `class="bigText"` 的输入项上使用第二种方法的示例。该方法为 `keypress` 事件传递了一个简单的事件对象，然后将事件对象的 `charCode` 属性设置为 13，即回车键：
-
-
+以下是在所有具有`class="bigText"`的输入项上使用第二种方法的示例。该方法为`keypress`事件传递了一个简单的事件对象，然后将事件对象的`charCode`属性设置为 13，即回车键：
 
 ```javascript
 $("input.bigText").trigger({'type':'keypress', 'charCode':13});
 ```
 
-注意，这比 JavaScript 的方法要简单得多，因为 `trigger()` 接受一个带有适当属性名称的简单对象，以设置你想要在事件对象中传递的任何值。偶尔，你可能不得不使用 JavaScript 方法，但你应该尽可能多地使用 jQuery。
+注意，这比 JavaScript 的方法要简单得多，因为`trigger()`接受一个带有适当属性名称的简单对象，以设置你想要在事件对象中传递的任何值。偶尔，你可能不得不使用 JavaScript 方法，但你应该尽可能多地使用 jQuery。
 
 ### 尝试一下：在 jQuery 中手动触发事件
 
-在这个示例中，你将通过使用来自 `<span>` 元素的事件处理程序来为 `<input>` 元素触发 `keypress` 事件的过程。结果是，对 `<span>` 的点击将作为按键传递给 `<input>` 元素。使用以下步骤创建列表 9.10、9.11 和 9.12 所示的文件：
+在这个示例中，你将通过使用来自`<span>`元素的事件处理程序来为`<input>`元素触发`keypress`事件的过程。结果是，对`<span>`的点击将作为按键传递给`<input>`元素。使用以下步骤创建列表 9.10、9.11 和 9.12 所示的文件：
 
-1. 在 Eclipse 中创建 `lesson09/card_suits.html`、`lesson09/js/card_suits.js` 和 `lesson09/css/card_suits.css` 文件。
-2. 将列表 9.10 中的代码添加到 HTML 文件中。这是一个加载了额外 jQuery、JavaScript 和 CSS 文件的基础 HTML 文件。有一个 `<p>` 元素、一个 `<input>` 元素以及一系列作为按钮的 `<span>` 元素。
-3. 将列表 9.12 中的 CSS 添加到 CSS 文件。该代码将 `<span>` 元素样式化为按钮，并为 `<p>` 元素提供良好的格式。
-4. 打开 `card_suits.js` 文件并添加以下 `ready()` 初始化函数，该函数为 `<input>` 元素附加 `keypress` 事件处理程序，并为所有 `<span>` 元素附加 `click` 处理程序：
+1. 在 Eclipse 中创建`lesson09/card_suits.html`、`lesson09/js/card_suits.js`和`lesson09/css/card_suits.css`文件。
+
+2. 将列表 9.10 中的代码添加到 HTML 文件中。这是一个加载了额外 jQuery、JavaScript 和 CSS 文件的基础 HTML 文件。有一个`<p>`元素、一个`<input>`元素以及一系列作为按钮的`<span>`元素。
+
+3. 将列表 9.12 中的 CSS 添加到 CSS 文件。该代码将`<span>`元素样式化为按钮，并为`<p>`元素提供良好的格式。
+
+4. 打开`card_suits.js`文件并添加以下`ready()`初始化函数，该函数为`<input>`元素附加`keypress`事件处理程序，并为所有`<span>`元素附加`click`处理程序：
 
 ```javascript
 $(document).ready(function(){
@@ -6503,7 +6501,7 @@ $(document).ready(function(){
 });
 ```
 
-5. 创建 `inputHandler()` 处理函数，该函数从事件对象获取 `charCode` 并并将字符串添加到 `<p>` 元素中。此时，当你在文本 `<input>` 中输入时，它也会显示在 `<p>` 元素中：
+5. 创建`inputHandler()`处理函数，该函数从事件对象获取`charCode`并并将字符串添加到`<p>`元素中。此时，当你在文本`<input>`中输入时，它也会显示在`<p>`元素中：
 
 ```javascript
 function inputHandler(e){
@@ -6512,7 +6510,7 @@ function inputHandler(e){
 }
 ```
 
-6. 添加以下 `spanHandler()` 处理函数，该函数获取 `<span>` 元素的 `innerHTML` 并第一个字符转换为代码。第 7 行随后 `<input>` 元素触发 `keypress` 事件，将按钮的字符代码作为 `charCode` 值传递。这允许用户点击按钮并使用文本 `<inputs>` 的事件处理程序应用卡牌符号：
+6. 添加以下`spanHandler()`处理函数，该函数获取`<span>`元素的`innerHTML`并第一个字符转换为代码。第 7 行随后`<input>`元素触发`keypress`事件，将按钮的字符代码作为`charCode`值传递。这允许用户点击按钮并使用文本`<inputs>`的事件处理程序应用卡牌符号：
 
 ```javascript
 function spanHandler(e){
@@ -6521,15 +6519,13 @@ function spanHandler(e){
 }
 ```
 
+### 列表 9.10 card_suits.html
 
-
-
-
-# 列表 9.10 card_suits.html 加载 CSS 和 JavaScript 并定义 <p>、文本 <input> 和 <span> 元素的 HTML 文件
+加载 CSS 和 JavaScript 并定义`<p>`、文本`<input>`和`<span>`元素的 HTML 文件
 
 点击此处查看代码图像
 
-* * *
+---
 
 ```html
 01 <!DOCTYPE html>
@@ -6552,13 +6548,17 @@ function spanHandler(e){
 18 </html>
 ```
 
-* * *
+---
 
-# 列表 9.11 card_suits.js 通过 <span> 元素的事件处理器触发 <input> 元素 keypress 事件的 JavaScript 代码
+### 列表 9.11 card_suits.js
+
+通过`<span>`元素的事件处理器触发`<input>`元素`keypress`事件的 JavaScript 代码
 
 点击此处查看代码图像
 
-* * *
+---
+
+
 
 ```javascript
 01 function inputHandler(e){
@@ -6575,13 +6575,9 @@ function spanHandler(e){
 12 });
 ```
 
-* * *
-
-# 列表 9.12 card_suits.css 为 <span> 和 <p> 元素设置的 CSS 代码
+# 列表 9.12：`card_suits.css` 为 `<span>` 和 `<p>` 元素设置的 CSS 代码
 
 点击此处查看代码图像
-
-* * *
 
 ```css
 01 span{
@@ -6600,11 +6596,7 @@ function spanHandler(e){
 14 }
 ```
 
-* * *
-
-* * *
-
-### 创建自定义事件
+## 创建自定义事件
 
 JavaScript 和 jQuery 事件处理机制非常强大的方面是添加自定义事件的能力。这解决了内置事件都与 DOM 元素和浏览器支持的特定行为的问题。如果你希望当数组中的项目数量大于 100 时触发一个事件，该怎么办？
 
@@ -6614,7 +6606,7 @@ JavaScript 和 jQuery 事件处理机制非常强大的方面是添加自定义�
 
 以下章节描述了你可以在 JavaScript 和 jQuery 中添加自己的自定义事件的不同方法。
 
-#### 使用 JavaScript 添加自定义事件
+### 使用 JavaScript 添加自定义事件
 
 在 JavaScript 中添加自定义事件与触发事件相似，即你创建一个自定义事件对象并对其进行初始化。以下代码显示了创建一个基本自定义事件的示例：
 
@@ -6638,9 +6630,6 @@ myEvent .initCustomEvent(
 ```javascript
 document.dispatchEvent(myEvent);
 ```
-
-
-
 
 jQuery 提供了一种实现回调函数的奇颖方式，即延迟对象（deferred object）。延迟对象是一个包含一组函数的对象，这些函数可以在以后的某个时间运行。传递给函数的实际参数只有在延迟对象被解析（resolve）且函数被执行时，才会被添加到其中。
 
@@ -6673,7 +6662,9 @@ deferredObj.resolve(5,6);
 
 在调用 `.resolve(args)` 之前，这些函数都不会执行。注意 `.resolve()` 的参数与函数所需的参数相匹配。每个函数按顺序执行。结果是将以下字符串追加到 `<div>` 元素中：
 
+```text
 Problem: 5 + 6 = 11
+```
 
 ### 总结
 
@@ -6715,32 +6706,32 @@ Problem: 5 + 6 = 11
 
 **4.** 错误。鼠标事件可以在 jQuery 和 JavaScript 中被手动触发。
 
-#### 练习题
+### 练习题
 
 **1.** 扩展 `9.10(#part0021.xhtml_ch09lis10)`、`9.11(#part0021.xhtml_ch09lis11)` 和 `9.12(#part0021.xhtml_ch09lis12)` 中的示例，为非标准字符添加额外的按钮。你需要从 Web 获取 Unicode 字符编码。
 
 **2.** 扩展 `9.7(#part0021.xhtml_ch09lis07)`、`9.8(#part0021.xhtml_ch09lis08)` 和 `9.9(#part0021.xhtml_ch09lis09)` 中的示例。
 
-## 第 10 课：使用 JavaScript 和 jQuery 动态访问和操作网页
+# 第 10 课：使用 JavaScript 和 jQuery 动态访问和操作网页
 
 在本节中将学习：
 
-- **跟踪鼠标位置和其他信息**
-- **操作元素的大小和其他属性**
-- **动态显示和隐藏元素**
-- **动态创建元素并添加到网页**
-- **在 jQuery 中添加和类**
-- **修改网页布局**
+- 跟踪鼠标位置和其他信息
+- 操作元素的大小和其他属性
+- 动态显示和隐藏元素
+- 动态创建元素并添加到网页
+- 在 jQuery 中添加和类
+- 修改网页布局
 
 这节课非常重要。到目前为止，已经为你提供了实现高度动态交互式网页的大部分工具。在本节中，你将学习如何使用这些工具以及一些新工具来访问信息。
 
 你将了解到 JavaScript 和 jQuery 的网页操作方法是完全开放的。你可以从 JavaScript 代码的任何地方操作页面元素。这种方法的优点是只需少量代码就能轻松转换页面。缺点是你需要保持自律，以确保代码易维护。AngularJS 有一种完全不同的方法，你将在 AngularJS 章节中学习。现在，请享受快速且方便的动态网页操作之旅。
 
-### 访问浏览器和元素值
+## 访问浏览器和元素值
 
 jQuery 和 JavaScript 的核心基础之一是访问代表网页元素的 DOM 对象。本节将引导你访问属性值、位置、大小和其他属性，并向你展示如何修改其中的许多内容。
 
-#### 获取鼠标位置
+### 获取鼠标位置
 
 鼠标移动是你将处理的最常见的网页交互之一。通常，你可能根据鼠标的位置对元素进行调整。
 
@@ -6760,10 +6751,7 @@ var pagePosition = e.pageX + ", " + e.pageY;
 var browserPosition = e.clientX + ", " + e.clientY;
 ```
 
-#### 获取和设置值
-
-
-
+### 获取和设置值
 
 若干 HTML 元素（特别是输入元素）具有与其关联的值。在 `jQuery` 和 `JavaScript` 中，访问这些元素的值都是非常简单的事情。
 
@@ -6785,7 +6773,7 @@ $("#textInput").val(5);
 var value = $("#textInput ").val();
 ```
 
-### 在 jQuery 中获取和设置属性和属性
+## 在 jQuery 中获取和设置属性和属性
 
 DOM 对象允许直接访问其所代表的 HTML 元素的 DOM 对象属性和 DOM 元素属性。这在 `jQuery` 中是不合理的，因为 `jQuery` 对象通常代表具有不同属性的多个元素。出于此原因，`jQuery` 提供了 `.attr()` 和 `.prop()` 方法来获取和设置这些元素的属性和属性。
 
@@ -6821,15 +6809,11 @@ var state = $("#firstCheckbox").prop("checked");
 $("input").prop("checked", true);
 ```
 
-***
+> **注意**
+>
+> 在 `jQuery` 中，属性（property）和特性（attribute）唯一的区别在于：特性是定义 HTML 结构的值，而属性影响对象的动态状态的值。例如，在 `<input>` 元素中，`"type"` 是特性，因为它定义了结构；而 `"checked"` 是属性，因为它只影响状态。
 
-注意
-
-在 `jQuery` 中，属性（property）和特性（attribute）唯一的区别在于：特性是定义 HTML 结构的值，而属性影响对象的动态状态的值。例如，在 `<input>` 元素中，"type"` 是特性，因为它定义了结构；而 `"checked"` 是属性，因为它只影响状态。
-
-***
-
-### 获取和设置 CSS 属性
+## 获取和设置 CSS 属性
 
 动态网页编程另一个重要方面是 CSS 的动态操作。
 
@@ -6879,17 +6863,13 @@ $("span").css({margin:0, padding:2, float:"left", "font-weight":"bold"});
 
 注意，属性名可以包含引号也可以不包含。如果属性名包含特殊字符，则需要使用引号。
 
-
-
-
-
 获取 HTML 元素相关类的最简单方法是查看 DOM 对象的 `className` 属性。`className` 属性是一个字符串，包含了附加到元素上的类（或类）名称。请注意，一个元素可能附加了多个类名。在这种情况下，这些名称将用空格分隔。
 
 以下示例展示了如何使用 jQuery 获取带有 `id="mainList"` 的元素的 `className` 属性：
 
 点击此处查看代码图像
 
-```
+```javascript
 var class = $("#mainList").get().className;
 ```
 
@@ -6901,7 +6881,7 @@ var class = $("#mainList").get().className;
 
 你可以使用 JavaScript 中的 `Screen` 对象访问屏幕尺寸。`Screen` 对象提供了 `width` 和 `height` 属性，它们代表屏幕分辨率的维度。例如，以下代码将屏幕的 `width` 和 `height` 存储在变量中：
 
-点击此处查看代码图像
+点击此处查看代码图片
 
 ```javascript
 var sWidth = screen.width;
@@ -6910,7 +6890,7 @@ var sHeight = screen.height;
 
 要获取屏幕以及因此 Web 浏览器支持的颜色，请使用 `Screen` 对象的 `colorDepth` 属性。它返回支持的位数的值——例如 8、16、24。以下是获取屏幕支持的色彩深示例：
 
-点击此处查看代码图像
+点击此处查看代码图片
 
 ```javascript
 var colorBits = screen.colorDepth;
@@ -6918,7 +6898,9 @@ var colorBits = screen.colorDepth;
 
 即使屏幕很大，浏览器窗口也可能没有占据整个屏幕。虽然浏览器窗口为超过窗口大小的网页提供了滚动条，但随着浏览器尺寸的变化，调整页面元素的大小或调整布局通常看起来会更好。
 
-可以通过 JavaScript 中 window 对象的 `innerWidth`、`outerWidth`、`innerHeight` 和 `outerHeight` 属性访问浏览器维度。`innerHeight` 和 `innerWidth` 值指的是网页可用的实际区域。`outerWidth` 和 `outerHeight` 指包括浏览器菜单、边框和栏在内的总区域。以下是获取网页显示区域尺寸的示例：
+
+
+可以通过 JavaScript 中 `window` 对象的 `innerWidth`、`outerWidth`、`innerHeight` 和 `outerHeight` 属性访问浏览器维度。`innerHeight` 和 `innerWidth` 值指的是网页可用的实际区域。`outerWidth` 和 `outerHeight` 指包括浏览器菜单、边框和栏在内的总区域。以下是获取网页显示区域尺寸的示例：
 
 点击此处查看代码图像
 
@@ -6927,18 +6909,20 @@ var pageWidth = window.innerWidth;
 var pageHeight = window.innerHeight;
 ```
 
-***
-
 ## 动手尝试：使用 jQuery 和 JavaScript 获取屏幕、浏览器、鼠标和元素信息
 
-现在是把所有内容整合在一起了。在这个示例中，你将构建包含一些不同 HTML 元素的基础网页。其中一个元素将是 `<div>`，用于显示屏幕、浏览器、鼠标和元素信息，并在每次移动鼠标时更新。代码显示在 Listing 10.1、10.2 和 10.3 中。起初看起来代码很多，但它们其实非常基础，并将帮助你了解如何从 jQuery 和 JavaScript 获取有关当前状态的信息。
+现在是把所有内容整合在一起了。在这个示例中，你将构建包含一些不同 HTML 元素的基础网页。其中一个元素将是 `<div>`，用于显示屏幕、浏览器、鼠标和元素信息，并在每次移动鼠标时更新。代码显示在 `Listing 10.1`、`10.2` 和 `10.3` 中。起初看起来代码很多，但它们其实非常基础，并将帮助你了解如何从 jQuery 和 JavaScript 获取有关当前状态的信息。
 
 使用以下步骤实现该示例：
 
-1. 在 Eclipse 中，创建 `lesson10`、`lesson10/js` 和 `lesson10/css` 文件夹。
+1. 在 `Eclipse` 中，创建 `lesson10`、`lesson10/js` 和 `lesson10/css` 文件夹。
+
 2. 创建 `lesson10/web_page_manipulation.html`、`lesson10/js/web_page_manipulation.js` 和 `lesson10/css/web_page_manipulation.css` 文件。
-3. 将 Listing 10.1 所示的代码添加到 HTML 文件中。你应该能识别出这些 HTML 组件。它有两个主要部分：第一部分定义了若干供你交互的元素，第二部分（那个非常长的 `<div>`）提供了一个显示鼠标、屏幕、浏览器和元素信息的地方。
-4. 将 Listing 10.3 中的 CSS 添加到 CSS 文件中。现在你也应该识别这些 CSS 语句了。CSS 中的某些行被合并在一起，以便更好地适应书中。
+
+3. 将 `Listing 10.1` 所示的代码添加到 HTML 文件中。你应该能识别出这些 HTML 组件。它有两个主要部分：第一部分定义了若干供你交互的元素，第二部分（那个非常长的 `<div>`）提供了一个显示鼠标、屏幕、浏览器和元素信息的地方。
+
+4. 将 `Listing 10.3` 中的 CSS 添加到 CSS 文件中。现在你也应该识别这些 CSS 语句了。CSS 中的某些行被合并在一起，以便更好地适应书中。
+
 5. 打开 `web_page_manipulation.js` 文件以及下面的 `load()` 函数，该函数为 `mousemove`、`mouseover`、`change`、`keypress` 和 `resize` 事件添加了事件处理器。你将在稍后的步骤中创建这些事件处理器。`mousemove` 事件处理器附加到文档上，以捕获文档层面的鼠标移动。`resize` 处理器附加到窗口上，以便在浏览器调整大小时你可以显示信息：
 
 点击此处查看代码图像
@@ -6952,6 +6936,7 @@ var pageHeight = window.innerHeight;
 06   $("*").resize(windowResize);
 07 });
 ```
+
 6. 添加在 `mousemove` 时调用的处理器。传播被阻止了，以便你只获取一次屏幕。`Screen` 对象被用于获取屏幕尺寸和颜色。事件对象用于获取鼠标坐标：
 
 点击此处查看代码图像
@@ -6967,6 +6952,7 @@ var pageHeight = window.innerHeight;
 15   $("#scrollPosition").html(e.clientX + "x" + e.clientY);
 16 }
 ```
+
 7. 创建显示元素的函数。传播被阻止了。`domObj` 被赋值为 `target`，`jObj` 是 `target` 的 jQuery 版本：
 
 点击此处查看代码图像
@@ -6979,6 +6965,7 @@ var pageHeight = window.innerHeight;
 21   var jObj = $(domObj);
 22 }
 ```
+
 8. 使用 DOM 和 jQuery 对象显示 `id`、`tag` 和 `class` 属性的语句：
 
 点击此处查看代码图像
@@ -6988,6 +6975,7 @@ var pageHeight = window.innerHeight;
 24 $("#elementType").html(jObj.prop('tagName'));
 25 $("#elementClass").html(domObj.className);
 ```
+
 9. 添加显示元素尺寸和位置的语句：
 
 点击此处查看代码图像
@@ -6996,7 +6984,8 @@ var pageHeight = window.innerHeight;
 26 $("#elementSize").html(jObj.width() + "x" + jObj.height());
 27 $("#elementPosition").html(jObj.offset().top + ", " + jObj.offset().left);
 ```
-10. 添加以下杂项语句。27 行使用 `.css()` 方法获取颜色属性，28 行使用 `.val()` 获取元素的值（如果有），30 行获取元素的被选中状态（如果可用），32 行获取 `<img>` 元素的 `src` 属性：
+
+10. 添加以下杂项语句。`27` 行使用 `.css()` 方法获取颜色属性，`28` 行使用 `.val()` 获取元素的值（如果有），`30` 行获取元素的被选中状态（如果可用），`32` 行获取 `<img>` 元素的 `src` 属性：
 
 点击此处查看代码图像
 
@@ -7008,6 +6997,7 @@ var pageHeight = window.innerHeight;
 31 } catch (e) {}
 32 $("#elementSource").html(jObj.attr('src'));
 ```
+
 11. 添加以下处理器，每次你调整浏览器大小时都会设置浏览器窗口尺寸：
 
 点击此处查看代码图像
@@ -7018,22 +7008,17 @@ var pageHeight = window.innerHeight;
 36 }
 ```
 
-
-
-
-## 12. 保存所有三个文件，然后在网络浏览器中打开 HTML 文档。尝试操作 HTML 元素并观察信息的变化，如图 10.1 所示。鼠标坐标、屏幕、浏览器大小以及元素信息都会显示出来。不要忘记尝试调整浏览器大小和滚动页面。
+## 12. 保存所有三个文件，然后在网络浏览器中打开 HTML 文档。尝试操作 HTML 元素并观察信息的变化，如图 `10.1` 所示。鼠标坐标、屏幕、浏览器大小以及元素信息都会显示出来。不要忘记尝试调整浏览器大小和滚动页面。
 
 ![Image](img/image0090.jpeg)![Image](img/image00901.jpeg)
 
 **图 10.1** 网页，会在你操作网页时显示屏幕、浏览器、鼠标和元素信息。
 
-**代码列表 10.1 web_page_manipulation.html HTML 文件，提供了若干个可以操作的元素，以及一个显示信息的独立 `<div>`**
+**代码列表 10.1** `web_page_manipulation.html` HTML 文件，提供了若干个可以操作的元素，以及一个显示信息的独立 `<div>`
 
 点击此处查看代码图片
 
-***
-
-```
+```html
 01 <!DOCTYPE html>
 02 <<html>
 03   <head>
@@ -7089,15 +7074,11 @@ var pageHeight = window.innerHeight;
 53 </html>
 ```
 
-***
-
-**代码列表 10.2 web_page_manipulation.js jQuery 和 JavaScript 代码，用于获取和显示关于屏幕、浏览器和 HTML 元素的信息**
+**代码列表 10.2** `web_page_manipulation.js` jQuery 和 JavaScript 代码，用于获取和显示关于屏幕、浏览器和 HTML 元素的信息
 
 点击此处查看代码图片
 
-***
-
-```
+```javascript
 01 $(window).load(function(){
 02   $(document).mousemove(mousePosition);
 03   $("*").mouseover(elementInfo);
@@ -7130,15 +7111,11 @@ var pageHeight = window.innerHeight;
 30 }
 ```
 
-***
-
-**代码列表 10.3 web_page_manipulation.css CSS 代码，用于设置 `<div>` 和其他元素的样式**
+**代码列表 10.3** `web_page_manipulation.css` CSS 代码，用于设置 `<div>` 和其他元素的样式
 
 点击此处查看代码图片
 
-***
-
-```
+```css
 01 .infoContainer{
 02   border:3px ridge;
 03   padding:3px;
@@ -7150,11 +7127,8 @@ var pageHeight = window.innerHeight;
 09   overflow-y:auto;
 10 }
 ```
+
 （注：提供的 CSS 代码块存在碎片化或损坏，我已根据上下文重建了逻辑结构。）
-
-
-
-
 
 ```javascript
 var newT = createTextNode("Paragraph 1 goes here");
@@ -7168,6 +7142,8 @@ domObj.appendChild(newP);
 
 点击此处查看代码图片
 
+
+
 ```javascript
 var newImg = createElement("img");
 
@@ -7180,7 +7156,7 @@ domObj.appendChild(newImg);
 
 ### 在 jQuery 中添加页面元素
 
-现在你可以查看如何在 jQuery 中添加新元素。你可以通过使用 `.html()` 方法在 jQuery 中应用与 JavaScript 相同的 `innerHTML` 快捷方法，该方法可以获取或设置 `innerHTML` 字符串。例如：
+现在你可以查看如何在 jQuery 中添加新元素。你可以通过使用`.html()`方法在 jQuery 中应用与 JavaScript 相同的`innerHTML`快捷方法，该方法可以获取或设置`innerHTML`字符串。例如：
 
 点击此处查看代码图片
 
@@ -7188,7 +7164,7 @@ domObj.appendChild(newImg);
 $("#myDiv").html("<p>Paragraph 1 goes here</p>");
 ```
 
-然而，这种方法具有相同的局限性，应该谨慎使用。更好的方法是创建一个新的 jQuery 对象并将其附加。以下代码将带你完成这一过程。第一步是通过向 jQuery 对象 `$` 传递标签名或 HTML 字符串来创建对象。例如，以下语句在集合中创建一个包含一个 `<p>` 元素的新 jQuery 对象：
+然而，这种方法具有相同的局限性，应该谨慎使用。更好的方法是创建一个新的 jQuery 对象并将其附加。以下代码将带你完成这一过程。第一步是通过向 jQuery 对象`$`传递标签名或 HTML 字符串来创建对象。例如，以下语句在集合中创建一个包含一个`<p>`元素的新 jQuery 对象：
 
 ```javascript
 var newP = $("<p></p>");
@@ -7202,13 +7178,13 @@ var newP = $("<p></p>");
 newP.html("Paragraph 1 goes here");
 ```
 
-然后你可以使用 `.append(jQueryObject)` 将元素附加到一个或多个现有元素中。例如，以下代码将段落添加到所有的 `<div>` 元素中：
+然后你可以使用`.append(jQueryObject)`将元素附加到一个或多个现有元素中。例如，以下代码将段落添加到所有的`<div>`元素中：
 
 ```javascript
 $("div").append(newP);
 ```
 
-为了说明这一点，以下代码创建了一个包含 `<img>` 元素的新 jQuery 对象，并将其添加到所有 `<li>` 元素中：
+为了说明这一点，以下代码创建了一个包含`<img>`元素的新 jQuery 对象，并将其添加到所有`<li>`元素中：
 
 点击此处查看代码图片
 
@@ -7222,7 +7198,7 @@ newImg.height(30);
 $("li").append(newImg);
 ```
 
-jQuery 还提供了 `.appendTo(target)` 方法，允许你将一个对象附加到另一个对象。它的工作与 `.append()` 相同，但方向相反。该方法是从子对象而不是新的父对象调用的。例如，上一个示例中的 `newImg` 对象可以使用以下语句替代：
+jQuery 还提供了`.appendTo(target)`方法，允许你将一个对象附加到另一个对象。它的工作与`.append()`相同，但方向相反。该方法是从子对象而不是新的父对象调用的。例如，上一个示例中的`newImg`对象可以使用以下语句替代：
 
 ```javascript
 newImg.appendTo("li");
@@ -7230,11 +7206,11 @@ newImg.appendTo("li");
 
 ### 移除页面元素
 
-可以通过可以通过移除元素。最基本的方法是获取父对象，然后对 DOM 对象设置 `domObj.innerHTML = ""` 或对 jQuery 对象调用 `jObj.html("")`。这会清除父元素内部的所有内容，从而移除任何子元素。
+可以通过可以通过移除元素。最基本的方法是获取父对象，然后对 DOM 对象设置`domObj.innerHTML = ""`或对 jQuery 对象调用`jObj.html("")`。这会清除父元素内部的所有内容，从而移除任何子元素。
 
-尝试设计你的 HTML 组件，以便能够使用 `.html("")` 方法移除元素，因为这让清理代码变得简单。另一个优势是向容器添加新元素变得更容易，因为你不需要处理已有的元素。
+尝试设计你的 HTML 组件，以便能够使用`.html("")`方法移除元素，因为这让清理代码变得简单。另一个优势是向容器添加新元素变得更容易，因为你不需要处理已有的元素。
 
-在 JavaScript 中，你也可以在父元素上调用 `.removeElement(child)`。例如，以下代码获取一个 `id="container"` 的元素，然后移除 `id="paragraphA"` 的子元素：
+在 JavaScript 中，你也可以在父元素上调用`.removeElement(child)`。例如，以下代码获取一个`id="container"`的元素，然后移除`id="paragraphA"`的子元素：
 
 点击此处查看代码图片
 
@@ -7246,21 +7222,21 @@ var child=document.getElementById("paragraphA");
 child.parentNode.removeChild(child);
 ```
 
-jQuery 提供了两种移除元素的方法。第一个是 `.empty()`，它等同于 `.html("")`。使用 `.empty()`，所有的子元素和文本将被移除。第二个方法是 `.remove([selector])`，它仅根据原始查询和可选的 `selector` 移除元素。
+jQuery 提供了两种移除元素的方法。第一个是`.empty()`，它等同于`.html("")`。使用`.empty()`，所有的子元素和文本将被移除。第二个方法是`.remove([selector])`，它仅根据原始查询和可选的`selector`移除元素。
 
-如果没有指定选择器，将移除原始查询的元素。例如，要移除所有的 `<div>` 元素，请使用以下语句：
+如果没有指定选择器，将移除原始查询的元素。例如，要移除所有的`<div>`元素，请使用以下语句：
 
 ```javascript
 $("div").remove()
 ```
 
-如果指定了选择器，原始查询中匹配选择器的子元素将被移除。例如，要移除 `<div>` 元素内部的 `<p>` 元素，请使用：
+如果指定了选择器，原始查询中匹配选择器的子元素将被移除。例如，要移除`<div>`元素内部的`<p>`元素，请使用：
 
 ```javascript
 $("div").remove("p");
 ```
 
-jQuery 还提供了一个在移除元素时非常有用的额外方法：`.detach([selector])` 方法。detach 方法的工作方式与 `.remove([selector])` 方法相同，但有一个重要的区别：即使元素从父元素中移除，实际的元素 DOM 数据也不会被删除。你仍然在现有的 jQuery 对象中拥有这些元素，并将它们重新插入 DOM 的其他位置。
+jQuery 还提供了一个在移除元素时非常有用的额外方法：`.detach([selector])`方法。`detach`方法的工作方式与`.remove([selector])`方法相同，但有一个重要的区别：即使元素从父元素中移除，实际的元素 DOM 数据也不会被删除。你仍然在现有的 jQuery 对象中拥有这些元素，并将它们重新插入 DOM 的其他位置。
 
 例如，以下代码从一个元素中分离所有段落并将它们添加到另一个中：
 
@@ -7276,7 +7252,7 @@ ps.appendTo("#div2");
 
 正如你在之前的章节中看到的，你可以轻松通过 jQuery 添加和移除元素。你还需要了解如何替换元素。
 
-你可以使用三种方法来替换 jQuery 中的元素。最简单的是使用 `.html()`。jQuery 中的 `.html()` 方法对于替换现有元素的内容非常有用。`.html()` 方法接受一个字符串或一个对象。例如，以下语句将所有 `<div>` 元素的内容替换为段落：
+你可以使用三种方法来替换 jQuery 中的元素。最简单的是使用`.html()`。jQuery 中的`.html()`方法对于替换现有元素的内容非常有用。`.html()`方法接受一个字符串或一个对象。例如，以下语句将所有`<div>`元素的内容替换为段落：
 
 点击此处查看代码图片
 
@@ -7284,7 +7260,7 @@ ps.appendTo("#div2");
 $("div").html("<p>New Paragraph</p>");
 ```
 
-另一种替换集合的方法是使用 `.replaceAll(target)`。该方法替换匹配 `target` 选择器的元素。例如，要将 `parentB` 替换为 `parentA` span 元素，你可以使用：
+另一种替换集合的方法是使用`.replaceAll(target)`。该方法替换匹配`target`选择器的元素。例如，要将`parentB`替换为`parentA` span 元素，你可以使用：
 
 点击此处查看代码图片
 
@@ -7292,7 +7268,7 @@ $("div").html("<p>New Paragraph</p>");
 $("#parentA span").replaceAll("#parentB");
 ```
 
-最后的方法是使用 `.replaceWith(newContent)`，它与 `.replaceAll()` 相。`.replaceWith()` 使用指定的内容替换元素。例如，要将所有的 `<div>` 元素替换为一个空的 `<div>`，你可以使用：
+最后的方法是使用`.replaceWith(newContent)`，它与`.replaceAll()`相同。`.replaceWith()`使用指定的内容替换元素。例如，要将所有的`<div>`元素替换为一个空的`<div>`，你可以使用：
 
 点击此处查看代码图片
 
@@ -7302,9 +7278,9 @@ $("div").replaceWith("<div>");
 
 ### 在 jQuery 中插入元素
 
-jQuery 的另一个重要功能是可以轻松向现有内容插入元素。你已经学会了如何在末尾添加项目；但如果你想在中间插入内容呢？`.before()` 和 `.after()` 方法就派上用场了。
+jQuery 的另一个重要功能是可以轻松向现有内容插入元素。你已经学会了如何在末尾添加项目；但如果你想在中间插入内容呢？`.before()`和`.after()`方法就派上用场了。
 
-`.after(content [,content])` 方法允许你指定一个插入到当前 jQuery 对象集合中每个元素之后的元素。例如，要在文档中的第三个 `<p>` 元素之后插入新段落，将使用以下代码：
+`.after(content [,content])`方法允许你指定一个插入到当前 jQuery 对象集合中每个元素之后的元素。例如，要在文档中的第三个`<p>`元素之后插入新段落，将使用以下代码：
 
 点击此处查看代码图片
 
@@ -7312,7 +7288,7 @@ jQuery 的另一个重要功能是可以轻松向现有内容插入元素。你�
 $("p:eq(2)").after("<p>New Fourth Paragraph</p>");
 ```
 
-`.before(content [,content])` 方法允许你指定一个插入到当前 jQuery 对象集合中每个元素之前的元素。例如，要在文档中的第三个 `<p>` 元素之前插入新段落，将使用以下代码：
+`.before(content [,content])`方法允许你指定一个插入到当前 jQuery 对象集合中每个元素之前的元素。例如，要在文档中的第三个`<p>`元素之前插入新段落，将使用以下代码：
 
 点击此处查看代码图片
 
@@ -7320,79 +7296,76 @@ $("p:eq(2)").after("<p>New Fourth Paragraph</p>");
 $("p:eq(2)").before("<p>New Third Paragraph</p>");
 ```
 
-
-
-
-
 富交互网页网页的一个非常重要的部分是良好的 CSS 设计。JavaScript 和 jQuery 可以通过动态向元素添加和移除类（classes）来增强 CSS 设计。
 
 jQuery 让添加、移除和切换类变得极其简单。如果你将 CSS 代码设计得当，就可以非常容易地应用一些精美的效果。
 
-使用 `.addClass(className)` 方法添加类。例如，要为所有 `<span>` 元素添加名为 `active` 的类，你可以使用以下语句：
+使用`.addClass(className)`方法添加类。例如，要为所有`<span>`元素添加名为`active`的类，你可以使用以下语句：
 
 点击此处查看代码图片
 
-```
+```javascript
 $("span").addClass("active");
 ```
 
-使用 `.removeClass([className])` 方法移除类。例如，要从 `<span>` 元素中移除 active 类，你将调用以下代码：
+使用`.removeClass([className])`方法移除类。例如，要从`<span>`元素中移除 active 类，你将调用以下代码：
 
 点击此处查看代码图片
 
-```
+```javascript
 $("span").removeClass("active");
 ```
 
-你也可以使用不带 `className` 的 `remove`，这会移除元素上的所有类。例如，以下语句会移除 `<p>` 元素上的所有类：
+你也可以使用不带`className`的`remove`，这会移除元素上的所有类。例如，以下语句会移除`<p>`元素上的所有类：
 
-```
+```javascript
 $("p").removeClass();
 ```
 
-你还可以使用 `.toggleClass(className [, switch])` 方法切换类的开启和关闭。除了 `className` 外，你还可以为可选的 `switch` 参数指定 `true` 或 `false`，表示开启或关闭类。
+你还可以使用`.toggleClass(className [, switch])`方法切换类的开启和关闭。除了`className`外，你还可以为可选的`switch`参数指定`true`或`false`，表示开启或关闭类。
 
-例如，要关闭所有 `<span>` 元素的 active 类和 inactive 类，代码如下：
+例如，要关闭所有`<span>`元素的 active 类和 inactive 类，代码如下：
 
 点击此处查看代码图片
 
-```
+```javascript
 $("span").toggleClass("active", true);
 $("span").toggleClass("inactive", false);
 ```
 
 ### 切换可见性
 
-改变网页外观的一种简单方法是切换元素的可见性。你可以通过将 JavaScript 中的 `style.display` 属性设置为 `"none"` 或 `""` 来实现这一点；然而，jQuery 提供了更优雅且扩展性更好的解决方案。
+改变网页外观的一种简单方法是切换元素的可见性。你可以通过将 JavaScript 中的`style.display`属性设置为`"none"`或`""`来实现这一点；然而，jQuery 提供了更优雅且扩展性更好的解决方案。
 
-要使用 jQuery 显示元素，调用该对象的 `.show()` 方法。要隐藏元素，则使用 `.hide()` 方法。就如此简单。例如，要隐藏名为 `jObj` 的对象，使用以下语句：
+要使用 jQuery 显示元素，调用该对象的`.show()`方法。要隐藏元素，则使用`.hide()`方法。就如此简单。例如，要隐藏名为`jObj`的对象，使用以下语句：
 
-```
+```javascript
 jObj.hide();
 ```
 
 要再次显示它，使用以下代码：
 
-```
+```javascript
 jObj.show();
 ```
 
-`.hide()` 的一个问题是，在应用之后元素将不再占据任何页面空间。这可能是你想要的，或者在某些情况下，你可能只想让元素不可见但仍占据空间。要让元素不可见，将 `opacity` CSS 属性设置为 0。例如：
+`.hide()`的一个问题是，在应用之后元素将不再占据任何页面空间。这可能是你想要的，或者在某些情况下，你可能只想让元素不可见但仍占据空间。要让元素不可见，将`opacity` CSS 属性设置为 0。例如：
 
-```
+```javascript
 jObj.css("opacity", "0");
 ```
 
-要让元素再次可见，将 `opacity` 设回 1：
+要让元素再次可见，将`opacity`设回 1：
 
-```
+```javascript
 jObj.css("opacity", "1");
 ```
 
 **提示**
-将透明度设置得较低但不设为 0，是显示元素当前未激活但仍显示它们的极佳方法。例如，你可以将尚未实现和激活的菜单和按钮元素设置为 `.5` 透明度，这样它们仍然显示，但显然是不可点击的。
 
-***
+将透明度设置得较低但不设为 0，是显示元素当前未激活但仍显示它们的极佳方法。例如，你可以将尚未实现和激活的菜单和按钮元素设置为`.5`透明度，这样它们仍然显示，但显然是不可点击的。
+
+---
 
 ### 动手试一下：动态操作网页元素
 
@@ -7404,41 +7377,47 @@ jObj.css("opacity", "1");
 
 代码在列表 10.4、10.5 和 10.6 中。在你掌握了这个示例后，它将为你开启更复杂、更丰富的实现思路。使用以下步骤实现该示例：
 
-1. 在 Eclipse 中，创建 `lesson10/web_element_manipulation.html`、`lesson10/js/web_element_manipulation.js` 和 `lesson10/css/web_element_manipulation.css` 文件。
-2. 将列表 10.4 中所示的代码添加到 HTML 文件中。你应该能识别出 HTML 组件。有一组 `<span>` 元素将作为按钮，有一个内容 `<div>` 可以在其中动态地放置新元素，以及一个提供指向 jQuery 文档链接按钮的浮菜单。
+1. 在 Eclipse 中，创建`lesson10/web_element_manipulation.html`、`lesson10/js/web_element_manipulation.js`和`lesson10/css/web_element_manipulation.css`文件。
+
+2. 将列表 10.4 中所示的代码添加到 HTML 文件中。你应该能识别出 HTML 组件。有一组`<span>`元素将作为按钮，有一个内容`<div>`可以在其中动态地放置新元素，以及一个提供指向 jQuery 文档链接按钮的浮菜单。
+
 3. 将列表 10.6 中的 CSS 添加到 CSS 文件中。有大量的 CSS 代码来美化不同的元素。然而，到目前为止，你对它们应该都很熟悉了。
-4. 打开 `web_element_manipulation.js` 文件并添加以下 `load()` 函数。第 2 行隐藏了 `docMenu` `div`，它只在用户点击 Docs 按钮时才会显示。其余行为按钮添加了点击处理程序：
+
+4. 打开`web_element_manipulation.js`文件并添加以下`load()`函数。第 2 行隐藏了`docMenu` `div`，它只在用户点击 Docs 按钮时才会显示。其余行为按钮添加了点击处理程序：
 
 点击此处查看代码图片
 
-```
+```javascript
 $(window).load(function(){
   $("#docMenu").hide();
   $("#lessons").click(setNav);
   $("#docs").click(setDoc);
 });
 ```
-5. 在 `web_element_manipulation.js` 中添加如第 7 到 22 行所示的代码。这将在用户点击 `<select>` 元素时调用 `setNav()`。该函数通过向 `<select>` 元素添加 `<option>` 元素来实现。在第 16 行，为 `<select>` 元素添加了 `change` 事件。该函数设置内容以匹配 lesson：
 
-```
+5. 在`web_element_manipulation.js`中添加如第 7 到 22 行所示的代码。这将在用户点击`<select>`元素时调用`setNav()`。该函数通过向`<select>`元素添加`<option>`元素来实现。在第 16 行，为`<select>`元素添加了`change`事件。该函数设置内容以匹配 lesson：
+
+```javascript
 function setNav(){
   $("#docMenu").show();
   $("span").removeClass("active");
   $("#docs").addClass("active");
 }
 ```
-6. 为用户点击菜单中的选项添加以下函数。该函数创建一个指向 doc 的新 `<iframe>`，然后用它替换 `#content` 的内容：
 
-```
+6. 为用户点击菜单中的选项添加以下函数。该函数创建一个指向 doc 的新`<iframe>`，然后用它替换`#content`的内容：
+
+```javascript
 function setDoc(doc){
   var frame = $("iframe");
   frame.attr("src", doc);
   $("#content").html(frame);
 }
 ```
-7. 为点击 Fade 按钮添加以下处理程序。该函数检查当前的 `opacity` 属性并增加或减少它，以导致内容淡入淡出：
 
-```
+7. 为点击 Fade 按钮添加以下处理程序。该函数检查当前的`opacity`属性并增加或减少它，以导致内容淡入淡出：
+
+```javascript
 function fade(){
   var opacity = $("#content").css("opacity");
   if (opacity < 1){
@@ -7449,9 +7428,10 @@ function fade(){
   }
 }
 ```
+
 8. 保存所有三个文件，然后在浏览器中打开 HTML 文档。尝试 Lessons 和 Docs 按钮以动态效果。尝试 Fade 按钮让内容淡入淡出。
 
-**列表 10.4 示例中使用的 web_element_manipulation.html HTML 文件**
+**列表 10.4 示例中使用的 `web_element_manipulation.html` HTML 文件**
 
 点击此处查看代码图片
 
@@ -7476,9 +7456,6 @@ function fade(){
 </html>
 ```
 
-
-
-
 ```html
 <span id="fade" class="menuItem">渐变 (Fade)</span>
 </div>
@@ -7492,9 +7469,11 @@ function fade(){
 </html>
 ```
 
-### 列表 10.5 web_element_manipulation.js 根据顶部菜单中点击的按钮动态构建左侧导航项的 jQuery 和 JavaScript 代码
+### 列表 10.5 `web_element_manipulation.js` 根据顶部菜单中点击的按钮动态构建左侧导航项的 jQuery 和 JavaScript 代码
 
 点击此处查看代码图片
+
+
 
 ```javascript
 $(window).load(function(){
@@ -7540,7 +7519,7 @@ function fade(){
 }
 ```
 
-### 列表 10.6 web_element_manipulation.css 样式化横幅、按钮和其他元素的 CSS 代码
+### 列表 10.6 `web_element_manipulation.css`：样式化横幅、按钮和其他元素的 CSS 代码
 
 ```css
 #banner{
@@ -7577,11 +7556,11 @@ function fade(){
 }
 ```
 
-### 在网页上动态重新排列元素
+## 在网页上动态重新排列元素
 
 你可以与网页交互时实现的最酷的交互之一是根据用户交互重新排列元素。例如，你可以让元素变大或变小，或者改变它们的位置。这些内容在本节的第一部分中作为获取和设置元素属性时已经涵盖了。本节在这些概念的基础上进一步深入，讨论了使用 `z-index` 对页面元素进行定位的最后方法；然后你通过一个示例展示了重新排列元素的不同方法。
 
-#### 调整 z-index
+### 调整 `z-index`
 
 `z-index` 是一个 CSS 属性，指定 HTML 元素相对于其他元素的位置，它不是垂直或水平方向，而是向用户投影的，就像屏幕上堆叠在另一个之上的纸张一样。当浏览器渲染页面时，`z-index` 元素将显示在其他元素的上方。
 
@@ -7638,7 +7617,7 @@ $(window).load(function(){
 
 你需要使用 `$(window).load()` 事件处理器而不是 `$(document).ready()`，以便在运行 `stack()` 之前图像已加载。
 
-6. 添加以下 resize 处理程序，它接收一个方向并使用该值通过调整 `width()` 方法来放大或缩小图像。注意 `topIndex` 变量被用于确定要调整哪个图像：
+6. 添加以下 `resize` 处理程序，它接收一个方向并使用该值通过调整 `width()` 方法来放大或缩小图像。注意 `topIndex` 变量被用于确定要调整哪个图像：
 
 ```javascript
 function resize(e, direction){
@@ -7648,7 +7627,7 @@ function resize(e, direction){
 }
 ```
 
-7. 添加以下 move 处理程序，根据方向参数调整元素的 `offset()` 向左或向右。同时 `startX` 和 `startY` 调整到新位置：
+7. 添加以下 `move` 处理程序，根据方向参数调整元素的 `offset()` 向左或向右。同时 `startX` 和 `startY` 调整到新位置：
 
 ```javascript
 function move(e, direction){
@@ -7662,11 +7641,7 @@ function move(e, direction){
 }
 ```
 
-
-
-
-
-## 8. 添加以下 `stack()` 函数，该函数会遍历所有的 `.photo` 元素并在每次迭代中通过调整 `top` 和 `left` 偏移值将它们进行堆叠：
+8. 添加以下 `stack()` 函数，该函数会遍历所有的 `.photo` 元素并在每次迭代中通过调整 `top` 和 `left` 偏移值将它们进行堆叠：
 
 点击此处查看代码图片
 
@@ -7681,7 +7656,7 @@ function stack(){
 }
 ```
 
-## 9. 添加以下 `tile()` 函数，该函数同样遍历所有的 `.photo` 元素并将它们并排放置，如果当前组超过了 400 像素，则换到下一行。注意，我在每次迭代中使用了几个变量来跟踪最大高度以及当前的 `x` 和 `y` 坐标：
+9. 添加以下 `tile()` 函数，该函数同样遍历所有的 `.photo` 元素并将它们并排放置，如果当前组超过了 400 像素，则换到下一行。注意，我在每次迭代中使用了几个变量来跟踪最大高度以及当前的 `x` 和 `y` 坐标：
 
 点击此处查看代码图片
 
@@ -7702,7 +7677,7 @@ function tile(){
 }
 ```
 
-## 10. 添加 `flip()` 函数，它将调整 `z-index`，以便当图像相互重叠时，你可以更改哪一个在上方：
+10. 添加 `flip()` 函数，它将调整 `z-index`，以便当图像相互重叠时，你可以更改哪一个在上方：
 
 点击此处查看代码图片
 
@@ -7718,13 +7693,13 @@ function flip(){
 }
 ```
 
-## 11. 保存所有三个文件，然后在网络浏览器中打开 HTML 文档，如图图 10.3 所示。尝试操作按钮，并观察图像的交互如何与点击处理函数进行的重新排列匹配。
+11. 保存所有三个文件，然后在网络浏览器中打开 HTML 文档，如图图 10.3 所示。尝试操作按钮，并观察图像的交互如何与点击处理函数进行的重新排列匹配。
 
 ![图像](img/image00903.jpeg)
 
 **图 10.3** 在图像对象上使用 `width()`、`offset()` 和 `css("z-index")` 方法；你可以轻松地在网页上重新排列它们的顺序。
 
-**代码列表 10.7 rearranging_elements.html HTML 文件，示例中使用的基础 Web 页面，定义了用于按钮的多个 `<span>` 元素和 `<img>` 元素**
+**代码列表 10.7 `rearranging_elements.html` HTML 文件，示例中使用的基础 Web 页面，定义了用于按钮的多个 `<span>` 元素和 `<img>` 元素**
 
 点击此处查看代码图片
 
@@ -7758,7 +7733,7 @@ function flip(){
 </html>
 ```
 
-**代码列表 10.8 rearranging_elements.js jQuery 和 JavaScript 代码，用于动态移动、调整大小和调整 `<img>` 元素的 z-index**
+**代码列表 10.8 `rearranging_elements.js` jQuery 和 JavaScript 代码，用于动态移动、调整大小和调整 `<img>` 元素的 `z-index`**
 
 点击此处查看代码图片
 
@@ -7778,7 +7753,7 @@ $(window).load(function(){
 });
 ```
 
-**代码列表 10.9 rearranging_elements.css 用于设置按钮和图像的 CSS 代码**
+**代码列表 10.9 `rearranging_elements.css` 用于设置按钮和图像的 CSS 代码**
 
 ```css
 .photo{
@@ -7799,7 +7774,7 @@ span{
 
 总结涵盖了许多内容。你已经掌握了 JavaScript 代码、CSS 样式以及对象。在本节中，你学习了如何访问这些对象的属性、方法和其他部分，并对它们进行修改以增强网页的交互性和动态。你还学习了如何动态创建 HTML 对象并将其添加到网页中，以及如何根据用户交互移除或修改现有元素。
 
-问答
+## 问答
 
 **问：你展示了如何在 jQuery 中添加和删除类，那么在 JavaScript 中有对应的方法吗？**
 
@@ -7807,47 +7782,45 @@ span{
 
 **问：有办法旋转图像元素吗？**
 
-**答：在某些浏览器中可以。你可以使用 `transform` CSS 属性处理 Firefox 和 Chrome，使用 `filter` 属性处理 Internet Explorer。以下代码演示了如何使用 jQuery 在这些浏览器中旋转图像。**
 
-工作坊
+
+在某些浏览器中可以。你可以使用`transform` CSS 属性处理 Firefox 和 Chrome，使用`filter`属性处理 Internet Explorer。以下代码演示了如何使用 jQuery 在这些浏览器中旋转图像。
+
+## 工作坊
 
 由一组问答组成，旨在巩固你对本节所涵盖内容的理解。在查看答案之前，请尝试回答这些问题。
 
-测试
+## 测试
 
+**1.** 你如何让一个元素消失，但在 Web 浏览器中仍然占据空间？
 
+**2.** 哪种 CSS 属性允许你指定当两个元素重叠时，哪个 HTML 元素显示在最上方？
 
+**3.** 鼠标事件的 `screenX`、`pageX` 和 `clientX` 属性之间的区别是什么？
 
+**4.** 你会使用什么 jQuery 来从`id="container"`的元素中移除所有的`<p>`元素？
 
-# 1.** 你如何让一个元素消失，但在 Web 浏览器中仍然占据空间？**
-
-** 2.** 哪种 CSS 属性允许你指定当两个元素重叠时，哪个 HTML 元素显示在最上方？
-
-** 3.** 鼠标事件的 `screenX`、`pageX` 和 `clientX` 属性之间的区别是什么？
-
-** 4.** 你会使用什么 jQuery 来从 `id="container"` 的元素中移除所有的 `<p>` 元素？
-
-** 5.** 判断对对错：一个 HTML 元素在同一时间只能分配一个类（class）。
+**5.** 判断对错：一个 HTML 元素在同一时间只能分配一个类（class）。
 
 ### 测验答案
 
-** 1.** 通过将 `opacity` CSS 属性设置为 0。
+**1.** 通过将`opacity` CSS 属性设置为 0。
 
-** 2.** `z-index`
+**2.** `z-index`
 
-** 3.** `screenX` 相对于屏幕的左边缘，`pageX` 相对于文档的左边缘，而 `clientX` 相对于浏览器窗口的左边缘。
+**3.** `screenX`相对于屏幕的左边缘，`pageX`相对于文档的左边缘，而`clientX`相对于浏览器窗口的左边缘。
 
-** 4.** `$("#container p").remove();`
+**4.** `$("#container p").remove();`
 
-** 5.** 错误。元素可以被分配多个类。
+**5.** 错误。元素可以被分配多个类。
 
 ## 练习题
 
-**1.** 打开 Listings 10.1、10.2 和 10.3 中的代码，并为其添加一个带有 `target` 和 `href` 值的链接。然后修改 JavaScript，将这些值也显示在页面的信息部分，这样你就可以悬停在链接上并看到它们。
+**1.** 打开 Listings 10.1、10.2 和 10.3 中的代码，并为其添加一个带有`target`和`href`值的链接。然后修改 JavaScript，将这些值也显示在页面的信息部分，这样你就可以悬停在链接上并看到它们。
 
 **2.** 打开 Listings 10.7、10.8 和 10.9 中的代码，并添加四个新按钮。添加两个移动图像向上和向下的按钮。然后添加两个改变图像透明度增加 .1 或减少 .1 的按钮。你需要确保透明度在 0 和 1 处停止。
 
-## 第 11 节：与窗口、浏览器及其他非网页元素元素交互
+## 第 11 节：与窗口、浏览器及其他非网页元素交互
 
 本节你将学到：
 
@@ -7859,15 +7832,15 @@ span{
 
 动态网页通常需要你访问 HTML 元素之外的内容，在某些情况下甚至可以操作这些内容。JavaScript 提供了一系列丰富的对象和函数，允许你访问有关屏幕、浏览器窗口、历史记录等信息。
 
-本节的第一部分描述了 `screen`、`window`、`location` 和 `history` 对象，这些对象为 JavaScript 提供了访问网页之外信息的接口。第二部分涵盖了利用这些对象来实现 cookie、弹出窗口和定时器。
+本节的第一部分描述了`screen`、`window`、`location`和`history`对象，这些对象为 JavaScript 提供了访问网页之外信息的接口。第二部分涵盖了利用这些对象来实现 cookie、弹出窗口和定时器。
 
 ### 理解 Screen 对象
 
-你在之前的课程中已经见过 screen 对象的用法。你曾使用 screen 对象来获取色彩深度以及屏幕的高度和宽度。随着移动设备和平板电脑的普及，获取屏幕尺寸变得更加重要。
+你在之前的课程中已经见过`screen`对象的用法。你曾使用`screen`对象来获取色彩深度以及屏幕的高度和宽度。随着移动设备和平板电脑的普及，获取屏幕尺寸变得更加重要。
 
 由于有多种屏幕尺寸可用，因此你必须能够设计你的网页和动态交互以考虑到屏幕尺寸。
 
-表 11.1 描述了 screen 对象上提供的全属性。
+表 11.1 描述了`screen`对象上提供的全属性。
 
 ![Image](img/image00904.jpeg)
 
@@ -7875,17 +7848,15 @@ span{
 
 ### 使用 Window 对象
 
-window 对象是外部对象集中迄为止最强大的。window 对象提供了对浏览器窗口的访问，允许你获取如浏览器窗口的尺寸和位置等信息。
+`window`对象是外部对象集中迄为止最强大的。`window`对象提供了对浏览器窗口的访问，允许你获取如浏览器窗口的尺寸和位置等信息。
 
-使用 window 对象，当你想要显示额外的网页内容但不想离开当前页面时，还可以创建并控制新的浏览器窗口。
+使用`window`对象，当你想要显示额外的网页内容但不想离开当前页面时，还可以创建并控制新的浏览器窗口。
 
-以下章节描述了附加到 window 对象的某些方法和属性。
+以下章节描述了附加到`window`对象的某些方法和属性。
 
 #### 访问 Window 对象属性
 
-window 对象为你提供了有关浏览器窗口的重要信息。你可以访问当前窗口甚至其父窗口的大小和位置。例如，以下代码获取了从屏幕左上角到浏览器左上角的像素距离：
-
-点击此处查看代码图片
+`window`对象为你提供了有关浏览器窗口的重要信息。你可以访问当前窗口甚至其父窗口的大小和位置。例如，以下代码获取了从屏幕左上角到浏览器左上角的像素距离：
 
 ```
 var fromTop = window.self.screenY;
@@ -7893,7 +7864,7 @@ var fromTop = window.self.screenY;
 var fromLeft = window.self.screenX;
 ```
 
-表 11.2 显示了某些较重要的 window 对象属性列表及其用途。
+表 11.2 显示了某些较重要的`window`对象属性列表及其用途。
 
 ![Image](img/image00905.jpeg)
 
@@ -7901,11 +7872,9 @@ var fromLeft = window.self.screenX;
 
 #### 使用 Window 方法
 
-window 对象还提供了一系列方法，允许你创建并管理额外的窗口。
+`window`对象还提供了一系列方法，允许你创建并管理额外的窗口。
 
-例如，以下代码通过 window 对象打开一个新的浏览器窗口并加载指定的 URL：
-
-点击此处查看代码图片
+例如，以下代码通过`window`对象打开一个新的浏览器窗口并加载指定的 URL：
 
 ```
 var tempWindow = window.open("http://com");
@@ -7917,7 +7886,7 @@ var tempWindow = window.open("http://com");
 tempWindow.close();
 ```
 
-表 11.3 显示了某些较重要的 window 对象属性及其用途。
+表 11.3 显示了某些较重要的`window`对象属性及其用途。
 
 ![Image](img/image00906.jpeg)
 
@@ -7925,7 +7894,7 @@ tempWindow.close();
 
 ### 使用浏览器 Location 对象
 
-location 对象提供了对当前位置的访问。这允许你获取 URL 信息，还可以刷新页面或加载新页面。
+`location`对象提供了对当前位置的访问。这允许你获取 URL 信息，还可以刷新页面或加载新页面。
 
 例如，以下语句从当前页面获取 URL 并加载新页面：
 
@@ -7935,7 +7904,7 @@ var oldURL = location.href;
 location.assign("http://com");
 ```
 
-此外，如果 URL 指向页面上的某个锚点，你可以通过 `location.hash` 获取该部分：
+此外，如果 URL 指向页面上的某个锚点，你可以通过`location.hash`获取该部分：
 
 ```
 var anchor = location.hash;
@@ -7949,11 +7918,11 @@ var anchor = location.hash;
 
 ### 使用浏览器 History 对象
 
-history 对象提供了对浏览器导航历史的访问，允许你动态地向前向后移动，而无需用户点击浏览器的前进/后退按钮。
+`history`对象提供了对浏览器导航历史的访问，允许你动态地向前向后移动，而无需用户点击浏览器的前进/后退按钮。
 
 #### 在历史记录中前进
 
-向前移动时可以使用 `history.forward()` 前到历史中的下一个 URL，或者可以使用 `history.go(n)`，其中 `n` 是一个表示移动步数的正数。例如，以下语句向前移动三个 URL：
+向前移动时可以使用`history.forward()`前到历史中的下一个 URL，或者可以使用`history.go(n)`，其中`n`是一个表示移动步数的正数。例如，以下语句向前移动三个 URL：
 
 ```
 history.go(3);
@@ -7961,19 +7930,13 @@ history.go(3);
 
 #### 在历史记录中向后
 
-向后移动时可以使用 `history.back()` 回到历史中的上一个 URL，或者可以使用 `history.go(n)`，其中 `n` 是一个表示移动步数的负数。例如，以下语句向后移动两个 URL：
+向后移动时可以使用`history.back()`回到历史中的上一个 URL，或者可以使用`history.go(n)`，其中`n`是一个表示移动步数的负数。例如，以下语句向后移动两个 URL：
 
 ```
 history.go(-2);
 ```
 
-
-
-
-
-要锁定网页上的外部链接，你首先需要为链接到外部的 `<a>` 标签添加点击事件处理程序，然后在点击事件对象上调用 `preventDefault()`。例如，以下代码使用 jQuery 的 `^=` 选择器语法来查找 `href` 以 `http://` 开头的 `<a>` 标签，然后添加一个防止浏览器默认行为的点击处理程序函数：
-
-点击此处查看代码图片
+要锁定网页上的外部链接，你首先需要为链接到外部的`<a>`标签添加点击事件处理程序，然后在点击事件对象上调用`preventDefault()`。例如，以下代码使用 jQuery 的`^=`选择器语法来查找`href`以`http://`开头的`<a>`标签，然后添加一个防止浏览器默认行为的点击处理程序函数：
 
 ```javascript
 $('ahref^="http://"').click(function (e){
@@ -7986,9 +7949,7 @@ $('ahref^="http://"').click(function (e){
 
 你通过简单的 jQuery 脚本可以执行的另一个有用任务是强制外部链接在新窗口中打开。这可以使当前窗口保持可用状态。
 
-要强制外部链接在新窗口中打开，请为链接到外部的 `<a>` 标签将 `target` 属性设置为“`_blank`”。例如，以下代码查找 `href` 以 `http://` 开头的 `<a>` 标签，然后将 `target` 属性设置为“`_blank`”，强制链接在点击时在新的浏览器窗口中打开：
-
-[点击此处查看代码图片
+要强制外部链接在新窗口中打开，请为链接到外部的`<a>`标签将`target`属性设置为"`_blank`"。例如，以下代码查找`href`以`http://`开头的`<a>`标签，然后将`target`属性设置为"`_blank`"，强制链接在点击时在新的浏览器窗口中打开：
 
 ```javascript
 $('ahref^="http://"').attr("target", "_blank");
@@ -7998,21 +7959,19 @@ $('ahref^="http://"').attr("target", "_blank");
 
 Cookies 允许你在客户端浏览器中静态地存储位信息，是 Web 范式的重要部分。Cookies 通常由服务器端脚本读取；然而，如果你可以在不需要额外的服务器通信的情况下从 JavaScript 获取并设置 Cookies，那也将非常有帮助。
 
-你可以通过读取或写入 `document.cookie` 属性来获取和设置 Cookies。`document.cookie` 采用字符串格式，包含以下格式的 `name`（名称）、`value`（值）、`expiration`（过期时间）和 `path`（路径）：
+你可以通过读取或写入`document.cookie`属性来获取和设置 Cookies。`document.cookie`采用字符串格式，包含以下格式的`name`（名称）、`value`（值）、`expiration`（过期时间）和`path`（路径）：
 
 `name=value;expiration;path`
 
 帮助理解如何实现 Cookie 的简单方法是通过示例展示。以下示例将带你创建一个简单的 JavaScript，用于从网页中获取和设置 Cookie。示例代码位于在列表 11.1、11.2 和 11.3 中。使用以下步骤实现示例：
 
-1. 在 Eclipse 中，创建 `lesson11/cookies.html`、`lesson11/js/cookies.js` 和 `lesson11/css/cookies.css` 文件。
+1. 在 Eclipse 中，创建`lesson11/cookies.html`、`lesson11/js/cookies.js`和`lesson11/css/cookies.css`文件。
 
-2. 将列表 11.1](#part0023.xhtml_ch11lis01)、11.2 和 11.3 所示的代码添加到 HTML 文件中。你应该能识别出这些 HTML 组件。HTML 代码包含几个被样式化为按钮的 `<span>` 元素、用于输入 Cookie 名称和值的文本框，以及一个 Cookie 列表。
+2. 将列表 11.1、11.2 和 11.3 所示的代码添加到 HTML 文件中。你应该能识别出这些 HTML 组件。HTML 代码包含几个被样式化为按钮的`<span>`元素、用于输入 Cookie 名称和值的文本框，以及一个 Cookie 列表。
 
-3. 将列表 11.3](#part0023.xhtml_ch11lis03) 中的 CSS 添加到 CSS 文件中。这段代码用于样式化按钮。
+3. 将列表 11.3 中的 CSS 添加到 CSS 文件中。这段代码用于样式化按钮。
 
-4. 打开 `cookies.js` 文件并添加以下 `ready()` 函数，该函数为获取、设置和删除 Cookie 的按钮添加了点击处理程序。注意，处理程序从名称 `<input>` 字段获取 Cookie 名称：
-
-点击此处查看代码图片
+4. 打开`cookies.js`文件并添加以下`ready()`函数，该函数为获取、设置和删除 Cookie 的按钮添加了点击处理程序。注意，处理程序从名称`<input>`字段获取 Cookie 名称：
 
 ```javascript
 01 $(document).ready(function(){
@@ -8024,9 +7983,7 @@ Cookies 允许你在客户端浏览器中静态地存储位信息，是 Web 范�
 07 });
 ```
 
-5. 添加以下 `setCookie()` 处理程序函数，该函数获取日期并使用其创建一个过期时间字符串。随后代码使用 `name`、`value`、`expires` 和根路径作为字符串值设置 `document.cookie`：
-
-点击此处查看代码图片
+5. 添加以下`setCookie()`处理程序函数，该函数获取日期并使用其创建一个过期时间字符串。随后代码使用`name`、`value`、`expires`和根路径作为字符串值设置`document.cookie`：
 
 ```javascript
 08 function setCookie(name, value, days) {
@@ -8038,9 +7995,7 @@ Cookies 允许你在客户端浏览器中静态地存储位信息，是 Web 范�
 14 }
 ```
 
-6. 以下 `getCookie()` 处理程序获取 `document.cookie` 字符串，通过 `;` 将其分割，然后遍历 Cookie 数组直到找到名称与传入名称匹配的 Cookie。随后，该函数将 `<input>` 字段的值设置为 Cookie 的值：
-
-点击此处查看代码图片
+6. 以下`getCookie()`处理程序获取`document.cookie`字符串，通过`;`将其分割，然后遍历 Cookie 数组直到找到名称与传入名称匹配的 Cookie。随后，该函数将`<input>`字段的值设置为 Cookie 的值：
 
 ```javascript
 15 function getCookie(name) {
@@ -8059,11 +8014,10 @@ Cookies 允许你在客户端浏览器中静态地存储位信息，是 Web 范�
 28    }
 29 }
 ```
+
 *(注：由于原文代码块 15-28 行在逻辑和格式上存在混乱，此处已严格按照原文文本进行翻译)*
 
-7. 添加以下 `displayCookies()` 函数，用于渲染当前的 Cookie 列表：
-
-点击此处查看代码图片
+7. 添加以下`displayCookies()`函数，用于渲染当前的 Cookie 列表：
 
 ```javascript
 30 function displayCookies(){
@@ -8075,15 +8029,11 @@ Cookies 允许你在客户端浏览器中静态地存储位信息，是 Web 范�
 36    }
 ```
 
-8. 保存所有文件，然后在浏览器中如图 1.1](#part0023.xhtml_fig01) 所示打开 HTML 文档。尝试设置和删除 Cookie。离开页面后再返回时，Cookie 应该依然存在。使用 JavaScript 获取、设置和删除 Cookie。**图 1.1** 用于示例的 HTML 页面。
+8. 保存所有文件，然后在浏览器中如图 1.1 所示打开 HTML 文档。尝试设置和删除 Cookie。离开页面后再返回时，Cookie 应该依然存在。使用 JavaScript 获取、设置和删除 Cookie。**图 1.1** 用于示例的 HTML 页面。
 
 **列表 11.1** 定义按钮的 HTML。
 
 **列表 11.2** cookies.js 获取、设置和删除 Cookie 的 JavaScript 代码。
-
-
-
-
 
 ```javascript
 25      break;
@@ -8102,8 +8052,6 @@ Cookies 允许你在客户端浏览器中静态地存储位信息，是 Web 范�
 
 列表 11.3 cookies.css 样式化按钮和图像的 CSS 代码
 
-点击此处查看代码图像
-
 ```css
 01 span{
 02   padding:10px;
@@ -8120,15 +8068,13 @@ Cookies 允许你在客户端浏览器中静态地存储位信息，是 Web 范�
 
 ### 注意
 
-通常情况下，创建一个带有覆盖层的固定位置 `<div>` 元素比使用这些弹出框要好得多，因为你对它们有更多的控制权。你将在书的稍后部分学习如何这样做。
+通常情况下，创建一个带有覆盖层的固定位置`<div>`元素比使用这些弹出框要好得多，因为你对它们有更多的控制权。你将在书的稍后部分学习如何这样做。
 
 #### 通知用户
 
 最常见的弹出框类型是警报（alert）弹出框，用于通知用户发生了某些事情。用户会看到消息；然而，提供的唯一选项是关闭弹出消息。
 
-要创建一个简单的警报消息，使用下所示 `window.alert()` 方法，并在图 11.2 中显示：
-
-点击此处查看代码图像
+要创建一个简单的警报消息，使用下所示`window.alert()`方法，并在图 11.2 中显示：
 
 ```javascript
 window.alert("It's 12/12/12 12:12:12!!!");
@@ -8140,11 +8086,9 @@ window.alert("It's 12/12/12 12:12:12!!!");
 
 #### 请求用户确认
 
-下一种常见的弹出框类型是确认（confirmation）弹出框，用于通知用户某些事情即将发生。用户会看到消息，然后获得点击“确定”以允许操作或点击“取消”以拒绝操作的选项。
+下一种常见的弹出框类型是确认（confirmation）弹出框，用于通知用户某些事情即将发生。用户会看到消息，然后获得点击"确定"以允许操作或点击"取消"以拒绝操作的选项。
 
-要创建一个允许用户用“是”或“否”响应的确认对话框，请使用 `window.confirm()` 方法，如下所示并在图 11.2 中显示：
-
-点击此处查看代码图像
+要创建一个允许用户用"是"或"否"响应的确认对话框，请使用`window.confirm()`方法，如下所示并在图 11.2 中显示：
 
 ```javascript
 var response = window.confirm("Are you sure?");
@@ -8156,7 +8100,9 @@ else { don't do something; }
 
 另一种弹出框类型是提示（prompt）。提示显示一个文本框，允许用户在弹出框中输入文本字符串。该字符串将返回给 JavaScript 代码并可以多种方式使用。
 
-要创建一个允许用户输入单个文本字符串作为输入的提示对话框，请使用 `window.prompt()` 方法，如下所示并在图 11.2 中显示：
+
+
+要创建一个允许用户输入单个文本字符串作为输入的提示对话框，请使用`window.prompt()`方法，如下所示并在图 11.2 中显示：
 
 点击此处查看代码图像
 
@@ -8170,11 +8116,11 @@ else { no pass }
 
 JavaScript 的另一个有用功能是设置定时器，以便在一定时间后或按特定间隔执行函数或评估表达式。
 
-使用定时器允许你延迟代码的执行，因此它不需要在事件触发或页面加载的精确时刻刻发生。
+使用定时器允许你延迟代码的执行，因此它不需要在事件触发或页面加载的精确时时刻刻发生。
 
 #### 添加延迟定时器
 
-要延迟代码的执行一段时间，请使用 `setTimeout(code, ms)` 方法，其中 `code` 是语句或在时间到期后执行的函数。`ms` 是毫秒数。例如，要在 10 秒后执行名为 `myTimer()` 的函数，你将使用以下代码：
+要延迟代码的执行一段时间，请使用`setTimeout(code, ms)`方法，其中`code`是语句或在时间到期后执行的函数。`ms`是毫秒数。例如，要在 10 秒后执行名为`myTimer()`的函数，你将使用以下代码：
 
 点击此处查看代码图像
 
@@ -8182,7 +8128,7 @@ JavaScript 的另一个有用功能是设置定时器，以便在一定时间后
 var timerId = setTimeout(myTimer, 10000);
 ```
 
-在时间耗尽且代码执行之前的任何时候，你可以使用 `setTimeout()` 返回的 `id` 调用 `clearTimeout(id)` 方法来清除定时器。例如：
+在时间耗尽且代码执行之前的任何时候，你可以使用`setTimeout()`返回的`id`调用`clearTimeout(id)`方法来清除定时器。例如：
 
 ```javascript
 clearTimeout(timerId);
@@ -8190,7 +8136,7 @@ clearTimeout(timerId);
 
 #### 添加循环定时器
 
-你还可以使用 `setInterval(code, ms)` 方法启动一个按固定间隔触发的定时器。该方法也接受 `code` 语句或函数名作为参数。例如，以下代码每分钟创建一个定时器并调用函数 `checkStatus()`：
+你还可以使用`setInterval(code, ms)`方法启动一个按固定间隔触发的定时器。该方法也接受`code`语句或函数名作为参数。例如，以下代码每分钟创建一个定时器并调用函数`checkStatus()`：
 
 点击此处查看代码图像
 
@@ -8198,7 +8144,7 @@ clearTimeout(timerId);
 var timerId = setInterval(checkStatus, 60000);
 ```
 
-你还可以使用 `clearInterval()` 方法关闭定时器：
+你还可以使用`clearInterval()`方法关闭定时器：
 
 ```javascript
 clearInterval(timerId);
@@ -8208,9 +8154,11 @@ clearInterval(timerId);
 
 在本练习中，你创建一个每秒更新一次的网页，它使用定时器显示时间。网页会弹出通知，直到你停止它。这种方法将巩固了在 11.4、11.5 和 11.6 中的定时器和警报。
 
-1. 在 Eclipse 中创建 `clock.html`、`clock.js` 和 `clock.css`。
+1. 在 Eclipse 中创建`clock.html`、`clock.js`和`clock.css`。
+
 2. 在 HTML 中添加代码，如 11.4 所示。
-3. 在 `clock.js` 中添加下所示的 `ready()` 函数，它包含了定时器和间隔器：
+
+3. 在`clock.js`中添加下所示的`ready()`函数，它包含了定时器和间隔器：
 
 ```javascript
 $(document).ready(function(){
@@ -8218,7 +8166,8 @@ $(document).ready(function(){
   setInterval(displayTime, 1000);
 });
 ```
-4. 添加下所示的 `continueNotify()` 函数，它将在 3 秒后执行：
+
+4. 添加下所示的`continueNotify()`函数，它将在 3 秒后执行：
 
 ```javascript
 function continueNotify(){
@@ -8226,11 +8175,8 @@ function continueNotify(){
   if (result) { setTimeout(continueNotify, 3000); }
 }
 ```
+
 5. 保存所有文件，然后在网页浏览器中打开 HTML 文档，如图 11.3 所示。时间应该开始更新。当弹出框出现时，尝试第一次取消，第二次接受它。它不再出现。
-
-
-
-
 
 ```javascript
 setTimeout(continueNotify, 3000);
@@ -8278,7 +8224,7 @@ span{
 
 ### 总结
 
-本节重点介绍了如何使用 JavaScript 对象访问网页之外的数据。你学习了 `screen`、`window`、`browser`、`location` 和 `history` 对象，这些对象提供了关于物理屏幕、浏览器和客户端历史的众多细节，以及对 cookie 的访问。
+本节重点介绍了如何使用 JavaScript 对象访问网页之外的数据。你学习了`screen`、`window`、`browser`、`location`和`history`对象，这些对象提供了关于物理屏幕、浏览器和客户端历史的众多细节，以及对 cookie 的访问。
 
 你看到了如何打开和关闭浏览器窗口。通过 JavaScript，你还学习了如何创建基础弹窗，以便与用户进行交互。
 
@@ -8286,7 +8232,7 @@ span{
 
 **问。有方法找到正在使用的操作系统和浏览器吗？**
 
-**答。** 有。`navigator` 对象会在 `window.navigator.appCodeName` 属性中显示浏览器。你也可以使用 `window.navigator.platform` 获取操作系统。
+**答。** 有。`navigator`对象会在`window.navigator.appCodeName`属性中显示浏览器。你也可以使用`window.navigator.platform`获取操作系统。
 
 ### 工作坊
 
@@ -8302,15 +8248,15 @@ span{
 
 ### 测验答案
 
-**1。** Alert（alert）、确认（confirm）和提示（prompt）。
+**1。** Alert（`alert`）、确认（`confirm`）和提示（`prompt`）。
 
-**2。** 访问 `location.href` 属性。
+**2。** 访问`location.href`属性。
 
-**3。** 错误。你可以使用 `history.forward()` 或 `history.go(n)` 向前导航。
+**3。** 错误。你可以使用`history.forward()`或`history.go(n)`向前导航。
 
 #### 练习题
 
-**1.** 打开列表 11.1、11.2 和 11.3 中的代码，并修改 `ready()` 函数以获取名为 `buttonColor` 的 cookie。如果设置了 `buttonColor` cookie，请使用以下 jQuery 代码行更改按钮的颜色：
+**1.** 打开列表 11.1、11.2 和 11.3 中的代码，并修改`ready()`函数以获取名为`buttonColor`的 cookie。如果设置了`buttonColor` cookie，请使用以下 jQuery 代码行更改按钮的颜色：
 
 点击此处查看代码图像
 
@@ -8318,7 +8264,7 @@ span{
 $("span").css("color", getCookie("buttonColor"));
 ```
 
-**2.** 打开列表 11.4、11.5 和 11.6 中的代码，并修改 prompt 以要求用户输入下一次通知之前的秒数。如果用户输入 0，则终止通知。否则，在 `setTimeout()` 调用中使用该值。记住你需要将秒数乘以 1000 以转换为毫秒。
+**2.** 打开列表 11.4、11.5 和 11.6 中的代码，并修改 prompt 以要求用户输入下一次通知之前的秒数。如果用户输入 0，则终止通知。否则，在`setTimeout()`调用中使用该值。记住你需要将秒数乘以 1000 以转换为毫秒。
 
 # 第三部分：使用 jQuery 构建丰富的交互式 网页
 
@@ -8338,7 +8284,7 @@ $("span").css("color", getCookie("buttonColor"));
 
 #### 动画 CSS 设置
 
-`.animate()` 方法用于制作数值属性。例如，你可以动画 `width`、`height`、`opacity` 等。
+`.animate()`方法用于制作数值属性。例如，你可以动画`width`、`height`、`opacity`等。
 
 ```javascript
 $(".box").animate({
@@ -8347,7 +8293,7 @@ $(".box").animate({
 });
 ```
 
-`.animate()` 方法接受一个对象，其中键是你想要动画的属性，值是最终值。你还可以指定 `duration`（持续时间）和 `easing`（缓动）函数。
+`.animate()`方法接受一个对象，其中键是你想要动画的属性，值是最终值。你还可以指定`duration`（持续时间）和`easing`（缓动）函数。
 
 ```javascript
 $(".box").animate({
@@ -8360,7 +8306,7 @@ $(".box").animate({
 
 #### 使用缓动函数
 
-jQuery 包含了几个内置的缓动函数，用于控制动画的进展，例如 `linear` 和 `swing`。你也可以定义自定义缓动函数。
+jQuery 包含了几个内置的缓动函数，用于控制动画的进展，例如`linear`和`swing`。你也可以定义自定义缓动函数。
 
 ```javascript
 $(".box").animate({
@@ -8380,7 +8326,7 @@ $(".box").animate({height: "100px"}, 500)
 
 #### 回调函数
 
-你可以向 `.animate()` 方法提供回调函数，以便在动画完成后执行代码。
+你可以向`.animate()`方法提供回调函数，以便在动画完成后执行代码。
 
 ```javascript
 $(".box").animate({
@@ -8392,43 +8338,39 @@ $(".box").animate({
 
 #### 停止动画
 
-如果你需要在动画完成之前停止它，请使用 `.stop()` 方法。这将清除所选元素的动画队列。
+如果你需要在动画完成之前停止它，请使用`.stop()`方法。这将清除所选元素的动画队列。
 
 ```javascript
 $(".box").stop();
 ```
 
-
-
-
-
-你必须注意触发动画的来源。请记住，事件会冒泡。如果你在冒泡阶段从所有层级执行同一个动画，可能会导致一些严重不符合预期结果。为了防止这种情况，你可以使用 `stopPropagation()` 和 `stopImmediatePropagation()` 方法。
+你必须注意触发动画的来源。请记住，事件会冒泡。如果你在冒泡阶段从所有层级执行同一个动画，可能会导致一些严重不符合预期结果。为了防止这种情况，你可以使用`stopPropagation()`和`stopImmediatePropagation()`方法。
 
 ***
 
 ## 停止动画
 
-jQuery 允许你停止在 jQuery 对象集包含的元素上当前正在执行的动画。`.stop([clearQueue] [, jumpToEnd])` 方法允许你通过几种方式停止动画。
+jQuery 允许你停止在 jQuery 对象集包含的元素上当前正在执行的动画。`.stop([clearQueue] [, jumpToEnd])`方法允许你通过几种方式停止动画。
 
-不带任何参数调用 `.stop()` 会暂停队列中的动画。下一个开始的动画将再次重新开始执行队列中的动画。例如，以下代码会暂停所有动画：
+不带任何参数调用`.stop()`会暂停队列中的动画。下一个开始的动画将再次重新开始执行队列中的动画。例如，以下代码会暂停所有动画：
 
 ```javascript
 ("*").stop();
 ```
 
-调用 `.stop(true)` 并将 `cleareQueue` 选项设置为 `true`，则会在当前点停止动画并从队列中移除所有动画。例如，以下代码将停止所有图片上的动画并移除队列中的动画：
+调用`.stop(true)`并将`cleareQueue`选项设置为`true`，则会在当前点停止动画并从队列中移除所有动画。例如，以下代码将停止所有图片上的动画并移除队列中的动画：
 
 ```javascript
 $("img").stop(true);
 ```
 
-调用 `.stop(true, true)` 并将 `jumpToEnd` 选项设置为 `true`，会导致当前正在执行的动画立即跳转到结束值，清空队列，然后停止所有动画。例如，以下代码会停止所有图片上的动画，但会完成当前动画做的调整，然后移除队列中的动画：
+调用`.stop(true, true)`并将`jumpToEnd`选项设置为`true`，会导致当前正在执行的动画立即跳转到结束值，清空队列，然后停止所有动画。例如，以下代码会停止所有图片上的动画，但会完成当前动画做的调整，然后移除队列中的动画：
 
 ```javascript
 $("img").stop(true, true);
 ```
 
-`.stop()` 方法返回 jQuery 对象，因此你可以在末尾链式调用其他方法。例如，以下代码停止所有图片上的动画，然后启动一个新动画将 `opacity` 设置为 `.5`：
+`.stop()`方法返回 jQuery 对象，因此你可以在末尾链式调用其他方法。例如，以下代码停止所有图片上的动画，然后启动一个新动画将`opacity`设置为`.5`：
 
 点击此处查看代码图片
 
@@ -8440,7 +8382,7 @@ $("img").stop(true, true).animate({opacity:.5}, 1000);
 
 在实现动画时，一个非常棒的选项是在动画添加到队列之前添加延迟。这可以用一种更高级的方式提供动画，因为你延迟了动画队列的执行，为用户提供了更好的视觉体验。
 
-`.delay(duration, [, queueName])` 方法允许你指定以毫秒为单位的延迟 `duration`，以及一个可选的 `queueName`，用于指定将延迟应用到哪个队列。例如，以下代码为图片添加了大小动画；在尺寸调整完成后，会有 2 秒的延迟，然后 `opacity` 将动画到 `1`：
+`.delay(duration, [, queueName])`方法允许你指定以毫秒为单位的延迟`duration`，以及一个可选的`queueName`，用于指定将延迟应用到哪个队列。例如，以下代码为图片添加了大小动画；在尺寸调整完成后，会有 2 秒的延迟，然后`opacity`将动画到`1`：
 
 点击此处查看代码图片
 
@@ -8452,15 +8394,15 @@ $("img").animate({width:500}, 1000).delay(2000).animate({opacity:1} 1000);
 
 注意
 
-`.delay()` 方法非常适合在队列中的 jQuery 效果之间之间延迟；然而，它并不是 JavaScript `setTimeout()` 函数的替代品，后者可能更适用于某些用例——特别是那些你要求具有取消延迟能力的情况。
+`.delay()`方法非常适合在队列中的 jQuery 效果之间之间延迟；然而，它并不是 JavaScript`setTimeout()`函数的替代品，后者可能更适用于某些用例——特别是那些你要求具有取消延迟能力的情况。
 
 ***
 
 ## 对动画应用 .promise()
 
-`.promise([type], [, target])` 方法允许你在绑定到 jQuery 对象集的所有操作完成后应用某些功能。它通过返回一个新对象来实现这一点，该对象将观察操作，并在操作完成之前不执行任何绑定的方法。
+`.promise([type], [, target])`方法允许你在绑定到 jQuery 对象集的所有操作完成后应用某些功能。它通过返回一个新对象来实现这一点，该对象将观察操作，并在操作完成之前不执行任何绑定的方法。
 
-`.promise()` 返回一个类似于延迟对象（deferred object）的对象。它拥有一个 `.done()` 方法，允许你传入一个函数，该函数将在 `.promise()` 功能执行后运行。
+`.promise()`返回一个类似于延迟对象（deferred object）的对象。它拥有一个`.done()`方法，允许你传入一个函数，该函数将在`.promise()`功能执行后运行。
 
 例如，以下代码等待动画完成，然后将文本更改为“complete”：
 
@@ -8472,17 +8414,17 @@ $("span").animate({opacity:0}, 30000).promise().done(function(){
 });
 ```
 
-`.promise()` 方法接受两个可选参数。第一个是 `type`，指定操作的类型。默认类型是 `fx`，适用于动画；因此对于动画，你不需要指定类型。第二个参数是 `target`，指定要返回的可选目标 jQuery 对象，而不是新创建一个。
+`.promise()`方法接受两个可选参数。第一个是`type`，指定操作的类型。默认类型是`fx`，适用于动画；因此对于动画，你不需要指定类型。第二个参数是`target`，指定要返回的可选目标 jQuery 对象，而不是新创建一个。
 
 ## 动画显示和隐藏
 
-你已经已经在 第 9 节 中见过 `.show()` 和 `.hide()` 方法的用法。对此功能进行动画处理是常见做法，因此 jQuery 特意为这些方法提供了良好的动画选项，让你的工作变得更轻松。
+你已经已经在 第 9 节 中见过`.show()`和`.hide()`方法的用法。对此功能进行动画处理是常见做法，因此 jQuery 特意为这些方法提供了良好的动画选项，让你的工作变得更轻松。
 
 ### 动画 hide()
 
-`.hide( [duration] [, easing] [, callback])` 方法提供了可选的 `duration`、`easing` 和 `callback` 选项，允许你对隐藏效果进行动画，使元素消失时不那么突兀。
+`.hide( [duration] [, easing] [, callback])`方法提供了可选的`duration`、`easing`和`callback`选项，允许你对隐藏效果进行动画，使元素消失时不那么突兀。
 
-例如，以下代码在隐藏元素时应用了一个 1 秒的带有 `linear` 缓动的动画，并执行了一个简单的回调函数：
+例如，以下代码在隐藏元素时应用了一个 1 秒的带有`linear`缓动的动画，并执行了一个简单的回调函数：
 
 点击此处查看代码图片
 
@@ -8492,9 +8434,9 @@ $("#box").hide(1000, "linear", function() { $("#label").html("Hidden!") });
 
 ### 动画 show()
 
-`.show( [duration] [, easing] [, callback])` 方法提供了可选的 `duration`、`easing` 和 `callback` 选项，允许你对显示效果进行动画，使元素出现时的过渡更平滑。
+`.show( [duration] [, easing] [, callback])`方法提供了可选的`duration`、`easing`和`callback`选项，允许你对显示效果进行动画，使元素出现时的过渡更平滑。
 
-例如，以下代码在显示元素时应用了一个 1 秒的带有 `linear` 缓动的动画，并执行了一个简单的回调函数：
+例如，以下代码在显示元素时应用了一个 1 秒的带有`linear`缓动的动画，并执行了一个简单的回调函数：
 
 点击此处查看代码图片
 
@@ -8504,9 +8446,9 @@ $("#box").show(1000, "linear", function() { $("#label").html("Shown!") });
 
 ### 动画 toggle()
 
-`.toggle( [duration] [, easing] [, callback])` 方法提供了可选的 `duration`、`easing` 和 `callback` 选项，允许你在切换时对显示或隐藏效果进行动画。
+`.toggle( [duration] [, easing] [, callback])`方法提供了可选的`duration`、`easing`和`callback`选项，允许你在切换时对显示或隐藏效果进行动画。
 
-例如，以下代码应用了一个 1 秒的带有 `linear` 缓动的动画，并在切换时执行一个简单的回调函数：
+例如，以下代码应用了一个 1 秒的带有`linear`缓动的动画，并在切换时执行一个简单的回调函数：
 
 点击此处查看代码图片
 
@@ -8522,7 +8464,7 @@ $("#switch").toggle(1000, "linear", function() { $("#label").html("Toggled!") })
 
 使用以下步骤创建动态网页：
 
-**1.** 在 Eclipse 中创建 lesson12、`lesson12/js` 和 `lesson12/css` 文件夹，然后添加 `lesson12/image_hide.html`、`lesson12/js/image_hide.js` 和 `lesson12/css/image_hide.css` 文件。
+**1.** 在 Eclipse 中创建`lesson12`、`lesson12/js`和`lesson12/css`文件夹，然后添加`lesson12/image_hide.html`、`lesson12/js/image_hide.js`和`lesson12/css/image_hide.css`文件。
 
 ***
 
@@ -8532,9 +8474,11 @@ $("#switch").toggle(1000, "linear", function() { $("#label").html("Toggled!") })
 
 ***
 
-**2.** 将 列表 12.1 和 列表 12.3 所示的代码添加到 HTML 和 CSS 文件中。这些只是基础内容——一个带有句柄的 `<div>`、一个 `<img>` 和页脚 `<div>`。
+**2.** 将 列表 12.1 和 列表 12.3 所示的代码添加到 HTML 和 CSS 文件中。这些只是基础内容——一个带有句柄的`<div>`、一个`<img>`和页脚`<div>`。
 
-**3.** 打开 image_hide.js 文件并添加以下 `load()` 函数，为 `#handle` 元素添加点击处理器：
+
+
+**3.** 打开`image_hide.js`文件并添加以下`load()`函数，为`#handle`元素添加点击处理器：
 
 点击此处查看代码图片
 
@@ -8544,7 +8488,7 @@ $(window).load(function(){
 });
 ```
 
-**4.** 添加以下处理器来切换图片的可见性。`if` 语句检查 `#handle` 中的文本，然后调用 `show()` 显示图片或调用 `hide()` 隐藏它。注意在 `show()` 时，有一个完整的函数会显示页脚，告诉用户图片已就绪。在 `hide()` 时，页脚会被隐藏：
+**4.** 添加以下处理器来切换图片的可见性。`if`语句检查`#handle`中的文本，然后调用`show()`显示图片或调用`hide()`隐藏它。注意在`show()`时，有一个完整的函数会显示页脚，告诉用户图片已就绪。在`hide()`时，页脚会被隐藏：
 
 ```javascript
 function toggleImage(){
@@ -8557,10 +8501,6 @@ function toggleImage(){
 }
 ```
 
-
-
-
-
 ```javascript
 $("#photo").hide(1000);
 $("#handle").html('+');
@@ -8568,7 +8508,7 @@ $("#handle").html('+');
 }
 ```
 
-5. 保存所有三个文件，然后在网页浏览器中打开该 HTML 文档，如图图 12.1 所示。你应该能够展开和折叠图像，并看到适当的时间显示页脚。
+**5.** 保存所有三个文件，然后在网页浏览器中打开该 HTML 文档，如图图 12.1 所示。你应该能够展开和折叠图像，并看到适当的时间显示页脚。
 
 ![Image](img/image00912.jpeg)
 
@@ -8654,15 +8594,15 @@ div{ width:300px; text-align:center; }
 
 ### 可见性动画
 
-jQuery 在附加到 jQuery 对象的淡入方法中提供了动画功能。最后，这些淡入方法等同于在透明度属性上使用 `.animate()`。
+jQuery 在附加到 jQuery 对象的淡入方法中提供了动画功能。最后，这些淡入方法等同于在透明度属性上使用`.animate()`。
 
 以下章节描述了如何将动画应用于各种淡入方法。
 
 #### fadeIn()
 
-`.fadeIn( [duration] [, easing] [, callback])` 方法提供了可选的 `duration`、`easing` 和 `callback` ，允许你将元素的 `opacity` 从其当前值淡化到 1 的动画效果。
+`.fadeIn( [duration] [, easing] [, callback])`方法提供了可选的`duration`、`easing`和`callback`，允许你将元素的`opacity`从其当前值淡化到 1 的动画效果。
 
-例如，以下代码对所有图像元素应用了带有 `swing` 缓动的 1 秒钟动画：
+例如，以下代码对所有图像元素应用了带有`swing`缓动的 1 秒钟动画：
 
 点击此处查看代码图片
 
@@ -8672,9 +8612,9 @@ $("img").fadeIn(1000, "swing");
 
 #### fadeOut()
 
-`.fadeIn( [duration] [, easing] [, callback])` 方法提供了可选的 `duration`、`easing` 和 `callback` ，允许你将元素的 `opacity` 从其当前值淡化到 0（淡出效果）。
+`.fadeIn( [duration] [, easing] [, callback])`方法提供了可选的`duration`、`easing`和`callback`，允许你将元素的`opacity`从其当前值淡化到 0（淡出效果）。
 
-例如，以下代码对所有图像元素应用了带有 `swing` 缓动的 1 秒钟动画，然后在完成后再次将它们淡入：点击此处查看代码图片
+例如，以下代码对所有图像元素应用了带有`swing`缓动的 1 秒钟动画，然后在完成后再次将它们淡入：点击此处查看代码图片
 
 ```javascript
 $("img").fadeOut(1000, "swing", function() {$(this).fadeIn(1000);});
@@ -8682,9 +8622,9 @@ $("img").fadeOut(1000, "swing", function() {$(this).fadeIn(1000);});
 
 #### fadeToggle()
 
-`.fadeToggle( [duration] [, easing] [, callback])` 方法提供了可选的 `duration`、`easing` 和 `callback`，允许你根据元素的当前值，将其 `opacity` 从当前值淡化到 0 或 1 的动画效果。
+`.fadeToggle( [duration] [, easing] [, callback])`方法提供了可选的`duration`、`easing`和`callback`，允许你根据元素的当前值，将其`opacity`从当前值淡化到 0 或 1 的动画效果。
 
-例如，以下代码对所有图像元素应用了带有 `swing` 缓动的 3 秒钟动画。当前可见的图像将淡出，而当前透明的图像将淡入：点击此处查看代码图片
+例如，以下代码对所有图像元素应用了带有`swing`缓动的 3 秒钟动画。当前可见的图像将淡出，而当前透明的图像将淡入：点击此处查看代码图片
 
 ```javascript
 $("img").fadeToggle(3000, "swing");
@@ -8692,7 +8632,7 @@ $("img").fadeToggle(3000, "swing");
 
 #### fadeTo()
 
-`.fadeTo( duration, opacity [, easing] [, callback])` 方法提供了 `duration` 和 `opacity` 选项，用于指定结束时的透明度以及动画过渡的时间。它还有可选的 `easing` 和 `callback` 参数。
+`.fadeTo( duration, opacity [, easing] [, callback])`方法提供了`duration`和`opacity`选项，用于指定结束时的透明度以及动画过渡的时间。它还有可选的`easing`和`callback`参数。
 
 例如，以下代码对所有图像应用了耗时 2 秒的动画，使其从当前透明度过渡到 .5：
 
@@ -8706,9 +8646,11 @@ $("img").fadeTo(2000, .5);
 
 在本示例中，你将淡入动画应用于一组图像，在鼠标悬停在图像上时改变其透明度。练习的目的是让你使用本节中的淡入技术。
 
-1. 在 Eclipse 中创建 `image_fade.html`、`image_fade.js` 和 `image_fade.css` 文件。
-2. 添加所示的 12.4、12.5 和 12.6 的 HTML 和 CSS 文件——一个包含五个 `<img>` 的基础 `<div>`。
-3. 打开 `image_fade.js` 并添加以下 `load()` 函数，为所有图像元素添加 `mouseover` 和 `mouseout` 处理程序。`mouseover` 将图像透明度淡至 1，使其不透明；`mouseout` 则在鼠标移开时将其淡回 .3，使其变为透明：
+1. 在 Eclipse 中创建`image_fade.html`、`image_fade.js`和`image_fade.css`文件。
+
+2. 添加所示的 12.4、12.5 和 12.6 的 HTML 和 CSS 文件——一个包含五个`<img>`的基础`<div>`。
+
+3. 打开`image_fade.js`并添加以下`load()`函数，为所有图像元素添加`mouseover`和`mouseout`处理程序。`mouseover`将图像透明度淡至 1，使其不透明；`mouseout`则在鼠标移开时将其淡回 .3，使其变为透明：
 
 ```javascript
 $(window).load(function(){
@@ -8716,19 +8658,16 @@ $(window).load(function(){
     $("img").mouseout(function(){$(this).fadeTo(1000, .3);});
 });
 ```
+
 4. 保存所有三个文件，然后在网页浏览器中打开该 HTML 文档，如图图 12.2 所示。你应该能够将鼠标移动在图像上并看到透明度的变化。
-
-
-
-
 
 一种常见的动画是滑动效果。滑动效果使元素从不占用空间到占用空间，从起始边缘移动到结束边缘进行过渡。使用滑动动画可以给用户提供更丰富的体验，因为菜单、图像和其他元素可以在用户将鼠标悬停在上面或点击它们之前被“收叠”起来。
 
-你可以使用几种方法来创建滑动元素。一种方法是使用内置的 `jQuery` 滑动方法。另一种方法是对 `height` 和 `width` 属性进行动画处理。以下章节将描述这些方法。
+你可以使用几种方法来创建滑动元素。一种方法是使用内置的`jQuery`滑动方法。另一种方法是对`height`和`width`属性进行动画处理。以下章节将描述这些方法。
 
-####  `slideUp()`、`slideDown()` 和 `slideToggle()`
+#### `slideUp()`、`slideDown()`和`slideToggle()`
 
-`.slideUp( duration [, easing] [, callback])`, `.slideDown( duration [, easing] [, callback])` 和 `.slideToggle( duration [, easing] [, callback])` 方法提供了 `duration`、`easing` 和 `callback` 参数，允许你在垂直方向上制作滑动效果。
+`.slideUp( duration [, easing] [, callback])`, `.slideDown( duration [, easing] [, callback])`和`.slideToggle( duration [, easing] [, callback])`方法提供了`duration`、`easing`和`callback`参数，允许你在垂直方向上制作滑动效果。
 
 例如，以下代码应用了 1 秒的动画使元素向下滑动，然后应用 3 秒的延迟并将元素滑向上：
 
@@ -8738,7 +8677,7 @@ $(window).load(function(){
 $("#menu").slideDown(1000).delay(3000).slideUp(1000);
 ```
 
-你也可以以类似的方式对 `.slideToggle()` 方法进行动画。例如，以下代码使用滑动动画控制 `<div>` 元素的可见性：
+你也可以以类似的方式对`.slideToggle()`方法进行动画。例如，以下代码使用滑动动画控制`<div>`元素的可见性：
 
 ```
 $("div").slideToggle(1000);
@@ -8746,11 +8685,11 @@ $("div").slideToggle(1000);
 
 #### 使用 Width 和 Height 滑动
 
-我们也喜欢使用 `width` 和 `height` 属性来创建滑动元素。你可以通过对 `height` 进行动画处理来创建垂直滑动动画，通过对 `width` 进行动画处理来创建水平滑动动画。
+我们也喜欢使用`width`和`height`属性来创建滑动元素。你可以通过对`height`进行动画处理来创建垂直滑动动画，通过对`width`进行动画处理来创建水平滑动动画。
 
-有一些技巧。如果你想获得完整的滑动效果而不仅仅是调整大小的效果，则需要为元素同时提供 `width` 和 `height` 值。此外，如果你想让元素在页面上保留空间，你就不能将该值一直减到 0。但是，你可以将其减到 `.1`，而另一个维度将保留其空间。
+有一些技巧。如果你想获得完整的滑动效果而不仅仅是调整大小的效果，则需要为元素同时提供`width`和`height`值。此外，如果你想让元素在页面上保留空间，你就不能将该值一直减到 0。但是，你可以将其减到 `.1`，而另一个维度将保留其空间。
 
-下面的示例显示了一个动画，该动画通过将 `height` 更改为 100 来向下滑动，然后通过将 `height` 更改为 .1 向上滑动：
+下面的示例显示了一个动画，该动画通过将`height`更改为 100 来向下滑动，然后通过将`height`更改为 .1 向上滑动：
 
 点击此处查看代码图片
 
@@ -8767,17 +8706,17 @@ $("img").animate({height:.1}, 1000);
 
 使用以下步骤创建动态网页：
 
-1. **在 Eclipse 中**，创建 `lesson12/sliding_images.html`、`lesson12/js/sliding_images.js` 和 `lesson12/css/sliding_images.css` 文件。
+1. **在 Eclipse 中**，创建`lesson12/sliding_images.html`、`lesson12/js/sliding_images.js`和`lesson12/css/sliding_images.css`文件。
 
-2. **将**在 Listing 12.7 和 Listing 12.9 中显示的代码添加到 HTML 和 CSS 文件中——这些只是基础内容：一个带有 `<p>` 标题栏的 `<div>`，以及一个包含用于菜单的 `<span>` 和 `<img>` 元素的内部 `<div>`。
+2. **将**在 Listing 12.7 和 Listing 12.9 中显示的代码添加到 HTML 和 CSS 文件中——这些只是基础内容：一个带有`<p>`标题栏的`<div>`，以及一个包含用于菜单的`<span>`和`<img>`元素的内部`<div>`。
 
-3. **打开 `sliding_images.js` 文件**并编写基本的 `$(window).load()` 函数。在 `load()` 函数内部，添加以下行来隐藏内部的 `<div>`：
+3. **打开`sliding_images.js`文件**并编写基本的`$(window).load()`函数。在`load()`函数内部，添加以下行来隐藏内部的`<div>`：
 
 ```javascript
 $("div div").hide();
 ```
 
-4. **添加以下语句**为 `<span>` 元素添加 `mouseover` 和 `mouseout` 处理器。在 `mouseover` 时，你获取 `<span>` 的索引，然后使用它找到对应的 `<img>` 元素，并通过动画将 `height` 设置为 100，从而使图像向下滑动。在 `mouseout` 时，你执行相反的操作，将 `height` 设置为 1 以使其向上滑动：
+4. **添加以下语句**为`<span>`元素添加`mouseover`和`mouseout`处理器。在`mouseover`时，你获取`<span>`的索引，然后使用它找到对应的`<img>`元素，并通过动画将`height`设置为 100，从而使图像向下滑动。在`mouseout`时，你执行相反的操作，将`height`设置为 1 以使其向上滑动：
 
 点击此处查看代码图片
 
@@ -8792,7 +8731,7 @@ $("span").mouseout(function(){
 });
 ```
 
-5. **添加以下语句**为 `#container` 元素添加 `mouseenter` 和 `mouseleave` 处理器。在 `mouseenter` 时，你首先停止传播，以便在冒泡期间只应用一次滑动切换。然后，你停止 `#images` 元素上的所有动画，并使用 `slideToggle()` 制作整个菜单的滑动动画。`mouseleave` 时发生相同的情况。结果是，当鼠标悬停在 `#container` 上时，它向下滑动，当你离开时它滑向上：
+5. **添加以下语句**为`#container`元素添加`mouseenter`和`mouseleave`处理器。在`mouseenter`时，你首先停止传播，以便在冒泡期间只应用一次滑动切换。然后，你停止`#images`元素上的所有动画，并使用`slideToggle()`制作整个菜单的滑动动画。`mouseleave`时发生相同的情况。结果是，当鼠标悬停在`#container`上时，它向下滑动，当你离开时它滑向上：
 
 6. **保存所有文件**，然后在浏览器中打开 HTML 文档。你应该看到菜单展开，并在鼠标悬停在每一项上时图像向下滑动，离开时滑向上。
 
@@ -8856,6 +8795,8 @@ $(window).load(function(){
 
 点击此处查看代码图片
 
+
+
 ```css
 img{
   display:inline-block;
@@ -8886,12 +8827,9 @@ span {
 }
 ```
 
-
-
-
 与使用高度和宽度创建滑动效果类似，你也可以使用它们来创建缩放动画。滑动（slide）和缩放（resize）的区别在于，在缩放时会保持图像的宽高比例，这使得元素的整体效果看起来是正在变大或缩小，而不是被拉伸或折叠。
 
-创建缩放动画的技巧在于，你要么需要在 `.animate()` 语句中同时指定 `height` 和 `width`，或者在 CSS 设置中将其中一个设置为 `auto`，并且你只对有值的那个进行动画处理。
+创建缩放动画的技巧在于，你要么需要在`.animate()`语句中同时指定`height`和`width`，或者在 CSS 设置中将其中一个设置为`auto`，并且你只对有值的那个进行动画处理。
 
 例如，以下代码展示了图像在 1 秒内缩放到 500 像素，然后在 5 秒内缓慢地缩小回 400 像素：
 
@@ -8901,7 +8839,7 @@ span {
 $("img").animate({height:500, width:500}, 1000).animate({height:500, width:500}, 5000);
 ```
 
-***
+---
 
 ## 动手一试：使用缩放动画创建一个简单的图库视图
 
@@ -8909,81 +8847,80 @@ $("img").animate({height:500, width:500}, 1000).animate({height:500, width:500},
 
 使用以下步骤创建动态网页：
 
-1.  在 Eclipse 中，创建 `lesson12/animated_resize.html`、`lesson12/js/animated_resize.js` 和 `lesson12/css/animated_resize.css` 文件。
+1. 在 Eclipse 中，创建`lesson12/animated_resize.html`、`lesson12/js/animated_resize.js`和`lesson12/css/animated_resize.css`文件。
 
-2.  将列表 12.10 和列表 12.12 中所示的代码添加到 HTML 和 CSS 文件中——只需要一个带有 `<img>` 元素的基础 `<div>`。在 CSS 文件中，`<img>` 元素的宽度被样式设置为 100px，但没有设置高度。这样我们就可以在不使用高度属性的情况下对尺寸进行动画处理。
+2. 将列表 12.10 和列表 12.12 中所示的代码添加到 HTML 和 CSS 文件中——只需要一个带有`<img>`元素的基础`<div>`。在 CSS 文件中，`<img>`元素的宽度被样式设置为 100px，但没有设置高度。这样我们就可以在不使用高度属性的情况下对尺寸进行动画处理。
 
-3.  现在打开 `animated_resize.js` 文件并编写基础的 `load()` 函数，为 `<img>` 元素添加 `mouseover` 和 `mouseout` 处理器。在 `mouseover` 时，通过增加 `width` 和 `opacity` 来实现动画，在 `mouseout` 时执行相反的操作：
+3. 现在打开`animated_resize.js`文件并编写基础的`load()`函数，为`<img>`元素添加`mouseover`和`mouseout`处理器。在`mouseover`时，通过增加`width`和`opacity`来实现动画，在`mouseout`时执行相反的操作：
 
-点击此处查看代码图片
+   点击此处查看代码图片
 
-```javascript
-$(window).load(function(){
-   $("img").mouseover(function(){
-      $(this).animate({width:"200px", opacity:1}, 1000);
+   ```javascript
+   $(window).load(function(){
+      $("img").mouseover(function(){
+         $(this).animate({width:"200px", opacity:1}, 1000);
+      });
+      $("img").mouseout(function(){
+         $(this).animate({width:"100px", opacity:.3}, 1000);
+      });
    });
-   $("img").mouseout(function(){
-      $(this).animate({width:"100px", opacity:.3}, 1000);
+   ```
+
+4. 保存所有三个文件，然后在网页浏览器中打开 HTML 文档，如图 12.4 所示。你应该能够悬停在图像上并看到缩放动画。
+
+   ![Image](img/image00915.jpeg)
+
+   **图 12.4** 简单的滑动菜单元素。
+
+   **列表 12.10 animated_resize.html 用于显示图像的基础 Web HTML 文件**
+
+   点击此处查看代码图片
+
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <head>
+      <title>Animated Image Resizing</title>
+      <meta charset="utf-8" />
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+      <script type="text/javascript" src="js/animated_resize.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/animated_resize.css">
+   </head>
+   <body>
+      <div id="photos">
+         <img src="/images/pool.jpg"/>
+         <img src="/images/peak.jpg"/>
+         <img src="/images/shadow_jump.jpg"/>
+         <img src="/images/misty_mountains.jpg"/>
+         <img src="/images/tiger.jpg"/>
+      </div>
+   </body>
+   </html>
+   ```
+
+   **列表 12.11 animated_resize.js 实现缩放效果的 jQuery 和 JavaScript 代码**
+
+   点击此处查看代码图片
+
+   ```javascript
+   $(window).load(function(){
+      $("img").mouseover(function(){
+         $(this).animate({width:"175px", opacity:1}, 1000);
+      });
+      $("img").mouseout(function(){
+         $(this).animate({width:"100px", opacity:.3}, 1000);
+      });
    });
-});
-```
+   ```
 
-4.  保存所有三个文件，然后在网页浏览器中打开 HTML 文档，如图 12.4 所示。你应该能够悬停在图像上并看到缩放动画。
+   **列表 12.12 animated_resize.css 设置图像样式的 CSS 代码**
 
-![Image](img/image00915.jpeg)
+   点击此处查看代码图片
 
-**图 12.4** 简单的滑动菜单元素。
-
-**列表 12.10 animated_resize.html 用于显示图像的基础 Web HTML 文件**
-
-点击此处查看代码图片
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-   <title>Animated Image Resizing</title>
-   <meta charset="utf-8" />
-   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-   <script type="text/javascript" src="js/animated_resize.js"></script>
-   <link rel="stylesheet" type="text/css" href="css/animated_resize.css">
-</head>
-<body>
-   <div id="photos">
-      <img src="/images/pool.jpg"/>
-      <img src="/images/peak.jpg"/>
-      <img src="/images/shadow_jump.jpg"/>
-      <img src="/images/misty_mountains.jpg"/>
-      <img src="/images/tiger.jpg"/>
-   </div>
-</body>
-</html>
-```
-
-**列表 12.11 animated_resize.js 实现缩放效果的 jQuery 和 JavaScript 代码**
-
-点击此处查看代码图片
-
-```javascript
-$(window).load(function(){
-   $("img").mouseover(function(){
-      $(this).animate({width:"175px", opacity:1}, 1000);
-   });
-   $("img").mouseout(function(){
-      $(this).animate({width:"100px", opacity:.3}, 1000);
-   });
-});
-```
-
-**列表 12.12 animated_resize.css 设置图像样式的 CSS 代码**
-
-```css
-div{padding:0px;}
-img{width:100px;} /* 此处补全 */
-```
-
-
-
+   ```css
+   div{padding:0px;}
+   img{width:100px;} /* 此处补全 */
+   ```
 
 ```javascript
 var rightEdge = window.innerWidth;
@@ -8994,7 +8931,9 @@ $(window).load(function(){
 });
 ```
 
-### 4. 为控制按钮添加以下处理程序。注意，每个处理程序首先更改飞机的图片 `src` 属性，停止当前动画，然后通过 `left` 或 `top` 属性来移动飞机会。`#stop` 处理程序会停止所有动画并清空动画队列：
+### 4. 为控制按钮添加以下处理程序
+
+注意，每个处理程序首先更改飞机的图片`src`属性，停止当前动画，然后通过`left`或`top`属性来移动飞机会。`#stop`处理程序会停止所有动画并清空动画队列：
 
 点击此处查看代码图片
 
@@ -9018,7 +8957,9 @@ $("#down").click(function(){
 $("#stop").click(function(){ $("#ship").stop(true) });
 ```
 
-### 5. 保存所有三个文件，然后在网页浏览器中打开 HTML 文档，如图 12.5 所示。你应该可以使用控制按钮让飞盘环绕飞行这是一个非常基础的示例，但对于理解动画非常有帮助。
+### 5. 保存所有三个文件，然后在网页浏览器中打开 HTML 文档
+
+如图 12.5 所示。你应该可以使用控制按钮让飞盘环绕飞行这是一个非常基础的示例，但对于理解动画非常有帮助。
 
 ![Image](img/image091.jpeg)
 
@@ -9026,7 +8967,7 @@ $("#stop").click(function(){ $("#ship").stop(true) });
 
 **12.13 interactive_animation.html** 用于显示控制、锥体和飞盘的 HTML 文件。点击此处查看代码图片
 
-***
+---
 
 ```html
 <!DOCTYPE html>
@@ -9057,9 +8998,11 @@ $("#stop").click(function(){ $("#ship").stop(true) });
 </html>
 ```
 
-### **12.14 interactive_animation.js** 使用点击处理程序实现飞盘移动的 jQuery 代码。点击此处查看代码图片
+### 12.14 interactive_animation.js
 
-***
+使用点击处理程序实现飞盘移动的 jQuery 代码。点击此处查看代码图片
+
+---
 
 ```javascript
 var rightEdge = window.innerWidth;
@@ -9086,9 +9029,11 @@ $(window).load(function(){
 });
 ```
 
-### **12.15 interactive_animation.js** 为控制、锥体和飞盘设置样式的 CSS 代码。点击此处查看代码图片
+### 12.15 interactive_animation.js
 
-***
+为控制、锥体和飞盘设置样式的 CSS 代码。点击此处查看代码图片
+
+---
 
 ```css
 img{ width:40px;}
@@ -9104,73 +9049,66 @@ body {
 }
 ```
 
-***
+---
 
 ### 总结
-在本节中，你学习了网页动画的基础知识以及如何将它们应用到元素的更改上。大多数动画可以使用 jQuery 对象上提供的 `.animate()` 方法完成。你学习了动画队列、如何停止动画并清空队列，以及如何延迟动画。
 
-jQuery 还提供了几个辅助函数，例如 `fadeIn()`/`fadeOut()` 和 `show()`/`hide()`，它们简化了一些常见的动画任务。你学习了如何创建一些实用的页面元素，以及一个用来通过飞行纸飞机消时间的简单应用。
+在本节中，你学习了网页动画的基础知识以及如何将它们应用到元素的更改上。大多数动画可以使用 jQuery 对象上提供的`.animate()`方法完成。你学习了动画队列、如何停止动画并清空队列，以及如何延迟动画。
+
+jQuery 还提供了几个辅助函数，例如`fadeIn()`/`fadeOut()`和`show()`/`hide()`，它们简化了一些常见的动画任务。你学习了如何创建一些实用的页面元素，以及一个用来通过飞行纸飞机消时间的简单应用。
 
 ### 问答
+
 **Q. 有没有全局禁用所有动画的方法？**
 
-**A.** 有的。你可以设置 `jQuery.fx.off` 来让所有动画处于最终状态并禁用动画。如果你想在测试时禁用动画，这是一个非常有用的功能。
+**A.** 有的。你可以设置`jQuery.fx.off`来让所有动画处于最终状态并禁用动画。如果你想在测试时禁用动画，这是一个非常有用的功能。
 
 **Q. 有没有可以控制动画步数的方法？**
 
-**A.** 在程度上。你可以设置 `jQuery.fx.interval` 值为步骤之间的毫秒数。这控制了动画运行的帧率。不过要小心这个设置；降低数值会让动画更平滑，但也会消耗资源。
+**A.** 在程度上。你可以设置`jQuery.fx.interval`值为步骤之间的毫秒数。这控制了动画运行的帧率。不过要小心这个设置；降低数值会让动画更平滑，但也会消耗资源。
 
 ### 工作
+
 工作由一系列问题组成旨在巩固你对课程内容的理解。在看答案之前尝试回答问题。
 
 ### 测验
-**1. 是否可以控制动画何时发生？**
 
-**2. 如何对颜色变化动画？**
-
-**3. 正确或错误：仅动画宽度始终会保持图片的宽高比例。**
-
-**4. 正确或错误：无法对静态元素进行动画。**
-
-**5. 有没有方法在所有动画完成后执行一个函数？**
+1. 是否可以控制动画何时发生？
+2. 如何对颜色变化动画？
+3. 正确或错误：仅动画宽度始终会保持图片的宽高比例。
+4. 正确或错误：无法对静态元素进行动画。
+5. 有没有方法在所有动画完成后执行一个函数？
 
 ### 测验答案
-**1.** 有的，部分可以。使用 `.delay()` 方法或 `setTimeout()`，你可以延迟动画一段时间。
 
-**2.** 你必须使用十六进制颜色值，例如 `#ffffff`。
-
-**3.** 错误。如果高度是自动的，那么它是正确的；但如果高度是特定值，宽高比例将被忽略。
-
-**4.** 错误。你可以通过动画外边距和内边距提供一些移动效果。
-
-**5.** 有的，使用 `.promise()` 方法。
+1. 有的，部分可以。使用`.delay()`方法或`setTimeout()`，你可以延迟动画一段时间。
+2. 你必须使用十六进制颜色值，例如`#ffffff`。
+3. 错误。如果高度是自动的，那么它是正确的；但如果高度是特定值，宽高比例将被忽略。
+4. 错误。你可以通过动画外边距和内边距提供一些移动效果。
+5. 有的，使用`.promise()`方法。
 
 ### 练习
-1. 打开列表 12.1 中的代码。在 `#title <div>` 中添加第二个 `<span>` 来放置“Image”文本。然后隐藏并展开该 `<span>` 以及图片。
 
+1. 打开列表 12.1 中的代码。在`#title <div>`中添加第二个`<span>`来放置“Image”文本。然后隐藏并展开该`<span>`以及图片。
 
+2. 打开列表 12.10、12.11 和 12.12 中的代码。通过为图像添加点击事件处理器来修改代码。在点击处理器中，停止所有动画而不完成当前动画。然后，使用`$(this).off("mouseover");`等代码关闭`mouseover`和`mouseout`事件处理器。
 
+3. 打开列表 12.13、12.14 和 12.15 中的代码。修改代码以对对角移动添加四个新按钮。你还需要为这些按钮添加处理器，在同一个动画中通过设置`top`和`left`属性来应用移动动画。
 
-
-2. 打开列表 12.10、12.11 和 12.12 中的代码。通过为图像添加点击事件处理器来修改代码。在点击处理器中，停止所有动画而不完成当前动画。然后，使用 `$(this).off("mouseover");` 等代码关闭 mouseover 和 mouseout 事件处理器。
-
-3. 打开列表 12.13、12.14 和 12.15 中的代码。修改代码以对对角移动添加四个新按钮。你还需要为这些按钮添加处理器，在同一个动画中通过设置 `top` 和 `left` 属性来应用移动动画。
-
-# 第 13 ：在 jQuery 和 JavaScript 中与 Web 表单交互
+# 第 13 章：在 jQuery 和 JavaScript 中与 Web 表单交互
 
 在本节中将学习：
 
-![Image](img/image00767.jpeg) 如何获取和设置表单元素的值
+- ![Image](img/image00767.jpeg) 如何获取和设置表单元素的值
+- ![Image](img/image00767.jpeg) 动态构建表单元素
+- ![Image](img/image00767.jpeg) 如何使用表单元素动画帮助用户导航表单
+- ![Image](img/image00767.jpeg) 如何为用户自动聚焦元素
+- ![Image](img/image00767.jpeg) 创建基础电子商务 Web 表单
+- ![Image](img/image00767.jpeg) Web 表单的简单方法
 
-![Image](img/image00767.jpeg) 动态构建表单元素
 
-![Image](img/image00767.jpeg) 如何使用表单元素动画帮助用户导航表单
 
-![Image](img/image00767.jpeg) 如何为用户自动聚焦元素
-
-![Image](img/image00767.jpeg) 创建基础电子商务 Web 表单
-
-![Image](img/image00767.jpeg) Web 表单的简单方法
+# Web 表单
 
 Web 表单是动态 Web 编程不可或缺的一部分。你可能只把表单考虑为信用卡支付、在线注册等；然而，每当你需要从用户处获取实际数据时，你都会使用 Web 表单来收集数据输入。
 
@@ -9179,46 +9117,36 @@ Web 表单对用户来说可能是积极或消面的体验。思考一下：他�
 那么，如何给用户提供良好的体验呢？
 
 1. 使用动态编程访问他们正在输入的数据，以提供符合其操作的动态工作流。
-
 2. 提供视觉效果（如高亮或展开元素），帮助他们浏览页面。
-
 3. 提供内联验证，让他们在开始偏离方向时立即获知。
 
 接下来的章节将介绍每个概念。当你完成学习后，你将能够实现一些非常出色的 Web 表单。
 
-***
+> **注意**
+>
+> jQuery 和 JavaScript 在处理 Web 表单时提供了许多非常棒的功能。AngularJS 为 JavaScript 和 jQuery 增加了功能，能够将 Web 表单元素绑定到 Web 页面数据模型中的值。你将在课程的 AngularJS 部分学习到更多相关内容。
 
-注意
-
-jQuery 和 JavaScript 在处理 Web 表单时提供了许多非常棒的功能。AngularJS 为 JavaScript 和 jQuery 增加了功能，能够将 Web 表单元素绑定到 Web 页面数据模型中的值。你将在课程的 AngularJS 部分学习到更多相关内容。
-
-***
-
-### 访问表单元素
+## 访问表单元素
 
 与 Web 表单交互最重要的部分是能够访问它们所代表的数据。访问表单数据允许你获取和设置值、更改选择并将数据序列化以供其他方式使用。
 
 表单元素有多种类型。遗憾的是，没有单一的标准方法来获取和设置元素所代表的值。接下来的章节描述了访问每种表单元素数据的方法。
 
-### 获取和设置表单元素的值
+## 获取和设置表单元素的值
 
 获取表单元素代表的值取决于表单元素的类型。例如，文本元素代表内部的文本，而选择元素代表被选中元素的值（或多个值）。
 
 在接下来的章节中，将根据获取表单值的方法对表单元素进行分组。例如，无论类型如何，所有文本元素都以相同的方式进行访问。
 
-#### 访问表单元素属性
+### 访问表单元素属性
 
 不同的元素具有许多相同的属性，也有一些是元素类型特有的。在实现动态代码时，有几个属性是你需要访问的：
 
-![Image](img/image00767.jpeg) `id`——用于查询和识别表单元素。
-
-![Image](img/image00767.jpeg) `name`——有多种用途。对于单选按钮（radio inputs），此属性用于将元素分组在一起，以便每次只能选择一个。对于表单的序列化和提交，`name` 属性被用作元素值的名称。
-
-![Image](img/image00767.jpeg) `type`——用于识别 `<input>` 元素的类型。
-
-![Image](img/image00767.jpeg) `value`——存储与元素关联的值。对于文本元素，该值显示在文本框中；对于按钮，它是按钮中的字符串；对于 `<option>` 元素，它是与选项关联的值。
-
-![Image](img/image00767.jpeg) `checked`——用于访问单选按钮或复选框 `<input>` 元素的选择状态。
+- `id`——用于查询和识别表单元素。
+- `name`——有多种用途。对于单选按钮（radio inputs），此属性用于将元素分组在一起，以便每次只能选择一个。对于表单的序列化和提交，`name` 属性被用作元素值的名称。
+- `type`——用于识别 `<input>` 元素的类型。
+- `value`——存储与元素关联的值。对于文本元素，该值显示在文本框中；对于按钮，它是按钮中的字符串；对于 `<option>` 元素，它是与选项关联的值。
+- `checked`——用于访问单选按钮或复选框 `<input>` 元素的选择状态。
 
 可以通过属性 `name` 直接在 JavaScript 中访问这些属性。例如，要获取和设置 `value` 属性，可以使用以下代码：
 
@@ -9229,27 +9157,21 @@ var newValue = domObj.value;
 
 在 jQuery 中，有三种方法获取表单对象的属性和特性：`.attr()`、`.prop()` 和 `.val()`。`.attr()` 方法用于访问对应 HTML 属性，如 `id`、`name` 和 `type`；而 `.prop()` 方法用于访问更特定的 DOM 对象的属性，例如 `<select>` 元素的 `selectedIndex`。
 
-***
-
-注意
-
-`.attr()`、`.prop()` 和 `.val()` 方法仅获取匹配元素的值。如果你正在处理多个元素，可能需要使用 `.map()` 或 `.each()` 来获取所有元素的值。
-
-***
+> **注意**
+>
+> `.attr()`、`.prop()` 和 `.val()` 方法仅获取匹配元素的值。如果你正在处理多个元素，可能需要使用 `.map()` 或 `.each()` 来获取所有元素的值。
 
 jQuery 提供了 `.val()` 方法来访问表单元素的值。在 jQuery 中，可以使用 jQuery 对象的 `.val()` 方法访问值。例如，以下语句设置所有 `type="text"` 的 `<input>` 元素的值，然后获取第一个值：
 
-#### 访问文本输入元素
+### 访问文本输入元素
 
 最常见的表单元素类型是文本输入。这些元素包括 `<textarea>` 元素以及具有以下 `type` 属性值的 `<input>` 元素：`color`、`date`、`datetime`、`datetime-local`、`email`、`month`、`number`、`password`、`range`、`search`、`tel`、`time`、`url` 和 `week`。
 
 尽管这些元素用法上有所不同，但它们都渲染相同的 Basic 文本框并以相同的方式访问。每个元素都有可以在 HTML 中设置的值属性。例如，以下代码显示了一个带有初始值的文本表单元素的示例，如图 13.1 所示：
 
-[content]
 ```html
 <input type="text" value="Initial Text"/>
 ```
-[/content]
 
 ![Image](img/image0917.jpeg)
 
@@ -9257,20 +9179,15 @@ jQuery 提供了 `.val()` 方法来访问表单元素的值。在 jQuery 中，�
 
 可以通过访问值属性直接从 JavaScript 获取该值。例如，以下代码设置了文本输入元素的值并获取了该值：
 
-[content]
 ```javascript
 textDomObj.value = "New Text";
 var newValue = textDomObj.value;
 ```
-[/content]
 
 ```javascript
 $("input:text").val("New Text");
 var newValue = $("input:text").val();
 ```
-
-
-
 
 复选框输入元素具有布尔值，该值取决于该元素是否被选中。通过获取 `checked` 属性的值可以访问该值。如果元素被选中，则 `checked` 的值将为 `true` 或 `"checked"`；否则，该值为 `undefined` 或 `false`。
 
@@ -9294,7 +9211,7 @@ jObj.is(":checked");
 jObj.prop("checked", true);
 ```
 
-将代表复选框的 jQuery 对象的状态设置为未选中的的方法类似。你需要使用 `prop()` 移除 `checked` 属性并将值设置为 `false`。例如：
+将代表复选框的 jQuery 对象的状态设置为未选中的方法类似。你需要使用 `prop()` 移除 `checked` 属性并将值设置为 `false`。例如：
 
 点击此处查看代码图片
 
@@ -9322,17 +9239,13 @@ var groupValue = $("input[name=myGroup]").filter(":checked").val();
 
 `select` 输入元素实际上是系列 `<option>` 元素的容器输入元素。`select` 元素的值是当前选中选项（或选项）的值。同样，jQuery 和 JavaScript 中的提交和序列化会自动为你处理这些。然而，若要手动处理，则需要一些代码。
 
-***
-
-**注意**
-
-如果你没有为 `<option>` 元素指定 `value` 属性，返回的值将是 `innerHTML` 的值。例如，以下选项的数值为 `"one"`：`<option>one</option>`
-
-***
+> **注意**
+>
+> 如果你没有为 `<option>` 元素指定 `value` 属性，返回的值将是 `innerHTML` 的值。例如，以下选项的数值为 `"one"`：`<option>one</option>`
 
 在访问 `<select>` 元素时，你可能需要几个值。其中一个是元素所代表的完整值。在 jQuery 中使用 `.val()` 方法获取该值非常简单。例如，考虑以下代码：
 
-HTML:
+**HTML：**
 
 点击此处查看代码图片
 
@@ -9344,7 +9257,7 @@ HTML:
 </select>
 ```
 
-jQuery:
+**jQuery：**
 
 ```javascript
 $("#mySelect").val();
@@ -9354,11 +9267,11 @@ $("#mySelect").val();
 
 `"one"`
 
-对于多选框，`.val()` 方法返回的是值的数组而不是单个值。例如，在多多选框中，如果过第一个选项被选中，jQuery 语句返回的值如下：
+对于多选框，`.val()` 方法返回的是值的数组而不是单个值。例如，在多多选框中，如果第一个选项被选中，jQuery 语句返回的值如下：
 
 `["one"]`
 
-在多选框中，如果过前三个选项都被选中，jQuery 语句返回的值如下：
+在多选框中，如果前三个选项都被选中，jQuery 语句返回的值如下：
 
 `["one", "two", "three"]`
 
@@ -9390,7 +9303,7 @@ $("#mySelect").val(["two", "three"]);
 
 在 Chrome 和 Firefox 中，DOM 对象还提供了一个 `files` 属性，它是一个文件对象数组，代表由该元素选择的文件。你可以从 JavaScript 使用用户选择的文件：
 
-HTML:
+**HTML：**
 
 点击此处查看代码图片
 
@@ -9398,7 +9311,7 @@ HTML:
 <input id="fileSelect" type="file" />
 ```
 
-JavaScript:
+**JavaScript：**
 
 点击此处查看代码图片
 
@@ -9415,19 +9328,15 @@ for (var i in fileList){
 }
 ```
 
-***
-
-**注意**
-
-在处理文件时必须小心，因为这似乎是恶意行为的漏洞。如果 Internet Explorer 检测到文件对象被篡改，它会阻止提交事件。此外，许多浏览器的安全设置阻止脚本获取某些文件信息。
-
-***
+> **注意**
+>
+> 在处理文件时必须小心，因为这似乎是恶意行为的漏洞。如果 Internet Explorer 检测到文件对象被篡改，它会阻止提交事件。此外，许多浏览器的安全设置阻止脚本获取某些文件信息。
 
 每个文件对象包含几个动态编程中非常有用的属性。常用的属性列在表 13.1。
 
 ![图片](img/image018.jpeg)
 
-**表 13.1 文件对象的属性**
+**表 13.1** 文件对象的属性
 
 ### 隐藏输入
 
@@ -9435,7 +9344,7 @@ for (var i in fileList){
 
 随表单提交的是 `name` 和 `value` 属性。然而，你可以使用 `.data(key [,value])` 方法为隐藏表单对象（或任何 jQuery DOM 对象）附加额外值。该方法的作用类似于 `.attr()` 和 `.prop()`：如果你想获取值，则传递键；如果你想设置值，则传递键和值。例如，以下代码定义了一个简单的隐藏元素，并使用 jQuery 分配了提交值以及扩展属性：
 
-HTML:
+**HTML：**
 
 点击此处查看代码图片
 
@@ -9443,7 +9352,7 @@ HTML:
 <input id="invisibleMan" name="InvisibleMan" type="hidden" />
 ```
 
-jQuery:
+**jQuery：**
 
 点击此处查看代码图片
 
@@ -9459,14 +9368,11 @@ var state $("#invisibleMan").data("hairColor");
 
 表单中的许多输入元素都可以轻松地序列化为字符串或数组。序列化表单数据使其在存储、发送或根据表单事件进行动态调整时变得更加容易。
 
-
-
-
 要对一个表单进行序列化，它需要具备两个要素：一个 `name` 属性和一个可以赋值给名称的 `value` 属性。表 13.2 描述了不同类型属性的各种来源。
 
 ![Image](img/image0091.jpeg)
 
-**表 13.2 DOM File 对象的属性**
+**表 13.2** DOM File 对象的属性
 
 ## 将表单转换为查询字符串
 
@@ -9474,7 +9380,7 @@ var state $("#invisibleMan").data("hairColor");
 
 例如，查看以下代码，它创建了一个表单并根据图 13.2 中设置的值对其进行序列化：
 
-HTML:
+**HTML：**
 
 点击此处查看代码图像
 
@@ -9495,7 +9401,7 @@ HTML:
 
 **图 13.2** 包含 `text`、`select` 和 `radio` 输入的简单表单。
 
-jQuery:
+**jQuery：**
 
 点击此处查看代码图像
 
@@ -9534,23 +9440,23 @@ var formArr = $("#simpleForm").serializeArray();
   3: {"name":"gender", "value":"male"}};
 ```
 
-***
-
 ## 动手实践：访问并操作表单元素数据
 
 现在你已经有机会回顾了访问和交互表单数据的方法，是时候亲自实践一下了。在这次练习中，你将创建两个表单：一个用于获取数据，另一个用于设置数据。结果将是当你更新一个表单时，另一个表单也会之更新。
 
 该练习的目的是让你有机会以各种方式获取和设置表单元素的值。示例代码位于列表 13.1、13.2 和 13.3 中。
 
-使用以下步骤创建动态 页面：
+使用以下步骤创建动态页面：
 
-1. 在 Eclipse 中，创建 `lesson13`、`lesson13/js` 和 `lesson13/css` 文件夹，然后添加 `lesson13/form_manipulation.html`、`lesson13/js/form_manipulation.js` 和 `lesson13/css/form_manipulation.css` 文件。
 
-2. 在 HTML 和 CSS 文件中添加列表 13.1 和列表 13.3 所示的代码。这里有很多 HTML 代码，但它们都只是定义表单元素。注意有两个表单：`formA` 和 `formB`。
 
-3. 打开 `form_manipulation.js` 文件并添加基础的 `.ready()` 函数，并在其中添加代码行来实现事件处理器，从而从 `formA` 的数据更新 `formB`。
+1. 在 `Eclipse` 中，创建`lesson13`、`lesson13/js`和`lesson13/css`文件夹，然后添加`lesson13/form_manipulation.html`、`lesson13/js/form_manipulation.js`和`lesson13/css/form_manipulation.css`文件。
 
-4. 添加以下行，为文本输入绑定一个 `keyup` 处理器，以便当 `formA` 中的值发生变化时，`formB` 中的值也会随之变化。值通过 `.val()` 方法获取和设置：
+2. 在`HTML`和`CSS`文件中添加列表`13.1`和列表`13.3`所示的代码。这里有很多`HTML`代码，但它们都只是定义表单元素。注意有两个表单：`formA`和`formB`。
+
+3. 打开`form_manipulation.js`文件并添加基础的`.ready()`函数，并在其中添加代码行来实现事件处理器，从而从`formA`的数据更新`formB`。
+
+4. 添加以下行，为文本输入绑定一个`keyup`处理器，以便当`formA`中的值发生变化时，`formB`中的值也会随之变化。值通过`.val()`方法获取和设置：
 
 点击此处查看代码图像
 
@@ -9560,7 +9466,7 @@ $("#formA input:text").keyup(function() {
 });
 ```
 
-5. 添加以下行，为 `<textarea>` 输入绑定一个 `keyup` 处理器，以便当 `formA` 中的值发生变化时，`formB` 中的值也会随之变化。值通过 `.val()` 方法获取和设置：
+5. 添加以下行，为`<textarea>`输入绑定一个`keyup`处理器，以便当`formA`中的值发生变化时，`formB`中的值也会随之变化。值通过`.val()`方法获取和设置：
 
 点击此处查看代码图像
 
@@ -9570,9 +9476,9 @@ $("#formA textarea").keyup(function() {
 });
 ```
 
-6. 添加以下行，为单选框输入绑定一个 `change` 处理器。注意为了获取另一个表单中相同的输入，你需要使用 `$("#formB inputvalue=...)` 获取元素。值通过 `.prop()` 方法设置：
+6. 添加以下行，为单选框输入绑定一个`change`处理器。注意为了获取另一个表单中相同的输入，你需要使用`$("#formB inputvalue=...)`获取元素。值通过`.prop()`方法设置：
 
-[点击此处查看代码图像
+点击此处查看代码图像
 
 ```javascript
 $("#formA input:radio").change(function() {
@@ -9580,9 +9486,10 @@ $("#formA input:radio").change(function() {
   radioB.prop("checked", true);
 });
 ```
-*(注：此处原文代码中逻辑略有瑕疵，radioB 未定义定义，但翻译保持原意)*
 
-7. 添加以下行，为复选框绑定一个 `click` 处理器。注意为了在 `formB` 中选中相同的复选框，你需要使用 `.prop()` 方法：
+*(注：此处原文代码中逻辑略有瑕疵，`radioB`未定义定义，但翻译保持原意)*
+
+7. 添加以下行，为复选框绑定一个`click`处理器。注意为了在`formB`中选中相同的复选框，你需要使用`.prop()`方法：
 
 点击此处查看代码图像
 
@@ -9592,7 +9499,7 @@ $("#formA input:checkbox").click(function() {
 });
 ```
 
-8. 添加以下行，为 `formA` 中的选择框绑定 `change` 处理器，以便当选择项变化时，可以调用 `.val()` 获取 `formA` 的值并设置给 `formB`：
+8. 添加以下行，为`formA`中的选择框绑定`change`处理器，以便当选择项变化时，可以调用`.val()`获取`formA`的值并设置给`formB`：
 
 点击此处查看代码图像
 
@@ -9602,7 +9509,7 @@ $("#formA select").change(function() {
 });
 ```
 
-9. 添加以下行，为图像输入绑定 `click` 处理器，以便当它被点击时，属性将匹配：
+9. 添加以下行，为图像输入绑定`click`处理器，以便当它被点击时，属性将匹配：
 
 点击此处查看代码图像
 
@@ -9613,7 +9520,7 @@ $("#formA input:image").click(function(e) {
 });
 ```
 
-10. 为重置按钮添加以下点击处理器。该处理器通过 `$("#formB").get(0)` 获取 `formB` DOM 元素并对其调用 `.reset()` 函数。然后它移除所有元素的 `checked` 属性并重置图像元素的 `src` 属性：
+10. 为重置按钮添加以下点击处理器。该处理器通过`$("#formB").get(0)`获取`formB`DOM元素并对其调用`.reset()`函数。然后它移除所有元素的`checked`属性并重置图像元素的`src`属性：
 
 点击此处查看代码图像
 
@@ -9625,7 +9532,7 @@ $("#resetB").click(function() {
 });
 ```
 
-11. 为序列化按钮添加以下点击处理器。该处理器首先对表单调用 `.serialize()` 并字符串写入序列化元素。然后通过调用 `.serializeArray()` 获取序列化数组。使用 `jQuery.each()` 方法遍历数组，并将带有名称/值对的新段落追加到 `serializedA` 段落中：
+11. 为序列化按钮添加以下点击处理器。该处理器首先对表单调用`.serialize()`并字符串写入序列化元素。然后通过调用`.serializeArray()`获取序列化数组。使用`jQuery.each()`方法遍历数组，并将带有名称/值对的新段落追加到`serializedA`段落中：
 
 点击此处查看代码图像
 
@@ -9640,10 +9547,7 @@ $("#serializeB").click(function(e) {
 });
 ```
 
-
-
-
-12. 保存所有三个文件，然后在网页浏览器中打开 HTML 文档，如图 13.3 所示。你应该更改左侧表单中的元素，并看到右侧随之变化。当你点击`Serialize`（序列化）按钮时，底部的两个`<div>`元素将填充来自 `formA` 的序列化数据。
+12. 保存所有三个文件，然后在网页浏览器中打开`HTML`文档，如图`13.3`所示。你应该更改左侧表单中的元素，并看到右侧随之变化。当你点击`Serialize`（序列化）按钮时，底部的两个`<div>`元素将填充来自`formA`的序列化数据。
 
 ![Image](img/image00921.jpeg)
 
@@ -9653,7 +9557,7 @@ $("#serializeB").click(function(e) {
 
 点击此处查看代码图片
 
-* *
+---
 
 ```html
 01 <!DOCTYPE html>
@@ -9699,13 +9603,13 @@ $("#serializeB").click(function(e) {
 41 </html>
 ```
 
-* *
+---
 
 **代码 13.2 form_manipulation.js 实现一系列处理器的 jQuery 和 JavaScript 代码，用于从一个表单读取数据并更新第二个表单**
 
 点击此处查看代码图片
 
-* *
+---
 
 ```javascript
 01 $(document).ready(function(){
@@ -9748,13 +9652,13 @@ $("#serializeB").click(function(e) {
 38 });
 ```
 
-* *
+---
 
 **代码 13.3 form_manipulation.css 用于设置表单元素的 CSS 代码**
 
 点击此处查看代码图片
 
-* *
+---
 
 ```css
 input[type=image] {height:40px; margin-top:15px;}
@@ -9765,14 +9669,11 @@ div{
 }
 ```
 
+表单流程动态控制的另一个重要方面是拦截`submit`和`reset`事件，并根据各种条件执行操作。例如，你可能希望在提交表单之前对表单值进行验证。
 
+你通过在表单上绑定`submit`事件处理器来控制表单的提交函数。在事件处理器内部，你可以访问有关事件的信息以及将提交的表单数据。你可以执行任何需要的任务，然后允许表单提交、重置或阻止浏览器的默认行为。
 
-
-表单流程动态控制的另一个重要方面是拦截 `submit` 和 `reset` 事件，并根据各种条件执行操作。例如，你可能希望在提交表单之前对表单值进行验证。
-
-你通过在表单上绑定 `submit` 事件处理器来控制表单的提交函数。在事件处理器内部，你可以访问有关事件的信息以及将提交的表单数据。你可以执行任何需要的任务，然后允许表单提交、重置或阻止浏览器的默认行为。
-
-以下代码演示了通过在事件上调用 `.preventDefault()` 来停止表单提交的示例：
+以下代码演示了通过在事件上调用`.preventDefault()`来停止表单提交的示例：
 
 ```javascript
 $("form").submit(function(e){
@@ -9781,7 +9682,7 @@ $("form").submit(function(e){
 });
 ```
 
-由于某些原因，`jQuery` 没有为表单的 `reset` 事件提供事件处理器。要在 jQuery 中解决这个问题，请将重置按钮的输入 `type` 从 `reset` 改为 `button`。然后为该按钮添加一个 `click` 处理器，在其中对表单的 DOM 元素调用 `.reset()`。以下代码根据用户提示执行了这一操作：
+由于某些原因，`jQuery`没有为表单的`reset`事件提供事件处理器。要在`jQuery`中解决这个问题，请将重置按钮的输入`type`从`reset`改为`button`。然后为该按钮添加一个`click`处理器，在其中对表单的`DOM`元素调用`.reset()`。以下代码根据用户提示执行了这一操作：
 
 ```javascript
 $("#resetB").click(function(e){
@@ -9789,21 +9690,23 @@ $("#resetB").click(function(e){
 });
 ```
 
-***
+---
 
 # 动手尝试：为表单添加动态流程控制
 
-现在你已经有机会回顾了表单流程控制的概念，准备好自己尝试了。在这个练习中，你将为一个接受付款的电子商务 Web 表单添加一些基础流程控制。
+现在你已经有机会回顾了表单流程控制的概念，准备好自己尝试了。在这个练习中，你将为一个接受付款的电子商务`Web`表单添加一些基础流程控制。
 
-该练习的目的是让你在用户与表单交互时获得隐藏、显示、禁用和自动聚焦 Web 元素的经验。示例代码位于 Listing 13.4、13.5 和 13.6。
+该练习的目的是让你在用户与表单交互时获得隐藏、显示、禁用和自动聚焦`Web`元素的经验。示例代码位于`Listing 13.4`、`13.5`和`13.6`。
 
 使用以下步骤创建动态网页：
 
-1. **在 Eclipse 中，创建 `lesson13/form_flow.html`、`lesson13/js/form_flow.js` 和 `lesson13/css/form_flow.css` 文件。**
+1. **在`Eclipse`中，创建`lesson13/form_flow.html`、`lesson13/js/form_flow.js`和`lesson13/css/form_flow.css`文件。**
 
-2. **将 Listing 13.4 和 Listing 13.6 所示的代码添加到 HTML 和 CSS 文件中。** 虽然有很多 HTML 和 CSS 代码，但你现在应该跟上了。这些代码定义并样式化了一个基础支付单。
+2. **将`Listing 13.4`和`Listing 13.6`所示的代码添加到`HTML`和`CSS`文件中。** 虽然有很多`HTML`和`CSS`代码，但你现在应该跟上了。这些代码定义并样式化了一个基础支付单。
 
-3. **打开 `form_flow.js` 文件并创建 Listing 13.4 所示的 `.ready()` 函数。你应该识别出前几行只是添加点击处理器，这在稍后会讨论。添加接下来显示的行并实现提交和重置表单的流程控制。`submit` 处理器会显示表单提交尚未实现的消息，并阻止默认提交。重置按钮的 `click` 处理器在调用 `.reset()` 重置表单之前会向用户提示一条消息：**
+3. **打开`form_flow.js`文件并创建`Listing 13.4`所示的`.ready()`函数。你应该识别出前几行只是添加点击处理器，这在稍后会讨论。添加接下来显示的行并实现提交和重置表单的流程控制。`submit`处理器会显示表单提交尚未实现的消息，并阻止默认提交。重置按钮的`click`处理器在调用`.reset()`重置表单之前会向用户提示一条消息：**
+
+
 
 ```javascript
 $("form").submit(function(e){
@@ -9815,7 +9718,9 @@ $("#resetB").click(function(e){
 });
 ```
 
-4. **添加 `updateAddr()` 函数，该函数将更新账单地址以匹配收货地址，如果勾选了选择框则禁用账单元素。如果没有勾选选择框，第 22 行将移除 `disabled` 值，使用户可以选择不同的账单地址：**
+#### 4. 添加 `updateAddr()` 函数
+
+该函数将更新账单地址以匹配收货地址，如果勾选了选择框则禁用账单元素。如果没有勾选选择框，第 22 行将移除 `disabled` 值，使用户可以选择不同的账单地址：
 
 ```javascript
 function updateAddr(){
@@ -9831,7 +9736,11 @@ function updateAddr(){
 }
 ```
 
-5. **添加以下函数以在用户选择信用卡或 PayPal 时更新支付部分。注意，当用户选择信用卡时，PayPal 信息会被隐藏，信用卡信息会被显示；如果选择了 PayPal，则反之亦之。还要注意在这两种情况下焦点都切换到了用户开始输入支付信息的第一个文本框。这样用户就不需要按 Tab 键或点击下一个元素了：**
+#### 5. 添加支付类型更新函数
+
+添加以下函数，以在用户选择信用卡或 PayPal 时更新支付部分。注意，当用户选择信用卡时，PayPal 信息会被隐藏，信用卡信息会被显示；如果选择了 PayPal，则反之亦之。
+
+还要注意，在这两种情况下焦点都切换到了用户开始输入支付信息的第一个文本框。这样用户就不需要按 Tab 键或点击下一个元素了：
 
 ```javascript
 function updateType(){
@@ -9847,11 +9756,13 @@ function updateType(){
 }
 ```
 
-6. **保存所有三个文件并在浏览器中打开 HTML 文档，如 Figure 13.4 所示。填写收货信息，然后通过勾选同一个选择框查看它如何填充账单信息。还要尝试不同的支付类型，观察元素的隐藏和自动聚焦功能。**
+#### 6. 测试表单功能
+
+保存所有三个文件并在浏览器中打开 HTML 文档，如 Figure 13.4 所示。填写收货信息，然后通过勾选同一个选择框查看它如何填充账单信息。还要尝试不同的支付类型，观察元素的隐藏和自动聚焦功能。
 
 ### FIGURE 13.4 带有智能数据流程控制的电子商务 Web 表单
 
-### LISTING 13.4 form_flow.html 实现支付的 HTML 文档
+### LISTING 13.4 `form_flow.html` 实现支付的 HTML 文档
 
 ```html
 <!DOCTYPE html>
@@ -9917,10 +9828,6 @@ function updateType(){
 </html>
 ```
 
-
-
-
-
 ```html
 <label>csc</label><br>
 <label>Expires</label><select id="expiresY"></select>
@@ -9939,11 +9846,11 @@ function updateType(){
 </div>
 </body>
 </html>
-``````
+```
 
-## 列表 13.5 form_flow.js 为支付表单提供智能流控制的 jQuery 代码
+### LISTING 13.5 `form_flow.js` 为支付表单提供智能流控制的 jQuery 代码
 
-点击此处查看代码图片
+点击此处查看代码图片。
 
 ```javascript
 var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -9994,9 +9901,9 @@ $(document).ready(function(){
 });
 ```
 
-## 列表 13.6 form_flow.css 为支付元素样式的 CSS 代码
+### LISTING 13.6 `form_flow.css` 为支付元素样式的 CSS 代码
 
-点击此处查看代码图片
+点击此处查看代码图片。
 
 ```css
 input[type=text] {
@@ -10046,11 +9953,11 @@ form{ padding:20px; }
 label{ color:#000; font-size:14px;}
 ```
 
-### 动态控制表单的外观和行为
+## 动态控制表单的外观和行为
 
 除了流控制外，在用户交互时为其提供视觉指示也是非常有帮助的。许多更改可以通过简单的 CSS 设置（例如 `:hover` 或 `:checked`）来实现。然而，通过动画功能，你可以为表单添加更丰富的体验。
 
-### 尝试一下：添加动画元素提升用户体验
+## 尝试一下：添加动画元素提升用户体验
 
 你已经拥有了在表单中添加动画所需的工具。本部分的示例是一个基础注册表单，包含了选择框、复选框以及其他效果。在尝试该示例时，可以自由扩展这些功能。
 
@@ -10061,12 +9968,16 @@ label{ color:#000; font-size:14px;}
 3. 打开 `form_effects.js` 并创建一个 `.ready()` 函数来实现这些处理程序。
 4. 添加以下代码，在用户点击标题时隐藏表单并缓慢显示表单，并在表单提交时将其隐藏。
 5. 添加以下代码，使 `<textarea>` 元素在获得和失去焦点时产生动画效果：
-6. 为单选按钮的更改添加以下处理程序。该处理器会将透明度淡化到 `.1`；在完成后，将类更改为更深的颜色并恢复透明度。这提供了类似于点击按钮的视觉效果。配合 CSS 样式，这使得单选按钮组表现得像一个按钮。
-7. 为复选框的点击操作添加以下处理程序。该处理器会处理图像尺寸、边框和透明度的变化，为元素提供关于是否拥有马匹或盔甲的视觉指示。
 
 
 
+### 6. 为单选按钮的更改添加处理程序
 
+该处理器会将透明度淡化到 `.1`；在完成后，将类更改为更深的颜色并恢复透明度。这提供了类似于点击按钮的视觉效果。配合 CSS 样式，这使得单选按钮组表现得像一个按钮。
+
+### 7. 为复选框的点击操作添加处理程序
+
+该处理器会处理图像尺寸、边框和透明度的变化，为元素提供关于是否拥有马匹或盔甲的视觉指示。
 
 ```javascript
 $(this).children("img").animate({opacity:.25, height:20, "border-size":1}, 500);}
@@ -10075,7 +9986,9 @@ else {
 }
 ```
 
-### 8. 添加以下行，为文本框附加一个处理程序，以便当用户输入文字时，标签（labels）将替换为文本内容：
+### 8. 为文本框附加处理程序
+
+添加以下行，为文本框附加一个处理程序，以便当用户输入文字时，标签（`labels`）将替换为文本内容：
 
 点击此处查看图片
 
@@ -10084,9 +9997,13 @@ $("input:text").keyup(function(){
     $(this).next("label").html($(this).val());});
 ```
 
-### 9. 在第 32–40 行添加代码，当提交按钮（Submit button）获得焦点或被用户鼠标悬停时，让其大小产生动画效果。
+### 9. 为提交按钮添加动画效果
 
-### 10. 添加以下行，为 `optgroup` 元素附加一个 `mouseover` 处理程序，并在鼠标悬停在其上方时增大字体大小的动画，让用户更清楚地知道他们将选择什么。我们使用 `optgroup` 来制作字体大小动画，是因为单独的 `option` 元素不允许动态编辑字体样式：
+在第 32–40 行添加代码，当提交按钮（Submit button）获得焦点或被用户鼠标悬停时，让其大小产生动画效果。
+
+### 10. 为 `optgroup` 元素添加鼠标悬停处理程序
+
+添加以下行，为 `optgroup` 元素附加一个 `mouseover` 处理程序，并在鼠标悬停在其上方时增大字体大小的动画，让用户更清楚地知道他们将选择什么。我们使用 `optgroup` 来制作字体大小动画，是因为单独的 `option` 元素不允许动态编辑字体样式：
 
 点击此处查看图片
 
@@ -10099,15 +10016,15 @@ $("optgroup").mouseout(function(){
   return false;});
 ```
 
-### 11. 保存所有三个文件，然后在浏览器中打开 HTML 文档，如图 13.5
+### 11. 保存并运行示例
+
+保存所有三个文件，然后在浏览器中打开 HTML 文档，如图 13.5。
 
 **图 13.5** 一个简单的注册表单，提供了一些动态视觉效果，使表单更具交互性且对用户友好。
 
-**代码列表 13.7 form_effects.html 实现了示例中注册表单的 HTML 文档**
+**代码列表 13.7** `form_effects.html` 实现了示例中注册表单的 HTML 文档。
 
 点击此处查看图片
-
-* * *
 
 ```html
 <!DOCTYPE html>
@@ -10159,11 +10076,9 @@ $("optgroup").mouseout(function(){
 </html>
 ```
 
-**代码列表 13.8 form_effects.js 实现动画视觉元素的 jQuery 代码**
+**代码列表 13.8** `form_effects.js` 实现动画视觉元素的 jQuery 代码。
 
 点击此处查看图片
-
-* * *
 
 ```javascript
 function changeCheckbox(){
@@ -10176,11 +10091,7 @@ function changeCheckbox(){
 }
 ```
 
-**代码列表 13.9 form_effects.js 用于调整表单元素的 CSS**
-
-
-
-
+**代码列表 13.9** `form_effects.js` 用于调整表单元素的 CSS。
 
 Web 表单最重要的部分之一就是对用户输入的信息进行验证。根据输入数据的不同，有许多不同类型和层级的验证。
 
@@ -10188,11 +10099,11 @@ Web 表单最重要的部分之一就是对用户输入的信息进行验证。�
 
 通常，这是通过服务器端脚本实现的。这种方法的问题是所有数据都必须发送到服务器，然后生成错误并将其返回给用户。
 
-更好的选择是在表单提交到服务器之前，在你的 `jQuery` 代码中对表单数据进行验证。以下章节描述了验证表单数据的不同方法
+更好的选择是在表单提交到服务器之前，在你的 `jQuery` 代码中对表单数据进行验证。以下章节描述了验证表单数据的不同方法。
 
 ## 手动验证 Web 表单
 
-验证表单最基本的方法是访问它们的值，并将实际内容与要求进行比对。这可以在用户输入数据时通过添加（例如 `blur`、`change` 或 `keypress` 事件处理器来完成，然后在事件处理程序内部检查数据的值。以下代码在 `keypress` 处理器中实现了验证，验证表单元素的值是否为数字，如果不是，则在标签上添加警告文本：
+验证表单最基本的方法是访问它们的值，并将实际内容与要求进行比对。这可以在用户输入数据时通过添加（例如 `blur`、`change` 或 `keypress`）事件处理器来完成，然后在事件处理程序内部检查数据的值。以下代码在 `keypress` 处理器中实现了验证，验证表单元素的值是否为数字，如果不是，则在标签上添加警告文本：
 
 点击此处查看代码图像
 
@@ -10240,11 +10151,11 @@ $("form").submit(function (){
 
 ![图像](img/image00924.jpeg)![图像](img/image00925.jpeg)
 
-**表 13.3 验证规则与用法**
+**表 13.3** 验证规则与用法。
 
 例如，要验证文本元素是否具有文本且符合电子邮件格式，你使用以下代码：
 
-HTML:
+**HTML：**
 
 点击此处查看代码图像
 
@@ -10254,7 +10165,7 @@ HTML:
 </form>
 ```
 
-jQuery:
+**jQuery：**
 
 点击此处查看代码图像
 
@@ -10264,13 +10175,13 @@ $(document).ready(function(){
 });
 ```
 
-`.ready()` 函数将验证添加到表单中，当用户在元素中输入时，如果元素为空，会显示该元素是必填的；如果不包含有效的电子邮件地址，则显示需要有效的电子邮件地址，如 图 13.6 所示。
+`.ready()` 函数将验证添加到表单中，当用户在元素中输入时，如果元素为空，会显示该元素是必填的；如果不包含有效的电子邮件地址，则显示需要有效的电子邮件地址，如图 13.6 所示。
 
 ![图像](img/image00926.jpeg)
 
 **图 13.6** 电子邮件元素的验证消息。
 
-你也可以添加自定义的文本消息，而不是验证库提供的默认消息。这是通过将 `title` 属性设置为你想要显示的消息字符串来实现的。例如，以下输入语句添加了当元素无效时将显示的 title 元素：
+你也可以添加自定义的文本消息，而不是验证库提供的默认消息。这是通过将 `title` 属性设置为你想要显示的消息字符串来实现的。例如，以下输入语句添加了当元素无效时将显示的 `title` 元素：
 
 点击此处查看代码图像
 
@@ -10280,9 +10191,9 @@ $(document).ready(function(){
 
 ## 应用复杂的验证
 
-添加验证的更好方法是在 `jQuery` 方法内部。`validate` 方法接受一个定义了规则的对象（规则列在 表 13.3 中），通过引用 `name` 属性应用于表单中。
+添加验证的更好方法是在 `jQuery` 方法内部。`validate` 方法接受一个定义了规则的对象（规则列在表 13.3 中），通过引用 `name` 属性应用于表单中。
 
-HTML:
+**HTML：**
 
 ```html
 <form id="myForm">
@@ -10290,7 +10201,7 @@ HTML:
 </form>
 ```
 
-jQuery:
+**jQuery：**
 
 点击此处查看代码图像
 
@@ -10300,7 +10211,7 @@ $(document).ready(function(){
 });
 ```
 
-`.ready()` 函数将验证添加到表单中，当用户在元素中输入时，如果元素为空，会显示该元素是必填的；如果不包含有效的电子邮件地址，则显示需要有效的电子邮件地址，如 图 13.6 所示。
+`.ready()` 函数将验证添加到表单中，当用户在元素中输入时，如果元素为空，会显示该元素是必填的；如果不包含有效的电子邮件地址，则显示需要有效的电子邮件地址，如图 13.6 所示。
 
 ### 添加规则
 
@@ -10363,12 +10274,9 @@ $(document).ready(function(){
 });
 ```
 
-**表 13.4 Validator 对象方法**
+**表 13.4** `Validator` 对象方法。
 
 当表单元素中检测到错误时，会向表单添加一个标签以显示错误消息。插件会在该元素和新的消息标签上添加一个名为 `error` 的类。这使得对消息以及元素的样式设置变得非常简单。
-
-
-
 
 要对元素设置样式，你可以为该元素类型添加 CSS 规则并添加 `.error`。例如，为了让带有错误的 `input` 元素显示为红色文本，你可以使用以下 CSS 规则：
 
@@ -10386,25 +10294,23 @@ label.error { color:red; }
 
 验证插件会将错误消息直接放置在经过验证的元素之后。这通常不是期望的位置。例如，你可能希望验证信息出现在某些元素之前，或者在完全不同的位置。
 
-***
+---
 
-注意
+> **注意**
+>
+> jQuery Validation 工具为 Web 表单验证本地化提供了一个简单的方法。如果你包含了在本地化文件夹中找到 `messages_##.js` 文件，验证错误消息将会被本地化。`messages_##.js` 中的两位数字（`##`）代表两个字符的 ISO 国家代码。
 
-jQuery Validation 工具为 Web 表单验证本地化提供了一个简单的方法。如果你包含了在本地化文件夹中找到 `messages_##.js` 文件，验证错误消息将会被本地化。`messages_##.js` 中的两位数字（`##`）代表两个字符的 ISO 国家代码。
-
-***
-
-一个很好的例子是单选框输入组（radio input groups）。如果你对该组进行验证，消息将出现在第一个单选框输入元素之后，如 图 13.7 所示。这并不是期望的位置。相反，你希望错误消息出现在整组单选框输入及其标签之后。
+一个很好的例子是单选框输入组（radio input groups）。如果你对该组进行验证，消息将出现在第一个单选框输入元素之后，如图 13.7 所示。这并不是期望的位置。相反，你希望错误消息出现在整组单选框输入及其标签之后。
 
 ![Image](img/image00928.jpeg)
 
 **图 13.7** 在 `.validate()` 方法中使用 `errorPlacement` 选项允许你定义错误消息的位置。
 
-这正是 `Validation` 对象的 `errorPlacement` 属性派上用场的地方。`errorPlacement` 属性值是一个函数，被调用以向 Web 表单添加错误元素。`errorPlacement` 函数将传递两个参数。第一个参数是代表新错误消息的 jQuery 对象，第二个参数是代表验证失败元素的 jQuery 对象。使用这些参数，你可以定义自己的函数，将元素放置在你想要的任何地方。
 
-为了说明这一点，请看以下代码。`errorPlacement` 被设置为一个接收 `error` 和 `element` 参数的函数。对 `element` 进行测试以判断是否为单选框。如果 `element` 是单选框输入，则将 `error` 插入到表单中最后一个单选框之后的标签之后，如 图 13.7 所示。如果 `element` 不是单选框输入，则 `error` 紧接插入到 `element` 之后：
 
-点击此处查看代码图像
+这正是`Validation`对象的`errorPlacement`属性派上用场的地方。`errorPlacement`属性值是一个函数，被调用以向Web表单添加错误元素。`errorPlacement`函数将传递两个参数。第一个参数是代表新错误消息的jQuery对象，第二个参数是代表验证失败元素的jQuery对象。使用这些参数，你可以定义自己的函数，将元素放置在你想要的任何地方。
+
+为了说明这一点，请看以下代码。`errorPlacement`被设置为一个接收`error`和`element`参数的函数。对`element`进行测试以判断是否为单选框。如果`element`是单选框输入，则将`error`插入到表单中最后一个单选框之后的标签之后，如图13.7所示。如果`element`不是单选框输入，则`error`紧接插入到`element`之后：
 
 ```javascript
 $("#simpleForm").validate({
@@ -10419,39 +10325,35 @@ $("#simpleForm").validate({
 });
 ```
 
-***
+**图 13.7** `errorPlacement`函数将错误消息插入到指定位置
 
-### 动手尝试：使用 jQuery 验证 Web 表单
+---
 
-在这个示例中，你使用 jQuery 验证插件来验证一个基础 Web 表单。该示例目的是帮助你理解如何在自己的脚本中实现该验证插件。
+### 动手尝试：使用jQuery验证Web表单
 
-示例代码位于 Listing 13.10、13.11 和 13.12。使用以下步骤创建带有验证的 Web 表单：
+在这个示例中，你使用jQuery验证插件来验证一个基础Web表单。该示例目的是帮助你理解如何在自己的脚本中实现该验证插件。
 
-**1.** 在 Eclipse 中，创建 `lesson13/form_validation.html`、`lesson13/js/form_validation.js` 和 `lesson13/css/form_validation.css` 文件。
+示例代码位于Listing 13.10、13.11和13.12。使用以下步骤创建带有验证的Web表单：
 
-**2.** 添加验证插件。你可以从以下位置下载插件，或者从书籍网站将代码 `lesson13/js/jquery.validation.min.js` 复制到项目的 `lesson13/js/jquery.validation.min.js` 中：
+**1.** 在Eclipse中，创建`lesson13/form_validation.html`、`lesson13/js/form_validation.js`和`lesson13/css/form_validation.css`文件。
+
+**2.** 添加验证插件。你可以从以下位置下载插件，或者从书籍网站将代码`lesson13/js/jquery.validation.min.js`复制到项目的`lesson13/js/jquery.validation.min.js`中：
 
 [`http://jqueryvalidation.org/`](http://jqueryvalidation.org/)
 
-你还需要在 Listing 13.10 中添加以下行来加载验证插件：
-
-点击此处查看代码图像
+你还需要在Listing 13.10中添加以下行来加载验证插件：
 
 ```html
 07 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
 ```
 
-**3.** 将 Listing 13.10 和 Listing 13.12 所示的代码添加到 HTML 和 CSS 文件中。HTML 是基础表单，不包含任何意外。CSS 包含了针对验证代码的一些特定格式。第 3 行将 `<input>` 和 `<select>` 元素格式化为红色背景和文本，使其突出。第 4 行将消息格式化为红色文本：
-
-点击此处查看代码图像
+**3.** 将Listing 13.10和13.12所示的代码添加到HTML和CSS文件中。HTML是基础表单，不包含任何意外。CSS包含了针对验证代码的一些特定格式。第3行将`<input>`和`<select>`元素格式化为红色背景和文本，使其突出。第4行将消息格式化为红色文本：
 
 ```css
 03 input.error, select.error{ background-color:#FFDDDD; color:darkred;
 ```
 
-**4.** 将 Listing 13.10 和 Listing 13.12 所示的代码添加到 HTML 和 CSS 文件中。打开 `form_validation.js` 文件，创建一个接收 `error` 和 `element` 参数的 `errorPlacement` 函数。测试 `element` 以检查是否为单选框。如果 `element` 是单选框输入，则将 `error` 插入到表单中最后一个单选框之后的标签之后，如 图 13.7 所示。如果 `element` 不是单选框输入，则 `error` 紧接插入到 `element` 之后：
-
-点击此处查看代码图像
+**4.** 打开`form_validation.js`文件，创建一个接收`error`和`element`参数的`errorPlacement`函数。测试`element`以检查是否为单选框。如果`element`是单选框输入，则将`error`插入到表单中最后一个单选框之后的标签之后，如图13.7所示。如果`element`不是单选框输入，则`error`紧接插入到`element`之后：
 
 ```javascript
 // ... 
@@ -10467,28 +10369,15 @@ $("#simpleForm").validate({
 });
 ```
 
-**5.** 在 `form_validation.js` 中添加以下行来加载验证插件。使用 `ready()` 方法来初始化验证单。 `      
-（注：此处根据上下文逻辑翻译，原文描述略有跳跃，保持核心逻辑一致）
+**5.** 在`form_validation.js`中添加以下行来加载验证插件。使用`ready()`方法来初始化验证单。使用`ready()`方法在文档就绪时初始化验证逻辑。
 
-（此处由于原文提供的文本在第 5 点后存在重复和描述缺失，已根据指令“不要重复输出原文”的原则进行逻辑对齐翻译）
-
-*注：由于提供的待翻译文本在第 5 点之后存在大量逻辑重复和描述不完整的情况，译文已基于代码逻辑进行了整合化处理。*
-
-
-
-
-
-## 9. 保存所有三个文件，然后用网络浏览器打开 HTML 文档，如图 13.8 所示。你应该会立即看到验证错误。在填写表单时，观察错误的变化和消失。还尝试在有和无错误的情况下提交表单，以查看提示消息。
+**6.** 保存所有三个文件，然后用网络浏览器打开HTML文档，如图13.8所示。你应该会立即看到验证错误。在填写表单时，观察错误的变化和消失。还尝试在有和无错误的情况下提交表单，以查看提示消息。
 
 ![Image](img/image0092.jpeg)
 
 **图 13.8** 带有验证的简单注册表单。
 
-### 代码 13.10 form_validation.html 实现示例中注册表单的 HTML 文档
-
-点击此处查看代码图像
-
-***
+### 代码 13.10 form_validation.html 实现示例中注册表单的HTML文档
 
 ```html
 01 <!DOCTYPE html>
@@ -10516,7 +10405,8 @@ $("#simpleForm").validate({
 23          <label>Birth Date</label>
 24      <input name="birthDate" type="text" /><br>
 25         <select name="class" multiple size=4>
-26������������������������<optionoption>Melee</option>277            <option>Mage</option>
+26            <option>Melee</option>
+27            <option>Mage</option>
 28            <option>Ranged</option>
 29            <option>Stealth</option>
 30            </select><br>
@@ -10548,11 +10438,9 @@ $("#simpleForm").validate({
 56 </html>
 ```
 
-***
+---
 
-### 代码 13.11 form_validation.js 实现表单元素的 jQuery 代码
-
-点击此处查看图像
+### 代码 13.11 form_validation.js 实现表单元素的jQuery代码
 
 ```javascript
 01 $(document).ready(function(){
@@ -10586,13 +10474,9 @@ $("#simpleForm").validate({
 29});
 ```
 
-***
+---
 
-### 代码 13.12 form_validation.css 样式化表单元素和错误的 CSS 代码
-
-点击此处查看代码图像
-
-***
+### 代码 13.12 form_validation.css 样式化表单元素和错误的CSS代码
 
 ```css
 01 label{display:inline-block;min-width:100px}
@@ -10608,65 +10492,69 @@ $("#simpleForm").validate({
 11 input[type="submit"]{float:right}
 ```
 
-***
+---
 
 ### 总结
 
-在本节中，你学习了如何保存所有三个文件，然后用网络浏览器打开 HTML 文档，如图 13.8 所示。你应该会立即看到验证错误。在填写表单时，观察错误的变化和消失。还尝试在有和无错误的情况下提交表单，以查看提示消息。
-
-Web 表单验证是编程中最关键的部分之一。通过在浏览器端直接捕捉问题而不是在表单提交到服务器之后，可以节省大量的用户时间。
+在本节中，你学习了如何使用jQuery验证插件来验证Web表单。通过在浏览器端直接捕捉问题而不是在表单提交到服务器之后，可以节省大量的用户时间。Web表单验证是编程中最关键的部分之一。
 
 ### 问答
 
-**可以使用 jQuery 插件创建自己的验证规则吗？**
+**可以使用jQuery插件创建自己的验证规则吗？**
 
-可以。你可以调用 `.validate()` 返回的 Validator 对象的 `addMethod(name, function(value, parameters) [,message])` 方法。你指定的 `name` 将作为新规则；调用函数并将当前值和元素传递给它。如果元素值有效，函数应返回 `true` 或 `false`。可选的 message 参数是运行显示的消息。
+可以。你可以调用`.validate()`返回的`Validator`对象的`addMethod(name, function(value, parameters) [,message])`方法。你指定的`name`将作为新规则；调用函数并将当前值和元素传递给它。如果元素值有效，函数应返回`true`或`false`。可选的`message`参数是运行显示的消息。
 
-**有什么方法可以隐藏 `<select>` 元素上难看的滚动条吗？**
+**有什么方法可以隐藏`<select>`元素上难看的滚动条吗？**
 
 并没有真正的办法。
 
-## 工作
+---
+
+### 工作坊
 
 工作坊包含一组旨在巩固你对本节内容理解的问题。在查看答案之前，尝试回答这些问题。
 
-### 测验
+#### 测验
 
-1. 如何通过 jQuery 获取 `<select>` 元素的值？
-2. 如何通过 jQuery 禁用表单元素？
-3. 列出两种通过 jQuery 判断复选框是否被选的方法。
-4. 语句 `$("input:text").blur();` 执行了什么？
+1. 如何通过jQuery获取`<select>`元素的值？
 
-### 测验答案
+2. 如何通过jQuery禁用表单元素？
 
-1. 在代表它的 jQuery 对象上调用 `.val()` 方法。
+3. 列出两种通过jQuery判断复选框是否被选的方法。
 
+4. 语句`$("input:text").blur();`执行了什么？
 
+#### 测验答案
 
+1. 在代表它的jQuery对象上调用`.val()`方法。
 
+2. 在代表该元素的jQuery对象上调用`.prop("disabled","disabled")`。
 
-[2]. 在代表该元素的 jQuery 对象上调用 `.prop("disabled","disabled")`。
+3. 在该jQuery对象上调用`.prop("checked")`或`.is(":selected")`。
 
-[3]. 在该 jQuery 对象上调用 `.prop("checked")` 或 `.is(":selected")`。
+4. 它会移除所有类型为`text`的`<input>`元素的焦点。
 
-[4]. 它会移除所有类型为 `text` 的 `<input>` 元素的焦点。
+#### 练习题
 
-### 练习题
+**1.** 打开[列表13.1]、[13.2]和[13.3]中的代码，并修改代码使`formB`也能更新`formA`中的某些元素。
 
-**1.** 打开[列表 13.1]、[13.2] 和 [13.3] 中的代码，并修改代码使 `formB` 也能更新 `formA` 中的某些元素。
+**2.** 打开[列表13.4]、[13.5]和[13.6]中的代码，并修改代码，当用户选择新年份时，月份元素会自动获得焦点。
 
-**2.** 打开[列表 13.4]、[13.5] 和 [13.6] 中的代码，并修改代码，当用户选择新年份时，月份元素会自动获得焦点。
+**3.** 打开[列表13.10]、[13.11]和[13.12]中的代码，并添加一组新的复选框组，用于射箭、策略、格斗等技能，或者自己编写技能。添加验证逻辑，要求用户必须在二到四个技能之间进行选择。
 
-**3.** 打开[列表 13.10]、[13.11] 和 [13.12] 中的代码，并添加一组新的复选框组，用于射箭、策略、格斗等技能，或者自己编写技能。添加验证逻辑，要求用户必须在二到四个技能之间进行选择。
+---
 
-## 第 14 节：使用 jQuery 创建高级 页面元素
+## 第14节：使用jQuery创建高级页面元素
 
 在本节中你将学习：
 
-- ![Image](img/image00767.jpeg) 创建带有滑块控制的图片库
-- ![Image](img/image00767.jpeg) 为表格元素添加排序功能
-- ![Image](img/image00767.jpeg) 为表格元素添加过滤功能
-- ![Image](img/image00767.jpeg) 如何创建多类型树形视图
+- 创建带有滑块控制的图片库
+- 为表格元素添加排序功能
+- 为表格元素添加过滤功能
+- 如何创建多类型树形视图
+
+
+
 - ![Image](img/image00767.jpeg) 如何实现自定义对话框
 - ![Image](img/image00767.jpeg) 使用基础 HTML 和 jQuery 创建视觉元素
 - ![Image](img/image00767.jpeg) 如何使用 jQuery 创建动态折线图（sparklines）
@@ -10675,7 +10563,7 @@ Web 表单验证是编程中最关键的部分之一。通过在浏览器端直�
 
 以下章节以示例的形式编写，首先解释高级元素中用到的一些概念；然后你将亲手实现它们。你将能够在本节中学到的概念应用到自己的网页中，实现各种类型的高级元素。
 
-### 添加图片库
+## 添加图片库
 
 图片库是网页中视觉交互最强的组件之一。一画胜于千言。图片允许用户比任何其他类型的视觉元素更快地做出决策。应用图片让用户做出决策的最佳方法是提供一个交互式图片库。
 
@@ -10685,7 +10573,7 @@ Web 表单验证是编程中最关键的部分之一。通过在浏览器端直�
 
 要实现滑块，你首先创建一个固定大小且隐藏溢出的容器 `<div>` 元素，然后是一个包含所有缩略图图像的子 `<div>` 元素。然后可以调整子 `<div>` 的位置，以显示滑块中不同的图像集。下一节描述了该过程。
 
-***
+---
 
 ### 尝试自己：添加基于滑块的图片库
 
@@ -10780,10 +10668,6 @@ function setPhoto(){
 }
 ```
 
-
-
-
-
 ```javascript
 $("#photo img").css({width:"auto",height:400}) }
 $("#photo img").fadeTo(500, 1);
@@ -10791,7 +10675,9 @@ return false;
 }
 ```
 
-### 8. 添加以下 `slide()` 代码，用于处理缩略图的滑动效果。基本上，这段代码决定了 `#imageSlide` 元素的新 `left` 位置应该是哪里。当滑块完全滑到左侧时，`left` 位置为 0；当它完全滑到右侧时，`left` 位置被设置为负值，使其超出网页范围，这样只有滑块的右侧边缘可见：
+### 8. 添加以下 `slide()` 代码，用于处理缩略图的滑动效果
+
+基本上，这段代码决定了 `#imageSlide` 元素的新 `left` 位置应该是哪里。当滑块完全滑到左侧时，`left` 位置为 0；当它完全滑到右侧时，`left` 位置被设置为负值，使其超出网页范围，这样只有滑块的右侧边缘可见：
 
 点击此处查看代码图片
 
@@ -10810,19 +10696,21 @@ function slide(value){
 }
 ```
 
-### 9. 添加初始化函数 `addImages()` 以及列表 14.2 中所示的 `addImages()` 调用。这段代码向 `#imageSlide` 元素动态添加一组图像元素。
+### 9. 添加初始化函数 `addImages()`
 
-### 10. 保存所有三个文件，然后在网页浏览器中打开 HTML 文档，如图 14.1 所示。你应该能看到缩略图滑块，并可以通过悬停在箭头上进行导航。当你点击缩略图图像时，主图像应该发生变化。
+添加初始化函数 `addImages()` 以及列表 14.2 中所示的 `addImages()` 调用。这段代码向 `#imageSlide` 元素动态添加一组图像元素。
+
+### 10. 保存文件并打开 HTML 文档
+
+保存所有三个文件，然后在网页浏览器中打开 HTML 文档，如图 14.1 所示。你应该能看到缩略图滑块，并可以通过悬停在箭头上进行导航。当你点击缩略图图像时，主图像应该发生变化。
 
 ![Image](img/image00930.jpeg)
 
 **图 14.1** 带有滑块控件的图库，可用于从缩略图中选择图像。
 
-**列表 14.1 image_slider.html 实现滑块、控制和图像元素的 HTML 文档**
+**列表 14.1 `image_slider.html` 实现滑块、控制和图像元素的 HTML 文档**
 
 点击此处查看代码图片
-
-* * *
 
 ```html
 <!DOCTYPE html>
@@ -10847,13 +10735,9 @@ function slide(value){
 </html>
 ```
 
-* * *
-
-**列表 14.2 image_slider.js 实现图像滑块控件和缩略图鼠标事件处理程序的 jQuery 和 JavaScript 代码**
+**列表 14.2 `image_slider.js` 实现图像滑块控件和缩略图鼠标事件处理程序的 jQuery 和 JavaScript 代码**
 
 点击此处查看代码图片
-
-* * *
 
 ```javascript
 var sliderMax = sliderWidth = sliderLeft = 0;
@@ -10916,13 +10800,9 @@ $(document).ready(function(){
 });
 ```
 
-* * *
-
-**列表 14.3 image_slider.css 用于设置图像的 CSS 代码**
+**列表 14.3 `image_slider.css` 用于设置图像的 CSS 代码**
 
 点击此处查看代码图片
-
-* * *
 
 ```css
 div { display: inline-block; }
@@ -10936,277 +10816,27 @@ div { display: inline-block; }
 #photo img { border: 5px grey; box-shadow: 10px 10px 5px #888888; }
 ```
 
-
-
-
+## 添加交互式表格
 
 使用以下步骤创建动态网页：
 
-1. 在 Eclipse 中，创建文件 `lesson14/interactive_table.html`、`lesson14/js/interactive_table.js` 和 `lesson14/css/interactive_table.css` 文件。
+**1.** 在 Eclipse 中，创建文件 `lesson14/interactive_table.html`、`lesson14/js/interactive_table.js` 和 `lesson14/css/interactive_table.css` 文件。
 
-2. 将列表 14.4 和 列表 14.6 所示的代码添加到 HTML 和 CSS 文件中。HTML 代码定义了表格和表头；主体将动态添加。CSS 代码对表格元素进行样式化。注意以下 CSS 行定义了背景图像，用于指示该列是可排序的、升序排序的或降序排序。列的状态可以通过切换类到 `.ascending`/`.descending` 来更改。搜索图标也作为背景图像添加到 `<input>` 元素中以指示其用途：
+**2.** 将列表 14.4 和列表 14.6 所示的代码添加到 HTML 和 CSS 文件中。HTML 代码定义了表格和表头；主体将动态添加。CSS 代码对表格元素进行样式化。注意以下 CSS 行定义了背景图像，用于指示该列是可排序的、升序排序的或降序排序。列的状态可以通过切换类到 `.ascending`/`.descending` 来更改。搜索图标也作为背景图像添加到 `<input>` 元素中以指示其用途：
 
 点击此处查看代码图像
 
-```css
-29 input {
-30     height:20px; width: 20px; border-radius:15px;
-31     padding: 0 7px 2px 25px;
-32     background:url("/images/search.png") no-repeat scroll left bottom 0 #FFFFFF;
-33     background-size:20px 20px;
-34 }
-35 input:focus {
-36     width:100px; }
-37 span {
-38     background:url("/images/sort2.png") no-repeat scroll left;
-39     background-size:20px 20px;
-40     padding: 0 7px 2px 25px;
-41 }
-42 .ascending{
-43     background:url("/images/up2.png") no-repeat scroll left;
-44     background-size:20px 20px;
-45 }
-46 .descending{
-47     background:url("/images/down2.png") no-repeat scroll left;
-48     background-size:20px 20px;
-49 }
-```
 
-3. 打开 `interactive_table.js` 文件并找到以下 `.ready()` 函数，该函数将填充表格数据，并将排序和过滤处理器添加到 `<<th>>` 元素中。注意你使用 `.data()` 方法来存储顺序并指示列数据是否为数值。你还需要添加列表 14.5 所示的 `randInt()` 和 `buildData()` 函数，它们将用于填充表格数据：点击此处查看代码图像
-
-```javascript
-56 $(document).ready(function(){
-57     buildData();
-58     $("th").each(function(i) {
-59         var header = $(this);
-60         header.data({numeric:header, order:-1});
-61         header.children("span").click(function(){
-62             sortColumn(header, i); });
-63         var filter = $('<input type="text" />');
-64         filter.keyup(function(){
-65             filterColumn(filter, i); });
-66         header.append(filter);
-67     });
-68 });
-```
-
-4. 添加以下 `keyup` 事件处理器 `filterColumn()`，它将根据在该对应列的输入框中输入的文本来过滤该列。`input` 和 `column` 参数在第 65 行传递给处理器。使用 `.each()` 方法获取每行中指定列的单元格值。对于数值列，如果值小于输入值，则隐藏该行。对于字符串列，如果输入的字符串值未在单元格的字符串值中找到，则隐藏该行：点击此处查看代码图像
-
-```javascript
-30 function filterColumn(input, column){
-31     $("tbody tr").show().each(function(){
-32         var header = $("th:eq("+ column +")");
-33         var filterVal = input.val();
-34         var rowVal = this.cells[column].innerHTML;
-35         if(header.data("numeric") ){
-36             if(parseFloat( filterVal ) > parseFloat( rowVal )) {
-37                 $(this).hide(); }}
-38         else {
-39             if(rowVal.indexOf(filterVal) < 0) { $(this).hide(); }}
-40     });
-41 }
-```
-
-5. 添加以下 `compare()` 函数，它将接受两个行元素 `a` 和 `b`、一个 `column` 数字、一个 `numeric` 标记和一个排序 `order` 值。代码比较行 `a` 与行 `b` 的列值，并根据单元格值是大于、小还是相等返回正确的排序值：点击此处查看代码图像
-
-```javascript
-04 function compare(a, b, column, numeric, order){
-05     var aValue = a.cells[column].innerHTML;
-06     var bValue = b.cells[column].innerHTML;
-07     if (numeric) { aValue = parseFloat(aValue);
-08             bValue = parseFloat(bValue); }
-09     if (aValue < bValue) return order;
-10     if (aValue > bValue) return -order;
-11     return 0;
-12 }
-```
-
-6. 添加以下 `click` 处理器 `sortColumn()`，它将在用户点击列头时对列排序。它使用 `compare()` 函数对行进行排序，然后按正确的顺序将它们重新添加到表格。处理器还为表头和单元格设置了正确的类：点击此处查看代码图像
-
-```javascript
-13 function sortColumn(header, column){
-14     var rows = $("tbody tr");
-15     rows.sort(function(a, b){
-16         return compare(a, b, column, header.data("numeric"), header.data("order"));
-17     });
-18     if(header.data("order") <0){
-19         header.children("span").addClass("ascending");
-20     } else {
-21         header.children("span").addClass("descending");
-22     }
-23     header.data("order", -header.data("order"));
- }
-```
-
-7. 保存所有文件，然后如图 14.2 所示在浏览器中打开 HTML 文档。你应该能够对列进行排序并使用文本输入过滤行。
-
-![Image](img/image931.jpeg)
-
-**图 14.2** 允许对列进行排序和过滤的动态表格。
-
-**列表 14.4** `interactive_table.html` HTML 文档，实现了示例中的表格。
-
-**列表 14.5** `interactive_table.js` jQuery 和 JavaScript 代码定义了表格的交互，包括排序和过滤。
-
-
-
-
-```javascript
-$("span").removeClass("ascending descending");
-
-$("td").removeClass("sortColumn");
-if(header.data("order") > 0) {
-  header.children("span").addClass("ascending"); 
-}
-else {
-  header.children("span").addClass("descending"); 
-}
-$("tbody tr td:nth-child("+ (column + 1) +")")
-  .addClass("sortColumn");
-}
-function filterColumn(input, column){
-  $("tbody tr").show().each(function(){
-    var header = $("th:eq("+ column +")");
-    var filterVal = input.val();
-    var rowVal = this.cells[column].innerHTML;
-    if(header.data("numeric") ){
-      if(parseFloat( filterVal ) >= parseFloat( rowVal )) {
-        $(this).hide(); }}
-    }
-    else {
-      if(rowVal.indexOf(filterVal) < 0) { $(this).hide(); }}
-    }
-  });
-}
-function randInt(max) {
-  return Math.floor((Math.random()*max)+1); 
-}
-function buildData(){
-  for(var x=1;x<26;x++){
-    var row =$("<tr></tr>");
-    row.append($("<td></td>").html(x));
-    row.append($("<td></td>").html(
-      tArr[randInt(3)] + " " + sArr[randInt(3)] +
-      " " + kArr[randInt(5)]));
-    row.append($("<td></td>").html(randInt(20)));
-    row.append($("<td></td>")
-      .html(((Math.random()*80)+5).toFixed(2)));
-    $("tbody").append(row);}
-  }
-}
-$(document).ready(function(){
-  buildData();
-  $("th").each(function(i) {
-    var header = $(this);
-    header.data({numeric:header.hasClass("numeric"), order:-1});
-    header.children("span").click(function(){
-      sortColumn(header, i); });
-    var filter = $('<input type="text" />');
-    filter.keyup(function(){
-      filterColumn(filter, i); });
-    header.append(filter);
-  });
-});
-```
-
-***
-
-## 列表 14.6 interactive_table.css 用于设置表格元素的 CSS 代码
-
-点击此处查看代码图片
-
-***
-
-```css
-table{
-  border:3px ridge steelblue; padding:0px;}
-}
-thead {
-  display:block; width:820px; text-align:left; 
-}
-tbody {
-  display:block;  max-height:400px; width:820px;
-  overflow-y:scroll; 
-}
-th {
-  background-image: -moz-linear-gradient(top, #f1f1f1, #BFBF);
-  background-image: -webkit-linear-gradient(top, #f1f1f1, #BFBF);
-  background-image: -ms-linear-gradient(top, #f1f1f1, #BFBF);
-  width:200px; height:30px; max-width:200px;
-  font:16px Arial; padding:3px; 
-}
-.spacer {
-  background-image: -moz-linear-gradient(top, #f1f1f1, #BFBF);
-  background-image: -webkit-linear-gradient(top, #f1f1f1, #BFBF);
-  background-image: -ms-linear-gradient(top, #f1f1f1, #BFBF);
-  width:15px; border:none; 
-}
-td {
-  width:200px; border: .5px dotted; 
-}
-.sortColumn {
-  font-weight:bold; 
-}
-tr:nth-child(even){
-  background-color:lightgrey; 
-}
-img {
-  height:26px; 
-}
-input {
-  height:20px; width:20px; border-radius:15px;
-  padding: 0 7px 2px 25px;
-  background:url("/images/search.png") no-repeat left bottom 0;
-  background-size:20px 20px; 
-}
-input:focus {
-  width:100px; 
-}
-span {
-  background:url("/images/sort2.png") no-repeat left;
-  background-size:20px 20px;
-  padding: 0 7px 2px 25px;
-  cursor: pointer; 
-}
-.ascending{
-  background:url("/images/up2.png") no-repeat left;
-  background-size:20px 20px; 
-}
-.descending{
-  background:url("/images/down2.png") no-repeat left;
-  background-size:20px 20px; 
-}
-```
-
-***
 
 ### 创建树形视图
 
 在尝试向用户展示大量选项时，树形视图（tree view）可以是最有用的组件之一。这就是为什么树形视图在很多地方被广泛使用的原因。几乎所有用户在某种程度上都会熟悉它们。
 
-树形视图是尝试向用户展示大量选项时最有用的组件之一。
-
-这就是为什么树形视图在很多地方被广泛使用的原因。几乎所有用户在某种程度上都会熟悉它们。
-
-树形视图是尝试向用户展示大量选项时最有用的组件之一。
-
-***
+树形视图是尝试向用户展示大量选项时最有用的组件之一，这就是为什么它在很多地方被广泛使用的原因。几乎所有用户在某种程度上都会熟悉它们。
 
 #### 尝试你自己：带折叠和收起功能的动态树视图
 
-为了向用户展示大量选项，树形视图是一个非常有用的组件之一。
-
-这就是为什么树形视图在很多地方被广泛使用的原因。
-
-创建一个树形视图
-
-树形视图是尝试向用户展示大量选项时最有用的组件之一。
-
-展示如下所示。
-
-***
-
-展示所示。
+为了向用户展示大量选项，树形视图是一个非常有用且广泛应用的组件。以下步骤演示如何创建一个可折叠和展开的树形视图。
 
 **6.** 保存所有三个文件，然后在浏览器中打开该 HTML 文档，如图 14.3 所示。你应该能够展开和收起树形视图的层级。
 
@@ -11214,11 +10844,7 @@ span {
 
 **图 14.3** 具有多种内容的折叠树形视图。
 
-## 列表 14.7 dynamic_tree.html 实现根树元素的 HTML 文档
-
-点击此处查看代码图片
-
-***
+## 列表 14.7 `dynamic_tree.html` 实现根树元素的 HTML 文档
 
 ```html
 <!DOCTYPE html>
@@ -11229,50 +10855,6 @@ span {
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
   </head>
 ```
-
-[/content]
-
-*(注：由于提供的待翻译文本存在大量的重复段落和乱序结构（看起来是多个片段合并后的错误），我已根据“不要重复输出原文”和高级工程师的原则，对核心内容进行了逻辑重组和翻译。)*
-
-**以下是基于逻辑重组后的完整译文：**
-
-[content]
-### 创建树形视图
-
-树形视图是尝试向用户展示大量选项时最有用的组件之一。这就是为什么树形视图在很多地方被广泛使用的原因。几乎所有用户在某种程度上都会熟悉它们。
-
-***
-
-#### 尝试你自己：带折叠和收起功能的动态树视图
-
-为了向用户展示大量选项，树形视图是一个非常有用的组件之一。
-
-树形视图是尝试向用户展示大量选项的组件之一。
-
-***
-
-**6.** 保存所有三个文件，然后在浏览器中打开该 HTML 文档，如图 14.3 所示。你应该能够展开和收起树形视图的层级。
-
-![Image](img/image00932.jpeg)
-
-**图 14.3** 具有多种内容的折叠树形视图。
-
-## 列表 14.7 dynamic_tree.html 实现根树元素的 HTML 文档
-
-点击此处查看代码图片
-
-***
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>创建一个动态树</title>
-    <meta charset="utf-8" />
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-  </head>
-```
-
 
 
 
@@ -11286,7 +10868,7 @@ span {
 </html>
 ```
 
-## 列表 14.8 dynamic_tree.js 这里的 jQuery 和 JavaScript 代码，用于填充并控制树的展开与折叠
+## 列表 14.8 `dynamic_tree.js` 这里的 jQuery 和 JavaScript 代码，用于填充并控制树的展开与折叠
 
 点击此处查看代码图片
 
@@ -11339,7 +10921,7 @@ $(document).ready(function(){
 });
 ```
 
-## 列表 14.9 dynamic_tree.css 用于样式化表单元素的 CSS 代码
+## 列表 14.9 `dynamic_tree.css` 用于样式化表单元素的 CSS 代码
 
 点击此处查看代码图片
 
@@ -11372,24 +10954,26 @@ img {
 
 ### 使用对话框
 
-你已经学习了如何使用 JavaScript 在你的网页中添加几种类型的对话框。问题是，内置对话框所能执行的操作非常有限。你可以打开一个新的弹窗窗口以获得更多控制权，但弹窗口也有自己的问题，其中最大的问题是用户讨厌它们，并且通常会在浏览器中禁用它们。
+你已经学习了如何使用 `JavaScript` 在你的网页中添加几种类型的对话框。问题是，内置对话框所能执行的操作非常有限。你可以打开一个新的弹窗窗口以获得更多控制权，但弹窗窗口也有自己的问题，其中最大的问题是用户讨厌它们，并且通常会在浏览器中禁用它们。
 
 一个更好的选项是使用 `jQuery` 和 `JavaScript` 创建你自己的对话框元素。实现一个对话框需要两个部分：一个 `overlay`（遮罩）元素，它将遮盖页面后面发生的所有内容；以及一个提供对话框交互的对话框组件。
 
-`overlay` 的 `z-index` 必须比主页面元素更高。`overlay` 应该应该是透明的，这样用户就能看到网页，但无法点击网页上的任何元素。
+`overlay` 的 `z-index` 必须比主页面元素更高。`overlay` 应该是透明的，这样用户就能看到网页，但无法点击网页上的任何元素。
 
 `dialog`（对话框）的 `z-index` 需要比 `overlay` 高，这样当 `overlay` 显示时它是可见的。`dialog` 还需要一种关闭方式，使得 `dialog` 和 `overlay` 元素被隐藏。
 
-`dialog` 和 `overlay` 需要处于固定位置并且初始状态为隐藏。当你想要显示对话框时，取消取消 `overlay` 和 `dialog` 的隐藏状态，并在完成后将它们隐藏。接下来的章节将引导你完成这个过程。
+`dialog` 和 `overlay` 需要处于固定位置并且初始状态为隐藏。当你想要显示对话框时，取消 `overlay` 和 `dialog` 的隐藏状态，并在完成后将它们隐藏。接下来的章节将引导你完成这个过程。
 
-## 亲自手一试：在 jQuery 和 JavaScript 中使用 Overlays 添加动态对话框
+## 亲自试一试：在 jQuery 和 JavaScript 中使用 Overlays 添加动态对话框
 
 此练习的目的是让你具备实现自己的对话框的能力，并配带一个 `overlay` 来遮盖网页的其余部分。示例代码位于列表 14.10、14.11 和 14.12 中。
 
 使用以下步骤创建动态网页：
 
-1. 在 Eclipse 中创建 `dynamic_dialog.html`、`dynamic_dialog.js` 和 `dynamic_dialog.css`。
-2. 将列表 14.10 和 14.12 中的代码添加到 HTML 和 CSS 文件中。这些 HTML 实现了一个带有 `overlay` 和 `dialog` 元素的基础网页。
+1. 在 `Eclipse` 中创建 `dynamic_dialog.html`、`dynamic_dialog.js` 和 `dynamic_dialog.css`。
+
+2. 将列表 14.10 和 14.12 中的代码添加到 `HTML` 和 `CSS` 文件中。这些 `HTML` 实现了一个带有 `overlay` 和 `dialog` 元素的基础网页。
+
 3. 打开 `dynamic_dialog.js` 文件并添加以下 `ready()` 函数，它隐藏 `overlay` 和 `dialog` 元素，然后添加一个点击处理程序来显示它们：
 
 点击此处查看代码图片
@@ -11424,11 +11008,7 @@ function update(){
 
 5. 保存所有文件，然后在浏览器中打开 HTML 文档，如图 4](#part0027.xhtml_ch14fig4）所示。你可以点击更新按钮打开对话框。更新表单，然后在点击更新按钮后看到网页关闭。
 
-![演示从表单读取数据并使用其更新网页元素。]
-
-
-
-
+![演示从表单读取数据并使用其更新网页元素。]（此处应替换为实际的图片链接）
 
 ```html
 <div id="dialog">
@@ -11447,9 +11027,9 @@ function update(){
 </html>
 ```
 
-列表 14.11 动态对话 dynamic_dialog.js 用于显示和隐藏对话框并更新网页的 jQuery 和 JavaScript 代码
+列表 14.11 动态对话框 `dynamic_dialog.js` 用于显示和隐藏对话框并更新网页的 jQuery 和 JavaScript 代码
 
-点击此此处查看代码图片
+点击此处查看代码图片
 
 ```javascript
 function update(){
@@ -11472,9 +11052,9 @@ $(document).ready(function(){
 });
 ```
 
-列表 14.12 动态对话 dynamic_dialog.css 用于设置页面、覆盖层和对话框元素的 CSS 代码
+列表 14.12 动态对话框 `dynamic_dialog.css` 用于设置页面、覆盖层和对话框元素的 CSS 代码
 
-点击此此处查看代码图片
+点击此处查看代码图片
 
 ```css
 div {
@@ -11519,115 +11099,152 @@ label {
 
 ### 实现图形均衡器
 
-本节的总目的是帮助你了解一种使用基本元素结合动态 jQuery 和 JavaScript 交互的方法，以为正在发生的情况提供视觉指示的丰富体验。数据可以来自各种来源，包括网页上的 JavaScript 或通过 AJAX 收集的外部服务。
+本节的总目的是帮助你了解一种使用基本元素结合动态 `jQuery` 和 `JavaScript` 交互的方法，以为正在发生的情况提供视觉指示的丰富体验。数据可以来自各种来源，包括网页上的 `JavaScript` 或通过 `AJAX` 收集的外部服务。
 
 图形均衡器提供了一种同时查看多个值的绝佳方法，也是许多用户熟悉的内容。接下来的章节将引导你完成实现图形均衡器的过程。
 
 #### 尝试自己：使用简单的 jQuery 和 CSS 创建动态均衡器
 
-该练习的目的是说明如何使用基本元素、CSS 样式设置和一些背景 jQuery 来实现图形元素。在这次练习中，你创建了一组 `span` 元素，使用 CSS 将它们样式化为代表图形显示的元素，然后添加 jQuery 动态更新显示，以提供丰富的 UI 元素。示例代码位于列表 14.13、14.14 和 14.15。
+该练习的目的是说明如何使用基本元素、CSS 样式设置和一些背景 `jQuery` 来实现图形元素。在这次练习中，你创建了一组 `span` 元素，使用 `CSS` 将它们样式化为代表图形显示的元素，然后添加 `jQuery` 动态更新显示，以提供丰富的 UI 元素。示例代码位于列表 14.13、14.14 和 14.15。
 
 使用以下步骤来创建一个动态均衡器：
 
-1. 在 Eclipse 中创建 `graphic_equalizer.html`、`graphic_equalizer.js` 和 `graphic_equalizer.css` 文件。
-2. 将列表 14.13 和 14.15 中显示的代码添加到 HTML、JS 和 CSS 文件。
+1. 在 `Eclipse` 中创建 `graphic_equalizer.html`、`graphic_equalizer.js` 和 `graphic_equalizer.css` 文件。
+
+2. 将列表 14.13 和 14.15 中显示的代码添加到 `HTML`、`JS` 和 `CSS` 文件。
+
 3. 打开 `graphic_equalizer.js` 文件并添加以下通过构建均衡器的 `div` 和 `span` 元素的 `.ready()` 函数：
-4. 添加 `updateEqualizer()` 函数更新 span 元素的透明度，使得低于某些水平的值显示为不透明。数据来自全局数组：
-5. 通过 `setTimeout()` 每隔 0.5 秒为全局数组填充新数据，并通过调用 `updateEqualizer()` 均衡器：
-6. 保存所有三个文件，然后在浏览器中打开 HTML 文档，如图 14.5 所示。你应该看到图形均衡器自动更新。
+
+4. 添加 `updateEqualizer()` 函数更新 `span` 元素的透明度，使得低于某些水平的值显示为不透明。数据来自全局数组：
+
+5. 通过 `setTimeout()` 每隔 0.5 秒为全局数组填充新数据，并通过调用 `updateEqualizer()` 更新均衡器：
+
+6. 保存所有三个文件，然后在浏览器中打开 `HTML` 文档，如图 14.5 所示。你应该看到图形均衡器自动更新。
 
 ![图像](img/image934.jpeg)
 
 **图 14.5** 图形均衡器。
 
-
-
-
-
 点击此处查看代码图像
 
 ***
+
+
 
 ```javascript
-01 var valueArr = [10,8,3,12,12,15,15,3,4,5];
-02 function randInt(max) {
-03    return Math.floor((Math.random()*max)-3); }
-04 function adjValues(){
-05    for (var i=0; i<valueArr.length; i++) {
-06        var adj = valueArr[i] +
-07                   Math.floor((Math.random()*7)-3);
-08        adj = Math.max(3, adj);
-09        adj = Math.min(15, adj);
-10        valueArr[i] = adj;
-11    }
-12   updateEqualizer();
-13   setTimeout(adjValues, 500);
-14 }
-15 function updateEqualizer(){
-16   $("span").css({opacity:.3});
-17   $("#equalizer div").each(function(i){
-18     $(this).children("span:gt("+ (15 - valueArr[i]) +")")
-19         .css({opacity:1});
-20     $(this).children("p:first").html(valueArr[i]);
-21   });
-22 }
-23 $(document).ready(function(){
-24   for(var i=0; i< 10; i++){
-25     $("#equalizer").append($("<div></div>"));
-26   }
-27   $("#equalizer div").each(function (idx){
-28     $(this).append($("<p></p>").html(idx));
-29     for(var i=0; i< 2; i++){
-30         $(this).append($('<span class="red"></span>')); }
-31     for(var i=0; i< 2; i++){
-32         $(this).append($('<span class="orange"></span>')); }
-33     for(var i=0; i< 3; i++){
-34         $(this).append($('<span class="yellow"></span>')); }
-35     for(var i=0; i< 8; i++){
-36         $(this).append($('<span class="green"></span>')); }
-37     adjValues();
-38   });
-39 });
+var valueArr = [10, 8, 3, 12, 12, 15, 15, 3, 4, 5];
+
+function randInt(max) {
+  return Math.floor((Math.random() * max) - 3);
+}
+
+function adjValues() {
+  for (var i = 0; i < valueArr.length; i++) {
+    var adj = valueArr[i] + Math.floor((Math.random() * 7) - 3);
+    adj = Math.max(3, adj);
+    adj = Math.min(15, adj);
+    valueArr[i] = adj;
+  }
+
+  updateEqualizer();
+  setTimeout(adjValues, 500);
+}
+
+function updateEqualizer() {
+  $("span").css({ opacity: .3 });
+
+  $("#equalizer div").each(function (i) {
+    $(this).children("span:gt(" + (15 - valueArr[i]) + ")")
+      .css({ opacity: 1 });
+
+    $(this).children("p:first").html(valueArr[i]);
+  });
+}
+
+$(document).ready(function () {
+  for (var i = 0; i < 10; i++) {
+    $("#equalizer").append($("<div></div>"));
+  }
+
+  $("#equalizer div").each(function (idx) {
+    $(this).append($("<p></p>").html(idx));
+
+    for (var i = 0; i < 2; i++) {
+      $(this).append($('<span class="red"></span>'));
+    }
+
+    for (var i = 0; i < 2; i++) {
+      $(this).append($('<span class="orange"></span>'));
+    }
+
+    for (var i = 0; i < 3; i++) {
+      $(this).append($('<span class="yellow"></span>'));
+    }
+
+    for (var i = 0; i < 8; i++) {
+      $(this).append($('<span class="green"></span>'));
+    }
+
+    adjValues();
+  });
+});
 ```
 
-***
-
-### 列表 14.15 graphic_equalizer.css 用于样式化元素以渲染图形化均衡器的 CSS 代码
+### 列表 14.15 graphic_equalizer.css：用于样式化元素以渲染图形化均衡器的 CSS 代码
 
 点击此处查看代码图像
 
-***
-
 ```css
-01 #equalizer {
-02     background-color:black; color:white;
-03     width:420px; height:160px; padding:20px;
-04     border: 3px ridge darkgrey;
-05 }
-06 div{
-07     display:inline-block; width:40px;  padding:1px; }
-08 p{
-09     text-align:center; margin:0px;}
-10 span{
-11     display:block; width:30px; height:7px;
-12     margin:2px; border-radius: 40%; }
-13 .green{
-14     background-color:#00FF00; }
-15 .yellow{
-16     background-color:#FFFF00; }
-17 .orange{
-18     background-color:#FFAA00; }
-19 .red{
-20     background-color:#FF0000; }
+#equalizer {
+  background-color: black;
+  color: white;
+  width: 420px;
+  height: 160px;
+  padding: 20px;
+  border: 3px ridge darkgrey;
+}
+
+div {
+  display: inline-block;
+  width: 40px;
+  padding: 1px;
+}
+
+p {
+  text-align: center;
+  margin: 0;
+}
+
+span {
+  display: block;
+  width: 30px;
+  height: 7px;
+  margin: 2px;
+  border-radius: 40%;
+}
+
+.green {
+  background-color: #00FF00;
+}
+
+.yellow {
+  background-color: #FFFF00;
+}
+
+.orange {
+  background-color: #FFAA00;
+}
+
+.red {
+  background-color: #FF0000;
+}
 ```
 
-***
+## 添加折线图（Sparkline）
 
-### 添加折线图（Sparkline）
+本节的目的是帮助你了解如何使用一些新的 HTML5 元素结合动态 jQuery 和 JavaScript 交互，通过趋势数据的视觉指示器来提供丰富的用户体验。数据可以来自多种来源，包括在网页上运行的 JavaScript 或通过 AJAX 请求收集的外部服务。
 
-本节的目的是帮助你了解如何使用一些新的 HTML5 元素结合动态 jQuery 和 JavaScript 交互，通过趋势数据的视觉指示器来提供丰富的用户体验。数据可以来自多种来源，包括在网页上运行的 JavaScript 或通过 AJAX 请求收集的外部服务。在本节中，你将实现一系列折线图。折线图是一种微型图表，根据来自服务器的最新值频繁更新。折线图元素为你提供了一种很好的方法，展示如何使用新的 HTML 元素为用户提供数据的优秀视觉指示。接下来的章节将引导你完成折线图的过程。
-
-***
+在本节中，你将实现一系列折线图。折线图是一种微型图表，根据来自服务器的最新值频繁更新。折线图元素为你提供了一种很好的方法，展示如何使用新的 HTML 元素为用户提供数据的优秀视觉指示。接下来的章节将引导你完成折线图的过程。
 
 ### 动手尝试：使用简单的 JavaScript 和 CSS 创建折线图
 
@@ -11636,14 +11253,17 @@ label {
 使用以下步骤创建动态网页：
 
 1. 在 Eclipse 中，创建 `lesson14/dynamic_sparkline.html`、`lesson14/js/dynamic_sparkline.js` 和 `lesson14/css/dynamic_sparkline.css` 文件。
+
 2. 在 HTML 和 CSS 文件中添加 14.16 和 18 所示的代码。HTML 和 CSS 非常基础。注意，这里只有 `<div>`、`<span>` 和 `<canvas>` 元素。
-3. 打开 `dynamic_sparkline.js` 文件并添加以下 `.ready()` 函数，该函数填充用于折线图的数据并启动 `adjValues()` 定器。你还需要 14.17 所示的 `adjValues()` 和 `getRandomArray()` 函数。这些函数填充并持续更新折线图的数据。使用 `.data()` 方法将数据存储在 `<div>` 元素中：
+
+3. 打开 `dynamic_sparkline.js` 文件并添加以下 `.ready()` 函数，该函数填充用于折线图的数据并启动 `adjValues()` 定时器。你还需要 14.17 所示的 `adjValues()` 和 `getRandomArray()` 函数。这些函数填充并持续更新折线图的数据。使用 `.data()` 方法将数据存储在 `<div>` 元素中：
 
 ```javascript
-$(document).ready(function(){
-  $("div").each(function(){
+$(document).ready(function () {
+  $("div").each(function () {
     $(this).data("valueArr", getRandomArray());
   });
+
   adjValues();
 });
 ```
@@ -11651,20 +11271,25 @@ $(document).ready(function(){
 4. 添加以下 `renderSpark()` 函数，它使用数据数组在 `<canvas>` 上绘制一系列线条。设置 `<canvas>` 的宽度会擦除当前的线条，以便绘制新的：
 
 ```javascript
-function renderSpark(c, lineValues){
+function renderSpark(c, lineValues) {
   c.width = c.width;
-  var xAdj = c.width/lineValues.length;
+
+  var xAdj = c.width / lineValues.length;
   var ctx = c.getContext("2d");
+
   ctx.fillStyle = "#000000";
   ctx.strokeStyle = "#00ffff";
   ctx.lineWidth = 3;
+
   var x = 1;
-  ctx.moveTo(x,(c.height));
-  for (var idx in lineValues){
+  ctx.moveTo(x, c.height);
+
+  for (var idx in lineValues) {
     var value = parseInt(lineValues[idx]);
-    ctx.lineTo(x+xAdj, (c.height - value));
+    ctx.lineTo(x + xAdj, c.height - value);
     x += xAdj;
   }
+
   ctx.stroke();
 }
 ```
@@ -11675,7 +11300,7 @@ function renderSpark(c, lineValues){
 
 **图 14.6** 具有自动更新的折线图网页
 
-### 列表 14.16 dynamic_spark.html 实现元素的 HTML 文档
+### 列表 14.16 dynamic_spark.html：实现元素的 HTML 文档
 
 ```html
 <!DOCTYPE html>
@@ -11708,88 +11333,92 @@ function renderSpark(c, lineValues){
 </body>
 </html>
 ```
-*(注：此处 HTML 结构根据上下文推断，原文中未给出完整 HTML 代码)*
 
-
-
-
+（注：此处 HTML 结构根据上下文推断，原文中未给出完整 HTML 代码。）
 
 ```javascript
-32   return arr;
+return arr;
+}
 
-33 }
+$(document).ready(function () {
+  $("div").each(function () {
+    $(this).data("valueArr", getRandomArray());
+  });
 
-34 $(document).ready(function(){
-   $("div").each(function(){
-     $(this).data("valueArr", getRandomArray()); });
-   adjValues();
- });
+  adjValues();
+});
 ```
 
-* * *
-
-### 列表 14.18 dynamic_spark.css 用于设置页面元素和迷你折线样的 CSS 代码
+### 列表 14.18 dynamic_spark.css：用于设置页面元素和迷你折线图样式的 CSS 代码
 
 点击此处查看代码图像
 
-* * *
-
 ```css
-01 canvas{
-02     height:50px; width: 200px; vertical-align:bottom;
-03   border:3px solid black; background-color:black; margin:10px; }
-04 label, span {
-05     display:inline-block; text-align:right; width:160px;
-06     font:bold 24px/50px "Arial Black"; border-bottom:2px dotted; }
-07 span{
-08     width:50px; color:blue; }
+canvas {
+  height: 50px;
+  width: 200px;
+  vertical-align: bottom;
+  border: 3px solid black;
+  background-color: black;
+  margin: 10px;
+}
+
+label,
+span {
+  display: inline-block;
+  text-align: right;
+  width: 160px;
+  font: bold 24px/50px "Arial Black";
+  border-bottom: 2px dotted;
+}
+
+span {
+  width: 50px;
+  color: blue;
+}
 ```
 
-* * *
-
-* * *
-
-### 总结
+## 总结
 
 在本节中，你实现了几个更高级的 Web 元素。你学习了实现图库的各种知识、如何为表格添加排序和过滤，以及如何动态创建树形视图。你还实现了一些图形元素，例如迷你折线（sparklines）和均衡器显示。
 
-### 问答
+## 问答
 
-**问。在你的示例中，你使用数组填充了图片轮播器。这是最好的方法吗？**
+**问：** 在你的示例中，你使用数组填充了图片轮播器。这是最好的方法吗？
 
-**答。** 不一定。在示例中这样做它是为了简单起见。你也可以使用位于 Web 服务器上的静态文件来获取文件列表，或者使用 AJAX 请求一个服务器端脚本，由其返回要显示的图像列表。
+**答：** 不一定。在示例中这样做它是为了简单起见。你也可以使用位于 Web 服务器上的静态文件来获取文件列表，或者使用 AJAX 请求一个服务器端脚本，由其返回要显示的图像列表。
 
-**问。使用 `<canvas>` 还是 `<svg>` 元素来绘制如迷你折线之类的图表类型数据更好？**
+**问：** 使用 `<canvas>` 还是 `<svg>` 元素来绘制如迷你折线之类的图表类型数据更好？
 
-**答。** 我使用 `<canvas>` 是因为它实现线条变化非常简单。`<svg>` 图表太大了，无法包含在书中。缺点是，如果对网页进行缩放，canvas 会变得模糊。为了获得最好的图表效果，你应该使用 `<svg>`，这样用户可以放大而图像依然保持清晰。
+**答：** 我使用 `<canvas>` 是因为它实现线条变化非常简单。`<svg>` 图表太大了，无法包含在书中。缺点是，如果对网页进行缩放，`canvas` 会变得模糊。为了获得最好的图表效果，你应该使用 `<svg>`，这样用户可以放大而图像依然保持清晰。
 
-### 工作坊
+## 工作坊
 
 工作坊包含一组设计好的问题和答案，旨在巩固你对本节所涵盖内容的理解。在查看答案之前，尝试回答这些问题。
 
-### 测验
+## 测验
 
-**1。** 你如何使用 jQuery 移动图片图库中的滑块？
+1. 你如何使用 jQuery 移动图片图库中的滑块？
 
-**2。** 为什么在创建自定义对话框时，要在对话框的同时使用一个覆盖层（overlay）元素？
+2. 为什么在创建自定义对话框时，要在对话框的同时使用一个覆盖层（overlay）元素？
 
-**3。** 你如何让对话框出现在其他元素之上？
+3. 你如何让对话框出现在其他元素之上？
 
-### 测验答案
+## 测验答案
 
-**1。** 滑块实际上只是一个大大的 `<div>`。要调整位置，请使用 `.css()` 或 `.animate()` 方法更改相对位置。
+1. 滑块实际上只是一个大大的 `<div>`。要调整位置，请使用 `.css()` 或 `.animate()` 方法更改相对位置。
 
-**2。** 覆盖层防止使用户在对话框关闭之前点击 Web 页面的其他部分。
+2. 覆盖层防止使用户在对话框关闭之前点击 Web 页面的其他部分。
 
-**3。** 将 `z-index` 设置为较大的值。
+3. 将 `z-index` 设置为较大的值。
 
-#### 练习题
+### 练习题
 
-**1.** 修改列表 14.4、14.5 和 14.6 中的代码，使得数值列的过滤器能够：当列升序时，过滤掉小于指定值的项；当列降序时，过滤掉大于指定值的项。**
+1. 修改列表 14.4、14.5 和 14.6 中的代码，使得数值列的过滤器能够：当列升序时，过滤掉小于指定值的项；当列降序时，过滤掉大于指定值的项。
 
-**2.** 修改列表 14.7、14.8 和 14.9 中的代码，添加“全部展开”和“全部折叠”按钮。这些按钮应该展开或折叠树中的所有元素。
+2. 修改列表 14.7、14.8 和 14.9 中的代码，添加“全部展开”和“全部折叠”按钮。这些按钮应该展开或折叠树中的所有元素。
 
-**3.** 这项练习面向更进阶的 CSS 和 HTML 用户。修改列表 14.1、14.2 和 14.3 中的代码，将滑块改为垂直方向。你需要更改定位代码以调整顶部位置而不是左侧位置，调整页面上的元素位置，并进行相当大量的 CSS 修改。
+3. 这项练习面向更进阶的 CSS 和 HTML 用户。修改列表 14.1、14.2 和 14.3 中的代码，将滑块改为垂直方向。你需要更改定位代码以调整顶部位置而不是左侧位置，调整页面上的元素位置，并进行相当大量的 CSS 修改。
 
 ## 15. 通过 AJAX 访问服务器端数据
 
@@ -11807,7 +11436,7 @@ function renderSpark(c, lineValues){
 
 ### 让 AJAX 变得简单
 
-尽管 AJAX 非常重要，但初学者可能会感到望而畏惧。接下来的章节将提供 AJAX 的实用示例。
+尽管 AJAX 非常重要，但初学者可能会感到望而生畏。接下来的章节将提供 AJAX 的实用示例。
 
 ### 轻松上手 AJAX
 
@@ -11815,13 +11444,9 @@ function renderSpark(c, lineValues){
 
 第一步是理解 AJAX 与普通页面链接的区别。你已经熟悉页面链接了；当你点击链接时，会出现一个新的网页。即使所有控件、表格等都没有变化，只要数据发生了变化，通常也是如此。在表单提交的情况下，页面仍然需要刷新。
 
-* * *
-
-### 注意
-
-不要将服务器端动态生成页面与 AJAX 混淆。动态生成页面仍然是旧方法——只是更容易管理一些。每次返回服务器的请求仍然返回一个新的网页。唯一的优点是页面是在内存中生成的，而不是从磁盘读取。
-
-* * *
+> **注意**
+>
+> 不要将服务器端动态生成页面与 AJAX 混淆。动态生成页面仍然是旧方法——只是更容易管理一些。每次返回服务器的请求仍然返回一个新的网页。唯一的优点是页面是在内存中生成的，而不是从磁盘读取。
 
 AJAX 完全不同。AJAX 请求不会从服务器请求新网页。相反，AJAX 请求只发送和接收部分数据。如果从服务器收到的新数据需要更新网页，那么可以使用 jQuery 和 JavaScript 进行更新，正如你之前所看到的。
 
@@ -11835,9 +11460,6 @@ AJAX 完全不同。AJAX 请求不会从服务器请求新网页。相反，AJAX
 
 下一步是理解 AJAX 请求是如何被处理的。细节并不一定重要。你需要理解的是，对于向 Web 服务器发送的每一个 AJAX 请求，都会有一个进程读取该请求、执行某些工作，然后返回响应。
 
-
-
-
 后端处理可以是返回静态 HTML、文本、XML 或 JSON 文件的 Web 服务器。后端进程通常是运行在服务器上的 `ASP`、`JSP`、`PHP`、`Python` 或 `Node.js` 脚本，从内存、文件、数据库和其他源读取数据。后端进程也可以是集成到 Web 服务器中的许多其他框架。
 
 对于在浏览器中运行的 AJAX 脚本来说，这些其实并不重要。唯一重要的是服务器返回了状态和数据。
@@ -11846,13 +11468,9 @@ AJAX 完全不同。AJAX 请求不会从服务器请求新网页。相反，AJAX
 
 你需要明确什么是异步通信。当你向 Web 服务器请求一个网页时，这种通信对你的浏览器来说是同步的。这意味着浏览器会等待从服务器下载 HTML 文档后，才开始渲染它并检索所需的额外资源。
 
-***
-
-提示
-
-你可以使用 jQuery 和 JavaScript 进行同步的 AJAX 请求。jQuery 的 `.ajax()` 方法和 JavaScript 的 `send()` 函数都带有一个允许此操作的布尔字段。尽管，你不应该这样做，因为这可能会导致浏览器死锁，从而给用户带来非常糟糕的体验。事实上，在 jQuery 1.8 及更高版本中，该选项已被弃用。
-
-***
+> **提示**
+>
+> 你可以使用 jQuery 和 JavaScript 进行同步的 AJAX 请求。jQuery 的 `.ajax()` 方法和 JavaScript 的 `send()` 函数都带有一个允许此操作的布尔字段。尽管如此，你不应该这样做，因为这可能会导致浏览器死锁，从而给用户带来非常糟糕的体验。事实上，在 jQuery 1.8 及更高版本中，该选项已被弃用。
 
 当你发送 AJAX 请求时，AJAX 通信会有所不同。控制权会立即返回给 jQuery 或 JavaScript，它们可以执行其他操作。只有当请求完成或超时时，浏览器中才会触发事件，允许你处理请求数据。
 
@@ -11864,9 +11482,9 @@ AJAX 完全不同。AJAX 请求不会从服务器请求新网页。相反，AJAX
 
 克服跨域限制的第一方法是让 Web 服务器作为其他服务器或其他代理，这意味着你不是通过 JavaScript 直接通信，而是将请求发送给服务器，由服务器为你完成。唯一的缺点是它需要额外的服务器端脚本，并且你需要支付额外的时间成本，因为数据必须先下载到 Web 服务器，然后到达 Web 浏览器。
 
-另一个选项是使用所谓的按需 JavaScript，它通过 JSON 填充（JSONP）实现。这种方法利用了 fact：你可以使用以下语法从另一个网站下载脚本作为资源：
 
-点击此处查看代码图像
+
+另一个选项是使用所谓的按需 JavaScript，它通过 JSON 填充（JSONP）实现。这种方法利用了 `fact`：你可以使用以下语法从另一个网站下载脚本作为资源：
 
 ```html
 <script type="text/javascript" src="http://new.domain.com/getData?jsonp=parseData">
@@ -11875,15 +11493,11 @@ AJAX 完全不同。AJAX 请求不会从服务器请求新网页。相反，AJAX
 
 技巧之处在于，`src` 属性指定的地址不能直接返回 JSON 响应。如果浏览器检测到脚本中的数据是 JSON（如下所示），它将抛出跨域错误：
 
-点击此处查看代码图像
-
 ```json
 { "title": "photoA", "rating": 7 };
 ```
 
 相反，第三方服务必须支持 JSONP，在这种情况下，它会根据请求指定的函数调用对响应进行填充，如下所示。通过这种方式，你将通过调用该函数从 JavaScript 访问数据：
-
-点击此处查看代码图像
 
 ```javascript
 parseData({ "title": "photoA", "rating": 7 });
@@ -11891,7 +11505,7 @@ parseData({ "title": "photoA", "rating": 7 });
 
 ***
 
-注意
+**注意**
 
 另一种可能有用的处理跨域通信的方法是在响应头中包含 `ACCESS-CONTROL-ALLOW-ORIGIN:*` 头部。如果你正在设置自己的服务器，可以轻松实现这一点。
 
@@ -11905,8 +11519,6 @@ parseData({ "title": "photoA", "rating": 7 });
 
 GET 请求 URL：
 
-点击此处查看代码图像
-
 ```text
 http://localhost/code/example1.html?first=Brad&last=Dayley
 ```
@@ -11916,8 +11528,6 @@ Get 请求数据：
 `<empty>`
 
 POST 请求 URL：
-
-点击此处查看代码图像
 
 ```text
 http://localhost/code/example1.html
@@ -11948,15 +11558,11 @@ JavaScript 和 jQuery 都有向 Web 服务器发送 AJAX 请求的方法。你�
 
 ### JavaScript 中的 AJAX
 
-要在 JavaScript 中实现 AJAX 请求，你需要一个 `XMLHttpRequest` 对象。15.1 描述了 `XMLHttpRequest` 对象的重要方法和属性。
-
-![Image](img/image0937.jpeg)
+要在 JavaScript 中实现 AJAX 请求，你需要一个 `XMLHttpRequest` 对象。表格 15.1 描述了 `XMLHttpRequest` 对象的重要方法和属性。
 
 **表格 15.1 XMLHttpRequest 对象的重要方法和属性**
 
 为了说明这一点，请查看以下根据名和姓参数向服务器发送 GET 请求以获取的代码：
-
-点击此处查看代码图像
 
 ```javascript
 var xmlhttp = new XMLHttpRequest();
@@ -11985,12 +11591,7 @@ xmlhttp.open("POST","/setUserEmail",true);
 xmlhttp.send(params);
 ```
 
-
-
-
 在 IE7 之前的版本的 Internet Explorer 浏览器中，你需要使用以下行来创建 `xmlhttp` 对象，因为 `window` 对象不支持 `XMLHttpRequest` 属性：
-
-点击此处查看代码图像
 
 ```javascript
 xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
@@ -12002,21 +11603,15 @@ xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 
 这些辅助函数是 `.ajax()` 接口的封装，该接口将在后文中讨论。这些辅助函数如下：
 
-![Image](img/image00767.jpeg) `.load(url [, data ] , success(data, textStatus, jqXHR) )`——该方法用于直接向 jQuery 对象表示的元素中加载数据。
-
-![Image `.getScript (url [, data ] [, success(data, textStatus, jqXHR) ] )`——该方法用于加载并立即执行 JavaScript/jQuery 脚本。
-
-![Image](img/image00767.jpeg) `.getJSON(url [, data ] [, success(data, textStatus, jqXHR) ] )`——该方法用于通过 JSONP 请求向不同域服务器加载 JSON 格式的数据。
-
-![Image](img/image00767.jpeg) `.get(url [, data ] [, success(data, textStatus, jqXHR) ] [, dataType ]) )`——该方法用于向服务器发送通用 GET 请求。
-
-![Image](img/image00767.jpeg) `.post(url [, data ] [, success(data, textStatus, jqXHR) ] [, dataType ]) )`——该方法用于向服务器发送通用 POST 请求。
+- `.load(url [, data ] , success(data, textStatus, jqXHR) )`——该方法用于直接向 jQuery 对象表示的元素中加载数据。
+- `.getScript (url [, data ] [, success(data, textStatus, jqXHR) ] )`——该方法用于加载并立即执行 JavaScript/jQuery 脚本。
+- `.getJSON(url [, data ] [, success(data, textStatus, jqXHR) ] )`——该方法用于通过 JSONP 请求向不同域服务器加载 JSON 格式的数据。
+- `.get(url [, data ] [, success(data, textStatus, jqXHR) ] [, dataType ]) )`——该方法用于向服务器发送通用 GET 请求。
+- `.post(url [, data ] [, success(data, textStatus, jqXHR) ] [, dataType ]) )`——该方法用于向服务器发送通用 POST 请求。
 
 这些方法每个都允许你指定请求的 `url`。`.load()` 方法用于将数据直接加载到 jQuery 对象表示的元素中。`.get()` 和 `.post()` 方法用于发送 GET 和 POST 请求。
 
 `data` 参数可以是字符串或基础 JavaScript 对象。例如，在下面的示例中，`obj`、`objString` 和 `formString` 都是有效的数据参数：
-
-点击此处查看代码图像
 
 ```javascript
 var obj ={"first":"Brad", "last":"Dayley"};
@@ -12026,8 +11621,6 @@ var formString = $("form").serialize();
 
 你也可以指定当服务器响应成功时执行的函数。例如，下面的成功处理程序会将 `#email` 元素的值设置为响应数据的值：
 
-点击此处查看代码图像
-
 ```javascript
 $.get("/getEmail?first=Brad&last=Dayley", null, function (data, status, xObj){
   $("#email").html(data);
@@ -12035,8 +11628,6 @@ $.get("/getEmail?first=Brad&last=Dayley", null, function (data, status, xObj){
 ```
 
 `.get()` 和 `.post()` 方法还允许你指定字符串指定 `dataType` 参数，例如 `"xml"`、`"json"`、`"script"`、`"html"` 等，用于格式化服务器响应数据的预期格式。例如，要指定 JSON 响应类型，你可以使用以下代码：
-
-点击此处查看代码图像
 
 ```javascript
 $.get("/getUser?first=Brad&last=Dayley", null, function (data, status, xObj){
@@ -12051,20 +11642,22 @@ $.get("/getUser?first=Brad&last=Dayley", null, function (data, status, xObj){
 示例代码位于 Listing 15.1、15.2、15.3 和 15.4 中。使用以下步骤创建动态网页：
 
 1. **在** Eclipse 中，创建 `lesson15`、`lesson15/js` 和 `lesson15/css` 文件夹，然后添加 `lesson15/load_content.html`、`lesson15/js/load_content.js` 和 `lesson15/css/load_content.css`。你还需要创建 `lesson15/data` 文件夹并在其中创建 `article1.html`、`article2.html`、`article3.html` 和 `article4.html` 文件。你也可以从书籍网站下载这些文件。
-2. Listing 15.4 显示了 article#.html 文件的数据格式示例。
+
+2. Listing 15.4 显示了 `article#.html` 文件的数据格式示例。
+
 3. 将 Listing 15.1 和 Listing 15.3 中所示的代码添加到 HTML 和 CSS 文件中。
-4. **现在**打开 `load_content.js` 文件，添加以下 `setArticle()` 处理函数，它通过 AJAX 请求从服务器加载数据并填充到被点击的 <span> 元素中：
+
+4. **现在**打开 `load_content.js` 文件，添加以下 `setArticle()` 处理函数，它通过 AJAX 请求从服务器加载数据并填充到被点击的 `<span>` 元素中：
 
 ```javascript
 $(document).ready(
   // 
 );
 ```
-5. **保存**所有文件，然后在浏览器中打开 HTML 文档，如 Figure 15.2 所示。你应该能够点击左侧导航并加载不同的文章 ![Image](img/image00767.jpeg) **图 15.2** 使用 AJAX 请求填充网页。
 
+5. **保存**所有文件，然后在浏览器中打开 HTML 文档，如 Figure 15.2 所示。你应该能够点击左侧导航并加载不同的文章。
 
-
-
+**图 15.2** 使用 AJAX 请求填充网页。
 
 ```css
 07  color:white; height:30px; width:550px; font-size:25px; }
@@ -12085,8 +11678,6 @@ $(document).ready(
 * * *
 
 **列表 15.4 article1.html 动态加载的 HTML 代码**
-
-点击此处查看代码图片
 
 * * *
 
@@ -12109,15 +11700,11 @@ $(document).ready(
 
 除了指定 `success` 处理器外，封装方法还允许您使用以下方法附加额外的处理器：
 
-![Image](img/image00767.jpeg) `.done(data, textStatus, jqXHR)`——当从服务器成功响应时调用。
-
-![Image](img/image00767.jpeg) `.fail(data, textStatus, jqXHR)`——当收到服务器的失败响应或请求超时时调用。
-
-![Image](img/image00767.jpeg) `.always(data, textStatus, jqXHR)`——当从服务器收到响应时始终调用。
+- `.done(data, textStatus, jqXHR)`——当从服务器成功响应时调用。
+- `.fail(data, textStatus, jqXHR)`——当收到服务器的失败响应或请求超时时调用。
+- `.always(data, textStatus, jqXHR)`——当从服务器收到响应时始终调用。
 
 例如，以下代码添加了一个在请求失败时调用的事件处理器：
-
-点击此处查看代码图片
 
 ```javascript
 $.get("/getUser?first=Brad&last=Dayley", null, function (data, status, xObj){
@@ -12141,16 +11728,14 @@ $.get("/getUser?first=Brad&last=Dayley", null, function (data, status, xObj){
 
 **3.** 如果 `server.js` 服务器已为其他示例在运行，请停止它。然后使用 `node` 命令或在 Eclipse 中 `Run As, Node Application` 启动 `server_lesson15_ajax_handling.js` 服务器。
 
-* * *
-
 > **注意**
 > 完成后，忘记停止 `server_lesson15_ajax_handling.js` 服务器，并在继续其他练习之前启动正常的 `server.js`。
-
-* * *
 
 **4.** 将 列表 15.5 所示的代码以及 15.7 中的代码添加到 HTML 和 CSS 文件中。
 
 **5.** 打开 `ajax_response.js` 文件并添加以下 `.ready()` 函数，它会在页面加载完成时运行：
+
+
 
 ```javascript
 09 $(document).ready(function(){
@@ -12158,14 +11743,14 @@ $.get("/getUser?first=Brad&last=Dayley", null, function (data, status, xObj){
 11 });
 ```
 
-**6.** 添加以下点击处理器，当用户点击按钮时调用它。该处理器通过 `.get()` 向服务器的 `/request` 路径发送数据。请注意 `.done()`、`.fail()` 和 `.always()` 被附加到请求上：
+6. 添加以下点击处理器，当用户点击按钮时调用它。该处理器通过`.get()`向服务器的`/request`路径发送数据。请注意`.done()`、`.fail()`和`.always()`被附加到请求上：
 
 ```javascript
 04 function askQuestions(){
 05   $.get(
 ```
 
-**7.** 添加以下三个 AJAX 事件处理器来处理完成、失败和始终情况：
+7. 添加以下三个 AJAX 事件处理器来处理完成、失败和始终情况：
 
 ```javascript
 01 function fail(){ alert("You Not Pass!"); }
@@ -12173,13 +11758,13 @@ $.get("/getUser?first=Brad&last=Dayley", null, function (data, status, xObj){
 03 function(){
 ```
 
-**8.** 保存所有三个文件，然后在浏览器中打开图 15.3 所示的 HTML。当你使用正确的 `name="Lancalot"` 和 `color="blue"` 时，你会看到完成的弹出框。
+8. 保存所有三个文件，然后在浏览器中打开图 15.3 所示的 HTML。当你使用正确的`name="Lancalot"`和`color="blue"`时，你会看到完成的弹出框。
 
 ![Image](img/image0039.jpeg)
 
 **图 15.3 简单表单**
 
-**列表 15.5 ajax_response.html 创建表单的 HTML**
+### 列表 15.5 `ajax_response.html` 创建表单的 HTML
 
 点击此处查看代码图片
 
@@ -12208,7 +11793,7 @@ $.get("/getUser?first=Brad&last=Dayley", null, function (data, status, xObj){
 22 </html>
 ```
 
-**列表 15.6 ajax_response.js 通过 AJAX 请求向服务器发送表单并处理成功与失败情况的 JavaScript**
+### 列表 15.6 `ajax_response.js` 通过 AJAX 请求向服务器发送表单并处理成功与失败情况的 JavaScript
 
 点击此处查看代码图片
 
@@ -12226,7 +11811,7 @@ $.get("/getUser?first=Brad&last=Dayley", null, function (data, status, xObj){
 11 });
 ```
 
-**列表 15.7 ajax_response.css 样式化页的 CSS 代码**
+### 列表 15.7 `ajax_response.css` 样式化页的 CSS 代码
 
 点击此处查看代码图片
 
@@ -12248,11 +11833,7 @@ $.get("/getUser?first=Brad&last=Dayley", null, function (data, status, xObj){
 15   font:italic 18px arial black; }
 ```
 
-
-
-
-
-# 列表 15.8 server_lesson15_ajax_handling.js 用于处理本练习中 POST 和 GET 请求的 Node.js 服务器
+### 列表 15.8 `server_lesson15_ajax_handling.js` 用于处理本练习中 POST 和 GET 请求的 Node.js 服务器
 
 点击此处查看代码图像
 
@@ -12276,7 +11857,7 @@ $.get("/getUser?first=Brad&last=Dayley", null, function (data, status, xObj){
 
 ## 处理响应数据
 
-你已经学习了响应可以生成的不同数据类型。你将处理的四种主要类型是脚本（script）、文本（text）、JSON 和 XML/HTML。脚本和文本可以通过 `.load()` 和 `.getScript()` 方法简单处理。JSON 和 XML/HTML 可能会复杂一些。
+你已经学习了响应可以生成的不同数据类型。你将处理的四种主要类型是脚本（script）、文本（text）、JSON 和 XML/HTML。脚本和文本可以通过`.load()`和`.getScript()`方法简单处理。JSON 和 XML/HTML 可能会复杂一些。
 
 后续章节将引导你了解处理服务器响应中 JSON 和 XML 数据的过程。
 
@@ -12298,7 +11879,7 @@ $.get("/getUser?first=Brad&last=Dayley", null, function (data, status, xObj){
 var name  = data.first + " " + data.last;
 ```
 
-即使响应数据对象是以字符串形式提供的，你也可以使用 `.parseJSON()` 获取 JavaScript 对象。例如：
+即使响应数据对象是以字符串形式提供的，你也可以使用`.parseJSON()`获取 JavaScript 对象。例如：
 
 点击此处查看代码图像
 
@@ -12307,87 +11888,82 @@ var data = $.parseJSON('{"first":"Brad", "last":"Dayley"}');
 var name  = data.first + " " + data.last;
 ```
 
-在本练习中，你将处理来自 AJAX 请求返回的 JSON 数据。生成的网页包含几张带有说明的图像。图像说明和图像文件名来自位于服务器 `lesson15/data/images.json` 的 JSON 文件。本练习的目的是让你熟悉如何使用从 AJAX 请求返回的 JSON 数据来动态填充页面。
+在本练习中，你将处理来自 AJAX 请求返回的 JSON 数据。生成的网页包含几张带有说明的图像。图像说明和图像文件名来自位于服务器`lesson15/data/images.json`的 JSON 文件。本练习的目的是让你熟悉如何使用从 AJAX 请求返回的 JSON 数据来动态填充页面。
 
-示例代码位于 列表 15.9、15.10、15.11 和 15.12。使用以下步骤创建动态网页：
+示例代码位于列表 15.9、15.10、15.11 和 15.12。使用以下步骤创建动态网页：
 
-1. 在 Eclipse 中，创建 `lesson15/load_json.html`、`lesson15/js/load_json.js`、`lesson15/css/load_json.css` 和 `lesson15/data/images.json` 文件。
-2. 在 HTML 和 CSS 文件中添加列表 15.9 和 列表 15.12 所示的代码。这些是非常基础的文件，因为图像元素将是动态生成的。
-3. 将列表 15.11 的内容添加到 `images.json` 文件中。
-4. 打开 `load_json.js` 文件并添加以下 `.ready()` 函数，该函数向服务器发送 `.get()` 请求以获取 `lesson15/data/images.json` 文件，并调用 `updateImages()` AJAX 请求完成事件处理程序。JSON 文件的内容可以在列表 15.11 中：
+1. 在 Eclipse 中，创建`lesson15/load_json.html`、`lesson15/js/load_json.js`、`lesson15/css/load_json.css`和`lesson15/data/images.json`文件。
+2. 在 HTML 和 CSS 文件中添加列表 15.9 和列表 15.12 所示的代码。这些是非常基础的文件，因为图像元素将是动态生成的。
+3. 将列表 15.11 的内容添加到`images.json`文件中。
+4. 打开`load_json.js`文件并添加以下`.ready()`函数，该函数向服务器发送`.get()`请求以获取`lesson15/data/images.json`文件，并调用`updateImages()` AJAX 请求完成事件处理程序。JSON 文件的内容可以在列表 15.11 中：
 
-点击此处查看代码图像
+   点击此处查看代码图像
 
-```javascript
-10 $(document).ready(function(){
-11   $.get("data/images.json", updateImages);
-12 });
-```
-5. 添加以下 AJAX 请求完成事件处理程序 `updateImages()`。注意，JSON 响应 `data` 已转换为 JavaScript 对象数组，你可以遍历该数组并创建图像元素并添加到网页中：
+   ```javascript
+   10 $(document).ready(function(){
+   11   $.get("data/images.json", updateImages);
+   12 });
+   ```
 
-点击此处查看代码图像
+5. 添加以下 AJAX 请求完成事件处理程序`updateImages()`。注意，JSON 响应`data`已转换为 JavaScript 对象数组，你可以遍历该数组并创建图像元素并添加到网页中：
 
-```javascript
-01 function updateImages(data){
-02   for (i=0; i<data.length; i++){
-03     var imageInfo =data[i];
-04     var img = $('<img />').attr("src", "images/"+imageInfo.image);
-05     var title = $("<p></p>").html(imageInfo.title);
-06     var div = $('<div></div>").append(img, title);
-07     }}
-```
+   点击此处查看代码图像
+
+   ```javascript
+   01 function updateImages(data){
+   02   for (i=0; i<data.length; i++){
+   03     var imageInfo =data[i];
+   04     var img = $('<img />').attr("src", "images/"+imageInfo.image);
+   05     var title = $("<p></p>").html(imageInfo.title);
+   06     var div = $('<div></div>').append(img, title);
+   07     }}
+   ```
+
 6. 保存所有文件，然后在浏览器中打开 HTML 文档，如图 15.4 所示。你应该看到带有 JSON 文件填充的图像和说明。
 
+在这个练习中，你将有机会处理来自 AJAX 请求返回的 XML 数据。生成的网页包含一个基础表格，其单元格数据源于服务器上`lesson15/data/parkdata.xml`文件中的 XML 数据。该练习的目的是让你熟悉如何使用 AJAX 请求返回的 XML 数据来动态填充页面。
 
+示例代码位于列表 15.13、15.14、15.15 和 15.16。使用以下步骤创建动态网页：
 
+1. 在 Eclipse 中，创建`lesson15/load_xml.html`、`lesson15/js/load_xml.js`、`lesson15/css/load_xml.css`和`lesson15/data/parkdata.xml`文件。
+2. 将列表 15.13 和列表 15.16 所示的代码添加到 HTML 和 CSS 文件中。这些是非常基础的文件，因为表格主体将动态生成。
+3. 将列表 15.15 的内容添加到`parkdata.xml`文件并保存。
+4. 打开`load_xml.js`文件并添加以下`.ready()`函数，该函数将向服务器发送`.get()`请求以获取`lesson15/data/parkdata.xml`文件，并调用`updateTable()` AJAX 请求完成事件处理器。XML 文件的内容可以在列表 15.15 中看到：
 
+   点击此处查看代码图片
 
-在这个练习中，你将有机会处理来自 AJAX 请求返回的 XML 数据。生成的网页包含一个基础表格，其单元格数据源于服务器上 `lesson15/data/parkdata.xml` 文件中的 XML 数据。该练习的目的是让你熟悉如何使用 AJAX 请求返回的 XML 数据来动态填充页面。
+   ```
+   13 $(document).ready(function(){
+   14    $.get("data/parkdata.xml", updateTable);
+   15 });
+   ```
 
-示例代码位于 列表 15.13、15.14、15.15 和 15.16。使用以下步骤创建动态网页：
+5. 添加以下 AJAX 请求完成事件处理器`updateTable()`。注意，XML 响应`data`已转换为 DOM 元素，并通过`$(data)`转换为 jQuery 对象。然后可以使用`.each()`对 jQuery 对象进行迭代，并使用`.children()`方法搜索每个元素以获取 XML 数据中的不同的值：
 
-**1.** 在 Eclipse 中，创建 `lesson15/load_xml.html`、`lesson15/js/load_xml.js`、`lesson15/css/load_xml.css` 和 `lesson15/data/parkdata.xml` 文件。
+   点击此处查看代码图片
 
-**2.** 将 列表 15.13 和 列表 15.16 所示的代码添加到 HTML 和 CSS 文件中。这些是非常基础的文件，因为表格主体将动态生成。
+   ```
+   01 function updateTable(data){
+   02    var parks = $(data).find("park");
+   03    parks.each(function(){
+   04      var tr = $("<tr></tr>");
+   05      tr.append($("<td></td>").html($(this).children("name").text()));
+   06      tr.append($("<td></td>").html($(this).children("location").text()));
+   07      tr.append($("<td></td>").html($(this).children("established").text()));
+   08      var img = $('<img />').attr("src", "images/"+$(this).children("image").text());
+   09      tr.append($("<td></td>").append(img));
+   10      $("tbody").append(tr);
+   11    });
+   12 }
+   ```
 
-**3.** 将 列表 15.15 的内容添加到 `parkdata.xml` 文件并保存。
-
-**4.** 打开 `load_xml.js` 文件并添加以下 `.ready()` 函数，该函数将向服务器发送 `.get()` 请求以获取 `lesson15/data/parkdata.xml` 文件，并调用 `updateTable()` AJAX 请求完成事件处理器。XML 文件的内容可以在 列表 15.15 中看到：
-
-点击此处查看代码图片
-
-```
-13 $(document).ready(function(){
-14    $.get("data/parkdata.xml", updateTable);
-15 });
-```
-
-**5.** 添加以下 AJAX 请求完成事件处理器 `updateTable()`。注意，XML 响应 `data` 已转换为 DOM 元素，并通过 `$(data)` 转换为 jQuery 对象。然后可以使用 `.each()` 对 jQuery 对象进行迭代，并使用 `.children()` 方法搜索每个元素以获取 XML 数据中的不同的值：
-
-点击此处查看代码图片
-
-```
-01 function updateTable(data){
-02    var parks = $(data).find("park");
-03    parks.each(function(){
-04      var tr = $("<tr></tr>");
-05      tr.append($("<td></td>").html($(this).children("name").text()));
-06      tr.append($("<td></td>").html($(this).children("location").text()));
-07      tr.append($("<td></td>").html($(this).children("established").text()));
-08      var img = $('<img />').attr("src", "images/"+$(this).children("image").text());
-09      tr.append($("<td></td>").append(img));
-10      $("tbody").append(tr);
-11    });
-12 }
-```
-
-**6.** 保存所有三个文件，然后在网页浏览器中打开 HTML 文档，如 图 15.5 所示。你应该看到从 XML 文件填充的表格。
+6. 保存所有三个文件，然后在网页浏览器中打开 HTML 文档，如图 15.5 所示。你应该看到从 XML 文件填充的表格。
 
 ![Image](img/image00941.jpeg)
 
 **图 15.5** 用 XML 数据填充的表格。
 
-**列表 15.13 加载 jQuery 和 JavaScript 的 HTML 文档**
+### 列表 15.13 加载 jQuery 和 JavaScript 的 HTML 文档
 
 点击此处查看代码图片
 
@@ -12412,81 +11988,23 @@ var name  = data.first + " " + data.last;
 18 </html>
 ```
 
-**列表 15.14 实现 AJAX 请求并处理 XML 响应的 jQuery 和 JavaScript 代码**
+### 列表 15.14 实现 AJAX 请求并处理 XML 响应的 jQuery 和 JavaScript 代码
 
 点击此处查看代码图片
 
-```javascript
-01 function updateTable(data){
-02    var parks = $(data).find("park");
-03    parks.each(function(){
-04      var tr = $("<tr></tr>");
-05      tr.append($("<td></td>").html($(this).children("name").text()));
-06      tr.append($("<td></td>").html($(this).children("location").text()));
-07      tr.append($("<td></td>").html($(this).children("established").text()));
-08      var img = $('<img />').attr("src", "images/"+$(this).children("image").text());
-09      tr.append($("<td></td>").append(img));
-10      $("tbody").append(tr);
-11    });
-12 }
-13 $(document).ready(function(){
-14    $.get("data/parkdata.xml", updateTable);
-15 });
-```
 
-**列表 15.15 带有原始数据的 XML 文件**
 
-点击此处查看代码图片
+### 使用 jQuery 更新服务器数据
 
-```xml
-01 <parkinfo>
-02  <park>
-03    <name>Yellowstone</name>
-04    <location>Montana, Wyoming, Idaho</location>
-05    <established>March 1, 1872</established>
-06    <image>bison.jpg</image>
-07  </park>
-08  <park>
-09    <name>Yosemite</name>
-10    <location>California</location>
-11    <established>March 1, 1872</established>
-12    <image>falls.jpg</image>
-13  </park>
-14  <park>
-15    <name>Zion</name>
-16    <location>Utah</location>
-17    <established>November 19, 1919</established>
-18    <image>peak.jpg</image>
-19  </park>
-20 </parkinfo>
-```
+在这个练习中，你有机会实现一个带有 `.get()` 和 `.post()` 请求以及若干不同 `AJAX` 处理器的复杂 `AJAX` 网页。生成的网页提供了你可以评分的不同度假地。度假数据位于 `Node.js` 服务器上的数据结构中。当你更改评分时，将发送 `POST` 请求到 `Node.js` 服务器并更改服务器数据，只要服务器运行，这种更改就是永久的。该练习的目的是巩固 `jQuery AJAX`。
 
-**列表 15.16 样式表格的 CSS 代码**
+示例代码位于列表 15.17、15.18、15.19 和 15.20。使用以下步骤创建动态网页：
 
-点击此处查看代码图片
+**1.** 在 `Eclipse` 中，创建 `lesson15/ajax_post.html`、`lesson15/js/ajax_post.js` 和 `lesson15/css/ajax_post.css` 文件。
 
-```css
-01 img {width:80px;}
-02 th {
-03    background-image: -moz-linear-gradient(top , #0000FF, #88BBFF);
-04    background-image: -webkit-linear-gradient(top , #0000FF, #88BBFF);
-05    background-image: -ms-linear-gradient(top , #0000FF, #88BBFF);
-06    color:white;  font:bold 18px arial black; }
-07 caption { border-radius: 10px 10px 0px 0px; font-size:22px; height:30px; }
-08 td { border:1px dotted; padding:2px; }
-```
+**2.** 在项目根目录下创建一个名为 `server_lesson15_ajax_post.js` 的文件，并将列表 15.5、15.6、15.7 和 15.8 的内容放入其中。该文件将仅作为此的 `Node.js` Web 服务器。
 
-## 自己尝试：使用 jQuery 更新服务器数据
-
-在这个练习中，你有机会实现一个带有 `.get()` 和 `.post()` 请求以及若干不同 AJAX 处理器的复杂 AJAX 网页。生成的网页提供了你可以评分的不同度假地。度假数据位于 Node.js 服务器上的数据结构中。当你更改评分时，将发送 POST 请求到 Node.js 服务器并更改服务器数据，只要服务器运行，这种更改就是永久的。该练习的目的是巩固 jQuery AJAX。
-
-示例代码位于 列表 15.17、15.18、15.19 和 15.20。使用以下步骤创建动态网页：
-
-**1.** 在 Eclipse 中，创建 `lesson15/ajax_post.html`、`lesson15/js/ajax_post.js` 和 `lesson15/css/ajax_post.css` 文件。
-
-**2.** 在项目根目录下创建一个名为 `server_lesson15_ajax_post.js` 的文件，并将 列表 15.5、15.6、15.7 和 15.8 的内容放入其中。该文件将仅作为此的 Node.js Web 服务器。
-
-**3.** 如果 `server.js` Web 服务器已在运行，请停止它。然后使用 `node` 命令或如果使用 Eclipse 则使用“Run As, Node Application”来启动 `server_lesson15_ajax_post.js` 服务器。
+**3.** 如果 `server.js` Web 服务器已在运行，请停止它。然后使用 `node` 命令或如果使用 `Eclipse` 则使用“Run As, Node Application”来启动 `server_lesson15_ajax_post.js` 服务器。
 
 * * *
 
@@ -12496,13 +12014,10 @@ var name  = data.first + " " + data.last;
 
 * * *
 
-**4.** 将 列表 15.17 和 列表 15.19 所示的代码添加到 HTML 和 CSS 文件中。这些文件定义了度假页的样式和框架。这些文件中不应该有任何以前没见过的新内容。
-
-
-
-
+**4.** 将列表 15.17 和列表 15.19 所示的代码添加到 HTML 和 CSS 文件中。这些文件定义了度假页的样式和框架。这些文件中不应该有任何以前没见过的新内容。
 
 ### 5. 打开 `ajax_post.js` 文件
+
 添加以下 `.ready()` 函数，该函数将向服务器发送 `.get()` 请求以从服务器获取假期列表。注意，添加了一个 `.done()` 函数，以便在数据返回并填充链接后，自动点击第一个链接以设置假期内容。注意，为元素添加了 `sendRating()` 事件处理器，以开始元素能够通过鼠标处理评分：
 
 ```javascript
@@ -12515,6 +12030,7 @@ $(document).ready(function(){
 ```
 
 ### 6. 为左侧导航栏添加以下点击处理器 `setList()`
+
 对于每个按钮，都添加了 `getTrip()` 事件处理器：
 
 ```javascript
@@ -12529,7 +12045,8 @@ function setList(data){
 ```
 
 ### 7. 添加以下 `getTrip()` 事件处理器
-这将发送一个 `.get()` 请求，通过指定 `/getTrip` 为路径以及 `idx`（Web 服务器上行程的索引）来获取特定行程的信息。当 AJAX 请求完成后，将调用 `setTrip()` 处理器，因此你需要添加如列表 15.18 第 1–10 行所示的代码。此函数获取 JSON 数据并填充元素：
+
+这将发送一个 `.get()` 请求，通过指定 `/getTrip` 为路径以及 `idx`（Web 服务器上行程的索引）来获取特定行程的信息。当 `AJAX` 请求完成后，将调用 `setTrip()` 处理器，因此你需要添加如列表 15.18 第 1–10 行所示的代码。此函数获取 `JSON` 数据并填充元素：
 
 ```javascript
 function getTrip(idx){
@@ -12538,7 +12055,8 @@ function getTrip(idx){
 ```
 
 ### 8. 添加以下 `sendRating()` 函数
-当用户点击星号时调用。`.star` 元素的索引将通过 `.post()` 方法发送到服务器，带有参数 `idx:idx` 和 `rating:rating`。生成的 POST 请求将更新服务器上的 JSON 文件，永久地存储新的评分值：
+
+当用户点击星号时调用。`.star` 元素的索引将通过 `.post()` 方法发送到服务器，带有参数 `idx:idx` 和 `rating:rating`。生成的 `POST` 请求将更新服务器上的 `JSON` 文件，永久地存储新的评分值：
 
 ```javascript
 function sendRating(){
@@ -12549,11 +12067,13 @@ function sendRating(){
 ```
 
 ### 9. 保存所有三个文件并打开 HTML 文档
+
 如图 15.6 所示，在网络浏览器中打开文档。你应该能够链接到不同的假期，查看图片并设置评分。
 
 #### 图 15.6 能够通过 AJAX 加载数据和更新评分的简单假期页面
 
-#### 列表 15.17 加载 jQuery 和 JavaScript 的 ajax_post.html 文档
+#### 列表 15.17 加载 jQuery 和 JavaScript 的 `ajax_post.html` 文档
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -12587,7 +12107,8 @@ function sendRating(){
 </html>
 ```
 
-#### 列表 15.18 实现填充页面和更新数据的 AJAX 请求的 ajax_post.js jQuery 和 JavaScript 代码
+#### 列表 15.18 实现填充页面和更新数据的 AJAX 请求的 `ajax_post.js` jQuery 和 JavaScript 代码
+
 ```javascript
 function setTrip(data){
   $("#idx").html(data.idx);
@@ -12627,7 +12148,8 @@ $(document).ready(function(){
 });
 ```
 
-#### 列表 15.19 ajax_post.css 用于设置页面的 CSS
+#### 列表 15.19 `ajax_post.css` 用于设置页面的 CSS
+
 ```css
 * { font-family:Georgia; }
 div { margin:0px; }
@@ -12643,6 +12165,7 @@ span { display:inline-block; float:left; text-align:center; }
 ```
 
 #### 列表 15.20 处理练习中 POST 和 GET 请求的 Node.js 服务器
+
 ```javascript
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -12694,8 +12217,6 @@ app.get('/getList', function(req, res){
 
 
 
-
-
 ```javascript
 46  res.setHeader('Content-Type', 'application/json');
 47  res.end(JSON.stringify(trips));
@@ -12713,11 +12234,11 @@ app.get('/getList', function(req, res){
 59 app.listen(80);
 ```
 
-### 使用高级 jQuery AJAX
+## 使用高级 jQuery AJAX
 
 本节中已经涵盖的概念应该能够满足你大部分 AJAX 需求。然而，它们并没有涵盖 jQuery AJAX 接口的所有功能。以下章节将讨论直接内置在 jQuery 中的一些额外 AJAX 功能。
 
-#### 复习全局设置
+### 复习全局设置
 
 jQuery 提供了 `.ajaxSetup()` 方法，允许你指定选项以便在整个脚本中全局配置 AJAX 请求。表 15.3 列出了调用 `.ajaxSetup()` 时可以指定的某些选项。例如，以下代码设置了请求的默认全局 URL：
 
@@ -12727,7 +12248,7 @@ jQuery 提供了 `.ajaxSetup()` 方法，允许你指定选项以便在整个脚
 $.ajaxSetup({url:"service.php", accepts:"json"})
 ```
 
-#### 使用全局事件处理器
+### 使用全局事件处理器
 
 jQuery 提供了了一些方法，用于创建全局事件处理器，这些处理器会在特定事件发生时被调用，例如所有 AJAX 请求的初始化或完成。全局事件会在每次 AJAX 请求时触发。表 15.2 列出了你可以使用的用于注册全局事件处理器的方法。
 
@@ -12751,7 +12272,7 @@ $(document).ajaxComplete(function(){
 
 > 注意：无论全局设置的值为何，跨域脚本或 JSONP 请求都永远不会触发全局事件。
 
-#### 实现低级 Ajax 请求
+### 实现低级 Ajax 请求
 
 你在本节中一直使用的所有 AJAX 请求封装方法在底层都是通过 `.ajax(url [, settings])` 接口处理的。该接口使用起来稍微困难，但它赋予了你对 AJAX 请求更大的灵活性和控制力。
 
@@ -12759,7 +12280,7 @@ $(document).ajaxComplete(function(){
 
 ![Image](img/image00944.jpeg)
 
-**表 15.3 .ajax() 请求中提供的常用设置**
+**表 15.3 `.ajax()` 请求中提供的常用设置**
 
 以下代码展示了一个使用 `.ajax()` 接口的简单示例：
 
@@ -12779,25 +12300,25 @@ $.ajax({
 
 ![Image](img/image00945.jpeg)
 
-**表 15.4 .ajax() 返回的 jqXHR 对象常用方法和属性**
+**表 15.4 `.ajax()` 返回的 `jqXHR` 对象常用方法和属性**
 
-### 总结
+## 总结
 
 AJAX 是 jQuery/JavaScript 与 Web 服务器之间基本的通信框架。使用 AJAX 允许你从 Web 服务器获取额外数据并用它动态更新页面，而不是完全重新加载。这让你能够为用户提供更好的体验。
 
 在本节中，你学习了 AJAX 的来龙去脉。你实现了几个示例，让你获得了处理 GET 和 POST 请求的经验，以及如何处理不同类型的数据（如 HTML、JSON 和 XML）。
 
-### 问答
+## 问答
 
-Q 为什么既有 GET 请求又有 POST 请求，而不是只有一个请求？
+**Q** 为什么既有 GET 请求又有 POST 请求，而不是只有一个请求？
 
-A 答案是优化。虽然你可以只用 POST 请求完成所有工作，但通过使用参数直接放在 URL 中的 GET 请求，可以在 Web 服务器和浏览器端进行优化。这在缓存处理方面尤为如此。
+**A** 答案是优化。虽然你可以只用 POST 请求完成所有工作，但通过使用参数直接放在 URL 中的 GET 请求，可以在 Web 服务器和浏览器端进行优化。这在缓存处理方面尤为如此。
 
-Q 除了 JSONP 之外，还有其他方法可以发送跨域请求吗？
+**Q** 除了 JSONP 之外，还有其他方法可以发送跨域请求吗？
 
-A 有。Flash 和 Silverlight 都有允许你发送跨域请求的机制。HTML5 引入了旨在允许跨域请求的 `postMessage` 接口。
+**A** 有。Flash 和 Silverlight 都有允许你发送跨域请求的机制。HTML5 引入了旨在允许跨域请求的 `postMessage` 接口。
 
-### 工作坊
+## 工作坊
 
 工作由一组问题和答案组成，旨在巩固你对本节涵盖内容的理解。尝试在查看答案之前先回答问题。
 
@@ -12821,18 +12342,19 @@ A 有。Flash 和 Silverlight 都有允许你发送跨域请求的机制。HTML5
 
 3 DOM 对象。
 
-4  JavaScript 对象。
+4 JavaScript 对象。
 
 5 是。你可以使用 `.ajax()` 配合参数，也可以使用 `.ajaxSetup()` 全局设置参数。
 
 ### 练习题
 
-1. 修改示例 15.9](#part0028.xhtml_ch15lis09)、15.10](#part0028.xhtml_ch15lis10)、15.11](#part0028.xhtml_ch15lis11) 和 15.12](#part0028.xhtml_ch15lis12)。为 JSON 文件中的每个图片添加一个额外的日期值。然后通过将其包含在图片说明中，在网页上显示该值。
-2. 修改示例 15.13](#part0028.xhtml_ch15lis13)、15.14](#part0028.xhtml_ch15lis14)、15.15](#part0028.xhtml_ch15lis15) 和 15.16](#part0028.xhtml_ch15lis16)。添加一个额外的评分列。你需要更新 XML 文件以及 AJAX 响应处理器，以便为行添加该列。
+1. 修改示例 15.9](`#part0028.xhtml_ch15lis09`)、15.10](`#part0028.xhtml_ch15lis10`)、15.11](`#part0028.xhtml_ch15lis11`) 和 15.12](`#part0028.xhtml_ch15lis12`)。为 JSON 文件中的每个图片添加一个额外的日期值。然后通过将其包含在图片说明中，在网页上显示该值。
+
+2. 修改示例 15.13](`#part0028.xhtml_ch15lis13`)、15.14](`#part0028.xhtml_ch15lis14`)、15.15](`#part0028.xhtml_ch15lis15`) 和 15.16](`#part0028.xhtml_ch15lis16`)。添加一个额外的评分列。你需要更新 XML 文件以及 AJAX 响应处理器，以便为行添加该列。
 
 # 第四部分：利用 jQuery UI
 
-## 第 16 ：介绍 jQuery UI
+## 第 16 章：介绍 jQuery UI
 
 在本节中将学习：
 
@@ -12848,10 +12370,6 @@ A 有。Flash 和 Silverlight 都有允许你发送跨域请求的机制。HTML5
 
 jQuery UI 是基于 jQuery 之上的额外库。jQuery UI 的目的是提供一组可扩展的交互、效果、组件和主题，使得在网页中引入专业的 UI 元素变得更容易。在本节中，你将有机会在一些网页中下载并实现 jQuery UI。
 
-
-
-
-
 jQuery UI 由 JavaScript 和 CSS 两部分组成。jQuery UI 的 JavaScript 部分扩展了 jQuery，添加了用于添加 UI 元素或对这些元素应用效果的特定功能。jQuery UI 的 CSS 部分对页面元素进行样式处理，使得开发者不需要都为元素设置样式。
 
 jQuery UI 通过提供预构建的 UI 元素（如日历和菜单）以及拖放、调整大小等交互功能，为开发者节省了时间。接下来的章节将向你介绍该库；你将学习如何下载它并将其应用于你的项目中。
@@ -12860,13 +12378,13 @@ jQuery UI 库由几个组件组成，用于构建、管理和与网页上的 UI 
 
 ![Image](img/image00767.jpeg) **JavaScript**——jQuery UI 自带一个 `.js` 文件，它挂接到主 jQuery 库。该文件必须与 jQuery 一起加载到网页中，以实现 jQuery UI 组件。
 
-![Image](img/image00767.jpeg) **CSS**——jQueryUI 包含了几个 css 文件。主文件是 `jquery-ui.css`。这些文件包含了与 jQuery UI 相关的所有 CSS 设置，特别是针对代表的主题。
+![Image](img/image00767.jpeg) **CSS**——jQuery UI 包含了几个 css 文件。主文件是 `jquery-ui.css`。这些文件包含了与 jQuery UI 相关的所有 CSS 设置，特别是针对代表的主题。
 
 ![Image](img/image00767.jpeg) **Images**——jQuery 还提供了几张用于构建某些 UI 组件的。
 
 ## 获取 jQuery UI 库
 
-你可以通过两种方式之一在项目中实现 jQuery UI。如果你想使用已经提供的特定主题，可以在 [`code.jquery.com`](https://code.jquery.com) 上的 jQuery CDN 位置的 jQuery UI 部分选择其中一个主题。
+你可以通过两种方式之一在项目中实现 jQuery UI。如果你想使用已经提供的特定主题，可以在 [code.jquery.com](https://code.jquery.com) 上的 jQuery CDN 位置的 jQuery UI 部分选择其中一个主题。
 
 例如，以下代码从 jQuery CDN 位置加载了 jQuery UI 库和 Smoothness 主题：
 
@@ -12884,7 +12402,7 @@ jQuery UI 库由几个组件组成，用于构建、管理和与网页上的 UI 
 
 你可以从以下位置下载 jQuery，通过选择图 16.1 所示的想要包含的选项，并点击底部的下载按钮。这将下载 jQuery UI 文件：
 
-[`http://jqueryui.com/download`](http://jqueryui.com/download)
+[http://jqueryui.com/download](http://jqueryui.com/download)
 
 ![Image](img/image00946.jpeg)
 
@@ -12892,7 +12410,7 @@ jQuery UI 库由几个组件组成，用于构建、管理和与网页上的 UI 
 
 ## 使用 ThemeRoller 创建自定义主题
 
-除了基础 jQuery UI 主题外，你还可以使用 jQuery UI ThemeRoller（如图 16.2](#part0030.xhtml_ch16fig02)所示）选择某些不同的自定义主题或自定义你自己的主题。主题定义了应用于 jQuery UI 组件和元素的颜色、圆角以及其他多种样式。
+除了基础 jQuery UI 主题外，你还可以使用 jQuery UI ThemeRoller（如图 16.2 所示）选择某些不同的自定义主题或自定义你自己的主题。主题定义了应用于 jQuery UI 组件和元素的颜色、圆角以及其他多种样式。
 
 ![Image](img/image00947.jpeg)
 
@@ -12902,7 +12420,7 @@ jQuery UI 库由几个组件组成，用于构建、管理和与网页上的 UI 
 
 **1.** 在你的浏览器中打开以下 URL：
 
-[`jqueryui.com/download/`](http://jqueryui.com/download/)
+[http://jqueryui.com/download/](http://jqueryui.com/download/)
 
 **2.** 滚动到图 16.1 所示下载页的底部，点击“Design a Custom Theme”（设计自定义主题）链接。这将弹出图 16.2 所示的 ThemeRoller。
 
@@ -12910,21 +12428,24 @@ jQuery UI 库由几个组件组成，用于构建、管理和与网页上的 UI 
 
 **4.** 选择最符合你需求的画库。
 
-**5.** 选择 Roll Your Own（自己制作）标签页（同样如图 16.2](#part0030.xhtml_ch16fig02)所示），并指定你想要定义的尽可能多的特定设置。
+**5.** 选择 Roll Your Own（自己制作）标签页（同样如图 16.2 所示），并指定你想要定义的尽可能多的特定设置。
 
 **6.** 点击 Download Theme（下载主题）按钮。这将带你回到主下载页面。
 
 **7.** 点击下载按钮下载 jQuery UI 文件。
 
-***
+---
 
 ### 动手尝试：添加 jQuery UI
 
 使用以下步骤下载 jQuery UI 并将其添加到你的：
 
 **1.** 在 Eclipse 中，创建 `lesson16`、`lesson16/js` 和 `lesson16/css` 文件夹。
+
 **2.** 创建 `lesson16/datepicker.html`。
+
 **3.** 创建 `lesson16/js` 和 `lesson16/css` 文件夹。
+
 **4.** 以下行加载了 jQuery、jQuery UI 库以及 jQuery 的 smoothness 主题：
 
 点击此处查看图片
@@ -12955,13 +12476,13 @@ $(document).ready(function(){
 });
 ```
 
-**7.** 保存文件，然后在 浏览器中打开 HTML 文档，如图图 16.3 所示。如果库安装正确，你应该看到日期选择器。
+**7.** 保存文件，然后在浏览器中打开 HTML 文档，如图 16.3 所示。如果库安装正确，你应该看到日期选择器。
 
 ![Image](img/00948.jpeg)
 
 **图 16.3** 简单的 jQuery UI 日期。
 
-**列表 16.1** datepicker.html 添加 jQuery 库并渲染日期的 HTML
+**列表 16.1** `datepicker.html` 添加 jQuery 库并渲染日期的 HTML
 
 ```html
 <!DOCTYPE html>
@@ -12984,10 +12505,6 @@ $(document).ready(function(){
 </html>
 ```
 
-
-
-
-
 要添加唯一 ID，可以使用 `.uniqueId()` 方法。该方法会检查集合中的每个元素，如果不存在 `id` 属性，则会添加一个。新 ID 将具有前缀 `"ui-id-"`。如果元素已经有了 `id` 属性，则不会对其进行修改。
 
 你稍后可以使用集合上的 `.removeUniqueId()` 方法来删除这些唯一 ID。只有通过 `.uniqueId()` 创建了 ID 的元素会受影响。
@@ -13009,117 +12526,129 @@ $("div"). removeUniqueId ();
 ```
 
 ### 获取 ScrollParent
+
 jQuery UI 的另一个有用扩展是 `.scrollParent()` 方法。该方法会搜索元素的祖先，并返回第一个可滚的父元素。此方法仅适用于集合中包含单个元素的 jQuery 对象。
 
 ### 获取 zIndex
-jQuery UI 的另一个有用扩展是 `.zIndex()` 方法。该方法返回元素的数值型 `z-index` 值（如果存在），或者返回具有该值的祖先。这让你能够快速确定页面上任何项目的堆叠位置。
 
-### 异步聚焦
-jQuery UI 扩展了 jQuery 对象的 `.focus(delay [. callback])` 方法，允许在设置焦点之前设置一个 `delay`，并包含一个在元素获得焦点时执行的 `callback` 函数。`delay` 以毫秒为单位。
 
-此功能具有广泛的用途，从使用计时器、自动选择表单元素，到强制元素重新聚焦。例如，以下代码在为元素 `#timedInput` 设置焦点之前添加了半秒的延迟：
+
+jQuery UI 的另一个有用扩展是`.zIndex()`方法。该方法返回元素的数值型`z-index`值（如果存在），或者返回具有该值的祖先。这让你能够快速确定页面上任何项目的堆叠位置。
+
+## 异步聚焦
+
+jQuery UI 扩展了jQuery对象的`.focus(delay [, callback])`方法，允许在设置焦点之前设置一个`delay`，并包含一个在元素获得焦点时执行的`callback`函数。`delay`以毫秒为单位。
+
+此功能具有广泛的用途，从使用计时器、自动选择表单元素，到强制元素重新聚焦。例如，以下代码在为元素`#timedInput`设置焦点之前添加了半秒的延迟：
 
 点击此处查看代码图像
 
-```
+```javascript
 $("#timedInput").focus(500, function(){
   $(this).val("Enter Text Now");
 });
 ```
 
-### 在 jQuery UI 中使用新选择器
-jQuery UI 的一个非常强大的特性是它能够扩展已经非常详尽的 jQuery 选择器。这些新选择器可以更方便地针对 UI 元素的需求来缩小选择范围。接下来的章节将讨论每一个种新选择器。
+## 在 jQuery UI 中使用新选择器
 
-#### 使用 :data() 选择器
-我最喜欢的 jQuery UI 选择器之一是 `:data()` 选择器。该选择器允许你根据使用 `.data()` jQuery 方法添加到元素上的特定键（key）来过滤元素。例如，以下代码为所有 `<span>`, `<div>` 和 `<p>` 元素添加了 `color` 值，然后使用 `:data()` 选择器在这些元素上设置相应的颜色：
+jQuery UI 的一个非常强大的特性是它能够扩展已经非常详尽的jQuery选择器。这些新选择器可以更方便地针对 UI 元素的需求来缩小选择范围。接下来的章节将讨论每一种新选择器。
+
+### 使用 `:data()` 选择器
+
+我最喜欢的 jQuery UI 选择器之一是`:data()`选择器。该选择器允许你根据使用`.data()`jQuery方法添加到元素上的特定键（key）来过滤元素。例如，以下代码为所有`<span>`、`<div>`和`<p>`元素添加了`color`值，然后使用`:data()`选择器在这些元素上设置相应的颜色：
 
 点击此处查看代码图像
 
-```
-$(p).data("color", "red");
-$(span).data("color", "blue");
-$(div).data("color", "green");
+```javascript
+$("p").data("color", "red");
+$("span").data("color", "blue");
+$("div").data("color", "green");
 
 $(":data(color)").each(function(){
   $(this).css({color:$(this).data("color")});
 });
 ```
 
-#### :focusable
-`:focusable` 选择器允许将元素限制为仅可以接收焦点的元素。例如，以下语句将更改限制为仅可以接收焦点的表单元素：
+### `:focusable`
+
+`:focusable`选择器允许将元素限制为仅可以接收焦点的元素。例如，以下语句将更改限制为仅可以接收焦点的表单元素：
 
 点击此处查看代码图像
 
-```
+```javascript
 $("form:focusable").each(function(){
-  $(this).css({color:red});
+  $(this).css({color:"red"});
 });
 ```
 
-#### :tabbable
-`:tabbable` 选择器类似于 `:focusable` 选择器。它允许将元素限制为仅可以通过 Tab 键切换选择的元素。例如，以下语句将更改限制为仅可以通过 Tab 键切换选择的表单元素：
+### `:tabbable`
+
+`:tabbable`选择器类似于`:focusable`选择器。它允许将元素限制为仅可以通过 Tab 键切换选择的元素。例如，以下语句将更改限制为仅可以通过 Tab 键切换选择的表单元素：
 
 点击此处查看代码图像
 
-```
+```javascript
 $("form:tabbable").each(function(){
-  $(this).css({color:red});
+  $(this).css({color:"red"});
 });
 ```
+
 这种过滤器非常有用，尤其是当你尝试排除禁用的元素时。
 
-> 提示：具有负 tab index 的元素是 `:focusable` 但不是 `:tabbable`。
+> **提示：** 具有负 tab index 的元素是`:focusable`但不是`:tabbable`。
 
-### 尝试一下：基于数据值应用 jQuery UI 选择器
-在这个示例中，你向网页添加了几个 `<div>` 元素。然后使用 jQuery，你为其中一些元素添加了图像数据值。使用 `:data()` 选择器，你对带有图像数据的元素和没有图像数据的元素应用不同的更改。
+## 尝试一下：基于数据值应用 jQuery UI 选择器
+
+在这个示例中，你向网页添加了几个`<div>`元素。然后使用jQuery，你为其中一些元素添加了图像数据值。使用`:data()`选择器，你对带有图像数据的元素和没有图像数据的元素应用不同的更改。
 
 该示例的代码位于 Listing 16.2、16.3 和 16.4 中。使用以下步骤创建动态网页：
 
-**1.** 在 Eclipse 中，创建 `lesson16/jquery_image_adder.html`、`lesson16/js/jquery_image_adder.js` 和 `lesson16/css/jquery_image_adder.css` 文件。
+**1.** 在 Eclipse 中，创建`lesson16/jquery_image_adder.html`、`lesson16/js/jquery_image_adder.js`和`lesson16/css/jquery_image_adder.css`文件。
 
-**2.** 添加 Listing 16.2 所示的代码。以下行用于加载 jQuery 库、jQuery UI 库和 CSS 文件：
+**2.** 添加 Listing 16.2 所示的代码。以下行用于加载jQuery库、jQuery UI 库和 CSS 文件：
 
 点击此处查看代码图像
 
-```
+```html
 06  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 07  <script type="text/javascript" src="http://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
 08  <script type="text/javascript" src="js/jquery_image_adder.js"></script>
 09  <link rel="stylesheet" type="text/css" href="css/jquery_image_adder.css">
 ```
 
-**3.** 打开 `jquery_image_adder.js` 文件并添加基础的 `.ready()` 函数。
+**3.** 打开`jquery_image_adder.js`文件并添加基础的`.ready()`函数。
 
-**4.** 添加以下内容。这些行为具有 `image` 值的 `<div>` 元素设置 `src` 值，并为没有 `image` 值的元素附加 `insert.png` 图像：
+**4.** 添加以下内容。这些行为具有`image`值的`<div>`元素设置`src`值，并为没有`image`值的元素附加`insert.png`图像：
 
 点击此处查看代码图像
 
-```
+```javascript
 02  $("#arch").data("image", "images/arch.jpg");
 03  $("#volcano").data("image", "images/volcano.jpg");
 04  $("#pyramid").data("image", "images/pyramid.jpg");
 05  $("#add").click(function(){
 06    $("div:data(image)").each(function(){
 07      $(this).prepend(
-08        $('<img>>').attr("src", $(this).data("image")));
+08        $('<img>').attr("src", $(this).data("image")));
 09    });
 10    $("div:not(:data(image))").each(function(){
 11      $(this).prepend(
-12        $('<img>>').attr("src", "/images/insert.png"));
+12        $('<img>').attr("src", "/images/insert.png"));
 13    });
 14  });
 ```
 
-**5.** 保存所有三个文件，然后在浏览器中打开 HTML 文档，如 Figure 16.4 所示。点击 Add Images 按钮，你会看到具有 `image` 值的 `<div>` 元素弹出图像，而没有值的元素显示通用图像。
+**5.** 保存所有三个文件，然后在浏览器中打开 HTML 文档，如 Figure 16.4 所示。点击 Add Images 按钮，你会看到具有`image`值的`<div>`元素弹出图像，而没有值的元素显示通用图像。
 
 ![Image](img/image0949.jpeg)
-**FIGURE 16.4** 使用 jQuery 选择器更新具有图像数据的元素。
+
+**FIGURE 16.4** 使用jQuery选择器更新具有图像数据的元素。
 
 **LISTINGS 16.2 jquery_image_adder.html 添加网页的 HTML 文档**
 
 点击此处查看代码图像
 
-```
+```html
 01 <!DOCTYPE html>
 02 <html>
 03   <head>
@@ -13140,17 +12669,12 @@ $("form:tabbable").each(function(){
 18   </body>
 19 </html>
 ```
-* * *
 
-**LISTING 16.3 jquery_image_adder.js jQuery 和 jQuery UI 代码使用 :data() 选择器选择元素**
+---
 
-
-
-
+**LISTING 16.3 jquery_image_adder.js jQuery 和 jQuery UI 代码使用`:data()`选择器选择元素**
 
 点击此处查看代码
-
-* * *
 
 ```javascript
 01 $(document).ready(function(){
@@ -13170,13 +12694,11 @@ $("form:tabbable").each(function(){
 15 });
 ```
 
-* * *
+---
 
 ### 列表 16.4 jquery_image_adder.css 用于设置页面元素的 CSS 代码
 
 点击此处查看代码
-
-* * *
 
 ```css
 01 img {
@@ -13192,43 +12714,41 @@ $("form:tabbable").each(function(){
 11     padding:3px; cursor:pointer; }
 ```
 
-* * *
+---
 
-* * *
+## 使用 jQuery UI 为 UI 元素定位
 
-### 使用 jQuery UI 为 UI 元素
+jQuery UI 提供的一个巨大优势是能够相对于其他元素对元素定位并处理冲突。这是通过扩展`.position()`方法实现的，允许通过一个选项对象来定义jQuery元素与其他元素或事件位置之间的相对位置。
 
-jQuery UI 提供的一个巨大优势是能够相对于其他元素对元素定位并处理冲突。这是通过扩展 `.position()` 方法实现的，允许通过一个选项对象来定义 jQuery 元素与其他元素或事件位置之间的相对位置。
-
-例如，要将元素 `#div1` 放置在 `#div2` 的右侧，可以使用以下代码：
+例如，要将元素`#div1`放置在`#div2`的右侧，可以使用以下代码：
 
 点击此处查看代码
 
 ```javascript
-$("#div1").position("my:"left", at:"right", of:"#div2");
+$("#div1").position({my:"left", at:"right", of:"#div2"});
 ```
 
-非常简单。表格 16.1 描述了 jQuery UI 为 `.position()` 方法提供的选项。
+非常简单。表格 16.1 描述了 jQuery UI 为`.position()`方法提供的选项。
 
 ![Image](img/image00950.jpeg)![Image](img/image00951.jpeg)
 
-**表格 16.1 使用 jQuery UI .position() 定位元素时的选项设置**
+**表格 16.1 使用 jQuery UI `.position()` 定位元素时的选项设置**
 
-* * *
+---
 
-### 动手试试：使用 jQuery UI 在网页上定位图像
+## 动手试试：使用 jQuery UI 在网页上定位图像
 
-帮助你理解 jQuery UI 定位的最佳方法是给你一些实操经验。在这个示例中，你使用 jQuery UI position 对静态图像元素以及一个随鼠标移动的动态元素进行定位。你添加了一些冲突保护，以防止图像离开 `<div>` 元素。
+帮助你理解 jQuery UI 定位的最佳方法是给你一些实操经验。在这个示例中，你使用 jQuery UI position 对静态图像元素以及一个随鼠标移动的动态元素进行定位。你添加了一些冲突保护，以防止图像离开`<div>`元素。
 
-示例代码位于 列表 16.5、16.6 和 16.7。使用以下步骤创建动态网页：
+示例代码位于列表 16.5、16.6 和 16.7。使用以下步骤创建动态网页：
 
-**1.** 在 Eclipse 中，创建 `lesson16/dynamic_positioning.html`、`lesson16/js/dynamic_positioning.js` 和 `lesson16/css/dynamic_positioning.css` 文件。
+**1.** 在 Eclipse 中，创建`lesson16/dynamic_positioning.html`、`lesson16/js/dynamic_positioning.js`和`lesson16/css/dynamic_positioning.css`文件。
 
-**2.** 在 HTML 和 CSS 文件中添加 列表 16.5 和 列表 16.7 所示的代码。
+**2.** 在 HTML 和 CSS 文件中添加列表 16.5 和列表 16.7 所示的代码。
 
-**3.** 打开 `dynamic_positioning.js` 文件并加载 `.load()`。
+**3.** 打开`dynamic_positioning.js`文件并加载`.load()`。
 
-**4.** 在 `.load()` 函数内部，添加以下行将 `#img2` 位于 `#img1` 的右下角，并将 `#img3` 位于 `#img2` 的右下角：
+**4.** 在`.load()`函数内部，添加以下行将`#img2`位于`#img1`的右下角，并将`#img3`位于`#img2`的右下角：
 
 点击此处查看代码
 
@@ -13239,7 +12759,7 @@ $("#div1").position("my:"left", at:"right", of:"#div2");
 05   {my:"left top", at:"right", of:"#img2"});
 ```
 
-**5.** 添加以下 `mousemove` 事件处理器，以便随鼠标重新定位 `#img3`。注意在 `<div>` 元素内 `collision` 被设置为 `"flip"`，这样图像就不会重新定位到元素之外：
+**5.** 添加以下`mousemove`事件处理器，以便随鼠标重新定位`#img3`。注意在`<div>`元素内`collision`被设置为`"flip"`，这样图像就不会重新定位到元素之外：
 
 点击此处查看代码
 
@@ -13287,6 +12807,8 @@ $("#div1").position("my:"left", at:"right", of:"#div2");
 
 点击此处查看代码
 
+
+
 ```javascript
 01 $(window).load(function(){
 02   $("#img2").position(
@@ -13300,19 +12822,15 @@ $("#div1").position("my:"left", at:"right", of:"#div2");
 10 });
 ```
 
-**列表 16.7 dynamic_positioning.css 用于设置的 CSS 代码**
+**列表 16.7** `dynamic_positioning.css` 用于设置的 CSS 代码
 
+## 1. `.data()`
 
+## 2. 错误。你可以使用 `.scrollParent()` 方法获取最近的滚动容器。
 
+## 3. 在 jQuery UI 中使用 `.focus()` 方法并带有一个延迟值。
 
-
-## **1.** `.data()`
-
-## **2.** 错误。你可以使用 `.scrollParent()` 方法获取最近的滚动容器。
-
-## **3.** 在 jQuery UI 中使用 `.focus()` 方法并带有一个延迟值。
-
-## **4.** 使用 `.position()` 方法，将一个元素设置为 `"right"`，另一个设置为 `"left"`。
+## 4. 使用 `.position()` 方法，将一个元素设置为 `"right"`，另一个设置为 `"left"`。
 
 ### 练习
 
@@ -13324,11 +12842,11 @@ $("#div1").position("my:"left", at:"right", of:"#div2");
 
 在本节你将学习：
 
-![Image](img/image00767.jpeg) 使用 jQuery UI 库应用效果
-![Image](img/image00767.jpeg) 缓动效果（easing effects）如何使动画变化变化
-![Image](img/image00767.jpeg) 在隐藏/显示元素时添加酷效果的方法
-![Image](img/image00767.jpeg) 如何对类更改应用效果
-![Image](img/image00767.jpeg) 在重新定位元素时应用动画效果
+- ![Image](img/image00767.jpeg) 使用 jQuery UI 库应用效果
+- ![Image](img/image00767.jpeg) 缓动效果（easing effects）如何使动画变化变化
+- ![Image](img/image00767.jpeg) 在隐藏/显示元素时添加酷效果的方法
+- ![Image](img/image00767.jpeg) 如何对类更改应用效果
+- ![Image](img/image00767.jpeg) 在重新定位元素时应用动画效果
 
 jQuery UI 提供了一系列丰富的动画类型效果，可以应用于 Web 上的元素。元素动画是一件好事，有几个原因。之一是让用户留下一种网站是交互式且易于使用的印象。其次是帮助用户理解你的动态脚本执行中正在发生的视觉变化。
 
@@ -13348,13 +12866,13 @@ jQuery UI 效果仅仅是针对 CSS 位置、大小和可见性属性的动画�
 
 ![Image](img/image00953.jpeg)![Image](img/image00954.jpeg)![Image](img/image00955.jpeg)
 
-**表 17.1 jQuery UI 效果**
+**表 17.1** jQuery UI 效果
 
 #### 设置效果动画缓动
 
 缓动函数设置了效果在执行动画时使用的值路径。你已经在 jQuery 动画中见过了线性（linear）和摆动（swing）缓动。jQuery UI 添加了大量新的缓动函数，可以提供一些有趣的动画效果。
 
-说明缓动工作的最简单方法是向你展示位于以下位置并在图 17.1 所示的图表。将水平轴设为持续时间，左侧为 0，右侧为完成。将垂直轴设为效果过渡的完成程度。例如，在淡出（fade-out）过渡中，底部将完全不透明，顶部将完全透明：[http://api.jqueryui.com/easings/]
+说明缓动工作的最简单方法是向你展示位于以下位置并在图 17.1 所示的图表。将水平轴设为持续时间，左侧为 0，右侧为完成。将垂直轴设为效果过渡的完成程度。例如，在淡出（fade-out）过渡中，底部将完全不透明，顶部将完全透明：[http://api.jqueryui.com/easings/](http://api.jqueryui.com/easings/)
 
 ![Image](img/image00956.jpeg)
 
@@ -13416,9 +12934,6 @@ $("#img3").click(function(e) {
 });
 ```
 
-
-
-
 ```javascript
 { direction:"down", distance:200}, 3000, function(){
     $(this).effect("slide",
@@ -13427,7 +12942,7 @@ $("#img3").click(function(e) {
 });
 ```
 
-### 7. 为 `#img4` 添加以下 `click` 处理程序。该 `click` 处理程序会应用爆炸效果，将图像分解为 16 份，并在它们在分离时逐渐淡出：
+**7.** 为 `#img4` 添加以下 `click` 处理程序。该 `click` 处理程序会应用爆炸效果，将图像分解为 16 份，并在它们在分离时逐渐淡出：
 
 点击此处查看代码图像
 
@@ -13437,17 +12952,17 @@ $("#img4").click(function(e) {
 });
 ```
 
-### 8. 保存所有三个文件，然后在网页浏览器中打开 HTML 文档，如图 图 17.2 所示。当你点击图像时，应该能看到这些效果。
+**8.** 保存所有三个文件，然后在网页浏览器中打开 HTML 文档，如图 图 17.2 所示。当你点击图像时，应该能看到这些效果。
 
 ![Image](img/image00957.jpeg)
 
 **图 17.2** 为图像应用 jQuery UI 效果。
 
-**列表 17.1 jquery_effects.html 添加网页页的 HTML 文档**
+**列表 17.1** `jquery_effects.html` 添加网页页的 HTML 文档
 
 点击此处查看代码图像
 
-* *
+* * *
 
 ```html
 <!DOCTYPE html>
@@ -13474,13 +12989,13 @@ $("#img4").click(function(e) {
 </html>
 ```
 
-* *
+* * *
 
-**列表 17.2 jquery_effects.js 在图像上应用多种效果的 jQuery 和 jQuery UI**
+**列表 17.2** `jquery_effects.js` 在图像上应用多种效果的 jQuery 和 jQuery UI
 
 点击此处查看代码图像
 
-* *
+* * *
 
 ```javascript
 $(document).ready(function(){
@@ -13506,11 +13021,11 @@ $(document).ready(function(){
 });
 ```
 
-**列表 17.3 jquery_effects.js 化页面的 CSS 代码**
+**列表 17.3** `jquery_effects.js` 化页面的 CSS 代码
 
 点击此处查看代码图像
 
-* *
+* * *
 
 ```css
 img {
@@ -13534,26 +13049,22 @@ div {
 }
 ```
 
-* *
+* * *
 
 ### 在类过渡中添加效果
 
 jQuery UI 效果中一个非常重要的部分是在向元素应用类时对过渡进行动画处理。这是通过为类过渡添加 `duration` 并指定控制动画的 `easing` 函数来实现的。任何改变的数值类值都将在类过渡的每一步中进行动画。
 
-注意
-颜色可能会很复杂；jQuery UI 无法动画从红色到蓝色的过渡，但它可以动画从 `#FF0000` 到 `#0000FF` 的过渡。如果你想动画颜色过渡，请使用它们的十六进制数值值。
+**注意**：颜色可能会很复杂；jQuery UI 无法动画从红色到蓝色的过渡，但它可以动画从 `#FF0000` 到 `#0000FF` 的过渡。如果你想动画颜色过渡，请使用它们的十六进制数值值。
 
 以下是你可以使用的类过渡方法列表，你可以通过设置 `duration` 和 `easing` 值来对对象应用效果：
 
-![Image](img/image00767.jpeg) `.addClass(className, duration, easing, complete)`——添加类并对数值类属性的更改进行动画。
+- ![Image](img/image00767.jpeg) `.addClass(className, duration, easing, complete)`——添加类并对数值类属性的更改进行动画。
+- ![Image](img/image00767.jpeg) `.removeClass(className, duration, easing, complete)`——移除类并对数值类属性的更改进行动画。
+- ![Image](img/image00767.jpeg) `.switchClass(removeClassName, addClassName, duration, easing, complete)`——首先移除 `removeClassName` 并对数值类属性的更改进行动画，然后添加 `addClass` 并对数值类属性的变化进行动画。
+- ![Image](img/image00767.jpeg) `.toggleClass(className, switch, duration, easing, complete)`——如果对象尚未具有该类，则添加它；如果已经，则移除它。对数值类属性的任何更改将根据 `easing` 函数进行动画。
 
-![Image](img/image00767.jpeg) `.removeClass(className, duration, easing, complete)`——移除类并对数值类属性的更改进行动画。
-
-![Image](img/image00767.jpeg) `.switchClass(removeClassName, addClassName, duration, easing, complete)`——首先移除 `removeClassName` 并对数值类属性的更改进行动画，然后添加 `addClass` 并对数值类属性的变化进行动画。
-
-![Image](img/image00767.jpeg) `.toggleClass(className, switch, duration, easing, complete)`——如果对象尚未具有该类，则添加它；如果已经，则移除它。对数值类属性的任何更改将根据 `easing` 函数进行动画。
-
-* *
+* * *
 
 ### 亲自尝试一下：在类过渡中应用缓
 
@@ -13568,6 +13079,14 @@ jQuery UI 效果中一个非常重要的部分是在向元素应用类时对过�
 **3.** 现在打开 `class_transitions.js` 文件并为 `<span>` 元素添加 `click` 处理程序：
 
 点击此处查看代码图像
+
+
+
+# jQuery UI 效果与动画
+
+## 使用 jQuery UI 实现类切换动画
+
+在 `class_transitions.js` 中，我们使用 jQuery UI 为元素的类切换添加了动画效果。以下代码展示了四个按钮的点击处理程序，分别实现添加类、切换类、切换类和移除类的动画：
 
 ```javascript
 $(document).ready(function(){
@@ -13592,19 +13111,13 @@ $(document).ready(function(){
 
 **图 17.3** 为类过渡添加动画效果。
 
-
-
-
-
+```html
 <span id="btn2" class="active">切换类</span>
 <span id="btn3" class="square">切换类</span>
 <span id="btn4" class="round">移除类</span>
-</</body>
-</html>
+```
 
 ## 列表 17.5 class_transitions.js 实现带有动画效果的类切换的 jQuery 和 jQuery UI 代码
-
-点击此处查看代码图像
 
 ```javascript
 $(document).ready(function(){
@@ -13621,8 +13134,6 @@ $(document).ready(function(){
 ```
 
 ## 列表 17.6 class_transitions.css 用于样式化页面的 CSS 代码
-
-点击此处查看代码图像
 
 ```css
 span {
@@ -13647,7 +13158,7 @@ span {
     border-radius:4px; color:#steelblue; }
 ```
 
-### 为元素可见性切换添加效果
+## 为元素可见性切换添加效果
 
 你可以使用 jQuery UI 添加到网页的另一个非常酷炫的效果是可见性变化。这可能是允许用户可视化正在发生的情况的最有用功能之一，并为他们提供了一个更好地跟踪页面流程的机会。
 
@@ -13655,24 +13166,28 @@ span {
 
 以下是你可以使用 jQuery UI 为不同的元素可见性切换方法添加效果的列表：
 
-![图像](img/image00767.jpeg) `.hide( effect [, options ] [, duration ] [, complete ] )—在隐藏元素的同时应用带有选项的效果。
+- `.hide( effect [, options ] [, duration ] [, complete ] )` — 在隐藏元素的同时应用带有选项的效果。
+- `.show( effect [, options ] [, duration ] [, complete ] )` — 在显示元素的同时应用带有选项的效果。
+- `.toggle( effect [, options ] [, duration ] [, complete ] )` — 根据对象当前的可见性显示或隐藏该对象，并在此时应用指定的效果。
 
-![图像](img/image00767.jpeg) `.show( effect [, options ] [, duration ] [, complete ] )—在显示元素的同时应用带有选项的效果。
-
-![图像](img/image00767.jpeg) `.toggle( effect [, options ] [, duration ] [, complete ] )—根据对象当前的可见性显示或隐藏该对象，并在此时应用指定的效果。
-
-### 亲自尝试一试：为 jQuery 切换应用效果
+### 亲自尝试：为 jQuery 切换应用效果
 
 在这个示例中，你对菜单项的可见性应用效果。该示例的目的是让你熟悉如何在 jQuery 的可见性方法中实现 jQuery UI 效果。示例的代码位于列表 17.7、17.8 和 17.9 中。使用以下步骤创建此动态页面：
 
 1. 在 Eclipse 中，添加 `lesson17/visibility_transitions.html`、`lesson17/js/visibility_transitions.js` 和 `lesson17/css/visibility_transitions.css`。
+
 2. 在 HTML 和 CSS 文件中添加列表 17.7 和列表 17.9 所示的代码。
+
 3. 打开 `visibility_transitions.js` 并添加以下 `.ready()` 函数，该函数将隐藏二级菜单：
+
 ```javascript
 $(document).ready(function(){
     $("#showMenu, #showMenu2, #toggleMenu").hide();
+});
 ```
+
 4. 为不同的菜单项添加以下点击处理程序。注意你使用了几种效果，包括 `fold`、`scale` 和 `blind`。这样做是为了让你看到这些效果是如何工作的。在 `blind` 效果上，你设置 `easing` 为 `easeOutBounce`；这提供了一个简单的跳动效果，位于底部：
+
 ```javascript
 $(show).click(function) {
     $("#showMenu").show("fold", {size:22}, 2000); });
@@ -13683,11 +13198,8 @@ $("#showMenu").click(function(e) {
 $("#showMenu2").click(function(e) {
     $("#showMenu2").hide("explode", {pieces:9}, 2000); });
 ```
-5. 保存所有文件，然后在浏览器中打开 HTML 文档![图像](img/image095.jpeg) **图 17.4** 你应该能够看到 `.show()`、`.hide()` 和 `.toggle()` 效果切换菜单的效果。
 
-
-
-
+5. 保存所有文件，然后在浏览器中打开 HTML 文档 **图 17.4**。你应该能够看到 `.show()`、`.hide()` 和 `.toggle()` 效果切换菜单的效果。
 
 ```javascript
 14            {direction:"up", easing:"easeOutBounce"}, 1000); });
@@ -13696,8 +13208,6 @@ $("#showMenu2").click(function(e) {
 ```
 
 ## 列表 17.9 visibility_transitions.css 样式化页面的 CSS 代码
-
-点击此处查看代码图片
 
 ```css
 01 span {
@@ -13723,11 +13233,12 @@ jQuery UI 中新的缓动功能也可以应用于 jQuery 的 `.animation()` 方�
 该示例的代码位于 列表 17.10、17.11 和 17.12 中。使用以下步骤创建动态 Web 页面：
 
 1. **在 Eclipse 中，添加 `lesson17/animation_effects.html`、`lesson17/js/animation_effects.js` 和 `lesson17/css/animation_effects.css` 文件。**
-2. **将 列表 17.10 和 列表 17.12 所示的代码添加到 HTML 和 CSS 文件中。`<img>` 元素设置为 `fixed` 定位，以便通过更改 CSS 位置对其移动进行动画处理。**
-3. **打开 `animation_effects.js` 文件并添加 列表 17.11 顶部显示的 `coords` 数组。该数组提供了定位坐标和缓动函数名称，这些将被 `click` 处理器使用。**
-4. **以下 `.ready()` 函数为球添加了 `click` 处理器：**
 
-点击此处查看代码图片
+2. **将 列表 17.10 和 列表 17.12 所示的代码添加到 HTML 和 CSS 文件中。`<img>` 元素设置为 `fixed` 定位，以便通过更改 CSS 位置对其移动进行动画处理。**
+
+3. **打开 `animation_effects.js` 文件并添加 列表 17.11 顶部显示的 `coords` 数组。该数组提供了定位坐标和缓动函数名称，这些将被 `click` 处理器使用。**
+
+4. **以下 `.ready()` 函数为球添加了 `click` 处理器：**
 
 ```javascript
 14 $(document).ready(function(){
@@ -13736,8 +13247,6 @@ jQuery UI 中新的缓动功能也可以应用于 jQuery 的 `.animation()` 方�
 ```
 
 5. **添加以下 `click` 处理器 `reposition()` 代码。此函数将弹出一个坐标，并在 `.animate()` 调用中使用这些值来控制球的移动。缓动值通过 `coord` 对象的 `easing` 属性设置。注意 `callback` 处理器会循环回 `reposition()` 函数。当没有更多坐标剩余时，将对球应用爆炸效果：**
-
-点击此处查看代码图片
 
 ```javascript
 07 function reposition(){
@@ -13749,15 +13258,13 @@ jQuery UI 中新的缓动功能也可以应用于 jQuery 的 `.animation()` 方�
 13 }
 ```
 
-6. **保存所有三个文件，然后在 浏览器中打开 HTML 文档，如图 图 17.5 所示。当你点击球时，它应该以不同的速度在 Web 页面上移动，说明缓动函数的作用。最后，它应该撞到针并消失。**
+6. **保存所有三个文件，然后在浏览器中打开 HTML 文档，如图 图 17.5 所示。当你点击球时，它应该以不同的速度在 Web 页面上移动，说明缓动函数的作用。最后，它应该撞到针并消失。**
 
 ![图像](img/image00960.jpeg)
 
 **图 17.5** 使用 jQuery UI 效果调整位置动画的时间。
 
 ## 列表 17.10 animation_effects.html 添加 Web 页面的 HTML 文档
-
-点击此处查看代码图片
 
 ```html
 01 <!DOCTYPE html>
@@ -13779,8 +13286,6 @@ jQuery UI 中新的缓动功能也可以应用于 jQuery 的 `.animation()` 方�
 ```
 
 ## 列表 17.11 animation_effects.js 实现位置的 jQuery
-
-点击此处查看代码图片
 
 ```javascript
 var coords = [
@@ -13814,6 +13319,12 @@ $(document).ready(function(){
 ## 列表 17.12 animation_effects.css 样式化页面的 CSS 代码
 
 ```css
+/* CSS 代码内容 */
+```
+
+
+
+```css
 01 span {
 02   display:inline-block; width:130px; border:1px ridge;
 03   text-align:center; cursor:pointer;
@@ -13828,9 +13339,6 @@ $(document).ready(function(){
 12   position:fixed; left:130px; top:30px; }
 ```
 
-
-
-
 ### [3]. 判断对错：你无法对 `border-style` 的变化制作动画。
 
 ### [4]. 你使用哪种效果来模拟元素缩小？
@@ -13839,7 +13347,7 @@ $(document).ready(function(){
 
 **[1].** 设置 `duration` 值。
 
-**[2].** 将 options 值设置为 `{pieces:25}`。
+**[2].** 将 `options` 值设置为 `{pieces:25}`。
 
 **[3].** 正确。你只能对数值型变化制作动画。
 
@@ -13875,7 +13383,7 @@ jQuery UI 交互组件可以附加到元素上，以提供一组丰富的预定�
 
 ### 介绍 jQuery UI 交互
 
-所有的 jQuery UI 交互都基于两个主要组件——`jQuery.widget` 工厂和鼠标组件（mouse widget）。`jQuery.widget` 工厂提供了所有组件的基础功能，包括创建、禁用、启用和选项设置。鼠标组件提供了与组件的基础鼠标交互，它捕获鼠标事件并允许组件与其进行交互。
+所有的 jQuery UI 交互都基于两个主要组件——`jQuery.widget` 工厂和鼠标组件（`mouse` widget）。`jQuery.widget` 工厂提供了所有组件的基础功能，包括创建、禁用、启用和选项设置。鼠标组件提供了与组件的基础鼠标交互，它捕获鼠标事件并允许组件与其进行交互。
 
 #### 复习 jQuery.widget 工厂
 
@@ -13885,13 +13393,13 @@ jQuery UI 交互组件可以附加到元素上，以提供一组丰富的预定�
 
 **表 18.1 所有 jQuery UI 组件可用的方法和事件**
 
-你可以在 [`api.jqueryui.com/jQuery.widget/`](http://api.jqueryui.com/jQuery.widget/) 获取更多关于 `jQuery.widget` 工厂的信息。
+你可以在[`api.jqueryui.com/jQuery.widget/`](http://api.jqueryui.com/jQuery.widget/)获取更多关于`jQuery.widget`工厂的信息。
 
 #### 理解鼠标交互组件
 
 鼠标交互组件会自动应用到所有组件。通常情况下，你不需要与它进行太多交互。但是，它暴露了一些在某些非常有用的选项。这些选项如下：
 
-![Image](img/image00767.jpeg) cancel—取消特定元素的交互。例如，要取消 `#item1` 中类类为 `"label"` 的元素的鼠标交互，你使用以下代码：
+![Image](img/image00767.jpeg) cancel—取消特定元素的交互。例如，要取消`#item1`中类类为`"label"`的元素的鼠标交互，你使用以下代码：
 
 点击此处查看代码图像
 
@@ -13899,7 +13407,7 @@ jQuery UI 交互组件可以附加到元素上，以提供一组丰富的预定�
 $( "#item1" ).mouse( "option", "cancel", ".label" );
 ```
 
-![Image](img/image00767.jpeg) delay—在 `mousedown` 事件发生后到交互发生之前延迟时间。例如，要为 `#item2` 的鼠标交互添加 1 秒延迟，请使用以下代码：
+![Image](img/image00767.jpeg) delay—在`mousedown`事件发生后到交互发生之前延迟时间。例如，要为`#item2`的鼠标交互添加 1 秒延迟，请使用以下代码：
 
 点击此处查看代码图像
 
@@ -13907,7 +13415,7 @@ $( "#item1" ).mouse( "option", "cancel", ".label" );
 $( "#item2" ).mouse( "option", "delay", 1000 );
 ```
 
-![Image](img/image00767.jpeg) distance—指定在 `mousedown` 事件发生后到交互开始之前鼠标必须移动的像素距离。例如，要将 `#item3` 的鼠标交互距离设置为 10 像素，请使用以下代码：
+![Image](img/image00767.jpeg) distance—指定在`mousedown`事件发生后到交互开始之前鼠标必须移动的像素距离。例如，要将`#item3`的鼠标交互距离设置为 10 像素，请使用以下代码：
 
 点击此处查看代码图像
 
@@ -13921,7 +13429,7 @@ $( "#item3" ).mouse( "option", "distance", 10 );
 
 #### 使用 Draggable 组件拖动元素
 
-draggable 组件通过按住鼠标并移动来将元素定义为可拖动。draggable 组件提供了多个选项来控制外观。表 18.2 描述了更多 draggable 选项。以下是将 `draggable` 组件附加到元素的示例：
+draggable 组件通过按住鼠标并移动来将元素定义为可拖动。draggable 组件提供了多个选项来控制外观。表 18.2 描述了更多 draggable 选项。以下是将`draggable`组件附加到元素的示例：
 
 ```
 $("#img1").draggable({cursor:"move",
@@ -13931,7 +13439,7 @@ $("#img1").draggable({cursor:"move",
 
 **表 18.2 常用 draggable 选项**
 
-draggable 组件还提供了可以附加的额外事件。表 18.3 列出了在 draggable 项目上可以使用的事件。以下是添加 `dragstop` 事件以在掉落时应用 `bounce` 效果的示例：
+draggable 组件还提供了可以附加的额外事件。表 18.3 列出了在 draggable 项目上可以使用的事件。以下是添加`dragstop`事件以在掉落时应用`bounce`效果的示例：
 
 点击此处查看代码图像
 
@@ -13941,8 +13449,6 @@ $("#drag1").on("dragstop", function(){
     $(this).effect("bounce", 1000);
 });
 ```
-
-```注， ，
 
 **表 18.3 Draggable 事件**
 
@@ -13952,13 +13458,13 @@ $("#drag1").on("dragstop", function(){
 
 示例代码位于 列表 18.1、18.2 和 18.3 中。使用以下步骤创建该动态网页：
 
-**1.** 在 Eclipse 中创建 `lesson18`、`lesson18/js` 和 `lesson18/css` 文件夹，然后添加 `lesson18/draggable_images.html`、`lesson18/js/draggable_images.js` 和 `lesson18/css/draggable_images.css` 文件。
+**1.** 在 Eclipse 中创建`lesson18`、`lesson18/js`和`lesson18/css`文件夹，然后添加`lesson18/draggable_images.html`、`lesson18/js/draggable_images.js`和`lesson18/css/draggable_images.css`文件。
 
 **2.** 将 列表 18.1 和 列表 18.3 所示的代码添加到 HTML 和 CSS 文件中。
 
-**3.** 打开 `draggable_images.js` 文件并添加一个 `.load()` 函数。
+**3.** 打开`draggable_images.js`文件并添加一个`.load()`函数。
 
-**4.** 添加以下行。第 2 行将 `draggable` 组件附加到 `#drag1` 并设置拖动时光标为移动；同时，拖动时 `opacity` 为 50%。第 3 行添加了一个 `dragstop` 处理程序函数，在图像掉落时对其应用 `bounce` 效果：
+**4.** 添加以下行。第 2 行将`draggable`组件附加到`#drag1`并设置拖动时光标为移动；同时，拖动时`opacity`为 50%。第 3 行添加了一个`dragstop`处理程序函数，在图像掉落时对其应用`bounce`效果：
 
 点击此处查看代码图像
 
@@ -13969,11 +13475,7 @@ $("#drag1").on("dragstop", function(){
 });
 ```
 
-
-
-
-
-### 5. 添加以下行代码，在 `#drag2` 元素上实现 `draggable`。将 `helper` 选项设置为 `"clone"`，以便对象在拖拽时保持原位；添加了 `dragstop` 事件处理器来动画化从原始位置到 helper 克隆位置的位置改变。注意 `offset` 是通过 `ui` 参数收集的：
+**5.** 添加以下行代码，在`#drag2`元素上实现`draggable`。将`helper`选项设置为`"clone"`，以便对象在拖拽时保持原位；添加了`dragstop`事件处理器来动画化从原始位置到 helper 克隆位置的位置改变。注意`offset`是通过`ui`参数收集的：
 
 点击此处查看代码图像
 
@@ -13983,7 +13485,7 @@ $("#drag2").on("dragstop", function(e, ui){
   $("#drag2").animate(ui.offset); });
 ```
 
-### 6. 添加以下行代码，在 `#drag3` 元素上实现 `draggable`。这次，你实现了一个 `drag` 处理器，它在拖拽时用当前的鼠标坐标更新段落元素。`dragstop` 处理器将清除位置文本：
+**6.** 添加以下行代码，在`#drag3`元素上实现`draggable`。这次，你实现了一个`drag`处理器，它在拖拽时用当前的鼠标坐标更新段落元素。`dragstop`处理器将清除位置文本：
 
 点击此处查看代码图像
 
@@ -13995,7 +13497,7 @@ $("#drag3").on("dragstop", function(e){
   $(this).children("p").html(""); });
 ```
 
-### 7. 保存所有三个文件，然后在浏览器中打开 HTML 文档，如图 18.1 所示所示。你应该能够拖动图像并测试交互。
+**7.** 保存所有三个文件，然后在浏览器中打开 HTML 文档，如图 18.1 所示。你应该能够拖动图像并测试交互。
 
 ![Image](img/image0096.jpeg)
 
@@ -14062,7 +13564,7 @@ img:hover{ cursor:move; }
 
 #### 使用 Droppable 组件创建投放目标
 
-`droppable` 组件通过可拖拽项目定义元素的投放容器。这允许你使用简单的鼠标控制提供元素交互。`droppable` 组件允许你指定一个 `accept` 函数来处理事件，例如鼠标坐标以及可拖拽项目。表 18.4 描述了更常见的 droppable 选项。以下展示了将 `droppable` 组件附加到元素并指定 `tolerance` 级别的示例：
+`droppable`组件通过可拖拽项目定义元素的投放容器。这允许你使用简单的鼠标控制提供元素交互。`droppable`组件允许你指定一个`accept`函数来处理事件，例如鼠标坐标以及可拖拽项目。表 18.4 描述了更常见的 droppable 选项。以下展示了将`droppable`组件附加到元素并指定`tolerance`级别的示例：
 
 点击此处查看代码图像
 
@@ -14074,7 +13576,7 @@ $("#div1").droppable ({tolerance:"touch"});
 
 **表 18.4 常见的 droppable 组件选项**
 
-`droppable` 组件还提供了额外的事件，以便在拖拽和释放时将处理器附加到元素。表 18.5 列出了你可以在 droppable 项目上访问的事件。以下展示了当 droppable 项目被激活时添加 `dropactivate` 事件以应用 `shake` 效果的示例：
+`droppable`组件还提供了额外的事件，以便在拖拽和释放时将处理器附加到元素。表 18.5 列出了你可以在 droppable 项目上访问的事件。以下展示了当 droppable 项目被激活时添加`dropactivate`事件以应用`shake`效果的示例：
 
 点击此处查看代码图像
 
@@ -14089,12 +13591,12 @@ $("#drop1").on("dropactivate", function(){$(this).effect("shake", 1000); });
 
 **: 自己尝试：将拖放应用于网页
 
-在此示例中，你在页面元素上实现了 `draggable` 和 `droppable`。第一个 droppable 元素显示图像，第二个将图像和 `src` 文本添加到列表中。示例的目的是帮助你了解让网页元素变为 droppable 有多简单。示例代码位于代码列表 18.4、18.5 和 18.6 中。使用以下步骤创建动态网页：
+在此示例中，你在页面元素上实现了`draggable`和`droppable`。第一个 droppable 元素显示图像，第二个将图像和`src`文本添加到列表中。示例的目的是帮助你了解让网页元素变为 droppable 有多简单。示例代码位于代码列表 18.4、18.5 和 18.6 中。使用以下步骤创建动态网页：
 
-1. 在 Eclipse 中，添加 `lesson18/drag_n_drop.html`、`lesson18/js/drag_n_drop.js` 和 `lesson18/css/drag_n_drop.css` 文件。
+1. 在 Eclipse 中，添加`lesson18/drag_n_drop.html`、`lesson18/js/drag_n_drop.js`和`lesson18/css/drag_n_drop.css`文件。
 2. 将代码列表 18.4 和代码列表 18.6 所示的代码添加到 HTML 和 CSS 文件中。
-3. 打开 `drag_n_drop.js` 文件并添加 `.ready()` 函数。
-4. 添加以下行，将 `draggable` 组件添加到 `#drag1`、`#drag2` 和 `#drag3`。为 `helper` 设置使用 `clone` 以保持图像原位，设置 `cursor` 和 `opacity`。此外，你设置了 `zIndex`，使得即使在拖过其他页面元素时图像也会显示在它们上方：
+3. 打开`drag_n_drop.js`文件并添加`.ready()`函数。
+4. 添加以下行，将`draggable`组件添加到`#drag1`、`#drag2`和`#drag3`。为`helper`设置使用`clone`以保持图像原位，设置`cursor`和`opacity`。此外，你设置了`zIndex`，使得即使在拖过其他页面元素时图像也会显示在它们上方：
 
 点击此处查看代码图像
 
@@ -14103,15 +13605,19 @@ $("#drag1, #drag2, #drag3").draggable(
   {helper:"clone", cursor:"move", opacity:.7, zIndex:99});
 ```
 
-5. 添加以下行，在 `#drop1` 上实现 `droppable`。`accept` 设置为 `"img"`，以便只接受 `<img>` 元素。在第 6 行，添加了 `dropover` 事件处理器，当可拖拽项目悬停在其上方时，对投放框应用 `pulsate` 效果。此外，在第 8 行添加了 `drop` 事件处理器，将向 `#drop1` 添加一个与可拖拽元素相同 `src` 属性的 `<img>` 元素。还添加了 `bounce` 效果向用户显示内容已更改：
+
+
+### 5. 添加以下行，在`#drop1`上实现`droppable`。`accept`设置为`"img"`，以便只接受`<img>`元素。在第6行，添加了`dropover`事件处理器，当可拖拽项目悬停在其上方时，对投放框应用`pulsate`效果。此外，在第8行添加了`drop`事件处理器，将向`#drop1`添加一个与可拖拽元素相同`src`属性的`<img>`元素。还添加了`bounce`效果向用户显示内容已更改：
 
 点击此处查看代码图像
 
 ```javascript
 $("#drop1").droppable(
   { accept:"img", tolerance:"fit"});
+
 $("#drop1").on("dropover", function(e,ui){
   $(this).effect("pulsate"); });
+
 $("#drop1").on("drop", function(e,ui){
   $(this).html($("<img></img>").attr("src",
   ui.draggable.attr("src")));
@@ -14119,7 +13625,7 @@ $("#drop1").on("drop", function(e,ui){
 });
 ```
 
-6. 添加以下行，在 `#drop2` 上实现 `droppable`。注意在第 15 行添加了 `hoverClass`。当框被 droppable 项目悬停时时，该类会使背景变为浅蓝色。同时在第 16 行，实现了 `drop` 处理器函数，向 `#drop2` 添加一个带有 `<img>` 和 `src` 文本的 `<div>` 元素：
+### 6. 添加以下行，在`#drop2`上实现`droppable`。注意在第15行添加了`hoverClass`。当框被 droppable 项目悬停时时，该类会使背景变为浅蓝色。同时在第16行，实现了`drop`处理器函数，向`#drop2`添加一个带有`<img>`和`src`文本的`<div>`元素：
 
 点击此处查看代码图像
 
@@ -14127,98 +13633,85 @@ $("#drop1").on("drop", function(e,ui){
 $("#drop2").droppable(
   { accept:"img", tolerance:"intersect",
     hoverClass:"drop-hover"});
+
 $("#drop2").on("drop", function(e,ui){
   var item = $("<div></div>");
   item.append($("<img></img>").attr("src",
-```
-
-
-
-
-
-```javascript
-19  ui.draggable.attr("src")));
-20  item.append($("<span></span>").html(
-21            ui.draggable.attr("src")));
-22  $(this).append(item);
-23 });
+    ui.draggable.attr("src")));
+  item.append($("<span></span>").html(
+    ui.draggable.attr("src")));
+  $(this).append(item);
+});
 ```
 
 ### 7. 最后步骤
-保存所有三个文件，然后在 Web 浏览器中打开 HTML 文档，如图图 18.2
 
-**图 18.2** 应用 jQuery UI 拖放功能。
+保存所有三个文件，然后在 Web 浏览器中打开 HTML 文档，如图图18.2
 
-**列表 18.4 drag_n_drop.html 添加网页的 HTML 文档**
+**图18.2** 应用 jQuery UI 拖放功能。
+
+**列表18.4 drag_n_drop.html 添加网页的 HTML 文档**
 
 点击此处查看代码图片
-
-* * *
 
 ```html
 01 <!DOCTYPE html>
 02 <html>
-03   <head>
-04   <title>drag'n'droppin</title>
-05   <meta charset="utf-8" />
-06   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-07   <script type="text/javascript" src="http://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
-08   <script type="text/javascript" src="js/drag_n_drop.js"></script>
-09   <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
-10   <link rel="stylesheet" type="text/css" href="css/drag_n_drop.css">
-11   </head>
-12   <body>
-13     <div id="images">
-14      <img id="drag1" src="/images/jungle.jpg" />
-15      <img id="drag2" src="/images/wheel.jpg" />
-16      <img id="drag3" src="/images/img7.jpg" />
-17      </div>
-18     <div id="drop1"></div>
-19     <div id="drop2"></div>
-20   </body>
+03   <head>
+04     <title>drag'n'droppin</title>
+05     <meta charset="utf-8" />
+06     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+07     <script type="text/javascript" src="http://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+08     <script type="text/javascript" src="js/drag_n_drop.js"></script>
+09     <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+10     <link rel="stylesheet" type="text/css" href="css/drag_n_drop.css">
+11   </head>
+12   <body>
+13     <div id="images">
+14       <img id="drag1" src="/images/jungle.jpg" />
+15       <img id="drag2" src="/images/wheel.jpg" />
+16       <img id="drag3" src="/images/img7.jpg" />
+17     </div>
+18     <div id="drop1"></div>
+19     <div id="drop2"></div>
+20   </body>
 21 </html>
 ```
 
-* * *
-
-**列表 18.5 drag_n_drop.js 使用 jQuery 和 jQuery UI 实现可拖放和可放置元素**
+**列表18.5 drag_n_drop.js 使用 jQuery 和 jQuery UI 实现可拖放和可放置元素**
 
 点击此处查看代码图片
-
-* * *
 
 ```javascript
 01 $(document).ready(function(){
-02   $("#drag1, #drag2, #drag3").draggable(
-03         {helper:"clone", cursor:"move", opacity:.7, zIndex:99 });
-04    $("#drop1").droppable(
-05         {accept:"img", tolerance:"fit"});
-06    $("#drop1").on("dropover", function(e,ui){
-07         $(this).effect("pulsate"); });
-08    $("#drop1").on("drop", function(e,ui){
-09         $(this).html($("<img></img>").attr("src",
-10             ui.draggable.attr("src")));
-11        $(this).effect("bounce");
-12    });
-13    $("#drop2").droppable(
-14              {accept:"img", tolerance:"intersect",
-15              hoverClass:"drop-hover"});
-16    $("#drop2").on("drop", function(e,ui){
-17        var item = $("<div></div>");
-18        item.append($("<img></img>").attr("src",
-19               ui.draggable.attr("src")));
-20       item.append($("<span></span>").html(
-21                ui.draggable.attr("src")));
-22       $(this).append(item);
-23     });
+02   $("#drag1, #drag2, #drag3").draggable(
+03     {helper:"clone", cursor:"move", opacity:.7, zIndex:99 });
+04   $("#drop1").droppable(
+05     {accept:"img", tolerance:"fit"});
+06   $("#drop1").on("dropover", function(e,ui){
+07     $(this).effect("pulsate"); });
+08   $("#drop1").on("drop", function(e,ui){
+09     $(this).html($("<img></img>").attr("src",
+10       ui.draggable.attr("src")));
+11     $(this).effect("bounce");
+12   });
+13   $("#drop2").droppable(
+14     {accept:"img", tolerance:"intersect",
+15     hoverClass:"drop-hover"});
+16   $("#drop2").on("drop", function(e,ui){
+17     var item = $("<div></div>");
+18     item.append($("<img></img>").attr("src",
+19       ui.draggable.attr("src")));
+20     item.append($("<span></span>").html(
+21       ui.draggable.attr("src")));
+22     $(this).append(item);
+23   });
 24 });
 ```
 
-**列表 18.6 drag_n_drop.js 设置页面的 CSS 代码**
+**列表18.6 drag_n_drop.js 设置页面的 CSS 代码**
 
 点击此处查看代码图片
-
-* * *
 
 ```css
 01 div {display:inline-block; vertical-align:top; }
@@ -14234,54 +13727,52 @@ $("#drop2").on("drop", function(e,ui){
 
 ### 使用 Widget 调整大小
 
-用户频繁的需求是定义图像、列表等的大小。`resizable` 组件提供了通过鼠标控件轻松调整大小的功能。这允许用户根据意愿调整页面元素。
+用户频繁的需求是定义图像、列表等的大小。`resizable`组件提供了通过鼠标控件轻松调整大小的功能。这允许用户根据意愿调整页面元素。
 
-`resizable` 组件在页面元素上附加了多个句柄，通过鼠标交互来调整元素。你也可以同时调整其他元素。表格 18.6 描述了更多常用的调整大小选项。以下是向元素附加 `resizable` 组件并指定 `aspectRatio` 为 `true` 的示例：
+`resizable`组件在页面元素上附加了多个句柄，通过鼠标交互来调整元素。你也可以同时调整其他元素。表格18.6描述了更多常用的调整大小选项。以下是向元素附加`resizable`组件并指定`aspectRatio`为`true`的示例：
 
 点击此处查看代码图片
 
 ```javascript
-$("#div1").resizable ({aspectRatio:true});
+$("#div1").resizable({aspectRatio:true});
 ```
 
 ![图像](img/image00968.jpeg)
 
-**表格 18.6 常用 Resizable 组件**
+**表格18.6 常用 Resizable 组件**
 
-resizable 组件提供了额外的事件，可以在调整大小时附加到元素上。表格 18.7 列出了可以在调整大小项上访问的事件。以下是添加 `resizestop` 事件以便在调整大小项完成后应用 `pulsate` 效果的示例：
+`resizable`组件提供了额外的事件，可以在调整大小时附加到元素上。表格18.7列出了可以在调整大小项上访问的事件。以下是添加`resizestop`事件以便在调整大小项完成后应用`pulsate`效果的示例：
 
 点击此处查看代码图片
 
 ```javascript
-$("#resize1").resizable ({aspectRatio:true });
+$("#resize1").resizable({aspectRatio:true });
 $("#resize1").on("dropactivate", function(){$(this).effect("pulsate"); });
 ```
 
 ![图像](img/image00969.jpeg)
 
-**表格 18.7 Resizable Widget 事件**
-
-* * *
+**表格18.7 Resizable Widget 事件**
 
 ### 动手尝试：创建可调整大小的元素
 
 在此示例中，你实现了可拖放和可调整大小的元素，允许用户自定义网页上项目的位置和大小。示例的目的是说明拖放和调整之间的交互。
 
-示例代码位于列表 18.7、18.8 和 18.9。使用以下步骤创建动态网页：
+示例代码位于列表18.7、18.8和18.9。使用以下步骤创建动态网页：
 
-**1.** 在 Eclipse 中，添加 `lesson18/resizable_elements.html`、`lesson18/js/resizable_elements.js` 和 `lesson18/css/resizable_elements.css` 文件。
-**2.** 在 HTML 和 CSS 文件中添加列表 18.7 和列表 18.9 所示的代码。
-**3.** 打开 `resizable_elements.js` 文件并添加 `.ready()` 函数。
-**4.** 添加以下行，将 `draggable` 添加到主 `<div>` 元素中：
+**1.** 在 Eclipse 中，添加`lesson18/resizable_elements.html`、`lesson18/js/resizable_elements.js`和`lesson18/css/resizable_elements.css`文件。
+
+**2.** 在 HTML 和 CSS 文件中添加列表18.7和列表18.9所示的代码。
+
+**3.** 打开`resizable_elements.js`文件并添加`.ready()`函数。
+
+**4.** 添加以下行，将`draggable`添加到主`<div>`元素中：
 
 点击此处查看代码图片
 
 ```javascript
 $("#resize1, #resize2, #resize3").draggable();
 ```
-
-
-
 
 ```html
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -14290,7 +13781,8 @@ $("#resize1, #resize2, #resize3").draggable();
 <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="css/resizable_elements.css">
 </head>
-<body>  <div id="resize1"><img src="/images/beachhouse.jpg" /></div>
+<body>
+  <div id="resize1"><img src="/images/beachhouse.jpg" /></div>
   <div id="resize2">
     <p>Ocean View</p>
     <img src="/images/img7.jpg" />
@@ -14300,13 +13792,9 @@ $("#resize1, #resize2, #resize3").draggable();
 </html>
 ```
 
-* * *
-
-###  18.8 resizable_elements.js 使用 jQuery 和 jQuery UI 实现页面元素的缩放与移动
+**列表18.8 resizable_elements.js 使用 jQuery 和 jQuery UI 实现页面元素的缩放与移动**
 
 点击此处查看代码图像
-
-* * *
 
 ```javascript
 $(document).ready(function(){
@@ -14322,13 +13810,9 @@ $(document).ready(function(){
 });
 ```
 
-* * *
-
-###  18.9 resizable_elements.css 样式化页面 CSS 代码
+**列表18.9 resizable_elements.css 样式化页面 CSS 代码**
 
 点击此处查看代码图像
-
-* * *
 
 ```css
 img {
@@ -14343,33 +13827,29 @@ p {
   height:200px; overflow-y:auto; }
 ```
 
-* * *
-
-* *
-
 ### 应用可选择组件 (Selectable Widget)
 
 用户的另一个频繁请求是能够使用边界框在页面上轻松选择多个项目。可选择组件通过允许用户使用鼠标在可选择元素内部的可选择子元素周围绘制一个框（或称为“套索”）来提供了该功能。框内的项目将在列表中被选中。
 
-表 18.8 描述了更常见的可选择选项。以下展示了将 `selectable` 组件附加到元素上并将 `tolerance` 指定为 `fit` 的示例：
+表18.8描述了更常见的可选择选项。以下展示了将`selectable`组件附加到元素上并将`tolerance`指定为`fit`的示例：
 
 点击此处查看代码图像
 
 ```javascript
-$("#ul1"). selectable ({tolerance:"fit"});
+$("#ul1").selectable({tolerance:"fit"});
 ```
 
 ![图像](img/image00971.jpeg)
 
-**表 18.8 常见可选择组件选项**
+**表18.8 常见可选择组件选项**
 
-可选择组件还提供了额外的事件，因此在更改选择时，可以将处理程序附加到可选择元素或其子元素。表 18.9 列出了你可以在可选择项目上访问的事件。
+可选择组件还提供了额外的事件，因此在更改选择时，可以将处理程序附加到可选择元素或其子元素。表18.9列出了你可以在可选择项目上访问的事件。
 
 ![图像](img/image00972.jpeg)
 
-**表 18.9 可选择组件事件**
+**表18.9 可选择组件事件**
 
-每个可选择事件将传递事件对象以及一个 `ui` 对象，该 `ui` 对象将为每个事件提供代表可选择元素的值。例如，以下代码为元素添加了 `selectables` 事件，然后访问 `selected` 属性：
+每个可选择事件将传递事件对象以及一个`ui`对象，该`ui`对象将为每个事件提供代表可选择元素的值。例如，以下代码为元素添加了`selectables`事件，然后访问`selected`属性：
 
 点击此处查看代码图像
 
@@ -14378,12 +13858,13 @@ $("#list1").selectable();
 $("#list1").on("selectables", function(e, ui){ ui.selected.effect("shake");
 ```
 
+
+
 #### 备注
+
 `.ui-selecting` 类会被附加到当前被选中的子元素。当子元素被选中后，`.ui-selected` 类将被附加。这允许你在在 CSS 中定义某些样式，而无需在可选择处理程序中添加/删除类。
 
-* * *
-
-* *
+---
 
 ### 亲手尝试：创建可选择集合
 
@@ -14394,48 +13875,38 @@ $("#list1").on("selectables", function(e, ui){ ui.selected.effect("shake");
 3. 打开 `selectable_sets.js` 文件并添加 `ready()` 函数。
 4. 添加以下代码来实现 `set1` 上的 `selectable`：
 
-点击此处查看代码图像
-
 ```javascript
 for(var i=0; i<100; i++){
-  $("#list").append($("<p></p>").html("Item "+i)); }
+  $("#list").append($("<p></p>").html("Item "+i)); 
+}
 ```
 
 5. 在 `set2` 上实现 `selectable`，并带有 `selectables` 事件。在 `selectables` 事件处理程序中，使用 `ui.selected` 属性来访问选中的项目：
 
-点击此处查看代码图像
-
 ```javascript
 $("#set2").selectable();
-$("#set2").on("selectables", function(e, ui){ ui.selected.effect("shake");
+$("#set2").on("selectables", function(e, ui){ 
+  ui.selected.effect("shake"); 
+});
 ```
 
 6. 在 `set2` 上实现 `selectable`，并带有 `selectablesop` 事件。在 `selectablesop` 事件处理程序中，使用 `ui-selected` 类来更新选中的计数：
-
-点击此处查看代码图像
 
 ```javascript
 $("#set2").on("selectablesop", function(e, ui){
   var selection = $("#set2 .ui-selected");
   selection.effect("highlight");
-  $("#span").html("Selected "+ selection.length + " Photos"); });
+  $("#span").html("Selected "+ selection.length + " Photos"); 
+});
 ```
 
-7. 保存所有文件，然后在浏览器中打开如图 18.4](#part0032.xhtml_ch18fig04) 所示的 HTML 文。你应该能够使用边界框选择列表中的项目以及图像。
+7. 保存所有文件，然后在浏览器中打开如图 [18.4](#part0032.xhtml_ch18fig04) 所示的 HTML 文。你应该能够使用边界框选择列表中的项目以及图像。
 
-### 18.10 selectable_sets.html 添加页面的 HTML 文
+### 18.10 `selectable_sets.html` 添加页面的 HTML 文
 
-点击此处查看代码图像
+---
 
-
-
-
-
-# 列表 18.11 selectable_sets.js jQuery 和 jQuery UI 实现项目选择
-
-点击此处查看代码图像
-
-* * *
+# 列表 18.11 `selectable_sets.js` jQuery 和 jQuery UI 实现项目选择
 
 ```javascript
 01 $(document).ready(function(){
@@ -14457,13 +13928,9 @@ $("#set2").on("selectablesop", function(e, ui){
 17 });
 ```
 
-* * *
+---
 
-# 列表 18.12 selectable_sets.js 样式化页面 CSS 代码
-
-点击此处查看代码图像
-
-* * *
+# 列表 18.12 `selectable_sets.js` 样式化页面 CSS 代码
 
 ```css
 01  span {
@@ -14496,7 +13963,7 @@ $("#set2").on("selectablesop", function(e, ui){
 28     opacity:1; }
 ```
 
-* * *
+---
 
 ### 使用 Sortable 小部件排序元素
 
@@ -14506,15 +13973,11 @@ jQuery UI 提供的最酷的交互之一是 `sortable` 小部件。`sortable` �
 
 表 18.10 描述了更常用的 sortable 选项。以下展示了如何将 `sortable` 小部件挂载到元素上并将 `tolerance` 指定为 `fit` 的示例：
 
-点击此处查看代码图像
-
 ```javascript
 $("#ul1").sortable({tolerance:"fit"});
 ```
 
 #### 常用 Sortable 小部件选项
-
-** *
 
 **注意**
 要使用 `sortable` 排序表格行，你需要让 `<tbody>` 可可排序，而不是 `<table>`。
@@ -14535,135 +13998,6 @@ jQuery UI 会为正在排序的辅助元素添加 `.ui-sortable-helper` 类。�
 - `position`: 当前位置信息。
 - `sender`: 发送事件的元素。
 
-
-
-
-
-```html
-<html
-<head>
-    <title>整理条目</title>
-    <meta charset="utf-8" />
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/sortable_elements.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" type="text/css" href="css/sortable_elements.css">
-</head>
-<body>
-    <div id="sorter1"></div>
-    <div id="sorter2"></div>
-    <table border=1>
-        <tbody>
-            <tr>
-                <th>图标</th>
-                <th>数字</th>
-                <th>名称</th>
-                <th>来源</th>
-            </tr>
-        </tbody>
-        <tbody id="sortTable"></</tbody>
-    </table>
-</body>
-</html>
-```
-
-### 列表 18.14 sortable_elements.js 使用 jQuery 和 jQuery UI 实现排序
-
-点击此处查看代码图片
-
-```javascript
-var images = [
-    {src:"/images/lake.jpg",name:"湖"},
-    {src:"/images/cliff.jpg",name:"悬崖"},
-    {src:"/images/flower2.jpg",name:"紫罗兰"},
-    {src:"/images/tiger.jpg",name:"老虎"},
-    {src:"/images/volcano.jpg",name:"火山"},
-    {src:"/images/flower.jpg",name:"花"}];
-function buildLists(){
-    $.each(images, function(i,item){
-        var img = $("<img></img>").attr("src", item.src);
-        var name = $("<p></p>").html(item.name);
-        $("#sorter1").append($("<div></div>").append(img, name));
-        var tr = $("<tr></tr>");
-        tr.append($("<td></td>").append(
-            $("<img></img>").attr("src", item.src)));
-        tr.append($("<td></td>").html(i));
-        tr.append($("<td></td>").html(item.name));
-        tr.append($("<td></td>").html(item.src));
-        $("#sortTable").append(tr);
-    });
-}
-$(document).ready(function(){
-    buildLists();
-    $("#sorter1").sortable(
-        {cursor:"move", connectWith:"#sorter2"});
-    $("#sorter2").sortable(
-        {cursor:"move", connectWith:"#sorter1"});
-    $("#sorter2").on("sortreceive", function(e, ui){
-        ui.sender.effect("pulsate");
-        $(this).effect("pulsate"); });
-    $("#sortTable").sortable(
-        {axis:"y", cursor:"n-resize", });
-    $("#sortTable").on("sortupdate", function(e, ui){
-        ui.item.effect("pulsate"); });
-});
-```
-
-### 列表 18.15 sortable_elements.css 样式化页面的 CSS 代码
-
-点击此处查看代码图片
-
-```css
-#sorter1, #sorter2, table {
-    display:inline-block; cursor:move;
-    width:200px; padding:10px; vertical-align:top;
-    margin:15px; height:auto; box-shadow: 5px 5px 5px #888888;
-    border:3px ridge white; }
-#sorter1 div, #sorter2 div {
-    width:180px; display:inline-block; height:50px;
-    padding:5px; margin:5px; border:1px dotted;
-    vertical-align:middle; }
-p {
-    float:right; margin:0px; display:inline-block; height:50px;
-    font:bold 18px/50px arial; vertical-align:top;
-    text-align:center; }
-img {
-    height:50px; }
-table {
-    width:auto; padding:5px; }
-tr {
-    background-color:white; }
-td {
-    min-width:80px; }
-#sortTable img {
-    height:20px; }
-.ui-sortable-helper {
-    background-color:blue; color:white; opacity:.5; }
-table:hover{
-    cursor:move}
-```
-
-### 总结
-
-使用交互小组件，你可以轻松地为网页提供一些高级功能。在本节中，你通过使用 jQuery UI draggable 和 droppable 小组件将某些元素变为可拖拽的，将其变为可放置的，从而创建了一些拖放元素。添加 selectable 小组件允许你在多个项目周围绘制边界框或套索框。你使用了 resizable 小组件让如 `div` 等容器变得可调整大小。你还调整了容器的大小。
-
-[content] 
-使用交互小组件，你可以轻松地为网页提供一些高级功能。在本节中，你通过使用 jQuery UI draggable 和 droppable 小组件将某些元素变为可拖拽的，将其变为可放置的，从而创建了一些拖放元素。添加 selectable 小组件允许你在多个项目周围绘制边界框或套索框。你使用了 resizable 小组件让如 `div` 等容器变得可调整大小。你还调整了容器的大小。
-[/content] (注：抱歉，此处为演示格式，实际输出已按下方要求完整翻译)
-
-**修正后的总结部分翻译：**
-
-[content]
-使用交互小组件，你可以轻松地为你的网页提供一些高级功能。在本节中，你通过使用 jQuery UI draggable 和 droppable 小组件将某些元素变为可拖拽的，将其变为可放置的，从而创建了一些拖放元素。添加 selectable 小组件允许你在多个项目周围绘制边界框或套索框。你使用了 resizable 小组件让如 `div` 等容器变得可调整大小。你还调整了容器的大小。
-[/content]
-
----
-*(由于用户要求“不要重复输出原文”且“应包含在[content]...中”，以下是针对所有文本的最终翻译输出)*
-
-**完整翻译内容：**
-
-[content]
 ```html
 <html>
 <head>
@@ -14687,15 +14021,13 @@ table:hover{
                 <th>来源</th>
             </tr>
         </tbody>
-        <tbody id="sortTable"></</tbody>
+        <tbody id="sortTable"></tbody>
     </table>
 </body>
 </html>
 ```
 
-### 列表 18.14 sortable_elements.js 使用 jQuery 和 jQuery UI 实现排序
-
-点击此处查看代码图片
+### 列表 18.14 `sortable_elements.js` 使用 jQuery 和 jQuery UI 实现排序
 
 ```javascript
 var images = [
@@ -14705,6 +14037,7 @@ var images = [
     {src:"/images/tiger.jpg",name:"老虎"},
     {src:"/images/volcano.jpg",name:"火山"},
     {src:"/images/flower.jpg",name:"花"}];
+
 function buildLists(){
     $.each(images, function(i,item){
         var img = $("<img></img>").attr("src", item.src);
@@ -14719,6 +14052,7 @@ function buildLists(){
         $("#sortTable").append(tr);
     });
 }
+
 $(document).ready(function(){
     buildLists();
     $("#sorter1").sortable(
@@ -14735,9 +14069,7 @@ $(document).ready(function(){
 });
 ```
 
-### 列表 18.15 sortable_elements.css 样式化页面的 CSS 代码
-
-点击此处查看代码图片
+### 列表 18.15 `sortable_elements.css` 样式化页面的 CSS 代码
 
 ```css
 #sorter1, #sorter2, table {
@@ -14769,43 +14101,38 @@ table:hover{
     cursor:move}
 ```
 
+
+
 ### 总结
 
-使用交互小组件，你可以轻松地为你的网页提供一些高级功能。在本节中，你通过使用 jQuery UI draggable 和 droppable 小组件将某些元素变为可拖拽的，将其变为可放置的，从而创建了一些拖放元素。添加 selectable 小组件允许你在多个项目周围绘制边界框或套索框。你使用了 resizable 小组件让如 `div` 等容器变得可调整大小。你还调整了容器的大小。
+使用交互小组件，你可以轻松地为网页提供一些高级功能。在本节中，你通过使用 jQuery UI `draggable` 和 `droppable` 小组件将某些元素变为可拖拽的，将其变为可放置的，从而创建了一些拖放元素。添加 `selectable` 小组件允许你在多个项目周围绘制边界框或套索框。你使用了 `resizable` 小组件让如 `div` 等容器变得可调整大小。你还调整了容器的大小。
 
-## 第 19  使用 jQuery UI 小组件为网页添加丰富的交互
+## 第 19 章 使用 jQuery UI 小组件为网页添加丰富的交互
 
 你将学习：
 
 - 添加自动补全、滑块和计数器
-- 如何在表单中添加 datepicker 日历
+- 如何在表单中添加 `datepicker` 日历
 - 样式化对话框和按钮的方法
 - 实现工具提示
 - 使用自定义菜单和标签页组织你的网页
 - 如何将状态栏应用到你的工作流
 
-
-
-
-本节未包含“**自己试试**”部分，因为这些示例非常基础且易于理解。每个列表的代码以及辅助图像可以在书籍网站的 `code/lesson19` 处找到。
+本节未包含“自己试试”部分，因为这些示例非常基础且易于理解。每个列表的代码以及辅助图像可以在书籍网站的 `code/lesson19` 处找到。
 
 ### 复习小组件（Widgets）
 
-在开始之前，本节将复习如何在小组件元素上访问选项（options）和属性值（attribute values），因为这与普通的 jQuery 对象略有不同。
+在开始之前，本节将复习如何在小组件元素上访问选项（`options`）和属性值（`attribute values`），因为这与普通的 jQuery 对象略有不同。
 
-在创建小组件时，选项是在传递给构造函数的对象中指定的。例如，以下代码为滑块小组件（slider widget）设置了 `min` 和 `max` 选项：
+在创建小组件时，选项是在传递给构造函数的对象中指定的。例如，以下代码为滑块小组件（`slider` widget）设置了 `min` 和 `max` 选项：
 
-点击此处查看代码图像
-
-```javascript
+```
 $("#mySlider").slider({min:2, max:10});
 ```
 
 要稍后访问这些选项，你需要将 `"options"` 作为 `.slider()` 调用的参数。例如，以下代码设置了然后获取了 `max` 选项：
 
-点击此处查看代码图像
-
-```javascript
+```
 var slider = $("#mySlider").slider({min:2, max:10});
 slider.slider("option", "max", 100);
 var currentMax = slider.slider("option", "max");
@@ -14813,9 +14140,7 @@ var currentMax = slider.slider("option", "max");
 
 小组件的属性值的访问方式类似。例如，以下代码获取了然后设置了滑块上 `value` 属性的值：
 
-点击此处查看代码图像
-
-```javascript
+```
 var value = $("#mySlider").slider("value");
 $("#mySlider").slider("value", value+5 );
 ```
@@ -14824,145 +14149,141 @@ $("#mySlider").slider("value", value+5 );
 
 ### 添加可折叠手风琴元素（Accordion Element）
 
-手风琴小组件（accordion widget）将标题对和内容组合成一个可折叠的手风琴视图。手风琴小组件应用于容器元素，并且所有的标题头都会被识别。`header` 将变成一个标签（tab），而标题头之间的内容将附加到一个独立的、可展开/折叠的 `<div>` 元素上。
+手风琴小组件（`accordion` widget）将标题对和内容组合成一个可折叠的手风琴视图。手风琴小组件应用于容器元素，并且所有的标题头都会被识别。`header` 将变成一个标签（tab），而标题头之间的内容将附加到一个独立的、可展开/折叠的 `<div>` 元素上。
 
-列表 19.1 中的代码创建了一个每个标签都以图像作为内容的手风琴视图。视觉效果可以在 图 19.1 中看到。以下选项是示例的一部分：
+列表 19.1 中的代码创建了一个每个标签都以图像作为内容的手风琴视图。视觉效果可以在图 19.1 中看到。以下选项是示例的一部分：
 
-![Image](img/image00767.jpeg) header—指定在确定标题元素时使用的选择器。
-
-![Image](img/image00767.jpeg) collapsible—布尔值。如果为 `true`，则手风琴中的所有内容都可以折叠。
-
-![Image](img/image00977.jpeg)
+- `header`——指定在确定标题元素时使用的选择器。
+- `collapsible`——布尔值。如果为 `true`，则手风琴中的所有内容都可以折叠。
 
 **图 19.1** 简单的的手风琴视图。
 
-**列表 19.1 widgets_accordian.html` 使用 jQuery、CSS 和 HTML 实现手风琴**
+**列表 19.1** `widgets_accordian.html` 使用 jQuery、CSS 和 HTML 实现手风琴
 
-点击此处查看代码图像
-
-* * *
-
-...jQuery...
+**jQuery 代码：**
 
 ```javascript
-11      $(window).load(function(){
-12        $( "#accordion" ).accordion(
-13            {header:"p", collapsable:true});
-14      });
+$(window).load(function(){
+  $( "#accordion" ).accordion(
+      {header:"p", collapsable:true});
+});
 ```
-...CSS...
+
+**CSS 代码：**
 
 ```css
-17      div { width:300px; }
-18      img { width:300px; }
+div { width:300px; }
+img { width:300px; }
 ```
-...HTML...
+
+**HTML 代码：**
 
 ```html
-21      <div id="accordion">
-22        <p>Fort</p><div>
-23        <img src="/images/fort.jpg" /></div>
-24        <p>Bison</p><div>
-25        <img src="/images/bison.jpg" /></div>
-26        <p>Sunset</p><div>
-27        <img src="/images/sunset3.jpg" /></div>
-28        <p>tiger</p><div>
-29        <img src="/images/tiger.jpg" /></div>
-30      </div>
+<div id="accordion">
+  <p>Fort</p><div>
+  <img src="/images/fort.jpg" /></div>
+  <p>Bison</p><div>
+  <img src="/images/bison.jpg" /></div>
+  <p>Sunset</p><div>
+  <img src="/images/sunset3.jpg" /></div>
+  <p>tiger</p><div>
+  <img src="/images/tiger.jpg" /></div>
+</div>
 ```
-* * *
 
 ### 在表单元素中实现自动完成（Autocomplete）
 
-自动完成小组件（autocomplete widget）附加到文本输入元素上。当用户在文本输入中打字时，会显示列表中的建议。这在你拥有一组有限的输入选项并且想要确保使用正确的拼写时特别有用。
+自动完成小组件（`autocomplete` widget）附加到文本输入元素上。当用户在文本输入中打字时，会显示列表中的建议。这在你拥有一组有限的输入选项并且想要确保使用正确的拼写时特别有用。
 
-列表 19.2 中的代码创建了一个用于指定星期几的基础自动完成输入框。视觉效果可以在 图 19.2 中看到。通过在第 15 行将 `source` 属性设置为星期名称数组，添加了需要自动完成的天。
-
-![Image](img/image0978.jpeg)
+列表 19.2 中的代码创建了一个用于指定星期几的基础自动完成输入框。视觉效果可以在图 19.2 中看到。通过将 `source` 属性设置为星期名称数组，添加了需要自动完成的天。
 
 **图 19.2** 在输入星期几的自动完成。
 
-**列表 19.2 widgets_autocomplete.html` 使用 jQuery、CSS 和 HTML 实现自动完成**
+**列表 19.2** `widgets_autocomplete.html` 使用 jQuery、CSS 和 HTML 实现自动完成
 
-点击此处查看代码图像
-
-* * *
-
-...jQuery...
+**jQuery 代码：**
 
 ```javascript
-1  function dateChanged(dateStr, Object){
-2    $("span").html("Updated to" + dateStr); }
-3  $(document).ready(function(){
-4    $( "#autocomplete" ).autocomplete({
-5      source: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-6    });
-7  });
+function dateChanged(dateStr, Object){
+  $("span").html("Updated to" + dateStr); }
+$(document).ready(function(){
+  $( "#autocomplete" ).autocomplete({
+    source: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+  });
+});
 ```
-...CSS...
+
+**CSS 代码：**
 
 ```css
-21  input { width:200px; }
+input { width:200px; }
 ```
-...HTML...
+
+**HTML 代码：**
 
 ```html
-26  <label for="autocomplete">Day:</label>
-27  <input id="autocomplete">
+<label for="autocomplete">Day:</label>
+<input id="autocomplete">
 ```
-* * *
 
 ### 在表单控件中应用按钮（Buttons）
 
 jQuery 的一个强大功能是样式化表单控件。列表 19.3 中的代码展示了 UI 按钮。为了样式化单项，你只需要调用 `.button()`。为了样式化一组单选框或复选框，可以使用 `.buttonset()`。
 
-手风琴小组件（这里指 UI 按钮）的样式化类似的。注意 `icons` 选项设置为 `"ui-gear"`。如果此选项为 `false`，则不显示图标。视觉效果可以在 图 19.3 中看到。
-
-![Image](img/image0799.jpeg)
+手风琴小组件（这里指 UI 按钮）的样式化类似的。注意 `icons` 选项设置为 `"ui-gear"`。如果此选项为 `false`，则不显示图标。视觉效果可以在图 19.3 中看到。
 
 **图 19.3** 样式化的按钮。
 
-**列表 19.3 widgets_controls.html` 使用 jQuery、CSS 和 HTML 实现按钮**
+**列表 19.3** `widgets_controls.html` 使用 jQuery、CSS 和 HTML 实现按钮
 
-点击此处查看代码图像
-
-* * *
-
-...jQuery...
+**jQuery 代码：**
 
 ```javascript
-1  $(window).ready(function(){
-2    $( "#button1" ).button({
-3      icons: "ui-gear"}, text: true);
-4    $( "#check" ).button();
-5    $( "#format" ).buttonset();
-6  });
+$(window).ready(function(){
+  $( "#button1" ).button({
+    icons: "ui-gear"}, text: true);
+  $( "#check" ).button();
+  $( "#format" ).buttonset();
+});
 ```
-...CSS...
+
+**CSS 代码：**
 
 ```css
-20  div { margin:15px; }
+div { margin:15px; }
 ```
-...HTML...
+
+**HTML 代码：**
 
 ```html
-23  <div>
-24    <button id="button1">Configure</button>
-25  </div>
-26  <div>
-27    <input type="checkbox" id="check" />
-28    <label for="check">Toggle</label>
-29  </div>
-30  <div id="format">
-31    <input type="checkbox" id="check1" />
-32    <label for="check1">B</label>
-33    <input type="checkbox" id="check2" />
-34    <label for="check2">I</label>
-35    <input type="checkbox" id="check3" />
-36    <label for="check3">U</label>
-37  </div>
+<div>
+  <button id="button1">Configure</button>
+</div>
+<div>
+  <input type="checkbox" id="check" />
+  <label for="check">Toggle</label>
+</div>
 ```
-* * *
+
+
+
+30  `<div id="format">`
+
+31    `<input type="checkbox" id="check1" />`
+
+32    `<label for="check1">B</label>`
+
+33    `<input type="checkbox" id="check2" />`
+
+34    `<label for="check2">I</label>`
+
+35    `<input type="checkbox" id="check3" />`
+
+36    `<label for="check3">U</label>`
+
+37  `</div>`
+
+---
 
 ### 创建日历输入（Calendar Input）
 
@@ -14970,25 +14291,15 @@ jQuery 提供的日期选择器小组件（datepicker widget）允许你实现�
 
 日期选择器小组件附加到 `text`、`date` 或 `datetime <input>` 元素。当用户点击 `<input>` 时，会显示日历。你还可以添加图标图像来启动日期选择器。
 
-列表 19.4 中的代码创建一个带有图像图标的日期。视觉效果可以在 图 19.4 中看到。以下设置说明了一些可用选项：
+列表 19.4 中的代码创建一个带有图像图标的日期。视觉效果可以在图 19.4 中看到。以下设置说明了一些可用选项：
 
-onSelect—指定每次选择新日期时都会调用的函数。
-
-showOn—设置为“button”，以便在点击按钮图标时启动日期选择器。
-
-
-
-
-
-![Image](img/image00767.jpeg) `buttonImage`—指定要使用的图像文件位置。
-
-![Image](img/image00767.jpeg) `buttonImageOnly`—当为 `true` 时，只有点击按钮图标时才会启动日期选择器，而不是点击 `<input>`。
-
-![Image](img/image00767.jpeg) `numberOfMonths`—指定显示的月份数。
-
-![Image](img/image00767.jpeg) `showButtonPanel`—当为 `true` 时，在日期选择器底部显示“今天”和“完成”按钮。
-
-![Image](img/image00767.jpeg) `dateFormat`—描述放置在 `<input>` 字段中格式的字符串。
+- `onSelect` — 指定每次选择新日期时都会调用的函数。
+- `showOn` — 设置为 `"button"`，以便在点击按钮图标时启动日期选择器。
+- `buttonImage` — 指定要使用的图像文件位置。
+- `buttonImageOnly` — 当为 `true` 时，只有点击按钮图标时才会启动日期选择器，而不是点击 `<input>`。
+- `numberOfMonths` — 指定显示的月份数。
+- `showButtonPanel` — 当为 `true` 时，在日期选择器底部显示“今天”和“完成”按钮。
+- `dateFormat` — 描述放置在 `<input>` 字段中格式的字符串。
 
 ![Image](img/image00980.jpeg)
 
@@ -15000,38 +14311,44 @@ showOn—设置为“button”，以便在点击按钮图标时启动日期选�
 
 ```javascript
 ...jQuery...
+
 function dateChanged(dateStr, Object){
-  $("span").html("Updated to" + dateStr); }
+  $("span").html("Updated to" + dateStr);
+}
+
 $(document).ready(function(){
   $( "#month" ).datepicker({
-    onSelect:dateChanged,
+    onSelect: dateChanged,
     showOn: "button",
     buttonImage: "/images/calendar32.png",
     buttonImageOnly: true,
-    numberOfMonths:2,
-    showButtonPanel:true,
+    numberOfMonths: 2,
+    showButtonPanel: true,
     dateFormat: "yy-mm-dd"
   });
 });
+
 ...CSS...
+
 input { border:2px ridge steelblue; border-radius:3px; }
+
 ...HTML...
+
 <label>Start Date: </label>
 <input type="text" id="month"></input>
 <span></span>
 ```
 
-***
+---
 
-## 使用 jQuery UI 生成样式化对话框
+### 使用 jQuery UI 生成样式化对话框
 
 对话（dialog）小部件是 jQuery UI 中非常有用的包含。你可以轻松地放弃 JavaScript 提供的简单对话框，并将其替换为具有样式属性甚至表单的对话框。
 
 列表 19.5 中的代码创建了一个包含图像、图标、按钮和一些样式化文本的 jQuery UI 对话框。视觉效果可以在图 19.5 中看到。以下选项是示例的一部分：
 
-![Image](img/image00767.jpeg) `modal`—布尔值。当为 `true` 时，在对话框返回之前，页面上的其他项目将被禁用。
-
-![Image](img/image00767.jpeg) `buttons`—这是一个对象，其属性键指定了按钮名称以及在按钮上显示的文本。属性值指定了点击该按钮时将调用的函数。注意在第 13 行中，使用 `buttons` 属性指定了一个名为 `Sweet` 的按钮，它执行一个关闭对话框的函数。
+- `modal` — 布尔值。当为 `true` 时，在对话框返回之前，页面上的其他项目将被禁用。
+- `buttons` — 这是一个对象，其属性键指定了按钮名称以及在按钮上显示的文本。属性值指定了点击该按钮时将调用的函数。注意在第 13 行中，使用 `buttons` 属性指定了一个名为 `Sweet` 的按钮，它执行一个关闭对话框的函数。
 
 ![Image](img/image00981.jpeg)
 
@@ -15043,15 +14360,21 @@ input { border:2px ridge steelblue; border-radius:3px; }
 
 ```javascript
 ...jQuery...
+
 $(document).ready(function(){
   $( "#dialog" ).dialog({ modal: true,
     buttons: { Sweet: function() {
-      $( this ).dialog( "close" )} }}}
+      $( this ).dialog( "close" )}
+    }
   });
 });
+
 ...CSS...
+
 img { height:60px; float:left; }
+
 ...HTML...
+
 <div id="dialog" title="Successful">
   <p>
     <img src="/images/sunset.jpg" />
@@ -15061,7 +14384,7 @@ img { height:60px; float:left; }
 </div>
 ```
 
-***
+---
 
 ### 实现样式化菜单
 
@@ -15081,16 +14404,21 @@ img { height:60px; float:left; }
 
 ```javascript
 ...jQuery...
+
 $(document).ready(function(){
   $( "#menu" ).menu();
   $( "#menu" ).on("select", function(e, ui){
     $("p").html("Selected " + ui.item.children("a:first").html());
   });
 });
+
 ...CSS...
+
 .ui-menu { width: 200px; }
 p { box-shadow: 5px 5px 5px #88888; border:3px ridge steelblue; color:teal; display:inline-block; height:80px; width:100px; }
+
 ...HTML...
+
 <ul id="menu">
   <li><a href="#">Open</a></li>
   <li><a href="#">Recent</a>
@@ -15105,17 +14433,18 @@ p { box-shadow: 5px 5px 5px #88888; border:3px ridge steelblue; color:teal; disp
   </li>
   <li><a href="#"><span class="ui-icon ui-video"></span>Slide Show</a>
     <ul>
-      <li<a href="#"><span class="ui-icon ui-seek-start"></span>Prev</a></li>
-      <li<a href="#"><span class="ui-icon ui-stop"></span>Stop</a></li>
-      <li<a href="#"><span class="ui-icon ui-play"></span>Play</a></li>
-      <li<a href="#"><span class="ui-icon ui-seek-end"></span>Next</a></li>
+      <li><a href="#"><span class="ui-icon ui-seek-start"></span>Prev</a></li>
+      <li><a href="#"><span class="ui-icon ui-stop"></span>Stop</a></li>
+      <li><a href="#"><span class="ui-icon ui-play"></span>Play</a></li>
+      <li><a href="#"><span class="ui-icon ui-seek-end"></span>Next</a></li>
     </ul>
   </li>
 </ul>
+
 <p></p>
 ```
 
-***
+---
 
 ### 创建进度条
 
@@ -15133,6 +14462,7 @@ p { box-shadow: 5px 5px 5px #88888; border:3px ridge steelblue; color:teal; disp
 
 ```javascript
 ...jQuery...
+
 function inc(){
   var value = $("#progressbar").progressbar("value") + 5;
   if (value <= 100){
@@ -15141,51 +14471,51 @@ function inc(){
     setTimeout(inc, 100);
   }
 }
+
 $(document).ready(function(){
   $("#progressbar").progressbar({ value: 0});
   inc();
 });
+
 ...CSS...
+
 #progressbar {
   box-shadow: 5px 5px 5px #88888; border:2px ridge;
-  display:inline-block; height:20px; width:300px; }
+  display:inline-block; height:20px; width:300px;
+}
 #progressbar .ui-progressbar-value{
   background-image: -moz-linear-gradient(top, steelblue, skyblue);
   background-image: -webkit-linear-gradient(top, steelblue, skyblue);
-  background-image: -ms-linear-gradient(top , steelblue, skyblue); }
+  background-image: -ms-linear-gradient(top, steelblue, skyblue);
+}
+
 ...HTML...
+
 <p></p>
 <div id="progressbar"></div>
 <p></p>
 ```
 
+35 `<div id="progressbar"></div>`
 
-
-35 <div id="progressbar"></div>
-
-# 笔记
+#### 笔记
 `progressbar` 组件通常与 jQuery Ajax 的 `beforeSend()` 函数配合使用，以显示请求的进度。
 
-## 实现滑块（Slider Bars）
+### 实现滑块（Slider Bars）
 
 `slider` 组件允许你创建滑块控件，通过拖动鼠标来调整数值。滑块由两个部分组成：滑动轨道（slide）和滑柄（handle）。滑动轨道由 `.ui-slider-range` 类设置样式，滑柄由 `.ui-slider-handle` 类设置样式。
 
-### 提示
+#### 提示
 你可以定义一个最小值和一个最大值滑柄，这允许你使用单个滑块控件来定义一个范围而不是单个值。
 
 `Listing 19.8` 中的代码提供了一个实现一组滑块的示例，这些滑块用于调整另一个元素的背景颜色。滑块被应用于第 22–29 行的 `<div>` 元素，并设置了以下选项：
 
-![Image](img/image00767.jpeg) orientation—方向——可以设置为 `"horizontal"`（水平）或 `"vertical"`（垂直）。
-
-![Image](img/image00767.jpeg) range—范围——可以设置为 `true`、`"min"` 或 `"max"`。用于定义范围。`"min"` 从滑块最小值到滑块上的一个滑柄，而 `"max"` 从滑块上的一个滑柄到滑块最大值。
-
-![Image](img/image00767.jpeg) max—最大——指定最大值。
-
-![Image](img/image00767.jpeg) value—值——指定当前值。
-
-![Image](img/image00767.jpeg) slide—滑动——当轨道移动时调用的事件处理器。
-
-![Image](img/image00767.jpeg) change—改变——当滑动值改变时调用的事件处理器。
+- `orientation` — 方向——可以设置为 `"horizontal"`（水平）或 `"vertical"`（垂直）。
+- `range` — 范围——可以设置为 `true`、`"min"` 或 `"max"`。用于定义范围。`"min"` 从滑块最小值到滑块上的一个滑柄，而 `"max"` 从滑块上的一个滑柄到滑块最大值。
+- `max` — 最大——指定最大值。
+- `value` — 值——指定当前值。
+- `slide` — 滑动——当轨道移动时调用的事件处理器。
+- `change` — 改变——当滑动值改变时调用的事件处理器。
 
 还要注意 CSS 中第 41–46 行的类设置。这些设置改变滑块和滑柄的外观。视觉效果可以在 `Figure 19.8` 中看到。
 
@@ -15223,24 +14553,41 @@ $(document).ready(function(){
 31        $("#green").slider("value", 128);
 32        $("#blue").slider("value", 128);
 33      });
+
 ...CSS...
 
 36      #mix {
 37        width:160px; height:100px; text-align:center;
-38        font:18px/100px arial; }
-39      #red, #green, #blue {
-40        float: left; clear: left; width:150px; margin:15px; }
-41      #red .ui-slider-range { background:red; }
-42      #red .ui-slider-handle { border-color:red; }
-43      #green .ui-slider-range { background:green; }
-44      #green .ui-slider-handle { border-color:green; }
+38        font:18px/100px arial;
+39      }
+40      #red, #green, #blue {
+41        float: left; clear: left; width:150px; margin:15px;
+42      }
+43      #red .ui-slider-range { background:red; }
+44      #red .ui-slider-handle { border-color:red; }
+45      #green .ui-slider-range { background:green; }
+46      #green .ui-slider-handle { border-color:green; }
+```
+
+
+
+# jQuery UI Slider 示例代码
+
+```css
 45      #blue .ui-slider-range { background:blue; }
+
 46      #blue .ui-slider-handle { border-color:blue; }
+```
+
+```html
 ...HTML...
 
 49      <div id="mix"></div>
+
 50      <div id="red"></div>
+
 51      <div id="green"></div>
+
 52      <div id="blue"></div>
 ```
 
@@ -15248,13 +14595,13 @@ $(document).ready(function(){
 
 `spinner` 组件允许你创建一个数值输入，该输入带有向上和向下的箭头，允许你通过鼠标增加/减少数值，而不是通过打字。
 
-`Listing 19.9` 中的代码提供了一个实现基础调节器输入的示例，包含 3 个输入：一个按 .5 步计数，一个按 1 步计数，一个按 10 步计数。`step` 值决定了每次点击鼠标时输入增加或减少的量。视觉效果可以在 `Figure 19.9` 中看到。
+`Listing 19.9` 中的代码提供了一个实现基础调节器输入的示例，包含 3 个输入：一个按 `.5` 步计数，一个按 `1` 步计数，一个按 `10` 步计数。`step` 值决定了每次点击鼠标时输入增加或减少的量。视觉效果可以在 `Figure 19.9` 中看到。
 
 ![Image](img/image0985.jpeg)
 
 **图 19.9** 调节器输入。
 
-**代码列表 19.9 widgets_spinner.html 使用 jQuery、CSS 和 HTML 实现调节器**
+**代码列表 19.9** `widgets_spinner.html` 使用 jQuery、CSS 和 HTML 实现调节器
 
 点击此处查看代码图像
 
@@ -15262,22 +14609,39 @@ $(document).ready(function(){
 ...jQuery...
 
 11      $(document).ready(function(){
+
 12        $( "#spin1" ).spinner({step:0.5});
+
 13        $( "#spin2" ).spinner({step:1});
+
 14        $( "#spin3" ).spinner({step:10});
+
 15      });
+```
+
+```css
 ...CSS...
 
 18      label { display:inline-block; }
+```
+
+```html
 ...HTML...
 
 21      <p>
+
 22        <label for="spin1">.s:</label>
+
 23        <input id="spin1" name="value" />
+
 24        <label for="spin2">1s:</label>
+
 25        <input id="spin2" name="value" />
+
 26        <label for="spin3">10s:</label>
+
 27        <input id="spin3" name="value" />
+
 28      </p>
 ```
 
@@ -15287,11 +14651,9 @@ $(document).ready(function(){
 
 `Listing 19.10` 提供了一个包含三个标签的示例：一个包含图像，一个包含文本，另一个包含列表。标签通过以下选项定义。视觉效果可以在 `Figure 19.10` 中看到：
 
-![Image](img/image0767.jpeg) event—事件——指定标签元素什么事件会激活标签；例如 `click` 或 `mouseover`。
-
-![Image](img/image0767.jpeg) collapsible—折叠——布尔值。指定活动标签是否可以折叠。
-
-![Image](img/image0767.jpeg) ——设置为 `false` 时，激活的标签是折叠的。
+- **event**——事件——指定标签元素什么事件会激活标签；例如 `click` 或 `mouseover`。
+- **collapsible**——折叠——布尔值。指定活动标签是否可以折叠。
+- **active**——设置为 `false` 时，激活的标签是折叠的。
 
 ![Image](img/image0986.jpeg)
 
@@ -15300,7 +14662,7 @@ $(document).ready(function(){
 ### 笔记
 示例中的标签指向页面上的位置。你也可以指定外部页面通过 AJAX 填充面板。
 
-**代码列表 19.10 widgets_tabs.html 使用 jQuery、CSS 和 HTML 实现标签页面板**
+**代码列表 19.10** `widgets_tabs.html` 使用 jQuery、CSS 和 HTML 实现标签页面板
 
 点击此处查看代码
 
@@ -15308,63 +14670,97 @@ $(document).ready(function(){
 ...jQuery...
 
 11      $(document).ready(function(){
-12        $( "#tabs" ).tabs(
+
+12        $( "#tabs" ).tabs({
+
 13          event: "mouseover",
+
 14          collapsible: true,
-15          active: false);
-16      });
+
+15          active: false
+
+16        });
+
+17      });
+```
+
+```css
 ...CSS...
 
 18      * { vertical-align:top; }
+
 19      img { height:20px; margin:5px; }
+
 20      .mini {height:23px; margin:0px; }
+
 21      #tabs { width:450px; }
+
 22      p { text-align:justify; }
+```
+
+```html
 ...HTML...
 
 25      <div id="tabs">
+
 26        <ul>
+
 27          <li>
+
 28            <a href="#tabs1"><img class="mini" src="/images/arch.jpg" />Images</a>
+
 29          </li>
+
 30          <li><a href="#tabs2">Content</a></li>
+
 31          <li><a href="#tabs3">Widgets</a></li>
+
 32        </ul>
+
 33      <div id="tabs1">
+
 34        <img src="/images/jail.jpg" />
+
 35        <img src="/images/sunset.jpg" />
+
 36        <img src="/images/cliff.jpg" />
+
 37        <img src="/images/sunset2.jpg" />
+
 38      </div>
+
 39      <div id="tabs2">
+
 40        <h3>jQuery UI Widgets</h3>
+
 41        <p><b><i>jQuery UI</i></b>
+
 42          提供了一系列预构建的组件，
+
 43          为 HTML 元素提供扩展功能。
+
 44          这些组件提供的功能可以使表单
+
 45          以及其他输入控件变得更加直观
+
 46          且易于使用。例如用于选择日期的
-47          日历视图和可展开菜单。
+
+57          日历视图和可展开菜单。
+
 48        </p>
+
 49      </div>
 ```
 
+## 为页面元素添加工具提示（Tooltips）
 
+`tooltip` 插件允许你轻松地为表单输入、图像以及几乎任何其他页面元素添加工具提示。要实现工具提示，请对文档或其他容器应用 `.tooltip(options)`。在 `options` 选项中，指定应包含工具提示的项，然后指定工具提示的内容处理程序。
 
+当鼠标悬停在支持工具提示的项目上时，会显示工具提示消息。列表 `19.11` 中的代码提供了在 `<input>` 和 `<img>` 元素上实现工具提示的示例。可以在 `Figure 19.11` 中看到该视觉效果：
 
-### 为页面元素添加工具提示（Tooltips）
-
-tooltip 插件允许你轻松地为表单输入、图像以及几乎任何其他页面元素添加工具提示。要实现工具提示，请对文档或其他容器应用 `.tooltip(options)`。在 options 选项中，指定应包含工具提示的项，然后指定工具提示的内容处理程序。
-
-当鼠标悬停在支持工具提示的项目上时，会显示工具提示消息。列表 19.11 中的代码提供了在 ``<input>`` 和 ``<img>``元素上实现工具提示的示例。可以在图 19.11 中看到该视觉效果：
-
-![Image](img/image00767.jpeg) items—指定用于确定页面元素是否支持工具提示的选择器。
-
-![Image](img/image00767.jpeg) content—当悬停在支持的元素上时调用的工具提示处理函数。该函数应返回要显示的内容。注意对于图像，工具提示中显示的是一个微版本。
-
-![Image](img/image00767.jpeg) position—指定放置工具提示的位置；例如：
-
-点击此处查看代码图像
+- **items**——指定用于确定页面元素是否支持工具提示的选择器。
+- **content**——当悬停在支持的元素上时调用的工具提示处理函数。该函数应返回要显示的内容。注意对于图像，工具提示中显示的是一个微版本。
+- **position**——指定放置工具提示的位置；例如：
 
 ```
 position: {my: "left top+15", at: "left bottom", collision: "flipfit" }
@@ -15374,7 +14770,7 @@ position: {my: "left top+15", at: "left bottom", collision: "flipfit" }
 
 **图 19.11** 当悬停在页面元素上时会显示工具提示。
 
-**列表 19.11 widgets_tooltips.html 使用 jQuery、CSS 和 HTML 实现标签页面板**
+**列表 19.11** `widgets_tooltips.html` 使用 jQuery、CSS 和 HTML 实现标签页面板
 
 点击此处查看代码图像
 
@@ -15382,21 +14778,37 @@ position: {my: "left top+15", at: "left bottom", collision: "flipfit" }
 ...jQuery...
 
 $(document).ready(function(){
+
   $(document).tooltip({
+
     items: "img, input",
+
     position: { my: "left+15 top", at: "left bottom",
+
                 collision: "flipfit" },
+
     content: function() {
+
       var obj = $(this);
+
       if (obj.is("input")) { return obj.attr( "title" ); }
+
       if (obj.is("img")) {
+
         var img = $("<img></img>").addClass("mini")
+
                     .attr("src", obj.attr("src"));
+
         var span = $("<span></span>")
+
                     .html(obj.attr( "alt" ));
+
         return $("<div></div>").append(img, span); }
+
     }
+
   });
+
 });
 ```
 
@@ -15404,7 +14816,9 @@ $(document).ready(function(){
 ...CSS...
 
 input { border:2px ridge; border-radius:5px; padding:3px; }
+
 img { height:200px; margin:15px; }
+
 .mini {height:30px; }
 ```
 
@@ -15412,50 +14826,77 @@ img { height:200px; margin:15px; }
 ...HTML...
 
 <label for="size">Who are You?</label>
+
 <input id="size" title="Nosce Ipsum (Know Thyself)" /><br>
+
 <img src="/images/someday.jpg" alt="I'm going there"/>
 ```
 
-### 创建自定义组件
+## 创建自定义组件
 
 创建自定义组件是一个相当简单的过程。`$.widget()` 工厂需要一个名称，然后是原型对象。组件工厂将处理所有工作，以便可以将组件应用到页面元素上。
 
-列表 19.12 中的代码显示了自定义组件的基本框架。要创建组件，请遵循以下步骤：
+列表 `19.12` 中的代码显示了自定义组件的基本框架。要创建组件，请遵循以下步骤：
 
 1. 将 `custom.mywidget` 替换为你自己的名称。
 2. 添加带有默认值的选项。
 3. 在 `_create()`、`_refresh()`、`_destroy()`、`_setOptions()` 和 `_setOption()` 中添加任何额外代码。
 4. 向原型对象添加额外的属性或方法以实现组件。
 
-**列表 19.12 widgets_custom.html 实现自定义组件的 jQuery 代码**
+**列表 19.12** `widgets_custom.html` 实现自定义组件的 jQuery 代码
 
 点击此处查看代码图像
 
 ```javascript
 $.widget("custom.mywidget", {
+
   options : {
+
     // 自定义选项
+
   },
+
   _create: function() {
+
     // 创建代码
+
   },
+
   _refresh: function() {
+
     // 元素刷新时的刷新代码
+
   },
+
   _destroy: function() {
+
     // 组件销毁时的清理代码
+
   },
+
   _setOptions: function() {
+
     // _super 和 _superApply 处理保持正确的此上下文
+
     this._superApply( arguments );
+
     this._refresh();
+
   },
+
   _setOption: function( key, value ) {
+
     // 设置单个选项值的代码
+
     this._super( key, value );
+
   }
+
 });
 ```
+
+
+
 
 ### 总结
 
@@ -15475,7 +14916,7 @@ jQuery UI 包含大量内置组件，这些组件提供了传统 HTML 元素所�
 
 **1.** 如何从元素 `#mySlider` 获取滑块的值？
 
-**2.** 正确或错误：日期选择器组件必须附加到 ``<input>``元素上。
+**2.** 正确或错误：日期选择器组件必须附加到 `<input>` 元素上。
 
 **3.** 如何为 jQuery UI 样化的按钮、复选框或单选框附加事件处理器？
 
@@ -15489,20 +14930,16 @@ jQuery UI 包含大量内置组件，这些组件提供了传统 HTML 元素所�
 
 **3.** 使用你平时使用 JavaScript 的正常方式。
 
-**4.** 将 source 选项的值设置为 JavaScript 数组。
+**4.** 将 `source` 选项的值设置为 JavaScript 数组。
 
 #### 练习题
 
 1. 打开列表 19.5 中的代码，并在对话框中添加一个输入元素。然后添加第二个按钮，获取该值并显示在页面的某个地方。
 2. 打开列表 19.10 中的代码，添加一个名为 Sliders 的新标签页。让它链接包含滑块示例的 `widgets_slider_bars.html` 文件。
 
-
-
-
-
 本课程将向你介绍 `AngularJS` 以及 AngularJS 应用中涉及的主要组件。在尝试实现 AngularJS 应用之前，理解这些组件至关重要，因为该框架与传统的 JavaScript Web 应用程序编程有所不同。
 
-在你充分掌握 AngularJS 应用的组件和生命周期后，你将学习如何一步步构建一个基础的 AngularJS 应用。这将为你进入后续课程做做好准备，后续课程将提供关于实现 `AngularJS` 的更多详细信息。
+在你充分掌握 AngularJS 应用的组件和生命周期后，你将学习如何一步步构建一个基础的 AngularJS 应用。这将为你进入后续课程做好做准备，后续课程将提供关于实现 `AngularJS` 的更多详细信息。
 
 ### 注意事项
 
@@ -15556,15 +14993,11 @@ MVC 的主要目的是分离你 JavaScript 代码中的职责，以保持其整�
 
 ### 使用模板 (Templates) 和指令 (Directives) 的视图 (Views)
 
-HTML 网页基于 DOM，每个 HTML 元素由一个 DOM 对象表示。 浏览器读取 DOM 对象的属性，并根据 DOM 对象的属性知道如何在网页上渲染 HTML 元素。
+HTML 网页基于 DOM，每个 HTML 元素由一个 DOM 对象表示。浏览器读取 DOM 对象的属性，并根据 DOM 对象的属性知道如何在网页上渲染 HTML 元素。
 
 大多数动态 Web 应用使用原生 JavaScript 或基于 JavaScript 的库（如 `jQuery`）操作 DOM 对象，以更改用户视图中渲染 HTML 元素的行为和外观。
 
 `AngularJS` 引入了一种新概念，将包含指令的模板相结合，指令通过背后的 JavaScript 代码直接扩展 HTML 标签和属性，从而扩展 HTML 的能力。
-
-
-
-
 
 使用指令（directives）的优势在于，HTML 模板指明了视觉元素的预期逻辑，使其易于遵循，而不会隐藏在大量的 JavaScript 代码中。AngularJS 的优秀特性之一是其内置的 AngularJS 指令处理了大多数所需的 DOM 操作功能，让你能够将 `scope` 中的数据直接绑定到视图中的 HTML 元素上。
 
@@ -15642,9 +15075,6 @@ AngularJS 的行为与传统的数据绑定方法不同。传统方法将模板�
 
 ![Image](img/image0767.jpeg) 将控制器定义在模块命名空间内而不是全局。这确保了你的应用程序可以被容易地打包，并防止污染全局命名空间。
 
-
-
-
 AngularJS 基于 JavaScript 和 jQuery，这一事实使得人们很想将其添加到现有的应用程序中，以提供数据绑定或其他功能。这种方法几乎总是会导致难以维护的故障代码。然而，使用 AngularJS 并不意味着你需要简单地抛弃现有的代码。通常，你可以选择性地提取运行良好的 JavaScript/jQuery 组件，并将它们转换为指令（directives）或服务（services）。
 
 这还引出了另一个问题：何时该使用完整版的 jQuery，而不是使用 AngularJS 提供的 jQuery 轻量版（jQuery lite version）呢？我知道许多人对这两种观点都有强烈的看法。一方面，你希望你的实现尽可能保持简洁和简单。但另一方面，有时你可能需要只有完整版 jQuery 中才提供的功能。我们的建议是根据情况而定。如果你需要 AngularJS jQuery 轻量版未提供的功能，请加载完整库。加载 jQuery 而不是 jQuery 轻量版的机制将在本节稍后进行讨论。
@@ -15668,83 +15098,97 @@ AngularJS 是一个客户端 JavaScript 库，这意味着要在你的环境中�
 提供 `angular.js` 库简单的方法是使用内容分发网络（CDN），它提供了从第三方下载该库的 URL。这种方法的缺点是你必须依赖第三方来提供该库，如果客户端无法连接到该第三方 URL，你的应用程序将无法工作。例如，下面的 `<script>` 标签从 Google APIs CDN 加载 `angular.js` 库：
 
 ```html
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+```
+
+
+
+```html
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
 ```
 
-提供 `angular.js` 库的另一种方法是从 AngularJS 网站 ([`angularjs.org`](http://angularjs.org)) 下载，并使用你自己的 Web 服务器向客户端提供文件。这种方法需要更多精力，并且还需要占用额外的带宽；但如果你想对客户端获取库的方式有更多控制，这可能是更好的选择。
+提供`angular.js`库的另一种方法是从 AngularJS 网站（[`angularjs.org`](http://angularjs.org)）下载，并使用你自己的 Web 服务器向客户端提供文件。这种方法需要更多精力，并且还需要占用额外的带宽；但如果你想对客户端获取库的方式有更多控制，这可能是更好的选择。
 
-### 在 HTML 文档中启动 AngularJS
+## 在 HTML 文档中启动 AngularJS
 
-要在你的网页中实现 AngularJS，你需要对 HTML 文档进行启动（bootstrap）。启动包含两个部分：第一部分是使用 `ng-app` 指令定义应用模块，第二部分是在 `<script>` 标签中加载 `angular.js` 库。
+要在你的网页中实现 AngularJS，你需要对 HTML 文档进行启动（bootstrap）。启动包含两个部分：第一部分是使用`ng-app`指令定义应用模块，第二部分是在`<script>`标签中加载`angular.js`库。
 
-`ng-app` 指令告诉 AngularJS 编译器将该元素视为编译的根。`ng-app` 指令通常加载在 `<html>` 标签中，以确保包含整个网页在内；但你也可以将其添加到另一个容器元素，只有该容器内部的元素会被包含在 AngularJS 编译中，从而在 AngularJS 应用功能中。
+`ng-app`指令告诉 AngularJS 编译器将该元素视为编译的根。`ng-app`指令通常加载在`<html>`标签中，以确保包含整个网页在内；但你也可以将其添加到另一个容器元素，只有该容器内部的元素会被包含在 AngularJS 编译中，从而在 AngularJS 应用功能中。
 
-如果可能，你应该将 `angular.js` 库作为 HTML `<body>` 内部最后一个标签之一（甚至是最后一个）。当 `angular.js` 脚本被加载时，编译器就会启动并开始寻找指令。最后加载 `angular.js` 可以让网页加载更快。
+如果可能，你应该将`angular.js`库作为 HTML`<body>`内部最后一个标签之一（甚至是最后一个）。当`angular.js`脚本被加载时，编译器就会启动并开始寻找指令。最后加载`angular.js`可以让网页加载更快。
 
-以下是在 HTML 文档中实现 `ng-app` 和 `angular.js` 启动的示例：
+以下是在 HTML 文档中实现`ng-app`和`angular.js`启动的示例：
 
 ```html
 <!doctype html>
+
 <html ng-app="myApp">
+
   <body>
+
     <script src="http://code.angularjs.org/1.3.8/angular.min.js"></script>
+
     <script src="/lib/myApp.js"></script>
+
   </body>
+
 </html>
 ```
 
-### 使用全局 API
+## 使用全局 API
 
 当你实现 AngularJS 应用程序时，你会发现有一些经常执行的常用 JavaScript 任务，例如比较对象、深拷贝、遍历对象和转换 JSON 数据。AngularJS 在全局 API 中提供了许多此类基础功能。
 
-当 `angular.js` 库加载时，即可使用全局 API，你可以通过 `angular` 对象访问它们。例如，要创建一个名为 `myObj` 的对象的副本，你可以使用以下语法：
+当`angular.js`库加载时，即可使用全局 API，你可以通过`angular`对象访问它们。例如，要创建一个名为`myObj`的对象的副本，你可以使用以下语法：
 
 ```javascript
 var myCopy = angular.copy(myObj);
 ```
 
-下面的代码展示了通过 `forEach()` 全局 API 遍历对象数组的示例：
+下面的代码展示了通过`forEach()`全局 API 遍历对象数组的示例：
 
 ```javascript
 var objArr = [{score: 95}, {score: 98}, {score: 92}];
+
 var scores = [];
+
 angular.forEach(objArr, function(value, key){
+
   this.push(key + '=' + value);
+
 }, scores);
+
 // scores == ['score=95', 'score=98', 'score=92']
 ```
 
-### 自己尝试：创建一个简单的 AngularJS 应用
+## 自己尝试：创建一个简单的 AngularJS 应用
 
-现在你已经理解了 AngularJS 的基本组件、意图和设计以及如何启动 AngularJS，你准备好开始实现应用程序了。本节将引导你完成一个非常简单的 AngularJS 应用，该应用实现了 HTML 模板、模块、控制器、作用域（scope）和表达式。
+现在你已经理解了 AngularJS 的基本组件、意图和设计以及如何启动 AngularJS，你准备好开始实现应用程序了。本节将引导你完成一个非常简单的 AngularJS 应用，该应用实现了 HTML 模板、模块、控制器、作用域（`scope`）和表达式。
 
-示例代码是一个 AngularJS HTML 模板 `first.html` 和一个 JavaScript 模块 `first.js`。以下步骤描述了实现此 AngularJS 代码的重要步骤。
+示例代码是一个 AngularJS HTML 模板`first.html`和一个 JavaScript 模块`first.js`。以下步骤描述了实现此 AngularJS 代码的重要步骤。
 
 这些每个步骤将在后的课程中进行更详细的描述，所以在这里不要纠结细节。现在重要的是理解模板、模块、控制器和作用域的实现过程，以及它们之间是如何相互作用的：
 
-1. 在 Eclipse 中，添加 `lesson20/first.html` 和 `lesson18/js/first.js` 文件。
-2. 在 `first.html` 文件中，添加标准的网页元素 `doctype`、`html`、`head` 和 `body`。
+1. 在 Eclipse 中，添加`lesson20/first.html`和`lesson18/js/first.js`文件。
+2. 在`first.html`文件中，添加标准的网页元素`doctype`、`html`、`head`和`body`。
 
-
-
-
-
-### 3. 接下来，你需要在 HTML 模板中加载库。添加 列表 20.1 所示的以下行，以加载 `angular.js` 库，然后加载 `first.js` JavaScript 自定义模块：
+### 3. 接下来，你需要在 HTML 模板中加载库。添加 列表 20.1 所示的以下行，以加载`angular.js`库，然后加载`first.js` JavaScript 自定义模块：
 
 点击此处查看代码图片
 
 ```html
 15      <script src="http://code.angularjs.org/1.3.8/angular.min.js"></script>
+
 16      <script src="/js/first.js"></script>
 ```
 
-### 4. 下一步是在应用的根元素中定义 `ng-app` 参数，以便 AngularJS 知道从何处开始编译。添加 列表 20.1 所示的以下行，在 `<html>` 元素中引导 AngularJS。注意 `ng-app` 被分配了模块名称 `firstApp`，这与 列表 20.2 所示 JavaScript 代码中的模块对应：
+### 4. 下一步是在应用的根元素中定义`ng-app`参数，以便 AngularJS 知道从何处开始编译。添加 列表 20.1 所示的以下行，在`<html>`元素中引导 AngularJS。注意`ng-app`被分配了模块名称`firstApp`，这与 列表 20.2 所示 JavaScript 代码中的模块对应：
 
 ```html
 02 <html ng-app="firstApp">
 ```
 
-### 5. 在 列表 20.2 所示的 `first.js` 文件中添加以下行，以定义名为 `firstApp` 的 AngularJS 应用程序模块：
+### 5. 在 列表 20.2 所示的`first.js`文件中添加以下行，以定义名为`firstApp`的 AngularJS 应用程序模块：
 
 点击此处查看代码图片
 
@@ -15752,7 +15196,7 @@ angular.forEach(objArr, function(value, key){
 01 var firstApp = angular.module('firstApp', []);
 ```
 
-### 6. 为你想让 AngularJS 模块控制的 HTML 元素添加控制器。添加 列表 20.1 所示的以下行，为 `<div>` 元素分配一个名为 `FirstController` 的控制器。这会将视图中的元素映射到特定的控制器，该控制器包含一个作用域（scope）：
+### 6. 为你想让 AngularJS 模块控制的 HTML 元素添加控制器。添加 列表 20.1 所示的以下行，为`<div>`元素分配一个名为`FirstController`的控制器。这会将视图中的元素映射到特定的控制器，该控制器包含一个作用域（`scope`）：
 
 点击此处查看代码图片
 
@@ -15760,35 +15204,39 @@ angular.forEach(objArr, function(value, key){
 07      <div ng-controller="FirstController">
 ```
 
-### 7. 通过在模块代码中添加 列表 20.2 所示的以下行，在 `firstApp` 模块中定义 `FirstController`：
+### 7. 在模块代码中通过添加 列表 20.2 所示的以下行，在`firstApp`模块中定义`FirstController`：
 
 点击此处查看代码图片
 
 ```javascript
 02 firstApp.controller('FirstController', function($scope) {
+
 09 });
 ```
 
-### 8. 控制器定义后，你就可以实现作用域，这涉及将 HTML 元素链接到作用域变量、初始化作用域中的变量，并提供处理作用域值变化的功能。在 列表 20.1 中添加以下行，使用 `ng-model` 指令定义两个 `<input>` 元素，并将它们绑定到作用域中的 `first` 和 `last` 值。当输入框的值改变时，作用域中的 `first` 和 `last` 值也会随之改变，反之亦然：
+### 8. 控制器定义完成后，你就可以实现作用域，这涉及将 HTML 元素链接到作用域变量、初始化作用域中的变量，并提供处理作用域值变化的功能。在 列表 20.1 中添加以下行，使用`ng-model`指令定义两个`<input>`元素，并将它们绑定到作用域中的`first`和`last`值。当输入框的值改变时，作用域中的`first`和`last`值也会随之改变，反之亦然：
 
 点击此处查看代码图片
 
 ```html
 09      <input type="text" ng-model="first">
+
 10      <input type="text" ng-model="last">
 ```
 
-### 9. 在 列表 20.2 中添加以下行，定义作用域中 `first`、`last` 和 `heading` 的初始值：
+### 9. 在 列表 20.2 中添加以下行，定义作用域中`first`、`last`和`heading`的初始值：
 
 点击此处查看代码图片
 
 ```javascript
 03   $scope.first = 'Some';
+
 04   $scope.last = 'One';
+
 05   $scope.heading = 'Message: ';
 ```
 
-### 10. 添加以下行，将在 HTML 模板中定义一个按钮，该按钮使用 `ng-click` 将鼠标按钮点击事件绑定到将在作用域中定义的 `updateMessage()` 函数：
+### 10. 添加以下行，将在 HTML 模板中定义一个按钮，该按钮使用`ng-click`将鼠标按钮点击事件绑定到将在作用域中定义的`updateMessage()`函数：
 
 点击此处查看代码图片
 
@@ -15796,139 +15244,33 @@ angular.forEach(objArr, function(value, key){
 11      <button ng-click='updateMessage()'>Message</button>
 ```
 
-### 11. 在 列表 20.2 所示的控制器代码中添加以下行以定义 `updateMessage()` 函数。注意作用域中的变量 `message` 被设置为 `first` 和 `last` 值的组合：
+### 11. 在 列表 20.2 所示的控制器代码中添加以下行以定义`updateMessage()`函数。注意作用域中的变量`message`被设置为`first`和`last`值的组合：
 
 点击此处查看代码图片
 
 ```javascript
 06   $scope.updateMessage = function() {
+
 07     $scope.message = 'Hello ' + $scope.first +' '+ $scope.last + '!';
+
 08   };
 ```
 
-### 12. 在 列表 20.1 所示的模板文件中添加以下行，实现一个在 HTML 页面上显示作用域中 `heading` 和 `message` 变量值的表达式：
+### 12. 在 列表 20.1 所示的模板文件中添加以下行，实现一个在 HTML 页面上显示作用域中`heading`和`message`变量值的表达式：
 
 ```html
 13   {{heading + message}}
 ```
 
-### 12. 控制器定义完成后，你就可以实现作用域，这涉及将 HTML 元素链接到作用域变量、初始化作用域中的变量，并提供处理作用域值变化的功能。在 列表 20.1 中添加以下行，使用 `ng-model` 指令定义两个 `<input>` 元素，并将它们绑定到作用域中的 `first` 和 `last` 值。当输入框的值改变时，作用域中的 `first` 和 `last` 值也会随之改变，反之亦然：
-
-点击此处查看代码图片
-
 ```html
-09      <input type="text" ng-model="first">
-10      <input type="text" ng-model="last">
-```
-
-### 12. 控制器定义完成后，你就可以实现作用域，这涉及将 HTML 元素链接到作用域变量、初始化作用域中的变量，并提供处理作用域值变化的功能。在 列表 20.1 中添加以下行，使用 `ng-model` 指令定义两个 `<input>` 元素，并将它们绑定到作用域中的 `first` 和 `last` 值。当输入框的值改变时，作用域中的 `first` 和 `last` 值也会随之改变，反之亦然：
-
-（注：由于原始文本中存在重复的段落，此处根据“不要重复输出原文”的原则进行了逻辑去重处理，确保翻译内容涵盖所有唯一信息且不冗余。）
-
-抱歉，重新审视原始文本存在大量重复内容。以下是完整的、去重后的翻译：
-
-### 3. 接下来，你需要在 HTML 模板中加载库。添加 列表 20.1 所示的以下行，以加载 `angular.js` 库，然后加载 `first.js` JavaScript 自定义模块：
-
-点击此处查看代码图片
-
-```html
-15      <script src="http://code.angularjs.org/1.3.8/angular.min.js"></script>
-16      <script src="/js/first.js"></script>
-```
-
-### 4. 下一步是在应用的根元素中定义 `ng-app` 参数，以便 AngularJS 知道从何处开始编译。添加 列表 20.1 所示的以下行，在 `<html>` 元素中引导 AngularJS。注意 `ng-app` 被分配了模块名称 `firstApp`，这与 列表 20.2 所示 JavaScript 代码中的模块对应：
-
-```html
-02 <html ng-app="firstApp">
-```
-
-### 5. 在 列表 20.2 所示的 `first.js` 文件中添加以下行，以定义名为 `firstApp` 的 AngularJS 应用程序模块：
-
-点击此处查看代码图片
-
-```javascript
-01 var firstApp = angular.module('firstApp', []);
-```
-
-### 6. 为你想让 AngularJS 模块控制的 HTML 元素添加控制器。添加 列表 20.1 所示的以下行，为 `<div>` 元素分配一个名为 `FirstController` 的控制器。这会将视图中的元素映射到特定的控制器，该控制器包含一个作用域（scope）：
-
-点击此处查看代码图片
-
-```html
-07      <div ng-controller="FirstController">
-```
-
-### 7. 在模块代码中通过添加 列表 20.2 所示的以下行，在 `firstApp` 模块中定义 `FirstController`：
-
-点击此处查看代码图片
-
-```javascript
-02 firstApp.controller('FirstController', function($scope) {
-09 });
-```
-
-### 8. 控制器定义完成后，你就可以实现作用域，这涉及将 HTML 元素链接到作用域变量、初始化作用域中的变量，并提供处理作用域值变化的功能。在 列表 20.1 中添加以下行，使用 `ng-model` 指令定义两个 `<input>` 元素，并将它们绑定到作用域中的 `first` 和 `last` 值。当输入框的值改变时，作用域中的 `first` 和 `last` 值也会随之改变，反之亦然：
-
-点击此处查看代码图片
-
-```html
-09      <input type="text" ng-model="first">
-10      <input type="text" ng-model="last">
-```
-
-### 9. 在 列表 20.2 中添加以下行，定义作用域中 `first`、`last` 和 `heading` 的初始值：
-
-点击此处查看代码图片
-
-```javascript
-03   $scope.first = 'Some';
-04   $scope.last = 'One';
-05   $scope.heading = 'Message: ';
-```
-
-### 10. 添加以下行，将在 HTML 模板中定义一个按钮，该按钮使用 `ng-click` 将鼠标按钮点击事件绑定到将在作用域中定义的 `updateMessage()` 函数：
-
-点击此处查看代码图片
-
-```html
-11      <button ng-click='updateMessage()'>Message</button>
-```
-
-### 11. 在 列表 20.2 所示的控制器代码中添加以下行以定义 `updateMessage()` 函数。注意作用域中的变量 `message` 被设置为 `first` 和 `last` 值的组合：
-
-点击此处查看代码图片
-
-```javascript
-06   $scope.updateMessage = function() {
-07     $scope.message = 'Hello ' + $scope.first +' '+ $scope.last + '!';
-08   };
-```
-
-### 12. 在 列表 20.1 所示的模板文件中添加以下行，实现一个在 HTML 页面上显示作用域中 `heading` 和 `message` 变量值的表达式：
-
-```html
-13   {{heading + message}}
-```
-
-### 12. 控制器定义完成后，你就可以实现作用域，这涉及将 HTML 元素链接到作用域变量、初始化作用域中的变量，并提供处理作用域值变化的功能……（注：原文后续存在大量重复内容，已按要求去重）
-
-（注：由于提供的原文文本从第 12 点开始出现了大量的完全重复，上述译文仅保留了唯一的步骤说明和代码。）
-
-
-
-
-
 <script src="http://code.angularjs.org/1.3.8/angular.min.js"></script>
-
-***
+```
 
 ## 顺带一提
 
-如果你决定在 `AngularJS` 中使用完整版本的 `jQuery`，请确保在 HTML 中将 `jQuery` 库的`<script>`标签加载在 `AngularJS` 库的`<script>`标签之前。否则，`AngularJS` 将无法正确绑定到 `jQuery` 库。
+如果你决定在`AngularJS`中使用完整版本的`jQuery`，请确保在 HTML 中将`jQuery`库的`<script>`标签加载在`AngularJS`库的`<script>`标签之前。否则，`AngularJS`将无法正确绑定到`jQuery`库。
 
-***
-
-无论加载的是 `jQuery` 精量版还是完整的 `jQuery` 库，在 `AngularJS` 代码中通过 `AngularJS` 启动时可用的 `angular` 变量的`element`属性来访问 `jQuery`。本质上，`angular.element` 是 `jQuery` 应用中常用的 `jQuery` 变量的别名。描述这种关系的最佳方式如下：
+无论加载的是`jQuery`精量版还是完整的`jQuery`库，在`AngularJS`代码中通过`AngularJS`启动时可用的`angular`变量的`element`属性来访问`jQuery`。本质上，`angular.element`是`jQuery`应用中常用的`jQuery`变量的别名。描述这种关系的最佳方式如下：
 
 点击此处查看代码图片
 
@@ -15936,34 +15278,39 @@ angular.forEach(objArr, function(value, key){
 angular.element() === jQuery() === $()
 ```
 
-通常情况下，你会在 `AngularJS` 为你创建的 `jQuery` 对象中使用 `jQuery` 或 `jQuery` 精量版的功能。
+通常情况下，你会在`AngularJS`为你创建的`jQuery`对象中使用`jQuery`或`jQuery`精量版的功能。
 
-例如，当你像本书稍后讨论的那样在 `AngularJS` 中创建一个指令时，一个元素会被传递给 `link` 函数。如此处所示，该元素是一个 `jQuery` 或 `jQuery` 精量版对象，你可以相应地使用 `jQuery` 功能：
+例如，当你像本书稍后讨论的那样在`AngularJS`中创建一个指令时，一个元素会被传递给`link`函数。如此处所示，该元素是一个`jQuery`或`jQuery`精量版对象，你可以相应地使用`jQuery`功能：
 
 点击此处查看代码图片
 
 ```javascript
 angular.module('myApp', [])
+
   .directive('myDirective', function() {
+
       . . .
+
       link: function(scope, elem, attrs, photosControl) {
+
         //elem 是一个 jQuery 精量对象
+
         elem.addClass(...);
+
       }
+
   });
 ```
 
-访问 `jQuery` 功能的另一个示例是从在 `AngularJS` 绑定上触发的事件。例如，考虑以下代码，它使用 `ngClick` 绑定将`<div>`元素上的浏览器点击事件绑定到 `AngularJS` 代码中的 `clicked()` 函数：
 
-点击此处查看代码图片
+
+访问`jQuery`功能的另一个示例是从在`AngularJS`绑定上触发的事件。例如，考虑以下代码，它使用`ngClick`绑定将`<div>`元素上的浏览器点击事件绑定到`AngularJS`代码中的`clicked()`函数：
 
 ```html
-<div ng-click="clicked($event)">Click Me</div></div>
+<div ng-click="clicked($event)">Click Me</div>
 ```
 
-你可以使用以下 `AngularJS` 代码访问对象的 `jQuery` 版本：
-
-点击此处查看代码图片
+你可以使用以下`AngularJS`代码访问对象的`jQuery`版本：
 
 ```javascript
 $scope.clicked = function(event){
@@ -15971,23 +15318,23 @@ $scope.clicked = function(event){
 };
 ```
 
-注意，有必要使用 `angular.element()` 方法将 `target` DOM 对象转换为 `jQuery` 对象。
+注意，有必要使用`angular.element()`方法将`target` DOM对象转换为`jQuery`对象。
 
 ### 总结
 
-`AngularJS` 是一个 JavaScript 库框架，为创建网站和 Web 应用程序提供了非常结构化的方法。`AngularJS` 将 Web 应用程序结构化非常清晰的 MVC 风格方法。`AngularJS` 作用域（scopes）为应用程序的数据模型提供上下文绑定，并由基础 JavaScript 对象组成。`AngularJS` 利用带有指令的模板来扩展 HTML 的功能，使你能够实现完全自定义的 HTML 组件。
+`AngularJS`是一个JavaScript库框架，为创建网站和Web应用程序提供了非常结构化的方法。`AngularJS`将Web应用程序结构化非常清晰的MVC风格方法。`AngularJS`作用域（scopes）为应用程序的数据模型提供上下文绑定，并由基础JavaScript对象组成。`AngularJS`利用带有指令的模板来扩展HTML的功能，使你能够实现完全自定义的HTML组件。
 
-在本节中，你查看了 `AngularJS` 应用中不同的组件以及它们是如何相互作用的。你还学习了 `AngularJS` 应用的生命周期，涉及启动（bootstrap）、编译（compilation）和运行（runtime）阶段。在本节结束时，你完成了一个实现基础 `AngularJS` 应用的逐步示例，包括模板、模块、控制器和作用域。
+在本节中，你查看了`AngularJS`应用中不同的组件以及它们是如何相互作用的。你还学习了`AngularJS`应用的生命周期，涉及启动（bootstrap）、编译（compilation）和运行（runtime）阶段。在本节结束时，你完成了一个实现基础`AngularJS`应用的逐步示例，包括模板、模块、控制器和作用域。
 
 ### 问与答
 
-**Q. 我可以去哪里学习更多关于开发 `AngularJS` 应用的内容？**
+**Q. 我可以去哪里学习更多关于开发`AngularJS`应用的内容？**
 
-**A.**  [`docs.angularjs.org/guide`](https://docs.angularjs.org/guide) 的 `AngularJS` 开发者指南提供了 `AngularJS` 开发主题的良好资源。
+**A.** [`docs.angularjs.org/guide`](https://docs.angularjs.org/guide)的`AngularJS`开发者指南提供了`AngularJS`开发主题的良好资源。
 
-**Q. 有方法构建 `AngularJS` 应用的端到端测试吗？**
+**Q. 有方法构建`AngularJS`应用的端到端测试吗？**
 
-**A.** 你可以使用 Node.js 程序 `Protractor` 来运行端到端测试。在开发者指南的 [`docs.angularjs.org/guide/e2e-testing`](https://docs.angularjs.org/guide/e2e-testing) 中有相关描述。
+**A.** 你可以使用Node.js程序`Protractor`来运行端到端测试。在开发者指南的[`docs.angularjs.org/guide/e2e-testing`](https://docs.angularjs.org/guide/e2e-testing)中有相关描述。
 
 ### 工作坊
 
@@ -15995,17 +15342,17 @@ $scope.clicked = function(event){
 
 ### 测验
 
-**1.** 使用完整版本的 `jQuery` 时，`jQuery` 库应该在 `AngularJS` 库之前还是之后加载？**
+**1.** 使用完整版本的`jQuery`时，`jQuery`库应该在`AngularJS`库之前还是之后加载？
 
-**2.** `AngularJS` 生命周期的三个阶段是什么？**
+**2.** `AngularJS`生命周期的三个阶段是什么？
 
-**3.** 全局 API 何时可用？**
+**3.** 全局API何时可用？
 
-**4.** 哪个 `AngularJS` 指令用于在 HTML 文件中启动 `AngularJS` 应用？**
+**4.** 哪个`AngularJS`指令用于在HTML文件中启动`AngularJS`应用？
 
 ### 测验答案
 
-**1.** 在 `AngularJS` 库之前加载。
+**1.** 在`AngularJS`库之前加载。
 
 **2.** 启动（bootstrap）、编译（compilation）和运行（runtime）。
 
@@ -16015,40 +15362,34 @@ $scope.clicked = function(event){
 
 ### 练习
 
-**1.** 访问 [`docs.angularjs.org/api`](https://docs.angularjs.org/api) 查看 `AngularJS` 文档，并回顾 `angular.copy` 和 `angular.element` 等全局函数。
+**1.** 访问[`docs.angularjs.org/api`](https://docs.angularjs.org/api)查看`AngularJS`文档，并回顾`angular.copy`和`angular.element`等全局函数。
 
-**2.** 通过 [`code.angularjs.org/`](https://code.angularjs.org/) 获取 `AngularJS` 版本的索引。
+**2.** 通过[`code.angularjs.org/`](https://code.angularjs.org/)获取`AngularJS`版本的索引。
 
-## 第 21 ：理解 AngularJS 动态机制
+## 第21章：理解AngularJS动态机制
 
 在本节中将学习：
 
-![Image(Images/00767.jpeg) `AngularJS` 如何使用依赖注入
+- `AngularJS`如何使用依赖注入
+- 如何在`AngularJS`中创建依赖提供者
+- `AngularJS`应用中配置块（configuration block）的用途
+- `AngularJS`应用中运行块（run block）的用途
 
-![Image(Images/00767.jpeg) 如何在 `AngularJS` 中创建依赖提供
+理解`AngularJS`最重要的方面之一是依赖注入以及它与模块的关系。依赖是许多服务器端语言中的共同概念，但在`AngularJS`之前并没有被大量实现。
 
-![Image(Images/00767.jpeg) `AngularJS` 应用中配置块（configuration block）的用途
-
-![Image(Images/00767.jpeg) `AngularJS` 应用中运行块（run block）的用途
-
-理解 `AngularJS` 最重要的方面之一是依赖注入以及它与模块的关系。依赖是许多服务器端语言中的共同概念，但在 `AngularJS` 之前并没有被大量实现。
-
-依赖注入允许 `AngularJS` 模块在保持非常整洁、组织良好的同时，更容易地访问其他模块的功能。当正确实现时，它通常会减少大量的代码。
+依赖注入允许`AngularJS`模块在保持非常整洁、组织良好的同时，更容易地访问其他模块的功能。当正确实现时，它通常会减少大量的代码。
 
 本节提供了依赖注入的基本概述，然后描述了如何创建功能的模块，以及如何在其他模块以及其他控制器中使用这些功能。
 
 ### 查看模块和依赖注入
 
-当你开始编写 `AngularJS` 应用时，理解模块和依赖注入的基础知识至关重要。对于一些习惯于开放式 JavaScript 背景的人来说，这个概念可能很难理解和实现。
+当你开始编写`AngularJS`应用时，理解模块和依赖注入的基础知识至关重要。对于一些习惯于开放式JavaScript背景的人来说，这个概念可能很难理解和实现。
 
 了解模块如何利用依赖注入访问其他模块的功能，将使你能够实现你的代码。
 
+依赖注入（Dependency injection）可能是一个难以理解的概念。然而，它是AngularJS中非常重要的一部分，在你理解了基础知识后，AngularJS的实现就会变得非常清晰。依赖注入是大多数服务器端语言中一种的设计模式，但在AngularJS之前，它尚未广泛应用于JavaScript框架。
 
-
-
-依赖注入（Dependency injection）可能是一个难以理解的概念。然而，它是 AngularJS 中非常重要的一部分，在你理解了基础知识后，AngularJS 的实现就会变得非常清晰。依赖注入是大多数服务器端语言中一种的设计模式，但在 AngularJS 之前，它尚未广泛应用于 JavaScript 框架。
-
-AngularJS 依赖注入的思想定义并将依赖对象动态地注入到另一个对象中，使得依赖对象提供的所有功能可用。
+AngularJS依赖注入的思想定义并将依赖对象动态地注入到另一个对象中，使得依赖对象提供的所有功能可用。
 
 我喜欢用来类比依赖注入的例子是虚拟房间。如果你只是想创建一个虚拟房间，你只需要定义四面墙、地板和天花板作为基础。然而，这个房间对于大多数用途来说功能性并不强。如果你想让房间变成餐厅，你需要桌子和餐椅；如果你想让它变成客厅，你可能需要沙发和电视。
 
@@ -16056,37 +15397,33 @@ AngularJS 依赖注入的思想定义并将依赖对象动态地注入到另一�
 
 然后，依赖注入允许你通过声明在创建房间时应该注入哪些类型的对象，来轻松地定义你可能任何类型的房间。
 
-例如，你可以定义类似 `LivingRoom` 等于 `[sofa, table, TV]` 并注入到 `Room` 中。这只是一个定义，在你创建实例 `LivingRoom` 之前，并没有 `Room`、`sofa`、`table` 或 `TV` 的实例；此时，`sofa`、`table` 和 `TV` 对象将被创建并自动注入到新创建的 `LivingRoom` 中，为你提供坐下看虚拟电影时所需的客厅功能。
+例如，你可以定义类似`LivingRoom`等于`[sofa, table, TV]`并注入到`Room`中。这只是一个定义，在你创建实例`LivingRoom`之前，并没有`Room`、`sofa`、`table`或`TV`的实例；此时，`sofa`、`table`和`TV`对象将被创建并自动注入到新创建的`LivingRoom`中，为你提供坐下看虚拟电影时所需的客厅功能。
 
-AngularJS 通过使用提供者（providers）和注入器服务（injector service）提供了依赖注入。提供者定义了如何创建具有某些功能的可注入对象。注入器服务创建可注入对象的实例，并使其在使用它们的新创建对象可用。
+AngularJS通过使用提供者（providers）和注入器服务（injector service）提供了依赖注入。提供者定义了如何创建具有某些功能的可注入对象。注入器服务创建可注入对象的实例，并使其在使用它们的新创建对象可用。
 
-## 提供者 (Providers)
+### 提供者（Providers）
 
-提供者本质上是如何创建一个具有所有必要功能的对象实例的定义。提供者应该定义为 AngularJS 模块的一部分。模块将提供者注册到注入器服务器。在 AngularJS 中，提供者的对象始终只会被实例。
+提供者本质上是如何创建一个具有所有必要功能的对象实例的定义。提供者应该定义为AngularJS模块的一部分。模块将提供者注册到注入器服务器。在AngularJS中，提供者的对象始终只会被实例。
 
-## 注入器 (Injectors)
+### 注入器（Injectors）
 
 注入器服务负责跟踪提供者对象的实例。为每个注册了提供者的模块都会创建一个注入器服务实例。
 
 当创建一个需要提供者的对象时，会针对提供者对象的实例发出一个依赖请求。注入器服务首先检查注入器缓存中是否已存在实例。如果是，则返回该实例。如果在缓存中没有找到实例，则将使用提供者定义创建一个新实例；将其存储在缓存中，然后返回。
 
-## 定义 AngularJS 模块对象
+### 定义AngularJS模块对象
 
-创建 AngularJS 模块是一个简单的过程，涉及调用 `angular.module()` 方法。该方法创建一个 `Module` 对象的实例，将其注册到注入器服务，然后返回新创建的 `Module` 对象的实例，你可以使用该实例来实现提供者功能。`angular.module()` 方法使用以下语法：
+创建AngularJS模块是一个简单的过程，涉及调用`angular.module()`方法。该方法创建一个`Module`对象的实例，将其注册到注入器服务，然后返回新创建的`Module`对象的实例，你可以使用该实例来实现提供者功能。`angular.module()`方法使用以下语法：
 
-点击此处查看代码图片
-
-```
+```javascript
 angular.module(name, [requires], [configFn])
 ```
 
-`name` 参数是模块在注入器服务中注册的名称。`requires` 参数是一个模块名称的数组，这些模块被添加到注入器服务中供该模块使用。如果你需要来自另一个模块的功能，你需要在 `requires` 列表中添加它。默认情况下，`ng` 模块会自动添加到每个实例模块中，因此你不需要在列表中显式指定 `ng` 即可访问 AngularJS 提供者。
+`name`参数是模块在注入器服务中注册的名称。`requires`参数是一个模块名称的数组，这些模块被添加到注入器服务中供该模块使用。如果你需要来自另一个模块的功能，你需要在`requires`列表中添加它。默认情况下，`ng`模块会自动添加到每个实例模块中，因此你不需要在列表中显式指定`ng`即可访问AngularJS提供者。
 
-所有依赖的实例都会自动注入到模块实例中。依赖可以是模块、服务以及注册在注入器服务中的任何其他对象。`configFn` 参数是另一个在模块配置阶段调用的函数。配置函数将在下一节中描述。
+所有依赖的实例都会自动注入到模块实例中。依赖可以是模块、服务以及注册在注入器服务中的任何其他对象。`configFn`参数是另一个在模块配置阶段调用的函数。配置函数将在下一节中描述。
 
-以下是一个创建一个依赖 `$window` 和 `$http` 服务的 AngularJS 模块的示例。该定义还包含一个添加名为 `myValue` 的 `value` 提供者的配置函数：
-
-点击此处查看代码图片
+以下是一个创建一个依赖`$window`和`$http`服务的AngularJS模块的示例。该定义还包含一个添加名为`myValue`的`value`提供者的配置函数：
 
 ```javascript
 var myModule = angular.module('myModule', ['$window', '$http'], function(){
@@ -16094,45 +15431,36 @@ var myModule = angular.module('myModule', ['$window', '$http'], function(){
 });
 ```
 
-如果你没有指定 `requires` 参数，返回的将不是一个新的 `Module` 对象，而是已经创建的实例。例如，以下代码覆盖了之前定义的实例：
-
-点击此处查看代码图片
+如果你没有指定`requires`参数，返回的将不是一个新的`Module`对象，而是已经创建的实例。例如，以下代码覆盖了之前定义的实例：
 
 ```javascript
 var myModule2 = angular.module('myModule', []);
 ```
 
-然而，以下代码返回了之前创建的实例，因为参数列表中的 `require` 数组中没有列出依赖：
-
-点击此处查看代码图片
+然而，以下代码返回了之前创建的实例，因为参数列表中的`require`数组中没有列出依赖：
 
 ```javascript
 var myModule3 = angular.module('myModule');
 ```
 
-## 在 AngularJS 模块中创建提供者
+### 在AngularJS模块中创建提供者
 
-AngularJS 为各种对象和服务提供了许多内置提供者。例如，`$window` 服务有一个提供者，用于构建 AngularJS 服务对象，使你能够与 JavaScript 底层的 `Window` 对象进行交互。除了这些提供者，你还可以创建自己的提供者，将功能注入到 AngularJS 组件中。
+AngularJS为各种对象和服务提供了许多内置提供者。例如，`$window`服务有一个提供者，用于构建AngularJS服务对象，使你能够与JavaScript底层的`Window`对象进行交互。除了这些提供者，你还可以创建自己的提供者，将功能注入到AngularJS组件中。
 
-`Module` 对象提供了几个辅助方法，作为使用 `config()` 方法的替代方案来添加提供者。这些方法更简单，代码也更清晰。你可以向 AngularJS 模块添加两种类型的提供者对象。这些方法接受两个参数：注册到依赖注入器的名称以及定义如何构建特定对象的器函数。后续章节将详细介绍这些方法。
+`Module`对象提供了几个辅助方法，作为使用`config()`方法的替代方案来添加提供者。这些方法更简单，代码也更清晰。你可以向AngularJS模块添加两种类型的提供者对象。这些方法接受两个参数：注册到依赖注入器的名称以及定义如何构建特定对象的器函数。后续章节将详细介绍这些方法。
 
-### 特殊 AngularJS 对象提供者
+### 特殊AngularJS对象提供者
 
-`Module` 对象提供了特殊的构造方法，用于为模块中需要实现的 AngularJS 对象添加提供者。这些特殊方法允许你为以下类型的对象添加定义：
+`Module`对象提供了特殊的构造方法，用于为模块中需要实现的AngularJS对象添加提供者。这些特殊方法允许你为以下类型的对象添加定义：
 
-图片 `animation(name, animationFactory)`
+- `animation(name, animationFactory)`
+- `controller(name, controllerFactory)`
+- `filter(name, filterFactory)`
+- `directive(name, directiveFactory)`
 
-图片 `controller(`name`,` controllerFactory`)`
-
-图片 `filter(`name`,` filterFactory`)`
-
-图片 `directive(name, directiveFactory)`
-
-之所以称为特殊方法，是因为 AngularJS 中为这些提供者方法了对应的 `animation`、`controller`、`filter` 和 `directive` 对象。
+之所以称为特殊方法，是因为AngularJS中为这些提供者方法了对应的`animation`、`controller`、`filter`和`directive`对象。
 
 这些每个对象将在后的课程中进行详细介绍。现在，快速看一下基础控制器的定义：
-
-点击此处查看代码图片
 
 ```javascript
 var mod = angular.module('myMod', []);
@@ -16142,50 +15470,40 @@ mod.controller('myController', function($scope) {
 });
 ```
 
-创建了一个名为 `mod` 的简单模块，然后调用 `controller()` 方法并传入了 `myController` 以及 `controllerFactory` 函数。`controllerFactory` 函数接收 `$scope` 变量作为参数。这是因为 AngularJS 有一个内置的控制器对象，并且知道所有控制器对象必须接收作用域对象作为第一个参数。
+创建了一个名为`mod`的简单模块，然后调用`controller()`方法并传入了`myController`以及`controllerFactory`函数。`controllerFactory`函数接收`$scope`变量作为参数。这是因为AngularJS有一个内置的控制器对象，并且知道所有控制器对象必须接收作用域对象作为第一个参数。
 
+服务者（Service providers）是一个独特的提供者类别，因为对于生成的提供者对象并没有特定的格式。相反，提供者作为一种服务来提供功能。AngularJS提供了一些构建服务的特定创建方法，并通过以下方法将它们暴露：
 
+- `value(name, object)`：这是所有提供者中最基本的。`object`参数被直接赋值给`name`，因此在注入器（injector）中`name`值和`object`值之间存在直接对应关系。
 
+- `constant(name, object)`：这与`value()`方法类似，但值是不可变的。此外，`constant()`方法在其他提供者方法之前应用。
 
-服务者（Service providers）是一个独特的提供者类别，因为对于生成的提供者对象并没有特定的格式。相反，提供者作为一种服务来提供功能。AngularJS 提供了一些构建服务的特定创建方法，并通过以下方法将它们暴露：
+- `factory(name, factoryFunction)`：此方法使用`factoryFunction`参数来构建一个由注入器提供的对象。
 
-![Image](img/image00767.jpeg) `value(name, object)`：这是所有提供者中最基本的。`object` 参数被直接赋值给 `name`，因此在注入器（injector）中 `name` 值和 `object` 值之间存在直接对应关系。
+- `service(name, serviceFactory)`：此方法为提供者对象增加了实现更面向对象方法的概念。AngularJS的许多内置功能都是通过服务提供者提供的。
 
-![Image](img/image00767.jpeg) `constant(name, object)`：这与 `value()` 方法类似，但值是不可变的。此外，`constant()` 方法在其他提供者方法之前应用。
+- `provider(name, providerFactory)`：这是所有其他方法的核心。虽然它提供了最多的功能，但并不频繁使用，因为其他方法更简单。
 
-![Image](img/image00767.jpeg) `factory(name, factoryFunction)`：此方法使用 `factoryFunction` 参数来构建一个由注入器提供的对象。
+后面的课程将更详细介绍这些对象。现在，这里有一些基础`value`和`constant`定义的快速示例：
 
-![Image](img/image00767.jpeg) `service(name, serviceFactory)`：此方法为提供者对象增加了实现更面向对象方法的概念。AngularJS 的许多内置功能都是通过服务提供者提供的。
-
-![Image](img/image00767.jpeg) `provider(name, providerFactory)`：这是所有其他方法的核心。虽然它提供了最多的功能，但并不频繁使用，因为其他方法更简单。
-
-后面的课程将更详细介绍这些对象。现在，这里有一些基础 `value` 和 `constant` 定义的快速示例：
-
-点击此处查看代码图像
-
-```
+```javascript
 var mod = angular.module('myMod', []);
 
 mod.constant("cID", "ABC");
-
 mod.value('counter', 0);
-
 mod.value('image', {name:'box.jpg', height:12, width:20});
 ```
 
-创建了一个名为 `mod` 的简单模块，然后定义了 `constant()` 和两个 `value()` 提供者。在这些方法中定义的值注册在 `myMod` 模块的注入器服务器中，然后可以通过名称进行访问。
+创建了一个名为`mod`的简单模块，然后定义了`constant()`和两个`value()`提供者。在这些方法中定义的值注册在`myMod`模块的注入器服务器中，然后可以通过名称进行访问。
 
 ### 实现提供者和依赖注入
 
-在定义模块和适当的提供者之后，你可以将该模块作为依赖添加到其他模块、控制器以及各种 AngularJS 对象中。你可以设置依赖于提供者的对象的 `$inject` 属性值。`$inject` 属性包含一个应该注入到它的提供者名称数组。
+在定义模块和适当的提供者之后，你可以将该模块作为依赖添加到其他模块、控制器以及各种AngularJS对象中。你可以设置依赖于提供者的对象的`$inject`属性值。`$inject`属性包含一个应该注入到它的提供者名称数组。
 
-例如，下面的代码定义了一个接受 `$scope` 和 `appMsg` 参数的基础控制器。然后，将 `$inject` 属性设置为一个包含 `$scope` 的数组，`$scope` 是 AngularJS 作用域服务，提供对作用域和自定义 `appMsg` 的访问。`$scope` 和 `appMsg` 都被注入到 `myController` 函数中：
+例如，下面的代码定义了一个接受`$scope`和`appMsg`参数的基础控制器。然后，将`$inject`属性设置为一个包含`$scope`的数组，`$scope`是AngularJS作用域服务，提供对作用域和自定义`appMsg`的访问。`$scope`和`appMsg`都被注入到`myController`函数中：
 
-点击此处查看代码图像
-
-```
+```javascript
 var myController = function($scope, appMsg) {
-
   $scope.message = appMsg;
 };
 
@@ -16194,87 +15512,68 @@ controller['$inject'] = ['$scope', 'appMsg'];
 myApp.myController('controllerA', controller);
 ```
 
-在实现某些对象时，这种方法可能会变得笨拙，因此 AngularJS 还提供了一种更优雅的方法来注入依赖项，使用以下语法代替常规的构造函数：
+在实现某些对象时，这种方法可能会变得笨拙，因此AngularJS还提供了一种更优雅的方法来注入依赖项，使用以下语法代替常规的构造函数：
 
-点击此处查看代码图像
-
-```
+```javascript
 [providerA, providerB, . . ., function(objectA, objectB, . . .) {} ]
 ```
 
 例如，前面的代码也可以这样写：
 
-点击此处查看代码图像
-
-```
+```javascript
 myApp.controller('controllerA', ['$scope', 'appMsg', function($scope, appMsg) {
-
   $scope.message = appMsg;
-
 }]);
 ```
 
+
+
 在继续之前，理解依赖注入是至关重要的，因此接下来的章节提供了在 AngularJS 中实现依赖注入的示例列表。
 
-***
+## 尝试一下：将内置提供者注入到控制器中
 
-### 尝试一下：将内置提供者注入到控制器中
+在本节中，你将学习如何将 AngularJS 内置的一些提供者注入到你的控制器中。列表 21.1 所示的代码实现了一个被注入了`$scope`和`$window`提供者的基础控制器。列表 22.2 中的代码显示了加载 AngularJS 应用程序的 HTML 模板。
 
-在本节中，你将学习如何将 AngularJS 内置的一些提供者注入到你的控制器中。列表 21.1 所示的代码实现了一个被注入了 `$scope` 和 `$window` 提供者的基础控制器。列表 22.2 中的代码显示了加载 AngularJS 应用程序的 HTML 模板。
+以下描述了使用依赖注入将 AngularJS 提供者的功能添加到控制器中的重要方面：
 
-以下描述了使用依赖注入将 AngularJS 提供者的功能添加到控制器的中的重要方面：
+1. 添加`lesson21/inject_builtin.html`和`lesson21/js/inject_builtin.js`文件。
 
-**1.** 添加 `lesson21/inject_builtin.html` 和 `lesson21/js/inject_builtin.js` 文件。
+2. 将列表 21.1 和列表 21.2 所示的代码添加到 HTML 和 JavaScript 文件中。
 
-**2.** 将 列表 21.1 和 列表 21.2 所示的代码添加到 HTML 和 JavaScript 文件中。
-
-**3.** 下面的代码定义了一个使用 AngularJS 内置的 `$scope` 和 `$window` 提供者的控制器。注意，在 `function()` 定义中，参数名也是 `$scope` 和 `$window`。这并不是必要的，但它可能会让代码更容易跟读：
-
-点击此处查看代码图像
+3. 下面的代码定义了一个使用 AngularJS 内置的`$scope`和`$window`提供者的控制器。注意，在`function()`定义中，参数名也是`$scope`和`$window`。这并不是必要的，但它可能会让代码更容易跟读：
 
 ```
 02 mod.controller('controllerA', '$scope', '$window',
 ```
 
-**4.** [列表 21.1 中的以下行代码使用 `$scope` 创建的 `$scope` 对象在作用域中设置一个值：
-
-点击此处查看代码图像
+4. 列表 21.1 中的以下行代码使用`$scope`创建的`$scope`对象在作用域中设置一个值：
 
 ```
 04 $scope.message = "My Loaded!";
 ```
 
-**5.** 列表 21.2 中的以下行使用注入到控制器的 `$window` 显示警报：
+5. 列表 21.2 中的以下行使用注入到控制器的`$window`显示警报：
 
 ```
 05 $window.alert($scope.message);
 ```
 
-**6.** 当你在浏览器中加载 `inject_builtin.html` 时，你应该看到一个类似于 图 21.1 的页面，显示了结果。
+6. 当你在浏览器中加载`inject_builtin.html`时，你应该看到一个类似于图 21.1 的页面，显示了结果。
 
 ![Image](img/image0794.jpeg)
 
 **列表 21.1 inject_builtin.js 实现内置服务**
 
-点击此处查看代码图像
-
 ```
 01 var mod = angular.module('myMod', []);
-
 02 mod.controller('controllerA', ['$scope', '$window',
-
 03               function($scope, $window) {
-
 04  $scope.message = "My Loaded!";
-
 05  $window.alert($scope.message);
-
 06 }]);
 ```
 
 **列表 21.2 inject_builtin.html 使用 HTML 代码实现 AngularJS**
-
-点击此处查看代码图像
 
 ```html
 01 <!doctype html>
@@ -16292,28 +15591,19 @@ myApp.controller('controllerA', ['$scope', 'appMsg', function($scope, appMsg) {
 13 </html>
 ```
 
-
-
-
-### 3. 下行代码定义了 `myMod` 模块：
-
-点击此处查看代码图片
+### 3. 下行代码定义了`myMod`模块：
 
 ```javascript
 01 var myMod = angular.module('myMod', []);
 ```
 
-### 4. 下行代码为 `myMod` 定义了一个名为 `modMsg` 的值提供者（value provider），它包含一个简单的字符串：
-
-点击此处查看代码图片
+### 4. 下行代码为`myMod`定义了一个名为`modMsg`的值提供者（value provider），它包含一个简单的字符串：
 
 ```javascript
 02 myMod.value('modMsg', 'Hello from My Module');
 ```
 
-### 5. 下几行代码定义了 `controllerB`并将 `$scope` 和 `modMsg` 提供者注入其中，然后设置将在模板中显示的 `message` 值：
-
-点击此处查看代码图片
+### 5. 下几行代码定义了`controllerB`并将`$scope`和`modMsg`提供者注入其中，然后设置将在模板中显示的`message`值：
 
 ```javascript
 03 myMod.controller('controllerB', ['$scope', 'modMsg',
@@ -16322,17 +15612,13 @@ myApp.controller('controllerA', ['$scope', 'appMsg', function($scope, appMsg) {
 06 }]);
 ```
 
-### 6. 然后，下行代码定义了 `myApp`，并将 `myMod` 作为可注入的提供者。其余行与前面步骤中定义的 `value` 提供者和控制定义类似：
-
-点击此处查看代码图片
+### 6. 然后，下行代码定义了`myApp`，并将`myMod`作为可注入的提供者。其余行与前面步骤中定义的`value`提供者和控制定义类似：
 
 ```javascript
 07 var myApp = angular.module('myApp', ['myMod']);
 ```
 
-### 7. 注意列表 21.4 中的以下几行，只有 `myApp` 模块被引导（bootstrapped），但 `myMod` 中的 `controllerB` 能够被使用，因为它被注入到了 `myApp`：
-
-点击此处查看代码图片
+### 7. 注意列表 21.4 中的以下几行，只有`myApp`模块被引导（bootstrapped），但`myMod`中的`controllerB`能够被使用，因为它被注入到了`myApp`：
 
 ```html
 02 <html ng-app="myApp">
@@ -16350,8 +15636,6 @@ myApp.controller('controllerA', ['$scope', 'appMsg', function($scope, appMsg) {
 
 **列表 21.3 inject_custom.js 在控制器和模块定义中实现依赖注入**
 
-点击此处查看代码图片
-
 ```javascript
 01 var myMod = angular.module('myMod', []);
 02 myMod.value('modMsg', 'Hello from My Module');
@@ -16368,8 +15652,6 @@ myApp.controller('controllerA', ['$scope', 'appMsg', function($scope, appMsg) {
 ```
 
 **列表 21.4 inject_custom.html 使用 HTML 代码实现依赖另一个模块的 AngularJS 模块**
-
-点击此处查看代码图片
 
 ```html
 01 <!doctype html>
@@ -16392,15 +15674,13 @@ myApp.controller('controllerA', ['$scope', 'appMsg', function($scope, appMsg) {
 </html>
 ```
 
-***
-
-### 应用配置块和运行块（Run Blocks）
+## 应用配置块和运行块（Run Blocks）
 
 现在你已经理解了模块之间的关系，需要了解 AngularJS 模块。它们通过两个阶段实现：配置（configuration）和运行（run）。
 
-#### 配置块
+### 配置块
 
-配置阶段是定义模块阶段。在此阶段，你可以注册提供者（providers）。你通过调用 `config()` 方法来实现配置，例如：
+配置阶段是定义模块阶段。在此阶段，你可以注册提供者（providers）。你通过调用`config()`方法来实现配置，例如：
 
 ```javascript
 01 var myMod = angular.module('myMod', []);
@@ -16409,7 +15689,7 @@ myApp.controller('controllerA', ['$scope', 'appMsg', function($scope, appMsg) {
 04 });
 ```
 
-#### 运行块
+### 运行块
 
 配置完成后，就可以执行运行阶段。这是放置需要在根级别执行的处理程序的绝佳位置。你通过以下方式实现运行块：
 
@@ -16419,15 +15699,15 @@ myApp.controller('controllerA', ['$scope', 'appMsg', function($scope, appMsg) {
 03 });
 ```
 
-### 动手尝试：实现配置和运行
+## 动手尝试：实现配置和运行
 
-在这个示例中，你将学习如何实现基础配置和运行块。列表 21.5 中的代码使用 `config()` 方法来实现两个提供者 `configTime` 和 `runTime`，它们是在配置和运行时显示的 `Date` 对象。
+在这个示例中，你将学习如何实现基础配置和运行块。列表 21.5 中的代码使用`config()`方法来实现两个提供者`configTime`和`runTime`，它们是在配置和运行时显示的`Date`对象。
 
 使用以下步骤构建应用程序：
 
-1. 添加 `lesson21/config_run_blocks.html` 和 `lesson21/js/config_run_blocks.js` 文件。
+1. 添加`lesson21/config_run_blocks.html`和`lesson21/js/config_run_blocks.js`文件。
 2. 将列表 21.5 和列表 21.6 所示的代码添加到 HTML 和 JavaScript 文件中。
-3. 列表 21.5 中的以下代码实现了定义 `value` 提供者 `configTime` 和 `runTime` 的配置块。注意第 5-7 行中实现了一个简单的循环，以注入配置期间可能会产生的延迟：
+3. 列表 21.5 中的以下代码实现了定义`value`提供者`configTime`和`runTime`的配置块。注意第 5-7 行中实现了一个简单的循环，以注入配置期间可能会产生的延迟：
 
 ```javascript
 02 myModule.config(function($provide) {
@@ -16439,7 +15719,7 @@ myApp.controller('controllerA', ['$scope', 'appMsg', function($scope, appMsg) {
 08 });
 ```
 
-4. 随后的代码定义了更改 `runTime` 值的运行块：
+4. 随后的代码定义了更改`runTime`值的运行块：
 
 ```javascript
 09 myModule.run(function(configTime, runTime) {
@@ -16447,13 +15727,7 @@ myApp.controller('controllerA', ['$scope', 'appMsg', function($scope, appMsg) {
 11 });
 ```
 
-
-
-
-
-## 5. 在接下来的行中，定义了控制器并注入了 `configTime` 和 `runTime`，它们被添加到了作用域（scope）值中：
-
-点击此处查看代码
+5. 在接下来的行中，定义了控制器并注入了`configTime`和`runTime`，它们被添加到了作用域（scope）值中：
 
 ```javascript
 12 myModule.controller('controllerA',['$scope', 'configTime', 'runTime',
@@ -16463,15 +15737,13 @@ myApp.controller('controllerA', ['$scope', 'appMsg', function($scope, appMsg) {
 16 }]);
 ```
 
-## 6. 来自列表 21.6 的模板显示了 `configTime` 和 `runTime` 值，如图 21.3 所示。
+6. 来自列表 21.6 的模板显示了`configTime`和`runTime`值，如图 21.3 所示。
 
 ![Image](img/image00996.jpeg)
 
 **图 21.3** 实现配置和运行块，通过设置并利用 JavaScript Date 对象来显示每个块的执行时间。
 
 **列表 21.5 config_run_blocks.js 在 AngularJS 模块中实现配置和运行块**
-
-点击此处查看代码
 
 ```javascript
 01 var myModule = angular.module('myApp', []);
@@ -16494,8 +15766,6 @@ myApp.controller('controllerA', ['$scope', 'appMsg', function($scope, appMsg) {
 
 **列表 21.6 run_blocks.html 使用 HTML 代码显示 AngularJS 模块配置和运行块中生成的 configTime 和 runTime 值**
 
-点击此处查看代码
-
 ```html
 01 <!doctype html>
 02 <html ng-app="myApp">
@@ -16517,19 +15787,19 @@ myApp.controller('controllerA', ['$scope', 'appMsg', function($scope, appMsg) {
 18 </html>
 ```
 
-### 总结
+## 总结
 
-### 依赖注入允许你定义可以注入到其他 AngularJS 组件的提供者功能。提供者功能包含在模块内部并在注入器服务（injector service）注册。提供者定义了如何构建功能，以便当另一个组件对提供者定义依赖时，可以创建并注入提供者对象的实例。
+依赖注入允许你定义可以注入到其他 AngularJS 组件的提供者功能。提供者功能包含在模块内部并在注入器服务（injector service）注册。提供者定义了如何构建功能，以便当另一个组件对提供者定义依赖时，可以创建并注入提供者对象的实例。
 
 AngularJS 提供了一个相当健壮的依赖注入模型，允许你定义不同类型的服务提供者。使用依赖注入而不是全局定义可以让你的代码更加模块化且易于维护。在本节中，你学习了依赖注入模型，并了解了如何在模块和控制器组件中实现它。
 
-### 问答
+## 问答
 
 **问。 AngularJS 程序的控制器和指令代码会在运行块（run block）之前还是之后运行？**
 
 **答。** 执行顺序是：config、run、指令编译（directive.compile）、controller 和指令链接（directive link）。
 
-### 工作坊
+## 工作坊
 
 工作坊由一组问题和答案组成，旨在巩固你的理解。
 
@@ -16539,34 +15809,32 @@ AngularJS 提供了一个相当健壮的依赖注入模型，允许你定义不�
 
 **答。** 执行顺序是：config、run、指令编译（directive.compile）、controller 和指令链接（directive link）。
 
+控制器（Controllers）是旨在通过扩展作用域（scope）来提供业务逻辑的代码。你通过使用应用`Model`对象上的`controller()`方法创建控制器。该函数将控制器注册为模块中的提供者（provider），但它不会创建控制器的实例。实例化是在 AngularJS 模板中链接`ng-controller`指令时完成的。
 
-
-
-控制器（Controllers）是旨在通过扩展作用域（scope）来提供业务逻辑的代码。你通过使用应用 `Model` 对象上的 `controller()` 方法创建控制器。该函数将控制器注册为模块中的提供者（provider），但它不会创建控制器的实例。实例化是在 AngularJS 模板中链接 `ng-controller` 指令时完成的。
-
-`controller()` 方法接收控制器名称作为第一个参数，并将依赖项数组作为第二个参数。例如，以下代码定义了一个使用依赖注入来访问名为 `start` 的 `value` 提供者的控制器：
+`controller()`方法接收控制器名称作为第一个参数，并将依赖项数组作为第二个参数。例如，以下代码定义了一个使用依赖注入来访问名为`start`的`value`提供者的控制器：
 
 ```javascript
 angular.module('myApp', []).
   value('start', 200).
-  controller('Counter', ['$scope', 'start',
-                function($scope, startingValue) {
-  }]);
 ```
 
-注意，`value()` 和 `controller()` 方法是使用点 `.` 符号链式连接的。你会在 AngularJS 应用中经常看到这种用法。当 AngularJS 中创建一个新的控制器实例时，还会创建一个特定于该控制器的新子作用域，并且可以通过注入到前面的 `Counter` 控制器的 `$scope` 服务进行访问。在之前的示例中，`start` 提供者被注入到控制器中，并作为 `startingValue` 传递给控制器函数。参数注入基于它们在传递给 `controller()` 函数的数组中的位置。
+
+
+`controller('Counter', ['$scope', 'start', function($scope, startingValue) {}]);`
+
+注意，`value()` 和 `controller()` 方法是使用点`.`符号链式连接的。你会在 AngularJS 应用中经常看到这种用法。当 AngularJS 中创建一个新的控制器实例时，还会创建一个特定于该控制器的新子作用域，并且可以通过注入到前面的 `Counter` 控制器的 `$scope` 服务进行访问。在之前的示例中，`start` 提供者被注入到控制器中，并作为 `startingValue` 传递给控制器函数。参数注入基于它们在传递给 `controller()` 函数的数组中的位置。
 
 控制器必须初始化创建并添加到作用域的状态。控制器还负责附加到该作用域的任何业务逻辑。这可能意味着处理作用域的更新更改、操纵作用域值，或根据作用域的状态发射事件。
 
-### 动手尝试：实现一个基础控制器
+## 动手尝试：实现一个基础控制器
 
-在这个示例中，你将有机会尝试一下控制器代码。列表 22.1 显示了如何实现一个利用依赖注入、初始化某些值并使用 `inc()`、`dec()` 和 `calcDiff()` 函数实现基础业务逻辑的控制器。列表 22.2 显示了一个基础的 AngularJS HTML 模板，该模板提供了查看和操作作用域中存储的值的视图。
+在这个示例中，你将有机会尝试一下控制器代码。列表 22.1 显示了如何实现一个利用依赖注入、初始化某些值并使用`inc()`、`dec()`和`calcDiff()`函数实现基础业务逻辑的控制器。列表 22.2 显示了一个基础的 AngularJS HTML 模板，该模板提供了查看和操作作用域中存储的值的视图。
 
 使用以下步骤构建应用并实现应用和控制器：
 
-1. 添加 `lesson22/scope_controller.html` 和 `lesson22/js/scope_controller.js` 文件。
+1. 添加`lesson22/scope_controller.html`和`lesson22/js/scope_controller.js`文件。
 2. 将列表 22.1 和列表 22.2 中所示代码添加到 HTML 和 JavaScript 文件中。
-3. 来自列表 22.1 的后续代码实现了一个 AngularJS 模块和一个名为 `Counter` 的控制器：
+3. 来自列表 22.1 的后续代码实现了一个 AngularJS 模块和一个名为`Counter`的控制器：
 
 ```javascript
 01 angular.module('myApp', []).
@@ -16575,7 +15843,7 @@ angular.module('myApp', []).
 04                               function($scope, start) {
 ```
 
-4. 然后接下来的几行在 `Counter` 控制器的 `$scope` 中定义了值：
+4. 然后接下来的几行在`Counter`控制器的`$scope`中定义了值：
 
 ```javascript
 05    $scope.start = start;
@@ -16584,7 +15852,7 @@ angular.module('myApp', []).
 08    $scope.change = 1;
 ```
 
-5. 注意，在接下来的行中，定义了函数 `inc()`、`dec()` 和 `calcDiff()`，它们用于操纵 `current` 和 `difference` 的值：
+5. 注意，在接下来的行中，定义了函数`inc()`、`dec()`和`calcDiff()`，它们用于操纵`current`和`difference`的值：
 
 ```javascript
 09    $scope.inc = function() {
@@ -16600,7 +15868,7 @@ angular.module('myApp', []).
 19    };
 ```
 
-6. 代码[列表 22.2 实现了一个 AngularJS 模板，该模板提供了一个数字输入来设置作用域中的 `change` 值，以及调用 `inc()` 和 `dec()` 来更改 `current` 值的 + 和 - 按钮。模板还使用简单的过滤器显示初始值、当前值和差值。图 22.1 显示了网页页的运行情况。你可以设置增减值并点击 +/– 按钮来减少当前值并查看作用域中的差值。
+6. 代码列表 22.2 实现了一个 AngularJS 模板，该模板提供了一个数字输入来设置作用域中的`change`值，以及调用`inc()`和`dec()`来更改`current`值的 + 和 - 按钮。模板还使用简单的过滤器显示初始值、当前值和差值。图 22.1 显示了网页页的运行情况。你可以设置增减值并点击 +/– 按钮来减少当前值并查看作用域中的差值。
 
 **图 22.1** 一个基础应用，在作用域中存储初始值和当前值，然后显示差值以说明作用域的交互。
 
@@ -16657,50 +15925,45 @@ angular.module('myApp', []).
 23 </html>
 ```
 
-### 作用域与模板的关系
+## 作用域与模板的关系
 
-模板为 AngularJS 应用提供视图。HTML 元素通过 `ng-controller` 属性定义为控制器。在控制器 HTML 元素及其子元素内部，控制器的作用域适用于表达式和其他 AngularJS 功能。
+模板为 AngularJS 应用提供视图。HTML 元素通过`ng-controller`属性定义为控制器。在控制器 HTML 元素及其子元素内部，控制器的作用域适用于表达式和其他 AngularJS 功能。
 
-作用域的值可以通过 `ng-model` 指令直接链接到模板中的 `<input>`、`<select>` 和 `<textarea>` 元素。该指令将元素的值链接到作用域中的属性名。当用户更改元素的值时，作用域会自动更新。例如，以下代码将元素的数字值链接到名为 `valueA` 的作用域：
+作用域的值可以通过`ng-model`指令直接链接到模板中的`<input>`、`<select>`和`<textarea>`元素。该指令将元素的值链接到作用域中的属性名。当用户更改元素的值时，作用域会自动更新。例如，以下代码将元素的数字值链接到名为`valueA`的作用域：
 
 ```html
 <input type="number" ng-model="valueA" />
 ```
 
-你可以使用 `{{expression}}` 语法在模板中添加作用域属性甚至函数。括号内的代码将被执行，结果将显示在渲染的视图中。例如，如果作用域包含名为 `valueA` 和 `valueB` 的属性，你可以在表达式中引用这些属性，如下所示：
+你可以使用`{{expression}}`语法在模板中添加作用域属性甚至函数。括号内的代码将被执行，结果将显示在渲染的视图中。例如，如果作用域包含名为`valueA`和`valueB`的属性，你可以在表达式中引用这些属性，如下所示：
 
 ```
 {{valueA + valueB}}
 ```
 
-
-
-
-在模板中定义 AngularJS 指令时，可以使用作用域属性和函数。例如，`ng-click` 指令将浏览器点击事件绑定到名为 `addValues()` 的作用域函数，并传递作用域属性 `valueA` 和 `valueB` 的值：
-
-点击此处查看代码图片
+在模板中定义 AngularJS 指令时，可以使用作用域属性和函数。例如，`ng-click`指令将浏览器点击事件绑定到名为`addValues()`的作用域函数，并传递作用域属性`valueA`和`valueB`的值：
 
 ```html
 <span ng-click="addValues(valueA, valueB)">Add Values{{valueA}} & {{valueB}}</span
 ```
 
-注意，在这段代码中，`{{}}` 括号是必须的。然而，在 `addValues()` 函数调用中，并不是需要的。这是因为 `ng-click` 和其他 AngularJS 指令会自动作为表达式求值。
+注意，在这段代码中，`{{}}`括号是必须的。然而，在`addValues()`函数调用中，并不是需要的。这是因为`ng-click`和其他 AngularJS 指令会自动作为表达式求值。
 
 ***
 
-### 动手尝试：查看 AngularJS 模板中的作用域值
+## 动手尝试：查看 AngularJS 模板中的作用域值
 
-在这个示例中，你将所有这些概念整合到一个非常基础的示例，以便理解模型（model）和作用域（scope）之间的关系。列表 22.3 实现了一个名为 `SimpleTemplate` 的控制器，该控制器初始化了一个带有三个值的作用域：`valueA`、`valueB` 和 `valueC`。作用域还包含一个名为 `addValues()` 的函数，它接受两个参数并将它们相加以设置 `$scope.valueC` 的值。
+在这个示例中，你将所有这些概念整合到一个非常基础的示例，以便理解模型（model）和作用域（scope）之间的关系。列表 22.3 实现了一个名为`SimpleTemplate`的控制器，该控制器初始化了一个带有三个值的作用域：`valueA`、`valueB`和`valueC`。作用域还包含一个名为`addValues()`的函数，它接受两个参数并将它们相加以设置`$scope.valueC`的值。
 
-列表 22.4 是一个 AngularJS 模板，它初始化了列表 22.3 定义的 `SimpleTemplate` 控制器，并提供了数字输入来设置 `valueA` 和 `valueB` 的值，以及一个计算 `valueC` 值的按钮。
+列表 22.4 是一个 AngularJS 模板，它初始化了列表 22.3 定义的`SimpleTemplate`控制器，并提供了数字输入来设置`valueA`和`valueB`的值，以及一个计算`valueC`值的按钮。
 
 使用以下步骤构建应用程序并实现作用域与模板之间的交互：
 
-1. **添加 `lesson22/scope_template.html` 和 `lesson22/js/scope_template.js` 文件。**
+1. **添加`lesson22/scope_template.html`和`lesson22/js/scope_template.js`文件。**
 
-2. **将列表 22.3 和 列表 22.4 所示的代码添加到 HTML 和 JavaScript 文件中。**
+2. **将列表 22.3 和列表 22.4 所示的代码添加到 HTML 和 JavaScript 文件中。**
 
-3. **以下代码来自列表 22.3，用于在作用域中定义 `valueA`、`valueB` 和 `valueC` 的值：**
+3. **以下代码来自列表 22.3，用于在作用域中定义`valueA`、`valueB`和`valueC`的值：**
 
 ```javascript
 03      $scope.valueA = 5;
@@ -16708,9 +15971,7 @@ angular.module('myApp', []).
 05      $scope.valueC = 12;
 ```
 
-4. **以下代码在作用域中提供了一个函数，它接受两个参数并将它们相加以设置 `valueC` 的值：**
-
-点击此处查看代码图片
+4. **以下代码在作用域中提供了一个函数，它接受两个参数并将它们相加以设置`valueC`的值：**
 
 ```javascript
 06      $scope.addValues = function(v1, v2) {
@@ -16718,57 +15979,45 @@ angular.module('myApp', []).
 08      };
 ```
 
-5. **列表 22.4 中的以下几行实现了数字输入并绑定到 `valueA` 和 `valueB` 的值：**
-
-点击此处查看代码图片
+5. **列表 22.4 中的以下几行实现了数字输入并绑定到`valueA`和`valueB`的值：**
 
 ```html
 08      ValueA: <input type="number" ng-model="valueA" /><br>
 09        ValueB: <input type="number" ng-model="valueB" /><br><br>
 ```
 
-6. **以下行使用简单的 AngularJS 表达式在模板中显示 `valueA` 和 `valueB` 的值：**
-
-点击此处查看代码图片
+6. **以下行使用简单的 AngularJS 表达式在模板中显示`valueA`和`valueB`的值：**
 
 ```html
 10      Expression: {{valueA}} + {{valueB}}<br><br>
 ```
 
-7. **接下来的的一行使用 AngularJS 表达式显示 `valueA` 加上 `valueB` 的值：**
-
-点击此处查看代码图片
+7. **接下来的的一行使用 AngularJS 表达式显示`valueA`加上`valueB`的值：**
 
 ```html
 11      Live Expression Value: {{valueA + valueB}}<br><br>
 ```
 
-8. **来自列表 22.4 的以下代码实现了一个输入按钮，当你点击它时会调用 `addValues()` 并传入 `valueA` 和 `valueB` 的值：**
-
-点击此处查看代码图片
+8. **来自列表 22.4 的以下代码实现了一个输入按钮，当你点击它时会调用`addValues()`并传入`valueA`和`valueB`的值：**
 
 ```html
 12      <input type="button" ng-click="addValues(valueA, valueB)"
 13        value ="Click to Add Values {{valueA}} & {{valueB}}" /><br>
 ```
 
-9. **以下行代码显示作用域中 `valueC` 的值：**
-
-点击此处查看代码图片
+9. **以下行代码显示作用域中`valueC`的值：**
 
 ```html
 14      Clicked Expression Value: {{valueC}}<br>
 ```
 
-10. 图 22.2 在网络浏览器中显示了此简单的应用程序。当两个输入元素发生变化时，表达式会自动变化。然而，`valueC` 表达式只有在点击 `Click to Add Values` 按钮时才会变化。
+10. 图 22.2 在网络浏览器中显示了此简单的应用程序。当两个输入元素发生变化时，表达式会自动变化。然而，`valueC`表达式只有在点击`Click to Add Values`按钮时才会变化。
 
 ![Image](img/image0998.jpeg)
 
 **图 22.2** 一个简单的 AngularJS 模板，它实现控制器并将多个字段链接到作用域，以提供值的输入和结果显示。
 
 **列表 22.3 scope_template.js 实现支持模板的基础控制器**
-
-点击此处查看代码图片
 
 ***
 
@@ -16809,11 +16058,7 @@ angular.module('myApp', []).
 19 </html>
 ```
 
-
-
-
-
-在创建阶段，还会创建一个与浏览器事件循环交互的 **digest 循环（digest loop）**。digest 循环负责根据模型的更改来更新 DOM 元素，并执行任何已注册的监听器（watcher）函数。虽然你永远不需要手动执行 digest 循环，但你可以通过在 scope 上执行 `$digest()` 方法来实现。例如，下面的代码评估任何异步更改，然后执行 scope 上的监听函数：
+在创建阶段，还会创建一个与浏览器事件循环交互的**digest 循环（digest loop）**。digest 循环负责根据模型的更改来更新 DOM 元素，并执行任何已注册的监听器（watcher）函数。虽然你永远不需要手动执行 digest 循环，但你可以通过在 scope 上执行`$digest()`方法来实现。例如，下面的代码评估任何异步更改，然后执行 scope 上的监听函数：
 
 ```
 $scope.$digest()
@@ -16823,42 +16068,43 @@ $scope.$digest()
 
 监听器注册阶段为模板中表示的 scope 值注册监听。这些监听会自动将模型的变化传播到 DOM 元素。
 
-你还可以使用 `$watch()` 方法在 scope 属性上注册你自己的监听函数。该方法接受 scope 属性名作为第一个参数，并将一个回调函数作为第二个参数。当 scope 中的属性发生变化时，旧值和新值将传递给该回调函数。
+你还可以使用`$watch()`方法在 scope 属性上注册你自己的监听函数。该方法接受 scope 属性名作为第一个参数，并将一个回调函数作为第二个参数。当 scope 中的属性发生变化时，旧值和新值将传递给该回调函数。
 
-例如，下面的代码为 scope 中的属性 `watchedItem` 添加了监听，并在它每次变化时将计数器加 1：
+例如，下面的代码为 scope 中的属性`watchedItem`添加了监听，并在它每次变化时将计数器加 1：
 
-点击此处查看代码图片
-
-```javascript$scope.watchedItem = 'myItem';
+```javascript
+$scope.watchedItem = 'myItem';
 $scope.counter = 0;
 $scope.$watch('watchedItem', function(newValue, oldValue) {
   $scope.watchedItem = $scope.counter + 1;
 });
 ```
 
+
+
 ### 模型变异阶段 (The Model Mutation Phase)
 
-当 scope 中的数据发生变化时，就会发生模型变异。当你从 AngularJS 代码中进行更改时，名为 `$apply()` 的 scope 函数会更新模型并调用 `$digest()` 函数来更新 DOM 和监听器。这就是你在 AngularJS 控制器或通过 `$http`、`$timeout` 和 `$interval` 服务所做的更改自动更新到 DOM 中的方式。
+当`scope`中的数据发生变化时，就会发生模型变异。当你从 AngularJS 代码中进行更改时，名为`$apply()`的`scope`函数会更新模型并调用`$digest()`函数来更新 DOM 和监听器。这就是你在 AngularJS 控制器或通过`$http`、`$timeout`和`$interval`服务所做的更改自动更新到 DOM 中的方式。
 
-你应该尝试在 AngularJS 控制器或服务内部对 scope 进行更改。然而，如果你必须在 AngularJS 范围之外更改 scope，你需要在 scope 上调用 `scope.$apply()` 以强制模型和 DOM 正确更新。`$apply()` 方法接受表达式作为唯一参数。该表达式会被求值并返回，然后调用 `$digest()` 方法来更新 DOM 和监听器。
+你应该尝试在 AngularJS 控制器或服务内部对`scope`进行更改。然而，如果你必须在 AngularJS 范围之外更改`scope`，你需要在`scope`上调用`scope.$apply()`以强制模型和 DOM 正确更新。`$apply()`方法接受表达式作为唯一参数。该表达式会被求值并返回，然后调用`$digest()`方法来更新 DOM 和监听器。
 
 ### 变异观察阶段 (The Mutation Observation Phase)
 
-当 digest 循环、`$apply()` 调用或手动执行 `$digest()` 方法时，就会发生变异观察阶段。当 `$digest()` 执行时，它会评估所有监听的变化。如果某个值发生了变化，`$digest()` 会调用 `$watch` 监听并更新 DOM。
+当 digest 循环、`$apply()`调用或手动执行`$digest()`方法时，就会发生变异观察阶段。当`$digest()`执行时，它会评估所有监听的变化。如果某个值发生了变化，`$digest()`会调用`$watch`监听并更新 DOM。
 
 ### Scope 销毁阶段 (The Scope Destruction Phase)
 
-`$destroy()` 方法从浏览器内存中移除 scope。AngularJS 库会在子 scope 不再时自动调用此方法。`$destroy()` 方法会停止 `$digest()` 调用并移除监听，允许浏览器垃圾回收器回收内存。
+`$destroy()`方法从浏览器内存中移除`scope`。AngularJS 库会在子`scope`不再时自动调用此方法。`$destroy()`方法会停止`$digest()`调用并移除监听，允许浏览器垃圾回收器回收内存。
 
 ### 实现 Scope 层级结构 (Implementing Scope Hierarchy)
 
-scope 的一个伟大特性是它们是按层次结构组织的。这种层次结构有助于你保持 scope 的有序，并与它们代表的视图上下文相关。在 AngularJS 模块级别有一个根 scope（root scope），然后在子组件（如控制器或指令）中实现子 scope。子 scope 可以相互嵌套，创建层级结构。
+`scope`的一个伟大特性是它们是按层次结构组织的。这种层次结构有助于你保持`scope`的有序，并与它们代表的视图上下文相关。在 AngularJS 模块级别有一个根`scope`（root scope），然后在子组件（如控制器或指令）中实现子`scope`。子`scope`可以相互嵌套，创建层级结构。
 
 #### 顺带一下
 
-`$digest()` 方法利用 scope 层级结构将 scope 更改传播到相应的监听器和 DOM 元素。
+`$digest()`方法利用`scope`层级结构将`scope`更改传播到相应的监听器和 DOM 元素。
 
-Scope 层级结构根据 AngularJS 模板中 `ng-controller` 语句的位置自动创建。例如，下面的模板代码定义了两个 `div` 元素，它们创建了同级的控制器实例：
+`Scope`层级结构根据 AngularJS 模板中`ng-controller`语句的位置自动创建。例如，下面的模板代码定义了两个`div`元素，它们创建了同级的控制器实例：
 
 点击此处查看代码图片
 
@@ -16867,7 +16113,7 @@ Scope 层级结构根据 AngularJS 模板中 `ng-controller` 语句的位置自�
 <div ng-controller="controllerB"> . . . </div>
 ```
 
-然而，下面的模板代码定义了控制器，其中 `controllerA` 是 `controllerB` 的父级：
+然而，下面的模板代码定义了控制器，其中`controllerA`是`controllerB`的父级：
 
 点击此处查看代码图片
 
@@ -16877,19 +16123,19 @@ Scope 层级结构根据 AngularJS 模板中 `ng-controller` 语句的位置自�
 </div>
 ```
 
-Scope 层级结构的工作类似于面向对象语言中的对象继承。你可以从控制器访问父级 scope 值，但无法访问兄弟或子 scope 值。如果你在子 scope 中添加属性名，它不会覆盖父级，而是在子 scope 中创建一个同名的属性，其值与父级不同。
+`Scope`层级结构的工作类似于面向对象语言中的对象继承。你可以从控制器访问父级`scope`值，但无法访问兄弟或子`scope`值。如果你在子`scope`中添加属性名，它不会覆盖父级，而是在子`scope`中创建一个同名的属性，其值与父级不同。
 
-* *
+* * *
 
 ### 亲自尝试一下：实现嵌套控制器和 scope
 
-在这个示例中，你将观察嵌套控制器内 scope 的行为。列表 22.5 和 22.6 实现了一个基本的嵌套 scope 层级结构，以演示 scope 在层级中是如何工作的。列表 22.5 创建包含三个控制器的应用程序，每个控制器定义了两个 scope 项。它们共享公共 scope 属性 `title` 以及 scope 属性 `valueA`、`valueB` 和 `valueC`。列表 22.6 在 AngularJS 模板中创建了三个控制器。
+在这个示例中，你将观察嵌套控制器内`scope`的行为。列表 22.5 和 22.6 实现了一个基本的嵌套`scope`层级结构，以演示`scope`在层级中是如何工作的。列表 22.5 创建包含三个控制器的应用程序，每个控制器定义了两个`scope`项。它们共享公共`scope`属性`title`以及`scope`属性`valueA`、`valueB`和`valueC`。列表 22.6 在 AngularJS 模板中创建了三个控制器。
 
-使用以下步骤构建带有嵌套控制器和 scope 的应用程序：
+使用以下步骤构建带有嵌套控制器和`scope`的应用程序：
 
-1. 添加 `lesson22/scope_hierarchy.html` 和 `lesson22/js/scope_hierarchy.js` 文件。
+1. 添加`lesson22/scope_hierarchy.html`和`lesson22/js/scope_hierarchy.js`文件。
 2. 将 列表 22.5 和 22.6 所示的代码添加到相应文件中。
-3. 列表 22.5 代码实现了三个控制器：`LevelA`、`LevelB` 和 `LevelC`。每个控制器定义了 `title`、`value` 和 `inc()` 函数。
+3. 列表 22.5 代码实现了三个控制器：`LevelA`、`LevelB`和`LevelC`。每个控制器定义了`title`、`value`和`inc()`函数。
 
 ```javascript
 $scope('LevelA', function($scope) {
@@ -16900,14 +16146,16 @@ $scope('LevelA', function($scope) {
   };
 });
 ```
-4. 在 列表 22.6 中，嵌套了以下 `div` 元素：
+
+4. 在 列表 22.6 中，嵌套了以下`div`元素：
 ```html
 <div ng-controller="controllerA">
   <div ng-controller="controllerB"></div>
   <div ng-controller="controllerC"></div>
 </div>
 ```
-5. `div` 中的以下模板显示 `LevelA` 的 `title` 和 `valueA` 值，并在点击按钮时调用 `LevelA` 的 `inc()` 函数：
+
+5. `div`中的以下模板显示`LevelA`的`title`和`valueA`值，并在点击按钮时调用`LevelA`的`inc()`函数：
 
 ```html
 <div>
@@ -16916,7 +16164,8 @@ $scope('LevelA', function($scope) {
   <button ng-click="inc()">+</button>
 </div>
 ```
-6. `div` 中的以下模板显示 `LevelB` 的 `title` 和 `valueB` 值，但也包含 `LevelA` scope 的 `valueA` 值。此外，当点击此按钮时，执行的是 `LevelB` 的 `inc()` 函数：
+
+6. `div`中的以下模板显示`LevelB`的`title`和`valueB`值，但也包含`LevelA` scope 的`valueA`值。此外，当点击此按钮时，执行的是`LevelB`的`inc()`函数：
 
 ```html
 <div>
@@ -16925,7 +16174,8 @@ $scope('LevelA', function($scope) {
   <button ng-click="inc()">+</button>
 </div>
 ```
-7. `div` 中的以下模板显示 `LevelC` 的 `title` 和 `valueC` 值，但也包含 `LevelA` scope 的 `valueA` 值以及 `LevelB` scope 的 `valueB` 值。此外，当点击此按钮时，执行的是 `LevelC` 的 `inc()` 函数：
+
+7. `div`中的以下模板显示`LevelC`的`title`和`valueC`值，但也包含`LevelA` scope 的`valueA`值以及`LevelB` scope 的`valueB`值。此外，当点击此按钮时，执行的是`LevelC`的`inc()`函数：
 
 ```html
 <div>
@@ -16935,10 +16185,7 @@ $scope('LevelA', function($scope) {
 </div>
 ```
 
-
-
-
-## 8. 图 22.3 显示了渲染后的 AngularJS 应用。注意三个作用域（scope）中 `title` 属性的值都是不同的。这是因为在层次结构中的每一层都创建了新的 `title` 属性。
+## 8. 图 22.3 显示了渲染后的 AngularJS 应用。注意三个作用域（scope）中`title`属性的值都是不同的。这是因为在层次结构中的每一层都创建了新的`title`属性。
 
 ![图像](img/image00999.jpeg)
 
@@ -17015,7 +16262,7 @@ $scope('LevelA', function($scope) {
 **A](#part0037.xhtml_ch22qq01)** 不，AngularJS 应用的作用域应该匹配应用程序本身所需。然而，尽可能保持与后端数据匹配可以使代码更易维护。
 
 **Q](#part0037.xhtml_ch22aa02)** 是否可以从 AngularJS 外部修改作用域？
-**A](#part0037.xhtml_ch22qq02)** 是的，你始终可以使用 `angular(element).scope()` 访问作用域。但是，通常最好只在作用域内部修改它。
+**A](#part0037.xhtml_ch22qq02)** 是的，你始终可以使用`angular(element).scope()`访问作用域。但是，通常最好只在作用域内部修改它。
 
 ### 工作坊
 该工作坊由一系列问题和答案组成，旨在巩固你对本节涵盖内容的理解。请在查看答案之前尝试回答这些问题。
@@ -17040,8 +16287,8 @@ $scope('LevelA', function($scope) {
 **4](#part0037.xhtml_ch22qa04)** B 是 A 的父级。
 
 #### 练习题
-**1](#part0037.xhtml_ch22lis01)** 修改列表 22.1，添加一个按钮，点击它时将作用域中的 `current` 值重置为 `start` 值。
-**2](#part0037.xhtml_ch22lis02)** 修改列表 22.2，在作用域中添加另一个名为 `multiplyValues()` 的函数，用于相乘值而不是相加值。
+**1](#part0037.xhtml_ch22lis01)** 修改列表 22.1，添加一个按钮，点击它时将作用域中的`current`值重置为`start`值。
+**2](#part0037.xhtml_ch22lis02)** 修改列表 22.2，在作用域中添加另一个名为`multiplyValues()`的函数，用于相乘值而不是相加值。
 **3](#part0037.xhtml_ch22lis03)** 修改列表 22.3，添加相应的表达式和按钮到模板以暴露该功能。
 **4](#part0037.xhtml_ch22lis04)** 修改列表 22.4，添加一个在点击时增加作用域中值的表达式。
 
@@ -17060,7 +16307,7 @@ AngularJS 模板提供了向用户表示应用程序的框架。模板包含表�
 ### 理解模板
 AngularJS 模板非常简单但非常强大且易于扩展。模板基于标准的 HTML 文档，但通过三个额外的组件扩展了 HTML 功能：
 
-- **表达式：** 表达式是在作用域范围内计算的类似 JavaScript 代码片段。表达式用 `{{}}` 括号表示。表达式的结果会被编译到 HTML 网页中。表达式可以放在普通的 HTML 文本或属性值中，如下：
+- **表达式：** 表达式是在作用域范围内计算的类似 JavaScript 代码片段。表达式用`{{}}`括号表示。表达式的结果会被编译到 HTML 网页中。表达式可以放在普通的 HTML 文本或属性值中，如下：
 
 ```html
 <p>{{1+2}}</p>
@@ -17070,11 +16317,7 @@ AngularJS 模板非常简单但非常强大且易于扩展。模板基于标准�
 - **过滤器：** 过滤器转换放置网页上的数据的外观。例如，过滤器可以将作用域中的数字转换为货币字符串或时间字符串。
 - **指令：** 指令是 HTML 元素内部新的 HTML 元素名称或属性名称。它们通过添加和修改 HTML 元素的行为，为 AngularJS 应用提供数据绑定、事件处理以及其他支持。
 
-
-
-
-
-以下代码段展示了指令、表达式和过滤器的实现。`ng-model="msg"` 属性是一个指令，它将`<input>`元素的值绑定到作用域（scope）中的 `msg`。`{{}}` 括号中的代码是一个表达式，它应用了 `uppercase` 过滤器：
+以下代码段展示了指令、表达式和过滤器的实现。`ng-model="msg"`属性是一个指令，它将`<input>`元素的值绑定到作用域（scope）中的`msg`。`{{}}`括号中的代码是一个表达式，它应用了`uppercase`过滤器：
 
 ```html
 <div>
@@ -17087,11 +16330,11 @@ AngularJS 模板非常简单但非常强大且易于扩展。模板基于标准�
 
 在编译期间，HTML 标签和属性会进行归一化处理，以支持 AngularJS 是大小写敏感而 HTML 不敏感的事实。归一化主要做了两件事：
 
-![Image](img/image00767.jpeg) 移除元素和属性开头的 `x-` 和 `data-` 前缀。
+![Image](img/image00767.jpeg) 移除元素和属性开头的`x-`和`data-`前缀。
 
-![Image](img/image00767.jpeg) 将带有 `:` 或 `-` 或 `_` 的名称转换为驼峰命名（camelCase）。
+![Image](img/image00767.jpeg) 将带有`:`或`-`或`_`的名称转换为驼峰命名（camelCase）。
 
-例如，以下所有内容都会归一化为 `ngModel`：
+例如，以下所有内容都会归一化为`ngModel`：
 
 - `ng-model`
 - `data-ng-model`
@@ -17104,13 +16347,16 @@ AngularJS 模板非常简单但非常强大且易于扩展。模板基于标准�
 
 ```html
 {{1+5}}
-{{'One' + 'Two'}}
 ```
+
+
+
+`{{'One' + 'Two'}}`
 
 基于这些表达式，网页显示了这些值：
 
-- 6
-- OneTwo
+- `6`
+- `OneTwo`
 
 表达式绑定到数据模型，这提供了两个巨大的优势。首先，你可以在表达式中使用作用域中定义的属性名和函数。其次，因为表达式绑定到作用域，所以当作用域中的数据变化时，表达式也会随之变化。例如，假设作用域包含以下值：
 
@@ -17119,7 +16365,7 @@ $scope.name='Brad';
 $scope.score=95;
 ```
 
-你可以直接在模板表达式中引用 name 和 score 值，如下所示：
+你可以直接在模板表达式中引用`name`和`score`值，如下所示：
 
 ```html
 Name: {{name}}
@@ -17129,15 +16375,11 @@ Adjusted: {{score+5}}
 
 AngularJS 表达式在许多方面与 JavaScript 表达式相似，但在以下方面不同：
 
-![Image](img/image00767.jpeg) **属性求值：** 属性名是针对作用域模型求值的，而不是针对全局 JavaScript 命名空间。
+- **属性求值：** 属性名是针对作用域模型求值的，而不是针对全局 JavaScript 命名空间。
+- **容错性更高：** 表达式在遇到`undefined`或`null`变量类型时不会抛出异常；相反，它们将这些视为没有值。
+- **无流程控制：** 表达式不允许 JavaScript 条件判断或循环。此外，你不能在表达式内部抛出错误。
 
-![Image](img/image00767.jpeg) **容错性更高：** 表达式在遇到 undefined 或 null 变量类型时不会抛出异常；相反，它们将这些视为没有值。
-
-![Image](img/image00767.jpeg) **无流程控制：** 表达式不允许 JavaScript 条件判断或循环。此外，你不能在表达式内部抛出错误。
-
-AngularJS 将用于定义指令标签中属性值的字符串求值为表达式。这允许你在一个定义中包含表达式类型的语法。例如，当你在模板中设置 `ng-click` 指令的值时，你指定了一个表达式。在该表达式内部，你可以引用作用域变量并使用其他表达式语法，如下所示：
-
-点击此处查看代码图像
+AngularJS 将用于定义指令标签中属性值的字符串求值为表达式。这允许你在一个定义中包含表达式类型的语法。例如，当你在模板中设置`ng-click`指令的值时，你指定了一个表达式。在该表达式内部，你可以引用作用域变量并使用其他表达式语法，如下所示：
 
 ```html
 <span ng-click="scopeFunction()"></span>
@@ -17145,9 +16387,7 @@ AngularJS 将用于定义指令标签中属性值的字符串求值为表达式�
 <span ng-click="scopeFunction(5*scopeVariable)"></span>
 ```
 
-因为 AngularJS 模板表达式可以访问作用域，你也可以可以在 AngularJS 表达式内部对作用域进行更改。例如，以下 `ng-click` 指令更改了作用域模型内部 `msg` 的值：
-
-点击此处查看代码图像
+因为 AngularJS 模板表达式可以访问作用域，你也可以在 AngularJS 表达式内部对作用域进行更改。例如，以下`ng-click`指令更改了作用域模型内部`msg`的值：
 
 ```html
 <span ng-click="msg='clicked'"></span>
@@ -17155,23 +16395,23 @@ AngularJS 将用于定义指令标签中属性值的字符串求值为表达式�
 
 接下来的章节将带你了解一些在 AngularJS 中利用表达式能力的示例。
 
-***
+---
 
 ### 动手实践：使用基础表达式
 
 在本次练习中，你将看到 AngularJS 表达式如何处理字符串和数字的渲染。此练习的目的是说明 AngularJS 如何求值包含字符串、数字以及基础数学运算符的表达式。
 
-列表 23.1 中的代码是一个简单的 AngularJS 应用，带有一个 `myController` 的控制器。该控制器是空的，因为没有任何表达式访问作用域。
+列表 23.1 中的代码是一个简单的 AngularJS 应用，带有一个`myController`的控制器。该控制器是空的，因为没有任何表达式访问作用域。
 
-列表 23.2 中的代码是一个 AngularJS 模板，包含几个封装在 `{{}}` 括号中的多种类型的表达式。某些表达式是数字或字符串，某些包含 `+` 操作以组合字符串和/或数字，还有一个应用了 `===` 运算符来比较两个数字。
+列表 23.2 中的代码是一个 AngularJS 模板，包含几个封装在`{{}}`括号中的多种类型的表达式。某些表达式是数字或字符串，某些包含`+`操作以组合字符串和/或数字，还有一个应用了`===`运算符来比较两个数字。
 
 使用以下步骤构建使用基础表达式的应用程序：
 
-**1.** 添加 `lesson23/expressions_basic.html` 和 `lesson23/js/expressions_basic.js` 文件。
+1. 添加`lesson23/expressions_basic.html`和`lesson23/js/expressions_basic.js`文件。
 
-**2.** 将 列表 23.1 和 列表 23.2 所示的代码添加到 HTML 和 JavaScript 文件中。
+2. 将列表 23.1 和列表 23.2 所示的代码添加到 HTML 和 JavaScript 文件中。
 
-**3.** 列表 23.1 中的以下代码实现了一个控制器：
+3. 列表 23.1 中的以下代码实现了一个控制器：
 
 ```javascript
 angular.module('myApp', [])
@@ -17179,49 +16419,49 @@ angular.module('myApp', [])
 });
 ```
 
-**4.** 列表 23.2 中的以下行显示数字：
+4. 列表 23.2 中的以下行显示数字：
 
 ```html
 {{5}}
 ```
 
-**5.** 列表 23.2 中的以下行显示字符串：
+5. 列表 23.2 中的以下行显示字符串：
 
 ```html
 {{5}}
 ```
 
-**6.** 列表 23.2 中的以下行通过组合字符串显示字符串：
+6. 列表 23.2 中的以下行通过组合字符串显示字符串：
 
 ```html
 {{'1' + '2'}}
 ```
 
-**7.** 列表 23.2 中的以下行通过数字数字显示数字：
+7. 列表 23.2 中的以下行通过数字数字显示数字：
 
 ```html
 {{5+5}}
 ```
 
-**8.** 列表 23.2 中的以下行通过将它们组合显示字符串和数字：
+8. 列表 23.2 中的以下行通过将它们组合显示字符串和数字：
 
 ```html
 {{5 + '+' + 5}}
 ```
 
-**9.** 列表 23.2 中的以下行通过比较 5 和 5 显示布尔值：
+9. 列表 23.2 中的以下行通过比较 5 和 5 显示布尔值：
 
 ```html
 {{5===5}}
 ```
 
-**10.** 在浏览器中打开 `expressions_basic.html`。图 23.1 显示渲染后的网页。注意数字和字符串直接渲染到最终视图。组合字符串和数字允许你构建渲染到视图的文本。还要注意使用比较运算符会在视图中渲染 `true` 或 `false`。
+10. 在浏览器中打开`expressions_basic.html`。图 23.1 显示渲染后的网页。注意数字和字符串直接渲染到最终视图。组合字符串和数字允许你构建渲染到视图的文本。还要注意使用比较运算符会在视图中渲染`true`或`false`。
 
 ![Image](img/image1000.jpeg)
 
 **图 23.1** 使用包含字符串、数字和数学运算的 AngularJS 表达式。
 
-***
+---
 
 ```html
 <!doctype html>
@@ -17234,10 +16474,6 @@ angular.module('myApp', [])
     </style>
   </head>
 ```
-
-
-
-
 
 ```html
 <body>
@@ -17258,24 +16494,22 @@ angular.module('myApp', [])
   <script src="http://code.angularjs.org/1.3.0/angular.min.js"></script>
   <script src="js/expressions_basic.js"></script>
 </body>
-</</html>
+</html>
 ```
 
-* * *
-* * *
-* * *
+---
 
-动手尝试：在表达式中与 scope（作用域）交互
+### 动手尝试：在表达式中与 scope（作用域）交互
 
 现在你已经看到基础的 AngularJS 表达式，让我们来看看如何在 AngularJS 表达式内部与 scope 进行交互。在之前的示例中，表达式的所有输入都来自显式的字符串或数字。这个示例展示了 AngularJS 表达式的真实威力，这种威力源于与 scope 中的数据进行交互。
 
 按照以下步骤构建使用基础表达式的应用程序：
 
-**1.** 添加 `lesson23/expressions_scope.html` 和 `lesson23/js/expressions_scope.js` 文件。
+1. 添加`lesson23/expressions_scope.html`和`lesson23/js/expressions_scope.js`文件。
 
-**2.** 在 HTML 和 JavaScript 文件中添加列表 23.3 和 列表 23.4 所示的代码。
+2. 在 HTML 和 JavaScript 文件中添加列表 23.3 和列表 23.4 所示的代码。
 
-**3.** 列表 23.3 中的后续代码初始化了 scope 所需要的 `speed`、`vehicle`、`new-Speed` 和 `newVehicle` 变量：
+3. 列表 23.3 中的后续代码初始化了 scope 所需要的`speed`、`vehicle`、`newSpeed`和`newVehicle`变量：
 
 ```javascript
 $scope.speed = 'Slow';
@@ -17284,7 +16518,7 @@ $scope.newSpeed = 'Hypersonic';
 $scope.newVehicle = 'Plane';
 ```
 
-**4.** 后续代码实现了两个函数，接受一个字符串并返回其大写或小写形式的字符：
+4. 后续代码实现了两个函数，接受一个字符串并返回其大写或小写形式的字符：
 
 ```javascript
 $scope.upper = function(aString){
@@ -17295,7 +16529,7 @@ $scope.lower = function(aString){
 };
 ```
 
-**5.** 后续代码创建了一个函数，根据传递的参数设置 `$scope.speed` 和 `$scope.vehicle` 的值：
+5. 后续代码创建了一个函数，根据传递的参数设置`$scope.speed`和`$scope.vehicle`的值：
 
 ```javascript
 $scope.setValues = function(speed, vehicle){
@@ -17304,44 +16538,44 @@ $scope.setValues = function(speed, vehicle){
 };
 ```
 
-**6.** 来自列表 23.4 的后续代码是 AngularJS 模板的一部分，允许你直接访问 scope 中的变量。
+6. 来自列表 23.4 的后续代码是 AngularJS 模板的一部分，允许你直接访问 scope 中的变量。
 
 ```html
 {{speed}} {{vehicle}}<hr>
 ```
 
-**7.** 下段代码从 scope 中添加变量 `speed` 和 `vehicle` 并显示它们：
+7. 下段代码从 scope 中添加变量`speed`和`vehicle`并显示它们：
 
 ```html
 {{speed + ' ' + vehicle}}
 ```
 
-**8.** 后续代码显示了在 scope 中调用 `lower()` 和 `upper()` 函数的结果。注意， scope 中的 `speed` 被传递给 `lower()`，字符串 `Jeep` 被传递给 `upper()`：
+8. 后续代码显示了在 scope 中调用`lower()`和`upper()`函数的结果。注意，scope 中的`speed`被传递给`lower()`，字符串`Jeep`被传递给`upper()`：
 
 ```html
 {{lower(speed)}} {{upper('Jeep')}}<hr>
 ```
 
-**9.** 后续几行代码使用 `ng-click` 调用控制器中的 `setValues()`。第一个参数是字符串，第二个参数是 scope 中的变量 `newVehicle`：
+9. 后续几行代码使用`ng-click`调用控制器中的`setValues()`。第一个参数是字符串，第二个参数是 scope 中的变量`newVehicle`：
 
 ```html
 <a ng-click="setValues('Fast', newVehicle)">点击切换到 {{newVehicle}}</a><hr>
 ```
 
-**10.** 后续几行代码使用 `ng-click` 调用控制器中的 `setValues()`。第一个参数是 scope 中的变量 `newSpeed`，第二个参数是字符串 `Rocket`：
+10. 后续几行代码使用`ng-click`调用控制器中的`setValues()`。第一个参数是 scope 中的变量`newSpeed`，第二个参数是字符串`Rocket`：
 
 ```html
 <a ng-click="setValues(newSpeed, 'Rocket')">点击切换到 {{newSpeed}}</a><hr>
 ```
 
-**11.** 后续几行代码在被点击时直接设置 scope 中的变量 `vehicle`：
+11. 后续几行代码在被点击时直接设置 scope 中的变量`vehicle`：
 
 ```html
 <a ng-click="vehicle='Car'">点击切换车辆为汽车</a><hr>
 <a ng-click="vehicle='Enhanced ' + vehicle">点击增强车辆</a><hr>
 ```
 
-**12.** 在浏览器中打开 `expressions_scope.html`。图 23.2 显示了基于表达式渲染的网页。注意，当点击页面上的链接时，产生的函数调用会调整 scope，从而改变之前讨论的表达式的渲染方式。
+12. 在浏览器中打开`expressions_scope.html`。图 23.2 显示了基于表达式渲染的网页。注意，当点击页面上的链接时，产生的函数调用会调整 scope，从而改变之前讨论的表达式的渲染方式。
 
 ![Image](img/image01001.jpeg)
 
@@ -17397,13 +16631,9 @@ angular.module('myApp', [])
 </html>
 ```
 
+---
 
-
-
-
-### 3. 列表 23.5 中的后续代码创建了一个简单的 AngularJS 控制器，它在 scope 中包含两个数组，这些数组将用于表达式中。注意第 3 行通过将其赋值给 `windows.Math` 向 scope 中添加了 `Math` 变量。为了使用 JavaScript 的 `Math` 功能，这是必要的，因为在评估 AngularJS 表达式时，只有 scope 变量是可用的：
-
-点击此处查看代码图像
+3. 列表 23.5 中的后续代码创建了一个简单的 AngularJS 控制器，它在 scope 中包含两个数组，这些数组将用于表达式中。注意第 3 行通过将其赋值给`windows.Math`向 scope 中添加了`Math`变量。为了使用 JavaScript 的`Math`功能，这是必要的，因为在评估 AngularJS 表达式时，只有 scope 变量是可用的：
 
 ```javascript
 01 angular.module('myApp', [])
@@ -17414,9 +16644,7 @@ angular.module('myApp', [])
 06    });
 ```
 
-### 4. 列表 23.6 实现了一个 AngularJS 模板，该模板使用 AngularJS 表达式来显示数组、显示数组长度，并直接在表达式中使用 `push()` 和 `shift()` 操作数组元素。以下行显示了来自 scope 的 `myArr` 和 `removedArr` 变量：
-
-点击此处查看代码图像
+4. 列表 23.6 实现了一个 AngularJS 模板，该模板使用 AngularJS 表达式来显示数组、显示数组长度，并直接在表达式中使用`push()`和`shift()`操作数组元素。以下行显示了来自 scope 的`myArr`和`removedArr`变量：
 
 ```html
 13          {{myArr}}<hr>
@@ -17424,9 +16652,7 @@ angular.module('myApp', [])
 15          {{removedArr}}<hr>
 ```
 
-### 5. 下续行直接从表达式内部对 scope 中的 `myArr` 和 `removedArray` 变量应用 JavaScript 的 `push` 和 `shift` 功能：
-
-点击此处查看代码图像
+5. 下续行直接从表达式内部对 scope 中的`myArr`和`removedArray`变量应用 JavaScript 的`push`和`shift`功能：
 
 ```html
 16      <a ng-click="myArr.push(Math.floor(Math.random()*100 + 1))">
@@ -17435,29 +16661,27 @@ angular.module('myApp', [])
 19        点击从数组中移除第一个值</a><hr>
 ```
 
-### 6. 下续行使用数组对象上的 JavaScript length 值显示 `myArry` 的长度：
-
-点击此处查看代码图像
+6. 下续行使用数组对象上的 JavaScript `length`值显示`myArr`的长度：
 
 ```html
 21          {{myArr.length}}<hr>
 ```
 
-### 7. 下续行使用 scope 中指向 JavaScript `Math` 对象的 `Math` 变量来获取 `removedArr` 长度的余弦值：
-
-点击此处查看代码图像
+7. 下续行使用 scope 中指向 JavaScript`Math`对象的`Math`变量来获取`removedArr`长度的余弦值：
 
 ```html
 23          {{Math.cos(removedArr.length)}}<hr>
 ```
 
-### 8. 在浏览器中打开 `expressions_javascript.html` 并点击向数组添加和移除元素。图 23.3 显示了渲染后的 AngularJS 网页。注意，当点击链接时，数组会调整，表达式会重新评估。
+
+
+### 8. 在浏览器中打开`expressions_javascript.html`并点击向数组添加和移除元素。图 23.3 显示了渲染后的 AngularJS 网页。注意，当点击链接时，数组会调整，表达式会重新评估。
 
 ![Image](img/image01002.jpeg)
 
-**图 23.3** 使用 AngularJS 表达式应用 JavaScript 数组和 `Math` 操作来与 scope 数据进行交互。
+**图 23.3** 使用 AngularJS 表达式应用 JavaScript 数组和`Math`操作来与 scope 数据进行交互。
 
-**列表 23.5 expressions_javascript.js 构建一个 AngularJS 表达式可以使用的数组和 Math 对象的 Scope**
+**列表 23.5 `expressions_javascript.js`构建一个 AngularJS 表达式可以使用的数组和`Math`对象的 Scope**
 
 点击此处查看代码图像
 
@@ -17470,7 +16694,7 @@ angular.module('myApp', [])
 06    });
 ```
 
-**列表 23.6 expressions_javascript.html 一个 AngularJS 模板，以各种方式使用包含数组和 Math 逻辑的表达式与 scope 模型中的数据进行交互**
+**列表 23.6 `expressions_javascript.html`一个 AngularJS 模板，以各种方式使用包含数组和`Math`逻辑的表达式与 scope 模型中的数据进行交互**
 
 点击此处查看代码图像
 
@@ -17501,10 +16725,10 @@ angular.module('myApp', [])
 24        <script src="http://code.angularjs.org/1.3.8/angular.min.js"></script>
 25        <script src="js/expressions_javascript.js"></script>
 26      </body>
-27</html
+27</html>
 ```
 
-### 使用过滤器 (Filters)
+### 使用过滤器（Filters）
 
 AngularJS 的一个强大特性是实现过滤器的能力。过滤器是提供者的一种，它挂接到表达式解析器并修改表达式的结果以便在视图中显示——例如，格式化时间或货币值。
 
@@ -17514,30 +16738,24 @@ AngularJS 的一个强大特性是实现过滤器的能力。过滤器是提供�
 
 如果你将多个过滤器链在一起，它们将按照你指定的顺序进行执行：
 
-点击此处查看代码图像
-
 `{{ expression | filter | filter }}`
 
 某些过滤器允许你以函数参数的形式提供输入。你通过使用以下语法添加这些参数：
 
-点击此处查看代码图像
-
 `{{ expression | filter:parameter1:parameter2 }}`
 
-此外，你还可以向控制器和服务中添加过滤器，过滤器的名称为过滤器的名称。例如，过滤器名为 `currencyFilter`。过滤器作为函数，以表达式作为第一个参数，后续是其他参数：
-
-点击此处查看代码图像
+此外，你还可以向控制器和服务中添加过滤器，过滤器的名称为过滤器的名称。例如，过滤器名为`currencyFilter`。过滤器作为函数，以表达式作为第一个参数，后续是其他参数：
 
 ```javascript
 controller('myController', '$scope', 'currencyFilter',
           function($scope, currencyFilter){
   $scope.getCurrencyValue = function(value){
   return currencyFilter(value, "$USD");
-
+```
 
 #### 使用内置过滤器
 
-AngularJS 提供了多种过滤器，允许你轻松地格式化 模板中的字符串、对象和数组。[表 23.1 列出了 AngularJS 提供的内置过滤器。
+AngularJS 提供了多种过滤器，允许你轻松地格式化模板中的字符串、对象和数组。表 23.1 列出了 AngularJS 提供的内置过滤器。
 
 ![Image](img/image0103.jpeg)![Image](img/image0104.jpeg)![Image](img/image0105.jpeg)
 
@@ -17545,12 +16763,14 @@ AngularJS 提供了多种过滤器，允许你轻松地格式化 模板中的字
 
 ### 尝试一下：使用过滤器控制数据渲染
 
-在这个示例中，你尝试使用内置过滤器。列表 23.7](#part0038.xhtml_ch23lis07) 定义了一个带有各种类型数据的 AngularJS 应用。列表 23.8](#part0038.xhtml_ch23lis08) 实现了一个使用某些过滤器的 AngularJS 模板。
+在这个示例中，你尝试使用内置过滤器。列表 23.7 定义了一个带有各种类型数据的 AngularJS 应用。列表 23.8 实现了一个使用某些过滤器的 AngularJS 模板。
 
 使用以下步骤创建应用程序并在 AngularJS 表达式中实现过滤器：
 
-1. 添加 `lesson23/filters.html` 和 `lesson23/js/filters.js` 文件。
-2. 将列表 23.7](#part0038.xhtml_ch23lis07) 和列表 23.8](#part0038.xhtml_ch23lis08) 所示的代码添加到 HTML 和 JavaScript 文件中。
+1. 添加`lesson23/filters.html`和`lesson23/js/filters.js`文件。
+
+2. 将列表 23.7 和列表 23.8 所示的代码添加到 HTML 和 JavaScript 文件中。
+
 3. 下续代码实现了一个带有日期、对象、字符串和数组对象的控制器：
 
 ```javascript
@@ -17563,51 +16783,37 @@ AngularJS 提供了多种过滤器，允许你轻松地格式化 模板中的字
 08   });
 ```
 
-4. 列表 23.8](#part0038.xhtml_ch23lis08) 中的后续代码实现了几个过滤器。下一行实现了 `number` 过滤器，并限制显示的小数数为 3：
+4. 列表 23.8 中的后续代码实现了几个过滤器。下一行实现了`number`过滤器，并限制显示的小数数为 3：
 
 ```html
 09       Number: {{123.45678|number:3}}<br>
 ```
 
-
-
-
-
-### 5. 下面的代码实现了 `currency` 过滤器，它接收一个数字，在前面加上美元符号，并将小数值限制为美货币的两位小数格式：
-
-点击此处查看代码图像
+5. 下面的代码实现了`currency`过滤器，它接收一个数字，在前面加上美元符号，并将小数值限制为美货币的两位小数格式：
 
 ```
 10      Currency: {{123.45678|currency:"$"}}
 ```
 
-### 6. 下面的代码实现了 `date` 过滤器，它格式化作用域中的日期对象 `currentDate` 并将其显示：
-
-点击此处查看代码图像
+6. 下面的代码实现了`date`过滤器，它格式化作用域中的日期对象`currentDate`并将其显示：
 
 ```
 11      Date: {{ currentDate | date:'yyyy-MM-dd HH:mm:ss Z' }}
 ```
 
-### 7. 还记得之前的 `JSONObj` 吗？下面的代码利用了它并填充了表达式：
-
-点击此处查看代码图像
+7. 还记得之前的`JSONObj`吗？下面的代码利用了它并填充了表达式：
 
 ```
 12      JSON: {{ JSONObj | json }}
 ```
 
-### 8. 下面的代码使用 `limit` 过滤器仅显示 `days` 数组的前 3 个元素：
-
-点击此处查看代码图像
+8. 下面的代码使用`limit`过滤器仅显示`days`数组的前 3 个元素：
 
 ```
 13      Limit Array: {{ days | limitTo:3 }}
 ```
 
-### 9. 下面的几行代码使用 `limit`、`uppercase` 和 `lowercase` 过滤器来修改作用域中字符串变量 `word` 的显示方式：
-
-点击此处查看代码图像
+9. 下面的几行代码使用`limit`、`uppercase`和`lowercase`过滤器来修改作用域中字符串变量`word`的显示方式：
 
 ```
 14      Limit String: {{ word | limitTo:9 }}
@@ -17615,13 +16821,13 @@ AngularJS 提供了多种过滤器，允许你轻松地格式化 模板中的字
 16      Lowercase: {{ word | lowercase | limitTo:9 }}
 ```
 
-### 10. 将 `filters.html` 加载到浏览器。图 23.4 显示过滤器生成的输出。
+10. 将`filters.html`加载到浏览器。图 23.4 显示过滤器生成的输出。
 
 ![Image](img/image01006.jpeg)
 
 **图 23.4** 使用 AngularJS 过滤器在 AngularJS 视图中显示之前修改数据。
 
-**代码列表 23.7 filters.js 构建 AngularJS 过滤器可以使用的作用域**
+**代码列表 23.7 `filters.js`构建 AngularJS 过滤器可以使用的作用域**
 
 点击此处查看代码图像
 
@@ -17636,7 +16842,7 @@ AngularJS 提供了多种过滤器，允许你轻松地格式化 模板中的字
 08   });
 ```
 
-**代码列表 23.8 filters.html 一个 AngularJS 模板，它实现了多种类型的过滤器以修改在渲染视图中显示的数据**
+**代码列表 23.8 `filters.html`一个 AngularJS 模板，它实现了多种类型的过滤器以修改在渲染视图中显示的数据**
 
 点击此处查看代码图像
 
@@ -17663,15 +16869,17 @@ AngularJS 提供了多种过滤器，允许你轻松地格式化 模板中的字
 20 </html>
 ```
 
-## 亲手试试：使用过滤器实现排序和过滤
+### 亲手试试：使用过滤器实现排序和过滤
 
-过滤器的一个非常常用的用途是使用 JavaScript 中的 `ng-repeat` 指令对元素进行排序或过滤。本节提供了 `orderBy` 过滤器的示例，用于生成一个可以按列排序并通过 `<input>` 元素过滤的表格。
+过滤器的一个非常常用的用途是使用 JavaScript 中的`ng-repeat`指令对元素进行排序或过滤。本节提供了`orderBy`过滤器的示例，用于生成一个可以按列排序并通过`<input>`元素过滤的表格。
 
 使用以下步骤创建一个利用对表格数据进行排序和排序过滤的 AngularJS 应用：
 
-1. 添加 `lesson23/filter_sort.html` 和 `lesson23/js/filter_sort.js`。
-2. 将 代码列表 23.9 和 代码列表 23.10 所示的代码添加到 HTML 和 JavaScript 文件中。
-3. 代码列表 23.9 中的代码实现了一个带有控制器的 AngularJS 应用。以下几行代码将 `filterFilter` 提供者注入到控制器中：
+1. 添加`lesson23/filter_sort.html`和`lesson23/js/filter_sort.js`。
+
+2. 将代码列表 23.9 和代码列表 23.10 所示的代码添加到 HTML 和 JavaScript 文件中。
+
+3. 代码列表 23.9 中的代码实现了一个带有控制器的 AngularJS 应用。以下几行代码将`filterFilter`提供者注入到控制器中：
 
 ```
 02  .controller('myController', ['$scope', 'filterFilter',
@@ -17698,7 +16906,7 @@ AngularJS 提供了多种过滤器，允许你轻松地格式化 模板中的字
 23  };
 ```
 
-4. 下面的代码将 `filterFilter` 提供者注入到控制器中：
+4. 下面的代码将`filterFilter`提供者注入到控制器中：
 
 ```
 02  .controller('myController', ['$scope', 'filterFilter',
@@ -17725,7 +16933,7 @@ AngularJS 提供了多种过滤器，允许你轻松地格式化 模板中的字
 23  };
 ```
 
-5. 下面的代码定义了 `setSort` 函数，用于更新 `column` 和 `reverse` 值：
+5. 下面的代码定义了`setSort`函数，用于更新`column`和`reverse`值：
 
 ```
 15  $scope.setSort = function(column) {
@@ -17734,56 +16942,20 @@ AngularJS 提供了多种过滤器，允许你轻松地格式化 模板中的字
 28  };
 ```
 
-6. 下面的代码定义了 `filterString` 值，它通过 `filterFilter` 将 `filteredPlanes` 限制为模糊匹配 `filterString` 的项：
+6. 下面的代码定义了`filterString`值，它通过`filterFilter`将`filteredPlanes`限制为模糊匹配`filterString`的项：
 
+
+
+## AngularJS 排序与过滤示例
+
+### 代码列表 23.9：AngularJS 模块构建飞机列表并提供排序和过滤功能
+
+```javascript
+01  angular.module('myApp', [])
+02     .controller('myController', ['$scope', 'filterFilter',
+03     function($scope, filterFilter) {
+04     $scope.planes = [
 ```
-19  $scope.filterString = '';
-20  $scope.setFilter = function() {
-21    $scope.filteredPlanes = filterFilter($scope.planes, $scope.filterString);
-22  };
-```
-
-7. 代码列表 23.10 实现了一个模板，它包含了设置字符串过滤器的输入和一个允许点击列进行排序的表格。下面的代码显示了绑定到 `filterString` 值的文本 `<input>` 以及点击时调用 `setFilter()` 的按钮 `<input>`：
-
-```
-14  <input type="text" ng-model="filterString">
-15  <input type="button" ng-click="setFilter()" value="Filter">
-```
-
-8. 下面的代码显示表头应用 `ng-click` 指令调用 `setSort()` 设置排序。每当调用一次 `setSort()`，排序就会反转：
-
-```
-18  <th ng-click="setSort('make')">Make</th>
-19  <th ng-click="setSort('model')">Model</th>
-20  <th ng-click="setSort('capacity')">Capacity</th>
-```
-
-9. 下面的代码使用 `ng-repeat` 指令实现表格的行。注意 `ng-repeat` 指令使用 `orderBy` 过滤器来指定由 `setSort()` 函数设置的 `column` 和 `reverse` 值：
-
-```
-22  <tr ng-repeat="plane in filteredPlanes | orderBy:column:reverse">
-24    <td>{{plane.make}}</td>
-25    <td>{{plane.model}}</td>
-26    <td>{{plane.capacity}}</td>
-27  </tr>
-```
-
-10. 在浏览器中打开 `filter_sort.html`。图 23.5 显示了生成的网页。点击列表头会对表格进行排序，在过滤器过滤框中添加文本会过滤表格的内容。
-
-**代码列表 23.9 AngularJS 模块构建了一个飞机列表并提供了对列表排序和排序的功能**
-
-点击此处查看代码图像
-
-```
-01 angular.module('myApp', [])
-02    .controller('myController', ['$scope', 'filterFilter',
-03    function($scope, filterFilter) {
-04    $scope.planes = [
-```
-
-
-
-
 
 ```javascript
 [
@@ -17810,9 +16982,7 @@ $scope.setFilter = function(value){
 };
 ```
 
-## 列表 23.10 filter_sort.html 使用 filter 和 orderBy 实现表格中项目排序和过滤的 AngularJS 模板
-
-点击此处查看代码图片
+### 列表 23.10：`filter_sort.html` 使用 `filter` 和 `orderBy` 实现表格中项目排序和过滤的 AngularJS 模板
 
 ```html
 <!doctype html>
@@ -17849,13 +17019,40 @@ $scope.setFilter = function(value){
 </html>
 ```
 
-### 创建自定义过滤器
+### 代码列表 23.10 实现说明
+
+代码列表 23.10 实现了一个模板，它包含了设置字符串过滤器的输入和一个允许点击列进行排序的表格。下面的代码显示了绑定到 `filterString` 值的文本 `<input>` 以及点击时调用 `setFilter()` 的按钮 `<input>`：
+
+```html
+14  <input type="text" ng-model="filterString">
+15  <input type="button" ng-click="setFilter()" value="Filter">
+```
+
+下面的代码显示表头应用 `ng-click` 指令调用 `setSort()` 设置排序。每当调用一次 `setSort()`，排序就会反转：
+
+```html
+18  <th ng-click="setSort('make')">Make</th>
+19  <th ng-click="setSort('model')">Model</th>
+20  <th ng-click="setSort('capacity')">Capacity</th>
+```
+
+下面的代码使用 `ng-repeat` 指令实现表格的行。注意 `ng-repeat` 指令使用 `orderBy` 过滤器来指定由 `setSort()` 函数设置的 `column` 和 `reverse` 值：
+
+```html
+22  <tr ng-repeat="plane in filteredPlanes | orderBy:column:reverse">
+24    <td>{{plane.make}}</td>
+25    <td>{{plane.model}}</td>
+26    <td>{{plane.capacity}}</td>
+27  </tr>
+```
+
+在浏览器中打开 `filter_sort.html`。图 23.5 显示了生成的网页。点击列表头会对表格进行排序，在过滤器过滤框中添加文本会过滤表格的内容。
+
+## 创建自定义过滤器
 
 AngularJS 允许你创建自己的自定义过滤器提供程序（custom filter provider），并可以在表达式、控制器和服务中中使用它，就像使用内置过滤器一样。AngularJS 提供了 `filter()` 方法来创建过滤器提供程序并将其注册到依赖注入服务器中。
 
 `filter()` 方法接受第一个参数作为过滤器的名称，第二个参数作为函数。过滤器函数应该接受第一个参数作为表达式输入，其后跟接任何额外参数。例如：
-
-点击此处查看代码图片
 
 ```javascript
 filter('myFilter', function(){
@@ -17867,15 +17064,15 @@ filter('myFilter', function(){
 
 在过滤器函数内部，你可以以任何喜欢的方式更改 `input` 的值。过滤器函数返回的任何值都将作为表达式的结果返回。
 
-### 尝试自己：创建并实现自定义过滤器
+## 尝试自己：创建并实现自定义过滤器
 
-在本次练习中，你将构建并使用一个对单词进行屏蔽（censor）的自定义过滤器。此练习的目的是说明如何构建和使用自定义模板。列表 `23.1](#part038.xhtml_ch2311)` 和 `23.2](#part038.xhtml_ch2312)` 中的代码创建了一个过滤器函数，该函数可以过滤字符串中的单词，并允许将替换值作为可选参数。按照以下步骤构建创建并应用自定义过滤器的应用程序：
+在本次练习中，你将构建并使用一个对单词进行屏蔽（censor）的自定义过滤器。此练习的目的是说明如何构建和使用自定义模板。列表 `23.1` 和 `23.2` 中的代码创建了一个过滤器函数，该函数可以过滤字符串中的单词，并允许将替换值作为可选参数。按照以下步骤构建创建并应用自定义过滤器的应用程序：
 
 1. 添加 `23/filter_custom.html` 和 `23/filter_custom.js`。
-2. 在 HTML 和 JavaScript 文件中添加 `23.1](#part038.xhtml_ch2311)` 和 `23.2](#part038.xhtml_ch2312)` 所示的代码。
-3. `23.1](#part038.xhtml_ch2311)` 中的后续代码定义了名为 `censor` 的过滤器。注意，该过滤器返回一个接受 `input` 和 `replacement` 值的函数，然后遍历被屏蔽的单词并将文本替换为 `replacement` 值：
 
-点击此处查看代码图片
+2. 在 HTML 和 JavaScript 文件中添加 `23.1` 和 `23.2` 所示的代码。
+
+3. `23.1` 中的后续代码定义了名为 `censor` 的过滤器。注意，该过滤器返回一个接受 `input` 和 `replacement` 值的函数，然后遍历被屏蔽的单词并将文本替换为 `replacement` 值：
 
 ```javascript
 .filter('censor', function() {
@@ -17891,7 +17088,7 @@ filter('myFilter', function(){
 })
 ```
 
-4. 后续代码实现了该应用程序。注意该过滤器被注入到控制器中。通过 `filterText` 函数手动处理字符串：点击此处查看代码图片
+4. 后续代码实现了该应用程序。注意该过滤器被注入到控制器中。通过 `filterText` 函数手动处理字符串：
 
 ```javascript
 .controller('myController', ['$scope', 'censorFilter',
@@ -17904,25 +17101,21 @@ filter('myFilter', function(){
   }]);
 ```
 
-5. `23.2](#part038.xhtml_ch2312)` 中的代码通过传递 `"happy"` 作为替换字符串，对作用域 `phrase` 值使用了过滤器：点击此处查看代码图片
+5. `23.2` 中的代码通过传递 `"happy"` 作为替换字符串，对作用域 `phrase` 值使用了过滤器：
 
 ```html
 {{phrase | censor:"happy"}}
 ```
 
-6. 这里的后续行代码使用 `ng-click` 调用控制器中的 `filterText()` 函数，这将通过调用过滤器并传递 `<<censored>>` 作为替换字符串：点击此处查看代码图片
+6. 这里的后续行代码使用 `ng-click` 调用控制器中的 `filterText()` 函数，这将通过调用过滤器并传递 `<<censored>>` 作为替换字符串：
 
 ```html
 <p ng-click="filterText()"></p>
 ```
 
-7. 在浏览器中加载 `filter_custom.html` 以查看图 `23.6](#part038.xhtml_ch236)` 所示的行为。
+7. 在浏览器中加载 `filter_custom.html` 以查看图 `23.6` 所示的行为。
 
 ![Image](img/0108.jpeg)
-
-
-
-
 
 ```html
 10      {"This is some bad, dark, evil text." | censor:"happy"}}
@@ -17937,13 +17130,13 @@ filter('myFilter', function(){
 15</</html>
 ```
 
-### 总结
+## 总结
 
 AngularJS 模板实现简单，但功能非常强大且广泛。本节将讨论 AngularJS 模板的各个组件，以及它们如何协同工作以扩展 HTML DOM 的行为和功能。表达式（Expressions）是包含在 `{{}}` 括号内或 AngularJS 模板指令定义中的 JavaScript 代码。表达式可以访问作用域（scope），因此你可以将作用域值渲染到视图。
 
 过滤器（Filters）作为表达式的修饰符，允许你根据特定目的格式化表达式的结果。AngularJS 提供了多个内置过滤器，例如用于货币和日期格式化的过滤器。你也可以创建自定义过滤器，以便在数据渲染到页面之前应用任何所需的格式化或修改。你将过滤器作为提供者注入到 `injector` 服务中，因此可以使用依赖注入在控制器和模板内部访问它们。这意味着你在 JavaScript 代码中也可以访问过滤器。
 
-### 问答
+## 问答
 
 **Q. 为什么使用自定义过滤器而不是控制器中的简单函数？**
 
@@ -17953,21 +17146,21 @@ AngularJS 模板实现简单，但功能非常强大且广泛。本节将讨论 
 
 **A.** 随着时间的推移，HTML 可能会添加 AngularJS 提供的某些功能。然而，要按照开发者所需的速度移动 HTML 这样被广泛采用的规范太困难。AngularJS 是最佳选择。
 
-### 工作坊
+## 工作坊
 
 工作坊由一组问答组成，旨在巩固你对本小时涵盖内容的理解。在查看答案之前，尝试回答这些问题。
 
-### 测验
+## 测验
 
-**1.** 如何在 AngularJS 表达式中比较作用域值 `valueA` 和 `valueB`？**
+**1.** 如何在 AngularJS 表达式中比较作用域值 `valueA` 和 `valueB`？
 
-**2.** 下述 AngularJS 表达式 `{{5 + '+' + 5}}` 的输出是什么？**
+**2.** 下述 AngularJS 表达式 `{{5 + '+' + 5}}` 的输出是什么？
 
-**3. 你如何使用 AngularJS 正确显示存储在作用域变量 `myMoney` 中的美国美元金额？**
+**3.** 你如何使用 AngularJS 正确显示存储在作用域变量 `myMoney` 中的美国美元金额？
 
-**4. 你会使用哪个 AngularJS 过滤器来对 HTML 表格进行排序？**
+**4.** 你会使用哪个 AngularJS 过滤器来对 HTML 表格进行排序？
 
-### 测验答案
+## 测验答案
 
 **1.** `{{valueA===valueB}`
 
@@ -17977,19 +17170,17 @@ AngularJS 模板实现简单，但功能非常强大且广泛。本节将讨论 
 
 **4.** `orderBy`
 
-### 练习
+## 练习
 
-**1.** 修改 列表 23.1 和 23.2 中的代码，在作用域中存储一个名为 `myScopeText` 的字符串变量，然后使用以下表达式在模板中显示它。然后对作用域中名为 `myScopeNumber` 的数字变量执行相同操作：
+**1.** 修改列表 23.1 和 23.2 中的代码，在作用域中存储一个名为 `myScopeText` 的字符串变量，然后使用以下表达式在模板中显示它。然后对作用域中名为 `myScopeNumber` 的数字变量执行相同操作：
 
 ```html
 {{myScopeText}}
 ```
 
-**2.** 查看 表 23.1 中列出的日期过滤器，然后修改 列表 23.8 中的日期过滤器，以更改显示的日期字符串格式。**
+**2.** 查看表 23.1 中列出的日期过滤器，然后修改列表 23.8 中的日期过滤器，以更改显示的日期字符串格式。
 
-**3.** 修改 列表 23.11 和 23.12 中的代码，向作用域中添加一个额外的字符串进行审查。然后向模板中添加一条语句，指定作用域中该单词的变量名以及作为替换值的字符串。例如：
-
-点击此处查看代码图像
+**3.** 修改列表 23.11 和 23.12 中的代码，向作用域中添加一个额外的字符串进行审查。然后向模板中添加一条语句，指定作用域中该单词的变量名以及作为替换值的字符串。例如：
 
 ```html
 {{myNewPhrase | censor:"XXX" }}<br>
@@ -18035,6 +17226,8 @@ AngularJS 最强大的功能之一是指令。指令扩展了 HTML 的行为，�
 
 后续每个章节都包含一个包含相关指令及其基本描述的表格。你现在不需要理解所有的指令；表格仅供参考。后续章节和课程提供了许多指令示例代码。
 
+
+
 #### 支持功能的指令
 
 若干指令提供了 AngularJS 功能的支持。这些指令涵盖了从启动应用程序到确保 AngularJS 需要的布尔表达式保留在 DOM 中的所有工作。
@@ -18045,26 +17238,25 @@ AngularJS 最强大的功能之一是指令。指令扩展了 HTML 的行为，�
 
 **表 24.1 支持模板功能的指令**
 
-表 24.1 中的指令在代码的不同部分以不同的方式使用。你可能已经在之前的示例中见过其中一些，例如 `ngApp` 和 `ngController`。某些指令非常直观，例如在模板中实现 `<img>` 元素时使用 `ng-src` 代替 `src`。其他指令将在后续课程的各种示例中使用。
+表 24.1 中的指令在代码的不同部分以不同的方式使用。你可能已经在之前的示例中见过其中一些，例如`ngApp`和`ngController`。某些指令非常直观，例如在模板中实现`<img>`元素时使用`ng-src`代替`src`。其他指令将在后续课程的各种示例中使用。
 
-
-
-
-
-我想在这里向你展示一个使用 `ngInclude` 指令的示例。这个小指令用法非常简单，可以用于多种目的，特别是当你正尝试将 AngularJS 引入到现有系统时。在这个示例中，我们使用 `ngInclude` 通过从服务器加载不同的部分 HTML 文件来切换基础网页顶部的横幅栏。
+我想在这里向你展示一个使用`ngInclude`指令的示例。这个小指令用法非常简单，可以用于多种目的，特别是当你正尝试将 AngularJS 引入到现有系统时。在这个示例中，我们使用`ngInclude`通过从服务器加载不同的部分 HTML 文件来切换基础网页顶部的横幅栏。
 
 ***
 
 ## 动手尝试：使用 ng-include 动态更改内容
 
-Listing 24.1 中的代码实现了一个基础 AngularJS 控制器，它在名为 `titleBar` 的变量中存储了一个 HTML 文件名。Listing 24.2 中的代码实现了一个 AngularJS 模板，该模板在顶部包含两个用于切换页面的链接，并在第 24 行的 `<div>` 元素使用 `ng-include` 将该 div 的内容更改为 `titleBar` 指定的文件。
+Listing 24.1 中的代码实现了一个基础 AngularJS 控制器，它在名为`titleBar`的变量中存储了一个 HTML 文件名。Listing 24.2 中的代码实现了一个 AngularJS 模板，该模板在顶部包含两个用于切换页面的链接，并在第 24 行的`<div>`元素使用`ng-include`将该 div 的内容更改为`titleBar`指定的文件。
 
-使用以下步骤构建使用 `ng-include` 快速在两个部分模板之间切换的应用：
+使用以下步骤构建使用`ng-include`快速在两个部分模板之间切换的应用：
 
-1. 添加 `lesson24/directive_angular_include.html`、`lesson24/large_title.html`、`lesson24/small_title.html` 和 `lesson24/js/directive_angular_include.js` 文件。
+1. 添加`lesson24/directive_angular_include.html`、`lesson24/large_title.html`、`lesson24/small_title.html`和`lesson24/js/directive_angular_include.js`文件。
+
 2. 将 Listing 24.1、Listing 24.2、Listing 24.3 和 Listing 24.4 中所示的代码添加到 HTML 和 JavaScript 文件中。
-3. Listing 24.1 中的代码实现了一个简单的应用程序，它将 `titleBar` 的作用域值设置为 `small_tile.html`，这是小横幅的 AngularJS 部分模板。
-4. Listing 24.2 中的代码实现了加载应用的 AngularJS 模板。Listing 24.2 中的后续几行创建了链接，将作用域中 `titleBar` 的值设置为 Listings 24.3 和 24.4 列出的两个模板部分文件之一：
+
+3. Listing 24.1 中的代码实现了一个简单的应用程序，它将`titleBar`的作用域值设置为`small_tile.html`，这是小横幅的 AngularJS 部分模板。
+
+4. Listing 24.2 中的代码实现了加载应用的 AngularJS 模板。Listing 24.2 中的后续几行创建了链接，将作用域中`titleBar`的值设置为 Listings 24.3 和 24.4 列出的两个模板部分文件之一：
 
 点击此处查看代码图像
 
@@ -18073,7 +17265,7 @@ Listing 24.1 中的代码实现了一个基础 AngularJS 控制器，它在名�
 23      [<a ng-click="titleBar='small_title.html'">使标题变小</a>]
 ```
 
-5. Listing 24.2 中的下一行代码使用 `ng-include` 指令将 `<div>` 元素的内容填充为 `titleBar` 设置的任何模板部分：
+5. Listing 24.2 中的下一行代码使用`ng-include`指令将`<div>`元素的内容填充为`titleBar`设置的任何模板部分：
 
 点击此处查看代码图像
 
@@ -18081,8 +17273,9 @@ Listing 24.1 中的代码实现了一个基础 AngularJS 控制器，它在名�
 24      <div ng-include="titleBar"></div
 ```
 
-6. 不同版本的标题栏位于 Listings 24.3 和 24.4 所示的文件中。基本上，这些文件包含一个`<p>` 元素，该元素分配了 `large` 或 `small` 类。这些类的定义位于 Listing 24.2 的`<style>` 元素中。
-7. 在浏览器中打开 `directive_angular_include.html` 文件。Figure 24.1 显示两个横幅。当点击链接切换横幅时，原始 `<div>` 元素的内容会被加载的新 HTML 文件替换。
+6. 不同版本的标题栏位于 Listings 24.3 和 24.4 所示的文件中。基本上，这些文件包含一个`<p>`元素，该元素分配了`large`或`small`类。这些类的定义位于 Listing 24.2 的`<style>`元素中。
+
+7. 在浏览器中打开`directive_angular_include.html`文件。Figure 24.1 显示两个横幅。当点击链接切换横幅时，原始`<div>`元素的内容会被加载的新 HTML 文件替换。
 
 ![图像](img/image01012.jpeg)
 
@@ -18094,10 +17287,15 @@ Listing 24.1 中的代码实现了一个基础 AngularJS 控制器，它在名�
 
 ***
 
+```
 01 angular.module('myApp', []).
+
 02    controller('myController', function($scope) {
+
 03      $scope.titleBar = "small_title.html";
+
 04    });
+```
 
 **LISTING 24.2 directive_angular_include.html 使用 include 指令通过切换两个 HTML 文件更改页面标题栏的 AngularJS 模板**
 
@@ -18165,14 +17363,17 @@ AngularJS 与表单元素深度集成，为应用程序中的表单元素提供�
 
 ## 动手尝试：使用 AngularJS 表单指令将表单元素绑定到作用域
 
-Listings 24.5 和 24.6 实现了一些基础的 AngularJS 表单元素作用域集成。Listing 24.5 初始化作用域。Listing 24.6 实现了常见的表单组件，包括文本框、复选框、单选按钮和 `select` 元素，以说明如何在模板中定义它们以及与作用域中的数据交互。
+Listings 24.5 和 24.6 实现了一些基础的 AngularJS 表单元素作用域集成。Listing 24.5 初始化作用域。Listing 24.6 实现了常见的表单组件，包括文本框、复选框、单选按钮和`select`元素，以说明如何在模板中定义它们以及与作用域中的数据交互。
 
 使用以下步骤使用 AngularJS 表单元素将表单元素绑定到控制器的作用域：
 
-1. 添加 `lesson24/directive_form.html` 和 `lesson24/js/directive_form.js` 文件。
+1. 添加`lesson24/directive_form.html`和`lesson24/js/directive_form.js`文件。
+
 2. 将 Listing 24.5 和 Listing 24.6 中所示的代码添加到 HTML 和 JavaScript 文件中。
-3. Listing 24.5 中的代码实现了一个基础作用域，其中包含一个名为 `cameras` 的对象数组，将用于动态填充模板中的 `<select>` 元素。它还提供了 `cameraObj`、`cameraName`、`cbValue` 和 `someText` 值，它们将绑定到模板中的各种表单元素。
-4. Listing 24.6 中的代码实现了几个与作用域交互以获取和设置值的 AngularJS 表单元素。以下几行代码将文本输入的值绑定到作用域中的 `someText` 变量，并在网页的 `input` 旁边显示该值：
+
+3. Listing 24.5 中的代码实现了一个基础作用域，其中包含一个名为`cameras`的对象数组，将用于动态填充模板中的`<select>`元素。它还提供了`cameraObj`、`cameraName`、`cbValue`和`someText`值，它们将绑定到模板中的各种表单元素。
+
+4. Listing 24.6 中的代码实现了几个与作用域交互以获取和设置值的 AngularJS 表单元素。以下几行代码将文本输入的值绑定到作用域中的`someText`变量，并在网页的`input`旁边显示该值：
 
 点击此处查看代码图像
 
@@ -18180,7 +17381,7 @@ Listings 24.5 和 24.6 实现了一些基础的 AngularJS 表单元素作用域�
 09  <input type="text" ng-model="someText"> {{someText}}<hr>
 ```
 
-5. 以下几行代码将复选框元素的值绑定到作用域值 `cbValue`，然后根据是否勾选将 `cbValue` 的值更改为不同的字符串：
+5. 以下几行代码将复选框元素的值绑定到作用域值`cbValue`，然后根据是否勾选将`cbValue`的值更改为不同的字符串：
 
 点击此处查看代码图像
 
@@ -18189,14 +17390,11 @@ Listings 24.5 和 24.6 实现了一些基础的 AngularJS 表单元素作用域�
 11      ng-true-value="'Checked'" ng-false-value="'Not Checked'">
 ```
 
-
-
-
-
 12 复选框：{{cbValue}}
 
 ## 6.
-以下代码行定义了一个单选框组，其值绑定到 `cameraName`，并在网页中单选框组之后显示该值：
+
+以下代码行定义了一个单选框组，其值绑定到`cameraName`，并在网页中单选框组之后显示该值：
 
 点击此处查看代码图片
 
@@ -18209,7 +17407,8 @@ Listings 24.5 和 24.6 实现了一些基础的 AngularJS 表单元素作用域�
 ```
 
 ## 7.
-以下代码行使用作用域（scope）中定义的相机数组在 `<select>`元素中构建选项组和选项，并在下方显示与当前选中相机相关的对象：
+
+以下代码行使用作用域（scope）中定义的相机数组在`<select>`元素中构建选项组和选项，并在下方显示与当前选中相机相关的对象：
 
 点击此处查看代码图片
 
@@ -18221,7 +17420,8 @@ Listings 24.5 和 24.6 实现了一些基础的 AngularJS 表单元素作用域�
 ```
 
 ## 8.
-在浏览器中打开 `directive_form.html` 并尝试更改表单元素的值，如图 24.2 所示。
+
+在浏览器中打开`directive_form.html`并尝试更改表单元素的值，如图 24.2 所示。
 
 ![Image](img/image01017.jpeg)
 
@@ -18279,38 +17479,46 @@ Listings 24.5 和 24.6 实现了一些基础的 AngularJS 表单元素作用域�
 ```
 
 ### 将模型绑定到页面元素的指令
+
 AngularJS 模板允许你将作用域中的数据绑定到 HTML 元素中显示的内容。你可以通过多种方式将数据绑定到视图，包括以下方式：
 
 ![Image](img/image00767.jpeg)
 
-**值：** 你可以直接在作用域中表示表单元素的值。例如，文本输入可以是作用域中的 `String` 变量，但复选框将由一个 `Boolean` 值表示。
+**值：** 你可以直接在作用域中表示表单元素的值。例如，文本输入可以是作用域中的`String`变量，但复选框将由一个`Boolean`值表示。
+
 ![Image](img/image00767.jpeg)
 
 **HTML：** 你可以使用如下表达式在元素的 HTML 输出中表示作用域中的数据值：
-`<p>{{myTitle}}</p>`
+
+```
+<p>{{myTitle}}</p>
+```
+
 ![Image](img/image00767.jpeg)
 
 **属性：** 通过使用如下表达式，HTML 属性的值可以反映作用域中的数据：点击此处查看代码图片
-`<a ng-href="/{{hash}}/index.html">{{hash}}</a>`。
+
+```
+<a ng-href="/{{hash}}/index.html">{{hash}}</a>。
+```
+
 ![Image](img/image00767.jpeg)
 
 **可见性：** 元素的可见性可以反映视图中的作用域。例如，当基于表达式的结果为真时，元素是可见的。
+
 ![Image](img/image00767.jpeg)
 
 **存在性：** 元素的存在性可以反映作用域。
+
 ![Image](img/image00767.jpeg)
 
 **表 24.3 将模型绑定到页面元素的指令**
 
+22 显示消息：<input type="checkbox" ng-model="checked" />
 
+23 <p ng-if="checked" ng-bind="msg"> </p>
 
-
-
-22 显示消息：<input type="checkbox" ng-model="checked" />
-
-23 <p ng-if="checked" ng-bind="msg"> </p>
-
-8. 在浏览器中打开 `directive_bind.html` 文件，并尝试更改单选按钮，以观察矩形颜色的变化，查看列表中偶数元素的样式，并通过复选框开启或关闭消息。图 24.3 显示了生成的网页。
+8. 在浏览器中打开`directive_bind.html`文件，并尝试更改单选按钮，以观察矩形颜色的变化，查看列表中偶数元素的样式，并通过复选框开启或关闭消息。图 24.3 显示了生成的网页。
 
 ![Image](img/image01023.jpeg)
 
@@ -18320,20 +17528,22 @@ AngularJS 模板允许你将作用域中的数据绑定到 HTML 元素中显示�
 
 点击此处查看代码图片
 
-* * *
+***
 
-```javascript
+```
 01 angular.module('myApp', []).
-02 controller('myController', function($scope) {
-03   $scope.colors=['red','green','blue'];
-04   $scope.myStyle = { "background-color": 'blue' };
-05   $scope.days=['Monday', 'Tuesday', 'Wednesday',
-06               'Thursday', 'Friday'];
-07   $scope.msg="Dynamic Message from the model";
-08  });
+02 controller('myController', function($scope) {
+03   $scope.colors=['red','green','blue'];
+04   $scope.myStyle = { "background-color": 'blue' };
+05   $scope.days=['Monday', 'Tuesday', 'Wednesday',
+06               'Thursday', 'Friday'];
+07   $scope.msg="Dynamic Message from the model";
+08  });
 ```
 
-代码代码 列表 24.8 `directive_bind.html` 实现若干数据绑定指令的 AngularJS 模板
+
+
+### 列表 24.8 `directive_bind.html` 实现若干数据绑定指令的 AngularJS 模板
 
 点击此处查看代码图片
 
@@ -18343,29 +17553,29 @@ AngularJS 模板允许你将作用域中的数据绑定到 HTML 元素中显示�
 01 <!doctype html>
 02 <html ng-app="myApp">
 03 <head>
-04  <title>AngularJS Data Binding Directives</title>
-05  <style>
-06    .even{background-color:lightgrey;}
-07   .rect{display:inline-block; height:40px; width:100px;}
-08  </style>
+04  <title>AngularJS Data Binding Directives</title>
+05  <style>
+06    .even{background-color:lightgrey;}
+07    .rect{display:inline-block; height:40px; width:100px;}
+08  </style>
 09 </head>
 10 <body>
-11   <div ng-controller="myController">
-12       <h2>Data Binding Directives</h2>
-13       <label ng-repeat="color in colors">
-14       {{color}}
-15       <input type="radio" ng-model="myStyle['background-color']"
-16                ng-value="color" id="{{color}}" name="mColor">
-17       </label>
-18      <span class="rect" ng-style="myStyle"></</span><hr>
-19      <li ng-repeat="day in days">
-20          <span ng-class-even="'even'">{{day}}</span>
-21      </li><hr>
-22      显示消息：<input type="checkbox" ng-model="checked" />
-23      <p ng-if="checked" ng-bind="msg"> </p>
-24      </div>
-25   <script src="http://code.angularjs.org/1.3.8/angular.min.js"></script>
-26  <script src="js/directive_bind.js"></script>
+11   <div ng-controller="myController">
+12       <h2>Data Binding Directives</h2>
+13       <label ng-repeat="color in colors">
+14       {{color}}
+15       <input type="radio" ng-model="myStyle['background-color']"
+16                ng-value="color" id="{{color}}" name="mColor">
+17       </label>
+18      <span class="rect" ng-style="myStyle"></span><hr>
+19      <li ng-repeat="day in days">
+20          <span ng-class-even="'even'">{{day}}</span>
+21      </li><hr>
+22      显示消息：<input type="checkbox" ng-model="checked" />
+23      <p ng-if="checked" ng-bind="msg"> </p>
+24      </div>
+25   <script src="http://code.angularjs.org/1.3.8/angular.min.js"></script>
+26  <script src="js/directive_bind.js"></script>
 27 </body>
 28 </html>
 ```
@@ -18379,38 +17589,18 @@ AngularJS 模板允许你将浏览器事件绑定到控制器代码。这意味�
 表 24.4 列出了将页面和设备事件绑定到 AngularJS 模型的指令。这些指令中的每一个都允许你指定一个表达式，该表达式通常是定义在作用域中的函数，正如第 23 “使用 AngularJS 模板创建视图”中所述。例如，以下是作用域中一个名为 `setTitle` 的函数：
 
 点击此处查看代码图片
+
 ```javascript
 $scope.setTitle = function(title){
-$scope.title = title;
+  $scope.title = title;
 };
 ```
+
 ![Image](img/image1024.jpeg)
 
-表 24.4 在 AngularJS 模板视图中实现数据绑定指令。
+**表 24.4** 在 AngularJS 模板视图中实现数据绑定指令。
 
-代码列表 24.7 `directive_bind.js` 实现一个带有作用域模型的控制器以支持数据绑定指令
-
-### 将页面事件绑定到控制器的指令
-
-AngularJS 模板允许你将浏览器事件绑定到控制器代码。这意味着你可以从作用域的角度来处理用户输入。你可以直接为适当的作用域实现浏览器事件的处理器。`event` 指令的工作方式与普通的浏览器事件处理器非常相似，不同之处它们直接链接到作用域上下文。
-
-表 24.4 列出了将页面和设备事件绑定到 AngularJS 模型的指令。这些指令中的每一个都允许你指定一个表达式，该表达式通常是定义在作用域中的函数，正如第 23 “使用 AngularJS 模板创建视图”中所述。例如，以下是作用域中一个名为 `setTitle` 的函数：
-
-点击此处查看代码图片
-```javascript
-$scope.setTitle = function(title){
-$scope.title = title;
-};
-```
-![Image](img/image1024.jpeg)
-
-表 24.4 在 AngularJS 模板视图中实现数据绑定指令。
-
-*(注：由于原文文本中存在大量重复和乱码，上述译文已根据指令对核心逻辑和内容进行了去重和规范化处理，确保符合文档工程师的输出标准)*
-
-
-
-
+### 列表 24.7 `directive_bind.js` 实现一个带有作用域模型的控制器以支持数据绑定指令
 
 ```javascript
 $scope.inputData = { input1: {value: "", state: ""},
@@ -18427,7 +17617,7 @@ $scope.focusLost = function(event, input){
 };
 ```
 
-### 列表 24.10 指令 directive_focus_events.html 一个实现了 ngFocus 和 ngBlur 指令的 AngularJS 模板
+### 列表 24.10 指令 `directive_focus_events.html` 一个实现了 `ngFocus` 和 `ngBlur` 指令的 AngularJS 模板
 
 点击此处查看代码图片
 
@@ -18466,9 +17656,9 @@ $scope.focusLost = function(event, input){
 
 **2.** 将 列表 24.11 和 列表 24.12 所示的代码添加到 HTML 和 JavaScript 文件中。
 
-**3.** 列表 24.11 中的代码实现了一个控制器，为按键按下按键释放事件提供了模型和键盘处理函数。`storedString` 变量用于存储用户在输入框中打字时按下 Enter 时文本输入的值。`keyInfo` 变量存储了最后一个按下键的 `keyCode`，而 `keyStrokes` 数组记录了之前按下按键的 `keyCodes`。
+**3.** 列表 24.11 中的代码实现了一个控制器，为按键按下和按键释放事件提供了模型和键盘处理函数。`storedString` 变量用于存储用户在输入框中打字时按下 Enter 时文本输入的值。`keyInfo` 变量存储了最后一个按下键的 `keyCode`，而 `keyStrokes` 数组记录了之前按下按键的 `keyCodes`。
 
-**4.** 列表 24.11 中的以下几行代码实现了 `keyPressed()` 函数。该函数会在输入框中按键时被调用。注意，我们检查 `keyCode` 是否为 13（意味着按下了 Enter 键），如果是，我们就记录 `storedString` 并重置其他变量。如果按键不是 Enter 键，我们就存储 `keyCode`，将其添加到 `keyrokes` 数组中，并设置 `keyState`。
+**4.** 列表 24.11 中的以下几行代码实现了 `keyPressed()` 函数。该函数会在输入框中按键时被调用。注意，我们检查 `keyCode` 是否为 13（意味着按下了 Enter 键），如果是，我们就记录 `storedString` 并重置其他变量。如果按键不是 Enter 键，我们就存储 `keyCode`，将其添加到 `keyStrokes` 数组中，并设置 `keyState`。
 
 **5.** 列表 24.12 中的以下几行代码将 `ng-keydown` 和 `ng-keyup` 指令分配给 `<input>` 元素。当 `ng-keydown` 触发时，作用域中的 `keyState` 变量会被更新；当 `ng-keyup` 触发时，会调用 `keyPressed()` 处理程序。
 
@@ -18478,7 +17668,7 @@ $scope.focusLost = function(event, input){
 
 **图 24.5 在 AngularJS 模板中实现键盘事件指令。**
 
-### 列表 24.11 directive_keyboard_events.js 实现一个带有作用域数据和处理器的控制器，以支持来自视图的按键按下和按键释放事件
+### 列表 24.11 `directive_keyboard_events.js` 实现一个带有作用域数据和处理器的控制器，以支持来自视图的按键按下和按键释放事件
 
 点击此处查看代码图片
 
@@ -18505,7 +17695,7 @@ angular.module('myApp', []).
   });
 ```
 
-### 列表 24.12 directive_keyboard_events.html 实现 ngKeydown 和 ngKeyup 指令的 AngularJS 模板
+### 列表 24.12 `directive_keyboard_events.html` 实现 `ngKeydown` 和 `ngKeyup` 指令的 AngularJS 模板
 
 点击此处查看代码图片
 
@@ -18550,16 +17740,8 @@ AngularJS 提供了多种鼠标事件指令，让你轻松增强 AngularJS 应�
 $scope.mouseClick = function(event){
   $scope.lastClickInfo.clientX = event.clientX;
   $scope.lastClickInfo.clientY = event.clientY;
-};
-```
-
-
-
-
-
-```javascript
-$scope.lastClickInfo.screenX = event.screenX;
-$scope.lastClickInfo.screenY = event.screenY;
+  $scope.lastClickInfo.screenX = event.screenX;
+  $scope.lastClickInfo.screenY = event.screenY;
 };
 ```
 
@@ -18576,7 +17758,7 @@ $scope.mouseMove = function(event){
 };
 ```
 
-### 6. 代码列表 24.14 中的以下几行代码将 `ng-mouseenter`、`ng-mouseleave`、`ng-mouseclick`、`ng-mousedown` 和 `ng-mouseup` 指令应用于 `<<img>>` 元素，并在事件触发时设置作用域 `mouseState` 的值。它们还将 `ng-click` 和 `ng-mousemove` 事件绑定到作用中的 `mouseClick($event)` 和 `mouseMove($event)`。请注意 `$event` 用于将浏览器的鼠标事件传递给处理器：
+### 6. 代码列表 24.14 中的以下几行代码将 `ng-mouseenter`、`ng-mouseleave`、`ng-mouseclick`、`ng-mousedown` 和 `ng-mouseup` 指令应用于 `<img>` 元素，并在事件触发时设置作用域 `mouseState` 的值。它们还将 `ng-click` 和 `ng-mousemove` 事件绑定到作用中的 `mouseClick($event)` 和 `mouseMove($event)`。请注意 `$event` 用于将浏览器的鼠标事件传递给处理器：
 
 点击此处查看代码图像
 
@@ -18592,13 +17774,15 @@ $scope.mouseMove = function(event){
   ng-mousemove="mouseMove($event)"></img><hr>
 ```
 
-### 7. 在浏览器中打开 `directive_mouse_events.html` 文件，并尝试在图片上移动和点击。图 24.6 显示了 AngularJS 应用程序的运行情况。注意当你进入、离开和点击图片时，鼠标状态会发生变化。同时请注意，当你会在图片上移动和点击图片时，位置信息也会更新。
+
+
+### 7. 在浏览器中打开`directive_mouse_events.html`文件，并尝试在图片上移动和点击。图 24.6 显示了 AngularJS 应用程序的运行情况。注意当你进入、离开和点击图片时，鼠标状态会发生变化。同时请注意，当你在图片上移动和点击图片时，位置信息也会更新。
 
 ![图像](img/image01027.jpeg)
 
 **图 24.6** 在 AngularJS 模板视图中实现鼠标点击和移动事件指令。
 
-**代码列表 24.13 directive_mouse_events.js 实现一个带有作用域数据（Scope Data）和事件处理程序的控制器，以支持来自视图的鼠标点击和移动事件**
+**代码列表 24.13** `directive_mouse_events.js`实现一个带有作用域数据（Scope Data）和事件处理程序的控制器，以支持来自视图的鼠标点击和移动事件
 
 点击此处查看代码图像
 
@@ -18619,8 +17803,10 @@ angular.module('myApp', []).
       $scope.mouseInfo.screenX = event.screenX;
       $scope.mouseInfo.screenY = event.screenY;
     };
-  ```
-**代码列表 24.14 directive_mouse_events.html 实现鼠标点击和移动指令的 AngularJS 模板**
+  });
+```
+
+**代码列表 24.14** `directive_mouse_events.html`实现鼠标点击和移动指令的 AngularJS 模板
 
 点击此处查看代码图像
 
@@ -18656,52 +17842,51 @@ angular.module('myApp', []).
   <script src="directive_mouse_events.js"></script>
 </body>
 </html>
+```
 
 ### 总结
-AngularJS 指令扩展了 HTML 的功能。你可以将指令应用于 元素、属性和类。通过 JavaScript 代码定义指令的功能。AngularJS 提供了许多内置指令来与表单元素交互，将作用域中的数据绑定到视图，反之亦然。
+AngularJS 指令扩展了 HTML 的功能。你可以将指令应用于元素、属性和类。通过 JavaScript 代码定义指令的功能。AngularJS 提供了许多内置指令来与表单元素交互，将作用域中的数据绑定到视图，反之亦然。
 
 ### 问答
-**Q](#part0039.xhtml_ch24aa01) 可以覆盖内置 AngularJS 指令的行为吗？**
+**Q:** 可以覆盖内置 AngularJS 指令的行为吗？
 
-**A](#part0039.xhtml_ch24qq01)** 不可以；但你可以创建一个同名的指令，它们一起执行。通常建议使用不同的名称创建自定义指令。
+**A:** 不可以；但你可以创建一个同名的指令，它们一起执行。通常建议使用不同的名称创建自定义指令。
 
-**Q](#part0039.xhtml_ch24aa02) 为什么 AngularJS 指令使用 ng 前缀？**
+**Q:** 为什么 AngularJS 指令使用`ng`前缀？
 
-**A](#part0039.xhtml_ch24qq02)** 因为它短且听起来像“angular”。
+**A:** 因为它短且听起来像“angular”。
 
 ### 工作坊
 工作坊包含一组问题，旨在巩固你对本节内容的理解。在查看答案之前请尝试回答问题。
 
 ### 测验
-**1](#part0039.xhtml_ch24as01) `ng-required` 指令的作用是什么？**
+**1.** `ng-required`指令的作用是什么？
 
-**2](#part0039.xhtml_ch24as02) `ng-repeat` 指令的作用是什么？**
+**2.** `ng-repeat`指令的作用是什么？
 
-**3](#part0039.xhtml_ch24as03) 使用哪个 AngularJS 指令将元素绑定鼠标点击事件？**
+**3.** 使用哪个 AngularJS 指令将元素绑定鼠标点击事件？
 
-**4](#part0039.xhtml_ch24as04) 使用哪个 AngularJS 指令将表单元素绑定焦点事件？**
+**4.** 使用哪个 AngularJS 指令将表单元素绑定焦点事件？
 
 ### 测验答案
-**1](#part0039.xhtml_ch24qa01)** 它为表单中的 `<input>` 元素创建一个布尔值。
+**1.** 它为表单中的`<input>`元素创建一个布尔值。
 
-**2](#part0039.xhtml_ch24qa02)** 允许根据 JavaScript 对象数组动态添加多个 HTML 元素。
+**2.** 允许根据 JavaScript 对象数组动态添加多个 HTML 元素。
 
-**3](#part0039.xhtml_ch24qa03)** `ng-click`
+**3.** `ng-click`
 
-**4](#part0039.xhtml_ch24qa04)** `ng-focus`
+**4.** `ng-focus`
 
 #### 练习题
-1. 修改 代码列表 24.8 中的代码，使其高亮奇数几而不是偶数。
-2. 修改 代码列表 24.9 和 24.10 中的代码，使得 `InputData` 对象中的输入值在未聚焦时显示为小写，在获得焦点时显示为大写。
+1. 修改代码列表 24.8 中的代码，使其高亮奇数几而不是偶数。
+2. 修改代码列表 24.9 和 24.10 中的代码，使得`InputData`对象中的输入值在未聚焦时显示为小写，在获得焦点时显示为大写。
 
-
-
+---
 
 本节讨论了自定义指令（directives）的设计与实现。你还将看到一些自定义指令的基本示例，这些指令扩展了 HTML 的功能。
 
 ### 理解自定义指令的定义
-
-你通过调用 `Module` 对象上的 `directive()` 方法来实现自定义指令。`directive()` 方法接受第一个参数作为指令的名称，第二个参数是一个提供者函数，该函数返回一个包含构建指令对象所需指令的对象。例如，以下是一个指令的基本定义：
+你通过调用`Module`对象上的`directive()`方法来实现自定义指令。`directive()`方法接受第一个参数作为指令的名称，第二个参数是一个提供者函数，该函数返回一个包含构建指令对象所需指令的对象。例如，以下是一个指令的基本定义：
 
 点击此处查看代码图片
 
@@ -18714,17 +17899,16 @@ directive('myDirective', function() {
 });
 ```
 
-表 25.1 提供了一个你可以应用于指令定义返回对象的的属性列表，在前面的代码中，返回了 `template` 属性。
+表 25.1 提供了一个你可以应用于指令定义返回对象的属性列表，在前面的代码中，返回了`template`属性。
 
 ![Image](img/image01028.jpeg)![Image](img/image01029.jpeg)![Image](img/image01030.jpeg)
 
-**表 25.1 定义 AngularJS 指令功能的指令定义属性**
+**表 25.1** 定义 AngularJS 指令功能的指令定义属性
 
 后续章节将更详细地讨论指令选项。
 
 ### 定义指令视图模板
-
-你可以包含 AngularJS 模板代码来构建视图组件，这些组件将显示在包含指令的 HTML 元素中。你可以通过使用 `template` 属性直接添加模板代码，如下例所示：
+你可以包含 AngularJS 模板代码来构建视图组件，这些组件将显示在包含指令的 HTML 元素中。你可以通过使用`template`属性直接添加模板代码，如下例所示：
 
 点击此处查看代码图片
 
@@ -18736,7 +17920,7 @@ directive('myDirective', function() {
 });
 ```
 
-你可以在自定义模板中指定一个根元素——但只能有一个。该元素将作为 AngularJS 模板中定义的任何子元素的根元素进行放置。此外，如果你使用了 `transclude` 标记，该元素应该包含 `ngTransclude`。例如：
+你可以在自定义模板中指定一个根元素——但只能有一个。该元素将作为 AngularJS 模板中定义的任何子元素的根元素进行放置。此外，如果你使用了`transclude`标记，该元素应该包含`ngTransclude`。例如：
 
 点击此处查看代码图片
 
@@ -18749,7 +17933,7 @@ directive('myDirective', function() {
 });
 ```
 
-你还可以使用 `templateUrl` 属性来指定位于 Web 服务器上的 AngularJS 模板的 URL，如下例所示：
+你还可以使用`templateUrl`属性来指定位于 Web 服务器上的 AngularJS 模板的 URL，如下例所示：
 
 点击此处查看代码图片
 
@@ -18764,8 +17948,7 @@ directive('myDirective', function() {
 模板 URL 可以包含任何标准的 AngularJS 模板代码。因此，你可以根据需要让指令尽可能简单或复杂。
 
 ### 限制指令行为
-
-你可以将指令作为 HTML 元素、属性或两者兼之应用。`restrict` 属性允许你限制自定义指令的应用方式。`restrict` 属性可以设置为以下值：
+你可以将指令作为 HTML 元素、属性或两者兼之应用。`restrict`属性允许你限制自定义指令的应用方式。`restrict`属性可以设置为以下值：
 
 ![Image](img/image00767.jpeg) **A**: 作为属性名应用。例如：
 
@@ -18775,13 +17958,13 @@ directive('myDirective', function() {
 
 点击此处查看代码图片
 
-`<div my-directive="expression"></</div>`
+`<div my-directive="expression"></div>`
 
 ![Image](img/image00767.jpeg) **C**: 作为类应用。例如：
 
 点击此处查看代码图片
 
-`<div class="my-directive: expression;"></</div>`
+`<div class="my-directive: expression;"></div>`
 
 ![Image](img/image00767.jpeg) **M**: 作为注释应用。例如：
 
@@ -18789,7 +17972,7 @@ directive('myDirective', function() {
 
 `<!-- directive: my-directive expression -->`
 
-![Image](img/image00767.jpeg) **AEC**: 作为属性、元素或类名应用。你也可以使用其他组合，例如 `AE` 或 `AC`。
+![Image](img/image00767.jpeg) **AEC**: 作为属性、元素或类名应用。你也可以使用其他组合，例如`AE`或`AC`。
 
 例如，你可以将以下指令作为属性或元素应用：
 
@@ -18811,8 +17994,7 @@ directive('myDirective', function() {
 `<div my-directive></div>`
 
 ### 为指令添加控制器
-
-你可以通过指令定义中的 `controller` 属性为指令添加自定义控制器。这允许为指令模板提供控制器支持。例如，以下代码添加了一个简单的控制器：
+你可以通过指令定义中的`controller`属性为指令添加自定义控制器。这允许为指令模板提供控制器支持。例如，以下代码添加了一个简单的控制器：
 
 ```javascript
 directive('myDirective', function() {
@@ -18826,7 +18008,7 @@ directive('myDirective', function() {
 });
 ```
 
-你还可以使用 `require` 属性来确保控制器可用。`require` 选项使用 `^controller` 语法来指示注入器向上查找直到找到控制器。例如：
+你还可以使用`require`属性来确保控制器可用。`require`选项使用`^controller`语法来指示注入器向上查找直到找到控制器。例如：
 
 ```javascript
 directive('myDirective', function() {
@@ -18836,7 +18018,7 @@ directive('myDirective', function() {
 });
 ```
 
-如果你在 `require` 选项中指定了另一个指令的名称，该指令的控制器将被链接。例如：
+如果你在`require`选项中指定了另一个指令的名称，该指令的控制器将被链接。例如：
 
 ```javascript
 directive('myDirective', function() {
@@ -18849,16 +18031,14 @@ directive('myDirective', function() {
 ```
 
 #### 配置指令作用域
-
 指令默认与父级共享作用域。这通常可以满足大多数需求。最大的缺点是你可能不想将所有自定义指令属性包含在父作用域中，特别是父作用域是根作用域时。
 
-为了解决这个问题，你可以使用 `scope` 属性为指令定义独立的作用域。后续章节将描述如何添加继承作用域和隔离作用域。
+为了解决这个问题，你可以使用`scope`属性为指令定义独立的作用域。后续章节将描述如何添加继承作用域和隔离作用域。
 
 #### 添加继承作用域
-
 为指令添加作用域的最简单方法是创建一个从父作用域继承的作用域。优点是你拥有了一个独立于父作用域的作用域来添加额外值，但缺点是自定义指令仍然可以修改父作用域中的值。
 
-为自定义指令创建一个继承作用域，将指令的 `scope` 属性设置为 `true`。例如：
+为自定义指令创建一个继承作用域，将指令的`scope`属性设置为`true`。例如：
 
 ```javascript
 directive('myDirective', function() {
@@ -18870,11 +18050,7 @@ directive('myDirective', function() {
 
 #### 添加隔离作用域
 
-
-
-
-
-有时，你可能希望将指令内部的作用域与指令外部的作用域隔离开。这样做可以防止指令更改父控制器作用域中的值。指令定义允许你指定一个 `scope` 属性来创建一个隔离作用域（isolate scope）。隔离作用域将指令作用域与外部作用域隔离开，防止指令访问外部作用域，并防止外部作用域中的控制器更改指令的作用域。例如，以下代码将指令的作用域从外部作用域隔离开：
+有时，你可能希望将指令内部的作用域与指令外部的作用域隔离开。这样做可以防止指令更改父控制器作用域中的值。指令定义允许你指定一个`scope`属性来创建一个隔离作用域（isolate scope）。隔离作用域将指令作用域与外部作用域隔离开，防止指令访问外部作用域，并防止外部作用域中的控制器更改指令的作用域。例如，以下代码将指令的作用域从外部作用域隔离开：
 
 点击此处查看图片
 
@@ -18891,7 +18067,7 @@ directive('myDirective', function() {
 
 ![Image](img/image00767.jpeg) `@`: 将本地作用域的字符串绑定到 DOM 属性的值。该属性的值将在指令作用域内部可用。
 
-![Image](img/image00767.jpeg) `=`: 在本地 `scope` 属性和指令 `scope` 属性之间创建双向绑定。
+![Image](img/image00767.jpeg) `=`: 在本地`scope`属性和指令`scope`属性之间创建双向绑定。
 
 ![Image](img/image00767.jpeg) `&`: 将本地作用域中的函数绑定到指令作用域。
 
@@ -18929,8 +18105,10 @@ angular.module('myApp', []).
 <div my-directive
       my-func="myFunc()"
       title="title"
-      info="SomeString"></</div>
+      info="SomeString"></div>
 ```
+
+
 
 ### 元素嵌套 (Transcluding Elements)
 
@@ -18938,9 +18116,8 @@ angular.module('myApp', []).
 
 你可以将 `transclude` 选项设置为以下值：
 
-![Image](img/image00767.jpeg) `true`: 嵌套指令的内容。
-
-![Image](img/image00767.jpeg) `element`: 嵌套整个元素，包括在较低优先级上定义的任何指令。
+- ![Image](img/image00767.jpeg) `true`: 嵌套指令的内容。
+- ![Image](img/image00767.jpeg) `element`: 嵌套整个元素，包括在较低优先级上定义的任何指令。
 
 你还必须在指令模板内部的元素中包含 `ngTransclude` 指令。以下是一个实现 `transclude` 以从 `myDirective` 指令模板访问控制器作用域中 `title` 变量的示例：
 
@@ -18948,15 +18125,25 @@ angular.module('myApp', []).
 
 ```javascript
 angular.module('myApp', []).
+
   directive('myDirective', function() {
+
     return {
+
       transclude: true,
+
       scope: {},
+
       template: '<div ng-transclude>{{title}}</div>'
+
     };
+
   }).
+
   controller('myController', function($scope) {
+
     $scope.title="myApplication";
+
   });
 ```
 
@@ -18968,34 +18155,32 @@ angular.module('myApp', []).
 
 *注意：提供的文本在句子中间结束。我已根据你的规则对可用内容进行了格式化。*
 
-
-
-
-[content]
-
-## 使用 Compile 函数操作 DOM
+### 使用 Compile 函数操作 DOM
 
 `compile` 函数与 `link` 函数非常相似，但有一个主要的优势，同时也存在一些缺点。使用 `compile` 函数的优势和主要原因是性能考虑。`compile` 方法仅在编译模板时执行一次，而 `link` 函数在每次元素被链接（linked）时都会执行一次；例如，如果你在 `ng-repeat` 循环内部应用了多个指令，或者当模型发生变化时。如果你正在进行大量的 DOM 操作，这将会是一个大问题。
 
 以下是 `compile` 函数的局限性：
 
-![Image](img/image00767.jpeg) 任何操作都在克隆（clone）之前应用。这意味着当在 `ng-repeat` 内部使用自定义指令时，任何 DOM 操作将应用于所有生成的自定义指令。
-
-![Image](img/image00767.jpeg) `compile()` 方法无法处理在 fact 自己的模板或 `compile()` 函数中递归使用自我的指令，因为这会导致死循环。
-
-![Image](img/image00767.jpeg) `compile()` 方法无法访问 scope。
-
-![Image](img/image0076.jpeg) `transclude` 函数已废弃并从 `compile` 函数中移除，因此你无法链接到嵌套（transcluded）的元素。
+- ![Image](img/image00767.jpeg) 任何操作都在克隆（clone）之前应用。这意味着当在 `ng-repeat` 内部使用自定义指令时，任何 DOM 操作将应用于所有生成的自定义指令。
+- ![Image](img/image00767.jpeg) `compile()` 方法无法处理在 fact 自己的模板或 `compile()` 函数中递归使用自我的指令，因为这会导致死循环。
+- ![Image](img/image00767.jpeg) `compile()` 方法无法访问 scope。
+- ![Image](img/image0076.jpeg) `transclude` 函数已废弃并从 `compile` 函数中移除，因此你无法链接到嵌套（transcluded）的元素。
 
 `compile()` 方法的语法与 `link()` 方法非常相似。你可以像这样指定一个单一的 postlink 函数：
 
 ```javascript
 directive('myDirective', function() {
+
   return {
+
     compile: function compile(scope, elem, attr, controller){
+
             //postlink code
+
         }
+
   };
+
 });
 ```
 
@@ -19003,24 +18188,35 @@ directive('myDirective', function() {
 
 ```javascript
 directive('myDirective', function() {
+
   return {
+
     compile: {
+
       pre: function preLink(elem, attr){
+
           //prelink code
+
       },
+
       post: function postLink(elem, attr){
+
           //postlink code
+
       },
+
     }
+
   };
+
 });
 ```
 
-## 实现自定义指令
+### 实现自定义指令
 
 你可以定义的自定义指令类型是无限制的，这使得 AngularJS 具有可扩展性。自定义指令是 AngularJS 中最难解释和理解的部分。入门的最好方法是向你展示一些自定义指令的示例，让你感受如何实现它们以及它们之间如何交互。
 
-### 尝试自己：在自定义指令中操作 DOM
+#### 尝试自己：在自定义指令中操作 DOM
 
 你在自定义指令中执行的最常见任务之一就是操作 DOM。这应该是你的 AngularJS 应用中唯一操作 DOM 的地方。在这个练习中，你将构建一个基础的自定义指令，它在包含的元素周围应用一个带有标题和页脚的框。这个示例非常基础，它让你有机会看到如何使用 AngularJS 中的某些机制，例如将值作为属性设置到自定义指令上。
 
@@ -19057,6 +18253,7 @@ directive('myDirective', function() {
 `10 template: '<div><span class="title">{{title}}' + '</span><div ng-transclude></div></div>',`
 
 **8.** 以下行显示了 `link()` 函数，它使用 `append` 添加了一个页脚。这也可以在 `template` 中完成；但是，我想说明可以在 `link()` 函数中完成。同时注意，页脚的文本来自父 scope 的标题，使用了 `scope.$parent.title`。`link` 函数还添加了 `border` 并根据 scope 中的 `bwidth` 值设置了 `display` 和 `width` 值：
+
 ```javascript
 12 link: function (scope, elem, attr, transclude){
 13     elem.append('<span class="footer">' + scope.$parent.title + '</span>');
@@ -19072,7 +18269,7 @@ directive('myDirective', function() {
 ![Image](img/image011)
 **FIGURE 25.1** 在 AngularJS 视图中操作元素的指令。
 
-### LISTING 25.1 directive_custom_dom.js - 操作 DOM 的指令
+##### LISTING 25.1 directive_custom_dom.js - 操作 DOM 的指令
 
 ```javascript
 01 angular.module('myApp', [])
@@ -19095,7 +18292,7 @@ directive('myDirective', function() {
 18 });
 ```
 
-### LISTING 25.2 directive_custom_dom.html - 使用自定义指令操作 DOM 的 AngularJS 模板
+##### LISTING 25.2 directive_custom_dom.html - 使用自定义指令操作 DOM 的 AngularJS 模板
 
 ```html
 01 <!doctype html>
@@ -19118,11 +18315,7 @@ directive('myDirective', function() {
 18   <div ng-controller="myController">
 ```
 
-
-
-
-
-## 操作 DOM 的自定义指令
+###### 操作 DOM 的自定义指令
 
 ```html
 <mybox title="Simple Text" bwidth="100px">
@@ -19148,7 +18341,7 @@ directive('myDirective', function() {
 <script src="js/directive_custom_dom.js"></script>
 ```
 
-### 动手一试：在自定义指令中实现事件处理程序
+#### 动手一试：在自定义指令中实现事件处理程序
 
 自定义指令的另一个常见用途是实现事件处理程序，以便与自定义元素中发生的鼠标和键盘事件进行交互。这允许你为自定义元素提供增强的用户交互。
 
@@ -19173,7 +18366,7 @@ angular.module('myApp', [])
   return {
     link: function (scope, elem, attr){
 // . . .
-    } 
+    }
 ```
 
 4. 第一个指令 `zoomit` 的 `link` 函数中的以下代码监听了 `mousedown`、`mouseup`、`mouseleave` 和 `mousemove` 事件。当按下鼠标按钮时，`dragging` 变量被设置为 `true`；当松开鼠标或鼠标离开元素时，`dragging` 被设置为 `false`。另外注意，在 `mousedown` 中，默认事件行为被 `event.preventDefault()` 抑制了。此举是为了消除拖动期间与浏览器默认行为的任何交互冲突：
@@ -19200,16 +18393,23 @@ elem.on('mousemove', function(event){
     }
     if(adjustment){
       //requires jQuery library
-      elem.width(elem.width()*adjustment);
-      elem.height(elem.height()*adjustment);
-      lastX = event.screenX;
-    }
-  }
+
+
+
+`elem.width(elem.width() * adjustment);`
+
+`elem.height(elem.height() * adjustment);`
+
+`lastX = event.screenX;`
+
+```
+}
+}
 });
 ```
 
-6. 查看 `fadeit` 指令，你可以发现它与 `zoomit` 指令非常相似，区别在于图片的 `opacity` 值被改变了。
-7. `fadeit` 和 `zoomit` 指令用在 [列表 25.4] 所示 AngularJS 模板中的以下 `<img>` 元素上。注意，在第一张图片上添加了 `zoomit` 指令，第二张图片上添加了 `fadeit` 指令，而在最后一张图片上两者都添加了。这向你展示了同一个元素可以添加多个自定义指令：
+6. 查看`fadeit`指令，你可以发现它与`zoomit`指令非常相似，区别在于图片的`opacity`值被改变了。
+7. `fadeit`和`zoomit`指令用在[列表 25.4]所示 AngularJS 模板中的以下`<img>`元素上。注意，在第一张图片上添加了`zoomit`指令，第二张图片上添加了`fadeit`指令，而在最后一张图片上两者都添加了。这向你展示了同一个元素可以添加多个自定义指令：
 
 ```html
 <img src="/images/wheel.jpg" zoomit></img>
@@ -19217,16 +18417,13 @@ elem.on('mousemove', function(event){
 <img src="/images/wheel.jpg" zoomit fadeit></img>
 ```
 
-8. 在浏览器中打开 `directive_custom_zoom.js` 文件。结果所示 [图 25.2]。第一张图片通过向左拖动缩小，第二张图片通过向上拖动变淡，而第三张图片则被放大并变淡。
+8. 在浏览器中打开`directive_custom_zoom.js`文件。结果所示[图 25.2]。第一张图片通过向左拖动缩小，第二张图片通过向上拖动变淡，而第三张图片则被放大并变淡。
 
 ![Image](img/image01032.jpeg)
 
 **图 25.2** 实现通过鼠标事件提供交互以操作 DOM 元素的自定义指令。
 
 **列表 25.3 directive_custom_zoom.js 注册 DOM 事件的自定义指令**
-
-
-
 
 ```javascript
 71              lastY = event.screenY;
@@ -19267,15 +18464,15 @@ elem.on('mousemove', function(event){
 
 ## 动手尝试：实现嵌套指令
 
-最后一个示例说明了如何将指令嵌套并让它们相互交互。嵌套指令是为相互相关的自定义元素提供父级上下文和容器的一种方法。在这个示例中，外部指令 `myPhotos` 充当容器，可以包含名为 `myPhoto` 的子指令。
+最后一个示例说明了如何将指令嵌套并让它们相互交互。嵌套指令是为相互相关的自定义元素提供父级上下文和容器的一种方法。在这个示例中，外部指令`myPhotos`充当容器，可以包含名为`myPhoto`的子指令。
 
-其思路是你可以添加一个 `<my-photos></my-photos>` 元素，然后在其中添加 `<my-photo></my-photo>` 元素。每个 `myPhoto` 元素都会被添加到 `myPhotos` 控制器的作用域中，从而允许显示照片标题，并轻松地切换每个 `myPhoto` 元素 `active` 属性的开启与关闭。
+其思路是你可以添加一个`<my-photos></my-photos>`元素，然后在其中添加`<my-photo></my-photo>`元素。每个`myPhoto`元素都会被添加到`myPhotos`控制器的作用域中，从而允许显示照片标题，并轻松地切换每个`myPhoto`元素`active`属性的开启与关闭。
 
 使用以下步骤构建一个操作 DOM 的自定义指令应用程序：
 
-1. 添加 `lesson25/directive_custom_photos.html`、`my_photos.html` 和 `lesson25/js/directive_custom_photos.js` 文件。
-2. 将 `列表 25.5`、`列表 25.6` 和 `列表 25.7` 所示的代码添加到 HTML 和 JavaScript 文件中。
-3. `列表 25.5` 中的以下行代码实现了 `myPhotos` 指令。`myPhotos` 指令被设计为稍后定义的 `myPhoto` 指令的容器。注意以下几行定义了一个为 `myPhotos` 指令提供功能的控制器，其中包含 `addPhoto()` 函数：
+1. 添加`lesson25/directive_custom_photos.html`、`my_photos.html`和`lesson25/js/directive_custom_photos.js`文件。
+2. 将[列表 25.5]、[列表 25.6]和[列表 25.7]所示的代码添加到 HTML 和 JavaScript 文件中。
+3. [列表 25.5]中的以下行代码实现了`myPhotos`指令。`myPhotos`指令被设计为稍后定义的`myPhoto`指令的容器。注意以下几行定义了一个为`myPhotos`指令提供功能的控制器，其中包含`addPhoto()`函数：
 
 ```javascript
 02 .directive('myPhotos', function() {
@@ -19300,13 +18497,13 @@ elem.on('mousemove', function(event){
 21 })
 ```
 
-4. `myPhotos` 指令中的以下行指定了在渲染指令时使用 `my_photos.html` 作为模板：
+4. `myPhotos`指令中的以下行指定了在渲染指令时使用`my_photos.html`作为模板：
 
 ```javascript
 19   templateUrl: 'my_photos.html'
 ```
 
-5. `列表 25.7` 中的以下行实现了由 `myPhotos` 指令加载的局部模板。它生成了一个 `<div>` 容器，然后使用 `myPhotos` 作用域中的 `photos` 数组来构建一个绑定到 `select()` 函数的链接列表，使用了 `ng-click`。`<div ng-transclude></div>` 为 `myPhoto` 子元素提供了容器：
+5. [列表 25.7]中的以下行实现了由`myPhotos`指令加载的局部模板。它生成了一个`<div>`容器，然后使用`myPhotos`作用域中的`photos`数组来构建一个绑定到`select()`函数的链接列表，使用了`ng-click`。`<div ng-transclude></div>`为`myPhoto`子元素提供了容器：
 
 ```html
 01 <div>
@@ -19320,7 +18517,7 @@ elem.on('mousemove', function(event){
 09 </div>
 ```
 
-6. `列表 25.5` 中的以下代码定义了 `myPhoto` 指令。由于 `myPhoto` 指令中使用了 `require:'^myPhotos'`，你也可以通过指向 `myPhotos` 控制器的 `photosControl` 句柄从 `link()` 函数调用 `addPhoto()` 方法：
+6. [列表 25.5]中的以下代码定义了`myPhoto`指令。由于`myPhoto`指令中使用了`require:'^myPhotos'`，你也可以通过指向`myPhotos`控制器的`photosControl`句柄从`link()`函数调用`addPhoto()`方法：
 
 ```javascript
 22 .directive('myPhoto', function() {
@@ -19337,7 +18534,7 @@ elem.on('mousemove', function(event){
 33 });
 ```
 
-7. `25.6` 在 AngularJS 模板中实现了 `myPhotos` 和 `myPhoto` 指令。`myPhoto` 指令嵌套在 `myPhotos` 指令内部。注意 `myPhoto` 指令上设置了 `title` 属性。使用后续的方法，你可以在页面上添加任意数量的 `myPhoto` 元素：
+7. [列表 25.6]在 AngularJS 模板中实现了`myPhotos`和`myPhoto`指令。`myPhoto`指令嵌套在`myPhotos`指令内部。注意`myPhoto`指令上设置了`title`属性。使用后续的方法，你可以在页面上添加任意数量的`myPhoto`元素：
 
 ```html
 14 <my-photos>
@@ -19346,7 +18543,7 @@ elem.on('mousemove', function(event){
 17   </my-photo>
 ```
 
-8. 在浏览器中打开 `directive_custom_photos.html` 文件。图 25.3 显示了图像在每次点击时如何显示或隐藏。
+8. 在浏览器中打开`directive_custom_photos.html`文件。图 25.3 显示了图像在每次点击时如何显示或隐藏。
 
 ## 图 25.3 在 AngularJS 中实现指令
 
@@ -19425,10 +18622,6 @@ elem.on('mousemove', function(event){
 32 </html>
 ```
 
-
-
-
-
 ```html
 31   <script src="http://code.angularjs.org/1.3.8/angular.min.js"></script>
 32   <script src="js/directive_custom_photos.js"></script>
@@ -19456,11 +18649,11 @@ elem.on('mousemove', function(event){
 09 </div>
 ```
 
-***
+
 
 ### 总结
 
-AngularJS 最强大的功能之一是创建自定义指令的能力。在 `Module` 对象上使用 `directive()` 方法在代码中实现自定义指令是非常简单的。然而，由于实现方式多种多样，指令也可以变得非常复杂。本节让你略微体验了在 AngularJS 中通过自定义指令可以做些什么。尝试花些时间研究这些示例并编写一些你自己的代码，以尽可能熟悉熟悉它们的工作原理。
+AngularJS 最强大的功能之一是创建自定义指令的能力。在`Module`对象上使用`directive()`方法在代码中实现自定义指令是非常简单的。然而，由于实现方式多种多样，指令也可以变得非常复杂。本节让你略微体验了在 AngularJS 中通过自定义指令可以做些什么。尝试花些时间研究这些示例并编写一些你自己的代码，以尽可能熟悉它们的工作原理。
 
 ### 问答
 
@@ -19478,9 +18671,9 @@ AngularJS 最强大的功能之一是创建自定义指令的能力。在 `Modul
 
 ### 测验
 
-**1.** 正确或错误：在自定义指令中使用 scope 时，scope 必须与父 scope 共享。
+**1.** 正确或错误：在自定义指令中使用`scope`时，`scope`必须与父`scope`共享。
 
-**2.** 正确或错误：属性 `'type'` 可以被设置为一个不是 HTML 根节点的字符串。
+**2.** 正确或错误：属性`'type'`可以被设置为一个不是 HTML 根节点的字符串。
 
 **3.** 在向指令添加控制器（controller）时，指示注入器服务（injector service）在父环境中查找控制器的语法是什么？
 
@@ -19488,41 +18681,41 @@ AngularJS 最强大的功能之一是创建自定义指令的能力。在 `Modul
 
 ### 测验答案
 
-**1.** 错误。scope 可以共享父 scope、继承父 scope，或者作为它自己的隔离作用域（isolate scope）。
+**1.** 错误。`scope`可以共享父`scope`、继承父`scope`，或者作为它自己的隔离作用域（isolate scope）。
 
-**2.** 正确。`'type'` 不仅可以用于 HTML，还可以用于 `svg` 和 `math` 元素。
+**2.** 正确。`'type'`不仅可以用于 HTML，还可以用于`svg`和`math`元素。
 
-**3.** 在指令中使用 `require: '^controllerName'` 。
+**3.** 在指令中使用`require: '^controllerName'`。
 
-**4.** `link` 和 `compile` 函数。
+**4.** `link`和`compile`函数。
 
 #### 练习题
 
-**1.** 修改 列表 25.1 和 25.2 中的示例代码。添加一个类似于 `bwidth` 参数的 `bheight` 参数，用于设置方框的高度和宽度。
+**1.** 修改列表 25.1 和 25.2 中的示例代码。添加一个类似于`bwidth`参数的`bheight`参数，用于设置方框的高度和宽度。
 
-**2.** 修改 列表 25.3 和 25.4 中的示例代码。添加一个名为 `movit` 的新指令，用于改变元素在页面上的 x 和 y 坐标。你需要将元素设置为绝对定位。
+**2.** 修改列表 25.3 和 25.4 中的示例代码。添加一个名为`movit`的新指令，用于改变元素在页面上的 x 和 y 坐标。你需要将元素设置为绝对定位。
 
-**3.** 修改 列表 25.6 中的示例代码，创建一个第二个 `<my-photos>` 块并包含 10 或 15 张额外的图片，这样你就可以看到复用自定义指令有多简单。
+**3.** 修改列表 25.6 中的示例代码，创建一个第二个`<my-photos>`块并包含 10 或 15 张额外的图片，这样你就可以看到复用自定义指令有多简单。
 
 ## 第 26 节 使用事件与模型交互
 
-事件是 AngularJS 中最重要的部分之一。具体来说，本节将讨论四种类型的事件：浏览器事件、用户交互事件、基于 scope 的事件以及自定义事件。你已经在之前的课程中接触了其中一些。在本节中，你将学习处理：
+事件是 AngularJS 中最重要的部分之一。具体来说，本节将讨论四种类型的事件：浏览器事件、用户交互事件、基于`scope`的事件以及自定义事件。你已经在之前的课程中接触了其中一些。在本节中，你将学习处理：
 
 本节你将学到：
-- 如何使用 `$watch` 跟踪变量
-- 如何使用 `ng` 指令
-- 如何发射自定义
+- 如何使用`$watch`跟踪变量
+- 如何使用`ng`指令
+- 如何发射自定义事件
 - 如何实现自定义事件
 
 ### 浏览器事件
 
-若干事件由浏览器触发。在某种意义上，当这些知道这些事件非常有用。浏览器事件包括文档加载时的 ready 事件以及浏览器调整大小时的 resize 事件。这些也是用户交互事件。
+若干事件由浏览器触发。在某种意义上，当这些知道这些事件非常有用。浏览器事件包括文档加载时的`ready`事件以及浏览器调整大小时的`resize`事件。这些也是用户交互事件。
 
 ### 用户交互事件
 
-你已经接触过用户事件。这些包括鼠标和键盘事件，以及诸如焦点（focus）和失去焦点（blur）之类的事件。通常有两个地方你会实现交互。一个是是使用 `ng` 指令，例如 `ngclick`。第二个地方是在自定义指令的 link 函数。你已经在之前的课程中接触过这两种方法；在本节中，你将看到你有权选择使用哪一种。使用内置 `ng` 事件指令如 `ngClick` 的优点是你不必为简单的添加自定义指令的复杂性。
+你已经接触过用户事件。这些包括鼠标和键盘事件，以及诸如焦点（focus）和失去焦点（blur）之类的事件。通常有两个地方你会实现交互。一个是是使用`ng`指令，例如`ngclick`。第二个地方是在自定义指令的`link`函数。你已经在之前的课程中接触过这两种方法；在本节中，你将看到你有权选择使用哪一种。使用内置`ng`事件指令如`ngClick`的优点是你不必为简单的添加自定义指令的复杂性。
 
-你不应该在控制器中进行 DOM 操作，而那是定义处理器的地方。另一个缺点是每当你需要该功能时，都需要在模板中实现 `ngClick` 代码。例如，考虑以下为元素添加鼠标事件处理程序的模板代码：
+你不应该在控制器中进行 DOM 操作，而那是定义处理器的地方。另一个缺点是每当你需要该功能时，都需要在模板中实现`ngClick`代码。例如，考虑以下为元素添加鼠标事件处理程序的模板代码：
 
 ```html
 <span ng-mouseenter="mouseEntered(event)"
@@ -19530,7 +18723,7 @@ AngularJS 最强大的功能之一是创建自定义指令的能力。在 `Modul
       ng-click="clicked(event)">
 ```
 
-代码看起来并不糟糕，但如果你在多个地方都需要相同的功能呢？如果它们落在 `ng-repeat` 块中，那么还不算糟糕，否则会很麻烦。遵循的一个良好规则是，如果你想在多个地方使用该功能，特别是如果你会在多个应用程序中复用它，就应该定义一个实现的自定义指令。
+代码看起来并不糟糕，但如果你在多个地方都需要相同的功能呢？如果它们落在`ng-repeat`块中，那么还不算糟糕，否则会很麻烦。遵循的一个良好规则是，如果你想在多个地方使用该功能，特别是如果你会在多个应用程序中复用它，就应该定义一个实现的自定义指令。
 
 ### 添加 $watches 来跟踪 scope 变化事件
 
@@ -19538,23 +18731,15 @@ AngularJS 最强大的功能之一是创建自定义指令的能力。在 `Modul
 
 #### 使用 $watch 跟踪 scope 变量
 
-
-
-
-
-要添加处理作用域（scope）值更改的能力，你需要使用 AngularJS 内置的 `$watch` 功能为作用域中的变量添加 `$watch`。作用域中的 `$watch` 函数语法如下：
-
-点击此处查看代码图片
+要添加处理作用域（scope）值更改的能力，你需要使用 AngularJS 内置的`$watch`功能为作用域中的变量添加`$watch`。作用域中的`$watch`函数语法如下：
 
 ```
 $watch(watchExpression, listener, [objectEquality])
 ```
 
-`watchExpression` 是要监听的作用域中的表达式。该表达式在每次 `$digest()` 时都会被调用，并返回被监听的值。`listener` 定义了一个函数，当 `watchExpression` 的值变为一个新值时，该函数会被调用。如果 `watchExpression` 的值变为了它已设置的值，则不会调用 `listener`。`objectEquality` 是一个布尔值，当为 `true` 时，将使用 `angular.equals()` 函数来判断相等性，而不是使用更严格的 `===` 运算符。在使用 `objectEquality` 时应小心，因为对于复杂对象，它可能会导致内存和性能消耗的增加。
+`watchExpression`是要监听的作用域中的表达式。该表达式在每次`$digest()`时都会被调用，并返回被监听的值。`listener`定义了一个函数，当`watchExpression`的值变为一个新值时，该函数会被调用。如果`watchExpression`的值变为了它已设置的值，则不会调用`listener`。`objectEquality`是一个布尔值，当为`true`时，将使用`angular.equals()`函数来判断相等性，而不是使用更严格的`===`运算符。在使用`objectEquality`时应小心，因为对于复杂对象，它可能会导致内存和性能消耗的增加。
 
-以下展示了在作用域变量 `score` 上添加 `$watch` 的示例：
-
-点击此处查看代码图片
+以下展示了在作用域变量`score`上添加`$watch`的示例：
 
 ```javascript
 $scope.score = 0;
@@ -19568,9 +18753,7 @@ $scope.$watch('score', function(newValue, oldValue) {
 
 ### 使用 $watchGroup 跟踪多个作用域变量
 
-AngularJS 还提供了使用 `$watchGroup` 方法监听表达式数组的能力。`$watchGroup` 方法的工作方式与 `$watch` 相同，不同之处第一个参数是需要监听的表达式数组。`listener` 将接收一个包含所监听变量的新值和旧值的数组。例如，如果你想监听 `score` 和 `time` 变量，可以使用以下代码：
-
-点击此处查看代码图片
+AngularJS 还提供了使用`$watchGroup`方法监听表达式数组的能力。`$watchGroup`方法的工作方式与`$watch`相同，不同之处第一个参数是需要监听的表达式数组。`listener`将接收一个包含所监听变量的新值和旧值的数组。例如，如果你想监听`score`和`time`变量，可以使用以下代码：
 
 ```javascript
 $scope.score = 0;
@@ -19587,9 +18770,7 @@ $scope.$watchGroup(['score', 'time'], function(newValues, oldValues) {
 
 ### 使用 $watchCollection 跟踪作用域中对象属性的变化
 
-你也可以使用 `$watchCollection` 方法监听对象的属性。`$watchCollection` 方法接受对象作为第一个参数，并监听该对象的属性。在数组的情况下，数组的各个值会被监听。例如：
-
-点击此处查看代码图片
+你也可以使用`$watchCollection`方法监听对象的属性。`$watchCollection`方法接受对象作为第一个参数，并监听该对象的属性。在数组的情况下，数组的各个值会被监听。例如：
 
 ```javascript
 $scope.scores = [5, 10, 15, 20];
@@ -19599,34 +18780,28 @@ $scope.$watchGroup('scores', function(newValue, oldValue) {
 });
 ```
 
-***
-
 ### 动手实践：在控制器中实现监听器（Watches）
 
-在这个示例中，你有机会在控制器中实现监听器、分组监听和集合监听，以跟踪更改并动态更新视图。代码列表 26.1 和 26.2 中的代码演示了一个实现 `$watch`、`$watchGroup` 和 `$watchCollection` 方法的简单示例。
+在这个示例中，你有机会在控制器中实现监听器、分组监听和集合监听，以跟踪更改并动态更新视图。代码列表 26.1 和 26.2 中的代码演示了一个实现`$watch`、`$watchGroup`和`$watchCollection`方法的简单示例。
 
-列表 26.1 中的代码实现了一个控制器，在作用域中存储了值 `myColor`、`hits`、`misses` 以及一个名为 `myObj` 的对象。列表 26.2 中的代码实现了一个 AngularJS 模板，该模板提供了更改值并查看更新监听项的交互。
+列表 26.1 中的代码实现了一个控制器，在作用域中存储了值`myColor`、`hits`、`misses`以及一个名为`myObj`的对象。列表 26.2 中的代码实现了一个 AngularJS 模板，该模板提供了更改值并查看更新监听项的交互。
 
 使用以下步骤构建监听作用域中值的应用程序：
 
-1. 添加 `lesson26/scope_watch.html` 和 `lesson26/js/scope_watch.js` 文件。
-2. 将 列表 26.1 和 列表 26.2 所示的代码添加到 HTML 和 JavaScript 文件中。
-3. 列表 26.1 中的代码首先设置了几个作用域值，包括 `myColor`、`hits` 和 `misses`，这些值将被监听。控制器还定义了 `setColor()`、`hit()` 和 `miss()` 函数，允许从浏览器更改这些值。
-4. 列表 26.1 中的以下几行代码对作用域中的 `myColor` 值实现了 `$watch`，以便每当 `myColor` 改变时，`myObj.color` 的值也能随之调整。
-5. 列表 26.1 中的以下几行代码对作用域中的 `hits` 和 `misses` 值实现了 `$watchGroup`，以便每当它们变化时，`myObj.hits` 和 `myObj.misses` 的值也会改变。
-6. 列表 26.1 中的以下几行代码对作用域中的 `myObj` 对象实现了 `$watchCollection`，以便每当 `myObj` 改变时，作用域中的 `changes` 值就会递增，以跟踪 `myColor`、`hits` 和 `misses` 变化次数。
-7. 列表 26.2 中的代码实现了一个 AngularJS 模板，使用户可以使用鼠标选择颜色并增加 `hits` 和 `misses` 变量。对象和更改值显示在底部，展示了 `$watch` 方法如何检测并更新作用域的变化。
-8. 在浏览器中打开 `scope_watch.html` 并更改颜色、增加 hits 和 misses，观察 `myObj` 和 `changes` 中监听值的变化。图 26.1 显示了渲染后的网页。
+1. 添加`lesson26/scope_watch.html`和`lesson26/js/scope_watch.js`文件。
+2. 将列表 26.1 和列表 26.2 所示的代码添加到 HTML 和 JavaScript 文件中。
+3. 列表 26.1 中的代码首先设置了几个作用域值，包括`myColor`、`hits`和`misses`，这些值将被监听。控制器还定义了`setColor()`、`hit()`和`miss()`函数，允许从浏览器更改这些值。
+4. 列表 26.1 中的以下几行代码对作用域中的`myColor`值实现了`$watch`，以便每当`myColor`改变时，`myObj.color`的值也能随之调整。
+5. 列表 26.1 中的以下几行代码对作用域中的`hits`和`misses`值实现了`$watchGroup`，以便每当它们变化时，`myObj.hits`和`myObj.misses`的值也会改变。
+6. 列表 26.1 中的以下几行代码对作用域中的`myObj`对象实现了`$watchCollection`，以便每当`myObj`改变时，作用域中的`changes`值就会递增，以跟踪`myColor`、`hits`和`misses`变化次数。
+7. 列表 26.2 中的代码实现了一个 AngularJS 模板，使用户可以使用鼠标选择颜色并增加`hits`和`misses`变量。对象和更改值显示在底部，展示了`$watch`方法如何检测并更新作用域的变化。
+8. 在浏览器中打开`scope_watch.html`并更改颜色、增加 hits 和 misses，观察`myObj`和`changes`中监听值的变化。图 26.1 显示了渲染后的网页。
 
 ![Image](img/image1034.jpeg)
 
-**图 26.1** 用于监听作用域变量值的 `$watch()`、`$watchGroup()` 和 `$watchCollection()` 处理程序。
+**图 26.1** 用于监听作用域变量值的`$watch()`、`$watchGroup()`和`$watchCollection()`处理程序。
 
-**列表 26.1 `scope_watch.js` 实现监听作用域变量值的 `$watch()`、`$watchGroup()` 和 `$watchCollection()` 处理程序**
-
-点击此处查看代码图片
-
-***
+**列表 26.1 `scope_watch.js` 实现监听作用域变量值的`$watch()`、`$watchGroup()`和`$watchCollection()`处理程序**
 
 ```javascript
 angular.module('myApp', [])
@@ -19637,44 +18812,41 @@ angular.module('myApp', [])
   $scope.misses = 0;
   $scope.changes = 0;
   $scope.myObj = {color: '', hits: '', misses: ''};
+
   $scope.setColor = function (color) {
     $scope.myColor = color;
   };
+
   $scope.hit = function () {
     $scope.hits += 1;
   };
+
   $scope.miss = function () {
     $scope.misses += 1;
   };
+
   $scope.$watch('myColor', function(newValue, oldValue) {
     $scope.myObj.color = newValue;
   });
+
   $scope.$watchGroup(['hits', 'misses'], function(newValues, oldValues) {
     $scope.myObj.hits = newValues[0];
     $scope.myObj.misses = newValues[1];
   });
+
   $scope.$watchCollection('myObj', function (newValue, oldValue) {
     $scope.changes += 1;
   });
 });
 ```
 
-***
-
-**列表 26.2 `scope_watch.html` 提供与 列表 26.1 中定义的作用域和控制器交互的 HTML 模板代码**
-
-点击此处查看代码图片
-
-
-
+**列表 26.2 `scope_watch.html` 提供与列表 26.1 中定义的作用域和控制器交互的 HTML 模板代码**
 
 作用域（scopes）的一个强大特性是可以在作用域层级中发射和广播事件。事件允许你向作用域中的不同级别发送通知，告知事件已发生。事件可以是你选择的任何内容，例如值改变或达到阈值。这在许多情况下都非常有用，例如让子作用域知道父作用域中的值发生了变化，反之亦然。
 
 ### 向父级作用域层级发射自定义事件
 
-要从作用域发射事件，你可以使用 `$emit()` 方法。该方法通过父级作用域层级向上发送事件。任何注册了该事件的祖先作用域都会收到通知`$emit()` 方法使用以下语法，其中 `name` 是事件名称，`args` 是传递给事件处理函数的零或多个参数：
-
-点击此处查看代码图像
+要从作用域发射事件，你可以使用`$emit()`方法。该方法通过父级作用域层级向上发送事件。任何注册了该事件的祖先作用域都会收到通知。`$emit()`方法使用以下语法，其中`name`是事件名称，`args`是传递给事件处理函数的零或多个参数：
 
 ```
 scope.$emit(name, [args, . . .])
@@ -19682,9 +18854,7 @@ scope.$emit(name, [args, . . .])
 
 ### 向子级作用域层级广播自定义事件
 
-你还可以通过 `$broadcast()` 方法通过子级作用域层级向下广播事件。任何注册了该事件的后代作用域都会收到通知。`$broadcast()` 方法使用以下语法，其中 `name` 是事件名称，`args` 是传递给事件处理函数的零或多个参数：
-
-点击此处查看代码图像
+你还可以通过`$broadcast()`方法通过子级作用域层级向下广播事件。任何注册了该事件的后代作用域都会收到通知。`$broadcast()`方法使用以下语法，其中`name`是事件名称，`args`是传递给事件处理函数的零或多个参数：
 
 ```
 scope.$broadcast(name, [args, . . .])
@@ -19692,43 +18862,34 @@ scope.$broadcast(name, [args, . . .])
 
 ### 使用监听器处理自定义事件
 
-要处理发射或广播的事件，你可以使用 `$on()` 方法。`$on()` 方法使用以下语法，其中 `name` 是要监听的事件名称：
+要处理发射或广播的事件，你可以使用`$on()`方法。`$on()`方法使用以下语法，其中`name`是要监听的事件名称：
 
 ```
 scope.$on(name, listener)
 ```
 
-listener 参数是一个函数，它接受事件作为第一个参数，并将由 `$emit()` 或 `$broadcast()` 方法传递的任何参数作为后续参数。`event` 对象具有以下属性：
+`listener`参数是一个函数，它接受事件作为第一个参数，并将由`$emit()`或`$broadcast()`方法传递的任何参数作为后续参数。`event`对象具有以下属性：
 
-![Image](img/image00767.jpeg) **targetScope:** 调用 `$emit()` 或 `$broadcast()` 的作用域。
-
-![Image](img/image00767.jpeg) **currentScope:** 当前正在处理事件的作用域。
-
-![Image](img/image00767.jpeg) **name:** 事件的名称。
-
-![Image](img/image00767.jpeg) **stopPropagation():** 一个停止事件沿作用域层级向上或向下传播的函数。
-
-![Image](img/image00767.jpeg) **preventDefault():** 一个防止浏览器事件默认行为的函数，但只执行你自己的自定义代码。
-
-![Image](img/image00767.jpeg) **defaultPrevented:** 一个布尔值，如果调用了 `event.preventDefault()` 则为 `true`。
-
-***
+- **targetScope:** 调用`$emit()`或`$broadcast()`的作用域。
+- **currentScope:** 当前正在处理事件的作用域。
+- **name:** 事件的名称。
+- **stopPropagation():** 一个停止事件沿作用域层级向上或向下传播的函数。
+- **preventDefault():** 一个防止浏览器事件默认行为的函数，但只执行你自己的自定义代码。
+- **defaultPrevented:** 一个布尔值，如果调用了`event.preventDefault()`则为`true`。
 
 ### 动手尝试：在嵌套控制器中实现自定义事件
 
-在这个示例中，你使用自定义事件在两个控制器之间通信变化，其中一个嵌套在另一个内部。列表 26.3 和列表 26.4 中的代码提供了 AngularJS 应用和模板，说明了如何使用 `$emit()`、`$broadcast()` 和 `$on()` 在作用域层级中上下发送和处理事件。
+在这个示例中，你使用自定义事件在两个控制器之间通信变化，其中一个嵌套在另一个内部。列表 26.3 和列表 26.4 中的代码提供了 AngularJS 应用和模板，说明了如何使用`$emit()`、`$broadcast()`和`$on()`在作用域层级中上下发送和处理事件。
 
 在示例中，父作用域中存储了一个角色列表。你可以轻松地点击列表中的角色来显示包含子作用域中的角色信息。你还可以删除子作用域中的角色，这将将其从父作用域的列表中移除。
 
 使用以下步骤构建带有嵌套控制器和作用域的应用程序：
 
-**1.** 添加 `lesson26/scope_events.html`和`lesson26/js/scope_events.js`文件。
+**1.** 添加`lesson26/scope_events.html`和`lesson26/js/scope_events.js`文件。
 
 **2.** 将列表 26.3 中和列表 26.4 中所示的代码添加到 HTML 和 JavaScript 文件中。
 
-**3.** 列表 26.3 中的以下几行代码实现了名为 `Characters`的父作用域控制器。作用域中定义了一个角色名称数组，并将 `currentName` 值设置为数组中的第一个元素：
-
-点击此处查看代码图像
+**3.** 列表 26.3 中的以下几行代码实现了名为`Characters`的父作用域控制器。作用域中定义了一个角色名称数组，并将`currentName`值设置为数组中的第一个元素：
 
 ```
 02  controller('Characters', function($scope) {
@@ -19738,7 +18899,9 @@ listener 参数是一个函数，它接受事件作为第一个参数，并将�
 15  }).
 ```
 
-**4.** `changeName()` 函数更改作用域中的 `currentName` 值，然后广播一个 `CharacterChanged` 事件。注意 `changeName()` 使用了`this`关键字来访问 `name` 属性。`name` 属性来自一个动态子作用域，该作用域是因为在列表 26.4 中使用以下指令生成多个元素而创建的：
+
+
+**4.** `changeName()` 函数更改作用域中的`currentName`值，然后广播一个`CharacterChanged`事件。注意`changeName()`使用了`this`关键字来访问`name`属性。`name`属性来自一个动态子作用域，该作用域是因为在列表 26.4 中使用以下指令生成多个元素而创建的：
 
 点击此处查看代码图像
 
@@ -19749,7 +18912,7 @@ listener 参数是一个函数，它接受事件作为第一个参数，并将�
 08  };
 ```
 
-**5.** 以下 `CharacterDeleted` 事件由 `$on('CharacterDeleted')` 处理并从列表中移除角色，这将反映在父作用域的列表中：点击此处查看代码图像
+**5.** 以下`CharacterDeleted`事件由`$on('CharacterDeleted')`处理并从列表中移除角色，这将反映在父作用域的列表中：点击此处查看代码图像
 
 ```
 05  $scope.changeName = function() {
@@ -19761,7 +18924,7 @@ listener 参数是一个函数，它接受事件作为第一个参数，并将�
 14  });
 ```
 
-**6.** 列表 26.3 中的以下几行代码定义了一个名为 `Character`的子作用域。`CharacterChanged` 事件由 `$on('CharacterChanged')` 处理并设置作用域中的 `currentInfo` 值，这将更新页面元素。`deleteChar()` 函数从`Character`作用域删除角色并使用 `$emit` 发送 `CharacterDeleted` 事件到父级，以便在 `Characters` 控制器中处理：点击此处查看代码图像
+**6.** 列表 26.3 中的以下几行代码定义了一个名为`Character`的子作用域。`CharacterChanged`事件由`$on('CharacterChanged')`处理并设置作用域中的`currentInfo`值，这将更新页面元素。`deleteChar()`函数从`Character`作用域删除角色并使用`$emit`发送`CharacterDeleted`事件到父级，以便在`Characters`控制器中处理：点击此处查看代码图像
 
 ```
 16  controller('Character', function($scope) {
@@ -19780,17 +18943,13 @@ listener 参数是一个函数，它接受事件作为第一个参数，并将�
 33  });
 ```
 
-**7.** 列表 26.4 中的 AngularJS 模板代码实现了嵌套的 `ng-controller` 语句，这些语句生成了作用域层级并显示了角色的作用域值。此代码还包含了一些基础的 CSS 样式，使 span 看起来像按钮并在页面上定位元素。
+**7.** 列表 26.4 中的 AngularJS 模板代码实现了嵌套的`ng-controller`语句，这些语句生成了作用域层级并显示了角色的作用域值。此代码还包含了一些基础的 CSS 样式，使 span 看起来像按钮并在页面上定位元素。
 
-**8.** 在浏览器中加载 `scope_events.html` 文件。图 26.2 显示了生成的网页。当你点击角色名称时，会显示该角色的信息，当你点击删除按钮时，该角色将从按钮和信息部分被删除。
+**8.** 在浏览器中加载`scope_events.html`文件。图 26.2 显示了生成的网页。当你点击角色名称时，会显示该角色的信息，当你点击删除按钮时，该角色将从按钮和信息部分被删除。
 
 ![Image](img/image01035.jpeg)
 
-**图 26.2** 使用 `$broadcast()` 和 `$emit()` 在作用域层级中发送更改和删除事件。
-
-
-
-
+**图 26.2** 使用`$broadcast()`和`$emit()`在作用域层级中发送更改和删除事件。
 
 ```javascript
 06      $scope.currentName = this.name;
@@ -19876,7 +19035,7 @@ listener 参数是一个函数，它接受事件作为第一个参数，并将�
 
 管理事件的能力是大多数 AngularJS 应用中至关重要的组件部分之一。你可以在 AngularJS 应用中使用事件来提供元素与用户的交互，并让应用程序的组件之间进行通信，以知道何时执行某些任务。本节从关于浏览器和用户交互事件的简短讨论开始，以及它们与整体架构的关系。
 
-接下来，本节涵盖了使用 `$watch`、`$watchGroup` 和 `$watchCollection` 方法来监听作用域值。使用监听允许你在作用域值变化时采取行动，而无需在这些值可能变化的每个地方放置代码。
+接下来，本节涵盖了使用`$watch`、`$watchGroup`和`$watchCollection`方法来监听作用域值。使用监听允许你在作用域值变化时采取行动，而无需在这些值可能变化的每个地方放置代码。
 
 作用域组织成层级结构，根作用域定义在应用程序级别。每个控制器的实例也会获得一个子作用域实例。在本节中，你学习了如何从作用域内部发射（emit）或广播（broadcast）事件，然后实现监听这些事件并在被触发时执行的处理器。
 
@@ -19898,13 +19057,13 @@ listener 参数是一个函数，它接受事件作为第一个参数，并将�
 
 问. 同时监听多个值的最佳方法是什么？
 
-答. 使用 `$watchGroup`
+答. 使用`$watchGroup`
 
-问. 由 `$emit` 触发的事件是向上还是向下传递？
+问. 由`$emit`触发的事件是向上还是向下传递？
 
 答. 向上
 
-问. 由 `$broadcast` 触发的事件是向上还是向下传递？
+问. 由`$broadcast`触发的事件是向上还是向下传递？
 
 答. 向下
 
@@ -19932,16 +19091,13 @@ listener 参数是一个函数，它接受事件作为第一个参数，并将�
 - 如何实现浏览器警告
 - 如何在 AngularJS 代码中实现定时器
 - 如何从 AngularJS 操作 Cookie
-- 如何使用 `$animate` 服务
+- 如何使用`$animate`服务
 
 服务为你的应用程序提供基于任务的功能。将服务视为执行一个或多个相关任务的可用代码块。AngularJS 提供了许多内置服务，并允许你创建自己的自定义服务。
 
 ### 理解 AngularJS 服务
 
-AngularJS 服务是单例对象，这意味着只会被创建一个实例。服务的意图是提供执行特定任务的简洁代码。服务可以是简单的值定义，也可以是复杂的提供完整的 Web 服务器 通信。
-
-
-
+AngularJS 服务是单例对象，这意味着只会被创建一个实例。服务的意图是提供执行特定任务的简洁代码。服务可以是简单的值定义，也可以是复杂的提供完整的 Web 服务器通信。
 
 服务提供了一个可重用功能的容器，供 AngularJS 应用程序轻松使用。在 AngularJS 中，服务通过依赖注入机制进行定义和注册。这允许你将服务注入到模块、控制器和其他服务中。
 
@@ -19965,55 +19121,56 @@ AngularJS 提供了几个内置服务。这些服务会自动注册到依赖注�
 
 ### 使用 $http 服务发送 HTTP GET 和 PUT 请求
 
-`$http` 服务允许你直接从 AngularJS 代码与 Web 服务器交互。`$http` 服务在底层使用浏览器的 `XMLHttpRequest` 对象，但在 AngularJS 框架的上下文中运行。
+`$http`服务允许你直接从 AngularJS 代码与 Web 服务器交互。`$http`服务在底层使用浏览器的`XMLHttpRequest`对象，但在 AngularJS 框架的上下文中运行。
 
-使用 `$http` 服务有两种方法。最简单的方法是使用以下对应标准 HTTP 请求的内置快捷方法之一：
+使用`$http`服务有两种方法。最简单的方法是使用以下对应标准 HTTP 请求的内置快捷方法之一：
 
 ![Image](img/image00767.jpeg) `delete(url, [config])`
 
-![Image](img/image00767.jpeg) `get(`url`, [`config`])`
+![Image](img/image00767.jpeg) `get(url, [config])`
 
-![Image](img/image00767.jpeg) `head(`url`, [`config`])`
+![Image](img/image00767.jpeg) `head(url, [config])`
 
-![Image](img/image00767.jpeg) `jsonp(`url`, [`config`])`
+![Image](img/image00767.jpeg) `jsonp(url, [config])`
 
-![Image](img/image00767.jpeg) `post(`url`,` data`, [`config`])`
+![Image](img/image00767.jpeg) `post(url, data, [config])`
 
-![Image](img/image00767.jpeg) `put(`url`,` data`, [`config`])`
+![Image](img/image00767.jpeg) `put(url, data, [config])`
 
 ![Image](img/image00767.jpeg) `patch(url, data, [config])`
 
 #### 配置 $http 请求
 
-在这些方法中，`url` 参数是 Web 请求的 URL。可选的 `config` 参数是一个 JavaScript 对象，用于指定实现请求时使用的选项。表 27.2 列出了你可以在 `config` 参数中设置的属性。
+在这些方法中，`url`参数是 Web 请求的 URL。可选的`config`参数是一个 JavaScript 对象，用于指定实现请求时使用的选项。表 27.2 列出了你可以在`config`参数中设置的属性。
 
 ![Image](img/image01039.jpeg)![Image](img/image01040.jpeg)
 
 **表 27.2 $http 服务请求中 config 参数中可以定义的属性**
 
-你也可以通过直接向 `$http(`config`)` 方法发送 `config` 参数来指定请求、URL 和数据。例如，以下两行代码是相同的：
+你也可以通过直接向`$http(config)`方法发送`config`参数来指定请求、URL 和数据。例如，以下两行代码是相同的：
 
 点击此处查看代码图片
 
 ```
 $http.get('/myUrl');
-
 $http({method: 'GET', url:'/myUrl'});
 ```
 
-#### 实现 $http 响应回调函数
 
-当你使用 `$http` 对象调用请求方法时，你将获得一个带有 `success()` 和 `error()` Promise 方法的对象。你可以向这些方法传递一个回调函数，该函数会在请求成功或失败时被调用。这些方法接受以下参数：
 
-![Image](img/image00767.jpeg) data:** 响应数据。
+#### 实现 `$http` 响应回调函数
 
-![Image](img/image00767.jpeg) status:** 响应状态。
+当你使用`$http`对象调用请求方法时，你将获得一个带有`success()`和`error()` Promise 方法的对象。你可以向这些方法传递一个回调函数，该函数会在请求成功或失败时被调用。这些方法接受以下参数：
 
-![Image](img/image00767.jpeg) header:** 响应标头。
+![Image](img/image00767.jpeg) `data`: 响应数据。
 
-![Image](img/image00767.jpeg) config:** 请求配置。
+![Image](img/image00767.jpeg) `status`: 响应状态。
 
-以下是在 `get()` 请求上实现 `success()` 和 `error()` 方法的简单示例：
+![Image](img/image00767.jpeg) `header`: 响应标头。
+
+![Image](img/image00767.jpeg) `config`: 请求配置。
+
+以下是在`get()`请求上实现`success()`和`error()`方法的简单示例：
 
 点击此处查看代码图片
 
@@ -20029,15 +19186,15 @@ $http({method: 'GET', url: '/myUrl'}).
 
 ***
 
-## 动手一试：实现一个简单的 HTTP 服务器并使用 $http 服务访问它
+## 动手一试：实现一个简单的 HTTP 服务器并使用 `$http` 服务访问它
 
-在例例中，你将实现一个 AngularJS 应用程序，使用 `$http` 服务访问并更新 Web 服务器上的数据。此练习的目的是让你熟悉使用 `$http.get()` 和 `$http.post()` 请求。
+在例例中，你将实现一个 AngularJS 应用程序，使用`$http`服务访问并更新 Web 服务器上的数据。此练习的目的是让你熟悉使用`$http.get()`和`$http.post()`请求。
 
 代码列表 27.1 到 27.3 中的代码实现了一个简单的 Node.js Web 服务和一个访问它的 AngularJS 应用程序。该 Web 服务器包含一个简单的 JavaScript 对象，其中包含项目和数量，以模拟商店的库存。该 Web 应用程序允许用户告诉服务器补货、购买并使用物品。该示例非常基础，因此请遵循后续代码。
 
-使用以下步骤构建使用 `$http` 服务访问和更新 Web 服务器上数据的 AngularJS 应用程序：
+使用以下步骤构建使用`$http`服务访问和更新 Web 服务器上数据的 AngularJS 应用程序：
 
-1. 添加 `lesson28/service_http.html` 和 `lesson28/js/service_http.js` 文件。
+1. 添加`lesson28/service_http.html`和`lesson28/js/service_http.js`文件。
 2. 将代码列表 27.2 所示的代码和代码列表 27.3 添加到服务器中。
 3. 在示例中，代码列表 27.5 实现处理以下内容的 Node.js 服务器：
 
@@ -20055,7 +19212,7 @@ $http({method: 'GET', url: '/myUrl'}).
 
 ## 顺说
 
-在启动代码列表 27.1 中的 `service_db.js` 之前，你需要停止正在运行的普通 `server.js` HTTP 服务器（完成后忘记停止 `server.js`）。此外，你可能希望将代码列表 27.1 中的 `service_server.js` 文件放置在代码列表 27.3 中 `service_http.html` 的父级目录下，以便 Node.js 静态路由能够正确匹配。结构如下：
+在启动代码列表 27.1 中的`service_db.js`之前，你需要停止正在运行的普通`server.js` HTTP 服务器（完成后忘记停止`server.js`）。此外，你可能希望将代码列表 27.1 中的`service_server.js`文件放置在代码列表 27.3 中`service_http.html`的父级目录下，以便 Node.js 静态路由能够正确匹配。结构如下：
 
 ```
 ./service_server.js
@@ -20065,7 +19222,7 @@ $http({method: 'GET', url: '/myUrl'}).
 
 ***
 
-## 列表 27.1 service_server.js 实现支持 AngularJS 控制器 GET 和 POST 路由的 Express 服务器
+## 列表 27.1 `service_server.js` 实现支持 AngularJS 控制器 GET 和 POST 路由的 Express 服务器
 
 ```
 01 var express = require('express');
@@ -20081,14 +19238,9 @@ $http({method: 'GET', url: '/myUrl'}).
 11     storeObj[items[itemIDX]] =
 ```
 
-
-
-
 ```javascript
 Math.floor(Math.random() * 5 + 1);
-
 }
-
 return storeObj;
 }
 var storeItems = initStore();
@@ -20108,9 +19260,9 @@ app.post('/buy/item', function(req, res){
 app.listen(80);
 ```
 
-4. 在 Listing 27.2 中添加实现 AngularJS 应用和控制器的代码。注意 `buyItem()` 方法会调用服务器上的 `/buy/item` `POST` 路由，并将结果存放在作用域变量 `$scope.storeItems` 中。如果发生错误，变量 `$scope.status` 将被设置为错误响应对象中的 `msg` 值。`resetStore()` 方法会调用服务器上的 `/reset/data` `GET` 路由，并用成功响应更新 `$scope.storeItems`。
+4. 在 Listing 27.2 中添加实现 AngularJS 应用和控制器的代码。注意`buyItem()`方法会调用服务器上的`/buy/item` `POST`路由，并将结果存放在作用域变量`$scope.storeItems`中。如果发生错误，变量`$scope.status`将被设置为错误响应对象中的`msg`值。`resetStore()`方法会调用服务器上的`/reset/data` `GET`路由，并用成功响应更新`$scope.storeItems`。
 
-**列表 27.2 service_http.js 使用 $http 服务实现与 Web 服务器交互的 AngularJS 控制器**
+**列表 27.2 `service_http.js` 使用 `$http` 服务实现与 Web 服务器交互的 AngularJS 控制器**
 
 点击此处查看代码图片
 
@@ -20154,9 +19306,9 @@ angular.module('myApp', []).
     ]);
 ```
 
-5. 在 Listing 27.3 中添加实现 AngularJS 模板的代码，该模板包含“Restock Store”（补货商店）按钮、错误时的 `status` 消息以及商店物品列表。
+5. 在 Listing 27.3 中添加实现 AngularJS 模板的代码，该模板包含“Restock Store”（补货商店）按钮、错误时的`status`消息以及商店物品列表。
 
-**列表 27.3 service_http.html 实现与 Web 服务器数据链接的指令 AngularJS 模板**
+**列表 27.3 `service_http.html` 实现与 Web 服务器数据链接的指令 AngularJS 模板**
 
 点击此处查看代码图片
 
@@ -20197,11 +19349,11 @@ angular.module('myApp', []).
 </html>
 ```
 
-6. 在浏览器中打开 Listing 27.3 中的 `service_http.html`。你应该能够进行补货操作。图 2.1 显示了当购买并使用物品时，缓存如何发生变化。图 2.1 使用 `$window` 服务来显示弹出框。
+6. 在浏览器中打开 Listing 27.3 中的`service_http.html`。你应该能够进行补货操作。图 2.1 显示了当购买并使用物品时，缓存如何发生变化。图 2.1 使用`$window`服务来显示弹出框。
 
-### 使用 $window 服务实现浏览器警告
+### 使用 `$window` 服务实现浏览器警告
 
-`$window` 服务是浏览器 `window` 对象的封装，允许你像通常在 JavaScript 中那样访问它。为了说明这一点，下面的代码使用 `window` 对象上的 `alert()` 方法弹出一个浏览器警告。警告的消息 get `$window.screen.availWidth` 和 `$window.screen.availHeight` 属性。
+`$window`服务是浏览器`window`对象的封装，允许你像通常在 JavaScript 中那样访问它。为了说明这一点，下面的代码使用`window`对象上的`alert()`方法弹出一个浏览器警告。警告的消息获取`$window.screen.availWidth`和`$window.screen.availHeight`属性。
 
 点击此处查看代码图片
 
@@ -20214,25 +19366,20 @@ var app = angular.module('myApp', []).
     }]);
 ```
 
-### 使用 $cookie 服务与浏览器 Cookie 交互
+### 使用 `$cookie` 服务与浏览器 Cookie 交互
 
-AngularJS 提供了获取和设置 Cookie 的服务：`$cookie` 和 `$cookieStore`。Cookie 在浏览器中提供临时存储，即使用户离开网页或关闭浏览器也会存在。
+AngularJS 提供了获取和设置 Cookie 的服务：`$cookie`和`$cookieStore`。Cookie 在浏览器中提供临时存储，即使用户离开网页或关闭浏览器也会存在。
 
-`$cookie` 服务允许你通过点符号获取并更改字符串 Cookie 值。例如，以下代码获取了名为 `appCookie` 的 cookie 值，然后更改了它：
+`$cookie`服务允许你通过点符号获取并更改字符串 Cookie 值。例如，以下代码获取了名为`appCookie`的 cookie 值，然后更改了它：
 
 ```javascript
 var cookie = $cookies.appCookie;
-
 $cookies.appCookie = 'New Value';
 ```
 
+`$cookieStore`服务提供了`get()`、`put()`和`remove()`函数用于获取、设置和删除 cookie。`$cookieStore`服务的一个非常好的特性是它在设置 cookie 之前会将 JavaScript 对象值序列化为 JSON 字符串，然后在获取时将它们反序列化回对象。
 
-
-
-
-`$cookieStore` 服务提供了 `get()`、`put()` 和 `remove()` 函数用于获取、设置和删除 cookie。`$cookieStore` 服务的一个非常好的特性是它在设置 cookie 之前会将 JavaScript 对象值序列化为 JSON 字符串，然后在获取时将它们反序列化回对象。
-
-要使用 `$cookie` 和 `$cookieStore` 服务，你需要完成三件事。首先，在模板中于 `angular.js` 之后但 `application.js` 之前加载 `angular-cookies.js` 库。例如：
+要使用`$cookie`和`$cookieStore`服务，你需要完成三件事。首先，在模板中于`angular.js`之后但`application.js`之前加载`angular-cookies.js`库。例如：
 
 点击此处查看代码图片
 
@@ -20243,9 +19390,9 @@ $cookies.appCookie = 'New Value';
 
 ### 顺一下
 
-你也可以从 AngularJS 网站 [`code.angularjs.org/`](http://code.angularjs.org/)-<version>/ 下载 `angular-cookies.js` 文件，其中 `<version>` 是你正在使用的 AngularJS 版本。根据你使用的 AngularJS 版本，你可能还需要下载 `angular-cookies.min.js.map` 文件。
+你也可以从 AngularJS 网站 [`code.angularjs.org/`](http://code.angularjs.org/)-<version>/ 下载`angular-cookies.js`文件，其中`<version>`是你正在使用的 AngularJS 版本。根据你使用的 AngularJS 版本，你可能还需要下载`angular-cookies.min.js.map`文件。
 
-其次，在你的应用程序 `Module` 定义的所需项列表中添加 `ngCookies`。例如：
+其次，在你的应用程序`Module`定义的所需项列表中添加`ngCookies`。例如：
 
 点击此处查看代码图片
 
@@ -20253,39 +19400,36 @@ $cookies.appCookie = 'New Value';
 var app = angular.module('myApp', ['ngCookies']);
 ```
 
-第三，将 `$cookies` 或 `$cookieStore` 服务注入你的控制器中。例如：
+第三，将`$cookies`或`$cookieStore`服务注入你的控制器中。例如：
 
 点击此处查看代码图片
 
 ```javascript
 app.controller('myController', ['$scope', '$cookieStore',
                                function($scope, cookieStore) {
-
 }]);
 ```
 
-### 动手尝试一下：使用 $cookieStore 服务
 
-在此示例中，你使用 `$cookie` 服务从你的 AngularJS 应用程序中设置和清除浏览器中的 cookie。列表 27.5 在应用中加载了 `ngCookies`，将 `$cookieStore` 注入到控制器中，然后使用 `get()`、`put()` 和 `remove()` 方法与名为 `myAppCookie` 的 cookie 进行交互。
 
-列表 27.6 实现了一组单选按钮，它们绑定到模型中的 `favCookie` 值，并使用 `ng-change` 在按钮值改变时调用 `setCookie()`。
+### 动手尝试一下：使用 `$cookieStore` 服务
+
+在此示例中，你使用`$cookie`服务从你的 AngularJS 应用程序中设置和清除浏览器中的 cookie。列表 27.5 在应用中加载了`ngCookies`，将`$cookieStore`注入到控制器中，然后使用`get()`、`put()`和`remove()`方法与名为`myAppCookie`的 cookie 进行交互。
+
+列表 27.6 实现了一组单选按钮，它们绑定到模型中的`favCookie`值，并使用`ng-change`在按钮值改变时调用`setCookie()`。
 
 使用以下步骤构建实现 cookie 的 AngularJS 应用程序：
 
-1. **添加** `lesson27/service_cookie.html` 和 `lesson27/js/service_cookie.js` 文件。
+1. **添加**`lesson27/service_cookie.html`和`lesson27/js/service_cookie.js`文件。
 2. **添加** 列表 27.5 和 列表 27.6 所示的代码到 HTML 和 JavaScript 文件中。
-3. 选 列表 27.5 的以下几行代码实现了注入了 `$cookieStore` 服务的控制器：
-
-点击此处查看代码图片
+3. 选 列表 27.5 的以下几行代码实现了注入了`$cookieStore`服务的控制器：
 
 ```javascript
 02 app.controller('myController', '$scope', '$cookieStore',
 03                                   function($scope, cookieStore) {
 ```
 
-4. 以下几行代码实现了 `setCookie()` 函数，该函数调用 `cookieStore.remove()` 从浏览器中删除 cookie，并调用 `cookieStore.put()` 在浏览器中设置 cookie。注意 cookie 的名称为 `myAppCookie`，`flavor` 的值来自作用 中的 `favCookie` 值：
-
-[点击此处查看代码图片
+4. 以下几行代码实现了`setCookie()`函数，该函数调用`cookieStore.remove()`从浏览器中删除 cookie，并调用`cookieStore.put()`在浏览器中设置 cookie。注意 cookie 的名称为`myAppCookie`，`flavor`的值来自作用域中的`favCookie`值：
 
 ```javascript
 04    $scope.setCookie = function(){
@@ -20298,9 +19442,7 @@ app.controller('myController', ['$scope', '$cookieStore',
 11      };
 ```
 
-5. 以下几行代码实现了 `initCookieValue()` 函数，该函数使用 `cookieStore.get()` 如果 cookie 已存储在浏览器中则检索其值，并设置 `favCookie` 和 `myFavCookie` 的值：
-
-点击此处查看代码图片
+5. 以下几行代码实现了`initCookieValue()`函数，该函数使用`cookieStore.get()`如果 cookie 已存储在浏览器中则检索其值，并设置`favCookie`和`myFavCookie`的值：
 
 ```javascript
 12  $scope.initCookieValue = function(){
@@ -20315,21 +19457,15 @@ app.controller('myController', ['$scope', '$cookieStore',
 21  $scope.initCookieValue();
 ```
 
-6. 列表 27.6 中的代码实现了一组单选按钮，它们绑定到模型中的 `favCookie` 值，并使用 `ng-change` 在按钮值改变时调用 `setCookie()`。
+6. 列表 27.6 中的代码实现了一组单选按钮，它们绑定到模型中的`favCookie`值，并使用`ng-change`在按钮值改变时调用`setCookie()`。
 
 （注：原文文本中似乎存在部分内容重复和错乱，翻译时已根据上下文逻辑进行了对齐）
 
+`count`: 表示间隔重复的次数。
 
+`invokeApply`: 是一个布尔值，如果为`true`，则导致仅在 AngularJS 事件循环的`$apply()`块中执行函数。默认值为`true`。
 
-
-
-![Image](img/image00767.jpeg) `count`: 表示间隔重复的次数。
-
-![Image](img/image00767.jpeg) `invokeApply`: 是一个布尔值，如果为 `true`，则导致仅在 AngularJS 事件循环的 `$apply()` 块中执行函数。默认值为 `true`。
-
-当你调用 `$interval()` 和 `$timeout()` 方法时，它们会返回一个 promise 对象，你可以使用该对象来取消超时或间隔。要取消现有的 `$timeout` 或 `$interval`，请调用 `cancel()` 方法。例如：
-
-点击此处查看代码图片
+当你调用`$interval()`和`$timeout()`方法时，它们会返回一个 promise 对象，你可以使用该对象来取消超时或间隔。要取消现有的`$timeout`或`$interval`，请调用`cancel()`方法。例如：
 
 ```javascript
 var myInterval = $interval(function(){$scope.seconds++;}, 1000, 10, true);
@@ -20337,11 +19473,9 @@ var myInterval = $interval(function(){$scope.seconds++;}, 1000, 10, true);
 
 . . .
 
-$interval.cancel(myInterval);
+`$interval.cancel(myInterval);`
 
-如果你通过 `$timeout` 或 `$interval` 创建了超时或间隔，你必须在 `scope` 或 `elements` 指令被销毁时，使用 `cancel()` 显式地销毁它们。最简单的方法是向 `$destroy` 事件添加监听器。例如：
-
-点击此处查看代码图片
+如果你通过`$timeout`或`$interval`创建了超时或间隔，你必须在`scope`或`elements`指令被销毁时，使用`cancel()`显式地销毁它们。最简单的方法是向`$destroy`事件添加监听器。例如：
 
 ```javascript
 $scope.$on('$destroy', function(){
@@ -20349,29 +19483,23 @@ $scope.$on('$destroy', function(){
 });
 ```
 
-### 使用 $animate 服务
+### 使用 `$animate` 服务
 
-`$animate` 服务提供了动画检测钩子，你可以在执行进入（enter）、离开（leave）、移动（move）DOM 操作以及 `addClass` 和 `removeClass` 操作时使用。你可以通过 CSS 类名或 AngularJS 中的 `$animate` 服务来使用这些钩子。
+`$animate` 服务提供了动画检测钩子，你可以在执行进入（enter）、离开（leave）、移动（move）DOM 操作以及`addClass`和`removeClass`操作时使用。你可以通过 CSS 类名或 AngularJS 中的`$animate`服务来使用这些钩子。
 
 要实现动画，你需要向想要动画的元素上添加一个支持动画的指令。表 27.3 列出了支持动画的指令以及它们所支持的动画事件类型。
-
-![Image](img/image01043.jpeg)
 
 **表 27.3 支持动画的 AngularJS 指令**
 
 #### 在 CSS 中实现动画
 
-要在 CSS 中实现动画，你需要在想要动画的元素中包含 `ngClass` 指令。AngularJS 使用 `ngClass` 的值作为附加 CSS 类的根名称，这些类将在动画期间被添加到元素并从元素中移除。
+要在 CSS 中实现动画，你需要在想要动画的元素中包含`ngClass`指令。AngularJS 使用`ngClass`的值作为附加 CSS 类的根名称，这些类将在动画期间被添加到元素并从元素中移除。
 
-在定义了 `ngClass` 指令的元素上会调用动画事件。表 27.4 列出了在动画过程中添加和移除的附加类。
-
-![Image](img/image01044.jpeg)
+在定义了`ngClass`指令的元素上会调用动画事件。表 27.4 列出了在动画过程中添加和移除的附加类。
 
 **表 27.4 在动画期间自动添加和移除的 AngularJS 指令**
 
-要实现基于 CSS 的动画，你需要为表 27.4 中列出的附加类添加相应的 CSS 过渡代码。为了说明这一点，以下代码段为名为 `.img-fade` 的用户定义类实现了添加类和移除类的过渡，该类会使图片的 `opacity`（透明度）在 2 秒内动画变为 `.1`：
-
-点击此处查看代码图片
+要实现基于 CSS 的动画，你需要为表 27.4 中列出的附加类添加相应的 CSS 过渡代码。为了说明这一点，以下代码段为名为`.img-fade`的用户定义类实现了添加类和移除类的过渡，该类会使图片的`opacity`（透明度）在 2 秒内动画变为`.1`：
 
 ```css
 .img-fade-add, .img-fade-remove {
@@ -20380,20 +19508,19 @@ $scope.$on('$destroy', function(){
   -o-transition:all ease 2s;
   transition:all ease 2s;
 }
+
 .img-fade, .img-fade-add.img-fade-add-active {
   opacity:.1;
 }
 ```
 
-注意，过渡效果被添加到 `.img-fade-add` 和 `.img-fade-remove` 类中，但实际的类定义被应用于 `.img-fade`。你还需要类定义 `.img-fade-add.img-fade-add-active` 来设置过渡的结束状态。
+注意，过渡效果被添加到`.img-fade-add`和`.img-fade-remove`类中，但实际的类定义被应用于`.img-fade`。你还需要类定义`.img-fade-add.img-fade-add-active`来设置过渡的结束状态。
 
 #### 在 JavaScript 中实现动画
 
 实现 AngularJS CSS 动画非常简单，但你也可以使用 jQuery 在 JavaScript 中实现动画。JavaScript 动画对你的动画提供了更直接的控制。此外，JavaScript 动画不需要浏览器支持 CSS3。
 
-要在 JavaScript 中实现动画，你需要在加载 `angular.js` 库之前，在你的模板中包含 jQuery 库。例如：
-
-点击此处查看代码图片
+要在 JavaScript 中实现动画，你需要在加载`angular.js`库之前，在你的模板中包含 jQuery 库。例如：
 
 ```html
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -20403,19 +19530,17 @@ $scope.$on('$destroy', function(){
 
 如果你希望能够利用 jQuery 动画的完整功能，则包含整个 jQuery 库是必要的。如果你决定包含 jQuery 库，请确保它在 HTML 代码中加载于 AngularJS 库之前加载。
 
-你还需要在应用程序的 `Module`（模块）对象定义中包含 `ngAnimate` 依赖。例如：
-
-点击此处查看代码图片
+你还需要在应用程序的`Module`（模块）对象定义中包含`ngAnimate`依赖。例如：
 
 ```javascript
 var app = angular.module('myApp', ['ngAnimate']);
 ```
 
-你可以在 `Module` 对象上使用 `animate()` 方法来实现动画。`animate()` 方法返回一个对象，该对象为你想要处理的 `enter`、`leave`、`move`、`addClass` 和 `removeClass` 事件提供了函数。这些函数将要动画的元素作为第一个参数传递。你可以使用 `animate()` 方法来动画元素。
+你可以在`Module`对象上使用`animate()`方法来实现动画。`animate()`方法返回一个对象，该对象为你想要处理的`enter`、`leave`、`move`、`addClass`和`removeClass`事件提供了函数。这些函数将要动画的元素作为第一个参数传递。你可以使用`animate()`方法来动画元素。
 
-`animate()` 方法使用以下语法：`cssProperties` 是一个对象，`duration` 以毫秒为单位，`callback` 是要执行的函数：
+`animate()`方法使用以下语法：`cssProperties`是一个对象，`duration`以毫秒为单位，`callback`是要执行的函数：
 
-例如，以下代码通过将 `opacity` 设置为 `0` 来动画 `fadeClass`：
+例如，以下代码通过将`opacity`设置为`0`来动画`fadeClass`：
 
 ```javascript
 app.animation('.fadeClass', function() {
@@ -20425,24 +19550,20 @@ app.animation('.fadeClass', function() {
     }
   };
 });
-```#### 自己尝试：使用 AngularJS 动画元素
+```
+
+#### 自己尝试：使用 AngularJS 动画元素
 
 在这个练习中，你有机会使用 AngularJS 以及 jQuery 实现动画。此练习的目的是展示每个方法 27.7、27.8 和 27.9 如何实现一个对图片应用淡入/淡出动画的基本示例，使用 JavaScript 方法并使用 CSS 过渡处理图片。
 
 按照以下步骤构建 AngularJS 应用程序：
 
-1. 添加 `27/service_animation.html`、`27/service_animation.js` 和 `27/service_animation.css` 文件。
+1. 添加`27/service_animation.html`、`27/service_animation.js`和`27/service_animation.css`文件。
 2. 将[27.7]、[27.8] 和 [27.9]所示的代码添加到 HTML、JavaScript 和 CSS 文件中。
 3. 下行代码将 AngularJS 动画服务注入到应用程序中以便使用：
-4. 下述几行代码使用应用程序上的 `animate()` 方法实现淡入和淡出动画。注意，同一个类 `.fadeOut` 被用于应用淡入和淡出动画，通过钩入 `addClass` 和 `removeClass` 事件，然后对元素的透明度使用 `jQuery.animate()` 方法。
+4. 下述几行代码使用应用程序上的`animate()`方法实现淡入和淡出动画。注意，同一个类`.fadeOut`被用于应用淡入和淡出动画，通过钩入`addClass`和`removeClass`事件，然后对元素的透明度使用`jQuery.animate()`方法。
 
-
-
-
-
-## 5. 下面来自代码列表 27.9 的 CSS 代码通过在给元素分配 `shrink` 和 `grow` 类时，对类 `–add` 和 `–add-active` 的 AngularJS 类切换应用 CSS 动画，实现了图像收缩和放大的动画：
-
-点击此处查看代码图像
+## 5. 下面来自代码列表 27.9 的 CSS 代码通过在给元素分配`shrink`和`grow`类时，对类`–add`和`–add-active`的 AngularJS 类切换应用 CSS 动画，实现了图像收缩和放大的动画：
 
 ```css
 01 .shrink-add, .grow-add {
@@ -20462,17 +19583,13 @@ app.animation('.fadeClass', function() {
 15 }
 ```
 
-## 6. 代码列表 27.8 实现了支持动画的 AngularJS 模板。注意第 5 行加载了 jQuery 库以支持 JavaScript 动画代码。此外，第 6 行加载了 `animate.css` 脚本，该脚本包含了代码列表 27.9 所示的过渡动画。按钮 `add` 通过添加或移除相应的类来启动动画。
+## 6. 代码列表 27.8 实现了支持动画的 AngularJS 模板。注意第 5 行加载了 jQuery 库以支持 JavaScript 动画代码。此外，第 6 行加载了`animate.css`脚本，该脚本包含了代码列表 27.9 所示的过渡动画。按钮`add`通过添加或移除相应的类来启动动画。
 
-## 7. 在浏览器中加载 `service_animate.html` 文件并使用按钮查看动画，如图 27.3 所示。
+## 7. 在浏览器中加载`service_animate.html`文件并使用按钮查看动画，如图 27.3 所示。
 
-![Image](img/image01045.jpeg)
-
-**图 27.3** 同时在 CSS 和 JavaScript 中实现 `$animation` 服务，以实现图像淡入和调整大小的动画。
+**图 27.3** 同时在 CSS 和 JavaScript 中实现`$animation`服务，以实现图像淡入和调整大小的动画。
 
 ### 代码列表 27.7 service_animate.js 实现一个使用 $animation 服务实现 jQuery 动画的 AngularJS 控制
-
-点击此处查看代码图像
 
 ```javascript
 01 var app = angular.module('myApp', ['ngAnimate']);
@@ -20494,9 +19611,7 @@ app.animation('.fadeClass', function() {
 17 });
 ```
 
-### 代码列表 27.8 service_animate.html 实现一个通过更改图像类来实现淡入和调整大小动画的的 AngularJS 模板
-
-点击此处查看代码图像
+### 代码列表 27.8 service_animate.html 实现一个通过更改图像类来实现淡入和调整大小动画的 AngularJS 模板
 
 ```html
 01 <!doctype html>
@@ -20518,7 +19633,7 @@ app.animation('.fadeClass', function() {
 17               ng-click="myImgClass='grow'" value="Big"/>
 18     <hr>
 19     <img ng-class="myImgClass" src="/images/anyon.jpg" />
-20   </</div>
+20   </div>
 21   <script src="http://jquery.com/jquery-1.11.0.min.js"></script>
 22   <script src="http://angularjs.org/1.3.0/angular.min.js"></script>
 23   <script src="http://angularjs.org/1.3.0/angular-animate.min.js"></script>
@@ -20527,7 +19642,10 @@ app.animation('.fadeClass', function() {
 26 </html>
 ```
 
+
+
 #### 顺便提一下
+
 如果你是从自己的服务器加载 AngularJS，也可以从 AngularJS 网站 `http://angularjs.org/<version>/` 下载 `angular-animate.js` 文件，其中 `<version>` 是你正在使用的 AngularJS 版本。你可能也需要下载 `angular-animate.min.js` 文件。根据你正在使用的 AngularJS 版本，你可能需要下载这些文件。
 
 ### 代码列表 27.9 为 AngularJS 阶段提供过渡效果的 CSS 代码
@@ -20552,12 +19670,14 @@ app.animation('.fadeClass', function() {
 15 }
 ```
 
-#### 使用 $location 服务
-`$location` 服务是对 window.location 对象的封装。它不仅可以让你获取 URL，还可以修改路径、哈希和搜索。
+#### 使用 `$location` 服务
 
-**表 27.5** 可用于 $location 属性的方法
+`$location` 服务是对 `window.location` 对象的封装。它不仅可以让你获取 URL，还可以修改路径、哈希和搜索。
 
-### 尝试一下：在 AngularJS 应用中实现 $location 服务
+**表 27.5** 可用于 `$location` 属性的方法
+
+### 尝试一下：在 AngularJS 应用中实现 `$location` 服务
+
 通过以下步骤构建使用 `$location` 服务的应用程序：
 
 1. 添加 `27/service_animate.html` 和 `27/js/service_animate.js` 文件。
@@ -20590,10 +19710,6 @@ $scope.changeSearch = function(){
 };
 ```
 
-
-
-
-
 ## 8. 列表 27.11 中的代码实现了一个 AngularJS 模板，用于显示捕获的 `$location` 服务信息，并提供了更改 `path`、`hash` 和 `search` 属性的链接。
 
 ## 9. 在浏览器中加载 `service_location.html` 文件并点击“更改路径”（Change Path）、“更改哈希”（Change Hash）和“更改搜索”（Change Search）链接。图 27.4 显示了该页面的运行情况。注意，当点击链接时，浏览器显示的 URL 中的 `path`、`hash` 和 `search` 值会发生变化。
@@ -20602,7 +19718,7 @@ $scope.changeSearch = function(){
 
 **图 27.4** 在 AngularJS 应用中实现 `$location` 服务以与浏览器位置交互。
 
-**列表 27.10 service_location.js 一个 AngularJS 应用，它实现了一个控制器用于从 $location 服务收集信息，并提供了更改 path、search 和 hash 值的函数**
+**列表 27.10 `service_location.js` 一个 AngularJS 应用，它实现了一个控制器用于从 `$location` 服务收集信息，并提供了更改 `path`、`search` 和 `hash` 值的函数**
 
 点击此处查看代码图像
 
@@ -20636,7 +19752,7 @@ $scope.changeSearch = function(){
 27 }]);
 ```
 
-**列表 27.11 service_location.html 一个 AngularJS 模板，用于显示从 $location 服务收集的信息并提供了更改 path、search 和 hash 值的链接**
+**列表 27.11 `service_location.html` 一个 AngularJS 模板，用于显示从 `$location` 服务收集的信息并提供了更改 `path`、`search` 和 `hash` 值的链接**
 
 点击此处查看代码图像
 
@@ -20653,10 +19769,10 @@ $scope.changeSearch = function(){
 10 </head>
 11 <body>
 12    <div ng-controller="myController">
-13      <<h3>Location Service:</h3>
-14      [<span ng-click="changePath()">Change Path</span>]]
-15      [<span ng-click="changeHash()">Change Hash</span>]]
-16      [<span ng-click="changeSearch()">Change Search</span>]]
+13      <h3>Location Service:</h3>
+14      [<span ng-click="changePath()">Change Path</span>]
+15      [<span ng-click="changeHash()">Change Hash</span>]
+16      [<span ng-click="changeSearch()">Change Search</span>]
 17      <hr>
 18      <h4>URL Info</h4>
 19      url: {{url}}<br>
@@ -20674,9 +19790,9 @@ $scope.changeSearch = function(){
 31 </html>
 ```
 
-### 使用 $q 服务提供延迟响应
+### 使用 `$q` 服务提供延迟响应
 
-AngularJS 提供的一个极其实用的服务是 `$q` 服务。`$q` 服务是一个 promise/延迟（deferred）实现。由于并不是所有服务都能立即响应请求，因此需要推迟响应，直到该服务准备好响应。这正是 `$q` 服务用武之地场。其核心思想是：你可以发送一个请求，而不是直接获取响应，而是将获得一个关于服务将响应的 promise。请求的应用程序可以分配一个回调函数，在延迟请求完成或失败时执行该函数。
+AngularJS 提供的一个极其实用的服务是 `$q` 服务。`$q` 服务是一个 promise/延迟（deferred）实现。由于并不是所有服务都能立即响应请求，因此需要推迟响应，直到该服务准备好响应。这正是 `$q` 服务用武之地。其核心思想是：你可以发送一个请求，而不是直接获取响应，而是将获得一个关于服务将响应的 promise。请求的应用程序可以分配一个回调函数，在延迟请求完成或失败时执行该函数。
 
 要利用 `$q` 服务实现延迟响应，你首先需要使用以下语法创建一个延迟对象：
 
@@ -20720,21 +19836,21 @@ promise.then(
 
 ![Image](img/image01049.jpeg)
 
-**表 27.6 $q 服务的延迟对象的可用方法**
+**表 27.6 `$q` 服务的延迟对象的可用方法**
 
-第 28  [#part0043.xhtml_ch28] 节“实现数据库访问服务”部分以及“创建你自己的 AngularJS 服务”展示了这些。
+第 28 节“实现数据库访问服务”部分以及“创建你自己的 AngularJS 服务”展示了这些。
 
 ### 总结
 
-AngularJS 服务是可以在依赖注入器注册的单例对象。控制器和其他 AngularJS 组件可以消费它们。AngularJS 通过服务提供了许多后端功能，例如 `$http`，允许你轻松地将 Web 通集成到 AngularJS 中。
+AngularJS 服务是可以在依赖注入器注册的单例对象。控制器和其他 AngularJS 组件可以消费它们。AngularJS 通过服务提供了许多后端功能，例如 `$http`，允许你轻松地将 Web 通信集成到 AngularJS 中。
 
 在本节中，你还学习了几个内置服务，如 `$cookieStore`、`$q`、`$window`、`$location`、`$animate` 和 `$cacheFactory`。这些以及 AngularJS 服务可以用于将功能注入到控制器、指令中。
 
 ### 问答
 
-**Q](#part0042.xhtml_ch27aa01) AngularJS 提供的内置服务是以单例运行的吗？**
+**Q:** AngularJS 提供的内置服务是以单例运行的吗？
 
-**A](#part0042.xhtml_ch27qq01) 是的，但它们是懒性单例，这意味着只有在依赖它们时才会被实例化。**
+**A:** 是的，但它们是懒性单例，这意味着只有在依赖它们时才会被实例化。
 
 ### 练习
 
@@ -20742,33 +19858,29 @@ AngularJS 服务是可以在依赖注入器注册的单例对象。控制器和�
 
 #### 测试
 
-**1](#part0042.xhtml_ch27as01) AngularJS $rootElement 服务的作用是什么？**
+**1.** AngularJS `$rootElement` 服务的作用是什么？
 
-**2](#part0042.xhtml_ch27as02) 我应该使用哪个 AngularJS 服务来发送和接收服务器请求？**
+**2.** 我应该使用哪个 AngularJS 服务来发送和接收服务器请求？
 
-**3](#part0042.xhtml_ch27as03) 我应该使用哪个 AngularJS 服务从 URL 获取查询字符串？**
+**3.** 我应该使用哪个 AngularJS 服务从 URL 获取查询字符串？
 
-**4](#part0042.xhtml_ch27as04) 哪个 AngularJS 服务允许你处理异步请求的延迟操作？**
+**4.** 哪个 AngularJS 服务允许你处理异步请求的延迟操作？
 
 #### 测试答案
 
-**1](#part0042.xhtml_ch27qa01) $rootElement 提供了对 AngularJS 根元素的访问权限。**
+**1.** `$rootElement` 提供了对 AngularJS 根元素的访问权限。
 
-**2](#part0042.xhtml_ch27qa02) $http**
+**2.** `$http`
 
-**3](#part0042.xhtml_ch27qa03) $location**
+**3.** `$location`
 
-**4](#part0042.xhtml_ch27qa04) $q**
+**4.** `$q`
 
 #### 练习题
 
 **1.** 修改 列表 27.5 和 27.6 中的代码，以添加并管理另一个用于存储（favorite）喜爱的蛋糕的 cookie。你应该实现与 cookie 相同的单选按钮组样式。
 
-
-
-
-
-2. 修改 Listing 27.7、27.8 和 27.9 中的代码以实现图像移动动画。你需要将图像的位置更改为绝对定位（absolute），并添加一个名为 `.slideRight` 的新类。然后实现一个类似于 `.fadeOut` 的动画，使用 `jQuery` 来动画化位置而不是不透明度（opacity）。
+**2.** 修改 列表 27.7、27.8 和 27.9 中的代码以实现图像移动动画。你需要将图像的位置更改为绝对定位（absolute），并添加一个名为 `.slideRight` 的新类。然后实现一个类似于 `.fadeOut` 的动画，使用 `jQuery` 来动画化位置而不是不透明度（opacity）。
 
 # 第 28 节：创建你自己的自定义 AngularJS 服务
 
@@ -20796,7 +19908,7 @@ AngularJS 服务是可以在依赖注入器注册的单例对象。控制器和�
 
 你使用非常简单的 `value` 服务来定义一个单一值，并作为服务提供者注入该值。`value` 方法使用以下语法，其中 `name` 是服务名称，`object` 是你想提供的任何 JavaScript 对象：
 
-```
+```javascript
 value(name, object)
 ```
 
@@ -20830,46 +19942,59 @@ app.constant('myConst', "Constant String");
 
 `factory` 方法提供了将功能实现到服务的能力。它还可以依赖于其他服务提供者，使你能够构建模块化的代码。`factory` 方法使用以下语法，其中 `name` 是服务名称，`factoryProvider` 是用于构建 factory 服务的 provider 函数：
 
-点击此处查看代码图像
-
 ```javascript
 factory(name, factoryProvider)
 ```
 
-与 `value` 或 `constant` 服务不同，你可以向其他服务注入 `factory` 方法，它会返回具有相应功能的服务对象。该功能可以是复杂的 JavaScript 服务、一个值或一个简单的函数。例如，以下代码实现了一个 `factory` 服务，该服务返回一个两个数字之和的函数：
+
+
+`factory(name, factoryProvider)`
+
+与`value`或`constant`服务不同，你可以向其他服务注入`factory`方法，它会返回具有相应功能的服务对象。该功能可以是复杂的 JavaScript 服务、一个值或一个简单的函数。例如，以下代码实现了一个`factory`服务，该服务返回一个两个数字之和的函数：
 
 点击此处查看代码图像
 
 ```javascript
 var app = angular.module('myApp', []);
+
 app.constant('myConst', 10);
+
 app.factory('multiplier', ['myConst', function (myConst) {
+
   return function(value) { return value + myConst; }
+
 ]);
 ```
 
 ### 使用对象定义 service 服务
 
-`service` 方法提供了将功能实现到服务器的能力。`service` 方法与 `factory` 方法的功能相同；然而，`service` 方法的实现方式与 `factory` 方法不同。选择其中哪一个取决于语义上的考虑。
+`service`方法提供了将功能实现到服务器的能力。`service`方法与`factory`方法的功能相同；然而，`service`方法的实现方式与`factory`方法不同。选择其中哪一个取决于语义上的考虑。
 
-`service` 方法接受构造函数作为第二个参数，并使用它来创建对象的新实例。`service` 方法使用以下语法，其中 `name` 是服务名称，`constructor` 是构造函数：
+`service`方法接受构造函数作为第二个参数，并使用它来创建对象的新实例。`service`方法使用以下语法，其中`name`是服务名称，`constructor`是构造函数：
 
 ```javascript
 service(name, constructor)
 ```
 
-`service` 方法还可以接受依赖注入。以下代码实现了一个基础服务方法，提供 `add()` 函数和 `multiply()` 函数：
+`service`方法还可以接受依赖注入。以下代码实现了一个基础服务方法，提供`add()`函数和`multiply()`函数：
 
 点击此处查看代码图像
 
 ```javascript
 var app = angular.module('myApp', []);
+
 app.constant('myConst', 10);
+
 function ConstObj(myConst) {
+
   this.add = function(value){ return value + myConst; };
+
   this.multiply = function(value){ return value * myConst; };
+
 }
+
 app.service('constMath', 'myConst
+```
 
 ## 将自定义服务集成到 AngularJS 应用程序中
 
@@ -20879,15 +20004,17 @@ app.service('constMath', 'myConst
 
 ### 动手尝试：实现一个使用四种类型的简单应用程序
 
-在这个示例中，你构建了 `constant`、`value`、`factory` 和 `service` 服务。目的是学习如何实现每种服务，以及如何在应用程序中使用多种类型的服务。
+在这个示例中，你构建了`constant`、`value`、`factory`和`service`服务。目的是学习如何实现每种服务，以及如何在应用程序中使用多种类型的服务。
 
-[Listing 28.1 中的代码展示了将 `value`、`constant`、`factory` 和 `service` 服务集成到单个模块的示例。Listing 28.2 代码实现了加载并运行应用程序的 AngularJS 模板。
+[Listing 28.1 中的代码展示了将`value`、`constant`、`factory`和`service`服务集成到单个模块的示例。Listing 28.2 代码实现了加载并运行应用程序的 AngularJS 模板。
 
 使用以下步骤构建使用四种类型的应用程序：
 
-1. 添加 `lesson28/service_custom_censor.html` 和 `lesson28/js/service_custom_censor.js` 文件。
+1. 添加`lesson28/service_custom_censor.html`和`lesson28/js/service_custom_censor.js`文件。
+
 2. 将 Listing 28.1 所示的代码和 Listing 28.2 的代码添加到 HTML 和 JavaScript 文件中。
-3. Listing 28.1 中的下一行创建了一个名为 `censorWords` 的简单 `value` 服务，包含要过滤的词汇数组：
+
+3. Listing 28.1 中的下一行创建了一个名为`censorWords`的简单`value`服务，包含要过滤的词汇数组：
 
 点击此处查看代码图像
 
@@ -20895,22 +20022,20 @@ app.service('constMath', 'myConst
 app.value('censorWords', ["can't", "quit", "fail"]);
 ```
 
-4. 下一行代码创建一个名为 `repString` 的 `constant` 服务，包含用于过滤词的替换字符串：
-
-
-
-
-
-点击此处查看代码图片
-
-03 `app.constant('repString', "****");`
-
-### 5. 下面代码实现了一个名为 `censorF` 的 `factory` 服务，该服务注入了 `censorWords` 和 `repString`。此服务返回一个函数，该函数接收输入字符串并使用 `replace` 将 `censorWords` 列表中的任何单词替换为 `repString` 的值：
+4. 下一行代码创建一个名为`repString`的`constant`服务，包含用于过滤词的替换字符串：
 
 点击此处查看代码图片
 
 ```javascript
-04 app.factory('censorF', ['censorWords', 'repString',
+app.constant('repString', "****");
+```
+
+### 5. 下面代码实现了一个名为`censorF`的`factory`服务，该服务注入了`censorWords`和`repString`。此服务返回一个函数，该函数接收输入字符串并使用`replace`将`censorWords`列表中的任何单词替换为`repString`的值：
+
+点击此处查看代码图片
+
+```javascript
+app.factory('censorF', ['censorWords', 'repString',
     function (cWords, repString) {
     return function(inString) {
       var outString = inString;
@@ -20923,12 +20048,12 @@ app.value('censorWords', ["can't", "quit", "fail"]);
  }]);
 ```
 
-### 6. 下面代码实现了一个名为 `censorS` 的 `service` 服务，它首先定义了一个名为 `CensorObj` 的函数，然后将其同 `censorWords` 和 `repString` 一起注入到 `app.service()` 方法中。与 `factory` 服务类似，此服务也接受字符串并返回过滤后的结果：
+### 6. 下面代码实现了一个名为`censorS`的`service`服务，它首先定义了一个名为`CensorObj`的函数，然后将其同`censorWords`和`repString`一起注入到`app.service()`方法中。与`factory`服务类似，此服务也接受字符串并返回过滤后的结果：
 
 点击此处查看代码图片
 
 ```javascript
-15 function CensorObj(cWords, repString) {
+function CensorObj(cWords, repString) {
     this.censor = function(inString){
       var outString = inString;
       for(i in cWords){
@@ -20941,19 +20066,19 @@ app.value('censorWords', ["can't", "quit", "fail"]);
       return cWords;
     };
 }
-28 app.service('censorS', ['censorWords', 'repString', CensorObj]);
+app.service('censorS', ['censorWords', 'repString', CensorObj]);
 ```
 
-### 7. 控制器定义在 27–37 行，并注入了 `censorF` 和 `censorS`。注意在接下来的行中，可以直接从控制器内部调用 `censorF` 和 `censorS`：
+### 7. 控制器定义在 27–37 行，并注入了`censorF`和`censorS`。注意在接下来的行中，可以直接从控制器内部调用`censorF`和`censorS`：
 
 点击此处查看代码图片
 
 ```javascript
-36 $scope.censoredByFactory = censorF(newValue);
-37 $scope.censoredByService = censorS.censor(newValue);
+$scope.censoredByFactory = censorF(newValue);
+$scope.censoredByService = censorS.censor(newValue);
 ```
 
-### 8. 在浏览器中打开列表 28.2 中的 `service_custom_censor.html` 文件，以加载 AngularJS 模板，该模板显示过滤后的单词并提供文本输入以输入短语。短语显示两次，一次通过 `censorF` 过滤，另一次通过 `censorS` 过滤。图 28.1 显示了运行中的 AngularJS 应用程序。
+### 8. 在浏览器中打开列表 28.2 中的`service_custom_censor.html`文件，以加载 AngularJS 模板，该模板显示过滤后的单词并提供文本输入以输入短语。短语显示两次，一次通过`censorF`过滤，另一次通过`censorS`过滤。图 28.1 显示了运行中的 AngularJS 应用程序。
 
 ![Image](img/image01050.jpeg)
 
@@ -21050,17 +20175,17 @@ app.value('censorWords', ["can't", "quit", "fail"]);
 
 在本例中，你将构建一个生成不同城市时间的简单时间服务。然后，在 AngularJS 模板中，你将在多个控制器中使用该时间服务。目的是让你看到重用 AngularJS 服务是多么简单。
 
-列表 28.3 中的代码实现了一个名为 `TimeService` 的自定义服务。使用以下步骤构建应用程序：
+列表 28.3 中的代码实现了一个名为`TimeService`的自定义服务。使用以下步骤构建应用程序：
 
-**1.** 添加 `lesson28/service_custom_time.html` 和 `lesson28/js/service_custom_time.js` 文件。
+**1.** 添加`lesson28/service_custom_time.html`和`lesson28/js/service_custom_time.js`文件。
 
 **2.** 将列表 28.3 和列表 28.4 中的代码添加到 HTML 和 JavaScript 文件中。
 
-**3.** 列表 28.3 中的以下代码实现了一个名为 `TimeService` 的基础时间服务，它使用定义 UTC 偏移的对象来获取时间。注意 `getTZ()` 方法接受城市名称并根据 UTC 时间和偏移计算数据。`getCies()` 函数返回该服务的城市列表。
+**3.** 列表 28.3 中的以下代码实现了一个名为`TimeService`的基础时间服务，它使用定义 UTC 偏移的对象来获取时间。注意`getTZ()`方法接受城市名称并根据 UTC 时间和偏移计算数据。`getCies()`函数返回该服务的城市列表。
 
-**4.** 列表 28.3 中的应用程序其余部分实现了几个控制器，包括 `LAController`、`NYController`、`LondonController` 和 `TimeController`。这些控制器注入了 `TimeService` 服务并使用它设置城市的当前时间，或者在 `TimeController` 的情况下设置所有城市。
+**4.** 列表 28.3 中的应用程序其余部分实现了几个控制器，包括`LAController`、`NYController`、`LondonController`和`TimeController`。这些控制器注入了`TimeService`服务并使用它设置城市的当前时间，或者在`TimeController`的情况下设置所有城市。
 
-**5.** 在浏览器中打开列表 28.4 中的 `service_custom_time.html` 文件。这实现了一个 AngularJS 模板，显示 `LAController`、`NYController`、`LondonController` 和 `TimeController` 控制器的内容。在 `TimeController` 的情况下，所有时间都使用 `ng-repeat` 在表格中显示。图 28.2 显示了生成的 AngularJS 应用程序网页。注意不同的时间。
+**5.** 在浏览器中打开列表 28.4 中的`service_custom_time.html`文件。这实现了一个 AngularJS 模板，显示`LAController`、`NYController`、`LondonController`和`TimeController`控制器的内容。在`TimeController`的情况下，所有时间都使用`ng-repeat`在表格中显示。图 28.2 显示了生成的 AngularJS 应用程序网页。注意不同的时间。
 
 **图 28.2** 在多个控制器中使用自定义 AngularJS 服务来显示不同城市的时间。
 
@@ -21074,8 +20199,6 @@ app.value('censorWords', ["can't", "quit", "fail"]);
 01 var app = angular.module('myApp', []);
 02 function TimeService() {
 ```
-
-
 
 
 
@@ -21123,13 +20246,9 @@ app.controller('TimeController', ['$scope', 'TimeService',
  }]);
 ```
 
-***
-
 ### 列表 28.4 service_custom_time.html AngularJS 模板，展示了如何向多个控制器注入自定义 AngularJS 服务
 
 点击此处查看代码图像
-
-***
 
 ```html
 <!doctype html>
@@ -21175,29 +20294,22 @@ app.controller('TimeController', ['$scope', 'TimeService',
 </html>
 ```
 
-***
-
-***
-
 ### 动手实践：实现数据库访问服务
 
-在例例中，你将构建一个中间数据库访问服务，该服务使用 `$http` 服务连接到模拟的服务端数据库服务。此练习的目的是演示如何在使用自定义服务的同时使用内置服务。这提供了利用 `$q` 服务的良好示例。
+在例中，你将构建一个中间数据库访问服务，该服务使用`$http`服务连接到模拟的服务端数据库服务。此练习的目的是演示如何在使用自定义服务的同时使用内置服务。这提供了利用`$q`服务的良好示例。
 
 按照以下步骤构建带有数据库模拟的自定义 Web 服务器，实现数据库访问服务器，并构建使用该服务的 AngularJS 应用程序：
 
-1. 添加 `lesson28/service_custom_db.html`、`lesson28/js/service_custom_db.js` 和 `lesson28/js/service_custom_db_access.js` 文件。
+1. 添加`lesson28/service_custom_db.html`、`lesson28/js/service_custom_db.js`和`lesson28/js/service_custom_db_access.js`文件。
+
 2. 在 HTML 和 JavaScript 文件中添加列表 28.6、28.7 和 28.8 所示的代码。
-3. 对于此示例，我们需要 Web 服务器提供一个模拟的数据库访问服务。列表 28.5 实现了一个 Node.js Web 服务器，它处理以下 `GET` 和 `POST` 路由，用于获取和设置用户对象以及表格数据数组，以模拟向远程数据库服务发送请求：
 
-- `/get/user`：返回用户对象 JSON 版本的 `GET` 路由。
-- `/get/data`：返回表格数据数组 JSON 版本的 `GET` 路由。
-- `/set/user`：接受请求体中用户对象的 `POST` 路由，并更新服务器上的对象以模拟用户对象。
-- `/set/data`：接受请求体中对象数组的 `POST` 路由，并更新 `data` 变量以模拟。
+3. 对于此示例，我们需要 Web 服务器提供一个模拟的数据库访问服务。列表 28.5 实现了一个 Node.js Web 服务器，它处理以下`GET`和`POST`路由，用于获取和设置用户对象以及表格数据数组，以模拟向远程数据库服务发送请求：
 
-（注：原文后续部分存在大量字符重复与乱码，已根据技术逻辑完成核心翻译。）
-
-
-
+- `/get/user`：返回用户对象 JSON 版本的`GET`路由。
+- `/get/data`：返回表格数据数组 JSON 版本的`GET`路由。
+- `/set/user`：接受请求体中用户对象的`POST`路由，并更新服务器上的对象以模拟用户对象。
+- `/set/data`：接受请求体中对象数组的`POST`路由，并更新`data`变量以模拟。
 
 ```javascript
 app.post('/set/user', function(req, res){
@@ -21214,15 +20326,11 @@ app.post('/set/data', function(req, res){
 app.listen(80);
 ```
 
-* *
+#### 4. 在列表 28.6 中添加代码，实现一个名为`dbAccess`的模块和一个名为`DBService`的自定义服务。创建服务对象的`DBAccessObj()`函数提供了`getUserData()`和`updateUser()`方法，用于通过`$http`请求从服务器检索和更新用户对象。`getData`和`updateData()`方法为表格数据提供了类似的功能。注意如何使用`$q`服务来推迟`$http`请求的响应，因为请求不会立即返回。
 
-#### 4. 在列表 28.6 中添加代码，实现一个名为 `dbAccess` 的模块和一个名为 `DBService` 的自定义服务。创建服务对象的 `DBAccessObj()` 函数提供了 `getUserData()` 和 `updateUser()` 方法，用于通过 `$http` 请求从服务器检索和更新用户对象。`getData` 和 `updateData()` 方法为表格数据提供了类似的功能。注意如何使用 `$q` 服务来推迟 `$http` 请求的响应，因为请求不会立即返回。
-
-**列表 28.6 service_custom_db_access.js 实现一种利用 $http 和 $q 服务与存储在服务器上的数据交互的自定义 AngularJS 服务**
+**列表 28.6 service_custom_db_access.js 实现一种利用`$http`和`$q`服务与存储在服务器上的数据交互的自定义 AngularJS 服务**
 
 点击此处查看代码图片
-
-* *
 
 ```javascript
 var app = angular.module('dbAccess', []);
@@ -21264,15 +20372,11 @@ function DBAccessObj($http, $q) {
 app.service('DBService', ['$http', '$q', DBAccessObj]);
 ```
 
-* *
-
-#### 5. 在列表 28.7 中添加代码，实现应用程序模块。注意第 1 行，`dbAccess` 模块被注入到 `myApp` 模块中，以提供对 `DBService` 服务的访问。`DBService` 在第 2 行注入到控制器，然后在第 6、12、18 和 23 行被调用以从服务器获取和设置数据，并将其赋值给作用域中的 `$scope.userInfo` 和 `$scope.data` 值。注意如何使用 `$q` 服务的 `then()` 函数来处理推迟的响应。为了简单起见，只实现了 `successCallback` 函数。通常你可能也想实现一个 `errorCallback` 函数。
+#### 5. 在列表 28.7 中添加代码，实现应用程序模块。注意第 1 行，`dbAccess`模块被注入到`myApp`模块中，以提供对`DBService`服务的访问。`DBService`在第 2 行注入到控制器，然后在第 6、12、18 和 23 行被调用以从服务器获取和设置数据，并将其赋值给作用域中的`$scope.userInfo`和`$scope.data`值。注意如何使用`$q`服务的`then()`函数来处理推迟的响应。为了简单起见，只实现了`successCallback`函数。通常你可能也想实现一个`errorCallback`函数。
 
 **列表 28.7 service_custom_db.js 实现一个从列表 28.6 注入模块和服务以利用数据库服务的 AngularJS 应用程序**
 
 点击此处查看代码图片
-
-* *
 
 ```javascript
 var app = angular.module('myApp', ['dbAccess']);
@@ -21306,31 +20410,25 @@ function($scope, db) {
 ]);
 ```
 
-* *
-
-#### 6. 在列表 28.8 中添加代码，实现一个 AngularJS 模板，该模板在文本框中显示用户信息并将值直接绑定到作用域。还有两个输入按钮，分别调用 `updateUser()` 更新服务器上的用户信息以及调用 `getUser()` 从服务器刷新作用域数据。同样，两个输入按钮通过调用 `updateData()` 和 `getUser()` 来更新和从刷新表格数据。
+#### 6. 在列表 28.8 中添加代码，实现一个 AngularJS 模板，该模板在文本框中显示用户信息并将值直接绑定到作用域。还有两个输入按钮，分别调用`updateUser()`更新服务器上的用户信息以及调用`getUser()`从服务器刷新作用域数据。同样，两个输入按钮通过调用`updateData()`和`getUser()`来更新和从刷新表格数据。
 
 **列表 28.8 service_custom_db.html 使用 input 元素实现与存储在服务器上的数据交互的 AngularJS 模板**
 
 点击此处查看代码图片
 
-* *
+AngularJS 自定义服务（services）是单例对象，你可以将它们注册到依赖注入器中。在注册之后，控制器（controllers）、指令（directives）以及其他的 AngularJS 组件就可以使用它们。AngularJS 提供了几种方法来创建自定义服务，复杂程度不相同。`value`和`constant`方法创建简单的服务。另一方面，`factory`和`service`方法允许你创建复杂得多的服务。
 
-(注：此处为代码块，根据要求不翻译，原文内容，已根据模板逻辑保持结构)
-
-
-
-AngularJS 自定义服务（services）是单例对象，你可以将它们注册到依赖注入器中。在注册之后，控制器（controllers）、指令（directives）以及其他的 AngularJS 组件就可以使用它们。AngularJS 提供了几种方法来创建自定义服务，复杂程度不相同。`value` 和 `constant` 方法创建简单的服务。另一方面，`factory` 和 `service` 方法允许你创建复杂得多的服务。
-
-本节课程重点介绍了当你需要为应用程序提供基于任务的功能时，能够让你实现自己的自定义服务的工具。你学习了四种自定义服务的方法或类型，包括 `value`、`constant`、`factory` 和 `service`。本节展示了实现每种类型自定义服务的示例。你还看到了一个在多个控制器中实现自定义服务的示例。本节的最后一个示例展示了如何实现一个使用 `$http` 与服务器交互的独立自定义服务，以及如何注入和使用它。
+本节课程重点介绍了当你需要为应用程序提供基于任务的功能时，能够让你实现自己的自定义服务的工具。你学习了四种自定义服务的方法或类型，包括`value`、`constant`、`factory`和`service`。本节展示了实现每种类型自定义服务的示例。你还看到了一个在多个控制器中实现自定义服务的示例。本节的最后一个示例展示了如何实现一个使用`$http`与服务器交互的独立自定义服务，以及如何注入和使用它。
 
 ### QA
 
 Q：在单元测试中可以模拟（mock）AngularJS 服务吗？
+
 A：可以。你可以使用像 Jasmine 测试驱动框架之类的工具来模拟服务提供者。
 
-Q：`value` 服务和 `constant` 服务之间有什么区别？
-A：它们在行为上几乎相同。唯一的真实区别是 `value` 服务不能注入到模块的配置块（configuration block）中。
+Q：`value`服务和`constant`服务之间有什么区别？
+
+A：它们在行为上几乎相同。唯一的真实区别是`value`服务不能注入到模块的配置块（configuration block）中。
 
 ### Workshop
 
@@ -21339,20 +20437,24 @@ A：它们在行为上几乎相同。唯一的真实区别是 `value` 服务不�
 ### Quiz
 
 1. 如果你想为变量定义初始值，你会使用哪种 AngularJS 服务提供者？
+
 2. 共有多少种服务提供者？
+
 3. 判断对错：服务在你的模块内只能被使用一次。
 
 ### Quiz Answers
 
-1. `value` 服务提供者。
+1. `value`服务提供者。
+
 2. Value、constant、factory 和 service。
+
 3. 错误。服务可以注入到模块的多个组件中。
 
 ### Exercises
 
-1. 修改 `28.1` 和 `28.2` 中的代码，添加用户向敏感词列表添加新单词的功能。在 `CensorObj` 对象中添加一个函数，允许用户将单词添加到 `cWords` 列表中。在控制器中添加一个函数，它将调用该方法来添加新的需要过滤的单词。最后，在模板中添加一个文本输入框和一个按钮，将其挂载到作用域（scope）上。
+1. 修改`28.1`和`28.2`中的代码，添加用户向敏感词列表添加新单词的功能。在`CensorObj`对象中添加一个函数，允许用户将单词添加到`cWords`列表中。在控制器中添加一个函数，它将调用该方法来添加新的需要过滤的单词。最后，在模板中添加一个文本输入框和一个按钮，将其挂载到作用域（scope）上。
 
-2. 修改 `28.3` 和 `28.4` 中的代码，为时间服务添加本地时间并在页面上显示。你需要为 `TimeObj` 添加一个获取本地时间并返回它的函数。然后为本地时间添加一个控制器，并像其他任何控制器一样在模板中实现它。
+2. 修改`28.3`和`28.4`中的代码，为时间服务添加本地时间并在页面上显示。你需要为`TimeObj`添加一个获取本地时间并返回它的函数。然后为本地时间添加一个控制器，并像其他任何控制器一样在模板中实现它。
 
 ## 第 29 节：以 AngularJS 的方式创建丰富的 Web 组件
 
@@ -21363,13 +20465,15 @@ A：它们在行为上几乎相同。唯一的真实区别是 `value` 服务不�
 - 使用自定义 AngularJS 指令实现可展开和折叠的容器
 - 如何使用简单的 AngularJS 代码实现星级评分视图
 
-本书之前的 AngularJS 课程旨在教你 AngularJS 应用程序中不同组件的机制和基础实现。你已经学习了作用域/模型（scope/model）、视图（views）、控制器（controllers）、指令（directives）和服务（services）。本节稍微转换思路，提供了一些示例来帮助巩固 AngularJS 中的操作方法。
+
+
+本书之前的 AngularJS 课程旨在教你 AngularJS 应用程序中不同组件的机制和基础实现。你已经学习了作用域/模型（`scope/model`）、视图（`views`）、控制器（`controllers`）、指令（`directives`）和服务（`services`）。本节稍微转换思路，提供了一些示例来帮助巩固 AngularJS 中的操作方法。
 
 AngularJS 对结构的要求比普通的 JavaScript 甚至 jQuery 要求的要得多。然而，它在框架内部仍然提供了很大的灵活性。因此，尽可能从不同的角度观察在 AngularJS 中实现任务的方法是一个好主意。
 
 这就是为什么整节课程都致力于展示以各种方式实现 AngularJS 的系列示例。本节中的示例并没有经过完美打磨——有些比其他的更完善——但是，它们提供了实现自定义指令和利用内置指令的不同视角。其目的不是为你提供立刻可复用的代码，而是提供一些不同的观点和一个基础框架，你可以在设计自己的实现方案时在此基础上构建。
 
-### 试一试：构建标签页视图
+## 试一试：构建标签页视图
 
 在这个示例中，你将构建两个自定义 AngularJS 指令：一个充当标签组，另一个充当标签组中的单个面板。此示例的目标是让你了解如何将自定义指令嵌套在另一个指令内部，以及它们之间的一些通信。
 
@@ -21378,18 +20482,24 @@ AngularJS 对结构的要求比普通的 JavaScript 甚至 jQuery 要求的要�
 1. 创建以下文件夹和文件结构。`server.js` 文件和 `images` 文件夹是在《动态编程》中创建的。你需要从书籍网站获取图像或提供自己的：
 
 - `server.js`：提供静态文件的 Node.js Web 服务器。
+
 - `images`：包含图像的文件夹。
+
 - `lesson29`：项目文件夹。
+
 - `lesson29/tabbable.html`：该项目的 AngularJS 模板。
+
 - `lesson29/tabs.html`：标签组的 AngularJS 局部模板。
+
 - `lesson29/panel.html`：标签组中每个单独面板的 AngularJS 局部模板。
+
 - `lesson29/js/tabbable.js`：支持自定义指令的 AngularJS 应用程序。
 
 2. 将 `29.1` 中的代码添加到 `tabbable.js` 文件中。这是一个定义了两个指令 `myTabs` 和 `Pane` 的 AngularJS 应用程序。注意，`directive` 函数只是返回一个定义指令的对象。AngularJS 在 HTML 中遇到该指令时会使用该对象来创建指令的实例。
 
 另外注意，模板内部使用的 HTML 来源于在指令定义中使用 `templateUrl` 选项引用的局部文件。同样注意，还使用了 `transclude` 选项，这允许我们保留 AngularJS 模板中 `myPane` 元素的内容。
 
-两个指令之间的通信通过在 `myPane` 的定义中要求 `myTabs` 指令来实现。这使得 `myTabs` 中定义的控制器被传递给 `myPane` 的 link 函数。注意在第 30 行，我们能够调用 `addPane()` 将 `myPane` 指令的作用域添加到 `myTabs` 指令的列表中。可见标签通过 `myTabs` 控制器函数中的 `select()` 方法进行更改。
+两个指令之间的通信通过在 `myPane` 的定义中要求 `myTabs` 指令来实现。这使得 `myTabs` 中定义的控制器被传递给 `myPane` 的 `link` 函数。注意在第 30 行，我们能够调用 `addPane()` 将 `myPane` 指令的作用域添加到 `myTabs` 指令的列表中。可见标签通过 `myTabs` 控制器函数中的 `select()` 方法进行更改。
 
 ```javascript
 var app = angular.module('myApp', []);
@@ -21399,10 +20509,6 @@ app.directive('myTabs', function() {
     restrict: 'E',
     transclude: true,
 ```
-
-
-
-
 
 ```javascript
 06      scope: {},
@@ -21436,7 +20542,7 @@ app.directive('myTabs', function() {
 33 });
 ```
 
-### 3. 将 Listing 29.2 中的代码添加到 `table.html` 文件中。这是一个 AngularJS 局部模板，作为 `myTabs` 指令的替代方案。注意 scope 中的 `panes` 值被用于将标签作为 `<span>` 元素添加到视图顶部。`panes` 数组会在每个 `myPane` 元素被编译并链接到模板时构建构建。
+### 3. 将 Listing 29.2 中的代码添加到 `table.html` 文件中。这是一个 AngularJS 局部模板，作为 `myTabs` 指令的替代方案。注意 `scope` 中的 `panes` 值被用于将标签作为 `<span>` 元素添加到视图顶部。`panes` 数组会在每个 `myPane` 元素被编译并链接到模板时构建构建。
 
 **列表 29.2 tabs.html 包含用于构建标签页容器（Tabs Container）的模板代码的 AngularJS 局部模板**
 
@@ -21467,7 +20573,7 @@ app.directive('myTabs', function() {
 
 ### 5. 将 Listing 29.4 中的代码添加到 `tabble.html` 文件中。这是一个支持 `myTabs` 和 `myPane` 指令的 AngularJS 模板。注意模板所需的元素 `my-tabs` 和 `my-pane` 的命名结构。在此示例中，只有图像被放置在 `myPane` 元素内部。它可以轻松地变为复杂的元素序列，例如表单或表格。
 
-**列表 29.4 tabby.html 实现 myTabs 和 myPane 自定义指令的 AngularJS 模板**
+**列表 29.4 tabby.html 实现 `myTabs` 和 `myPane` 自定义指令的 AngularJS 模板**
 
 点击查看图片
 
@@ -21513,28 +20619,27 @@ app.directive('myTabs', function() {
 
 ---
 
-### 动手尝试：实现拖拽和放置
+## 动手尝试：实现拖拽和放置
 
 在此示例中，你使用 AngularJS 实现可拖拽和可放置的元素。注意示例使用了 HTML5 API。
 
 按照以下步骤构建：
 
 1. 创建以下结构：
+
    - `lesson29`: 项目文件夹
+
    - `dragdrop.html`: AngularJS 模板
+
    - `dragdrop.js`: AngularJS 应用
 
-2. 将 Listing 29.5 中的代码添加到 `dragdrop.js` 文件中。这是一个定义了两个自定义指令 `dragit` 和 `dropit` 的 AngularJS 应用。注意在 scope 中，`dragStatus` 和 `dropStatus` 变量被更新。这是因为没有定义隔离作用域，它们共享了同一个作用域。
+2. 将 Listing 29.5 中的代码添加到 `dragdrop.js` 文件中。这是一个定义了两个自定义指令 `dragit` 和 `dropit` 的 AngularJS 应用。注意在 `scope` 中，`dragStatus` 和 `dropStatus` 变量被更新。这是因为没有定义隔离作用域，它们共享了同一个作用域。
 
 在 `dragit` 指令中，为 `dragit` 元素添加了 `draggable` 属性。此外，在 `dragit` 指令中，实现了 `dragstart`、`drag` 和 `dragend` 处理器。对于 `dragstart` 和 `drag`，阻止了默认行为以便我们的自定义 AngularJS 代码处理放置。
 
-在 `dropit` 指令中，实现了 `dragover`、`drleave`、`dragenter` 和 `drop`。注意在 `drop` 中，我们使用 `append` 方法向 `dropit` 元素添加了一个 `<p>` 元素。段落内部的值来自 scope 并在指令的 `dragstart` 期间设置。
+在 `dropit` 指令中，实现了 `dragover`、`drleave`、`dragenter` 和 `drop`。注意在 `drop` 中，我们使用 `append` 方法向 `dropit` 元素添加了一个 `<p>` 元素。段落内部的值来自 `scope` 并在指令的 `dragstart` 期间设置。
 
-**列表 29.5 dragdrop.js 实现 dragit 和 dropit 自定义指令以提供拖拽和放置功能的 AngularJS 应用**
-
-
-
-
+**列表 29.5 dragdrop.js 实现 `dragit` 和 `dropit` 自定义指令以提供拖拽和放置功能的 AngularJS 应用**
 
 ```javascript
 element.on('drag', function(event) {
@@ -21592,7 +20697,9 @@ return {
 
 ### 3. 将 [Listing 29.6] 中的代码添加到 `dragdrop.html` 文件中。这实现了显示 `dragStatus` 和 `dropStatus` 值的 AngularJS 模板。注意，可拖拽元素是使用 `<dragit>` 语法声明的，而放置元素是使用 `<dropit>` 语法声明的。
 
-#### 列表 29.6 dragdrop.html 模板使用 dragit 和 dropit 指令向页面添加可拖拽和可放置元素
+#### 列表 29.6 dragdrop.html 模板使用 `dragit` 和 `dropit` 指令向页面添加可拖拽和可放置元素
+
+
 
 ```html
 <!doctype html>
@@ -21665,26 +20772,29 @@ return {
 </html>
 ```
 
-4. 在浏览器中加载 `dragdrop.html`。`图 29.2` 显示了运行中的 AngularJS 应用。当单词被拖动并释放到图像上时，它们会被附加到图像下方。同样注意拖放坐标和放置状态显示得良好。
+4. 在浏览器中加载`dragdrop.html`。`图 29.2`显示了运行中的 AngularJS 应用。当单词被拖动并释放到图像上时，它们会被附加到图像下方。同样注意拖放坐标和放置状态显示得良好。
 
 **图 29.2 使用自定义 AngularJS 指令在网页中提供拖放功能。**
 
 ### 亲自尝试一下：为图像添加缩放字段
 
-在这个示例中，你使用自定义 AngularJS 指令来替换 `<img>` 元素，并提供一个显示在图像旁边的自动缩放字段。当点击图像时，缩放字段将显示图片的放大部分。此练习目的是向你展示 AngularJS 令如何扩展具有丰富功能的 HTML。请按照以下步骤构建缩放应用：
+在这个示例中，你使用自定义 AngularJS 指令来替换`<img>`元素，并提供一个显示在图像旁边的自动缩放字段。当点击图像时，缩放字段将显示图片的放大部分。此练习目的是向你展示 AngularJS 令如何扩展具有丰富功能的 HTML。请按照以下步骤构建缩放应用：
 
 1. 在代码中创建以下文件夹和文件结构：
+
 - `./lesson29/zooming.html`: AngularJS 模板。
+
 - `./lesson29/zoomit.html`: 包含图像和缩放字段定义的 AngularJS 部分模板。
+
 - `./lesson29/js/zooming.js`: 支持指令的 AngularJS 应用。
 
-2. 将 [Listing 29.7] 中的代码添加到 `zooming.js` 文件中。这是一个定义名为 `zoomit` 的自定义 AngularJS 指令的 AngularJS 应用。`zoomit` 指令限制为 `E`。注意来自定义的 `src` 属性已注入到作用域中。
+2. 将`[Listing 29.7]`中的代码添加到`zooming.js`文件中。这是一个定义名为`zoomit`的自定义 AngularJS 指令的 AngularJS 应用。`zoomit`指令限制为`E`。注意来自定义的`src`属性已注入到作用域中。
 
-`zoomit` 指令的功能位于 `controller` 函数中。注意有一个名为 `zInfo` 的对象，包含 `background-image` 和 `background-position` 属性。`zInfo` 作用域将被用于设置 `zoomit.html` 部分模板中缩放字段的 `ng-style` 属性，见 [Listing 29.8]。设置 `background-image` 和 `background-position` 属性会将图像添加到背景并定位缩放。
+`zoomit`指令的功能位于`controller`函数中。注意有一个名为`zInfo`的对象，包含`background-image`和`background-position`属性。`zInfo`作用域将被用于设置`zoomit.html`部分模板中缩放字段的`ng-style`属性，见`[Listing 29.8]`。设置`background-image`和`background-position`属性会将图像添加到背景并定位缩放。
 
-`imageClick()` 函数抑制了默认点击行为，然后获取 `event.target` 元素作为 jQuery 对象。这里我们需要完整版本的 jQuery 来获取图像的 `height`、`width` 和当前的 `offset`。然后我们可以计算鼠标点击时相对于左侧的百分比 `posX` 和相对于顶部的百分比 `posY`，并相应设置 `background-position` 样式。
+`imageClick()`函数抑制了默认点击行为，然后获取`event.target`元素作为 jQuery 对象。这里我们需要完整版本的 jQuery 来获取图像的`height`、`width`和当前的`offset`。然后我们可以计算鼠标点击时相对于左侧的百分比`posX`和相对于顶部的百分比`posY`，并相应设置`background-position`样式。
 
-#### 列表 29.7 zooming.js AngularJS 应用定义名为 zoomit 的自定义 AngularJS 指令以实现带有缩放字段的 <img> 元素
+#### 列表 29.7 zooming.js AngularJS 应用定义名为 zoomit 的自定义 AngularJS 指令以实现带有缩放字段的`<img>`元素
 
 ```javascript
 angular.module('myApp', [])
@@ -21708,9 +20818,6 @@ angular.module('myApp', [])
 }
 ```
 
-
-
-
 ```javascript
 var elem = angular.element(event.target);
 var posX = Math.ceil((event.pageX - elem.offset().left) / elem.width() * 100);
@@ -21724,9 +20831,9 @@ templateUrl: 'zoomit.html'
 };
 ```
 
-### 3. 将 代码列表 29.8 中的代码添加到 `zoomit.html` 文件中。此代码实现了 `zoomit.html` 部分模板，该模板添加了 `<img>` 元素和 `<div>` 元素，后者将具有缩放图像作为背景。注意 `ng-click` 方法被设置为作用中的 `imageClick()` 函数，并传递了 `$event`。同样注意作用域 `ng-style` 被设置为 `zInfo`。
+### 3. 将`代码列表 29.8`中的代码添加到`zoomit.html`文件中。此代码实现了`zoomit.html`部分模板，该模板添加了`<img>`元素和`<div>`元素，后者将具有缩放图像作为背景。注意`ng-click`方法被设置为作用中的`imageClick()`函数，并传递了`$event`。同样注意作用域`ng-style`被设置为`zInfo`。
 
-**列表 29.8 zoomit.html AngularJS 部分模板，用于实现图像和缩放视图字段的 <img> 和 <div> 元素**
+**列表 29.8 zoomit.html AngularJS 部分模板，用于实现图像和缩放视图字段的`<img>`和`<div>`元素**
 
 点击此处查看代码图片
 
@@ -21737,9 +20844,9 @@ templateUrl: 'zoomit.html'
 </</div>
 ```
 
-### 4. 将 代码列表 29.9 中的代码添加到 `zooming.html` 文件中。此代码包含了 AngularJS 模板代码，用于为缩放视图字段和图像提供样式。注意 `<zoomit>` 元素像其他其他元素一样被添加，且 `src` 属性是像 `<img>` 元素一样设置的。还要注意完整的 jQuery 库在 AngularJS 库之前已加载。
+### 4. 将`代码列表 29.9`中的代码添加到`zooming.html`文件中。此代码包含了 AngularJS 模板代码，用于为缩放视图字段和图像提供样式。注意`<zoomit>`元素像其他其他元素一样被添加，且`src`属性是像`<img>`元素一样设置的。还要注意完整的 jQuery 库在 AngularJS 库之前已加载。
 
-**列表 29.9 zooming.html AngularJS 模板，用于样式化实现 <zoomit> 自定义 AngularJS 指令**
+**列表 29.9 zooming.html AngularJS 模板，用于样式化实现`<zoomit>`自定义 AngularJS 指令**
 
 点击此处查看代码图片
 
@@ -21772,7 +20879,7 @@ templateUrl: 'zoomit.html'
 </html>
 ```
 
-### 5. 在浏览器中加载 `zooming.html` 文件。图 29.3 显示了网页上带有其视图字段的图像。当你点击图像中的某个特定点时，缩放视图字段就会更新。
+### 5. 在浏览器中加载`zooming.html`文件。图 29.3 显示了网页上带有其视图字段的图像。当你点击图像中的某个特定点时，缩放视图字段就会更新。
 
 **图 29.3 实现一个提供带缩放视图图像的自定义 AngularJS 指令。**
 
@@ -21785,22 +20892,24 @@ templateUrl: 'zoomit.html'
 **1. 在你的代码中创建以下文件夹和文件结构：**
 
 * `./server.js`: 提供静态项目文件的 Node.js Web 服务器。
+
 * `./images`: 包含示例中使用的图像的文件夹。
+
 * `./lesson29`: 项目文件夹。
+
 * `./lesson29/expand.html`: 项目的 AngularJS 模板，实现自定义的可展开指令。
+
 * `./lesson29/expand_list.html`: 可展开元素指令的 AngularJS 部分模板。
+
 * `./lesson29/expand_item.html`: 可展开元素中每个单独项的 AngularJS 部分模板。
+
 * `./lesson29/js/expand.js`: 支持可展开元素指令的 AngularJS 应用。
 
-**2. 将 代码列表 29.10 中的代码添加到 `expand.js` 文件中。** 这是一个定义了 `expandList` 和 `expandItem` 自定义 AngularJS 指令的 AngularJS 应用。使用 `transclude` 选项是为了保留内容。
+**2. 将`代码列表 29.10`中的代码添加到`expand.js`文件中。** 这是一个定义了`expandList`和`expandItem`自定义 AngularJS 指令的 AngularJS 应用。使用`transclude`选项是为了保留内容。
 
-在 `expandList` 指令中，作用域是隔离的，但在展开容器和容器内的项目之间共享。由于 `transclude` 选项是为了保留内容。
+在`expandList`指令中，作用域是隔离的，但在展开容器和容器内的项目之间共享。由于`transclude`选项是为了保留内容。
 
 **列表 29.10 expand.js AngularJS 应用，用于实现可展开和可折叠元素的 expandList 和 expandItem 指令**
-
-
-
-
 
 ```javascript
   restrict: 'E',
@@ -21817,7 +20926,7 @@ templateUrl: 'zoomit.html'
 };
 ```
 
-### 3. 将列表 29.11 中的代码添加到 `expand_list.html` 文件中。该文件包含了 AngularJS 部分模板 `expand_list.html`，它提供了 `expandList` 元素的定义。该文件中添加了折叠列表标题的元素，包括展开/折叠按钮和标题。`<div ng-transclude>` 元素是放置 `expandItem` 元素的地方。
+### 3. 将列表 29.11 中的代码添加到`expand_list.html`文件中。该文件包含了 AngularJS 部分模板`expand_list.html`，它提供了`expandList`元素的定义。该文件中添加了折叠列表标题的元素，包括展开/折叠按钮和标题。`<div ng-transclude>`元素是放置`expandItem`元素的地方。
 
 **列表 29.11 expand_list.html 用于定义 expandList 元素的 AngularJS 部分模板**
 
@@ -21833,7 +20942,7 @@ templateUrl: 'zoomit.html'
 </>
 ```
 
-### 4. 将列表 29.12 中的代码添加到 `expand_item.html` 文件中。该文件包含了 AngularJS 部分模板 `expand_item.html`，它提供了可展开项目的定义。注意，`ng-hide` 被设置为作用域中的 `myHide`，以展开/折叠元素。`ng-style` 被设置为 `myStyle`，以便我们可以将宽度设置为折叠列表的宽度。`expand-item` 类允许我们使用 CSS 轻松更改项目的外观。`ng-transclude` 用于将 AngularJS 模板定义中的内容放置在列表项内部。
+### 4. 将列表 29.12 中的代码添加到`expand_item.html`文件中。该文件包含了 AngularJS 部分模板`expand_item.html`，它提供了可展开项目的定义。注意，`ng-hide`被设置为作用域中的`myHide`，以展开/折叠元素。`ng-style`被设置为`myStyle`，以便我们可以将宽度设置为折叠列表的宽度。`expand-item`类允许我们使用 CSS 轻松更改项目的外观。`ng-transclude`用于将 AngularJS 模板定义中的内容放置在列表项内部。
 
 **列表 29.12 expand_item.html 用于定义 expandItem 元素的 AngularJS 部分模板**
 
@@ -21845,13 +20954,15 @@ templateUrl: 'zoomit.html'
 </</div>
 ```
 
-### 5. 将列表 29.13 中的代码添加到 `expand.html` 文件中。它实现了提供页面样式以及 `<expand-list>` 元素定义的 AngularJS 模板。注意定义了四个 `<expand-list>` 元素。第一个是简单列表，`<expand-item>` 元素仅包含文本。第二个提供了一个带有表单元素的 `<expand-item>` 元素。第三个在每个 `<expand-item>` 元素中混合了不同的 HTML 元素。第四个仅包含一个 `<img>` 元素。
+### 5. 将列表 29.13 中的代码添加到`expand.html`文件中。它实现了提供页面样式以及`<expand-list>`元素定义的 AngularJS 模板。注意定义了四个`<expand-list>`元素。第一个是简单列表，`<expand-item>`元素仅包含文本。第二个提供了一个带有表单元素的`<expand-item>`元素。第三个在每个`<expand-item>`元素中混合了不同的 HTML 元素。第四个仅包含一个`<img>`元素。
 
-注意，每个 `<expand-list>` 元素包含不同的属性 `title` 和 `exwidth` 值，这导致页面上显示具有不同标题和宽度的列表。
+注意，每个`<expand-list>`元素包含不同的属性`title`和`exwidth`值，这导致页面上显示具有不同标题和宽度的列表。
 
 **列表 29.13 expand.html 使用 expandList 和 expandItem 自定义指令设置样式并实现可展开/折叠元素的 AngularJS 代码**
 
 点击此处查看代码图片
+
+
 
 ```html
 <!DOCTYPE html>
@@ -21929,8 +21040,11 @@ templateUrl: 'zoomit.html'
 使用以下步骤构建可展开/折叠 AngularJS 应用：
 
 **1.** 创建以下目录结构：
+
 `lesson29/`: 项目文件夹。
+
 `lesson29/rating.html`: 实现简单星级项目的 AngularJS 模板。
+
 `lesson29/js/rating.js`: 定义支持元素的 AngularJS 应用。
 
 **2.** 将列表 29.14 中的代码添加到 `rating.js` 文件中。它实现了我们用于更改星级的 AngularJS 应用。注意所使用的数据来自 `$scope.items`。这些数据可能来自服务、数据库或其他源。`$scope.stars` 数组用于模板在网页上显示星星。控制器代码中唯一的函数是 `adjustRating`，它在用户点击星星更改评分时被调用。
@@ -21947,10 +21061,6 @@ angular.module('myApp', [])
     {
       description: "Wheel",
 ```
-
-
-
-
 
 ```javascript
 11 img: "/images/wheel.jpg",
@@ -22035,6 +21145,7 @@ AngularJS 提供了许多工具，通过使用带有内置和自定义指令的�
 ### 问答
 
 - 哪里是学习 AngularJS 额外功能的良好来源？
+
 - 最好且最新的来源是 AngularJS 官方网站 `angularjs.org`。对于简单内容，你可以参考 `w3schools.com` 提供的内容。
 
 ### 工作坊
@@ -22044,18 +21155,23 @@ AngularJS 提供了许多工具，通过使用带有内置和自定义指令的�
 ### 测验
 
 - 你可以使用哪个 AngularJS 指令来隐藏或显示元素？
+
 - 哪个 AngularJS 指令用于标记使用编译 DOM 元素的插入点？
+
 - 在自定义指令定义中，`template` 和 `templateUrl` 有什么区别？
 
 ### 测验答案
 
 - `ng-show`
+
 - `ng-transclude`
+
 - `template` 设置包含实际的 HTML 代码，而 `templateUrl` 设置包含指令使用的模板路径。
 
 ### 练习
 
 1. 修改列表 `29.1`、`29.2`、`29.3` 和 `29.4` 中的代码，包含一些不同内容的标签。
+
 2. 修改列表 `29.7`、`29.8` 和 `29.9` 中的代码，在自定义缩放区域显示鼠标的当前页面坐标。
 
 ### 索引
@@ -22063,28 +21179,41 @@ AngularJS 提供了许多工具，通过使用带有内置和自定义指令的�
 ### 符号
 
 - `$anchorScroll` 服务 (AngularJS)
+
 - `$animate` 服务 (AngularJS)
+
 - `$broadcast`
+
 - `$cacheFactory` 服务 (AngularJS)
+
 - `$compile` 服务 (AngularJS)
+
 - `$cookies` 服务 (AngularJS)
+
 - `$cookieStore` 服务 (AngularJS)，操作浏览器 cookie
+
 - `$data()` 选择器
+
 - `$destroy` 事件（jQuery 对象）
+
 - `$document` 服务 (AngularJS)
+
 - `$emit()` 方法
+
 - `$exceptionHandler` 服务 (AngularJS)
+
 - `$focusable` 选择器
+
 - `$http` 服务 (AngularJS)
+
 - `$ingerpolate` 服务 (AngularJS)
+
 - `$interval` 服务 (AngularJS)
+
 - `$locale` 服务 (AngularJS)
 
-
-
-
-
 ## $location service (AngularJS), 700
+
 提供 `window.location` 对象的封装，721-724
 
 ## $log service (AngularJS), 700
@@ -22094,6 +21223,7 @@ AngularJS 提供了许多工具，通过使用带有内置和自定义指令的�
 ## $parse service (AngularJS), 700
 
 ## $q service (AngularJS), 700
+
 提供延迟响应，726-728
 
 ## $resource service (AngularJS), 700
@@ -22119,15 +21249,19 @@ AngularJS 提供了许多工具，通过使用带有内置和自定义指令的�
 ## $timeout service (AngularJS), 700, 714
 
 ## $watch() method, 689
+
 跟踪作用域变量，687
 
 ## $watchCollection() method, 689
+
 跟踪作用域中对象属性的变化，688-690
 
 ## $watchGroup() method, 689
+
 跟踪多个作用域变量，687
 
 ## $window service (AngularJS), 700
+
 实现浏览器警告，704-709
 
 ## A
@@ -22161,108 +21295,130 @@ AngularJS 提供了许多工具，通过使用带有内置和自定义指令的�
 ## ajax() method, 450-452
 
 ## AJAX requests, 423, 453
+
 高级 jQuery, 450-453
+
 全局事件处理器， 451
+
 全局设置， 450
+
 异步通信， 425-[426]](#part0028.xhtml_page_426)
+
 跨域， 426
+
 GET 对比 POST， 427
+
 处理响应， 433-434
+
 HTML 响应数据， 439-444
+
 JSON 响应数据， 438-441
+
 成功与失败， 434-437
+
 XML 响应数据， 439-444
+
 实现， 428-450
+
 来自 JavaScript， 428-429
-来自 jQuery， 429-433
-低级， 451-453
-对比页面请求， 424-425
-响应类型， 427
-服务端服务， 425
-## ajax_post.css 列表， 448-449
-
-## ajax_post.html 列表， 447
-
-## ajax_post.js 列表， 447-448
-
-## ajax_response.css 列表， 437
-
-## ajax_response.html 列表， 436
-
-## ajax_response.js 列表， 436-437
-
-## ajaxComplete() method, 451
-
-## ajaxError() method, 451
-
-## ajax.html 列表， 19-20
-
-## ajaxSend() method, 451
-
-## ajaxSetup() method, 450
-
-## ajaxStart() method, 451
-
-## ajaxStop() method, 451
-
-## ajaxSuccess() method, 451
-
-## alert() method (window object), 305
-
-## alsoResize option (jQuery resizable widget), 507
-
-## altKey attribute (event objects), 237
-
-## always() method, 453
-
-## analysis, 网络流量， 63-65
-## AngularJS， 509-510
-## 添加到， 514-515
-## 元素动画， 717-719
-## 创建基础， 557-560
-## 创建丰富的 Web， 751-773
-## 使用 jQuery 和 Lite， 560-564
-## 优势， 548-549
-## 引导 HTML 文档， 555
-## 编译器， 552
-## 控制器， 551
-## 数据绑定， 551
-## 数据模型， 550
-## 调试， 63
-## 依赖注入， 551, 567, 568
-## 实现， 572-574
-## 注入器服务， 569
-## 指令， 550, 627
-## 动画期间自动添加和移除， 715-719
-## 内置， 628-653
-## 创建自定义， 657-668
-## 自定义， 683
-## 添加星级， 770-773
-## 可拖放可放置， 756-761
-## 可展开/折叠， 764-770
-## 事件， 685, 696-697
-## 浏览器， 685
-## 发射和广播自定义， 691-693
-## 跟踪作用域变化， 686-689
-## 表达式， 550
-## 全局 API， 555-560
 
 
 
+来自 jQuery，429-433
 
+低级，451-453
 
-# 图像
+对比页面请求，424-425
+
+响应类型，427
+
+服务端服务，425
+
+## `ajax_post.css` 列表，448-449
+
+## `ajax_post.html` 列表，447
+
+## `ajax_post.js` 列表，447-448
+
+## `ajax_response.css` 列表，437
+
+## `ajax_response.html` 列表，436
+
+## `ajax_response.js` 列表，436-437
+
+## `ajaxComplete()` 方法，451
+
+## `ajaxError()` 方法，451
+
+## `ajax.html` 列表，19-20
+
+## `ajaxSend()` 方法，451
+
+## `ajaxSetup()` 方法，450
+
+## `ajaxStart()` 方法，451
+
+## `ajaxStop()` 方法，451
+
+## `ajaxSuccess()` 方法，451
+
+## `alert()` 方法（window 对象），305
+
+## `alsoResize` 选项（jQuery 可调整组件），507
+
+## `altKey` 属性（事件对象），237
+
+## `always()` 方法，453
+
+## 分析，网络流量，63-65
+
+## AngularJS，509-510
+
+- 添加到，514-515
+- 元素动画，717-719
+- 创建基础，557-560
+- 创建丰富的 Web，751-773
+- 使用 jQuery 和 Lite，560-564
+- 优势，548-549
+- 引导 HTML 文档，555
+- 编译器，552
+- 控制器，551
+- 数据绑定，551
+- 数据模型，550
+- 调试，63
+- 依赖注入，551, 567, 568
+- 实现，572-574
+- 注入器服务，569
+- 指令，550, 627
+- 动画期间自动添加和移除，715-719
+- 内置，628-653
+- 创建自定义，657-668
+- 自定义，683
+- 添加星级，770-773
+- 可拖放可放置，756-761
+- 可展开/折叠，764-770
+- 事件，685, 696-697
+- 浏览器，685
+- 发射和广播自定义，691-693
+- 跟踪作用域变化，686-689
+- 表达式，550
+- 全局 API，555-560
+
+## 图像
+
 - 为 761-764 添加缩放视图字段
 - 与 JavaScript 和 jQuery 集成，553-554
 
-# 生命周期
+## 生命周期
+
 - 生命周期周期，552
 - 引导阶段，552
 - 编译阶段，552
 - 运行时数据绑定阶段，552-553
 - 加载 jQuery 库，563-564
 
-# 模块
+## 模块
+
 - 模块，549, 567-568
 - 添加配置块，575-578
 - 添加运行块，578
@@ -22270,12 +21426,14 @@ XML 响应数据， 439-444
 - 定义模块对象，569-570
 - 注入到另一个中，575-577
 
-# 提供者
+## 提供者
+
 - 提供者，569
 - 实现，572
 - 注入到控制器中，572
 
-# 作用
+## 作用
+
 - 作用，550, 583, 597
 - 实现层次结构，593-595
 - 生命周期，591-593
@@ -22286,17 +21444,18 @@ XML 响应数据， 439-444
 - 模板值，588-589
 - 职责分离，553
 
-# 服务
+## 服务
+
 - 服务，551, 699-700, 728
-- `$animate`,714-719
-- `$cacheFactory`,704-709
-- `$cookieStore`,709-711
-- `$http`,701-708
-- `$interval`,714
-- `$location`,721-724
-- `$q`,726-728
-- `$timeout`,714
-- `$window`,704-709
+- `$animate`，714-719
+- `$cacheFactory`，704-709
+- `$cookieStore`，709-711
+- `$http`，701-708
+- `$interval`，714
+- `$location`，721-724
+- `$q`，726-728
+- `$timeout`，714
+- `$window`，704-709
 - 构建工厂，732
 - 内置的，700-701
 - 创建自定义，731-748
@@ -22313,23 +21472,25 @@ XML 响应数据， 439-444
 - 视图，550
 - 构建标签页视图，751-755
 
-# 动画
-- `angular.module()`,569-570
-- `animate()`,322
-- `animate.css` (27.9),720
-- `animated_resize.css` (12.12),339
-- `animated_resize.html` (12.10),338-339
-- `animated_resize.js` (12.11),339
+## 动画
+
+- `angular.module()`，569-570
+- `animate()`，322
+- `animate.css` (27.9)，720
+- `animated_resize.css` (12.12)，339
+- `animated_resize.html` (12.10)，338-339
+- `animated_resize.js` (12.11)，339
 - 动画，321-325
 - 添加效果到，487-491
 - 将 `promise()` 应用于，325
 
-# CSS (层叠样式表)
+## CSS（层叠样式表）
+
 - 实现于，715-716
 - 设置，322
 - 延迟，324-325
 - 元素，添加到 Web 表单，368-370
-- `hide()`,325, 326-327, 328-329
+- `hide()`，325, 326-327, 328-329
 - 交互式，341-343
 - 在 JavaScript 中实现，716-719
 - 移动元素，340-344
@@ -22338,15 +21499,15 @@ XML 响应数据， 439-444
 - 设置缓动，478
 - 滑动，332-337
 - 停止，323
-- `toggle()`,326-327
+- `toggle()`，326-327
 - 可性，329-332
-- `animation_effects.css` (17.12),491
-- `animation_effects.html` (17.10),489-491
-- `animation_effects.js` (17.11),491
-- `append()`,561
-- `appendChild()`,198
-- `appendTo` 选项 (jQuery widget),511
-- `applications` (AngularJS),567
+- `animation_effects.css` (17.12)，491
+- `animation_effects.html` (17.10)，489-491
+- `animation_effects.js` (17.11)，491
+- `append()`，561
+- `appendChild()`，198
+- `appendTo` 选项（jQuery widget），511
+- `applications`（AngularJS），567
 - 构建标签页视图，751-755
 - 创建基础，557-560
 - 创建丰富的 Web 组件，751-773
@@ -22354,19 +21515,22 @@ XML 响应数据， 439-444
 - 实现，572-574
 - `injector` 服务，569
 
-# 元素
+## 元素
+
 - 添加星级评分，770-773
 - 可拖拽和可放置的，756-761
 - 可展开/可折叠的，764-770
 
-# 事件
+## 事件
+
 - 事件，685, 696-697
 - 浏览器，685
 - 触发和广播自定义，691-693
 - 全局 API，555-560
 - 跟踪作用域变化，686-689
 
-# 图像
+## 图像
+
 - 为 761-764 添加缩放视图字段
 - 将自定义服务集成到，733-747
 - 模块，567-568
@@ -22374,293 +21538,377 @@ XML 响应数据， 439-444
 - 添加运行块，578
 - 创建提供者，570-572
 
+## 定义模块对象，569-570
 
+## 注入到另一个中，575-577
 
+## 提供者，569
 
+### 提供者，569
 
-# 定义模块对象，569-570
+## 实现，572
 
-# 注入到另一个中，575-577
+### 注入到控制器，572
 
-# 提供者，569
-## 提供者
+## 作用域，583, 597
 
-# 实现，572
-## 注入到控制器，572
+### 生命周期，591-595
 
-# 作用域，583, 597
-## 生命周期，591-595
-### 后端服务器数据的关系，591
-### 控制器之间的关系，584-586
-### 根作用域与应用之间的关系，584
-### 模板之间的关系，587-589
+#### 后端服务器数据的关系，591
 
-# 服务，699-700
-## `$animate`，714-719
-## `$cacheFactory`，704-709
-## `$cookieStore`，709-711
-## `$http`，701-708
-## `$interval`，714
-## `$location`，721-724
-## `$q`，726-728
-## `$timeout`，714
-## `$window`，704-709
-## 内置，700-701
+#### 控制器之间的关系，584-586
 
-# 在...中使用 jQuery 和 jQuery Lite，560-564
+#### 根作用域与应用之间的关系，584
 
-# 算术运算符（JavaScript），154
+#### 模板之间的关系，587-589
 
-# 数组数据类型（JavaScript），153
+## 服务，699-700
 
-# 数组对象（JavaScript），181-187
-## `array_manipulation.html` 列表 (6.2)，186-187
-## 数组
-### 添加/删除项，184-187
-### 检查项，184
-### 合并，183
-### 转换为字符串，183
-### 创建，184-186
-### 遍历，183
-### 操作，184-187
+### `$animate`，714-719
 
-# `article1.html` 列表 (15.3)，433
+### `$cacheFactory`，704-709
 
-# ASP（活动服务器页面），425
+### `$cookieStore`，709-711
 
-# aspectRatio 选项（jQuery 可调整组件），507
+### `$http`，701-708
 
-# `asrfHeaderName` 属性，`http` 请求，702
+### `$interval`，714
 
-# `assign()` 方法（window 对象），307
+### `$location`，721-724
 
-# 赋值运算符（JavaScript），154
+### `$q`，726-728
 
-# 关联数组/对象数据类型（JavaScript），153
+### `$timeout`，714
 
-# 异步通信，AJAX 请求，425-426
+### `$window`，704-709
 
-# `attr()` 方法，199, 561
-# 属性选择器（jQuery），206
-# `ajax()` 方法，450-452
-# DOM 对象，198
-# HTML 元素，71-72
-# Web 表单元素，348-349
-# `XMLHttpRequest` 对象，428
+### 内置，700-701
 
-# `<audio>` 标签，102
-# `AUTHORIZATION` 头部（HTTP），15
-# `autoHide` 选项（jQuery 可调整组件），507
-# `availHeight` 属性（屏幕对象），304
-# `availWidth` 属性（屏幕对象），304
-# Axis 拖拽组件，497
-# Sortable 排序组件，516
+## 在...中使用 jQuery 和 jQuery Lite，560-564
 
-### 后端服务器数据，作用域之间的关系，591
-### Background-attachment 属性（CSS），119
-### Background-color 属性（CSS），119
-### Background-image 属性（CSS），119
-### Background-position 属性（CSS），119
-### Background-repeat 属性（CSS），120-121
-### `backgrounds.html` 列表 (4.3)，124-125
-### Background-size 属性（CSS），119
-### 行为、指令、限制，660-661
-### `bind()` 方法，561
-### `bindToController` 属性（AngularJS），658
-### Blind 效果（jQuery UI），476
-### Block 元素，78-79
-### Blur 事件，239, 647-648
-### `blur()` 方法（window 对象），305
-### 模糊元素、Web 表单，361
-### `<body>` 元素，77-90
-### 布尔值类型（JavaScript），153
-### Bootstrap 生命周期，552
-### Bootstrap 应用，555
-### Border 属性（CSS），119
-### Border-color 属性（CSS），119
-### Border-radius 属性（CSS），120
-### Border-style 属性（CSS），120-121
-### Border-width 属性（CSS），120
+## 算术运算符（JavaScript），154
 
+## 数组数据类型（JavaScript），153
 
+## 数组对象（JavaScript），181-187
 
+### `array_manipulation.html` 列表 (6.2)，186-187
 
+### 数组
 
-# web 服务器/浏览器范式, 9-20
+#### 添加/删除项，184-187
+
+#### 检查项，184
+
+#### 合并，183
+
+#### 转换为字符串，183
+
+#### 创建，184-186
+
+#### 遍历，183
+
+#### 操作，184-187
+
+## `article1.html` 列表 (15.3)，433
+
+## ASP（活动服务器页面），425
+
+## `aspectRatio` 选项（jQuery 可调整组件），507
+
+## `asrfHeaderName` 属性，`http` 请求，702
+
+## `assign()` 方法（window 对象），307
+
+## 赋值运算符（JavaScript），154
+
+## 关联数组/对象数据类型（JavaScript），153
+
+## 异步通信，AJAX 请求，425-426
+
+## `attr()` 方法，199, 561
+
+## 属性选择器（jQuery），206
+
+## `ajax()` 方法，450-452
+
+- DOM 对象，198
+- HTML 元素，71-72
+- Web 表单元素，348-349
+- `XMLHttpRequest` 对象，428
+
+## `<audio>` 标签，102
+
+## `AUTHORIZATION` 头部（HTTP），15
+
+## `autoHide` 选项（jQuery 可调整组件），507
+
+## `availHeight` 属性（屏幕对象），304
+
+## `availWidth` 属性（屏幕对象），304
+
+## Axis 拖拽组件，497
+
+## Sortable 排序组件，516
+
+## 后端服务器数据，作用域之间的关系，591
+
+## `background-attachment` 属性（CSS），119
+
+## `background-color` 属性（CSS），119
+
+## `background-image` 属性（CSS），119
+
+## `background-position` 属性（CSS），119
+
+## `background-repeat` 属性（CSS），120-121
+
+## `backgrounds.html` 列表 (4.3)，124-125
+
+## `background-size` 属性（CSS），119
+
+## 行为、指令、限制，660-661
+
+## `bind()` 方法，561
+
+## `bindToController` 属性（AngularJS），658
+
+## Blind 效果（jQuery UI），476
+
+## Block 元素，78-79
+
+## Blur 事件，239, 647-648
+
+## `blur()` 方法（window 对象），305
+
+## 模糊元素、Web 表单，361
+
+## `<body>` 元素，77-90
+
+## 布尔值类型（JavaScript），153
+
+## Bootstrap 生命周期，552
+
+## Bootstrap 应用，555
+
+## Border 属性（CSS），119
+
+## Border-color 属性（CSS），119
+
+## Border-radius 属性（CSS），120
+
+## Border-style 属性（CSS），120-121
+
+## Border-width 属性（CSS），120
+
+## web 服务器/浏览器范式，9-20
 
 ## window, 11
 
-## 内置指令 (AngularJS), 628-653
+## 内置指令（AngularJS），628-653
 
-- 将模型绑定到页面元素, 639-643
-- 将页面事件绑定到控制器, 645-653
-- 扩展表单元素, 631-637
-- 功能支持, 628-630
+- 将模型绑定到页面元素，639-643
+- 将页面事件绑定到控制器，645-653
+- 扩展表单元素，631-637
+- 功能支持，628-630
 
-## 内置过滤器, AngularJS 模板, 612
+## 内置过滤器，AngularJS 模板，612
 
-## 内置 JavaScript 对象, 175-189
+## 内置 JavaScript 对象，175-189
 
-- `Array`, 181-187
-- `Date`, 187-188
-- `Math`, 188
-- `Number`, 175-176
-- `RegExp`, 189
-- `String`, 176-178
+- `Array`，181-187
+- `Date`，187-188
+- `Math`，188
+- `Number`，175-176
+- `RegExp`，189
+- `String`，176-178
 
-## 内置服务 (AngularJS), 700-701
+## 内置服务（AngularJS），700-701
 
-## button 属性 (事件对象), 237
+## `button` 属性（事件对象），237
 
-## 按钮输入元素, Web 表单, 访问, 352 (等一下，让我重新检查文本)
-- 按钮输入元素, Web 表单, 访问, 352
+## 按钮输入元素，Web 表单，访问，352
 
-## `<button>` 标签, 89
+## `<button>` 标签，89
 
-## buttonImage 选项 (日期选择器组件), 530
+## `buttonImage` 选项（日期选择器组件），530
 
-## buttonImageOnly 选项 (日期选择器组件), 530
+## `buttonImageOnly` 选项（日期选择器组件），530
 
-## buttons 选项 (对话框组件), 532
+## `buttons` 选项（对话框组件），532
 
 ## C
 
-## cache 属性 (配置参数), `$http` 服务请求, 702
+## `cache` 属性（配置参数），`$http` 服务请求，702
 
-## 日历输入, 网页, 530-531
+## 日历输入，网页，530-531
 
-## 调用堆栈 窗格 (调试器), 58
+## 调用堆栈 窗格（调试器），58
 
-## 回调函数, jQuery, 263-265
+## 回调函数，jQuery，263-265
 
-## cancelable 属性 (事件对象), 237
+## `cancelable` 属性（事件对象），237
 
-## `<canvas>` 元素, 99-101
+## `<canvas>` 元素，99-101
 
-## `<<caption>>` 标签, 85
+## `<caption>` 标签，85
 
-## `card_suits.css` 列表 (9.12), 261-262
+## `card_suits.css` 列表 (9.12)，261-262
 
-## `card_suits.html` 列表 (9.10), 261
+## `card_suits.html` 列表 (9.10)，261
 
-## `card_suits.js` 列表 (9.11), 261
+## `card_suits.js` 列表 (9.11)，261
 
-## CDN (内容交付网络), 555
+## CDN（内容交付网络），555
 
-## change 事件, 239
+## `change` 事件，239
 
-## change 选项 (滑块组件), 537
+## `change` 选项（滑块组件），537
 
-## `charAt()` 方法, 177
+## `charAt()` 方法，177
 
-## `charCode` 属性 (事件对象), 237
+## `charCode` 属性（事件对象），237
 
-## check 框元素, Web 表单, 访问, 350
+## 复选框元素，Web 表单，访问，350
 
-## `children()` 方法, 561
+## `children()` 方法，561
 
-## class 属性
-- body 元素, 77
-- DOM 对象, 198
+## `class` 属性
 
-## class 过渡
-- 添加效果, 482-485
-- 应用缓动, 483-484
-- `class_transitions.css` 列表 (17.6), 485
-- `class_transitions.html` 列表 (17.4), 484
-- `class_transitions.js` 列表 (17.5), 485
+- body 元素，77
+- DOM 对象，198
 
-## classes
-- HTML 元素, 274
-- 过渡, 484-485
-- `clearInterval()` 方法 (window 对象), 305
-- `clearTimeout()` 方法 (window 对象), 305
+## 类过渡
 
-- click 事件, 239
-- `click()` 方法, 198-199
-- 客户端脚本, 16-17
-- AJAX 请求, 19-20
-- `clientX` 属性 (事件对象), 237,270
-- `clientY` 属性 (事件对象), 237,270
-- clip 效果 (jQuery UI), 476
+- 添加效果，482-485
+- 应用缓动，483-484
+- `class_transitions.css` 列表 (17.6)，485
+- `class_transitions.html` 列表 (17.4)，484
+- `class_transitions.js` 列表 (17.5)，485
 
-- `clock.cs` CSS Code the Clock 列表 (11.6), 317
-- `clock.cs` 列表 (11.6), 317
-- `clock.html` HTML 列表 (11.4), 316-317
-- `clock.js` 列表 (11.5), 317
-- `clone()` 方法, 561
-- `close()` 方法, 305
-- `closed` 属性 (window 对象), 304
-- `code`. 另见 listings, delaying, `$interval` 和 `$timeout` 服务, 714
+## 类
 
-- `<col>` 标签, 85
-- `<colgroup>` 标签, 85
-- collapse 元素, 创建, 326-329
-- 可折叠元素, AngularJS 应用, 764-770
-- 可折叠选项 (标签页组件), 541
-- 折叠分支, 动态树视图, 404-408
-- 颜色设计属性 (CSS), 112-130
-- 颜色属性 (CSS), 113
-- 颜色深度 (window 对象), 304
-- 合并数组, 183
-- 字符串, 178
-- 比较运算符 (JavaScript), 155-160
-- 编译阶段, 552
-- compile 定义属性 (AngularJS), 658
-- `compile()` 函数, 665-667
-- 编译器 (AngularJS), 552
-- complete 选项 (jQuery), 322
-- 复杂验证, Web 表单, 377-384
+- HTML 元素，274
+- 过渡，484-485
 
+## `clearInterval()` 方法（window 对象），305
 
+## `clearTimeout()` 方法（window 对象），305
 
+## `click` 事件，239
 
+## `click()` 方法，198-199
 
-# controllerAs 定义属性 (AngularJS), 658
+## 客户端脚本，16-17
 
-## controllers
+- AJAX 请求，19-20
 
-### AngularJS, 551
+## `clientX` 属性（事件对象），237, 270
 
-### AngularJS controllers
+## `clientY` 属性（事件对象），237, 270
+
+## `clip` 效果（jQuery UI），476
+
+## `clock.cs` Clock 的 CSS 列表 (11.6)，317
+
+## `clock.html` HTML 列表 (11.4)，316-317
+
+## `clock.js` 列表 (11.5)，317
+
+## `clone()` 方法，561
+
+## `close()` 方法，305
+
+## `closed` 属性（window 对象），304
+
+## 代码，另见列表，延迟，`$interval` 和 `$timeout` 服务，714
+
+## `<col>` 标签，85
+
+## `<colgroup>` 标签，85
+
+## 折叠菜单项，创建，326-329
+
+## 可折叠元素，AngularJS 应用，764-770
+
+## 可折叠选项（标签页组件），541
+
+## 折叠分支，动态树视图，404-408
+
+## 颜色设计属性（CSS），112-130
+
+## 颜色属性（CSS），113
+
+## 颜色深度（window 对象），304
+
+## 合并数组，183
+
+- 字符串，178
+
+## 比较运算符（JavaScript），155-160
+
+## 编译阶段，552
+
+## `compile` 定义属性（AngularJS），658
+
+## `compile()` 函数，665-667
+
+## 编译器（AngularJS），552
+
+## `complete` 选项（jQuery），322
+
+## 复杂验证，Web 表单，377-384
+
+## `controllerAs` 定义属性（AngularJS），658
+
+## 控制器
+
+### AngularJS，551
+
+### AngularJS 控制器
+
 - 绑定页面事件到，645-653
 - 添加到指令，661-662
 - 实现基础，585-586
-- 在...中实现 watches，688-689
+- 在...中实现 `watches`，688-689
 - 向...中注入内置提供者，572
 
-### nested
+### 嵌套
+
 - 自定义事件，692-693
-- scope 之间的关系，584-586
-- scopes，593-595
+- 作用域之间的关系，584-586
+- 作用域，593-595
 
-## COOKIE 请求头 (HTTP), 15
+## COOKIE 请求头（HTTP），15
 
-## cookies, 获取与设置，308-313
+## cookies，获取与设置，308-313
 
-## Cookies 标签 (网络流量分析器), 65
+## Cookies 标签（网络流量分析器），65
 
-## cookies.css 列表 (11.3), 312-313
+## `cookies.css` 列表 (11.3)，312-313
 
-## cookies.html HTML 列表 (11.1), 309
+## `cookies.html` HTML 列表 (11.1)，309
 
-## cookies.js 列表 (11.2), 312
+## `cookies.js` 列表 (11.2)，312
 
-## copy() 方法，556
 
-## create 事件 (jQuery UI 控件), 495
 
-## createPop() 方法 (window 对象), 305
+# copy() 方法，556
 
-## 创建阶段 (AngularJS scope), 591-592
+# create 事件 (jQuery UI 控件), 495
 
-## creditcard 规则 (验证), 376
+# createPop() 方法 (window 对象), 305
 
-## 跨域 AJAX 请求，426
+# 创建阶段 (AngularJS scope), 591-592
 
-## CSS (层叠样式表), 13, 105, 141. *另参 CSS3*
+# creditcard 规则 (验证), 376
 
-### adding
+# 跨域 AJAX 请求，426
+
+# CSS (层叠样式表), 13, 105, 141. *另参 CSS3*
+
+## adding
+
 - 背景，119-121
 - 向请求头添加代码，107
 - 样式，29-30, 105-108
@@ -22668,9 +21916,10 @@ XML 响应数据， 439-444
 - 为 HTML 元素添加边框，123-128
 - 按钮，样式，312-313
 
-### creating
+## creating
+
 - 动态图形均衡器，413-417
--  sparkline 图形，417-421
+- sparkline 图形，417-421
 - 调试，48-51
 - 在 HTML 元素中定义样式，108
 - 设计属性，112-131
@@ -22680,7 +21929,8 @@ XML 响应数据， 439-444
 - 可见性，131
 - 编辑属性，48-49
 
-### elements
+## elements
+
 - 布局，299
 - 样式，291-292
 - 图像，样式，312-313
@@ -22691,53 +21941,57 @@ XML 响应数据， 439-444
 - 选择器，110-111
 - 动画设置，322
 
-### styles
+## styles
+
 - 向 HTML 元素添加样式，108-140
 - 应用文本，113-119
 - 为动态设计准备，140-141
 - 语法，108-110
 - 在 HTML body 中样式，107-108
-- z-index 属性，调整，292-295
+- `z-index` 属性，调整，292-295
 
-## css() 方法，199, 561
+# css() 方法，199, 561
 
-## CSS 样式编辑器，48-49
+# CSS 样式编辑器，48-49
 
-## css_errors.html 列表 (2.3), 50-52
+# css_errors.html 列表 (2.3), 50-52
 
-## css_styling.html 列表 (3.4), 82
+# css_styling.html 列表 (3.4), 82
 
-## CSS3, 13, 105. *另参 CSS (层叠样式表)*
+# CSS3, 13, 105. *另参 CSS (层叠样式表)*
 
-## ctrlKey 属性 (事件对象),237
+# ctrlKey 属性 (事件对象)，237
 
-## currency[:symbol] 过滤器 (AngularJS 模板),612
+# currency[:symbol] 过滤器 (AngularJS 模板)，612
 
-## 当前执行行选项 (调试器), 58
+# 当前执行行选项 (调试器), 58
 
-## currentTarget 属性 (事件对象),237
+# currentTarget 属性 (事件对象)，237
 
-## 光标设计属性 (CSS), 130
+# 光标设计属性 (CSS), 130
 
-## cursor 选项
+# cursor 选项
+
 - 可拖拽控件，497
 - 可排序控件，516
 
-## 自定义指令 (AngularJS), 657, 683
+# 自定义指令 (AngularJS), 657, 683
+
 - 添加到控制器，661-662
 - 配置 scope，663-664
 - 定义模板，659-660
 - 实现指令，657-680
 - 实现事件处理器，272-273
 - 在 DOM 中，668-670
-- 使用 DOM ，665-667
+- 使用 DOM，665-667
 - 转换元素，664-665
 
-## 自定义事件，692-693
+# 自定义事件，692-693
 
-## 自定义过滤器，AngularJS 模板，创建，620-621
+# 自定义过滤器，AngularJS 模板，创建，620-621
 
-## 自定义服务 (AngularJS), 731, 748
+# 自定义服务 (AngularJS), 731, 748
+
 - 构建工厂，732
 - 数据库访问，741-747
 - 定义常量服务，732
@@ -22746,28 +22000,26 @@ XML 响应数据， 439-444
 - 集成到应用中，733-747
 - 时间，737
 
-## 发射与广播，691-693
+# 发射与广播，691-693
 
-## JavaScript 事件，262-263
+# JavaScript 事件，262-263
 
-## jQuery 事件，262-263
+# jQuery 事件，262-263
 
-## 嵌套控制器，691-693
+# 嵌套控制器，691-693
 
-## 嵌套事件，692-693
+# 嵌套事件，692-693
 
-## custom_objects.html 列表 (6.3), 194
-
-
-
-
+# custom_objects.html 列表 (6.3), 194
 
 # 数据类型与 JavaScript
+
 - `data types`, `JavaScript`, [152]-[153]
 - `database access service`, `AngularJS`, 实现, [741]-[747]
 - `data.html` 列表 (1.4), [20]
 
 ## 日期与验证
+
 - `Date` 对象 (JavaScript), [187]-[188]
 - `date` 规则 (验证), [376]
 - `date[:format]` 过滤器, AngularJS 模板, [613]
@@ -22776,50 +22028,57 @@ XML 响应数据， 439-444
 - `dateISO` 规则 (验证), [376]
 
 ## 事件与调试
+
 - `dbclick` 事件, [239]
 - `debugger` (JavaScript), [51]-[63]
 - `debugging`, [35], [65]-[66]
-- `AngularJS`, [63]
-- `CSS` (层叠样式表), [48]-[51]
-- `HTML` 元素, [41]-[48]
-- `JavaScript`, [51]-[63]
-- `jQuery`, [63]
+  - `AngularJS`, [63]
+  - `CSS` (层叠样式表), [48]-[51]
+  - `HTML` 元素, [41]-[48]
+  - `JavaScript`, [51]-[63]
+  - `jQuery`, [63]
 
 ## 服务与对象
+
 - `deferred responses`, `$q` 服务, [726]-[728]
 - `defining`, `JavaScript` 对象, [190]
 - `definitions`, `AngularJS` 自定义指令, [657]-[668]
 - `directive` 视图模板, [659]-[660]
 
 ## 定时与动画
+
 - `delay timers`, 添加, [314]-[315]
 - `delaying animation`, 延迟延迟, [324]-[325]
 - `delaying code`, `$interval` 和 `$timeout` 服务, [714]
 - `delegateTarget` 属性 (事件对象), [237]
 
 ## 依赖注入
+
 - `dependency injection`, `AngularJS`, [551], [568]-[569]
-- 实现, [572]-[574]
+  - 实现, [572]-[574]
 - `injector` 服务, [569]
 
 ## 设计属性
+
 - `design properties` (CSS), [112]-[131]
-- `color`, [112]-[130]
-- `cursor`, [130]
-- `opacity`, [131]
-- `visibility`, [131]
+  - `color`, [112]-[130]
+  - `cursor`, [130]
+  - `opacity`, [131]
+  - `visibility`, [131]
 
 ## 方法与工具
+
 - `destroy()` 方法, [495]
 - `detatch()` 方法, [561]
 - `developer tools console`, [35]-[40]
 - `development web servers`, [21]
 - `dialogs`
-- `overlay`, [409]-[413]
-- `simple`, [315]-[316]
-- `stylized`, 生成, [532]-[533]
+  - `overlay`, [409]-[413]
+  - `simple`, [315]-[316]
+  - `stylized`, 生成, [532]-[533]
 
 ## 指令与模板
+
 - `digits` 规则 (验证), [376]
 - `directive()` 方法, [657]-[658], [683]
 - `directive_angular_include.html` 列表 (24), [632]
@@ -22842,38 +22101,35 @@ XML 响应数据， 439-444
 - `directive_mouse_events.js` 列表 (24), [654]
 
 ## AngularJS 指令
+
 - `directives` (AngularJS), [550], [627]
-- 一个, [634]
-- 动画, 在...期间自动添加和移除, [715]
-- 内置, [628]-[653]
-- 将模型绑定到页面元素, [639]-[643]
-- 将页面事件绑定到控制器, [645]-[653]
-- 扩展表单元素, [631]-[637]
-- 功能支持, [628]-[630]
-- 自定义, [657], [683]
-- 向...添加控制器, [632], [630]
-- 配置 scope, [657], [668]
-- `directive` DOM (文档对象模型), [569], [670]
-- 实现处理器, [572]-[574]
-- 使用 `link()` 函数操作 DOM, [670], [677]
-- 限制行为, [665], [680]
-- 转换元素, [674], [676]
-- `ngForm`, [634]
-- `input`, [634]
-- `input.checkbox`, [634]
-- `input.email`, [634]
-- `input.number`, [635]
-- `input.radio` 指令, [634]
-- `input.text` 指令, [634]
-- `input.time` 指令, [578]
-- `input.url` 指令, [634]
-- `input.week` 指令, [634]
-- 键盘事件, [649], [651]
-- 鼠标事件, [654], [655]
-
-
-
-
+  - 一个, [634]
+  - 动画, 在...期间自动添加和移除, [715]
+  - 内置, [628]-[653]
+  - 将模型绑定到页面元素, [639]-[643]
+  - 将页面事件绑定到控制器, [645]-[653]
+  - 扩展表单元素, [631]-[637]
+  - 功能支持, [628]-[630]
+  - 自定义, [657], [683]
+    - 向...添加控制器, [632], [630]
+    - 配置 scope, [657], [668]
+  - `directive` DOM (文档对象模型), [569], [670]
+    - 实现处理器, [572]-[574]
+    - 使用 `link()` 函数操作 DOM, [670], [677]
+  - 限制行为, [665], [680]
+  - 转换元素, [674], [676]
+  - `ngForm`, [634]
+  - `input`, [634]
+  - `input.checkbox`, [634]
+  - `input.email`, [634]
+  - `input.number`, [635]
+  - `input.radio` 指令, [634]
+  - `input.text` 指令, [634]
+  - `input.time` 指令, [578]
+  - `input.url` 指令, [634]
+  - `input.week` 指令, [634]
+  - 键盘事件, [649], [651]
+  - 鼠标事件, [654], [655]
 
 # DOM (文档对象模型), 10-11, 32
 
@@ -22922,6 +22178,7 @@ XML 响应数据， 439-444
 ## drag_n_drop.js 列表 (18.6), 506-507
 
 ## 拖放组件 (jQuery), 497-507
+
 - 可拖拽组件，拖动元素，497-501
 - 可放置组件，创建目标，497-507
 
@@ -22960,6 +22217,7 @@ XML 响应数据， 439-444
 ## 动态树视图，添加展开和收折分支，404-408
 
 ## 动态网页页面，69
+
 使用 jQuery 创建，28
 
 ## HTML
@@ -22997,7 +22255,7 @@ XML 响应数据， 439-444
 
 ## Eclipse 开发，22
 
-## easing (jQuery 动画),322
+## easing (jQuery 动画), 322
 
 ## easing 添加类，487-491
 
@@ -23009,9 +22267,9 @@ XML 响应数据， 439-444
 
 ## `element()` 方法，556
 
-## 元素 (DOM),添加和移除事件处理器，242-253
+## 元素 (DOM)，添加和移除事件处理器，242-253
 
-## 元素 (HTML),103, 303
+## 元素 (HTML), 103, 303
 
 ## Eclipse (重复文本)
 
@@ -23027,10 +22285,6 @@ XML 响应数据， 439-444
 
 ## 内边距，133
 
-
-
-
-
 # 核心主题
 
 - `<body>`, 76-90
@@ -23040,7 +22294,7 @@ XML 响应数据， 439-444
 - 容器，80-82
 - 内容，71
 - 添加 CSS（级联样式表）样式，108-140
-- 选择器，110-111
+  - 选择器，110-111
 - 调试，41-48
 - 在其中定义 CSS 样式，108
 - `<div>`, 279-281
@@ -23057,12 +22311,12 @@ XML 响应数据， 439-444
 - 实现自动补全，528-530
 - 分组，80-81
 - `<head>`, 72-77
-- `<link>` 标签，76-77
-- `<meta>` 标签，73-74
-- `<noscript>` 标签，76
-- `<script>` 标签，75
-- `<style>` 标签，74
-- `<title>` 标签，72-73
+  - `<link>` 标签，76-77
+  - `<meta>` 标签，73-74
+  - `<noscript>` 标签，76
+  - `<script>` 标签，75
+  - `<style>` 标签，74
+  - `<title>` 标签，72-73
 - 图片，83-84
 - 内联，78-79
 - `<input>`, 232, 261, 309
@@ -23090,26 +22344,29 @@ XML 响应数据， 439-444
 - 表格，85-88
 - 切换可见性，286-287
 - 包含，664-665
+
+
+
 - 数值计数器，538-539
 - 可见性，为过渡添加效果，485-491
 - Web 表单，348-360
-- 自动聚焦和失去焦点，361
-- 按钮输入，352
-- 复选框，350
-- 禁用，362
-- 动态控制外观和行为，368-374
-- 文件输入，352-353
-- 隐藏和显示，361
-- 获取并设置值，348-353
-- 单选输入，350-351
-- 选择输入，351-352
-- 文字输入，349-350
+  - 自动聚焦和失去焦点，361
+  - 按钮输入，352
+  - 复选框，350
+  - 禁用，362
+  - 动态控制外观和行为，368-374
+  - 文件输入，352-353
+  - 隐藏和显示，361
+  - 获取并设置值，348-353
+  - 单选输入，350-351
+  - 选择输入，351-352
+  - 文字输入，349-350
 - 元素 (HTML5)，93-102
-- `<canvas>`, 99-101
-- 图形，93-101
-- 媒体，102
-- `<path>`, 95-99
-- `<svg>`, 95-99
+  - `<canvas>`, 99-101
+  - 图形，93-101
+  - 媒体，102
+  - `<path>`, 95-99
+  - `<svg>`, 95-99
 - `equalTo` 规则（验证），376
 - 触发自定义事件，691-693
 - `empty()` 方法，561
@@ -23121,77 +22378,73 @@ XML 响应数据， 439-444
 - 错误处理，JavaScript，168-169
 - 转义代码，JavaScript 字符串，176
 - 事件处理器
-- DOM 元素，242-253
-- 在自定义指令中实现，672-674
-- jQuery，应用，248-253
+  - DOM 元素，242-253
+  - 在自定义指令中实现，672-674
+  - jQuery，应用，248-253
 - 事件处理器 (HTML)，访问，147-148
 - 事件对象属性，鼠标位置规范，270
 - 事件选项 (tabs 小部件)，541
-- eventPhase 属性（事件对象），237
+- `eventPhase` 属性（事件对象），237
 - 事件，235-236, 265-266
-- AngularJS ，685, 696-697
-- 浏览器，685
-- 触发和广播自定义，691-693
-- 跟踪范围变化，686-689
-- 失去焦点，647-648
-- 损坏，247-248
-- 浏览器，11
-- 创建自定义，262
-- JavaScript，262-263
-- jQuery，262-263
-- 可 draggable 小部件 (jQuery)，498
-- 可 droppable 小部件，
-
-- 聚焦，647-648
-
-
-
-
-
-- jQuery Lite 对象, 562
-- jQuery 可排序组件, 517
-- jQuery UI 组件, 495
-- 键盘，在 AngularJS 元素上的处理, 649
-- 鼠标，在 AngularJS 元素上的处理, 652-653
-- 对象, 237-239
-- 属性, 237
-- onload, 240-242
-- 页面，绑定到控制器, 645-653
-- 用于化的页面加载, 240-242
-- process, 236-237
-- 可选择组件事件, 511
-- 手动触发, 253
-- JavaScript, 254-258
-- jQuery, 258-262
-- 类型, 239
+  - AngularJS ，685, 696-697
+  - 浏览器，685
+  - 触发和广播自定义，691-693
+  - 跟踪范围变化，686-689
+  - 失去焦点，647-648
+  - 损坏，247-248
+  - 浏览器，11
+  - 创建自定义，262
+  - JavaScript，262-263
+  - jQuery，262-263
+  - 可 draggable 小部件 (jQuery)，498
+  - 可 droppable 小部件，
+  - 聚焦，647-648
+  - jQuery Lite 对象, 562
+  - jQuery 可排序组件, 517
+  - jQuery UI 组件, 495
+  - 键盘，在 AngularJS 元素上的处理, 649
+  - 鼠标，在 AngularJS 元素上的处理, 652-653
+  - 对象, 237-239
+  - 属性, 237
+  - `onload`, 240-242
+  - 页面，绑定到控制器, 645-653
+  - 用于化的页面加载, 240-242
+  - process, 236-237
+  - 可选择组件事件, 511
+  - 手动触发, 253
+    - JavaScript, 254-258
+    - jQuery, 258-262
+  - 类型, 239
 - 展开元素，创建, 326-329
-- expand_item.html 列表 (29.12), 768
-- expand_list.html 列表 (29.11), 767
+- `expand_item.html` 列表 (29.12), 768
+- `expand_list.html` 列表 (29.11), 767
 - 可展开的手风琴元素，添加, 526-527
-- expand.html 列表 (29.13), 768-770
+- `expand.html` 列表 (29.13), 768-770
 - 可展开元素，AngularJS 应用, 764-770
 - 展开分支，动态树视图, 404-408
-- expand.js 列表 (29.10), 766-767
+- `expand.js` 列表 (29.10), 766-767
 - 爆炸效果 (jQuery UI), 476
 - Express Web 服务器，创建, 26-29
 
 ### 表达式
+
 - AngularJS 模板, 550, 599-609
-- 基础, 602-603
-- JavaScript, 608-609
-- 作用域, 604-606
-- expressions_basic.html 列表 (23.2), 603-604
-- expressions_basic.js 列表 (23.1), 603
-- expressions_javascript.html 列表 (23.6), 610
-- expressions_javascript.js 列表 (23.5), 610
-- expressions_scope.html 列表 (23.4), 607
-- expressions_scope.js 列表 (23.3), 606
+  - 基础, 602-603
+  - JavaScript, 608-609
+  - 作用域, 604-606
+- `expressions_basic.html` 列表 (23.2), 603-604
+- `expressions_basic.js` 列表 (23.1), 603
+- `expressions_javascript.html` 列表 (23.6), 610
+- `expressions_javascript.js` 列表 (23.5), 610
+- `expressions_scope.html` 列表 (23.4), 607
+- `expressions_scope.js` 列表 (23.3), 606
 - `extend()` 方法, 556
 - 外部链接, 308
-- 强制在新窗口中打开, 308-311
-- 停止, 308
+  - 强制在新窗口中打开, 308-311
+  - 停止, 308
 
 ### 工厂服务 (AngularJS)
+
 - 使用工厂提供者, 732
 - 淡入动画, 330
 - 渐变效果 (jQuery UI), 476
@@ -23204,25 +22457,25 @@ XML 响应数据， 439-444
 - Web 元素访问, 352-353
 - 从 CSS 加载, 106-107
 - `filter()` 方法, 620
-- filter  (jQuery 组件), 511
-- filter_custom.html 列表 (23.12), 622
-- filter_custom.js 列表, 621-622
-- filter_sort.html 列表, 618-619
-- filter_sort.js 列表 (23.9), 618
+- filter (jQuery 组件), 511
+- `filter_custom.html` 列表 (23.12), 622
+- `filter_custom.js` 列表, 621-622
+- `filter_sort.html` 列表, 618-619
+- `filter_sort.js` 列表 (23.9), 618
 - filter 选择器 (jQuery), 211
 - `filter`:compare filter (AngularJS 模板), 612
 - 过滤表格, 397-404
 - 过滤对象 (jQuery), 218-219
 - filters AngularJS 模板, 599, 611-618
-- 内置, 612
-- 自定义, 620-621
-- 数据渲染, 613-615
-- 排序和整理, 616-618
-- filters.html 列表 (23.8), 615
-- filters.js 列表 (23.7), 615
+  - 内置, 612
+  - 自定义, 620-621
+  - 数据渲染, 613-615
+  - 排序和整理, 616-618
+- `filters.html` 列表 (23.8), 615
+- `filters.js` 列表 (23.7), 615
 - `find()` 方法, 561
-- first.html 列表 (23.1), 560
-- first.js 列表 (23.2), 555-560
+- `first.html` 列表 (23.1), 560
+- `first.js` 列表 (23.2), 555-560
 - Web 表单流程控制, 361-368
 - 创建 flying saucer, 340-342
 - `focus()` 方法, 305
@@ -23235,19 +22488,15 @@ XML 响应数据， 439-444
 - for 元素, 88-90
 - 使用指令进行处理, 631-637
 - 表单选择器 (jQuery), 209
-- form_effects.html 列表 (23.7), 371-372
-- form_effects.js 列表 (23.8), 372-373
-- form_effects.js 列表 (23.9), 374
-- form_flow.css 列表 (23.6), 367-368
-- form_flow.html 列表 (23.4), 365-366
-- form_flow.js 列表 (23.5), 366-367
-- form_manipulation.css 列表 (13.3), 360
-- form_manipulation.html 列表 (13.1), 358-359
-- form_manipulation.js 列表 (13.2), 359-360
-
-
-
-
+- `form_effects.html` 列表 (23.7), 371-372
+- `form_effects.js` 列表 (23.8), 372-373
+- `form_effects.js` 列表 (23.9), 374
+- `form_flow.css` 列表 (23.6), 367-368
+- `form_flow.html` 列表 (23.4), 365-366
+- `form_flow.js` 列表 (23.5), 366-367
+- `form_manipulation.css` 列表 (13.3), 360
+- `form_manipulation.html` 列表 (13.1), 358-359
+- `form_manipulation.js` 列表 (13.2), 359-360
 
 # form/ngform 指令 (AngularJS 模板), 634
 
@@ -23269,7 +22518,7 @@ XML 响应数据， 439-444
 - 选择输入, 351-352
 - 文本输入, 349-350
 - 流程控制, 361-368
-- 动态, 362-364
+  - 动态, 362-364
 - 数据序列化, 354-360
 - 验证, 375-387
   - 添加消息, 378-380
@@ -23280,7 +22529,7 @@ XML 响应数据， 439-444
   - 手动方式, 375
   - 放置消息, 380-384
 
-## forms.html 列表 (3.6), 90
+## `forms.html` 列表 (3.6), 90
 
 ## `fromCharCode()` 方法, 177
 
@@ -23322,12 +22571,12 @@ XML 响应数据， 439-444
 - `hash()` 方法, 722
 - `hash` 属性 (window 对象), 307
 - `<head>` 元素, 72-77
-- `<link>` 标签, 76-77
-- `<meta>` 标签, 73-74
-- `<noscript>` 标签, 76
-- `<script>` 标签, 75
-- `<style>` 标签, 74
-- `<title>` 标签, 72-73
+  - `<link>` 标签, 76-77
+  - `<meta>` 标签, 73-74
+  - `<noscript>` 标签, 76
+  - `<script>` 标签, 75
+  - `<style>` 标签, 74
+  - `<title>` 标签, 72-73
 
 ## headers
 
@@ -23341,8 +22590,8 @@ XML 响应数据， 439-444
 - `helper` 选项 (jQuery 可移动组件), 297
 - `helper` 选项 (jQuery 可排序组件), 507
 - `hide()` 方法, 199, 225
-- 动画, 225-229
-- 隐藏元素, 229-230
+  - 动画, 225-229
+  - 隐藏元素, 229-230
 - 隐藏显示, 361
 - 高亮显示, 451
 - jQuery 类, 476
@@ -23355,133 +22604,119 @@ XML 响应数据， 439-444
 - `<hr>` 标签, 80
 - `href` 属性 (window 对象), 307
 - documents
-- 引入 AngularJS, 555
-- 结构, 70-72
-- 元素, 303
-- 访问类, 274
-- 动态添加类, 140-141
-- 动态添加类, 282-283
-- 添加外边距, 133
-- 添加内边距, 133
-- 属性, 71-72
-- 块, 78-79
-- body, 77-90
-- 盒模型, 132
-- 修改类, 286
-- 容器, 80-82
+  - 引入 AngularJS, 555
+  - 结构, 70-72
+  - 元素, 303
+  - 访问类, 274
+  - 动态添加类, 140-141
+  - 动态添加类, 282-283
+  - 添加外边距, 133
+  - 添加内边距, 133
+  - 属性, 71-72
+  - 块, 78-79
+  - body, 77-90
+  - 盒模型, 132
+  - 修改类, 286
+  - 容器, 80-82
+  - 内容, 71
+  - 调试, 41-48
+  - 在其中定义 CSS 样式, 108
+  - 动态网页页, 69-70
+  - 动态操作, 282-292
+  - 动态重排, 292-299
+  - 结束标签, 72
+  - 表单, 88-90
+  - 头部, 72-77
+  - 图像, 83-84
+  - 内联, 78-79
+  - 检查, 41-46
+  - 链接, 82-83
+  - 列表, 84
+  - 修改流, 133-134
+  - 获取并设置大小, 273
+  - 获取信息, 275-277
+  - 定位, 273-274
+  - 从 CSS 定位, 134-135
+  - 移除, 284
+  - 替换, 285
+  - 语法, 71
+  - 表格, 85-88
+  - 标签, 71
+  - 切换可见性, 286-287
+  - 事件处理器, 访问, 147-148
+  - 响应数据, AJAX 请求, 439-444
+- HTML 4.01 Strict 版, 70
+- HTML 4.01 Transitional 版, 70
+- `html()` 方法, 199, 561
+- `html_errors.html` 列表 (2.2), 42
+- HTML5, 12, 70, 103. *另请* HTML (超文本标记语言)
+  - 元素, 93-102
+  - 动态网页页, 69-70
+  - 图形化的, 93-101
+- HTTP (超文本传输协议)
+  - GET 请求, 15-16
+  - 请求标头, 15
+  - POST 请求, 16
+  - 协议, 14-15
+- HTTPS (安全超文本传输) 协议, 14-15
 
+### id 属性
 
-
-
-
-- 内容, 71
-- 调试, 41-48
-- 在其中定义 CSS 样式, 108
-- 动态网页页, 69-70
-- 动态操作, 282-292
-- 动态重排, 292-299
-- 结束标签, 72
-- 表单, 88-90
-- 头部, 72-77
-- 图像, 83-84
-- 内联, 78-79
-- 检查, 41-46
-- 链接, 82-83
-- 列表, 84
-- 修改流, 133-134
-- 获取并设置大小, 273
-- 获取信息, 275-277
-- 定位, 273-274
-- 从 CSS 定位, 134-135
-- 移除, 284
-- 替换, 285
-- 语法, 71
-- 表格, 85-88
-- 标签, 71
-- 切换可见性, 286-287
-- 事件处理器, 访问, 147-148
-- 响应数据, AJAX 请求, 439-444
-
-- **HTML 4.01 Strict 版, 70**
-- **HTML 4.01 Transitional 版, 70**
-- **html() 方法, 199, 561**
-- **html_errors.html 列表 (2.2), 42**
-- **HTML5, 12, 70, 103. *另请* HTML (超文本标记语言)**
-- 元素, 93-102
-- 动态网页页, 69-70
-- 图形化的, 93-101
-- **HTTP (超文本传输协议) GET 请求, 15-16**
-- 请求标头, 15
-- POST 请求, 16
-- 协议, 14-15
-- **HTTPS (安全超文本传输) 协议, 14-15**### id 属性
 - body 元素, DOM 对象, 198
-- **IDEs (集成开发环境), 21**
-- 配置 Eclipse, 22-26
-- **if 条件逻辑, JavaScript, 157-160**
-- **if_logic.html 列表 (5.3), 158-160**
-- **图像元素, 83-84**- **image 画廊**
-- 添加, 391-397
-- 视图, 337-338
-- image_fade.html 列表 (12.4), 331
-- image_fade.js 列表 (12.5), 332
-- image_fade.js 列表 (12.6), 332
-- image_hide.css 列表 (12.3), 328-329
-- image_hide.html 列表 (12.1), 328
-- image_hide.js 列表 (12.2), 328
-- image_slider.css 列表 (14.3), 397
-- image_slider.html 列表 (14.1), 395
-- image_slider.js 列表 (14.2), 395-396**- **图像**
-- 向其中添加缩放视图, 761-764
-- 在网页中添加可拖拽, 498-501
-- 淡入, 331-332
-- 隐藏, 328
-- 滑滑块, 392-397
-- **images.json 列表 (15.11), 440**
-- **<img> 标签, 83-84**
-- **indexOf() 方法, 177, 182**
-- **ineractive_table.css 列表 (14.6), 403-404**
-- **ineractive_table.html 列表 (14.4), 400-401**- **ineractive_table.js 列表 (14.5), 402**- 作用, 663
+- IDEs (集成开发环境), 21
+  - 配置 Eclipse, 22-26
+- if 条件逻辑, JavaScript, 157-160
+- `if_logic.html` 列表 (5.3), 158-160
+- 图像元素, 83-84
+- image 画廊
+  - 添加, 391-397
+  - 视图, 337-338
+- `image_fade.html` 列表 (12.4), 331
+- `image_fade.js` 列表 (12.5), 332
+- `image_fade.js` 列表 (12.6), 332
+- `image_hide.css` 列表 (12.3), 328-329
+- `image_hide.html` 列表 (12.1), 328
+- `image_hide.js` 列表 (12.2), 328
+- `image_slider.css` 列表 (14.3), 397
+- `image_slider.html` 列表 (14.1), 395
+- `image_slider.js` 列表 (14.2), 395-396
+- 图像
+  - 向其中添加缩放视图, 761-764
+  - 在网页中添加可拖拽, 498-501
+  - 淡入, 331-332
+  - 隐藏, 328
+  - 滑滑块, 392-397
+- `images.json` 列表 (15.11), 440
+- `<img>` 标签, 83-84
+- `indexOf()` 方法, 177, 182
+- `ineractive_table.css` 列表 (14.6), 403-404
+- `ineractive_table.html` 列表 (14.4), 400-401
+- `ineractive_table.js` 列表 (14.5), 402
+- 作用, 663
 - 方法, 562
 - 初始逻辑, 24-25
 - 元素, 64
-- inject_builtin.html 列表 (12.2), 328
-- inject_builtin.js 列表 (12.3), 331
-- inject_custom.html 列表 (12.4), 331
-- inject_custom.js 列表 (12.5), 332
-- inject_custom.js 列表 (12.6), 332
+- `inject_builtin.html` 列表 (12.2), 328
+- `inject_builtin.js` 列表 (12.3), 331
+- `inject_custom.html` 列表 (12.4), 331
+- `inject_custom.js` 列表 (12.5), 332
+- `inject_custom.js` 列表 (12.6), 332
+- `interactive_animation.html` 列表 (12.13), 341-343
+- `interactive_animation.js` 列表 (12.14), 343-344
+- `interactive_animation.js` 列表 (12.15), 344
+- 中断循环, JavaScript, 163
+- `isArray()` 方法, 556
+- `isDate()` 方法, 556
+- `isDefaultPrevented()` 方法, 239
+- `isDefined()` 方法, 556
+- `isElement()` 方法, 556
+- `isFunction()` 方法, 556
+- `isImmediatePropagationStopped()` 方法, 239
+- `isNumber()` 方法, 556
+- `isObject()` 方法, 556
+- 隔离作用域, 663-664
 
 
-
-
-
-`interactive_animation.html` 列表 (12.13), 341-343
-
-`interactive_animation.js` 列表 (12.14), 343-344
-
-`interactive_animation.js` 列表 (12.15), 344
-
-中断循环, JavaScript, 163
-
-`isArray()` 方法, 556
-
-`isDate()` 方法, 556
-
-`isDefaultPrevented()` 方法, 239
-
-`isDefined()` 方法, 556
-
-`isElement()` 方法, 556
-
-`isFunction()` 方法, 556
-
-`isImmediatePropagationStopped()` 方法, 239
-
-`isNumber()` 方法, 556
-
-`isObject()` 方法, 556
-
-隔离作用域, 663-664
 
 `isolateScope()` 方法, 562
 
@@ -23491,33 +22726,33 @@ XML 响应数据， 439-444
 
 `isUndefined()` 方法, 556
 
-items 选项 (可排序组件), 516
+`items` 选项 (可排序组件), 516
 
 遍历数组, 183
 
 ### J
 
-JavaScript, 9, 169, 215
+`JavaScript`, 9, 169, 215
 
 动态添加元素, 282-283
 
 来自的 AJAX 请求, 428-429
 
-AngularJS 表达式, 608-609
+`AngularJS` 表达式, 608-609
 
 动画, 实现, 716-719
 
-cookies, 获取与设置, 312
+`cookies`, 获取与设置, 312
 
-创建 sparkline 图形, 417-421
+创建 `sparkline` 图形, 417-421
 
 数据类型, 152-153
 
-debugger, 51-63
+`debugger`, 51-63
 
 开发者工具控制台, 35-40
 
-DOM (文档对象模型), 148-151, 201-204
+`DOM` (文档对象模型), 148-151, 201-204
 
 添加事件处理器, 245-246
 
@@ -23537,11 +22772,11 @@ DOM (文档对象模型), 148-151, 201-204
 
 函数, 创建, 163-167
 
-if 逻辑, 157-160
+`if` 逻辑, 157-160
 
 实现, 146-148
 
-与 AngularJS 集成, 553-554
+与 `AngularJS` 集成, 553-554
 
 循环, 160-163
 
@@ -23593,7 +22828,7 @@ if 逻辑, 157-160
 
 作用域, 167-168
 
-JavaScript 视图 (debugger), 57
+`JavaScript` 视图 (`debugger`), 57
 
 `join()` 方法, 182
 
@@ -23603,7 +22838,7 @@ JavaScript 视图 (debugger), 57
 
 图片库, 391-397
 
-sparkline 图形, 417-421
+`sparkline` 图形, 417-421
 
 高级 AJAX, 450-453
 
@@ -23613,11 +22848,11 @@ sparkline 图形, 417-421
 
 来自的 AJAX 请求, 429-433
 
-在 AngularJS 应用中应用, 560-564
+在 `AngularJS` 应用中应用, 560-564
 
 动画, 321-325
 
-对 `promise()``, 325
+对 `promise()`, 325
 
 CSS 设置, 322
 
@@ -23639,7 +22874,7 @@ CSS 设置, 322
 
 延迟对象, 265
 
-cookies, 获取与设置, 312
+`cookies`, 获取与设置, 312
 
 创建动态网页, 28
 
@@ -23647,11 +22882,11 @@ cookies, 获取与设置, 312
 
 调试, 63
 
-DOM (文档对象模型)
+`DOM` (文档对象模型)
 
 访问, 148-151, 211-213
 
-遍历 DOM, 231
+遍历 `DOM`, 231
 
 获取并设置对象属性和属性, 271-272
 
@@ -23661,594 +22896,756 @@ DOM (文档对象模型)
 
 事件, 235, 265-266
 
+- 过程, 236-237
 
+- 类型, 239
 
+- `HTML` 元素, 使用选择器访问, 149-150
 
+- 实现, 146-148
 
-- 过程，236-237
-- 类型，239
-- HTML 元素，使用选择器访问，149-150
-- 实现，146-148
-- 图形均衡器显示，413-417
-- 带有排序和过滤的表格，397-404
-- 插入元素，285-286
-- 与 AngularJS 集成，553-554
-- 库，加载，145-146
-- 加载库，563-564
-- `.map()` 方法，225-229
-- 对象，197, 199
-- 为...添加效果，478-482
-- 链式操作，217-218
-- 转换为 DOM，201
-- 确定，200
-- 过滤结果，218-219
-- 方法，223
-- 遍历 DOM，219-220
-- 浮层对话框，409-413
-- 替换元素，285
-- 选择器，205-215
-- 应用基础，205
-- 属性，206
-- 内容，207
-- 过滤过的，211
-- 表单，209
-- 层级结构，208-209
-- 可见性，210
-- 简单的交互式网页，31-32
-- 特殊特效，321
-- 语法，145
-- UI（用户界面），457, 472, 475, 492, 522, 525, 545
-- 添加和删除唯一 ID，463
-- 为类过渡添加效果，482-485
-- 为元素可见性添加效果，485-491
-- 添加到网页中，461-462
-- 将按钮应用到控件，528-530
-- 应用效果，475-482
-- 应用到脚本，463-472
-- 自动补全组件，527-528
-- 创建自定义主题，459-461
-- 创建自定义组件，544-545
-- CSS，457
-- 日期选择组件，530-531
-- 对话框组件，532-533
-- 拖放，497-507
-- 可展开元素，526-527
-- 功能，463-464
-- 样式化菜单，533-535
-- JavaScript，457-458
-- 获取库，458-459
-- 定位元素，468-472
-- 进度条组件，535-536
-- 可调整大小组件，507-511
-- 复习，525
-- 可选择组件，511-516
-- 选择器，464-466
-- 滑块组件，536-538
-- 可排序组件，516-522
-- 旋转加载组件，538-539
-- 标签页组件，539-542
-- 提示组件，542-544
-- UI 组件，495
-- 事件，495
-- 交互，495-496
-- `jQuery.widget` 工厂，495-496
-- 方法，495
-- 鼠标交互组件，496
-- 添加消息，378-380
-- 复杂验证，377-384
-- 验证插件，376
-- 使用 HTML 的验证，376-377
-- `jQuery Lite`，561-562
-- 在 AngularJS 应用中使用，560-564
-- 支持的 jQuery 方法，561
-- 加载库，563-564
-- `jquery_effects.html` 列表 (17.1)，481
-- `jquery_effects.js` 列表 (17.2)，481-482
-- `jquery_effects.js` 列表 (17.3)，482
-- `jquery_image.css` 列表 (17.4)，468
-- `jquery_image.html` 列表 (17.5)，467
-- `jquery_image.js` 列表 (17.6)，467
-- `jquery_selectors.html` 列表 (17.7)，215
-- `jquery_selectors.html` 列表 (17.8)，214
-- `jquery_selectors.js` 列表 (17.9)，214
-- `jquery_version.html` 列表 (18.1)，148
+- 图形均衡器显示, 413-417
 
+- 带有排序和过滤的表格, 397-404
 
+- 插入元素, 285-286
 
+- 与 `AngularJS` 集成, 553-554
 
+- 库, 加载, 145-146
 
-# 延迟项（网络流量分析器），64
+- 加载库, 563-564
 
-# 布局编辑器，50-55
+- `.map()` 方法, 225-229
 
-## 布局属性 (CSS)
-在 HTML 内容周围添加内边距，133
-应用，119-140
-设置内容大小，132-133
+- 对象, 197, 199
 
-## <legend> 标签，89
+- 为...添加效果, 478-482
 
-## 字间间距属性 (CSS),114
+- 链式操作, 217-218
 
-## 库 (jQuery)
-加载，145-146
-获取，458-459
+- 转换为 `DOM`, 201
 
-## 生命周期，AngularJS 应用，552-553
-作用域，591-595
+- 确定, 200
 
-## limitTo:limit 过滤器 (AngularJS 模板)，612
+- 过滤结果, 218-219
 
-## 行高属性 (CSS),115
+- 方法, 223
 
-## 链接定义属性 (AngularJS),658
+- 遍历 `DOM`, 219-220
 
-## 链接元素，添加，82-83
+- 浮层对话框, 409-413
 
-## link() 函数，665-667
+- 替换元素, 285
 
-## <link> 标签，76-77
+- 选择器, 205-215
 
-## 外部链接，308
-强制在新浏览器窗口中打开，308-311
-停止，308
+- 应用基础, 205
 
-## 列表元素，应用，84
+- 属性, 206
 
-## list.html 列表 (1.1)，12
+- 内容, 207
 
-## 列表，309, 382-386
+- 过滤过的, 211
 
-ajax_post.css 用于样式化页面元素的 CSS 代码 (15.19)，448-449
-ajax_post.html 加载 jQuery 和 JavaScript 的 HTML 文档 (15.17)，447
-ajax_post.js 实现 AJAX 请求以填充页面并更新服务器数据的 jQuery 和 JavaScript 代码 (15.18)，447-448
-ajax_response.css 用于样式化页面的 CSS 代码 (15.7)，437
-ajax_response.html 创建表单对话框的 HTML 文档 (15.5)，436
-ajax_response.js 通过 AJAX GET 请求向服务器发送表单请求并处理成功与失败条件的 jQuery 和 JavaScript (15.6)，436-437
-ajax.html (1.3)，19-20
-animate.css 为 AngularJS 动画代码各种类阶段提供过渡效果的 CSS 代码 (27.9)，720
-animated_resize.css 用于样式化图片的 CSS 代码 (12.12)，339
-animated_resize.html 用于显示图片的 HTML HTML 文件 (12.10)，338-339
-animated_resize.js 实现缩放效果的 jQuery 和 JavaScript 代码 (12.11)，339
-animation_effects.css 用于样式化页面的 CSS 代码 (17.12)，491
-animation_effects.html 添加页面的 HTML 文档 (17.10)，489-491
-animation_effects.js 实现重新定位效果的 jQuery 和 UI (17.11)，491
-array_manipulation.html 在 JavaScript 中创建和操作对象的示例 (6.2)，186-187
-article.html 动态加载的文章代码 (15.4)，433
-backgrounds.html 为元素添加不同类型背景的 HTML 和 CSS 代码 (4.3)，124-125
-broken_event.html 加载 jQuery 和 JavaScript 提供用户交互的 HTML 文件，定义了示例中的 `div` 和 `h1` 元素 (9.1)，247
-broken_event.js 定义事件处理器并动态将其绑定到 `div` 元素的 JavaScript 代码 (9.2)，248
-card_suits.css 用于样式化 `span` 和 `p` 元素的 CSS 代码 (9.12)，261-262
-card_suits.html 加载 CSS 和 JavaScript 并定义 `p`、文本 `input` 和 `span` 元素的 HTML 文件 (9.10)，261
-card_suits.js 从 `span` 元素的事件处理器触发 `input` 元素的 `keypress` 事件的 JavaScript 代码 (9.11)，261
-class_transitions.css 用于样式化页面的 CSS 代码 (17.6)，485
-class_transitions.html 添加页面的 HTML 文档 (17.4)，484
-class_transitions.js 实现带有动画效果类过渡的 jQuery 和 jQuery UI 代码 (17.5)，485
-clock.html 用于显示时间的 HTML HTML 文件 (11.4)，316-317
-clock.js 实现超时和间隔计时器的 jQuery 和 JavaScript 代码 (11.5)，317
-config_run_blocks.js 在 AngularJS 模块中实现配置和运行块 (21.5)，578-580
-cookies.css 用于样式化按钮和图片的 CSS 代码 (11.3)，312-313
-cookies.html 示例中使用的 HTML 页面，定义了多个用于按钮的 `span` 元素和输入 Cookie 名称和值的 `input` 元素 (11.1)，309
-cookies.js 获取、设置和删除 Cookie 的 jQuery 和 JavaScript 代码 (11.2)，312
-定义多种边框样式的 CSS 规则 (4.5)，129-130
-css_errors.html (2.3)，51-52
-css_styling.html 使用 `<style>` 标签向 HTML 文档添加 CSS (3.4)，82
-custom_objects.html 在 JavaScript 中创建和操作自定义对象的示例 (6.3)，194
-data.html (1.4)，20
-date_picker.html 加载 jQuery UI 并渲染日期器的 HTML 文档 (16.1)，462
-directive_angular_include.html 使用 `nd-include` 指令通过切换两个 HTML 文件更改页面标题栏的 AngularJS 模板 (24.2)，632
-directive_angular_include.js 实现控制器在作用域中存储标题元素的 HTML 文件名 (24.1)，630
-directive_bind.html 实现多种数据绑定指令的 AngularJS 模板 (24.8)，644
-directive_bind.js 实现带有作用域模型支持数据绑定的控制器 (24.7)，644
-directive_custom_dom.html 利用操作 DOM 的自定义指令的 AngularJS 模板 (25.2)，670-671
-directive_custom_dom.js 实现操作 DOM 的自定义指令 (25.1)，670
-directive_custom_photos.html 实现嵌套自定义指令的 AngularJS 模板 (25.6)，680-681
-directive_custom_photos.js 实现相互交互的自定义指令 (25.5)，680
+- 表单, 209
 
+- 层级结构, 208-209
 
+- 可见性, 210
 
+- 简单的交互式网页, 31-32
 
+- 特殊特效, 321
 
-# 指令 (Directives)
+- 语法, 145
 
-- `directive_custom_zoom.html`: 一个利用自定义指令提供鼠标事件交互的 AngularJS 模板 (25.4), 676
-- `directive_custom_zoom.js`: 实现与 DOM 事件进行注册的自定义指令 (25.3), 674-676
-- `directive_focus_events.html`: 一个实现 `ngFocus` 和 `ngBlur` 指令的 AngularJS 模板 (24.10), 648-649
+- `UI`（用户界面）, 457, 472, 475, 492, 522, 525, 545
+
+- 添加和删除唯一 ID, 463
+
+- 为类过渡添加效果, 482-485
+
+- 为元素可见性添加效果, 485-491
+
+- 添加到网页中, 461-462
+
+- 将按钮应用到控件, 528-530
+
+- 应用效果, 475-482
+
+- 应用到脚本, 463-472
+
+- 自动补全组件, 527-528
+
+- 创建自定义主题, 459-461
+
+- 创建自定义组件, 544-545
+
+- `CSS`, 457
+
+- 日期选择组件, 530-531
+
+- 对话框组件, 532-533
+
+- 拖放, 497-507
+
+- 可展开元素, 526-527
+
+- 功能, 463-464
+
+- 样式化菜单, 533-535
+
+- `JavaScript`, 457-458
+
+- 获取库, 458-459
+
+- 定位元素, 468-472
+
+- 进度条组件, 535-536
+
+- 可调整大小组件, 507-511
+
+- 复习, 525
+
+- 可选择组件, 511-516
+
+- 选择器, 464-466
+
+- 滑块组件, 536-538
+
+- 可排序组件, 516-522
+
+- 旋转加载组件, 538-539
+
+- 标签页组件, 539-542
+
+- 提示组件, 542-544
+
+- `UI` 组件, 495
+
+- 事件, 495
+
+- 交互, 495-496
+
+- `jQuery.widget` 工厂, 495-496
+
+- 方法, 495
+
+- 鼠标交互组件, 496
+
+- 添加消息, 378-380
+
+- 复杂验证, 377-384
+
+- 验证插件, 376
+
+- 使用 `HTML` 的验证, 376-377
+
+- `jQuery Lite`, 561-562
+
+- 在 `AngularJS` 应用中使用, 560-564
+
+- 支持的 `jQuery` 方法, 561
+
+- 加载库, 563-564
+
+- `jquery_effects.html` 列表 (17.1), 481
+
+- `jquery_effects.js` 列表 (17.2), 481-482
+
+- `jquery_effects.js` 列表 (17.3), 482
+
+- `jquery_image.css` 列表 (17.4), 468
+
+- `jquery_image.html` 列表 (17.5), 467
+
+- `jquery_image.js` 列表 (17.6), 467
+
+- `jquery_selectors.html` 列表 (17.7), 215
+
+- `jquery_selectors.html` 列表 (17.8), 214
+
+- `jquery_selectors.js` 列表 (17.9), 214
+
+- `jquery_version.html` 列表 (18.1), 148
+
+### 延迟项（网络流量分析器）, 64
+
+### 布局编辑器, 50-55
+
+#### 布局属性 (CSS)
+
+在 `HTML` 内容周围添加内边距, 133
+
+应用, 119-140
+
+设置内容大小, 132-133
+
+#### `<legend>` 标签, 89
+
+#### 字间间距属性 (CSS), 114
+
+#### 库 (jQuery)
+
+加载, 145-146
+
+获取, 458-459
+
+#### 生命周期, `AngularJS` 应用, 552-553
+
+作用域, 591-595
+
+#### `limitTo:limit` 过滤器 (`AngularJS` 模板), 612
+
+#### 行高属性 (CSS), 115
+
+#### 链接定义属性 (`AngularJS`), 658
+
+#### 链接元素, 添加, 82-83
+
+#### `link()` 函数, 665-667
+
+#### `<link>` 标签, 76-77
+
+#### 外部链接, 308
+
+强制在新浏览器窗口中打开, 308-311
+
+停止, 308
+
+#### 列表元素, 应用, 84
+
+#### `list.html` 列表 (1.1), 12
+
+#### 列表, 309, 382-386
+
+`ajax_post.css` 用于样式化页面元素的 CSS 代码 (15.19), 448-449
+
+`ajax_post.html` 加载 `jQuery` 和 `JavaScript` 的 `HTML` 文档 (15.17), 447
+
+`ajax_post.js` 实现 AJAX 请求以填充页面并更新服务器数据的 `jQuery` 和 `JavaScript` 代码 (15.18), 447-448
+
+`ajax_response.css` 用于样式化页面的 CSS 代码 (15.7), 437
+
+`ajax_response.html` 创建表单对话框的 `HTML` 文档 (15.5), 436
+
+`ajax_response.js` 通过 AJAX GET 请求向服务器发送表单请求并处理成功与失败条件的 `jQuery` 和 `JavaScript` (15.6), 436-437
+
+`ajax.html` (1.3), 19-20
+
+`animate.css` 为 `AngularJS` 动画代码各种类阶段提供过渡效果的 CSS 代码 (27.9), 720
+
+`animated_resize.css` 用于样式化图片的 CSS 代码 (12.12), 339
+
+`animated_resize.html` 用于显示图片的 `HTML` 文件 (12.10), 338-339
+
+`animated_resize.js` 实现缩放效果的 `jQuery` 和 `JavaScript` 代码 (12.11), 339
+
+`animation_effects.css` 用于样式化页面的 CSS 代码 (17.12), 491
+
+`animation_effects.html` 添加页面的 `HTML` 文档 (17.10), 489-491
+
+`animation_effects.js` 实现重新定位效果的 `jQuery` 和 `UI` (17.11), 491
+
+`array_manipulation.html` 在 `JavaScript` 中创建和操作对象的示例 (6.2), 186-187
+
+`article.html` 动态加载的文章代码 (15.4), 433
+
+`backgrounds.html` 为元素添加不同类型背景的 `HTML` 和 CSS 代码 (4.3), 124-125
+
+`broken_event.html` 加载 `jQuery` 和 `JavaScript` 提供用户交互的 `HTML` 文件，定义了示例中的 `div` 和 `h1` 元素 (9.1), 247
+
+`broken_event.js` 定义事件处理器并动态将其绑定到 `div` 元素的 `JavaScript` 代码 (9.2), 248
+
+`card_suits.css` 用于样式化 `span` 和 `p` 元素的 CSS 代码 (9.12), 261-262
+
+`card_suits.html` 加载 CSS 和 `JavaScript` 并定义 `p`、文本 `input` 和 `span` 元素的 `HTML` 文件 (9.10), 261
+
+`card_suits.js` 从 `span` 元素的事件处理器触发 `input` 元素的 `keypress` 事件的 `JavaScript` 代码 (9.11), 261
+
+`class_transitions.css` 用于样式化页面的 CSS 代码 (17.6), 485
+
+`class_transitions.html` 添加页面的 `HTML` 文档 (17.4), 484
+
+`class_transitions.js` 实现带有动画效果类过渡的 `jQuery` 和 `jQuery UI` 代码 (17.5), 485
+
+`clock.html` 用于显示时间的 `HTML` 文件 (11.4), 316-317
+
+`clock.js` 实现超时和间隔计时器的 `jQuery` 和 `JavaScript` 代码 (11.5), 317
+
+`config_run_blocks.js` 在 `AngularJS` 模块中实现配置和运行块 (21.5), 578-580
+
+`cookies.css` 用于样式化按钮和图片的 CSS 代码 (11.3), 312-313
+
+`cookies.html` 示例中使用的 `HTML` 页面，定义了多个用于按钮的 `span` 元素和输入 Cookie 名称和值的 `input` 元素 (11.1), 309
+
+`cookies.js` 获取、设置和删除 Cookie 的 `jQuery` 和 `JavaScript` 代码 (11.2), 312
+
+定义多种边框样式的 CSS 规则 (4.5), 129-130
+
+`css_errors.html` (2.3), 51-52
+
+`css_styling.html` 使用 `<style>` 标签向 `HTML` 文档添加 CSS (3.4), 82
+
+`custom_objects.html` 在 `JavaScript` 中创建和操作自定义对象的示例 (6.3), 194
+
+`data.html` (1.4), 20
+
+`date_picker.html` 加载 `jQuery UI` 并渲染日期器的 `HTML` 文档 (16.1), 462
+
+`directive_angular_include.html` 使用 `nd-include` 指令通过切换两个 `HTML` 文件更改页面标题栏的 `AngularJS` 模板 (24.2), 632
+
+`directive_angular_include.js` 实现控制器在作用域中存储标题元素的 `HTML` 文件名 (24.1), 630
+
+`directive_bind.html` 实现多种数据绑定指令的 `AngularJS` 模板 (24.8), 644
+
+`directive_bind.js` 实现带有作用域模型支持数据绑定的控制器 (24.7), 644
+
+`directive_custom_dom.html` 利用操作 `DOM` 的自定义指令的 `AngularJS` 模板 (25.2), 670-671
+
+`directive_custom_dom.js` 实现操作 `DOM` 的自定义指令 (25.1), 670
+
+`directive_custom_photos.html` 实现嵌套自定义指令的 `AngularJS` 模板 (25.6), 680-681
+
+`directive_custom_photos.js` 实现相互交互的自定义指令 (25.5), 680
+
+### 指令 (Directives)
+
+- `directive_custom_zoom.html`: 一个利用自定义指令提供鼠标事件交互的 `AngularJS` 模板 (25.4), 676
+
+- `directive_custom_zoom.js`: 实现与 `DOM` 事件进行注册的自定义指令 (25.3), 674-676
+
+- `directive_focus_events.html`: 一个实现 `ngFocus` 和 `ngBlur` 指令的 `AngularJS` 模板 (24.10), 648-649
+
 - `directive_focus_events.js`: 实现带有作用域数据和事件处理器的控制器，以支持来自视图的失去焦点（Blur）和聚焦（Focus）事件 (24.9), 648
-- `directive_form.html`: 实现多个表单元素指令的 AngularJS 模板 (24.6), 638
-- `directive_form.js`: 为表单指令实现控制器 (24.5), 638
-- `directive_keyboard_events.html`: 一个实现 `ngKeydown` 和 `ngKeyup` 指令的 AngularJS 模板 (24.12), 651
-- `directive_keyboard_events.js`: 实现带有作用域数据和事件处理器的控制器，以支持来自视图的按按下（Key-Down）和按起（Key-Up）事件 (24.11), 649-651
-- `directive_mouse_events.html`: 一个实现 `ngClick` 以及其他鼠标点击和移动事件指令的 AngularJS 模板 (24.14), 654-655
-- `directive_mouse_events.js`: 实现带有作用域数据和事件处理器的控制器，以支持来自视图的鼠标点击和移动事件 (24.13), 654
-- `dragdrop.html`: 使用 `dragit` 和 `dropit` 指令向网页添加可拖拽和可放置元素的 AngularJS 模板 (29.6), 759-760
-- `dragdrop.js`: 实现 `dragit` 和 `dropit` 自定义 AngularJS 指令以提供拖放功能的 AngularJS 应用程序 (29.5), 756-759
-- `expand.html`: 使用 `expandList` 和 `expandItem` 指令样式并实现可展开/折叠元素的 AngularJS 代码 (29.13), 768-770
-- `expand.js`: 实现 `expandList` 和 `expandItem` 自定义指令以提供可展开和折叠元素的 AngularJS 应用程序 (29.10), 766-767
-- `expand_item.html`: 定义 `expandItem` 元素的 AngularJS 局部模板 (29.12), 768
-- `expand_list.html`: 定义 `expandList` 元素的 AngularJS 局部模板 (29.11), 767
 
-# DOM 操作 (DOM Manipulation)
+- `directive_form.html`: 实现多个表单元素指令的 `AngularJS` 模板 (24.6), 638
+
+- `directive_form.js`: 为表单指令实现控制器 (24.5), 638
+
+- `directive_keyboard_events.html`: 一个实现 `ngKeydown` 和 `ngKeyup` 指令的 `AngularJS` 模板 (24.12), 651
+
+- `directive_keyboard_events.js`: 实现带有作用域数据和事件处理器的控制器，以支持来自视图的按按下（Key-Down）和按起（Key-Up）事件 (24.11), 649-651
+
+- `directive_mouse_events.html`: 一个实现 `ngClick` 以及其他鼠标点击和移动事件指令的 `AngularJS` 模板 (24.14), 654-655
+
+- `directive_mouse_events.js`: 实现带有作用域数据和事件处理器的控制器，以支持来自视图的鼠标点击和移动事件 (24.13), 654
+
+- `dragdrop.html`: 使用 `dragit` 和 `dropit` 指令向网页添加可拖拽和可放置元素的 `AngularJS` 模板 (29.6), 759-760
+
+- `dragdrop.js`: 实现 `dragit` 和 `dropit` 自定义 `AngularJS` 指令以提供拖放功能的 `AngularJS` 应用程序 (29.5), 756-759
+
+- `expand.html`: 使用 `expandList` 和 `expandItem` 指令样式并实现可展开/折叠元素的 `AngularJS` 代码 (29.13), 768-770
+
+- `expand.js`: 实现 `expandList` 和 `expandItem` 自定义指令以提供可展开和折叠元素的 `AngularJS` 应用程序 (29.10), 766-767
+
+- `expand_item.html`: 定义 `expandItem` 元素的 `AngularJS` 局部模板 (29.12), 768
+
+- `expand_list.html`: 定义 `expandList` 元素的 `AngularJS` 局部模板 (29.11), 767
+
+### DOM 操作 (DOM Manipulation)
 
 - `dom_manipulation.css`: 样式 `<span>` 和 `<p>` 元素的 CSS 代码 (8.3), 229
-- `dom_manipulation.css`: 加载 jQuery 和 JavaScript 的 HTML 文件 (8.1), 228
-- `dom_manipulation.js`: 使用 jQuery 和 JavaScript 代码获取 `<p>` 元素并通过 `.map()` 和 `.each()` 遍历它们，为每个元素应用不同的更改 (8.2), 228-229
+
+- `dom_manipulation.css`: 加载 `jQuery` 和 `JavaScript` 的 `HTML` 文件 (8.1), 228
+
+- `dom_manipulation.js`: 使用 `jQuery` 和 `JavaScript` 代码获取 `<p>` 元素并通过 `.map()` 和 `.each()` 遍历它们，为每个元素应用不同的更改 (8.2), 228-229
+
 - `dom_objects.css`: 样式 `<p>` 元素的 CSS (7.3), 204
-- `dom_objects.html`: 加载 JavaScript 为按钮元素绑定事件处理器以更新页面的 HTML 文件 (204](#part0019.xhtml_page_204)
-- `dom_objects.js`: 通过 `id`、`tag` 和 `class` 属性访问变量的 JavaScript 文件 (7.2), 204
-
-# 拖放 (Drag and Drop)
-
-- `drag_n_drop.html`: 添加网页的 HTML 文档 (18.4), 503-505
-- `drag_n_drop.js`: 样式页面的 CSS 代码 (18.6), 506-507
-- `drag_n_drop.js`: jQuery 和 jQuery UI 实现可拖和可放置元素 (18.5), 506
-- `draggable_images.css`: 样式页面的 CSS 代码 (18.3), 501
-- `draggable_images.html`: 添加网页的 HTML 文档 (18.1), 500
-- `draggable_images.js`: jQuery 和 jQuery UI 实现可拖图像 (18.2), 500-501
-
-# 动态对话框 (Dynamic Dialogs)
-
-- `dynamic_dialog.css`: 样式页面、覆盖层和对话框元素的 CSS 代码 (14.12), 412-413
-- `dynamic_dialog.html`: 实现页面、覆盖层和对话框的 HTML 文档 (14.10), 410-411
-- `dynamic_dialog.js`: jQuery 和 JavaScript 代码显示隐藏对话框并更新网页 (14.11), 412-413
-
-# 动态定位 (Dynamic Positioning)
-
-- `dynamic_positioning.css`: 样式页面的 CSS 代码 (16.7), 472
-- `dynamic_positioning.html`: 向网页添加图像的 HTML 文档 (16.5), 471
-- `dynamic_positioning.js`: jQuery 和 jQuery UI 动态对图像定位 (16.6), 471-472
-
-# 动态趋势图 (Dynamic Spark)
-
-- `dynamic_spark.css`: 样式页面元素和折线图的 CSS 代码 (14.18), 421
-- `dynamic_spark.html`: 实现页面元素的 HTML 文档 (14.16), 418-420
-- `dynamic_spark.js`: jQuery 和 JavaScript 代码动态填充并更新折线图 (14.17), 420-421
-
-# 动态树 (Dynamic Tree)
-
-- `dynamic_tree.css`: 样式表单元素的 CSS 代码 (14.9), 408
-- `dynamic_tree.html`: 实现根树元素的 HTML 文档 (14.7), 407
-- `dynamic_tree.js`: jQuery 和 JavaScript 代码填充并控制树的展开和折叠 (14.8), 407-408
-
-# 表达式 (Expressions)
-
-- `expressions_basic.html`: 在 AngularJS 模板上应用带有简单数学运算的基础字符串和数字 (23.2), 603-604
-- `expressions_basic.js`: 带有空控制器的基础 AngularJS 应用程序代码 (23.1), 603
-- `expressions_javascript.html`: 使用各种方式包含数组和数学逻辑的表达式与作用域模型中的数据交互的 AngularJS 模板 (23.5), 610
-- `expressions_javascript.js`: 构建一个 AngularJS 表达式可以使用带有数组和 `Math` 对象的作用域 (23.5), 610
-- `expressions_scope.html`: 使用各种方式表达式与作用域模型数据交互的 AngularJS 模板 (23.4), 607
-- `expressions_scope.js`: 构建 AngularJS 表达式可以使用的作用域 (23.3), 606
-
-# 过滤器 (Filters)
-
-- `filter_custom.html`: 使用自定义过滤器的 AngularJS 模板 (23.12), 622
-- `filter_custom.js`: 在 AngularJS 中实现自定义过滤器提供者 (23.11), 621-622
-- `filter_sort.html`: 实现 `filter` 和 `orderBy` 过滤器对表格视图中的项目进行排序和过滤的 AngularJS 模板 (23.10), 618-619
-- `filter_sort.js`: 构建平面列表并提供列表排序功能的 AngularJS 模块 (23.9), 618
-
-# 第一个 (First)
-
-- `first.html`: 一个提供两个输入元素和一个按钮以与模型交互的简单 AngularJS 模板 (20.1), 560
 
 
 
+# DOM 对象（DOM Objects）
 
+- `dom_objects.html`：加载 JavaScript 为按钮元素绑定事件处理器以更新页面的 HTML 文件（`204`，`#part0019.xhtml_page_204`）
+- `dom_objects.js`：通过 `id`、`tag` 和 `class` 属性访问变量的 JavaScript 文件（`7.2`，第 204 页）
 
-- `first.js`: 一个简单的 AngularJS 模块，实现了一个控制器以支持列表 20.1 (20.2) 中的模板，560
-- `form_effects.html`: 实现示例中使用的注册单的 HTML 文档 (13.7)，371-372
-- `form_effects.js`: 为表单元素设置样式并为动态调整提供类名的 CSS 代码 (13.9)，374
-- `form_effects.js`: 实现动画视觉元素的 jQuery 代码 (13.8)，372-373
-- `form_flow.css`: 为支付表单元素设置样式的 CSS 代码 (13.6)，367-368
-- `form_flow.html`: 实现示例中使用的支付表单的 HTML 文档 (13.4)，365-366
-- `form_flow.js`: 为支付表单提供智能流控制的 jQuery 代码 (13.5)，366-367
-- `form_manipulation.css`: 为表单元素设置样式的 CSS 代码 (13.3)，360
-- `form_manipulation.html`: 实现示例中使用的表单元素的 HTML 文档 (13.1)，358-359
-- `form_manipulation.js`: 实现一系列事件处理器的 jQuery 和 JavaScript 代码，这些处理器会在一个表单元素变化时读取数据并更新第二个表单 (13.2)，359-360
-- `form_validation.css`: 为表单元素和错误设置样式的 CSS 代码 (13.12)，386-387
-- `form_validation.html`: 实现示例中使用的注册单的 HTML 文档 (13.10)，382-386
-- `form_validation.js`: 实现表单元素验证的 jQuery 代码 (13.11)，386
-- `forms.html`: 生成带有文本、单选框和选择输入的表单的 HTML (3.6)，90
-- `graphic_equalizer.css`: 用于渲染图形均衡器的元素样式 CSS 代码 (14.15)，417
-- `graphic_equalizer.html`: 实现网页的 HTML 文档 (14.13)，415-416
-- `graphic_equalizer.js`: 动态构建和填充图形均衡器的 jQuery 和 JavaScript 代码 (14.14)，416
-- 创建一系列由列表 4.5 样式样式的 `<div>` 元素的 HTML (4.4)，129
-- `html_errors.html`: (2.2)，43
-- `if_logic.html`: 在 JavaScript 内部使用条件逻辑简单示例 (5.3)，158-160
-- `image_fade.html`: 用于显示图片的基础 Web 文件 (12.4)，331
-- `image_fade.js`: 为折叠图片元素设置样式的 CSS 代码 (12.6)，332
-- `image_fade.js`: 实现图片选择淡入的 jQuery 和 JavaScript 代码 (12.5)，332
-- `image_hide.css`: 为折叠图片元素设置样式的 CSS 代码 (12.3)，328-329
-- `image_hide.html`: 用于显示折叠图片的基础 Web 文件 (12.1)，328
-- `image_hide.js`: 实现折叠图片的 jQuery 和 JavaScript 代码 (12.2)，328
-- `image_slider.css`: 为图片和控制设置样式的 CSS 代码 (14.3)，397
-- `image_slider.html`: 实现滑块、控制和元素的 HTML 文档 (14.1)，395
-- `image_slider.js`: 为图片滑块和缩图实现鼠标处理器 jQuery 和 JavaScript 代码 (14.2)，395-396
-- `images.json`: 来自书籍 `15/images.json` 包含文件名和说明的 JSON 数据 (15.1)，440
-- `interactive_table.css`: 为表格元素设置样式的 CSS 代码 (14.6)，403-404
-- `interactive_table.html`: 实现示例中表格的 HTML 文档 (14.4)，400-401
-- `interactive_table.js`: 定义表格交互（包括排序和过滤）的 jQuery 和 JavaScript 代码 (14.5)，402-403
-- `inject_builtin.html`: 实现依赖注入的 AngularJS 模块 HTML 代码 (21.2)，574
-- `inject_builtin.js`: 在控制器中实现内置服务的依赖注入 (21.1)，572
-- `inject_custom.html`: 实现依赖另一个模块的 AngularJS 模块 HTML 代码 (21.4)，576
-- `inject_custom.js`: 在控制器和模块中实现依赖注入 (21.3)，576
-- `interactive_animation.html`: 用于显示控制、圆锥和飞碟的基础 Web 文件 (12.13)，341-343
-- `interactive_animation.js`: 为控制、圆锥和飞碟设置样式的 CSS 代码 (12.15)，344
-- `interactive_animation.js`: 使用点击处理器实现飞碟移动动画的 jQuery 和 JavaScript 代码 (12.14)，343-344
-- 在 `<canvas>` 元素上绘制立方体的 JavaScript 和 HTML 代码 (3.8)，100-101
-- 使用 `<svg>` 元素创建饼图和时钟周围文本框的 JavaScript 和 HTML 代码 (3.7)，98-99
-- `jquery_effects.html`: 添加网页页的 HTML 文档 (17.1)，481
-- `jquery_effects.js`: 为页面设置样式的 CSS 代码 (17.3)，482
-- `jquery_effects.js`: 对图片应用多种效果的 jQuery 和 jQuery UI (17.2)，481-482
-- `jquery_image_adder.css`: 为页面元素设置样式的 CSS 代码 (16.4)，468
-- `jquery_image_adder.html`: 添加网页的 HTML 文档 (16.2)，467
-- `jquery_image_adder.js`: 使用 `:data()` 选择器元素的 jQuery 和 jQuery UI 代码 (16.3)，467
-- `jquery_selectors.css`: 为 `<span>` 元素和 `class="label"` 元素设置样式 (7.6)，215
-- `jquery_selectors.html`: 加载 jQuery 和 JavaScript 并绑定事件元素以提供交互的 HTML 文件 (7.4)，214
-- `jquery_selectors.js`: 使用各种方式 jQuery 选择和更改元素的事件函数 JavaScript 文件 (7.5)，214-215
-- `jquery_version.html`: 在网页中加载 jQuery 并打印版本的极简单示例 (5.1)，148
-- `js_errors.html`: (2.1)，37
-- `js_functions.html`: JavaScript 函数简单示例 (5.4)，166-167
-- `js_reversed_text.html`: 使用 `<script>` 标签将 JavaScript 和 jQuery 添加到 HTML 文档 (3.3)，75
-- `large_title.html`: 包含大号标题的部分 HTML 文件 (24.4)，633
+# 拖放（Drag and Drop）
 
+- `drag_n_drop.html`：添加网页的 HTML 文档（`18.4`，第 503-505 页）
+- `drag_n_drop.js`：样式页面的 CSS 代码（`18.6`，第 506-507 页）
+- `drag_n_drop.js`：jQuery 和 jQuery UI 实现可拖和可放置元素（`18.5`，第 506 页）
+- `draggable_images.css`：样式页面的 CSS 代码（`18.3`，第 501 页）
+- `draggable_images.html`：添加网页的 HTML 文档（`18.1`，第 500 页）
+- `draggable_images.js`：jQuery 和 jQuery UI 实现可拖图像（`18.2`，第 500-501 页）
 
+# 动态对话框（Dynamic Dialogs）
 
+- `dynamic_dialog.css`：样式页面、覆盖层和对话框元素的 CSS 代码（`14.12`，第 412-413 页）
+- `dynamic_dialog.html`：实现页面、覆盖层和对话框的 HTML 文档（`14.10`，第 410-411 页）
+- `dynamic_dialog.js`：jQuery 和 JavaScript 代码显示隐藏对话框并更新网页（`14.11`，第 412-413 页）
 
+# 动态定位（Dynamic Positioning）
 
-- `load_content.js` 实现 AJAX `.load()` 请求的 jQuery 和 JavaScript (15.2), 第 432 页
-- - `load_json.css` 样式化图片的 CSS 代码 (15.12), 第 441 页
-- 
-- `load_json.html` 加载 jQuery 和 JavaScript 的 HTML 文档 (15.9), 第 440 页
-- 
-- `load_json.js` 实现 AJAX 请求并处理 JSON 响应的 jQuery 和 JavaScript 代码 (15.10), 第 440 页
-- 
-- `load_xml.css` 样式化表格的 CSS 代码 (15.16), 第 444 页
-- 
-- `load_xml.html` 加载 jQuery 和 JavaScript 的 HTML 文档 (15.13), 第 443 页
-- 
-- `load_xml.js` 实现 AJAX 请求并处理 XML 响应的 jQuery 和 JavaScript 代码 (15.14), 第 443 页
-- 
-- `manual_event.css` 样式化 `<span>` 元素的 CSS 代码 (9.9), 第 258 页
-- 
-- `manual_event.html` 加载 CSS 和 JavaScript 并定义复选框和 `<span>` 元素的 HTML 文件 (9.7), 第 257 页
-- 
-- `manual_event.js` 手动触发来自 `<span>` 元素的 Check Box 复选框元素点击事件的 JavaScript 代码 (9.8), 第 257 页-第 258 页
-- 
-- `my_photos.html` 为 `myPhotos` 自定义指令提供根元素的 AngularJS 部分模板 (25.7), 第 681 页
-- 
-- `page_title.html` 在页面加载后更改 `<title>` 值的 JavaScript 代码 (3.1), 第 73 页
-- 
-- `pane.html` 包含用于构建选项页容器各个面板的模板代码的 AngularJS 部分模板 (29.3), 第 754 页
-- 
-- `parkdata.xml` 带有原始表格数据的 XML 数据文件 (15.15), 第 444 页
-- 
-- `rating.html` 利用 Scope 中的数据来显示带有描述和评分的图片列表的 AngularJS 模板 (29.15), 第 772 页-第 773 页
-- 
-- `rating.js` 提供支持视图中星级评分的数据和功能的 AngularJS 应用 (29.14), 第 770 页-第 772 页
-- 
-- `rearranging_elements.css` 样式化按钮和图片的 CSS 代码 (10.9), 第 299 页
-- 
-- `rearranging_elements.html` 示例中使用的基础网页 HTML 文件，定义了用于按钮的 `<span>` 元素和 `<img>` 元素 (10.7), 第 297 页
-- 
-- `rearranging_elements.js` 动态移动、调整大小并调整多个 `<img>` 元素 z-index 的 jQuery 和 JavaScript 代码 (10.8), 第 297 页-第 298 页
-- 
-- `resizable_elements.css` 样式化页面的 CSS 代码 (18.9), 第 510 页-第 511 页
-- 
-- `resizable_elements.html` 添加该网页的 HTML 文档 (18.7), 第 510 页
-- 
-- `resizable_elements.js` 使用 jQuery 和 jQuery UI 实现页面元素的缩放和移动 (18.8), 第 510 页
-- 
-- `reversed_text.html` 使用 `<style>` 标签向 HTML 文档添加 CSS (3.2), 第 74 页
-- 
-- `run_blocks.html` 使用 HTML 代码显示 AngularJS 模块的配置块和运行块中生成的 `configTime` 和 `runTime` 值 (21.6), 第 580 页
-- 
-- `scope_controller.html` 允许你根据值的增减动态查看 Scope 中数据发生变化的 HTML 模板 (22.2), 第 586 页-第 587 页
-- 
-- `scope_controller.js` 实现使用依赖注入、初始化 Scope 值并实现业务逻辑的基础控制器 (22.1), 第 586 页
-- 
-- `scope_events.html` 渲染用于列出 26.3 控制器的 Scope 层级结构的 HTML 模板 (26.4), 第 694 页-第 695 页
-- 
-- `scope_events.js` 在 Scope 层级结构中实现 `$emit()` 和 `$broadcast()` 事件 (26.3), 第 694 页-第 695 页
-- 
-- `scope_hierarchy.js` 实现具有每层属性访问的基础 Scope 层级结构 (22.5), 第 595 页
-- 
-- `scope_template.html` 实现与 Scope 关联的各种 HTML 字段的 HTML 模板代码 (22.4), 第 590 页
-- 
-- `scope_watch.html` 提供 Scope 和交互的 HTML 模板代码 (26.2), 第 689 页
-- 
-- `scope_watch.js` 实现监控值的 `$watch()` 和 `$watchCollection()` 处理程序 (26.3), 第 694 页
-- 
-- `selectable_sets.html` 添加该网页的 HTML 文档 (18.10), 第 514 页
-- 
-- `selectable_sets.css` 样式化页面的 CSS 代码 (18.1), 第 515 页
-- 
-- `selectable_sets.js` 使用 jQuery 和 jQuery UI 实现页面元素的缩放和移动 (18.8), 第 510 页
-- 
-- `run_blocks.html` 使用 HTML 代码显示 AngularJS 模块的配置块和运行块中生成的 `configTime` 和 `runTime` 值 (21.6), 第 580 页
+- `dynamic_positioning.css`：样式页面的 CSS 代码（`16.7`，第 472 页）
+- `dynamic_positioning.html`：向网页添加图像的 HTML 文档（`16.5`，第 471 页）
+- `dynamic_positioning.js`：jQuery 和 jQuery UI 动态对图像定位（`16.6`，第 471-472 页）
 
-由于提供的文本包含大量重复项，我已根据要求提取并整理了核心文件。以下是排版后的：
+#动态趋势图（Dynamic Spark）
 
-- `load_content.js` 实现 AJAX `.load()` 请求的 jQuery 和 JavaScript (15.2), 第 432 页
-- `load_json.css` 样式化图片的 CSS 代码 (15.12), 第 441 页
-- `load_json.html` 加载 jQuery 和 JavaScript 的 HTML 文档 (15.9), 第 440 页
-- `load_json.js` 实现 AJAX 请求并处理 JSON 响应的 jQuery 和 JavaScript 代码 (15.10), 第 440 页
-- `load_xml.css` 样式化表格的 CSS 代码 (15.16), 第 444 页
-- `load_xml.html` 加载 jQuery 和 JavaScript 的 HTML 文档 (15.13), 第 443 页
-- `load_xml.js` 实现 AJAX 请求并处理 XML 响应的 jQuery 和 JavaScript 代码 (15.14), 第 443 页
-- `manual_event.css` 样式化 `<span>` 元素的 CSS 代码 (9.9), 第 258 页
-- `manual_event.html` 加载 CSS 和 JavaScript 并定义复选框和 `<span>` 元素的 HTML 文件 (9.7), 第 257 页
-- `manual_event.js` 手动触发来自 `<span>` 元素的 Check Box 复选框元素点击事件的 JavaScript 代码 (9.8), 第 257 页-第 258 页
-- `my_photos.html` 为 `myPhotos` 自定义指令提供根元素的 AngularJS 部分模板 (25.7), 第 681 页
-- `page_title.html` 在页面加载后更改 `<title>` 值的 JavaScript 代码 (3.1), 第 73 页
-- `pane.html` 包含用于构建选项页容器各个面板的模板代码的 AngularJS 部分模板 (29.3), 第 754 页
-- `parkdata.xml` 带有原始表格数据的 XML 数据文件 (15.15), 第 444 页
-- `rating.html` 利用 Scope 中的数据来显示带有描述和评分的图片列表的 AngularJS 模板 (29.15), 第 772 页-第 773 页
-- `rating.js` 提供支持视图中星级评分的数据和功能的 AngularJS 应用 (29.14), 第 770 页-第 772 页
-- `rearranging_elements.css` 样式化按钮和图片的 CSS 代码 (10.9), 第 299 页
-- `rearranging_elements.html` 示例中使用的基础网页 HTML 文件，定义了用于按钮的 `<span>` 元素和 `<img>` 元素 (10.7), 第 297 页
-- `rearranging_elements.js` 动态移动、调整大小并调整多个 `<img>` 元素 z-index 的 jQuery 和 JavaScript 代码 (10.8), 第 297 页-第 298 页
-- `resizable_elements.css` 样式化页面的 CSS 代码 (18.9), 第 510 页-第 511 页
-- `resizable_elements.html` 添加该网页的 HTML 文档 (18.7), 第 510 页
-- `resizable_elements.js` 使用 jQuery 和 jQuery UI 实现页面元素的缩放和移动 (18.8), 第 510 页
-- `reversed_text.html` 使用 `<style>` 标签向 HTML 文档添加 CSS (3.2), 第 74 页
-- `run_blocks.html` 使用 HTML 代码显示 AngularJS 模块的配置块和运行块中生成的 `configTime` 和 `runTime` 值 (21.6), 第 580 页
-- `scope_controller.html` 允许你根据值的增减动态查看 Scope 中数据发生变化的 HTML 模板 (22.2), 第 586 页-第 587 页
-- `scope_controller.js` 实现使用依赖注入、初始化 Scope 值并实现业务逻辑的基础控制器 (22.1), 第 586 页
-- `scope_events.html` 渲染用于列出 26.3 控制器的 Scope 层级结构的 HTML 模板 (26.4), 第 694 页-第 695 页
-- `scope_events.js` 在 Scope 层级结构中实现 `$emit()` 和 `$broadcast()` 事件 (26.3), 第 694 页-第 695 页
-- `scope_hierarchy.js` 实现具有每层属性访问的基础 Scope 层级结构 (22.5), 第 595 页
-- `scope_template.html` 实现与 Scope 关联的各种 HTML 字段的 HTML 模板代码 (22.4), 第 590 页
-- `scope_watch.html` 提供 Scope 和交互的 HTML 模板代码 (26.2), 第 689 页
-- `scope_watch.js` 实现监控值的 `$watch()` 和 `$watchCollection()` 处理程序 (26.3), 第 694 页
-- `selectable_sets.html` 添加该网页的 HTML 文档 (18.10), 第 514 页
-- `selectable_sets.css` 样式化页面的 CSS 代码 (18.1), 第 515 页
-- `selectable_sets.js` 使用 jQuery 和 jQuery UI 实现页面元素的缩放和移动 (18.8), 第 510 页
-- `service_http.html` 实现链接到服务器数据的指令 AngularJS 模板 (27.3), 第 707 页
+- `dynamic_spark.css`：样式页面元素和折线图的 CSS 代码（`14.18`，第 421 页）
+- `dynamic_spark.html`：实现页面元素的 HTML 文档（`14.16`，第 418-420 页）
+- `dynamic_spark.js`：jQuery 和 JavaScript 代码动态填充并更新折线图（`14.17`，第 420-421 页）
 
+# 动态树（Dynamic Tree）
 
+- `dynamic_tree.css`：样式表单元素的 CSS 代码（`14.9`，第 408 页）
+- `dynamic_tree.html`：实现根树元素的 HTML 文档（`14.7`，第 407 页）
+- `dynamic_tree.js`：jQuery 和 JavaScript 代码填充并控制树的展开和折叠（`14.8`，第 407-408 页）
 
+# 表达式（Expressions）
 
+- `expressions_basic.html`：在 AngularJS 模板上应用带有简单数学运算的基础字符串和数字（`23.2`，第 603-604 页）
+- `expressions_basic.js`：带有空控制器的基础 AngularJS 应用程序代码（`23.1`，第 603 页）
+- `expressions_javascript.html`：使用各种方式包含数组和数学逻辑的表达式与作用域模型中的数据交互的 AngularJS 模板（`23.5`，第 610 页）
+- `expressions_javascript.js`：构建一个 AngularJS 表达式可以使用带有数组和 `Math` 对象的作用域（`23.5`，第 610 页）
+- `expressions_scope.html`：使用各种方式表达式与作用域模型数据交互的 AngularJS 模板（`23.4`，第 607 页）
+- `expressions_scope.js`：构建 AngularJS 表达式可以使用的作用域（`23.3`，第 606 页）
 
-- `service_http.js`: 实现一个使用 `$http` 服务与 Web 服务器交互的 AngularJS Controller (27.2), 706
-- `service_location.html`: 一个显示从 `$location` 服务收集的信息并提供更改路径、搜索和哈希（hash）值链接的 AngularJS Template (27.11), 725
-- `service_location.js`: 一个 AngularJS 应用，实现了一个控制器以从 `$location` 服务收集信息，并提供更改路径、搜索和哈希（hash）值的函数 (27.10), 727
-- `service_server.js`: 实现一个支持为 AngularJS 控制器提供 `GET` 和 `POST` 路由的 Express 服务器 (27.1), 705
+# 过滤器（Filters）
 
-**基础示例**
-- 简单的交互式 jQuery 和 JavaScript 网页 (1.6), 31-32
-- 使用 JavaScript 和 jQuery 访问 DOM 元素的非常基础示例 (5.2), 151
+- `filter_custom.html`：使用自定义过滤器的 AngularJS 模板（`23.12`，第 622 页）
+- `filter_custom.js`：在 AngularJS 中实现自定义过滤器提供者（`23.11`，第 621-622 页）
+- `filter_sort.html`：实现 `filter` 和 `orderBy` 过滤器对表格视图中的项目进行排序和过滤的 AngularJS 模板（`23.10`，第 618-619 页）
+- `filter_sort.js`：构建平面列表并提供列表排序功能的 AngularJS 模块（`23.9`，第 618 页）
 
-**滑动图片**
-- `sliding_images.css`: 用于滑动菜单样式的 CSS 代码 (12.9), 336-337
-- `sliding_images.html`: 用于显示滑动菜单元素的基础 Web HTML 文件 (12.7), 335-336
-- `sliding_images.js`: 实现滑动图片菜单的 jQuery 和 JavaScript 代码 (12.8), 336
+# 第一个（First）
 
-**标题与元素**
-- `small_title.html`: 包含小版本标题的部分 HTML 文件 (24.3), 632
-- `sortable_elements.css`: 用于页面样式的 CSS 代码 (18.15), 521-522
-- `sortable_elements.html`: 添加网页的 HTML 文档 (18.13), 518-520
-- `sortable_elements.js`: 使用 jQuery 和 jQuery UI 实现排序 (18.14), 521
+- `first.html`：一个提供两个输入元素和一个按钮以与模型交互的简单 AngularJS 模板（`20.1`，第 560 页）
+- `first.js`：一个简单的 AngularJS 模块，实现了一个控制器以支持列表 `20.1`（`20.2`）中的模板，第 560 页
 
-**字符串处理**
-- `string_manipulation.html`: 将多行文本合并为单个字符串，并使用 `replace()` 将变量值填充到字符串特定格式区域的示例 (6.1), 181
+# 表单（Forms）
 
-**样式与标签页**
-- `style.html`: (1.2), 13-14
-- `tabbable.html`: 实现 `myTabs` 和 `myPane` 自定义指令以创建标签页视图的 AngularJS Template (29.4), 754-755
-- `tabbable.js`: 定义两个可以嵌套的自定义指令以提供标签面板视图的 AngularJS 应用 (29.1), 753
-- `tabs.html`: 包含构建标签页容器模板代码的 AngularJS 部分模板 (29.2), 754
-- `text_styles.css`: 通过调整颜色、对齐方式、添加线条和调整间距来对各种文本元素进行化的 CSS 代码 (4.2), 118-119
-- `text_styles.html`: 带有多个需要样式化的段元素的 HTML 代码 (4.1), 118
+- `form_effects.html`：实现示例中使用的注册单的 HTML 文档（`13.7`，第 371-372 页）
+- `form_effects.js`：为表单元素设置样式并为动态调整提供类名的 CSS 代码（`13.9`，第 374 页）
+- `form_effects.js`：实现动画视觉元素的 jQuery 代码（`13.8`，第 372-373 页）
+- `form_flow.css`：为支付表单元素设置样式的 CSS 代码（`13.6`，第 367-368 页）
+- `form_flow.html`：实现示例中使用的支付表单的 HTML 文档（`13.4`，第 365-366 页）
+- `form_flow.js`：为支付表单提供智能流控制的 jQuery 代码（`13.5`，第 366-367 页）
+- `form_manipulation.css`：为表单元素设置样式的 CSS 代码（`13.3`，第 360 页）
+- `form_manipulation.html`：实现示例中使用的表单元素的 HTML 文档（`13.1`，第 358-359 页）
+- `form_manipulation.js`：实现一系列事件处理器的 jQuery 和 JavaScript 代码，这些处理器会在一个表单元素变化时读取数据并更新第二个表单（`13.2`，第 359-360 页）
+- `form_validation.css`：为表单元素和错误设置样式的 CSS 代码（`13.12`，第 386-387 页）
+- `form_validation.html`：实现示例中使用的注册单的 HTML 文档（`13.10`，第 382-386 页）
+- `form_validation.js`：实现表单元素验证的 jQuery 代码（`13.11`，第 386 页）
+- `forms.html`：生成带有文本、单选框和选择输入的表单的 HTML（`3.6`，第 90 页）
 
-**表格与 DOM**
-- `tables.html`: 生成带有表头、行和列的表格的 HTML (3.5), 87-88
-- `traverse_dom.css`: 为 `<span>`, `<input>` 和 `<label>` 元素设置式的 CSS 代码 (8.6), 232
-- `traverse_dom.html`: 加载 jQuery 和 JavaScript 并绑定事件处理元素以提供用户交互的 HTML 文件 (8.4), 229-232
-- `traverse_dom.js`: 处理 Key 事件并使用 jQuery 根据输入值操作 `<span>` 元素的 JavaScript 代码 (8.5), 232
+# 图形均衡器（Graphic Equalizer）
 
-**可见性过渡**
-- `visibility_transitions.css`: 设置页面样式的 CSS 代码 (17.9), 488-489
-- `visibility_transitions.html`: 添加网页的 HTML 文档 (17.7), 490-488
-- `visibility_transitions.js`: 使用 jQuery 实现可见性效果 (17.8), 488
+- `graphic_equalizer.css`：用于渲染图形均衡器的元素样式 CSS 代码（`14.15`，第 417 页）
+- `graphic_equalizer.html`：实现网页的 HTML 文档（`14.13`，第 415-416 页）
+- `graphic_equalizer.js`：动态构建和填充图形均衡器的 jQuery 和 JavaScript 代码（`14.14`，第 416 页）
 
-**Web 元素操作**
-- `web_element_manipulation.css`: 为横幅、按钮和其他元素设置样式的 CSS 代码 (10.6), 291-292
-- `web_element_manipulation.html`: 示例中使用的 HTML 文件 (10.4), 290
-- `web_element_manipulation.js`: 根据顶部菜单中的按钮动态构建左侧导航项的 jQuery 和 JavaScript 代码 (10.5), 290-291
+# 其他
 
-**Web 布局**
-- `web_layout.css`: 用于应用页面布局（将元素放置在固定位置）的 CSS 代码 (4.7), 139-140
-- `web_layout.html`: 创建一对 `<div>` 元素来显示歌曲信息和一组播放控件的 HTML (4.6), 136-139
-- `web_page_manipulation.css`: 为 `<div>` 和其他元素设置样式的 CSS 代码 (10.3), 281
-- `web_page_manipulation.html`: 提供多个播放元素以及显示信息的独立 `<div>` HTML 文件 (10.1), 279-280
-- `web_page_manipulation.js`: 获取并显示关于屏幕、鼠标和 HTML 元素的 jQuery 和 JavaScript 代码 (10.2), 280-281
+- 创建一系列由列表 `4.5` 样式样式的 `<div>` 元素的 HTML（`4.4`，第 129 页）
+- `html_errors.html`：（`2.2`，第 43 页）
+- `if_logic.html`：在 JavaScript 内部使用条件逻辑简单示例（`5.3`，第 158-160 页）
+- `image_fade.html`：用于显示图片的基础 Web 文件（`12.4`，第 331 页）
+- `image_fade.js`：为折叠图片元素设置样式的 CSS 代码（`12.6`，第 332 页）
+- `image_fade.js`：实现图片选择淡入的 jQuery 和 JavaScript 代码（`12.5`，第 332 页）
+- `image_hide.css`：为折叠图片元素设置样式的 CSS 代码（`12.3`，第 328-329 页）
+- `image_hide.html`：用于显示折叠图片的基础 Web 文件（`12.1`，第 328 页）
+- `image_hide.js`：实现折叠图片的 jQuery 和 JavaScript 代码（`12.2`，第 328 页）
+- `image_slider.css`：为图片和控制设置样式的 CSS 代码（`14.3`，第 397 页）
+- `image_slider.html`：实现滑块、控制和元素的 HTML 文档（`14.1`，第 395 页）
+- `image_slider.js`：为图片滑块和缩图实现鼠标处理器 jQuery 和 JavaScript 代码（`14.2`，第 395-396 页）
+- `images.json`：来自书籍 `15/images.json` 包含文件名和说明的 JSON 数据（`15.1`，第 440 页）
+- `interactive_table.css`：为表格元素设置样式的 CSS 代码（`14.6`，第 403-404 页）
+- `interactive_table.html`：实现示例中表格的 HTML 文档（`14.4`，第 400-401 页）
+- `interactive_table.js`：定义表格交互（包括排序和过滤）的 jQuery 和 JavaScript 代码（`14.5`，第 402-403 页）
+- `inject_builtin.html`：实现依赖注入的 AngularJS 模块 HTML 代码（`21.2`，第 574 页）
+- `inject_builtin.js`：在控制器中实现内置服务的依赖注入（`21.1`，第 572 页）
+- `inject_custom.html`：实现依赖另一个模块的 AngularJS 模块 HTML 代码（`21.4`，第 576 页）
+- `inject_custom.js`：在控制器和模块中实现依赖注入（`21.3`，第 576 页）
+- `interactive_animation.html`：用于显示控制、圆锥和飞碟的基础 Web 文件（`12.13`，第 341-343 页）
+- `interactive_animation.js`：为控制、圆锥和飞碟设置样式的 CSS 代码（`12.15`，第 344 页）
+- `interactive_animation.js`：使用点击处理器实现飞碟移动动画的 jQuery 和 JavaScript 代码（`12.14`，第 343-344 页）
+- 在 `<canvas>` 元素上绘制立方体的 JavaScript 和 HTML 代码（`3.8`，第 100-101 页）
+- 使用 `<svg>` 元素创建饼图和时钟周围文本框的 JavaScript 和 HTML 代码（`3.7`，第 98-99 页）
+- `jquery_effects.html`：添加网页页的 HTML 文档（`17.1`，第 481 页）
+- `jquery_effects.js`：为页面设置样式的 CSS 代码（`17.3`，第 482 页）
+- `jquery_effects.js`：对图片应用多种效果的 jQuery 和 jQuery UI（`17.2`，第 481-482 页）
+- `jquery_image_adder.css`：为页面元素设置样式的 CSS 代码（`16.4`，第 468 页）
+- `jquery_image_adder.html`：添加网页的 HTML 文档（`16.2`，第 467 页）
+- `jquery_image_adder.js`：使用 `:data()` 选择器元素的 jQuery 和 jQuery UI 代码（`16.3`，第 467 页）
+- `jquery_selectors.css`：为 `<span>` 元素和 `class="label"` 元素设置样式（`7.6`，第 215 页）
+- `jquery_selectors.html`：加载 jQuery 和 JavaScript 并绑定事件元素以提供交互的 HTML 文件（`7.4`，第 214 页）
+- `jquery_selectors.js`：使用各种方式 jQuery 选择和更改元素的事件函数 JavaScript 文件（`7.5`，第 214-215 页）
+- `jquery_version.html`：在网页中加载 jQuery 并打印版本的极简单示例（`5.1`，第 148 页）
+- `js_errors.html`：（`2.1`，第 37 页）
+- `js_functions.html`：JavaScript 函数简单示例（`5.4`，第 166-167 页）
+- `js_reversed_text.html`：使用 `<script>` 标签将 JavaScript 和 jQuery 添加到 HTML 文档（`3.3`，第 75 页）
 
-**组件**
-- `widgets_accordian.html`: 使用 jQuery、CSS 和 HTML 实现手风琴组件 (19.1), 527
-- `widgets_autocomplete.html`: 使用 jQuery、CSS 和 HTML 实现自动完成字段 (19.2), 528
-- `widgets_calendar.html`: 使用 jQuery、CSS 和 HTML 实现日期选择组件 (19.4), 531
-- `widgets_custom.html`: 实现自定义组件的 jQuery 代码大纲 (19.12), 544-545
-- `widgets_dialogs.html`: 使用 jQuery、CSS 和 HTML 实现对话框 (19.5), 533
-- `widgets_menus.html`: 使用 jQuery、CSS 和 HTML 实现菜单 (19.6), 534-535
-- `widgets_progress_bars.html`: 使用 jQuery、CSS 和 HTML 实现进度条 (19.7), 536
-- `widgets_slider_bars.html`: 使用 jQuery、CSS 和 HTML 实现滑块 (19.8), 537-538
-- `widgets_spinner.html`: 使用 jQuery、CSS 和 HTML 实现加载器 (19.9), 539
-- `widgets_tabs.html`: 使用 jQuery、CSS 和 HTML 实现标签页视图 (19.10), 541-542
-- `widgets_tooltips.html`: 使用 jQuery、CSS 和 HTML 实现工具提示 (19.11), 543-544
+# 标题（Title）
 
-**工作事件**
-- `working_event.css`: 为 `<div>` 元素设置式的 CSS 代码 (9.6), 232
-- `working_event.html`: 加载 jQuery 和 JavaScript 并绑定事件处理元素以提供用户交互，并定义示例中 `<div>` 和 `<h1>` 元素的 HTML 文件 (9.4), 229-232
-- `working_event.js`: 定义事件处理器并动态将其绑定到 `<div>` 元素的 JavaScript 代码 (9.5), 232
+- `large_title.html`：包含大号标题的部分 HTML 文件（`24.4`，第 633 页）
 
-**缩放**
-- `zooming.html`: 设置并实现 `<zoomit>` 自定义 AngularJS 指令的 AngularJS Template (29.9), 763-764
-- `zooming.js`: 定义一个名为 `zoomit` 的自定义 AngularJS 指令以实现一个带有缩放视图的 `<img>` 元素的 AngularJS 应用 (29.7), 762-763
-- `zoomit.html`: 实现用于图片和缩放视图的对 `<img>` 和 `<div>` 元素的 AngularJS 部分模板 (29.8), 763
+# 加载内容（Load Content）
+
+- `load_content.js`：实现 AJAX `.load()` 请求的 jQuery 和 JavaScript（`15.2`，第 432 页）
+- `load_json.css`：样式化图片的 CSS 代码（`15.12`，第 441 页）
+- `load_json.html`：加载 jQuery 和 JavaScript 的 HTML 文档（`15.9`，第 440 页）
+- `load_json.js`：实现 AJAX 请求并处理 JSON 响应的 jQuery 和 JavaScript 代码（`15.10`，第 440 页）
+- `load_xml.css`：样式化表格的 CSS 代码（`15.16`，第 444 页）
+- `load_xml.html`：加载 jQuery 和 JavaScript 的 HTML 文档（`15.13`，第 443 页）
+- `load_xml.js`：实现 AJAX 请求并处理 XML 响应的 jQuery 和 JavaScript 代码（`15.14`，第 443 页）
+
+# 手动事件（Manual Event）
+
+- `manual_event.css`：样式化 `<span>` 元素的 CSS 代码（`9.9`，第 258 页）
+- `manual_event.html`：加载 CSS 和 JavaScript 并定义复选框和 `<span>` 元素的 HTML 文件（`9.7`，第 257 页）
+- `manual_event.js`：手动触发来自 `<span>` 元素的 Check Box 复选框元素点击事件的 JavaScript 代码（`9.8`，第 257-258 页）
+
+# 我的照片（My Photos）
+
+- `my_photos.html`：为 `myPhotos` 自定义指令提供根元素的 AngularJS 部分模板（`25.7`，第 681 页）
+
+## 页面标题（Page Title）
+
+- `page_title.html`：在页面加载后更改 `<title>` 值的 JavaScript 代码（`3.1`，第 73 页）
+
+## 面板（Pane）
+
+- `pane.html`：包含用于构建选项页容器各个面板的模板代码的 AngularJS 部分模板（`29.3`，第 754 页）
+
+## 公园数据（Park Data）
+
+- `parkdata.xml`：带有原始表格数据的 XML 数据文件（`15.15`，第 444 页）
+
+## 评分（Rating）
+
+- `rating.html`：利用 Scope 中的数据来显示带有描述和评分的图片列表的 AngularJS 模板（`29.15`，第 772-773 页）
+- `rating.js`：提供支持视图中星级评分的数据和功能的 AngularJS 应用（`29.14`，第 770-772 页）
+
+## 重新排列元素（Rearranging Elements）
+
+- `rearranging_elements.css`：样式化按钮和图片的 CSS 代码（`10.9`，第 299 页）
+- `rearranging_elements.html`：示例中使用的基础网页 HTML 文件，定义了用于按钮的 `<span>` 元素和 `<img>` 元素（`10.7`，第 297 页）
+- `rearranging_elements.js`：动态移动、调整大小并调整多个 `<img>` 元素 z-index 的 jQuery 和 JavaScript 代码（`10.8`，第 297-298 页）
+
+## 可调整大小的元素（Resizable Elements）
+
+- `resizable_elements.css`：样式化页面的 CSS 代码（`18.9`，第 510-511 页）
+- `resizable_elements.html`：添加该网页的 HTML 文档（`18.7`，第 510 页）
+- `resizable_elements.js`：使用 jQuery 和 jQuery UI 实现页面元素的缩放和移动（`18.8`，第 510 页）
+
+## 反转文本（Reversed Text）
+
+- `reversed_text.html`：使用 `<style>` 标签向 HTML 文档添加 CSS（`3.2`，第 74 页）
+
+## 运行块（Run Blocks）
+
+- `run_blocks.html`：使用 HTML 代码显示 AngularJS 模块的配置块和运行块中生成的 `configTime` 和 `runTime` 值（`21.6`，第 580 页）
+
+## 作用域控制器（Scope Controller）
+
+- `scope_controller.html`：允许你根据值的增减动态查看 Scope 中数据发生变化的 HTML 模板（`22.2`，第 586-587 页）
+- `scope_controller.js`：实现使用依赖注入、初始化 Scope 值并实现业务逻辑的基础控制器（`22.1`，第 586 页）
+
+## 作用域事件（Scope Events）
+
+- `scope_events.html`：渲染用于列出 `26.3` 控制器的 Scope 层级结构的 HTML 模板（`26.4`，第 694-695 页）
+- `scope_events.js`：在 Scope 层级结构中实现 `$emit()` 和 `$broadcast()` 事件（`26.3`，第 694-695 页）
 
 
 
+- `scope_hierarchy.js` 实现具有每层属性访问的基础 `Scope` 层级结构 (22.5)，第 595 页
+- `scope_template.html` 实现与 `Scope` 关联的各种 HTML 字段的 HTML 模板代码 (22.4)，第 590 页
+- `scope_watch.html` 提供 `Scope` 和交互的 HTML 模板代码 (26.2)，第 689 页
+- `scope_watch.js` 实现监控值的 `$watch()` 和 `$watchCollection()` 处理程序 (26.3)，第 694 页
+- `selectable_sets.html` 添加该网页的 HTML 文档 (18.10)，第 514 页
+- `selectable_sets.css` 样式化页面的 CSS 代码 (18.1)，第 515 页
+- `selectable_sets.js` 使用 jQuery 和 jQuery UI 实现页面元素的缩放和移动 (18.8)，第 510 页
+- `run_blocks.html` 使用 HTML 代码显示 AngularJS 模块的配置块和运行块中生成的 `configTime` 和 `runTime` 值 (21.6)，第 580 页
 
+- `load_content.js` 实现 AJAX `.load()` 请求的 jQuery 和 JavaScript (15.2)，第 432 页
+- `load_json.css` 样式化图片的 CSS 代码 (15.12)，第 441 页
+- `load_json.html` 加载 jQuery 和 JavaScript 的 HTML 文档 (15.9)，第 440 页
+- `load_json.js` 实现 AJAX 请求并处理 JSON 响应的 jQuery 和 JavaScript 代码 (15.10)，第 440 页
+- `load_xml.css` 样式化表格的 CSS 代码 (15.16)，第 444 页
+- `load_xml.html` 加载 jQuery 和 JavaScript 的 HTML 文档 (15.13)，第 443 页
+- `load_xml.js` 实现 AJAX 请求并处理 XML 响应的 jQuery 和 JavaScript 代码 (15.14)，第 443 页
+- `manual_event.css` 样式化 `<span>` 元素的 CSS 代码 (9.9)，第 258 页
+- `manual_event.html` 加载 CSS 和 JavaScript 并定义复选框和 `<span>` 元素的 HTML 文件 (9.7)，第 257 页
+- `manual_event.js` 手动触发来自 `<span>` 元素的 Check Box 复选框元素点击事件的 JavaScript 代码 (9.8)，第 257 页-第 258 页
+- `my_photos.html` 为 `myPhotos` 自定义指令提供根元素的 AngularJS 部分模板 (25.7)，第 681 页
+- `page_title.html` 在页面加载后更改 `<title>` 值的 JavaScript 代码 (3.1)，第 73 页
+- `pane.html` 包含用于构建选项页容器各个面板的模板代码的 AngularJS 部分模板 (29.3)，第 754 页
+- `parkdata.xml` 带有原始表格数据的 XML 数据文件 (15.15)，第 444 页
+- `rating.html` 利用 `Scope` 中的数据来显示带有描述和评分的图片列表的 AngularJS 模板 (29.15)，第 772 页-第 773 页
+- `rating.js` 提供支持视图中星级评分的数据和功能的 AngularJS 应用 (29.14)，第 770 页-第 772 页
+- `rearranging_elements.css` 样式化按钮和图片的 CSS 代码 (10.9)，第 299 页
+- `rearranging_elements.html` 示例中使用的基础网页 HTML 文件，定义了用于按钮的 `<span>` 元素和 `<img>` 元素 (10.7)，第 297 页
+- `rearranging_elements.js` 动态移动、调整大小并调整多个 `<img>` 元素 z-index 的 jQuery 和 JavaScript 代码 (10.8)，第 297 页-第 298 页
+- `resizable_elements.css` 样式化页面的 CSS 代码 (18.9)，第 510 页-第 511 页
+- `resizable_elements.html` 添加该网页的 HTML 文档 (18.7)，第 510 页
+- `resizable_elements.js` 使用 jQuery 和 jQuery UI 实现页面元素的缩放和移动 (18.8)，第 510 页
+- `reversed_text.html` 使用 `<style>` 标签向 HTML 文档添加 CSS (3.2)，第 74 页
+- `run_blocks.html` 使用 HTML 代码显示 AngularJS 模块的配置块和运行块中生成的 `configTime` 和 `runTime` 值 (21.6)，第 580 页
+- `scope_controller.html` 允许你根据值的增减动态查看 `Scope` 中数据发生变化的 HTML 模板 (22.2)，第 586 页-第 587 页
+- `scope_controller.js` 实现使用依赖注入、初始化 `Scope` 值并实现业务逻辑的基础控制器 (22.1)，第 586 页
+- `scope_events.html` 渲染用于列出 26.3 控制器的 `Scope` 层级结构的 HTML 模板 (26.4)，第 694 页-第 695 页
+- `scope_events.js` 在 `Scope` 层级结构中实现 `$emit()` 和 `$broadcast()` 事件 (26.3)，第 694 页-第 695 页
+- `scope_hierarchy.js` 实现具有每层属性访问的基础 `Scope` 层级结构 (22.5)，第 595 页
+- `scope_template.html` 实现与 `Scope` 关联的各种 HTML 字段的 HTML 模板代码 (22.4)，第 590 页
+- `scope_watch.html` 提供 `Scope` 和交互的 HTML 模板代码 (26.2)，第 689 页
+- `scope_watch.js` 实现监控值的 `$watch()` 和 `$watchCollection()` 处理程序 (26.3)，第 694 页
+- `selectable_sets.html` 添加该网页的 HTML 文档 (18.10)，第 514 页
+- `selectable_sets.css` 样式化页面的 CSS 代码 (18.1)，第 515 页
+- `selectable_sets.js` 使用 jQuery 和 jQuery UI 实现页面元素的缩放和移动 (18.8)，第 510 页
+- `service_http.html` 实现链接到服务器数据的指令 AngularJS 模板 (27.3)，第 707 页
+- `service_http.js`: 实现一个使用 `$http` 服务与 Web 服务器交互的 AngularJS Controller (27.2)，706
+- `service_location.html`: 一个显示从 `$location` 服务收集的信息并提供更改路径、搜索和哈希（hash）值链接的 AngularJS Template (27.11)，725
+- `service_location.js`: 一个 AngularJS 应用，实现了一个控制器以从 `$location` 服务收集信息，并提供更改路径、搜索和哈希（hash）值的函数 (27.10)，727
+- `service_server.js`: 实现一个支持为 AngularJS 控制器提供 `GET` 和 `POST` 路由的 Express 服务器 (27.1)，705
+
+## 基础示例
+
+- 简单的交互式 jQuery 和 JavaScript 网页 (1.6)，31-32
+- 使用 JavaScript 和 jQuery 访问 DOM 元素的非常基础示例 (5.2)，151
+
+## 滑动图片
+
+- `sliding_images.css`: 用于滑动菜单样式的 CSS 代码 (12.9)，336-337
+- `sliding_images.html`: 用于显示滑动菜单元素的基础 Web HTML 文件 (12.7)，335-336
+- `sliding_images.js`: 实现滑动图片菜单的 jQuery 和 JavaScript 代码 (12.8)，336
+
+## 标题与元素
+
+- `small_title.html`: 包含小版本标题的部分 HTML 文件 (24.3)，632
+- `sortable_elements.css`: 用于页面样式的 CSS 代码 (18.15)，521-522
+- `sortable_elements.html`: 添加网页的 HTML 文档 (18.13)，518-520
+- `sortable_elements.js`: 使用 jQuery 和 jQuery UI 实现排序 (18.14)，521
+
+## 字符串处理
+
+- `string_manipulation.html`: 将多行文本合并为单个字符串，并使用 `replace()` 将变量值填充到字符串特定格式区域的示例 (6.1)，181
+
+## 样式与标签页
+
+- `style.html`: (1.2)，13-14
+- `tabbable.html`: 实现 `myTabs` 和 `myPane` 自定义指令以创建标签页视图的 AngularJS Template (29.4)，754-755
+- `tabbable.js`: 定义两个可以嵌套的自定义指令以提供标签面板视图的 AngularJS 应用 (29.1)，753
+- `tabs.html`: 包含构建标签页容器模板代码的 AngularJS 部分模板 (29.2)，754
+- `text_styles.css`: 通过调整颜色、对齐方式、添加线条和调整间距来对各种文本元素进行化的 CSS 代码 (4.2)，118-119
+- `text_styles.html`: 带有多个需要样式化的段元素的 HTML 代码 (4.1)，118
+
+## 表格与 DOM
+
+- `tables.html`: 生成带有表头、行和列的表格的 HTML (3.5)，87-88
+- `traverse_dom.css`: 为 `<span>`, `<input>` 和 `<label>` 元素设置式的 CSS 代码 (8.6)，232
+- `traverse_dom.html`: 加载 jQuery 和 JavaScript 并绑定事件处理元素以提供用户交互的 HTML 文件 (8.4)，229-232
+- `traverse_dom.js`: 处理 Key 事件并使用 jQuery 根据输入值操作 `<span>` 元素的 JavaScript 代码 (8.5)，232
+
+## 可见性过渡
+
+- `visibility_transitions.css`: 设置页面样式的 CSS 代码 (17.9)，488-489
+- `visibility_transitions.html`: 添加网页的 HTML 文档 (17.7)，490-488
+- `visibility_transitions.js`: 使用 jQuery 实现可见性效果 (17.8)，488
+
+## Web 元素操作
+
+- `web_element_manipulation.css`: 为横幅、按钮和其他元素设置样式的 CSS 代码 (10.6)，291-292
+- `web_element_manipulation.html`: 示例中使用的 HTML 文件 (10.4)，290
+- `web_element_manipulation.js`: 根据顶部菜单中的按钮动态构建左侧导航项的 jQuery 和 JavaScript 代码 (10.5)，290-291
+
+## Web 布局
+
+- `web_layout.css`: 用于应用页面布局（将元素放置在固定位置）的 CSS 代码 (4.7)，139-140
+- `web_layout.html`: 创建一对 `<div>` 元素来显示歌曲信息和一组播放控件的 HTML (4.6)，136-139
+- `web_page_manipulation.css`: 为 `<div>` 和其他元素设置样式的 CSS 代码 (10.3)，281
+- `web_page_manipulation.html`: 提供多个播放元素以及显示信息的独立 `<div>` HTML 文件 (10.1)，279-280
+- `web_page_manipulation.js`: 获取并显示关于屏幕、鼠标和 HTML 元素的 jQuery 和 JavaScript 代码 (10.2)，280-281
+
+## 组件
+
+- `widgets_accordian.html`: 使用 jQuery、CSS 和 HTML 实现手风琴组件 (19.1)，527
+- `widgets_autocomplete.html`: 使用 jQuery、CSS 和 HTML 实现自动完成字段 (19.2)，528
+- `widgets_calendar.html`: 使用 jQuery、CSS 和 HTML 实现日期选择组件 (19.4)，531
+- `widgets_custom.html`: 实现自定义组件的 jQuery 代码大纲 (19.12)，544-545
+- `widgets_dialogs.html`: 使用 jQuery、CSS 和 HTML 实现对话框 (19.5)，533
+- `widgets_menus.html`: 使用 jQuery、CSS 和 HTML 实现菜单 (19.6)，534-535
+- `widgets_progress_bars.html`: 使用 jQuery、CSS 和 HTML 实现进度条 (19.7)，536
+- `widgets_slider_bars.html`: 使用 jQuery、CSS 和 HTML 实现滑块 (19.8)，537-538
+- `widgets_spinner.html`: 使用 jQuery、CSS 和 HTML 实现加载器 (19.9)，539
+- `widgets_tabs.html`: 使用 jQuery、CSS 和 HTML 实现标签页视图 (19.10)，541-542
+- `widgets_tooltips.html`: 使用 jQuery、CSS 和 HTML 实现工具提示 (19.11)，543-544
+
+## 工作事件
+
+- `working_event.css`: 为 `<div>` 元素设置式的 CSS 代码 (9.6)，232
+- `working_event.html`: 加载 jQuery 和 JavaScript 并绑定事件处理元素以提供用户交互，并定义示例中 `<div>` 和 `<h1>` 元素的 HTML 文件 (9.4)，229-232
+- `working_event.js`: 定义事件处理器并动态将其绑定到 `<div>` 元素的 JavaScript 代码 (9.5)，232
+
+## 缩放
+
+- `zooming.html`: 设置并实现 `<zoomit>` 自定义 AngularJS 指令的 AngularJS Template (29.9)，763-764
+- `zooming.js`: 定义一个名为 `zoomit` 的自定义 AngularJS 指令以实现一个带有缩放视图的 `<img>` 元素的 AngularJS 应用 (29.7)，762-763
+- `zoomit.html`: 实现用于图片和缩放视图的对 `<img>` 和 `<div>` 元素的 AngularJS 部分模板 (29.8)，763
 
 改变外观，13-14
 
 渲染输入，12
 
-`load event`, 239
+`load event`，239
 
-`load_content.css listing (15.3)`, 433
+`load_content.css listing (15.3)`，433
 
-`load_content.html listing (15.1)`, 432
+`load_content.html listing (15.1)`，432
 
-`load_content.js listing (15.2)`, 432
+`load_content.js listing (15.2)`，432
 
-`load_json.css listing (15.12)`, 441
+`load_json.css listing (15.12)`，441
 
-`load_json.html listing (15.9)`, 440
+`load_json.html listing (15.9)`，440
 
-`load_json.js listing (15.10)`, 440
+`load_json.js listing (15.10)`，440
 
-`load_xml.css listing (15.16)`, 444
+`load_xml.css listing (15.16)`，444
 
-`load_xml.html listing (15.13)`, 443
+`load_xml.html listing (15.13)`，443
 
-`load_xml.js listing (15.14)`, 443
+`load_xml.js listing (15.14)`，443
 
-加载库，`jQuery`, 145-146
+加载库，`jQuery`，145-146
 
-循环，`JavaScript`, 160-163
+循环，`JavaScript`，160-163
 
-`lowercase filter (AngularJS templates)`, 612
+`lowercase filter (AngularJS templates)`，612
 
-`lowercase()` 方法, 556
+`lowercase()` 方法，556
 
 低级 AJAX 请求，451-453
 
 # M
 
-`manual_event.css listing (9.9)`, 258
+`manual_event.css listing (9.9)`，258
 
-`manual_event.html listing (9.7)`, 257
+`manual_event.html listing (9.7)`，257
 
 手动触发事件，253
 
-`JavaScript`, 254-258
+`JavaScript`，254-258
 
-`jQuery`, 258-262
+`jQuery`，258-262
 
 手动验证 Web 表单，375
 
 外边距，在 HTML 元素周围添加，133
 
+
+
 `match()` 方法，177](#part0017.xhtml_page_177)
 
 `Math` 对象 (`JavaScript`), 188
 
-max 选项（滑块组件），526
+`max` 选项（滑块组件），526
 
-max 规则（验证），376
+`max` 规则（验证），376
 
-maxlength 规则（验证），376
+`maxlength` 规则（验证），376
 
 媒体元素，102
 
@@ -24266,7 +23663,7 @@ maxlength 规则（验证），376
 
 方法项（网络流量分析器），64
 
-`method` 属性（配置参数），$http` 服务请求，702
+`method` 属性（配置参数），`$http` 服务请求，702
 
 方法，177
 
@@ -24462,10 +23859,6 @@ maxlength 规则（验证），376
 
 `link()`, 665-667
 
-
-
-
-
 `on()`, 249, 561
 
 `one()`, 561
@@ -24604,49 +23997,49 @@ maxlength 规则（验证），376
 
 `zIndex()`, 463
 
-**min** 规则（验证）, 376
+`min` 规则（验证）, 376
 
-**minlength** 规则（验证）, 376
+`minlength` 规则（验证）, 376
 
-**modal 变异阶段 (AngularJS scope)**, 592
+`modal` 变异阶段 (AngularJS scope), 592
 
-**modal 选项 (对话框组件)**, 532
+`modal` 选项 (对话框组件), 532
 
-**模型视图控制器 (MVC)**. *查看 MVC (模型视图控制器)*
+模型视图控制器 (MVC). 查看 MVC (模型视图控制器)
 
-**AngularJS 模块**, 549, 567-568
+AngularJS 模块, 549, 567-568
 
-**添加配置块**, 575-578
+添加配置块, 575-578
 
-**添加 run 块**, 578
+添加 run 块, 578
 
-**创建提供者**, 570-572
+创建提供者, 570-572
 
-**定义模块对象**, 569-570
+定义模块对象, 569-570
 
-**注入另一个中**, 575-577
+注入另一个中, 575-577
 
-**提供者**, 569
+提供者, 569
 
-**在 AngularJS 元素上处理鼠标事件**, 652-653
+在 AngularJS 元素上处理鼠标事件, 652-653
 
-**鼠标交互组件**, 496
+鼠标交互组件, 496
 
-**获取鼠标位置**, 270
+获取鼠标位置, 270
 
-**鼠标中心事件**, 239
+鼠标中心事件, 239
 
-**鼠标按下事件**, 239
+鼠标按下事件, 239
 
-**鼠标移出事件**, 239
+鼠标移出事件, 239
 
-**鼠标移动事件**, 239
+鼠标移动事件, 239
 
-**鼠标移出事件**, 239
+鼠标移出事件, 239
 
-**鼠标移入事件**, 239
+鼠标移入事件, 239
 
-**鼠标释放事件**, 239
+鼠标释放事件, 239
 
 `move()`, 305
 
@@ -24654,11 +24047,7 @@ maxlength 规则（验证），376
 
 `move() (window)`, 652
 
-**MVC (模型视图控制器)**, 547
-
-
-
-
+MVC (模型视图控制器), 547
 
 - `ngKeypress` 指令 (AngularJS 模板), 646
 - `ngKeyup` 指令 (AngularJS 模板), 646
@@ -24692,6 +24081,7 @@ maxlength 规则（验证），376
 - `ngView` 指令 (AngularJS 模板), 629
 
 ## Node.js, 424
+
 - 配置, 21-22
 - 创建 Express Web 服务器, 26-29
 
@@ -24708,6 +24098,7 @@ maxlength 规则（验证），376
 - `numberOfMonths` 选项 (日期选择器组件), 530
 
 ## O 对象
+
 - 浏览器历史, 307-308
 - 浏览器位置, 306-307
 - 链式操作, `jQuery`, 217-218
@@ -24724,14 +24115,12 @@ maxlength 规则（验证），376
 - 属性, 304
 - `window.location` 封装, 721-724
 - `XMLHttpRequest`, 428
-
 - (DOM) 对象, 197-198
 - 访问, 201-204
 - `jQuery`, 211-213
 - 按类名查找, 201
 - 按 ID 查找, 201
 - 按标签名查找, 202-203
-
 - (JavaScript) 对象, 173, 195
 - 访问方法, 174
 - 访问属性, 174
@@ -24749,39 +24138,62 @@ maxlength 规则（验证），376
 - `RegExp`, 189
 - `String`, 176-178
 - 语法, 173-175
-- `off()` 方法, 250, 561
-- `on()` 方法, 561
-- `on` 事件, 237-239
-- `onreadystatechange` 属性, 240
-- `onSelect` 选项, 530
-- `opacity` 设计 (CSS), 131
-- `opacity` 选项 (可拖拽), 497
-- `opacity` 选项 (可排序), 516
-- `open()` 方法, 305, 428
-- `opener` 属性 (window 对象), 304
-- 运算符, JavaScript, 154
-- 算术, 154
-- 分配, 154-160
-- `option()` 方法, 495
-- `<option>` 标签, 89
-- `orderBy:exp:reverse` 过滤器 (AngularJS 模板), 612
-- 排序, AngularJS 过滤器, 616-618
-- `orientation` 选项 (滑块组件), 536
-- `outerHeight()` 方法, 273
-- `outerHeight` 属性 (window 对象), 304
-- `outerHTML` 属性 (DOM 对象), 198
-- `outerWidth()` 方法, 273
-- `outerWidth` 属性 (window 对象), 304
-- `overflow` 属性 (CSS), 135-136
--- 覆盖对话框, 409-413
+
+`off()` 方法, 250, 561
+
+`on()` 方法, 561
+
+`on` 事件, 237-239
+
+`onreadystatechange` 属性, 240
+
+`onSelect` 选项, 530
+
+`opacity` 设计 (CSS), 131
+
+`opacity` 选项 (可拖拽), 497
+
+`opacity` 选项 (可排序), 516
+
+`open()` 方法, 305, 428
+
+`opener` 属性 (window 对象), 304
+
+运算符, JavaScript, 154
+
+算术, 154
+
+分配, 154-160
+
+`option()` 方法, 495
+
+`<option>` 标签, 89
+
+`orderBy:exp:reverse` 过滤器 (AngularJS 模板), 612
+
+排序, AngularJS 过滤器, 616-618
+
+`orientation` 选项 (滑块组件), 536
+
+`outerHeight()` 方法, 273
+
+`outerHeight` 属性 (window 对象), 304
+
+`outerHTML` 属性 (DOM 对象), 198
+
+`outerWidth()` 方法, 273
+
+`outerWidth` 属性 (window 对象), 304
+
+`overflow` 属性 (CSS), 135-136
+
+覆盖对话框, 409-413
 
 ### P
-- `<p>` 元素, 261
-- 内边距, 在 HTML 内容周围添加, 133
 
+`<p>` 元素, 261
 
-
-
+内边距, 在 HTML 内容周围添加, 133
 
 # 页面事件，绑定到控制器，645-653
 
@@ -24799,7 +24211,7 @@ maxlength 规则（验证），376
 
 # pane.html 列表 (29.3), 754
 
-# params 属性（配置参数），$http 服务请求, 702
+# params 属性（配置参数），`$http` 服务请求, 702
 
 # parent() 方法, 561
 
@@ -24813,7 +24225,7 @@ maxlength 规则（验证），376
 
 # path() 方法, 722
 
-# <path> 元素 (HTML5), 95
+# `<path>` 元素 (HTML5), 95
 
 # pathname 属性（window 对象), 307
 
@@ -24838,7 +24250,9 @@ maxlength 规则（验证），376
 # position() 方法, 468-472
 
 # POST 请求
+
 ## 相比 GET, 427
+
 ## HTTP (超文本传输协议), 16, 32
 
 # prefentDefault() 方法, 239
@@ -24860,23 +24274,33 @@ maxlength 规则（验证），376
 # prop() 方法, 561
 
 # 属性
+
 ## CSS（层叠样式表），获取与设置，272-273
-## JavaScript 对象，访问, 174
-## screen 对象, 304
-## window 对象, 304, 307
+
+
+
+# JavaScript 对象，访问, 174
+
+# screen 对象, 304
+
+# window 对象, 304, 307
 
 # protocol() 方法, 722
 
 # protocol 属性（window 对象), 307
 
 # 协议
+
 ## HTTP (超文本传输协议), 14-15
+
 ## HTTPS (安全超文本传输协议), 14-15
 
 # 原型模式，JavaScript 对象, 191-194
 
 # providers (AngularJS 模块), 569, 创建，570-572
+
 ## 实现, 572
+
 ## 注入到控制器, 572
 
 # puffEffects (jQuery UI), 476
@@ -24888,7 +24312,9 @@ maxlength 规则（验证），376
 # PUT 请求，发送，$http 服务, 701-708
 
 ### Q 队列 (jQuery 动画), 322
+
 ### 队列，动画, 323
+
 ### radio 输入元素，表单，访问, 350-351
 
 # range 选项（滑块组件）, 537
@@ -24938,23 +24364,32 @@ maxlength 规则（验证），376
 # replaceWith() 方法, 561
 
 # 请求 (AJAX), 423
+
 ## 高级 jQuery, 450-453
+
 ## 全局处理程序, 451
+
 ## 全局设置, 450
+
 ## 跨域, 426
+
 ## 相比 GET, 427
+
 ## 处理响应，433-444
+
 ## HTML 响应数据, 439-444
+
 ## JSON 响应数据, 438-441
+
 ## 成功与失败, 434-437
+
 ## XML 响应数据, 439-444
+
 ## 实现，428-450
+
 ## 来自 JavaScript，428-429
+
 ## 来自 jQuery，429-433
-
-
-
-
 
 `resizable_elements.js` 列表 (18.8), 510
 
@@ -25158,14 +24593,12 @@ jQuery UI
 
 序列化数据，Web 表单， 354-360
 
-
-
-
-
 # server.js 列表 (1.5), 28
 
 ## servers
+
 * 从 jQuery, AJAX 更新数据，442-450
+
 * Web 服务器/浏览器范式，9-20
 
 ## 服务端脚本, 动态 JSON 数据生成，20
@@ -25215,200 +24648,362 @@ jQuery UI
 ## service_server.js 列表 (27.1), 705
 
 ## services (AngularJS), 551, 699-700, 728
+
 * 内置， 700-701
+
 * `$animate`, 714-719
+
 * `$cacheFactory`, 704-709
+
 * `$cookieStore`, 709-711
+
 * `$http`, 701-708
+
 * `$interval`, 714
+
 * `$location`, 721-724
+
 * `$q`, 726-728
+
 * `$timeout`, 714
+
 * `$window`, 704-709
+
 * `custom`, 731, 748
+
 * `censor`, 735-737
+
 * `database access`, 741-747
+
 * `defining constant service`, 732
+
 * `defining value service`, 732
+
 * `integrating into applications`, 733-747
+
 * `time`, 737
+
 * `defining`, 733
+
 * `factory, building provider`, 732
+
 * `setAttribute()`, 198
+
 * `SET-COOKIE header (HTTP)`, 15
+
 * `setInterval() (window object)`, 305
+
 * `setRequestHeader attribute (XMLHttpRequest object)`, 428
+
 * `setRequestHeader()`, 453
+
 * `setTimeout()`, 305
+
 * `shift()`, 182
+
 * `shiftKey attribute (event objects)`, 237
+
 * `show()`, 199, 325-327
+
 * `animating`, 326-327
+
 * `showButtonPanel (datepicker widget)`, 530
+
 * `showOn option (datepicker widget)`, 530
+
 * `size, HTML elements, obtaining and setting`, 273
+
 * `size effect (jQuery UI)`, 476
+
 * `Size item (network traffic analyzer)`, 64
+
 * `slice()`, 177, 182
+
 * `slide effect (jQuery UI)`, 476
+
 * `slide option (slider widget)`, 536
+
 * `slideDown()`, 332-333
+
 * `slider bars, implementing`, 536-538
+
 * `slider-based image gallery, adding`, 392-397
+
 * `slide()`, 332-333
+
 * `slideUp()`, 332
+
 * `sliding`, 332-337
+
 * `sliding_images.css (12)`, 336-337
+
 * `sliding_images.html (12)`, 335-336
+
 * `sliding_images.js (12)`, 336
+
 * `small_title.html (24)`, 632
+
 * `snake effect (jQuery UI)`, 476
+
 * `sort()`, 182
+
 * `sortable widget (jQuery)`, 516-522
+
 * `sortable_elements.css (15)`, 521-522
+
 * `sortable_elements.html (13)`, 518-520
+
 * `sortable_elements.js (1)`, 512
 
 ## sorting
+
 * AngularJS filters, 516-522
+
 * tables, implementing, 397-404
 
 ## Source
+
 * 选择菜单 (调试), 57
-* <span> 元素, 232, 257-258, 261, 309
+
+* `<span>` 元素, 232, 257-258, 261, 309
+
 * sparkline 图形, 添加， 417-421
+
 * 特殊效果, 321
+
 * 特殊缓选项 (jQuery 动画), 322
+
 * 特殊化对象提供者 (AngularJS), 570-571
 
-
-
-
-
 # 步出选项 (debugger), 58
+
 # 步过选项 (debugger), 58
+
 # `stopImmediatePropagation()` 方法, 239
+
 # 停止动画, 323
+
 # `stopPropagation()` 方法, 239
+
 # String 数据类型 (JavaScript), 152
+
 # 字符串对象 (JavaScript), 176-178
+
 # `string_manipulation.html` 列表 (6.1), 181
 
 ## strings
+
 - 合并, 178
+
 - 将数组转换为, 183
+
 - 转义码, 176
+
 - 操作, 179-180
+
 - 在...中替换单词, 179
+
 - 搜索子字符串, 178
+
 - 拆分为数组, 179-181
 
 # style 属性 (body 元素), 77
+
 # style 属性 (DOM 对象), 198
+
 # `<STYLE>` 元素 (CSS), 13-14
+
 # `<style>` 标签, 74, 82
+
 # style.html 列表 (1.2), 13-14
+
 # 样式 (CSS), 13-14
+
 - 添加, 105-108
+
 - 添加到 HTML 元素, 108-140
+
 - 应用文本, 113-119
+
 - 在 HTML 元素中定义, 108
+
 - 为动态设计做准备, 140-141
+
 - 选择器，用于为 HTML 元素设置样式, 110-111
 
 # 提交，Web 表单，控制, 362-364
+
 # submit 事件, 241
+
 # `substr()` 方法, 177
+
 # `substring()` 方法, 177
+
 # 搜索子字符串, 178
+
 # AJAX 请求成功处理, 433-444
+
 # `<svg>` 元素, 93, 95-99
 
 ## syntax
+
 - CSS (层叠样式表), 108-110
+
 - HTML 元素, 71
+
 - JavaScript, 145, 151-169
+
 - 对象, 173-175
+
 - jQuery, 145
+
 - `tab.html` 列表 (29.4), 754-755
+
 - `tab.js` 列表 (29.1), 753
-- 创建选项卡面板, 539-542
-- 构建选项卡视图, 751-755
-- 表格元素, 85-88
-- `<table>` 标签, 85
-- 表格, 87
-- 实现排序和过滤, 397-404
-- `tables.html` 列表 (35.5), 87-88
-- `tabs.html` 列表 (29.2), 754
+
+
+
+创建选项卡面板, 539-542
+
+构建选项卡视图, 751-755
+
+表格元素, 85-88
+
+`<table>` 标签, 85
+
+表格, 87
+
+实现排序和过滤, 397-404
+
+`tables.html` 列表 (35.5), 87-88
+
+`tabs.html` 列表 (29.2), 754
 
 ## tags
-- `<audio>`, 102
-- `<button>`, 89
-- `<caption>`, 85
-- `<col>`, 85
-- `<colgroup>`, 85
-- `<fieldset>`, 89
-- `<form>`, 88
-- `<img`, 83-84
-- `<input>`, 89
-- `<label>`, 89
-- `<legend>`, 89
-- `<link>`, 76-77
-- `<meta>`, 73-74
-- `<noscript>`, 76
-- `<option>`, 89
-- `<script>`, 75
-- `<select>`, 89
-- `<style>`, 74, 82
-- `<table>`, 85
-- `<tbody>`, 85
-- `<textarea>`, 89
-- `<tfoot>`, 85
-- `<th>`, 85
-- `<thead>`, 85
-- `<title>`, 72-73
-- `<tr>`, 85
-- `<video>`, 102
+
+`<audio>`, 102
+
+`<button>`, 89
+
+`<caption>`, 85
+
+`<col>`, 85
+
+`<colgroup>`, 85
+
+`<fieldset>`, 89
+
+`<form>`, 88
+
+`<img`, 83-84
+
+`<input>`, 89
+
+`<label>`, 89
+
+`<legend>`, 89
+
+`<link>`, 76-77
+
+`<meta>`, 73-74
+
+`<noscript>`, 76
+
+`<option>`, 89
+
+`<script>`, 75
+
+`<select>`, 89
+
+`<style>`, 74, 82
+
+`<table>`, 85
+
+`<tbody>`, 85
+
+`<textarea>`, 89
+
+`<tfoot>`, 85
+
+`<th>`, 85
+
+`<thead>`, 85
+
+`<title>`, 72-73
+
+`<tr>`, 85
+
+`<video>`, 102
 
 # target 属性 (事件对象), 237
+
 # `<tbody>` 标签, 85
+
 # 模板定义属性 (AngularJS), 658
-# 模板 (Angular JS), 550, 599-600, 623, 650
+
+# 模板 (AngularJS), 550, 599-600, 623, 650
+
 - 指令, 599, 627
+
 - 向...添加控制器, 661-662
+
 - 内置, 628-653
+
 - 配置 scope, 663-664
+
 - 创建自定义的, 657-668
+
 - 指令模板, 659-660
+
 - 实现自定义, 668-680
+
 - 在...中实现事件处理器, 672-674
+
 - 在...中操作 DOM, 668-670
+
 - 使用 `compile()` 操作 DOM, 634-636
+
 - 使用 `link()` 操作 DOM, 665-667
+
 - 嵌套的, 677-680
+
 - 限制行为, 660-661
+
 - 排除元素, 664-665
+
 - 表达式, 599-609
+
 - 基础, 602-603
+
 - JavaScript, 608-609
+
 - scope, 604-606
+
 - 过滤器, 599, 611-618
+
 - 内置, 612
+
 - 自定义, 620-621
+
 - 数据渲染, 613-615
+
 - 排序和排序, 616-618
+
 - scope 之间的关系, 587-589
+
 - 服务端, 17-18
-# templateUrl 定义属性 (AngularJS), 658
-# terminal 定义属性 (AngularJS), 658
+
+# `templateUrl` 定义属性 (AngularJS), 658
+
+# `terminal` 定义属性 (AngularJS), 658
+
 # 文本元素，Web 表单，访问, 349-350
+
 # `text()` 方法, 561
+
 # 文本响应，AJAX 请求, 427
+
 # 文本样式 (CSS), 应用, 113-119
-
-
-
-
 
 `text_styles.css` 列表 (4.2), 118-119
 
@@ -25516,7 +25111,8 @@ jQuery, 258-262
 
 `Type` 项目 (流量分析器), 64
 
-### UI
+## UI
+
 `UI` (用户界面) (jQuery), 457, 472, 475, 492
 
 添加并移除 ID, 463
@@ -25563,7 +25159,7 @@ JavaScript, 457-458
 
 交互, 495
 
-jQuery.widget, 495
+`jQuery.widget`, 495
 
 鼠标交互, 495
 
@@ -25609,246 +25205,421 @@ jQuery.widget, 495
 
 `URLs` (统一资源定位符), 11
 
-### V
+## V
+
 `val()` 方法, 199, 561
-
-
-
-
 
 # `validate()` 方法，376-387
 
 # 验证，Web 表单，375-387
+
 - 添加消息，378-380
+
 - 添加规则，377-378
+
 - 复杂验证，377-384
+
 - jQuery 验证插件，376
+
 - 结合 HTML 的 jQuery 验证，376-377
+
 - 手动操作，375
+
 - 放置消息，380-384
 
 # 验证器对象消息，378-380
 
-# value 属性（DOM 对象），198
+# `value` 属性（DOM 对象），198
 
-# value 选项（滑块组件），526
+# `value` 选项（滑块组件），526
 
-# value 服务（AngularJS），定义，732
+# `value` 服务（AngularJS），定义，732
 
-# value spinner 元素，添加，538-539
+# `value` spinner 元素，添加，538-539
 
 # `valueOf()` 方法，177, 182
 
 # 值
+
 - JavaScript 对象，分配新值，174-175
+
 - Web 表单元素，获取和设置，348-353
 
 # 变量（JavaScript）
+
 - 创建，151-152
+
 - 作用域，167-168
+
 - 使用 `$watch` 跟踪，687
 
 # `<video>` 标签，102
 
 # 视图（AngularJS），550
+
 - 构建标签页，751-755
+
 - 指令，627
+
 - 内置的，628-653
+
 - 创建自定义，657-668
+
 - 模板，599-600
+
 - 自定义过滤器，620-621
+
 - 指令，599
+
 - 表达式，599-609
+
 - 过滤器，599, 611-618
 
 # 可见性
+
 - 动画化，329-332
+
 - 切换元素，286-287
+
 - 可见性设计（CSS），131
+
 - 可见性选择器（jQuery），210
+
 - `visibility_transitions.css` 列表，488-489
+
 - `visibility_transitions.html` 列表，490-488
+
 - `visibility_transitions.js` 列表，488
+
 # Watch 格（调试器），57-58
+
 - watcher 阶段（AngularJS），592
+
 - Web 环境设置，21-32
+
 - Web 表单，347-387
+
 - 访问隐藏输入，353
+
 - 控制提交和重置，362-364
+
 - 元素，348-360
+
 - 动画化，368-370
+
 - 自动聚焦和失去焦点，361
+
 - 按钮输入，352
+
 - 选框，350
+
 - 禁用，362
+
 - 动态控制外观和行为，368-374
+
 - 文件输入，352-353
+
 - 隐藏和显示，361
+
 - 获取和设置值，348-353
+
 - 单选框输入，350-351
+
 - 选择输入，351-352
+
 - 文本输入，349-350
+
 - 流程控制，361-368
+
 - 动态，362-364
+
 - 序列化数据，354-360
+
 - 验证，375-387
+
 - 添加消息，378-380
+
 - 添加规则，377-378
+
 - 复杂验证，377-384
+
 - jQuery，381-384
+
 - jQuery 验证插件，376
+
 - 结合 HTML 的 jQuery 验证，376-377
+
 - 手动操作，375
+
 - 放置消息，380-384
 
 # Web 页面。参见 *elements (HTML)*，45
+
 - 访问元素值，270-281
+
 - 获取和设置值，271
+
 - 获取鼠标位置，270
+
 - 添加 CSS，29-30, 105-108
+
 - 可拖拽图像，498-501
+
 - HTML，29
+
 - 图像库，391-397
+
 - jQuery UI，461-462
+
 - sparkline 图形，417-421
+
 - 动画，321-325
+
 - 将按钮应用于表控件，528-530
+
 - Bootstrap AngularJS，555
+
 - 日历输入，530-531
+
 - Cookie，获取和设置，308-313
+
 - 创建进度条，355-356
+
 - 树视图，404-408
+
 - 动态，69
+
 - HTML 文档结构，70-72
+
 - HTML 元素，69-70
 
 # 效果
+
 - 添加到类过渡，482-485
+
 - 添加到元素可见性过渡，485-491
+
 - 使用 jQuery UI 应用，475-482
 
 # 元素
+
 - 拖拽并放置，502-507
+
 - 可展开手风琴，526-527
+
 - 实现自动补全表单，528-530
+
 - 定位，273-274
+
 - 可调整大小，508-511
+
 - 可选集，512-516
+
 - 排序，516-522
 
-
-
-
-
 ## 通用
+
 - 外部链接，308
+
 - 强制在新浏览器窗口中打开，308-311
+
 - 停止，308
+
 - 实现图形化均衡器显示，413-417
+
 - 菜单，样式化实现，533-535
+
 - 覆盖层对话框，409-413
+
 - 弹出框，添加，313-314
+
 - 图像定位，jQuery UI，469-472
+
 - 设置定时器，314-317
+
 - 滑块条，536-538
+
 - 特殊特效，321
+
 - 样式化对话框，532-533
+
 - 标签面板，539-542
+
 - 表格，带排序和过滤的实现，397-404
+
 - 提示文字，542-544
 
 ## Web 服务器与浏览器
+
 - Web 服务器/浏览器范式，9-20
+
 - Web 服务器，10
+
 - 客户端脚本，16-17
+
 - 开发，21
+
 - Express，创建，26-29
+
 - Web 服务器/浏览器范式，9-20
 
 ## Web 文件
+
 - `web_element_manipulation.css` 列表 (10.6)，291-292
+
 - `web_element_manipulation.html` 列表 (10.4)，290
+
 - `web_element_manipulation.js` 列表 (10.5)，290-291
+
 - `web_layout.css` 列表 (4.7)，139-140
+
 - `web_layout.html` 列表 (4.6)，136-139
+
 - `web_page_manipulation.css` 列表 (10.3)，281
+
 - `web_page_manipulation.html` 列表 (10.1)，279-280
+
 - `web_page_manipulation.js` 列表 (10.2)，280-281
 
 ## JavaScript 与逻辑
+
 - 哪个属性（事件对象），237
+
 - while 循环（JavaScript），160-161
 
 ## jQuery Widgets
+
 - `widget()` 方法，495
-- (jQuery)，495,522,525
+
+- (jQuery)，495, 522, 525
+
 - 自动完成，527-530
+
 - 创建自定义，544-545
+
 - 日期选择器，530-531
+
 - 对话框，532-533
+
 - 拖放目标，497-507
+
 - 可拖拽，497-507
+
 - 拖拽中的元素，497-507
+
 - 可放置组件，497-507
+
 - 事件，495
+
 - 可展开面板元素，526-527
+
 - 交互，495-496
+
 - `jQuery.widget` 工厂，495-496
+
 - 鼠标交互组件，496
+
 - 方法，495
+
 - 进度条，535-536
+
 - 可调整大小，507-511
+
 - 预览，525
+
 - 可选择，511-516
+
 - 滑块，536-538
+
 - 可排序，516-522
+
 - 旋转器，538-539
+
 - 标签页，539-542
+
 - 提示文字，542-544
 
 ### Widget 文件
+
 - `widgets_accordian.html` 列表 (19.1)，527
+
 - `widgets_autocomplete.html` 列表 (19.2)，528
+
 - `widgets_calendar.html` 列表 (19.4)，531
+
 - `widgets_custom.html` 列表 (19.12)，544-545
+
 - `widgets_dialogs.html` 列表 (19.5)，533
+
 - `widgets_menus.html` 列表 (19.6)，534-535
+
 - `widgets_progress_bars.html` 列表 (19.7)，536
+
 - `widgets_slider_bars.htm` 列表 (19.8)，537-538
+
 - `widgets_spinner.html` 列表 (19.9)，539
+
 - `widgets_tabs.html` 列表 (19.10)，541-542
+
 - `widgets_tooltips.html` 列表 (19.11)，543-544
 
 ### Object Methods
-- `width()`，199,273
+
+- `width()`，199, 273
+
 - `width` 属性（屏幕对象），304
+
 - `window`，浏览器，11
+
 - `window` 对象，304-305
+
 - 方法，305
+
 - 属性，304
+
 - `window.location` 对象，包装器，721-724
-- `withCredentials` 属性（配置参数），$http 请求，702
+
+- `withCredentials` 属性（配置参数），`$http` 请求，702
+
 - 字符串中的单词，179
+
 - 字间距属性（CSS），115
+
 - `working_event.css` 列表 (9.6)，252
+
 - `working_event.html` 列表 (9.4)，251-252
+
 - `working_event.js` 列表 (9.5)，252
+
 - `wrap()` 方法，562
+
 - `writeIt()` 函数，168
+
 - 编写动态脚本，31-32
 
 ## X
+
 - XML 响应，AJAX 请求，427
+
 - 数据数据，439-444
+
 - `XMLHttpRequest` 对象，428
-- `xsrfCookieName` 属性（配置参数），$http 请求，702
+
+- `xsrfCookieName` 属性（配置参数），`$http` 请求，702
+
 - `x.toExponential()` 方法，175
+
 - `x.toFixed()` 方法，175
+
 - `x.toPrecision()` 方法，175
+
+
+
 - `x.toString()` 方法，175
 - `x.valueOf()` 方法，175
 
 ## Z
+
 - `zIndex()` 方法，463
 - `zIndex` 选项，497
 - 可拖拽组件，497
@@ -25858,18 +25629,8 @@ jQuery.widget, 495
 - 缩放视图字段，图像，添加，761-764
 - `zooming.html` 列表 (19.9)，763-764
 - `zooming.js` 列表 (29.7)，762-763
-
-
-
-
-
-`zoomit.html` 列表 (29.8), 763
+- `zoomit.html` 列表 (29.8), 763
 
 ## 代码片段
 
-
-
-
-
-![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image![Image
-
+![Image](path/to/image)

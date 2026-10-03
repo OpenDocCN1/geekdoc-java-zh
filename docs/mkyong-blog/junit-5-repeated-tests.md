@@ -1,3 +1,4 @@
+
 # JUnit 5 重复测试
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/junit5/junit-5-repeated-tests/>
@@ -8,14 +9,14 @@
 
 *用 JUnit 5.5.2 测试的 PS*
 
-## 1.@重复测试
+## 1. `@RepeatedTest`
 
-1.1`@RepeatedTest`测试方法就像常规的`@Test`方法一样，相同的生命周期。
+1.1 `@RepeatedTest`测试方法就像常规的`@Test`方法一样，相同的生命周期。
 
-RepeatedSample1Test.java
+`RepeatedSample1Test.java`
 
 ```java
- package com.mkyong.repeated;
+package com.mkyong.repeated;
 
 import org.junit.jupiter.api.*;
 
@@ -56,7 +57,7 @@ public class RepeatedSample1Test {
         assertEquals(2, 1 + 1);
     }
 
-} 
+}
 ```
 
 IDE 中的输出。
@@ -66,7 +67,7 @@ IDE 中的输出。
 控制台中的输出。
 
 ```java
- beforeAll
+beforeAll
 
 beforeEach
 Run math_add_1()
@@ -92,17 +93,17 @@ beforeEach
 Run math_add_2()
 afterEach
 
-afterAll 
+afterAll
 ```
 
-## 2.自定义测试名称
+## 2. 自定义测试名称
 
 2.1 我们可以配置`@RepeatedTest`方法的名称。
 
-RepeatedSample2Test.java
+`RepeatedSample2Test.java`
 
 ```java
- package com.mkyong.repeated;
+package com.mkyong.repeated;
 
 import org.junit.jupiter.api.RepeatedTest;
 
@@ -128,7 +129,7 @@ public class RepeatedSample2Test {
         assertEquals(2, 1 + 1);
     }
 
-} 
+}
 ```
 
 IDE 中的输出。
@@ -137,18 +138,18 @@ IDE 中的输出。
 
 注意
 
-*   `{displayName}`:测试方法的名称。
-*   `{currentRepetition}`:当前重复次数。
-*   `{totalRepetitions}`:总重复次数。
+* `{displayName}`：测试方法的名称。
+* `{currentRepetition}`：当前重复次数。
+* `{totalRepetitions}`：总重复次数。
 
-## 3.重复信息
+## 3. 重复信息
 
 3.1 我们也可以将`RepetitionInfo`作为参数注入，并访问`@RepeatedTest`的元数据。
 
-@RepeatedTest.java
+`RepeatedSample3Test.java`
 
 ```java
- package com.mkyong.repeated;
+package com.mkyong.repeated;
 
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.RepetitionInfo;
@@ -163,28 +164,30 @@ public class RepeatedSample3Test {
         assertEquals(3, repetitionInfo.getTotalRepetitions());
     }
 
-} 
+}
 ```
 
 控制台中的输出。
 
 ```java
- Repetition #1
+Repetition #1
 
 Repetition #2
 
-Repetition #3 
+Repetition #3
 ```
 
 ## 下载源代码
 
-$ git clone [https://github.com/mkyong/junit-examples](http://web.archive.org/web/20221225035521/https://github.com/mkyong/junit-examples)
+```
+$ git clone https://github.com/mkyong/junit-examples
 $ cd junit5-examples
 $ check src/test/java/com/mkyong/repeated/*.java
+```
 
-# 参考
+## 参考
 
-*   [JUnit 5 重复测试](http://web.archive.org/web/20221225035521/https://junit.org/junit5/docs/current/user-guide/#writing-tests-repeated-tests)
-*   [重复测试的原因](http://web.archive.org/web/20221225035521/https://www.satisfice.com/reasons-to-repeat-tests)
+* [JUnit 5 重复测试](http://web.archive.org/web/20221225035521/https://junit.org/junit5/docs/current/user-guide/#writing-tests-repeated-tests)
+* [重复测试的原因](http://web.archive.org/web/20221225035521/https://www.satisfice.com/reasons-to-repeat-tests)
 
 <input type="hidden" id="mkyong-current-postId" value="15253">

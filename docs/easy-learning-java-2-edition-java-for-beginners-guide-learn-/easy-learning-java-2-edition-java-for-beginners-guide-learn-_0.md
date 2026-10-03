@@ -1,27 +1,24 @@
+
 # Java 轻松学习（第2版）：初学者指南，快速上手 Java
-
-
 
 ![](img/Image00169.jpg)
 
-
 ![](img/Image00000.jpg)
 
-
-简单是智慧的开始。本书简要解释了相关概念并生动地培养编程兴趣，帮助你快速学习 Java 面对象编程。
+简单是智慧的开始。本书简要解释了相关概念并生动地培养编程兴趣，帮助你快速学习 Java 面向对象编程。
 
 [`en.verejava.com`](http://en.verejava.com)
-
-
 
 1. Java JDK 安装：是一个软件开发环境，提供了开发 Java 应用程序所需的整套工具和库。
 
 ## 1. 下载 JDK (Java 开发工具包)
 
 [`java.com/en/download/`](https://java.com/en/download/)
+
 或 [`en.verejava.com/download.jsp?id=1`](http://en.verejava.com/download.jsp?id=1)
 
 JDK 有很多版本。我们使用 `jdk-8u91-windows-x64.zip` 作为示例。
+
 在 Google Chrome 浏览器中打开链接：[`en.verejava.com/download.jsp?id=1`](http://en.verejava.com/download.jsp?id=1)
 
 ![](img/Image00001.jpg)
@@ -37,61 +34,85 @@ JDK 有很多版本。我们使用 `jdk-8u91-windows-x64.zip` 作为示例。
 ![](img/Image00003.jpg)
 
 点击 Next（下一步）按钮
+
 `C:\Program Files\Java\jdk1.8.0_91\` 是安装路径。
+
 ![](img/Image00004.jpg)
 
 点击 Next（下一步）按钮
+
 安装成功
+
 ![](img/Image00005.jpg)
 
 点击 Close（关闭）按钮
+
 JDK 安装后的目录结构
+
 ![](img/Image00006.jpg)
 
 ## 设置 Java 环境变量
 
-环境变量：是在在操作系统（OS，如 Windows、macOS 和 Linux）下运行的所有进程/用户可访问的全局系统变量。
+环境变量：是在操作系统（OS，如 Windows、macOS 和 Linux）下运行的所有进程/用户可访问的全局系统变量。
 
 例如：
 
 ### 1. 在 Windows 下设置环境变量
 
 右键点击：计算机 -> 属性
+
 ![](img/Image00007.jpg)
 
 点击：高级系统设置
+
 ![](img/Image0008.jpg)
 
 点击：高级 -> 环境变量
+
 ![](img/Image0009.jpg)
 
 点击新建按钮创建三个环境变量
+
 ![](img/Image0010.jpg)
 
 1. `JAVA_HOME` 是一个环境变量，被设置为你电脑上 Java 目录的位置。
+
 `JAVA_HOME=C:\Program Files\Java\jdk1.8.0_91\`
+
 ![](img/Image00011.jpg)
 
 2. `CLASSP`: 是 Java 应用程序执行时查找文件的路径。
+
 `CLASSP=%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;`
+
 ![](img/Image00012.jpg)
+
 ![](img/Image00013.jpg)
 
 3. `PATH`：用于定义系统查找可执行文件（exe）的位置，classpath 用于指定位置。
+
 `PATH=%JAVA_HOME%\bin`
+
 ![](img/Image00014.jpg)
 
 `javac`: 将 Java 代码编译为字节码类文件。
-`java`:  Java 字节码类文件。
+
+`java`: Java 字节码类文件。
+
 ![](img/Image00015.jpg)
 
 三个环境变量设置完成
+
 ![](img/Image0016.jpg)
 
 点击 Ok（确定）按钮
+
 下图所示环境变量安装成功
+
 点击 Windows 图标，输入 `cmd`，点击 `cmd.exe` 打开命令行窗口
+
 输入命令：`java -version`
+
 ![](img/Image00017.jpg)
 
 ## 第一个 Java 程序
@@ -99,18 +120,18 @@ JDK 安装后的目录结构
 ### 1. 安装 Java 开发工具
 
 有很多用于开发 Java 的工具：
+
 - 文本编辑器：Notepad, Notepad++ 等。
+
 - IDE：NetBeans, IDEA, Eclipse 等。
 
 如果你是初学者，我们建议使用 Notepad/Notepad++ 而不是 IDE。
-我觉得当你掌握了足够的 Java 知识和经验时，就是转向使用 IDE 的正确时。
+
+我觉得当你掌握了足够的 Java 知识和经验时，就是转向使用 IDE 的正确时机。
 
 下载 Notepad++.zip
+
 [`en.verejava.com/download.jsp?id=1`](http://en.verejava.com/download.jsp?id=1)
-
-
-
-
 
 点击确定按钮
 
@@ -222,6 +243,7 @@ public class Hello {}
 **变量**：由系统分配的用于存储数据的内存区域。
 
 示例：将 "Apple" 放入篮子
+
 `basket` 是变量，"Apple" 是赋值给 `basket` 的值。
 
 ![](img/Image00026.jpg)
@@ -229,6 +251,7 @@ public class Hello {}
 1. 在 Notepad++ 中创建一个文件：`Variable.java` 保存到目录 `c:\java`
 
 `String`：是一个由双引号 `" "` 包围的字符序列
+
 例如："Apple", "12345", "_name", "Keep going" 等。
 
 ```java
@@ -270,13 +293,19 @@ public class Variable {
 ![](img/Image00029.jpg)
 
 3. 变量命名规则：
+
 1. 由字符、下划线、`$` 组成。
+
 2. 首字母必须是字符或 `$`，而不是数字。
+
 3. 首字母需要小写。
+
 4. 不能使用 java 关键字（保留字）作为变量名。
 
 示例：
+
 正确命名：`name`, `age`, `_salary` 等。
+
 错误命名：`1234`, `2_name`, `a@mail`, `public` 等。
 
 在 Notepad++ 中创建一个文件：`Variable.java` 保存到目录 `c:\java`
@@ -305,14 +334,23 @@ Java 有 8 种基本类型（也称为原始类型）：`byte`, `short`, `int`, 
 每个基本类型的参数如下：
 
 | 类别 | 类型 | 大小(bit) |
+
 | :--- | :--- | :--- |
+
 | 整数 | byte | 1 byte = 8 bits ($-2⁷~2⁷-1$ (-128~127)) |
+
 | | short | 2 bytes = 16 bits |
+
 | | int | 4 bytes = 32 bits |
+
 | | long | 8 bytes = 64 bits |
+
 | 浮点型 | float | 4 bytes = 32 bits |
+
 | | double | 8 bytes = 64 bits |
+
 | 字符 | char | 2 bytes = 16 bits |
+
 | 布尔型 | boolean | 1 byte = 8 bits |
 
 1. 整数 (`byte`, `short`, `int`, `long`)。
@@ -366,11 +404,17 @@ public class DataType {
 转义序列：反斜杠 (`\`) 前的字符是转义序列，对编译器有特殊含义。
 
 | 序列 | 描述 |
+
 | :--- | :--- |
+
 | `\t` | 在此处插入一个制表符。 |
+
 | `\n` | 在此处插入一个换行符。 |
+
 | `\'` | 在此处插入一个单引号字符。 |
+
 | `\"` | 在此处插入一个双引号字符。 |
+
 | `\\` | 在此处插入一个反斜杠字符。 |
 
 `boolean`：布尔数据类型，只能取 `true` 或 `false` 的值。
@@ -394,21 +438,23 @@ public class DataType {
 }
 ```
 
-
-
-
-
 ## 常量 (Constant)
+
 常量：一旦赋值，其值无法改变的变量。
 
 1. 常量的定义需要大写字母。
+
 2. 要定义一个常量，我们只需要在变量前面添加 `final` 关键字。
+
 ```java
 final float PI = 3.14f ;
 ```
+
 `PI` 的值一旦赋值就无法更改。
 
-### 1. 在 Nodepad++ 中创建一个文件：`FinalVariable.java`
+### 1. 在 Notepad++ 中创建一个文件：`FinalVariable.java`
+
+
 
 ```java
 public class FinalVariable {
@@ -424,22 +470,27 @@ public class FinalVariable {
     }
 }
 ```
-打开 `cmd` 输入 `javac FinalVariable.java`，然后输入 `java FinalVariable `。
+
+打开`cmd`输入`javac FinalVariable.java`，然后输入`java FinalVariable`。
 
 ![](img/Image00034.jpg)
 
 ## 类型转换 (Type Casting)
+
 类型转换：是将一个原始数据类型的值赋值给另一种类型。
 
 转换有两种类型：
 
 1. **宽类型转换 (Widening Casting)**：自动将较小的类型转换为较大的类型大小。
+
    `byte -> short -> char -> int -> long -> float -> double`
 
 2. **窄类型转换 (Narrowing Casting)**：手动将较大的类型转换为较小的尺寸类型。
+
    `double -> float -> long -> int -> char -> short -> byte`
 
 ### 1. 宽类型转换
+
 在 Nodepad++ 中创建一个文件：`TypeCasting.java`
 
 ```java
@@ -455,11 +506,13 @@ public class TypeCasting {
     }
 }
 ```
-打开 `cmd` 输入 `javac TypeCasting.java`，然后输入 `java TypeCasting `。
+
+打开`cmd`输入`javac TypeCasting.java`，然后输入`java TypeCasting`。
 
 ![](img/Image00035.jpg)
 
 ### 2. 窄类型转换
+
 在 Nodepad++ 中创建一个文件：`TypeCasting.java`
 
 ```java
@@ -475,19 +528,24 @@ public class TypeCasting {
     }
 }
 ```
-打开 `cmd` 输入 `javac TypeCasting.java`，然后输入 `java TypeCasting `。
+
+打开`cmd`输入`javac TypeCasting.java`，然后输入`java TypeCasting`。
 
 ![](img/Image00036.jpg)
 
 ### 3. char 和 int（宽类型转换和窄类型转换）
-`int` 和 `char` 的转换遵循 ASCII 表。
+
+`int`和`char`的转换遵循 ASCII 表。
 
 ASCII 代表美国信息交换标准代码。下面是 ASCII 字符表，包括前 32 个字符的描述。
 
-* `char 'a'` 转换为 `int` 97
-* `char 'b'` 转换为 `int` 98
-* `int` 99 转换为 `char 'c'`
-* `int` 100 转换为 `char 'd'`
+* `char 'a'`转换为`int` 97
+
+* `char 'b'`转换为`int` 98
+
+* `int` 99 转换为`char 'c'`
+
+* `int` 100 转换为`char 'd'`
 
 ![](img/Image00037.gif)
 
@@ -507,11 +565,13 @@ public class TypeCasting {
     }
 }
 ```
-打开 `cmd` 输入 `javac TypeCasting.java`，然后输入 `java TypeCasting `。
+
+打开`cmd`输入`javac TypeCasting.java`，然后输入`java TypeCasting`。
 
 ![](img/Image0038.jpg)
 
 ## 算术运算符 (Arithmetic Operator)
+
 算术运算符：用于执行数学运算：`+`, `-`, `*`, `/`, `%`。
 
 ![](img/Image0039.jpg)
@@ -532,16 +592,22 @@ public class Arithmetic {
     }
 }
 ```
-打开 `cmd` 输入 `javac Arithmetic.java`，然后输入 `java Arithmetic `。
+
+打开`cmd`输入`javac Arithmetic.java`，然后输入`java Arithmetic`。
 
 ![](img/Image0040.jpg)
 
 ## 方法 (Method)
+
 方法：是一个代码块，只有在被调用时运行。你可以向方法传递数据，并多次调用它。
 
 ![](img/Image0041.jpg)
+
 ![](img/Image0042.jpg)
-![](img/Image0043.gif)### 1. 在 Nodepad++ 中创建一个文件：`TestMethod.java`
+
+![](img/Image0043.gif)
+
+### 1. 在 Nodepad++ 中创建一个文件：`TestMethod.java`
 
 ```java
 public class TestMethod {
@@ -556,9 +622,12 @@ public class TestMethod {
     }
 }
 ```
-打开 `cmd` 输入 `javac TestMethod.java`，然后输入 `java TestMethod `。
 
-![](img/Image0044.jpg)### 2. 添加方法 *, /
+打开`cmd`输入`javac TestMethod.java`，然后输入`java TestMethod`。
+
+![](img/Image0044.jpg)
+
+### 2. 添加方法 *, /
 
 ```java
 public class TestMethod {
@@ -573,7 +642,9 @@ public class TestMethod {
     }
 }
 ```
+
 *(注：此处根据原文逻辑重复翻译，以匹配用户提供的原始文本结构)*
+
 ```java
 public class TestMethod {
     // 定义 add 方法
@@ -589,7 +660,9 @@ public class TestMethod {
 }
 }
 ```
+
 *(注：此处根据原文逻辑重复翻译，以匹配用户提供的原始文本结构)*
+
 ```java
 public class TestMethod {
     // 定义 add 方法
@@ -606,9 +679,11 @@ public class TestMethod {
 }
 }
 ```
+
 *(注：原文中存在多处重复和格式断裂，此处已按原文内容逐行进行对应翻译)*
 
 ## 类 (Class)
+
 类：是创建对象的蓝图。Java 中的所有内容与类相关，以及属性和方法。
 
 ![](img/Image0045.jpg)
@@ -646,10 +721,12 @@ public class TestMethod {
 ```
 
 ## 包 (Package)
+
 包：用于分组相关的类。将包视为文件目录中的文件夹。
 
 示例：
-在目录 c:/java 中创建 java 文件 `TestClass.java` 和 `Caculator.java`
+
+在目录`c:/java`中创建 java 文件`TestClass.java`和`Caculator.java`
 
 ![](img/Image0046.gif)
 
@@ -666,25 +743,22 @@ public class Caculator {
     }
 }
 ```
-打开 `cmd` 输入 `javac com/tool/Caculator.java`
 
-编译 `com/tool/Caculator.java` 到 `com/tool/Caculator.class`
+打开`cmd`输入`javac com/tool/Caculator.java`
 
-
-
-
+编译`com/tool/Caculator.java`到`com/tool/Caculator.class`
 
 ![](img/Image00047.jpg)
 
 ### 2. TestClass.java
 
-如果我们想使用 `com.tool` 包中的 `Caculator` 类。
+如果我们想使用`com.tool`包中的`Caculator`类。
 
-我们需要导入包中的 `Caculator`：`import com.tool.Caculator;`
+我们需要导入包中的`Caculator`：`import com.tool.Caculator;`
 
 或者
 
-导入整个包：`import com.tool.*;;`
+导入整个包：`import com.tool.*;`
 
 ```java
 import com.tool.Caculator; // 导入包中的 Caculator
@@ -699,17 +773,17 @@ public class TestClass {
 }
 ```
 
-打开 `cmd` 输入 `javac TestClass.java` 然后输入 `java TestClass`。
+打开`cmd`输入`javac TestClass.java`然后输入`java TestClass`。
 
 ![](img/Image00048.jpg)
 
 ## 递增与递减
 
-递增 `++`：一元运算符，将变量的值加 1。
+递增`++`：一元运算符，将变量的值加 1。
 
-递减 `--`：一元运算符，将变量的值减 1。
+递减`--`：一元运算符，将变量的值减 1。
 
-1.  在 Notepad++ 中创建一个文件：`Unary.java`
+1. 在 Notepad++ 中创建一个文件：`Unary.java`
 
 ```java
 public class Unary {
@@ -735,15 +809,17 @@ public class Unary {
 }
 ```
 
-打开 `cmd` 输入 `javac Unary.java` 然后输入 `java Unary`。
+打开`cmd`输入`javac Unary.java`然后输入`java Unary`。
 
 你将能够在窗口上看到打印的结果。
 
 ## 关系运算符
 
-关系运算符：用于比较两个变量是否相等、不相等、大于、小于等，始终返回一个布尔值：`true` 或 `false`。
+关系运算符：用于比较两个变量是否相等、不相等、大于、小于等，始终返回一个布尔值：`true`或`false`。
 
-1.  创建一个文件：`Relational.java`
+1. 创建一个文件：`Relational.java`
+
+
 
 ```java
 public class Relational {
@@ -758,7 +834,7 @@ public class Relational {
 }
 ```
 
-打开 `cmd` 输入 `javac Relational.java` 然后输入 `java Relational`。
+打开`cmd`输入`javac Relational.java`然后输入`java Relational`。
 
 ![](img/Image00049.jpg)
 
@@ -766,11 +842,11 @@ public class Relational {
 
 逻辑运算符：`&&`、`||`、`!`
 
-1.  `&&` 如果操作的两侧都为真，则返回 true，否则返回 false
-2.  `||` 如果操作的两侧都为假，则返回 false，否则返回 true
-3.  `!` 如果结果为假，则返回真，否则为真
+1. `&&` 如果操作的两侧都为真，则返回 `true`，否则返回 `false`
+2. `||` 如果操作的两侧都为假，则返回 `false`，否则返回 `true`
+3. `!` 如果结果为假，则返回真，否则为真
 
-1.  创建一个文件：`Logical.java`
+1. 创建一个文件：`Logical.java`
 
 ```java
 public class Logical {
@@ -794,11 +870,11 @@ public class Logical {
 }
 ```
 
-打开 `cmd` 输入 `javac Logical.java` 然后输入 `java Logical`。
+打开`cmd`输入`javac Logical.java`然后输入`java Logical`。
 
 你将能够在窗口上看到打印的结果。
 
-2.  创建一个文件：`Logical2.java`
+2. 创建一个文件：`Logical2.java`
 
 ```java
 public class Logical2 {
@@ -816,13 +892,13 @@ public class Logical2 {
 }
 ```
 
-打开 `cmd` 输入 `javac Logical2.java` 然后输入 `java Logical2`。
+打开`cmd`输入`javac Logical2.java`然后输入`java Logical2`。
 
 你将能够在窗口上看到打印的结果。
 
 ## if 语句
 
-### if 
+### if
 
 ```java
 if (condition1) {
@@ -835,11 +911,12 @@ if (condition1) {
 ```
 
 得分示例：
+
 - `if score == 5`: 优秀
 - `else score == 4`: 好
 - `else`: 需要提高
 
-1.  创建一个 `IfStatement.java`
+1. 创建一个`IfStatement.java`
 
 ```java
 public class IfStatement {
@@ -856,13 +933,13 @@ public class IfStatement {
 }
 ```
 
-打开 `cmd` 输入 `javac IfStatement.java` 然后输入 `java IfStatement`。
+打开`cmd`输入`javac IfStatement.java`然后输入`java IfStatement`。
 
 结果：优秀
 
 2. 从键盘获取用户输入
 
-`Scanner`: 类用于获取用户输入，它位于 `java.util` 包中。要使用 `Scanner` 类，需要创建该类的对象。在示例中，我们将使用 `nextInt()` 方法从用户输入读取 `int` 值。
+`Scanner`：类用于获取用户输入，它位于`java.util`包中。要使用`Scanner`类，需要创建该类的对象。在示例中，我们将使用`nextInt()`方法从用户输入读取`int`值。
 
 ```java
 import java.util.Scanner; // 导入 Scanner 类
@@ -882,19 +959,19 @@ public class IfStatement {
 }
 ```
 
-打开 `cmd` 输入 `javac IfStatement.java` 然后输入 `java IfStatement`。
+打开`cmd`输入`javac IfStatement.java`然后输入`java IfStatement`。
 
 ## switch
 
-`switch`: switch 语句用于选择多个代码块中的一个执行。
+`switch`：`switch`语句用于选择多个代码块中的一个执行。
 
-switch 表达式求值一次。
+`switch`表达式求值一次。
 
-表达式的值与每个 `case` 的值进行比较。如果匹配，则执行相应的代码块。
+表达式的值与每个`case`的值进行比较。如果匹配，则执行相应的代码块。
 
-`break` 关键字会跳出 switch 块。
+`break`关键字会跳出`switch`块。
 
-`default` 关键字指定在没有匹配项时运行某些代码。
+`default`关键字指定在没有匹配项时运行某些代码。
 
 ```java
 switch (expression) {
@@ -909,7 +986,8 @@ switch (expression) {
 }
 ```
 
-得分示例：使用 switch 语句替换 if 语句：
+得分示例：使用`switch`语句替换`if`语句：
+
 - `if score == 5`: 优秀
 - `else score == 4`: 好
 - `else`: 需要提高
@@ -926,10 +1004,6 @@ switch (score) {
         System.out.println("Need to catch up");
 }
 ```
-
-
-
-
 
 ## switch 语句
 
@@ -954,13 +1028,13 @@ public class SwitchStatement {
 }
 ```
 
-打开 `cmd` 输入 `javac SwitchStatement.java` 然后输入 `java SwitchStatement`。
+打开`cmd`输入`javac SwitchStatement.java`然后输入`java SwitchStatement`。
 
 ![](img/Image00051.jpg)
 
 ## while 循环
 
-`while` 循环：只要指定的条件为真，就会循环执行代码块。
+`while`循环：只要指定的条件为真，就会循环执行代码块。
 
 ```java
 while (condition) {
@@ -970,7 +1044,7 @@ while (condition) {
 
 1. 创建一个文件：`WhileLoop.java`
 
-只要变量 `i` 小于 3，循环中的代码就会反复执行：
+只要变量`i`小于 3，循环中的代码就会反复执行：
 
 ```java
 public class WhileLoop {
@@ -988,7 +1062,7 @@ public class WhileLoop {
 
 ## do while 循环
 
-`do while` 循环：先执行一次代码块，检查条件是否为真，如果条件为真，则重复循环。
+`do while`循环：先执行一次代码块，检查条件是否为真，如果条件为真，则重复循环。
 
 ```java
 do {
@@ -998,7 +1072,7 @@ do {
 
 1. 创建一个文件：`DoWhile.java`
 
-只要变量 `i` 小于 3，循环中的代码就会反复执行：
+只要变量`i`小于 3，循环中的代码就会反复执行：
 
 ```java
 public class DoWhile {
@@ -1012,7 +1086,7 @@ public class DoWhile {
 }
 ```
 
-打开 `cmd` 输入 `javac DoWhile.java` 然后输入 `java DoWhile`。
+打开`cmd`输入`javac DoWhile.java`然后输入`java DoWhile`。
 
 ![](img/Image00053.jpg)
 
@@ -1033,7 +1107,7 @@ While ( num!= 0 ){
 
 ![](img/Image00055.jpg)
 
-1. 创建 `WhileLoopGames.java`
+1. 创建`WhileLoopGames.java`
 
 ```java
 import java.util.Scanner;
@@ -1059,16 +1133,19 @@ public class WhileLoopGames {
 }
 ```
 
-打开 `cmd` 输入 `javac WhileLoopGames.java` 然后输入 `java WhileLoopGames`。
+打开`cmd`输入`javac WhileLoopGames.java`然后输入`java WhileLoopGames`。
 
 ![](img/Image00056.jpg)
 
 ## for 循环
 
-`for` 循环：精确控制循环执行代码块的次数。
-`Statement 1` 在代码块执行前执行一次。
-`Statement 2` 定义执行代码块的条件。
-`Statement 3` 在每次代码块执行完后执行一次。
+`for`循环：精确控制循环执行代码块的次数。
+
+`Statement 1`在代码块执行前执行一次。
+
+`Statement 2`定义执行代码块的条件。
+
+`Statement 3`在每次代码块执行完后执行一次。
 
 ```java
 for (statement 1; statement 2; statement 3) {
@@ -1076,7 +1153,7 @@ for (statement 1; statement 2; statement 3) {
 }
 ```
 
-1. 创建 `ForLoop.java` 打印数字 0 到 2：
+1. 创建`ForLoop.java`打印数字 0 到 2：
 
 ```java
 public class ForLoop {
@@ -1088,7 +1165,8 @@ public class ForLoop {
 }
 ```
 
-打开 `cmd` 输入 `javac ForLoop.java` 然后输入 `java ForLoop`。
+打开`cmd`输入`javac ForLoop.java`然后输入`java ForLoop`。
+
 结果：`0 , 1 , 2 ,`
 
 ![](img/Image00057.gif)
@@ -1114,8 +1192,10 @@ public class PrintBall {
 }
 ```
 
-打开 `cmd` 输入 `javac PrintBall.java` 然后输入 `java PrintBall`。
+打开`cmd`输入`javac PrintBall.java`然后输入`java PrintBall`。
+
 结果：
+
 ```
 * * * * * * * *
 * * * * * * * *
@@ -1130,9 +1210,12 @@ public class PrintBall {
 ## continue 和 break
 
 `break`：可以用于跳出循环。
+
 `continue`：中断当前迭代并继续循环的下一次迭代。
 
-1. 创建 `BreakLoop.java`，当 `i==1` 时跳出循环：
+1. 创建`BreakLoop.java`，当`i==1`时跳出循环：
+
+
 
 ```java
 public class BreakLoop {
@@ -1146,7 +1229,8 @@ public class BreakLoop {
     }
 }
 ```
-结果：0
+
+结果：`0`
 
 2. 创建 `ContinueLoop.java`，当 `i==1` 时跳过当前迭代：
 
@@ -1162,11 +1246,12 @@ public class ContinueLoop {
     }
 }
 ```
-结果：0, 2
+
+结果：`0, 2`
 
 ## 一维数组
 
-数组用于在单个变量中存储多个值。声明数组使用方括号：`int[] scores`。通过索引访问数组元素：`[0]` 是第一个，`[1]` 是第二个，以此此类推。
+数组用于在单个变量中存储多个值。声明数组使用方括号：`int[] scores`。通过索引访问数组元素：`[0]` 是第一个，`[1]` 是第二个，以此类推。
 
 ![](img/00059.jpg)
 
@@ -1186,6 +1271,7 @@ public class Array {
 2. 数组长度
 
 `length`：数组有多少个元素，使用 `length` 属性。
+
 创建 `Array2.java`：
 
 ```java
@@ -1198,7 +1284,8 @@ public class Array2 {
     }
 }
 ```
-结果：90,70,50,80,60,
+
+结果：`90,70,50,80,60,`
 
 ## 二维数组
 
@@ -1248,10 +1335,6 @@ public class TwoArray2 {
 }
 ```
 
-
-
-
-
 ```java
 public class BinaryArray2 {
     public static void main(String[] args) {
@@ -1271,7 +1354,8 @@ public class BinaryArray2 {
 }
 ```
 
-结果:
+结果：
+
 ```
 10 20 30
 40 50 60
@@ -1313,7 +1397,8 @@ public class TestPerson {
 
 打开命令行并输入 `javac TestPerson.java`，然后输入 `java TestPerson`。
 
-结果:
+结果：
+
 ```
 我的名字是: Joseph, 今年今年 22 岁了
 ```
@@ -1323,21 +1408,29 @@ public class TestPerson {
 封装：是将数据包装成一个单一单元的机制。类的变量将对其他类隐藏，并且只能通过当前类的方法进行访问。
 
 ### 实现封装：
+
 - 将类的变量声明为 `private`（私有）。
-- 提供公共（public）setter 和 getter 方法来设置和获取变量的值。
+
+- 提供公共（`public`）`setter` 和 `getter` 方法来设置和获取变量的值。
 
 ### 示例：
+
 - 在 `Person` 类中将 `name` 和 `age` 声明为 `private`。
+
 - 提供公共的 `setName(String name)` 和 `getName()` 来设置和获取 `name` 的值。
+
 - 提供公共的 `setAge(String age)` 和 `getAge()` 来设置和获取 `age` 的值。
 
 ![](img/Image00063.jpg)
 
 字体 注意：
+
 1. 类中定义的变量被称为成员变量。
+
 2. 在方法中定义的变量被称为局部变量。
 
 为了区分成员变量和局部变量，在成员变量前添加：
+
 `this`：指代方法中的当前对象。
 
 ![](img/Image00064.gif)
@@ -1376,7 +1469,8 @@ public class TestEncapsulation {
 
 打开命令行并输入 `javac TestEncapsulation.java`，然后输入 `java TestEncapsulation`。
 
-结果:
+结果：
+
 ```
 Joseph 22
 ```
@@ -1386,11 +1480,15 @@ Joseph 22
 构造方法：用于初始化对象。当创建对象时，构造方法会被自动调用。它可以用于为属性设置初始值。构造方法的名称必须与类名匹配，且没有返回类型。所有类默认都有构造方法：如果你没有创建类，Java 会自动为你创建一个。
 
 ### 示例：
+
 - 定义一个 `Person` 类
+
 - 创建一个不带参数的构造方法：`Person()`
+
 - 创建一个带有两个参数的构造方法：`Person(String name, int age)`
 
 ![](img/Image00065.jpg)
+
 ![](img/Image00066.gif)
 
 ### 1. 创建文件：`TestConstructor.java`
@@ -1422,7 +1520,8 @@ public class TestConstructor {
 }
 ```
 
-结果:
+结果：
+
 ```
 调用了不带参数的构造方法
 我的名字是: null, 今年今年 0 岁了
@@ -1435,6 +1534,7 @@ public class TestConstructor {
 方法重载：是指在同一个类中，`add(int a, int b)` 和 `add(double a, double b)` 具有相同的方法名但不同的参数列表。
 
 示例：
+
 ```java
 class Calculator {
     public int add(int a, int b) {
@@ -1453,15 +1553,12 @@ public class Test {
 }
 ```
 
-结果:
+结果：
+
 ```
 30
 31.0
 ```
-
-
-
-
 
 ```java
 class User {
@@ -1483,7 +1580,8 @@ public class TestStatic {
 }
 ```
 
-Result:
+结果：
+
 ```
 User Count : 2
 User Count : 2
@@ -1491,24 +1589,31 @@ User Count : 2
 
 ## 继承
 
-`继承`: 是一种机制，一个对象可以获取父对象的所有属性和方法。
+`继承`：是一种机制，一个对象可以获取父对象的所有属性和方法。
 
 ### 示例：`Student` 继承 `Person`
 
 ### 步骤：
+
 1. 类：`Student`, `Person`
+
 2. 关系：`Student` 扩展 `Person`
+
 3. 属性：`Person` 的属性 (`name`, `age`）
+
 4. 方法：`Person` 的动作 (`say`)
 
 `Person` 被称为父类或超类
+
 `Student` 被称为 `Person` 的子类或 `Person` 的子类
 
 ![](img/Image00071.gif)
 
 ### 注意：
-1. 子类无法访问父类的私有（private）属性和方法
-2. 子类可以访问父类的保护（protected）和公共（public）属性、方法
+
+1. 子类无法访问父类的私有（`private`）属性和方法
+
+2. 子类可以访问父类的保护（`protected`）和公共（`public`）属性、方法
 
 ### 1. 创建一个文件：`TestInheritence.java`
 
@@ -1535,7 +1640,8 @@ public class TestInheritence {
 }
 ```
 
-Result:
+结果：
+
 ```
 Person can speaking
 ```
@@ -1543,12 +1649,16 @@ Person can speaking
 ### 2. 继承关系中构造方法的调用顺序
 
 如果父类有无参数的构造方法：
+
 - 首先调用父类的无参数构造方法
 
 如果子类有无参数的构造方法：
+
 - 紧接着调用子类的无参数构造方法
 
 **创建一个文件：`TestInheritence.java`**
+
+
 
 ```java
 class Person {
@@ -1575,6 +1685,7 @@ public class TestInheritence {
 ```
 
 Result:
+
 ```
 Parent class Person is created
 Child class Student is created
@@ -1583,12 +1694,16 @@ Person can speaking
 
 ## 方法重写
 
-`重写`: 子类重写了父类的方法，子类的实例将调用子类的方法，而不是调用父类的方法。
+`重写`：子类重写了父类的方法，子类的实例将调用子类的方法，而不是调用父类的方法。
 
 ### 示例：
+
 1. 创建一个父类：`Person`，其中有一个方法：`say()`
+
 2. 创建一个子类：`ChineseStudent`，有一个相同的方法：`say()`
+
 3. 创建一个子类：`AmericaStudent`，有一个相同的方法：`say()`
+
 `ChineseStudent` 和 `AmericaStudent` 的 `say()` 将重写 `Person` 的 `say()`
 
 ![](img/Image00072.jpg)
@@ -1625,6 +1740,7 @@ public class TestOverride {
 ```
 
 Result:
+
 ```
 Speak Chinese
 Speak English
@@ -1632,11 +1748,14 @@ Speak English
 
 ## super 关键字
 
-`super`: 可以用于引用父类变量。
+`super`：可以用于引用父类变量。
 
 ### 示例：
+
 1. 创建一个父类：`Person`，其中有一个方法：`say()`
+
 2. 创建一个子类：`Student`，有一个相同的方法：`say()`
+
 `Student` 的 `say()` 将重写 `Person` 的 `say()`，子类的实例将调用子类的 `say()` 方法，而不是调用父类的 `say()` 方法。如果你想调用父类的 `say()` 方法，需要像这样调用 `super.say()`。
 
 **创建一个文件：`TestSuper.java`**
@@ -1664,6 +1783,7 @@ public class TestSuper {
 ```
 
 Result:
+
 ```
 Person speaking
 Speak English
@@ -1671,11 +1791,14 @@ Speak English
 
 ## 多态
 
-`多态`: 继承中的对象可以向上转型为父类，向下转型为子类。
+`多态`：继承中的对象可以向上转型为父类，向下转型为子类。
 
 ### 示例：
+
 1. 创建父类：`Person`，有一个方法：`say()`
+
 2. 创建子类：`Student`，有一个相同的方法：`say()`
+
 向上转型为父类，子类的实例将调用子类的 `say()` 方法，而不是调用父类的 `say()` 方法。`Student` 的 `say()` 将重写 `Person` 的 `say()`
 
 ![](img/Image0073.gif)
@@ -1683,6 +1806,7 @@ Speak English
 ### 1. 创建一个文件：`TestPolymorphism.java`
 
 向上转型为父类，向下转型为子类
+
 子类的实例将调用子类的 `say()` 方法，而不是调用父类的 `say()` 方法
 
 ![](img/Image0074.gif)
@@ -1721,6 +1845,7 @@ public class TestPolymorphism {
 ```
 
 Result:
+
 ```
 Student speaking
 Student speaking
@@ -1732,9 +1857,13 @@ Student studying
 ### 1. 示例：`Baby` 可以吃一个水果
 
 ### 分析：
+
 1. 类：`Baby`, `Fruit`
+
 2. 关系：`Fruit` 一对一属于 `Baby`
+
 3. 属性：`Baby` 的属性 (`fruit`)
+
 4. 方法：`Baby` 的方法 (`eat`)
 
 ![](img/Image00075.gif)
@@ -1776,6 +1905,7 @@ public class TestObjectRelation {
 ```
 
 Result:
+
 ```
 Baby eat Red Apple
 Baby eat Black Grape
@@ -1783,14 +1913,18 @@ Baby eat Black Grape
 
 ## 抽象类
 
-`抽象类`: 是一个声明为抽象的类。抽象类不能实例化，但它的子类可以实例化。
+`抽象类`：是一个声明为抽象的类。抽象类不能实例化，但它的子类可以实例化。
 
 ### 示例：`Father` 告诉他的儿子买一些水果
 
 ### 分析：
+
 1. 抽象类：`Father`
+
 2. 实现类：`Son`
+
 3. 关系：`Son` 继承 `Dad`
+
 4. 方法：`buy()` 父亲告诉儿子买水果，但父亲没有买
 
 ![](img/Image00076.gif)
@@ -1800,10 +1934,6 @@ Baby eat Black Grape
 父亲告诉儿子买水果，但父亲没有买，
 
 这意味着方法：`buy()` 没有实现
-
-
-
-
 
 ## 抽象类
 
@@ -1847,6 +1977,7 @@ public class TestAbstract {
 ```
 
 **结果：**
+
 ```
 Dad, I bought some : Apples
 ```
@@ -1854,9 +1985,11 @@ Dad, I bought some : Apples
 ### 2. 抽象类也可以有自己的方法实现
 
 **示例：**
+
 `Father` 现在正在工作，所以让儿子去买一些水果。
 
 **分析：**
+
 1. 方法：`Father` 有两个方法：`work()` 和 `abstract buy()`
 
 **创建文件：`TestAbstract.java`**
@@ -1885,6 +2018,7 @@ public class TestAbstract {
 ```
 
 **结果：**
+
 ```
 Father is working now.
 Dad, I bought some : Apples
@@ -1897,18 +2031,25 @@ Dad, I bought some : Apples
 `interface`：是实现抽象的另一种方式，用于将具有空方法体的方法方法在一起，子类必须实现该接口及其空方法。
 
 **示例：**
+
 老板雇佣员工工作。
 
 **分析：**
+
 1. `interface`：`Boss`
+
 2. 实现类：`Employee`
+
 3. 关系：`Employee` 实现 `Boss`
+
 4. 方法：`work()` 老板雇佣员工工作，老板自己不执行这项工作。
 
 ![](img/Image00077.jpg)
 
 接口方法在声明时没有实现。
+
 老板雇佣员工工作，老板自己不执行这项工作。
+
 这意味着方法：`work()` 没有实现。
 
 ```java
@@ -1951,25 +2092,35 @@ public class TestInterface {
 ```
 
 **结果：**
+
 ```
 Employee start to work
 ```
 
 **注意：**
+
 1. 接口中的方法允许没有实现。
+
 2. 接口方法默认是 public 的。
+
 3. 接口属性是 public 的。
+
 4. 子类必须实现接口中所有声明的方法。
 
-###2. 子类只能继承一个类，但可以实现多个接口。
+### 2. 子类只能继承一个类，但可以实现多个接口。
 
 **示例：**
+
 老板雇佣员工工作，让员工学习。
 
 **分析：**
+
 1. `interface`：`Boss`, `Manager`
+
 2. 实现类：`Employee`
+
 3. 关系：`Employee` 实现 `Boss`, `Manager`
+
 4. 方法：`work()` 老板雇佣员工工作，老板不执行这项工作；`learn()` 让员工学习，老板不执行这项工作。
 
 ![](img/Image0078.jpg)
@@ -2009,6 +2160,7 @@ public class TestInterface {
 ```
 
 **结果：**
+
 ```
 Employee start to work
 Employee start to learn
@@ -2016,26 +2168,34 @@ Employee start to learn
 
 ---
 
-##举
+## 枚举
 
 `enum`：是一种特殊的数据类型，允许变量是一个常量集合。变量必须等于预定义值之一。
 
 **示例：**
+
 绘制不同的颜色。
 
 ![](img/Image0079.gif)
 
 **分析：**
+
+
+
 1. `enum`：`Color (RED, BLUE)`
+
 2. `class`：`Circle`
+
 3. 方法：`draw()` 不同的颜色。
 
 定义 `enum` 类型：
+
 ```java
 enum Color {
     RED, GREEN, BLUE
 }
 ```
+
 ![](img/Image0080.gif)
 
 ### 1. 创建文件：`TestEnum.java`
@@ -2072,6 +2232,7 @@ public class TestEnum {
 ```
 
 **结果：**
+
 ```
 draw Red circle
 draw Green circle
@@ -2085,11 +2246,15 @@ draw Blue circle
 `Inner class`：是一种安全机制。如果我们把类作为另一个类的成员，那么内部类就可以设为私有。
 
 **示例：**
+
 母亲怀孕，婴儿从母亲那里获得食物。
 
 **分析：**
+
 1. `class`：`Mother`, `Baby`
+
 2. 关系：`Baby` 在 `Mother` 内部
+
 3. 方法：`Mother eat(food)`, `Baby eat()` 来自 `Mother`。
 
 ![](img/Image0081.gif)
@@ -2138,6 +2303,7 @@ public class TestInnerClass {
 ```
 
 **结果：**
+
 ```
 Mother eat Apple
 Baby absorb nutrients from the mother's Apple
@@ -2165,11 +2331,8 @@ Baby absorb nutrients from the mother's Apple
 
 ![](img/Image0084.jpg)
 
-
-
-
-
 ## 工作空间 (Workspace)
+
 工作空间包含资源，如：`Projects`、`Files`、`Folders` 等。工作空间具有层级结构。`Projects` 位于顶层，在里面你可以拥有文件和文件夹。
 
 ![](img/Image0085.jpg)
@@ -2179,6 +2342,7 @@ Baby absorb nutrients from the mother's Apple
 ![](img/Image00086.jpg)
 
 ## 创建 Java 项目
+
 4. 点击 `File` -> `New` -> `Project`
 
 ![](img/Image00087.jpg)
@@ -2192,14 +2356,17 @@ Baby absorb nutrients from the mother's Apple
 ![](img/Image00089.jpg)
 
 ## 项目: test
+
 7. `Project: test` 具有层级结构。
 
 - `src`: 存储源代码文件的文件夹。
+
 - `JRE System Library`: 由 Eclipse 在创建 Java 项目时自动添加。`JRE System Library` 实现了 Eclipse 中的 Java API。因此，在 Eclipse 中编写的 Java 程序可以访问 Java 的所有预定义方法。
 
 ![](img/Image00090.jpg)
 
 ## 创建类
+
 8. 创建类：`Hello`，右键点击 `src` 然后选择 `New` -> `Class`
 
 ![](img/Image00091.jpg)
@@ -2227,9 +2394,11 @@ System.out.println("Hello World!");
 ![](img/Image00095.jpg)
 
 ## String
+
 `String`: 是 Java 的默认类，表示字符字符串。`Strings` 是常量；它们值在创建后不能被更改。
 
 ### 1. String 比较
+
 `equals()` 方法和 `==` 运算符用于比较两个 `String`。
 
 ```java
@@ -2238,6 +2407,7 @@ String str2 = "hello";
 System.out.println(str1.equals(str2)); // =true
 System.out.println(str1 == str2); // = true
 ```
+
 `str1` 和 `str2` 指向字符串池中同一个 "hello" 对象，所以 `equals()` 和 `==` 为 true ![](img/Image00096.gif)
 
 ```java
@@ -2246,11 +2416,15 @@ String str2 = new String("hello");
 System.out.println(str1.equals(str2)); // =true
 System.out.println(str1 == str2); // =false
 ```
+
 为什么 `str1.equals(str2)` 为 true 但 `str1 == str2` 为 false？
+
 因为 `str1` "hello" 在 `String Pool`（字符串池）中创建的，而 `str2` `new String("hello")` 在 `Heap`（堆）中创建的。`==` 运算符比较引用，而 `equals()` 比较 `String` 的值。`str1` 和 `str2` 的值相同，但引用不同 ![](img/Image00097.gif)
 
 ### 2. String replace (char oldChar, char newChar)
+
 返回一个将字符串中所有出现的 `oldChar` 替换为 `newChar` 后的新字符串。
+
 将所有 `||` 替换为 `,`
 
 ```java
@@ -2258,29 +2432,37 @@ String person = "David||30||Male||Married";
 person = person.replace("||", ",");
 System.out.println(person);
 ```
+
 结果：`David,30,Male,Married`
 
 ### 3. boolean startsWith(String prefix)
+
 测试此字符串是否以指定的 `prefix` 开始。
+
 测试文件路径是否以 `c:` 开始
 
 ```java
 String path = "c:/video/forever.mp4";
 System.out.println(path.startsWith("c:"));
 ```
+
 结果：`true`
 
 ### 4. boolean endsWith(String suffix)
+
 测试此字符串是否以指定的 `suffix` 结尾。
+
 测试文件路径是否以 `.mp4` 结尾
 
 ```java
 String path = "c:/video/forever.mp4";
 System.out.println(path.endsWith(".mp4"));
 ```
+
 结果：`true`
 
 ### 5. int indexOf(char ch)
+
 从左到右在字符串中查找 `ch` 的第一个索引。字符串的索引从 `0` 开始 ![](img/Image00098.gif)
 
 ```java
@@ -2288,9 +2470,11 @@ String path = "c:/video/forever.mp4";
 int index = path.indexOf("/");
 System.out.println(index);
 ```
+
 结果：`2`
 
 ### 6. int lastIndexOf(char ch)
+
 从右到左在字符串中查找 `ch` 的第一个索引。从右到左在路径中查找第一个 `/`索引。
 
 ```java
@@ -2298,9 +2482,11 @@ String path = "c:/video/forever.mp4";
 int lastIndex = path.lastIndexOf("/");
 System.out.println(lastIndex);
 ```
+
 结果：`8`
 
 ### 7. String trim()
+
 移除字符串两边的空白字符。
 
 ```java
@@ -2308,10 +2494,13 @@ String str = " aa bb  ";
 str = str.trim();
 System.out.println(str);
 ```
+
 结果：`aa bb`
 
 ### 8. String substring(int beginIndex)
+
 移除字符串两边的空白字符（注：此处原文描述与方法名不符，按意译处理）。
+
 从 `beginIndex` 开始截取字符串，直到末尾。
 
 ```java
@@ -2319,9 +2508,11 @@ String str = " aa bb  ";
 str = str.trim();
 System.out.println(str);
 ```
+
 结果：`aa bb`
 
 ### 9. String substring(int beginIndex, int endIndex)
+
 从 `beginIndex` 开始截取字符串。
 
 ```java
@@ -2329,14 +2520,12 @@ String str = " aa bb  ";
 str = str.trim();
 System.out.println(str);
 ```
+
 结果：`aa bb`
 
 ### 10. String split(String regex)
+
 根据正则表达式将字符串拆分为数组。
-
-
-
-
 
 ```java
 String ageStr = "20" ;
@@ -2348,6 +2537,7 @@ System.out.println(money);
 ```
 
 **Result:**
+
 ```
 20
 1000.5
@@ -2383,6 +2573,7 @@ public class TestObject {
 ```
 
 **Result:**
+
 ```
 test.Cat@1f1fba0
 ```
@@ -2414,6 +2605,7 @@ public class TestObject {
 ```
 
 **Result:**
+
 ```
 Teddy
 ```
@@ -2423,16 +2615,21 @@ Teddy
 `ArrayList` 是集合框架的一部分，存在于 `java.util` 包中。它为我们提供了动态数组。它实现了 `List` 接口。`List` 继承自 `Collection` 接口。
 
 1. `ArrayList` 遵循先进先出的顺序。
+
 2. `ArrayList` 可以添加重复元素。
+
 3. `ArrayList` 还可以添加 `null` 值。
+
 4. `ArrayList` 是一个对象数组。
 
 ![](img/Image00103.gif)
 
 ### 1. `add(Object o)`
+
 在列表的末尾添加元素。
 
 ### `get(int index)`
+
 从列表指定的位置获取元素。
 
 ```java
@@ -2446,13 +2643,17 @@ public static void main(String[] args) {
 ```
 
 **Result:**
+
 ```
 100
 David
 ```
 
 ### 2. `int size()`
+
 返回列表中元素的数量。
+
+
 
 ```java
 public static void main(String[] args) {
@@ -2469,11 +2670,13 @@ public static void main(String[] args) {
 ```
 
 **Result:**
+
 ```
 100,David,25.5,
 ```
 
 ### 3. `set(int index, Object element)`
+
 替换列表中指定位置的元素。
 
 ```java
@@ -2484,11 +2687,13 @@ list.set(1, "Grace"); // 将 "David" 更新为 "Grace"
 ```
 
 **Result:**
+
 ```
 100,Grace
 ```
 
 ### 4. `remove(int index)` 和 `remove(Object o)`
+
 移除指定位置的元素，或移除指定元素的第一次出现项。
 
 ```java
@@ -2501,12 +2706,14 @@ list.remove("David"); // 删除元素 "David"
 ```
 
 **Result:**
+
 ```
 10.5
 ```
 
 ### 5. `isEmpty()`, `clear()`, 和 `contains(Object o)`
-`isEmpty()` 如果列表为空则返回 true，否则返回 false。`clear()` 移除列表中的所有元素。`contains(Object o)` 如果列表包含指定元素返回 true。
+
+`isEmpty()` 如果列表为空则返回 `true`，否则返回 `false`。`clear()` 移除列表中的所有元素。`contains(Object o)` 如果列表包含指定元素返回 `true`。
 
 ```java
 public static void main(String[] args) {
@@ -2552,6 +2759,7 @@ public class TestList {
 ```
 
 **Result:**
+
 ```
 name = David, age = 20
 name = Joseph, age = 30
@@ -2563,6 +2771,7 @@ name = Grace, age = 40
 `LinkedList` 是一个许多许多对象的集合，它实现了 `List` 接口。`LinkedList` 是一个双向链表，它可以包含许多元素。如果你频繁地访问随机元素，最好使用 `ArrayList`。如果你频繁地添加和删除元素，最好使用 `LinkedList`。
 
 ### 1. `addFirst(E e)` 和 `addLast(E e)`
+
 在列表头部或末尾添加元素。
 
 ```java
@@ -2579,6 +2788,7 @@ public static void main(String[] args) {
 ```
 
 **Result:**
+
 ```
 Grace
 David
@@ -2587,6 +2797,7 @@ Renia
 ```
 
 ### 2. `getFirst()` 和 `getLast()`
+
 获取头部或末尾的元素。
 
 ```java
@@ -2600,12 +2811,14 @@ public static void main(String[] args) {
 ```
 
 **Result:**
+
 ```
 First: David
 Last: Joseph
 ```
 
 ### 3. `removeFirst()` 和 `removeLast()`
+
 移除头部或末尾的元素。
 
 ```java
@@ -2622,6 +2835,7 @@ public static void main(String[] args) {
 ```
 
 **Result:**
+
 ```
 David
 ```
@@ -2633,10 +2847,12 @@ David
 ![](img/Image0107.gif)
 
 ### 1. `hasNext()`
-如果迭代器还有元素可以迭代，则返回 true。
+
+如果迭代器还有元素可以迭代，则返回 `true`。
 
 ### 2. `next()`
-返回集合中的下一个元素，直到 `hasNext()` 返回 false。
+
+返回集合中的下一个元素，直到 `hasNext()` 返回 `false`。
 
 ```java
 public static void main(String[] args) {
@@ -2653,11 +2869,8 @@ public static void main(String[] args) {
 }
 ```
 
-
-
-
-
 Result:
+
 伯克利大学 -> Market Street -> Polo Alto -> Cuptino ->
 
 ## HashSet
@@ -2665,7 +2878,9 @@ Result:
 `HashSet`: 用于创建一个使用哈希表进行存储的集合。它实现了 `Set` 接口。`HashSet` 类具有与 `ArrayList` 相同的方法。
 
 1. `HashSet` 仅包含唯一元素。
+
 2. `HashSet` 允许 `null` 值。
+
 3. `HashSet` 返回值的顺序是不固定的。
 
 ![](img/Image00108.jpg)
@@ -2685,7 +2900,9 @@ public static void main(String[] args) {
     }
 }
 ```
+
 Result:
+
 Washington , James , Abraham ,
 
 ## HashMap
@@ -2693,15 +2910,19 @@ Washington , James , Abraham ,
 `HashMap`: 基于 `Map` 的集合类，用于存储 `Key = value` 键值对，它不会以相同的顺序返回键和值。
 
 ![](img/Image00109.jpg)
+
 ![](img/Image00110.gif)
 
 1. `put(Object key, Object value)`:
+
 将键值映射插入到 map 中。
 
 `Object get(Object key)`:
+
 返回指定键对应的值。
 
 `boolean containsKey(Object key)`:
+
 根据 map 中是否找到指定的键来返回 `true` 或 `false`。
 
 ```java
@@ -2716,6 +2937,7 @@ public static void main(String[] args) {
 ```
 
 2. `Set keySet()`:
+
 返回从 map 中获取的键的 `Set`。
 
 ```java
@@ -2734,10 +2956,15 @@ public static void main(String[] args) {
     }
 }
 ```
+
 Result:
+
 married=false
+
 age=20
+
 name=David
+
 salary=12000
 
 ## Generic
@@ -2745,6 +2972,7 @@ salary=12000
 `Generic`: 方法和泛型类允许程序员人员通过单个方法声明或单个类声明来指定类型。泛型还提供了编译时安全，允许您在编译时捕获无效类型。所有的泛型声明都有由尖括号 `< >` 分隔的类型参数。
 
 ### 1. 创建泛型类：`Person<T>`
+
 ```java
 class Person<T> { //<T> 传递各种类型
     private T age;
@@ -2768,11 +2996,15 @@ class TestGeneric {
     }
 }
 ```
+
 Result:
+
 30
+
 80
 
 ### 2. 为 List 使用泛型：`ArrayList<String>`
+
 ```java
 public static void main(String[] args) {
     List<String> list = new ArrayList<String>();
@@ -2785,12 +3017,17 @@ public static void main(String[] args) {
     }
 }
 ```
+
 Result:
+
 Faith
+
 Danie
+
 Mathew
 
 ### 3. 为 Map 使用泛型：`HashMap<String, Integer>`
+
 ```java
 public static void main(String[] args) {
     Map<String, Integer> map = new HashMap<String, Integer>();
@@ -2806,13 +3043,21 @@ public static void main(String[] args) {
     }
 }
 ```
+
 Result:
+
 Math=95
+
 Science=98
+
 English=100
 
 ### 4. 创建一个类：`Customer`
+
 为 List 使用泛型：`ArrayList<Customer>`
+
+
+
 ```java
 import java.util.*;
 class Customer {
@@ -2843,17 +3088,23 @@ class TestGeneric {
     }
 }
 ```
+
 Result:
+
 Grace, 25
+
 Renia, 30
+
 Rebeka, 28
 
 ## Random
 
-`Random`: 用于生成随机数。`Random` 类位于 `java.util` 包中。
+`Random`：用于生成随机数。`Random` 类位于 `java.util` 包中。
 
 ### 1. 打印随机数 0-9
-`nextInt(n)`: 返回 `0` 到 `n-1` 之间的随机数。
+
+`nextInt(n)`：返回 `0` 到 `n-1` 之间的随机数。
+
 ```java
 import java.util.*;
 class RandomNumber {
@@ -2866,11 +3117,15 @@ class RandomNumber {
     }
 }
 ```
+
 Result:
+
 9, 3, 4, 0, 5,
 
 ### 2. 生成 6 个不同的随机数
-`HashSet` 包含唯一元素，我们可以持续生成随机数直到 HashSet 填充了 6 个不同的数字。
+
+`HashSet` 包含唯一元素，我们可以持续生成随机数直到 `HashSet` 填充了 6 个不同的数字。
+
 ```java
 import java.util.*;
 class VerificationCode {
@@ -2890,17 +3145,21 @@ class VerificationCode {
     }
 }
 ```
+
 Result:
+
 0, 3, 4, 5, 7, 8 ,
 
 ## Exception
 
-`Exception`: 是程序执行过程中发生的意外或意外事件，`Exception` 可能会尝试捕获。
-`Error`: 表示应用程序不应捕获的严重问题。
+`Exception`：是程序执行过程中发生的意外或意外事件，`Exception` 可能会尝试捕获。
+
+`Error`：表示应用程序不应捕获的严重问题。
 
 ![](img/Image00111.jpg)
 
 try catch 块
+
 ```java
 try {
     // 可能引起异常的语句
@@ -2909,7 +3168,8 @@ try {
 }
 ```
 
-### 1. 如果 `a/b` 且 `b = 0`，将抛出异常：`ArithmeticException`。
+### 1. 如果 `a/b` 且 `b = 0`，将抛出异常：`ArithmeticException`
+
 ```java
 public static void main(String[] args) {
     int result = 0;
@@ -2923,29 +3183,36 @@ public static void main(String[] args) {
     }
 }
 ```
+
 Result:
+
 除数不能为 0
+
 如果发生异常，`try` 块将终止并直接跳转到 `catch` 块。
 
 ![](img/Image00112.gif)
 
-## 2. `finally` 块：包含无论是否发生异常都执行的关键语句。无论 `try` 块中是否发生异常，此块中的语句都都会执行。
+### 2. `finally` 块：包含无论是否发生异常都执行的关键语句。无论 `try` 块中是否发生异常，此块中的语句都都会执行。
 
 如果 `a/b` 且 `b != 0`
+
 ![](img/Image00113.gif)
+
 Result:
+
 2
+
 finally
 
 如果 `a/b` 且 `b = 0`
+
 ![](img/Image00114.gif)
+
 Result:
+
 除数不能为 0
+
 Finally
-
-
-
-
 
 `finally` 块无论 `try` 块中是否发生异常都会始终执行。
 
@@ -2955,8 +3222,7 @@ Finally
 
 ### 1. 创建目录：`c:/java`
 
-`mkdirs()`:
-创建由 `pathname` 指定命名的目录。
+`mkdirs()`：创建由 `pathname` 指定命名的目录。
 
 ```java
 import java.io.*;
@@ -2967,54 +3233,66 @@ public class TestFile {
     }
 }
 ```
+
 结果：(Image00115.jpg)
 
-### 2. `String getAbsolutePath()`:
+### 2. `String getAbsolutePath()`
+
 返回此 `pathname` 的绝对形式。
 
 ```java
 File f = new File("c:/java");
 System.out.println(f.getAbsolutePath());
 ```
+
 结果：`c:/java`
 
-### 3. `String getName()`:
+### 3. `String getName()`
+
 返回文件或目录名称。
 
 ```java
 File f = new File("c:/java");
 System.out.println(f.getName());
 ```
+
 结果：`java`
 
-### 4. `boolean exists()`:
+### 4. `boolean exists()`
+
 测试文件或目录是否存在。
 
 ```java
 File f = new File("c:/java");
 System.out.println(f.exists());
 ```
+
 结果：`true`
 
-### 5. `boolean isDirectory()`:
+### 5. `boolean isDirectory()`
+
 测试其是否为目录。
 
 ```java
 File f = new File("c:/java");
 System.out.println(f.isDirectory());
 ```
+
 结果：`true`
 
-### 6. `boolean renameTo(File dest)`:
+### 6. `boolean renameTo(File dest)`
+
 重命名目录。
 
 ```java
 File f = new File("c:/java");
 f.renameTo(new File("c:/java_new"));
 ```
+
 结果：(Image00116.jpg)
 
-### 7. `boolean createNewFile()`:
+### 7. `boolean createNewFile()`
+
 仅当不存在以此名称命文件时，才创建一个新的空文件。
 
 ```java
@@ -3027,58 +3305,69 @@ public static void main(String[] args) {
     }
 }
 ```
+
 结果：(Image00117.gif)
 
-### 8. `String getAbsolutePath()`:
+### 8. `String getAbsolutePath()`
+
 返回此 `pathname` 的绝对形式。
 
 ```java
 File f = new File("c:/java_new/test.txt");
 System.out.println(f.getAbsolutePath());
 ```
+
 结果：`c:\java_new\test.txt`
 
-### 9. `String getName()`:
+### 9. `String getName()`
+
 返回文件的名称。
 
 ```java
 File f = new File("c:/java_new/test.txt");
 System.out.println(f.getName());
 ```
+
 结果：`test.txt`
 
-### 10. `boolean exists()`:
+### 10. `boolean exists()`
+
 测试文件或目录是否存在。
 
 ```java
 File f = new File("c:/java_new/test.txt");
 System.out.println(f.exists());
 ```
+
 结果：`true`
 
-### 11. `boolean isFile()`:
+### 11. `boolean isFile()`
+
 测试其是否为文件。
 
 ```java
 File f = new File("c:/java_new/test.txt");
 System.out.println(f.isFile());
 ```
+
 结果：`true`
 
-### 12. `boolean delete()`:
+### 12. `boolean delete()`
+
 删除文件或目录。
 
 ```java
 File f = new File("c:/java_new/test.txt");
 System.out.println(f.delete());
 ```
+
 结果：`true`
 
 ---
 
 ## FileInputStream
 
-`FileInputStream`: 从文件中获取输入字节。它用于读取面向字节的数据的数据，如图像数据、音频、视频等。
+`FileInputStream`：从文件中获取输入字节。它用于读取面向字节的数据的数据，如图像数据、音频、视频等。
 
 (Image00118.gif)
 
@@ -3087,13 +3376,17 @@ System.out.println(f.delete());
 ```text
 every day is good day
 ```
+
 (Image00119.jpg)
 
 ### `FileInputStream` 从 `C:/java/english.txt` 读取 5 字节数据
+
 文件中的每个字符占用 1 字节。
+
 (Image00120.gif)
 
-#### `int read(byte[] b)`:
+#### `int read(byte[] b)`
+
 用于从输入流中读取多达 `b.length` 字节的数据。返回实际读取的 `data.length`，如果没有数据则返回 -1。
 
 ```java
@@ -3119,10 +3412,13 @@ public class TestInputStream {
     }
 }
 ```
+
 结果：`every`
 
-### 2. 如果你想从 `C:/java/english.txt` 读取所有数据：
+### 2. 如果你想从 `C:/java/english.txt` 读取所有数据
+
 需要反复读取 `C:/java/english.txt` 中的数据直到文件末尾。
+
 (Image00120.gif)
 
 ```java
@@ -3148,10 +3444,13 @@ public class TestInputStream {
     }
 }
 ```
+
 (注：此处原文示例似乎存在逻辑重复或错乱，已按意图翻译)
 
-### 2. 如果你想从 `C:/java/english.txt` 读取所有数据：
+### 2. 如果你想从 `C:/java/english.txt` 读取所有数据
+
 需要反复读取 `C:/java/english.txt` 中的数据直到文件末尾。
+
 (Image00120.gif)
 
 ```java
@@ -3177,12 +3476,15 @@ public class TestInputStream {
     }
 }
 ```
+
 (注：此处原文示例似乎存在逻辑重复或错乱，已按意图翻译)
 
 *修正：由于提供的原文文本在后半部分存在大量重复和格式混乱，我将基于 Markdown 逻辑进行结构化翻译。*
 
-### 2. 如果你想从 `C:/java/english.txt` 读取所有数据：
+### 2. 如果你想从 `C:/java/english.txt` 读取所有数据
+
 需要反复读取 `C:/java/english.txt` 中的数据直到文件末尾。
+
 (Image00120.gif)
 
 (此处由于原文输入异常，以下为后续核心内容的翻译)
@@ -3191,10 +3493,13 @@ public class TestInputStream {
 
 ## FileInputStream
 
-`FileOutputStream`: 是一个输出流，用于向文件写入数据。
+`FileOutputStream`：是一个输出流，用于向文件写入数据。
+
 (Image00122.gif)
 
 ### 1. 创建文件：`c:/java/test.txt`，内容如下
+
+
 
 ```java
 import java.io.*;
@@ -3219,11 +3524,13 @@ public class TestOutputStream {
 }
 ```
 
-`Thread`: 是程序中执行的顺序流，CPU 为其分配执行时间。
+`Thread`：是程序中执行的顺序流，CPU 为其分配执行时间。
+
 (Image00123.jpg)
 
-### 1. 创建文件：`TestThread.java`
-`Thread`: 启动线程后，`run()` 方法将被自动调用。
+## 1. 创建文件：`TestThread.java`
+
+`Thread`：启动线程后，`run()` 方法将被自动调用。
 
 ```java
 class CarThread extends Thread {
@@ -3263,7 +3570,9 @@ public class TestThread {
     }
 }
 ```
+
 输出结果：
+
 ```
 Car Thread 0
 Train Thread 0
@@ -3276,15 +3585,13 @@ Train Thread 3
 Car Thread 4
 Train Thread 4
 ```
+
 从结果可以看出，两个线程交替执行。
 
-### 2. Java 有另一种实现线程的方式：
-- `CarThread` 实现 `Runnable`，
+## 2. Java 有另一种实现线程的方式
+
+- `CarThread` 实现 `Runnable`
 - `TrainThread` 实现 `Runnable`
-
-
-
-
 
 ```java
 class CarThread implements Runnable {
@@ -3325,7 +3632,7 @@ public class TestThread {
 }
 ```
 
-**输出结果：**
+输出结果：
 
 ```
 Car Thread Run 0
@@ -3342,11 +3649,11 @@ Train Thread Run 4
 
 从结果可以看出，两个线程正在交替执行。
 
-## 创建 GUI 窗口应用程序
+# 创建 GUI 窗口应用程序
 
 Java 提供了 `Swing` 用于开发 GUI（图形用户界面）。`Swing` 是常用的。它是 GUI 工具包的标准 Java 接口。使用 Java 和 Swing 创建 GUI 应用程序是最快、最简单的方法。
 
-### 1. 在 Eclipse 中创建一个文件：`AirplaneGame.java`
+## 1. 在 Eclipse 中创建一个文件：`AirplaneGame.java`
 
 - `JFrame`：类是一种容器类型，可以创建窗口。
 - `JFrame.setSize(int width, int height)`：设置框架的大小。
@@ -3368,7 +3675,7 @@ public class AirplaneGame {
 
 ![](img/Image00124.jpg)
 
-## 创建 Canvas
+# 创建 Canvas
 
 `Canvas`：用于在屏幕上绘制图形和图像。Java 库包含一个用于绘制 2D 图形的简单包，称为 `java.awt`。
 
@@ -3376,11 +3683,11 @@ public class AirplaneGame {
 
 ![](img/Image00125.jpg)
 
-### 1. 创建继承自 `JPanel` 的 `Canvas`，并将画布添加到 `JFrame` 的中心。
+## 1. 创建继承自 `JPanel` 的 `Canvas`，并将画布添加到 `JFrame` 的中心
 
 ![](img/Image00126.jpg)
 
-### 2. 在 Eclipse 中创建一个文件：`AirplaneGame.java`
+## 2. 在 Eclipse 中创建一个文件：`AirplaneGame.java`
 
 - `this.setLayout(null)`：必须设置布局为 null
 - `this.setBackground(Color c)`：设置 `JPanel` 的背景颜色
@@ -3410,7 +3717,7 @@ public class AirplaneGame {
 
 ![](img/Image00127.jpg)
 
-## 在 Canvas 上绘制图形
+# 在 Canvas 上绘制图形
 
 `Graphics` 类提供了基本的绘制方法，如 `drawLine`、`drawRect`、`drawString` 和 `drawImage`。当我们想在屏幕上绘制自己的图形时，应该将图形代码放在 `JPanel` 的 `paintComponent()` 方法中。系统会直接调用它。因此我们的 `Canvas` 需要重写 `paintComponent()` 方法来执行我们的图形代码。
 
@@ -3429,7 +3736,7 @@ class Canvas extends JPanel {
 }
 ```
 
-### 1. 在 Canvas 上画线
+## 1. 在 Canvas 上画线
 
 Java 使用坐标系，原点位于左上角。图形坐标以像素为单位；每个像素对应于屏幕上的一个点。
 
@@ -3462,7 +3769,7 @@ public class AirplaneGame {
 }
 ```
 
-### 2. 在 Canvas 上画一个矩形
+## 2. 在 Canvas 上画一个矩形
 
 ![](img/Image00130.jpg)
 
@@ -3483,11 +3790,12 @@ class Canvas extends JPanel {
 }
 ```
 
-### 3. 在 Canvas 填充矩形
+## 3. 在 Canvas 填充矩形
 
 ![](img/Image00131.jpg)
 
 `g.fillRect(int x, int y, int width, int height)`：在画布上填充矩形。
+
 `g.setColor(Color c)`：设置颜色（红色：`Color.RED`，绿色：`Color.GREEN`，蓝色：`Color.BLUE`）。
 
 ```java
@@ -3511,12 +3819,12 @@ class Canvas extends JPanel {
         g.fillRect(270, 50, 100, 50);
     }
 }
-}
 ```
 
-### 4. 在 Canvas 上绘制图像
+## 4. 在 Canvas 上绘制图像
 
 `KidsJavascriptImages.zip` 中的所有图片请在此链接下载：
+
 [`en.verejava.com/download.jsp?id=1`](http://en.verejava.com/download.jsp?id=1)
 
 将图片放入 `Project test /images`
@@ -3538,8 +3846,6 @@ Project test/images
 ### 2. 在画布上绘制 `BufferedImage`
 
 ![](img/Image00134.jpg)
-
-
 
 
 
@@ -3594,16 +3900,24 @@ public class AirplaneGame {
 ## 分析
 
 1. **类**：`EnemyPlane`, `Canvas`
+
 2. **关系**：
-    - 2.1 敌机绘制在 `Canvas` 顶部：这意味着 `EnemyPlane` 属于 `Canvas`。
+
+   - 2.1 敌机绘制在 `Canvas` 顶部：这意味着 `EnemyPlane` 属于 `Canvas`。
 
 ![](img/Image00136.jpg)
+
 3. **属性**：
-    - 3.1 敌机加载图片：这意味着 `EnemyPlane` 拥有 `image` 属性，以及该图片的 `width` 和 `height` 属性。
-    - 3.2 敌机绘制在 Canvas 上：这意味着 `Sprite` 拥有 `x`、`y` 坐标。
+
+   - 3.1 敌机加载图片：这意味着 `EnemyPlane` 拥有 `image` 属性，以及该图片的 `width` 和 `height` 属性。
+
+   - 3.2 敌机绘制在 `Canvas` 上：这意味着 `Sprite` 拥有 `x`、`y` 坐标。
+
 ![](img/Image00137.jpg)
+
 4. **方法**：
-    - 4.1 敌机需要加载图片：我们可以创建一个类 `ImageUtil` 和一个方法 `BufferedImage loadImage(String imagePath)` 来加载图片；我们可以创建一个构造方法 `EnemyPlane(int x, int y, String imagePath)` 传递 `imagePath`，然后调用 `loadImage(String imagePath)` 来加载图片。
+
+   - 4.1 敌机需要加载图片：我们可以创建一个类 `ImageUtil` 和一个方法 `BufferedImage loadImage(String imagePath)` 来加载图片；我们可以创建一个构造方法 `EnemyPlane(int x, int y, String imagePath)` 传递 `imagePath`，然后调用 `loadImage(String imagePath)` 来加载图片。
 
 ```java
 public EnemyPlane(int x, int y, String imagePath) {
@@ -3615,7 +3929,7 @@ public EnemyPlane(int x, int y, String imagePath) {
 }
 ```
 
-    - 4.2 敌机在 Canvas 顶部绘制：我们可以创建一个方法 `draw(Graphics g)`。
+   - 4.2 敌机在 `Canvas` 顶部绘制：我们可以创建一个方法 `draw(Graphics g)`。
 
 ```java
 public void draw(Graphics g) {
@@ -3623,7 +3937,7 @@ public void draw(Graphics g) {
 }
 ```
 
-    - 4.3 敌机向下移动：我们可以创建一个方法 `move(int distanceX, int distanceY)`，`distanceX` 和 `distanceY` 表示在 X 轴和 Y 轴上移动的距离。
+   - 4.3 敌机向下移动：我们可以创建一个方法 `move(int distanceX, int distanceY)`，`distanceX` 和 `distanceY` 表示在 X 轴和 Y 轴上移动的距离。
 
 ```java
 public void move(int distanceX, int distanceY) {
@@ -3632,10 +3946,11 @@ public void move(int distanceX, int distanceY) {
 }
 ```
 
-    - 4.4 属性 `x`, `y`, `width`, `height` 拥有它们自己的 getter 和 setter 方法。
+   - 4.4 属性 `x`, `y`, `width`, `height` 拥有它们自己的 getter 和 setter 方法。
+
 ![](img/Image00138.jpg)
 
-    - 4.5 敌机想要在 Canvas 顶部绘制：我们需要一个构造方法 `Canvas()` 来初始化敌机，然后在 `paintComponent(Graphics g)` 方法中在 Canvas 上绘制。
+   - 4.5 敌机想要在 `Canvas` 顶部绘制：我们需要一个构造方法 `Canvas()` 来初始化敌机，然后在 `paintComponent(Graphics g)` 方法中在 `Canvas` 上绘制。
 
 ```java
 public Canvas() {
@@ -3649,18 +3964,24 @@ protected void paintComponent(Graphics g) {
 }
 ```
 
-    - 4.6 敌机向下移动：我们需要一个继承自 `Canvas` 的内部类 `CanvasThread`，它有一个 `run()` 方法。我们可以定义 `while(true)`，在其中反复调用 `draw(Graphics g)` 和 `move(int distanceX, distanceY)` 来改变敌机的位置，然后调用 `repaint()`，这会强制再次调用 `paintComponent(Graphics g)`。
+   - 4.6 敌机向下移动：我们需要一个继承自 `Canvas` 的内部类 `CanvasThread`，它有一个 `run()` 方法。我们可以定义 `while(true)`，在其中反复调用 `draw(Graphics g)` 和 `move(int distanceX, distanceY)` 来改变敌机的位置，然后调用 `repaint()`，这会强制再次调用 `paintComponent(Graphics g)`。
 
 ![](img/Image00139.gif)
+
 流程图
+
 ![](img/Image00140.jpg)
+
 最终类图：
+
 ![](img/Image00141.jpg)
 
-创建一个 Java 项目：animation，然后创建一个类：ImageUtil
+创建一个 Java 项目：`animation`，然后创建一个类：`ImageUtil`
+
 ![](img/Image00142.jpg)
 
 **ImageUtil.java**
+
 ```java
 import java.awt.image.BufferedImage;
 import java.io.*;
@@ -3681,9 +4002,11 @@ public class ImageUtil {
 ```
 
 创建一个类：`EnemyPlane.java`
+
 ![](img/Image00143.jpg)
 
 **EnemyPlane.java**
+
 ```java
 import java.awt;
 import java.awt.image.BufferedImage;
@@ -3747,9 +4070,11 @@ public class EnemyPlane {
 ```
 
 创建一个类：`Canvas.java`
+
 ![](img/Image00144.jpg)
 
 **Canvas.java**
+
 ```java
 import java.awt.*;
 import java.awt.event.*;
@@ -3793,9 +4118,11 @@ public class Canvas extends JPanel {
 ```
 
 创建一个类：`AirplaneGame.java`
+
 ![](img/Image00145.jpg)
 
 **AirplaneGame.java**
+
 ```java
 import java.awt.*;
 import javax.swing.*;
@@ -3815,13 +4142,14 @@ public class AirplaneGame {
 ```
 
 右键点击 `AirplaneGame.java`，然后运行方式 $\rightarrow$ Java Application
+
 ![](img/Image00146.jpg)
 
 结果：
 
 ![](img/Image00147.jpg)
 
-飞机游戏
+# 飞机游戏
 
 在本章中，我将演示如何通过编写一个基础的飞机游戏在 Java 中制作一个基础的 2D 游戏。
 
@@ -3829,121 +4157,136 @@ public class AirplaneGame {
 
 步骤：
 
-
-
-
-
 1. 创建一个蓝色战斗机，然后在屏幕底部的中心绘制它。
+
 2. 按下上、下、左、右键来移动蓝色战斗机。
+
 3. 按下回车键从蓝色战斗机的顶部正中央发射子弹并向上移动。
+
 4. 如果子弹飞出屏幕顶部并消失，按回车键可以重新发射。
+
 5. 敌机从屏幕顶部随机出现并向下移动。
+
 6. 如果敌机飞出屏幕底部，敌机将消失，并随机从屏幕顶部重新出现。
+
 7. 如果子弹击中敌机，敌机将爆炸并消失。
 
 ## 分析
 
-### 1. 类 
+### 1. 类
+
 `BluePlane`, `EnemyPlane`, `Bullet`, `Canvas`
 
 ### 2. 关系
+
 在游戏游戏中，`BluePlane`、`EnemyPlane` 和 `Bullet` 统称为 `Sprite`（精灵）。由于它们具有相同的属性和方法，我们可以将 `Sprite` 定义为一个抽象类，`BluePlane`、`EnemyPlane` 和 `Bullet` 继承 `Sprite` 的属性和方法。所有的 `Sprite` 都会在 `Canvas` 上进行绘制和移动。
 
 ![](img/Image0014.jpg)
 
 ### 3. 属性
+
 3.1 所有的 `Sprite` 都会在 `Canvas` 上绘制。因此 `Sprite` 拥有 `x`、`y` 坐标、`image` 以及图片的宽度和高度。
+
 3.2 `Sprite` 会随机出现并可能消失，因此它有 `visible` 属性。`BluePlane`、`EnemyPlane` 和 `Bullet` 继承这些属性。
+
 3.3 `Canvas` 也有宽度高度，我们可以定义：`canvasWidth` 和 `canvasHeight`。
 
 ![](img/Image00150.jpg)
 
 ### 4. 方法
+
 4.1 `Sprite` 需要加载图片：我们可以创建一个类 `ImageUtil` 和方法 `BufferedImage loadImage(String imagePath)` 来加载图片，我们可以创建一个构造方法 `Sprite(int x, int y, String imagePath)` 传递 `imagePath`，然后调用 `loadImage(String imagePath)` 来加载图片。
+
 4.2 `Sprite` 在 `Canvas` 上绘制：我们可以创建一个方法 `draw(Graphics g)`。
+
 4.3 `Sprite` 移动：我们可以创建一个方法 `move(int distanceX, int distanceY)`，`distanceX` 和 `int distanceY` 表示在 X 轴和 Y 轴上移动的距离。
+
 4.4 子弹击中敌机：我们可以创建一个方法 `collideWith(Sprite sprite)`。
+
 4.5 属性 `x`、`y`、`width`、`height`、`visible` 有自己的公共 getter 和 setter 方法。
 
 ![](img/Image00151.jpg)
 
 ## 子弹碰撞敌机
+
+
+
 两个图片中心坐标差的绝对值小于它们宽度和高度一半之和，我们认为它们有交集并发生了碰撞。
 
-| `Math.abs()`：返回给定参数的绝对值。示例：`Math.abs( 10 ) = 10`，`Math.abs( -10 ) = 10` |
+| `Math.abs()`：返回给定参数的绝对值。示例：`Math.abs(10) = 10`，`Math.abs(-10) = 10` |
 
 ![](img/Image00152.jpg)
 
-4.6 `Sprite` 在 `Canvas` 上绘制：我们需要创建一个构造方法 `Canvas()` 来初始化 `BluePlane`、`EnemyPlane` 和 `Bullet`，然后在 `paintComponent(Graphics g)` 方法中在 `Canvas` 上进行绘制。
+## 4.6 `Sprite` 在 `Canvas` 上绘制
+
+我们需要创建一个构造方法 `Canvas()` 来初始化 `BluePlane`、`EnemyPlane` 和 `Bullet`，然后在 `paintComponent(Graphics g)` 方法中在 `Canvas` 上进行绘制。
 
 ```java
-  public Canvas() {
-      this .setLayout( null );
-      this .setBackground(Color. WHITE );
-      this .requestFocus();
-      bluePlane = new BluePlane(100, 200, "images/blue_plane.png" );
-      bullet = new Bullet(-100, -100, "images/blue_bullet.png" );
-      bullet .setVisible( false );
-      enemyPlane = new EnemyPlane(-100, -100, "images/enemy_plane.png" );
-  }
+public Canvas() {
+    this.setLayout(null);
+    this.setBackground(Color.WHITE);
+    this.requestFocus();
+    bluePlane = new BluePlane(100, 200, "images/blue_plane.png");
+    bullet = new Bullet(-100, -100, "images/blue_bullet.png");
+    bullet.setVisible(false);
+    enemyPlane = new EnemyPlane(-100, -100, "images/enemy_plane.png");
+}
 
-  protected void paintComponent(Graphics g) {
-      super.paintComponent(g);
-      bluePlane.draw(g);
-      bullet.draw(g);
-      enemyPlane.draw(g);
-  }
+protected void paintComponent(Graphics g) {
+    super.paintComponent(g);
+    bluePlane.draw(g);
+    bullet.draw(g);
+    enemyPlane.draw(g);
+}
 ```
 
-4.7 按下上、下、左、右键来移动蓝色战斗机：我们需要为 `Canvas` 添加按键监听器：`this.addKeyListener`。当按下任意键时，`keyPressed(e)` 方法会被调用。
+## 4.7 按下上、下、左、右键来移动蓝色战斗机
+
+我们需要为 `Canvas` 添加按键监听器：`this.addKeyListener`。当按下任意键时，`keyPressed(e)` 方法会被调用。
 
 ```java
-  this.addKeyListener( new KeyAdapter() {
-      public void keyPressed(KeyEvent e) {
-          int keyCode = e.getKeyCode();
-          if (keyCode == KeyEvent.UP ) {
-              bluePlane.move(0, -10);
-          } else if (keyCode == KeyEvent.DOWN ) {
-              bluePlane.move(0, 10);
-          } else if (keyCode == KeyEvent.LEFT ) {
-              bluePlane.move(-10, 0);
-          } else if (keyCode == KeyEvent.RIGHT ) {
-              bluePlane.move(10, 0);
-          }
-      }
-  });
+this.addKeyListener(new KeyAdapter() {
+    public void keyPressed(KeyEvent e) {
+        int keyCode = e.getKeyCode();
+        if (keyCode == KeyEvent.UP) {
+            bluePlane.move(0, -10);
+        } else if (keyCode == KeyEvent.DOWN) {
+            bluePlane.move(0, 10);
+        } else if (keyCode == KeyEvent.LEFT) {
+            bluePlane.move(-10, 0);
+        } else if (keyCode == KeyEvent.RIGHT) {
+            bluePlane.move(10, 0);
+        }
+    }
+});
 ```
 
-4.8 按回车键从蓝色战斗机的顶部正中央发射子弹并向上移动：
+## 4.8 按回车键从蓝色战斗机的顶部正中央发射子弹并向上移动
 
 ```java
-          if (keyCode == KeyEvent.ENTER ) {
-              bullet = new Bullet(bluePlane.x, bluePlane.y, "images/blue_bullet.png" );
-              bullet.setVisible( true );
-          }
+if (keyCode == KeyEvent.ENTER) {
+    bullet = new Bullet(bluePlane.x, bluePlane.y, "images/blue_bullet.png");
+    bullet.setVisible(true);
+}
 ```
 
-4.9 如果子弹 `visible=true` 在 `Canvas` 上向上移动：
+## 4.9 如果子弹 `visible=true` 在 `Canvas` 上向上移动
 
 ```java
-    public void bulletMove(){
-      if ( bullet .isVisible()){
-          bullet.move(0, -10);
-      }
-  }
+public void bulletMove() {
+    if (bullet.isVisible()) {
+        bullet.move(0, -10);
+    }
+}
 ```
 
-4.10 如果子弹飞出屏幕顶部并消失，设置 `visible=false`。
+## 4.10 如果子弹飞出屏幕顶部并消失，设置 `visible=false`
 
-4.11 敌机从屏幕顶部随机出现并向下移动：
+## 4.11 敌机从屏幕顶部随机出现并向下移动
 
-4.12 当 `enemyplane` 移出画布时，敌机需要被销毁设置 `visible = false`：
+## 4.12 当 `enemyPlane` 移出画布时，敌机需要被销毁设置 `visible = false`
 
-4.13 如果子弹击中敌机，子弹和敌机爆炸并消失：
-
-
-
-
+## 4.13 如果子弹击中敌机，子弹和敌机爆炸并消失
 
 ```java
 import java.awt.Graphics;
@@ -4025,6 +4368,7 @@ public abstract class Sprite {
 ![](img/Image0016.jpg)
 
 ### BluePlane.java
+
 ```java
 public class BluePlane extends Sprite {
     public BluePlane(int x, int y, String imagePath) {
@@ -4034,6 +4378,7 @@ public class BluePlane extends Sprite {
 ```
 
 ### EnemyPlane.java
+
 ```java
 public class EnemyPlane extends Sprite {
     public EnemyPlane(int x, int y, String imagePath) {
@@ -4043,6 +4388,7 @@ public class EnemyPlane extends Sprite {
 ```
 
 ### Bullet.java
+
 ```java
 public class Bullet extends Sprite {
     public Bullet(int x, int y, String imagePath) {
@@ -4171,6 +4517,8 @@ public class Canvas extends JPanel {
 
 ![](img/Image0165.jpg)
 
+
+
 ```java
 import java.awt.*;
 import javax.swing.*;
@@ -4191,13 +4539,13 @@ public class AirplaneGame {
 
 ![](img/Image0166.jpg)
 
-右击 `AirplaneGame.java`，然后 运行方式 – Java 
+右击`AirplaneGame.java`，然后选择“运行方式 – Java”。
 
 结果：
 
 ![](img/Image0148.jpg)
 
-感谢学习
+感谢学习。
 
 [`www.amazon.com/dp/B086SPBJ87`](https://www.amazon.com/dp/B086SPBJ87)
 
@@ -4210,9 +4558,5 @@ public class AirplaneGame {
 如果你喜欢这本书并从中受益，我想听到您的反馈，并希望您能抽时间在亚马逊上发表评论。您的反馈和支持将帮助我们在未来改进，让这本书变得更好。
 
 您可以点击此链接：
-
-
-
-
 
 祝愿你们未来的道路上取得成功！

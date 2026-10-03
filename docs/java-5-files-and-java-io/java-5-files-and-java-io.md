@@ -1,35 +1,25 @@
+
 # Java 5：文件与 Java IO
-
-
-
-
-
-
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_0_0.png)
 
-
-
-
-
 Ove Thomsen, EA Dania 同行评审
-
-
-
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_3_0.png)
 
 我们并不是在发明轮子，我们是在重新发明光。
+
 迷人的光影提供了无限的可能性：创新技术和新市场带来了机遇与挑战。在一个你的专业知识被高度需求的环境中。享受在全球集团内的支持性工作环境，并从国际化的职业路径中受益。与其他专家紧密合作实施可持续理念，并为影响我们的未来贡献力量。加入我们，每天一起重新发明光。
 
 OSRAM SYLVANIA
+
 光来自 OSRAM
 
-在 bookboom.com 下载免费电子书，点击广告阅读更多
+在 bookboom.com 下载免费电子书，点击广告阅读更多。
 
-  - 问题 2 65
+- 问题 2 65
 - 4 简单数据类型操作 127
-  - 5.2 用户界面 157
+- 5.2 用户界面 157
 
 # 序言
 
@@ -37,17 +27,13 @@ OSRAM SYLVANIA
 
 如标题所示，系列书籍处理的是软件开发，目标是教读者如何用 Java 开发应用程序。可以通过阅读相关主题和学习示例程序来掌握，但最重要的是亲自动实践并从零开始编写自己的程序。因此，书籍中的重要部分是练习和问题，读者必须编写与所处理内容相对应的程序。系列中的所有书籍都围绕这一核心构建，并将包含自然属于其中的练习和问题。练习与问题的区别在于，练习很大程度上涉及重复，而问题则不然。
 
-
-
-
-
 处理文件的类包含在 `java.io` 包中，但自该包开发以来，Java 扩展了一个名为 `java.nio` 的新包——主要为了满足新需求并支持现代操作系统的功能。这两个包都会被使用，并且可能在未来的许多年里都是如此，因此本书在后续将同时涵盖这两个 API。
 
 本书基本上由三部分组成，前两部分处理 IO，第三部分处理数据的二进制表示。如果你没有二进制和十六进制数的知识，先阅读书的附录可能是一个好主意。
 
-# JAVA 5：文件与 JAVA IO
+# Java 5：文件与 Java IO
 
-## JAVA.IO
+## `java.io`
 
 本章涵盖了流（streams），它是一系列提供了 Java 中基本输入输出操作的类。流是可以在源和目的地之间的通信通道上发送的数据序列。源和目的地可以是多种形式：程序、文件、某种或另一种外部设备（如打印机、网络套接字或计算机内存中的数组）。Java 提供了大量可用类，这些类都旨在封装与通过流发送数据相关的许多细节，并且适用于字节流、其他原始类型以及各种对象。本章展示了 `java.io` 中许多类的用法，这些类主要通过项目 `FileProgram` 中的小型测试方法呈现。
 
@@ -63,7 +49,7 @@ OSRAM SYLVANIA
 
 ### 文件信息
 
-以下方法打印关于文件文件的信息：
+以下方法打印关于文件的信息：
 
 ```java
 private static void fileInfo(String filename) throws IOException {
@@ -87,6 +73,7 @@ if (file.exists()) {
     }
 }
 System.out.println(file.length());
+```
 
 该方法的参数是文件名。注意该方法可能会抛出 `IOException`，通常发生在你尝试对文件执行操作时。在这种情况下，只有一种方法会抛出 `IOException`。该方法创建了一个表示命名文件的 `File` 对象。注意 `File` 对象既可以表示目录也可以表示文件，并且该文件（或目录）存在是合法的。这些条件在对象使用时非常重要。前两个语句打印绝对路径和规范路径。在大多数情况下它们是相同的，但规范路径可能与绝对路径不同（见程序测试）。接下来的三个语句分别打印文件名、父目录和路径。这里是文件所属目录的文件名，父目录是该文件所在的目录名。Path 用于创建 `File` 对象，在这种情况下是文件名参数的值。最后三个语句测试它是否为绝对路径，以及该命名的目录是否存在。在这种情况下测试它是目录还是文件。最后，语句打印以字节为单位的文件大小。
 
@@ -95,10 +82,14 @@ System.out.println(file.length());
 ```java
 private static void test01() {
     System.out.println("Working Directory = " + System.getProperty("user.dir"));
+
     try {
         FileInfo info = new File("/home/pa/doc");
+
         info.inputFile("/home/pa/doc/Swing");
+
         fileInfo("/home/pa/doc/pa/xpq/1234");
+
         fileInfo("..");
     } catch (IOException ex) {
         System.out.println(ex);
@@ -131,8 +122,7 @@ System.out.println("Total space = " + root.getTotalSpace());
 所有大小都以字节指定。`getFreeSpace()` 和 `getUsableSpace()` 通常显示相同的值，是因为后者更好的估计，因为它考虑了与当前操作系统文件系统相关的开销。该方法在以下测试方法中使用：
 
 ```java
-private static void test02()
-{
+private static void test02() {
     print(new File("/"));
     print(new File("/home"));
     print(new File("/root/media/pa/HD-NFPU3"));
@@ -146,17 +136,17 @@ private static void test02()
 以下方法有一个名称参数并创建一个相应的 `File` 对象。如果该对象表示一个文件，该方法将打印名称和大小，其中大小由 `getSize()` 方法递归确定，该方法确定以该对象为根的树的大小。注意 `size` 是一个静态变量，在程序开始时定义。
 
 ```java
-private static void fileSize(String filename, FileFilter filter)
-{
+private static void fileSize(String filename, FileFilter filter) {
     File file = new File(filename);
-    if (file.exists())
-{
+
+    if (file.exists()) {
         System.out.println(file.getAbsolutePath());
         size = 0;
         getSize(file, filter);
         System.out.println(size);
+    } else {
+        System.out.println("Filen ikke ikke");
     }
-    else System.out.println("Filen ikke ikke");
 }
 ```
 
@@ -169,12 +159,15 @@ public boolean accept(File pathname);
 该方法应该测试由参数标识的文件是否符合某些标准。`FileFilter` 对象与由名称表示的 `File` 对象一起传递给 `getSize()` 方法：
 
 ```java
-private static void getSize(File file, FileFilter filter)
-{
-  if (file.isDirectory()) {
-    File[] files = filter == null ? file.listFiles() : file.listFiles(filter);
-    for (File f : files) getSize(f, filter);
-  } else if (filter == null || filter.accept(file)) size += file.length();
+private static void getSize(File file, FileFilter filter) {
+    if (file.isDirectory()) {
+        File[] files = filter == null ? file.listFiles() : file.listFiles(filter);
+        for (File f : files) {
+            getSize(f, filter);
+        }
+    } else if (filter == null || filter.accept(file)) {
+        size += file.length();
+    }
 }
 ```
 
@@ -183,37 +176,35 @@ private static void getSize(File file, FileFilter filter)
 下面是一个测试方法，确定部分当前目录和部分用户主目录的文件大小。在两种情况下，都有带过滤器和不带过滤器的测试，过滤器接受目录或文件名以 `.java` 结尾的文件。
 
 ```java
-private static void test03()
-{
-  FileFilter filter = new FileFilter() {
-    public boolean accept(File f) {
-      return f.isDirectory() || (f.isFile() && f.getName().endsWith(".java"));
-    }
-  };
-  getSize(".", null);
-  getSize(".", filter);
-  getSize(System.getProperty("user.home"), null);
-  getSize(System.getProperty("user.home"), filter);
+private static void test03() {
+    FileFilter filter = new FileFilter() {
+        public boolean accept(File f) {
+            return f.isDirectory() || (f.isFile() && f.getName().endsWith(".java"));
+        }
+    };
+
+    getSize(".", null);
+    getSize(".", filter);
+    getSize(System.getProperty("user.home"), null);
+    getSize(System.getProperty("user.home"), filter);
 }
 ```
 
 你不需要知道过滤器是如何基于匿名类定义的。
 
-
-
-JAVA 5：文件与 JAVA IO
-
-### 文件系统的操作
+## 文件系统的操作
 
 类文件还有许多可以操作文件系统的方法，例如创建目录和文件，以及再次删除它们。有很多这样的方法（鼓励你去检查一下），下面的测试方法展示了其中几个用法，但首先是一个简单的辅助方法：
 
 ```java
-private static void showFiles(File file)
-{
+private static void showFiles(File file) {
     System.out.printf(file.isDirectory() ? "[%s\n" : "%s\n", file.getName());
+
     if (file.isDirectory()) {
         File[] files = file.listFiles();
-        for (File f : files) showFiles(f);
+        for (File f : files) {
+            showFiles(f);
+        }
     }
 }
 ```
@@ -221,41 +212,47 @@ private static void showFiles(File file)
 该方法会以特定的 `File` 对象为根节点打印递归的文件树。测试方法如下所示：
 
 ```java
-private static void test04()
-{}
+private static void test04() {
+}
 ```
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_14_0.png)
 
-我们将你的简历变成一生难难的机会
+我们将你的简历变成一生难难的机会。
 
 你喜欢汽车吗？你想成为成功品牌的一员吗？我们会感谢并奖励你的热情和才华。向我们发送你的简历。你会惊讶它能带你走向哪里。
 
-在 www.employerforlife.com 向我们发送你的简历
+在 www.employerforlife.com 向我们发送你的简历。
 
-在 bookboom.com 下载免费电子书
+在 bookboom.com 下载免费电子书。
 
-点击广告阅读更多
+点击广告阅读更多。
 
-## JAVA 5：文件与 IO
+## Java 5：文件与 IO
 
 ```java
 File file = new File(System.getProperty("user.home") + "/test");
+
 try {
-  file.mkdir();
-  (new File(file, "filer")).mkdir();
-  (new File(file, "filer/file1")).createNewFile();
-  (new File(file, "filer/file2")).createNewFile();
-  showFiles(file);
-  file.deleteOnExit();
+    file.mkdir();
+
+    (new File(file, "filer")).mkdir();
+
+    (new File(file, "filer/file1")).createNewFile();
+
+    (new File(file, "filer/file2")).createNewFile();
+
+    showFiles(file);
+
+    file.deleteOnExit();
 } catch (Exception ex) {
-  System.out.println(ex);
+    System.out.println(ex);
 }
 ```
 
 第一个语句定义了一个 `File` 对象，引用用户主目录下名为 `test` 的文件。接下来，它创建了名为该名的目录并包含一个子目录 `filer`。下面再次创建了两个普通文件，然后调用了 `showFiles()` 方法。结果如下：
 
-```
+```text
 [test]
 [filer]
 file2
@@ -274,22 +271,35 @@ java -jar Seek.jar directory [text]
 
 其中 `directory` 是目录名称，`text` 是搜索文本。该命令应该打印以 `directory` 为根目录的文件树中所有包含搜索文本的文件的绝对路径。结果可能如下：
 
-JAVA.IO
+### Java IO
 
 ```bash
 Fil Rediger Sag Terminal Hjelp
+
 $ java -jar Seek.jar /home/pa/doc/noter/note05/histor/src/PersonView.java [06-07-2016] 5899
+
 /home/pa/doc/noter/note05/histor/src/Person.java [06-07-2016] 4435
+
 /home/pa/doc/noter/note05/histor/src/Person6.java [06-07-2016] 2480
+
 /home/pa/doc/noter/note05/histor/src/History.java [06-07-2016] 233
+
 /home/pa/doc/noter/note05/histor/src/Main.java [06-07-2016] 1961
+
 /home/pa/doc/noter/note05/histor/src/Other.java [06-07-2016] 2129
+
 /home/pa/doc/noter/note05/loesinger/src/sec/seek.java [10-07-2016] 1360
+
 /home/pa/doc/noter/note05/NioFile/src/copy/NioFile.java [10-07-2016] 2883
-/home/pa/doc/noter/note05/NioFile/src/copy/copy.java [10-07-2016] 844
-/home/pa/doc/noter/note05/FileCopy/src/copy/copy.java [04-12-2015] 895
-/home/pa/doc/noter/note05/FileCopy/src/filer/File.java [10-07-2016] 2921
 ```
+
+
+
+`/home/pa/doc/noter/note05/NioFile/src/copy/copy.java` [10-07-2016] 844
+
+`/home/pa/doc/noter/note05/FileCopy/src/copy/copy.java` [04-12-2015] 895
+
+`/home/pa/doc/noter/note05/FileCopy/src/filer/File.java` [10-07-2016] 2921
 
 对于每个文件，显示其名称、修改日期和文件大小。程序不能显示符合搜索标准的目录名称，如果搜索标准为空（缺少最后一个参数），则命令应显示当前文件树中的所有文件。
 
@@ -308,18 +318,15 @@ filer
 
 （此处省略后续大量重复的段落，其内容与上述完全一致，已在上方翻译中体现）
 
-
-
-
 ## JAVA 5: 文件与 JAVA IO
 
 在执行完四个语句后，文件会被关闭。这非常重要，因为写入语句是写入内存缓冲区的。只有当缓冲区满或文件关闭时，书中的内容才会被物理地写入文件。关闭文件的另一个原因是你释放了分配给文件的资源。使用 `close()` 关闭文件是非常重要的，为了确保该语句被执行，将其放置在 `finally` 块中，无论是否发生异常，`finally` 块都会执行。
 
 上述内容清晰地定义了处理文件的模式：
 
-- 1. 打开文件
-- 2. 执行所需的文件操作
-- 3. 关闭文件
+1. 打开文件
+2. 执行所需的文件操作
+3. 关闭文件
 
 在文件中写入四个数字后，再次打开它以读取内容：
 
@@ -327,10 +334,12 @@ filer
 try (RandomAccessFile file = new RandomAccessFile("tal.dat", "r"))
 ```
 
-这次，文件是在 `try` 之后的语句中打开打开的。这种语法实际上是上述写法的简写，但它保证了当程序退出 `try` 块时文件会被关闭。在大多数情况下，这种语法更优：首先，它实际上更短且更易读；其次，你可以确定自己没有忘记关闭文件。文件打开后，执行了四次 `read()` 操作，读取文件中的四个整数，并计算这些数字之和，然后将其与文件中写入的四个数字之和一起打印出来。其意图是让你看到你得到了相同的结果：
+这次，文件是在 `try` 之后的语句中打开的。这种语法实际上是上述写法的简写，但它保证了当程序退出 `try` 块时文件会被关闭。在大多数情况下，这种语法更优：首先，它实际上更短且更易读；其次，你可以确定自己没有忘记关闭文件。文件打开后，执行了四次 `read()` 操作，读取文件中的四个整数，并计算这些数字之和，然后将其与文件中写入的四个数字之和一起打印出来。其意图是让你看到你得到了相同的结果：
 
+```
 4783678760
 4783678760
+```
 
 因此，读取的四个数字与最初写入文件的数字是相同的。你应该注意，`readInt()` 方法从文件指针所在的位置读取 4 字节，并将这 4 字节转换为一个 `int`。在方法执行后，文件指针会向前移动 4 字节。该方法并不解释这 4 字节包含的内容，结果是一个“感”（sense）整数。无论这 4 字节包含什么，4 字节都可以被解释为一个整数。下一步，再次打开文件进行读和写操作：
 
@@ -343,8 +352,10 @@ try (RandomAccessFile file = new RandomAccessFile("tal.dat", "rw")) {
 
 然后文件指针向前移动 8 字节，这意味着它指向了文件中第三个数字的开头。该方法向文件中写入另一个数字，这意味着第三个数字被覆盖了，该值现在变成了 `value5` 的值。在语句执行后，再次打开文件进行读取，再次计算四个数字之和，你会发现你得到了一个不同的结果，但结果正确的：
 
+```
 4918422832
 4918422832
+```
 
 在 `RandomAccessFile` 中，你可以使用 `seek()` 方法将文件指针移动到随机位置，或从该位置进行读取或写入。
 
@@ -361,7 +372,9 @@ try (RandomAccessFile file = new RandomAccessFile("tal.dat", "r")) {
 
 该代码创建了一个可以容纳 16 字节的数组（与文件内容完全匹配——如果你用 `Files` 检查其属性，可以看到它占用了 16 字节）。接下来，使用 `read()` 方法作为参数读取文件。该方法从文件中最多读取 16 字节（如果文件指针后没有 16 字节）。这 16 字节用于初始化一个字符串，结果是：
 
+```
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
+```
 
 其目的是展示，尽管文件包含四个总计 16 字节的整数，但它可以被解释为任何内容，而读取文件的程序决定了应该如何解释结果。通过测试方法中的最后语句进一步说明，该方法读取文件内容并解释为两个 `double` 类型数字。
 
@@ -400,11 +413,7 @@ public class Person implements Comparable<Person>, Serializable
 
 与程序的之前的版本相比，我做了一个改变，因为类扩展了一个名为 `recnr` 的 `int` 变量。还定义了该变量的 getter 和 setter 方法，并且包含人在文件中的位置。最后添加了一个额外的构造函数。该类被为 `Serializable`。
 
-
-
-
-
-JAVA.IO
+## JAVA.IO
 
 ```java
 String job = read(JLENGTH);
@@ -429,22 +438,20 @@ private String read(int length) throws IOException {
 
 27
 
-
-该类开始于定义一些常量，指定名称最大长度为 50 个字符，位置最大长度为 500 个字符。最后定义了一个表示记录大小的常量。这三个常数之和乘以 2，因为一个字符（char）占用 2 个字节。最后一个数字 12 是三个整数的大小。这意味着一个 Person 记录在文件中始终占用 1172 字节。你应该注意，在大多数情况下，这会比需要的多得多，而且文件将包含一些浪费的空间，但这就是这类文件的条件。这是为了能够读取存储在特定位置的记录而必须付出的代价。
+该类开始于定义一些常量，指定名称最大长度为 50 个字符，位置最大长度为 500 个字符。最后定义了一个表示记录大小的常量。这三个常数之和乘以 2，因为一个字符（`char`）占用 2 字节。最后一个数字 12 是三个整数的大小。这意味着一个 `Person` 记录在文件中始终占用 1172 字节。你应该注意，在大多数情况下，这会比需要的多得多，而且文件将包含一些浪费的空间，但这就是这类文件的条件。这是为了能够读取存储在特定位置的记录而必须付出的代价。
 
 该类有一个 `RandomAccessFile` 类型的实例变量，构造函数打开文件进行读写。注意，如果文件无法打开，构造函数将抛出异常。该类提供了以下服务：
 
-- length()：返回文件中记录的数量
-- select()：返回具有特定记录号的记录
-- append()：向文件添加一条新记录
-- update()：修改特定记录的内容
-- delete()：删除特定记录
-- close()：关闭文件
+- `length()`：返回文件中记录的数量
+- `select()`：返回具有特定记录号的记录
+- `append()`：向文件添加一条新记录
+- `update()`：修改特定记录的内容
+- `delete()`：删除特定记录
+- `close()`：关闭文件
 
 这些方法的实现通常没有问题，但 `delete()` 是一个例外。问题在于当你删除一条记录时会发生什么，因为在逻辑上你在文件中产生了一个“空洞”。在实践中，有几种解决方案。你可以将记录移动到被删除记录所在的位置，然后根据记录的大小缩短文件的长度。这种策略的主要问题是，通过这样做记录可能会改变记录号，从而无法用于识别特定记录——记录号不能作为键。在这种情况下，我将使用一种策略，将记录号设为 -1，从而指示该记录已被删除。这种方法的缺点是文件将包含许多“死”记录，而你应该删除已删除的记录。如果你删除了许多记录，可能也意味着文件是不必要的庞大。这个问题可以通过在添加新记录时写入已删除的记录来解决（在本例中没有这样做）。你必须特别注意 `delete()` 方法是如何实现的，以及如何通过向文件写入数字 -1 来删除记录。当记录号是第一个字段时，它正好对应于文件中的数字 -1。
 
 在 bookhoon.com 免费下载电子书
-
 
 `append()` 方法的参数是待要添加到文件的 `Person` 对象。该方法首先将该对象的记录号分配为文件的下一条记录，然后将文件指针设置为文件的末尾。使用 `write()` 方法将对象写入文件。在这里，你必须注意如何使用 `writeChars()` 保存字符串。首先使用了 `PalLib` 中的两个方法，确保字符串不会过长，如果字符串小于最大长度，则会用空格填充到最大宽度。
 
@@ -470,11 +477,11 @@ public class Person implements Iterable<Person>
     }
 
     public Iterator<Person> iterator()
-{
+    {
         return list.iterator();
+    }
 }
 ```
-
 
 ```java
 public boolean add(Person pers)
@@ -495,10 +502,8 @@ public boolean add(Person pers)
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_29_0.png)
 
-
-public boolean remove(Person pers)
-
 ```java
+public boolean remove(Person pers)
 {
   PersonDB db = null;
   try {
@@ -515,9 +520,8 @@ public boolean remove(Person pers)
 }
 ```
 
-public boolean update(Person pers)
-
 ```java
+public boolean update(Person pers)
 {
   PersonDB db = null;
   try {
@@ -534,15 +538,16 @@ public boolean update(Person pers)
 }
 ```
 
-private void initialize()
-
 ```java
-list = new ArrayList<>();
-for (int i = 0; i < navname.length; i++) {
-  String job = navname[i][0].equals("Margrete d. 1.") || navname[i][0].equals("Margrete d. 2.") ? "Queen" : "King";
-  int fra = navname[i][1].length() > 0 ? Integer.parseInt(navname[i][1]) : -9999;
-  int til = navname[i][2].length() > 0 ? Integer.parseInt(navname[i][2]) : 9999;
-  list.add(new Person(navname[i][0], job, fra, til));
+private void initialize()
+{
+  list = new ArrayList<>();
+  for (int i = 0; i < navname.length; i++) {
+    String job = navname[i][0].equals("Margrete d. 1.") || navname[i][0].equals("Margrete d. 2.") ? "Queen" : "King";
+    int fra = navname[i][1].length() > 0 ? Integer.parseInt(navname[i][1]) : -9999;
+    int til = navname[i][2].length() > 0 ? Integer.parseInt(navname[i][2]) : 9999;
+    list.add(new Person(navname[i][0], job, fra, til));
+  }
 }
 ```
 
@@ -587,7 +592,6 @@ private void store()
 }
 ```
 
-
 ```java
 private String[][] navne = {
     {"Margrete d. 1.", "1000", "1049"},
@@ -606,98 +610,32 @@ public class Person
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_29_0)
 
-
-
-
-
-
 ```java
 /**
  * 向文件添加新产品。该方法为产品分配一个
  * 数字，即文件中的下一条记录。因此，第一个产品的
  * 数字为 0。
  * @param prod 要加到文件中的产品。
- * @throws IOException 如果无法添加产品
  */
-public void add(Product prod) throws IOException { }
 ```
 
-```java
-/**
- * 返回产品编号 pnr 的产品。如果未找到该产品，
- * 方法将抛出异常。
- * @param pnr 产品编号
- * @return 编号为 pnr 的产品
- * @throws IOException 如果未找到产品
- */
-public Product select(int pnr) throws IOException { }
-```
-
-```java
-/**
- * 返回文件中的所有产品。
- * @return 文件中的所有产品
- */
-public ArrayList<Product> select() { }
-```
-
-```java
-/**
- * 更新产品。该方法测试位置上的记录是否具有
- * 正确的产品编号。如果不是，则抛出异常。
- * @param prod 要更新的产品
- * @throws IOException 如果未找到产品
- */
-public void update(Product prod) throws IOException { }
-```
-
-```java
-/**
- * 删除产品编号为 pnr 的产品。通过向产品编号
- * 写入 -i 来删除产品。
- * @param pnr 要删除产品的产品编号
- * @throws IOException 如果未找到产品
- */
-public void delete(int pnr) throws IOException { }
-```
-
-你应该注意，该类的每个方法都应该同时打开和关闭文件。你还应该注意，文件中的前 4 个字节是一个签名（signature），在确定每条记录的位置时必须考虑这一点。
-
-应用程序的主窗口应主要显示一个包含所有产品列表的列表框：
-
-![](img/5d98ad28901c31fd736abaabe8f09e19_35_0.png)
-
-点击按钮，你将获得一个可以创建新产品的窗口。
-
-![](img/5d98ad28901c31fd736abaabe8f09e19_35_1.png)
-
-关于 e-Learning for Kids。e-Learning 成立于2004 年，是一个全球非营利基金会，致力于为 5-12 岁的儿童提供互联网上免费且有趣的学习，课程涵盖数学、科学、语言艺术、健康和环境技能。自 2005 年以来，来自 190 多个国家的 1500 万儿童受益于我们提供的 e-Learning 服务。所有志愿者员工均由教育和在线学习专家、来自全球致力于改变的业务专业人士组成，目标是通过种子资金、志愿者、赞助商和慷慨的开发者来推动在线学习。更多信息，请访问 www.e-learningforkids.org。
-
-- 小学教育排名第一 MOOC
-- 针对 5-12 岁儿童的免费数字学习
-- 惠及 1500 万儿童
-
-在 bookboom.com 下载免费电子书
 
 
-如果你双击列表框中的某个产品，你将获得相同的窗口，你可以在其中编辑该产品：
-
-![](img/5d98ad28901c31fd736abaabe8f09e19_36_0.png)
+# JAVA 5：文件与 JAVA IO
 
 ## 2.3 字节流
 
-java.io 包包含若干用于字节流（以及其他流）的类，流由字节序列组成，基本上有以下类：
+`java.io` 包包含若干用于字节流（以及其他流）的类，流由字节序列组成，基本上有以下类：
 
 | 输入类 | 输出类 |
 | :--- | :--- |
-| ByteArrayInputStream | ByteArrayOutputStream |
-| FileInputStream | FileOutputStream |
-| ObjectInputStream | ObjectOutputStream |
-| PipedInputStream | PipedOutputStream |
-| FilterInputStream | FilterOutputStream |
+| `ByteArrayInputStream` | `ByteArrayOutputStream` |
+| `FileInputStream` | `FileOutputStream` |
+| `ObjectInputStream` | `ObjectOutputStream` |
+| `PipedInputStream` | `PipedOutputStream` |
+| `FilterInputStream` | `FilterOutputStream` |
 
-在这里，左列是输入类，所有类都派自抽象类 `InputStream`。右列是输出类，派自抽象类 `OutputStream`。在接下来，我将展示这些类的示例——推迟展示 PipedInputStream 和 PipedOutputStream。
-
+在这里，左列是输入类，所有类都派自抽象类 `InputStream`。右列是输出类，派自抽象类 `OutputStream`。在接下来，我将展示这些类的示例——推迟展示 `PipedInputStream` 和 `PipedOutputStream`。
 
 可以将 `ByteArrayOutputStream` 视为 `ByteArrayInputStream` 的内存表示，而 `InputStream` 的内存表示。这些类的典型用途是将文件内容（例如图片）加载到 `ByteArrayOutputStream` 中，可以在内存中对文件内容进行处理。然后使用 `ByteArrayInputStream` 将内容流到文件。考虑以下测试方法：
 
@@ -705,40 +643,31 @@ java.io 包包含若干用于字节流（以及其他流）的类，流由字节
 private static void test06() {
   try (RandomAccessFile file = new RandomAccessFile("numbers1.dat", "rw")) {
     for (int i = 1; i <= 10; ++i) file.writeInt(i);
-```
-
-```java
-catch (IOException ex)
-{
+  } catch (IOException ex) {
     System.out.println(ex);
-}
-```
+  }
 
-```java
-ByteArrayOutputStream streamOut = new ByteArrayOutputStream();
-try (RandomAccessFile file = new RandomAccessFile("numbers1.dat", "r")) {
+  ByteArrayOutputStream streamOut = new ByteArrayOutputStream();
+  try (RandomAccessFile file = new RandomAccessFile("numbers1.dat", "r")) {
     for (int i = 0; i < file.length(); ++i) streamOut.write(file.readByte());
-} catch (IOException ex) {
+  } catch (IOException ex) {
     System.out.println(ex);
-}
-```
+  }
 
-```java
-byte[] bytes = streamOut.toByteArray();
-for (int i = 0; i < bytes.length; i++) if ((i + 2) % 4 == 0) bytes[i] = 1;
-ByteArrayInputStream streamIn = new ByteArrayInputStream(bytes);
-try (RandomAccessFile file = new RandomAccessFile("numbers1.dat", "rw")) {
+  byte[] bytes = streamOut.toByteArray();
+  for (int i = 0; i < bytes.length; i++) if ((i + 2) % 4 == 0) bytes[i] = 1;
+  ByteArrayInputStream streamIn = new ByteArrayInputStream(bytes);
+  try (RandomAccessFile file = new RandomAccessFile("numbers1.dat", "rw")) {
     for (int b = streamIn.read(); b != -1; b++) file.writeByte(b);
-} catch (IOException ex) {
+  } catch (IOException ex) {
     System.out.println(ex);
-}
-```
+  }
 
-```java
-try (RandomAccessFile file = new RandomAccessFile("numbers1.dat", "r")) {
+  try (RandomAccessFile file = new RandomAccessFile("numbers1.dat", "r")) {
     for (int i = 0, n = (int)(file.length() / 4); i < n; i++) {
-        System.out.println(file.readInt());
+      System.out.println(file.readInt());
     }
+  }
 }
 ```
 
@@ -764,32 +693,93 @@ try (RandomAccessFile file = new RandomAccessFile("numbers1.dat", "r")) {
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_35_1.png)
 
-- 小学教育排名第一 MOOC
-- 针对 5-12 岁儿童的免费数字学习
-- 惠及 1500 万儿童
-
 如果你双击列表框中的某个产品，你将获得相同的窗口，你可以在其中编辑该产品：
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_36_0.png)
 
+## 产品管理类
 
+```java
+/**
+ * @throws IOException 如果无法添加产品
+ */
+public void add(Product prod) throws IOException { }
+```
 
+```java
+/**
+ * 返回产品编号 pnr 的产品。如果未找到该产品，
+ * 方法将抛出异常。
+ *
+ * @param pnr 产品编号
+ * @return 编号为 pnr 的产品
+ * @throws IOException 如果未找到产品
+ */
+public Product select(int pnr) throws IOException { }
+```
 
+```java
+/**
+ * 返回文件中的所有产品。
+ *
+ * @return 文件中的所有产品
+ */
+public ArrayList<Product> select() { }
+```
 
+```java
+/**
+ * 更新产品。该方法测试位置上的记录是否具有
+ * 正确的产品编号。如果不是，则抛出异常。
+ *
+ * @param prod 要更新的产品
+ * @throws IOException 如果未找到产品
+ */
+public void update(Product prod) throws IOException { }
+```
+
+```java
+/**
+ * 删除产品编号为 pnr 的产品。通过向产品编号
+ * 写入 -i 来删除产品。
+ *
+ * @param pnr 要删除产品的产品编号
+ * @throws IOException 如果未找到产品
+ */
+public void delete(int pnr) throws IOException { }
+```
+
+你应该注意，该类的每个方法都应该同时打开和关闭文件。你还应该注意，文件中的前 4 个字节是一个签名（signature），在确定每条记录的位置时必须考虑这一点。
+
+## 关于 e-Learning for Kids
+
+e-Learning 成立于 2004 年，是一个全球非营利基金会，致力于为 5-12 岁的儿童提供互联网上免费且有趣的学习，课程涵盖数学、科学、语言艺术、健康和环境技能。自 2005 年以来，来自 190 多个国家的 1500 万儿童受益于我们提供的 e-Learning 服务。所有志愿者员工均由教育和在线学习专家、来自全球致力于改变的业务专业人士组成，目标是通过种子资金、志愿者、赞助商和慷慨的开发者来推动在线学习。更多信息，请访问 www.e-learningforkids.org。
+
+- 小学教育排名第一 MOOC
+- 针对 5-12 岁儿童的免费数字学习
+- 惠及 1500 万儿童
+
+在 bookboom.com 下载免费电子书
+
+## 加密与解密
 
 那个数字是 35335216。如果我们现在必须用上述密钥对这个数字进行加密，其原理是每个字节都被用作密钥的索引，并被替换为密钥在该索引处的内容：
 
+```
 0x32305c1b
+```
 
 结果是数字 842030107，这是一个完全不同的数字。能够加密数据是可以好的，但如果你不能解密这些数据，它就没有太大意义。如果你拥有密钥，对于每个字节，你都可以在密钥中找到它的索引，并将该字节替换为该索引：
 
+```
 0x021b2c30
+```
 
 你就回到了原始加密的数字。
 
 考虑以下 `void test0` 方法：
 
-```
+```java
 private static void test0()
 {
   String path0 = "text0";
@@ -815,80 +805,73 @@ private static void test0()
 }
 ```
 
-
 该方法的第一部分将一个字符串
 
+```java
 String navn = "ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÍŞÅ";
+```
 
 写入 `FileOutputStream`。你应该注意，如何创建一个 `FileOutputStream`，将字符串转换为字节数组，然后将其写入文件。该文件保存在当前目录中，名为 `text`。如果你检查该文件，你会发现它占用了 31 个字节，这可能不是人们预期的结果，原因是 `String` 类的 `getBytes()` 方法使用默认字符编码（即 UTF-8）转换为字节数组。该字符串占据了 28 个字符，但最后三个被编码为单个字节，而最后三个使用了 2 个字节。因此，25 + 6 = 31 个字节。
 
 程序还有一个方法，可以读取字符串（文件）的内容，将内容解释为文本并在屏幕上打印文本：
 
-```
+```java
 private static void printText(String path)
 {
-    InputStream stream = null;
-try
-{
+  InputStream stream = null;
+  try {
     stream = new FileInputStream(path);
+    ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+    for (int b = stream.read(); b != -1; b = stream.read()) bytes.write(b);
+    System.out.println(new String(bytes.toByteArray()));
+  } catch (IOException ex) {
+    System.out.println(ex);
+  } finally {
+    if (stream != null) try { stream.close(); } catch (Exception e) { }
+  }
+}
 ```
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_41_0.png)
 
-
-```
-ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-for (int b = stream.read(); b != -1; b = stream.read()) bytes.write(b);
-System.out.println(new String(bytes.toByteArray()));
-}
-catch (IOException ex) {
-    System.out.println(ex);
-}
-finally {
-    if (stream != null) try { stream.close(); } catch (Exception e) {
-}
-}
-```
-
 在这种情况下，打开了一个 `FileInputStream`，并将文件内容读取到 `ByteArrayOutputStream` 中。该流被转换为字符串并打印在屏幕上。该方法在 `test0` 测试方法中使用，将文件内容打印到屏幕上。
 
-测试方法的其余部分将文件文本加密到 `text1`并在屏幕上打印该文件的内容。以下方法通过在数组 `key` 中交换 1000 次随机元素来创建密钥：
+测试方法的其余部分将文件文本加密到 `text1` 并在屏幕上打印该文件的内容。以下方法通过在数组 `key` 中交换 1000 次随机元素来创建密钥：
 
-```
+```java
 private static int[] createKey() {
-int[] key = new int[256];
-for (int i = 0; i < key.length; ++i) key[i] = i;
-Random rand = new Random();
-for (int n = 0; n < 1000; ++n) {
+  int[] key = new int[256];
+  for (int i = 0; i < key.length; ++i) key[i] = i;
+  Random rand = new Random();
+  for (int n = 0; n < 1000; ++n) {
     int i = rand.nextInt(key.length);
     int j = rand.nextInt(key.length);
     if (i != j) {
-        int t = key[i];
-        key[i] = key[j];
-        key[j] = t;
+      int t = key[i];
+      key[i] = key[j];
+      key[j] = t;
     }
-}
-return key;
+  }
+  return key;
 }
 ```
 
 从原理上讲，可以创建 256! 个密钥，这是一个巨大的数字，因此猜测密钥是一项徒劳的任务，但相对，在明文分析中确定密钥是相对容易的。
 
-
 以下类用于加密文件：
 
-```
+```java
 class InCrypter extends FilterOutputStream {
-    private int[] key;
+  private int[] key;
 
-    public InCrypter(OutputStream stream, int[] key) {
-        super(stream);
-        this.key = key;
-    }
+  public InCrypter(OutputStream stream, int[] key) {
+    super(stream);
+    this.key = key;
+  }
 
-    public void write(int b) throws IOException {
-        out.write(key[b]);
-    }
+  public void write(int b) throws IOException {
+    out.write(key[b]);
+  }
 }
 ```
 
@@ -896,56 +879,54 @@ class InCrypter extends FilterOutputStream {
 
 使用该类可以按以下方式加密文件：
 
-```
+```java
 private static void crypt(String path1, String path2, int[] key) {
-    FileInputStream in = null;
-    InCrypter inCrypter = null;
-    try {
-        in = new FileInputStream(path1);
-        inCrypter = new InCrypter(new FileOutputStream(path2), key);
-        for (int b = in.read(); b != -1; b = in.read()) inCrypter.write(b);
-    } catch (IOException ex) {
-        System.out.println(ex);
-    } finally {
-        if (in != null) try { in.close(); } catch (IOException e) { }
-        if (inCrypter != null) try { inCrypter.close(); } catch (IOException e) { }
-    }
+  FileInputStream in = null;
+  InCrypter inCrypter = null;
+  try {
+    in = new FileInputStream(path1);
+    inCrypter = new InCrypter(new FileOutputStream(path2), key);
+    for (int b = in.read(); b != -1; b = in.read()) inCrypter.write(b);
+  } catch (IOException ex) {
+    System.out.println(ex);
+  } finally {
+    if (in != null) try { in.close(); } catch (IOException e) { }
+    if (inCrypter != null) try { inCrypter.close(); } catch (IOException e) { }
+  }
 }
 ```
-
-# JAVA 5：文件与 JAVA IO
 
 `path1` 是要加密的文件名，并作为 `FileInputStream` 打开。`path2` 是必须包含加密数据的文件名，作为 `FileOutputStream` 打开并作为 `InCrypter` 对象的参数使用。此之后，通过读取输入文件并使用 `FilterOutputStream` 对象将其写入输出文件来进行加密。你应该注意，当在 `finally` 块中关闭此流时，当内容物理写入文件时，`OutputStream` 也会被关闭。
 
 文件的解密原理上是相同。首先，它定义了一个 `FilterInputStream` 作为 `InputStream` 的过滤器：
 
-```
+```java
 class DeCrypter extends FilterInputStream {
-    private int[] key;
+  private int[] key;
 
-    public DeCrypter(InputStream stream, int[] key) {
-        super(stream);
-        int[] map = new int[256];
-        for (int i = 0; i < map.length; ++i) map[key[i]] = i;
-        this.key = map;
-    }
+  public DeCrypter(InputStream stream, int[] key) {
+    super(stream);
+    int[] map = new int[256];
+    for (int i = 0; i < map.length; ++i) map[key[i]] = i;
+    this.key = map;
+  }
+
+  public int read() throws IOException {
+    int value = in.read();
+    return (value == -1) ? -1 : key[value];
+  }
+}
 ```
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_44_0.png)
 
 在 bookoon.com 下载免费电子书。点击广告阅读更多。
 
-# JAVA 5：文件与 JAVA IO
 
-```
-public int read() throws IOException
-{
-    int value = in.read();
-    return (value == -1) ? -1 : key[value];
-}
-```
 
-构造函数将此 `InputStream` 作为参数，但构造函数也注入了密钥以便解密文件。`read()` 方法读取输入流中的下一个字节，这是一个字节（不是结束符），该方法返回反转的密钥。以下方法可用于解密加密文件：
+`return (value == -1) ? -1 : key[value];`
+
+构造函数将此`InputStream`作为参数，但构造函数也注入了密钥以便解密文件。`read()`方法读取输入流中的下一个字节，这是一个字节（不是结束符），该方法返回反转的密钥。以下方法可用于解密加密文件：
 
 ```
 private static void decrypt(String path1, String path2, int[] key)
@@ -965,7 +946,7 @@ private static void decrypt(String path1, String path2, int[] key)
 }
 ```
 
-这里 `path1` 是要加密的文件名，`path2` 是要解密的文件名。该方法原理上与 `crypt()` ，仅使用了 `FilterInputStream`。
+这里`path1`是要加密的文件名，`path2`是要解密的文件名。该方法原理上与`crypt()`相同，仅使用了`FilterInputStream`。
 
 如果你运行程序，你会得到以下结果：
 
@@ -973,19 +954,19 @@ private static void decrypt(String path1, String path2, int[] key)
 ABCDEFGHIJKLMNOPQRSTUVWXYZÆ
 ```
 
-如果你使用 Files 检查三个文件，你会发现它们的大小相同（31 个字节）。
+如果你使用`Files`检查三个文件，你会发现它们的大小相同（31 个字节）。
 
 # JAVA 5：文件与 IO
 
 ## 练习 2
 
-编写一个名为 `Copy` 的程序，它应该作为命令行执行，其工作方式类似于 Linux 中的 `cp` 命令，命令行指定源文件（要复制的）以及目标文件的名称。源文件必须是 `InputStream`，目标必须是 `OutputStream`。
+编写一个名为`Copy`的程序，它应该作为命令行执行，其工作方式类似于 Linux 中的`cp`命令，命令行指定源文件（要复制的）以及目标文件的名称。源文件必须是`InputStream`，目标必须是`OutputStream`。
 
-程序完成后，你必须对其进行测试，最好使用不同类型的文件，例如文档和图片
+程序完成后，你必须对其进行测试，最好使用不同类型的文件，例如文档和图片。
 
 ## 数据流
 
-字节流是基础流，原理上讲，所有流都是字节流，但还有其他类可以轻松将其他类型流到文件。是派自 `FilterOutputStream` 的 `DataOutputStream` 以及派自 `FilterInputStream` 的 `DataInputStream`。我提到 `BufferedOutputStream` 和 `BufferedInputStream`，它们也派自 `FilterOutputStream` 和 `FilterInputStream`。通常情况下，数据流作为 `OutputStream` 和 `InputStream` 工作，这意味着它们告诉操作系统对每个字节进行写入和读取。这并不是特别有效的，因此有了 `BufferedOutputStream` 和 `BufferedInputStream` 类，它们为 `OutputStream` 和 `InputStream` 分配了缓冲区。
+字节流是基础流，原理上讲，所有流都是字节流，但还有其他类可以轻松将其他类型流到文件。是派自`FilterOutputStream`的`DataOutputStream`以及派自`FilterInputStream`的`DataInputStream`。我提到`BufferedOutputStream`和`BufferedInputStream`，它们也派自`FilterOutputStream`和`FilterInputStream`。通常情况下，数据流作为`OutputStream`和`InputStream`工作，这意味着它们告诉操作系统对每个字节进行写入和读取。这并不是特别有效的，因此有了`BufferedOutputStream`和`BufferedInputStream`类，它们为`OutputStream`和`InputStream`分配了缓冲区。
 
 考虑以下测试方法：
 
@@ -1013,10 +994,6 @@ JAVA.IO
 
 47
 
-
-
-
-
 ## JAVA 5：文件与 JAVA IO
 
 ```java
@@ -1028,7 +1005,7 @@ catch (IOException ex)
 }
 ```
 
-第一个方法打开了一个 `FileOutputStream` 数据流。它被封装在 `BufferedOutputStream` 中，而后者又被封装在 `DataOutputStream` 中。然后，该方法向文件写入了一个 `int`、一个 `double`、一个 `String` 和一个 `long`。你应该注意，`DataOutputStream` 拥有所有基本类型以及 `String` 类型的方法。在这里，`writeInt()` 方法向文件写入 4 字节，而 `writeDouble()` 方法写入 8 字节。`writeUTF()` 方法写入一个用 UTF-8 编码转换的字符串。在这种情况下，字符串填充了空间，并且由于字符 A 和 #，它将被编码为 14 字节，因此该方法应该写入：
+第一个方法打开了一个`FileOutputStream`数据流。它被封装在`BufferedOutputStream`中，而后者又被封装在`DataOutputStream`中。然后，该方法向文件写入了一个`int`、一个`double`、一个`String`和一个`long`。你应该注意，`DataOutputStream`拥有所有基本类型以及`String`类型的方法。在这里，`writeInt()`方法向文件写入 4 字节，而`writeDouble()`方法写入 8 字节。`writeUTF()`方法写入一个用 UTF-8 编码转换的字符串。在这种情况下，字符串填充了空间，并且由于字符 A 和 #，它将被编码为 14 字节，因此该方法应该写入：
 
 4 + 8 + 14 + 8 = 34 字节
 
@@ -1046,23 +1023,23 @@ BI挪威商学院是欧洲最大的商学院之一，欢迎超过 20,000 名学�
 
 ## JAVA 5：IO
 
-如果你检查该文件，你会发现它占了 36 字节。原因是 `writeUTF()` 方法额外添加了两个字节（前两个），用于表示写入文件的字节数（字符串的长度）。有必要再次读取该字符串。注意，`DataInputStream` 拥有所有基本类型的读取方法。例如，`readDouble()` 方法从文件指针所在的位置读取接下来的 8 个字节，并将这些字节转换为 `double`。同样，`readUTF()` 读取前两个字节，确定需要读取多少个字节。
+如果你检查该文件，你会发现它占了 36 字节。原因是`writeUTF()`方法额外添加了两个字节（前两个），用于表示写入文件的字节数（字符串的长度）。有必要再次读取该字符串。注意，`DataInputStream`拥有所有基本类型的读取方法。例如，`readDouble()`方法从文件指针所在的位置读取接下来的 8 个字节，并将这些字节转换为`double`。同样，`readUTF()`读取前两个字节，确定需要读取多少个字节。
 
 ### 练习题 3
 
-你必须编写一个程序，其中包含一个方法可以将 `double` 的值打印到文件中。数字应使用 `DataOutputStream` 写入，但不使用 `BufferedOutputStream`。当该方法向文件写入数据时，必须同时计算它们的和并在屏幕上打印该值。该程序还必须包含一个方法，读取上述文件中的数字并使用 `DataInputStream` 确定它们，但不使用 `BufferedInputStream`。最后，该方法必须在屏幕上打印和，并希望结果与第一个方法的数字相同。为了更改上述方法，第一个使用 `BufferedOutputStream`，另一个使用 `BufferedInputStream`。尝试观察效率的提升。
+你必须编写一个程序，其中包含一个方法可以将`double`的值打印到文件中。数字应使用`DataOutputStream`写入，但不使用`BufferedOutputStream`。当该方法向文件写入数据时，必须同时计算它们的和并在屏幕上打印该值。该程序还必须包含一个方法，读取上述文件中的数字并使用`DataInputStream`确定它们，但不使用`BufferedInputStream`。最后，该方法必须在屏幕上打印和，并希望结果与第一个方法的数字相同。为了更改上述方法，第一个使用`BufferedOutputStream`，另一个使用`BufferedInputStream`。尝试观察效率的提升。
 
 ### 练习题 4
 
-你必须编写一个与练习 2 相同的程序，但这次你必须分别将两个流对封装在 `BufferedOutputStream` 和 `BufferedInputStream` 中。你能观察到改进吗？
+你必须编写一个与练习 2 相同的程序，但这次你必须分别将两个流对封装在`BufferedOutputStream`和`BufferedInputStream`中。你能观察到改进吗？
 
 ## 2.4 对象序列化
 
-在之前的示例中，我使用了对象序列化作为一种在文件中存储数据的简便方法。现在我将更深入地观察它的工作原理。原则上，这是一个关于对象字节到 `ByteArray` 的问题，并不一定简单。如果你考虑 `DataStream`，对于基本类型来说它是简单的，你知道填充了多少数据，以及确切写入或读取多少字节。这由 `DataOutputStream` 和 `DataInputStream` 类表示，它们对每种基本类型都有特定的方法。当你看一个 `String`（这是一个对象）时，情况稍微复杂一点，因为需要保存字符串填充了多少字节。
+在之前的示例中，我使用了对象序列化作为一种在文件中存储数据的简便方法。现在我将更深入地观察它的工作原理。原则上，这是一个关于对象字节到`ByteArray`的问题，并不一定简单。如果你考虑`DataStream`，对于基本类型来说它是简单的，你知道填充了多少数据，以及确切写入或读取多少字节。这由`DataOutputStream`和`DataInputStream`类表示，它们对每种基本类型都有特定的方法。当你看一个`String`（这是一个对象）时，情况稍微复杂一点，因为需要保存字符串填充了多少字节。
 
 如果存在任何对象，情况会更加复杂，因为人们不知道这样的对象填充了什么，而且它可能由基本类型和对象组成，而这些对象反过来又可以由基本类型和对象组成，并可以任意深度重复。
 
-为了加载对象，必须知道该对象填充了多少字节。为了从文件加载对象，必须将对象的字节转换到 `ByteArray`。原则上，这是一个关于对象字节到 `ByteArray` 的问题，并不一定简单。序列化对象可以被存储。序列化的对象可以被反序列化。为了序列化对象，必须实现 `Serializable` 接口。如下所示：
+为了加载对象，必须知道该对象填充了多少字节。为了从文件加载对象，必须将对象的字节转换到`ByteArray`。原则上，这是一个关于对象字节到`ByteArray`的问题，并不一定简单。序列化对象可以被存储。序列化的对象可以被反序列化。为了序列化对象，必须实现`Serializable`接口。如下所示：
 
 ```java
 class Person implements Serializable
@@ -1108,7 +1085,7 @@ class Person implements Serializable
 }
 ```
 
-为了能够序列化化，类必须实现 `Serializable` 接口。如下所示：
+为了能够序列化，类必须实现`Serializable`接口。如下所示：
 
 ```java
 private static void test8()
@@ -1141,7 +1118,7 @@ private static void print(Person pers)
 }
 ```
 
-为了序列序列化，类必须实现 `Serializable` 接口。如下所示：
+为了能够序列化，类必须实现`Serializable`接口。如下所示：
 
 ```java
 class Person implements Serializable
@@ -1187,7 +1164,7 @@ class Person implements Serializable
 }
 ```
 
-为了能够序列化，类必须实现 `Serializable` 接口。如下所示：
+为了能够序列化，类必须实现`Serializable`接口。如下所示：
 
 ```java
 private static void test7()
@@ -1220,7 +1197,42 @@ private static void print(Person pers)
 }
 ```
 
-为了能够序列化，类必须实现 `Serializable` 接口。如下所示：
+为了能够序列化，类必须实现`Serializable`接口。如下所示：
+
+```java
+class Person implements Serializable
+{
+    private String name;
+    private Calendar fdate;
+    private double sats;
+    private transient int hours = 0;
+
+    public Person(String name, Calendar fdate, double sats)
+    {
+        this.name = name;
+        this.fdate = fdate;
+        this.sats = sats;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public Calendar getDate()
+    {
+        return fdate;
+    }
+
+    public double getPay()
+    {
+        return sats;
+    }
+```
+
+
+
+为了能够序列化，类必须实现`Serializable`接口。如下所示：
 
 ```java
 class Person implements Serializable
@@ -1266,7 +1278,7 @@ class Person implements Serializable
 }
 ```
 
-为了能够序列化，类必须实现 `Serializable` 接口。如下所示：
+为了能够序列化，类必须实现`Serializable`接口。如下所示：
 
 ```java
 private static void test6()
@@ -1282,11 +1294,13 @@ private static void test6()
     {
         System.out.println(ex);
     }
+
     try (ObjectInputStream stream = new ObjectInputStream(new FileInputStream("person")))
     {
         Person pers = (Person)stream.readObject();
         print(pers);
-    } catch (ClassNotFoundException ex)
+    }
+    catch (ClassNotFoundException ex)
     {
         System.out.println(ex);
     }
@@ -1299,7 +1313,7 @@ private static void print(Person pers)
 }
 ```
 
-为了能够序列化，类必须实现 `Serializable` 接口。如下所示：
+为了能够序列化，类必须实现`Serializable`接口。如下所示：
 
 ```java
 class Person implements Serializable
@@ -1345,7 +1359,7 @@ class Person implements Serializable
 }
 ```
 
-为了能够序列化，类必须实现 `Serializable` 接口。如下所示：
+为了能够序列化，类必须实现`Serializable`接口。如下所示：
 
 ```java
 private static void test5()
@@ -1361,11 +1375,13 @@ private static void test5()
     {
         System.out.println(ex);
     }
+
     try (ObjectInputStream stream = new ObjectInputStream(new FileInputStream("person")))
     {
         Person pers = (Person)stream.readObject();
         print(pers);
-    } catch (ClassNotFoundException ex)
+    }
+    catch (ClassNotFoundException ex)
     {
         System.out.println(ex);
     }
@@ -1378,7 +1394,7 @@ private static void print(Person pers)
 }
 ```
 
-为了能够序列化，类必须实现 `Serializable` 接口。如下所示：
+为了能够序列化，类必须实现`Serializable`接口。如下所示：
 
 ```java
 class Person implements Serializable
@@ -1424,7 +1440,7 @@ class Person implements Serializable
 }
 ```
 
-为了能够序列化，类必须实现 `Serializable` 接口。如下所示：
+为了能够序列化，类必须实现`Serializable`接口。如下所示：
 
 ```java
 private static void test4()
@@ -1440,11 +1456,13 @@ private static void test4()
     {
         System.out.println(ex);
     }
+
     try (ObjectInputStream stream = new ObjectInputStream(new FileInputStream("person")))
     {
         Person pers = (Person)stream.readObject();
         print(pers);
-    } catch (ClassNotFoundException ex)
+    }
+    catch (ClassNotFoundException ex)
     {
         System.out.println(ex);
     }
@@ -1457,7 +1475,7 @@ private static void print(Person pers)
 }
 ```
 
-为了能够序列化，类必须实现 `Serializable` 接口。如下所示：
+为了能够序列化，类必须实现`Serializable`接口。如下所示：
 
 ```java
 class Person implements Serializable
@@ -1503,7 +1521,7 @@ class Person implements Serializable
 }
 ```
 
-为了能够序列化，类必须实现 `Serializable` 接口。如下所示：
+为了能够序列化，类必须实现`Serializable`接口。如下所示：
 
 ```java
 private static void test3()
@@ -1519,11 +1537,13 @@ private static void test3()
     {
         System.out.println(ex);
     }
+
     try (ObjectInputStream stream = new ObjectInputStream(new FileInputStream("person")))
     {
         Person pers = (Person)stream.readObject();
         print(pers);
-    } catch (ClassNotFoundException ex)
+    }
+    catch (ClassNotFoundException ex)
     {
         System.out.println(ex);
     }
@@ -1536,7 +1556,7 @@ private static void print(Person pers)
 }
 ```
 
-为了能够序列化，类必须实现 `Serializable` 接口。如下所示：
+为了能够序列化，类必须实现`Serializable`接口。如下所示：
 
 ```java
 class Person implements Serializable
@@ -1582,7 +1602,7 @@ class Person implements Serializable
 }
 ```
 
-为了能够序列化，类必须实现 `Serializable` 接口。如下所示：
+为了能够序列化，类必须实现`Serializable`接口。如下所示：
 
 ```java
 private static void test2()
@@ -1598,11 +1618,13 @@ private static void test2()
     {
         System.out.println(ex);
     }
+
     try (ObjectInputStream stream = new ObjectInputStream(new FileInputStream("person")))
     {
         Person pers = (Person)stream.readObject();
         print(pers);
-    } catch (ClassNotFoundException ex)
+    }
+    catch (ClassNotFoundException ex)
     {
         System.out.println(ex);
     }
@@ -1615,7 +1637,7 @@ private static void print(Person pers)
 }
 ```
 
-为了能够序列化，类必须实现 `Serializable` 接口。如下所示：
+为了能够序列化，类必须实现`Serializable`接口。如下所示：
 
 ```java
 class Person implements Serializable
@@ -1661,7 +1683,35 @@ class Person implements Serializable
 }
 ```
 
-为了能够序列化，类必须实现 `Serializable` 接口。如下所示：
+
+
+`this.sats = sats;`
+
+`public String getName()`
+
+`return name;`
+
+`public Calendar getDate()`
+
+`return fdate;`
+
+`public double getPay()`
+
+`return sats;`
+
+`public void add(int hours)`
+
+`this.hours += hours;`
+
+`public int getAge()`
+
+`Calendar now = Calendar.getInstance();`
+
+`int age = now.get(Calendar.YEAR) - fdate.get(Calendar.YEAR);`
+
+`return age;`
+
+为了能够序列化，类必须实现`Serializable`接口。如下所示：
 
 ```java
 private static void test1()
@@ -1693,10 +1743,6 @@ private static void print(Person pers)
     System.out.println("Pay: " + pers.getPay());
 }
 ```
-
-
-
-
 
 ## JAVA 5：文件与 JAVA IO
 
@@ -1733,7 +1779,7 @@ catch (IOException ex) {
 
 在 bookboom.com 下载免费电子书
 
-然而，你很少会这样做。如果你有多个对象，并且像这里一样是一个对象数组（或对象的 `ArrayList`），你通常会对它进行序列化，但是作为单次操作：
+然而，你很少会这样做。如果你有多个对象，并且像这里一样是一个对象数组（或对象的`ArrayList`），你通常会对它进行序列化，但是作为单次操作：
 
 ```java
 private static void test1() {
@@ -1760,22 +1806,20 @@ private static void test1() {
 }
 ```
 
-这是可能的，因为 `Array` 类实现了 `Serializable` 接口。情况对于集合类也是如此，因此它们也可以被序列化。
+这是可能的，因为`Array`类实现了`Serializable`接口。情况对于集合类也是如此，因此它们也可以被序列化。
 
 ### 序列化对象层次
 
-以下类继承自 `Person` 并通过职位名称扩展了 `Person` 类
+以下类继承自`Person`并通过职位名称扩展了`Person`类
 
 ```java
 class Employee extends Person {
     private String job;
-
     public Employee(String name, String job, Calendar fdate, double sats)
     {
       super(name, fdate, sats);
       this.job = job;
     }
-
     public String toString()
     {
       return job + "\n" + super.toString();
@@ -1783,7 +1827,7 @@ class Employee extends Person {
 }
 ```
 
-你应该注意，该类没有定义为 `Serializable`，但这种类型的对象仍然可以被序列化，因为基类是 `Serializable`：
+你应该注意，该类没有定义为`Serializable`，但这种类型的对象仍然可以被序列化，因为基类是`Serializable`：
 
 ```java
 private static void test2()
@@ -1806,35 +1850,31 @@ private static void test2()
 }
 ```
 
-这是可以运行的，因为 `Employee` 类实现了 `Serializable`。
+这是可以运行的，因为`Employee`类实现了`Serializable`。
 
 ### 自定义的 writeObject() 和 readObject()
 
-有时你想自己决定如何对对象的序列化和反序列化。这可能是为了性能，但过程非常简单，只要该类实现了 `Serializable`。以下类实现了这些方法：
+有时你想自己决定如何对对象的序列化和反序列化。这可能是为了性能，但过程非常简单，只要该类实现了`Serializable`。以下类实现了这些方法：
 
 ```java
 class Name implements Serializable
 {
     private String name;
     private Calendar time = null;
-
     public Name(String name)
     {
         this.name = name;
     }
-
     private void writeObject(ObjectOutputStream out) throws IOException
     {
         out.writeObject(name);
         out.writeObject(time);
     }
-
     private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException
     {
         name = (String) in.readObject();
         time = (Calendar) in.readObject();
     }
-
     public String toString()
     {
         if (time == null) return name;
@@ -1868,35 +1908,30 @@ private static void test3() {
 
 ### 外部化 (EXTERNALIZABLE)
 
-注意 `Externalizable` 接口定义了两个方法 `writeExternal()` 和 `readExternal()`：
+注意`Externalizable`接口定义了两个方法`writeExternal()`和`readExternal()`：
 
 ```java
 class King implements Externalizable {
     private String name;
     private int from;
     private int to;
-
     public King() {}
-
     public King(String name, int from, int to) {
         this.name = name;
         this.from = from;
         this.to = to;
     }
-
     public String toString() {
         if (from == 0 && to == 0) return name;
         if (from == 0) return name + String.format(" %d", from);
         if (to == 0) return name + String.format(" %d", to);
         return name + String.format(" %d - %d", from, to);
     }
-
     public void writeExternal(ObjectOutput out) throws IOException {
         out.writeUTF(name);
         out.writeInt(from);
         out.writeInt(to);
     }
-
     public void readExternal(ObjectInput in) 
         throws IOException, ClassNotFoundException {
         name = in.readUTF();
@@ -1908,7 +1943,7 @@ class King implements Externalizable {
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_59_0.png)
 
-这些方法必须分别向 `ObjectOutput` 写入和从 `ObjectInput` 读取，因为这些接口是由 `ObjectOutputStream` 和 `ObjectInputStream` 实现的。对象的序列化和反序列化的语法与之前相同：
+这些方法必须分别向`ObjectOutput`写入和从`ObjectInput`读取，因为这些接口是由`ObjectOutputStream`和`ObjectInputStream`实现的。对象的序列化和反序列化的语法与之前相同：
 
 ```java
 private static void test14() {
@@ -1931,10 +1966,6 @@ private static void test14() {
 }
 ```
 
-
-
-
-
 ## JAVA 5：文件与 JAVA IO
 
 ## 2.5 字符流
@@ -1943,21 +1974,27 @@ private static void test14() {
 
 ```java
 private static void test15() {
-    try (FileWriter writer = new FileWriter("names")) {
-        writer.write("Gorm Gamle\n");
-        writer.write("Harald Blåtand\n");
-        writer.write("Svend Tveskåg\n");
-    } catch (IOException ex) {
-        System.out.println(ex);
+```
+
+
+
+`try (FileWriter writer = new FileWriter("names")) {`
+
+```
+    writer.write("Gorm Gamle\n");
+    writer.write("Harald Blåtand\n");
+    writer.write("Svend Tveskåg\n");
+} catch (IOException ex) {
+    System.out.println(ex);
+}
+
+char[] buffer = new char[20];
+try (FileReader reader = new FileReader("names")) {
+    for (int count = reader.read(buffer, 0, buffer.length); count != -1; ) {
+        for (int i = 0; i < count; ++i) System.out.print(buffer[i]);
     }
-    char[] buffer = new char[20];
-    try (FileReader reader = new FileReader("names")) {
-        for (int count = reader.read(buffer, 0, buffer.length); count != -1; ) {
-            for (int i = 0; i < count; ++i) System.out.print(buffer[i]);
-        }
-    } catch (IOException ex) {
-        System.out.println(ex);
-    }
+} catch (IOException ex) {
+    System.out.println(ex);
 }
 ```
 
@@ -1974,6 +2011,7 @@ private static void test16() {
     } catch (IOException exception) {
         System.out.println(ex);
     }
+
     try (BufferedReader reader = new BufferedReader(new FileReader("names")) {
 ```
 
@@ -1981,28 +2019,28 @@ private static void test16() {
 
 ```java
 for (String line = reader.readLine(); line != null; line = reader.readLine()) {
-  System.out.println(line);
+    System.out.println(line);
 }
 catch (IOException e) {
-  System.out.println(ex);
+    System.out.println(ex);
 }
 ```
 
-在上面的示例中，我使用了 `FileWriter` 和 `FileReader` 作为面向字符的文件流类类，并包含了 `BufferedWriter` 和 `BufferedReader`，但还有其他的 Reader/Writer 类，最重要的包括：
+在上面的示例中，我使用了 `FileWriter` 和 `FileReader` 作为面向字符的文件流类类，并包含了 `BufferedWriter` 和 `BufferedReader`，但还有其他的 `Reader`/`Writer` 类，最重要的包括：
 
-- FileReader
-- FilterReader
-- StringIO
-- PipedReader
-- CharArrayReader
-- InputStreamReader
-- FileReader
-- FileWriter
-- StringWriter
-- PipedWriter
-- CharArrayWriter
-- OutputStreamWriter
-- PrintWriter
+- `FileReader`
+- `FilterReader`
+- `StringIO`
+- `PipedReader`
+- `CharArrayReader`
+- `InputStreamReader`
+- `FileReader`
+- `FileWriter`
+- `StringWriter`
+- `PipedWriter`
+- `CharArrayWriter`
+- `OutputStreamWriter`
+- `PrintWriter`
 
 你还应该注意 `FileReader` 和 `FileWriter` 分别是 `InputStream` 和 `OutputStreamWriter` 的包装类。
 
@@ -2010,16 +2048,16 @@ catch (IOException e) {
 
 ```java
 private static void test17() {
-  try (BufferedWriter writer = new BufferedWriter(
-    new OutputStreamWriter(new FileOutputStream("navne2","ISO-8859-1"))) {
-    writer.write("Gorm den Gamle");
-    writer.newLine();
-    writer.write("Harald Blåtand");
-    writer.newLine();
-    writer.write("Svend Tveskåg");
-  }
+    try (BufferedWriter writer = new BufferedWriter(
+        new OutputStreamWriter(new FileOutputStream("navne2","ISO-8859-1"))) {
+        writer.write("Gorm den Gamle");
+        writer.newLine();
+        writer.write("Harald Blåtand");
+        writer.newLine();
+        writer.write("Svend Tveskåg");
+    }
 } catch (IOException ex) {
-  System.out.println(ex);
+    System.out.println(ex);
 }
 ```
 
@@ -2037,18 +2075,19 @@ try (BufferedReader reader =
 
 在这种情况下，指定了编码不应是 UTF-8 而是 ISO 8859-1。在这种情况下，指定了其编码不应是 UTF-8 而是 ISO 8859-1。
 
-### 问题 2
+## 问题 2
 
 该文件夹包含三个
 
-- 1. regions，包含每个区域的文本，区域以逗号分隔
-- 2. municipalities，包含每个市的文本，市的编号和名称以逗号分隔
-- 3. zipcodes，包含每个邮政编码的文本，城市名称以逗号分隔
+- 1. `regions`，包含每个区域的文本，区域以逗号分隔
+- 2. `municipalities`，包含每个市的文本，市的编号和名称以逗号分隔
+- 3. `zipcodes`，包含每个邮政编码的文本，城市名称以逗号分隔
 
-你现在必须创建一个新项目，例如 Denmark，你必须为项目添加以下接口并编写实现这些接口的类：
+你现在必须创建一个新项目，例如 `Denmark`，你必须为项目添加以下接口并编写实现这些接口的类：
 
 ```java
 package denmark;
+
 /**
 * 定义一个区域。
 * 如果两个区域具有相同的编号，则它们相等。
@@ -2122,10 +2161,6 @@ public interface IMunicipality extends Comparable<IMunicipality>, Iterable<IZipc
 }
 ```
 
-
-
-
-
 # JAVA 5：文件与 JAVA IO
 
 ```java
@@ -2191,6 +2226,7 @@ public boolean removeZipcode(String code);
 
 ```java
 package denmark;
+
 /**
  * 定义邮政编码的接口。
  * 如果两个邮政编码具有相同的数字代码，则认为它们是相等的。
@@ -2351,11 +2387,9 @@ public Iterator<IZipcode> itZipcode()
 {}
 ```
 
-
-
-
-
 # JAVA 5: 文件与 JAVA IO
+
+
 
 ```java
 for (int i = 0; i < 10; ++i) {
@@ -2400,7 +2434,7 @@ try (Scanner scan = new Scanner(new BufferedReader(new FileReader("numbers")))) 
 
 表格必须显示每个日期的总销售额，且行必须按日期排序。CSV 文件通常是面向行的，但也不一定如此。你必须编写另一个方法创建一个文本文件，但该文件必须由分号分隔的元素组成，交替为日期和数字。接下来，编写一个方法读取文件并打印如上面的概览。由于文件不是面向行的，因此必须以不同的方式读取，使用 `scanner` 这样做会很有利。
 
-上述内容原则上定义了处理文件时所需的内容，但现代操作系统提供了许多 `java.io` 中的类并不支持的服务，这就是引入另一个名为 `java.nio` 的包的原因。引入新 IO 包的另一个原因还为了提供通过网络流传输数据的服务。在书中，我将只查看针对文件的包，但我会处理 `java.nio`提供的其他服务。本章描述了该包中的主要类。基本上它是关于以下类的：
+上述内容原则上定义了处理文件时所需的内容，但现代操作系统提供了许多 `java.io` 中的类并不支持的服务，这就是引入另一个名为 `java.nio` 的包的原因。引入新 IO 包的另一个原因还为了提供通过网络流传输数据的服务。在书中，我将只查看针对文件的包，但我会处理 `java.nio` 提供的其他服务。本章描述了该包中的主要类。基本上它是关于以下类的：
 
 - 缓冲区 (buffers)
 - 通道 (channels)
@@ -2410,7 +2444,7 @@ try (Scanner scan = new Scanner(new BufferedReader(new FileReader("numbers")))) 
 
 # JAVA.NIO
 
-新 API 的基本概念是缓冲区。进程（如 JVM）请求操作系统通过写入操作排放缓冲区，相应地，JVM 请求操作系统通过读取操作填充缓冲区。如果 JVM 实例请求操作系统从磁盘文件读取，操作系统将向磁盘控制器发送命令，从磁盘读取一个字节块并将其保存到操作系统缓冲区中。在操作完成后，操作系统将缓冲区的内容复制到指定进程地址空间中的第二个缓冲区中，作为 JVM 在 `read()` 操作的参数。`java nio` 的目标之一是增加缓冲区之间必要的复制的效率，这并不简单，因为磁盘控制器始终以固定大小读/写，而 JVM 使用可变大小的块，且这些块不一定是连续分配的，并可能被垃圾回收器移动。
+新 API 的基本概念是缓冲区。进程（如 JVM）请求操作系统通过写入操作排放缓冲区，相应地，JVM 请求操作系统通过读取操作填充缓冲区。如果 JVM 实例请求操作系统从磁盘文件读取，操作系统将向磁盘控制器发送命令，从磁盘读取一个字节块并将其保存到操作系统缓冲区中。在操作完成后，操作系统将缓冲区的内容复制到指定进程地址空间中的第二个缓冲区中，作为 JVM 在 `read()` 操作的参数。`java.nio` 的目标之一是增加缓冲区之间必要的复制的效率，这并不简单，因为磁盘控制器始终以固定大小读/写，而 JVM 使用可变大小的块，且这些块不一定是连续分配的，并可能被垃圾回收器移动。
 
 可以将通道（channel）认为是操作系统使用的管道，用于从设备（如磁盘控制器）向缓冲区填充或排放字节。例子是 `FileChannel`，正如其名称所示，它充当程序与磁盘文件之间的通道。它支持一些标准 IO 无法实现的功能，这里包括锁定机制和内存映射文件。
 
@@ -2473,15 +2507,13 @@ private static Buffer print(Buffer buffer)
 
 第一个语句创建缓冲区，执行方法后第一个打印语句的结果：
 
+```
 Capacitet: 10
 Limit: 10
 Position: 0
 Remaining: 10
 java.nio.HeapBuffer[pos=0 lim=10 cap=10]
-
-
-
-
+```
 
 # JAVA 5：文件与 IO
 
@@ -2576,6 +2608,7 @@ buffer.reset();
 ```
 
 JAVA 5：文件与 JAVA IO
+
 JAVA.NIO
 
 你可以写：
@@ -2586,25 +2619,23 @@ buffer.mark().position(2).reset();
 
 示例展示了两种类型的缓冲区：
 
-- ByteBuffer
-- LongBuffer
+- `ByteBuffer`
+- `LongBuffer`
 
 它们都是抽象类的示例，具体的缓冲区是通过静态方法创建的。此外还有以下缓冲区类：
 
-- CharBuffer
-- ShortBuffer
-- IntBuffer
-- FloatBuffer
-- DoubleBuffer
+- `CharBuffer`
+- `ShortBuffer`
+- `IntBuffer`
+- `FloatBuffer`
+- `DoubleBuffer`
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_83_0.png)
 
 > “我学了 16 年英语，但是……我最终只用了六节课就学会了说它。”
-Jane，中国建筑师
-
-点击听听我在参加我那独特的课程前后的录音并下载
-
-在 bookboom.com 免费下载电子书
+> Jane，中国建筑师
+> 点击听听我在参加我那独特的课程前后的录音并下载
+> 在 bookboom.com 免费下载电子书
 
 ### 创建缓冲区
 
@@ -2712,11 +2743,13 @@ java.nio.IntBuffer[pos=0 lim=2]
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_86_0.png)
 
+
+
 # JAVA 5：文件与 JAVA IO
 
-### 读取与写入
+## 读取与写入
 
-只有当你可以修改内容时，缓冲区才有意义，这意味着你可以读取单个元素并更改它们。这是通过 `put()` 和 `get()` 完成的，这两个方法都有绝对和相对版本。考虑以下方法：
+只有当你可以修改内容时，缓冲区才有意义，这意味着你可以读取单个元素并更改它们。这是通过`put()`和`get()`完成的，这两个方法都有绝对和相对版本。考虑以下方法：
 
 ```java
 private static void test04() {
@@ -2744,22 +2777,18 @@ private static void printElements(ByteBuffer buffer) {
 }
 ```
 
-`test04()` 方法创建了一个封装了 8 个元素数组的缓冲区。下一个方法以两种方式打印缓冲区的内容。第一种是普通循环，单个组件通过 `get()` 方法和索引进行引用。单个元素通过绝对索引引用，且索引必须大于 0 且小于 limit。下一个循环相对于它们的位置引用元素，循环从将 position 设置为 0 开始，只要 position 小于 limit 就会迭代。使用不带索引的 `get()` 引用元素，方法返回 position 指向的元素，然后 position 加 1。这意味着当循环停止时，position 等于 limit。
-
-
-
-
+`test04()`方法创建了一个封装了 8 个元素数组的缓冲区。下一个方法以两种方式打印缓冲区的内容。第一种是普通循环，单个组件通过`get()`方法和索引进行引用。单个元素通过绝对索引引用，且索引必须大于 0 且小于`limit`。下一个循环相对于它们的位置引用元素，循环从将`position`设置为 0 开始，只要`position`小于`limit`就会迭代。使用不带索引的`get()`引用元素，方法返回`position`指向的元素，然后`position`加 1。这意味着当循环停止时，`position`等于`limit`。
 
 # JAVA 5: 文件与 I/O
 
-在打印缓冲区内容后，索引为 3 的元素被改为 23。这是通过 `put()` 方法完成的，但使用了绝对索引。你应该注意，此操作不会改变 `position` 的值。下一个 `position` 被设置为 6，位置 6 处的值被改为 29。这是通过未指定索引的 `put()` 实现的，操作完成后，`position` 会向前计数 1 位。最后，底层数组最后一个位置的值被改为 31，buffer 的打印结果为：
+在打印缓冲区内容后，索引为 3 的元素被改为 23。这是通过`put()`方法完成的，但使用了绝对索引。你应该注意，此操作不会改变`position`的值。下一个`position`被设置为 6，位置 6 处的值被改为 29。这是通过未指定索引的`put()`实现的，操作完成后，`position`会向前计数 1 位。最后，底层数组最后一个位置的值被改为 31，buffer 的打印结果为：
 
 ```
 2 3 5 23 11 13 29 31
 2 3 5 23 11 13 31
 ```
 
-`get()` 和 `put()` 也可以接受数组作为参数，可以高效地修改缓冲区中的多个元素。考虑以下方法：
+`get()`和`put()`也可以接受数组作为参数，可以高效地修改缓冲区中的多个元素。考虑以下方法：
 
 ```java
 private static void test05() {
@@ -2791,20 +2820,20 @@ private static void test05() {
 0 0 0 0 0 0
 ```
 
-也就是说，使用 `allocate()` 创建的缓冲区中的元素均为 0。接下来将 `position` 设置为 0，并通过数组 `bytes1` 更改缓冲区：
+也就是说，使用`allocate()`创建的缓冲区中的元素均为 0。接下来将`position`设置为 0，并通过数组`bytes1`更改缓冲区：
 
 ```
 buffer.put(bytes1);
 ```
 
-这意味着数组的内容从起始位置开始拷贝到缓冲区。因此，必须先将 `position` 置于 0，语句执行完成后，`position` 会向前移动到缓冲区的末尾。当你打印缓冲区时，得到：
+这意味着数组的内容从起始位置开始拷贝到缓冲区。因此，必须先将`position`置于 0，语句执行完成后，`position`会向前移动到缓冲区的末尾。当你打印缓冲区时，得到：
 
 ```
 2 3 5 7 11 13 17 19
 2 3 5 7 11 13 19
 ```
 
-`put()` 还有另一个版本，除了数组外，还指定了数组中的偏移量和要拷贝的元素数量：
+`put()`还有另一个版本，除了数组外，还指定了数组中的偏移量和要拷贝的元素数量：
 
 ```java
 buffer.put(bytes2, 1, 3);
@@ -2812,27 +2841,27 @@ buffer.put(bytes2, 1, 3);
 
 ![](img/5d9828901c31fd736abe8f0919_0.png)
 
-`position` 之前被设置为 2，结果为：
+`position`之前被设置为 2，结果为：
 
 ```
 2 3 5 7 11 13 17 19
 2 3 5 7 11 13 17 19
 ```
 
-其中索引为 2、3 和 4 的位置被更新了。`get()` 也有类似的重载，可以将缓冲区中的元素拷贝到数组中。`bytes3` 是一个可以容纳 4 个元素的数组，`position` 被设置为 2，接下来的语句将 4 个元素拷贝到数组 `bytes3`：
+其中索引为 2、3 和 4 的位置被更新了。`get()`也有类似的重载，可以将缓冲区中的元素拷贝到数组中。`bytes3`是一个可以容纳 4 个元素的数组，`position`被设置为 2，接下来的语句将 4 个元素拷贝到数组`bytes3`：
 
 ```
 buffer.get(bytes3);
 ```
 
-因此，数组的长度决定了拷贝多少元素。如果将 `bytes3` 封装在缓冲区中打印，你会得到：
+因此，数组的长度决定了拷贝多少元素。如果将`bytes3`封装在缓冲区中打印，你会得到：
 
 ```
 2 3 5 7 11 13 17 19
 2 3 5 7 11 13 17
 ```
 
-最后一个例子是 `bytes4`，一个容纳 8 个元素的数组。`position` 再次设置为 2，执行了以下语句：
+最后一个例子是`bytes4`，一个容纳 8 个元素的数组。`position`再次设置为 2，执行了以下语句：
 
 ```java
 buffer.get(bytes4, 3, 3);
@@ -2845,7 +2874,7 @@ buffer.get(bytes4, 3, 3);
 0 0 0 0 0 0 0 0
 ```
 
-缓冲区的一个典型用法是一个获取缓冲区元素的程序，其中缓冲区连接到（从缓冲区取出元素）。下面的示例定义了一个带有字符串的 `CharBuffer`。然后方法遍历字符串并对每个字符串清空缓冲区——`clear()` 方法将限制设置为缓冲区的容量，并将位置设置为 0。接下来，内部循环遍历字符串中的每个字符并填充到缓冲区。当字符加载到缓冲区后，通过 `println()` 方法从 `position` 到 `limit` 打印缓冲区。也就是说，limit 应该被设置为位置，之后 `position` 被设置为 0，这可以通过 `flip()` 方法完成。
+缓冲区的一个典型用法是一个获取缓冲区元素的程序，其中缓冲区连接到（从缓冲区取出元素）。下面的示例定义了一个带有字符串的`CharBuffer`。然后方法遍历字符串并对每个字符串清空缓冲区——`clear()`方法将限制设置为缓冲区的容量，并将位置设置为 0。接下来，内部循环遍历字符串中的每个字符并填充到缓冲区。当字符加载到缓冲区后，通过`println()`方法从`position`到`limit`打印缓冲区。也就是说，`limit`应该被设置为位置，之后`position`被设置为 0，这可以通过`flip()`方法完成。
 
 ```java
 private static void test06() {
@@ -2867,7 +2896,7 @@ private static void println(CharBuffer buffer) {
 }
 ```
 
-特别注意 `println` 方法如何处理缓冲区以及使用 `hasRemaining` 测试 `position` 是否到达 `limit`。`test06()` 是缓冲区用法的一种原型。有时你对一个缓冲区并将索引恢复到原来的状态。这里是索引标记。考虑以下方法：
+特别注意`println`方法如何处理缓冲区以及使用`hasRemaining`测试`position`是否到达`limit`。`test06()`是缓冲区用法的一种原型。有时你对一个缓冲区并将索引恢复到原来的状态。这里是索引标记。考虑以下方法：
 
 ```java
 private static void test07() {
@@ -2892,20 +2921,20 @@ private static void printElements(IntBuffer buffer) {
 0 0 0 0 0 0 0 0
 ```
 
-也就是说，使用 `allocate()` 创建的缓冲区中的元素均为 0。接下来将 `position` 设置为 0，并通过数组 `bytes1` 更改缓冲区：
+也就是说，使用`allocate()`创建的缓冲区中的元素均为 0。接下来将`position`设置为 0，并通过数组`bytes1`更改缓冲区：
 
 ```
 buffer.put(bytes1);
 ```
 
-这意味着数组的内容从起始位置开始拷贝到缓冲区。因此，必须先将 `position` 置于 0，语句执行完成后，`position` 会向前移动到缓冲区的末尾。当你打印缓冲区时，得到：
+这意味着数组的内容从起始位置开始拷贝到缓冲区。因此，必须先将`position`置于 0，语句执行完成后，`position`会向前移动到缓冲区的末尾。当你打印缓冲区时，得到：
 
 ```
 2 3 5 7 11 13 17 19
 2 3 5 7 11 13
 ```
 
-`put()` 有另一个版本，除了数组外，还指定了数组中的偏移量和要拷贝的元素数量：
+`put()`有另一个版本，除了数组外，还指定了数组中的偏移量和要拷贝的元素数量：
 
 ```java
 buffer.put(bytes2, 1, 3);
@@ -2913,27 +2942,27 @@ buffer.put(bytes2, 1, 3);
 
 ![](img/5d9828901c31fd736abe8f0919_0.png)
 
-`position` 之前被设置为 2，结果为：
+`position`之前被设置为 2，结果为：
 
 ```
 2 3 5 7 11 13 17 19
 2 3 5 7 11 13 17 19
 ```
 
-其中索引为 2、3 和 4 的位置被更新了。`get()` 也有类似的重载，可以将缓冲区中的元素拷贝到数组中。`bytes3` 是一个可以容纳 4 个元素的数组，`position` 被设置为 2，接下来的语句将 4 个元素拷贝到数组 `bytes3`：
+其中索引为 2、3 和 4 的位置被更新了。`get()`也有类似的重载，可以将缓冲区中的元素拷贝到数组中。`bytes3`是一个可以容纳 4 个元素的数组，`position`被设置为 2，接下来的语句将 4 个元素拷贝到数组`bytes3`：
 
 ```
 buffer.get(bytes3);
 ```
 
-因此，数组的长度决定了拷贝多少元素。如果将 `bytes3` 封装在缓冲区中打印，你会得到：
+因此，数组的长度决定了拷贝多少元素。如果将`bytes3`封装在缓冲区中打印，你会得到：
 
 ```
 2 3 5 7 11 13 17 19
 2 3 5 7 11 13 17 19
 ```
 
-最后一个例子是 `bytes4`，一个容纳 8 个元素的数组。`position` 再次设置为 2，执行了以下语句：
+最后一个例子是`bytes4`，一个容纳 8 个元素的数组。`position`再次设置为 2，执行了以下语句：
 
 ```java
 buffer.get(bytes4, 3, 3);
@@ -2946,23 +2975,19 @@ buffer.get(bytes4, 3, 3);
 0 0 0 0 0 0 0 0 0
 ```
 
-
-
-
-
 # JAVA 5: 文件与 JAVA IO
 
 ## JAVA.NIO
 
-在执行最后的 `print()` 之前，会执行 `clear()`，它将位置（position）设置为 0，限制（limit）设置为容量（capacity），因此结果如下：
+在执行最后的`print()`之前，会执行`clear()`，它将位置（`position`）设置为 0，限制（`limit`）设置为容量（`capacity`），因此结果如下：
 
 5 7 11 13 17 19 23 29 0 0
 
 ### 关于缓冲区的最后备注
 
-可以使用 `equals()` 比较缓冲区，其协议如下：
+可以使用`equals()`比较缓冲区，其协议如下：
 
-两个缓冲区当且仅当它们具有相同的元素类型、相同数量的剩余元素，且剩余元素的序列（不考虑其起始位置）各自相等时，它们才是 `equals()` 相等的。
+两个缓冲区当且仅当它们具有相同的元素类型、相同数量的剩余元素，且剩余元素的序列（不考虑其起始位置）各自相等时，它们才是`equals()`相等的。
 
 例如，以下方法将打印 true：
 
@@ -2985,7 +3010,7 @@ buff2.flip();
 System.out.println(buffer1.equals(buffer2));
 ```
 
-首先注意这两个缓冲区的长度不同。buffer1 的位置为 2 限制为 6，而 buffer2 的位置为 0 限制为 4，这意味着两个缓冲区都有四个剩余元素，且这些元素是成对相等的。
+首先注意这两个缓冲区的长度不同。`buffer1`的位置为 2 限制为 6，而`buffer2`的位置为 0 限制为 4，这意味着两个缓冲区都有四个剩余元素，且这些元素是成对相等的。
 
 最后一个观察与性能。目前，缓冲区仅仅是一个封装了数组的内存结构，对于文件来说，它的意思是操作系统必须在缓冲区和文件之间拷贝数据。在某些情况下这并不是最优的，因为操作系统的 IO 操作使用的是它们自己的缓冲区，这些缓冲区与 Java 无关；但本节描述的缓冲区是 JVM 的数据结构，因此，如果它们是相同的缓冲区，将是有利的。然而，这并不简单，特别是因为 Java 的缓冲区并不一定是连续分配的，而且因为垃圾回收器在必要时会移动它们。为了解决这些问题，可以创建一个字节缓冲区：
 
@@ -3005,7 +3030,7 @@ ByteBuffer buffer = ByteBuffer.allocateDirect(99);
 java.nio.channels.Channel
 ```
 
-该接口只定义两个方法 `close()` 和 `isOpen()`，而 IO 方法定义在两个子接口中：
+该接口只定义两个方法`close()`和`isOpen()`，而 IO 方法定义在两个子接口中：
 
 ```java
 java.nio.channels.WritableByteChannel
@@ -3014,16 +3039,16 @@ java.nio.channels.ReadableByteChannel
 
 正如其名称定义了用于写入或读取的通道。只实现其中一个接口的类被称为单向的，实现两个接口的类被称为双向的。
 
-有多种方法可以创建指向文件的通道并从而创建 Channel 对象。`Channels` 类有两个静态方法：
+有多种方法可以创建指向文件的通道并从而创建`Channel`对象。`Channels`类有两个静态方法：
 
 ```java
 WritableByteChannel writer = Channels.newChannel(OutputStream stream)
 ReadableByteChannel reader = Channels.newChannel(InputStream stream)
 ```
 
-最后，`java.io` 中的若干几个类都扩展了 `getChannel()` 方法，该方法返回一个 `Channel`。
+最后，`java.io`中的若干几个类都扩展了`getChannel()`方法，该方法返回一个`Channel`。
 
-现在我将展示一个使用两个 Channel 对象复制文件的示例。该示例假设我的主目录下有一个名为 `date` 的子目录，其中有一个名为 `municipalities` 的文件，大小为 2863 字节（包含丹麦市名称的文件，但文件中包含什么并不重要，只要它在正确的目录下且大小在 2 到 3 KB 之间即可）。首先考虑以下方法：
+现在我将展示一个使用两个`Channel`对象复制文件的示例。该示例假设我的主目录下有一个名为`date`的子目录，其中有一个名为`municipalities`的文件，大小为 2863 字节（包含丹麦市名称的文件，但文件中包含什么并不重要，只要它在正确的目录下且大小在 2 到 3 KB 之间即可）。首先考虑以下方法：
 
 ```java
 private static void copy(ReadableByteChannel src, WritableByteChannel dst)
@@ -3041,7 +3066,9 @@ throws IOException
 }
 ```
 
-该方法有两个参数，都是单向 Channel 对象，其中第一个用于读取，第二个用于写入。该方法创建了一个缓冲区，你唯一应该注意的是，它的大小比文件小。该方法执行一个循环，只要输入通道上还有数据就会一直迭代。每次迭代都会对缓冲区执行 `flip()`，然后将缓冲区写入输出通道，因为方法的 `write()` 方法会排空缓冲区。你必须注意，这都是从位置 0 到限制的所有字节，操作之后位置就等于限制。以下方法创建了指向 `InputStream` 的输入通道和一个指向 `OutputStream` 的输出通道，并使用上述方法复制文件：
+该方法有两个参数，都是单向`Channel`对象，其中第一个用于读取，第二个用于写入。该方法创建了一个缓冲区，你唯一应该注意的是，它的大小比文件小。该方法执行一个循环，只要输入通道上还有数据就会一直迭代。每次迭代都会对缓冲区执行`flip()`，然后将缓冲区写入输出通道，因为方法的`write()`方法会排空缓冲区。你必须注意，这都是从位置 0 到限制的所有字节，操作之后位置就等于限制。以下方法创建了指向`InputStream`的输入通道和一个指向`OutputStream`的输出通道，并使用上述方法复制文件：
+
+
 
 ```java
 private static void test10() {
@@ -3083,13 +3110,9 @@ private static void copy2(ReadableByteChannel src, WritableByteChannel dst)
 
 ```java
 private static void testl1() {
-    try (ReadableByteChannel src = 
+    try (ReadableByteChannel src =
         Channels.newChannel(new FileInputStream(System.getProperty("user.home") + "/data/municipalities"))) {
 ```
-
-
-
-
 
 # JAVA 5：文件与 JAVA IO
 
@@ -3104,7 +3127,7 @@ WritableByteChannel dst = Channels.newChannel(new FileOutputStream("municipaliti
 
 这里主要的区别在于，两个 Channel 对象是在 `try` 语句中作为创建的。
 
-### 多缓冲区
+## 多缓冲区
 
 如示例所示，Channel 是在两个端点之间进行流式数据传输的基本技术，例如它可以是文件，并且作为通道与程序之间的适配器，存在一个缓冲区（buffer）。多年来，提高计算机性能最重要的方法之一是并行，这是一种特定操作系统所采用的技术，也应用于 IO 中。由于这个原因，Channel 对象支持使用多个缓冲区，其中输入通道可以填充几个缓冲区，而输出通道可以抽空多个缓冲区。以下将展示它们的语法：
 
@@ -3131,7 +3154,7 @@ public static void test12()
 
 # JAVA 5：文件与 JAVA IO
 
-JAVA.NIO
+`JAVA.NIO`
 
 ```java
 dst.write(buffers);
@@ -3141,7 +3164,7 @@ catch (IOException ex)
 }
 ```
 
-在 `try` 之后创建了三个通道。一个使用多个缓冲区的输入通道，被称为散射通道（scattering channel）。它是像其他输入通道一样创建的，因此创建时进行类型转换（typecast）。这次，通道连接到 regions 文件——原因仅仅是因为文件很小。第二个通道是一个普通的输出通道，连接到 System.out，而第三个也是一个连接到当前目录下某个文件的输出通道。
+在 `try` 之后创建了三个通道。一个使用多个缓冲区的输入通道，被称为散射通道（scattering channel）。它是像其他输入通道一样创建的，因此创建时进行类型转换（typecast）。这次，通道连接到 regions 文件——原因仅仅是因为文件很小。第二个通道是一个普通的输出通道，连接到 `System.out`，而第三个也是一个连接到当前目录下某个文件的输出通道。
 
 `try` 块中的第一条语句创建了一个包含两个 `ByteBuffer` 对象的数组。这次我使用了 `allocateDirect()`，在原则上这是处理文件最有效的缓冲区，但重要的是，这两个缓冲区都无法存储整个 regions 文件。请注意，这两个缓冲区的大小并不相同，这其实很正常。下一条语句在输入通道上执行读取（read）操作，其中缓冲区数组是参数。`read()` 方法将读取输入通道并将内容填充到两个缓冲区。
 
@@ -3163,9 +3186,9 @@ catch (IOException ex)
 1085, Region Sjlland
 ```
 
-你应该注意到第一个缓冲区被填充到了它的容量，而另一个只被填充了一部分。你可能还会注意到有一个微小的编码错误（System.out），但如果你查看当前目录下的 regions1 文件，你会发现文件被正确地复制了。
+你应该注意到第一个缓冲区被填充到了它的容量，而另一个只被填充了一部分。你可能还会注意到有一个微小的编码错误（`System.out`），但如果你查看当前目录下的 regions1 文件，你会发现文件被正确地复制了。
 
-### 文件通道 (FILE CHANNELS)
+## 文件通道（FILE CHANNELS）
 
 `FileChannel` 是一个代表文件通道的类。`FileChannel` 是一个抽象类，但你可以通过 `getChannel()` 方法创建对象，该方法由 `java.io` 中的几个类支持。如下例所示，一个方法使用 `FileChannel` 对象复制文件：
 
@@ -3182,7 +3205,7 @@ private static void test13() {
 
 # JAVA 5：文件与 JAVA IO
 
-该方法的原理与 `test11()` ，但两个 Channel 对象的创建方式不同。`FileInputStream` 类拥有 `getChannel()` 方法，返回一个 `FileChannel`。这是一个只读通道。同样，`FileOutputStream` 拥有 `getChannel()` 方法，返回一个可写的文件通道。
+该方法的原理与 `test11()`，但两个 Channel 对象的创建方式不同。`FileInputStream` 类拥有 `getChannel()` 方法，返回一个 `FileChannel`。这是一个只读通道。同样，`FileOutputStream` 拥有 `getChannel()` 方法，返回一个可写的文件通道。
 
 同样，`RandomAccessFile` 也有一个 `getChannel()` 方法，返回一个 `FileChannel`，这是一个可读写的缓冲区。`FileChannel` 类有许多方法，我将提到最重要的几个：
 
@@ -3213,7 +3236,7 @@ public static void test14() {
 
 # JAVA 5：文件与 JAVA IO
 
-JAVA.NIO
+`JAVA.NIO`
 
 ```java
 buffer.clear();
@@ -3233,9 +3256,11 @@ catch (Exception ex) {
 ![](img/5d98ad28901c31fd736abaabe8f09e19_104_0.png)
 
 # 赋能人才。
-改进业务。
+
+## 改进业务。
 
 BI 挪威商学院是欧洲最大的商学院之一，每年欢迎超过 20,000 名学生。我们的课程提供了一个启发性且多元化的学习环境，并具有国际视野，最终为学生提供满足日益增长业务需求的专业技能。
+
 BI 提供四个为期两年的全制硕士（MSc）课程，完全用英语授课，旨在提供满足日益增长的业务需求的专业技能。硕士课程提供了启发性且多元化的学习环境，为你开启职业生涯提供最佳路径。
 
 - 商业硕士
@@ -3243,15 +3268,11 @@ BI 提供四个为期两年的全制硕士（MSc）课程，完全用英语授�
 - 战略营销管理硕士
 - 领导力与组织心理学硕士
 
-www.bi.edu/master
-
-
-
-
+`www.bi.edu/master`
 
 # JAVA 5：文件与 IO
 
-打开了一个指向文件的 FileChannel，这次是一个读写通道，首先发生的是该方法打印了文件指针的位置和文件大小。接下来，创建了一个 `ByteBuffer`。现在你可以向此缓冲区写入一个 `int`、一个 `double`、一个 `int` 和另一个 `double`。为了将这些值格式化为字节，我发现 `ByteBuffer` 有专门的方法，它们会将值部分复制到缓冲区中并移动索引位置。在将四个值写入缓冲区后，执行 `flip()`，并将缓冲区的内容发送到通道。然后将缓冲区和文件指针重置为 0，并将文件内容读取到缓冲区。最后，打印结果，并再次使用正确的 `get` 方法从缓冲区中读取。如果该方法（如文所示），结果为：
+打开了一个指向文件的 `FileChannel`，这次是一个读写通道，首先发生的是该方法打印了文件指针的位置和文件大小。接下来，创建了一个 `ByteBuffer`。现在你可以向此缓冲区写入一个 `int`、一个 `double`、一个 `int` 和另一个 `double`。为了将这些值格式化为字节，我发现 `ByteBuffer` 有专门的方法，它们会将值部分复制到缓冲区中并移动索引位置。在将四个值写入缓冲区后，执行 `flip()`，并将缓冲区的内容发送到通道。然后将缓冲区和文件指针重置为 0，并将文件内容读取到缓冲区。最后，打印结果，并再次使用正确的 `get` 方法从缓冲区中读取。如果该方法（如文所示），结果为：
 
 ```
 Position = 0, size = 24
@@ -3262,17 +3283,17 @@ Position = 24, size = 24
 2.718281828459045
 ```
 
-### 内存映射文件
+## 内存映射文件
 
-FileChannel 有一个 `map()` 方法，它可以将一个打开的文件或打开文件的部分嵌入缓冲区中：
+`FileChannel` 有一个 `map()` 方法，它可以将一个打开的文件或打开文件的部分嵌入缓冲区中：
 
-```
+```java
 MappedByteBuffer map(FileChannel.MapMode mode, long position, long size)
 ```
 
 这三个参数表示一种模式，以及要封装的文件部分（起始位置和要封装段的长度）。模式可以是 `READ_ONLY`（只读）或 `READ_WRITE`（读写）。`MappedByteBuffer` 类型与其他缓冲区具有相同的特性，但它的内容存储在文件中。这意味着例如，如果你执行 `get()` 且另一个程序更新了文件，那么更改在当前程序中是可见的。`put()` 也是如此，如果你更新了缓冲区，更改将在使用相同文件的其他程序中可见。内存映射文件的目标自然是性能优化，特别是在处理图片等大文件时。示例显示了一个创建一个包含 1000 个整数的文件的方法：
 
-```
+```java
 private static void test15() {
   try (FileChannel fc = (new RandomAccessFile("numbers", "rw")).getChannel()) {
     MappedByteBuffer buffer = fc.map(FileChannel.MapMode.READ_WRITE, 0, 4096);
@@ -3282,7 +3303,7 @@ private static void test15() {
 
 # JAVA 5：文件与 JAVA IO
 
-```
+```java
 catch (IOException ex) {
     System.out.println("I/O error: " + ex.getMessage());
 }
@@ -3292,7 +3313,7 @@ catch (IOException ex) {
 
 下一个方法更新了文件：
 
-```
+```java
 private static void test6() {
     try (FileChannel fc = (new RandomAccessFile("numbers", "rw")).getChannel()) {
         MappedByteBuffer buffer = fc.map(FileChannel.MapMode.READ_WRITE, 0, fc.size());
@@ -3305,13 +3326,13 @@ private static void test6() {
 
 同样是一个内存映射文件，文件中所有的数据都通过翻倍进行了更新。你应该注意单个数字是如何被引用的：
 
-```
+```java
 buffer.getInt(i * 4)
 ```
 
 返回一个从地址 `4*i` 开始的 `int`，但不会移动缓冲区的位置。语句
 
-```
+```java
 buffer.putInt(2 * buffer.getInt(i * 4));
 ```
 
@@ -3320,6 +3341,8 @@ buffer.putInt(2 * buffer.getInt(i * 4));
 # JAVA 5：文件与 IO
 
 由于所有数字都翻倍了，文件中数字之和此时即为 1001000。通过以下方法进行验证：
+
+
 
 ```
 private static void test17() {
@@ -3342,9 +3365,9 @@ private static void test17() {
 
 立即获取帮助
 
-访问 www.helpmyassignment.co.uk 获取更多信息
+访问 `www.helpmyassignment.co.uk` 获取更多信息
 
-从 bookoon.com 下载免费电子书 点击广告阅读更多
+从 `bookoon.com` 下载免费电子书 点击广告阅读更多
 
 # JAVA 5：文件与 JAVA IO
 
@@ -3352,16 +3375,19 @@ private static void test17() {
 
 作为与通道相关的最后一个主题，我将介绍文件锁定。可以对整个文件加锁，也可以只对文件的部分加锁，锁指示了在文件中何处开始锁定或要锁定文件的哪个区域。锁定发生在进程级别（而不是线程级别），我在此语境下将区分写入进程（向文件写入的进程）和读取进程（仅从文件中读取的进程）。锁有两种类型。写入进程可以对文件的部分部分设置**排斥锁**（exclusive lock），只要没有其他进程设置与要锁定部分重叠的锁，就可以这样做。排斥锁赋予写入者对文件锁定部分的完全控制权，使其既可以读也可以写。读取进程可以对文件的部分设置**共享锁**（shared lock），只要没有其他进程设置与要锁定部分重叠的排斥锁就可以这样做。这意味着多个进程可以对文件的同一部分设置共享锁，更多的进程可以读取文件。
 
-锁的类型是 `FileLock`，`FileChannel` 类有四个方法创建锁：
+锁的类型是`FileLock`，`FileChannel`类有四个方法创建锁：
 
 1. `lock()`
+
 2. `lock(long position, long size, boolean shared)`
+
 3. `tryLock()`
+
 4. `tryLock(long position, long size, boolean shared)`
 
-第一个和第三个创建整个文件的排斥锁，而另外两个可以指定要锁定的文件部分以及锁应该是排斥的还是共享的。进一步的区别在于前两个是阻塞的，也就是说，如果它们无法锁定，它们会被放入队列中直到获取锁，在锁被释放后进程会自动运行。最后两个方法是非阻塞的，但如果它们无法创建锁，它们将返回 `null`，这由程序决定下一步发生什么。
+第一个和第三个创建整个文件的排斥锁，而另外两个可以指定要锁定的文件部分以及锁应该是排斥的还是共享的。进一步的区别在于前两个是阻塞的，也就是说，如果它们无法锁定，它们会被放入队列中直到获取锁，在锁被释放后进程会自动运行。最后两个方法是非阻塞的，但如果它们无法创建锁，它们将返回`null`，这由程序决定下一步发生什么。
 
-`FileLock` 类有许多方法可以返回有关锁及其状态的信息，但最重要的是 `release()` 方法，它被用于释放锁。通常情况下，人们使用以下模式来锁定文件：
+`FileLock`类有许多方法可以返回有关锁及其状态的信息，但最重要的是`release()`方法，它被用于释放锁。通常情况下，人们使用以下模式来锁定文件：
 
 ```
 FileLock lock = fileChannel.lock();
@@ -3375,9 +3401,9 @@ finally{
 }
 ```
 
-在这里，`release()` 在 `finally` 块中执行很重要，确保它会被执行。
+在这里，`release()`在`finally`块中执行很重要，确保它会被执行。
 
-为了在实践中演示文件锁定，我写了以下程序 `Locking`：
+为了在实践中演示文件锁定，我写了以下程序`Locking`：
 
 ```
 package locking;
@@ -3409,10 +3435,6 @@ public class Locking {
     }
 }
 ```
-
-
-
-
 
 ## JAVA 5：文件与 IO
 
@@ -3448,19 +3470,22 @@ private static void write(FileChannel fc) throws Exception
 ![](img/5d98ad28901c31fd736abaabe8f09e19_110_0.png)
 
 到 2020 年，我们能够提供地球上十分之一的电力需求。在今天，SKF 的创新知识对于提高全球大部分风力发电机的效率至关重要。
+
 发电成本的一半与维护有关。得益于我们的在线状态监控和自动润滑系统，这些成本可以大幅降低。SKF 让风能变得更加负担负担，从空气中创造出更清洁的能量。
+
 通过分享我们的经验、专业知识和创造力，行业可以实现超出预期的性能。因此，离不开能够应对挑战的最佳员工！
 
 ### 大脑动力
 
 连接到《知识工程的力量》，
-访问我们的网站：www.skf.com/knowledge
+
+访问我们的网站：`www.skf.com/knowledge`
 
 知识工程的力量
 
 SKF
 
-在 bookboom.com 下载免费电子书
+在 `bookboom.com` 下载免费电子书
 
 点击广告阅读更多
 
@@ -3481,29 +3506,29 @@ try {
 }
 ```
 
-该程序被实现为一个命令，可以在命令行上带有一个参数。该值并不重要，但在 `main()` 方法中，布尔值 `writer` 根据是否有参数而取决于 true 或 false。在 `main()` 中创建了一个 `RandomAccessFile`，它根据变量的值被设为读写或只读模式，并使用同一个变量来决定执行 `write()` 方法还是 `read()` 方法。
+该程序被实现为一个命令，可以在命令行上带有一个参数。该值并不重要，但在`main()`方法中，布尔值`writer`根据是否有参数而取决于 true 或 false。在`main()`中创建了一个`RandomAccessFile`，它根据变量的值被设为读写或只读模式，并使用同一个变量来决定执行`write()`方法还是`read()`方法。
 
-`write()` 方法迭代 1,000,000 次，在每次迭代中，该方法都会为文件获取一个排斥锁。当文件被锁定后，该方法会打印等待锁的时间，然后在再次释放锁之前写入 4 个整数。
+`write()`方法迭代 1,000,000 次，在每次迭代中，该方法都会为文件获取一个排斥锁。当文件被锁定后，该方法会打印等待锁的时间，然后在再次释放锁之前写入 4 个整数。
 
-`read()` 方法在原理上的工作方式相同，只是尝试使用该方法来获取共享锁，而不是写入文件，而是读取这 4 个整数并在屏幕上打印它们的和。
+`read()`方法在原理上的工作方式相同，只是尝试使用该方法来获取共享锁，而不是写入文件，而是读取这 4 个整数并在屏幕上打印它们的和。
 
 现在的想法是启动两个版本的程序，它们在每个终端中运行，其中一个进行写入，另一个进行读取。你将能够观察到程序如何交替获取锁。先启动写入的程序是非常重要的。
 
 ## 3.3 路径与文件
 
-`Path` 代表文件系统，`Path` 类扮演的角色与 `java.io` 中的 `File` 类相同，但 `Path` 代表了一个更通用的概念，并提供了许多可用的服务。在以下，一个 `Path` 对象引用文件或目录的路径，但它不必是一个已存在的文件或目录，因此一个 `Path` 只是一个名称。
+`Path`代表文件系统，`Path`类扮演的角色与`java.io`中的`File`类相同，但`Path`代表了一个更通用的概念，并提供了许多可用的服务。在以下，一个`Path`对象引用文件或目录的路径，但它不必是一个已存在的文件或目录，因此一个`Path`只是一个名称。
 
-在 ebook.com 下载免费电子书
+在 `ebook.com` 下载免费电子书
 
 ## JAVA 5：文件与 IO
 
-与 `Path` 类一起还有 `Files` 类，这两个类都位于 `java.nio.file` 包中。`Files` 类非常全面，但通常它包含了操作文件系统所需的内容。以下内容不是这些类的完整文档，我们鼓励你检查 `java.nio.file` 包中存在哪些类型，以及 `Files` 类的特定文档，以便你对该类提供的功能有一个整体了解。
+与`Path`类一起还有`Files`类，这两个类都位于`java.nio.file`包中。`Files`类非常全面，但通常它包含了操作文件系统所需的内容。以下内容不是这些类的完整文档，我们鼓励你检查`java.nio.file`包中存在哪些类型，以及`Files`类的特定文档，以便你对该类提供的功能有一个整体了解。
 
-在本节的剩余部分以及本章的剩余部分中，我将通过简单的测试方法来展示一些可能性，以及如何应用 `Path` 和 `Files` 这两个类。
+在本节的剩余部分以及本章的剩余部分中，我将通过简单的测试方法来展示一些可能性，以及如何应用`Path`和`Files`这两个类。
 
 ### PATH 类
 
-路径由由分隔符分隔的元素（文件名）组成，分隔符是一个字符，在 Linux 中是 `/`，而在 Windows 下是 `\`。以下方法打印关于 `Path` 的信息，同时对 `Path` 类提供的一些方法进行介绍：
+路径由由分隔符分隔的元素（文件名）组成，分隔符是一个字符，在 Linux 中是`/`，而在 Windows 下是`\`。以下方法打印关于`Path`的信息，同时对`Path`类提供的一些方法进行介绍：
 
 ```java
 private static void voidPath(Path p)
@@ -3551,17 +3576,13 @@ public static void test1() {
 
 ## JAVA 5：文件与 IO，JAVA.NIO
 
-`Paths` 类是一个通过 `get()` 方法创建 `Path` 对象的类。该方法可以创建一个文件系统路径，它可以接收一个或多个字符串，或者一个 `URI`。
-
-
-
-
+`Paths`类是一个通过`get()`方法创建`Path`对象的类。该方法可以创建一个文件系统路径，它可以接收一个或多个字符串，或者一个`URI`。
 
 ## JAVA 5：文件与 JAVA IO
 
 ### Files 类
 
-如前所述，`Files` 类非常全面，它其中包含了许多静态方法，可以打印关于文件属性的等信息：
+如前所述，`Files`类非常全面，它其中包含了许多静态方法，可以打印关于文件属性的等信息：
 
 ```java
 private static void test20()
@@ -3587,7 +3608,7 @@ private static void info(Path path)
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_116_0.png)
 
-其中 `numbers` 是上面创建的文件。每个方法的含义应该从名称中推断出来，执行方法的结果如下：
+其中`numbers`是上面创建的文件。每个方法的含义应该从名称中推断出来，执行方法的结果如下：
 
 ```
 true
@@ -3628,13 +3649,15 @@ private static void test21() {
 }
 ```
 
-该方法创建了一个指向我的家目录的路径 `p0`。使用此路径意味着：
+该方法创建了一个指向我的家目录的路径`p0`。使用此路径意味着：
 
 ```
 p0.resolve("testdir")
 ```
 
-创建一个名为 `testdir` 的路径，使其成为 `p0` 下的一个“文件”——在这种情况下，是一个子..目录。`Files` 有一个静态方法 `createDirectory()`，它可以根据路径创建一个目录并返回指向该目录的 `Path` 对象 `p1`。同样地，`p2` 是该目录中一个文件的路径。`Files` 还有一个 `copy()` 方法来复制文件。在这种情况下，被复制的文件路径为 `p2`，并被复制到同一目录下的名为 `testfile1` 的文件中。执行这些语句的结果是在我的家目录中创建了以下文件树：
+
+
+创建一个名为`testdir`的路径，使其成为`p0`下的一个“文件”——在这种情况下，是一个子..目录。`Files`有一个静态方法`createDirectory()`，它可以根据路径创建一个目录并返回指向该目录的`Path`对象`p1`。同样地，`p2`是该目录中一个文件的路径。`Files`还有一个`copy()`方法来复制文件。在这种情况下，被复制的文件路径为`p2`，并被复制到同一目录下的名为`testfile1`的文件中。执行这些语句的结果是在我的家目录中创建了以下文件树：
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_118_0.png)
 
@@ -3649,7 +3672,7 @@ true
 true
 ```
 
-下一个方法展示了如何在我的 `tmp` 目录中创建一个指向文件的路径，然后用该路径打开一个 `OutputStream` 并向流中打印 15 个字节：
+下一个方法展示了如何在我的`tmp`目录中创建一个指向文件的路径，然后用该路径打开一个`OutputStream`并向流中打印15个字节：
 
 ```java
 private static void test22() {
@@ -3663,7 +3686,7 @@ private static void test22() {
 }
 ```
 
-这里没什么好解释的，但你应该注意到如何为 `newOutputStream()` 设置选项。`StandardOpenOption` 是一个枚举，鼓励你研究其他选项。
+这里没什么好解释的，但你应该注意到如何为`newOutputStream()`设置选项。`StandardOpenOption`是一个枚举，鼓励你研究其他选项。
 
 同样的问题也可以通过以下方式解决：
 
@@ -3679,7 +3702,7 @@ private static void test23() {
 }
 ```
 
-其中 `write()` 方法打开文件、向文件写入字节数组并再次关闭。下面是两个再次读取文件的方法：
+其中`write()`方法打开文件、向文件写入字节数组并再次关闭。下面是两个再次读取文件的方法：
 
 ```java
 private static void test24() {
@@ -3701,7 +3724,7 @@ private static void test22() {
 }
 ```
 
-这里没什么好解释的，但你应该注意到如何为 `newOutputStream()` 设置选项。`StandardOpenOption` 是一个枚举，鼓励你研究其他选项。
+这里没什么好解释的，但你应该注意到如何为`newOutputStream()`设置选项。`StandardOpenOption`是一个枚举，鼓励你研究其他选项。
 
 同样的问题也可以通过以下方式解决：
 
@@ -3717,7 +3740,7 @@ private static void test23() {
 }
 ```
 
-其中 `write()` 方法打开文件、向文件写入字节数组并再次关闭。下面是两个再次读取文件的方法：
+其中`write()`方法打开文件、向文件写入字节数组并再次关闭。下面是两个再次读取文件的方法：
 
 ```java
 private static void test24() {
@@ -3743,7 +3766,7 @@ private static void test22() {
 p0.resolve("testdir")
 ```
 
-创建一个路径，使其其名为 `testdir` 成为 `p0` 下的一个“文件”——在这种情况下，是一个子..目录。`Files` 有一个静态方法 `createDirectory()`，它可以根据路径创建一个目录并返回指向该目录的 `Path` 对象 `p1`。同样地，`p2` 是该目录中一个文件的路径。`Files` 还有一个 `copy()` 方法来复制文件。在这种情况下，被复制的文件路径为 `p2`，并被复制到同一目录下的名为 `testfile1` 的文件中。执行这些语句的结果是在我的家目录中创建了以下文件树：
+创建一个路径，使其其名为`testdir`成为`p0`下的一个“文件”——在这种情况下，是一个子..目录。`Files`有一个静态方法`createDirectory()`，它可以根据路径创建一个目录并返回指向该目录的`Path`对象`p1`。同样地，`p2`是该目录中一个文件的路径。`Files`还有一个`copy()`方法来复制文件。在这种情况下，被复制的文件路径为`p2`，并被复制到同一目录下的名为`testfile1`的文件中。执行这些语句的结果是在我的家目录中创建了以下文件树：
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_118_0.png)
 
@@ -3758,7 +3781,7 @@ true
 true
 ```
 
-下一个方法展示了如何在我的 `tmp` 目录中创建一个指向文件的路径，然后用该路径打开一个 `OutputStream` 并向流中打印 15 个字节：
+下一个方法展示了如何在我的`tmp`目录中创建一个指向文件的路径，然后用该路径打开一个`OutputStream`并向流中打印15个字节：
 
 ```java
 private static void test22() {
@@ -3772,7 +3795,7 @@ private static void test22() {
 }
 ```
 
-这里没什么好解释的，但你应该注意到如何为 `newOutputStream()` 设置选项。`StandardOpenOption` 是一个枚举，鼓励你研究其他选项。
+这里没什么好解释的，但你应该注意到如何为`newOutputStream()`设置选项。`StandardOpenOption`是一个枚举，鼓励你研究其他选项。
 
 同样的问题也可以通过以下方式解决：
 
@@ -3788,16 +3811,12 @@ private static void test23() {
 }
 ```
 
-其中 `write()` 方法打开文件、向文件写入字节数组并再次关闭。下面是两个再次读取文件的方法：
+其中`write()`方法打开文件、向文件写入字节数组并再次关闭。下面是两个再次读取文件的方法：
 
 ```java
 private static void test24() {
     byte[] b = new byte[100];
 ```
-
-
-
-
 
 ## JAVA 5：文件与 IO
 
@@ -3806,9 +3825,9 @@ System.out.println(ex);
 }
 ```
 
-这些示例中，重要的是你如何使用 `Files` 类同时创建 `BufferedWriter` 和 `BufferedReader`。
+这些示例中，重要的是你如何使用`Files`类同时创建`BufferedWriter`和`BufferedReader`。
 
-接下来的两个示例类似，它们展示了 `Files` 类如何创建 `BufferedOutputStream` 和 `BufferedInputStream`：
+接下来的两个示例类似，它们展示了`Files`类如何创建`BufferedOutputStream`和`BufferedInputStream`：
 
 ```java
 private static void test30() {
@@ -3836,7 +3855,7 @@ private static void test31() {
 }
 ```
 
-第一个方法向 `BufferedOutputStream` 写入 10000 个字节，在这里你应该特别注意它是以追加模式打开的。该方法写入了 100 次，每次写入一个包含 100 个随机字节的数组。最后一个方法通过 `BufferedInputStream` 再次读取文件并确定总和。
+第一个方法向`BufferedOutputStream`写入10000个字节，在这里你应该特别注意它是以追加模式打开的。该方法写入了100次，每次写入一个包含100个随机字节的数组。最后一个方法通过`BufferedInputStream`再次读取文件并确定总和。
 
 ## JAVA 5：文件与 JAVA IO
 
@@ -3864,7 +3883,7 @@ private static void test32()
 }
 ```
 
-首先创建一个包含上述所示的 7 位丹麦国王名字的列表，然后创建一个指向我 tmp 目录某个文件的路径。`Files` 类有一个 `newByteChannel()` 方法，它可以为由路径标识的文件创建一个 `ByteChannel`。通道准备好后，该方法执行一个循环，遍历文件中的所有字符串。对于每个字符串（名字），都会添加一个换行符，并在经过 UTF-8 编码后将所有转换为字节数组。该数组被完全封装在 `ByteBuffer` 中并发送到通道上。
+首先创建一个包含上述所示的7位丹麦国王名字的列表，然后创建一个指向我tmp目录某个文件的路径。`Files`类有一个`newByteChannel()`方法，它可以为由路径标识的文件创建一个`ByteChannel`。通道准备好后，该方法执行一个循环，遍历文件中的所有字符串。对于每个字符串（名字），都会添加一个换行符，并在经过UTF-8编码后将所有转换为字节数组。该数组被完全封装在`ByteBuffer`中并发送到通道上。
 
 下面是等效的方法，它再次读取了文件：
 
@@ -3889,31 +3908,39 @@ catch (IOException ex) {
 }
 ```
 
-再次创建了一个指向文件的 `ByteChannel`，然后是一个 `ByteBuffer`。数字 30 是任意的，但选择它的目的是为了让缓冲区足够大以容纳最长的名字。更准确地说，这意味着通道上的后续读取每次读取 30 个字节，直到字节少于 30 个。每当缓冲区满时，或者更准确地说当执行 `read()` 方法时，程序会执行 `flip()`，并将缓冲区的字节内容解码为字符串打印在屏幕上。
+再次创建了一个指向文件的`ByteChannel`，然后是一个`ByteBuffer`。数字30是任意的，但选择它的目的是为了让缓冲区足够大以容纳最长的名字。更准确地说，这意味着通道上的后续读取每次读取30个字节，直到字节少于30个。每当缓冲区满时，或者更准确地说当执行`read()`方法时，程序会执行`flip()`，并将缓冲区的字节内容解码为字符串打印在屏幕上。
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_125_0.png)
 
 # 4 简单数据类型的四种操作
 
-任何数据元素（简单变量或对象）都会占用机器内存空间，当机器内存中最小的可寻址单位是字节时，所有数据元素无一例外地使用整数个字节。这取决于元素本身并由元素的数据类型决定。一个字节由 8 位组成（即 8 个 0 和 1 的符号），你可以将一个字节视为由 8 位组成的位模式。由于一个位可以取两个值，因此一个字节可以表示不同的值。这些值如何被解释完全取决于程序和数据类型，在许多语文中它是一个数字，而在其他语文中它是一个字符的编码。
+任何数据元素（简单变量或对象）都会占用机器内存空间，当机器内存中最小的可寻址单位是字节时，所有数据元素无一例外地使用整数个字节。这取决于元素本身并由元素的数据类型决定。一个字节由8位组成（即8个0和1的符号），你可以将一个字节视为由8位组成的位模式。由于一个位可以取两个值，因此一个字节可以表示不同的值。这些值如何被解释完全取决于程序和数据类型，在许多语文中它是一个数字，而在其他语文中它是一个字符的编码。
 
-在本章中，我将描述简单数据类型在 Java 中如何表示，以及在此背景下可以使用哪些操作处理单个位。本章假设你了解二进制数和十六进制数，目前你缺少附录内容。
+在本章中，我将描述简单数据类型在Java中如何表示，以及在此背景下可以使用哪些操作处理单个位。本章假设你了解二进制数和十六进制数，目前你缺少附录内容。
 
 ## 4.1 整数
 
-Java 已经描述了四种整数类型：`byte`、`short`、`int` 和 `long`，它们仅在内存中所填充的内容有所不同，分别为 1、2、4 或 8 字节。例如，一个 `int` 使用 4 个连续的字节。这意味着一个 `int` 使用 32 位，并可以表示 4294967296 个不同的整数。32 位被解释为二进制数，其中负数用补码表示。这对应于：
+Java已经描述了四种整数类型：`byte`、`short`、`int`和`long`，它们仅在内存中所填充的内容有所不同，分别为1、2、4或8字节。例如，一个`int`使用4个连续的字节。这意味着一个`int`使用32位，并可以表示4294967296个不同的整数。32位被解释为二进制数，其中负数用补码表示。这对应于：
 
-a = -2147483648 (二进制数 10000000000000000000000000000000)
-b = 2147483647 (二进制数 01111111111111111111111111111111)
+`a = -2147483648`（二进制数`10000000000000000000000000000000`）
+
+`b = 2147483647`（二进制数`01111111111111111111111111111111`）
 
 任何整数类型都支持二进制操作：
-- 算术 (+)
-- 按位与 (&)
-- 按位异或 (^)
-- 左移 (<<)
-- 右移 (>>)
 
-整数的二进制表示是简单的，在 Java 中也很容易测试：
+- 算术（`+`）
+
+- 按位与（`&`）
+
+- 按位异或（`^`）
+
+- 左移（`<<`）
+
+- 右移（`>>`）
+
+整数的二进制表示是简单的，在Java中也很容易测试：
+
+
 
 ```java
 public static String toBin(int t) {
@@ -3944,11 +3971,13 @@ private static void test01() {
 }
 ```
 
+```
 00000000000000000000011100010001 = 113
 11111111111111111111110011101111 = -113
 00000000000000000000000000000000 = 0
 01111111111111111111111111111111 = 2147483647
 10000000000000000000000000000000 = -2147483648
+```
 
 对应上述内容。同样地方法：
 
@@ -3962,18 +3991,16 @@ private static void test02() {
 
 结果如下：
 
+```
 11110000111100001111000011110000
 00111100111100001111000011110000
-
-
-
-
+```
 
 ## JAVA 5：文件与 IO | 简单数据类型操作
 
-在这里你应该特别注意，变量 $a$ 和 $b$ 使用十六进制值初始化，这在处理二进制整数时非常有用。请注意，`>>` 运算符是算术右移（会加上符号位），而 `>>>` 运算符是右移，它总是插入一个 0。
+在这里你应该特别注意，变量 `a` 和 `b` 使用十六进制值初始化，这在处理二进制整数时非常有用。请注意，`>>` 运算符是算术右移（会加上符号位），而 `>>>` 运算符是右移，它总是插入一个 0。
 
-对于其他整数，区别仅在于类型所表示的范围，因此它们处理的数字大小也不同。然而，二进制操作得到的结果有时与预期不符。如果参数是 *byte* 或 *short*，该参数在执行操作之前将先被转换为 *int*，且结果将是一个 32 位的 *int*。如果参数表示一个负数，其结果可能与预期的不同。如果参数是 *long*，则可能会发生某些情况，因为第二个参数在执行操作之前也必须转换为 *long*。考虑以下方法示例：
+对于其他整数，区别仅在于类型所表示的范围，因此它们处理的数字大小也不同。然而，二进制操作得到的结果有时与预期不符。如果参数是 `byte` 或 `short`，该参数在执行操作之前将先被转换为 `int`，且结果将是一个 32 位的 `int`。如果参数表示一个负数，其结果可能与预期的不同。如果参数是 `long`，则可能会发生某些情况，因为第二个参数在执行操作之前也必须转换为 `long`。考虑以下方法示例：
 
 ```java
 private static void test03() {
@@ -3990,25 +4017,30 @@ private static void test03() {
 
 如果执行该方法，你得到结果：
 
+```
 11111111111111111111111110011000
 11111111111111111111111111011101
 11111111111111111111111111011101
 00000000000000000000000000011101
+```
 
-$b$ 的值为 11001000，当它被传递给 `toBin()` 时，它会被扩展到 32 位并用符号位填充。第一个结果是符合预期的。这也适用于算术移动时的第二个结果，但你应该注意，操作是先将 $b$ 扩展到 32 位，然后执行算术右移。然而，第三个结果并不是预期的，因为这不是算术移动，而是发生了以下情况：
+`b` 的值为 11001000，当它被传递给 `toBin()` 时，它会被扩展到 32 位并用符号位填充。第一个结果是符合预期的。这也适用于算术移动时的第二个结果，但你应该注意，操作是先将 `b` 扩展到 32 位，然后执行算术右移。然而，第三个结果并不是预期的，因为这不是算术移动，而是发生了以下情况：
 
 ## JAVA 5：文件与 Java IO
+
 ### 简单数据类型操作
 
-$b$ 扩展到 32 位：11111111111111111111111110100000000001111111111111111111111110011111101 
+`b` 扩展到 32 位：11111111111111111111111110100000000001111111111111111111111110011111101
 
 - 向右移动 3 位：
-- 强制类型转换为 byte：
+
+- 强制类型转换为 `byte`：
+
 - 调用 `toBin()` 扩展到 32 位：11111111111111111111111111110001
 
-可以通过将 $b$ 扩展到 32 位来解决此问题：
+可以通过将 `b` 扩展到 32 位来解决此问题：
 
-```java
+```
 b << 0xff =
 1111111111111111111111000 & 0000000000000000000001111111 =
 000000000000000000000010010000
@@ -4069,6 +4101,7 @@ public class Binary {
 ```
 
 ## JAVA 5：文件与 Java IO
+
 ### 简单数据类型操作
 
 ### 练习 7
@@ -4085,11 +4118,7 @@ static String toBin(BitSet s)
 }
 ```
 
-返回 BitSet s 的位字符串。你还需要扩展测试程序以测试二进制旋转的方法。
-
-
-
-
+返回 `BitSet` 的位字符串。你还需要扩展测试程序以测试二进制旋转的方法。
 
 # JAVA 5：文件与 IO | 简单数据类型操作
 
@@ -4108,9 +4137,13 @@ static String toBin(BitSet s)
 其中包含 64 位。位，位图实现为八个字节（bytes）、整数（ints）或长整数（long）。然而，位图必须更通用，并且能够任意大小，因此它应该被实现为一种简单类型（整数）的数组。通常实现位图是简单的，但有几点你必须考虑并做出决策。我将提到一些重要的例子：
 
 - 内部数组应使用哪种类型来存储各个位
+
 - 位图必须是固定大小的
+
 - 位图可能的尺寸应该是哪些，且它应该应该是数组元素大小的倍数
+
 - 位图必须提供哪些操作
+
 - 两个位图何时是兼容的
 
 关于第一点，你可以在 `byte`、`short`、`int` 和 `long` 之间进行选择。对于大型位图，你应该选择位较多的类型，因为这意味着数组更小，从而使方法中的循环更短，从而提高效率。对于较小的位图，64 位的元素可能意味着不必要的空间消耗，但在大多数你需要位图的情况下，位图将是具有许多位的位图，这表明要选择一个能够容纳许多位的类型。下面你选择了 `long` 类型。
@@ -4121,11 +4154,11 @@ static String toBin(BitSet s)
 
 根据以上内容，你的任务是使用以下类扩展类库 `PaLib`：
 
-```
+```java
 package palib.util;
 ```
 
-```
+```java
 import java.util.*;
 ```
 
@@ -4215,15 +4248,14 @@ public void clear() { ... }
 因为实现你的梦想是你最大的挑战。IE 商学院提供英语、西班牙语或双语教学的管理硕士课程，通过一项创新且具有刺激性的计划，培训处于职业生涯初的高性能专业人士，帮助他们发挥出全部潜力。
 
 - 选择你的专业领域。
+
 - 通过不同的选项定制你的硕士课程。
+
 - 在伦敦等地点进行全球沉浸周。
 
 英语 OUT THERE
+
 点击在下载我独特的课程之前听听我说话
-
-
-
-
 
 # JAVA 5：简单数据类型上的文件与 IO 操作
 
@@ -4316,9 +4348,11 @@ public static String toBin(Bitmap bm, char c)
 
 你现在必须编写一个程序，用户可以在其中输入一个数字（见下方的窗口）。当你点击 `Test` 按钮时，应用程序必须在列表中插入一行，显示该数字是否为质数。为了判断情况如何，程序必须使用上述算法和上面的 `Bitmap` 类。你可以通过观察以下几点来稍微改进算法：
 
-- 1. 如果一个数有质因子（能整除该数的质数），那么它或另一个质因子必须小于或等于该数的平方根，因此当起始索引大于数的平方根时，上述迭代可以停止。
-- 2. 如果你到达之前循环中未被标记的索引，它就是一个质数，你必须标记所有具有该因数的数：2k, 3k, 4k, ..., 那么实际上从 k 开始就足够了，否则该位置会在之前的循环中被标记。
-- 3. 位图中没有必要跟踪奇数以外，因为所有大于 2 的偶数都不是质数。
+
+
+1. 如果一个数有质因子（能整除该数的质数），那么它或另一个质因子必须小于或等于该数的平方根，因此当起始索引大于数的平方根时，上述迭代可以停止。
+2. 如果你到达之前循环中未被标记的索引，它就是一个质数，你必须标记所有具有该因数的数：`2k`、`3k`、`4k`、……，那么实际上从`k`开始就足够了，否则该位置会在之前的循环中被标记。
+3. 位图中没有必要跟踪奇数以外，因为所有大于 2 的偶数都不是质数。
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_143_0.png)
 
@@ -4328,9 +4362,9 @@ public static String toBin(Bitmap bm, char c)
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_144_0.png)
 
-### 练习 8
+## 练习 8
 
-创建一个名为 `Encoding` 的项目。添加以下两个测试方法，其中第一个将文本写入文件，而另一个再次读取文本：
+创建一个名为`Encoding`的项目。添加以下两个测试方法，其中第一个将文本写入文件，而另一个再次读取文本：
 
 ```java
 private static void test1()
@@ -4361,10 +4395,6 @@ private static void test2()
 }
 ```
 
-
-
-
-
 # JAVA 5：文件与 JAVA IO
 
 ```java
@@ -4372,13 +4402,13 @@ public static String toBin(double t, char c)
 }
 ```
 
-使用这些方法打印数字 123.45F、-123.45F、12345.6789 和 -12,345.6789 的二进制表示，并检查它们是否符合附录中的描述。
+使用这些方法打印数字`123.45F`、`-123.45F`、`12345.6789`和`-12,345.6789`的二进制表示，并检查它们是否符合附录中的描述。
 
-`Float` 类还有三个额外的常量：NEGATIVE_INFINITY、POSITIVE_INFINITY 和 NaN。打印这些常量的二进制表示。对 `Double` 类也执行相同的操作。
+`Float`类还有三个额外的常量：`NEGATIVE_INFINITY`、`POSITIVE_INFINITY`和`NaN`。打印这些常量的二进制表示。对`Double`类也执行相同的操作。
 
 ## 练习 10
 
-在问题 3 中来说，你编写了一个 `Bitmap` 类，它位于你的类库 `PaLib` 中。该类位于 `palib.util` 包中，你必须向该包中添加以下异常类：
+在问题 3 中来说，你编写了一个`Bitmap`类，它位于你的类库`PaLib`中。该类位于`palib.util`包中，你必须向该包中添加以下异常类：
 
 ```java
 package palib.util;
@@ -4391,13 +4421,13 @@ public class UtilException extends Exception
 }
 ```
 
-`Bitmap` 类有四个实例方法和四个静态方法，它们都可以抛出异常。你必须修改该类，使得所有这些都抛出类型为 `UtilException` 的异常。
+`Bitmap`类有四个实例方法和四个静态方法，它们都可以抛出异常。你必须修改该类，使得所有这些都抛出类型为`UtilException`的异常。
 
-打开测试程序 `TestBitmap` 并查看它是否仍然可以编译（它应该是可以的）。扩展程序，添加另一个测试方法来触发异常（例如对两个长度不同的位图进行 `AND` 操作），并测试你是否可以捕获到 `UtilException`。
+打开测试程序`TestBitmap`并查看它是否仍然可以编译（它应该是可以的）。扩展程序，添加另一个测试方法来触发异常（例如对两个长度不同的位图进行`AND`操作），并测试你是否可以捕获到`UtilException`。
 
 # JAVA 5：文件与 JAVA IO
 
-### 最终示例
+## 最终示例
 
 在最后一个示例中，我将展示一个可以打开任何文件并编辑内容的程序——无论你是否有权限这样做。程序应该以十六进制显示文件内容，你可以通过修改单个字节来编辑文件。程序可以编辑所有文件（文本文件、图像、翻译后的程序等），但另一个问题是，你从中从中获得什么，以及你是否能解释十六进制代码。
 
@@ -4405,30 +4435,30 @@ public class UtilException extends Exception
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_149_0.png)
 
-关于儿童在线学习（e-Learning for Kids）。它成立于2004年，是一个全球性的非营利基金会，致力于为 5-12 岁的儿童提供免费的互联网学习，涵盖数学、科学、语言艺术、计算机、健康和环境技能课程。自2005 年以来，来自 190 多个国家的 1500 万儿童受益于 LU KI 提供的在线学习。来自世界各地的志愿者教育工作人员、在线学习专家和业务专业人士致力于带来改变。e-Learning for Kids 正在寻求资金、志愿者、赞助商和关注开发者。欲了解更多信息，请访问 www.e-learningforkids.org。
+关于儿童在线学习（e-Learning for Kids）。它成立于2004年，是一个全球性的非营利基金会，致力于为 5-12 岁的儿童提供免费的互联网学习，涵盖数学、科学、语言艺术、计算机、健康和环境技能课程。自2005 年以来，来自 190 多个国家的 1500 万儿童受益于 LU KI 提供的在线学习。来自世界各地的志愿者教育工作人员、在线学习专家和业务专业人士致力于带来改变。e-Learning for Kids 正在寻求资金、志愿者、赞助商和关注开发者。欲了解更多信息，请访问`www.e-learningforkids.org`。
 
 - 小学教育第 1 MOOC
 - 为 5-12 岁儿童提供的免费数字学习
 - 让 1500 万儿童受益
 
-在 bookboom.com 下载免费电子书
+在`bookboom.com`下载免费电子书。
 
-点击广告阅读更多信息
+点击广告阅读更多信息。
 
 # JAVA 5：文件与 JAVA IO
 
-### 最终示例
+## 最终示例
 
 | 文件浏览器 | 新建文件 | 打开文件 | 保存文件 | 另存为 | 上一页 | 下一页 | 选项 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_150_0.png)
 
-该窗口在 `JSplitPane` 中包含两个 `JTextArea` 组件。左侧组件用于以十六进制显示文件内容，你可以在这里编辑文件。右侧组件显示被解释为文本的文件内容——在可能的范围内。
+该窗口在`JSplitPane`中包含两个`JTextArea`组件。左侧组件用于以十六进制显示文件内容，你可以在这里编辑文件。右侧组件显示被解释为文本的文件内容——在可能的范围内。
 
-顶部七个按钮的功能很大程度上取决于文本描述：第一个按钮清除窗口并从而创建一个空文件，而接下来的三个按钮分别用于打开文件、保存文件和另存为。由于文件可能非常大，`JTextArea` 的内容可能大到无法管理（程序运行会变慢），因此大文件被分成若干块，程序一次只处理一个块。第五个和第六个按钮用于在这些块之间来回滚动。最后，最后一个一个按钮会打开一个对话框，你可以在其中设置块的大小以及每行显示多少个字节：
+顶部七个按钮的功能很大程度上取决于文本描述：第一个按钮清除窗口并从而创建一个空文件，而接下来的三个按钮分别用于打开文件、保存文件和另存为。由于文件可能非常大，`JTextArea`的内容可能大到无法管理（程序运行会变慢），因此大文件被分成若干块，程序一次只处理一个块。第五个和第六个按钮用于在这些块之间来回滚动。最后，最后一个一个按钮会打开一个对话框，你可以在其中设置块的大小以及每行显示多少个字节：
 
-在 bookboom.com 下载免费电子书
+在`bookboom.com`下载免费电子书。
 
 # JAVA 5：文件与 JAVA IO
 
@@ -4438,11 +4468,13 @@ public class UtilException extends Exception
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_151_1.png)
 
-字节以十六进制显示。现在你可以通过按键输入数据。如果变量为 `null`，则表示没有加载文件。
+字节以十六进制显示。现在你可以通过按键输入数据。如果变量为`null`，则表示没有加载文件。
 
-`JAVA 5：文件与 JAVA IO` 列表用于存储块，为了处理文件，它包含了块。对于小文件（默认小于 1/2 MB）只有一个块。
+`JAVA 5：文件与 JAVA IO`列表用于存储块，为了处理文件，它包含了块。对于小文件（默认小于 1/2 MB）只有一个块。
 
-`JAVA 5：文件与 JAVA IO`## 5.1 模型
+`JAVA 5：文件与 JAVA IO`
+
+## 5.1 模型
 
 以下是表示数据的块类：
 
@@ -4456,7 +4488,8 @@ class Block {
 ![](img/5d98ad28901c31fd736abaabe8f09e19_152_0.png)
 
 # JAVA 5：文件与 JAVA IO
-最终示例
+
+## 最终示例
 
 ```java
 public Block(int size)
@@ -4475,9 +4508,9 @@ class Model {
 }
 ```
 
-模型还有一个 `changed` 变量，用于跟踪模型状态，并根据编辑的文件发生变化。然后 `file` 变量指向已打开的文件。
+模型还有一个`changed`变量，用于跟踪模型状态，并根据编辑的文件发生变化。然后`file`变量指向已打开的文件。
 
-模型拥有 `get` 和 `set` 方法，包括导航 `current` 变量的方法，特别是返回模型状态信息的方法。它们通常很简单，我在这里不会显示这些方法。
+模型拥有`get`和`set`方法，包括导航`current`变量的方法，特别是返回模型状态信息的方法。它们通常很简单，我在这里不会显示这些方法。
 
 该类还有读取和保存文件的方法。下面是打开文件的方法：
 
@@ -4500,10 +4533,6 @@ public boolean open(File file) {
     }
 }
 ```
-
-
-
-
 
 # JAVA 5：文件与 JAVA IO 最终示例
 
@@ -4538,21 +4567,21 @@ public boolean save() {
 - 第2位：计量经济学与运筹硕士
 - 第2位：全球供应链管理与变革硕士
 
-来源：2013年凯恩斯大师排名；2012年爱思唯尔“最佳研究”排名；2012年《金融时报》全球管理业务排名
+来源：2013年凯恩斯大师排名；2012年爱思唯尔“最佳研究”排名；2012年《金融时报》全球管理业务排名。
 
-访问我们的网站，了解为什么我们是最好的！硕士课程开放日：2014年2月22日
+访问我们的网站，了解为什么我们是最好的！硕士课程开放日：2014年2月22日。
 
-马斯塔里特大学是荷兰最优秀的专业大学（Bievier）
+马斯塔里特大学是荷兰最优秀的专业大学（Bievier）。
 
-www.mastersopenday.nl
+`www.mastersopenday.nl`
 
-在 bookoon.com 免费下载电子书
+在`bookoon.com`免费下载电子书。
 
-JAVA 5：文件与 IO
+# JAVA 5：文件与 IO
 
 ## 5.2 用户界面
 
-这本质上是 `ModelAndView` 类，它是一个相对复杂的类。由于我不允许用户任意编辑内容，而必须输入每个字节的十六进制值，因此需要对键盘和鼠标编写事件处理程序，这正是该类变得有些复杂的原因。鼓励你彻底研究完成后的代码，但在下面我将简要介绍最重要的部分。
+这本质上是`ModelAndView`类，它是一个相对复杂的类。由于我不允许用户任意编辑内容，而必须输入每个字节的十六进制值，因此需要对键盘和鼠标编写事件处理程序，这正是该类变得有些复杂的原因。鼓励你彻底研究完成后的代码，但在下面我将简要介绍最重要的部分。
 
 该类定义了以下变量：
 
@@ -4567,7 +4596,7 @@ private JScrollPane scroll2;
 private Scroller scroll:
 ```
 
-这里是两个 `JTextArea` 组件用于当前文件的视图，其中 `txtEdit` 用于编辑被解释为十六进制值的内容，而 `txtText` 用于显示解释为文本的内容。两个 `JLabel` 组件位于窗口底部，分别用于显示文件名（及大小）以及光标在文件中的位置。两个 `JScrollPane` 组件用于封装这两个 `JTextArea` 组件，最后一种类型是 `Scroller`。它是一个内部类，在这里不会显示，但它必须同步两个 `JScrollPane` 容器，这样当你滚动其中一个时，另一个也会自动滚动。鼓励你研究它的工作原理。
+这里是两个`JTextArea`组件用于当前文件的视图，其中`txtEdit`用于编辑被解释为十六进制值的内容，而`txtText`用于显示解释为文本的内容。两个`JLabel`组件位于窗口底部，分别用于显示文件名（及大小）以及光标在文件中的位置。两个`JScrollPane`组件用于封装这两个`JTextArea`组件，最后一种类型是`Scroller`。它是一个内部类，在这里不会显示，但它必须同步两个`JScrollPane`容器，这样当你滚动其中一个时，另一个也会自动滚动。鼓励你研究它的工作原理。
 
 至于用户界面的设计，没什么特殊的，但你应该注意这个方法：
 
@@ -4580,7 +4609,7 @@ private JTextArea createEditor()
 }
 ```
 
-它创建了组件 `txtEdit`。它的类型是 `HexEditor`，是一个继承自 `JTextArea` 的内部类：
+它创建了组件`txtEdit`。它的类型是`HexEditor`，是一个继承自`JTextArea`的内部类：
 
 ```java
 class HexEditor extends JTextArea
@@ -4594,42 +4623,40 @@ public HexEditor()
 }
 ```
 
-该类的构造函数为键盘和鼠标添加了监听器。对于键盘和鼠标的事件，我们需要处理键盘的按下，以及鼠标的点击
+该类的构造函数为键盘和鼠标添加了监听器。对于键盘和鼠标的事件，我们需要处理键盘的按下，以及鼠标的点击。
 
 - 键盘按键的按下
-
 - 键盘按键的按下
 
-这意味着我们需要处理键盘的事件
+这意味着我们需要处理键盘的事件：
 
 ```java
 public void keyPressed(KeyEvent e)
 ```
 
 - 字母数字键
-- Ctrl + 键
-- Shift + 键
-- Alt + 键
-- Ctrl + 字母
-- Shift + 字母
-- Alt + 字母
+- `Ctrl` + 键
+- `Shift` + 键
+- `Alt` + 键
+- `Ctrl` + 字母
+- `Shift` + 字母
+- `Alt` + 字母
 - 字母
 - 数字键
 - 方向键
-- Ctrl + 方向键
-- Shift + 方向键
-- Alt + 方向键
-- Page Up
-- Page Down
-- Home
-- End
-- Insert
-- Delete
-- Backspace
-- Enter
-- Space
-- 功能键 F1-F12
-
+- `Ctrl` + 方向键
+- `Shift` + 方向键
+- `Alt` + 方向键
+- `Page Up`
+- `Page Down`
+- `Home`
+- `End`
+- `Insert`
+- `Delete`
+- `Backspace`
+- `Enter`
+- `Space`
+- 功能键`F1`-`F12`
 - 鼠标左键
 - 鼠标右键
 - 鼠标中键
@@ -4641,28 +4668,27 @@ public void keyPressed(KeyEvent e)
 - 鼠标退出
 - 鼠标移动
 - 鼠标移动
-
 - 组合
-- Ctrl + C
-- Ctrl + V
-- Ctrl + X
-- Ctrl + Z
-- Ctrl + S
-- Ctrl + A
-- Ctrl + F
-- Ctrl + Q
-- Ctrl + R
-- Ctrl + T
-- Ctrl + W
-- Ctrl + E
-- Ctrl + Home
-- Ctrl + End
-- Shift + Insert
-- Shift + Delete
-- Shift + Home
-- Shift + End
-- Shift + Enter
-- Shift + Space
+- `Ctrl + C`
+- `Ctrl + V`
+- `Ctrl + X`
+- `Ctrl + Z`
+- `Ctrl + S`
+- `Ctrl + A`
+- `Ctrl + F`
+- `Ctrl + Q`
+- `Ctrl + R`
+- `Ctrl + T`
+- `Ctrl + W`
+- `Ctrl + E`
+- `Ctrl + Home`
+- `Ctrl + End`
+- `Shift + Insert`
+- `Shift + Delete`
+- `Shift + Home`
+- `Shift + End`
+- `Shift + Enter`
+- `Shift + Space`
 
 对于键盘的输入，可以看到以下方法：
 
@@ -4679,7 +4705,7 @@ private void changeChar(char ch)
 }
 ```
 
-在 `insertChar` 方法中，可以看到：
+在`insertChar`方法中，可以看到：
 
 ```java
 private void insertChar(char ch)
@@ -4694,7 +4720,7 @@ private void insertChar(char ch)
 }
 ```
 
-在 `deleteChar` 方法中，可以看到：
+在`deleteChar`方法中，可以看到：
 
 ```java
 private void deleteChar()
@@ -4705,15 +4731,11 @@ private void deleteChar()
 
 （注：由于原文文本不完整且存在重复，以上翻译已根据要求保留了结构）
 
+# JAVA 5：文件与 I/O
 
+## 最终示例
 
-
-
-## JAVA 5：文件与 I/O
-
-### 最终示例
-
-如果你观察 10 进制系统中的整数，它们可以被写为 $t = \sum_{i=0}^{n} a_i 10^i$，其中该数字有 $n+1$ 位，且 $a_0, a_1, \dots, a_n$ 都是符号 $0, 1, 2, \dots, 9$ 之一。例如：
+如果你观察 10 进制系统中的整数，它们可以被写为`t = \sum_{i=0}^{n} a_i 10^i`，其中该数字有`n+1`位，且`a_0`、`a_1`、……、`a_n`都是符号`0`、`1`、`2`、……、`9`之一。例如：
 
 ```
 $18207 = 7 * 10^0 + 0 * 10^1 + 2 * 10^2 + 8 * 10^3 + 1 * 10^4
@@ -4736,8 +4758,11 @@ $t = \sum_{i=0}^{n} a_i 2^i
 挪威商学学院（BI Norwegian Business School）是欧洲最大的学校之一，欢迎超过 20,000 名学生。我们的课程提供了一个具有启发性和多元文化的环境，具有国际视野，最终提供为期两年的英文英文科学硕士（MSc）课程，并为你开启职业提供最佳路径：
 
 - 商业管理硕士
+
 - 金融经济学硕士
+
 - 战略管理硕士
+
 - 领导力与组织心理学硕士
 
 赋能人类。其中 $a_0, a_1, \dots, a_n$ 均为 0 或 1。如果 $n = 7$ 且：
@@ -4771,8 +4796,11 @@ $= 128 + 32 + 16 + 1 = 177$
 为了比较这些系统，请注意以下几：
 
 | $0_2 = 0_{10}$ | $100_2 = 4_{10}$ | $1000_2 = 8_{10}$ | $1100_2 = 12_{10}$ |
+
 | $1_2 = 1_{10}$ | $101_2 = 5_{10}$ | $1001_2 = 9_{10}$ | $1101_2 = 13_{10}$ |
+
 | $10_2 = 2_{10}$ | $110_2 = 6_{10}$ | $1010_2 = 10_{10}$ | $1110_2 = 14_{10}$ |
+
 | $11_2 = 3_{10}$ | $111_2 = 7_{10}$ | $1011_2 = 11_{10}$ | $1111_2 = 15_{10}$ |
 
 你可以立即看到二进制系统中的数字占据的空间比十进制系统中的数字空间更大。
@@ -4780,9 +4808,11 @@ $= 128 + 32 + 16 + 1 = 177$
 以下是用 2 进制表示的一些正整数的示例，以及如何将这些数字转换为 10 进制：
 
 1100000111110 = 2^{12} + 2^{11} + 2^{10} + 2^5 + 2^4 + 2^3 + 2^2 + 2^1
+
 = 4096 + 2048 + 1024 + 32 + 16 + 8 + 4 = 7228
 
 111111111 = 2^9 + 2^8 + 2^7 + 2^6 + 2^5 + 2^4 + 2^2 + 2^1 + 2^0
+
 = 512 + 256 + 128 + 64 + 32 + 16 + 4 + 2 + 1 = 1015
 
 110000001 = 512 + 256 + 128 + 1 = 897
@@ -4792,11 +4822,8 @@ $= 128 + 32 + 16 + 1 = 177$
 要确定二进制数的值——换句话说，将其转换为十进制——只需对 2 的幂进行简单计算。将二进制数转换为十进制是简单的，但将十进制转换为二进制则需要一些步骤。例如，将一个十进制数字转换为二进制，需要通过 2 的幂来确定，即一个数字是 2 的幂的倍数还是不是。2 进制系统在原则上与 10 进制系统完全等价，数字被表示为符号序列——10 进制中是 10 个符号，2 进制中是 2 个符号——而值由位置决定。如果你观察上面的构造，很容易通过对 2 的幂进行简单计算来确定 2 进制数字的值：
 
 $t = 1 * 2^7 + 0 * 2^6 + 1 * 2^5 + 1 * 2^4 + 0 * 2^3 + 0 * 2^2 + 0 * 2^1 + 1 * 2^0$
+
 $= 128 + 32 + 16 + 1 = 177$
-
-
-
-
 
 ## JAVA 5：文件与 Java IO
 
@@ -4894,13 +4921,21 @@ $1101101001111111_2 = 1101101001111111_{10} = 6E9F_{16}$
 这种表示法允许以下非负整数：
 
 - 0000000000000000 0
+
 - 0000000000000001 1
+
 - 0000000000000010 2
+
 - 0000000000000011 3
+
 - 0000000000000100 4
+
 - ....
+
 - 1000000000000000 32768
+
 - ....
+
 - 0111111111111111 32767
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_170_0.png)
@@ -4978,21 +5013,29 @@ $1101101001111111_2 = 1101101001111111_{10} = 6E9F_{16}$
 这个计算可能需要对如何加两个二进制数进行一点说明。当你加两个十进制数时，你通常会将数字对齐，使它们的右侧数字对齐。然后从后往前加数字：
 
 + 1. 如果两个数字之和小于基数10，它就是结果
+
 2. 否则从和中减去基数10，差就是结果，同时你得到一个进位1，包含在两个数字之和中。
 
 这种方法可以直接应用于二进制数（原则上也可以应用于任何其他数字系统），区别仅在于基数现在变成了 2：特定位置的和是 0 要么是 1，如果和大于 1，则会向下一个位置产生进位。所有选项都如下表所示：
 
-
-
 | 位 1 | 位 2 | 进位前 | 和 | 进位后 |
+
 | --- | --- | --- | --- | --- |
+
 | 0 | 0 | 0 | 0 | 0 |
+
 | 1 | 0 | 0 | 1 | 0 |
+
 | 0 | 1 | 0 | 1 | 0 |
+
 | 1 | 1 | 0 | 0 | 1 |
+
 | 0 | 0 | 1 | 1 | 0 |
+
 | 1 | 0 | 1 | 0 | 1 |
+
 | 0 | 1 | 1 | 0 | 1 |
+
 | 1 | 1 | 1 | 1 | 1 |
 
 因此，手动相二进制数是一个简单的问题。
@@ -5141,6 +5184,8 @@ $1101101001111111_2 = 1101101001111111_{10} = 6E9F_{16}$
 
 43 的补码：
 
+
+
 ```
 00101011
 11010100
@@ -5148,7 +5193,7 @@ $1101101001111111_2 = 1101101001111111_{10} = 6E9F_{16}$
 11010101
 ```
 
--43 = 11010101，处理器随后加上 01110000 和 11010101：
+`-43 = 11010101`，处理器随后加上`01110000`和`11010101`：
 
 ```
 11110000
@@ -5157,7 +5202,7 @@ $1101101001111111_2 = 1101101001111111_{10} = 6E9F_{16}$
 01000101
 ```
 
-这意味着你得到一个可以快速转换为 69 的结果，这是正确的结果。也许这并不显而易见，如果你手动进行上述加法，你会发现最后一次有进位，它消失了——实际上消失了，因为没有空间存放它。你可以说丢弃了符号位，因为结果是正数。所以我们可以注意到处理器可能会加一个正负负数。计算 43 + (-112)：
+这意味着你得到一个可以快速转换为 69 的结果，这是正确的结果。也许这并不显而易见，如果你手动进行上述加法，你会发现最后一次有进位，它消失了——实际上消失了，因为没有空间存放它。你可以说丢弃了符号位，因为结果是正数。所以我们可以注意到处理器可能会加一个正负负数。计算`43 + (-112)`：
 
 ```
 112 = 01110000
@@ -5175,7 +5220,7 @@ $1101101001111111_2 = 1101101001111111_{10} = 6E9F_{16}$
 10010000
 ```
 
--112 = 1001000，处理器随后加上 1001000 和 00101011：
+`-112 = 1001000`，处理器随后加上`1001000`和`00101011`：
 
 ```
 00000000
@@ -5197,7 +5242,7 @@ $1101101001111111_2 = 1101101001111111_{10} = 6E9F_{16}$
 
 # JAVA 5：文件与 JAVA IO 最终示例
 
-它是数字 69，然后结果是 -69，这也是正确的结果。计算 73 + 60：处理器随后加上两个二进制数 01001001 和 00111100：
+它是数字 69，然后结果是 -69，这也是正确的结果。计算`73 + 60`：处理器随后加上两个二进制数`01001001`和`00111100`：
 
 ```
 01001001
@@ -5208,17 +5253,13 @@ $1101101001111111_2 = 1101101001111111_{10} = 6E9F_{16}$
 
 其中顶位是进位。很容易发现结果是数字 119，这同样正确的结果。
 
-
-
-
-
 ## JAVA 5：文件与 JAVA IO
 
 ### 32 位加法
 
 作为最后一个示例，我将查看两个数字的加法，但这次字长为 32 位，这很好地反映了真实处理器中的情况。我将查看计算过程
 
-2819316 + 32512819
+`2819316 + 32512819`
 
 实际上，这与上述相比没有新之处，只是我写更多的位数。
 
@@ -5258,7 +5299,7 @@ $1101101001111111_2 = 1101101001111111_{10} = 6E9F_{16}$
 a - b = a + (-b)
 ```
 
-如果我们再次得到一个 8 位字，如果你需要计算 83 - 23，那么在计算和 83 + (-23) 时会发生以下情况：
+如果我们再次得到一个 8 位字，如果你需要计算`83 - 23`，那么在计算和`83 + (-23)`时会发生以下情况：
 
 ```
 83 = 01010011
@@ -5283,9 +5324,9 @@ a - b = a + (-b)
 00111100
 ```
 
-结果是 00111100 = 60。
+结果是`00111100 = 60`。
 
-另一个示例：当字长为 32 位时，计算 2819316 - 32512819：
+另一个示例：当字长为 32 位时，计算`2819316 - 32512819`：
 
 ```
 2819316 = 2B04F4 = 0000000010110000001001111011010
@@ -5350,7 +5391,7 @@ a - b = a + (-b)
 0000000010101
 ```
 
-如果你观察十进制系统中如何进行乘法，例如 432 * 2，这是通过先将 432 乘以 1，然后乘以 2 完成的，每次都将 432 向左移动并相加：![](img/5d98ad28901c31fd736abaabe8f09e19_184_0)
+如果你观察十进制系统中如何进行乘法，例如`432 * 2`，这是通过先将 432 乘以 1，然后乘以 2 完成的，每次都将 432 向左移动并相加：![](img/5d98ad28901c31fd736abaabe8f09e19_184_0)
 
 在实际上，乘以二进制并不重要，重要的是乘法可以通过两种操作完成：左移和加法，因此可以由可以加法的处理器执行。
 
@@ -5358,14 +5399,20 @@ a - b = a + (-b)
 
 除法在十系统中是通过减法进行的。除法算法也可以转移到二进制系统中，然后可以由可以加法的处理器执行。
 
-手动进行除法并不容易，因为你需要跟踪是否需要借位，这里有一个例子。假设 13556 必须除以 38，且字长为 16 位。首先注意结果是一个整数，简单的计算得出结果应该是 356：
+手动进行除法并不容易，因为你需要跟踪是否需要借位，这里有一个例子。假设`13556`必须除以 38，且字长为 16 位。首先注意结果是一个整数，简单的计算得出结果应该是 356：
 
 | 38 | 13556 | 356 |
+
 |---|---|---|
+
 | | 114 | |
+
 | | 215 | |
+
 | | 190 | |
+
 | | 228 | |
+
 | | 28 | |
 
 商为 356，余数为 28，对应除法结果。如果你尝试将普通的十进制除法算法复制到二进制系统，这种方法更简单，因为每次迭代的结果都是 0 或 1。
@@ -5378,12 +5425,12 @@ a - b = a + (-b)
 现在可以以二进制方式进行除法，如下所示。然而手动操作并不容易：
 
 1. 如果除数大于上方的数字，则商为 0，上方的数字保持不变进入下一步。
+
 2. 否则，则商为 1，然后必须从上方的数字中减去除数——这里可能需要“借位”，你应该跟踪这一点。
+
 3. 使用下一个位（作为右侧位）。
+
 4. 继续进行直到没有更多位为止。
-
-
-
 
 也就是说，结果为
 
@@ -5468,10 +5515,15 @@ a - b = a + (-b)
 这是一种基本上对两个位的操作，如果两个操作数均为 1，则结果为 1，否则为 0。该操作可以用下表表示：
 
 | 参数 1 | 参数 2 | AND |
+
 |---|---|---|
+
 | 0 | 0 | 0 |
+
 | 0 | 1 | 0 |
+
 | 1 | 0 | 0 |
+
 | 1 | 1 | 1 |
 
 该操作对应于语句的逻辑与。
@@ -5516,10 +5568,15 @@ AND 01100010
 该操作可以用下表表示：
 
 | 参数 1 | 参数 2 | OR |
+
 |---|---|---|
+
 | 0 | 0 | 0 |
+
 | 0 | 1 | 1 |
+
 | 1 | 0 | 1 |
+
 | 1 | 1 | 1 |
 
 该操作对应于语句的逻辑或。
@@ -5546,10 +5603,15 @@ OR 11110010
 这是一种基本上对两个位的操作，如果两个参数不同，则结果为 1，如果相同则为 0。该操作可以用下表表示：
 
 | 参数 1 | 参数 2 | XOR |
+
 |---|---|---|
+
 | 0 | 0 | 0 |
+
 | 0 | 1 | 1 |
+
 | 1 | 0 | 1 |
+
 | 1 | 1 | 0 |
 
 该操作对应于语句的逻辑异或。
@@ -5574,8 +5636,11 @@ XOR 10010010
 NOT 通过翻转单个位来操作。该操作可以用如下描述：
 
 | 参数 | NOT |
+
 |---|---|
+
 | 0 | 1 |
+
 | 1 | 0 |
 
 该操作类似于数学取反。
@@ -5664,27 +5729,35 @@ NOT 10011101
 我从一个名为 ASCII（美国信息交换标准）的表开始，它可能不再直接用于现代计算机，但它是一个非常重要的表。该表将字符编码为 1 字节数字代码，因此表空间容纳 256 个字符。该表通常分为三个部分：
 
 - 1. 代码 0–31 定义了各种控制字符
+
 - 2. 代码 32–127 定义了英语字母表的标准字符
+
 - 3. 代码 128–255 定义了包括其他国家特定字符在内的字符
 
 注意，前两个部分包含 128 个代码，因此可以用 7 位表示，而第一批 ASCII 表（第一个标准）仅涵盖了前两个部分，因此是 7 位编码。
-
-
-
 
 ## JAVA 5: 文件与 JAVA IO
 
 以下是表格的第一部分，其中展示了代码（包括十进制、二进制和十六进制）以及部分符号名称和简短的描述文本。请注意，这些代码并不直接对应键盘上的字符，而是控制代码，其中许多是为了数据通信而定义的，因为文本必须通过某条通信线路进行传输。
 
 | DEC | BIN | HEX | Symbol | Text |
+
 |---|---|---|---|---|
+
 | 0 | 0000000 | 00 | NUL | 空字符 |
+
 | 1 | 00000001 | 01 | SOH | 标题开始 |
+
 | 2 | 00000010 | 02 | STX | 文本开始 |
+
 | 3 | 00000011 | 03 | ETH | 文本结束 |
+
 | 4 | 00000100 | 04 | EOT | 传输结束 |
+
 | 5 | 00000101 | 05 | ENQ | 询问 |
+
 | 6 | 00000110 | 06 | ACK | 确认 |
+
 | 7 | 00000111 | 07 | BEL | 铃声 |
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_196_0.png)
@@ -5694,103 +5767,109 @@ NOT 10011101
 ### 最终示例
 
 | DEC | BIN | HEX | Symbol | Text |
+
 |---|---|---|---|---|
-| 8 | 00001000 | 08 | BS | 退格 |
-| 9 | 00001001 | 09 | HT | 水平制表符 |
-| 10 | 00001010 | 0A | LF | 换行 |
-| 11 | 00001011 | 0B | VT | 垂直制表符 |
-| 12 | 00001100 | 0C | FF | 分页 |
-| 13 | 00001101 | 0D | CR | 回车 |
-| 14 | 00001110 | 0E | SO | 移出 / X-on |
-| 15 | 00001111 | 0F | SI | 移入 / X-off |
-| 16 | 00010000 | 10 | DLE | 数据链路转逸 |
-| 17 | 00010001 | 11 | DC1 | 设备控制 1 (常为 XON) |
-| 18 | 00010010 | 12 | DC2 | 设备控制 2 |
-| 19 | 00010011 | 13 | DC3 | 设备控制 3 (常为 XOFF) |
-| 20 | 00010100 | 14 | DC4 | 设备控制 4 |
-| 21 | 00010101 | 15 | NAK | 否定确认 |
-| 22 | 00010110 | 16 | SYN | 同步空闲 |
-| 23 | 00010111 | 17 | ETB | 传输块结束 |
-| 24 | 00011000 | 18 | CAN | 取消 |
-| 25 | 00011001 | 19 | EM | 介质结束 |
-| 26 | 00011010 | 1A | SUB | 替换 |
-| 27 | 00011011 | 1B | ESC | 逸 |
-| 28 | 00011100 | 1C | FS | 文件分隔符 |
-| 29 | 00011101 | 1D | GS | 组分隔符 |
-| 30 | 00011110 | 1E | RS | 记录分隔符 |
-| 31 | 00011111 | 1F | US | 分隔符 |
+
+
 
 ## JAVA 5: 文件与 IO 最终示例
 
 下面我列出了在纯文本中使用的代码：
 
-- LF，用于换行
-- HT，用于制表符
-- FF，用于分页
-- ESC，ESC 键
-- BS，退格键
+- `LF`，用于换行
+- `HT`，用于制表符
+- `FF`，用于分页
+- `ESC`，`ESC` 键
+- `BS`，退格键
+
+下面是表格的第一部分，它定义了控制字符的代码：
+
+| DEC | BIN | HEX | 缩写 | 描述 |
+| --- | --- | --- | --- | --- |
+| 8 | 00001000 | 08 | `BS` | 退格 |
+| 9 | 00001001 | 09 | `HT` | 水平制表符 |
+| 10 | 00001010 | 0A | `LF` | 换行 |
+| 11 | 00001011 | 0B | `VT` | 垂直制表符 |
+| 12 | 00001100 | 0C | `FF` | 分页 |
+| 13 | 00001101 | 0D | `CR` | 回车 |
+| 14 | 00001110 | 0E | `SO` | 移出 / X-on |
+| 15 | 00001111 | 0F | `SI` | 移入 / X-off |
+| 16 | 00010000 | 10 | `DLE` | 数据链路转逸 |
+| 17 | 00010001 | 11 | `DC1` | 设备控制 1 (常为 `XON`) |
+| 18 | 00010010 | 12 | `DC2` | 设备控制 2 |
+| 19 | 00010011 | 13 | `DC3` | 设备控制 3 (常为 `XOFF`) |
+| 20 | 00010100 | 14 | `DC4` | 设备控制 4 |
+| 21 | 00010101 | 15 | `NAK` | 否定确认 |
+| 22 | 00010110 | 16 | `SYN` | 同步空闲 |
+| 23 | 00010111 | 17 | `ETB` | 传输块结束 |
+| 24 | 00011000 | 18 | `CAN` | 取消 |
+| 25 | 00011001 | 19 | `EM` | 介质结束 |
+| 26 | 00011010 | 1A | `SUB` | 替换 |
+| 27 | 00011011 | 1B | `ESC` | 逸 |
+| 28 | 00011100 | 1C | `FS` | 文件分隔符 |
+| 29 | 00011101 | 1D | `GS` | 组分隔符 |
+| 30 | 00011110 | 1E | `RS` | 记录分隔符 |
+| 31 | 00011111 | 1F | `US` | 分隔符 |
 
 下面是表格的第二部分，它定义了英文字母中字符的代码：
 
-| DEC | BIN | HEX | DEC | BIN | HEX | DEC | BIN | HEX |
-|---|---|---|---|---|---|---|---|---|
-| 32 | 01000000 | 20 | 64 | 01000000 | @ | 96 | 01100000 | 60 |
-| 33 | 01000001 | 21 | ! | 65 | 01000001 | 41 | A | 97 | 01100001 | 61 |
-| 34 | 01000010 | 22 | " | 66 | 01000010 | 42 | B | 98 | 01100010 | 62 |
-| 35 | 01000011 | 23 | # | 67 | 01000011 | 43 | C | 99 | 01100011 | 63 |
-| 36 | 01000100 | 24 | $ | 68 | 01000100 | 44 | D | 100 | 01100100 | 64 |
-| 37 | 01000101 | 25 | % | 69 | 01000101 | 45 | E | 101 | 01100101 | 65 |
-| 38 | 01000110 | 26 | & | 70 | 01000110 | 46 | F | 102 | 01100110 | 66 |
-| 39 | 01000111 | 27 | ' | 71 | 01000111 | 47 | G | 103 | 01100111 | 67 |
-| 40 | 01001000 | 28 | ( | 72 | 01001000 | 48 | H | 104 | 01101000 | 68 |
-| 41 | 01001001 | 29 | ) | 73 | 01001001 | 49 | I | 105 | 01101001 | 69 |
-| 42 | 01001010 | 3A | * | 74 | 01001010 | 50 | J | 106 | 01101010 | 6a |
-| 43 | 01001011 | 3B | + | 75 | 01001011 | 51 | K | 107 | 01101011 | 6k |
-| 44 | 01001100 | 2C | / | 76 | 01001100 | 52 | L | 108 | 01101100 | 6l |
-| 45 | 01001101 | 3D | - | 77 | 01001101 | 53 | M | 109 | 01101101 | 6m |
-| 46 | 01001110 | 2E | . | 78 | 01001110 | 54 | N | 110 | 01101110 | 6e |
-| 47 | 01001111 | 2F | / | 79 | 01001111 | 5F | O | 111 | 01111111 | 6f |
-| 48 | 01010000 | 30 | o | 80 | 01010000 | 50 | P | 112 | 01110000 | 70 |
-| 49 | 01010001 | 31 | q | 81 | 01010001 | 51 | Q | 113 | 01110001 | 71 |
-| 50 | 01010010 | 32 | r | 82 | 01010010 | 52 | R | 114 | 01110010 | 72 |
-| 51 | 01010011 | 33 | s | 83 | 01010011 | 53 | S | 115 | 01110011 | 73 |
-| 52 | 01010100 | 34 | t | 84 | 01010100 | 54 | T | 116 | 01110100 | 74 |
-| 53 | 01010101 | 35 | u | 85 | 01010101 | 55 | U | 117 | 01110101 | 75 |
-| 54 | 01010110 | 36 | v | 86 | 01010110 | 56 | V | 118 | 01110110 | 76 |
-| 55 | 01010111 | 37 | w | 87 | 01010111 | 57 | W | 119 | 01110111 | 77 |
-
-| DEC | BIN | HEX | DEC | BIN | HEX | DEC | BIN | HEX |
-|---|---|---|---|---|---|---|---|---|
-| 56 | 00111000 | 38 | 88 | 01011000 | X | 120 | 01111000 | 78 |
-| 57 | 00111001 | 39 | 89 | 01011001 | Y | 121 | 01111001 | 79 |
-| 58 | 00111010 | 3A | 90 | 01011010 | Z | 122 | 01111010 | 7a |
-| 59 | 00111011 | 3B | 91 | 01011011 | | 123 | 01111011 | 7b |
-| 60 | 00111100 | 3C | 92 | 01011100 | | 124 | 01111100 | 7c |
-| 61 | 00111101 | 3D | 93 | 01011101 | | 125 | 01111101 | 7d |
-| 62 | 00111110 | 3E | 94 | 01011110 | | 126 | 01111110 | 7e |
-| 63 | 00111111 | 3F | 95 | 01011111 | | 127 | 01111111 | 7f |
+| DEC | BIN | HEX | 字符 | DEC | BIN | HEX | 字符 | DEC | BIN | HEX | 字符 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 32 | 01000000 | 20 | 空格 | 64 | 01000000 | 40 | `@` | 96 | 01100000 | 60 | `` ` `` |
+| 33 | 01000001 | 21 | `!` | 65 | 01000001 | 41 | `A` | 97 | 01100001 | 61 | `a` |
+| 34 | 01000010 | 22 | `"` | 66 | 01000010 | 42 | `B` | 98 | 01100010 | 62 | `b` |
+| 35 | 01000011 | 23 | `#` | 67 | 01000011 | 43 | `C` | 99 | 01100011 | 63 | `c` |
+| 36 | 01000100 | 24 | `$` | 68 | 01000100 | 44 | `D` | 100 | 01100100 | 64 | `d` |
+| 37 | 01000101 | 25 | `%` | 69 | 01000101 | 45 | `E` | 101 | 01100101 | 65 | `e` |
+| 38 | 01000110 | 26 | `&` | 70 | 01000110 | 46 | `F` | 102 | 01100110 | 66 | `f` |
+| 39 | 01000111 | 27 | `'` | 71 | 01000111 | 47 | `G` | 103 | 01100111 | 67 | `g` |
+| 40 | 01001000 | 28 | `(` | 72 | 01001000 | 48 | `H` | 104 | 01101000 | 68 | `h` |
+| 41 | 01001001 | 29 | `)` | 73 | 01001001 | 49 | `I` | 105 | 01101001 | 69 | `i` |
+| 42 | 01001010 | 2A | `*` | 74 | 01001010 | 4A | `J` | 106 | 01101010 | 6A | `j` |
+| 43 | 01001011 | 2B | `+` | 75 | 01001011 | 4B | `K` | 107 | 01101011 | 6B | `k` |
+| 44 | 01001100 | 2C | `,` | 76 | 01001100 | 4C | `L` | 108 | 01101100 | 6C | `l` |
+| 45 | 01001101 | 2D | `-` | 77 | 01001101 | 4D | `M` | 109 | 01101101 | 6D | `m` |
+| 46 | 01001110 | 2E | `.` | 78 | 01001110 | 4E | `N` | 110 | 01101110 | 6E | `n` |
+| 47 | 01001111 | 2F | `/` | 79 | 01001111 | 4F | `O` | 111 | 01101111 | 6F | `o` |
+| 48 | 01010000 | 30 | `0` | 80 | 01010000 | 50 | `P` | 112 | 01110000 | 70 | `p` |
+| 49 | 01010001 | 31 | `1` | 81 | 01010001 | 51 | `Q` | 113 | 01110001 | 71 | `q` |
+| 50 | 01010010 | 32 | `2` | 82 | 01010010 | 52 | `R` | 114 | 01110010 | 72 | `r` |
+| 51 | 01010011 | 33 | `3` | 83 | 01010011 | 53 | `S` | 115 | 01110011 | 73 | `s` |
+| 52 | 01010100 | 34 | `4` | 84 | 01010100 | 54 | `T` | 116 | 01110100 | 74 | `t` |
+| 53 | 01010101 | 35 | `5` | 85 | 01010101 | 55 | `U` | 117 | 01110101 | 75 | `u` |
+| 54 | 01010110 | 36 | `6` | 86 | 01010110 | 56 | `V` | 118 | 01110110 | 76 | `v` |
+| 55 | 01010111 | 37 | `7` | 87 | 01010111 | 57 | `W` | 119 | 01110111 | 77 | `w` |
+| 56 | 00111000 | 38 | `8` | 88 | 01011000 | 58 | `X` | 120 | 01111000 | 78 | `x` |
+| 57 | 00111001 | 39 | `9` | 89 | 01011001 | 59 | `Y` | 121 | 01111001 | 79 | `y` |
+| 58 | 00111010 | 3A | `:` | 90 | 01011010 | 5A | `Z` | 122 | 01111010 | 7A | `z` |
+| 59 | 00111011 | 3B | `;` | 91 | 01011011 | 5B | `[` | 123 | 01111011 | 7B | `{` |
+| 60 | 00111100 | 3C | `<` | 92 | 01011100 | 5C | `\` | 124 | 01111100 | 7C | `\|` |
+| 61 | 00111101 | 3D | `=` | 93 | 01011101 | 5D | `]` | 125 | 01111101 | 7D | `}` |
+| 62 | 00111110 | 3E | `>` | 94 | 01011110 | 5E | `^` | 126 | 01111110 | 7E | `~` |
+| 63 | 00111111 | 3F | `?` | 95 | 01011111 | 5F | `_` | 127 | 01111111 | 7F | `DEL` |
 
 特别注意代码 32，它是空格。
 
-这种编码是不够的，因为还有许多其他国家的字母。例如，丹麦语字母 æ、ø 和 å，但键盘上还有其他字符，例如可能包括希腊字母等特殊字符。
+这种编码是不够的，因为还有许多其他国家的字母。例如，丹麦语字母 `æ`、`ø` 和 `å`，但键盘上还有其他字符，例如可能包括希腊字母等特殊字符。
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_199_0.png)
 
-这些符号的编码通过定义 128-255 的扩展 ASCII 表解决了，定义了额外的 128 个字符。机器可以加载你想使用的表格。例如，名为 ISO 859-1 的代码表，它包含了丹麦语字母，下面是 ISO 859-1 中的丹麦语字母代码：
+这些符号的编码通过定义 128-255 的扩展 ASCII 表解决了，定义了额外的 128 个字符。机器可以加载你想使用的表格。例如，名为 `ISO 859-1` 的代码表，它包含了丹麦语字母，下面是 `ISO 859-1` 中的丹麦语字母代码：
 
-- æ 230
-- ø 248
-- å 229
-- Æ 198
-- Ø 216
-- Å 197
+- `æ` 230
+- `ø` 248
+- `å` 229
+- `Æ` 198
+- `Ø` 216
+- `Å` 197
 
 ### Hello World
 
 如果这段文本被编码为 ASCII 并存储在机器内存中，它使用 11 个字节加一个字节，内存的内容可能是：
 
-| | 0B | 48 | 65 | 6C | 6C | 20 | 57 | 6F | 72 | 6C | 64 |
-|---|---|---|---|---|---|---|---|---|---|---|
+| 长度 | 内容 |
+| --- | --- |
+| `0B` | `48` `65` `6C` `6C` `6F` `20` `57` `6F` `72` `6C` `64` |
 
 内容以十六进制显示（这样便于人类阅读），箭头指示文本存储的地址。注意指示文本长度的第一个字节。无论通过何种方式，必须存储关于文本何时结束的信息，它不必像上面那样是一个计数器，但它是使用方法之一。还要注意，如果上面的图示使用一个字节来指定长度，那么文本的最大长度为 255 个字符。这个问题可以通过使用两个或多个字节来指示长度来轻松解决。
 
@@ -5812,32 +5891,28 @@ NOT 10011101
 
 存在不同的系统：
 
-- UTF（Unicode 传输格式）
-- USC（通用字符集）
+- `UTF`（Unicode 传输格式）
+- `USC`（通用字符集）
 
 每个系统都有多种编码，我将提到以下：
 
-- UTF-8 是一种 8 位变长度编码，基本上是 ASCII 系统的扩展，特别在互联网上被广泛使用
-- UTF-16 是 Windows 使用的 16 位变长度编码
-- UTF-32 是一种 32 位固定长度编码，在 Unix 和 Linux 中某种程度上使用（与 UCS-4 相同）
+- `UTF-8` 是一种 8 位变长度编码，基本上是 ASCII 系统的扩展，特别在互联网上被广泛使用
+- `UTF-16` 是 Windows 使用的 16 位变长度编码
+- `UTF-32` 是一种 32 位固定长度编码，在 Unix 和 Linux 中某种程度上使用（与 `UCS-4` 相同）
 
-还要提到 UCS-2，它是一种固定长度 16 位编码，仅支持所有 Unicode 的子集。
+还要提到 `UCS-2`，它是一种固定长度 16 位编码，仅支持所有 Unicode 的子集。
 
 在 bookboom.com 下载免费电子书
-
-
-
-
 
 # JAVA 5：文件与 JAVA IO 最终示例
 
 ### UTF-16
 
-我将从 Windows 和 Linux 下使用的 UTF-16 开始。所有代码都是 2 或 4 字节。前 256 个 ASCII 代码完全对应 ISO 8859-1，每个字符使用两个 2 字节（16 位）。例如大写字母 A (0041) 的编码。
+我将从 Windows 和 Linux 下使用的 `UTF-16` 开始。所有代码都是 2 或 4 字节。前 256 个 ASCII 代码完全对应 `ISO 8859-1`，每个字符使用两个 2 字节（16 位）。例如大写字母 `A` (`0041`) 的编码。
 
-对于所有最频繁出现的字符，使用 16 位，其十六进制代码从 0000 到 FFFF，提供了 65,536 种不同的代码。所有其他代码占用 4 字节或 32 位。所有 16 位的部分被称为*基本多语言平面* (BMP)。
+对于所有最频繁出现的字符，使用 16 位，其十六进制代码从 `0000` 到 `FFFF`，提供了 65,536 种不同的代码。所有其他代码占用 4 字节或 32 位。所有 16 位的部分被称为*基本多语言平面* (`BMP`)。
 
-UTF-16 是一种 ISO 标准，名称为 ISO / IEC 10646，包含了世界上大多数字符。原则上，用于分配代码的 4 字节对应 4,294,967,296 个字符，但并非所有字符都被使用，且 4 字节代码的编码相对复杂。
+`UTF-16` 是一种 ISO 标准，名称为 `ISO / IEC 10646`，包含了世界上大多数字符。原则上，用于分配代码的 4 字节对应 4,294,967,296 个字符，但并非所有字符都被使用，且 4 字节代码的编码相对复杂。
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_202_0.png)
 
@@ -5853,28 +5928,28 @@ LIGS 大学未获得美国教育部长列出的任何国家认可认证机构的
 
 # JAVA 5：文件与 IO 最终示例
 
-对于 BMP 之外的代码，UTF-16 定义了 10000 – 1FFFF 范围内的字符代码，提供了 1048576 种代码。每个代码被翻译为两个代码，称为代理对（surrogate pair）。步骤如下：
+对于 `BMP` 之外的代码，`UTF-16` 定义了 `10000 – 1FFFF` 范围内的字符代码，提供了 1048576 种代码。每个代码被翻译为两个代码，称为代理对（surrogate pair）。步骤如下：
 
-1. 如果根据标准代码属于 [10000; 1FFFF] 区间的代码，则从代码中减去 10000，如果结果小于或等于 FFFF，则将 20 位代码填充到两个 10 位的半部分
-2. 将 D800 拆分为左半部分（最大为 3FF），得到一个 [D800; DBFF] 范围内的值
-3. 在右半部分加上 DC00（最大为 3FF），得到一个 [DC00; DFFF] 范围内的值
+1. 如果根据标准代码属于 `[10000; 1FFFF]` 区间的代码，则从代码中减去 `10000`，如果结果小于或等于 `FFFF`，则将 20 位代码填充到两个 10 位的半部分
+2. 将 `D800` 拆分为左半部分（最大为 `3FF`），得到一个 `[D800; DBFF]` 范围内的值
+3. 在右半部分加上 `DC00`（最大为 `3FF`），得到一个 `[DC00; DFFF]` 范围内的值
 
-它提供了 1024 * 1024 = 1048576 对（10 位提供 1024 种不同的值）。
+它提供了 `1024 * 1024 = 1048576` 对（10 位提供 1024 种不同的值）。
 
 标准保证这些范围之外永远不会定义代理对。注意，这两个区间是不相交的，编码之所以有些复杂是因为它必须能够简单地解码 4 字节 Unicode。
 
 ### UTF-8
 
-UTF-8 是一种在互联网上编码，因为它是 ASCII 编码的直接扩展，尽可能发送尽可能位。它是一种变长编码，每个字符使用 1 到 6 个字节。但在实践中，最多 4 字节就足够编码整个 UTF-16 区域。
+`UTF-8` 是一种在互联网上编码，因为它是 ASCII 编码的直接扩展，尽可能发送尽可能位。它是一种变长编码，每个字符使用 1 到 6 个字节。但在实践中，最多 4 字节就足够编码整个 `UTF-16` 区域。
 
-下表显示了 UTF-16 区域的编码原理，其中 b 表示数据位：
+下表显示了 `UTF-16` 区域的编码原理，其中 `b` 表示数据位：
 
 | Unicode | UTF-8 | 字符数量 |
 | :--- | :--- | :--- |
-| 000000 – 0007F | 0bbbbbbbb | 128 |
-| 000080 – 0007FF | 110bbbbbb 10bbbbbb | 1920 |
-| 000800 – 0FFFF | 1110bbbb 10bbbbbb 10bbbbbb | 63488 |
-| 010000 – FFFFF | 11110bbbb 10bbbbbb 10bbbbbb 10bbbbbb | 203166 | JAVA 5：文件与 IO
+| `000000 – 0007F` | `0bbbbbbbb` | 128 |
+| `000080 – 0007FF` | `110bbbbbb 10bbbbbb` | 1920 |
+| `000800 – 0FFFF` | `1110bbbb 10bbbbbb 10bbbbbb` | 63488 |
+| `010000 – FFFFF` | `11110bbbb 10bbbbbb 10bbbbbb 10bbbbbb` | 203166 |
 
 ### UTF-32
 
@@ -5887,7 +5962,7 @@ UTF-8 是一种在互联网上编码，因为它是 ASCII 编码的直接扩展�
 1. 定点小数，许多方法是整数表示法的扩展，因此其中某些位用于整数部分，某些位用于小数部分。
 2. 浮点小数，其中你有一定的位数用于整数部分，另一部分位数用于小数部分。
 
-这两类大不相同，第一类最简单，适用于范围范围数字；第二类允许更广泛的数字范围，但更复杂。部分是因为它是数字最常用的表示形式，部分是因为这里再次提到了 IEEE 754 标准，它是最常用于表示浮点数的。
+这两类大不相同，第一类最简单，适用于范围范围数字；第二类允许更广泛的数字范围，但更复杂。部分是因为它是数字最常用的表示形式，部分是因为这里再次提到了 `IEEE 754` 标准，它是最常用于表示浮点数的。
 
 ### 关于二进制数的更多信息
 
@@ -5895,7 +5970,7 @@ UTF-8 是一种在互联网上编码，因为它是 ASCII 编码的直接扩展�
 
 $$\sum_{i=-n}^{n} a_i10^i$$
 
-如果观察数字 123.56，它可以写成：
+如果观察数字 `123.56`，它可以写成：
 
 $$\sum_{i=-2}^{3} a_i$$
 
@@ -5903,11 +5978,11 @@ $$\sum_{i=-2}^{3} a_i$$
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_205.png)
 
-**关于e-Learning Kids。** e-Learning Kids成立于2004年，是一个全球非营利组织，致力于为5-12岁的儿童提供数学、语言、计算机和环境技能的免费学习。自2005年以来，来自190个国家的超过500万名儿童受益于在线学习，这由全球教育和商业专业人士组成的志愿者团队致力于让所有人都能接受教育。寻求资助、慷慨的开发者，请参与进来！欲了解更多信息，请访问 www.elearningkids.org。
+**关于 e-Learning Kids。** e-Learning Kids 成立于 2004 年，是一个全球非营利组织，致力于为 5-12 岁的儿童提供数学、语言、计算机和环境技能的免费学习。自 2005 年以来，来自 190 个国家的超过 500 万名儿童受益于在线学习，这由全球教育和商业专业人士组成的志愿者团队致力于让所有人都能接受教育。寻求资助、慷慨的开发者，请参与进来！欲了解更多信息，请访问 www.elearningkids.org。
 
 # JAVA 5：文件与 IO 最终示例
 
-这种带有基数负幂的表示也适用于带有小数的二进制数。考虑二进制数 10110.101011，很容易确定该数字的十进制值，因为它仍然是2的幂之和：
+这种带有基数负幂的表示也适用于带有小数的二进制数。考虑二进制数 `10110.101011`，很容易确定该数字的十进制值，因为它仍然是 2 的幂之和：
 
 $$10110.101011_2 = 2^4 + 2^2 + 2 + 2^{-1} + 2^{-4} + 2^{-6} + 2^{-7} = 22.5898435$$
 
@@ -5915,16 +5990,16 @@ $$10110.101011_2 = 2^4 + 2^2 + 2 + 2^{-1} + 2^{-4} + 2^{-6} + 2^{-7} = 22.589843
 
 $$1.0000000000001_2 = 1 + 2^{-13} + 2^{-14} = 1.0001831054688$$
 
-你也可以将十进制数转换为二进制小数。这是分别转换整数部分和小数部分。考虑数字123.45，整数部分可以如之前所示转换：
+你也可以将十进制数转换为二进制小数。这是分别转换整数部分和小数部分。考虑数字 `123.45`，整数部分可以如之前所示转换：
 
 $$123 = 64 + 59 = 64 + 32 + 27 = 64 + 32 + 16 + 8 + 3 \dots$$
 
-小数部分可以通过乘以2来转换：
+小数部分可以通过乘以 2 来转换：
 
-- 将小数部分乘以2，整数部分（即0或1）就是下一位
-- 重复上述步骤，直到小数部分为0或你拥有了所需的位数
+- 将小数部分乘以 2，整数部分（即 0 或 1）就是下一位
+- 重复上述步骤，直到小数部分为 0 或你拥有了所需的位数
 
-这意味着你找到了通过乘以2得到的下一位，然后对结果的小数部分继续。
+这意味着你找到了通过乘以 2 得到的下一位，然后对结果的小数部分继续。
 
 在这种情况下，方法是：
 
@@ -5937,13 +6012,16 @@ $$123 = 64 + 59 = 64 + 32 + 27 = 64 + 32 + 16 + 8 + 3 \dots$$
 - 80
 - 60
 
-结果是1111011.0111001 = 123.45，这是一个舍入后的结果。
+结果是 `1111011.0111001 = 123.45`，这是一个舍入后的结果。
 
-另一个例子是十进制数字0.0825。在这里，只需要转换小数部分，因为整数部分为0：
+另一个例子是十进制数字 `0.0825`。在这里，只需要转换小数部分，因为整数部分为 0：
 
 - 0825
 - 1650
 - 3300
+
+
+
 - 6600
 - 3200
 - 6400
@@ -5958,13 +6036,9 @@ $$123 = 64 + 59 = 64 + 32 + 27 = 64 + 32 + 16 + 8 + 3 \dots$$
 - 6800
 - 3600
 
-结果为：0.0825 = 0.0001010100011111
+结果为：`0.0825 = 0.0001010100011111`
 
-注意，如果我将二进制结果转换为十进制数，得到的是0.0824890137，所以你可以看到获得准确的结果需要许多位。
-
-
-
-
+注意，如果我将二进制结果转换为十进制数，得到的是`0.0824890137`，所以你可以看到获得准确的结果需要许多位。
 
 # JAVA 5：文件与 JAVA I/O
 
@@ -5976,13 +6050,13 @@ $$123 = 64 + 59 = 64 + 32 + 27 = 64 + 32 + 16 + 8 + 3 \dots$$
 
 | s | 指数字段 | 带有小数的尾数字段 |
 
-其中 $s$ 字段始终占用 1 位并表示符号，指数字段是指数，尾数字段用于表示数字的数字。
+其中`$s$`字段始终占用 1 位并表示符号，指数字段是指数，尾数字段用于表示数字的数字。
 
 ![](img/5d98ad28901c31fd736abaabe8f09e19_208_0.png)
 
 # JAVA 5：文件与 JAVA I/O
 
-主要问题是实数的表示并不是唯一的，而总是一个舍后的结果。整数的表示定义了整数的一个子集，使得范围内的所有整数都能被表示。同样，通过实数的表示也是如此，由于可用位数有限，我们只能表示实数的一个子集，即某个范围内的实数；与整数不同，实数的任何区间都包含无限多个数字，而使用特定位数对实数进行的任何表示都只能表示该范围的一个子集。另一个问题是像 123.45 这样的小数无法转换为有限位数的二进制数：
+主要问题是实数的表示并不是唯一的，而总是一个舍后的结果。整数的表示定义了整数的一个子集，使得范围内的所有整数都能被表示。同样，通过实数的表示也是如此，由于可用位数有限，我们只能表示实数的一个子集，即某个范围内的实数；与整数不同，实数的任何区间都包含无限多个数字，而使用特定位数对实数进行的任何表示都只能表示该范围的一个子集。另一个问题是像`123.45`这样的小数无法转换为有限位数的二进制数：
 
 ```
 123.45 = 1111011.01110110011001100011......
@@ -6000,7 +6074,7 @@ $$123 = 64 + 59 = 64 + 32 + 27 = 64 + 32 + 16 + 8 + 3 \dots$$
 
 如果数字是非负数，符号位为 0；如果是负数，则为 1。如果你看尾数字段，它包含 23 位：
 
-bbbbbbbbbbbbbbbbbbbbbbbbbb
+`bbbbbbbbbbbbbbbbbbbbbbbbbb`
 
 它被解释为二进制数：
 
@@ -6008,7 +6082,7 @@ bbbbbbbbbbbbbbbbbbbbbbbbbb
 1.bbbbbbbbbbbbbbbbbbbbbbbbbb * 2^{n-127}
 ```
 
-其中 n 是指数字段的值。127 被称为偏移值（bias value），二进制表示为 01111111。它的作用是确保指数字段的内容不是负数。以数字 123.45 为例。由于它是正数，所以符号位为 0。该数字的二进制表示为：
+其中`n`是指数字段的值。`127`被称为偏移值（bias value），二进制表示为`01111111`。它的作用是确保指数字段的内容不是负数。以数字`123.45`为例。由于它是正数，所以符号位为 0。该数字的二进制表示为：
 
 ```
 123.45 = 1.111010110101100110011001100110010110011..* 2^6
@@ -6016,19 +6090,19 @@ bbbbbbbbbbbbbbbbbbbbbbbbbb
 
 # JAVA 5：文件与 I/O 最终示例
 
-因此，尾数字段的内容为 111011011100110010110（小数点前的第一个数字是隐式的）。由于 133-127 = 6，指数字段的内容为 133，二进制为 100000101。那么数字 123.45 表示为位模式：
+因此，尾数字段的内容为`111011011100110010110`（小数点前的第一个数字是隐式的）。由于`133-127 = 6`，指数字段的内容为`133`，二进制为`100000101`。那么数字`123.45`表示为位模式：
 
 ```
 01000010111101101110011001010
 ```
 
-在浮点数的情况下，不使用补码运算，负数仅通过改变符号位来处理。例如，-123.45 表示为：
+在浮点数的情况下，不使用补码运算，负数仅通过改变符号位来处理。例如，`-123.45`表示为：
 
 ```
 1100001011101101110011001010
 ```
 
-这与 123.45 的位模式相同，仅符号位不同。
+这与`123.45`的位模式相同，仅符号位不同。
 
 ### 示例
 
@@ -6038,15 +6112,15 @@ bbbbbbbbbbbbbbbbbbbbbbbbbb
 1100011100111101110010101010
 ```
 
-当第一位为 1 时，它表示一个负数。指数部分为 10001110，即数字 142，减去偏移值后得到 15。
+当第一位为 1 时，它表示一个负数。指数部分为`10001110`，即数字`142`，减去偏移值后得到`15`。
 
-尾数部分为 01100111110011100101010，那么该数字为：
+尾数部分为`01100111110011100101010`，那么该数字为：
 
-1.01100111110011110110101010 * 2^15 = 1011001111101110.01010101 = 46030.328
+`1.01100111110011110110101010 * 2^15 = 1011001111101110.01010101 = 46030.328`
 
-该数字的值为 -46030.32813。
+该数字的值为`-46030.32813`。
 
-在边界条件的处理方式上变化不大，但基本上可以假设如下：指数字段表示 0 到 255 范围内的值，但 255（其值为 11111111）是非合法的。因此，2 的幂指数在 -127 到 127 之间。最大的正数是：
+在边界条件的处理方式上变化不大，但基本上可以假设如下：指数字段表示 0 到 255 范围内的值，但`255`（其值为`11111111`）是非合法的。因此，2 的幂指数在 -127 到 127 之间。最大的正数是：
 
 ```
 0111111011111111111111111111
@@ -6054,7 +6128,7 @@ bbbbbbbbbbbbbbbbbbbbbbbbbb
 
 # JAVA 5：文件与 I/O 最终示例
 
-指数为 11111110 – 127 = 127，因此最大的正数是：
+指数为`11111110 – 127 = 127`，因此最大的正数是：
 
 ```
 1.11111111111111111111111 * 2^127
@@ -6066,7 +6140,7 @@ bbbbbbbbbbbbbbbbbbbbbbbbbb
 0000000000000000000000000
 ```
 
-指数为 00000000 – 127 = -127，该数字为：
+指数为`00000000 – 127 = -127`，该数字为：
 
 ```
 1.00000000000000000000001 * 2^-127 = 5.8774725 * 10^-39
@@ -6074,26 +6148,26 @@ bbbbbbbbbbbbbbbbbbbbbbbbbb
 
 ![](img/5d98ad28901c31fd736abaabef09e19_208_0.png)
 
-（注) 结果略有不同。可以假设标准表示以下范围内的数字：$[-10^{38}; -10^{-38}] \cup [10^{-38}; 10^{38}]$，大约有 7 位有效数字。特定的模式被赋予了特殊的含义：
+（注) 结果略有不同。可以假设标准表示以下范围内的数字：`$[-10^{38}; -10^{-38}] \cup [10^{-38}; 10^{38}]$`，大约有 7 位有效数字。特定的模式被赋予了特殊的含义：
 
 | 位模式 | 值 |
 | :--- | :--- |
-| 000000000000000000000000000 | 0 |
-| 000000000000000000000000001 | 1 |
-| 000000000000000000000000010 | 2 |
-| 000000000000000000000000011 | 3 |
-| 000000000000000000000000100 | 4 |
-| 000000000000000000000000101 | 5 |
-| 000000000000000000000000110 | 6 |
-| 000000000000000000000000111 | 7 |
-| 000000000000000000000001000 | 8 |
-| 000000000000000000000001001 | 9 |
-| 000000000000000000000001010 | 10 |
-| 000000000000000000000001011 | 11 |
-| 000000000000000000000010110 | 12 |
-| 000000000000000000000010111 | 13 |
-| 000000000000000000000011000 | 14 |
-| 000000000000000000000011011 | 15 |
+| `000000000000000000000000000` | 0 |
+| `000000000000000000000000001` | 1 |
+| `000000000000000000000000010` | 2 |
+| `000000000000000000000000011` | 3 |
+| `000000000000000000000000100` | 4 |
+| `000000000000000000000000101` | 5 |
+| `000000000000000000000000110` | 6 |
+| `000000000000000000000000111` | 7 |
+| `000000000000000000000001000` | 8 |
+| `000000000000000000000001001` | 9 |
+| `000000000000000000000001010` | 10 |
+| `000000000000000000000001011` | 11 |
+| `000000000000000000000010110` | 12 |
+| `000000000000000000000010111` | 13 |
+| `000000000000000000000011000` | 14 |
+| `000000000000000000000011011` | 15 |
 
 ### 64 位浮点数
 
@@ -6103,7 +6177,7 @@ bbbbbbbbbbbbbbbbbbbbbbbbbb
 - 11 位指数
 - 52 位尾数
 
-偏移值为 1023。以数字 123.45 为例。二进制表示为：
+偏移值为`1023`。以数字`123.45`为例。二进制表示为：
 
 ```
 1.111010110101100110011001100110010110011..* 2^6
@@ -6115,13 +6189,13 @@ bbbbbbbbbbbbbbbbbbbbbbbbbb
 1.01110010010111000111000111111111110100011101000111001000 * 2^{13}
 ```
 
-由于 13 = 1036 - 1023 且 1036 = 10000001101 是 123.45 的表示：
+由于`13 = 1036 - 1023`且`1036 = 10000001101`是`123.45`的表示：
 
 ```
 01000000110111101011110001110001111111111101000111001000
 ```
 
-略微舍入后，它提供了表示以下范围数字的机会：$[-10^{308}; -10^{-308}] \cup [10^{-308}; 10^{308}]$
+略微舍入后，它提供了表示以下范围数字的机会：`$[-10^{308}; -10^{-308}] \cup [10^{-308}; 10^{308}]$`
 
 ### 另一个示例
 
@@ -6146,4 +6220,3 @@ bbbbbbbbbbbbbbbbbbbbbbbbbb
 10111001001011100011100.0111111111110100011101000111001000 =
 37829.45291
 ```
-

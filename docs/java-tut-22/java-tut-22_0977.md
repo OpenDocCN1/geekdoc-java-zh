@@ -1,3 +1,4 @@
+
 # 课程：软件设置
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/software/index.html`](https://docs.oracle.com/javase/tutorial/jndi/software/index.html)
@@ -6,13 +7,9 @@
 
 以下是您需要的软件/系统列表：
 
-+   Java 平台软件
-
-+   服务提供者软件
-
-+   命名和目录服务器软件
-
-* * *
+- Java 平台软件
+- 服务提供者软件
+- 命名和目录服务器软件
 
 ### Java 平台软件
 
@@ -32,13 +29,10 @@ JNDI API 是用于访问任何命名或目录服务的通用 API。通过在 JND
 
 JDK 附带以下服务提供者：
 
-+   轻量级目录访问协议（LDAP）
-
-+   CORBA 公共对象服务命名（COS 命名）
-
-+   RMI 注册表
-
-+   域名服务（DNS）
+- 轻量级目录访问协议（LDAP）
+- CORBA 公共对象服务命名（COS 命名）
+- RMI 注册表
+- 域名服务（DNS）
 
 如果您对其他提供者感兴趣，请查看[JNDI 页面](http://www.oracle.com/technetwork/java/jndi/index.html)以获取下载信息。
 
@@ -52,10 +46,8 @@ JDK 附带以下服务提供者：
 
 您也可以在下面下载一个免费的 LDAP 服务器：
 
-+   [389 目录服务器](http://directory.fedoraproject.org/)
+- [389 目录服务器](http://directory.fedoraproject.org/)
+- [Apache 目录服务器](http://directory.apache.org)
+- [OpenLDAP](http://www.OpenLDAP.org/)
 
-+   [Apache 目录服务器](http://directory.apache.org)
-
-+   [OpenLDAP](http://www.OpenLDAP.org/)
-
-一个公开访问的服务器位于：ldap://ldap.openldap.org 命名上下文：dc=OpenLDAP,dc=org
+一个公开访问的服务器位于：`ldap://ldap.openldap.org` 命名上下文：`dc=OpenLDAP,dc=org`

@@ -1,11 +1,12 @@
-# Wicket 下拉框示例–drop down choice
+
+# Wicket 下拉框示例 – DropDownChoice
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/wicket/wicket-dropdown-box-example-dropdownchoice/>
 
-在 Wicket 中，可以使用“ **DropDownChoice** 来呈现一个下拉框组件。
+在 Wicket 中，可以使用`DropDownChoice`来呈现一个下拉框组件。
 
 ```java
- //Java 
+//Java
 import org.apache.wicket.markup.html.form.DropDownChoice;
 ...
 //choices in dropdown box
@@ -20,15 +21,15 @@ DropDownChoice<String> listSites = new DropDownChoice<String>(
 		"sites", new PropertyModel<String>(this, "selected"), SEARCH_ENGINES);
 
 //HTML for dropdown box
-<select wicket:id="sites"></select> 
+<select wicket:id="sites"></select>
 ```
 
-## 1.Wicket DropDownChoice 示例
+## 1. Wicket DropDownChoice 示例
 
-示例通过“`DropDownChoice`”显示下拉框，并默认一个选定值。
+示例通过`DropDownChoice`显示下拉框，并默认一个选定值。
 
 ```java
- import java.util.Arrays;
+import java.util.Arrays;
 import java.util.List;
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.form.DropDownChoice;
@@ -65,15 +66,15 @@ public class DropDownChoicePage extends WebPage {
 		form.add(listSites);
 
 	}
-} 
+}
 ```
 
- ## 2.Wicket HTML 页面
+## 2. Wicket HTML 页面
 
 用于呈现下拉框的页面。
 
-```java
- <html>
+```html
+<html>
 <head>
 <style>
 .feedbackPanelINFO {
@@ -95,12 +96,12 @@ public class DropDownChoicePage extends WebPage {
 	</form>
 
 </body>
-</html> 
+</html>
 ```
 
- ## 3.演示
+## 3. 演示
 
-开始并访问—*http://localhost:8080/wicket examples/*
+开始并访问 – `http://localhost:8080/wicket examples/`
 
 默认选择“谷歌”。
 
@@ -108,17 +109,12 @@ public class DropDownChoicePage extends WebPage {
 
 选择“百度”并点击显示按钮。
 
-![wicket dropdownbox example](img/445fe949c1ad3e514286861a8e3e8654.png "wicket-dropdownchoice-example2")Download it – [Wicket-DropDownChoice-Example.zip](http://web.archive.org/web/20190221190526/http://www.mkyong.com/wp-content/uploads/2011/05/Wicket-DropDownChoice-Examples.zip) (7KB)
+![wicket dropdownbox example](img/445fe949c1ad3e514286861a8e3e8654.png "wicket-dropdownchoice-example2")
+
+Download it – [Wicket-DropDownChoice-Example.zip](http://web.archive.org/web/20190221190526/http://www.mkyong.com/wp-content/uploads/2011/05/Wicket-DropDownChoice-Examples.zip) (7KB)
 
 ## 参考
 
-1.  [Wicket drop down choice Javadoc](http://web.archive.org/web/20190221190526/http://wicket.apache.org/apidocs/1.4/org/apache/wicket/markup/html/form/DropDownChoice.html)
+1. [Wicket drop down choice Javadoc](http://web.archive.org/web/20190221190526/http://wicket.apache.org/apidocs/1.4/org/apache/wicket/markup/html/form/DropDownChoice.html)
 
 [dropdown](http://web.archive.org/web/20190221190526/http://www.mkyong.com/tag/dropdown/) [wicket](http://web.archive.org/web/20190221190526/http://www.mkyong.com/tag/wicket/)
-
-
-
-
-
-
-

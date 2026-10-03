@@ -1,14 +1,15 @@
+
 # 带有假装客户端的请求行
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/feign-requestline>
 
-## 1。概述
+## 1. 概述
 
-在本教程中，我们将演示如何在[假装](/web/20220811173852/https://www.baeldung.com/spring-cloud-openfeign)客户端中使用 [`@RequestLine`](https://web.archive.org/web/20220811173852/https://github.com/OpenFeign/feign/blob/master/core/src/main/java/feign/RequestLine.java) 注释。@ `RequestLine`是一个模板，用于定义连接 RESTful web 服务的 URI 和查询参数。
+在本教程中，我们将演示如何在假装客户端中使用 [`@RequestLine`](https://web.archive.org/web/20220811173852/https://github.com/OpenFeign/feign/blob/master/core/src/main/java/feign/RequestLine.java) 注释。`@RequestLine`是一个模板，用于定义连接 RESTful web 服务的 URI 和查询参数。
 
-## 2。Maven 依赖关系
+## 2. Maven 依赖关系
 
-首先，让我们创建一个 [Spring Boot](/web/20220811173852/https://www.baeldung.com/spring-boot) web 项目，并将 [`spring-cloud-starter-openfeign`](https://web.archive.org/web/20220811173852/https://search.maven.org/search?q=a:spring-cloud-starter-openfeign) 或 [`feign-core`](https://web.archive.org/web/20220811173852/https://search.maven.org/artifact/io.github.openfeign/feign-core) 依赖项包含到我们的`pom.xml`文件中。`spring-cloud-starter-openfeign`中包含`feign-core`依赖关系；
+首先，让我们创建一个 Spring Boot web 项目，并将 [`spring-cloud-starter-openfeign`](https://web.archive.org/web/20220811173852/https://search.maven.org/search?q=a:spring-cloud-starter-openfeign) 或 [`feign-core`](https://web.archive.org/web/20220811173852/https://search.maven.org/artifact/io.github.openfeign/feign-core) 依赖项包含到我们的`pom.xml`文件中。`spring-cloud-starter-openfeign`中包含`feign-core`依赖关系；
 
 ```java
 <dependency>
@@ -28,7 +29,7 @@
 </dependency>
 ```
 
-## 3。`@RequestLine`在中**佯托**
+## 3. `@RequestLine`在假装中
 
 `@RequestLine` Feign 注释指定 HTTP 动词、路径和请求参数作为 Feign 客户机中的参数。使用`@Param`注释指定路径和请求参数。
 
@@ -46,9 +47,9 @@ public interface EmployeeClient {
 }
 ```
 
-我们还应该提供`@Headers`，在这里我们定义其余`API`所需的头。
+我们还应该提供`@Headers`，在这里我们定义其余 API 所需的头。
 
-现在，我们将调用这样创建的接口来调用实际的`API`:
+现在，我们将调用这样创建的接口来调用实际的 API:
 
 ```java
 EmployeeClient employeeResource = Feign.builder().encoder(new SpringFormEncoder())
@@ -56,8 +57,8 @@ EmployeeClient employeeResource = Feign.builder().encoder(new SpringFormEncoder(
 Employee employee = employeeResource.getEmployee(id, true);
 ```
 
-## 4。结论
+## 4. 结论
 
-在本文中，我们展示了@ `RequestLine`注释是如何以及何时在 Feign Client 中使用的。
+在本文中，我们展示了`@RequestLine`注释是如何以及何时在 Feign Client 中使用的。
 
-按照惯例，本教程中使用的所有代码示例都可以从 GitHub 上的[处获得。](https://web.archive.org/web/20220811173852/https://github.com/eugenp/tutorials/tree/master/spring-cloud-modules/spring-cloud-openfeign)
+按照惯例，本教程中使用的所有代码示例都可以从 GitHub 上的[处获得](https://web.archive.org/web/20220811173852/https://github.com/eugenp/tutorials/tree/master/spring-cloud-modules/spring-cloud-openfeign)。

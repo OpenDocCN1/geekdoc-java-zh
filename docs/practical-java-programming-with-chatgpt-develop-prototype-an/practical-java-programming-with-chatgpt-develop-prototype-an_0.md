@@ -1,30 +1,22 @@
+
 # ChatGPT Java 编程：通过集成 OpenAI API 并利用生成式 AI 和大语言模型开发、原型化并验证 Java 应用
 
-
-
 ![](img/cover.jpg)
+
 ![image](img/cover.jpg)
 
-
 ![](img/line.jpg)
 
-
 ![](img/line.jpg)
-
 
 ![](img/logo.jpg)
 
 [www.orangeava.com](http://www.orangeava.com)
 
-
-
-
-
-
-
 # 献给
 
 我亲爱的妻子，`Jenny`
+
 我的孩子们 `Julie` 和 `Rosalie` 以及他们的家人
 
 # 关于作者
@@ -58,9 +50,6 @@
 书中的许多 Java 程序软件开发问题是向 ChatGPT 安卓手机应用提出的。这些问题基于之前的开发成果（许多算法最初需要几天时间才能编写）。回答令人惊讶，并且在几秒钟内出现了！在书中，我们采用了 ChatGPT 提供的示例 Java 代码，并使用最新的 Eclipse IDE 进行了实现。
 
 ChatGPT 为 Java 程序员提供了一个加速代码编写的绝佳机会。软件开发者、程序员和软件工程师可以花费数几天为应用程序编写代码。在书中，我们通过示例描述了用于 ChatGPT 自动生成 ChatGPT Java 代码过程的提示词（prompts）。
-
-
-
 
 本书分为 13 章，旨在为 Java 程序员、IT 顾问、系统和解决方案架构师以及具备基础 IT 知识的人士提供示例。本书提供了开发 Java 编程解决方案的运行模板，并包含使用 OpenAI ChatGPT 服务器系统和前端 AI 系统的示例，以支持开发者开发用于数据处理、数学分析和文档管理的程序，适用于制造业、银行和保险公司的实施。
 
@@ -110,8 +99,6 @@ ChatGPT 为 Java 程序员提供了一个加速代码编写的绝佳机会。软
 
 非常感谢您的支持——这对我们意义重大！
 
-
-
 我们对 `Orange Education Pvt Ltd` 的工作感到非常自豪，并遵循最佳实践以确保内容的准确性，为我们的订阅者提供沉浸式的阅读体验。读者是我们的镜子，我们利用他们的反馈来反映并改进在出版过程中可能出现的任何人为错误。为了让我们保持质量，并帮助我们联系可能因任何不可预见的错误而遇到困难的读者，请通过以下邮箱与我们联系：
 
 `errata@orangeava.com` 
@@ -157,8 +144,11 @@ ChatGPT 为 Java 程序员提供了一个加速代码编写的绝佳机会。软
 在本章中，我们将讨论以下主题：
 
 * AI 建议的书名
+
 * AI 生成 Java 代码的版权法
+
 * 为免费版 ChatGPT 3.5 创建账户
+
 * 为订阅版 ChatGPT-4 版本创建账户
 
 # AI 建议的书名
@@ -170,14 +160,23 @@ ChatGPT 为 Java 程序员提供了一个加速代码编写的绝佳机会。软
 *当然可以！这里有几个关于使用 ChatGPT 辅助 Java 程序员的书籍的书名建议：*
 
 1. *"使用 ChatGPT 精通 Java：释放 AI 增强你的编程技能"*
+
 2. *"面向 Java 程序员的 ChatGPT：彻底改变你的编码体验"*
+
 3. *"AI 驱动的 Java 开发人员：释放 ChatGPT 的力量"*
+
 4. *"让 Java 编程更智能：利用 ChatGPT 提高效率和生产力"*
+
 5. *"ChatGPT 伴侣：用 AI 辅助赋能 Java 程序员"*
+
 6. *"对话式编程：通过 ChatGPT 的智能指导精通 Java"*
+
 7. *"使用 ChatGPT 增强 Java 开发：你的 AI 编程助手"*
+
 8. *"智能 Java 开发人员：利用 ChatGPT 提高效率"*
+
 9. *"AI 辅助的 Java 编程：用 ChatGPT 开启新领域"*
+
 10. *"AI 时代的 Java 编程：利用 ChatGPT 走向成功"*
 
 *请随时自定义这些建议，或者如果您需要更多选项，请告诉我！*
@@ -200,10 +199,6 @@ ChatGPT 为 Java 程序员提供了一个加速代码编写的绝佳机会。软
 
 **WIPO**，世界知识产权组织，目前陈述（在许多其他陈述和更多相关的问题中！）如下：
 
-
-
-
-
 “AI 应用越来越具备生成文学和艺术作品的能力。这种能力为版权制度带来了重大的政策问题，因为版权制度一直与人类创造精神紧密相关，并对人类创造力的表达表示尊重、奖励和鼓励。在将 AI 生成作品归于版权方面采取的政策立场，将触版权制度存在的社会目的核心。如果 AI 生成的作品被排除在版权保护之外，那么版权制度将被视为一种鼓励和偏袒人类创造力而非机器创造力的工具。如果 AI 生成的作品获得版权保护，那么版权制度将倾向于被视为一种有利于消费者获得更多创意作品，并赋予人类和机器创造力同等价值的工具。”
 
 全文可从世界知识产权组织（WIPO）免费下载，文中涵盖了 AI 知识产权的许多方面，并提出了许多额外且非常有趣的问题。可以从此处下载 pdf 文件（`wipo_ip_ai_2_ge_20_1_rev.pdf`）：
@@ -216,13 +211,17 @@ ChatGPT 为 Java 程序员提供了一个加速代码编写的绝佳机会。软
 
 因此，当涉及到版权时，一般规则是 AI 生成的内容不受版权法的保护。”
 
-《知识产权法实务实践杂志》（Journal of Intellectual Property Law Practice）在以下链接有一篇文章：
 
-参见：（第 17 卷，第 3 期，2022 年 3 月，第 321–326 页，https://doi.org/10.1093/jiplp/jpac013）
 
-此外，在 https://academic.oup.com/jiplp/article/17/3/321/6550465 有以下段落：
+# 《知识产权法实务实践杂志》文章
 
-“例如，欧洲专利局（EPO）最近在上诉中确认了对 DABUS 申请 EP 18 275 163 和 EP 18 275 174 的拒绝。虽然该决定尚未公布，但欧洲专利局明确‘只有人类发明员才能成为发明员’‘机器不能向申请人转移任何权利’。除非通过国际法寻求——并希望实现——统一，否则国家层面的干预将面临面临不一致的风险。相反，根据上诉法院在 Thaler 诉专利局长案裁决，英国目前的立场是法律相对明确的——我们知道 AI 不能被列为发明员，从经验上看，没有迹象表明迫切需要改变这一点。”
+《知识产权法实务实践杂志》（*Journal of Intellectual Property Law Practice*）在以下链接有一篇文章：
+
+参见：（第 17 卷，第 3 期，2022 年 3 月，第 321–326 页，`https://doi.org/10.1093/jiplp/jpac013`）
+
+此外，在 `https://academic.oup.com/jiplp/article/17/3/321/6550465` 有以下段落：
+
+> “例如，欧洲专利局（EPO）最近在上诉中确认了对 DABUS 申请 EP 18 275 163 和 EP 18 275 174 的拒绝。虽然该决定尚未公布，但欧洲专利局明确‘只有人类发明员才能成为发明员’‘机器不能向申请人转移任何权利’。除非通过国际法寻求——并希望实现——统一，否则国家层面的干预将面临面临不一致的风险。相反，根据上诉法院在 Thaler 诉专利局长案裁决，英国目前的立场是法律相对明确的——我们知道 AI 不能被列为发明员，从经验上看，没有迹象表明迫切需要改变这一点。”
 
 为了获取关于版权问题的 AI 观点，我们向 Ask AI（使用 ChatGPT 3.5）提出了关于内容所有权的问题，征求其对商业用途使用 AI 生成内容的意见。
 
@@ -230,13 +229,13 @@ ChatGPT 为 Java 程序员提供了一个加速代码编写的绝佳机会。软
 
 使用 ChatGPT 3.5 的 Ask AI 手机应用程序对该问题给出了以下回答：
 
-“将 OpenAI GPT 模型（如 ChatGPT）的输出用于商业用途可能受到某些限制，并需要获得 OpenAI 的适当许可或授权。
-
-OpenAI 的 GPT 模型受多个许可协议涵盖，包括知识共享署名-非商业-相同共享 4.0 国际许可（CC BY-NC-SA 4.0）。
-
-该许可允许对模型生成的输出进行非商业使用和分发，前提是提供了适当的署名，并且结果作品在相同或类似的许可下发布。
-
-如果您打算将 ChatGPT 的输出用于商业用途，应咨询 OpenAI 或法律专业人士，以确保您拥有相应的许可和权限。此外，您应该意识到在商业应用中使用 AI 生成内容可能涉及的任何伦理或法律问题。”
+> “将 OpenAI GPT 模型（如 ChatGPT）的输出用于商业用途可能受到某些限制，并需要获得 OpenAI 的适当许可或授权。
+>
+> OpenAI 的 GPT 模型受多个许可协议涵盖，包括知识共享署名-非商业-相同共享 4.0 国际许可（CC BY-NC-SA 4.0）。
+>
+> 该许可允许对模型生成的输出进行非商业使用和分发，前提是提供了适当的署名，并且结果作品在相同或类似的许可下发布。
+>
+> 如果您打算将 ChatGPT 的输出用于商业用途，应咨询 OpenAI 或法律专业人士，以确保您拥有相应的许可和权限。此外，您应该意识到在商业应用中使用 AI 生成内容可能涉及的任何伦理或法律问题。”
 
 CC BY-NC-SA 4.0 知识共享署名-相同共享 4.0 许可允许他人修改并基于许可材料进行开发，即使是为了商业目的，只要署了作者名且材料以相同的条款发布即可。该许可实际上是“免版权”的，并且是一种开源软件许可。
 
@@ -253,10 +252,6 @@ CC BY-NC-SA 4.0 知识共享署名-相同共享 4.0 许可允许他人修改并�
 
 # 开发用于 ChatGPT API 的 Java 代码
 
-
-
-
-
 ![](img/Figure-1.10.jpg)
 
 **图 1.10:** ChatGPT 账户提示输入用户的手机号码
@@ -267,7 +262,7 @@ CC BY-NC-SA 4.0 知识共享署名-相同共享 4.0 许可允许他人修改并�
 
 **图 1.11:** 从 `SMS` 短信输入 `ChatGPT` 账户的双重验证码
 
-7.  完成这些步骤后，您将已成功注册 `ChatGPT`，并可以开始使用其仪表板，如`图 1.12`所示。
+7. 完成这些步骤后，您将已成功注册 `ChatGPT`，并可以开始使用其仪表板，如`图 1.12`所示。
 
 ![](img/Figure-1.12.jpg)
 
@@ -366,12 +361,9 @@ public class BinarySearch {
 }
 ```
 
-
-
-
 令人失望，但就像蛇吞噬尾巴一样，如果你将此回复作为搜索内容粘贴回文本框，你会得到：
 
-“一直有传言 Bing Chat 使用 GPT-4，在 OpenAI 宣布 ChatGPT-4 后，微软证实了这一点。”
+> “一直有传言 Bing Chat 使用 GPT-4，在 OpenAI 宣布 ChatGPT-4 后，微软证实了这一点。”
 
 为了确认这一惊人的回答，我们再次将这段回复文本输入搜索框，并附带 Bing 搜索引擎的响应，如图 1.25](#c01.xhtml_fig1_25）所示：
 
@@ -405,9 +397,9 @@ public class BinarySearch {
 
 我们在他们的网站上发现了以下内容（**[`www.softwaretestinghelp.com/copyright-policy/`](https://www.softwaretestinghelp.com/copyright-policy/)**）：
 
-“允许合理使用：
-
-如果你想引用此网站的任何文章，你可以发布通常不超过一段的文章节选或摘要，并提供指向 Softwaretestinghelp.com 原文的链接。”
+> “允许合理使用：
+>
+> 如果你想引用此网站的任何文章，你可以发布通常不超过一段的文章节选或摘要，并提供指向 Softwaretestinghelp.com 原文的链接。”
 
 # 结论
 
@@ -419,65 +411,93 @@ public class BinarySearch {
 
 # 要记忆的点
 
-*   关于版权，进行尽职调查并自己研究以确认你想要使用的代码确实属于公领域是非常重要的。
-*   `ChatGPT` 提供的网页由 `OpenAI` 定期更新。这个 `AI` 系统一直在不断进化，因此请注意书中提供的示例可能会随时间改变。本书尝试关注如何充分利用 `AI` 系统以适应 Java 程序员的专业知识，因此我们涵盖了获取原始代码以及使用 `Bing` 搜索引擎寻求深度协助的方法。
-*   生成的实际代码可能会随时间变化。例如，在本章所示的二分查找代码列表，我们对从较早的回复中添加的一些内容进行了加粗处理。
+* 关于版权，进行尽职调查并自己研究以确认你想要使用的代码确实属于公领域是非常重要的。
+
+* `ChatGPT` 提供的网页由 `OpenAI` 定期更新。这个 `AI` 系统一直在不断进化，因此请注意书中提供的示例可能会随时间改变。本书尝试关注如何充分利用 `AI` 系统以适应 Java 程序员的专业知识，因此我们涵盖了获取原始代码以及使用 `Bing` 搜索引擎寻求深度协助的方法。
+
+* 生成的实际代码可能会随时间变化。例如，在本章所示的二分查找代码列表，我们对从较早的回复中添加的一些内容进行了加粗处理。
 
 # 单选题
 
 1. **哪个版本的 ChatGPT 收费每月 20 美元？**
-    1. `ChatGPT` 模型 `GPT-4`
-    2. `ChatGPT` 模型 `GPT-3-5`
-    3. `gpt-3.5-turbo-0301`
-    4. 微软 `Bing`
+
+   1. `ChatGPT` 模型 `GPT-4`
+
+   2. `ChatGPT` 模型 `GPT-3-5`
+
+   3. `gpt-3.5-turbo-0301`
+
+   4. 微软 `Bing`
 
 2. **GDPR 是什么缩写？**
-    1. `General Digital Processing Regulations`（通用数字处理条例）
-    2. `General Digital Protection Requirements`（通用数字保护要求）
-    3. `General Data Protection Regulations`（通用数据保护条例）
-    4. `General Data Processing Regulations`（通用数据处理条例）
+
+   1. `General Digital Processing Regulations`（通用数字处理条例）
+
+   2. `General Digital Protection Requirements`（通用数字保护要求）
+
+   3. `General Data Protection Regulations`（通用数据保护条例）
+
+   4. `General Data Processing Regulations`（通用数据处理条例）
 
 3. **以下哪项是 Android 手机“App”的名称？**
-    1. `ChatGPT`
-    2. `Ask AI`
-    3. `Bing`
-    4. `OpenAI`
+
+   1. `ChatGPT`
+
+   2. `Ask AI`
+
+   3. `Bing`
+
+   4. `OpenAI`
 
 # 答案
 
 1. **a**
+
 2. **c**
+
 3. **b**
 
 # 问题
 
 1. 使用 ChatGPT AI 最昂贵的选项是什么？请描述每个“免费”版本的局限性。
+
 2. 版权不能分配给 AI 程序生成内容的主要原因是什么？
+
 3. 为什么你仍然应该小心验证 `ChatGPT` 创建的响应？
+
 4. 为什么在申请 OpenAI 账户时提供有效的电子邮件地址很重要？
 
 # 关键术语
 
-*   **AI**: 人工智能软件，模拟人类操作员对提供的问题的预期回答。
-*   **OpenAI**: 美国的人工智能研究实验室，开发了 `ChatGPT`，由非营利组织 `OpenAI` 及其营利子公司 `OpenAI Limited` 组成。
-*   **API**: 应用程序编程接口——一组可调用方法，允许客户端程序使用代码来实现功能。
-*   **Ask AI**: Android 手机应用，可访问 `ChatGPT` 3.5。
-*   **CC BY-NC-SA**: 知识共享署名-非商业-相同共享许可，有效地将内容归功于原始来源。
-*   **ChatGPT**: 由 `OpenAI` 开发的语言模型，基于 `GPT`（生成式预训练 Transformer）架构，特别是 `GPT-3.5`，设计用于生成类人的文本响应。`ChatGPT` 在海量多样化的文本数据上进行训练，使其能够理解语言和上下文。它使用深度学习技术，特别是 `transformers` 来处理并生成文本。它具有广泛的应用，包括回答问题、提供解释和建议。
-*   **EPO**: 欧洲专利局。
-*   **EU**: 欧盟。
-*   **Fortran**: 早期计算机语言。
-*   **GDPR**: 通用数据保护条例。
-*   **SMS**: 短信服务。
-*   **WIPO**: 世界知识产权组织。
+* **AI**: 人工智能软件，模拟人类操作员对提供的问题的预期回答。
 
+* **OpenAI**: 美国的人工智能研究实验室，开发了 `ChatGPT`，由非营利组织 `OpenAI` 及其营利子公司 `OpenAI Limited` 组成。
 
+* **API**: 应用程序编程接口——一组可调用方法，允许客户端程序使用代码来实现功能。
 
+* **Ask AI**: Android 手机应用，可访问 `ChatGPT` 3.5。
 
+* **CC BY-NC-SA**: 知识共享署名-非商业-相同共享许可，有效地将内容归功于原始来源。
 
-- 里氏夫替换原则 (LSP)
-- 接口隔离原则 (ISP)
-- 依赖倒置原则 (DIP)
+* **ChatGPT**: 由 `OpenAI` 开发的语言模型，基于 `GPT`（生成式预训练 Transformer）架构，特别是 `GPT-3.5`，设计用于生成类人的文本响应。`ChatGPT` 在海量多样化的文本数据上进行训练，使其能够理解语言和上下文。它使用深度学习技术，特别是 `transformers` 来处理并生成文本。它具有广泛的应用，包括回答问题、提供解释和建议。
+
+* **EPO**: 欧洲专利局。
+
+* **EU**: 欧盟。
+
+* **Fortran**: 早期计算机语言。
+
+* **GDPR**: 通用数据保护条例。
+
+* **SMS**: 短信服务。
+
+* **WIPO**: 世界知识产权组织。
+
+* 里氏夫替换原则 (LSP)
+
+* 接口隔离原则 (ISP)
+
+* 依赖倒置原则 (DIP)
 
 # SOLID 原则
 
@@ -523,43 +543,45 @@ public class BinarySearch {
 
   **图 2.3:** ChatGPT Java 代码垂直对齐示例
 
-- **折行缩进:** 当一行代码过长并折行到多行时，后续行应该缩进以指示它们的延续性。
+
+
+- **折行缩进：** 当一行代码过长并折行到多行时，后续行应该缩进以指示它们的延续性。
 
   ![](img/Figure-2.4.jpg)
 
-  **图 2.4:** ChatGPT Java 代码折行缩进示例
+  **图 2.4：** ChatGPT Java 代码折行缩进示例
 
-- **嵌套构造的缩进:** 在处理嵌套构造时，相应增加缩进级别以显示它们的嵌套深度。
+- **嵌套构造的缩进：** 在处理嵌套构造时，相应增加缩进级别以显示它们的嵌套深度。
 
   ![](img/Figure-2.5.jpg)
 
-  **图 2.5:** ChatGPT Java 代码嵌套构造缩进示例
+  **图 2.5：** ChatGPT Java 代码嵌套构造缩进示例
 
-- **注释和注解:** 注释和注解通常应该与它们关联的代码具有相同的缩进级别。
+- **注释和注解：** 注释和注解通常应该与它们关联的代码具有相同的缩进级别。
 
   ![](img/Figure-2.6.jpg)
 
-  **图 2.6:** ChatGPT Java 代码注释和注解缩进示例
+  **图 2.6：** ChatGPT Java 代码注释和注解缩进示例
 
-- **对齐参数:** 对于具有多个参数的方法调用，考虑对齐参数以提高可读性。
+- **对齐参数：** 对于具有多个参数的方法调用，考虑对齐参数以提高可读性。
 
   ![](img/Figure-2.7.jpg)
 
-  **图 2.7:** ChatGPT Java 代码参数对齐缩进示例
+  **图 2.7：** ChatGPT Java 代码参数对齐缩进示例
 
-- **Switch 语句中的缩进:** 在 switch 语句内部对 case 标签缩进，并对每个 case 块内部的代码缩进。
+- **Switch 语句中的缩进：** 在 `switch` 语句内部对 `case` 标签缩进，并对每个 `case` 块内部的代码缩进。
 
   ![](img/Figure-2.8.jpg)
 
-  **图 2.8:** ChatGPT Java 代码 Switch 语句缩进示例
+  **图 2.8：** ChatGPT Java 代码 Switch 语句缩进示例
 
-- **使用 IDE 的格式化工具:** 大多数现代集成开发环境 (IDE) 都提供了自动代码格式化工具。配置你的 IDE 设置以遵循你偏好的缩进风格，并定期使用自动格式化功能。
+- **使用 IDE 的格式化工具：** 大多数现代集成开发环境 (IDE) 都提供了自动代码格式化工具。配置你的 IDE 设置以遵循你偏好的缩进风格，并定期使用自动格式化功能。
 
-- 通过遵循这些最佳实践，你可以创建易读、易懂且易维护的 Java 代码，从而提高开发的效率。
+通过遵循这些最佳实践，你可以创建易读、易懂且易维护的 Java 代码，从而提高开发的效率。
 
 # SOLID 代码示例
 
-通过在后续章节中向 **ChatGPT AI** 移动应用针对每个原则提问以下问题，详细检查了五项面向对象编程的 **SOLID** 最佳实践原则，所示所示：
+通过在后续章节中向 **ChatGPT AI** 移动应用针对每个原则提问以下问题，详细检查了五项面向对象编程的 **SOLID** 最佳实践原则，如下所示：
 
 ## 单一职责原则 (SRP)
 
@@ -595,23 +617,20 @@ public class EmailService {
 }
 ```
 
-在上述示例中，有两个类：**UserService** 和 **EmailService**。**UserService** 类负责用户相关的操作，如用户注册、身份验证和密码重置。它遵循 SRP，因为它具有管理用户操作的单一责任。
+在上述示例中，有两个类：`UserService` 和 `EmailService`。`UserService` 类负责用户相关的操作，如用户注册、身份验证和密码重置。它遵循 SRP，因为它具有管理用户操作的单一责任。
 
-另一方面，**EmailService** 类负责发送邮件。它遵循 SRP，因为它具有管理邮件操作的单一责任。
-
-
-
+另一方面，`EmailService` 类负责发送邮件。它遵循 SRP，因为它具有管理邮件操作的单一责任。
 
 通过将关注点分为两个独立的类，我们遵循了 `SRP` 并在我们的代码中实现了更好的可维护性和灵活性。如果用户相关操作需要更改，我们只需要修改 `UserService` 类，而不会影响 `EmailService` 类，反之亦然。
 
-# 开/闭原则 (OCP)
+## 开/闭原则 (OCP)
 
 你是否有可以说明 SOLID 开/闭原则的 Java 代码示例？
 
 当然可以！开/闭原则（`OCP`）规定，类应该对扩展开放，但对修改关闭。换句话说，你应该能够在不修改现有代码的情况下为类添加新功能。这里有一个演示 `OCP` 的 Java 代码示例：
 
 ```java
-// 表示几何形状的接口接口
+// 表示几何形状的接口
 public interface Shape {
     double calculateArea();
 }
@@ -666,19 +685,19 @@ public class AreaCalculator {
 }
 ```
 
-在上面的示例中，我们有一个 `AreaCalculator` 类负责计算形状的总面积。它遵循了 `OCP`，因为它对扩展开放的。如果我们想添加一种新形状，例如 `Triangle`（三角形），我们可以创建一个实现 `Shape` 接口的新类，而无需修改现有代码。
+在上面的示例中，我们有一个 `AreaCalculator` 类负责计算形状的总面积。它遵循了 `OCP`，因为它对扩展是开放的。如果我们想添加一种新形状，例如 `Triangle`（三角形），我们可以创建一个实现 `Shape` 接口的新类，而无需修改现有代码。
 
-`Rectangle` 和 `Circle` 类是实现 `Shape` 接口的形状示例。它们对修改关闭，因为在添加新形状时，它们的代码不需要更改。
+`Rectangle` 和 `Circle` 类是实现 `Shape` 接口的形状示例。它们对修改是关闭的，因为在添加新形状时，它们的代码不需要更改。
 
 通过遵循 `OCP`，我们可以通过创建实现 `Shape` 接口的新类来轻松引入新形状，而无需修改 `AreaCalculator` 类或现有的形状类。这促进了代码的重用性和维护性。
 
-# 里氏夫替换原则 (LSP)
+## 里氏替换原则 (LSP)
 
-`ChatGPT Ask AI` 对此问题的回答使用了与前一节相同的 Java 代码示例作为基础，该一节标题为 `Open/Closed Principle (OCP)`，因此，我们在下方的回答中用***粗体斜体***格式标出了新添加的额外 Java 代码。
+`ChatGPT Ask AI` 对此问题的回答使用了与前一节相同的 Java 代码示例作为基础，该节标题为 `Open/Closed Principle (OCP)`，因此，我们在下方的回答中用***粗体斜体***格式标出了新添加的额外 Java 代码。
 
-你是否有可以说明 SOLID 里氏夫替换原则的 Java 代码示例？
+你是否有可以说明 SOLID 里氏替换原则的 Java 代码示例？
 
-当然可以！里氏夫替换原则（`LSP`）规定，超类的对象应该被子类的对象替换，而不会影响程序的正确性。这里有一个演示 `LSP` 的 Java 代码示例：
+当然可以！里氏替换原则（`LSP`）规定，超类的对象应该被子类的对象替换，而不会影响程序的正确性。这里有一个演示 `LSP` 的 Java 代码示例：
 
 ```java
 // 表示几何形状的接口
@@ -801,15 +820,7 @@ class Robot implements Worker {
         throw new UnsupportedOperationException("Robots don't sleep.");
     }
 }
-}
-
-public class Main {
-}
-}
 ```
-
-
-
 
 ```java
 public static void main(String[] args) {
@@ -842,6 +853,8 @@ public static void main(String[] args) {
 这里有一个说明依赖倒置原则的 Java 代码示例：
 
 在这个示例中，通过引入 `Switchable` 接口演示了依赖倒置原则。`LightBulb` 和 `Fan` 类都实现了 `Switchable` 接口。`Switch` 类依赖于 `Switchable` 抽象，而不是具体的实现。这使你能够在不修改 `Switch` 类的情况下，轻松地在不同类型的设备（灯泡、风扇等）之间进行切换。
+
+
 
 ```java
 // 依赖倒置原则示例
@@ -908,41 +921,37 @@ public class Main {
 
 # 结论
 
-在本章中，我们提示了 `ChatGPT` 来测试其对良好编程实践的知识。我们要求它定义它对“SOLID”原则的理解，它几乎是瞬间完成。AI 程序还提供了代码示例，来说明 Java 代码缩进的最佳实践。（以下链接涵盖了为什么 `ChatGPT AI` 可能会很慢的原因：`https://ecoagi.ai/topics/ChatGPT/why-is-chatgpt-slow` ）
+在本章中，我们提示了`ChatGPT`来测试其对良好编程实践的知识。我们要求它定义它对“SOLID”原则的理解，它几乎是瞬间完成。AI 程序还提供了代码示例，来说明 Java 代码缩进的最佳实践。（以下链接涵盖了为什么`ChatGPT AI`可能会很慢的原因：`https://ecoagi.ai/topics/ChatGPT/why-is-chatgpt-slow`）
 
-在下一章中，我们将尝试使用 OpenAI Java API 与 `ChatGPT AI` 系统进行接口交互。`ChatGPT` 提供了一个如何使用 `OkHttp` 库向 `API` 发请求的示例。
+在下一章中，我们将尝试使用 OpenAI Java API 与`ChatGPT AI`系统进行接口交互。`ChatGPT`提供了一个如何使用`OkHttp`库向`API`发请求的示例。
 
-我们还尝试了为 `ChatGPT`  `REST API` 服务以及新的 `Whisper` 语音转文本功能。
+我们还尝试了为`ChatGPT` `REST API`服务以及新的`Whisper`语音转文本功能。
 
 # 注意事项
 
-* `SOLID` 是一组面向面向对象的五个原则，旨在使软件设计更加健壮、灵活和易于维护。
+* `SOLID`是一组面向面向对象的五个原则，旨在使软件设计更加健壮、灵活和易于维护。
 * 适当的代码缩进对于编写清晰、可读且易于维护的 Java 代码至关重要。
 * 利用你的 Java 开发环境 (IDE) 自动格式化功能来提供自动格式，并配置为遵循你组织的风格。
 * 一个 Java 类应该有一个职责。
 * 你应该能够在不修改现有代码的情况下，为 Java 类添加新功能。
 * 超类的对象应该可以被其子类替换，而不影响程序的正确性。
 
+## 2. 与通过 Ask AI Mobile“手机 App”提供的`ChatGPT 3.5` AI 相比，使用网页版链接[`chat.openai.com/`](https://chat.openai.com/)提供的`ChatGPT 3.5` AI，你还能想到它的一个优点吗？
 
-
-
-
-## 2. 与通过 Ask AI Mobile“手机 App”提供的 `ChatGPT 3.5` AI 相比，使用网页版链接 `[`chat.openai.com/`](https://chat.openai.com/)` 提供的 `ChatGPT 3.5` AI，你还能想到它的一个优点吗？
-
-## 3. 在说明 `SOLID` `开/闭原则` 的 Java 代码示例中，与给出 `SOLID` `Liskov 替换原则` 的代码相比，缺少两个方法。你能描述一下这两个方法的作用吗？
+## 3. 在说明`SOLID` `开/闭原则`的 Java 代码示例中，与给出`SOLID` `Liskov 替换原则`的代码相比，缺少两个方法。你能描述一下这两个方法的作用吗？
 
 # 核心术语
 
-*   **AI**: 模拟人类操作员对提出的问题给出预期响应的人工智能软件。
-*   **OpenAI**: 美国的人工智能研究实验室，开发了 `ChatGPT`，由非营利组织 `OpenAI` 及其营利性子公司公司 `OpenAI Limited` 组成。
-*   **Ask AI**: 一款可访问 `ChatGPT` 3.5 的 Android 手机应用程序。
-*   **SOLID**: 由 Robert C. Martin（也称为“鲍姆叔” Uncle Bob）引入的面向对象编程的五项原则。
-*   **SRP**: 单一责任原则——列出的第一项原则。
-*   **OCP**: 开/闭原则——列出的第二项原则。
-*   **LSP**: Liskov 替换原则——列出的第三项原则。
-*   **ISP**: 接口隔离原则——列出的第四项原则。
-*   **DIP**: 依赖倒转原则——列出的第五项原则。
-*   **ChatGPT**: `ChatGPT` 是一个由 `OpenAI` 开发的语言模型。它基于 `GPT`（生成式预训练变换器）架构，免费使用选项采用 `GPT-3.5`。该模型旨在针对用户输入生成类人类的文本响应，使其能够进行交互且自然的对话。`ChatGPT` 已经在来自互联网的海量多样化文本数据上进行了训练，使其能够对语言和语境获得广泛理解。它使用深度学习技术，特别是 `transformers`，使其能够有效地处理和生成文本。该语言模型具有广泛的应用范围，包括回答问题、提供解释、提供建议、提供创意写作辅助、语言翻译和代码生成。它可以集成到各种软件操作系统和硬件平台中，并用于创建软件应用程序，为使用 `ChatGPT` `API` 接口的用户提供交互和对话的体验。
+* **AI**: 模拟人类操作员对提出的问题给出预期响应的人工智能软件。
+* **OpenAI**: 美国的人工智能研究实验室，开发了`ChatGPT`，由非营利组织`OpenAI`及其营利性子公司公司`OpenAI Limited`组成。
+* **Ask AI**: 一款可访问`ChatGPT` 3.5 的 Android 手机应用程序。
+* **SOLID**: 由 Robert C. Martin（也称为“鲍姆叔” Uncle Bob）引入的面向对象编程的五项原则。
+* **SRP**: 单一责任原则——列出的第一项原则。
+* **OCP**: 开/闭原则——列出的第二项原则。
+* **LSP**: Liskov 替换原则——列出的第三项原则。
+* **ISP**: 接口隔离原则——列出的第四项原则。
+* **DIP**: 依赖倒转原则——列出的第五项原则。
+* **ChatGPT**: `ChatGPT`是一个由`OpenAI`开发的语言模型。它基于`GPT`（生成式预训练变换器）架构，免费使用选项采用`GPT-3.5`。该模型旨在针对用户输入生成类人类的文本响应，使其能够进行交互且自然的对话。`ChatGPT`已经在来自互联网的海量多样化文本数据上进行了训练，使其能够对语言和语境获得广泛理解。它使用深度学习技术，特别是`transformers`，使其能够有效地处理和生成文本。该语言模型具有广泛的应用范围，包括回答问题、提供解释、提供建议、提供创意写作辅助、语言翻译和代码生成。它可以集成到各种软件操作系统和硬件平台中，并用于创建软件应用程序，为使用`ChatGPT` `API`接口的用户提供交互和对话的体验。
 
 # 第 3 章
 
@@ -950,26 +959,26 @@ public class Main {
 
 ## 引言
 
-本章描述了如何使用 `OpenAI` Java `API` 与 `ChatGPT` `AI` 系统建立接口。`ChatGPT` 提供了一个使用 `OkHttp` 库向 `API` 发起请求的示例。
+本章描述了如何使用`OpenAI` Java `API`与`ChatGPT` `AI`系统建立接口。`ChatGPT`提供了一个使用`OkHttp`库向`API`发起请求的示例。
 
 ## 结构
 
 在本章中，我们将讨论以下主题：
 
-*   `ChatGPT` 概述
-*   `ChatGPT` `API`
-*   `ChatGPT` `AI`
-*   使用 `OkHttp` 的 `ChatGPT` 代码示例
-*   访问 `ChatGPT`
-*   `ChatGPT` 模型
+* `ChatGPT`概述
+* `ChatGPT` `API`
+* `ChatGPT` `AI`
+* 使用`OkHttp`的`ChatGPT`代码示例
+* 访问`ChatGPT`
+* `ChatGPT`模型
 
 # ChatGPT API
 
-关于 `ChatGPT` 和 `OpenAI` 的概述可以在 `https://platform.openai.com/` (https://platform.openai.com/) 查找到。
+关于`ChatGPT`和`OpenAI`的概述可以在`https://platform.openai.com/` (https://platform.openai.com/) 查找到。
 
-在 `API` 中使用的 `ChatGPT` 模型通常指 `GPT-3.5` 架构。`ChatGPT` 可以通过 `https://chat.openai.com/` 的网页链接界面访问。
+在`API`中使用的`ChatGPT`模型通常指`GPT-3.5`架构。`ChatGPT`可以通过`https://chat.openai.com/`的网页链接界面访问。
 
-要通过 `API` 与 `ChatGPT` 模型交互，开发者必须获取 API 密钥。以下示例演示了使用 `curl` 命令执行的基础请求：
+要通过`API`与`ChatGPT`模型交互，开发者必须获取 API 密钥。以下示例演示了使用`curl`命令执行的基础请求：
 
 ```bash
 curl https://api.openai.com/v1/chat/completions \
@@ -981,9 +990,9 @@ curl https://api.openai.com/v1/chat/completions \
   }'
 ```
 
-`ChatGPT` 模型旨在针对用户输入生成类人类的文本响应，使其能够进行交互且自然的对话。`ChatGPT` 已经在来自互联网的海量多样化文本数据上进行了训练，使其能够对语言和语境获得广泛理解。它使用深度学习技术，特别是 `transformers`，使其能够有效地处理和生成文本。该语言模型具有广泛的应用范围，包括回答问题、提供解释、提供建议、提供创意写作辅助、语言翻译和代码生成。它可以集成到各种软件操作系统和硬件平台中，并用于创建软件应用程序，为使用 `ChatGPT` `API` 接口的用户提供交互和对话的体验。
+`ChatGPT`模型旨在针对用户输入生成类人类的文本响应，使其能够进行交互且自然的对话。`ChatGPT`已经在来自互联网的海量多样化文本数据上进行了训练，使其能够对语言和语境获得广泛理解。它使用深度学习技术，特别是`transformers`，使其能够有效地处理和生成文本。该语言模型具有广泛的应用范围，包括回答问题、提供解释、提供建议、提供创意写作辅助、语言翻译和代码生成。它可以集成到各种软件操作系统和硬件平台中，并用于创建软件应用程序，为使用`ChatGPT` `API`接口的用户提供交互和对话的体验。
 
-来自 `API` 的响应以 JSON 格式返回。以下是一个响应示例：
+来自`API`的响应以 JSON 格式返回。以下是一个响应示例：
 
 ```json
 {
@@ -1009,13 +1018,9 @@ curl https://api.openai.com/v1/chat/completions \
 }
 ```
 
-注意：只需如示例所示设置 `OPENAI_API_KEY` 环境变量即可。这涉及使用 `OpenAI` 密钥，我们将在本章稍后的“访问 ChatGPT 密钥密钥”部分介绍如何从你的 `OpenAI` 账户下载它。
+注意：只需如示例所示设置`OPENAI_API_KEY`环境变量即可。这涉及使用`OpenAI`密钥，我们将在本章稍后的“访问 ChatGPT 密钥密钥”部分介绍如何从你的`OpenAI`账户下载它。
 
-我已加粗显示了 `ChatGPT` AI 返回的 JSON 响应。
-
-
-
-
+我已加粗显示了`ChatGPT` AI 返回的 JSON 响应。
 
 ```json
 {
@@ -1033,13 +1038,17 @@ curl https://api.openai.com/v1/chat/completions \
 (base) [root@ECMUKDEMO6 ~]#
 ```
 
-`Whisper` 语音转文本模型由 `OpenAI` 于 2022 年 9 月发布，最近更新为可通过 `Whisper API` 使用的 `large-v2` 模型（费用为 $0.006/分钟）。
+![](img/Figure-3.2.jpg)
 
-`Whisper API` 目前接受以下音频文件格式：
+**图 3.2:** 使用`whisper-1`模型的`OpenAI` REST `API`端点示例
+
+`Whisper`语音转文本模型由`OpenAI`于 2022 年 9 月发布，最近更新为可通过`Whisper API`使用的`large-v2`模型（费用为 $0.006/分钟）。
+
+`Whisper API`目前接受以下音频文件格式：
 
 `m4a, mp3, mp4, mpeg, mpga, wav, webm`
 
-`OpenAI` 还为 `Whisper AI` 了一个了一个示例代码模式：
+`OpenAI`还为`Whisper AI`了一个了一个示例代码模式：
 
 ```bash
 curl https://api.openai.com/v1/audio/transcriptions \
@@ -1049,11 +1058,11 @@ curl https://api.openai.com/v1/audio/transcriptions \
 -F file="@/path/to/file/openai.mp3"
 ```
 
-我们使用手机录制了一个 `.wav` 文件，并将其复制到 Linux 系统中运行。
+我们使用手机录制了一个`.wav`文件，并将其复制到 Linux 系统中运行。
 
-（该音频文件 `Recording9.wav` 以 100% 的准确率转换成了文本（以**粗体**显示）！）
+（该音频文件`Recording9.wav`以 100% 的准确率转换成了文本（以**粗体**显示）！）
 
-首先，我们将通过电子邮件收到的原始文件（`Recording 9.wav`）复制到 Linux VMWare 服务器的 `/root` 目录，并使用 `mv` 命令删除了文件名中的空格进行重命名：
+首先，我们将通过电子邮件收到的原始文件（`Recording 9.wav`）复制到 Linux VMWare 服务器的`/root`目录，并使用`mv`命令删除了文件名中的空格进行重命名：
 
 ```bash
 (base) [root@ECMUKDEMO6 ~]# cp /mnt/hgfs/Installs/Recording\ 9.wav .
@@ -1062,7 +1071,7 @@ curl https://api.openai.com/v1/audio/transcriptions \
 /root
 ```
 
-然后使用以下命令运行指令（密钥已在 `OPEN_API_KEY` 环境变量中设置）：
+然后使用以下命令运行指令（密钥已在`OPEN_API_KEY`环境变量中设置）：
 
 ```bash
 (base) [root@ECMUKDEMO6 ~]# curl https://api.openai.com/v1/audio/transcriptions \
@@ -1080,23 +1089,21 @@ curl https://api.openai.com/v1/audio/transcriptions \
 (base) [root@ECMUKDEMO6 ~]#
 ```
 
-![](img/Figure-3.2.jpg)
+如需更多链接，请访问[`openai.com/blog/introducing-chatgpt-and-whisper-apis`](https://openai.com/blog/introducing-chatgpt-and-whisper-apis)。
 
-**图 3.2:** 使用 `whisper-1` 模型的 `OpenAI` REST `API` 端点示例
-
-如需更多链接，请访问 [`openai.com/blog/introducing-chatgpt-and-whisper-apis`](https://openai.com/blog/introducing-chatgpt-and-whisper-apis)。
-
-在此链接中，`OpenAI` 为开发者重申了他们是：
+在此链接中，`OpenAI`为开发者重申了他们是：
 
 “正在简化我们的服务条款和使用政策，包括关于数据所有权的条款：**用户拥有模型的输入和输出。**”
 
 ### ChatGPT AI 生成的 Java 代码 API 示例
 
-使用手机上的 `Ask AI`，我们向 `ChatGPT` 询问了一个 Java 程序示例，用于使用接口与基于服务器的 AI 进行内部交互。
+使用手机上的`Ask AI`，我们向`ChatGPT`询问了一个 Java 程序示例，用于使用接口与基于服务器的 AI 进行内部交互。
 
 **有与 ChatGPT AI 系统建立接口的 Java 程序代码示例吗？**
 
-*是的，你可以使用 `OpenAI API` 在 Java 中与 `ChatGPT AI` 系统建立接口。以下是一个使用 `OkHttp` 库向 `API` 发请求的示例：*
+*是的，你可以使用`OpenAI API`在 Java 中与`ChatGPT AI`系统建立接口。以下是一个使用`OkHttp`库向`API`发请求的示例：*
+
+
 
 ```java
 import okhttp3.*;
@@ -1126,23 +1133,23 @@ public class ChatGPTApi {
 }
 ```
 
-*在此示例中，你需要将 `YOUR_API_KEY` 替换为你的 API 密钥，并将 `YOUR_MODEL_ID` 替换为模型 ID。`getResponseGPT` 方法接收提示字符串作为参数并返回响应的 JSON 字符串。`main` 方法演示了如何使用它。*
+在此示例中，你需要将`YOUR_API_KEY`替换为你的 API 密钥，并将`YOUR_MODEL_ID`替换为模型 ID。`getResponseGPT`方法接收提示字符串作为参数并返回响应的 JSON 字符串。`main`方法演示了如何使用它。
 
-*注意：使用 OpenAI API 需要 OpenAI 密钥。*
+**注意：** 使用 OpenAI API 需要 OpenAI 密钥。
 
 ### ChatGPT 代码验证
 
-我们现在必须测试 `ChatGPT` 创建的 Java 代码以验证其可用性。因此，我们使用了最新的 `Eclipse IDE`。`Eclipse IDE` 的下载安装将在**第五章**中详细介绍。
+我们现在必须测试`ChatGPT`创建的 Java 代码以验证其可用性。因此，我们使用了最新的`Eclipse IDE`。`Eclipse IDE`的下载安装将在**第五章**中详细介绍。
 
-`ChatGPT` 与其他基于大模型的 AI 系统一样，可能会给出错误的结果（存在**幻觉**问题）。请参阅免费 PDF 文章：[`assets.cureus.com/uploads/editorial/pdf/138667/20230219-28928-6cyip.pdf`](https://assets.cureus.com/uploads/editorial/pdf/138667/20230219-28928-6cyip.pdf)
+`ChatGPT`与其他基于大模型的 AI 系统一样，可能会给出错误的结果（存在**幻觉**问题）。请参阅免费 PDF 文章：[`assets.cureus.com/uploads/editorial/pdf/138667/20230219-28928-6cyip.pdf`](https://assets.cureus.com/uploads/editorial/pdf/138667/20230219-28928-6cyip.pdf)
 
-在这篇关于医疗诊断的文章中，引用了 `ChatGPT` 回复的以下内容：
+在这篇关于医疗诊断的文章中，引用了`ChatGPT`回复的以下内容：
 
-*ChatGPT 在下节中定义了幻觉：“幻觉是指机器（如机器人）生成的与任何现实输入都不匹配的真实体验。这包括视觉、听觉或其他类型的幻觉……某些先进的 AI 系统（如生成模型）已被发现产生幻觉。”*
+> `ChatGPT`在下节中定义了幻觉：“幻觉是指机器（如机器人）生成的与任何现实输入都不匹配的真实体验。这包括视觉、听觉或其他类型的幻觉……某些先进的 AI 系统（如生成模型）已被发现产生幻觉。”
 
 ### 获取 ChatGPT 引用的 OkHttp Java 库 Jar 包
 
-这引发了关于获取 `ChatGPT` 响应引用的 `OkHttp` 等 Java 库 Jar 包的问题。因此，我问 `ChatGPT`：
+这引发了关于获取`ChatGPT`响应引用的`OkHttp`等 Java 库 Jar 包的问题。因此，我问`ChatGPT`：
 
 **最好的 Java Jar 包下载网站有哪些？**
 
@@ -1150,24 +1157,21 @@ public class ChatGPTApi {
 
 **图 3.3:** (a) Ask AI 手机应用问题 2 (b) 长按窗口区域复制
 
-安卓 手机 **Ask AI** 移动应用程序的响应（和问题）可以像*图 3.3 (b)* 所示，通过长按问题或响应窗口区域并选择**复制消息**来获取以下响应：
+安卓手机 **Ask AI** 移动应用程序的响应（和问题）可以像*图 3.3 (b)*所示，通过长按问题或响应窗口区域并选择**复制消息**来获取以下响应：
 
-*“作为一个 AI 语言模型，我可以为你提供可以下载 Java Jar 包的流行网站列表。以下是一些最常用的几个：*
-
-
-
-
-1. **Maven 中央仓库：** Maven 中央 是 Java 库和依赖的主要仓库。你可以通过指定所需库的 group ID 和 artifact ID 来搜索 `JAR` 文件。访问网站 [`mvnrepository.com/`](https://mvnrepository.com/)。
-
-2. **GitHub：** 许多开源 Java 项目在 GitHub 上托管了它们的 `JAR` 文件。你可以搜索与你感兴趣的库相关的仓库，并在它们的 releases 或 downloads 部分找到 `JAR` 文件。GitHub 主站地址为 [`github.com/`](https://github.com/)。
-
-3. **SourceForge：** SourceForge 是一个托管开源软件的流行平台，包括 Java 项目。你可以搜索 Java 库并从项目的 files 部分下载 `JAR` 文件。访问 SourceForge 访问 [`sourceforge.net/`](https://sourceforge.net/)。
-
-4. **JCenter：** JCenter 曾是一个流行的 Java 库仓库，但它已经停止维护，不再推荐新项目使用。然而，现有项目可能仍然可以在 JCenter 上找到可用的 `JAR` 文件。访问网站 [`bintray.com/bintray/jcenter`](https://bintray.com/bintray/jcenter)。
-
-5. **Apache Maven 仓库：** Apache Maven 也托管了一个 Java 库和依赖的仓库。你可以使用所需库的 Maven 坐标来搜索 `JAR` 文件。Apache Maven 仓库的网站为 [`repository.apache.org/`](https://repository.apache.org/)。
-
-*请注意，从外部网站下载 `JAR` 文件时，验证文件的完整性和真实性至关重要，以确保它们来自受信任的来源。此外，考虑使用如 Maven 或 Gradle 等构建自动化工具，它们可以管理依赖并从可靠来源自动下载 `JAR` 文件。*
+> “作为一个 AI 语言模型，我可以为你提供可以下载 Java Jar 包的流行网站列表。以下是一些最常用的几个：
+>
+> 1. **Maven 中央仓库：** Maven 中央是 Java 库和依赖的主要仓库。你可以通过指定所需库的 group ID 和 artifact ID 来搜索`JAR`文件。访问网站 [`mvnrepository.com/`](https://mvnrepository.com/)。
+>
+> 2. **GitHub：** 许多开源 Java 项目在 GitHub 上托管了它们的`JAR`文件。你可以搜索与你感兴趣的库相关的仓库，并在它们的 releases 或 downloads 部分找到`JAR`文件。GitHub 主站地址为 [`github.com/`](https://github.com/)。
+>
+> 3. **SourceForge：** SourceForge 是一个托管开源软件的流行平台，包括 Java 项目。你可以搜索 Java 库并从项目的 files 部分下载`JAR`文件。访问 SourceForge 访问 [`sourceforge.net/`](https://sourceforge.net/)。
+>
+> 4. **JCenter：** JCenter 曾是一个流行的 Java 库仓库，但它已经停止维护，不再推荐新项目使用。然而，现有项目可能仍然可以在 JCenter 上找到可用的`JAR`文件。访问网站 [`bintray.com/bintray/jcenter`](https://bintray.com/bintray/jcenter)。
+>
+> 5. **Apache Maven 仓库：** Apache Maven 也托管了一个 Java 库和依赖的仓库。你可以使用所需库的 Maven 坐标来搜索`JAR`文件。Apache Maven 仓库的网站为 [`repository.apache.org/`](https://repository.apache.org/)。
+>
+> 请注意，从外部网站下载`JAR`文件时，验证文件的完整性和真实性至关重要，以确保它们来自受信任的来源。此外，考虑使用如 Maven 或 Gradle 等构建自动化工具，它们可以管理依赖并从可靠来源自动下载`JAR`文件。”
 
 我们使用了第一种方案，使用了以下链接：
 
@@ -1175,25 +1179,25 @@ public class ChatGPTApi {
 
 ![](img/Figure3.4.jpg)
 
-**图 3.4：** Maven 仓库搜索字段用于搜索 `okhttp.jar` 文件
+**图 3.4：** Maven 仓库搜索字段用于搜索`okhttp.jar`文件
 
-搜索 `okhttp3 jar` 结果如下：
+搜索`okhttp3 jar`结果如下：
 
 [`mvnrepository.com/artifact/com.squareup.okhttp3/okhttp`](https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp)
 
 **注意**
 
-*我们最终不得不使用 `Version 3.2`，因为我们需要的某些功能在 `okhttp.jar` 文件的后续版本中被删除了。*
+我们最终不得不使用`Version 3.2`，因为我们需要的某些功能在`okhttp.jar`文件的后续版本中被删除了。
 
 ![](img/Figure3.5.jpg)
 
-**图 3.5：** Maven 仓库网页显示了 `OkHttp3 jar` 下载页面
+**图 3.5：** Maven 仓库网页显示了`OkHttp3 jar`下载页面
 
-这提供了高亮链接，如 图 3.5 所示。点击此链接获得 `Jar`，并使用 图 3.6 中的高亮链接进行选择。
+这提供了高亮链接，如*图 3.5*所示。点击此链接获得`Jar`，并使用*图 3.6*中的高亮链接进行选择。
 
 ![](img/Figure3.6.jpg)
 
-**图 3.6：** 点击高亮链接以下载 `ChatGPT-` 引用的 `OkHttp3` jar
+**图 3.6：** 点击高亮链接以下载`ChatGPT-`引用的`OkHttp3` jar
 
 当该版本失败时，我们使用了较早的版本 3.2，可以通过以下链接获取：
 
@@ -1205,15 +1209,15 @@ public class ChatGPTApi {
 
 **注意**
 
-*我们发现还必须将 Eclipse 项目的 `JVM` 从 Java 17 更改为 Java 11*
+我们发现还必须将 Eclipse 项目的`JVM`从 Java 17 更改为 Java 11
 
-Chrome 浏览器提示确保我们愿意下载 `.jar` 文件（该文件可能包含恶意软件）。我们选择了 `Keep` 选项，如 图 3.7 所示。
+Chrome 浏览器提示确保我们愿意下载`.jar`文件（该文件可能包含恶意软件）。我们选择了`Keep`选项，如*图 3.7*所示。
 
 ![](img/Figure3.7.jpg)
 
-**图 3.7：** Chrome 浏览器对下载 jar 文件发出警告，我们选择了 `Keep`
+**图 3.7：** Chrome 浏览器对下载 jar 文件发出警告，我们选择了`Keep`
 
-# 获取 ChatGPT 密钥 API Key](#toc.xhtml_s35a)
+# 获取 ChatGPT 密钥 API Key
 
 接下来我们需要的是 OpenAI 账户中的 Secret API Key。步骤如下：
 
@@ -1223,27 +1227,27 @@ Chrome 浏览器提示确保我们愿意下载 `.jar` 文件（该文件可能�
 
     ![](img/Figure3.8.jpg)
 
-    **图 3.8：** 选择了 `View API keys` 下拉菜单项
+    **图 3.8：** 选择了`View API keys`下拉菜单项
 
-2. 在 `API` Keys 页面，你将看到现有 Secret Keys 的列表。
+2. 在`API` Keys 页面，你将看到现有 Secret Keys 的列表。
 
-第一次进入个人资料时，你需要选择 `Create new secret key`，如 图 3.9 所示。
+第一次进入个人资料时，你需要选择`Create new secret key`，如*图 3.9*所示。
 
     ![](img/Figure3.9.jpg)
 
-    **图 3.9：** 点击了高亮的 `Create new secret key` 链接
+    **图 3.9：** 点击了高亮的`Create new secret key`链接
 
-3. 然后，点击弹出页面上的绿色图标将你的 `OpenAI` 密钥复制到安全的地方，如 图 3.10 所示。
+3. 然后，点击弹出页面上的绿色图标将你的`OpenAI`密钥复制到安全的地方，如*图 3.10*所示。
 
     ![](img/Figure3.10.jpg)
 
-    **图 3.10：** 点击了高亮的 `Create new secret key` 链接
+    **图 3.10：** 点击了高亮的`Create new secret key`链接
 
-这提供了高亮链接，如 图 3.5 所示。点击此链接获得 `Jar`，并使用 图 3.6 中的高亮链接进行选择。
+这提供了高亮链接，如*图 3.5*所示。点击此链接获得`Jar`，并使用*图 3.6*中的高亮链接进行选择。
 
     ![](img/Figure3.6.jpg)
 
-    **图 3.6：** 点击高亮链接以下载 `ChatGPT-` 引用的 `OkHttp3` jar
+    **图 3.6：** 点击高亮链接以下载`ChatGPT-`引用的`OkHttp3` jar
 
 当该版本失败时，我们使用了较早的版本 3.2，可通过链接链接：
 
@@ -1255,28 +1259,25 @@ Chrome 浏览器提示确保我们愿意下载 `.jar` 文件（该文件可能�
 
 **注意**
 
-*我们发现还必须将 Eclipse 项目的 `JVM` 从 Java 17 更改为 Java 11*
+我们发现还必须将 Eclipse 项目的`JVM`从 Java 17 更改为 Java 11
 
-Chrome 浏览器提示确保我们愿意下载 `.jar` 文件（该文件可能包含恶意软件）。我们选择了 `Keep` 选项，如 图 3.7 所示。
+Chrome 浏览器提示确保我们愿意下载`.jar`文件（该文件可能包含恶意软件）。我们选择了`Keep`选项，如*图 3.7*所示。
 
     ![](img/Figure3.7.jpg)
 
-    **图 3.7：** Chrome 浏览器对下载 jar 文件发出警告，我们选择了 `Keep`
+    **图 3.7：** Chrome 浏览器对下载 jar 文件发出警告，我们选择了`Keep`
 
-这提供了高亮链接，如 图 3.5 所示。点击此链接获得 `Jar`，并使用 图 3.6 中的高亮链接进行选择。
+这提供了高亮链接，如*图 3.5*所示。点击此链接获得`Jar`，并使用*图 3.6*中的高亮链接进行选择。
 
     ![](img/Figure3.6.jpg)
 
-    **图 3.6：** 点击高亮链接以下载 `ChatGPT-` 引用的 `OkHttp3` jar
+    **图 3.6：** 点击高亮链接以下载`ChatGPT-`引用的`OkHttp3` jar
 
-
-
-
-现在我们可以将从 `Maven` 网站下载的 `okhttp-4.11.0.jar` 文件复制到 `Linux` 服务器上的新 `Eclipse` 目录区域 `/root/eclipse/eclipse/AILibs`。这用于存放外部 .jar 文件库，以支持 `ChatGPT API` 依赖。
+现在我们可以将从`Maven`网站下载的`okhttp-4.11.0.jar`文件复制到`Linux`服务器上的新`Eclipse`目录区域`/root/eclipse/eclipse/AILibs`。这用于存放外部 .jar 文件库，以支持`ChatGPT API`依赖。
 
 ![](img/Figure3.19.jpg)
 
-**图 3.19:** 推荐的 `ChatGPT` jar 文件 `okhttp-4.11.0.jar` 已复制到 `Eclipse` 区域
+**图 3.19:** 推荐的`ChatGPT` jar 文件`okhttp-4.11.0.jar`已复制到`Eclipse`区域
 
 选择项目属性（Project properties）以更新项目的类路径（Class path），如图`图 3.20`所示。
 
@@ -1284,17 +1285,17 @@ Chrome 浏览器提示确保我们愿意下载 `.jar` 文件（该文件可能�
 
 **图 3.20:** 选择项目属性以更新项目的类路径
 
-使用 `Add External jars` 选项来更新类路径，如图`图 3.21`所示。
+使用`Add External jars`选项来更新类路径，如图`图 3.21`所示。
 
 ![](img/Figure3.21.jpg)
 
-**图 3.21:** 点击 `Add External JARs` 按钮
+**图 3.21:** 点击`Add External JARs`按钮
 
 现在我们可以通过浏览创建的 Eclipse jar 区域来添加下载并复制的 jar 文件，如图`图 3.22`所示。
 
 ![](img/Figure3.22.jpg)
 
-**图 3.22:** 从目录 `/root/eclipse/eclipse/AILibs` 选择了 `okhttp-4.11.0.jar` 文件
+**图 3.22:** 从目录`/root/eclipse/eclipse/AILibs`选择了`okhttp-4.11.0.jar`文件
 
 我们发现还需要另一个支持的 Java 库。运行程序时，发生了错误：
 
@@ -1306,7 +1307,7 @@ The type `okio.ByteString` cannot be resolved. It is indirectly referenced from 
 
 ### 安装 Okio 库
 
-因此，我们需要下载 `okio jar` 文件。我们使用了链接：[`mvnrepository.com/artifact/com.squareup.okio/okio`](https://mvnrepository.com/artifact/com.squareup.okio/okio)
+因此，我们需要下载`okio jar`文件。我们使用了链接：[`mvnrepository.com/artifact/com.squareup.okio/okio`](https://mvnrepository.com/artifact/com.squareup.okio/okio)
 
 该 jar 有一个高亮链接：[`mvnrepository.com/artifact/com.squareup.okio/okio/2.8.0`](https://mvnrepository.com/artifact/com.squareup.okio/okio/2.8.0)
 
@@ -1314,11 +1315,11 @@ The type `okio.ByteString` cannot be resolved. It is indirectly referenced from 
 
 **注意**
 
-较后的 `okio` jar 文件版本 3.4 和 3.5 无法工作（我们尝试过了），而且体积小得多。
+较后的`okio` jar 文件版本 3.4 和 3.5 无法工作（我们尝试过了），而且体积小得多。
 
 ![](img/Figure3.23.jpg)
 
-**图 3.23:** 从 `/root/eclipse/eclipse/AILibs` 添加了 `okio-2.8.0.jar` 文件
+**图 3.23:** 从`/root/eclipse/eclipse/AILibs`添加了`okio-2.8.0.jar`文件
 
 ### 处理 Kotlin 依赖
 
@@ -1328,9 +1329,9 @@ The type `okio.ByteString` cannot be resolved. It is indirectly referenced from 
 Exception in thread "main" java.lang.NoClassDefFoundError: kotlin/jvm/internal/markers/KMappedMarker
 ```
 
-互联网搜索建议我们需要 `kotlin-stdlib-1.3.41.jar`。（这可以在页面找到：[`mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.41`](https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.41)）
+互联网搜索建议我们需要`kotlin-stdlib-1.3.41.jar`。（这可以在页面找到：[`mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.41`](https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.41)）
 
-然后，我们通过以下 URL 链接添加了 `kotlin-runtime-1.2.71.jar`：
+然后，我们通过以下 URL 链接添加了`kotlin-runtime-1.2.71.jar`：
 
 [`mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-runtime`](https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-runtime)
 
@@ -1338,13 +1339,13 @@ Exception in thread "main" java.lang.NoClassDefFoundError: kotlin/jvm/internal/m
 
 现在我们得到了错误消息：
 
-```
-Error caused by: java.lang.ClassNotFoundException: kotlin.collections.AbstractList
-```
+
+
+`Error caused by: java.lang.ClassNotFoundException: kotlin.collections.AbstractList`
 
 我们选择了以下链接来获取如何修复此问题的思路：[`beginnersbook.com/2017/12/kotlin-in-eclipse-ide/`](https://beginnersbook.com/2017/12/kotlin-in-eclipse-ide/)
 
-### 安装 Kotlin 插件
+## 安装 Kotlin 插件
 
 因此，我们意识到需要为 Eclipse 安装 `Kotlin` 插件框架以满足项目依赖。我们选择了 `Help` 下拉菜单、`Eclipse Marketplace…` 菜单选项，如图`图 3.24`所示。
 
@@ -1397,48 +1398,70 @@ Error caused by: java.lang.ClassNotFoundException: kotlin.collections.AbstractLi
 
 为了解决此问题，我们确保 `ChatGPTApi` 类中的 `RequestBody` 被正确地格式化为 JSON 字符串。
 
-
-
-
-
 ```bash
 * https://api.openai.com/v1/chat/completions -H "Authorization: Bearer sk-xxxxxxxxxxxxxxxxxxxxxxBlbkFJVAxxxxxxxxxxxxxxxxxx" -H "Content-Type: application/json" -d '{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "What is the OpenAI mission?"}] }'
 ```
 
-*/
-// Original private static final String API_URL = "https://api.openai.com/v1/engines/" + MODEL_ID + "/completions";
-// NEW private static final String API_URL = "https://api.openai.com/v1/chat/completions/";
+```java
+// Original
+private static final String API_URL = "https://api.openai.com/v1/engines/" + MODEL_ID + "/completions";
+
+// NEW
+private static final String API_URL = "https://api.openai.com/v1/chat/completions/";
+
 private static final String API_URL = "https://api.openai.com/v1/chat/completions";
+
 public static String getResponseFromGPT(String prompt) throws Exception {
+
     OkHttpClient client = new OkHttpClient().newBuilder().build();
+
     MediaType mediaType = MediaType.parse("application/json");
+
     // ASB Original line gave the error "message": "you must provide a model parameter",
     // RequestBody body = RequestBody.create(mediaType, "{  \"prompt\": \"" + prompt + "\",\"temperature\":0.7,\"max_tokens\":60}");
+
     RequestBody body = RequestBody.create(mediaType, "{  \"model\": \"" + MODEL_ID + "\\",\"messages\": [{\"role\": \"user\", \"content\":" + prompt + "\\",\"temperature\":0.7,\"max_tokens\":60}");
+
     Request request = new Request.Builder()
+
         .url(API_URL)
+
         .method("POST", body)
+
         .addHeader("Authorization", " Bearer " + API_KEY)
+
         .addHeader("Content-Type", "application/json")
+
         .addHeader("messages", " [{\"role\": \"user\", \"content\": \"What is the OpenAI mission?\" }" ) //}]
+
         .build();
+
     System.out.print("Request=" + request.toString());
+
     Response response = client.newCall(request).execute();
+
     String responseJson = response.body().string();
+
     response.close();
+
     return responseJson;
-}
-public static void main(String[] args) throws Exception {
-    String responseJson = getResponseFromGPT("Hello, how are you?");
-    System.out.println(responseJson); // ASB for debug output
+
 }
 
+public static void main(String[] args) throws Exception {
+
+    String responseJson = getResponseFromGPT("Hello, how are you?");
+
+    System.out.println(responseJson); // ASB for debug output
+
+}
 ```
 
 ### 注意
+
 以下链接提供了一个更实用的示例：
 
-[构建一个与 ChatGPT 通的 Java 应用](https://www.infoworld.com/article/3697151/build-a-java-application-to-talk-to-chatgpt.html)](https://www.infoworld.com/article/3697151/build-a-java-application-to-talk-to-chatgpt.html)
+[构建一个与 ChatGPT 通的 Java 应用](https://www.infoworld.com/article/3697151/build-a-java-application-to-talk-to-chatgpt.html)
 
 # 结论
 
@@ -1450,7 +1473,7 @@ public static void main(String[] args) throws Exception {
 
 即使在更新了几个库的导入后，上述问题仍然存在。在下一章中，我们将查看针对二分查找算法问题所获得的响应。我们将看到，ChatGPT 对此问题的响应要有用得多。
 
-# 记忆的点
+## 记忆的点
 
 *   要使用 OpenAI API，你需要 OpenAI API key，这可以通过注册 OpenAI 账户获取。这允许创建 API key 来使用 ChatGPT API。
 
@@ -1460,19 +1483,15 @@ public static void main(String[] args) throws Exception {
 
 *   在 Eclipse 中，我们最终也使用了 3.2 版本的 `okhttp.jar` 文件，因为我们需要的一些功能在后面的版本中被删除了。
 
-
-
-
-
 ## 核心概念
 
 *   **REST API:** `REST API`（有时称为 `RESTful` `API`）是一种 `API`（应用程序编程接口），它允许从程序或网络浏览器向基于 `HTTP` 的目标 Web 服务器发送命令，该服务器设计用于处理数据并返回结果。`REST` 代表“表征状态转移”（Representational State Transfer）。发送和返回的数据通常结构化为 `XML` 或 `JSON` 消息。在本章的示例中，我们已经涵盖了这种基于 `REST` 的 `ChatGPT AI API` 接口的使用。
 *   **URL:** 统一资源定位符（Uniform Resource Locator）用于识别特定的 Web 服务器，通常指向网页、可下载的文件或文档，并链接到在线内容，这些内容可以通过浏览器或客户端程序访问。
 *   **XML:** 可扩展标记语言 `XML` 是一种标记语言，其用途与 `JSON` 非常相似，用于存储结构化数据。`XML` 使用的角括号允许结构化数据被轻松解析，从而提取子集进行进一步处理。`XML` 用于一些旧的 `REST API` 服务，但 `JSON` 是最常用的格式。
 
-## 第 4 章：用于二分查找的 Java 程序
+# 第 4 章：用于二分查找的 Java 程序
 
-### 简介
+## 简介
 
 在本章中，我们将提示 `ChatGPT` 生成一个用于二分查找的 Java 程序。二分查找方法接收一个排序后的整数数组和一个要搜索的目标整数。如果在数组中找到了该整数，它将返回该整数的索引；如果没有找到，则返回 -1。该方法首先初始化两个变量 `left` 和 `right`，它们代表搜索空间的左右边界。初始时，搜索空间是整个数组。然后，该方法进入一个循环，只要搜索空间未耗尽就会持续运行。
 
@@ -1490,31 +1509,39 @@ public static void main(String[] args) throws Exception {
 1.  **你是否有一个用于二分查找程序的 Java 代码方法？**
     *“当然可以！这是一个用于二分查找的 Java 代码方法示例：”*
 
-
-
-
-
 ```java
 public static int binarySearch(int[] array, int target) {
+
     int left = 0;
+
     int right = array.length - 1;
+
     while (left <= right) {
+
         int mid = left + (right - left) / 2;
+
         if (array[mid] == target) {
+
             return mid;
+
         } else if (array[mid] < target) {
+
             left = mid + 1;
+
         } else {
+
             right = mid - 1;
+
         }
+
     }
+
     return -1;
+
 }
 ```
 
 “此方法接收一个整数数组和一个要搜索的整数整数。如果在数组中找到了该目标整数，它将返回其索引；如果未找到，则返回 -1。
-
-由
 
 该方法首先初始化两个变量——`left` 和 `right`，它们代表搜索空间的左右边界。初始时，搜索空间是整个数组。
 
@@ -1536,49 +1563,87 @@ public static int binarySearch(int[] array, int target) {
 
 ```java
 public class BinarySearch {
+
     /**
+
      * 二分查找方法，用于在排序后的数组中找到目标元素。
+
      *
+
      * @param arr 要搜索的排序数组。
+
      * @param target 要搜索的元素。
+
      * @return 如果找到，返回目标元素的索引；否则返回 -1。
+
      */
+
     public static int binarySearch(int[] arr, int target) {
+
         int left = 0;
+
         int right = arr.length - 1;
+
         while (left <= right) {
+
             // 如果中间元素是目标，返回其索引
+
             if (arr[mid] == target) {
+
                 return mid;
+
             }
+
             // 如果目标在左半部分，丢弃右半部分
+
             if (arr[mid] > target) {
+
                 right = mid - 1;
+
             } else {
+
                 // 如果目标在右半部分，丢弃左半部分
+
                 left = mid + 1;
+
             }
+
         }
+
         // 如果未找到目标，返回 -1
+
         return -1;
+
     }
 
     public static void main(String[] args) {
+
         int[] arr = {2, 5, 8, 12, 16, 23, 38, 45, 72};
+
         int target = 23;
+
         int index = binarySearch(arr, target);
+
         if (index != -1) {
+
             System.out.println("Element found at index: " + index);
+
         } else {
+
             System.out.println("Element not found in the array.");
+
         }
+
     }
+
 }
 ```
 
+
+
 我们可以向下滚动过代码以查看 ChatGPT AI 的描述，如下：在示例中，我们有一个排序后的数组 `arr`，我们正在使用 `binarySearch` 方法搜索目标元素。如果找到了目标元素，该方法将返回其索引；否则，它将返回 -1 表示元素不存在。提供的 `main` 方法演示了如何使用示例数组使用 `binarySearch` 方法。
 
-# 使用 Eclipse 代码的 Java 代码
+## 使用 Eclipse 代码的 Java 代码
 
 为了完全验证二分查找算法，我们需要提供的一个要求是排序数组。因此，我们向 ChatGPT 网页应用（`https://chat.openai.com/`）提问了这个问题。这个问题和回答如下：你是否有一个使用 Java 程序将整数值数组按升序排列的高效排序算法的示例？
 
@@ -1586,46 +1651,81 @@ public class BinarySearch {
 
 ```java
 public class QuickSort {
+
     public static void main(String[] args) {
+
         int[] arr = {9, 7, 5, 11, 12, 2, 14, 3, 10, 6};
+
         System.out.println("Original array:");
+
         printArray(arr);
+
         quickSort(arr, 0, arr.length - 1);
+
         System.out.println("Sorted array:");
+
         printArray(arr);
+
     }
 
     public static void quickSort(int[] arr, int low, int high) {
+
         if (low < high) {
+
             int pi = partition(arr, low, high);
+
             quickSort(arr, low, pi - 1);
+
             quickSort(arr, pi + 1, high);
+
         }
+
     }
 
     public static int partition(int[] arr, int low, int high) {
+
         int pivot = arr[high];
+
         int i = low - 1;
+
         for (int j = low; j < high; j++) {
+
             if (arr[j] < pivot) {
+
                 i++;
+
                 int temp = arr[i];
+
                 arr[i] = arr[j];
+
                 arr[j] = temp;
+
             }
+
         }
+
         int temp = arr[i + 1];
+
         arr[i + 1] = arr[high];
+
         arr[high] = temp;
+
         return i + 1;
+
     }
 
     public static void printArray(int[] arr) {
+
         for (int num : arr) {
+
             System.out.print(num + " ");
+
         }
+
         System.out.println();
+
     }
+
 }
 ```
 
@@ -1645,48 +1745,87 @@ public class QuickSort {
 import java.util.Arrays;
 
 public class MergeSortExample {
+
     public static void merge(int[] arr, int left, int mid, int right) {
+
         int n1 = mid - left + 1;
+
         int n2 = right - mid;
+
         int[] leftArray = new int[n1];
+
         int[] rightArray = new int[n2];
+
         System.arraycopy(arr, left, leftArray, 0, n1);
+
         System.arraycopy(arr, mid + 1, rightArray, 0, n2);
+
         int i = 0, j = 0, k = left;
+
         while (i < n1 && j < n2) {
+
             if (leftArray[i] <= rightArray[j]) {
+
                 arr[k] = leftArray[i++];
+
             } else {
+
                 arr[k] = rightArray[j++];
+
             }
+
             k++;
+
         }
+
         while (i < n1) {
+
             arr[k++] = leftArray[i++];
+
         }
+
         while (j < n2) {
+
             arr[k++] = rightArray[j++];
+
         }
+
     }
 
     public static void mergeSort(int[] arr, int left, int right) {
+
         if (left < right) {
+
             int mid = left + (right - left) / 2;
+
             mergeSort(arr, left, mid);
+
             mergeSort(arr, mid + 1, right);
+
             merge(arr, left, mid, right);
+
         }
+
     }
 
     public static void main(String[] args) {
+
         int[] arr = {12, 11, 13, 5, 6, 7};
+
         System.out.println("Original array: " + Arrays.toString(arr));
+
         long startTime = System.currentTimeMillis();
+
         mergeSort(arr, 0, arr.length - 1);
+
         long endTime = System.currentTimeMillis();
+
         System.out.println("Sorted array: " + Arrays.toString(arr));
+
         System.out.println("Time taken: " + (endTime - startTime) + " milliseconds");
+
     }
+
 }
 ```
 
@@ -1704,15 +1843,25 @@ public class MergeSortExample {
 import java.util.Arrays;
 
 public class TimSortExample {
+
     public static void main(String[] args) {
+
         int[] arr = {12, 11, 13, 5, 6, 7};
+
         System.out.println("Original array: " + Arrays.toString(arr));
+
         long startTime = System.currentTimeMillis();
+
         Arrays.sort(arr);
+
         long endTime = System.currentTimeMillis();
+
         System.out.println("Sorted array: " + Arrays.toString(arr));
+
         System.out.println("Time taken: " + (endTime - startTime) + " milliseconds");
+
     }
+
 }
 ```
 
@@ -1726,7 +1875,6 @@ public class TimSortExample {
 
 现在我们可以测试 **ChatGPT** 提供的每个排序算法，在 **Eclipse IDE** 中运行我们要排序的数组：
 
-```
 ```java
 public class QuickSort {
     // ... (代码省略)
@@ -1748,10 +1896,6 @@ public class QuickSort {
 在 `Figure 6` 中点击 **Finish** 按钮，我们可以添加一个包名为 `com.asb` 的 Java 类 `QuickSort`，所示：(images/Figure-4.7.jpg)
 
 **图 4.7:** `QuickSort` 类被添加到我们的 `com.asb` 包下
-
-
-
-
 
 ```java
 import com.xuggle.mediatool.IMediaReader;
@@ -1788,7 +1932,7 @@ class AudioSampleListener extends MediaListenerAdapter {
 
 `AI` 提供的**粗体建议**证明是 `ChatGPT` 给出的最佳（也是最简单的）建议。
 
-# MP4 傅里叶分析 Java 代码 – 根据 OpenAI ChatGPT
+## MP4 傅里叶分析 Java 代码 – 根据 OpenAI ChatGPT
 
 接下来，我们尝试了 `Perplexity`，因为 `Ask AI` 提供的 `Java` 代码骨架通常只是一系列注释，它的回复如下：
 
@@ -1819,15 +1963,24 @@ class AudioSampleListener extends MediaListenerAdapter {
 对 MP4 音乐文件进行傅里叶分析以分离乐器和人声是一项复杂的任务，通常不仅涉及 `Java` 代码。它涉及数字信号处理、机器学习以及可能的深度学习方法。以下是你可能采取的步骤的高级概述，但请记住，这是一个非常高级的话题，需要对信号处理、音频处理以及超出基础 `Java` 的编程有深度理解。
 
 1. **加载并解码音频：** 你需要从 MP4 文件中提取音频数据。可以使用如 `JavaZoom` 的 `Java Sound API` 等库。
+
 2. **预处理：** 执行任何必要的步骤，例如将音频重采样为常用的采样率，或在必要时转换为单声道。
+
 3. **短时傅里叶变换 (STFT)：** `STFT` 是一种随时间分析信号频率内容的技术。你将 `STFT` 应用于你的音频信号，将其转换为时间-频率表示。
+
 4. **频谱源分离：** 这是整个过程的核心。你可以使用不同的方法，包括：
+
     * **非负矩阵分解 (NMF)：** `NMF` 可用于将谱图分解为基组件（乐器/人声）及其相应的激活值。
+
     * **深度学习模型：** 使用在源分离任务上训练的深度学习模型，如卷积神经网络 (`CNNs`) 或循环神经网络 (`RNNs`)。
-5. **重构：** 一旦你分离了不同的源（乐器和人声），你就需要从处理后的谱图数据中重建音频信号。这涉及逆 `STFT` 过程。
+
+
+
+5. **重构：** 一旦你分离了不同的源（乐器和人声），你就需要从处理后的谱图数据中重建音频信号。这涉及逆`STFT`过程。
+
 6. **后处理：** 清理分离和重构过程中引入任何伪影或缺陷。
 
-这里是一个关于如何使用 `Java Sound API` 和 `JTransforms` 库执行 `STFT` 的非常简单的示例：
+这里是一个关于如何使用`Java Sound API`和`JTransforms`库执行`STFT`的非常简单的示例：
 
 ```java
 import javax.sound.sampled.*;
@@ -1872,9 +2025,9 @@ public class AudioAnalysis {
 
 请注意，此示例非常简单，并没有执行任何源分离或重构。现实世界的源分离需要复杂的算法。
 
-为了获得实用且稳健的解决方案，你可能想要探索专门用于源分离的现有库和工具，例如 `Deezer` 的 `Spleeter`，它是用于分离音乐录中人声和伴奏的预训练模型。这可以通过 `Python` 使用，你可以通过适当接口方法（如从 Java 调用 Python 脚本）将其集成到你的 Java 应用中。
+为了获得实用且稳健的解决方案，你可能想要探索专门用于源分离的现有库和工具，例如`Deezer`的`Spleeter`，它是用于分离音乐录中人声和伴奏的预训练模型。这可以通过`Python`使用，你可以通过适当接口方法（如从 Java 调用 Python 脚本）将其集成到你的 Java 应用中。
 
-所以，再次 `Java` 代码仅实现了运行程序的“骨架”。我们乐观地问道：
+所以，再次`Java`代码仅实现了运行程序的“骨架”。我们乐观地问道：
 
 **ChatGPT 可以输入 MP4 音乐文件并分离乐器和人声吗？**
 
@@ -1882,12 +2035,9 @@ public class AudioAnalysis {
 
 “不，ChatGPT 无法直接处理或分析音频视频文件（包括 MP4 音乐文件）。它是一个基于文本的语言模型，不具备直接处理音频或视频数据的能力。从音频文件中分离乐器和人声需要复杂的信号处理和机器学习技术，这些超出了 ChatGPT 这样的文本模型的能力。
 
-要执行从 MP4 音乐文件中分离乐器和人声之类的音频源分离任务，你需要使用专门为音频处理和源分离设计的专用工具、库和软件。这些工具通常涉及数字信号处理方法和机器学习算法的结合。之前提到的 `Spleeter` 等库就是执行此类音频源分离的工具示例。”
+要执行从 MP4 音乐文件中分离乐器和人声之类的音频源分离任务，你需要使用专门为音频处理和源分离设计的专用工具、库和软件。这些工具通常涉及数字信号处理方法和机器学习算法的结合。之前提到的`Spleeter`等库就是执行此类音频源分离的工具示例。”
 
-
-
-
-请记住，这些任务相当高级，可能需要一些音频处理和编程方面的专业知识才能获得有意义的结果。”
+请记住，这些任务相当高级，可能需要一些音频处理和编程方面的专业知识才能获得有意义的结果。
 
 我们加亮了上面的文本，是因为它确实表明 ChatGPT 对其之前提供的回答具有一定的记忆能力。
 
@@ -1895,7 +2045,7 @@ public class AudioAnalysis {
 
 `Do you have example java code to call the Spleeter python libraries for source separation of an MP4 audio file?`
 
-在提出此问题后，我们确实获得了一些 Java 代码，如 *图 6.5* 所示：
+在提出此问题后，我们确实获得了一些 Java 代码，如*图 6.5*所示：
 
 ![](img/Figure6.5.jpg)
 
@@ -1903,7 +2053,7 @@ public class AudioAnalysis {
 
 这提供了一个完整的方法示例，用于实现我们分离人声和乐器的原始目标，尽管它并没有直接使用傅里叶分析：
 
-当然，你可以使用 Java 通过 `ProcessBuilder` 类来调用 Python 代码来执行 Python 脚本。以下是一个如何从 Java 程序调用 Spleeter Python 库来对 MP4 音频文件进行音频源分离的示例：
+当然，你可以使用 Java 通过`ProcessBuilder`类来调用 Python 代码来执行 Python 脚本。以下是一个如何从 Java 程序调用 Spleeter Python 库来对 MP4 音频文件进行音频源分离的示例：
 
 ### 1. 安装 Spleeter
 
@@ -1915,7 +2065,7 @@ pip install spleeter
 
 ### 2. 创建一个 Java 类
 
-创建一个调用 Python 脚本的 Java 类。为了简单起见，让我们假设你有一个名为 `spleeter_separate.py` 的 Python 脚本，它使用 Spleeter 执行源分离。该脚本接受输入音频文件路径和输出目录作为命令行参数。
+创建一个调用 Python 脚本的 Java 类。为了简单起见，让我们假设你有一个名为`spleeter_separate.py`的 Python 脚本，它使用 Spleeter 执行源分离。该脚本接受输入音频文件路径和输出目录作为命令行参数。
 
 以下是你如何构建 Java 类的示例：
 
@@ -1953,7 +2103,7 @@ public class SpleeterCaller {
 
 ### 3. Python 脚本 (`spleeter_separate.py`)
 
-创建一个名为 `spleeter_separate.py` 的 Python 脚本，使用 Spleeter 库执行音频源分离。以下是脚本的简化示例：
+创建一个名为`spleeter_separate.py`的 Python 脚本，使用 Spleeter 库执行音频源分离。以下是脚本的简化示例：
 
 ```python
 import sys
@@ -1972,7 +2122,7 @@ if __name__ == "__main__":
     main()
 ```
 
-记得根据你想要分离源的数量将 `'spleeter:2stems'` 替换为相应的分离模型。你可以在 Spleeter 官方文档 ([`github.com/deezer/spleeter`](https://github.com/deezer/spleeter)) 中找到更多关于 Spleeter 及其可用模型的信息。
+记得根据你想要分离源的数量将`'spleeter:2stems'`替换为相应的分离模型。你可以在 Spleeter 官方文档 ([`github.com/deezer/spleeter`](https://github.com/deezer/spleeter)) 中找到更多关于 Spleeter 及其可用模型的信息。
 
 请注意，此示例演示了从 Java 调用 Python 脚本进行音频源分离的基本过程。你可能需要根据特定的用例调整代码，并更健壮地处理错误情况。此外，确保你的 Java 和 Python 环境都已正确配置。
 
@@ -1984,16 +2134,13 @@ if __name__ == "__main__":
 
 1. 安装 Spleeter
 
-
-
-
 这些安装过程如图图 6.11 所示，命令已高亮显示：
 
 ![](img/Figure6.11.jpg)
 
-**图 6.11：** 下载 `audio_example.mp3` 文件作为测试输入，并使用 `urllib3`
+**图 6.11：** 下载`audio_example.mp3`文件作为测试输入，并使用`urllib3`
 
-然后，我们尝试在 `Linux` 命令行窗口中运行 `spleeter` 命令：
+然后，我们尝试在`Linux`命令行窗口中运行`spleeter`命令：
 
 ```bash
 spleeter separate -p spleeter:2stems -o output audio_example.mp3
@@ -2004,6 +2151,7 @@ spleeter separate -p spleeter:2stems -o output audio_example.mp3
 ```bash
 [root@ECMUKDEMO22 site-packages]# spleeter separate -p spleeter:2stems -o output audio_example.mp3
 ```
+
 `ERROR:spleeter:ffmpeg binary not found`
 
 在 Google 上搜索该错误后，我们从链接中获取了建议：[`computingforgeeks.com/how-to-install-ffmpeg-on-centos-rhel-8/`](https://computingforgeeks.com/how-to-install-ffmpeg-on-centos-rhel-8/)
@@ -2022,7 +2170,7 @@ dnf install http://rpmfind.net/linux/epel/7/x86_64/Packages/s/SDL2-2.0.14-2.el7.
 
 ![](img/Figure6.12.jpg)
 
-**图 6.12：** 我们需要安装 `EPEL` 软件包以支持 `Spleeter python` 程序
+**图 6.12：** 我们需要安装`EPEL`软件包以支持`Spleeter python`程序
 
 我们运行以下命令来安装推荐的 CRB 仓库，如图图 6.12 所示：
 
@@ -2042,13 +2190,13 @@ subscription-manager repos --enable codeready-builder-for-rhel-8-x86_64-rpms
 dnf install -y https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm
 ```
 
-在安装过程中，我们被提示要导入两个 `GPG` 安全密钥，如图图 6.14 所示：
+在安装过程中，我们被提示要导入两个`GPG`安全密钥，如图图 6.14 所示：
 
-（`GPG` 安全密钥用于公钥/私钥加密，以确保数据以加密格式安全地传输）。
+（`GPG`安全密钥用于公钥/私钥加密，以确保数据以加密格式安全地传输）。
 
 ![](img/Figure6.14.jpg)
 
-**图 6.14：** 我们通过高亮行行确认了两个 `GPG` 安全密钥的使用
+**图 6.14：** 我们通过高亮行行确认了两个`GPG`安全密钥的使用
 
 运行此 rpm 包安装的输出如图图 6.15 所示：
 
@@ -2064,13 +2212,13 @@ yum install ffmpeg ffmpeg-devel
 
 ![](img/Figure6.16.jpg)
 
-**图 6.16：** 我们使用 `yum install ffmpeg ffmpeg-devel` 安装了 29 个包库
+**图 6.16：** 我们使用`yum install ffmpeg ffmpeg-devel`安装了 29 个包库
 
-我们需要的已安装 `ffmpeg` 包已显示成功安装，如图图 6.17 所示：
+我们需要的已安装`ffmpeg`包已显示成功安装，如图图 6.17 所示：
 
 ![](img/Figure6.17.jpg)
 
-**图 6.17：** 我们需要的已安装 `ffmpeg` 包已显示成功安装
+**图 6.17：** 我们需要的已安装`ffmpeg`包已显示成功安装
 
 现在安装运行正常，因此我们重试了该命令，如图图 6.18 所示：
 
@@ -2080,41 +2228,39 @@ spleeter separate -p spleeter:2stems -o output audio_example.mp3
 
 ![](img/Figure6.18.jpg)
 
-**图 6.18：** `spleeter separate -p spleeter:2stems -o output audio_example.mp3` 命令
+**图 6.18：** `spleeter separate -p spleeter:2stems -o output audio_example.mp3`命令
 
 现在它运行得没有任何任何错误，如图图 6.18 所示。
 
 注意，该程序使用了一个它下载的训练模型，正如 ChatGPT 所出的。
 
-因此，最后我们得到了运行结果，但为了实现这个结果，我们付出了大量的额外努力，而且我们不需要 `Java` 程序来完成它。
+因此，最后我们得到了运行结果，但为了实现这个结果，我们付出了大量的额外努力，而且我们不需要`Java`程序来完成它。
 
-两个拆分文件输出为 `accompaniment.wav` 和 `vocals.wav`。通过听原始 `audio_example.mp3` 文件和输出的拆分文件，可以听到对原始声音的惊人分离（播放的 .wav 文件列在图 6.19 中）。
+两个拆分文件输出为`accompaniment.wav`和`vocals.wav`。通过听原始`audio_example.mp3`文件和输出的拆分文件，可以听到对原始声音的惊人分离（播放的 .wav 文件列在图 6.19 中）。
 
 ![](img/Figure6.19.jpg)
 
-**图 6.19：** 两个拆分文件输出为 `accompaniment.wav` 和 `vocals.wav`。
+**图 6.19：** 两个拆分文件输出为`accompaniment.wav`和`vocals.wav`。
 
-然而，我们确实想验证 ChatGPT 提供的 `Java` 程序，因此我们使用 `Eclipse IDE` 在 `com.asb` `Java` 包下创建了一个类 `SpleeterCaller`，如图图 6.20 所示：
+然而，我们确实想验证 ChatGPT 提供的`Java`程序，因此我们使用`Eclipse IDE`在`com.asb` `Java`包下创建了一个类`SpleeterCaller`，如图图 6.20 所示：
 
 ![](img/Figure6.20.jpg)
 
-**图 6.20：** `SpleeterCaller` Java 类在 `com.asb` 包下创建
+**图 6.20：** `SpleeterCaller` Java 类在`com.asb`包下创建
 
-首先，按照建议，我们创建了 `spleeter_separate.py` Python 脚本文件，如图图 6.21 所示：
+首先，按照建议，我们创建了`spleeter_separate.py` Python 脚本文件，如图图 6.21 所示：
 
 ![](img/Figure6.21.jpg)
 
 **图 6.21：** `spleeter_separate.py` Python 脚本文件
 
-在粘贴 ChatGPT 建议的代码后，我们保存类文件 `SpleeterCaller.java` 并运行应用程序主 Java 类，如图图 6.22 所示：
+在粘贴 ChatGPT 建议的代码后，我们保存类文件`SpleeterCaller.java`并运行应用程序主 Java 类，如图图 6.22 所示：
 
 ![](img/Figure6.22.jpg)
 
+
+
 **图 6.22：** 运行 `SpleeterCaller.java` Java 类
-
-
-
-
 
 `String[]` 数组不受 `ProcessBuilder` 接受，它需要一个 `ArrayList`。
 
@@ -2151,16 +2297,21 @@ System.out.println("Python script exited with code: " + exitCode);
 Java 代码进行了如下更改，如图 6.28 所示：
 
 代码行更新如下：
+
 `//String inputFile = "/usr/local/lib64/python3.6/site-packages/audio_example.mp3"; // ASB Our input file path`
+
 变更为：
+
 `String inputFile = "/usr/local/lib64/python3.6/site-packages/Three_Lions_Footballs_Coming_Home-641522.mp3"; // ASB Our input file path`
 
 ![](img/Figure6.28.jpg)
+
 **图 6.28:** 代码已将 `inputFile` 更新为“The Three Lions on the Shirt” MP3 文件
 
 文件按预期输出，如图 6.29 所示：
 
 ![](img/Figure6.29.jpg)
+
 **图 6.29:** 成功分离的“The Three Lions on the Shirt” MP3 输出文件
 
 总而言之，`ChatGPT` 确实提供了使用 `Spleeter` 的概念，这是一种基于 Python 的程序，可以在 RHEL Linux 8.8 上作为独立程序运行。`Spleeter` Java 启动程序需要许多额外的辅助库，而且 `ChatGPT` 建议的实际 Java 代码正如我们在上面创建的列表中注释的那样，是不正确的。
@@ -2210,21 +2361,25 @@ public class FourierAnalysis {
 在本节中，我们再次尝试验证 `ChatGPT` 提供的正弦波傅里叶分析代码，并如图 6.30 所示创建了一个 Eclipse 项目：
 
 ![](img/Figure6.30.jpg)
+
 **图 6.30:** 在 Eclipse 中选中了 File -> New -> Java Project
 
 项目名称如图 6.31 所示设置为 `FourierAnalysis_ExampleChapter6`：
 
 ![](img/Figure6.31.jpg)
+
 **图 6.31:** 项目名称设置为 `FourierAnalysis_ExampleChapter6`
 
 如图 6.31 所示选了 `Next>` 按钮，显示图 6.32 所示屏幕：
 
 ![](img/Figure6.32.jpg)
+
 **图 6.32:** 点击了项目 `FourierAnalysis_ExampleChapter6` 的 Finish 按钮
 
 现在我们可以添加 `ChatGPT` 建议的 Java 类 `MusicFileAnalyzer` 和 `AudioAnalysis`。图 6.33 显示了 `MusicFileAnalyzer` 的创建：
 
 ![](img/Figure6.33.jpg)
+
 **图 6.33:** `MusicFileAnalyzer` 创建
 
 在粘贴 Java 代码时，我们必须进行一些更改以允许代码编译。为了满足软件缺失的包导入需求，我们找到了以下 Maven 网站：[`www.dcm4che.org/maven2/xuggle/xuggle-xuggler/5.4/`](https://www.dcm4che.org/maven2/xuggle/xuggle-xuggler/5.4/)
@@ -2232,10 +2387,6 @@ public class FourierAnalysis {
 然后我们使用以下链接下载了所需的 jar 文件：[`www.dcm4che.org/maven2/xuggle/xuggle-xuggler/5.4/xuggle-xuggler-5.4.jar`](https://www.dcm4che.org/maven2/xuggle/xuggle-xuggler/5.4/xuggle-xuggler-5.4.jar)
 
 随后，`xuggle-xuggler-5.4.jar` 文件被复制到我们之前创建的 VMWare Linux 服务器的 Eclipse IDE 外部库区域 `AILibs` 中：
-
-
-
-
 
 `/root/eclipse/eclipse/AILibs`
 
@@ -2355,6 +2506,8 @@ module FourierAnalysis {
 
 ![](img/Figure642.jpg)
 
+
+
 **图 6.42：** 使用 `Bing` 显示的图表
 
 现在我们可以获取代码示例并将其应用于 `FourierAnalysis` 变换，如 `图 6.43` 所示：
@@ -2434,10 +2587,6 @@ public class FourierAnalysis {
     }
 }
 ```
-
-
-
-
 
 ```java
 `ChartFrame` `frame2` = new ChartFrame("Using ChatGPT FourierAnalysis.java", chart2);
@@ -2583,18 +2732,27 @@ public class AudioAnalysis {
 `[root@ECMUKDEMO22 AILibs]#`
 
 不幸的是，该 mp4 文件导致了 `javax.sound.sampled.UnsupportedAudioFileException: File of unsupported format`。Java Sound 技术支持以下格式：
+
 - 音频格式：AIFF, AU。
+
 - 音乐格式：MIDI Type 0, MIDI Type 1 以及音乐格式 (RMF)。
+
 - 声音格式：8 位和 16 位音频数据，单声道或立体声，采样率从 8 kHz 到 48 kHz。
+
 - 线性、a-law 和 mu-law 编码数据，适用于任何支持的音频格式。
 
 我们尝试使用之前创建的 `vocals.wav` 文件，但随后仍然出现了代码错误：
 
 `java.lang.ArrayIndexOutOfBoundsException: Index 1024 out of bounds for length 1024`
+
 `at JTransforms@3.1-with-dependencies.org.jtransforms.utils.cftf81(CommonUtils.java:10538)`
+
 `at JTransforms@3.1-with-dependencies.org.jtransforms.utils.cftfsub(CommonUtils.java:5924)`
+
 `at JTransforms@3.1-with-dependencies.org.jtransforms.fft.FloatFFT_1D.realForward(FloatFFT_1D.java:537)`
+
 `at JTransforms@3.1-with-dependencies.org.jtransforms.fft.FloatFFT_2D.realForwardFull(FloatFFT_2D.java:959)`
+
 `at FourierAnalysis_ExampleChapter6/com.asb.AudioAnalysis.main(AudioAnalysis.java:33)`
 
 这是引发上述异常的代码行：
@@ -2606,14 +2764,12 @@ fft.realForward(spectrum);
 因此，我们调整了代码行：
 
 `java.lang.IllegalArgumentException: rows and columns must be greater than 1`
+
 `at JTransforms@3.1-with-dependencies.org.jtransforms.fft.FloatFFT_2D.<init>(FloatFFT_2D.java:76)`
+
 `at FourierAnalysis_ExampleChapter6/com.asb.AudioAnalysis.main(AudioAnalysis.java:24)`
 
 随后，我们使用 **junit 4** 来进行测试并下载：
-
-
-
-
 
 ```java
 requires `javax.sound;`
@@ -2624,7 +2780,9 @@ requires `junit;`
 }
 ```
 
-接下来，我们需要 JTransforms 的源码 jar 包：
+
+
+接下来，我们需要 `JTransforms` 的源码 jar 包：
 
 [`search-maven.org/remotecontent?filepath=com/github/wendykierp/JTransforms/3.1/JTransforms-3.1-sources.jar`](http://search-maven.org/remotecontent?filepath=com/github/wendykierp/JTransforms/3.1/JTransforms-3.1-sources.jar)
 
@@ -2632,21 +2790,21 @@ requires `junit;`
 
 ![](img/Figure6.48.jpg)
 
-图 6.48：添加了 JTransforms 源码 jar 包 `JTransforms-3.1-sources.jar` 文件
+图 6.48：添加了 `JTransforms` 源码 jar 包 `JTransforms-3.1-sources.jar` 文件
 
-我们为 `AudioAnalysis.java` 创建的最终代码显示我们正确地读取了 .wav 文件，并添加了代码对数据块进行绘图，最多显示五个图表，例如如下代码列表所示：
+我们为 `AudioAnalysis.java` 创建的最终代码显示我们正确地读取了 `.wav` 文件，并添加了代码对数据块进行绘图，最多显示五个图表，例如如下代码列表所示：
 
 ```java
-package `com.asb;`
+package com.asb;
 
-import `javax.sound.sampled.*;`
-import `org.jfree.chart.ChartFactory;`
-import `org.jfree.chart.ChartFrame;`
-import `org.jfree.chart.JFreeChart;`
-import `org.jfree.data.xy.XYSeries;`
-import `org.jfree.data.xy.XYSeriesCollection;`
-import `org.jtransforms.fft.FloatFFT_2D;`
-import `java.io.*; // ASB 此处缺少了导入，File("input.mp4") 代码行需要它
+import javax.sound.sampled.*;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartFrame;
+import org.jfree.chart.JFreeChart;
+import org.jfree.data.xy.XYSeries;
+import org.jfree.data.xy.XYSeriesCollection;
+import org.jtransforms.fft.FloatFFT_2D;
+import java.io.*; // ASB 此处缺少了导入，File("input.mp4") 代码行需要它
 
 public class AudioAnalysis {
     public static void main(String[] args) {
@@ -2706,74 +2864,66 @@ public class AudioAnalysis {
 }
 ```
 
-
-
-
-
 - 为了获得更实用且更健壮的解决方案，你可能想要探索专门音频源分离的现有库和工具，例如 Deezer 的 `Spleeter`。
 - 为了获得功能性的 Java 代码，你必须准备好添加大量的支持性 Java 库。
 - 有时，重新表述向 AI 提出的问题以获得的目标响应是有用的。
 - 简单的问题可以提供运行的 Java 代码片段，然后可以将它们整合起来来实现复杂的需求，正如我们向 Microsoft Bing 提问以提供傅里叶分析输出的图形表示的示例所示。
 - 如果一个 AI 应用没有提供有用的响应，通常可以通过其他可用的 AI 接口获得更好的回复。这对于达成共识也有帮助。
-  （记住，不同的 AI 接口使用的 LLM 数据模型可能不同。）
 
-# 多选择题
+（记住，不同的 AI 接口使用的 LLM 数据模型可能不同。）
 
-1. **构建 Spleeter 的 Java 启动程序需要以下哪个列表中的库？**
-    1. `javax.sound-1.0.5.jar`
-    2. `tensorflow-2.5.0`
-    3. `Jtransforms-3.1-with-dependencies.jar`
-    4. `xuggle-xuggler-5.4.jar`
+## 多选择题
 
-2. **构建 Java MusicFileAnalyzer 代码需要以下哪个 Java 库列表中的？**
-    1. `javax.sound-1.0.5.jar`
-    2. `jfree-1.5.3.jar`
-    3. `Jtransforms-3.1-with-dependencies.jar`
-    4. `xuggle-xuggler-5.4.jar`
+1. **构建 `Spleeter` 的 Java 启动程序需要以下哪个列表中的库？**
+   1. `javax.sound-1.0.5.jar`
+   2. `tensorflow-2.5.0`
+   3. `Jtransforms-3.1-with-dependencies.jar`
+   4. `xuggle-xuggler-5.4.jar`
+
+2. **构建 Java `MusicFileAnalyzer` 代码需要以下哪个 Java 库列表中的？**
+   1. `javax.sound-1.0.5.jar`
+   2. `jfree-1.5.3.jar`
+   3. `Jtransforms-3.1-with-dependencies.jar`
+   4. `xuggle-xuggler-5.4.jar`
 
 3. **Java Sound 技术不支持以下哪种音频文件作为输入？**
-    1. `.wav`
-    2. `.au`
-    3. `.mp4`
-    4. `.AIFF`
+   1. `.wav`
+   2. `.au`
+   3. `.mp4`
+   4. `.AIFF`
 
-4. **Spleeter 支持以下哪种音频文件输入？**
-    1. `.wav`
-    2. `.mp3`
-    3. `.mp4`
-    4. `.AIFF`
+4. **`Spleeter` 支持以下哪种音频文件输入？**
+   1. `.wav`
+   2. `.mp3`
+   3. `.mp4`
+   4. `.AIFF`
 
-# 答案
+## 答案
 
 1. **b**
 2. **d**
 3. **c**
 4. **b**
 
-# 问题
+## 问题
 
 1. 你将如何修改 `SpleeterCaller` 代码以允许它处理包含多个 mp3 文件的文件夹？（提示：`Chapter 8` 中关于代码片段有一些指南）
 2. 你能描述 `Spleeter` 提供的主要功能吗？（提示：本章提供的链接将会有帮助）
 3. 你认为我们在本章中使用的哪个 AI 接口最有用？请给出你的分析理由。
 4. 除了 `Spleeter`，ChatGPT 还建议了哪些其他方案来将人声与伴奏分离？
 
-# 关键术语
+## 关键术语
 
 - **傅里叶分析 (Fourier analysis)**：傅里叶分析是一种用于识别数字时间序列中循环的数学分析，通过将数据数组分解为一系列函数来分解数据。
-- **Maven**: `Maven` 是一种用于 Java 项目的项目管理工具。
-- **MP4**: `MP4` 是一种数字多媒体容器格式。
-- **Spleeter**: `Spleeter` 是一种用于音频源分离的工具。
-- **Python**: `Python` 是一种高级编程语言。
-- **Java**: `Java` 是一种基于类的面向对象的编程语言。
-- **IDE**: `IDE` 是集成集成开发环境。
-- **XML**: `pom.xml` 是 Maven 使用的配置文件。
-
-
-
-
+- **Maven**：`Maven` 是一种用于 Java 项目的项目管理工具。
+- **MP4**：`MP4` 是一种数字多媒体容器格式。
+- **Spleeter**：`Spleeter` 是一种用于音频源分离的工具。
+- **Python**：`Python` 是一种高级编程语言。
+- **Java**：`Java` 是一种基于类的面向对象的编程语言。
+- **IDE**：`IDE` 是集成集成开发环境。
+- **XML**：`pom.xml` 是 `Maven` 使用的配置文件。
 
 4. [`www.maths.ed.ac.uk/~ateckent/vacation_reports/summer_project_gillian_smith.pdf`](https://www.maths.ed.ac.uk/~ateckent/vacation_reports/summer_project_gillian_smith.pdf)
-
 5. [`eng.libretexts.org/Bookshelves/Electrical_Engineering/Signal_Processing_and_Modeling/Signals_and_Systems_%28Baraniuk_et_al.%29/13%3A_Capstone_Signal_Processing_Topics/13.02%3A_The_Fast_Fourier_Transform_%28FFT%29`](https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Signal_Processing_and_Modeling/Signals_and_Systems_%28Baraniuk_et_al.%29/13%3A_Capstone_Signal_Processing_Topics/13.02%3A_The_Fast_Fourier_Transform_%28FFT%29)
 
 我们向 `ChatGPT` `Ask AI` 手机 App 询问了 `Java` 代码示例，该代码可以运行并使用快速傅里叶变换（`Fast Fourier Transform`）进行计算：
@@ -2807,14 +2957,16 @@ public class FFTExample {
 上述代码的输出大致如下：
 
 Input:
+
 `1.0 2.0 3.0 4.0`
 
 Output:
+
 `(10.0,0.0) (-2.0,2.0) (-2.0,0.0) (-2.0,-2.0)`
 
 注意，输出是复数形式，其中每个复数代表原始输入信号中频率分量的振幅和相位。输出中的第一个数字 (10.0,0.0) 代表输入信号的直流分量（即平均值）。其余数字按频率增加的顺序表示输入信号的频率分量。
 
-# 使用 Eclipse Java 程序项目验证快速傅里叶变换 Java 代码
+## 使用 Eclipse Java 程序项目验证快速傅里叶变换 Java 代码
 
 我们创建新的 `Eclipse IDE` 项目来验证 `ChatGPT` 提供的 `Java` 代码，如图 [7.1] 所示。
 
@@ -2838,7 +2990,7 @@ Output:
 
 ![](img/Figure7.3.jpg)
 
-**图 7.3:** 右键点击 src 节点并选择 `New-> Class`
+**图 7.3:** 右键点击 `src` 节点并选择 `New-> Class`
 
 我们创建了一个名为 `FFTExample` 的新“骨架” Java 类，如图 [7.4] 所示。
 
@@ -2846,7 +2998,9 @@ Output:
 
 **图 7.4:** 在 `com.asb` 包名下创建了新的 `FFTExample` 类
 
-接下来，我们将 `ChatGPT` 的 Java 代码响应复制到骨架类中，如图 [7.5] 所示，并观察到某些导入需要下载新的库 .jar 文件，并将其配置为 `Module` 编译路径中的外部 .jar。
+
+
+接下来，我们将 `ChatGPT` 的 Java 代码响应复制到骨架类中，如图 [7.5] 所示，并观察到某些导入需要下载新的库 `.jar` 文件，并将其配置为 `Module` 编译路径中的外部 `.jar`。
 
 ![](img/Figure7.5.jpg)
 
@@ -2878,7 +3032,7 @@ Output:
 
 ![](img/Figure7.7.jpg)
 
-**图 7.7:** 点击 Open 按钮后，我们需要选择 Apply and Close
+**图 7.7:** 点击 `Open` 按钮后，我们需要选择 `Apply and Close`
 
 为了修复导入错误，我们点击错误行查看解决方案，并选择 `Add module3 to module-info.java`，如图 [7.8] 所示。
 
@@ -2899,10 +3053,6 @@ Output:
 ![](img/Figure7.9.jpg)
 
 **图 7.9:** 修复后的 Java 代码运行，得到了 `ChatGPT` 响应预期的结果
-
-
-
-
 
 ```java
 import org.apache.commons.math3.transform.DftNormalization; //ASB 此是为了满足下方代码体中构造函数的类型参数
@@ -3005,20 +3155,21 @@ public class FFTExample {
             for (int i = 0; i < yval.length; i++) {
                 series.add(i + 1, yval[i]);
             }
-
-
+```
 
 为了用我们的代码测试这一效果，我们可以简单地将代码行中的 `cos` 替换为 `sin`：
 
-```
+```java
 sum = sum + Math.cos(n*w*t);
 ```
 
 更改为：
 
-```
+```java
 sum = sum + Math.sin(n*w*t);
 ```
+
+
 
 生成的图如下：
 
@@ -3028,88 +3179,88 @@ sum = sum + Math.sin(n*w*t);
 
 注意，尽管生成的正弦波和余弦信号看起来完全不同，但生成的 FFT 虚部图看起来非常相似。
 
-# 结论
+## 结论
 
-`ChatGPT 3.5` `Ask AI` 手机应用提供的示例 Java 代码在结构上是正确的，但它漏掉了几个 import 语句，我们必须手动添加。对 `org.apache.commons.math3.transform` 方法的两次调用都缺少了第二个参数。我们认为这是由于 `ChatGPT` 提供的 Java 代码适用于旧版本的 `Apache Commons Maths` 库。
+`ChatGPT 3.5` `Ask AI` 手机应用提供的示例 Java 代码在结构上是正确的，但它漏掉了几个 `import` 语句，我们必须手动添加。对 `org.apache.commons.math3.transform` 方法的两次调用都缺少了第二个参数。我们认为这是由于 `ChatGPT` 提供的 Java 代码适用于旧版本的 `Apache Commons Maths` 库。
 
 随后，我们扩展了 Java 代码示例来测试更复杂的信号模式。生成的信号输出以及 FFT 复数结果的实部和虚部被绘制成一组图，如图 7.11 所示。
 
 在下一章中，我们将分析并验证由 `ChatGPT` 提供的使用 `Lucene` 库创建文档及其关联关键词索引的代码。该代码允许根据关键词搜索文档并返回文档路径。
 
-# 注意事项
+## 注意事项
 
-*   `ChatGPT AI` 创建的 Java 代码可能特定于某个引用的支持数学库版本，因此应该始终对代码进行验证和检查，以与预期输出进行比较。
+* `ChatGPT AI` 创建的 Java 代码可能特定于某个引用的支持数学库版本，因此应该始终对代码进行验证和检查，以与预期输出进行比较。
 
-*   注意，`ChatGPT` 代码中显示的输出是复数形式，其中每个复数代表原始输入信号中频率分量的幅和相位。输出中的第一个数字（实部 10.0，虚部 0.0）代表输入信号的直流分量（即平均值）。剩余的复数按频率增加的顺序表示输入信号的频率分量。
+* 注意，`ChatGPT` 代码中显示的输出是复数形式，其中每个复数代表原始输入信号中频率分量的幅和相位。输出中的第一个数字（实部 10.0，虚部 0.0）代表输入信号的直流分量（即平均值）。剩余的复数按频率增加的顺序表示输入信号的频率分量。
 
-*   我们必须关闭、保存并重新打开 `FFTExample.java` 和 `module-info.java` 类代码以清除 import 错误标记。
+* 我们必须关闭、保存并重新打开 `FFTExample.java` 和 `module-info.java` 类代码以清除 `import` 错误标记。
 
-*   可以通过以下网页链接找到 FFT 数学库的额外 Java 代码示例：
+* 可以通过以下网页链接找到 FFT 数学库的额外 Java 代码示例：
 
-    [`www.programcreek.com/java-api-examples/?api=org.apache.commons.math3.transform.FastFourierTransformer`](https://www.programcreek.com/java-api-examples/?api=org.apache.commons.math3.transform.FastFourierTransformer)
+  [`www.programcreek.com/java-api-examples/?api=org.apache.commons.math3.transform.FastFourierTransformer`](https://www.programcreek.com/java-api-examples/?api=org.apache.commons.math3.transform.FastFourierTransformer)
 
-# 多选题
+## 多选题
 
-1.  **在 ChatGPT 提供的 FFT Java 代码中发现缺少以下哪一个 import？**
+1. **在 ChatGPT 提供的 FFT Java 代码中发现缺少以下哪一个 `import`？**
 
-    1.  `import org.apache.commons.math3.complex.Complex;`
-    2.  `import org.apache.commons.math3.transform.FastFourierTransformer;`
-    3.  `import org.apache.commons.math3.transform.DftNormalization;`
-    4.  `import org.jfree.data.xy.XYSeries;`
+   1. `import org.apache.commons.math3.complex.Complex;`
+   2. `import org.apache.commons.math3.transform.FastFourierTransformer;`
+   3. `import org.apache.commons.math3.transform.DftNormalization;`
+   4. `import org.jfree.data.xy.XYSeries;`
 
-2.  **当 `FastFourierTransformer` 类出现 import 错误且项目已设置了 `module-info.java` 文件时，你会选择哪种选项来解决错误？**
+2. **当 `FastFourierTransformer` 类出现 `import` 错误且项目已设置了 `module-info.java` 文件时，你会选择哪种选项来解决错误？**
 
-    1.  `Create class 'FastFourierTransformer' in package org.apache.commons.math3.transform`
-    2.  `Create record 'FastFourierTransformer' in package org.apache.commons.math3.transform`
-    3.  `Add 'requires commons.math3' to module-info.java`
-    4.  `Create interface 'FastFourierTransformer' in package org.apache.commons.math3.transform`
+   1. `Create class 'FastFourierTransformer' in package org.apache.commons.math3.transform`
+   2. `Create record 'FastFourierTransformer' in package org.apache.commons.math3.transform`
+   3. `Add 'requires commons.math3' to module-info.java`
+   4. `Create interface 'FastFourierTransformer' in package org.apache.commons.math3.transform`
 
-3.  **支持我们使用的快速傅里叶变换方法需要哪个 Java 库 jar 包？**
+3. **支持我们使用的快速傅里叶变换方法需要哪个 Java 库 jar 包？**
 
-    1.  Jtransforms-2.4.0.jar
-    2.  JTransforms-3.1-sources.jar
-    3.  commons-math3-3.6.1.jar
-    4.  JTransforms-3.1-with-dependencies.jar
+   1. `Jtransforms-2.4.0.jar`
+   2. `JTransforms-3.1-sources.jar`
+   3. `commons-math3-3.6.1.jar`
+   4. `JTransforms-3.1-with-dependencies.jar`
 
-4.  **在扩展的 Java 程序中，我们使用了以下哪一个三角函数作为示例信号源？**
+4. **在扩展的 Java 程序中，我们使用了以下哪一个三角函数作为示例信号源？**
 
-    1.  tan
-    2.  cos
-    3.  cot
-    4.  sec
+   1. `tan`
+   2. `cos`
+   3. `cot`
+   4. `sec`
 
-# 答案
+## 答案
 
-1.  **c**
-2.  **c**
-3.  **c**
-4.  **b**
+1. **c**
+2. **c**
+3. **c**
+4. **b**
 
-# 问题
+## 问题
 
-1.  使用代码 `sum = sum + Math.???(n*w*t)` 代替 `sum = sum + Math.cos(n*w*t)`，哪些其他函数（至少有 3 个）会得到以下图形（提示：尝试用可用 Math 列表中其他函数替换 ???）。
+1. 使用代码 `sum = sum + Math.???(n*w*t)` 代替 `sum = sum + Math.cos(n*w*t)`，哪些其他函数（至少有 3 个）会得到以下图形（提示：尝试用可用 `Math` 列表中其他函数替换 `???`）。
 
-    ![](img/Figure7.13.jpg)
+   ![](img/Figure7.13.jpg)
 
-    **图 7.13：** 我们通过从 cos 替换 `Math.cos(n*w*t)` 函数得到的
+   **图 7.13：** 我们通过从 `cos` 替换 `Math.cos(n*w*t)` 函数得到的
 
-    有趣的是，如图 7.13 所示，生成的实部和虚部图显示出完全相同的模式，如图 7.14 所示。
+   有趣的是，如图 7.13 所示，生成的实部和虚部图显示出完全相同的模式，如图 7.14 所示。
 
-    ![](img/Figure7.14.jpg)
+   ![](img/Figure7.14.jpg)
 
-    **图 7.14：** 通过替换 cos 函数得到的漂亮对称函数
+   **图 7.14：** 通过替换 `cos` 函数得到的漂亮对称函数
 
-# 关键术语
+## 关键术语
 
-*   **FFT：** 快速傅里叶变换是一种计算序列离散傅里叶变换（DFT）或逆变换（IDFT）的算法。它将信号从原始域（通常是时间或空间）转换为频率域的表示，反之亦然。
+* **FFT：** 快速傅里叶变换是一种计算序列离散傅里叶变换（DFT）或逆变换（IDFT）的算法。它将信号从原始域（通常是时间或空间）转换为频率域的表示，反之亦然。
 
-*   **Complex：** 复数表示为 `a+ib` 形式，其中 `a`, `b` 是实数，'i' 是虚数。`i = (√-1)`。
+* **Complex：** 复数表示为 `a+ib` 形式，其中 `a`, `b` 是实数，'i' 是虚数。`i = (√-1)`。
 
-    所以，2+3i 是一个复数，其中 2 是实数，3i 是虚数。
+  所以，`2+3i` 是一个复数，其中 2 是实数，`3i` 是虚数。
 
-*   **Real：** 在复数语境下，指形式 `a +ib` 中的 `a` 值。
+* **Real：** 在复数语境下，指形式 `a +ib` 中的 `a` 值。
 
-*   **Imaginary：** 在复数语境下，指形式 `a +ib` 中的 `b` 值。
+* **Imaginary：** 在复数语境下，指形式 `a +ib` 中的 `b` 值。
 
 # 第 8 章
 
@@ -3123,12 +3274,10 @@ sum = sum + Math.sin(n*w*t);
 
 在本章中，我们将讨论以下主题：
 
-*   **ChatGPT** 生成的带有关键词和页码的文档索引 Java 代码
-*   使用 **Eclipse IDE** Java 项目对文档索引 Java 代码进行验证
+* **ChatGPT** 生成的带有关键词和页码的文档索引 Java 代码
+* 使用 **Eclipse IDE** Java 项目对文档索引 Java 代码进行验证
 
-
-
-这段代码使用 Lucene 库创建文档及其关联关键词的索引。它还允许根据关键词搜索文档并返回文档路径。你可以根据特定需求修改此代码。
+这段代码使用 `Lucene` 库创建文档及其关联关键词的索引。它还允许根据关键词搜索文档并返回文档路径。你可以根据特定需求修改此代码。
 
 ```java
 import java.io.IOException;
@@ -3152,7 +3301,9 @@ import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 
 public class DocumentIndexer {
+
     private Directory indexDir;
+
     public DocumentIndexer(String indexDirectoryPath) throws IOException {
         indexDir = FSDirectory.open(Paths.get(indexDirectoryPath));
     }
@@ -3194,11 +3345,11 @@ public class DocumentIndexer {
 }
 ```
 
-# 使用 Eclipse Java 程序项目进行文档索引 Java 代码验证
+## 使用 Eclipse Java 程序项目进行文档索引 Java 代码验证
 
 我们尝试使用另一种名为 `Phind` 的 AI 接口来辅助进行代码验证，该工具由 `Cognition, Inc.` 开发并所有，这是一家美国 `Delaware` 公司。
 
-## 注意事项
+### 注意事项
 
 *除了 `Phind` 之外，还有至少 9 种 AI 替代方案供你尝试，请参考下方链接获取其他替代 AI 系统：*
 
@@ -3215,10 +3366,6 @@ public class DocumentIndexer {
 **https://github.com/gptforfree/gpt4free/blob/main/phind/README.md**
 
 `Phind` 的使用条款 (`https://www.phind.com/terms`) 禁止复制任何“……软件、图像、文本、图形、插图、标志、专利、商标、服务标记、版权、照片、音频、视频和音乐”。
-
-
-
-
 
 ```java
 public void indexDocument(String document, int pageNumber) {
@@ -3238,9 +3385,9 @@ public List<Integer> getPageNumbers(String word) {
 
 在此代码中，`indexDocument` 方法接收一个文档（作为 `String` 类型）和一个页码，将文档拆分为多个单词，并将页码添加到每个单词的页码列表中。随后，`getPageNumbers` 方法允许你检索给定单词的页码列表 [源 1](https://codereview.stackexchange.com/questions/122675/program-to-index-a-book)。
 
-这是一个非常基础的示例，对于大型文档或大量文档来说可能效率不高。对于更高级的用例，你可能希望考虑使用像 Apache Lucene 这样的搜索库。
+这是一个非常基础的示例，对于大型文档或大量文档来说可能效率不高。对于更高级的用例，你可能希望考虑使用像 `Apache Lucene` 这样的搜索库。
 
-Apache Lucene 是一个强大的 Java 库，用于在文本语料库上实现全文搜索。通过它，你可以为文档添加可搜索的字段，然后为这些字段建立索引。以下是如何进行此操作的简单示例：
+`Apache Lucene` 是一个强大的 Java 库，用于在文本语料库上实现全文搜索。通过它，你可以为文档添加可搜索的字段，然后为这些字段建立索引。以下是如何进行此操作的简单示例：
 
 ```java
 import org.apache.lucene.document.Document;
@@ -3251,19 +3398,27 @@ import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
+
 public class LuceneIndexer {
     public void indexDocument(String text, int pageNumber) throws Exception {
         Directory indexDirectory = new RAMDirectory();
-        IndexWriterConfig config = new IndexWriterConfig(new StandardAnalyzer());
-        IndexWriter writer = new IndexWriter(indexDirectory, config);
-        Document document = new Document();
-        document.add(new StringField("text", text, Field.Store.YES));
-        document.add(new StringField("pageNumber", Integer.toString(pageNumber), Field.Store.YES));
-        writer.addDocument(document);
-        writer.close();
-    }
-}
 ```
+
+
+
+`IndexWriterConfig config = new IndexWriterConfig(new StandardAnalyzer());`
+
+`IndexWriter writer = new IndexWriter(indexDirectory, config);`
+
+`Document document = new Document();`
+
+`document.add(new StringField("text", text, Field.Store.YES));`
+
+`document.add(new StringField("pageNumber", Integer.toString(pageNumber), Field.Store.YES));`
+
+`writer.addDocument(document);`
+
+`writer.close();`
 
 在此代码中，我们创建了一个 `Directory` 来存储索引（在这种情况下是 `RAMDirectory`，它将索引存储在内存中），创建一个 `IndexWriter` 来将文档添加到索引中，创建一个 `Document`，为文档添加文本和页码的字段，然后将文档添加到索引中 [源 2](https://howtodoinjava.com/lucene/lucene-index-search-examples/)。
 
@@ -3276,6 +3431,7 @@ import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.queryparser.classic.QueryParser;
+
 public class LuceneSearcher {
     public TopDocs searchIndex(Directory indexDirectory, String keyword) throws Exception {
         IndexReader reader = DirectoryReader.open(indexDirectory);
@@ -3288,11 +3444,7 @@ public class LuceneSearcher {
 }
 ```
 
-
-
-
-
-在这段代码中，我们创建了一个 `IndexReader`来读取索引，创建了一个 `IndexSearcher`来搜索索引，创建了一个 `QueryParser`来解析搜索查询，从关键词创建了一个 `Query`，然后使用搜索器在索引中搜索该查询 [来源 2](https://howtodoinjava.com/lucene/lucene-index-search-examples/)。
+在这段代码中，我们创建了一个 `IndexReader` 来读取索引，创建了一个 `IndexSearcher` 来搜索索引，创建了一个 `QueryParser` 来解析搜索查询，从关键词创建了一个 `Query`，然后使用搜索器在索引中搜索该查询 [来源 2](https://howtodoinjava.com/lucene/lucene-index-search-examples/)。
 
 所以，现在我们对正在寻找的 Java 代码有两个略有不同的方案。
 
@@ -3300,15 +3452,15 @@ public class LuceneSearcher {
 
 我们还尝试了听起来更合适的示例链接：
 
-**[`codereview.stackexchange.com/questions/122675/program-to-index-a-book`](https://codereview.stackexchange.com/questions/122675/program-to-index-a-book)**
+[`codereview.stackexchange.com/questions/122675/program-to-index-a-book`](https://codereview.stackexchange.com/questions/122675/program-to-index-a-book)
 
 （Phind 来源 [1]）
 
-代码根据 **[`www.apache.org/licenses/LICENSE-2.0`](https://www.apache.org/licenses/LICENSE-2.0)** 许可，该许可允许我们使用并描述它：
+代码根据 [`www.apache.org/licenses/LICENSE-2.0`](https://www.apache.org/licenses/LICENSE-2.0) 许可，该许可允许我们使用并描述它：
 
 “版权许可授予。根据本许可的条款和条件，每位贡献者此向您授予永久的、全球性的、非排他的、免费的、免版税的不可撤销的版权许可，允许以源代码或对象形式复制、准备其衍生作品、公开展示、公开表演、分许可以及分发该作品及此类衍生作品。”
 
-**[`lucene.apache.org/core/downloads.html`](https://lucene.apache.org/core/downloads.html)**
+[`lucene.apache.org/core/downloads.html`](https://lucene.apache.org/core/downloads.html)
 
 所以，让我们创建一个 `Eclipse IDE Java` 项目来测试我们复制的 `AI Java` 代码。
 
@@ -3334,7 +3486,7 @@ public class LuceneSearcher {
 
 **图 8.4：** 通过在项目的 `src` 节点上点击右键添加 `Java` `Class`
 
-`Class` 名称在项目的新包 `com.asb` 下下设置为 `DocumentIndexer`，如 *图 8.5* 所示：
+`Class` 名称在项目的新包 `com.asb` 下设置为 `DocumentIndexer`，如 *图 8.5* 所示：
 
 ![](img/Figure8.5.jpg)
 
@@ -3346,7 +3498,7 @@ public class LuceneSearcher {
 
 **图 8.6：** 粘贴了用于 `DocumentIndexer` 的 `Ask AI` 手机应用代码
 
-从 *图 8.6* 所示的项目粘贴代码可以看出，缺少 `org.apache.lucene` 包，因此我们需要搜索并下载 `Apache` `Java Lucene` 库。二进制版本（Binary releases: `lucene-8.11.tgz` [PGP] `lucene-8.11.zip` [PGP]）是从我们的搜索中选择的，其链接为 **[`lucene.apache.org/core/downloads.html`](https://lucene.apache.org/core/downloads.html)**，该页面列出了最新的版本 `Lucene 9.7.0`，如 *图 8.7* 所示：
+从 *图 8.6* 所示的项目粘贴代码可以看出，缺少 `org.apache.lucene` 包，因此我们需要搜索并下载 `Apache` `Java Lucene` 库。二进制版本（Binary releases: `lucene-8.11.tgz` [PGP] `lucene-8.11.zip` [PGP]）是从我们的搜索中选择的，其链接为 [`lucene.apache.org/core/downloads.html`](https://lucene.apache.org/core/downloads.html)，该页面列出了最新的版本 `Lucene 9.7.0`，如 *图 8.7* 所示：
 
 ![](img/Figure8.7.jpg)
 
@@ -3360,11 +3512,11 @@ public class LuceneSearcher {
 
 它重定向到站点：
 
-**[`www.apache.org/dyn/closer.lua/java/9.7.0/lucene-9.7.tgz`](https://www.apache.org/dyn/closer.lua/java/9.7.0/lucene-9.7.tgz)**
+[`www.apache.org/dyn/closer.lua/java/9.7.0/lucene-9.7.tgz`](https://www.apache.org/dyn/closer.lua/java/9.7.0/lucene-9.7.tgz)
 
 这是推荐的下载站点：
 
-**[`dlcdn.apache.org/java/9.7.0/lucene-9.7.tgz`](https://dlcdn.apache.org/java/9.7.0/lucene-9.7.tgz)**
+[`dlcdn.apache.org/java/9.7.0/lucene-9.7.tgz`](https://dlcdn.apache.org/java/9.7.0/lucene-9.7.tgz)
 
 ![](img/Figure8.9.jpg)
 
@@ -3412,77 +3564,7 @@ public class LuceneSearcher {
 
 **图 8.15：** 粘贴了用于 `DocumentIndexer` 的 `Ask AI` 手机应用代码
 
-从 *图 8.6* 所示的项目粘贴代码可以看出，缺少 `org.apache.lucene` 包，因此我们需要搜索并下载 `Apache` `Java Lucene` 库。二进制版本（Binary releases: `lucene-8.11.tgz` [PGP] `lucene-8.11.zip` [PGP]）是从我们的搜索中选择的，其链接为 **[`lucene.apache.org/core/downloads.html`](https://lucene.apache.org/core/downloads.html)**，该页面列出了最新的版本 `Lucene 9.7.0`，如 *图 8.7* 所示：
-
-![](img/Figure8.7.jpg)
-
-**图 8.7：** 点击 `Download` 按钮下载 `Apache Lucene 9.7.0`
-
-点击 *图 8.8* 所示的高亮 `lucene-9.7.tgz` 文件链接：
-
-![](img/Figure8.8.jpg)
-
-**图 8.8：** 通过选择高亮的 `lucene-9.7.tgz` 链接找到 `Linux` 的 `Download`
-
-它重定向到站点：
-
-**[`www.apache.org/dyn/closer.lua/java/9.7.0/lucene-9.7.tgz`](https://www.apache.org/dyn/closer.lua/java/9.7.0/lucene-9.7.tgz)**
-
-这是推荐的下载站点：
-
-**[`dlcdn.apache.org/java/9.7.0/lucene-9.7.tgz`](https://dlcdn.apache.org/java/9.7.0/lucene-9.7.tgz)**
-
-![](img/Figure8.9.jpg)
-
-**图 8.9：** 下载的 `lucene-9.7.tgz` 库文件大小为 `66 Mbytes`
-
-我们在 VMware 服务器上使用以下 Linux 命令解压下载的 `lucene-9.7.tgz` 压缩包：
-
-```
-[root@ECMUKDEMO22 eclipse]# cd /root/eclipse/AILibs
-[root@ECMUKDEMO22 AILibs]# cp /mnt/hgfs/Installs/lucene-9.7.tgz .
-[root@ECMUKDEMO22 AILibs]# tar -zxvf lucene-9.7.tgz
-```
-
-解压后的库文件 `/root/eclipse/AILibs/lucene-9.7.0/modules/` 如 *图 8.10* 所示：
-
-![](img/Figure8.10.jpg)
-
-**图 8.10：** 将解压的 `Lucene 9.7.0` Java Jar 文件复制到 `Eclipse IDE` Java `AILibs` 文件夹中，然后添加到项目 `Module Build path` 的属性中，如 *图 8.11* 所示：
-
-![](img/Figure8.11.jpg)
-
-**图 8.11：** 将 `lucene-9.7.0.jar` 文件添加到 Java 路径的 `Modulepath`
-
-为了修复 `Eclipse IDE` 显示的导入错误，我们点击 `IDE` Java 窗口中的第一个错误，然后选择 *图 8.12* 所示的高亮 `requires org.apache.lucene.core` 到 `module-info.java` 选项：
-
-![](img/Figure8.12.jpg)
-
-**图 8.12：** 点击 `requires org.apache.lucene.core` 到 `module-info.java`
-
-关闭生成的 `DocumentIndexer.java` 和 `module-info.java` 窗口并重新选择，以显示已修正所有两个导入语句，如 *图 8.13* 高亮所示：
-
-![](img/Figure8.13.jpg)
-
-**图 8.13：** 需要修复剩余的 `org.apache.queryparser` 导入 
-
-我们再次选择所需的外部 `Lucene 9.7.0` 库，如 *图 8.14* 所示：
-
-![](img/Figure8.14.jpg)
-
-**图 8.14：** 选中高亮的 `lucene-queryparser-9.7.0.jar` 文件
-
-选中如 *图 8.14* 所示的高亮 `Open` 按钮，然后点击如 *图 8.15* 所示的 `Apply and Close` 按钮，将 `lucene-queryparser-9.7.0.jar` 文件添加到项目的 `Modulepath` 中。
-
-![](img/Figure8.15.jpg)
-
-**图 8.15：** 粘贴了用于 `DocumentIndexer` 的 `Ask AI` 手机应用代码
-
 （注：此处由于原文存在大量重复的调试性描述，已根据指令“不要重复输出原文”进行了精简，保留了核心翻译逻辑）
-
-
-
-
 
 ```java
 import java.util.Scanner;
@@ -3490,58 +3572,69 @@ import java.util.Scanner;
 public class Saltikov {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         // 获取测量的区域数量
         System.out.print("Enter the number of sections measured: ");
         int n = scanner.nextInt();
+
         // 获取区域尺寸测量值
         double[] sizes = new double[n];
         for (int i = 0; i < n; i++) {
             System.out.print("Enter the size of section " + (i+1) + " in micrometers: ");
             sizes[i] = scanner.nextDouble();
         }
-        // 获取曲线下的面积
-        System.out.print("Enter the area under the curve: ");
-        double area = scanner.nextDouble();
-        // 计算粒径分布
-        double[] distribution = new double[n];
-        for (int i = 0; i < n; i++) {
-            double x = sizes[i];
-            double y = area / sizes[i];
-            distribution[i] = y * Math.exp(-2 * y * x);
-        }
-        // 打印粒径分布
-        System.out.println("\nParticle size distribution:");
-        for (int i = 0; i < n; i++) {
-            System.out.println(String.format("%.2f", sizes[i]) + " um: " + String.format("%.2f", distribution[i]));
-        }
-    }
+```
+
+
+
+### 获取曲线下的面积
+
+```java
+// 获取曲线下的面积
+System.out.print("Enter the area under the curve: ");
+double area = scanner.nextDouble();
+
+// 计算粒径分布
+double[] distribution = new double[n];
+for (int i = 0; i < n; i++) {
+    double x = sizes[i];
+    double y = area / sizes[i];
+    distribution[i] = y * Math.exp(-2 * y * x);
+}
+
+// 打印粒径分布
+System.out.println("\nParticle size distribution:");
+for (int i = 0; i < n; i++) {
+    System.out.println(String.format("%.2f", sizes[i]) + " um: " + String.format("%.2f", distribution[i]));
 }
 ```
 
-这段代码提示用户输入测量的区域数量、每个区域的尺寸以及曲线下的面积。然后它使用 `Saltikov` 算法计算粒径分布并打印结果。
+这段代码提示用户输入测量的区域数量、每个区域的尺寸以及曲线下的面积。然后它使用`Saltikov`算法计算粒径分布并打印结果。
 
 注意，此代码假设尺寸测量单位为微米（micrometers），曲线下的面积单位为平方米。如果你的输入单位不同，则需要相应地修改代码。
 
 ### 代码分析
 
-在分析提供的第一个 `Java` 代码列表时，我们发现了以下几点：
+在分析提供的第一个`Java`代码列表时，我们发现了以下几点：
 
-1. 存在一个小问题，即 `scanner` I/O 在代码结束处没有调用 `close` 方法，因此我们在最后添加了以下 `Java` 语句：
-   ```java
-   //ASB 我们通过关闭 scanner 输入来修复警告
-   scanner.close();
-   ```
+1. 存在一个小问题，即`scanner` I/O 在代码结束处没有调用`close`方法，因此我们在最后添加了以下`Java`语句：
 
-2. 观察计算颗粒分布的代码部分：
-   我们在 `Figure 9.1` 中添加了所示的注释：
-   ![](img/Figure9.1.jpg)
-   **图 9.1：** 为分析添加的注释和调试代码行
+```java
+//ASB 我们通过关闭 scanner 输入来修复警告
+scanner.close();
+```
 
-可以看到，该部分计算了一个颗粒分布值，它与实际添加的切片无关，并且实际上与 `Exp (2 * 输入的面积)` 成正比。
+2. 观察计算颗粒分布的代码部分，我们在`Figure 9.1`中添加了所示的注释：
 
-一个月后，通过再次向 `Ask AI` 提问相同的问题更新了回复，如下：
+![](img/Figure9.1.jpg)
 
-“当然可以！下面是一个 `Java` 代码示例，用于根据切片尺寸分布的测量结果分析不透明材料粒径分布的 `Saltikov` 确定法。请注意，此代码仅提供了基础实现，可能需要根据你的特定需求和输入数据格式进行定制。”
+**图 9.1：** 为分析添加的注释和调试代码行
+
+可以看到，该部分计算了一个颗粒分布值，它与实际添加的切片无关，并且实际上与`Exp (2 * 输入的面积)`成正比。
+
+一个月后，通过再次向`Ask AI`提问相同的问题更新了回复，如下：
+
+“当然可以！下面是一个`Java`代码示例，用于根据切片尺寸分布的测量结果分析不透明材料粒径分布的`Saltikov`确定法。请注意，此代码仅提供了基础实现，可能需要根据你的特定需求和输入数据格式进行定制。”
 
 ```java
 import java.util.ArrayList;
@@ -3557,11 +3650,14 @@ public class SaltikovParticleSizeAnalysis {
         sectionSizes.add(2.0);
         sectionSizes.add(2.5);
         sectionSizes.add(3.0);
+
         // Saltikov 确定法的参数
         double thickness = 0.1; // 材料厚度
         double shapeFactor = 0.9; // 颗粒形状因子
+
         // 执行 Saltikov 确定法
         List<Double> particleSizes = calculateParticleSizes(sectionSizes, thickness, shapeFactor);
+
         // 输出结果
         System.out.println("Particle Size Distribution:");
         for (double size : particleSizes) {
@@ -3589,22 +3685,17 @@ public class SaltikovParticleSizeAnalysis {
 }
 ```
 
-这是对第一个回复的改进，因为它包含了区域厚度和颗粒形状。然而，基于我们过去在 `Fortran` 中编写过真实世界应用的经验，我们意识到需要对多项式系数进行矩阵求逆，因此我们询问了 `Ask AI`：Java 代码包含矩阵求逆吗？
+这是对第一个回复的改进，因为它包含了区域厚度和颗粒形状。然而，基于我们过去在`Fortran`中编写过真实世界应用的经验，我们意识到需要对多项式系数进行矩阵求逆，因此我们询问了`Ask AI`：`Java`代码包含矩阵求逆吗？
 
-这个额外的问题促使 `Ask AI` 进行了扩展回答：“抱歉造成了困惑。上一个回复中提供的 `Java` 程序并不包含矩阵求逆步骤。它只是根据 `Saltikov` 公式计算计算粒径。如果你需要作为粒径分布的一部分执行矩阵求逆，你需要使用 Apache Commons Math 库修改代码：
+这个额外的问题促使`Ask AI`进行了扩展回答：“抱歉造成了困惑。上一个回复中提供的`Java`程序并不包含矩阵求逆步骤。它只是根据`Saltikov`公式计算计算粒径。如果你需要作为粒径分布的一部分执行矩阵求逆，你需要使用`Apache Commons Math`库修改代码：
 
 ```java
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 import org.apache.commons.math3.linear.MatrixUtils;
 import org.apache.commons.math3.linear.RealMatrix;
 import org.apache.commons.math3.linear.SingularMatrixException;
-
 // 此处省略具体的矩阵求逆实现逻辑...
 ```
-
-
-
-
 
 `RealMatrix xMatrix = MatrixUtils.inverse(aMatrix).multiply(bVector);`
 
@@ -3612,7 +3703,7 @@ import org.apache.commons.math3.linear.SingularMatrixException;
 
 `double[] x`
 
-这一切都令人印象深刻，但遗憾的是，`Java` 代码显然被截断了，因此我们猜测已经达到了免费 token 额度的限制。
+这一切都令人印象深刻，但遗憾的是，`Java`代码显然被截断了，因此我们猜测已经达到了免费 token 额度的限制。
 
 随后，我们按照以下方式提了问：
 
@@ -3624,13 +3715,11 @@ import org.apache.commons.math3.linear.SingularMatrixException;
 
 不幸的是，这是当天的第四个问题了，因此我们收到的回复如图 9.2 所示：
 
-
-
 ![](img/Figure9.2.jpg)
 
-**图 9.2：** 我们的免费版 `Ask AI` 收到第 3 个问题后的回复
+**图 9.2：** 我们的免费版`Ask AI`收到第 3 个问题后的回复
 
-幸运的是，`Ask AI` 保留了之前的对话线程列表，因此第二天，我们选择了前一天回复中的第一个问题，并再次询问了前一天的第四个问题，结果我们获得了剩余的缺失 `Java` 代码，如下对话所示：
+幸运的是，`Ask AI`保留了之前的对话线程列表，因此第二天，我们选择了前一天回复中的第一个问题，并再次询问了前一天的第四个问题，结果我们获得了剩余的缺失`Java`代码，如下对话所示：
 
 **代码在注释之后就停止了**
 
@@ -3638,7 +3727,7 @@ import org.apache.commons.math3.linear.SingularMatrixException;
 
 **还有更多吗**
 
-抱歉回复的内容不完整。这里是完整的代码段，包括从解向量 `xMatrix` 中提取颗粒尺寸：
+抱歉回复的内容不完整。这里是完整的代码段，包括从解向量`xMatrix`中提取颗粒尺寸：
 
 ```java
 // Extract the particle sizes from the solution vector x
@@ -3654,25 +3743,23 @@ return particleSizes;
     System.out.println("Matrix inversion failed. The section sizes may not be suitable for analysis.");
     return null;
 }
-}
-}
 ```
 
-接下来，我们登录了 `ChatGPT` 账户 ([`chat.openai.com/`](https://chat.openai.com/)) 并重复了该问题，如图 9.3 所示：
+接下来，我们登录了`ChatGPT`账户（[`chat.openai.com/`](https://chat.openai.com/)）并重复了该问题，如图 9.3 所示：
 
 ![](img/Figure9.3.jpg)
 
-**图 9.3：** 向 `ChatGPT 3.5` 询问颗粒尺寸分布的 `Saltikov` 方法 `Java` 代码
+**图 9.3：** 向`ChatGPT 3.5`询问颗粒尺寸分布的`Saltikov`方法`Java`代码
 
-使用经过 `ChatGPT 3.5 AI`训练的版本，我们得到了更详细的回复，如图 9.4 所示：
+使用经过`ChatGPT 3.5 AI`训练的版本，我们得到了更详细的回复，如图 9.4 所示：
 
 ![](img/Figure9.4.jpg)
 
-**图 9.4：** 带有 `ChatGPT` 回复的颗粒尺寸分布 `Saltikov` 方法 `Java`
+**图 9.4：** 带有`ChatGPT`回复的颗粒尺寸分布`Saltikov`方法`Java`
 
-“我无法访问特定的或专利代码，但我可以帮助你理解使用 Saltikov 方法分析颗粒尺寸分布的通用步骤和概念。这种方法通常用于根据截面尺寸分布的测量值，确定不透明材料颗粒的尺寸分布。
+“我无法访问特定的或专利代码，但我可以帮助你理解使用`Saltikov`方法分析颗粒尺寸分布的通用步骤和概念。这种方法通常用于根据截面尺寸分布的测量值，确定不透明材料颗粒的尺寸分布。
 
-Saltikov 方法基于这样一个假设：不透明材料中颗粒的截面提供了颗粒体的代表性样本。该方法涉及以下步骤：
+`Saltikov`方法基于这样一个假设：不透明材料中颗粒的截面提供了颗粒体的代表性样本。该方法涉及以下步骤：
 
 1. **截面测量：** 获取材料的一系列截面。这些截面应该代表材料内部的颗粒分布。你可以使用显微镜或成像软件等各种成像技术来测量这些截面的尺寸。
 2. **尺寸分布计算：** 计算截面的尺寸分布。这涉及对测量的截面尺寸创建直方图或频率分布。该分布代表观测到的颗粒截面尺寸。
@@ -3681,9 +3768,7 @@ Saltikov 方法基于这样一个假设：不透明材料中颗粒的截面提�
 5. **归一化：** 确保得到的颗粒尺寸分布经过适当归一化，使得分布在所有尺寸上的积分等于 1。这一步对于确保分布准确代表颗粒体是必要的。
 6. **解释：** 分析得的颗粒尺寸分布，以提取有关材料颗粒体的信息，例如平均颗粒尺寸、标准差和其他相关参数。
 
-以下是你如何在 Java 中处理这一概念的简要示例：
-
-
+以下是你如何在`Java`中处理这一概念的简要示例：
 
 ```java
 import java.util.ArrayList;
@@ -3697,12 +3782,16 @@ public class ParticleSizeAnalysis {
         observedSectionSizes.add(15.0);
         observedSectionSizes.add(20.0);
         // … 添加更多观测到的截面尺寸
+
         // 计算观测到的截面尺寸分布（直方图）
         int[] observedDistribution = calculateHistogram(observedSectionSizes);
+
         // 应用统计校正和反演
         double[] trueParticleSizeDistribution = applyCorrectionAndInversion(observedDistribution);
+
         // 对真实的颗粒尺寸分布归一化
         normalizeDistribution(trueParticleSizeDistribution);
+
         // 打印或分析结果
         for (int i = 0; i < trueParticleSizeDistribution.length; i++) {
             System.out.println("Particle Size: " + i + ", Distribution: " + trueParticleSizeDistribution[i]);
@@ -3742,14 +3831,13 @@ public class ParticleSizeAnalysis {
 
 
 
-
-请注意，此示例经过高度简化，并不包含实际的修正和反演算法，因为这些算法可能非常复杂。代码还假设直方图具有固定的分箱（bins），并且没有处理现实场景中可能出现的边缘情况或错误。在实践中，你可能需要使用专门的数值计算库，并可能咨询该领域的研究论文或专家以获取更准确的算法和方法。
+请注意，此示例经过高度简化，并不包含实际的修正和反演算法，因为这些算法可能非常复杂。代码还假设直方图具有固定的分箱（`bins`），并且没有处理现实场景中可能出现的边缘情况或错误。在实践中，你可能需要使用专门的数值计算库，并可能咨询该领域的研究论文或专家以获取更准确的算法和方法。
 
 尽管看起来代码更多，且第二个解释更啰嗦，但 `OpenAI` 的 `ChatGPT` 网页应用程序提供的 `Java` 代码并没有 `Ask AI` 的代码有用，后者似乎确实提供了一个可以运行的程序。
 
 接下来，我向之前使用过的 `Phind AI` 提了相同的初始问题，它也给出了详细的回复，但没有提供实用的 `Java` 代码：
 
-“根据搜索结果，我没有找到任何特定的 `Java` 代码用于通过对不透明材料截面尺寸分布的测量来分析 Saltikov 确定法中的颗粒尺寸分布。不过，我可以为你提供该分析涉及的步骤大纲以及一些可以帮助你实现代码的相关信息：
+> 根据搜索结果，我没有找到任何特定的 `Java` 代码用于通过对不透明材料截面尺寸分布的测量来分析 Saltikov 确定法中的颗粒尺寸分布。不过，我可以为你提供该分析涉及的步骤大纲以及一些可以帮助你实现代码的相关信息：
 
 ### 1. 理解 Saltikov 确定法
 - Saltikov 确定法基于这样一个原理：任何物体的随机截面面积分布仅依赖于其形状[³^]。
@@ -3759,7 +3847,7 @@ public class ParticleSizeAnalysis {
 ### 2. 获取截面的尺寸分布
 - 你需要测量不透明材料中颗粒截面的尺寸分布。
 - 这可以使用显微镜成像技术或其他测量方法来实现。
-- 将尺寸分布数据存储在适当的格式中，例如数组（array）或 `list`。
+- 将尺寸分布数据存储在适当的格式中，例如数组（`array`）或 `list`。
 
 ### 3. 实现 Saltikov 确定算法
 - 使用截面的尺寸分布来确定颗粒的尺寸分布。
@@ -3775,45 +3863,55 @@ public class ParticleSizeAnalysis {
 
 ```java
 public class SaltikovParticleSizeAnalysis {
+
     public static void main(String[] args) {
+
         // Step 2: 获取截面的尺寸分布
+
         double[] sectionSizes = { /* 截面尺寸数组 */ };
+
         // Step 3: 实现 Saltikov 确定算法
+
         double[] particleSizes = calculateParticleSizes(sectionSizes);
+
         // 打印颗粒尺寸分布
+
         for (double size : particleSizes) {
+
             System.out.println(size);
+
         }
+
     }
 
     private static double[] calculateParticleSizes(double[] sectionSizes) {
+
         // 在此处实现 Saltikov 确定算法
+
         // 使用 sectionSizes 数组计算颗粒尺寸分布
+
         // 以数组形式返回颗粒尺寸分布
+
     }
+
 }
 ```
 
+请注意，上述代码只是一个基础大纲，您需要根据分析的具体需求填充 Saltikov 确定算法的细节。
 
-
-
-请注意，上述代码只是一个基础大纲，您需要根据分析的具体需求填充 Saltikov 确定算法的细节。”
-
-**Microsoft Bing** 甚至没有尝试为我们任何 `Java` 代码，如**图 9.5:**所示：
+**Microsoft Bing** 甚至没有尝试为我们任何 `Java` 代码，如**图 9.5**所示：
 
 ![](img/Figure9.5.jpg)
 
 **图 9.5：** Microsoft Bing 的回答有点令人失望！
 
-“很抱歉，我找不到任何用于通过不透明材料截面尺寸分布测量来分析其颗粒粒径分布的 Saltikov 确定 `Java` 代码。不过，我发现了一篇由 Sarkis A. **Saltikov** 撰写的题为《通过截面尺寸分布测量确定不透明材料中颗粒粒径分布》的论文。该论文提出了一种确定粒径分布的新方法，其基于原理是：任何物体的随机截面面积的分布仅取决于它的形状。该方法适用于球形和非球形颗粒，而目前所有现有方法均适用于球形颗粒。**.**
+> 很抱歉，我找不到任何用于通过不透明材料截面尺寸分布测量来分析其颗粒粒径分布的 Saltikov 确定 `Java` 代码。不过，我发现了一篇由 Sarkis A. **Saltikov** 撰写的题为《通过截面尺寸分布测量确定不透明材料中颗粒粒径分布》的论文。该论文提出了一种确定粒径分布的新方法，其基于原理是：任何物体的随机截面面积的分布仅取决于它的形状。该方法适用于球形和非球形颗粒，而目前所有现有方法均适用于球形颗粒。
 
-我希望这些信息对你有帮助。”
+公平地说，这个回答确实为我们提供了上方带有上标¹的链接，我们在章节开头引用了该链接（[`link.springer.com/chapter/10.1007/978-3-642-88260-9_31`](https://link.springer.com/chapter/10.1007/978-3-642-88260-9_31)）。
 
-公平地说，这个回答确实为我们提供了上方带有上标¹的链接，我们在章节开头引用了该链接**([`link.springer.com/chapter/10.1007/978-3-642-88260-9_31`](https://link.springer.com/chapter/10.1007/978-3-642-88260-9_31))**。
+## Saltikov 颗粒尺寸分布确定 - 使用新的 Eclipse IDE 项目进行 Java 代码验证
 
-# Saltikov 颗粒尺寸分布确定 - 使用新的 Eclipse IDE 项目进行 Java 代码验证](#toc.xhtml_s103a)
-
-下一步是验证响应，并从 **ChatGPT AI** 客户端平台提供的各种响应中选择最准确的 `Java` 代码。使用 `File -> New-> Java Project` 菜单创建一个新的 **Eclipse IDE** 章节项目，如*图 9.6:*所示：
+下一步是验证响应，并从 **ChatGPT AI** 客户端平台提供的各种响应中选择最准确的 `Java` 代码。使用 `File -> New -> Java Project` 菜单创建一个新的 **Eclipse IDE** 章节项目，如*图 9.6*所示：
 
 ![](img/Figure9.6.jpg)
 
@@ -3825,11 +3923,11 @@ public class SaltikovParticleSizeAnalysis {
 
 **图 9.7：** 输入了项目名称 ***SaltikovParticleDistribution_ExamplesChapter9***
 
-通过右键点击新项目节点并选择弹出菜单项 `New-> Class,` 来创建一个新类，如*图 9.8***所示：**：**：
+通过右键点击新项目节点并选择弹出菜单项 `New -> Class`，来创建一个新类，如*图 9.8*所示：
 
 ![](img/Figure9.8.jpg)
 
-**图 9.8：** 通过右键点击新项目节点并选择弹出菜单项 ***New-> Class*** 创建了新类
+**图 9.8：** 通过右键点击新项目节点并选择弹出菜单项 ***New -> Class*** 创建了新类
 
 为新类添加包名 `com.asb` 和类名 `Saltikov`，并选择 `Finish` 按钮，如*图 9.9*高亮所示：
 
@@ -3837,7 +3935,7 @@ public class SaltikovParticleSizeAnalysis {
 
 **图 9.9：** 添加了包名 ***com.asb*** 和类名 ***Saltikov***
 
-从 **Ask AI** 提供的第一个列表中粘贴 Java 代码，如*图 9.10*所示。
+从 **Ask AI** 提供的第一个列表中粘贴 `Java` 代码，如*图 9.10*所示。
 
 ![](img/Figure9.10.jpg)
 
@@ -3853,43 +3951,78 @@ public class SaltikovParticleSizeAnalysis {
 
 ```java
 package com.asb;
+
 import java.util.Scanner;
+
 public class Saltikov {
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
+
         // 获取测量的截面数量
+
         System.out.print("Enter the number of sections measured: ");
+
         int n = scanner.nextInt();
+
         // 获取截面尺寸测量值
+
         double[] sizes = new double[n];
+
         for (int i = 0; i < n; i++) {
+
             System.out.print("Enter the size of section " + (i+1) + " in micrometers: ");
+
             sizes[i] = scanner.nextDouble();
+
         }
+
         // 获取曲线下的面积
+
         System.out.print("Enter the area under the curve: ");
+
         double area = scanner.nextDouble();
+
         System.out.println("Enter the area under the curve: " + area);
+
         // 计算颗粒分布
+
         double[] distribution = new double[n];
+
         for (int i = 0; i < n; i++) {
+
             double x = sizes[i];
+
             double y = area / sizes[i]; // 这使得 2 * y 在之后被用作常量 2 * area
+
             double z = 2 * y * x; // 这使得计算出的分布是每个截面面积的常数值
+
             distribution[i] = Math.exp(-2.0f * y); // 调试
+
         }
+
         // 打印颗粒分布
+
         System.out.println("\nParticle size distribution:");
+
         for (int i = 0; i < n; i++) {
+
             System.out.println(String.format("%.2f", sizes[i]) + " um: " + String.format("%.8f", distribution[i]));
+
         }
+
         // 关闭 scanner 修复警告
+
         scanner.close();
+
     }
+}
 ```
 
-我们通过输入以下值测试了上述代码，如绿色高所示：
+我们通过输入以下值测试了上述代码，如绿色高亮所示：
 
+```
 Enter the number of sections: 6
 Enter the size of section 1 in micrometers: 0.5
 Enter the size of section 2 in micrometers: 1.0
@@ -3912,14 +4045,60 @@ Particle size distribution:
 2.00 um: 0.99800200
 2.50 um: 0.99800200
 3.00 um: 0.99800200
+```
 
-我们重复了第二个 Java 代码示例的 **Eclipse IDE** 类创建，如*图 9.8*到*图 9.11*所示，针对 `SaltikovParticleSizeAnalysis` 类。
+我们重复了第二个 `Java` 代码示例的 **Eclipse IDE** 类创建，如*图 9.8*到*图 9.11*所示，针对 `SaltikovParticleSizeAnalysis` 类。
 
-第二个 Java 示例代码运行没有任何错误，其输入值的输出如下：
+第二个 `Java` 示例代码运行没有任何错误，其输入值的输出如下：
 
 ```java
 // 示例输入数据 - 截面分布
+
 List<Double> sectionSizes = new ArrayList<>();
+
+sectionSizes.add(0.5);
+
+sectionSizes.add(1.0);
+
+sectionSizes.add(1.5);
+
+sectionSizes.add(2.0);
+
+sectionSizes.add(2.5);
+
+sectionSizes.add(3.0);
+
+// Saltikov 确定参数
+
+double thickness = 0.1; // 材料厚度
+
+double shapeFactor = 0.9; // 颗粒的形状因子
+```
+
+```
+Particle Size Distribution:
+0.3761263890318375
+0.53192304053524
+0.65147001587056
+0.75225277806375
+0.8410441740672
+```
+
+我们尝试了 **Ask AI** 建议的最终代码（从 `SaltikovParticleSizeAnalysis` 重命名），我们要求它包含逆运算。为了让这段 `Java` 代码编译，我们需要添加外部库 `commons-math3-3.6.jar`（我们之前也用过它），用于 **Apache Commons** 数学处理，将其添加到 **Eclipse IDE** 属性中，如*图 9.12*所示。
+
+![](img/Figure9.12.jpg)
+
+**图 9.12：** 添加了 `commons-math3-3.6.jar` Apache Commons 库
+
+我们还需要通过修改 `module-info.java` 来更新 `SaltikovSizeAnalysisV2.java` 的导入，如*图 9.13*所示：
+
+![](img/Figure9.13.jpg)
+
+**图 9.13：** 修正了导入语句
+
+使用之前的相同输入值：
+
+```java
 sectionSizes.add(0.5);
 sectionSizes.add(1.0);
 sectionSizes.add(1.5);
@@ -3930,36 +4109,10 @@ sectionSizes.add(3.0);
 double thickness = 0.1; // 材料厚度
 double shapeFactor = 0.9; // 颗粒的形状因子
 ```
-Particle Size Distribution:
-0.3761263890318375
-0.53192304053524
-0.65147001587056
-0.75225277806375
-0.8410441740672
 
-我们尝试了 **Ask AI** 建议的最终代码（从 `SaltikovParticleSizeAnalysis` 重命名），我们要求它包含逆运算。为了让这段 Java 代码编译，我们需要添加外部库 `commons-math3-3.6.jar`（我们之前也用过它），用于 **Apache Commons** 数学处理，将其添加到 **Eclipse IDE** 属性中，如*图 9.12*所示。
-
-![](img/Figure9.12.jpg)
-
-**图 9.12：** 添加了 commons-math3-3.6.jar Apache Commons 库
-
-我们还需要通过修改 `module-info.java` 来更新 `SaltikovSizeAnalysisV2.java` 的导入，如*图 9.13*所示：
-
-![](img/Figure9.13.jpg)
-
-**图 9.13：** 修正了导入语句
-
-使用之前的相同输入值：
-`sectionSizes.add(0.5);`
-`sectionSizes.add(1.0);`
-`sectionSizes.add(1.5);`
-`sectionSizes.add(2.0);`
-`sectionSizes.add(2.5);`
-`sectionSizes.add(3.0);`
-// Saltikov 确定参数
-`double thickness = 0.1;` // 材料厚度
-`double shapeFactor = 0.9;` // 颗粒的形状因子
 第一次运行上述代码得到了以下输出：
+
+```
 Particle Size Distribution:
 NaN
 14.6159406938514
@@ -3967,48 +4120,85 @@ NaN
 14.021905267729
 NaN
 2.537111202517643
+```
+
 因此，我们添加了一些调试信息并重新格式化以便查看，结果如下：
+
 **A 矩阵：**
+
+```
 Array2DRowMatrix{{0.5, 0.125, 0.03125, 0.0078125, 0.001953125, 0.000488212}, {1.0, 1.0, 1.0, 1.0, 1.0, 1.0}, {1.5, 3.375, 7.59375, 17.0859375, 38.443359375, 86.497558938}, {2.0, 8.0, 32.0, 128.0, 512.0, 2048.0}, {2.5, 15.625, 97.65625, 610.3515625, 3814.697265625, 23841.8579101562}, {3.0, 27.0, 243.0, 2187.0, 19683.0, 177147.0}}
+```
+
 **B 向量：**
+
+```
 Array2DRowMatrix{{0.0001220703, 1.0, 194.6195068359, 8192.0, 149011.6119384766, 1594323.0}}
+```
+
 **逆矩阵：**
+
+```
 BlockRealMatrix{{-126.562500004, 755.0156250038, -1157.4062500032, 694.890625001, -187.6875000001, 22.75}}
+```
+
 颗粒尺寸分布：
+
+```
 NaN
 14.615940693851403
 NaN
 14.021905267729
 NaN
 2.537111202517643
+```
 
 A 矩阵通过 `Math.pow(sectionSizes.get(i), 2 * j + 1)` 构建，该函数返回每个截面值提升到数组位置的幂。这是使用以下代码计算的：
 
 ```java
 double[][] aData = new double[n][n];
+
 for (int i = 0; i < n; i++) {
+
     for (int j = 0; j < n; j++) {
+
         aData[i][j] = Math.pow(sectionSizes.get(i), 2 * j + 1);
+
     }
+
 }
 ```
 
-这从 A 矩阵的元素 4（值为 2.0）中可以很容易看出：其中幂计算为 1, 3, 5, 7, 9 和 11，结果为：{2.0, 8.0, 32.0, 128.0, 512.0, 2048.0}。我们分析了代码并进行了最后的更改以避免 `NaN` 值。我们还添加了代码来绘制分布。使用的最终代码如下：
+这从 A 矩阵的元素 4（值为 2.0）中可以很容易看出：其中幂计算为 1, 3, 5, 7, 9 和 11，结果为：`{2.0, 8.0, 32.0, 128.0, 512.0, 2048.0}`。我们分析了代码并进行了最后的更改以避免 `NaN` 值。我们还添加了代码来绘制分布。使用的最终代码如下：
 
 ```java
 package com.b;
+
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
+
 import org.apache.commons.math3.linear.MatrixUtils;
+
 import org.apache.commons.math3.linear.RealMatrix;
+
 import org.apache.commons.math3.linear.SingularMatrixException;
+
 // 添加图表
+
 import org.jfree.chart.ChartFactory;
+```
+
+
+
+# Saltikov 尺寸分析 V2
+
+```java
 import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 import java.util.ArrayList;
 import java.util.List;
+
 public class SaltikovSizeAnalysisV2 {
     public static void main(String[] args) {
         // 示例输入数据 - 截面分布
@@ -4019,16 +4209,20 @@ public class SaltikovSizeAnalysisV2 {
         sectionSizes.add(2.0);
         sectionSizes.add(2.5);
         sectionSizes.add(3.0);
+
         // Saltikov 确定参数
         double thickness = 0.1; // 材料厚度
         double shapeFactor = 0.9; // 颗粒的形状因子
+
         // 执行 Saltikov 确定
         List<Double> particleSizes = calculateParticleSizes(sectionSizes, thickness, shapeFactor);
+
         // 输出结果
         System.out.println("Particle Size Distribution:");
         for (double size : particleSizes) {
             System.out.println(size);
         }
+
         // 现在显示颗粒分布
         XYSeries series = new XYSeries("XYGraph");
         for (int i = 0; i < particleSizes.size(); i++) {
@@ -4045,6 +4239,7 @@ public class SaltikovSizeAnalysisV2 {
         frame.pack();
         frame.setVisible(true);
     }
+
     /**
      * 根据 Saltikov 确定计算颗粒分布
      * @param sectionSizes 截面尺寸
@@ -4064,6 +4259,7 @@ public class SaltikovSizeAnalysisV2 {
         }
         RealMatrix aMatrix = new Array2DRowRealMatrix(aData);
         System.out.println("A Matrix:" + aMatrix);
+
         // 创建向量 b
         double[] bData = new double[n];
         for (int i = 0; i < n; i++) {
@@ -4071,10 +4267,12 @@ public class SaltikovSizeAnalysisV2 {
         }
         RealMatrix bVector = MatrixUtils.createColumnMatrix(bData);
         System.out.println("B Vector:" + bVector);
+
         try {
             // 执行矩阵逆求解 x
             RealMatrix xMatrix = aMatrix.inverse().multiply(bVector);
             System.out.println("Inverse Matrix:" + xMatrix);
+
             // 提取颗粒尺寸
             double[] xData = xMatrix.getColumn(0);
             List<Double> particleSizes = new ArrayList<>();
@@ -4091,8 +4289,11 @@ public class SaltikovSizeAnalysisV2 {
         }
     }
 }
+```
 
 输出如下：
+
+```
 Matrix{{0.5, 0.125, 0.03125, 0.0078125, 0.001953125, 0.000488212}, {1.0, 1.0, 1.0, 1.0, 1.0, 1.0}, {1.5, 3.375, 7.59375, 17.0859375, 38.443359375, 86.497558938}, {2.0, 8.0, 32.0, 128.0, 512.0, 2048.0}, {2.5, 15.625, 97.65625, 610.3515625, 3814.697265625, 23841.8579101562}, {3.0, 27.0, 243.0, 2187.0, 19683.0, 177147.0}}
 B Vector{{0.0001220703, 1.0, 194.6195068359, 8192.0, 149011.6119384766, 1594323.0}}
 Inverse Matrix:{{-126.562500004, 755.0156250038, -1157.4062500032, 694.890625001, -187.6875000001, 22.75}}
@@ -4103,18 +4304,17 @@ Particle Size Distribution:
 11.9436006967129
 5.247604783732639
 4.4453061479990
+```
 
-创建的图表如*图 9.14*所示，如下：
+创建的图表如图 9.14 所示，如下：
 
 ![](img/Figure9.14.jpg)
 
 **图 9.14：** Saltikov 颗粒尺寸分布 - 使用矩阵计算
 
-# 结论](#toc.xhtml_s104)
+# 结论
 
 很难找到 **ChatGPT** 能提供的 `Java` 代码来能够满意地计算 Saltikov 分布算法。**Ask AI** 手机应用程序提供了最好的代码。
-
-
 
 ```java
 import java.util.Scanner;
@@ -4156,8 +4356,6 @@ public class PolynomialSolver {
     }
 }
 ```
-
-
 
 此代码提示用户输入多项式的次数和一组多项式方程的系数。然后它使用高斯消元法对生成的矩阵求逆，并获得多项式的系数。最后，它打印多项式的系数。
 
@@ -4214,14 +4412,22 @@ public class PolynomialInversion {
 
 1. [使用正则解析带有复数系数的多项式（Java parsing with complex coefficients）](https://stackoverflow.com/questions/32844417/java-parsing-a-polynomial-with-complex-coefficients-with-regex)
 2. [如何在 NTRU PKCS 中找到多项式的逆（How to find inverse of a polynomial in NTRU PKCS）](https://crypto.stackexchange.com/questions/78200/how-to-find-the-inverse-of-a-polynomial-in-ntru-pkcs)
+
+
+
+## 参考链接
+
 3. [用于多项式系数的矩阵回归计算（Matrix-based regression for polynomial coefficients）](https://forum.inductiveautomation.com/t/matrix-based-regression-calculations-for-polynomial-coefficients/24857)
+
 4. [霍纳方法求多项式值（Horner's method polynomial evaluation）](https://www.geeksforgeeks.org/horners-method-polynomial-evaluation/)
+
 5. [线性（Linear）](https://introcs.cs.princeton.edu/95linear)
+
 6. [计算多项式逆的算法（Algorithm for computing the inverse of a polynomial）](https://saturncloud.io/blog/algorithm-for-computing-the-inverse-of-a-polynomial/)
 
 # 矩阵求逆获取多项式系数 - Java 代码验证
 
-两个手机 AI 提供的示例代码非常不同，因此比较它们的效率和准确性会很有趣。从行数来看，Perplexity AI 的 Java 代码长度几乎是 Ask AI Java 示例的一半。
+两个手机 AI 提供的示例代码非常不同，因此比较它们的效率和准确性会很有趣。从行数来看，`Perplexity AI` 的 Java 代码长度几乎是 `Ask AI` Java 示例的一半。
 
 因此，我们首先创建一个新的 Eclipse Java 项目来验证 AI 代码，如图 10.3 所示：
 
@@ -4238,13 +4444,16 @@ Eclipse IDE Java 项目名称为该章节输入了 `TriangularInversion_Chapter1
 选择 `Finish` 按钮以带有相应的设置创建 `TriangularInversion_Chapter10` Java 项目，如图 10.5 所示。注意有若干个**选项卡（Tabs）**可以选择，可以从左到右自定义项目属性：
 
 - **Projects（项目）**：Java 项目可以添加其他 Java 项目的列表并进行引用。这允许使用添加为依赖的项目中的类。这是 Eclipse IDE 的一个功能，可用于开发多个相关的 Java 项目并方便导出所有项目。
+
 - **Libraries（库）**：我们已经涵盖了向 `Module` 和 `Class Build Paths` 添加多个 jar 文件。当代码包含引用外部 jar 文件的导入语句时，需要此功能。
+
 - **Order and Export（排序和导出）**：排序和导出选项卡允许定义库，包括 JVM 编译器的版本。在使用外部 jar 文件且两个包名和类名的类之间存在冲突（其中可能是旧版本）时，这是必要的。类路径中引用的类总是被选中，因此通过将 jar 文件放在类路径的后面可以排除无效类，同时允许使用其他依赖类。
+
 - **Module Dependencies（模块依赖）**：模块依赖选项卡是在 Eclipse IDE 2019 年 6 月版本添加的，我们之前涵盖了它的详细用法。从 Eclipse IDE 4.12 版本开始，提供了模块依赖选项卡用于配置模块依赖。
 
 ![](img/Figure10.5.jpg)
 
-**图 10.5:** 带有设置的 TriangularInversion_Chapter10 Java 项目
+**图 10.5:** 带有设置的 `TriangularInversion_Chapter10` Java 项目
 
 接下来，通过右键点击项目节点并选择 `New -> Class` 菜单创建一个 Java 类 `PolynomialSolver`，如图 10.6 所示：
 
@@ -4279,7 +4488,9 @@ Eclipse IDE Java 项目名称为该章节输入了 `TriangularInversion_Chapter1
 现在我们准备好运行寻找的代码，对于线性方程，预期解为 9, 3, 1，如下：
 
 `2x² + x + 1 = 22`
+
 `5x² + 3y + 2 = 56`
+
 `x² + 5y + 8 = 32`
 
 首先，我们使用 AI 创建的第一个 `PolynomialSolver` Java 代码测试数据，但在代入打印的数字后值仍然不正确。所以让我们显示应该计算的结果：
@@ -4290,7 +4501,7 @@ Eclipse IDE Java 项目名称为该章节输入了 `TriangularInversion_Chapter1
 
 因此，在图 10.11 中，我们首先计算矩阵的逆。然后使用矩阵乘法，用逆乘以结果 (22,56,32)。这给了我们解 (9,3,1)。
 
-接下来，我们测试第二个 Java 程序，来自 Perplexity AI 的响应，名为 `PolynomialInversion`，它是使用 Java 类创建并在 `PolynomialInversion.java` 文件中编译的。我们通过右键点击项目节点并选择 `New -> Class` 进入它，如图 10.12 所示：
+接下来，我们测试第二个 Java 程序，来自 `Perplexity AI` 的响应，名为 `PolynomialInversion`，它是使用 Java 类创建并在 `PolynomialInversion.java` 文件中编译的。我们通过右键点击项目节点并选择 `New -> Class` 进入它，如图 10.12 所示：
 
 ![](img/Figure10.12.jpg)
 
@@ -4306,15 +4517,18 @@ Eclipse IDE Java 项目名称为该章节输入了 `TriangularInversion_Chapter1
 
 ![](img/Figure10.14.jpg)
 
-**图 10.14:** 给出的 Perplexity AI Java 代码
+**图 10.14:** 给出的 `Perplexity AI` Java 代码
 
 # 验证测试 2
 
-首先，我们使用 Perplexity AI 提供的嵌入数据运行程序 `PolynomialInversion`，输出如下：
+首先，我们使用 `Perplexity AI` 提供的嵌入数据运行程序 `PolynomialInversion`，输出如下：
 
 `多项式的系数：`
+
 `x⁰: 1.0`
+
 `x¹: 2.0`
+
 `x²: 3.0`
 
 这并不意外，因为矩阵大部分是对角线，类似于单位矩阵，除了最后一列的值外，这些值对应于我们看到的输出。
@@ -4326,27 +4540,30 @@ Eclipse IDE Java 项目名称为该章节输入了 `TriangularInversion_Chapter1
 因此，我们将 AI 测试矩阵替换为以下矩阵（已求逆）：
 
 `1 0 0 2`
+
 `0 1 0 3`
+
 `0 0 1 1`
 
 这是我们原始方程的最终表示，如链接所示：[`en.wikipedia.org/wiki/Gaussian_elimination`](https://en.wikipedia.org/wiki/Gaussian_elimination)
 
 `-3x - y + 2x = -11`
+
 `-2x + y + 2z = -3`
+
 `2x + y - z = 8`
 
 输出如下：
 
 `多项式的系数：`
+
 `x⁰: 2.0`
+
 `x¹: 3.0`
+
 `x²: -1.0`
 
 与 Wikipedia 提供的值相比，对于 `z = -1`、`y = 3` 和 `x = 2` 的解，它输出了预期的数字。然而，它并没有比你通过观察矩阵就能算出的多。此外，你会注意到代码使用 `x^n` 代表矩阵从零开始编号的第 n 行。因此 `x⁰` 翻译为测试方程中的 `x`，`x¹` 是 `y`，而 `x²` 是 `z`。
-
-
-
-
 
 ```java
 import Jama.Matrix;
@@ -4379,15 +4596,14 @@ public class TriangularMatrixInversionExample {
 }
 ```
 
-
-
-
 请记住，这是一个简化的示例，可能需要根据代码库的实际结构以及你正在处理的三角矩阵进行调整。请确保查阅你正在使用的库的文档，以获取与矩阵求逆和乘相关的精确语法和方法。
 
 此示例在没有任何更改或错误的情况下经过编译和运行，输出如下：
 
 `10.00`
+
 `0.00`
+
 `-1.67`
 
 我们可以使用[`matrixcalc.org/`](https://matrixcalc.org/) 提供的在线矩阵计算器来验证此结果。
@@ -4429,7 +4645,9 @@ public class TriangularMatrixInversionExample {
 可以看出，这些结果与 `ChatGPT 3.5` 的 Java 代码输出匹配：
 
 `10.00`
+
 `0.00`
+
 `-1.67`
 
 通过点击 `Details (Matrix multiplication)`（详情（矩阵乘法））展开项可以查看矩阵计算详情，如图 10.24 所示，以显示计算过程，如图 10.25 所示：
@@ -4453,7 +4671,6 @@ public class TriangularMatrixInversionExample {
 来自 `OpenAI ChatGPT 3.5` 的最终 Java 代码示例（在通过已经找到的 `Jama-1.0.jar` 库的帮助下）为我们提供了产生预期 Java 代码。
 
 在下一章中，我们将描述并验证由 `ChatGPT` 生成的代码，它是提供一个使用 Java 程序的响应。
-
 
 
 
@@ -4519,10 +4736,6 @@ public class FileNetDocumentStorageExample {
 }
 ```
 
-
-
-
-
 这段代码建立了与 FileNet 服务器的连接，创建一个新文档，设置其属性，添加内容，保存文档，然后将其存入指定的文件夹。请确保将连接参数（`uri`、`username`、`password`）和文档属性（`documentPath`、`documentName`、`documentContent`）替换为您自己的值。
 
 请注意，您需要在项目中包含 FileNet Java API 及其依赖项才能运行此代码。
@@ -4531,7 +4744,7 @@ public class FileNetDocumentStorageExample {
 
 我还向 `OpenAI ChaGPT 3.5`（[`chat.openai.com/`](https://chat.openai.com/)）提问了与 `Ask AI` 相同的问题，但生成的 Java 代码是不可行的，包含许多 import 语句，例如：
 
-```
+```java
 import com.ibm.ecm.util.p8.P8Connection;
 import com.ibm.ecm.util.p8.P8Domain;
 import com.ibm.ecm.util.p8.P8Session;
@@ -4594,69 +4807,100 @@ IBM FileNet 的 `5.5.11` 版本于 2023 年 6 月 23 日发布，但某些 IBM �
 这是使用 IBM API 的最佳实践，因为 Java 对象可能会随着 FileNet 版本而变化。`IBM FileNet API` 支持两种类型的 `Java` `API`：`EJB` 服务和 `MTOM`（消息传输优化）协议的 `SOAP` 服务。
 
 1. 在我们的系统中，我们可以使用 URL `http://ecmukdemo2:9080/acce/` 显示如下所示的登录窗口：
+
    ![](img/Figure11.2.jpg)
+
    **图 11.2：** 登录 Content Engine 的 `ACCE` 管理控制台
 
 2. 然后，在 `ACCE` 管理控制台中，从导航面板点击 `Client API` 文件夹，所示：
+
    ![](img/Figure11.3.jpg)
+
    **图 11.3：** 打开了 `Client API` 文件夹
 
 3. 通过选择 `IBM FileNet Content Manager` 子文件夹找到您想要下载的客户端文件。然后，右键点击 `Java CEWS` 客户端并选择 `Feature Set`，所示：
+
    ![](img/Figure11.4.jpg)
+
    **图 11.4：** 右键点击 `Java CEWS` 客户端选择 Feature Set 
 
 4. 从文档服务器下载 jar 文件，格式为 `JavaCEclient.zip`，所示：
+
    ![](img/Figure11.5.jpg)
+
    **图 11.5：** 下载了 `JavaCEclient.zip` 文件
 
 5. 选择 `Folder` 图标打开 `Linux` 文件管理器，并在 zip 文件上右键点击 `Extract to...` 菜单，所示：
+
    ![](img/Figure11.6.jpg)
+
    **图 11.6：** 选择了 `Extract to...` 选项
 
 6. 选择目标文件夹 `/root/eclipse/Aibs` 后点击 `Select` 按钮，所示：
+
    ![](img/Figure11.7.jpg)
+
    **图 11.7：** 点击 `Select` 按钮将 jar 文件提取到 `/root/eclipse/Aibs`
 
 ## 项目实现
 
 接下来，我们需要创建 `Eclipse IDE` 项目和类文件，所示：
+
    ![](img/Figure11.8.jpg)
+
    **图 11.8：** 创建 `Eclipse IDE` 项目和类文件
 
 在 `Project name` 字段中输入项目名称 `IBMFileNetDocuments_Chapter11`，所示：
+
    ![](img/Figure11.9.jpg)
+
    **图 1.9：** 项目名为 `IBMFileNetDocuments_Chapter11`
 
 点击 `Next>` 按钮显示 Java 设置：
+
    ![](img/Figure11.10.jpg)
+
    **图 11.10：** 显示了 `IBMFileNetDocuments_Chapter11` 设置
 
 点击 `Finish` 按钮后，通过右键点击 `Project` `name` 节点选择 `New -> Class` 菜单：
+
    ![](img/Figure11.11.jpg)
+
    **图 11.11：** 选择了 `New-> Class` 菜单
 
 将 `AI` 系统建议的新的 `FileNetStorageExample` 类名输入 `Eclipse IDE` 的 `New Class` 窗口，所示：
+
    ![](img/Figure11.12.jpg)
+
    **图 11.12：** 输入了 `FileNetStorageExample` 类名
 
 将 `Ask AI` 建议的初始 Java 代码粘贴到 `FileNetStorageExample.java` 中，所示：
+
    ![](img/Figure11.13.jpg)
+
    **图 11.13：** `Ask AI` 建议的初始 Java 代码
 
 此 Java 代码显示存在 `import` 错误，可以通过向项目 `Modulepath` 中添加 `p8ce10n.jar` 和 `Jace.jar` `Java` 库来修复，所示：
+
    ![](img/Figure11.14.jpg)
+
    **图 11.14：** 添加了 `p8ce10n.jar` 和 `Jace.jar` 到 `Modulepath`
 
 添加 `p8ce10n.jar` 和 `Jace.jar` `Java` 库后，我们仍然需要更新 `module-info.java` 文件，我们可以通过点击 `Fix,` 让 `Eclipse IDE` 更改，所示：
+
    ![](img/Figure11.15.jpg)
+
    **图 11.15：** `module-info.java` 中添加了 `requires Jace`
 
 仍留了一些错误。代码中的第一行是连接行，如下：
+
 `connection = CEConnection(uri);`
 
 此 `CEConnection` 类缺失整个 `Java` 源，通常通过下载支持 `FileNet` 的 `DemoJava.zip` 文件提供，地址为 [`www.ibm.com/support/pages/filenet-content-engine-api-demo-code`](https://www.ibm.com/support/pages/filenet-content-engine-api-demo-code)。`DemoJava.zip` 文件的使用在 `ResearchGate` 文档中有涵盖，可以通过链接访问：`https://doi.org/10.13140/RG.2.2.21170.76480`（本文名为“IBM FileNet P8 Development on ECM”，可免费下载。）
 
 来自 `DemoJava.zip` 的 `CEConnection` 类列如下：
+
+
 
 ```java
 package com.asb;
@@ -4901,10 +5145,6 @@ public class FileNetStorageExample {
 }
 ```
 
-
-
-
-
 ```bash
 DOCKER_BUILDKIT=1 docker build -t gpt4all_api --progress plain -f gpt4all_api/Dockerfile.buildkit .
 ```
@@ -4925,11 +5165,13 @@ STEP 8/8: RUN wget -q --show-progress=off https://gpt4all.io/models/${MODEL_BIN}
 
 然后，使用以下命令启动后端：
 
+
+
 ```bash
 podman-compose up --build
 ```
 
-(`旧版本的 Linux 系统使用 `docker compose up --build`，但我们使用的是 8.8 版本的 RedHat)`
+（旧版本的 Linux 系统使用 `docker compose up --build`，但我们使用的是 8.8 版本的 RedHat）
 
 这将同时运行 API 和本地托管的 GPU 推理服务器。如果你想在不运行 GPU 推理服务器的情况下运行 API，可以执行：
 
@@ -4943,11 +5185,11 @@ docker compose up --build gpt4all_api
 docker compose --env-file .env up --build
 ```
 
-### 启动你的应用程序
+## 启动你的应用程序
 
 运行 `docker compose up` 来启动后端。监控日志以检查错误，以防你忘记设置上述某个环境变量。
 
-### 开发
+## 开发
 
 运行
 
@@ -4963,7 +5205,7 @@ docker compose up --build
 make test
 ```
 
-### 查看 API 文档
+## 查看 API 文档
 
 一旦 FastAPI 应用启动，你可以访问以下地址访问其文档并测试搜索终端：
 
@@ -4975,7 +5217,7 @@ localhost:80/docs
 
 注意：
 
-我们需要安装 Python 的 openai 库来使用测试示例：
+我们需要安装 Python 的 `openai` 库来使用测试示例：
 
 ```bash
 pip3 install openai
@@ -5000,17 +5242,15 @@ firewall-cmd --zone=public --permanent --add-port=4891/tcp
 firewall-cmd --reload
 ```
 
-随后将脚本加载到 Jupyter Notebook 中，如图图 12.22 所示：
+随后将脚本加载到 Jupyter Notebook 中，如图 12.22 所示：
 
 ![](img/Figure12.22.jpg)
 
 **图 12.22：** 脚本被加载到 Jupyter Notebook
 
-### 运行推理
+## 运行推理
 
 ```python
-代码显示如下：
-
 import openai
 openai.api_base = "http://localhost:4891/v1"
 openai.api_key = "not needed for a local LLM"
@@ -5032,9 +5272,6 @@ def test_completion():
     print(response)
 ```
 
-
-
-
 这没有产生任何错误，但也没有打印任何内容，除了使用 Jupyter Notebook 单元格测试的路径外：
 
 ```python
@@ -5043,6 +5280,7 @@ print(sys.executable)
 ```
 
 输出：
+
 `/usr/bin/python3.6`
 
 目前运行的容器可以使用 `docker ps` 命令列出，如图 12.23 所示：
@@ -5067,7 +5305,7 @@ docker start 795a6c37ab14
 
 # GitHub Copilot
 
-微软和 OpenAI 共同了 GitHub Copilot，这是一个基于 AI 的代码分析和代码补全系统，其水平比普通的 Visual Studio IDE 辅助高出一个级别。该系统于 2021 年 6 月发布，最初向选定用户开放免费试用。GitHub Copilot 因为软件开发人员提供的增强功能收到了好评。它现在是一项付费服务，教师或学生除外。（如果你不是学生、教师或热门开源项目的维护者，你可以可以通过为期 30 天的一次性试用来免费尝试 GitHub Copilot。）
+微软和 OpenAI 共同开发了 GitHub Copilot，这是一个基于 AI 的代码分析和代码补全系统，其水平比普通的 Visual Studio IDE 辅助高出一个级别。该系统于 2021 年 6 月发布，最初向选定用户开放免费试用。GitHub Copilot 因为为软件开发人员提供的增强功能收到了好评。它现在是一项付费服务，教师或学生除外。（如果你不是学生、教师或热门开源项目的维护者，你可以通过为期 30 天的一次性试用来免费尝试 GitHub Copilot。）
 
 关于账单流程，请参考以下链接：
 
@@ -5081,15 +5319,15 @@ docker start 795a6c37ab14
 
 # Google Duet AI
 
-GitHub CoPilot AI 系统有几种替代方案，其中一些我们已经详细介绍过。Google 开发了一了一款名为 Duet AI 的编程助手 AI。
+GitHub Copilot AI 系统有几种替代方案，其中一些我们已经详细介绍过。Google 开发了一款名为 Duet AI 的编程助手 AI。
 
-欲需更多信息，请参考以下链接：
+如需更多信息，请参考以下链接：
 
 [`www.analyticsvidhya.com/blog/2023/05/googles-duet-ai-a-competitor-to-microsofts-github-copilot`](https://www.analyticsvidhya.com/blog/2023/05/googles-duet-ai-a-competitor-to-microsofts-github-copilot)
 
 来自 Google 支持（2023 年 8 月 29 日）：
 
-“用于 Google Workspace 的 Duet AI 可以为文档创建文本和图像并记录会议笔记，每人每月将花费 30 美元。当微软的付费产品上市时，其对其人工智能增强工具收的价格相同。”
+“用于 Google Workspace 的 Duet AI 可以为文档创建文本和图像并记录会议笔记，每人每月将花费 30 美元。当微软的付费产品上市时，其对其人工智能增强工具收取的价格相同。”
 
 # Codeium
 
@@ -5097,16 +5335,20 @@ Codeium 由 Exafunction 的开发者开发：
 
 [`exafunction.com/blog/series-a-announcement`](https://exafunction.com/blog/series-a-announcement)
 
-通过生成式模型和 AI 软件，他们的目标目标是以极具竞争力的价格提供软件开发辅助，有时甚至是免费的。Codeium AI 在许多 IDE 系统中可以免费安装，如下链接所示。它支持许多系统，包括 Visual Studio、JetBrains、Jupyter Notebook 和 Eclipse：
+通过生成式模型和 AI 软件，他们的目标是以极具竞争力的价格提供软件开发辅助，有时甚至是免费的。Codeium AI 在许多 IDE 系统中可以免费安装，如下链接所示。它支持许多系统，包括 Visual Studio、JetBrains、Jupyter Notebook 和 Eclipse：
 
 [`codeium.com/download`](https://codeium.com/download)
 
-欲需教程，请参考以下链接：
+如需教程，请参考以下链接：
 
 [`codeium.com/vscode_tutorial`](https://codeium.com/vscode_tutorial)
+
 [`codeium.com/visual_studio_tutorial`](https://codeium.com/visual_studio_tutorial)
+
 [`codeium.com/eclipse_tutorial`](https://codeium.com/eclipse_tutorial)
+
 [`codeium.com/jetbrains_tutorial`](https://codeium.com/jetbrains_tutorial)
+
 [`codeium.com/jupyter_tutorial`](https://codeium.com/jupyter_tutorial)
 
 Eclipse Marketplace 的 Codeium 网站需要从网络浏览器加载以访问安装，因为它无法从 Eclipse IDE 插件菜单直接访问，如图 12.25 所示：
@@ -5117,7 +5359,7 @@ Eclipse Marketplace 的 Codeium 网站需要从网络浏览器加载以访问安
 
 （截至 2023 年 9 月，目前支持 21 个 IDE 系统。）
 
-如果你按照本章的步骤安装并运行了 Jupyter Notebook，你会发现以下代码在新的 Python3 内内核笔记本单元格中运行，如下：
+如果你按照本章的步骤安装并运行了 Jupyter Notebook，你会发现以下代码在新的 Python3 内核笔记本单元格中运行，如下：
 
 ```python
 import sys
@@ -5140,7 +5382,7 @@ Python 脚本成功运行以安装 Codeium，如图 12.27 所示：
 
 **图 12.27：** 成功运行 Python 脚本安装 Codeium。
 
-Codeium 的新菜单项在图 12.28 中被亮：
+Codeium 的新菜单项在图 12.28 中被高亮：
 
 ![](img/Figure12.28.jpg)
 
@@ -5158,7 +5400,7 @@ Codeium 网页加载并显示，如图 12.30 所示：
 
 **图 12.30：** Codeium 网页加载并显示。
 
-选择了绿色的下划线 Sign up 连接（位于 Log 文本下方），这会弹出窗口，如图 12.31 所示：
+选择了绿色的下划线 Sign up 链接（位于 Log 文本下方），这会弹出窗口，如图 12.31 所示：
 
 ![](img/Figure12.31.jpg)
 
@@ -5236,11 +5478,11 @@ Amazon CodeWhisperer 页面具有以下预览数据，看起来很有前景，�
 
 **图 12.38：** Amazon Code Whisperer 的预览。
 
-使用了之前解释的 Amazon CodeWhiser AI 的 pip 安装命令，可以看到正在下载所需的 Linux 库，如图 12.39 所示：
+使用了之前解释的 Amazon CodeWhisperer AI 的 pip 安装命令，可以看到正在下载所需的 Linux 库，如图 12.39 所示：
 
 ![](img/Figure12.39.jpg)
 
-**图 12.39：** Amazon CodeWhiser AI 的 pip 安装。
+**图 12.39：** Amazon CodeWhisperer AI 的 pip 安装。
 
 接下来，我们按照所示运行命令，如图 12.40 所示：
 
@@ -5280,33 +5522,35 @@ CodeWhisperer 目前不支持 JupyterLab 版本 4。
 
 Codeium 网页加载并显示，如图 12.30 所示：
 
+
+
 ![](img/Figure12.30.jpg)
 
 **图 12.30：** Codeium 网页加载并显示。
 
-选择了绿色的下划线 Sign up 连接（位于 Log 文本下方），这会弹出窗口，如图 12.31 所示：
+选择了绿色的下划线 `Sign up` 连接（位于 `Log` 文本下方），这会弹出窗口，如图 12.31 所示：
 
 ![](img/Figure12.31.jpg)
 
 **图 12.31：** 输入了 Codeium 账户详情。
 
-作为 Codeium 注册的一部分，我们可以上传图片并创建 Discord 账户和服务器，如图 12.32 所示：
+作为 Codeium 注册的一部分，我们可以上传图片并创建 `Discord` 账户和服务器，如图 12.32 所示：
 
 ![](img/Figure12.32.jpg)
 
-**图 12.32：** 提供了加入 Discord 系统的邀请。
+**图 12.32：** 提供了加入 `Discord` 系统的邀请。
 
-这为我们提供了访问 AI Chat 的权限，如图 12.33 所示：
+这为我们提供了访问 `AI Chat` 的权限，如图 12.33 所示：
 
 ![](img/Figure12.33.jpg)
 
-**图 12.33：** 作为 Codeium 创建了 AI Chat 服务器。
+**图 12.33：** 作为 Codeium 创建了 `AI Chat` 服务器。
 
-此时，我们必须点击 Codeium 系统发送到我们地址的 verify 链接以确认账户。这给出一个包含 Accept 按钮的弹出窗口，我们点击它，如图 12.34 所示：
+此时，我们必须点击 Codeium 系统发送到我们地址的 `verify` 链接以确认账户。这给出一个包含 `Accept` 按钮的弹出窗口，我们点击它，如图 12.34 所示：
 
 ![](img/Figure12.34.jpg)
 
-**图 12.34：** 选择了 Accept。
+**图 12.34：** 选择了 `Accept`。
 
 刷新 Codeium 获取页面后，可以看到不同 IDE 环境的安装链接，如图 12.35 所示：
 
@@ -5318,12 +5562,12 @@ Codeium 网页加载并显示，如图 12.30 所示：
 
 ![](img/Figure12.36.jpg)
 
-**图 12.36：** 复制了 Token。
+**图 12.36：** 复制了 `Token`。
 
-现在可以将 Code Authentication Token 粘贴到我们的 Jupyter Notebook 项目中，如图 12.37 所示：
+现在可以将 `Code Authentication Token` 粘贴到我们的 `Jupyter Notebook` 项目中，如图 12.37 所示：
 
 ![](img/Figure12.37.jpg)
 
-**图 12.37：** Token 粘贴到我们的项目中。
+**图 12.37：** `Token` 粘贴到我们的项目中。
 
 Codeium 系统在测试时表现并不好，可能是由于用户过多导致过载。AI 系统是资源的高消耗者，需要大量的 GPU 和内存，服务器可能会因为访问量而变慢。

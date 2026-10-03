@@ -1,3 +1,4 @@
+
 # 2023 年初学者学习的 13 个最佳角度课程
 
 > 原文：<https://medium.com/javarevisited/10-courses-to-learn-angular-for-web-development-6da1bd2856dc?source=collection_archive---------0----------------------->
@@ -14,13 +15,13 @@
 
 Angular 是谷歌最受欢迎的 JavaScript 前端框架之一，它允许你构建一个现代的大型电子商务 web 应用程序以及一个在浏览器上运行的单页面 web 应用程序。
 
-它使用 [TypeScript](https://javarevisited.blogspot.com/2018/07/top-5-courses-to-learn-typescript.html) 编程语言，这是 [JavaScript](https://javarevisited.blogspot.com/2018/06/top-10-courses-to-learn-javascript-in.html) 的超集，为编写更好的代码提供了更多功能。它还具有高度的可扩展性和高性能，这是可以理解的，因为谷歌落后于 Angular。
+它使用 `TypeScript` 编程语言，这是 `JavaScript` 的超集，为编写更好的代码提供了更多功能。它还具有高度的可扩展性和高性能，这是可以理解的，因为谷歌落后于 Angular。
 
-谈谈 [TypeScript](http://www.java67.com/2018/05/top-5-free-typescript-courses-to-learn.html) ，这是微软创造的一种新的编程语言，它通过提供更多的类型安全和功能，如允许创建一个类来增强 JavaScript，但它的缺点是你不能在浏览器中运行 TypeScript，但不用担心，你可以将 TypeScript 代码编译成可以在浏览器上运行的 JavaScript。
+谈谈 `TypeScript` ，这是微软创造的一种新的编程语言，它通过提供更多的类型安全和功能，如允许创建一个类来增强 `JavaScript`，但它的缺点是你不能在浏览器中运行 `TypeScript`，但不用担心，你可以将 `TypeScript` 代码编译成可以在浏览器上运行的 `JavaScript`。
 
-[TypeScript](/javarevisited/top-10-free-typescript-courses-to-learn-online-best-of-lot-44bce9da41d1) 的另一个好处是它附带了 ES6 特性，这可以产生更好的 JavaScript 代码。由于这些原因，Angular 团队选择 TypeScript 作为官方语言来创建 Angular 应用程序。
+`TypeScript` 的另一个好处是它附带了 ES6 特性，这可以产生更好的 `JavaScript` 代码。由于这些原因，Angular 团队选择 `TypeScript` 作为官方语言来创建 Angular 应用程序。
 
-顺便说一下，如果你是 TypeScript 新手，想在 2023 年学习 TypeScript，并且需要一门课程，那么我强烈推荐你加入 Udemy 上的 [**理解 TypeScript**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Funderstanding-typescript%2F) 课程，这是学习 TypeScript 的最佳在线课程之一。
+顺便说一下，如果你是 `TypeScript` 新手，想在 2023 年学习 `TypeScript`，并且需要一门课程，那么我强烈推荐你加入 Udemy 上的 [**理解 TypeScript**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Funderstanding-typescript%2F) 课程，这是学习 `TypeScript` 的最佳在线课程之一。
 
 </javarevisited/7-best-courses-to-learn-typescript-in-depth-58439e1ce729>  
 
@@ -40,7 +41,7 @@ Angular 是谷歌最受欢迎的 JavaScript 前端框架之一，它允许你构
 
 正如我所说的，这门课程非常全面，包含超过 440 堂课和 27.5 小时的内容。这意味着你将会学到所有你想知道的关于 Angular 的知识，并且使用 Angular 框架创建一个真实的项目。
 
-这个课程的结构也非常好，这意味着即使你对 Angular 完全陌生，你也会从单词 go 开始学习。课程从基础开始，比如*什么是 Angular* 以及它比传统的 JavaScript 开发模型有什么好处。
+这个课程的结构也非常好，这意味着即使你对 Angular 完全陌生，你也会从单词 go 开始学习。课程从基础开始，比如*什么是 Angular* 以及它比传统的 `JavaScript` 开发模型有什么好处。
 
 > 以下是查看本课程的链接— [**Angular —完整指南**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-guide-to-angular-2%2F)
 
@@ -54,9 +55,9 @@ Angular 是谷歌最受欢迎的 JavaScript 前端框架之一，它允许你构
 
 ## 2.[前端 JavaScript 框架:Angular](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fangular) 【最佳 Coursera 课程】
 
-这是香港科技大学在 Coursera 上提供的一个非常棒的从零开始学习 Angular 的免费课程。在本课程中，您将学习如何使用 TypeScript 来使用 Angular。
+这是香港科技大学在 Coursera 上提供的一个非常棒的从零开始学习 Angular 的免费课程。在本课程中，您将学习如何使用 `TypeScript` 来使用 Angular。
 
-作为练习的一部分，首先将向您介绍 Angular 环境中的 Typescript 特性，然后您将学习如何使用 Angular 材料和 Angular Flex-Layout 进行响应式 UI 设计。
+作为练习的一部分，首先将向您介绍 Angular 环境中的 `Typescript` 特性，然后您将学习如何使用 Angular 材料和 Angular Flex-Layout 进行响应式 UI 设计。
 
 您还将学习 Angular 的各个方面，包括组件、指令和服务。您将了解数据绑定、角度路由器以及它们在开发单页面应用程序中的用途。
 
@@ -78,7 +79,7 @@ Angular 是谷歌最受欢迎的 JavaScript 前端框架之一，它允许你构
 
 这是 2023 年学习 Angular 的又一个牛逼课程。由 ZTM 学院的 Andrei '和他的团队创建的这个基于项目的课程将从头开始教你 Angular(正式名称为 AngularJS/Angular.js ),并向你介绍 2023 年 Angular 开发者的现代工具链。
 
-在这个过程中，您将使用 Angular、TypeScript、 [*WebAssembly*](/javarevisited/7-best-webassembly-and-blazor-courses-for-beginners-to-learn-online-8e0cdd61be28) 、 [*Rust*](/javarevisited/7-best-rust-programming-courses-and-books-for-beginners-in-2021-2ed2311af46c) 、RxJS、 [*Tailwind CSS*](/javarevisited/6-best-books-and-courses-to-learn-tailwind-css-5889c254ad2b) 、 [Firebase](/javarevisited/5-best-firebase-and-firestore-courses-for-frontend-developers-88052b0d3e74) 等等构建一个大型视频共享应用程序。
+在这个过程中，您将使用 Angular、`TypeScript`、 [*WebAssembly*](/javarevisited/7-best-webassembly-and-blazor-courses-for-beginners-to-learn-online-8e0cdd61be28) 、 [*Rust*](/javarevisited/7-best-rust-programming-courses-and-books-for-beginners-in-2021-2ed2311af46c) 、RxJS、 [*Tailwind CSS*](/javarevisited/6-best-books-and-courses-to-learn-tailwind-css-5889c254ad2b) 、 [Firebase](/javarevisited/5-best-firebase-and-firestore-courses-for-frontend-developers-88052b0d3e74) 等等构建一个大型视频共享应用程序。
 
 这是一个全栈应用程序，不同于大多数 Angular 教程或在线课程，这是一个理想的课程，适合希望一步一步学习和掌握 Angular 的开发者，从零开始，一直到能够被顶级公司聘用
 
@@ -97,8 +98,11 @@ Angular 是谷歌最受欢迎的 JavaScript 前端框架之一，它允许你构
 以下是您将在本课程中学到的内容:
 
 1.  典型 Angular 应用程序的架构，以及如何使用组件和模块来构建应用程序的各个部分。
+
 2.  探索服务、依赖注入、可观察对象和 RxJs。
+
 3.  NgRx，这是一个用于管理 Angular 的反应状态的库。
+
 4.  测试和包装产品的角度应用。
 
 总的来说，这是一个从零开始学习 Angular 的很好的互动课程。最后，你的投资组合将会有一个很棒的新应用程序，同时你也会更好地理解如何从头开始设计一个 Angular 应用程序。
@@ -113,9 +117,11 @@ Angular 是谷歌最受欢迎的 JavaScript 前端框架之一，它允许你构
 
 ## 5.Deborah Kurata 在 Pluralsight 上的文章
 
+
+
 这是从 [*复数视线*](/javarevisited/top-10-pluralsight-courses-to-learn-programming-and-software-development-during-covid-19-stay-at-30b7d8a4f88f) 学习 Angular 的另一个奇妙课程。你可以在看完上一个关于 Angular: The Big Picture 之后查看这个课程。
 
-这是更多的实践操作，您将学习如何创建优秀的 web 应用程序，并通过快速使用 Agular 的组件、模板和服务来了解最新的应用程序开发技术。
+这是更多的实践操作，您将学习如何创建优秀的 web 应用程序，并通过快速使用 Angular 的组件、模板和服务来了解最新的应用程序开发技术。
 
 您还将设置您的环境，了解组件、模板和数据绑定以及它们如何协同工作，了解如何使用强类型代码构建干净的组件，构建嵌套组件，如何使用依赖注入来注入您构建的服务，以及如何使用 HTTP、导航和路由来检索数据。
 
@@ -233,6 +239,8 @@ TypeScript 之后都是[角](https://javarevisited.blogspot.com/2018/06/5-best-c
 
 这是 Dan Wahlin 在 Pluralsight 上的一个关于 Angular 的高级课程，它是我在周末学习 Angular 的 3 门课程系列的一部分。你可以在完成我上面提到的前两个课程后参加这个课程，以便在 3 天内对 Angular 有一个很好的了解和练习。
 
+
+
 在本课程中，您将学习架构概念、最佳实践，以及如何解决出现的一些更具挑战性的任务。您将发现组件通信技术。
 
 接下来，您将学习状态管理和代码组织。最后，您将探索一般的最佳实践、性能考虑等。
@@ -241,9 +249,9 @@ TypeScript 之后都是[角](https://javarevisited.blogspot.com/2018/06/5-best-c
 
 > 以下是查看本课程的链接— [角度架构和最佳实践](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fangular-architecture-best-practices)
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fangular-architecture-best-practices>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fangular-architecture-best-practices>
 
-## 13.[角度要领(角度 2+带打字稿)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fangular-essentials-angular-2-angular-4-with-typescript%2F)
+## 13. [角度要领(角度 2+带打字稿)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fangular-essentials-angular-2-angular-4-with-typescript%2F)
 
 这个课程是他其他角度课程的浓缩形式，比如第一个，这可能是 [Udemy](https://javarevisited.blogspot.com/2019/08/top-10-udemy-courses-and-certifications-for-programmers.html) 上最受欢迎的课程。
 
@@ -255,29 +263,32 @@ TypeScript 之后都是[角](https://javarevisited.blogspot.com/2018/06/5-best-c
 
 [![](img/030b1f11eea3b3d0307ae79f2b68104c.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fangular-essentials-angular-2-angular-4-with-typescript%2F)
 
-在本课程中，您将了解到 Angular 的一切，如 [TypeScript](https://javarevisited.blogspot.com/2018/07/top-5-courses-to-learn-typescript.html) 、Angular CLI(Angular 团队提供的用于创建 Angular 项目的工具)以及 Angular 本身。
+在本课程中，您将了解到 Angular 的一切，如 [TypeScript](https://javarevisited.blogspot.com/2018/07/top-5-courses-to-learn-typescript.html) 、`Angular CLI`(Angular 团队提供的用于创建 Angular 项目的工具)以及 Angular 本身。
 
 一旦您通过学习本课程学习了 Angular，您可以随时通过加入第一门课程或学习本课程中提供的其他几个补充材料来进行更深入的学习。
 
 这就是学习 web 开发角度框架的一些最好的课程。Angular 在当今世界是一项非常有用的技能，它不仅能帮助你找到一份 web 开发人员的工作，还能帮助你创建自己的网站和应用程序。您可以快速创建一个单页应用程序来开始您的在线投资。
 
-其他**有用的在线课程**你可能喜欢的
-[2023 年 Web 开发者路线图](https://javarevisited.blogspot.com/2019/02/the-2019-web-developer-roadmap.html)
-[面向 Java 开发者的 5 门免费 Spring 框架课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
-[2023 年学习 React Native 的 5 门课程](http://javarevisited.blogspot.sg/2018/02/5-react-native-courses-to-learn-mobile-development-using-JavaScript.html)
-[2023 年学习 Web 开发的前 5 门课程](https://javarevisited.blogspot.com/2018/02/top-5-online-courses-to-learn-web-development.html)
-[学习大数据和 Apache Spark 的 5 门课程](http://javarevisited.blogspot.com/2017/12/top-5-courses-to-learn-big-data-and.html)
-[前 10 名 JavaScript 教程和课程为 2023 年学 Spring Boot](https://javarevisited.blogspot.com/2018/06/top-10-courses-to-learn-javascript-in.html)
-[2023 年学 Python 的前 5 门课程](http://www.java67.com/2018/02/5-free-python-online-courses-for-beginners.html)
-[2023 年 React JS 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
-[10 JavaScript 框架 Fullstack 开发者应该知道的](http://www.java67.com/2019/01/top-10-javascript-frameworks-and-libraries-for-web-developers.html)
+## 其他**有用的在线课程**你可能喜欢的
+
+- [2023 年 Web 开发者路线图](https://javarevisited.blogspot.com/2019/02/the-2019-web-developer-roadmap.html)
+- [面向 Java 开发者的 5 门免费 Spring 框架课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
+- [2023 年学习 React Native 的 5 门课程](http://javarevisited.blogspot.sg/2018/02/5-react-native-courses-to-learn-mobile-development-using-JavaScript.html)
+- [2023 年学习 Web 开发的前 5 门课程](https://javarevisited.blogspot.com/2018/02/top-5-online-courses-to-learn-web-development.html)
+- [学习大数据和 Apache Spark 的 5 门课程](http://javarevisited.blogspot.com/2017/12/top-5-courses-to-learn-big-data-and.html)
+- [前 10 名 JavaScript 教程和课程为 2023 年学 Spring Boot](https://javarevisited.blogspot.com/2018/06/top-10-courses-to-learn-javascript-in.html)
+- [2023 年学 Python 的前 5 门课程](http://www.java67.com/2018/02/5-free-python-online-courses-for-beginners.html)
+- [2023 年 React JS 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
+- [10 JavaScript 框架 Fullstack 开发者应该知道的](http://www.java67.com/2019/01/top-10-javascript-frameworks-and-libraries-for-web-developers.html)
 
 感谢您阅读本文。如果你喜欢这些*最佳角度课程*，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
 
 **p . s .**——如果你正在寻找一些免费课程来启动你的 Angular 之旅，你也可以看看这个 [**Angular for 初学者课程**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fangular-for-beginners-course%2F) ，它提供了 Angular 框架的快速介绍，重点介绍了它最常用的部分，也为 Angular 11 进行了更新。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fangular-for-beginners-course%2F>  
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fangular-for-beginners-course%2F>
 
 ## 您可能喜欢的其他文章:
 
-</javarevisited/top-10-angular-books-and-courses-for-beginners-and-experienced-web-developers-best-of-lot-9a2dae87f04c>  </javarevisited/my-favorite-free-tutorials-and-courses-to-learn-javascript-8f4d0a71faf2>  </javarevisited/10-javascript-frameworks-and-libraries-to-learn-in-2020-best-of-lot-5f61f86c60b4> 
+- </javarevisited/top-10-angular-books-and-courses-for-beginners-and-experienced-web-developers-best-of-lot-9a2dae87f04c>
+- </javarevisited/my-favorite-free-tutorials-and-courses-to-learn-javascript-8f4d0a71faf2>
+- </javarevisited/10-javascript-frameworks-and-libraries-to-learn-in-2020-best-of-lot-5f61f86c60b4>

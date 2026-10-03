@@ -1,19 +1,20 @@
+
 # Quartz 2 作业监听器示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/quartz-joblistener-example/>
 
 在本教程中，我们将向您展示如何创建一个`JobListener`，来跟踪正在运行的作业状态，比如作业何时完成。
 
-*附注:本示例使用石英 2.1.5* 进行测试
+*附注：本示例使用石英 2.1.5 进行测试*
 
-## 1.石英工作
+## 1. 石英工作
 
-Job，打印一条简单的消息，并抛出一个`JobExecutionException`进行测试。
+`Job`，打印一条简单的消息，并抛出一个`JobExecutionException`进行测试。
 
-*文件:HelloJob.java*
+*文件：`HelloJob.java`*
 
 ```java
- package com.mkyong.quartz;
+package com.mkyong.quartz;
 
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
@@ -30,17 +31,17 @@ public class HelloJob implements Job
 		throw new JobExecutionException("Testing Exception");
 	}
 
-} 
+}
 ```
 
- ## 2.作业监听器
+## 2. 作业监听器
 
-要创建 JobListener，只需实现`JobListener`接口，并覆盖所有接口的方法。
+要创建`JobListener`，只需实现`JobListener`接口，并覆盖所有接口的方法。
 
-*文件:HelloJobListener.java*
+*文件：`HelloJobListener.java`*
 
 ```java
- package com.mkyong.quartz.listener;
+package com.mkyong.quartz.listener;
 
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
@@ -87,18 +88,21 @@ public class HelloJobListener implements JobListener {
 
 	}
 
-} 
+}
 ```
 
-**Note**
-No idea what is “jobExecutionVetoed” and when will it triggered? Do comment if you know this, thanks. ## 3.克朗触发器
+**注意**
+
+不知道“`jobExecutionVetoed`”是什么，以及它何时会被触发？如果你知道，请留言，谢谢。
+
+## 3. 克朗触发器
 
 示例将上述`HelloJobListener`附加到调度程序，并监控作业的状态。
 
-*文件:CronTriggerExample.java*
+*文件：`CronTriggerExample.java`*
 
 ```java
- package com.mkyong.quartz;
+package com.mkyong.quartz;
 
 import org.quartz.CronScheduleBuilder;
 import org.quartz.JobBuilder;
@@ -143,13 +147,13 @@ public class CronTriggerExample {
     	scheduler.scheduleJob(job, trigger);
 
     }
-} 
+}
 ```
 
 运行`CronTriggerExample.java`，这里是输出。
 
 ```java
- jobToBeExecuted
+jobToBeExecuted
 Job : group1.dummyJobName is going to start...
 Hello Quartz! 123
 jobWasExecuted
@@ -161,24 +165,17 @@ Job : group1.dummyJobName is going to start...
 Hello Quartz! 123
 jobWasExecuted
 Job : group1.dummyJobName is started and finished...
-Exception thrown by: group1.dummyJobName Exception: Testing Exception 
+Exception thrown by: group1.dummyJobName Exception: Testing Exception
 ```
 
 ## 下载源代码
 
-Download it – [Quartz2-JobListener-Example.zip](http://web.archive.org/web/20190226180851/http://www.mkyong.com/wp-content/uploads/2012/07/Quartz2-JobListener-Example.zip) (13 KB)
+下载它 – [Quartz2-JobListener-Example.zip](http://web.archive.org/web/20190226180851/http://www.mkyong.com/wp-content/uploads/2012/07/Quartz2-JobListener-Example.zip) (13 KB)
 
 ## 参考
 
-1.  [石英官网](http://web.archive.org/web/20190226180851/http://www.quartz-scheduler.org/)
-2.  [Quartz 2 JobListener 文档](http://web.archive.org/web/20190226180851/http://quartz-scheduler.org/documentation/quartz-2.1.x/tutorials/tutorial-lesson-07)
-3.  [石英 2 hello world 示例](http://web.archive.org/web/20190226180851/http://www.mkyong.com/java/quartz-2-scheduler-tutorial/)
+1. [石英官网](http://web.archive.org/web/20190226180851/http://www.quartz-scheduler.org/)
+2. [Quartz 2 JobListener 文档](http://web.archive.org/web/20190226180851/http://quartz-scheduler.org/documentation/quartz-2.1.x/tutorials/tutorial-lesson-07)
+3. [石英 2 hello world 示例](http://web.archive.org/web/20190226180851/http://www.mkyong.com/java/quartz-2-scheduler-tutorial/)
 
 [quartz](http://web.archive.org/web/20190226180851/http://www.mkyong.com/tag/quartz/) [scheduler](http://web.archive.org/web/20190226180851/http://www.mkyong.com/tag/scheduler/)
-
-
-
-
-
-
-

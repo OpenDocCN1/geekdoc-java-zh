@@ -1,13 +1,13 @@
+
 # 获取字段类型
 
 > 原文：[`docs.oracle.com/javase/tutorial/reflect/member/fieldTypes.html`](https://docs.oracle.com/javase/tutorial/reflect/member/fieldTypes.html)
 
 字段可以是原始类型或引用类型。有八种原始类型：`boolean`、`byte`、`short`、`int`、`long`、`char`、`float` 和 `double`。引用类型是任何直接或间接是 [`java.lang.Object`](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html) 的子类，包括接口、数组和枚举类型。
 
-``FieldSpy`` 示例根据完全限定的二进制类名和字段名打印字段的类型和泛型类型。
+`FieldSpy` 示例根据完全限定的二进制类名和字段名打印字段的类型和泛型类型。
 
 ```java
-
 import java.lang.reflect.Field;
 import java.util.List;
 
@@ -32,7 +32,6 @@ public class FieldSpy<T> {
 	}
     }
 }
-
 ```
 
 获取此类中三个公共字段（`b`、`name` 和参数化类型 `list`）的类型的示例输出如下。用户输入以斜体表示。
@@ -50,7 +49,6 @@ GenericType: java.util.List<java.lang.Integer>
 $ *java FieldSpy FieldSpy val*
 Type: class java.lang.Object
 GenericType: T
-
 ```
 
 字段 `b` 的类型是布尔值的二维数组。类型名称的语法在 [`Class.getName()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getName--) 中有描述。

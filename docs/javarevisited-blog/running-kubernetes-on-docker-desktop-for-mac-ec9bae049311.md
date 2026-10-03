@@ -1,8 +1,9 @@
+
 # 在 Kubernetes 上部署 Spring Boot 应用程序
 
 > 原文：<https://medium.com/javarevisited/running-kubernetes-on-docker-desktop-for-mac-ec9bae049311?source=collection_archive---------1----------------------->
 
-> 在本文中，我将解释如何启用 kubernetes、创建 pod、部署 spring boot 应用程序、使用 Docker 桌面上的 Lens IDE 监控单节点集群。
+> 在本文中，我将解释如何启用 `kubernetes`、创建 `pod`、部署 `spring boot` 应用程序、使用 Docker 桌面上的 Lens IDE 监控单节点集群。
 
 ![](img/89abfff51f7f24e7fc57170787aace69.png)
 
@@ -25,8 +26,6 @@
 
 如果你还没有安装的话，你可以遵循 Docker 官方的桌面安装指南。
 
-  
-
 ## 如何在 Mac 版 Docker 桌面上启用 Kubernetes
 
 *   前往 Docker 菜单栏中的偏好设置。然后点击 Kubernetes 选项卡。单击复选框启用 Kubernetes，并将默认的 orchestrator 切换到 [Kubernetes](https://javarevisited.blogspot.com/2020/06/top-5-courses-to-learn-kubernetes-for-devops-and-certification.html) 。启用 Kubernetes 需要一些时间。
@@ -41,11 +40,11 @@
 
 Kubernetes 跑步
 
-*   接下来，如果有多个集群或环境在本地运行，还应该将 Kubernetes 上下文设置为 docker-desktop。
+*   接下来，如果有多个集群或环境在本地运行，还应该将 Kubernetes 上下文设置为 `docker-desktop`。
 
 ![](img/ba0e25f1d665bcfd44377ba7fd7b1bc5.png)
 
-上下文设置为 docker-desktop
+上下文设置为 `docker-desktop`
 
 根据官方[文件](https://docs.docker.com/docker-for-mac/kubernetes/)
 
@@ -56,7 +55,9 @@ mac Kubernetes 集成在`/usr/local/bin/kubectl`提供了 Kubernetes CLI 命令�
 现在我们可以使用下面的`kubectl`命令来验证设置。输出应该类似于下面这样。
 
 ```
-kubectl get nodesNAME             STATUS   ROLES    AGE   VERSIONdocker-desktop   Ready    master   17d   v1.18.8
+kubectl get nodes
+NAME             STATUS   ROLES    AGE   VERSION
+docker-desktop   Ready    master   17d   v1.18.8
 ```
 
 # 如何在 Kubernetes 上创建 Pod
@@ -66,47 +67,103 @@ Kubernetes 中的 Pod 是最小的可能执行单元。它可以再包含一个�
 1.  使用下面的`YAML`文件创建一个 pod。
 
 ```
-apiVersion: v1kind: Podmetadata:name: nginxlabels:app: nginxspec:containers:- name: mycontainerimage: docker.io/nginxports:- containerPort: 80
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+spec:
+  containers:
+  - name: mycontainer
+    image: docker.io/nginx
+    ports:
+    - containerPort: 80
 ```
 
-使用`*kubectl create*`和`YAML`文件名创建一个 pod。
+使用`kubectl create`和`YAML`文件名创建一个 pod。
 
 ```
-kubectl create -f pod.yamlpod/nginx created
+kubectl create -f pod.yaml
+pod/nginx created
 ```
 
-2.检查我们刚刚创建的 pod 的状态。
+2. 检查我们刚刚创建的 pod 的状态。
 
 ```
-kubectl get podsNAME    READY   STATUS    RESTARTS   AGEnginx   1/1     Running   0          2m38s
+kubectl get pods
+NAME    READY   STATUS    RESTARTS   AGE
+nginx   1/1     Running   0          2m38s
 ```
 
-3.为了进一步调试 pod 并使其工作，我们可以使用`*kubectl exec*` 命令*将 shell 添加到正在运行的容器中。进入容器后，我们将使用 curl 来验证 Nginx 的设置。让我们现在做那件事。*
+3. 为了进一步调试 pod 并使其工作，我们可以使用`kubectl exec`命令将 shell 添加到正在运行的容器中。进入容器后，我们将使用 `curl` 来验证 Nginx 的设置。让我们现在做那件事。
 
 ```
-kubectl exec -it nginx -- /bin/sh# curl 10.1.0.65<!DOCTYPE html><html><head><title>Welcome to nginx!</title><style>body {width: 35em;margin: 0 auto;font-family: Tahoma, Verdana, Arial, sans-serif;}</style></head><body><h1>Welcome to nginx!</h1><p>If you see this page, the nginx web server is successfully installed andworking. Further configuration is required.</p><p>For online documentation and support please refer to<a href="http://nginx.org/">nginx.org</a>.<br/>Commercial support is available at<a href="http://nginx.com/">nginx.com</a>.</p><p><em>Thank you for using nginx.</em></p></body></html>
+kubectl exec -it nginx -- /bin/sh
+# curl 10.1.0.65
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+body {
+width: 35em;
+margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
 ```
 
 # 如何在 Kubernetes 上部署有效的 Spring Boot 应用程序
 
-让我们在本地 Kubernetes 集群上部署一个工作的 Spring Boot 应用程序。我们将使用 Indian-states 应用程序进行演示。您可以查看[GitHub 库来了解这个应用程序的更多信息。](https://github.com/yrashish/indian-states)
+让我们在本地 Kubernetes 集群上部署一个工作的 Spring Boot 应用程序。我们将使用 Indian-states 应用程序进行演示。您可以查看 [GitHub 库来了解这个应用程序的更多信息。](https://github.com/yrashish/indian-states)
 
-<https://github.com/yrashish/indian-states>  
+<https://github.com/yrashish/indian-states>
 
 在我的上一篇文章中，我已经解释了这个 Kubernetes 应用程序的服务和部署资源。
 
-<https://ashishtechmill.com/cicd-workflow-for-springboot-applications-on-kubernetes-via-skaffold>  
+<https://ashishtechmill.com/cicd-workflow-for-springboot-applications-on-kubernetes-via-skaffold>
 
 现在我们将克隆这个库，并使用下面的命令创建 Kubernetes 清单。
 
 ```
-git clone [https://github.com/yrashish/indian-states](https://github.com/yrashish/indian-states)cd indian-states/k8skubectl create -f myservice.yamlservice/states createdkubectl create -f mydeployment.yamldeployment.apps/states createdkubectl get allNAME                          READY   STATUS    RESTARTS   AGEpod/states-6664b9dbf6-l2tgj   1/1     Running   0          8sNAME                 TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGEservice/kubernetes   ClusterIP   10.96.0.1      <none>        443/TCP          55sservice/states       NodePort    10.96.78.225   <none>        8080:31238/TCP   15sNAME                     READY   UP-TO-DATE   AVAILABLE   AGEdeployment.apps/states   1/1     1            1           8sNAME                                DESIRED   CURRENT   READY   AGEreplicaset.apps/states-6664b9dbf6   1         1         1       8s 
+git clone https://github.com/yrashish/indian-states
+cd indian-states/k8s
+kubectl create -f myservice.yaml
+service/states created
+kubectl create -f mydeployment.yaml
+deployment.apps/states created
+kubectl get all
+NAME                          READY   STATUS    RESTARTS   AGE
+pod/states-6664b9dbf6-l2tgj   1/1     Running   0          8s
+NAME                 TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
+service/kubernetes   ClusterIP   10.96.0.1      <none>        443/TCP          55s
+service/states       NodePort    10.96.78.225   <none>        8080:31238/TCP   15s
+NAME                     READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/states   1/1     1            1           8s
+NAME                                DESIRED   CURRENT   READY   AGE
+replicaset.apps/states-6664b9dbf6   1         1         1       8s
 ```
 
-现在只需使用 curl 并访问/states REST 端点，看看会发生什么。
+现在只需使用 `curl` 并访问 `/states` REST 端点，看看会发生什么。
 
 ```
-curl localhost:31238/states[{“name”:”Andra Pradesh”,”capital”:”Hyderabad”},{“name”:”Arunachal Pradesh”,”capital”:”Itangar”},{“name”:”Assam”,”capital”:”Dispur”},{“name”:”Bihar”,”capital”:”Patna”},{“name”:”Chhattisgarh”,”capital”:”Raipur”},{“name”:”Goa”,”capital”:”Panaji”},{“name”:”Gujarat”,”capital”:”Gandhinagar”},{“name”:”Haryana”,”capital”:”Chandigarh”},{“name”:”Himachal Pradesh”,”capital”:”Shimla”},{“name”:”Jharkhand”,”capital”:”Ranchi”},{“name”:”Karnataka”,”capital”:”Bangalore”},{“name”:”Kerala”,”capital”:”Thiruvananthapuram”},{“name”:”Madhya Pradesh”,”capital”:”Bhopal”},{“name”:”Maharashtra”,”capital”:”Mumbai”},{“name”:”Manipur”,”capital”:”Imphal”},{“name”:”Meghalaya”,”capital”:”Shillong”},{“name”:”Mizoram”,”capital”:”Aizawi”},{“name”:”Nagaland”,”capital”:”Kohima”},{“name”:”Orissa”,”capital”:”Bhubaneshwar”},{“name”:”Rajasthan”,”capital”:”Jaipur”},{“name”:”Sikkim”,”capital”:”Gangtok”},{“name”:”Tamil Nadu”,”capital”:”Chennai”},{“name”:”Telangana”,”capital”:”Hyderabad”},{“name”:”Tripura”,”capital”:”Agartala”},{“name”:”Uttaranchal”,”capital”:”Dehradun”},{“name”:”Uttar Pradesh”,”capital”:”Lucknow”},{“name”:”West Bengal”,”capital”:”Kolkata”},{“name”:”Punjab”,”capital”:”Chandigarh”}]
+curl localhost:31238/states
+[{"name":"Andra Pradesh","capital":"Hyderabad"},{"name":"Arunachal Pradesh","capital":"Itangar"},{"name":"Assam","capital":"Dispur"},{"name":"Bihar","capital":"Patna"},{"name":"Chhattisgarh","capital":"Raipur"},{"name":"Goa","capital":"Panaji"},{"name":"Gujarat","capital":"Gandhinagar"},{"name":"Haryana","capital":"Chandigarh"},{"name":"Himachal Pradesh","capital":"Shimla"},{"name":"Jharkhand","capital":"Ranchi"},{"name":"Karnataka","capital":"Bangalore"},{"name":"Kerala","capital":"Thiruvananthapuram"},{"name":"Madhya Pradesh","capital":"Bhopal"},{"name":"Maharashtra","capital":"Mumbai"},{"name":"Manipur","capital":"Imphal"},{"name":"Meghalaya","capital":"Shillong"},{"name":"Mizoram","capital":"Aizawi"},{"name":"Nagaland","capital":"Kohima"},{"name":"Orissa","capital":"Bhubaneshwar"},{"name":"Rajasthan","capital":"Jaipur"},{"name":"Sikkim","capital":"Gangtok"},{"name":"Tamil Nadu","capital":"Chennai"},{"name":"Telangana","capital":"Hyderabad"},{"name":"Tripura","capital":"Agartala"},{"name":"Uttaranchal","capital":"Dehradun"},{"name":"Uttar Pradesh","capital":"Lucknow"},{"name":"West Bengal","capital":"Kolkata"},{"name":"Punjab","capital":"Chandigarh"}]
 ```
 
 # 如何用 Lens IDE 监控和管理 Kubernetes 集群
@@ -175,7 +232,7 @@ Lens 有一个特性，它允许您在集群中安装 Prometheus stack，以便�
 
 # 支持我
 
-如果你喜欢你刚刚读到的，那么你可以点击下图中的链接给我买杯咖啡:
+如果你喜欢你刚刚读到的，那么你可以点击下图中的链接给我买杯咖啡：
 
 [![](img/883994fb2cde2cb170202b796dac9bb8.png)](https://www.buymeacoffee.com/meashish)
 
@@ -183,4 +240,6 @@ Lens 有一个特性，它允许您在集群中安装 Prometheus stack，以便�
 
 可以继续看我之前的一些文章。
 
-<https://ashishtechmill.com/running-simple-springboot-app-on-openshift>  <https://ashishtechmill.com/local-variable-type-inference-declare-var-not-war> 
+<https://ashishtechmill.com/running-simple-springboot-app-on-openshift>
+
+<https://ashishtechmill.com/local-variable-type-inference-declare-var-not-war>

@@ -1,3 +1,4 @@
+
 # 使用限制
 
 > 原文：[`docs.oracle.com/javase/tutorial/jaxp/limits/using.html`](https://docs.oracle.com/javase/tutorial/jaxp/limits/using.html)
@@ -22,7 +23,6 @@ XML 处理可能非常消耗内存。允许消耗的内存量取决于特定环�
 
 ```java
 parser.setProperty("http://www.oracle.com/xml/jaxp/properties/getEntityCountInfo", "yes");
-
 ```
 
 查看示例以获取有关下载示例代码的更多信息。
@@ -36,14 +36,14 @@ parser.setProperty("http://www.oracle.com/xml/jaxp/properties/getEntityCountInfo
 | `ELEMENT_ATTRIBUTE_LIMIT` | 10000 | 0 | 0 | `null` |
 | `TOTAL_ENTITY_SIZE_LIMIT` | 50000000 | 55425 | 0 | `null` |
 | `GENERAL_ENTITY_SIZE_LIMIT` | 0 | 0 | 0 | `null` |
-| `PARAMETER_ENTITY_SIZE_LIMIT` | 1000000 | 0 | 7303 | %MultiScriptExpression |
+| `PARAMETER_ENTITY_SIZE_LIMIT` | 1000000 | 0 | 7303 | `%MultiScriptExpression` |
 | `MAX_ELEMENT_DEPTH_LIMIT` | 0 | 2 | 0 | `null` |
 | `MAX_NAME_LIMIT` | 1000 | 13 | 13 | `null` |
 | `ENTITY_REPLACEMENT_LIMIT` | 3000000 | 0 | 0 | `null` |
 
-在此示例中，实体引用的总数，或实体扩展，为 1417；默认限制为 64000。所有实体的总大小为 55425；默认限制为 50000000。在解析所有引用后，最大的参数实体是 `%MultiScriptExpression`，长度为 7303；默认限制为 1000000。
+在此示例中，实体引用的总数，或实体扩展，为 1417；默认限制为 64000。所有实体的总大小为 55425；默认限制为 50000000。在解析所有引用后，最大的参数实体是`%MultiScriptExpression`，长度为 7303；默认限制为 1000000。
 
-如果这是应用程序预计要处理的最大文件，请建议将限制设置为较小的数字。例如，`ENTITY_EXPANSION_LIMIT` 设置为 2000，`TOTAL_ENTITY_SIZE_LIMIT` 设置为 100000，`PARAMETER_ENTITY_SIZE_LIMIT` 设置为 10000。
+如果这是应用程序预计要处理的最大文件，请建议将限制设置为较小的数字。例如，`ENTITY_EXPANSION_LIMIT`设置为 2000，`TOTAL_ENTITY_SIZE_LIMIT`设置为 100000，`PARAMETER_ENTITY_SIZE_LIMIT`设置为 10000。
 
 ## 设置限制
 
@@ -65,17 +65,15 @@ schemaFactory.setProperty(name, value);
 
 TransformerFactory factory = TransformerFactory.newInstance();
 factory.setAttribute(name, value);
-
 ```
 
-以下示例显示了如何使用 `DocumentBuilderFactory` 设置限制：
+以下示例显示了如何使用`DocumentBuilderFactory`设置限制：
 
 ```java
 dbf.setAttribute(JDK_ENTITY_EXPANSION_LIMIT, "2000");
 dbf.setAttribute(TOTAL_ENTITY_SIZE_LIMIT, "100000");
-dbf.setAttribute(PARAMETER_ENTITY_SIZE_LIMIT, "10000"); 
-dbf.setAttribute(JDK_MAX_ELEMENT_DEPTH, "100"); 
-
+dbf.setAttribute(PARAMETER_ENTITY_SIZE_LIMIT, "10000");
+dbf.setAttribute(JDK_MAX_ELEMENT_DEPTH, "100");
 ```
 
 ## 使用系统属性
@@ -95,24 +93,22 @@ System.setProperty(SP_GENERAL_ENTITY_SIZE_LIMIT, "2000");
 
 //after it is done, clear the property
 System.clearProperty(SP_GENERAL_ENTITY_SIZE_LIMIT);
-
 ```
 
-请注意，属性的值应为整数。如果输入的值不包含可解析的整数，将抛出 `NumberFormatException`；请参阅方法 [`parseInt(String)`](https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html#parseInt-java.lang.String-)。
+请注意，属性的值应为整数。如果输入的值不包含可解析的整数，将抛出`NumberFormatException`；请参阅方法[`parseInt(String)`](https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html#parseInt-java.lang.String-)。
 
-查看 示例 以获取有关下载示例代码的更多信息。
+查看示例以获取有关下载示例代码的更多信息。
 
-## 使用 `jaxp.properties` 文件
+## 使用`jaxp.properties`文件
 
-`jaxp.properties` 文件是一个配置文件。通常位于 `${*java.home*}/lib/jaxp.properties`，其中 `*java.home*` 是 JRE 安装目录，例如，*[安装目录路径]*/jdk8/jre。
+`jaxp.properties`文件是一个配置文件。通常位于`${*java.home*}/lib/jaxp.properties`，其中`*java.home*`是 JRE 安装目录，例如，*[安装目录路径]*/jdk8/jre。
 
-可通过向 `jaxp.properties` 文件添加以下行来设置限制：
+可通过向`jaxp.properties`文件添加以下行来设置限制：
 
 ```java
 jdk.xml.maxGeneralEntitySizeLimit=2000
-
 ```
 
-请注意，属性名称与系统属性相同，并具有前缀 `jdk.xml`。属性的值应为整数。如果输入的值不包含可解析的整数，将抛出 `NumberFormatException`；请参阅方法 [`parseInt(String)`](https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html#parseInt-java.lang.String-)。
+请注意，属性名称与系统属性相同，并具有前缀`jdk.xml`。属性的值应为整数。如果输入的值不包含可解析的整数，将抛出`NumberFormatException`；请参阅方法[`parseInt(String)`](https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html#parseInt-java.lang.String-)。
 
 当在文件中设置属性时，所有 JDK 和 JRE 的调用都将遵守限制。

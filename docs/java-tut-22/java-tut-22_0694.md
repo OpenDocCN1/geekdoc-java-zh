@@ -1,3 +1,4 @@
+
 # Trail: JavaBeans(TM)
 
 > 原文：[`docs.oracle.com/javase/tutorial/javabeans/index.html`](https://docs.oracle.com/javase/tutorial/javabeans/index.html)

@@ -1,3 +1,4 @@
+
 # Spring Boot·JDBC 存储过程示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-boot-jdbc-stored-procedure-examples/>
@@ -6,7 +7,7 @@
 
 在本教程中，我们将向您展示如何使用 Spring Boot·JDBC`SimpleJdbcCall`从 Oracle 数据库中调用存储过程和存储函数。
 
-使用的技术:
+使用的技术：
 
 *   Spring Boot 2.1.2 .版本
 *   春季 JDBC 5.1.4 .发布
@@ -18,41 +19,42 @@
 与`JdbcTemplate`不同，Spring Boot 没有自动创建任何`SimpleJdbcCall`，我们必须手动创建它。
 
 **Note**
+
 This example extends the previous [Spring Boot JDBC examples](/web/20230101144912/https://mkyong.com/spring-boot/spring-boot-jdbc-examples/), adds support for `SimpleJdbcCall`
 
-## 1.测试数据
+## 1. 测试数据
 
 1.1 创建一个表，保存 4 本书进行测试。
 
 ```java
- CREATE TABLE BOOKS(
+CREATE TABLE BOOKS(
     ID NUMBER GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1),
     NAME VARCHAR2(100) NOT NULL,
     PRICE NUMBER(15, 2) NOT NULL,
     CONSTRAINT book_pk PRIMARY KEY (ID)
-); 
+);
 ```
 
 ```java
- List<Book> books = Arrays.asList(
-			new Book("Thinking in Java", new BigDecimal("46.32")),
-			new Book("Mkyong in Java", new BigDecimal("1.99")),
-			new Book("Getting Clojure", new BigDecimal("37.3")),
-			new Book("Head First Android Development", new BigDecimal("41.19"))
-	);
+List<Book> books = Arrays.asList(
+        new Book("Thinking in Java", new BigDecimal("46.32")),
+        new Book("Mkyong in Java", new BigDecimal("1.99")),
+        new Book("Getting Clojure", new BigDecimal("37.3")),
+        new Book("Head First Android Development", new BigDecimal("41.19"))
+);
 
-	books.forEach(book -> {
-		log.info("Saving...{}", book.getName());
-		bookRepository.save(book);
-	}); 
+books.forEach(book -> {
+    log.info("Saving...{}", book.getName());
+    bookRepository.save(book);
+});
 ```
 
-## 2.存储过程
+## 2. 存储过程
 
 2.1 返回单个结果的存储过程。
 
 ```java
- CREATE OR REPLACE PROCEDURE get_book_by_id(
+CREATE OR REPLACE PROCEDURE get_book_by_id(
         p_id IN BOOKS.ID%TYPE,
         o_name OUT BOOKS.NAME%TYPE,
         o_price OUT BOOKS.PRICE%TYPE)
@@ -61,7 +63,7 @@ This example extends the previous [Spring Boot JDBC examples](/web/2023010114491
 
         SELECT NAME , PRICE INTO o_name, o_price from BOOKS WHERE ID = p_id;
 
-    END; 
+    END;
 ```
 
 2.2 我们可以通过`@PostConstruct`初始化`SimpleJdbcCall`。
@@ -69,7 +71,7 @@ This example extends the previous [Spring Boot JDBC examples](/web/2023010114491
 StoredProcedure1.java
 
 ```java
- package com.mkyong.sp;
+package com.mkyong.sp;
 
 import com.mkyong.Book;
 import com.mkyong.repository.BookRepository;
@@ -164,15 +166,15 @@ public class StoredProcedure1 {
         return result;
     }
 
-} 
+}
 ```
 
-## 3.存储过程#SYS_REFCURSOR
+## 3. 存储过程#SYS_REFCURSOR
 
 3.1 返回引用游标的存储过程。
 
 ```java
- CREATE OR REPLACE PROCEDURE get_book_by_name(
+CREATE OR REPLACE PROCEDURE get_book_by_name(
    p_name IN BOOKS.NAME%TYPE,
    o_c_book OUT SYS_REFCURSOR)
 AS
@@ -181,7 +183,7 @@ BEGIN
   OPEN o_c_book FOR
   SELECT * FROM BOOKS WHERE NAME LIKE '%' || p_name || '%';
 
-END; 
+END;
 ```
 
 3.2 `BeanPropertyRowMapper`将光标结果映射到`book`对象。
@@ -189,7 +191,7 @@ END;
 StoredProcedure2.java
 
 ```java
- package com.mkyong.sp;
+package com.mkyong.sp;
 
 import com.mkyong.Book;
 import com.mkyong.repository.BookRepository;
@@ -250,7 +252,7 @@ public class StoredProcedure2 {
 
     public void start() {
 
-		log.info("Creating Store Procedures and Function...");
+        log.info("Creating Store Procedures and Function...");
         jdbcTemplate.execute(SQL_STORED_PROC_REF);
 
         /* Test Stored Procedure RefCursor */
@@ -277,15 +279,17 @@ public class StoredProcedure2 {
 
     }
 
-} 
+}
 ```
 
-## 4.存储功能
+## 4. 存储功能
 
 4.1 为测试创建两个函数。
 
+
+
 ```java
- CREATE OR REPLACE FUNCTION get_price_by_id(p_id IN BOOKS.ID%TYPE)
+CREATE OR REPLACE FUNCTION get_price_by_id(p_id IN BOOKS.ID%TYPE)
 RETURN NUMBER
 IS o_price BOOKS.PRICE%TYPE;
 BEGIN
@@ -299,15 +303,15 @@ IS o_date VARCHAR2(20);
 BEGIN
     SELECT TO_CHAR(SYSDATE, 'DD-MON-YYYY HH:MI:SS') INTO o_date FROM dual;
     RETURN(o_date);
-END; 
+END;
 ```
 
-4.2.对于存储函数，用`SimpleJdbcCall.executeFunction`调用它
+## 4.2 对于存储函数，用`SimpleJdbcCall.executeFunction`调用它
 
-StoredFunction.java
+`StoredFunction.java`
 
 ```java
- package com.mkyong.sp;
+package com.mkyong.sp;
 
 import com.mkyong.repository.BookRepository;
 import org.slf4j.Logger;
@@ -345,10 +349,10 @@ public class StoredFunction {
         jdbcTemplate.setResultsMapCaseInsensitive(true);
 
         simpleJdbcCallFunction1 = new SimpleJdbcCall(jdbcTemplate)
-			.withFunctionName("get_price_by_id");
+            .withFunctionName("get_price_by_id");
 
         simpleJdbcCallFunction2 = new SimpleJdbcCall(jdbcTemplate)
-			.withFunctionName("get_database_time");
+            .withFunctionName("get_database_time");
     }
 
     private static final String SQL_STORED_FUNCTION_1 = ""
@@ -387,28 +391,28 @@ public class StoredFunction {
 
     }
 
-} 
+}
 ```
 
-总而言之:
+总而言之：
 
-*   对于存储过程，`SimpleJdbcCall.execute`。
-*   对于存储功能，`SimpleJdbcCall.executeFunction`
+* 对于存储过程，使用`SimpleJdbcCall.execute`。
+* 对于存储功能，使用`SimpleJdbcCall.executeFunction`。
 
 ## 下载源代码
 
-$ git clone [https://github.com/mkyong/spring-boot.git](http://web.archive.org/web/20230101144912/https://github.com/mkyong/spring-boot.git)
+```bash
+$ git clone https://github.com/mkyong/spring-boot.git
 $ cd spring-jdbc/sp
+```
 
 ## 参考
 
-*   [Oracle 创建函数](http://web.archive.org/web/20230101144912/https://docs.oracle.com/cd/B19306_01/server.102/b14200/statements_5009.htm)
-*   [Oracle 存储函数示例](http://web.archive.org/web/20230101144912/https://www.mkyong.com/oracle/oracle-plsql-create-function-example/)
-*   [Oracle 开发和使用存储过程](http://web.archive.org/web/20230101144912/https://docs.oracle.com/cd/B28359_01/appdev.111/b28843/tdddg_procedures.htm)
-*   [JDBC 可调用语句-存储过程输出参数示例](http://web.archive.org/web/20230101144912/https://www.mkyong.com/jdbc/jdbc-callablestatement-stored-procedure-out-parameter-example/)
-*   [春季 JDBC 文档](http://web.archive.org/web/20230101144912/https://docs.spring.io/spring/docs/current/spring-framework-reference/data-access.html#jdbc)
-*   [使用 SQL 数据库](http://web.archive.org/web/20230101144912/https://docs.spring.io/spring-boot/docs/2.1.3.RELEASE/reference/htmlsingle/#boot-features-sql)
-*   [Java JDBC 教程](/web/20230101144912/https://mkyong.com/tutorials/jdbc-tutorials/)
-*   [使用引用游标返回记录集](http://web.archive.org/web/20230101144912/https://oracle-base.com/articles/misc/using-ref-cursors-to-return-recordsets)
-
-<input type="hidden" id="mkyong-current-postId" value="15151">
+* [Oracle 创建函数](http://web.archive.org/web/20230101144912/https://docs.oracle.com/cd/B19306_01/server.102/b14200/statements_5009.htm)
+* [Oracle 存储函数示例](http://web.archive.org/web/20230101144912/https://www.mkyong.com/oracle/oracle-plsql-create-function-example/)
+* [Oracle 开发和使用存储过程](http://web.archive.org/web/20230101144912/https://docs.oracle.com/cd/B28359_01/appdev.111/b28843/tdddg_procedures.htm)
+* [JDBC 可调用语句-存储过程输出参数示例](http://web.archive.org/web/20230101144912/https://www.mkyong.com/jdbc/jdbc-callablestatement-stored-procedure-out-parameter-example/)
+* [春季 JDBC 文档](http://web.archive.org/web/20230101144912/https://docs.spring.io/spring/docs/current/spring-framework-reference/data-access.html#jdbc)
+* [使用 SQL 数据库](http://web.archive.org/web/20230101144912/https://docs.spring.io/spring-boot/docs/2.1.3.RELEASE/reference/htmlsingle/#boot-features-sql)
+* [Java JDBC 教程](/web/20230101144912/https://mkyong.com/tutorials/jdbc-tutorials/)
+* [使用引用游标返回记录集](http://web.archive.org/web/20230101144912/https://oracle-base.com/articles/misc/using-ref-cursors-to-return-recordsets)

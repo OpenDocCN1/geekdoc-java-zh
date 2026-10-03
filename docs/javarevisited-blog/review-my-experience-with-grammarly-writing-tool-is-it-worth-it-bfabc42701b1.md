@@ -1,3 +1,4 @@
+
 # 语法评论——语法溢价值得吗？[2023 年更新]
 
 > 原文：<https://medium.com/javarevisited/review-my-experience-with-grammarly-writing-tool-is-it-worth-it-bfabc42701b1?source=collection_archive---------0----------------------->
@@ -107,13 +108,21 @@ image_credit —语法上
 其他**你可能喜欢的编程和博客文章****
 
 *   **[为什么每个程序员都应该创建在线课程](https://javarevisited.blogspot.com/2019/06/why-programmers-should-create-and-sell.html)**
+
 *   **每个软件工程师都应该学习的 10 件事**
+
 *   **[提高邮件写作技巧的五大课程](https://javarevisited.blogspot.com/2018/02/top-5-professional-email-writing-courses-for-programmers.html#axzz5QneDWILh)**
+
 *   **[提高你软技能的前 5 本书](https://javarevisited.blogspot.com/2017/12/5-career-development-and-soft-skill-books-for-programmers.html)**
+
 *   **[每个程序员都应该读的 10 本书](http://www.java67.com/2015/03/10-books-every-programmer-and-software-engineer-read.html)**
+
 *   **[每个程序员都应该读的 10 本算法书](https://dev.to/javinpaul/10-best-books-to-learn-data-structure-and-algorithms-in-java-python-c-and-c-5743)**
+
 *   **[10 门数据结构与编程课程破解面试](https://hackernoon.com/10-data-structure-algorithms-and-programming-courses-to-crack-any-coding-interview-e1c50b30b927)**
+
 *   **[初学者学习 Python 的 5 大课程](https://javarevisited.blogspot.com/2018/03/top-5-courses-to-learn-python-in-2018.html)**
+
 *   **[学习数据科学和机器学习的 10 门课程](https://javarevisited.blogspot.com/2018/10/data-science-and-machine-learning-courses-using-python-and-R-programming.html)**
 
 **感谢您阅读本文。如果你喜欢这篇关于流行写作工具 Grammarly 的评论，并且有兴趣了解更多关于我写博客的经历，我使用的工具等等。，然后订阅博客，每篇帖子都会通知你。你也可以在 Twitter、脸书和 Medium、

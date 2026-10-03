@@ -1,10 +1,11 @@
+
 # DDD 的双重派遣
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/ddd-double-dispatch>
 
-## 1。概述
+## 1. 概述
 
-双重分派是一个技术术语，用来描述基于接收者和参数类型选择调用方法的**过程。**
+双重分派是一个技术术语，用来描述基于接收者和参数类型选择调用方法的**过程**。
 
 很多开发人员经常混淆双重分派和[策略模式](https://web.archive.org/web/20220813055833/https://en.wikipedia.org/wiki/Strategy_pattern)。
 
@@ -12,15 +13,15 @@ Java 不支持双重分派，但是我们可以使用一些技术来克服这个
 
 在本教程中，我们将重点展示在领域驱动设计(DDD)和策略模式的背景下双重分派的例子。
 
-## 2。双重调度
+## 2. 双重调度
 
 在我们讨论双重分派之前，让我们回顾一些基础知识，并解释什么是单一分派。
 
-### 2.1.单一调度
+### 2.1. 单一调度
 
 **Single dispatch 是一种基于接收方运行时类型来选择实现方法的方式。**在 Java 中，这基本上和多态性是一回事。
 
-例如，让我们看看这个简单的折扣政策界面:
+例如，让我们看看这个简单的折扣政策界面：
 
 ```java
 public interface DiscountPolicy {
@@ -28,7 +29,7 @@ public interface DiscountPolicy {
 }
 ```
 
-`DiscountPolicy`接口有两个实现。平坦的，总是返回相同的折扣:
+`DiscountPolicy`接口有两个实现。平坦的，总是返回相同的折扣：
 
 ```java
 public class FlatDiscountPolicy implements DiscountPolicy {
@@ -39,14 +40,13 @@ public class FlatDiscountPolicy implements DiscountPolicy {
 }
 ```
 
-第二个实现根据订单的总成本返回折扣:
+第二个实现根据订单的总成本返回折扣：
 
 ```java
 public class AmountBasedDiscountPolicy implements DiscountPolicy {
     @Override
     public double discount(Order order) {
-        if (order.totalCost()
-            .isGreaterThan(Money.of(CurrencyUnit.USD, 500.00))) {
+        if (order.totalCost().isGreaterThan(Money.of(CurrencyUnit.USD, 500.00))) {
             return 0.10;
         } else {
             return 0;
@@ -57,7 +57,7 @@ public class AmountBasedDiscountPolicy implements DiscountPolicy {
 
 为了这个例子的需要，让我们假设`Order`类有一个`totalCost()`方法。
 
-**现在，Java 中的单一分派只是一个众所周知的多态行为，在下面的测试中得到了证明:**
+**现在，Java 中的单一分派只是一个众所周知的多态行为，在下面的测试中得到了证明：**
 
 ```java
 @DisplayName(
@@ -86,7 +86,7 @@ void test() throws Exception {
 
 我们现在准备引入双重调度。
 
-### 2.2.双重分派与方法重载
+### 2.2. 双重分派与方法重载
 
 **Double dispatch 根据接收方类型和参数类型确定运行时调用的方法**。
 
@@ -96,7 +96,7 @@ Java 不支持双重调度。
 
 以下示例详细解释了这种行为。
 
-我们来介绍一个新的折扣界面，名为`SpecialDiscountPolicy`:
+我们来介绍一个新的折扣界面，名为`SpecialDiscountPolicy`：
 
 ```java
 public interface SpecialDiscountPolicy extends DiscountPolicy {
@@ -106,7 +106,7 @@ public interface SpecialDiscountPolicy extends DiscountPolicy {
 
 `SpecialOrder`只是扩展了`Order`，没有添加新的行为。
 
-现在，当我们创建一个`SpecialOrder`的实例，但将其声明为普通的`Order`时，则不使用特殊折扣方法:
+现在，当我们创建一个`SpecialOrder`的实例，但将其声明为普通的`Order`时，则不使用特殊折扣方法：
 
 ```java
 @DisplayName(
@@ -142,7 +142,7 @@ void test() throws Exception {
 
 即使 Java 不支持双重分派，我们也可以用一个模式来实现类似的行为: [Visitor](https://web.archive.org/web/20220813055833/https://en.wikipedia.org/wiki/Visitor_pattern) 。
 
-### 2.3.访问者模式
+### 2.3. 访问者模式
 
 访问者模式允许我们在不修改现有类的情况下向它们添加新的行为。多亏了模仿双重分派的巧妙技术，这才成为可能。
 
@@ -152,7 +152,7 @@ void test() throws Exception {
 
 相反，我们将使用访问者模式。
 
-首先，我们需要介绍一下`Visitable`接口:
+首先，我们需要介绍一下`Visitable`接口：
 
 ```java
 public interface Visitable<V> {
@@ -160,7 +160,7 @@ public interface Visitable<V> {
 }
 ```
 
-我们还将使用一个访问者接口，在我们名为`OrderVisitor`的案例中:
+我们还将使用一个访问者接口，在我们名为`OrderVisitor`的案例中：
 
 ```java
 public interface OrderVisitor {
@@ -175,7 +175,7 @@ public interface OrderVisitor {
 
 每个订单类型都需要实现`Visitable`接口，并提供自己的看似相同的实现，这是另一个缺点。
 
-注意添加到`Order`和`SpecialOrder`的方法是相同的:
+注意添加到`Order`和`SpecialOrder`的方法是相同的：
 
 ```java
 public class Order implements Visitable<OrderVisitor> {
@@ -195,7 +195,7 @@ public class SpecialOrder extends Order {
 
 **不在子类中重新实现`accept` 可能很诱人。然而，如果我们不这样做，那么`OrderVisitor.visit(Order)`方法将总是被使用，当然，由于多态性。**
 
-最后，让我们看看负责创建 HTML 视图的`OrderVisitor`的实现:
+最后，让我们看看负责创建 HTML 视图的`OrderVisitor`的实现：
 
 ```java
 public class HtmlOrderViewCreator implements OrderVisitor {
@@ -215,11 +215,10 @@ public class HtmlOrderViewCreator implements OrderVisitor {
     public void visit(SpecialOrder order) {
         html = String.format("<h1>Special Order</h1><p>total cost: %s</p>", order.totalCost());
     }
-
 }
 ```
 
-以下示例演示了`HtmlOrderViewCreator`的使用:
+以下示例演示了`HtmlOrderViewCreator`的使用：
 
 ```java
 @DisplayName(
@@ -235,11 +234,9 @@ void test() throws Exception {
     HtmlOrderViewCreator htmlOrderViewCreator = new HtmlOrderViewCreator();
 
     // when
-    orders.get(0)
-        .accept(htmlOrderViewCreator);
+    orders.get(0).accept(htmlOrderViewCreator);
     String regularOrderHtml = htmlOrderViewCreator.getHtml();
-    orders.get(1)
-        .accept(htmlOrderViewCreator);
+    orders.get(1).accept(htmlOrderViewCreator);
     String specialOrderHtml = htmlOrderViewCreator.getHtml();
 
     // then
@@ -248,7 +245,7 @@ void test() throws Exception {
 }
 ```
 
-## 3.DDD 的双重派遣
+## 3. DDD 的双重派遣
 
 在前面的部分中，我们讨论了双重分派和访问者模式。
 
@@ -256,9 +253,9 @@ void test() throws Exception {
 
 让我们回到订单和折扣政策的例子。
 
-### 3.1.作为战略模式的折扣政策
+### 3.1. 作为战略模式的折扣政策
 
-前面，我们介绍了计算所有订单行项目总和的`Order`类及其`totalCost()`方法:
+前面，我们介绍了计算所有订单行项目总和的`Order`类及其`totalCost()`方法：
 
 ```java
 public class Order {
@@ -270,7 +267,7 @@ public class Order {
 
 还有一个`DiscountPolicy`接口来计算订单的折扣。引入该接口是为了允许使用不同的折扣策略，并在运行时更改它们。
 
-这种设计比简单地将所有可能的折扣策略硬编码到 *Order* 类中灵活得多:
+这种设计比简单地将所有可能的折扣策略硬编码到`Order`类中灵活得多：
 
 ```java
 public interface DiscountPolicy {
@@ -282,11 +279,11 @@ public interface DiscountPolicy {
 
 让我们看看如何结合双派遣技术和折扣政策。
 
-### 3.2.双重派遣和折扣政策
+### 3.2. 双重派遣和折扣政策
 
 为了正确使用策略模式，将它作为参数传递通常是个好主意。这种方法遵循支持更好封装的[告诉，不要问](https://web.archive.org/web/20220813055833/https://martinfowler.com/bliki/TellDontAsk.html)原则。
 
-例如，`Order`类可以像这样实现`totalCost` :
+例如，`Order`类可以像这样实现`totalCost`：
 
 ```java
 public class Order /* ... */ {
@@ -304,9 +301,9 @@ public class Order /* ... */ {
 
 我们已经知道方法重载发生在编译时。因此，一个自然的问题出现了:我们如何根据订单的运行时类型动态地将订单折扣逻辑分派给正确的方法？
 
-**答案？我们需要稍微修改订单类。**
+**答案？**我们需要稍微修改订单类。
 
-根`Order`类需要在运行时分派给折扣策略参数。实现这一点最简单的方法是添加一个受保护的`applyDiscountPolicy`方法:
+根`Order`类需要在运行时分派给折扣策略参数。实现这一点最简单的方法是添加一个受保护的`applyDiscountPolicy`方法：
 
 ```java
 public class Order /* ... */ {
@@ -318,13 +315,15 @@ public class Order /* ... */ {
     protected double applyDiscountPolicy(SpecialDiscountPolicy discountPolicy) {
         return discountPolicy.discount(this);
     }
-   // ...
+    // ...
 }
 ```
 
 由于这种设计，我们避免了在`Order`子类的`totalCost`方法中复制业务逻辑。
 
-让我们演示一下用法:
+让我们演示一下用法：
+
+
 
 ```java
 @DisplayName(
@@ -357,9 +356,9 @@ void test() throws Exception {
 }
 ```
 
-这个例子仍然使用 Visitor 模式，只是稍微修改了一下。订单类知道`SpecialDiscountPolicy`(访问者)有某种意义并计算折扣。
+这个例子仍然使用 `Visitor` 模式，只是稍微修改了一下。订单类知道`SpecialDiscountPolicy`(访问者)有某种意义并计算折扣。
 
-**如前所述，我们希望能够基于`Order`的运行时类型应用不同的折扣规则。因此，我们需要在每个子类中覆盖受保护的`applyDiscountPolicy`方法。**
+如前所述，我们希望能够基于`Order`的运行时类型应用不同的折扣规则。因此，我们需要在每个子类中覆盖受保护的`applyDiscountPolicy`方法。
 
 让我们在`SpecialOrder`类中覆盖这个方法:
 
@@ -413,8 +412,8 @@ void test() throws Exception {
 
 此外，由于我们在订单类中使用多态行为，我们可以很容易地修改总成本计算方法。
 
-## 4。结论
+## 4. 结论
 
 在本文中，我们学习了如何在领域驱动设计中使用双重分派技术和`Strategy`(又名`Policy`)模式。
 
-GitHub 上的[提供了所有示例的完整源代码。](https://web.archive.org/web/20220813055833/https://github.com/eugenp/tutorials/tree/master/ddd)
+GitHub 上的[所有示例的完整源代码](https://web.archive.org/web/20220813055833/https://github.com/eugenp/tutorials/tree/master/ddd)已提供。

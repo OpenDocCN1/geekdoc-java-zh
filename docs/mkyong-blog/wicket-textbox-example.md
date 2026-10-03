@@ -1,3 +1,4 @@
+
 # Wicket 文本框示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/wicket/wicket-textbox-example/>
@@ -5,7 +6,7 @@
 Wicket 教程向你展示了如何创建一个文本框，验证它，并将文本框的值传递到下一页。
 
 ```java
- //Java 
+//Java 
 import org.apache.wicket.markup.html.form.TextField;
 ...
 final TextField<String> username = new TextField<String>("username", Model.of(""));
@@ -15,14 +16,14 @@ form.add(username);
 <input wicket:id="username" type="text" size="20" /> 
 ```
 
-## 1.Wicket 文本框示例
+## 1. Wicket 文本框示例
 
 通过 Wicket 的`TextField`呈现文本框的用户页面。
 
-*文件:UserPage.java*
+*文件：`UserPage.java`*
 
 ```java
- package com.mkyong.user;
+package com.mkyong.user;
 
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.form.Form;
@@ -64,10 +65,10 @@ public class UserPage extends WebPage {
 } 
 ```
 
-*File : UserPage.html*
+*文件：`UserPage.html`*
 
-```java
- <html>
+```html
+<html>
 <head>
 <style>
 label {
@@ -96,14 +97,14 @@ label {
 </html> 
 ```
 
- ## 2.用户名验证器
+## 2. 用户名验证器
 
-一个用户名验证器，以确保用户名的长度在 5 到 15 之间，在字符或符号 a-z，0-9，下划线，连字符。
+一个用户名验证器，以确保用户名的长度在 5 到 15 之间，在字符或符号 `a-z`，`0-9`，下划线，连字符。
 
-*文件:UsernameValidator.java*
+*文件：`UsernameValidator.java`*
 
 ```java
- package com.mkyong.user;
+package com.mkyong.user;
 
 import org.apache.wicket.validation.CompoundValidator;
 import org.apache.wicket.validation.validator.PatternValidator;
@@ -122,14 +123,14 @@ public class UsernameValidator extends CompoundValidator<String> {
 } 
 ```
 
- ## 3.显示文本框值
+## 3. 显示文本框值
 
-显示来自**UserPage.html**的文本框值的页面。
+显示来自`UserPage.html`的文本框值的页面。
 
-*文件:SuccessPage.java*
+*文件：`SuccessPage.java`*
 
 ```java
- package com.mkyong.user;
+package com.mkyong.user;
 
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.basic.Label;
@@ -152,10 +153,10 @@ public class SuccessPage extends WebPage {
 } 
 ```
 
-*文件:SuccessPage.html*
+*文件：`SuccessPage.html`*
 
-```java
- <html>
+```html
+<html>
 <body>
 	<h1>Wicket TextBox Example - SuccessPage.html</h1>
 
@@ -165,28 +166,23 @@ public class SuccessPage extends WebPage {
 </html> 
 ```
 
-## 4.演示
+## 4. 演示
 
-开始并访问—*http://localhost:8080/wicket examples/*
+开始并访问 — *http://localhost:8080/wicket examples/*
 
-如果文本框有错误:
+如果文本框有错误：
 
 ![wicket textbox example](img/a9fee054551a3eeba8179110831eafd7.png "wicket-textbox-example1")
 
 如果文本框没有错误，导航到下一页并显示文本框值。
 
-![wicket textbox](img/a857756edda29e30434f2bab3bed1740.png "wicket-textbox-example2")Download it – [Wicket-textbox-examples.zip](http://web.archive.org/web/20190304030558/http://www.mkyong.com/wp-content/uploads/2011/05/Wicket-textbox-examples.zip) (8KB)
+![wicket textbox](img/a857756edda29e30434f2bab3bed1740.png "wicket-textbox-example2")
+
+Download it – [Wicket-textbox-examples.zip](http://web.archive.org/web/20190304030558/http://www.mkyong.com/wp-content/uploads/2011/05/Wicket-textbox-examples.zip) (8KB)
 
 ## 参考
 
-1.  [用正则表达式验证用户名](http://web.archive.org/web/20190304030558/http://www.mkyong.com/regular-expressions/how-to-validate-username-with-regular-expression/)
-2.  [Wicket TextField Javadoc](http://web.archive.org/web/20190304030558/http://wicket.apache.org/apidocs/1.4/org/apache/wicket/markup/html/form/TextField.html)
+1. [用正则表达式验证用户名](http://web.archive.org/web/20190304030558/http://www.mkyong.com/regular-expressions/how-to-validate-username-with-regular-expression/)
+2. [Wicket TextField Javadoc](http://web.archive.org/web/20190304030558/http://wicket.apache.org/apidocs/1.4/org/apache/wicket/markup/html/form/TextField.html)
 
 [textbox](http://web.archive.org/web/20190304030558/http://www.mkyong.com/tag/textbox/) [wicket](http://web.archive.org/web/20190304030558/http://www.mkyong.com/tag/wicket/)
-
-
-
-
-
-
-

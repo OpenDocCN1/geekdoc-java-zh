@@ -1,3 +1,4 @@
+
 # 为什么你应该学习在树莓派上编程
 
 > 原文：<https://medium.com/javarevisited/why-you-should-learn-to-program-on-the-raspberry-pi-da4a039bb02b?source=collection_archive---------1----------------------->
@@ -12,13 +13,13 @@ Raspberry Pi 项目的目标是**制造一台所有人都买得起的廉价电�
 
 如果你想快速入门，就买[“Raspberry Pi 4 桌面套件”(130€)](https://www.raspberrypi.org/products/raspberry-pi-4-desktop-kit/) 吧，里面包括板卡、电源、HDMI 线、机箱、预装操作系统的 microSD 卡。你只需要增加一个显示器或电视。
 
-# 为什么要用树莓派？
+## 为什么要用树莓派？
 
-## 价格
+### 价格
 
 如果你已经有一个电源，电缆，和/或 microSD 卡，你可以从 40€起购买板本身。是的，事实上，这是一个小型主板上的完整 PC 的起始价格！
 
-## 拉斯比安操作系统(完整版)
+### 拉斯比安操作系统(完整版)
 
 有不同的操作系统可用于 Raspberry Pi，但完美的起点是“Raspbian OS (full)”，它可以通过免费的[“Imager”工具](https://www.raspberrypi.org/downloads/)复制到 microSD 卡上。
 
@@ -36,13 +37,13 @@ $ wget https://github.com/stevedesmond-ca/vscode-arm/releases/download/1.28.2/ v
 $ sudo apt install ./vscode-1.28.2.deb
 ```
 
-## 多种编程语言
+### 多种编程语言
 
 做出你的选择: [Java](/javarevisited/10-books-java-developers-should-read-in-2020-e6222f25cc72) ， [Python](/javarevisited/8-projects-you-can-buil-to-learn-python-in-2020-251dd5350d56?source=---------10-----------------------) ， [JavaScript](/javarevisited/10-best-online-courses-to-learn-javascript-in-2020-af5ed0801645) ，…或者从基础做起。你们都可以在树莓派上运行和使用它。
 
 正如你在上面的截图中看到的，有多种工具可以用于所有这些编程语言。
 
-## GPIOs
+### GPIOs
 
 当您查看 Raspberry Pi 板时，您会发现有 40 个引脚(2 排，每排 20 个)。那些是通用输入/输出。其中一些可以用作数字输入或输出引脚，这意味着 0 伏为关，3.3 伏为开。你能用它做的事情多得惊人！
 
@@ -50,13 +51,13 @@ $ sudo apt install ./vscode-1.28.2.deb
 
 在这篇关于 [Oracle Java Magazine](https://blogs.oracle.com/javamagazine/getting-started-with-javafx-on-raspberry-pi) 的长文中，您可以找到一个 Java 应用程序的详细步骤，该应用程序有一个用户界面来控制 led 并在图表上显示距离传感器的测量结果。
 
-## 权力
+### 权力
 
 最新的 Raspberry Pi 4 速度很快，有 2、4 或 8GB 内存可供选择。我写了一整本书，并在上面创建了许多不同的 Java 应用程序。你可以连接多达两个 4K 显示器，所以有很大的空间来拥有不同的应用程序，终端，文件浏览器等。已经有一个这样的 4K 屏幕是程序员的天堂！
 
 ![](img/a343262b9b1b33370854a1d29009cada.png)
 
-# 《树莓派上的 Java 入门》一书
+## 《树莓派上的 Java 入门》一书
 
 如果你想在 Raspberry Pi 上开始尝试 Java，我可以强烈推荐我的书[，这本书通过大量示例引导你完成入门的所有步骤](https://webtechie.be/books/)。
 

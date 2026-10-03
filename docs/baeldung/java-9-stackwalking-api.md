@@ -1,14 +1,15 @@
+
 # Java 9 堆栈审核 API 简介
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-9-stackwalking-api>
 
-## 1。简介
+## 1. 简介
 
 在这篇简短的文章中，我们将看看 Java 9 的[堆栈审核 API](https://web.archive.org/web/20220820045610/https://openjdk.java.net/jeps/259) 。
 
-**新功能提供了对`StackFrame` s** 的`Stream`的访问，使我们能够轻松地直接浏览堆栈，并充分利用 Java 8 中强大的 [`Stream` API。](/web/20220820045610/https://www.baeldung.com/java-8-streams)
+**新功能提供了对`StackFrame`的`Stream`的访问**，使我们能够轻松地直接浏览堆栈，并充分利用 Java 8 中强大的[`Stream` API](/web/20220820045610/https://www.baeldung.com/java-8-streams)。
 
-## 2。`StackWalker` 【T2 的优势】
+## 2. `StackWalker`的优势
 
 在 Java 8 中，`Throwable::getStackTrace`和`Thread::getStackTrace`返回一个由`StackTraceElement`组成的数组。如果没有大量的手动代码，就没有办法丢弃不需要的帧，只保留我们感兴趣的帧。
 
@@ -18,9 +19,9 @@
 
 当然，新功能是线程安全的；这允许多个线程共享一个`StackWalker`实例来访问它们各自的堆栈。
 
-正如在 [JEP-259](https://web.archive.org/web/20220820045610/https://openjdk.java.net/jeps/259) 中所描述的，JVM 将得到增强，以允许在需要时对额外的堆栈帧进行高效的惰性访问。
+正如在[JEP-259](https://web.archive.org/web/20220820045610/https://openjdk.java.net/jeps/259)中所描述的，JVM 将得到增强，以允许在需要时对额外的堆栈帧进行高效的惰性访问。
 
-## 3。`StackWalker`在行动中
+## 3. `StackWalker`在行动中
 
 让我们首先创建一个包含一系列方法调用的类:
 
@@ -41,7 +42,7 @@ public class StackWalkerDemo {
 }
 ```
 
-### 3.1。捕获整个堆栈跟踪
+### 3.1. 捕获整个堆栈跟踪
 
 让我们继续，添加一些堆栈审核代码:
 
@@ -49,7 +50,7 @@ public class StackWalkerDemo {
 public void methodThree() {
     List<StackFrame> stackTrace = StackWalker.getInstance()
       .walk(this::walkExample);
-} 
+}
 ```
 
 `StackWalker::walk`方法接受一个函数引用，为当前线程创建一个`StackFrame`的`Stream`，将函数应用于`Stream`，并关闭`Stream`。
@@ -88,9 +89,9 @@ class org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference#run, Line 86
 class org.eclipse.jdt.internal.junit.runner.RemoteTestRunner#main, Line 192
 ```
 
-在整个堆栈跟踪中，我们只对前四帧感兴趣。来自 org.junit 的剩余的**帧和`org.eclipse`只不过是噪声帧**。
+在整个堆栈跟踪中，我们只对前四帧感兴趣。来自`org.junit`和`org.eclipse`的剩余的**帧只不过是噪声帧**。
 
-### 3.2。过滤`StackFrame`年代
+### 3.2. 过滤`StackFrame`
 
 让我们增强堆栈审核代码并消除干扰:
 
@@ -120,15 +121,15 @@ public String walkExample3(Stream<StackFrame> stackFrameStream) {
       .filter(frame -> frame.getClassName()
         .contains("com.baeldung") && frame.getClassName().endsWith("Test"))
       .findFirst()
-      .map(f -> f.getClassName() + "#" + f.getMethodName() 
+      .map(f -> f.getClassName() + "#" + f.getMethodName()
         + ", Line " + f.getLineNumber())
       .orElse("Unknown caller");
 }
 ```
 
-请注意，在这里，我们只对映射到一个`String`的单个`StackFrame,`感兴趣。输出将只是包含`StackWalkerDemoTest`类的那一行。
+请注意，在这里，我们只对映射到一个`String`的单个`StackFrame`感兴趣。输出将只是包含`StackWalkerDemoTest`类的那一行。
 
-### 3.3。捕捉反射帧
+### 3.3. 捕捉反射帧
 
 为了捕捉默认隐藏的反射帧，`StackWalker`需要配置一个额外的选项`SHOW_REFLECT_FRAMES`:
 
@@ -157,7 +158,7 @@ org.eclipse.jdt.internal.junit.runner.RemoteTestRunner#main, Line 192
 
 正如我们所见，`jdk.internal`帧是由`SHOW_REFLECT_FRAMES`选项捕获的新帧。
 
-### 3.4。捕捉隐藏帧
+### 3.4. 捕捉隐藏帧
 
 除了反射帧之外，JVM 实现可能会选择隐藏特定于实现的帧。
 
@@ -194,11 +195,11 @@ org.junit.runners.model.FrameworkMethod$1#runReflectiveCall, Line 50
 org.eclipse.jdt.internal.junit.runner.RemoteTestRunner#main, Line 192
 ```
 
-最上面的两个框架是 lambda 代理框架，由 JVM 内部创建。值得注意的是，我们在前面的例子中捕获的反射帧仍然保留在`SHOW_HIDDEN_FRAMES`选项中。这是因为 **`SHOW_HIDDEN_FRAMES`是`SHOW_REFLECT_FRAMES`** 的超集。
+最上面的两个框架是 lambda 代理框架，由 JVM 内部创建。值得注意的是，我们在前面的例子中捕获的反射帧仍然保留在`SHOW_HIDDEN_FRAMES`选项中。这是因为**`SHOW_HIDDEN_FRAMES`是`SHOW_REFLECT_FRAMES`的超集**。
 
-### 3.5。识别调用类
+### 3.5. 识别调用类
 
-选项`RETAIN_CLASS_REFERENCE`在`StackWalker`走过的所有`StackFrame`中零售`Class`的对象。这允许我们调用方法`StackWalker::getCallerClass`和`StackFrame::getDeclaringClass`。
+选项`RETAIN_CLASS_REFERENCE`在`StackWalker`走过的所有`StackFrame`中保留`Class`的对象。这允许我们调用方法`StackWalker::getCallerClass`和`StackFrame::getDeclaringClass`。
 
 让我们使用`StackWalker::getCallerClass`方法来识别调用类:
 
@@ -220,7 +221,7 @@ public void giveStalkWalker_whenInvokingFindCaller_thenFindCallingClass() {
 }
 ```
 
-`caller.getCanonicalName(),`的输出将是:
+`caller.getCanonicalName()`的输出将是:
 
 ```java
 com.baeldung.java9.stackwalker.StackWalkerDemoTest
@@ -228,10 +229,10 @@ com.baeldung.java9.stackwalker.StackWalkerDemoTest
 
 请注意，不应该从堆栈底部的方法调用`StackWalker::getCallerClass`。因为这会导致`IllegalCallerException`被抛出。
 
-## 4。结论
+## 4. 结论
 
 通过这篇文章，我们看到了使用结合了`StackWalker`和`Stream` API 的`StackFrame`的能力来处理`StackFrame`是多么容易。
 
-当然，我们可以探索各种其他功能——例如跳过、丢弃和限制`StackFrame`s。[官方文档](https://web.archive.org/web/20220820045610/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StackWalker.html)包含一些其他用例的可靠示例。
+当然，我们可以探索各种其他功能——例如跳过、丢弃和限制`StackFrame`。[官方文档](https://web.archive.org/web/20220820045610/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StackWalker.html)包含一些其他用例的可靠示例。
 
-和往常一样，您可以在 GitHub 上获得本文[的完整源代码。](https://web.archive.org/web/20220820045610/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-9-new-features)
+和往常一样，您可以在 GitHub 上获得本文[的完整源代码](https://web.archive.org/web/20220820045610/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-9-new-features)。

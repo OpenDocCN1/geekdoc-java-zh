@@ -1,3 +1,4 @@
+
 # 您需要了解的高级 Java Enum 特性
 
 > 原文：<https://medium.com/javarevisited/advanced-java-enum-features-you-need-to-know-b516a191c7e2?source=collection_archive---------1----------------------->

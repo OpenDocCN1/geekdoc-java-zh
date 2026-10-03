@@ -1,3 +1,4 @@
+
 # 使用 GUI API 的 JDBC
 
 > 原文：[`docs.oracle.com/javase/tutorial/jdbc/basics/jdbcswing.html`](https://docs.oracle.com/javase/tutorial/jdbc/basics/jdbcswing.html)
@@ -8,21 +9,16 @@
 
 该示例包含五个文本字段，对应于`COFFEES`表中的每一列。它还包含三个按钮：
 
-+   **向表中添加行**：根据文本字段中输入的数据向示例表中添加一行。
-
-+   **更新数据库**：根据示例表中的数据更新`COFFEES`表。
-
-+   **放弃更改**：检索`COFFEES`表的内容，替换示例表中的现有数据。
++ **向表中添加行**：根据文本字段中输入的数据向示例表中添加一行。
++ **更新数据库**：根据示例表中的数据更新`COFFEES`表。
++ **放弃更改**：检索`COFFEES`表的内容，替换示例表中的现有数据。
 
 这个示例（需要`CoffeesTableModel.java`）演示了将 JDBC 与 Swing API 集成的一般步骤：
 
-1.  实现`TableModel`接口
-
-1.  实现`RowSetListener`接口
-
-1.  布局 Swing 组件
-
-1.  为示例中的按钮添加监听器
+1. 实现`TableModel`接口
+2. 实现`RowSetListener`接口
+3. 布局 Swing 组件
+4. 为示例中的按钮添加监听器
 
 ## 实现 javax.swing.event.TableModel
 
@@ -48,40 +44,39 @@ public CoffeesTableModel(CachedRowSet rowSetArg)
     }
     this.coffeesRowSet.beforeFirst();
 }
-
 ```
 
 以下描述了在这个构造函数中初始化的成员变量：
 
-+   `CachedRowSet coffeesRowSet`：存储`COFFEES`表的内容。
++ `CachedRowSet coffeesRowSet`：存储`COFFEES`表的内容。
 
-    本示例使用`RowSet`对象，特别是`CachedRowSet`对象，而不是`ResultSet`对象，有两个原因。`CachedRowSet`对象使应用程序的用户能够对其中包含的数据进行更改，而无需连接到数据库。此外，因为`CachedRowSet`对象是一个 JavaBeans 组件，它可以在发生某些事情时通知其他组件。在本示例中，当向`CachedRowSet`对象添加新行时，它会通知渲染表中数据的 Swing 组件刷新自身并显示新行。
+  本示例使用`RowSet`对象，特别是`CachedRowSet`对象，而不是`ResultSet`对象，有两个原因。`CachedRowSet`对象使应用程序的用户能够对其中包含的数据进行更改，而无需连接到数据库。此外，因为`CachedRowSet`对象是一个 JavaBeans 组件，它可以在发生某些事情时通知其他组件。在本示例中，当向`CachedRowSet`对象添加新行时，它会通知渲染表中数据的 Swing 组件刷新自身并显示新行。
 
-+   `ResultSetMetaData metadata`: 检索表`COFFEES`中的列数以及每个列的名称。
++ `ResultSetMetaData metadata`：检索表`COFFEES`中的列数以及每个列的名称。
 
-+   `int numcols, numrows`: 分别存储表`COFFEES`中的列数和行数。
++ `int numcols, numrows`：分别存储表`COFFEES`中的列数和行数。
 
 `CoffeesTableModel.java`示例实现了`TableModel`接口中的以下方法：
 
-+   `Class<?> getColumnClass(int columnIndex)`: 返回列中所有单元格值的最具体的超类。
++ `Class<?> getColumnClass(int columnIndex)`：返回列中所有单元格值的最具体的超类。
 
-+   `int getColumnCount()`: 返回模型中的列数。
++ `int getColumnCount()`：返回模型中的列数。
 
-+   `String getColumnName(int columnIndex)`: 返回由参数`columnIndex`指定的列的名称。
++ `String getColumnName(int columnIndex)`：返回由参数`columnIndex`指定的列的名称。
 
-+   `int getRowCount()`: 返回模型中的行数。
++ `int getRowCount()`：返回模型中的行数。
 
-+   `Object getValueAt(int rowIndex, int columnIndex)`: 返回交叉点处的单元格的值，该单元格位于列`columnIndex`和行`rowIndex`的交叉点处。
++ `Object getValueAt(int rowIndex, int columnIndex)`：返回交叉点处的单元格的值，该单元格位于列`columnIndex`和行`rowIndex`的交叉点处。
 
-+   `boolean isCellEditable(int rowIndex, int columnIndex)`: 如果列`rowIndex`和行`columnIndex`的交叉点处的单元格可以编辑，则返回 true。
++ `boolean isCellEditable(int rowIndex, int columnIndex)`：如果列`rowIndex`和行`columnIndex`的交叉点处的单元格可以编辑，则返回 true。
 
 以下方法未实现，因为此示例不允许用户直接编辑表的内容：
 
-+   `void addTableModelListener(TableModelListener l)`: 向列表中添加一个侦听器，每当数据模型发生更改时通知该侦听器。
++ `void addTableModelListener(TableModelListener l)`：向列表中添加一个侦听器，每当数据模型发生更改时通知该侦听器。
 
-+   `void removeTableModelListener(TableModelListener l)`: 从列表中移除一个侦听器，每当数据模型发生更改时通知该侦听器。
++ `void removeTableModelListener(TableModelListener l)`：从列表中移除一个侦听器，每当数据模型发生更改时通知该侦听器。
 
-+   `void setValueAt(Object aValue, int rowIndex, int columnIndex)`: 将交叉点处的单元格中的值设置为对象`aValue`，该单元格位于列`columnIndex`和行`rowIndex`的交叉点处。
++ `void setValueAt(Object aValue, int rowIndex, int columnIndex)`：将交叉点处的单元格中的值设置为对象`aValue`，该单元格位于列`columnIndex`和行`rowIndex`的交叉点处。
 
 ### 实现 getColumnCount 和 getRowCount
 
@@ -95,7 +90,6 @@ public int getColumnCount() {
 public int getRowCount() {
     return numrows;
 }
-
 ```
 
 ### 实现 getColumnClass
@@ -106,7 +100,6 @@ public int getRowCount() {
 public Class getColumnClass(int column) {
     return String.class;
 }
-
 ```
 
 ### 实现 getColumnName
@@ -121,7 +114,6 @@ public String getColumnName(int column) {
         return e.toString();
     }
 }
-
 ```
 
 ### 实现 getColumnAt
@@ -142,7 +134,6 @@ public Object getValueAt(int rowIndex, int columnIndex) {
         return e.toString();
     }
 }
-
 ```
 
 ### 实现 isCellEditable
@@ -153,7 +144,6 @@ public Object getValueAt(int rowIndex, int columnIndex) {
 public boolean isCellEditable(int rowIndex, int columnIndex) {
     return false;
 }
-
 ```
 
 ## 实现 javax.sql.RowSetListener
@@ -188,7 +178,6 @@ public void rowChanged(RowSetEvent event) {
         );
     }
 }
-
 ```
 
 此方法更新 GUI 应用程序中的表格。
@@ -205,7 +194,6 @@ myCoffeesTableModel.addEventHandlersToRowSet(this);
 // Displays the table   
 table = new JTable(); 
 table.setModel(myCoffeesTableModel);
-
 ```
 
 如前所述，此示例使用`RowSet`对象（特别是`CachedRowSet`对象）而不是`ResultSet`对象来表示`COFFEES`表的内容。
@@ -224,7 +212,6 @@ contentPane.setComponentOrientation(
     ComponentOrientation.LEFT_TO_RIGHT);
 contentPane.setLayout(new GridBagLayout());
 GridBagConstraints c = new GridBagConstraints();
-
 ```
 
 有关使用布局`GridBagLayout`的更多信息，请参见如何使用 GridBagLayout 中的 JFC/Swing 创建 GUI。
@@ -271,18 +258,19 @@ button_ADD_ROW.addActionListener(
         }
     }
 });
-
 ```
 
 当用户点击此按钮时，它执行以下操作：
 
-+   创建一个消息对话框，显示要添加到表中的行。
++ 创建一个消息对话框，显示要添加到表中的行。
 
-+   调用方法`CoffeesTableModel.insertRow`，将行添加到成员变量`CoffeesTableModel.coffeesRowSet`中。
++ 调用方法`CoffeesTableModel.insertRow`，将行添加到成员变量`CoffeesTableModel.coffeesRowSet`中。
 
 如果抛出`SQLException`，则方法`CoffeesFrame.displaySQLExceptionDialog`将创建一个消息对话框，显示`SQLException`的内容。
 
 以下语句向按钮**更新数据库**添加了一个监听器：
+
+
 
 ```java
 button_UPDATE_DATABASE.addActionListener(
@@ -304,12 +292,11 @@ button_UPDATE_DATABASE.addActionListener(
         }
     }
 );
-
 ```
 
 当用户点击此按钮时，将使用行集`myCoffeesTableModel.coffeesRowSet`的内容更新表`COFFEES`。
 
-以下语句向按钮**放弃更改**添加了一个监听器：
+以下语句向按钮`放弃更改`添加了一个监听器：
 
 ```java
 button_DISCARD_CHANGES.addActionListener(new ActionListener() {
@@ -321,7 +308,6 @@ button_DISCARD_CHANGES.addActionListener(new ActionListener() {
         }
     }
 });
-
 ```
 
 当用户点击此按钮时，将调用方法`CoffeesFrame.createNewTableModel`，该方法重新填充`JTable`组件，其中包含`COFFEES`表的内容。

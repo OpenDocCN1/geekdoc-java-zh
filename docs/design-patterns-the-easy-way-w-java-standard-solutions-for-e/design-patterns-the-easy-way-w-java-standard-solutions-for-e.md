@@ -1,69 +1,7 @@
+
 # 设计模式：简易方法，使用 Java 标准解决方案解决日常编程问题；适用于游戏编程、系统管理、应用及数据库系统（设计模式系列）
 
-
-
-
-
-
-
-
-
-
-
-
 # CodeWiz RDZ 和 R.M.Z. 呈现：
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # JAVA 简介
 
@@ -71,7 +9,7 @@
 ======================================
 ```
 
-Java 也许是目前最流行的编程语言之一。网络上有数无数的 Java 框架、更多的 Java 库，以及似乎无尽的 Java 项目。Android - 当今最流行的移动操作系统之一 - 大程度上基于 Java 代码的。
+Java 也许是目前最流行的编程语言之一。网络上有数无数的 Java 框架、更多的 Java 库，以及似乎无尽的 Java 项目。Android——当今最流行的移动操作系统之一——大程度上基于 Java 代码的。
 
 作为一名程序员，你将遇到许多需要特定解决方案的情况。通常，你会在其他项目中不断遇到相同的情况——然后意识到自己似乎在一遍又一遍地编写相同的解决方案和代码。
 
@@ -83,9 +21,9 @@ Java 也许是目前最流行的编程语言之一。网络上有数无数的 Ja
 
 重要的是如何快速且费力地实现这些模式——这本书将教你如何做。即使你只是开始学习 Java 编程，你也会发现这里的所有技术大有用处。
 
-# JAVA 工作坊 (Workshops):
+# JAVA 工作坊 (Workshops)
 
-在整书中，你将遇到一些工作坊，帮助你通过实际运用来应用各种设计模式。在完成这些任务时，思考一下需要使用它们的情况。
+在整本书中，你将遇到一些工作坊，帮助你通过实际运用来应用各种设计模式。在完成这些任务时，思考一下需要使用它们的情况。
 
 然后，在你自己的编码项目过程中，仔细考虑你的设计，并问自己在什么情况下某种设计模式会派上用场。我们设计的这本书具有很强的实践性——为你提供很多机会使用材料。
 
@@ -125,19 +63,15 @@ class Main{
 
 那么你需要使用工厂方法 (Factory Method)。
 
-## 它的基本原理：
+## 它的基本原理
 
 取决于你使用的编程语言，创建一个标准的数据对象创建类接口。然而，你将使用子类（扩展或实现你的高级“工厂”接口）来实际创建数据对象。子类为创建数据对象提供了广泛的灵活性。如果你的编程语言没有接口或抽象类，只需将你的“工厂”接口创建为类，然后让子类扩展它。
 
 例如，考虑要制作各种运动球数据对象，如篮球、足球、橄榄球、排球球等。你可能不知道在特定时刻该创建什么。那么你该如何编写代码？创建一个概述球类构建的接口。
 
+让我们将其命名为接口`BallMaker`。然后，对于我们拥有的每种球，创建一个扩展`BallMaker`的子类。这些子类是实际创建球数据对象的类——但它们每一个都有自己的规范。因此，`BasketBallMaker`子类将制造篮球，而`FootballMaker`子类将制造足球。
 
-
-
-让我们将其命名为接口 `BallMaker`。然后，对于我们拥有的每种球，创建一个扩展 `BallMaker` 的子类。这些子类是实际创建球数据对象的类——但它们每一个都有自己的规范。因此，`BasketBallMaker` 子类将制造篮球，而 `FootballMaker` 子类将制造足球。
-
-以下是 UML 图的的样式：
-
+以下是 UML 图的样式：
 
 该模式的伪代码实现也包含在归档中。如果你需要在另一种语言中实现此模式，这些伪代码将为你提供帮助。
 
@@ -167,7 +101,7 @@ class SubFactory1 implements Factory {
     // 这实现了接口中概述的相同函数
     interface
     public void createObject() {
-        // 为此创建者包含任何独特的之处
+        // 为此创建者包含任何独特之处
         class
         // 此处任何其他代码
     }
@@ -181,7 +115,7 @@ class SubFactory2 implements Factory {
 
     // 这实现了接口中概述的相同函数
     public void createObject() {
-        // 为此创建类包含任何独特的之处
+        // 为此创建类包含任何独特之处
         // 此处任何其他代码
     }
 }
@@ -235,7 +169,7 @@ class SportsBall {
 
 然后，你将有机会通过扩展工作来练习你所学的内容。
 
-### 第 1 ：工厂接口
+### 第 1 步：工厂接口
 
 首先，我们将创建一个所有球类工厂类都将实现的接口。
 
@@ -255,9 +189,9 @@ interface BallFactory {
 }
 ```
 
-### 第 2 ：第一个工厂类
+### 第 2 步：第一个工厂类
 
-接下来，我们创建一个实现我们定义的 BallFactory 接口的独特工厂类。目前，它做的只是创建篮球。这些可能是 SportsBall 对象的实例，但它们将具有篮球的特定特征。
+接下来，我们创建一个实现我们定义的`BallFactory`接口的独特工厂类。目前，它做的只是创建篮球。这些可能是`SportsBall`对象的实例，但它们将具有篮球的特定特征。
 
 ```java
 // 篮球制造器：
@@ -280,9 +214,9 @@ class BasketballMaker implements BallFactory {
 }
 ```
 
-### 第 3 ：设计你需要的任何额外工厂类
+### 第 3 步：设计你需要的任何额外工厂类
 
-之后，我们根据需要创建尽可能多的工厂类。它们都实现了 BallFactory 接口，并且它们都创建具有独特特征和属性的运动球。
+之后，我们根据需要创建尽可能多的工厂类。它们都实现了`BallFactory`接口，并且它们都创建具有独特特征和属性的运动球。
 
 让我们通过设计一个创建棒球的工厂类来实现。
 
@@ -311,11 +245,11 @@ class BaseballMaker implements BallFactory {
 }
 ```
 
-### 第 4 ：运行代码
+### 第 4 步：运行代码
 
 现在你已经设计了工厂类，是时候运行它们了。
 
-在你的主函数中（具有 public static-void main 方法的主类中），为每个类创建一个实例。我们将使用工厂来创建特定对象。在我们的示例中，我们创建了篮球和棒球工厂。
+在你的主函数中（具有`public static void main`方法的主类中），为每个类创建一个实例。我们将使用工厂来创建特定对象。在我们的示例中，我们创建了篮球和棒球工厂。
 
 ```java
 // 创建工厂
@@ -340,7 +274,7 @@ System.out.println(bb1.type);
 System.out.println(bb2.type);
 ```
 
-## JAVA-工作坊 1：
+## JAVA-工作坊 1
 
 使用你喜欢的 IDE 运行以下代码。在线 IDE，如 codechef.com、retextester.com、ideone.com 或 codpad.org 都是很好的选择。
 
@@ -392,14 +326,11 @@ class VolleyballMaker implements BallFactory {
 }
 ```
 
-
-
-
-### 高级编码：
+### 高级编码
 
 注意看所有的运动球仍然同一种类型的对象——运动球。
 
-你会如何修改代码，以便每个工厂类都能创建它们本应该创建的球类对象？例如，如何让 `BasketballMaker` 创建 `Basketball` 对象，而不是通用的、修改过的 `Sports Balls`？或者让 `BaseballMaker` 创建 `Baseball` 对象？
+你会如何修改代码，以便每个工厂类都能创建它们本应该创建的球类对象？例如，如何让`BasketballMaker`创建`Basketball`对象，而不是通用的、修改过的`SportsBall`？或者让`BaseballMaker`创建`Baseball`对象？
 
 # 第 2 章：组合模式（Composite Pattern）
 
@@ -413,20 +344,19 @@ class VolleyballMaker implements BallFactory {
 
 组合模式。
 
-## 它的基本工作原理：
+## 它的基本工作原理
 
-你有两个不同的类：`File` 类和 `Folder` 类。或者是 `Item` 和 `Group`。`Clothing` 和 `Bag`。`Toys` 和 `Box`。任何两个类的组合，其中一个类是由这两种类型组成的集合。
+你有两个不同的类：`File`类和`Folder`类。或者是`Item`和`Group`。`Clothing`和`Bag`。`Toys`和`Box`。任何两个类的组合，其中一个类是由这两种类型组成的集合。
 
 然而，这两个类可能具有许多相似的特征、方法和字段。你意识到可能需要编写比平时多一倍的代码——一个用于项目（items），一个用于分组（groups）。
 
-解决方案是让它们继承一个共同的父类或抽象类——组件（component）。这包括一个关键区别：`Group` 类包含该父类的集合。因为两个类都继承自同一个父类，所以 `Group` 类可以拥有项目或分组的集合。
+解决方案是让它们继承一个共同的父类或抽象类——组件（component）。这包括一个关键区别：`Group`类包含该父类的集合。因为两个类都继承自同一个父类，所以`Group`类可以拥有项目或分组的集合。
 
-例如，假设你有两个类：`Clothing` 和 `Bag`。一个 `Bag` 可以既包含衣服，也包含其他包。它们共享相似的特征，如名称、描述等。你意识到，当这些本应该放在同一段代码下时，编写单独的代码是多么低效（例如，当获取所有名称时，需要分别调用 `Clothing.getName()` 和 `Bag.getName()`）。
+例如，假设你有两个类：`Clothing`和`Bag`。一个`Bag`可以既包含衣服，也包含其他包。它们共享相似的特征，如名称、描述等。你意识到，当这些本应该放在同一段代码下时，编写单独的代码是多么低效（例如，当获取所有名称时，需要分别调用`Clothing.getName()`和`Bag.getName()`）。
 
-因此，你应用了组合模式。`Clothing` 和 `Bag` 类都继承自新的父类 `Item`。`Bag` 类被修改为拥有一个 `Items` 集合（可以是 `Bags` 或 `Clothing`）。
+因此，你应用了组合模式。`Clothing`和`Bag`类都继承自新的父类`Item`。`Bag`类被修改为拥有一个`Items`集合（可以是`Bags`或`Clothing`）。
 
 UML 图看起来是这样的：
-
 
 这里要记住的主要点是项目/容器类继承自共同的父类——组件。容器类将拥有一个包含组件的列表，组件可以是文件也可以是文件夹。
 
@@ -479,13 +409,15 @@ class Folder extends Component {
 
 想象你是某个非常受欢迎的社交媒体网站的软件工程师。
 
-下一次网站更新将拥有一个非常酷的功能——允许用户上传并组织他们选择的数据文件。你被指派实现这个功能。你知道必须设计 `File` 和 `Folder` 类，但你也意识到它们共享了太多的特征，例如名称、创建日期、修改日期、缩略图图标等。所以你想想，一定有更简单的方法来实现。
+
+
+下一次网站更新将拥有一个非常酷的功能——允许用户上传并组织他们选择的数据文件。你被指派实现这个功能。你知道必须设计`File`和`Folder`类，但你也意识到它们共享了太多的特征，例如名称、创建日期、修改日期、缩略图图标等。所以你想想，一定有更简单的方法来实现。
 
 你脑海中浮出的第一个想法就是实现组合模式。这也是应用它的理想情况。
 
-### 第 1 步：组件父类（Component Superclass）
+## 第 1 步：组件父类（Component Superclass）
 
-首先，我们将创建 `File` 和 `Folder` 类基础的父类。
+首先，我们将创建`File`和`Folder`类基础的父类。
 
 我们使用 Java 编码，所以可以使用抽象类（Abstract Class）。
 
@@ -509,9 +441,9 @@ abstract class Component {
 }
 ```
 
-### 第 2 步：自定义 Component 构造函数
+## 第 2 步：自定义 Component 构造函数
 
-接下来，我们将为 `Component` 编写一个修改版本的构造函数。当创建一个新组件时，它的名称将被设置，两个日期字段将被设置为当前日期。
+接下来，我们将为`Component`编写一个修改版本的构造函数。当创建一个新组件时，它的名称将被设置，两个日期字段将被设置为当前日期。
 
 以后继承此父类的 Files 和 Folders 也会使用相同的构造函数。
 
@@ -536,13 +468,13 @@ abstract class Component {
 
 在这里，你亲眼看到了共享方法如何为程序员节省许多行代码，并在过程中防止更多的编码错误。两个类之间的任何基本字段和方法都存在——程序员将不必受编写双倍代码的痛苦，也不需要更改某些字段。
 
-### 第 3 步：创建 File 类
+## 第 3 步：创建 File 类
 
-现在我们创建 `File` 类。
+现在我们创建`File`类。
 
-如前所述，`File` 类将具有 `Folder` 类的一些共同字段和方法。
+如前所述，`File`类将具有`Folder`类的一些共同字段和方法。
 
-然而，这里的 `File` 类将具有更具区分性的字段。它将包含文件类型的指示（例如表格、文档、幻灯片、图片、视频、PDF 等）。
+然而，这里的`File`类将具有更具区分性的字段。它将包含文件类型的指示（例如表格、文档、幻灯片、图片、视频、PDF 等）。
 
 ```java
 /*
@@ -567,11 +499,11 @@ class File extends Component {
 }
 ```
 
-### 第 3 步：创建 Folder 类
+## 第 3 步：创建 Folder 类
 
-创建 `Folder` 类的过程与创建 `File` 类非常相似。
+创建`Folder`类的过程与创建`File`类非常相似。
 
-然而，区别在于 `Folder` 类将有一个关键字段——一个组件列表，可以是 `Files` 或子文件夹 `SubFolders`）。
+然而，区别在于`Folder`类将有一个关键字段——一个组件列表，可以是`Files`或子文件夹`SubFolders`）。
 
 ```java
 // 通用 Group 类（又称 Folder）：
@@ -586,13 +518,13 @@ class Folder extends Component {
 }
 ```
 
-### 第 4 步：运行并测试代码
+## 第 4 步：运行并测试代码
 
 现在我们将通过编写几行代码来测试这些类。
 
 我们将创建一些文件和文件夹，然后以某种层次级结构组织它们。
 
-在你的主类中运行这些代码，位于 `Public-Static-Void-Main` 方法内（或任何其他可以运行这些代码的地方）
+在你的主类中运行这些代码，位于`Public-Static-Void-Main`方法内（或任何其他可以运行这些代码的地方）
 
 ```
 Folder top = new Folder("Top Folder");
@@ -600,7 +532,6 @@ File a = new File("A", "Spreadsheet");
 File b = new File("B", "Picture");
 Folder mid = new Folder("Mid Folder");
 ```
-
 
 ```java
 top.contents.add(a);
@@ -633,21 +564,16 @@ for (Component cp: bot.contents) {
 
 在正确实现上述步骤后，输出应该如下：
 
+```
 Top Folder
-
-+   A
-
-+   B
-
+  A
+  B
 Mid Folder
-
-+   C
-
-+   D
-
+  C
+  D
 Bottom Folder
-
-+   E
+  E
+```
 
 如果实现正确，我们可以创建一个文件、文件夹和子文件夹的层级系统。
 
@@ -720,12 +646,10 @@ class Bag extends Component {
 
 所有实现 Observer 接口的类都有一个要关注的 Subject 对象列表。这些类还需要一个 update 方法，设计用于根据相应的数据来更新它们的数据。
 
-
-
-
 ### 第 1 ：识别观察者与被观察者
 
 首先，谁或什么是主体？
+
 谁或什么是观察者？
 
 没错。恐怖分子将是需要关注的主体（Subject）。因此，你需要用几行代码（一个类）来表示恐怖分信息。目前，你需要跟踪他们的行踪——换句话说，就是位置。
@@ -829,7 +753,7 @@ class Terrorist implements Subject{
 }
 ```
 
-对于 `notifyObservers` 方法，它应该遍历 Observer 列表并更新每一个。修改该方法来实现此操作。
+对于`notifyObservers`方法，它应该遍历 Observer 列表并更新每一个。修改该方法来实现此操作。
 
 ```java
 // 新增：来自 Subject 接口
@@ -840,7 +764,7 @@ public void notifyObservers() {
 }
 ```
 
-接下来，我们实现 `addObs()` 和 `deleteObs()` 方法。它们所做的只是分别从列表中添加和删除 Observer 对象。
+接下来，我们实现`addObs()`和`deleteObs()`方法。它们所做的只是分别从列表中添加和删除 Observer 对象。
 
 ```java
 public void addObs(Observer o) {
@@ -908,11 +832,11 @@ class Module implements Observer{
 }
 ```
 
-在实现 `update()` 之前，你必须理解你所的情况。在这种情况下，问自己：“Module 类如何响应 Terrorist 类？”
+在实现`update()`之前，你必须理解你所的情况。在这种情况下，问自己：“Module 类如何响应 Terrorist 类？”
 
 ### 第 5：根据主体类修改观察类的更新
 
-Module 类需要在恐怖分子附近时更新并发送警报。Terrorist 类拥有 String 类型的位置字段。当 Module 的位置与 Terrorist 相同时，它会发送警报。为了让 Module 接收来自 Terrorist 类的数据，你需要更改 `update()` 方法。
+Module 类需要在恐怖分子附近时更新并发送警报。Terrorist 类拥有 String 类型的位置字段。当 Module 的位置与 Terrorist 相同时，它会发送警报。为了让 Module 接收来自 Terrorist 类的数据，你需要更改`update()`方法。
 
 ```java
 // 输入：一个 Terrorist 对象
@@ -931,6 +855,8 @@ interface Observer {
 }
 ```
 
+
+
 ```java
 class Terrorist implements Subject{
     public void notifyObservers() {
@@ -939,11 +865,11 @@ class Terrorist implements Subject{
 }
 ```
 
-之后，我们让 `update()` 方法工作起来。
+之后，我们让`update()`方法工作起来。
 
-### 第 5 ：实现 update()
+## 第 5 步：实现`update()`
 
-根据上面的信息，我们在 Module 类中实现 `update()` 方法的功能代码。
+根据上面的信息，我们在`Module`类中实现`update()`方法的功能代码。
 
 ```java
 // 输入：一个 Terrorist 对象
@@ -965,11 +891,11 @@ public void update(Terrorist t) {
 }
 ```
 
-### 运行代码
+## 运行代码
 
-根据现有的代码，我们将两个场景。两种情况下，观察类都会根据它们观察的内容发出警报。
+根据现有的代码，我们将运行两个场景。两种情况下，观察类都会根据它们观察的内容发出警报。
 
-一种情况是观察者远多于主体：（将以下代码粘贴到你的 Main() 方法下方）
+一种情况是观察者远多于主体：（将以下代码粘贴到你的`Main()`方法下方）
 
 ```java
 // 部分 1：创建所有数据对象
@@ -1002,7 +928,7 @@ locs[9] = "Dallas";
 ```
 
 ```java
-// // 部分 3：将观察者设置为它们的位置
+// 部分 3：将观察者设置为它们的位置
 m1.location = locs[1];
 m2.location = locs[4];
 m3.location = locs[5];
@@ -1012,7 +938,7 @@ m4.location = locs[9];
 ```java
 // 随着恐怖分子在美国全范围内移动，
 // 它将通知所有设备模块其位置。
-// 当恐怖分子附近时，模块 将触发。
+// 当恐怖分子附近时，模块将触发。
 ```
 
 ```java
@@ -1024,21 +950,16 @@ for(int i = 0; i < 10; i++) {
 
 如果所有代码运行正常，你应该得到如下打印输出：
 
+```
 ALERT: Terrorist Nearby in Chicago
-
 ALERT: Terrorist Nearby in Cleveland
-
 ALERT: Terrorist Nearby in Boston
-
 ALERT: Terrorist Nearby in Dallas
+```
 
 另一种情况是主体远多于观察者。
 
-
-
-
-
-（将以下代码粘贴到你的 Main() 方法中）
+（将以下代码粘贴到你的`Main()`方法中）
 
 ```java
 // Part 1: 创建所有数据对象
@@ -1078,10 +999,9 @@ t4.location = locs[7];
 t5.location = locs[5];
 ```
 
+```java
 // 带有 Device Module 的单一代理将遍及整个美国，
 // 然后所有恐怖分子将通知观察模块。
-
-```java
 // 当附近有恐怖分子时，模块将触发。
 for(int i = 0; i < 10; i++) {
   m.location = locs[i];
@@ -1117,7 +1037,7 @@ for(int i = 0; i < 10; i++) {
 
 通过这种模式，你可以修改你的类，使其在同一时间只有一个可能的对象。或者永远只有一个可能的对象。
 
-## 它的基本工作原理：
+## 它的基本工作原理
 
 单例模式是最简单的设计模式之一。然而，当情况需要使用它的设计时，它将被证明非常有帮助。
 
@@ -1181,7 +1101,7 @@ class Singleton {
 }
 ```
 
-要访问单例对象，你只需要调用静态方法 `getObject()`。
+要访问单例对象，你只需要调用静态方法`getObject()`。
 
 ```java
 // 将单例赋值给变量
@@ -1257,15 +1177,16 @@ class Championship {
         this.champion = chap;
         System.out.println("Team " + chap.name + " 赢得锦标赛冠军!");
     }
+```
 
 ```java
     /*
-// playoffs() 的辅助函数：
+    // playoffs() 的辅助函数：
     // 输入：两支球队：a & b
     // 输出：一个 Team
     // 效果：两支球队 a & b 之间的比赛，
     // 以获胜者作为输出
-*/
+    */
     private Team match(Team ta, Team tb) {
         Random random = new Random();
         if (random.nextBoolean()) {
@@ -1279,11 +1200,7 @@ class Championship {
 }
 ```
 
-
-
-
-
-在 `public-static-void main()` 方法中，以下代码创建了 8 支队伍，随后运行锦标赛。
+在`public static void main()`方法中，以下代码创建了 8 支队伍，随后运行锦标赛。
 
 ```java
 // Create 8 Teams:
@@ -1312,6 +1229,7 @@ contender8);
 
 如果你运行所有代码，你应该看到类似下面的内容，不过队伍名称是随机混合的：
 
+```
 Hunters Defeats Archers
 Guards Defeats Bobcats
 Flames Defeats Centurions
@@ -1322,14 +1240,15 @@ Guards Defeats Flames
 
 Danger Zone Defeats Guards
 Team Danger Zone WIN THE CHAMPIONSHIP!
+```
 
-### 第 2 步：确定哪个类应该是单例
+### 步骤 2：确定哪个类应该是单例
 
 但现在有一个问题。
 
 我们希望每次运行代码时，只产生一个锦标赛队伍和一个季后赛。
 
-如果这几行代码在 `main()` 方法中运行……
+如果这几行代码在`main()`方法中运行……
 
 ```java
 Championship[] cc = {new Championship(),
@@ -1354,17 +1273,17 @@ for (Championship x: cc) {
 
 那么我们可以做什么来限制代码产生一个冠军队伍呢？
 
-将 `Championship` 类转换为单例（Singleton）。
+将`Championship`类转换为单例（Singleton）。
 
-我们通过逐个将组件添加到单例类中来实现。除此之外，`Championship` 类的其他部分保持不变。
+我们通过逐个将组件添加到单例类中来实现。除此之外，`Championship`类的其他部分保持不变。
 
 ### 组件 #1：私有类构造函数
 
-将构造函数设置为 `private` 可以确保该类的对象**不能**被创建——除非是从类内部的代码创建。
+将构造函数设置为`private`可以确保该类的对象**不能**被创建——除非是从类内部的代码创建。
 
 对于单例类，私有构造函数（连同其他单例组件）确保了对象将是单例。
 
-下面是修改后的 `Championship` 构造函数及其解释性注释。请将此代码添加到 `Championship` 类内部：
+下面是修改后的`Championship`构造函数及其解释性注释。请将此代码添加到`Championship`类内部：
 
 ```java
 // Singleton Component #1:
@@ -1373,15 +1292,17 @@ for (Championship x: cc) {
 private Championship() {};
 ```
 
+
+
 ### 组件 #2：唯一的类对象
 
 你的单例类将包含一个专属字段，该字段最终将是你的类构造的唯一对象。
 
-它是一个 `private` 字段，因此不会在类外部被访问。它也将是两个 `static` 单例组件之一——它们可以通过类本身进行访问，而不是通过它的对象。
+它是一个`private`字段，因此不会在类外部被访问。它也将是两个`static`单例组件之一——它们可以通过类本身进行访问，而不是通过它的对象。
 
-默认情况下，该字段将将设置为 `null`。当第三个组件被调用时，它最终会被赋值。
+默认情况下，该字段将设置为`null`。当第三个组件被调用时，它最终会被赋值。
 
-下面是类对象的字段。请将以下代码添加到 `Championship` 类内部：
+下面是类对象的字段。请将以下代码添加到`Championship`类内部：
 
 ```java
 // Singleton Component #2:
@@ -1393,16 +1314,16 @@ private static Championship c = null;
 
 ### 组件 #3：getObject() 方法
 
-`Championship` 类的最后一个单例组件是 `getObject()` 方法。作为两个静态组件之一，该方法旨在从 `Championship` 类进行访问，而不是从它的某个对象。
+`Championship`类的最后一个单例组件是`getObject()`方法。作为两个静态组件之一，该方法旨在从`Championship`类进行访问，而不是从它的某个对象。
 
-它的作用是获取你代码中创建的唯一 `Championship` 对象。如果尚未创建对象，它将调用组件 #1（自定义构造函数）来创建一个。
+它的作用是获取你代码中创建的唯一`Championship`对象。如果尚未创建对象，它将调用组件 #1（自定义构造函数）来创建一个。
 
-下面是该方法。只需将代码添加到 `Championship` 类中即可：
+下面是该方法。只需将代码添加到`Championship`类中即可：
 
 ```java
 // Singleton Component #3
 // INPUT: none
-// OUTPUT:一个 Championship 对象
+// OUTPUT: 一个 Championship 对象
 // EFFECT: 返回单例 Championship 对象
 public static Championship getChamp() {
     if (c == null) {
@@ -1414,11 +1335,11 @@ public static Championship getChamp() {
 
 ### 单例 Championship 类
 
-总的来说，`Championship` 类的单例版本保持不变，只是你向其中添加了三个单例组件。
+总的来说，`Championship`类的单例版本保持不变，只是你向其中添加了三个单例组件。
 
 ### 主代码，现在已包含单例 Championship
 
-现在，我们将在 `main()` 方法中运行这段代码：
+现在，我们将在`main()`方法中运行这段代码：
 
 ```java
 // Create 8 Teams:
@@ -1441,9 +1362,6 @@ contender6,
 contender7,
 contender8);
 ```
-
-
-
 
 3) 在子类中实现你策略算法的变体。
 
@@ -1542,21 +1460,20 @@ class RPSGame {
     //     否则返回 false
     */
     boolean checkWin(String s1, String s2) {
-  if (s1 == s2) return false;
-  boolean c1 = (s1 == "Paper") && (s2 == "Rock");
-  boolean c2 = (s1 == "Scissors") && (s2 == "Paper");
-  boolean c3 = (s1 == "Rock") && (s2 == "Scissors");
-  return c1 || c2 || c3;
+        if (s1 == s2) return false;
+        boolean c1 = (s1 == "Paper") && (s2 == "Rock");
+        boolean c2 = (s1 == "Scissors") && (s2 == "Paper");
+        boolean c3 = (s1 == "Rock") && (s2 == "Scissors");
+        return c1 || c2 || c3;
+    }
 }
-} 
 ```
 
-接下来，是进入 `Main()` 方法并执行的代码：
+接下来，是进入`Main()`方法并执行的代码：
 
 ```java
 RPSGame r = new RPSGame();
 String aiPick = r.RPSGet();
-
 // 为变量 myPick 输入 "Paper"、"Scissors" 或 "Rock"
 // （通常情况下，玩家会为之
 // 输入一个值）
@@ -1565,10 +1482,10 @@ String myPick = "Paper";
 
 System.out.println("AI Pick: " + aiPick);
 System.out.println("My Pick: " + myPick);
-
 System.out.println(myPick + " v.s. " + aiPick);
+
 if (r.checkWin(myPick, aiPick)) {
-  System.out.println("你赢了!");
+    System.out.println("你赢了!");
 }
 ```
 
@@ -1616,11 +1533,9 @@ interface AbstractStrategy {
 }
 ```
 
+最后，变量`myPick`将是策略模式产生的获胜选择。无论在三个`if`语句之后变为什么形式，调用`stratPattern`的`Algorithm()`都会返回一个获胜的选择。
 
-
-最后，变量 `myPick` 将是策略模式产生的获胜选择。无论在三个 `if` 语句之后变为什么形式，调用 `stratPattern` 的 `Algorithm()`都会返回一个获胜的选择。
-
-```
+```java
 //----------
 // 将模式初始化为任何你选择的
 // 无论它可能会被替换
@@ -1638,17 +1553,16 @@ if (aiPick == "Scissors") {
 
 // 新行：
 myPick = stratPattern.Algorithm();
-
 //----------
 ```
 
 这里是修改后的原始代码。在运行代码剩余部分后，你应该总是获胜的。
 
-```
+```java
 System.out.println("AI Pick: " + aiPick);
 System.out.println("My Pick: " + myPick);
-
 System.out.println(myPick + " v.s. " + aiPick);
+
 if (r.checkWin(myPick, aiPick))
     System.out.println("YOU WIN!");
 ```
@@ -1686,7 +1600,7 @@ if (r.checkWin(myPick, aiPick))
 - 1) 创建一个涵盖所有子类和变体的通用抽象。
 - 2) 创建默认子类。这将直接扩展你之前的通用抽象。
 - 3) 创建装饰子类。与默认子类一样，它也将直接扩展你的通用抽象。
-- 4) 确保装饰子类包含上一个装饰器或默认类作为其字段之一（将变量类型设置为通用抽象！）。这与下一步步骤共同是允许多个装饰器动态添加到默认类中的关键特征。
+- 4) 确保装饰子类包含上一个装饰器或默认类作为其字段之一（将变量类型设置为通用抽象！）。这与下一步骤共同是允许多个装饰器动态添加到默认类中的关键特征。
 - 5) 确保装饰子类的构造函数输入一个装饰器或基对象（再次，将输入类型设置为通用抽象！），并将此输入设置为上一个装饰器。
 - 6) 创建三级装饰子类。这些直接扩展你在之前的步骤开发的装饰器类。
 
@@ -1694,13 +1608,13 @@ if (r.checkWin(myPick, aiPick))
 
 1) 当创建装饰器模式的实例时，将其数据类型设置为抽象，但将其初始化为默认子类：
 
-```
+```java
 abstract class default = new defaultsubclass();
 ```
 
 2) 当向默认子类对象添加装饰器时，使用上一个装饰器或默认对象作为输入。如果你正确设计了模式，所有的装饰器都应该像链表一样连接到默认类。
 
-```
+```java
 DecoratorOne a = new Decorator(default)
 DecoratorTwo b = new Decorator(a)
 DecoratorTwo c = new Decorator(b)
@@ -1727,7 +1641,6 @@ interface DecorativeObject {
     // 输入与输出：（由你选择）
     // （由子类实现）
     public void procedure();
-
     // (根据你的意愿包含任何其他通用字段
     // 和程序)
 }
@@ -1750,35 +1663,33 @@ class BaseObject implements DecorativeObject {
 
 装饰器将包含你想要应用于装饰性对象的任何额外修改。这将使用类似于组合模式的结构。
 
-创建其中一个实例需要将上一个装饰器作为构造函数的输入（如果没有，则使用基对象）。这样，你基本上可以在默认基对象之上像链链一样叠加你需要的数量的装饰器。
+创建其中一个实例需要将上一个装饰器作为构造函数的输入（如果没有，则使用基对象）。这样，你基本上可以在默认基对象之上像链条一样叠加你需要的数量的装饰器。
 
 ```java
 class Decoration implements DecorativeObject{
     // 添加的之前应用的装饰器实例：
     DecorativeObject prevDeco;
-```
 
-```java
-// 作为 Decoration 实现的通用程序
-// 包含此装饰器添加的任何额外效果
-  public void procedure() {
-    // (在此处实现此程序，
-    // 也添加任何你想要的其他内容)
-    prevDeco.procedure();
-  }
+    // 作为 Decoration 实现的通用程序
+    // 包含此装饰器添加的任何额外效果
+    public void procedure() {
+        // (在此处实现此程序，
+        // 也添加任何你想要的其他内容)
+        prevDeco.procedure();
+    }
 
-  // 构造函数：
-  public Decoration(DecorativeObject d) {
-    this.prevDeco = d;
-  }
-  // (根据你的意愿包含任何其他字段)
-  // 和程序)
+    // 构造函数：
+    public Decoration(DecorativeObject d) {
+        this.prevDeco = d;
+    }
+    // (根据你的意愿包含任何其他字段)
+    // 和程序)
 }
 ```
 
-注意 `procedure()` 方法也会调用上一个装饰器的方法。这样，一旦 `procedure()` 被调用，其真实效果将由每一个添加的装饰器交付——加上来自基对象的效果。
+注意`procedure()`方法也会调用上一个装饰器的方法。这样，一旦`procedure()`被调用，其真实效果将由每一个添加的装饰器交付——加上来自基对象的效果。
 
-最后，你可以拥有任意数量的不同装饰器类。它们都继承装饰器类，并可能包含自己的额外字段和程序
+最后，你可以拥有任意数量的不同装饰器类。它们都继承装饰器类，并可能包含自己的额外字段和程序。
 
 ```java
 class DecorationOne extends Decoration{
@@ -1806,30 +1717,38 @@ class DecorationX extends Decoration{
 }
 ```
 
+
+
+
 ## JAVA-6b：应用装饰器模式
 
-使用你喜欢的 IDE 运行下面的代码。在线 IDE，如 codechef.com、rextester.com、ideone.com 或 codpad.org 都是很好的选择。
+使用你喜欢的 IDE 运行下面的代码。在线 IDE，如`codechef.com`、`rextester.com`、`ideone.com`或`codpad.org`都是很好的选择。
 
 在这里，我们遇到了一个需要装饰器模式的场景。
 
-## MMORPG 角色：
+### MMORPG 角色
 
 在之前的大型在线角色扮演游戏中，可玩的角色通常属于某些角色原型——例如，治疗师、法师、弓箭、装甲骑士等。随着你玩的时间越来越久，你的玩家角色会逐渐提高并变得更强大。
-
-
-
 
 在代码方面，通用的 MMORPG 角色应该是基于类似于如下数据类（Data Class）的数据对象：
 
 ```go
 /*
+ 
 // MMOCharacter 可以：
+ 
 // -执行它的主技能
+ 
 */
+ 
 class MMOCharacter {
+ 
   void skill() {
+ 
     // 在此处有一些代码
+ 
   }
+ 
 }
 ```
 
@@ -1839,22 +1758,35 @@ class MMOCharacter {
 
 ```
 // (不要这样做)
+
 class MMOCharacterLV5 {
+
   void skill() {
+
     // 在此处有一些代码
+
   }
+
 }
 ```
 
 ```go
 // (不要这样做)
+
 class MMOCharacterLV510{
+
   void skill(){
+
     // 在此处有一些代码
+
   }
+
   void skill2(){
+
     // 在此处有一些代码
+
   }
+
 }
 ```
 
@@ -1862,38 +1794,55 @@ class MMOCharacterLV510{
 
 ```go
 // (不要这样做)
+
 class MMOCharacterKnight {
+
   void attack(){
+
     // 在此处有一些代码
+
   }
+
 }
 ```
 
 ```go
 // (不要这样做)
+
 class MMOCharacterHealer {
+
   void heal(){
+
     // 在此处有一些代码
+
   }
+
 }
 ```
 
-解决此问题的方法是应用**装饰器模式**（Decorator Pattern）。通过多态，我们可以开发数据类，允许数据对象在游戏运行时被修改。
+解决此问题的方法是应用装饰器模式（Decorator Pattern）。通过多态，我们可以开发数据类，允许数据对象在游戏运行时被修改。
 
 为了应用我们的模式，我们按照之前概述的步骤逐一执行。
 
-### 1) 创建一个涵盖所有子类和变体的通用抽象。
+### 1) 创建一个涵盖所有子类和变体的通用抽象
 
-让我们回一下装饰器模式的抽象形式：`/* 装饰器实现：// 这种抽象形式具有： // - 所有子类共有的任何过程、算法和特征的签名 */`
+让我们回一下装饰器模式的抽象形式：
+
+`/* 装饰器实现：// 这种抽象形式具有： // - 所有子类共有的任何过程、算法和特征的签名 */`
 
 ```go
 interface DecorativeObject {
+
     // 输入 & 输出：(由你选择)
+
     // (由子类实现)
+
     public void procedure();
 
     // (包含任何其他公共字段)
+
     // 并根据你的需要包含过程
+
 }
 ```
 
@@ -1903,38 +1852,59 @@ interface DecorativeObject {
 
 ```go
 /*
+ 
 // 装饰器实现：
+ 
 // 角色抽象具有：
+ 
 // - 单个技能
+ 
 // - 生命值 (int)
+ 
 // - 攻击力 (int)
+ 
 */
 ```
 
 ```go
 abstract class Character {
+
     // 输入： - 一个目标角色
+
     // 输出：无
+
     // (由子类实现)
+
     abstract public void skill(Character target);
 
     int hp;
+
     int atk;
+
 }
 ```
 
-### 2) 创建默认子类。这将直接扩展你之前的通用抽象。
+### 2) 创建默认子类
+
+这将直接扩展你之前的通用抽象。
 
 再次，让我们回想一下装饰器模式中的默认子类：
 
 ```go
 class BaseObject implements DecorativeObject {
+
     // 通用过程，作为 Base Object 实现
+
     public void procedure() {
+
         // (在此处实现此过程)
+
     }
+
     // 包含任何其他字段
+
     // 并根据你的需要包含过程
+
 }
 ```
 
@@ -1942,20 +1912,33 @@ class BaseObject implements DecorativeObject {
 
 ```go
 class DefaultChar extends Character {
+
   // 通用过程，作为 Base Object 实现
+
   public void skill(Character target) {
+
     // (包含任何其他字段
+
     // 并根据你的需要包含过程
+
   }
+
   // 构造函数：
+
   public DefaultChar() {
+
     this.hp = 12;
+
     this.atk = 1;
+
   }
+
 }
 ```
 
-### 3) 创建装饰子类。与默认子类一样，这将直接扩展你之前的通用抽象。
+### 3) 创建装饰子类
+
+与默认子类一样，这将直接扩展你之前的通用抽象。
 
 这部分赋予了装饰器模式渐进升级和推进的能力。
 
@@ -1963,25 +1946,39 @@ class DefaultChar extends Character {
 
 ```go
 class Decoration implements DecorativeObject{
+
     // 添加之前应用的装饰器实例：
+
     DecorativeObject prevDeco,
+
     // 通用过程，作为 Decoration 实现
+
     // 包括此装饰器添加的任何额外效果
 
     public void procedure() {
+
         // (在此处实现此过程，
+
         // 也加上你想要的任何其他内容)
+
         prevDeco.procedure();
+
     }
 ```
 
 ```go
 // 构造函数：
+
   public Decoration(DecorativeObject d) {
+
     this.prevDeco = d;
+
   }
+
   // (包含任何其他字段)
+
   // 并根据你的需要包含过程)
+
 }
 ```
 
@@ -1991,128 +1988,185 @@ class Decoration implements DecorativeObject{
 
 ```go
 class Decoration extends Character {
+
   // 通用过程，作为 Decoration 实现
+
   public void skill(Character target) {
+
     // (由子类实现)
+
     prevDeco.skill(target);
+
   }
+
   // (包含任何其他字段)
+
   // 并根据你的需要包含过程
+
 }
 ```
 
 接下来的步骤为装饰器类提供了关键功能。
 
-### 4) 确保装饰子类包含之前的装饰器或默认类。
+### 4) 确保装饰子类包含之前的装饰器或默认类
 
 在你的装饰类中，创建一个使用抽象作为类型的字段。如果给这个字段一个合理的名称会有帮助。在我们的情况下，抽象是：
 
 ```go
 class Decoration extends Character {
+
     Character prevDeco; // (新行)
 
     // 通用过程，作为
+
     Decoration
+
     public void skill(Character target) {
+
         // (由子类实现)
+
         prevDeco.skill(target);
+
     }
+
 } // 包含任何其他字段
+
 // 并根据你的需要包含过程
+
 }
 ```
 
 为了初始化这个字段，将由构造函数处理。这将在下一步完成。
 
-### 5) 确保装饰子类的构造函数输入装饰器或默认类。将此输入设置为之前的装饰器。
+### 5) 确保装饰子类的构造函数输入装饰器或默认类
 
-构造函数的输入将是 Character 类的实例（允许装饰器或默认类）。总体而言，装饰类现在看起来是：
+将此输入设置为之前的装饰器。
+
+构造函数的输入将是`Character`类的实例（允许装饰器或默认类）。总体而言，装饰类现在看起来是：
 
 ```go
 class Decoration extends Character {
+
     Character prevDeco;
+
     // 通用过程，作为 Decoration 实现
+
     public void skill(Character target) {
+
         // (由子类实现)
+
         prevDeco.skill(target);
+
     }
+
     // 包含任何其他字段
+
     // 并根据你的需要包含过程
+
 }
 ```
 
 ```go
 // (新行)：-----
+
 // 构造函数：
+
 public Decoration(Character c) {
+
     this.prevDeco = c;
+
 }
+
 // ------------------
 ```
 
 接下来是有趣的部分。
 
-### 6) 创建三级装饰子类。
+### 6) 创建三级装饰子类
+
 这些直接扩展了你在之前的步骤中开发的装饰类。
 
 我们可以开始实现由我们的抽象所概述的细节。
 
 在 MMORPG 游戏中，能够“装饰”角色的很好的例子是武器。因此，我们可以开始创建附加到基础角色的武器和其他装备类。
 
-我们还可以实现 `skill()` 方法以执行实际操作。在我们的情况下，让 `skill()` 方法攻击目标。
+我们还可以实现`skill()`方法以执行实际操作。在我们的情况下，让`skill()`方法攻击目标。
 
-这个 GreatSword 类是我们之前开发的装饰类的扩展。它拥有装饰类所有的字段和方法，加上它独特的特征。
+这个`GreatSword`类是我们之前开发的装饰类的扩展。它拥有装饰类所有的字段和方法，加上它独特的特征。
 
 ```go
 class GreatSword extends Decoration {
+
 // 武器伤害
+
 int damage = 3
 
 // 构造函数：
+
 // (使用 super() 将其作为超类型实现)
+
 public GreatSword(Character c){
+
     super(c);
+
 }
+
 }
 ```
 
 ```go
 // 通用过程。作为 Greatsword 实现
+
 // (是一个攻击)
+
 public void skill(Character target) {
+
 // 攻击目标：
+
 target.hp -= damage;
+
 prevDeco.skill(target);
+
 }
 ```
 
-
-
-
-但为什么不增加其他武器呢？让我们也设计一把火焰战斧（Fiery Battle Axe）。像大剑（GreatSword）一样，它也有攻击作为 `skill()` 方法。
+但为什么不增加其他武器呢？让我们也设计一把火焰战斧（Fiery Battle Axe）。像大剑（GreatSword）一样，它也有攻击作为`skill()`方法。
 
 ```java
 class FieryBattleAxe extends Decoration {
+
  // 武器伤害
+
  int damage = 2;
+
  int magicPower = 2;
 ```
 
 ```java
 // 构造函数:
+
  // (使用 super() 实现其作为超类型的逻辑)
+
  public void FieryBattleAxe(Character c){
+
  super(c);
+
  }
 ```
 
 ```java
 // 通用过程，由 FieryBattleAxe 实现
+
  // （将是一个攻击 Attack）
+
  public void skill(Character target) {
+
  // 攻击目标:
+
  target.hp -= damage + magicPower;
+
  prevDeco.skill(target);
+
  }
 ```
 
@@ -2120,25 +2174,35 @@ class FieryBattleAxe extends Decoration {
 
 ```java
 class GoldenShield extends Decoration {
+
     int armorBonus = 10;
 
     // 构造函数:
+
     // (使用 super() 实现其作为超类型的逻辑)
+
     public GoldenShield(Character c) {
+
         super(c);
+
     }
 
 public// 通用过程。由 GoldenShield 实现
+
     public void skill(Character target) {
+
         this.hp += armorBonus;
+
         prevDeco.skill(target);
+
     }
+
 }
 ```
 
 现在类已经准备就绪，这里是代码运行时的样子。
 
-### 创建新对象：
+### 创建新对象
 
 要创建一个新角色，你将它的数据类型设为抽象类，但将其初始化为默认类。
 
@@ -2162,9 +2226,7 @@ me = new GreatSword(new GoldenShield(me));
 
 ### 使用通用过程
 
-当你对通用过程进行函数调用时，
-所有附加的装饰器以及默认对象，
-都会被一同调用。
+当你对通用过程进行函数调用时，所有附加的装饰器以及默认对象，都会被一同调用。
 
 假设下面这行代码刚刚执行完毕：
 
@@ -2172,47 +2234,53 @@ me = new GreatSword(new GoldenShield(me));
 me = new GreatSword(new FieryBattleAxe(me));
 ```
 
-在下方的第二行中，我们调用了函数 `skill()`，并指向一个角色：
+在下方的第二行中，我们调用了函数`skill()`，并指向一个角色：
 
 ```java
 Character you = new DefaultChar();
+
 me.skill(you);
 ```
 
-在这种情况下，`skill()` 函数究竟会做什么？
-嗯，让我们回一下一个装饰器类中的 `skill()` 代码：
+在这种情况下，`skill()`函数究竟会做什么？
+
+嗯，让我们回一下一个装饰器类中的`skill()`代码：
 
 ```java
 public void skill(Character target) {
+
   // 攻击目标:
+
 target.hp -= damage + magicPower;
+
   prevDeco.skill(target);
+
 }
 ```
 
-对于每个装饰器和默认类，`skill()` 函数都会执行该类的原始代码，然后再次为下一个对象调用 `skill()`。
+对于每个装饰器和默认类，`skill()`函数都会执行该类的原始代码，然后再次为下一个对象调用`skill()`。
 
-以此类推。这种情况会持续发生，直到所有附加的装饰器以及默认类都调用了 `skill()`。
+以此类推。这种情况会持续发生，直到所有附加的装饰器以及默认类都调用了`skill()`。
 
-在上面的代码中，由于我们在原始默认类上附加了两个装饰器，`skill()` 将为两者执行。所有对 `skill()` 的函数调用都将原始目标作为输入。
+在上面的代码中，由于我们在原始默认类上附加了两个装饰器，`skill()`将为两者执行。所有对`skill()`的函数调用都将原始目标作为输入。
 
 ```java
 Character me = new GreatSword(new FieryBattleAxe(me));
 ```
 
-从对象 'me' 调用 Skill：
+从对象`me`调用`Skill`：
 
-- 执行 GreatSword.Skill()
-- 执行 FieryBattleAxe.Skill()
-- 执行 DefaultChar.Skill()
+- 执行`GreatSword.Skill()`
+- 执行`FieryBattleAxe.Skill()`
+- 执行`DefaultChar.Skill()`
 
-但如果一个没有附加装饰器对象的默认角色调用 `skill()` 呢？
+但如果一个没有附加装饰器对象的默认角色调用`skill()`呢？
 
 ```java
 Character you = new DefaultChar(); you.skill(me);
 ```
 
-由于没有附加任何装饰器，因此只有默认类的 `skill()` 函数会被调用。
+由于没有附加任何装饰器，因此只有默认类的`skill()`函数会被调用。
 
 ## 装饰器模式简述
 
@@ -2230,13 +2298,13 @@ Character you = new DefaultChar(); you.skill(me);
 
 本质上，这就是状态模式的体现——一个数据对象可以在运行时根据外部因素或任何需要特定行为的因素改变其特征。
 
-## 它的本质原理是：
+## 它的本质原理是
 
 数据对象将包含一个可切换状态的实例。可以根据需要包含任意数量的不同可切换状态。
 
 如果你更改了状态，就会更改数据对象的特征和行为。你通常这样做是为了适应你的数据类所所处的任何情况。
 
-## 状态模式与策略模式的区别：
+## 状态模式与策略模式的区别
 
 状态模式和策略模式都实现了适用于不同场景的设计变体。然而，它们之间的主要区别在于情境上下文。
 
@@ -2244,16 +2312,16 @@ Character you = new DefaultChar(); you.skill(me);
 
 相比之下，状态模式对象在运行时持续存在。环境的任何变化都可以促使状态模式对象进行适应。
 
-## 创建状态模式：
+## 创建状态模式
 
 要实现这种设计模式，请遵循以下步骤：
 
-- 1) 识别哪个类将作为“处理器”（handler）类。该类功能的关键部分将取决于它的当前状态。
-- 2) 创建状态抽象。在这里定义所有公共字段和过程。
-- 3) 创建所有不同的状态子类。在必要的地方实现。
-- 4) 让处理器包含其当前状态的实例。其数据类型应该是抽象类。当使用构造函数进行初始化时，处理器应该有一个默认状态。
-- 5) 在处理器类中开发更改状态的方法。应该有一个切换方法（toggling method）和一个设置方法（set method）。
-- 6) 应用所有其他利用处理器所依赖的各种状态的代码。
+1. 识别哪个类将作为“处理器”（handler）类。该类功能的关键部分将取决于它的当前状态。
+2. 创建状态抽象。在这里定义所有公共字段和过程。
+3. 创建所有不同的状态子类。在必要的地方实现。
+4. 让处理器包含其当前状态的实例。其数据类型应该是抽象类。当使用构造函数进行初始化时，处理器应该有一个默认状态。
+5. 在处理器类中开发更改状态的方法。应该有一个切换方法（toggling method）和一个设置方法（set method）。
+6. 应用所有其他利用处理器所依赖的各种状态的代码。
 
 总的来说，这里是状态模式的 UML 图：
 
@@ -2271,21 +2339,32 @@ Character you = new DefaultChar(); you.skill(me);
 
 ```java
 /* 处理器类包含：
+
 // - 一个转换状态类的实例
+
 // 根据需要插入任何其他字段或方法
+
 */
+
 class Handler {
+
 AbstractState currentState;
 ```
 
 ```java
 /*
+
 // toggleState():简单实现
+
 // （通过 IF-ELSE 语句将 currentState 切换到下一个状态）
-// - 确保覆盖所有可用状态
-// 必要时重新实现
-*/
 ```
+
+
+
+
+确保覆盖所有可用状态。
+
+必要时重新实现。
 
 ```java
 void toggleState() {
@@ -2306,7 +2385,7 @@ void setState(AbstractState in) {
   this.currentState = in;
 }
 
-// 构造函数:
+// 构造函数：
 public Handler() {
   this.currentState = new StateOne();
 }
@@ -2319,8 +2398,10 @@ abstract class AbstractState {
   String commonField;
 
   // 输入与输出：（你的选择）
+
   // 效果：（你的选择）
-  public void commonProcedure(){
+
+  public void commonProcedure() {
     // （在此处添加任何实现）
   }
 
@@ -2330,8 +2411,6 @@ abstract class AbstractState {
 
 最后，我们实现状态子类。它们的实现是独特的；它们的公共字段是不同的，它们的公共过程也可以以它们独特的方式进行实现。
 
-
-
 对于我们的通用版本，将会有三个不同的状态。在代码中应用状态模式（State pattern）时，你可以根据需要定义任意数量的状态。
 
 ```java
@@ -2339,11 +2418,13 @@ class StateOne extends AbstractState {
     String commonField = "ONE";
 
     // commonProcedure() 的子类实现
-    // (包含了父类版本的所有特征，
-    // 加上子类产生的任何额外效果)
-    public void commonProcedure(){
+    // （包含了父类版本的所有特征，
+    // 加上子类产生的任何额外效果）
+
+    public void commonProcedure() {
         super.commonProcedure();
-        // (在此处添加任何额外的实现)
+
+        // （在此处添加任何额外的实现）
     }
 }
 ```
@@ -2351,9 +2432,11 @@ class StateOne extends AbstractState {
 ```java
 class StateTwo extends AbstractState {
     String commonField = "TWO";
-    public void commonProcedure(){
+
+    public void commonProcedure() {
         super.commonProcedure();
-        // (在此处添加任何额外的实现)
+
+        // （在此处添加任何额外的实现）
     }
 }
 ```
@@ -2362,31 +2445,34 @@ class StateTwo extends AbstractState {
 class StateN extends AbstractState {
     String commonField = "N";
 
-    public void commonProcedure(){
+    public void commonProcedure() {
         super.commonProcedure();
 
-        // (在此处添加任何额外的实现)
+        // （在此处添加任何额外的实现）
     }
 }
 ```
 
-## JAVA-7b: 应用状态模式
+## JAVA-7b：应用状态模式
 
-请使用你喜欢的 IDE 来运行以下代码。在线 IDE，如 codechef.com、rextester.com、ideone.com 或 codpad.org 都是很好的选择。
+请使用你喜欢的 IDE 来运行以下代码。在线 IDE，如 `codechef.com`、`rextester.com`、`ideone.com` 或 `codpad.org` 都是很好的选择。
 
 在这里，我们将遇到一个需要应用状态模式的情况。
 
-## 变形金刚 (Transformers)
+## 变形金刚（Transformers）
 
 假设你正在为一辆先进的变形机器人编写代码。
 
 ```java
 /*
-// 一个变形金刚目前拥有：
-// - 一个位置（坐标形式）
-// 它可以：
-// - 发射它的主武器
-// - 移动它的物理位置
+一个变形金刚目前拥有：
+
+- 一个位置（坐标形式）
+
+它可以：
+
+- 发射它的主武器
+- 移动它的物理位置
 */
 ```
 
@@ -2405,10 +2491,12 @@ class TransformerMech {
 
 ```java
 /*
-// Coordinates 拥有：
-// - 经度和纬度；
-// - 高度，以当前地面水平以上的米计
+Coordinates 拥有：
+
+- 经度和纬度；
+- 高度，以当前地面水平以上的米计
 */
+
 class Coordinates {
   double lat, longterm, height;
 
@@ -2423,13 +2511,13 @@ class Coordinates {
 
 变形金刚移动和射击武器的能力取决于它所处的状态。作为一种双足机器人，它可以适度地移动，但没有主武器。作为一台坦克，它可以移动得更快，拥有更高的护甲等级，并使用标准武器。作为一门固定的大炮，它将以移动能力为代价拥有极其强大的武器。而作为一种飞行器，它可以在所有方向上移动得极快。
 
-显然，这种情况需要状态模式。让我们让我们一步步应用它。
+显然，这种情况需要状态模式。让我们一步步应用它。
 
-- 1) 识别哪个类将作为“处理器”（handler）类。该类的功能关键部分将取决于它的当前状态。
+1. 识别哪个类将作为“处理器”（handler）类。该类的功能关键部分将取决于它的当前状态。
 
 `TransformerMech` 类将作为“处理器”类。因此，我们将以利用其不断变化的当前状态的方式来实现它。
 
-- 2) 创建状态抽象。在这里定义所有公共字段和过程。
+2. 创建状态抽象。在这里定义所有公共字段和过程。
 
 你各种状态的抽象形式将包含每个状态共享的所有字段和过程。
 
@@ -2450,7 +2538,7 @@ abstract class AbstractMode {
 
 现在我们可以开始开发机器人可以采取的各种状态了。
 
-### 3) 创建所有不同的状态子类。在必要的地方进行实现。
+### 3. 创建所有不同的状态子类。在必要的地方进行实现
 
 我们为变形金刚描述了四种不同的状态。第一个状态是双足机器人，没有主武器且移动速度较慢（它通过跑步移动）。
 
@@ -2459,7 +2547,7 @@ abstract class AbstractMode {
 ```java
 class RobotMode extends AbstractMode {
     // 构造函数：
-    public RobotMode(){
+    public RobotMode() {
         this.firePower = 0;
         this.firingRate = 0;
         this.moveSpeed = 10;
@@ -2473,7 +2561,7 @@ class RobotMode extends AbstractMode {
 ```java
 class TankMode extends AbstractMode {
     // 构造函数：
-    public TankMode(){
+    public TankMode() {
         this.firePower = 25;
         this.firingRate = 0.75;
         this.moveSpeed = 50;
@@ -2487,7 +2575,7 @@ class TankMode extends AbstractMode {
 ```java
 class BlasterCannonMode extends AbstractMode {
   // 构造函数：
-  public BlasterCannonMode(){
+  public BlasterCannonMode() {
     this.firePower = 180;
     this.fireRate = 0.0;
     this.moveSpeed = 0;
@@ -2501,7 +2589,7 @@ class BlasterCannonMode extends AbstractMode {
 ```java
 class FlightMode extends AbstractMode {
   // 构造函数：
-  public FlightMode(){
+  public FlightMode() {
     this.firePower = 15;
     this.firingRate = 0.5;
     this.moveSpeed = 10;
@@ -2510,16 +2598,17 @@ class FlightMode extends AbstractMode {
 }
 ```
 
-`move()` 方法还取决于 Transformer Mech（变形金机器人）的当前状态。机器的速度将取决于它当前设置的任何模式。
+`move()` 方法还取决于 `TransformerMech`（变形金机器人）的当前状态。机器的速度将取决于它当前设置的任何模式。
 
 在 `TransformerMech` 类中，将空的 `move()` 方法替换为下面的代码：
 
-（再次，为了简单起见，我们现在可以跳过完整的实现）
+（再次，为了简单起见，我们现在可以跳过完整的实现。）
 
-```
+```java
 // UPDATED LINES:
 void move(double degrees, double dist) {
   int speed = currentMode.moveSpeed;
+
   /*
   // some other code that
   // moves this Transformer Mech
@@ -2539,18 +2628,40 @@ void move(double degrees, double dist) {
 
 假设我们正计划部署几台机器以防御纽约市免受外星人的入侵。我们将有几台机器人模式的机器，伴随一台坦克模式的机器在曼哈顿西侧进行巡逻：
 
-```
-TransformerMech ptm1 = new TransformerMech(new Coordinates(40.7615576,-73.9940587.0), new RobotMode());
-TransformerMech ptm2 = new TransformerMech(new Coordinates(40.7623624,-73.9939141.0), new RobotMode());
-TransformerMech ptm3 = new TransformerMech(new Coordinates(40.7617993,-73.9933656.0), new TankMode());
+```java
+TransformerMech ptm1 = new TransformerMech(
+    new Coordinates(40.7615576, -73.9940587.0),
+    new RobotMode()
+);
+
+TransformerMech ptm2 = new TransformerMech(
+    new Coordinates(40.7623624, -73.9939141.0),
+    new RobotMode()
+);
+
+TransformerMech ptm3 = new TransformerMech(
+    new Coordinates(40.7617993, -73.9933656.0),
+    new TankMode()
+);
 ```
 
 我们还会在东侧部署一门激光发射炮，并让两台飞行模式的机器在周围巡逻：
 
-```
-TransformerMech ptm1 = new TransformerMech(new Coordinates(40.7720871,-73.963746.0), new BlasterCannonMode());
-TransformerMech ptm2 = new TransformerMech(new Coordinates(40.7549617,-73.9696583.8180), new FlightMode());
-TransformerMech ptm3 = new TransformerMech(new Coordinates(40.7483817,-73.9792723.7990), new FlightMode());
+```java
+TransformerMech ptm1 = new TransformerMech(
+    new Coordinates(40.7720871, -73.963746.0),
+    new BlasterCannonMode()
+);
+
+TransformerMech ptm2 = new TransformerMech(
+    new Coordinates(40.7549617, -73.9696583.8180),
+    new FlightMode()
+);
+
+TransformerMech ptm3 = new TransformerMech(
+    new Coordinates(40.7483817, -73.9792723.7990),
+    new FlightMode()
+);
 ```
 
 如果我们想重新分配机器以承担不同的战斗角色和状态，我们可以轻松做到。
@@ -2560,44 +2671,49 @@ TransformerMech ptm3 = new TransformerMech(new Coordinates(40.7483817,-73.979272
 ```java
 p1tm1.setMode(new FlightMode());
 p1tm1.move(26.6, 0.00036);
+
 p1tm2.setMode(new FlightMode());
 p1tm2.move(-94.3, 0.000012);
+
 p1tm3.setMode(new FlightMode());
 p1tm3.move(132, 0.00045);
 ```
 
 接下来，假设第二组收到了曼哈顿北部一艘外星母舰的坐标。它们被赋予任务尽快消灭它。
 
-```
-Coordinates enemyMothership = new
-Coordinates(40.8877895, -73.8721194, 10000);
+```java
+Coordinates enemyMothership = new Coordinates(
+    40.8877895,
+    -73.8721194,
+    10000
+);
 ```
 
 为了执行命令，第二组将迅速向敌母舰飞去。但在之前，其中一台机器必须变形为飞行模式：
 
-```
+```java
 p2tm1.setMode(new FlightMode());
 ```
 
-然后它们将朝向母舰移动......
+然后它们将朝向母舰移动……
 
-```
+```java
 p2tm1.move(15.6, 0.00063);
 p2tm2.move(15.6, 0.00064);
 p2tm2.move(15.6, 0.00062);
 ```
 
-... 改变它们的状态，卸载最强大的主武器...
+改变它们的状态，卸载最强大的主武器……
 
-```
+```java
 p2tm1.setMode(new BlasterCannonMode());
 p2tm2.setMode(new BlasterCannonMode());
 p2tm2.setMode(new BlasterCannonMode());
 ```
 
-... 最后，对敌方威胁火力。
+最后，对敌方威胁火力。
 
-```
+```java
 p2tm1.fireMainWeapon(enemyMothership);
 p2tm2.fireMainWeapon(enemyMothership);
 p2tm3.fireMainWeapon(enemyMothership);
@@ -2605,38 +2721,40 @@ p2tm3.fireMainWeapon(enemyMothership);
 
 总之，状态模式在运行时提供了极大的灵活性。当你遇到需要持续可变数据对象的场景时，请使用状态模式。
 
-# 第 8 章：外观模式 (Facade Pattern)
+# 第 8 章：外观模式（Facade Pattern）
 
 如果你以前开过车，你就知道操作它是多么简单。启动汽车只需要转动点火开关上的钥匙（现在通常是按按钮）。要开得更快，就踩油门。要减速或停止，就踩刹车。方向盘也有明显的功能。
 
-但汽车也是一个非常复杂的系统。启动汽车需要电池提供足够的功率。之后，需要油箱足够的汽。火花也必须正常。必须有足够的机油来移动发动机活塞和其他部件。还有其他未提到的事情——这取决于具体的汽车。如果一切正常，火花点燃发动机气缸并在发动机中产生足够的能量来推动汽车。
+但汽车也是一个非常复杂的系统。启动汽车需要电池提供足够的功率。之后，需要油箱足够的汽油。火花也必须正常。必须有足够的机油来移动发动机活塞和其他部件。还有其他未提到的事情——这取决于具体的汽车。如果一切正常，火花点燃发动机气缸并在发动机中产生足够的能量来推动汽车。
 
 此外，转向、加速和制动都需要一组组件协同工作。但我们通常不会考虑这一点，因为从驾驶座上来说，我们只能看到可见的组件。换句话说，这就是一个外观（Facade）。
 
-## 外观模式是如何工作的：
+## 外观模式是如何工作的
 
-外观模式为你提供了一个顶层组件，用于监督复杂子系统的功能。要操作该子系统，你只需要通过外观模式进行即可。结果是一个简单得系统，你只需要访问外观模式来获取功能。
+外观模式为你提供了一个顶层组件，用于监督复杂子系统的功能。要操作该子系统，你只需要通过外观模式进行即可。结果是一个简单的系统，你只需要访问外观模式来获取功能。
 
 回看我们的汽车类比，驾驶座提供的接口就是外观模式；它让驾驶员通过一组简单的手势来控制系统。同时，它根据驾驶员的指令协调一个复杂的组件系统。
 
-## 创建外观模式：
+## 创建外观模式
 
 要实现此设计模式，首先识别我们想要简化主要程序和/或行为。
 
 如果使用接口，请遵循以下步骤：
 
-- 1) 创建包含这些主要程序的外观接口
-- 2) 创建实现外观接口的通用客户端类
-- 3) 通用客户端应该实现所有的主要程序。包含尽可能多的组件实例。
-- 4) 如果必要，你可以创建多个外观接口和客户端类。如果是这样，重复步骤 1 到 3。
-- 5) 有需要时为通用客户端类创建子类。任何访问系统的代码都作为客户端子类来执行。
+1. 创建包含这些主要程序的外观接口。
+2. 创建实现外观接口的通用客户端类。
+3. 通用客户端应该实现所有的主要程序，包含尽可能多的组件实例。
+4. 如果必要，你可以创建多个外观接口和客户端类。如果是这样，重复步骤 1 到 3。
+5. 有需要时为通用客户端类创建子类。任何访问系统的代码都作为客户端子类来执行。
 
 如果使用封装类（encompassing class），请改用以下步骤：
 
-- 1) 创建通用的“Facade”类。该类应该实现之前提到的所有主要程序。包含尽可能多的组件实例。
-- 2) 创建通用客户端类。它应该包含一个 Facade 类实例。
-- 3) 如果必要，你可以创建多个 Facade 类并重复步骤 1&2。
-- 4) 有需要时为通用客户端类创建子类。任何访问系统的代码都通过 Facade 类执行。你采取哪种步骤取决于你遇到的情况。因此，你必须判断一个‘Facade’包装类是否更好。
+1. 创建通用的“Facade”类。该类应该实现之前提到的所有主要程序，包含尽可能多的组件实例。
+2. 创建通用客户端类。它应该包含一个 `Facade` 类实例。
+3. 如果必要，你可以创建多个 `Facade` 类并重复步骤 1 和 2。
+4. 有需要时为通用客户端类创建子类。任何访问系统的代码都通过 `Facade` 类执行。
+
+你采取哪种步骤取决于你遇到的情况。因此，你必须判断一个“Facade”包装类是否更好。
 
 如果你将外观模式实现为单个包装类，UML 图将如下：
 
@@ -2654,10 +2772,13 @@ p2tm3.fireMainWeapon(enemyMothership);
 
 ```java
 /*
-// 类，带有子组件
-// 方法：
-// - 一个访问子组件的方法
- */
+类，带有子组件
+
+方法：
+
+- 一个访问子组件的方法
+*/
+
 class ComponentOne {
   SubcompOne sc11 = new SubcompOne();
   SubcompOneTwo sc12 = new SubcompOneTwo();
@@ -2667,21 +2788,33 @@ class ComponentOne {
 ```java
 // IN & OUT: (your choice)
 // EFFECT: (your choice)
+
 public void distinctMethodOne() {
     sc11.distinctMethodOne();
     sc12.distinctMethodOneTwo();
 }
+
 class SubcompOne {
     // IN & OUT: (your choice)
     // EFFECT: (your choice)
+
     public void distinctMethodOne() {
     }
 }
+
 class SubcompOneTwo {
     // IN & OUT: (your choice)
     // EFFECT: (your choice)
-    public void distinctMethodOneTwo() {
-    }
+}
+```
+
+
+
+```java
+public void distinctMethodOneTwo() {
+
+}
+
 }
 ```
 
@@ -2689,25 +2822,35 @@ class SubcompOneTwo {
 
 ```java
 class ComponentTwo {
+
     // IN & OUT: (your choice)
+
     // EFFECT: (your choice)
+
     public void distinctMethodTwo() {
+
         // (add implementation here)
+
     }
+
 }
 ```
 
 ```java
 class ComponentN {
+
     // IN & OUT: (your choice)
+
     // EFFECT: (your choice)
+
     public void distinctMethodN() {
+
         // (add implementation here)
+
     }
+
 }
 ```
-
-
 
 在这个系统中，我们需要协调所有的组件。
 
@@ -2715,40 +2858,55 @@ class ComponentN {
 
 ```java
 /*
-// 接口形式的 Facade
-// (包含所有利用环境内
-// 组件的主要过程)
-*/
-interface Facade{
+ * 接口形式的 Facade
+ *
+ * (包含所有利用环境内
+ * 组件的主要过程)
+ */
+interface Facade {
 
     // 主要过程：
     // 输入与输出：（由你选择）
     // 效果：（由你选择）
     // - 调用所有系统组件的方法
+
     public void activateA();
+
     public void activateB();
+
 }
 ```
 
 ```java
 /*
-// 客户端类
-// (实现 Facade 接口中定义的
-// 所有过程
-*/
+ * 客户端类
+ *
+ * (实现 Facade 接口中定义的
+ * 所有过程)
+ */
 class Client implements Facade {
+
     ComponentOne c1 = new ComponentOne();
+
     ComponentTwo c2 = new ComponentTwo();
+
     ComponentN cN = new ComponentN();
 
     // Facade 接口的方法：
     public void activateA() {
+
         c1.distinctMethodOne();
+
     }
+
     public void activateB() {
+
         c2.distinctMethodTwo();
+
         cN.distinctMethodN();
+
     }
+
 }
 ```
 
@@ -2757,9 +2915,13 @@ class Client implements Facade {
 ```java
 // 客户端子类：
 // (根据需要添加)
+
 class ClientA extends Client {
+
 }
-class ClientB extends Client{
+
+class ClientB extends Client {
+
 }
 ```
 
@@ -2767,28 +2929,39 @@ class ClientB extends Client{
 
 ```java
 /*
-// 作为主类的 Facade
-// - 包含环境内每个组件的实例
-// - 包含所有利用环境内
-//      组件的主要过程
-*/
-class Facade{
+ * 作为主类的 Facade
+ *
+ * - 包含环境内每个组件的实例
+ * - 包含所有利用环境内组件的主要过程
+ */
+class Facade {
+
     ComponentOne c1 = new ComponentOne();
+
     ComponentTwo c2 = new ComponentTwo();
+
     ...
+
     ComponentN cN = new ComponentN();
 
     // 主要过程：
     // 输入与输出：（由你选择）
     // 效果：（由你选择）
+
     public void activateA() {
+
         c1.distinctMethodOne();
+
     }
 
     public void activateB() {
+
         c2.distinctMethodTwo();
+
         cN.distinctMethodN();
+
     }
+
 }
 ```
 
@@ -2797,111 +2970,161 @@ class Facade{
 ```java
 // 客户端类：
 // (软件的其他访问部分)
+
 class Client {
+
     Facade f = new Facade();
+
 }
 ```
 
 ```java
 // 客户端子类：
 // (根据需要添加)
-class ClientA extends Client{}
-class ClientB extends Client{}
+
+class ClientA extends Client {
+}
+
+class ClientB extends Client {
+}
 ```
 
 ## JAVA-8b: 应用外观模式
 
-使用你选择的 IDE 运行以下代码。在线 IDE，如 codechef.com、rextester.com、ideone.com 或 codpad.org 都是很好的选择。
-
-==============================
+使用你选择的 IDE 运行以下代码。在线 IDE，如 `codechef.com`、`rextester.com`、`ideone.com` 或 `codpad.org` 都是很好的选择。
 
 在本章中，我们遇到了一个需要实现外观模式的场景。
 
-# 带有曲速驱动器的的银河星舰
+# 带有曲速驱动器的银河星舰
 
 在这里，我们有一段来自银河星舰系统的小段代码。每个类部分管理相应的星舰硬件组件。
 
 ```java
 /*
-// 银河星舰 GSX2013-A4
-// 列出的组件：
-// - 正电子引擎
-// - 点火晶体
-// - 暗物质驱动
-// - 能量预点火器
-// - 物质聚变反应堆
-// - 曲速驱动
-// - 银河导航
-// - 坐标
-// - 曲速点火器
-*/
+ * 银河星舰 GSX2013-A4
+ *
+ * 列出的组件：
+ * - 正电子引擎
+ * - 点火晶体
+ * - 暗物质驱动
+ * - 能量预点火器
+ * - 物质聚变反应堆
+ * - 曲速驱动
+ * - 银河导航
+ * - 坐标
+ * - 曲速点火器
+ */
 
 class PositronEngine {
-  IgnitionCrystal igc = new IgnitionCrystal();
-  DarkMatterDrive dmd = new DarkMatterDrive();
 
-  void startEngine() {
-    igc.lightUp();
-    dmd.activate();
-  }
+    IgnitionCrystal igc = new IgnitionCrystal();
+
+    DarkMatterDrive dmd = new DarkMatterDrive();
+
+    void startEngine() {
+
+        igc.lightUp();
+
+        dmd.activate();
+
+    }
+
 }
 
 class IgnitionCrystal {
-  void lightUp() {
-    // (此处为硬件实现)
-  }
+
+    void lightUp() {
+
+        // (此处为硬件实现)
+
+    }
+
 }
 
 class DarkMatterDrive {
+
     EnergyPreIgniter epi = new EnergyPreIgniter();
+
     MatterFusionReactor mfr = new MatterFusionReactor();
 
     void activate() {
+
         epi.ignite();
+
         mfr.fuse();
+
     }
+
 }
 
 class EnergyPreIgniter {
+
     void ignite() {
+
         // (此处为硬件实现)
+
     }
+
 }
 
 class MatterFusionReactor {
+
     void fuse() {
+
         // (此处为硬件实现)
+
     }
+
 }
 
 class WarpDrive {
+
     WarpIgniter wi = new WarpIgniter();
+
     MatterFusionReactor mfr = new MatterFusionReactor();
 
     void warpTo(Coordinates c) {
+
         wi.activate();
+
         mfr.fuse();
+
         // (将星舰传送到到位置)
+
     }
+
 }
 
 class GalacticNavigation {
+
     List<Coordinates> points = new ArrayList<Coordinates>();
+
 }
 
 class Coordinates {
+
     int x, y, z;
+
     public Coordinates(int x, int y, int z) {
+
         this.x = x;
+
         this.y = y;
+
         this.z = z;
+
     }
+
 }
 
 class WarpIgniter {
-  void activate() {
-    // (此处为硬件实现)
-  }
+
+    void activate() {
+
+        // (此处为硬件实现)
+
+    }
+
 }
 ```
 
@@ -2920,12 +3143,13 @@ class WarpIgniter {
 
 然后我们选择一种实现外观模式的方法。目前，我们将将其应用为一个包含所有功能的 Facade 包装类。
 
-### 1) 创建通用的“Facade”类....
+### 1) 创建通用的“Facade”类
 
 我们从创建 Facade 包装类开始，如下所示：
 
 ```java
 class Facade {
+
 }
 ```
 
@@ -2933,16 +3157,26 @@ class Facade {
 
 ```java
 class Facade {
-// 新行：
-// 主要过程：
-public void startEngine(){
-  pe.startEngine();
-  // (其余的实现部分)
-}
-public void activateWarpDrive(){
-  wd.warpTo(new Coordinates(0, 0, 0));
-  // (其余的实现部分)
-}
+
+    // 新行：
+    // 主要过程：
+
+    public void startEngine() {
+
+        pe.startEngine();
+
+        // (其余的实现部分)
+
+    }
+
+    public void activateWarpDrive() {
+
+        wd.warpTo(new Coordinates(0, 0, 0));
+
+        // (其余的实现部分)
+
+    }
+
 }
 ```
 
@@ -2952,54 +3186,74 @@ public void activateWarpDrive(){
 
 如果我们仔细观察代码，会发现某些组件依赖于其他组件才能工作。当映射出来时，它看起来会像这样：
 
-PositronEngine 依赖于：
-- IgnitionCrystal
-- DarkMatterDrive（依赖于：）
-- EnergyPreIgniter
-- MatterFusionReactor
+`PositronEngine` 依赖于：
 
-WarpDrive 依赖于：
-- WarpIgniter
-- MatterFusionReactor
+- `IgnitionCrystal`
+- `DarkMatterDrive`（依赖于：）
+  - `EnergyPreIgniter`
+  - `MatterFusionReactor`
 
-从代码来看，PositronEngine 和 WarpDrive 类似乎拥有相关类的实例，或者对它们有某种依赖关系。
+`WarpDrive` 依赖于：
+
+- `WarpIgniter`
+- `MatterFusionReactor`
+
+从代码来看，`PositronEngine` 和 `WarpDrive` 类似乎拥有相关类的实例，或者对它们有某种依赖关系。
 
 因此，我们需要这两个类的实例。其余部分将以某种方式与它们链接。
 
 ```java
 class Facade {
-  // 新行：
-  PositronEngine pe = new PositronEngine();
-  WarpDrive wd = new WarpDrive();
 
-  // 主要过程：
-  public void startEngine(){
-    pe.startEngine();
-    // (其余的实现部分)
-  }
-  public void activateWarpDrive(){
-    wd.warpTo(new Coordinates(0, 0, 0));
-    // (其余的实现部分)
-  }
+    // 新行：
+
+    PositronEngine pe = new PositronEngine();
+
+    WarpDrive wd = new WarpDrive();
+
+    // 主要过程：
+
+    public void startEngine() {
+
+        pe.startEngine();
+
+        // (其余的实现部分)
+
+    }
+
+    public void activateWarpDrive() {
+
+        wd.warpTo(new Coordinates(0, 0, 0));
+
+        // (其余的实现部分)
+
+    }
+
 }
 ```
 
-### 2) 创建通用客户端类。它应该包含 Facade 类的实例。
+### 2) 创建通用客户端类
+
+它应该包含 Facade 类的实例。
 
 客户端类的泛化非常简单。它只是一个包含一个实例的类：
 
 ```java
 // 客户端类：
 // (软件的其他访问部分)
+
 class Client {
+
     Facade f = new Facade();
+
 }
 ```
 
-因此，为了访问功能，我们只需要访问客户端类及其底层的 facade：
+因此，为了访问功能，我们只需要访问客户端类及其底层的 Facade：
 
 ```java
 Client c = new Client();
+
 // 启动引擎：
 c.f.startEngine();
 ```
@@ -3009,69 +3263,91 @@ c.f.startEngine();
 c.f.activateWarpDrive();
 ```
 
-### 4) 根据需要为通用客户端类创建子类。
+### 3) 根据需要为通用客户端类创建子类
 
 你可以选择通过创建专门的子类来进一步开发你的客户端类。
 
 ```java
 // 客户端子类：
 // (根据需要添加)
-class ClientA extends Client{}
-class ClientB extends Client{}
+
+class ClientA extends Client {
+}
+
+class ClientB extends Client {
+}
 ```
 
 如果这样做，你的客户端子类将以通用客户端的方式访问 Facade 过程：
 
 ```java
-Client ca = new ClientA();
+Client ca = new Client();
+
 Client cb = new ClientB();
+
 // 启动引擎：
 ca.f.startEngine();
+
 cb.f.startEngine();
+
 // 激活曲速驱动器：
 ca.f.activateWarpDrive();
+
 cb.f.activateWarpDrive();
 ```
 
-总而言，我们现在看到了外观模式如何为功能提供一个简单的枢纽。当面临类似场景时，请考虑应用此模式。
+总而言之，我们现在看到了外观模式如何为功能提供一个简单的枢纽。当面临类似场景时，请考虑应用此模式。
 
-
-
-
-## 如果存在多个门面（FACADES）：
+## 如果存在多个门面（FACADES）
 
 如果该流程导致你创建了多个门面，那么探索该选项可能是值得的。如果我们的示例场景是一个需要使用一个以上门面的情况，它看起来是这样的：
 
-```
+```java
 class EngineFacade {
+
     PositronEngine pe = new PositronEngine();
 
     // 主要程序：
-    public void startEngine(){
+
+    public void startEngine() {
+
         pe.startEngine();
+
         // (其余实现部分)
+
     }
+
 }
 
 class WarpDriveFacade {
+
     WarpDrive wd = new WarpDrive();
 
     // 主要程序：
-    public void activateWarpDrive(){
+
+    public void activateWarpDrive() {
+
         wd.warpTo(new Coordinates(o, o, o));
+
         // (其余实现部分)
+
     }
+
 }
 ```
 
 随后，通用的 Client 类将反映这种替代方案：
 
-```
+```java
 // Client 类：
 // (软件的其他部分访问此处)
+
 class Client {
+
     EngineFacade ef = new EngineFacade();
+
     WarpDriveFacade wdf = new WarpDriveFacade();
+
 }
 ```
 
@@ -3079,39 +3355,58 @@ class Client {
 
 使用下方的伪代码用你选择的编程语言实现工厂模式。
 
-```
-==== ==== ==== ====\
-// 工厂由任何需要使用它的子类实现
+```text
+==== ==== ==== ====
+
+/*
+ * 工厂由任何需要使用它的子类实现
+ */
 interface Factory {
+
     // 输入：由你选择
     // 输出：由你选择
     // 实现此的类的构造函数
+
     function CreateObject(<此处为任何输入>) {
+
         // 此处编写任何代码
+
     }
+
 }
 
 // 子工厂1：
 // 根据 Factory 接口创建不同的对象
+
 class SubFactory1 implements Factory {
-// 这实现了接口中概述的相同函数
-function CreateObject(<此处为任何输入>) {
-  // 为此创建者包含任何独特的区别之处
-  // 此处编写任何其他代码
-}
+
+    // 这实现了接口中概述的相同函数
+
+    function CreateObject(<此处为任何输入>) {
+
+        // 为此创建者包含任何独特的区别之处
+        // 此处编写任何其他代码
+
+    }
+
 }
 ```
 
-```
+```text
 // 子工厂2：
 // 根据 Factory 接口创建不同的对象
+
 class SubFactory2 implements Factory {
-  // 这实现了接口中概述的相同函数
-// interface
-  function CreateObject(<此处为任何输入>) {
-    // 为此创建者包含任何独特的区别之处
-    // 此处编写任何其他代码
-  }
+
+    // 这实现了接口中概述的相同函数
+
+    function CreateObject(<此处为任何输入>) {
+
+        // 为此创建者包含任何独特的区别之处
+        // 此处编写任何其他代码
+
+    }
+
 }
 ```
 
@@ -3119,31 +3414,43 @@ class SubFactory2 implements Factory {
 
 使用下方的伪代码用你选择的编程语言实现工厂模式（注：原文此处可能为误，通常应为组合模式）。
 
-```
+```text
 === ==== ==== ==== ====
-// Component 是 File 和 Folder 类
-// 继承的超类
-// 你可以定义两个类共有的任何字段和方法
+
+/*
+ * Component 是 File 和 Folder 类继承的超类。
+ *
+ * 你可以定义两个类共有的任何字段和方法。
+ */
 abstract high class Component {
+
     // 根据需要插入任意数量的字段和方法
+
     String someField;
+
     public void someMethod()
+
 }
 
 // 通用项类（作为 File）：
 // 包含了在 Component 中定义的所有字段和方法
+
 class File extends Component {
+
 }
 ```
 
-```
+```text
 // 通用组类（作为 Folder）：
 // 包含了在 Component 中定义的所有字段和方法
+//
 // 同时也具有：
-// - 一个 Components 列表，其中可以包含 Items
-// 或 Groups
+// - 一个 Components 列表，其中可以包含 Items 或 Groups
+
 class Folder extends Component {
-  contents = new List
+
+    contents = new List
+
 }
 ```
 
@@ -3151,85 +3458,121 @@ class Folder extends Component {
 
 使用下方的伪代码用你选择的编程语言实现观察者模式。
 
-```
+```text
 ==== ==== ==== ==== ====
 ```
 
 第一个是观察对（Observing pair），包括类和接口。
 
-```
+```text
 // 所有观察者类都实现 Observer 抽象
+//
 // 它可以：
 // - 根据主题更新对象数据
+
 abstract class Observer {
+
     update()
+
     // 此处进入任何其他方法
+
 }
 ```
 
-```
+```text
 // 观察类具有：
 // - update() 方法的工作版本
 // - 任意数量的额外字段和方法
+//
 // 观察类可能需要一个 Subjects 列表来访问
-```
 
-```
 class ObservingClass extends Observer {
-  // 此处输入任何关键字段
 
-  List of Subjects;
+    // 此处输入任何关键字段
 
-  // 输入：（可选）
-  // 输出：无
-  // 效果：响应主题更新数据
-  public void update() {
-    // 在此处对观察者的关键字段进行任何更改
-  }
+    List of Subjects;
+
+    // 输入：（可选）
+    // 输出：无
+    // 效果：响应主题更新数据
+
+    public void update() {
+
+        // 在此处对观察者的关键字段进行任何更改
+
+    }
+
 }
 ```
 
 接下来是主题对（Subject pair），包括类和接口。
 
-```
+```text
 // 所有主题类都实现 Subject 抽象
+//
 // 它可以：
 // - 通知观察者
 // - 在其更新列表中添加/删除观察者
+//
 // 主题类还需要一个 Observers 列表来更新
+```
+
+
+
+```java
 abstract class Subject {
+
     notifyObservers()
+
     addObs(Observer o)
+
     deleteObs(Observer o)
+
     // 此处进入任何其他方法
 }
 
 // 主题类具有：
+
 // - 一个用于通知的 Observers 列表
+
 // - notifyObservers() 的工作版本
+
 // - 任意数量的额外字段和方法
+
 // 主题类还需要一个 Observers 列表来更新
+
 //（在 Subject 类上添加）
+
 class SubjectClass extends Subject {
+
     // 此处输入任何关键字段
-```
 
-```
-obs = List of Observers
+    obs = List of Observers
 
-// 输入：（可选）
-// 输出：无
-// 效果：根据列表中的任何变化更新所有观察者
-public void notifyObservers(){
-    for each item in obs: update()
-}
+    // 输入：（可选）
 
-// 添加/删除方法：
-// 输入 - -一个 Observer
-// 输出：无
-// 效果：响应主题更新数据
-public void addObs(Observer o) {}
-public void deleteObs(Observer o) {}
+    // 输出：无
+
+    // 效果：根据列表中的任何变化更新所有观察者
+
+    public void notifyObservers() {
+
+        for each item in obs: update()
+
+    }
+
+    // 添加/删除方法：
+
+    // 输入 - -一个 Observer
+
+    // 输出：无
+
+    // 效果：响应主题更新数据
+
+    public void addObs(Observer o) {}
+
+    public void deleteObs(Observer o) {}
+
 }
 ```
 
@@ -3237,36 +3580,61 @@ public void deleteObs(Observer o) {}
 
 使用下方的伪代码用你选择的编程语言实现单例模式。
 
-```
+```java
 ==== ==== ==== ====
+
 // 单例类具有：
+
 // - 一个单例实例
+
 // - 你需要的任何其他字段
+
 //
+
 // 它不能：
+
 // - 像平常一样实例化（就像一个普通类）
+
 // （构造函数被设置为私有，以确保万无一失）
+
 //
+
 // 它可以：
+
 // - 返回唯一的单例类实例
+
 class Singleton
+
 // 构造函数：
+
 // 设置为私有
-    private Singleton()
+
+private Singleton()
 
 // 静态字段
-    private static Singleton object = null
+
+private static Singleton object = null
 
 // 输入：（可选）
+
 // 输出：Singleton 对象
+
 // 效果：如果不存在则创建单例
+
 // 静态调用此方法
+
 public static Singleton getObject() {
+
     if (object == null) {
+
         object = new Singleton()
+
         // 在此处初始化任何其他字段
+
     }
+
     return object
+
 }
 ```
 
@@ -3274,42 +3642,63 @@ public static Singleton getObject() {
 
 使用下方的伪代码用你选择的编程语言实现策略模式。
 
-```
+```java
 ==== ==== ==== ==== ====
+
 // 抽象策略实现：
+
 // 它具有：
+
 // - 抽象算法的签名
+
 AbstractStrategy {
+
     输入：由你选择
+
     输出：由你选择
+
     （基于子类的效果）
+
     void Algorithm();
+
 }
 ```
 
 每种策略的类：
-根据抽象策略使用任意数量的类。
-每个类都可以：
-- 实现抽象算法
-（基于每个类的唯一策略）
 
-```
-class Strategy1, extension of AbstractStrategy{
-  抽象算法，作为 Strategy1：
-  Algorithm() {
-    （在此处唯一地实现算法）
-  }
+根据抽象策略使用任意数量的类。
+
+每个类都可以：
+
+- 实现抽象算法（基于每个类的唯一策略）
+
+```java
+class Strategy1, extension of AbstractStrategy {
+
+    抽象算法，作为 Strategy1：
+
+    Algorithm() {
+
+        （在此处唯一地实现算法）
+
+    }
+
 }
 ```
 
-...
+……
 
-```
-class StrategyN, extension of AbstractStrategy{
-  抽象算法，作为 StrategyN：
-  Algorithm() {
-    （在此处唯一地实现算法）
-  }
+```java
+class StrategyN, extension of AbstractStrategy {
+
+    抽象算法，作为 StrategyN：
+
+    Algorithm() {
+
+        （在此处唯一地实现算法）
+
+    }
+
 }
 ```
 
@@ -3317,200 +3706,274 @@ class StrategyN, extension of AbstractStrategy{
 
 使用下方的伪代码用你选择的编程语言实现装饰器模式。
 
-==== ==== ====
-
+```java
+==== ==== ==== ====
 ```
-装饰器实现：
-这种抽象形式具有：
-- 所有子类共有的通用程序、算法和特征的签名
-abstract class DecorativeObject {
-  输入输出：由你选择
-  （由子类实现）
-  procedure()
 
-  （任何其他公共字段
-  和方法）
+#### 装饰器实现
+
+这种抽象形式具有：
+
+- 所有子类共有的通用程序、算法和特征的签名
+
+```java
+abstract class DecorativeObject {
+
+    输入输出：由你选择
+
+    （由子类实现）
+
+    procedure()
+
+    （任何其他公共字段
+
+    和方法）
+
 }
 ```
 
-```
-
+```java
 class BaseObject, extension of DecorativeObject {
+
     通用程序，作为基础对象实现：
+
     procedure() {
+
         （在此处实现此程序）
+
     }
 
     （任何其他公共字段
+
     和方法）
+
 }
 ```
 
-```
-class Decoration, extension of DecorativeObject{
+```java
+class Decoration, extension of DecorativeObject {
+
     之前应用的装饰实例添加：
+
     - DecorativeObject prevDeco;
 
-    （ 通用程序，作为装饰器实现
-    包含了此装饰器添加的任何额外效果 ）
+    （通用程序，作为装饰器实现
+
+    包含了此装饰器添加的任何额外效果）
+
     procedure() {
+
         （在此处实现此程序，
+
         添加任何你想添加的内容）
+
         prevDeco’s procedure()
+
     }
+
 }
 ```
-
-
-
-
 
 ```java
 CONSTRUCTOR:
+
 Decoration(DecorativeObject d) {
-  this.prevDeco = d;
+
+    this.prevDeco = d;
+
 }
 ```
 
 ```java
 (any other common fields
+
 and procedures)
+
 }
 ```
 
 ```java
-class DecorationOne, extension of Decoration{
-  ( Common Procedure, implemented as
-DecorationOne )
-  (also implements procedure() as its superclass
-  procedure() {
-    Decoration Superclass's procedure();
-    // (Implement this procedure here)
-  }
+class DecorationOne, extension of Decoration {
 
-  (any other common fields
-  and procedures)
+    （通用程序，作为 DecorationOne 实现）
 
-  (SAME CONSTRUCTOR AS SUPERCLASS
-DECORATION)
+    （也实现 procedure() 作为其父类）
+
+    procedure() {
+
+        Decoration Superclass's procedure();
+
+        // （在此处实现此程序）
+
+    }
+
+    （任何其他公共字段
+
+    和方法）
+
+    （与父类 Decoration 相同的构造函数）
+
 }
 ```
 
 ```java
-class DecorationX, extension of Decoration{
-  ( Common Procedure, implemented as
-DecorationX )
-  (also implements procedure() as its superclass)
-  procedure() {
-    Decoration Superclass's procedure();
-    // (Implement this procedure here)
-  }
+class DecorationX, extension of Decoration {
 
-  (any other common fields
-  and procedures)
+    （通用程序，作为 DecorationX 实现）
 
-  (SAME CONSTRUCTOR AS SUPERCLASS
-DECORATION)
+    （也实现 procedure() 作为其父类）
+
+    procedure() {
+
+        Decoration Superclass's procedure();
+
+        // （在此处实现此程序）
+
+    }
+
+    （任何其他公共字段
+
+    和方法）
+
+    （与父类 Decoration 相同的构造函数）
+
 }
 ```
 
-### 存档 A7: 状态模式实现
+### 存档 A7：状态模式实现
 
 使用下面的伪代码在你选择的编程语言中实现状态模式。
 
-```
+```java
 ==== ==== ==== ==== ====
 ```
 
-+   处理器类（Handler Class）具有：
+#### 处理器类
+
+处理器类（Handler Class）具有：
+
 - 当前状态：变换状态类的实例
-（根据你的需要插入任何其他字段或方法）
+- 根据你的需要插入任何其他字段或方法
+
 包含的方法：
-- toggleState()
-- setState()
+
+- `toggleState()`
+- `setState()`
 - 构造函数
 
-+   toggleState():
+#### `toggleState()`
+
 简单实现：
-（通过 IF-ELSE 语句将 currentState 切换为下一个状态）
+
+通过 `IF-ELSE` 语句将 `currentState` 切换为下一个状态。
+
 - 确保覆盖所有可用的状态
 - 有必要时重新实现
 
 ```java
 if currentState is StateOne,
+
     currentState = new StateTwo()
+
 if currentState is StateTwo,
+
     currentState = new StateN()
 
 if currentState is StateN:
+
     currentState = new StateOne()
+
 \setState(input):
+
     this.currentState = input;
 
 CONSTRUCTOR:
+
 Handler():
+
     this.currentState = new StateOne()
 ```
 
+#### 抽象状态类
+
 AbstractState 类（抽象状态）具有：
+
 - 你选择的公共字段
+
 包含的方法：
-- (你的选择)
 
-输入 & 输出：(你的选择)
-影响：(你的选择)
+- 你的选择
+
+输入 & 输出：你的选择
+
+影响：你的选择
+
+```java
 commonProcedure():
-(添加任何所需的实现)
 
-AbstractState 的子类：
+    // 添加任何所需的实现
+```
+
+#### AbstractState 的子类
+
 每个子类都具有：
+
 - 公共字段的特定值
 - 任何地方需要的额外字段
--
 
 每个公共方法的实现包含：
-- 父类版本的所有特征，
+
+- 父类版本的所有特征
 - 子类的任何额外影响
 
-StateOne, StateTwo, StateN 是 AbstractState 的子类
+`StateOne`、`StateTwo`、`StateN` 是 `AbstractState` 的子类。
 
-### 存档 A8: Facade 模式实现
+### 存档 A8：Facade 模式实现
 
 使用下面的伪代码在你选择的编程语言中实现 Facade 模式。
 
-```
+```java
 ==== ==== ==== ==== ====
 ```
 
-+   子系统（Subsystem）：
+#### 子系统（Subsystem）
+
 子系统包含：
+
 - 一组相互连接的类（组件）
 - 类层次结构和包含关系可能有所不同
 
-+   作为包装类的 FACADE（外观面类）：
+#### 作为包装类的 FACADE（外观面类）
+
 Facade 类具有：
+
 - 子系统中任何主要组件类的实例
+
 包含的方法：
+
 - 每一个利用子系统组件的主要过程
 
-+   客户端类（CLIENT CLASS）：
+#### 客户端类（CLIENT CLASS）
+
 客户端类具有：
+
 - 一个 Facade 类的实例
 
-## 作为接口的 FACADE：
+## 作为接口的 FACADE
 
 Facade 接口具有：
 
-+   - 每一个利用子系统组件的主要过程
+- 每一个利用子系统组件的主要过程
 
-## 实现 FACADE 的客户端类：
+## 实现 FACADE 的客户端类
 
 客户端类具有：
 
-+   - 子系统中任何主要组件类的实例
+- 子系统中任何主要组件类的实例
+
 包含的方法：
 
-+   - 与 Facade 接口相同，但已完全实现
+- 与 Facade 接口相同，但已完全实现
 
 # 学习 Java 最简单的方法，第 1 部分
 
@@ -3518,9 +3981,7 @@ Facade 接口具有：
 
 为了帮助你更容易地理解，我们将其设置得尽可能简单。
 
-为了方便运行代码，请选择一个你喜欢的 IDE（集成开发环境：本质上是你编写和运行代码的地方）。你也可以使用在线 IDE，如 retestester.com、ideone.com 或 codpad.org。
-
-============================= =====
+为了方便运行代码，请选择一个你喜欢的 IDE（集成开发环境：本质上是你编写和运行代码的地方）。你也可以使用在线 IDE，如 `retestester.com`、`ideone.com` 或 `codpad.org`。
 
 ## 序：Java 文件的结构
 
@@ -3528,65 +3989,87 @@ Facade 接口具有：
 
 ```java
 import java.util.*; // A)
+
 import java.lang.*;
 
 // E
+
 class ClassName // B)
+
 {
+
     public static void main(String args[]) // C
+
     // Some Code // D
+
 }
+
 // E
 ```
 
-## 解释各个部分：
+## 解释各个部分
 
-A) 导入语句（Import Statements）：这些代码指示计算机包含库 - 现有的数据、预写的代码以及在其他地方创建的工具。你也可以从其他 Java 文件导入代码。这些内容最好放在文件中的第一几行。
+A) 导入语句（Import Statements）：这些代码指示计算机包含库——现有的数据、预写的代码以及在其他地方创建的工具。你也可以从其他 Java 文件导入代码。这些内容最好放在文件中的第一几行。
 
 注意：至少你需要在 Java 文件中具备上述两行代码。这些导入引入了你今天代码中使用最核心的 Java 库。
 
 B) 主类（The Main Class）：你的代码文件至少需要有一个类（Class）。所有类中至少有一个类需要包含 `main()` 方法（见下文）。
 
-C) main() 方法：这是入口（Entry Point）。计算机将执行你 `main` 方法中的所有代码。在你的 Java 项目的所有类中，你至少需要有一个名为 `main()` 的类方法。现在，请确保你的 `main()` 方法拥有上方完全相同的行。
+C) `main()` 方法：这是入口（Entry Point）。计算机将执行你 `main` 方法中的所有代码。在你的 Java 项目的所有类中，你至少需要有一个名为 `main()` 的类方法。现在，请确保你的 `main()` 方法拥有上方完全相同的行。
 
-D) main() 方法代码：这是计算机将实际执行的代码。如果任何代码引用了其他类、库、函数或它可以到达的任何其他代码，它将会被包含在内。
+D) `main()` 方法代码：这是计算机将实际执行的代码。如果任何代码引用了其他类、库、函数或它可以到达的任何其他代码，它将会被包含在内。
 
 （注意：如果你还不知道什么是方法，我们稍后会介绍）
 
 E) 空格（White Space）：在 Java 文件中，你只能拥有导入语句、类或枚举。
 
-### 1) 基础数据类型（Data Types）
+### 1）基础数据类型（Data Types）
 
-布尔值（Booleans）：本质上是开关值。在代码中，布尔值可以是 true 或 false。在 Java 中，布尔值只能小写。
+#### 布尔值（Booleans）
+
+本质上是开关值。在代码中，布尔值可以是 `true` 或 `false`。在 Java 中，布尔值只能小写。
 
 例如：
 
+```java
 true, false
+```
 
-字符串（Strings）：这些是字符、数字和其他符号的集合 - 按顺序排列形成一段文本。它们以双引号开头并结束。
+#### 字符串（Strings）
+
+这些是字符、数字和其他符号的集合——按顺序排列形成一段文本。它们以双引号开头并结束。
 
 例如：
 
-" This is a String."
+```java
+"This is a String."
+```
 
-整数（Integers）：它们是不带小数的整数。
+#### 整数（Integers）
+
+它们是不带小数的整数。
 
 示例：
 
-```
+```java
 12
+
 19932
 ```
 
-浮点数（Floats）：与整数相反，它们是带小数的。在 Java 中，浮点数后面紧跟字母 `f`。
+#### 浮点数（Floats）
+
+与整数相反，它们是带小数的。在 Java 中，浮点数后面紧跟字母 `f`。
 
 示例：
 
-```
+```java
 0.12f
 ```
 
-### 2) 变量（Variables）记得在小学数学中使用 X 和 Y 等字母代表数字吗？教科书上有 `let x = 4` 和 `let y = 19` 这样的句子。这些被称为变量。
+### 2）变量（Variables）
+
+记得在小学数学中使用 X 和 Y 等字母代表数字吗？教科书上有 `let x = 4` 和 `let y = 19` 这样的句子。这些被称为变量。
 
 变量在编程中也普遍存在。但在编程中，你可以给变量命名。除了数字，变量可以是你赋值的任何数据。它们可以是字符串、布尔值、整数等。
 
@@ -3594,29 +4077,35 @@ true, false
 
 在 Java 中，你可以按照以下语法创建变量：
 
-（数据类型）（变量名） =（初始值）；
+```java
+（数据类型）（变量名）=（初始值）；
+```
 
 示例：
 
 ```java
 String a = "This is a String.";
+
 int b = 12;
+
 boolean c = true;
+
 float d = 0.1234f;
+
 double e = 0.1234;
 ```
 
 记住，Java 中的数据类型必须以特定的方式编写。接几行解释了这一点。
 
--   **Strings:** String
--   **Integers:** int
--   **Booleans:** boolean
--   **作为 float 的小数：** float
--   **作为 double 的小数：** double
+- **Strings:** `String`
+- **Integers:** `int`
+- **Booleans:** `boolean`
+- **作为 float 的小数：** `float`
+- **作为 double 的小数：** `double`
 
 注意：你需要按照上述完全相同的拼写和大小写来声明数据类型。
 
-### 3) 复合数据（Composite Data）
+### 3）复合数据（Composite Data）
 
 这个概念意味着一组独立的、较小的数据组合成一个完整的、单一的数据块。用简单的话说，如果变量是句子，复合数据就是整个段落。
 
@@ -3626,23 +4115,23 @@ double e = 0.1234;
 
 ```java
 class (Class Name) {
-  // some code
+
+    // some code
+
 }
 ```
 
+示例：
 
-
-
-
-示例:
-
-```
+```java
 class House {
+
     // insert code here
+
 }
 ```
 
-### 4a) 创建函数
+### 4a）创建函数
 
 如果说变量是句子，那么函数就是动作或动词。
 
@@ -3650,11 +4139,15 @@ class House {
 
 在 Java 中创建函数，请遵循以下语法：
 
-```
+```java
 (返回的数据类型)<函数名称>(<数据类型1>输入1,...<任何额外的输入>) {
-//在此处编写代码
-// 如果函数输出任何数据，请使用下一行：
-// return (带有数据类型的变量名，或任何数据)
+
+    // 在此处编写代码
+
+    // 如果函数输出任何数据，请使用下一行：
+
+    // return (带有数据类型的变量名，或任何数据)
+
 }
 ```
 
@@ -3662,17 +4155,25 @@ class House {
 
 ```java
 // 注意函数的返回数据类型是 String
+
 // 并且有一行返回实际字符串的语句
+
 String functionA(String in1, int in2) {
+
     return "OKAY";
+
 }
 ```
 
 ```java
 // 注意函数的返回数据类型是 void
+
 // 并且 'return' 行没有返回任何数据
+
 void functionB(boolean in1, float in2) {
+
     return;
+
 }
 ```
 
@@ -3684,33 +4185,40 @@ void functionB(boolean in1, float in2) {
 
 ```java
 // 返回一个 Integer，无输入：
+
 int functionXYZ() {
-    //在此处编写代码
+
+    // 在此处编写代码
+
     return 12;
+
 }
 ```
 
 ```java
 // 不返回数据，有 3 个输入：
+
 void functionABC(int a, int b, int c) {
-    //在此处编写代码
+
+    // 在此处编写代码
+
 }
 ```
 
-### 4b) 使用函数
+### 4b）使用函数
 
 要调用函数，只需编写它的名称以及任何输入（如果需要的话）。
 
-如果函数不输出数据（或者输出 void），请遵循此语法 - 并确保它单独占一行：
+如果函数不输出数据（或者输出 `void`），请遵循此语法——并确保它单独占一行：
 
-```
-<函数名称>( input1, input2, ..., inputN);
+```java
+<函数名称>(input1, input2, ..., inputN);
 ```
 
 如果函数输出某些数据，语法与上述类似。但请确保函数位于期望输出数据类型的地方：
 
-```
-<数据类型> (变量名) = <函数名称>(input1, input2, ..., inputN);
+```java
+<数据类型>（变量名）= <函数名称>(input1, input2, ..., inputN);
 ```
 
 换句话说，函数的输出数据必须位于“符合逻辑”的地方。例如，如果一个变量期望一个整数，那么函数就需要输出一个整数。
@@ -3719,37 +4227,39 @@ void functionABC(int a, int b, int c) {
 
 ```java
 // 无输出：
+
 functionABC(2, 4, 5);
 ```
 
 ```java
 // 输出一个 Integer：
+
 int varInteger = functionABC(2, 4, 5);
 ```
 
-## 学习 Java 的最方法，第 2 部分
 
-为了方便运行代码，请选择你仪的 IDE（集成开发环境：本质上是你编写和运行代码的地方）。你也可以使用在线 IDE，如 rextester.com、ideone.com 或 codpad.org。
 
-==============================
+# 学习 Java 的最简单方法：第 2 部分
 
-## 5a 部分：Java 中的数组：传统静态数组
+为了方便运行代码，请选择你中意的 IDE（集成开发环境：本质上是你编写和运行代码的地方）。你也可以使用在线 IDE，如`rextester.com`、`ideone.com`或`codpad.org`。
+
+## 5a 部分：Java 中的数组——传统静态数组
 
 数组是特定数据类型的顺序列表。这些数据类型可以是简单数据，也可以是复合数据。如果你需要存储数据列表，请使用数组（Arrays）。
 
 声明数组请遵循以下语法：
 
-```
+```java
 <数据类型>[] (变量名);
 ```
 
 要同时初始化它，只需这样做：
 
-```
-<数据类型>[] (变量名) = new <相同的数据类型>[<数组项数量];
+```java
+<数据类型>[] (变量名) = new <相同的数据类型>[<数组项数量>];
 ```
 
-示例：
+### 示例
 
 ```java
 int[] aa = new int[5];
@@ -3757,14 +4267,14 @@ int[] aa = new int[5];
 
 你甚至可以初始化数组数据中的每一个项：
 
-```
-<数据类型[]>(变量名) = {项 1>, <项 2>, ..., <项 N>};
+```java
+<数据类型>[] (变量名) = {<项 1>, <项 2>, ..., <项 N>};
 ```
 
-示例：
+### 示例
 
 ```java
-int[] aa = {1,2,3,4,5};
+int[] aa = {1, 2, 3, 4, 5};
 ```
 
 你还可以根据项在数组中的位置来访问单个项。0 是第一个项；数组大小减一是最后一个项。
@@ -3773,7 +4283,7 @@ int[] aa = {1,2,3,4,5};
 
 例如，你可以这样获取数组的第一个项：
 
-```
+```java
 aa[0]
 ```
 
@@ -3787,31 +4297,24 @@ aa[9]
 只需记住：你只能将上述代码放在期望数据类型的地方：
 
 ```java
-int[] zzz={1,2,3};
+int[] zzz = {1, 2, 3};
+
 int x = zzz[0];
 ```
 
-## 5b 部分：Java 库中的 ArrayList 类
+## 5b 部分：Java 库中的 `ArrayList` 类
 
-Java 语言包含一个 ArrayList 类，可以帮助程序员创建灵活的数组。
+Java 语言包含一个`ArrayList`类，可以帮助程序员创建灵活的数组。
 
-要使用 ArrayList，它是...（注意：原始 OCR 文本已截断）
-
-
-
-
+要使用`ArrayList`，它是……（注意：原始 OCR 文本已截断）
 
 # 学习面向对象的最简单方法
 
 我们还包含了一份关于学习面向对象编程的补充指南——这是当今最流行的编程类型之一。
 
-为了方便运行代码，请选择一个你中意的 IDE（集成开发环境：本质上就是你编写和运行代码的地方）。你也可以使用在线 IDE，例如 rextester.com、ideone.com 或 codpad.org。
+为了方便运行代码，请选择一个你中意的 IDE（集成开发环境：本质上就是你编写和运行代码的地方）。你也可以使用在线 IDE，例如`rextester.com`、`ideone.com`或`codpad.org`。
 
-```
-======================================
-```
-
-## 1) 对象面向编程
+## 1. 面向对象编程
 
 在编程的世界里，你会经常听到这个术语。
 
@@ -3821,90 +4324,100 @@ Java 语言包含一个 ArrayList 类，可以帮助程序员创建灵活的数�
 
 面向对象编程的核心点在于：
 
-在面向对象编程中，你创建了你所设计的那些类的“副本”。更简单地说，类是一个充当“蓝图”的数据结构。而你根据这些类“蓝图”创建的那些“生成的副本”，就称为**对象（Objects）**。
+在面向对象编程中，你创建了你所设计的那些类的“副本”。更简单地说，类是一个充当“蓝图”的数据结构。而你根据这些类“蓝图”创建的那些“生成的副本”，就称为对象（Objects）。
 
 为什么要这样做呢？因为随着你对编程的越来越深入，你会遇到“抽象（Abstraction）”的概念——将一个通用的思想应用于多次、多个场景——最终从而节省时间、避免困惑并精力。
 
 反复编写相同的复合数据会导致更多的精力消耗和挫败感，而重用同一个思想则会导致效率和一致性。
 
-## 2) OOP 术语
+## 2. OOP 术语
 
-变量和函数在 OOP 中可以承担新的角色。它们分别可以被称为**字段（Fields）**和**方法（Methods）**。在某些情况下，完全取决于你是否使用你喜欢的名称，只要你理解其他程序员在使用这些术语时的意思即可。
+变量和函数在 OOP 中可以承担新的角色。它们分别可以被称为字段（Fields）和方法（Methods）。在某些情况下，完全取决于你是否使用你喜欢的名称，只要你理解其他程序员在使用这些术语时的意思即可。
 
 字段代表 OOP 中的变量，因为就像任何输入表单中的字段一样，数据对象可以拥有你可以想象的任何不同值的字段。
 
 将字段视为对象的某种特定属性。每个对象可能具有彼此不同的属性：
 
-```
-class Cat{
-  String color;
+```java
+class Cat {
+    String color;
 }
 
 // 这些猫是基于 Cat 类的对象：
-catA.color = "white"
-catB.color = "grey"
-catC.color = "orange"
+
+catA.color = "white";
+catB.color = "grey";
+catC.color = "orange";
 ```
 
 方法代表对象拥有的函数。将方法视为对象执行的“动作”和“行为”。
 
-在 **OOP** 中，你可以在类内部定义方法，但你需要从对象本身来访问该方法。
+在 OOP 中，你可以在类内部定义方法，但你需要从对象本身来访问该方法。
 
-例如，如果我们根据某个 Cat 类创建了几个 Cat 对象，每个 Cat 对象都将拥有 Cat 类上定义的所有方法：
+例如，如果我们根据某个`Cat`类创建了几个`Cat`对象，每个`Cat`对象都将拥有`Cat`类上定义的所有方法：
 
-```
-class Cat{
+```java
+class Cat {
     void meow() {}
 }
 
 // 这些猫是基于 Cat 类的对象：
-catA.meow()
-catB.meow()
-catC.meow()
+
+catA.meow();
+catB.meow();
+catC.meow();
 ```
 
-## 3) 构造方法
+## 3. 构造方法
 
 构造方法是特殊的类方法。它们根据所属的类，为你创建对象。
 
 要根据特定类创建数据对象，请遵循以下语法：
 
+```java
 (变量名) = new <类名>();
+```
 
 你本质上是将某些变量设置为数据对象。
 
-示例：
+### 示例
 
-```
+```java
 class House {
     // 在此处插入代码
 }
+
 h = new House();
 ```
 
-要调用类对象，只需引用它所属的变量：
+要调用类对象，只需引用它所属的变量。
 
-示例：
+### 示例
 
-```
+```java
 House h = new House();
+
 ij = h;
 ```
 
 # 克服任何编程障碍！
 
-> “ 它针对如此复杂的主题，并以简单、生动且幽默的方式呈现。”
-- William Connor，来自 Amazon.com
+> “它针对如此复杂的主题，并以简单、生动且幽默的方式呈现。”
+>
+> — William Connor，来自 Amazon.com
 
-> “ 内容异常完整且充满了数据。”
-- Freya Jab，来自 Amazon.com
+> “内容异常完整且充满了数据。”
+>
+> — Freya Jab，来自 Amazon.com
 
-> “ 作者用易于理解的方法解释了主题。”
-- Ador，来自 Amazon.com
+> “作者用易于理解的方法解释了主题。”
+>
+> — Ador，来自 Amazon.com
 
 # 你准备好将你的编程提升到新的层次了吗？
 
-警告：
+## 警告
+
 这些页面中包含了特殊的编程解决方案，可以帮助你解决会遇到的许多常见编程问题。
 
 数十名熟练程序员的集体编程经验，经过数年的开发，现在通过这本书就能为你提供。
@@ -3913,11 +4426,11 @@ ij = h;
 
 最棒的是，学习这些信息你不需要花费数百美元。
 
-+ 主题包括：
-- 如何自动更新你的数据 - 这样你就无需手动操作
+## 主题包括
+
+- 如何自动更新你的数据——这样你就无需手动操作
 - 如何在另一种语言中应用这些模式
 - 如何创建自定义数据对象
-- 在实现某些模式**之前**需要的重要事项……
+- 在实现某些模式之前需要的重要事项……
 - 应用你在这里所学知识的特殊方法
-以及更多、更多内容！
-
+- 以及更多、更多内容！

@@ -1,14 +1,13 @@
+
 # 执行器接口
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/concurrency/exinter.html`](https://docs.oracle.com/javase/tutorial/essential/concurrency/exinter.html)
 
 `java.util.concurrent` 包定义了三个执行器接口：
 
-+   `Executor` 是一个简单的接口，支持启动新任务。
-
-+   `ExecutorService` 是 `Executor` 的子接口，增加了一些功能，有助于管理单个任务和执行器本身的生命周期。
-
-+   `ScheduledExecutorService` 是 `ExecutorService` 的子接口，支持未来和/或定期执行任务。
++ `Executor` 是一个简单的接口，支持启动新任务。
++ `ExecutorService` 是 `Executor` 的子接口，增加了一些功能，有助于管理单个任务和执行器本身的生命周期。
++ `ScheduledExecutorService` 是 `ExecutorService` 的子接口，支持未来和/或定期执行任务。
 
 通常，引用执行器对象的变量声明为这三种接口类型之一，而不是执行器类类型。
 
@@ -18,14 +17,12 @@
 
 ```java
 (new Thread(r)).start();
-
 ```
 
-with
+为
 
 ```java
 e.execute(r);
-
 ```
 
 然而，`execute` 的定义不太具体。低级习语创建一个新线程并立即启动它。根据 `Executor` 的实现，`execute` 可能会做同样的事情，但更有可能使用现有的工作线程来运行 `r`，或者将 `r` 放入队列等待工作线程可用。（我们将在线程池部分描述工作线程。）

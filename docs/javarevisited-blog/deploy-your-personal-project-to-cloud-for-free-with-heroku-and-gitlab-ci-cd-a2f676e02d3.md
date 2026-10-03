@@ -1,3 +1,4 @@
+
 # 使用 Heroku 和 GitLab CI/CD 将您的个人项目部署到云
 
 > 原文：<https://medium.com/javarevisited/deploy-your-personal-project-to-cloud-for-free-with-heroku-and-gitlab-ci-cd-a2f676e02d3?source=collection_archive---------2----------------------->
@@ -44,15 +45,15 @@
 
 尽管如此，我们还是使用 Heroku [**Maven 插件**](https://javarevisited.blogspot.com/2016/08/top-10-maven-plugins-every-java-developer-know.html) **来代替。这将允许我们从 CI/CD 管道触发部署。**
 
-## 3.1 pom.xml
+### 3.1 pom.xml
 
-首先，让我们将插件添加到我们的 *pom.xml* 文件中:
+首先，让我们将插件添加到我们的`pom.xml`文件中:
 
-## 3.2 系统属性
+### 3.2 系统属性
 
 正如你所注意到的，我们正试图在这个项目中使用 java 17。默认情况下，Heroku 会尝试使用 [java 8](https://www.java67.com/2018/08/top-10-free-java-courses-for-beginners-experienced-developers.html) 。
 
-因此，如果你想使用较新版本的 java，你需要添加一个具有以下属性的***system . properties***文件:
+因此，如果你想使用较新版本的 java，你需要添加一个具有以下属性的`system.properties`文件:
 
 ```
 java.runtime.version=17.0.3
@@ -60,17 +61,17 @@ java.runtime.version=17.0.3
 
 你可以阅读 Heroku 的文档来查看你的配置到底支持哪些 java 版本。
 
-## 3.3 Procfile
+### 3.3 Procfile
 
 此外，Heroku 将需要另一个配置文件来了解如何启动应用程序。
 
-我们必须添加一个名为**Procfile**的文件(没有扩展名)。在里面，我们可以根据需要添加 [JVM 参数](https://www.java67.com/2016/08/10-jvm-options-for-java-production-application.html)。例如，我使用的 *Procfile* 有以下内容:
+我们必须添加一个名为`Procfile`的文件(没有扩展名)。在里面，我们可以根据需要添加 [JVM 参数](https://www.java67.com/2016/08/10-jvm-options-for-java-production-application.html)。例如，我使用的`Procfile`有以下内容:
 
 ```
 web: java $JAVA_OPTS -Dserver.port=$PORT -jar target/*.jar
 ```
 
-要阅读更多关于 *Procfile* 的内容，请查阅 [Heroku 的官方指南](https://devcenter.heroku.com/articles/procfile)。
+要阅读更多关于`Procfile`的内容，请查阅 [Heroku 的官方指南](https://devcenter.heroku.com/articles/procfile)。
 
 ## 4.从本地机器部署到 Heroku
 
@@ -100,7 +101,7 @@ $ HEROKU_API_KEY="xxx-xxx-xxxx" mvn heroku:deploy
 
 最后，让我们为部署创建管道阶段。
 
-因为我们使用的是 GitLab，所以这将通过**来完成。gitlab-cy.yml** 文件:
+因为我们使用的是 GitLab，所以这将通过`.gitlab-ci.yml`文件来完成:
 
 之后，转到 *CI/CD > Pipelines* 并点击最新创建的管道。您应该已经看到了 yml 文件中指定的*测试*和*部署*阶段。如果测试通过，您现在就可以从 GitLab 手动触发部署了。
 

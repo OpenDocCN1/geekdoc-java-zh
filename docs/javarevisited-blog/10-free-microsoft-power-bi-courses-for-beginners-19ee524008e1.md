@@ -1,3 +1,4 @@
+
 # 2023 年面向初学者的 10 门免费微软 Power BI 课程
 
 > 原文：<https://medium.com/javarevisited/10-free-microsoft-power-bi-courses-for-beginners-19ee524008e1?source=collection_archive---------0----------------------->
@@ -8,9 +9,9 @@
 
 image_credit — Udemy
 
-大家好，如果你想在 2023 年学习 Power BI，这也是数据可视化和商业分析的领先技术之一，并寻找免费资源，如免费在线课程，那么你来对地方了。之前我已经分享过 [**最佳 Power BI 课程**](/javarevisited/7-best-courses-to-learn-microsoft-power-bi-for-beginners-and-experienced-developers-83695c9428dc) ，今天 IA m 要分享免费在线培训课程学习 Power BI。
+大家好，如果你想在 2023 年学习 Power BI，这也是数据可视化和商业分析的领先技术之一，并寻找免费资源，如免费在线课程，那么你来对地方了。之前我已经分享过[最佳 Power BI 课程](/javarevisited/7-best-courses-to-learn-microsoft-power-bi-for-beginners-and-experienced-developers-83695c9428dc)，今天我要分享免费在线培训课程学习 Power BI。
 
-这些免费课程由专家创建，受到了成千上万想要学习 Power BI 的开发人员和技术人员的信任。他们也来自著名的网站，如 [Udemy](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2F) 、 [Edureka](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=42536&murl=https%3A%2F%2Fwww.edureka.co%2Fpower-bi-certification-training&LSNSUBSITE=LSNSUBSITE) 和 [edX](https://www.awin1.com/cread.php?awinmid=6798&awinaffid=631878&clickref=&p=) ，你们中的许多人已经很熟悉了。
+这些免费课程由专家创建，受到了成千上万想要学习 Power BI 的开发人员和技术人员的信任。他们也来自著名的网站，如 [Udemy](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2F)、[Edureka](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=42536&murl=https%3A%2F%2Fwww.edureka.co%2Fpower-bi-certification-training&LSNSUBSITE=LSNSUBSITE) 和 [edX](https://www.awin1.com/cread.php?awinmid=6798&awinaffid=631878&clickref=&p=)，你们中的许多人已经很熟悉了。
 
 这些课程最好的一点是它们完全免费，你不需要任何信用卡，你需要的只是一个免费的帐户来加入这些在线课程并学习 Power BI。
 
@@ -20,13 +21,13 @@ image_credit — Udemy
 
 有一种简单的方法来获得开始使用该软件的必要技能，那就是参加一些在线课程，许多教师让他们付费，但我已经编制了五门课程来免费学习 Microsoft Power BI。作为该软件的初学者或中级用户，请随意浏览所有课程，并尝试挑选最适合您技能的课程。
 
-顺便说一句，如果你不介意花点钱，那么我也建议你去看看 Udemy 上的[**Microsoft Power BI-完整介绍**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpowerbi-complete-introduction%2F) 课程。这是 2023 年学习 Power BI 的最全面的课程之一，你可以在现在正在进行的 Udemy 销售中只花 9.9 美元购买。
+顺便说一句，如果你不介意花点钱，那么我也建议你去看看 Udemy 上的[Microsoft Power BI-完整介绍](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpowerbi-complete-introduction%2F)课程。这是 2023 年学习 Power BI 的最全面的课程之一，你可以在现在正在进行的 Udemy 销售中只花 9.9 美元购买。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpowerbi-complete-introduction%2F>  
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpowerbi-complete-introduction%2F>
 
 # 2023 年我最喜欢的免费学动力 BI 的课程
 
-为了不浪费你更多的时间，下面是我列出的 2023 年学习 Power BI 的免费在线课程。这些课程大部分来自两个领先的在线学习平台 [Udemy](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2F) 和 [edX](https://www.awin1.com/cread.php?awinmid=6798&awinaffid=631878&clickref=&p=) 。
+为了不浪费你更多的时间，下面是我列出的 2023 年学习 Power BI 的免费在线课程。这些课程大部分来自两个领先的在线学习平台 [Udemy](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2F) 和 [edX](https://www.awin1.com/cread.php?awinmid=6798&awinaffid=631878&clickref=&p=)。
 
 你不需要赢得所有这些课程，参加其中的几个课程就足以对 Power BI 有一个像样的了解，但如果你喜欢深入学习，你可以查看所有课程，它们都是免费的。
 
@@ -112,84 +113,86 @@ image_credit — Udemy
 
 ## 7. [Power BI 全程课程—在 4 小时内学会 Power BI](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=42536&murl=https%3A%2F%2Fwww.edureka.co%2Fpower-bi-certification-training&LSNSUBSITE=LSNSUBSITE)【edu reka】
 
+
+
 这是一个 4 小时的免费课程，从 YouTube 上领先的在线教练门户网站 Edureka 学习 Power BI。Edureka 因其在线课堂培训而闻名，在这里你可以向专家现场学习。
 
 讲这个课程有助于你详细了解和学习 Power BI。本 Power BI 教程对于初学者以及希望掌握 Power BI 概念的专业人士来说都是非常理想的。
 
-本免费课程涵盖以下主题:
+本免费课程涵盖以下主题：
 
-1.  商业智能和数据可视化
-2.  什么是 Power BI？为什么选择 Power BI？
-3.  主要优势 Power BI
-4.  Power BI 的主要优势和架构
-5.  Power BI 的构建模块
-6.  如何使用 Power BI，包括 BI desktop
-7.  功率 BI 图表和更多。
+1. 商业智能和数据可视化
+2. 什么是 Power BI？为什么选择 Power BI？
+3. 主要优势 Power BI
+4. Power BI 的主要优势和架构
+5. Power BI 的构建模块
+6. 如何使用 Power BI，包括 BI desktop
+7. 功率 BI 图表和更多。
 
 总的来说，这是一个从零开始学习 Power BI 的好课程。这个课程最好的一点是，它在 YouTube 上是免费的，这意味着你不需要帐户或登录来观看这个课程。你甚至可以在这里看。
 
-并且，如果你想向专家现场学习，你还可以在 Edureka 上查看 [**微软 Power BI 培训。这不是免费的，但很值得。**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=42536&murl=https%3A%2F%2Fwww.edureka.co%2Fpower-bi-certification-training&LSNSUBSITE=LSNSUBSITE)
+并且，如果你想向专家现场学习，你还可以在 Edureka 上查看[微软 Power BI 培训](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=42536&murl=https%3A%2F%2Fwww.edureka.co%2Fpower-bi-certification-training&LSNSUBSITE=LSNSUBSITE)。这不是免费的，但很值得。
 
-## 8.[学功毕快](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-power-bi-fast%2F)【免费 Udemy 课程】
+## 8. [学功毕快](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-power-bi-fast%2F)【免费 Udemy 课程】
 
 这是另一个很棒的 Udemy 课程，可以免费快速地学习 Power BI。在这门免费课程中，您不仅可以在不到 2 小时的时间内构建一份专业的电力 BI 报告，还可以[学习数据可视化基础知识](/javarevisited/5-advanced-courses-to-learn-microsoft-excel-in-depth-b556aaee5f6c?source=---------18------------------)和高级技术。
 
-本课程包括以下内容:
+本课程包括以下内容：
 
-1.  如何从头开始构建 Power BI 报告
-2.  如何创建计算列和度量以创建更可靠的数据模型
-3.  如何使用高级 DAX 来执行复杂计算
-4.  设计报表的样式，使其美观、有趣
-5.  将报告推送到 Power BI 服务并配置自动数据刷新
-6.  如何下载并安装 Power BI Desktop 和 SQL Server 2017
+1. 如何从头开始构建 Power BI 报告
+2. 如何创建计算列和度量以创建更可靠的数据模型
+3. 如何使用高级 DAX 来执行复杂计算
+4. 设计报表的样式，使其美观、有趣
+5. 将报告推送到 Power BI 服务并配置自动数据刷新
+6. 如何下载并安装 Power BI Desktop 和 SQL Server 2017
 
 总的来说，这是一门很好的课程，可以让你很快开始学习 Power BI。一些很好的问题可以引导你探索更多关于你自己的东西，并试着去理解你如何能自己做到！
 
-**以下是加入本课程的链接—** [快速学习力量 BI](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-power-bi-fast%2F)
+**以下是加入本课程的链接**——[快速学习力量 BI](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-power-bi-fast%2F)
 
 ![](img/f2246fb05b3f14672d0fc3efe31b20ea.png)
 
-## 9.[动力毕&动力支点:简介](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpower-bi-power-pivot-introduction%2F)【免费】
+## 9. [动力毕&动力支点：简介](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpower-bi-power-pivot-introduction%2F)【免费】
 
 这是 Udemy 上的另一个不错的小课程，学习如何有效地使用 Power BI 和 Power Pivot。由 Bas Dohmen 创建的这个免费课程将在 1.5 小时内教你一些关键的电力商业智能技能。
 
-在这门免费课程中，您将学到以下内容:
+在这门免费课程中，您将学到以下内容：
 
-1.  如何从普通透视表过渡到 [Excel](/javarevisited/10-free-courses-to-learn-microsoft-excel-for-beginners-69561f2f2678) 中的 Power Pivot 报表
-2.  了解 Power BI 和 Power Pivot 作为自助式 BI 的下一步是如何运作的
-3.  数据建模、构建交互式可视化和简单计算等基本概念
-4.  帮助您启动和运行的实际案例
-5.  向专业 BI 开发人员学习
+1. 如何从普通透视表过渡到 [Excel](/javarevisited/10-free-courses-to-learn-microsoft-excel-for-beginners-69561f2f2678) 中的 Power Pivot 报表
+2. 了解 Power BI 和 Power Pivot 作为自助式 BI 的下一步是如何运作的
+3. 数据建模、构建交互式可视化和简单计算等基本概念
+4. 帮助您启动和运行的实际案例
+5. 向专业 BI 开发人员学习
 
 Bas 是一名数据科学专业人员，拥有 10 年在商业智能领域提供培训和支持的经验，擅长用简单易懂的语言解释复杂的主题。这意味着您将免费向专业的 BI 开发人员学习。
 
-**这里是加入本课程的链接**——[力量毕&力量支点:简介](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpower-bi-power-pivot-introduction%2F)
+**这里是加入本课程的链接**——[力量毕&力量支点：简介](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpower-bi-power-pivot-introduction%2F)
 
 ![](img/6bfee0af215f4f15022cba98ebf85ace.png)
 
-## 10.[在 POWER BI 中一小时内创建一个仪表板](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdashboardinanhour-powerbi%2F)[免费]
+## 10. [在 POWER BI 中一小时内创建一个仪表板](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdashboardinanhour-powerbi%2F)【免费】
 
 这是在 Udemy 上学习 Power BI 的另一个免费实践课程。在本课程中，您将学习如何按照逐步说明在 Power BI 中创建仪表板。
 
 在这个免费的 Power BI 课程中，讲师准备了一个与 HR analytics 相关的仪表盘，为您提供一些动手实践。
 
-这是一门初级课程，讲解很简单。您将执行专门的 ***分析*** 并使用内置的 ***分析*** 功能进行更深入的挖掘。
+这是一门初级课程，讲解很简单。您将执行专门的分析并使用内置的分析功能进行更深入的挖掘。
 
-**这是参加本课程的链接** — [在 POWER BI 中一小时内创建一个仪表板](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdashboardinanhour-powerbi%2F)
+**这是参加本课程的链接**——[在 POWER BI 中一小时内创建一个仪表板](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdashboardinanhour-powerbi%2F)
 
 ![](img/63633c1569cc07af4a1e98c1404c3961.png)
 
-## 11.使用 POWER BI 实现数据可视化【免费】
+## 11. 使用 POWER BI 实现数据可视化【免费】
 
 这是 Udemy 的另一门免费课程，也是上一门课程的讲师，在这门课程中，您可以学习如何使用 Power BI 进行数据可视化。许多人不知道 Power BI 具有一些出色的数据可视化功能，本课程将让您探索这些功能。
 
-Power BI 报告可能只有一页，只有一种视觉效果，也可能有几页都是视觉效果。区分报表*设计者*和报表*消费者*是很重要的。
+Power BI 报告可能只有一页，只有一种视觉效果，也可能有几页都是视觉效果。区分报表设计者和报表消费者是很重要的。
 
 如果您是构建或修改报表的开发人员，那么您就是设计人员。设计者拥有对报表及其基础数据集的编辑权限。在 Power BI Desktop 中，这意味着您可以在数据视图中打开数据集，并在报告视图中创建可视化效果。
 
 如果您想使用 Power BI 掌握数据可视化并寻找免费的在线课程，那么本课程就是为您准备的。
 
-**这里是加入本课程**—[POWER BI 数据可视化](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdata-visualizations-with-power-bi%2F)的链接
+**这里是加入本课程**——[POWER BI 数据可视化](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdata-visualizations-with-power-bi%2F)的链接
 
 [![](img/d9886fce7b6774958417e0a8a8e230c2.png)](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdata-visualizations-with-power-bi%2F)
 
@@ -197,22 +200,22 @@ Power BI 报告可能只有一页，只有一种视觉效果，也可能有几�
 
 Udemy 的大部分免费商务智能课程，一旦达到他们的营销目标，讲师可以将他们的免费课程转换为付费课程，因此建议现在就加入课程，即使你计划下周或下个月学习，因为一旦加入这个课程，你就可以随时免费学习。
 
-您可能喜欢的其他**编程文章和资源**:
+您可能喜欢的其他**编程文章和资源**：
 
-*   [10 门 Coursera 课程，通过分析和分析学习数据](https://javarevisited.blogspot.com/2020/08/top-10-coursera-certifications-to-learn-Data-Science-Visualization-and-Data-Analysis.html)
-*   [初学者学习 Python 的 5 大课程](https://hackernoon.com/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
-*   [面向数据科学家的 10 大 TensorFlow 课程](https://dev.to/javinpaul/10-of-the-best-tensorflow-courses-to-learn-machine-learning-from-coursera-and-udemy-37bf)
-*   [初学者学习 Python 的 10 门免费课程](https://hackernoon.com/10-free-python-programming-courses-for-beginners-to-learn-online-38312f3b9912)
-*   [10 个机器学习认证促进你的职业发展](/javarevisited/top-10-machine-learning-and-data-science-certifications-and-training-courses-for-beginners-and-a6308497b764)
-*   [学习数据科学 Python 的 6 本最佳书籍](/javarevisited/6-best-python-books-for-data-science-and-machine-learning-in-2021-2f41d9fbf8be)
-*   [学习机器学习的 10 大免费课程](/javarevisited/10-free-machine-learning-courses-for-beginners-181f83b4c816)
-*   [学习 Python 做编码的 10 个理由](https://hackernoon.com/10-reasons-to-learn-python-in-2018-f473dc35e2ee)
-*   [面向数据科学和机器学习的 8 大 Python 库](https://javarevisited.blogspot.com/2018/10/top-8-python-libraries-for-data-science-machine-learning.html)
-*   [学习高级数据科学的前 5 门课程](https://hackernoon.com/top-5-data-science-and-machine-learning-course-for-programmers-e724cfb9940a)
-*   [哈佛和 IBM 的 9 门最佳数据科学课程](https://becominghuman.ai/9-data-science-and-machine-learning-courses-by-harvard-ibm-udemy-and-others-12a0c7c23ec1)
+- [10 门 Coursera 课程，通过分析和分析学习数据](https://javarevisited.blogspot.com/2020/08/top-10-coursera-certifications-to-learn-Data-Science-Visualization-and-Data-Analysis.html)
+- [初学者学习 Python 的 5 大课程](https://hackernoon.com/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
+- [面向数据科学家的 10 大 TensorFlow 课程](https://dev.to/javinpaul/10-of-the-best-tensorflow-courses-to-learn-machine-learning-from-coursera-and-udemy-37bf)
+- [初学者学习 Python 的 10 门免费课程](https://hackernoon.com/10-free-python-programming-courses-for-beginners-to-learn-online-38312f3b9912)
+- [10 个机器学习认证促进你的职业发展](/javarevisited/top-10-machine-learning-and-data-science-certifications-and-training-courses-for-beginners-and-a6308497b764)
+- [学习数据科学 Python 的 6 本最佳书籍](/javarevisited/6-best-python-books-for-data-science-and-machine-learning-in-2021-2f41d9fbf8be)
+- [学习机器学习的 10 大免费课程](/javarevisited/10-free-machine-learning-courses-for-beginners-181f83b4c816)
+- [学习 Python 做编码的 10 个理由](https://hackernoon.com/10-reasons-to-learn-python-in-2018-f473dc35e2ee)
+- [面向数据科学和机器学习的 8 大 Python 库](https://javarevisited.blogspot.com/2018/10/top-8-python-libraries-for-data-science-machine-learning.html)
+- [学习高级数据科学的前 5 门课程](https://hackernoon.com/top-5-data-science-and-machine-learning-course-for-programmers-e724cfb9940a)
+- [哈佛和 IBM 的 9 门最佳数据科学课程](https://becominghuman.ai/9-data-science-and-machine-learning-courses-by-harvard-ibm-udemy-and-others-12a0c7c23ec1)
 
-感谢您阅读本文。如果您喜欢免费的 *Microsoft Power BI 数据可视化和分析课程*，请与您的朋友和同事分享。如果您有任何问题或反馈，请留言
+感谢您阅读本文。如果您喜欢免费的 Microsoft Power BI 数据可视化和分析课程，请与您的朋友和同事分享。如果您有任何问题或反馈，请留言
 
-**附言**——如果你不介意花点钱，我还建议你去看看 Udemy 上的[**Microsoft Power BI——完整介绍**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpowerbi-complete-introduction%2F) 课程。这是 2023 年学习 Power BI 的最全面的课程之一，你可以在现在正在进行的 Udemy 销售中只花 9.9 美元购买。
+**附言**——如果你不介意花点钱，我还建议你去看看 Udemy 上的[Microsoft Power BI——完整介绍](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpowerbi-complete-introduction%2F)课程。这是 2023 年学习 Power BI 的最全面的课程之一，你可以在现在正在进行的 Udemy 销售中只花 9.9 美元购买。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpowerbi-complete-introduction%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpowerbi-complete-introduction%2F>

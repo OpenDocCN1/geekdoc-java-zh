@@ -1,3 +1,4 @@
+
 # 可用区域设置的识别
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/locale/identify.html`](https://docs.oracle.com/javase/tutorial/i18n/locale/identify.html)
@@ -18,7 +19,6 @@ public class Available {
         }
     }
 }
-
 ```
 
 请注意，`toString`返回的`String`包含由下划线分隔的语言和国家代码：
@@ -32,7 +32,6 @@ cs_CZ
 da_DK
 de_DE
 ...
-
 ```
 
 如果您想向最终用户显示`Locale`名称列表，您应该向他们显示比`toString`返回的语言和国家代码更容易理解的内容。相反，您可以调用`Locale.getDisplayName`方法，该方法检索`Locale`对象的本地化`String`。例如，当在前面的代码中用`getDisplayName`替换`toString`时，程序会打印以下行：
@@ -46,7 +45,6 @@ Czech (Czech Republic)
 Danish (Denmark)
 German (Germany)
 ...
-
 ```
 
 根据 Java 平台的不同实现，您可能会看到不同的区域设置列表。

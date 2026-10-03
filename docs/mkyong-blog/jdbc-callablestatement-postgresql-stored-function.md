@@ -1,3 +1,4 @@
+
 # JDBC 可调用语句–PostgreSQL 存储函数
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/jdbc/jdbc-callablestatement-postgresql-stored-function/>
@@ -6,7 +7,7 @@
 
 *PS 用 PostgreSQL 11 和 Java 8 测试*
 
-pom.xml
+`pom.xml`
 
 ```java
  <dependency>
@@ -20,7 +21,7 @@ pom.xml
 
 1.1 创建一个存储函数并通过 JDBC 调用它。
 
-FunctionReturnString.java
+`FunctionReturnString.java`
 
 ```java
  package com.mkyong.jdbc.callablestatement;
@@ -104,7 +105,7 @@ select hello('mkyong');
 
 *P.S 表 [`pg_roles`](http://web.archive.org/web/20230101144855/https://www.postgresql.org/docs/current/view-pg-roles.html) 是包含数据库角色*的系统表
 
-FunctionReturnResultSet.java
+`FunctionReturnResultSet.java`
 
 ```java
  package com.mkyong.jdbc.callablestatement;
@@ -180,7 +181,7 @@ select * from getRoles();
 
 3.1 JDBC +参考光标示例。
 
-FunctionReturnRefCursor.java
+`FunctionReturnRefCursor.java`
 
 ```java
  package com.mkyong.jdbc.callablestatement;
@@ -259,16 +260,22 @@ public class FunctionReturnRefCursor {
 
 ## 下载源代码
 
-$ git clone [https://github.com/mkyong/java-jdbc.git](http://web.archive.org/web/20230101144855/https://github.com/mkyong/java-jdbc.git)
+`$ git clone [https://github.com/mkyong/java-jdbc.git](http://web.archive.org/web/20230101144855/https://github.com/mkyong/java-jdbc.git)`
 
 ## 参考
 
 *   [PostgreSQL–调用存储函数](http://web.archive.org/web/20230101144855/https://jdbc.postgresql.org/documentation/94/callproc.html#callproc-resultset-refcursor)
+
 *   [PostgreSQL–pg _ roles](http://web.archive.org/web/20230101144855/https://www.postgresql.org/docs/current/view-pg-roles.html)
+
 *   [PostgreSQL–创建函数](http://web.archive.org/web/20230101144855/https://www.postgresql.org/docs/11/sql-createfunction.html)
+
 *   [JDBC PL/SQL 示例](http://web.archive.org/web/20230101144855/https://docs.oracle.com/cd/A84870_01/doc/java.816/a81354/samapp2.htm)
+
 *   [语句 JavaDocs](http://web.archive.org/web/20230101144855/https://docs.oracle.com/javase/8/docs/api/java/sql/Statement.html)
+
 *   [Java JDBC 教程](/web/20230101144855/https://mkyong.com/tutorials/jdbc-tutorials/)
+
 *   [PostgreSQL 11 中的新存储过程](http://web.archive.org/web/20230101144855/https://severalnines.com/blog/overview-new-stored-procedures-postgresql-11)
 
 <input type="hidden" id="mkyong-current-postId" value="15115">

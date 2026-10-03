@@ -1,14 +1,15 @@
+
 # 使用 Spring 数据仓库进行不区分大小写的查询
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-data-case-insensitive-queries>
 
-## 1.概观
+## 1. 概观
 
 默认情况下，Spring Data JPA 查询区分大小写。换句话说，字段值比较区分大小写。
 
 在本教程中，我们将探索如何在 Spring 数据 JPA 存储库中快速创建一个不区分大小写的查询。
 
-## 2.属国
+## 2. 属国
 
 首先，让我们确保我们的`pom.xml`中有 [Spring 数据](/web/20220627173802/https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa)和 [H2](/web/20220627173802/https://www.baeldung.com/java-in-memory-databases) 数据库依赖项:
 
@@ -28,7 +29,7 @@
 
 这些的最新版本可以在 Maven Central 上获得。
 
-## 3.初始设置
+## 3. 初始设置
 
 假设我们有一个带有`id, firstName`和`lastName`属性的`Passenger`实体:
 
@@ -78,11 +79,11 @@ public class PassengerRepositoryIntegrationTest {
 }
 ```
 
-## 4.`IgnoreCase`对于不区分大小写的查询
+## 4. `IgnoreCase` 用于不区分大小写的查询
 
-现在，假设我们想要执行一个不区分大小写的搜索来查找给定`firstName.`的所有乘客
+现在，假设我们想要执行一个不区分大小写的搜索来查找给定`firstName`的所有乘客。
 
-为此，我们将我们的`PassengerRepository` 定义为:
+为此，我们将我们的`PassengerRepository`定义为:
 
 ```java
 @Repository
@@ -114,9 +115,9 @@ public void givenPassengers_whenMatchingIgnoreCase_thenExpectedReturned() {
 }
 ```
 
-尽管已经将 `“FrED”`作为参数传递，但我们返回的列表`passengers`包含一个`Passenger`，其中`firstName`显然是`“Fred”.`，在`IgnoreCase`关键字的帮助下，我们实现了一个不区分大小写的匹配。
+尽管已经将`"FrED"`作为参数传递，但我们返回的列表`passengers`包含一个`Passenger`，其中`firstName`显然是`"Fred"`。在`IgnoreCase`关键字的帮助下，我们实现了一个不区分大小写的匹配。
 
-## 5.结论
+## 5. 结论
 
 在这个快速教程中，我们学习了如何在 Spring 数据存储库中创建不区分大小写的查询。
 

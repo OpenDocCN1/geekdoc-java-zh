@@ -1,3 +1,4 @@
+
 # 用 Docker 公开多个端口
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/ops/docker-expose-more-than-one-port>
@@ -24,7 +25,7 @@ $ curl http://localhost:8081/actuator/health
 
 ### 2.1.`Dockerfile`中的声明
 
-由于我们的应用程序`my-app`在两个端口`8080`和`8081`中发布其端点，我们需要在我们的`Dockerfile`中公开这两个端口。`Dockerfile`中的`[EXPOSE](https://web.archive.org/web/20221126221746/https://docs.docker.com/engine/reference/builder/#expose)`动词暴露端口:
+由于我们的应用程序`my-app`在两个端口`8080`和`8081`中发布其端点，我们需要在我们的`Dockerfile`中公开这两个端口。`Dockerfile`中的`EXPOSE`动词暴露端口:
 
 ```java
 FROM openjdk:8-jdk-alpine
@@ -62,7 +63,7 @@ EXPOSE 8000-8009
 
 ### 2.2.在`docker run`命令中声明
 
-让我们假设我们已经有了一个`my-app`的 docker 映像，该映像在`Dockerfile`中使用`EXPOSE`命令只暴露了一个端口`8080`。现在，**如果我们想要暴露另一个端口，`8081`，我们应该使用`–expose`参数和`[run](https://web.archive.org/web/20221126221746/https://docs.docker.com/engine/reference/run/#expose-incoming-ports)`命令**:
+让我们假设我们已经有了一个`my-app`的 docker 映像，该映像在`Dockerfile`中使用`EXPOSE`命令只暴露了一个端口`8080`。现在，**如果我们想要暴露另一个端口，`8081`，我们应该使用`--expose`参数和`run`命令**:
 
 ```java
 $ docker run --name myapp -d --expose=8081 my-app:latest
@@ -117,7 +118,7 @@ $ docker port myapp
 8081/tcp -> 0.0.0.0:32772
 ```
 
-现在，可以使用端口`32773,`访问应用程序，并且可以通过`32772`访问管理端点:
+现在，可以使用端口`32773`访问应用程序，并且可以通过`32772`访问管理端点:
 
 ```java
 $ curl http://localhost:32773
@@ -151,7 +152,7 @@ $ docker run --name myapp -d -p 80:8080 -p 81:8081 my-app:latest
 
 ### 3.2.在`docker-compose`发布
 
-如果我们在`docker-compose`、**中使用我们的应用程序，我们可以提供一个需要在`docker-compose.yml`文件**中发布的端口列表:
+如果我们在`docker-compose`**中使用我们的应用程序，我们可以提供一个需要在`docker-compose.yml`文件**中发布的端口列表:
 
 ```java
 version: "3.7"

@@ -1,33 +1,7 @@
+
 # 绝对初学者 Java 编程：掌握 Java 基础快速课程
 
-
-
-
-
-
-
-
-
-
 ![Java 图标和背景图案]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # 引言
 
@@ -36,14 +10,6 @@ Java 是一种跨平台的高级语言，由 Sun Microsystems 在 James Gosling 
 这本书是一本关于 Java 基础的入门课程。因此，它的创建考虑到了读者对 Java 的背景知识很少或完全没有。然而，少量的编程语言背景知识将有助于更好地理解。通过这门课程，我们希望从 Java 的视角并特别关注 Java，在读者心中植入编程基础。
 
 在开始之前，你最好了解编程概念是通用的，并适用于适用于一系列编程语言。因此，如果你侧重于构建编程概念而不是学习语法，你将能够以最小的努力学习许多编程语言。关注概念而不是语法。
-
-
-
-
-
-
-
-
 
 # 第一章：开始学习 Java
 
@@ -78,7 +44,7 @@ Java 是一种跨平台的高级语言，由 Sun Microsystems 在 James Gosling 
 
 ### Windows
 
-很大情况下，你通过点击安装包附带的 .exe 文件安装的 Java 版本必须安装在目录：`c:\Program Files\java\jdk`。假设如此，你只需要通过右键点击“我的电脑”来打开属性。在出现的对话框中，打开“高级”并进入“环境变量”。在现有字段内容的末尾添加 `c:\Program Files\java\jdk\bin`。
+很大情况下，你通过点击安装包附带的 `.exe` 文件安装的 Java 版本必须安装在目录：`c:\Program Files\java\jdk`。假设如此，你只需要通过右键点击“我的电脑”来打开属性。在出现的对话框中，打开“高级”并进入“环境变量”。在现有字段内容的末尾添加 `c:\Program Files\java\jdk\bin`。
 
 ### Linux/freeBSD/Unix/Solaris
 
@@ -97,16 +63,14 @@ Java 实现了面向对象的编程原则。因此，一个 Java 程序是一个
 Java 程序的要素元素是类（class）。它仅仅是一个定义对象状态和行为的模板。
 
 - 对象的的状态由变量（Variables）定义，行为由方法（methods）描述。因此，类包含了变量和方法。这里需要说明，每个使用类创建的对象都有自己的一组变量，因此变量也称为实例变量（Instance Variables）。
+
 - 当我们实例化一个类时，我们就创建一个对象（object），它是 Java 编程的第二个基本元素。
 
-为了帮助你理解这个概念，让我们举个例子。假设我们创建了一个名为 Car（汽车）的类。Car 是所有四轮小型车辆的通用术语，每辆汽车都有不同的规格，如品牌、颜色、发动机、变速箱和功能。这些功能是可以修改的。例如，你可能会更改颜色或增强某项功能。
+为了帮助你理解这个概念，让我们举个例子。假设我们创建了一个名为 `Car` 的类。Car 是所有四轮小型车辆的通用术语，每辆汽车都有不同的规格，如品牌、颜色、发动机、变速箱和功能。这些功能是可以修改的。例如，你可能会更改颜色或增强某项功能。
 
 因此，car 是模板（在我们的案例中是一个类），但具体的汽车是该类的对象或实例。规格集是变量，而我们对这些变量进行的任何初始化或操作都是通过方法完成的。
 
 这个例子也可以很好地用于理解封装（encapsulation）和抽象（abstraction）这两个面向对象的原则。类将变量和方法封装在其中。因此，作为用户，你处理的是 car 类，而其实现细节对你是隐藏的。这就是 Java 实现抽象的方式。
-
-
-
 
 学习编程最好的方法就是编写程序。因此，我们在下方为你提供了一个示例程序供你尝试。我们还将使用这个程序来解释 Java 编程语言的基础语法。
 
@@ -123,13 +87,10 @@ public static void main(String[] args) {
 
 为了编写、编译和运行这个程序，你需要按照下面的指令进行操作——
 
--   * 使用任何文本编辑器，创建一个文本文件并将代码复制到其中。将文件保存为 samplejavaprogram.java *
-
--   * 使用 IDE 编译并运行代码。如需进行手动执行，你需要输入以下命令：
-
--   - javac samplejavaprogram.java
-
--   - java samplejavaprogram
+- 使用任何文本编辑器，创建一个文本文件并将代码复制到其中。将文件保存为 `samplejavaprogram.java`
+- 使用 IDE 编译并运行代码。如需进行手动执行，你需要输入以下命令：
+  - `javac samplejavaprogram.java`
+  - `java samplejavaprogram`
 
 第一条命令将从 java 文件创建一个类文件，而第二个命令将执行程序以得到预期的结果。代码的运行示例已在图中所示。
 
@@ -143,16 +104,20 @@ public static void main(String[] args) {
 ```
 
 编译源代码中...
+
+```
 javac SampleProgram.java 2->&1
+```
 
 执行程序...
+
+```
 java -Xmx128M -Xmx16M SampleJavaProgram
+```
 
 Hello World!
 
-如果你已经到了这里，说明你已经成功执行了你的第一个 Java 程序。现在是时候检查这个程序，看看我们是如何写它的，以及为什么要这样写
-
-它得到了那个结果。
+如果你已经到了这里，说明你已经成功执行了你的第一个 Java 程序。现在是时候检查这个程序，看看我们是如何写它的，以及为什么要这样写它得到了那个结果。
 
 首先，在 Java 中编写程序需要遵循一些约定。这些规定列如下——
 
@@ -162,24 +127,41 @@ Java 是一种大小写敏感的语言。换句话说，对于 Java 来说，`cl
 
 方法名也遵循同样的大小写约定，即方法名的首字母必须是小写。然而，如果名称由多个单词组成，除了第一个单词外，每个其他单词的首字母都必须大写。例如，如果方法名为 `add`，那么 `a` 必须是小写；但如果方法名为 `addnumbers`，那么 `a` 是小写，而 `n` 是大写。
 
-Java 文件的名称必须与类名相同，并以 .java 扩展名结尾。例如，如果你的类名为 `sampleapplication`，那么 Java 文件名必须是 `sampleapplication.java`。还要记住，字母的大小也必须匹配。如果你不满足任何要求。
+Java 文件的名称必须与类名相同，并以 `.java` 扩展名结尾。例如，如果你的类名为 `sampleapplication`，那么 Java 文件名必须是 `sampleapplication.java`。还要记住，字母的大小也必须匹配。如果你不满足任何要求。
 
+# 第三章：数据类型
 
+Java 支持两种主要的数据类型：基本数据类型和引用数据类型。
 
-默认值 = 0。
+## 基本数据类型
 
+Java 中有八种基本数据类型，它们是预定义的，并由语言关键字命名。让我们详细了解一下它们。
+
+### Byte
+
+- 默认值 = 0
+- 最小值 = -128 (-2^7)
+- 最大值 = 127（包含) (2^7 - 1)
+- 8位有符号补码整数
+- 它是另一种在需要节省内存时使用的数据类型。
+
+### Short
+
+- 默认值 = 0
 - 最小值 = -32,768 (-2^15)
+- 最大值 = 32,767（包含) (2^15 - 1)
 - 16位有符号补码整数
 - 它是另一种在需要节省内存时使用的数据类型。
 
-## Int
+### Int
 
 - 默认值 = 0
 - 最大值 = 2,147,483,647（包含) (2^31 - 1)
-- 32位有符号补码整数。**最小值** = -2,147,483,648 (-2^31)
+- 32位有符号补码整数
+- **最小值** = -2,147,483,648 (-2^31)
 - 这是用于所有整数值的默认数据类型。
 
-## Long
+### Long
 
 - 默认值 = 0L
 - **最小值** = -9,223,372,036,854,775,808 (-2^63)
@@ -187,7 +169,7 @@ Java 文件的名称必须与类名相同，并以 .java 扩展名结尾。例�
 - 最大值 = 9,223,372,036,854,775,807（包含) (2^63-1)
 - 当变量预计存储大数字时使用。
 
-## Float
+### Float
 
 - 默认值 = 0.0f
 - 32位 IEEE 754 浮点数
@@ -195,21 +177,21 @@ Java 文件的名称必须与类名相同，并以 .java 扩展名结尾。例�
 - 此数据类型用作存储浮点数的默认数据类型。
 - 必须避免使用此数据类型存储需要精确计算的值。
 
-## double
+### Double
 
 - 64位 IEEE 754 浮点数
 - 双精度
 - 默认值 = 0.0d
-- 此数据类型用于需要存储小数值的变量。然而，与 float ，使用 double 存储的变量值可能会变化。因此，这些数据类型不用于货币等关键计算。
+- 此数据类型用于需要存储小数值的变量。然而，与 float 一样，使用 double 存储的变量值可能会变化。因此，这些数据类型不用于货币等关键计算。
 
-## boolean
+### Boolean
 
 - 默认值 = false
 - 1 位
 - 可能的值值：true 和 False
 - 此数据类型用于实现标志位。
 
-## Char
+### Char
 
 - 最大值 = '\uffff'（或包含 65,535）
 - 最小值 = '\u0000'（或 0）
@@ -222,21 +204,21 @@ Java 文件的名称必须与类名相同，并以 .java 扩展名结尾。例�
 
 ## Java 字面量
 
-字面量用于表示固定值。它们被声明为变量并具有数据类型。字面量的声明示例为 - Char x = 'X';
+字面量用于表示固定值。它们被声明为变量并具有数据类型。字面量的声明示例为 `Char x = 'X';`。
 
 你可能会注意到不同进制的整数和浮点数。根据规则，任何带有 0 前缀的字面量值都是八进制数，而 0x 前缀表示十六进制数。如果你处理字符串，那么字符串字面量始终定义为双引号内的字符序列。你将处理的另一组字符是转义字符。以下是转义字符列表：
 
-- 回车 (\r)
-- 换行 (\n)
-- 退格 (\b)
-- 映符 (f)
-- 制表符 (t)
-- 空格 (\s)
-- 单引号 (\')
-- 双引号 (\")
-- 十六进制字符 (\uxxxx)
-- 八进制字符 (\ddd)
-- 反斜杠 (\\)
+- 回车 (`\r`)
+- 换行 (`\n`)
+- 退格 (`\b`)
+- 映符 (`\f`)
+- 制表符 (`\t`)
+- 空格 (`\s`)
+- 单引号 (`\'`)
+- 双引号 (`\"`)
+- 十六进制字符 (`\uxxxx`)
+- 八进制字符 (`\ddd`)
+- 反斜杠 (`\\`)
 
 # 第 4 章：变量
 
@@ -247,9 +229,9 @@ Java 文件的名称必须与类名相同，并以 .java 扩展名结尾。例�
 - 可以在变量上执行的操作。
 - 变量可以存储的值范围。
 
-根据规则，每个变量在使用之前都需要进行声明。变量声明的标准语句是 data_type variable_name;
+根据规则，每个变量在使用之前都需要进行声明。变量声明的标准语句是 `data_type variable_name;`。
 
-在这里，data_type 是变量的数据类型，而 variable_name 是用于变量的标识符。如果你使用多个相同类型的变量，可以通过以逗号分隔的方式指定变量名将它们组合在同一个语句中。如之前提到的，Java 支持三种类型的变量，即类变量、实例变量和局部变量。本章将详细解释这些变量类型。
+在这里，`data_type` 是变量的数据类型，而 `variable_name` 是用于变量的标识符。如果你使用多个相同类型的变量，可以通过以逗号分隔的方式指定变量名将它们组合在同一个语句中。如之前提到的，Java 支持三种类型的变量，即类变量、实例变量和局部变量。本章将详细解释这些变量类型。
 
 ## 局部变量
 
@@ -257,9 +239,9 @@ Java 文件的名称必须与类名相同，并以 .java 扩展名结尾。例�
 
 由于这种变量在方法或块的作用域内有效，因此只能在该代码块内进行访问。在内部，局部变量是在栈级别创建的。因此，当它们被创建时，会被推入栈中，一旦块执行完毕，栈就会清空。最后，局部变量的默认值是垃圾（garbage）。因此，这些变量在使用前必须进行初始化。
 
-下面给出了说明局部变量工作的示例代码。它在类的方法中实现了一个局部变量 agep，该变量从主方法访问。
+下面给出了说明局部变量工作的示例代码。它在类的方法中实现了一个局部变量 `agep`，该变量从主方法访问。
 
-```
+```java
 public class lvdemo {
     public void puppyage() {
         int agep = 0;
@@ -288,17 +270,14 @@ public class lvdemo {
 
 （实际上，查看文本：“此外，一旦块的作用域结束，变量就会被销毁。这种类型的变量无法使用访问修饰符……”
 
-
-
-
-
 ### 修饰符类型
 
 可以使用修饰符来修改变量的行为和访问权限。修饰符主要有两种类型，即访问修饰符和非访问修饰符。
 
 ### 访问控制修饰符
 
-- Java 支持多种访问级别，每个级别都有对应的关键字。这些包括：
+Java 支持多种访问级别，每个级别都有对应的关键字。这些包括：
+
 - Public（公共）：所有人可见
 - Private（私有）：类内部可见
 - Protected（保护性）：类及其子类可见
@@ -323,39 +302,39 @@ Java 中还有其他修饰符可用。这些包括：
 
 ### 加法 (+)
 
-该运算符执行两个数字之间的加法运算。如果 a 和 b 是两个分别持有 5 和 6 的变量，那么 `c = a+b` 将产生 `c = 11`。
+该运算符执行两个数字之间的加法运算。如果 `a` 和 `b` 是两个分别持有 5 和 6 的变量，那么 `c = a+b` 将产生 `c = 11`。
 
 ### 乘法 (*)
 
-该运算符执行两个数字之间的乘法运算。如果 a 和 b 是两个分别持有 5 和 6 的变量，那么 `c = a*b` 将产生 `c = 30`。
+该运算符执行两个数字之间的乘法运算。如果 `a` 和 `b` 是两个分别持有 5 和 6 的变量，那么 `c = a*b` 将产生 `c = 30`。
 
 ### 减法 (-)
 
-该运算符执行两个数字之间的减法运算。如果 a 和 b 是两个分别持有 5 和 6 的变量，那么 `c = a-b` 将产生 `c = -1`。
+该运算符执行两个数字之间的减法运算。如果 `a` 和 `b` 是两个分别持有 5 和 6 的变量，那么 `c = a-b` 将产生 `c = -1`。
 
 ### 除法 (/)
 
-该运算符执行两个数字之间的除法运算。如果 a 和 b 是两个分别持有 10 和 5 的变量，那么 `c = a/b` 将产生 `c = 2`。
+该运算符执行两个数字之间的除法运算。如果 `a` 和 `b` 是两个分别持有 10 和 5 的变量，那么 `c = a/b` 将产生 `c = 2`。
 
 ### 取模 (%)
 
-该运算符返回两个数字相除后剩余余数。如果 a 和 b 是两个分别持有 10 和 5 的变量，那么 `c = a%b` 将产生 `c = 0`。
+该运算符返回两个数字相除后剩余余数。如果 `a` 和 `b` 是两个分别持有 10 和 5 的变量，那么 `c = a%b` 将产生 `c = 0`。
 
 ### 递增 (++)
 
-该运算符将变量的值加 1。如果 a 是持有值 1 的变量，那么 `a++` 将产生值 2。
+该运算符将变量的值加 1。如果 `a` 是持有值 1 的变量，那么 `a++` 将产生值 2。
 
 ### 递减 (--)
 
-该运算符将变量的值减 1。如果 a 是持有值 1 的变量，那么 `a--` 将产生值 0。
+该运算符将变量的值减 1。如果 `a` 是持有值 1 的变量，那么 `a--` 将产生值 0。
 
 ## 关系运算符
 
 所有涉及比较的操作都是使用关系运算符完成的。该编程语言支持的运算符列表如下 –
 
-- 不等于 (!)
+- 不等于 (!=)
 
-该 运算符应用于两个操作数。它检查两个操作数之间的相等性。如果它们相等，则返回 FALSE，否则返回 true。
+该运算符应用于两个操作数。它检查两个操作数之间的相等性。如果它们相等，则返回 FALSE，否则返回 true。
 
 - 等于 (==)
 
@@ -387,34 +366,38 @@ Java 中还有其他修饰符可用。这些包括：
 
 - 位或 (|)
 
-该运算符作用两个操作数，如果其中一个或两个输入位为 1，则每组输入位的输出为 1，否则输出为零。
 
-- 位异异 (^)
 
-该运算符作用两个操作数，只有当其中一个输入位为 1 时，每组输入位的输出才为 1，否则输出为零。
+该运算符作用于两个操作数，如果其中一个或两个输入位为 1，则每组输入位的输出为 1，否则输出为零。
 
-- 取反 (~)
+- 位异或 (`^`)
 
-该运算符作用单个操作数，将值从 0 反转为 1，从 1 反转为 0。
+该运算符作用于两个操作数，只有当其中一个输入位为 1 时，每组输入位的输出才为 1，否则输出为零。
 
-- 左移 (<<)
+- 取反 (`~`)
 
-该运算符作用两个操作数。左操作数的位向左移动。移动的位数等于第二个操作数指定的值。
+该运算符作用于单个操作数，将值从 0 反转为 1，从 1 反转为 0。
 
-- 右移 (>>)
+- 左移 (`<<`)
 
-该运算符作用两个操作数。左操作数的位向右移动，位数等于第二个操作数指定的值。
+该运算符作用于两个操作数。左操作数的位向左移动。移动的位数等于第二个操作数指定的值。
 
-- 零填充右移 (>>>)
+- 右移 (`>>`)
 
-该运算符作用两个操作数。左操作数的位向右移动，位数等于第二个操作数指定的值。此外，0 会替换移出的位。
+该运算符作用于两个操作数。左操作数的位向右移动，位数等于第二个操作数指定的值。
 
-为了理解位运算是如何发生的，让我们来看一个例子。假设两个变量 a 和 b 分别持有值 60 和 13。a 和 b 的二进制等效形式如下
+- 零填充右移 (`>>>`)
 
+该运算符作用于两个操作数。左操作数的位向右移动，位数等于第二个操作数指定的值。此外，0 会替换移出的位。
+
+为了理解位运算是如何发生的，让我们来看一个例子。假设两个变量 `a` 和 `b` 分别持有值 60 和 13。`a` 和 `b` 的二进制等效形式如下：
+
+```
 A = 00111100
 b = 00000101
+```
 
-使用与真值表，只有当两个输入均为 1 时输出才为 1。相应地，`a&b = 00001100`。同样，也可以执行其他的位运算。
+使用与真值表，只有当两个输入均为 1 时输出才为 1。相应地，`a & b = 00001100`。同样，也可以执行其他的位运算。
 
 ## 逻辑运算符
 
@@ -422,80 +405,75 @@ Java 中所有的逻辑操作都是使用逻辑运算符完成的。该编程语
 
 ### 逻辑与
 
-该运算符作用两个操作数。如果两个操作数都非零，表达式返回 true，否则返回 FALSE。
+该运算符作用于两个操作数。如果两个操作数都非零，表达式返回 `true`，否则返回 `FALSE`。
 
 ### 逻辑或
 
-该运算符作用两个操作数。如果一个或两个操作数非零，表达式返回 true，否则返回 FALSE。
+该运算符作用于两个操作数。如果一个或两个操作数非零，表达式返回 `true`，否则返回 `FALSE`。
 
 ### 逻辑非
 
-该运算符作用一个操作数。如果操作数为 0，则该表达式返回 true，否则返回 FALSE。
+该运算符作用于一个操作数。如果操作数为 0，则该表达式返回 `true`，否则返回 `FALSE`。
 
 ## 赋值运算符
 
-Java 支持的赋值运算符包括 –
+Java 支持的赋值运算符包括：
 
-- 简单赋值运算符 (=)
+- 简单赋值运算符 (`=`)
 
-该运算符将右侧计算的值赋值给左侧的变量。如果 a, b 和 c 是三个变量...
+该运算符将右侧计算的值赋值给左侧的变量。如果 `a`、`b` 和 `c` 是三个变量...
 
-- 加赋值运算符 (+=)
+- 加赋值运算符 (`+=`)
 
-该运算符将右侧相加计算的结果赋值给左侧。如果 a 和 b c 是两个变量且表达式为 `c+=a`，那么 `a+b` 的值将被赋值给 `c`。
+该运算符将右侧相加计算的结果赋值给左侧。如果 `a` 和 `b` `c` 是两个变量且表达式为 `c += a`，那么 `a + b` 的值将被赋值给 `c`。
 
-- 减赋值运算符 (-=)
+- 减赋值运算符 (`-=`)
 
-该运算符将左侧减去右侧的值赋值给左侧。如果 a 和 c 是两个变量且表达式为 `c-=a`，那么 `c-a` 的值将被赋值给 `c`。
+该运算符将左侧减去右侧的值赋值给左侧。如果 `a` 和 `c` 是两个变量且表达式为 `c -= a`，那么 `c - a` 的值将被赋值给 `c`。
 
-- 乘赋值运算符 (*=)
+- 乘赋值运算符 (`*=`)
 
-该运算符将右侧乘法计算的值赋值给左侧。如果 a 和 c 是两个变量且表达式为 `c*=a`，那么 `c*a` 的值将被赋值给 `c`。
+该运算符将右侧乘法计算的值赋值给左侧。如果 `a` 和 `c` 是两个变量且表达式为 `c *= a`，那么 `c * a` 的值将被赋值给 `c`。
 
-- 除赋值运算符 (/=)
+- 除赋值运算符 (`/=`)
 
-该运算符将左侧除以右侧的值的结果赋值给左侧。如果 a 和 c 是两个变量且表达式为 `c/=a`，那么 `c/a` 的值将被赋值给 `c`。
+该运算符将左侧除以右侧的值的结果赋值给左侧。如果 `a` 和 `c` 是两个变量且表达式为 `c /= a`，那么 `c / a` 的值将被赋值给 `c`。
 
-- 取模赋值运算符 (%=
+- 取模赋值运算符 (`%=`)
 
-该运算符将左侧对右侧取模的结果赋值给左侧。如果 a 和 c 是两个变量且表达式为 `c%=a`，那么 `c%a` 的值将被赋值给 `c`。
+该运算符将左侧对右侧取模的结果赋值给左侧。如果 `a` 和 `c` 是两个变量且表达式为 `c %= a`，那么 `c % a` 的值将被赋值给 `c`。
 
-- 左移赋值运算符 (<<=)
+- 左移赋值运算符 (`<<=`)
 
-如果 a 和 c 是两个变量且表达式为 `c<<=a`，那么 `c<<a` 的值将被赋值给 `c`。
+如果 `a` 和 `c` 是两个变量且表达式为 `c <<= a`，那么 `c << a` 的值将被赋值给 `c`。
 
-- 右移赋值运算符 (>>=)
+- 右移赋值运算符 (`>>=`)
 
-如果 a 和 c 是两个变量且表达式为 `c>>=a`，那么 `c>>a` 的值将被赋值给 `c`。
+如果 `a` 和 `c` 是两个变量且表达式为 `c >>= a`，那么 `c >> a` 的值将被赋值给 `c`。
 
-- 位与赋值运算符 (&=)
+- 位与赋值运算符 (`&=`)
 
-如果 a 和 c 是两个变量且表达式为 `c&=a`，那么 `c&a` 的值将被赋值给 `c`。
+如果 `a` 和 `c` 是两个变量且表达式为 `c &= a`，那么 `c & a` 的值将被赋值给 `c`。
 
-- 位异异赋值运算符 (^=)
+- 位异或赋值运算符 (`^=`)
 
-如果 a 和 c 是两个变量且表达式为 `c^=a`，那么 `c^a` 的值将被赋值给 `c`。
+如果 `a` 和 `c` 是两个变量且表达式为 `c ^= a`，那么 `c ^ a` 的值将被赋值给 `c`。
 
-- 位或赋值运算符 (|=)
+- 位或赋值运算符 (`|=`)
 
-如果 a 和 c 是两个变量且表达式为 `c|=a`，那么 `c|a` 的值将被赋值给 `c`。
+如果 `a` 和 `c` 是两个变量且表达式为 `c |= a`，那么 `c | a` 的值将被赋值给 `c`。
 
 ## 运算符优先级
 
-如果表达式使用了多个运算符，则使用运算符优先级规则来确定操作执行的顺序。运算符从右到左或从左到右评估的优先级按如下方式对运算符组进行定义 –
+如果表达式使用了多个运算符，则使用运算符优先级规则来确定操作执行的顺序。运算符从右到左或从左到右评估的优先级按如下方式对运算符组进行定义：
 
-从右到左
+### 从右到左
 
 - 一元运算符
 - 条件运算符
+- 赋值
 
-
-
-
-
-## 赋值
-
-## 从左到右
+### 从左到右
 
 - 后置
 - 乘法
@@ -523,7 +501,7 @@ Java 支持的赋值运算符包括 –
 
 对象的创建涉及三个步骤。第一步是为对象声明一个变量。第二步是使用 `new` 创建对象。最后，需要使用类的构造函数对对象进行初始化。
 
-如果你省略了第三步，Java 将使用默认构造方法进行对象初始化。这三个步骤被合并为一个语句来创建对象。例如，我们有一个类 `democlass` 并想要创建一个对象 `o1`，可以使用以下语句完成——
+如果你省略了第三步，Java 将使用默认构造方法进行对象初始化。这三个步骤被合并为一个语句来创建对象。例如，我们有一个类 `democlass` 并想要创建一个对象 `o1`，可以使用以下语句完成：
 
 ```
 democlass o1 = new democlass
@@ -533,94 +511,94 @@ democlass o1 = new democlass
 
 ## 构造函数
 
-当你开始创建类和对象时，你需要的第一件事是初始化对象。Java 有专门用于初始化的方法实现，称为构造函数。这些元素的实现方式
+当你开始创建类和对象时，你需要的第一件事是初始化对象。Java 有专门用于初始化的方法实现，称为构造函数。这些元素的实现方式与方法相似，但它们与类同名且没有返回类型。
 
-与方法相似，但它们与类同名且没有返回类型。
-
-那么，你可以在哪里使用构造呢呢每当你创建一个类的对象并需要初始化某些参数或执行该类中所有对象通用的功能时，就可以使用它。例如，如果你创建一个名为 `rectangle` 的类。你可以创建一个构造函数来初始化矩形的长和宽。
+那么，你可以在哪里使用构造呢？每当你创建一个类的对象并需要初始化某些参数或执行该类中所有对象通用的功能时，就可以使用它。例如，如果你创建一个名为 `rectangle` 的类。你可以创建一个构造函数来初始化矩形的长和宽。
 
 如果你不定义构造函数，Java 将为你的程序使用默认构造函数。这个构造函数会将类中所有参数的值初始化为零。因此，如果你创建了一个类，无论你是否显式定义了它，你的程序都将有一个激活的构造函数。
 
 现在让我们创建一个带有显式构造函数的类，看看这个概念是如何运作的。
 
-```
-Class Sampleclass {
-  Int i;
-  Sampleclass() {
-    i = 100;
-  }
+```java
+class Sampleclass {
+    int i;
+    Sampleclass() {
+        i = 100;
+    }
 }
-Public class demosampleclass {
-  Public static void main(String args[]) {
-    Sampleclass c1 = new Sampleclass1(); Sampleclass c2 = new Sampleclass1();
-    System.out.println(c1.i + "\n" + c2.i);
-  }
+
+public class demosampleclass {
+    public static void main(String args[]) {
+        Sampleclass c1 = new Sampleclass();
+        Sampleclass c2 = new Sampleclass();
+        System.out.println(c1.i + "\n" + c2.i);
+    }
 }
 ```
 
 下方显示的截图说明了代码以及执行后生成的输出。为了运行这段代码，你需要创建两个文件，每个文件的名称与其包含的类相同。
 
-## 执行主文件支持的类文件
+### 执行主文件支持的类文件
+
+```java
+public class DemoSampleClass {
+    public static void main(String[] args) {
+        SampleClass c1 = new SampleClass();
+        SampleClass c2 = new SampleClass();
+        System.out.println(c1.i + " \n" + c2.i);
+    }
+}
+```
+
+### 结果
 
 ```
-1- public class DemoSampleClass {
-2    public static void main(String[] args) {
-3      SampleClass c1 = new SampleClass();
-4      SampleClass c2 = new SampleClass();
-5      System.out.println(c1.i + " \n" + c2.i);
-6    }
-7 }
-```
-
-## 结果
-
 编译源代码...
-javac DemoSampleClass.java SampleClass1.java 2>&&1
-
+javac DemoSampleClass.java SampleClass1.java 2>&1
 执行程序...
 java -Xmx128M -Xms16M DemoSampleClass SampleClass1
 100
 100
-
-## 执行主文件支持的类文件
-
-```
-1- class SampleClass1 {
-2    int i;
-3    SampleClass1() {
-4      i = 100;
-5    }
-6 }
 ```
 
-## 结果
+### 执行主文件支持的类文件
 
+```java
+class SampleClass1 {
+    int i;
+    SampleClass1() {
+        i = 100;
+    }
+}
+```
+
+### 结果
+
+```
 编译源代码...
-javac DemoSampleClass.java SampleClass1.java 2>&&1
-
+javac DemoSampleClass.java SampleClass1.java 2>&1
 执行程序...
 java -Xmx128M -Xms16M DemoSampleClass SampleClass1
 100
 100
+```
 
 在上面的示例中，我们给出了静态的静态值。然而，你的程序可能需要对参数进行动态初始化。为此，你需要实现带参数的构造函数。此类构造函数以参数的形式向构造方法接收值。下面给出了示例实现。
 
-```
-Class Sampleclass2 {
-  Int i;
+```java
+class Sampleclass2 {
+    int i;
+    Sampleclass2(int x) {
+        i = x;
+    }
 }
-```
 
-```
-Sampleclass2(int x) {
-I = x;
-}
-```
-
-Public class demosampleclass2 {
-Public static void main(String args[]) {
-Sampleclass2 c1 = new Sampleclass2(100); Sampleclass2 c2 = new Sampleclass2(200);
-System.out.println(c1.i + "\n" + c2.i); 
+public class demosampleclass2 {
+    public static void main(String args[]) {
+        Sampleclass2 c1 = new Sampleclass2(100);
+        Sampleclass2 c2 = new Sampleclass2(200);
+        System.out.println(c1.i + "\n" + c2.i);
+    }
 }
 ```
 
@@ -630,58 +608,58 @@ System.out.println(c1.i + "\n" + c2.i);
 
 在构造函数的实现方面，使用了一个特定的关键字。这个关键字是 `this` 关键字。它用于引用正在考虑的类的对象。通过这个关键字的帮助，可以在构造函数或方法内部访问类的变量。下方代码说明了 `this` 关键字的使用。
 
-```
-Class Sampleclass3 {
-```
+```java
+class Sampleclass3 {
+    int i;
+    Sampleclass3(int i) {
+        this.i = i;
+    }
+}
 
-```
-Int i;
-Sampleclass3(int i) {
-  This.i = i;
+public class demosampleclass2 {
+    public static void main(String args[]) {
+        Sampleclass3 c1 = new Sampleclass3(200);
+        Sampleclass3 c2 = new Sampleclass3(200);
+        System.out.println(c1.i + "\n" + c2.i);
+    }
 }
 ```
 
-```
-Public class demosampleclass2
-Public static void main(String args[]) {
-  Sampleclass3 c1 = new Sampleclass3(200);
-  Sampleclass3 c2 = new Sampleclass3(200);
-  System.out.println(c1.i + "\n" + c2.i);
-}
-```
-
-## 执行后，此代码给出以下输出 -
+## 执行后，此代码给出以下输出
 
 ![](img/73ee4bf5cc63fca6a92dbd634bd146b7_56_0.png)
 
 ## 可变参数
 
-在某些程序中，可能存在你，你不知道 `main` 方法在执行期间将提供的精确参数数量。为了允许这种级别的动态性，使用了 var-args 或可变参数。`var-args` 在方法参数中使用以下语法声明：
+在某些程序中，可能存在你不知道 `main` 方法在执行期间将提供的精确参数数量的情况。为了允许这种级别的动态性，使用了 var-args 或可变参数。`var-args` 在方法参数中使用以下语法声明：
 
-<type>...<var_name>
+`<type>...<var_name>`
 
-在变量声明中给出的 `var_name` 是数组，包含了执行 `main` 方法时发送的所有变量值。在实现此概念之前，你需要记住两点——
+在变量声明中给出的 `var_name` 是数组，包含了执行 `main` 方法时发送的所有变量值。在实现此概念之前，你需要记住两点：
 
 - 每个方法只能实现一个 var-args。
 - 如果方法有其他参数（普通性质的），这些参数必须出现在 `var-args` 之前。换句话说，`var-args` 必须是方法的最后一个参数。
 
 该概念的示例实现如下。
 
-```
-Public class demovarargs {
-    Public static void main(String args[]) {
-        Printnum(56.5, 3, 34, 2, 3);
-        Printnum(new double[]{2, 1, 3});
+```java
+public class demovarargs {
+    public static void main(String args[]) {
+        printnum(56.5, 3, 34, 2, 3);
+        printnum(new double[]{2, 1, 3});
     }
-    Public static void printnum( double... number) { if (number.length == 0) {
-        System.out.println("no argument passed"); return;
+
+    public static void printnum(double... number) {
+        if (number.length == 0) {
+            System.out.println("no argument passed");
+            return;
+        }
+        double resultnum = number[0];
+        for (int x = 1; x < number.length; x++)
+            if (number[x] > resultnum)
+                resultnum = number[x];
+        System.out.println("the maximum value in the number set is " + resultnum);
     }
-    double resultnum = number[0];
-    For (int x = 1; x < number.length; x++)
-    If (number[x] > resultnum)
-        Resultnum = number[x];
-    System.out.println("the maximum value in the number set is " + resultnum);
-}
 }
 ```
 
@@ -689,35 +667,32 @@ Public class demovarargs {
 
 ## 实现方法
 
-一组用于执行操作的操作被称为方法。你可以看到上面大多数程序中的 `print` 语句调用了方法 `system.out.println()`。此方法将将其提供的字符串打印到屏幕上。
+一组用于执行操作的操作被称为方法。你可以看到上面大多数程序中的 `print` 语句调用了方法 `system.out.println()`。此方法将其提供的字符串打印到屏幕上。
 
-就像这个内置方法一样，开发者也可以创建特定于问题描述的方法。用户定义的方法可能或没有参数，也可能或没有返回值。创建方法的标准语句是——
-
-Public static int methoddemo(int i, int j) {
-
-![](img/73ee4bf5cc63fca6a92dbd634bd146b7_60_0.png)
-
-```
-/*Body*/
-}
-```
-这里，`methoddemo` 是方法的名称，`i` 和 `j` 是此方法接受的 `int` 参数。方法的实现逻辑位于花括号内部，此外，你注意到函数声明中写了三个单词——`public`、`static` 和 `int`。这里 `int` 是方法的返回类型，而 `public static` 是修饰符。这个示例方法可以修改以满足开发者的需求。
-
-
-
-
-下面展示了一个方法实现的示例代码——public static int mincaldemo (int num1, int num2) {
+就像这个内置方法一样，开发者也可以创建特定于问题描述的方法。用户定义的方法可能有或没有参数，也可能有或没有返回值。创建方法的标准语句是：
 
 ```java
-int minval;
-if (num1 > num2)
-    minval = num2;
-  else
-    minval = num1;
-  return minval;
+public static int methoddemo(int i, int j) {
+    /* Body */
+}
 ```
 
-} 该方法确定所提供的两个参数值中的较小值，并将其返回给调用它的方法。现在你已经对方法以及它们的实现方式有了初步了解，是时候讨论一下如何在整体代码中使用这些方法了了。
+这里，`methoddemo` 是方法的名称，`i` 和 `j` 是此方法接受的 `int` 参数。方法的实现逻辑位于花括号内部，此外，你注意到函数声明中写了三个单词——`public`、`static` 和 `int`。这里 `int` 是方法的返回类型，而 `public static` 是修饰符。这个示例方法可以修改以满足开发者的需求。
+
+下面展示了一个方法实现的示例代码：
+
+```java
+public static int mincaldemo(int num1, int num2) {
+    int minval;
+    if (num1 > num2)
+        minval = num2;
+    else
+        minval = num1;
+    return minval;
+}
+```
+
+该方法确定所提供的两个参数值中的较小值，并将其返回给调用它的方法。现在你已经对方法以及它们的实现方式有了初步了解，是时候讨论一下如何在整体代码中使用这些方法了。
 
 ## 调用方法
 
@@ -727,50 +702,51 @@ if (num1 > num2)
 
 对于返回值的方法，返回类型在方法声明中注明。另一方面，对于不返回任何内容的方法，返回类型为 `void`。为了调用我们上面实现的方法，调用程序的某处需要出现以下语句：
 
+```java
 int result;
-
 result = mincaldemo(5, 6);
 ```
 
-由于该方法返回一个 `int` 值，该值需要收集在一个 `int` 变量（result）中。对方法的调用提供了方法所需的两个参数值。这种类型的的方法调用也被称为参数化方法调用或按值传递参数。
+由于该方法返回一个 `int` 值，该值需要收集在一个 `int` 变量（`result`）中。对方法的调用提供了方法所需的两个参数值。这种类型的的方法调用也被称为参数化方法调用或按值传递参数。
 
 你可能会遇到参数类型不同且数量较多的情况。在这种情况下，请务必按照所需的顺序提供参数值，以避免出现任何意外的编译错误或运行时错误。
 
 ## 方法重载
 
-可以存在名称相同但参数不同的方法。当方法被调用时，系统会检测匹配调用语句中给出的参数类型和数量的方法，并将控制权转移到相应的方法。这种方法实现的形式被称为方法重载（method overloading）。不要将此概念与重写（overriding）混淆。在方法重写中，方法名、参数和参数数量也是相同的。
+可以存在名称相同但参数不同的方法。当方法被调用时，系统会检测匹配调用语句中给出的参数类型和数量的方法，并将控制权转移到相应的方法。这种方法实现的形式被称为方法重载。不要将此概念与重写混淆。在方法重写中，方法名、参数和参数数量也是相同的。
 
-为了理解这个概念，让我们来看一个例子——
+为了理解这个概念，让我们来看一个例子：
 
 ```java
 public class overloadingdememo {
     public static void main(String[] args) {
-    int x = 34;
-    int y = 56;
-    double z = 10.5;
-    double u = 7.8;
-    int resultxy = mincaldemo(x, y);
-    double resultzu = mincaldemo(z, u);
-    System.out.println("MIN Value (Integers) = " + resultxy);
-System.out.println("min Value (double) = " + resultzu);
+        int x = 34;
+        int y = 56;
+        double z = 10.5;
+        double u = 7.8;
+        int resultxy = mincaldemo(x, y);
+        double resultzu = mincaldemo(z, u);
+        System.out.println("MIN Value (Integers) = " + resultxy);
+        System.out.println("min Value (double) = " + resultzu);
+    }
 
-}
-public static int mincaldemo (int num1, int num2) {
-    int minval;
-    if (num1 > num2)
-        minval = num2;
-    else
-        minval = num1;
-    return minval;
-}
+    public static int mincaldemo(int num1, int num2) {
+        int minval;
+        if (num1 > num2)
+            minval = num2;
+        else
+            minval = num1;
+        return minval;
+    }
 
-public static double mincaldemo (double num1, double num2) {
-    double minval;
-    if (num1 > num2)
-        minval = num2;
-    else
-        minval = num1;
-    return minval;
+    public static double mincaldemo(double num1, double num2) {
+        double minval;
+        if (num1 > num2)
+            minval = num2;
+        else
+            minval = num1;
+        return minval;
+    }
 }
 ```
 
@@ -780,26 +756,27 @@ public static double mincaldemo (double num1, double num2) {
 
 有些程序要求你在运行时执行程序时传递参数。这些参数可以通过命令行参数的形式传递给程序。在命令行上输入执行命令时，这些参数会连程序名称一起交给程序。在程序内部访问这些参数的方式在下面的示例代码所示。
 
+```java
 public class commandlineargdemo {
+```
+
+
 
 ```java
 public static void main(String args[]) {
-for(int x = 0; x<args.length; x++) {
-```
-
-![](img/73ee4bf5cc63fca6a92dbd634bd146b7_66_0.png)
-
-```java
-System.out.println("args[" + x + "]: " + args[x]);
-}
+    for(int x = 0; x < args.length; x++) {
+        System.out.println("args[" + x + "]: " + args[x]);
+    }
 }
 ```
 
 从命令行输入以下命令来执行程序并查看你得到什么结果。
 
-## $Java commandlineargdemo 200 100 10 8 7 6
+```bash
+java commandlineargdemo 200 100 10 8 7 6
+```
 
-## 这是 finalize() 方法
+## 这是 `finalize()` 方法
 
 在 Java 编程中，你会处理大量的对象，所有这些对象都会在内存中占用空间。如果你正在编写大规模代码，可能要求在终止程序之前清除这些对象所占的空间。为了方便这一操作，Java 中提供了一个垃圾回收器方法，称为 `finalize()` 方法。
 
@@ -824,11 +801,9 @@ protected void finalize() {
 
 你需要理解，`package` 和 `import` 语句对于源文件的所有类都是通用的。在一个源文件中为不同的类拥有不同的包和导入语句是不可能的。
 
-- 在结束讨论之前，让我们对包给出一个结语。它只是接口和类的一种分类形式。当你处理大型 Java 项目时，使用包有助于组织代码并使其更易于维护和阅读。
+在结束讨论之前，让我们对包给出一个结语。它只是接口和类的一种分类形式。当你处理大型 Java 项目时，使用包有助于组织代码并使其更易于维护和阅读。
 
 # 第 7 章：决策
-
-
 
 决策结构用于在当条件为真时执行一组指令，而在条件被确定为假时执行另一组指令的情况。Java 中提供了几种结构用于编写此类场景。这些结构包括——
 
@@ -837,55 +812,49 @@ protected void finalize() {
 该语句用于需要测试条件的情况，如果发现条件为真，则需要执行该语句后续的代码块。该构造的语法为：
 
 ```java
-if(condition){
-/*body*/
+if (condition) {
+    /* body */
 }
 ```
 
 该构造的示例实现如下：
 
 ```java
-public class demo {
-  public static void main(String args[]) {
-    int i = 10;
-    int j = 1;
-    if(i>j){
-      System.out.print(i);
+public class Demo {
+    public static void main(String args[]) {
+        int i = 10;
+        int j = 1;
+        if (i > j) {
+            System.out.print(i);
+        }
     }
-  }
 }
 ```
 
 此代码在执行后的输出如下：
 
-
-
-
-
 ## if else 语句
 
-该语句用于需要测试条件的情况：如果发现条件为真，则需要执行紧随该语句的代码块；否则执行 else 语句后面的代码块。该构造的语法为 –
+该语句用于需要测试条件的情况：如果发现条件为真，则需要执行紧随该语句的代码块；否则执行 `else` 语句后面的代码块。该构造的语法为 –
 
-```
-If(condition){
-  /*body*/
+```java
+if (condition) {
+    /* body */
+} else {
+    /* body */
 }
-Else{
-  /* Body*/
-}
 ```
-
-![](imgimg/73ee4bf5cc63fca6a92dbd634bd146b7_72_0.png)
 
 下面给出了该构造的示例实现 –
-Public class ifelsedemo {
-    Public static void main(String[] args) {
+
+```java
+public class IfElseDemo {
+    public static void main(String[] args) {
         int i = 1;
         int j = 0;
-        If(i>j){
+        if (i > j) {
             System.out.print(i);
-        }
-        Else{
+        } else {
             System.out.print(j);
         }
     }
@@ -894,41 +863,35 @@ Public class ifelsedemo {
 
 该代码执行后的输出如下 –
 
-![](img/73ee4bf5cc63fca6a92dbd634bd146b7_74_0.png)
-
 ## 嵌套 if 语句
 
-该语句用于需要测试条件的情况：如果发现条件为真，则需要执行紧随该语句的代码块；否则测试下一个条件。如果该条件为真，则执行与该条件对应的 if 语句代码块。如果没有发现条件为真，则执行 else 语句后面的代码块。可以使用嵌套 if 语句测试多个条件。该构造的语法为 -
+该语句用于需要测试条件的情况：如果发现条件为真，则需要执行紧随该语句的代码块；否则测试下一个条件。如果该条件为真，则执行与该条件对应的 `if` 语句代码块。如果没有发现条件为真，则执行 `else` 语句后面的代码块。可以使用嵌套 `if` 语句测试多个条件。该构造的语法为 -
 
-```
-If(condition1) {
-/* Body*/
-}
-Else if (condition2) {
-  /* Body*/
-}
-Else {
-  /* Body*/
+```java
+if (condition1) {
+    /* body */
+} else if (condition2) {
+    /* body */
+} else {
+    /* body */
 }
 ```
 
 下面给出了该构造的示例实现 –
-Public class nestedifdemo {
 
 ```java
-Public static void main(String args[]) {
-  int i = 0;
-  int j = 0;
-  If(i>j){
-    System.out.print(i);
-  }
-  Else if(j>i) {
-    System.out.print(j);
-  }
-  Else {
-    System.out.print("Equal");
-  }
-}
+public class NestedIfDemo {
+    public static void main(String args[]) {
+        int i = 0;
+        int j = 0;
+        if (i > j) {
+            System.out.print(i);
+        } else if (j > i) {
+            System.out.print(j);
+        } else {
+            System.out.print("Equal");
+        }
+    }
 }
 ```
 
@@ -936,45 +899,45 @@ Public static void main(String args[]) {
 
 ## Switch
 
-如果你有一个变量，并且需要根据该变量的不同值执行不同的代码块，那么理想的构造是 switch 语句。该构造的语法为 -
+如果你有一个变量，并且需要根据该变量的不同值执行不同的代码块，那么理想的构造是 `switch` 语句。该构造的语法为 -
 
-```
-Switch(variable){
-Case <value1>:
-    /*body*/
-    break;
-Case <value2>:
-    /* Body */
-    break;
-case <value3>:
-    /* Body */
-    break;
-default:
-    /* body */
-    break;
+```java
+switch (variable) {
+    case <value1>:
+        /* body */
+        break;
+    case <value2>:
+        /* body */
+        break;
+    case <value3>:
+        /* body */
+        break;
+    default:
+        /* body */
+        break;
 }
 ```
 
-![](img/73ee4bf5cc63fca6a92dbd634bd146b7_78_0.png)
-
-下面给出了该构造的示例实现 – public class switchdemo {
+下面给出了该构造的示例实现 –
 
 ```java
-Public static void main(String args[]) {
-    int i = 5;
-    Switch (i) {
-        Case 0:
-            System.out.print(0);
-            break;
-        Case 2:
-            System.out.print(2);
-            break;
-        Case 5:
-            System.out.print(5);
-            break;
-        default:
-            System.out.print(999);
-            break;
+public class SwitchDemo {
+    public static void main(String args[]) {
+        int i = 5;
+        switch (i) {
+            case 0:
+                System.out.print(0);
+                break;
+            case 2:
+                System.out.print(2);
+                break;
+            case 5:
+                System.out.print(5);
+                break;
+            default:
+                System.out.print(999);
+                break;
+        }
     }
 }
 ```
@@ -983,48 +946,41 @@ Public static void main(String args[]) {
 
 ## 三元运算符
 
-Java 还支持条件运算符，它也被称为 ?: 运算符。该运算符用于替换 ‘if else’ 构造。其语法如下 –
+Java 还支持条件运算符，它也被称为 `?:` 运算符。该运算符用于替换 `if else` 构造。其语法如下 –
 
-Expression1 ? Expression2 : Expression3
+```java
+expression1 ? expression2 : expression3
+```
 
-这里，Expression1 是需要测试的条件。如果条件为真，则执行 Expression2，否则执行 Expression3。
-
-![](img/73ee4bf5cc63fca6a92dbd634bd146b7_81_0.png)
+这里，`expression1` 是需要测试的条件。如果条件为真，则执行 `expression2`，否则执行 `expression3`。
 
 # 第 8 章：循环控制
 
 有几种情况需要你多次执行同一组指令。例如，如果你需要对一组数字进行排序，你将需要多次扫描并重新排列这组数字以获得所需的排列。这种执行流被称为循环控制。
 
-简单来说，循环是一种允许多次执行代码块的构造。Java 支持几种用于实现循环的构造。这些包括 while 循环、for 循环和 do while 循环。
+简单来说，循环是一种允许多次执行代码块的构造。Java 支持几种用于实现循环的构造。这些包括 `while` 循环、`for` 循环和 `do while` 循环。
 
-- while 循环迭代执行代码块，直到为 while 循环指定的条件为真。一旦该条件失败，while 循环就会停止。
-
-- For 循环允许程序员在同一个构造中操作条件和循环变量。因此，你可以初始化一个循环变量，对其进行增/减，并运行循环直到关于该变量的条件为真。
-
-do while 循环与 while 循环类似，但在 while 循环中，条件是在执行代码块之前检查的。而在 do while 循环中，先执行代码块再检查条件。如果满足条件，则重新启动循环执行，否则终止循环。可以说，do while 循环一旦实现，至少会执行一次。
+- `while` 循环迭代执行代码块，直到为 `while` 循环指定的条件为真。一旦该条件失败，`while` 循环就会停止。
+- `for` 循环允许程序员在同一个构造中操作条件和循环变量。因此，你可以初始化一个循环变量，对其进行增/减，并运行循环直到关于该变量的条件为真。
+- `do while` 循环与 `while` 循环类似，但在 `while` 循环中，条件是在执行代码块之前检查的。而在 `do while` 循环中，先执行代码块再检查条件。如果满足条件，则重新启动循环执行，否则终止循环。可以说，`do while` 循环一旦实现，至少会执行一次。
 
 ## 循环语句
 
 有两个关键字专门与循环相关，也被称为控制语句，因为它们允许控制流从代码的一个部分转移到另一个部分。这些关键字是 –
 
-break
-
-该关键字用于循环内部，在你希望执行流终止循环并直接从循环后的第一条指令开始执行的地方。
-
-Continue
-
-该关键字用于循环内部，在程序员希望计算机忽略循环的剩余部分并将控制转移到循环的第一条语句的地方。
+- `break`：该关键字用于循环内部，在你希望执行流终止循环并直接从循环后的第一条指令开始执行的地方。
+- `continue`：该关键字用于循环内部，在程序员希望计算机忽略循环的剩余部分并将控制转移到循环的第一条语句的地方。
 
 为了帮助你理解循环是如何执行的，让我们来看一个例子，并使用所有类型的循环控制来实现它。
 
 ## For 循环实现
 
 ```java
-Public class fordemo {
-    Public static void main(String[] args[]) {
-        int [] numberarray = {100, 300, 500, 700, 900};
-        For(int i=0; i<5; i++) {
-            System.out.print(numberarray[i]);
+public class ForDemo {
+    public static void main(String[] args) {
+        int[] numberArray = {100, 300, 500, 700, 900};
+        for (int i = 0; i < 5; i++) {
+            System.out.print(numberArray[i]);
         }
     }
 }
@@ -1034,17 +990,18 @@ Public class fordemo {
 
 ## While 循环实现
 
-Public class whileledemo {
-
-public static void main(String[] args[]) {
-    int [] numberarray = {100, 300, 500, 700, 900};
-    int i = 0;
-    While(i<5) {
-        System.out.print(numberarray[i]);
-        System.out.print(",");
-        i++;
+```java
+public class WhileDemo {
+    public static void main(String[] args) {
+        int[] numberArray = {100, 300, 500, 700, 900};
+        int i = 0;
+        while (i < 5) {
+            System.out.print(numberArray[i]);
+            System.out.print(",");
+            i++;
+        }
+        System.out.print("\n");
     }
-    System.out.print("\n");
 }
 ```
 
@@ -1052,42 +1009,44 @@ public static void main(String[] args[]) {
 
 ## do 循环实现
 
-Public class dowiledemo {
-
-public static void main(String args[]) {
-int [] numberarray = {100, 300, 500, 700, 900};
-int i = 0;
-
-do {
-    System.out.print(numberarray[i]);
-    System.out.print(" ");
-    i++;
-} while (i<5);
-System.out.print("\n");
+```java
+public class DoWhileDemo {
+    public static void main(String args[]) {
+        int[] numberArray = {100, 300, 500, 700, 900};
+        int i = 0;
+        do {
+            System.out.print(numberArray[i]);
+            System.out.print(" ");
+            i++;
+        } while (i < 5);
+        System.out.print("\n");
+    }
 }
 ```
-
-![](img/73ee4bf5cc63fca6a92dbd634bd146b7_87_0.png)
 
 ## 增强 For 循环
 
 Java 还支持增强循环结构，可用于数组元素。该循环的语法为 –
 
-For(declaration : expression) {
-  /* body*/
+```java
+for (declaration : expression) {
+    /* body */
 }
+```
 
-增强循环的声明部分用于声明变量。该变量局部于‘for 循环’且类型与数组元素相同。变量当前的值始终等于正在遍历的数组元素。表达式是一个数组或返回数组的方法调用。
+增强循环的声明部分用于声明变量。该变量局部于 `for` 循环且类型与数组元素相同。变量当前的值始终等于正在遍历的数组元素。表达式是一个数组或返回数组的方法调用。
 
-增强循环的示例实现如下 – public class arraydemo {
+增强循环的示例实现如下 –
 
 ```java
-Public static void main(String args[]) {
-  int [] numberarray = {100, 300, 500, 700, 900};
-  For(int i : numberarray ) {
-    System.out.print( i );
-    System.out.print("");
-  }
+public class ArrayDemo {
+    public static void main(String args[]) {
+        int[] numberArray = {100, 300, 500, 700, 900};
+        for (int i : numberArray) {
+            System.out.print(i);
+            System.out.print("");
+        }
+    }
 }
 ```
 
@@ -1095,44 +1054,35 @@ Public static void main(String args[]) {
 
 # 第 9 章：文件处理
 
-所有文件操作都由 Java java.io 包支持，这些函数的实现基于流的概念。流简单来说的数据序列，分为两种类型：输入流和输出流。前者用于读取数据，后者用于写入数据。
+所有文件操作都由 Java `java.io` 包支持，这些函数的实现基于流的概念。流简单来说是数据序列，分为两种类型：输入流和输出流。前者用于读取数据，后者用于写入数据。
 
 ## 字节流
 
-Java 支持的第一种流是字节流。在这种分类下，i/o 操作被限制为8 位大小。在我们开始编码之前，你需要意识到用于执行输入和输出的类分别是 FileInputStream 和 FileOutputStream。现在让我们来看一个将一个文件的内容复制到另一个文件的示例。
+Java 支持的第一种流是字节流。在这种分类下，I/O 操作被限制为 8 位大小。在我们开始编码之前，你需要意识到用于执行输入和输出的类分别是 `FileInputStream` 和 `FileOutputStream`。现在让我们来看一个将一个文件的内容复制到另一个文件的示例。
 
 ```java
-Public class copyfilebs {
-    Public static void main(String[] args) throws exception{
-        Fileinputstream inputfile = null;
-        Fileoutput outputfile = null;
-        Try {
-            Inputfile = new fileinputstream("in.txt");
-            Outputfile = new fileoutputstream("out.txt");
+import java.io.*;
+
+public class CopyFileBS {
+    public static void main(String[] args) throws Exception {
+        FileInputStream inputFile = null;
+        FileOutputStream outputFile = null;
+        try {
+            inputFile = new FileInputStream("in.txt");
+            outputFile = new FileOutputStream("out.txt");
             int i;
-            While ((i = inputfile.read()) != -1) {
-                Outputfile.write(i);
+            while ((i = inputFile.read()) != -1) {
+                outputFile.write(i);
             }
         } finally {
-            If (inputfile != null) {
-                inputfile.close();
+            if (inputFile != null) {
+                inputFile.close();
             }
-            If (outputfile != null) {
-                outputfile.close();
+            if (outputFile != null) {
+                outputFile.close();
             }
         }
     }
-}
-```
-
-
-
-```java
-inputfile.close();
-}
-if (outputfile != null) {
-    outputfile.close();
-}
 }
 ```
 
@@ -1140,35 +1090,29 @@ if (outputfile != null) {
 
 ## 字符流
 
-从 8 位数据操作切换到 16 位 Unicode 数据操作，我们需要从二进制字节流（binary Streams）切换到字符流（character Streams）。分别用于执行输入和输出文件读取器的写入类。上面的代码可以如下所示修改为使用字符流。
+从 8 位数据操作切换到 16 位 Unicode 数据操作，我们需要从二进制字节流切换到字符流。分别用于执行输入和输出的类是 `FileReader` 和 `FileWriter`。上面的代码可以如下所示修改为使用字符流。
 
+```java
 import java.io.*;
 
-public class copyfiles {
+public class CopyFiles {
     public static void main(String args[]) throws IOException {
-
-```java
-    FileReader inputfile = null;
-    FileWriter outputfile = null;
-    try {
-        inputfile = new FileReader("in.txt");
-        output = new FileWriter("out.txt");
-        int i;
-        while ((i = inputfile.read()) != -1) {
-```
-
-```java
-            output.write(i);
-```
-
-```java
-        }
-    } finally {
-        if (inputfile != null) {
-            inputfile.close();
-        }
-        if (outputfile != null) {
-            outputfile.close();
+        FileReader inputFile = null;
+        FileWriter outputFile = null;
+        try {
+            inputFile = new FileReader("in.txt");
+            outputFile = new FileWriter("out.txt");
+            int i;
+            while ((i = inputFile.read()) != -1) {
+                outputFile.write(i);
+            }
+        } finally {
+            if (inputFile != null) {
+                inputFile.close();
+            }
+            if (outputFile != null) {
+                outputFile.close();
+            }
         }
     }
 }
@@ -1180,35 +1124,40 @@ public class copyfiles {
 
 为了允许用户从键盘获取输入并在屏幕上打印输出，Java 支持标准流——
 
-- System.in 代表标准输入流，允许用户通过键盘提供输入。
-- System.out 代表标准输出流，允许用户在屏幕上获取输出。
-- System.err 代表标准错误流，允许用户获取系统的错误消息。
+- `System.in`：代表标准输入流，允许用户通过键盘提供输入。
+- `System.out`：代表标准输出流，允许用户在屏幕上获取输出。
+- `System.err`：代表标准错误流，允许用户获取系统的错误消息。
 
 下面提供的示例程序允许系统获取用户输入并将输入的内容打印到屏幕上，直到用户按下 'q' 键后程序退出。
 
+```java
 import java.io.*;
 
-```java
-public class ssddemo {
+public class SSDDemo {
     public static void main(String[] args) throws Exception {
-```
-
-```java
-    InputStreamReader inputc = null;
-
-    try {
-        inputc = new InputStreamReader(System.in);
-        System.out.println("Enter characters, 'q' to quit.");
-        char charin;
-        do {
-            charin = (char) inputc.read();
-            System.out.print(charin);
-        } while(charin != 'q');
-    } finally {
-        if (inputc != null) {
-            inputc.close();
+        InputStreamReader inputC = null;
+        try {
+            inputC = new InputStreamReader(System.in);
+            System.out.println("Enter characters, 'q' to quit.");
+            char charIn;
+            do {
+                charIn = (char) inputC.read();
+                System.out.print(charIn);
+            } while (charIn != 'q');
+        } finally {
+            if (inputC != null) {
+                inputC.close();
+            }
         }
     }
+}
+```
+
+
+
+```
+if (inputc != null) {
+    inputc.close();
 }
 ```
 
@@ -1227,88 +1176,80 @@ public class ssddemo {
 
 显然，异常可能由系统、用户问题或程序层面的问题引起。基于这一观察，创建了三类异常。这三类异常已在章节中讨论。
 
-## 检异常 (Checked Exceptions)
+## 检查异常 (Checked Exceptions)
 
-在编译时由编译器检查并报告的异常称为检异常。它们也被称为编译时异常，需要开发者在编写或编写代码时进行处理。
+在编译时由编译器检查并报告的异常称为检查异常。它们也被称为编译时异常，需要开发者在编写代码时进行处理。
 
 下面提供的示例代码演示了此类错误的异常处理示例。
 
 ```java
 import java.io.File;
-```
-
-```java
 import java.io.FileReader;
 
 public class demoeh {
-```
-
-```java
     public static void main(String args[]) {
-      File filedemo = new File("E://samplefile.txt");
-      FileReader infile = new FileReader(filedemo);
+        File filedemo = new File("E://samplefile.txt");
+        FileReader infile = new FileReader(filedemo);
     }
 }
 ```
 
-如果在创建 filedemo 处理器时指定的文件名和位置在指定位置不存在，编译器将给出 `filenamenotexception` 错误。
+如果在创建 `filedemo` 处理器时指定的文件名和位置在指定位置不存在，编译器将给出 `FileNotFoundException` 错误。
 
-## 未检出异常 (Unchecked Exceptions)
+## 未检查异常 (Unchecked Exceptions)
 
-某些异常发生在运行时。此类异常称为未检出异常或运行时异常。逻辑错误、编程 Bug 以及对 API 的错误用法都是这类错误的示例。这类错误的另一个重要特点是它们在编译时不会被检测到。
+某些异常发生在运行时。此类异常称为未检查异常或运行时异常。逻辑错误、编程 Bug 以及对 API 的错误用法都是这类错误的示例。这类错误的另一个重要特点是它们在编译时不会被检测到。
 
-为了帮助你理解什么是运行时错误，让我们来看一个例子。假设你在程序中实现了一个包含 5 个元素的数组。然而，部分代码正在访问第 6 个元素。此错误将在运行时被检测到，系统将生成错误 `indexoutofboundexceptionexception`。
+为了帮助你理解什么是运行时错误，让我们来看一个例子。假设你在程序中实现了一个包含 5 个元素的数组。然而，部分代码正在访问第 6 个元素。此错误将在运行时被检测到，系统将生成错误 `ArrayIndexOutOfBoundsException`。
 
 ## 错误 (Errors)
 
-某些异常超出了系统或程序员的控制。此类错误的一个常见例子是栈溢出（stack overflow）。对于这些错误，你几乎无能做什么。因此，最好忽略它们。当它们发生时，会中断程序的执行，但对此无能为力。
+某些异常超出了系统或程序员的控制。此类错误的一个常见例子是栈溢出（stack overflow）。对于这些错误，你几乎无能为力。因此，最好忽略它们。当它们发生时，会中断程序的执行，但对此无能为力。
 
 ## 异常层次结构
 
-Java 有一个内置类 `java.lang.Exception`。所有异常都属于此类类。此外，`throwable` 是父类。`Exception` 类是 `throwable` 的子类。`Error` 类是 `throwable` 的父类。`Exception` 类有两个子类，即 `RuntimeException` 和 `IOException`。`throwable` 的子类是 `Error` 类。`Error` 类是 `throwable` 的父类。`Exception` 类是 `throwable` 的子类。所有异常都属于此类类。此外，`throwable` 是父类。
+Java 有一个内置类 `java.lang.Exception`。所有异常都属于此类。此外，`Throwable` 是父类。`Exception` 类是 `Throwable` 的子类。`Error` 类也是 `Throwable` 的子类。`Exception` 类有两个主要子类，即 `RuntimeException` 和 `IOException`。
 
-`throwable` 中提供的方法有：
-- getmessage(): 被调用时，返回异常的消息。
-- getcause(): 被调用时，返回异常的原因。
-- toString(): 此方法返回异常的详细描述。
-- printstacktrace(): 栈跟踪的结果可以打印到标准错误流。
-- stacktrace(): 此方法返回堆栈跟踪数组。
-- fillstacktrace(): 将堆栈跟踪中的之前信息附加当前堆栈跟踪的内容。
+`Throwable` 中提供的方法有：
+- `getMessage()`: 被调用时，返回异常的消息。
+- `getCause()`: 被调用时，返回异常的原因。
+- `toString()`: 此方法返回异常的详细描述。
+- `printStackTrace()`: 栈跟踪的结果可以打印到标准错误流。
+- `getStackTrace()`: 此方法返回堆栈跟踪数组。
+- `fillInStackTrace()`: 将堆栈跟踪中的之前信息附加当前堆栈跟踪的内容。
 
 ## 捕获异常 (Catching Exceptions)
 
-捕获异常的标准方法是使用 `try and catch` 关键字及其代码实现。这个 `try and catch` 块需要设计成包含预期可能抛出异常的代码。`try and catch` 块的语法如下：
+捕获异常的标准方法是使用 `try` 和 `catch` 关键字及其代码实现。这个 `try-catch` 块需要设计成包含预期可能抛出异常的代码。`try-catch` 块的语法如下：
 
 ```java
 try {
-    /* code*/
-}catch(Exception exc1) {
-    /* catch code*/
+    /* code */
+} catch (Exception exc1) {
+    /* catch code */
 }
 ```
 
 预期抛出异常的代码放在 `try` 块中。如果抛出异常，则在 `catch` 块中执行相应的异常处理操作。每个 `try` 块都必须有一个 `catch` 块或 `finally` 块。
 
-在 `catch` 语句中，需要声明预期抛出的异常。一旦发生异常，执行流将转移到 `catch` 块。如果抛出的异常与 `catch` 块中定义的异常匹配（此处假设不存在），则执行 `catch` 块。
+在 `catch` 语句中，需要声明预期抛出的异常。一旦发生异常，执行流将转移到 `catch` 块。如果抛出的异常与 `catch` 块中定义的异常匹配，则执行 `catch` 块。
 
-下面给出了 `try and catch` 块的示例实现。代码实现了一个包含 2 个元素的数组。然而，代码尝试访问第三个元素，而该元素并不。因此，抛出了异常。
-
-import java.io.*;
-
-## public class demoexception {
+下面给出了 `try-catch` 块的示例实现。代码实现了一个包含 2 个元素的数组。然而，代码尝试访问第三个元素，而该元素并不存在。因此，抛出了异常。
 
 ```java
+import java.io.*;
+
+public class demoexception {
     public static void main(String args[]) {
         try {
             int arr[] = new int[2];
-            System.out.println("Accesing the 3 rd element of the array:" + arr[3]);
-        }catch(arrayindexoutofboundexception exp) {
-            System.out.println("catching Exception:" + exp);
+            System.out.println("Accessing the 3rd element of the array:" + arr[3]);
+        } catch (ArrayIndexOutOfBoundsException exp) {
+            System.out.println("Catching Exception:" + exp);
         }
     }
 }
 ```
-
 
 ```java
 System.out.println("Reached outside catch block");
@@ -1321,38 +1262,36 @@ System.out.println("Reached outside catch block");
 
 ## 实现多个 catch 块
 
-一段代码可能会导致多个异常。为了满足这一需求，程序允许实现多个 catch 块。此类实现的语法如下所示。
+一段代码可能会导致多个异常。为了满足这一需求，程序允许实现多个 `catch` 块。此类实现的语法如下所示。
 
 ```java
 try {
     /* Protected code */
-} catch(Exptype1 exp1) {
-  /* catch block 1*/
-} catch(Exptype2 exp2) {
-  /* catch block 2*/
-} catch(Exptype3 exp3) {
-  /* catch block 3*/
+} catch (Exptype1 exp1) {
+    /* catch block 1 */
+} catch (Exptype2 exp2) {
+    /* catch block 2 */
+} catch (Exptype3 exp3) {
+    /* catch block 3 */
 }
 ```
 
-上述语法说明了三个 catch 块的实现。然而，你可以根据需要实现任意数量的 catch 块。当执行此代码时，会执行受保护的代码。如果发生异常，异常类型将与第一个 catch 块的异常进行匹配。但是，如果异常类型不匹配，则忽略 catch 块 1，并尝试匹配第二个 catch 块的异常类型。哪一个 catch 块的异常类型与触发异常相同，就会执行对应的 catch 块。
+上述语法说明了三个 `catch` 块的实现。然而，你可以根据需要实现任意数量的 `catch` 块。当执行此代码时，会执行受保护的代码。如果发生异常，异常类型将与第一个 `catch` 块的异常进行匹配。但是，如果异常类型不匹配，则忽略 `catch` 块 1，并尝试匹配第二个 `catch` 块的异常类型。哪一个 `catch` 块的异常类型与触发异常相同，就会执行对应的 `catch` 块。
 
 ## 关键字：throw/throws
 
-这两个关键字是相似的词，但用于完全不同的目的。`throws` 关键字用于方法名之后，用于声明代码抛出了一个检查异常（checked exception），但方法本身不处理该异常。换句话说，`throw` 关键字用于字面上的抛出异常。此异常可以是一个新异常，也可以是之前发生的异常。
+这两个关键字是相似的词，但用于完全不同的目的。`throws` 关键字用于方法名之后，用于声明代码抛出了一个检查异常，但方法本身不处理该异常。换句话说，`throw` 关键字用于字面上的抛出异常。此异常可以是一个新异常，也可以是之前发生的异常。
 
-下面提供了说明 `throws` 和 `throw` 用法的示例代码。在方法声明中，该方法方法抛出一个异常，而 `throw` 的使用启动了该异常的抛出。
+下面提供了说明 `throws` 和 `throw` 用法的示例代码。在方法声明中，该方法声明抛出一个异常，而 `throw` 的使用启动了该异常的抛出。
 
 ```java
 import java.io.*;
-```
 
-```java
 public class name {
-    public void depositmethod(double amount) throws exception { /*Implementation*/
-        throw new remoteexception();
+    public void depositmethod(double amount) throws Exception { /* Implementation */
+        throw new RemoteException();
     }
-    /*Implementation */
+    /* Implementation */
 }
 ```
 
@@ -1362,7 +1301,7 @@ public class name {
 import java.io.*;
 
 public class scname {
-    public void withdrawdamemo(double amountdemo) throws reexception, insufficientfundexception {
+    public void withdrawdamemo(double amountdemo) throws RemoteException, InsufficientFundException {
         /* Implementation */
     }
 }
@@ -1371,50 +1310,50 @@ public class scname {
 
 ## finally 块
 
-现在你已经熟悉了 try 和 catch 块，让我们来看看异常处理中使用的第三个块：finally 块。这是出现在 'try' 和 catch 块之后的最后一个块。此外，如果没有找到异常，catch 块的执行可能会被省略，但无论是否发生异常，finally 块始终会被执行。
+现在你已经熟悉了 `try` 和 `catch` 块，让我们来看看异常处理中使用的第三个块：`finally` 块。这是出现在 `try` 和 `catch` 块之后的最后一个块。此外，如果没有找到异常，`catch` 块的执行可能会被省略，但无论是否发生异常，`finally` 块始终会被执行。
 
-此块的目的是执行程序员认为必要的任何清理活动。无论 try 块中的代码发生什么情况，你都想要执行这段代码。该块的语法及其实现方式所示。
+此块的目的是执行程序员认为必要的任何清理活动。无论 `try` 块中的代码发生什么情况，你都想要执行这段代码。该块的语法及其实现方式如下所示。
 
 ```java
 try {
     /* Protected code */
-    catch(Exptype1 exp1) {
-        /* catch block 1 */
-        catch(Exptype2 exp2) {
-            /* catch block 2 */
-            catch(Exptype3 exp3) {
-                /* catch block 3 */
-            }
-        }
-    }
-finally {
+} catch (Exptype1 exp1) {
+    /* catch block 1 */
+} catch (Exptype2 exp2) {
+    /* catch block 2 */
+} catch (Exptype3 exp3) {
+    /* catch block 3 */
+} finally {
     /* Finally block implementation */
 }
 ```
 
 下面提供了实现该概念的示例代码，以使概念更清晰。
+
+```java
 public class demoexcep {
     public static void main(String args[]) {
         int arr[] = new int[2];
         try {
-            System.out.println("Accessing the 3 rd element:" + arr[3]);
-        } catch(arrayindexoutofboundsexception exp) {
-            System.out.println("catching exception:" + exp);
+            System.out.println("Accessing the 3rd element:" + arr[3]);
+        } catch (ArrayIndexOutOfBoundsException exp) {
+            System.out.println("Catching exception:" + exp);
         } finally {
             arr[0] = 5;
-            System.out.println("the first element is: " + arr[0]);
+            System.out.println("The first element is: " + arr[0]);
             System.out.println("Finally block executed");
         }
     }
 }
 ```
+
 代码的输出如下图所示。
 
-在实现 try/catch/finally 块时，请始终记住几点。首先，除非实现了 try 块，否则没有 catch 块。同样地，没有 catch 或 finally 块就不会有独立的 try 块。此外，finally 块是一个可选的结构，即使你的代码中没有 finally 块，你的 try/catch 也能正常工作。
+在实现 `try/catch/finally` 块时，请始终记住几点。首先，除非实现了 `try` 块，否则没有 `catch` 块。同样地，没有 `catch` 或 `finally` 块就不会有独立的 `try` 块。此外，`finally` 块是一个可选的结构，即使你的代码中没有 `finally` 块，你的 `try/catch` 也能正常工作。
 
 ## 自定义异常
 
-java 允许你定义自己的异常。然而，在你这样做之前，有几点需要记住。首先，任何异常都需要派生自 throwable 类或是该类的子类。为了实现检查异常，你必须扩展 Exception 类。然而，运行时异常（runtime exception）的实现必须扩展 runtimeexception 类。
+Java 允许你定义自己的异常。然而，在你这样做之前，有几点需要记住。首先，任何异常都需要派生自 `Throwable` 类或是该类的子类。为了实现检查异常，你必须扩展 `Exception` 类。然而，运行时异常的实现必须扩展 `RuntimeException` 类。
 
 ![](img/73ee4bf5cc63fca6a92dbd634bd146b7_112_0.png)
 
@@ -1424,25 +1363,22 @@ java 允许你定义自己的异常。然而，在你这样做之前，有几点
 
 ```java
 import java.io.*;
-```
 
-```java
-public class insufficientexception extends Exception {
-    private double amo;
+public class InsufficientFundException extends Exception {
+    private double amount;
 
-    public insuffundsexception(double amo) {
-        this.amo = amo;
+    public InsufficientFundException(double amount) {
+        this.amount = amount;
     }
 
-    public double getamo () {
-        return amo;
+    public double getAmount() {
+        return amount;
     }
 }
 ```
 
 ## 结论
 
-这本书提供了关于 java 基础的入门教程。我们涵盖了 java 编程的所有基本概念以及入门 java 编程所需的所有内容。现在你已经回顾了 java 编程的所有基本概念，假设你已经尝试了书中提供的所有代码，你已经准备好进入高级 java 编程阶段。
+这本书提供了关于 Java 基础的入门教程。我们涵盖了 Java 编程的所有基本概念以及入门 Java 编程所需的所有内容。现在你已经回顾了 Java 编程的所有基本概念，假设你已经尝试了书中提供的所有代码，你已经准备好进入高级 Java 编程阶段。
 
-成为编程专家（无论是任何编程语言）的关键在于实践。你练习得越多，你的编程技能就越好！我们希望你喜欢这本书，并希望它帮助你获得 java 的基础专业知识。我们希望已经为你打下了坚实的基础，让你磨练技能并成为一名专家 java 程序员。
-
+成为编程专家（无论是任何编程语言）的关键在于实践。你练习得越多，你的编程技能就越好！我们希望你喜欢这本书，并希望它帮助你获得 Java 的基础专业知识。我们希望已经为你打下了坚实的基础，让你磨练技能并成为一名专家 Java 程序员。

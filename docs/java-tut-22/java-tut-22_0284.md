@@ -1,3 +1,4 @@
+
 # 开发 Java Web Start 应用程序
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/webstart/developing.html`](https://docs.oracle.com/javase/tutorial/deployment/webstart/developing.html)
@@ -5,22 +6,21 @@
 使用基于组件的架构设计的软件可以轻松地开发和部署为 Java Web Start 应用程序。考虑具有基于 Swing 的图形用户界面（GUI）的 Java Web Start 应用程序的示例。通过基于组件的设计，GUI 可以使用更小的构建块或组件构建。以下是用于创建应用程序 GUI 的一般步骤：
 
 +   创建一个`MyTopJPanel`类，它是`JPanel`的子类。在`MyTopJPanel`类的构造函数中布局应用程序的 GUI 组件。
-
 +   创建一个名为`MyApplication`的类，它是`JFrame`类的子类。
-
 +   在`MyApplication`类的`main`方法中，实例化`MyTopJPanel`类，并将其设置为`JFrame`的内容窗格。
 
 以下各节通过使用 Dynamic Tree Demo 应用程序更详细地探讨了这些步骤。如果您对 Swing 不熟悉，请参阅使用 Swing 创建 GUI 以了解更多关于使用 Swing GUI 组件的信息。
 
 单击以下启动按钮以启动 Dynamic Tree Demo 应用程序。
 
-//&lt;![CDATA[ var url = "https://docs.oracle.com/javase/tutorialJWS/samples/deployment/dynamictree_webstartJWSProject/dynamictree_webstart.jnlp"; deployJava.createWebStartLaunchButton(url, '1.7.0'); //]]&gt;
-
-* * *
+```
+//<![CDATA[
+var url = "https://docs.oracle.com/javase/tutorialJWS/samples/deployment/dynamictree_webstartJWSProject/dynamictree_webstart.jnlp";
+deployJava.createWebStartLaunchButton(url, '1.7.0');
+//]]>
+```
 
 **注意：** 如果您看不到示例运行，请确保在浏览器中启用 JavaScript 解释器，以便部署工具包脚本能够正常运行。
-
-* * *
 
 ## 创建顶级`JPanel`类
 
@@ -65,7 +65,6 @@ public class DynamicTreePanel extends JPanel implements ActionListener {
     }
     // ...
 }
-
 ```
 
 ## 创建应用程序
@@ -95,7 +94,6 @@ public class DynamicTreeApplication extends JFrame {
         setVisible(true);
     }    
 }
-
 ```
 
 ## 将核心功能与最终部署机制分离的好处

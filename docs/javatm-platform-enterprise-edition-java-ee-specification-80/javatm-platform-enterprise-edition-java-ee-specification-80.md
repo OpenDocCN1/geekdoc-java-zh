@@ -1,108 +1,25 @@
+
 # JavaTM 平台企业版 (Java EE) 规范 8.0
-
-
-
-
 
 ![](img/2d0d59290c8adb2789da0c25757ad1d3_0_0.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - EE.5.18.2 所有资源类型的要求 ................................................................... 134
-
-
 - EE.6.1 要求的 API ............................................ 157
 - EE.6.1.1 Java 兼容 API ................................................ 157
 - EE.6.1.2 要求的 Java 技术 ................................... 158
 - EE.6.1.3 精简的 Java 技术 ........................................ 161
 
-
-
-
-
-
 xiii
-
 
 ## EE.7 互操作性
 
 - EE.7.2.4 数据格式
-
-
 - EE.8.3.2 EJB 容器类加载要求
-
-
-
-
-
-
-
-
 - EE.12.2.2 JAX-WS
-
-
-
-
-
-
-
 
 EE.A.14 J2EE 1.4 客户端 XML Schema ........................................ 268
 EE.A.15 J2EE:application-client 1.3 XML DTD ................................................ 271
 EE.A.16 J2EE:application-client 1.2 XML DTD ................................................ 272
-
-
-
-
-
 
 今天的企业需要扩大业务范围，降低成本，并缩短对客户、员工和供应商服务的响应时间。通常，提供这些服务的应用程序必须将现有的企业信息系统 (EISs) 与向广泛用户提供服务的新业务功能相结合。这些服务需要具备：
 
@@ -120,34 +37,27 @@ Java EE 通过定义包含以下元素的标准架构来实现这些优势：
 - Java EE 兼容性测试套件 - 一组用于验证 Java EE 平台产品符合 Java 平台标准的兼容性测试。
 - Java EE 参考实现 - 用于 Java EE 应用程序进行原型设计，并为 Java EE 平台提供操作性定义的参考实现。
 
-本文是 Java EE 平台规范。它规定了 Java EE 平台产品必须满足的 old。
+本文是 Java EE 平台规范。它规定了 Java EE 平台产品必须满足的要求。
 
 ## EE.1.1 初始版本的致谢
 
 本规范是许多人的工作成果。Vlada Matena 编写了初稿以及事务管理... (此处原文存在重复内容，已按要求处理)
 
-
-
-
 无价的帮助：Roberto Chinnici 为许多与依赖注入的问题提供了草案。
 
 ## EE.1.5 版本 6 致谢
 
-本规范的第 6 版本是在 Java 社区过程下作为 JSR-316 专家小组创建的，该专家小组成员为 Bill Shannon (Sun Microsystems, Inc.) 和 Roberto Chinnici (Sun Microsystems, Inc.)。专家小组包括以下成员：Florent Beni (Inria), Adam Ben (个人), David Bevins (个人),Bill Burke (Red Hat Middleware LLC), Larry Cable (BEA Systems), Bongiae Chang (Tmax Soft, Inc.),Rejeev Divakaran (个人), Francois Exier (Inria), Jeff Genender (个人),Antonio Goncalves (个人),Jason Greene (Red Hat Middleware LLC),Gang Huang (北京大学),Rod Johnson (SpringSource), Werner Keil (个人),Michael Keith (Oracle),Wonseok Kim (Tmax Soft, Inc.), Jim Knutton (IBM),Elika S. Cohen (个人),Changshin Lee (Ericsson AB), Felipe Leme (个人),Ming Li (TongTech Ltd.),Vladimir Pavlov (SAP AG),Dhanji R. Prasanna (Google),Reza Rahman (个人),Rajiv Shivane (Pramati Technologies),H Suleiman (个人)。
+本规范的第 6 版本是在 Java 社区过程下作为 JSR-316 专家小组创建的，该专家小组成员为 Bill Shannon (Sun Microsystems, Inc.) 和 Roberto Chinnici (Sun Microsystems, Inc.)。专家小组包括以下成员：Florent Beni (Inria), Adam Ben (个人), David Bevins (个人), Bill Burke (Red Hat Middleware LLC), Larry Cable (BEA Systems), Bongiae Chang (Tmax Soft, Inc.), Rejeev Divakaran (个人), Francois Exier (Inria), Jeff Genender (个人), Antonio Goncalves (个人), Jason Greene (Red Hat Middleware LLC), Gang Huang (北京大学), Rod Johnson (SpringSource), Werner Keil (个人), Michael Keith (Oracle), Wonseok Kim (Tmax Soft, Inc.), Jim Knutton (IBM), Elika S. Cohen (个人), Changshin Lee (Ericsson AB), Felipe Leme (个人), Ming Li (TongTech Ltd.), Vladimir Pavlov (SAP AG), Dhanji R. Prasanna (Google), Reza Rahman (个人), Rajiv Shivane (Pramati Technologies), H Suleiman (个人)。
 
 ## EE.1.6 版本 7 致谢
 
-本规范的第 7 版本是在 Java 社区过程下作为 JSR-342 创建的。该规范的专家小组工作通过 http://javaee-spec.java.net 项目进行，旨在向 Java 社区提供透明度。JSR-342 专家小组的负责人为 Bill Shannon (Oracle) 和 Linda DeMich (Oracle)。专家小组包括以下成员：Deepak Ansari (Pramati Technologies),Anton Arhipov (ZeroTurnaround),Florent Beni (OW2),Adam Ben (个人),David Bevins (个人),Markus Eisele (个人),Jeff Genender (个人),Antonio Goncalves (个人),Jason Greene (Red Hat, Inc.),Alex Beneveld (个人),Minehko Iida (富士),Jevgen Kabanov (个人),Ingy Kang (Tmax Soft, Inc.),Werner Keil (个人),Jim Knutton (IBM),Ming Li (TongTech Ltd.),Peter Muir (Red Hat, Inc.),Minoru Nitta (富士),Reza Rahman (Caucho Technology),Kristoffer Sjogren (Ericsson AB),Kevin Sutter (IBM),Spike Washburn (个人),Kyung Yoo Yoon (TmaxSoft)。
-
+本规范的第 7 版本是在 Java 社区过程下作为 JSR-342 创建的。该规范的专家小组工作通过 `http://javaee-spec.java.net` 项目进行，旨在向 Java 社区提供透明度。JSR-342 专家小组的负责人为 Bill Shannon (Oracle) 和 Linda DeMich (Oracle)。专家小组包括以下成员：Deepak Ansari (Pramati Technologies), Anton Arhipov (ZeroTurnaround), Florent Beni (OW2), Adam Ben (个人), David Bevins (个人), Markus Eisele (个人), Jeff Genender (个人), Antonio Goncalves (个人), Jason Greene (Red Hat, Inc.), Alex Beneveld (个人), Minehko Iida (富士), Jevgen Kabanov (个人), Ingy Kang (Tmax Soft, Inc.), Werner Keil (个人), Jim Knutton (IBM), Ming Li (TongTech Ltd.), Peter Muir (Red Hat, Inc.), Minoru Nitta (富士), Reza Rahman (Caucho Technology), Kristoffer Sjogren (Ericsson AB), Kevin Sutter (IBM), Spike Washburn (个人), Kyung Yoo Yoon (TmaxSoft)。
 
 ## EE.1.7 版本 8 致谢
 
-本规范的第 8 版本是在 Java 社区过程下作为 JSR-366 创建的。该规范的专家小组工作通过 http://javaee-spec.java.net 和 https://javaee.github.io/javaee-spec 项目进行，旨在向 Java 社区提供透明度。JSR-366 专家小组的负责人为 Bill Shannon (Oracle) 和 Linda DeMichiel (Oracle)。专家小组包括以下成员：Florent Benoit (OW2),David Blevins (Tomitribe),Jeff Genender (Savoir Technologies),Antonio Goncalves (TmaxSoft),Jason Greene (Red Hat),Werner Keil Sabot-Durand (Red Hat),Kevin Keil (个人),Moon Namkoong (Jelastic, Inc.) Antoine Sutter (Red Hat),Kevin Sutter (IBM),Ruslan Synytsky (Jelastic, Inc.),Markus Winkler (oparco - open architectures & consulting)。Reza Rahman (个人) 以贡献者身份参与。
-
-
+本规范的第 8 版本是在 Java 社区过程下作为 JSR-366 创建的。该规范的专家小组工作通过 `http://javaee-spec.java.net` 和 `https://javaee.github.io/javaee-spec` 项目进行，旨在向 Java 社区提供透明度。JSR-366 专家小组的负责人为 Bill Shannon (Oracle) 和 Linda DeMichiel (Oracle)。专家小组包括以下成员：Florent Benoit (OW2), David Blevins (Tomitribe), Jeff Genender (Savoir Technologies), Antonio Goncalves (TmaxSoft), Jason Greene (Red Hat), Werner Keil Sabot-Durand (Red Hat), Kevin Keil (个人), Moon Namkoong (Jelastic, Inc.) Antoine Sutter (Red Hat), Kevin Sutter (IBM), Ruslan Synytsky (Jelastic, Inc.), Markus Winkler (oparco - open architectures & consulting)。Reza Rahman (个人) 以贡献者身份参与。
 
 本章提供了 Java™ 平台版 (Java EE™) 的概述。
-
 
 Java EE 平台架构元素所需的关系如图 EE.2-1 所示。请注意，此图显示的是元素的逻辑关系；并不意味着将元素物理性地划分到不同的机器、进程、地址空间或虚拟机中。
 
@@ -159,13 +69,11 @@ Java EE 平台架构元素所需的关系如图 EE.2-1 所示。请注意，此�
 
 ![](img/2d0d59290c8adb2789da0c25757ad1d3_23_0.png)
 
-### ### 图 EE.2-1 Java EE 架构图
+### 图 EE.2-1 Java EE 架构图
 
 后续章节描述了每种 Java EE 平台元素的要求。
 
-
 Java EE 6 规范引入了构文件的概念（参见第 EE.9 章，“配置文件”）。
-
 
 配置文件是针对特定类应用程序的 Java EE 平台配置。
 
@@ -173,12 +81,9 @@ Java EE 6 规范引入了构文件的概念（参见第 EE.9 章，“配置文�
 
 （注：原文中存在大量重复的段落，根据指令“不要重复输出原文”，此处仅保留核心含义的翻译并忽略重复部分。）
 
-
-
 Java EE™ 技术或 JavaServer™ Faces、Web 过滤器和 Web 事件监听器在本规范中统称为“Web 组件”。Web 应用由 Web 组件和 HTML 页面等数据组成。Web 组件在 Web 容器中执行。Web 服务器包含 Web 容器以及根据 Java EE 规范要求的其他协议支持、安全支持等。
 
 - 企业级 JavaBeans™ (EJB) 组件在支持事务的托管环境中执行。企业级豆通常包含 Java EE 应用程序的业务逻辑。企业级豆直接使用 SOAP/HTTP 协议提供 Web 服务。
-
 
 Java EE 服务器为符合规范的应用程序组件提供部署、管理和执行支持。根据组件对 Java EE 服务器的依赖关系，应用程序组件可以分为三类：
 
@@ -186,11 +91,9 @@ Java EE 服务器为符合规范的应用程序组件提供部署、管理和执
 - 在 Java EE 服务器上部署和管理，但加载到客户端机器执行的组件。这些组件包括 Web 资源，如 HTML 页面和嵌入在 HTML 页面中的 applet。
 - 部署和管理未完全由本规范定义的组件。应用程序客户端（Application Clients）属于此类。本规范的未来版本可能会完整定义应用程序客户端的部署和管理。请参阅第 EE.10 章节“应用程序客户端”获取有关应用程序客户端的描述。
 
-
 容器为 Java EE 应用程序组件提供运行时支持。容器为应用程序组件提供底层 Java EE API 的联邦视图。Java EE 应用程序组件绝不会与其他 Java EE 应用程序组件直接交互。它们使用容器的协议和方法相互交互以及与平台服务进行交互。在应用程序组件和 Java EE 服务之间引入容器，允许容器透明地注入组件所需的的服务，例如声明式事务管理、安全检查、资源池化和状态管理。
 
 典型的 Java EE 产品会为每种应用程序组件类型提供一个容器：应用程序客户端容器、applet 容器、Web 组件容器和企业级豆容器。
-
 
 本规范要求容器提供由 Java 平台标准版 v8 规范（Java SE）定义的 Java 兼容运行时环境。applet 容器可以使用 Java 插件提供此环境，也可以以原生方式提供。使用提供 JDK™1.1 API 的 applet 容器在本规范的范围之外。
 
@@ -200,30 +103,22 @@ Java EE 服务器为符合规范的应用程序组件提供部署、管理和执
 
 本规范定义了每个 Java EE 产品必须支持的一系列标准服务。下文描述了这些标准服务。Java EE 容器提供了应用程序组件访问这些服务的 API。本规范还描述了通过连接器到其他非 Java EE 应用程序系统（如主机系统和 ERP 系统）扩展 Java EE 服务的标准方法。
 
-
 Java EE 容器底层是其所属的服务器。Java EE 产品通常使用事务处理基础设施结合 Java 平台标准版（Java SE）技术来实现 Java EE 远端功能。Java EE 客户端功能通常基于 Java SE 技术构建。
-
 
 资源适配器（Resource Adapter）是一种系统级软件组件，通常实现与外部资源管理器的连接性。资源适配器可以通过实现 Java EE 标准 API 之一（例如 JDBC™ 驱动程序），或通过定义并实现连接到外部应用程序系统的连接器适配器来扩展 Java EE 平台的功能。资源适配器还可以提供完全本地的服务，可能与原生资源交互。资源适配器通过 Java EE 服务接口（Java EE SPI）与 Java EE 平台接口。使用 Java EE SPI 挂载到 Java EE 平台的资源适配器能够与所有 Java 产品工作。
 
-
 Java EE 平台需要一个通过 JDBC API 访问的数据库用于存储业务数据。该数据库可从 Web 组件、企业级豆和应用程序客户端访问。applet 则一定不能访问数据库。Java EE 产品提供者还必须为应用程序提供一个预配置的默认数据源。请参阅第 EE.19 节“默认数据源”。
-
 
 Java EE 标准服务包括以下内容（在本文后续详细说明）。其中某些标准服务实际上由 Java SE 提供。
 
-
 HTTP 客户端 API 由 `java.net` 包定义。HTTP 服务端 API 由 servlet、JSP 接口定义，Web 服务是 Java EE 的一部分。
 
-
 在 SSL 协议上使用 HTTP 协议的支持与 HTTP 具有相同的客户端和服务 API。
-
 
 Java 事务 API 由两部分组成：
 
 - 容器和应用程序组件用于划分事务边界的应用级接口。
 - Java EE 级别用于事务管理器与资源管理器之间的接口。
-
 
 RMI-IIOP 子系统由 API 组成，允许使用独立于底层协议的 RMI 风格编程，以及支持 Java 原生 RMI 协议（JRMP）和 CORBA IIOP 协议的实现。Java EE 应用可以使用支持 IIOP 协议的 RMI-IIOP 访问符合 RMI 的 CORBA 服务（详情见 RMI-IIOP 规范）。此类 CORBA 服务通常由 Java EE 产品之外的组件定义，通常位于旧系统中。只有 Java EE 应用程序客户端被要求直接使用 RMI-IIOP API 定义自己的 CORBA 服务。通常在访问其他 CORBA 对象时会使用此类回调对象。
 
@@ -231,98 +126,104 @@ Java EE 产品可以使用 IIOP 协议导出企业级豆组件，并使用 IIOP 
 
 对 CORBA 的支持（包括对 IIOP 和 Java IDL 的使用）在 Java EE 8 中为建议可选。请参阅第 EE.1.3 节“精简 Java 技术”。
 
-
 Java IDL 允许 Java EE 应用程序组件使用 IIOP 协议调用外部 CORBA 对象。这些 CORBA 对象可以用任何语言编写，并通常位于 Java EE 产品之外。Java EE 应用可以使用 Java IDL 作为客户端，但只有 Java EE 应用程序客户端被要求可以直接使用 Java IDL 提供自身的 CORBA 服务。
-
-
-
-
-
 
 JDBC API 是用于连接关系型数据库系统的 API。JDBC API 包含两个部分：用于应用程序组件访问数据库的应用程序级接口，以及用于将 JDBC 驱动程序附加到 Java EE 平台的服务提供接口。Java EE 产品不要求支持该服务接口。相反，JDBC 驱动程序应该被封装为资源适配器（resource adapters），使用 Connector API 的功能与 Java EE 产品建立接口。JDBC API 包含在 Java SE 中，但本规范对 JDBC 设备驱动程序包含了额外要求。
 
-
 Java Persistence API（Java 持久 API）是用于持久化和对象/关系映射的标准 API。它为应用程序开发者提供了一种对象/关系映射机制，使其可以使用 Java 领域模型来管理关系型数据库。Java EE 要求支持 Java Persistence API。它也可以用于 Java SE 环境。
-
 
 Java Message Service（Java 消息服务）是一种用于消息传递的标准 API，支持可靠的点对点消息以及发布/订阅模型。本规范要求 JMS 提供者同时实现点对点消息和发布/订阅消息。Java EE 提供者还必须提供一个预配置的
 
 
+
+# JNDI API
+
 JNDI API 是用于命名和目录访问的标准 API。JNDI API 包含两个部分：用于应用程序组件访问命名和目录服务的应用程序级接口，以及用于附加命名和目录服务提供者的服务提供接口。JNDI API 包含在 Java SE 中，但本规范定义了额外要求。
 
+# JavaMail API
 
 许多互联网应用程序都需要具备发送电子邮件通知的能力，因此 Java EE 平台包含了 JavaMail API 以及一个 JavaMail 服务提供者，该者允许应用程序组件发送互联网邮件。JavaMail API 包含两个部分：用于应用程序组件发送邮件的应用程序级接口，以及位于 Java EE SPI 级别的服务提供者接口。
 
+# JAF
 
 JAF 提供了一个处理不同 MIME 类型、源自不同格式和位置的数据的框架。JavaMail API 使用了 JAF API。JAF API 包含在 Java SE 中，因此对 Java EE 应用程序可用。
 
+# JAXP 与 StAX
 
 Java™ API for XML Processing (JAXP) 提供对行业标准 XML 和 DOM 解析 XML 文档的支持，以及对 XSLT 引擎的支持。XML 流式 API (StAX) 提供了用于 XML 的拉取解析 API。JAXP 和 StAX API 包含在 Java SE 中，因此对 Java EE 应用程序可用。
 
+# Connector 架构
 
 Connector 架构是一种 Java EE SPI，允许支持访问企业信息系统（EIS）的资源适配器被插入到任何 Java EE 产品中。Connector 架构定义了 Java EE 服务器与资源适配器之间系统级合约的标准。标准合约包括：
 
-- 连接管理合约，允许 Java EE 服务器池化到底层 EIS 的连接，并允许应用程序组件连接到 EIS。这导致了一个可扩展的应用程序环境，可以支持大量需要访问 EIS 系统的客户端。
-- 事务管理器与 EIS 之间的事务管理合约，支持对 EIS 资源管理器的事务性访问。该合约允许 Java EE 服务器使用事务管理器跨跨多个资源管理器的事务。它还支持在 EIS 资源管理器内部管理的事务，而无需涉及外部事务管理器。
-## JAVA EE STANDARD SERVICES
+- **连接管理合约**：允许 Java EE 服务器池化到底层 EIS 的连接，并允许应用程序组件连接到 EIS。这导致了一个可扩展的应用程序环境，可以支持大量需要访问 EIS 系统的客户端。
+- **事务管理合约**：事务管理器与 EIS 之间的事务管理合约，支持对 EIS 资源管理器的事务性访问。该合约允许 Java EE 服务器使用事务管理器跨多个资源管理器的事务。它还支持在 EIS 资源管理器内部管理的事务，而无需涉及外部事务管理器。
+- **安全合约**：启用对 EIS 的安全访问。该合约为安全应用程序环境提供支持，减少了 EIS 的安全威胁并保护了 EIS 管理的价值信息资源。
+- **线程管理合约**：允许资源适配器将工作委托给其他线程，并允许应用程序服务器管理线程池。资源适配器可以控制工作线程使用的安全上下文和事务上下文。
+- **消息传递合约**：允许资源适配器向消息驱动豆（message driven beans）传递消息的合约，取决于用于传递消息的具体消息样式、消息语义和消息基础设施。该合约还作为标准消息提供者可插性合约，允许消息提供者作为资源适配器插入到任何 Java EE 服务器中。
+- **事务上下文传播合约**：允许资源适配器将导入的事务上下文传播到 Java EE 服务器的合约，使其与服务器以及任何应用程序组件的交互成为导入事务的一部分。该合约保留了导入事务的 ACID（原子性、一致性、隔离性、持久性）属性。
+- **通用命令接口合约**：一个可选的合约，在应用程序程序和资源适配器之间提供通用的命令接口。
 
-- 安全合约，启用对 EIS 的安全访问。该合约为安全应用程序环境提供支持，减少了 EIS 的安全威胁并保护了 EIS 管理的价值信息资源。
-- 线程管理合约允许资源适配器将工作委托给其他线程，并允许应用程序服务器管理线程池。资源适配器可以控制工作线程使用的安全上下文和事务上下文。
-- 允许资源适配器向消息驱动豆（message driven beans）传递消息的合约，取决于用于传递消息的具体消息样式、消息语义和消息基础设施。该合约还作为标准消息提供者可插性合约，允许消息提供者作为资源适配器插入到任何 Java EE 服务器中。
-- 允许资源适配器将导入的事务上下文传播到 Java EE 服务器的合约，使其与服务器以及任何应用程序组件的交互成为导入事务的一部分。该合约保留了导入事务的 ACID（原子性、一致性、隔离性、持久性）属性。
-- 一个可选的合约，在应用程序程序和资源适配器之间提供通用的命令接口。
-
+# Java EE 安全服务
 
 Java™ Authentication 使服务能够对用户进行身份验证并强制访问控制。它实现了标准可插身份验证模块（PAM）框架的 Java 技术版本，并支持基于用户的授权。容器 Java™ 授权提供者 (JACC) 定义了 Java EE 应用程序服务器与授权提供者之间的合约，允许自定义授权服务提供者插入到任何 Java EE 产品中。容器 Java™ 认证服务接口 (JASPIC) 定义了一个 SPI，通过该 SPI，身份提供者实现的消息认证机制可以集成在客户端或服务器的消息处理容器或运行时。Java EE Security API 利用 JASPIC，但为 Web 应用程序用户的身份验证提供了更易用的 SPI，并定义了用于认证和授权的身份存储 API。
 
+# Web 服务支持
 
 Java 为客户端以及服务端点均提供完全支持。多种 Java 技术共同工作以提供 Web 服务。Java Web Services API (JAX-WS) 和 Java XML RPC API (JAX-RPC) 都支持使用 SOAP/HTTP 协议的服务调用。JAX-WS 包含在 Java SE 中，是 Web 服务的主要 API，是 JAX-RPC 的继任者。JAX-WS 丰富的 Web 服务功能，支持多种绑定/协议。当使用 WS-I Basic Profile 限制的 HTTP 之上的 SOAP 1.1 协议时，JAX-WS 和 JAX-RPC 是完全互操作的。JAX-RPC 在 EE 7 中已变为可选。参见 EE6.1.3，“Pruned Java Technologies”。
 
-JAX-WS 和 XML 绑定架构 (JAXB) 定义了 Java 类与 SOAP 调用中 XML 之间的映射，并支持 100% 的 XML Schema。JAXB 包含在 Java SE 中。带附件的 SOAP API (SAAJ) 也包含在 Java SE 中，提供了对底层 SOAP 消息的支持。Web Services for EE 规范完整定义了 Java EE 中 Web 服务客户端和服务端点的部署，以及使用企业豆实现服务端点。Web Services Metadata规范定义了 Java 注解，使开发 Web 服务变得更容易。XML 注册 API (JAXR) 提供了对 XML 注册服务器的客户端访问。从 EE 7 开始支持已变为可选。参见 EE6.1.3，“Pruned Java Technologies”。
+JAX-WS 和 XML 绑定架构 (JAXB) 定义了 Java 类与 SOAP 调用中 XML 之间的映射，并支持 100% 的 XML Schema。JAXB 包含在 Java SE 中。带附件的 SOAP API (SAAJ) 也包含在 Java SE 中，提供了对底层 SOAP 消息的支持。Web Services for EE 规范完整定义了 Java EE 中 Web 服务客户端和服务端点的部署，以及使用企业豆实现服务端点。Web Services Metadata 规范定义了 Java 注解，使开发 Web 服务变得更容易。XML 注册 API (JAXR) 提供了对 XML 注册服务器的客户端访问。从 EE 7 开始支持已变为可选。参见 EE6.1.3，“Pruned Java Technologies”。
 
-JSON Processing API (JSON-P) 提供了一种处理 JSON 文本（解析、生成、转换和查询）的便捷方法。JSON 绑定 API (JSON-B) 提供了一种在 JSON 文本和对象之间转换的便捷方法。WebSocket Java API (WebSocket) 是创建 WebSocket 应用程序的标准 API。
+# JSON 处理与绑定
+
+JSON Processing API (JSON-P) 提供了一种处理 JSON 文本（解析、生成、转换和查询）的便捷方法。JSON 绑定 API (JSON-B) 提供了一种在 JSON 文本和对象之间转换的便捷方法。
+
+# WebSocket
+
+WebSocket Java API (WebSocket) 是创建 WebSocket 应用程序的标准 API。
+
+# JAX-RS
 
 RESTful Web Services API (JAX-RS) 为使用 REST 风格的 Web 服务提供支持。RESTful 服务更符合 Web 的设计风格，并且可以使用各种编程语言轻松访问。JAX-RS 提供了一个编写 Web 服务的简单高级 API，以及一个用于控制 Web 服务交互细节的低级 API。
 
+# Concurrency Utilities for Java EE
 
 Concurrency Utilities for Java EE 是一种标准 API，通过以下类型为 Java EE 应用程序组件提供异步能力：
 
-Java EE 8, Final Release
+- 受管理的执行服务
+- 受管理的调度执行服务
+- 受管理的线程工厂
+- 上下文服务
 
-
-
-
-对象：受管理的执行服务、受管理的调度执行服务、受管理的线程工厂以及上下文服务。
-
+# Java 批处理 API
 
 Java 批处理 API (Batch) 为批处理应用程序提供了一种编程模型以及用于调度和执行作业的运行时。
 
+# 管理与部署规范
 
 Java 2 平台企业版管理规范（Java 2 Platform, Enterprise Edition Management Specification）定义了使用特殊管理 Bean 管理 Java EE 服务器的 API。Java™ 管理扩展（JMX）API 也用于提供某些管理支持。
 
-
 Java 2 平台企业版部署规范（Java 2 Platform, Enterprise Edition Deployment Specification）定义了部署工具与 Java EE 产品之间的合约。Java EE 产品提供运行在部署工具中的插件组件，并允许部署工具提供这些插件组件所使用的服务。从 Java EE 7 开始，对部署规范的支持已变为可选。参见第 EE.6.1.3 节，“精简的 Java 技术”。
 
-## EE.2.8 互操作性
+# EE.2.8 互操作性
 
 描述的许多 API 提供了与非 Java EE 平台组件（如外部 Web 服务或 CORBA 服务）的互操作性。
+
 图 EE.2-2 展示了 Java EE 平台的互操作性设施。
+
 （箭头的方向表示组件之间的客户端/服务器关系。）
 
 ![](img/2d0d59290c8adb2789da0c25757ad1d3_35_0.png)
 
 图 EE.2-2 Java EE 互操作性
 
-## EE.2.9 产品需求的灵活性
+# EE.2.9 产品需求的灵活性
 
 本规范并不要求 Java EE 产品必须由单个程序、单个服务器甚至单台机器实现。通常情况下，本规范并不描述机器、服务器或进程之间服务或功能的划分。只要满足本规范中的要求，Java EE 产品提供者可以根据其合适情况对功能进行任何划分。Java EE 产品必须能够部署按照本规范描述的 EE 语义执行的应用程序组件。
-
-
 
 高级 Java EE 产品将支持在流行浏览器之一中使用 Java 插件的 Applet，支持在各自的 Java 虚拟机中运行应用程序客户端，并提供一个同时支持 Web 组件和企业豆（Enterprise Beans）的单一服务器。高级 EE 产品可能会将服务器组件拆分为多个服务器，每个服务器都可以在一组机器上进行分布式部署和负载均衡。虽然此类机器可能位于企业内部或公有云中，但本规范并不规定或排除任何此类配置。
 
 可能存在多种 Java EE 配置和实现，它们都符合本规范的要求。一个可移植的 Java EE 应用程序在成功部署到这些产品任一中都能正常运行。
-
 
 本规范不包含对 Java EE 产品封装的要求。Java EE 产品可能通过分发介质提供、通过网络下载、或作为仅在网络上提供的服务（例如）。Java EE 产品必须包含本规范所引的所有 API 的实现。这些实现可能依赖于未包含在 Java EE 产品中的其他软件或服务。客户可能需要产品与其他软件或服务结合或配置，以满足本规范的要求。Java EE 产品的文档必须完整描述所有所需的软件和配置。
 
@@ -332,15 +233,15 @@ Java 2 平台企业版部署规范（Java 2 Platform, Enterprise Edition Deploym
 
 例如，本规范要求应用程序可以使用数据库。如果 Java EE 产品要求单独安装数据库服务器，并要求配置 Java EE 产品使用该数据库，则此类配置必须在应用程序部署之前完成。这确保了应用程序的运行环境包含了所有所需的服务。
 
-
 本规范描述了所有 Java EE 产品可用的最小设施集。Java EE 配置文件可能包含 EE.9 节“配置文件”中所描述的这些部分或全部内容。大多数 Java EE 产品将提供超出本规范最小要求的设施。特别是，它还包含了本规范未指定的可选功能。Java EE 产品可以自由地以特定实现的方式实现本规范未指定的接口。
 
 可移植的 Java EE 应用程序不会使用任何平台扩展。使用非可移植扩展的应用程序可移植性较低。取决于所使用的设施，可移植性的损失可能是微小的，也可能是巨大的。我们期望 Java EE 产品在质量各个方面（如性能、可扩展性、健壮性、可用性和安全性）产生广泛差异并激烈竞争。在某些情况下，本规范要求最低级别的的服务。
 
+# EE.2.12 角色
 
 本节描述了典型的 Java 平台企业版角色。在实际实例中，组织可能会不同的划分角色功能，以匹配该组织的应用程序开发和部署工作流。本规范的后续章节将更详细地描述角色。
 
-
+## EE.2.12.1 Java EE 产品提供者
 
 Java EE 产品提供者是 Java EE 产品的实现者和供应商，该产品包含了组件容器、Java EE平台 API 以及本规范定义的其他功能。产品提供者通常是应用服务器厂商、Web 服务器厂商、数据库系统厂商或操作系统厂商。提供者经常基于现有基础设施进行实现。
 
@@ -348,22 +249,21 @@ Java EE 产品提供者必须提供本规范指定的应用程序组件到网络
 
 Java EE 产品提供者必须提供应用程序部署和管理工具。部署工具允许部署者（参见 EE.2.12.4 节，“部署者”）在 Java EE 产品上部署应用程序组件。管理工具允许系统管理员（参见 EE.2.12.5 节，“系统管理员”）管理 Java EE 产品以及部署在 Java EE 产品上的应用程序。这些工具的形式不受规范规定。
 
+## EE.2.12.2 应用程序组件提供者
 
 应用程序组件提供者有多个角色，例如 HTML 文档设计师、程序员和企业豆开发者。这些角色使用工具产生 Java EE 应用程序和组件。
 
+## EE.2.12.3 应用程序装配者
 
 应用程序装配者获取由组件提供者开发的组件，并将其组装完整的 Java EE 应用程序，以企业归档文件 (.ear) 的交付。应用程序装配者通常会使用平台提供者或工具提供者提供的 GUI 工具。应用程序装配者负责提供描述外部依赖的装配指令，部署者在部署过程中需要解析这些依赖。
 
-
-
-
-
+## EE.2.12.4 部署者
 
 部署器负责将客户端应用程序、Web应用程序以及 Enterprise JavaBeans 组件部署到特定的运行环境中。部署器使用 Java EE 产品提供商提供的工具来执行部署任务。部署通常是一个三阶段的过程：
 
-1. 在**安装**期间，部署器将介质移动到服务器，生成额外的特定容器的类和接口（以便容器能够在运行时管理应用程序组件），并将应用程序组件以及额外的类和接口安装到适当的 Java EE 组件中。
-2. 在**配置**期间，解析由应用程序组件提供者（Application Component Provider）声明的外部依赖，并解析由应用程序装配器（Application Assembler）定义的应用程序组装指令。例如，部署器负责管理由应用程序装配器针对目标环境中存在的用户组和账户定义的安全角色。
-3. 最后，部署器启动新安装并配置的应用程序的**执行**。
+1. **安装**：部署器将介质移动到服务器，生成额外的特定容器的类和接口（以便容器能够在运行时管理应用程序组件），并将应用程序组件以及额外的类和接口安装到适当的 Java EE 组件中。
+2. **配置**：解析由应用程序组件提供者（Application Component Provider）声明的外部依赖，并解析由应用程序装配器（Application Assembler）定义的应用程序组装指令。例如，部署器负责管理由应用程序装配器针对目标环境中存在的用户组和账户定义的安全角色。
+3. **执行**：最后，部署器启动新安装并配置的应用程序的执行。
 
 在某些情况下，经过特殊的部署器可以在部署时自定义应用程序组件的业务逻辑。例如，使用 Java EE 产品提供的工具，部署器可以提供简单的应用程序代码来封装企业 Bean 的业务方法，或自定义 JSP 或 JSF 页面的外观。
 
@@ -371,39 +271,49 @@ Java EE 产品提供者必须提供应用程序部署和管理工具。部署工
 
 例如，在云部署的情况下，部署器负责配置应用程序运行在云环境中。部署器将把应用程序安装到云环境中，配置其外部依赖，并可能处理其所需资源的供应方面。
 
+## EE.2.12.5 系统管理员
 
 系统管理员负责企业计算和网络基础设施的配置与管理。系统管理员还负责监督已部署 Java EE 应用程序的运行状况。系统管理员通常使用 Java EE 产品提供提供的提供的监控和管理工具来完成这些任务。
 
 例如，在云场景下，系统管理员负责安装、配置、管理和维护云环境，包括提供给环境中运行应用程序的资源。
 
+## EE.2.12.6 工具提供者
 
 工具提供者提供用于开发和打包应用程序组件的工具。预计会有多种工具，对应于 Java EE 平台支持的各种应用程序组件类型。平台无关的工具可以用于从开发到应用程序部署，以及应用程序服务器的管理和监控的所有阶段。
 
-## EE.2.12.7 系统组件提供者 (System Component Provider)
+## EE.2.12.7 系统组件提供者
 
-系统组件提供者可能提供各种系统级组件。连接器架构（Connector Architecture）定义了用于提供多种类型资源适配器的主要 API。这些资源适配器可以连接到多种类型的现有企业信息系统，包括数据库和消息系统。另一种类型的系统组件是根据《容器 Java 授权服务提供者合约》（Java Authorization Service Provider Contract for Containers定义的定义的策略提供者。
+系统组件提供者可能提供各种系统级组件。连接器架构（Connector Architecture）定义了用于提供多种类型资源适配器的主要 API。这些资源适配器可以连接到多种类型的现有企业信息系统，包括数据库和消息系统。另一种类型的系统组件是根据《容器 Java 授权服务提供者合约》（Java Authorization Service Provider Contract for Containers）定义的策略提供者。
 
+# EE.2.13 Java EE 合约
 
 本节描述了实现完整 Java EE 平台的 Java EE 产品提供者必须满足的 Java 平台企业版（Enterprise Edition）合约。Java EE 配置文件可能包含 EE.9 章“配置文件”（Profiles）中描述的部分或全部功能。
 
+## EE.2.13.1 Java EE API
 
 Java EE API 定义了 Java EE 应用程序组件与 Java EE 平台之间的合约。合约规定了运行时和部署接口。
 
 Java EE 产品提供者必须以支持本规范中描述的语义和策略的方式实现 Java EE API。应用程序组件提供者提供符合这些 API 和策略的组件。
 
+## EE.2.13.2 Java EE SPI
 
-Java EE 服务提供者接口 (SPIs) 定义了 Java EE 平台与可能插入 Java EE 产品的服务提供者之间的合约。连接器 API 定义了用于将资源适配器集成到 Java EE 应用程序服务器的服务提供者接口。实现连接器 API 的资源适配器组件被称为连接器（Connectors）。Java EE  API 定义了将安全授权机制集成到 Java EE 应用程序服务器的服务提供者接口。
+Java EE 服务提供者接口 (SPIs) 定义了 Java EE 平台与可能插入 Java EE 产品的服务提供者之间的合约。连接器 API 定义了用于将资源适配器集成到 Java EE 应用程序服务器的服务提供者接口。实现连接器 API 的资源适配器组件被称为连接器（Connectors）。Java EE API 定义了将安全授权机制集成到 Java EE 应用程序服务器的服务提供者接口。
 
 Java EE 产品提供者必须以支持本规范中描述的语义和策略的方式实现 Java EE SPI。服务提供者组件提供者（例如连接器提供者）应该提供符合这些 SPI 和策略的组件。
 
+## EE.2.13.3 网络协议映射
 
 本规范定义了应用程序组件到行业标准网络协议的映射。该映射允许未安装 Java EE 产品技术的系统访问应用程序组件。有关互操作性所需的网络协议支持的详细信息，请参阅 EE7.7 章“互操作性”（Interoperability）。
 
 Java EE 产品提供者被要求在行业标准协议上发布已安装的应用程序组件。本规范定义了 servlet 和 JSP 页面到 HTTP 和 HTTPS 协议的映射，以及 EJB 组件通过 IIOP 和 SOAP 协议的映射。
 
+## EE.2.13.4 部署描述符与注解
 
 部署描述符和 Java 注解用于将应用程序组件的需求告知部署器。部署描述符和类文件注解是应用程序组件提供者或装配器与部署器之间的合约。部署器需要在组件的部署描述符或通过类文件注解指定应用程序组件的外部资源需求、安全需求、环境参数等。Java EE 产品提供者被要求提供一种部署工具，用于解释 Java EE 部署描述符和类注解，并允许将组件的需求映射到特定 Java EE 产品和环境的能力。
 
+# EE.2.14 历史版本变更
+
+## J2EE 1.3
 
 J2EE 1.3 规范通过额外的企业集成功能扩展了 J2EE 平台。连接器 API 支持与外部企业信息系统的集成。现在需要 JMS 提供者。JAXP API 提供处理 XML 文档的支持。JAAS API 为连接器 API 提供安全支持。EJB 规范现在要求支持使用 IIOP 协议的互操作。
 
@@ -412,118 +322,77 @@ EJB 规范发生了重大变化。EJB 规范具有新的容器管理持久化模
 其他 J2EE API 也进行了更新。详细信息请参见各个 API 规范。最后，J2EE 1.3 要求支持 J2SE 1.3。
 
 
-J2EE 1.4 的主要重点是支持 Web 服务。JAX-RPC 和 SAAJ API 提供了基本的 Web 服务互操作支持。Java EE Web 服务规范描述了提供和使用 Web 服务的 Java EE 应用程序的打包和部署要求。EJB 规范也为了支持使用无状态 Bean 实现 Web 服务。JAXR API 支持访问注册表。
 
-其他多个 API 被添加到 J2EE 1.4 中。Java EE 管理和部署 API 增强了对 Java EE 产品的工具支持。JMX API 支持 Java EE 管理 API。Java 容器授权合约为安全提供者提供了一个 SPI。
+# Java EE 平台演进与安全架构
 
+## J2EE 1.4
 
+J2EE 1.4 的主要重点是支持 Web 服务。`JAX-RPC` 和 `SAAJ` API 提供了基本的 Web 服务互操作支持。Java EE Web 服务规范描述了提供和使用 Web 服务的 Java EE 应用程序的打包和部署要求。`EJB` 规范也为了支持使用无状态 Bean 实现 Web 服务。`JAXR` API 支持访问注册表。
 
+其他多个 API 被添加到 J2EE 1.4 中。Java EE 管理和部署 API 增强了对 Java EE 产品的工具支持。`JMX` API 支持 Java EE 管理 API。Java 容器授权合约为安全提供者提供了一个 SPI。
 
-此 J2EE 平台规范的变更包括支持独立于任何应用程序部署类库，以及将部署描述符 DTD 转换为 XML Schema（Schemas）。
+此 J2EE 平台规范的变更包括支持独立于任何应用程序部署类库，以及将部署描述符 DTD 转换为 XML Schema。
+
 其他 J2EE API 也得到了增强。更多详细信息，请参阅所引用的每个规范。
-
 
 随着此版本的发布，平台有了新名称——Java 平台企业版（Java Platform, Enterprise Edition），简称为 Java EE。这个新名称消除了令人困惑的“2”，同时在简短的名称中强调了它是一个 Java 平台。之前的版本仍使用旧名称“J2EE”指代。
 
-Java EE 5 的重点是易于开发。为了简化开始使用 Java EE 的程序员或开发中小型应用程序程序员的开发过程，Java EE 5 大量使用了 JSE 5.0 引入的 Java 语言注解（Annotations）。在许多情况下，注解减少或消除了处理 Java EE 部署描述符的需求。即使是大型应用程序也能从注解提供的简化中获益。
+## Java EE 5
 
-注解的主要用途之一是指定向 Java EE 组件中注入资源和其他依赖项。注入技术增强了 JNDI 查找能力，为应用程序提供了一种新的简化模型，以从运行环境中获取所需的资源。注入还与部署描述符配合，允许部署器自定义或覆盖应用程序源代码中的资源设置。
+Java EE 5 的重点是易于开发。为了简化开始使用 Java EE 的程序员或开发中小型应用程序程序员的开发过程，Java EE 5 大量使用了 JSE 5.0 引入的 Java 语言注解。在许多情况下，注解减少或消除了处理 Java EE 部署描述符的需求。即使是大型应用程序也能从注解提供的简化中获益。
+
+注解的主要用途之一是指定向 Java EE 组件中注入资源和其他依赖项。注入技术增强了 `JNDI` 查找能力，为应用程序提供了一种新的简化模型，以从运行环境中获取所需的资源。注入还与部署描述符配合，允许部署器自定义或覆盖应用程序源代码中的资源设置。
 
 通过提供更好的默认值，注解的使用更加有效。更好的行为和更好的配置允许应用程序在大多数情况下（通过使用注解或部署描述符）获得它们最想要的行为。当默认值不是应用程序所希望的时，可以使用简单的注解来指定所需的行为或配置。
 
-注解与更好的默认值的结合极大地简化了使用企业级技术的应用程序以及定义或使用 Web 服务的应用程序的开发。企业豆（Enterprise beans）的开发现在变得异常简单。使用由 Web 服务元数据规范（Web Services Metadata specification）定义的注解，Web 服务开发变得更加容易。
+注解与更好的默认值的结合极大地简化了使用企业级技术的应用程序以及定义或使用 Web 服务的应用程序的开发。企业豆的开发现在变得异常简单。使用由 Web 服务元数据规范定义的注解，Web 服务开发变得更加容易。
 
-Web 服务领域继续以快速的速度演进。为了提供最新的 Web 服务支持，JAX-RPC 技术已演进为 JAX-WS 技术，它大量利用 JAXB 技术将 Java 对象绑定到 XML 数据。JAX-WS 和 JAXB 对于该版本的平台来说都是新特性。
+Web 服务领域继续以快速的速度演进。为了提供最新的 Web 服务支持，`JAX-RPC` 技术已演进为 `JAX-WS` 技术，它大量利用 `JAXB` 技术将 Java 对象绑定到 XML 数据。`JAX-WS` 和 `JAXB` 对于该版本的平台来说都是新特性。
 
-Java EE 5 的主要新增包括简化 Web 开发的 JSTL 和 JSF 技术，以及由 EJB 3.0 专家组开发的 Java 持久化 API（Java Persistence API），它极大简化了 Java 对象到数据库的映射。
+Java EE 5 的主要新增包括简化 Web 开发的 `JSTL` 和 `JSF` 技术，以及由 `EJB 3.0` 专家组开发的 Java 持久化 API，它极大简化了 Java 对象到数据库的映射。
 
-小型新增包括用于 XML 解析的 StAX API。之前版本的大多数 API 都经过了中等的改进。
+小型新增包括用于 XML 解析的 `StAX` API。之前版本的大多数 API 都经过了中等的改进。
 
+## Java EE 6
 
-Java EE 6 继续延续 Java EE 5 对“开发便利”的关注。Java EE 6 引入的主要改进之一是上下文与依赖注入（CDI）技术，它为“托管豆”（managed beans）的依赖注入和生命周期管理提供了一个统一的框架。
+Java EE 6 继续延续 Java EE 5 对“开发便利”的关注。Java EE 6 引入的主要改进之一是上下文与依赖注入（`CDI`）技术，它为“托管豆”的依赖注入和生命周期管理提供了一个统一的框架。
 
-EE 6 托管豆规范定义了一系列 EE 托管对象的共性，范围从基础托管豆扩展到 EJB 组件。
+EE 6 托管豆规范定义了一系列 EE 托管对象的共性，范围从基础托管豆扩展到 `EJB` 组件。
 
-此版本引入的 Bean 验证（Bean Validation）规范为托管对象的验证提供了一种设施。Bean 验证被集成到 Java 持久化 API 中，它为 JPA 实体的验证提供了自动化设施。
+此版本引入的 Bean 验证规范为托管对象的验证提供了一种设施。Bean 验证被集成到 Java 持久化 API 中，它为 `JPA` 实体的验证提供了自动化设施。
 
-Java EE 6 将 JAX-RS API 作为 Java EE 平台的强制技术。JAX-RS 是用于开发根据表述状态转换（REST）架构风格构建的 Web  API。
+Java EE 6 将 `JAX-RS` API 作为 Java EE 平台的强制技术。`JAX-RS` 是用于开发根据表述状态转换（`REST`）架构风格构建的 Web API。
 
-Java EE 6 还引入了 Java EE Web 配置文件（Web Profile），这是 Java EE 平台第一个新配置文件。
-
+Java EE 6 还引入了 Java EE Web 配置文件，这是 Java EE 平台第一个新配置文件。
 
 自成立以来，Java EE 平台一直旨在通过其基于容器的模型和资源访问的抽象，将开发者从常见的基础任务中解放出来。在最近的发布中，平台大幅简化了访问容器服务的 API，同时扩大了服务的范围。在本次发布中，我们继续改进简化的方向，同时扩展 Java EE 平台的范围，以涵盖 Web 领域的新兴技术。
 
-Java EE 7 对 Web标准的最新进展提供了原生支持，包括 WebSockets 和 JSON，这些技术为 Java EE 中的 HTML 5 支持提供了基础。Java EE 7 还增加了由 JAX-RS 2.0 定义的现代 HTTP 客户端 API。
+## Java EE 7
 
-Java EE 7 的新特性还包括 Batch API，它为批处理应用程序提供了编程模型以及一个用于调度和执行作业的运行时；以及并发工具类（Concurrency Utilities），它提供了托管执行器服务、调度执行器和服务线程工厂。
+Java EE 7 对 Web 标准的最新进展提供了原生支持，包括 `WebSockets` 和 `JSON`，这些技术为 Java EE 中的 `HTML 5` 支持提供了基础。Java EE 7 还增加了由 `JAX-RS 2.0` 定义的现代 HTTP 客户端 API。
 
-通过提供更好的默认值，注解的使用更加有效。更好的行为和更好的配置允许应用程序在大多数情况下（通过使用注解或部署描述符）获得它们最想要的行为。当默认值不是应用程序所希望的时，可以使用简单的注解来指定所需的行为或配置。
+Java EE 7 的新特性还包括 `Batch API`，它为批处理应用程序提供了编程模型以及一个用于调度和执行作业的运行时；以及并发工具类，它提供了托管执行器服务、调度执行器和服务线程工厂。
 
-注解与更好的默认值的结合极大地简化了使用企业级技术的应用程序以及定义或使用 Web 服务的应用程序的开发。企业豆的开发现在变得异常简单。使用由 Web 服务元数据规范定义的注解，Web 服务开发变得更加容易。
+## Java EE 8
 
-Web 服务领域继续以快速的速度演进。为了提供最新的 Web 服务支持，JAX-RPC 技术已演进为 JAX-WS 技术，它大量利用 JAXB 技术将 Java 对象绑定到 XML 数据。JAX-WS 和 JAXB 对于该版本的平台来说都是新特性。
+Java EE 8 继续关注 Java EE 7 的现代 Web 应用并扩大此类应用的范围。Java EE 8 引入了 JSON 绑定 API（`JSON-B`），用于映射 JSON 文本和 Java 对象，基于 Java EE 7 引入的 JSON 处理 API（`JSON-P`）。处理 API 本身已更新以反映额外的 JSON 标准。`Servlet` 通过增加对 `HTTP/2` 协议的支持而经历了重大增强。`JAX-RS` 增加了对服务器发送事件的支持，并基于 Java 8 增加的并发功能引入了响应式客户端 API。新的 Java EE 安全 API 为 Web 模块的验证和授权提供了增强支持，并引入了访问身份存储的 API。Bean 验证设施已更新以反映 SE 8 中的改进并扩展验证对象的范围。虽然此版本中 `CDI` 的重点是通过引入引导启动 API 将其范围扩展到 Java EE 之外，但 `CDI` 也包含了对事件的处理和对 SE 8 特性的对齐。
 
-Java EE 5 的主要新增包括简化 Web 开发 JSTL 和 JSF 技术，以及由 EJB 3.0 专家组开发的 Java 持久化 API，它极大简化了 Java 对象到数据库的映射。
+## 安全需求
 
-小型新增包括用于 XML 解析的 StAX API。之前版本的大多数 API 都经过了中等的改进。
+- **机密性或数据隐私**：用于确保信息仅对授权访问该信息的用户可用的手段。
+- **不可否认性**：用于证明用户执行了某些操作，且该用户在合理范围内无法否认执行过该操作的手段。
+- **审计**：用于捕获防篡改的安全事件记录的手段，目的是评估安全策略和机制的有效性。
 
-Java EE 6 继续延续 Java EE 5 对“开发便利”的关注。Java EE 6 引入的主要改进之一是上下文与依赖注入（CDI）技术，它为“托管豆”的依赖注入和生命周期管理提供了一个统一的框架。
+本章规定了 Java EE 平台需求如何满足安全需求，并识别了可能由 Java EE 产品提供者满足的需求。最后，EE.3.7 节“未来方向”简要提到了本规范未来版本中考虑的问题。
 
-EE 6 托管豆规范定义了一系列 EE 托管对象的共性，范围从基础托管豆扩展到 EJB 组件。
+## 安全行为示例
 
-此版本引入的 Bean 验证规范为托管对象的验证提供了一种设施。Bean 验证被集成到 Java 持久化 API 中，它为 JPA 实体的验证提供了自动化设施。
-
-Java EE 6 将 JAX-RS API 作为 Java EE 平台的强制技术。JAX-RS 是用于开发根据表述状态转换（REST）架构风格构建的 Web API。
-
-Java EE 6 还引入了 Java EE Web 配置文件，这是 Java EE 平台第一个新配置文件。自成立以来，Java EE 平台一直旨在通过其基于容器的模型和资源访问的抽象，将开发者从常见的基础任务中解放出来。在最近的发布中，平台大幅简化了访问容器服务的 API，同时扩大了服务的范围。在本次发布中，我们继续改进简化的方向，同时扩展 Java EE 平台的范围，以涵盖 Web 领域的新兴技术。
-
-Java EE 7 对 Web标准的最新进展提供了原生支持，包括 WebSockets 和 JSON，这些技术为 Java EE 中的 HTML 5 支持提供了基础。Java EE 7 还增加了由 JAX-RS 2.0 定义的现代 HTTP 客户端 API。
-
-Java EE 7 的新特性还包括 Batch API，它为批处理应用程序提供了编程模型以及一个用于调度和执行作业的运行时；以及并发工具类，它提供了托管执行器服务、调度执行器和服务线程工厂。
-
-通过提供更好的默认值，注解的使用更加有效。更好的行为和更好的配置允许应用程序在大多数情况下（通过使用注解或部署描述符）获得它们最想要的行为。当默认值不是应用程序所希望的时，可以使用简单的注解来指定所需的行为或配置。
-
-注解与更好的默认值的结合极大地简化了使用企业级技术的应用程序以及定义或使用 Web 服务的应用程序的开发。企业豆的开发现在变得异常简单。使用由 Web 服务元数据规范定义的注解，Web 服务开发变得更加容易。
-
-Web 服务领域继续以快速的速度演进。为了提供最新的 Web 服务支持，JAX-RPC 技术已演进为 JAX-WS 技术，它大量利用 JAXB 技术将 Java 对象绑定到 XML 数据。JAX-WS 和 JAXB 对于该版本的平台来说都是新特性。
-
-Java EE 5 的主要新增包括简化 Web 开发 JSTL 和 JSF 技术，以及由 EJB 3.0 专家组开发的 Java 持久化 API，它极大简化了 Java 对象到数据库的映射。
-
-小型新增包括用于 XML 解析的 StAX API。之前版本的大多数 API 都经过了中等的改进。
-
-Java EE 6 继续延续 Java EE 5 对“开发便利”的关注。Java EE 6 引入的主要改进之一是上下文与依赖注入（CDI）技术，它为“托管豆”的依赖注入和生命周期管理提供了一个统一的框架。
-
-EE 6 托管豆规范定义了一系列 EE 托管对象的共性，范围从基础托管豆扩展到 EJB 组件。
-
-此版本引入的 Bean 验证规范为托管对象的验证提供了一种设施。Bean 验证被集成到 Java 持久化 API 中，它为 JPA 实体的验证提供了自动化设施。
-
-Java EE 6 将 JAX-RS API 作为 Java EE 平台的强制技术。JAX-RS 是用于开发根据表述状态转换（REST）架构风格构建的 Web API。
-
-Java EE 6 还引入了 Java EE Web 配置文件，这是 Java EE 平台第一个新配置文件。自成立以来，Java EE 平台一直旨在通过其基于容器的模型和资源访问的抽象，将开发者从常见的基础任务中解放出来。在最近的发布中，平台大幅简化了访问容器服务的 API，同时扩大了服务的范围。在本次发布中，我们继续改进简化的方向，同时扩展 Java EE 平台的范围，以涵盖 Web 领域的新兴技术。
-
-Java EE 7 对 Web标准的最新进展提供了原生支持，包括 WebSockets 和 JSON，这些技术为 Java EE 中的 HTML 5 支持提供了基础。Java EE 7 还增加了由 JAX-RS 2.0 定义的现代 HTTP 客户端 API。
-
-Java EE 7 的新特性还包括 Batch API，它为批处理应用程序提供了编程模型以及一个用于调度和执行作业的运行时；以及并发工具类，它提供了托管执行器服务、调度执行器和服务线程工厂。
-
-Web 服务领域继续以快速的速度演进。为了提供最新的 Web 服务支持，JAX-RPC 技术已演进为 JAX-WS 技术，它大量利用 JAXB 技术将 Java 对象绑定到 XML 数据。JAX-WS 和 JAXB 对于该版本的平台来说都是新特性。
-
-Java EE 8 继续关注 Java EE 7 的现代 Web 应用并扩大此类应用的范围。Java EE 8 引入了 JSON 绑定 API（JSON-B），用于映射 JSON 文本和 Java 对象，基于 Java EE 7 引入的 JSON 处理 API（JSON-P）。处理 API 本身已更新以反映额外的 JSON 标准。Servlet 通过增加对 HTTP/2 协议的支持而经历了重大增强。JAX-RS 增加了对服务器发送事件的支持，并基于 Java 8 增加的并发功能引入了响应式客户端 API。新的 Java EE 安全 API 为 Web 模块的验证和授权提供了增强支持，并引入了访问身份存储的 API。Bean 验证设施已更新以反映 SE 8 中所的改进并扩展验证对象的范围。虽然此版本中 CDI 的重点是通过引入引导启动 API 将其范围扩展到 Java EE 之外，但 CDI 也包含了对事件的处理和对 SE 8 特性的对齐。
-
-
-
-
--   机密性或数据隐私：用于确保信息仅对授权访问该信息的用户可用的手段。
--   不可否认性：用于证明用户执行了某些操作，且该用户在合理范围内无法否认执行过该操作的手段。
--   审计：用于捕获防篡改的安全事件记录的手段，目的是评估安全策略和机制的有效性。
-
-本章规定了 Java EE 平台需求如何满足安全需求，并识别了可能由 Java EE 产品提供者（Product Providers）满足的需求。最后，EE.3.7 节“未来方向”简要提到了本规范未来版本中考虑的问题。
-
-
-通过检查具有 Web 客户端、JSP 用户界面和企业 Bean（Enterprise Bean）业务逻辑简单应用程序中发生的情况，可以更好地理解 Java EE 环境的安全行为。（该示例并非规定需求）。
+通过检查具有 Web 客户端、`JSP` 用户界面和企业 Bean 业务逻辑简单应用程序中发生的情况，可以更好地理解 Java EE 环境的安全行为。（该示例并非规定需求）。
 
 在此示例中，Web 客户端依赖 Web 服务器作为其身份验证代理，从客户端收集用户身份验证数据并使用其建立已验证的会话。
 
 ### 步骤 1：初始请求
+
 Web 客户端请求主 URL，如图 EE.3-1 所示。
 
 ![](img/2d0d59290c8adb2789da0c25757ad1d3_49_0.png)
@@ -533,17 +402,18 @@ Web 客户端请求主 URL，如图 EE.3-1 所示。
 由于客户端尚未向应用程序环境进行身份验证，负责交付应用程序 Web 部分服务器（此处称为“Web 服务器”）检测到这一点，并为该资源调用相应的身份验证机制。
 
 ### 步骤 2：初始身份验证
+
 Web 服务器返回一个表单，Web 客户端使用该表单从用户处收集身份验证数据（例如用户名和密码）。Web 客户端将身份验证数据转发到 Web 服务器，由 Web 服务器进行验证，如图 EE.3-2 所示。
 
 ![](img/2d0d59290c8adb2789da0c25757ad1d3_50_0.png)
 
 图 EE.3-2 初始身份验证
 
-验证机制可能是服务器本地的，也可能利用底层安全服务。根据验证结果，Web 服务器为用户设置了一个凭据（credential）。
+验证机制可能是服务器本地的，也可能利用底层安全服务。根据验证结果，Web 服务器为用户设置了一个凭据。
 
 ### 步骤 3：URL 授权
 
-该凭据用于后续确定用户是否有权访问其可能请求的受限资源。Web 服务器查询与 Web 资源相关的安全策略（源自部署描述），以确定允许访问该资源的安全角色。然后， Web 容器针对每个角色测试用户的凭据，以确定其是否可以将用户映射到该角色。图 EE.3-3 显示了这一过程。
+该凭据用于后续确定用户是否有权访问其可能请求的受限资源。Web 服务器查询与 Web 资源相关的安全策略（源自部署描述），以确定允许访问该资源的安全角色。然后，Web 容器针对每个角色测试用户的凭据，以确定其是否可以将用户映射到该角色。图 EE.3-3 显示了这一过程。
 
 ![](img/2d0d59290c8adb2789da0c25757ad1d3_50_1.png)
 
@@ -557,23 +427,23 @@ Web 服务器返回一个表单，Web 客户端使用该表单从用户处收集
 
 ![](img/2d0d59290c8adb2789da0c25757ad1d3_51_0.png)
 
-### 图 EE.3–4 完成原始请求
+图 EE.3–4 完成原始请求
 
-在我们的示例中，返回了 JSP 页面的响应 URL，使用户可以提交由业务逻辑组件处理的表单数据。
+在我们的示例中，返回了 `JSP` 页面的响应 URL，使用户可以提交由业务逻辑组件处理的表单数据。
 
 ### 步骤 5：调用企业 Bean 业务方法
 
-JSP 对企业 Bean 执行远程方法调用，使用用户的凭据在 JSP 页面和企业 Bean 之间建立安全关联（如图 EE.3-5 所示）。该关联实现为两个相关的安全上下文（security contexts），一个在 Web 服务器中，另一个在 EJB 容器中。
+`JSP` 对企业 Bean 执行远程方法调用，使用用户的凭据在 `JSP` 页面和企业 Bean 之间建立安全关联（如图 EE.3-5 所示）。该关联实现为两个相关的安全上下文，一个在 Web 服务器中，另一个在 `EJB` 容器中。
 
 ![](img/2d0d59290c8adb2789da0c25757ad1d3_51_1.png)
 
-### 图 EE.3–5 调用企业 Bean 业务方法
+图 EE.3–5 调用企业 Bean 业务方法
 
-EJB 容器负责对企业 Bean 方法执行访问控制。它查询与企业 Bean 相关的安全策略（源自部署描述），以确定允许访问方法的安全角色。对于每个角色，EJB 容器使用与调用相关的安全上下文来确定其是否可以将调用者映射到该角色。
+`EJB` 容器负责对企业 Bean 方法执行访问控制。它查询与企业 Bean 相关的安全策略（源自部署描述），以确定允许访问方法的安全角色。对于每个角色，`EJB` 容器使用与调用相关的安全上下文来确定其是否可以将调用者映射到该角色。
 
-当容器能够将调用者的凭据映射到某个角色时，容器的评估步骤以“已授权”的结果结束。如果容器无法将调用者映射到任何允许的角色之一，则达到“未授权”的结果。“未授权”的结果会导致容器抛出异常，并传播到调用的 JSP 页面。
+当容器能够将调用者的凭据映射到某个角色时，容器的评估步骤以“已授权”的结果结束。如果容器无法将调用者映射到任何允许的角色之一，则达到“未授权”的结果。“未授权”的结果会导致容器抛出异常，并传播到调用的 `JSP` 页面。
 
-如果调用“已授权”，容器将控制权交由企业 Bean。Bean 执行调的结果返回给调用的 JSP 页面。
+如果调用“已授权”，容器将控制权交由企业 Bean。Bean 执行调的结果返回给调用的 `JSP` 页面。
 
 ## EE.3.3 安全架构
 
@@ -583,23 +453,25 @@ EJB 容器负责对企业 Bean 方法执行访问控制。它查询与企业 Bea
 
 以下是 Java EE 安全架构的目标：
 
--   1. 可移植性：Java EE 安全架构必须支持“一次编写，随处运行”属性。
--   2. 透明性：应用程序开发者无需了解安全即可编写应用程序。
--   3. 隔离性：Java EE 平台能够根据系统管理员建立的指令执行身份验证和访问控制。注意，将应用程序与安全责任解耦确保了 Java EE 应用程序的可移植性。
--   4. 可扩展性：安全感知应用程序使用平台服务不会损害应用程序的可移植性。本规范提供了与安全信息交互的组件模型。限制在提供的 API 上的应用程序将保留可移植性。
--   5. 灵活性：本规范使用的安全机制和声明并不实施特定的安全策略，而是便于实施特定于 Java EE 安装或应用程序的安全策略。
--   6. 抽象性：所需的安全行为和部署合约可以使用多种安全技术实现。
--   7. 兼容性测试：Java EE 安全需求必须以一种方式表示，以便明确判断实现是否兼容。
--   8. 安全互操作性：在 Java EE 产品中执行的应用程序必须能够调用不同供应商的 Java EE 产品提供的服务，无论使用的是相同还是不同的安全策略。这些服务由 Web 组件或企业 Bean 提供。
+1. **可移植性**：Java EE 安全架构必须支持“一次编写，随处运行”属性。
+2. **透明性**：应用程序开发者无需了解安全即可编写应用程序。
+3. **隔离性**：Java EE 平台能够根据系统管理员建立的指令执行身份验证和访问控制。注意，将应用程序与安全责任解耦确保了 Java EE 应用程序的可移植性。
+4. **可扩展性**：安全感知应用程序使用平台服务不会损害应用程序的可移植性。本规范提供了与安全信息交互的组件模型。限制在提供的 API 上的应用程序将保留可移植性。
+5. **灵活性**：本规范使用的安全机制和声明并不实施特定的安全策略，而是便于实施特定于 Java EE 安装或应用程序的安全策略。
+6. **抽象性**：所需的安全行为和部署合约可以使用多种安全技术实现。
+7. **兼容性测试**：Java EE 安全需求必须以一种方式表示，以便明确判断实现是否兼容。
+8. **安全互操作性**：在 Java EE 产品中执行的应用程序必须能够调用不同供应商的 Java EE 产品提供的服务，无论使用的是相同还是不同的安全策略。这些服务由 Web 组件或企业 Bean 提供。
 
 ### EE.3.3.2 非目标
 
 以下不是 Java EE 安全架构的目标：
 
--   1. 本规范不规定特定的安全策略。应用程序和企业系统的安全策略出于许多与本规范无关的原因。提供者可以在遵循本规范的同时提供实施管理安全策略的技术。
--   2. 本规范不强制特定的安全技术，例如 Kerberos、PK、NIS+ 或 NTLM。
--   3. 本规范不要求 Java EE 安全行为能够使用任何或所有安全技术实现。
--   4. 本规范对 Java EE 产品的有效安全性不提供任何保证或保证。
+1. 本规范不规定特定的安全策略。应用程序和企业系统的安全策略出于许多与本规范无关的原因。提供者可以在遵循本规范的同时提供实施管理安全策略的技术。
+2. 本规范不强制特定的安全技术，例如 `Kerberos`、`PK`、`NIS+` 或 `NTLM`。
+3. 本规范不要求 Java EE 安全行为能够使用任何或所有安全技术实现。
+4. 本规范对 Java EE 产品的有效安全性不提供任何保证或保证。
+
+
 
 ### EE.3.3.3 术语
 
@@ -607,43 +479,40 @@ EJB 容器负责对企业 Bean 方法执行访问控制。它查询与企业 Bea
 
 #### 主体 (Principal)
 
-主体是在可以在部署在企业的安全服务中通过身份验证协议进行验证的实体。主体标识
+主体是在可以在部署在企业的安全服务中通过身份验证协议进行验证的实体。主体标识使用主体名称（principal name）并使用认证数据进行认证。主体名称和认证数据的内容和格式取决于具体的认证协议。
 
-
-使用主体名称（principal name）并使用认证数据进行认证。主体名称和认证数据的内容和格式取决于具体的认证协议。
-
-# 安全策略域
+#### 安全策略域
 
 安全策略域（security policy domain），也称为安全域（security domain），是安全服务管理员在其范围内定义并执行通用安全策略的范围。
 
 安全策略域有时也被称为领域（realm）。本规范使用“安全策略域”和“安全域”这两个术语。
 
-# 安全技术域
+#### 安全技术域
 
 安全技术域（security technology domain）是使用同一种安全机制（例如 Kerberos）来执行安全策略的范围。
 
 一个单一的安全技术域可能包含多个安全策略域，例如。
 
-# 安全属性
+#### 安全属性
 
 每个主体（principal）都关联有一组安全属性。安全属性有许多用途（例如对受保护资源的访问和对用户的审计）。安全属性可以通过认证协议和/或 Java EE 产品提供者（Product Provider）与主体关联。
 
 Java EE 平台未规定与主体关联哪些安全属性。
 
-# 凭证
+#### 凭证
 
 凭证（credential）包含或引用用于认证 Java EE 产品服务主体的信息（安全属性）。主体通过认证获取凭证，或从另一个允许其凭证被使用的主体获取凭证（委托）。
 
 本规范未规定凭证的内容或格式。凭证的内容和格式差异很大。
 
-## EE.3.3.3.4 基于容器的安全
+#### EE.3.3.3.4 基于容器的安全
 
 安全组件由其容器提供，以便在 Java EE 环境中实现上述安全目标。容器提供两种安全机制（在接后的节中讨论）：
 
 - 声明式安全（Declarative security）
 - 程序化安全（Programmatic security）
 
-## EE.3.3.4.1 声明式安全
+#### EE.3.3.4.1 声明式安全
 
 声明式安全是指通过以非程序化的形式表达应用程序的安全结构，包括安全角色、访问控制和认证要求。Java 注解和部署描述符（deployment descriptor）是 Java EE 平台声明式安全的主要方法。
 
@@ -653,13 +522,13 @@ Java 注解和部署描述符是应用程序组件提供者与部署者（Deploy
 
 在运行时，容器使用从注解和部署描述符中表达的声明式安全信息、并由部署者配置出的安全策略安全结构来执行授权（参见 EE.3.3.6 节，“授权模型”）。
 
-## EE.3.3.4.2 程序化安全
+#### EE.3.3.4.2 程序化安全
 
-程序化安全是指由安全感知应用程序做出的安全决策。当仅靠声明式安全不足以表达应用程序的安全模型时，程序化安全非常有用。程序化安全的 API 由 Java EE Security API Context 的方法、EJBContext 方法以及 servlet `HttpServletRequest` 接口的方法组成。Java EE Security API Context 的方法旨在取代 EJBContext 和 `HttpServletRequest` 接口的相应方法。
+程序化安全是指由安全感知应用程序做出的安全决策。当仅靠声明式安全不足以表达应用程序的安全模型时，程序化安全非常有用。程序化安全的 API 由 Java EE Security API Context 的方法、`EJBContext` 方法以及 servlet `HttpServletRequest` 接口的方法组成。Java EE Security API Context 的方法旨在取代 `EJBContext` 和 `HttpServletRequest` 接口的相应方法。
 
 这些方法允许组件根据调用者或远程用户的安全规则做出业务逻辑决策。例如，它们允许组件确定调用者或远程用户的主体名称以用作数据库键。（注意，主体名称的形式和内容在产品和企业之间差异很大，移植组件将不取决于主体名称的实际内容。由于主体映射，同一个逻辑主体在不同的容器中可能具有不同的名称，尽管可以配置单一产品使用一致的主体名称。特别是，如果主体名称被用作数据库表的键，且该数据库表被多个组件、容器或产品访问，则同一个逻辑主体可能映射到数据库中的不同条目。）
 
-## EE.3.3.5 分布式安全
+#### EE.3.3.5 分布式安全
 
 某些产品提供者可能提供 Java EE 产品，在其中不同组件类型的容器是分布式的。在分布式环境中，Java EE 组件之间的通信可能会受到安全攻击（例如重放攻击）。
 
@@ -677,7 +546,7 @@ Java 注解和部署描述符是应用程序组件提供者与部署者（Deploy
 
 本规范未定义应用程序组件提供者用于与实体 bean 通信的安全关联机制。
 
-## EE.3.3.6 授权模型
+#### EE.3.3.6 授权模型
 
 Java EE 授权模型基于安全角色（security roles）的概念。安全角色是由应用程序组件提供者或组合者定义的用户的逻辑分组。部署者将角色映射到环境中的安全身份（例如主体和组）。安全角色既用于声明式安全也用于程序化安全。
 
@@ -685,7 +554,7 @@ Java EE 授权模型基于安全角色（security roles）的概念。安全角�
 
 安全角色用于 `SecurityContext` 方法 `CallerInRole`、`EJBContext` 方法 `CallerInRole` 以及 `HttpServletRequest` 方法 `UserInRole`。如果调用主体处于指定的角色，这些方法返回 `true`。
 
-### EE.3.3.6.1 角色映射
+##### EE.3.3.6.1 角色映射
 
 资源或实体 bean 安全约束的执行（无论是程序化的还是声明式的），取决于与请求关联的主体是否被赋予安全角色。容器根据调用者的安全属性做出此判断。例如：
 
@@ -694,43 +563,44 @@ Java EE 授权模型基于安全角色（security roles）的概念。安全角�
 
 安全属性的来源随 Java EE 平台的实现而异。
 
-
-
-
-## EE.3.3.7 HTTP 登录网关
+#### EE.3.3.7 HTTP 登录网关
 
 EJB 规范解决了不同安全策略域之间企业 Bean 之间的安全互操作问题。此外，组件可以选择通过 HTTP 登录到远程服务器。在使用 HTTP 访问远程资源时，应用程序组件可以配置为使用 SSL 认证以确保安全性。这种方式的应用可以选择使用 XML 或其他结构化格式，而不是 HTML。
 
 我们将通过带有 SSL 认证的 HTTP 访问远程的服务称为 *HTTP 登录网关*。该领域的规定在 EE.3.3.8.1 节“Web 客户端认证”中。
 
-## EE.3.3.8 用户验证
+#### EE.3.3.8 用户验证
 
 用户验证是用户向系统证明其身份的过程。经过验证的身份随后被用于对访问 Java EE 组件做出授权决策。终端用户可以验证两种支持的客户端类型之一：
 
 - *Web 客户端*
 - *应用程序*
 
-### EE.3.3.8.1 Web 客户端认证
+##### EE.3.3.8.1 Web 客户端认证
 
 要求客户端能够使用以下任何机制向 Web 服务器验证用户。由部署程序（Deployer）或系统管理员决定对某个应用程序或一组应用程序采用哪种方法。
 
 - *HTTP 基础认证*
+
 HTTP 基础认证是 HTTP 协议支持的认证机制。该机制基于用户名和密码。Web 服务器请求 Web 客户端验证用户。在请求过程中，Web 服务器会传递用户要进行认证的*域（realm）*。Web 客户端获取用户名和密码并将其传输到 Web 服务器。Web 服务器在指定的域（本文中称为 HTTP 域）中验证用户。
+
 HTTP 基础认证是不安全的。密码以简单的 base64 编码发送。目标服务器未经过认证。可以应用额外的保护措施来克服这些缺陷。可以通过在传输层（例如 HTTPS）或网络层（例如 IPSEC 或 VPN）应用安全保护来保护密码。
 
 尽管存在这些局限性，HTTP 基础认证机制仍包含在本规范中，因为它在基于表单的应用程序中被广泛使用。
 
 - *HTTPS 客户端认证*
+
 使用 HTTPS（基于 SSL 的 HTTP）进行终端认证是一种强身份认证机制。该机制要求用户拥有公钥证书（PKC）。目前，互联网上的用户很少使用 PKC。然而，它对于电子商务应用程序以及来自浏览器的单点登录是有用的。由于这些原因，HTTPS 客户端认证是 Java EE 平台的一项强制功能。
 
 - *基于表单的认证*
+
 使用 Web 浏览器内置的认证机制可以改变登录界面的外观和感受。本规范引入了封装标准 HTML 或基于 servlet/JSP/JSF 的登录表单的能力，允许对用户界面进行自定义。本规范引入的基于表单的认证机制在 Servlet 规范中描述。
 
 HTTP 摘要认证（Digest Authentication）未被 Web 浏览器广泛支持，因此不是强制要求的。
 
 Web 客户端可以使用 Web 服务器作为其认证代理。在这种情况下，客户端的凭据建立在服务器中，服务器可以使用该凭据执行各种用途：执行认证决策、在调用企业 Bean 时充当客户端，或与资源协商安全关联。目前的 Web 浏览器依赖代理认证。
 
-### EE.3.3.8.2 Web 单点登录
+##### EE.3.3.8.2 Web 单点登录
 
 HTTP 是一个无状态协议。然而，许多 Web 应用程序需要会话支持，以便跨客户端的多个请求维持状态。因此，理想的情况是：
 
@@ -740,15 +610,15 @@ HTTP 是一个无状态协议。然而，许多 Web 应用程序需要会话支�
 
 通过 Web 登录过程获取的凭据与会话关联。容器使用这些凭据为会话建立安全上下文。容器使用安全上下文来确定访问 Web 资源的授权，以及与其它组件（包括企业 Bean）建立安全关联。
 
-### EE.3.3.8.3 登录会话
+##### EE.3.3.8.3 登录会话
 
 在 Java EE 平台中，登录会话支持由 Web 容器提供。当用户成功通过 Web 服务器认证时，容器为用户建立登录会话上下文。登录会话包含与用户关联的凭据¹¹
 
-### EE.3.3.8.4 应用程序客户端认证
+##### EE.3.3.8.4 应用程序客户端认证
 
 应用程序客户端（在第 10 章“应用程序客户端”中详细描述）是直接与企业 Bean 交互的客户端程序（即无需 Web 服务器的帮助）。应用程序客户端与其他 Java EE 客户端类型一样，在托管环境中执行。应用程序客户端预期图形显示和输入设备。应用程序客户端预计访问受保护的资源。
 
-## EE.3.3.9 延迟认证
+#### EE.3.3.9 延迟认证
 
 认证是有成本的。例如，认证过程可能需要跨网络交换多条消息。因此，理想使用延迟认证，即仅在需要时执行认证。虽然客户端在认证方面是无状态的，但客户端需要服务器充当其代理并维护其登录上下文。如果使用 SSL 认证作为认证协议，客户端可以管理自己的认证上下文，而无需依赖通过 Cookie 或 URL 写入提供的登录状态引用。通过延迟认证，用户在产生访问受保护资源的请求之前不需要进行认证。当第一级客户端（小 应用程序/applets、应用程序客户端）请求访问需要认证的受保护资源时，可以使用延迟认证。在此时，可以要求用户提供适当的认证数据。如果用户成功通过认证，则允许用户访问该资源。
 
@@ -774,11 +644,7 @@ Web 服务器必须支持受保护 Web 资源的延迟认证。需要认证时�
 
 Java EE 8, 最终发布
 
-
-
-
-
-## EE.3.4.2.2 SSL 双向认证
+#### EE.3.4.2.2 SSL 双向认证
 
 本规范要求支持 TLS 1.2 以及执行基于证书的双向（客户端和服务器）认证的方法。
 
@@ -786,39 +652,39 @@ Java EE 8, 最终发布
 
 同样，所有 Java EE 产品必须支持以下加密套件，以确保与客户端进行相互安全的通信：
 
-- TLS_RSA_WITH_AES_128_CBC_SHA
-- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
-- TLS_ECDH_RSA_WITH_AES_128_CBC_SHA
-- TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA
-- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
-- TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+- `TLS_RSA_WITH_AES_128_CBC_SHA`
+- `TLS_DHE_RSA_WITH_AES_128_CBC_SHA`
+- `TLS_ECDH_RSA_WITH_AES_128_CBC_SHA`
+- `TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA`
+- `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA`
+- `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA`
 
 然而，建议使用客户端和服务器之间可以协商的最强加密套件，如果特定部署中不需要，可以禁用上述加密套件以改用更强的加密套件。
 
 注意，本规范的早期版本要求支持 SSL 3.0 以及以下加密套件：
 
-- TLS_RSA_WITH_RC4_128_MD5
-- SSL_RSA_WITH_RC4_128_MD5
-- TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA
-- TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA
-- TLS_RSA_EXPORT_WITH_RC4_40_MD5
-- SSL_RSA_EXPORT_WITH_RC4_40_MD5
-- TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA
-- TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA
+- `TLS_RSA_WITH_RC4_128_MD5`
+- `SSL_RSA_WITH_RC4_128_MD5`
+- `TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA`
+- `TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA`
+- `TLS_RSA_EXPORT_WITH_RC4_40_MD5`
+- `SSL_RSA_EXPORT_WITH_RC4_40_MD5`
+- `TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA`
+- `TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA`
 
 SSL 3.0 已于 2015 年被 RFC 7568 正式废弃，许多 TLS 实现不支持或禁用了它。上述加密套件目前均不被认为是安全的，并且默认不支持或被禁用。在极端情况下，为了与旧客户端或旧版本的 Java EE 配合，可能需要使用 SSL 3.0 或协商上述任一加密套件。然而，尽可能使用 TLS 1.0 或更高版本，并协商更强的加密套件。如果特定部署中不需要为了操作性，应当禁用 SSL 3.0 以及上述的加密套件。
 
-## EE.3.4.2.3 基于表单的登录
+#### EE.3.4.2.3 基于表单的登录
 
 Web 应用部署符包含一个元素，允许 Java EE 产品将 HTML 表单响应（可能是动态生成的）与 Web 应用关联。如果部署程序（Deployer）选择这种认证形式（而非 HTTP Basic 或 SSL 证书认证），则必须使用此表单作为登录应用程序的用户界面。
 
 基于表单的登录机制和 Web 应用部署符在 Servlet 规范中有描述。
 
-## EE.3.4.4.3 未认证访问
+#### EE.3.4.4.3 未认证访问
 
 Web 容器必须允许未通过容器认证的客户端访问 Web 资源。这是互联网上访问 Web 资源的常见模式。
 
-Web 容器通过从 SecurityContext 方法 `getCallerPrincipal()` 或 HttpServlet 方法 `getUserPrincipal()` 返回 `null` 来报告没有用户通过了身份验证。这与 EJBContext 方法 `getCallerPrincipal()` 的结果不同。EJB 规范要求 EJBContext 方法 `getCallerPrincipal()` 始终返回一个有效的 Principal 对象。它永远不会返回 `null`。SecurityContext 方法 `getCallerPrincipal()` 也可以在 EJB 容器中调用，但对匿名用户仍返回 `null`。
+Web 容器通过从 `SecurityContext` 方法 `getCallerPrincipal()` 或 `HttpServlet` 方法 `getUserPrincipal()` 返回 `null` 来报告没有用户通过了身份验证。这与 `EJBContext` 方法 `getCallerPrincipal()` 的结果不同。EJB 规范要求 `EJBContext` 方法 `getCallerPrincipal()` 始终返回一个有效的 `Principal` 对象。它永远不会返回 `null`。`SecurityContext` 方法 `getCallerPrincipal()` 也可以在 EJB 容器中调用，但对匿名用户仍返回 `null`。
 
 在同时包含 Web 容器和 EJB 容器的 Java EE 产品中，运行在 Web 容器中的组件必须能够在未通过 Web 容器认证的情况下调用企业豆。当从 Web 容器中的组件向企业豆发起调用时，Java EE 产品必须为该调用提供一个 Principal。
 
@@ -830,13 +696,17 @@ Java EE 产品可以通过多种方法为未认证的调用者提供 Principal�
 
 本规范未规定 Java EE 产品应如何选择 Principal 来代表未认证的用户，尽管本规范的未来版本可能会在此领域增加要求。注意，在使用 EJB 互操作协议时，EJB 规范在此领域包含了客户端要求。在 Web 组件可能未认证且需要调用 EJB 组件的情况下，鼓励应用程序使用 Run As 能力。
 
-## EE.3.4.4 客户端用户认证
+#### EE.3.4.4 客户端用户认证
 
 客户端容器必须提供应用程序用户的认证，以满足企业豆容器和 Web 容器强制执行的认证和授权限制。使用的技术取决于客户端容器的实现，且不受应用程序控制。客户端容器可以与 Java EE 产品的认证系统集成，以提供单点登录，或者容器可以在应用程序启动时对用户进行认证。容器可以延迟认证，直到出现访问保护资源或企业豆的请求。
 
 容器将提供一个适当的用户界面与用户交互以收集认证数据。此外，客户端容器可以与 Java EE 产品的认证系统集成，以提供单点登录，或者容器可以在应用程序启动时对用户进行认证。容器可以延迟认证，直到出现访问保护资源或企业豆的请求。
 
-## EE.3.4.5 资源认证要求
+#### EE.3.4.5 资源认证要求
+
+
+
+# 企业内部资源部署与安全策略
 
 企业内部的资源通常部署在与应用程序不同的安全策略域中。由于用于认证调用者的认证机制存在巨大差异，因此 Java EE 产品必须提供在安全策略域中进行认证的方法。
 
@@ -853,12 +723,6 @@ Java EE 产品可以通过多种方法为未认证的调用者提供 Principal�
 4. **调用者冒充**：资源 Principal 代表调用者执行操作。代表调用者执行操作需要将调用者的身份和凭据委托给底层资源管理器。在某些场景下，请求 Principal 可以是初始化 Principal 的委托，资源 Principal 则间接地冒充初始化 Principal。对委托的支持通常取决于特定的安全机制。例如，Kerberos 提供了凭据委托的机制。
 
 5. **凭据映射**：当应用服务器和 EIS 支持不同的认证域时，可以使用此技术。例如：
-
-Java EE 8，最终发布
-
-
-
-
 
 - a. 发起主体可能已经通过了身份验证，并拥有基于公密钥证书的凭据。
 - b. 资源管理器的安全环境可能配置了 Kerberos 身份验证服务。
@@ -885,7 +749,7 @@ Java EE 产品必须执行部署时指定的访问控制规则（参见 EE3.6 �
 
 ### EE3.5.3 传播的调用者身份
 
-在包含 EJB 容器的 Java EE 产品中，必须配置 Java EE 产品，以便在所有授权决策中使用传播的调用者身份。在此配置下，对于来自单个 Java EE 产品内单个应用程序对所有企业 bean 的调用，由 `EJBContext` 方法 `getCallerPrincipal` 或 `SecurityContext` 方法 `CallerPrincipal` 返回的主体名称必须与调用链中第一个企业 bean 返回的名称相同。如果调用链中的第一个企业 bean是由 servlet 或 JSP 页面调用的，则主体名称必须与调用 servlet 或 JSP 页面中 `HttpServletRequest` 方法 `getUserPrincipal` 或 `SecurityContext` 方法 `CallerPrincipal` 返回的名称相同。然而，如果 `HttpServletRequest` 或 `SecurityContext` 方法 `getCallerPrincipal` 返回 `null`，则在调用企业 bean 时使用的主体未由本规范规定，但必须能够配置让企业 bean 可被此类组件调用。
+在包含 EJB 容器的 Java EE 产品中，必须配置 Java EE 产品，以便在所有授权决策中使用传播的调用者身份。在此配置下，对于来自单个 Java EE 产品内单个应用程序对所有企业 bean 的调用，由 `EJBContext` 方法 `getCallerPrincipal()` 或 `SecurityContext` 方法 `CallerPrincipal()` 返回的主体名称必须与调用链中第一个企业 bean 返回的名称相同。如果调用链中的第一个企业 bean 是由 servlet 或 JSP 页面调用的，则主体名称必须与调用 servlet 或 JSP 页面中 `HttpServletRequest` 方法 `getUserPrincipal()` 或 `SecurityContext` 方法 `CallerPrincipal()` 返回的名称相同。然而，如果 `HttpServletRequest` 或 `SecurityContext` 方法 `getCallerPrincipal()` 返回 `null`，则在调用企业 bean 时使用的主体未由本规范规定，但必须能够配置让企业 bean 可被此类组件调用。
 
 注意，这不需要委托，只需要对调用者进行识别。单一主体必须是访问调用链中所有企业 bean 授权决策时使用的的主体。本节中的要求仅当 Java EE 产品已配置为传播调用者身份时适用。
 
@@ -898,8 +762,6 @@ Java EE 产品必须支持 `Run As` 能力，允许应用程序组件提供者�
 ## EE3.6 部署要求
 
 所有 Java EE 产品必须实现所有包含的组件规范（如 EJB、JSP 和 Servlet 规范）中描述的访问控制语义；
-
-Java EE 8 最终发布
 
 提供一种方法，将元数据注解或部署描述符中指定的安全角色映射到 Java EE 产品暴露的实际角色；并支持从用户组到 Java EE Security API 规范中定义的角色的默认映射。
 
@@ -921,11 +783,9 @@ Java EE 8 最终发布
 
 ### EE3.7.3 用户注册
 
-基于 Web 的互联网应用程序通常需要动态管理一组客户，允许用户注册成为新客户。这一场景在 Servlet 专家组（JSR-53）中被广泛讨论，但我们未能对适当的解决方案达成共。我们不得不放弃 J2EE 1.3 的这项工作，并未能在 J2EE 1.4 中解决它，但希望在未来的发布中进一步追求。
+基于 Web 的互联网应用程序通常需要动态管理一组客户，允许用户注册成为新客户。这一场景在 Servlet 专家组（JSR-53）中被广泛讨论，但我们未能对适当的解决方案达成共识。我们不得不放弃 J2EE 1.3 的这项工作，并未能在 J2EE 1.4 中解决它，但希望在未来的发布中进一步追求。
 
-# EE.4 章
-
-## 事务管理
+# EE.4 章 事务管理
 
 本章描述了所需的 Java 平台企业版 (Java EE) 事务管理和运行时环境。
 
@@ -937,19 +797,15 @@ Java EE 8 最终发布
 - JMS 会话
 - 指定 XA 事务级别的资源适配器连接
 
-### EE.4.1 概述
+## EE.4.1 概述
 
 同时包含 servlet 容器和 EJB 容器的 Java EE 产品必须支持由 Web 应用程序组件在单个事务内访问多个企业 bean 的事务应用程序。如果 Java EE 产品还包含对 Connectors 规范的支持，每个组件还可以获取一个或多个连接以访问一个或多个事务资源管理器。
 
 例如，如图 EE.4-1 所示，调用链从访问多个企业 bean 的 servlet 或 JSP 页面，企业 bean 可能访问其他企业 bean。组件通过连接访问资源管理器。
 
-
-
-
-
 ![](img/2d0d59290c8adb2789da0c25757ad1d3_71_0.png)
 
-### 图 EE.4-1 访问企业 Bean 的 Servlets/JSP 
+### 图 EE.4-1 访问企业 Bean 的 Servlets/JSP
 
 应用组件提供者通过程序化和声明式事务边界 API 的组合，规定了平台如何代表应用程序管理事务。
 
@@ -959,32 +815,33 @@ Java EE 8 最终发布
 
 本章的其余部分详细描述了 Java EE 产品的事务需求。
 
-Java EE 8，最终发布版
-
 ## EE.4.2 要求
 
 本节定义了产品提供者必须支持的 Java EE 产品的事务支持需求。
 
 ### EE.4.2.1 Web 组件
 
-Web 组件可以使用 `javax.transaction.UserTransaction` 接口或 JTA 规范中定义的事务拦截器来界定事务。它们可以在单个事务中访问多个资源管理器并调用多个企业 Bean。指定的事务上下文会自动传播到企业 Bean 和事务资源管理器中。传播的结果可能取决于企业 Bean 的事务属性（例如，Bean 可能被要求使用容器托管事务 CMT CMT）。
+Web 组件可以使用 `javax.transaction.UserTransaction` 接口或 JTA 规范中定义的事务拦截器来界定事务。它们可以在单个事务中访问多个资源管理器并调用多个企业 Bean。指定的事务上下文会自动传播到企业 Bean 和事务资源管理器中。传播的结果可能取决于企业 Bean 的事务属性（例如，Bean 可能被要求使用容器托管事务 CMT）。
 
 Web 应用程序监听器和升级处理器不能使用 `javax.transaction.UserTransaction` 接口或事务拦截器来界定事务。Servlet 过滤器（Servlet filters）可以在其 `doFilter` 方法中使用事务资源，但不应在用于封装请求或响应对象的方法中使用任何事务资源。
 
-### EE.4.2.1.1 事务要求
+#### EE.4.2.1.1 事务要求
 
 Java EE 平台必须满足以下要求：
 
 - Java EE 平台必须向所有 Web 组件提供实现 `javax.transaction.UserTransaction` 接口的对象。平台必须在 Web 组件可用的 Java™ 命名和目录接口（JNDI）命名空间中，通过 `java:comp/UserTransaction` 名称使用 `UserTransaction` 对象。
+
 - Java EE 平台必须提供实现 JTA 规范定义的事务拦截器的类。
+
 - 如果 Web 组件从与 JTA 事务相关的线程调用企业 Bean，Java EE 平台必须在调用企业 Bean 时传播事务上下文。目标企业 Bean 是否会在此事务上下文中被调用，取决于 EJB 规范中定义的规则。
 
 请注意，此事务传播要求仅适用于与调用组件在同一个 Java EE 产品实例中调用企业 Bean 的情况。在另一个 Java EE 产品实例中调用企业 Bean（例如，使用 EJB 互操作性协议）则不需要传播事务上下文。详情请参阅 EJB 规范。
 
 - 如果 Web 组件从 JTA 事务访问事务资源管理器，Java EE 平台必须确保该资源访问包含在 JTA 事务中。
+
 - 如果 Web 组件创建了线程，Java EE 平台必须确保新创建的线程不与任何 JTA 事务关联。
 
-### EE.4.2.1.2 事务非要求
+#### EE.4.2.1.2 事务非要求
 
 产品提供者不要求支持从客户端到 Web 组件导入事务上下文。
 
@@ -1002,17 +859,19 @@ Java EE 平台必须满足以下要求：
 
 正如 EE.4.2.1.2 节“事务非要求”所示，在 Web 容器中使用 `RequestDispatcher` 的请求会将事务上下文传播到被调用的类。除非被调用的类提交或中止事务，否则事务在被调用的类返回时必须保持激活。
 
-如果通过 `RequestDispatcher` 调用的 Servlet 启动了事务，容器在 Servlet 从 `service` 方法返回时的行为是不指定的。Web 可能会向调用者抛出异常、中止事务并返回调用者，或将事务上下文传回调用者。可 Servlet 在 `service` 方法返回之前完成任何事务。
+如果通过 `RequestDispatcher` 调用的 Servlet 启动了事务，容器在 Servlet 从 `service` 方法返回时的行为是不指定的。Web 容器可能会向调用者抛出异常、中止事务并返回调用者，或将事务上下文传回调用者。该 Servlet 在 `service` 方法返回之前完成任何事务。
 
 ## EE.4.2.3 事务与线程
 
 事务资源与线程之间存在许多简单和复杂的交互。为了确保正确运行，Web 组件应遵循以下指南，Web 容器必须支持这些用法。
 
 - JTA 事务应该在调用 `service` 方法的线程中启动并完成。出于任何目的创建的其他线程不尝试启动 JTA 事务。
-- 事务资源可以在 service 方法之外的线程获取并释放，但不应在线程间共享。
-- 事务资源对象（例如 JDBC 连接对象）不应存储在静态字段中。此类对象一次只能关联一个事务。将其存储在静态字段中很容易在不同事务的线程间错误地共享它们。
-- 实现 SingleThreadModel 的 Web 组件可以在类实例启动启动层事务资源对象。顶层对象直接从容器管理的工厂对象获取（例如，从 `JDBC ConnectionFactory` 获取的 `JDBC Connection`），而不是从这些顶层对象获取的其他对象（例如，从 `JDBC Connection` 获取的 `JDBC Statement`）。Web 容器确保对 SingleThreadModel Servlet 的请求是序列化的，因此在同一时间只有一个线程和一个事务可以使用该对象。
 
+- 事务资源可以在 service 方法之外的线程获取并释放，但不应在线程间共享。
+
+- 事务资源对象（例如 JDBC 连接对象）不应存储在静态字段中。此类对象一次只能关联一个事务。将其存储在静态字段中很容易在不同事务的线程间错误地共享它们。
+
+- 实现 `SingleThreadModel` 的 Web 组件可以在类实例启动启动层事务资源对象。顶层对象直接从容器管理的工厂对象获取（例如，从 `JDBC ConnectionFactory` 获取的 `JDBC Connection`），而不是从这些顶层对象获取的其他对象（例如，从 `JDBC Connection` 获取的 `JDBC Statement`）。Web 容器确保对 SingleThreadModel Servlet 的请求是序列化的，因此在同一时间只有一个线程和一个事务可以使用该对象。
 
 顶层对象将被列入组件启动的任何新事务中。
 
@@ -1040,9 +899,7 @@ Java EE 产品必须支持 JDBC 数据库作为事务资源管理器。平台必
 
 在单个事务内，可以从多个应用程序组件访问 JDBC 技术数据库。例如，servlet 可能希望启动事务，访问数据库，调用一个作为同一事务一部分访问相同数据库的企业级豆，最后提交事务。
 
-Java EE 8, 最终发布版
-
-Java EE 产品必须提供一个事务管理器，能够协调跨多个支持 XA 的 JDBC 数据库的二阶段提交操作。如果 JDBC 驱动程序支持 `javax.transaction` 包中 Java Transaction API 的 XA 接口，则 Java EE 产品将能够使用 JDBC 驱动程序提供的 XA 接口来完成二阶段提交操作。Java EE 产品可以通过特定特定的方法发现 JDBC 驱动程序的 XA 能力，尽管通常此类 JDBC 驱动程序会作为资源适配器（resource adapters）通过 Connector API 提供。
+Java EE 产品必须提供一个事务管理器，能够协调跨多个支持 XA 的 JDBC 数据库的二阶段提交操作。如果 JDBC 驱动程序支持 `javax.transaction` 包中 Java Transaction API 的 XA 接口，则 Java EE 产品将能够使用 JDBC 驱动程序提供的 XA 接口来完成二阶段提交操作。Java EE 产品可以通过特定的方法发现 JDBC 驱动程序的 XA 能力，尽管通常此类 JDBC 驱动程序会作为资源适配器（resource adapters）通过 Connector API 提供。
 
 ## EE.4.2.8 事务型 JMS 支持
 
@@ -1061,6 +918,8 @@ Java EE 产品必须支持使用 XA 事务模式的资源适配器作为事务�
 ### EE.4.3.1 多 Java EE 平台互操作性
 
 本规范不要求提供者实现任何跨多个 Java EE 产品的事务互操作协议。Java EE 兼容性既不要求来自同一产品提供者的相同 Java EE 产品之间具有互操作性，也不要求来自多个产品提供者的异构 Java EE 产品之间具有互操作性。
+
+
 
 我们建议 Java EE 产品提供者使用 OMG 定义并在 OTS 规范中描述的 IIOP 事务传播协议（由 Java Transaction Service 实现），基于 RMI-IIOP 的 EJB 互操作协议进行事务互操作。
 
@@ -1100,9 +959,7 @@ Java EE 产品必须支持使用 XA 事务模式的资源适配器作为事务�
 
 当 Java EE 应用获取的多个连接使用相同的资源管理器时，容器可以选择在同一个事务范围内提供连接共享。共享连接通常会导致资源的高效利用和更好的性能。容器在某些情况下必须提供连接共享；详见 Connector 规范。
 
-Java EE 应用获取的到资源管理器的连接被认为可能是共享的或可共享的。Java EE 应用程序组件意图以不可共享的方式使用连接，必须提供相应的部署信息，以防止连接被容器共享。需要此类操作示例包括更改安全属性、隔离级别、字符设置和本地化配置。容器不得尝试共享标记为
-
-不可共享（unshareable）。如果连接未被标记为不可共享，则对于应用程序而言，连接是否实际被共享应该是透明的。
+Java EE 应用获取的到资源管理器的连接被认为可能是共享的或可共享的。Java EE 应用程序组件意图以不可共享的方式使用连接，必须提供相应的部署信息，以防止连接被容器共享。需要此类操作示例包括更改安全属性、隔离级别、字符设置和本地化配置。容器不得尝试共享标记为不可共享（unshareable）。如果连接未被标记为不可共享，则对于应用程序而言，连接是否实际被共享应该是透明的。
 
 Java EE 应用组件使用 `Resource` 注解中的可选 `shareable` 元素，或部署描述符中的可选 `sharing-scope` 元素，来指示到资源管理器的连接是可共享的还是不可的。如果没有提供部署提示，容器必须假设连接是可共享的。EE10.7 节“Java EE 客户端 XML 架构”、EJB 规范以及 Servlet 规范提供了对部署描述符的描述。
 
@@ -1133,8 +990,7 @@ Java EE 产品必须支持在单个事务中使用多个支持 XA 的资源适�
 - 在运行时监控事务。
 - 接收异常事务处理状态的通知（例如事务回滚次数异常高）。
 
-## EE.5
-### 章节 资源、命名与注入
+## EE.5 资源、命名与注入
 
 本章描述了应用程序如何声明对外部资源和配置参数的依赖，以及这些项目如何在 Java EE 命名系统中表示，以及如何被注入到应用组件中。这些要求是基于 Java 元数据规范中定义的注解以及 Java 命名和目录接口（JNDI）规范中定义的特性。`Resource` 注解在通用注解规范中定义；`EJB` 注解在企业豆 规范中定义；`PersistenceUnit` 和 `PersistenceContext` 注解在持久化规范中定义；`Inject` 注解在 Java 注入规范中定义，其在 Java EE 平台的用法。
 
@@ -1157,16 +1013,7 @@ Java EE 产品必须支持在单个事务中使用多个支持 XA 的资源适�
 - EE5.5.7 节“资源管理器连接工厂引用”定义了使用资源管理器连接工厂引用获取连接工厂的接口。资源管理器连接工厂引用是组件环境中的特殊项。
 - EE5.5.8 节“资源环境引用”定义了获取与资源环境引用关联的托管对象的接口。资源环境引用是组件环境中的特殊项。
 - EE5.5.9 节“消息目标引用”定义了声明和使用消息目标引用的接口。
-- EE5.5.10 节“UserTransaction ”描述了合格的应用组件使用环境中的 UserTransaction 对象引用来启动、提交和回滚事务。
-
-
-
-
-
-## 概述
-
-69
-
+- EE5.5.10 节“UserTransaction”描述了合格的应用组件使用环境中的 UserTransaction 对象引用来启动、提交和回滚事务。
 - EE.5.11 节“TransactionSynchronizationRegistry 引用”描述了合规应用组件对组件环境中 `TransactionSynchronizationRegistry` 对象的引用。
 - EE.5.12 节“ORB 引用”描述了合规应用组件对组件环境中 CORBA ORB 对象的引用。
 - EE.5.13 节“持久化单元引用”描述了合规应用组件对组件环境中 `EntityManagerFactory` 对象的引用。
@@ -1216,16 +1063,12 @@ Java EE 8，最终发布
 
 组件的命名环境由四个逻辑命名空间组成，代表不同范围的命名环境。这四个命名空间是：
 
-- java:comp：此命名空间是组件级的（例如企业豆）。Web 模块中的组件外，每个组件都有自己的 java:comp 命名空间，不与其他组件共享。Web 模块中的组件没有私有的组件命名空间，见下文。
-- java:module：此命名空间由模块中的所有组件共享（例如单个 EJB 模块中的所有企业豆，或单个 Web 模块中的所有组件）。
-- java:app：此命名空间由单个应用程序中所有模块中的所有组件共享，“单个应用程序”意味着单个部署单元，例如单个文件、独立部署的单个模块等。例如，同一个文件中的 war 文件和 EJB jar 文件都具有访问 java:app 命名空间中资源的权限。
-- java:global：此命名空间由部署在应用服务器实例中的所有应用程序共享。注意，应用服务器实例的范围取决于产品，但必须确保在多次部署应用程序的环境中（例如云环境中，可能会为多个租户部署同一应用程序的多个实例），每个应用程序实例的命名空间与该应用程序的其他实例的命名空间是不相交的。
+- `java:comp`：此命名空间是组件级的（例如企业豆）。Web 模块中的组件外，每个组件都有自己的 `java:comp` 命名空间，不与其他组件共享。Web 模块中的组件没有私有的组件命名空间，见下文。
+- `java:module`：此命名空间由模块中的所有组件共享（例如单个 EJB 模块中的所有企业豆，或单个 Web 模块中的所有组件）。
+- `java:app`：此命名空间由单个应用程序中所有模块中的所有组件共享，“单个应用程序”意味着单个部署单元，例如单个文件、独立部署的单个模块等。例如，同一个文件中的 war 文件和 EJB jar 文件都具有访问 `java:app` 命名空间中资源的权限。
+- `java:global`：此命名空间由部署在应用服务器实例中的所有应用程序共享。注意，应用服务器实例的范围取决于产品，但必须确保在多次部署应用程序的环境中（例如云环境中，可能会为多个租户部署同一应用程序的多个实例），每个应用程序实例的命名空间与该应用程序的其他实例的命名空间是不相交的。
 
-
-
-
-
-# JNDI 命名上下文 73
+# JNDI 命名上下文
 
 由于历史原因，`java:comp` 命名空间由 Web 模块的所有组件共享。为了保持兼容性，本规范没有改变此。在 Web 模块中，`java:comp` 指的是与 `java:module` 相同的命名空间。建议将 Web 模块中意图被多个组件共享的资源声明在 `java:module/env` 命名空间中。
 
@@ -1241,19 +1084,21 @@ Java EE 8，最终发布
 
 `application.xml` 描述符中的环境条必须在 `java:app` 或 `java:global` 命名空间中指定 JNDI 名称，例如：`java:app/env/myString` 或 `java:global/isValue`。在 `application.xml` 描述符中声明的环境条目的 `java:comp` 或 `java:module` 名称必须作为部署错误报告给部署器。
 
-EE 产品可能会对共享命名空间中资源的访问施加安全限制。然而，必须能够部署在共享命名空间中定义资源的应用程序，且这些资源在给定范围内可供不同的实体使用。例如，必须能够部署一个应用程序，该程序使用各种形式的元数据声明在 `java:global` 命名空间中定义资源，并可供另一个应用程序使用。
+
+
+# EE 产品可能会对共享命名空间中资源的访问施加安全限制
+
+然而，必须能够部署在共享命名空间中定义资源的应用程序，且这些资源在给定范围内可供不同的实体使用。例如，必须能够部署一个应用程序，该程序使用各种形式的元数据声明在 `java:global` 命名空间中定义资源，并可供另一个应用程序使用。
 
 ## EE.5.2.3 环境条目的访问性
 
-在任何类型的环境条目中定义的所有对象（无论是通过描述符还是注解）都必须指定为组件可访问的 Java 类型。Java 类的访问性在 EE.8.3 节“类加载要求”中指定。如果对象是 `java.lang.Class` 类型，则该 `Class` 对象必须引用组件可访问的类。请注意，在容器可能返回请求类型的实现子类的情况下，该实现子类可能对组件是访问的。
+在任何类型的环境条目中定义的所有对象（无论是通过描述符还是注解）都必须指定为组件可访问的 Java 类型。Java 类的访问性在 EE.8.3 节“类加载要求”中指定。如果对象是 `java.lang.Class` 类型，则该 `Class` 对象必须引用组件可访问的类。请注意，在容器可能返回请求类型的实现子类的情况下，该实现子类可能对组件是可访问的。
 
 ## EE.5.2.4 环境条目的共享
 
-每个应用程序组件定义了它们自己的依赖set，这些依赖必须作为应用程序组件环境中的条目出现。同一容器内、同一应用程序实例中的所有应用程序组件实例共享相同的环境条目。应用程序组件实例不允许在运行时修改环境。
+每个应用程序组件定义了它们自己的依赖 set，这些依赖必须作为应用程序组件环境中的条目出现。同一容器内、同一应用程序实例中的所有应用程序组件实例共享相同的环境条目。应用程序组件实例不允许在运行时修改环境。
 
 通常情况下，JNDI `java:` 命名空间中的对象查找要求每次都返回请求对象的新实例。对于以下情况允许存在异常：
-
-JNDI 命名上下文 75
 
 - 容器知道该对象是不可变的（例如 `java.lang.String` 类型的对象），或者知道应用程序无法更改对象的状态。
 - 对象被定义为单例，使得 JVM 中可能只存在该对象的一个实例。
@@ -1271,17 +1116,13 @@ JNDI 命名上下文 75
 
 类的字段可以是注入的目标。字段必须是 `final` 的。默认情况下，字段的名称与类的完全限定名结合并直接作为名称。例如，`com.example` 包中 `MyApp` 类的名为 `myDatabase` 的字段对应于 JNDI 名称 `java:comp/env/com.example.MyApp`。注解也允许显式指定 JNDI 名称。当使用条目指定注入时，JNDI 名称和字段名称都是显式指定的。那样，JNDI 名称相对于 `java:comp/env`。
 
-环境条目可以通过遵循 JavaBean 属性命名约的方法注入类中。注解应用于属性，该属性是调用以注入环境条目的方法。属性（而不是方法名）被用作 JNDI 名称。例如，`MyApp` 类中名为 `setDatabase` 的方法对应于 JNDI 名称 `java:comp/env/com.example.MyApp/myData`。每个资源只能注入到类中给定名称的单个字段或方法。将 `:comp/env/com.example.MyApp/myData` 资源注入 `setDatabase` 方法和 `myDatabase` 字段是错误的。然而，请注意，字段或方法可以请求注入不同的（非默认）名称。通过显式指定资源的 JNDI 名称，单个资源可以注入到多个类的多个字段或方法中。
+环境条目可以通过遵循 JavaBean 属性命名约定的方法注入类中。注解应用于属性，该属性是调用以注入环境条目的方法。属性（而不是方法名）被用作 JNDI 名称。例如，`MyApp` 类中名为 `setDatabase` 的方法对应于 JNDI 名称 `java:comp/env/com.example.MyApp/myData`。每个资源只能注入到类中给定名称的单个字段或方法。将 `:comp/env/com.example.MyApp/myData` 资源注入 `setDatabase` 方法和 `myDatabase` 字段是错误的。然而，请注意，字段或方法可以请求注入不同的（非默认）名称。通过显式指定资源的 JNDI 名称，单个资源可以注入到多个类的多个字段或方法中。
 
 各种应用程序组件类型的规范描述了可以用于注入的类，总结如表 EE5-1 所示。
 
-表 EE5-1 中支持级别为“Standard”的组件类均支持 Java EE 资源注入，以及 `@PostConstruct` 和 `@PreDestroy` 回调。此外，如果启用了 CDI（默认启用），这些类还支持 CDI 注入，如 EE.5.24 节“依赖注入支持”所述²仅支持 Java EE 字段注入和 `@PostConstruct` 回调。请注意这些是应用程序客户端主类，字段注入是针对静态字段的。
+表 EE5-1 中支持级别为“Standard”的组件类均支持 Java EE 资源注入，以及 `@PostConstruct` 和 `@PreDestroy` 回调。此外，如果启用了 CDI（默认启用），这些类还支持 CDI 注入，如 EE.5.24 节“依赖注入支持”所述。仅支持 Java EE 字段注入和 `@PostConstruct` 回调。请注意这些是应用程序客户端主类，字段注入是针对静态字段的。
 
 应用程序组件类型的规范还描述了注入发生在组件生命周期的什么时候。通常，注入发生在类实例化之后，但在调用任何业务方法之前。
-
-
-
-
 
 # 表 EE.5-1 支持注入的组件类
 
@@ -1307,20 +1148,20 @@ JNDI 命名上下文 75
 | Java EE platform | main class (static) | 有限 |
 | | login callback handler | 标准 |
 
-- a. 关于 CDI beans 中资源注入的get，请参阅 CDI 注入。
+- a. 关于 CDI beans 中资源注入的 get，请参阅 CDI 注入。
 - b. 关于这些类的列表，请参阅 JSF 部分“JSF Managed Classes and Java EE Annotations”。
 - c. 仅由 CDI 管理的 JAX-RS 组件支持资源和 CDI 注入。
 - d. 拦截器不能绑定到其他拦截器。
 - e. 我们使用此术语指代根据 CDI 规范规则管理 managed beans 的类，但不使用 ManagedBean 注解声明的 managed beans 以及 EJB session beans，在没有 CDI 的情况下，两者都应该是 managed beans。
 - f. 拦截器不能绑定到装饰器。
 
-注解也可以应用于类本身。这些注解声明了应用程序组件环境中的一个条目，但不会导致资源被注入。相反，预计应用程序组件使用 JNDI 或组件上下文查找方法来查找该条目。当注解应用到类上时，必须显式指定 JNDI 名称和环境类型。
+注解也可以应用于类本身。这些注解声明了应用程序组件环境中的一个条目，但不会导致资源被注入。相反，预期应用程序组件使用 JNDI 或组件上下文查找方法来查找该条目。当注解应用到类上时，必须显式指定 JNDI 名称和环境类型。
 
 资源注解可能会出现在上述列出的任何类上，或者出现在上述任何一个类的任何父类上。继承层次结构中任何类上的资源注解都定义了应用程序组件所需的资源。然而，资源的注入遵循 Java 语言关于字段和方法可见性的重写规则。重写父类方法的类定义定义了要注入该方法的任何资源。即使父类没有请求注入，重写方法也可以请求注入，它可能会请求与父类请求的不同的资源，或者在父类方法请求注入时它可能不请求注入。
 
 此外，子类中不可见或被隐藏（与重写不同）的字段或方法仍可以请求注入。这允许一个私有字段成为注入的目标，并在父类的实现中使用该字段，即使子类对该字段没有可见性，且不知道父类的实现正在使用注入的资源。请注意，在子类中声明与父类中字段同名的字段始终会导致父类中的字段被隐藏。
 
-在某些情况下，类可能需要在资源被注入后执行其自身的初始化。为了支持这一点，其中一个类可以标记为 `PostConstruct` 注解（或等地，使用部署描述符中的 `post-construct` 条目指定）。该方法将在所有注入发生之后并在类投入使用之前调用。即使该类没有请求注入任何资源，该方法也会被调用。同样，对于由容器管理生命周期的类，`PreDestroy` 注解（或等地，使用部署描述符中的 `pre-destroy` 条目）可以应用于任何在类停止且不再被容器使用的方法。类层次结构中的每个类都可能有 `PostConstruct` 和 `PreDestroy` 方法。方法调用的顺序与类层次结构的顺序一致，父类方法在子类方法之前被调用。
+在某些情况下，类可能需要在资源被注入后执行其自身的初始化。为了支持这一点，其中一个类可以标记为 `PostConstruct` 注解（或等价地，使用部署描述符中的 `post-construct` 条目指定）。该方法将在所有注入发生之后并在类投入使用之前调用。即使该类没有请求注入任何资源，该方法也会被调用。同样，对于由容器管理生命周期的类，`PreDestroy` 注解（或等价地，使用部署描述符中的 `pre-destroy` 条目）可以应用于任何在类停止且不再被容器使用的方法。类层次结构中的每个类都可能有 `PostConstruct` 和 `PreDestroy` 方法。方法调用的顺序与类层次结构的顺序一致，父类方法在子类方法之前被调用。
 
 `PostConstruct` 和 `PreDestroy` 注解由 Common Annotation 规范指定。所有支持注入的类也支持 `PostConstruct` 注解。所有由容器管理对象完整生命期的类也支持 `PreDestroy` 注解。
 
@@ -1328,17 +1169,17 @@ JNDI 命名上下文 75
 
 ## EE.5.2.6 注解和部署描述符
 
-可以使用注解声明环境条目，而不需要任何部署描述符条目。环境条目也可以通过部署描述符条目声明。同一个环境条目同时可以使用注解和部署描述符条目声明。在这种情况下，可以使用部署描述符条目中的信息覆盖注解中提供的某些信息。这种方法可以由应用程序汇器（Application Assembler）或部署器（Deployer）用于覆盖应用程序组件开发者提供的信息。应用程序不应使用部署描述符条目向未为注入设计的字段或方法请求注入资源。
+可以使用注解声明环境条目，而不需要任何部署描述符条目。环境条目也可以通过部署描述符条目声明。同一个环境条目同时可以使用注解和部署描述符条目声明。在这种情况下，可以使用部署描述符条目中的信息覆盖注解中提供的某些信息。这种方法可以由应用程序汇编器（Application Assembler）或部署器（Deployer）用于覆盖应用程序组件开发者提供的信息。应用程序不应使用部署描述符条目向未为注入设计的字段或方法请求注入资源。
 
-以下列表了部署描述符条目如何覆盖 `Resource` 注解的规则。
+以下列出了部署描述符条目如何覆盖 `Resource` 注解的规则。
 
-- 相关的部署描述符条目位于与注解使用的 JNDI 名称（默认或显式提供）。
+- 相关的部署描述符条目位于与注解使用的 JNDI 名称（默认或显式提供）相同的位置。
 - 部署描述符中指定的类型必须赋值给字段或属性的类型。
 - 描述（如果指定）将覆盖注解的 `description` 元素。
 - 注入目标（如果指定）将为源定义额外的注入点。
 - `mapped-name` 元素（如果指定）将覆盖注解的 `mappedName` 元素。
-- `res-sharing-scope` 元素（如果指定）将覆盖注解的 `shareable` 元素。通常，应用程序汇器或部署器不应更改此值，因为这样做可能会破坏应用程序。
-- `res-auth` 元素（如果指定）将覆盖注解的 `authenticationType` 元素。通常，应用程序汇器或部署器不应更改此值，因为这样做可能会破坏应用程序。
+- `res-sharing-scope` 元素（如果指定）将覆盖注解的 `shareable` 元素。通常，应用程序汇编器或部署器不应更改此值，因为这样做可能会破坏应用程序。
+- `res-auth` 元素（如果指定）将覆盖注解的 `authenticationType` 元素。通常，应用程序汇编器或部署器不应更改此值，因为这样做可能会破坏应用程序。
 - `lookup-name` 元素（如果指定）将覆盖注解的 `lookup` 元素。
 
 向同一个目标请求注入两个资源是一个错误。此类应用程序的行为是未定义的。
@@ -1349,7 +1190,7 @@ JNDI 命名上下文 75
 
 ## EE.5.2.7 其他命名上下文条目
 
-除了应用程序组件声明的环境条目外，根据本规范和其他规范，其他项目将出现在命名上下。以下是这些条目。这并不是详尽列表，请参阅相应的规范获取详情。
+除了应用程序组件声明的环境条目外，根据本规范和其他规范，其他项目将出现在命名上下文中。以下是这些条目。这并不是详尽列表，请参阅相应的规范获取详情。
 
 - 应用程序中的所有企业 bean 在共享命名空间中都有条目。详情请参阅 EJB 规范。
 - 所有 Web 应用程序在共享命名空间中都有命名。对应 Web 应用程序的完整 URL。详情请参阅 Servlet 规范。
@@ -1360,11 +1201,7 @@ JNDI 命名上下文 75
 
 本节描述了适用于所有 Java EE 命名上下文使用的 Java EE 角色的责任。后续章节描述了存储在命名上下文中不同类型对象的特定责任。
 
-
-
-
-
-# EE.5.3.1 应用组件提供者的责任
+### EE.5.3.1 应用组件提供者的责任
 
 应用组件提供者可以使用三种技术来访问和管理命名上下文（naming context）。首先，应用组件提供者可以使用 Java 语言注解来请求从命名上下文注入资源，或声明命名上下文中需要的元素。其次，该组件可以使用 JNDI API 访问上下文中的条目。第三，可以使用部署描述符（deployment descriptor）条目来声明命名上下文中的条目，并请求将这些条目注入应用组件中。部署描述符条目还可以用于覆盖注解提供的信息。
 
@@ -1372,39 +1209,37 @@ JNDI 命名上下文 75
 
 为了确保它能够通过容器访问正确的 `javax.naming.InitialContext` 实现，可移植应用组件不得指定 `java.naming.factory.initial` 属性，不得为 “java” 模式-id 指定 `URLContextFactory`，并且不得调用 `java.naming.spi.NamingManager.setInitialFactoryBean`。
 
-# EE.5.3.2 应用组配者的责任
+### EE.5.3.2 应用组装者的责任
 
-允许应用组配者修改应用组件提供者设置的命名上下文条目，并允许为应用组件提供者未指定任何值的条目设置值。应用组配者可以使用部署描述符来覆盖应用组件提供者在源代码中使用注解所做的的设置。
+允许应用组装者修改应用组件提供者设置的命名上下文条目，并允许为应用组件提供者未指定任何值的条目设置值。应用组装者可以使用部署描述符来覆盖应用组件提供者在源代码中使用注解所做的设置。
 
 ### EE.5.3.3 部署者的责任
 
 部署者必须确保由应用组件声明的所有条目都已创建并正确初始化。
 
-部署者可以修改之前由应用组件提供者和/或应用组配者设置的条目，并且必须为未指定必需值的条目设置值。如果注解包含 `lookup-name` 元素，部署者应将其绑定到指定为查找目标的条目。如果找不到注解的 `lookup` 元素，或者部署描述符条目中的 `lookup-name` 元素未指定带有显式 `java:` 命名空间的名称，则部署应失败。部署者还可以使用特定特定资源映射工具、部署描述符、规则或功能将引用条目绑定到目标运行环境中的资源。
+部署者可以修改之前由应用组件提供者和/或应用组装者设置的条目，并且必须为未指定必需值的条目设置值。如果注解包含 `lookup-name` 元素，部署者应将其绑定到指定为查找目标的条目。如果找不到注解的 `lookup` 元素，或者部署描述符条目中的 `lookup-name` 元素未指定带有显式 `java:` 命名空间的名称，则部署应失败。部署者还可以使用特定资源映射工具、部署描述符、规则或功能将引用条目绑定到目标运行环境中的资源。
 
-应用组件提供者或应用组配者提供的部署描述符元素和注解元素有助于部署者完成此任务。
+应用组件提供者或应用组装者提供的部署描述符元素和注解元素有助于部署者完成此任务。
 
-# EE.5.3.4 Java EE 产品提供者的责任
+### EE.5.3.4 Java EE 产品提供者的责任
 
 Java EE 产品提供者具有以下责任：
 
 - 提供一个部署工具，允许部署者设置和修改应用组件命名上下文的条目。
-- 实现 `java:comp`、`java:module`、`java:app` 并在运行时将其提供给应用组件实例。命名上下文必须包含应用组件提供者交付的所有条目，其值在部署描述符中提供或由部署者设置。环境命名上下文必须允许部署者在应用组件需要时创建子上下文。命名上下文中的某些条目可能需要与其他条目的值进行初始化，特别是当使用 “lookup” 功能时。在此情况下，如果条目之间存在循环依赖，则存在错误。同样，如果在类型与正在创建的条目不的资源中查找指定的 JNDI 名称，也会出错。部署工具可以允许部署者纠正这两类错误并继续部署。
+- 实现 `java:comp`、`java:module`、`java:app` 并在运行时将其提供给应用组件实例。命名上下文必须包含应用组件提供者交付的所有条目，其值在部署描述符中提供或由部署者设置。环境命名上下文必须允许部署者在应用组件需要时创建子上下文。命名上下文中的某些条目可能需要与其他条目的值进行初始化，特别是当使用 “lookup” 功能时。在此情况下，如果条目之间存在循环依赖，则存在错误。同样，如果在类型与正在创建的条目不匹配的资源中查找指定的 JNDI 名称，也会出错。部署工具可以允许部署者纠正这两类错误并继续部署。
 - 确保在没有应用指定任何属性的情况下，`java.naming.InitialContext` 实现符合本规范描述的要求。
 - 根据部署描述符或应用组件类上的注解，将命名环境中的条目注入应用组件中。
 - 容器必须确保应用组件实例对命名上下文只有读取访问权限。容器必须从修改环境命名上下文的 `java.naming.Context` 接口的所有方法中抛出 `java.naming.OperationNotSupportedException`。
-
-Java EE 8 发布
 
 ## EE.5.4 环境条目
 
 环境条目是用于自定义应用组件的配置参数。环境条目的值可以是以下 Java 类型之一：`String`、`Character`、`Byte`、`Short`、`Integer`、`Long`、`Boolean`、`Double`、`Float`、`Class` 以及任何 `Enum` 子类。
 
-# EE.5.4.1 应用组件提供者的责任
+### EE.5.4.1 应用组件提供者的责任
 
 本节描述了应用组件提供者的环境，并定义了三个部分：注解、用于环境条目的 API 以及在部署描述符中声明环境条目的语法。
 
-# EE.5.4.1.1 环境条目的注入
+#### EE.5.4.1.1 环境条目的注入
 
 应用组件的字段或方法可以使用 `@Resource` 注解。注意容器会将环境条目解箱为原始类型；环境条目是共享的且不需要认证。
 
@@ -1417,8 +1252,10 @@ Java EE 8 发布
 @Resource int minExemptions;
 ```
 
+
+
 ```java
-public void setTaxInfo(int numberOfExemptions,...)
+public void setTaxInfo(int numberOfExemptions, ...)
     throws InvalidExemptionsException {
     ...
     // 使用环境条目自定义业务逻辑
@@ -1444,7 +1281,7 @@ public void setTaxInfo(int numberOfExemptions,...)
 以下示例说明了应用组件如何访问其环境条目。
 
 ```java
-public void setTaxInfo(int numberOfOfExemptions,...)
+public void setTaxInfo(int numberOfOfExemptions, ...)
     throws InvalidNumberOfExemptionsException {
     ...
     // 获取应用组件的环境命名上下文
@@ -1458,8 +1295,6 @@ public void setTaxInfo(int numberOfOfExemptions,...)
     Integer min = (Integer)myEnv.lookup("minExemptions");
 }
 ```
-
-
 
 ```java
 // customize business logic.
@@ -1481,8 +1316,6 @@ Integer val3 = (Integer)initCtx.lookup("java:comp/env/name3");
 Integer val4 =
     (Integer)initCtx.lookup("java:comp/env/name4");
 ```
-
-}
 
 ## EE5.4.1.3 简单环境条目的声明
 
@@ -1657,16 +1490,13 @@ int minExemptions = 4;
 
 应用组件的字段或方法可以使用 `@EJB` 注解。EJB 注解代表对 EJB 会话豆或实体豆的引用。该引用可以是指向会话豆的业务接口、会话豆的无界面视图，或者是会话豆或实体豆的本地或远程 home 接口。
 
-
-
-
 以下示例说明了应用程序组件如何使用 EJB 注解来引用企业 bean（enterprise bean）的实例。被引用的 bean 是一个无状态 bean。该企业 bean 在命名环境中具有名称 `java:comp/env/com.ExampleBean/myCart`，其中 `ExampleBean` 是引用 bean 的类名，`com.acme.example` 是其所在的包名。引用的目标没有命名，必须由部署器（Deployer）解析，除非应用程序中只有一个会话 bean 组件提供了与 EJB 引用匹配的客户端视图类型。
 
-```
+```java
 package com.acme.example;
 ```
 
-```
+```java
 @Stateless public class ExampleBean implements Example {
 ...
   @EJB private ShoppingCart myCart;
@@ -1675,7 +1505,7 @@ package com.acme.example;
 
 接下来的示例说明了 EJB 注解中几乎所有元素的用法。
 
-```
+```java
 @EJB(
   name = "ejb/shopping-cart",
   beanName = "cart1",
@@ -1687,7 +1517,7 @@ private ShoppingCart myCart;
 
 作为 `beanName` 的替代方案，对 EJB 的引用可以通过 `lookup` 注解元素使用 EJB 的全局 JNDI 名称，或 EJB 规范规定的任何其他名称。接下来的示例使用了在应用程序命名空间中的 JNDI 名称。
 
-```
+```java
 @EJB(
   lookup="java:app/cartModule/ShoppingCart",
   description = "The shopping cart for this application"
@@ -1697,59 +1527,58 @@ private ShoppingCart myOtherCart;
 
 如果将 `ShoppingCart` bean 写为 EJB 2.x 客户端视图，则 EJB 引用将指向该 bean 的本地接口（home interface）。例如：
 
-Java EE 8, Final Release
 
-# ENTERPRISE JAVABEANS™ (EJB) REFERENCES 91
 
-```
+# Java EE 8, Final Release
+
+# ENTERPRISE JAVABEANS™ (EJB) REFERENCES
+
+```java
 @EJB(
-name="ejb/shopping-cart",
-beanInterface=ShoppingCartHome.class,
-beanName="cart1",
-description="The shopping cart for this application"
+    name="ejb/shopping-cart",
+    beanInterface=ShoppingCartHome.class,
+    beanName="cart1",
+    description="The shopping cart for this application"
 )
 private ShoppingCartHome myCartHome;
 ```
 
 如果将 `ShoppingCart` bean 改为无接口视图并由 `ShoppingCartBean.class` 类实现，则 EJB 引用的类型将为 `ShoppingCartBean.class`。例如：
 
-```
-
+```java
 @EJB(
-name="ejb/shopping-cart",
-beanInterface=ShoppingCartBean.class,
-beanName="cart1",
-description="The shopping cart for this application"
+    name="ejb/shopping-cart",
+    beanInterface=ShoppingCartBean.class,
+    beanName="cart1",
+    description="The shopping cart for this application"
 )
 private ShoppingCartBean myCartHome;
 ```
 
-### EE.5.5.1.2 用于 EJB 引用的编程接口
+## EE.5.5.1.2 用于 EJB 引用的编程接口
 
 应用程序组件提供者可以使用 EJB 引用按如下方式定位企业 bean 的业务接口、无接口视图或本地接口。
 
 - 在应用程序组件的环境中为引用分配一个条目。（有关如何在部署描述符中声明 EJB 引用的信息，请参见第 5.5.1.3 节。）
-
 - 本规范建议但并不要求对企业 bean 的引用组织在应用程序组件环境的 `ejb` 子上下文中（即 `java:comp/env/ejb` JNDI 上下文）。注意，通过注解声明的引用默认不会位于任何子上下文中。
-
 - 使用 JNDI 在应用程序组件环境中查找被引用企业 bean 的业务接口、无接口视图或本地接口。
 
 接下来的示例说明了应用程序组件如何使用 EJB 引用来定位企业 bean 的本地接口。
 
-```
+```java
 public void changePhoneNumber(...) {
-  ...
-  // 获取默认的初始 JNDI 上下文。
-  Context initCtx = new InitialContext();
+    ...
+    // 获取默认的初始 JNDI 上下文。
+    Context initCtx = new InitialContext();
 
-  // 在环境中查找 EmployeeRecord
-  // 企业 bean 的本地接口。
-  Object result = initCtx.lookup("java:comp/ejb/Emp1Record");
+    // 在环境中查找 EmployeeRecord
+    // 企业 bean 的本地接口。
+    Object result = initCtx.lookup("java:comp/ejb/Emp1Record");
 
-  // 将结果转换为正确的类型。
-  EmployeeRecordHome employeeRecord = (EmployeeRecordHome)
-    rmi.PortableRemoteObject.narrow(result,
-    EmployeeRecordHome.class);
+    // 将结果转换为正确的类型。
+    EmployeeRecordHome employeeRecord = (EmployeeRecordHome)
+        rmi.PortableRemoteObject.narrow(result,
+        EmployeeRecordHome.class);
 }
 ```
 
@@ -1759,63 +1588,11 @@ public void changePhoneNumber(...) {
 
 尽管 EJB 引用是应用程序组件环境中的条目，但应用程序组件提供者不能使用 `env-entry` 元素来声明它。相反，应用程序组件提供者必须使用应用程序组件代码上的注解或部署描述符中的 `ejb-ref` 或 `ejb-local-ref` 元素来声明所有 EJB 引用。这允许应用程序组件 JAR 文件的消费者（应用程序组装器或部署器）发现应用程序组件所使用的所有 EJB 引用。部署描述符也可用于指定将 EJB 引用注入到组件组件。
 
-每个 `ejb-ref` 或 `ejb-local-ref` 元素描述了引用应用程序组件对被引用企业 bean 的接口要求。`ejb-ref` 元素用于通过远程业务接口和组件接口访问的企业 bean。`ejb-local-ref` 元素用于引用通过本地业务接口、无接口视图、本地 home 和组件接口访问的企业 bean。`ejb-ref` 元素包含一个 `description` 元素以及 `ejb-ref-name`、`ejb-ref-type` 和 `remote` 元素。`ejb-local-ref` 元素包含一个 `description` 元素以及 `ejb-ref-name`、`ejb-ref-type`、`local-home` 和 `local` 元素
-
-Java EE 8, Final Release
-
-# ENTERPRISE JAVABEANS™ (EJB) REFERENCES 93
-
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。
-
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。
-
-`ejb- -name`    -``-- -type----   ```    `。
-
-`ejb-ref-name` 指定 E  引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。`local` 元素指定本地接口。
+每个 `ejb-ref` 或 `ejb-local-ref` 元素描述了引用应用程序组件对被引用企业 bean 的接口要求。`ejb-ref` 元素用于通过远程业务接口和组件接口访问的企业 bean。`ejb-local-ref` 元素用于引用通过本地业务接口、无接口视图、本地 home 和组件接口访问的企业 bean。`ejb-ref` 元素包含一个 `description` 元素以及 `ejb-ref-name`、`ejb-ref-type` 和 `remote` 元素。`ejb-local-ref` 元素包含一个 `description` 元素以及 `ejb-ref-name`、`ejb-ref-type`、`local-home` 和 `local` 元素。
 
 `ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。`local` 元素指定本地接口。
 
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。`local` 元素指定本地接口。
-
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。`local` 元素指定本地接口。
-
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。`local` 元素指定本地接口。
-
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。`local` 元素指定本地接口。
-
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。`local` 元素指定本地接口。
-
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。`local` 元素指定本地接口。
-
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。`local` 元素指定本地接口。
-
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。`local` 元素指定本地接口。
-
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。`local` 元素指定本地接口。
-
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。`local` 元素指定本地接口。
-
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。`local` 元素指定本地接口。
-
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。`local` 元素指定本地接口。
-
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定元素 bean 的远程接口。``-home`       。  `  `  。
-
- 。
-
- `ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。`local` 元素指定本地接口。
-
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。`local` 元素指定本地接口。
-
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。`local` 元素指定本地接口。
-
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。`local` 元素指定本地接口。
-
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素指定本地 home 接口。`local` 元素指定本地接口。
-
-`ejb-ref-name` 指定 EJB 引用。`ejb-ref-type` 指定 EJB 引用的类型。`remote` 元素指定企业 bean 的远程接口。`local-home` 元素。
-
-```
+```xml
 <ejb-ref>
   <description>
     这是一个指向封装员工记录的实体 bean。
@@ -1827,7 +1604,7 @@ Java EE 8, Final Release
 </ejb-ref>
 ```
 
-```
+```xml
 <ejb-ref>
   <ejb-ref-name>ejb/Payroll</ejb-ref-name>
   <ejb-ref-type>Entity</ejb-ref-type>
@@ -1836,7 +1613,7 @@ Java EE 8, Final Release
 </ejb-ref>
 ```
 
-```
+```xml
 <ejb-ref>
   <ejb-ref-name>ejb/PensionPlan</ejb-ref-name>
   <ejb-ref-type>Session</ejb-ref-type>
@@ -1854,11 +1631,8 @@ Java EE 8, Final Release
 
 - 应用程序组装器使用引用组件 `ejb-local-ref` 元素的可选 `ejb-link` 元素。`ejb-link` 的值是由 bean 类上的元数据注解（或默认）或企业 bean 的 `ejb-name` 指定的目标 bean 名称。
 - 或者，为了避免在 Java EE 应用程序内部重命名企业 bean 以具有唯一名称，应用程序组装器可以在引用组件的 `ejb-link` 元素中使用以下两种语法之一：
-    - 应用程序组装器指定包含引用企业 bean 的 ej-jar 文件或 war 文件的模块名，并通过 “/” 添加目标名称。模块名是带文件扩展名的包名，除非在部署描述符中另有指定。
-    - 应用程序组装器指定包含引用企业 bean 的 ej-jar 文件的路径，并通过 # 添加目标 bean 的 `ejb-name`。该路径相对于引用应用程序组件 JAR 文件。
-
-
-
+    - 应用程序组装器指定包含引用企业 bean 的 ejb-jar 文件或 war 文件的模块名，并通过 “/” 添加目标名称。模块名是带文件扩展名的包名，除非在部署描述符中另有指定。
+    - 应用程序组装器指定包含引用企业 bean 的 ejb-jar 文件的路径，并通过 # 添加目标 bean 的 `ejb-name`。该路径相对于引用应用程序组件 JAR 文件。
 
 除了使用 `ejb-link` 之外，应用程序装器（Application Assembler）可以使用 `lookup-name` 元素通过其 JNDI 名称引用 EJB 组件。在 `ejb-ref` 元素内部出现 `ejb-link` 和 `lookup-name` 都是错误的。
 
@@ -1914,14 +1688,14 @@ Java EE 8, Final Release
 </ejb-ref>
 ```
 
+
+
 ## EE.5.5.3 部署者的职责
 
 部署者负责以下工作：
 
-- 部署者必须确保所有声明的 EJB 引用都绑定到运行环境中存在的企业豆的业务接口、无接口视图或本地接口。部署者可以使用（例如）JNDI LinkRef 机制来创建指向目标企业豆实际 JNDI 名称的符号链接。
-
-- 部署者必须确保目标企业豆与 EJB 引用声明的类型类型兼容。这意味着目标企业豆必须是通过 EJB 注解指定的 `ejb-ref-type` 元素中声明的类型，并且目标企业豆的业务接口、无接口视图或本地或远程接口与 EJB 引用中声明的类型在 Java 上兼容（如果已指定）。
-
+- 部署者必须确保所有声明的 EJB 引用都绑定到运行环境中存在的企业豆的业务接口、无接口视图或本地接口。部署者可以使用（例如）JNDI `LinkRef` 机制来创建指向目标企业豆实际 JNDI 名称的符号链接。
+- 部署者必须确保目标企业豆与 EJB 引用声明的类型兼容。这意味着目标企业豆必须是通过 EJB 注解指定的 `ejb-ref-type` 元素中声明的类型，并且目标企业豆的业务接口、无接口视图或本地或远程接口与 EJB 引用中声明的类型在 Java 上兼容（如果已指定）。
 - 如果 EJB 引用声明包含 `ejb-link` 元素，部署者应将企业豆引用绑定到指定为链接目标的企业豆。如果 EJB 注解中的查找引用声明包含 `lookup-name` 元素，部署者应将豆引用绑定到指定为查找目标的企业豆。EJB 引用声明同时包含 `ejb-link` 和 `lookup-name` 元素是错误的。
 
 下面的示例说明了使用 `lookup-name` 元素将 `ejb-ref` 绑定到运行环境中的目标企业豆。该引用最初是在豆的代码中使用注解声明的。目标企业豆具有 `ejb-name` `ShoppingCart`，并部署在独立模块 `products` 中。
@@ -1933,19 +1707,19 @@ Java EE 8, Final Release
 </ejb-ref>
 ```
 
-## EE5.5.4 Java EE 产品提供者的职责
+## EE.5.5.4 Java EE 产品提供者的职责
 
 Java EE 产品提供者必须提供部署工具，允许部署者执行上一节中描述的任务。Java EE 产品提供者提供的部署工具必须能够处理（此处原文包含大量重复文本，根据上下文过滤为：“提供允许部署者执行上一节中描述的任务的部署工具。”）
 
 ## EE.5.6 Web 服务引用
 
-Web 服务引用与企业豆（EnterpriseBean）类似，但用于引用 Web 服务。Web 服务引用完全包含在 Web 服务规范中。
+Web 服务引用与企业豆（`EnterpriseBean`）类似，但用于引用 Web 服务。Web 服务引用完全包含在 Web 服务规范中。
 
 ## EE.5.7 资源管理器工厂引用
 
 资源管理器工厂是用于创建到数据库管理系统连接的对象。例如，实现 `javax.sql.DataSource` 的对象就是资源管理器工厂。通过资源管理器工厂获取的连接被称为托管资源（例如，这些允许自动加入事务）。
 
-## EE5.7.1 应用程序组件提供者的职责
+## EE.5.7.1 应用程序组件提供者的职责
 
 本节描述了应用程序组件提供者查找资源的视图，并定义了其职责。
 
@@ -1958,6 +1732,7 @@ Web 服务引用与企业豆（EnterpriseBean）类似，但用于引用 Web 服
 ```java
 // 员工数据库。
 @Resource javax.sql.DataSource employeeAppDB;
+
 public void change phoneNumber(...) {
   // 调用工厂获取资源。没有给出资源的主体（principal），
   // 因此它将由部署者进行配置。
@@ -1973,26 +1748,23 @@ public void change phoneNumber(...) {
 java.sql.DataSource customerDB;
 ```
 
-
-
-
-从实际角度考虑，在应用级别声明常用的数据源并在多个组件中通过查找（lookup）引用它，可能会简化应用程序的部署任务，因为现在部署器（Deployer）仅需对应用级资源执行单次绑定操作，而不是多次操作。使用数据源资源定义可以进一步简化任务，请参见第 EE.5 节“数据源定义”。当然，这并不阻止部署器在需要时分离每个数据源引用。
+从实际角度考虑，在应用级别声明常用的数据源并在多个组件中通过查找（`lookup`）引用它，可能会简化应用程序的部署任务，因为现在部署器（`Deployer`）仅需对应用级资源执行单次绑定操作，而不是多次操作。使用数据源资源定义可以进一步简化任务，请参见第 EE.5 节“数据源定义”。当然，这并不阻止部署器在需要时分离每个数据源引用。
 
 ## EE.5.7.1.2 资源管理器连接工厂引用的编程接口
 
-应用程序组件提供程序（Application Component Provider）可以使用以下方式使用资源管理器连接工厂引用来获取对资源的连接：
+应用程序组件提供程序（`Application Component Provider`）可以使用以下方式使用资源管理器连接工厂引用来获取对资源的连接：
 
--   在应用程序组件的命名环境中将条目（entry）分配给资源管理器连接工厂引用。（参见第 5.7.1.3 节有关如何在部署描述符中声明资源管理器连接工厂引用的信息）
--   本规范建议（但不要求）将所有资源管理器连接工厂引用组织在应用程序组件环境的子文中，为每种资源管理器类型使用不同的子文。例如，所有的 `JDBCDataSource` 引用都应该声明在 `java:comp/env/jdbc` 子文中，所有的 `JMS` 连接都声明在 `java:comp/env/jms` 子文中，所有的 `JavaMail` 连接都声明在 `java:comp/env/mail` 子文中。注意，通过注解声明的资源管理器连接工厂引用默认情况下不会出现在任何子文中。
--   使用 JNDI 接口在应用程序组件的环境中查找资源管理器连接工厂对象。
--   在资源管理器连接工厂对象上调用适当的方法以获取到资源的连接。工厂方法取决于具体的资源类型。通过多次调用工厂对象可以获取多个连接。
+- 在应用程序组件的命名环境中将条目（`entry`）分配给资源管理器连接工厂引用。（参见第 5.7.1.3 节有关如何在部署描述符中声明资源管理器连接工厂引用的信息）
+- 本规范建议（但不要求）将所有资源管理器连接工厂引用组织在应用程序组件环境的子文中，为每种资源管理器类型使用不同的子文。例如，所有的 `JDBCDataSource` 引用都应该声明在 `java:comp/env/jdbc` 子文中，所有的 `JMS` 连接都声明在 `java:comp/env/jms` 子文中，所有的 `JavaMail` 连接都声明在 `java:comp/env/mail` 子文中。注意，通过注解声明的资源管理器连接工厂引用默认情况下不会出现在任何子文中。
+- 使用 JNDI 接口在应用程序组件的环境中查找资源管理器连接工厂对象。
+- 在资源管理器连接工厂对象上调用适当的方法以获取到资源的连接。工厂方法取决于具体的资源类型。通过多次调用工厂对象可以获取多个连接。
 
 应用程序组件提供程序可以控制从资源管理器连接工厂获取的连接的共享性。默认情况下，连接在应用程序中、在相同事务上下文中使用相同资源的其他应用程序组件之间是可以共享的。应用程序组件提供程序可以通过将 `shareable` 注解元素的值设置为 `false`，或将 `sharing-scope` 部署器元素设置为 `Unshareable`，来指定从资源管理器连接工厂引用获取的连接是不可共享的。对资源管理器连接的共享允许容器优化连接的使用，并允许容器使用本地事务优化。
 
-在处理将主体（principal）与资源管理器访问关联时，应用程序组件提供程序有两个选择：
+在处理将主体（`principal`）与资源管理器访问关联时，应用程序组件提供程序有两个选择：
 
--   允许部署器设置主体映射或资源管理器登录信息。在这种情况下，应用程序组件代码调用一个没有安全相关参数的资源管理器连接工厂方法。
--   从应用程序组件代码对资源进行登录。在这种情况下，应用程序组件调用将登录信息作为方法参数的适当资源管理器连接工厂方法。
+- 允许部署器设置主体映射或资源管理器登录信息。在这种情况下，应用程序组件代码调用一个没有安全相关参数的资源管理器连接工厂方法。
+- 从应用程序组件代码对资源进行登录。在这种情况下，应用程序组件调用将登录信息作为方法参数的适当资源管理器连接工厂方法。
 
 应用程序组件提供程序使用 `authenticationType` 元素或 `res-auth` 部署描述符元素来指示使用两种资源认证方法中的一种。
 
@@ -2003,20 +1775,16 @@ java.sql.DataSource customerDB;
 ```java
 public void changePhoneNumber(...) {
   ...
-
   // 获取初始 JNDI 下
   Context initCtx = new InitialContext();
-
   // 执行 JNDI 查找以获取资源管理器
   // 连接工厂
   javax.sql.DataSource ds = (javax.sql.DataSource)
   initCtx.lookup("java:comp/env/jdbc/EmployeeAppDB");
-
   // 调用工厂获取资源。没有给出资源的安全
   //主体，因此
   // 它将由部署器进行配置。
   java.sql.Connection con = ds.getConnection();
-
   ...
 }
 ```
@@ -2060,15 +1828,13 @@ public void changePhoneNumber(...) {
 </resource-ref>
 ```
 
+
+
 ## EE.5.7.1.4 标准资源管理器连接工厂类型
 
 应用程序组件提供程序必须使用 `javax.sql.DataSource` 资源管理器连接工厂类型来获取 API 连接。
 
 应用程序组件提供程序必须使用 `javax.jms.ConnectionFactory`、`javax.jms.QueueConnectionFactory` 或 `javax.jms.TopicConnectionFactory` 来获取 JMS 连接。
-
-
-
-
 
 应用程序组件供应商必须使用 `java.mail.Session` 资源管理器连接工厂类型来获取 JavaMail API 连接。
 
@@ -2085,9 +1851,7 @@ Java EE 适配器架构允许应用程序组件使用本节描述的注解或 AP
 部署者必须对部署描述符中声明的每个资源管理器连接工厂引用执行以下任务：
 
 - 将资源管理器连接工厂引用绑定到运行环境中存在的资源管理器连接工厂。部署者可以使用（例如通过 JNDI 查找机制）创建指向资源管理器连接工厂实际 JNDI 名称的符号链接。资源管理器连接工厂类型必须与源代码或 `res-type` 元素中声明的类型兼容。如果资源管理器连接工厂引用包含 `lookup` 注解元素或 `lookup-name` 部署描述符元素，部署者可以选择遵循它并执行相应的查找，或用其选择的绑定来覆盖它。
-
 - 提供资源管理器打开和管理资源所需的任何额外配置信息。配置机制取决于特定的资源管理器，且超出了本规范的范围。
-
 - 如果 `Resource` 注解的 `authenticationType` 元素值为 `AuthenticationType.CONTAINER` 或部署描述符的 `res-auth` 元素为 `Container`，则部署者负责为资源管理器配置登录表单。这种操作是以特定容器和资源管理器的方式进行的；超出了本规范的范围。
 
 例如，如果必须从应用程序组件级使用的安全域（security domain）和主体域（principal realm）映射到资源管理器的安全域和主体域，则必须由部署者或系统管理员定义这种映射。这种映射是以特定容器和资源管理器的方式进行的；超出了本规范的范围。
@@ -2128,10 +1892,6 @@ Java EE 适配器架构允许应用程序组件使用本节描述的注解或 AP
 
 尽管资源环境引用位于应用程序组件环境中，应用程序组件供应商不能使用 `env-entry` 元素来声明它。相反，应用程序组件供应商必须使用应用程序代码上的注解或部署描述符中的 `resource-ref` 元素来声明所有对相关管理对象的引用。这允许应用程序 JAR 包消费者发现应用程序组件使用的所有环境引用。部署描述符条目也可用于指定将资源环境引用注入到应用程序组件中。
 
-
-
-
-
 每个 `resource-env-ref` 元素描述了引用应用程序组件对被引用管理对象的需求。`resource-env-ref` 元素包含可选的 `description` 和 `resource-env-ref-type` 元素以及强制的 `resource-env-ref-name` 元素。如果为此资源指定了注入目标，则 `resource-env-ref-type` 元素可选的；在这种情况下，`resource-env-ref-type` 默认为注入目标的类型。
 
 `resource-env-ref-name` 元素指定资源环境引用名称。它是应用程序代码中使用的环境名称。资源环境引用名称相对于 `java:comp/env` 上下文。`resource-env-ref-type` 元素指定被引用对象的预期类型。
@@ -2171,13 +1931,13 @@ Java EE 产品提供者必须提供部署工具，允许部署器执行上一个
 
 以下示例说明了应用程序如何使用 `Resource` 注解请求注入消息目的引用。
 
-```
+```java
 @Resource javax.jms.Queue stockQueue;
 ```
 
 以下示例说明了如何通过指定其 JNDI 名称（可能在不同的命名空间中，如 `lookup` 元素）将消息目的引用链接到另一个。
 
-```
+```java
 @Resource(lookup="java:comp/OrderQueue") javax.jms.Queue orderQueue;
 ```
 
@@ -2191,12 +1951,10 @@ Java EE 产品提供者必须提供部署工具，允许部署器执行上一个
 
 以下示例说明了应用程序组件如何使用消息目的引用来定位 JMS 目的。
 
-```
+```java
 // 获取默认的 JNDI 上下文。
 Context initCtx = new InitialContext();
-```
 
-```java
 // 在环境中查找 JMSQueue。
 Object result = initCtx.lookup("java:comp/jms/StockQueue");
 ```
@@ -2209,33 +1967,32 @@ Object result = initCtx.lookup("java:comp/jms/StockQueue");
 
 每个 `message-destination-ref` 元素描述了引用应用程序组件对被引用目的的需求。`message-destination-ref` 元素包含可选的 `description`、`message-destination-type` 和 `message-destination-usage` 元素以及强制的 `message-destination-ref-name` 元素。
 
-
-
-
 源自消息目的、为目的地产生，或两者兼有。如果未指定，则假设消息既被消费又产生。
 
 消息目的引用（message destination reference）的作用范围限于包含其 `message-destination-ref-element` 元素的应用组件。这意味着消息目的引用在运行时对其他应用组件不可见，且其他应用组件可以定义具有相同 `message-destination-ref-name` 的 `message-destination-ref-element`，而不会引起冲突。
 
 下面的示例说明了在部署描述符中声明消息目的引用。
 
-```
+```xml
 ...
 <message-destination-ref>
-<description>
-  This is a reference to a JMS queue used in the processing of Stock info
-</description>
-<message-destination-ref-name>
-  Jms/StockInfo
-</message-destination-ref-name>
-<message-destination-type>
-  Javax.jms.Queue
-</message-destination-type>
-<message-destination-usage>
-  Produces
-</message-destination-usage>
+  <description>
+    This is a reference to a JMS queue used in the processing of Stock info
+  </description>
+  <message-destination-ref-name>
+    Jms/StockInfo
+  </message-destination-ref-name>
+  <message-destination-type>
+    Javax.jms.Queue
+  </message-destination-type>
+  <message-destination-usage>
+    Produces
+  </message-destination-usage>
 </message-destination-ref>
 ...
 ```
+
+
 
 ## EE.5.9.2 应用组装器（Application Assembler）的职责
 
@@ -2243,13 +2000,13 @@ Object result = initCtx.lookup("java:comp/jms/StockQueue");
 
 应用组装器按如下方式指定消息消费者和生产者之间的链接：
 
-Java EE 8, 最终发布
+> Java EE 8, 最终发布
 
 应用组装器使用 `message-destination-element` 来指定应用程序内的逻辑目的。`message-destination-element` 定义了 `message-destination-name`，用于链接。
 
 应用组装器使用产生消息的应用组件的 `message-destination-ref` 元素中的 `message-destination-link` 元素将其链接到目标目的。`message-destination-link` 元素的值是目标目的的名称，如 `message-destination-element` 中的 `message-destination-name` 元素定义的那样。`message-destination` 元素可以是 Java EE 应用程序中的任何模块作为引用组件。应用组装器使用 `message-destination-ref` 元素中的 `message-destination-usage` 元素来指示该引用应用组件向被引用目的产生消息。
 
-如果来自公共目的的消息消费者是消息驱动豆（message-driven bean），则应用组装器使用 `message-destination-link` 元素来引用逻辑目的。应用组装器将消息驱动豆链接到其源目的，或者应该使用 `message-destination` 的 `message-destination-type` 元素来指定预期的目的类型。否则，应用组装器使用消费消息的应用组件的 `message-destination-ref` 元素中的 `message-destination-link` 元素链接到公共目的。在后的情况下，应用组装器使用 `message-destination-ref` 元素中的 `message-destination-usage` 元素指示该应用组件从被引用目的消费消息。
+如果来自公共目的的消息消费者是消息驱动豆（message-driven bean），则应用组装器使用 `message-destination-link` 元素来引用逻辑目的。应用组装器将消息驱动豆链接到其源目的，或者应该使用 `message-destination` 的 `message-destination-type` 元素来指定预期的目的类型。否则，应用组装器使用消费消息的应用组件的 `message-destination-ref` 元素中的 `message-destination-link` 元素链接到公共目的。在后者的情况下，应用组装器使用 `message-destination-ref` 元素中的 `message-destination-usage` 元素指示该应用组件从被引用目的消费消息。
 
 为了避免在整个 EE 应用程序中重命名目的以获得唯一名称，应用组装器可以在引用应用组件的 `message-destination-link` 元素中使用以下语法。应用组装器指定包含引用消息的 JAR 文件的路径，并附加以由 `#` 分隔的目标目的的 `message-destination-name`。该路径相对于引用应用的 JAR 文件。通过这种方式，可以唯一地标识具有相同 `message-destination-name` 的多个目的。
 
@@ -2273,26 +2030,35 @@ Java EE 产品提供者必须提供部署工具，允许部署器执行在前一
 
 某些 Java EE 应用组件类型允许使用 JTA `UserTransaction` 接口来启动、提交和中止事务。此类应用组件可以通过查找 JNDI 名称 `java:comp/UserTransaction` 或使用 `Resource` 注解请求 `UserTransaction` 对象来找到实现 `UserTransaction` 接口的适当对象。不能指定 `Resource` 注解的 `authenticationType` 和 `shareable` 元素。容器只需为可以有效使用它的组件提供 `java:comp/UserTransaction` 名称，或注入 `UserTransaction` 对象。`UserTransaction` 对象仅在执行查找的组件实例内有效。更多信息请参见各个组件的定义。下面的示例说明了应用组件如何通过注入获取并使用 `UserTransaction` 对象。
 
-```
+```java
 @Resource UserTransaction tx;
+
 ...
+
 public void updateData(...) {
+
   // 启动事务。
   tx.begin();
+
   ...
+
   // 对数据执行事务操作。
   ...
+
   // 提交事务。
   tx.commit();
+
   ...
+
 }
 ```
 
 下面的示例说明了应用组件如何使用 JNDI 查找获取并使用 `UserTransaction` 对象。
 
-```
+```java
 public void updateData(...) {
-  // 获取默认 JNDI 上下。
+
+  // 获取默认 JNDI 上下文。
   Context initCtx = new InitialContext();
 
   // 查找 UserTransaction 对象。
@@ -2300,12 +2066,17 @@ public void updateData(...) {
 
   // 启动事务。
   tx.begin();
+
   ...
+
   // 对数据执行事务操作。
   ...
+
   // 提交事务。
   tx.commit();
+
   ...
+
 }
 ```
 
@@ -2323,40 +2094,40 @@ public void updateData(...) {
 
 Java EE 产品提供者负责根据本规范提供适当的 `UserTransaction` 对象。
 
-## EE5.11 事务同步注册（TransactionSynchronizationRegistry）引用
+## EE.5.11 事务同步注册（TransactionSynchronizationRegistry）引用
 
-JTA `TransactionSynchronizationRegistry` 接口可能被系统级组件作为持久化管理器使用并与 EJB 或 Web 应用组件打包。此类组件可以通过查找 JNDI 名称 `java:comp/TransactionSynchronizationRegistry` 或使用 `Resource` 注解请求注入 `TransactionSynchronizationRegistry` 对象来找到实现 `TransactionSynchronizationRegistry` 接口的适当对象。不能指定 `Resource` 注解的 `authenticationType` 和 `shareable` 元素。容器只需为可以有效使用它的组件提供 `java:comp/TransactionSynchronizationRegistry` 名称，或注入 `TransactionSynchronizationRegistry` 对象。`TransactionSynchronizationRegistry` 对象仅在执行查找的组件实例内有效。更多信息请参见各个组件的定义。
-
-
-
-
+JTA `TransactionSynchronizationRegistry` 接口可能被系统级组件作为持久化管理器使用并与 EJB 或 Web 应用组件打包。此类组件可以通过查找 JNDI 名称 `java:comp/TransactionSynchronizationRegistry` 或使用 `Resource` 注解请求注入 `TransactionSynchronizationRegistry` 对象来找到实现 `TransactionSynchronizationRegistry` 接口的适当对象。不能指定 `Resource` 注解的 `authenticationType` 和 `shareable` 元素。容器只需为可以有效使用它的组件提供 `java:comp/TransactionSynchronizationRegistry` 名称，或注入 `TransactionSynchronizationRegistry` 对象。`TransactionSynchronizationRegistry` 对象仅在执行查看的组件实例内有效。更多信息请参见各个组件的定义。
 
 引用。此类部署描述符项可指定 `TransactionSynchronizationRegistry` 对象的注入。
 
 本节中的要求仅适用于支持 JTA 的 Java EE 产品。
 
-## EE5.11.1 应用组件提供者的责任
+## EE.5.11.1 应用组件提供者的责任
 
 应用程序组件提供者负责使用 `Resource` 注解请求注入 `TransactionSynchronizationRegistry` 实例，或使用定义的名称查找 `TransactionSynchronizationRegistry` 对象。
 
 只有某些应用程序组件类型需要能够访问 `TransactionSynchronizationRegistry` 对象；请参见本规范详情中的表 EE.6-1。
 
-## EE5.11.2 Java EE 产品提供者的责任
+## EE.5.11.2 Java EE 产品提供者的责任
 
 Java EE 产品提供者负责根据本规范提供适当的 `TransactionSynchronizationRegistry` 对象。
 
-## EE5.11.12 ORB 
+## EE.5.11.12 ORB
 
 某些 Java EE 需要利用 CORBA ORB 来执行某些操作。此类应用程序可以通过查找 JNDI 名称 `java:comp/ORB` 或请求注入 ORB 对象，来找到实现 ORB 接口的适当对象。容器要求为除 applet 之外的所有组件提供 `java:comp/ORB` 名称。对 ORB 的任何引用仅在执行查找的组件实例内有效。
 
 以下示例说明了应用程序组件如何通过注入获取并使用 ORB 对象。
 
-```
+```java
 @Resource ORB orb;
+
 ...
+
 // 获取用于创建对象引用的 POA。
 POA rootPOA = (POA)orb.resolve_initial_references("RootPOA");
+
 ...
+
 }
 ```
 
@@ -2364,6 +2135,7 @@ POA rootPOA = (POA)orb.resolve_initial_references("RootPOA");
 
 ```java
 public void method(...) {
+
     // 获取默认初始 JNDI 上下文。
     Context initCtx = new InitialContext();
 
@@ -2372,6 +2144,7 @@ public void method(...) {
 
     // 获取用于创建 ORB 引用的 POA。
     POA rootPOA = (POA)orb.resolve_initial_references("RootPOA");
+
 }
 ```
 
@@ -2381,15 +2154,15 @@ ORB 对象引用也可以以资源连接工厂引用相同的方式声明在部�
 
 本节的要求仅适用于支持互操作性 CORBA 的 Java EE 产品。
 
-## EE5.12.1 应用组件提供者的责任
+## EE.5.12.1 应用组件提供者的责任
 
 应用程序组件提供者负责请求注入 ORB 对象或使用定义的名称查找 ORB 对象。如果 `Resource` 注解的 `shareable` 元素设置为 `false`，则注入的 ORB 对象将不再是应用程序中其他组件使用的共享实例，而是仅供此组件使用的私有 ORB 实例。
 
-## EE5.12.2 Java EE 产品提供者的责任
+## EE.5.12.2 Java EE 产品提供者的责任
 
 Java EE 产品提供者负责根据本规范提供适当的 ORB 对象。
 
-Java EE 8, 最终发布版
+> Java EE 8, 最终发布版
 
 ## EE.5.13 持久化单元引用
 
@@ -2415,7 +2188,7 @@ EntityManagerFactory emf;
 EntityManagerFactory inventoryEMF;
 ```
 
-### EE.5.13.1.2 持久化单元引的编程接口
+### EE.5.13.1.2 持久化单元引用的编程接口
 
 应用程序组件提供者必须如下使用持久化单元引用来获取实体管理器工厂的引用：
 
@@ -2429,9 +2202,11 @@ EntityManagerFactory inventoryEMF;
 @PersistenceUnit(name="persistence/InventoryAppDB")
 @Stateless
 public class InventoryManagerBean implements InventoryManager {
+
     EJBContext ejContext;
 
     public void updateInventory(...) {
+
         ...
 
         // 获取初始 JNDI 上下文
@@ -2443,12 +2218,15 @@ public class InventoryManagerBean implements InventoryManager {
 
         // 使用工厂获取应用管理的实体管理器
         EntityManager em = factory.createEntityManager();
+
         ...
+
     }
+
 }
 ```
 
-Java EE 8, 最终发布版
+> Java EE 8, 最终发布版
 
 ### EE.5.13.1.3 部署描述符中的持久化单元引用
 
@@ -2465,6 +2243,19 @@ Java EE 8, 最终发布版
 ```xml
 <persistence-unit-ref>
   <description>
+```
+
+
+
+## EE.5.13.1 应用程序组件提供者的责任
+
+应用程序组件提供者使用 `PersistenceUnit` 注解或部署描述符中的 `persistence-unit-ref` 元素来声明对持久化单元的引用。
+
+以下代码示例说明了如何在部署描述符中声明持久化单元引用。
+
+```xml
+<persistence-unit-ref>
+  <description>
     用于库存管理程序的持久化单元。
   </description>
   <persistence-unit-ref-name>
@@ -2476,26 +2267,22 @@ Java EE 8, 最终发布版
 </persistence-unit-ref>
 ```
 
-
-
-
-
 ### EE.5.13.2 应用组装器：职责
 
-应用组装器（Application Assembler）可以使用部署描述符中的 `persistence-unit-name` 元素来消除持久化单元引用的歧。应用组装器（或应用程序组件提供者）可以在引用应用程序组件的 `persistence-unit-name` 元素中使用以下语法，避免在 Java EE 应用中重命名持久化单元以获得唯一名称。应用组装器指定被引用持久化单元的 `persistence.xml` 文件的根路径名称，并用 # 将持久化单元名称与路径分离。该路径相对于引用应用程序组件的 jar 文件。通过这种方式，当应用组装器无法更改持久化单元时，具有相同持久化单元名称的多个持久化单元可以被唯一标识。例如：
+应用组装器（Application Assembler）可以使用部署描述符中的 `persistence-unit-name` 元素来消除持久化单元引用的歧义。应用组装器（或应用程序组件提供者）可以在引用应用程序组件的 `persistence-unit-name` 元素中使用以下语法，避免在 Java EE 应用中重命名持久化单元以获得唯一名称。应用组装器指定被引用持久化单元的 `persistence.xml` 文件的根路径名称，并用 `#` 将持久化单元名称与路径分离。该路径相对于引用应用程序组件的 jar 文件。通过这种方式，当应用组装器无法更改持久化单元时，具有相同持久化单元名称的多个持久化单元可以被唯一标识。例如：
 
-```
+```xml
 ...
 <persistence-unit-ref>
-<description>
-Persistence unit for the inventory management application.
-</description>
-<persistence-unit-ref-name>
-persistence/InventoryDB
-</persistence-unit-ref-name>
-<persistence-unit-name>
-../lib/inventory.Jar#InventoryManagement
-</persistence-unit-name>
+  <description>
+    Persistence unit for the inventory management application.
+  </description>
+  <persistence-unit-ref-name>
+    persistence/InventoryDB
+  </persistence-unit-ref-name>
+  <persistence-unit-name>
+    ../lib/inventory.jar#InventoryManagement
+  </persistence-unit-name>
 </persistence-unit-ref>
 ...
 ```
@@ -2514,7 +2301,7 @@ persistence/InventoryDB
 
 部署者必须对元数据注解或部署描述符中声明的每个持久化单元引用执行以下任务：
 
-- 将持久化单元引用绑定到存在于运行环境中为该持久化单元配置的实体管理器工厂。部署者可以使用 JNDI Linkref 机制创建指向实体管理器工厂实际 JNDI 名称符号符号链接
+- 将持久化单元引用绑定到存在于运行环境中为该持久化单元配置的实体管理器工厂。部署者可以使用 JNDI Linkref 机制创建指向实体管理器工厂实际 JNDI 名称的符号链接。
 - 如果指定了持久化单元名称，部署者应将持久化单元引用绑定到指定为目标的持久化单元的实体管理器工厂。
 - 提供实体管理器工厂管理持久化单元所需的任何额外配置信息，如 Java Persistence 规范中所描述的。
 
@@ -2541,71 +2328,58 @@ Java EE 产品提供者负责以下工作：
 
 ### EE.5.14.1 应用程序组件提供者的职责
 
-本小节描述了应用程序组件提供者定位容器托管实体管理器的视图，并定义了其职责。第一小节描述了用于注入容器托管实体管理器引用的注解；第二部分描述了访问容器托管实体管理器引用的 API；第三部分描述了在部署描述符中声明这些引用的句语法。
+本小节描述了应用程序组件提供者定位容器托管实体管理器的视图，并定义了其职责。第一小节描述了用于注入容器托管实体管理器引用的注解；第二部分描述了访问容器托管实体管理器引用的 API；第三部分描述了在部署描述符中声明这些引用的语法。
 
-### EE.5.14.1.1 持久化上下文引用的注入
+#### EE.5.14.1.1 持久化上下文引用的注入
 
-应用程序组件的字段或方法可以使用 `PersistenceContext` 注解。`name` 元素指定了在 JNDI 命名文中定位被引用持久化单元容器托管实体管理器的名称。可选的 `unitName` 元素指定了定义该持久化单元的 `persistence.xml` 文件中声明的持久化单元名称。可选的 `type` 元素指定是使用事务范围还是扩展的持久化上下文。如果没有指定类型，则将使用事务范围的持久化上下文。带有扩展持久化上下文的容器托管实体管理器引用只能注入到状态会话 bean 中。可选的 `synchronization` 元素指定持久化上下文始终自动与当前事务同步，还是必须显式加入事务。如果没有指定 `synchronization` 元素，持久化上下文将自动同步。可选的 `properties` 元素指定了在创建实体管理器时传递给持久化提供者的配置属性。
+应用程序组件的字段或方法可以使用 `PersistenceContext` 注解。`name` 元素指定了在 JNDI 命名环境中定位被引用持久化单元容器托管实体管理器的名称。可选的 `unitName` 元素指定了定义该持久化单元的 `persistence.xml` 文件中声明的持久化单元名称。可选的 `type` 元素指定是使用事务范围还是扩展的持久化上下文。如果没有指定类型，则将使用事务范围的持久化上下文。带有扩展持久化上下文的容器托管实体管理器引用只能注入到状态会话 bean 中。可选的 `synchronization` 元素指定持久化上下文始终自动与当前事务同步，还是必须显式加入事务。如果没有指定 `synchronization` 元素，持久化上下文将自动同步。可选的 `properties` 元素指定了在创建实体管理器时传递给持久化提供者的配置属性。
 
 下面的代码示例说明了应用程序组件如何使用注解来声明持久化上下文引用。
 
-```
+```java
 @PersistenceContext(type=EXTENDED)
 EntityManager em;
 ```
 
-### EE.5.14.1.2 持久化上下文引用的编程接口
+#### EE.5.14.1.2 持久化上下文引用的编程接口
 
-应用程序组件提供者可以使用持久化上下文引用如下如下获取为持久化单元配置的容器托管实体管理器：
+应用程序组件提供者可以使用持久化上下文引用如下获取为持久化单元配置的容器托管实体管理器：
 
-- 将应用程序组件环境中的项分配给持久化上下文引用。（有关如何在部署描述符中声明持久化上下文引用的信息，请参见小节 5.14.1.3）。建议应用程序组件提供者将所有持久化上下文引用组织在组件环境的 `java:comp/env/persistence` 子上下。
+- 将应用程序组件环境中的项分配给持久化上下文引用。（有关如何在部署描述符中声明持久化上下文引用的信息，请参见小节 EE.5.14.1.3）。建议应用程序组件提供者将所有持久化上下文引用组织在组件环境的 `java:comp/env/persistence` 子上下文中。
 - 使用 JNDI API 在应用程序组件环境中查找持久化单元的容器托管实体管理器。
 
 下面的代码示例说明了如何获取持久化上下文的实体管理器。
 
-```
+```java
 @PersistenceContext(name="persistence/InventoryMgr")
 @Stateless
 public class InventoryManagerBean implements InventoryManager {
-
     public void updateInventory(...) {
-
-        // 获取初始 JNDI 上文
+        // 获取初始 JNDI 上下文
         Context initCtx = new InitialContext();
-
         // JNDI 查找获取容器托管实体管理器
-        EntityManager entityManager = (EntityManager) initCtx.lookup("
-```
-
-
-
-```java
-"java:comp/env/persistence/InventoryAppMgr");
-...
-}
+        EntityManager entityManager = (EntityManager) initCtx.lookup("java:comp/env/persistence/InventoryAppMgr");
+        ...
+    }
 }
 ```
 
-### EE.5.14.1.3 在部署描述符中声明持久上下文引用
+#### EE.5.14.1.3 在部署描述符中声明持久化上下文引用
 
-尽管持久上下文引用是应用程序组件环境中的一个条目，但应用组件提供者不能使用 `env-entry` 元素来声明它。
+尽管持久化上下文引用是应用程序组件环境中的一个条目，但应用组件提供者不能使用 `env-entry` 元素来声明它。
 
-相反，如果使用了元数据注解，应用组件提供者必须在部署描述符中使用声明所有的持久上下文引用……这允许应用程序组装器（Application Assembler）或部署器（Deployer）发现应用程序组件使用的所有持久上下文引用。部署描述符也可用于指定将持久上下文引用注入到 bean 中。
+相反，如果使用了元数据注解，应用组件提供者必须在部署描述符中使用声明所有的持久化上下文引用……这允许应用程序组装器（Application Assembler）或部署器（Deployer）发现应用程序组件使用的所有持久化上下文引用。部署描述符也可用于指定将持久化上下文引用注入到 bean 中。
 
 每个 `persistence-context-ref` 元素描述单个容器管理的实体引用。`persistence-context-ref` 元素由可选的 `description`、`persistence-unit-name`、`persistence-context-type`、`persistence-context-synchronization` 和 `persistence-property` 元素，以及强制的 `persistence-context-ref-name` 元素组成。
 
-`persistence-context-ref-name` 元素包含应用程序组件使用的环境条目代码。该环境条目相对于 `java:comp/env` 上文（例如，名称为 `persistence/InventoryAppMgr` 而不是 `java:comp/env/persistence/InventoryAppMgr`）。`persistence-unit-name` 元素是持久单元的名称，如持久单元的 .xml 文件中指定的。`persistence-context-type` 元素指定使用的是事务范围的持久上下文还是扩展的持久上下文。其值为 `Transaction` 或 `Extended`。如果未指定持久上下文类型，将使用事务范围的持久上下文。可选的 `persistence-context-synchronization` 元素指定持久上下文是否会自动与当前事务同步。其取值为 `Synchronized` 或 `Unsynchronized`。如果持久上下文将自动同步，可选的 `persistence-property` 元素指定了在实体被管理时传递给持久化提供者的配置属性。
+`persistence-context-ref-name` 元素包含应用程序组件使用的环境条目代码。该环境条目相对于 `java:comp/env` 上下文（例如，名称为 `persistence/InventoryAppMgr` 而不是 `java:comp/env/persistence/InventoryAppMgr`）。`persistence-unit-name` 元素是持久化单元的名称，如持久化单元的 .xml 文件中指定的。`persistence-context-type` 元素指定使用的是事务范围的持久化上下文还是扩展的持久化上下文。其值为 `Transaction` 或 `Extended`。如果未指定持久化上下文类型，将使用事务范围的持久化上下文。可选的 `persistence-context-synchronization` 元素指定持久化上下文是否会自动与当前事务同步。其取值为 `Synchronized` 或 `Unsynchronized`。如果持久化上下文将自动同步，可选的 `persistence-property` 元素指定了在实体被管理时传递给持久化提供者的配置属性。
 
-Java EE 8, 最终发布
-
-以下示例是上一小节说明的 `InventoryManager` 企业级 bean 使用的持久上下文引用的声明。
-
-...
+以下示例是上一小节说明的 `InventoryManager` 企业级 bean 使用的持久化上下文引用的声明。
 
 ```xml
 <persistence-context-ref>
   <description>
-    库存管理应用程序的持久上下文。
+    库存管理应用程序的持久化上下文。
   </description>
   <persistence-context-ref-name>
     persistence/InventoryAppDB
@@ -2616,18 +2390,14 @@ Java EE 8, 最终发布
 </persistence-context-ref>
 ```
 
-...
-
 ## EE.5.14.2 应用程序组装器的责任
 
-应用程序组装器可以使用部署描述符中的 `persistence-unit` 元素，根据第 EE.5.132.2 节“应用程序组装器的责任”中描述的语法指定对持久单元的引用。通过这种方式，如果持久单元名称无法更改，具有相同持久单元名称的多个持久单元可以被唯一标识。例如，
-
-...
+应用程序组装器可以使用部署描述符中的 `persistence-unit-name` 元素，根据第 EE.5.13.2 节“应用程序组装器的责任”中描述的语法指定对持久化单元的引用。通过这种方式，如果持久化单元名称无法更改，具有相同持久化单元名称的多个持久化单元可以被唯一标识。例如：
 
 ```xml
 <persistence-context-ref>
   <description>
-    库存管理应用程序的持久上下文。
+    库存管理应用程序的持久化上下文。
   </description>
   <persistence-context-ref-name>
     persistence/InventoryAppDB
@@ -2638,9 +2408,7 @@ Java EE 8, 最终发布
 </persistence-context-ref>
 ```
 
-...
-
-应用程序组装器使用 `persistence-unit-name` 将 `InventoryManagerBean` 中声明的持久单元名称 `InventoryManagement` 与 `inventory.jar` 中定义的名为 `InventoryManagement` 的持久单元链接起来。
+应用程序组装器使用 `persistence-unit-name` 将 `InventoryManagerBean` 中声明的持久化单元名称 `InventoryManagement` 与 `inventory.jar` 中定义的名为 `InventoryManagement` 的持久化单元链接起来。
 
 以下规则适用于部署描述符条目如何覆盖 `PersistenceContext` 注解：
 
@@ -2653,33 +2421,28 @@ Java EE 8, 最终发布
 
 ### EE.5.14.3 部署者的责任
 
-部署器使用部署工具将持久上下文引用绑定到容器管理的实体管理器，该上下文具有指定的类型，并为目标运行环境中的持久单元进行了配置。
+部署者使用部署工具将持久化上下文引用绑定到容器管理的实体管理器，该上下文具有指定的类型，并为目标运行环境中的持久化单元进行了配置。
 
-部署器必须为元数据注解或部署描述符声明的每个持久上下文引用执行以下任务：
+部署者必须为元数据注解或部署描述符声明的每个持久化上下文引用执行以下任务：
 
-- 将持久上下文引用绑定到容器管理的实体管理器，该持久上下文具有指定的类型，并按照运行环境中存在的持久单元的 `persistence.xml` 文件进行配置。部署器可以使用，例如，
+- 将持久化上下文引用绑定到容器管理的实体管理器，该持久化上下文具有指定的类型，并按照运行环境中存在的持久化单元的 `persistence.xml` 文件进行配置。部署者可以使用，例如，`JNDIRef` 机制创建指向实体管理器实际 JNDI 名称的符号链接。
+- 如果指定了持久化单元名称，部署者应将持久化上下文引用绑定到指定为目标的持久化单元的实体管理器。
+- 提供 Java Persistence 规范中所述的，实体管理器创建和管理持久化单元所需的任何额外配置信息。
 
-Java EE 8, 最终发布
+## EE.5.14.4 Java EE 产品提供者的责任
 
-`JNDIRef` 机制创建指向实体管理器实际 JNDI 名称的符号链接。
+Java EE 产品提供者负责以下工作：
 
-- 如果指定了持久单元名称，部署器应将持久上下文引用绑定到指定为目标的持久单元的实体管理器。
-- 提供 Java Persistence 规范中所述的，实体管理器创建创建实体管理器和管理持久单元所需的任何额外配置信息。
-
-## EE.5.14.4 Java 产品提供者的责任
-
-Java 产品提供者负责以下工作：
-
-- 提供允许部署器执行上一小节任务的部署工具。
-- 为容器配置的持久单元提供实体管理实现。此实现可能由第三方持久化提供者提供。
+- 提供允许部署者执行上一小节任务的部署工具。
+- 为容器配置的持久化单元提供实体管理器实现。此实现可能由第三方持久化提供者提供。
 
 ## EE.5.14.5 系统管理员的责任
 
 系统管理员通常负责：
 
-- 在环境中添加、删除和配置实体工厂。
+- 在环境中添加、删除和配置实体管理器工厂。
 
-在某些场景下，这些任务由部署器完成。
+在某些场景下，这些任务由部署者完成。
 
 ## EE.5.15 应用程序名称和模块名称
 
@@ -2689,9 +2452,9 @@ Java 产品提供者负责以下工作：
 
 应用组件提供者负责通过注解对 String 方法或字段请求应用程序名称或模块名称，或使用定义的名称查找应用程序名称或模块名称。
 
-### EE.5.15.2 Java 产品提供者的责任
+### EE.5.15.2 Java EE 产品提供者的责任
 
-Java 产品提供者负责根据规范提供正确的应用程序名称和模块名称 String 对象。
+Java EE 产品提供者负责根据规范提供正确的应用程序名称和模块名称 String 对象。
 
 ## EE.5.16 客户端容器属性
 
@@ -2701,50 +2464,41 @@ Java 产品提供者负责根据规范提供正确的应用程序名称和模块
 
 应用组件提供者负责通过注解对 Boolean 或 boolean 方法或字段请求客户端容器属性，或使用定义的名称查找客户端容器属性。
 
-### EE.5.16.2 Java 产品提供者的责任
+### EE.5.16.2 Java EE 产品提供者的责任
 
-Java 产品提供者负责根据规范提供正确的客户端容器属性。
+Java EE 产品提供者负责根据规范提供正确的客户端容器属性。
 
-## EE.5.17 验证器和验证器工厂的的引用
+## EE.5.17 验证器和验证器工厂的引用
 
-本节描述了允许应用程序获取 Bean Validation 验证器和 ValidatorFactory 类型实例的注解和部署描述符条目。
+本节描述了允许应用程序获取 Bean Validation 验证器和 `ValidatorFactory` 类型实例的注解和部署描述符条目。
 
-需要使用这些接口的应用程序可以通过查找 `java:comp/Validator` 查找 Validator 以及 `java:comp/` 查找适当的对象。
+需要使用这些接口的应用程序可以通过查找 `java:comp/Validator` 查找 `Validator` 以及 `java:comp/ValidatorFactory` 查找 `ValidatorFactory`，或通过 `Resource` 注解请求注入适当类型的对象。不能指定 `Resource` 注解的 `authenticationType` 和 `shareable` 元素。
 
-
-
-
-
-# 验证器与验证器工厂引用 131
-
-用于 `ValidatorFactory` 或通过 `Resource` 注解请求注入适当类型的对象。不能指定 `Resource` 注解的 `authenticationType` 和 `shareable` 元素。
-
-```
+```java
 @Resource ValidatorFactory validatorFactory;
-```
-
-```
-@Resource validator;
+@Resource Validator validator;
 ```
 
 对于 `Validator` 对象，将使用默认验证上下文。这意味着所有此类验证器将等同于首先获取一个 `ValidatorFactory`，然后在其上调用无参数的 `getValidator` 方法的结果。
 
 用语言描述，这两个代码段是等价的：
 
-```
+```java
 // 直接获取 Validator
 Context initCtx = new InitialContext();
-Validator validator = (Validator).lookup(
-"java:comp/Validator");
+Validator validator = (Validator) initCtx.lookup("java:comp/Validator");
 ```
 
+
+
+"java:comp/Validator");
+
 ```
-// 从 ValidatorFactory 获取 Validator
 Context initCtx = new InitialContext();
 Validator validator =
-((ValidatorFactory) initCtx.lookup(
-"java:comp/ValidatorFactory")
-.getValidator();
+    ((ValidatorFactory) initCtx.lookup(
+        "java:comp/ValidatorFactory")
+    .getValidator();
 ```
 
 `Validator` 或 `ValidatorFactory` 对象引用也可以通过与资源引用相同的方式在部署描述符中声明。
@@ -2816,18 +2570,13 @@ Java EE 8，最终发布
 
 当应用程序组件提供者或应用程序装配器通过资源定义注解或部署描述符指定指向“物理”资源的连接信息时，假设该物理资源存在。实现可以支持资源的自动置备，但不是此项功能。如果不支持资源的自动置备，则由部署程序（可能配合系统管理员）确保为应用程序置备物理资源。
 
-### EE.5.18.2.1 JNDI 名称
+## EE.5.18.2.1 JNDI 名称
 
 部署程序和 Java EE 产品提供者不能更改指定的 JNDI 名称。请求的资源必须在指定的名称下可用。
 
-### EE.5.18.2.2 资源地址
+## EE.5.18.2.2 资源地址
 
-如果应用程序组件提供者或应用程序装配器指定了资源的地址（服务器名称、端口等），位于指定位置的资源
-
-
-
-
-应当已经存在。如果不存在，且不支持资源的自动置备，则由部署者（Deployer）有责任（可能与系统管理员协作）确保为应用程序配置好该资源⁴。
+如果应用程序组件提供者或应用程序装配器指定了资源的地址（服务器名称、端口等），位于指定位置的资源应当已经存在。如果不存在，且不支持资源的自动置备，则由部署者（Deployer）有责任（可能与系统管理员协作）确保为应用程序配置好该资源⁴。
 
 如果该资源没有通过其他方式配置，且支持资源的自动置备，则由 Java EE 产品提供者负责配置该资源。如果请求的资源无法可用或创建，则应用程序必须无法部署。
 
@@ -2835,11 +2584,11 @@ Java EE 8，最终发布
 
 服务质量元素可以由部署者更改。Java EE 产品提供者允许根据其实现限制和服务质量保证，对服务质量元素施加限制。如果指定的服务质量值不符合这些限制，产品提供者不得拒绝部署（但必须使用适当的值）。
 
-### EE.5.18.2.4 属性
+## EE.5.18.2.4 属性
 
 所有资源定义注解和 XML 元素都支持使用属性元素（命名为 "properties" 或 "property" 的元素）。如果 Java EE 产品提供者识别的属性的值是其不支持的，则 Java EE 产品提供者被允许拒绝部署。Java EE 产品提供者不得基于其不识别的属性拒绝部署。
 
-## EE.5.18.3 DataSource 资源定义
+# EE.5.18.3 DataSource 资源定义
 
 应用程序可以定义一个 DataSource 资源。DataSource 资源用于使用 JDBC 驱动访问数据库。
 
@@ -2848,8 +2597,6 @@ DataSource 资源可以在节 EE.5.2.2.2 “应用程序组件环境命名空间
 DataSource 资源可以在 Web 模块、EJB 模块、应用程序客户端模块或应用程序部署符中使用 `source` 元素定义。
 
 例如：
-
-> ⁴ 注意，部署者并不禁止覆盖资源地址。
 
 ```xml
 <data-source>
@@ -2904,46 +2651,44 @@ DataSource 资源也可以通过在容器管理的类（如 servlet 或企业 Be
 public class MySessionBean {
     @Resource(lookup = "java:app/MyDataSource")
     DataSource myDB;
-
 }
 ```
 
-以下 `DataSourceDefinition` 注解元素被视为指定 DataSource 资源的地址：serverName, portNumber, databaseName, url。
+以下 `DataSourceDefinition` 注解元素被视为指定 DataSource 资源的地址：`serverName`, `portNumber`, `databaseName`, `url`。
 
-以下 `DataSourceDefinition` 注解元素被视为服务质量元素：loginTimeout, initialPoolSize, maxPoolSize, minPoolSize, maxIdleTime, maxStatements。
+以下 `DataSourceDefinition` 注解元素被视为服务质量元素：`loginTimeout`, `initialPoolSize`, `maxPoolSize`, `minPoolSize`, `maxIdleTime`, `maxStatements`。
 
-### EE.5.18.3.1 应用程序组件提供者的责任
+## EE.5.18.3.1 应用程序组件提供者的责任
 
 应用程序组件提供者负责使用 `@DataSourceDefinition` 注解或 `data-source` 部署元素定义 DataSource 资源。
 
 如果数据库之前已经为应用程序配置过（例如，由系统管理员配置），则由应用程序组件负责提供访问数据库的 URL。
 
-### EE.5.18.3.2 部署者的责任
+## EE.5.18.3.2 部署者的责任
 
 所有资源定义的共同要求在节 EE.5.18.2.3 “服务质量”中描述。额外要求如下：
 
 - 如果指定了用户名，则应使用密码。
 - 如果指定了事务性（transactional），则指定隔离级别。
 
-### EE.5.18.3.3 产品提供者的责任
+## EE.5.18.3.3 产品提供者的责任
 
 所有资源定义的共同要求在节 EE.5.18.2.3 “服务质量”中描述。额外要求如下：
 
 - 如果指定了类，则必须提供数据源。
 - 如果指定了隔离级别，产品提供者必须拒绝部署。
 
-## EE.5.18.3.4 Jms ConnectionFactory 资源定义
+## EE.5.18.3.4 JMS ConnectionFactory 资源定义
 
-应用程序可以定义一个 Jms ConnectionFactory 资源。
-Jms ConnectionFactory 资源可以在节 EE.5.2.2 “应用程序组件环境命名空间”中描述的任何 JNDI 命名空间中定义。
+应用程序可以定义一个 JMS ConnectionFactory 资源。JMS ConnectionFactory 资源可以在节 EE.5.2.2 “应用程序组件环境命名空间”中描述的任何 JNDI 命名空间中定义。
 
-Jms ConnectionFactory 资源可以在 Web 模块、EJB 模块、应用程序客户端模块或应用程序部署符中使用 `jms-connection-factory` 元素定义。
+JMS ConnectionFactory 资源可以在 Web 模块、EJB 模块、应用程序客户端模块或应用程序部署符中使用 `jms-connection-factory` 元素定义。
 
 例如：
 
 ```xml
 <jms-connection-factory>
-  <description>Sample Jms ConnectionFactory definition</description>
+  <description>Sample JMS ConnectionFactory definition</description>
   <name>java:app/MyJCF</name>
   <interface-name>javax.jms.QueueConnectionFactory</interface-name>
   <resource-adapter>myJMSRA</resource-adapter>
@@ -2976,7 +2721,7 @@ ConnectionFactory 资源也可以通过在容器管理的类（如 servlet 或�
 )
 ```
 
-与 DataSource 定义一样，我们不建议在代码中包含生产系统的密码，但在测试时通常很有用。密码或 `JMSConnectionFactoryDefinition` 注解的其他部分可以在应用程序部署时通过部署符进行覆盖。）
+与 DataSource 定义一样，我们不建议在代码中包含生产系统的密码，但在测试时通常很有用。密码或 `JMSConnectionFactoryDefinition` 注解的其他部分可以在应用程序部署时通过部署符进行覆盖。
 
 一旦定义好，组件就可以使用 `resource-ref` 部署符元素或 `@Resource` 注解来引用 JMS ConnectionFactory 资源。例如，上述 JMS ConnectionFactory 可以如下所示引用：
 
@@ -2985,18 +2730,15 @@ ConnectionFactory 资源也可以通过在容器管理的类（如 servlet 或�
 public class MySessionBean {
     @Resource(lookup = "java:app/MyJCF")
     ConnectionFactory myCF;
-
 ...
 }
 ```
 
-以下 `JMSConnectionFactoryDefinition` 注解元素（以及相应的 XML 部署符元素）被视为指定 JMS ConnectionFactory 资源的地址：resourceAdapter。
 
 
+以下 `JMSConnectionFactoryDefinition` 注解元素（以及相应的 XML 部署描述符元素）被视为指定 JMS ConnectionFactory 资源的地址：`resourceAdapter`。
 
-
-
-以下 `JMSConnectionFactoryDefinition` 注解元素（以及相应的 XML 部署描述符元素）被视为服务元素：maxPoolSize, minPoolSize。
+以下 `JMSConnectionFactoryDefinition` 注解元素（以及相应的 XML 部署描述符元素）被视为服务元素：`maxPoolSize`, `minPoolSize`。
 
 ## EE.5.18.4.1 应用组件提供者的责任
 
@@ -3025,46 +2767,47 @@ JMS 目标资源可以在 Web 模块、EJB 模块、应用程序客户端模块�
 
 例如：
 
-```
+```xml
 <jms-destination>
-<description>Sample JMS Destination definition</description>
-<name>java:app/MyMSDestination</name>
-<interface-name>javax.jms.Queue</interface-name>
-<resource-adapter>myJMSRA</resource-adapter>
-<destination-name>myQueue1</destination-name>
-<property>
-<name>Property1</name>
-<value>10</value>
-</property>
-<property>
-<name>Property2</name>
-<value>20</value>
-</property>
+  <description>Sample JMS Destination definition</description>
+  <name>java:app/MyMSDestination</name>
+  <interface-name>javax.jms.Queue</interface-name>
+  <resource-adapter>myJMSRA</resource-adapter>
+  <destination-name>myQueue1</destination-name>
+  <property>
+    <name>Property1</name>
+    <value>10</value>
+  </property>
+  <property>
+    <name>Property2</name>
+    <value>20</value>
+  </property>
 </jms-destination>
 ```
 
-JMS 目标资源也可以在容器管理类（如 servlet 或企业 bean 类）上使用 `JMSDefinition` 注解定义。
+JMS 目标资源也可以在容器管理类（如 servlet 或企业 bean 类）上使用 `JMSDestinationDefinition` 注解定义。
 
 例如：
 
-```
+```java
 @JMSDestinationDefinition(
-name="java:app/MyJMSQueue",
-interfaceName="javax.jms.Queue",ndestinationName="myQueue1")
+  name="java:app/MyJMSQueue",
+  interfaceName="javax.jms.Queue",
+  destinationName="myQueue1")
 ```
 
 `JMSDestinationDefinition` 注解在应用程序部署时可以被部署描述符覆盖。一旦定义，组件可以通过 `resource-env-ref` 或 `message-destination-ref` 部署描述符元素或 `Resource` 注解来引用 JMS 目标资源。例如，上述目标可以如下方式引用：
 
-```
+```java
 @Stateless
 public class MySessionBean {
-@Resource(Lookup = "java:app/MyJMSQueue")
-Queue myQueue;
-..
+  @Resource(Lookup = "java:app/MyJMSQueue")
+  Queue myQueue;
+  ..
 }
 ```
 
-以下 `JMSDestinationDefinition` 注解元素（以及相应的 XML 部署描述符元素）被视为指定 JMS 目标资源的地址：resourceAdapter, destinationName。
+以下 `JMSDestinationDefinition` 注解元素（以及相应的 XML 部署描述符元素）被视为指定 JMS 目标资源的地址：`resourceAdapter`, `destinationName`。
 
 ## EE.5.18.5.1 应用组件提供者的责任
 
@@ -3090,31 +2833,32 @@ Mail Session 资源可以在 Web 模块、EJB 模块、应用程序客户端模�
 
 例如：
 
-```
+```xml
 <mail-session>
-<description>Sample Mail Session definition</description>
-<name>java:app/mail/MySession</name>
-<store-protocol>imap</store-protocol>
-<transport-protocol>smtp</transport-protocol>
-<host>somewhere.myco.com</host>
-<user>linda</user>
-<password>secret</password>
-<from>some.body@myco.com</from>
-<property>
-<name>smtp.starttls.enable</name>
-<value>true</value>
-</property>
-<property>
-  <name>mail.imap.connectiontimeout</name>
-  <value>500</value>
-</property>
+  <description>Sample Mail Session definition</description>
+  <name>java:app/mail/MySession</name>
+  <store-protocol>imap</store-protocol>
+  <transport-protocol>smtp</transport-protocol>
+  <host>somewhere.myco.com</host>
+  <user>linda</user>
+  <password>secret</password>
+  <from>some.body@myco.com</from>
+  <property>
+    <name>smtp.starttls.enable</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>mail.imap.connectiontimeout</name>
+    <value>500</value>
+  </property>
 </mail-session>
 ```
 
 Mail Session 资源也可以在容器管理类（如 servlet 或企业类）上使用 `MailSessionDefinition` 注解定义。
+
 例如：
 
-```
+```java
 @MailSessionDefinition(
   name="java:app/mail/MySession",
   host="somewhere.myco.com",
@@ -3123,16 +2867,16 @@ Mail Session 资源也可以在容器管理类（如 servlet 或企业类）上�
 
 `MailSessionDefinition` 注解在应用程序部署时可以被部署描述符覆盖。一旦定义，组件通过 `resource-ref` 部署元素引用 Mail Session 资源。例如，上述目标可以如下方式引用：
 
-```
+```java
 @Stateless
 public class MySessionBean {
-@Resource(Lookup = "java:app/mail/MySession")
-MailSession session;
-..
+  @Resource(Lookup = "java:app/mail/MySession")
+  MailSession session;
+  ..
 }
 ```
 
-以下 `MailSessionDefinition` 注解元素（以及相应的 XML 部署描述符元素）被视为指定 Mail Session 资源的地址：host, from。
+以下 `MailSessionDefinition` 注解元素（以及相应的 XML 部署描述符元素）被视为指定 Mail Session 资源的地址：`host`, `from`。
 
 ## EE.5.18.6.1 应用组件提供者的责任
 
@@ -3158,23 +2902,23 @@ Connector factory 资源可以在 Web 模块、EJB 模块或应用程序部署�
 
 例如：
 
-```
+```xml
 <connection-factory>
-<description>Sample Connector resource definition</description>
-<name>java:app/myConnectionFactory</name>
-<interface-name>com.eis.ConnectionFactory</interface-name>
-<resource-adapter>MyEISRA</resource-adapter>
-<max-pool-size>20</max-pool-size>
-<min-pool-size>10</min-pool-size>
-<transaction-support>XATrans</transaction-support>
-<property>
-<name>Property1</name>
-<value>prop1val</value>
-</property>
-<property>
-<name>Property2</name>
-<value>prop2val</value>
-</property>
+  <description>Sample Connector resource definition</description>
+  <name>java:app/myConnectionFactory</name>
+  <interface-name>com.eis.ConnectionFactory</interface-name>
+  <resource-adapter>MyEISRA</resource-adapter>
+  <max-pool-size>20</max-pool-size>
+  <min-pool-size>10</min-pool-size>
+  <transaction-support>XATrans</transaction-support>
+  <property>
+    <name>Property1</name>
+    <value>prop1val</value>
+  </property>
+  <property>
+    <name>Property2</name>
+    <value>prop2val</value>
+  </property>
 </connection-factory>
 ```
 
@@ -3182,25 +2926,25 @@ Connector factory 资源也可以在容器管理类（如 servlet 或企业 bean
 
 例如：
 
-```
+```java
 @ConnectionFactoryDefinition(
-name="java:app/myConnectionFactory",
-interfaceName="com.eis.ConnectionFactory",
-resourceAdapter="MyESRA")
+  name="java:app/myConnectionFactory",
+  interfaceName="com.eis.ConnectionFactory",
+  resourceAdapter="MyESRA")
 ```
 
 `ConnectionFactoryDefinition` 注解在应用程序部署时可以被部署描述符覆盖。一旦定义，组件可以通过 `resource-ref` 部署元素或 `Resource` 注解来引用 Connector factory 资源。例如，上述连接器工厂可以如下方式引用：
 
-```
+```java
 @Stateless
 public class MySessionBean {
-@Resource(lookup = "java:app/myConnectionFactory")
-ConnectionFactory myCF;
-..
+  @Resource(lookup = "java:app/myConnectionFactory")
+  ConnectionFactory myCF;
+  ..
 }
 ```
 
-以下 `ConnectionFactoryDefinition` 注解元素（以及相应的 XML 部署描述符元素）被视为指定 Connector factory 资源的地址：resourceAdapter, interfaceName。
+以下 `ConnectionFactoryDefinition` 注解元素（以及相应的 XML 部署描述符元素）被视为指定 Connector factory 资源的地址：`resourceAdapter`, `interfaceName`。
 
 ## EE.5.18.7.1 应用组件提供者的责任
 
@@ -3211,12 +2955,7 @@ ConnectionFactory myCF;
 所有资源定义类型的通用要求描述在 EE.5.18.2 节“所有资源定义类型的通用要求”中。适用以下额外要求：
 
 - 必须提供指定接口类型的资源。
-
-
-
-
-
--   必须提供指定类型的资源。
+- 必须提供指定类型的资源。
 
 ## EE.5.18.7.3 Java EE 产品提供者的责任
 
@@ -3227,39 +2966,42 @@ ConnectionFactory myCF;
 应用程序可以定义一个连接器管理对象资源。该管理对象资源可以在 EE.5.2.2 节（“应用程序组件环境命名空间”）中描述的任何 JNDI 命名空间中定义。
 
 可以使用 `administered-object` 元素在 Web 模块、EJB 模块或应用程序部署描述符中定义管理对象资源。用于管理对象配置的属性如连接器（Connector）规范所示。
+
 示例：
 
 ```xml
 <administered-object>
-<description>Sample Admin Object definition</description>
-<name>java:app/MyAdminObject</name>
-<class-name>com.extraServices.AdminObject</class-name>
-<resource-adapter>myESRA</resource-adapter>
-<property>
-<name>Property1</name>
-<value>10</value>
-</property>
-<property>
-<name>Property2</name>
-<value>20</value>
-</property>
+  <description>Sample Admin Object definition</description>
+  <name>java:app/MyAdminObject</name>
+  <class-name>com.extraServices.AdminObject</class-name>
+  <resource-adapter>myESRA</resource-adapter>
+  <property>
+    <name>Property1</name>
+    <value>10</value>
+  </property>
+  <property>
+    <name>Property2</name>
+    <value>20</value>
+  </property>
 </administered-object>
 ```
 
 也可以在容器托管类（如 Servlet 或企业级 Bean 类）上使用 `AdministeredObjectDefinition` 注解来定义管理对象资源。
+
 示例：
 
 ```java
 @AdministeredObjectDefinition(
-name="java:app/MyAdminObject",className="com.extraServices.AdminObject",
-resourceAdapter="myESRA")
+  name="java:app/MyAdminObject",
+  className="com.extraServices.AdminObject",
+  resourceAdapter="myESRA")
 ```
 
-当应用程序部署时，可以通过部署描述符覆盖 `AdministeredObjectDefinition` 注解。
-一旦定义定义，组件可以使用 `resource-env-ref` 描述符元素或 `Resource` 注解来引用管理对象资源。例如，上述管理对象资源可以如下引用：
+当应用程序部署时，可以通过部署描述符覆盖 `AdministeredObjectDefinition` 注解。一旦定义，组件可以使用 `resource-env-ref` 描述符元素或 `Resource` 注解来引用管理对象资源。例如，上述管理对象资源可以如下引用：
 
 ```java
-@Stateless public class MySessionBean {
+@Stateless
+public class MySessionBean {
   @Resource(lookup = "java:app/myAdminObject")
   AdminObject myAdminObject;
   ...
@@ -3314,9 +3056,14 @@ Java EE 产品提供者必须通过 JNDI 名称 `java:comp/DefaultJMSConnectionF
 应用程序组件提供者或应用程序组装器可以使用 `Resource` 注解的 `lookup` 元素或 `resource-ref` 部署描述符元素的 `lookup-name` 元素显式地将 JMS 连接工厂引用绑定到默认连接工厂。例如：
 
 ```java
-@Resource(name="myJMSCF",lookup="java:comp/DefaultJMSConnectionFactory")
-ConnectionFactory myJMSCF;
+@Resource(lookup="java:comp/DefaultJMSConnectionFactory")
+ConnectionFactory myCF;
 ```
+
+
+
+@Resource(name="myJMSCF", lookup="java:comp/DefaultJMSConnectionFactory")
+ConnectionFactory myJMSCF;
 
 如果没有此类绑定或等效的特定产品绑定，引用的映射将默认为产品的默认数据源（注：此处原文可能笔误，应为工厂）。例如，以下内容将映射到该产品默认数据库的预配置数据源：
 
@@ -3336,15 +3083,15 @@ Java EE 产品提供者必须在运行环境中提供一个 JMS 提供者。Java
 Java EE 平台要求 Java EE 产品提供者提供一个预配置的托管执行服务、一个预配置的调度执行服务、一个预配置的托管线程工厂以及一个预配置的上下文服务供应用程序使用。
 Java EE 产品提供者必须通过以下 JNDI 名称向应用程序提供默认并发工具：
 
--   java:comp/DefaultManagedExecutorService：对应预配置的托管执行服务
--   java:comp/DefaultManagedScheduledExecutorService：对应预配置的调度执行服务
--   java:comp/DefaultManagedThreadFactory：对应预配置的托管线程工厂
--   java:comp/DefaultContextService：对应预配置的上下文服务
+- `java:comp/DefaultManagedExecutorService`：对应预配置的托管执行服务
+- `java:comp/DefaultManagedScheduledExecutorService`：对应预配置的调度执行服务
+- `java:comp/DefaultManagedThreadFactory`：对应预配置的托管线程工厂
+- `java:comp/DefaultContextService`：对应预配置的上下文服务
 
 应用程序组件提供者或应用程序组装器可以使用 `Resource` 注解的 `lookup` 元素或 `resource-ref` 部署描述符元素的 `lookup-name` 元素显式地将资源绑定到默认并发对象。例如：
 
 ```java
-@Resource(name="managedExecutorService",lookup="java:comp/DefaultManagedExecutorService")
+@Resource(name="managedExecutorService", lookup="java:comp/DefaultManagedExecutorService")
 ManagedExecutorService myManagedExecutorService;
 ```
 
@@ -3359,16 +3106,12 @@ ManagedExecutorService myManagedExecutorService;
 
 Java EE 产品提供者必须提供：
 
--   预配置的默认托管执行服务，供应用程序通过 JNDI 名称 `java:comp/DefaultManagedExecutorService` 访问该服务
--   预配置的默认调度执行服务，供应用程序通过 JNDI 名称 `java:comp/DefaultManagedScheduledExecutorService` 访问该服务
--   预配置的默认托管线程工厂，供应用程序通过 JNDI 名称 `java:comp/DefaultManagedThreadFactory` 访问该工厂
--   预配置的默认上下文服务，供应用程序通过 JNDI 名称 `java:comp/DefaultContextService` 访问该服务。
+- 预配置的默认托管执行服务，供应用程序通过 JNDI 名称 `java:comp/DefaultManagedExecutorService` 访问该服务
+- 预配置的默认调度执行服务，供应用程序通过 JNDI 名称 `java:comp/DefaultManagedScheduledExecutorService` 访问该服务
+- 预配置的默认托管线程工厂，供应用程序通过 JNDI 名称 `java:comp/DefaultManagedThreadFactory` 访问该工厂
+- 预配置的默认上下文服务，供应用程序通过 JNDI 名称 `java:comp/DefaultContextService` 访问该服务。
 
 Java EE 8, Final Release
-
-
-
-
 
 如果并发工具类（Concurrency Utilities）对象环境引用没有被应用程序组件提供者、应用程序组装器或部署器映射到特定的配置对象，则必须由 Java EE 提供者映射到用于 Java EE 产品提供者的预配置并发工具类对象。
 
@@ -3407,11 +3150,11 @@ ShoppingCart cart = (ShoppingCart) context.lookup("java:module/cart");
 
 接下来的示例显示了如何使用描述符声明上一个例中购物 bean 的引用，这次使用了描述符。（为了使示例更真实，应该为 `resource-ref` 添加一个 `injection-target` 子元素。）
 
-```
+```xml
 <resource-ref>
-<res-ref-name>bean/cart</res-ref-name>
-<ref-type>com.acme.ShoppingCart</ref-type>
-<lookup-name>java:module/cart</lookup-name>
+  <res-ref-name>bean/cart</res-ref-name>
+  <ref-type>com.acme.ShoppingCart</ref-type>
+  <lookup-name>java:module/cart</lookup-name>
 </resource-ref>
 ```
 
@@ -3443,6 +3186,8 @@ Java EE 8，最终发布版
 @Inject BeanManager manager;
 ```
 
+
+
 `BeanManager` 对象引用也可以以资源环境引用相同的方式在部署描述符中声明。
 
 ## EE.5.23.1 应用程序组件提供者的职责
@@ -3459,11 +3204,11 @@ Java EE 产品提供者负责根据规范提供适当的 `BeanManager` 实例。
 
 根据 CDI 规范，托管 bean 支持依赖注入。目前，类成为托管 bean 有三种方式：
 
-- 1. 作为 EJB 会话 bean 组件。
-- 2. 被标记为 `@ManagedBean` 注解。
-- 3. 满足 CDI 规范中描述的条件。
+1. 作为 EJB 会话 bean 组件。
+2. 被标记为 `@ManagedBean` 注解。
+3. 满足 CDI 规范中描述的条件。
 
-满足上述至少一个类的将有资格获得 CDI 规范描述的完全依赖注入支持。
+满足上述至少一个条件的类将有资格获得 CDI 规范描述的完全依赖注入支持。
 
 表 EE.5–1 中列出的满足上述第三种条件但既不满足第一种也不满足第二种组件类，如果标记了 CDI bean 定义注解或包含了启用了 CDI 的 bean 存档（bean archive），也可以用作 CDI 托管 bean。然而，如果它们被用作 CDI 托管 bean（例如注入到其他托管类中），由 CDI 管理的实例可能不是由 Java EE 容器管理的实例。
 
@@ -3485,17 +3230,11 @@ Java EE 产品提供者负责根据规范提供适当的 `BeanManager` 实例。
 
 容器可以优化上述步骤，例如避免调用实际的 CDI SPI 而是依赖容器特定的接口，只要结果一致即可。
 
-
-
-
-
-# 第 EE.6 章
-
-## 应用程序接口
+# 第 EE.6 章 应用程序接口
 
 本章描述了 Java™ 平台企业版（Java EE）的 API 要求。Java EE 要求提供若干 API 供 Java EE 使用，这些从核心 Java API 开始，并包括许多额外的 Java 技术。
 
-### EE.6.1 必要的 API
+## EE.6.1 必要的 API
 
 Java EE 应用组件在由 Java EE 平台提供的容器所提供的运行时执行。完整的 Java EE 平台支持四种容器，对应不同的 Java EE 应用类型：应用程序客户端容器；applet 容器；用于 servlet、JSP 页面、JSF 应用、JAX-RS 应用的 Web 容器；企业 Bean（EJB）容器。Java EE 配置文件可能仅支持这些组件类型的子集，具体由各个 Java EE 配置文件规范定义。
 
@@ -3527,16 +3266,12 @@ Java SE API 的规范可以在 http://docs.oracle.com/javase/8/docs/ 获取。
 
 ### EE.6.1.2 必要的 Java SE 技术
 
-完整的 Java EE 平台在本规范定义的每个容器中还提供了许多 Java 技术。表 EE.6-1 列出了这些技术及其所需的版本、哪些容器包含了这些技术，以及该技术是必要的 (REQ)、建议可选的 (POPT) 或还是的 (OPT)。
+完整的 Java EE 平台在本规范定义的每个容器中还提供了许多 Java 技术。表 EE.6-1 列出了这些技术及其所需的版本、哪些容器包含了这些技术，以及该技术是必要的 (REQ)、建议可选的 (POPT) 或可选的 (OPT)。
 
-Java EE 8，最终发布
-
-每个 Java EE 规范将包含一个类似的表格，描述该配置文件需要哪些技术。请注意，某些技术被标记为可选 (Optional)，如下一节所述。
-
-#### 表 EE.6-1 Java EE 技术
+#### 表 EE.6-1 Java EE 技术（第一部分）
 
 | Java 技术 | 应用程序客户端 | Web | EJB | 状态 |
-|---|---|---|---|--|
+|---|---|---|---|---|
 | EJB 3.2 | Y* | Y | Y | REQ, OPTᵇ, OPTᶜ |
 | Servlet 4.0 | N | Y | N | REQ |
 | JSP 2.3 | N | Y | N | REQ |
@@ -3560,10 +3295,10 @@ Java EE 8，最终发布
 | JASPIC 1.1 | N | Y | Y | REQ |
 | Java EE Security API 1.0 | N | Y | Y | REQ |
 
-#### 表 EE.6-1 Java EE 技术
+#### 表 EE.6-1 Java EE 技术（第二部分）
 
 | Java 技术 | 应用程序客户端 | Web | EJB | 状态 |
-| --- | --- | --- | --- | --- |
+|---|---|---|---|---|
 | JSP 调试 1.0 | N | Y | N | REQ |
 | JSTL 1.2 | N | Y | N | REQ |
 | Web 服务元数据 2.1 | Y | Y | Y | REQ |
@@ -3573,7 +3308,7 @@ Java EE 8，最终发布
 | Bean 校验 2.0 | Y | Y | Y | REQ |
 | Managed Beans 1.0 | Y | Y | Y | REQ |
 | 拦截器 1.2 | Y | Y | Y | REQ |
-| 上下文与依赖  2.0 | Y | Y | Y | REQ |
+| 上下文与依赖 2.0 | Y | Y | Y | REQ |
 | 依赖注入 1.0 | Y | Y | Y | REQ |
 
 - a. 仅客户端。
@@ -3583,11 +3318,7 @@ Java EE 8，最终发布
 
 Java EE 规范所需的所有类和接口由 Java EE 连接提供。在某些情况下，Java EE 产品不需要提供由应用服务器实现的接口，这些接口定义必须包含在 Java EE 平台中。
 
-> ¹ 注意，为了适应接口依赖，例如 EJB SessionContext 依赖 javax.xml.rpc.handler.MessageContext。
-
-¹
-
-Java EE 8，最终发布
+> ¹ 注意，为了适应接口依赖，例如 EJB SessionContext 依赖 `javax.xml.rpc.handler.MessageContext`。
 
 ### EE.6.1.3 精简 Java 技术
 
@@ -3600,29 +3331,25 @@ Java EE 8，最终发布
 
 截至 Java EE 8 已精简的技术在表 EE.6-1 中标记为可选。在未来版本中可能精简的技术在表 EE.6-1 中标记为可选。
 
-### EE.6.2 Java 平台标准版 (Java SE) 要求
+## EE.6.2 Java 平台标准版 (Java SE) 要求
 
 ### EE.6.2.1 编程限制
 
 Java EE 编程模型在应用组件提供者和 Java EE 产品提供者之间划分了责任：应用组件提供者专注于编写业务逻辑，而 Java EE 产品提供者专注于提供一个可以部署应用组件的托管系统基础设施。
 
-
-
-
-
 例如，如果允许企业豆（enterprise beans）管理线程，Java EE 平台将无法管理企业豆的生命周期，也无法正确管理事务。
 
-由于我们不想对 Java SE 平台进行子集化，并且希望 Java EE 产品提供者无需修改即可在 Java EE 平台上使用 Java SE 产品，因此我们使用 Java SE 安全权限来对应用程序组件提供者（Application Component Providers）实施编程限制。
+由于我们不想对 Java SE 平台进行子集化，并且希望 Java EE 产品提供者无需修改即可在 Java EE 平台上使用 Java SE 产品，因此我们使用 Java SE 安全权限来对应用程序组件提供者实施编程限制。
 
 在本节中，我们规定了 Java EE 产品提供者必须为每个应用程序组件类型提供的 Java SE 安全权限。这些权限被称为 Java EE 安全权限集。Java EE 安全权限集是 Java EE API 合约的强制组成部分。我们还规定了 Java EE 产品提供者必须能够限制向应用程序组件提供的权限集。此外，我们规定了应用程序组件声明对特定权限需求的方法，以及 Java EE 产品必须如何处理这些声明。
 
 Java SE 安全权限在 http://docs.oracle.com/javase/8/docs/techniques/guides/security/permissions.html 中有详细描述。
 
-## EE.6.2.2 Java EE 安全管理器相关要求
+### EE.6.2.2 Java EE 安全管理器相关要求
 
 每个 Java EE 产品都必须能够在带有 Java 安全管理器的情况下运行，该管理器强制执行 Java 安全权限，并防止应用程序组件执行其未提供所需权限的操作。
 
-## EE.6.2.2.1 Java EE 产品提供者的责任
+#### EE.6.2.2.1 Java EE 产品提供者的责任
 
 Java EE 产品允许应用程序组件在没有安全管理器的情况下运行，但每个 Java EE 产品都必须能够在带有强制执行安全权限的安全管理器的情况下运行应用程序组件，如下文所示。
 
@@ -3636,7 +3363,7 @@ Java EE 产品允许应用程序组件在没有安全管理器的情况下运行
 
 每个 Java EE 产品都必须能够在带有 Java 安全管理器的情况下运行，并且能够在不将表 EE.6-3 中描述的权限授予 Web、EJB 和资源适配器组件的安装策略下运行。该环境其他情况下必须完全支持本规范的要求。
 
-## EE.6.2.2.2 应用程序组件提供者的责任
+#### EE.6.2.2.2 应用程序组件提供者的责任
 
 为了确保只有在所需权限与安装环境的安全策略兼容时应用程序部署才能成功，应用程序组件提供者应该声明其应用程序组件所需的所有 Java 安全权限。
 
@@ -3644,87 +3371,80 @@ Java EE 产品允许应用程序组件在没有安全管理器的情况下运行
 
 注意，虽然特定资源的 `FilePermissions` 或 `SocketPermissions` 可能会因为应用程序组件将其声明为所需而获得授予，但本地操作系统或网络安全策略可能会限制对请求资源的访问。这可能导致即使应用程序部署成功，访问这些资源时仍发生运行时故障。
 
-### EE.6.2.2.3 系统管理员的责任
+#### EE.6.2.2.3 系统管理员的责任
 
 安全策略要求随不同的安装环境而异。系统管理员负责配置应用程序模块可用的权限以满足安装环境的安全策略要求。例如，云环境对应用程序可用系统资源的限制可能比本地安装更严格。请注意，将权限限制在表 EE.6-2 之外可能会防止某些应用程序正常工作。
 
 系统管理员应采取措施，确保预计供应用程序组件可用的资源在运行环境的安全策略中得到适当表示。
 
-## EE.6.2.2.4 Java EE 安全权限集列表
+#### EE.6.2.2.4 Java EE 安全权限集列表
 
 表 EE.6-2 列出了在适当的本地安装配置下，Java EE 产品可以可靠地授予 Java EE 组件（按类型）的权限。
 
-| 安全权限 | 目标 | 操作 |
-| --- | --- | --- |
-| 应用程序客户端 | | |
-| java.awt.AWTPermission | accessClipboard | |
-| java.awt.AWTPermission | accessEventQueueQueue | |
-| java.awt.AWTPermission | showWindowWithoutBanner | |
-
-## 表 EE.6-2 Java EE 权限集
+##### 表 EE.6-2 Java EE 权限集
 
 | 安全权限 | 目标 | 操作 |
 |---|---|---|
-| java.lang.RuntimePermission | exitVM | |
-| java.lang.RuntimePermission | loadLibrary.* | |
-| java.lang.RuntimePermission | queuePrintJob | |
-| java.net.SocketPermission | * | connect |
-| java.net.SocketPermission | localhost:1024- | accept,listen |
-| java.io.FilePermission | * | read,write |
-| java.util.FilePermission | * | read |
-| Applet 客户端 | | |
-| java.net.SocketPermission | codebase | connect |
-| java.util.PropertyPermission | limited | read |
-| Web、EJB 和资源适配器组件 | | |
-| java.lang.RuntimePermission | loadLibrary.* | |
-| java.lang.RuntimePermission | queuePrintJob | |
-| java.net.SocketPermission | * | connect |
-| java.io.FilePermission | * | read,write a |
-| java.io.FilePermission | file:$[javax.servlet.context.tmpdir] | read, write b |
-| java.util.PropertyPermission | * | read |
+| **应用程序客户端** | | |
+| `java.awt.AWTPermission` | `accessClipboard` | |
+| `java.awt.AWTPermission` | `accessEventQueueQueue` | |
+| `java.awt.AWTPermission` | `showWindowWithoutBanner` | |
+| `java.lang.RuntimePermission` | `exitVM` | |
+| `java.lang.RuntimePermission` | `loadLibrary.*` | |
+| `java.lang.RuntimePermission` | `queuePrintJob` | |
+| `java.net.SocketPermission` | `*` | `connect` |
+| `java.net.SocketPermission` | `localhost:1024-` | `accept,listen` |
+| `java.io.FilePermission` | `*` | `read,write` |
+| `java.util.FilePermission` | `*` | `read` |
+| **Applet 客户端** | | |
+| `java.net.SocketPermission` | `codebase` | `connect` |
+| `java.util.PropertyPermission` | `limited` | `read` |
+| **Web、EJB 和资源适配器组件** | | |
+| `java.lang.RuntimePermission` | `loadLibrary.*` | |
+| `java.lang.RuntimePermission` | `queuePrintJob` | |
+| `java.net.SocketPermission` | `*` | `connect` |
+| `java.io.FilePermission` | `*` | `read,write` a |
+| `java.io.FilePermission` | `file:$[javax.servlet.context.tmpdir]` | `read, write` b |
+| `java.util.PropertyPermission` | `*` | `read` |
 
-a. FilePermission 特指当前目录下的所有文件。
+a. `FilePermission` 特指当前目录下的所有文件。
 b. （仅针对 Web 组件。）必须能够通过 `HttpServlet` 授予 Web 组件提供的 `tmpdir` 权限，无论其物理位置何处。此外，必须能够授予 `tmpdir` 的权限而不授予当前目录下所有文件的权限。
 
-### EE.6.2.2.5 可限制的 Java EE 安全权限
+#### EE.6.2.2.5 可限制的 Java EE 安全权限
 
-表 EE.6-3 列出了 Java EE 产品在运行 Web 或 EJB 应用程序组件时必须能够限制的权限。如果目标字段为空，Java EE 产品必须能够将应用程序模块作为
+表 EE.6-3 列出了 Java EE 产品在运行 Web 或 EJB 应用程序组件时必须能够限制的权限。
 
-
-
-
-
-# 表 EE.6-3 受限制的 Java EE 安全权限
+##### 表 EE.6-3 受限制的 Java EE 安全权限
 
 | 安全权限 | 目标 | 动作 |
-| --- | --- | --- |
-| Web, EJB 和资源适配器组件 | | |
-| java.security.AllPermission | | |
-| java.security.SecurityPermission | | |
-| java.security.UnresolvedPermission | | |
-| java.awt.AWTPermission | | |
-| java.io.SerializablePermission | | |
-| java.lang.reflect.ReflectPermission | | |
-| java.lang.RuntimePermission | <除 library.* 和 queue-PrintJob 以外的任意项> | a |
-| java.net.NetPermission | | |
-| java.sql.SQLPermission | | |
-| java.util.PropertyPermission | <any> | write b |
-| java.util.logging.LoggingPermission | | |
-| javax.net.ssl.SSLPermission | | |
-| java.security.auth.AuthPermission | | |
-| java.security.auth.CredentialPermission | | |
-| java.security.auth.kerberos.DelegationPermission | | |
-| java.security.auth.kerberos.ServicePermission | | |
-| javax.sound.sampled.AudioPermission | | |
+|---|---|---|
+| **Web, EJB 和资源适配器组件** | | |
+| `java.security.AllPermission` | | |
+| `java.security.SecurityPermission` | | |
+| `java.security.UnresolvedPermission` | | |
+| `java.awt.AWTPermission` | | |
+| `java.io.SerializablePermission` | | |
+| `java.lang.reflect.ReflectPermission` | | |
+| `java.lang.RuntimePermission` | <除 `library.*` 和 `queuePrintJob` 以外的任意项> | a |
+| `java.net.NetPermission` | | |
+| `java.sql.SQLPermission` | | |
+| `java.util.PropertyPermission` | `<any>` | `write` b |
+| `java.util.logging.LoggingPermission` | | |
+| `javax.net.ssl.SSLPermission` | | |
+| `java.security.auth.AuthPermission` | | |
+| `java.security.auth.CredentialPermission` | | |
+| `java.security.auth.kerberos.DelegationPermission` | | |
+| `java.security.auth.kerberos.ServicePermission` | | |
+| `javax.sound.sampled.AudioPermission` | | |
 
-- a. 必须能够部署一个应用模块，该模块中的组件未被授予任何 `java.lang.RuntimePermission` 实例，除非其目标是针对特定库的 `loadlibrary.*` 或目标为 `queuePrintJob`。理想情况下，容器（container）应该能够限制这些权限，但并非强制要求。
+- a. 必须能够部署一个应用模块，该模块中的组件未被授予任何 `java.lang.RuntimePermission` 实例，除非其目标是针对特定库的 `loadLibrary.*` 或目标为 `queuePrintJob`。理想情况下，容器（container）应该能够限制这些权限，但并非强制要求。
 - b. 必须能够部署一个应用模块，该模块未被授予任何允许写入任何属性的 `java.util.PropertyPermission` 实例。
 
-### EE.6.2.2.6 声明应用组件所需的权限
+#### EE.6.2.2.6 声明应用组件所需的权限
 
 通过本节所述的方式声明应用程序所需的权限，通过开发人员的成功部署，Java EE 产品已向封装在应用模块中的类和库授予了至少所声明的权限。
 
-由于授予成功部署应用的特定权限集是取决于安装的安全策略以及 `permissions.xml` 文件中声明的权限的函数（函数），因此可以确保应用提供商的有效权限集至少包含应用程序中声明的权限。
+由于授予成功部署应用的特定权限集是取决于安装的安全策略以及 `permissions.xml` 文件中声明的权限的函数，因此可以确保应用提供商的有效权限集至少包含应用程序中声明的权限。
 
 权限声明必须存储在 EJB、应用客户端或资源适配器归档文件的 `META-INF/permissions.xml` 文件中，以便 Java EE 产品的部署机制定位并随后处理。Java EE 的 `product.xml` 文件指定了封装在应用程序中的权限类。
 
@@ -3737,13 +3457,19 @@ b. （仅针对 Web 组件。）必须能够通过 `HttpServlet` 授予 Web 组�
 以下是权限声明的示例：
 
 ```xml
-<permissions>
-  <permission class="java.io.FilePermission" target="/tmp" action="read"/>
-  <permission class="java.lang.RuntimePermission" target="create"/>
-</permissions>
 ```
 
 
+
+```xml
+<permissions>
+
+  <permission class="java.io.FilePermission" target="/tmp" action="read"/>
+
+  <permission class="java.lang.RuntimePermission" target="create"/>
+
+</permissions>
+```
 
 
 
@@ -3757,13 +3483,13 @@ JDBC 4.2 规范可以在 https://jcp.org/en/jsr/detailid=221 获取。
 
 JAX-WS 规范为使用 JAX API 将 XML 数据绑定到 Java 对象的 Web 服务提供了支持。JAX-WS 规范定义了访问 Web 服务的客户端 API 以及实现 Web 端点的技术。Web Services for Java EE 规范描述了基于 JAX-WS 的服务和客户端的部署。EJB 和 Servlet 规范也描述了此类部署的某些方面。必须能够使用任何一种部署模型部署基于 JAX-WS 的应用程序。
 
-JAX-WS 规范描述了对消息处理器（message handlers）的支持，这些句处理器可以处理消息请求和响应。通常情况下，这些消息处理器在与与其关联的 JAX-WS 客户端或端点组件相同的容器中执行，并具有相同的权限和执行上下文。这些消息处理器与其关联的组件拥有相同的 JNDI `java:comp` 命名空间。如果支持，自定义序列化器和反序列化器将以消息处理器相同的方式处理。
+JAX-WS 规范描述了对消息处理器（message handlers）的支持，这些处理器可以处理消息请求和响应。通常情况下，这些消息处理器在与其关联的 JAX-WS 客户端或端点组件相同的容器中执行，并具有相同的权限和执行上下文。这些消息处理器与其关联的组件拥有相同的 JNDI `java:comp` 命名空间。如果支持，自定义序列化器和反序列化器将以消息处理器相同的方式处理。
 
 JAX-WS 规范可以在 http://jcp.org/en/jsr/summary?id=224 获取。
 
 ## EE.6.2.3.4 Java IDL（建议可选）
 
-本节中的仅适用于支持与 CORBA 互操作的 Java 产品。
+本节中的要求仅适用于支持与 CORBA 互操作的 Java 产品。
 
 Java IDL 允许应用程序使用标准 IIOP 协议访问使用任何语言编写的任何 CORBA 对象。Java EE 安全限制通常会防止应用程序客户端以外的所有组件类型创建和导出 CORBA 对象，但所有 Java EE 组件类型都可以是 CORBA 对象。
 
@@ -3773,12 +3499,12 @@ IIOP 协议支持在单个连接上进行调用多路复用的能力。所有 Ja
 
 Java EE 产品必须提供对 CORBA 可移植对象适配器（POA）的支持，以支持 stub、skeleton 和 tie 类。定义或使用除企业豆以外的 CORBA 对象的 Java EE 应用程序必须在应用程序包中包含 stub、skeleton 类和 tie 类。
 
-Java EE 应用程序需要使用 `org.omg.CORBA.ORB` 实例来执行 Java IDL 和 RMI-IIOP 操作。调用 `ORB.init(new String[], null)` 返回的默认 ORB 必须此类此类；应用程序需要感知用于 ORB 和 RMI-IIOP 传输的实现类。
+Java EE 应用程序需要使用 `org.omg.CORBA.ORB` 实例来执行 Java IDL 和 RMI-IIOP 操作。调用 `ORB.init(new String[], null)` 返回的默认 ORB 必须是此类；应用程序需要感知用于 ORB 和 RMI-IIOP 传输的实现类。
 
 此外，出于某些原因，在应用程序的组件之间共享 ORB 实例通常是有益的。为了支持这种用法，所有 Web、企业豆和应用程序客户端容器都要求在 JNDI 命名空间中提供名为 `comp/ORB` 的 ORB 实例。容器允许但并不要求在组件之间共享此实例。容器也可以使用该 ORB 本身。为了支持应用程序之间的隔离，不应在不同应用程序的组件之间共享 ORB 实例。为了允许此 ORB 实例在组件之间安全共享，可移植组件必须限制其某些 ORB API 和功能的使用：
 
 - 不要调用 ORB `shutdown` 方法。
-- 不要使用容器使用的 id 调用 `org.omg.CORBA.2_3.ORB` 的 `register_value_factory` 和 `unregister_value_factory` 方法。
+- 不要使用容器使用的 id 调用 `org.omg.CORBA_2_3.ORB` 的 `register_value_factory` 和 `unregister_value_factory` 方法。
 
 Java EE 产品必须提供 CosNaming 服务以支持 EJB 互操作性要求。必须能够使用 Java IDL CosNaming API 访问此 CosNaming 服务。具有适当权限的应用程序必须能够在 CosNaming 服务中查找对象。CosNaming 定义在互操作命名服务（Interoperable Naming Service）规范中，该规范可以在 http://www.omg.org/cgi-bin/doc?formal=2000-06-19 获取。
 
@@ -3796,15 +3522,11 @@ RMI-IIOP 允许使用 RMI 接口定义的对象通过 IIOP 协议进行访问。
 
 Java EE 产品中的 JNDI 实现必须能够支持在单个应用程序组件通过使用无参数的默认构造函数创建 JNDI InitialContext 时提供所有这些对象。应用程序组件可以在该 InitialContext 上执行查找以寻找上述对象。
 
-
-
-
-
 # Java 平台标准版 (JAVA SE) 要求 175
 
 用于查找对象的 JNDI 名称必须在 JNDI `java:` 命名空间中。详情请参见第 EE.5 节“资源、命名与注入”。
 
-本规范定义了特定的名称，以适用于 Java EE 产品包含相应技术的情况。对于所有访问 JTA UserTransaction 接口的应用程序组件，可以使用 java 名称 `java:comp/UserTransaction` 找到相应的 `UserTransaction` 对象。除 applet 打印机以外的所有客户端，应用程序组件都可以使用名称 `java:comp/ORB` 查找 CORBA ORB 实例。对于所有访问 CDI BeanManager 接口的应用程序组件，可以使用 java 名称 `java:comp/BeanManager` 找到相应的 `BeanManager` 对象。对于所有访问 Validation APIs 的应用程序组件，分别可以使用名称 `java:comp/Validator` 和 `java:comp/ValidatorFactory` 找到相应的 `Validator` 和 `ValidatorFactory` 对象。
+本规范定义了特定的名称，以适用于 Java EE 产品包含相应技术的情况。对于所有访问 JTA UserTransaction 接口的应用程序组件，可以使用名称 `java:comp/UserTransaction` 找到相应的 `UserTransaction` 对象。除 applet 容器以外的所有客户端，应用程序组件都可以使用名称 `java:comp/ORB` 查找 CORBA ORB 实例。对于所有访问 CDI BeanManager 接口的应用程序组件，可以使用名称 `java:comp/BeanManager` 找到相应的 `BeanManager` 对象。对于所有访问 Validation APIs 的应用程序组件，分别可以使用名称 `java:comp/Validator` 和 `java:comp/ValidatorFactory` 找到相应的 `Validator` 和 `ValidatorFactory` 对象。
 
 用于查找特定 Java EE 对象的名称在不同的应用程序组件中可能不同。通常，JNDI 名称无法作为远程调用从一个组件有意义地传递到另一个远程组件（例如，在调用企业 Bean 时）。
 
@@ -3840,13 +3562,13 @@ Java EE 8，最终发布版
 
 ## EE.6.2.3.11 偏好 API (Preferences API) 要求
 
-`java.util.prefs` 包中的 Preferences API 允许应用程序存储和检索用户系统及配置数据。Java EE 不会具有使用 Preferences API 所需的 `RuntimePermission("preferences")`。本规范未定义使用的主体（principal）与 Preferences API 定义的用户偏好之间的任何关系。本规范的未来版本可能定义 Java EE 应用程序对 Preferences API的使用。
+`java.util.prefs` 包中的 Preferences API 允许应用程序存储和检索用户系统及配置数据。Java EE 不会具有使用 Preferences API 所需的 `RuntimePermission("preferences")`。本规范未定义使用的主体（principal）与 Preferences API 定义的用户偏好之间的任何关系。本规范的未来版本可能定义 Java EE 应用程序对 Preferences API 的使用。
 
 ## EE.6.3 Enterprise JavaBeans™ (EJB) 3.2 要求
 
 本规范要求 Java EE 产品按照 EJB 规范支持企业 Bean。EJB 规范可见：http://jcp.com/en/jsr/summary?id=345。
 
-本规范目前未施加任何额外要求。注意，EJB 规范包含了基于 RMI-IIOP 的 EJB 互操作性协议规范。Java EE 8 要求支持 RMI-IIOP。所有支持 EJB 互操作性协议的容器都必须支持企业 Bean。Java EE 产品可能还支持用于调用企业 Bean 的其他协议。但是，当企业 Bean 使用 RMI-IIOP 时，必须能够将 RMI-IIOP 或 Java ID 对象作为参数传递给此类企业 Bean 的方法。此外，必须能够从此类企业 Bean 返回 RMI-IIOP 或 Java ID 对象作为返回值。
+本规范目前未施加任何额外要求。注意，EJB 规范包含了基于 RMI-IIOP 的 EJB 互操作性协议规范。Java EE 8 要求支持 RMI-IIOP。所有支持 EJB 互操作性协议的容器都必须支持企业 Bean。Java EE 产品可能还支持用于调用企业 Bean 的其他协议。但是，当企业 Bean 使用 RMI-IIOP 时，必须能够将 RMI-IIOP 或 Java IDL 对象作为参数传递给此类企业 Bean 的方法。此外，必须能够从此类企业 Bean 返回 RMI-IIOP 或 Java IDL 对象作为返回值。
 
 在包含 EJB 容器和 Web 容器的 Java EE 产品中，两个容器都需要支持访问本地企业 Bean。不支持从应用程序容器或 applet 容器访问本地企业 Bean。
 
@@ -3864,7 +3586,7 @@ Web 容器必须支持 Java EE 可发布 Web 应用程序将以下类型的对�
 - `javax.ejb.EJBObject`
 - `javax.ejb.EJBHome`
 - `javax.ejb.EJBLocalObject`
-- `javax.ejb.EJBLLocalHome`
+- `javax.ejb.EJBLocalHome`
 - `javax.transaction.UserTransaction`
 - 用于 `java:comp/env` 上下文的 `java.naming.Context` 对象
 - 对 EJB 本地或远程业务接口或无接口视图的引用
@@ -3872,9 +3594,6 @@ Web 容器必须支持 Java EE 可发布 Web 应用程序将以下类型的对�
 Web 容器可能也支持其他类型的对象。如果将上述类型之外或容器支持的其他类型传递给对应于 Java EE 可发布会话的 `HttpSession` 对象的 `setAttribute` 或 `putValue` 方法，Web 容器必须抛出 `java.lang.IllegalArgumentException`。此异常向程序员指示 Web 容器不支持在虚拟机之间移动该对象。支持多虚拟机操作的 Web 容器必须确保，当会话从一个虚拟机移动到另一个虚拟机时，所有支持类型的对象都在目标虚拟机上被准确重建。
 
 Servlet 规范将访问本地企业 Bean 定义为可选功能。
-
-
-
 
 Web 容器和 EJB 容器都支持从 Web 容器访问本地企业豆（local enterprise beans）。
 
@@ -3896,42 +3615,42 @@ JSP 规范可以在 http://jcp.org/en/jsp/summary?id=245 获取。
 
 需要支持 JMS 的 Java EE 产品必须包含一个 Java 消息服务提供者。JMS 实现必须同时支持点对点（point-to-point）和发布/订阅（publish/subscribe）消息，并通过 `ConnectionFactory` 和 `Destination` API 提供这些功能。
 
-JMS 规范定义了多个用于与应用程序服务器集成的接口。Java EE 产品不需要实现这些接口的对象，可的 Java EE 应用程序不得使用以下接口：
+JMS 规范定义了多个用于与应用程序服务器集成的接口。Java EE 产品不需要实现这些接口的对象，且的 Java EE 应用程序不得使用以下接口：
 
-- java.jms.ServerSession
-- java.jms.ServerPool
-- java.jms.ConnectionConsumer
-- java.jms.XA
+- `java.jms.ServerSession`
+- `java.jms.ServerPool`
+- `java.jms.ConnectionConsumer`
+- `java.jms.XA`
 
 以下方法只能由执行在应用程序容器中的应用程序组件使用：
 
-- java.jms.MessageConsumer getMessageListener
-- java.jms.MessageConsumer method setMessageListener
-- java.jms.JMSConsumer method getMessageListener
-- java.jms.JMSConsumer method setMessageListener
-- java.jms.Connection method setExceptionListener
-- java.jms.Connection method stop
-- java.jms.Connection method setClientID
-- java.jms.JMSContext method stop
-- java.jms.JMSContext method setClientID
-- java.jms.JMSContext method setExceptionListener
-- java.jms.JMSContext method createContext
-- java.jms.MessageProducer method setAsync
-- java.jms.MessageProducer method send(Message, CompletionListener)
-- java.jms.MessageProducer method send(Message, int deliveryMode, int priority, long timeLive, CompletionListener)
-- java.jms.MessageProducer method send(Destination destination, Message message, CompletionListener)
+- `java.jms.MessageConsumer.getMessageListener`
+- `java.jms.MessageConsumer.setMessageListener`
+- `java.jms.JMSConsumer.getMessageListener`
+- `java.jms.JMSConsumer.setMessageListener`
+- `java.jms.Connection.setExceptionListener`
+- `java.jms.Connection.stop`
+- `java.jms.Connection.setClientID`
+- `java.jms.JMSContext.stop`
+- `java.jms.JMSContext.setClientID`
+- `java.jms.JMSContext.setExceptionListener`
+- `java.jms.JMSContext.createContext`
+- `java.jms.MessageProducer.setAsync`
+- `java.jms.MessageProducer.send(Message, CompletionListener)`
+- `java.jms.MessageProducer.send(Message, int deliveryMode, int priority, long timeLive, CompletionListener)`
+- `java.jms.MessageProducer.send(Destination destination, Message message, CompletionListener)`
 
 以下方法只能由执行在客户端容器中的应用程序组件使用。请注意，这些方法提供了普通应用程序并不使用的功能。详情请参 JMS 规范。
 
-- javax.jms.Session method setMessageListener
-- javax.jms.Session method getMessageListener
-- javax.jms.Session method run
-- javax.jms.Connection method createConnection
-- javax.jms.Connection method createSharedConnection
-- javax.jms.Connection method createDurableConnection
-- javax.jms.Connection method createSharedDurableConnection
+- `javax.jms.Session.setMessageListener`
+- `javax.jms.Session.getMessageListener`
+- `javax.jms.Session.run`
+- `javax.jms.Connection.createConnection`
+- `javax.jms.Connection.createSharedConnection`
+- `javax.jms.Connection.createDurableConnection`
+- `javax.jms.Connection.createSharedDurableConnection`
 
-如果应用程序组件违反了上述上述限制，Java EE 容器可能会抛出 `JMSException`（如果方法允许）或 `RuntimeException`（方法不允许抛出 `JMSException`）。Web 和 EJB 容器中的应用程序组件不得尝试为每个连接创建多个活跃（未关闭）的 `Session` 对象。当该连接已存在活跃的 `Session` 对象时，容器应禁止使用 `Connection` 对象的 `createSession` 方法。如果应用程序组件违反此限制，容器应抛出 `JMSException`。容器应禁止使用 `JMSContext` 对象的 `createContext` 方法。容器应抛出 `RuntimeException`，因为第一个 `JMSContext` 已经包含一个连接和一个会，该方法将在同一连接上创建第二个会。应用程序客户端必须支持为每个连接创建多个会。
+如果应用程序组件违反了上述限制，Java EE 容器可能会抛出 `JMSException`（如果方法允许）或 `RuntimeException`（方法不允许抛出 `JMSException`）。Web 和 EJB 容器中的应用程序组件不得尝试为每个连接创建多个活跃（未关闭）的 `Session` 对象。当该连接已存在活跃的 `Session` 对象时，容器应禁止使用 `Connection` 对象的 `createSession` 方法。如果应用程序组件违反此限制，容器应抛出 `JMSException`。容器应禁止使用 `JMSContext` 对象的 `createContext` 方法。容器应抛出 `RuntimeException`，因为第一个 `JMSContext` 已经包含一个连接和一个会话，该方法将在同一连接上创建第二个会话。应用程序客户端必须支持为每个连接创建多个会话。
 
 JMS 规范对在 EJB 和 Web 容器中使用 JMS 定义了进一步的限制。通常情况下，JMS 提供者在 EJB 容器和 Web 容器中的行为应该是一致的。
 JMS 规范可以在 http://jcp.org/en/jsr/detail?id=343 获取。
@@ -3942,19 +3661,17 @@ JTA 定义了 `UserTransaction` 接口，应用程序使用它来启动、提交
 
 JTA 还定义了 `TransactionSynchronizationRegistry` 接口，系统级组件可以将其持久化管理器以与事务管理器进行交互。这些组件通过 JNDI 查找（使用名称 `java:comp/TransactionSynchronizationRegistry`）或请求注入 `TransactionSynchronizationRegistry` 对象来获取该对象。
 
-JTA 定义的一系列接口被应用程序服务器用于与事务管理器通信，并用于事务管理器与资源管理器进行交互。这些接口必须按照 Connector（连接接器）规范的描述被支持。此外，Java EE 产品可以透明地为应用程序提供其他事务设施的支持。
+JTA 定义的一系列接口被应用程序服务器用于与事务管理器通信，并用于事务管理器与资源管理器进行交互。这些接口必须按照 Connector（连接器）规范的描述被支持。此外，Java EE 产品可以透明地为应用程序提供其他事务设施的支持。
 
 JTA 规范可以在 http://jcp.org/en/jsr/detail?id=907 获取。
 
-JavaMail™ 1.6 规范
+## EE.6.9 JavaMail™ 1.6 规范
 
-JavaMail API 允许访问消息存储（message stores）中的邮件消息，并使用消息传输（message transport）创建和发送邮件消息。包含了对 Internet 标准 MIME 协议的支持。对消息存储和传输的访问是通过支持特定存储和传输协议的协议提供来实现的。JavaMail API 规范不需要任何特定的协议提供者，但 JavaMail 参考实现包含了 IM 消息存储、POP3 消息存储提供者和 SMTP 消息传输提供者。
+JavaMail API 允许访问消息存储（message stores）中的邮件消息，并使用消息传输（message transport）创建和发送邮件消息。包含了对 Internet 标准 MIME 协议的支持。对消息存储和传输的访问是通过支持特定存储和传输协议的协议提供者来实现的。JavaMail API 规范不需要任何特定的协议提供者，但 JavaMail 参考实现包含了 IMAP 消息存储、POP3 消息存储提供者和 SMTP 消息传输提供者。
 
-JavaMail API 的配置通常通过在 `Properties` 对象中设置属性来实现，并使用静态工厂创建 `javax.mail.Session` 对象。为了让 Java EE 平台配置和管理 JavaMail API，使用该 API 的应用程序组件应通过 JNDI 请求 `Session` 对象，并在部署描述中使用 `<resource-ref>` 元素或使用 `@Resource` 注解列出对 `Session` 对象的需求。Java EE 平台支持作为资源工厂的 `javax.mail.Session` 对象，见节 EE.5.7，“资源引用”。
+JavaMail API 的配置通常通过在 `Properties` 对象中设置属性来实现，并使用静态工厂创建 `javax.mail.Session` 对象。为了让 Java EE 平台配置和管理 JavaMail API，使用该 API 的应用程序组件应通过 JNDI 请求 `Session` 对象，并在部署描述符中使用 `<resource-ref>` 元素或使用 `@Resource` 注解列出对 `Session` 对象的需求。Java EE 平台支持作为资源工厂的 `javax.mail.Session` 对象，见节 EE.5.7，“资源引用”。
 
 Java EE 要求提供一种能够处理 `InternetAddress` 类型地址和 `MimeMessage` 类型消息的消息传输（message transport）。默认的消息传输层必须经过正确配置，以便使用 `javax.mail.Transport` 类的 `send` 方法发送此类消息。默认 Authenticator 需要的任何认证，可以通过无需应用程序显式连接传输并提供身份信息的方式来处理。
-
-Java EE 连接接器架构 1.7 规范
 
 本规范不要求 Java EE 产品支持任何消息存储协议。
 
@@ -3972,10 +3689,11 @@ JavaMail API 使用 JavaBeans Activation 框架来支持各种 MIME 数据类型
 
 JavaMail API 规范可以在 http://jcp.org/en/jsr/detail?id=919 获取。
 
+## EE.6.10 Java EE 连接器架构 1.7 规范
 
+Java EE 连接器架构定义了应用程序服务器与资源适配器之间的标准契约。资源适配器插入到应用程序服务器中，以提供对企业信息系统（EIS）的连接。连接器架构规范可以在 http://jcp.org/en/jsr/detail?id=322 获取。
 
-
-## EE.6.11 Java EE 1.4 Web Web Services 需求
+## EE.6.11 Java EE 1.4 Web Services 需求
 
 Web Services for Java EE 规范定义了 Java EE 应用服务器在部署 Web 服务的端点时必须支持的能力。它定义了一个完整的部署模型，包括若干个新的部署描述符。所有 Java EE 产品必须支持根据 Web Services for Java EE 规范（JSR-109）指定的 Web 服务的部署和执行。
 
@@ -3983,7 +3701,7 @@ Web Services for Java EE 规范可以通过以下地址获取：http://jcp.org/e
 
 ## EE.6.12 基于 XML 的 Java™ RPC API (JAX-RPC) 1.1 需求（可选）
 
-JAX-RPC 规范定义了用于访问 Web 服务的客户端 API 以及实现 Web 服务的端点的技术。Web Services for Java EE 规范还描述了基于 JAX-RPC的服务和客户端的部署。EJB 和 Servlet 规范也描述了部署的某些方面。在支持 JAX-RPC 的 Java EE 产品中，必须能够使用任何一种部署模型部署基于 JAX-RPC 的应用程序。
+JAX-RPC 规范定义了用于访问 Web 服务的客户端 API 以及实现 Web 服务的端点的技术。Web Services for Java EE 规范还描述了基于 JAX-RPC 的服务和客户端的部署。EJB 和 Servlet 规范也描述了部署的某些方面。在支持 JAX-RPC 的 Java EE 产品中，必须能够使用任何一种部署模型部署基于 JAX-RPC 的应用程序。
 
 JAX-RPC 规范描述了对能够处理请求和响应的消息处理器的支持。通常情况下，这些消息处理器在与它们关联的 JAX-RPC 客户端或端点组件相同的容器中执行，并具有相同的权限和执行上下文。这些消息处理器与其组件具有相同的 JNDI `java:comp/env` 命名空间。组件序列化器和反序列化器（如果支持）被视为消息处理器。
 
@@ -3993,11 +3711,11 @@ JAX-RPC 规范可以通过以下地址获取：http://jcp.org/en/jsr/detail?id=1
 
 ## EE.6.13 RESTful Web 服务 Java™ API (JAX-RS) 2.1 需求
 
-JAX-RS 定义了用于开发根据表述状态转换（REST）架构风格构建的 Web服务的 API。
+JAX-RS 定义了用于开发根据表述状态转换（REST）架构风格构建的 Web 服务的 API。
 
 在完整的 Java EE 产品中，所有 Java EE Web 容器都要求支持使用 JAX-RS 技术的应用程序。
 
-该规范描述了将服务作为 servlet 部署的方法。必须能够这种部署模型部署基于 JAX-RS 的应用程序，其中 `web.xml` 描述符中的 `servlet-class` 元素指定了应用程序提供的 JAX-RS 类的扩展名。
+该规范描述了将服务作为 servlet 部署的方法。必须能够使用这种部署模型部署基于 JAX-RS 的应用程序，其中 `web.xml` 描述符中的 `servlet-class` 元素指定了应用程序提供的 JAX-RS 类的扩展名。
 
 该规范定义了一系列可选的容器管理设施和资源，旨在在 Java EE 容器中可用——所有功能和资源都必须被提供。
 
@@ -4039,7 +3757,7 @@ Java Platform Batch Applications 规范可以在以下地址找到：http://jcp.
 
 ## EE.6.19 基于 XML 的 Java™ RPC API (JAX-RPC) 1.1 需求（可选）
 
-JAX-RPC 规范定义了用于访问 Web 服务的客户端 API 以及实现 Web 服务端点的技术。Web Services for Java EE 规范还描述了基于 JAX-RPC的服务和客户端的部署。EJB 和 Servlet 规范也描述了部署的某些方面。在支持 JAX-RPC 的 Java EE 产品中，必须能够使用任何一种部署模型部署基于 JAX-RPC 的应用程序。
+JAX-RPC 规范定义了用于访问 Web 服务的客户端 API 以及实现 Web 服务端点的技术。Web Services for Java EE 规范还描述了基于 JAX-RPC 的服务和客户端的部署。EJB 和 Servlet 规范也描述了部署的某些方面。在支持 JAX-RPC 的 Java EE 产品中，必须能够使用任何一种部署模型部署基于 JAX-RPC 的应用程序。
 
 JAX-RPC 规范描述了对能够处理请求和响应的消息处理器的支持。通常情况下，这些消息处理器在与它们关联的 JAX-RPC 客户端或端点组件相同的容器中执行，并具有相同的权限和执行上下文。这些消息处理器与其组件具有相同的 JNDI `java:comp/env` 命名空间。组件序列化器和反序列化器（如果支持）被视为消息处理器。
 
@@ -4061,7 +3779,7 @@ Deployment API 规范可以通过以下地址获取：http://jcp.org/en/jsr/deta
 
 ## EE.6.22 容器授权合约 (JACC) 1.5 需求
 
-JACC 规范定义了 Java EE 应用服务器与策略提供者之间的合约。在完整的 Java EE 产品中，所有容器和 EJB 容器都要求支持此合约。
+JACC 规范定义了 Java EE 应用服务器与策略提供者之间的合约。在完整的 Java EE 产品中，所有 Web 容器和 EJB 容器都要求支持此合约。
 
 JACC 规范可以在以下地址找到：http://jcp.org/en/jsr/detail?id=115。
 
@@ -4069,51 +3787,43 @@ JACC 规范可以在以下地址找到：http://jcp.org/en/jsr/detail?id=115。
 
 JASPIC 规范定义了一个服务提供接口 (SPI)，通过该接口可以将实现消息认证的认证提供器集成到消息处理容器或运行时。通过此接口集成的认证提供器在由调用容器提供的网络消息上操作。消息的源可能由消息容器认证，消息的接收者可能由消息发送者认证。它们验证传入的消息，并向调用容器返回通过消息认证确立的身份。
 
-在完整的 Java EE 产品中，所有 Java EE Web 容器和 EJB 容器都要求支持 JASPIC 规范定义的基兼容性要求。在完整的 Java EE 产品中，所有 Web 容器还必须支持 JASPIC 规范定义的 Servlet 配置文件。在包含 Servlet 和 JASPIC 的 Java EE 产品中，所有 Web 容器还必须支持 JASPIC 规范定义的 Servlet 配置文件。不支持 JASPIC SOAP 配置。
+在完整的 Java EE 产品中，所有 Java EE Web 容器和 EJB 容器都要求支持 JASPIC 规范定义的基础兼容性要求。在完整的 Java EE 产品中，所有 Web 容器还必须支持 JASPIC 规范定义的 Servlet 配置文件。在包含 Servlet 和 JASPIC 的 Java EE 产品中，所有 Web 容器还必须支持 JASPIC 规范定义的 Servlet 配置文件。不支持 JASPIC SOAP 配置。
 
 JASPIC 规范可以在以下地址找到：http://jcp.org/en/jsr/detail?id=196。
 
-## Java EE Security API 1.0 需求
+## EE.6.24 Java EE Security API 1.0 需求
 
 Java EE Security API 利用 JASPIC，但为 Web 应用程序认证提供了更易用的 SPI，并定义了用于认证和授权的身份存储。
 
 在完整的 Java EE 产品中，所有 Java EE Web 容器和 EJB 容器都要求支持 Java EE Security API 规范定义的要求。
 
-Java EE Security API 规范可以在以下地址找到：http://jcp.org/en/jsr/detailid=375。
+Java EE Security API 规范可以在以下地址找到：http://jcp.org/en/jsr/detail?id=375。
 
-# 其他语言调试支持 (JSR-45) 需求
+## EE.6.25 其他语言调试支持 (JSR-45) 需求
 
-JSP 页面通常被翻译成 Java 页面，然后编译生成类文件。其他语言调试支持规范
+JSP 页面通常被翻译成 Java 页面，然后编译生成类文件。其他语言调试支持规范描述了可以包含在类文件中的信息，用于将类文件数据与原始源文件关联。所有 Java EE 产品都要求能够在从 JSP 页面生成的类文件中包含此类信息。
+其他语言的调试支持（Debugging Support for Other Languages）规范可以在 http://jcp.org/en/jsr/detail?id=45 查看。
 
-
-
-
-
-# JAVASERVER PAGES 标准标签库 (JSTL) 1.2 要求
-
-描述了可以包含在类文件中的信息，用于将类文件数据与原始源文件关联。所有 Java EE 产品都要求能够在从 JSP 页面生成的类文件中包含此类信息。
-其他语言的调试支持（Debugging Support for Other Languages）规范可以在 http://jcp.org/en/jsr/detail?id=45 。
-
-# EE.6.26 JavaServer Pages™ 标准标签库 (JSTL) 1.2 要求
+## EE.6.26 JavaServer Pages™ 标准标签库 (JSTL) 1.2 要求
 
 JSTL 定义了一个标准标签库，使得开发 JSP 页面变得更容易。所有 Java EE 产品都要求提供 JSTL 以供所有 JSP 页面使用。
 JavaServer Pages 标准标签库（Standard Tag Library for JavaServer Pages）规范可以在 http://jcp.org/en/jsr/detail?id=52 查看。
 
-# EE.6.27 Java™ Platform 2.1 Web 服务元数据
+## EE.6.27 Java™ Platform 2.1 Web 服务元数据
 
 Java Platform Web 服务元数据规范定义了 Java 语言注解，这些注解可以简化 Web 服务的开发。这些注解可以与 JAX-WS Web 服务组件一起使用。
 Java Platform Web 服务元数据规范可以在 http://jcp.org/en/jsr/detail?id=181 查看。
 
-# EE.6.28 JavaServer Faces™ 2.3 要求
+## EE.6.28 JavaServer Faces™ 2.3 要求
 
 JavaServer Faces 技术简化了为 JavaServer 应用构建用户界面的过程。不同水平的开发者可以通过以下方式快速构建应用程序：在页面中组装 UI 组件；将这些组件连接到应用程序数据源；并将客户端生成的事件连接到服务器端事件处理程序。在完整的 Java EE 产品中，所有 Java EE 容器都要求支持使用 JavaServer Faces 技术的应用程序。
 JavaServer Faces 规范可以在 http://jcp.org/en/jsr/detail?id=372 查看。
 
-# EE.6.29 Java™ Platform 1.3 通用注解
+## EE.6.29 Java™ Platform 1.3 通用注解
 
 通用注解（Common Annotations）规范定义了若干其他规范（包括本规范）使用的 Java 语言注解。这些规范完整定义了对这些注解的要求。Applet 容器不需要支持这些注解中的任何一个。所有其他容器必须提供所有这些注解的定义，并且必须按照相应规范中描述并在下表中摘要的这些注解的语义。
 
-# 表格 EE.6-6 容器对通用注解的支持
+### 表格 EE.6-6 容器对通用注解的支持
 
 | 注解 | App 客户端 | Web | EJB |
 |---|---|---|---|
@@ -4133,7 +3843,7 @@ JavaServer Faces 规范可以在 http://jcp.org/en/jsr/detail?id=372 查看。
 
 Java Platform 通用注解（Common Annotations for the Java Platform）规范可以在 http://jcp.org/en/jsr/detail?id=250 查看。
 
-# EE.6.30 JavaTM Persistence API 2.2 要求
+## EE.6.30 JavaTM Persistence API 2.2 要求
 
 Java Persistence（持久化）是管理持久化和对象/关系映射的标准 API。Java Persistence 规范为使用 Java 领域模型管理关系型数据库的应用开发者提供了一种对象/关系映射机制。
 
@@ -4141,15 +3851,19 @@ Java Persistence（持久化）是管理持久化和对象/关系映射的标准
 
 Java Persistence 规范可以在 http://jcp.org/en/jsr/detail?id=338 查看。
 
-# EE.6.31 Bean Validation 2.0 要求
+## EE.6.31 Bean Validation 2.0 要求
 
 Bean Validation（验证）规范定义了用于 JavaBean 验证的元数据模型和 API。默认元数据源是注解，并且可以通过 XML 验证描述符覆盖并扩展元数据。
 
 Java EE 平台要求 Web 容器通过将 `ValidatorFactory` 实例存储在名为以下的 servlet 属性中，供 JSF 实现可用：
 
 ```
-javax.faces.validator.beanValidator.ValidatorFactory.
+javax.faces.validator.ValidatorFactory
 ```
+
+
+
+javax.faces.validator.beanValidator.`ValidatorFactory`。
 
 Java EE 平台还要求 `ValidatorFactory` 实例作为 map 的属性提供给 JPA 提供者，该 map 是作为 `PersistenceProvider.persistence.validation.factory` 中 `createContainerEntityManagerFactory(PersistenceUnitInfo, Map)` 方法的第二个参数传递的。
 
@@ -4206,37 +3920,31 @@ Java EE 平台被企业环境用于各种客户端、平台和应用程序。特
 
 - TCP/IP 协议族——这是互联网通信的核心组件。TCP/IP 和 UDP/IP 是互联网的标准传输协议。TCP/IP 由 Java SE 和底层操作系统支持。
 
-- HTTP 1.1——这是 Web 通信的核心协议。与 TCP/IP 一，HTTP 1.1 由 Java SE 和底层操作系统支持。Java EE Web 容器必须能够在标准 HTTP 端口（80 端口）上发布其 HTTP 服务。
+- HTTP 1.1——这是 Web 通信的核心协议。与 TCP/IP 一起，HTTP 1.1 由 Java SE 和底层操作系统支持。Java EE Web 容器必须能够在标准 HTTP 端口（80 端口）上发布其 HTTP 服务。
 
+- HTTP/2——Servlet 规范要求对 HTTP/2 协议提供服务端支持。
 
+- SSL 3.0, TLS 1.2——SSL 3.0（安全套接层）代表 Web 通信的安全层。当使用 https URL 而非 http URL 时，可以间接使用。Java EE 容器能够在标准 HTTPS 端口（端口 443）上发布其 HTTPS 服务。请注意，作为 EJB 互操作性协议的一部分，EJB 要求 SSL 3.0 仅 TLS 1.0。
 
+- SOAP 1.1——SOAP 是一种用于交换 XML 消息的表示层协议。对于在 HTTP 之上的 SOAP，需要如 JAX-RPC 和 JAX-WS 规范所述的支持。
 
+- SOAP 1.2——SOAP 1.2 是通过 W3C 标准化并由 JAX-WS 支持的 SOAP 协议版本。
 
--   HTTP/2—Servlet 规范要求对 HTTP/2 协议提供服务端支持。
+- WS-I Basic Profile 1.1——WS-I Basic Profile 结合 SOAP 绑定与附件规范（Simple SOAP Binding and Attachment Profile）描述了使用 SOAP 1.1、WSDL 1.1 以及基于 MIME 的带附件 SOAP 的互操作性。JAX-RPC 和 JAX-WS 规范对此要求。
 
--   SSL 3.0, TLS 1.2—SSL 3.0（安全套接层）代表 Web 通信的安全层。当使用 https URL 而非 http URL 时，可以间接使用。Java EE 容器能够在标准 HTTPS 端口（端口 443）上发布其 HTTPS 服务。请注意，作为 EJB 互操作性协议的一部分，EJB 要求 SSL 3.0 仅 TLS 1.0。
+- WebSocket 协议——WebSocket 协议允许在 TCP 之上的双向通信。它允许通过初始 HTTP 握手和升级请求建立的单一连接实现双向通信。WebSocket 协议已由 IETF 在 RFC 6455 中完成标准化。
 
--   SOAP 1.1—SOAP 是一种用于交换 XML 消息的表示层协议。对于在 HTTP 之上的 SOAP，需要如 JAX-RPC 和 JAX-WS 规范所述的支持。
-
--   SOAP 1.2—SOAP 1.2 是通过 W3C 标准化并由 JAX-WS 支持的 SOAP 协议版本。
-
--   WS-I Basic Profile 1.1—WS-I Basic Profile 结合 SOAP 绑定与附件规范（Simple SOAP Binding and Attachment Profile）描述了使用 SOAP 1.1、WSDL 1.1 以及基于 MIME 的带附件 SOAP 的互操作性。JAX-RPC 和 JAX-WS 规范对此要求。
-
--   WebSocket 协议—WebSocket 协议允许在 TCP 之上的双向通信。它允许通过初始 HTTP 握手和升级请求建立的单一连接实现双向通信。WebSocket 协议已由 IETF 在 RFC 6455 中完成标准化。
-
-## EE.7.2.2
-
-## OMG 协议（建议可选）
+### 7.2.2 OMG 协议（建议可选）
 
 本规范要求完整的 Java EE 产品支持以下基于对象管理组（OMG）的协议：
 
--   IIOP（Internet-ORB 协议)—Java SE 中的 Java IDL 和 RMI-IIOP 支持该协议。Java IDL 通过公共对象请求代理架构（CORBA）提供基于标准的互操作性和可连接性。CORBA 规定了对象请求代理（ORB），它允许应用程序无论位置如何都能相互通信。这种互操作性通过 IIOP 实现，通常用于内网环境。IIOP 可以使用 RMI-IIOP 技术作为 RMI 协议。IIOP 定义在 CORBA 2.3.1 规范的第 13 章和第 15 章中，可从 http://omg.org/cgi-bin/doc?formal/99-10-07 获取。
+- IIOP（Internet-ORB 协议）——Java SE 中的 Java IDL 和 RMI-IIOP 支持该协议。Java IDL 通过公共对象请求代理架构（CORBA）提供基于标准的互操作性和可连接性。CORBA 规定了对象请求代理（ORB），它允许应用程序无论位置如何都能相互通信。这种互操作性通过 IIOP 实现，通常用于内网环境。IIOP 可以使用 RMI-IIOP 技术作为 RMI 协议。IIOP 定义在 CORBA 2.3.1 规范的第 13 章和第 15 章中，可从 http://omg.org/cgi-bin/doc?formal/99-10-07 获取。
 
--   EJB 互操作性协议—EJB 互操作性协议基于 IIOP（GIOP 1.2）和 CSiv2 CORBA 安全互操作性规范。EJB 互操作性协议定义在 EJB 规范中。
+- EJB 互操作性协议——EJB 互操作性协议基于 IIOP（GIOP 1.2）和 CSiv2 CORBA 安全互操作性规范。EJB 互操作性协议定义在 EJB 规范中。
 
--   CORBA 可互操作命名服务协议—基于 COSNaming 的 INS 协议是一种基于 IIOP 的命名服务协议。EJB 互操作性协议要求使用 INS 协议通过 JND API 查找 EJB 对象。此外，必须能够 Java IDL COSNaming API 访问命名服务。所有 Java EE 产品都提供符合互操作命名服务规范的命名服务（可从 http://omg.org/cgi-bin/doc?formal/2000-06-19 获取），并作为独立的命名服务器或指向另一个命名服务的网关提供。这两种方法均符合本规范。
+- CORBA 可互操作命名服务协议——基于 COSNaming 的 INS 协议是一种基于 IIOP 的命名服务协议。EJB 互操作性协议要求使用 INS 协议通过 JND API 查找 EJB 对象。此外，必须能够 Java IDL COSNaming API 访问命名服务。所有 Java EE 产品都提供符合互操作命名服务规范的命名服务（可从 http://omg.org/cgi-bin/doc?formal/2000-06-19 获取），并作为独立的命名服务器或指向另一个命名服务的网关提供。这两种方法均符合本规范。
 
-## EE.7.2.3 Java 技术协议
+### 7.2.3 Java 技术协议
 
 本规范要求 Java EE 平台支持 JRMP 协议，这是 Java 特有的远程方法调用（RMI）协议。JRMP 是 Java SE 的强制组件，也是两个强制 RMI 协议之一（IIOP 是另一个强制性 RMI 协议，见上文）。
 
@@ -4244,23 +3952,27 @@ JRMP 是 Java 编程语言的分布式对象模型。运行在不同地址空间
 
 关于 JRMP 规范的完整信息可以访问 http://docs.oracle.com/java/8/docs/technotes/guides/rmi。
 
-## EE.7.2.4 数据格式
+### 7.2.4 数据格式
 
 除了允许组件间通信的协议外，本规范还要求 Java EE 平台支持多种数据格式。这些格式为组件之间交换的数据提供了定义。
 
 必须支持以下数据格式：
 
--   XML 1.0—XML 格式可用于构建文档、RPC 消息等。JAXP API 提供对 XML 格式数据处理的支持。JAX-RPC API 提供对 XML RPC 消息的支持以及 Java 类与 XML 之间的映射。
+- XML 1.0——XML 格式可用于构建文档、RPC 消息等。JAXP API 提供对 XML 格式数据处理的支持。JAX-RPC API 提供对 XML RPC 消息的支持以及 Java 类与 XML 之间的映射。
 
--   JSON—JSON 是一种语言无关的纯文本格式，通常用于在服务器和 Web 应用程序之间传输结构化数据。JSON-P API 提供对 JSON 文本解析、生成、转换和查询的支持。JSON-B API 提供对 JSON 文本与 Java 对象之间映射的支持。
+- JSON——JSON 是一种语言无关的纯文本格式，通常用于在服务器和 Web 应用程序之间传输结构化数据。JSON-P API 提供对 JSON 文本解析、生成、转换和查询的支持。JSON-B API 提供对 JSON 文本与 Java 对象之间映射的支持。
 
--   HTML 4.01—这代表了最小的浏览器文档格式。虽然除 JSF 外，所有 Java EE API 与浏览器文档格式的版本无关，但 Java EE 客户端能够显示 HTML 4.01 文档。
+- HTML 4.01——这代表了最小的浏览器文档格式。虽然除 JSF 外，所有 Java EE API 与浏览器文档格式的版本无关，但 Java EE 客户端能够显示 HTML 4.01 文档。
 
--   图像格式—Java EE 平台支持 GIF、JPEG 和 PNG 图像。这些格式的支持由 java.awt.image API（URL: http://docs.oracle.com/javase/8/docs/api/java/awt/package-summary.html）和 Java EE 客户端提供。
+- 图像格式——Java EE 平台支持 GIF、JPEG 和 PNG 图像。这些格式的支持由 `java.awt.image` API（URL: http://docs.oracle.com/javase/8/docs/api/java/awt/package-summary.html）和 Java EE 客户端提供。
 
--   JAR 文件—JAR（Java Archive）文件是 Java 组件的标准打包格式。JAR 是平台无关的文件，允许将许多文件聚合在一起。关于 JAR 规范的完整信息，请参阅 http://docs.oracle.com/javase/8/docs/technotes/jar。类文件—类文件格式由 Java 虚拟机规定。每个类文件包含一个 Java 语言类型（类或接口），并由 8 位字节组成。关于类文件的完整信息，请参阅 http://docs.oracle.com/javase/specs
+- JAR 文件——JAR（Java Archive）文件是 Java 组件的标准打包格式。JAR 是平台无关的文件，允许将许多文件聚合在一起。关于 JAR 规范的完整信息，请参阅 http://docs.oracle.com/javase/8/docs/technotes/jar。
 
-## EE.8. 应用组装与部署
+- 类文件——类文件格式由 Java 虚拟机规定。每个类文件包含一个 Java 语言类型（类或接口），并由 8 位字节组成。关于类文件的完整信息，请参阅 http://docs.oracle.com/javase/specs。
+
+# 第 8 章
+
+## 应用组装与部署
 
 本章规定了组装、部署 Java™ 企业版（Java EE）应用的要求。这些要求的主要目标是提供可扩展和移植的 Java EE 应用部署。
 
@@ -4280,28 +3992,18 @@ Java EE 应用的生命周期始于离散 Java EE 组件的。这些组件可以
 
 图 EE.8-2 显示了 Java EE 应用的生命周期。
 
-
-
-
-
-# 应用生命周期
-
-## 创建
-
-## 部署
-
 ![](img/2d0d59290c8adb2789da0c25757ad1d3_216_0.png)
+
 图 EE.8-2 Java EE 应用生命周期
 
-## EE.8.1.1 组件创建
+#### EE.8.1.1 组件创建
 
 EJB、servlet、应用客户端和 Connector 规范包含了用于生成 Java EE 模块所需的关联模块级部署描述符的 XML 架构（XML Schema）定义以及组件打包体系。（应用客户端规范见本文的第 EE.10 节。）
 
-一个 Java EE 模块是由一个或多个 Java EE 组件（web、EJB、应用客户端或 Connector）组成的集合，并带有一个可选的该类型模块部署描述符。相同类型的任意数量的组件可以与适用于该容器类型的单个 Java EE 部署描述符打包在一起，以生成一个 Java EE 模块。不同类型的组件不能混合在同一个 Java EE 模块中，但在 web 模块中打包 EJB 组件的除除外。
+一个 Java EE 模块是由一个或多个 Java EE 组件（web、EJB、应用客户端或 Connector）组成的集合，并带有一个可选的该类型模块部署描述符。相同类型的任意数量的组件可以与适用于该容器类型的单个 Java EE 部署描述符打包在一起，以生成一个 Java EE 模块。不同类型的组件不能混合在同一个 Java EE 模块中，但在 web 模块中打包 EJB 组件的除外。
 
 - Java EE 模块代表了 Java EE 应用组合的基本基单元。在某些情况下，一个 Java EE 模块（不一定打包到 Java EE 应用包中）将包含另一个应用。在其他情况下，一个应用将由多个 Java EE 模块组成。
 - Java EE 模块的部署描述符包含了部署模块中组件所需的声明式数据。Java EE 模块的部署描述符还包含了描述组件如何组合成应用的组装指令。
-
 - 从 Java EE 平台第 5 版本开始，web 应用模块、企业 Bean 模块或应用客户端模块不需要包含部署描述符。相反，部署信息可以通过模块类文件中的注解来指定。
 - 从 Java EE 平台第 5 版本开始，Java EE 企业归档（enterprise archive）不需要包含部署描述符。相反，部署信息可以使用嵌入模块的默认命名规则来确定。
 - 独立的 Java EE 模块可以作为独立的 Java EE 模块进行部署，而无需应用级部署描述符，并代表一个有效的 Java EE 应用。
@@ -4331,11 +4033,13 @@ store.war
 admin.war
 ```
 
-其默认应用名为 "bigapp"，并定义了四个默认名为 "ejbs/inventory","ejbs/accounts", "ui/store" 和 "ui/admin" 的模块。
 
-### EE.8.1.2 应用组装
 
-一个 Java EE 应用可能由一个或多个 Java EE 模块组成，并且一个 Java EE 应用部署器使用 Java 归档（JAR）文件格式打包成具有 .ear（企业归档）文件名扩展名的文件。最小的 Java EE 应用包将仅包含 Java EE 模块，以及可选的部署描述符。Java EE 应用包还可以包含 Java EE 模块引用的库（使用下方 EE.8.2 节“库支持”中描述的 Class-Path 机制）、帮助文件和辅助部署器的文档。
+其默认应用名为`"bigapp"`，并定义了四个默认名为`"ejbs/inventory"`、`"ejbs/accounts"`、`"ui/store"`和`"ui/admin"`的模块。
+
+## EE.8.1.2 应用组装
+
+一个 Java EE 应用可能由一个或多个 Java EE 模块组成，并且一个 Java EE 应用部署器使用 Java 归档（JAR）文件格式打包成具有`.ear`（企业归档）文件名扩展名的文件。最小的 Java EE 应用包将仅包含 Java EE 模块，以及可选的部署描述符。Java EE 应用包还可以包含 Java EE 模块引用的库（使用下方 EE.8.2 节“库支持”中描述的`Class-Path`机制）、帮助文件和辅助部署器的文档。
 
 可移植 Java EE 应用的部署应依赖于包中除本规范定义之外可能包含任何实体。可移植 Java EE 应用部署器（如果有）以及 Java EE 模块（及其依赖库）列在其中。
 
@@ -4343,44 +4047,42 @@ Java EE 部署描述符代表了 Java EE 应用内容的顶层。Java EE 应用�
 
 在某些情况下，Java EE 应用在部署到企业之前可能需要自定义。可能会向应用添加新的 Java EE 模块。现有模块可能需要创建、更改或替换自定义内容。例如，应用消费者可能需要使用 HTML 编辑器为为 Java EE web 提供的模板登录页面添加图形。
 
-所有 Java EE 应用都有一个名称。该名称可以在应用部署描述符中显式设置。如果没有设置，应用的名称为文件的基名，去掉任何 .ear 扩展名并移除目录名。应用名称在应用实例中必须是唯一的。如果尝试部署一个与已部署应用名称冲突的应用，部署工具可能会为该应用选择一个新的唯一名称。部署工具还允许在部署时指定不同的名称。部署工具可能会使用特定产品的方法来判断部署操作是新应用的部署（在这种情况下，名称必须是唯一的），还是现有应用的重新部署（在这种情况下，名称可以与现有应用匹配）。
+所有 Java EE 应用都有一个名称。该名称可以在应用部署描述符中显式设置。如果没有设置，应用的名称为文件的基名，去掉任何`.ear`扩展名并移除目录名。应用名称在应用实例中必须是唯一的。如果尝试部署一个与已部署应用名称冲突的应用，部署工具可能会为该应用选择一个新的唯一名称。部署工具还允许在部署时指定不同的名称。部署工具可能会使用特定产品的方法来判断部署操作是新应用的部署（在这种情况下，名称必须是唯一的），还是现有应用的重新部署（在这种情况下，名称可以与现有应用匹配）。
 
-同样，当部署独立模块时，模块名称被用作应用名称，并遵循上述描述的相同规则。模块名称可以在模块描述符中显式设置。如果没有设置，模块名称为模块文件的基名，去掉任何扩展名（.war, .jar, .rar）并移除目录名。
-
-
-
-
+同样，当部署独立模块时，模块名称被用作应用名称，并遵循上述描述的相同规则。模块名称可以在模块描述符中显式设置。如果没有设置，模块名称为模块文件的基名，去掉任何扩展名（`.war`、`.jar`、`.rar`）并移除目录名。
 
 ## EE.8.2 库支持
 
 Java EE 平台提供了几种机制，允许应用程序使用可选包和共享库（以下称为库）。库可以与应用程序捆绑，也可以单独安装供任何应用程序使用。
 
-Java EE 产品需要根据[扩展机制架构和可选包版本控制](Extension Mechanism Architecture and Optional Package Versioning，可见 http://docs.oracle.com/java/8/docs/techniques/guides/extensions/) 以及 [JAR 文件规范](JAR File Specification，可见 http://docs.oracle.com/java/8/docs/techniques/guides/jar/jar.html）的规定，支持对捆绑和已安装库的使用。通过这种机制，Java JAR 文件可以引用封装在单独的 .jar 文件或目录中的实用类或其他共享类或资源，而这些文件或目录既可以包含在同一个 Java EE 应用程序包中，也可以是预先安装在 Java EE 容器中的。
+Java EE 产品需要根据[扩展机制架构和可选包版本控制](http://docs.oracle.com/java/8/docs/techniques/guides/extensions/)以及[JAR 文件规范](http://docs.oracle.com/java/8/docs/techniques/guides/jar/jar.html)的规定，支持对捆绑和已安装库的使用。通过这种机制，Java JAR 文件可以引用封装在单独的`.jar`文件或目录中的实用类或其他共享类或资源，而这些文件或目录既可以包含在同一个 Java EE 应用程序包中，也可以是预先安装在 Java EE 容器中的。
 
 ### EE.8.2.1 捆绑库
 
 与应用程序捆绑的库可以通过以下方式引用：
 
-- 1. JAR 格式文件（如 .jar 文件、.war 文件或 .rar 文件）可以通过在引用的 JAR 文件的 Manifest 文件的 Class-Path Header中命名引用的 .jar 文件或目录，来引用该 .jar 文件或目录。引用的 .jar 文件或目录是相对于引用 JAR 文件的 URL 命名的。Manifest 文件在 JAR 文件中名为 META-INF/MANIFEST.MF。Manifest 文件中的 Class-Path 条目为：
+1. JAR 格式文件（如`.jar`文件、`.war`文件或`.rar`文件）可以通过在引用的 JAR 文件的 Manifest 文件的`Class-Path`Header中命名引用的`.jar`文件或目录，来引用该`.jar`文件或目录。引用的`.jar`文件或目录是相对于引用 JAR 文件的 URL 命名的。Manifest 文件在 JAR 文件中名为`META-INF/MANIFEST.MF`。Manifest 文件中的`Class-Path`条目为：
 
-Class-Path: list-of-jar-files-or-directories-separated-by-spaces
+   ```
+   Class-Path: list-of-jar-files-or-directories-separated-by-spaces
+   ```
 
-（有关 Class-Path 头部语法的重要细节和限制，请参阅[JAR 文件规范]。）Java EE 部署工具在处理 Java EE 模块时必须处理所有引用的文件和目录。在处理引用的 JAR 文件时，必须忽略引用的 .jar 文件中的任何部署描述符。部署工具必须以保留文件之间相对引用的方式安装 .jar 文件和目录。通常，这是通过将 .jar 文件安装到与原始应用程序目录结构匹配的目录层级来实现的。所有引用的 .jar 文件或目录在运行时都必须出现在引用 JAR 文件的本地类路径中。
+   （有关`Class-Path`头部语法的重要细节和限制，请参阅[JAR 文件规范]。）Java EE 部署工具在处理 Java EE 模块时必须处理所有引用的文件和目录。在处理引用的 JAR 文件时，必须忽略引用的`.jar`文件中的任何部署描述符。部署工具必须以保留文件之间相对引用的方式安装`.jar`文件和目录。通常，这是通过将`.jar`文件安装到与原始应用程序目录结构匹配的目录层级来实现的。所有引用的`.jar`文件或目录在运行时都必须出现在引用 JAR 文件的本地类路径中。
 
-只有包含可由标准类加载器直接加载的类文件或资源的 JAR 格式文件或目录，才能作为 Class-Path 引用的目标；此类文件始终以 .jar 扩展名命名。部署工具处理的顶层 JAR 文件不应包含 Class-Path 条目；根据定义，此类条目将引用部署单元外部的其他文件。部署工具不要求处理此类外部引用。
+   只有包含可由标准类加载器直接加载的类文件或资源的 JAR 格式文件或目录，才能作为`Class-Path`引用的目标；此类文件始终以`.jar`扩展名命名。部署工具处理的顶层 JAR 文件不应包含`Class-Path`条目；根据定义，此类条目将引用部署单元外部的其他文件。部署工具不要求处理此类外部引用。
 
-- 2. .ear 文件可以包含一个包含以 JAR 文件封装的库的目录。.ear 文件部署描述符中的 library-directory 元素包含该目录的名称。如果检查了 library-directory 元素，或者 .ear 文件不包含部署描述符，则使用名为 lib 的目录。可以使用空 library-directory 元素来指定没有库目录。
-此目录中所有（但不包括子目录）具有 .jar 扩展名的文件都必须对封装在 EAR 文件中的所有组件（包括应用程序客户端）可用。这些库可以使用可以使用本文处描述的任何技术来引用与应用程序捆绑或单独安装的其它库。
+2. `.ear`文件可以包含一个包含以 JAR 文件封装的库的目录。`.ear`文件部署描述符中的`library-directory`元素包含该目录的名称。如果检查了`library-directory`元素，或者`.ear`文件不包含部署描述符，则使用名为`lib`的目录。可以使用空`library-directory`元素来指定没有库目录。
+   此目录中所有（但不包括子目录）具有`.jar`扩展名的文件都必须对封装在 EAR 文件中的所有组件（包括应用程序客户端）可用。这些库可以使用可以使用本文处描述的任何技术来引用与应用程序捆绑或单独安装的其它库。
 
-- 3. Web 应用程序可以在 WEB-INF/lib 目录中包含库。详情请参阅[Servlet 规范]。这些库可以使用本文处描述的任何技术来引用与应用程序捆绑或单独安装的其它库。
+3. Web 应用程序可以在`WEB-INF/lib`目录中包含库。详情请参阅[Servlet 规范]。这些库可以使用本文处描述的任何技术来引用与应用程序捆绑或单独安装的其它库。
 
 ### EE.8.2.2 已安装库
 
 单独安装的库可以通过以下方式引用：
 
-- 1. 所有类型的 JAR 格式文件都可以在 Manifest 文件中包含 Extension-List 属性，表示对已安装库的依赖。[JAR 文件规范]定义了供应用程序使用的此类属性的语义；此规范要求所有组件类型和相应的 JAR 格式文件都支持此类属性。可迁移应用程序不应假设任何已安装库对组件可用，除非该组件的 JAR 格式文件或包含它的其中一个 JAR 格式文件使用 Extension-List 及相关属性表示了对该库的依赖。引用的库必须对引用文件中的所有组件可用，包括包含引用文件中其他 JAR 格式文件中的任何组件。例如，如果 .ear 引用了已安装的库，则该库必须对 ear 内部的 .war 文件、EJB .jar 文件、应用程序 .jar 文件和资源适配器 .rar 文件中的所有组件可用。
+1. 所有类型的 JAR 格式文件都可以在 Manifest 文件中包含`Extension-List`属性，表示对已安装库的依赖。[JAR 文件规范]定义了供应用程序使用的此类属性的语义；此规范要求所有组件类型和相应的 JAR 格式文件都支持此类属性。可迁移应用程序不应假设任何已安装库对组件可用，除非该组件的 JAR 格式文件或包含它的其中一个 JAR 格式文件使用`Extension-List`及相关属性表示了对该库的依赖。引用的库必须对引用文件中的所有组件可用，包括包含引用文件中其他 JAR 格式文件中的任何组件。例如，如果`.ear`引用了已安装的库，则该库必须对 ear 内部的`.war`文件、EJB`.jar`文件、应用程序`.jar`文件和资源适配器`.rar`文件中的所有组件可用。
 
-Java EE 产品不要求在部署时或运行时下载库（使用 `<extension>-Implementation-URL` 头部）。Java EE 产品不要求同时支持多个版本的已安装库。Java EE 产品不要求将对已安装库的访问限制为应用程序已表示依赖的库；应用程序可能会被赋予比其请求更多的已安装库的访问权限。在所有这些情况下，强烈建议支持此类功能，并且可能在该规范的未来版本中被要求。我们建议 Java EE 产品支持已安装库的多个版本，并默认仅允许应用程序访问其已表示依赖的已安装库。
+   Java EE 产品不要求在部署时或运行时下载库（使用`<extension>-Implementation-URL`头部）。Java EE 产品不要求同时支持多个版本的已安装库。Java EE 产品不要求将对已安装库的访问限制为应用程序已表示依赖的库；应用程序可能会被赋予比其请求更多的已安装库的访问权限。在所有这些情况下，强烈建议支持此类功能，并且可能在该规范的未来版本中被要求。我们建议 Java EE 产品支持已安装库的多个版本，并默认仅允许应用程序访问其已表示依赖的已安装库。
 
 ### EE.8.2.3 库冲突
 
@@ -4388,18 +4090,15 @@ Java EE 产品不要求在部署时或运行时下载库（使用 `<extension>-I
 
 ### EE.8.2.4 库资源
 
-除了上述允许访问引用类外，引用 JAR 文件中包含的任何资源也必须能够通过 Class 和 ClassLoader 的 `getResource` 方法访问，这取决于应用程序安全权限的允许。应用程序通常具有访问与应用程序封装的任何 JAR 文件中资源所需的安全权限。
+除了上述允许访问引用类外，引用 JAR 文件中包含的任何资源也必须能够通过`Class`和`ClassLoader`的`getResource`方法访问，这取决于应用程序安全权限的允许。应用程序通常具有访问与应用程序封装的任何 JAR 文件中资源所需的安全权限。
 
 ### EE.8.2.5 动态类加载
 
-动态加载类的库必须考虑 Java EE 应用程序的类加载环境。库通常由加载应用程序类的类加载器的父类加载器加载，因此无法直接看到应用程序模块的类。仅需要动态加载由库本身提供的类的库可以安全地使用 `Class` 方法的 `setName`。然而，需要动态加载作为应用程序一部分提供的类的库，需要使用上下文类加载器来加载这些类。请注意，应用程序每个模块的上下文类加载器可能有所不同。访问上下文类加载器需要 `RuntimePermission("getClassLoader")`，该权限通常不授予应用程序，但应该授予需要动态加载类的库。
-
-
-
+动态加载类的库必须考虑 Java EE 应用程序的类加载环境。库通常由加载应用程序类的类加载器的父类加载器加载，因此无法直接看到应用程序模块的类。仅需要动态加载由库本身提供的类的库可以安全地使用`Class`方法的`setName`。然而，需要动态加载作为应用程序一部分提供的类的库，需要使用上下文类加载器来加载这些类。请注意，应用程序每个模块的上下文类加载器可能有所不同。访问上下文类加载器需要`RuntimePermission("getClassLoader")`，该权限通常不授予应用程序，但应该授予需要动态加载类的库。
 
 ### EE.8.2.6 示例
 
-以下示例说明了捆绑库（bundled library）机制的简单用法，用于引用在两个独立的 ejb-jar文件的企业豆（enterprise beans）之间共享实用类库。
+以下示例说明了捆绑库（bundled library）机制的简单用法，用于引用在两个独立的 ejb-jar 文件的企业豆（enterprise beans）之间共享实用类库。
 
 ```
 app1.ear:
@@ -4409,9 +4108,9 @@ ejb2.jar Class-Path: util.jar
 util.jar
 ```
 
-下一个示例说明了 Class-Path 机制更复杂的用法。在此示例中，开发者选择将企业豆客户端类封装在一个单独的 JAR 文件中，并从需要这些类的其他 JAR 文件中引用该 JAR 文件。这些类也被 `ejb2.jar` 需要（它与 `ejb1.jar` 包在同一个应用程序中），以及被 `ejb3.jar` 和 `servlet1.jar`（它们封装在不同的应用程序中）需要。`ejb1.jar` 本身也需要这些类，因为它们定义了 `ejb1.jar` 中企业豆的远程接口，开发者选择了 EJB 规范中描述的使这些类可用的引用模型。`ejb1.jar` 的部署描述符在 `ejb-client-jar` 中指定了客户端 JAR 文件。
+下一个示例说明了`Class-Path`机制更复杂的用法。在此示例中，开发者选择将企业豆客户端类封装在一个单独的 JAR 文件中，并从需要这些类的其他 JAR 文件中引用该 JAR 文件。这些类也被`ejb2.jar`需要（它与`ejb1.jar`包在同一个应用程序中），以及被`ejb3.jar`和`servlet1.jar`（它们封装在不同的应用程序中）需要。`ejb1.jar`本身也需要这些类，因为它们定义了`ejb1.jar`中企业豆的远程接口，开发者选择了 EJB 规范中描述的使这些类可用的引用模型。`ejb1.jar`的部署描述符在`ejb-client-jar`中指定了客户端 JAR 文件。
 
-`app2.ear` 中的组件必须使用 Class-Path 来引用与 `ejb1.jar` 中封装的企业豆对应的客户端 JAR 文件。企业豆通过 `ejb3.jar` 中的企业豆以及封装在 `webapp.war` 中的 서服器被引用。
+`app2.ear`中的组件必须使用`Class-Path`来引用与`ejb1.jar`中封装的企业豆对应的客户端 JAR 文件。企业豆通过`ejb3.jar`中的企业豆以及封装在`webapp.war`中的服务器被引用。
 
 ```
 app2.ear:
@@ -4434,7 +4133,9 @@ WEB-INF/web.xml
 WEB-INF/lib/servlet1.jar
 ```
 
-以下示例说明了已安装库（installed library）机制的简单用法，用于引用单独安装的实用类库。
+
+
+以下示例说明了已安装库机制的简单用法，用于引用单独安装的实用类库。
 
 app1.ear:
 META-INF/application.xml
@@ -4455,7 +4156,7 @@ Implementation-Version: build96
 
 ## EE.8.3 类加载要求
 
-Java EE 规范刻意没有定义 Java EE 产品必须使用的类加载器的精确类型和排列。相反，规范从“哪些类必须或不能对组件可见”的角度来定义要求。Java EE 产品可以自由使用任何类加载器来满足这些要求。可移植应用程序（Portable applications）不能依赖于所使用的类加载器类型或类加载器的层级结构，并且不能依赖于类和资源的加载顺序。如果需要动态加载类，可移植应用程序应使用节 EE.8.2.5 中“动态类加载”描述的技术。
+Java EE 规范刻意没有定义 Java EE 产品必须使用的类加载器的精确类型和排列。相反，规范从“哪些类必须或不能对组件可见”的角度来定义要求。Java EE 产品可以自由使用任何类加载器来满足这些要求。可移植应用程序不能依赖于所使用的类加载器类型或类加载器的层级结构，并且不能依赖于类和资源的加载顺序。如果需要动态加载类，可移植应用程序应使用节 EE.8.2.5 中“动态类加载”描述的技术。
 
 除了下面指定的所需的类外，Java EE 产品必须提供一种方法，允许访问安装在应用程序服务器中的类库，即使它没有对该库的依赖。这支持了不使用未定义依赖机制的旧应用程序和扩展库的使用。
 
@@ -4523,11 +4224,6 @@ EJB容器中的组件可以访问以下类和资源。可移植应用程序不�
 - 以上 EJB jar 文件和客户端 jar 文件引用的任何库的传递闭包（如节 EE.8.2，“库支持”所示）。
 - 部署到应用程序服务器的任何资源适配器存档（rar 文件）中任何 jar 文件的内容。
 - 上述 jar 文件引用的任何库的传递闭包（如节 EE.8.2，“库支持”所示）。
-
-
-
-
-
 - 上述 rar 文件本身引用的任何库的传递闭包（如第 EE.8.2 节“库支持”所示）。
 - 表 EE.6-1 中指定的除 EJB 容器之外的容器的 Java EE API 类。
 - 应用程序服务器中可用的任何已安装库。
@@ -4569,53 +4265,50 @@ applet 容器的要求完全 Java SE 8 规范规定。本规范未为 applet 容
 
 ### EE.8.4.1 装配 Java EE 应用程序
 
-- 1. 选择应用程序将使用的 Java EE 模块。
+1. 选择应用程序将使用的 Java EE 模块。
 2. 创建应用程序目录结构。
 
 应用程序的目录结构是任意的，但遵循某些简单约定，可能不需要部署符。结构应该根据设计组件的需求进行设计。
 
-- 3. 协调 Java EE 部署符。
-必须编辑 Java EE 模块的部署符，以链接内部满足的依赖关系并消除任何冗余的安全名称。当希望保留原始部署符时，可以使用可选元素 alt-dd（在第 EE.8.6 节“Java EE 应用程序 XML Schema”中描述）。alt-dd 元素指定了部署时使用的备用部署符。编辑后的部署符文件副本可以保存到由应用程序组装器（Application Assembler）确定的应用程序目录树中。如果没有 alt-dd 元素，部署器必须直接从模块包读取部署符。
+3. 协调 Java EE 部署符。
+必须编辑 Java EE 模块的部署符，以链接内部满足的依赖关系并消除任何冗余的安全名称。当希望保留原始部署符时，可以使用可选元素 `alt-dd`（在第 EE.8.6 节“Java EE 应用程序 XML Schema”中描述）。`alt-dd` 元素指定了部署时使用的备用部署符。编辑后的部署符文件副本可以保存到由应用程序组装器确定的应用程序目录树中。如果没有 `alt-dd` 元素，部署器必须直接从模块包读取部署符。
 
-- a. 为应用程序包含的模块选择唯一名称。如果两个模块在它们的部署符中指定了冲突的名称，则为至少一个模块创建一个备用部署符并更改其名称。如果 ear 文件中同一目录下的两个模块具有相同的基名称（例如 foo.jar 和 foo.war），则重命名其中一个模块或创建一个备用部署符为其中一个模块指定唯一名称。
-- b. 链接应用程序包含的每个模块中所有组件的内部满足的依赖关系。对于每个组件，在应用程序范围内必须仅有一个对应的组件满足该依赖关系。
-- i. 对于每个 `ejb-link`，在整个应用程序范围内只能有一个匹配的 `ejb-name`（参见第 EE.5.5 节“Enterprise Beans™ (EJB) References”）。
-- ii. 未链接到内部组件的依赖关系必须由部署器作为外部依赖处理，这些依赖必须由之前安装在平台上的资源满足。外部依赖必须在部署期间链接到平台上的资源。
-- c. 同步整个应用程序的安全角色名称。将具有冗余含义的唯一角色名称重命名为通用名称。将具有通用名称但含义不同的角色名称重命名为唯一名称。应用程序中许多组件使用的角色名称描述可以包含在应用程序级别的部署符中。
-- d. 为 Java EE 应用程序包含的每个 web 模块分配一个上下文根（context root）。上下文根是 web 命名空间中应用程序的相对名称。每个 web 模块的上下文根必须是不同且不重叠的。web 模块在部署时必须在 web 服务器的命名空间中分配完整名称。如果 Java EE 应用程序只有一个 web 模块，上下文根可以为空字符串。如果应用程序包中没有包含部署符，它将使用 web 模块中的 `default-context-path`。否则，它将使用模块名称作为 web 模块的上下文根。有关上下文根命名的详细要求请参见 Servlet 规范。
+a. 为应用程序包含的模块选择唯一名称。如果两个模块在它们的部署符中指定了冲突的名称，则为至少一个模块创建一个备用部署符并更改其名称。如果 ear 文件中同一目录下的两个模块具有相同的基名称（例如 `foo.jar` 和 `foo.war`），则重命名其中一个模块或创建一个备用部署符为其中一个模块指定唯一名称。
+b. 链接应用程序包含的每个模块中所有组件的内部满足的依赖关系。对于每个组件，在应用程序范围内必须仅有一个对应的组件满足该依赖关系。
+i. 对于每个 `ejb-link`，在整个应用程序范围内只能有一个匹配的 `ejb-name`（参见第 EE.5.5 节“Enterprise Beans™ (EJB) References”）。
+ii. 未链接到内部组件的依赖关系必须由部署器作为外部依赖处理，这些依赖必须由之前安装在平台上的资源满足。外部依赖必须在部署期间链接到平台上的资源。
+c. 同步整个应用程序的安全角色名称。将具有冗余含义的唯一角色名称重命名为通用名称。将具有通用名称但含义不同的角色名称重命名为唯一名称。应用程序中许多组件使用的角色名称描述可以包含在应用程序级别的部署符中。
+d. 为 Java EE 应用程序包含的每个 web 模块分配一个上下文根。上下文根是 web 命名空间中应用程序的相对名称。每个 web 模块的上下文根必须是不同且不重叠的。web 模块在部署时必须在 web 服务器的命名空间中分配完整名称。如果 Java EE 应用程序只有一个 web 模块，上下文根可以为空字符串。如果应用程序包中没有包含部署符，它将使用 web 模块中的 `default-context-path`。否则，它将使用模块名称作为 web 模块的上下文根。有关上下文根命名的详细要求请参见 Servlet 规范。
 
-- 确保应用程序中的每个组件都正确描述它对其他组件可能有的任何依赖。Java EE 应用程序不应假设应用程序中的所有组件在运行时都在类路径上。每个组件都可能被加载到具有单独命名空间的单独类加载器中。如果 JAR 文件中的类依赖另一个 JAR 文件中的类，则第一个 JAR 文件应使用 `ClassPath` 机制引用第二个 JAR 文件。该规则的一个显著异常是位于 web 应用 `WEB-INF/lib` 目录下的 JAR 文件。所有此类 JAR 文件在运行时都包含在 web 应用的类路径中；不需要使用 `ClassPath` 机制显式引用它们。该规则的另一个异常是位于应用程序包中库目录（通常为 `lib`）下的 JAR 文件。请注意，在共享构件存在声明组件的注解（例如库目录中且通过 `ClassPath` 引用被多个模块使用的库）可能会导致意外和不受人愿的后果，且不建议这样做。
+确保应用程序中的每个组件都正确描述它对其他组件可能有的任何依赖。Java EE 应用程序不应假设应用程序中的所有组件在运行时都在类路径上。每个组件都可能被加载到具有单独命名空间的单独类加载器中。如果 JAR 文件中的类依赖另一个 JAR 文件中的类，则第一个 JAR 文件应使用 `ClassPath` 机制引用第二个 JAR 文件。该规则的一个显著异常是位于 web 应用 `WEB-INF/lib` 目录下的 JAR 文件。所有此类 JAR 文件在运行时都包含在 web 应用的类路径中；不需要使用 `ClassPath` 机制显式引用它们。该规则的另一个异常是位于应用程序包中库目录（通常为 `lib`）下的 JAR 文件。请注意，在共享构件存在声明组件的注解（例如库目录中且通过 `ClassPath` 引用被多个模块使用的库）可能会导致意外和不受人愿的后果，且不建议这样做。
 
-- 应用程序中每个类只能有一个版本。如果一个组件依赖于库的一个版本而另一个组件依赖于另一个版本，则可能无法部署包含这两个组件的应用程序。除了应用程序客户端外，Java EE 应用程序不应假设每个组件都加载在单独的类加载器并具有单独的命名空间。单个应用程序中的所有组件可能被加载到单个类加载器并共享单个命名空间。但注意，必须能够部署一个其所有组件都在与其他应用程序不同的命名空间（或命名空间）中的应用程序。通常，这就是是部署方法。默认情况下，应用程序客户端被部署到自己的 Java 虚拟机实例中，因此每个应用程序客户端都有自己的命名空间，应用程序客户端的类在其他组件的类命名空间中不可见。
+应用程序中每个类只能有一个版本。如果一个组件依赖于库的一个版本而另一个组件依赖于另一个版本，则可能无法部署包含这两个组件的应用程序。除了应用程序客户端外，Java EE 应用程序不应假设每个组件都加载在单独的类加载器并具有单独的命名空间。单个应用程序中的所有组件可能被加载到单个类加载器并共享单个命名空间。但注意，必须能够部署一个其所有组件都在与其他应用程序不同的命名空间（或命名空间）中的应用程序。通常，这就是是部署方法。默认情况下，应用程序客户端被部署到自己的 Java 虚拟机实例中，因此每个应用程序客户端都有自己的命名空间，应用程序客户端的类在其他组件的类命名空间中不可见。
 
-- 可选为应用程序创建一个 XML 部署符。部署符必须命名为 `application.xml` 并位于应用程序 .ear 文件 `META-INF` 目录的顶层。
+可选为应用程序创建一个 XML 部署符。部署符必须命名为 `application.xml` 并位于应用程序 .ear 文件 `META-INF` 目录的顶层。
 
-
-
-
-部署描述符必须根据 Java EE  XML 文档的 XML Schema 是有效的 XML 文档。（或者，部署描述符也可以满足 Java EE 以前版本的要求。）
+部署描述符必须根据 Java EE XML 文档的 XML Schema 是有效的 XML 文档。（或者，部署描述符也可以满足 Java EE 以前版本的要求。）
 
 许多遵循下述约的应用程序不需要为应用程序部署描述符。部署工具将使用一些简单规则确定应用程序的组件。
 
-- 5. 打包应用程序。
-  - a. 将 Java EE 模块和部署描述符放在适当的目录下。
-  - b. 使用 JAR 文件格式将应用程序目录树封装成一个文件。该文件的文件名应带有 .ear 扩展名。
+5. 打包应用程序。
+  a. 将 Java EE 模块和部署描述符放在适当的目录下。
+  b. 使用 JAR 文件格式将应用程序目录树封装成一个文件。该文件的文件名应带有 .ear 扩展名。
 
-- 6. （可选）为应用程序创建一个位于包外部的备用部署描述符（"alt-dd"）。
+6. （可选）为应用程序创建一个位于包外部的备用部署描述符。
 
 ### EE.8.4.2 添加和移除模块
 
 在创建应用程序后，可以在部署之前添加或移除 Java EE 模块。在添加或移除模块时，必须执行以下步骤：
 
-- 1. 在应用程序包中为新模块确定一个存放的位置。可选地在应用程序包层次结构中创建新目录，以包含任何正在添加到应用程序中的 Java EE 模块。
+1. 在应用程序包中为新模块确定一个存放的位置。可选地在应用程序包层次结构中创建新目录，以包含任何正在添加到应用程序中的 Java EE 模块。
 
-- 2. 通过为模块选择合适的默认文件名，或在模块的部署描述符或备用描述符中显式指定模块名称，确保新模块名称不会与任何现有模块冲突。
+2. 通过为模块选择合适的默认文件名，或在模块的部署描述符或备用描述符中显式指定模块名称，确保新模块名称不会与任何现有模块冲突。
 
-- 3. 将新的 Java EE 模块复制到应用程序包中的目标位置。封装的模块直接插入到目标位置；模块不会被解包。
+3. 将新的 Java EE 模块复制到应用程序包中的目标位置。封装的模块直接插入到目标位置；模块不会被解包。
 
-- 4. 编辑 Java EE 模块的部署描述符，以链接由应用程序包含的 Java EE 模块内部满足的依赖关系。
+4. 编辑 Java EE 模块的部署描述符，以链接由应用程序包含的 Java EE 模块内部满足的依赖关系。
 
-- 5. 编辑 Java EE 应用程序部署描述符（如果包含），以满足 Java EE 平台的内容要求以及 Java EE 应用程序 XML DTD 或 schema 的有效性要求。
+5. 编辑 Java EE 应用程序部署描述符（如果包含），以满足 Java EE 平台的内容要求以及 Java EE 应用程序 XML DTD 或 schema 的有效性要求。
 
 Java EE 8, 最终发布
 
@@ -4641,15 +4334,15 @@ Java EE 平台支持三种类型的部署单元：
 
 Java EE 部署 API 描述了独立于产品的部署工具如何接受特定 Java EE 产品的插件，以及这些插件如何协作部署 Java EE 应用程序。本规范中引用部署工具的要求是指任何供应商提供的独立于产品的部署工具与该工具的供应商特定的部署插件的结合，以及与 Java EE 产品一同提供的任何其他供应商特定的部署工具。
 
-通常，部署工具会将已部署的应用程序或模块复制到特定特定的位置，并带有部署者（Deployer）提供的配置设置和自定义设置。在某些情况下，部署工具可能还包含组装功能，允许部署者在部署之前构建、修改或自定义应用程序。尽管如此，必须能够部署一个包含无特定特定部署信息的通用 Java EE 应用程序、模块或库，而无需修改部署者指定部署的原始文件或构件。
+通常，部署工具会将已部署的应用程序或模块复制到特定特定的位置，并带有部署者提供的配置设置和自定义设置。在某些情况下，部署工具可能还包含组装功能，允许部署者在部署之前构建、修改或自定义应用程序。尽管如此，必须能够部署一个包含无特定特定部署信息的通用 Java EE 应用程序、模块或库，而无需修改部署者指定部署的原始文件或构件。
 
 Java EE 容器的部署工具必须验证与正在处理的部署描述符对应的 Java EE 描述符 schema 或 DTD。架构 schema 或 DTD 是通过分析部署描述符以确定其声称符合的版本来选择的。验证错误必须向部署者报告错误。部署工具允许部署者纠正错误并继续部署。注意，部署描述符的版本仅指应用程序编写时的 EE 平台版本。
 
-部署描述符是可选的。所需的部署信息由默认规则或类上的注解决定。Java EE 组件规范包括本规范描述了描述符是可选的，并以完整或不完整的形式存在。metadata-complete 属性用于描述符中指定描述符是否完整。完整的描述符提供了完整的部署信息；部署工具不得检查类文件以此类部署信息。
+部署描述符是可选的。所需的部署信息由默认规则或类上的注解决定。Java EE 组件规范包括本规范描述了描述符是可选的，并以完整或不完整的形式存在。`metadata-complete` 属性用于描述符中指定描述符是否完整。完整的描述符提供了完整的部署信息；部署工具不得检查类文件以此类部署信息。
 
 如果处理注解（由表 EE.10-1、Servlet 表 8-1 以及 EJB 表 16 和 17 要求），则必须扫描表 EE.5-1 指定的所有类以指定部署信息的注解。如第 8.5.2 节所述，可以选择地扫描应用程序可以使用的所有类以这些注解。（这些是指定等同于描述符中信息的注解。此要求不涉及为其他目的定义的注解的处理。）这些注解可以出现在类、方法和字段上。资源定义注解指定的资源必须创建。所有资源注解必须在相应的命名空间中产生 JNDI 条目。如果声明或取消引用的相应命名空间可用，则产生的结果未定义。本规范后续版本可能会更改此行为。
 
-metadata-complete 属性的作用范围是它所属的描述符。由于历史原因，webservices.xml 部署描述符没有自己的 metadata-complete 属性；相反，它默认为模块描述符中 metadata-complete 属性的值。定义了自己的附加部署描述符的规范如果认为有用，应该提供自己的 metadata-complete 属性，并具有相应的语义。
+`metadata-complete` 属性的作用范围是它所属的描述符。由于历史原因，`webservices.xml` 部署描述符没有自己的 `metadata-complete` 属性；相反，它默认为模块描述符中 `metadata-complete` 属性的值。定义了自己的附加部署描述符的规范如果认为有用，应该提供自己的 `metadata-complete` 属性，并具有相应的语义。
 
 Java EE 8, 最终发布
 
@@ -4659,19 +4352,19 @@ Java EE 8, 最终发布
 
 本节规定了部署独立 Java EE 模块的要求。
 
-- 1. 部署工具首先读取 Java EE 模块部署描述符，如果在包外部提供或存在包内。参见组件规范以获取描述符所需的位置和名称。
+1. 部署工具首先读取 Java EE 模块部署描述符，如果在包外部提供或存在包内。参见组件规范以获取描述符所需的位置和名称。
 
 每种组件类型的脚本。
 
-- 2. 如果部署描述符不存在，或者存在但为 Java EE 5 或更高版本的描述符，且 `metadata-complete` 属性未设置为 `true`，则部署工具必须检查应用程序包中的所有类文件。任何指定了部署信息的注解都必须在逻辑上与部署描述符（如果存在）中的信息进行合并。注解信息与部署描述符信息之间的对应关系以及覆盖规则，已在本规范及其他 Java EE 规范中描述。此逻辑合并过程的结果提供了后续部署步骤中使用的部署信息。请注意，合并过程并不要求生成新的部署描述符，尽管这可能是一种常见的实现技术。
+2. 如果部署描述符不存在，或者存在但为 Java EE 5 或更高版本的描述符，且 `metadata-complete` 属性未设置为 `true`，则部署工具必须检查应用程序包中的所有类文件。任何指定了部署信息的注解都必须在逻辑上与部署描述符（如果存在）中的信息进行合并。注解信息与部署描述符信息之间的对应关系以及覆盖规则，已在本规范及其他 Java EE 规范中描述。此逻辑合并过程的结果提供了后续部署步骤中使用的部署信息。请注意，合并过程并不要求生成新的部署描述符，虽然这可能是一种常见的实现技术。
 
-- 3. 当部署独立模块时，使用模块名称作为应用程序名称。部署工具必须确保该应用程序名称在应用服务器实例中是唯一的。如果名称不唯一，部署工具可以自动选择一个唯一名称，或允许部署者（Deployer）选择一个唯一名称，但必须导致部署失败。这确保了现有模块是可以部署的。
+3. 当部署独立模块时，使用模块名称作为应用程序名称。部署工具必须确保该应用程序名称在应用服务器实例中是唯一的。如果名称不唯一，部署工具可以自动选择一个唯一名称，或允许部署者选择一个唯一名称，但必须导致部署失败。这确保了现有模块是可以部署的。
 
-- 4. 部署工具必须将 Java EE 模块部署描述符中列出的所有组件，或通过注解标记并按照前述要求发现的组件，根据各自 Java EE 组件规范的部署要求进行部署。如果模块是包含 JAR 格式文件的类型（例如，web 和 Connector 模块），则模块内其他 JAR 文件通过 `Class-Path` 清单文件头引用的其他 JAR 文件中的所有 `.jar` 文件都必须包含在部署中。如果该模块或模块内的任何 JAR 格式文件声明对已安装库的依赖，则必须满足该依赖。
+4. 部署工具必须将 Java EE 模块部署描述符中列出的所有组件，或通过注解标记并按照前述要求发现的组件，根据各自 Java EE 组件规范的部署要求进行部署。如果模块是包含 JAR 格式文件的类型（例如，web 和 Connector 模块），则模块内其他 JAR 文件通过 `Class-Path` 清单文件头引用的其他 JAR 文件中的所有 `.jar` 文件都必须包含在部署中。如果该模块或模块内的任何 JAR 格式文件声明对已安装库的依赖，则必须满足该依赖。
 
-- 5. 部署工具必须允许部署者配置容器，为每个组件提供所需的资源和配置值。所需的资源和配置参数在部署描述符中指定，或通过在要求 2 中发现的注解指定。
+5. 部署工具必须允许部署者配置容器，为每个组件提供所需的资源和配置值。所需的资源和配置参数在部署描述符中指定，或通过在要求 2 中发现的注解指定。
 
-- 6. 部署工具必须允许部署者多次部署同一个模块，作为多个独立的应用程序，并可能具有不同的配置。例如，`ej-jar` 文件中的企业豆（Enterprise Beans）可以在不同的 JNDI 名称和不同的资源配置下被多次部署。
+6. 部署工具必须允许部署者多次部署同一个模块，作为多个独立的应用程序，并可能具有不同的配置。例如，`ej-jar` 文件中的企业豆可以在不同的 JNDI 名称和不同的资源配置下被多次部署。
 
 Java EE 8, Final Release
 
@@ -4679,10 +4372,10 @@ Java EE 8, Final Release
 
 本节规定了部署 Java EE 应用程序的要求。
 
-- 1. 部署工具必须首先从外部提供或从应用程序 .ear 文件（META-INF/application.xml）中读取 Java EE 应用程序部署描述符。如果存在部署描述符，它将完整指定应用程序中所包含的模块。如果不存在部署描述符，部署工具使用以下规则来确定应用程序包含的模块：
+1. 部署工具必须首先从外部提供或从应用程序 .ear 文件（`META-INF/application.xml`）中读取 Java EE 应用程序部署描述符。如果存在部署描述符，它将完整指定应用程序中所包含的模块。如果不存在部署描述符，部署工具使用以下规则来确定应用程序包含的模块：
 
-  aa. 应用程序包中所有扩展名为 .war 的文件都被视为 web 模块。web 模块的上下文根（Context root）为模块名称（见 EE.8.1.1 节，“组件创建”）。
-  b. 应用程序包中所有扩展名为 .rar 的文件都被视为资源适配器（Resource Adapters）。
+  aa. 应用程序包中所有扩展名为 .war 的文件都被视为 web 模块。web 模块的上下文根为模块名称（见 EE.8.1.1 节，“组件创建”）。
+  b. 应用程序包中所有扩展名为 .rar 的文件都被视为资源适配器。
   c. 命名为 `lib` 的目录被视为库目录，见 EE.8.2.1 节，“捆绑库”。
   d. 对于应用程序包中所有扩展名为 .jar 但未包含在 `lib` 目录中的文件，执行以下操作：
 
@@ -4690,29 +4383,25 @@ Java EE 8, Final Release
     ii. 如果 .jar 文件包含一个 `META-INF/ejb-jar.xml` 文件，或任何带有 EJB 组件标识注解（如 `Stateless` 等）的类，则将该 .jar 文件视为 EJB 模块。
     iii. 所有其他 .jar 文件均被忽略，除非它们通过清单文件中的 `Class-Path` 头等 JAR 文件引用机制被发现的 JAR 文件引用。
 
-- 2. 部署工具必须确保应用程序名称在部署服务器中是唯一的。如果名称不唯一，部署工具可以自动选择一个唯一名称，或允许部署者选择一个唯一名称，但不能导致部署失败。这确保了现有应用程序能够继续部署。
+2. 部署工具必须确保应用程序名称在部署服务器中是唯一的。如果名称不唯一，部署工具可以自动选择一个唯一名称，或允许部署者选择一个唯一名称，但不能导致部署失败。这确保了现有应用程序能够继续部署。
 
-- 3. 部署工具必须打开 Java EE 应用程序部署描述符中的或通过上述规则发现的每个 Java EE 模块，如果包中存在，则读取 Java EE 模块部署描述符。请参阅 Enterprise JavaBeans、servlet、Java EE Connector 和应用程序客户端规范，以获取每种组件类型部署描述符所需的路径和名称。所有模块类型的部署描述符都是可选的（应用程序客户端规范见 EE.10 章，“应用程序客户端”）。
+3. 部署工具必须打开 Java EE 应用程序部署描述符中的或通过上述规则发现的每个 Java EE 模块，如果包中存在，则读取 Java EE 模块部署描述符。请参阅 Enterprise JavaBeans、servlet、Java EE Connector 和应用程序客户端规范，以获取每种组件类型部署描述符所需的路径和名称。所有模块类型的部署描述符都是可选的（应用程序客户端规范见 EE.10 章，“应用程序客户端”）。
 
-- 4. 如果模块描述符不存在，或者存在且为 Java EE 5 或更高版本且 `metadata-complete` 属性未设置为 `true`，部署工具必须检查应用程序包中包含在 .ear 文件中且被模块引用的所有类（例如模块自身包含的类文件、通过 `Class-Path` 引用从模块引用的类文件、库目录中的类文件等）。任何指定了部署信息的注解都必须在逻辑上与部署描述符（如果存在）中的信息进行合并。请注意，在共享制品中（如 `lib` 目录中的库以及通过 `Class-Path` 引用被多个处引用的库）存在清除组件的注解可能会导致意外和不受理想的后果。注解形成与部署描述符信息之间的对应关系以及覆盖规则已在本规范及其他 Java EE 规范中描述。此逻辑合并过程的结果提供了后续部署步骤中使用的部署信息。请注意，合并过程并不要求生成新的部署描述符，尽管这可能是一种常见的实现技术。
+4. 如果模块描述符不存在，或者存在且为 Java EE 5 或更高版本且 `metadata-complete` 属性未设置为 `true`，部署工具必须检查应用程序包中包含在 .ear 文件中且被模块引用的所有类（例如模块自身包含的类文件、通过 `Class-Path` 引用从模块引用的类文件、库目录中的类文件等）。任何指定了部署信息的注解都必须在逻辑上与部署描述符（如果存在）中的信息进行合并。请注意，在共享制品中（如 `lib` 目录中的库以及通过 `Class-Path` 引用被多个处引用的库）存在清除组件的注解可能会导致意外和不受理想的后果。注解形成与部署描述符信息之间的对应关系以及覆盖规则已在本规范及其他 Java EE 规范中描述。此逻辑合并过程的结果提供了后续部署步骤中使用的部署信息。请注意，合并过程并不要求生成新的部署描述符，虽然这可能是一种常见的实现技术。
 
-- 5. 部署工具必须将每个模块描述符描述的所有组件，或通过注解标记并按照前述要求发现的组件，根据各自 Java EE 组件规范的部署要求安装到相应的容器中。jar 文件中的所有类，或使用 `Class-Path` 清单文件头从其他 JAR 文件引用的目录都应包含在部署中。如果 .ear 文件或 .ear 文件内的任何 JAR 格式文件声明对已安装库的依赖，则必须满足该依赖。
+5. 部署工具必须将每个模块描述符描述的所有组件，或通过注解标记并按照前述要求发现的组件，根据各自 Java EE 组件规范的部署要求安装到相应的容器中。jar 文件中的所有类，或使用 `Class-Path` 清单文件头从其他 JAR 文件引用的目录都应包含在部署中。如果 .ear 文件或 .ear 文件内的任何 JAR 格式文件声明对已安装库的依赖，则必须满足该依赖。
 
-- 6. 部署工具必须允许部署者配置容器，为每个组件提供所需的资源和配置值。所需的资源和配置参数在部署描述符中指定，或通过在 3 中发现的注解指定。
+6. 部署工具必须允许部署者配置容器，为每个组件提供所需的资源和配置值。所需的资源和配置参数在部署描述符中指定，或通过在 3 中发现的注解指定。
 
-- 7. 部署工具必须允许部署者多次部署同一个 Java 应用程序，作为多个独立的应用程序，并可能具有不同的配置。例如，`ejb-jar` 文件中的企业豆可以在不同的 JNDI 名称和不同的资源配置下被多次部署。
+7. 部署工具必须允许部署者多次部署同一个 Java 应用程序，作为多个独立的应用程序，并可能具有不同的配置。例如，`ejb-jar` 文件中的企业豆可以在不同的 JNDI 名称和不同的资源配置下被多次部署。
 
 Java EE 8, Final Release
 
-- 8. 在向部署者展示安全角色描述时，部署工具必须使用 Java EE 应用程序描述符中的描述，而不是同名角色在模块描述符中的描述。然而，对于出现在模块描述符但未出现在应用程序描述符中的角色，部署工具必须使用模块描述符中的描述。
-
-
-
-
+8. 在向部署者展示安全角色描述时，部署工具必须使用 Java EE 应用程序描述符中的描述，而不是同名角色在模块描述符中的描述。然而，对于出现在模块描述符但未出现在应用程序描述符中的角色，部署工具必须使用模块描述符中的描述。
 
 通过在应用部署描述符中包含 `<initialize-inorder>true</initialize-inorder>` 元素，可以声明模块必须按照应用部署描述符中列出的顺序进行初始化。如果应用部署描述符指定的模块顺序与任何模块指定的初始化顺序冲突（例如，通过使用 EJB Depends 注解），部署工具必须报告错误。应用程序客户端模块按照自身的调度进行初始化，通常是在端用户调用它们时；因此，它们被排除在任何初始化要求之外。
 
-## EE8.6 Java EE Application XML Schema
+## EE.8.6 Java EE Application XML Schema
 
 Java EE 应用部署描述符的 XML 语法由 Java EE 架构定义。Java EE 应用部署描述符的根元素是 `application`。Java EE 组装的粒度是模块。Java EE 部署描述符包含应用程序的名称、描述以及应用程序的 URI。XML 元素的内容区分大小写。这意味着，例如 `<name>Manager</name>` 与 `<name>manager</name>` 不同。
 
@@ -4720,17 +4409,19 @@ Java EE 应用部署描述符的 XML 语法由 Java EE 架构定义。Java EE �
 
 图 EE8-3 Java EE 应用 XML 结构
 
-![](img/0d5929c0adb2789da0c2575ad1d3.png) Java EE 8，最终发布
+![](img/0d5929c0adb2789da0c2575ad1d3.png)
 
-## EE8.7 Common Java EE XML Schema
+Java EE 8，最终发布
+
+## EE.8.7 Common Java EE XML Schema
 
 位于 http://xmlns.jcp.org/xml/ns/javaee/javaee_8.xsd 的 XML 架构定义了许多 Java EE 部署描述符使用的类型，这些类型存在于本规范和其他规范中。
 
-# 9 章 配置文件 (Profiles)
+# 9 章 配置文件
 
 本章描述了所有 Java EE 配置文件共同共同的要求。它没有定义任何具体的配置文件，而是将此任务交给独立的规范。与本规范共同发布的《Java EE Profile规范》定义了 Java EE 配置文件，即 Web Profile。其他配置文件的定义留给未来的规范。
 
-### EE9.1 引言
+### EE.9.1 引言
 
 Java EE 配置文件（以下简称“配置文件”）代表了适用于特定类应用程序的平台配置。
 
@@ -4740,17 +4431,17 @@ Java EE 配置文件（以下简称“配置文件”）代表了适用于特定
 
 一个产品可以实现两个或多个 Java EE 配置文件，或者实现整个平台以及一个或多个 Java EE 配置文件，只要它们的组合要求不会产生冲突即可。
 
-### EE9.2 配置文件定义
+### EE.9.2 配置文件定义
 
-配置文件是根据 Java 社区过程程序（Java Community Process）的规则定义的。通常，创建新配置文件或修订现有配置文件的提议将作为 Java 规范请求（JSR）提交。一旦 JSR 获得批准，将形成一个专家小组并按照流程指示开展工作。配置文件的 JSR 必须提到其所构建的 Java EE 平台版本。此外，如果它是基于现有平台构建的，也必须保持这一事实。
+配置文件是根据 Java 社区过程程序的规则定义的。通常，创建新配置文件或修订现有配置文件的提议将作为 Java 规范请求（JSR）提交。一旦 JSR 获得批准，将形成一个专家小组并按照流程指示开展工作。配置文件的 JSR 必须提到其所构建的 Java EE 平台版本。此外，如果它是基于现有平台构建的，也必须保持这一事实。
 
 尽管配置文件可以独立于 Java EE 平台进行创建和演进，但在本规范包含的规则限制下，设想是让配置文件与平台本身保持合理的对齐水平，以避免开发空间碎片化为逐渐互不兼容的孤岛。为此，配置文件必须在获得批准时，构建在当时 Java EE 平台的最新版本之上。还建议配置文件专家小组超越这一要求，并在实际可行范围内，确保它们的配置文件在最终定稿时是构建在当时 Java EE 平台的最新版本之上的。
 
-### EE9.3 配置文件通用规则
+### EE.9.3 配置文件通用规则
 
-配置文件必须包含所有作为 Java EE 平台或其所构建的任何配置的必需组件的技术。这些技术将在配置文件中列为必须的（required）。
+配置文件必须包含所有作为 Java EE 平台或其所构建的任何配置的必需组件的技术。这些技术将在配置文件中列为必须的。
 
-配置文件可以将任何作为 Java EE 平台或其所构建的任何配置的可选组件（optional）的技术提升为必需状态。
+配置文件可以将任何作为 Java EE 平台或其所构建的任何配置的可选组件的技术提升为必需状态。
 
 除非配置文件强制规定，任何作为 Java EE 平台或该配置文件所构建的任何配置可选组件的技术，必须是配置文件本身的可选组件。
 
@@ -4762,7 +4453,7 @@ Java EE 配置文件（以下简称“配置文件”）代表了适用于特定
 
 单个技术的规范可能允许该技术的功能是可选的。在这种情况下，配置文件可以将这些功能中的一个或多个提升为必需，前提是 Java EE 平台或其构建的任何配置文件尚未这样做。
 
-### EE9.4 要求的表达
+### EE.9.4 要求的表达
 
 本规范在表达与平台中包含的一个多个技术相关的要求时，使用了以下约定：
 
@@ -4770,17 +4461,13 @@ Java EE 配置文件（以下简称“配置文件”）代表了适用于特定
 - 除非另有说明，单独段落和句子被认为对其所提到的任何技术具有条件。
 - 讨论示例或在其他非规范性的章节或段落不包含任何要求。
 
-### EE9.5 所有 Java EE 配置文件的要求
+### EE.9.5 所有 Java EE 配置文件的要求
 
 Java 平台标准版 8 是任何 Java EE 8 配置文件的必需基础。
 
 以下技术要求存在所有 Java EE 配置文件中：
 
-- 由 Common Annotations 规范定义的资源和组件生命周期注解（Resource, Resources, PostConstruct, PostDestroy）
-
-
-
-
+- 由 Common Annotations 规范定义的资源和组件生命周期注解（`Resource`, `Resources`, `PostConstruct`, `PostDestroy`）
 
 所有 Java EE 配置文件都要求支持以下功能：
 
@@ -4793,12 +4480,12 @@ Java 平台标准版 8 是任何 Java EE 8 配置文件的必需基础。
 以下功能被指定为 Java EE 配置文件的可选：
 
 - RMI/IIOP 互操作性要求（见 EE.7.2.2 节，“OMG Protocols (Optional Specification)”）
-- 对 java:comp/ORB 的支持（见 EE.5.12 节，“ORB References”）
+- 对 `java:comp/ORB` 的支持（见 EE.5.12 节，“ORB References”）
 
 ## EE.9.7 完整 Java EE 产品要求
 
 本节定义了完整 Java EE 平台产品的要求。这些要求对应于之前版本 Java EE 平台规范中的完整要求，并针对此新版本的平台更新了这些要求。
-请注意，由于精简过程（pruning process）的影响，未来的 Java EE 规范版本可能会放宽此处的要求，特别是将那些已经过精简且是当前规范强制要求的的技术标记为可选。已变为可选和/或被确定为精简候选的技术集见 EE.6.1.3 节，“精简的 Java 技术”。
+请注意，由于精简过程的影响，未来的 Java EE 规范版本可能会放宽此处的要求，特别是将那些已经过精简且是当前规范强制要求的的技术标记为可选。已变为可选和/或被确定为精简候选的技术集见 EE.6.1.3 节，“精简的 Java 技术”。
 以下是相关技术：
 
 - EJB 3.2（EJB 实体豆及相关的 EJB QL 除外，它们已变为可选）
@@ -4854,7 +4541,7 @@ Java 平台标准版 8 是任何 Java EE 8 配置文件的必需基础。
 
 应用程序客户端的 Java EE 认证要求与其他 Java EE 组件相同，其他 Java EE 应用程序可以使用相同的认证技术。
 
-访问不受保护的 Web 资源时不需要认证。访问受保护的 Web 资源时，可以使用常用的认证方式，即 HTTP Basic 认证、SSL 客户端认证或 HTTP 登录表单认证。可以使用惰性认证（Lazy authentication）。
+访问不受保护的 Web 资源时不需要认证。访问受保护的 Web 资源时，可以使用常用的认证方式，即 HTTP Basic 认证、SSL 客户端认证或 HTTP 登录表单认证。可以使用惰性认证。
 
 访问受保护的企业豆时需要进行认证。企业豆的认证机制包括 EJB 规范中为企业豆互操作而要求的机制。可以使用惰性认证。
 
@@ -4882,10 +4569,7 @@ Java 平台标准版 8 是任何 Java EE 8 配置文件的必需基础。
 
 ### EE.10.6 打包与部署
 
-应用程序客户端以 JAR 格式打包，扩展名为 .jar，并可能包含与 Java EE 组件相似的部署描述符。部署描述符描述了应用程序引用的企业豆、Web 服务和其他类型的外部资源。如果没有包含部署描述符，或者包含但标记为元数据完全完整（metadata-complete），应用程序客户端主类上的注解也可以用于描述应用程序所需的资源。与其他 Java EE 应用程序
-
-
-组件、必须在部署时配置资源访问、为企业级豆（enterprise beans）和资源分配名称等。
+应用程序客户端以 JAR 格式打包，扩展名为 .jar，并可能包含与 Java EE 组件相似的部署描述符。部署描述符描述了应用程序引用的企业豆、Web 服务和其他类型的外部资源。如果没有包含部署描述符，或者包含但标记为元数据完全完整，应用程序客户端主类上的注解也可以用于描述应用程序所需的资源。与其他 Java EE 应用程序组件、必须在部署时配置资源访问、为企业级豆和资源分配名称等。
 
 下表描述了部署工具必须考虑是否对应用程序客户端主类处理注解的情况。是否处理注解取决于部署描述符的存在及其版本，以及 `metadata-complete` 属性的设置。
 
@@ -4913,32 +4597,32 @@ Java 平台标准版 8 是任何 Java EE 8 配置文件的必需基础。
 
 `metadata-complete` 属性适用的注解列表目前包含以下：
 
-- java.annotation.PostConstruct
-- java.annotation.PreDestroy
-- java.annotation.Resource
-- java.annotation.Resources
-- java.annotation.sql.DataSourceDefinition
-- java.annotation.sql.DataSourceSourceDefinitions
-- java.ejb.EJB
-- java.ejb.EJBFactoryDefinition
-- java.jms.JMSConnectionFactoryDefinition
-- java.jms.JMSConnectionFactoryDefinitions
-- java.jms.JMSDestinationDefinition
-- java.jms.JMSDestinationDefinitions
-- java.mail.MailSessionDefinition
-- java.mail.MailSessionDefinitions
-- java.persistence.PersistenceUnit
-- java.persistence.PersistenceUnits
-- java.resource.AdministeredObjectDefinition
-- java.resource.AdministeredObjectDefinitions
-- java.resource.ConnectionFactoryDefinition
-- java.resource.ConnectionFactoryDefinitions
+- `java.annotation.PostConstruct`
+- `java.annotation.PreDestroy`
+- `java.annotation.Resource`
+- `java.annotation.Resources`
+- `java.annotation.sql.DataSourceDefinition`
+- `java.annotation.sql.DataSourceSourceDefinitions`
+- `java.ejb.EJB`
+- `java.ejb.EJBFactoryDefinition`
+- `java.jms.JMSConnectionFactoryDefinition`
+- `java.jms.JMSConnectionFactoryDefinitions`
+- `java.jms.JMSDestinationDefinition`
+- `java.jms.JMSDestinationDefinitions`
+- `java.mail.MailSessionDefinition`
+- `java.mail.MailSessionDefinitions`
+- `java.persistence.PersistenceUnit`
+- `java.persistence.PersistenceUnits`
+- `java.resource.AdministeredObjectDefinition`
+- `java.resource.AdministeredObjectDefinitions`
+- `java.resource.ConnectionFactoryDefinition`
+- `java.resource.ConnectionFactoryDefinitions`
 - 以下包中的所有注解：
-  - javax.jws
-  - java.jws.soap
-  - java.xml.ws
-  - java.xml.ws.soap
-  - java.xml.ws.spi
+  - `javax.jws`
+  - `java.jws.soap`
+  - `java.xml.ws`
+  - `java.xml.ws.soap`
+  - `java.xml.ws.spi`
 
 如果未指定 `metadata-complete` 属性或其值为 "false"，则对于所有此类注解，部署工具必须检查类文件以查找所有注解。
 
@@ -4959,7 +4643,7 @@ Java EE 应用程序部署描述符的 XML 语法由 Java EE 应用程序-client
 
 ## EE.11 章
 
-### 服务提供者接口 (Service Provider Interface)
+### 服务提供者接口
 
 Java™ Platform, Enterprise Edition (Java EE) 包含了多种技术，主要用于扩展 Java EE 容器的能力。此外，某些 Java EE 技术在它们的应用程序编程接口中包含了服务提供者接口。Java EE 配置可能包含部分或全部这些设施，如第 EE.9 节所示。
 
@@ -4993,9 +4677,6 @@ JavaMail 规范描述了 JavaMail 协议提供者如何打包和分发，以便�
 
 JavaMail 规范位于 http://jcp.org/en/jsr/detail?id=919.
 
-
-
-
 ## EE.12 章
 
 ## 兼容性与迁移
@@ -5006,13 +4687,13 @@ JavaMail 规范位于 http://jcp.org/en/jsr/detail?id=919.
 
 “兼容性”一词涵盖了许多不同的概念。如果 Java EE 产品实现了规范要求的 API 和行为，则该产品与 Java EE 规范兼容。如果应用程序仅依赖于某个 Java EE 平台发布版本定义的 API 和行为，则该应用程序与该 Java EE 平台发布版本兼容。如果为 Java EE 平台旧版本编写的所有可移植应用程序在平台的新发布版本上运行，且保持不变并具有相同的行为，则该 Java EE 平台的新发布版本与旧发布版本兼容。
 
-兼容性是 Java EE 平台的核心价值。Java EE 产品被要求支持为平台旧版本编写的可移植应用程序。兼容性和可移植性共同工作，提供了 Java EE 平台“一次编写，随处运行”（Write Once, Run Anywhere）的价值。Java EE 产品通过提供规范要求的 API 和行为来符合 Java EE 规范。可移植应用程序仅依赖于 Java EE 规范要求的 API 和行为。通常情况下，为平台旧版本编写的可移植应用程序将在当前版本的平台上继续保持不变地工作并具有相同的行为。
+兼容性是 Java EE 平台的核心价值。Java EE 产品被要求支持为平台旧版本编写的可移植应用程序。兼容性和可移植性共同工作，提供了 Java EE 平台“一次编写，随处运行”的价值。Java EE 产品通过提供规范要求的 API 和行为来符合 Java EE 规范。可移植应用程序仅依赖于 Java EE 规范要求的 API 和行为。通常情况下，为平台旧版本编写的可移植应用程序将在当前版本的平台上继续保持不变地工作并具有相同的行为。
 
 ## EE.12.2 迁移
 
 迁移是将应用程序转换为使用平台此发布版本引入的新功能的行为。由于此版本的 Java EE 平台版本具有很强的兼容性，迁移在很大程度上是一个可选的操作。尽管如此，通过转换为使用 Java EE 平台的新功能可以改进应用程序（更好的性能、更简单的开发、更灵活性等）。
 
-### EE.12.2.1 Java 持久化 (Java Persistence)
+### EE.12.2.1 Java 持久化
 
 Java Persistence 比 EJB CMP 实体豆提供了丰富得建模能力和对象/关系映射能力，并且易用得多。
 
@@ -5020,7 +4701,7 @@ Java EE 7 发布版已对 EJB CMP 和 BMP 实体豆的支持改为可选。自 J
 
 ## EE.12.2.2 JAX-WS
 
-JAX-WS 一同 JAXB 和 Web 服务元数据（Metadata for Web Services）规范，比使用 JAX-RPC 技术提供了更简单、更完整的 Web 服务支持。Java EE 7 发布版已将 JAX-RPC 支持改为可选。使用 JAX-RPC 提供 服务的应用程序应考虑迁移到 JAX-WS API。注意，两种技术都支持相同的 Web 服务互操作标准，客户端和服务端可以独立地迁移到新 API。
+JAX-WS 一同 JAXB 和 Web 服务元数据规范，比使用 JAX-RPC 技术提供了更简单、更完整的 Web 服务支持。Java EE 7 发布版已将 JAX-RPC 支持改为可选。使用 JAX-RPC 提供 服务的应用程序应考虑迁移到 JAX-WS API。注意，两种技术都支持相同的 Web 服务互操作标准，客户端和服务端可以独立地迁移到新 API。
 
 Java EE 8 最终发布版
 
@@ -5034,17 +4715,13 @@ Java EE 8 最终发布版
 
 ## EE.13.1 Java EE SPI
 
-构成 Java EE 平台的许多 API 包含一个 SPI 层，允许服务提供者或其他系统组件进行插拔。本规范没有描述所有服务提供者的执行环境，也没有描述所有服务提供者的打包和部署要求。然而，Java EE 连接器架构（Connector Architecture）定义了某些称为资源适配器（resource adapters）的服务提供者的类型，容器授权合约（Authorization Contract for Containers）定义了安全服务提供者的要求。本规范的未来版本将更完整地定义 Java EE SPI。
+构成 Java EE 平台的许多 API 包含一个 SPI 层，允许服务提供者或其他系统组件进行插拔。本规范没有描述所有服务提供者的执行环境，也没有描述所有服务提供者的打包和部署要求。然而，Java EE 连接器架构定义了某些称为资源适配器的服务提供者的类型，容器授权合约定义了安全服务提供者的要求。本规范的未来版本将更完整地定义 Java EE SPI。
 
 ## EE.A 录
 
 ## 旧版本部署描述符
 
-本录描述了 Java EE 规范旧版本部署描述符（Deployment Descriptors）的文档类型定义（DTD）和 XML 架构。所有 Java EE 产品都要求支持这些 DTD 和架构。
-
-
-
-
+本录描述了 Java EE 规范旧版本部署描述符的文档类型定义（DTD）和 XML 架构。所有 Java EE 产品都要求支持这些 DTD 和架构。
 
 图 EE.A-3 Java EE 应用 XML Schema 结构
 
@@ -5058,7 +4735,7 @@ Java EE 8 最终发布版
 
 ## EE.A.6 Java EE 6 应用客户端 XML Schema
 
-Java EE 应用客户端部署描述符的 XML 语法由用于应用客户端的 Java EE 应用客户端部署描述符 application-client 定义。部署描述符的 XML 元素的根元素在通常情况下是区分大小写的。这意味着，例如，必须使用 `<res-auth>Container</res-auth>`，而不是 `<res-auth>container</res-auth>`。
+Java EE 应用客户端部署描述符的 XML 语法由用于应用客户端的 Java EE 应用客户端部署描述符 `application-client` 定义。部署描述符的 XML 元素的根元素在通常情况下是区分大小写的。这意味着，例如，必须使用 `<res-auth>Container</res-auth>`，而不是 `<res-auth>container</res-auth>`。
 
 所有有效的应用客户端部署描述符必须符合 XML Schema 定义，或符合本规范以前版本的 DTD 或 schema 定义。部署描述符在应用客户端的 jar 文件中必须命名为 `META-INF/application-client.xml`。注意此名称是区分大小写的。
 
@@ -5127,18 +4804,13 @@ Java EE 8, 最终发布
 
 有效的 J2EE 1.3 部署描述符可能包含以下 DOCTYPE 声明：
 
-```xml
-<!DOCTYPE application "-//Sun Microsystems, Inc.//DTD J2EE Application 1.3//EN" "http://java.sun.com/dtd/application_1_3">
+```
+<!DOCTYPE application PUBLIC "-//Sun Microsystems, Inc.//DTD J2EE Application 1.3//EN" "http://java.sun.com/dtd/application_1_3.dtd">
 ```
 
-部署描述符在 .ear 文件中必须命名为 `META-INF/application.xml`。
-图 EE.A-8 显示了 J2EE:application DTD 的图形表示。
 
-![](img/2d0d59290c8adb2789da0c25757ad1d3_282_0.png)
 
-定义 J2EE 1.3 应用部署描述符 XML 语法的 DTD 可从 http://java.sun.com/dtd/application_1_3。
-
-## EE.A.13 J2EE:application 1.2 DTD
+# EE.A.13 J2EE:application 1.2 DTD
 
 本节提供了 J2EE 1.2 版本应用描述符的 XML DTD。J2EE 1.2 应用部署描述符可能包含以下 DOCTYPE 声明：
 
@@ -5152,31 +4824,25 @@ Java EE 8, 最终发布
 
 图 EE.A-9 J2EE:application DTD 结构
 
+应用程序客户端的描述符为 `application-client`。XML 元素的内容通常是区分大小写的。这意味着，例如，必须使用 `<res-auth>Container</res-auth>`，而不是 `<res-auth>container</res-auth>`。
 
+有效的 `application-client` 部署描述符可以符合以下 XML Schema 定义。部署描述符在应用程序客户端的 `.jar` 文件中命名为 `META-INF/application-client.xml`。注意，此名称是区分大小写的。
 
-
-应用程序客户端的描述符为 application-client。XML 元素的内容通常是区分大小写的。这意味着，例如，必须使用 <res-auth>Container</res-auth>，而不是 <res-auth>container/</res-auth>。
-
-有效的 application-client 部署描述符可以符合以下 XML Schema 定义。部署描述符在应用程序客户端的 .jar 文件中命名为 META-INF/application-client.xml。注意，此名称是区分大小写的。
-
-图 EE.A-10 显示了 J2EE 1.4 application-client XML Schema 的结构，该节点可通过 http://java.sun.com/xml/j2ee/application_client_1_4.xsd。
+图 EE.A-10 显示了 J2EE 1.4 `application-client` XML Schema 的结构，该节点可通过 `http://java.sun.com/xml/j2ee/application_client_1_4.xsd`。
 
 ![](img/2d0d59290c8adb2789da0c25757ad1d3_285_0.png)
 
-Java EE 8, Final Release
-
 # EE.A.15 J2EE:application-client 1.3 XML DTD
 
-本节描述了 J2EE 1.3 版本应用程序客户端部署描述符的 XML DTD。J2EE 应用程序客户端部署符的 XML 语法由 J2EE:application-client 文档类型定义。应用程序客户端部署描述符的根元素是 application-client。XML 元素的内容通常是区分大小写的。这意味着，例如，必须使用 <res-auth>container</res-auth>，而不是 <res-auth>。
+本节描述了 J2EE 1.3 版本应用程序客户端部署描述符的 XML DTD。J2EE 应用程序客户端部署符的 XML 语法由 J2EE:application-client 文档类型定义。应用程序客户端部署描述符的根元素是 `application-client`。XML 元素的内容通常是区分大小写的。这意味着，例如，必须使用 `<res-auth>container</res-auth>`，而不是 `<res-auth>`。
 
-有效的 application-client 部署描述符包含以下 DOCTYPE：
+有效的 `application-client` 部署描述符包含以下 DOCTYPE：
 
-```
+```xml
 <!DOCTYPE application-client PUBLIC "-//Sun Microsystems, Inc.//DTD J2EE Application Client 1.3/EN" "http://java.sun.com/dtd/application-client_1_3.dtd">
 ```
 
-部署描述符在应用程序客户端的 .jar 文件中命名为 META-INF/application-client.xml。
-EE.A-11 显示了 J2EE:application-client XML DTD 的结构，该节点可通过 http://java.sun.com/dtd/application-client_1_3.dtd。
+部署描述符在应用程序客户端的 `.jar` 文件中命名为 `META-INF/application-client.xml`。EE.A-11 显示了 J2EE:application-client XML DTD 的结构，该节点可通过 `http://java.sun.com/dtd/application-client_1_3.dtd`。
 
 ![](img/2d0d59290c8adb2789da0c25757ad1d3_286_0.png)
 
@@ -5186,53 +4852,38 @@ EE.A-11 显示了 J2EE:application-client XML DTD 的结构，该节点可通过
 
 本节描述了 J2EE 1.2 版本应用程序客户端部署描述符的 XML DTD。有效的应用程序客户端部署描述符必须包含以下 DOCTYPE 声明：
 
-```
-<!DOCTYPE application-client PUBLIC "-//Sun Microsystems, Inc.//DTD
-J2EE Application Client 1.2//EN" "http://java.sun.com/j2ee/dtds/application-client-1_2.dtd">
+```xml
+<!DOCTYPE application-client PUBLIC "-//Sun Microsystems, Inc.//DTD J2EE Application Client 1.2//EN" "http://java.sun.com/j2ee/dtds/application-client-1_2.dtd">
 ```
 
-图 EE.A-12 显示了 J2EE:application-client XML DTD 的结构，该节点可通过 http://java.sun.com/j2ee/dtds/application-client-1_2.dtd。
+图 EE.A-12 显示了 J2EE:application-client XML DTD 的结构，该节点可通过 `http://java.sun.com/j2ee/dtds/application-client-1_2.dtd`。
 
 ![](img/2d0d59290c8adb2789da0c25757ad1d3_287_0.png)
 
 图 EE.A-12 J2EE:application-client XML DTD 结构
 
-Java EE 8, Final Release
-
-- 在“提议可选”技术列表中添加了 CORBA，包括 RMI/IIOP 和 Java IDL。
-
-# EE.B.2.2
-
-# 移除的内容
+# EE.B.2.2 移除的内容
 
 - 从表 EE.5-1 和表 EE.6-1 的强制 API 中删除了 MVC 1.0；从第 6 章删除了“模型-视图-控制器 (MVC) 1.0 需求”章节。
 
-# EE.B.2.3
-
-# 编辑变更
+# EE.B.2.3 编辑变更
 
 - 将 Bean Validation 版本从 1.1 更改为 2.0。
 - 将 JMS 版本从 2.1 更改为 2.0。
 - 从第 EE.13 章删除了 JNLP 的“未来方向”章节。
 
-# EE.B.3
+# EE.B.3 公开评审草案中的更改
 
-# 公开评审草案中的更改
-
-# EE.B.3.1
-
-# 附加需求
+## EE.B.3.1 附加需求
 
 - 添加了节 EE.6.24，“Java EE Security API 1.0 需求”。
 - 更新了节 EE.8.4.1，“组装 Java EE 应用程序”，以反映 Servlet 上根命名的需求。
 - 在节 EE.6.2.3.1，“网络”中将必须支持的 TLS 版本更新为 1.2。
 - 在节 EE.7.2.4，“数据格式”中将 Java EE Web 客户端必须显示的 HTML 版本更新为 4.01。
 
-# EE.B.3.2
+## EE.B.3.2 编辑变更
 
-# 编辑变更
-
-- 添加了对 Java EE 8工作的感谢。
+- 添加了对 Java EE 8 工作的感谢。
 - 添加了节 EE.2.19，“Java EE 8 的更改”。
 - 更新了表 EE.6-1 和节 9.7 以反映 Java EE API 的需求。
 - 将 Web Socket 版本更正为 1.1。
@@ -5240,43 +4891,38 @@ Java EE 8, Final Release
 - 从第 EE.6 章删除了 JAXB 章节。
 - 将之前关于 JAX-WS 的章节移动到节 6.2.3.3。
 - 从第 EE.11 章删除了 JAX-WS 章节。
-
-Java EE 8, Final Release
-
 - 从节 EE.5.17，“验证器和验证器工厂引用”中删除了与 Bean Validation 规范不一致的需求。
 - 在节 EE.6.23，“Java™ 容器身份验证提供者接口 (JASPIC) 1.1 需求”中明确了 JSPIC Servlet 配置和 JSPIC SOAP 配置的需求。
 
 # EE.B.4 提议最终草案中的更改
 
-# EE.B.4.1 附加需求
+## EE.B.4.1 附加需求
 
 - 更新了第 EE.3 章，“安全”，以反映 Java EE Security API 的需求。
 
-# EE.B.4.2 编辑变更
+## EE.B.4.2 编辑变更
 
 - 将 Batch 版本更正为 1.0。
 - 在“节 EE.7.2.1，互联网和网络协议”中增加了关于 TLS 支持的说明。
 - 更新了“相关文档”。
-- 添加了对 https://javaee.github.io/javaee-spec-project 的引用。
+- 添加了对 `https://javaee.github.io/javaee-spec-project` 的引用。
 
 # EE.B.5 最终发布草案中的更改
 
-# EE.B.5.1 附加需求
+## EE.B.5.1 附加需求
 
 - 更新了节 EE.3.4.2.2，“SSL 双向认证”，以反映对 TLS 1.2 及相关密码套件的支持。
 - 更新了第 EE.3 章，“安全”，以反映 Java EE API 规范支持从用户组到角色的默认映射的需求。
 
-# EE.B.5.2 编辑变更
+## EE.B.5.2 编辑变更
 
 - 对节 EE.10.6，“打包和部署”中的注解列表和需求进行了说明。
 
-# 附录 EE.C
-
-# 相关文档
+# 附录 EE.C 相关文档
 
 本规范引用了以下文档（在本规范中指代这些文档的术语放在括号内）。
 
-- Java 平台企业版规范版本 8（本规范）。可通过 http://jcp.org/en/jsr/detail?id=366 访问。
+- Java 平台企业版规范版本 8（本规范）。可通过 `http://jcp.org/en/jsr/detail?id=366` 访问。
 - Java 平台标准版，版本 8
 - JavaBeans 规范，版本 3.2
 - Server Pages（服务器页面），版本 2.3
@@ -5297,34 +4943,31 @@ Java EE 8, Final Release
 - Java EE 部署规范 1.2
 - Java™ 容器授权提供者 1.5
 - Java™ 容器身份验证提供者接口 1.1
-
-
-
-- Java™ EE Security API 1.0. 可于 http://jcp.org/en/jsr/detail?id=375.
-- 其它语言的调试支持 1.0. 可于 http://jcp.org/en/jsr/detail?id=45.
-- JavaServer 标准标签库 1.2 (JSTL 规范). 可于 http://jcp.org/en/jsr/detail?id=52.
-- Java 平台 Web 服务元数据 2.1. 可于 http://jcp.org/en/jsr/detail?id=18.
-- JavaServer Faces 2.3 (JSF 规范). 可于 http://jcp.org/en/jsr/detail?id=372.
-- Java Persistence 2.2 (Java 持久化规范). 可于 http://jcp.org/en/jsr/detail?id=338.
-- Bean Validation 2.0 (Bean 验证规范). 可于 http://jcp.org/en/jsr/detail?id=380.
-- Managed Beans 1.0 (Managed Beans 规范). 可于 http://jcp.org/en/jsr/detail?id=316.
-- Interceptors 1.2 rev A (拦截器规范). 可于 http://jcp.org/en/jsr/detail?id=318.
-- Java EE 平台的上下文与依赖注入 2.0 (CDI 规范). 可于 http://jcp.org/en/jsr/detail?id=365.
-- Java 依赖注入 1.0 (DI 规范). 可于 http://jcp.org/en/jsr/detail?id=330.
-- Java  WebSocket API 1.1 (WebSocket 规范). 可于 http://jcp.org/en/jsr/detail?id=356.
-- Java JSON 处理 API 1.1 (JSON-P 规范). 可于 http://jcp.org/en/jsr/detail?id=374.
-- Java JSON 绑定 API 1.0 (JSON-B 规范). 可于 http://jcp.org/en/jsr/detail?id=367.
-- Java EE 并发工具 1.0 (并发工具). 可于 http://jcp.org/en/jsr/detail?id=236.
-- Java 平台批处理应用程序 1.0 rev A (批处理规范). 可于 http://jcp.org/en/jsr/detail?id=352.
-- 扩展机制架构, 可于 http://docs.oracle.com/javase/8/docs/technotes/guides/extensions/index.html.
-- 可选版本控制, 可于 http://docs.oracle.com/javase/8/docs/technotes/guides/extensions/index.html.
-- JAR 文件规范, 可于 http://docs.oracle.com/javase/8/docs/technotes/guides/jar/jar.html.
-- 通用对象请求代理：架构与规范 (CORBA 2.3.1 规范), 可于 http://www.omg.org/cgibin/doc?formal/99-10-07.
-- CORBA 2.6 - 第 26 章 - 安全互操作性, 可于 http://www.omg.org/cgibin/doc?formal/01-12-30.
-- IDL Java™ 语言映射规范, 可于 http://www.omg.org/cgibin/doc?ptc/2000-01-08.
-- Java™ 语言到 IDL 映射规范, 可于 http://www.omg.org/cgibin/doc?ptc/2000-01-06.
-- 可互操作命名服务, 可于 http://www.omg.org/cgibin/doc?ptc/00-08-07.
-- 事务服务规范 (OTS 规范), 可于 http://www.omg.org/cgi-bin/doc?formal/2001-11-03.
-- SSL 协议, 版本 3.0. 可于 http://tools.iet.org/html/rfc6101.
-- 架构风格与基于网络的软件架构的设计 (REST), R. Fielding, 博士论文, 加州大学欧尔文分校, 2000. 可于 http://roy.gbib.com/pubs/dissertation/top.htm.
-- Java™ 社区进程SM:2: 流程文档, 版本 2.10 (2016年3月21日). 可于 http://jcp.org/en/procedures/jcp2.
+- Java™ EE Security API 1.0. 可于 `http://jcp.org/en/jsr/detail?id=375`.
+- 其它语言的调试支持 1.0. 可于 `http://jcp.org/en/jsr/detail?id=45`.
+- JavaServer 标准标签库 1.2 (JSTL 规范). 可于 `http://jcp.org/en/jsr/detail?id=52`.
+- Java 平台 Web 服务元数据 2.1. 可于 `http://jcp.org/en/jsr/detail?id=18`.
+- JavaServer Faces 2.3 (JSF 规范). 可于 `http://jcp.org/en/jsr/detail?id=372`.
+- Java Persistence 2.2 (Java 持久化规范). 可于 `http://jcp.org/en/jsr/detail?id=338`.
+- Bean Validation 2.0 (Bean 验证规范). 可于 `http://jcp.org/en/jsr/detail?id=380`.
+- Managed Beans 1.0 (Managed Beans 规范). 可于 `http://jcp.org/en/jsr/detail?id=316`.
+- Interceptors 1.2 rev A (拦截器规范). 可于 `http://jcp.org/en/jsr/detail?id=318`.
+- Java EE 平台的上下文与依赖注入 2.0 (CDI 规范). 可于 `http://jcp.org/en/jsr/detail?id=365`.
+- Java 依赖注入 1.0 (DI 规范). 可于 `http://jcp.org/en/jsr/detail?id=330`.
+- Java WebSocket API 1.1 (WebSocket 规范). 可于 `http://jcp.org/en/jsr/detail?id=356`.
+- Java JSON 处理 API 1.1 (JSON-P 规范). 可于 `http://jcp.org/en/jsr/detail?id=374`.
+- Java JSON 绑定 API 1.0 (JSON-B 规范). 可于 `http://jcp.org/en/jsr/detail?id=367`.
+- Java EE 并发工具 1.0 (并发工具). 可于 `http://jcp.org/en/jsr/detail?id=236`.
+- Java 平台批处理应用程序 1.0 rev A (批处理规范). 可于 `http://jcp.org/en/jsr/detail?id=352`.
+- 扩展机制架构, 可于 `http://docs.oracle.com/javase/8/docs/technotes/guides/extensions/index.html`.
+- 可选版本控制, 可于 `http://docs.oracle.com/javase/8/docs/technotes/guides/extensions/index.html`.
+- JAR 文件规范, 可于 `http://docs.oracle.com/javase/8/docs/technotes/guides/jar/jar.html`.
+- 通用对象请求代理：架构与规范 (CORBA 2.3.1 规范), 可于 `http://www.omg.org/cgibin/doc?formal/99-10-07`.
+- CORBA 2.6 - 第 26 章 - 安全互操作性, 可于 `http://www.omg.org/cgibin/doc?formal/01-12-30`.
+- IDL Java™ 语言映射规范, 可于 `http://www.omg.org/cgibin/doc?ptc/2000-01-08`.
+- Java™ 语言到 IDL 映射规范, 可于 `http://www.omg.org/cgibin/doc?ptc/2000-01-06`.
+- 可互操作命名服务, 可于 `http://www.omg.org/cgibin/doc?ptc/00-08-07`.
+- 事务服务规范 (OTS 规范), 可于 `http://www.omg.org/cgi-bin/doc?formal/2001-11-03`.
+- SSL 协议, 版本 3.0. 可于 `http://tools.iet.org/html/rfc6101`.
+- 架构风格与基于网络的软件架构的设计 (REST), R. Fielding, 博士论文, 加州大学欧尔文分校, 2000. 可于 `http://roy.gbib.com/pubs/dissertation/top.htm`.
+- Java™ 社区进程SM:2: 流程文档, 版本 2.10 (2016年3月21日). 可于 `http://jcp.org/en/procedures/jcp2`.

@@ -1,8 +1,9 @@
+
 # 用 Spring 介绍 Jooq
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/jooq-with-spring>
 
-## 1。概述
+## 1. 概述
 
 本文将介绍 Jooq 面向对象查询——Jooq——以及一种与 Spring 框架协作设置它的简单方法。
 
@@ -12,11 +13,11 @@ Jooq 避免了一些典型的 ORM 模式，并生成允许我们构建类型安�
 
 本文主要关注 Spring MVC。我们的文章 [Spring Boot 对 jOOQ 的支持](/web/20220627091424/https://www.baeldung.com/spring-boot-support-for-jooq)描述了如何在 Spring Boot 使用 jOOQ。
 
-## 2。Maven 依赖关系
+## 2. Maven 依赖关系
 
 以下依赖项是运行本教程中的代码所必需的。
 
-### 2.1 .jooq〔t1〕
+### 2.1. jOOQ
 
 ```java
 <dependency>
@@ -26,7 +27,7 @@ Jooq 避免了一些典型的 ORM 模式，并生成允许我们构建类型安�
 </dependency>
 ```
 
-### 2.2。弹簧
+### 2.2. Spring
 
 我们的例子需要几个 Spring 依赖项；然而，为了简单起见，我们只需要在 POM 文件中显式包含其中的两个:
 
@@ -43,7 +44,7 @@ Jooq 避免了一些典型的 ORM 模式，并生成允许我们构建类型安�
 </dependency>
 ```
 
-### 2.3。数据库
+### 2.3. 数据库
 
 为了简化我们的示例，我们将使用 H2 嵌入式数据库:
 
@@ -55,13 +56,13 @@ Jooq 避免了一些典型的 ORM 模式，并生成允许我们构建类型安�
 </dependency>
 ```
 
-## 3。代码生成
+## 3. 代码生成
 
-### 3.1。数据库结构
+### 3.1. 数据库结构
 
 让我们介绍一下贯穿本文的数据库结构。假设我们需要为出版商创建一个数据库来存储他们管理的书籍和作者的信息，其中一个作者可能写了许多书，一本书可能由许多作者合著。
 
-为了简单起见，我们将只生成三个表:书籍的`book`、作者的`author`和另一个名为`author_book` 的表，以表示作者和书籍之间的多对多关系。`author`表有三列:`id`、`first_name`和`last_name.``book`表只包含一个`title`列和`id`主键。
+为了简单起见，我们将只生成三个表:书籍的`book`、作者的`author`和另一个名为`author_book` 的表，以表示作者和书籍之间的多对多关系。`author`表有三列:`id`、`first_name`和`last_name`。`book`表只包含一个`title`列和`id`主键。
 
 存储在`intro_schema.sql`资源文件中的以下 SQL 查询将针对我们之前已经建立的数据库执行，以创建必要的表并用样本数据填充它们:
 
@@ -102,7 +103,7 @@ INSERT INTO book VALUES
 INSERT INTO author_book VALUES (1, 1), (1, 3), (2, 1);
 ```
 
-### 3.2。属性 Maven 插件
+### 3.2. 属性 Maven 插件
 
 我们将使用三个不同的 Maven 插件来生成 Jooq 代码。第一个是属性 Maven 插件。
 
@@ -133,7 +134,7 @@ INSERT INTO author_book VALUES (1, 1), (1, 3), (2, 1);
 </plugin>
 ```
 
-### 3.3。SQL Maven 插件
+### 3.3. SQL Maven 插件
 
 SQL Maven 插件用于执行 SQL 语句来创建和填充数据库表。它将利用 Properties Maven 插件从`intro_config.properties`文件中提取的属性，并从`intro_schema.sql`资源中获取 SQL 语句。
 
@@ -173,7 +174,7 @@ SQL Maven 插件配置如下:
 
 注意，在 POM 文件中，这个插件必须放在 Properties Maven 插件之后，因为它们的执行目标都绑定到同一个阶段，Maven 将按照它们被列出的顺序执行它们。
 
-### 3.4。jOOQ Codegen 插件
+### 3.4. jOOQ Codegen 插件
 
 Jooq Codegen 插件从数据库表结构中生成 Java 代码。它的`generate`目标应该绑定到`generate-sources`阶段，以确保正确的执行顺序。插件元数据如下所示:
 
@@ -207,7 +208,7 @@ Jooq Codegen 插件从数据库表结构中生成 Java 代码。它的`generate`
 </plugin>
 ```
 
-### 3.5。生成代码
+### 3.5. 生成代码
 
 为了完成源代码生成的过程，我们需要运行 Maven `generate-sources`阶段。在 Eclipse 中，我们可以通过右键单击项目并选择`Run As`–>`Maven generate-sources`来做到这一点。该命令完成后，生成对应于`author`、`book`、`author_book`表(以及其他几个支持类)的源文件。
 
@@ -245,9 +246,9 @@ public class AuthorBook extends TableImpl<AuthorBookRecord> {
 
 当与项目中的其他层一起工作时，这些静态字段引用的实例将作为数据访问对象来表示相应的表。
 
-## 4。弹簧配置
+## 4. Spring 配置
 
-### 4.1。将 jOOQ 异常转换为 Spring
+### 4.1. 将 jOOQ 异常转换为 Spring
 
 为了使 Jooq 执行抛出的异常与 Spring 对数据库访问的支持保持一致，我们需要将它们转换成`DataAccessException`类的子类型。
 
@@ -267,15 +268,18 @@ public class ExceptionTranslator extends DefaultExecuteListener {
 
 这个类将被 Spring 应用程序上下文使用。
 
-### 4.2。配置弹簧
+### 4.2. 配置 Spring
 
-本节将介绍定义一个包含元数据和 beanss 的`PersistenceContext`的步骤，这些元数据和 bean 将在 Spring 应用程序上下文中使用。
+本节将介绍定义一个包含元数据和 beans 的`PersistenceContext`的步骤，这些元数据和 bean 将在 Spring 应用程序上下文中使用。
 
 让我们从对类应用必要的注释开始:
 
 *   `@Configuration`:使类被识别为 beans 的容器
+
 *   `@ComponentScan`:配置扫描指令，包括`value`选项来声明一个包名数组以搜索组件。在本教程中，要搜索的包是由 Jooq Codegen Maven 插件生成的包
+
 *   `@EnableTransactionManagement`:启用 Spring 管理的事务
+
 *   `@PropertySource`:表示要加载的属性文件的位置。本文中的值指向包含配置数据和数据库方言的文件，这恰好是 4.1 小节中提到的同一文件。
 
 ```java
@@ -289,6 +293,8 @@ public class PersistenceContext {
 ```
 
 接下来，使用一个`Environment`对象来获取配置数据，然后用它来配置`DataSource` bean:
+
+
 
 ```java
 @Autowired
@@ -304,11 +310,11 @@ public DataSource dataSource() {
 ```
 
 ```java
- return dataSource; 
+ return dataSource;
 }
 ```
 
-现在我们定义几个 beans 来处理数据库访问操作:
+现在我们定义几个 beans 来处理数据库访问操作：
 
 ```java
 @Bean
@@ -337,7 +343,7 @@ public DefaultDSLContext dsl() {
 }
 ```
 
-最后，我们提供了一个 Jooq `Configuration`实现，并将其声明为由`DSLContext`类使用的 Spring bean:
+最后，我们提供了一个 Jooq `Configuration`实现，并将其声明为由`DSLContext`类使用的 Spring bean：
 
 ```java
 @Bean
@@ -354,11 +360,11 @@ public DefaultConfiguration configuration() {
 }
 ```
 
-## 5。使用 jOOQ 和 Spring
+## 5. 使用 jOOQ 和 Spring
 
 本节演示 Jooq 在常见数据库访问查询中的使用。对于每种类型的“写”操作，包括插入、更新和删除数据，有两个测试，一个用于提交，一个用于回滚。当选择数据来验证“写”查询时，示出了“读”操作的使用。
 
-我们将首先声明一个自动连接的`DSLContext`对象和 Jooq 生成的类的实例，供所有测试方法使用:
+我们将首先声明一个自动连接的`DSLContext`对象和 Jooq 生成的类的实例，供所有测试方法使用：
 
 ```java
 @Autowired
@@ -369,9 +375,9 @@ Book book = Book.BOOK;
 AuthorBook authorBook = AuthorBook.AUTHOR_BOOK;
 ```
 
-### 5.1。插入数据
+### 5.1. 插入数据
 
-第一步是将数据插入表格:
+第一步是将数据插入表格：
 
 ```java
 dsl.insertInto(author)
@@ -389,7 +395,7 @@ dsl.insertInto(authorBook)
   .execute();
 ```
 
-提取数据的`SELECT`查询:
+提取数据的`SELECT`查询：
 
 ```java
 Result<Record3<Integer, String, Integer>> result = dsl
@@ -403,7 +409,7 @@ Result<Record3<Integer, String, Integer>> result = dsl
   .fetch();
 ```
 
-上述查询产生以下输出:
+上述查询产生以下输出：
 
 ```java
 +----+---------+-----+
@@ -415,7 +421,7 @@ Result<Record3<Integer, String, Integer>> result = dsl
 +----+---------+-----+
 ```
 
-结果由`Assert` API 确认:
+结果由`Assert` API 确认：
 
 ```java
 assertEquals(3, result.size());
@@ -425,7 +431,7 @@ assertEquals("Schildt", result.getValue(2, author.LAST_NAME));
 assertEquals(Integer.valueOf(1), result.getValue(2, DSL.count()));
 ```
 
-当由于无效查询而导致失败时，会引发异常，并且事务会回滚。在以下示例中，`INSERT`查询违反了外键约束，导致异常:
+当由于无效查询而导致失败时，会引发异常，并且事务会回滚。在以下示例中，`INSERT`查询违反了外键约束，导致异常：
 
 ```java
 @Test(expected = DataAccessException.class)
@@ -437,9 +443,9 @@ public void givenInvalidData_whenInserting_thenFail() {
 }
 ```
 
-### 5.2。更新数据
+### 5.2. 更新数据
 
-现在让我们更新现有数据:
+现在让我们更新现有数据：
 
 ```java
 dsl.update(author)
@@ -456,7 +462,7 @@ dsl.insertInto(authorBook)
   .execute();
 ```
 
-获取必要的数据:
+获取必要的数据：
 
 ```java
 Result<Record3<Integer, String, String>> result = dsl
@@ -470,7 +476,7 @@ Result<Record3<Integer, String, String>> result = dsl
   .fetch();
 ```
 
-输出应该是:
+输出应该是：
 
 ```java
 +----+---------+----------------------------------+
@@ -480,7 +486,7 @@ Result<Record3<Integer, String, String>> result = dsl
 +----+---------+----------------------------------+
 ```
 
-以下测试将验证 Jooq 是否按预期工作:
+以下测试将验证 Jooq 是否按预期工作：
 
 ```java
 assertEquals(1, result.size());
@@ -489,7 +495,7 @@ assertEquals("Baeldung", result.getValue(0, author.LAST_NAME));
 assertEquals("Building your REST API with Spring", result.getValue(0, book.TITLE));
 ```
 
-在失败的情况下，抛出一个异常，事务回滚，我们通过测试来确认这一点:
+在失败的情况下，抛出一个异常，事务回滚，我们通过测试来确认这一点：
 
 ```java
 @Test(expected = DataAccessException.class)
@@ -501,9 +507,9 @@ public void givenInvalidData_whenUpdating_thenFail() {
 }
 ```
 
-### 5.3。删除数据
+### 5.3. 删除数据
 
-以下方法删除一些数据:
+以下方法删除一些数据：
 
 ```java
 dsl.delete(author)
@@ -511,7 +517,7 @@ dsl.delete(author)
   .execute();
 ```
 
-以下是读取受影响的表的查询:
+以下是读取受影响的表的查询：
 
 ```java
 Result<Record3<Integer, String, String>> result = dsl
@@ -520,7 +526,7 @@ Result<Record3<Integer, String, String>> result = dsl
   .fetch();
 ```
 
-查询输出:
+查询输出：
 
 ```java
 +----+----------+---------+
@@ -530,7 +536,7 @@ Result<Record3<Integer, String, String>> result = dsl
 +----+----------+---------+
 ```
 
-以下测试验证删除:
+以下测试验证删除：
 
 ```java
 assertEquals(1, result.size());
@@ -538,7 +544,7 @@ assertEquals("Bryan", result.getValue(0, author.FIRST_NAME));
 assertEquals("Basham", result.getValue(0, author.LAST_NAME));
 ```
 
-另一方面，如果一个查询无效，它将抛出一个异常，事务回滚。以下测试将证明:
+另一方面，如果一个查询无效，它将抛出一个异常，事务回滚。以下测试将证明：
 
 ```java
 @Test(expected = DataAccessException.class)
@@ -549,7 +555,7 @@ public void givenInvalidData_whenDeleting_thenFail() {
 }
 ```
 
-## 6。结论
+## 6. 结论
 
 本教程介绍了 Jooq 的基础知识，Jooq 是一个用于处理数据库的 Java 库。它涵盖了从数据库结构生成源代码的步骤，以及如何使用新创建的类与数据库进行交互。
 

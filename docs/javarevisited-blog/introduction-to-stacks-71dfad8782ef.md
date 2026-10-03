@@ -1,3 +1,4 @@
+
 # Java 中的堆栈介绍
 
 > 原文：<https://medium.com/javarevisited/introduction-to-stacks-71dfad8782ef?source=collection_archive---------1----------------------->

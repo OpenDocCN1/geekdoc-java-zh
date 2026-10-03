@@ -1,3 +1,4 @@
+
 # 2023 年学习 Python 可以搭建的 8 个项目
 
 > 原文：<https://medium.com/javarevisited/8-projects-you-can-buil-to-learn-python-in-2020-251dd5350d56?source=collection_archive---------0----------------------->
@@ -109,15 +110,25 @@ image_credit — [参加系统设计面试](https://www.educative.io/collection/
 如果您需要更多项目，您还可以查看 Udemy 上的[**Python 大型课程:构建 10 个真实世界的应用程序**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-python-mega-course%2F) 课程，该课程提供了构建 10 个真实世界项目的分步指南，如
 
 1.  在浏览器上创建 web 地图应用程序
+
 2.  创建一个桌面应用程序来存储书籍数据
+
 3.  创建 web scraper
+
 4.  创建数据库应用程序
+
 5.  创建网站拦截器
+
 6.  创建一个翻译英语单词的应用程序
+
 7.  创建一个作品集网站，并在真实的服务器上发布
+
 8.  创建一个检测移动物体的网络摄像头视频应用程序
+
 9.  创建数据可视化应用程序
+
 10.  创建地理编码 web 应用程序
+
 11.  使用 Python 根据计算机事件安排程序。
 
 <https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-python-mega-course%2F>  
@@ -125,23 +136,37 @@ image_credit — [参加系统设计面试](https://www.educative.io/collection/
 如果你真的想深入学习 Python，这里有更多免费和付费的资源供你进一步学习
 
 *   [2023 年学习 Python 的 10 个理由](https://javarevisited.blogspot.com/2018/05/10-reasons-to-learn-python-programming.html)
+
 *   [初学者学习 Python 的 5 大课程](https://javarevisited.blogspot.com/2018/03/top-5-courses-to-learn-python-in-2018.html)
+
 *   [Python 开发者的 5 大 Web 开发框架](https://javarevisited.blogspot.com/2019/04/top-5-python-web-development-frameworks.html)
+
 *   [Python 和 JavaScript——从哪个开始比较好？](https://javarevisited.blogspot.com/2019/05/python-vs-javascript-which-programming-language-beginners-should-learn.html)
+
 *   [深入学习 Python 的 10 门免费在线课程](https://javarevisited.blogspot.com/2018/12/10-free-python-courses-for-programmers.html)
+
 *   [面向数据科学和机器学习的 8 大 Python 库](https://javarevisited.blogspot.com/2018/10/top-8-python-libraries-for-data-science-machine-learning.html)
+
 *   [Python vs . Java——初学者应该学习哪种编程语言？](https://javarevisited.blogspot.com/2018/06/java-vs-python-which-programming-language-to-learn-first.html)
+
 *   [5 Python 中的数据科学和机器学习课程](https://javarevisited.blogspot.com/2018/03/top-5-data-science-and-machine-learning-online-courses-to-learn-online.html)
+
 *   [10 门 Python 课程和程序员认证](/better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
+
 *   [学习数据科学的五大 Python 书籍](https://javarevisited.blogspot.com/2019/08/top-5-python-books-for-data-science-and-machine-learning.html)
+
 *   [面向程序员的 10 本免费 Python 编程书籍](http://www.java67.com/2017/05/top-7-free-python-programming-books-pdf-online-download.html)
 
 感谢您阅读本文。如果你喜欢这些 Python 项目，那么请把这篇文章分享给你的朋友和同事。如果您有任何问题或反馈，请留言，如果您有一个 Python 项目应该在此列表中，请随时与我们分享。
 
 **p . s .**——如果你更喜欢互动阅读和边做边学，而不是看书或看视频，那么你也可以看看 [**Codecademy 的学习 Python 3 课程**](https://bit.ly/learnpython3codecademy) ，这是一门边做边学 Python 的很棒的课程。这是他们职业套装的一部分，但值得学习。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fcomplete-python-bootcamp%2F>  
+
+
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fcomplete-python-bootcamp%2F>
 
 ## 您可能喜欢的其他媒体文章:
 
-  </hackernoon/10-data-structure-algorithms-and-programming-courses-to-crack-any-coding-interview-e1c50b30b927>  </swlh/5-free-python-courses-for-beginners-to-learn-online-e1ca90687caf> 
+</hackernoon/10-data-structure-algorithms-and-programming-courses-to-crack-any-coding-interview-e1c50b30b927>
+
+</swlh/5-free-python-courses-for-beginners-to-learn-online-e1ca90687caf>

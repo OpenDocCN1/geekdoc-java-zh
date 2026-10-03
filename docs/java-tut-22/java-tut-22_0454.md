@@ -1,3 +1,4 @@
+
 # 更改颜色主题
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/lookandfeel/color.html`](https://docs.oracle.com/javase/tutorial/uiswing/lookandfeel/color.html)
@@ -17,7 +18,6 @@ for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
         break;
     }
 }
-
 ```
 
 这三种基本颜色，`nimbusBase`，`nimbusBlueGrey`和`control`，将满足您大部分需求。在 Nimbus Defaults 页面上查看颜色键及其默认值的完整列表。

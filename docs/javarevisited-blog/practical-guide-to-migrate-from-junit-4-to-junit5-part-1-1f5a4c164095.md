@@ -1,4 +1,5 @@
-# 从 JUnit 4 迁移到 JUnit5 的实用指南—第 1 部分
+
+# 从 JUnit 4 迁移到 JUnit 5 的实用指南—第 1 部分
 
 > 原文：<https://medium.com/javarevisited/practical-guide-to-migrate-from-junit-4-to-junit5-part-1-1f5a4c164095?source=collection_archive---------5----------------------->
 

@@ -1,3 +1,4 @@
+
 # 从零到服务——使用 Hibernate、MySQL 和 Spring Boot 检索和存储数据
 
 > 原文：<https://medium.com/javarevisited/from-zero-to-service-retrieving-and-storing-data-using-hibernate-mysql-and-spring-boot-46a4dd0be995?source=collection_archive---------1----------------------->

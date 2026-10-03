@@ -1,22 +1,23 @@
+
 # 在 Java 中从字符串中删除停用词
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-string-remove-stopwords>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将讨论在 Java 中从`String`中移除停用词的不同方法。当我们想要从文本中删除不想要的或不允许的单词时，这是一个非常有用的操作，例如用户在网站上添加的评论或评论。
 
 我们将使用一个简单的循环、`Collection.removeAll()`和正则表达式。
 
-最后，我们将使用 [Java 微基准测试工具](/web/20221208143830/https://www.baeldung.com/java-microbenchmark-harness)来比较它们的性能。
+最后，我们将使用 [Java 微基准测试工具](https://web.archive.org/web/20221208143830/https://www.baeldung.com/java-microbenchmark-harness)来比较它们的性能。
 
-## 2。加载停用词
+## 2. 加载停用词
 
 首先，我们将从文本文件中加载停用词。
 
 这里我们有文件`english_stopwords.txt`，它包含了我们认为是停用词的单词列表，比如`I`、`he`、`she`和`the`。
 
-我们将使用 `Files.readAllLines()`将停用词加载到`String` 的`List`中:
+我们将使用`Files.readAllLines()`将停用词加载到`String`的`List`中：
 
 ```java
 @BeforeClass
@@ -25,9 +26,9 @@ public static void loadStopwords() throws IOException {
 }
 ```
 
-## 3。手动移除停用字词
+## 3. 手动移除停用字词
 
-对于我们的第一个解决方案，**我们将通过迭代每个单词并检查它是否是停用词来手动移除停用词**:
+对于我们的第一个解决方案，**我们将通过迭代每个单词并检查它是否是停用词来手动移除停用词**：
 
 ```java
 @Test
@@ -49,9 +50,9 @@ public void whenRemoveStopwordsManually_thenSuccess() {
 }
 ```
 
-## 4。使用`Collection.removeAll()`
+## 4. 使用`Collection.removeAll()`
 
-接下来，我们可以使用`Collection.removeAll()`一次删除所有停用词，而不是迭代`String`、**中的每个词:**
+接下来，我们可以使用`Collection.removeAll()`一次删除所有停用词，而不是迭代`String`中的每个词：
 
 ```java
 @Test
@@ -66,11 +67,11 @@ public void whenRemoveStopwordsUsingRemoveAll_thenSuccess() {
 }
 ```
 
-在这个例子中，在将我们的`String`分割成一个单词数组之后，我们将把它转换成一个`ArrayList`以便能够应用`removeAll()`方法。
+在这个例子中，在将`String`分割成一个单词数组之后，我们将把它转换成一个`ArrayList`以便能够应用`removeAll()`方法。
 
-## 5。使用正则表达式
+## 5. 使用正则表达式
 
-最后，**我们可以从我们的`stopwords`列表**中创建一个正则表达式，然后用它替换我们的`String`中的停用词:
+最后，**我们可以从`stopwords`列表**中创建一个正则表达式，然后用它替换`String`中的停用词：
 
 ```java
 @Test
@@ -85,11 +86,11 @@ public void whenRemoveStopwordsUsingRegex_thenSuccess() {
 
 结果`stopwordsRegex`的格式为“\\b(he|she|the|…)\\b\\s？”。在这个正则表达式中，“\b”指的是一个词的边界，例如，为了避免替换“heat”中的“he”，而“\s？”指零个或一个空格，在替换停用词后删除多余的空格。
 
-## 6。性能比较
+## 6. 性能比较
 
 现在，让我们看看哪种方法的性能最好。
 
-首先，**让我们建立我们的基准**。我们将使用一个相当大的文本文件作为名为`shakespeare-hamlet.txt`的`String` 的源文件:
+首先，**让我们建立基准**。我们将使用一个相当大的文本文件作为名为`shakespeare-hamlet.txt`的`String`的源文件：
 
 ```java
 @Setup
@@ -101,7 +102,7 @@ public void setup() throws IOException {
 }
 ```
 
-然后我们将有我们的基准方法，从`removeManually()`开始:
+然后我们将有基准方法，从`removeManually()`开始：
 
 ```java
 @Benchmark
@@ -118,7 +119,7 @@ public String removeManually() {
 }
 ```
 
-接下来，我们有了`removeAll()`基准测试:
+接下来，我们有了`removeAll()`基准测试：
 
 ```java
 @Benchmark
@@ -131,7 +132,7 @@ public String removeAll() {
 }
 ```
 
-最后，我们将为`replaceRegex()`添加基准:
+最后，我们将为`replaceRegex()`添加基准：
 
 ```java
 @Benchmark
@@ -140,7 +141,7 @@ public String replaceRegex() {
 }
 ```
 
-这是我们基准测试的结果:
+这是我们基准测试的结果：
 
 ```java
 Benchmark                           Mode  Cnt   Score    Error  Units
@@ -151,8 +152,8 @@ replaceRegex                        avgt   60  42.035 ±  1.098  ms/op
 
 似乎使用`Collection.removeAll()`的**执行时间最快，而使用正则表达式的**执行时间最慢。
 
-## 7。结论
+## 7. 结论
 
 在这篇简短的文章中，我们学习了在 Java 中从一个`String`中移除停用词的不同方法。我们还对它们进行了基准测试，看哪种方法的性能最好。
 
-GitHub 上的[提供了示例的完整源代码。](https://web.archive.org/web/20221208143830/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-string-algorithms)
+GitHub 上的[示例的完整源代码](https://web.archive.org/web/20221208143830/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-string-algorithms)已提供。

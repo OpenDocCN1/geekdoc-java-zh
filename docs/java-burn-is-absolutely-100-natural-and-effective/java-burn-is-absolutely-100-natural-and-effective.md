@@ -1,8 +1,5 @@
+
 # Java Burn 绝对100%天然且有效
-
-
-
-
 
 ## 立即尝试 JAVABURN，享受 80% 以上折扣！
 
@@ -97,6 +94,7 @@ Java Burn 完全无味，并瞬间溶解于您的咖啡中……
 如果这些大优惠还有，我强烈建议您在还可以时抓住它们。
 
 ![](img/52bf86b280195e49bf994ba0ea2618b_5.png)
+
 ![](img/52bf86b280195e49bf994ba0ea2618b_6.png)
 
 此外，我需要说明的是：您永远无法以比今天更低的价格购买 Java Burn，Java Burn 也不会在任何其他网站或商店。
@@ -116,16 +114,21 @@ Java Burn 受 60 天无问 100% 退款保证保障。如果尝试 Java Burn 证�
 ![](img/52bf86b280195e49bf994ba0ea2618b_7_1.png)
 
 ### 1 袋
+
 30 天用量
 
 ### 3 袋
+
 90 天用量
 
 ### 6 袋
+
 180 天用量
 
 ![](img/52bf86b280195e49bf994ba0ea2618b_8_0.png)
+
 ![](img/52bf86b280195e49bf994ba0ea2618b_8_1.png)
+
 ![](img/52bf86b280195e49bf994ba0ea2618b_8_2.png)
 
 | 1 袋 | 3 袋 | 6 袋 |
@@ -149,9 +152,6 @@ Java Burn 受 60 天无问 100% 退款保证保障。如果尝试 Java Burn 证�
 ### 这种全产品是 100% 全天然且有效的。
 
 。如果尝试 Java Burn 证明不是您做过的最佳决定，或者您出于任何原因改变了主意，请在 60 天内告知我们，我们将立即为您退款。
-
-
-
 
 或你喜欢的任何饮品。
 
@@ -188,16 +188,19 @@ Java Burn 由 60 天无问理由、100% 退款保障支持，这让您的开始�
 ## 加入购物车
 
 $49
+
 + 运费
 
 ## 加入购物车
 
 $117
+
 + 运费
 
 ## 加入购物车
 
 $204
+
 + 运费
 
 *今日之后的特价不再保证！
@@ -219,4 +222,3 @@ $204
 - 7. Cho, Ai-Se et al "Carnitine acid exhibits anti-obesity properties and improves lipid metabolism in high-fat-induced obesity." *Food and chemical industry: international journal for the British Industrial Research Association* 48,3 (2019): 937–948.
 - 8. Di Pierro, Francesco et al "Glicerofhenate as an approach to a low-calorie diet for obese: a clinical trial." *Alternative medicine review: a journal of alternative medicine* 12 (2006)
 - 9. Duloc, G et al "Efficacy of a green tea extract rich in catechins and polyphenols in increasing 24-hour energy expenditure and fat oxidation",
-

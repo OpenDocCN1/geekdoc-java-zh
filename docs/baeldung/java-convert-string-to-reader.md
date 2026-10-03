@@ -1,4 +1,5 @@
-# Java–字符串到阅读器
+
+## Java–字符串到阅读器
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-convert-string-to-reader>
 
@@ -6,9 +7,9 @@
 
 本文是 Baeldung 网站上的“Java 回归基础”系列文章的一部分。
 
-## 1。用普通 Java
+### 1、用普通 Java
 
-让我们从 Java 解决方案开始:
+让我们从 Java 解决方案开始：
 
 ```java
 @Test
@@ -21,9 +22,9 @@ public void givenUsingPlainJava_whenConvertingStringIntoReader_thenCorrect() thr
 
 如您所见，`StringReader`可用于这种简单的转换。
 
-## 2。有番石榴
+### 2、使用 Guava
 
-接下来——番石榴溶液:
+接下来是 Guava 解决方案：
 
 ```java
 @Test
@@ -36,9 +37,9 @@ public void givenUsingGuava_whenConvertingStringIntoReader_thenCorrect() throws 
 
 我们在这里使用了通用的`CharSource`抽象，允许我们从中打开一个阅读器。
 
-## 3。使用 Apache Commons IO
+### 3、使用 Apache Commons IO
 
-最后，这是 Commons IO 解决方案，也使用了现成的`Reader`实现:
+最后是 Commons IO 解决方案，它也使用了现成的`Reader`实现：
 
 ```java
 @Test
@@ -49,4 +50,4 @@ public void givenUsingCommonsIO_whenConvertingStringIntoReader_thenCorrect() thr
 }
 ```
 
-现在我们有了——**3 种非常简单的方法将一个字符串转换成 Java 中的阅读器。确保在 GitHub 上查看样本[。](https://web.archive.org/web/20221013193920/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-io-conversions)**
+现在我们有了——**3 种非常简单的方法将一个字符串转换成 Java 中的阅读器。** 确保在 GitHub 上查看样本[。](https://web.archive.org/web/20221013193920/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-io-conversions)

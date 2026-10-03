@@ -1,23 +1,24 @@
+
 # JSF 2 数据表示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jsf2/jsf-2-datatable-example/>
 
-在 JSF 中，“ **h:dataTable** ”标签用于以 HTML 表格格式显示数据。下面的 JSF 2.0 示例向您展示了如何使用“ **h:dataTable** ”标记来循环遍历“订单”对象的数组，并以 HTML 表格格式显示它。
+在 JSF 中，`h:dataTable`标签用于以 HTML 表格格式显示数据。下面的 JSF 2.0 示例向您展示了如何使用`h:dataTable`标记来循环遍历“订单”对象的数组，并以 HTML 表格格式显示它。
 
-## 1.项目文件夹
+## 1. 项目文件夹
 
 本例的项目文件夹结构。
 
 ![jsf2-dataTable-folders](img/1cc517ae7c2b203eea9a01f518fe4145.png "jsf2-dataTable-folders")
 
-## 2.受管 bean
+## 2. 受管 bean
 
 一个名为“order”的受管 bean 初始化了数组对象供以后使用。
 
 **OrderBean.java**
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -68,17 +69,17 @@ public class OrderBean implements Serializable{
 
 		//getter and setter methods
 	}
-} 
+}
 ```
 
-## 3.半铸钢ˌ钢性铸铁(Cast Semi-Steel)
+## 3. 半铸钢ˌ钢性铸铁(Cast Semi-Steel)
 
 创建一个 CSS 文件来设置表格布局的样式。
 
 **table-style.css**
 
-```java
- .order-table{   
+```css
+.order-table{   
 	border-collapse:collapse;
 }
 
@@ -99,17 +100,17 @@ public class OrderBean implements Serializable{
 	text-align:center;
 	background:none repeat scroll 0 0 #F9F9F9;
 	border-top:1px solid #BBBBBB;
-} 
+}
 ```
 
-## 4.h:数据表
+## 4. h:dataTable
 
-一个 JSF 2.0 xhtml 页面，展示了如何使用" **h:dataTable** "标签来循环访问" order "对象的数组。这个例子应该是不言自明的。
+一个 JSF 2.0 xhtml 页面，展示了如何使用`h:dataTable`标签来循环访问“order”对象的数组。这个例子应该是不言自明的。
 
 **default.xhtml**
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html    
@@ -155,13 +156,13 @@ public class OrderBean implements Serializable{
     		</h:dataTable>
 
     </h:body>
-</html> 
+</html>
 ```
 
 生成这个 HTML 输出
 
-```java
- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html >
 	<head>
@@ -217,27 +218,28 @@ public class OrderBean implements Serializable{
 	  </tbody> 
 	 </table> 
       </body> 	
-</html> 
+</html>
 ```
 
-## 6.演示
+## 6. 演示
 
-URL:*http://localhost:8080/Java server faces/default . XHTML*
+URL：`http://localhost:8080/JavaServerFaces/default.xhtml`
 
-![jsf2-dataTable-example](img/e73bedcd2f06c19819f848931c8fcafb.png "jsf2-dataTable-example")Download It – [JSF-2-DataTable-Example.zip](http://web.archive.org/web/20190705140941/http://www.mkyong.com/wp-content/uploads/2010/10/JSF-2-DataTable-Example.zip) (11KB)
+![jsf2-dataTable-example](img/e73bedcd2f06c19819f848931c8fcafb.png "jsf2-dataTable-example")
+
+Download It – [JSF-2-DataTable-Example.zip](http://web.archive.org/web/20190705140941/http://www.mkyong.com/wp-content/uploads/2010/10/JSF-2-DataTable-Example.zip) (11KB)
 
 ## 参考
 
-1.  [JSF<h:dataTable/>JavaDoc](http://web.archive.org/web/20190705140941/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/h/dataTable.html)
-2.  [JSF<h:column/>JavaDoc](http://web.archive.org/web/20190705140941/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/h/column.html)
-3.  [JSF<f:facet/>JavaDoc](http://web.archive.org/web/20190705140941/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/f/facet.html)
-4.  [JSF 新协议资源捆绑示例](http://web.archive.org/web/20190705140941/http://www.mkyong.com/jsf2/jsf-2-0-and-resource-bundles-example/)
+1. [JSF `<h:dataTable/>` JavaDoc](http://web.archive.org/web/20190705140941/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/h/dataTable.html)
+2. [JSF `<h:column/>` JavaDoc](http://web.archive.org/web/20190705140941/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/h/column.html)
+3. [JSF `<f:facet/>` JavaDoc](http://web.archive.org/web/20190705140941/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/f/facet.html)
+4. [JSF 新协议资源捆绑示例](http://web.archive.org/web/20190705140941/http://www.mkyong.com/jsf2/jsf-2-0-and-resource-bundles-example/)
 
-[datatable](http://web.archive.org/web/20190705140941/https://www.mkyong.com/tag/datatable/) [jsf2](http://web.archive.org/web/20190705140941/https://www.mkyong.com/tag/jsf2/)![](img/882b4249d91428e327badfd40a48da6e.png) (function (i,d,s,o,m,r,c,l,w,q,y,h,g) { var e=d.getElementById(r);if(e===null){ var t = d.createElement(o); t.src = g; t.id = r; t.setAttribute(m, s);t.async = 1;var n=d.getElementsByTagName(o)[0];n.parentNode.insertBefore(t, n); var dt=new Date().getTime(); try{i[l][w+y](h,i[l][q+y](h)+'&amp;'+dt);}catch(er){i[h]=dt;} } else if(typeof i[c]!=='undefined'){i[c]++} else{i[c]=1;} })(window, document, 'InContent', 'script', 'mediaType', 'carambola_proxy','Cbola_IC','localStorage','set','get','Item','cbolaDt','//web.archive.org/web/20190705140941/https://route.carambo.la/inimage/getlayer?pid=myky82&amp;did=112239&amp;wid=0')<input type="hidden" id="mkyong-postId" value="7363">
+[datatable](http://web.archive.org/web/20190705140941/https://www.mkyong.com/tag/datatable/) [jsf2](http://web.archive.org/web/20190705140941/https://www.mkyong.com/tag/jsf2/)
 
+![](img/882b4249d91428e327badfd40a48da6e.png)
 
+(function (i,d,s,o,m,r,c,l,w,q,y,h,g) { var e=d.getElementById(r);if(e===null){ var t = d.createElement(o); t.src = g; t.id = r; t.setAttribute(m, s);t.async = 1;var n=d.getElementsByTagName(o)[0];n.parentNode.insertBefore(t, n); var dt=new Date().getTime(); try{i[l][w+y](h,i[l][q+y](h)+'&amp;'+dt);}catch(er){i[h]=dt;} } else if(typeof i[c]!=='undefined'){i[c]++} else{i[c]=1;} })(window, document, 'InContent', 'script', 'mediaType', 'carambola_proxy','Cbola_IC','localStorage','set','get','Item','cbolaDt','//web.archive.org/web/20190705140941/https://route.carambo.la/inimage/getlayer?pid=myky82&amp;did=112239&amp;wid=0')
 
-
-
-
-
+<input type="hidden" id="mkyong-postId" value="7363">

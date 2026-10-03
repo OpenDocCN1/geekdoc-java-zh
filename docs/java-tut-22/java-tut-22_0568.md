@@ -1,3 +1,4 @@
+
 # Period 和 Duration
 
 > 原文：[`docs.oracle.com/javase/tutorial/datetime/iso/period.html`](https://docs.oracle.com/javase/tutorial/datetime/iso/period.html)
@@ -20,7 +21,6 @@
 Instant t1, t2;
 ...
 long ns = Duration.between(t1, t2).toNanos();
-
 ```
 
 以下代码将 10 秒添加到一个`Instant`中：
@@ -30,7 +30,6 @@ Instant start;
 ...
 Duration gap = Duration.ofSeconds(10);
 Instant later = start.plus(gap);
-
 ```
 
 一个`Duration`与时间线无关，即它不跟踪时区或夏令时。将相当于 1 天的`Duration`添加到`ZonedDateTime`中，结果将确切地添加 24 小时，而不考虑夏令时或其他可能导致的时间差异。
@@ -51,7 +50,6 @@ if (previous != null) {
     gap = ChronoUnit.MILLIS.between(previous,current);
 }
 ...
-
 ```
 
 ## Period
@@ -71,17 +69,15 @@ long p2 = ChronoUnit.DAYS.between(birthday, today);
 System.out.println("You are " + p.getYears() + " years, " + p.getMonths() +
                    " months, and " + p.getDays() +
                    " days old. (" + p2 + " days total)");
-
 ```
 
 该代码生成类似以下的输出：
 
 ```java
 You are 53 years, 4 months, and 29 days old. (19508 days total)
-
 ```
 
-要计算距离你下一个生日还有多长时间，可以使用来自``Birthday``示例的以下代码。使用`Period`类来确定月和日的值。`ChronoUnit.between`方法返回总天数的值，并显示在括号中。
+要计算距离你下一个生日还有多长时间，可以使用来自`Birthday`示例的以下代码。使用`Period`类来确定月和日的值。`ChronoUnit.between`方法返回总天数的值，并显示在括号中。
 
 ```java
 LocalDate birthday = LocalDate.of(1960, Month.JANUARY, 1);
@@ -98,14 +94,12 @@ long p2 = ChronoUnit.DAYS.between(today, nextBDay);
 System.out.println("There are " + p.getMonths() + " months, and " +
                    p.getDays() + " days until your next birthday. (" +
                    p2 + " total)");
-
 ```
 
 该代码生成类似以下的输出：
 
 ```java
 There are 7 months, and 2 days until your next birthday. (216 total)
-
 ```
 
 这些计算没有考虑时区差异。例如，如果你出生在澳大利亚，但目前居住在班加罗尔，这会稍微影响你确切年龄的计算。在这种情况下，可以结合使用`Period`和`ZonedDateTime`类。当你将`Period`添加到`ZonedDateTime`时，会考虑时差。

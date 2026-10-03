@@ -1,3 +1,4 @@
+
 # 使用 Java 和 Spring Boot 进行登录和注册
 
 > 原文：<https://medium.com/javarevisited/a-simple-user-authentication-api-made-with-spring-boot-4a7135ff1eca?source=collection_archive---------0----------------------->
@@ -8,6 +9,6 @@
 
 学习弹簧靴
 
-# **简介**
+## 简介
 
 如今，开发一个合适的应用程序来做你需要它做的事情比以往任何时候都容易。有成千上万的应用程序开发框架，不管你现在使用什么编程语言…

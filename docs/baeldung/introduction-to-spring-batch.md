@@ -1,8 +1,9 @@
+
 # 春季批次简介
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/introduction-to-spring-batch>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将看一个实用的、以代码为中心的 Spring Batch 介绍。Spring Batch 是一个处理框架，旨在健壮地执行作业。
 
@@ -10,7 +11,7 @@
 
 这里有几个有趣且实用的框架用例。
 
-## 2。工作流程基础知识
+## 2. 工作流程基础知识
 
 Spring Batch 遵循传统的批处理架构，其中作业存储库执行调度工作并与作业交互。
 
@@ -18,13 +19,13 @@ Spring Batch 遵循传统的批处理架构，其中作业存储库执行调度�
 
 当然，框架将在这里为我们做大部分繁重的工作——特别是当涉及到处理作业的低级持久性工作时——使用`sqlite`作为作业存储库。
 
-### 2.1。示例用例
+### 2.1. 示例用例
 
 我们这里要处理的简单用例是将一些金融交易数据从 CSV 迁移到 XML。
 
 输入文件的结构非常简单。
 
-每行包含一笔交易，由用户名、用户 id、交易日期和金额组成:
+每行包含一笔交易，由用户名、用户 id、交易日期和金额组成：
 
 ```java
 username, userid, transaction_date, transaction_amount
@@ -33,9 +34,9 @@ john, 2134, 3/12/2015, 12321
 robin, 2134, 2/02/2015, 23411
 ```
 
-## 3。Maven POM
+## 3. Maven POM
 
-该项目所需的依赖项是弹簧芯、弹簧批次和`sqlite` JDBC 连接器:
+该项目所需的依赖项是弹簧芯、弹簧批次和`sqlite` JDBC 连接器：
 
 ```java
 <!-- SQLite database driver -->
@@ -61,9 +62,9 @@ robin, 2134, 2/02/2015, 23411
 </dependency>
 ```
 
-## 4。春季批量配置
+## 4. 春季批量配置
 
-我们要做的第一件事是用 XML 配置 Spring Batch:
+我们要做的第一件事是用 XML 配置 Spring Batch：
 
 ```java
 <!-- connect to SQLite database -->
@@ -107,7 +108,7 @@ robin, 2134, 2/02/2015, 23411
 </bean>
 ```
 
-当然，Java 配置也是可用的:
+当然，Java 配置也是可用的：
 
 ```java
 @Configuration
@@ -167,9 +168,9 @@ public class SpringConfig {
 }
 ```
 
-## 5。春季批处理作业配置
+## 5. 春季批处理作业配置
 
-现在让我们为 CSV 到 XML 的工作编写工作描述:
+现在让我们为 CSV 到 XML 的工作编写工作描述：
 
 ```java
 <import resource="spring.xml" />
@@ -223,7 +224,13 @@ public class SpringConfig {
 </batch:job>
 ```
 
-下面是类似的基于 Java 的作业配置:
+下面是类似的基于 Java 的作业配置：
+
+
+
+`@Profile("spring")` 注解下的`SpringBatchConfig`类配置了一个完整的Spring Batch作业，包含读取、处理、写入和作业配置。
+
+### Spring配置类
 
 ```java
 @Profile("spring")
@@ -242,15 +249,13 @@ public class SpringBatchConfig {
     private Resource outputXml;
 
     @Bean
-    public ItemReader<Transaction> itemReader()
-      throws UnexpectedInputException, ParseException {
-        FlatFileItemReader<Transaction> reader = new FlatFileItemReader<Transaction>();
+    public ItemReader<Transaction> itemReader() throws UnexpectedInputException, ParseException {
+        FlatFileItemReader<Transaction> reader = new FlatFileItemReader<>();
         DelimitedLineTokenizer tokenizer = new DelimitedLineTokenizer();
         String[] tokens = { "username", "userid", "transactiondate", "amount" };
         tokenizer.setNames(tokens);
         reader.setResource(inputCsv);
-        DefaultLineMapper<Transaction> lineMapper = 
-          new DefaultLineMapper<Transaction>();
+        DefaultLineMapper<Transaction> lineMapper = new DefaultLineMapper<>();
         lineMapper.setLineTokenizer(tokenizer);
         lineMapper.setFieldSetMapper(new RecordFieldSetMapper());
         reader.setLineMapper(lineMapper);
@@ -263,10 +268,8 @@ public class SpringBatchConfig {
     }
 
     @Bean
-    public ItemWriter<Transaction> itemWriter(Marshaller marshaller)
-      throws MalformedURLException {
-        StaxEventItemWriter<Transaction> itemWriter = 
-          new StaxEventItemWriter<Transaction>();
+    public ItemWriter<Transaction> itemWriter(Marshaller marshaller) throws MalformedURLException {
+        StaxEventItemWriter<Transaction> itemWriter = new StaxEventItemWriter<>();
         itemWriter.setMarshaller(marshaller);
         itemWriter.setRootTagName("transactionRecord");
         itemWriter.setResource(outputXml);
@@ -281,11 +284,10 @@ public class SpringBatchConfig {
     }
 
     @Bean
-    protected Step step1(ItemReader<Transaction> reader,
-      ItemProcessor<Transaction, Transaction> processor,
-      ItemWriter<Transaction> writer) {
+    protected Step step1(ItemReader<Transaction> reader, ItemProcessor<Transaction, Transaction> processor,
+            ItemWriter<Transaction> writer) {
         return steps.get("step1").<Transaction, Transaction> chunk(10)
-          .reader(reader).processor(processor).writer(writer).build();
+                .reader(reader).processor(processor).writer(writer).build();
     }
 
     @Bean(name = "firstBatchJob")
@@ -295,11 +297,9 @@ public class SpringBatchConfig {
 }
 ```
 
-现在我们有了完整的配置，让我们把它分解并开始讨论。
+### 5.1 用`ItemReader`读取数据和创建对象
 
-### 5.1。用`ItemReader` 读取数据和创建对象
-
-首先，我们配置了从`record.csv`中读取数据并将其转换成`Transaction`对象的`cvsFileItemReader`:
+首先，我们配置了从`record.csv`中读取数据并将其转换成`Transaction`对象的`cvsFileItemReader`。
 
 ```java
 @SuppressWarnings("restriction")
@@ -315,13 +315,12 @@ public class Transaction {
     @Override
     public String toString() {
         return "Transaction [username=" + username + ", userId=" + userId
-          + ", transactionDate=" + transactionDate + ", amount=" + amount
-          + "]";
+                + ", transactionDate=" + transactionDate + ", amount=" + amount + "]";
     }
 }
 ```
 
-为此，它使用自定义映射器:
+为此，它使用自定义映射器：
 
 ```java
 public class RecordFieldSetMapper implements FieldSetMapper<Transaction> {
@@ -340,11 +339,11 @@ public class RecordFieldSetMapper implements FieldSetMapper<Transaction> {
 }
 ```
 
-### 5.2。用`ItemProcessor` 处理数据
+### 5.2 用`ItemProcessor`处理数据
 
 我们已经创建了自己的项目处理器`CustomItemProcessor`。这不处理任何与事务对象相关的事情。
 
-它所做的只是将来自阅读器的原始对象传递给编写器:
+它所做的只是将来自阅读器的原始对象传递给编写器：
 
 ```java
 public class CustomItemProcessor implements ItemProcessor<Transaction, Transaction> {
@@ -355,11 +354,11 @@ public class CustomItemProcessor implements ItemProcessor<Transaction, Transacti
 }
 ```
 
-### 5.3。用`ItemWriter` 向 FS 中写入对象
+### 5.3 用`ItemWriter`向FS中写入对象
 
-最后，我们将把这个`transaction`存储到位于`xml/output.xml`的 XML 文件中:
+最后，我们将把这个`transaction`存储到位于`xml/output.xml`的XML文件中：
 
-```java
+```xml
 <bean id="itemWriter"
   class="org.springframework.batch.item.xml.StaxEventItemWriter">
     <property name="resource" value="file:xml/output.xml" />
@@ -368,15 +367,15 @@ public class CustomItemProcessor implements ItemProcessor<Transaction, Transacti
 </bean>
 ```
 
-### 5.4。配置批处理作业
+### 5.4 配置批处理作业
 
-因此，我们所要做的就是使用`batch:job` 语法将这些点与作业联系起来。
+因此，我们所要做的就是使用`batch:job`语法将这些点与作业联系起来。
 
 注意`commit-interval`。这是在将批处理提交给`itemWriter`之前要保存在内存中的事务数量。
 
-它会将事务保存在内存中，直到该点(或者直到遇到输入数据的结尾):
+它会将事务保存在内存中，直到该点（或者直到遇到输入数据的结尾）：
 
-```java
+```xml
 <batch:job id="firstBatchJob">
     <batch:step id="step1">
         <batch:tasklet>
@@ -388,9 +387,9 @@ public class CustomItemProcessor implements ItemProcessor<Transaction, Transacti
 </batch:job>
 ```
 
-### 5.5。运行批处理作业
+### 5.5 运行批处理作业
 
-现在让我们设置并运行一切:
+现在让我们设置并运行一切：
 
 ```java
 @Profile("spring")
@@ -417,28 +416,28 @@ public class App {
 }
 ```
 
-我们使用`-Dspring.profiles.active=spring` profile 运行我们的 Spring 应用程序。
+我们使用`-Dspring.profiles.active=spring`配置来运行我们的Spring应用程序。
 
-在下一节中，我们将在一个 Spring Boot 应用程序中配置我们的示例。
+在下一节中，我们将在一个Spring Boot应用程序中配置我们的示例。
 
-## 6。Spring Boot 配置
+## 6 Spring Boot配置
 
-在这一节中，我们将创建一个 Spring Boot 应用程序，并将之前的 Spring 批处理配置转换为在 Spring Boot 环境中运行。实际上，这大致相当于前面的春批示例。
+在这一节中，我们将创建一个Spring Boot应用程序，并将之前的Spring批处理配置转换为在Spring Boot环境中运行。实际上，这大致相当于前面的Spring批处理示例。
 
-### 6.1。Maven 依赖关系
+### 6.1 Maven依赖关系
 
-让我们从在 Spring Boot 应用程序的`pom.xml`中声明 [`spring-boot-starter-batch`](https://web.archive.org/web/20221118053208/https://search.maven.org/search?q=g:org.springframework.boot%20a:spring-boot-starter-batch) 依赖关系开始:
+让我们从在Spring Boot应用程序的`pom.xml`中声明[`spring-boot-starter-batch`](https://web.archive.org/web/20221118053208/https://search.maven.org/search?q=g:org.springframework.boot%20a:spring-boot-starter-batch)依赖关系开始：
 
-```java
+```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-batch</artifactId>
 </dependency>
 ```
 
-**我们需要一个数据库来存储春季批量作业信息**。在本教程中，我们使用一个内存中的 [HSQLDB](/web/20221118053208/https://www.baeldung.com/spring-boot-hsqldb) 数据库。因此，我们需要用 [`hsqldb`](https://web.archive.org/web/20221118053208/https://search.maven.org/search?q=g:org.hsqldb%20AND%20a:hsqldb) 搭配 Spring Boot:
+**我们需要一个数据库来存储Spring批量作业信息**。在本教程中，我们使用一个内存中的[HSQLDB](/web/20221118053208/https://www.baeldung.com/spring-boot-hsqldb)数据库。因此，我们需要用[`hsqldb`](https://web.archive.org/web/20221118053208/https://search.maven.org/search?q=g:org.hsqldb%20AND%20a:hsqldb)搭配Spring Boot：
 
-```java
+```xml
 <dependency>
     <groupId>org.hsqldb</groupId>
     <artifactId>hsqldb</artifactId>
@@ -447,9 +446,9 @@ public class App {
 </dependency>
 ```
 
-### 6.2。Spring Boot 配置
+### 6.2 Spring Boot配置
 
-我们使用 [`@Profile`](/web/20221118053208/https://www.baeldung.com/spring-profiles) 注释来区分弹簧和 Spring Boot 配置。我们在应用程序中设置了`spring-boot`配置文件:
+我们使用[`@Profile`](/web/20221118053208/https://www.baeldung.com/spring-profiles)注解来区分Spring和Spring Boot配置。我们在应用程序中设置了`spring-boot`配置文件：
 
 ```java
 @SpringBootApplication
@@ -464,9 +463,9 @@ public class SpringBatchApplication {
 }
 ```
 
-### 6.3。春季批处理作业配置
+### 6.3 Spring批处理作业配置
 
-我们使用与前面的`SpringBatchConfig`类相同的批处理作业配置:
+我们使用与前面的`SpringBatchConfig`类相同的批处理作业配置：
 
 ```java
 @Configuration
@@ -492,12 +491,12 @@ public class SpringBootBatchConfig {
 }
 ```
 
-我们从一个 Spring `@Configuration`注释开始。然后，我们将`@EnableBatchProcessing`注释添加到类中。**`@EnableBatchProcessing`注释自动创建`dataSource` 对象并将其提供给我们的作业**。
+我们从一个Spring `@Configuration`注解开始。然后，我们将`@EnableBatchProcessing`注解添加到类中。**`@EnableBatchProcessing`注解自动创建`dataSource`对象并将其提供给我们的作业**。
 
-## 7 .**。结论**
+## 7 结论
 
-在本文中，我们学习了如何使用 Spring Batch 以及如何在一个简单的用例中使用它。
+在本文中，我们学习了如何使用Spring Batch以及如何在一个简单的用例中使用它。
 
 我们看到了如何轻松开发批处理管道，以及如何定制读取、处理和写入的不同阶段。
 
-一如既往，本文的完整实现可以在 GitHub 上的[中找到。](https://web.archive.org/web/20221118053208/https://github.com/eugenp/tutorials/tree/master/spring-batch)
+一如既往，本文的完整实现可以在GitHub上找到[。](https://web.archive.org/web/20221118053208/https://github.com/eugenp/tutorials/tree/master/spring-batch)

@@ -1,15 +1,16 @@
+
 # Wicket 选择示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/wicket/wicket-select-example/>
 
-Wicket 扩展附带了一个“`Select`”类，用于呈现一个下拉框组件，该组件能够用< optgroup >标签对相关选项进行**分组。**
+Wicket 扩展附带了一个“`Select`”类，用于呈现一个下拉框组件，该组件能够用 `<optgroup>` 标签对相关选项进行**分组**。
 
-*图:<下拉框*中的>选项组
+*图：下拉框中的选项组*
 
 ![wicket select example](img/5ffb756d7d8e867975b9cee31f7232b0.png "wicket-select-example1")
 
 ```java
- //Java 
+//Java
 import org.apache.wicket.extensions.markup.html.form.select.Select;
 import org.apache.wicket.extensions.markup.html.form.select.SelectOption;
 ...
@@ -36,17 +37,17 @@ import org.apache.wicket.extensions.markup.html.form.select.SelectOption;
 		<option wicket:id="Script1" >jQuery (1.6.1)</option>
 		<option wicket:id="Script2" >prototype (1.7)</option>
 	</optgroup>
-</select> 
+</select>
 ```
 
-##  ## 1。Wicket Extension 
+## 1. Wicket Extension
 
-要使用“`Select`”标签，您需要获得“**wicket-extensions**jar。
+要使用“`Select`”标签，您需要获得“`wicket-extensions`”jar。
 
-文件:pom.xml
+文件：`pom.xml`
 
-```java
- <project ...>
+```xml
+<project ...>
 
 	<dependencies>
 
@@ -71,15 +72,15 @@ import org.apache.wicket.extensions.markup.html.form.select.SelectOption;
 
 	</dependencies>
 
-</project> 
+</project>
 ```
 
- ## 2.Wicket 选择示例
+## 2. Wicket 选择示例
 
-显示下拉框的示例，使用 **< optgroup >** 标签，通过“`Select`”和“`SelectOption`”标签对相关选项进行分组。
+显示下拉框的示例，使用 `<optgroup>` 标签，通过“`Select`”和“`SelectOption`”标签对相关选项进行分组。
 
 ```java
- import org.apache.wicket.PageParameters;
+import org.apache.wicket.PageParameters;
 import org.apache.wicket.extensions.markup.html.form.select.Select;
 import org.apache.wicket.extensions.markup.html.form.select.SelectOption;
 import org.apache.wicket.markup.html.form.Form;
@@ -123,15 +124,15 @@ public class SelectPage extends WebPage {
 				"prototype")));
 
 	}
-} 
+}
 ```
 
-## 3.Wicket HTML 页面
+## 3. Wicket HTML 页面
 
 匹配上述 Wicket 代码的 HTML 代码。
 
-```java
- <html>
+```html
+<html>
 <head>
 <style>
 .feedbackPanelINFO {
@@ -165,12 +166,12 @@ public class SelectPage extends WebPage {
 	</form>
 
 </body>
-</html> 
+</html>
 ```
 
-## 4.演示
+## 4. 演示
 
-开始并访问—*http://localhost:8080/wicket examples/*
+开始并访问 — `http://localhost:8080/wicket examples/`
 
 默认情况下选择“jQuery”。
 
@@ -178,19 +179,14 @@ public class SelectPage extends WebPage {
 
 选择“Spring MVC”并点击显示按钮。
 
-![wicket select example](img/ff4ae1a3ab2d6a8a021dad195931f484.png "wicket-select-example2")Download it – [Wicket-Select-Example.zip](http://web.archive.org/web/20190202032227/http://www.mkyong.com/wp-content/uploads/2011/05/Wicket-Select-Example.zip) (7KB)
+![wicket select example](img/ff4ae1a3ab2d6a8a021dad195931f484.png "wicket-select-example2")
+
+下载 — [Wicket-Select-Example.zip](http://web.archive.org/web/20190202032227/http://www.mkyong.com/wp-content/uploads/2011/05/Wicket-Select-Example.zip) (7KB)
 
 ## 参考
 
-1.  [Wicket Select Javadoc](http://web.archive.org/web/20190202032227/http://wicket.apache.org/apidocs/1.4/org/apache/wicket/extensions/markup/html/form/select/Select.html)
-2.  [Wicket select option Javadoc](http://web.archive.org/web/20190202032227/http://wicket.apache.org/apidocs/1.4/org/apache/wicket/extensions/markup/html/form/select/SelectOption.html)
-3.  [HTML optgroup 标签](http://web.archive.org/web/20190202032227/http://www.w3schools.com/tags/tag_optgroup.asp)
+1. [Wicket Select Javadoc](http://web.archive.org/web/20190202032227/http://wicket.apache.org/apidocs/1.4/org/apache/wicket/extensions/markup/html/form/select/Select.html)
+2. [Wicket select option Javadoc](http://web.archive.org/web/20190202032227/http://wicket.apache.org/apidocs/1.4/org/apache/wicket/extensions/markup/html/form/select/SelectOption.html)
+3. [HTML optgroup 标签](http://web.archive.org/web/20190202032227/http://www.w3schools.com/tags/tag_optgroup.asp)
 
-[wicket](http://web.archive.org/web/20190202032227/http://www.mkyong.com/tag/wicket/)![](img/9e519e48c42a1fb7372c36c8642924ba.png) (function (i,d,s,o,m,r,c,l,w,q,y,h,g) { var e=d.getElementById(r);if(e===null){ var t = d.createElement(o); t.src = g; t.id = r; t.setAttribute(m, s);t.async = 1;var n=d.getElementsByTagName(o)[0];n.parentNode.insertBefore(t, n); var dt=new Date().getTime(); try{i[l][w+y](h,i[l][q+y](h)+'&amp;'+dt);}catch(er){i[h]=dt;} } else if(typeof i[c]!=='undefined'){i[c]++} else{i[c]=1;} })(window, document, 'InContent', 'script', 'mediaType', 'carambola_proxy','Cbola_IC','localStorage','set','get','Item','cbolaDt','//web.archive.org/web/20190202032227/http://route.carambo.la/inimage/getlayer?pid=myky82&amp;did=112239&amp;wid=0')<input type="hidden" id="mkyong-postId" value="9067">
-
-
-
-
-
-
-
+[wicket](http://web.archive.org/web/20190202032227/http://www.mkyong.com/tag/wicket/)

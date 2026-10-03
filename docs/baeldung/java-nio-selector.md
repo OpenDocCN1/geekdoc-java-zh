@@ -1,8 +1,9 @@
+
 # Java NIO 选择器简介
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-nio-selector>
 
-## 1。概述
+## 1. 概述
 
 在本文中，我们将探索 Java NIO 的`Selector`组件的介绍部分。
 
@@ -10,7 +11,7 @@
 
 这样，**单个线程可以用于管理多个通道**，从而管理多个网络连接。
 
-## 2。为什么要使用选择器？
+## 2. 为什么要使用选择器
 
 有了选择器，我们可以用一个线程而不是几个来管理多个通道。**线程间的上下文切换对于操作系统**来说开销很大，另外，**每个线程都要占用内存。**
 
@@ -20,7 +21,7 @@
 
 还要注意，选择器不仅仅帮助你读取数据；它们还可以侦听传入的网络连接，并通过慢速通道写入数据。
 
-## 3。设置
+## 3. 设置
 
 要使用选择器，我们不需要任何特殊的设置。我们需要的所有类都在核心`java.nio`包中，我们只需要导入我们需要的。
 
@@ -28,7 +29,7 @@
 
 我们用选择器注册的任何通道都必须是`SelectableChannel`的子类。这些是可以被置于非阻塞模式的特殊类型的通道。
 
-## 4。创建选择器
+## 4. 创建选择器
 
 可以通过调用`Selector` 类的静态`open` 方法来创建选择器，该方法将使用系统的默认选择器提供程序来创建新的选择器:
 
@@ -36,7 +37,7 @@
 Selector selector = Selector.open();
 ```
 
-## 5。注册可选频道
+## 5. 注册可选频道
 
 为了让选择器监控任何通道，我们必须向选择器注册这些通道。我们通过调用可选通道的`register`方法来实现这一点。
 
@@ -60,13 +61,13 @@ SelectionKey key = channel.register(selector, SelectionKey.OP_READ);
 
 返回的对象`SelectionKey`代表可选通道在选择器中的注册。我们将在下一节中进一步研究它。
 
-## 6。`SelectionKey`对象
+## 6. `SelectionKey`对象
 
 正如我们在上一节中看到的，当我们用选择器注册一个通道时，我们得到一个`SelectionKey`对象。该对象保存表示通道注册的数据。
 
 它包含一些重要的属性，我们必须很好地理解这些属性才能在通道上使用选择器。我们将在下面的小节中研究这些属性。
 
-### 6.1。利息设定
+### 6.1. 利息设定
 
 兴趣集定义了我们希望选择器在这个通道上关注的事件集。它是一个整数值；我们可以用下面的方法得到这个信息。
 
@@ -83,13 +84,13 @@ boolean isInterestedInRead    = interestSet & SelectionKey.OP_READ;
 boolean isInterestedInWrite   = interestSet & SelectionKey.OP_WRITE;
 ```
 
-### 6.2。就绪设定
+### 6.2. 就绪设定
 
 就绪集定义了通道准备好的事件集。它也是一个整数值；我们可以用下面的方法得到这个信息。
 
 我们已经得到了由`SelectionKey`的`readyOps`方法返回的就绪集合。当我们将该值与事件常量进行 AND 运算时，就像我们在兴趣集的情况下所做的那样，我们会得到一个布尔值，表示通道是否准备好接受某个特定值。
 
-另一个更简单的替代方法是使用`SelectionKey'`的便利方法来达到同样的目的:
+另一个更简单的替代方法是使用`SelectionKey`的便利方法来达到同样的目的:
 
 ```java
 selectionKey.isAcceptable();
@@ -98,7 +99,7 @@ selectionKey.isReadable();
 selectionKey.isWriteable();
 ```
 
-### 6.3。频道
+### 6.3. 频道
 
 从`SelectionKey`对象访问正在观看的频道非常简单。我们只是调用了`channel`方法:
 
@@ -106,7 +107,7 @@ selectionKey.isWriteable();
 Channel channel = key.channel();
 ```
 
-### 6.4。选择器
+### 6.4. 选择器
 
 就像获取通道一样，从`SelectionKey`对象中获取`Selector`对象非常容易:
 
@@ -114,9 +115,9 @@ Channel channel = key.channel();
 Selector selector = key.selector();
 ```
 
-### 6.5。附着物体
+### 6.5. 附着物体
 
-我们可以将一个对象附加到一个`SelectionKey.` 上，有时我们可能想要给一个通道一个自定义 ID，或者附加我们想要跟踪的任何种类的 Java 对象。
+我们可以将一个对象附加到一个`SelectionKey`上。有时我们可能想要给一个通道一个自定义 ID，或者附加我们想要跟踪的任何种类的 Java 对象。
 
 附加对象是一种简便的方法。下面是如何从`SelectionKey`中附加和获取对象:
 
@@ -133,7 +134,7 @@ SelectionKey key = channel.register(
   selector, SelectionKey.OP_ACCEPT, object);
 ```
 
-## 7。频道键选择
+## 7. 频道键选择
 
 到目前为止，我们已经了解了如何创建一个选择器，向它注册通道，并检查代表通道向选择器注册的`SelectionKey`对象的属性。
 
@@ -157,7 +158,7 @@ Set<SelectionKey> selectedKeys = selector.selectedKeys();
 
 在一个通道的生命周期中，它可能被选择多次，因为它的键出现在不同事件的就绪集中。这就是为什么我们必须有一个连续的循环来捕获和处理发生的通道事件。
 
-## 8。完整示例
+## 8. 完整示例
 
 为了巩固我们在前面几节中获得的知识，我们将构建一个完整的客户机-服务器示例。
 
@@ -165,7 +166,7 @@ Set<SelectionKey> selectedKeys = selector.selectedKeys();
 
 当服务器遇到特定的消息，比如`end`，它会将其解释为通信结束，并关闭与客户端的连接。
 
-### 8.1。服务器
+### 8.1. 服务器
 
 这是我们的`EchoServer.java`代码:
 
@@ -265,9 +266,11 @@ Java NIO 使用面向缓冲区的模型，而不是面向流的模型。所以�
 
 定义了 `start()`方法，以便 echo 服务器可以在单元测试期间作为一个单独的进程启动。
 
-### 8.2。客户端
+### 8.2. 客户端
 
 这是我们的`EchoClient.java`代码:
+
+
 
 ```java
 public class EchoClient {
@@ -327,11 +330,11 @@ public class EchoClient {
 
 然后，我们从客户端通道读取，以获取服务器发送的消息。我们将此作为我们信息的回应。
 
-### 8.3。测试
+### 8.3. 测试
 
 在一个名为`EchoTest.java`的类中，我们将创建一个测试用例，它启动服务器，向服务器发送消息，只有当从服务器收到相同的消息时才通过。作为最后一步，测试用例在完成之前停止服务器。
 
-我们现在可以运行测试:
+我们现在可以运行测试：
 
 ```java
 public class EchoTest {
@@ -361,13 +364,13 @@ public class EchoTest {
 }
 ```
 
-## 9.`Selector.wakeup()`
+## 9. `Selector.wakeup()`
 
 正如我们前面看到的，调用`selector.select()`会阻塞当前线程，直到其中一个被监视的通道准备好运行。我们可以通过从另一个线程调用`selector.wakeup()`来覆盖它。
 
-结果是**阻塞线程立即返回，而不是继续等待，无论通道是否准备就绪**。
+结果是阻塞线程立即返回，而不是继续等待，无论通道是否准备就绪。
 
-我们可以使用`[CountDownLatch](/web/20220922104547/https://www.baeldung.com/java-countdown-latch)`并跟踪代码执行步骤来演示这一点:
+我们可以使用`CountDownLatch`并跟踪代码执行步骤来演示这一点：
 
 ```java
 @Test
@@ -417,7 +420,7 @@ public void whenWakeUpCalledOnSelector_thenBlockedThreadReturns() {
 
 在这个例子中，我们使用 Java NIO 的`Pipe`类打开一个通道进行测试。我们在线程安全列表中跟踪代码执行步骤。通过分析这些步骤，我们可以看到`selector.wakeup()`是如何释放被`selector.select()`阻塞的线程的。
 
-## 10。结论
+## 10. 结论
 
 在本文中，我们介绍了 Java NIO 选择器组件的基本用法。
 

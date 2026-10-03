@@ -1,35 +1,30 @@
+
 # Java 泛型与集合
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 献给
 
 我亲爱的父母
+
 已故 Nand Kishore 和 Smt Kamlesh Kiran，以及我的丈夫 Pradeep 和我的孩子们 Suryansh 和 Purvashi
+
 -Meenu Jaiswal
 
 我的父母，在他们的指导和支持下，我建立了自己的道路
+
 已故 Ramesh Gupta 和 Smt Kiran Gupta，以及我的妻子和儿子，是我力量和快乐的最大来源
+
 -Sunil Gupta
 
 ## 作者简介
 
 *   Meenu Jaiswal 是 Java 开发人员，在软件行业拥有超过 13 年的经验，曾对多个领域的众多项目做出贡献。她的热情在于开发和教育。她是一位 Oracle 认证关联 Java 程序员，并持有来自 IIT 鲁尔基理工学院的全栈工程师认证。她提供侧重于实践和现实应用的高级 Java 培训课程，并在 LinkedIn 上分享关于 Java、后端编程和新技术的见解。她的专业知识涵盖高级 Java、`Spring`、`Spring Boot` 和微服务，她利用这些技术来帮助开发者构建扩展且高效的解决方案。
+
 *   Sunil Gupta 是一位架构师和软件开发人员，在应用设计和开发方面拥有 30 年以上的经验。他专长面向服务的架构 (`SOA`) 和设计模式。凭借 25 年 `Java` 编程专业知识，他在金融科技、分析、营销、机器人技术和 `CAD/CAM` 等多个领域开发了创新的解决方案。他的经验涵盖了初创公司和大型企业，他将深厚的技术知识与战略方法相结合，创造具有影响力的高性能产品。
 
 ## 审稿人简介
 
-*   Roopa Sunder Raj 是一位练的企业级软件工程师和系统架构师，在设计可扩展、云原生和安全的解决方案解决方案方面拥有坚实的基础，关注现实性能和业务影响。她的技术专业知识涵盖系统架构，包括微服务、事件驱动系统 (`Kafka`) 和遗留系统现代化；云和 DevOps，精通 `AWS`、`CI/CD` 流水、`Kubernetes` 编排和各种部署策略；集成和 API，涵盖 `REST`、`SOAP`、服务编排和异步消息传递；以及核心技术如 `Java/J2EE`、`Oracle SQL` 和 `WebLogic`。她还擅长安全和合规，具备安全编码和基于 `OAuth` 的身份验证/授权的知识，以及 `AI/ML` 在企业和中小型电信领域的实际应用。她的经验还包括 `OSS/BSS`，涵盖端到端电信系统、服务生命周期自动化和 `TM Forum` 标准。她曾在 Charter Communications 和 Oracle 公司领导过重大转型计划，包括国际顾问角色，例如为澳大利亚的大量移动订单优化电信基础设施。她的领导工作涵盖了架构审查、数据备份和存储策略，以及跨越全球分布的工程团队的跨功能解决方案验证。作为技术多样性的倡导者，她也是国家多族通信协会（铂牌会员）的活跃成员。
+*   Roopa Sunder Raj 是一位资深的企业级软件工程师和系统架构师，在设计可扩展、云原生和安全的解决方案方面拥有坚实的基础，关注现实性能和业务影响。她的技术专业知识涵盖系统架构，包括微服务、事件驱动系统 (`Kafka`) 和遗留系统现代化；云和 DevOps，精通 `AWS`、`CI/CD` 流水线、`Kubernetes` 编排和各种部署策略；集成和 API，涵盖 `REST`、`SOAP`、服务编排和异步消息传递；以及核心技术如 `Java/J2EE`、`Oracle SQL` 和 `WebLogic`。她还擅长安全和合规，具备安全编码和基于 `OAuth` 的身份验证/授权的知识，以及 `AI/ML` 在企业和中小型电信领域的实际应用。她的经验还包括 `OSS/BSS`，涵盖端到端电信系统、服务生命周期自动化和 `TM Forum` 标准。她曾在 Charter Communications 和 Oracle 公司领导过重大转型计划，包括国际顾问角色，例如为澳大利亚的大量移动订单优化电信基础设施。她的领导工作涵盖了架构审查、数据备份和存储策略，以及跨越全球分布的工程团队的跨功能解决方案验证。作为技术多样性的倡导者，她也是国家多族通信协会（铂牌会员）的活跃成员。
+
 *   Kavita Bora 是一位熟练的软件工程师，在 `Java` 开发、`Spring Boot`、`Spring Cloud` 和微服务方面拥有 8.5 年经验。她致力于交付高质量的代码，并在 `MySQL` 和 `PostgreSQL` 数据库管理方面具有深厚造诣。她专注于自动化、API 领域以及通过创新的解决方案以满足客户期望。
 
 ## 致谢
@@ -46,12 +41,7 @@ Sunil Gupta：我对我的父母表示最深切的感谢，他们的坚定支持
 
 ## 前言
 
-
-
-
-
-
-本节将探索如何限制泛型`generics` 中使用的类型。我们将涵盖上界、下界和通配符，向你展示如何构建更灵活、安全的代码以便在编译时防止意外错误。
+本节将探索如何限制泛型 `generics` 中使用的类型。我们将涵盖上界、下界和通配符，向你展示如何构建更灵活、安全的代码以便在编译时防止意外错误。
 
 本章桥接了泛型与集合框架（Collections Framework）之间的差距，详细介绍了如何将泛型应用于 `List<String>`、`Set<Integer>` 和 `Map<String, User>` 等日常数据结构中。我们将探索这如何让你的集合管理变得更加安全且易于阅读。
 
@@ -71,59 +61,51 @@ Sunil Gupta：我对我的父母表示最深切的感谢，他们的坚定支持
 
 本书以对关键概念的总结以及对 Java 未来发展的探索作为结束。我们将查看最近的进展和未来趋势，帮助你保持领先。
 
-
 请点击链接下载书籍的代码包（`Code Bundle`）和彩色图片（`Coloured Images`）：
 
 [`rebrand.ly/091a3a`](https://rebrand.ly/091a3a)
 
 书籍的代码也托管在 GitHub 上：[`github.com/bpbpublications/Java-Generics-and-Collections`](https://github.com/bpbpublications/Java-Generics-and-Collections)。如果代码有更新，将在现有的 GitHub 仓库中进行更新。
 
-
 我们对 BPB Publications 的工作非常自豪，并遵循最佳实践以确保准确性。非常感谢您的反馈。
-
-
 
 本章介绍了 Java 中的泛型概念，这一特性通过在编译时强制检查来增强类型安全，减少运行时错误并提高可读性。我们首先从开发中对泛型的需求开始。我们还将探索编程接口（API）。
 
-
 本章涵盖了以下主题：
-* 构造函数
 
+*   构造函数
 
 在本章结束时，你将清晰理解在 Java 中使用泛型的目的和好处。你将学习泛型的基础语法和核心概念，使你能够自信地将其应用于实际场景。此外，本章最后有一组练习题来测试你的理解情况。
 
-
 Java 泛型于 2004 年作为 Java 开发工具包 5（`JDK5`）的一部分引入，旨在使代码更安全且更容易复用。它们提供了一种机制，可以创建与不同类型工作的类、方法和接口，而无需每次都重写代码。
-
 
 ### 背景
 
 泛型旨在解决旧代码中需要大量手动类型检查（强制转换）的局限性，特别是集合部分。
+
 在泛型之前，Java 开发者必须使用原始类型（raw types），这允许集合存储任何对象类型。这种方法在开发者无意中向集合添加不兼容类型时会导致运行时错误。例如，向整数集合中添加字符串只会在运行时访问值时才会导致错误，引发 `ClassCastException` 并潜在的程序故障。
 
 以下是不使用泛型的示例：
 
-```
+```java
 List listWithoutGenerics = new ArrayList();
 Integer number = (Integer) listWithoutGenerics.get(0); // 运行时错误
 ```
 
 以下是使用泛型的示例：
-```
+
+```java
 List<String> stringList = new ArrayList<>();
 stringList.add("A String");
 // Integer number = (Integer) stringList.get(0); // 编译时错误
 String text = stringList.get(0); // 编译时安全性无需强制转换
-
-
-
-
-
+```
 
 在泛型出现之前，开发者通常需要为不同的数据类型创建同一类或接口的不同版本，这导致了所谓的接口或类爆炸。例如，为了以类型安全的方式处理类型，可能会创建：
 
 ```java
 class ListOfIntegers implements List { ... }
+
 class MapOfStringToInteger implements Map { ... }
 ```
 
@@ -132,6 +114,7 @@ class MapOfStringToInteger implements Map { ... }
 
 以下是一个示例：
 
+```java
 public class CommonBox<T> {
     private T commonItem;
 
@@ -142,34 +125,37 @@ public class CommonBox<T> {
         return commonItem;
     }
 }
+```
 
 `CommonBox` 类可以用于创建不同数据类型的类。
 
 例如，创建一个 `Integer` 类型的 `CommonBox`：
 
+```java
 CommonBox<Integer> intBox = new CommonBox<>();
 intBox.setItem(123);
 ```
-
 
 ```java
 CommonBox<String> strBox = new CommonBox<>();
 strBox.setItem("Hello");
 ```
 
-
 泛型消除了手动类型转换的需求，这种转换可能会在程序执行期间导致错误。通过提前指定类型，泛型在编译时强制类型安全，防止了这些运行时错误。
 
 以下是不使用泛型的示例：
 
+```java
 List commonList = new ArrayList();
+
 commonList.add("Hello");
+
 String text = (String) commonList.get(0); // 需要显式转换
 ```
 
-
 ```java
 List<String> stringList = new ArrayList<>();
+
 stringList.add("Hello");
 ```
 
@@ -180,15 +166,19 @@ stringList.add("Hello");
 
 ```java
 List commonList = new ArrayList();
+
 commonList.add(123); // 添加了一个整数，这可能并非本意
 
 for (Object obj : commonList) {
+
     String str = (String) obj; // 需要转换，容易产生运行时错误
+
 }
 ```
 
 以下是使用泛型的示例：
 
+```java
 List<String> stringList = new ArrayList<>();
 stringList.add("Hello");
 // stringList.add(123); // 编译错误，防止添加不兼容的数据
@@ -198,10 +188,10 @@ for (String str : stringList) {
 
 显而易见，列表只能包含字符串对象，提高了可读性并减少了困惑。
 
-
 泛型可以通过避免运行时不必要的转换和类型检查来带来性能提升。这导致了更快的执行，特别是在频繁类型操作的场景下。
 
 > 注意：这在官方 Java 文档中并未得到正式确认或明确声明，关于这些性能收益的程度可能仍存在争议。
+
 以下是不使用泛型的示例：
 
 ```java
@@ -211,37 +201,43 @@ String str = (String) commonList.get(0); // 在运行时发生转换
 
 以下是使用泛型的示例：
 
+```java
 List<String> stringList = new ArrayList<>();
+
 stringList.add("Hello");
+
 String str = stringList.get(0); // 不需要转换，类型在编译时已知
 ```
-
 
 ## 向后兼容
 
 泛型的设计考虑了向后兼容性，确保现有的非泛型代码和库保持功能，同时允许开发者逐步采用泛型。
 
-
 ```java
 List commonList = new ArrayList();
+
 commonList.add("Hello");
+
 commonList.add(123); 
+
     String str = (String) obj; 
+
     System.out.println(str);
+
 }
 ```
-
 
 ```java
 List<String> stringList = new ArrayList<>();
+
 stringList.add("Hello");
+
 // stringList.add(123); 
+
 for (String str : stringList) {
+
 }
 ```
-
-
-
 
 *   `stringInstance.setTemplateValue("Hello, Generics!")`: 这将 `stringInstance` 的值设置为 `String`。这是因为 `stringInstance` 的类型是 `TemplateClass<String>`，编译器确保只有 `String` 类型的值可以传递给 `setTemplateValue`。
 *   `System.out.println(stringInstance.getTemplateValue())`: 这获取了 `stringInstance` 的值，该值被保证是 `String`。不需要显式的类型转换。
@@ -251,16 +247,17 @@ for (String str : stringList) {
 
 在这里，`T` 被替换为 `Integer`，因此 `intInstance` 只能持有 `Integer` 类型的值。
 
-
 泛型方法允许你在方法的作用域内使用类型参数，使方法能够处理不同的数据类型，而无需为每种类型编写单独的实现。这对于操作集合或执行通用操作的工具方法来说特别有用。
 
 泛型方法在方法的返回类型之前通过尖括号 `<>` 内的类型参数进行声明。
 
-
 ```java
 public static <T> void printArrayObjects(T[] array) {
+
     for (T arrayObj : array) {
+
         System.out.println(arrayObj);
+
 }
 ```
 
@@ -282,6 +279,7 @@ public static <T> void printArrayObjects(T[] array) {
 
 // 显式指定类型参数（较少）：
 `printArrayObjects<Double>(new Double[]{1.0, 2.0, 3.0});`
+
 ### 边界类型参数
 
 顾其名，边界类型参数限制了可以作为类型参数指定的类型。这是通过使用 `extends` 关键字（以及用于多个边界的 `&` 符号）来实现的。这提供了更大的类型安全性，并允许你使用特定于边界类型的方法。
@@ -303,6 +301,7 @@ public static <T> void printArrayObjects(T[] array) {
 
 ```java
 public <T extends Number> void processNumber(T number) {
+
 }
 ```
 
@@ -318,138 +317,11 @@ public <T extends Number> void processNumber(T number) {
 
 ### 通配符类型
 
-
 以下是一个示例：
 
 ```java
-public void printList(List<?> list) {
-        System.out.println(arrayObj);
-    }
-}
 ```
 
-
-*   `public void printList(List<?> list)`: 声明了一个名为 `printList` 的方法，接收一个 `List` 作为参数。`<?>` 是无边界通配符。这意味着该方法可以接受任何类型的列表。
-*   `for (Object arrayObj : list)`: 在方法内部，遍历列表。由于类型未知，我们将元素视为 `Object`。
-*   `System.out.println(arrayObj)`: 这一行打印当前元素。
-
-
-示例：
-
-`List<String> stringList = Arrays.asList("String", "List");`
-`printList(stringList); // 输出：
-String
-
-`List<Integer> integerList = Arrays.asList(101, 201, 301);`
-`printList(integerList); // 输出：
-101
-201
-
-`List<Double> doubleList = Arrays.asList(3.14, 2.71);`
-`printList(doubleList); // 输出：
-3.14
-2.71`
-
-
-
-
-*   `private T product;`: 这声明了一个类型为 `T` 的实例变量 `product`。`product` 的类型将在创建 `Container` 对象时确定。
-
-让我们来讨论一下用法。当你创建一个泛型类的对象时，在角括号内提供实际类型：
-
-```java
-Container<Integer> integerContainer = new Container<>(123); 
-int intValue = integerContainer.getProduct(); // 不需要转换
-
-Container<String> stringContainer = new Container<>("Hello"); 
-// T 被替换为 String
-String textValue = stringContainer.getProduct(); // 不需要转换
-
-double piValue = doubleContainer.getProduct();
-```
-
-## 使用泛型方法
-
-
-让我们讨论一下语法。通过在方法的返回类型之前在角括号 `<>` 中放置类型参数来声明泛型方法。
-
-以下是一个示例：
-
-```java
-    public static <E> void displayArray(E[] dataArray) { // E 是类型参数
-        for (E displayItem : dataArray) {
-            System.out.print(displayItem + " ");
-        }
-        System.out.println();
-
-    public static <K, V> void displayMap(Map<K, V> dataMap){
-        for (Map.Entry<K, V> displayEntry : dataMap.entrySet()){
-            System.out.println("Key: " + displayEntry.getKey() + ", Value: " + displayEntry.getValue());
-        }
-}
-```
-
-以下是解释：
-
-*   `<E>`: 这为 `displayArray` 方法声明了类型参数 `E`。该 `E` 仅在该方法的作用域内。
-*   `<K, V>`: 这为 `displayMap` 方法声明了两个类型参数 `K` 和 `V`。
-*   `Map<K, V> dataMap`: 该方法接收键类型为 `K` 值类型为 `V` 的 `Map`。
-
-让我们讨论一下用法。编译器通常根据方法的参数推断类型参数。你也可以显式地指定它，但并不常见：
-
-Integer[] numbers = {1, 2, 3};
-Utility.displayArray(numbers); // E 被推断为 Integer
-
-String[] words = {"a", "b", "c"};
-Utility.displayArray(words); // E 被推断为 String
-Map<String, Integer> ages = new HashMap<>();
-ages.put("Alice", 30);
-ages.put("Bob", 25);
-Utility.displayMap(ages);
-```
-
-
-虽然类本身可以是泛型的，但构造函数不像方法那样直接是泛型的。然而，如果你在一个泛型类中，构造函数会隐式地与类的类型参数工作。
-
-以下是一个示例：
-
-public class Container<T> { // T 是类型参数
-    private T product;
-
-    public Container(T product) { // 构造函数使用了类的类型参数 T
-        this.product = product;
-
-    public T getProduct() {
-        return product;
-    }
-
-    public void setProduct(T product) {
-    }
-}
-```
-
-
-
-
-### 解释
-解释：边界类型参数使用 `extends` 关键字将类型限制为某个类或其子类。例如，`T extends Number` 确保 `T` 必须是 `Number` 的子类。在此语文中不使用 `super` 关键字。
-
-### 6. b
-
-### 7. b
-解释：通配符 `? extends T` 代表一种可以是 `T` 或 `T` 的子类的类型。它被用于方法或类可以处理自 `T` 派生的类型的情况。
-
-### 8. d
-
-### 9. b
-解释：`E` 代表 "Element"（元素），通常用于 `List<E>` 或 `Set<E>` 等集合。`T` 是一个通用的类型占位符，而 `K` 和 `V` 通常用于映射中的键值对。
-
-### 10. b
-
-## 加入我们的 Discord 社区
-加入我们的 Discord 工作空间获取最新更新、优惠、全球科技动态、新发布以及与作者的交流活动：
-
-[`discord.bpbonline.com`](https://discord.bpbonline.com)
 
 
 # 第 2 章：边界类型
@@ -472,18 +344,21 @@ public class Container<T> { // T 是类型参数
 
 考虑以下方法 `fetchMaxElement`：
 
+```java
 public static <T extends Comparable<T>> T fetchMaxElement(List<T> list) {
     T max = list.get(0);
     for (T element : list) {
         if (element.compareTo(max) > 0) {
             max = element;
+        }
     }
     return max;
 }
 ```
 
 在上面的示例中，`<T extends Comparable<T>>` 确保类型 `T` 必须实现 `Comparable` 接口，具体来说，它必须与自己可比较。这允许我们安全地使用 `compareTo` 方法。
-我们可以可以使用提供的方法：
+
+我们可以使用提供的方法：
 
 ```java
 List<String> listOfNames = Arrays.asList("Apple", "Carrot", "Grapes");
@@ -494,22 +369,28 @@ Integer maxAge = fetchMaxElement(listOfAges);
 `String` 和 `Integer` 都实现了 `Comparable` 接口，因此 `maxName` 和 `maxAge` 都是有效的。
 
 以下是上界的主要优点：
+
 * 代码重用性：允许编写可以处理一系列相关类型的泛型代码。
 * 方法访问：保证了边界类或接口中定义的方法是可用。
 
 ## 下界
+
 类型参数的下界定义了基于父类的约束，并使用 `super` 关键字定义。它们指定了类型参数必须是特定类或继承层次结构中的任何一个祖先。这些边界在处理集合时特别有用，允许你处理类层次结构中某个层级或之上的类型。
+
 可以这样想：`T super SomeClass` 意味着类型 `T` 可以是 `SomeClass` 本身，也可以是它的任何父类（继承树中更靠上的父类）。它为类型设置了下限。
 
 ### 示例 2.1：消费元素
+
 想象有一个向集合中添加元素的方法。你可能想添加类型为 `T` 或其任何子类的对象。下界允许你做到这一点。
 
 考虑以下方法 `addElements`：
+
 ```java
 public static <T> void addElements(List<? super T> list, T element) {
     list.add(element);
 }
 ```
+
 在这里，`? super T` 通配符确保列表可以接受 `T` 或其任何父类。
 
 我们可以这样调用该方法：
@@ -521,18 +402,17 @@ addElements(objectList, new Integer(10));
 
 `objectList` 是 `List<Object>`，`String` 和 `Integer` 是 `Object` 的子类。
 
-
 ```java
 List<String> stringList = new ArrayList<>();
 // addElements(stringList, new Object());
 ```
-
 
 同样，我们不能像下面所示向 `List<Integer>` 添加 `Number`：
 
 ```java
 List<Integer> intList = new ArrayList<>();
 // addElements(intList, new Number());
+```
 
 这也会导致编译错误。
 
@@ -544,6 +424,7 @@ List<Integer> intList = new ArrayList<>();
 abstract class AnyShape {
     abstract void drawShape();
 }
+```
 
 两个具体的子类继承 `AnyShape`。
 
@@ -554,30 +435,27 @@ class CircleShape extends AnyShape {
     }
 }
 
+class RectangleShape extends AnyShape {
     @Override
     void drawShape() {
         System.out.println("Drawing a Rectangle");
     }
 }
 ```
+
 现在考虑方法 `drawShapes`：
 
 ```java
 public static void drawShapes(List<? super CircleShape> shapes) {
     shapes.add(new CircleShape());
-        // ...
-    }
+    // ...
 }
 ```
-
 
 ```java
 List<AnyShape> shapeList = new ArrayList<>();
 drawShapes(shapeList);
 ```
-
-
-
 
 ```java
 System.out.println("Processing shape: " + shape.getClass().getSimpleName());
@@ -586,27 +464,30 @@ System.out.println("Processing shape: " + shape.getClass().getSimpleName());
 该方法接受一个列表，其元素类型为 `CircleShape` 或其任何超类（`AnyShape`、`Object`）。这意味着你不能传递 `List<RectangleShape>`，因为 `RectangleShape` 与 `CircleShape` 没有关系。
 
 例如，你不能这样做：
+
 ```java
 shapes.add(new Shape());
 ```
 
 或者
+
 ```java
 shapes.add(new Rectangle());
 ```
 
 ### 示例 2.3: 方法返回类型（较少见）
 
-
 让我们考虑如下 `getNumberList()` 方法：
 
 ```java
 public static List<? super Integer> getNumberList() {
+    List<Number> numbers = new ArrayList<>();
     numbers.add(10);
     numbers.add(20.5);
     return numbers;
 }
 ```
+
 该方法返回一个 `List<? super Integer>`，这意味着返回的列表包含至少是 `Integer` 的元素，但也可能是其超类（`Number`、`Object`）。
 
 对于返回的列表，我们可以像下面添加整数值：
@@ -618,17 +499,18 @@ List<? super Integer> list = getNumberList();
 由于确切类型未知，我们只能作为对象获取元素，而不能直接获取整数。
 
 以下行将导致编译错误：
+
 ```java
 Integer num = list.get(0);  // 编译错误
 ```
 
 然而，我们可以以对象的形式获取元素：
 
+```java
 Object obj = list.get(0);
 ```
 
 ### 上界与下界的主要区别
-
 
 | 特性 | 上界 (Upper bounds) | 下界 (Lower bounds) |
 | :--- | :--- | :--- |
@@ -640,12 +522,12 @@ Object obj = list.get(0);
 
 ## 通配符 (Wildcards)
 
-
 在探索不同类型的通配符之前，理解 Java 泛型的一个基本属性至关重要：不变性（invariance）。
 
 意味着即使 `TypeA` 是 `TypeB` 的子类型，`List<TypeA>` 也不被视为 `List<TypeB>` 的子类型。例如，`List<Integer>` 不是 `List<Number>` 的子类型，尽管 `Integer` 是 `Number` 的子类型。
 
 因此，以下操作是不允许的：
+
 ```java
 List<Number> numbers = new ArrayList<Integer>(); // 编译错误
 ```
@@ -657,147 +539,163 @@ List<Number> numbers = new ArrayList<Integer>(); // 编译错误
 
 以下是三种通配符形式的分解：
 
-
 以下是示例代码：
 
 ```java
 public static void printElements(Collection<?> anyCollection) {
+    for (Object theObject : anyCollection) {
         System.out.println(theObject);
     }
 }
 ```
 
 `printElements` 方法只需接受任何集合并打印其元素。它不限于任何一种类型的集合。
--   **上界通配符：`? extends Type`**：正如我们在本章看到的，上界通配符 `? extends Type` 将未知类型限制为 `Type` 本身或 `Type` 的任何子类型。当你想要与一组相关类型工作时，通常当你想从集合中读取元素时（例如当你是元素的生产者时），这非常有用。遵循 PECS 规则（producer extends`），如果你从参数化类型产生值，请使用 `extends`。
+
+*   **上界通配符：`? extends Type`**：正如我们在本章看到的，上界通配符 `? extends Type` 将未知类型限制为 `Type` 本身或 `Type` 的任何子类型。当你想要与一组相关类型工作时，通常当你想从集合中读取元素时（例如当你是元素的生产者时），这非常有用。遵循 PECS 规则（producer extends`），如果你从参数化类型产生值，请使用 `extends`。
 
 例如，如果你有一个形状层次结构，并且想要处理任何形状或其子类型的集合：
 
 ```java
+public static void drawAllShapes(List<? extends Shape> shapesList) {
     for (Shape eachShape : shapesList) {
         eachShape.drawShape();
     }
 }
 ```
+
+
+
 在这里，`shapes` 可以是 `List<Shape>` 或其子类。
 
--   **下界通配符：`? super Type`**：下界通配符 `? super Type` 将未知类型限制为 `Type` 本身或其任何超类型。这通常用于你想向集合中添加元素时（例如当你是元素的消费者时）。遵循 PECS 规则（consumer super`），如果你从参数化类型消费值，请使用 `super`。
+- **下界通配符：`? super Type`**：下界通配符 `? super Type` 将未知类型限制为 `Type` 本身或其任何超类型。这通常用于你想向集合中添加元素时（例如当你是元素的消费者时）。遵循 PECS 规则（consumer super），如果你从参数化类型消费值，请使用 `super`。
 
-例如，如果你想向一个可以包含 Circle 及其超类型的列表添加 Circle 对象：
+例如，如果你想向一个可以包含 `Circle` 及其超类型的列表添加 `Circle` 对象：
 
+```java
 public static void addCircles(List<? super Circle> circles) {
     circles.add(new Circle());
 }
 ```
 
-
-
-
-
-
 - 当使用类型 b 数据（你向其写入数据）时，请使用 `super`。
+
 在处理集合和其他参数化类型时，这一原则有助于编写更通用、更健壮的代码。
 
 因此，通配符在保持类型安全的同时提供了灵活性。`PECS` 规则是有效使用通配符的关键指南。理解何时使用每种类型的通配符（特别是结合上界和下界使用时），对于 Java 中有效的泛型编程至关重要。
 
-## 边界类型参数 (Bounded type parameters)
+## 边界类型参数
+
 边界类型参数限制了类型参数匹配特定的类型范围。这有助于创建既灵活又受限的方法或类。边界类型参数对于表达类型之间的关系以及在处理泛型时确保类型安全至关重要。
 
 在详细探讨了上界和下界之后，我们现在总结了它们作为边界类型参数的作用。以下重申了关键要点：
 
-- 上界 (extends)：将类型参数限制为特定类型或其子类型。当你需要产生某种特定类型的值，或者想要确保类型参数支持特定操作（例如在接口或父类中定义的方法）时，通常使用它们。可以将其理解为：这种类型必须至少是这种特定类型。
-- 边界类型参数的重要性：边界类型参数允许你编写既类型安全又灵活的泛型代码。它们防止你不意外使用不兼容的类型，并允许你处理一系列相关类型。`PECS` 记忆法是记住如何有效使用上界和下界的有用工具。
+- **上界 (`extends`)**：将类型参数限制为特定类型或其子类型。当你需要产生某种特定类型的值，或者想要确保类型参数支持特定操作（例如在接口或父类中定义的方法）时，通常使用它们。可以将其理解为：这种类型必须至少是这种特定类型。
+
+- **边界类型参数的重要性**：边界类型参数允许你编写既类型安全又灵活的泛型代码。它们防止你意外使用不兼容的类型，并允许你处理一系列相关类型。`PECS` 记忆法是记住如何有效使用上界和下界的有用工具。
 
 通过策略性地使用边界类型参数，你可以设计出健壮且复用的泛型类和方法，这些方法可以在定义层次结构内的各种类型之间无缝工作。
 
 ## 边界类型的实践示例
+
 我们已经看到边界类型参数对于确保泛型编程中的类型安全和灵活性至关重要。以下示例说明了它们在不同领域的实际应用：
 
-- 处理金融交易：想象你正在构建一个金融系统，该系统需要处理各种类型的交易，例如存款和取款。每种交易类型可能有自己的特定逻辑，但它们共享一些共同属性，如金额。我们可以使用边界类型参数来创建一个泛型方法，在处理任何类型的交易的同时确保类型安全。
+### 处理金融交易
+
+想象你正在构建一个金融系统，该系统需要处理各种类型的交易，例如存款和取款。每种交易类型可能有自己的特定逻辑，但它们共享一些共同属性，如金额。我们可以使用边界类型参数来创建一个泛型方法，在处理任何类型的交易的同时确保类型安全。
 
 以下是实现方式：
+
 ```java
 import java.util.Arrays;
 import java.util.List;
 
 abstract class Transaction {
     private double amount;
+
     public Transaction(double amount) {
         this.amount = amount;
     }
 
     public double getAmount() {
+        return amount;
     }
 
-    public abstract String getType(); //不同的交易类型
+    public abstract String getType(); // 不同的交易类型
 
     @Override
+    public String toString() {
         return "Transaction{" +
-        "amount=" + amount +
-        ", type='" + getType() + '\'' +
-        '}';
+                "amount=" + amount +
+                ", type='" + getType() + '\'' +
+                '}';
     }
 }
+
 class Deposit extends Transaction {
     public Deposit(double amount) {
         super(amount);
     }
 
+    @Override
     public String getType() {
         return "Deposit";
     }
 }
 
+class Withdrawal extends Transaction {
     public Withdrawal(double amount) {
         super(amount);
     }
 
     @Override
+    public String getType() {
         return "Withdrawal";
     }
 }
 
 public class TransactionProcessor {
     public static <T extends Transaction> void processTransactions(List<T> transactions) {
+        for (Transaction transaction : transactions) {
             System.out.println("Processing " + transaction);
             // 根据交易类型执行特定操作（例如，更新余额）
             if (transaction instanceof Deposit) {
                 // ... 处理存款特定的逻辑
             } else if (transaction instanceof Withdrawal) {
+                // ... 处理取款特定的逻辑
             }
         }
     }
 
     public static void main(String[] args) {
         List<Deposit> deposits = Arrays.asList(new Deposit(100), new Deposit(50));
+        processTransactions(deposits); // 正常：Deposit extends Transaction
 
         List<Withdrawal> withdrawals = Arrays.asList(new Withdrawal(20), new Withdrawal(75));
         processTransactions(withdrawals); // 正常：Withdrawal extends Transaction
 
         List<Transaction> allTransactions = Arrays.asList(new Deposit(100), new Withdrawal(20));
+        processTransactions(allTransactions); // 正常：Transaction extends Transaction
+
         // List<String> strings = Arrays.asList("a", "b");
         // processTransactions(strings); // 编译错误：String 不是一个 Transaction
     }
 }
 ```
+
 我们定义了一个抽象的 `Transaction` 类，表示所有交易的共同属性。`Deposit` 和 `Withdrawal` 是具体的子类，表示特定的交易类型。它们继承了 `Transaction` 的 `amount` 属性和 `getAmount()` 方法，但提供了对 `getType()` 方法的自己的实现。
 
-`processTransactions` 方法是泛型的，使用了类型参数 `<T extends Transaction>`。这种绑定至关重要。这意味着 `T` 可以是任何作为交易或交易的子类的类型。这允许该方法处理存款、取款、交易或我们可能添加的任何其他未来交易类型的列表。
+`processTransactions` 方法是泛型的，使用了类型参数 `<T extends Transaction>`。这种绑定至关重要。这意味着 `T` 可以是任何作为 `Transaction` 或 `Transaction` 的子类的类型。这允许该方法处理 `Deposit`、`Withdrawal`、`Transaction` 或我们可能添加的任何其他未来交易类型的列表。
 
-在方法内部，我们遍历交易列表。这是因为有了 `<T extends Transaction>` 边界；我们保证列表中的每个交易对象至少是一个交易。这意味着我们可以安全地调用 `transaction.getAmount()` 和 `transaction.getType()` 等方法。
+在方法内部，我们遍历交易列表。这是因为有了 `<T extends Transaction>` 边界；我们保证列表中的每个交易对象至少是一个 `Transaction`。这意味着我们可以安全地调用 `transaction.getAmount()` 和 `transaction.getType()` 等方法。
 
+### 通用仓库接口
 
-- 通用仓库接口：数据访问是软件开发中的一项常见任务。仓库模式通常用于抽象数据存储的细节。我们可以使用泛型来创建类型安全且复用的仓库接口。此外，我们可能需要为具有特定功能（如搜索）的实体创建特殊的仓库。边界类型参数可以帮助我们表达这些关系。
+数据访问是软件开发中的一项常见任务。仓库模式通常用于抽象数据存储的细节。我们可以使用泛型来创建类型安全且复用的仓库接口。此外，我们可能需要为具有特定功能（如搜索）的实体创建特殊的仓库。边界类型参数可以帮助我们表达这些关系。
 
 考虑以下示例，它演示了一个通用的 `Repository` 接口、针对可搜索实体的 `Searchable` 接口，以及一个继承这两者的 `SearchableRepository` 接口：
 
+```java
 import java.util.List;
-
-public class RepositoryProcessor {
-    public static void main(String args[]) {
-        SearchableRepository<Product> productRepository = new SearchableProductRepository();
-        List<Product> products = productRepository.search("Laptop");
-    }
-}
 
 interface Repository<T> {
     T findById(Long id);
@@ -805,60 +703,109 @@ interface Repository<T> {
     void delete(Long id);
 }
 
+interface Searchable {
+    boolean matches(String keyword);
+}
+
+class Product implements Searchable {
+    private String name;
+
+    public Product(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public boolean matches(String keyword) {
+        return name.toLowerCase().contains(keyword.toLowerCase());
+    }
+}
+
 class ProductRepository implements Repository<Product> {
+    @Override
+    public Product findById(Long id) {
+        return null; // 简化实现
+    }
+
+    @Override
+    public void save(Product entity) {
+        // 简化实现
+    }
+
+    @Override
+    public void delete(Long id) {
+        // 简化实现
+    }
 }
 
 // 针对更特殊仓库操作的边界类型参数
 interface SearchableRepository<T extends Searchable> extends Repository<T> {
     List<T> search(String keyword);
 }
-interface Searchable {
-    boolean matches(String keyword);
-}
 
 class SearchableProductRepository extends ProductRepository implements SearchableRepository<Product> {
+    @Override
+    public List<Product> search(String keyword) {
+        // 简化实现：实际应查询数据库
+        return List.of();
+    }
+}
+
+public class RepositoryProcessor {
+    public static void main(String args[]) {
+        SearchableRepository<Product> productRepository = new SearchableProductRepository();
+        List<Product> products = productRepository.search("Laptop");
+    }
 }
 ```
 
 `Repository<T>` 接口定义了类型 `T` 实体的基本数据访问操作，如按 ID 查找、全部、保存和删除。具体的仓库实现（如 `ProductRepository`）将为这些方法提供具体实现。
 
+`Searchable` 接口定义了一个 `matches` 方法，允许对实体进行搜索关键词的检查。`Product` 类现在实现了此接口，为产品提供了 `matches` 方法的具体实现。
 
+`SearchableRepository<T extends Searchable>` 接口同时扩展了 `Repository<T>` 并添加了 `search` 方法。这里的关键在于边界 `T extends Searchable`。这确保了任何实现 `SearchableRepository` 的仓库必须与同样实现了 `Searchable` 接口的实体一起工作。这就是我们强制执行关系的方式；只有可搜索的实体才能拥有可搜索的仓库。
 
+`SearchableProductRepository` 类扩展了 `ProductRepository`（并隐式实现了 `Repository<Product>`），并实现了 `SearchableRepository<Product>`。这很重要，因为 `SearchableRepository` 本身扩展了 `Repository`。
 
-`Searchable` 接口定义了一个 `matches` 方法，允许对实体进行搜索关键词的检查。`product` 类现在实现了此接口，为产品提供了 `matches` 方法的具体实现。
+通过扩展 `ProductRepository`，我们就不需要重写基础的仓库方法。`SearchableProductRepository` 提供了特定的搜索实现，利用了 `Product` 类的 `matches` 方法。
 
-`SearchableRepository<T extends Searchable>` 接口同时扩展了 `Repository<T>` 并添加了 `search` 方法。这里的关键在于边界 `T` 扩展了 `Searchable`。这确保了任何实现 `SearchableRepository` 的仓库必须与同样实现了 `Searchable` 接口的实体一起。这就是我们强制执行关系的方式；只有可搜索的实体才能拥有可搜索的仓库。
-`SearchableProductRepository` 类扩展了 `ProductRepository`（并隐式实现了 `Repository<Product>`），并实现了 `SearchableRepository<Product>`。这很重要，因为 `SearchableRepository` 本身扩展了仓库。
+在 `main` 方法中，我们创建了一个 `SearchableRepository<Product>` 并使用它来搜索产品。正是因为 `Product` 实现了 `Searchable`，且 `SearchableProductRepository` 与 `Product` 实体配合，类型约束得以满足，代码能够正确编译并运行。这个示例清楚地演示了边界类型参数结合接口继承，在处理不同类型的实体和专门的仓库操作时，如何确保类型安全和代码重用性。
 
-通过扩展 `ProductRepository`，我们就不需要重写基础的仓库方法。`SearchableProductRepository` 提供了特定的搜索实现，利用了 `product` 类的 `matches` 方法。
+### 实现可比较接口
 
-在 `main` 方法中，我们创建了一个 `SearchableRepository<Product>` 并使用它来搜索产品。
-正是因为 `product` 实现了 `searchable`，且 `SearchableProductRepository` 与 `product` 实体配合，类型约束得以满足，代码能够正确编译并运行。这个示例清楚地演示了边界类型参数结合接口继承，在处理不同类型的实体和专门的仓库操作时，如何确保类型安全和代码重用性。
-
-- 实现可比较接口：有时，你需要创建彼此可以相互比较的泛型类。例如，你可能想创建一个泛型 `SampleBox` 类，它可以持有任何可比较的类型，然后根据它们包含的值来比较 `SampleBox` 实例。边界类型参数结合 `comparable` 接口使得这成为可能。
+有时，你需要创建彼此可以相互比较的泛型类。例如，你可能想创建一个泛型 `SampleBox` 类，它可以持有任何可比较的类型，然后根据它们包含的值来比较 `SampleBox` 实例。边界类型参数结合 `Comparable` 接口使得这成为可能。
 
 以下是实现方式：
+
 ```java
 class SampleBox<T extends Comparable<T>> implements Comparable<SampleBox<T>> {
-
     private T value;
 
     public SampleBox(T value) {
+        this.value = value;
     }
 
     public T getValue() {
         return value;
     }
+
     @Override
     public int compareTo(SampleBox<T> other) {
         return this.value.compareTo(other.value);
     }
 
+    public static void main(String[] args) {
         SampleBox<Integer> box1 = new SampleBox<>(10);
         SampleBox<Integer> box2 = new SampleBox<>(20);
         int comparison = box1.compareTo(box2); // Comparing Integer values
+
         SampleBox<String> box3 = new SampleBox<>("apple");
         SampleBox<String> box4 = new SampleBox<>("banana");
+        int stringComparison = box3.compareTo(box4);
+
         System.out.println("Integer comparison: " + comparison);
         System.out.println("String comparison: " + stringComparison);
     }
@@ -866,20 +813,20 @@ class SampleBox<T extends Comparable<T>> implements Comparable<SampleBox<T>> {
 ```
 
 
+
 - `T` 扩展 `Comparable<T>`：这意味着类型参数 `T` 必须实现 `Comparable<T>` 接口。这是至关重要的，因为我们希望能够比较 `SampleBox` 实例。`Comparable<T>` 接口定义了用于比较的 `compareTo` 方法。这个边界确保了可以在 `value` 字段上调用 `compareTo` 方法。
 
-- 实现 `comparable<SampleBox<T>>`：这意味着 `SampleBox` 类本身实现了 `comparable` 接口。具体来说，一个 `SampleBox<T>` 可以与另一个 `SampleBox<T>` 进行比较。这允许我们根据包含的值比较 `SampleBox` 对象。
+- 实现 `Comparable<SampleBox<T>>`：这意味着 `SampleBox` 类本身实现了 `Comparable` 接口。具体来说，一个 `SampleBox<T>` 可以与另一个 `SampleBox<T>` 进行比较。这允许我们根据包含的值比较 `SampleBox` 对象。
 
-
-`main` 方法演示了我们如何创建不同可比较类型的 `SampleBox` 对象，例如 `Integer` 和 `String`。这是因为整数和字符串都实现了 `comparable`，我们可以创建 `SampleBox<Integer>` 和 `SampleBox<String>` 对象并使用 `compareTo` 方法对它们进行比较。编译器确保了我们无法创建不可比较类型的 `SampleBox`。这就是边界类型参数的威力；它们强制执行了我们的逻辑正确运行所需的类型约束。
+`main` 方法演示了我们如何创建不同可比较类型的 `SampleBox` 对象，例如 `Integer` 和 `String`。这是因为整数和字符串都实现了 `Comparable`，我们可以创建 `SampleBox<Integer>` 和 `SampleBox<String>` 对象并使用 `compareTo` 方法对它们进行比较。编译器确保了我们无法创建不可比较类型的 `SampleBox`。这就是边界类型参数的威力；它们强制执行了我们的逻辑正确运行所需的类型约束。
 
 这些示例演示了 Java 泛型中边界类型参数的力量和多功能性。通过将类型参数限制在特定范围内，你可以创建出与相关类型无缝协作的类型安全且可重用的代码。边界类型对于构建健壮灵活的泛型类和方法至关重要。
-
 
 本章提供了泛型关键性的全面概述，包括类型参数、通配符和边界类型。通过有效使用泛型，你可以在编译时捕获类型错误，编写更适应不同数据类型的代码，并避免运行时转换的开销。
 
 下一章将探索泛型如何在 Java 集合框架中使用，它们在使你的代码更简洁、可靠方面起着至关重要的作用。我们将看到泛型如何帮助你更有效地处理集合。
 
+### 练习题
 
 1. Java 泛型边界类型参数的目的是什么？
     1. 允许在泛类类原生类型。
@@ -891,77 +838,86 @@ class SampleBox<T extends Comparable<T>> implements Comparable<SampleBox<T>> {
     2. `extends`
     3. `implements`
     4. `within`
+
 3. 使用哪个关键字来指定类型参数的下边界？
     1. `super`
     2. `extends`
     3. `implements`
     4. `within`
+
 4. 上边界 `<T extends Number>` 是什么？
     1. `T` 可以是任何类型。
     2. `T` 可以是数字或数字的任何父类。
     3. `T` 可以是数字或数字的任何子类。
     4. `T` 必须正好是数字。
-5. 下边界 `<T super<T>>` 是什么？
-    1. `T` 可以是任何实现 `comparable` 的类型。
-    2. `T` 可以是 `comparable` 或 `comparable` 的任何父类。
-    3. `T` 可以是 `comparable` 或 `comparable` 的任何子类。
-    4. `T` 必须正好是 `comparable`。
 
+5. 下边界 `<T super Comparable<T>>` 是什么？
+    1. `T` 可以是任何实现 `Comparable` 的类型。
+    2. `T` 可以是 `Comparable` 或 `Comparable` 的任何父类。
+    3. `T` 可以是 `Comparable` 或 `Comparable` 的任何子类。
+    4. `T` 必须正好是 `Comparable`。
+
+6. 何时使用上界通配符 `? extends Type`？
     1. 当你想向集合添加元素。
     2. 当你想从集合读取元素。
     3. 当你想定义泛类。
     4. 当你想指定类型参数的下边界。
 
+7. 何时使用下界通配符 `? super Type`？
     1. 当你想从集合读取元素。
     2. 当你想向集合添加元素。
     3. 当你想定义泛型接口。
     4. 当你想指定类型参数的上边界。
 
+8. 哪个方法签名允许接受 `Number`、`Integer`、`Double` 等列表？
     1. `public void processNumbers(List<Number> numbers)`
     2. `public void processNumbers(List<? extends Number> numbers)`
     3. `public void processNumbers(List<? super Number> numbers)`
     4. `public void processNumbers(List<T extends Number> numbers)`
 
+9. 哪个方法签名允许安全地向列表添加 `Integer`？
     1. `public void addIntegers(List<Integer> list)`
     2. `public void addIntegers(List<? extends Integer> list)`
     3. `public void addIntegers(List<? super Integer> list)`
     4. `public void addIntegers(List<T super Integer> list)`
 
+10. PECS 原则是什么？
     1. 定义泛型类的规则。
     2. 记忆何时在使用通配符中使用 `extends` 和 `super` 的助记法。
     3. 将原生类型转换为包装类型的规则。
 
-
-
-
-# 4. 提高泛型代码性能的指南。
-
 ### 答案
-1. **a**
-解释：边界类型参数限制了可以作为类型参数的类型，从而确保了类型安全，并允许你处理一系列相关的类型。
+
+1. **b**
+   解释：边界类型参数限制了可以作为类型参数的类型，从而确保了类型安全，并允许你处理一系列相关的类型。
 
 2. **b**
-解释：`extends` 关键字用于定义上界，将类型参数限制在特定类型或其子类型上。
+   解释：`extends` 关键字用于定义上界，将类型参数限制在特定类型或其子类型上。
+
 3. **a**
-解释：`super` 关键字用于定义下界，将类型参数限制在特定类型或其父类型上。
+   解释：`super` 关键字用于定义下界，将类型参数限制在特定类型或其父类型上。
 
 4. **c**
-解释：`<T extends Number>` 意味着 `T` 可以是 `Number` 本身，也可以任何继承自 `Number` 的类（例如整数、double）。
+   解释：`<T extends Number>` 意味着 `T` 可以是 `Number` 本身，也可以任何继承自 `Number` 的类（例如 `Integer`、`Double`）。
+
 5. **b**
-解释：`<T super Comparable<T>>` 意味着 `T` 可以是 `Comparable` 本身，也可以是 `Comparable` 的父类的任何接口/类。
+   解释：`<T super Comparable<T>>` 意味着 `T` 可以是 `Comparable` 本身，也可以是 `Comparable` 的父类的任何接口/类。
 
 6. **b**
-解释：上界通配符通常用于从集合中产生值（读取），因为它们确保了你获取的至少是指定的类型。
+   解释：上界通配符通常用于从集合中产生值（读取），因为它们确保了你获取的至少是指定的类型。
+
 7. **b**
-解释：下界通配符通常用于向集合中消费值（添加），确保集合可以接受至少是指定类型的元素。
+   解释：下界通配符通常用于向集合中消费值（添加），确保集合可以接受至少是指定类型的元素。
 
 8. **b**
-解释：`List<? extends Number>` 允许方法接受 `Number`、`Integer`、`Double` 等列表。
+   解释：`List<? extends Number>` 允许方法接受 `Number`、`Integer`、`Double` 等列表。
+
 9. **c**
-解释：`List<? super Integer>` 允许方法接受 `Integer`、`Number`、`Object` 等列表，你可以安全地向这些列表中的任何一个添加 `Integer`。
+   解释：`List<? super Integer>` 允许方法接受 `Integer`、`Number`、`Object` 等列表，你可以安全地向这些列表中的任何一个添加 `Integer`。
 
 10. **b**
-解释：生产者 extends，消费者 super (PECS) 是一个非常有用的记忆法，帮助记住何时在通配符上使用 `extends`（用于生产或读取）和 `super`（用于消费或写入）。
+    解释：生产者 extends，消费者 super (PECS) 是一个非常有用的记忆法，帮助记住何时在通配符上使用 `extends`（用于生产或读取）和 `super`（用于消费或写入）。
+
 ## 加入我们的 Discord 空间
 
 加入我们的 Discord 工作区，获取最新更新、优惠、全球科技动态、新发布以及与作者的交流会议：
@@ -973,7 +929,6 @@ class SampleBox<T extends Comparable<T>> implements Comparable<SampleBox<T>> {
 
 ## 引言
 
-
 ## 结构
 
 本章涵盖了以下主题：
@@ -983,32 +938,38 @@ class SampleBox<T extends Comparable<T>> implements Comparable<SampleBox<T>> {
 * 将泛型应用于 `Map<K, V>`
 * 常见陷阱和最佳实践
 * 泛型中的类型擦除
+
 ## 目标
 
 在本章结束时，你将理解 Java 集合框架如何与泛型集成，以提供类型安全且可重用的数据结构。你将学习如何将泛型应用于 `List<T>`、`Set<T>` 和 `Map<K, V>` 等常用集合，以及在处理它们时避免陷阱的最佳实践。此外，你将探索类型擦除及其对集合中泛型的影响。本章末的练习将通过实际实现加强你的理解。
 
 ## Java 集合框架概览
+
 Java 集合框架 (JCF) 是一个用于处理和操作 Java 中集合的统一架构。它包含了各种数据结构的接口和类，例如 Lists、Sets、Maps 等。该框架提供了高效且灵活的方法来存储、检索和处理对象。
 
 在探索泛型在 Java 集合框架中的应用之前，理解核心集合是有帮助的。
 
 下表提供了主要集合类型及其主要特征的概览：
 
+| 接口 | 描述 |
 | :--- | :--- |
 | `List<T>` | 一种有序的集合，允许重复（例如 `ArrayList`、`LinkedList`）。 |
 | `Set<T>` | 一种不允许重复且无序的集合（例如 `HashSet`、`TreeSet`）。 |
 | `Queue<T>` | 通常为先进先出 (FIFO) 操作设计的集合（例如 `PriorityQueue`）。 |
 | `Map<K, V>` | 一种存储键值对的集合（例如 `HashMap`、`TreeMap`）。 |
+
 表 3.1：Java 集合框架中的核心接口
 
 理解这些集合类型及其特征为有效地与它们配合泛型奠定了基础。泛型增强了集合的类型安全性和灵活性，允许你在处理强类型数据结构的同时，避免不必要的类型转换和运行时错误。
 
-在接下来的章节中，我们将探索如何将泛型应用于 List、Set 和 Map，以及确保代码类型安全和维护性的最佳实践。我们将在 第 4 章 集合框架简介中深入探讨集合框架。
+在接下来的章节中，我们将探索如何将泛型应用于 List、Set 和 Map，以及确保代码类型安全和维护性的最佳实践。我们将在 **第 4 章 集合框架简介** 中深入探讨集合框架。
+
 虽然泛型主要以增强类型安全性和可读性而闻名，但它们对性能提升也有贡献。在非泛型代码中，集合以原始 `Object` 类型存储元素，需要频繁的强制转换，并引入了运行时 `ClassCastException` 的风险。泛型消除了此类转换的需求，使得字节码更高效、更安全。
 
-此外，泛型减少了在处理包装类型（特别是 `List<Integer>`）时与装箱（boxing）和拆箱（unboxing）相关的开销。尽管 Java 尚未在核心库中包含基本数据类型特化的集合（例如 `IntList`），但带有包装类型的泛型提供了一个更简洁、更好的替代方案。
+此外，泛型减少了在处理包装类型（特别是 `List<Integer>`）时与装箱和拆箱相关的开销。尽管 Java 尚未在核心库中包含基本数据类型特化的集合（例如 `IntList`），但带有包装类型的泛型提供了一个更简洁、更好的替代方案。
 
 这种编译时的类型强制确保了更整洁的代码执行，并允许 Java 虚拟机 (`JVM`) 和即时编译器 (`JIT compiler`) 等工具更有效地优化字节码。
+
 考虑以下示例：
 
 ```java
@@ -1020,132 +981,141 @@ int n = (Integer) numbers.get(0); // 需要显式转换
 List<Integer> numbersGen = new ArrayList<>();
 numbersGen.add(10); // 仍会自动装箱
 int m = numbersGen.get(0); // 不需要转换
+```
 
 第二个示例避免了对显式强制转换的需求，并允许编译器执行类型检查。这不仅提高了安全性，还实现了运行时优化。
 
-## 将泛型应用于 List<T>
+## 将泛型应用于 `List<T>`
 
-
-在泛型引入之前，Java 集合以 `object` 类型存储元素，这意味着不同类型的对象可以添加到同一个列表中。然而，这导致了不安全的类型转换，在检索元素时需要显式的强制转换。
+在泛型引入之前，Java 集合以 `Object` 类型存储元素，这意味着不同类型的对象可以添加到同一个列表中。然而，这导致了不安全的类型转换，在检索元素时需要显式的强制转换。
 
 考虑以下非泛型列表实现的示例：
 
+```java
 import java.util.ArrayList;
 import java.util.List;
 
 public class NonGenericListExample {
-  public static void main(String[] args) {
-    nonGenericList.add("Java"); // 添加 String
-    nonGenericList.add(100); // 添加 Integer（无编译错误）
-    fetchItems(nonGenericList);
-  }
+    public static void main(String[] args) {
+        List nonGenericList = new ArrayList();
+        nonGenericList.add("Java"); // 添加 String
+        nonGenericList.add(100);    // 添加 Integer（无编译错误）
+        fetchItems(nonGenericList);
+    }
 
-  public static void fetchItems(List nonGenericListItems) {
-    String item2 = (String) nonGenericListItems.get(1); // 运行时错误！ClassCastException
-  }
+    public static void fetchItems(List nonGenericListItems) {
+        String item2 = (String) nonGenericListItems.get(1); // 运行时错误！ClassCastException
+        System.out.println(item2);
+    }
 }
 ```
-
-
-
-
-```java
-System.out.println(item1);
-System.out.println(item2); // 这将导致错误
-}
-}
-```
-
 
 这就是引入泛型的原因，因为泛型在编译时强制执行了类型安全。
 
 通过指定类型参数 `<T>`，我们限制列表只能存储一种类型的元素。
 
-
 ```java
 import java.util.ArrayList;
 import java.util.List;
 
-  public static void main(String[] args) {
-    List<String> genericList = new ArrayList<>(); // 类型安全的列表
-    genericList.add("Java");
-    // genericlist.add(100); // 编译错误 - 只允许字符串
-    String item1 = genericList.get(0); // 不需要显式强制转换
-  }
+public class GenericListExample {
+    public static void main(String[] args) {
+        List<String> genericList = new ArrayList<>(); // 类型安全的列表
+        genericList.add("Java");
+        // genericList.add(100); // 编译错误 - 只允许字符串
+        String item1 = genericList.get(0); // 不需要显式强制转换
+        System.out.println(item1);
+    }
 }
 ```
 
 在这里，`List<String>` 确保了只能存储字符串元素。尝试添加 100（一个整数）会导致编译错误。在获取元素时，不需要显式强制转换。使用泛型后，代码更加安全且整洁。
+
 ### 泛型列表中的通配符
 
 虽然泛型强制了严格的类型安全，但在某些场景下，我们希望在处理未知或相关类型时具有灵活性。例如，我们可能希望一个方法能够处理包含不同但相关类型元素的列表。
 
 考虑以下代码：
+
 ```java
 public void printNames(List<? extends Person> people) {
-  for (Person p : people) {
-    System.out.println(p.getName());
-  }
+    for (Person p : people) {
+        System.out.println(p.getName());
+    }
 }
+```
 
-在上述代码中，`printNames` 方法接受任何作为 `Person` 子类的类型的列表（例如，`Employee`、`Student` 等），这在保持类型安全的同时赋予了灵活性。如果没有通配符，你将为每个特定的子类编写一个独立的方法。
+在上述代码中，`printNames` 方法接受任何作为 `Person` 子类的类型的列表（例如 `Employee`、`Student` 等），这在保持类型安全的同时赋予了灵活性。如果没有通配符，你将为每个特定的子类编写一个独立的方法。
 
 这就是通配符 (`?`) 派上用场。通配符允许我们创建更通用的方法，以处理一系列泛型类型，同时仍维持类型安全。让我们探索通配符的不同类型以及如何有效地使用它们：
 
-
-通过使用无界通配符 (`?`)，我们指示该方法可以接受任何类型的列表，但由于我们不知道它们的确切类型，我们将元素视为 `objects`。让我们来看一个示例：
+**无界通配符 (`?`)**：通过使用无界通配符 (`?`)，我们指示该方法可以接受任何类型的列表，但由于我们不知道它们的确切类型，我们将元素视为 `Object`。让我们来看一个示例：
 
 ```java
+import java.util.Arrays;
 import java.util.List;
 
 public class UnboundedWildcardListExample {
-  public static void printList(List<?> unboundedList) {
-    for (Object eachItem : unboundedList) {
-      System.out.println(eachItem);
-  }
-  public static void main(String[] args) {
-    List<String> stringList = Arrays.asList("A", "B", "C");
-    List<Integer> intList = Arrays.asList(1, 2, 3);
-    printList(stringList); // 适用于任何类型
-    printList(intList);
+    public static void printList(List<?> unboundedList) {
+        for (Object eachItem : unboundedList) {
+            System.out.println(eachItem);
+        }
+    }
+
+    public static void main(String[] args) {
+        List<String> stringList = Arrays.asList("A", "B", "C");
+        List<Integer> intList = Arrays.asList(1, 2, 3);
+        printList(stringList); // 适用于任何类型
+        printList(intList);
+    }
 }
 ```
 
 在此示例中，任何列表类型（`List<String>`、`List<Integer>` 等）都可以传递给 `printList` 方法。我们不能向 `List<?>` 添加新元素，因为确切类型是未知的。以下行会导致编译错误：
 
+```java
+// unboundedList.add("New Item"); // 编译错误
+```
 
-- **列表中的上界通配符 (`? extends Type`)**：在处理泛型中的列表时，上界通配符 (`? extends T`) 允许我们处理包含特定类型元素或其任何子类的集合。当我们想要从列表中读取数据而不必担心其确切类型时，这非常有用。由于列表可以持有各种子类的元素，我们可以安全地获取元素，但不能向列表添加新元素（`null` 除外）。让我们通过示例来探索：
+**列表中的上界通配符 (`? extends Type`)**：在处理泛型中的列表时，上界通配符 (`? extends T`) 允许我们处理包含特定类型元素或其任何子类的集合。当我们想要从列表中读取数据而不必担心其确切类型时，这非常有用。由于列表可以持有各种子类的元素，我们可以安全地获取元素，但不能向列表添加新元素（`null` 除外）。让我们通过示例来探索：
 
 ```java
 import java.util.List;
-  public static double sumNumbers(List<? extends Number> upperBoundList) {
-    double sum = 0;
-    for (Number num : upperBoundList) {
-      sum += num.doubleValue(); // 安全是因为 Number 有 doubleValue()
+
+public class UpperBoundedWildcardListExample {
+    public static double sumNumbers(List<? extends Number> upperBoundList) {
+        double sum = 0;
+        for (Number num : upperBoundList) {
+            sum += num.doubleValue(); // 安全是因为 Number 有 doubleValue()
+        }
+        return sum;
     }
-  }
-  public static void main(String[] args) {
-    List<Integer> intList = List.of(1, 2, 3);
-    List<Double> doubleList = List.of(1.5, 2.5, 3.5);
-    System.out.println(sumNumbers(intList)); // 输出: 6.0
-    System.out.println(sumNumbers(doubleList)); // 输出: 7.5
+
+    public static void main(String[] args) {
+        List<Integer> intList = List.of(1, 2, 3);
+        List<Double> doubleList = List.of(1.5, 2.5, 3.5);
+        System.out.println(sumNumbers(intList));    // 输出: 6.0
+        System.out.println(sumNumbers(doubleList)); // 输出: 7.5
+    }
 }
 ```
 
 方法 `sumNumbers(List<? extends Number>)` 接收 `Number` 的任何子类的列表（`Integer`、`Double` 等）。它遍历列表并使用 `doubleValue()` 求总和。
 
 
+
 ```java
 import java.util.List;
 import java.util.ArrayList;
 
-  public static void addIntegers(List<? super Integer> lowerBoundedList) {
+public static void addIntegers(List<? super Integer> lowerBoundedList) {
     lowerBoundedList.add(10);
     lowerBoundedList.add(20);
     lowerBoundedList.add(30);
     // lowerBoundedList.add(3.14); // 无法添加 Double
-  }
-  public static void main(String[] args) {
+}
+
+public static void main(String[] args) {
     List<Number> numberList = new ArrayList<>();
     List<Object> objectList = new ArrayList<>();
     addIntegers(numberList);
@@ -1153,138 +1123,162 @@ import java.util.ArrayList;
 }
 ```
 
-### 泛型应用于 Set<T>
-
+### 泛型应用于 `Set<T>`
 
 `Set<T>` 是一个不允许重复元素的集合。通过指定泛型类型 `T`，你可以创建防止意外类型匹配的强类型集合。
 
 让我们从一个简单的泛型集合示例开始：
 
+```java
 import java.util.Set;
 import java.util.HashSet;
 
 public class GenericSetExample {
-  public static void main(String[] args) {
-    stringSet.add("item1");
-    stringSet.add("item2");
-  }
-}
-```
 
+    public static void main(String[] args) {
+        Set<String> stringSet = new HashSet<>();
+        stringSet.add("item1");
+        stringSet.add("item2");
+        stringSet.add("item3");
 
-
-
-```java
-stringSet.add("item3");
-for (String item : stringSet) {
-    System.out.println(item);
-}
-
-}
+        for (String item : stringSet) {
+            System.out.println(item);
+        }
+    }
 }
 ```
 
 `Set<String>` 确保了集合中只能存储 `String` 类型的元素。尝试添加 `Integer` 将导致编译时错误。`for` 循环可以安全地迭代，不需要显式的类型转换。
 
 ### 泛型集合中的通配符
+
 通配符在处理包含未知类型或相关类型的集合时提供了更大的灵活性。让我们通过示例来理解这一点：
 
 -   **无界通配符 (`Set<?>`):** 当集合中元素的精确类型未知但我们仍需要从中读取数据时，无界通配符 (`?`) 非常有用。这通常用于对各种类型的集合进行操作且对其修改的泛型方法。
 
-考虑以下示例。
+考虑以下示例：
+
 ```java
 import java.util.Set;
 
 public class UnboundedWildcardSetExample {
+
     public static void printSet(Set<?> unboundedSet) {
+        for (Object element : unboundedSet) {
             System.out.println(element);
         }
     }
 }
 ```
-该方法接受任何集合，无论其元素类型为何。由于类型未知，你无法在方法内部向集合中添加新元素。迭代使用 `object` 进行，确保了在读取值时的类型安全。
+
+该方法接受任何集合，无论其元素类型为何。由于类型未知，你无法在方法内部向集合中添加新元素。迭代使用 `Object` 进行，确保了在读取值时的类型安全。
 
 -   **上界通配符 (`Set<? extends T>`):** 上界通配符允许集合持有特定类型或其子类的元素。这在处理存储了对象层次结构的集合时非常有用。让我们看看它在实践中如何工作：
 
 ```java
 import java.util.Set;
+
 public class UpperBoundedWildcardSetExample {
+
     public static void printAnimalSounds(Set<? extends Animal> upperBoundSet) {
         for (Animal animal : upperBoundSet) {
             animal.animalSound();
         }
+    }
 }
 
 class Animal {
     void animalSound() {
         System.out.println("Some general animal sound");
+    }
 }
 
 class Dog extends Animal {
     @Override
     void animalSound() {
+        System.out.println("Dog barks");
     }
 }
 ```
 
-通配符 `? extends Animal` 确保集合包含元素元素或任何子类（`Dog`、`Cat` 等）。该方法遍历集合并调用 `animalSound()`，确保了每个子类都有正确的行为。你无法在方法内部添加新元素，因为在运行时具体的子类型是未知的。
+通配符 `? extends Animal` 确保集合包含 `Animal` 元素或任何子类（`Dog`、`Cat` 等）。该方法遍历集合并调用 `animalSound()`，确保了每个子类都有正确的行为。你无法在方法内部添加新元素，因为在运行时具体的子类型是未知的。
+
 -   **下界通配符 (`Set<? super T>`):** 下界通配符允许集合包含指定类型或其任何父类的元素。当你需要在确保最小类型约束的同时添加元素时，这特别有用。让我们通过示例来探索这一点：
 
 ```java
 import java.util.Set;
 
-public class LowerBoundedWildCardsetExample {
+public class LowerBoundedWildCardSetExample {
+
+    public static void addManagers(Set<? super Manager> employeeSet) {
         employeeSet.add(new Manager("Manager1"));
         employeeSet.add(new Manager("Manager2"));
     }
 }
-```
-通配符 `? super Manager` 确保集合可以持有 `Manager` 或任何父类（`Employee`、`Person`）。你可以添加 `Manager` 元素，因为它是有效的子类型。获取元素受到限制，因为除了对象本身之外，精确类型是未知的。
 
-## 将泛型应用于 Map<K,V>
+class Employee {}
+class Manager extends Employee {}
+```
+
+通配符 `? super Manager` 确保集合可以持有 `Manager` 或任何父类（`Employee`、`Person`）。你可以添加 `Manager` 元素，因为它是有效的子类型。获取元素受到限制，因为除了 `Object` 本身之外，精确类型是未知的。
+
+## 将泛型应用于 `Map<K,V>`
 
 泛型在处理 Java 的 `Map` 接口时显著提高了类型安全性和灵活性。通过对 map 应用泛型，我们确保键和值都符合特定类型，减少了运行时错误和不必要的类型转换。本节探讨了泛型如何与 map 工作，包括通配符的使用、上界和下界。
+
 `Map<K, V>` 将类型为 `K` 的键与类型为 `V` 的值关联。通过指定泛型类型，我们创建了强类型的 map，防止意外的类型不匹配。
 
 让我们从一个泛型 `Map` 的简单示例开始：
 
 ```java
 import java.util.HashMap;
+import java.util.Map;
 
 public class GenericMapExample {
+
     public static void main(String[] args) {
         Map<Integer, String> genericEmployeeMap = new HashMap<>();
+
         genericEmployeeMap.put(101, "Employee1");
         genericEmployeeMap.put(103, "Employee3");
+
         for (Map.Entry<Integer, String> entry : genericEmployeeMap.entrySet()) {
             System.out.println("ID: " + entry.getKey() + ", Name: " + entry.getValue());
         }
     }
+}
 ```
 
 `Map<Integer, String>` 确保了只能存储 `Integer` 键和 `String` 值。使用泛型防止了插入或检索元素时发生意外的类型不匹配。`for` 循环安全地遍历条目，不需要显式的类型转换。
 
 ### 泛型 map 中的通配符
+
 通配符在处理各种类型时使 map 更加灵活。让我们通过示例来理解这一点：
 
 -   **无界通配符 (`Map<?, ?>`):** 无界通配符 (`?`) 允许 map 在不指定类型的情况下存储任何键值对。这对于不修改 map 的只读操作有用：
 
 ```java
 import java.util.Map;
+
 public class UnboundedWildcardExample {
+
     public static void printMap(Map<?, ?> unboundedMap) {
         for (Map.Entry<?, ?> entry : unboundedMap.entrySet()) {
             System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
         }
+    }
 }
 ```
 
 `printMap` 方法接受任何 map，无论键或值的类型为何。由于类型未知，你无法添加新元素。迭代使用对象，确保了读取值时的类型安全。
 
+-   **上界通配符 (`Map<? extends K, ? extends V>`):** 上界通配符限制键和值为特定类型或其子类。这在处理对象层次结构时非常有用：
 
 ```java
 import java.util.Map;
 import java.util.HashMap;
+
+public class UpperBoundedWildcardMapExample {
 
     public static void printEmployees(Map<? extends Number, ? extends Employee> map) {
         for (Map.Entry<? extends Number, ? extends Employee> entry : map.entrySet()) {
@@ -1292,65 +1286,77 @@ import java.util.HashMap;
         }
     }
 
+    public static void main(String[] args) {
         Map<Integer, Employee> employees = new HashMap<>();
-        employees.put(1, new Employee("Employee1"));
-        employees.put(2, new ProgramManager("Employee2"));
+        employees.put(1, new Employee("Employee1", 1));
+        employees.put(2, new ProgramManager("Employee2", 2));
         printEmployees(employees);
     }
+}
 
 class Employee {
     String empName;
     int empId;
+
     Employee(String name, int id) {
+        this.empName = name;
         this.empId = id;
     }
 }
 
 class ProgramManager extends Employee {
     ProgramManager(String name, int id) {
+        super(name, id);
     }
 }
 ```
 
 通配符 `? extends Number` 确保键类型为 `Number` 或其子类。通配符 `? extends Employee` 确保值是 `Employee` 或任何子类。由于子类型未知，你无法在方法内部插入新元素。
+
 -   **下界通配符 (`Map<? super K, ? super V>`):** 下界通配符允许 map 存储指定类型或其任何父类的元素。当需要在确保最小类型约束的同时添加元素时，这非常有用：
 
 ```java
 import java.util.Map;
 import java.util.HashMap;
+
 public class LowerBoundedWildcardMapExample {
+
     public static void addEmployees(Map<? super Integer, ? super Employee> employeeMap) {
         employeeMap.put(201, new Employee("Employee1", 201));
         employeeMap.put(202, new ProgramManager("Employee2", 202));
     }
+
     public static void main(String[] args) {
         Map<Number, Object> employees = new HashMap<>();
         addEmployees(employees);
+
         for (Map.Entry<Number, Object> entry : employees.entrySet()) {
             System.out.println("ID: " + entry.getKey() + ", Value: " + entry.getValue());
         }
+    }
 }
 ```
-
-
-
 
 通配符 `? super Integer` 确保 map 可以接受 `Integer` 或其任何父类（如 `Number`、`Object`）。通配符 `? super Employee` 确保值是 `Employee` 或其任何父类。你可以添加元素，但获取值时需要进行强制类型转换，因为在 `Object` 之外具体的类型是未知的。
 
 `main` 方法演示了如何使用 `Map<Number, Object>` 调用 `addEmployees`。
-
 
 在 Java 集合（`List`、`Set` 和 `Map`）上使用泛型时，遵循最佳实践以确保类型安全并防止运行时错误至关重要。误用泛型可能会导致编译错误、类转换异常（`ClassCastException`）和意外行为等问题。
 
 在下文中，我们将讨论一些常见的陷阱以及如何通过最佳实践避免它们：
 
 ### 使用原始类型代替参数化类型
+
 *   **陷阱**：使用原始类型（即不带泛型参数的集合）会移除编译时的类型检查，增加了运行时出现 `ClassCastException` 的风险：
+
     ```java
     List namesList = new ArrayList(); // 原始类型，无类型安全
     namesList.add(10); // 允许，但如果只期望 String 则是错误的
     String name = (String) namesList.get(0); // 抛出 ClassCastException
+    ```
+
 *   **最佳实践**：为了强制类型安全，在声明集合时始终指定泛型类型。这确保了只有兼容的对象被添加，防止了运行时错误：
+
     ```java
     List<String> namesList = new ArrayList<>(); // 类型安全的集合
     namesList.add("Name1"); // 允许
@@ -1360,10 +1366,14 @@ public class LowerBoundedWildcardMapExample {
 ### 向带有通配符的集合添加元素
 
 *   **陷阱**：在使用上界通配符（`? extends T`）时，编译器禁止修改，因为它无法确定具体的子类型，会导致编译错误：
+
+    ```java
     List<? extends Number> numbers = new ArrayList<Integer>();
     numbers.add(10); // 编译错误：无法添加元素
     ```
+
 *   **最佳实践**：当你需要添加元素时，使用下界通配符（`? super T`），确保集合可以安全地接受预期的类型：
+
     ```java
     List<? super Integer> numbers = new ArrayList<>();
     numbers.add(20); // 允许
@@ -1376,10 +1386,14 @@ public class LowerBoundedWildcardMapExample {
 ### 误用上界和下界通配符
 
 *   **陷阱**：错误使用 `? extends T` 可能会导致无法添加元素：
+
+    ```java
     List<? extends Animal> animals = new ArrayList<Dog>();
     animals.add(new Dog()); // 编译错误
     ```
+
 *   **最佳实践**：如果你需要修改集合，使用下界通配符（`? super T`）来允许安全插入元素：
+
     ```java
     List<? super Dog> animals = new ArrayList<Animal>();
     animals.add(new Bulldog()); // 如果 Bulldog 继承 Dog 则允许
@@ -1392,52 +1406,64 @@ public class LowerBoundedWildcardMapExample {
 ### 在修改操作中使用无界通配符 (`?`)
 
 *   **陷阱**：无界通配符（`?`）使集合完全不感知类型，这意味着我们无法向其添加任何元素：
+
+    ```java
     Set<?> set = new HashSet<Integer>();
     set.add(5); // 编译错误：无法向通配符集合添加元素
     ```
-*   **最佳实践**：无界通配符（`?`）使集合完全不感知类型，这意味着我们无法向其添加任何元素。在只需要读取而不需要修改时使用 `?`。如果需要修改，请使用特定的类型或 `? super T`：
+
+*   **最佳实践**：在只需要读取而不需要修改时使用 `?`。如果需要修改，请使用特定的类型或 `? super T`：
+
     ```java
+    public static void printCollection(Set<?> set) {
         for (Object element : set) {
             System.out.println(element);
         }
     }
     ```
-    *纠正对齐逻辑：*
-    在只需要读取而不需要修改时使用无界通配符。例如：
-    ```java
-    public static void printCollection(Set<?> set) {
-        for (Object element : set) {
-            System.out.println(element);
-    ```
 
 ### 在 map 中错误使用泛型
 
 *   **陷阱**：错误地指定 map 的泛型类型会导致类型匹配错误：
-    Map<Object, String> map = new HashMap<Integer>();
-    ```
-*   **最佳实践**：为了维护类型安全并避免匹配，正确声明 `Map<K, V>`：
+
     ```java
-    Map<Integer, String> employeeMap = new HashMap<>();
-    employeeMap.put(102, "Employee2");
+    Map<Object, String> map = new HashMap<Integer>(); // 编译错误
     ```
 
-这引产生一个关于安全地读写 map 的通用原则：
+
+
+## 最佳实践
+
+为了维护类型安全并避免不匹配，正确声明 `Map<K, V>`：
+
+```java
+Map<Integer, String> employeeMap = new HashMap<>();
+employeeMap.put(102, "Employee2");
+```
+
+这引出一个关于安全地读写 map 的通用原则：
 
 *   当从 map 中读取时，使用 `Map<?, ?>`。
 
-### 误解不变性
+## 误解不变性
 
-*   **陷阱**：泛型的一个常见误解是认为子类型关系会延续。然而，Java 泛型是不变的，这意味着 `List<Integer>` 不是 `List<Number>` 的子类型：
-    ```java
-    ```
-*   **最佳实践**：正确声明类型。
+### 陷阱
+
+泛型的一个常见误解是认为子类型关系会延续。然而，Java 泛型是不变的，这意味着 `List<Integer>` 不是 `List<Number>` 的子类型：
+
+```java
+```
+
+### 最佳实践
+
+正确声明类型。
 
 ## 泛型擦除
-
 
 让我们了解擦除是如何工作的、它的影响以及如何处理这些局限性。
 
 考虑以下泛型类的示例：
+
 ```java
 public class TypeEraserExample<T> {
     public void set(T value) {
@@ -1445,38 +1471,41 @@ public class TypeEraserExample<T> {
     }
     public T get() {
         return value;
+    }
 }
 ```
 
 编译后，类型擦除移除了泛型并将其转换为：
+
 ```java
-    private Object value;
-    public void set(Object value) {
-        this.value = value;
-    }
-    public Object get() {
-        return value;
+private Object value;
+public void set(Object value) {
+    this.value = value;
+}
+public Object get() {
+    return value;
 }
 ```
 
 ### 类型擦除的影响
 
+#### 类型信息丢失
 
-*   **类型信息丢失**：在运行时，所有泛型的实例看起来都是相同的。例如：
-    ```java
-    List<String> stringList = new ArrayList<>();
-    List<Integer> intList = new ArrayList<>();
-    ```
+在运行时，所有泛型的实例看起来都是相同的。例如：
+
+```java
+List<String> stringList = new ArrayList<>();
+List<Integer> intList = new ArrayList<>();
+```
+
 两个列表看起来都是 `ArrayList` 的实例，没有任何类型区别。
-
-
-
 
 # 第 4 章 集合框架简介
 
 ## 引言
 
 Java 集合框架（Collections Framework）是 Java 开发工具包（JDK）中强大且至关重要的部分。它为表示和操作对象组提供了统一的架构。在集合框架出现之前，开发者必须依赖数组等临时数据结构，这往往导致代码难以维护和扩展。
+
 想象一下，在没有结构化系统的情况下组织图书馆。书籍将散落在各地，使得寻找特定的标题变得极其困难。集合框架就像一个组织良好的图书馆系统，提供了多种具有定义接口的预实现数据结构，有助于实现高效的数据管理和操作。
 
 ## 结构
@@ -1487,161 +1516,173 @@ Java 集合框架（Collections Framework）是 Java 开发工具包（JDK）中
 *   `Collection` 接口
 *   集合中的关键方法
 *   `Iterable` 接口与迭代器
-
-
-
-* 集合中的嵌套类
-* 包装类
-
+*   集合中的嵌套类
+*   包装类
 
 在本章结束时，你将对 `JCF` 有全面的理解，包括它的架构、核心接口以及它们之间的关系。这些基础知识将使你能够有效地处理不同的集合类型，并理解它们的优缺点和权衡。在随后的章节中，我们将讨论 `List`、`Set` 和 `Map` 的详细实现，为你的真实 Java 开发提供实用的见解。
 
 ## Java 集合框架概述
 
-`JCF` 是一组接口和类，它们为存储和处理对象集合提供了统一的架构。它消除了开发者创建自定义数据结构需要，允许他们利用预构建的、优化的实现。
+`JCF` 是一组接口和类，它们为存储和处理对象集合提供了统一的架构。它消除了开发者创建自定义数据结构的需要，允许他们利用预构建的、优化的实现。
+
 在 Java 2 之前，开发者使用数组和其他手动数据结构来存储和管理数据。然而，数组有几个局限性：
 
-* 大小固定（无法动态增长）
-* 没有内置的排序或搜索算法
-* 在添加或删除元素时缺乏灵活性
+*   大小固定（无法动态增长）
+*   没有内置的排序或搜索算法
+*   在添加或删除元素时缺乏灵活性
+
 为了解决这些问题，`JCF` 提供了可调整且高效的数据结构，使得搜索、排序和迭代等操作变得更加简单。
 
 ## 集合层次结构
 
 `JCF` 是围绕一组接口和抽象类构建的。下图表示了它的层次结构：
+
 ![一张显示 Java 集合框架层次结构的 UML 图，包含接口（Iterable, Collection, List, Queue, Set, Map）以及它们的实现类（例如 ArrayList, HashSet, TreeMap）、关系和继承关系。](img/Figure_4.1.jpg)
 
 图 4.1: 集合层次结构
 
 集合层次结构的关键接口有：
 
-* `List`: 一种有序的集合，允许重复元素（`ArrayList`, `LinkedList`）。
-* `Set`: 不允许重复元素的集合（`HashSet`, `TreeSet`）。
-* `Queue`: 遵循先进先出（FIFO）原则的集合（`PriorityQueue`）。
-* `Map`: 键值对的集合（`Hashtable`, `HashMap`, `TreeMap`）。
-
+*   `List`：一种有序的集合，允许重复元素（`ArrayList`, `LinkedList`）。
+*   `Set`：不允许重复元素的集合（`HashSet`, `TreeSet`）。
+*   `Queue`：遵循先进先出（FIFO）原则的集合（`PriorityQueue`）。
+*   `Map`：键值对的集合（`Hashtable`, `HashMap`, `TreeMap`）。
 
 ## Collection 接口
 
-`collection` 接口是 `JCF` 的根接口。它代表了一组对象（称为元素），是更专门的集合类型如 `List`、`Set` 和 `Queue` 的父接口。
+`Collection` 接口是 `JCF` 的根接口。它代表了一组对象（称为元素），是更专门的集合类型如 `List`、`Set` 和 `Queue` 的父接口。
 
-
-下表显示了 `collection` 和 `collections` 之间的区别：
+下表显示了 `Collection` 和 `Collections` 之间的区别：
 
 | 特性 | Collection | Collections |
 | :--- | :--- | :--- |
-| 包名 | `java.util.Collection` | `java.util.Collection` |
+| 包名 | `java.util.Collection` | `java.util.Collections` |
 | 目的 | 代表一组对象 | 提供操作集合的静态方法 |
 | 关键方法 | `add()`, `remove()`, `size()`, `iterator()` | `sort()`, `reverse()`, `shuffle()`, `min()` |
 | 继承 | 由 `List`, `Set`, `Queue` 扩展 | 无继承。它纯粹是一个辅助类。 |
 | 示例 | `Collection<String> names = new ArrayList<>(); names.add("Ryan"); names.add("Roger");` | `Collections.sort((List<String>) names);` |
-表 4.1: Collections 和 collection 的区别
 
-### collection 接口中的关键方法
+表 4.1: Collections 和 Collection 的区别
 
-`collection` 接口为管理和操作元素提供了几个基本方法。让我们探索最常用的几个，并附带示例：
+### Collection 接口中的关键方法
 
+`Collection` 接口为管理和操作元素提供了几个基本方法。让我们探索最常用的几个，并附带示例：
 
-`add(E element)` 方法尝试将指定的元素插入集合中，如果集合被修改，则返回 true。接下来的示例演示了这种行为：
+#### `add(E element)`
+
+`add(E element)` 方法尝试将指定的元素插入集合中，如果集合被修改，则返回 `true`。接下来的示例演示了这种行为：
 
 ```java
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class AddElementExample {
-  public static void main(String[] args) {
-    Collection<String> names = new ArrayList<>();
-    names.add("Ryan");
-    names.add("Roger");
-    System.out.println(checkAddReturn);// Output: true
-    System.out.println(names); // Output: [Ryan, Roger, Roger]
-  }
+    public static void main(String[] args) {
+        Collection<String> names = new ArrayList<>();
+        names.add("Ryan");
+        names.add("Roger");
+        boolean checkAddReturn = names.add("Roger");
+        System.out.println(checkAddReturn); // Output: true
+        System.out.println(names); // Output: [Ryan, Roger, Roger]
+    }
 }
 ```
-在上面的示例中，`checkAddReturn` 的值为 true，因为集合在执行 `add` 操作后发生了变化。
 
-* `addAll(Collection<? extends E> c)`: 将指定集合中的所有元素添加到当前集合中。
+在上面的示例中，`checkAddReturn` 的值为 `true`，因为集合在执行 `add` 操作后发生了变化。
 
-接下来的示例展示了如何使用 `add(E element)` 方法更新集合并返回一个布尔值指示集合是否被修改：
+#### `addAll(Collection<? extends E> c)`
+
+将指定集合中的所有元素添加到当前集合中。
+
+接下来的示例展示了如何使用 `addAll(Collection<? extends E> c)` 方法更新集合并返回一个布尔值指示集合是否被修改：
+
 ```java
 import java.util.ArrayList;
 import java.util.Collection;
 
 public class AddAllExample {
-public static void main(String[] args) {
-firstCollection.add("Ryan");
-Collection<String> secondCollection = new ArrayList<>();
-secondCollection.add("Roger");
-secondCollection.add("Royce");
-firstCollection.addAll(secondCollection);
-System.out.println(secondCollection); // Output: [Ryan, Royce] // 注意：原文此处是 Ryan
-}
+    public static void main(String[] args) {
+        Collection<String> firstCollection = new ArrayList<>();
+        firstCollection.add("Ryan");
+        Collection<String> secondCollection = new ArrayList<>();
+        secondCollection.add("Roger");
+        secondCollection.add("Royce");
+        firstCollection.addAll(secondCollection);
+        System.out.println(firstCollection); // Output: [Ryan, Roger, Royce]
+    }
 }
 ```
 
 在上面的示例中，我们创建了两个集合并使用 `addAll` 方法将 `secondCollection` 添加到 `firstCollection`。
-* `remove(Object element)`: 如果存在，则移除元素的单个实例。如果元素不存在，则方法返回 false。
+
+#### `remove(Object element)`
+
+如果存在，则移除元素的单个实例。如果元素不存在，则方法返回 `false`。
 
 接下来的示例说明了当指定的元素存在于集合中以及不存在时，`remove(Object element)` 方法的行为：
-
-```java
-import java.util.Collection;
-
-public class RemoveExample {
-  public static void main(String[] args) {
-    Collection<String> names = new ArrayList<>();
-    names.add("Roger");
-    names.add("Royce");
-    System.out.println(names); // Output: [Ryan, Roger, Royce]
-    names.remove("Ryan");
-    System.out.println(names); // Output: [Roger, Royce]
-    boolean result = names.remove("Roy");
-    System.out.println(names); // Output: [Roger, Royce]
-  }
-}
-```
-
-
-此外，对于基于哈希的集合（如 `HashMap`），正确运行于 `equals()` 和 `hashCode()`。我们将在后续关于 Map 的章节中详细讨论这一点。
-
-* `contains(Object element)`: 检查集合是否包含特定元素。
-
 
 ```java
 import java.util.ArrayList;
 import java.util.Collection;
 
-  public static void main(String[] args) {
-    Collection<String> names = new ArrayList<>();
-    names.add("Ryan");
-    names.add("Royce");
-    System.out.println(names.contains("Ryan")); // Output: true
-    System.out.println(names.contains("Roger")); // Output: false
+public class RemoveExample {
+    public static void main(String[] args) {
+        Collection<String> names = new ArrayList<>();
+        names.add("Ryan");
+        names.add("Roger");
+        names.add("Royce");
+        System.out.println(names); // Output: [Ryan, Roger, Royce]
+        names.remove("Ryan");
+        System.out.println(names); // Output: [Roger, Royce]
+        boolean result = names.remove("Roy");
+        System.out.println(names); // Output: [Roger, Royce]
+    }
 }
 ```
 
+此外，对于基于哈希的集合（如 `HashMap`），正确运行依赖于 `equals()` 和 `hashCode()`。我们将在后续关于 Map 的章节中详细讨论这一点。
 
+#### `contains(Object element)`
 
+检查集合是否包含特定元素。
 
-在上面的示例中，`names.contains(Roger)` 返回 `false`，因为集合中不存在该名称。与 `remove` 方法类似，`contains` 方法使用 `equals()` 方法检查元素的相等性。如果集合中没有元素根据 `equals()` 与指定的元素匹配，则该方法返回 `false`。`collection` 接口的其他一些基础方法包括：
+```java
+import java.util.ArrayList;
+import java.util.Collection;
 
-* `int size();`: 返回元素数量
-* `void clear();`: 移除所有元素
+public class ContainsExample {
+    public static void main(String[] args) {
+        Collection<String> names = new ArrayList<>();
+        names.add("Ryan");
+        names.add("Royce");
+        System.out.println(names.contains("Ryan")); // Output: true
+        System.out.println(names.contains("Roger")); // Output: false
+    }
+}
+```
+
+在上面的示例中，`names.contains("Roger")` 返回 `false`，因为集合中不存在该名称。与 `remove` 方法类似，`contains` 方法使用 `equals()` 方法检查元素的相等性。如果集合中没有元素根据 `equals()` 与指定的元素匹配，则该方法返回 `false`。
+
+`Collection` 接口的其他一些基础方法包括：
+
+*   `int size()`：返回元素数量
+*   `void clear()`：移除所有元素
 
 这些方法构成了处理数据结构的核心，让你能够轻松地添加、删除和遍历元素。在随后的章节中，我们将探索这些方法在特定集合类型（如 `List`、`Set` 和 `Map`）中的行为，每种类型都提供了独特的功能和优化。
 
 ## 集合中的关键方法
 
-
 `Collections` 类包含各种静态方法，用于排序、搜索、查找最小/最大元素等任务。这些方法简化了复杂的操作，使开发人员无需编写自定义算法。让我们结合示例拆解一些最常用的方法：
 
 ### 排序列表
-排序是集合上最频繁的操作之一。`Collections.sort()` 方法按照自然顺序对元素进行排序（例如，字符串按字母顺序，数字按升序顺序）。
 
+排序是集合上最频繁的操作之一。`Collections.sort()` 方法按照自然顺序对元素进行排序（例如，字符串按字母顺序，数字按升序顺序）。
 
 考虑以下示例：
 
 ```java
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class SortExample {
@@ -1649,21 +1690,25 @@ public class SortExample {
         List<String> names = new ArrayList<>();
         names.add("Zane");
         names.add("Aiden");
+        names.add("Ryan");
         Collections.sort(names);
         System.out.println(names); // Output: [Aiden, Ryan, Zane]
     }
 }
+```
 
 在这里，我们创建了一个名称列表并使用 `Collections.sort()` 按字母顺序对其排序。排序后的列表打印为 `[Aiden, Ryan, Zane]`。如果需要不区分大小写的排序，可以使用如下所示的 `String.CASE_INSENSITIVE_ORDER`：
 
 ```java
 Collections.sort(names, String.CASE_INSENSITIVE_ORDER);
+```
 
 `String.CASE_INSENSITIVE_ORDER` 是一个内置的 `Comparator<String>`，用于在忽略大小写的情况下比较字符串。
 
 不区分大小写的反排序可以如下所示实现：
 
 ```java
+Collections.sort(names, String.CASE_INSENSITIVE_ORDER.reversed());
 ```
 
 排序有助于组织数据，使其更容易以结构化的格式进行搜索或显示。
@@ -1674,37 +1719,46 @@ Collections.sort(names, String.CASE_INSENSITIVE_ORDER);
 
 ```java
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class MaxMinExample {
     public static void main(String[] args) {
         List<Integer> scores = Arrays.asList(85, 90, 78, 88);
         int maxScore = Collections.max(scores);
+        int minScore = Collections.min(scores);
         System.out.println("Highest Score: " + maxScore); // Output: 90
         System.out.println("Lowest Score: " + minScore);  // Output: 78
     }
 }
 ```
+
 我们创建了一个分数列表并使用 `Collections.max()` 和 `Collections.min()` 找到最高和最低分。当你需要快速确定集合中的边界值时，这些方法非常有用。
 
 ### 随机洗牌元素
+
 `Collections.shuffle()` 方法随机重排列表中的元素。这对于游戏或模拟等需要随机顺序的场景非常有帮助：
 
+```java
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class ShuffleExample {
     public static void main(String[] args) {
+        List<String> names = new ArrayList<>();
         names.add("Ryan");
         names.add("Roger");
         names.add("Royce");
         Collections.shuffle(names);
         System.out.println(names); // Output: Random order of [Roger, Ryan, Royce]
+    }
 }
 ```
 
 在这个示例中，我们向列表中添加了三个名称并使用 `Collections.shuffle()` 重新排序元素。每次运行程序时，顺序都是不同的。这对于卡牌游戏或从列表中随机选择元素等场景非常完美。
+
+### 反转列表
 
 `Collections.reverse()` 方法反转列表中元素的顺序。当你想要反向遍历元素时，这个方法非常有用。
 
@@ -1712,16 +1766,19 @@ public class ShuffleExample {
 
 ```java
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ReverseExample {
     public static void main(String[] args) {
         List<String> names = new ArrayList<>();
+        names.add("Ryan");
         names.add("Roger");
         names.add("Royce");
         System.out.println(names); // Output: [Ryan, Roger, Royce]
         Collections.reverse(names);
         System.out.println(names); // Output: [Royce, Roger, Ryan]
+    }
 }
 ```
 
@@ -1733,44 +1790,56 @@ public class ReverseExample {
 
 ```java
 package com.meennu.javbook.chap4;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class FillExample {
-        List<String> names = new ArrayList<>();
-        names.add("Ryan");
-        names.add("Roger");
-        names.add("Royce");
-        System.out.println(names); // Output: [Ryan, Roger, Royce]
-        Collections.fill(names, "Unknown");
+    public static void main(String[] args) {
+        List<String> names = new ArrayList<>(Collections.nCopies(5, "Default"));
+        System.out.println(names); // Output: [Default, Default, Default, Default, Default]
     }
 }
 ```
 
+
+
+```java
+import java.util.Collections;
+import java.util.List;
+
+public class FillExample {
+    List<String> names = new ArrayList<>();
+    names.add("Ryan");
+    names.add("Roger");
+    names.add("Royce");
+    System.out.println(names); // Output: [Ryan, Roger, Royce]
+    Collections.fill(names, "Unknown");
+}
+```
+
 在这个示例中，`Collections.fill()` 将列表中的每个元素替换为 "Unknown"。这在需要重置集合或初始化默认值元素时非常有用。
-理解 `Collections` 类是关重要的，因为它提供了现成的算法，可以节省时间并降低代码复杂性。这些方法抽象了实现细节，让你能够专注于更高层次的问题。
+理解 `Collections` 类是关键的，因为它提供了现成的算法，可以节省时间并降低代码复杂性。这些方法抽象了实现细节，让你能够专注于更高层次的问题。
 
-
-
-
+| 方法 | 所属类/接口 | 描述 | 修改集合 | 典型用例 |
+| :--- | :--- | :--- | :---: | :--- |
 | `contains(Object o)` | `Collection` | 检查集合是否包含指定的元素。 | 否 | 验证元素是否存在 |
 | `size()` | `Collection` | 返回集合中元素的数量。 | 否 | 获取元素计数 |
 | `isEmpty()` | `Collection` | 检查集合是否为空。 | 否 | 当集合为空时执行条件逻辑 |
 | `clear()` | `Collection` | 移除集合中的所有元素。 | 是 | 重置集合 |
 | `sort(List<T> list)` | `Collections` | 按自然顺序对元素排序。 | 是 | 为搜索或显示组织数据 |
-| `sort(List<T> list, Comparator<? super T> c)` | `Collections` | 使用自定义比较器排序元素。 | 是 | 自定义排序，例如不区分大小的排序 |
+| `sort(List<T> list, Comparator<? super T> c)` | `Collections` | 使用自定义比较器排序元素。 | 是 | 自定义排序，例如不区分大小写的排序 |
 | `min(Collection<? extends T> coll)` | `Collections` | 根据自然顺序返回最小的元素。 | 否 | 寻找最低分或最小值 |
 | `shuffle(List<?> list)` | `Collections` | 随机重排列表中的元素。 | 是 | 为游戏或模拟提供随机化顺序 |
 | `reverse(List<?> list)` | `Collections` | 反转列表中元素的顺序。 | 是 | 逆序处理元素 |
 | `fill(List<? super T> list, T obj)` | `Collections` | 用指定的值替换列表中的所有元素。 | 是 | 初始化或重置所有列表值 |
 
-
 在下一节中，我们将探索 `Iterable` 接口以及迭代器如何提供遍历集合的强大方式，弥补集合操作与迭代之间的差距。
 
 ## Iterable 接口和迭代器
 
-我们使用集合来组织数据，使用迭代器来处理数据。`Iterable` 接口是 Java 中所有集合类的根接口。它代表可以逐个遍历的元素集合。Java 中几乎所有的类都实现了此接口，允许你使用 for-each 循环和迭代器来遍历元素。
+我们使用集合来组织数据，使用迭代器来处理数据。`Iterable` 接口是 Java 中所有集合类的根接口。它代表可以逐个遍历的元素集合。Java 中几乎所有的集合类都实现了此接口，允许你使用 for-each 循环和迭代器来遍历元素。
 `Iterable` 接口提供了 `iterator()` 方法，该方法返回一个 `Iterator` 对象，用于逐个遍历集合中的元素。
 
 理解迭代器可以确保你可以：
@@ -1781,28 +1850,31 @@ public class FillExample {
 `Iterable` 接口仅包含一个方法，如下所示：
 
 ```java
+interface Iterable<T> {
     Iterator<T> iterator();
 }
 ```
 
-该方法返回一个 `Iterator` 对象，该对象提供了几个用于遍历集合的有用方法。`Iterator` 在不暴露其内部结构的情况下遍历集合的方法。
-
+该方法返回一个 `Iterator` 对象，该对象提供了几个用于遍历集合的有用方法。`Iterator` 在不暴露其内部结构的情况下遍历集合。
 
 `Iterator` 接口提供了三个用于导航集合的主要方法：
 
 - `hasNext()`：如果集合还有更多元素，则返回 true。
 - `next()`：返回集合中的下一个元素。
+- `remove()`：从集合中移除迭代器返回的最后一个元素。
 
 让我们通过以下示例理解迭代：
 
 ```java
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class IteratorExample {
     public static void main(String[] args) {
         List<String> names = new ArrayList<>();
         names.add("Ryan");
+        names.add("Roger");
         names.add("Royce");
         Iterator<String> iterator = names.iterator();
         System.out.println("Iterating through the list:");
@@ -1814,20 +1886,15 @@ public class IteratorExample {
             }
         }
         System.out.println("\nList after removal: " + names);
+    }
 }
 ```
 
 输出是：
 ```
-Ryan
-Roger
-Royce
-
+Iterating through the list:
 List after removal: [Roger, Royce]
 ```
-
-
-
 
 我们创建了一个包含元素的单例集合。如果你尝试向此集合添加另一个元素，将导致产生 `UnsupportedOperationException`。
 当你想要将单个项目表示为集合时，可以使用单例集合。它对于默认值或常量元素非常有用。
@@ -1835,43 +1902,43 @@ List after removal: [Roger, Royce]
 ## 同步集合 (Synchronized collections)
 
 如果你在多线程环境中工作，集合默认情况下不是线程安全的。`Collections` 类提供了这些方法，可以将集合包装在同步视图中：
+
 * `Collections.synchronizedList(List<T> list)`
 * `Collections.synchronizedSet(Set<T> set)`
 * `Collections.synchronizedMap(Map<K, V> map)`
 
 以下是创建一个同步列表的示例：
 
+```java
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class SynchronizedExample {
+    public static void main(String[] args) {
         List<String> names = Collections.synchronizedList(new ArrayList<>());
         names.add("Ryan");
         names.add("Roger");
         names.add("Royce");
         // 在迭代期间进行同步
+        synchronized (names) {
             for (String name : names) {
                 System.out.println(name);
             }
         }
-        /*Output: 
-        Ryan
-        Royce*/
     }
 }
 ```
 
-
-| 注意：你仍然需要手动对迭代进行同步（例如使用上面的 `synchronized` 块）。 |
+> **注意**：你仍然需要手动对迭代进行同步（例如使用上面的 `synchronized` 块）。
 
 ## 检查集合 (Checked collections)
-
 
 让我们尝试创建一个检查列表：
 
 ```java
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class CheckedCollectionExample {
@@ -1880,34 +1947,35 @@ public class CheckedCollectionExample {
         names.add("Ryan");
         // names.add(100); // 这将抛出 ClassCastException
         System.out.println("Checked List: " + names);
-        //Output: Checked List: [Ryan]
+        // Output: Checked List: [Ryan]
     }
 }
+```
 
-检查集合增加了运行时安全检查，有助于在开发早期发现发现类型不匹配的 bug。
+检查集合增加了运行时安全检查，有助于在开发早期发现类型不匹配的 bug。
 
 ## 不可变集合 (Immutable collections)
 
 从 Java 9 开始，你可以直接创建不可变集合：
+
 * `List.of()`
 * `Set.of()`
 * `Map.of()`
 
 以下是一个创建一个不可变列表的示例：
+
 ```java
 import java.util.List;
 
 public class ImmutableCollectionExample {
     public static void main(String[] args) {
+        List<String> names = List.of("Ryan", "Roger", "Royce");
         System.out.println("Immutable List: " + names);
-        //Output: Immutable List: [Ryan, Roger, Royce]
-        // 尝试添加错误的类型会导致运行时错误
+        // Output: Immutable List: [Ryan, Roger, Royce]
+        // 尝试添加、删除或修改元素会导致运行时错误
     }
 }
 ```
-
-
-
 
 * `parseInt()`: 将字符串转换为整数。
 * `compareTo()`: 比较两个包装对象（返回负数、零或正数）。
@@ -1916,16 +1984,19 @@ public class ImmutableCollectionExample {
 
 * 内存占用：包装类比基本数据类型消耗更多内存。
 * 空值：包装类可以为 `null`，这增加了灵活性，但也引入了 `NullPointerException` 的风险。
+
 在大多数情况下，其益处大于这些成本，特别是在处理集合（collections）时。
 
 包装类桥接了基本数据类型与 Java 面向对象特性之间的鸿沟。它们使得基本数据类型可以在集合中使用，并提供了实用的工具方法。理解包装类对于掌握 Java 集合至关重要，因为它们在实际应用中频繁出现。
 
 ## 结论
+
 在本章中，我们探索了 JCF（Java 集合框架），理解了它的架构、核心接口和基本方法。我们学习了集合如何简化数据管理，为存储、操作和遍历对象提供了灵活的方式。
 
-我们讨论了 `collection` 和 `collections` 之间的区别、`Iterable` 接口的作用，以及迭代器（iterators）对于访问元素的重要性。嵌套类和包装类进一步扩展了框架的能力，增强了功能和兼容性。
+我们讨论了 `Collection` 和 `Collections` 之间的区别、`Iterable` 接口的作用，以及迭代器对于访问元素的重要性。嵌套类和包装类进一步扩展了框架的能力，增强了功能和兼容性。
 
-在接下来的章节中，我们将深入观察具体的集合类型，从 `list`、`set` 和 `map` 实现开始。我们将理解它们的独特行为、实际应用，以及如何根据给定场景选择合适的集合。
+在接下来的章节中，我们将深入观察具体的集合类型，从 `List`、`Set` 和 `Map` 实现开始。我们将理解它们的独特行为、实际应用，以及如何根据给定场景选择合适的集合。
+
 ## 练习
 
 1. 下列哪项是 Java 集合框架中的根接口？
@@ -1943,96 +2014,106 @@ public class ImmutableCollectionExample {
     2. `Queue`
     3. `Set`
     4. `Map`
-4. Java 中 `collection` 和 `collections` 的区别是什么？
-    1. `Collection` 是一个类，`collections` 是一个接口
-    2. `Collection` 是一个接口，`collections` 是一个工具类
+
+4. Java 中 `Collection` 和 `Collections` 的区别是什么？
+    1. `Collection` 是一个类，`Collections` 是一个接口
+    2. `Collection` 是一个接口，`Collections` 是一个工具类
     3. 它们都是接口
     4. 它们都是工具类
-5. 下列哪个方法是 `collection` 接口的一部分？
+
+5. 下列哪个方法是 `Collection` 接口的一部分？
     1. `sort()`
     2. `add()`
     3. `shuffle()`
     4. `reverse()`
+
 6. 如何使用迭代器遍历集合？
-    1. 通过调用 `iterator()` 方法并使用 `for` 循环
+    1. 通过调用 `iterator()` 方法并使用 `while` 循环
     2. 直接使用 `get()` 方法
     3. 使用 `iterator` 关键字
     4. 先将集合转换为数组
 
+7. 如果你尝试向使用 `List.of()` 创建的列表添加元素，会发生什么？
     1. 元素被成功添加
     2. 抛出运行时异常
     3. 列表动态调整大小
     4. 列表忽略新元素
 
+8. 哪个集合类按排序顺序维护元素且不允许重复？
     1. `ArrayList`
     2. `LinkedList`
     3. `HashSet`
     4. `TreeSet`
 
+9. `iterator.remove()` 方法的作用是什么？
     1. 清空集合中的所有元素
     2. 移除迭代器返回的最后一个元素
     3. 从集合中移除一个随机元素
     4. 根据条件移除元素
 
 10. 集合必须实现哪个接口才能用于增强型 for 循环？
+    1. `Collection`
     2. `Iterable`
     3. `List`
     4. `Comparator`
 
 ### 答案
-1. c
-解释：`Iterable` 接口是 Java 集合框架中的根接口。它提供了使用 `iterator` 或增强型 for 循环遍历元素的能力。
 
-2. b
-解释：Java 集合框架为处理和操作对象组提供了一个统一的架构，使得数据存储、检索和操作变得更加简单。
-3. c
-解释：`Set` 接口不允许重复元素。当你想要维护一个唯一元素集合时，它是非常有用的。
+1. **c**
+   解释：`Iterable` 接口是 Java 集合框架中的根接口。它提供了使用 `iterator` 或增强型 for 循环遍历元素的能力。
 
-4. b
-解释：`Collection` 是大多数集合类型的根接口，而 `Collections` 是一个工具类，提供了提供了用于操作集合的静态方法。
-5. b
-解释：`add()` 方法是 `collection` 接口的一部分，用于向集合中插入元素。
+2. **b**
+   解释：Java 集合框架为处理和操作对象组提供了一个统一的架构，使得数据存储、检索和操作变得更加简单。
 
-6. a
-解释：你可以使用 `iterator()` 方法获取迭代器对象，然后使用它的 `hasNext()` 和 `next()` 方法来遍历元素。
+3. **c**
+   解释：`Set` 接口不允许重复元素。当你想要维护一个唯一元素集合时，它是非常有用的。
 
-解释：用 `List.of()` 创建的列表是不可变的，这意味着任何添加、删除或修改元素的尝试都会抛出 `UnsupportedOperationException`。
+4. **b**
+   解释：`Collection` 是大多数集合类型的根接口，而 `Collections` 是一个工具类，提供了用于操作集合的静态方法。
 
-8. d
-解释：`TreeSet` 按照排序顺序维护元素且不允许重复。它在对顺序重要的场景下非常有用。
+5. **b**
+   解释：`add()` 方法是 `Collection` 接口的一部分，用于向集合中插入元素。
 
-解释：`iterator.remove()` 方法移除迭代器返回的最后一个元素。它必须在 `next()` 之后调用，否则会抛出异常。
+6. **a**
+   解释：你可以使用 `iterator()` 方法获取迭代器对象，然后使用它的 `hasNext()` 和 `next()` 方法来遍历元素。
 
-10. b
-解释：集合必须实现 `Iterable` 接口才能用于增强型 for 循环，因为它提供了用于元素遍历 `iterator()` 方法。
+7. **b**
+   解释：用 `List.of()` 创建的列表是不可变的，这意味着任何添加、删除或修改元素的尝试都会抛出 `UnsupportedOperationException`。
+
+8. **d**
+   解释：`TreeSet` 按照排序顺序维护元素且不允许重复。它在对顺序重要的场景下非常有用。
+
+9. **b**
+   解释：`iterator.remove()` 方法移除迭代器返回的最后一个元素。它必须在 `next()` 之后调用，否则会抛出异常。
+
+10. **b**
+    解释：集合必须实现 `Iterable` 接口才能用于增强型 for 循环，因为它提供了用于元素遍历的 `iterator()` 方法。
 
 # 第 5 章 List 接口及其实现
+
 ## 引言
 
-Java 中的 `List` 接口是 JCF 的一部分，代表元素的有序集合。与 set 不同，list 允许重复元素并提供对元素的位置访问。list 被广泛应用于需要按特定顺序存储、检索和操作元素的场景。
+Java 中的 `List` 接口是 JCF 的一部分，代表元素的有序集合。与 `Set` 不同，`List` 允许重复元素并提供对元素的位置访问。`List` 被广泛应用于需要按特定顺序存储、检索和操作元素的场景。
 
 本章将探讨 `List` 接口及其关键实现，如 `ArrayList`、`LinkedList` 和 `Vector`。它还涵盖了列表同步、不可变集合和检查集合。此外，我们将查看内部实现，比较不同的列表类型并实现自定义行为。
+
 ## 结构
 
 本章涵盖以下主题：
 
 * `List` 接口
+* `ArrayList` 实现
 * `LinkedList` 实现
 * `Vector` 实现
 * 列表同步
-* 不可集合
+* 不可变集合
 * 检查集合
 
-
 本章旨在全面理解 Java 中的 `List` 接口及其关键实现及其工作原理。在本章结束时，你将理解 `ArrayList`、`LinkedList` 和 `Vector` 在性能、内存占用和实际应用方面的差异。你还将学习用于线程安全的同步机制、创建不可变列表以及使用检查集合确保类型安全。此外，本章将包含示例和自定义实现，以巩固你对列表在实际应用中如何工作的理解。
-
-
-
 
 ![显示 List 接口及其类：ArrayList, LinkedList, Vector 和 Stack 的图表。每个类都列出了关键特征，箭头表示实现和扩展关系。](img/Figure_5.1.jpg)
 
 图 5.1：`List` 接口及其实现
-
 
 | 方法 | 描述 |
 | :--- | :--- |
@@ -2044,33 +2125,50 @@ Java 中的 `List` 接口是 JCF 的一部分，代表元素的有序集合。�
 
 表 5.1：`List` 接口中的额外方法
 
-
 ```java
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListExample {
+    public static void main(String[] args) {
         // 创建一个学生姓名的 List
         List<String> studentNames = new ArrayList<>();
-        //向 List 添加元素
+
+        // 向 List 添加元素
         studentNames.add("Ryan");
         studentNames.add("Roger");
+
         // 使用索引访问元素
         System.out.println("First Student: " + studentNames.get(0));
+
         // 遍历 List，这将按照元素添加的顺序打印元素
         System.out.println("All Students:");
         for (String name : studentNames) {
+            System.out.println(name);
         }
-        // 检查元素是否存在
-        System.out.println("Is Ryan in the list? " + studentNames.contains("Ryan"));
-        // 删除一个元素
-        studentNames.remove("Roger");
-        System.out.println("After removing Roger: " + studentNames);
+    }
 }
+```
+
+
+
+// 检查元素是否存在
+
+System.out.println("Is Ryan in the list? " + studentNames.contains("Ryan"));
+
+// 删除一个元素
+
+studentNames.remove("Roger");
+
+System.out.println("After removing Roger: " + studentNames);
+
+}
+
 ```
 
 以下是输出结果：
 
+```
 First Student: Ryan
 All Students:
 Ryan
@@ -2082,6 +2180,7 @@ After removing Roger: [Ryan, Royce]
 这个示例演示了在 `List` 中添加、访问、遍历、检查和删除元素等关键操作。我们使用 `ArrayList`（它是 `List` 接口的一种常用实现）来存储和操作学生姓名。`add()` 方法插入元素，`get(index)` 获取元素，`contains()` 方法检查特定元素是否存在于列表中。`remove()` 方法删除元素，而遍历列表允许我们打印所有存储的名称。由于 `ArrayList` 维护插入顺序，输出反映了元素被添加的顺序。
 
 ## ArrayList 实现
+
 `ArrayList` 是 Java 中使用广泛的 `List` 接口实现之一。它是 `java.util` 包的一部分，提供了一个根据需要增长的动态数组，这与具有固定大小的普通数组不同。在内部，`ArrayList` 维护一个数组（`Object[] elementData`），当其达到容量时会进行扩展。
 
 以下是 `ArrayList` 的内部结构：
@@ -2092,71 +2191,71 @@ After removing Roger: [Ryan, Royce]
 *   随着元素的添加，它们被按顺序放入此数组中。
 *   当数组满时，`ArrayList` 会创建一个新数组。
 
-
-
-
-
-
 ## 优化提示：如果你提前知道列表的预期大小，请使用：
+
 ```java
 List<Integer> numbers = new ArrayList<>(100);
 ```
 
 这可以避免多次扩容，从而提高性能。
+
 ## 在末尾插入（最佳情况）
 
 *   在列表末尾添加元素（当容量未超过容量时）需要 `O(1)`（分摊）时间。
 *   如果需要扩容，由于需要复制元素，成本为 `O(n)`。
-* 优化提示是，如果预计会在中间频繁添加，请考虑使用 `LinkedList`。我们将在稍后的章节中讨论 `LinkedList`。
+*   优化提示是，如果预计会在中间频繁添加，请考虑使用 `LinkedList`。我们将在稍后的章节中讨论 `LinkedList`。
+
 ## 在开头或中间插入（最坏情况）
 
 *   在开头或中间添加元素会导致所有后续元素向右移动。
-* 为了理解在开头或中间插入的成本，请考虑以下示例，我们在索引 `0` 处插入了一个元素。
+*   为了理解在开头或中间插入的成本，请考虑以下示例，我们在索引 `0` 处插入了一个元素。
 
 ```java
 ```
 
 当你在索引 `0` 处插入元素时，`ArrayList` 中的所有现有元素都会右移动一位以腾出空间。这种移动操作需要线性时间 `O(n)`，因为每个受影响的元素都必须单独移动。这被认为是最坏情况。
-* 如果需要频繁在中间插入，`LinkedList` 是更好的选择。
 
+*   如果需要频繁在中间插入，`LinkedList` 是更好的选择。
 
 *   删除最后一个元素（`remove(size - 1)`） | `O(1)`（不需要移动）。
 *   从中间或开头删除（`remove(index)`） | `O(n)`（所有元素向左移动）。
-* 优化提示是，如果顺序不重要，可以将目标元素与最后一个元素交换，然后将其删除：
+*   优化提示是，如果顺序不重要，可以将目标元素与最后一个元素交换，然后将其删除：
 
 ```java
 numbers.remove(numbers.size() - 1); // 移除最后一个元素
 ```
 
-* 这这将移动成本从 `O(n)` 降低到 `O(1)`。
+*   这将移动成本从 `O(n)` 降低到 `O(1)`。
 
-
-* ``ArrayList` 预留了额外的空间以减少扩容次数。
+*   `ArrayList` 预留了额外的空间以减少扩容次数。
 *   如果 `ArrayList` 的元素远少于其容量，则会浪费内存。
-* 优化提示是，如果 `ArrayList` 不会再增长，请修剪未使用的容量：
+*   优化提示是，如果 `ArrayList` 不会再增长，请修剪未使用的容量：
 
+```java
 numbers.trimToSize();
 ```
 
-* 这将释放多余内存。
+*   这将释放多余内存。
 
 ## 同步与线程安全
-* `ArrayList` 不是线程安全的。
-* 如果多个线程并发修改列表，请使用：
+
+*   `ArrayList` 不是线程安全的。
+*   如果多个线程并发修改列表，请使用：
 
 ```java
 List<Integer> syncList = Collections.synchronizedList(new ArrayList<>());
+```
 
 然而，`CopyOnWriteArrayList` 是并发读取和偶尔写入的更好选择。这使得读取非常快（`O(1)`），但为写入增加了开销（`O(n)`）。它适用于读取频繁但写入稀少的场景，例如缓存或事件监听器列表。我们即将在稍后的章节中看到 `CopyOnWriteArrayList` 的示例。
 
 ## ArrayList 的自定义实现
 
 为了更好地理解 `ArrayList`，让我们来实现它的简化版本。以下是需要考虑的点：
+
 *   **内部存储**：我们可以使用整数数组（`data`）来存储元素。
 *   **动态扩展**：如果在添加新元素时数组已满，我们可以通过将容量翻倍并复制现有元素来提供扩容逻辑。
 *   **检索**：为了检索元素，我们可以拥有一个 `get(index)` 方法。我们可以在返回元素之前添加验证，以确保索引在边界内。
 *   **大小跟踪**：我们可以通过 `size` 变量来跟踪数组的大小。该变量记录了已添加元素的数量。
-
 
 ```java
 class CustomArrayList {
@@ -2179,22 +2278,18 @@ class CustomArrayList {
         int[] newData = new int[capacity];
         System.arraycopy(data, 0, newData, 0, size);
         data = newData;
-
+    }
     public int get(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index out of bounds");
         }
+        return data[index];
     }
-
     public int size() {
         return size;
     }
+}
 ```
-
-
-
-
-
 
 图 5.6：添加 40 后的 `LinkedList`
 
@@ -2204,39 +2299,43 @@ class CustomArrayList {
 
 总结这种结构，每个节点存储两个引用（`next` 和 `prev`）。`head` 始终指向第一个节点。`tail`（最后一个节点）指向 `null`。
 
-在移�除（删除）元素的情况下，只需更新引用即可。
+在移除（删除）元素的情况下，只需更新引用即可。
+
 假设我们使用以下代码删除 20：
 
 ```java
 list.remove(Integer.valueOf(20));
 ```
 
-
 ![一个包含三个节点的双向链表图：10, 30 和 40。箭头表示正向和反向链接。head 指向第一个节点 (10)，其之前的指针被设置为 null。 ](img/Figure_5.7.jpg)
 
 图 5.7：删除 20 后的 `LinkedList`
-
 
 * `10 next` 现在指向 `30`（跳过 20）
 * `30 prev` 现在指向 `10`
 
 ### `LinkedList` 的性能考量
+
 在决定使用 `LinkedList` 还是 `ArrayList` 时，理解 `LinkedList` 的性能特性至关重要。虽然 `LinkedList` 提供了高效的插入和删除，但在内存使用和元素访问速度方面存在权衡。让我们探索以下关键性能方面：
 
 * **插入和删除**：
     * 在开头或末尾的高效插入或删除：与 `ArrayList` 不同，`LinkedList` 在插入或删除时不需要移动元素。只需更新节点中的 `previous` 和 `next` 引用，使得在头部或尾部添加或删除元素的复杂度为 `O(1)`。
     * 中间插入或删除需要遍历：如果在中间插入或删除元素，我们需要遍历列表以找到正确的位置，这在最坏情况下复杂度为 `O(n)`。
+
 * **元素访问**：
     * 通过索引访问元素需要从头部或尾部遍历，这在最坏情况下复杂度为 `O(n)`。
     * 如果按顺序访问元素，由于缺乏连续内存存储，其迭代速度比 `ArrayList` 慢。
+
 * **内存开销**：
     * 更高的内存占用：`LinkedList` 中的每个节点都存储数据和两个引用（`previous` 和 `next`），与只存储元素的 `ArrayList` 相比，增加了内存消耗。
     * 垃圾回收开销：频繁的插入和删除会导致更多的对象创建和移除，这可能会影响垃圾回收性能。
     * 正向和反向遍历：`LinkedList` 支持使用 `ListIterator` 在两个方向上高效迭代，但它仍然是 `O(n)`。
     * 缓存局部性差：由于元素分散在内存中，访问它们需要额外的指针解引用，使得迭代比 `ArrayList` 慢。
+
 * **`LinkedList` 表现更好的用例**：
     * 频繁的插入或删除：如果你经常在列表开头或中间插入或移除元素，`LinkedList` 的性能优于 `ArrayList`。
     * 队列和栈实现：当 `LinkedList` 用作队列（FIFO）或栈（LIFO）时，它是理想的选择，因为插入和删除非常高效。
+
 ### 自定义 `LinkedList` 实现
 
 为了深入理解 `LinkedList`，让我们自己实现一个自定义的 `LinkedList`。
@@ -2248,44 +2347,50 @@ list.remove(Integer.valueOf(20));
 
 以下是 `Node` 类的一个示例：
 
+```java
 class Node<T> {
     T data;
     Node<T> next;
     Node<T> prev;
-
     public Node(T data) {
+        this.data = data;
         this.next = null;
         this.prev = null;
     }
 }
 ```
+
 链表维护对 `head`（第一个节点）和 `tail`（最后一个节点）的引用。它还跟踪列表的大小：
 
 ```java
 class CustomLinkedList<T> {
     private Node<T> head;
+    private Node<T> tail;
     private int size;
-
     public CustomLinkedList() {
         this.head = null;
         this.tail = null;
         this.size = 0;
+    }
 }
 ```
 
 为了添加新元素，我们可以创建一个 `add` 方法。它通过更新 `next` 和 `prev` 引用将新元素附加到末尾：
 
+```java
 public void add(T data) {
     Node<T> newNode = new Node<>(data);
     if (head == null) { // 如果列表为空
         head = newNode;
         tail = newNode;
     } else {
+        tail.next = newNode;
         newNode.prev = tail;
         tail = newNode;
     }
     size++;
 }
+```
 
 在上面的代码中：
 * 如果列表为空，新节点将同时成为 `head` 和 `tail`。
@@ -2296,67 +2401,75 @@ public void add(T data) {
 ```java
 public boolean remove(T data) {
     if (head == null)
-        return false; // 列表
+        return false; // 列表为空
+    Node<T> current = head;
     while (current != null) {
         if (current.data.equals(data)) {
             if (current == head) { // 删除头部
                 head = head.next;
                 if (head != null) {
+                    head.prev = null;
                 } else {
                     tail = null;
                 }
             } else if (current == tail) { // 删除尾部
                 tail = tail.prev;
                 if (tail != null) {
+                    tail.next = null;
                 }
             } else { // 删除中间
                 current.prev.next = current.next;
                 current.next.prev = current.prev;
             }
+            size--;
             return true;
         }
         current = current.next;
     }
     return false; // 未找到
 }
+```
 
 与 `ArrayList` 不同，`LinkedList` 没有直接索引访问。我们需要遍历列表来找到元素。我们可以通过以下 `get` 方法来实现：
 
 ```java
 public T get(int index) {
+    if (index < 0 || index >= size) {
         throw new IndexOutOfBoundsException("Index: " + index);
     }
     Node<T> current;
     if (index < size / 2) { // 从头部遍历
         current = head;
+        for (int i = 0; i < index; i++) {
             current = current.next;
         }
     } else { // 从尾部遍历
         current = tail;
         for (int i = size - 1; i > index; i--) {
             current = current.prev;
+        }
     }
     return current.data;
 }
 ```
-
 
 ```java
 public void display() {
     Node<T> current = head;
     while (current != null) {
         System.out.print(current.data + " => ");
+        current = current.next;
     }
     System.out.println("null");
 }
 ```
-
 
 ```java
 public class LinkedListDemo {
     public static void main(String[] args) {
         CustomLinkedList<Integer> list = new CustomLinkedList<>();
         list.add(10);
+        list.add(20);
         list.add(30);
         list.add(40);
         list.display(); // 输出: 10 => 20 => 30 => 40 => null
@@ -2365,9 +2478,6 @@ public class LinkedListDemo {
     }
 }
 ```
-
-
-
 
 `Java` 中的 `Vector` 是 `java.util` 包的一部分，它提供了一种类似于 `ArrayList` 的动态数组结构。然而，与 `ArrayList` 不同，`Vector` 是同步的，这使得它是安全的，但由于同步开销，速度可能会较慢。在本节中，我们将探索 `Vector` 的内部实现、存储机制以及性能考虑。
 
@@ -2378,12 +2488,16 @@ public class LinkedListDemo {
 - 它实现了 `List` 接口，允许存在重复元素，同时保持插入顺序。
 
 让我们来看一个创建和使用 `Vector` 的示例：
+
+
+
 ```java
 import java.util.Vector;
 
 public class VectorExample {
   public static void main(String[] args) { 
     // 创建一个整数 Vector
+    Vector<Integer> numbers = new Vector<>();
     // 添加元素
     numbers.add(10);
     numbers.add(20);
@@ -2395,13 +2509,17 @@ public class VectorExample {
     numbers.remove(2); // 移除 30
     // 显示 Vector
     System.out.println("Updated Vector: " + numbers);
+  }
 }
 ```
 
 以下是输出：
 
+```
 Last element: 40
+
 Updated Vector: [10, 20, 40]
+```
 
 类似于 `ArrayList`：
 
@@ -2411,11 +2529,12 @@ Updated Vector: [10, 20, 40]
 以下是性能考虑：
 
 - `Vector` 是同步的，这意味着多个线程可以安全地修改它。然而，这是以性能为代价的。
-- 如果不需要同步，则优先 `ArrayList`。
+- 如果不需要同步，则优先使用 `ArrayList`。
 - 当多个线程并发访问并修改集合时，`Vector` 是合适的。
 
 在 `ArrayList`、`LinkedList` 和 `Vector` 之间做出选择时，理解它们在性能、同步用法方面的关键区别至关重要。下表总结了每种集合的主要功能和特性，帮助你根据特定需求做出明智选择：
 
+| 特性 | ArrayList | LinkedList | Vector |
 | :--- | :--- | :--- | :--- |
 | 底层数据结构 | 动态数组 | 双向链表 | 动态数组 |
 | 访问时间（随机访问） | 常数时间 (O(1)) | 线性时间 (O(n)) | 常数时间 (O(1)) |
@@ -2427,11 +2546,13 @@ Updated Vector: [10, 20, 40]
 | 使用场景 | 最适合频繁访问、较少修改 | 最适合频繁插入和删除 | 适用于需要线程安全的遗留系统 |
 
 表 5.2：ArrayList、LinkedList 和 Vector 的比较
+
 ## 列表中的同步
 
 在多线程环境中，多个线程可能尝试同时从列表读取或写入数据。如果没有适当的同步，可能会导致竞态条件、数据不一致，甚至出现如 `ConcurrentModificationException` 等运行时异常。为了维护数据完整性并确保线程安全，使用同步列表实现或使用同步机制封装现有列表是至关重要的。
 
 某些类（如 `Vector`）默认是同步的，这意味着它们的所有方法都是线程安全的。然而，在单线程或读密集型环境中，它们会带来性能权衡。另一方面，常用的集合如 `ArrayList` 和 `LinkedList` 不是线程安全的，当被多个线程并发访问时，需要显式同步。
+
 ### Collections.synchronizedList()
 
 `Collections.synchronizedList()` 方法为列表提供了一个同步包装器。让我们通过示例来看下它的用法：
@@ -2439,64 +2560,81 @@ Updated Vector: [10, 20, 40]
 ```java
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class SynchronizedListExample {
   public static void main(String[] args) {
     // 使用 Collections.synchronizedList() 创建线程安全的（同步）列表
+    List<Integer> list = Collections.synchronizedList(new ArrayList<>());
     list.add(10);
     list.add(20);
     list.add(30);
 
     /*
     * 尽管列表对单个操作是同步的，
+    * 迭代时仍需手动同步
     */
     synchronized (list) {
       for (Integer num : list) {
         System.out.println(num);
       }
-  }
-}
-```
-
-输出：
-20
-30
-
-注意：仅在迭代时需要同步块。
-
-### CopyOnWriteArrayList
-Java 提供了 `CopyOnWriteArrayList`，这是一种线程安全的列表，写操作会创建列表的副本。让我们通过示例来看它的用法：
-
-```java
-import java.util.concurrent.CopyOnWriteArrayList;
-
-public class CopyOnArrayListExample {
-    CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<>();
-    list.add("Java");
-    list.add("Python");
-    list.add("C++");
-
-      System.out.println(language);
     }
   }
 }
 ```
 
+输出：
+
+```
+10
+20
+30
+```
+
+注意：仅在迭代时需要同步块。
+
+### CopyOnWriteArrayList
+
+Java 提供了 `CopyOnWriteArrayList`，这是一种线程安全的列表，写操作会创建列表的副本。让我们通过示例来看它的用法：
+
+```java
+import java.util.concurrent.CopyOnWriteArrayList;
+
+public class CopyOnWriteArrayListExample {
+    public static void main(String[] args) {
+        CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<>();
+        list.add("Java");
+        list.add("Python");
+        list.add("C++");
+
+        for (String language : list) {
+            System.out.println(language);
+        }
+    }
+}
+```
+
+输出：
+
+```
 Java
 Python
 C++
+```
 
 由于 `CopyOnWriteArrayList` 不允许修改影响正在进行的迭代，它可以防止 `ConcurrentModificationException`，但消耗更多内存。
-
 
 在 Java 中，有时我们需要只读集合以确保初始化后数据保持不变。`Collections` 类提供了创建 `List`、`Set` 和 `Map` 不变版本的方法。
 
 这在从 API 暴露集合时特别有用，因为我们希望防止调用者进行意外修改。
 
-
 让我们通过一个示例来理解这一点：
 
 ```java
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+
 List<String> names = new ArrayList<>();
 names.add("Roger");
 
@@ -2505,16 +2643,12 @@ List<String> unmodifiableNames = Collections.unmodifiableList(names);
 unmodifiableNames.add("Royce"); // 抛出 UnsupportedOperationException
 ```
 
-
-
-
-
 在上面的示例中：
 
 * `unmodifiableList()` 方法封装了原始列表并防止对其修改。
 * 如果尝试修改列表，将会抛出 `UnsupportedOperationException`。
 
-注意：如果原始列表（names）被修改，这些更改将反映在不可修改的列表中。要创建一个真正不可变的列表（immutable），Java 9+ 提供了 `List.of()` 方法，它同时防止了对底层集合的修改和更新。
+注意：如果原始列表（`names`）被修改，这些更改将反映在不可修改的列表中。要创建一个真正不可变的列表（immutable），Java 9+ 提供了 `List.of()` 方法，它同时防止了对底层集合的修改和更新。
 
 以下是 `List.of()` 的用法示例：
 
@@ -2535,6 +2669,10 @@ List<String> immutableNames = List.of("Ryan", "Roger", "Royce");
 让我们通过一个示例来理解这一点：
 
 ```java
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+
 List rawList = new ArrayList(); // 原始类型 (raw type)
 List<String> checkedList = Collections.checkedList(rawList, String.class);
 
@@ -2543,7 +2681,7 @@ rawList.add(10);             // 编译通过，但会导致运行时错误
 System.out.println(checkedList.get(1)); // 抛出 ClassCastException
 ```
 
-`Collections.checkedList()` 将原始原始列表封装为检查列表，该列表在运行时强制类型安全。添加 `Hello` 是允许的，但当直接向原始列表添加整数 (`10`) 时，它绕过了编译时检查。然而，通过 `checkedList` 访问它会导致 `ClassCastException`，因为封装器确保了只有 `String` 对象在运行时被视为有效元素。
+`Collections.checkedList()` 将原始列表封装为检查列表，该列表在运行时强制类型安全。添加 `Hello` 是允许的，但当直接向原始列表添加整数 (`10`) 时，它绕过了编译时检查。然而，通过 `checkedList` 访问它会导致 `ClassCastException`，因为封装器确保了只有 `String` 对象在运行时被视为有效元素。
 
 ### 使用检查集合的优势
 
@@ -2556,65 +2694,75 @@ System.out.println(checkedList.get(1)); // 抛出 ClassCastException
 
 ## 结论
 
-在本章中，我们学习了不可变列表和检查集合。我们了解了 `unmodifiableList()` 和 `List.of()` 的区别：`unmodifiableList()` 只是原始列表的视图，如果原始列表被修改，视图也会随之改变；而 `List.of()` 创建的是真正的不可变列表。我们学习了 `List.of()` 如何创建一个完全被修改的列表。我们还学习了检查集合，以及它们如何在运行时强制类型安全，这在处理泛型集合时非常有用。
+在本章中，我们学习了不可变列表和检查集合。我们了解了 `unmodifiableList()` 和 `List.of()` 的区别：`unmodifiableList()` 只是原始列表的视图，如果原始列表被修改，视图也会随之改变；而 `List.of()` 创建的是真正的不可变列表。我们还学习了检查集合，以及它们如何在运行时强制类型安全，这在处理泛型集合时非常有用。
 
 ## 练习题 (Exercise)
 
 1. 下列哪项关于 `ArrayList` 是正确的？
+
     1. `List<int> list = new ArrayList<>();`
     2. `List<String> list = new ArrayList<>();`
     3. 以上都是
     4. 以上均不是
 
 2. `ArrayList` 的默认容量是多少？
+
     1. 5
     2. 10
     3. 16
     4. 20
 
 3. `ArrayList` 是如何扩容的？
+
     1. 它创建一个新数组。
     2. 它按原始大小的 1.5 倍进行增长。
-    3. 它动态增加大小。
+    4. 它动态增加大小。
     4. 以上
 
 4. 在 `ArrayList` 的末尾添加元素的时间复杂度是多少？
+
     1. `O(1)`
     2. `O(n)`
     3. `O(log n)`
     4. `O(n²)`
 
 5. `LinkedList` 在 Java 中使用什么数据结构？
+
     1. 动态数组
     2. 双链表
     3. 单链表
     4. 哈希表
 
 6. 关于 `Vector`，下列哪项是正确的？
+
     1. 它是同步的
     2. 它在满时会动态增加大小
     3. 它比 ArrayList 更好
     4. 以上
 
 7. 使用哪种方法获取 `ArrayList` 的同步版本？
+
     1. `Collections.synchronizedList()`
     2. `Collections.synchronizedArrayList()`
     3. `Arrays.synchronizedList()`
     4. `synchronized(new ArrayList())`
 
 8. 下列哪个类用于创建不可修改列表？
+
     1. `Collections.unmodifiableList()`
     2. `List.unmodifiable()`
     3. `Arrays.unmodifiableList()`
     4. `Collections.synchronizedList()`
 
 9. 检查集合的目的是什么？
+
     1. 防止空值
     2. 在运行时确保类型安全
     3. 允许并发修改
     4. 提高性能
 
 10. 哪种列表实现适合频繁插入和删除？
+
     1. `ArrayList`
     2. `Vector`
     3. `LinkedList`
@@ -2622,46 +2770,42 @@ System.out.println(checkedList.get(1)); // 抛出 ClassCastException
 
 ### 答案 (Answers)
 
-1. b
-解释：Java 泛型不支持原始类型，因此 `List<int>` 是无效的。正确的用法是指定有效的泛型类型。
+1. **b**
+   解释：Java 泛型不支持原始类型，因此 `List<int>` 是无效的。正确的用法是指定有效的泛型类型。
 
-2. b
-解释：`ArrayList` 在创建时的默认初始容量是 10。
+2. **b**
+   解释：`ArrayList` 在创建时的默认初始容量是 10。
 
-3. b
-解释：当达到容量时，它通常按原始大小的 1.5 倍进行增长。
+3. **b**
+   解释：当达到容量时，它通常按原始大小的 1.5 倍进行增长。
 
-4. a
-解释：在 `ArrayList` 末尾添加元素的时间复杂度通常为 `O(1)`，除非发生调整，此时为 `O(n)`。
+4. **a**
+   解释：在 `ArrayList` 末尾添加元素的时间复杂度通常为 `O(1)`，除非发生调整，此时为 `O(n)`。
 
-5. b
-解释：Java 中的 `LinkedList` 是用双链表实现的。
+5. **b**
+   解释：Java 中的 `LinkedList` 是用双链表实现的。
 
-6. d
-解释：`Vector` 是同步的，在满时会动态增加大小，并在需要线程安全的环境中使用。
+6. **d**
+   解释：`Vector` 是同步的，在满时会动态增加大小，并在需要线程安全的环境中使用。
 
-7. a
-解释：`Collections.synchronizedList()` 方法返回指定列表的同步版本。
+7. **a**
+   解释：`Collections.synchronizedList()` 方法返回指定列表的同步版本。
 
-8. a
-解释：`Collections.unmodifiableList()` 方法返回列表的不可修改版本。
+8. **a**
+   解释：`Collections.unmodifiableList()` 方法返回列表的不可修改版本。
 
-9. b
-解释：检查集合通过封装类型验证来在运行时确保类型安全。
+9. **b**
+   解释：检查集合通过封装类型验证来在运行时确保类型安全。
 
-10. c
-解释：`LinkedList` 由于其链表结构，适合频繁的插入和删除。
-
-
-
-
-解释：对于频繁的插入和删除，优先选择 `LinkedList`，因为它使用了双链表结构，使得此类操作非常高效。
+10. **c**
+    解释：`LinkedList` 由于其链表结构，适合频繁的插入和删除。
+    解释：对于频繁的插入和删除，优先选择 `LinkedList`，因为它使用了双链表结构，使得此类操作非常高效。
 
 加入我们的 Discord 空间
 
 加入我们的 Discord 工作区获取最新更新、优惠、全球科技动态、新发布以及与作者的交流活动：
 
-**[`discord.bpbonline.com`](https://discord.bpbonline.com)**
+[`discord.bpbonline.com`](https://discord.bpbonline.com)
 
 ![QR-Logo](img/fm1.png)
 
@@ -2699,16 +2843,21 @@ Java 中的 `Map` 接口定义了键值映射的规范。它是 `java.util` 包�
 
 以下是 Map 的关键特性：
 
-* 键的唯一性：`Map` 不允许重复的键，确保每个键只关联一个值。
-* 空键/值处理：某些 `Map` 实现允许 `null` 键和值，而另一些则不允许。
-* 基础操作：接口包含了 `put()`、`get()`、`remove()` 和 `containsKey()` 等基本方法，有助于管理存储在 `Map` 中的数据。
-* 迭代器：Map 为键、值和条目（entries）提供了迭代器，使得遍历数据变得简单。
+* **键的唯一性**：`Map` 不允许重复的键，确保每个键只关联一个值。
+* **空键/值处理**：某些 `Map` 实现允许 `null` 键和值，而另一些则不允许。
+* **基础操作**：接口包含了 `put()`、`get()`、`remove()` 和 `containsKey()` 等基本方法，有助于管理存储在 `Map` 中的数据。
+* **迭代器**：Map 为键、值和条目（entries）提供了迭代器，使得遍历数据变得简单。
 
 为了更好地理解 `Map` 接口的功能，这里是常用方法列表及其描述。这些方法为管理 `Map` 中的键值映射提供了基本操作。请参考下表：
 
 | 方法 | 描述 |
 | :--- | :--- |
 | `put(K key, V value)` | 将键值对插入到 map 中。如果键已存在，则更新与其关联的值 |
+
+
+
+| 方法 | 说明 |
+| :--- | :--- |
 | `get(Object key)` | 检索与指定键关联的值，如果该键在 map 中不存在，则返回 `null` |
 | `remove(Object key)` | 移除与指定键关联的键值对。如果找到则返回该值，如果键不存在则返回 `null` |
 | `containsKey(Object key)` | 如果 map 包含指定键的映射，则返回 `true`；否则返回 `false` |
@@ -2720,7 +2869,7 @@ Java 中的 `Map` 接口定义了键值映射的规范。它是 `java.util` 包�
 | `isEmpty()` | 如果 map 中不包含任何键值映射，则返回 `true`；否则返回 `false` |
 | `clear()` | 移除 map 中所有的键值映射 |
 | `putAll(Map<? extends K,? extends V> m)` | 将指定 map 中的所有映射拷贝到当前 map |
-| `equals(Object o)` | 根据键值映射将指定对象与 map 进行等等性比较 |
+| `equals(Object o)` | 根据键值映射将指定对象与 map 进行等值性比较 |
 | `hashCode()` | 根据其键值对返回 map 的哈希值 |
 | `forEach(BiConsumer<? super K,? super V> action)` | 对 map 中的每个键值对执行指定的动作 |
 
@@ -2738,9 +2887,9 @@ Java 提供了 `Map` 接口的若干种实现，每种实现都针对特定的�
 
 以下是关键特性：
 
-* 顺序：`HashMap` 不保证元素的特定顺序。随着时间的推移，键顺序可能会改变。
-* 空处理：`HashMap` 允许 `null` 键和多个 `null` 值，这在所有 `Map` 实现中都是允许的。
-* 并发：`HashMap` 不是同步的，意味着它不是线程安全的。如果你在并发环境中使用它，可以使用 `ConcurrentHashMap` 或通过 `Collections.synchronizedMap()` 对其封装。
+* **顺序**：`HashMap` 不保证元素的特定顺序。随着时间的推移，键顺序可能会改变。
+* **空处理**：`HashMap` 允许 `null` 键和多个 `null` 值，这在所有 `Map` 实现中都是允许的。
+* **并发**：`HashMap` 不是同步的，意味着它不是线程安全的。如果你在并发环境中使用它，可以使用 `ConcurrentHashMap` 或通过 `Collections.synchronizedMap()` 对其封装。
 
 ### HashMap 的内部结构
 
@@ -2750,7 +2899,7 @@ Java 提供了 `Map` 接口的若干种实现，每种实现都针对特定的�
 
 让我们了解 `HashMap` 的关键特性：
 
-* `Node<K,V>` 类：内部，每个键值对由一个名为 `Node<K,V>` 的静态内部类表示，该类实现了 `Map.Entry<K,V>` 接口。这是其结构的简化版本：
+* **`Node<K,V>` 类**：内部，每个键值对由一个名为 `Node<K,V>` 的静态内部类表示，该类实现了 `Map.Entry<K,V>` 接口。这是其结构的简化版本：
 
 ```java
 static class Node<K,V> implements Map.Entry<K,V> {
@@ -2768,21 +2917,17 @@ static class Node<K,V> implements Map.Entry<K,V> {
 * `hash`：键的哈希码。
 * `key`：条目的键。
 * `value`：与键关联的值。
+* `next`：指向桶中下一个节点的引用（用于发生冲突的情况）。
 
-
-
-
-*   `next`: 指向桶中下一个节点的引用（用于发生冲突的情况）。
-
-*   桶数组（table）：`HashMap` 维护一个名为 `table` 的数组，其中每个元素都是一个 `Node` 的引用。该数组的默认初始容量为 16，并会随着条目数量的增加而动态调整大小。
+* **桶数组（table）**：`HashMap` 维护一个名为 `table` 的数组，其中每个元素都是一个 `Node` 的引用。该数组的默认初始容量为 16，并会随着条目数量的增加而动态调整大小。
 
 这通过以下代码表示：
 
-```
+```java
 transient Node<K,V>[] table;
 ```
 
-*   哈希函数：为了确定键值对应该所在的桶索引，`HashMap` 使用哈希函数。它计算键的哈希码（hash code），然后应用辅助哈希函数来减少冲突。以下是使用的哈希函数：
+* **哈希函数**：为了确定键值对应该所在的桶索引，`HashMap` 使用哈希函数。它计算键的哈希码，然后应用辅助哈希函数来减少冲突。以下是使用的哈希函数：
 
 ```java
 static final int hash(Object key) {
@@ -2791,13 +2936,13 @@ static final int hash(Object key) {
 }
 ```
 
-该函数获取键的原始哈希码，并使用异或（`^`）操作将其高位与低位位混合。这有助于哈希码在各个桶之间实现更均匀的分布，特别是当哈希码的高位存在模式时。
+该函数获取键的原始哈希码，并使用异或（`^`）操作将其高位与低位混合。这有助于哈希码在各个桶之间实现更均匀的分布，特别是当哈希码的高位存在模式时。
 
-*   索引计算：一旦计算出哈希码，使用以下公式确定桶数组的索引：
+* **索引计算**：一旦计算出哈希码，使用以下公式确定桶数组的索引：
 
 `index = (n - 1) & hash;`
 
-在这里，`n` 是桶数组的长度（即 `HashMap` 的容量）。与 `n - 1` 进行按位与（`&`）操作可确保索引在数组的范围内。这种方法是高效的，因为它避免了使用取模运算符（modulo operator），并且当 `n` 是 2 的幂时非常有效，而 `HashMap` 的容量始终是 2 的幂。
+在这里，`n` 是桶数组的长度（即 `HashMap` 的容量）。与 `n - 1` 进行按位与（`&`）操作可确保索引在数组的范围内。这种方法是高效的，因为它避免了使用取模运算符，并且当 `n` 是 2 的幂时非常有效，而 `HashMap` 的容量始终是 2 的幂。
 
 为了更好地理解这一点，让我们通过一个示例来演示 `HashMap` 中一些关键方法的内部操作。
 
@@ -2818,8 +2963,8 @@ int h = "Apple".hashCode();
 
 然后应用辅助哈希，`h = h ^ (h >>> 16)`：
 
-*   `h`: `63062875 ^ (63062875 >>> 16)`
-*   `h`: `63062875 ^ 961` 得到最终哈希码 = `63061914`
+* `h`: `63062875 ^ (63062875 >>> 16)`
+* `h`: `63062875 ^ 961` 得到最终哈希码 = `63061914`
 
 `HashMap` 的数组长度始终是 2 的幂。初始容量为 16。因此，索引计算如下：
 
@@ -2829,8 +2974,8 @@ int h = "Apple".hashCode();
 
 现在，`HashMap` 检查索引 2 是否已经存在节点：
 
-*   如果是，它使用 `equals()` 比较键以判断是否是同一个键。如果键相同，则用新值更新旧值。
-*   如果不是，它创建一个新节点并将其插入该位置。
+* 如果是，它使用 `equals()` 比较键以判断是否是同一个键。如果键相同，则用新值更新旧值。
+* 如果不是，它创建一个新节点并将其插入该位置。
 
 在我们的示例中，它是空的，所以如下所示添加了一个新节点：
 
@@ -2846,9 +2991,9 @@ map.get("Apple");
 
 以下是从 `Map` 检索值遵循的序列：
 
-*   计算 `Apple` 的哈希码，得到 `63061914`。
-*   计算索引，得到 2，然后进入第 2 桶查找节点。
-*   使用 `equals()` 方法比较键，一旦找到匹配的键，就会返回该值。在这种情况下，返回的值是 `Fruit`。
+* 计算 `Apple` 的哈希码，得到 `63061914`。
+* 计算索引，得到 2，然后进入第 2 桶查找节点。
+* 使用 `equals()` 方法比较键，一旦找到匹配的键，就会返回该值。在这种情况下，返回的值是 `Fruit`。
 
 在发生冲突的情况下，假设在以下代码中 `Orange` 也哈希到索引 2（仅为假设）：
 
@@ -2876,7 +3021,7 @@ import java.util.HashMap;
 public class HashMapResizeDemo {
     public static void main(String[] args) {
         HashMap<Integer, String> map = new HashMap<>(4, 0.75f); 
-        // 较初始容量触发扩容
+        // 较小初始容量触发扩容
         for (int i = 0; i < 10; i++) {
             map.put(i, "Value" + i);
         }
@@ -2884,10 +3029,6 @@ public class HashMapResizeDemo {
     }
 }
 ```
-
-
-
-
 
 双向链表按照插入顺序（或访问顺序，取决于配置）连接所有条目。为了理解访问顺序，请考虑以下示例：
 
@@ -2909,18 +3050,18 @@ map.put("C", 3);
 
 图 6.4: 带有 accessOrder 的 LinkedHashMap
 
-| Note：双向链表独立于哈希表桶。它仅用于迭代，而不用于搜索或哈希。与 `HashMap` 相比，这增加了微小的开销，但为你提供了顺序保持。 |
+> **Note**：双向链表独立于哈希表桶。它仅用于迭代，而不用于搜索或哈希。与 `HashMap` 相比，这增加了微小的开销，但为你提供了顺序保持。
 
 ### LinkedHashMap 中的构造函数
 
 `LinkedHashMap` 类提供了几个构造函数来创建不同配置的 map：
 
-*   `LinkedHashMap()`：创建一个初始容量为 16 负载因子为 0.75 的空 `LinkedHashMap`，保持条目的插入顺序。
-*   `LinkedHashMap(int initialCapacity)`：创建一个具有指定 `initialCapacity` 且负载因子为 0.75 的空 `LinkedHashMap`，保留插入顺序。
-*   `LinkedHashMap(int initialCapacity, float loadFactor)`：创建一个具有指定 `initialCapacity` 和 `loadFactor` 的空 `LinkedHashMap`，保持插入顺序。
-*   `LinkedHashMap(int initialCapacity, float loadFactor, boolean accessOrder)`：创建一个具有指定 `initialCapacity`、`loadFactor` 和迭代顺序的空 `LinkedHashMap`。
+* `LinkedHashMap()`：创建一个初始容量为 16、负载因子为 0.75 的空 `LinkedHashMap`，保持条目的插入顺序。
+* `LinkedHashMap(int initialCapacity)`：创建一个具有指定 `initialCapacity` 且负载因子为 0.75 的空 `LinkedHashMap`，保留插入顺序。
+* `LinkedHashMap(int initialCapacity, float loadFactor)`：创建一个具有指定 `initialCapacity` 和 `loadFactor` 的空 `LinkedHashMap`，保持插入顺序。
+* `LinkedHashMap(int initialCapacity, float loadFactor, boolean accessOrder)`：创建一个具有指定 `initialCapacity`、`loadFactor` 和迭代顺序的空 `LinkedHashMap`。
 
-如果 `accessOrder` 为 `true`， map 将按照访问顺序进行迭代（最近访问的条目将移动到末尾），这对于实现最久未使用（LRU）缓存非常有用。
+如果 `accessOrder` 为 `true`，map 将按照访问顺序进行迭代（最近访问的条目将移动到末尾），这对于实现最久未使用（LRU）缓存非常有用。
 
 如果 `accessOrder` 为 `false`，map 将保持插入顺序。
 
@@ -2930,28 +3071,30 @@ map.put("C", 3);
 
 以下是 `TreeMap` 的关键特性：
 
-*   排序顺序：`TreeMap` 按键对条目进行排序。默认情况下，它使用键的自然排序（如果它们实现了 `comparable`），或者你可以指定一个自定义的比较器进行排序。
-*   null 键：`TreeMap` 不允许 `null` 键。然而，它允许 `null` 值。
-*   性能：由于底层的红黑树结构，`get()`、`put()` 和 `remove()` 操作的时间复杂度为 `O(log n)`。
-*   线程安全：`TreeMap` 不是同步的。如果需要线程安全，应该使用外部同步，或考虑使用 `Collections.synchronizedMap()`。
+* **排序顺序**：`TreeMap` 按键对条目进行排序。默认情况下，它使用键的自然排序（如果它们实现了 `Comparable`），或者你可以指定一个自定义的比较器进行排序。
+* **null 键**：`TreeMap` 不允许 `null` 键。然而，它允许 `null` 值。
+* **性能**：由于底层的红黑树结构，`get()`、`put()` 和 `remove()` 操作的时间复杂度为 `O(log n)`。
+* **线程安全**：`TreeMap` 不是同步的。如果需要线程安全，应该使用外部同步，或考虑使用 `Collections.synchronizedMap()`。
 
 ### TreeMap 的内部结构
 
 如之前提到的，`TreeMap` 使用红黑树作为底层数据结构。这确保了 map 保持平衡，并且 `get()`、`put()` 和 `remove()` 等操作具有 `O(log n)` 的时间复杂度。以下是工作原理的逐步分解：
 
-1.  红黑树属性：
-    1.  它是一种自平衡二叉搜索树。
-    2.  树中的每个节点都有一个颜色（红色或黑色）以维持平衡。
-    3.  树遵循特定的属性以确保保持平衡，红黑树的关键属性包括：
+1. **红黑树属性**：
+    1. 它是一种自平衡二叉搜索树。
+    2. 树中的每个节点都有一个颜色（红色或黑色）以维持平衡。
+    3. 树遵循特定的属性以确保保持平衡，红黑树的关键属性包括：
         i. 根节点始终是黑色的。
         ii. 红色节点不能有红色孩子。
         iii. 从一个节点到其后代 `null` 节点的每条路径必须具有相同数量的黑色节点。
-2.  插入：
-    1.  当键值对插入到 `TreeMap` 时，它根据键的自然顺序（或提供的 `comparator`）放置在树中。
-    2.  插入后，红黑树可能会变得平衡。如果是这样，将执行旋转和颜色翻转以恢复平衡。
-3.  搜索：
-    1.  当你在 `TreeMap` 中搜索键时，从根节点开始遍历树。根据键与当前节点键的比较检查左节点或右子节点。这会递归进行，遵循二叉搜索树的逻辑。
-    2.  这是因为树是平衡的；搜索的时间复杂度为 `O(log n)`。
+
+2. **插入**：
+    1. 当键值对插入到 `TreeMap` 时，它根据键的自然顺序（或提供的 `Comparator`）放置在树中。
+    2. 插入后，红黑树可能会变得不平衡。如果是这样，将执行旋转和颜色翻转以恢复平衡。
+
+3. **搜索**：
+    1. 当你在 `TreeMap` 中搜索键时，从根节点开始遍历树。根据键与当前节点键的比较检查左节点或右子节点。这会递归进行，遵循二叉搜索树的逻辑。
+    2. 这是因为树是平衡的；搜索的时间复杂度为 `O(log n)`。
 
 这是一个在 Java 中演示 `TreeMap` 基本操作的简单示例，包括插入、检索、更新、删除和迭代：
 
@@ -2983,23 +3126,25 @@ public class TreeMapExample {
 }
 ```
 
+### TreeMap 中的构造函数
 
-
-
-
-* `TreeMap(Map<? extends K, ? extends V> m)`: 创建一个新的 `TreeMap`，包含与指定的 map `m` 相同的映射。条目根据键的自然排序或指定的比较器进行排序。
-* `TreeMap(Comparator<? super K> comparator)`: 创建一个空的 `TreeMap`，使用指定的 `comparator` 对键进行排序。如果 `comparator` 为 `null`，则 map 将使用自然排序。
-* `TreeMap(SortedMap<K, ? extends V> m)`: 创建一个新的 `TreeMap`，包含与指定的 `SortedMap` 相同的映射。条目根据 `SortedMap` 的顺序进行排序。
+* `TreeMap()`：创建一个空的 `TreeMap`，使用键的自然排序。
+* `TreeMap(Map<? extends K, ? extends V> m)`：创建一个新的 `TreeMap`，包含与指定的 map `m` 相同的映射。条目根据键的自然排序或指定的比较器进行排序。
+* `TreeMap(Comparator<? super K> comparator)`：创建一个空的 `TreeMap`，使用指定的 `comparator` 对键进行排序。如果 `comparator` 为 `null`，则 map 将使用自然排序。
+* `TreeMap(SortedMap<K, ? extends V> m)`：创建一个新的 `TreeMap`，包含与指定的 `SortedMap` 相同的映射。条目根据 `SortedMap` 的顺序进行排序。
 
 ### TreeMap 中的常用方法
 
-下表显示了 `TreeMap` 中可用的一些常用常用方法：
+下表显示了 `TreeMap` 中可用的一些常用方法：
 
-| 方法 |  |
+| 方法 | 说明 |
 | :--- | :--- |
 | `firstKey()` | 返回 map 中当前的第一个（最低）键 |
 | `lastKey()` | 返回 map 中当前的最后一个（最高）键 |
 | `firstEntry()` | 返回与最低键关联的键值映射 |
+
+
+
 | `lastEntry()` | 返回与最高键关联的键值映射 |
 | `ceilingKey(K key)` | 返回大于或等于给定键的最小键，如果没有则返回 `null` |
 | `ceilingEntry(K key)` | 返回大于或等于给定键的最小条目 |
@@ -3012,7 +3157,7 @@ public class TreeMapExample {
 | `pollFirstEntry()` | 从 map 中移除并返回第一个条目（最低键） |
 | `pollLastEntry()` | 从 map 中移除并返回最后一个条目（最高键） |
 
-表 6.2: TreeMap TreeMap 中的额外方法
+表 6.2: TreeMap 中的额外方法
 
 ### Hashtable 实现
 
@@ -3029,7 +3174,7 @@ public class TreeMapExample {
 
 ### Hashtable 的内部工作原理
 
-内部，`Hashtable` 使用一个桶数组，每个桶是一个链表（或 `Entry[]`），用于存储键值对。键的哈希码决定了桶的索引。当发生冲突时（即两个键的哈希值指向同一个索引），它使用链链法来解决。
+内部，`Hashtable` 使用一个桶数组，每个桶是一个链表（或 `Entry[]`），用于存储键值对。键的哈希码决定了桶的索引。当发生冲突时（即两个键的哈希值指向同一个索引），它使用链地址法来解决。
 
 其表示如下所示：
 
@@ -3054,7 +3199,7 @@ public class Hashtable<K,V> extends Dictionary<K,V> implements Map<K,V>, Cloneab
 * `Hashtable(int initialCapacity, float loadFactor)`：创建一个具有给定初始容量和负载因子的 `Hashtable`。
 * `Hashtable(Map<? extends K, ? extends V> t)`：使用指定 `Map` 中的映射初始化 `Hashtable`。表的容量将足够容纳这些映射。
 
-考虑一个简单的示例示例，演示如何在 Java 中使用 `Hashtable`：
+考虑一个简单的示例，演示如何在 Java 中使用 `Hashtable`：
 
 ```java
 import java.util.Hashtable;
@@ -3115,16 +3260,9 @@ Updated Hashtable: {Grace=88, Ray=85, Sara=92}
 Java 中 `Map` 接口的每种实现根据其底层数据结构提供不同的性能特性：
 
 * `HashMap` 通常为 `get()`、`put()` 和 `remove()` 等基本操作提供常数时间性能，前提是哈希函数能够良好地分散元素。然而在最坏的情况下（例如许多键哈希到同一个桶），这些操作可能会退化为线性时间。
-
 * `LinkedHashMap` 维护一个双向链表以保留插入或访问顺序，这与 `HashMap` 相比会带来额外的开销。然而，在典型情况下，它的查找和插入时间保持为有效常数。
-
-* 另一方面，`TreeMap` 维护一个平衡二叉搜索树（具体来说是红黑树），保证了 `get()`、`put()` 和 `remove()` 操作的时间数复杂度。这使得它在通用用途上比 `HashMap` 或 `LinkedHashMap` 慢，但在需要键排序时是首选的。
-
-
-
-
-
-- `Hashtable` 是一个遗留类，提供同步访问，这在单线程上下文中会引入性能影响。它的基本操作与 `HashMap` 类似，但新增的同步开销使其在大多数现代应用程序中效率较低。
+* 另一方面，`TreeMap` 维护一个平衡二叉搜索树（具体来说是红黑树），保证了 `get()`、`put()` 和 `remove()` 操作的对数时间复杂度。这使得它在通用用途上比 `HashMap` 或 `LinkedHashMap` 慢，但在需要键排序时是首选的。
+* `Hashtable` 是一个遗留类，提供同步访问，这在单线程上下文中会引入性能影响。它的基本操作与 `HashMap` 类似，但新增的同步开销使其在大多数现代应用程序中效率较低。
 
 下表展示了不同 `Map` 实现核心操作和特性的简洁对比：
 
@@ -3145,9 +3283,9 @@ Java 中 `Map` 接口的每种实现根据其底层数据结构提供不同的�
 
 `Map` 接口是 Java 中多功能的数据结构之一，广泛应用于实际场景。它提供了一种将键与值关联的高效方式，能够实现快速查找、更新和删除：
 
-- 一个常见的用例是实现缓存，其中键是资源标识符（如用户 ID 或 URL），值是关联的数据。例如，启用了访问顺序的 `LinkedHashMap` 是构建 LRU 缓存的理想选择。
-- Maps 也经常被用于维护配置和设置，其中每个键是配置名称，值是其设置值。在数据处理或分析任务中，`Map` 可以充当计数器，将项目映射到它们的出现次数。
-- 在涉及路由或查找服务的应用程序中（如字典或地址录），`Map` 能够轻松地根据已知键存储和检索数据。同样，当键需要保持排序顺序时（例如在调度应用程序或排行榜中），`TreeMap` 非常有用。
+* 一个常见的用例是实现缓存，其中键是资源标识符（如用户 ID 或 URL），值是关联的数据。例如，启用了访问顺序的 `LinkedHashMap` 是构建 LRU 缓存的理想选择。
+* Maps 也经常被用于维护配置和设置，其中每个键是配置名称，值是其设置值。在数据处理或分析任务中，`Map` 可以充当计数器，将项目映射到它们的出现次数。
+* 在涉及路由或查找服务的应用程序中（如字典或地址录），`Map` 能够轻松地根据已知键存储和检索数据。同样，当键需要保持排序顺序时（例如在调度应用程序或排行榜中），`TreeMap` 非常有用。
 
 Maps 在框架中也是基础性的，例如存储 HTTP 请求头、会话属性（session attributes），甚至在 Web 应用程序中绑定表单数据。无论是维护对象引用、执行分组操作还是表示关系，`Map` 都是 Java 开发者工具箱中必备的工具。
 
@@ -3157,25 +3295,25 @@ Maps 在框架中也是基础性的，例如存储 HTTP 请求头、会话属性
 
 对于单线程环境或只读访问，不需要同步。但在多线程场景下，Java 提供了几种策略：
 
-- `Collections.synchronizedMap()`：此实用方法将任何 map 包装为同步访问。然而，它会为每个操作锁定整个 map，这在高并发环境中可能会降低性能。可以如下所示创建它：
+* `Collections.synchronizedMap()`：此实用方法将任何 map 包装为同步访问。然而，它会为每个操作锁定整个 map，这在高并发环境中可能会降低性能。可以如下所示创建它：
 
-```
+```java
 Map<String, String> syncMap = Collections.synchronizedMap(new HashMap<>());
 ```
 
-- `ConcurrentHashMap`：为了获得更好的并发性，`java.util.concurrent` 包提供了 `ConcurrentHashMap`，它将 map 分为若干段，允许多个线程进行读写而无需锁定整个 map。可以如下所示创建它：
+* `ConcurrentHashMap`：为了获得更好的并发性，`java.util.concurrent` 包提供了 `ConcurrentHashMap`，它将 map 分为若干段，允许多个线程进行读写而无需锁定整个 map。可以如下所示创建它：
 
-```
+```java
 Map<String, Integer> concurrentMap = new ConcurrentHashMap<>();
 ```
 
-- 不变 Map（Immutable Maps）：如果 map 在构造后仅进行读取，可以使用不可修改封装器或 `Map.of()` 的工厂方法来防止更改。这在 Java 9 及以上版本可用，并可以如下所示使用：
+* 不变 Map（Immutable Maps）：如果 map 在构造后仅进行读取，可以使用不可修改封装器或 `Map.of()` 的工厂方法来防止更改。这在 Java 9 及以上版本可用，并可以如下所示使用：
 
-```
+```java
 Map<String, String> readOnlyMap = Map.of("key", "value");
 ```
 
-- 同步 Map – `Hashtable`：在历史上，`Hashtable` 提供了内置同步。然而，它同步每一个方法，使其效率较低，在现代应用程序中通常会被避免，转而使用 `ConcurrentHashMap`。
+* 同步 Map – `Hashtable`：在历史上，`Hashtable` 提供了内置同步。然而，它同步每一个方法，使其效率较低，在现代应用程序中通常会被避免，转而使用 `ConcurrentHashMap`。
 
 选择正确的同步策略取决于你的具体用例，即你优先考虑的是安全性、性能还是简单性。
 
@@ -3185,35 +3323,35 @@ Map<String, String> readOnlyMap = Map.of("key", "value");
 
 以下是一些常用的技术和模式：
 
-- 遍历条目：使用 `entrySet()` 方法高效地遍历键值对。
+* 遍历条目：使用 `entrySet()` 方法高效地遍历键值对。
 
 以下是使用 `entrySet()` 进行迭代的示例：
 
-```
+```java
 for (Map.Entry<String, Integer> entry : map.entrySet()) {
     System.out.println(entry.getKey() + " -> " + entry.getValue());
 }
 ```
 
-- 过滤值或键：可以使用 Streams 根据条件进行过滤，如下所示：
+* 过滤值或键：可以使用 Streams 根据条件进行过滤，如下所示：
 
-```
+```java
 map.entrySet().stream()
   .filter(e -> e.getValue() > 10)
   .forEach(e -> System.out.println(e.getKey()));
 ```
 
-- 排序 Map：虽然 `HashMap` 不保持排序，但可以使用 Streams 对键或值进行排序，如下所示：
+* 排序 Map：虽然 `HashMap` 不保持排序，但可以使用 Streams 对键或值进行排序，如下所示：
 
-```
+```java
 map.entrySet().stream()
   .sorted(Map.Entry.comparingValue())
   .forEach(System.out::println);
 ```
 
-- 转换键或值：可以通过转换构建新的 map，如下所示：
+* 转换键或值：可以通过转换构建新的 map，如下所示：
 
-```
+```java
 Map<String, Integer> updated = map.entrySet().stream()
   .collect(Collectors.toMap(
     e -> e.getKey().toUpperCase(),
@@ -3221,18 +3359,18 @@ Map<String, Integer> updated = map.entrySet().stream()
   ));
 ```
 
-- 分组和计数：Maps 在使用 `Collectors.groupBy` 构建分组时非常重要，如下所示：
+* 分组和计数：Maps 在使用 `Collectors.groupingBy` 构建分组时非常重要，如下所示：
 
-```
+```java
 Map<String, Long> frequency = list.stream()
-  .collect(Collectors.groupBy(Function.identity(), Collectors.counting()));
+  .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 ```
 
 这些算法模式让你轻松处理复杂数据。虽然 map 不支持 `Collections.sort()`，但其视图的灵活性使得 map 操作变得高效。
 
 ## 总结
 
-在本章中，我们探索了 `Map` 接口及其主要实现——HashMap、`LinkedHashMap`、`TreeMap` 和 `Hashtable`。我们讨论了它们的内部机制、构造函数、性能特性以及同步策略。此外，我们对比了它们的优缺点，概述了常见用例，并演示了如何对 map 应用泛型算法。
+在本章中，我们探索了 `Map` 接口及其主要实现——`HashMap`、`LinkedHashMap`、`TreeMap` 和 `Hashtable`。我们讨论了它们的内部机制、构造函数、性能特性以及同步策略。此外，我们对比了它们的优缺点，概述了常见用例，并演示了如何对 map 应用泛型算法。
 
 理解每个 map 实现的细节有助于你根据性能需求、排序需求和线程安全考虑做出正确选择，最终帮助你编写清洁、可扩展且高效的 Java 代码。
 
@@ -3241,108 +3379,140 @@ Map<String, Long> frequency = list.stream()
 ## 练习
 
 1. 以下哪个 Map 实现是同步的且不允许空键或值？
+
    1. `HashMap`
    2. `TreeMap`
    3. `Hashtable`
    4. `LinkedHashMap`
 
 2. 哪个 Map 实现维护键的插入顺序？
+
    1. `HashMap`
    2. `LinkedHashMap`
    3. `TreeMap`
    4. `Hashtable`
 
 3. 哪个 Map 实现根据自然排序或比较器保持键的排序状态？
+
    1. `HashMap`
+   2. `TreeMap`
+   3. `Hashtable`
+   4. `LinkedHashMap`
+
+4. `HashMap` 中 `put()` 和 `get()` 操作的平均时间复杂度是多少？
+
+   1. `O(n)`
+   2. `O(log n)`
+   3. `O(1)`
+   4. `O(n log n)`
+
+5. 是什么导致了 `HashMap` 调整大小？
+
+   1. 达到最大数组大小
+   2. 键的数量超过了容量
+   3. 超过负载因子阈值
+   4. `EntrySet` 为空
+
+6. 下列哪一个允许 null 键和多个 null 值？
+
+   1. `Hashtable`
    2. `TreeMap`
 
 
 
+## 选择题
 
-
-3. `Hashtable`
-
-4. `LinkedHashMap`
-
-4. `HashMap` 中 `put()` 和 `get()` 操作的平均时间复杂度是多少？
-1. `O(n)`
-2. `O(log n)`
-3. `O(1)`
-4. `O(n log n)`
-
-5. 是什么导致了 `HashMap` 调整大小？
-1. 达到最大数组大小
-2. 键的数量超过了容量
-3. 超过负载因子阈值
-4. `EntrySet` 为空
-
-6. 下列哪一个允许 null 键和多个 null 值？
-1. `Hashtable`
-2. `TreeMap`
 3. `HashMap`
+
 4. 以上均不是
 
 7. 哪种 Map 实现类最适合多线程在无外部同步的情况下进行并发访问？
+
 1. `HashMap`
+
 2. `Hashtable`
+
 3. `TreeMap`
+
 4. `ConcurrentHashMap`
 
 8. 当 `HashMap` 中的两个键返回相同的 hash code 时，会发生什么？
+
 1. 只存储一个键
+
 2. 抛出异常
-3. 发生冲突，并使用链链法存储两个
+
+3. 发生冲突，并使用链表法存储两个
+
 4. 第二个键替换第一个键
 
 9. 使用哪个构造函数来创建一个具有自定义键排序逻辑的 `TreeMap`？
+
 1. `TreeMap(Collection c)`
+
 2. `TreeMap(SortedMap s)`
+
 3. `TreeMap()`
+
 4. `TreeMap(Comparator comparator)`
 
 10. 在用于 `HashMap` 的键类中应该重写哪个方法以确保正常运行？
+
 1. `compareTo()`
+
 2. `toString()`
+
 3. `equals()` 和 `hashCode()`
+
 4. `finalize()`
 
 ### 答案
 
 1. c
+
 解释：`Hashtable` 是同步的，不允许 null 键或值。所有其他实现都允许一个 null 键或多个 null 值。
 
 2. b
+
 解释：`LinkedHashMap` 维护一个双链表以保留条目的插入顺序。
 
 3. b
+
 解释：`TreeMap` 使用红黑树结构存储，并使用自然排序或指定的 `Comparator` 进行排序。
 
 4. c
+
 解释：在平均情况下，假设哈希函数良好，`HashMap` 为 `put()` 和 `get()` 提供常数时间复杂度。
 
 5. c
-解释：当键值对的数量超过*容量 * 负载因子*时，map 会调整大小以保持性能。
+
+解释：当键值对的数量超过 `容量 * 负载因子` 时，map 会调整大小以保持性能。
 
 6. c
+
 解释：`HashMap` 允许一个 null 键和任意数量的 null 值。`TreeMap` 允许 null 值但不允许 null 键（自然排序）。`Hashtable` 完全不允许 null。
 
 7. d
+
 解释：`ConcurrentHashMap` 设计用于线程安全操作，不需要锁定整个 map，与 `Hashtable` 不同。
 
 8. c
+
 解释：`HashMap` 通过在相同的桶索引处使用链表或树存储条目来处理冲突。
 
 9. d
+
 解释：该构造函数允许你定义一个自定义的 `Comparator` 来排序键。
 
 10. c
+
 解释：`hashCode()` 用于找到正确的桶，而 `equals()` 用于检查桶内键的相等性。
 
 加入我们的 Discord 空间
 
 加入我们的 Discord 工作空间以获取最新更新、优惠、全球科技动态、新发布以及与作者的交流：
 
-**[`discord.bpbonline.com`](https://discord.bpbonline.com)**
+[`discord.bpbonline.com`](https://discord.bpbonline.com)
 
 ![QR-Logo](img/fm1.png)
 
@@ -3350,7 +3520,7 @@ Map<String, Long> frequency = list.stream()
 
 ## 引言
 
-在 Java 中，`Set` 是一个不包含重复元素的集合。与维护插入顺序并允许重复的 `List` 不同，`Set` 侧重于唯一性和高效查找。当我们想要存储一组不同的项目（例如用户 ID、唯一令牌或配置键/键）时，通常会使用 `Set`。Java 提供了 `Set` 接口的多种实现，每种实现都具有不同的内部行为和性能特征。
+在 Java 中，`Set` 是一个不包含重复元素的集合。与维护插入顺序并允许重复的 `List` 不同，`Set` 侧重于唯一性和高效查找。当我们想要存储一组不同的项目（例如用户 ID、唯一令牌或配置键）时，通常会使用 `Set`。Java 提供了 `Set` 接口的多种实现，每种实现都具有不同的内部行为和性能特征。
 
 在本章中，我们将探索 `Set` 接口的核心概念、其主要实现类：`HashSet`、`LinkedHashSet` 和 `TreeSet`，以及实际案例、内部实现细节、自定义实现示例和比较。我们还将涵盖性能考虑、同步策略以及专门针对 Set 的泛型算法。
 
@@ -3372,7 +3542,7 @@ Map<String, Long> frequency = list.stream()
 
 ## Set 接口
 
-Java 中的 `Set` 接口是 `java.util` 包的一部分，并扩展了集合 接口。它定义了一个不允许重复元素的集合。如果你尝试添加重复元素，集合只会简单地忽略它并保留一个实例。
+Java 中的 `Set` 接口是 `java.util` 包的一部分，并扩展了 `Collection` 接口。它定义了一个不允许重复元素的集合。如果你尝试添加重复元素，集合只会简单地忽略它并保留一个实例。
 
 由于 `Set` 是一个接口，因此不能直接实例化。相反，我们使用它的具体实现类之一，如 `HashSet`、`LinkedHashSet` 或 `TreeSet`。
 
@@ -3382,7 +3552,7 @@ Java 中的 `Set` 接口是 `java.util` 包的一部分，并扩展了集合 接
 * 无保证顺序：在大多数实现（如 `HashSet`）中，元素的顺序不会被保留。
 * null 元素：大多数 Set 实现都允许单个 null 元素。
 
-`Set` 接口扩展了集合接口并引入了几个额外方法，如下表所示：
+`Set` 接口扩展了 `Collection` 接口并引入了几个额外方法，如下表所示：
 
 | 方法 | 描述 |
 | :--- | :--- |
@@ -3392,7 +3562,7 @@ Java 中的 `Set` 接口是 `java.util` 包的一部分，并扩展了集合 接
 | `contains(Object o)` | 如果元素存在则返回 true |
 | `size()` | 返回集合中元素的数量 |
 | `isEmpty()` | 如果集合为空则返回 true |
-| `clear()` | 集合集合所有元素 |
+| `clear()` | 清除集合所有元素 |
 | `iterator()` | 返回集合中元素的迭代器 |
 
 表 7.1：Set 接口的额外方法
@@ -3417,7 +3587,7 @@ Java 中的 `Set` 接口是 `java.util` 包的一部分，并扩展了集合 接
 
 ### HashSet 的内部结构
 
-在内部，`HashSet` 只是 `HashMap` 的一个器。当你向 `HashSet` 添加元素时，它被作为内部 map 的键存储，所有的值都使用常量虚拟值（如 `PRESENT`）。
+在内部，`HashSet` 只是 `HashMap` 的一个包装器。当你向 `HashSet` 添加元素时，它被作为内部 map 的键存储，所有的值都使用常量虚拟值（如 `PRESENT`）。
 
 让我们通过示例来理解这一点：
 
@@ -3439,22 +3609,18 @@ map.put("Banana", PRESENT);
 map.put("Apple", PRESENT); // 覆盖相同的键，不会添加新条目
 ```
 
-
-
-
-
-当添加像"Apple"这样的元素时，`HashMap` 会使用 `"Apple".hashCode()` 计算哈希值，该值决定了合适的桶索引并据此放置键值对。这种机制基于第 6 章 `Map` 接口及其实现中讨论的哈希原理。在出现重复元素的情况下，当你向 `HashSet` 中添加元素时，会使用元素的 `hashCode()` 方法计算哈希值。该哈希值用于查找桶（内部数组中的索引）。如果该桶已存在相同哈值的条目，它将使用 `equals()` 方法检查相等性。如果哈希值和 `equals()` 都匹配，则认为新元素是重复的，不再添加。
+当添加像 "Apple" 这样的元素时，`HashMap` 会使用 `"Apple".hashCode()` 计算哈希值，该值决定了合适的桶索引并据此放置键值对。这种机制基于第 6 章 `Map` 接口及其实现中讨论的哈希原理。在出现重复元素的情况下，当你向 `HashSet` 中添加元素时，会使用元素的 `hashCode()` 方法计算哈希值。该哈希值用于查找桶（内部数组中的索引）。如果该桶已存在相同哈希值的条目，它将使用 `equals()` 方法检查相等性。如果哈希值和 `equals()` 都匹配，则认为新元素是重复的，不再添加。
 
 ### HashSet 中的构造函数
 
 Java 在 `HashSet` 类中提供了几个构造函数，以在初始化时提供灵活性，具体取决于用例和性能需求：
 
 * `HashSet()`：创建一个具有默认初始容量 (16) 和负载因子 (0.75) 的空 `HashSet`。
-* `HashSet(int initialCapacity)`：创建一个具有指定初始容量的 `HashSet`。当预知元素数量以减少重哈时非常有用。
+* `HashSet(int initialCapacity)`：创建一个具有指定初始容量的 `HashSet`。当预知元素数量以减少重哈希时非常有用。
 * `HashSet(int initialCapacity, float loadFactor)`：允许同时设置初始容量和负载因子以精调性能。
 * `HashSet(Collection<? extends E> c)`：构造一个包含给定集合中所有元素的 `HashSet`。重复元素会被删除。
 
-### LinkedHashSet 实现
+## LinkedHashSet 实现
 
 `LinkedHashSet` 是 `HashSet` 的子类，它维护了元素的插入顺序。在内部，它使用双向链表配合哈希表。这种组合确保了元素按照它们被添加的顺序存储，同时仍然提供了快速访问。
 
@@ -3479,7 +3645,7 @@ System.out.println(names); // 输出: [Alex, Brian, Clara]
 
 添加到 `LinkedHashSet` 的每个元素都存储在内部 `LinkedHashMap` 的键中。与每个键关联的值是一个常量虚拟对象（通常为 `PRESENT`）。
 
-当添加元素时，会计算该元素的哈希值。如果它已经不存在，则会将哈希值添加到哈希表中。会创建一个节点，该节点还连接到插入顺序中的上一个节点和下一个节点。
+当添加元素时，会计算该元素的哈希值。如果它尚不存在，则会将该元素添加到哈希表中。会创建一个节点，该节点还连接到插入顺序中的上一个节点和下一个节点。
 
 假设我们按照以下顺序添加元素：
 
@@ -3540,9 +3706,13 @@ public class LinkedHashSetExamples {
 ```
 
 输出为：
+
 Set1: [Apple, Banana]
+
 Set2: [Cherry]
+
 Set3: [Date]
+
 Set4: [Sugarcane, Fig, Grape]
 
 这个示例展示了如何使用所有构造函数，并且可以看到插入顺序被保留了。
@@ -3553,11 +3723,11 @@ Set4: [Sugarcane, Fig, Grape]
 
 以下是关键特性：
 
-* 排序：元素根据自然顺序或创建时提供的 `comparator` 自动排序。
+* 排序：元素根据自然顺序或创建时提供的 `Comparator` 自动排序。
 * 无重复：像所有集合一样，`TreeSet` 不允许重复元素。如果添加重复元素，它们将被忽略。
 * 性能：由于树平衡，`add()`、`remove()` 和 `contains()` 操作的时间复杂度为 O(log n)。
 * 空值处理：如果使用自然排序（`Comparable`），`TreeSet` 不允许空元素；这样做会导致 `NullPointerException`。
-* 非安全：对于并发访问，应外部使用 `Collections.synchronizedSet()` 进行同步。
+* 非线程安全：对于并发访问，应外部使用 `Collections.synchronizedSet()` 进行同步。
 
 ### TreeSet 的内部结构
 
@@ -3574,11 +3744,7 @@ numbers.add(30);
 
 因此，`TreeSet` 不直接存储元素。相反，它使用 `TreeMap` 的键来存储元素，同时为所有键分配一个虚拟值（`PRESENT`）。
 
-
-
-
-
-当我们调用 `numbers.add(20);` 时，它内部调用了 `map.put(20, PRESENT)`。由于 map 是空的，`20` 被添加为底层红黑树的根节点。当我们调用 `numbers.add(10);` 时，它会将 `ten` 与根节点（`20`）进行比较。由于 `10 < 20`，它被放置为 `20` 的左孩子。树可能会进行重平衡，但在这个小示例中，可能不需要重平衡。最后，当调用 `numbers.add(30);` 时，它将 `30` 与 `20` 进行比较。由于 `30 > 20`，它被放置为 `20` 的右孩子。
+当我们调用 `numbers.add(20);` 时，它内部调用了 `map.put(20, PRESENT)`。由于 map 是空的，`20` 被添加为底层红黑树的根节点。当我们调用 `numbers.add(10);` 时，它会将 `10` 与根节点（`20`）进行比较。由于 `10 < 20`，它被放置为 `20` 的左孩子。树可能会进行重平衡，但在这个小示例中，可能不需要重平衡。最后，当调用 `numbers.add(30);` 时，它将 `30` 与 `20` 进行比较。由于 `30 > 20`，它被放置为 `20` 的右孩子。
 
 底层的红黑树现在包含三个节点，如图所示：
 
@@ -3592,11 +3758,11 @@ numbers.add(30);
 
 在将元素添加到 `TreeSet` 之前，它必须满足某些标准，以确保集合能够保持其排序顺序并避免不一致，如下所示：
 
-- 必须是可比较的或提供 `Comparator`：`TreeSet` 使用自然排序（`Comparable`）或自定义的 `Comparator` 对元素进行排序。
+* 必须是可比较的或提供 `Comparator`：`TreeSet` 使用自然排序（`Comparable`）或自定义的 `Comparator` 对元素进行排序。
+* 元素必须实现 `Comparable<T>`，或者在创建 `TreeSet` 时传入 `Comparator<T>` 进行插入。
+* 如果两者均未提供，添加元素将导致：
 
-元素必须实现 `Comparable<T>`，或者在通过构造函数时传入 `Comparator<T>` 进行插入。
 
-如果两者均未提供，添加元素将导致：
 
 ```
 java.lang.ClassCastException: class X cannot be cast to class java.lang.Comparable
@@ -3628,7 +3794,7 @@ set.add(100); // 运行时抛出 ClassCastException
 
 下表显示了 `TreeSet` 可的一些常用方法：
 
-| 方法 |  |
+| 方法 | 说明 |
 | :--- | :--- |
 | `first()` | 返回最小元素（根据集合的排序顺序）。 |
 | `last()` | 返回最大元素。 |
@@ -3671,7 +3837,7 @@ Java 8 对 `Set` 接口及其实现进行了一些重要的更新，在 API 可�
 
 `Set`（及其继承的 `Collection`）现在包含以下默认方法：
 
-`forEach(Consumer<? super E> action)`：该方法可以使用 Lambda 表达式或方法引用遍历元素。
+- `forEach(Consumer<? super E> action)`：该方法可以使用 Lambda 表达式或方法引用遍历元素。
 
 ```java
 Set<String> names = new HashSet<>();
@@ -3680,12 +3846,13 @@ names.add("Bob");
 names.forEach(System.out::println);
 ```
 
-`removeIf(Predicate<? super E> filter)`：移除所有满足给定条件的元素。例如：
+- `removeIf(Predicate<? super E> filter)`：移除所有满足给定条件的元素。例如：
+
 ```java
 names.removeIf(name -> name.startsWith("A"));
 ```
 
-- 通过 `Collection.stream()` 和 `Collection.parallelStream()`  Stream 方法：这些使得函数式操作成为可能。
+- 通过 `Collection.stream()` 和 `Collection.parallelStream()` Stream 方法：这些使得函数式操作成为可能。
 
 ```java
 names.stream()
@@ -3703,12 +3870,10 @@ names.stream()
 
 它不是从头重新计算哈希码，而是使用位运算来更有效地重新分配元素，改进了调整大小操作的性能。
 
-
-
-
-
 - `TreeSet`: 由 `TreeMap` 支持，由于它使用了红黑树，因此对于大多数操作（如 `add()`、`remove()`、`contains()`）都提供了 `O(log n)` 的时间复杂度。这使得它比 `HashSet` 慢，但在需要有序排列时非常合适。
+
 - `Iteration`: 遍历 `HashSet` 或 `LinkedHashSet` 的速度通常比遍历 `TreeSet` 快，因为后者需要维护顺序。
+
 - `Memory usage`: `TreeSet` 消耗的内存比 `HashSet` 和 `LinkedHashSet` 多，因为存在树形结构和额外的指针。
 
 ## Set 中的同步
@@ -3738,7 +3903,8 @@ synchronized (set) {
 在现代并发环境中（具有多核处理器），通常有选择提供线程安全和可扩展性的集合实现。Java 提供了专门的并发集合实现，例如：
 
 - `ConcurrentSkipListSet`（一种并发且排序的集合）：它是 `TreeSet` 的可扩展、线程安全的替代方案，内部基于跳表。
-- `CopyOnWriteArraySet`：最适合频繁读取和低频率写入的集合。它在每次修改时都会创建底层数组的新。
+
+- `CopyOnWriteArraySet`：最适合频繁读取和低频率写入的集合。它在每次修改时都会创建底层数组的新副本。
 
 ## 用于 Set 的泛型算法
 
@@ -3794,12 +3960,17 @@ Set<Integer> intersection = set1.stream()
 ## 练习
 
 1. 下哪个 Set 实现维护了插入顺序？
+
     1. `HashSet`
+
     2. `LinkedHashSet`
+
     3. `TreeSet`
+
     4. 以上均不是
 
 2. 下述代码的输出是什么？
+
 ```java
 Set<String> set = new HashSet<>();
 set.add("Book");
@@ -3807,25 +3978,34 @@ set.add("Pen");
 set.add("Book");
 System.out.println(set.size());
 ```
+
     1. 2
+
     2. 3
+
     3. 1
+
     4. 编译错误
 
 3. 哪个 Set 实现按自然顺序排序元素？
+
     1. `HashSet`
+
     2. `LinkedHashSet`
+
     3. `TreeSet`
+
     4. 以上都是
 
 4. `HashSet` 中 `add()` 操作的时间复杂度是多少？
+
     1. `O(1)`
+
     2. `O(log n)`
+
     3. `O(n)`
+
     4. `O(log n)`
-
-
-
 
 解释：`Set.of()` 在 Java 9 及以上版本中直接创建一个不可修改的集合。
 
@@ -3892,7 +4072,7 @@ Java 提供了 `Queue` 接口的多种实现，每种都适用于不同的用例
 
 `Queue` 接口引入了几个额外方法，如下所示：
 
-| 方法 |  |
+| 方法 | 说明 |
 | :--- | :--- |
 | `add(E e)` | 将指定的元素插入队列。如果队列满了则抛出异常。 |
 | `offer(E e)` | 将元素插入队列。如果失败（例如队列满了）则返回 false。 |
@@ -3904,6 +4084,8 @@ Java 提供了 `Queue` 接口的多种实现，每种都适用于不同的用例
 表 8.1：Queue 接口中的额外方法
 
 为了理解队列在 Java 中的行为，让我们来看一个使用 `Queue` 接口及其常见实现 `LinkedList` 的简单示例。这有助于演示队列的 FIFO 特性。考虑以下代码：
+
+
 
 ```java
 Queue<String> queue = new LinkedList<>();
@@ -3957,7 +4139,7 @@ Java 中的 `PriorityQueue` 使用二叉堆实现，二叉堆是一种完全树�
 
 * 元素被插入到一个基于数组的堆中。
 * 堆不是排序的，但其组织方式允许在 O(1) 时间内获取最小元素。
-* 插入和移除通过堆化操作（heapify operations）维护堆属性：`siftUp()` 和 `siftDown()`。
+* 插入和移除通过堆化操作维护堆属性：`siftUp()` 和 `siftDown()`。
 
 这里是 `PriorityQueue` 中 `add` 方法的基本示例：
 
@@ -4010,15 +4192,11 @@ pq.add(20);
 
 * 最初，添加 30 后，堆所示：
 
-![一个带有黑框的浅蓝色矩形在中心用加粗黑色字体显示数字 30。 ](img/Figure_8.1.jpg)
+![一个带有黑框的浅蓝色矩形在中心用加粗黑色字体显示数字 30。](img/Figure_8.1.jpg)
 
 图 8.1：初始堆
 
 * 添加 10 后，由于 10 小于 30，它们交换了位置。现在的堆所示。
-
-
-
-
 
 ![一张包含两个浅蓝色矩形的图表：上方矩形包含数字 10，下方矩形包含数字 30，由一条对角线连接。](img/Image57575.jpg)
 
@@ -4137,12 +4315,9 @@ System.out.println(deque.pop()); // C
 System.out.println(deque.pop()); // B
 ```
 
-
-
-
 让我们通过一个例子来理解这一点。考虑以下代码：
 
-```
+```java
 Deque<String> deque = new ArrayDeque<>();
 deque.addFirst("C");
 deque.addLast("D");
@@ -4156,48 +4331,50 @@ System.out.println(deque); // [B, C]
 
 以下是输出：
 
+```
 [A, B, C, D]
 D
 A
 [B, C]
+```
 
 以下是解释：
 
-*   执行 `addFirst("C")` 时，元素将如图所示。头部和尾指向同一个元素。
+* 执行 `addFirst("C")` 时，元素将如图所示。头部和尾指向同一个元素。
 
-![A diagram showing a box labeled C under the heading elements, with two arrows pointing down labeled head and tail. ](img/Figure_8.5.png)
+![A diagram showing a box labeled C under the heading elements, with two arrows pointing down labeled head and tail.](img/Figure_8.5.png)
 
 图 8.5：添加 C 后的 ArrayDeque
 
-*   执行 `addLast("D")`，D 被添加到队列末尾，尾部现在指向 D，如图所示：
+* 执行 `addLast("D")`，D 被添加到队列末尾，尾部现在指向 D，如图所示：
 
-![A diagram showing a box split into two sections labeled C and D, with arrows pointing to head under C and tail under D; elements is labeled on the left side. ](img/Figure_8.6.png)
+![A diagram showing a box split into two sections labeled C and D, with arrows pointing to head under C and tail under D; elements is labeled on the left side.](img/Figure_8.6.png)
 
 图 8.6：添加 D 后的 ArrayDeque
 
-*   执行 `addFirst("B")`，现在当 B 被添加到头部时，头部指向 B，arraydeque 如图所示：
+* 执行 `addFirst("B")`，现在当 B 被添加到头部时，头部指向 B，arraydeque 如图所示：
 
-![A diagram of an array labeled elements containing three boxes with B, C, and D. Head points to the leftmost box (B) and tail to the rightmost box (D). ](img/Figure_8.7.png)
+![A diagram of an array labeled elements containing three boxes with B, C, and D. Head points to the leftmost box (B) and tail to the rightmost box (D).](img/Figure_8.7.png)
 
 图 8.7：添加 B 后的 ArrayDeque
 
-*   执行 `addFirst("A")`，在添加 A 后，头部现在指向 A，arraydeque 如下：
+* 执行 `addFirst("A")`，在添加 A 后，头部现在指向 A，arraydeque 如下：
 
-![A horizontal array with four boxes labeled A, B, C, and D. The left end (A) is labeled head and the right end (D) is labeled tail. The entire array is labeled elements. ](img/Figure_8.8.jpg)
+![A horizontal array with four boxes labeled A, B, C, and D. The left end (A) is labeled head and the right end (D) is labeled tail. The entire array is labeled elements.](img/Figure_8.8.jpg)
 
-图 8.8：添加 B 后的 ArrayDeque（注：原文此处为添加 B，应为添加 A）
+图 8.8：添加 A 后的 ArrayDeque
 
-*   执行 `removeLast()` 移除最后一个元素（D），arraydeque 如图所示：
+* 执行 `removeLast()` 移除最后一个元素（D），arraydeque 如图所示：
 
-![A horizontal array with three boxes labeled A, B, and C. The terms head and tail point to A and C, respectively. The array is labeled elements on the left. ](img/Figure_8.9.png)
+![A horizontal array with three boxes labeled A, B, and C. The terms head and tail point to A and C, respectively. The array is labeled elements on the left.](img/Figure_8.9.png)
 
 图 8.9：移除最后一个元素后的 ArrayDeque
 
-*   执行 `removeFirst()` 移除第一个元素（A），arraydeque 中只剩下 B 和 C。arraydeque 如下：
+* 执行 `removeFirst()` 移除第一个元素（A），arraydeque 中只剩下 B 和 C。arraydeque 如下：
 
-![A two-cell box labeled elements contains B on the left and C on the right. Head points to B and tail points to C. ](img/Figure_8.10.png)
+![A two-cell box labeled elements contains B on the left and C on the right. Head points to B and tail points to C.](img/Figure_8.10.png)
 
-图 8.10：移除最后一个元素后的 ArrayDeque（注：原文此处为 removing last，应为 removing first）
+图 8.10：移除第一个元素后的 ArrayDeque
 
 内部的缩容逻辑确保了即使我们在两端进行添加/删除，性能依然保持高效。
 
@@ -4205,21 +4382,21 @@ A
 
 以下是可用于创建 `ArrayDeque` 的构造函数：
 
-*   `ArrayDeque()`：初始容量为 16 的默认构造函数。如下所示创建：
+* `ArrayDeque()`：初始容量为 16 的默认构造函数。如下所示创建：
 
-```
+```java
 ArrayDeque<Integer> deque1 = new ArrayDeque<>();
 ```
 
-*   `ArrayDeque(int initialCapacity)`：创建一个具有给定容量的 deque，如下所示：
+* `ArrayDeque(int initialCapacity)`：创建一个具有给定容量的 deque，如下所示：
 
-```
+```java
 ArrayDeque<String> deque2 = new ArrayDeque<>(50);
 ```
 
-*   `ArrayDeque(Collection<? extends E> c)`：构建包含指定集合元素的 deque，如下所示：
+* `ArrayDeque(Collection<? extends E> c)`：构建包含指定集合元素的 deque，如下所示：
 
-```
+```java
 ArrayDeque<Character> deque3 = new ArrayDeque<>(List.of('A', 'B', 'C'));
 ```
 
@@ -4229,36 +4406,35 @@ ArrayDeque<Character> deque3 = new ArrayDeque<>(List.of('A', 'B', 'C'));
 
 `ArrayDeque` 的特点包括：
 
-*   它不是线程安全的。
-*   它不支持 `null` 元素。
-*   在单线程环境下，它通常比 `Stack` 和 `LinkedList` 更快。
-*   它在两端进行操作时性能极佳。
-*   它没有 `capacity` 方法，但可以通过 `size()` 获取元素数量。
-
-
-
+* 它不是线程安全的。
+* 它不支持 `null` 元素。
+* 在单线程环境下，它通常比 `Stack` 和 `LinkedList` 更快。
+* 它在两端进行操作时性能极佳。
+* 它没有 `capacity` 方法，但可以通过 `size()` 获取元素数量。
 
 选择合适的同步机制取决于具体的并发需求，例如是否需要阻塞行为，或者是否应该在不锁定整个结构的情况下支持并发读写。
 
-一种常用方法是使用并发集合，如 `ConcurrentLinkedQueue` 或 `ConcurrentLinkedDeque`，它们是非阻塞的，允许多个线程进行高吞吐量访问。对于简单的场景或遗留代码库，可以使用 `Collections.synchronizedQueue()` 或 `Collections.synchronizedDeque()` 方法来封装现有的非线程安全实现并使其同步同步，尽管在高度竞争的情况下，这些方法的可扩展性通常较差。
+一种常用方法是使用并发集合，如 `ConcurrentLinkedQueue` 或 `ConcurrentLinkedDeque`，它们是非阻塞的，允许多个线程进行高吞吐量访问。对于简单的场景或遗留代码库，可以使用 `Collections.synchronizedQueue()` 或 `Collections.synchronizedDeque()` 方法来封装现有的非线程安全实现并使其同步，尽管在高度竞争的情况下，这些方法的可扩展性通常较差。
 
 对于需要生产者和消费者之间进行协调的用例，Java 提供了 `BlockingQueue` 和 `BlockingDeque` 接口。`ArrayBlockingQueue`、`LinkedBlockingQueue` 和 `LinkedBlockingDeque` 等实现支持线程安全的操作，这些操作在队列满（插入时）或队列空（检索时）会发生阻塞。这些非常适合用于构建任务队列、消息传递系统或边界缓冲区。
 
+
+
 现在，让我们详细探索这些替代方案和最佳实践，并结合演示它们在并发应用中有效使用的示例。
 
-### 使用并发集合
+## 使用并发集合
 
 Java 提供了以下内置的并发实现：
 
 *   `ConcurrentLinkedQueue`：一种非阻塞、线程安全的 FIFO（先进先出）队列实现。
-*   `LinkedBlockingQueue`, `ArrayBlockingQueue`：用于生产者-消费者场景的阻塞队列。
+*   `LinkedBlockingQueue`、`ArrayBlockingQueue`：用于生产者-消费者场景的阻塞队列。
 *   `ConcurrentLinkedDeque`：非阻塞的双端队列实现。
 
 这些类在内部处理同步，在并发设计中是首选。
 
-### 使用同步集合封装
+## 使用同步集合封装
 
-如果你在多线程环境中使用如 `LinkedList` 等非线程安全的类作为队列，你必须对访问进行同步以避免并发问题。Java 了一了一个工具方法 `Collections.synchronizedList()`，它可以封装一个 `List`（可以用作队列）并使其线程安全。可以像所示所示：
+如果你在多线程环境中使用如 `LinkedList` 等非线程安全的类作为队列，你必须对访问进行同步以避免并发问题。Java 提供了一个工具方法 `Collections.synchronizedList()`，它可以封装一个 `List`（可以用作队列）并使其线程安全。可以像下面所示：
 
 ```java
 Queue<String> queue = Collections.synchronizedList(new LinkedList<>());
@@ -4277,7 +4453,7 @@ synchronized (queue) {
 *   但是，在迭代期间仍然需要手动同步，以避免 `ConcurrentModificationException`。
 *   `synchronized (queue)` 块确保了迭代是原子的且不受线程干扰的。
 
-### BlockingQueue 和 BlockingDeque
+## BlockingQueue 和 BlockingDeque
 
 当你需要线程等待插入或移除等操作时（例如在生产者-消费者场景中），Java 提供了 `BlockingQueue` 和 `BlockingDeque`。它们可以使用如下所示：
 
@@ -4298,9 +4474,9 @@ System.out.println(val); // 输出: Data
 
 在并发环境中使用队列和双端队列时，确保线程安全性是至关重要的。虽然像 `ArrayDeque` 和 `LinkedList` 等集合默认不是线程安全的，但 Java 提供了如同步包装器和如 `BlockingQueue`、`BlockingDeque` 等并发实现等机制。选择正确的方法取决于你需要的是基本的线程安全还是线程之间完全的协调（例如阻塞行为）。
 
-### ArrayDeque vs. LinkedList vs. PriorityQueue
+## ArrayDeque vs. LinkedList vs. PriorityQueue
 
-下表了 `ArrayDeque`、`LinkedList` 和 `PriorityQueue` 的比较：
+下表列出了 `ArrayDeque`、`LinkedList` 和 `PriorityQueue` 的比较：
 
 | 特性 | ArrayDeque | LinkedList (作为队列/Deque) | PriorityQueue |
 | :--- | :--- | :--- | :--- |
@@ -4337,34 +4513,37 @@ System.out.println(val); // 输出: Data
 
 ### 答案
 
-1.  c
-解释：`add()` 向尾部添加元素并在插入失败时抛出异常。
-2.  b
-解释：`Deque` 支持从两端插入和移除。
-3.  c
-解释：`PriorityQueue` 使用自然排序，除非提供了比较器。
-4.  a
-解释：`poll()` 在队列为空时返回 null。
-5.  b
-解释：`ArrayDeque` 不允许空元素并抛出 `NullPointerException`。
-6.  c
-解释：`push()` 是属于 `Deque` 的，不是 `Queue` 接口定义的。
-7.  d
-解释：`ArrayDeque` 支持随机访问。
-8.  c
-解释：`PriorityQueue` 最适合实现优先级调度器。
-9.  d
-解释：`Deque` 提供了 `addFirst()` 和 `removeLast()` 方法。
+1.  **c**  
+    解释：`add()` 向尾部添加元素并在插入失败时抛出异常。
 
+2.  **b**  
+    解释：`Deque` 支持从两端插入和移除。
 
+3.  **c**  
+    解释：`PriorityQueue` 使用自然排序，除非提供了比较器。
 
+4.  **a**  
+    解释：`poll()` 在队列为空时返回 null。
 
+5.  **b**  
+    解释：`ArrayDeque` 不允许空元素并抛出 `NullPointerException`。
+
+6.  **c**  
+    解释：`push()` 是属于 `Deque` 的，不是 `Queue` 接口定义的。
+
+7.  **d**  
+    解释：`ArrayDeque` 支持随机访问。
+
+8.  **c**  
+    解释：`PriorityQueue` 最适合实现优先级调度器。
+
+9.  **d**  
+    解释：`Deque` 提供了 `addFirst()` 和 `removeLast()` 方法。
 
 说明：`PriorityQueue` 针对基于优先级的任务调度进行了优化。
 
-10. d
-
-说明：`Deque` 提供了 `addFirst()`、`removeLast()` 以及其他双端操作。
+10. **d**  
+    说明：`Deque` 提供了 `addFirst()`、`removeLast()` 以及其他双端操作。
 
 ## 加入我们的 Discord
 
@@ -4386,15 +4565,15 @@ System.out.println(val); // 输出: Data
 
 本章涵盖了以下主题：
 
-* 集合工具类
-* 使用 `Collections` 进行排序和搜索
-* 使用 `Collections` 修改集合
-* 数组工具类
-* 使用 `Arrays` 和 `Collections`
-* 包装类
-* 同步工具
-* 不可修改集合
-* 检查集合
+*   集合工具类
+*   使用 `Collections` 进行排序和搜索
+*   使用 `Collections` 修改集合
+*   数组工具类
+*   使用 `Arrays` 和 `Collections`
+*   包装类
+*   同步工具
+*   不可修改集合
+*   检查集合
 
 ## 目标
 
@@ -4406,7 +4585,9 @@ Java 中的 `Collections` 类是 `java.util` 包的一部分，它提供了一�
 
 该类无法实例化，仅作为工具持有者。它通常与 JCF（Java 集合框架）配合使用，以提高效率并减少样板代码。
 
-`Collections` 类中的关键方法。以下是 `Collections` 工具类提供的常用方法列表：
+### `Collections` 类中的关键方法
+
+以下是 `Collections` 工具类提供的常用方法列表：
 
 | 方法 | 说明 |
 | :--- | :--- |
@@ -4446,12 +4627,16 @@ public class CollectionsExample {
 ```
 
 以下是输出：
+
+```
 Sorted List: [Apple, Banana, Cherry, Mango]
 Reversed List: [Mango, Cherry, Banana, Apple]
+```
 
 在此示例中：
-* `Collections.sort(fruits)` 按字母顺序对列表进行排序。
-* `Collections.reverse(fruits)` 随后反转了排序后的列表。
+
+*   `Collections.sort(fruits)` 按字母顺序对列表进行排序。
+*   `Collections.reverse(fruits)` 随后反转了排序后的列表。
 
 这些工具方法抽象了排序和反转的内部复杂性，使代码更简洁且更容易维护。
 
@@ -4464,8 +4649,9 @@ Reversed List: [Mango, Cherry, Banana, Apple]
 ### 列表排序
 
 常见的操作是排序。Java 提供了两种排序方式：
-* 自然顺序：当元素实现了 `Comparable` 接口时。
-* 自定义顺序：通过使用 `Comparator`。
+
+*   自然顺序：当元素实现了 `Comparable` 接口时。
+*   自定义顺序：通过使用 `Comparator`。
 
 #### 自然排序
 
@@ -4478,12 +4664,16 @@ System.out.println(numbers);
 ```
 
 以下是输出：
+
+```
 [1, 2, 3, 4]
+```
 
 上面的示例说明了：
-* 我们创建一个随机顺序的整数列表。
-* `Collections.sort(numbers)` 使用自然顺序对列表进行排序。
-* 原始列表被修改，元素按增加顺序重新排列。
+
+*   我们创建一个随机顺序的整数列表。
+*   `Collections.sort(numbers)` 使用自然顺序对列表进行排序。
+*   原始列表被修改，元素按增加顺序重新排列。
 
 这是因为 `Integer` 实现了 `Comparable` 接口，该接口定义了如何比较两个整数。
 
@@ -4498,11 +4688,15 @@ System.out.println(fruits);
 ```
 
 以下是输出：
+
+```
 [Mango, Banana, Apple]
+```
 
 上面的示例说明了：
-* Lambda 表达式 `(a, b) -> b.compareTo(a)` 反转了比较，使列表按降序（Z 到 A）排序。
-* 这允许对排序逻辑进行完全控制；你可以根据长度、不区分大小或任何自定义规则进行排序。
+
+*   Lambda 表达式 `(a, b) -> b.compareTo(a)` 反转了比较，使列表按降序（Z 到 A）排序。
+*   这允许对排序逻辑进行完全控制；你可以根据长度、不区分大小或任何自定义规则进行排序。
 
 注意：你也可以使用 `Comparator.reverseOrder()` 或方法引用来简化语法。
 
@@ -4519,23 +4713,22 @@ System.out.println("Index of 30: " + index);
 ```
 
 以下是输出：
+
+```
 Index of 30: 2
+```
 
 上面的示例说明了：
-* 列表已经按升序排序。
-* `Collections.binarySearch(list, 30)` 执行二分查找，每次将列表减半以找到元素。
 
-
-
-
-
+*   列表已经按升序排序。
+*   `Collections.binarySearch(list, 30)` 执行二分查找，每次将列表减半以找到元素。
 *   如果找到元素，则返回该元素的索引；在这里，30 位于索引 2。
 
 注意：在调用 `binarySearch()` 之前，必须按升序排序列表。如果未找到元素，该方法将返回一个负值，表示插入点。
 
 ### 使用自定义比较器进行二分查找
 
-如果你的列表使用自定义比较器进行排序，则你必须在 `binarySearch()` 调用中使用相同的相同的比较器：
+如果你的列表使用自定义比较器进行排序，则你必须在 `binarySearch()` 调用中使用相同的比较器：
 
 ```java
 List<String> items = Arrays.asList("X", "M", "A");
@@ -4546,7 +4739,9 @@ System.out.println("Index of M: " + index); // 1
 
 以下是输出结果：
 
+```
 Index of M: 1
+```
 
 上面的示例解释了：
 
@@ -4567,6 +4762,8 @@ Index of M: 1
 假设我们有一个按注册顺序排列的学生姓名列表。我们想反转列表以先显示最新注册的学生。
 
 考虑以下示例：
+
+
 
 ```java
 List<String> students = Arrays.asList("Andrew", "Becky", "Carlos");
@@ -4621,7 +4818,7 @@ System.out.println(scoreboard);
 *   `fill()` 将每个元素替换为指定的值。
 *   它通常用于初始化或重置列表。
 
-### 替换所有出现出现的值
+### 替换所有出现的值
 
 假设你有一个城市列表，其中发生了名称更改。你想将所有旧名称更新为新名称。你可以使用下面的 `replaceAll()` 方法来实现：
 
@@ -4757,10 +4954,6 @@ System.out.println(Arrays.toString(extended));
 *   `copyOf()` 创建一个指定长度的新数组。
 *   如果新长度更大，额外的元素将填充为默认值（int 为 0）。
 
-
-
-
-
 `Arrays` 工具类确保了在 Java 中处理固定大小的数组依然保持强大、简洁，并与集合范式保持一致。
 
 ## 数组与集合的操作
@@ -4773,7 +4966,7 @@ System.out.println(Arrays.toString(extended));
 
 假设你从 `List` 中收集了用户的输入，现在想将其存储在 `Array` 中以便通过网络发送。你可以像下面的代码所示操作：
 
-```
+```java
 List<String> users = Arrays.asList("Emma", "Michael", "Sophia");
 String[] userArray = users.toArray(new String[0]);
 System.out.println(Arrays.toString(userArray));
@@ -4781,7 +4974,7 @@ System.out.println(Arrays.toString(userArray));
 
 以下是输出：
 
-`[Emma, Michael, Sophia]`
+[Emma, Michael, Sophia]
 
 上面的示例解释了：
 
@@ -4794,7 +4987,7 @@ System.out.println(Arrays.toString(userArray));
 
 例如，如果你想反转一个名称数组，可以像下面所示：
 
-```
+```java
 String[] names = {"Alex", "Brian", "Chloe"};
 List<String> nameList = Arrays.asList(names);
 Collections.reverse(nameList);
@@ -4803,7 +4996,7 @@ System.out.println(Arrays.toString(names));
 
 以下是输出：
 
-`[Chloe, Brian, Alex]`
+[Chloe, Brian, Alex]
 
 上面的示例解释了：
 
@@ -4837,9 +5030,9 @@ System.out.println(Arrays.toString(names));
 
 ### 使列表同步
 
-假设 Ryan 和 Sophia 正在不同的线程上工作，更新一个共享的任务列表。为了防止数据损坏，列表必须同步同步。可以像下面所示创建一个同步列表：
+假设 Ryan 和 Sophia 正在不同的线程上工作，更新一个共享的任务列表。为了防止数据损坏，列表必须同步。可以像下面所示创建一个同步列表：
 
-```
+```java
 List<String> taskList = new ArrayList<>();
 List<String> syncTaskList = Collections.synchronizedList(taskList);
 ```
@@ -4850,7 +5043,7 @@ List<String> syncTaskList = Collections.synchronizedList(taskList);
 *   现在对 `syncTaskList` 的所有方法调用在内部都是同步的。
 *   然而，迭代仍然需要手动进行同步以避免 `ConcurrentModificationException`。迭代可以像下面所示进行同步：
 
-```
+```java
 synchronized (syncTaskList) {
     for (String task : syncTaskList) {
         System.out.println(task);
@@ -4875,10 +5068,6 @@ Map<Integer, String> syncEmployeeMap = Collections.synchronizedMap(employeeMap);
 *   包装器确保了基础操作（如 `add`、`remove`、`get`、`put`）是线程安全的。
 *   与 List 一样，迭代必须在 `synchronized` 块中完成。
 
-
-
-
-
 当使用 `Collections.synchronizedList()` 等方法封装一个集合（如 `List`、`Set` 或 `Map`）时，Java 内部会为该集合的每个方法调用添加同步机制。因此，当两个或多个线程尝试调用如下所示的方法时：
 
 - `add()`: 插入元素
@@ -4886,7 +5075,7 @@ Map<Integer, String> syncEmployeeMap = Collections.synchronizedMap(employeeMap);
 - `get()`: 通过索引访问元素（针对列表）
 - `put()`: 添加键值对（针对映射）
 
-这些方法调用将使用内部锁进行自动同步。这意味着**一次只有一个线程可以执行这些方法，从而避免了冲突或数据损坏。
+这些方法调用将使用内部锁进行自动同步。这意味着**一次只有一个线程可以执行这些方法，从而避免了冲突或数据损坏**。
 
 然而，迭代（例如使用 `for-each` 循环）并不会自动同步，因此你仍然需要手动使用 `synchronized` 块来处理这部分。
 
@@ -4916,7 +5105,7 @@ departments.add("IT");
 List<String> unmodifiableDepartments = Collections.unmodifiableList(departments);
 ```
 
-上面的示例解释了了：
+上面的示例解释了：
 
 - 原始部门列表被封装在一个不可修改的层中。
 - 现在 `unmodifiableDepartments` 可以被读取，但任何修改它的尝试（如 `add()`、`remove()` 或 `clear()`）都将抛出异常。例如，下面的代码将抛出 `UnsupportedOperationException` 异常：
@@ -4932,7 +5121,7 @@ Set<String> states = Collections.unmodifiableSet(new HashSet<>());
 Map<Integer, String> codes = Collections.unmodifiableMap(new HashMap<>());
 ```
 
-| 注意：不可修改包装器并不会深拷贝。如果底层集合被修改，更改将同样反映在不可修改的版本中。 |
+> **注意**：不可修改包装器并不会深拷贝。如果底层集合被修改，更改将同样反映在不可修改的版本中。
 
 如下面的代码所示：
 
@@ -4951,6 +5140,9 @@ Java 在 9 中还引入了 `List.of()`、`Set.of()` 和 `Map.of()` 方法，这�
 
 - `Collections.emptyList()`
 - `Collections.emptySet()`
+
+
+
 - `Collections.emptyMap()`
 
 让我们看看它们在实际代码中的用法示例：
@@ -4970,21 +5162,25 @@ public class OrderService {
 ```
 
 Case 1:
+
 ```java
 public static void main(String[] args) {
     OrderService service = new OrderService();
     System.out.println(service.getPendingOrders("user1"));
 }
 ```
+
 输出：`[ORD123, ORD456]`
 
 Case 2：
+
 ```java
 public static void main(String[] args) {
     OrderService service = new OrderService();
     System.out.println(service.getPendingOrders(""));
 }
 ```
+
 输出：`[]`
 
 上述解释如下：
@@ -4992,6 +5188,7 @@ public static void main(String[] args) {
 - 如果 `userId` 无效，我们返回一个空列表。
 - `Collections.emptyList()` 确保不返回 `null`，消除了对空值检查的需要。
 - 由于列表是不可变的，也防止了意外的修改。
+
 - `Collections.emptySet()`：考虑以下示例：
 
 ```java
@@ -5011,25 +5208,27 @@ public class Student {
 ```
 
 Case 1:
+
 ```java
 Student s1 = new Student(true);
 System.out.println(s1.getEnrolledSubjects());
 ```
+
 输出：`[Math, Science]`
 
 Case 2:
+
 ```java
 Student s2 = new Student(false);
 System.out.println(s2.getEnrolledSubjects());
 ```
+
 输出：`[]`
 
 上述的解释如下：
 
-- 如果 `userId` 无效，我们返回一个空列表。
-- `Collections.emptyList()` 确保不返回 `null`，消除了对空值检查的需要。
-- 由于列表是不可变的，也防止了意外的修改。
 - 当学生未注册时，返回空集合。
+
 - `Collections.emptyMap()`：考虑以下示例：
 
 ```java
@@ -5088,9 +5287,6 @@ checkedNames.add("Alex");
 //checkedNames.add(101); // 编译失败
 ```
 
-
-
-
 上述示例解释了：
 
 *   包装器 `Collections.checkedList()` 会监控列表的每次添加操作。
@@ -5098,7 +5294,7 @@ checkedNames.add("Alex");
 
 其他类型也存在类似的包装器，如下：
 
-```
+```java
 Set<Integer> checkedSet = Collections.checkedSet(new HashSet<>(), Integer.class);
 Map<String, Double> checkedMap = Collections.checkedMap(new HashMap<>(), String.class, Double.class);
 ```
@@ -5109,7 +5305,7 @@ Map<String, Double> checkedMap = Collections.checkedMap(new HashMap<>(), String.
 *   在测试或调试期间尽早捕获错误用法。
 *   在共享库或 API 中为消费者强制执行类型安全。
 
-检查集合充了运行时安全网的角色，并不是泛型的替代品，当由于原始类型（raw type）的使用导致泛型无法保证安全性时，它们是非常有助手。
+检查集合充当了运行时安全网的角色，并不是泛型的替代品，当由于原始类型（raw type）的使用导致泛型无法保证安全性时，它们是非常有用的助手。
 
 ## 结论
 
@@ -5124,60 +5320,70 @@ Map<String, Double> checkedMap = Collections.checkedMap(new HashMap<>(), String.
 ## 练习题
 
 1.  你会使用哪种方法让列表变得不可修改？
+
     1.  `Collections.immutableList()`
     2.  `Collections.readOnlyList()`
     3.  `Collections.unmodifiableList()`
     4.  `List.makeReadOnly()`
 
 2.  你会使用哪种工具方法在排序列表中查找元素？
+
     1.  `Collections.find()`
     2.  `Collections.binarySearch()`
     3.  `Arrays.lookup()`
     4.  `List.search()`
 
 3.  使用 `Arrays.asList()` 转换原始数组的结果是什么？
+
     1.  一个包含原始值的列表
     2.  编译错误
     3.  一个包含整个数组的单元素列表
     4.  一个包含装箱值的列表
 
 4.  你会使用 `Arrays` 类中的哪种方法用特定值填充数组？
+
     1.  `Arrays.assign()`
     2.  `Arrays.fill()`
     3.  `Arrays.copy()`
     4.  `Arrays.setAll()`
 
 5.  `Collections.checkedList(list, String.class)` 提供了什么？
+
     1.  只读列表
     2.  同步列表
     3.  类型安全列表
     4.  排序列表
 
 6.  哪种方法将列表转换为对象数组？
+
     1.  `list.convertToArray()`
     2.  `Collections.toArray()`
     3.  `list.toArray()`
     4.  `Arrays.fromList()`
 
 7.  这些包装器中哪一个确保了 map 的线程安全访问？
+
     1.  `Collections.lockedMap()`
     2.  `Collections.synchronizedMap()`
     3.  `Collections.concurrentMap()`
     4.  `Map.makeThreadSafe()`
 
 8.  `Collections.reverse(list)` 做了什么？
+
     1.  从列表中删除元素
     2.  创建一个新的反转列表
     3.  按降序对列表进行排序
     4.  原地反转列表中元素的顺序
 
 9.  哪种类允许对数组的子范围进行排序？
+
     1.  `Collections`
     2.  `SubArray`
     3.  `Arrays`
     4.  `PartialSorter`
 
 10. 当你频繁需要按排序顺序访问元素时，哪一个 `Set` 实现最合适？
+
     1.  `HashSet`
     2.  `LinkedHashSet`
     3.  `TreeSet`
@@ -5186,33 +5392,43 @@ Map<String, Double> checkedMap = Collections.checkedMap(new HashMap<>(), String.
 ### 答案
 
 1.  **c**
+
     解释：`Collections.unmodifiableList()` 返回指定列表的视图，不允许进行修改操作，如果尝试任何修改，将抛出 `UnsupportedOperationException`。
 
 2.  **b**
+
     解释：`Collections.binarySearch()` 用于在排序列表上使用二分查找法高效定位元素。
 
 3.  **c**
+
     解释：`Arrays.asList()` 将原始数组视为单个对象。因此，传递原始数组会导致产生一个只有一个元素的列表：整个数组本身。
 
 4.  **b**
+
     解释：`Arrays.fill()` 将给定值分配给指定数组的每个元素。
 
 5.  **c**
+
     解释：检查集合提供了集合的动态类型安全视图，以便在运行时捕获类型错误。
 
 6.  **c**
+
     解释：`list.toArray()` 将列表转换为 `Object` 数组。可以使用 `list.toArray(new Type[0])` 获取类型数组。
 
 7.  **b**
+
     解释：`Collections.synchronizedMap()` 包装了 map，通过内部同步使其所有基本操作都是线程安全的。
 
 8.  **d**
+
     解释：`Collections.reverse()` 原地反转给定列表中元素的顺序。
 
 9.  **c**
+
     解释：`Arrays.sort(array, fromIndex, toIndex)` 对数组的子范围进行排序。
 
 10. **c**
+
     解释：`TreeSet` 根据自然排序或提供的 `comparator` 保持元素有序，非常适合排序访问。
 
 # 第 10 章 泛型与集合的最佳实践
@@ -5227,9 +5443,9 @@ Map<String, Double> checkedMap = Collections.checkedMap(new HashMap<>(), String.
 
 *   使用泛型编写类型安全的代码
 *   避免泛型的常见陷阱
-* 集合的高效使用
-* 设计基于集合的 API
-* 性能考量
+*   集合的高效使用
+*   设计基于集合的 API
+*   性能考量
 *   同步最佳实践
 *   泛型算法
 
@@ -5245,30 +5461,36 @@ Map<String, Double> checkedMap = Collections.checkedMap(new HashMap<>(), String.
 
 以下是最佳实践：
 
-*   始终显式声明类型参数：避免使用原始类型 `List` 或 `Map`。相反，指定类型以利用编译检查。例如，避免如下声明列表：
-    ```
+*   **始终显式声明类型参数**：避免使用原始类型 `List` 或 `Map`。相反，指定类型以利用编译检查。例如，避免如下声明列表：
+
+    ```java
     List list = new ArrayList();
     ```
+
     这创建了一个可以包含任何对象的列表，向字符串列表添加整数等错误将不会被捕获。相反，按所示声明：
-    ```
+
+    ```java
     List<String> names = new ArrayList<>();
     ```
+
     现在列表只能存储 `String` 值，如果你尝试添加其他内容，将得到错误。
 
+*   **使用泛型方法实现重用**：泛型方法允许你编写可处理不同类型的单一方法，同时保持类型安全。
 
-
-
-```java
-public <T> void printElements(List<T> elements) {
-    for (T element : elements) {
-        System.out.println(element);
+    ```java
+    public <T> void printElements(List<T> elements) {
+        for (T element : elements) {
+            System.out.println(element);
+        }
     }
-}
-```
-此方法可以打印字符串、整数或任何其他类型的列表。`T` 代表 `Type`（类型）。
+    ```
 
-- **利用有界类型参数**：你可以使用边界来限制泛型代码所接受的类型：
-    - **上界 (extends)**：当你想要接受任何子类时，如下所示：
+    此方法可以打印字符串、整数或任何其他类型的列表。`T` 代表 `Type`（类型）。
+
+*   **利用有界类型参数**：你可以使用边界来限制泛型代码所接受的类型：
+
+    *   **上界 (extends)**：当你想要接受任何子类时，如下所示：
+
       ```java
       public double sum(List<? extends Number> numbers) {
           double total = 0;
@@ -5278,146 +5500,165 @@ public <T> void printElements(List<T> elements) {
           return total;
       }
       ```
+
       该方法接受整数、双浮点数等类型的列表，即任何继承 `Number` 的类型。
-    - **下界 (super)**：当你想要安全地向列表添加元素时，如下所示：
+
+    *   **下界 (super)**：当你想要安全地向列表添加元素时，如下所示：
+
       ```java
       public void addIntegers(List<? super Integer> list) {
           list.add(1);
           list.add(2);
       }
       ```
-      该方法可以向持有 `integer` 或 `number` 类型的列表添加整数。
 
-- **在自己的方法中，优先使用类型参数而非通配符**：如果你正在编写一个既读又写的方法，请定义一个类型参数。
+      该方法可以向持有 `Integer` 或 `Number` 类型的列表添加整数。
+
+*   **在自己的方法中，优先使用类型参数而非通配符**：如果你正在编写一个既读又写的方法，请定义一个类型参数。
+
   以下示例并不是理想的：
+
   ```java
   public void process(List<?> items) {
       // 无法安全地添加元素
   }
   ```
+
   相反，优于使用如下所示的类型参数：
+
   ```java
   public <T> void process(List<T> items) {
       // 可以读取并添加类型 T 的元素
   }
   ```
+
   通配符 (`?`) 是具有限制性的，这意味着你不能向其添加元素。如果你需要更大的灵活性，请使用 `<T>`。
 
-- **避免混合原始类型和泛型**：不要将旧的非泛型代码与泛型集合混合：
-  ```java
-  List rawList = new ArrayList<String>();
-  rawList.add(10); // 没有错误，但用法错误
-  ```
-  上面的示例违背了泛型的初衷。请使用 `List<String>`。
 
-- **谨慎使用 @SuppressWarnings("unchecked")**：仅在你确定它是安全的时（例如在遗留代码中）使用它：
-  ```java
-  @SuppressWarnings("unchecked")
-  List<String> names = (List<String>) getLegacyData();
-  ```
-  添加注释解释为什么它是安全的，并仅在隔离的地方使用。
-
-- **避免创建泛型数组**：由于类型擦除，Java 不允许 `new T[]`。请使用 `List<T>` 代替。
-  这是无效的，会抛出编译错误：
-  ```java
-  T[] array = new T[10]; // 编译错误
-  ```
-  相反，在处理泛型时，请使用 `List<T>` 等集合而非数组，如下所示：
-  ```java
-  List<T> list = new ArrayList<>();
-  ```
 
 ## 避免泛型的常见陷阱
 
 虽然泛型提供了类型安全和更整的代码，但开发者仍然可能陷入微妙的陷阱，从而降低其有效性或导致令人困惑的行为。在本节中，我们将探索在使用泛型时出现的一些实际问题以及如何避免它们。这些示例建立在之前讨论的概念之上，并突出了开发者在实际代码库中可能面临的较不明显的误用和局限性：
 
-- **避免重载泛型方法**：用具有相似签名的方法重载泛型方法会导致歧义或无意的方法选择。当类型擦除导致多个重载具有不可区分的字节码签名时，这种情况特别危险。
-  让我们通过以下代码来理解这一点：
-  ```java
-  public class Printer {
-      public void print(String data) {
-          System.out.println("String: " + data);
-      }
-      public <T> void print(T data) {
-          System.out.println("Generic: " + data);
-      }
-      public static void main(String[] args) {
-          Printer printer = new Printer();
-          printer.print("Hello");
-      }
-  }
-  ```
-  **解释**：在上面的示例中，虽然看起来泛型方法 `print(T data)` 可能被选中，但非泛型的 `print(String data)` 是更好的匹配且会被调用。这可能导致行为不一致，特别是如果以后以后为其他类型重载了该方法。开发者应避免创建可能与特定方法冲突的泛型方法重载，除非绝对必要。
+### 避免重载泛型方法
 
-- **避免在静态上下文中使用泛型**：泛型类型参数与类的静态上下文没有绑定。这意味着你不能在静态方法或静态字段中使用类的类型参数。
-  考虑以下示例：
-  ```java
-  public class Box<T> {
-      private T value;
-      // 这会导致编译错误
-      // private static T staticValue;
-      public static void show(T data) {
-          // 编译错误
-      }
-  }
-  ```
-  **解释**：在上面的示例中，由于类型参数绑定到实例级别，静态字段和方法无法访问它们。解决方案是让静态方法本身变为泛型，如下所示：
-  ```java
-  public static <T> void show(T data) {
-      System.out.println(data);
-  }
-  ```
+用具有相似签名的方法重载泛型方法会导致歧义或无意的方法选择。当类型擦除导致多个重载具有不可区分的字节码签名时，这种情况特别危险。
 
-- **避免不当使用有界类型参数**：有界类型参数放置不当或不必要的复杂性会让泛型代码更难以理解和维护。考虑以下示例：
-  ```java
-  public <T extends Number & Comparable<T>> void process(T value) {}
-  ```
-  **解释**：虽然这种写法是有效的，但如果不需要，过度使用边界会增加代码认知负担。
+让我们通过以下代码来理解这一点：
 
-- **避免在方法参数中冗余使用通配符**：在不需要的情况下使用通配符 `? extends T` 或 `? super T` 会增加代码理解难度。考虑以下示例：
-  ```java
-  public <T> void process(List<? extends T> list) {
-      // 只读
-  }
-  ```
-  解释**：如果不需要对 `list` 进行完全访问，简单的签名如 `process(List<?> list)` 可能更好。通配符 (`?`) 只有在需要遵循 PECS 规则时才使用。
+```java
+public class Printer {
+    public void print(String data) {
+        System.out.println("String: " + data);
+    }
+    public <T> void print(T data) {
+        System.out.println("Generic: " + data);
+    }
+    public static void main(String[] args) {
+        Printer printer = new Printer();
+        printer.print("Hello");
+    }
+}
+```
 
-- **未检查的强制转换和编译器警告**：未检查的警告表示类型安全可能受到破坏。如果不加小心地忽略这些警告会导致运行时出现 `ClassCastException`。
-  例如：
-  ```java
-  List<String> list = (List<String>) getObject();
-  ```
-  **解释**：在上面的代码中，如果 `getObject()` 返回的是原始类型或其他泛型类型，编译器会发出警告。使用 `@SuppressWarnings("unchecked")` 抑制警告应在确认类型安全后进行。
+**解释**：在上面的示例中，虽然看起来泛型方法 `print(T data)` 可能被选中，但非泛型的 `print(String data)` 是更好的匹配且会被调用。这可能导致行为不一致，特别是如果以后以后为其他类型重载了该方法。开发者应避免创建可能与特定方法冲突的泛型方法重载，除非绝对必要。
 
-- **泛型与可变参数**：在可变参数中使用泛型会导致堆污染并产生警告。
-  堆污染发生在参数化类型的变量（如 `List<String>`）指向实际上并非该类型的对象时。
-  这通常发生在：
-    - 将原始类型与泛型混合
-    - 使用未检查的强制转换
-    - 误用可变参数
-  考虑以下示例：
-  ```java
-  List<String> strings = new ArrayList<>();
-  List rawList = strings; // 原始类型
-  rawList.add(42); // 向 List<String> 添加整数
-  String s = strings.get(0); // 此处发生 ClassCastException
-  ```
-  在这里，编译器认为 strings 只持有 String 对象，但由于堆污染，一个 `Integer` 溜了进来，导致运行时错误。
-  泛型和可变参数更容易发生堆污染，因为数组是在运行时创建的，而泛型使用类型擦除；数组可能会存储错误类型的元素而缺乏编译时安全性。
-  为了避免这种情况，可以如下所示使用 `@SafeVarargs` 注解：
-  ```java
-  @SafeVarargs
-  public static <T> void addAll(List<T> list, T... elements) {
-      for (T element : elements) {
-          list.add(element);
-      }
-  }
-  ```
-  `@SafeVarargs` 注解会抑制警告，只有当方法不会修改或暴露可能破坏类型安全的可变参数数组时才使用。此外，`@SafeVarargs` 只能应用于 `final` 或 `static` 方法和构造函数，以确保该方法不会被重写并引入不安全行为。
+### 避免在静态上下文中使用泛型
 
+泛型类型参数与类的静态上下文没有绑定。这意味着你不能在静态方法或静态字段中使用类的类型参数。
 
+考虑以下示例：
 
+```java
+public class Box<T> {
+    private T value;
+    // 这会导致编译错误
+    // private static T staticValue;
+    public static void show(T data) {
+        // 编译错误
+    }
+}
+```
 
+**解释**：在上面的示例中，由于类型参数绑定到实例级别，静态字段和方法无法访问它们。解决方案是让静态方法本身变为泛型，如下所示：
+
+```java
+public static <T> void show(T data) {
+    System.out.println(data);
+}
+```
+
+### 避免不当使用有界类型参数
+
+有界类型参数放置不当或不必要的复杂性会让泛型代码更难以理解和维护。考虑以下示例：
+
+```java
+public <T extends Number & Comparable<T>> void process(T value) {}
+```
+
+**解释**：虽然这种写法是有效的，但如果不需要，过度使用边界会增加代码认知负担。
+
+### 避免在方法参数中冗余使用通配符
+
+在不需要的情况下使用通配符 `? extends T` 或 `? super T` 会增加代码理解难度。考虑以下示例：
+
+```java
+public <T> void process(List<? extends T> list) {
+    // 只读
+}
+```
+
+**解释**：如果不需要对 `list` 进行完全访问，简单的签名如 `process(List<?> list)` 可能更好。通配符 (`?`) 只有在需要遵循 PECS 规则时才使用。
+
+### 未检查的强制转换和编译器警告
+
+未检查的警告表示类型安全可能受到破坏。如果不加小心地忽略这些警告会导致运行时出现 `ClassCastException`。
+
+例如：
+
+```java
+List<String> list = (List<String>) getObject();
+```
+
+**解释**：在上面的代码中，如果 `getObject()` 返回的是原始类型或其他泛型类型，编译器会发出警告。使用 `@SuppressWarnings("unchecked")` 抑制警告应在确认类型安全后进行。
+
+### 泛型与可变参数
+
+在可变参数中使用泛型会导致堆污染并产生警告。
+
+堆污染发生在参数化类型的变量（如 `List<String>`）指向实际上并非该类型的对象时。
+
+这通常发生在：
+
+- 将原始类型与泛型混合
+- 使用未检查的强制转换
+- 误用可变参数
+
+考虑以下示例：
+
+```java
+List<String> strings = new ArrayList<>();
+List rawList = strings; // 原始类型
+rawList.add(42); // 向 List<String> 添加整数
+String s = strings.get(0); // 此处发生 ClassCastException
+```
+
+在这里，编译器认为 strings 只持有 String 对象，但由于堆污染，一个 `Integer` 溜了进来，导致运行时错误。
+
+泛型和可变参数更容易发生堆污染，因为数组是在运行时创建的，而泛型使用类型擦除；数组可能会存储错误类型的元素而缺乏编译时安全性。
+
+为了避免这种情况，可以如下所示使用 `@SafeVarargs` 注解：
+
+```java
+@SafeVarargs
+public static <T> void addAll(List<T> list, T... elements) {
+    for (T element : elements) {
+        list.add(element);
+    }
+}
+```
+
+`@SafeVarargs` 注解会抑制警告，只有当方法不会修改或暴露可能破坏类型安全的可变参数数组时才使用。此外，`@SafeVarargs` 只能应用于 `final` 或 `static` 方法和构造函数，以确保该方法不会被重写并引入不安全行为。
 
 ```java
 // catch (CustomException<String> e) { }
@@ -5443,9 +5684,9 @@ System.out.println(cities.get(1)); // 快速访问索引 1
 
 就像上面的示例一样，如果你的用例需要频繁通过索引访问，并且在中间的插入或删除较少，`ArrayList` 是最佳选择。
 
-考虑以下示例：
+### 避免不必要的调整大小
 
-- **避免不必要的调整大小**：在使用 `ArrayList` 或 `HashMap` 等可调整大小的集合时，频繁的调整大小是非常昂贵的。如果你知道预期的尺寸，请使用合适的容量初始化 `Collection`。
+在使用 `ArrayList` 或 `HashMap` 等可调整大小的集合时，频繁的调整大小是非常昂贵的。如果你知道预期的尺寸，请使用合适的容量初始化 `Collection`。
 
 在下面的示例中，`ArrayList` 和 `HashMap` 初始化时指定尺寸：
 
@@ -5456,7 +5697,9 @@ Map<String, Integer> marks = new HashMap<>(50);
 
 指定初始容量可以减少内部数组调整大小的次数，这可以显著提高大型循环或数据密集型操作的性能。
 
-- **使用 Stream 和增强 for 循环提高可读性**：当不需要索引时，避免使用传统的 `for` 循环。这会让代码更简洁、更安全。像下面所示使用增强 for 循环或 `Streams`：
+### 使用 Stream 和增强 for 循环提高可读性
+
+当不需要索引时，避免使用传统的 `for` 循环。这会让代码更简洁、更安全。像下面所示使用增强 for 循环或 `Streams`：
 
 ```java
 List<String> fruits = Arrays.asList("Mango", "Apple", "Banana");
@@ -5481,9 +5724,13 @@ fruits.forEach(System.out::println);
 
 在设计暴露或消费集合的应用时，开发者必须考虑灵活性、易用性、可维护性和安全性。设计良好的集合 API 可以让代码更直观并减少错误：
 
-- **在方法签名中始终使用集合接口**（`List`、`Set`、`Map`）而不是实现类（`ArrayList`、`HashSet` 等）。这使得方法具有灵活，允许调用者传递任何列表实现（例如 `ArrayList` 或 `LinkedList`），而不会破坏兼容性。
+### 在方法签名中始终使用集合接口
 
-- **不要从返回集合的方法中返回 `null`**。相反，像下面所示使用工具方法返回一个空集合：
+在方法签名中始终使用集合接口（`List`、`Set`、`Map`）而不是实现类（`ArrayList`、`HashSet` 等）。这使得方法具有灵活，允许调用者传递任何列表实现（例如 `ArrayList` 或 `LinkedList`），而不会破坏兼容性。
+
+### 不要从返回集合的方法中返回 `null`
+
+不要从返回集合的方法中返回 `null`。相反，像下面所示使用工具方法返回一个空集合：
 
 ```java
 public List<String> getStudents() {
@@ -5493,7 +5740,9 @@ public List<String> getStudents() {
 
 这防止了调用代码必须进行空检查，并降低了 `NullPointerException` 的概率。
 
-- **为了避免对内部数据的意外或未经授权修改**，返回不可修改的视图或不可变集合。可以像下面所示：
+### 返回不可修改的视图或不可变集合
+
+为了避免对内部数据的意外或未经授权修改，返回不可修改的视图或不可变集合。可以像下面所示：
 
 ```java
 private List<String> courses = new ArrayList<>();
@@ -5504,7 +5753,9 @@ public List<String> getCourses() {
 
 这封装了你的数据，并确保外部代码不会意外更改内部状态。
 
-- **如果你的方法期望少数量的固定元素**，使用 `varargs`（可变参数）以获得更好的可读性和便利性，像面所示：
+### 使用 varargs（可变参数）
+
+如果你的方法期望少数量的固定元素，使用 `varargs`（可变参数）以获得更好的可读性和便利性，像面所示：
 
 ```java
 public void addSubjects(String... subjects) {
@@ -5516,7 +5767,9 @@ public void addSubjects(String... subjects) {
 
 这允许调用者以简洁简单的方式传递多个值，而无需显式创建列表。
 
-- **在返回集合时**，如果顺序或唯一性很重要，请使用更具体的接口，如 `Set` 或 `Queue`。可以像下面所示：
+### 在返回集合时使用更具体的接口
+
+在返回集合时，如果顺序或唯一性很重要，请使用更具体的接口，如 `Set` 或 `Queue`。可以像下面所示：
 
 ```java
 public Set<String> getUniqueCities() {
@@ -5526,7 +5779,9 @@ public Set<String> getUniqueCities() {
 
 这有助于向调用者清晰地传达行为和预期，并提高 API 的清晰度。
 
-- **当你不需要特定操作时，使用更宽的类型**如 `collection`、`iterable` 甚至 `stream`。像下面所示使用更宽的类型：
+### 当你不需要特定操作时，使用更宽的类型
+
+当你不需要特定操作时，使用更宽的类型如 `Collection`、`Iterable` 甚至 `Stream`。像下面所示使用更宽的类型：
 
 ```java
 public void printAll(Collection<String> items) {
@@ -5536,7 +5791,9 @@ public void printAll(Collection<String> items) {
 
 这使得调用方法可以使用任何集合而不必强制进行转换。
 
-- **如果你需要增强或自定义集合**，请使用组合来包装它，而不是继承集合类，像下面所示：
+### 使用组合而非继承
+
+如果你需要增强或自定义集合，请使用组合来包装它，而不是继承集合类，像下面所示：
 
 ```java
 public class LoggedList<E> {
@@ -5575,13 +5832,9 @@ public class LoggedList<E> {
 以下是一些实用的提示：
 
 - **如果需要频繁访问，避免使用 `LinkedList`**。它的 `get(index)` 操作是 O(n)，而 `ArrayList` 是 O(1)。
-
 - **如果知道预期元素数量，预先调整 `ArrayList` 或 `HashMap`**。这可以减少昂贵的调整大小或重哈操作。
-
 - **最小化原始值的装箱和拆箱**。`List<Integer>` 等集合存储包装对象，会使用更多内存并影响性能。对于大数据集，考虑针对原始类型的库（如 Trove 或 fastutil）。
-
 - **对于只读遍历使用增强 for 循环**。它更简洁且易于阅读。
-
 - **在性能敏感的代码中谨慎使用 Stream**。虽然它们提高了可读性，但与循环相比可能会引入额外的开销：
 
 ```java
@@ -5599,26 +5852,20 @@ int getFactorial(int n) {
 ```
 
 - **对于栈或队列操作，优先使用 `ArrayDeque`** 而不是 `Stack` 和 `LinkedList`。它在这些用例下更高效、更快。
-
 - **在使用后移除未使用的大型临时集合**，通过调用 `.clear()` 或允许其超出作用范围进行垃圾回收。
-
-
-
-
-
-*   除非必要，否则避免使用同步集合包装器（`Collections.synchronizedList`）。它们会增加开销；在处理多线程时，请考虑 `ConcurrentHashMap` 或 `CopyOnWriteArrayList`。
+- **除非必要，否则避免使用同步集合包装器**（`Collections.synchronizedList`）。它们会增加开销；在处理多线程时，请考虑 `ConcurrentHashMap` 或 `CopyOnWriteArrayList`。
 
 ## 同步最佳实践
 
 在多线程应用中，如果不加同步地使用 `Collections`，可能会导致数据损坏或不可预测的行为。Java 框架（JCF）提供了多种安全处理并发的方法。然而，如果处理不当，盲目同步 `Collections` 可能会降低性能或导致死锁。以下是处理同步或并发集合时应遵循的关键最佳实践：
 
-*   优先使用并发集合而非同步包装器。使用 `ConcurrentHashMap`、`CopyOnWriteArrayList` 和 `ConcurrentLinkedQueue` 等类，而不是使用 `Collections.synchronizedXXX()` 对标准集合进行同步。
 
-*   避免对并发集合进行外部同步。不要在对 `ConcurrentHashMap` 等并发集合的操作周围使用 `synchronized` 块。这些类已经设计为线程安全的访问，添加额外的同步会降低性能。
 
-*   仅在旧代码或需要极少并发的单线程场景中使用同步包装器。例如，`Collections.synchronizedList()` 使用线程安全的代理来封装列表。但是，你仍然必须在迭代期间进行同步，如下所示：
+* 优先使用并发集合而非同步包装器。使用 `ConcurrentHashMap`、`CopyOnWriteArrayList` 和 `ConcurrentLinkedQueue` 等类，而不是使用 `Collections.synchronizedXXX()` 对标准集合进行同步。
+* 避免对并发集合进行外部同步。不要在对 `ConcurrentHashMap` 等并发集合的操作周围使用 `synchronized` 块。这些类已经设计为线程安全的访问，添加额外的同步会降低性能。
+* 仅在旧代码或需要极少并发的单线程场景中使用同步包装器。例如，`Collections.synchronizedList()` 使用线程安全的代理来封装列表。但是，你仍然必须在迭代期间进行同步，如下所示：
 
-```
+```java
 List<String> syncList = Collections.synchronizedList(new ArrayList<>());
 
 synchronized (syncList) {
@@ -5628,7 +5875,7 @@ synchronized (syncList) {
 }
 ```
 
-*   谨慎使用原子复合操作。即使使用同步或并发集合，诸如“检查并执行”（check-then-act）之类的复合操作也需要额外的同步。例如，以下代码可能会导致竞态条件：
+* 谨慎使用原子复合操作。即使使用同步或并发集合，诸如“检查并执行”（check-then-act）之类的复合操作也需要额外的同步。例如，以下代码可能会导致竞态条件：
 
 ```java
 // 即使使用 ConcurrentHashMap 也是安全的
@@ -5643,17 +5890,12 @@ if (!map.containsKey(key)) {
 map.putIfAbsent(key, value);
 ```
 
-*   理解 CopyOnWrite 集合的权衡。`CopyOnWriteArrayList` 和 `CopyOnWriteArraySet` 在迭代时不需要锁就是安全的，但它们在每次修改时都会复制整个数组，这可能是昂贵的。仅当读操作远多于写操作时才使用它们。
-
-*   避免对未共享数据进行不必要的同步。如果 `Collection` 被单个线程使用（或每个线程都有自己的副本），则不需要进行同步。
-
-*   利用 `ConcurrentSkipListMap` 和 `ConcurrentSkipListSet` 进行排序并发访问。这些类提供了线程安全的、排序的 map 和 set，且没有同步块的开销。
-
-*   不要直接暴露内部 `Collections`。始终返回一个不可修改的或防御性拷贝，以防止外部线程修改内部结构。
-
-*   在生产者-消费者场景中使用线程安全的阻塞集合。当线程需要等待数据时，`LinkedBlockingQueue`、`ArrayBlockingQueue` 和 `PriorityBlockingQueue` 等类是理想的。
-
-*   避免长时间持有锁。如果在块上进行同步，请保持临界区域尽可能小，以减少竞争和死锁风险。
+* 理解 CopyOnWrite 集合的权衡。`CopyOnWriteArrayList` 和 `CopyOnWriteArraySet` 在迭代时不需要锁就是安全的，但它们在每次修改时都会复制整个数组，这可能是昂贵的。仅当读操作远多于写操作时才使用它们。
+* 避免对未共享数据进行不必要的同步。如果 `Collection` 被单个线程使用（或每个线程都有自己的副本），则不需要进行同步。
+* 利用 `ConcurrentSkipListMap` 和 `ConcurrentSkipListSet` 进行排序并发访问。这些类提供了线程安全的、排序的 map 和 set，且没有同步块的开销。
+* 不要直接暴露内部 `Collections`。始终返回一个不可修改的或防御性拷贝，以防止外部线程修改内部结构。
+* 在生产者-消费者场景中使用线程安全的阻塞集合。当线程需要等待数据时，`LinkedBlockingQueue`、`ArrayBlockingQueue` 和 `PriorityBlockingQueue` 等类是理想的。
+* 避免长时间持有锁。如果在块上进行同步，请保持临界区域尽可能小，以减少竞争和死锁风险。
 
 ## 使用泛型算法
 
@@ -5692,15 +5934,15 @@ int result = GenericAlgorithms.countOccurrences(names, "Liam"); // 返回 2
 
 这个单一方法适用于：
 
-*   统计分数，`countOccurrences(Arrays.asList(85, 90, 85), 85)`
-*   统计自定义对象（如果正确重写了 `equals()`）
-*   任何其他集合类型，如 `Set`、`Queue` 等。
+* 统计分数，`countOccurrences(Arrays.asList(85, 90, 85), 85)`
+* 统计自定义对象（如果正确重写了 `equals()`）
+* 任何其他集合类型，如 `Set`、`Queue` 等。
 
 这说明了：
 
-*   你可以编写一次逻辑并在不同类型之间复用。
-*   我们不需要为每种类型进行类型转换或重载。
-*   清晰的 API 有助于为团队和项目构建泛型工具库。
+* 你可以编写一次逻辑并在不同类型之间复用。
+* 我们不需要为每种类型进行类型转换或重载。
+* 清晰的 API 有助于为团队和项目构建泛型工具库。
 
 ## 结论
 
@@ -5713,102 +5955,118 @@ int result = GenericAlgorithms.countOccurrences(names, "Liam"); // 返回 2
 ## 练习
 
 1. 哪些声明是类型安全且有效的？
-1. `List<Object> list = new ArrayList<>();`
-2. `List<String> list = new ArrayList<>();`
-3. `List list = new ArrayList();`
-4. `List<int> list = new ArrayList<>();`
+
+   1. `List<Object> list = new ArrayList<>();`
+   2. `List<String> list = new ArrayList<>();`
+   3. `List list = new ArrayList();`
+   4. `List<int> list = new ArrayList<>();`
 
 2. 如果向 `List<String>` 添加 `Integer`，会发生什么？
-1. 编译时错误
-2. 运行时错误
-3. 自动转换
-4. 无
+
+   1. 编译时错误
+   2. 运行时错误
+   3. 自动转换
+   4. 无
 
 3. 哪种泛型通配符允许只读访问？
-1. `<? super T>`
-2. `<?>`
-3. `<? extends T>`
-4. `<T>`
+
+   1. `<? super T>`
+   2. `<?>`
+   3. `<? extends T>`
+   4. `<T>`
 
 4. 为什么要在泛型代码中避免原始类型？
-1. 它们更快
-2. 它们提高了性能
-3. 它们绕过了编译检查
-4. 它们支持更多类型
+
+   1. 它们更快
+   2. 它们提高了性能
+   3. 它们绕过了编译检查
+   4. 它们支持更多类型
 
 5. 使用 `Collections.unmodifiableList()` 的优势是？
-1. 提高性能
-2. 防止修改
-3. 增加容量
-4. 支持并行
+
+   1. 提高性能
+   2. 防止修改
+   3. 增加容量
+   4. 支持并行
 
 6. 哪个方法返回给定 `Set` 的同步版本？
-1. `Collections.unmodifiableSet()`
-2. `Collections.checkedSet()`
-3. `Collections.synchronizedSet()`
-4. 以上都不是
+
+   1. `Collections.unmodifiableSet()`
+   2. `Collections.checkedSet()`
+   3. `Collections.synchronizedSet()`
+   4. 以上都不是
 
 7. 如何在运行时强制执行 `Collection` 的类型安全？
-1. 使用原始类型
-2. 使用检查的集合
-3. 运行时类型转换
-4. 使用反射
+
+   1. 使用原始类型
+   2. 使用检查的集合
+   3. 运行时类型转换
+   4. 使用反射
 
 8. 在 `ArrayList` 中访问元素的时间复杂度是多少？
-1. `O(log n)`
-2. `O(1)`
-3. `O(n)`
-4. `O(n log n)`
+
+   1. `O(log n)`
+   2. `O(1)`
+   3. `O(n)`
+   4. `O(n log n)`
 
 9. 哪些集合允许重复元素？
-1. `HashSet`
-2. `LinkedHashSet`
-3. `TreeSet`
-4. `ArrayList`
+
+   1. `HashSet`
+   2. `LinkedHashSet`
+   3. `TreeSet`
+   4. `ArrayList`
 
 10. `<? super T>` 在泛型方法中允许什么？
+
     1. 仅接受 `T`
     2. 接受任何类型
     3. 接受 `T` 及其父类
     4. 限制为子类仅
 
-
-
-
-
 ### 答案
 
 1. `b`
-解释：Java 泛型要求类型参数为对象类型，而 `b` 是类型安全的。
+
+   解释：Java 泛型要求类型参数为对象类型，而 `b` 是类型安全的。
 
 2. `a`
-解释：你不能向 `List<String>` 中添加 `Integer`；这会导致编译时错误。
+
+   解释：你不能向 `List<String>` 中添加 `Integer`；这会导致编译时错误。
 
 3. `c`
-解释：`<? extends T>` 允许只读访问，并用于协变性。
+
+   解释：`<? extends T>` 允许只读访问，并用于协变性。
 
 4. `c`
-解释：原始类型（Raw types）会跳过编译检查，导致代码不安全且容易出错。
+
+   解释：原始类型（Raw types）会跳过编译检查，导致代码不安全且容易出错。
 
 5. `b`
-解释：不可修改列表（Unmodifiable lists）防止在创建后对 `Collection` 进行更改。
+
+   解释：不可修改列表（Unmodifiable lists）防止在创建后对 `Collection` 进行更改。
 
 6. `c`
-解释：`Collections.synchronizedSet()` 提供了 `Set` 的线程安全版本。
+
+   解释：`Collections.synchronizedSet()` 提供了 `Set` 的线程安全版本。
 
 7. `b`
-解释：如果使用了错误的类型，受检查的集合（Checked collections）会在运行时抛出 `ClassCastException`。
+
+   解释：如果使用了错误的类型，受检查的集合（Checked collections）会在运行时抛出 `ClassCastException`。
 
 8. `b`
-解释：`ArrayList` 通过索引对元素提供常数时间的访问。
+
+   解释：`ArrayList` 通过索引对元素提供常数时间的访问。
 
 9. `d`
-解释：`ArrayList` 允许重复元素，与 `Set` 的实现不同。
+
+   解释：`ArrayList` 允许重复元素，与 `Set` 的实现不同。
 
 10. `c`
-解释：`<? super T>` 接受 `T` 及其超类，用于逆变参数。
 
-加入我们的 Discord 空间
+    解释：`<? super T>` 接受 `T` 及其超类，用于逆变参数。
+
+## 加入我们的 Discord 空间
 
 加入我们的 Discord 工作空间以获取最新更新、优惠、全球科技动态、新发布以及与作者的交流：
 
@@ -5843,13 +6101,16 @@ int result = GenericAlgorithms.countOccurrences(names, "Liam"); // 返回 2
 ### 案例研究 1：Web 应用程序中用户会话的管理
 
 * **问题描述**：想象一个基于 Java 的 Web 应用程序，允许用户根据角色（管理员、编辑器、查看者）登录并执行任务。每个用户会话都必须被唯一跟踪以确保：
+
     * 通过会话 ID 快速查找
     * 防止重复登录
     * 根据登录时间清理过期的会话
     * 以只读暴露的方式安全处理会话数据
+
     随着活跃用户数量的增加，系统必须具备良好的扩展。
 
 * **设计决策**：在设计会话管理器之前，考虑为什么选择某些数据结构和类型系统是重要的。在大规模应用中，管理用户会话等状态需要精确性、性能和清晰度。集合提供了快速访问和高效存储，而泛型确保了类型安全和可重用性。
+
 这种组合使得集合和泛型成为管理会话数据的理想选择，因为在这种情况下，快速查找、受控暴露和可维护的代码至关重要。
 
 以下是核心设计因素：
@@ -5945,23 +6206,28 @@ public class SessionManager {
 
 在上面的示例中：
 
-* `Map` 允许我们将会话 ID（作为 `String`）映射到 `SessionInfo` 对象。
-* 我们使用 `LinkedHashMap` 而不是 `HashMap`，因为它保留了添加的顺序。这有助于我们稍后清理旧会话。
-* `createSession` 使用唯一的 `sessionId` 在 map 中添加新会话。如果已存在相同 ID 的会话，则会被替换（这同时也允许处理重新登录逻辑）。
-* `getSession` 方法使用 `sessionId` 键查找 `SessionInfo` 对象。如果不存在此类会话，则返回 `null`。
-* `removeSession` 允许手动移除会话，例如在注销或安全失效时。
 
 
+`Map` 允许我们将会话 ID（作为 `String`）映射到 `SessionInfo` 对象。
 
+我们使用 `LinkedHashMap` 而不是 `HashMap`，因为它保留了添加的顺序。这有助于我们稍后清理旧会话。
 
+`createSession` 使用唯一的 `sessionId` 在 map 中添加新会话。如果已存在相同 ID 的会话，则会被替换（这同时也允许处理重新登录逻辑）。
 
-*  `getAllActiveSessions` 方法暴露了所有活跃会话的列表，但是：
-    *   我们将 `Map` 值（即 `SessionInfo` 对象）转换为列表。
-    *   我们随后将其封装在 `Collections.unmodifiableList()` 中，以防止外部代码修改内部会话数据。
-* `cleanUpExpiredSession` 是最重要的功能之一：
-    *   `SESSION_TIMEOUT` 定义了允许的会话时长（30 分钟）。
-    *   我们使用 `Iterator` 遍历所有会话，这样就可以安全地移除项而不会抛出 `ConcurrentModificationException`。
-    *   我们计算每个会话自开始以来，如果超过 30 分钟，则将其从 map 中移除。
+`getSession` 方法使用 `sessionId` 键查找 `SessionInfo` 对象。如果不存在此类会话，则返回 `null`。
+
+`removeSession` 允许手动移除会话，例如在注销或安全失效时。
+
+`getAllActiveSessions` 方法暴露了所有活跃会话的列表，但是：
+
+* 我们将 `Map` 值（即 `SessionInfo` 对象）转换为列表。
+* 我们随后将其封装在 `Collections.unmodifiableList()` 中，以防止外部代码修改内部会话数据。
+
+`cleanUpExpiredSession` 是最重要的功能之一：
+
+* `SESSION_TIMEOUT` 定义了允许的会话时长（30 分钟）。
+* 我们使用 `Iterator` 遍历所有会话，这样就可以安全地移除项而不会抛出 `ConcurrentModificationException`。
+* 我们计算每个会话自开始以来，如果超过 30 分钟，则将其从 map 中移除。
 
 以下是使用 `SessionManager` 的示例：
 
@@ -5983,6 +6249,7 @@ public class TestSessionManager {
 ```
 
 以下是系统的整体工作机制：
+
 * 当用户登录时创建新会话
 * 允许对会话进行查找、删除和列出
 * 根据时间高效清理旧会话
@@ -5995,21 +6262,25 @@ public class TestSessionManager {
 
 ### 案例研究 2：基于 Sets 和 Maps 的角色访问控制
 
-* **问题描述**：在企业级应用程序中，必须在多个级别执行访问控制。每个用户被分配一个或多个角色，每个角色允许一组操作（或权限）。系统必须高效地分配并检索用户的角色
-    *   定义每个角色允许哪些操作
-    * 验证用户是否被允许执行特定操作
-    * 避免重复并确保快速查找
-* **设计决策**：访问控制自然地映射到集合：
-    *   使用 `Set` 维护每个用户的唯一角色以及每个角色的唯一权限
-    *   使用 `Map` 允许快速检索特定角色的权限或某个用户的角色
-    *   泛型确保如 `Map<String, Set<String>>` 等映射是严格类型安全的，减少运行时错误并提高可读性
+**问题描述**：在企业级应用程序中，必须在多个级别执行访问控制。每个用户被分配一个或多个角色，每个角色允许一组操作（或权限）。系统必须高效地分配并检索用户的角色
+
+* 定义每个角色允许哪些操作
+* 验证用户是否被允许执行特定操作
+* 避免重复并确保快速查找
+
+**设计决策**：访问控制自然地映射到集合：
+
+* 使用 `Set` 维护每个用户的唯一角色以及每个角色的唯一权限
+* 使用 `Map` 允许快速检索特定角色的权限或某个用户的角色
+* 泛型确保如 `Map<String, Set<String>>` 等映射是严格类型安全的，减少运行时错误并提高可读性
 
 这些结构实现了可扩展、高性能且安全的访问管理逻辑。
 
-* **实现**：让我们让我们构建一个简单的基于角色的访问控制 (RBAC) 系统，其中：
-    *   用户可以拥有多个角色
-    *   每个角色映射到允许的操作集
-    *   我们可以检查用户是否被允许执行给定的操作
+**实现**：让我们构建一个简单的基于角色的访问控制 (RBAC) 系统，其中：
+
+* 用户可以拥有多个角色
+* 每个角色映射到允许的操作集
+* 我们可以检查用户是否被允许执行给定的操作
 
 我们从 `RolePermissionRegistry` 类开始，如下：
 
@@ -6030,9 +6301,13 @@ public class RolePermissionRegistry {
     }
 }
 ```
+
 上述类持有角色到其操作的映射。
+
 * `rolePermissions` 将每个角色（例如 `admin`）映射到操作集（例如 `{"CREATE", "DELETE"}`）。
-* 如果角色不存在，我们返回一个不可变的空集合。为了维护用户-角色的映射，我们有如下所示的 `UserAccessManager` 类：
+* 如果角色不存在，我们返回一个不可变的空集合。
+
+为了维护用户-角色的映射，我们有如下所示的 `UserAccessManager` 类：
 
 ```java
 import java.util.HashMap;
@@ -6062,7 +6337,9 @@ public class UserAccessManager {
     }
 }
 ```
+
 在上述示例中：
+
 * `userRoles` 将每个用户 ID 映射到角色集（例如 `"user123"` `["editor", "viewer"]`）。
 * `assignRole()` 在不存在时初始化角色集。
 * `isActionAllowed()` 遍历用户的角色，并检查是否有任何一个允许给定的操作。
@@ -6079,7 +6356,7 @@ public class AccessControlTest {
         registry.addPermissions("admin", Set.of("CREATE", "READ", "UPDATE", "DELETE"));
         registry.addPermissions("editor", Set.of("READ", "UPDATE"));
         registry.addPermissions("viewer", Set.of("READ"));
-        UserAccessManager accessManager = new UserAccessManager (registry);
+        UserAccessManager accessManager = new UserAccessManager(registry);
         accessManager.assignRole("Chloe", "viewer");
         accessManager.assignRole("Ray", "editor");
         accessManager.assignRole("Ann", "admin");
@@ -6090,42 +6367,42 @@ public class AccessControlTest {
 }
 ```
 
-
-
-
-
 本案例展示了如何有效 Java 集合和泛型来实现 RBAC（基于角色的访问控制），这是许多应用程序中的基础安全需求。通过使用 `Map` 和 `Set` 对用户-角色和角色-权限关系进行建模，我们能够简洁高效地执行访问规则。
 
 泛型（`Map<String, Set<String>>`）的使用确保了类型安全和可读性，同时避免了冗余数据并实现了快速查找。这种设计对于访问权限频繁变化的现实系统而言，具有良好的扩展性和适应性。
 
 ### 案例研究 3：电子商务系统中的产品订单处理
 
-*   **问题描述**：在电子商务平台中，全天都会收到来自多个客户的订单。每个订单包含：
-    *   一个唯一的订单 ID
-    *   客户信息
-    *   项目列表，每个项目都包含产品详情和数量
+**问题描述**：在电子商务平台中，全天都会收到来自多个客户的订单。每个订单包含：
+
+* 一个唯一的订单 ID
+* 客户信息
+* 项目列表，每个项目都包含产品详情和数量
 
 系统必须通过以下方式高效处理传入的订单：
-    *   按 `customer ID` 对订单进行存储和分组
-    *   跟踪每个客户订单的所有项目
-    *   计算每个客户的总价值
-    *   在需要时提供订单的只读摘要
+
+* 按 `customer ID` 对订单进行存储和分组
+* 跟踪每个客户订单的所有项目
+* 计算每个客户的总价值
+* 在需要时提供订单的只读摘要
 
 数据量可能会迅速增长，因此解决方案必须是内存高效的并且能够防止意外修改。
 
-*   **设计决策**：为了满足上述问题描述，我们选择了：
-    *   使用 `Map` 按 `customer ID` 对订单进行分组
-    *   使用 `List` 维护每个客户的已排序项目
-    *   使用自定义 `class` 来表示订单中的每个项目
-    *   使用 `Generics` 确保订单的类型安全处理并避免强制类型转换
-    *   使用 `Unmodifiable views`（不可修改视图）来报告订单摘要，而不暴露内部结构
+**设计决策**：为了满足上述问题描述，我们选择了：
+
+* 使用 `Map` 按 `customer ID` 对订单进行分组
+* 使用 `List` 维护每个客户的已排序项目
+* 使用自定义 `class` 来表示订单中的每个项目
+* 使用 `Generics` 确保订单的类型安全处理并避免强制类型转换
+* 使用 `Unmodifiable views`（不可修改视图）来报告订单摘要，而不暴露内部结构
 
 这些设计选择允许结构化存储、易于聚合以及为报告工具提供安全的读取访问。
 
-*   **实现**：我们将使用以下组件建模一个简化的订单处理模块：
-    *   `OrderItem` 是订单中的单个项目
-    *   `CustomerOrderManager` 存储并按客户分组订单
-    *   用于计算总额和生成只读摘要的实用方法方法
+**实现**：我们将使用以下组件建模一个简化的订单处理模块：
+
+* `OrderItem` 是订单中的单个项目
+* `CustomerOrderManager` 存储并按客户分组订单
+* 用于计算总额和生成只读摘要的实用方法
 
 以下是 `OrderItem` 类，它代表客户订单中的产品：
 
@@ -6156,10 +6433,13 @@ public class OrderItem {
 ```
 
 在上面的示例中：
-*   `getTotalPrice()` 计算该项目的成本
-*   该类是不可变的，确保了线程安全和数据完整性
+
+* `getTotalPrice()` 计算该项目的成本
+* 该类是不可变的，确保了线程安全和数据完整性
 
 接下来，我们有了处理存储和聚合的 `CustomerOrderManager` 类：
+
+
 
 ```java
 import java.util.ArrayList;
@@ -6198,8 +6478,9 @@ public class CustomerOrderManager {
 ```
 
 在上面的示例中：
+
 *   `computeIfAbsent` 确保在第一次遇到 `customer ID` 时初始化新列表。
-*   `unmodifiableList` 和 `unmodifiableSet`提供了对内部结构的安全的访问。
+*   `unmodifiableList` 和 `unmodifiableSet` 提供了对内部结构的安全访问。
 *   使用 `streams` 使得聚合操作变得简洁高效。
 
 订单处理可以进行测试，如下所示：
@@ -6223,13 +6504,12 @@ public class OrderProcessingTest {
 }
 ```
 
-
-
-
-
 ```java
-"Eraser (Out of Stock)"
-
+List<String> products = List.of(
+    "Notebook",
+    "Pen",
+    "Eraser (Out of Stock)",
+    "Marker"
 );
 
 List<String> availableProducts = products.stream()
@@ -6241,13 +6521,13 @@ System.out.println(availableProducts); // [Notebook, Pen, Marker]
 
 在上面的示例中：
 
-* 我们使用 `Stream` 来处理列表并应用一个过滤条件。
-* 只有不包含 `(Out of Stock)` 的产品会被收集到一个新的列表中。
-* 由于由于不可变性（`List.of(...)`），原始列表保持不变。
+*   我们使用 `Stream` 来处理列表并应用一个过滤条件。
+*   只有不包含 `(Out of Stock)` 的产品会被收集到一个新的列表中。
+*   由于不可变性（`List.of(...)`），原始列表保持不变。
 
-### 示例 11.2：使用 `Collectors.groupingBy()` 对元素进行分组：
+### 示例 11.2：使用 `Collectors.groupingBy()` 对元素进行分组
 
-* 问题：你想根据部门对员工进行分组。
+*   问题：你想根据部门对员工进行分组。
 
 可以通过以下方式解决：
 
@@ -6269,13 +6549,13 @@ System.out.println(groupedByDept);
 
 在上面的示例中：
 
-* 使用 `Collectors.groupingBy()` 创建一个 `Map`，其中键是部门名称，值是该部门员工的列表。
-* 使用 `record`（`Employee`）使得代码更加简洁且易读。
-* 这通常用于报告生成、仪表板和分析功能。
+*   使用 `Collectors.groupingBy()` 创建一个 `Map`，其中键是部门名称，值是该部门员工的列表。
+*   使用 `record`（`Employee`）使得代码更加简洁且易读。
+*   这通常用于报告生成、仪表板和分析功能。
 
 ### 示例 11.3：对自定义对象列表进行排序
 
-* 问题：你有一有一个包含姓名和成绩的学生列表。你想按成绩降序排列对他们进行排序。
+*   问题：你有一个包含姓名和成绩的学生列表。你想按成绩降序排列对他们进行排序。
 
 可以通过以下方式解决：
 
@@ -6306,12 +6586,12 @@ System.out.println(students);
 
 在示例中：
 
-* 使用自定义比较器对列表进行排序，该比较器降序比较成绩。
-* 使用 `Collections.sort()` 或 `List.sort()` 对自定义对象进行排序是现实世界中常见的任务。
+*   使用自定义比较器对列表进行排序，该比较器降序比较成绩。
+*   使用 `Collections.sort()` 或 `List.sort()` 对自定义对象进行排序是现实世界中常见的任务。
 
-### 示例 11.4：创建频率映射：
+### 示例 11.4：创建频率映射
 
-* 问题：给定一个产品 ID 列表，统计每个产品销售的次数。
+*   问题：给定一个产品 ID 列表，统计每个产品销售的次数。
 
 以下是解决该问题的代码：
 
@@ -6327,13 +6607,13 @@ System.out.println(frequencyMap); // {P1=3, P2=2, P3=1}
 
 在上面的示例中：
 
-* 配合 `counting` 使用 `groupingBy` 可以统计每个元素的次数。
-* 结果是一个 `Map`，其中键是产品 ID，值是它们的频率。
-* 对于生成摘要、日志或仪表板有用。
+*   配合 `counting` 使用 `groupingBy` 可以统计每个元素的次数。
+*   结果是一个 `Map`，其中键是产品 ID，值是它们的频率。
+*   对于生成摘要、日志或仪表板有用。
 
-### 示例 11.5：使用 `flatMap()` 展开嵌套集合：
+### 示例 11.5：使用 `flatMap()` 展开嵌套集合
 
-* 问题：给定一个学生列表，每个学生都参加了多门课程，获取一个所有学生所选课程的唯一扁化列表。
+*   问题：给定一个学生列表，每个学生都参加了多门课程，获取一个所有学生所选课程的唯一扁化列表。
 
 以下是解决该问题的代码：
 
@@ -6344,11 +6624,7 @@ List<String> uniqueCourses = students.stream()
     .collect(Collectors.toList());
 ```
 
-
-
-
-
-*   处理大型数据集：使用如 `ArrayDeque`（队列）或 `TreeSet`（有序访问）等数据结构，可以使用化的内存和访问速度处理海量数据。
+*   处理大型数据集：使用如 `ArrayDeque`（队列）或 `TreeSet`（有序访问）等数据结构，可以使用优化的内存和访问速度处理海量数据。
 
 ## 真实场景中的最佳实践
 
@@ -6356,119 +6632,130 @@ List<String> uniqueCourses = students.stream()
 
 以下是广泛推荐且在真实软件系统中证明有效的关键最佳实践：
 
-*   **优先使用接口而非实现类**：始终使用接口（`List`, `Set`, `Map`）声明变量和返回类型，而不是具体的实现类（`ArrayList`, `HashSet`, `HashMap`）。这提高了了灵活性，并允许在最小影响内切换实现类。
+*   **优先使用接口而非实现类**：始终使用接口（`List`、`Set`、`Map`）声明变量和返回类型，而不是具体的实现类（`ArrayList`、`HashSet`、`HashMap`）。这提高了灵活性，并允许在最小影响内切换实现类。
 
-例如：
+    例如：
 
-```javaList<String> names = new ArrayList<>();
-```
+    ```java
+    List<String> names = new ArrayList<>();
+    ```
 
 *   **以合适的容量初始化集合**：如果你提前知道大小，请提供初始容量（例如在 `ArrayList` 或 `HashMap` 中），以避免昂贵的重扩操作。
 
-例如：
+    例如：
 
-```java
-Map<String, String> cache = new HashMap<>(1000); // 减少重哈
-```
+    ```java
+    Map<String, String> cache = new HashMap<>(1000); // 减少重哈希
+    ```
 
 *   **避免原始类型（raw types）**：始终使用泛型而非原始类型，以维护类型安全并防止 `ClassCastException`。
 
-例如：
+    例如：
 
-```java
-List<String> list = new ArrayList<>();
-List rawList = new ArrayList();
-```
+    ```java
+    List<String> list = new ArrayList<>();
+    List rawList = new ArrayList();
+    ```
 
 *   **返回空集合而非 null**：返回 `null` 会强制调用者进行空检查。返回 `Collections.emptyList()` 或 `emptyMap()` 可以避免错误并简化代码。
 
 *   **在暴露集合时使用不可修改包装器**：防止调用者无意（或有意）修改内部状态。
 
-例如：
+    例如：
 
-```java
-return Collections.unmodifiableList(orderHistory);
-```
+    ```java
+    return Collections.unmodifiableList(orderHistory);
+    ```
 
 *   **使用 `Comparator.comparing()` 进行可读性强的排序**：现代 Java 允许编写具有表现力的排序逻辑。
 
-例如：
+    例如：
 
-```java
-products.sort(Comparator.comparing(Product::getPrice).reversed());
-```
+    ```java
+    products.sort(Comparator.comparing(Product::getPrice).reversed());
+    ```
 
 *   **最小化可变性**：在处理共享或敏感数据时，使用不可变数据结构或防御性拷贝。
 
-*   **避免泛型中不必要的装箱**：在可能的情况下使用原始类型特有的替代方案（`IntStream`, `Map<Integer, String>` 等）以避免性能开销。
+*   **避免泛型中不必要的装箱**：在可能的情况下使用原始类型特有的替代方案（`IntStream`、`Map<Integer, String>` 等）以避免性能开销。
 
-*   **使用 `computeIfAbsent()` 或 `merge()` 进行聚合**：这些方法在填充或更新 map 时消除了冗冗的 `if-else` 检查。
+*   **使用 `computeIfAbsent()` 或 `merge()` 进行聚合**：这些方法在填充或更新 map 时消除了冗余的 `if-else` 检查。
 
 ## 总结
 
 在本章中，我们探索了 Java 集合和泛型如何超越理论构型，成为构建实际真实世界软件的重要工具。通过案例研究、常用用法模式和真实世界的问题解决策略，我们看到了如何以可扩展的方式组织、处理和保护数据。
 
-集合提供了一种管理成组组的结构化方式，而泛型确保了类型安全、可重用并减少了运行时错误。无论你是在设计订单处理系统、实现 RBAC 还是分析产品数据，掌握这些 API 都能带来更健壮、更易维护的代码。
+集合提供了一种管理成组数据的结构化方式，而泛型确保了类型安全、可重用并减少了运行时错误。无论你是在设计订单处理系统、实现 RBAC 还是分析产品数据，掌握这些 API 都能带来更健壮、更易维护的代码。
 
 在下一章也是最后一章中，我们将探索新兴趋势、近期 Java 版本的增强功能以及集合和泛型的未来方向。
 
 ## 练习
 
 1.  你应该使用哪种集合类型按插入顺序存储项并避免重复？
+
     1.  `HashSet`
     2.  `TreeSet`
     3.  `LinkedHashSet`
     4.  `ArrayList`
 
 2.  哪个方法返回列表的不可修改版本？
+
     1.  `List.unmodifiable()`
     2.  `Collections.freeze()`
     3.  `Collections.unmodifiableList()`
     4.  `List.readOnly()`
 
 3.  以下哪种是使用 stream 计数项在列表中出现次数的有效方法？
+
     1.  `filter().grouping()`
     2.  `collect(Collectors.counting())`
     3.  `collect(Collectors.groupingBy(..., counting()))`
     4.  `stream().sum()`
 
 4.  `computeIfAbsent()` 在 `Map` 中作用什么？
+
     1.  检查 map 是否包含某个值
     2.  如果键缺失则插入默认值
     3.  如果不存在则删除条目
     4.  合并两个 map
 
 5.  以下哪项可以创建一个空的、不可修改的列表？
+
     1.  `new ArrayList<>()`
     2.  `Collections.emptyList()`
     3.  `List.of(null)`
     4.  `Optional.empty()`
 
 6.  Java 集合中泛型的目的是什么？
+
     1.  更快的编译
     2.  节省内存
     3.  类型安全和代码可重用
     4.  多线程
 
 7.  哪种集合最适合基于键的快速检索？
+
     1.  `List`
     2.  `Set`
     3.  `TreeMap`
     4.  `HashMap`
 
 8.  `Collections.unmodifiableList()` 什么时候最有用？
+
     1.  当你想要线程安全时
     2.  当你想要同步时
     3.  当你想防止修改时
     4.  当你在排序期间需要不可变性时
 
 9.  哪个 stream 方法返回第一个匹配的元素？
+
     1.  `findAll()`
     2.  `findFirst()`
     3.  `firstMatch()`
     4.  `getFirst()`
 
 10. 以下哪项不是在方法中使用边界泛型（`<T extends SomeType>`）的有效益处？
+
     1.  减少类型转换
     2.  限制输入
     3.  启用更灵活的代码
@@ -6476,42 +6763,51 @@ products.sort(Comparator.comparing(Product::getPrice).reversed());
 
 ### 答案
 
-1.  c
-解释：`LinkedHashSet` 保持插入顺序并确保没有重复条目。
+1.  **c**
 
-2.  c
-解释：`Collections.unmodifiableList()` 将列表封装在只读视图中。
+    解释：`LinkedHashSet` 保持插入顺序并确保没有重复条目。
 
-3.  c
-解释：`Collectors.groupingBy(..., counting())` 是流中分组和计数的标准方法。
+2.  **c**
 
-4.  b
-解释：`computeIfAbsent()` 检查键是否存在；如果不存在，则插入函数返回的默认值。
+    解释：`Collections.unmodifiableList()` 将列表封装在只读视图中。
 
-5.  b
-解释：`Collections.emptyList()` 返回一个不可变的空列表，适合常量。
+3.  **c**
 
-6.
-c
-解释：集合中的泛型允许类型安全并消除了显式转换的需求。
+    解释：`Collectors.groupingBy(..., counting())` 是流中分组和计数的标准方法。
 
-7.  d
-解释：`HashMap` 最适合在常量时间内通过键检索值。
+4.  **b**
 
-8.  c
-解释：`Collections.unmodifiableList()` 用于通过防止修改来安全地共享数据。
+    解释：`computeIfAbsent()` 检查键是否存在；如果不存在，则插入函数返回的默认值。
 
-9.  b
-解释：`findFirst()` 返回流中第一个匹配元素的 `Optional`。
+5.  **b**
 
-10. d
-解释：边界泛型有助于提高类型安全和灵活性，而不是导致性能下降。
+    解释：`Collections.emptyList()` 返回一个不可变的空列表，适合常量。
+
+6.  **c**
+
+    解释：集合中的泛型允许类型安全并消除了显式转换的需求。
+
+7.  **d**
+
+    解释：`HashMap` 最适合在常量时间内通过键检索值。
+
+8.  **c**
+
+    解释：`Collections.unmodifiableList()` 用于通过防止修改来安全地共享数据。
+
+9.  **b**
+
+    解释：`findFirst()` 返回流中第一个匹配元素的 `Optional`。
+
+10. **d**
+
+    解释：边界泛型有助于提高类型安全和灵活性，而不是导致性能下降。
 
 
 
+# Java 泛型与集合框架的演进与未来趋势
 
-
-在本章中，你将深入理解 Java 泛型和集合框架（Collections Framework）不断演变的格局。你将探索最近的增强，例如改进的类型推断、创建不可变集合的工厂方法，以及密封类（sealed classes）的使用。本章还将引导你了解预期的发展，如值类型（value types）以及针对类型擦除（type erasure）等限制的解决方案。此外，你将研究现代 Java 开发的关键趋势，包括函数式和响应式编程日益增长的影响。在本章结束时，你将能够跟上 Java 创新的潮流，并设计出高效、可维护且符合语言未来发展趋势应用程序。
+在本章中，你将深入理解 Java 泛型和集合框架不断演变的格局。你将探索最近的增强，例如改进的类型推断、创建不可变集合的工厂方法，以及密封类的使用。本章还将引导你了解预期的发展，如值类型以及针对类型擦除等限制的解决方案。此外，你将研究现代 Java 开发的关键趋势，包括函数式和响应式编程日益增长的影响。在本章结束时，你将能够跟上 Java 创新的潮流，并设计出高效、可维护且符合语言未来发展趋势的应用程序。
 
 ## Java 泛型的最新进展
 
@@ -6519,90 +6815,90 @@ Java 泛型在 `JDK 5` 中引入，旨在为编译时提供更强的类型检查
 
 以下是近期最受关注的进展：
 
--   通过 `var` 改进类型推断（`JDK 10+`）：`var` 关键字允许你在不显式指定类型的情况下声明局部变量，使得大量使用泛型的代码更加整洁、简洁。
+- **通过 `var` 改进类型推断（`JDK 10+`）**：`var` 关键字允许你在不显式指定类型的情况下声明局部变量，使得大量使用泛型的代码更加整洁、简洁。
 
-可以通过如下方式实现：
+  可以通过如下方式实现：
 
-```java
-var employeeMap = new HashMap<String, List<String>>();
-employeeMap.put("HR", List.of("Asher", "Satin"));
-System.out.println(employeeMap);
-```
+  ```java
+  var employeeMap = new HashMap<String, List<String>>();
+  employeeMap.put("HR", List.of("Asher", "Satin"));
+  System.out.println(employeeMap);
+  ```
 
-在这里，`var` 从右侧推断出类型 `HashMap<String, List<String>>`。这在处理深度嵌套的泛型结构时特别有用。
+  在这里，`var` 从右侧推断出类型 `HashMap<String, List<String>>`。这在处理深度嵌套的泛型结构时特别有用。
 
--   菱形操作符改进（`JDK 7+`）：菱形操作符 `<>` 允许编译器推断类型参数，减少了重复类型信息的需要。让我们通过一个示例来理解：
+- **菱形操作符改进（`JDK 7+`）**：菱形操作符 `<>` 允许编译器推断类型参数，减少了重复类型信息的需要。让我们通过一个示例来理解：
 
-```java
-List<String> cities = new ArrayList<>();
-// 编译器推断类型为 ArrayList<String>
-cities.add("Delhi");
-```
+  ```java
+  List<String> cities = new ArrayList<>();
+  // 编译器推断类型为 ArrayList<String>
+  cities.add("Delhi");
+  ```
 
-你不再需要编写 `new ArrayList<String>()`；编译器会从变量声明中推断出来。
+  你不再需要编写 `new ArrayList<String>()`；编译器会从变量声明中推断出来。
 
--   泛型边界的交集类型（Intersection types）：交集类型允许类型参数扩展多个接口，从而实现更灵活、可复用的 API。考虑以下示例：
+- **泛型边界的交集类型**：交集类型允许类型参数扩展多个接口，从而实现更灵活、可复用的 API。考虑以下示例：
 
-```java
-public <T extends Runnable & AutoCloseable> void executeAndClose(T resource) throws Exception {
-    resource.run();
-    resource.close();
-}
-```
+  ```java
+  public <T extends Runnable & AutoCloseable> void executeAndClose(T resource) throws Exception {
+      resource.run();
+      resource.close();
+  }
+  ```
 
-该方法要求任何类型 `T` 同时实现 `Runnable` 和 `AutoCloseable`。它在确保编译安全的同时，允许进行依赖于这两个接口的操作。
+  该方法要求任何类型 `T` 同时实现 `Runnable` 和 `AutoCloseable`。它在确保编译安全的同时，允许进行依赖于这两个接口的操作。
 
--   Lambdas 和 Streams 的增强支持（`JDK 8` 及以后）：泛型现在在函数式编程结构中得到了更好的利用，提高了表达能力和编译时安全性。
+- **Lambdas 和 Streams 的增强支持（`JDK 8` 及以后）**：泛型现在在函数式编程结构中得到了更好的利用，提高了表达能力和编译时安全性。
 
-让我们来看一个示例：
+  让我们来看一个示例：
 
-```java
-List<String> names = List.of("Asher", "Victor", "Ryan");
-List<String> upperNames = names.stream()
-    .map(String::toUpperCase)
-    .collect(Collectors.toList());
-System.out.println(upperNames); // [ASHER, VICTOR, RYAN]
-```
+  ```java
+  List<String> names = List.of("Asher", "Victor", "Ryan");
+  List<String> upperNames = names.stream()
+      .map(String::toUpperCase)
+      .collect(Collectors.toList());
+  System.out.println(upperNames); // [ASHER, VICTOR, RYAN]
+  ```
 
-在上面的示例中，`map()` 方法对泛型列表中的每个元素应用转换函数。类型推断和泛型确保了整个流水线上的类型安全。
+  在上面的示例中，`map()` 方法对泛型列表中的每个元素应用转换函数。类型推断和泛型确保了整个流水线上的类型安全。
 
--   Java 规范请求（`JSR-335`）和复杂结构中的改进类型推断：在复杂的链式操作或方法引用中，Java 更加擅长在没有显式声明的情况下推断类型。
+- **Java 规范请求（`JSR-335`）和复杂结构中的改进类型推断**：在复杂的链式操作或方法引用中，Java 更加擅长在没有显式声明的情况下推断类型。
 
-考虑以下示例：
+  考虑以下示例：
 
-```java
-Map<String, List<String>> groupByFirstLetter = List.of("apple", "banana", "apricot", "blueberry")
-    .stream()
-    .collect(Collectors.groupingBy(s -> s.substring(0, 1)));
-```
+  ```java
+  Map<String, List<String>> groupByFirstLetter = List.of("apple", "banana", "apricot", "blueberry")
+      .stream()
+      .collect(Collectors.groupingBy(s -> s.substring(0, 1)));
+  ```
 
-在上面的示例中，编译器正确地推断出类型为 `Map<String, List<String>>`，即使它没有显式声明。
+  在上面的示例中，编译器正确地推断出类型为 `Map<String, List<String>>`，即使它没有显式声明。
 
--   不可变集合工厂方法（引入自 `JDK 9`）：Java 引入了方便的工厂方法，如 `List.of()`、`Set.of()` 和 `Map.of()` 用于创建不可变集合。
+- **不可变集合工厂方法（引入自 `JDK 9`）**：Java 引入了方便的工厂方法，如 `List.of()`、`Set.of()` 和 `Map.of()` 用于创建不可变集合。
 
-它们的定义如下：
+  它们的定义如下：
 
-```java
-List<String> cities = List.of("New York", "Chicago", "San Francisco");
-//cities.add("Los Angeles");
-// 此行将抛出 UnsupportedOperationException
-System.out.println("Immutable Cities: " + cities);
-```
+  ```java
+  List<String> cities = List.of("New York", "Chicago", "San Francisco");
+  // cities.add("Los Angeles");
+  // 此行将抛出 UnsupportedOperationException
+  System.out.println("Immutable Cities: " + cities);
+  ```
 
-`List.of()` 方法创建一个不可变列表。任何修改它的尝试（例如添加 "Los Angeles"）都将抛出 `UnsupportedOperationException`。当你需要固定配置或想防止意外更改时，这非常有用。
+  `List.of()` 方法创建一个不可变列表。任何修改它的尝试（例如添加 "Los Angeles"）都将抛出 `UnsupportedOperationException`。当你需要固定配置或想防止意外更改时，这非常有用。
 
--   带泛型的密封类（引入自 `JDK 17`）：密封类限制了哪些类可以实现或扩展它们，从而改进了领域驱动设计中的代码可读性和安全性。考虑以下示例：
+- **带泛型的密封类（引入自 `JDK 17`）**：密封类限制了哪些类可以实现或扩展它们，从而改进了领域驱动设计中的代码可读性和安全性。考虑以下示例：
 
-```java
-sealed interface Vehicle permits Car, Bike {}
-final class Car implements Vehicle {}
-final class Bike implements Vehicle {}
+  ```java
+  sealed interface Vehicle permits Car, Bike {}
+  final class Car implements Vehicle {}
+  final class Bike implements Vehicle {}
 
-List<Vehicle> vehicles = List.of(new Car(), new Bike());
-vehicles.forEach(v -> System.out.println(v.getClass().getSimpleName()));
-```
+  List<Vehicle> vehicles = List.of(new Car(), new Bike());
+  vehicles.forEach(v -> System.out.println(v.getClass().getSimpleName()));
+  ```
 
-此示例使用密封类定义了一个封闭的类型层次。即使配合泛型（如 `List<Vehicle>`）使用，只允许许可的类型（`Car`、`Bike`）。这在代码演进过程中提供了更好的控制和安全性。
+  此示例使用密封类定义了一个封闭的类型层次。即使配合泛型（如 `List<Vehicle>`）使用，只允许许可的类型（`Car`、`Bike`）。这在代码演进过程中提供了更好的控制和安全性。
 
 这些改进不仅提高了代码的可读性，还帮助开发者关注逻辑而非样板代码声明。
 
@@ -6634,20 +6930,18 @@ vehicles.forEach(v -> System.out.println(v.getClass().getSimpleName()));
 
 以下是未来改进的一些最有前景的方向：
 
--   值类型（Project Valhalla）：Java 生态中最期待的变化之一是通过 Project Valhalla 引入值类型。这些是轻量级、不可变的数据载体，不会产生对象头开销，并且在内存中的存储更紧凑。
+### 值类型（Project Valhalla）
 
+Java 生态中最期待的变化之一是通过 Project Valhalla 引入值类型。这些是轻量级、不可变的数据载体，不会产生对象头开销，并且在内存中的存储更紧凑。
 
-
-
-
-# 让我们了解值类型将如何改变 Java 集合的内部行为和性能特性：
+让我们了解值类型将如何改变 Java 集合的内部行为和性能特性：
 
 - 在传统的集合中，存储数千个小对象（如点或坐标）会导致由于频繁的堆内存分配而产生糟糕的内存局部性和性能瓶颈。
 - 值类型一旦完全整合，将允许 `List<Point>` 或 `Map<Key, Value>` 等集合更高效地存储数据，甚至可能进行内联存储，从而减少 GC 压力并提高 CPU 缓存利用率。
 
 这对于实时分析、游戏引擎和金融系统等对性能敏感的应用来说尤为重要。
 
-## 模式匹配与结构化解构
+### 模式匹配与结构化解构
 
 Java 正在稳步向更具表达性的控制流和数据访问语法进化。
 
@@ -6668,7 +6962,7 @@ for (Object obj : list) {
 
 Java 的未来迭代可能会在集合遍历中更广泛地支持此类模式，消除对冗长类型转换和嵌套方法调用的需求。
 
-## 默认不可变集合
+### 默认不可变集合
 
 不可变性日益被视为现代软件架构中的最佳实践，特别是在并发和函数式编程模型中。
 
@@ -6679,7 +6973,7 @@ Java 的未来迭代可能会在集合遍历中更广泛地支持此类模式，
 
 在未来，集合的创建模式可能会优先考虑不可变性，除非开发者显式选择使用可变变体。
 
-## 并发集合的增强
+### 并发集合的增强
 
 并发是当今可扩展系统的关键关注点，Java 的并发集合（如 `ConcurrentHashMap` 和 `CopyOnWriteArrayList`）长期以来一直支持多线程访问。
 
@@ -6690,7 +6984,7 @@ Java 的未来迭代可能会在集合遍历中更广泛地支持此类模式，
 
 这些变化在云原生环境中至关重要，因为容器和微服务在重负载下经常面临并发瓶颈。
 
-## 内存高效型实现
+### 内存高效型实现
 
 随着 Java 成为微服务、边缘计算和无服务器平台的首选语言，对轻量级且高度优化的数据结构的需求日益增长。
 
@@ -6711,7 +7005,7 @@ Java 的未来迭代可能会在集合遍历中更广泛地支持此类模式，
 
 ## 函数式编程的影响
 
-函数式编程概念在现代 Java 中找到了稳固的，特别是在 Java 8 引入 Lambda 和 `Stream API` 之后。集合不再通过传统的循环和 if-else 逻辑操作，而是通过表达式的操作进行转换。
+函数式编程概念在现代 Java 中找到了稳固的立足点，特别是在 Java 8 引入 Lambda 和 `Stream API` 之后。集合不再通过传统的循环和 if-else 逻辑操作，而是通过表达式的操作进行转换。
 
 让我们检查函数式编程如何影响 Java 集合的演进：
 
@@ -6753,34 +7047,32 @@ Java 冗长的口碑正在消失。新的语言增强旨在不牺牲可读性或
 
 例如，以下声明允许开发者清晰地表达逻辑，同时仍从编译时类型检查中受益：
 
-
-
-
-
 ```java
 var employeeMap = new HashMap<String, List<String>>();
 ```
 
--   records 和密封类使用率的增加：Java records 和密封类（sealed classes）正在重塑开发者设计数据模型的方式。这些特性改进了集合、泛型与业务逻辑的集成：
-    - `Records` 为不可变数据持有器提供了紧凑的语法，使其成为 `DTOs`、配置模型和集合元素的理想选择。
-    - `Sealed classes` 允许定义受限的类型层次结构，有助于强制领域约束并提高泛型类型安全。
+- **Records 和密封类使用率的增加**：Java records 和密封类正在重塑开发者设计数据模型的方式。这些特性改进了集合、泛型与业务逻辑的集成：
 
-像 `List<RecordType>` 或 `Map<KeyType, Record>` 等集合正成为需要清晰、可维护且不可变数据结构的 API 中的标准。
+  - `Records` 为不可变数据持有器提供了紧凑的语法，使其成为 `DTOs`、配置模型和集合元素的理想选择。
+  - `Sealed classes` 允许定义受限的类型层次结构，有助于强制领域约束并提高泛型类型安全。
 
-简而言之，这些特性支持了更具声明性、安全且可预测的设计哲学。
+  像 `List<RecordType>` 或 `Map<KeyType, Record>` 等集合正成为需要清晰、可维护且不可变数据结构的 API 中的标准。
 
--   模块化和云原生设计：Java 应用现在通常被部署为轻量、容器化的微服务，这些服务必须快速启动、消耗极少内存并能够有效扩展。这种转变导致了在使用集合和泛型时出现了一些新的考量：
+  简而言之，这些特性支持了更具声明性、安全且可预测的设计哲学。
 
-    - `Java Platform Module System` (`JPMS`) 鼓励使用仅加载必要内容的模块化代码库。
-    - 库和框架倾向于使用不可变集合或原始类型特化的数据结构以减少内存占用。
-    - `Concurrent collections` 和线程安全模式现在是许多后端服务的默认选择，确保了在分布式系统中更好的表现。
+- **模块化和云原生设计**：Java 应用现在通常被部署为轻量、容器化的微服务，这些服务必须快速启动、消耗极少内存并能够有效扩展。这种转变导致了在使用集合和泛型时出现了一些新的考量：
 
-集合现在必须是精简、响应迅速的，并且在无状态和多线程环境中是安全的；在这些环境中，即使是微小的低效率在大规模下也会产生巨大影响。
+  - `Java Platform Module System` (`JPMS`) 鼓励使用仅加载必要内容的模块化代码库。
+  - 库和框架倾向于使用不可变集合或原始类型特化的数据结构以减少内存占用。
+  - `Concurrent collections` 和线程安全模式现在是许多后端服务的默认选择，确保了在分布式系统中更好的表现。
 
--   与云工具和 DevOps 的集成：集合和泛型也被大量应用于逻辑之外之外领域，例如配置处理、遥测、日志和指标聚合：
-    - 配置属性（来自 `YAML/JSON` 文件）通常被解析为键值对集合或对象列表。
-    - 日志和结构化事件使用 `maps` 和泛型来确保灵性和模式演进（schema evolution）。
-    - 泛型接口使得构建缓存、审计日志和追踪等复用服务变得更加容易。
+  集合现在必须是精简、响应迅速的，并且在无状态和多线程环境中是安全的；在这些环境中，即使是微小的低效率在大规模下也会产生巨大影响。
+
+- **与云工具和 DevOps 的集成**：集合和泛型也被大量应用于逻辑之外领域，例如配置处理、遥测、日志和指标聚合：
+
+  - 配置属性（来自 `YAML/JSON` 文件）通常被解析为键值对集合或对象列表。
+  - 日志和结构化事件使用 `maps` 和泛型来确保灵活性和模式演进（schema evolution）。
+  - 泛型接口使得构建缓存、审计日志和追踪等复用服务变得更加容易。
 
 这些趋势共同反映了 Java 开发者构建代码方式的转变：从命令式到声明式，从可变到不可变，从孤立系统到可扩展的云就绪服务。随着 Java 继续演进，其惯用法也会随之发展，而 `Collections Framework` 和泛型将始终是这一演进的核心。
 
@@ -6788,129 +7080,150 @@ var employeeMap = new HashMap<String, List<String>>();
 
 Java 是少数几个具有一致、可预测发布周期的编程语言之一。自 2017 年引入六个月发布周期以来，开发者每年可以期待两次新特性、改进和错误修复。此外，每三年会发布一个长期支持（`LTS`）版本，例如 `JDK 11`、`JDK 17` 以及最近的 `JDK 21`，这使得组织更容易规划稳定的升级。
 
-然而，跟上 Java 的演进不仅仅是阅读发布说明或等待 `LTS` 版本。这门语言由其社区积极塑造，而见多丰富的开发者能够更有优势地编写现代、高效且向前兼容的代码。以下是你如何在 Java 开发旅程中保持领先的方法：
 
--   关注 `JEPs` (`JDK Enhancement Proposals`)：`JEPs`（JDK 增强提案）是定义所提议 Java 特性目标、动机和技术细节的正式文档。它们是跟踪 Java 未来方向最透明、详尽的方式之一：
-    - `JEPs` 涵盖了从语言特性到 `JVM` 改进以及库更改的所有内容。
-    - 监控活跃和草案中的 `JEPs` 有助于你预测即将到来的新增并据此调整你的代码库或学习计划。
 
-    例如：
-    - `JEP 401`，`primitive classes`（预览版 `Preview`）：`Project Valhalla` 的一部分，旨在通过引入值类型提高性能。
-    - `JEP 430`，`string templates`（预览版 `Preview`）：旨在简化动态字符串构建，使代码更具可读性且安全。
+然而，跟上 Java 的演进不仅仅是阅读发布说明或等待 `LTS` 版本。这门语言由其社区积极塑造，而见多识广的开发者能够更有优势地编写现代、高效且向前兼容的代码。以下是你如何在 Java 开发旅程中保持领先的方法：
+
+### 关注 `JEPs` (`JDK Enhancement Proposals`)
+
+`JEPs`（JDK 增强提案）是定义所提议 Java 特性目标、动机和技术细节的正式文档。它们是跟踪 Java 未来方向最透明、详尽的方式之一：
+
+- `JEPs` 涵盖了从语言特性到 `JVM` 改进以及库更改的所有内容。
+- 监控活跃和草案中的 `JEPs` 有助于你预测即将到来的新增并据此调整你的代码库或学习计划。
+
+例如：
+
+- `JEP 401`，`primitive classes`（预览版 `Preview`）：`Project Valhalla` 的一部分，旨在通过引入值类型提高性能。
+- `JEP 430`，`string templates`（预览版 `Preview`）：旨在简化动态字符串构建，使代码更具可读性且安全。
 
 你可以在 OpenJDK 官方网站跟踪所有的 `JEPs`：[`openjdk.org/jeps/0`](https://openjdk.org/jeps/0)
 
--   阅读社区博客并观看会议：Java 社区是编程世界最活跃的社区之一，社区驱动的内容在知识传播中起着至关重要的作用。
+### 阅读社区博客并观看会议
 
-让我们意识到社区驱动的学习资源在跟进演进中的 Java 生态系统中的性：
-    - 像 `JavaOne`、`Devoxx`、`Oracle CodeOne` 和 `JNation` 这样的会议提供了实操课程、主题演讲公告以及 Java 背后工程师的讨论。
-    - 著名的博客（如 `Baeldung`、`InfoQ`、`JetBrains` 和 `Oracle` 的官方博客）拆解了复杂主题，提供了真实的应用用例，并涵盖了仅凭文档可能无法发现的微妙更新。
-    - 录制的演讲和演示通常会解释为什么存在某个特性以及旨在如何使用它，弥补了理论规范与实际使用之间的差距。
+Java 社区是编程世界最活跃的社区之一，社区驱动的内容在知识传播中起着至关重要的作用。
+
+社区驱动的学习资源在跟进演进中的 Java 生态系统中至关重要：
+
+- 像 `JavaOne`、`Devoxx`、`Oracle CodeOne` 和 `JNation` 这样的会议提供了实操课程、主题演讲公告以及 Java 背后工程师的讨论。
+- 著名的博客（如 `Baeldung`、`InfoQ`、`JetBrains` 和 `Oracle` 的官方博客）拆解了复杂主题，提供了真实的应用用例，并涵盖了仅凭文档可能无法发现的微妙更新。
+- 录制的演讲和演示通常会解释为什么存在某个特性以及旨在如何使用它，弥补了理论规范与实际使用之间的差距。
 
 这些内容对于保持前沿以及深入理解新特性如何集成到集合和泛型等现有工具中具有无价价值。
 
--   尝试预览特性（preview features）：现代 Java 中的许多特性是以预览特的形式引入的，允许开发者在最终确定之前进行实验并提供反馈。
+### 尝试预览特性
 
-让我们探索尝试预览特性如何让开发者领先于 Java 语言即将的变化：
-    - 要启用预览特性，请在命令行或 IDE 配置中使用 `--enable-preview` 标记编译并运行代码。
+现代 Java 中的许多特性是以预览特性的形式引入的，允许开发者在最终确定之前进行实验并提供反馈。
 
-    预览特性示例包括：
-    - 针对 `instanceof` 和 `switch` 的模式匹配
-    - `Sealed classes`（密封类）
-    - `Record patterns`（记录模式）
-    - `Preview features`（预览特性）让你尽早访问未来功能，让你能够测试集成策略并确定遗留代码可能需要修订的地方。
+尝试预览特性让开发者领先于 Java 语言即将到来的变化：
+
+- 要启用预览特性，请在命令行或 IDE 配置中使用 `--enable-preview` 标记编译并运行代码。
+
+预览特性示例包括：
+
+- 针对 `instanceof` 和 `switch` 的模式匹配
+- `Sealed classes`（密封类）
+- `Record patterns`（记录模式）
+
+`Preview features`（预览特性）让你尽早访问未来功能，让你能够测试集成策略并确定遗留代码可能需要修订的地方。
 
 尝试这些特性确保了它们在未来版本中稳定时你不会措手不及。
 
--   使用早期访问构建（early-access builds）：`OpenJDK` 项目提供未来 Java 版本的早期访问（`EA`）构建。这些构建包含了最新的特性和修复，让开发者有机会在受控环境中进行探索和验证：
-    - 这些构建免费下载并定期更新。
-    - 你可以测试你的库、集合和 API 在新语言特性、JVM 调整或编译器行为下的表现。
-    - 对于需要提前兼容版本的框架、工具或库的开发者非常理想。
+### 使用早期访问构建
+
+`OpenJDK` 项目提供未来 Java 版本的早期访问（`EA`）构建。这些构建包含了最新的特性和修复，让开发者有机会在受控环境中进行探索和验证：
+
+- 这些构建免费下载并定期更新。
+- 你可以测试你的库、集合和 API 在新语言特性、JVM 调整或编译器行为下的表现。
+- 对于需要提前兼容版本的框架、工具或库的开发者非常理想。
 
 访问 [`jdk.java.net`](https://jdk.java.net) 获取下一个版本的 EA 构建。
 
--   贡献 OpenJDK：Java 的开发是开放且社区驱动的。如果你热衷于影响 Java 的方向（无论是集合、泛型还是 JVM 优化），贡献 OpenJDK 是最直接的途径：
-    - 贡献包括测试用例、特性建议、文档编写甚至是补丁。
-    - 积极参与邮件列表（如 `compiler-dev`、`core-libs-dev` 或 `valhalla-dev`）让你接触到进行的技术讨论和设计决策。
-    - 开发者还可以通过参与社区投票、加入工作小组或评审 `JEP` 提案来做出贡献。
+### 贡献 OpenJDK
+
+Java 的开发是开放且社区驱动的。如果你热衷于影响 Java 的方向（无论是集合、泛型还是 JVM 优化），贡献 OpenJDK 是最直接的途径：
+
+- 贡献包括测试用例、特性建议、文档编写甚至是补丁。
+- 积极参与邮件列表（如 `compiler-dev`、`core-libs-dev` 或 `valhalla-dev`）让你接触到进行中的技术讨论和设计决策。
+- 开发者还可以通过参与社区投票、加入工作小组或评审 `JEP` 提案来做出贡献。
 
 成为 `OpenJDK` 社区的一部分有助于你理解 Java 不仅仅是一门语言，更是一个由集体努力塑造的演进平台。
 
-
-
-
 随着 Java 在保持其向后兼容、安全性和平台无关性核心原则的同时不断现代化，我们可以预见到泛型和集合的设计、实现和使用将得到实质改进。对性能、并发和开发者生产力日益增长的需求可能会塑造这些增强。基于当前的趋势、正在进行的 JEP 以及更广泛的生态系统影响，以下是对 Java 泛型和集合框架未来演进的一些有据可循的预测。
 
-以下是几个合理的预测：
+### 支持具化泛型
 
-### 支持具化泛型（Reified Generics）
 Java 泛型中最常讨论的局限性之一是类型擦除，即泛型类型信息在运行时会被移除。这阻止了如使用 `instanceof` 检查对象的类型参数或创建泛型数组等操作。
 
-让我们考虑具化泛型如何解决 Java 中由类型擦除带来的长期局限：
+具化泛型如何解决 Java 中由类型擦除带来的长期局限：
 
-*   Java 的未来版本可能会引入具化泛型，允许在运行时保留完整的类型信息。这将：
-    *   允许更安全、更具表现力的反射操作。
-    *   消除许多常见场景下对未检查强制转换（unchecked casts）的需求。
-    *   促进更健壮的序列化和反序列化机制。
-*   这一改进与 `Project Valhalla` 的长期目标一致，该目标旨在引入值类型并改进运行时类型处理。
+- Java 的未来版本可能会引入具化泛型，允许在运行时保留完整的类型信息。这将：
+  - 允许更安全、更具表现力的反射操作。
+  - 消除许多常见场景下对未检查强制转换（unchecked casts）的需求。
+  - 促进更健壮的序列化和反序列化机制。
+- 这一改进与 `Project Valhalla` 的长期目标一致，该目标旨在引入值类型并改进运行时类型处理。
 
 尽管引入具化泛型在向后兼容方面面临挑战，但逐步集成（可能通过新语法或选择性启用注解）可以提供一条前进之路。
 
 ### 原始类型特化集合
+
 目前的泛型集合（如 `List<Integer>`）依赖于原始类型的装箱和拆箱，这会产生性能和内存开销。尽管像 `Trove` 和 `FastUtil` 这样的第三方库解决了这一需求，但 Java 核心库缺乏内置支持。
 
-让我们评估引入原始类型特化集合如何显著提升 Java 应用程序的性能和效率：
+引入原始类型特化集合如何显著提升 Java 应用程序的性能和效率：
 
-*   引入原始类型特化集合（如 `IntList`、`DoubleMap`）将允许：
-    *   通过避免装箱来提高性能。
-    *   减少内存占用，特别在大规模数值或数据处理应用程序中。
-    *   在数据科学、机器学习或高频交易系统中进行无缝使用。
-*   这些集合可以被构建到 `java.util` 中，扩展标准库的可用性和效率。
+- 引入原始类型特化集合（如 `IntList`、`DoubleMap`）将允许：
+  - 通过避免装箱来提高性能。
+  - 减少内存占用，特别是在大规模数值或数据处理应用程序中。
+  - 在数据科学、机器学习或高频交易系统中进行无缝使用。
+- 这些集合可以被构建到 `java.util` 中，扩展标准库的可用性和效率。
 
-`Project Valhalla` 的值类将通过将原始包装类型视为无身份语义的内联类型，使这种增强更可行性。
+`Project Valhalla` 的值类将通过将原始包装类型视为无身份语义的内联类型，使这种增强更可行。
 
 ### 更流式的集合 API
+
 Kotlin、Scala 和 JavaScript 等语言提供了简洁且生动的方法来构建、转换和链式集合。Java 正在通过 `Streams` 和 `Collectors` 等功能逐步向这一方向移动。
 
 未来的 Java 版本可能会增强集合 API 以支持：
 
-*   流式构建器（例如 `ListBuilder.add("A").add("B").build()`）
-*   在流式上下文之外对集合进行内联过滤、映射和合并。
-*   在核心 `java.util` 包中提供直接转换方法（例如 `map.replaceAllKeys(...)`、`list.groupBy(...)`）。
+- 流式构建器（例如 `ListBuilder.add("A").add("B").build()`）
+- 在流式上下文之外对集合进行内联过滤、映射和合并。
+- 在核心 `java.util` 包中提供直接转换方法（例如 `map.replaceAllKeys(...)`、`list.groupBy(...)`）。
 
 此类 API 将使集合处理变得更具声明性、可读性和可维护性，特别是在处理业务逻辑密集的代码库中。
 
 ### 与结构化并发的集成
+
 结构化并发是一种新兴范式，它通过将并发任务视为结构化代码块来简化多线程编程。随着 Java 集成结构化并发（例如通过 `Project Loom`），集合可能会演变为以更原生的方式支持并行、并发工作流。
 
 潜在的增强包括：
 
-*   与轻量级线程（虚拟线程）无缝工作的流式 API。
-*   专为并发流优化的线程安全收集器和分区器。
-*   与 `ExecutorService`、`ScopedValue` 或结构化任务集成的集合工具。
+- 与轻量级线程（虚拟线程）无缝工作的流式 API。
+- 专为并发流优化的线程安全收集器和分区器。
+- 与 `ExecutorService`、`ScopedValue` 或结构化任务集成的集合工具。
 
 这些改进将允许开发者高效处理大型数据集或实时流，同时确保安全的资源管理和简单的线程生命周期处理。
 
 ### 增强的 IDE 和编译器的泛型支持
+
 随着泛型在现代 Java 应用中变得更具表现力并被广泛使用，开发者工具必须跟上。
 
 编译器和 IDE（如 `IntelliJ IDEA`、`Eclipse` 和 `NetBeans`）的未来改进可能包括：
 
-*   更智能的类型推断：减少显式声明冗长泛型类型的需求。
-*   实时重构辅助：使用泛型安全地泛化或特化方法。
-*   更强的静态分析：检测不安全的类型转换。
-*   代码生成：提供更优雅的泛型使用。
+- 更智能的类型推断：减少显式声明冗长泛型类型的需求。
+- 实时重构辅助：使用泛型安全地泛化或特化方法。
+- 更强的静态分析：检测不安全的类型转换。
+- 代码生成：提供更优雅的泛型使用。
 
 此类工具支持不仅提高了生产力，还减少了对泛型的误用。
 
 ### 更加强调不可变性的设计
+
 对不可变性的关注（在 `List.of()` 和 `Set.of()` 中已可见）并将继续。
 
 未来的增强可能会：
 
-*   提供原生支持的不可变类型。
-*   鼓励函数式的使用。
-*   提供专为函数式管道设计的集合工具。
+- 提供原生支持的不可变类型。
+- 鼓励函数式的使用。
+- 提供专为函数式管道设计的集合工具。
 
 这些功能与其他语言的趋势一致。
 
@@ -6927,30 +7240,35 @@ Java 集合和泛型的未来前景广阔。虽然安全、重用性能的核心
 ## 练习题
 
 1. 哪种功能在处理泛型时减少了冗余性？
+
    1. 菱运算符
    2. 密封类
    3. `var` 关键字
    4. 模式匹配
 
 2. 在现代 Java 中使用哪种方法创建不可变列表？
+
    1. `new ArrayList<>()`
    2. `List.copyOf()`
    3. `Collections.emptyList()`
    4. `Arrays.asList()`
 
 3. 未来版本可能解决 Java 泛型的什么局限性？
+
    1. 缺少接口
    2. 不支持继承
    3. 类型擦除
    4. 不支持 Lambda
 
 4. Project Valhalla 关注什么？
+
    1. 减少语法冗余
    2. 改进 Javadoc
    3. 支持值类型
    4. 升级 HashMap
 
 5. `List.of("A", "B")` 返回什么？
+
    1. 可变列表
    2. 包含 null 元素的列表
    3. 一个不可变列表
@@ -6958,34 +7276,34 @@ Java 集合和泛型的未来前景广阔。虽然安全、重用性能的核心
 
 6. 哪种功能允许声明具有特定允许实现类的泛型类？
 
-
-
-
-
-1. 流 (Streams)
-2. Lambda 表达式
-3. 密封类 (Sealed classes)
-4. 函数式接口 (Functional interfaces)
+   1. 流 (Streams)
+   2. Lambda 表达式
+   3. 密封类 (Sealed classes)
+   4. 函数式接口 (Functional interfaces)
 
 7. 哪种集合类型有助于并发读写？
-    1. `HashMap`
-    2. `LinkedList`
-    3. `ConcurrentHashMap`
-    4. `TreeMap`
+
+   1. `HashMap`
+   2. `LinkedList`
+   3. `ConcurrentHashMap`
+   4. `TreeMap`
 
 8. 哪种语言特性简化了只读集合视图创建？
-    1. `Optional`
-    2. `switch-case`
-    3. `Collections.unmodifiableList()`
-    4. `List.addAll()`
+
+   1. `Optional`
+   2. `switch-case`
+   3. `Collections.unmodifiableList()`
+   4. `List.addAll()`
 
 9. `flatMap()` 有什么帮助？
-    1. 排序集合
-    2. 创建嵌套结构
-    3. 展平嵌套流
-    4. 跳过元素
+
+   1. 排序集合
+   2. 创建嵌套结构
+   3. 展平嵌套流
+   4. 跳过元素
 
 10. 在 Java 中使用 records 的主要目的是？
+
     1. 编写可变数据容器
     2. 定义行为丰富的类
     3. 通过不可变性简化数据容器
@@ -6995,43 +7313,43 @@ Java 集合和泛型的未来前景广阔。虽然安全、重用性能的核心
 
 1. c
 
-解释：JDK 10 引入的 `var` 关键字开启了局部变量类型推断。它允许开发者在声明变量时不重复泛型类型，从而在保持类型安全的同时减少冗余代码。
+   解释：JDK 10 引入的 `var` 关键字开启了局部变量类型推断。它允许开发者在声明变量时不重复泛型类型，从而在保持类型安全的同时减少冗余代码。
 
 2. b
 
-解释：`List.copyOf()` 创建提供列表的不可修改副本。当你需要一个包含实际元素的不可变列表时，这比 `Collections.emptyList()` 或 `Arrays.asList()` 好。如果输入列表包含 null，将抛出异常。
+   解释：`List.copyOf()` 创建提供列表的不可修改副本。当你需要一个包含实际元素的不可变列表时，这比 `Collections.emptyList()` 或 `Arrays.asList()` 好。如果输入列表包含 null，将抛出异常。
 
 3. c
 
-解释：Java 泛型使用类型擦除，这会在运行时移除泛型类型信息。这防止了某些操作，例如使用 `instanceof` 检查实际类型参数。未来的增强可能会通过具体泛型（reified generics）解决这一限制。
+   解释：Java 泛型使用类型擦除，这会在运行时移除泛型类型信息。这防止了某些操作，例如使用 `instanceof` 检查实际类型参数。未来的增强可能会通过具体泛型（reified generics）解决这一限制。
 
 4. c
 
-解释：Valhalla 项目旨在引入值类型（也称为内联类），优化内存和 CPU 使用。这些类型在集合中特别有用，减少了与对象引用和装箱相关的开销。
+   解释：Valhalla 项目旨在引入值类型（也称为内联类），优化内存和 CPU 使用。这些类型在集合中特别有用，减少了与对象引用和装箱相关的开销。
 
 5. c
 
-解释：像 `List.of()` 这样的工厂方法返回不可变集合。任何添加或删除元素的尝试将导致 `UnsupportedOperationException`。
+   解释：像 `List.of()` 这样的工厂方法返回不可变集合。任何添加或删除元素的尝试将导致 `UnsupportedOperationException`。
 
 6. c
 
-解释：JDK 17 引入的密封类允许你控制哪些类或接口可以扩展或实现某个类型。与泛型结合时，这有助于强制严格的类型层次结构和受控的多态性。
+   解释：JDK 17 引入的密封类允许你控制哪些类或接口可以扩展或实现某个类型。与泛型结合时，这有助于强制严格的类型层次结构和受控的多态性。
 
 7. c
 
-解释：`ConcurrentHashMap` 为并发访问和修改设计。它使用细粒度锁（或无锁机制）在不牺牲性能的情况下确保线程安全，是多线程应用程序的理想选择。
+   解释：`ConcurrentHashMap` 为并发访问和修改设计。它使用细粒度锁（或无锁机制）在不牺牲性能的情况下确保线程安全，是多线程应用程序的理想选择。
 
 8. c
 
-解释：`Collections.unmodifiableList()` 创建给定列表的只读视图。尝试修改它将导致运行时异常，适用于防御性编程和 API 安全性。
+   解释：`Collections.unmodifiableList()` 创建给定列表的只读视图。尝试修改它将导致运行时异常，适用于防御性编程和 API 安全性。
 
 9. c
 
-解释：`flatMap()` 函数用于展平嵌套结构——特别是在处理列表的流时。它将每个元素转换为流，然后将其展平为单个流，使处理复杂数据变得更加容易。
+   解释：`flatMap()` 函数用于展平嵌套结构——特别是在处理列表的流时。它将每个元素转换为流，然后将其展平为单个流，使处理复杂数据变得更加容易。
 
 10. c
 
-解释：Java 中的 records 为不可变数据容器提供了简洁的语法。它们自动生成构造函数、getter 方法和 `toString()` 方法，减少了样板代码并促进了基于值的设计。
+    解释：Java 中的 records 为不可变数据容器提供了简洁的语法。它们自动生成构造函数、getter 方法和 `toString()` 方法，减少了样板代码并促进了基于值的设计。
 
 ## 加入我们的 Discord 空间
 
@@ -7048,22 +7366,39 @@ Java 集合和泛型的未来前景广阔。虽然安全、重用性能的核心
 应用程序编程接口 (APIs) 1
 
 Array Deque (`ArrayDeque`) 162
+
 特性 162
+
 构造函数 165
+
 实现 162
+
 内部结构 162-165
+
 用例 165, 166
+
 ArrayList 实现 86-89
+
 自定义实现 91, 92
+
 性能考量 89-91
-Arrays 和 Collections 类类 184
+
+Arrays 和 Collections 类 184
+
 数组，转换为列表 185
+
 集合方法，在数组上使用 185
+
 Arrays 工具类 182
+
 数组，填充 183
+
 数组，比较 184
+
 数组，复制 184
+
 数组，搜索 183
+
 数组，排序 183
 
 ### B
@@ -7071,41 +7406,69 @@ Arrays 工具类 182
 BlockingDeque 170
 
 BlockingQueue 170
+
 边界类型 19
+
 示例 27-33
+
 下界 21-23
+
 参数 27
+
 上界 20, 21
 
 ### C
 
 案例研究 216-227
+
 检查集合 106, 192, 193
+
 用处 106
+
 集合接口 61, 62
+
 关键方法 62-65
+
 未来 248-251
+
 未来更新 241-243
+
 性能考量 206, 207
+
 基于集合的 API 204-206
+
 Collections 类 176
+
 关键方法 65-69
+
 List，反转 177
+
 List，排序 177
+
 集合层次结构 60, 61
+
 集合，使用 Collections 工具修改 180
+
 所有出现的值，替换 181, 182
+
 元素，洗牌 181
+
 list，复制到另一个 182
+
 list，填充值 181
+
 list，反转 180, 181
+
 并发集合 169
 
 ### D
 
 Deque 接口 160
+
 方法 160
+
 真实世界场景 160
+
 作为 Queue 和 Stack 使用 161, 162
 
 ### E
@@ -7119,111 +7482,151 @@ Deque 接口 160
 ### G
 
 泛型算法使用 209, 210
+
 泛型类定义 11, 12
+
 泛型方法使用 12, 13
+
 泛型 2
+
 背景 2
+
 基本语法 6
+
 用处 3-6
+
 最佳实践 50-52
+
 常见陷阱 50-52
+
 避免常见陷阱 200-203
+
 未来 248-251
+
 最新进展 238-241
+
 带构造函数 13
+
 泛型，应用于 `List<T>` 39-41
+
 泛型列表中的通配符 41-44
+
 泛型，应用于 `Map<K,V>` 46, 47
+
 泛型映射中的通配符 47-50
+
 泛型，应用于 `Set<T>` 44
+
 泛型集合中的通配符 44-46
 
 ### H
 
 HashMap 114
+
 特性 114
+
 构造函数 118
 
+内部结构 114-118
 
+`HashSet` 137
 
+构造函数 138
 
+实现 137
 
-# 内部结构
-- 114-118
+内部结构 137, 138
 
-# `HashSet`
-- 137
-- 构造函数 138
-- 实现 137
-- 内部结构 137, 138
+`Hashtable` 实现 125
 
-# `Hashtable` 实现
-- 125
-- 构造函数 125, 126
-- 内部工作原理 125
+构造函数 125, 126
 
-# I
-## `iterable` 接口
-- 70
+内部工作原理 125
 
-## `Iterator` 接口
-- 70, 71
-- 迭代器 70
+### I
 
-# J
-## `Java`
-- 246
-- 增强型 for 循环 71, 72
-- 创新 246-248
+`Iterable` 接口 70
+
+`Iterator` 接口 70, 71
+
+迭代器 70
+
+### J
+
+`Java` 246
+
+增强型 for 循环 71, 72
+
+创新 246-248
 
 ### Java 8
-- 增强，针对 `Set` 接口 145
+
+增强，针对 `Set` 接口 145
 
 ## Java 集合框架 (JCF)
-- 60
-- 集合接口 61, 62
-- 集合层级结构 60, 61
-- 高效使用 203, 204
-- 嵌套类 72
-- 概述 38, 39
+
+60
+
+集合接口 61, 62
+
+集合层级结构 60, 61
+
+高效使用 203, 204
+
+嵌套类 72
+
+概述 38, 39
 
 ## Java 开发工具包 5 (JDK 5)
-- 2
 
-## Java 开发工具包 (JDK)
+2
+
+
+
+# Java 开发工具包 (JDK)
+
 - 59
 
-## Java 平台模块系统 (JPMS)
+# Java 平台模块系统 (JPMS)
+
 - 245
 
-## Java 虚拟机 (JVM)
+# Java 虚拟机 (JVM)
+
 - 39
 - 即时编译器 (JIT 编译器) 39
 
 # L
+
 ## Lambdas
+
 - 用于迭代的使用 72
 
 ## `LinkedHashMap` 实现
+
 - 118, 119
 - 构造函数 120
 - 内部结构 119, 120
 
 ## `LinkedHashSet`
+
 - 138
 - 构造函数 140, 141
 - 实现 138, 139
 - 内部结构 139, 140
 
 ## 作为 `Queue` 的 `LinkedList`
+
 - 167
 - 特性 168
 - 使用 168
 
 ## `LinkedList` 实现
+
 - 92, 93
 
 ### 自定义 `LinkedList` 实现
+
 - 97-100
 - 内部结构 93, 96
 - 性能考虑 96, 97
@@ -7236,14 +7639,23 @@ HashMap 114
 - 使用自然顺序排序 178
 
 ## `List` 接口
+
 - 84
 - 特性 84
-- 长期支持 (LTS) 246
-- 下界符 21-23
+
+## 长期支持 (LTS)
+
+- 246
+
+## 下界符
+
+- 21-23
 - 对比上界符 24
 
 # M
+
 ## `Map` 接口
+
 - 111-113
 - 比较 127
 - 泛型算法 130, 131
@@ -7252,7 +7664,9 @@ HashMap 114
 - 用例 129
 
 # N
+
 ## 集合中的嵌套类
+
 - 检查集合 75
 - 空集合 72, 73
 - 不变集合 75, 76
@@ -7260,12 +7674,15 @@ HashMap 114
 - 同步集合 74
 
 # P
+
 ## 参数化类型
+
 - 定义 6
 - 实际示例 227-230
 - 定义空集合 190-192
 
 ## `PriorityQueue`
+
 - 156
 - 特性 156
 - 实现 156
@@ -7274,50 +7691,83 @@ HashMap 114
 - 生产者 extends，消费者 super (PECS) 原则 24
 
 # Q
+
 ## `queue`
+
 - 166
 - 实现 166, 167
 - 滑动窗口或固定缓冲区 167
 
 ## `Queue` 接口
+
 - 154
 - 特性 154-156
 - 实现 154
 - 方法 155
 
 # R
+
 ## 现实场景
+
 - 最佳实践 232, 233
 
 # S
+
 ## `Set` 接口
+
 - 135-137
 - 泛型算法 147, 148
 - 性能考虑 146, 147
 - 同步 146, 147
 
 ## `Stack`
+
 - 166
 - 实现 166
 - 最佳实践 208, 209
 
 ## 在队列和双队列中
+
 - 169
-- 列表中的同步 103, 104
+
+## 列表中的同步
+
+- 103, 104
 - `Collections.synchronizedList()` 103, 104
 - `ArrayList` 104
-- 同步工具 187, 188
-- 同步 `Set` 和 `Map` 188
+
+## 同步工具
+
+- 187, 188
+
+## 同步 `Set` 和 `Map`
+
+- 188
 
 ## 同步集合
+
 - 170
-- 泛型语法 9, 10
-- 泛型方法 8
-- 概述 6
-- 通配符 10
+
+## 泛型语法
+
+- 9, 10
+
+## 泛型方法
+
+- 8
+
+## 泛型概述
+
+- 6
+
+## 通配符
+
+- 10
 
 # T
+
 ## `TreeMap` 实现
+
 - 120
 - 特性 121
 - 泛型方法 124
@@ -7325,6 +7775,7 @@ HashMap 114
 - 泛型类型 121, 123
 
 ## `TreeSet`
+
 - 141
 - 特性 141
 - 泛型方法 143, 144
@@ -7332,31 +7783,51 @@ HashMap 114
 - 元素要求 142, 143
 - 实现 141
 - 内部结构 141, 142
-- 趋势 243-246
+
+## 趋势
+
+- 243-246
 
 ## 类型擦除
+
 - 53
 - 影响 54, 55
 - 泛型中的 53, 54
 
 ## 类型安全代码
+
 - 使用泛型编写 198-200
 
 # U
+
 ## 不变集合
+
 - 105, 189, 190
-- 上界符 20
+
+## 上界符
+
+- 20
 - 益处 21
 - 对比下界符 24
-- 用用模式 231, 232
-- 工具类 175, 176
+
+## 用例模式
+
+- 231, 232
+
+## 工具类
+
+- 175, 176
 
 # V
+
 ## `Vector` 实现
+
 - 100, 101
 
 # W
+
 ## 通配符
+
 - 24
 - 最佳实践 26, 27
 - 下界通配符 25, 26
@@ -7364,8 +7835,6 @@ HashMap 114
 - 上界通配符 25
 
 ## 包装类
+
 - 77-80
-
-## 包装类
 - 77
-

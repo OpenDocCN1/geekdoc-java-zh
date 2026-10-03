@@ -1,3 +1,4 @@
+
 # 位置敏感的拖放
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/dnd/locsensitivedrop.html`](https://docs.oracle.com/javase/tutorial/uiswing/dnd/locsensitivedrop.html)
@@ -32,7 +33,6 @@ public boolean canImport(TransferHandler.TransferSupport info) {
 
     return true;
 }
-
 ```
 
 粗体显示的代码指示了位置敏感的拖放逻辑：当用户以无法计算列（因此无效）的方式放置数据或者当用户将文本放置在第一列时，`canImport` 方法返回 false — 因此 Swing 显示“无拖动”鼠标光标。一旦用户将鼠标移出第一列，`canImport` 返回 true 并且 Swing 显示拖动光标。

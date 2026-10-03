@@ -1,3 +1,4 @@
+
 # 属性
 
 > 原文：[`docs.oracle.com/javase/tutorial/javabeans/writing/properties.html`](https://docs.oracle.com/javase/tutorial/javabeans/writing/properties.html)
@@ -16,7 +17,6 @@ public class FaceBean {
         mMouthWidth = mw;
     }
 }
-
 ```
 
 像 NetBeans 这样的构建工具识别方法名，并在其属性列表中显示`mouthWidth`属性。它还识别类型`int`，并提供一个适当的编辑器，以便在设计时操作属性。
@@ -29,7 +29,6 @@ public class FaceBean {
 public boolean isRunning() {
     // ...
 }
-
 ```
 
 可用并在以下部分描述基本属性的各种特殊化。
@@ -46,7 +45,6 @@ public int[] getTestGrades() {
 public void setTestGrades(int[] tg) {
     mTestGrades = tg;
 }
-
 ```
 
 对于索引属性，bean 类还提供了用于获取和设置数组特定元素的方法。
@@ -59,16 +57,14 @@ public int getTestGrades(int index) {
 public void setTestGrades(int index, int grade) {
     mTestGrades[index] = grade;
 }
-
 ```
 
 ## 绑定属性
 
 *绑定*属性在其值更改时通知监听器。这有两个含义：
 
-1.  bean 类包括用于管理 bean 监听器的`addPropertyChangeListener()`和`removePropertyChangeListener()`方法。
-
-1.  当绑定属性更改时，bean 向其注册的监听器发送`PropertyChangeEvent`。
+1. bean 类包括用于管理 bean 监听器的`addPropertyChangeListener()`和`removePropertyChangeListener()`方法。
+2. 当绑定属性更改时，bean 向其注册的监听器发送`PropertyChangeEvent`。
 
 `PropertyChangeEvent`和`PropertyChangeListener`位于`java.beans`包中。
 
@@ -105,7 +101,6 @@ public class FaceBean {
         mPcs.removePropertyChangeListener(listener);
     }
 }
-
 ```
 
 绑定属性可以直接与其他 bean 属性绑定，使用像 NetBeans 这样的构建工具。例如，您可以将滑块组件的`value`属性绑定到示例中显示的`mouthWidth`属性。NetBeans 允许您在不编写任何代码的情况下执行此操作。
@@ -162,7 +157,6 @@ public class FaceBean {
         mVcs.removeVetoableChangeListener(listener);
     }
 }
-
 ```
 
 ## NetBeans 中的开发支持

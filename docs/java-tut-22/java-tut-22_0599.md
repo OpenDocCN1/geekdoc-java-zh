@@ -1,12 +1,13 @@
+
 # 日期和时间
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/format/dateintro.html`](https://docs.oracle.com/javase/tutorial/i18n/format/dateintro.html)
 
-* * *
+---
 
-**版本说明：** 此日期和时间部分使用`java.util`包中的日期和时间 API。JDK 8 发布的`java.time` API 提供了一个全面的日期和时间模型，相比`java.util`类有显著改进。`java.time` API 在日期时间教程中有描述。旧版日期时间代码页面可能会引起特别关注。
+**版本说明：** 此日期和时间部分使用`java.util`包中的日期和时间 API。JDK 8 发布的`java.time` API 提供了一个全面的日期和时间模型，相比`java.util`类有显著改进。`java.time` API 在日期时间教程中有描述。旧版日期时间代码页面可能会引起特别关注。
 
-* * *
+---
 
 `Date`对象表示日期和时间。您无法显示或打印`Date`对象，而不先将其转换为适当格式的`String`。什么是“适当”的格式呢？首先，格式应符合最终用户的`Locale`的约定。例如，德国人认为`20.4.09`是一个有效的日期，但美国人期望同一日期显示为`4/20/09`。其次，格式应包含必要的信息。例如，一个测量网络性能的程序可能报告经过的毫秒数。在线约会日历可能不会显示毫秒，但会显示星期几。
 

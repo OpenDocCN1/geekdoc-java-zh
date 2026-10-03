@@ -1,3 +1,4 @@
+
 # gRPC 是什么？比 REST API 好吗？
 
 > 原文：<https://medium.com/javarevisited/what-is-grpc-is-it-better-than-rest-api-58a3b7aff13a?source=collection_archive---------0----------------------->

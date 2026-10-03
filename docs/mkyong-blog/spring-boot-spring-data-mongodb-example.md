@@ -1,26 +1,29 @@
+
 # Spring Boot + Spring 数据 MongoDB 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-boot-spring-data-mongodb-example/>
 
 在本文中，我们将向您展示如何使用 Gradle 构建工具创建一个 Spring Boot + Spring 数据 MongoDB 应用程序。
 
-1.  Spring Boot 1.5.1 .版本
-2.  MongoDB
-3.  Gradle
-4.  Java 8
+1. Spring Boot 1.5.1 .版本
+2. MongoDB
+3. Gradle
+4. Java 8
 
-## 1.项目结构
+## 1. 项目结构
 
 标准项目结构。
 
-![project directory](img/e5b58eccc4df3b2e80c7932033b78a71.png) ## 2.项目依赖性
+![project directory](img/e5b58eccc4df3b2e80c7932033b78a71.png)
+
+## 2. 项目依赖性
 
 2.1 一个 Gradle 构建文件。
 
-build.gradle
+`build.gradle`
 
 ```java
- buildscript {
+buildscript {
     repositories {
         mavenCentral()
     }
@@ -48,15 +51,15 @@ targetCompatibility = 1.8
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
-} 
+}
 ```
 
-2.2 声明了一个`spring-boot-starter-data-mongodb`，它抓取了大量的库，查看以下依赖项:
+2.2 声明了一个`spring-boot-starter-data-mongodb`，它抓取了大量的库，查看以下依赖项：
 
 Console
 
 ```java
- $ gradle dependencies --configuration runtime
+$ gradle dependencies --configuration runtime
 :dependencies
 
 ------------------------------------------------------------
@@ -109,32 +112,32 @@ runtime - Runtime classpath for source set 'main'.
           |    +--- org.slf4j:slf4j-api:1.7.22
           |    \--- org.slf4j:jcl-over-slf4j:1.7.22 (*)
           +--- org.slf4j:slf4j-api:1.7.22
-          \--- org.slf4j:jcl-over-slf4j:1.7.22 (*) 
+          \--- org.slf4j:jcl-over-slf4j:1.7.22 (*)
 ```
 
- ## 3.MongoDB 配置
+## 3. MongoDB 配置
 
-application.properties
+`application.properties`
 
 ```java
- #mongodb
+#mongodb
 spring.data.mongodb.host=localhost
 spring.data.mongodb.port=27017
 spring.data.mongodb.database=app1
 
 #logging
 logging.level.org.springframework.data=debug
-logging.level.=error 
+logging.level.=error
 ```
 
-## 4.Spring 数据–mongo repository
+## 4. Spring 数据 – mongo repository
 
 4.1 带有 Spring 数据注释的简单模型。
 
-Domain.java
+`Domain.java`
 
 ```java
- package com.mkyong.domain;
+package com.mkyong.domain;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -151,16 +154,16 @@ public class Domain {
 
     private boolean displayAds;
 
-    //getters and setters 
-} 
+    //getters and setters
+}
 ```
 
-4.2 扩展`MongoRepository`，自动拥有 CRUD 功能。Spring 数据附带了许多神奇的`findBy`查询，查看官方[Spring data MongoDB–查询方法](http://web.archive.org/web/20190224163503/http://docs.spring.io/spring-data/data-document/docs/current/reference/html/#mongodb.repositories.queries)了解详情。
+4.2 扩展`MongoRepository`，自动拥有 CRUD 功能。Spring 数据附带了许多神奇的`findBy`查询，查看官方 [Spring data MongoDB – 查询方法](http://web.archive.org/web/20190224163503/http://docs.spring.io/spring-data/data-document/docs/current/reference/html/#mongodb.repositories.queries) 了解详情。
 
-DomainRepository.java
+`DomainRepository.java`
 
 ```java
- package com.mkyong.domain;
+package com.mkyong.domain;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
@@ -181,7 +184,7 @@ public interface DomainRepository extends MongoRepository<Domain, Long> {
     @Query("{domain: { $regex: ?0 } })")
     List<Domain> findCustomByRegExDomain(String domain);
 
-} 
+}
 ```
 
 4.3 要为`DomainRepository`创建自定义方法，您需要在另一个文件中创建实现，并让`DomainRepository`扩展它。
@@ -190,24 +193,24 @@ public interface DomainRepository extends MongoRepository<Domain, Long> {
 
 自定义界面
 
-DomainRepositoryCustom.java
+`DomainRepositoryCustom.java`
 
 ```java
- package com.mkyong.domain;
+package com.mkyong.domain;
 
 public interface DomainRepositoryCustom {
 
     int updateDomain(String domain, boolean displayAds);
 
-} 
+}
 ```
 
 4.3.2 实现类的名字很严格，名字必须是`"CoreRepositoryInterface" + Impl`，读这个 [Spring data MongoDB 自定义实现](http://web.archive.org/web/20190224163503/http://docs.spring.io/spring-data/data-document/docs/current/reference/html/#repositories.custom-implementations)
 
-DomainRepositoryCustom.java
+`DomainRepositoryCustom.java`
 
 ```java
- package com.mkyong.domain;
+package com.mkyong.domain;
 
 import com.mongodb.WriteResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -237,15 +240,15 @@ public class DomainRepositoryImpl implements DomainRepositoryCustom {
             return 0;
 
     }
-} 
+}
 ```
 
 4.3.3 `DomainRepository`扩展自定义接口`DomainRepositoryCustom`
 
-DomainRepository.java
+`DomainRepository.java`
 
 ```java
- package com.mkyong.domain;
+package com.mkyong.domain;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
@@ -254,19 +257,21 @@ import java.util.List;
 
 public interface DomainRepository extends MongoRepository<Domain, Long>, DomainRepositoryCustom {
 
-	//other methods
+    //other methods
 
-} 
+}
 ```
 
-## 5.奔跑
+## 5. 奔跑
 
 5.1 Spring Boot 应用程序。
 
-Application.java
+`Application.java`
+
+
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.mkyong.domain.Domain;
 import com.mkyong.domain.DomainRepository;
@@ -300,15 +305,15 @@ public class Application {
 
     }
 
-} 
+}
 ```
 
-5.2 Gradle 构建并运行它。
+## 5.2 Gradle 构建并运行它
 
 Terminal
 
 ```java
- $ gradle build
+$ gradle build
 
 $ java -jar build/libs/spring-data-mongodb-example-1.0.jar
 
@@ -320,18 +325,19 @@ $ java -jar build/libs/spring-data-mongodb-example-1.0.jar
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v1.5.1.RELEASE)
 
-//blah blah blah 
+//blah blah blah
 ```
 
-## 6.常见问题
+## 6. 常见问题
 
-6.1 如何创建自定义`MongoTemple`？
-答:声明一个新的`MongoTemplate` bean 来覆盖默认值。在下面的例子中，它创建了一个自定义的`MongoTemplate`来删除`_class`字段。
+### 6.1 如何创建自定义`MongoTemplate`？
 
-Application.java
+答：声明一个新的`MongoTemplate` bean 来覆盖默认值。在下面的例子中，它创建了一个自定义的`MongoTemplate`来删除`_class`字段。
+
+`Application.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -365,7 +371,7 @@ public class Application {
 
     }
 
-} 
+}
 ```
 
 ## 下载源代码
@@ -374,17 +380,10 @@ Download – [spring-boot-data-mongodb-example.zip](http://web.archive.org/web/2
 
 ## 参考
 
-1.  [Spring Data MongoDB–参考文档](http://web.archive.org/web/20190224163503/http://docs.spring.io/spring-data/data-document/docs/current/reference/html/)
-2.  [与 NoSQL 科技合作](http://web.archive.org/web/20190224163503/http://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-nosql.html)
-3.  [Spring Boot Gradle 插件](http://web.archive.org/web/20190224163503/http://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-gradle-plugin.html)
-4.  [用 Spring Boot 构建应用](http://web.archive.org/web/20190224163503/https://spring.io/guides/gs/spring-boot/)
-5.  [Gradle–显示项目相关性](http://web.archive.org/web/20190224163503/https://www.mkyong.com/gradle/gradle-display-project-dependency/)
+1. [Spring Data MongoDB–参考文档](http://web.archive.org/web/20190224163503/http://docs.spring.io/spring-data/data-document/docs/current/reference/html/)
+2. [与 NoSQL 科技合作](http://web.archive.org/web/20190224163503/http://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-nosql.html)
+3. [Spring Boot Gradle 插件](http://web.archive.org/web/20190224163503/http://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-gradle-plugin.html)
+4. [用 Spring Boot 构建应用](http://web.archive.org/web/20190224163503/https://spring.io/guides/gs/spring-boot/)
+5. [Gradle–显示项目相关性](http://web.archive.org/web/20190224163503/https://www.mkyong.com/gradle/gradle-display-project-dependency/)
 
 [gradle](http://web.archive.org/web/20190224163503/http://www.mkyong.com/tag/gradle/) [mongodb](http://web.archive.org/web/20190224163503/http://www.mkyong.com/tag/mongodb/) [spring boot](http://web.archive.org/web/20190224163503/http://www.mkyong.com/tag/spring-boot/) [spring-data](http://web.archive.org/web/20190224163503/http://www.mkyong.com/tag/spring-data/)
-
-
-
-
-
-
-

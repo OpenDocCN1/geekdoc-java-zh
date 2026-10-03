@@ -1,3 +1,4 @@
+
 # 时间包
 
 > 原文：[`docs.oracle.com/javase/tutorial/datetime/iso/temporal.html`](https://docs.oracle.com/javase/tutorial/datetime/iso/temporal.html)
@@ -22,7 +23,6 @@
 
 ```java
 boolean isSupported = LocalDate.now().isSupported(ChronoField.CLOCK_HOUR_OF_DAY);
-
 ```
 
 针对 ISO-8601 日历系统的特定字段在[`IsoFields`](https://docs.oracle.com/javase/8/docs/api/java/time/temporal/IsoFields.html)类中定义。以下示例展示了如何使用`ChronoField`和`IsoFields`获取字段的值：
@@ -30,7 +30,6 @@ boolean isSupported = LocalDate.now().isSupported(ChronoField.CLOCK_HOUR_OF_DAY)
 ```java
 time.get(ChronoField.MILLI_OF_SECOND)
 int qoy = date.get(IsoFields.QUARTER_OF_YEAR);
-
 ```
 
 另外两个类定义了可能有用的额外字段，[`WeekFields`](https://docs.oracle.com/javase/8/docs/api/java/time/temporal/WeekFields.html) 和 [`JulianFields`](https://docs.oracle.com/javase/8/docs/api/java/time/temporal/JulianFields.html)。
@@ -42,5 +41,4 @@ int qoy = date.get(IsoFields.QUARTER_OF_YEAR);
 ```java
 Instant instant = Instant.now();
 boolean isSupported = instant.isSupported(ChronoUnit.DAYS);
-
 ```

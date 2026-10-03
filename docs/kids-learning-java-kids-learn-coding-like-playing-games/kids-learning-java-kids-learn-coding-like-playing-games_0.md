@@ -1,15 +1,11 @@
+
 # Kids学习 Java：像玩游戏一样学编程
 
-
-
 ![](img/Image00000.jpg)
-
-
 
 Java 是一种强大的编程语言，简单易学且有趣！孩子们学习 Java 就像玩游戏一样，这本书为 10 岁以上的儿童教授 Java 核心技能，并逐步引导他们了解编码。在书结束时，孩子们可以创建自己的应用程序和游戏。
 
 [`en.verejava.com`](http://en.verejava.com)
-
 
 1. Java JDK 安装
 2. 创建第一个 Java 代码，然后点击菜单 -> Run As Java Application
@@ -17,6 +13,7 @@ Java 是一种强大的编程语言，简单易学且有趣！孩子们学习 Ja
 ## 2. Java 基础概念
 
 1. 在 Eclipse 中创建文件：`HelloWorld.java`
+
 ```
 public class HelloWorld {
     public static void main(String[] args) {
@@ -26,16 +23,23 @@ public class HelloWorld {
     }
 }
 ```
+
 `System.out.println()`：将消息打印到控制台并换行
+
 `System.out.print()`：将消息打印到控制台但不换行
+
 `\t`：制表符
+
 `main(String[] args)`：程序开始执行的入口
 
 ### 2.1 HelloWorld 详解
 
 1. 创建文件：`Variable.java`
+
 `Variable`：系统分配用于存储数据的内存区域。
+
 `String`：字符序列，如 `"Apple"`
+
 ```
 public class Variable {
     public static void main(String[] args) {
@@ -44,11 +48,13 @@ public class Variable {
     }
 }
 ```
+
 结果：Apple
 
 ### 2.2 变量
 
 2. 将变量 `basket` 的值从 `"Apple"` 改为 `"Orange"`
+
 ```
 public class Variable {
     public static void main(String[] args) {
@@ -59,13 +65,17 @@ public class Variable {
     }
 }
 ```
+
 结果：Apple Orange
 
 ## 3. 算术运算符
 
 1. 在 Eclipse 中创建文件：`ArithmeticOperator.java`
+
 `int`：整数类型，可以存储正负的非小数数字。
+
 算术运算：`+`, `-`, `*`, `/`
+
 ```
 public class ArithmeticOperator {
     public static void main(String[] args) {
@@ -80,6 +90,7 @@ public class ArithmeticOperator {
     }
 }
 ```
+
 结果：3 -121
 
 ### 3.1 算术运算符
@@ -87,6 +98,7 @@ public class ArithmeticOperator {
 ### 3.2 方法
 
 1. 添加 3 个更多关于 `-`、`*`、`/` 的方法
+
 ```java
 public class ArithmeticOperator {
     public static int add(int a, int b){
@@ -113,11 +125,13 @@ public class ArithmeticOperator {
     }
 }
 ```
+
 结果：6282
 
 ### 3.3 类
 
 `class`：是用户定义的蓝图或原型，根据它创建对象。
+
 ```
 class {
     public static int add(int a, int b){
@@ -144,11 +158,8 @@ class {
     }
 }
 ```
+
 （注：此处示例原文代码结构略有混乱，翻译已按逻辑保留代码块内容）
-
-
-
-
 
 ```java
 import javax.swing.*;
@@ -164,9 +175,10 @@ public class FirstGUIApplication {
 运行打开窗口：![](img/Image00011.jpg)
 
 ### JLabel
+
 `JLabel`：是一种标准的 Swing 组件，用于在窗口上显示文本或图像。![](img/Image00012.jpg)
 
-1.  在 Eclipse 中创建一个文件：`JLabelApplication.java`
+1. 在 Eclipse 中创建一个文件：`JLabelApplication.java`
 
 ```java
 import javax.swing.*;
@@ -182,9 +194,10 @@ public class JLabelApplication {
 ```
 
 ### BorderLayout
+
 `BorderLayout`：是一种容器，将组件排列在五个区域：北（north）、南（south）、东（east）、西（west）和中心（center）。`setHorizontalAlignment(JLabel.CENTER)`：将 JLabel 的水平对齐设置为居中。![](img/Image00013.jpg)
 
-1.  在 Eclipse 中创建一个文件：`BorderLayoutApplication.java`
+1. 在 Eclipse 中创建一个文件：`BorderLayoutApplication.java`
 
 ```java
 import java.awt.BorderLayout;
@@ -212,9 +225,10 @@ public class BorderLayoutApplication {
 ```
 
 ### JTextField
+
 `JTextField`：是一种文本组件，允许编辑单行文本...![](img/Image00014.jpg)
 
-1.  在 Eclipse 中创建一个文件：`JTextFieldApplication.java`
+1. 在 Eclipse 中创建一个文件：`JTextFieldApplication.java`
 
 ```java
 import java.awt.BorderLayout;
@@ -231,9 +245,10 @@ public class JTextFieldApplication {
 ```
 
 ### JButton
+
 `JButton`：用于在应用程序中添加按钮。你可以为按钮附加一个函数或方法，该方法会在点击按钮时自动调用。![](img/Image00015.jpg)
 
-1.  在 Eclipse 中创建一个文件：`JButtonApplication.java`
+1. 在 Eclipse 中创建一个文件：`JButtonApplication.java`
 
 ```java
 import java.awt.BorderLayout;
@@ -250,10 +265,12 @@ public class JButtonApplication {
 ```
 
 ### JButton 点击事件
+
 `button.addActionListener()`：为按钮添加点击事件，方法 `actionPerformed(ActionEvent e)` 将被自动调用。
+
 `label.setText(String str)`：设置标签显示的文本为字符串![](img/Image00016.jpg)
 
-1.  在 Eclipse 中创建一个文件：`JButtonEventApplication.java`
+1. 在 Eclipse 中创建一个文件：`JButtonEventApplication.java`
 
 ```java
 import java.awt.BorderLayout;
@@ -279,9 +296,12 @@ public class JButtonEventApplication {
 ```
 
 ### GridLayout
+
 `GridLayout(rows, cols)`：创建一个具有指定行数和列数的网格布局...![](img/Image00017.jpg)
 
-1.  在 Eclipse 中创建一个文件：`GridLayoutApplication.java`
+1. 在 Eclipse 中创建一个文件：`GridLayoutApplication.java`
+
+
 
 ```java
 import java.awt.*;
@@ -308,12 +328,15 @@ public class GridLayoutApplication {
 }
 ```
 
-### GUI 计算器
+## GUI 计算器
+
 `Integer.parseInt()`：这是 Java 的默认方法，可以将 `String` 转换为 `integer`。
+
 `Integer.toString()`：这是 Java 的默认方法，可以将整数转换为 `String`。
+
 `JTextField.getText()`：获取 `JTextField` 的文本。
 
-1.  在 Eclipse 中创建一个文件：`GUICaculator.java`![](img/Image00018.jpg)
+1. 在 Eclipse 中创建一个文件：`GUICaculator.java`![](img/Image00018.jpg)
 
 ```java
 import java.awt.GridLayout;
@@ -383,14 +406,9 @@ public class GUICaculator {
 }
 ```
 
-# 赋值运算符
-1.  创建一个 `AssignmentOperator.java`
+## 赋值运算符
 
-
-
-
-
-# 赋值运算符
+1. 创建一个 `AssignmentOperator.java`
 
 ```java
 public class AssignmentOperator {
@@ -416,7 +434,7 @@ public class AssignmentOperator {
 }
 ```
 
-## 2. 创建数量加法器和减法器
+## 创建数量加法器和减法器
 
 `QuantityApplication.java` 点击 `+` 按钮将数量增加 1，点击 `-` 按钮将数量减少 1![](img/Image00020.jpg)
 
@@ -459,11 +477,11 @@ public class QuantityApplication {
 }
 ```
 
-# 关系运算符
+## 关系运算符
 
 关系运算符：只有两种结果：`true` 或 `false`
 
-## 1. 创建文件：`RelationalOperator.java`
+### 创建文件：`RelationalOperator.java`
 
 ```java
 public class RelationalOperator {
@@ -477,23 +495,28 @@ public class RelationalOperator {
     }
 }
 ```
+
 结果：`false`, `true`, `true`, `true`, `true`, `true`
 
-# If 条件语句
+## If 条件语句
 
 If 语句：
+
 1. `if (expression){statement}`
+
 2. `if (expression) { statement } else { statement }`
+
 3. `if (expression) {statement } else if { statement }`
 
 评分示例：
+
 ```
 if score == 5 :  优秀
 else if score == 4 :   良好
 else : 需要努力追赶
 ```
 
-## 1. 创建一个 `IfStatement.java`
+### 创建一个 `IfStatement.java`
 
 ```java
 public class IfStatement {
@@ -509,10 +532,14 @@ public class IfStatement {
     }
 }
 ```
+
 结果：`Excellent`
+
 修改 `score = 4`：`Good`
 
-## 2. 创建一个 `IfStatementGUI.java`![](img/Image00021.jpg)
+### 创建一个 `IfStatementGUI.java`![](img/Image00021.jpg)
+
+
 
 ```java
 import java.awt.GridLayout;
@@ -551,7 +578,7 @@ public class IfStatementGUI {
 
 # 逻辑运算符
 
-逻辑运算符：`与` (`&&`)，`或` (`||`)，`非` (`!`)
+逻辑运算符：`与`（`&&`），`或`（`||`），`非`（`!`）
 
 1. `&&` 如果操作的两边都为 `true` 则返回 `true`，否则返回 `false`
 2. `||` 当操作的两边都为 `false` 时结果为 `false`，否则为 `true`
@@ -572,6 +599,7 @@ public class LogicalOperator {
     }
 }
 ```
+
 ## 2. 创建 `LogicalOperator2.java`
 
 ```java
@@ -587,11 +615,15 @@ public class LogicalOperator2 {
     }
 }
 ```
+
 ## 3. 创建 `PocketMoneyGUI.java`
 
 输入分数：
+
 `if score == 5`: 优秀
+
 `else if score == 4`: 良好
+
 `else`: 需要努力追赶
 
 ```java
@@ -646,15 +678,21 @@ public class WhileLoop {
     }
 }
 ```
-结果：0123456789
+
+结果：`0123456789`
 
 # while 循环游戏
 
 模拟游戏：
+
 `while ( num != 0 )`
+
 `if num 等 1`: 西瓜
+
 `else if num 等 2`: 香蕉
+
 `else if num 等 3`: 桃子
+
 `else if num 等 0`: 游戏结束
 
 ## 1. 创建 `WhileLoopGames.java`
@@ -682,9 +720,6 @@ public class WhileLoopGames {
 }
 ```
 
-
-
-
 结果：`0, 1, 2, 3, 4, 5, 6, 7, 8, 9`,一维数组![](img/Image00028.jpg)
 
 ### 1. 创建 `OneArray.java`
@@ -699,7 +734,8 @@ public class OneArray {
     }
 }
 ```
-结果：``905060`
+
+结果：`905060`
 
 ### 2. 创建 `OneArray2.java`
 
@@ -715,7 +751,8 @@ public class OneArray2 {
     }
 }
 ```
-结果：``90,70,50,80,60,85`
+
+结果：`90,70,50,80,60,85`
 
 ---
 
@@ -735,7 +772,8 @@ public class BinaryArray {
     }
 }
 ```
-结果：``10305090`
+
+结果：`10305090`
 
 ### 2. 创建一个 `TwoArray2.html` 打印二维数组的所有元素![](img/Image00030.jpg)
 
@@ -753,7 +791,8 @@ public class BinaryArray2 {
     }
 }
 ```
-结果：``10 20 3040 50 6070 80 90`
+
+结果：`10 20 3040 50 6070 80 90`
 
 ---
 
@@ -785,53 +824,58 @@ public class FindDogGame {
 }
 ```
 
-### 2. 将数组名称填入按钮中，并添加按钮点击事件，如果按钮名称为 1 则变为 * *，如果按钮名称为 2 则变为 Dog![](img/Image00032.jpg)
+### 2. 将数组名称填入按钮中，并添加按钮点击事件，如果按钮名称为 1 则变为 `*`，如果按钮名称为 2 则变为 `Dog`![](img/Image00032.jpg)
 
-1:      `*`
-2:      `Dog`
+1: `*`
+
+2: `Dog`
 
 `String.equals(String str)`：根据字符串的内容比较两个两个字符串
+
+
 
 ```java
 import java.awt.GridLayout;
 import java.awt.event.*;
 import javax.swing.*;
+
 public class FindDogGame {
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Java GUI Application" );
-        final int [][]  maps ={{ 1, 1, 1, 1 },{ 1, 1, 1, 1 },{ 1, 2, 1, 1 },{ 1, 1, 1, 1 }};
-        frame.setLayout(new GridLayout(4,4));
-        for (int i = 0; i < maps.length ; i++) {
-            for (int j = 0; j < maps[i].length ; j++) {
+        JFrame frame = new JFrame("Java GUI Application");
+        final int[][] maps = {{1, 1, 1, 1}, {1, 1, 1, 1}, {1, 2, 1, 1}, {1, 1, 1, 1}};
+        frame.setLayout(new GridLayout(4, 4));
+        for (int i = 0; i < maps.length; i++) {
+            for (int j = 0; j < maps[i].length; j++) {
                 final JButton button = new JButton();
-                button.setName(Integer.toString (maps[i][j]));
+                button.setName(Integer.toString(maps[i][j]));
                 frame.add(button);
-                button.addActionListener(new ActionListener(){
+                button.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        if (button.getName().equals("1")){
+                        if (button.getName().equals("1")) {
                             button.setText("*");
-                        }else if (button.getName().equals("2")){
+                        } else if (button.getName().equals("2")) {
                             button.setText("Dog");
                         }
                     }
                 });
             }
         }
-        frame.setSize(200,200);
-        frame.setVisible(true );
+        frame.setSize(200, 200);
+        frame.setVisible(true);
     }
 }
 ```
 
 ### 3. 打印随机数 0-9
 
-Random：`random.nextInt(n)`：返回一个 0 到 n-1 之间的随机数。
+`Random`：`random.nextInt(n)`：返回一个 0 到 n-1 之间的随机数。
 
 创建文件：`RandomNumber.java`
 
 ```java
 import java.util.Random;
+
 public class RandomNumber {
     public static void main(String[] args) {
         Random rn = new Random();
@@ -842,17 +886,16 @@ public class RandomNumber {
     }
 }
 ```
-结果：``9, 3, 9, 0, 4, 1, 0, 3, 4, 5`
 
-### 4. 随机生成 1-2 初始化二维数组，将数组名称填入按钮中，并添加按钮点击事件，如果按钮名称为 1 则变为 * *，如果按钮名称为 2 则变为 Dog![](img/Image00033.jpg)
+结果：`9, 3, 9, 0, 4, 1, 0, 3, 4, 5`
 
-1:      `*`
-2:      `Dog`
+### 4. 随机生成 1-2 初始化二维数组，将数组名称填入按钮中，并添加按钮点击事件，如果按钮名称为 1 则变为 `*`，如果按钮名称为 2 则变为 `Dog`
 
-*(注：由于原文最后部分代码存在逻辑重复和碎片化，已根据上下文进行了结构化对齐)*
+![](img/Image00033.jpg)
 
+1: `*`
 
-
+2: `Dog`
 
 # 方法重载
 
@@ -861,6 +904,7 @@ class Caculator {
     public double add(double a, double b) {
         return a + b;
     }
+
     public int add(int a, int b) {
         return a + b;
     }
@@ -870,26 +914,28 @@ public class TestOverLoad {
     public static void main(String[] args) {
         Caculator c = new Caculator();
         int result = c.add(10, 20);
-        System.out .println(result);
+        System.out.println(result);
         // 使用不同参数类型调用重载方法
         double result2 = c.add(30.5, 40.2);
-        System.out .println(result2);
+        System.out.println(result2);
     }
 }
 ```
-结果: 3070.7
+
+结果：`30` `70.7`
 
 # 继承
 
 主题：`Student` 继承 `Person`
 
 步骤：
+
 1. 类：`Student`, `Person`
 2. 关系：`Student` 扩展 `Person`
-3. 属性：`Person` 的属性 (`name`, `age`）
-4. 方法：`Person` 的动作 (`say`)
+3. 属性：`Person` 的属性（`name`, `age`）
+4. 方法：`Person` 的动作（`say`）
 
-```![](img/Image00038.jpg)
+![](img/Image00038.jpg)
 
 1. 创建文件：`TestInheritence.java`
 
@@ -897,14 +943,17 @@ public class TestOverLoad {
 class Person {
     protected String name;
     protected int age;
+
     public Person() {
-        System.out .println("Parent Person() instantiation");
+        System.out.println("Parent Person() instantiation");
     }
+
     public Person(String name, int age) {
-        System.out .println("Parent Person(String name, int age) instantiated");
+        System.out.println("Parent Person(String name, int age) instantiated");
     }
+
     public void say() {
-        System.out .println("Person can speaking");
+        System.out.println("Person can speaking");
     }
 }
 
@@ -915,11 +964,12 @@ class Person {
 class Student extends Person {
     public Student() {
         super();
-        System.out .println("Subclass Student() Instantiation");
+        System.out.println("Subclass Student() Instantiation");
     }
+
     public Student(String name, int age) {
         super(name, age);
-        System.out .println("Subclass Student(String name, age) " + name + " instantiated");
+        System.out.println("Subclass Student(String name, age) " + name + " instantiated");
     }
 }
 
@@ -928,22 +978,29 @@ public class TestInheritence {
         Student s = new Student();
         s.name = "Sumi";
         s.age = 22;
-        System.out .println("-----------------------------------------");
+        System.out.println("-----------------------------------------");
         Student s2 = new Student("Isacc", 23);
         s2.say();
     }
 }
 ```
+
+```java
 /**
  * 1. 子类无法访问父类的私有属性和方法
  * 2. 子类可以访问父类的保护、公有属性和方法
  */
+```
+
 结果：
+
+```
 Parent Person() instantiation
 Subclass Student() Instantiation
 Parent Person(String name, age) instantiated
 Subclass Student(String name, age) Isacc instantiated
 Person can speaking
+```
 
 # 方法重写
 
@@ -956,19 +1013,19 @@ Person can speaking
 ```java
 class Person {
     public void say() {
-        System.out .println("Person speaking");
+        System.out.println("Person speaking");
     }
 }
 
 class ChineseStudent extends Person {
     public void say() {
-        System.out .println("Speak Chinese");
+        System.out.println("Speak Chinese");
     }
 }
 
 class AmericaStudent extends Person {
     public void say() {
-        System.out .println("Speak English");
+        System.out.println("Speak English");
     }
 }
 
@@ -981,14 +1038,17 @@ public class TestOverride {
     }
 }
 ```
+
 结果：
+
+```
 Speak Chinese
 Speak English
+```
 
 # Java 线程
 
-线程：是程序内部单一的顺序控制流。CPU 会为每个线程分配一段时间时间来执行。
-汽车和火车同时运行
+线程：是程序内部单一的顺序控制流。CPU 会为每个线程分配一段时间时间来执行。汽车和火车同时运行。
 
 ![](img/Image00040.jpg)
 
@@ -1000,10 +1060,10 @@ Speak English
 class CarThread extends Thread {
     @Override
     public void run() {
-        for (int i=0; i<5;i++) {
-            System.out .println("Car Thread Run " + i);
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Car Thread Run " + i);
             try {
-                Thread.sleep (200);
+                Thread.sleep(200);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -1014,10 +1074,10 @@ class CarThread extends Thread {
 class TrainThread extends Thread {
     @Override
     public void run() {
-        for (int i=0; i<5;i++) {
-            System.out .println("Train Thread Run " + i);
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Train Thread Run " + i);
             try {
-                Thread.sleep (200);
+                Thread.sleep(200);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -1034,7 +1094,10 @@ public class TestThread {
     }
 }
 ```
+
 输出结果：
+
+```
 Car Thread Run 0
 Train Thread Run 0
 Car Thread Run 1
@@ -1045,17 +1108,19 @@ Car Thread Run 3
 Train Thread Run 3
 Car Thread Run 4
 Train Thread Run 4
+```
+
 从结果可以看出，两个线程是交替执行的。
 
 # Canvas 进度条
 
-Canvas：用于在屏幕上绘制图形，我们可以继承 `JPanel`
+`Canvas`：用于在屏幕上绘制图形，我们可以继承 `JPanel`。
 
 ![](img/Image00041.jpg)
 
 1. 创建 `ProgressBar.java`
 `Canvas` 扩展 `JPanel`：`Canvas` 继承自 `JPanel`
-`this.setLayout(null)`：必须设置布局为 null
+`this.setLayout(null)`：必须设置布局为 `null`
 `this.setBackground(Color c)`：在 `JPanel` 中设置背景颜色
 
 ```java
@@ -1064,11 +1129,12 @@ import javax.swing.*;
 
 class Canvas extends JPanel {
     public Canvas() {
-        this .setLayout(null);
-        this .setBackground(Color.WHITE);
+        this.setLayout(null);
+        this.setBackground(Color.WHITE);
     }
+
     protected void paintComponent(Graphics g) {
-        super .paintComponent(g);
+        super.paintComponent(g);
     }
 }
 
@@ -1077,12 +1143,15 @@ public class ProgressBar {
         JFrame frame = new JFrame("GUI Canvas Application");
         Canvas canvas = new Canvas();
         frame.add(canvas);
-        frame.setSize(300,200);
+        frame.setSize(300, 200);
     }
 }
 ```
+
 2. 在 `Canvas` 上画一条线
+
 ![](img/Image00042.jpg)
+
 `g.drawLine(x1, y1, x2, y2)`：接收四个整数表示起点 `x1, y1` 和终点 `x2, y2` 的坐标。
 
 ```java
@@ -1091,17 +1160,21 @@ import javax.swing.*;
 
 class Canvas extends JPanel {
     public Canvas() {
-        this .setLayout(null);
-        this .setBackground(Color.WHITE);
+        this.setLayout(null);
+        this.setBackground(Color.WHITE);
     }
+
     protected void paintComponent(Graphics g) {
-        super .paintComponent(g);
+        super.paintComponent(g);
         g.drawLine(50, 50, 200, 50);
     }
 }
 ```
+
 3. 在 `Canvas` 上画一个矩形
+
 ![](img/Image00043.jpg)
+
 `g.drawRect(x, y, width, height)`：在画布上绘制矩形。
 
 ```java
@@ -1110,17 +1183,21 @@ import javax.swing.*;
 
 class Canvas extends JPanel {
     public Canvas() {
-        this .setLayout(null);
-        this .setBackground(Color.WHITE);
+        this.setLayout(null);
+        this.setBackground(Color.WHITE);
     }
+
     protected void paintComponent(Graphics g) {
-        super .paintComponent(g);
+        super.paintComponent(g);
         g.drawRect(50, 50, 150, 50);
     }
 }
 ```
+
 4. 在 `Canvas` 上填充一个矩形
+
 ![](img/Image00044.jpg)
+
 `g.fillRect(x, y, width, height)`：填充画布上的矩形。
 `g.setColor(Color c)`：设置颜色（`Color.RED`、`Color.GREEN`、`Color.BLUE`）。
 
@@ -1130,11 +1207,12 @@ import javax.swing.*;
 
 class Canvas extends JPanel {
     public Canvas() {
-        this .setLayout(null);
-        this .setBackground(Color.WHITE);
+        this.setLayout(null);
+        this.setBackground(Color.WHITE);
     }
+
     protected void paintComponent(Graphics g) {
-        super .paintComponent(g);
+        super.paintComponent(g);
     }
 }
 ```
@@ -1144,37 +1222,178 @@ import java.awt.*;
 import javax.swing.*;
 
 class Canvas extends JPanel {
+```
+
+
+
+# 画布小球碰撞
+
+## 1. 在画布上画一个圆 `(x, y) = (80, 80)`，`width = 100`，`height = 100`。
+
+![](img/Image00046.jpg)
+
+创建一个`BallGame.java`。
+
+`fillOval(int x, int y, int width, int height)`：用当前颜色填充指定矩形边界内的椭圆。
+
+```java
+import java.awt.*;
+import javax.swing.*;
+
+class Canvas extends JPanel {
+
     public Canvas() {
-        this .setLayout(null);
-        this .setBackground(Color.WHITE);
+        this.setLayout(null);
+        this.setBackground(Color.WHITE);
     }
+
     protected void paintComponent(Graphics g) {
-        super .paintComponent(g);
-        g.setColor(Color.RED);
-        g.fillRect(50, 50, 100, 50);
+        super.paintComponent(g);
+        g.setColor(Color.BLUE);
+        g.fillOval(80, 80, 100, 100);
+    }
+}
+
+public class BallGame {
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("GUI Canvas Application");
+        Canvas canvas = new Canvas();
+        frame.add(canvas);
+        frame.setSize(300, 300);
+        frame.setVisible(true);
     }
 }
 ```
-4. 绘制进度条动画
-4.1. 先画一个空矩形
-4.2. 填充一个实矩形，开启一个线程 `ProgressBarThread`，宽度每 200 毫秒增加 10，直到 `width=150`
+
+## 2. 创建一个类`Ball`，然后创建方法`draw(Graphics g, int x, int y, int r, Color c)`在画布上画 3 个圆。
+
+![](img/Image00047.jpg)
+
+```java
+import java.awt.*;
+import javax.swing.*;
+
+class Ball {
+
+    public void draw(Graphics g, int x, int y, int r, Color c) {
+        g.setColor(c);
+        g.fillOval(x, y, 2 * r, 2 * r);
+    }
+}
+
+class Canvas extends JPanel {
+
+    public Canvas() {
+        this.setLayout(null);
+        this.setBackground(Color.WHITE);
+    }
+
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        Ball ball = new Ball();
+        ball.draw(g, 50, 50, 30, Color.RED);
+        ball.draw(g, 120, 50, 30, Color.GREEN);
+        ball.draw(g, 190, 50, 30, Color.BLUE);
+    }
+}
+
+public class BallGame {
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("GUI Canvas Application");
+        Canvas canvas = new Canvas();
+        frame.add(canvas);
+        frame.setSize(400, 200);
+        frame.setVisible(true);
+    }
+}
+```
+
+## 3. 创建一个类`Ball`，通过构造方法传递`x, y, r, color`，然后创建一个方法`draw(Graphics g)`在画布上画 1 个圆。
+
+![](img/Image00048.jpg)
+
+`g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON)`：开启`ANTIALIASING`以绘制出良好的圆。
+
+```java
+import java.awt.*;
+import javax.swing.*;
+
+class Ball {
+
+    private int x;
+    private int y;
+    private int r;
+    private Color color;
+
+    public Ball(int x, int y, int r, Color color) {
+        this.x = x;
+        this.y = y;
+        this.r = r;
+        this.color = color;
+    }
+
+    public void draw(Graphics g) {
+        Graphics2D g2 = (Graphics2D) g;
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        g2.setColor(this.color);
+        g2.fillOval(this.x, this.y, 2 * this.r, 2 * this.r);
+    }
+}
+
+class Canvas extends JPanel {
+
+    public Canvas() {
+        this.setLayout(null);
+        this.setBackground(Color.WHITE);
+    }
+
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        Ball ball = new Ball(50, 50, 30, Color.BLUE);
+        ball.draw(g);
+    }
+}
+
+public class BallGame {
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("GUI Canvas Application");
+        Canvas canvas = new Canvas();
+        frame.add(canvas);
+        frame.setSize(200, 300);
+        frame.setVisible(true);
+    }
+}
+```
+
+## 4. 绘制进度条动画
+
+### 4.1. 先画一个空矩形
+
+### 4.2. 填充一个实矩形，开启一个线程`ProgressBarThread`，宽度每 200 毫秒增加 10，直到`width = 150`
 
 ![](img/Image00045.jpg)
-`repaint()`：持有重绘此组件的指令，`paintComponent(Graphics g)` 将自动调用以重绘。
+
+`repaint()`：持有重绘此组件的指令，`paintComponent(Graphics g)`将自动调用以重绘。
 
 ```java
 import java.awt.*;
 import javax.swing.*;
 
 class Canvas extends JPanel {
+
     int width = 0;
+
     public Canvas() {
-        this .setLayout(null);
-        this .setBackground(Color.WHITE);
+        this.setLayout(null);
+        this.setBackground(Color.WHITE);
         new ProgressBarThread().start();
     }
+
     protected void paintComponent(Graphics g) {
-        super .paintComponent(g);
+        super.paintComponent(g);
         g.drawRect(50, 50, 150, 50);
         g.setColor(Color.RED);
         g.fillRect(50, 50, width, 50);
@@ -1182,13 +1401,14 @@ class Canvas extends JPanel {
 }
 
 class ProgressBarThread extends Thread {
+
     @Override
     public void run() {
         while (width < 150) {
             width = width + 10;
             try {
-                Thread.sleep (200);
-                Canvas.this .repaint();
+                Thread.sleep(200);
+                Canvas.this.repaint();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -1197,286 +1417,90 @@ class ProgressBarThread extends Thread {
 }
 ```
 
+## 5. 创建一个`Ball`并打开一个`Canvas`。让小球向下移动
 
-
-
-
-# 画布小球碰撞
-
-## 1. 在画布上画一个圆 `(x, y)= (80, 80)`，`width= 100`, `height= 100`。![](img/Image00046.jpg)
-
-创建一个 `BallGame.java`。
-`fillOval(int x, int y, int width, int height)`: 用当前颜色填充指定矩形边界内的椭圆。
+![](img/Image00049.jpg)
 
 ```java
 import java.awt.*;
 import javax.swing.*;
-class Canvas extends JPanel{
-    public Canvas(){
-        this .setLayout(null );
-        this .setBackground(Color.WHITE );
-    }
-    protected void paintComponent(Graphics g){
-        super .paintComponent(g);
-        g.setColor(Color.BLUE );
-        g.fillOval(80,80,100,100);
-    }
-}
-public class BallGame {
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("GUI Canvas Application" );
-        Canvas canvas = new Canvas();
-        frame.add(canvas);
-        frame.setSize(300,300);
-        frame.setVisible(true );
-    }
-}
-```
 
-## 2. 创建一个类 `Ball`，然后创建方法 `draw(Graphics g, int x, int y, int r, Color c)` 在画布上画 3 个圆。![](img/Image00047.jpg)
+class Ball {
 
-```java
-import java.awt.*;
-import javax.swing.*;
-class Ball{
-    public void draw(Graphics g, int x, int y, int r, Color c){
-        g.setColor(c);
-        g.fillOval(x,y,2*r,2*r);
-    }
-}
-class Canvas extends JPanel{
-    public Canvas(){
-        this .setLayout(null );
-        this .setBackground(Color.WHITE );
-    }
-    protected void paintComponent(Graphics g){
-        super .paintComponent(g);
-        Ball ball =new Ball();
-        ball.draw(g, 50, 50, 30, Color.RED );
-        ball.draw(g, 120, 50, 30, Color.GREEN );
-        ball.draw(g, 190, 50, 30, Color.BLUE );
-    }
-}
-public class BallGame {
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("GUI Canvas Application" );
-        Canvas canvas = new Canvas();
-        frame.add(canvas);
-        frame.setSize(400,200);
-        frame.setVisible(true );
-    }
-}
-```
+    private int x;
+    private int y;
+    private int r;
+    private Color color;
 
-## 3. 创建一个类 `Ball`，通过构造方法传递 `x, y, r, color`，然后创建一个方法 `draw(Graphics g)` 在画布上画 1 个圆。![](img/Image00048.jpg)
-`g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON)`: 开启 `ANTIALIASING` 以绘制出良好的圆。
-
-```java
-import java.awt.*;
-import javax.swing.*;
-class Ball{
-    private int x ;
-    private int y ;
-    private int r ;
-    private Color color ;
-    public Ball( int x, int y, int r, Color color){
-        this .x = x;
-        this .y = y;
-        this .r = r;
-        this .color = color;
+    public Ball(int x, int y, int r, Color color) {
+        this.x = x;
+        this.y = y;
+        this.r = r;
+        this.color = color;
     }
-    public void draw(Graphics g){
-        Graphics2D g2=(Graphics2D)g;
-        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING , RenderingHints.VALUE_ANTIALIAS_ON );
-        g2.setColor(this .color );
-        g2.fillOval(this .x ,this .y ,2*this .r ,2*this .r );
+
+    public void draw(Graphics g) {
+        Graphics2D g2 = (Graphics2D) g;
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        g2.setColor(this.color);
+        g2.fillOval(this.x, this.y, 2 * this.r, 2 * this.r);
+    }
+
+    public void move(int distance) {
+        this.y = this.y + distance;
     }
 }
-class Canvas extends JPanel{
-    public Canvas(){
-        this .setLayout(null );
-        this .setBackground(Color.WHITE );
+
+class Canvas extends JPanel {
+
+    private Ball ball;
+
+    public Canvas() {
+        this.setLayout(null);
+        this.setBackground(Color.WHITE);
+        ball = new Ball(80, 50, 30, Color.BLUE);
+        new BallThread().start();
     }
-    protected void paintComponent(Graphics g){
-        super .paintComponent(g);
-        Ball ball =new Ball(50,50,30,Color.BLUE );
+
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
         ball.draw(g);
     }
-}
-public class BallGame {
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("GUI Canvas Application" );
-        Canvas canvas = new Canvas();
-        frame.add(canvas);
-        frame.setSize(200,300);
-        frame.setVisible(true );
-    }
-}
-```
 
-## 4. 创建一个 `Ball` 并打开一个 `Canvas`。让小球向下移动![](img/Image00049.jpg)
-
-```java
-import java.awt.*;
-import javax.swing.*;
-class Ball{
-    private int x ;
-    private int y ;
-    private int r ;
-    private Color color ;
-    public Ball( int x, int y, int r, Color color){
-        this .x = x;
-        this .y = y;
-        this .r = r;
-        this .color = color;
-    }
-    public void draw(Graphics g){
-        Graphics2D g2=(Graphics2D)g;
-        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING , RenderingHints.VALUE_ANTIALIAS_ON );
-        g2.setColor(this .color );
-        g2.fillOval(this .x ,this .y ,2*this .r ,2*this .r );
-    }
-    public void move(int distance){
-        this .y = this;
-    }
-
-
-
-
-
-
-
-
-    
-
-
-
-
-    
-
-    private is
-
-
-    
-
-
-    Thread    
-
-
-    
-    
-
-
-(
-(
-this
-
-thisthis
-
-
-
-
-
-
-
-(
-,,0,,0,,000000
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
- paint paint paint(((
-
-
-
-paint(((
-
-                ..(,00,0000000
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-((0
-
-
-
-
-000
-0}
-.
-
-
-
-
-
-
-}
-
-
-
+    class BallThread extends Thread {
+
+        @Override
+        public void run() {
+            while (true) {
+                ball.move(10);
+                Canvas.this.repaint();
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }
+
 public class BallGame {
+
     public static void main(String[] args) {
-        JFrame frame = new JFrame("GUI Canvas Application" );
+        JFrame frame = new JFrame("GUI Canvas Application");
         Canvas canvas = new Canvas();
         frame.add(canvas);
-        frame.setSize(200,300);
-        frame.setVisible(true );
+        frame.setSize(200, 300);
+        frame.setVisible(true);
     }
 }
+```
 
-## 5. 小球向上和向下![](img/Image0050.jpg)
+## 6. 小球向上和向下
+
+![](img/Image0050.jpg)
+
+
 
 ```java
 import java.awt.*;
@@ -1559,6 +1583,7 @@ public class BallGame {
 ```
 
 ## 创建类
+
 Java 是一种面向对象的编程语言。Java 中的几乎一切都是对象，拥有自己的属性和方法。类就像对象的构造器。在游戏中，飞机、子弹、炸弹和敌机被称为 `Sprite`。![](img/Image0051.jpg)
 
 ### 1. 创建文件 `TestSprite.java`
@@ -1597,12 +1622,17 @@ public class TestSprite {
 ```
 
 **输出：**
+
 Blue Airplane is drawn on canvas
+
 Red Airplane is drawn on canvas
+
 Blue Bullet is drawn on canvas
+
 Red Bullet is drawn on canvas
 
 ### 构造方法
+
 构造方法：创建对象时会被自动调用。
 
 ### 2. 创建文件 `TestConstructor.java`
@@ -1616,7 +1646,7 @@ class Sprite {
         this .color = color;
     }
     public void draw() {
-        String text = this .color + " " + this .name + " is drawn on canvas" ;
+        String text = this .color + " " + this .name + " is drawn on canvas" ;
         System.out .println(text);
     }
 }
@@ -1631,15 +1661,14 @@ public class TestConstructor {
 }
 ```
 
-
-
-
-
 # 结果
+
 结果：`Blue Airplane` 画在画布上。
+
 结果：`Blue Bullet` 画在画布上。
 
 # 继承
+
 所有类 `EnemyPlane`、`BluePane`、`RedPlane`、`Bullet` 都继承自 `Sprite1`。`Sprite` 被称为父类。`EnemyPlane`、`BluePane`、`RedPlane`、`Bullet` 被称为子类。子类可以调用父类的属性和方法。
 
 ![](img/Image_Image00052.jpg)
@@ -1687,12 +1716,17 @@ public class TestInheritance{
 ```
 
 # 结果
+
 结果：`Blue Airplane` 画在画布上。
+
 结果：`Red Airplane` 画在画布上。
+
 结果：`Red Bullet` 画在画布上。
 
 # 重写
+
 重写：子类重写父类的方法，子类实例将调用被重写的方法。
+
 `Sprite` 可以发射子弹，但 `BluePlane` 可以发射蓝色子弹，而 `RedPlane` 可以发射红色子弹。
 
 ![](img/Image_Image00053.jpg)
@@ -1728,22 +1762,38 @@ public class TestOverride{
 ```
 
 # 结果
+
 结果：`BluePlane fire blue bullet`
+
 结果：`RedPlane fire red bullet`
 
 # 飞机游戏
+
 ## 1. 在画布上绘制图片。
+
 ### 1.1 将两张飞机图片放入目录 `images/blue_plane.png` 和 `images/red_plane.png`
+
 ![](img/Image_Image00054.jpg) ![](img/Image_Image00055.jpg)
+
 ### 1.2 在画布上绘制 `images/blue_plane.png` 和 `images/red_plane.png`。
+
 ![](img/Image_Image00056.jpg)
 
 `KidsLearningJavascript.zip` 中的所有图片请通过此链接下载：[http://en.verejava.com/download.jsp?id=1]
 
 ## 2. 创建 `AirplaneGame.java`
+
 - `new File(imagePath)`：通过图片路径创建文件对象。
+
 - `ImageIO.read(file)`：读取图片文件并保存到 `BufferedImage`。
+
 - `g.drawImage(image, x, y, null)`：将图片绘制到画布上。
+
+
+
+## 3. 创建 `Airplane` 类并在画布上绘制图片
+
+![](img/Image_Image00057.jpg)
 
 ```java
 import java.awt.image.BufferedImage;
@@ -1784,9 +1834,6 @@ public class AirplaneGame {
     }
 }
 ```
-
-## 3. 创建 `Airplane` 类并在画布上绘制图片。
-![](img/Image_Image00057.jpg)
 
 ```java
 import java.awt.image.BufferedImage;
@@ -1842,10 +1889,14 @@ public class AirplaneGame {
 ```
 
 ## 4. 按键事件
+
 ### 4.1 在 `Canvas` 中添加 `KeyListener` 监听
+
 点击上、下、左、右键时 `keyPressed(KeyEvent e)` 方法将被调用。
+
 - `static Canvas canvas`：如果 `keyPressed` 事件生效，它需要是 `static`。
 - `canvas.requestFocus()`：如果 `keyPressed` 事件生效，需要获取焦点。
+
 ![](img/Image_Image00058.jpg)
 
 ```java
@@ -1890,10 +1941,6 @@ public class AirplaneGame {
     }
 }
 ```
-
-
-
-
 
 ```java
 import java.awt.BorderLayout;
@@ -1987,38 +2034,47 @@ public class AirplaneGame {
 }
 ```
 
-## 5. 飞机发射蓝色子弹。
+## 5. 飞机发射蓝色子弹
 
 ### 5.1 子弹从飞机的顶部中心位置射出
+
 ![](img/Image00060.jpg)
 
 ### 5.2 启动一个 `CanvasThread` 让子弹向上移动
+
 当子弹移出画布范围时，需要通过设置 `visible = false` 将子弹销毁，子弹可以重新发射。
+
 ![](img/Image00061.jpg)
 
-### 5.3 飞机和子弹继承自 `Sprite` 以实现复用。
+### 5.3 飞机和子弹继承自 `Sprite` 以实现复用
+
 ![](img/Image00062.jpg)
 
-### 6. 敌机持续向下移动。
+## 6. 敌机持续向下移动
 
 ### 6.1 敌机随机从画布顶部开始并向下移动
+
 ![](img/Image00063.jpg)
 
 ### 6.2 保持敌机持续向下移动
+
 当敌机移出画布范围时，需要通过设置 `visible = False` 将敌机销毁，敌机可以重新生成。
+
 ![](img/Image00064.jpg)
 
-### 6.3 飞机、子弹和敌机继承自 `Sprite` 以实现复用。
+### 6.3 飞机、子弹和敌机继承自 `Sprite` 以实现复用
+
 ![](img/Image00065.jpg)
 
-### 7. 子弹与敌机碰撞并爆炸。
+## 7. 子弹与敌机碰撞并爆炸
+
 ![](img/Image00066.jpg)
 
 ### 7.1 子弹与敌机碰撞
+
 当两张图片中心坐标之差的绝对值小于它们宽度和高度一半之和时，我们认为它们发生了交集并产生了碰撞。
+
 ![](img/Image00067.jpg)
-
-
 
 
 
@@ -2262,4 +2318,3 @@ public class AirplaneGame {
 ```
 
 感谢学习，如果你想学习网页编码，请学习我们的书籍[`en.verejava.com`](http://en.verejava.com/)![](img/Image00068.jpg)VereMVC: Java Web MVC Framework[`en.verejava.com/?section_id=1697715673191`](http://en.verejava.com/?section_id=1697715673191)
-

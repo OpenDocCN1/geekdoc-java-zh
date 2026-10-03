@@ -1,31 +1,33 @@
-# 如何计算 XML 文档的深度(DOM 解析器)
+
+
+# 如何计算 XML 文档的深度（DOM 解析器）
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/how-to-count-the-depth-of-xml-document-dom-example/>
 
 在 DOM 解析器中，我们可以使用子节点的递归循环来查找或计算 XML 文档的深度。
 
-目录
+## 目录
 
-*   [1。一个 XML 文件](#an-xml-file)
-*   [2。DOM 解析器+递归循环](#dom-parser-recursive-loop)
-*   [3。DOM 解析器+树遍历器](#dom-parser-tree-walker)
-*   [4。下载源代码](#download-source-code)
-*   [5。参考文献](#references)
+1. [一个 XML 文件](#1一个-xml-文件)
+2. [DOM 解析器 + 递归循环](#2dom-解析器-递归循环)
+3. [DOM 解析器 + 树遍历器](#3dom-解析器-树遍历器)
+4. [下载源代码](#4下载源代码)
+5. [参考文献](#5参考文献)
 
 用 Java 11 测试。
 
-**注**
-
-*   [如何在 Java 中读取 XML 文件—(DOM 解析器)](http://web.archive.org/web/20220626054148/https://mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/)
+> **注**
+>
+> - [如何在 Java 中读取 XML 文件—（DOM 解析器）](http://web.archive.org/web/20220626054148/https://mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/)
 
 ## 1。一个 XML 文件
 
 下面的 XML 文件包含 3 个深度级别。
 
-src/main/resources/staff.xml
+`src/main/resources/staff.xml`
 
-```java
- <?xml version="1.0" encoding="utf-8"?>
+```xml
+<?xml version="1.0" encoding="utf-8"?>
 <company>                     <!-- Level 1 -->
     <staff id="1001">         <!-- Level 2 -->
         <name>mkyong</name>   <!-- Level 3 -->
@@ -40,17 +42,17 @@ src/main/resources/staff.xml
         <salary currency="EUR">8000</salary>
         <bio><![CDATA[a & b]]></bio>
     </staff>
-</company> 
+</company>
 ```
 
-## 2。DOM 解析器+递归循环
+## 2。DOM 解析器 + 递归循环
 
 下面的例子使用了一个 DOM 解析器和递归循环来查找 XML 级别的深度。
 
-CountDepthXmlDom.java
+`CountDepthXmlDom.java`
 
 ```java
- package com.mkyong.xml.dom;
+package com.mkyong.xml.dom;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -120,36 +122,36 @@ public class CountDepthXmlDom {
 
   }
 
-} 
+}
 ```
 
-输出
+### 输出
 
-Terminal
+`Terminal`
 
-```java
- company : [1]
-   staff : [2]
-         name : [3]
-         role : [3]
-       salary : [3]
-          bio : [3]
-   staff : [2]
-         name : [3]
-         role : [3]
-       salary : [3]
-          bio : [3]
-Depth of XML : 3 
+```text
+company : [1]
+  staff : [2]
+        name : [3]
+        role : [3]
+      salary : [3]
+         bio : [3]
+  staff : [2]
+        name : [3]
+        role : [3]
+      salary : [3]
+         bio : [3]
+Depth of XML : 3
 ```
 
-## 3。DOM 解析器+树遍历器
+## 3。DOM 解析器 + 树遍历器
 
-下面的例子使用 DOM 的`TreeWalker`遍历节点并找到 XML 级别的深度。
+下面的例子使用 DOM 的 `TreeWalker` 遍历节点并找到 XML 级别的深度。
 
-CountDepthXmlDomTreeWalker.java
+`CountDepthXmlDomTreeWalker.java`
 
 ```java
- package com.mkyong.xml.dom;
+package com.mkyong.xml.dom;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -230,44 +232,43 @@ public class CountDepthXmlDomTreeWalker {
 
     }
 
-} 
+}
 ```
 
-输出
+### 输出
 
-Terminal
+`Terminal`
 
-```java
- company : [1]
-   staff : [2]
-         name : [3]
-         role : [3]
-       salary : [3]
-          bio : [3]
-   staff : [2]
-         name : [3]
-         role : [3]
-       salary : [3]
-          bio : [3]
-Depth of XML : 3 
+```text
+company : [1]
+  staff : [2]
+        name : [3]
+        role : [3]
+      salary : [3]
+         bio : [3]
+  staff : [2]
+        name : [3]
+        role : [3]
+      salary : [3]
+         bio : [3]
+Depth of XML : 3
 ```
 
 ## 4。下载源代码
 
-$ git 克隆[https://github.com/mkyong/core-java](http://web.archive.org/web/20220626054148/https://github.com/mkyong/core-java)
-
-$ cd java-xml
-
-$ CD src/main/Java/com/mkyong/XML/DOM/
+```bash
+git clone https://github.com/mkyong/core-java
+cd java-xml
+cd src/main/java/com/mkyong/xml/dom/
+```
 
 ## 5。参考文献
 
-*   [维基百科–文档对象模型](http://web.archive.org/web/20220626054148/https://en.wikipedia.org/wiki/Document_Object_Model)
-*   [Oracle–文档对象模型](http://web.archive.org/web/20220626054148/https://docs.oracle.com/javase/tutorial/jaxp/dom/index.html)
-*   [如何在 Java 中读取 XML 文件—(DOM 解析器)](http://web.archive.org/web/20220626054148/https://mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/)
-*   [如何用 Java 编写 XML 文件—(DOM 解析器)](http://web.archive.org/web/20220626054148/https://mkyong.com/java/how-to-create-xml-file-in-java-dom/)
-*   [如何在 Java 中读取 XML 文件—(SAX 解析器)](http://web.archive.org/web/20220626054148/https://mkyong.com/java/how-to-read-xml-file-in-java-sax-parser/)
-*   [如何在 Java 中读取 XML 文件—(JDOM 解析器)](http://web.archive.org/web/20220626054148/https://mkyong.com/java/how-to-read-xml-file-in-java-jdom-example/)
-*   [JAXB hello world 示例](http://web.archive.org/web/20220626054148/https://mkyong.com/java/jaxb-hello-world-example/)
+- [维基百科–文档对象模型](http://web.archive.org/web/20220626054148/https://en.wikipedia.org/wiki/Document_Object_Model)
+- [Oracle–文档对象模型](http://web.archive.org/web/20220626054148/https://docs.oracle.com/javase/tutorial/jaxp/dom/index.html)
+- [如何在 Java 中读取 XML 文件—（DOM 解析器）](http://web.archive.org/web/20220626054148/https://mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/)
+- [如何用 Java 编写 XML 文件—（DOM 解析器）](http://web.archive.org/web/20220626054148/https://mkyong.com/java/how-to-create-xml-file-in-java-dom/)
+- [如何在 Java 中读取 XML 文件—（SAX 解析器）](http://web.archive.org/web/20220626054148/https://mkyong.com/java/how-to-read-xml-file-in-java-sax-parser/)
+- [如何在 Java 中读取 XML 文件—（JDOM 解析器）](http://web.archive.org/web/20220626054148/https://mkyong.com/java/how-to-read-xml-file-in-java-jdom-example/)
+- [JAXB hello world 示例](http://web.archive.org/web/20220626054148/https://mkyong.com/java/jaxb-hello-world-example/)
 
-<input type="hidden" id="mkyong-current-postId" value="12956">

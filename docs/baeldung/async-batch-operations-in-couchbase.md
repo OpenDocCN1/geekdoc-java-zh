@@ -1,14 +1,11 @@
+
 # Couchbase 中的异步批处理操作
 
-> 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/async-batch-operations-in-couchbase>
+在这篇关于在 Spring 应用程序中使用 Couchbase 的教程的后续文章中，我们将探索 Couchbase SDK 的异步特性，以及如何使用它来批量执行持久化操作，从而使我们的应用程序实现对 Couchbase 资源的最佳利用。
 
-## 1。简介
+## 1. `CrudService` 接口
 
-在这篇关于在 Spring 应用程序中使用 Couchbase 的教程[的后续文章中，我们将探索 Couchbase SDK 的异步特性，以及如何使用它来批量执行持久化操作，从而使我们的应用程序实现对 Couchbase 资源的最佳利用。](/web/20220926200754/https://www.baeldung.com/couchbase-sdk-spring)
-
-### 1.1。`CrudService`界面
-
-首先，我们扩充了通用的`CrudService`接口，以包含批处理操作:
+首先，我们扩充了通用的`CrudService`接口，以包含批处理操作：
 
 ```java
 public interface CrudService<T> {
@@ -26,9 +23,9 @@ public interface CrudService<T> {
 }
 ```
 
-### 1.2。`CouchbaseEntity`界面
+## 2. `CouchbaseEntity` 接口
 
-我们为想要持久化的实体定义了一个接口:
+我们为想要持久化的实体定义了一个接口：
 
 ```java
 public interface CouchbaseEntity {
@@ -40,9 +37,9 @@ public interface CouchbaseEntity {
 }
 ```
 
-### 1.3。`AbstractCrudService`阶级
+## 3. `AbstractCrudService` 类
 
-然后我们将在一个通用的抽象类中实现这些方法。这个类是从我们在之前的教程的[中使用的`PersonCrudService`类派生而来的，开始如下:](/web/20220926200754/https://www.baeldung.com/couchbase-sdk-spring)
+然后我们将在一个通用的抽象类中实现这些方法。这个类是从我们在之前的教程中使用的`PersonCrudService`类派生而来的，开始如下：
 
 ```java
 public abstract class AbstractCrudService<T extends CouchbaseEntity> implements CrudService<T> {
@@ -63,21 +60,21 @@ public abstract class AbstractCrudService<T extends CouchbaseEntity> implements 
 }
 ```
 
-## 2。异步桶接口
+## 4. 异步桶接口
 
-Couchbase SDK 提供了用于执行异步操作的`AsyncBucket`接口。给定一个`Bucket`实例，您可以通过`async()`方法获得它的异步版本:
+Couchbase SDK 提供了用于执行异步操作的`AsyncBucket`接口。给定一个`Bucket`实例，您可以通过`async()`方法获得它的异步版本：
 
 ```java
 AsyncBucket asyncBucket = bucket.async();
 ```
 
-## 3。批量操作
+## 5. 批量操作
 
-为了使用`AsyncBucket`接口执行批处理操作，我们使用了`[RxJava](https://web.archive.org/web/20220926200754/https://github.com/ReactiveX/RxJava/wiki)`库。
+为了使用`AsyncBucket`接口执行批处理操作，我们使用了`RxJava`库。
 
-### 3.1。批量读取
+### 5.1. 批量读取
 
-这里我们实现了`readBulk`方法。首先，我们使用 RxJava 中的`AsyncBucket`和`flatMap`机制将文档异步检索到`Observable<JsonDocument>`中，然后我们使用`RxJava`中的`toBlocking`机制将这些文档转换成实体列表:
+这里我们实现了`readBulk`方法。首先，我们使用 RxJava 中的`AsyncBucket`和`flatMap`机制将文档异步检索到`Observable<JsonDocument>`中，然后我们使用`RxJava`中的`toBlocking`机制将这些文档转换成实体列表：
 
 ```java
 @Override
@@ -108,11 +105,9 @@ public List<T> readBulk(Iterable<String> ids) {
 }
 ```
 
-### 3.2。批量插入
+### 5.2. 批量插入
 
-我们再次使用`RxJava's flatMap`构造来简化`createBulk`方法。
-
-由于批量突变请求产生的速度比它们的响应产生的速度快，有时会导致过载情况，因此每当遇到`BackpressureException`时，我们都会以指数延迟进行重试:
+我们再次使用`RxJava`的`flatMap`构造来简化`createBulk`方法。由于批量突变请求产生的速度比它们的响应产生的速度快，有时会导致过载情况，因此每当遇到`BackpressureException`时，我们都会以指数延迟进行重试：
 
 ```java
 @Override
@@ -142,9 +137,9 @@ public void createBulk(Iterable<T> items) {
 }
 ```
 
-### 3.3。批量更新
+### 5.3. 批量更新
 
-我们在`updateBulk`方法中使用类似的机制:
+我们在`updateBulk`方法中使用类似的机制：
 
 ```java
 @Override
@@ -171,9 +166,9 @@ public void updateBulk(Iterable<T> items) {
 }
 ```
 
-### 3.4。批量删除
+### 5.4. 批量删除
 
-我们将`deleteBulk`方法编写如下:
+我们将`deleteBulk`方法编写如下：
 
 ```java
 @Override
@@ -199,11 +194,11 @@ public void deleteBulk(Iterable<String> ids) {
 }
 ```
 
-## 4。`PersonCrudService`
+## 6. `PersonCrudService`
 
 最后，我们编写了一个 Spring 服务`PersonCrudService`，它为`Person`实体扩展了我们的`AbstractCrudService`。
 
-因为所有的 Couchbase 交互都是在抽象类中实现的，所以实体类的实现是琐碎的，因为我们只需要确保注入所有的依赖项并加载我们的 bucket:
+因为所有的 Couchbase 交互都是在抽象类中实现的，所以实体类的实现是琐碎的，因为我们只需要确保注入所有的依赖项并加载我们的 bucket：
 
 ```java
 @Service
@@ -223,8 +218,8 @@ public class PersonCrudService extends AbstractCrudService<Person> {
 }
 ```
 
-## 5。结论
+## 7. 结论
 
-本教程中显示的源代码可以在 [github 项目](https://web.archive.org/web/20220926200754/https://github.com/eugenp/tutorials/tree/master/couchbase)中获得。
+本教程中显示的源代码可以在 `github` 项目中获得。
 
-你可以在官方 [Couchbase 开发者文档网站](https://web.archive.org/web/20220926200754/https://docs.couchbase.com/java-sdk/2.6/start-using-sdk.html)了解更多关于 Couchbase Java SDK 的信息。
+你可以在官方 `Couchbase 开发者文档` 网站了解更多关于 Couchbase Java SDK 的信息。

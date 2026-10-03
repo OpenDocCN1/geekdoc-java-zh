@@ -1,3 +1,4 @@
+
 # LDAP 的认证方式
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/ldap/authentication.html`](https://docs.oracle.com/javase/tutorial/jndi/ldap/authentication.html)
@@ -12,19 +13,19 @@
 
 在 JNDI 中，认证信息是在环境属性中指定的。当您使用[`InitialDirContext`](https://docs.oracle.com/javase/8/docs/api/javax/naming/directory/InitialDirContext.html)类（或其超类或子类）创建初始上下文时，您提供一组环境属性，其中一些可能包含认证信息。您可以使用以下环境属性来指定认证信息。
 
-+   [`Context.SECURITY_AUTHENTICATION`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html#SECURITY_AUTHENTICATION) (`"java.naming.security.authentication"`).
++   [`Context.SECURITY_AUTHENTICATION`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html#SECURITY_AUTHENTICATION)（`"java.naming.security.authentication"`）
 
-    指定要使用的认证机制。对于 JDK 中的 LDAP 服务提供程序，这可以是以下字符串之一："none"，"simple"，*sasl_mech*，其中*sasl_mech*是一组以空格分隔的 SASL 机制名称。有关这些字符串的描述，请参见认证机制。
+    指定要使用的认证机制。对于 JDK 中的 LDAP 服务提供程序，这可以是以下字符串之一：`"none"`，`"simple"`，*sasl_mech*，其中*sasl_mech*是一组以空格分隔的 SASL 机制名称。有关这些字符串的描述，请参见认证机制。
 
-+   [`Context.SECURITY_PRINCIPAL`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html#SECURITY_PRINCIPAL) (`"java.naming.security.principal"`).
++   [`Context.SECURITY_PRINCIPAL`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html#SECURITY_PRINCIPAL)（`"java.naming.security.principal"`）
 
     指定进行认证的用户/程序的名称，取决于`Context.SECURITY_AUTHENTICATION`属性的值。有关详细信息和示例，请参见本课程的接下来几节。
 
-+   [`Context.SECURITY_CREDENTIALS`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html#SECURITY_CREDENTIALS) (`"java.naming.security.credentials"`).
++   [`Context.SECURITY_CREDENTIALS`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html#SECURITY_CREDENTIALS)（`"java.naming.security.credentials"`）
 
     指定进行认证的用户/程序的凭据，取决于`Context.SECURITY_AUTHENTICATION`属性的值。有关详细信息和示例，请参见本课程的接下来几节。
 
-创建初始上下文时，底层 LDAP 服务提供程序从这些环境属性中提取认证信息，并使用 LDAP 的“绑定”操作将其传递给服务器。
+创建初始上下文时，底层 LDAP 服务提供程序从这些环境属性中提取认证信息，并使用 LDAP 的"绑定"操作将其传递给服务器。
 
 `以下示例`展示了如何通过使用简单的明文密码，客户端向 LDAP 服务器进行身份验证。
 
@@ -44,7 +45,6 @@ env.put(Context.SECURITY_CREDENTIALS, "mysecret");
 DirContext ctx = new InitialDirContext(env);
 
 // ... do something useful with ctx
-
 ```
 
 ## 为上下文使用不同的认证信息
@@ -69,7 +69,6 @@ DirContext ctx = new InitialDirContext(env);
 ctx.addToEnvironment(Context.SECURITY_AUTHENTICATION, "none");
 
 // ... do something useful with ctx
-
 ```
 
 ## 认证失败
@@ -84,7 +83,6 @@ env.put(Context.SECURITY_AUTHENTICATION, "simple");
 env.put(Context.SECURITY_PRINCIPAL, 
         "cn=S. User, ou=NewHires, o=JNDITutorial");
 env.put(Context.SECURITY_CREDENTIALS, "notmysecret");
-
 ```
 
 这将产生以下输出。
@@ -92,7 +90,6 @@ env.put(Context.SECURITY_CREDENTIALS, "notmysecret");
 ```java
 javax.naming.AuthenticationException: [LDAP: error code 49 - Invalid Credentials]
         ...
-
 ```
 
 因为不同的服务器支持不同的认证机制，您可能请求服务器不支持的认证机制。在这种情况下，将抛出[`AuthenticationNotSupportedException`](https://docs.oracle.com/javase/8/docs/api/javax/naming/AuthenticationNotSupportedException.html)。
@@ -105,7 +102,6 @@ env.put(Context.SECURITY_AUTHENTICATION, "custom");
 env.put(Context.SECURITY_PRINCIPAL, 
         "cn=S. User, ou=NewHires, o=JNDITutorial");
 env.put(Context.SECURITY_CREDENTIALS, "mysecret");
-
 ```
 
 这将产生以下输出。
@@ -113,5 +109,4 @@ env.put(Context.SECURITY_CREDENTIALS, "mysecret");
 ```java
 javax.naming.AuthenticationNotSupportedException: custom
         ...
-
 ```

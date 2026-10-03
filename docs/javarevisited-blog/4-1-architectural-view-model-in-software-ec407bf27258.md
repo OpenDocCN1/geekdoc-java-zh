@@ -1,3 +1,4 @@
+
 # 软件中的 4+1 架构视图模型
 
 > 原文：<https://medium.com/javarevisited/4-1-architectural-view-model-in-software-ec407bf27258?source=collection_archive---------0----------------------->
@@ -69,9 +70,13 @@ Philippe Kruchten:4+1 建筑视图模型的发明者(图片来源:[https://twitt
 参考资料:
 
 1.  [**Philippe Kruchten**](https://www.ics.uci.edu/~andre/ics223w2006/kruchten3.pdf)th 4+1 建筑视图模型的原始论文
+
 2.  [**维基百科:4+1 建筑视图模型**](https://en.wikipedia.org/wiki/4%2B1_architectural_view_model)
+
 3.  [**【4+1】Mazeiar sale HIE 的软件架构视图模型**](http://cic.javerianacali.edu.co/wiki/lib/exe/fetch.php?media=materias:mazeiar-kruchten-4_1.pdf)
+
 4.  [**克里斯西蒙的 4+1 建筑观模式的历史**](https://devcycles.io/2019/02/28/history-of-the-4-1-architectural-view-model/)
+
 5.  [**克鲁奇滕对普内特·萨普拉**](/the-mighty-programmer/kruchtens-views-of-software-design-e9088398c592) 软件设计的 4 + 1 观点
 
 ## 您可能喜欢的其他软件架构师文章和资源

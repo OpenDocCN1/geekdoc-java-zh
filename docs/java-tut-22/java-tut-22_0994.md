@@ -1,3 +1,5 @@
+
+
 # 范围
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/ops/scope.html`](https://docs.oracle.com/javase/tutorial/jndi/ops/scope.html)
@@ -24,12 +26,11 @@ String filter = "(&(sn=Geisel)(mail=*))";
 
 // Search the subtree for objects by using the filter
 NamingEnumeration answer = ctx.search("", filter, ctls);
-
 ```
 
-`这个示例` 搜索上下文`ctx`的子树，查找满足指定过滤器的条目。它在这个子树中找到了满足过滤器的条目`"cn= Ted Geisel, ou=People"`。
+`这个示例`搜索上下文`ctx`的子树，查找满足指定过滤器的条目。它在这个子树中找到了满足过滤器的条目`"cn= Ted Geisel, ou=People"`。
 
-```java
+```text
 # java SearchSubtree
 >>>cn=Ted Geisel, ou=People
 attribute: sn
@@ -38,7 +39,6 @@ attribute: mail
 value: Ted.Geisel@JNDITutorial.example.com
 attribute: telephonenumber
 value: +1 408 555 5252
-
 ```
 
 ## 搜索命名对象
@@ -58,14 +58,13 @@ ctls.setSearchScope(SearchControls.OBJECT_SCOPE);
 String filter = "(&(sn=Geisel)(mail=*))";
 
 // Search the subtree for objects by using the filter
-NamingEnumeration answer = 
+NamingEnumeration answer =
     ctx.search("cn=Ted Geisel, ou=People", filter, ctls);
-
 ```
 
-`这个示例` 测试对象`"cn=Ted Geisel, ou=People"`是否满足给定的过滤器。
+`这个示例`测试对象`"cn=Ted Geisel, ou=People"`是否满足给定的过滤器。
 
-```java
+```text
 # java SearchObject
 >>>
 attribute: sn
@@ -74,7 +73,7 @@ attribute: mail
 value: Ted.Geisel@JNDITutorial.example.com
 attribute: telephonenumber
 value: +1 408 555 5252
-
 ```
 
 该示例找到一个答案并将其打印出来。请注意，结果的名称是空字符串。这是因为对象的名称始终相对于搜索上下文命名（在本例中为`"cn=Ted Geisel, ou=People"`）。
+

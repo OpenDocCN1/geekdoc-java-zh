@@ -1,18 +1,17 @@
-# Java 8 并发教程：原子变量和 ConcurrentMap
+
+# Java 8 并发教程：原子变量和 `ConcurrentMap`
 
 > 原文：[Java 8 Concurrency Tutorial: Synchronization and Locks](http://winterbe.com/posts/2015/04/30/java8-concurrency-tutorial-synchronized-locks-examples/)
-
-> 译者：[飞龙](https://github.com/wizardforcel)  
-
+> 译者：[飞龙](https://github.com/wizardforcel)
 > 协议：[CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-欢迎阅读我的Java8多线程编程系列教程的第三部分。这个教程包含并发API的两个重要部分：原子变量和`ConcurrentMap`。由于最近发布的Java8中的lambda表达式和函数式编程，二者都有了极大的改进。所有这些新特性会以一些简单易懂的代码示例来描述。希望你能喜欢。
+欢迎阅读我的Java 8多线程编程系列教程的第三部分。这个教程包含并发API的两个重要部分：原子变量和`ConcurrentMap`。由于最近发布的Java 8中的lambda表达式和函数式编程，二者都有了极大的改进。所有这些新特性会以一些简单易懂的代码示例来描述。希望你能喜欢。
 
 + 第一部分：[线程和执行器](ch4.md)
 + 第二部分：[同步和锁](ch5.md)
-+ 第三部分：[原子变量和 ConcurrentMap](ch6.md)
++ 第三部分：[原子变量和 `ConcurrentMap`](ch6.md)
 
-出于简单的因素，这个教程的代码示例使用了定义在[这里](https://github.com/winterbe/java8-tutorial/blob/master/src/com/winterbe/java8/samples/concurrent/ConcurrentUtils.java)的两个辅助函数`sleep(seconds)` 和 `stop(executor)`。
+出于简单的因素，这个教程的代码示例使用了定义在[这里](https://github.com/winterbe/java8-tutorial/blob/master/src/com/winterbe/java8/samples/concurrent/ConcurrentUtils.java)的两个辅助函数`sleep(seconds)`和`stop(executor)`。
 
 ## `AtomicInteger`
 
@@ -77,7 +76,7 @@ stop(executor);
 System.out.println(atomicInt.get());    // => 499500
 ```
 
-其它实用的原子类有`AtomicBoolean`、`AtomicLong` 和 `AtomicReference`。
+其它实用的原子类有`AtomicBoolean`、`AtomicLong`和`AtomicReference`。
 
 ## `LongAdder`
 
@@ -122,7 +121,7 @@ System.out.println(accumulator.getThenReset());     // => 2539
 
 ## `ConcurrentMap`
 
-`ConcurrentMap`接口继承自`Map`接口，并定义了最实用的并发集合类型之一。Java8通过将新的方法添加到这个接口，引入了函数式编程。
+`ConcurrentMap`接口继承自`Map`接口，并定义了最实用的并发集合类型之一。Java 8通过将新的方法添加到这个接口，引入了函数式编程。
 
 在下面的代码中，我们使用这个映射示例来展示那些新的方法：
 
@@ -168,7 +167,7 @@ map.compute("foo", (key, value) -> value + value);
 System.out.println(map.get("foo"));   // barbar
 ```
 
-除了`compute()`之外还有两个变体：`computeIfAbsent()` 和 `computeIfPresent()`。这些方法的函数式参数只在键不存在或存在时被调用。
+除了`compute()`之外还有两个变体：`computeIfAbsent()`和`computeIfPresent()`。这些方法的函数式参数只在键不存在或存在时被调用。
 
 最后，`merge()`方法可以用于以映射中的现有值来统一新的值。这个方法接受键、需要并入现有元素的新值，以及指定两个值的合并行为的`BiFunction`。
 
@@ -181,7 +180,7 @@ System.out.println(map.get("foo"));   // boo was foo
 
 所有这些方法都是`ConcurrentMap`接口的一部分，因此可在所有该接口的实现上调用。此外，最重要的实现`ConcurrentHashMap`使用了一些新的方法来改进，便于在映射上执行并行操作。
 
-就像并行流那样，这些方法使用特定的`ForkJoinPool`，由Java8中的`ForkJoinPool.commonPool()`提供。该池使用了取决于可用核心数量的预置并行机制。我的电脑有四个核心可用，这会使并行性的结果为3：
+就像并行流那样，这些方法使用特定的`ForkJoinPool`，由Java 8中的`ForkJoinPool.commonPool()`提供。该池使用了取决于可用核心数量的预置并行机制。我的电脑有四个核心可用，这会使并行性的结果为3：
 
 ```java
 System.out.println(ForkJoinPool.getCommonPoolParallelism());  // 3
@@ -203,7 +202,7 @@ map.put("r2", "d2");
 map.put("c3", "p0");
 ```
 
-Java8引入了三种类型的并行操作：`forEach`、`search` 和 `reduce`。这些操作中每个都以四种形式提供，接受以键、值、元素或键值对为参数的函数。
+Java 8引入了三种类型的并行操作：`forEach`、`search`和`reduce`。这些操作中每个都以四种形式提供，接受以键、值、元素或键值对为参数的函数。
 
 所有这些方法的第一个参数是通用的`parallelismThreshold`。这一阈值表示操作并行执行时的最小集合大小。例如，如果你传入阈值500，而映射的实际大小是499，那么操作就会在单线程上串行执行。在下一个例子中，我们使用阈值1，始终强制并行执行来展示。
 
@@ -264,7 +263,9 @@ System.out.println("Result: " + result);
 
 ### `reduce`
 
-`reduce()`方法已经在Java 8 的数据流之中用过了，它接受两个`BiFunction`类型的lambda表达式。第一个函数将每个键值对转换为任意类型的单一值。第二个函数将所有这些转换后的值组合为单一结果，并忽略所有可能的`null`值。
+`reduce()`方法已经在Java 8的数据流之中用过了，它接受两个`BiFunction`类型的lambda表达式。第一个函数将每个键值对转换为任意类型的单一值。第二个函数将所有这些转换后的值组合为单一结果，并忽略所有可能的`null`值。
+
+
 
 ```java
 String result = map.reduce(1,
@@ -294,5 +295,7 @@ System.out.println("Result: " + result);
 如果你想要支持我的工作，请向你的朋友分享这篇教程。你也可以[在Twiiter上关注我](https://twitter.com/winterbe_)，因为我会不断推送一些Java或编程相关的东西。
 
 + 第一部分：[线程和执行器](ch4.md)
+
 + 第二部分：[同步和锁](ch5.md)
+
 + 第三部分：[原子变量和 ConcurrentMap](ch6.md)

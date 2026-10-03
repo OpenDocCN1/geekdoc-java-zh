@@ -1,3 +1,4 @@
+
 # 兼容性
 
 > 原文：[`docs.oracle.com/javase/tutorial/collections/interoperability/compatibility.html`](https://docs.oracle.com/javase/tutorial/collections/interoperability/compatibility.html)
@@ -13,7 +14,6 @@ Java 集合框架旨在确保核心集合接口与早期 Java 平台版本中用
 ```java
 Foo[] result = oldMethod(arg);
 newMethod(Arrays.asList(result));
-
 ```
 
 如果旧的 API 返回一个`Vector`或`Hashtable`，你根本不需要做任何工作，因为`Vector`已经被改装为实现`List`接口，而`Hashtable`已经被改装为实现`Map`。因此，`Vector`可以直接传递给任何需要`Collection`或`List`的方法。
@@ -21,7 +21,6 @@ newMethod(Arrays.asList(result));
 ```java
 Vector result = oldMethod(arg);
 newMethod(result);
-
 ```
 
 类似地，`Hashtable`可以直接传递给任何需要`Map`的方法。
@@ -29,7 +28,6 @@ newMethod(result);
 ```java
 Hashtable result = oldMethod(arg);
 newMethod(result);
-
 ```
 
 较少情况下，一个 API 可能返回一个代表对象集合的`Enumeration`。`Collections.list`方法将`Enumeration`转换为`Collection`。
@@ -37,7 +35,6 @@ newMethod(result);
 ```java
 Enumeration e = oldMethod(arg);
 newMethod(Collections.list(e));
-
 ```
 
 ## 向后兼容性
@@ -49,15 +46,13 @@ newMethod(Collections.list(e));
 ```java
 Collection c = newMethod();
 oldMethod(c.toArray());
-
 ```
 
-如果旧的 API 需要一个`String`数组（或其他类型）而不是一个`Object`数组怎么办？你只需使用`toArray`的另一种形式  需要一个数组作为输入的形式。
+如果旧的 API 需要一个`String`数组（或其他类型）而不是一个`Object`数组怎么办？你只需使用`toArray`的另一种形式 — 需要一个数组作为输入的形式。
 
 ```java
 Collection c = newMethod();
 oldMethod((String[]) c.toArray(new String[0]));
-
 ```
 
 如果旧的 API 需要一个`Vector`，标准集合构造函数会派上用场。
@@ -65,7 +60,6 @@ oldMethod((String[]) c.toArray(new String[0]));
 ```java
 Collection c = newMethod();
 oldMethod(new Vector(c));
-
 ```
 
 需要`Hashtable`的旧 API 的情况类似处理。
@@ -73,7 +67,6 @@ oldMethod(new Vector(c));
 ```java
 Map m = newMethod();
 oldMethod(new Hashtable(m));
-
 ```
 
 最后，如果旧的 API 需要一个`Enumeration`怎么办？这种情况并不常见，但偶尔会发生，[`Collections.enumeration`](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#enumeration-java.util.Collection-) 方法就是为了处理这种情况而提供的。这是一个静态工厂方法，接受一个`Collection`并返回该`Collection`中元素的`Enumeration`。
@@ -81,5 +74,4 @@ oldMethod(new Hashtable(m));
 ```java
 Collection c = newMethod();
 oldMethod(Collections.enumeration(c));
-
 ```

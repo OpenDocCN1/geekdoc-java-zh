@@ -1,3 +1,4 @@
+
 # 关于 JFC 和 Swing
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/start/about.html`](https://docs.oracle.com/javase/tutorial/uiswing/start/about.html)
@@ -28,6 +29,5 @@ Swing API 强大、灵活 —— 也是庞大的。Swing API 有 18 个公共包
 
 幸运的是，大多数程序只使用 API 的一个小子集。本教程为您整理了 API，为您提供常见代码示例，并指导您可能需要的方法和类。本教程中的大部分代码仅使用一个或两个 Swing 包：
 
-+   `javax.swing`
-
-+   `javax.swing.event`（不总是必需的）
++ `javax.swing`
++ `javax.swing.event`（不总是必需的）

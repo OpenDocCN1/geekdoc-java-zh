@@ -1,3 +1,4 @@
+
 # 成为更好的 Java 开发人员的 3 种编码实践
 
 > 原文：<https://medium.com/javarevisited/3-coding-practices-to-become-a-better-java-developer-529243ab6815?source=collection_archive---------0----------------------->
@@ -6,7 +7,7 @@
 
 ![](img/e7f960ccde4d334b5d4d0185c007204a.png)
 
-来自 [Pexels](https://www.pexels.com/photo/man-in-red-polo-shirt-thought-a-good-idea-3779432/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) 的 Andrea Piacquadio 的照片
+来自 [Pexels](https://www.pexels.com/photo/man-in-red-polo-shirt-thought-a-good-idea-3779432/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) 的 Andrea Piacquadio 的照片。
 
 **良好的 Java 实践提高软件质量。**
 

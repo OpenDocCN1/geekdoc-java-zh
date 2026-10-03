@@ -1,3 +1,4 @@
+
 # 没有人告诉过你的缺失的 Java 数据结构——第 3 部分
 
 > 原文：<https://medium.com/javarevisited/the-missing-java-data-structures-no-one-ever-told-you-about-part-3-d26387b9e66e?source=collection_archive---------4----------------------->
@@ -38,19 +39,19 @@ API 中支持对象和原语集合之间的转换。
 
 ![](img/7602c972c8553289d2870bfa14ac41f6.png)
 
-PrimitiveIterable 是所有基元集合类型的父类型
+`PrimitiveIterable` 是所有基元集合类型的父类型
 
 ![](img/d78f0dbe0d983cd0e5d35d9729996df0.png)
 
-单一基元类型(int)的可迭代类型层次结构
+单一基元类型(`int`)的可迭代类型层次结构
 
 # 构建时代码生成
 
-如果复制和维护上述图表的源代码八次似乎是一项不可能的任务，那么您是正确的。诀窍是我们从模板文件中代码生成基本的集合类型。Eclipse Collections 使用 [**StringTemplate**](https://www.stringtemplate.org/) 为其原始集合生成大部分 Java 源代码。这发生在构建时。所以你不会看到。GitHub 中原始集合的 java 源文件。然而，您会在`eclipse-collections-code-generator`模块中看到扩展名为. stg 的模板。
+如果复制和维护上述图表的源代码八次似乎是一项不可能的任务，那么您是正确的。诀窍是我们从模板文件中代码生成基本的集合类型。Eclipse Collections 使用 [**StringTemplate**](https://www.stringtemplate.org/) 为其原始集合生成大部分 Java 源代码。这发生在构建时。所以你不会看到。GitHub 中原始集合的 java 源文件。然而，您会在`eclipse-collections-code-generator`模块中看到扩展名为`.stg`的模板。
 
 ![](img/c0426e56b6dbc5ace01f48fe45a4a179.png)
 
-StringTemplate 模板文件:primitiveList.stg
+StringTemplate 模板文件:`primitiveList.stg`
 
 # 给我看看代码
 
@@ -95,7 +96,7 @@ Eclipse 集合中的原语`Bag`实现由原语`Maps`提供支持。例如，`Int
 
 Eclipse 集合中的原语`Stack`实现由一个原语数组支持。有可变和不可变的原始堆栈。下面的代码将演示可变和不可变堆栈上可用的 API。
 
-**注意:** `Stack`不是`Collection`，所以`Stack`没有`add`、`addAll`、`remove`、`removeAll`或`retainAll`这样额外的变异方法。在 Eclipse 集合中，`Stack`确实有丰富的可迭代方法集(例如，`select`、`reject`、`collect`等)。).
+**注意:** `Stack`不是`Collection`，所以`Stack`没有`add`、`addAll`、`remove`、`removeAll`或`retainAll`这样额外的变异方法。在 Eclipse 集合中，`Stack`确实有丰富的可迭代方法集（例如，`select`、`reject`、`collect`等）。
 
 [TOC](#d57c)
 
@@ -103,7 +104,7 @@ Eclipse 集合中的原语`Stack`实现由一个原语数组支持。有可变�
 
 Eclipse 集合中的原语`Map`实现支持键类型和值类型的所有组合。在键和值类型相同的情况下，键和值都存储在一个数组中。如果键和值类型不同，它们将存储在不同的数组中。有可变和不可变的原始地图。下面的代码将演示可变和不可变映射上可用的 API。
 
-注意:Eclipse 集合中的`Map`类型在值上是`Iterable`。所以一个`IntIntMap`也是一个`IntIterable`，支持`IntIterable`上可用的全套方法。
+注意：Eclipse 集合中的`Map`类型在值上是`Iterable`。所以一个`IntIntMap`也是一个`IntIterable`，支持`IntIterable`上可用的全套方法。
 
 [目录](#d57c)
 
@@ -133,19 +134,19 @@ Eclipse 集合有三个原始的`String`适配器— `CharAdapter`、`CodePointA
 
 ## 内存成本
 
-将原语打包成包装器会带来巨大的内存开销。下表显示了在原始数据结构和装箱数据结构中存储 100 万个 int 值的内存比较成本。我可能需要一段时间来把它绘制成图表，但是我想我应该早点分享这些原始的比较，以及我用来计算它们的代码。
+将原语打包成包装器会带来巨大的内存开销。下表显示了在原始数据结构和装箱数据结构中存储 100 万个`int`值的内存比较成本。我可能需要一段时间来把它绘制成图表，但是我想我应该早点分享这些原始的比较，以及我用来计算它们的代码。
 
 ![](img/09110ea53185693597717180efec9906.png)
 
 原始集合和装箱集合的内存开销比较表
 
-**注**:最容易收集的垃圾是从未产生的垃圾。
+**注**：最容易收集的垃圾是从未产生的垃圾。
 
 # 等待瓦尔哈拉
 
 我对 Valhalla 项目给 Java 带来的希望感到兴奋。你可能正在等待项目 [Valhalla](https://openjdk.java.net/projects/valhalla/) 来提高你正在编写的代码的性能。我真希望我能等到瓦尔哈拉。这可能会为我和许多其他从事 Eclipse 集合和其他原始集合库工作的人节省大量工作。不幸的是，等待编程语言未来版本的高级功能并不是每个人都可以选择的。
 
-大约九年前，我们将具有丰富 API 的原始集合添加到了 Eclipse 集合中。我们看到的好处是显著的。对这些好处的认识有望帮助维持 [JEP 218:泛型优于原语类型](https://openjdk.java.net/jeps/218)的持续关注和发展。
+大约九年前，我们将具有丰富 API 的原始集合添加到了 Eclipse 集合中。我们看到的好处是显著的。对这些好处的认识有望帮助维持 [JEP 218：泛型优于原语类型](https://openjdk.java.net/jeps/218)的持续关注和发展。
 
 我很高兴我们没有等。我们在原始收藏领域学到的和继续学到的经验可以帮助我们了解瓦尔哈拉工程的设计和开发。
 
@@ -159,14 +160,22 @@ Eclipse 集合有三个原始的`String`适配器— `CharAdapter`、`CodePointA
 
 *我是*[*Eclipse Foundation*](https://projects.eclipse.org/projects/technology.collections)*的*[*Eclipse Collections*](https://github.com/eclipse/eclipse-collections)*OSS 项目的项目负责人。* [*月食收藏*](https://github.com/eclipse/eclipse-collections) *为* [*投稿*](https://github.com/eclipse/eclipse-collections/blob/master/CONTRIBUTING.md) *打开。如果你喜欢这个库，你可以在 GitHub 上让我们知道。*
 
-其他 **Java 编程文章**你可能喜欢:
+其他 **Java 编程文章**你可能喜欢：
+
 [完整的 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
+
 [Java 程序员应该学习的 10 件事](/javarevisited/9-things-java-programmers-should-learn-in-2018-3f0b2207dfc4)
+
 [你可以学习的 10 种编程语言](/hackernoon/10-best-programming-languages-to-learn-in-2019-e5b05af4a972)
+
 [10 种工具每个 Java 开发者都应该知道的](http://www.java67.com/2018/04/10-tools-java-developers-should-learn.html)
+
 [2021 年学习 Java 编程语言的 10 个理由](http://javarevisited.blogspot.sg/2013/04/10-reasons-to-learn-java-programming.html)
+
 [我最喜欢的初学者免费编程课程](/javarevisited/top-10-free-interactive-programming-courses-from-educative-for-beginners-to-learn-in-2021-713cbf96d4eb)
+
 7 最佳数据结构与算法初学者课程
+
 [50+数据结构与算法面试题](/hackernoon/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0)
 
-</javarevisited/the-java-programmer-roadmap-f9db163ef2c2> 
+</javarevisited/the-java-programmer-roadmap-f9db163ef2c2>

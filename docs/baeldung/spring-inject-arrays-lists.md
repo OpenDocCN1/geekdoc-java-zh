@@ -1,20 +1,21 @@
+
 # 从 Spring 属性文件注入数组和列表
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-inject-arrays-lists>
 
-## 1.概观
+## 1. 概观
 
 在这个快速教程中，我们将学习如何从一个 Spring 属性文件中向一个数组或`List`注入值。
 
-## 2.默认行为
+## 2. 默认行为
 
-我们将从一个简单的`application.properties`文件开始:
+我们将从一个简单的`application.properties`文件开始：
 
 ```java
 arrayOfStrings=Baeldung,dot,com
 ```
 
-让我们看看当我们将变量类型设置为`String[]`时 Spring 是如何表现的:
+让我们看看当我们将变量类型设置为`String[]`时 Spring 是如何表现的：
 
 ```java
 @Value("${arrayOfStrings}")
@@ -32,9 +33,9 @@ void whenContextIsInitialized_thenInjectedArrayContainsExpectedValues() {
 
 我们还应该注意到，默认情况下，只有当我们有逗号分隔的值时，注入数组才能正常工作。
 
-## 3.注入列表
+## 3. 注入列表
 
-如果我们尝试以同样的方式注入一个`List`，我们会得到一个令人惊讶的结果:
+如果我们尝试以同样的方式注入一个`List`，我们会得到一个令人惊讶的结果：
 
 ```java
 @Value("${arrayOfStrings}")
@@ -50,7 +51,7 @@ void whenContextIsInitialized_thenInjectedListContainsUnexpectedValues() {
 
 **我们的`List`包含一个元素，它等于我们在属性文件中设置的值。**
 
-为了正确地注入一个`List`，我们需要使用一种叫做 [Spring 表达式语言](/web/20220628151332/https://www.baeldung.com/spring-expression-language) (SpEL)的特殊语法:
+为了正确地注入一个`List`，我们需要使用一种叫做 Spring 表达式语言 (SpEL) 的特殊语法：
 
 ```java
 @Value("#{'${arrayOfStrings}'.split(',')}")
@@ -68,13 +69,13 @@ void whenContextIsInitialized_thenInjectedListContainsExpectedValues() {
 
 **我们还应该注意，我们正在调用一个`split`方法，这使得表达式比通常的注入稍微复杂一些。**
 
-如果我们想让我们的表达式简单一点，我们可以用一种特殊的格式来声明我们的属性:
+如果我们想让我们的表达式简单一点，我们可以用一种特殊的格式来声明我们的属性：
 
 ```java
 listOfStrings={'Baeldung','dot','com'}
 ```
 
-Spring 将识别这种格式，我们将能够使用稍微简单一些的表达式来注入我们的`List`:
+Spring 将识别这种格式，我们将能够使用稍微简单一些的表达式来注入我们的`List`：
 
 ```java
 @Value("#{${listOfStrings}}")
@@ -88,15 +89,15 @@ void whenContextIsInitialized_thenInjectedListV2ContainsExpectedValues() {
 }
 ```
 
-## 4.使用自定义分隔符
+## 4. 使用自定义分隔符
 
-让我们创建一个类似的属性，但这一次，我们将使用不同的分隔符:
+让我们创建一个类似的属性，但这一次，我们将使用不同的分隔符：
 
 ```java
 listOfStringsWithCustomDelimiter=Baeldung;dot;com
 ```
 
-**正如我们在注入`Lists`时看到的，我们可以使用一个特殊的表达式来指定我们想要的分隔符:**
+**正如我们在注入`Lists`时看到的，我们可以使用一个特殊的表达式来指定我们想要的分隔符：**
 
 ```java
 @Value("#{'${listOfStringsWithCustomDelimiter}'.split(';')}")
@@ -110,9 +111,9 @@ void whenContextIsInitialized_thenInjectedListWithCustomDelimiterContainsExpecte
 }
 ```
 
-## 5.注射其他类型
+## 5. 注入其他类型
 
-让我们来看看以下属性:
+让我们来看看以下属性：
 
 ```java
 listOfBooleans=false,false,true
@@ -120,7 +121,7 @@ listOfIntegers=1,2,3,4
 listOfCharacters=a,b,c
 ```
 
-**我们可以看到 Spring 支持开箱即用的基本类型，所以我们不需要做任何特殊的解析:**
+**我们可以看到 Spring 支持开箱即用的基本类型，所以我们不需要做任何特殊的解析：**
 
 ```java
 @Value("#{'${listOfBooleans}'.split(',')}")
@@ -144,16 +145,16 @@ void whenContextIsInitialized_thenInjectedListOfBasicTypesContainsExpectedValues
 
 这仅通过 SpEL 支持，所以我们不能以同样的方式注入数组。
 
-## 6.以编程方式读取属性
+## 6. 以编程方式读取属性
 
-为了以编程方式读取属性，我们首先需要获得我们的`Environment`对象的实例:
+为了以编程方式读取属性，我们首先需要获得我们的`Environment`对象的实例：
 
 ```java
 @Autowired
 private Environment environment;
 ```
 
-**然后，我们可以简单地使用`getProperty`方法，通过指定它的键和预期类型来读取任何属性:**
+**然后，我们可以简单地使用`getProperty`方法，通过指定它的键和预期类型来读取任何属性：**
 
 ```java
 @Test
@@ -166,8 +167,8 @@ void whenReadingFromSpringEnvironment_thenPropertiesHaveExpectedValues() {
 }
 ```
 
-## 7.结论
+## 7. 结论
 
 在这个快速教程中，我们通过快速实用的例子学习了如何轻松地注入数组和`List`。
 
-和往常一样，代码可以在 GitHub 的[上获得。](https://web.archive.org/web/20220628151332/https://github.com/eugenp/tutorials/tree/master/spring-boot-modules/spring-boot-properties-2)
+和往常一样，代码可以在 GitHub 上获得。

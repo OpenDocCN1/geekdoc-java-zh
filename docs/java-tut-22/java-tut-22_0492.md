@@ -1,3 +1,4 @@
+
 # 如何编写项目监听器
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/events/itemlistener.html`](https://docs.oracle.com/javase/tutorial/uiswing/events/itemlistener.html)
@@ -7,7 +8,7 @@
 这里是从`ComponentEventDemo.java`中提取的一些项目事件处理代码：
 
 ```java
-*//where initialization occurs*
+//where initialization occurs
 checkbox.addItemListener(this);
 ...
 public void itemStateChanged(ItemEvent e) {
@@ -18,7 +19,6 @@ public void itemStateChanged(ItemEvent e) {
         label.setVisible(false);
     }
 }
-
 ```
 
 ## 项目监听器 API

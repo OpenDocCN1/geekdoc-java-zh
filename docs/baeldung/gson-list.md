@@ -1,16 +1,18 @@
+
+
 # 用 Gson 序列化和反序列化列表
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/gson-list>
 
-## 1。简介
+## 1. 简介
 
-在本教程中，我们将探索一些高级的[序列化](/web/20221107092027/https://www.baeldung.com/gson-serialization-guide)和[反序列化](/web/20221107092027/https://www.baeldung.com/gson-deserialization-guide)案例，用于使用 [Google 的 Gson 库](https://web.archive.org/web/20221107092027/https://github.com/google/gson)的`List`。
+在本教程中，我们将探索一些高级的序列化和反序列化案例，用于使用 Google 的 Gson 库的`List`。
 
-## 2。对象列表
+## 2. 对象列表
 
 一个常见的用例是序列化和反序列化 POJOs 列表。
 
-考虑一下这个类:
+考虑一下这个类：
 
 ```java
 public class MyClass {
@@ -26,7 +28,7 @@ public class MyClass {
 }
 ```
 
-下面是我们如何连载`List<MyClass>`:
+下面是我们如何序列化`List<MyClass>`：
 
 ```java
 @Test
@@ -43,7 +45,7 @@ public void givenListOfMyClass_whenSerializing_thenCorrect() {
 
 正如我们所见，序列化相当简单。
 
-然而，反序列化是棘手的。这是一种不正确的做法:
+然而，反序列化是棘手的。这是一种不正确的做法：
 
 ```java
 @Test(expected = ClassCastException.class)
@@ -57,11 +59,11 @@ public void givenJsonString_whenIncorrectDeserializing_thenThrowClassCastExcepti
 }
 ```
 
-在这里，**尽管在反序列化后我们会得到一个大小为 2 的`List`，但它不会是`MyClass`** 的`List`。因此，6 号线抛出`ClassCastException`。
+在这里，**尽管在反序列化后我们会得到一个大小为 2 的`List`，但它不会是`MyClass`** 的`List`。因此，第 6 行抛出`ClassCastException`。
 
 **Gson 可以序列化任意对象的集合，但是在没有附加信息的情况下无法反序列化数据。这是因为用户没有办法指出结果对象的类型。**相反，在反序列化时，`Collection`必须是特定的泛型类型。
 
-反序列化`List`的正确方式应该是:
+反序列化`List`的正确方式应该是：
 
 ```java
 @Test
@@ -80,11 +82,11 @@ public void givenJsonString_whenDeserializing_thenReturnListOfMyClass() {
 
 这里，**我们使用 Gson 的`TypeToken`来确定要反序列化的正确类型——`ArrayList<MyClass>`**。用于获取`listOfMyClassObject`的习语实际上定义了一个匿名的本地内部类，包含一个返回完全参数化类型的方法`getType()`。
 
-## 3。多态对象列表
+## 3. 多态对象列表
 
-### 3.1。问题
+### 3.1. 问题
 
-考虑一个动物等级的例子:
+考虑一个动物等级的例子：
 
 ```java
 public abstract class Animal {
@@ -102,13 +104,13 @@ public class Cow extends Animal {
 
 我们如何序列化和反序列化`List<Animal>`？我们可以像在上一节中一样使用`TypeToken<ArrayList<Animal>>`。然而，Gson 仍然无法确定存储在列表中的对象的具体数据类型。
 
-### 3.2。使用自定义反序列化器
+### 3.2. 使用自定义反序列化器
 
 解决这个问题的一个方法是向序列化的 JSON 添加类型信息。我们在 JSON 反序列化过程中尊重类型信息。为此，我们需要编写自己的自定义序列化程序和反序列化程序。
 
-首先，我们将在基类`Animal`中引入一个名为 `type`的新`String`字段。它存储它所属的类的简单名称。
+首先，我们将在基类`Animal`中引入一个名为`type`的新`String`字段。它存储它所属的类的简单名称。
 
-让我们看一下我们的示例类:
+让我们看一下我们的示例类：
 
 ```java
 public abstract class Animal {
@@ -142,7 +144,7 @@ public class Cow extends Animal {
 }
 ```
 
-序列化将像以前一样继续工作，没有任何问题:
+序列化将像以前一样继续工作，没有任何问题：
 
 ```java
 @Test 
@@ -160,7 +162,7 @@ public void givenPolymorphicList_whenSerializeWithTypeAdapter_thenCorrect() {
 }
 ```
 
-为了反序列化列表，我们必须提供一个定制的反序列化器:
+为了反序列化列表，我们必须提供一个定制的反序列化器：
 
 ```java
 public class AnimalDeserializer implements JsonDeserializer<Animal> {
@@ -192,7 +194,7 @@ public class AnimalDeserializer implements JsonDeserializer<Animal> {
 
 在反序列化过程中，我们首先提取出新添加的`type`字段。使用这个值，我们在`animalTypeRegistry`映射上进行查找，以获得具体的数据类型。这个数据类型然后被传递给`fromJson()`。
 
-让我们看看如何使用我们的自定义反序列化器:
+让我们看看如何使用我们的自定义反序列化器：
 
 ```java
 @Test
@@ -215,11 +217,11 @@ public void givenPolymorphicList_whenDeserializeWithTypeAdapter_thenCorrect() {
 }
 ```
 
-### 3.3。使用`RuntimeTypeAdapterFactory`
+### 3.3. 使用`RuntimeTypeAdapterFactory`
 
-编写定制反序列化器的另一种方法是使用 [Gson 源代码](https://web.archive.org/web/20221107092027/https://github.com/google/gson/blob/master/extras/src/main/java/com/google/gson/typeadapters/RuntimeTypeAdapterFactory.java)中的`RuntimeTypeAdapterFactory`类。然而，**并没有被图书馆公开给用户使用**。因此，我们必须在 Java 项目中创建该类的副本。
+编写定制反序列化器的另一种方法是使用 Gson 源代码中的`RuntimeTypeAdapterFactory`类。然而，**并没有被库公开给用户使用**。因此，我们必须在 Java 项目中创建该类的副本。
 
-完成后，我们可以用它来反序列化我们的列表:
+完成后，我们可以用它来反序列化我们的列表：
 
 ```java
 @Test
@@ -249,8 +251,9 @@ public void givenPolymorphicList_whenDeserializeWithRuntimeTypeAdapter_thenCorre
 
 `RuntimeTypeAdapterFactory`根据传递给它的字段名和注册的子类型提供正确的类型适配器。
 
-## 4。结论
+## 4. 结论
 
 在本文中，我们看到了如何使用 Gson 序列化和反序列化对象列表。
 
-像往常一样，代码可以在 GitHub 上的[处获得。](https://web.archive.org/web/20221107092027/https://github.com/eugenp/tutorials/tree/master/json-modules/gson)
+像往常一样，代码可以在 GitHub 上获得。
+

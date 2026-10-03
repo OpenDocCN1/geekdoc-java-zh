@@ -1,3 +1,4 @@
+
 # [Java]并发编程
 
 > 原文：<https://medium.com/javarevisited/java-concurrent-programming-9c7661466fdf?source=collection_archive---------4----------------------->
@@ -5,7 +6,7 @@
 ![](img/23a34dba21c94a03886a8626548aec1b.png)
 
 > 用户理所当然地认为他们的系统可以同时做多件事情。他们认为自己可以继续在文字处理器中工作，而其他应用程序可以下载文件、管理打印队列和传输音频。…能做这些事情的软件被称为*并发软件*
-> 
+
 > —[Java 教程](https://docs.oracle.com/javase/tutorial/essential/concurrency/)
 
 # 什么是并发软件？
@@ -22,11 +23,11 @@
 
 # 线程是如何创建的？
 
-创建 Thread 实例的应用程序必须提供将在该线程中运行的代码。有两种方法可以做到这一点:
+创建`Thread`实例的应用程序必须提供将在该线程中运行的代码。有两种方法可以做到这一点:
 
 一种方法是创建一个扩展`Thread`的子类，并覆盖它的`run`方法。或者，你可以直接提供一个[可运行的](https://javarevisited.blogspot.com/2016/08/useful-difference-between-callable-and-Runnable-in-Java.html#axzz6e8hmwujv)对象作为参数。`Runnable`接口定义了一个方法`[run](https://javarevisited.blogspot.com/2012/03/difference-between-start-and-run-method.html#axzz6vPUwyVzv)` <https://javarevisited.blogspot.com/2012/03/difference-between-start-and-run-method.html#axzz6vPUwyVzv>，其中包含了执行代码。
 
-`Runnable`对象被传递给`Thread`构造函数，如示例所示。哪个更好看？根据 [ORACLE](https://docs.oracle.com/javase/tutorial/essential/concurrency/runthread.html) 文档，使用 Runnable 对象更加通用，因为您可以扩展除 Thread 之外的类。
+`Runnable`对象被传递给`Thread`构造函数，如示例所示。哪个更好看？根据 [ORACLE](https://docs.oracle.com/javase/tutorial/essential/concurrency/runthread.html) 文档，使用`Runnable`对象更加通用，因为您可以扩展除`Thread`之外的类。
 
 # 线程的操作
 
@@ -40,7 +41,7 @@
 
 ## 等待另一个线程加入
 
-`[join](https://javarevisited.blogspot.com/2013/02/how-to-join-multiple-threads-in-java-example-tutorial.html#axzz6pTHjcWBu)`方法允许一个线程等待另一个线程完成它的操作。如果 newThread 是当前正在工作的线程，`newThread.join`使执行加入主线程。然后，主线程暂停其操作，直到新线程终止。
+`[join](https://javarevisited.blogspot.com/2013/02/how-to-join-multiple-threads-in-java-example-tutorial.html#axzz6pTHjcWBu)`方法允许一个线程等待另一个线程完成它的操作。如果`newThread`是当前正在工作的线程，`newThread.join`使执行加入主线程。然后，主线程暂停其操作，直到新线程终止。
 
 # 结果
 
@@ -52,4 +53,6 @@
 
 # 参考
 
-    <https://www.toptal.com/software/introduction-to-concurrent-programming> 
+```
+<https://www.toptal.com/software/introduction-to-concurrent-programming>
+```

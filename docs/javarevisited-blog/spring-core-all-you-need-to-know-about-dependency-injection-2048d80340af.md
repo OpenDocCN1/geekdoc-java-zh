@@ -1,4 +1,5 @@
-# Spring Core:关于依赖注入您需要知道的一切
+
+# Spring Core：关于依赖注入您需要知道的一切
 
 > 原文：<https://medium.com/javarevisited/spring-core-all-you-need-to-know-about-dependency-injection-2048d80340af?source=collection_archive---------0----------------------->
 

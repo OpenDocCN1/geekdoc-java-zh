@@ -1,13 +1,14 @@
+
 # 构建 Java 项目的 Ant 模板文件
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/ant/ant-template-file-to-build-a-java-project/>
 
 这里有一个 Apache Ant 模板文件，最适合用来从头开始一个项目。
 
-*文件:build.xml*
+*文件：`build.xml`*
 
-```java
- <project name="ProjectName" default="dist" basedir=".">
+```xml
+<project name="ProjectName" default="dist" basedir=".">
     <description>
         Project Description
     </description>
@@ -62,7 +63,7 @@
     	<delete dir="${build}"/>
     	<delete dir="${dist}"/>
   </target>
-</project> 
+</project>
 ```
 
 <input type="hidden" id="mkyong-current-postId" value="7819">

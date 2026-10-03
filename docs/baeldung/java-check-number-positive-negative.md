@@ -1,18 +1,19 @@
+
 # 在 Java 中检查一个数字是正数还是负数
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-check-number-positive-negative>
 
-## 1.概观
+## 1. 概观
 
 在 Java 中，当我们处理像`Integer`、`Long`、`Float`和`Double`这样的类型时，我们经常想要检查数字是正还是负。这是一个基本且常见的数字运算。
 
 在这个快速教程中，我们将讨论如何检查一个给定的数字是正数还是负数。
 
-## 2.问题简介
+## 2. 问题简介
 
 检查一个数字是正数还是负数是一个非常简单的问题。然而，在我们开始研究实现之前，让我们先了解一下积极和消极的定义。
 
-给定一个[实数](https://web.archive.org/web/20221012124242/https://en.wikipedia.org/wiki/Real_number) `n`，如果`n`大于零，则为正数。否则，如果`n`小于零，则为负。所以，我们还有一个特例:零。 **[零既不是正也不是负](https://web.archive.org/web/20221012124242/https://en.wikipedia.org/wiki/0)** 。
+给定一个[实数](https://web.archive.org/web/20221012124242/https://en.wikipedia.org/wiki/Real_number) `n`，如果`n`大于零，则为正数。否则，如果`n`小于零，则为负。所以，我们还有一个特例:零。**[零既不是正也不是负](https://web.archive.org/web/20221012124242/https://en.wikipedia.org/wiki/0)**。
 
 所以，我们可以创建一个 [`enum`](/web/20221012124242/https://www.baeldung.com/a-guide-to-java-enums) 来涵盖这三种可能性:
 
@@ -24,11 +25,11 @@ enum Result {
 
 在本教程中，我们将介绍两种不同的方法来检查一个数字是正数、负数还是零。为了简单起见，我们将使用单元测试断言来验证结果。
 
-接下来，让我们看看他们的行动。
+接下来，让我们看看它们的行动。
 
-## 3.使用'`<`'和'`>`'运算符
+## 3. 使用`<`和`>`运算符
 
-根据定义，一个数是正数还是负数取决于与零的比较结果。所以，**我们可以用 Java 的“大于(>)”和“小于(<)”[运算符](/web/20221012124242/https://www.baeldung.com/java-operators)来解决问题**。
+根据定义，一个数是正数还是负数取决于与零的比较结果。所以，**我们可以用 Java 的“大于(`>`)和“小于(`<`)[运算符](/web/20221012124242/https://www.baeldung.com/java-operators)来解决问题**。
 
 接下来，让我们以`Integer`类型为例创建一个方法来进行检查:
 
@@ -55,11 +56,11 @@ assertEquals(NEGATIVE, PositiveOrNegative.byOperator(-700));
 
 不出所料，如果我们执行它，测试就会通过。
 
-当然，如果我们可以将`Integer`参数更改为`Long`、`Float,`或`Double`，同样的逻辑也适用。
+当然，如果我们可以将`Integer`参数更改为`Long`、`Float`或`Double`，同样的逻辑也适用。
 
-## 4.使用`signum()`方法
+## 4. 使用`signum()`方法
 
-我们已经看到了如何使用< and the >操作符检查一个数字是正还是负。或者，我们可以使用`signum()`方法获得给定数字的符号。
+我们已经看到了如何使用`<`和`>`操作符检查一个数字是正还是负。或者，我们可以使用`signum()`方法获得给定数字的符号。
 
 **对于`Integer`和`Long`的数字，我们可以调用 [`Integer.signum()`](https://web.archive.org/web/20221012124242/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html#signum(int)) 和 [`Long.signum()`](https://web.archive.org/web/20221012124242/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html#signum(long)) 的方法。**
 
@@ -112,7 +113,7 @@ assertEquals(NEGATIVE, PositiveOrNegative.bySignum(-7.7f));
 
 如果我们试一试，测试就会通过。
 
-## 5.结论
+## 5. 结论
 
 在本文中，我们学习了两种方法来确定一个给定的数字是正数、负数还是零。
 

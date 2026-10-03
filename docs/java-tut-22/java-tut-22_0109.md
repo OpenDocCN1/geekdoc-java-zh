@@ -1,3 +1,4 @@
+
 # 操作字符串中的字符
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/data/manipstrings.html`](https://docs.oracle.com/javase/tutorial/java/data/manipstrings.html)
@@ -11,7 +12,6 @@
 ```java
 String anotherPalindrome = "Niagara. O roar again!"; 
 char aChar = anotherPalindrome.charAt(9);
-
 ```
 
 索引从 0 开始，因此索引为 9 的字符是'O'，如下图所示：
@@ -32,7 +32,6 @@ char aChar = anotherPalindrome.charAt(9);
 ```java
 String anotherPalindrome = "Niagara. O roar again!"; 
 String roar = anotherPalindrome.substring(11, 15); 
-
 ```
 
 ![使用 substring 方法获取字符串的一部分。](img/c76ca5899d8c39cb8ba3db60eca48c48.png)
@@ -68,11 +67,7 @@ String roar = anotherPalindrome.substring(11, 15);
 | `int indexOf(String str, int fromIndex) int lastIndexOf(String str, int fromIndex)` | 返回指定子字符串的第一个（最后一个）出现的索引，从指定索引向前（向后）搜索。 |
 | `boolean contains(CharSequence s)` | 如果字符串包含指定的字符序列，则返回 true。 |
 
-* * *
-
 **注意:** `CharSequence`是一个由`String`类实现的接口。因此，您可以将字符串作为`contains()`方法的参数。
-
-* * *
 
 ## 将字符和子字符串替换为字符串
 
@@ -93,14 +88,9 @@ String roar = anotherPalindrome.substring(11, 15);
 
 以下类，`Filename`，演示了使用`lastIndexOf()`和`substring()`来分离文件名的不同部分。
 
-* * *
-
 **注意：**以下`Filename`类中的方法没有进行任何错误检查，并假定它们的参数包含完整的目录路径和带有扩展名的文件名。如果这些方法是生产代码，它们将验证它们的参数是否正确构造。
 
-* * *
-
 ```java
-
 public class Filename {
     private String fullPath;
     private char pathSeparator, 
@@ -129,13 +119,11 @@ public class Filename {
         return fullPath.substring(0, sep);
     }
 }
-
 ```
 
 这里有一个程序，`FilenameDemo`，它构造了一个`Filename`对象并调用了它的所有方法：
 
 ```java
-
 public class FilenameDemo {
     public static void main(String[] args) {
         final String FPATH = "/home/user/index.html";
@@ -145,7 +133,6 @@ public class FilenameDemo {
         System.out.println("Path = " + myHomePage.path());
     }
 }
-
 ```
 
 以下是程序的输出：
@@ -154,7 +141,6 @@ public class FilenameDemo {
 Extension = html
 Filename = index
 Path = /home/user
-
 ```
 
 如下图所示，我们的`extension`方法使用`lastIndexOf`来定位文件名中句点（.）的最后一个出现位置。然后`substring`使用`lastIndexOf`的返回值来提取文件名扩展名，即从句点到字符串末尾的子字符串。此代码假定文件名中有一个句点；如果文件名中没有句点，`lastIndexOf`将返回-1，而`substring`方法将抛出`StringIndexOutOfBoundsException`。

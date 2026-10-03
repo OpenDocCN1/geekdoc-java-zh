@@ -1,9 +1,15 @@
-# RAML 介绍 RESTful API 建模语言
+
+
+## RAML 介绍 RESTful API 建模语言
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/raml-restful-api-modeling-language-tutorial>
 
-[This article is part of a series:](javascript:void(0);)• Introduction to RAML – The RESTful API Modeling Language (current article)[• Eliminate Redundancies in RAML with Resource Types and Traits](/web/20220523224944/https://www.baeldung.com/simple-raml-with-resource-types-and-traits)
+[This article is part of a series:](javascript:void(0);)• Introduction to RAML – The RESTful API Modeling Language (current article)
+
+[• Eliminate Redundancies in RAML with Resource Types and Traits](/web/20220523224944/https://www.baeldung.com/simple-raml-with-resource-types-and-traits)
+
 [• Modular RAML Using Includes, Libraries, Overlays and Extensions](/web/20220523224944/https://www.baeldung.com/modular-raml-includes-overlays-libraries-extensions)
+
 [• Define Custom RAML Properties Using Annotations](/web/20220523224944/https://www.baeldung.com/raml-custom-properties-with-annotations)
 
 ## 1。概述
@@ -16,30 +22,36 @@
 
 最后，我们将通过描述 RAML 规范的当前状态进行总结。
 
-## 延伸阅读:
+### 延伸阅读:
 
-## [Spring REST API 的二进制数据格式](/web/20220523224944/https://www.baeldung.com/spring-rest-api-with-binary-data-formats)
+#### 二进制数据格式的 Spring REST API
 
 In this article we explore how to configure Spring REST mechanism to utilize binary data formats which we illustrate with Kryo. Moreover we show how to support multiple data formats with Google Protocol buffers.[Read more](/web/20220523224944/https://www.baeldung.com/spring-rest-api-with-binary-data-formats) →
 
-## [放心指南](/web/20220523224944/https://www.baeldung.com/rest-assured-tutorial)
+#### 放心指南
 
 Explore the basics of REST-assured - a library that simplifies the testing and validation of REST APIs.[Read more](/web/20220523224944/https://www.baeldung.com/rest-assured-tutorial) →
 
-## [用 Javalin 创建 REST 微服务](/web/20220523224944/https://www.baeldung.com/javalin-rest-microservices)
+#### 用 Javalin 创建 REST 微服务
 
 Learn how to implement REST APIs with the Javalin framework[Read more](/web/20220523224944/https://www.baeldung.com/javalin-rest-microservices) →
 
-## 2。定义你的 API(创建`.raml`文件)
+## 2。定义你的 API(创建`api.raml`文件)
 
 我们将定义的 API 相当简单:给定实体类型`Foo`，定义基本的 CRUD 操作和一些查询操作。以下是我们将为 API 定义的资源:
 
 *   `GET /api/v1/foos`
+
 *   `POST /api/v1/foos`
+
 *   `GET /api/v1/foos/{id}`
+
 *   `PUT /api/v1/foos/{id}`
+
 *   `DELETE /api/v1/foos/{id}`
+
 *   `GET /api/v1/foos/name/{name}`
+
 *   `GET /api/v1/foos?name={name}&ownerName;={ownerName}`
 
 让我们将我们的 API 定义为无状态的，使用 HTTP 基本认证，并通过 HTTPS 加密交付。最后，让我们选择 JSON 作为我们的数据传输格式(也支持 XML)。
@@ -57,7 +69,7 @@ baseUri: http://myapi.mysite.com/api/{version}
 mediaType: application/json 
 ```
 
-请注意第 3 行中“`version`”一词周围使用了大括号{ }。这就是我们如何告诉 RAML "`version”`指的是一个属性，并且要被扩展。因此实际的`baseUri`将是:**http://myapi.mysite.com/v1**
+请注意第 3 行中“`version`”一词周围使用了大括号{ }。这就是我们如何告诉 RAML "`version`”指的是一个属性，并且要被扩展。因此实际的`baseUri`将是:**`http://myapi.mysite.com/v1`**
 
 [注意:`version`属性是可选的，不必是`baseUri`的一部分。]
 
@@ -180,7 +192,7 @@ JSON 模式可以用来代替数据类型，以向后兼容早期版本的 RAML�
 
 [注意:在下面的代码片段中，仅包含三个点(…)的一行表示为了简洁起见跳过了一些行。]
 
-让我们从`/foos/{id}:`上的简单 GET 操作开始
+让我们从`/foos/{id}`上的简单 GET 操作开始:
 
 ```java
 /foos:
@@ -259,7 +271,7 @@ JSON 模式可以用来代替数据类型，以向后兼容早期版本的 RAML�
               example: { "message" : "Not found", "code" : 1001 } 
 ```
 
-## 3。带有 JSON 模式的 RAML】
+## 3。带有 JSON 模式的 RAML
 
 在 RAML 1.0 中引入`data types`之前，对象、请求体和响应体是使用 JSON 模式定义的。
 
@@ -310,13 +322,31 @@ RAML 规范提供了一种包含机制，允许我们将重复和冗长的代码
 
 例如，我们可以将一个`Foo`对象的数据类型放在文件`types/Foo.raml`中，将一个`Error`对象的数据类型放在`types/Error.raml`中。那么我们的`types`部分将如下所示:
 
+```yaml
+types:
+  Foo: !include types/Foo.raml
+  Error: !include types/Error.raml
+```
+
+通过使用 include，我们还可以将资源定义外部化到单独的文件中。例如，我们可以将所有与`/foos/{id}`相关的定义放入`resources/foos-id.raml`文件中，然后在主文件中引用它:
+
+```yaml
+/foos:
+  /{id}: !include resources/foos-id.raml
+```
+
+这种方式可以更好地组织 API 定义，使其更易于维护和扩展。
+
+
+
+
 ```java
 types:
   Foo: !include types/Foo.raml
   Error: !include types/Error.raml
 ```
 
-如果我们使用 JSON 模式，我们的`types`部分可能看起来像这样:
+如果我们使用 JSON 模式，我们的`types`部分可能看起来像这样：
 
 ```java
 types:
@@ -324,9 +354,9 @@ types:
   error: !include schemas/error.json
 ```
 
-## 5。完成 API
+## 5. 完成 API
 
-在将所有数据类型和示例外部化到它们的文件中之后，我们可以使用 include 工具来重构我们的 API:
+在将所有数据类型和示例外部化到它们的文件中之后，我们可以使用`include`工具来重构我们的 API：
 
 ```java
 #%RAML 1.0
@@ -432,7 +462,7 @@ types:
               example: !include examples/Foos.json 
 ```
 
-## 6。RAML 工具
+## 6. RAML 工具
 
 RAML 的一大优点是工具支持。
 
@@ -440,42 +470,55 @@ RAML 的一大优点是工具支持。
 
 甚至有一个工具可以将 Swagger JSON API 转换成 RAML。
 
-以下是可用工具的示例:
+以下是可用工具的示例：
 
-*   [API Designer](https://web.archive.org/web/20220523224944/https://github.com/mulesoft/api-designer)–一款基于网络的工具，旨在实现快速高效的 API 设计
-*   [API 工作台](https://web.archive.org/web/20220523224944/https://atom.io/packages/api-workbench)–用于设计、构建、测试和记录支持 RAML 0.8 和 1.0 的 RESTful APIs 的 IDE
-*   [RAML Cop](https://web.archive.org/web/20220523224944/https://github.com/thebinarypenguin/raml-cop)-一个验证 RAML 文件的工具
-*   用于 JAX-RS 的 RAML——一套工具，用于从 RAML 规范生成 Java + JAX-RS 应用程序代码的框架，或者从现有的 JAX-RS 应用程序生成 RAML 规范
-*   RAML Sublime 插件-Sublime 文本编辑器的语法高亮插件
-*   从 RAML 到 HTML 的工具
-*   [raml 2 pdf](https://web.archive.org/web/20220523224944/https://github.com/our-bts/raml2pdf)–从 RAML 生成 PDF 文档的工具
-*   ram L2 Wiki–一个生成 Wiki 文档的工具(使用 Confluence/JIRA 标记)
-*   SoapUI RAML 插件——一个流行的 SoapUI 功能 API 测试套件的 RAML 插件
-*   Vigia T1——一个能够基于 RAML 定义生成测试用例的集成测试套件
+* [API Designer](https://web.archive.org/web/20220523224944/https://github.com/mulesoft/api-designer)–一款基于网络的工具，旨在实现快速高效的 API 设计
+
+* [API 工作台](https://web.archive.org/web/20220523224944/https://atom.io/packages/api-workbench)–用于设计、构建、测试和记录支持 RAML 0.8 和 1.0 的 RESTful APIs 的 IDE
+
+* [RAML Cop](https://web.archive.org/web/20220523224944/https://github.com/thebinarypenguin/raml-cop)-一个验证 RAML 文件的工具
+
+* 用于 JAX-RS 的 RAML——一套工具，用于从 RAML 规范生成 Java + JAX-RS 应用程序代码的框架，或者从现有的 JAX-RS 应用程序生成 RAML 规范
+
+* RAML Sublime 插件-Sublime 文本编辑器的语法高亮插件
+
+* 从 RAML 到 HTML 的工具
+
+* [raml 2 pdf](https://web.archive.org/web/20220523224944/https://github.com/our-bts/raml2pdf)–从 RAML 生成 PDF 文档的工具
+
+* ram L2 Wiki–一个生成 Wiki 文档的工具(使用 Confluence/JIRA 标记)
+
+* SoapUI RAML 插件——一个流行的 SoapUI 功能 API 测试套件的 RAML 插件
+
+* Vigia T1——一个能够基于 RAML 定义生成测试用例的集成测试套件
 
 有关 RAML 工具和相关项目的完整列表，请访问 [RAML 项目](https://web.archive.org/web/20220523224944/https://raml.org/projects)页面。
 
-## 7。RAML 的当前状态
+## 7. RAML 的当前状态
 
 RAML 1.0 (RC)规范在 2015 年 11 月 3 日获得了发布候选状态，在撰写本文时，1.0 版本有望在本月内完成。
 
 它的前身 RAML 0.8 最初是在 2014 年秋季发布的，现在仍有许多工具支持它。
 
-## 8。延伸阅读
+## 8. 延伸阅读
 
 这里有一些链接，在我们的 RAML 之旅中可能会有用。
 
-*   [RAML.org](https://web.archive.org/web/20220523224944/http://raml.org/)——RAML 规范的官方网站
-*   [json-schema.org](https://web.archive.org/web/20220523224944/https://json-schema.org/)——JSON 模式的发源地
-*   [了解 JSON 模式](https://web.archive.org/web/20220523224944/https://spacetelescope.github.io/understanding-json-schema/)
-*   [JSON 模式生成器](https://web.archive.org/web/20220523224944/http://jsonschema.net/)
-*   [维基百科 RAML 页面](https://web.archive.org/web/20220523224944/https://en.wikipedia.org/wiki/RAML_(software))
+* [RAML.org](https://web.archive.org/web/20220523224944/http://raml.org/)——RAML 规范的官方网站
 
-## 9。结论
+* [json-schema.org](https://web.archive.org/web/20220523224944/https://json-schema.org/)——JSON 模式的发源地
+
+* [了解 JSON 模式](https://web.archive.org/web/20220523224944/https://spacetelescope.github.io/understanding-json-schema/)
+
+* [JSON 模式生成器](https://web.archive.org/web/20220523224944/http://jsonschema.net/)
+
+* [维基百科 RAML 页面](https://web.archive.org/web/20220523224944/https://en.wikipedia.org/wiki/RAML_(software))
+
+## 9. 结论
 
 本文介绍了 RESTful API 建模语言(RAML)。我们演示了使用 RAML 1.0 (RC)规范编写简单 API 规范的一些基本语法。
 
-我们还看到了通过使用语法快捷方式和将示例、数据类型和模式外化到“include”文件中来使我们的定义更加简洁的方法。
+我们还看到了通过使用语法快捷方式和将示例、数据类型和模式外化到`include`文件中来使我们的定义更加简洁的方法。
 
 然后，我们介绍了一组功能强大的工具，它们与 RAML 规范一起工作，帮助完成日常的 API 设计、开发、测试和文档任务。
 

@@ -1,3 +1,4 @@
+
 # 锁对象
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/concurrency/newlocks.html`](https://docs.oracle.com/javase/tutorial/essential/concurrency/newlocks.html)
@@ -8,10 +9,9 @@
 
 `Lock` 对象相对于隐式锁的最大优势在于其能够在尝试获取锁时撤销操作。如果指定了超时时间，`tryLock` 方法在锁不可用时或超时之前会撤销操作。`lockInterruptibly` 方法在获取锁之前如果另一个线程发送中断信号，则会撤销操作。
 
-让我们使用 `Lock` 对象来解决我们在 Liveness 中看到的死锁问题。阿方索和加斯顿已经训练自己注意到朋友即将鞠躬的时刻。我们通过要求我们的 `Friend` 对象必须在继续鞠躬之前为*两个*参与者获取锁来模拟这种改进。这是改进模型的源代码，``Safelock``。为了展示这种习语的多功能性，我们假设阿方索和加斯顿如此迷恋他们新发现的安全鞠躬能力，以至于他们无法停止向彼此鞠躬：
+让我们使用 `Lock` 对象来解决我们在 Liveness 中看到的死锁问题。阿方索和加斯顿已经训练自己注意到朋友即将鞠躬的时刻。我们通过要求我们的 `Friend` 对象必须在继续鞠躬之前为*两个*参与者获取锁来模拟这种改进。这是改进模型的源代码，`Safelock`。为了展示这种习语的多功能性，我们假设阿方索和加斯顿如此迷恋他们新发现的安全鞠躬能力，以至于他们无法停止向彼此鞠躬：
 
 ```java
-
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.Random;
@@ -104,5 +104,4 @@ public class Safelock {
         new Thread(new BowLoop(gaston, alphonse)).start();
     }
 }
-
 ```

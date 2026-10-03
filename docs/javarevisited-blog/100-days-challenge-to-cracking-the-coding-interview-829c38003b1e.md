@@ -1,8 +1,9 @@
+
 # 第 19 天—罗马到整数
 
 > 原文：<https://medium.com/javarevisited/100-days-challenge-to-cracking-the-coding-interview-829c38003b1e?source=collection_archive---------0----------------------->
 
-## **亚马逊 100 天**
+## 亚马逊 100 天
 
 [**100 天到亚马逊—**](https://leetcode.com/problems/roman-to-integer/) **第 19 天罗马到整数**
 

@@ -1,3 +1,4 @@
+
 # 使用 JUnit 5 参数化测试注释的 REST API 输入验证测试
 
 > 原文：<https://medium.com/javarevisited/rest-api-input-validation-test-using-junit-5-parameterized-test-annotation-908491fa4?source=collection_archive---------2----------------------->

@@ -1,27 +1,19 @@
+
 # 检查枚举
 
 > 原文：[`docs.oracle.com/javase/tutorial/reflect/special/enumMembers.html`](https://docs.oracle.com/javase/tutorial/reflect/special/enumMembers.html)
 
 反射提供了三个特定于枚举的 API：
 
-[`Class.isEnum()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#isEnum--)
+- [`Class.isEnum()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#isEnum--)：表示此类是否表示枚举类型
+- [`Class.getEnumConstants()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getEnumConstants--)：检索由枚举定义的枚举常量列表，按照它们声明的顺序
+- [`java.lang.reflect.Field.isEnumConstant()`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html#isEnumConstant--)：表示此字段是否表示枚举类型的元素
 
-表示此类是否表示枚举类型
+有时需要动态检索枚举常量的列表；在非反射代码中，可以通过在枚举上调用隐式声明的静态方法`values()`来实现这一点。如果枚举类型的实例不可用，则获取可能值列表的唯一方法是调用`Class.getEnumConstants()`，因为无法实例化枚举类型。
 
-[`Class.getEnumConstants()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getEnumConstants--)
-
-检索由枚举定义的枚举常量列表，按照它们声明的顺序
-
-[`java.lang.reflect.Field.isEnumConstant()`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html#isEnumConstant--)
-
-表示此字段是否表示枚举类型的元素
-
-有时需要动态检索枚举常量的列表；在非反射代码中，可以通过在枚举上调用隐式声明的静态方法 [`values()`](https://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html) 来实现这一点。 如果枚举类型的实例不可用，则获取可能值列表的唯一方法是调用 [`Class.getEnumConstants()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getEnumConstants--)，因为无法实例化枚举类型。
-
-给定完全限定名称，``EnumConstants`` 示例显示如何使用 [`Class.getEnumConstants()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getEnumConstants--) 检索枚举中常量的有序列表。
+给定完全限定名称，`EnumConstants`示例显示如何使用`Class.getEnumConstants()`检索枚举中常量的有序列表。
 
 ```java
-
 import java.util.Arrays;
 import static java.lang.System.out;
 
@@ -43,16 +35,14 @@ public class EnumConstants {
 	}
     }
 }
-
 ```
 
-输出示例如下。 用户输入以斜体显示。
+输出示例如下。用户输入以斜体显示。
 
 ```java
 $ *java EnumConstants java.lang.annotation.RetentionPolicy*
 Enum name:  java.lang.annotation.RetentionPolicy
 Enum constants:  [SOURCE, CLASS, RUNTIME]
-
 ```
 
 ```java
@@ -61,10 +51,9 @@ Enum name:  java.util.concurrent.TimeUnit
 Enum constants:  [NANOSECONDS, MICROSECONDS, 
                   MILLISECONDS, SECONDS, 
                   MINUTES, HOURS, DAYS]
-
 ```
 
-该示例还表明，通过调用 [`Class.getEnumConstants()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getEnumConstants--) 返回的值与在枚举类型上调用 `values()` 返回的值相同。
+该示例还表明，通过调用`Class.getEnumConstants()`返回的值与在枚举类型上调用`values()`返回的值相同。
 
 ```java
 $ *java EnumConstants*
@@ -73,13 +62,11 @@ Enum constants:  [HADEAN, ARCHAEAN,
                   PROTEROZOIC, PHANEROZOIC]
 Eon.values():  [HADEAN, ARCHAEAN, 
                 PROTEROZOIC, PHANEROZOIC]
-
 ```
 
-由于枚举是类，可以使用本教程中描述的字段、方法和构造函数部分中描述的相同反射 API 获取其他信息。 ``EnumSpy`` 代码示例说明了如何使用这些 API 获取有关枚举声明的其他信息。 该示例使用 [`Class.isEnum()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#isEnum--) 来限制要检查的类集。 它还使用 [`Field.isEnumConstant()`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html#isEnumConstant--) 来区分枚举声明中的枚举常量和其他字段（并非所有字段都是枚举常量）。
+由于枚举是类，可以使用本教程中描述的字段、方法和构造函数部分中描述的相同反射 API 获取其他信息。`EnumSpy`代码示例说明了如何使用这些 API 获取有关枚举声明的其他信息。该示例使用`Class.isEnum()`来限制要检查的类集。它还使用`Field.isEnumConstant()`来区分枚举声明中的枚举常量和其他字段（并非所有字段都是枚举常量）。
 
 ```java
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -142,7 +129,6 @@ public class EnumSpy {
 	return (m.isSynthetic() ? "[ synthetic ]" : "");
     }
 }
-
 ```
 
 ```java
@@ -157,22 +143,23 @@ Class:  class java.lang.annotation.RetentionPolicy
         Field:  private static final java.lang.annotation.RetentionPolicy[] 
                   java.lang.annotation.RetentionPolicy. [ synthetic ]
   Constructor:  private java.lang.annotation.RetentionPolicy() 
-       Method:  public static java.lang.annotation.RetentionPolicy[]
+       Method:  public static final java.lang.annotation.RetentionPolicy[]
                   java.lang.annotation.RetentionPolicy.values() 
-       Method:  public static java.lang.annotation.RetentionPolicy
+       Method:  public static final java.lang.annotation.RetentionPolicy
                   java.lang.annotation.RetentionPolicy.valueOf(java.lang.String) 
-
 ```
 
-输出显示，[`java.lang.annotation.RetentionPolicy`](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html)的声明仅包含三个枚举常量。枚举常量暴露为`public static final`字段。字段、构造函数和方法是由编译器生成的。`$VALUES`字段与`values()`方法的实现有关。
+输出显示，`java.lang.annotation.RetentionPolicy`的声明仅包含三个枚举常量。枚举常量暴露为`public static final`字段。字段、构造函数和方法是由编译器生成的。`$VALUES`字段与`values()`方法的实现有关。
 
-* * *
+---
 
-**注意：**出于各种原因，包括支持枚举类型的演变，枚举常量的声明顺序很重要。[`Class.getFields()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getFields--)和[`Class.getDeclaredFields()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getDeclaredFields--)不能保证返回值的顺序与声明源代码中的顺序匹配。如果应用程序需要排序，请使用[`Class.getEnumConstants()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getEnumConstants--)。
+**注意：**出于各种原因，包括支持枚举类型的演变，枚举常量的声明顺序很重要。`Class.getFields()`和`Class.getDeclaredFields()`不能保证返回值的顺序与声明源代码中的顺序匹配。如果应用程序需要排序，请使用`Class.getEnumConstants()`。
 
-* * *
+---
 
-对于[`java.util.concurrent.TimeUnit`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/TimeUnit.html)的输出显示，更复杂的枚举是可能的。这个类包括几个方法以及额外声明为`static final`的字段，这些字段不是枚举常量。
+对于`java.util.concurrent.TimeUnit`的输出显示，更复杂的枚举是可能的。这个类包括几个方法以及额外声明为`static final`的字段，这些字段不是枚举常量。
+
+
 
 ```java
 $ java EnumSpy java.util.concurrent.TimeUnit
@@ -227,5 +214,4 @@ Class:  class java.util.concurrent.TimeUnit
        Method:  public long java.util.concurrent.TimeUnit.toMinutes(long)
        Method:  public long java.util.concurrent.TimeUnit.toSeconds(long)
        Method:  static long java.util.concurrent.TimeUnit.x(long,long,long)
-
 ```

@@ -1,3 +1,4 @@
+
 # 使用数组对象
 
 > 原文：[`docs.oracle.com/javase/tutorial/jdbc/basics/array.html`](https://docs.oracle.com/javase/tutorial/jdbc/basics/array.html)
@@ -6,13 +7,10 @@
 
 下面的主题包括：
 
-+   创建数组对象
-
-+   检索和访问 ResultSet 中的数组值
-
-+   存储和更新数组对象
-
-+   释放数组资源
++ 创建数组对象
++ 检索和访问 `ResultSet` 中的数组值
++ 存储和更新数组对象
++ 释放数组资源
 
 ## 创建数组对象
 
@@ -32,14 +30,12 @@ insert into REGIONS values(
 insert into REGIONS values(
     'Southwest',
     '{"94105", "90049", "92027"}');
-
 ```
 
 ```java
 Connection con = DriverManager.getConnection(url, props);
 String [] northEastRegion = { "10022", "02110", "07399" };
 Array anArray = con.createArrayOf("VARCHAR", northEastRegion);
-
 ```
 
 Oracle 数据库 JDBC 驱动程序使用`oracle.sql.ARRAY`类实现`java.sql.Array`接口。
@@ -64,26 +60,23 @@ while (rs.next()) {
         }
     }
 }
-
 ```
 
 在以下语句中，`ResultSet`方法`getArray`将当前行的列`ZIPS`中存储的值作为`java.sql.Array`对象`z`返回：
 
 ```java
 Array z = rs.getArray("ZIPS");
-
 ```
 
-变量`*z*`包含一个定位器，这是指向服务器上 SQL `ARRAY`的逻辑指针；它不包含`ARRAY`本身的元素。作为逻辑指针，`*z*`可用于在服务器上操作数组。
+变量`z`包含一个定位器，这是指向服务器上 SQL `ARRAY`的逻辑指针；它不包含`ARRAY`本身的元素。作为逻辑指针，`z`可用于在服务器上操作数组。
 
 在以下行中，`getArray`是`Array.getArray`方法，而不是前一行中使用的`ResultSet.getArray`方法。因为`Array.getArray`方法在 Java 编程语言中返回一个`Object`，并且每个邮政编码都是一个`String`对象，所以在分配给变量`zips`之前，结果被转换为`String`对象的数组。
 
 ```java
 String[] zips = (String[])z.getArray();
-
 ```
 
-`Array.getArray`方法将 SQL `ARRAY`元素在客户端作为`String`对象数组实现。因为实际上变量`*zips*`包含数组的元素，所以可以在`for`循环中遍历`zips`，查找无效的邮政编码。
+`Array.getArray`方法将 SQL `ARRAY`元素在客户端作为`String`对象数组实现。因为实际上变量`zips`包含数组的元素，所以可以在`for`循环中遍历`zips`，查找无效的邮政编码。
 
 ## 存储和更新数组对象
 
@@ -97,7 +90,6 @@ PreparedStatement pstmt = con.prepareStatement(
 pstmt.setString(1, "NorthEast");
 pstmt.setArray(2, anArray);
 pstmt.executeUpdate();
-
 ```
 
 同样，使用方法`PreparedStatement.updateArray`和`PreparedStatement.updateObject`来使用`Array`值更新表中的列。
@@ -112,5 +104,4 @@ pstmt.executeUpdate();
 Array aArray = con.createArrayOf("VARCHAR", northEastRegionnewYork);
 // ...
 aArray.free();
-
 ```

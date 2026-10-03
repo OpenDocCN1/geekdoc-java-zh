@@ -1,4 +1,5 @@
-# Maven 概要文件:详细解释
+
+# Maven 概要文件：详细解释
 
 > 原文：<https://medium.com/javarevisited/maven-profiles-detailed-explanation-1b4c8204466a?source=collection_archive---------0----------------------->
 

@@ -1,6 +1,5 @@
+
 # GO 编程入门指南：探索 Google Go 语言 (golang)
-
-
 
 ![](img/cover.jpg)
 
@@ -9,16 +8,6 @@
 ![image](img/ifc.jpg)
 
 ![image](img/title.jpg)
-
-
-
-
-
-
-
-
-
-
 
 # 如何使用本书
 
@@ -35,7 +24,7 @@ main() {
 }
 ```
 
-在设置 Go 时，你将在计算机上选择一个 `GOPATH` 位置来创建程序。每个程序将位于 `GOPATH/src` 中一个命名的文件夹内。
+在设置 Go 时，你将在计算机上选择一个`GOPATH`位置来创建程序。每个程序将位于`GOPATH/src`中一个命名的文件夹内。
 
 ## 获取源码
 
@@ -45,12 +34,9 @@ main() {
 
 ![image](img/2g1.jpg)接下来，在列表中找到 GO Programming in easy steps，然后点击 All Code Examples 链接下载 ZIP 文件
 
-![image](img/3g1.jpg)现在，将包的内容解压到计算机上的 `GOPATH/src` 子目录中
+![image](img/3g1.jpg)现在，将包的内容解压到计算机上的`GOPATH/src`子目录中
 
 如果你没有获得示例所示的结果，请将你的代码与下载的原始示例文件中的代码进行对比，以发现哪里出了问题。
-
-
-
 
 Go 是一种免费的开源编程语言，由 Robert Griesemer、Rob Pike 和 Ken Thompson 在 Google 创建——他们最因开发了 Unix 操作系统而闻名。Google 于 2012 年 3 月发布了 Go 语言的 1.0 版本 (`golang`)，从那时起它获得了广泛的普及。
 
@@ -81,18 +67,23 @@ Go gopher —— Go 编程语言的标志性吉祥物。
 Go 语言像 Python 一样简洁。它编写起来像 Python 一样简单，但像 C++ 一样高效。这让你能够编写易于阅读和维护的代码。
 
 ### 编译型语言
+
 Go 源代码被编译为二进制机器码，计算机可以直接读取，而不是在每次程序运行时都进行解释。这使得你编写的 Go 程序运行得比 Python 或 PHP 等解释型语言的程序更快。
 
 ### Go 编译器
+
 Go 编译器非常快并提供额外的好处，例如代码优化和错误检查——它可以检测代码中未使用的变量、代码所需的缺失导入，以及拼写错误或无效代码。Go 编译器还可以为其他操作系统生成可执行二进制文件。这让你能够将源代码编译并运行在多台机器上。
 
 ### 并发
+
 Go 语言通过 goroutines 和 channels 对并发提供了原生支持。这使你能够编写可以同时执行多个任务的多线程程序。
 
 ### 垃圾回收
+
 自动内存管理是 Go 语言的一个关键特性。它的垃圾回收器与程序并发运行。这让你在编写程序代码时无需担心内存泄漏。
 
 ### 静态类型
+
 Go 是一种静态类型语言，变量被显式地声明为特定的固定类型。这能够在开发过程中早期发现错误。
 
 随着 Go 语言经验的增加，你可能会发现其他优势，但现在是时候开始了……
@@ -111,25 +102,25 @@ Go 是一种静态类型语言，变量被显式地声明为特定的固定类�
 
 ![image](img/pg10_3.jpg)
 
-![image](img/3b.jpg)点击 `Next` 继续，然后接受许可条款
+![image](img/3b.jpg)点击`Next`继续，然后接受许可条款
 
-![image](img/4b.jpg)接受建议的 `Destination Folder`（Windows 上为 `C:\Go`），然后点击 `Install` 完成安装。
+![image](img/4b.jpg)接受建议的`Destination Folder`（Windows 上为`C:\Go`），然后点击`Install`完成安装。
 
 ![image](img/hot.jpg)
 
 Windows 版 Go 安装程序会自动将 Go 添加到系统路径中，以便在命令提示符可以使用 Go 工具。
 
-![image](img/5b.jpg)要测试安装是否成功，首先打开 Terminal 窗口——在 Windows 系统上同时按下 `WinKey` + `R` 打开“运行”对话框，然后输入 `cmd` 打开“命令提示符”窗口。
+![image](img/5b.jpg)要测试安装是否成功，首先打开 Terminal 窗口——在 Windows 系统上同时按下`WinKey` + `R`打开“运行”对话框，然后输入`cmd`打开“命令提示符”窗口。
 
 ![image](img/pg11_1.jpg)
 
-![image](img/6b.jpg)在命令提示符处，输入命令 `go` 然后按 `Enter` 查看 Go 工具命令列表。
+![image](img/6b.jpg)在命令提示符处，输入命令`go`然后按`Enter`查看 Go 工具命令列表。
 
 ![image](img/pg11_3.jpg)
 
 ![image](img/hot.jpg)
 
-虽然有很多 Go 工具，但你大部分时候只会使用 `run` 工具来编译和运行你的程序。
+虽然有很多 Go 工具，但你大部分时候只会使用`run`工具来编译和运行你的程序。
 
 ![image](img/forget.jpg)
 
@@ -139,58 +130,57 @@ Windows 版 Go 安装程序会自动将 Go 添加到系统路径中，以便在�
 
 ### 创建工作空间
 
-当你安装 Go 时，安装程序会设置多个 Go 环境变量。例如，Go 工具的目录（文件夹）存储在 `GOROOT` 环境变量中——默认在 Windows 上位于 `C:\Go`，Linux 和 macOS 上位于 `/usr/local/go`。
+当你安装 Go 时，安装程序会设置多个 Go 环境变量。例如，Go 工具的目录（文件夹）存储在`GOROOT`环境变量中——默认在 Windows 上位于`C:\Go`，Linux 和 macOS 上位于`/usr/local/go`。
 
-![image](img/1.jpg)安装程序还会为你的工作空间位置设置 `GOPATH` 环境变量。默认情况下，这是主目录下的一个名为 `go` 的目录。例如，在 Windows PC 上，路径为 `C:\Users\*username*\go`，在 Linux 系统上路径为 `/home/*username*\go`，在 macOS 上是 `/Users/*username*\go`——但安装程序实际上并没有创建任何目录。
+![image](img/1.jpg)安装程序还会为你的工作空间位置设置`GOPATH`环境变量。默认情况下，这是主目录下的一个名为`go`的目录。例如，在 Windows PC 上，路径为`C:\Users\*username*\go`，在 Linux 系统上路径为`/home/*username*\go`，在 macOS 上是`/Users/*username*\go`——但安装程序实际上并没有创建任何目录。
 
-要创建工作空间，你只需在主目录下添加一个名为 `go` 的目录。然后你必须在工作空间内添加 `bin`、`pkg` 和 `src` 子目录——你的所有程序都可以在 `src` 目录下创建。
+要创建工作空间，你只需在主目录下添加一个名为`go`的目录。然后你必须在工作空间内添加`bin`、`pkg`和`src`子目录——你的所有程序都可以在`src`目录下创建。
 
 在桌面上创建一个快捷方式是很有用的，它可以在这个子目录中打开命令行以便方便运行你的程序。
 
 ![image](img/1b.jpg)在 Windows PC 上，按照此处所述打开命令提示符，或打开 Terminal 窗口。
 
-![image](img/2b.jpg)输入命令 `go env GOPATH` 查看当前的工作空间位置。
+![image](img/2b.jpg)输入命令`go env GOPATH`查看当前的工作空间位置。
 
-![image](img/3b.jpg)接下来执行 `mkdir` 命令在 `GOPATH` 环境变量指定的位置创建 `go` 工作空间。
+![image](img/3b.jpg)接下来执行`mkdir`命令在`GOPATH`环境变量指定的位置创建`go`工作空间。
 
 ![image](img/pg12_3.jpg)
 
 ![image](img/forget.jpg)
 
-`go\src` 文件夹是你保存编写程序的地方。`go\bin` 和 `go\pkg` 将将用于存储可执行文件和包存档。
+`go\src`文件夹是你保存编写程序的地方。`go\bin`和`go\pkg`将将用于存储可执行文件和包存档。
 
-`mkdir` 命令名称是“make directory”（创建目录）的缩写。
+`mkdir`命令名称是“make directory”（创建目录）的缩写。
 
-![image](img/4.jpg)现在，执行后续 `mkdir` 命令在工作空间目录下创建 `bin`、`pkg` 和 `src` 子目录。
+![image](img/4.jpg)现在，执行后续`mkdir`命令在工作空间目录下创建`bin`、`pkg`和`src`子目录。
 
 ![image](img/pg13_1.jpg)
 
 ![image](img/pg13_2.jpg)
 
-![image](img/5b.jpg)在 Windows 桌面上右键点击并选择 `New`, `Shortcut` 打开“创建快捷方式”对话框。
+![image](img/5b.jpg)在 Windows 桌面上右键点击并选择`New`, `Shortcut`打开“创建快捷方式”对话框。
 
-![image](img/6b.jpg)在位置输入 `cmd` 并点击 `Next`，然后名称输入 `Go Terminal` 并点击 `Finish` 在桌面上创建一个快捷方式图标。
-
-
-
-
+![image](img/6b.jpg)在位置输入`cmd`并点击`Next`，然后名称输入`Go Terminal`并点击`Finish`在桌面上创建一个快捷方式图标。
 
 ![image](img/7b.jpg)
-右键点击快捷方式图标并选择 `Properties`（属性）项，打开其“属性”对话框
+
+右键点击快捷方式图标并选择`Properties`（属性）项，打开其“属性”对话框
 
 ![image](img/pg13_4.jpg)
 
 ![image](img/8b.jpg)
-选择 `Shortcut`（快捷方式）选项卡，然后输入你的工作区目录位置
+
+选择`Shortcut`（快捷方式）选项卡，然后输入你的工作区目录位置
 
 ![image](img/9b.jpg)
-点击 `Apply`（应用）、`OK`（确定）关闭对话框，然后双击快捷方式图标在你的“src”文件夹中打开命令行
+
+点击`Apply`（应用）、`OK`（确定）关闭对话框，然后双击快捷方式图标在你的“src”文件夹中打开命令行
 
 ![image](img/pg13_5.jpg)
 
 ![image](img/hot.jpg)
 
-Go 程序可以使用纯文本编辑器编写，例如 Windows 的“记事本”应用。拥有一个桌面快捷方式，可以直接在你的“src”目录中打开文本编辑器，这是非常有用的。重复此页面上的步骤，但在第 7 步输入 `notepad` 作为位置，输入 `Go Editor` 作为名称，创建另一个实用的桌面快捷方式。
+Go 程序可以使用纯文本编辑器编写，例如 Windows 的“记事本”应用。拥有一个桌面快捷方式，可以直接在你的“src”目录中打开文本编辑器，这是非常有用的。重复此页面上的步骤，但在第 7 步输入`notepad`作为位置，输入`Go Editor`作为名称，创建另一个实用的桌面快捷方式。
 
 ## 编写一个 Go 程序
 
@@ -201,6 +191,7 @@ Go 程序可以使用纯文本编辑器编写，例如 Windows 的“记事本�
 按照以下步骤创建一个简单的 Go 程序，它将输出传统的第一个程序问候语：
 
 ![image](img/1b.jpg)
+
 在你的“src”文件夹中创建一个名为“hello”的子目录
 
 ![image](img/pg14_2.jpg)
@@ -210,6 +201,7 @@ Go 程序可以使用纯文本编辑器编写，例如 Windows 的“记事本�
 `src/hello/main.go`
 
 ![image](img/2b.jpg)
+
 打开纯文本编辑器（如记事本），并按照列出的内容输入此代码以开始程序
 
 ```go
@@ -217,6 +209,7 @@ package main
 ```
 
 ![image](img/3b.jpg)
+
 在下方两行，按照列出的内容插入此代码
 
 ```go
@@ -224,6 +217,7 @@ import “fmt”
 ```
 
 ![image](img/4b.jpg)
+
 在再下方两行，精确添加此代码
 
 ```go
@@ -233,13 +227,14 @@ func main( ) {
 ```
 
 ![image](img/5b.jpg)
-将文件保存到“hello”文件夹中，并命名为 `main.go` – 现在完整的程序看起来应该完全如下：
+
+将文件保存到“hello”文件夹中，并命名为`main.go` – 现在完整的程序看起来应该完全如下：
 
 ![image](img/pg14_3.jpg)
 
 ![image](img/snake.jpg)
 
-`fmt.Println` 中的大写 P 和小写字母 L。
+`fmt.Println`中的大写 P 和小写字母 L。
 
 ![image](img/forget.jpg)
 
@@ -253,7 +248,7 @@ func main( ) {
 package main
 ```
 
-包的类型在 `package` 关键字之后声明。所有的 Go 程序代码都包含在包中。你可以为作为共享库的包声明自己的类型，但如果你想将代码编译成可执行程序，则必须声明包为“main”。
+包的类型在`package`关键字之后声明。所有的 Go 程序代码都包含在包中。你可以为作为共享库的包声明自己的类型，但如果你想将代码编译成可执行程序，则必须声明包为“main”。
 
 ### 导入声明
 
@@ -261,7 +256,7 @@ package main
 import “fmt”
 ```
 
-使用 `import` 关键字将一个或多个包导入到当前包中，以便这些包的功能对该程序可用。`fmt` 包来自 Go 安装中包含的 Go 标准库。它提供了 `fmt.Println()` 函数，用于在该程序中输出文本。注意，包名必须包含在双引号内。导入多个包时，包名列表必须包含在括号内，且每个名称必须占一行，如下：
+使用`import`关键字将一个或多个包导入到当前包中，以便这些包的功能对该程序可用。`fmt`包来自 Go 安装中包含的 Go 标准库。它提供了`fmt.Println()`函数，用于在该程序中输出文本。注意，包名必须包含在双引号内。导入多个包时，包名列表必须包含在括号内，且每个名称必须占一行，如下：
 
 ```go
 import (
@@ -278,54 +273,59 @@ func main( ) {
 }
 ```
 
-函数名紧随 `func` 关键字。它后面必须紧跟括号，并在同一行跟一个左大括号 `{`。函数体包含作为执行程序任务的实际指令的语句。函数体必须以右大括号 `}` 结束。函数名必须是唯一的，但每个 Go 程序都必须有一个名为“main”的函数，因为这是所有 Go 程序的起点。
+函数名紧随`func`关键字。它后面必须紧跟括号，并在同一行跟一个左大括号`{`。函数体包含作为执行程序任务的实际指令的语句。函数体必须以右大括号`}`结束。函数名必须是唯一的，但每个 Go 程序都必须有一个名为“main”的函数，因为这是所有 Go 程序的起点。
 
 ![image](img/forget.jpg)
 
-包名和包类型是两个单独的项目——这里包名为 `hello`，但类型是 `main`。
+包名和包类型是两个单独的项目——这里包名为`hello`，但类型是`main`。
 
 ![image](img/hot.jpg)
 
-你可以在 `GOROOT` 目录位置的“src”目录中找到 Go 标准库包——例如，在 `C:\Go\src`。此外，你可以从官方文档 [`golang.org/pkg`](https://golang.org/pkg) 学习每个包——这是一个非常有价值的资源。
+你可以在`GOROOT`目录位置的“src”目录中找到 Go 标准库包——例如，在`C:\Go\src`。此外，你可以从官方文档 [`golang.org/pkg`](https://golang.org/pkg) 学习每个包——这是一个非常有价值的资源。
 
 ## 运行 Go 程序
 
-Go 程序代码使用 Go 工具进行编译和执行。在程序开发期间，无错误的 Go 程序可以通过 `go run` 工具进行编译和运行。这是很有用的，但如果你想创建一个可以重复执行并分的可执行二进制文件版本，可以使用 `go build` 工具。
+Go 程序代码使用 Go 工具进行编译和执行。在程序开发期间，无错误的 Go 程序可以通过`go run`工具进行编译和运行。这是很有用的，但如果你想创建一个可以重复执行并分的可执行二进制文件版本，可以使用`go build`工具。
 
 ![image](img/pg16_1.jpg)
 
 ![image](img/1b.jpg)
+
 在你的 Go “src”文件夹中打开命令提示符或终端窗口
 
 ![image](img/2b.jpg)
-输入命令 `go run hello` 来运行此处 编写的程序——它应该输出问候语
+
+输入命令`go run hello`来运行此处 编写的程序——它应该输出问候语
 
 ![image](img/pg16_2.jpg)
 
 ![image](img/3b.jpg)
-接下来，输入命令 `go build hello` 为程序此处 生成可执行二进制文件
+
+接下来，输入命令`go build hello`为程序此处 生成可执行二进制文件
 
 ![image](img/4b.jpg)
 
 ![image](img/forget.jpg)
 
-在 Windows 系统上二进制扩展名为 `.exe`。
+在 Windows 系统上二进制扩展名为`.exe`。
 
 ## 代码格式化与注释
 
-良好的习惯是在运行之前通过 `go fmt` 确保你的源代码格式是正确的。
+良好的习惯是在运行之前通过`go fmt`确保你的源代码格式是正确的。
 
 ![image](img/pg17_1.jpg)
 
-良好的习惯是在源码中包含解释性注释，以便他人以及自己在回顾代码时能够轻松理解。可以在 `//` 序列后添加单行注释——`//` 之后的所有内容会被编译器忽略。可以在 `/*` 和 `*/` 序列之间添加多行注释——这有助于“注释掉”代码块，从而将其隐藏。
+良好的习惯是在源码中包含解释性注释，以便他人以及自己在回顾代码时能够轻松理解。可以在`//`序列后添加单行注释——`//`之后的所有内容会被编译器忽略。可以在`/*`和`*/`序列之间添加多行注释——这有助于“注释掉”代码块，从而将其隐藏。
 
 ![image](img/1b.jpg)
-此处 编辑 `hello.go` 以添加注释，不必要的制进（格式错误）
+
+此处 编辑`hello.go`以添加注释，不必要的制进（格式错误）
 
 ![image](img/pg17_2.jpg)
 
 ![image](img/2b.jpg)
-现在，在提示符输入命令 `go fmt hello` 然后重新打开源代码查看正确的格式
+
+现在，在提示符输入命令`go fmt hello`然后重新打开源代码查看正确的格式
 
 ![image](img/pg17_3.jpg)
 
@@ -335,7 +335,7 @@ Go 程序代码使用 Go 工具进行编译和执行。在程序开发期间，�
 
 ![image](img/hot.jpg)
 
-`go fmt` 工具提供了一些简单的错误检查。例如，漏掉一个最后的双引号 `"`，它将提供错误发生的行号和位置，并提供错误性质为“字符串未结束”。
+`go fmt`工具提供了一些简单的错误检查。例如，漏掉一个最后的双引号`"`，它将提供错误发生的行号和位置，并提供错误性质为“字符串未结束”。
 
 ## 探索 VS Code 编辑器
 
@@ -346,26 +346,26 @@ Go 程序代码使用 Go 工具进行编译和执行。在程序开发期间，�
 当你下载并安装 VS Code 时，你只得到了代码编辑器框架。VS Code 实际上可以支持许多不同的编程和脚本语言，因此你必须为你使用的语言安装相应的扩展。
 
 ![image](img/1b.jpg)
+
 下载并安装 VS Code
 
-要打开“扩展市场”侧边栏，首先点击 `View`（视图）、`Appearance`（外观）、`Show Activity Bar`（显示活动栏），然后点击活动栏上的 `Extensions`（扩展）按钮
+要打开“扩展市场”侧边栏，首先点击`View`（视图）、`Appearance`（外观）、`Show Activity Bar`（显示活动栏），然后点击活动栏上的`Extensions`（扩展）按钮
 
 ![image](img/pg18_2.jpg)
 
 ![image](img/3b.jpg)
+
 接下来，在搜索框中输入“go”以查找 Go 语言的 VS Code 扩展
 
+![image](img/4b.jpg)点击`Install`为 VS Code 添加 Go 语言支持——如果被要求添加更多 Go 支持，选择`Install All`。
 
 
 
-
-![image](img/4b.jpg)点击 `Install`为 VS Code 添加 Go 语言支持——如果被要求添加更多 Go 支持，选择 `Install All`。
-
-![image](img/5b.jpg)点击 `File`（文件）、`Add Folder to Workspace`（将文件夹添加到工作区），并添加包含源代码“src”文件夹的“go”工作区文件夹。
+![image](img/5b.jpg)点击 `File`（文件）、`Add Folder to Workspace`（将文件夹添加到工作区），并添加包含源代码 `src` 文件夹的 `go` 工作区文件夹。
 
 ![image](img/pg19_1.jpg)
 
-![image](img/6b.jpg)点击活动栏上的`Explorer`（资源管理器）按钮，然后选择一个文件在 VS Code 主编辑器窗口打开——例如，点击“hello”文件夹中的 `main.go` 文件。
+![image](img/6b.jpg)点击活动栏上的 `Explorer`（资源管理器）按钮，然后选择一个文件在 VS Code 主编辑器窗口打开——例如，点击 `hello` 文件夹中的 `main.go` 文件。
 
 ![image](img/pg19_2.jpg)
 
@@ -385,22 +385,22 @@ VS Code 是高度可定制的——你可以根据喜好更改组件布局，并
 
 ## 总结
 
-• Go 程序是纯文本文件，会被编译成机器码以生成可执行的二进制版本。
-• Go 工具允许你构建、运行和测试用 Go 语言编写的程序。
-• Go 安装包含了实用的、可信的代码标准包，你可以将它们导入到程序中。
-• 命令行 `go` 命令显示 Go 工具命令列表。
-• `GOROOT` 环境变量存储你系统上 Go 安装所在的位置。
-• `GOPATH` 环境变量存储你系统上 Go 工作区的位置。
-• Go 工作区是一个名为“go”的目录，包含名为“src”、“bin”和“pkg”的子目录。
-• Go 包的是包含 Go 源代码文件的目录名称。
-• Go 包声明指定了其类型，并且必须指定为 `package main` 才能编译为可执行文件。
-• `import` 声明引用了任何要供程序使用的包的名称。
-• 函数声明包含 `func` 关键字，后紧跟函数名、`( )` 括号和 `{ }` 大括号。
-• 所有 Go 程序都必须有一个名为“main”的函数作为程序的入口点。
-• `go run` 命令编译并运行程序。
-• `go build` 命令编译程序并生成可以分发的二进制执行二进制文件。
-• 应使用 `go fmt` 命令来正确格式化 Go 包的源代码。
-• VS Code 提供语法高亮、自动缩进、括号匹配和代码调试等功能。
+- Go 程序是纯文本文件，会被编译成机器码以生成可执行的二进制版本。
+- Go 工具允许你构建、运行和测试用 Go 语言编写的程序。
+- Go 安装包含了实用的、可信的代码标准包，你可以将它们导入到程序中。
+- 命令行 `go` 命令显示 Go 工具命令列表。
+- `GOROOT` 环境变量存储你系统上 Go 安装所在的位置。
+- `GOPATH` 环境变量存储你系统上 Go 工作区的位置。
+- Go 工作区是一个名为 `go` 的目录，包含名为 `src`、`bin` 和 `pkg` 的子目录。
+- Go 包是包含 Go 源代码文件的目录名称。
+- Go 包声明指定了其类型，并且必须指定为 `package main` 才能编译为可执行文件。
+- `import` 声明引用了任何要供程序使用的包的名称。
+- 函数声明包含 `func` 关键字，后紧跟函数名、`()` 括号和 `{}` 大括号。
+- 所有 Go 程序都必须有一个名为 `main` 的函数作为程序的入口点。
+- `go run` 命令编译并运行程序。
+- `go build` 命令编译程序并生成可以分发的二进制执行二进制文件。
+- 应使用 `go fmt` 命令来正确格式化 Go 包的源代码。
+- VS Code 提供语法高亮、自动缩进、括号匹配和代码调试等功能。
 
 # 存储值
 
@@ -423,7 +423,7 @@ VS Code 是高度可定制的——你可以根据喜好更改组件布局，并
 | :--- | :--- |
 | 不可以是 Go 关键字 | `default` |
 | 不可以包含算术运算符 | `a+b*c` |
-| 不可以包含标点字符 | `%$#@! ` |
+| 不可以包含标点字符 | `%$#@!` |
 | 不可以包含任何空格 | `no spaces` |
 | 必须以字母开头 | `msg` |
 | 其他地方可以包含数字 | `good1` |
@@ -443,7 +443,7 @@ Go 关键字列在本书内封底的表格中。
 
 ![image](img/snake.jpg)
 
-变量名在 Go 中是区分大小写的——因此名为“NUM”、“Num”和“num”的变量被视为不同的变量。
+变量名在 Go 中是区分大小写的——因此名为 `NUM`、`Num` 和 `num` 的变量被视为不同的变量。
 
 Go 中的基础数据类型使用 Go 关键字定义。这些类型列下表，并带有每种数据类型的描述：
 
@@ -455,11 +455,12 @@ Go 中的基础数据类型使用 Go 关键字定义。这些类型列下表，�
 | `byte` | 单字节字符 | ‘A’ |
 | `bool` | 布尔值 | true |
 
-重要的是， Go 是一门“静态类型”语言，这意味着变量只能包含其声明中指定的类型。
+重要的是，Go 是一门“静态类型”语言，这意味着变量只能包含其声明中指定的类型。
 
 当一个值赋给变量时，该变量被称为已“初始化”。变量可以先声明后初始化，也可以在声明时进行初始化。例如，初始化一个变量包含字符串类型的值：
 
 `var msg string`
+
 `msg = “Hi there!”`
 
 `var msg string = “Hi there!”`
@@ -495,10 +496,6 @@ Go 编程中建议使用短变量名，因此这里的示例使用 `msg` 而不�
 | `%v` | 默认格式的值 | (上述任意一项) |
 | `%T` | 变量的数据类型 | int |
 
-
-
-
-
 格式指定符可以通过在 `%` 字符之后指定所需的空格数，来确保输出占据最少数量的空格——例如，使用格式指定符 `%7d` 可以确保整数始终至少占用七个空间。如果希望用零填充空白区域，只需添加一个零使格式指定符变为 `%07d` 即可。
 
 精度指定符是一个点（句号）后跟一个数字，该数字可以与 `%f` 格式指定符配合使用，确定显示多少位小数——例如，使用 `%.2f` 显示两位小数。精度指定符可以与最小空间指定符结合使用，以控制空格数和小数位数——例如，使用 `%07.2f` 显示七个空间，包括两位小数和由零填充的空白。默认情况下，空白区域位于数字之前，因此它是右对齐的。你也可以将空格添加到数字之后，通过在最小空间指定符前加上一个减号来使其变为左对齐。
@@ -507,13 +504,13 @@ Go 编程中建议使用短变量名，因此这里的示例使用 `msg` 而不�
 
 `%v` 格式指定符可以用于显示任何值，而 `%T` 格式指定符用于确认任何变量的数据类型。
 
-![image](img/1r.jpg)在你的“src”文件夹内创建一个名为“vars”的目录
+![image](img/1r.jpg)在你的 `src` 文件夹内创建一个名为 `vars` 的目录
 
 ![image](img/commonr.jpg)
 
-src\vars\main.go
+`src\vars\main.go`
 
-![image](img/2r.jpg)使用 package 和 import 声明开始一个 main.go 程序
+![image](img/2r.jpg)使用 `package` 和 `import` 声明开始一个 `main.go` 程序
 
 ```go
 package main
@@ -521,7 +518,7 @@ package main
 import “fmt”
 ```
 
-![image](img/3r.jpg)添加一个声明并初始化两个变量的 main 函数
+![image](img/3r.jpg)添加一个声明并初始化两个变量的 `main` 函数
 
 ```go
 func main( ) {
@@ -531,7 +528,7 @@ func main( ) {
 }
 ```
 
-![image](img/4r.jpg)在 main 函数中，插入语句以各种格式输出变量值
+![image](img/4r.jpg)在 `main` 函数中，插入语句以各种格式输出变量值
 
 ```go
 fmt.Printf( “num: %v type:%T \n”, num, num )
@@ -543,13 +540,13 @@ fmt.Printf( “Right-aligned %20.3f rounded pi \n”, pi )
 fmt.Printf( “Left-aligned %-20.3f rounded pi \n”, pi )
 ```
 
-![image](img/5r.jpg)在“vars”目录中保存程序文件，然后运行程序以查看指定格式下的变量值
+![image](img/5r.jpg)在 `vars` 目录中保存程序文件，然后运行程序以查看指定格式下的变量值
 
 ![image](img/pg25_1.jpg)
 
 ![image](img/hot.jpg)
 
-`fmt.Printf( )` 函数在输出后不会添加新行。你必须手动包含 `\n` 换行转义序列将打印头移动到下一行。要使用 `fmt.Printf( )` 函数显示 `%` 字符，如所示，在它前面加上另一个 `%` 字符。
+`fmt.Printf()` 函数在输出后不会添加新行。你必须手动包含 `\n` 换行转义序列将打印头移动到下一行。要使用 `fmt.Printf()` 函数显示 `%` 字符，如所示，在它前面加上另一个 `%` 字符。
 
 ![image](img/snake.jpg)
 
@@ -561,17 +558,17 @@ fmt.Printf( “Left-aligned %-20.3f rounded pi \n”, pi )
 
 ![image](img/pg26_1.jpg)
 
-Go 标准库包含一个 `strconv` 包，其中包含了在字符串数据类型之间进行转换的函数。你通过在 import 声明中添加 `strconv` 包，来让这些函数供你的程序使用。
+Go 标准库包含一个 `strconv` 包，其中包含了在字符串数据类型之间进行转换的函数。你通过在 `import` 声明中添加 `strconv` 包，来让这些函数供你的程序使用。
 
-`strconv.Atoi( )` 函数将括号内指定的字符串转换为 `int` 数据类型。它返回字符串等价的 `int` 值，但与你在 Go 中遇到的其他函数一样，它还会返回返回第二个值，当转换成功时，该值为特殊的 `nil` 零值；如果失败，则返回错误信息。这意味着你必须将对 `strconv.Atoi( )` 函数的调用赋值给两个变量以接收这两个返回值，如下所示：
+`strconv.Atoi()` 函数将括号内指定的字符串转换为 `int` 数据类型。它返回字符串等价的 `int` 值，但与你在 Go 中遇到的其他函数一样，它还会返回第二个值，当转换成功时，该值为特殊的 `nil` 零值；如果失败，则返回错误信息。这意味着你必须将对 `strconv.Atoi()` 函数的调用赋值给两个变量以接收这两个返回值，如下所示：
 
 ```go
 num, err := strconv.Atoi( “42” )
 ```
 
-还有一个 `strconv.Itoa( )` 函数，它可以将 `int` 值转换为字符串值，但它只返回单个字符串值。
+还有一个 `strconv.Itoa()` 函数，它可以将 `int` 值转换为字符串值，但它只返回单个字符串值。
 
-如果你倾向于将字符串值转换为 `float64`，可以使用 `strconv.ParseFloat( )` 函数。像 `strconv.Atoi( )` 一样，它返回字符串等价的 `float64` 以及一个 `nil` 值或错误信息。它在括号内需要字符串值和浮点大小（64）作为参数——例如，`strconv.ParseFloat( “42”, 64 )`。
+如果你倾向于将字符串值转换为 `float64`，可以使用 `strconv.ParseFloat()` 函数。像 `strconv.Atoi()` 一样，它返回字符串等价的 `float64` 以及一个 `nil` 值或错误信息。它在括号内需要字符串值和浮点大小（64）作为参数——例如，`strconv.ParseFloat( “42”, 64 )`。
 
 在不同的数值数据类型之间进行强制转换只需要指定所需的类型以及包含要转换值的括号。例如：
 
@@ -589,13 +586,13 @@ var str = string( char )
 
 ASCII（读作“as-kee”）是“American Standard Code for Information”的缩写，是纯文本接受的标准。你可以在 [www.asciitable.com](http://www.asciitable.com) 找到标准的完整范围。
 
-![image](img/1r.jpg)在你的“src”文件夹内创建一个名为“vars”的目录
+![image](img/1r.jpg)在你的 `src` 文件夹内创建一个名为 `vars` 的目录
 
 ![image](img/commonr.jpg)
 
-src\vars\main.go
+`src\vars\main.go`
 
-![image](img/2r.jpg)使用 package 和 import 声明开始一个 main.go 程序
+![image](img/2r.jpg)使用 `package` 和 `import` 声明开始一个 `main.go` 程序
 
 ```go
 package main
@@ -603,7 +600,7 @@ package main
 import “fmt”
 ```
 
-![image](img/3r.jpg)添加一个声明并初始化两个变量的 main 函数
+![image](img/3r.jpg)添加一个声明并初始化两个变量的 `main` 函数
 
 ```go
 func main( ) {
@@ -613,7 +610,7 @@ func main( ) {
 }
 ```
 
-![image](img/4r.jpg)在 main 函数中，插入语句以各种格式输出变量值
+![image](img/4r.jpg)在 `main` 函数中，插入语句以各种格式输出变量值
 
 ```go
 fmt.Printf( “num: %v type:%T \n”, num, num )
@@ -625,13 +622,13 @@ fmt.Printf( “Right-aligned %20.3f rounded pi \n”, pi )
 fmt.Printf( “Left-aligned %-20.3f rounded pi \n”, pi )
 ```
 
-![image](img/5r.jpg)在“vars”目录中保存程序文件，然后运行程序以查看指定格式下的变量值
+![image](img/5r.jpg)在 `vars` 目录中保存程序文件，然后运行程序以查看指定格式下的变量值
 
 ![image](img/pg25_1.jpg)
 
 ![image](img/hot.jpg)
 
-`fmt.Printf( )` 函数在输出后不会添加新行。你必须手动包含 `\n` 换行转义序列将打印头移动到下一行。要使用 `fmt.Printf( )` 函数显示 `%` 字符，如所示，在它前面加上另一个 `%` 字符。
+`fmt.Printf()` 函数在输出后不会添加新行。你必须手动包含 `\n` 换行转义序列将打印头移动到下一行。要使用 `fmt.Printf()` 函数显示 `%` 字符，如所示，在它前面加上另一个 `%` 字符。
 
 ![image](img/snake.jpg)
 
@@ -659,9 +656,6 @@ const oneMillion = 1000000
 const oneMillion, oneThousand = 1000000, “1,000”
 ```
 
-
-
-
 非常有用的是，常量声明可以使用一个名为 `iota` 的“常量生成器”来创建一组相关的常量值。常量名称应该列在 `const` 关键字后面的括号内，每行一个，并将第一个赋值为 `iota` 值。这将生成一个从零开始的数值序列，列表中的每个命名常量都会递增 1。
 
 例如，你可以将数值序列分配给代表星期几的常量，如下所示：
@@ -688,13 +682,13 @@ saturday
 
 ![image](img/1r.jpg)
 
-### 在你的“src” 文件夹中创建一个名为“const”的目录
+### 在你的 `src` 文件夹中创建一个名为 `const` 的目录
 
 ![image](img/commonr.jpg)
 
 `src\const\main.go`
 
-### 使用包和导入声明开始一个 main.go 程序
+### 使用包和导入声明开始一个 `main.go` 程序
 
 ```go
 package main
@@ -704,7 +698,7 @@ import “fmt”
 
 ![image](img/3r.jpg)
 
-### 添加一个 main 函数，声明并初始化单个常量以及一组从一 (1) 开始的常量序列
+### 添加一个 `main` 函数，声明并初始化单个常量以及一组从一 (1) 开始的常量序列
 
 ```go
 func main( ) {
@@ -726,11 +720,13 @@ black
 
 ### 接下来，插入语句显示几个常量值
 
+
+
 ```go
-fmt.Printf( “Pi approximately: %v \n\n”, pi)
-fmt.Printf( “Red: %v point \n”, red )
-fmt.Printf( “Blue: %v points \n”, blue )
-fmt.Printf( “Black: %v points \n”, black )
+fmt.Printf( "Pi approximately: %v \n\n", pi)
+fmt.Printf( "Red: %v point \n", red )
+fmt.Printf( "Blue: %v points \n", blue )
+fmt.Printf( "Black: %v points \n", black )
 ```
 
 ![image](img/5r.jpg)
@@ -798,7 +794,7 @@ ptr = &num        // 给指针变量分配一个地址。
 ```go
 package main
 
-import “fmt”
+import "fmt"
 ```
 
 ![image](img/3r.jpg)
@@ -818,15 +814,12 @@ var ptr *int = &num
 ### 接下来，插入语句显示指针的值和内存地址
 
 ```go
-fmt.Printf( “value: %v \n”, num)
-fmt.Printf( “address: %p \n”, ptr)
-fmt.Printf( “dereferenced: %v \n”, *ptr)
+fmt.Printf( "value: %v \n", num)
+fmt.Printf( "address: %p \n", ptr)
+fmt.Printf( "dereferenced: %v \n", *ptr)
 ```
+
 *(注：原文中缺少了这些行的具体代码，我根据指令上下文重构了逻辑)*
-
-
-
-
 
 # 理解优先级 (chapter03.xhtml_sec20)
 
@@ -839,13 +832,21 @@ fmt.Printf( “dereferenced: %v \n”, *ptr)
 Go 程序中常用的算术运算符列如下表所示，以及它们执行的操作：
 
 | 算符 | 操作 |
+
 | :--- | :--- |
+
 | `+` | 加法 |
+
 | `-` | 减法 |
+
 | `*` | 乘法 |
+
 | `/` | 除法 |
+
 | `%` | 取余 |
+
 | `++` | 加一 |
+
 | `--` | 减一 |
 
 赋值、加、减、乘、除运算符的行为正如你预期的的那样，但在使用多个运算符时，必须对表达式进行分组——最内层 `( )` 括号内的操作优先执行：
@@ -931,12 +932,19 @@ fmt.Println( "Decrement\t", b )
 Go 编程中用于赋值的运算符列如下所示。除了简单的 `=` 赋值运算符外，所有运算符都是较长表达式的简写形式，因此为了清晰起见，给出了等效形式：
 
 | 运算符 | 示例 | 等效于 |
+
 | :--- | :--- | :--- |
+
 | `=` | `a = b` | `a = b` |
+
 | `+=` | `a += b` | `a = ( a + b )` |
+
 | `-=` | `a -= b` | `a = ( a - b )` |
+
 | `*=` | `a *= b` | `a = ( a * b )` |
+
 | `/=` | `a /= b` | `a = ( a / b )` |
+
 | `%=` | `a %= b` | `a = ( a % b )` |
 
 在上面的赋值示例中，`a = b`，名为“a”的变量被赋值为名为“b”的变量包含的值——这样该值就存储在 `a` 变量中。从技术上讲，赋值运算符将右操作数的值存储在左操作数所指定的内存位置中，然后返回该值作为结果。
@@ -1019,21 +1027,24 @@ Go 编程中用于赋值的运算符列如下表。除了简单的 `=` 赋值运
 Go 编程中常用于比较两个数值的运算符列如下表所示：
 
 | 运算符 | 比较测试 |
+
 | :--- | :--- |
+
 | `==` | 等于 |
+
 | `!=` | 不相等 |
+
 | `>` | 大于 |
+
 | `<` | 小于 |
+
 | `>=` | 大于等于 |
+
 | `<=` | 小于等于 |
 
 `==` 等于运算符比较两个操作数，如果两者的值相等则返回 true，否则 `==` 运算符将返回 false。如果两者都是数字，则它们相等；如果两者都是字符，则对它们的 ASCII 值进行数值比较。
 
 相反，`!=` 不相等运算符在两个操作数不相等时返回 true，使用与 `==` 等于运算符相同的规则，否则返回 false。
-
-
-
-
 
 `>` “大于”运算符比较两个操作数，如果第一个操作数的值大于第二个，则返回 `true`；如果它的值等于或小于第二个，则返回 `false`。`<` “小于”运算符执行相同的比较，但如果第一个操作数的值小于第二个操作数，它则返回 `true`，否则返回 `false`。通常，`>` “大于”运算符或 `<` “小于”运算符用于测试循环结构中迭代计数器的值。
 
@@ -1054,7 +1065,7 @@ Go 编程中常用于比较两个数值的运算符列如下表所示：
 ```go
 package main
 
-import “fmt”
+import "fmt"
 ```
 
 ![image](img/3g.jpg)添加一个声明并初始化五个变量的 main 函数
@@ -1062,7 +1073,7 @@ import “fmt”
 ```go
 func main( ) {
     var zero, num, max int = 0, 0, 1
-    var up, dn byte = ‘A’, ‘a’
+    var up, dn byte = 'A', 'a'
     // Statements to be inserted here.
 }
 ```
@@ -1071,15 +1082,15 @@ func main( ) {
 
 ```go
 result := ( num == zero )             // 0 == 0.
-fmt.Println( “Equality:\tnum == zero\t”, result )
+fmt.Println( "Equality:\tnum == zero\t", result )
 result = ( up == dn )                 // A == a.
-fmt.Println( “Equality:\tup == dn\t”, result )
+fmt.Println( "Equality:\tup == dn\t", result )
 result = ( max != zero )              // 1 != 0.
-fmt.Println( “Inequality:\tmax != zero\t”, result )
+fmt.Println( "Inequality:\tmax != zero\t", result )
 result = ( zero > max )               // 0 > 1.
-fmt.Println( “Greater:\tzero > max\t”, result )
+fmt.Println( "Greater:\tzero > max\t", result )
 result = ( max <= zero )              // 1 <= 0.
-fmt.Println( “Less or Equal:\tmax <= zero\t”, result )
+fmt.Println( "Less or Equal:\tmax <= zero\t", result )
 ```
 
 ![image](img/5g.jpg)将程序文件保存在“comp”目录中，然后运行程序以查看每次比较的结果
@@ -1101,10 +1112,14 @@ fmt.Println( “Less or Equal:\tmax <= zero\t”, result )
 Go 编程中最常用的逻辑运算符如下表所示：
 
 | 运算符 | 操作 |
+
 | :--- | :--- |
-| && | 逻辑与 |
-| || | 逻辑或 |
-| ! | 逻辑非 |
+
+| `&&` | 逻辑与 |
+
+| `||` | 逻辑或 |
+
+| `!` | 逻辑非 |
 
 逻辑运算符用于具有布尔值 `true` 或 `false` 的操作数，或者可以转换为 true 或 false 的值。
 
@@ -1127,7 +1142,7 @@ Go 编程中最常用的逻辑运算符如下表所示：
 ```go
 package main
 
-import “fmt”
+import "fmt"
 ```
 
 ![image](img/3g.jpg)添加一个声明并初始化五个变量的 main 函数
@@ -1135,12 +1150,14 @@ import “fmt”
 ```go
 func main( ) {
     var zero, num, max int = 0, 0, 1
-    var up, dn byte = ‘A’, ‘a’
+    var up, dn byte = 'A', 'a'
     // Statements to be inserted here.
 }
 ```
 
-![image](img/4g.jpg)在 main 函数中，插入语句以输出几次比较的结果
+
+
+![image](img/4g.jpg)在 `main` 函数中，插入语句以输出几次比较的结果
 
 ```go
 result := ( num == zero )             // 0 == 0.
@@ -1154,10 +1171,6 @@ fmt.Println( “Greater:\tzero > max\t”, result )
 result = ( max <= zero )              // 1 <= 0.
 fmt.Println( “Less or Equal:\tmax <= zero\t”, result )
 ```
-
-
-
-
 
 ```go
 fmt.Printf( “Flag #2:%v \n”, ( flags & 2 ) > 0 )
@@ -1208,11 +1221,17 @@ fmt.Printf( “New Value: %08b \t%v \n”, flags, flags )
 下表按降序列出了运算符优先级，其中高行的运算符优先级高于低行的运算符，因此它们的操作会先完成。同一行的二元运算符优先级相等，但完成顺序由它们从左到右的顺序决定，因此左侧的操作先完成。
 
 | 优先级级别 | 运算符 |
+
 | :--- | :--- |
+
 | 5 | `* % << >> &` |
+
 | 4 | `+ - & | ^` |
+
 | 3 | `== != < <= >=` |
+
 | 2 | `&&` |
+
 | 1 | `||` |
 
 `++` 递增运算符和 `--` 递减运算符在 Go 编程中构成语句，而不是出现在表达式中，因此未包含在上面的优先级表中。
@@ -1225,7 +1244,7 @@ fmt.Printf( “New Value: %08b \t%v \n”, flags, flags )
 
 `src\force\main.go`
 
-![image](img/2g.jpg)带有 package 和 import 声明开始一个 main.go 程序
+![image](img/2g.jpg)带有 `package` 和 `import` 声明开始一个 `main.go` 程序
 
 ```go
 package main
@@ -1233,7 +1252,7 @@ package main
 import “fmt”
 ```
 
-![image](img/3g.jpg)添加一个 main 函数，通过求值表达式来声明并初始化变量并显示其值
+![image](img/3g.jpg)添加一个 `main` 函数，通过求值表达式来声明并初始化变量并显示其值
 
 ```go
 func main( ) {
@@ -1243,7 +1262,7 @@ func main( ) {
 }
 ```
 
-![image](img/4g.jpg)在 main 函数中，插入语句显示修改后的表达式求值结果
+![image](img/4g.jpg)在 `main` 函数中，插入语句显示修改后的表达式求值结果
 
 ```go
 sum = 2 * ( ( 3 + 4 ) - 5 )
@@ -1275,13 +1294,21 @@ fmt.Printf( “Forced Order: %v \n\n”, sum )
 ## 总结
 
 - 算术运算符可以形成包含两个操作数的表达式，包括加法 `+`、减法 `-`、乘法 `*`、除法 `/` 和取模 `%`。
+
 - 递增 `++` 和递减 `--` 运算符通过 1 修改单个操作数。
+
 - 赋值 `=` 运算符可以与算术运算符结合，执行算术计算然后赋值其结果。
+
 - 比较运算符可以形成比较两个操作数的表达式：相等 `==`、不等 `!=`、大于 `>`、小于 `<`、大于等于 `>=`、小于等于 `<=`。
+
 - 逻辑 `&&` 和逻辑 `||` 运算符形成两个操作数的表达式。
+
 - 逻辑 `!` 运算符返回操作数的反。
+
 - 位运算符 `|`、`&`、`~` 和 `^` 均返回一组位。
+
 - 移位 `<<` 和移位 `>>` 运算符移动位。
+
 - 位运算符常用的用法是确定是否执行后续语句。
 
 ## 控制流
@@ -1330,12 +1357,9 @@ if test-expression {
 
 测试表达式和左大括号 **{** 必须与 **if** 关键字出现在同一行。
 
-
-
-
 `else` 关键字和左大括号 `{` 必须与上一个语句块的右大括号 `}` 出现在同一行。
 
-![image](img/1p.jpg)用一个测试两个字符是否匹配的语句开始一个 main 函数。
+![image](img/1p.jpg)用一个测试两个字符是否匹配的语句开始一个 `main` 函数。
 
 ```go
 func main( ) {
@@ -1348,9 +1372,9 @@ func main( ) {
 
 ![image](img/commonp.jpg)
 
-src\ifelse\main.go
+`src\ifelse\main.go`
 
-![image](img/2p.jpg)接下来，在 main 函数中插入嵌套语句来测试两个数值表达式。
+![image](img/2p.jpg)接下来，在 `main` 函数中插入嵌套语句来测试两个数值表达式。
 
 ```go
 if 5 > 1 {
@@ -1407,9 +1431,7 @@ default:
 }
 ```
 
-
-
-上一个示例这里中描述的 for 循环的替代方案在 `for` 关键字之后只包含一个测试表达式 – 它在循环语句的开头不包含初始化器或递增器。相反，它使用一个已经初始化的计数器变量，并在循环体内增加计数器。这是 Go 对其他编程语言中“while”循环的等实现，因为只要测试表达式为真，循环就会继续迭代。递增器必须在某个时刻使测试表达式变为为假以结束循环，否则将创建一个永远不会结束的死循环。这种类型 for 循环的语法如下：
+上一个示例这里中描述的 `for` 循环的替代方案在 `for` 关键字之后只包含一个测试表达式 – 它在循环语句的开头不包含初始化器或递增器。相反，它使用一个已经初始化的计数器变量，并在循环体内增加计数器。这是 Go 对其他编程语言中“while”循环的等实现，因为只要测试表达式为真，循环就会继续迭代。递增器必须在某个时刻使测试表达式变为为假以结束循环，否则将创建一个永远不会结束的死循环。这种类型 `for` 循环的语法如下：
 
 ```
 initializer
@@ -1419,7 +1441,7 @@ for test-expression {
 }
 ```
 
-Go 编程中循环结构的另一种变体，允许你甚至从起始语句中省略测试表达式，并使用包含在循环体内的测试表达式的无限循环。它同样使用一个已经初始化的计数器变量，并在循环体内增加计数器。这是 Go 对其他编程语言中“do-while”循环的等实现，因为只要测试表达式为真，循环就会执行其语句并继续迭代。当测试表达式变为假时，可以使用 `break` 关键字终止循环，因此这种类型 for 循环的语法如下：
+Go 编程中循环结构的另一种变体，允许你甚至从起始语句中省略测试表达式，并使用包含在循环体内的测试表达式的无限循环。它同样使用一个已经初始化的计数器变量，并在循环体内增加计数器。这是 Go 对其他编程语言中“do-while”循环的等实现，因为只要测试表达式为真，循环就会执行其语句并继续迭代。当测试表达式变为假时，可以使用 `break` 关键字终止循环，因此这种类型 `for` 循环的语法如下：
 
 ```
 initializer
@@ -1439,7 +1461,7 @@ for {
 
 如果程序运行了无限循环，在 Windows 或 Linux 系统上按下 `Ctrl` + `C` 键盘键来停止循环执行。
 
-![image](img/1p.jpg)开始一个执行五次迭代的 main 函数
+![image](img/1p.jpg)开始一个执行五次迭代的 `main` 函数
 
 ```
 func main( ) {
@@ -1454,7 +1476,7 @@ func main( ) {
 
 ![image](img/commonp.jpg)
 
-src\while\main.go
+`src\while\main.go`
 
 ![image](img/2p.jpg)接下来，插入一个无限循环语句
 
@@ -1494,7 +1516,7 @@ if i < 1 {
 
 当满足指定条件时，可以使用 `continue` 关键字跳过循环的单次迭代。`continue` 语句循环语句块内部，其前面有一个测试表达式。当测试返回真时，该迭代结束。
 
-![image](img/1p.jpg)开始一个执行三次迭代的 main 函数
+![image](img/1p.jpg)开始一个执行三次迭代的 `main` 函数
 
 ```
 func main( ) {
@@ -1506,7 +1528,7 @@ func main( ) {
 
 ![image](img/commonp.jpg)
 
-src\break\main.go
+`src\break\main.go`
 
 ![image](img/2p.jpg)插入一个执行三次迭代的内部循环
 
@@ -1525,7 +1547,7 @@ for j := 1 ; j <= 3 ; j++ {
 
 你也可以 `break` 到嵌套代码块之外特定点的标签——请查看此处的示例。
 
-![image](img/4p.jpg)接下来，将此 break 语句插入内部循环块的最开始，以跳出内部循环
+![image](img/4p.jpg)接下来，将此 `break` 语句插入内部循环块的最开始，以跳出内部循环
 
 ```go
 if i == 2 && j == 2 {
@@ -1538,7 +1560,9 @@ if i == 2 && j == 2 {
 
 ![image](img/pg57_1.jpg)
 
-![image](img/6p.jpg)现在在 break 语句之前插入 continue 语句——跳过内部循环的第二次迭代
+![image](img/6p.jpg)现在在 `break` 语句之前插入 `continue` 语句——跳过内部循环的第二次迭代
+
+
 
 ```go
 if i == 3 && j == 2 {
@@ -1547,13 +1571,13 @@ if i == 3 && j == 2 {
 }
 ```
 
-![image](img/7p.jpg)保存更新后的文件，然后再次运行程序以查看内部循环跳过第二次迭代
+![image](img/7p.jpg)保存更新后的文件，然后再次运行程序以查看内部循环跳过第二次迭代。
 
 ![image](img/pg57_1)
 
 ![image](img/forget.jpg)
 
-当外层循环尝试执行第三次时，continue 语句跳过了内部循环。
+当外层循环尝试执行第三次时，`continue` 语句跳过了内部循环。
 
 ![image](img/forget.jpg)
 
@@ -1563,11 +1587,11 @@ if i == 3 && j == 2 {
 
 ![image](img/pg58_1.jpg)
 
-`goto` 关键字是一个存在几十年的强大功能，但被早期程序员滥用，创建了难以理解的程序。这产生了不可读的代码，因此 goto 的使用不再流行。通常，程序可能会执行一组语句，然后通过 goto 语句跳转回语句开头的标签以重复执行。此外，在语句执行的某处可能会测试条件，如果未满足条件，另一个 goto 语句可能会跳转到语句之后。通过这种方式，程序代码迅速获得了大量的 goto 语句和标签。
+`goto` 关键字是一个存在几十年的强大功能，但被早期程序员滥用，创建了难以理解的程序。这产生了不可读的代码，因此 `goto` 的使用不再流行。通常，程序可能会执行一组语句，然后通过 `goto` 语句跳转回语句开头的标签以重复执行。此外，在语句执行的某处可能会测试条件，如果未满足条件，另一个 `goto` 语句可能会跳转到语句之后。通过这种方式，程序代码迅速获得了大量的 `goto` 语句和标签。
 
 `goto` 关键字的一种可能的合法用法是跳转到外层循环块结束之后的标签，从而干净地跳出嵌套循环。这会立即退出两个循环，不再执行任何循环的后续迭代。
 
-![image](img/1p.jpg)开始一个执行三次迭代的 main 函数
+![image](img/1p.jpg)开始一个执行三次迭代的 `main` 函数。
 
 ```go
 func main( ) {
@@ -1579,9 +1603,9 @@ func main( ) {
 
 ![image](img/commonp.jpg)
 
-src\jump\main.go
+`src\jump\main.go`
 
-![image](img/2p.jpg)插入一个执行三次迭代的内部循环
+![image](img/2p.jpg)插入一个执行三次迭代的内部循环。
 
 ```go
 for j := 1 ; j <= 3 ; j++ {
@@ -1589,11 +1613,11 @@ for j := 1 ; j <= 3 ; j++ {
 }
 ```
 
-![image](img/3p.jpg)将程序文件保存到“jump”目录中，然后运行程序以查看每次循环迭代的输出
+![image](img/3p.jpg)将程序文件保存到“jump”目录中，然后运行程序以查看每次循环迭代的输出。
 
 ![image](img/pg59_1.jpg)
 
-![image](img/4p.jpg)在内部嵌套循环的第一行插入语句，在指定的计数器值跳转到名为“end”的标签
+![image](img/4p.jpg)在内部嵌套循环的第一行插入语句，在指定的计数器值跳转到名为“end”的标签。
 
 ```go
 if i == 2 && j == 2 {
@@ -1601,16 +1625,13 @@ if i == 2 && j == 2 {
 }
 ```
 
-![image](img/5p.jpg)现在，在外层循环闭合括号 **}** 之后的下一行添加标签
+![image](img/5p.jpg)现在，在外层循环闭合括号 `}` 之后的下一行添加标签。
 
 ```go
 end:
 ```
 
-
-
-
-![image](img/6p.jpg)保存更新后的文件，然后再次运行程序，查看当测试条件变为真时循环结束
+![image](img/6p.jpg)保存更新后的文件，然后再次运行程序，查看当测试条件变为真时循环结束。
 
 ![image](img/pg59_1.jpg)
 
@@ -1635,7 +1656,7 @@ end:
 - `for` 关键字可以完全省略测试表达式以创建无限循环。
 - 可以在无限循环体内测试条件，并使用 `break` 关键字结束循环。
 - `break` 关键字用于终止循环，而 `continue` 关键字用于跳过单次迭代。
-- 循环可以嵌套，使得内层循环在在外层循环的每次迭代中执行一系列迭代。
+- 循环可以嵌套，使得内层循环在外层循环的每次迭代中执行一系列迭代。
 - 通常不建议使用 `goto` 关键字，但它可以合法地用于退出嵌套循环。
 
 # 产生函数
@@ -1661,7 +1682,7 @@ end:
 
 函数块仅包含一组语句，这些语句每当该函数被调用时就会执行。一旦函数语句执行完毕，程序流将从函数调用后的直接点继续恢复。这种模块化在 Go 编程中非常有用，它可以隔离一组代码序列，以便根据需要反复调用。
 
-要向 Go 程序中添加自定义函数，必须使用 `func` 关键字进行声明，后跟一个你选择的名字 —— 遵循与变量名相同的命名规范。
+要向 Go 程序中添加自定义函数，必须使用 `func` 关键字进行声明，后跟一个你选择的名字——遵循与变量名相同的命名规范。
 
 | 命名规则 | 示例 |
 | :--- | :--- |
@@ -1669,17 +1690,17 @@ end:
 | 不能包含算术运算符 | `a+b*c` |
 | 不能包含标点符号字符 | `%$#@!` |
 | 不能包含任何空格 | `no spaces` |
-| 必须以字母开头 | `msg`|-msg` |
+| 必须以字母开头 | `msg`-`msg` |
 | 可以在其他地方包含数字 | `good1` |
 | 可以包含混合大小写 | `camelCase` |
 
-在选择函数名时，它应该描述函数的用途但要保持简洁。函数名后面紧跟 `()` 括号和 ` {` 左花括号，所有内容都在同一行内。这一行通常被称为函数的“签名”。要执行的语句包含在函数体中，函数体以 `}` 右花括号结束——与 `main` 函数一样。在程序中，可以通过陈述函数名后跟 `()` 括号来调用该函数。
+在选择函数名时，它应该描述函数的用途但要保持简洁。函数名后面紧跟 `()` 括号和 `{` 左花括号，所有内容都在同一行内。这一行通常被称为函数的“签名”。要执行的语句包含在函数体中，函数体以 `}` 右花括号结束——与 `main` 函数一样。在程序中，可以通过陈述函数名后跟 `()` 括号来调用该函数。
 
 ![image](img/snake.jpg)
 
-函数名应以小字母开头，除非该函数需要被导出 —— 参见此处。
+函数名应以小字母开头，除非该函数需要被导出——参见此处。
 
-![image](img/1o.jpg)创建一个函数，每次被调用时简单地打印一条消息
+![image](img/1o.jpg)创建一个函数，每次被调用时简单地打印一条消息。
 
 ```go
 func first() {
@@ -1690,9 +1711,9 @@ func first() {
 
 ![image](img/commono.jpg)
 
-src\funcs\main.go
+`src\funcs\main.go`
 
-![image](img/2o.jpg)创建另一个函数，每次被调用时简单地打印乘法结果
+![image](img/2o.jpg)创建另一个函数，每次被调用时简单地打印乘法结果。
 
 ```go
 func sqFive() {
@@ -1700,7 +1721,7 @@ func sqFive() {
 }
 ```
 
-![image](img/3o.jpg)接下来，添加一个 main 函数，其开头是一个调用第一个函数的语句以打印其消息
+![image](img/3o.jpg)接下来，添加一个 `main` 函数，其开头是一个调用第一个函数的语句以打印其消息。
 
 ```go
 func main() {
@@ -1709,20 +1730,20 @@ func main() {
 }
 ```
 
-![image](img/4o.jpg)现在，添加一个 main 函数，其开头是一个调用第一个函数的语句以打印其消息
+![image](img/4o.jpg)现在，添加一个 `main` 函数，其开头是一个调用第一个函数的语句以打印其消息。
 
 ```go
 fmt.Print("5 = ")
 sqFive()
 ```
 
-![image](img/5o.jpg)将程序文件保存到 “funcs” 目录，然后运行程序以查看输出
+![image](img/5o.jpg)将程序文件保存到“funcs”目录，然后运行程序以查看输出。
 
 ![image](img/pg63_2.jpg)
 
 ![image](img/forget.jpg)列出的代码假设你已经在每个程序的开头声明了 `package main` 和 `import "fmt"`。
 
-![image](img/hot.jpg)在函数或其他块内部声明的变量只能在该块内部访问 —— 它们具有“局部作用域”。例如，这里的 `msg` 只能在 `first()` 内部访问。在函数外部声明的变量可以在程序的任何地方访问 —— 它们具有“全局作用域”。最好只使用局部变量，以避免与全局变量可能的冲突。
+![image](img/hot.jpg)在函数或其他块内部声明的变量只能在该块内部访问——它们具有“局部作用域”。例如，这里的 `msg` 只能在 `first()` 内部访问。在函数外部声明的变量可以在程序的任何地方访问——它们具有“全局作用域”。最好只使用局部变量，以避免与全局变量可能的冲突。
 
 ## 添加参数
 
@@ -1752,9 +1773,9 @@ funcName(argument, argument, argument)
 
 与其他编程语言不同，Go 没有方法为函数参数指定默认内容。
 
-在 Go 编程中，参数默认是“按值传递”的 —— 函数接收的是参数的副本，而不是原始参数。这意味着对参数变量的更改默认不会影响调用者指定的原始参数 —— 只会影响副本。
+在 Go 编程中，参数默认是“按值传递”的——函数接收的是参数的副本，而不是原始参数。这意味着对参数变量的更改默认不会影响调用者指定的原始参数——只会影响副本。
 
-![image](img/1o.jpg)创建一个需要单个整数参数的函数并显示其值
+![image](img/1o.jpg)创建一个需要单个整数参数的函数并显示其值。
 
 ```go
 func square(num int) {
@@ -1763,23 +1784,18 @@ func square(num int) {
 }
 ```
 
-
-
-
-}
-
 ![image](img/commono.jpg)
 
 `src\args\main.go`
 
-![image](img/2o.jpg)接下来，插入语句修改接收到的参数并显示其新值
+![image](img/2o.jpg)接下来，插入语句修改接收到的参数并显示其新值。
 
 ```go
 num = num * num
 fmt.Println( “\t\tModified Copy:”, num )
 ```
 
-![image](img/3o.jpg)开始一个 main 函数声明并初始化单个变量，然后显示其值
+![image](img/3o.jpg)开始一个 `main` 函数声明并初始化单个变量，然后显示其值。
 
 ```go
 func main( ) {
@@ -1789,14 +1805,14 @@ fmt.Println( “Original:”, num )
 }
 ```
 
-![image](img/4o.jpg)现在，在 main 函数中插入语句调用另一个函数，并再次显示其变量值
+![image](img/4o.jpg)现在，在 `main` 函数中插入语句调用另一个函数，并再次显示其变量值。
 
 ```go
 square( num )
 fmt.Println( “Original:”, num )
 ```
 
-![image](img/5o.jpg)将程序文件保存到“args”目录中，然后运行程序查看原始值是否保持不变
+![image](img/5o.jpg)将程序文件保存到“args”目录中，然后运行程序查看原始值是否保持不变。
 
 ![image](img/pg65_1.jpg)
 
@@ -1812,7 +1828,7 @@ fmt.Println( “Original:”, num )
 
 记住，指针是对系统上存储某个值的内存地址的引用。这意味着，如果你向函数传递指针参数，它将能够修改位于指针所提供地址上的原始值。
 
-在声明一个可以接收指针参数的函数时，其参数列表中指定的类型类型必须以星号 `*` 前缀，以指示该参数将是一个指针，如下：
+在声明一个可以接收指针参数的函数时，其参数列表中指定的类型必须以星号 `*` 前缀，以指示该参数将是一个指针，如下：
 
 ```go
 func *functionName* ( *paramName* *type* ) {
@@ -1822,7 +1838,7 @@ func *functionName* ( *paramName* *type* ) {
 
 该参数将能够存储一个位置地址。
 
-函数语句可以通过在参数名前加加星号 `*` 作为解引用符，来访问并修改指针提供地址处的值。
+函数语句可以通过在参数名前加星号 `*` 作为解引用符，来访问并修改指针提供地址处的值。
 
 在调用接受指针参数的函数时，参数必须以 `&` 符号为前缀，以引用存储该值的内存地址。
 
@@ -1834,10 +1850,10 @@ func *functionName* ( *paramName* *type* ) {
 
 返回此处复习指针的工作原理。
 
-![image](img/1o.jpg)创建一个需要单个整数指针参数的函数并显示其值
+![image](img/1o.jpg)创建一个需要单个整数指针参数的函数并显示其值。
 
 ```go
-func square( num *int ) {
+func square(num *int) {
 fmt.Println( “\t\tReceived Address:”, num )
 // 在此处插入语句。
 }
@@ -1847,14 +1863,14 @@ fmt.Println( “\t\tReceived Address:”, num )
 
 `src\refs\main.go`
 
-![image](img/2o.jpg)接下来，插入语句修改接收到的参数并显示其新值
+![image](img/2o.jpg)接下来，插入语句修改接收到的参数并显示其新值。
 
 ```go
 num = *num * *num
 fmt.Println( “\t\tModified Original:”, *num )
 ```
 
-![image](img/3o.jpg)开始一个 main 函数声明并初始化单个变量，然后显示其值
+![image](img/3o.jpg)开始一个 `main` 函数声明并初始化单个变量，然后显示其值。
 
 ```go
 func main( ) {
@@ -1864,14 +1880,14 @@ fmt.Println( “Original:”, num )
 }
 ```
 
-![image](img/4o.jpg)现在，在 main 函数中插入语句调用另一个函数，并再次显示其变量值
+![image](img/4o.jpg)现在，在 `main` 函数中插入语句调用另一个函数，并再次显示其变量值。
 
 ```go
 square( &num )
 fmt.Println( “Original:”, num )
 ```
 
-![image](img/5o.jpg)将程序文件保存到“refs”目录中，然后运行程序查看原始值已改变
+![image](img/5o.jpg)将程序文件保存到“refs”目录中，然后运行程序查看原始值已改变。
 
 ![image](img/pg67_1.jpg)
 
@@ -1903,17 +1919,17 @@ return *returnValue
 }
 ```
 
-如果你调用了一个返回多个值的函数但没有在代码中使用所有返回值，编译器将产生“声明但未未使用”的消息，程序将无法运行。为了避免这种情况，你可以将不需要的值赋值给下划线 `_`。这在 Go 中被称为“空白标识”。
+如果你调用了一个返回多个值的函数但没有在代码中使用所有返回值，编译器将产生“声明但未使用”的消息，程序将无法运行。为了避免这种情况，你可以将不需要的值赋值给下划线 `_`。这在 Go 中被称为“空白标识”。
 
 ![image](img/hot.jpg)
 
 标准库中的许多函数返回多个值，特别是返回结果和错误值。
 
-![image](img/1o.jpg)创建一个需要单个整数参数并向调用者返回三个值的函数
+![image](img/1o.jpg)创建一个需要单个整数参数并向调用者返回三个值的函数。
 
 ```go
-func cube( num int ) ( string, int, int ) {
-return “Result”, num, ( num * num * num )
+func cube(num int) (string, int, int) {
+return “Result”, num, (num * num * num)
 }
 ```
 
@@ -1921,7 +1937,7 @@ return “Result”, num, ( num * num * num )
 
 `src\returns\main.go`
 
-![image](img/2o.jpg)添加一个 main 函数，将三个返回值赋值给三个变量，然后尝试显示两个值
+![image](img/2o.jpg)添加一个 `main` 函数，将三个返回值赋值给三个变量，然后尝试显示两个值。
 
 ```go
 func main( ) {
@@ -1930,11 +1946,11 @@ fmt.Println( b, “Cubed =”, c )
 }
 ```
 
-![image](img/3o.jpg)将程序文件保存到“returns”目录中，然后运行程序查看编译错误
+![image](img/3o.jpg)将程序文件保存到“returns”目录中，然后运行程序查看编译错误。
 
 ![image](img/pg69_1.jpg)
 
-![image](img/4o.jpg)修改 main 函数中的赋值，将第一个返回值赋值给空白标识符
+![image](img/4o.jpg)修改 `main` 函数中的赋值，将第一个返回值赋值给空白标识符。
 
 ```go
 func main( ) {
@@ -1943,24 +1959,24 @@ fmt.Println( b, “Cubed =”, c )
 }
 ```
 
-![image](img/5o.jpg)再次保存程序文件，然后运行程序，查看输出中打印的两个返回值
+![image](img/5o.jpg)再次保存程序文件，然后运行程序，查看输出中打印的两个返回值。
 
 ### 递归调用
 
 自定义函数内部的语句可以自由调用其他自定义函数，就像调用 Go 标准库函数（如 `fmt.Printf()`）一样。此外，函数可以调用自身进行“递归”。和循环一样，重要的是递归函数调用必须修改测试的表达式以避免持续执行——这样函数会在某处退出。
 
-
-
 递归函数调用可以用于模拟循环结构，例如倒计时示例此处：
 
-![image](img/1o.jpg)创建一个需要整数参数的函数，并进行递归调用，直到该值减小到零
+![image](img/1o.jpg)创建一个需要整数参数的函数，并进行递归调用，直到该值减小到零。
+
+
 
 ```go
 func countDn( num int ) {
   if num < 1 {
-    fmt.Println( “\t\t\t\tLift Off!” )
+    fmt.Println( "\t\t\t\tLift Off!" )
   } else {
-    fmt.Println( “\t\t\tCountdown”, num )
+    fmt.Println( "\t\t\tCountdown", num )
     num--
     countDn( num )
   }
@@ -1969,9 +1985,9 @@ func countDn( num int ) {
 
 ![image](img/commono.jpg)
 
-src\recur\main.go
+`src\recur\main.go`
 
-![image](img/2o.jpg)添加一个 main 函数，其中包含一条调用上述函数的语句
+![image](img/2o.jpg)添加一个 `main` 函数，其中包含一条调用上述函数的语句
 
 ```go
 func main( ) {
@@ -1997,7 +2013,7 @@ func facto( num int ) int {
 
 ![image](img/commono.jpg)
 
-src\facto\main.go
+`src\facto\main.go`
 
 ![image](img/2o.jpg)接下来，插入一条语句，当参数值减小到零（0）时返回一个一（1）
 
@@ -2013,12 +2029,12 @@ if num == 0 {
 return num * facto( num - 1 )
 ```
 
-![image](img/4o.jpg)添加一个 main 函数，其中包含一条打印七个阶乘的语句
+![image](img/4o.jpg)添加一个 `main` 函数，其中包含一条打印七个阶乘的语句
 
 ```go
 func main( ) {
   for i := 1 ; i <= 7 ; i++ {
-    fmt.Println( “Factorial“, i, “=”, facto( i ) )
+    fmt.Println( "Factorial", i, "=", facto( i ) )
   }
 }
 ```
@@ -2042,13 +2058,13 @@ Go 编程语言支持“一等函数”。这允许将函数赋值给变量、�
 匿名函数简单来说就是不包含名称函数定义。这对于内联创建函数而无需对其命名非常有用。匿名函数也被称为“函数字面量”。与其他函数一样，它们可以包含参数列表、返回类型列表，并返回多个值。你可以通过在函数定义末尾附加 `()` 调用操作符来创建一个自执行匿名函数表达式，如下：
 
 ```go
-func( ) { fmt.Println( “Function Literal” ) } ( )
+func( ) { fmt.Println( "Function Literal" ) } ( )
 ```
 
 此外，匿名函数可以赋值给变量，然后通过在变量名后附加 `()` 调用操作符调用调用如下：
 
 ```go
-fn := func( ) { fmt.Println( “Function Literal” ) }
+fn := func( ) { fmt.Println( "Function Literal" ) }
 fn( )
 ```
 
@@ -2068,7 +2084,7 @@ fn( )
 
 如果你不能立即理解闭包是如何工作的，不要担心。它们起初看起来很神秘，但随着经验的增加会变得清晰。你可以继续下去，稍后回来学习这种技术。
 
-![image](img/1o.jpg)通过将匿名函数赋值给变量来开始一个 main 函数
+![image](img/1o.jpg)通过将匿名函数赋值给变量来开始一个 `main` 函数
 
 ```go
 func main( ) {
@@ -2080,14 +2096,14 @@ func main( ) {
 
 ![image](img/commono.jpg)
 
-src\anon\main.go
+`src\anon\main.go`
 
 ![image](img/2o.jpg)接下来，插入语句显示匿名函数的类型和两个返回值
 
 ```go
-fmt.Printf( “area type: %T \n”, area )
-fmt.Println( “Area 1:”, area( 10, 4 ) )
-fmt.Println( “Area 2:”, area( 12, 5 ) )
+fmt.Printf( "area type: %T \n", area )
+fmt.Println( "Area 1:", area( 10, 4 ) )
+fmt.Println( "Area 2:", area( 12, 5 ) )
 ```
 
 ![image](img/3o.jpg)现在，插入语句将一个自执行闭包函数赋值给变量
@@ -2105,10 +2121,10 @@ counter := func( ) func( ) int {
 ![image](img/4o.jpg)最后，插入语句显示闭包函数的类型和三次返回值
 
 ```go
-fmt.Printf( “counter type: %T \n”, counter )
-fmt.Println( “Count:”, counter( ) )
-fmt.Println( “Count:”, counter( ) )
-fmt.Println( “Count:”, counter( ) )
+fmt.Printf( "counter type: %T \n", counter )
+fmt.Println( "Count:", counter( ) )
+fmt.Println( "Count:", counter( ) )
+fmt.Println( "Count:", counter( ) )
 ```
 
 ![image](img/5o.jpg)将程序文件保存到“anon”目录中，然后运行程序查看函数类型和返回值
@@ -2117,7 +2133,7 @@ fmt.Println( “Count:”, counter( ) )
 
 ![image](img/forget.jpg)
 
-注意外部函数必须声明返回类型为 `func() int`因为它因为它了一个返回整数值的函数。
+注意外部函数必须声明返回类型为 `func() int`，因为它返回了一个返回整数值的函数。
 
 ## 传递函数
 
@@ -2129,7 +2145,7 @@ fmt.Println( “Count:”, counter( ) )
 
 将函数传递给其他函数允许在不重复现有代码的情况下修改操作。
 
-![image](img/1o.jpg)通过在 main 函数中声明一个自定义函数类型来开始，该类型的签名需要两个整数参数和一个整数返回类型
+![image](img/1o.jpg)通过在 `main` 函数中声明一个自定义函数类型来开始，该类型的签名需要两个整数参数和一个整数返回类型
 
 ```go
 func main( ) {
@@ -2139,7 +2155,7 @@ func main( ) {
 
 ![image](img/commono.jpg)
 
-src\ftype\main.go
+`src\ftype\main.go`
 
 ![image](img/2o.jpg)接下来，插入语句定义自定义函数类型的函数（实例）——具有匹配的签名
 
@@ -2152,17 +2168,14 @@ var add adder = func( a int, b int ) int {
 ![image](img/3o.jpg)现在，插入一条调用该函数（实例）的语句
 
 ```go
-fmt.Println( “Added:”, add( 6, 2 ) )
+fmt.Println( "Added:", add( 6, 2 ) )
 ```
 
-
-
-
-![image](img/4o.jpg)在 main 函数之后，开始编写高阶函数，该函数将接收并返回一个与自定义函数类型签名相同的函数
+![image](img/4o.jpg)在 `main` 函数之后，开始编写高阶函数，该函数将接收并返回一个与自定义函数类型签名相同的函数
 
 ```go
 func dub( twice func( int, int ) int ) func( int, int ) int {
-    fmt.Println( “Doubled:”, twice( 6, 2 ) * 2 )
+    fmt.Println( "Doubled:", twice( 6, 2 ) * 2 )
     // 在此处插入语句 – 步骤 5.
 }
 ```
@@ -2176,7 +2189,7 @@ div := func( a int, b int ) int {
 return div
 ```
 
-![image](img/6o.jpg)回到 main 函数，插入一条语句将函数（实例）传递给高阶函数，并将该函数返回的函数赋值给变量
+![image](img/6o.jpg)回到 `main` 函数，插入一条语句将函数（实例）传递给高阶函数，并将该函数返回的函数赋值给变量
 
 ```go
 div := dub( add )
@@ -2185,15 +2198,15 @@ div := dub( add )
 ![image](img/7o.jpg)现在，插入一条语句调用返回的函数
 
 ```go
-fmt.Println( “Divided:”, div( 6, 2 ) )
+fmt.Println( "Divided:", div( 6, 2 ) )
 ```
 
 ![image](img/8o.jpg)最后，插入语句显示函数（实例）、高阶函数以及返回函数的类型
 
 ```go
-fmt.Printf( “add type: %T \n”, add )
-fmt.Printf( “dub type: %T \n”, dub )
-fmt.Printf( “div type: %T \n”, div )
+fmt.Printf( "add type: %T \n", add )
+fmt.Printf( "dub type: %T \n", dub )
+fmt.Printf( "div type: %T \n", div )
 ```
 
 ![image](img/9o.jpg)将程序文件保存到 “ftype” 目录中，然后运行程序以查看返回的值和函数类型
@@ -2257,22 +2270,22 @@ func isPosInt( num int ) ( int, error ) {
 
 ```go
 if num < 1 {
-    err := fmt.Errorf( “%v not a positive integer”, num )
+    err := fmt.Errorf( "%v not a positive integer", num )
     return -1, err
 }
 return num, nil
 ```
 
-![image](img/3o.jpg)现在，添加一个 main 函数，该函数包含一个递减循环，用于打印参数值或错误消息
+![image](img/3o.jpg)现在，添加一个 `main` 函数，该函数包含一个递减循环，用于打印参数值或错误消息
 
 ```go
 func main( ) {
     for i := 2 ; i >= -2 ; i-- {
         res, err := isPosInt( i )
         if err != nil {
-            fmt.Println( “Failed:”, err )
+            fmt.Println( "Failed:", err )
         } else {
-            fmt.Println( res, “Passed!” )
+            fmt.Println( res, "Passed!" )
         }
     }
 }
@@ -2288,12 +2301,12 @@ func main( ) {
 
 随着程序规模增大，将代码部分划分到单独文件中通常是明智的。在创建可能实用的自定义包时，将它们存储在与包同名的目录中。要使用导入包的函数，其名称必须以大字母开头。
 
-![image](img/1o.jpg)首先，编写带有包声明的 verify.go 文件
+![image](img/1o.jpg)首先，编写带有包声明的 `verify.go` 文件
 
 ```go
 package verify
 
-import “fmt”
+import "fmt"
 ```
 
 ![image](img/commono.jpg)
@@ -2306,14 +2319,14 @@ import “fmt”
 // IsPosInt 测试正整数
 func IsPosInt( num int ) ( int, error ) {
     if num < 1 {
-        err := fmt.Errorf( “%v not a positive integer”, num )
+        err := fmt.Errorf( "%v not a positive integer", num )
         return -1, err
     }
     return num, nil
 }
 ```
 
-![image](img/3o.jpg)将文件保存在 src 文件夹内的 verify 目录中
+![image](img/3o.jpg)将文件保存在 `src` 文件夹内的 `verify` 目录中
 
 执行命令 `go install verify` 在你的 `go/pkg` 文件夹中创建一个名为 `verify.a` 的编译存档文件
 
@@ -2321,14 +2334,14 @@ func IsPosInt( num int ) ( int, error ) {
 
 创建 Go 存档包意味着每次编译导入文件时，工具文件都不重新编译
 
-![image](img/5o.jpg)接下来，编写带有包和导入声明的 main.go 程序
+![image](img/5o.jpg)接下来，编写带有包和导入声明的 `main.go` 程序
 
 ```go
 package main
 
 import (
-    “fmt”
-    “verify”
+    "fmt"
+    "verify"
 )
 ```
 
@@ -2336,16 +2349,16 @@ import (
 
 `src\prog\main.go`
 
-![image](img/6o.jpg)现在，添加 main 函数，在导入的函数名前前加上包名
+![image](img/6o.jpg)现在，添加 `main` 函数，在导入的函数名前前加上包名
 
 ```go
 func main( ) {
     for i := 2 ; i >= -2 ; i-- {
         res, err := verify.IsPosInt( i )
         if err != nil {
-            fmt.Println( “Failed:”, err )
+            fmt.Println( "Failed:", err )
         } else {
-            fmt.Println( res, “Passed!” )
+            fmt.Println( res, "Passed!" )
         }
     }
 }
@@ -2359,24 +2372,34 @@ func main( ) {
 
 导入多个包时，导入声明必须在括号内逐行列出这些包。
 
-
-
-
-
 - 可以使用 `func` 关键字声明函数，其后跟一个符合 Go 命名规范的名称。
+
 - 函数声明包含 `( )` 括号，随后是 `{}` 大括号，用于用于包裹要执行的语句。
+
 - 函数声明中的括号可以包含一个参数列表，用于指定每个参数的类型。
+
 - 传递给函数的参数默认是值传递的——即原始值的副本。
+
 - 传递给函数的指针参数是内存地址的引用，该地址是原始值所在的位置。
+
 - `return` 关键字允许在函数执行语句后，向调用者返回一个或多个值。
+
 - 如果函数向调用者返回值，则必须在函数声明的参数列表之后列出每个返回类型。
+
 - 函数可以递归调用自己来模拟循环结构，但必须测试某个条件以便在某一点退出。
+
 - Go 支持一等函数，函数可以赋值给变量、作为参数传递以及从函数返回。
+
 - 匿名函数没有名称，可以通过在代码块后附加 `( )` 调用运算符来实现自执行。
+
 - 闭包是嵌套在外部函数内部的函数，它保留了对外部函数中声明的变量的访问。
+
 - 使用 `type` 关键字后跟名称和函数签名可以创建自定义函数类型。
+
 - 将函数传递给其他函数允许在不重复现有代码行的情况下修改操作。
+
 - Go 编程允许通过返回单独的值来处理函数中出现的错误。
+
 - 只有导入的且名称首字母大写的函数和变量才能被导入的文件访问。
 
 # 6 构建结构
@@ -2384,21 +2407,28 @@ func main( ) {
 本章演示了如何将数据和函数包含在“struct”（结构）中，它可以代表 Go 语言中的面向对象编程。
 
 - [分组数据]
+
 - [附加方法]
+
 - [嵌入结构]
+
 - [封装特性]
+
 - [组合元素]
+
 - [实现接口]
+
 - [嵌入接口]
-- [总结]
 
-## 分组数据
 
-任何数据类型的多个相关项都可以在 Go 语言的“struct”类型中分组在一起。这对于创建记录非常有用，类似于你在数据库中可能会找到记录。
+
+# 分组数据
+
+任何数据类型的多个相关项都可以在 Go 语言的`struct`类型中分组在一起。这对于创建记录非常有用，类似于你在数据库中可能会找到记录。
 
 ![image](img/pg82_1.jpg)
 
-结构使用 `type` 关键字创建，其后跟你选择的名称，以及 `struct` 关键字和 `{}` 大括号。大括号内包含每行一个变量名和数据类型对列表。这些被称为结构的“字段”（fields），并定义了结构将包含的内容，语法如下：
+结构使用`type`关键字创建，其后跟你选择的名称，以及`struct`关键字和`{}`大括号。大括号内包含每行一个变量名和数据类型对列表。这些被称为结构的“字段”（fields），并定义了结构将包含的内容，语法如下：
 
 ```go
 type structName struct {
@@ -2446,7 +2476,7 @@ instanceName := structName { fieldName: value, fieldName: value }
 
 ![image](img/snake.jpg)
 
-虽然这两个语句相似，但请注意 `:=` 运算符仅在创建实例并在单个语句中初始化结构字段时使用。
+虽然这两个语句相似，但请注意`:=`运算符仅在创建实例并在单个语句中初始化结构字段时使用。
 
 ![image](img/1bl.jpg) 通过创建一个结构类型来开始程序
 
@@ -2498,7 +2528,7 @@ fmt.Printf("%v works in %v\n", clerk.name, clerk.dept)
 
 ![image](img/7bl.jpg) 注意第 4 步中的语句赋值字段值的顺序与结构中列出的字段顺序不同。
 
-## 附加方法
+# 附加方法
 
 ![image](img/pg84_1.jpg)
 
@@ -2519,7 +2549,7 @@ func (paramName structName) funcName()
 - 属性描述对象拥有的特性。
 - 行为描述对象可以执行的操作。
 
-例如，一辆汽车可以带有“蓝色”和“轿跑”属性，以及“加速”行为。这些特性在 Go 编程中可以用一个包含 color 和 body 字段属性的 `car` 结构以及一个附加的 `accelerate()` 方法表示。
+例如，一辆汽车可以带有“蓝色”和“轿跑”属性，以及“加速”行为。这些特性在 Go 编程中可以用一个包含`color`和`body`字段属性的`car`结构以及一个附加的`accelerate()`方法表示。
 
 ![image](img/pg84_2.jpg) Go 编程通过定义一个结构作为模板来创建对象，从模板创建不同的副本或“实例”。结构的每个实例都可以通过分配值和行为进行自定义以描述该对象。
 
@@ -2548,42 +2578,40 @@ func (c car) accelerate() string {
 
 ```go
 porsche := car{ color: "blue", body: "coupe" }
+bentley := car{ color: "green", body: "saloon" }
 ```
 
-
-
-
-
-`bentley := car{ color: “green”, body: “saloon” }`
-
 ![image](img/4bl.jpg)
+
 添加语句来显示第一个实例的所有值
 
 ```go
-fmt.Println( “Porsche paint is”, porsche.color )
-fmt.Println( “Porsche style is”, porsche.body )
-fmt.Println( “Porsche is”, porsche.accelerate( ) )
+fmt.Println( "Porsche paint is", porsche.color )
+fmt.Println( "Porsche style is", porsche.body )
+fmt.Println( "Porsche is", porsche.accelerate( ) )
 ```
 
 ![image](img/5bl.jpg)
+
 最后，添加语句来显示第二个实例的所有值
 
 ```go
-fmt.Println( “Bentley paint is”, bentley.color )
-fmt.Println( “Bentley style is”, bentley.body )
-fmt.Println( “Bentley is”, bentley.accelerate( ) )
+fmt.Println( "Bentley paint is", bentley.color )
+fmt.Println( "Bentley style is", bentley.body )
+fmt.Println( "Bentley is", bentley.accelerate( ) )
 ```
 
 ![image](img/6bl.jpg)
+
 将程序文件保存在“method”目录中，然后运行程序查看结构体字段的值
 
 ![image](img/pg85_1.jpg)
 
 ![image](img/hot.jpg)
 
-当你调用方法时，Go 会自动处理值和指针之间的转换，因此如果你如果你让方法能够修改原始结构体字段，这里的接收者可以是 `( c *car )`。
+当你调用方法时，Go 会自动处理值和指针之间的转换，因此如果你如果你让方法能够修改原始结构体字段，这里的接收者可以是`( c *car )`。
 
-## 嵌入结构体
+# 嵌入结构体
 
 由于结构体字段只需简单声明名称和类型，且结构体是一种类型，Go 编程甚至允许你通过声明一个字段为结构体类型将一个结构体嵌入另一个结构体中。
 
@@ -2612,7 +2640,7 @@ type circle struct {
 }
 ```
 
-现在，当创建 circle 的实例时，可以通过链结构体名称和字段名称来访问嵌入结构体的字段，如下：
+现在，当创建`circle`的实例时，可以通过链结构体名称和字段名称来访问嵌入结构体的字段，如下：
 
 `instanceName.embeddedStructName.fieldName`
 
@@ -2638,6 +2666,7 @@ type circle struct {
 匿名字段必须是命名类型，或者是指向命名类型的指针。
 
 ![image](img/1bl.jpg)
+
 通过创建两个结构体类型来启动程序
 
 ```go
@@ -2653,9 +2682,10 @@ type circle struct {
 
 ![image](img/commonb.jpg)
 
-src\embed\main.go
+`src\embed\main.go`
 
 ![image](img/2bl.jpg)
+
 接下来，为第二个结构体挂载一个方法
 
 ```go
@@ -2665,6 +2695,7 @@ func ( c circle ) getDiameter( ) int {
 ```
 
 ![image](img/3bl.jpg)
+
 现在，通过创建一个结构体类型的实例来开始 main 函数
 
 ```go
@@ -2672,6 +2703,7 @@ var ring circle
 ```
 
 ![image](img/4bl.jpg)
+
 添加语句为结构体字段和嵌入结构体字段赋值
 
 ```go
@@ -2681,19 +2713,21 @@ ring.y = ring.radius
 ```
 
 ![image](img/5bl.jpg)
+
 最后，添加语句来显示值
 
 ```go
-fmt.Printf( “Diameter:%v \n”, ring.getDiameter( ) )
-fmt.Printf( “Point X:%v Y:%v \n”, ring.x, ring.y )
+fmt.Printf( "Diameter:%v \n", ring.getDiameter( ) )
+fmt.Printf( "Point X:%v Y:%v \n", ring.x, ring.y )
 ```
 
 ![image](img/6bl.jpg)
+
 将程序文件保存在“embed”目录中，然后运行程序查看结构体字段的值
 
 ![image](img/pg87_1.jpg)
 
-## 封装特性
+# 封装特性
 
 在 Go 程序中表示对象的能力是面向对象编程 (OOP) 的第一个基石原则。面向对象的程序使用方法来表达其挂载的数据结构的属性和操作，因此程序不需要直接访问对象。
 
@@ -2704,7 +2738,8 @@ fmt.Printf( “Point X:%v Y:%v \n”, ring.x, ring.y )
 Go 编程中的封装依赖于导入程序的包的数据隐藏。只有以大写字母开头的变量名、函数名和方法名会被导出到程序。以小写字母开头的将无法访问——即它们被封装了。
 
 ![image](img/1bl.jpg)
-首先，从 cube.go 工具文件开始，包声明和结构体定义
+
+首先，从`cube.go`工具文件开始，包声明和结构体定义
 
 ```go
 package cube
@@ -2717,9 +2752,10 @@ type Dims struct {
 
 ![image](img/commonb.jpg)
 
-src\cube\cube.go
+`src\cube\cube.go`
 
 ![image](img/2bl.jpg)
+
 接下来，为第二个结构体挂载一个方法
 
 ```go
@@ -2728,17 +2764,13 @@ func ( c circle ) getDiameter( ) int {
 }
 ```
 
-
-
-
 ```go
-return m.firstName + “ “ + m.lastName
+return m.firstName + " " + m.lastName
 
 }
-
 ```
 
-![image](img/3bl.jpg)现在，创建一个包含两个新字段并嵌入基础结构体的第二个结构体
+![image](img/3bl.jpg) 现在，创建一个包含两个新字段并嵌入基础结构体的第二个结构体
 
 ```go
 type article struct {
@@ -2748,51 +2780,51 @@ type article struct {
 }
 ```
 
-![image](img/4bl.jpg)然后，为第二个结构体附加一个方法以输出所有字段值
+![image](img/4bl.jpg) 然后，为第二个结构体附加一个方法以输出所有字段值
 
 ```go
 func ( a article ) content( ) {
-    fmt.Println( “Title:”, a.title )
-    fmt.Println( “Content:”, a.body )
-    fmt.Printf( “Author: %v \n\n”, a.fullName( ) )
+    fmt.Println( "Title:", a.title )
+    fmt.Println( "Content:", a.body )
+    fmt.Printf( "Author: %v \n\n", a.fullName( ) )
 }
 ```
 
-![image](img/5bl.jpg)通过使用结构体字面量初始化基础结构体的实例来开始 main 函数
+![image](img/5bl.jpg) 通过使用结构体字面量初始化基础结构体的实例来开始 main 函数
 
 ```go
 func main( ) {
     member1 := member {
-        “Mike”,
-        “McGrath”,
+        "Mike",
+        "McGrath",
     }
     // 在此处插入语句。
 }
 ```
 
-![image](img/6bl.jpg)接下来，创建第二个结构体的实例并显示其所有字段值
+![image](img/6bl.jpg) 接下来，创建第二个结构体的实例并显示其所有字段值
 
 ```go
 article1 := article {
-    “Object Oriented Programming”,
-    “In Go, Composition emulates Inheritance”,
+    "Object Oriented Programming",
+    "In Go, Composition emulates Inheritance",
     member1,
 }
 article1.content( )
 ```
 
-![image](img/7bl.jpg)现在，创建另一个第二个结构体的实例并显示其所有字段值
+![image](img/7bl.jpg) 现在，创建另一个第二个结构体的实例并显示其所有字段值
 
 ```go
 article2 := article {
-    “Object Oriented Programming”,
-    “Coming next… Polymorphism”,
+    "Object Oriented Programming",
+    "Coming next… Polymorphism",
     member1,
 }
 article2.content( )
 ```
 
-![image](img/8bl.jpg)将程序文件保存在“inher”目录中，然后运行程序查看继承字段的值
+![image](img/8bl.jpg) 将程序文件保存在“inher”目录中，然后运行程序查看继承字段的值
 
 ![image](img/pg91_1.jpg)
 
@@ -2800,13 +2832,13 @@ article2.content( )
 
 记住，结构体字面量中的所有值后面必须跟一个逗号——包括最后一个。
 
-### 满足接口
+## 满足接口
 
 面向对象编程的第三大基石是“多态”——这是一个源自希腊语的术语，意思是“多种形式”，描述了根据上下文赋予实体不同含义或目的的能力。
 
 ![image](img/pg92_1.jpg)
 
-Go 语言通过使用 `type` 关键字创建“接口”类型来支持多态，后面跟着你选择的名称以及接口关键字，然后是 `{ }` 大括号。接口体只包含方法签名列表：
+Go 语言通过使用`type`关键字创建“接口”类型来支持多态，后面跟着你选择的名称以及接口关键字，然后是`{ }`大括号。接口体只包含方法签名列表：
 
 ```go
 type interfaceName interface {
@@ -2817,7 +2849,7 @@ type interfaceName interface {
 
 任何具有与接口中列出的所有方法名称和签名精确匹配的方法结构体都会实现该接口。在 Go 语言术中，它们被认为“满足”了接口。这样做的好处是允许程序拥有具有相同名称附加方法的各种结构体，每个方法都执行不同的任务——即它们是多态的。
 
-![image](img/1bl.jpg)通过创建一个接口来启动程序，该接口列出了两个方法签名，每个方法都不需要参数且都返回字符串
+![image](img/1bl.jpg) 通过创建一个接口来启动程序，该接口列出了两个方法签名，每个方法都不需要参数且都返回字符串
 
 ```go
 type bird interface {
@@ -2828,17 +2860,17 @@ type bird interface {
 
 ![image](img/commonb.jpg)
 
-src\poly\main.go
+`src\poly\main.go`
 
-![image](img/2bl.jpg)接下来，创建一个空结构体并附加满足接口的方法
+![image](img/2bl.jpg) 接下来，创建一个空结构体并附加满足接口的方法
 
 ```go
 type parrot struct { }
 func ( parrot ) speak( ) string {
-    return “Squawk, squawk!”
+    return "Squawk, squawk!"
 }
 func ( parrot ) move( ) string {
-    return “A parrot flies away.”
+    return "A parrot flies away."
 }
 ```
 
@@ -2846,28 +2878,30 @@ func ( parrot ) move( ) string {
 
 注意，你可以省略接收者中的参数名称，只需说明结构体名称，除非你需要在方法语句中使用参数名称。
 
-![image](img/3bl.jpg)现在，创建另一个空结构体并附加同样满足接口的方法
+![image](img/3bl.jpg) 现在，创建另一个空结构体并附加同样满足接口的方法
 
 ```go
 type chicken struct { }
 func ( chicken ) speak( ) string {
-    return “Cluck, cluck!”
+    return "Cluck, cluck!"
 }
 func ( chicken ) move( ) string {
-    return “Chickens cannot fly.”
+    return "Chickens cannot fly."
 }
 ```
 
-![image](img/4bl.jpg)添加一个接收接口的函数并调用实现的方法
+![image](img/4bl.jpg) 添加一个接收接口的函数并调用实现的方法
 
 ```go
 func nudge( b ) {
-    fmt.Printf( “\n%v \n”, b.speak( ) )
-    fmt.Printf( “%v \n\n”. b.move( ) )
+    fmt.Printf( "\n%v \n", b.speak( ) )
+    fmt.Printf( "%v \n\n". b.move( ) )
 }
 ```
 
-![image](img/5bl.jpg)添加一个 main 函数，创建每个结构体的实例，然后调用它们同名的方法
+![image](img/5bl.jpg) 添加一个 main 函数，创建每个结构体的实例，然后调用它们同名的方法
+
+
 
 ```go
 func main( ) {
@@ -2878,7 +2912,7 @@ func main( ) {
 }
 ```
 
-![image](img/6bl.jpg)将程序文件保存在“poly”目录中，然后运行程序查看不同的输出
+![image](img/6bl.jpg)将程序文件保存在`poly`目录中，然后运行程序查看不同的输出。
 
 ![image](img/pg93_1.jpg)
 
@@ -2886,9 +2920,9 @@ func main( ) {
 
 Go 自动识别接口的实现。
 
-### 嵌入接口
+## 嵌入接口
 
-正如结构体可以嵌入，接口也可以。理解接口嵌入很有帮助，许多标准库都使用了这种技术。例如，`io` 包包含一个 `ReadCloser` 接口，它嵌入了 `Reader` 和 `Closer` 接口。
+正如结构体可以嵌入，接口也可以。理解接口嵌入很有帮助，许多标准库都使用了这种技术。例如，`io` 包包含一个`ReadCloser`接口，它嵌入了`Reader`和`Closer`接口。
 
 ```go
 type bird interface {
@@ -2907,9 +2941,9 @@ type creature interface {
 }
 ```
 
-src\abstr\main.go
+`src\abstr\main.go`
 
-接下来，创建一个嵌入前两个接口的接口
+接下来，创建一个嵌入前两个接口的接口。
 
 ```go
 type parrot struct { }
@@ -2921,9 +2955,9 @@ func ( parrot ) move( ) string {
 }
 ```
 
-**parrot** 类型的实例将调用第 3 步的方法。
+`parrot`类型的实例将调用第 3 步的方法。
 
-现在，添加另一个空结构体并附加满足（第一个和）第二个接口——因此满足第三个接口
+现在，添加另一个空结构体并附加满足（第一个和）第二个接口——因此满足第三个接口。
 
 ```go
 type person struct { }
@@ -2951,47 +2985,38 @@ func main( ) {
 }
 ```
 
-将程序文件保存在“abstr”目录中，然后运行程序查看输出。方法签名还可以指定参数列表和多个返回类型。
+将程序文件保存在`abstr`目录中，然后运行程序查看输出。方法签名还可以指定参数列表和多个返回类型。
 
-**总结**
+## 总结
 
-•多个相关数据项可以组合在 Go 结构体类型中。
-
-•结构体的 { } 大括号包含名称和类型对列表，这些字段定义了结构体的内容。
-
-•结构体的实例可以作为声明以结构体名称为类型的变量来创建。
-
-•通过将值赋值给实例名称和点后缀字段可以初始化结构体的单个字段。
-
-•通过将结构体字面量赋值给变量名可以创建并初始化结构体的实例。
-
-
-
-
-
--   通过添加接收者，可以将函数绑定到结构体上，接收者在函数签名中指定结构体的名称。
--   绑定到结构体的函数被称为方法（method）。
--   方法可以是值接收者（在结构体的副本上进行操作），也可以指针接收者（在原始字段上进行操作）。
--   结构体可以通过其字段属性和附加的方法表示真实世界对象的属性和行为。
--   结构体可以作为匿名字段嵌入另一个结构体中，这样就可以直接访问它的字段。
--   面向对象编程的三大基石是封装、继承和多态。
--   Go 中的封装依赖于包中的数据隐藏，只有大写字母开头的项会被导出。
--   Go 中的继承依赖于组合，嵌入的结构体为嵌入的结构体提供字段和方法。
--   Go 中的多态依赖于其接口类型（interface），接口只包含方法签名列表。
--   任何拥有与接口方法签名精确匹配方法的结构体都实现了该接口。
--   接口可以嵌入另一个接口中，以为额外的灵活性提供进一步的抽象。
+- 多个相关数据项可以组合在 Go 结构体类型中。
+- 结构体的`{ }`大括号包含名称和类型对列表，这些字段定义了结构体的内容。
+- 结构体的实例可以作为声明以结构体名称为类型的变量来创建。
+- 通过将值赋值给实例名称和点后缀字段可以初始化结构体的单个字段。
+- 通过将结构体字面量赋值给变量名可以创建并初始化结构体的实例。
+- 通过添加接收者，可以将函数绑定到结构体上，接收者在函数签名中指定结构体的名称。
+- 绑定到结构体的函数被称为方法（method）。
+- 方法可以是值接收者（在结构体的副本上进行操作），也可以指针接收者（在原始字段上进行操作）。
+- 结构体可以通过其字段属性和附加的方法表示真实世界对象的属性和行为。
+- 结构体可以作为匿名字段嵌入另一个结构体中，这样就可以直接访问它的字段。
+- 面向对象编程的三大基石是封装、继承和多态。
+- Go 中的封装依赖于包中的数据隐藏，只有大写字母开头的项会被导出。
+- Go 中的继承依赖于组合，嵌入的结构体为嵌入的结构体提供字段和方法。
+- Go 中的多态依赖于其接口类型（interface），接口只包含方法签名列表。
+- 任何拥有与接口方法签名精确匹配方法的结构体都实现了该接口。
+- 接口可以嵌入另一个接口中，以为额外的灵活性提供进一步的抽象。
 
 # 7 创建数组
 
 本章演示了如何在 Go 程序中通过索引元素存储多个数据项。
 
--   创建基础数组
--   遍历元素
--   切片数组
--   制作切片
--   切片与数组的区别
--   Map 的键和值
--   总结
+- 创建基础数组
+- 遍历元素
+- 切片数组
+- 制作切片
+- 切片与数组的区别
+- Map 的键和值
+- 总结
 
 ## 创建基础数组
 
@@ -2999,41 +3024,41 @@ func main( ) {
 
 ![image](img/pg98_1.jpg)
 
-可以使用 `var` 关键字后跟一个自定义的名称，然后跟一个 `[ ]` 方括号（其中包含指定所需元素数量的整数）来声明空数组。这些后面必须紧跟元素可以包含的数据类型。声明的语法如下：
+可以使用`var`关键字后跟一个自定义的名称，然后跟一个`[ ]`方括号（其中包含指定所需元素数量的整数）来声明空数组。这些后面必须紧跟元素可以包含的数据类型。声明的语法如下：
 
-```
+```go
 var arrayName [ nElements ] dataType
 ```
 
-然后可以通过在方括号中指定元素编号，为每个可用元素单独赋值值：
+然后可以通过在方括号中指定元素编号，为每个可用元素单独赋值：
 
-```
+```go
 arrayName [ elementNumber ] = value
 ```
 
 或者，也可以通过在“数组字面量”中列出每个元素的值来声明并初始化数组——这是一个在花括号内分组的、并用逗号分隔的列表：
 
-```
+```go
 arrayName := [ nElements ] dataType { value, value, value }
 ```
 
 可以使用数组名称后跟包含元素编号的方括号来引用任何单个元素的值。例如，引用第一个元素中的值：
 
-```
+```go
 arrayName [ 0 ]
 ```
 
 数组的元素合称为“索引”（index）。数组可以有多个索引——以表示多个维度，而不是普通数组的单维度。具有三个或更多索引的多维数组并不常见，但二维数组常用于存储基于网格的信息，如坐标。
 
-要创建一个二维数组，只需添加第二对 `[ ]` 方括号来指定所需的元素数量，如下：
+要创建一个二维数组，只需添加第二对`[ ]`方括号来指定所需的元素数量，如下：
 
-```
+```go
 var arrayName [ nElements ] [ nElements ] dataType
 ```
 
 然后可以通过在方括号中指定元素编号，为每个可用元素单独赋值：
 
-```
+```go
 arrayName [ elementNumber ] [ elementNumber ] = value
 ```
 
@@ -3047,51 +3072,51 @@ arrayName [ elementNumber ] [ elementNumber ] = value
 
 或者，可以在声明二维数组时通过在数组字面量中列出每个索引的值来初始化它并为每个元素赋值：
 
-```
+```go
 arrayName := [ nElements ] [ nElements ] dataType
 { { value, value, value }, { value, value, value } }
 ```
 
 可以使用数组名称后跟包含每个索引元素编号的方括号来引用任何单个元素的值。例如，第二个索引的第一个元素：
 
-```
+```go
 arrayName [ 0 ] [ 1 ]
 ```
 
-![image](img/1v.jpg)创建一个包含三个元素的空数组，每个元素只能包含字符串值
+![image](img/1v.jpg)创建一个包含三个元素的空数组，每个元素只能包含字符串值。
 
-```
+```go
 var cars [ 3 ]string
 ```
 
 ![image](img/commonv.jpg)
 
-src\array\main.go
+`src\array\main.go`
 
-![image](img/2v.jpg)接下来，添加语句来初始化每个数组元素
+![image](img/2v.jpg)接下来，添加语句来初始化每个数组元素。
 
-```
+```go
 cars[ 0 ] = "BMW"
 cars[ 1 ] = "Ford"
 cars[ 2 ] = "Opel"
 ```
 
-![image](img/3v.jpg)现在，声明并初始化一个二维数组
+![image](img/3v.jpg)现在，声明并初始化一个二维数组。
 
-```
+```go
 coords := [ 2 ][ 3 ]int { { 1, 2, 3 }, { 4, 5, 6 } }
 ```
 
-![image](img/4v.jpg)然后，添加语句显示数组元素
+![image](img/4v.jpg)然后，添加语句显示数组元素。
 
-```
+```go
 fmt.Println("Cars:", cars)
 fmt.Println("Second Car:", cars[1])
 fmt.Println("X1,Y1:", coords[0][0])
 fmt.Println("X2,Y3:", coords[1][2])
 ```
 
-![image](img/5v.jpg)将程序保存到“array”目录，然后运行程序查看数组元素
+![image](img/5v.jpg)将程序保存到`array`目录，然后运行程序查看数组元素。
 
 ![image](img/pg99.jpg)
 
@@ -3099,25 +3124,25 @@ fmt.Println("X2,Y3:", coords[1][2])
 
 ## 遍历元素
 
-循环和数组是完美的。循环可以用于填充空数组并遍历每个元素。Go 有一个内置函数 `len()`，它接受数组变量作为参数，并返回数组元素的数量。这可以在传统的 for 循环中使用，直到数组的最后一个元素。
+循环和数组是完美的。循环可以用于填充空数组并遍历每个元素。Go 有一个内置函数`len()`，它接受数组变量作为参数，并返回数组元素的数量。这可以在传统的`for`循环中使用，直到数组的最后一个元素。
 
-![image](img/1v.jpg)创建一个五个元素的空整数数组
+![image](img/1v.jpg)创建一个五个元素的空整数数组。
 
-```
+```go
 var arr [ 5 ]int
 ```
 
 ![image](img/commonv.jpg)
 
-src\elems\main.go
+`src\elems\main.go`
 
-![image](img/2v.jpg)接下来，添加语句确认数组大小
+![image](img/2v.jpg)接下来，添加语句确认数组大小。
 
-```
+```go
 fmt.Println("No. of Elements:", len(arr))
 ```
 
-![image](img/3v.jpg)现在，添加一个循环来填充元素
+![image](img/3v.jpg)现在，添加一个循环来填充元素。
 
 ```go
 for i := 0; i < len(arr); i++ {
@@ -3125,7 +3150,7 @@ for i := 0; i < len(arr); i++ {
 }
 ```
 
-![image](img/4v.jpg)然后，添加一个循环引用引用数组元素
+![image](img/4v.jpg)然后，添加一个循环引用数组元素。
 
 ```go
 for i := 0; i < len(arr); i++ {
@@ -3133,31 +3158,27 @@ for i := 0; i < len(arr); i++ {
 }
 ```
 
-![image](img/5v.jpg)将程序保存到“elems”目录，然后运行程序查看存储在数组元素中的值
+![image](img/5v.jpg)将程序保存到`elems`目录，然后运行程序查看存储在数组元素中的值。
 
 ![image](img/pg100.jpg)
 
 ![image](img/forget.jpg)数组索引是从零开始，所以这里的最后一个元素索引是 4。
 
-Go 提供了一些适用于数组的特殊特性。首先，在使用数组字面量声明数组变量时，可以使用 `…` 通配符运算符将元素数量设置为与数组字面量中的值相等：
+Go 提供了一些适用于数组的特殊特性。首先，在使用数组字面量声明数组变量时，可以使用`…`通配符运算符将元素数量设置为与数组字面量中的值相等：
 
-```
+```go
 arr := [ ... ]int { 10, 20, 30 } // len(arr) == 3
 ```
 
 你甚至可以通过为每个值指定索引编号来指定它应该存储在哪个元素中，如下：
 
-```
+```go
 arr := [ ... ]int { 2: 10, 0: 20, 1: 30 } // arr == [ 20, 30, 10 ]
 ```
 
-其次，你可以在循环中使用 `range` 关键字遍历数组并返回每个元素的索引编号和值。
+其次，你可以在循环中使用`range`关键字遍历数组并返回每个元素的索引编号和值。
 
-
-
-
-
-![image](img/1v.jpg)创建一个包含五个元素的整数数组
+![image](img/1v.jpg)创建一个包含五个元素的整数数组。
 
 ```go
 arr := [ … ]int { 100, 200, 300, 400, 500 }
@@ -3167,13 +3188,13 @@ arr := [ … ]int { 100, 200, 300, 400, 500 }
 
 `src\range\main.go`
 
-![image](img/2v.jpg)接下来，添加一条语句确认数组的大小
+![image](img/2v.jpg)接下来，添加一条语句确认数组的大小。
 
 ```go
 fmt.Println( “No. of Elements:”, len( arr ) )
 ```
 
-![image](img/3v.jpg)现在，添加一个循环修改每个元素的值
+![image](img/3v.jpg)现在，添加一个循环修改每个元素的值。
 
 ```go
 for i , v := range arr {
@@ -3181,7 +3202,7 @@ for i , v := range arr {
 }
 ```
 
-![image](img/4v.jpg)然后，添加一个循环来引用每个数组元素的值
+![image](img/4v.jpg)然后，添加一个循环来引用每个数组元素的值。
 
 ```go
 for i , v := range arr {
@@ -3189,15 +3210,15 @@ for i , v := range arr {
 }
 ```
 
-![image](img/5v.jpg)将程序文件保存在“range”目录中，然后运行程序查看存储在数组元素中的值
+![image](img/5v.jpg)将程序文件保存在`range`目录中，然后运行程序查看存储在数组元素中的值。
 
 ![image](img/pg101_1.jpg)
 
 ![image](img/hot.jpg)
 
-如果你在循环语句中不需要索引数字，可以将变量名 `i` 替换为空白标识符 `_` 以避免错误——请参阅这里。
+如果你在循环语句中不需要索引数字，可以将变量名`i`替换为空白标识符`_`以避免错误——请参阅这里。
 
-## 切片数组 (Slice Arrays)
+## 切片数组（Slice Arrays）
 
 数组是序列，其每个元素都包含相同类型的数据，但长度是固定的，因此并不灵活。幸运的是，Go 提供了切片类型，它代表底层数组且其长度是可以改变的。
 
@@ -3213,7 +3234,7 @@ for i , v := range arr {
 
 ![image](img/pg102_2.jpg)
 
-在 Go 编程中，可以通过将数组赋值给指定所需上下边界元素索引的变量来创建切片。这些边界通过 `[ ]` 方括号之间的冒号 `:` 字符来指定。冒号左侧的数字指定切片起始元素的索引——切片指针将引用该元素。冒号右侧的数字指定上边界的索引——用于提取直到上边界元素但不包括该元素的所有元素。上述示例的赋值语句如下所示：
+在 Go 编程中，可以通过将数组赋值给指定所需上下边界元素索引的变量来创建切片。这些边界通过`[ ]`方括号之间的冒号`:`字符来指定。冒号左侧的数字指定切片起始元素的索引——切片指针将引用该元素。冒号右侧的数字指定上边界的索引——用于提取直到上边界元素但不包括该元素的所有元素。上述示例的赋值语句如下所示：
 
 ```go
 weekdays := days[ 0 : 5 ]
@@ -3225,9 +3246,9 @@ weekdays := days[ 0 : 5 ]
 
 切片在 Go 编程中非常重要，出现频率比数组类型得多，但重要的是理解它们是对底层数组的引用。
 
-你可以使用内置函数 `len()` 像数组一样获取切片的长度，但也可以使用内置函数 `cap()` 切片的容量。将切片的指针值与它指向的数组元素的内存地址进行比较，可以确认切片确实是一个指针引用。
+你可以使用内置函数`len()`像数组一样获取切片的长度，但也可以使用内置函数`cap()`获取切片的容量。将切片的指针值与它指向的数组元素的内存地址进行比较，可以确认切片确实是一个指针引用。
 
-![image](img/1v.jpg)首先，创建一个包含七元素的数组
+![image](img/1v.jpg)首先，创建一个包含七元素的数组。
 
 ```go
 days := [ 7 ]string {“Mon”,”Tue”，“Wed”，“Thu”，“Fri”，“Sat”，“Sun”}
@@ -3237,42 +3258,42 @@ days := [ 7 ]string {“Mon”,”Tue”，“Wed”，“Thu”，“Fri”，�
 
 `src\slice\main.go`
 
-![image](img/2v.jpg)创建一个代表最后两个数组元素的切片
+![image](img/2v.jpg)创建一个代表最后两个数组元素的切片。
 
 ```go
 weekend := days[ 5 : ]
 ```
 
-![image](img/3v.jpg)现在，添加语句显示切片的内容和类型
+![image](img/3v.jpg)现在，添加语句显示切片的内容和类型。
 
 ```go
 fmt.Printf( “Slice weekend: %v \n”, weekend )
 fmt.Printf( “Type weekend : %T \n”, weekend )
 ```
 
-![image](img/4v.jpg)添加语句显示切片的长度和容量
+![image](img/4v.jpg)添加语句显示切片的长度和容量。
 
 ```go
 fmt.Printf( “Length weekend: %v \n”, len( weekend ) )
 fmt.Printf( “Capacity weekend: %v \n”, cap( weekend ) )
 ```
 
-![image](img/5v.jpg)最后，添加语句确认切片是引用底层数组元素的引用
+![image](img/5v.jpg)最后，添加语句确认切片是引用底层数组元素的引用。
 
 ```go
 fmt.Printf( “Pointer weekend: %p \n”, weekend )
 fmt.Printf( “Address days[0]: %p \n”, &days[ 5 ] )
 ```
 
-![image](img/6v.jpg)将程序文件保存在“slice”目录中，然后运行程序查看切片的特性
+![image](img/6v.jpg)将程序文件保存在`slice`目录中，然后运行程序查看切片的特性。
 
 ![image](img/pg103_1.jpg)
 
 ![image](img/hot.jpg)
 
-可以看到切片的类型由空 `[ ]` 方括号后跟每个元素可能包含的类型来描述。
+可以看到切片的类型由空`[ ]`方括号后跟每个元素可能包含的类型来描述。
 
-## 创建切片 (Make Slices)
+## 创建切片（Make Slices）
 
 ![image](img/pg104_1.jpg)
 
@@ -3282,7 +3303,7 @@ fmt.Printf( “Address days[0]: %p \n”, &days[ 5 ] )
 fruitSlice := []string{"Apple”，“Banana”，“Cherry”
 ```
 
-你还可以使用 `make()` 函数创建一个空切片，其参数指定切片类型、长度以及（可选的）切片容量。
+你还可以使用`make()`函数创建一个空切片，其参数指定切片类型、长度以及（可选的）切片容量。
 
 ```go
 fruitSlice := make( []string, 3 )
@@ -3297,14 +3318,14 @@ fruitSlice[ 2 ] = “Cherry”
 fruitSlice = append( fruitSlice, “Damson”)
 ```
 
-还有一个 `copy()` 函数允许你将一个切片复制到另一个切片。它需要两个参数，指定目标切片和源切片。
+还有一个`copy()`函数允许你将一个切片复制到另一个切片。它需要两个参数，指定目标切片和源切片。
 
 ```go
 jamSlice := make( []string, len(fruitSlice) )
 copy( jamSlice, fruitSlice )
 ```
 
-如果你想从切片中删除元素并保留剩余元素的顺序，可以使用 `copy()` 函数将所有元素向下移动一位。
+如果你想从切片中删除元素并保留剩余元素的顺序，可以使用`copy()`函数将所有元素向下移动一位。
 
 ```go
 copy( nums[ 0 : ], nums[ 1 : ] )
@@ -3313,7 +3334,7 @@ nums = nums[ : len( nums ) - 1 ]
 
 你不必切片的底层数组，因为 Go 会处理它。
 
-![image](img/1v.jpg)通过字面量创建一个整数切片
+![image](img/1v.jpg)通过字面量创建一个整数切片。
 
 ```go
 nums := []int{ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 }
@@ -3323,7 +3344,9 @@ nums := []int{ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 }
 
 `src\make\main.go`
 
-创建另一个切片，然后初始化它的各个元素
+创建另一个切片，然后初始化它的各个元素。
+
+
 
 ```go
 more := make( []int, 3 )
@@ -3353,7 +3376,7 @@ nums = nums[ : len( nums ) - 1 ]
 describe( nums )
 ```
 
-在 main 函数之后，添加描述第一个切片元素值、长度和容量的函数
+在`main`函数之后，添加描述第一个切片元素值、长度和容量的函数
 
 ```go
 func describe( nums []int ) {
@@ -3361,10 +3384,6 @@ func describe( nums []int ) {
     fmt.Printf( “Capacity: %v \n”, cap( nums ) )
 }
 ```
-
-
-
-
 
 这里的容量增量大小为 10，但在其他平台上可能会有所不同。请注意，当元素被删除时，容量不会恢复到原始大小。
 
@@ -3378,19 +3397,19 @@ func describe( nums []int ) {
 
 数组和切片的另一个区别涉及“变长参数”函数，这种函数可以使用任意数量的参数进行调用。除非你通过将数组元素值复制到切片元素并将数组“转换”为切片，否则你无法将数组元素值传递给变长函数。
 
-你可以通过在函数签名的最后一个参数的数据类型前加上 `…` 通配符运算符来简单地创建一个变长函数，使用这种语法：
+你可以通过在函数签名的最后一个参数的数据类型前加上`…`通配符运算符来简单地创建一个变长函数，使用这种语法：
 
-`func *funcName* (*paramName…dataType)`
+`func funcName( paramName…dataType)`
 
-变长函数可以像通常一样调用，在 `()` 括号内包含用逗号分隔的参数列表。
+变长函数可以像通常一样调用，在`()`括号内包含用逗号分隔的参数列表。
 
-变长函数在将切片元素的值传递给函数时特别有用，因为切片的长度在程序执行过程中可能会变化。无论切片的长度如何，都可以通过在函数调用的括号内指定切片名称后跟 `…` 通配符运算符，将它的元素值传递给变长函数：
+变长函数在将切片元素的值传递给函数时特别有用，因为切片的长度在程序执行过程中可能会变化。无论切片的长度如何，都可以通过在函数调用的括号内指定切片名称后跟`…`通配符运算符，将它的元素值传递给变长函数：
 
-`*funcName*(sliceName…)`
+`funcName(sliceName…)`
 
 ![image](img/hot.jpg)
 
-`fmt.Printf()` 函数是一个变长函数——它在开头需要一个固定参数，然后接受任意数量的后续参数。
+`fmt.Printf()`函数是一个变长函数——它在开头需要一个固定参数，然后接受任意数量的后续参数。
 
 ![image](img/1v.jpg)创建一个三个字符串的数组
 
@@ -3426,7 +3445,7 @@ slice = append( slice, “Porsche”, “Ferrari” )
 list( slice…)
 ```
 
-![image](img/6v.jpg)在 main 函数之后，添加变长函数来列出传递的切片元素值
+![image](img/6v.jpg)在`main`函数之后，添加变长函数来列出传递的切片元素值
 
 ```go
 func list( autos …string ) {
@@ -3437,7 +3456,7 @@ func list( autos …string ) {
 }
 ```
 
-![image](img/7v.jpg)将程序文件保存在“versus”目录中，然后运行程序查看参数值
+![image](img/7v.jpg)将程序文件保存在`versus`目录中，然后运行程序查看参数值
 
 ![image](img/pg107_1.jpg)
 
@@ -3453,35 +3472,35 @@ func list( autos …string ) {
 
 map 中的所有键必须是唯一的且具有相同的数据类型。map 中的所有值必须具有相同的数据类型，但不一定与键的数据类型相同。
 
-可以使用 `var` 和 `map` 关键字，并使用这种语法指定键和值的数据类型来创建 map：
+可以使用`var`和`map`关键字，并使用这种语法指定键和值的数据类型来创建 map：
 
-`var *mapName = map [ *keyDataType ] *valueDataType`
+`var mapName = map [ keyDataType ] valueDataType`
 
 然后可以将单独的键/值对赋值给 map，如下：
 
 ```go
-*mapName[ “*keyName*” ] = *value*
+mapName[ “keyName” ] = value
 ```
 
-或者，你可以使用内置的 `make()` 函数来创建 map：
+或者，你可以使用内置的`make()`函数来创建 map：
 
 ```go
-*mapName := make( map [ *keyDataType ] *valueDataType* )
+mapName := make( map [ keyDataType ] valueDataType )
 ```
 
 此外，你可以通过使用这种语法赋值“map 字面量”来创建并初始化 map：
 
 ```go
-*mapName := map [ *keyDataType ] *valueDataType {
-    *key* : *value* , *key* : *value* , *key* : *value ,
+mapName := map [ keyDataType ] valueDataType {
+    key : value , key : value , key : value ,
 }
 ```
 
 与数组和切片不同，键/值对是以无序方式存储的，因此你不能使用元素索引来引用存储的值——你必须使用其关联的键。
 
-你可以随时向 map 添加键/值对，并可以使用内置的 `delete()` 函数删除键/值对。这需要两个参数来指定 map 名称和要删除的键名。
+你可以随时向 map 添加键/值对，并可以使用内置的`delete()`函数删除键/值对。这需要两个参数来指定 map 名称和要删除的键名。
 
-与数组和切片一样，你可以使用 `range` 关键字遍历 map 的所有元素。在这种情况下，循环将返回键和值。
+与数组和切片一样，你可以使用`range`关键字遍历 map 的所有元素。在这种情况下，循环将返回键和值。
 
 ![image](img/snake.jpg)map 不是切片，所以你无法对其地址。
 
@@ -3532,63 +3551,60 @@ for k, v := range colors {
 ## 总结
 
 - 数组是顺序存储元素的固定长度结构。
-- 数组声明必须在 [ ] 中指定元素数量。
+- 数组声明必须在`[ ]`中指定元素数量。
 - 数组或切片元素存储的值可以通过指定索引数字来引用。
-- 空数组可以使用 `var` 关键字创建，也可以通过赋值数组字面量创建并初始化。
-- `len()` 函数返回数组或切片的长度。
-- 可以使用 `range` 关键字遍历元素。
+- 空数组可以使用`var`关键字创建，也可以通过赋值数组字面量创建并初始化。
+- `len()`函数返回数组或切片的长度。
+- 可以使用`range`关键字遍历元素。
 - 切片是顺序存储在底层数组元素的可变长度结构。
 - 切片包含一个指针、长度和容量。
-- `cap()` 函数返回切片的容量。
-- 切片声明不需要在 [ ] 中指定元素数量。
-- 元素序列的上下边界可以在 [ ] 内的 `:` 字符周围进行指定。
-- 空切片可以使用 `make()` 函数创建，也可以通过赋值切片字面量创建并初始化。
-- 可以 `append()` 函数向切片添加元素。
-- 切片可以通过 `copy()` 函数复制到另一个切片中。
+- `cap()`函数返回切片的容量。
+- 切片声明不需要在`[ ]`中指定元素数量。
+- 元素序列的上下边界可以在`[ ]`内的`:`字符周围进行指定。
+- 空切片可以使用`make()`函数创建，也可以通过赋值切片字面量创建并初始化。
+- 可以使用`append()`函数向切片添加元素。
+- 切片可以通过`copy()`函数复制到另一个切片中。
 - 将引用传递给函数时不需要指针。
 - 变长函数可以使用任意数量的参数调用。
 - map 是包含关联键/值对的可变长度结构。
-- 空 map 可以使用 `make()` 函数创建，也可以通过赋值 map 字面量创建并初始化。
-- map 元素存储的值可以通过指定 [ ] 中的关联键来引用。
+- 空 map 可以使用`make()`函数创建，也可以通过赋值 map 字面量创建并初始化。
+- map 元素存储的值可以通过指定`[ ]`中的关联键来引用。
 
-
-
-
-本章演示了如何使用 Go 标准库中的 `time` 包处理日期和时间。
+本章演示了如何使用 Go 标准库中的`time`包处理日期和时间。
 
 ## 获取日期
 
-Go 标准库的 `time` 包提供了功能，可以从 `Time` 数据类型中提取描述特定时间点的特定字段。通过导入 `time` 包，程序可以使用这些功能。
+Go 标准库的`time`包提供了功能，可以从`Time`数据类型中提取描述特定时间点的特定字段。通过导入`time`包，程序可以使用这些功能。
 
 ![image](img/pg112_1.jpg)
 
-可以使用 `time.Now()` 函数创建一个新的 `Time` 数据类型的日期/时间实例，其字段描述了当前的日期和时间。这些字段是根据设备上当前区域的系统时钟初始化的。
+可以使用`time.Now()`函数创建一个新的`Time`数据类型的日期/时间实例，其字段描述了当前的日期和时间。这些字段是根据设备上当前区域的系统时钟初始化的。
 
-可以使用 `Time` 数据类型的相应方法来获取单个字段的值。例如，可以使用 `Year()` 方法获取年份字段的值。同样，还有 `Month()`、`Day()` 和 `Weekday()` 方法，用于获取 `Time` 数据类型的其他单个字段。
+可以使用`Time`数据类型的相应方法来获取单个字段的值。例如，可以使用`Year()`方法获取年份字段的值。同样，还有`Month()`、`Day()`和`Weekday()`方法，用于获取`Time`数据类型的其他单个字段。
 
-| **方法** | **返回** |
+| 方法 | 返回 |
 | :--- | :--- |
-| `Now()` | 包含当前日期、时间和时区字段的 `time.Time` 数据类型 |
+| `Now()` | 包含当前日期、时间和时区字段的`time.Time`数据类型 |
 | `Year()` | 4 位数字年份 (YYYY) |
 | `Month()` | 年份的月份名称 |
 | `Day()` | 月份中的数字 |
 | `Weekday()` | 星期几名称 |
 
-还有这三个方法返回的 `Time` 数据类型值可以很好地赋值给变量：
+还有这三个方法返回的`Time`数据类型值可以很好地赋值给变量：
 
-| **方法** | **返回** |
+| 方法 | 返回 |
 | :--- | :--- |
 | `Date()` | 4 位数字年份 (YYYY)、年份的月份名称和月份中的数字 |
 | `ISOWeek()` | 年的周数 (1-53) 和 4 位数字年份 (YYYY) |
 | `YearDay()` | 年中的天数 (1-365/366) |
 
-需要注意的是，`Time` 数据类型包含单个字段，因此它不是字符串。不过，你可以使用它的 `String()` 方法将其转换为字符串：
+需要注意的是，`Time`数据类型包含单个字段，因此它不是字符串。不过，你可以使用它的`String()`方法将其转换为字符串：
 
 ![image](img/snake.jpg)
 
-`Time` 类型方法返回的值不是字符串。
+`Time`类型方法返回的值不是字符串。
 
-![image](img/1b.jpg)首先在程序中导入 Go 标准库的 `time` 包
+![image](img/1b.jpg)首先在程序中导入 Go 标准库的`time`包
 
 ```go
 import (
@@ -3599,9 +3615,9 @@ import (
 
 ![image](img/commons.jpg)
 
-src\date\main.go
+`src\date\main.go`
 
-![image](img/2b.jpg)接下来，创建一个 `Time` 数据类型的日期/时间实例，用当前日期和时间初始化
+![image](img/2b.jpg)接下来，创建一个`Time`数据类型的日期/时间实例，用当前日期和时间初始化
 
 ```go
 dt := time.Now()
@@ -3631,7 +3647,7 @@ dy := dt.YearDay()
 fmt.Printf("Day No.: %v \n", dy)
 ```
 
-![image](img/6b.jpg)将程序文件保存在“date”目录中，然后运行程序查看日期字段的值
+![image](img/6b.jpg)将程序文件保存在`date`目录中，然后运行程序查看日期字段的值
 
 ![image](img/pg113_1.jpg)
 
@@ -3641,26 +3657,26 @@ fmt.Printf("Day No.: %v \n", dy)
 
 ## 获取时间
 
-`Time` 数据类型单个字段中的时间值可以使用相应的方法获取。例如，可以使用 `Hour()` 方法获取小时字段的值。同样，还有 `Minute()`、`Second()` 和 `Nanosecond()` 方法，用于获取 `Time` 数据类型的其他单个字段。
+`Time`数据类型单个字段中的时间值可以使用相应的方法获取。例如，可以使用`Hour()`方法获取小时字段的值。同样，还有`Minute()`、`Second()`和`Nanosecond()`方法，用于获取`Time`数据类型的其他单个字段。
 
 ![image](img/pg114_1.jpg)
 
-| **方法** | **返回** |
+| 方法 | 返回 |
 | :--- | :--- |
 | `Hour()` | 当天的小时 (0-23) |
 | `Minute()` | 小时内的分钟 (0-59) |
 | `Second()` | 分钟内的秒数 (0-59) |
 | `Nanosecond()` | 秒内的纳秒 (0-999999999) |
 
-与其他编程语言不同，Go 的 `time` 包没有提供从 `Time` 数据类型返回毫秒值的方法。不过，你可以将纳秒值除以一百来产生等等的毫秒值。还有这三个方法返回的数据类型值可以很好地赋值给变量：
+与其他编程语言不同，Go 的`time`包没有提供从`Time`数据类型返回毫秒值的方法。不过，你可以将纳秒值除以一百来产生等等的毫秒值。还有这三个方法返回的数据类型值可以很好地赋值给变量：
 
-| **方法** | **返回** |
+| 方法 | 返回 |
 | :--- | :--- |
 | `Clock()` | 当天的小时、分、秒 |
 | `Unix()` | 自纪元（1970 年 1 月 1 日）开始的秒数 |
 | `UnixNano()` | 自纪元（1970 年 1 月 1 日）开始的纳秒数 |
 
-![image](img/1b.jpg)首先在程序中导入 Go 标准库的 `time` 包
+![image](img/1b.jpg)首先在程序中导入 Go 标准库的`time`包
 
 ```go
 import (
@@ -3671,9 +3687,9 @@ import (
 
 ![image](img/commons.jpg)
 
-src\main.go
+`src\main.go`
 
-![image](img/2b.jpg)接下来，创建一个 `Time` 数据类型的日期/时间实例，用当前日期和时间初始化
+![image](img/2b.jpg)接下来，创建一个`Time`数据类型的日期/时间实例，用当前日期和时间初始化
 
 ```go
 dt := time.Now()
@@ -3720,7 +3736,7 @@ fmt.Println("Nanoseconds:", ns)
 fmt.Println("Milliseconds:", ms)
 ```
 
-![image](img/7b.jpg)将程序文件保存在“times”目录中，然后运行程序查看时间字段的值
+![image](img/7b.jpg)将程序文件保存在`times`目录中，然后运行程序查看时间字段的值
 
 ![image](img/pg115_1.jpg)
 
@@ -3732,7 +3748,7 @@ fmt.Println("Milliseconds:", ms)
 
 ![image](img/pg116_1.jpg)
 
-`Time` 数据类型单个字段中的日期和时间可以使用其 `Format()` 方法以多种方式格式化。该方法接受一个作为“布局”字符串的参数，该格式必须通过精确使用此引用字符串的元素来指定：
+`Time`数据类型单个字段中的日期和时间可以使用其`Format()`方法以多种方式格式化。该方法接受一个作为“布局”字符串的参数，该格式必须通过精确使用此引用字符串的元素来指定：
 
 `Mon Jan 2 15:04:05 2006 MST`
 
@@ -3740,7 +3756,7 @@ fmt.Println("Milliseconds:", ms)
 
 `01 02 03:04:05PM '06 -0700`
 
-如果你想让 `Format()` 方法只返回日期、月份和 hh:mm 格式的时间，可以将布局指定为：
+如果你想让`Format()`方法只返回日期、月份和 hh:mm 格式的时间，可以将布局指定为：
 
 `Jan 2 15:04`
 
@@ -3752,21 +3768,21 @@ fmt.Println("Milliseconds:", ms)
 
 `Monday January 2 15:04`
 
-`time` 包包含了预定义的 `UnixDate`、`ANSIC` 和 `RFC3339` 常量，你可以作为日期/时间布局格式。
+`time`包包含了预定义的`UnixDate`、`ANSIC`和`RFC3339`常量，你可以作为日期/时间布局格式。
 
 自定义布局可以任意顺序指定组件以适应不同的区域——例如，用于日期格式化。
-
-
 
 此外，时间组件可以格式化为 24 小时制，通过指定“15:04”将自动在单数字小时前补零。
 
 12 小时格式和 24 小时格式都会自动在单数字分钟前补零。
 
+
+
 ![image](img/hot.jpg)
 
-ANSIC 指的是美国国家标准学会 C 语言的标准日期/时间格式。RFC 3339 指的是互联网工程任务组（IETF）的日期/时间文档。
+`ANSIC` 指的是美国国家标准学会 C 语言的标准日期/时间格式。`RFC 3339` 指的是互联网工程任务组（IETF）的日期/时间文档。
 
-![image](img/1b.jpg)首先在程序中导入 Go 标准库 time 包
+![image](img/1b.jpg)首先在程序中导入 Go 标准库 `time` 包
 
 ```go
 import (
@@ -3777,9 +3793,9 @@ import (
 
 ![image](img/commons.jpg)
 
-src\format\main.go
+`src\format\main.go`
 
-![image](img/2b.jpg)接下来，创建一个 Time 类型的日期/时间实例，用当前日期和时间初始化，然后以各种格式显示其组件
+![image](img/2b.jpg)接下来，创建一个 `Time` 类型的日期/时间实例，用当前日期和时间初始化，然后以各种格式显示其组件
 
 ```go
 dt := time.Now()
@@ -3814,33 +3830,33 @@ fmt.Println("Time 24-Hour:", dt.Format("15:04"))
 
 ## 设置日期和时间
 
-你可以使用 Go 标准库 time 包的 `Date()` 函数创建自定义的 Time 数据类型。这需要八个参数来指定（按顺序）年、月、日、时、分、秒、纳秒和位置。
+你可以使用 Go 标准库 `time` 包的 `Date()` 函数创建自定义的 `Time` 数据类型。这需要八个参数来指定（按顺序）年、月、日、时、分、秒、纳秒和位置。
 
 ![image](img/pg116_1.jpg)
 
 除了月份和位置外，所有参数都以整数值指定。
 
-月份可以使用 time 包预定义的 1 月至 12 月的全称月份常量之一来指定，例如 `time.January`。
+月份可以使用 `time` 包预定义的 1 月至 12 月的全称月份常量之一来指定，例如 `time.January`。
 
-位置可以使用 time 包预定义的位置常量之一指定，如 `time.UTC`（协调世界时）或 `time.Local`（你的系统时钟）。
+位置可以使用 `time` 包预定义的位置常量之一指定，如 `time.UTC`（协调世界时）或 `time.Local`（你的系统时钟）。
 
-任何 Time 数据类型中的日期字段都可以使用 Go 标准库 time 包的 `AddDate()` 方法进行修改，以指定年、月、日的三个参数。正值将推进日期，负值将推迟日期。例如，`time.AddDate(1, 0, 0)` 将日期推后一年。
+任何 `Time` 数据类型中的日期字段都可以使用 Go 标准库 `time` 包的 `AddDate()` 方法进行修改，以指定年、月、日的三个参数。正值将推进日期，负值将推迟日期。例如，`time.AddDate(1, 0, 0)` 将日期推后一年。
 
-同样，time 包的 `Add()` 方法可以通过指定单个持续时间参数来修改日期/时间。该值可以是一个表示修改日期/时间的纳秒数的 `int64` 值。更方便的是，可以使用常量 `time.Hour`、`time.Minute`、`time.Second` 或 `time.Millisecond` 来修改 Time 数据类型的各个时间字段。例如，`time.Add(10 * time.Hour)` 将时间推进 10 小时。
+同样，`time` 包的 `Add()` 方法可以通过指定单个持续时间参数来修改日期/时间。该值可以是一个表示修改日期/时间的纳秒数的 `int64` 值。更方便的是，可以使用常量 `time.Hour`、`time.Minute`、`time.Second` 或 `time.Millisecond` 来修改 `Time` 数据类型的各个时间字段。例如，`time.Add(10 * time.Hour)` 将时间推进 10 小时。
 
-你还可以使用 Go 标准库 time 包的 `Parse()` 函数从字符串创建自定义 Time 数据类型。这需要两个参数来指定布局和日期/时间字符串。有用的是，此函数返回两个值：一个 Time 数据类型和一个错误。如果函数返回 Time 数据类型，错误值将为 `nil`，否则它将是一个错误消息。
+你还可以使用 Go 标准库 `time` 包的 `Parse()` 函数从字符串创建自定义 `Time` 数据类型。这需要两个参数来指定布局和日期/时间字符串。有用的是，此函数返回两个值：一个 `Time` 数据类型和一个错误。如果函数返回 `Time` 数据类型，错误值将为 `nil`，否则它将是一个错误消息。
 
 布局应仅使用 Go 引用字符串中的值：
 
 **Mon Jan 2 15:04:05 2006 MST**
 
-除非在日期/时间字符串中指定了时区偏移值（例如 `-0500`），否则生成的 Time 数据类型将假设为 UTC 时间。
+除非在日期/时间字符串中指定了时区偏移值（例如 `-0500`），否则生成的 `Time` 数据类型将假设为 UTC 时间。
 
 ![image](img/forget.jpg)
 
 `Time` 数据类型可以使用此处描述的 `Format()` 方法进行格式化。
 
-![image](img/1b.jpg)首先在程序中导入 Go 标准库 time 包
+![image](img/1b.jpg)首先在程序中导入 Go 标准库 `time` 包
 
 ```go
 import (
@@ -3851,9 +3867,9 @@ import (
 
 ![image](img/commons.jpg)
 
-src\setdate\main.go
+`src\setdate\main.go`
 
-![image](img/2b.jpg)接下来，创建并显示 Time 类型的日期/时间实例，初始化为元旦一的正午
+![image](img/2b.jpg)接下来，创建并显示 `Time` 类型的日期/时间实例，初始化为元旦一的正午
 
 ```go
 dt := time.Date(2025, time.January, 1, 12, 0, 0, 0, time.Local)
@@ -3872,14 +3888,11 @@ if err != nil {
 }
 ```
 
-
-
-
 ![image](img/2b.jpg)接下来，在指定位置创建并初始化带有默认字符串值和 `Time` 数据类型的变量
 
-`zone := “All”`
+`zone := "All"`
 
-`loc, _ := time.LoadLocation( “America/New_York” )`
+`loc, _ := time.LoadLocation( "America/New_York" )`
 
 `dt := time.Now( ).In( loc )`
 
@@ -3890,6 +3903,7 @@ if err != nil {
 `if offset < 1 {`
 
 `offset = offset * -1`
+
 `}`
 
 `offset /= 60`
@@ -3897,16 +3911,22 @@ if err != nil {
 ![image](img/4b.jpg)现在，评估缩写和偏移量值
 
 `switch {`
-`case abbr == “EST” && offset == 300 :`
-`zone = “East Coast”`
-`case abbr == “EDT” && offset == 240 :`
-`zone = “East Coast”`
+
+`case abbr == "EST" && offset == 300 :`
+
+`zone = "East Coast"`
+
+`case abbr == "EDT" && offset == 240 :`
+
+`zone = "East Coast"`
+
 `}`
 
 ![image](img/5b.jpg)显示时区详情和适当的消息
 
-`fmt.Printf( “\nTZ: %v Offset Minutes: %v \n”, abbr, offset )`
-`fmt.Println( “Welcome to”, zone, “Visitors!” )`
+`fmt.Printf( "\nTZ: %v Offset Minutes: %v \n", abbr, offset )`
+
+`fmt.Println( "Welcome to", zone, "Visitors!" )`
 
 ![image](img/6b.jpg)在“zone”目录中保存程序文件，然后运行程序查看时区值
 
@@ -3922,7 +3942,7 @@ Go 标准库 `time` 包提供了一个 `Sleep( )` 函数，允许你通过指定
 
 ![image](img/pg122_1.jpg)
 
-Go 标准库 `time` 包还提供了三个方法，用于将 `Time` 数据类型的实例与作为参数指定的另一个时间进行比较。这些方法将根据时间比较的结果分别返回布尔值 true 或 false：
+Go 标准库 `time` 包还提供了三个方法，用于将 `Time` 数据类型的实例与作为参数指定的另一个时间进行比较。这些方法将根据时间比较的结果分别返回布尔值 `true` 或 `false`：
 
 | 方法 | 返回 |
 | :--- | :--- |
@@ -3938,20 +3958,20 @@ Go 标准库 `time` 包还提供了三个方法，用于将 `Time` 数据类型�
 
 ```go
 import (
-	“fmt”
-	“time”
+	"fmt"
+	"time"
 )
 ```
 
 ![image](img/commons.jpg)
 
-src\delay\main.go
+`src\delay\main.go`
 
 ![image](img/2b.jpg)接下来，创建并显示 `Time` 数据类型的组件
 
 `start := time.Now( )`
 
-`fmt.Println( “\nStarted At:”, start.Format( “03:04:05” ) )`
+`fmt.Println( "\nStarted At:", start.Format( "03:04:05" ) )`
 
 ![image](img/3b.jpg)现在，延迟程序的进度五秒
 
@@ -3961,18 +3981,19 @@ src\delay\main.go
 
 `finish := time.Now( )`
 
-`fmt.Println( “\nFinished At:”, finish.Format( “03:04:05” ) )`
+`fmt.Println( "\nFinished At:", finish.Format( "03:04:05" ) )`
 
 ![image](img/5b.jpg)比较开始和结束时间
 
-`fmt.Println( “\nStart First?:”, start.Before( finish ) )`
-`fmt.Println( “Finish First?:”, finish.Before( start ) )`
+`fmt.Println( "\nStart First?:", start.Before( finish ) )`
+
+`fmt.Println( "Finish First?:", finish.Before( start ) )`
 
 ![image](img/6b.jpg)最后，显示延迟的长度
 
 `diff := finish.Sub( start )`
 
-`fmt.Println( “\nTime Elapsed:”, diff.Round( time.Second ) )`
+`fmt.Println( "\nTime Elapsed:", diff.Round( time.Second ) )`
 
 ![image](img/7b.jpg)在“delay”目录中保存程序文件，然后运行程序查看时间延迟
 
@@ -3980,7 +4001,7 @@ src\delay\main.go
 
 ![image](img/hot.jpg)
 
-延迟执行的能力在暂停单个“goroutine”（协程）时特别有用——更多详情请参见示例此处 。
+延迟执行的能力在暂停单个“goroutine”（协程）时特别有用——更多详情请参见示例此处。
 
 ## 总结
 
@@ -3997,10 +4018,6 @@ src\delay\main.go
 - `Zone( )` 方法返回时区缩写和偏移量。
 - `Format( )` 方法用于格式化时间输出。
 
-
-
-
-
 Go 标准库的 `strings` 包包含了许多用于字符串处理的有用函数。其 `Join()` 函数将字符串数组中的所有元素连接（拼接）起来，创建一个单一的统一字符串。该函数需要两个参数：用于指定字符串数组的名称，以及一个用于放置在统一字符串中每个字符串元素之间的分隔符值。通常情况下，你会指定一个空格作为分隔符，以创建一个由空格分隔的统一字符串。
 
 用于写入到标准输出的 `fmt.Printf()` 和 `fmt.Println()` 函数可以在输出中添加空格和换行符，但不会更改实际的字符串。然而，它们都会返回两个值，即写入的字节数和任何写入错误。如果没有遇到错误，错误值将将如往常一样为 `nil`。对于英语语言来说，写入的字节数通常代表输出的字符数——包括字符串中包含的不可打印字符。
@@ -4009,7 +4026,7 @@ Go 标准库的 `strings` 包包含了许多用于字符串处理的有用函数
 
 非打印字符 `\t` 制表符的 ASCII 码为 9，非打印字符 `\n` 换行符的 ASCII 码为 10。
 
-![image](img/1r.jpg)首先在程序中导入 Go 标准库 strings 包
+![image](img/1r.jpg)首先在程序中导入 Go 标准库 `strings` 包
 
 ```go
 import (
@@ -4070,23 +4087,23 @@ if ast[0] == 10 && ast[1] == 9 {
 
 ![image](img/pg128_1.jpg)
 
-Go 标准库 strings 包提供了几个函数，允许将指定的字符串拆分为子字符串。这些函数将字符串视为一个数组，其中每个元素包含一个字符或空格。
+Go 标准库 `strings` 包提供了几个函数，允许将指定的字符串拆分为子字符串。这些函数将字符串视为一个数组，其中每个元素包含一个字符或空格。
 
-通常，你可能希望将一个由空格分隔的句子拆分为子字符串数组，其中每个子字符串都是独立的单词。strings 包方便地提供了一个 `Fields()` 函数，可以执行这项任务。该函数需要字符串句子作为唯一参数，并返回一个包含该字符串中每个独立单词的子字符串数组。
+通常，你可能希望将一个由空格分隔的句子拆分为子字符串数组，其中每个子字符串都是独立的单词。`strings` 包方便地提供了一个 `Fields()` 函数，可以执行这项任务。该函数需要字符串句子作为唯一参数，并返回一个包含该字符串中每个独立单词的子字符串数组。
 
-strings 包有一个 `Split()` 函数，它需要两个参数来指定一个字符串和一个分隔符。该函数将返回位于指定分隔符出现位置之间的子字符串数组。例如，当字符串是一个由空格分隔的句子且分隔符是空格字符时，`Split()` 函数将返回该句子中的单词数组。
+`strings` 包有一个 `Split()` 函数，它需要两个参数来指定一个字符串和一个分隔符。该函数将返回位于指定分隔符出现位置之间的子字符串数组。例如，当字符串是一个由空格分隔的句子且分隔符是空格字符时，`Split()` 函数将返回该句子中的单词数组。
 
-strings 包还了 `SplitN()` 函数，它的工作方式与 `Split()` 函数相同，但接受第三个参数来指定返回多少个子字符串。如果指定的子字符串数量超过了分隔符的数量，则指定分隔符的后续出现将简单地位于最后一个子字符串中。例如，当字符串是一个由空格分隔的句子、分隔符是空格字符且仅指定了两个子字符串时，`SplitN()` 函数将返回一个包含句子第一个单词的子字符串，以及一个包含句子剩余所有部分（包括空格）的子字符串。
+`strings` 包还了 `SplitN()` 函数，它的工作方式与 `Split()` 函数相同，但接受第三个参数来指定返回多少个子字符串。如果指定的子字符串数量超过了分隔符的数量，则指定分隔符的后续出现将简单地位于最后一个子字符串中。例如，当字符串是一个由空格分隔的句子、分隔符是空格字符且仅指定了两个子字符串时，`SplitN()` 函数将返回一个包含句子第一个单词的子字符串，以及一个包含句子剩余所有部分（包括空格）的子字符串。
 
 重要的是，`Fields()`、`Split()` 和 `SplitN()` 函数会丢弃指定的分隔符，并在返回的子字符串中包含分隔符周围的字符。然而，还有两个额外的函数允许你在返回的子字符串中也包含分隔符。
 
-strings 包的 `SplitAfter()` 函数工作方式类似于 `Split()` 函数，但在返回的子字符串中包含了分隔符。同样，strings 包的 `SplitAfterN()` 函数工作方式类似于 `SplitN()` 函数，但在返回的子字符串中包含了分隔符。
+`strings` 包的 `SplitAfter()` 函数工作方式类似于 `Split()` 函数，但在返回的子字符串中包含了分隔符。同样，`strings` 包的 `SplitAfterN()` 函数工作方式类似于 `SplitN()` 函数，但在返回的子字符串中包含了分隔符。
 
 ![image](img/hot.jpg)
 
 数据通常以逗号分隔值（CSV）的形式存储在 CSV 文件中，可以很好地拆分为单个值。
 
-![image](img/1r.jpg)首先在程序中导入 Go 标准库 strings 包
+![image](img/1r.jpg)首先在程序中导入 Go 标准库 `strings` 包
 
 ```go
 import (
@@ -4100,6 +4117,8 @@ import (
 `src\split\main.go`
 
 ![image](img/2r.jpg)通过初始化字符串来开始主函数
+
+
 
 ```go
 str := "I can, and I will."
@@ -4139,22 +4158,19 @@ func list(desc string, subs []string) {
 
 ![image](img/pg130_1.jpg)
 
-Go 标准库 strings 包提供了几个函数，允许搜索指定的字符串以查找指定的字符或子字符串（模式）。这些函数将字符串视为一个数组，其中每个元素包含一个字符或空格。
+Go 标准库 `strings` 包提供了几个函数，允许搜索指定的字符串以查找指定的字符或子字符串（模式）。这些函数将字符串视为一个数组，其中每个元素包含一个字符或空格。
 
-strings 包有一个 `Contains()` 函数，它需要两个参数来指定一个字符串和一个模式。该函数简单地返回 true 或 false 以表示（区分大小写的）搜索结果。例如，搜索“Pro”模式：
+`strings` 包有一个 `Contains()` 函数，它需要两个参数来指定一个字符串和一个模式。该函数简单地返回 `true` 或 `false` 以表示（区分大小写的）搜索结果。例如，搜索“Pro”模式：
 
 `strings.Contains("Go Programming in easy steps", "Pro")`
 
-strings 包还有一个 `Index()` 函数，需要两个参数。如果搜索成功，该函数将返回模式在搜索字符串中首次出现的索引位置整数；否则在搜索失败时将返回 -1。
+`strings` 包还有一个 `Index()` 函数，需要两个参数。如果搜索成功，该函数将返回模式在搜索字符串中首次出现的索引位置整数；否则在搜索失败时将返回 `-1`。
 
-strings 包的 `Count()` 函数需要两个参数来指定一个字符串和一个模式。你可以使用此函数发现模式在搜索字符串中出现了多少次非重叠实例。如果模式为空字符串，此函数通常返回 1 加上搜索字符串的字符数。这允许你通过从返回的整数减去 1 来确定搜索字符串的字符数。
+`strings` 包的 `Count()` 函数需要两个参数来指定一个字符串和一个模式。你可以使用此函数发现模式在搜索字符串中出现了多少次非重叠实例。如果模式为空字符串，此函数通常返回 `1` 加上搜索字符串的字符数。这允许你通过从返回的整数减去 `1` 来确定搜索字符串的字符数。
 
-strings 包的 `HasPrefix()` 函数需要两个参数来指定一个字符串和一个模式。该函数将返回 **true** 或 **false** 以表示搜索字符串是否以指定的模式开头。
+`strings` 包的 `HasPrefix()` 函数需要两个参数来指定一个字符串和一个模式。该函数将返回 `true` 或 `false` 以表示搜索字符串是否以指定的模式开头。
 
-
-
-
-同样，`strings` 包的 `HasSuffix()` 函数需要两个参数，分别指定一个字符串和一个要查找的模式，并返回 true 或 false 以表示搜索的字符串是否以指定的模式结尾。
+同样，`strings` 包的 `HasSuffix()` 函数需要两个参数，分别指定一个字符串和一个要查找的模式，并返回 `true` 或 `false` 以表示搜索的字符串是否以指定的模式结尾。
 
 你可以使用 `strings` 包的 `Replace()` 函数通过将指定的模式替换为替换子字符串来修改搜索字符串。该函数需要四个参数，分别指定要搜索的字符串、要查找的模式、替换子字符串以及一个表示要替换次数的整数。如果你想替换搜索字符串中所有的模式实例，只需将替换次数指定为 `-1`。
 
@@ -4175,7 +4191,7 @@ import (
 
 `src\find\main.go`
 
-![image](img/2r.jpg)通过初始化字符串变量来启动 main 函数。
+![image](img/2r.jpg)通过初始化字符串变量来启动 `main` 函数。
 
 ```go
 str := "I can resist everything except temptation"
@@ -4215,7 +4231,7 @@ fmt.Println(strings.Replace(str, "temptation", "chocolate", 1))
 
 ![image](img/pg132_1.jpg)
 
-Go 标准库 strings 包提供了转换字符串字符大小的函数。
+Go 标准库 `strings` 包提供了转换字符串字符大小的函数。
 
 `strings` 包有一个 `ToUpper()` 函数，它需要一个字符串参数。该函数将简单地返回字符串的副本，将其所有字符都转换为大写字母。
 
@@ -4247,7 +4263,7 @@ import (
 
 `src\conv\main.go`
 
-![image](img/2r.jpg)通过初始化字符串变量启动 main 函数，然后显示不同字符大小的字符串。
+![image](img/2r.jpg)通过初始化字符串变量启动 `main` 函数，然后显示不同字符大小的字符串。
 
 ```go
 str := "I have Nothing to declare except My Genius"
@@ -4271,7 +4287,7 @@ str = strings.Trim(str, " ")
 
 ![image](img/5r.jpg)最后，尝试将数据类型转换为整数。
 
-````go
+```go
 num, err := strconv.Atoi(str)
 if err != nil {
 	fmt.Println(err)
@@ -4286,7 +4302,7 @@ if err != nil {
 
 ## 计算面积
 
-![image](img/pg134.1)Go 标准库 math 包提供了许多实用的函数和常量。常量列在下表中，并带有它们的近似值：
+![image](img/pg134.1)Go 标准库 `math` 包提供了许多实用的函数和常量。常量列在下表中，并带有它们的近似值：
 
 | 常量 | 描述 |
 | :--- | :--- |
@@ -4302,7 +4318,7 @@ if err != nil {
 | `math.Ln10` | 10 的自然对数，近似值为 2.30259 |
 | `math.Log10E` | 常数 *e* 的底为 10 对数，近似值为 0.43429 |
 
-math 常量用于具有特定数学目的的 Go 程序，但为了完整性，上面列出了所有的 math 包常量。
+`math` 常量用于具有特定数学目的的 Go 程序，但为了完整性，上面列出了所有的 `math` 包常量。
 
 ![image](img/hot.jpg)
 
@@ -4310,10 +4326,7 @@ math 常量用于具有特定数学目的的 Go 程序，但为了完整性，�
 
 ![image](img/pg134_2)
 
-
-
-
-![image](img/1r.jpg)开始在程序中导入 Go 标准库的 math 包
+![image](img/1r.jpg)开始在程序中导入 Go 标准库的 `math` 包
 
 ```go
 import (
@@ -4324,7 +4337,7 @@ import (
 
 ![image](img/commonr.jpg)
 
-src\area\main.go
+`src\area\main.go`
 
 ![image](img/2r.jpg)声明三个浮点变量
 
@@ -4378,7 +4391,7 @@ Go 的 `math` 包提供了这些实用的函数，用于评估 `float64` 参数�
 | `math.Cos( )` | 余弦值 |
 | `math.Exp( )` | 常数 *e* 的幂 |
 | `math.Floor( )` | 向下取整的值 |
-| `math.IsNaN( )` | 布尔值 true 或 false |
+| `math.IsNaN( )` | 布尔值 `true` 或 `false` |
 | `math.Log( )` | 自然对数值 |
 | `math.Max( )` | 两个数中较大的一个 |
 | `math.Min( )` | 两个数中较小的一个 |
@@ -4396,7 +4409,7 @@ Go 的 `math` 包提供了这些实用的函数，用于评估 `float64` 参数�
 
 `math` 包包含了更多函数，但此处列出的函数对许多数学操作非常有用。可以在 Go 文档 [golang.org/pkg/math](http://www.golang.org/pkg/math) 中发现更多信息。
 
-![image](img/1r.jpg)开始在程序中导入 Go 标准库的 math 包
+![image](img/1r.jpg)开始在程序中导入 Go 标准库的 `math` 包
 
 ```go
 import (
@@ -4407,7 +4420,7 @@ import (
 
 ![image](img/commonr.jpg)
 
-src\area\main.go
+`src\area\main.go`
 
 ![image](img/2r.jpg)声明三个浮点变量
 
@@ -4461,7 +4474,7 @@ Go 的 `math` 包提供了这些实用的函数，用于评估 `float64` 参数�
 | `math.Cos( )` | 余弦值 |
 | `math.Exp( )` | 常数 *e* 的幂 |
 | `math.Floor( )` | 向下取整的值 |
-| `math.IsNaN( )` | 布尔值 true 或 false |
+| `math.IsNaN( )` | 布尔值 `true` 或 `false` |
 | `math.Log( )` | 自然对数值 |
 | `math.Max( )` | 两个数中较大的一个 |
 | `math.Min( )` | 两个数中较小的一个 |
@@ -4475,11 +4488,13 @@ Go 的 `math` 包提供了这些实用的函数，用于评估 `float64` 参数�
 
 `math.IsNan( )` 函数（判断是否不是数字）用于发现一个转换为 `float64` 数据类型的值是否确实为数字。
 
+
+
 ![image](img/hot.jpg)
 
 `math` 包包含了更多函数，但此处列出的函数对许多数学操作非常有用。可以在 Go 文档 [golang.org/pkg/math](http://www.golang.org/pkg/math) 中发现更多信息。
 
-![image](img/1r.jpg)开始在程序中导入 Go 标准库的 math 包
+![image](img/1r.jpg)开始在程序中导入 Go 标准库的 `math` 包
 
 ```go
 import (
@@ -4490,7 +4505,7 @@ import (
 
 ![image](img/commonr.jpg)
 
-src\area\main.go
+`src\area\main.go`
 
 ![image](img/2r.jpg)声明三个浮点变量
 
@@ -4523,12 +4538,7 @@ fmt.Printf( "\nPerimeter of Circle: %.2f \n”, perim )
 
 ![image](img/pg135_1.jpg)
 
-[由于原文存在重复，此处已根据指令“不要重复输出原文”进行去重处理，仅展示逻辑连续的翻译。]
-
-
-
-
-随机化模式基于一个的“种子”，该种子在每次程序运行时都会返回相同的伪随机顺序。这可能正是你所需要的，但通常情况下，在每次程序运行时生成不同的顺序会更好。为了实现这一点，你必须将一个自定义的种子作为整数参数传递给 `rand.Seed()` 函数，该种子在每次程序运行时都应该是唯一的。一种方便的方法是使用当前系统时间，通过调用 `time.Now()` 函数并使用 `Time` 数据类型的 `UnixNano()` 方法提取自 Unix 纪（Epoch）以来经过的纳秒整数计数。此值在每次程序运行时都会不同，因此将此整数作为 `rand.Seed()` 函数的参数，将可以确保每次程序运行时都会生成不同的伪随机顺序。
+随机化模式基于一个“种子”，该种子在每次程序运行时都会返回相同的伪随机顺序。这可能正是你所需要的，但通常情况下，在每次程序运行时生成不同的顺序会更好。为了实现这一点，你必须将一个自定义的种子作为整数参数传递给 `rand.Seed()` 函数，该种子在每次程序运行时都应该是唯一的。一种方便的方法是使用当前系统时间，通过调用 `time.Now()` 函数并使用 `Time` 数据类型的 `UnixNano()` 方法提取自 Unix 纪元（Epoch）以来经过的纳秒整数计数。此值在每次程序运行时都会不同，因此将此整数作为 `rand.Seed()` 函数的参数，将可以确保每次程序运行时都会生成不同的伪随机顺序。
 
 ![image](img/1r.jpg)在程序中导入 Go 标准库 `math/rand` 包，以及用于设置随机种子的 `time` 包和用于转换随机数的 `strconv` 包。
 
@@ -4542,7 +4552,7 @@ import ( "fmt"
 
 ![image](img/commonr.jpg)
 
-src\lotto\main.go
+`src\lotto\main.go`
 
 ![image](img/2r.jpg)接下来，为随机生成器指定一个唯一的种子
 
@@ -4556,7 +4566,7 @@ rand.Seed( time.Now().UnixNano() )
 nums := rand.Perm( 59 )
 ```
 
-![image](img/4r.jpg)然后，增加范围变为包含 1-59 
+![image](img/4r.jpg)然后，增加范围变为包含 1-59
 
 ```go
 for i := 0 ; i < len( nums ) ; i++ {
@@ -4605,7 +4615,7 @@ fmt.Println( str )
 - 字符串是字符的集合，类似于数组中的元素。
 - 内置函数 `len()` 返回作为参数的指定字符串中的字符数量。
 - `strings` 包包含用于字符串操作的函数，例如 `Join()` 拼接函数。
-- `Fields()` 和 `Split()` 函数分别从从指定字符串参数返回的子字符串数组。
+- `Fields()` 和 `Split()` 函数分别从指定字符串参数返回的子字符串数组。
 - `Contains()` 和 `Index()` 函数可用于在字符串参数中查找指定的子字符串。
 - `Count()` 函数报告子字符串在指定字符串参数中出现的次数。
 - `HasPrefix()` 和 `HasSuffix()` 函数可用于识别字符串参数的开头和结尾。
@@ -4673,9 +4683,6 @@ func main() {
 
 当你想向程序中收集较大的数据项时，通常将数据流存储在内存缓冲区中会更好。Go 标准库 `bufio`（缓冲输入输出）包提供了一个 `Scanner` 类型，它是一个具有多个处理数据流的有用方法的内存缓冲区。你可以通过导入 `bufio` 包使其在你的程序可用。
 
-
-
-
 首先，通过向 `bufio` 包的 `NewScanner()` 传递一个作为读取数据源的参数，来创建一个 `Scanner` 实例。如果数据源是用户输入，你可以导入 Go 标准库中的 `os` 包，并指定 `os.Stdin`（标准输入）作为 `NewScanner()` 的参数。
 
 `Scanner` 实例有一个 `Scan()` 方法，用于读取所有用户输入，以及一个 `Text()` 方法，用于将读取到的输入作为单个字符串值返回。
@@ -4697,7 +4704,7 @@ import (
 
 ![image](img/commong.jpg)
 
-src\buffer\main.go
+`src\buffer\main.go`
 
 ![image](img/2g.jpg)接下来，请求用户输入
 
@@ -4775,7 +4782,7 @@ import (
 
 ![image](img/commong.jpg)
 
-src\params\main.go
+`src\params\main.go`
 
 ![image](img/2g.jpg)接下来，添加一个循环来显示程序在系统上的默认位置，以及任何传入的参数
 
@@ -4803,7 +4810,7 @@ Go 标准库 `flag` 包提供了用于更高级命令行处理的函数。你可
 
 ![image](img/pg149_1.jpg)
 
-你使用 `flag` 包的 `String()`、`Int()` 或 `Bool()` 函数来定义标志。这些函数都需要三个参数：名称、默认值和帮助信息。（注：原文此处有大量重复描述，已提取核心逻辑）。
+你使用 `flag` 包的 `String()`、`Int()` 或 `Bool()` 函数来定义标志。这些函数都需要三个参数：名称、默认值和帮助信息。
 
 `Parse()` 函数应用命令行标志。
 
@@ -4820,7 +4827,7 @@ import (
 
 ![image](img/commong.jpg)
 
-src\flags\main.go
+`src\flags\main.go`
 
 ![image](img/2g.jpg)接下来，定义三个标志
 
@@ -4859,19 +4866,20 @@ func check(err error) {
 }
 ```
 
-
-
-
 # 写入文件
 
 Go 标准库包含了 `ioutil`（输入/输出实用）包，该包提供了写入文本文件的函数。你可以通过导入 `io/ioutil` 来在程序中使用该包。
 
-`ioutil` 包的 `WriteFile()` 函数接受三个参数：指定要写入的文件路径、一个包含写入文本的 `[]byte` 切片，以及数值型文件权限。如果写入尝试失败，该函数将返回一个错误信息；如果文件成功成功，则返回 `nil` 值。
+`ioutil` 包的 `WriteFile()` 函数接受三个参数：指定要写入的文件路径、一个包含写入文本的 `[]byte` 切片，以及数值型文件权限。如果写入尝试失败，该函数将返回一个错误信息；如果文件成功写入，则返回 `nil` 值。
 
 为了在写入文本文件时进行更精细的控制，你可以使用 `os` 包的 `OpenFile()` 函数。这需要三个参数：指定要写入的文件路径、一个指定操作类型的标志位以及数值型文件权限。指定操作类型的标志位是 `os` 包中的常量。例如：
+
 - `os.O_RDWR` 用于读和写
 - `os.O_APPEND` 用于追加文本
-- `os.O_CREATE` 如果文件不存在则创建一个新文件
+
+
+
+`os.O_CREATE` 如果文件不存在则创建一个新文件
 
 `OpenFile()` 函数返回一个 `os.File` 类型和任何读取错误。该文件类型具有 `Write()` 和 `Close()` 方法，允许你处理文件内容。`Write()` 方法需要一个包含写入文本的 `[]byte` 参数。该方法返回读取的字节数和任何读取错误。`Close()` 方法可以在打开文件后立即使用 `defer` 关键字调用，以便在文件操作完成后封装函数结束后关闭文件。
 
@@ -4977,16 +4985,12 @@ nb, err := tmpFile.WriteString("Go Programming Fun!\n")
 check(err)
 ```
 
-
-
-
-
 ![image](img/5g.jpg)接下来，从临时文件中读取文本并检查错误，然后显示读取的字符数
 
 ```go
 txt, err := ioutil.ReadFile( tmpFile.Name( ) )
 check( err )
-fmt.Printf( “\nRead: %v bytes - %v \n”, nb, string( txt ) )
+fmt.Printf( "\nRead: %v bytes - %v \n", nb, string( txt ) )
 ```
 
 ![image](img/6g.jpg)记得在处理完成后关闭文件
@@ -5019,34 +5023,53 @@ check( err )
 ## 总结
 
 - Go 标准库 `fmt` 包提供了 `Scan()`、`Scanln()` 和 `Scanf()` 函数用于从标准输入读取内容。
-- `Scan()`、`Scanln()` 和 `Scanf()` 函数各返回两个值，分别是已扫描的项数和任何读取错误。
-- 如果在从标准输入读取时没有遇到错误，返回的错误值将为 `nil`。
-- Go 标准库 `bufio` 包提供了 `Scanner` 类型，它是用于数据流的内存缓冲区。
-- `Scanner` 拥有一个用于读取输入的 `Scan()` 方法、一个返回文本的 `Text()` 方法以及一个用于返回错误的 `Err()` 方法。
-- Go 标准库 `strings` 包提供了 `Fields()` 函数，它可以将字符串拆分为单个单词。
-- Go 标准库 `os` 包提供了 `Args` 切片（slice），它在元素中存储命令行参数值。
-- Go 标准库 `flag` 包拥有 `String()`、`Int()` 和 `Bool()` 函数，每个函数都指定了标志名称、默认值和帮助信息。
-- `flag` 包的 `Parse()` 函数将用户的值应用到标志上。
-- Go 标准库 `io` 包包含一个 `ioutil` 包，该包提供了 `ReadFile()` 函数来读取整个文本文件。
-- Go 标准库 `os` 包拥有 `Open()`、`Read()`、`Seek()` 和 `Close()` 方法来处理文件内容。
-- 可以配合 `defer` 关键字调用 `Close()` 方法，以便在所有文件操作完成后后关闭文件。
-- Go 标准库 `io/ioutil` 包提供了 `TempFile()` 函数来创建临时文件。
-- `TempFile()` 函数返回一个 `os.File` 类型，该类型拥有 `Name()`、`Write()`、`WriteString()` 和 `Close()` 方法，用于向临时文件添加内容。
-- `os.Remove()` 函数可以删除文件，而 `os.Stat()` 函数可以检查文件信息。
 
-11
+- `Scan()`、`Scanln()` 和 `Scanf()` 函数各返回两个值，分别是已扫描的项数和任何读取错误。
+
+- 如果在从标准输入读取时没有遇到错误，返回的错误值将为 `nil`。
+
+- Go 标准库 `bufio` 包提供了 `Scanner` 类型，它是用于数据流的内存缓冲区。
+
+- `Scanner` 拥有一个用于读取输入的 `Scan()` 方法、一个返回文本的 `Text()` 方法以及一个用于返回错误的 `Err()` 方法。
+
+- Go 标准库 `strings` 包提供了 `Fields()` 函数，它可以将字符串拆分为单个单词。
+
+- Go 标准库 `os` 包提供了 `Args` 切片（slice），它在元素中存储命令行参数值。
+
+- Go 标准库 `flag` 包拥有 `String()`、`Int()` 和 `Bool()` 函数，每个函数都指定了标志名称、默认值和帮助信息。
+
+- `flag` 包的 `Parse()` 函数将用户的值应用到标志上。
+
+- Go 标准库 `io` 包包含一个 `ioutil` 包，该包提供了 `ReadFile()` 函数来读取整个文本文件。
+
+- Go 标准库 `os` 包拥有 `Open()`、`Read()`、`Seek()` 和 `Close()` 方法来处理文件内容。
+
+- 可以配合 `defer` 关键字调用 `Close()` 方法，以便在所有文件操作完成后后关闭文件。
+
+- Go 标准库 `io/ioutil` 包提供了 `TempFile()` 函数来创建临时文件。
+
+- `TempFile()` 函数返回一个 `os.File` 类型，该类型拥有 `Name()`、`Write()`、`WriteString()` 和 `Close()` 方法，用于向临时文件添加内容。
+
+- `os.Remove()` 函数可以删除文件，而 `os.Stat()` 函数可以检查文件信息。
 
 # 使用并发
 
 *本章演示了如何使用 goroutine（协程）和通道（channels）在 Go 程序中执行任务的并发执行。*
 
 - 创建 goroutine
+
 - 持续等待
+
 - 制作通道
+
 - 缓冲通道
+
 - 选择通道
+
 - 同步 goroutine
+
 - 使用工作池
+
 - 总结
 
 ## 创建 goroutine
@@ -5132,16 +5155,14 @@ var waitgroupName sync.WaitGroup
 WaitGroup 只是一个计数器，可以记录运行中的 goroutine 总数。它拥有以下方法用于阻塞程序直到所有 goroutine 完成：
 
 - `Add()` 根据指定的参数增加 WaitGroup 计数器。每向程序添加一个新的 goroutine，计数器应该加一。
+
 - `Done()` 自动将 WaitGroup 计数器减一，不需要参数。当每个 goroutine 完成时，计数器减一。
+
 - `Wait()` 阻塞程序直到 WaitGroup 计数器变为零，不需要参数。当最后一个运行的 goroutine 将计数器减为零时，阻塞会自动移除。
 
 将 WaitGroup 作为参数传递给函数时，必须以指针传递。这意味着参数将指定其内存地址（使用 `&` 取地址运算符），函数参数将使用 `*` 前缀运算符将其标记为指针。接收函数可以使用指针参数调用 WaitGroup 的 `Done()` 方法。
 
 在实际创建 goroutine 的语句之前，应该调用 `Add()` 方法来增加 WaitGroup 计数器。
-
-
-
-
 
 可选地，`Add()` 方法的参数可以指定集合中 goroutine 的总数，而不是逐个为每个添加的 goroutine 增加 `WaitGroup`计数计数。
 
@@ -5239,8 +5260,6 @@ variableName <- channelName
 variableName, channelOpenState <- channelName
 ```
 
-```
-
 这可以用来检查通道状态，并对于在通道确定关闭后退出包含接收者的循环有用。
 
 ![image](img/snake.jpg)
@@ -5263,36 +5282,47 @@ import (
 ![image](img/2p.jpg)接下来，在 `main` 函数中，创建一个字符串类型的通道
 
 ```go
-c := make( chan string )
-```
 
-![image](img/3p.jpg)添加一个传递字符串值和通道的 goroutine
+
+
+`c := make(chan string)`
+
+![image](img/3p.jpg)
+
+添加一个传递字符串值和通道的 goroutine：
 
 ```go
-go count( "Message", c )
+go count("Message", c)
 ```
 
-![image](img/4p.jpg)现在，添加一个包含通道接收者的循环，它将打印接收到的消息直到通道关闭。
+![image](img/4p.jpg)
+
+现在，添加一个包含通道接收者的循环，它将打印接收到的消息直到通道关闭。
 
 ```go
 for {
-	msg, open := <- c
+	msg, open := <-c
+
 	if !open {
 		break
 	}
-	fmt.Println( msg )
+
+	fmt.Println(msg)
 }
 ```
 
-![image](img/5p.jpg)现在，添加带有通道发送者的循环函数，该循环将每隔 1 秒发送一次消息，然后在循环结束时关闭通道
+![image](img/5p.jpg)
+
+现在，添加带有通道发送者的循环函数，该循环将每隔 1 秒发送一次消息，然后在循环结束时关闭通道。
 
 ```go
-func count( msg string, c chan string ) {
+func count(msg string, c chan string) {
 	for i := 0; i < 3; i++ {
 		c <- msg + " " + time.Now().Format("15:04:05")
-		time.Sleep( 1 * time.Second )
+		time.Sleep(1 * time.Second)
 	}
-	close(c )
+
+	close(c)
 }
 ```
 
@@ -5308,13 +5338,9 @@ func count( msg string, c chan string ) {
 
 可以使用 `range` 关键字在循环中接收发送的每条消息，直到通道关闭。
 
-**选择通道 (Select Channels)**
+### 选择通道（Select Channels）
 
-
-
-
-
-当多个 goroutine 在不同的时间向通道发送消息时，程序可能会在等待从较的通道接收消息时阻塞进度。Go 提供了一种解决这种阻塞操作的方法，通过在 `select` 语句中同时监听多个通道的消息。这种语法与这里描述的 `switch` 语句相似，但 `select` 语句会阻塞直到其中一个 `case` 语句找到匹配项。一旦找到匹配，与该 `case` 语句关联的语句将被执行。这种组合 goroutine 和通道的能力是 Go 语言的一项强大特性。
+当多个 goroutine 在不同的时间向通道发送消息时，程序可能会在等待从较慢的通道接收消息时阻塞进度。Go 提供了一种解决这种阻塞操作的方法，通过在 `select` 语句中同时监听多个通道的消息。这种语法与这里描述的 `switch` 语句相似，但 `select` 语句会阻塞直到其中一个 `case` 语句找到匹配项。一旦找到匹配，与该 `case` 语句关联的语句将被执行。这种组合 goroutine 和通道的能力是 Go 语言的一项强大特性。
 
 ![image](img/pg166_1.jpg)
 
@@ -5322,7 +5348,9 @@ func count( msg string, c chan string ) {
 
 Go 标准库 `time` 包提供了一个实用的 `After()` 函数，可以用于创建一个“超时”来限制监听循环的执行时间。它需要一个持续时间作为参数，并返回一个 `time.Time` 类型的通道——这将是当前时间加上持续时间后的未来时间。使用 `case` 语句测试当前时间何时匹配超时通道可用于退出监听循环。
 
-![image](img/1p.jpg)首先导入 Go 标准库 `time` 包，以等待 goroutine 并创建超时
+![image](img/1p.jpg)
+
+首先导入 Go 标准库 `time` 包，以等待 goroutine 并创建超时：
 
 ```go
 import (
@@ -5333,46 +5361,56 @@ import (
 
 ![image](img/commonp.jpg)
 
-src\select\main.go
+`src\select\main.go`
 
-![image](img/2p.jpg)接下来，在 main 函数中创建一个超时通道和两个空通道
+![image](img/2p.jpg)
+
+接下来，在 `main` 函数中创建一个超时通道和两个空通道：
 
 ```go
-c0 := time.After( 7 * time.Second )
-c1 := make( chan string )
-c2 := make( chan string )
+c0 := time.After(7 * time.Second)
+c1 := make(chan string)
+c2 := make(chan string)
 ```
 
-![image](img/3p.jpg)现在，添加两个 goroutine 调用，每个调用传递一个通道
+![image](img/3p.jpg)
+
+现在，添加两个 goroutine 调用，每个调用传递一个通道：
 
 ```go
-go fastCount( c1 )
-go slowCount( c2 )
+go fastCount(c1)
+go slowCount(c2)
 ```
 
-![image](img/4p.jpg)在 main 函数之后，添加两个被调用的函数，它们将以不同的间隔发送通道消息
+![image](img/4p.jpg)
+
+在 `main` 函数之后，添加两个被调用的函数，它们将以不同的间隔发送通道消息：
 
 ```go
-func fastCount( c1 chan string ) {
+func fastCount(c1 chan string) {
 	for {
-		time.Sleep( 1 * time.Second )
-		c1 <- time.Now( ).Format( “04:05” )
+		time.Sleep(1 * time.Second)
+		c1 <- time.Now().Format("04:05")
 	}
 }
 
-func slowCount( c2 chan string ) {
+func slowCount(c2 chan string) {
 	for {
-		time.Sleep( 2 * time.Second )
-		c2 <- time.Now( ).Format( “04:05” )
+		time.Sleep(2 * time.Second)
+		c2 <- time.Now().Format("04:05")
 	}
 }
 ```
 
-![image](img/5p.jpg)现在，回到 main 函数，添加一个无限循环来接收来自三个通道中任何一个通道的消息
+![image](img/5p.jpg)
+
+现在，回到 `main` 函数，添加一个无限循环来接收来自三个通道中任何一个通道的消息。
 
 ![image](img/pg167_2.jpg)
 
-![image](img/6p.jpg)将程序文件保存在“select”目录中，然后运行程序查看通道消息
+![image](img/6p.jpg)
+
+将程序文件保存在“select”目录中，然后运行程序查看通道消息。
 
 ![image](img/pg167_1.jpg)
 
@@ -5391,79 +5429,95 @@ func slowCount( c2 chan string ) {
 默认情况下，通道既可以发送也可以接收，但当你将通道传递给 goroutine 时，你可以在函数参数中指定该通道是仅可发送还是仅用于接收项目。只发送通道通过在参数中 `chan` 关键字前加上 `<-` 操作符来指定，如下所示：
 
 ```go
-func funcName ( paramName <-chan dataType )
+func funcName(paramName <-chan dataType)
 ```
 
 相反，只接收通道通过在参数中 `chan` 关键字后加上 `<-` 操作符来指定，如下所示：
 
 ```go
-func funcName ( paramName chan<- dataType )
+func funcName(paramName chan<- dataType)
 ```
 
 建议指定单一允许的方向，以减少程序出现 bug 的可能性。
 
-![image](img/1p.jpg)开始一个 main 函数，创建两个用于整数项目的无缓冲通道
+![image](img/1p.jpg)
+
+开始一个 `main` 函数，创建两个用于整数项目的无缓冲通道：
 
 ```go
-nums := make( chan int )
-sqrs := make( chan int )
+nums := make(chan int)
+sqrs := make(chan int)
 ```
 
 ![image](img/commonp.jpg)
 
-src\synchronize\main.go
+`src\synchronize\main.go`
 
-![image](img/2p.jpg)接下来，添加一个传递通道的 goroutine 调用，这将开始一个流水线
+![image](img/2p.jpg)
+
+接下来，添加一个传递通道的 goroutine 调用，这将开始一个流水线：
 
 ```go
-go count( nums )
+go count(nums)
 ```
 
-![image](img/3p.jpg)现在，添加一个传递两个通道的 goroutine 调用，这将继续流水线
+![image](img/3p.jpg)
+
+现在，添加一个传递两个通道的 goroutine 调用，这将继续流水线：
 
 ```go
-go square( nums, sqrs )
+go square(nums, sqrs)
 ```
 
-![image](img/4p.jpg)在 main 函数之后，添加第一个调用的函数，它带有一个只接收通道，当流水线空闲时，它将逐个发送 10 个独立的整数
+![image](img/4p.jpg)
+
+在 `main` 函数之后，添加第一个调用的函数，它带有一个只接收通道，当流水线空闲时，它将逐个发送 10 个独立的整数：
 
 ```go
-func count( nums chan<- int ) {
-	for i := 1 ; i <= 10 ; i++ {
+func count(nums chan<- int) {
+	for i := 1; i <= 10; i++ {
 		nums <- i
 	}
 }
 ```
 
-![image](img/5p.jpg)现在，回到 main 函数，添加第二个被调用的函数，它带有一个只接收通道，当流水线空闲时它将逐个发送 10 个结果
+![image](img/5p.jpg)
+
+现在，回到 `main` 函数，添加第二个被调用的函数，它带有一个只接收通道，当流水线空闲时它将逐个发送 10 个结果：
 
 ```go
-func square( nums <-chan int, sqrs chan<- int ) {
-	for i := 1 ; i <= 10 ; i++ {
-		num := <- nums
+func square(nums <-chan int, sqrs chan<- int) {
+	for i := 1; i <= 10; i++ {
+		num := <-nums
 		sqrs <- num
 	}
 }
 ```
 
-![image](img/6p.jpg)现在，在 main 函数中，添加一个循环来接收流水线末尾的结果
+![image](img/6p.jpg)
+
+现在，在 `main` 函数中，添加一个循环来接收流水线末尾的结果：
 
 ```go
-for i := 1 ; i <= 10 ; i++ {
-	num := <- sqrs
-	fmt.Printf( “%v x %v = %v \n”, i, num )
+for i := 1; i <= 10; i++ {
+	num := <-sqrs
+	fmt.Printf("%v x %v = %v \n", i, num, num)
 }
 ```
 
-![image](img/7p.jpg)将程序文件保存在“synchronize”目录中，然后运行程序查看流水线
+![image](img/7p.jpg)
+
+将程序文件保存在“synchronize”目录中，然后运行程序查看流水线。
 
 ![image](img/pg69_1)
 
 ![image](img/pg170_1.jpg)
 
-工作池允许你从多个并发调用发送任务到 goroutine，由 Go 调度器决定完成顺序。你可以使用 WaitGroup 等待 goroutine 完成，或者简单排空通道以确保所有 goroutine 都已完成。
+工作池允许你从多个并发调用发送任务到 goroutine，由 Go 调度器决定完成顺序。你可以使用 `WaitGroup` 等待 goroutine 完成，或者简单排空通道以确保所有 goroutine 都已完成。
 
-![image](img/1p.jpg)首先导入 Go 标准库 `time` 包，以延迟 goroutine 函数
+![image](img/1p.jpg)
+
+首先导入 Go 标准库 `time` 包，以延迟 goroutine 函数：
 
 ```go
 import (
@@ -5474,68 +5528,80 @@ import (
 
 ![image](img/commonp.jpg)
 
-src\workers\main.go
+`src\workers\main.go`
 
-![image](img/2p.jpg)接下来，在 main 函数中初始化 jobs 变量，并创建两个大小为总数的缓冲通道
+![image](img/2p.jpg)
+
+接下来，在 `main` 函数中初始化 `jobs` 变量，并创建两个大小为总数的缓冲通道：
 
 ```go
 numJobs := 10
-jobs := make( chan int, numJobs )
-results := make( chan int, numJobs )
+jobs := make(chan int, numJobs)
+results := make(chan int, numJobs)
 ```
 
-![image](img/3p.jpg)现在，添加三个 worker goroutine 调用，每个调用传递一个 ID 数字和两个通道
+![image](img/3p.jpg)
+
+现在，添加三个 worker goroutine 调用，每个调用传递一个 ID 数字和两个通道：
 
 ```go
-go worker( 1, jobs, results )
-go worker( 2, jobs, results )
-go worker( 3, jobs, results )
+go worker(1, jobs, results)
+go worker(2, jobs, results)
+go worker(3, jobs, results)
 ```
 
-![image](img/4p.jpg)为 10 个任务中的每一个发送一个整数，然后关闭该通道以指示队列中已无任务
+![image](img/4p.jpg)
+
+为 10 个任务中的每一个发送一个整数，然后关闭该通道以指示队列中已无任务：
 
 ```go
-for i := 1 ; i <= numJobs ; i++ {
+for i := 1; i <= numJobs; i++ {
 	jobs <- i
 }
-close( jobs )
+
+close(jobs)
 ```
 
-![image](img/5p.jpg)在 main 函数之后，添加调用的 worker 函数，它接受 worker ID 数字，有一个只发送通道用于接收任务号，并有一个只接收通道用于发送结果
+![image](img/5p.jpg)
+
+在 `main` 函数之后，添加调用的 `worker` 函数，它接受 worker ID 数字，有一个只发送通道用于接收任务号，并有一个只接收通道用于发送结果：
 
 ```go
-func worker( id int, jobs <-chan int, results chan<- int ) {
+func worker(id int, jobs <-chan int, results chan<- int) {
 	for job := range jobs {
-		fmt.Print( “Worker “, id, “ ran Job “, job )
-		fmt.Printf( “ …%v x %v = %v \n”, job, job, job*job )
-		time.Sleep( 1 * time.Second )
+		fmt.Print("Worker ", id, " ran Job ", job)
+		fmt.Printf(" …%v x %v = %v \n", job, job, job*job)
+		time.Sleep(1 * time.Second)
 		results <- job
 	}
 }
 ```
 
-![image](img/6p.jpg)现在，回到 main 函数中，添加一个循环来接收结果
+![image](img/6p.jpg)
+
+现在，回到 `main` 函数中，添加一个循环来接收结果：
 
 ```go
-for i := 1 ; i <= numJobs ; i++ {
-	num := <- results
+for i := 1; i <= numJobs; i++ {
+	num := <-results
 }
 ```
 
+![image](img/6p.jpg)
 
-
-
-
-![image](img/6p.jpg)现在，回到 `main` 函数，添加一个循环来收集结果并确保所有工作线程已完成
+现在，回到 `main` 函数，添加一个循环来收集结果并确保所有工作线程已完成：
 
 ```go
-for i := 1 ; i <= numJobs ; i++ {
-    <- results
+for i := 1; i <= numJobs; i++ {
+	<-results
 }
-close( results )
+
+close(results)
 ```
 
-![image](img/7p.jpg)将程序文件保存在“workers”目录中，然后运行程序以查看工作池结果
+![image](img/7p.jpg)
+
+将程序文件保存在“workers”目录中，然后运行程序以查看工作池结果。
 
 ![image](img/pg171_1.jpg)
 
@@ -5549,35 +5615,37 @@ close( results )
 
 ## 总结
 
--   并行性（Parallelism）是指同时执行两个任务。
--   并发（Concurrency）是将程序代码拆分为多个可能被同时执行的独立任务。
--   Goroutine 提供了代码行并发执行的能力。
--   通过在普通函数调用或方法调用之前插入 `go` 关键字来创建一个 goroutine。
--   Go 标准库 `sync` 包提供了 `WaitGroup` 类型，可以等待多个 goroutine 完成。
--   `WaitGroup` 具有一个 `Add()` 递增方法、一个 `Done()` 递减方法和一个 `Wait()` 阻塞方法。
--   当将 `WaitGroup` 作为参数传递给函数时，必须以指针的形式传递。
--   Go 通道（channel）就像一根管道，程序可以通过它来发送和接收消息。
--   通道是通过在内置的 `make()` 函数中指定 `chan` 关键字和数据类型作为参数来创建的。
--   死锁（Deadlock）是程序无法继续运行的致命错误。
--   内置函数 `close()` 可以显式地关闭通道。
--   在 `make()` 函数中添加缓冲区大小参数，可以将多个项目作为队列发送到通道中。
--   `select` 语句块可以同时监听来自多个通道的消息。
--   将 `select` 语句块封装在无限 `for` 循环中，允许程序持续监听通道消息。
--   通道可以在流水线中连接 goroutine，通过发送和接收消息来同步这些 goroutine。
--   `<-` 箭头运算符可以在函数参数中使用，指定通道是否仅允许发送或仅接收。
--   工作池可以将从多个并发调用产生的任务发送给 goroutine，按随机设置的顺序进行完成。
+- 并行性（Parallelism）是指同时执行两个任务。
+- 并发（Concurrency）是将程序代码拆分为多个可能被同时执行的独立任务。
+- Goroutine 提供了代码行并发执行的能力。
+- 通过在普通函数调用或方法调用之前插入 `go` 关键字来创建一个 goroutine。
+- Go 标准库 `sync` 包提供了 `WaitGroup` 类型，可以等待多个 goroutine 完成。
+- `WaitGroup` 具有一个 `Add()` 递增方法、一个 `Done()` 递减方法和一个 `Wait()` 阻塞方法。
+- 当将 `WaitGroup` 作为参数传递给函数时，必须以指针的形式传递。
+- Go 通道（channel）就像一根管道，程序可以通过它来发送和接收消息。
+- 通道是通过在内置的 `make()` 函数中指定 `chan` 关键字和数据类型作为参数来创建的。
+- 死锁（Deadlock）是程序无法继续运行的致命错误。
+- 内置函数 `close()` 可以显式地关闭通道。
+- 在 `make()` 函数中添加缓冲区大小参数，可以将多个项目作为队列发送到通道中。
+- `select` 语句块可以同时监听来自多个通道的消息。
+- 将 `select` 语句块封装在无限 `for` 循环中，允许程序持续监听通道消息。
+- 通道可以在流水线中连接 goroutine，通过发送和接收消息来同步这些 goroutine。
+- `<-` 箭头运算符可以在函数参数中使用，指定通道是否仅允许发送或仅接收。
+- 工作池可以将从多个并发调用产生的任务发送给 goroutine，按随机设置的顺序进行完成。
 
 # 12 请求响应
 
 *本章演示了如何创建一个 Web 服务器，以及如何使用 Go 标准库中的 `net/http` 和 `io` 包处理提交的表单数据。*
 
-### 监听请求
-### 处理请求
-## 添加待提供的文件
-## 交付静态页面
-### 记录接收到的数据
-### 交付动态响应
-## 总结
+## 目录
+
+- ### 监听请求
+- ### 处理请求
+- ## 添加待提供的文件
+- ## 交付静态页面
+- ### 记录接收到的数据
+- ### 交付动态响应
+- ## 总结
 
 ## 12.1 监听请求
 
@@ -5589,37 +5657,51 @@ Go 标准库 `net` 包包含一个 `http` 包，它提供了可以方便创建 W
 
 `http.ListenAndServe()` 函数始终返回一个非空的 `error` 并永久阻塞。这意味着调用此函数之后的代码行将永远不会执行。Web 服务器将继续监听传入的请求，直到程序终止。
 
-![image](img/1o.jpg)通过导入 `net/http` 包开始程序
+![image](img/1o.jpg)
+
+通过导入 `net/http` 包开始程序：
 
 ```go
 import (
-    "fmt"
-    "net/http"
+	"fmt"
+	"net/http"
 )
 ```
 
-![image](img/commono.jpg)接下来，添加一个 `main` 函数来输出消息并启动 Web 服务器
+![image](img/commono.jpg)
+
+接下来，添加一个 `main` 函数来输出消息并启动 Web 服务器：
 
 ```go
 func main() {
-    fmt.Println("Starting web server on 8000")
-    http.ListenAndServe(":8000", nil)
+	fmt.Println("Starting web server on 8000")
+	http.ListenAndServe(":8000", nil)
 }
 ```
 
-![image](img/3.jpg)将程序文件保存在“server”目录中
+![image](img/3.jpg)
 
-![image](img/5.jpg)server.go
+将程序文件保存在“server”目录中。
+
+![image](img/5.jpg)
+
+`server.go`
 
 本地地址通过回环地址 `127.0.0.1` 引用 `localhost`。
 
-![image](img/hot.jpg)如果出现防火墙警告，确认你希望访问
+![image](img/hot.jpg)
 
-![image](img/pg75.jpg)现在，启动浏览器并访问 `localhost:8000`
+如果出现防火墙警告，确认你希望访问。
 
-![image](img/hot.jpg)你可以按 `Ctrl + C` 终止运行的程序。
+![image](img/pg75.jpg)
 
-Web 服务器还不知道如何响应
+现在，启动浏览器并访问 `localhost:8000`。
+
+![image](img/hot.jpg)
+
+你可以按 `Ctrl + C` 终止运行的程序。
+
+Web 服务器还不知道如何响应。
 
 ## 12.2 处理请求
 
@@ -5627,15 +5709,17 @@ Web 服务器还不知道如何响应
 
 ![image](img/pg76.jpg)
 
-`net/http` 包提供了 `http.HandleFunc()` 函数来注册处理程序。该函数需要两个参数：描述路径的字符串模式，以及将被调用的函数名称。字符串模式将以 `/` 斜杠字符开头——例如，“/hello”。这指定了 Web 服务器监听来自 localhost:8000/hello 的请求。
+`net/http` 包提供了 `http.HandleFunc()` 函数来注册处理程序。该函数需要两个参数：描述路径的字符串模式，以及将被调用的函数名称。字符串模式将以 `/` 斜杠字符开头——例如，“/hello”。这指定了 Web 服务器监听来自 `localhost:8000/hello` 的请求。
 
 请求处理函数默认总是包含一个用于向请求写入响应的 `ResponseWriter` 对象，以及包含请求信息（例如其 `URL.Path`）的 `http.Request` 对象指针。通常，`http.ResponseWriter` 对象被命名为 `w`，`http.Request` 对象被命名为 `r`。
 
 `http.ResponseWriter` 对象有一个 `Write()` 方法，接受要发送响应的字符字节切片参数。字符可以转换为字符串，如下：
 
 ```go
-w.Write( []byte("response string") )
+w.Write([]byte("response string"))
 ```
+
+
 
 然而，更方便的方法是使用 Go 标准库 `io` 包中包含的 `WriteString()` 函数将字符串传递给 `ResponseWriter` 对象。这可以通过导入 `io` 包来实现。
 
@@ -5668,10 +5752,6 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-
-
-
-
 ![image](img/5o.jpg)如果出现防火墙安全警告，请确认你希望允许 Web 服务器访问
 
 ![image](img/6o.jpg)启动浏览器并访问 `localhost:8000/hello` 查看 Web 服务器对此请求的响应
@@ -5686,15 +5766,13 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 
 Web 服务器文件通常包含在一个名为 `htdocs`（超文本文档）或类似名称的根目录下。这通常包含 HTML 文件，可能还有一个 `favicon.ico` 图像用于在浏览器的标题栏中标识网站。根目录通常还包含子目录以对关联文件分组——例如 `img` 文件夹中的图像、`css` 文件夹中的样式表等。
 
-在我们的服务器示例中，根 `htdocs` 目录下添加了两个 HTML 文档和一个 `favicon.ico` 。一个样式表位于 `htdocs/css` 目录，几张图像包含 `htdocs/img` 目录中。整个服务器程序树现在如下：
+在我们的服务器示例中，根 `htdocs` 目录下添加了两个 HTML 文档和一个 `favicon.ico`。一个样式表位于 `htdocs/css` 目录，几张图像包含 `htdocs/img` 目录中。整个服务器程序树现在如下：
 
 ![image](img/pg178_2.jpg)
 
 ![image](img/pg178_3.jpg)
 
-favicon.ico
-
-32px x 32px
+favicon.ico 32px x 32px
 
 ![image](img/pg178_4.jpg)
 
@@ -5705,7 +5783,6 @@ power.png 100px x 25px
 样式表包含规则，用于指定程序动态写入的网页响应的样式：
 
 | `img, p` | `{ float: left }` |
-
 | `p` | `{ width: 320px ; text-align: center ; font-size: 1.5em }` |
 
 ![image](img/pg179_1.jpg)
@@ -5859,15 +5936,11 @@ lang := r.FormValue("Language")
 lang = strings.ToLower(strings.Trim(lang, " "))
 ```
 
-
-
-
-
 ![image](img/6o.jpg)
 然后，在表单处理器中，插入语句将格式化后的值写入日志文件
 
 ```go
-file, err := os.OpenFile( “htdocs/data.log”, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644 )
+file, err := os.OpenFile( "htdocs/data.log", os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644 )
 if err != nil {
     log.Print( err )
 }
@@ -5877,7 +5950,7 @@ log.Print( lang )
 ```
 
 ![image](img/7o.jpg)
-保存更新后的程序文件，然后启动 Web 服务器并访问 localhost:8000/form.html 查看表单出现
+保存更新后的程序文件，然后启动 Web 服务器并访问 `localhost:8000/form.html` 查看表单出现
 
 ![image](img/8o.jpg)
 在输入字段中输入编程语言的名称，然后点击 Submit 按钮提交表单数据
@@ -5893,7 +5966,7 @@ log.Print( lang )
 ![image](img/pg183_2.jpg)
 ![image](img/pg183_3.jpg)
 ![image](img/10o.jpg)
-然后，访问 localhost:8000/data.log 查看文件中每个提交的表单值
+然后，访问 `localhost:8000/data.log` 查看文件中每个提交的表单值
 
 ![image](img/pg183_4.jpg)
 ![image](img/pg183_5.jpg)
@@ -5911,8 +5984,8 @@ data.log
 在表单处理器的日志语句之后，初始化两个带有默认响应字符串值的变量
 
 ```go
-title := “<a href=’http://www.ineasysteps.com’>See all titles online</a>”
-isbn := “logo”
+title := "<a href='http://www.ineasysteps.com'>See all titles online</a>"
+isbn := "logo"
 ```
 
 ![image](img/commono.jpg)
@@ -5923,21 +5996,21 @@ src\server\main.go
 
 ```go
 switch lang {
-case “c” :
-    title = “C Programming”
-    isbn = “978-1-84078-840-2”
-case “go” :
-    title = “Go Programming”
-    isbn = “978-1-84078-919-5”
-case “java” :
-    title = “Java”
-    isbn = “978-1-84078-873-0”
-case “python” :
-    title = “Python”
-    isbn = “978-1-84078-812-9”
-case “sql” :
-    title = “SQL”
-    isbn = “978-1-84078-902-7”
+case "c" :
+    title = "C Programming"
+    isbn = "978-1-84078-840-2"
+case "go" :
+    title = "Go Programming"
+    isbn = "978-1-84078-919-5"
+case "java" :
+    title = "Java"
+    isbn = "978-1-84078-873-0"
+case "python" :
+    title = "Python"
+    isbn = "978-1-84078-812-9"
+case "sql" :
+    title = "SQL"
+    isbn = "978-1-84078-902-7"
 }
 ```
 
@@ -5945,15 +6018,15 @@ case “sql” :
 现在，构建一个包含响应值的 HTML 字符串
 
 ```go
-response := “<!DOCTYPE HTML><title>Web Server Response</title>”
-response += “<link rel=’shortcut icon’ href=’favicon.ico’>”
-response += “<link rel=’stylesheet’ href=’css/style.css’>”
-response += “<p>” + title + “<br>in easy steps”
-if isbn != “logo” {
-    response += “<br>ISBN:” + isbn
+response := "<!DOCTYPE HTML><title>Web Server Response</title>"
+response += "<link rel='shortcut icon' href='favicon.ico'>"
+response += "<link rel='stylesheet' href='css/style.css'>"
+response += "<p>" + title + "<br>in easy steps"
+if isbn != "logo" {
+    response += "<br>ISBN:" + isbn
 }
-response += “</p><img src=’img/” + isbn + “.png’ alt=’Cover’>”
-response += “<img src=’img/power.png’ alt=’Power’>”
+response += "</p><img src='img/" + isbn + ".png' alt='Cover'>"
+response += "<img src='img/power.png' alt='Power'>"
 ```
 
 ![image](img/hot.jpg)
@@ -5969,7 +6042,7 @@ io.WriteString( w, response )
 
 ![image](img/pg185_1.jpg)
 ![image](img/5o.jpg)
-再次保存更新后的程序文件并启动 Web 服务器，然后访问 localhost:8000/form.html 发送请求并接收响应
+再次保存更新后的程序文件并启动 Web 服务器，然后访问 `localhost:8000/form.html` 发送请求并接收响应
 
 ![image](img/pg185_2.jpg)
 ![image](img/pg185_3.jpg)
@@ -5992,4 +6065,3 @@ io.WriteString( w, response )
 - `http.Dir()` 函数指定了根文件系统路径。
 - `http.FileServer()` 函数返回一个用于指定文件系统内容的处理器。
 - `http.Handle()` 函数指定了路由以及处理指定文件系统请求的处理器名称。
-

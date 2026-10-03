@@ -1,8 +1,10 @@
- 
- ![](img/Image00000.jpg)
+
+![](img/Image00000.jpg)
 
 # 快速学习 Kotlin 与 Python
+
 ## 面向初学者的编程实战项目
+
 ### 作者：J J TAM
 
 - Kotlin 简介
@@ -50,7 +52,6 @@
 - Kotlin：继承
 - Kotlin：方法重写
 - Kotlin：属性重写
-
 - Kotlin：调用父类方法
 - Kotlin：嵌套类
 - Kotlin：内部类
@@ -92,7 +93,7 @@
 - Python：list extend：追加给定列表的元素
 - Python：insert：在指定位置插入元素
 - Python：list remove：移除元素
-- Python：[list: pop: 移除列表中的最后一个元素
+- Python：list: pop: 移除列表中的最后一个元素
 - Python：list：清除列表中的所有元素
 - Python：list：index：获取元素的索引
 - Python：list：对列表元素进行排序
@@ -128,7 +129,9 @@
 - Python：生成随机数
 
 # 快速学习 KOTLIN
+
 ## 面向初学者的编程实战项目
+
 ### 作者：J J TAM
 
 ## Kotlin 简介
@@ -157,9 +160,7 @@ Kotlin 是一种高级编程语言，运行在 JVM 上。Kotlin 将源代码编�
 - 开发服务器端应用程序
 - 你可以开发任何能用 Java 开发的应用程序
 
-
- 
- # Kotlin 基础教程
+# Kotlin 基础教程
 
 ## 常见问题
 
@@ -454,6 +455,8 @@ Java 有 `int`、`float`、`char` 等原始类型，Kotlin 呢？
 
 **HelloWorld.kt**
 
+
+
 ```kotlin
 fun main (args: Array<String>) {
     var doubleVar: Double = 1.23
@@ -539,9 +542,7 @@ Kotlin 提供以下数据类型来支持数字。
 | Short | 16 |
 | Byte | 8 |
 
-
- 
- # Kotlin：数字
+## Kotlin：数字
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -946,6 +947,8 @@ var squares = Array(5, { i -> i * i })
 
 上面的语句定义了一个大小为 5 的数组 `squares`，并初始化为 `{1, 4, 9, 16, 25}`
 
+
+
 ```kotlin
 fun main(args: Array<String>) {
     var squares = Array(5, { i -> i * i })
@@ -981,7 +984,7 @@ Elements in cubes array :
 
 ### 打印数组元素
 
-在我之前的文章中，我解释了什么是数组以及如何在 kotlin 中定义它。在这篇文章中，我将展示如何打印数组的元素。
+在我之前的文章中，我解释了什么是数组以及如何在 Kotlin 中定义它。在这篇文章中，我将展示如何打印数组的元素。
 
 #### 使用 For 循环打印数组元素
 
@@ -1087,9 +1090,7 @@ index : 3, value : 7
 
 下表总结了 Kotlin 支持的位运算符。
 
-
- 
- | 运算符 | 描述 | Java 等价 |
+| 运算符 | 描述 | Java 等价 |
 | --- | --- | --- |
 | `shl` | 执行有符号左移 | `<<` |
 | `shr` | 执行有符号右移 | `>>` |
@@ -1106,10 +1107,13 @@ index : 3, value : 7
 左移运算符将所有位向左移动一位，即**将数值翻倍**。
 
 语法：
+
 ```
 variable shl n
 ```
+
 将变量左移 'n' 位。`Variable shl n` 等价于 `variable = variable * 2 的 n 次方`
+
 ```
 var1 shl 1 = 2 * 2 的 1 次方 = 4
 var1 shl 2 = 2 * 2 的 2 次方 = 8
@@ -1117,6 +1121,7 @@ var1 shl 9 = 2 * 2 的 9 次方 = 1024
 ```
 
 LeftShift.kt
+
 ```kotlin
 fun main (args: Array<String>) {
   var var1: Int = 2
@@ -1130,6 +1135,7 @@ fun main (args: Array<String>) {
 ```
 
 输出
+
 ```
 res1 : 4
 res2 : 8
@@ -1141,10 +1147,13 @@ res3 : 1024
 右移运算符将所有位向右移动一位，即**将数值减半（除以 2）**。
 
 语法：
+
 ```
 variable shr n
 ```
+
 将变量右移 'n' 位。`Variable shr n` 等价于 `variable = variable / 2 的 n 次方`
+
 ```
 var a : Int = 128
 a shr 1 = 128 / (2 的 1 次方) = 64
@@ -1152,6 +1161,7 @@ a shr 2 = 128 / (2 的 2 次方) = 32
 ```
 
 RightShift.kt
+
 ```kotlin
 fun main (args: Array<String>) {
   var a: Int = 128
@@ -1165,6 +1175,7 @@ fun main (args: Array<String>) {
 ```
 
 输出
+
 ```
 res1 : 64
 res2 : 32
@@ -1176,11 +1187,13 @@ res3 : 16
 将所有位向右移动一位，并将最左边的位设为 0。
 
 语法
+
 ```
 Variable ushr n
 ```
 
 UnsignedRightShift.kt
+
 ```kotlin
 fun main (args: Array<String>) {
   var a: Int = - 128
@@ -1190,6 +1203,7 @@ fun main (args: Array<String>) {
 ```
 
 输出
+
 ```
 res1 : 2147483584
 ```
@@ -1197,12 +1211,15 @@ res1 : 2147483584
 解释
 
 -128 的补码形式为
+
 ```
 11111111 11111111 11111111 10000000
 ```
+
 `>>>` 将位向右移动一位，并将最左边的位替换为 0。
 
 因此 (`-128 ushr 1`) 的结果如下序列
+
 ```
 01111111 11111111 11111111 11000000
 ```
@@ -1217,6 +1234,7 @@ res1 : 2147483584
 | 1 | 1 | 1 | 1 |
 
 HelloWorld.kt
+
 ```kotlin
 fun main (args: Array<String>) {
   var a: Int = 8
@@ -1228,6 +1246,7 @@ fun main (args: Array<String>) {
 ```
 
 输出
+
 ```
 a and b is 8
 a or b is 9
@@ -1235,6 +1254,7 @@ a xor b is 1
 ```
 
 解释
+
 ```
 a   = 0000 1000
 b   = 0000 1001
@@ -1256,19 +1276,25 @@ a^b = 0000 0001
 取反运算符将 1 变为 0，将 0 变为 1。
 
 示例
+
 ```
 var a : Int = 8
 ```
+
 `a` 的二进制格式为
+
 ```
 0 0 0 0 0 1 1 1
 ```
+
 `a.inv()` 的二进制格式为
+
 ```
 1 1 1 1 1 0 0 0
 ```
 
 Inverse.kt
+
 ```kotlin
 fun main (args: Array<String>) {
   var a: Int = 8
@@ -1278,6 +1304,7 @@ fun main (args: Array<String>) {
 ```
 
 输出
+
 ```
 Value of a is : 8
 inversion of a is : -9
@@ -1303,6 +1330,7 @@ Kotlin 支持逻辑运算符（也称为**布尔运算符**），用于组合多
 | True | true | true |
 
 BooleanOr.kt
+
 ```kotlin
 fun main (args: Array<String>) {
   var operand1: Boolean = false
@@ -1321,6 +1349,7 @@ fun main (args: Array<String>) {
 ```
 
 输出
+
 ```
 false || false : false
 false || true : true
@@ -1333,6 +1362,7 @@ true || true : true
 如果第一个表达式求值为 true，则 Kotlin 不会计算整个表达式。因此，逻辑 OR 被称为**短路 OR**（或）**惰性析取运算符**。
 
 LazyDisjunciton.kt
+
 ```kotlin
 fun main (args: Array<String>) {
   var a : Int = 10
@@ -1349,6 +1379,7 @@ fun main (args: Array<String>) {
 ```
 
 输出
+
 ```
 This statement evaluated
 a is not incremented 10
@@ -1367,6 +1398,7 @@ a is incremented 11
 | True | true | true |
 
 BooleanAnd.kt
+
 ```kotlin
 fun main (args: Array<String>) {
   var operand1: Boolean = false
@@ -1385,6 +1417,7 @@ fun main (args: Array<String>) {
 ```
 
 输出
+
 ```
 false && false: false
 false && true: false
@@ -1397,6 +1430,7 @@ true && true: true
 如果表达式中的第一个语句求值为 false，则 Kotlin 不会计算整个表达式。因此，逻辑 AND 被称为**短路 AND**。
 
 LazyConjunction.kt
+
 ```kotlin
 fun main (args: Array<String>) {
   var a: Int = 10
@@ -1413,6 +1447,7 @@ fun main (args: Array<String>) {
 ```
 
 输出
+
 ```
 a is not incremented 10
 This statement is evaluated
@@ -1431,6 +1466,9 @@ a is incremented 11
 | True | false |
 
 LogicalNot.kt
+
+
+
 ```kotlin
 fun main (args: Array<String>) {
   var operand1: Boolean = false
@@ -1443,6 +1481,7 @@ fun main (args: Array<String>) {
 ```
 
 输出
+
 ```
 operand1 : false
 !operand1 : true
@@ -1457,9 +1496,7 @@ Kotlin 支持两种类型的相等性。
 - **引用相等**
 - **结构相等**
 
-
- 
- # 引用相等（`===`）
+### 引用相等（`===`）
 
 `===` 运算符用于检查两个引用是否指向同一个对象。
 
@@ -1467,21 +1504,21 @@ Kotlin 支持两种类型的相等性。
 
 `ref1 === ref2`
 
-如果引用 `ref1` 和 `ref2` 指向同一个对象，则上述语句返回 `true`，否则返回 `false`。
+如果引用`ref1`和`ref2`指向同一个对象，则上述语句返回`true`，否则返回`false`。
 
 ### 结构相等（`==`）
 
-结构相等用于检查两个引用的值是否相等（通过使用 Java 的 `equals()` 方法进行检查）。
+结构相等用于检查两个引用的值是否相等（通过使用 Java 的`equals()`方法进行检查）。
 
 例如：
 
 `ref1 == ref2`
 
-如果 `ref1.equals(ref2)` 返回 `true`，则上述语句返回 `true`，否则返回 `false`。
+如果`ref1.equals(ref2)`返回`true`，则上述语句返回`true`，否则返回`false`。
 
 #### Equality.kt
 
-```
+```kotlin
 fun main (args: Array<String>) {
   var intVar1 : Int = 10000
   var intBoundedVar1 : Int? = intVar1
@@ -1500,8 +1537,9 @@ fun main (args: Array<String>) {
 
 ## Kotlin：控制流语句
 
-Kotlin 提供了控制流语句
-- 用于决策（`if`、`if-else`、`when`）和
+Kotlin 提供了控制流语句：
+
+- 用于决策（`if`、`if-else`、`when`）
 - 用于循环（`for`、`while`、`do-while`）
 
 ### 决策语句
@@ -1519,11 +1557,11 @@ Kotlin 提供了控制流语句
 
 ## Kotlin：`if` 语句
 
-`if` 告诉程序在条件求值为 `true` 时执行代码段。
+`if` 告诉程序在条件求值为`true`时执行代码段。
 
 ### 语法
 
-```
+```kotlin
 if(condition){
   // 如果条件为真则执行
 }
@@ -1531,7 +1569,7 @@ if(condition){
 
 #### IfStmt.kt
 
-```
+```kotlin
 fun main (args: Array<String>) {
   var marks: Int = 20
   if (marks < 35 ) {
@@ -1552,18 +1590,18 @@ You failed in the Exam. Better luck next time
 
 ## Kotlin：`if-else` 语句
 
-如果条件为 `true`，则执行 `if` 块代码，否则执行 `else` 块代码。
+如果条件为`true`，则执行`if`块代码，否则执行`else`块代码。
 
 ### 语法
 
-```
+```kotlin
 if(condition){
 }else{}
 ```
 
 #### IfElse.kt
 
-```
+```kotlin
 fun main (args: Array<String>) {
   var marks: Int = 65
   if (marks < 35 ) {
@@ -1582,11 +1620,11 @@ You passed in the exam
 
 ## Kotlin：`if-else if-else`
 
-通过使用 `if-else if-else` 结构，你可以在多个选项中进行选择。`if` 语句后面可以跟一个可选的 `else if`...`else` 语句，这对于测试各种条件非常有用。
+通过使用`if-else if-else`结构，你可以在多个选项中进行选择。`if`语句后面可以跟一个可选的`else if`...`else`语句，这对于测试各种条件非常有用。
 
 #### IfElseIf.kt
 
-```
+```kotlin
 fun main (args: Array<String>) {
   var marks: Int = 65
   if (marks < 35 )
@@ -1610,11 +1648,11 @@ You are passed and got first class
 
 ## Kotlin：`when` 表达式
 
-`when` 相当于 Java 中的 `switch` 语句。
+`when` 相当于 Java 中的`switch`语句。
 
 ### 语法
 
-```
+```kotlin
 when(expression){
   1 -> {
     //执行某些操作
@@ -1628,11 +1666,11 @@ when(expression){
 }
 ```
 
-`when` 按顺序将表达式与所有可能的 case 进行匹配求值。如果没有一个 case 满足，则执行 `else` 块。
+`when` 按顺序将表达式与所有可能的 case 进行匹配求值。如果没有一个 case 满足，则执行`else`块。
 
 #### WhenDemo.kt
 
-```
+```kotlin
 fun main (args: Array<String>) {
   var a : Int = 5
   when (a){
@@ -1650,11 +1688,11 @@ fun main (args: Array<String>) {
 Value 5 is checked
 ```
 
-你可以在 `when` 表达式中组合多个分支语句。
+你可以在`when`表达式中组合多个分支语句。
 
 #### WhenDemo.kt
 
-```
+```kotlin
 fun main (args: Array<String>) {
   var a : Int = 5
   when (a){
@@ -1671,11 +1709,11 @@ fun main (args: Array<String>) {
 Prime number
 ```
 
-你也可以使用任意表达式作为分支条件。例如，我使用 `2+3` 作为分支条件。
+你也可以使用任意表达式作为分支条件。例如，我使用`2+3`作为分支条件。
 
 #### WhenDemo.kt
 
-```
+```kotlin
 fun main (args: Array<String>) {
   var a : Int = 5
   when (a){
@@ -1696,7 +1734,7 @@ Checked value 5
 
 #### WhenDemo.kt
 
-```
+```kotlin
 fun main (args: Array<String>) {
   var a : Int = 5
   when (a){
@@ -1715,11 +1753,11 @@ a is in between 1 to 5 (or) 11 to 15
 
 ## Kotlin：将 `when` 用作 `if-else if` 阶梯
 
-你也可以将 `when` 表达式用作 `if-elseif` 阶梯。如果你不为 `when` 表达式指定任何参数，它可以作为 `if-else if` 阶梯使用。
+你也可以将`when`表达式用作`if-elseif`阶梯。如果你不为`when`表达式指定任何参数，它可以作为`if-else if`阶梯使用。
 
 #### ConditionDemo.kt
 
-```
+```kotlin
 fun main (args: Array<String>) {
   var marks: Int = 65
   if (marks < 35 )
@@ -1741,11 +1779,11 @@ fun main (args: Array<String>) {
 You are passed and got first class
 ```
 
-你可以使用 `when` 表达式实现上述 `if-else if-else` 逻辑，如下所示。
+你可以使用`when`表达式实现上述`if-else if-else`逻辑，如下所示。
 
 #### WhenDemo.kt
 
-```
+```kotlin
 fun main (args: Array<String>) {
   var marks: Int = 65
   when {
@@ -1766,11 +1804,11 @@ You are passed and got first class
 
 ## Kotlin：将 `When` 用作表达式
 
-你可以将 `when` 用作表达式。如果将 `when` 用作表达式，则匹配分支的值将成为 `when` 表达式的值。
+你可以将`when`用作表达式。如果将`when`用作表达式，则匹配分支的值将成为`when`表达式的值。
 
 #### WhenDemo.kt
 
-```
+```kotlin
 fun main (args: Array<String>) {
   var a : Int = 2
   var s : String = "cube"
@@ -1791,20 +1829,20 @@ result is 8
 
 ## Kotlin：`for` 循环
 
-`for` 循环用于遍历集合、数组、范围等。通过使用 `for` 循环，你可以遍历任何提供迭代器的东西。
+`for` 循环用于遍历集合、数组、范围等。通过使用`for`循环，你可以遍历任何提供迭代器的东西。
 
 ### 遍历数组
 
 ### 语法
 
-```
+```kotlin
 for(ele in array){
 }
 ```
 
 #### ArrayDemo.kt
 
-```
+```kotlin
 fun main (args: Array<String>) {
   var arr: Array<Int> = arrayOf( 2 , 3 , 5 , 7 )
   for (ele in arr){
@@ -1826,7 +1864,7 @@ fun main (args: Array<String>) {
 
 #### ArrayDemo.kt
 
-```
+```kotlin
 fun main (args: Array<String>) {
   for (ele in 1.. 10 ){
     println(ele)
@@ -1853,7 +1891,7 @@ fun main (args: Array<String>) {
 
 #### ArrayDemo.kt
 
-```
+```kotlin
 fun main (args: Array<String>) {
   var message = "Good Morning"
   for (c in message){
@@ -1872,23 +1910,23 @@ Good Morning
 
 ### `while` 循环
 
-`while` 语句执行一段语句块，直到某个条件为 `true`
+`while` 语句执行一段语句块，直到某个条件为`true`。
 
 ### 语法
 
-```
+```kotlin
 while (expression) {
   //statements
 }
 ```
 
-`while` 语句中的表达式必须求值为布尔值，否则编译器将抛出错误。`while` 语句首先对表达式求值，直到表达式求值为 `true`，它执行 `while` 块内的代码，否则退出 `while` 循环。
+`while` 语句中的表达式必须求值为布尔值，否则编译器将抛出错误。`while` 语句首先对表达式求值，直到表达式求值为`true`，它执行`while`块内的代码，否则退出`while`循环。
 
-示例：使用 `while` 循环打印从 0 到 9 的数字。
+示例：使用`while`循环打印从 0 到 9 的数字。
 
 #### WhileDemo.kt
 
-```
+```kotlin
 fun main (args: Array<String>) {
   var counter : Int = 0
   while (counter < 10 ){
@@ -1915,11 +1953,11 @@ fun main (args: Array<String>) {
 
 ### `do-while` 循环
 
-`do-while` 也是一种类似 `while` 的循环结构，但它在循环底部而不是顶部对其表达式求值。
+`do-while` 也是一种类似`while`的循环结构，但它在循环底部而不是顶部对其表达式求值。
 
 ### 语法
 
-```
+```kotlin
 do {
   //statement(s)
 } while (expression)
@@ -1927,7 +1965,7 @@ do {
 
 #### DoWhileDemo.kt
 
-```
+```kotlin
 fun main (args: Array<String>) {
   var counter : Int = 0
   do {
@@ -1954,13 +1992,12 @@ fun main (args: Array<String>) {
 
 ### `while` 和 `do-while` 有什么区别？
 
-
- 
- `do` 代码块中的语句至少会执行一次，即使表达式的计算结果为 false。
+`do` 代码块中的语句至少会执行一次，即使表达式的计算结果为 false。
 
 ## Kotlin：`break` 语句
 
 `break` 语句用于跳出循环。`break` 语句有两种使用形式。
+
 - 无标签 break
 - 带标签 break
 
@@ -1970,13 +2007,13 @@ fun main (args: Array<String>) {
 
 **语法**
 
-```
+```kotlin
 break
 ```
 
 **BreakDemo.kt**
 
-```
+```kotlin
 fun main(args: Array<String>) {
     for (i in 1..10) {
         println(i)
@@ -1999,7 +2036,7 @@ fun main(args: Array<String>) {
 
 **BreakDemoInnerLoop.kt**
 
-```
+```kotlin
 fun main(args: Array<String>) {
     for (i in 1..5) {
         for (j in 1..i) {
@@ -2026,7 +2063,7 @@ Kotlin 允许我们为任何表达式添加标签。
 
 **如何创建标签？**
 
-定义一个标识符，后跟 `@` 符号。
+定义一个标识符，后跟`@`符号。
 
 例如：`outerLoop@`、`processState@`
 
@@ -2034,20 +2071,20 @@ Kotlin 允许我们为任何表达式添加标签。
 
 **语法**
 
-```
+```kotlin
 break@labelIdentifier
 ```
 
 例如
 
-```
-break@outerLoop
-break@processState
-```
 
-**LabelledBreakDemo.kt**
 
-```
+`break@outerLoop`
+`break@processState`
+
+### `LabelledBreakDemo.kt`
+
+```kotlin
 fun main(args: Array<String>) {
     var counter: Int = 0;
     outerLoop@ for (i in 1..5) {
@@ -2076,20 +2113,21 @@ Breaking out of the outer loop
 ## Kotlin：`continue` 语句
 
 `continue` 语句跳过循环的当前迭代（例如：`for`、`while`、`do-while` 循环）。与 `break` 类似，`continue` 也有两种形式。
-1. 无标签 continue
-2. 带标签 continue
 
-### 无标签 continue
+1. 无标签 `continue`
+2. 带标签 `continue`
+
+### 无标签 `continue`
 
 **语法**
 
-```
+```kotlin
 continue;
 ```
 
-**ContinueDemo.kt**
+**`ContinueDemo.kt`**
 
-```
+```kotlin
 fun main(args: Array<String>) {
     for (i in 1..10) {
         if (i % 2 != 0) {
@@ -2106,9 +2144,9 @@ fun main(args: Array<String>) {
 2 4 6 8 10
 ```
 
-**UnlabelledContinueInnerLoop.kt**
+**`UnlabelledContinueInnerLoop.kt`**
 
-```
+```kotlin
 fun main(args: Array<String>) {
     for (i in 1..5) {
         for (j in 1..10) {
@@ -2132,7 +2170,7 @@ fun main(args: Array<String>) {
 2 4 6 8 10
 ```
 
-### 带标签 continue
+### 带标签 `continue`
 
 Kotlin 允许我们为任何表达式添加标签。
 
@@ -2146,20 +2184,20 @@ Kotlin 允许我们为任何表达式添加标签。
 
 **语法**
 
-```
+```kotlin
 continue@labelIdentifier
 ```
 
 例如
 
-```
+```kotlin
 continue@outerLoop
 continue@processState
 ```
 
-**ContinueLabelledDemo.kt**
+**`ContinueLabelledDemo.kt`**
 
-```
+```kotlin
 fun main(args: Array<String>) {
     outerLoop@ for (i in 1..5) {
         for (j in 1..10) {
@@ -2207,6 +2245,7 @@ fun main(args: Array<String>) {
 现在通过比较这些属性，我们可以轻松区分两个人。
 
 | 属性 | 人 A | 人 B |
+| --- | --- | --- |
 | 身高 | 6ft | 5.5ft |
 | 体重 | 75Kg | 60Kg |
 | 肤色 | 白色 | 黑色 |
@@ -2223,13 +2262,12 @@ fun main(args: Array<String>) {
 `walk`、`run`、`swim`、`eat`、`sleep`、`see`、`hear` 等。现在通过比较这些行为，我们可以轻松区分两个人。
 
 | 行为 | 人 A | 人 B |
+| --- | --- | --- |
 | 步行 | 10km/hr | 12km/hr |
 | 跑步 | 20km/hr | 18km/hr |
 | 睡眠 | 8 小时/天 | 6 小时/天 |
 
-
- 
- # 类
+### 类
 
 用通俗的话来说，我把类称为类别。所有人都属于人类别，猫、狮子、大象属于动物类别。因此，类或类别是一组具有相似属性和行为的对象。
 
@@ -2245,7 +2283,7 @@ fun main(args: Array<String>) {
 
 **语法**
 
-```
+```kotlin
 class ClassName {
   // 属性
   // 函数
@@ -2254,7 +2292,7 @@ class ClassName {
 
 **示例**
 
-```
+```kotlin
 class Employee {
   var firstName : String = ""
   var lastName : String = ""
@@ -2265,7 +2303,7 @@ class Employee {
 
 如何为 `Employee` 类定义对象？
 
-```
+```kotlin
 var emp1 = Employee()
 ```
 
@@ -2277,29 +2315,29 @@ var emp1 = Employee()
 
 **语法**
 
-```
+```kotlin
 objName.propertyName
 ```
 
 **示例**
 
-```
+```kotlin
 emp1.firstName = "Chamu"
 emp1.lastName = "Delhi"
 ```
 
-**Employee.kt**
+**`Employee.kt`**
 
-```
+```kotlin
 class Employee {
   var firstName: String = ""
   var lastName: String = ""
 }
 ```
 
-**Main.kt**
+**`Main.kt`**
 
-```
+```kotlin
 fun main (args: Array<String>) {
   var emp1 = Employee()
   emp1.firstName = "Chamu"
@@ -2326,7 +2364,7 @@ Last name : Delhi
 
 **示例**
 
-```
+```kotlin
 var name : String = "JJTam"
 ```
 
@@ -2336,11 +2374,11 @@ var name : String = "JJTam"
 
 **示例**
 
-```
+```kotlin
 val name : String = "JJTam"
 ```
 
-```
+```kotlin
 class Employee{
   var name : String = "JJTam"
   var age : Int = 28
@@ -2356,13 +2394,13 @@ class Employee{
 
 **语法**
 
-```
+```kotlin
 objectName.propertyName
 ```
 
-**HelloWorld.kt**
+**`HelloWorld.kt`**
 
-```
+```kotlin
 class Employee {
   var name: String = "JJTam"
   var age: Int = 28
@@ -2387,7 +2425,7 @@ orgID : ORG1234
 
 定义属性时无需添加属性类型，Kotlin 环境会自动推断。但添加类型可以提高程序的可读性。
 
-```
+```kotlin
 class Employee {
   var name = "JJTam"
   var age = 28
@@ -2401,7 +2439,7 @@ class Employee {
 
 **语法**
 
-```
+```kotlin
 var <propertyName>[: <PropertyType>] [= <property_initializer>]
 [<getter>]
 [<setter>]
@@ -2409,9 +2447,9 @@ var <propertyName>[: <PropertyType>] [= <property_initializer>]
 
 定义属性时，`PropertyType`、`getter` 和 `setter` 都是可选的。
 
-**HelloWorld.kt**
+**`HelloWorld.kt`**
 
-```
+```kotlin
 class Employee {
   var name: String = "JJTam"
   get () = field
@@ -2448,7 +2486,7 @@ orgID : ORG1234
 
 getter 和 setter 方法用于在发送/设置信息之前对数据进行转换/验证。
 
-```
+```kotlin
 var age : Int = 28
 get() = field
 set(value) {
@@ -2459,9 +2497,9 @@ set(value) {
 
 例如，在上面的代码片段中，setter 方法在将年龄设置到属性之前对其进行验证。如果用户将年龄设置为 `<0` 或 `> 100`，年龄将被设置为 `3`。下面是完整的可运行应用。
 
-**HelloWorld.kt**
+**`HelloWorld.kt`**
 
-```
+```kotlin
 class Employee {
   var name: String = "JJTam"
   get () = field
@@ -2505,7 +2543,7 @@ orgID : ORG1234
 
 Kotlin 为可变属性（使用 `var` 关键字定义的属性）提供默认的 getter 和 setter 方法，而为不可变属性（使用 `val` 关键字定义的属性）仅提供 getter 方法。
 
-```
+```kotlin
 var name = "JJTam" // 类型为 String，具有默认的 getter 和 setter
 val orfID = "orf1234" // 类型为 String，具有默认的 getter
 ```
@@ -2516,7 +2554,7 @@ Kotlin 中的函数使用 `fun` 关键字定义。
 
 **示例：**
 
-```
+```kotlin
 fun square(x : Int) : Int{
   return x*x
 }
@@ -2524,9 +2562,9 @@ fun square(x : Int) : Int{
 
 上面的代码片段定义了一个名为 `square` 的函数，它接受一个 `Int` 类型的参数并返回整数。
 
-**Employee.kt**
+**`Employee.kt`**
 
-```
+```kotlin
 class Employee {
   private var firstName: String = ""
   private var lastName: String = ""
@@ -2545,9 +2583,9 @@ class Employee {
 }
 ```
 
-**Main.kt**
+**`Main.kt`**
 
-```
+```kotlin
 fun main (args: Array<String>) {
   var emp1 = Employee()
   emp1.setFirstName( "Chamu" )
@@ -2568,9 +2606,9 @@ lastName : Delhi
 
 在 Kotlin 中，成员属性要么被初始化，要么必须声明为抽象。让我们通过一个例子来看看。
 
-**Employee.kt**
+**`Employee.kt`**
 
-```
+```kotlin
 class Employee {
   private var firstName: String
   private var lastName: String
@@ -2602,13 +2640,15 @@ Employee.kt:3:2: error: property must be initialized or be abstract
 
 ### 如何消除上述错误？
 
+
+
 有两种方法，要么初始化属性，要么将属性设为抽象。
 
-**方法 1：先初始化 firstName 和 lastName 属性**
+**方法 1：先初始化 `firstName` 和 `lastName` 属性**
 
-**Employee.kt**
+**`Employee.kt`**
 
-```
+```kotlin
 class Employee {
   private var firstName: String = ""
   private var lastName: String = ""
@@ -2629,28 +2669,28 @@ class Employee {
 
 **方法 2：将属性设为抽象**
 
-**Employee.kt**
+**`Employee.kt`**
 
-```
+```kotlin
 abstract class Employee {
   abstract var firstName: String
   abstract var lastName: String
 }
 ```
 
-## Kotlin：const：编译时常量
+## Kotlin：`const`：编译时常量
 
 你可以使用 `const` 关键字定义编译时常量。
 
 **示例**
 
-```
+```kotlin
 const val VENDOR_NAME = "Self Learning Java blog"
 ```
 
-**HelloWorld.kt**
+**`HelloWorld.kt`**
 
-```
+```kotlin
 const val VENDOR_NAME = "Self Learning Java blog"
 const val PI = 3.14
 
@@ -2670,12 +2710,12 @@ Value of PI : 3.14
 定义编译时常量时，属性必须满足以下前提条件。
 
 * 顶层属性或对象的成员
+
 * 使用 `String` 类型或基本类型的值进行初始化
-* 没有自定义 getter
 
+* 没有自定义 `getter`
 
- 
- # Kotlin：`const` 与 `val`
+## Kotlin：`const` 与 `val`
 
 `const` 关键字用于定义编译期常量，也就是说，`const` 变量的值在编译时就已经确定。而 `val` 则用于定义运行期常量。
 
@@ -2687,13 +2727,13 @@ const val PICon = getPI()
 
 当你尝试编译包含上述语句的 Kotlin 程序时，你会遇到如下错误。
 
-> 'Const 'val' has type 'Unit'. Only primitives and String are allowed'.
+> `'Const 'val' has type 'Unit'. Only primitives and String are allowed'.`
 
 这是因为 `getPI()` 是在运行期求值并将值赋给 `PICon`，但 `const` 是用来在编译期定义常量的。
 
 请看下面的可运行示例。
 
-`HelloWorld.kt`
+**`HelloWorld.kt`**
 
 ```kotlin
 const val VENDOR_NAME = "Self Learning Java blog"
@@ -2720,7 +2760,7 @@ Value of PI : 3.14
 
 默认情况下，Kotlin 不允许存在未初始化的属性。你必须在声明时（或）在构造函数中对其进行初始化。让我用一个例子来说明。
 
-`HelloWorld.kt`
+**`HelloWorld.kt`**
 
 ```kotlin
 class Employee {
@@ -2741,8 +2781,11 @@ ERROR: Property must be initialized or be abstract (4, 2)
 ### 如何解决上述问题？
 
 有三种方法：
+
 - a. 在声明时初始化变量
+
 - b. 在构造函数中定义变量
+
 - c. 使用延迟初始化
 
 #### 在声明时初始化变量
@@ -2787,7 +2830,7 @@ class Employee {
 
 不可以。如果你尝试在初始化之前访问 `lateinit` 属性，你会遇到 `UninitializedPropertyAccessException`。
 
-`HelloWorld.kt`
+**`HelloWorld.kt`**
 
 ```kotlin
 class Employee {
@@ -2812,7 +2855,7 @@ Exception in thread "main" kotlin.UninitializedPropertyAccessException: lateinit
 
 要解决该错误，请在访问之前定义 `lateinit` 属性。
 
-`HelloWorld.kt`
+**`HelloWorld.kt`**
 
 ```kotlin
 class Employee {
@@ -2851,7 +2894,7 @@ class Employee constructor(fName: String, lName: String) {
 }
 ```
 
-`Employee.kt`
+**`Employee.kt`**
 
 ```kotlin
 class Employee constructor (fName: String, lName: String) {
@@ -2861,7 +2904,7 @@ class Employee constructor (fName: String, lName: String) {
 }
 ```
 
-`Main.kt`
+**`Main.kt`**
 
 ```kotlin
 fun main (args: Array<String>) {
@@ -2879,7 +2922,7 @@ fName : Hareesh, lName : Seeram
 
 如果主构造函数没有任何修饰符（或）注解，定义主构造函数时可以省略 `constructor` 关键字。
 
-`Employee.kt`
+**`Employee.kt`**
 
 ```kotlin
 class Employee (fName: String, lName: String) {
@@ -2893,7 +2936,7 @@ class Employee (fName: String, lName: String) {
 
 如果你在主构造函数的类型参数前添加 `var`/`val` 关键字，它会在类中创建一个字段。
 
-`Main.kt`
+**`Main.kt`**
 
 ```kotlin
 class Employee ( var firstName: String, var lastName: String) {}
@@ -2926,9 +2969,7 @@ Kotlin 类可以有多个次构造函数。
 constructor(arguments){
 ```
 
-
- 
- ```kotlin
+```kotlin
 class Employee {
   var firstName: String = ""
   var lastName: String = ""
@@ -2961,7 +3002,7 @@ firstName : Hareesh, lastName : Seeram
 firstName : Praneeth, lastName : Praneeth
 ```
 
-主构造函数必须被次构造函数显式调用。我的意思是，如果一个类有主构造函数，那么次构造函数必须直接或通过其他 constructors 间接地委托给主构造函数。
+主构造函数必须被次构造函数显式调用。我的意思是，如果一个类有主构造函数，那么次构造函数必须直接或通过其他 `constructors` 间接地委托给主构造函数。
 
 ```kotlin
 class Employee(var firstName: String) {
@@ -2976,7 +3017,7 @@ class Employee(var firstName: String) {
 
 在上面的例子中，`Employee` 类有一个主构造函数，我们在定义次构造函数时使用 `this` 关键字调用主构造函数。
 
-`ConstructorDemo.kt`
+**`ConstructorDemo.kt`**
 
 ```kotlin
 class Employee(var firstName: String) {
@@ -3045,7 +3086,7 @@ var emp3 = Employee("Shwetha", "kam")
 
 `firstName` 被赋值为 `Shwetha`，`lastName` 被赋值为 `Kam`。
 
-`ConstructorDemo.kt`
+**`ConstructorDemo.kt`**
 
 ```kotlin
 class Employee(var firstName: String = "JJTam", var lastName: String = "Delhi") {
@@ -3077,7 +3118,9 @@ firstName : Shwetha, lastName : kam
 
 通过在类头中指定 `private` 访问修饰符，你可以定义私有主构造函数。
 
-`PrivateConDemo.kt`
+**`PrivateConDemo.kt`**
+
+
 
 ```kotlin
 class Employee private constructor(var firstName: String) {
@@ -3178,6 +3221,7 @@ class DerivedClass : BaseClass {
 让我们通过一个例子来了解继承特性。在每个组织中，有两种员工。
 
 a. 正式员工
+
 b. 合同工
 
 正式员工和合同工都共享 `firstName`、`lastName` 和 `id` 等属性。而合同工有单独的薪酬公司。我们可以将这些共同属性（`firstName`、`lastName` 和 `id`）放在单独的类 `Employee` 中，并让 `PermanentEmployee` 和 `ContractEmployee` 类从共同的基类 `Employee` 继承这些属性。
@@ -3532,6 +3576,8 @@ Hello Base class
 一个类可以嵌套在另一个类中。
 
 示例
+
+
 
 ```kotlin
 class Outer {
@@ -3974,8 +4020,6 @@ ERROR: Class 'MyClass' must override public open fun welcomeMessage(name: String
 
 ### 如何解决上述错误？
 
-
- 
 通过在 `MyClass` 中重写函数 `welcomeMessage`，你可以消除上述错误。
 
 ```kotlin
@@ -3988,7 +4032,7 @@ class MyClass : Interface1, Interface2 {
 
 查看下面的可运行应用。
 
-**HelloWorld.kt**
+`HelloWorld.kt`
 
 ```kotlin
 interface Interface1 {
@@ -4015,7 +4059,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-**Output**
+输出
 
 ```
 Hello JJTam
@@ -4025,7 +4069,7 @@ Hello JJTam
 
 通过使用 `super` 关键字，你可以从类中调用接口方法的实现。
 
-**示例**
+示例
 
 ```kotlin
 class MyClass : Interface1, Interface2 {
@@ -4038,7 +4082,7 @@ class MyClass : Interface1, Interface2 {
 
 查看下面的可运行应用。
 
-**HelloWorld.kt**
+`HelloWorld.kt`
 
 ```kotlin
 interface Interface1 {
@@ -4066,7 +4110,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-**Output**
+输出
 
 ```
 Welcome JJTam
@@ -4078,6 +4122,8 @@ Good Morning JJTam
 如果你想创建一个对现有类稍作修改的对象，可以使用匿名类。通过使用对象表达式，你可以创建匿名类。
 
 例如，
+
+
 
 ```kotlin
 open class PrintUtil {
@@ -4098,7 +4144,7 @@ var anonymousObj: PrintUtil = object : PrintUtil() {
 }
 ```
 
-正如你在上面的代码片段中观察到的，我使用对象表达式定义了对象 `anonymousObj`。对象表达式使用关键字 `object` 来定义。
+正如你在上面的代码片段中观察到的，我使用对象表达式定义了对象`anonymousObj`。对象表达式使用关键字`object`来定义。
 
 **HelloWorld.kt**
 
@@ -4247,7 +4293,7 @@ Hello, Good Morning JJTam
 
 ## Kotlin：定义单例对象
 
-通过使用 `object` 关键字，你可以定义单例对象。
+通过使用`object`关键字，你可以定义单例对象。
 
 ### 语法
 
@@ -4400,7 +4446,7 @@ fun main(args: Array<String>) {
 Hello
 ```
 
-正如你在上面的代码片段中看到的，我使用 `TestClass` 调用了伴生对象的 `sayHello` 函数（没有创建 `TestClass` 的任何对象）。
+正如你在上面的代码片段中看到的，我使用`TestClass`调用了伴生对象的`sayHello`函数（没有创建`TestClass`的任何对象）。
 
 你可以为伴生对象命名。
 
@@ -4434,7 +4480,7 @@ fun main(args: Array<String>) {
 Hello
 ```
 
-通过在伴生对象上添加 `@JvmStatic` 注解，你可以在任何 Java 类中将其用作静态成员。
+通过在伴生对象上添加`@JvmStatic`注解，你可以在任何 Java 类中将其用作静态成员。
 
 **HelloWorld.kt**
 
@@ -4513,7 +4559,7 @@ Good Morning customer
 
 ## Kotlin：抽象类
 
-抽象类可以包含没有实现的方法。抽象类使用 `abstract` 关键字定义。
+抽象类可以包含没有实现的方法。抽象类使用`abstract`关键字定义。
 
 **示例**
 
@@ -4540,8 +4586,6 @@ abstract class ArithmeticImpl : Arithmetic {
 
 ### 抽象方法
 
-
- 
 就像你定义抽象类一样，你可以使用关键字`abstract`来定义抽象方法（没有实现的方法）。
 
 ```kotlin
@@ -4575,6 +4619,9 @@ class ConcreteArithmetic : ArithmeticImpl() {
 以下是可运行的应用程序。
 
 `HelloWorld.kt`
+
+
+
 ```kotlin
 interface Arithmetic {
   fun sum (x: Int, y: Int): Int
@@ -4621,6 +4668,7 @@ fun main (args: Array<String>) {
 ```
 
 输出
+
 ```
 sumOf10And20 = 30
 subOf10And20 = -10
@@ -4636,10 +4684,7 @@ areaOfCircle = 78.5
 * Kotlin 库函数（例如：`print`、`sqrt`等）
 * 用户自定义函数
 
-
- 
-Segment 1:
- # Kotlin 用户自定义函数
+## Kotlin 用户自定义函数
 
 在本教程系列中，我将重点介绍用户自定义函数。在 Kotlin 中，函数使用 `fun` 关键字定义。
 
@@ -5000,7 +5045,9 @@ fun factorial(n: Int): Int {
 
 如上面的代码片段所示，我在 `factorial` 函数内部定义了 `fact`。`fact` 是局部函数，而 `factorial` 是外部函数。
 
-#### FunctionDemo.kt
+
+
+## `FunctionDemo.kt`
 
 ```kotlin
 fun factorial (n: Int): Int {
@@ -5018,7 +5065,7 @@ fun main (args: Array<String>) {
 }
 ```
 
-#### 输出
+### 输出
 
 ```
 factorial Of 5 : 120
@@ -5042,7 +5089,7 @@ class Number {
 
 在上面的代码片段中，`isEven` 是一个成员函数。
 
-#### FunctionDemo.kt
+#### `FunctionDemo.kt`
 
 ```kotlin
 class Number {
@@ -5137,7 +5184,7 @@ Type "help" , "copyright" , "credits" or "license" for more information.
 
 使用 `quit()` 退出 Python 提示符。
 
-### python3 的位置
+### `python3` 的位置
 
 ```
 $ which python3
@@ -5152,7 +5199,7 @@ $ which python3.5
 
 打开任意文本编辑器，复制语句 `print ('hello world')` 并将文件保存为 `hello.py`。
 
-### hello.py
+### `hello.py`
 
 ```python
 print ('hello world')
@@ -5173,8 +5220,6 @@ Python 首先将你的源代码编译为字节码，然后将其发送到 Python
 
 **注意：**
 
-
- 
 字节码不是机器可理解的代码，它是 Python 特有的表示形式。
 
 ## Python 交互式命令行
@@ -5220,11 +5265,17 @@ Hello World
 运算符是一种符号，用于执行操作。以下是 Python 支持的运算符。
 
 - 算术运算符
+
 - 关系运算符
+
 - 赋值运算符
+
 - 逻辑运算符
+
 - 位运算符
+
 - 成员运算符
+
 - 身份运算符
 
 ### Python 中的算术运算符
@@ -5232,12 +5283,19 @@ Hello World
 以下是 Python 支持的算术运算符。
 
 | 运算符 | 描述 | 示例 |
+
 | + | 加法 | `2+3` |
+
 | - | 减法 | `2-3` |
+
 | * | 乘法 | `2*3` |
+
 | / | 除法始终返回浮点数值。要仅获取整数结果，请使用 `//`。 | `2/3` 返回 `0.6666666666666666` |
+
 | // | 地板除法，舍弃小数部分 | `2//3` 返回 `0` |
+
 | % | 返回除法的余数。 | `2%3` |
+
 | ** | 幂运算 | `2**3` 返回 2 的 3 次方 = `8` |
 
 ```
@@ -5260,11 +5318,17 @@ Hello World
 关系运算符用于判断一个操作数是否大于、小于、等于或不等于另一个操作数。
 
 | 运算符 | 描述 | 示例 |
+
 | == | 等于 | `a==b` 如果 a 等于 b 则返回 true，否则返回 false |
+
 | != | 不等于 | `a!=b` 如果 a 不等于 b 则返回 true，否则返回 false。 |
+
 | > | 大于 | `a>b` 如果 a > b 则返回 true，否则返回 false。 |
+
 | >= | 大于或等于 | `a>=b` 如果 a >= b 则返回 true，否则返回 false。 |
+
 | < | 小于 | `a<b` 如果 a < b 则返回 true，否则返回 false。 |
+
 | <= | 小于或等于 | `a<=b` 如果 a <= b 则返回 true，否则返回 false。 |
 
 ```
@@ -5289,13 +5353,21 @@ True
 赋值运算符用于给变量赋值。以下是 Python 提供的赋值运算符。
 
 | 运算符 | 描述 |
+
 | = | `a=10` 将 10 赋值给变量 a |
+
 | += | `a+=10` 等同于 `a=a+10` |
+
 | -= | `a-=10` 等同于 `a=a-10` |
+
 | *= | `a*=10` 等同于 `a=a*10` |
+
 | /= | `a/=10` 等同于 `a=a/10` |
+
 | //= | `a//=10` 等同于 `a=a//10` |
+
 | %= | `a%=10` 等同于 `a=a%10` |
+
 | **= | `a**=10` 等同于 `a=a**10` |
 
 ```
@@ -5347,8 +5419,11 @@ True
 以下是 Python 支持的逻辑运算符。
 
 | 运算符 | 描述 |
+
 | and | 'a and b' 如果 a 和 b 都为 true，则返回 true。否则返回 false。 |
+
 | or | 'a or b' 如果 a 和 b 都为 false，则返回 false，否则返回 true。 |
+
 | not | 'not a' 如果 a 为 false 则返回 True，否则返回 true |
 
 ```
@@ -5381,11 +5456,17 @@ False
 Python 支持以下位运算符，用于对整数执行位运算。
 
 | 运算符 | 描述 |
+
 | >> | 位右移 |
+
 | << | 位左移 |
+
 | & | 位与 |
+
 | ^ | 位异或 |
+
 | &#124; | 位或 |
+
 | ~ | 位非 |
 
 以下文章清楚地解释了位运算符。http://self-learning-java-tutorial.blogspot.in/2014/02/bit-wise-operators.html
@@ -5412,7 +5493,9 @@ Python 支持以下位运算符，用于对整数执行位运算。
 成员运算符用于测试某个值或变量是否存在于序列（字符串、列表、元组、集合和字典）中。
 
 | 运算符 | 描述 |
+
 | in | 如果值/变量在序列中找到，则返回 true，否则返回 false。 |
+
 | not in | 如果值/变量在序列中未找到，则返回 True，否则返回 false |
 
 ```
@@ -5430,7 +5513,9 @@ True
 身份运算符用于比较两个对象的内存位置。
 
 | 运算符 | 描述 |
+
 | is | `a is b` 如果 a 和 b 指向同一对象，则返回 true，否则返回 false。 |
+
 | is not | `a is not b` 如果 a 和 b 不指向同一对象，则返回 true，否则返回 false。 |
 
 ```
@@ -5535,6 +5620,8 @@ firstline\nsecondline
 
 你可以使用索引位置访问字符串的特定字符。
 
+
+
 ```
 >>> name = "Hello World"
 >>> name[0]
@@ -5543,9 +5630,9 @@ firstline\nsecondline
 'W'
 ```
 
-索引 0 表示第 1 个字符，1 表示第 2 个字符，依此类推。
+索引`0`表示第 1 个字符，`1`表示第 2 个字符，依此类推。
 
-你也可以使用负数进行索引。-1 表示最后一个字符；-2 表示倒数第二个字符，依此类推。
+你也可以使用负数进行索引。`-1`表示最后一个字符；`-2`表示倒数第二个字符，依此类推。
 
 ```
 >>> name
@@ -5563,13 +5650,11 @@ firstline\nsecondline
 切片用于获取给定字符串的子字符串。
 
 | 示例 | 描述 |
-| string[start:end] | 返回从索引 start（包含）到 end 索引（不包含）的子字符串。 |
-| string[:end] | 返回从索引 0（包含）到 end 索引（不包含）的子字符串。 |
-| string[start:] | 返回从索引 start 到末尾的子字符串。 |
-
-
- 
- | `string[-2:]` | 返回从倒数第 2 个字符到末尾的字符。 |
+| --- | --- |
+| `string[start:end]` | 返回从索引`start`（包含）到`end`索引（不包含）的子字符串。 |
+| `string[:end]` | 返回从索引`0`（包含）到`end`索引（不包含）的子字符串。 |
+| `string[start:]` | 返回从索引`start`到末尾的子字符串。 |
+| `string[-2:]` | 返回从倒数第 2 个字符到末尾的字符。 |
 
 ```
 >>> message = "Hello World"
@@ -5587,7 +5672,7 @@ firstline\nsecondline
 
 ### 获取字符串长度
 
-函数 `len(str)` 用于获取字符串的长度。
+函数`len(str)`用于获取字符串的长度。
 
 ```
 >>> message
@@ -5602,7 +5687,7 @@ firstline\nsecondline
 
 ### "if" 语句
 
-`"if"` 告诉程序在条件求值为真时执行该段代码。
+`"if"`告诉程序在条件求值为真时执行该段代码。
 
 **语法**
 
@@ -5630,7 +5715,7 @@ a is equal to 10
 
 ### if-else 语句
 
-如果条件为真，则执行 if 代码块。否则执行 else 代码块。
+如果条件为真，则执行`if`代码块。否则执行`else`代码块。
 
 **语法**
 
@@ -5652,7 +5737,7 @@ else:
 
 ### if-elif-else 语句
 
-通过使用 if-elif-else 结构，你可以选择多种替代方案。if 语句后面可以跟可选的 elif...else 语句。
+通过使用`if-elif-else`结构，你可以选择多种替代方案。`if`语句后面可以跟可选的`elif...else`语句。
 
 **语法**
 
@@ -5723,7 +5808,7 @@ data is not empty
 
 ## Python：while 语句
 
-`while` 语句执行一段代码块，直到某个条件为真。
+`while`语句执行一段代码块，直到某个条件为真。
 
 **语法**
 
@@ -5733,7 +5818,7 @@ while_stmt ::=
                           ["else" ":" suite]
 ```
 
-`else` 子句是可选的。如果表达式求值为假，则 else 子句将执行（如果存在 else），然后终止。
+`else`子句是可选的。如果表达式求值为假，则`else`子句将执行（如果存在`else`），然后终止。
 
 **test.py**
 
@@ -5759,7 +5844,7 @@ Done
 
 ## Python：for 语句
 
-Python 的 for 语句用于遍历任何序列（如列表、字符串）中的项目。
+Python 的`for`语句用于遍历任何序列（如列表、字符串）中的项目。
 
 **语法**
 
@@ -5769,7 +5854,7 @@ for_stmt ::=
               ["else" ":" suite]
 ```
 
-`else` 子句是可选的，它在循环终止后执行。
+`else`子句是可选的，它在循环终止后执行。
 
 **test.py**
 
@@ -5794,7 +5879,7 @@ Finsihed Execution
 
 ## Python：break 语句
 
-`break` 语句用于跳出 for、while 等循环。
+`break`语句用于跳出`for`、`while`等循环。
 
 **test.py**
 
@@ -5820,11 +5905,11 @@ $ python3 test.py
 Finished Execution
 ```
 
-正如你观察到的输出，else 子句中的 print 语句没有打印出来。这是因为，当 break 语句终止循环时，else 子句不会执行。
+正如你观察到的输出，`else`子句中的`print`语句没有打印出来。这是因为，当`break`语句终止循环时，`else`子句不会执行。
 
 ## Python：continue 语句
 
-`continue` 语句跳过 for、while 等循环的当前迭代。
+`continue`语句跳过`for`、`while`等循环的当前迭代。
 
 **test.py**
 
@@ -5859,7 +5944,7 @@ Finished Execution
 
 ## Python：函数
 
-函数是由名称标识的语句块。关键字 `def` 用于定义函数。函数主要用于两个原因。
+函数是由名称标识的语句块。关键字`def`用于定义函数。函数主要用于两个原因。
 
 a. 使代码更易于构建和理解
 
@@ -5927,11 +6012,11 @@ Traceback (most recent call last):
 UnboundLocalError: local variable 'x' referenced before assignment
 ```
 
-删除 `x += 1` 语句并重新运行上面的程序，`x` 的值将打印到控制台。
+删除`x += 1`语句并重新运行上面的程序，`x`的值将打印到控制台。
 
 ## Python：函数：return 语句
 
-`return` 语句用于将值从函数返回给调用者。
+`return`语句用于将值从函数返回给调用者。
 
 **test.py**
 
@@ -5960,7 +6045,7 @@ $ python3 test.py
 120
 ```
 
-不带表达式参数的 `return` 返回 `None`。
+不带表达式参数的`return`返回`None`。
 
 ```python
 def hello():
@@ -5975,9 +6060,7 @@ Hello
 None
 ```
 
-
- 
- # Python：函数：默认参数值
+## Python：函数：默认参数值
 
 在 Python 中，你可以为函数参数传递默认值。
 
@@ -5988,11 +6071,11 @@ def welcomeMessage(name='user', message='Hello'):
 
 你可以通过以下方式调用上述函数。
 
-`welcomeMessage()` ：打印 `Hello user`
+`welcomeMessage()`：打印`Hello user`
 
-`welcomeMessage('JJTam')` ：打印 `Hello JJTam`
+`welcomeMessage('JJTam')`：打印`Hello JJTam`
 
-`welcomeMessage('JJTam', "Welcome")` ：打印 `Welcome JJTam`
+`welcomeMessage('JJTam', "Welcome")`：打印`Welcome JJTam`
 
 ```python
 # test.py
@@ -6123,6 +6206,8 @@ SyntaxError: positional argument follows keyword argument
 [2, 3, 5, 7, 11, 13, 17, 19, 23]
 ```
 
+
+
 `primes` 是一个包含素数的列表。
 
 ```python
@@ -6178,9 +6263,7 @@ SyntaxError: positional argument follows keyword argument
 | `list[start:]` | 返回从起始索引到末尾的子列表。 |
 | `list[-2:]` | 返回从倒数第二个到末尾的列表。 |
 
-
- 
- ```
+```python
 >>> objects[1, 3, 'Hello', 10.23]
 >>> objects[-1]
 10.23
@@ -6206,7 +6289,7 @@ SyntaxError: positional argument follows keyword argument
 
 `+` 运算符用于连接两个列表。
 
-```
+```python
 >>> even = [2, 4, 6, 8, 10]
 >>> odd = [1, 3, 5, 7, 9]
 >>> numbers = even + odd
@@ -6216,7 +6299,7 @@ SyntaxError: positional argument follows keyword argument
 
 列表是可变的；你可以更改列表中的值。
 
-```
+```python
 >>> numbers
 [2, 4, 6, 8, 10, 1, 3, 5, 7, 9]
 >>> numbers[0] = 12
@@ -6229,7 +6312,7 @@ SyntaxError: positional argument follows keyword argument
 
 列表提供了 `append` 方法，用于在列表末尾添加新元素。
 
-```
+```python
 >>> numbers
 [12, 14, 6, 8, 10, 1, 3, 5, 7, 9]
 >>>
@@ -6252,7 +6335,7 @@ SyntaxError: positional argument follows keyword argument
 
 上述语句通过将所有元素替换为空列表来清空列表。
 
-```
+```python
 >>> numbers
 [12, 14, 6, 8, 10, 1, 3, 5, 7, 9, 11, 13]
 >>>
@@ -6269,7 +6352,7 @@ SyntaxError: positional argument follows keyword argument
 
 使用 `len` 函数，你可以获取列表的长度。
 
-```
+```python
 >>> vowels = ['a', 'e', 'i', 'o', 'u']
 >>> len(vowels)
 5
@@ -6277,9 +6360,9 @@ SyntaxError: positional argument follows keyword argument
 
 ### 嵌套列表
 
-一个列表可以嵌套在另一个列表中。例如，在下面的示例中，numbers 包含 3 个列表，第一个列表表示奇数，第二个列表表示偶数，第三个列表表示质数。
+一个列表可以嵌套在另一个列表中。例如，在下面的示例中，`numbers` 包含 3 个列表，第一个列表表示奇数，第二个列表表示偶数，第三个列表表示质数。
 
-```
+```python
 >>> numbers = [[1, 3, 5, 7], [2, 4, 6, 8], [2, 3, 5, 7, 11]]
 >>> numbers
 [[1, 3, 5, 7], [2, 4, 6, 8], [2, 3, 5, 7, 11]]
@@ -6315,7 +6398,7 @@ Python 提供了 `extend` 方法，用于追加给定列表中的所有项目。
 
 `test.py`
 
-```
+```python
 evenNumbers = [2, 4, 6]
 oddNumbers = [1, 3, 5]
 numbers = []
@@ -6325,7 +6408,7 @@ numbers.extend(oddNumbers)
 print(numbers)
 ```
 
-```
+```python
 $ python3 test.py
 [2, 4, 6]
 [2, 4, 6, 1, 3, 5]
@@ -6339,13 +6422,13 @@ $ python3 test.py
 
 `list.insert(i, x)`
 
-- `list.insert(0, x)`：在列表开头插入元素 x。
-- `list.insert(len(list), x)`：在列表末尾插入元素 x。
-- `list.insert(2, x)`：在第 2 个位置插入元素 x。
+- `list.insert(0, x)`：在列表开头插入元素 `x`。
+- `list.insert(len(list), x)`：在列表末尾插入元素 `x`。
+- `list.insert(2, x)`：在第 2 个位置插入元素 `x`。
 
 `test.py`
 
-```
+```python
 list = [2, 4, 6]
 print(list)
 list.insert(0, -2)
@@ -6356,7 +6439,7 @@ list.insert(2, 3)
 print(list)
 ```
 
-```
+```python
 $ python3 test.py
 [2, 4, 6]
 [-2, 2, 4, 6]
@@ -6372,18 +6455,18 @@ $ python3 test.py
 
 `list.remove(x)`
 
-`remove` 方法移除列表中值为 x 的第一个项目。
+`remove` 方法移除列表中值为 `x` 的第一个项目。
 
 `test.py`
 
-```
+```python
 list = [2, 4, 6, 6, 4, 2]
 print(list)
 list.remove(6)
 print(list)
 ```
 
-```
+```python
 $ python3 test.py
 [2, 4, 6, 6, 4, 2]
 [2, 4, 6, 4, 2]
@@ -6393,14 +6476,14 @@ $ python3 test.py
 
 `test.py`
 
-```
+```python
 list = [2, 4, 6, 6, 4, 2]
 print(list)
 list.remove(60)
 print(list)
 ```
 
-```
+```python
 $ python3 test.py
 [2, 4, 6, 6, 4, 2]
 Traceback (most recent call last):
@@ -6417,7 +6500,7 @@ ValueError: list.remove(x): x not in list
 
 `test.py`
 
-```
+```python
 list = [2, 4, 6, 6, 4, 2]
 print(list)
 print("Removing last element ", list.pop())
@@ -6426,7 +6509,7 @@ print("Removing element at index 2 ", list.pop(2))
 print(list)
 ```
 
-```
+```python
 $ python3 test.py
 [2, 4, 6, 6, 4, 2]
 Removing last element  2
@@ -6441,14 +6524,14 @@ Removing element at index 2  6
 
 `test.py`
 
-```
+```python
 list = [2, 4, 6, 6, 4, 2]
 print(list)
 list.clear()
 print(list)
 ```
 
-```
+```python
 $ python3 test.py
 [2, 4, 6, 6, 4, 2]
 []
@@ -6458,11 +6541,11 @@ $ python3 test.py
 
 `list.index(x)`
 
-`list` 提供了 index 方法，返回值为 x 的第一个项目的索引。
+`list` 提供了 `index` 方法，返回值为 `x` 的第一个项目的索引。
 
 `test.py`
 
-```
+```python
 list = [2, 4, 6, 6, 4, 2]
 print(list)
 print("index of 2 is ", list.index(2))
@@ -6470,7 +6553,7 @@ print("index of 4 is ", list.index(4))
 print("index of 6 is ", list.index(6))
 ```
 
-```
+```python
 $ python3 test.py
 [2, 4, 6, 6, 4, 2]
 index of 2 is  0
@@ -6482,13 +6565,13 @@ index of 6 is  2
 
 `test.py`
 
-```
+```python
 list = [2, 4, 6, 6, 4, 2]
 print(list)
 print("index of 20 is ", list.index(20))
 ```
 
-```
+```python
 $ python3 test.py
 [2, 4, 6, 6, 4, 2]
 Traceback (most recent call last):
@@ -6499,11 +6582,11 @@ ValueError: 20 is not in list
 
 ## Python：list：对列表元素进行排序
 
-`list` 提供了 sort 方法，用于对列表元素进行排序。默认情况下，sort 方法按升序对元素进行排序。要按降序对元素进行排序，请传递 `reverse=True` 参数。
+`list` 提供了 `sort` 方法，用于对列表元素进行排序。默认情况下，`sort` 方法按升序对元素进行排序。要按降序对元素进行排序，请传递 `reverse=True` 参数。
 
 `test.py`
 
-```
+```python
 list = [12, 5, 32, 43, 21, 356]
 print(list)
 list.sort()
@@ -6512,7 +6595,7 @@ list.sort(reverse=True)
 print(list)
 ```
 
-```
+```python
 $ python3 test.py
 [12, 5, 32, 43, 21, 356]
 [5, 12, 21, 32, 43, 356]
@@ -6521,18 +6604,18 @@ $ python3 test.py
 
 ## Python：count：统计元素出现的次数
 
-列表提供 count 方法，用于统计元素在结果中出现的次数。
+列表提供 `count` 方法，用于统计元素在结果中出现的次数。
 
 `test.py`
 
-```
+```python
 list = [12, 5, 32, 43, 21, 356, 5, 21]
 print(list)
 print("5 appears ", list.count(5), " times ")
 print("12 appears ", list.count(12), " times ")
 ```
 
-```
+```python
 $ python3 test.py
 [12, 5, 32, 43, 21, 356, 5, 21]
 5 appears  2  times
@@ -6541,26 +6624,24 @@ $ python3 test.py
 
 ## Python：list：反转列表元素
 
-列表提供了 reverse 方法，用于反转列表元素。
+列表提供了 `reverse` 方法，用于反转列表元素。
 
 `test.py`
 
-```
+```python
 list = [12, 5, 32, 43, 21, 356, 5, 21]
 print(list)
 list.reverse()
 print(list)
 ```
 
-```
+```python
 $ python3 test.py
 [12, 5, 32, 43, 21, 356, 5, 21]
 [21, 5, 356, 21, 43, 32, 5, 12]
 ```
 
-
- 
- ```python
+```python
 [21, 5, 356, 21, 43, 32, 5, 12]
 ```
 
@@ -6569,7 +6650,8 @@ $ python3 test.py
 `List` 提供了 `copy` 方法，用于获取列表的浅拷贝。
 
 `test.py`
-```
+
+```python
 list = [12, 5, 32, 43, 21, 356, 5, 21]
 list1 = list.copy()
 print(list)
@@ -6579,7 +6661,7 @@ print(list)
 print(list1)
 ```
 
-```
+```python
 $ python3 test.py
 [12, 5, 32, 43, 21, 356, 5, 21]
 [12, 5, 32, 43, 21, 356, 5, 21]
@@ -6592,7 +6674,8 @@ $ python3 test.py
 使用 `del` 语句，可以通过索引从列表中移除元素。
 
 `test.py`
-```
+
+```python
 list = [12, 5, 32, 43, 21, 356, 5, 21]
 print(list)
 del list[0]
@@ -6600,7 +6683,7 @@ del list[5]
 print(list)
 ```
 
-```
+```python
 $ python3 test.py
 [12, 5, 32, 43, 21, 356, 5, 21]
 [5, 32, 43, 21, 356, 21]
@@ -6609,14 +6692,15 @@ $ python3 test.py
 使用 `del` 语句，可以从列表中移除切片。
 
 `test.py`
-```
+
+```python
 list = [12, 5, 32, 43, 21, 356, 5, 21]
 print(list)
 del list[2:6]
 print(list)
 ```
 
-```
+```python
 $ python3 test.py
 [12, 5, 32, 43, 21, 356, 5, 21]
 [12, 5, 5, 21]
@@ -6625,14 +6709,15 @@ $ python3 test.py
 使用 `del` 语句，可以清空列表。`del list[:]` 会移除列表 `list` 中的所有元素。
 
 `test.py`
-```
+
+```python
 list = [12, 5, 32, 43, 21, 356, 5, 21]
 print(list)
 del list[:]
 print(list)
 ```
 
-```
+```python
 $ python3 test.py
 [12, 5, 32, 43, 21, 356, 5, 21]
 []
@@ -6641,14 +6726,15 @@ $ python3 test.py
 使用 `del` 语句，可以删除变量本身。一旦删除变量，就无法再使用它。如果在删除后尝试使用该变量，将会报错。
 
 `test.py`
-```
+
+```python
 list = [12, 5, 32, 43, 21, 356, 5, 21]
 print(list)
 del list
 list[0] = 1
 ```
 
-```
+```python
 $ python3 test.py
 [12, 5, 32, 43, 21, 356, 5, 21]
 Traceback (most recent call last):
@@ -6661,14 +6747,14 @@ TypeError: 'type' object does not support item assignment
 
 ### 使用 for 循环
 
-```
+```python
 for var in list:
     # 在此处进行处理
 ```
 
 你可以像上面这样使用 `for` 循环来遍历列表。下面的例子解释了这一点。
 
-```
+```python
 >>> countries = ['India', 'China', 'Pakisthan', 'Sri Lanka', 'Bangladesh']
 >>> for i in countries:
 ...     print(i)
@@ -6686,6 +6772,8 @@ Bangladesh
 
 `enumerate` 函数返回列表中的位置及其对应的值。
 
+
+
 ```
 >>> countries
 ['India', 'China', 'Pakisthan', 'Sri Lanka', 'Bangladesh']
@@ -6701,7 +6789,7 @@ Bangladesh
 
 ### 反向遍历序列
 
-使用 `reversed` 函数来反向遍历序列。
+使用`reversed`函数来反向遍历序列。
 
 ```
 >>> countries
@@ -6719,7 +6807,7 @@ India
 
 ### 按排序顺序遍历序列
 
-使用 `sorted` 函数来按排序顺序遍历序列。
+使用`sorted`函数来按排序顺序遍历序列。
 
 ```
 >>> for i in sorted(countries):
@@ -6734,7 +6822,7 @@ Sri Lanka
 
 ### 同时遍历多个列表
 
-使用 `zip` 函数来同时遍历多个列表。
+使用`zip`函数来同时遍历多个列表。
 
 ```
 >>> for country, capital in zip(countries, capitals):
@@ -6774,6 +6862,7 @@ a. 列表是可变的，而元组是不可变的
 b. 元组可以包含异构数据，而列表通常包含同构数据。
 
 `test.py`
+
 ```
 employee = (1, "Hari Krihsna", "Delhi", 12345.678)
 print(employee)
@@ -6795,6 +6884,7 @@ Delhi
 如上面的例子所示，元组中的元素用圆括号括起来。尽管元组是不可变的，但你可以创建包含可变对象（如列表）的元组。
 
 `test.py`
+
 ```
 employee = (1, [])
 print(employee)
@@ -6829,6 +6919,7 @@ id, firstName, lastName, salary = employee
 上面是元组解包的例子。序列解包要求等号左侧的变量数量与序列中的元素数量相同。
 
 `test.py`
+
 ```
 employee = 1, "Hari Krihsna", "Delhi", 12345.678
 id, firstName, lastName, salary = employee
@@ -6848,7 +6939,7 @@ Delhi
 
 ### 连接元组
 
-`+` 运算符用于连接元组。
+`+`运算符用于连接元组。
 
 ```
 >>> tuple1 = (1, "HI", 2, 45.65)
@@ -6864,36 +6955,42 @@ Delhi
 
 | 示例 | 说明 |
 | --- | --- |
-| `tuple[start:end]` | 返回从索引 start（包含）到 end 索引（不包含）的元组。 |
-| `tuple[:end]` | 返回从索引 0（包含）到 end 索引（不包含）的元组。 |
-| `tuple[start:]` | 返回从索引 start 到末尾的元组。 |
+| `tuple[start:end]` | 返回从索引`start`（包含）到`end`索引（不包含）的元组。 |
+| `tuple[:end]` | 返回从索引`0`（包含）到`end`索引（不包含）的元组。 |
+| `tuple[start:]` | 返回从索引`start`到末尾的元组。 |
 | `tuple[-2:]` | 返回从倒数第二个到末尾的元素。 |
 
-
- 
- ```
->>> tuple1(1, 'HI', 2, 45.65)>>> tuple1  0 :>>> tuple1:>>> tuple1 : 3 >>> tuple1  2 : 5 
+```
+>>> tuple1 = (1, 'HI', 2, 45.65)
+>>> tuple1[0:]
+>>> tuple1[:]
+>>> tuple1[:3]
+>>> tuple1[2:5]
 ```
 
 ### `'*'`: 重复元组元素
 
-`'*'` 是重复运算符，用于重复元组的元素。
+`'*'`是重复运算符，用于重复元组的元素。
 
 ```
->>> tuple1(1, 'HI', 2, 45.65)
+>>> tuple1 = (1, 'HI', 2, 45.65)
 >>>
->>> tuple 1 * 3(1, 'HI', 2, 45.65, 1, 'HI', 2, 45.65, 1, 'HI', 2, 45.65)
+>>> tuple1 * 3
+(1, 'HI', 2, 45.65, 1, 'HI', 2, 45.65, 1, 'HI', 2, 45.65)
 ```
 
 ### 删除元组元素
 
-正如我所说，元组是不可变的，因此无法从元组中删除元素。但你可以使用 `del` 语句删除整个元组。
+正如我所说，元组是不可变的，因此无法从元组中删除元素。但你可以使用`del`语句删除整个元组。
 
 ```
->>> tuple 1 = ( 1 , "HI " , 2 , 45.6 5 )
+>>> tuple1 = (1, "HI", 2, 45.65)
 >>>
->>> de l tuple1
->>> tuple1Traceback (most recent call last):File "<stdin>" , line 1 , in <module>NameErro r : name 'tuple1' is not defined
+>>> del tuple1
+>>> tuple1
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'tuple1' is not defined
 ```
 
 观察输出，抛出了异常；这是因为删除后，元组不再存在。
@@ -6904,7 +7001,7 @@ Delhi
 
 ### 如何创建集合
 
-你可以使用 `{}` 或 `set()` 函数创建集合。`set()` 创建空集合。
+你可以使用`{}`或`set()`函数创建集合。`set()`创建空集合。
 
 ```
 >>> evenNumbers={2, 4, 6, 8, 8, 4, 10}
@@ -6912,7 +7009,7 @@ Delhi
 {8, 10, 2, 4, 6}
 ```
 
-观察上面的代码片段，`evenNumbers` 是一个包含偶数的集合。观察输出，集合不包含重复元素。
+观察上面的代码片段，`evenNumbers`是一个包含偶数的集合。观察输出，集合不包含重复元素。
 
 集合支持以下操作。
 
@@ -6921,91 +7018,91 @@ Delhi
 返回集合的基数（不同元素的数量）。
 
 ```
->>> evenNumber s = { 2 , 4 , 6 , 8 , 8 , 4 , 1 0 }
+>>> evenNumbers = {2, 4, 6, 8, 8, 4, 10}
 >>> len(evenNumbers)
 5
 ```
 
 #### `x in s`：检查元素是否在集合中
 
-`'in'` 运算符用于检查元素是否在集合中，如果元素在集合中则返回 true，否则返回 false。
+`'in'`运算符用于检查元素是否在集合中，如果元素在集合中则返回`true`，否则返回`false`。
 
 ```
 >>> evenNumbers
 {8, 10, 2, 4, 6}
 >>>
->>> 10 0 i n evenNumbers
+>>> 100 in evenNumbers
 False
 >>>
->>> 2 i n evenNumbers
+>>> 2 in evenNumbers
 True
 ```
 
 #### `x not in s`：检查元素是否在集合中
 
-`'not in'` 运算符与 `'in'` 运算符相反，如果元素不在集合中则返回 true，否则返回 false。
+`'not in'`运算符与`'in'`运算符相反，如果元素不在集合中则返回`true`，否则返回`false`。
 
 ```
 >>> evenNumbers
 {8, 10, 2, 4, 6}
 >>>
->>> 1 0 no t i n evenNumbers
+>>> 10 not in evenNumbers
 False
 >>>
->>> 10 0 no t i n evenNumbers
+>>> 100 not in evenNumbers
 True
 ```
 
 #### `isdisjoint(other)`
 
-如果两个集合不相交则返回 true，否则返回 false。如果两个集合没有共同元素，则称它们为不相交。
+如果两个集合不相交则返回`true`，否则返回`false`。如果两个集合没有共同元素，则称它们为不相交。
 
 ```
 >>> evenNumbers
 {8, 10, 2, 4, 6}
 >>>
->>> evenNumber s . isdisjoint( { 1 , 3 , 5 , 7 })
+>>> evenNumbers.isdisjoint({1, 3, 5, 7})
 True
 >>>
->>> evenNumber s . isdisjoint( { 1 , 3 , 5 , 7 , 8 })
+>>> evenNumbers.isdisjoint({1, 3, 5, 7, 8})
 False
 ```
 
 #### `issubset(other)`
 
-如果此集合是 other 的子集则返回 true，否则返回 false。
+如果此集合是`other`的子集则返回`true`，否则返回`false`。
 
 ```
 >>> evenNumbers
 {8, 10, 2, 4, 6}
 >>>
->>> evenNumber s . issubset( { 2 , 4 })
+>>> evenNumbers.issubset({2, 4})
 False
 >>>
->>> evenNumber s . issubset( { 2 , 4 , 6 , 8 , 1 0 , 1 2 })
+>>> evenNumbers.issubset({2, 4, 6, 8, 10, 12})
 True
 ```
 
 #### `set <= other`
 
-如果集合中的每个元素都在 other 中则返回 true。
+如果集合中的每个元素都在`other`中则返回`true`。
 
 #### `set < other`
 
-如果集合是 other 的真子集则返回 true，即 `set >= other` 且 `set != other`。
+如果集合是`other`的真子集则返回`true`，即`set >= other`且`set != other`。
 
 ```
 >>> evenNumbers
 {8, 10, 2, 4, 6}
 >>>
->>> evenNumbers < = { 2 , 4 , 6 , 8 , 1 0 }
+>>> evenNumbers <= {2, 4, 6, 8, 10}
 True
->>> evenNumbers < = { 2 , 4 , 6 , 8 , 1 0 , 1 2 }
+>>> evenNumbers <= {2, 4, 6, 8, 10, 12}
 True
 >>>
->>> evenNumbers < { 2 , 4 , 6 , 8 , 1 0 }
+>>> evenNumbers < {2, 4, 6, 8, 10}
 False
->>> evenNumbers < { 2 , 4 , 6 , 8 , 1 0 , 1 2 }
+>>> evenNumbers < {2, 4, 6, 8, 10, 12}
 True
 ```
 
@@ -7016,9 +7113,9 @@ True
 `set | other | ...`
 
 ```
->>> evenNumber s = { 2 , 4 , 6 , 8 , 1 0 }
->>> oddNumber s = { 1 , 3 , 5 , 7 , 9 }
->>> resul t = evenNumber s | oddNumbers
+>>> evenNumbers = {2, 4, 6, 8, 10}
+>>> oddNumbers = {1, 3, 5, 7, 9}
+>>> result = evenNumbers | oddNumbers
 >>> result
 {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 ```
@@ -7030,9 +7127,9 @@ True
 `set & other & ...`
 
 ```
->>> evenNumber s = { 2 , 4 , 6 , 8 , 1 0 }
->>> powersOf 2 = { 1 , 2 , 4 , 8 , 1 6 }
->>> resul t = evenNumber s & powersOf2
+>>> evenNumbers = {2, 4, 6, 8, 10}
+>>> powersOf2 = {1, 2, 4, 8, 16}
+>>> result = evenNumbers & powersOf2
 >>> result
 {8, 2, 4}
 ```
@@ -7050,9 +7147,9 @@ True
 {8, 10, 2, 4, 6}
 >>> powersOf2
 {16, 8, 2, 4, 1}
->>> evenNumber s - powersOf2
+>>> evenNumbers - powersOf2
 {10, 6}
->>> powersOf 2 - evenNumbers
+>>> powersOf2 - evenNumbers
 {16, 1}
 ```
 
@@ -7062,30 +7159,30 @@ True
 
 `set ^ other`
 
-如果 A 和 B 是两个集合，那么 A 和 B 的对称差集是 `A^B = (A-B) union (B-A)`
+如果`A`和`B`是两个集合，那么`A`和`B`的对称差集是`A^B = (A-B) union (B-A)`
 
 ```
 >>> evenNumbers
 {8, 10, 2, 4, 6}
 >>> powersOf2
 {16, 8, 2, 4, 1}
->>> evenNumber s - powersOf2
+>>> evenNumbers - powersOf2
 {10, 6}
->>> powersOf 2 - evenNumbers
+>>> powersOf2 - evenNumbers
 {16, 1}
 >>>
->>> evenNumber s ^ powersOf2
+>>> evenNumbers ^ powersOf2
 {1, 6, 10, 16}
 ```
 
 ### 复制集合元素
 
-`'copy'` 函数返回一个新集合，包含 s 的浅拷贝。
+`'copy'`函数返回一个新集合，包含`s`的浅拷贝。
 
 ```
 >>> evenNumbers
 {8, 10, 2, 4, 6}
->>> tem p = evenNumber s . copy()
+>>> temp = evenNumbers.copy()
 >>> temp
 {8, 10, 2, 4, 6}
 ```
@@ -7106,7 +7203,7 @@ True
 >>> powersOf2
 {16, 8, 2, 4, 1}
 >>>
->>> evenNumber s . update(oddNumbers, powersOf2)
+>>> evenNumbers.update(oddNumbers, powersOf2)
 >>> evenNumbers
 {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 16}
 ```
@@ -7126,7 +7223,7 @@ True
 {9, 3, 5, 1, 7}
 >>> powersOf2
 {16, 8, 2, 4, 1}
->>> number s . intersection_update(oddNumbers, powersOf2)
+>>> numbers.intersection_update(oddNumbers, powersOf2)
 >>> numbers
 {1}
 ```
@@ -7144,7 +7241,7 @@ True
 {9, 3, 5, 1, 7}
 >>> powersOf2
 {16, 8, 2, 4, 1}
->>> oddNumber s . difference_update(powersOf2)
+>>> oddNumbers.difference_update(powersOf2)
 >>> oddNumbers
 {9, 3, 5, 7}
 ```
@@ -7162,21 +7259,21 @@ True
 {9, 3, 5, 7}
 >>> powersOf2
 {16, 8, 2, 4, 1}
->>> oddNumber s . symmetric_difference_update(powersOf2)
+>>> oddNumbers.symmetric_difference_update(powersOf2)
 >>> oddNumbers
 {1, 2, 3, 4, 5, 7, 8, 9, 16}
 ```
 
 ### 向集合添加元素
 
-`'add'` 方法用于向集合添加元素。
+`'add'`方法用于向集合添加元素。
 
 ```
 >>> temp
 {2, 3, 5, 7}
 >>>
->>> tem p . add ( 1 1 )
->>> tem p . add ( 1 3 )
+>>> temp.add(11)
+>>> temp.add(13)
 >>>
 >>> temp
 {2, 3, 5, 7, 11, 13}
@@ -7184,22 +7281,22 @@ True
 
 ### 从集合中删除元素
 
-`'remove'` 方法用于从集合中删除元素。
+`'remove'`方法用于从集合中删除元素。
 
 ```
 >>> temp
 {2, 3, 5, 7, 11, 13}
 >>>
->>> tem p . remove ( 2 )
+>>> temp.remove(2)
 >>> temp
 {3, 5, 7, 11, 13}
 >>>
->>> tem p . remove ( 1 1 )
+>>> temp.remove(11)
 >>> temp
 {3, 5, 7, 13}
 ```
 
-如果元素不在集合中，则抛出 `KeyError`。
+如果元素不在集合中，则抛出`KeyError`。
 
 ```
 >>> temp.remove(100)
@@ -7210,31 +7307,33 @@ KeyError: 100
 
 ### 删除任意元素
 
-`'pop()'` 用于删除并返回集合中的任意元素。如果集合为空，则抛出 `KeyError`。
+`'pop()'`用于删除并返回集合中的任意元素。如果集合为空，则抛出`KeyError`。
 
 ```
 >>> temp
 {5, 7, 13}
->>> tem p . pop()
+>>> temp.pop()
 5
 >>>
->>> tem p . pop()
+>>> temp.pop()
 7
->>> tem p . pop()
+>>> temp.pop()
 13
->>> tem p . pop()
-Traceback (most recent call last):File "<stdin>" , line 1 , in <module>KeyErro r : 'pop from an empty set'
+>>> temp.pop()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'pop from an empty set'
 ```
 
 ### 删除集合中的所有元素
 
-`'clear'` 方法用于删除集合中的所有元素。
+`'clear'`方法用于删除集合中的所有元素。
 
 ```
 >>> powersOf2
 {16, 8, 2, 4, 1}
 >>>
->>> powersOf 2 . clear()
+>>> powersOf2.clear()
 >>> powersOf2
 set()
 ```
@@ -7242,11 +7341,16 @@ set()
 ## Python：查找列表的交集和并集
 
 以下程序实现：
+
 a. 列表中的唯一元素
+
 b. 两个列表的交集
+
 c. 两个列表的并集。
 
 `test.py`
+
+
 
 ```python
 def unique (a):
@@ -7297,14 +7401,14 @@ $ python3 test.py
 | 2 | {"Prithi", "Nair"} |
 | 3 | {"Mohan", "Shekkappa"} |
 
-
- 
 字典通过键进行索引，键是不可变类型。你可以使用字符串、数字或任何其他不可变类型作为键。如果元组只包含字符串、数字或元组，则可以用作键。
 
 ### 使用 dict 构造函数构建字典
 
 `class dict(**kwarg)`
+
 `class dict(mapping, **kwarg)`
+
 `class dict(iterable, **kwarg)`
 
 上述构造函数用于定义字典。
@@ -7475,7 +7579,7 @@ False
 
 `fromkeys(seq[, value])`
 
-使用 seq 中的键和设置为 value 的值创建新字典。
+使用 `seq` 中的键和设置为 `value` 的值创建新字典。
 
 ```python
 >>> employees
@@ -7521,7 +7625,7 @@ dict_keys([1, 3, 4])
 
 ### pop(key[, default])
 
-如果键在字典中，pop 方法删除并返回与此键关联的值。如果键不存在，则返回默认值。如果未指定默认值，则抛出 `KeyError`。
+如果键在字典中，`pop` 方法删除并返回与此键关联的值。如果键不存在，则返回默认值。如果未指定默认值，则抛出 `KeyError`。
 
 ```python
 >>> employees
@@ -7561,7 +7665,7 @@ KeyError: 'popitem(): dictionary is empty'
 
 ### setdefault(key[, default])
 
-如果键在字典中，setdefault 方法返回与其关联的值，否则将键设置为 default 并返回 default。
+如果键在字典中，`setdefault` 方法返回与其关联的值，否则将键设置为 `default` 并返回 `default`。
 
 ```python
 >>> employees
@@ -7583,7 +7687,7 @@ KeyError: 'popitem(): dictionary is empty'
 
 `update([other])`
 
-使用 `update` 方法从 other 更新字典的键/值对，覆盖现有键。
+使用 `update` 方法从 `other` 更新字典的键/值对，覆盖现有键。
 
 ```python
 >>> emps1 = {1: {'Garimella', 'Phalgun'}, 3: {'Shekkappa', 'Mohan'}, 4: {'Ranganath', 'Thippisetty'}}
@@ -7664,6 +7768,8 @@ def div(a, b):
 
 ### 将模块的函数用作本地函数
 
+
+
 ```python
 >>> import arithmetic
 >>> sum = arithmetic.sum
@@ -7681,7 +7787,7 @@ def div(a, b):
 
 ## Python：模块中的可执行语句
 
-模块可以包含可执行语句。这些语句仅在 import 语句中首次遇到模块名称时执行。
+模块可以包含可执行语句。这些语句仅在 `import` 语句中首次遇到模块名称时执行。
 
 `arithmetic.py`
 
@@ -7713,11 +7819,11 @@ Simple api to perform arithmetic operations
 0.5
 ```
 
-观察上面的代码片段，print 语句仅在模块首次导入时执行，第二次导入时不执行。
+观察上面的代码片段，`print` 语句仅在模块首次导入时执行，第二次导入时不执行。
 
 ## Python：直接从模块导入函数
 
-通过使用 from、import 关键字，我们可以直接从模块导入函数。
+通过使用 `from`、`import` 关键字，我们可以直接从模块导入函数。
 
 `arithmetic.py`
 
@@ -7750,7 +7856,7 @@ def div(a, b):
 
 ## Python：在其他模块中导入模块
 
-模块可以使用 import 语句导入其他模块。
+模块可以使用 `import` 语句导入其他模块。
 
 `arithmetic.py`
 
@@ -7789,7 +7895,7 @@ $ python3 main.py
 
 ### 注意
 
-不必将所有 import 语句放在模块的开头。你可以在需要时导入。
+不必将所有 `import` 语句放在模块的开头。你可以在需要时导入。
 
 ## Python 命令行参数
 
@@ -7870,26 +7976,38 @@ a =  8 b =  13
 
 `open` 函数以特定模式打开文件并返回相应的文件对象。如果无法打开文件，则抛出 `OSError`。
 
+| 参数 | 说明 |
 
- 
- | 参数 | 说明 |
-| file | 要打开的文件的完整路径。 |
-| mode | 指定文件打开的模式。默认情况下文件以读取模式打开。 |
-| buffering | `0`：关闭缓冲（仅在二进制模式下允许）`1`：行缓冲（仅在文本模式下可用）`>1`：以字节为单位指定缓冲区大小。如果未指定任何值，默认缓冲行为如下：a. 二进制文件以固定大小的块进行缓冲；缓冲区大小使用启发式方法确定，尝试确定底层设备的"块大小"，否则回退到 `io.DEFAULT_BUFFER_SIZE`。b. "交互式"文本文件使用行缓冲。 |
-| encoding | 用于对文件进行编码/解码的编码类型。此值应在文本模式下使用。如果未指定编码，则使用的编码取决于平台。 |
-| errors | 指定如何处理编码和解码错误。不能在二进制模式下使用 |
-| newline | 控制通用换行模式的工作方式。一种解释文本流的方式，其中以下所有内容都被识别为行结束：Unix 行尾约定 `'\n'`、Windows 约定 `'\r\n'` 以及旧的 Macintosh 约定 `'\r'`。 |
-| closefd | 如果 `closefd` 为 `False` 且给定的是文件描述符而非文件名，则文件关闭时底层文件描述符将保持打开状态。如果给定的是文件名，`closefd` 必须为 `True`（默认值），否则会引发错误 |
+| `file` | 要打开的文件的完整路径。 |
+
+| `mode` | 指定文件打开的模式。默认情况下文件以读取模式打开。 |
+
+| `buffering` | `0`：关闭缓冲（仅在二进制模式下允许）`1`：行缓冲（仅在文本模式下可用）`>1`：以字节为单位指定缓冲区大小。如果未指定任何值，默认缓冲行为如下：a. 二进制文件以固定大小的块进行缓冲；缓冲区大小使用启发式方法确定，尝试确定底层设备的"块大小"，否则回退到 `io.DEFAULT_BUFFER_SIZE`。b. "交互式"文本文件使用行缓冲。 |
+
+| `encoding` | 用于对文件进行编码/解码的编码类型。此值应在文本模式下使用。如果未指定编码，则使用的编码取决于平台。 |
+
+| `errors` | 指定如何处理编码和解码错误。不能在二进制模式下使用 |
+
+| `newline` | 控制通用换行模式的工作方式。一种解释文本流的方式，其中以下所有内容都被识别为行结束：Unix 行尾约定 `'\n'`、Windows 约定 `'\r\n'` 以及旧的 Macintosh 约定 `'\r'`。 |
+
+| `closefd` | 如果 `closefd` 为 `False` 且给定的是文件描述符而非文件名，则文件关闭时底层文件描述符将保持打开状态。如果给定的是文件名，`closefd` 必须为 `True`（默认值），否则会引发错误 |
 
 以下是打开文件时可以使用的不同模式。
 
 | 模式 | 说明 |
+
 | `'r'` | 打开用于读取 |
+
 | `'w'` | 打开用于写入，首先截断文件 |
+
 | `'x'` | 独占创建，如果文件已存在则失败 |
+
 | `'a'` | 打开用于写入，如果文件存在则追加到末尾 |
+
 | `'b'` | 二进制模式 |
+
 | `'t'` | 文本模式（默认） |
+
 | `'+'` | 打开磁盘文件用于更新（读取和写入） |
 
 例如，`data.txt` 包含以下数据。
@@ -7914,12 +8032,14 @@ Fourth line
 以下方法用于读取文件内容。
 
 - `read`
+
 - `readline`
+
 - `readlines`
 
 #### `read(size)`
 
-读取 `size` 字节的数据并将其作为字符串或字节对象返回。如果 size 为负数（或）省略，则返回所有文件内容。如果已到达文件末尾，`f.read()` 将返回空字符串（`''`）。
+读取 `size` 字节的数据并将其作为字符串或字节对象返回。如果 `size` 为负数（或）省略，则返回所有文件内容。如果已到达文件末尾，`f.read()` 将返回空字符串（`''`）。
 
 ```
 >>> f = open("/Users/hariJJTam_Delhi/data.txt")
@@ -7955,7 +8075,7 @@ Fourth line
 ['First line\n', 'Second line\n', 'Third line\n', 'Fourth line\n']
 ```
 
-#### 使用 for 循环读取文件
+#### 使用 `for` 循环读取文件
 
 要从文件中读取行，可以对文件对象进行循环。
 
@@ -7973,7 +8093,7 @@ Third line
 Fourth line
 ```
 
-如您观察到的输出，每行之后都打印了换行。您可以通过向 print 方法传递 `end` 参数来消除这一点。
+如您观察到的输出，每行之后都打印了换行。您可以通过向 `print` 方法传递 `end` 参数来消除这一点。
 
 ```
 >>> f = open("/Users/hariJJTam_Delhi/data.txt")
@@ -7991,6 +8111,7 @@ Fourth line
 Python 提供以下方法向文件写入数据。
 
 - `write()`：用于向文件写入固定序列的字符。返回写入文件的字符数。
+
 - `writelines()`：`writelines` 可以写入字符串列表。
 
 ```
@@ -8121,15 +8242,20 @@ Total Employees 3
 以下是内置类属性。
 
 | 属性 | 说明 |
+
 | `__dict__` | 包含类命名空间的字典。 |
+
 | `__doc__` | 指向类的文档字符串 |
+
 | `__name__` | 类名 |
+
 | `__module__` | 定义该类的模块名 |
+
 | `__bases__` | 表示该类基类的元组 |
 
 
- 
- ```python
+
+```python
 class Employee:
     """ Blue print for all employees """
     noOfEmployees = 0   # Class level variable
@@ -8222,11 +8348,9 @@ public class Employee {
 
 在 Python 中，你必须编写一个构造函数来处理所有情况，使用默认参数、类型检查或能力测试。
 
-例如，使用 `None` 重载 `__init__`
+例如，使用 `None` 重载 `__init__`：
 
-
- 
- ```
+```python
 class Employee :
     """ Blue print for all employees """
     noOfEmployees= 0   # Class level variable
@@ -8273,7 +8397,7 @@ Inside Employee constructor
 
 ## 使用默认参数重载 `__init__`
 
-```
+```python
 class Employee :
     """ Blue print for all employees """
     noOfEmployees= 0   # Class level variable
@@ -8306,7 +8430,7 @@ $ python Employee.py
 
 类变量与类相关联，对该类的所有实例（对象）都可用；而实例变量则是对象独有的，用于唯一标识该对象。
 
-```
+```python
 class Employee :
     """ Blue print for all employees """
     # Class level variables
@@ -8359,7 +8483,7 @@ class DerivedClassName (BaseClassName1, BaseClassName2 ... BaseClassNameN):
     < statement- N>
 ```
 
-```
+```python
 class Parent :
     def printLastName (self ):
         print ("Delhi" )
@@ -8391,7 +8515,7 @@ Country : India
 
 你可以在子类中重写父类的属性和方法。例如，下面的应用程序重写了 `Parent` 类的 `printPermAddress` 方法。
 
-```
+```python
 class Parent :
     def printLastName (self ):
         print ("Delhi" )
@@ -8426,7 +8550,7 @@ Country : India
 
 一个类可以从多个类继承属性和方法。
 
-```
+```python
 class A :
     def printA (self ):
         print ("I am in A" )
@@ -8459,6 +8583,8 @@ I am in D
 ```
 
 ## Python：异常
+
+
 
 异常是打断正常执行流程的事件。即使程序中的语句在语法上是正确的，它们也可能导致错误。
 
@@ -8505,13 +8631,13 @@ Enter input 10
 
 ### try 和 except 块如何工作？
 
-首先执行 try 块中的语句。如果没有异常发生，则跳过 except 子句，try 语句的执行结束。如果在 try 块的执行过程中发生任何异常，则跳过 try 子句的其余部分。
+首先执行 `try` 块中的语句。如果没有异常发生，则跳过 `except` 子句，`try` 语句的执行结束。如果在 `try` 块的执行过程中发生任何异常，则跳过 `try` 子句的其余部分。
 
-try 块后面可以跟多个 except 子句，如果 try 中抛出的异常与任何 except 子句后的异常匹配，则执行相应的 except 子句。
+`try` 块后面可以跟多个 `except` 子句，如果 `try` 中抛出的异常与任何 `except` 子句后的异常匹配，则执行相应的 `except` 子句。
 
-如果发生的异常与 except 子句中命名的异常不匹配，则将其传递给外部的 try 语句；如果找不到处理程序，则为未处理的异常，通过抛出异常消息停止执行。
+如果发生的异常与 `except` 子句中命名的异常不匹配，则将其传递给外部的 `try` 语句；如果找不到处理程序，则为未处理的异常，通过抛出异常消息停止执行。
 
-try 块后面可以跟多个 except 子句
+`try` 块后面可以跟多个 `except` 子句
 
 ```
 while True :
@@ -8541,7 +8667,7 @@ Enter dividend 2
 
 ### 在单个 except 子句中处理多个异常
 
-except 子句可以捕获多个异常。例如 `except (ValueError, ZeroDivisionError)` 可以同时处理 `ValueError` 和 `ZeroDivisionError`。
+`except` 子句可以捕获多个异常。例如 `except (ValueError, ZeroDivisionError)` 可以同时处理 `ValueError` 和 `ZeroDivisionError`。
 
 ```
 while True :
@@ -8566,7 +8692,7 @@ Enter dividend 4
 0.5
 ```
 
-最后一个 except 子句可以省略异常名称。它用作全局异常处理程序。
+最后一个 `except` 子句可以省略异常名称。它用作全局异常处理程序。
 
 ```
 while True :
@@ -8590,7 +8716,7 @@ Global handler list index out of range
 
 ### try…except…else 子句
 
-`try…except` 语句可以有可选的 else 子句，它跟在 except 子句之后。如果 try 块没有抛出任何异常，else 子句将会被执行。
+`try…except` 语句可以有可选的 `else` 子句，它跟在 `except` 子句之后。如果 `try` 块没有抛出任何异常，`else` 子句将会被执行。
 
 ```
 while True :
@@ -8647,7 +8773,7 @@ Enter dividend 4
 Program executed successfully
 ```
 
-except 子句可以在异常名称后指定一个变量。该变量绑定到一个异常实例，参数存储在 `instance.args` 中。
+`except` 子句可以在异常名称后指定一个变量。该变量绑定到一个异常实例，参数存储在 `instance.args` 中。
 
 ```
 while True :
@@ -8710,7 +8836,7 @@ x/y =  0.5
 raise_stmt ::=  "raise" [expression ["from" expression]]
 ```
 
-如果没有表达式存在，raise 会重新抛出当前作用域中活动的最后一个异常。如果当前作用域中没有活动的异常，则会抛出 `RuntimeError` 异常，表明这是一个错误。
+如果没有表达式存在，`raise` 会重新抛出当前作用域中活动的最后一个异常。如果当前作用域中没有活动的异常，则会抛出 `RuntimeError` 异常，表明这是一个错误。
 
 ```
 while True :
@@ -8735,7 +8861,7 @@ Enter dividend 43
 0.5348837209302325
 ```
 
-`raise Exception("divisor shouldn't be zero")` 当 divisor 为 0 时，`raise` 语句抛出异常。
+`raise Exception("divisor shouldn't be zero")` 当 `divisor` 为 0 时，`raise` 语句抛出异常。
 
 ## Python：用户自定义异常
 
@@ -8763,7 +8889,7 @@ Traceback (most recent call last):
 __main__.PasswordExceptio n : 'Minimum password lenght should be 8 characters'
 ```
 
-在这个例子中，默认的 `__init__()` 被重写了。新行为只是创建了 value 属性。这替代了创建 args 属性的默认行为。
+在这个例子中，默认的 `__init__()` 被重写了。新行为只是创建了 `value` 属性。这替代了创建 `args` 属性的默认行为。
 
 ## Python global 关键字
 
@@ -8818,7 +8944,7 @@ Module name :  arithmetic
 Module name :  arithmetic
 ```
 
-观察输出，模块名称打印了两次。模块可以包含可执行语句。这些语句只在模块名称首次在 import 语句中遇到时执行。因此 `arithmetic.py` 中的可执行语句也会被执行。
+观察输出，模块名称打印了两次。模块可以包含可执行语句。这些语句只在模块名称首次在 `import` 语句中遇到时执行。因此 `arithmetic.py` 中的可执行语句也会被执行。
 
 像下面这样更新 `arithmetic.py`，然后重新运行 `test.py`。
 
@@ -8859,26 +8985,28 @@ Module name :  arithmetic
 
 ### 使用 if 语句检查类型
 
-```
-dat a = { 1 : "hari " , 2 : "JJTam " }
 
-#Approach 1
-if (data. __class__. __name__ == 'dict' ):
-    print ("data is of type dictionary" )
-else :
-    print ("data is not dictionary type" )
 
-#Approach 2
-if (type (data). __name__ == 'dict' ):
-    print ("data is of type dictionary" )
-else :
-    print ("data is not dictionary type" )
+```python
+data = {1: "hari", 2: "JJTam"}
 
-#Approach 3 indirectly
-if type (data)== type (dict ()):
-    print ("data is of type dictionary" )
-else :
-    print ("data is not dictionary type" )
+# Approach 1
+if data.__class__.__name__ == 'dict':
+    print("data is of type dictionary")
+else:
+    print("data is not dictionary type")
+
+# Approach 2
+if type(data).__name__ == 'dict':
+    print("data is of type dictionary")
+else:
+    print("data is not dictionary type")
+
+# Approach 3 indirectly
+if type(data) == type(dict()):
+    print("data is of type dictionary")
+else:
+    print("data is not dictionary type")
 ```
 
 运行上面的程序，你会得到以下输出。
@@ -8891,18 +9019,18 @@ data is of type dictionary
 
 ### 检查对象是否是类的实例
 
-`isinstance(object, classinfo)` 方法用于检查对象是否是给定类的实例。如果 object 参数是 classinfo 参数的实例，或是其子类的实例，则返回 true，否则返回 false。
+`isinstance(object, classinfo)` 方法用于检查对象是否是给定类的实例。如果 `object` 参数是 `classinfo` 参数的实例，或是其子类的实例，则返回 `true`，否则返回 `false`。
 
-```
-dat a = { 1 : "hari " , 2 : "JJTam " }
+```python
+data = {1: "hari", 2: "JJTam"}
 
-class Employee :
-    def __init__ (self , id , firstName, lastName):
-        self . id = id
-        self . firstName = firstName
-        self . lastName = lastName
+class Employee:
+    def __init__(self, id, firstName, lastName):
+        self.id = id
+        self.firstName = firstName
+        self.lastName = lastName
 
-em p = Employee ( 1 , "Hari " , "JJTam " )
+emp = Employee(1, "Hari", "JJTam")
 print(isinstance(emp, Employee))
 print(isinstance(emp, dict))
 print(isinstance(data, dict))
@@ -8918,32 +9046,30 @@ True
 
 ## Python：生成随机数
 
-Python 提供了 random 模块来生成随机数，通过使用 `random.seed` 方法可以初始化随机数生成器。
+Python 提供了 `random` 模块来生成随机数，通过使用 `random.seed` 方法可以初始化随机数生成器。
 
 `random.seed(a=None, version=2)`
 
-用于初始化随机数生成器。如果不为 `a` 指定值，则默认使用系统时间。`a` 可以是 int 或 string。
+用于初始化随机数生成器。如果不为 `a` 指定值，则默认使用系统时间。`a` 可以是 `int` 或 `string`。
 
-如果 `version=1`，则使用 `a` 的哈希值进行初始化；如果 `version=2`，则 str、bytes 或 bytearray 对象会被转换为 int，并使用其所有位。
+如果 `version=1`，则使用 `a` 的哈希值进行初始化；如果 `version=2`，则 `str`、`bytes` 或 `bytearray` 对象会被转换为 `int`，并使用其所有位。
 
 以下方法用于在 Python 中生成随机数和随机打乱列表。
 
-
- 
- | 方法 | 说明 |
+| 方法 | 说明 |
 | --- | --- |
-| `random.getrandbits(k)` | 返回一个具有 k 个随机比特位的整数。 |
-| `random.randrange(a, b)` | 返回区间 [a, b) 内的一个整数。 |
-| `random.randint(a, b)` | 返回一个随机整数 N，满足 a <= N <= b。它等价于 `random.randrange(a, b+1)` |
-| `random.choice(seq)` | 从非空序列 seq 中返回一个随机元素。如果 seq 为空，则引发 IndexError。 |
-| `random.shuffle(list)` | 就地打乱一个列表，即对其进行随机排列 |
-| `random.random()` | 返回区间 [0.0, 1.0) 内的下一个随机浮点数。 |
-| `random.uniform(a, b)` | 返回一个随机浮点数 N，当 a <= b 时满足 a <= N <= b，当 b < a 时满足 b <= N <= a。 |
-| `random.triangular(low, high, mode)` | 返回一个随机浮点数 N，满足 low <= N <= high，且在该区间内具有指定的众数。low 和 high 的默认值分别为 0 和 1。mode 参数默认为区间的中点，从而得到对称分布。 |
+| `random.getrandbits(k)` | 返回一个具有 `k` 个随机比特位的整数。 |
+| `random.randrange(a, b)` | 返回区间 `[a, b)` 内的一个整数。 |
+| `random.randint(a, b)` | 返回一个随机整数 `N`，满足 `a <= N <= b`。它等价于 `random.randrange(a, b+1)`。 |
+| `random.choice(seq)` | 从非空序列 `seq` 中返回一个随机元素。如果 `seq` 为空，则引发 `IndexError`。 |
+| `random.shuffle(list)` | 就地打乱一个列表，即对其进行随机排列。 |
+| `random.random()` | 返回区间 `[0.0, 1.0)` 内的下一个随机浮点数。 |
+| `random.uniform(a, b)` | 返回一个随机浮点数 `N`，当 `a <= b` 时满足 `a <= N <= b`，当 `b < a` 时满足 `b <= N <= a`。 |
+| `random.triangular(low, high, mode)` | 返回一个随机浮点数 `N`，满足 `low <= N <= high`，且在该区间内具有指定的众数。`low` 和 `high` 的默认值分别为 `0` 和 `1`。`mode` 参数默认为区间的中点，从而得到对称分布。 |
 
-`os.urandom(n)`: 返回一个长度为 n 的随机字节串，适用于加密用途。
+`os.urandom(n)`：返回一个长度为 `n` 的随机字节串，适用于加密用途。
 
-```
+```python
 >>> import random
 >>> 
 >>> random.getrandbits(20)

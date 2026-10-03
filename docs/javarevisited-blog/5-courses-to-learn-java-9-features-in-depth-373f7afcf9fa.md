@@ -1,3 +1,4 @@
+
 # 深入学习 Java 9 特性的 5 大在线课程
 
 > 原文：<https://medium.com/javarevisited/5-courses-to-learn-java-9-features-in-depth-373f7afcf9fa?source=collection_archive---------0----------------------->
@@ -73,18 +74,29 @@ Packt publishing ( [Packt](https://medium.com/u/8ef58ed680e6?source=post_page---
 永远不会太晚，今天可能是掌握 JDK 9 特性的最佳时机，用 Java 的最新和最棒的特性来更新自己。
 
 其他**免费 Java 编程资源**你可能喜欢
+
 [面向 Java 开发者的 5 门免费 Spring 框架课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
+
 [深入学习 Web 开发的 5 门课程](https://javarevisited.blogspot.com/2018/02/top-5-online-courses-to-learn-web-development.html)
+
 [学习大数据和 Apache Spark 的 5 门课程](http://javarevisited.blogspot.com/2017/12/top-5-courses-to-learn-big-data-and.html)
+
 [面向 Web 开发者的 10 门 JavaScript 教程和课程](https://javarevisited.blogspot.com/2018/06/top-10-courses-to-learn-javascript-in.html)
+
 [深入学习 Spring Boot 的 5 门课程](https://javarevisited.blogspot.com/2018/05/top-5-courses-to-learn-spring-boot-in.html)
+
 [5 门免费数据](https://javarevisited.blogspot.com/2018/01/top-5-free-data-structure-and-algorithm-courses-java--c-programmers.html) [面向程序员和开发人员的 5 门免费 Linux 课程](http://www.java67.com/2018/02/5-free-linux-unix-courses-for-programmers-learn-online.html)
+
 [学习 React JS 框架的 5 门免费课程](http://www.java67.com/2018/02/5-free-react-courses-for-web-developers.html)
+
 [学习 Java 编程最好的方法是什么？](/javarevisited/3-ways-to-learn-java-and-become-a-software-developer-in-2023-3d885a58cd3c)
+
 [如何深入学习 Spring 框架和 Spring Boot](/javarevisited/how-to-learn-spring-framework-spring-mvc-spring-boot-and-spring-security-best-resources-202e7f6ab3c8?source=user_profile---------11----------------------------)
 
 感谢您阅读本文。如果你喜欢这些 Java 9 课程，请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
 **附言**。—如果你是一个初学者，刚开始学 Java，那么 [**完整的 Java 大师班**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F) ，深入学习 Java 最好的、最新的在线课程之一。
 
-<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F> 
+
+
+<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F>

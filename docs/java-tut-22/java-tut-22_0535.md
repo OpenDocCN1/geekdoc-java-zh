@@ -1,3 +1,4 @@
+
 # 并行性
 
 > 原文：[`docs.oracle.com/javase/tutorial/collections/streams/parallelism.html`](https://docs.oracle.com/javase/tutorial/collections/streams/parallelism.html)
@@ -11,17 +12,11 @@
 本节涵盖以下主题：
 
 +   并行执行流
-
 +   并发归约
-
 +   顺序
-
 +   副作用
-
     +   懒惰性
-
     +   干扰
-
     +   有状态的 Lambda 表达式
 
 你可以在示例`ParallelismExamples`中找到本节中描述的代码摘录。
@@ -66,9 +61,7 @@ ConcurrentMap<Person.Sex, List<Person>> byGender =
 这被称为*并发减少*。如果包含`collect`操作的特定管道满足以下所有条件，则 Java 运行时执行并发减少：
 
 +   流是并行的。
-
 +   `collect`操作的参数，收集器，具有特征[`Collector.Characteristics.CONCURRENT`](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.Characteristics.html#CONCURRENT)。要确定收集器的特征，请调用[`Collector.characteristics`](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.Characteristics.html)方法。
-
 +   流要么是无序的，要么收集器具有特征[`Collector.Characteristics.UNORDERED`](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.Characteristics.html#UNORDERED)。要确保流是无序的，请调用[`BaseStream.unordered`](https://docs.oracle.com/javase/8/docs/api/java/util/stream/BaseStream.html#unordered--)操作。
 
 **注意**：此示例返回一个[`ConcurrentMap`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentMap.html)的实例，而不是`Map`，并调用[`groupingByConcurrent`](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html#groupingByConcurrent-java.util.function.Function-)操作，而不是`groupingBy`。（有关`ConcurrentMap`的更多信息，请参见并发集合部分。）与操作`groupingByConcurrent`不同，操作`groupingBy`在并行流中表现不佳。（这是因为它通过键合并两个映射，这在计算上是昂贵的。）同样，操作[`Collectors.toConcurrentMap`](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html#toConcurrentMap-java.util.function.Function-java.util.function.Function-)在并行流中的性能优于操作[`Collectors.toMap`](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html#toMap-java.util.function.Function-java.util.function.Function-)。
@@ -134,11 +127,8 @@ With forEachOrdered:
 该示例执行以下操作：
 
 +   第一个流水线按照它们添加到列表中的顺序打印`listOfIntegers`列表的元素。
-
 +   第二个流水线在使用[`Collections.sort`](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#sort-java.util.List-)方法对`listOfIntegers`进行排序后打印元素。
-
 +   第三和第四个流水线以一种看似随机的顺序打印列表的元素。请记住，流操作在处理流的元素时使用内部迭代。因此，当您并行执行流时，除非流操作另有规定，否则 Java 编译器和运行时会确定处理流元素的顺序，以最大化并行计算的好处。
-
 +   第五个流水线使用[`forEachOrdered`](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html#forEachOrdered-java.util.function.Consumer-)方法，该方法按照其来源指定的顺序处理流的元素，无论您是串行还是并行执行流。请注意，如果您在并行流中使用类似`forEachOrdered`的操作，可能会丧失并行性的好处。
 
 ## 副作用
@@ -183,6 +173,8 @@ try {
 ### 有状态的 Lambda 表达式
 
 避免在流操作中将*有状态的 lambda 表达式*用作参数。有状态的 lambda 表达式是指其结果取决于在管道执行过程中可能发生变化的任何状态。以下示例使用`map`中间操作将`List` `listOfIntegers` 中的元素添加到新的`List`实例中。它分别使用串行流和并行流执行两次：
+
+
 
 ```java
 List<Integer> serialStorage = new ArrayList<>();

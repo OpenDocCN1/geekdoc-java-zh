@@ -1,24 +1,25 @@
+
 # Struts 2 日期标记示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts2/struts-2-date-tag-example/>
 
-Download It – [Struts2-Date-Tag-Example.zip](http://web.archive.org/web/20190304032514/http://www.mkyong.com/wp-content/uploads/2010/07/Struts2-Date-Tag-Example.zip)
+下载：[Struts2-Date-Tag-Example.zip](http://web.archive.org/web/20190304032514/http://www.mkyong.com/wp-content/uploads/2010/07/Struts2-Date-Tag-Example.zip)
 
-Struts 2 " **date** 标签用于以两种方式格式化日期对象:
+Struts 2 的`date`标签用于以两种方式格式化日期对象：
 
-1.  自定义日期格式(如“日/月/年”)。
-2.  “nice”属性将日期格式化为易于阅读的符号，如“此日期是 162 天前”。
+1. 自定义日期格式（如“日/月/年”）。
+2. `nice`属性将日期格式化为易于阅读的符号，如“此日期是 162 天前”。
 
-在本教程中，它展示了使用 Struts 2 " **date** "标记将日期对象格式化为"**自定义日期格式**"和"**易读符号**"。
+本教程展示了使用 Struts 2 的`date`标记将日期对象格式化为“自定义日期格式”和“易读符号”。
 
-## 1.行动
+## 1. 动作类
 
-转发请求的操作类，并用预定义的日期初始化日期对象。
+转发请求的动作类，并用预定义的日期初始化日期对象。
 
-**date tagging . Java**
+`DateTagAction.java`
 
 ```java
- package com.mkyong.common.action;
+package com.mkyong.common.action;
 
 import java.text.DateFormat;
 import java.util.Calendar;
@@ -51,22 +52,22 @@ public class DateTagAction extends ActionSupport{
 		this.customDate = customDate;
 	}
 
-} 
+}
 ```
 
- ## 2.日期标签示例
+## 2. 日期标签示例
 
-一个 JSP 页面，展示了如何使用“ **date** 标记来格式化日期对象:
+一个 JSP 页面，展示了如何使用`date`标记来格式化日期对象：
 
-1.  默认日期格式。
-2.  自定义日期格式。
-3.  易读的符号。
+1. 默认日期格式。
+2. 自定义日期格式。
+3. 易读的符号。
 
-**date.jsp**
+`date.jsp`
 
 ```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
- <html>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<html>
 <head>
 </head>
 
@@ -93,15 +94,15 @@ In Date tag, set the nice attribute to "true"
 </ol>
 
 </body>
-</html> 
+</html>
 ```
 
- ## 3.struts.xml
+## 3. `struts.xml`
 
 链接一下~
 
 ```java
- <?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
@@ -116,12 +117,12 @@ In Date tag, set the nice attribute to "true"
 		</action>
 
 	</package>
-</struts> 
+</struts>
 ```
 
-## 4.演示
+## 4. 演示
 
-*http://localhost:8080/struts 2 example/datetagaction . action*
+`http://localhost:8080/struts2example/dateTagAction.action`
 
 **输出**
 
@@ -129,13 +130,6 @@ In Date tag, set the nice attribute to "true"
 
 ## 参考
 
-1.  [Struts 2 日期标签文档](http://web.archive.org/web/20190304032514/http://struts.apache.org/2.0.14/docs/date.html)
+1. [Struts 2 日期标签文档](http://web.archive.org/web/20190304032514/http://struts.apache.org/2.0.14/docs/date.html)
 
 [date](http://web.archive.org/web/20190304032514/http://www.mkyong.com/tag/date/) [struts2](http://web.archive.org/web/20190304032514/http://www.mkyong.com/tag/struts2/)
-
-
-
-
-
-
-

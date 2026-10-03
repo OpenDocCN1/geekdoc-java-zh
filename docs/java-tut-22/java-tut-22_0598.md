@@ -1,3 +1,4 @@
+
 # 自定义格式
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html`](https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html)
@@ -16,7 +17,6 @@
 DecimalFormat myFormatter = new DecimalFormat(pattern);
 String output = myFormatter.format(value);
 System.out.println(value + " " + pattern + " " + output);
-
 ```
 
 前面代码的输出描述在以下表中。`value`是要格式化的数字，一个`double`，`pattern`是指定格式属性的`String`，`output`是一个`String`，表示格式化后的数字。
@@ -41,7 +41,6 @@ DecimalFormat df = (DecimalFormat)nf;
 df.applyPattern(pattern);
 String output = df.format(value);
 System.out.println(pattern + " " + output + " " + loc.toString());
-
 ```
 
 运行上一个代码示例会产生以下输出。格式化的数字，位于第二列，随`Locale`而变化：
@@ -50,14 +49,13 @@ System.out.println(pattern + " " + output + " " + loc.toString());
 ###,###.###      123,456.789     en_US
 ###,###.###      123.456,789     de_DE
 ###,###.###      123 456,789     fr_FR
-
 ```
 
-到目前为止，这里讨论的格式化模式遵循美国英语的惯例。例如，在模式###,###.##中，逗号是千位分隔符，句点代表小数点。这种惯例是可以接受的，前提是您的最终用户不会接触到它。然而，一些应用程序，如电子表格和报表生成器，允许最终用户定义自己的格式化模式。对于这些应用程序，最终用户指定的格式化模式应使用本地化符号。在这些情况下，您需要在`DecimalFormat`对象上调用`applyLocalizedPattern`方法。
+到目前为止，这里讨论的格式化模式遵循美国英语的惯例。例如，在模式`###,###.##`中，逗号是千位分隔符，句点代表小数点。这种惯例是可以接受的，前提是您的最终用户不会接触到它。然而，一些应用程序，如电子表格和报表生成器，允许最终用户定义自己的格式化模式。对于这些应用程序，最终用户指定的格式化模式应使用本地化符号。在这些情况下，您需要在`DecimalFormat`对象上调用`applyLocalizedPattern`方法。
 
 ## 更改格式化符号
 
-您可以使用[DecimalFormatSymbols](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormatSymbols.html)类来更改`format`方法生成的格式化数字中出现的符号。这些符号包括小数分隔符、分组分隔符、减号和百分号等。
+您可以使用[`DecimalFormatSymbols`](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormatSymbols.html)类来更改`format`方法生成的格式化数字中出现的符号。这些符号包括小数分隔符、分组分隔符、减号和百分号等。
 
 下一个示例演示了`DecimalFormatSymbols`类，通过对数字应用奇怪的格式来实现。这种不寻常的格式是通过调用`setDecimalSeparator`、`setGroupingSeparator`和`setGroupingSize`方法得到的。
 
@@ -72,14 +70,12 @@ weirdFormatter.setGroupingSize(4);
 
 String bizarre = weirdFormatter.format(12345.678);
 System.out.println(bizarre);
-
 ```
 
 运行时，此示例会以奇怪的格式打印数字：
 
 ```java
 1²³⁴⁵|678
-
 ```
 
 ## 数字格式模式语法
@@ -93,7 +89,6 @@ prefix     := '\\u0000'..'\\uFFFD' - specialCharacters
 suffix     := '\\u0000'..'\\uFFFD' - specialCharacters
 integer    := '#'* '0'* '0'
 fraction   := '0'* '#'*
-
 ```
 
 在前面的图表中使用的符号在以下表格中有解释：

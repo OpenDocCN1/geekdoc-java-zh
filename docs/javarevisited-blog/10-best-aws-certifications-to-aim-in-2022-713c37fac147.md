@@ -1,3 +1,4 @@
+
 # 2023 年 10 项最佳 AWS 认证，适用于初学者和有经验者
 
 > 原文：<https://medium.com/javarevisited/10-best-aws-certifications-to-aim-in-2022-713c37fac147?source=collection_archive---------0----------------------->
@@ -32,7 +33,7 @@ image_credit — Whizlabs
 
 如果您的组织正在使用 AWS，那么申请该认证是明智之举，即使您的组织没有使用 AWS，但您希望从 AWS 开始，那么 Cloud Practitioner 应该是第一个以 2023 年为目标的认证。
 
-您需要参加并通过 *AWS 认证云从业者*考试(CLF-C01)才能获得该认证。考试的特点是多项选择和多项选择问题的结合
+您需要参加并通过 `AWS 认证云从业者`考试(`CLF-C01`)才能获得该认证。考试的特点是多项选择和多项选择问题的结合
 
 如果你需要资源，我强烈推荐这个 [**终极 AWS 认证云从业者**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faws-certified-cloud-practitioner-new%2F) 可以帮助你的旅程。
 
@@ -54,7 +55,7 @@ image_credit — Whizlabs
 
 这种证书对于想要执行和定义解决方案架构师(如部署 web 应用程序和保护它们)的人来说是很好的。简而言之，高级开发人员和解决方案架构师的最佳云认证。
 
-要获得此*认证*，您需要参加并通过 *AWS 认证解决方案架构师* — *助理考试* (SAA-C02)，该考试不仅需要回答问题，还需要进行一些实验室活动。
+要获得此`认证`，您需要参加并通过 `AWS 认证解决方案架构师` — `助理考试` (`SAA-C02`)，该考试不仅需要回答问题，还需要进行一些实验室活动。
 
 该考试也非常注重场景，需要对不同的 AWS 服务有深入的理解才能正确回答。这就是你需要努力准备成为 AWS 认证解决方案架构师的原因。
 
@@ -64,7 +65,7 @@ image_credit — Whizlabs
 
 ## 4.AWS 认证系统运营管理员—助理(系统管理员最佳云证书)
 
-*AWS 认证系统管理员* — *助理*考试验证候选人是否有经验和技能做出贡献并“立即进入角色”。
+`AWS 认证系统管理员` — `助理`考试验证候选人是否有经验和技能做出贡献并“立即进入角色”。
 
 这是面向 Linux 管理员、系统管理员和支持专业人员的最佳 AWS 认证之一，在准备该认证的过程中，您将获得广泛的知识和技能，包括在 AWS 上部署、管理和操作可扩展、高可用性和容错的系统。
 
@@ -76,7 +77,7 @@ image_credit — Whizlabs
 
 ## 5.AWS 认证数据分析—专业(数据分析师最佳云证书)
 
-*AWS 认证数据分析* — *专业*考试验证具备构建、部署和调优*数据*模型所需的深入技能的个人，要获得此*认证*，您需要参加并通过 *AWS 认证数据分析* — *专业*考试(DAS-C01)。
+`AWS 认证数据分析` — `专业`考试验证具备构建、部署和调优`数据`模型所需的深入技能的个人，要获得此`认证`，您需要参加并通过 `AWS 认证数据分析` — `专业`考试(`DAS-C01`)。
 
 对于数据科学家来说，这是最好的 AWS 认证之一，完全值得，因为你将对数据科学需求层次的基础层有一个坚实的理解。
 
@@ -88,7 +89,7 @@ image_credit — Whizlabs
 
 ## 6.AWS 认证高级网络—专业(网络专家最佳云证书)
 
-*AWS 认证高级网络* — *专业*面向具有五年实践经验的执行复杂*网络*任务的个人。您需要通过**AWS 认证高级网络专业(ANS-C00)** 考试，才能成为 AWS 认证网络工程师。
+`AWS 认证高级网络` — `专业`面向具有五年实践经验的执行复杂`网络`任务的个人。您需要通过 `AWS 认证高级网络专业`(`ANS-C00`)考试，才能成为 AWS 认证网络工程师。
 
 对于参与设计、部署和管理 AWS 云和混合网络解决方案的网络架构师、网络工程师和 DevOps 工程师来说，这是最好的 AWS 认证之一。
 
@@ -100,9 +101,9 @@ udemy 上的一门名为 [**AWS 认证高级网络专业**](https://click.linksy
 
 ## 7.AWS 认证安全—专业(安全专家最佳云证书)
 
-*AWS 认证安全* — *专业*考试验证在 *AWS 上保护和强化工作负载和架构的技术技能和经验。*
+`AWS 认证安全` — `专业`考试验证在 `AWS 上保护和强化工作负载和架构的技术技能和经验。`
 
-要获得这个*认证*，你需要参加并通过 *AWS 认证安全* — *专业*考试(SCS-C01)。该认证面向在 AWS 工作负载方面至少有两年经验，并且希望学习安全性(如数据加密和保护您的 AWS 帐户内的 web 应用程序)的人员。
+要获得这个`认证`，你需要参加并通过 `AWS 认证安全` — `专业`考试(`SCS-C01`)。该认证面向在 AWS 工作负载方面至少有两年经验，并且希望学习安全性(如数据加密和保护您的 AWS 帐户内的 web 应用程序)的人员。
 
 对于安全专业人员，尤其是那些参与云安全的人员来说，这是最好的 AWS 认证之一，如果您想获得该认证并需要资源，那么您应该查看 udemy 上名为 [**AWS 认证高级网络-专业**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faws-certified-security-specialty%2F) 的高级课程，帮助您学习这些技能。
 
@@ -110,7 +111,7 @@ udemy 上的一门名为 [**AWS 认证高级网络专业**](https://click.linksy
 
 ## 8.AWS 认证 DevOps 工程师-专业(DevOps 工程师最佳云证书)
 
-*AWS 认证开发运维工程师* —专业考试验证在供应、操作和管理分布式应用系统方面的技术专长，要获得该认证，您需要参加并通过 *AWS 认证开发运维工程师* —专业考试(DOP-C01)。
+`AWS 认证开发运维工程师` —专业考试验证在供应、操作和管理分布式应用系统方面的技术专长，要获得该认证，您需要参加并通过 `AWS 认证开发运维工程师` —专业考试(`DOP-C01`)。
 
 这是一个 AWS 专业证书，面向使用 AWS 服务至少两年的人，您将学习设计和维护自动化工具，以及监控 AWS 系统的指标，自动化安全控制等。
 
@@ -122,9 +123,9 @@ udemy 上的一门名为 [**AWS 认证高级网络专业**](https://click.linksy
 
 专业认证建议您至少拥有五年的数据库技术工作经验和两年的 AWS 服务经验，并且您将学习如何在 AWS 中为您的 web 应用程序设计和维护数据库。
 
-这是数据库管理员最好的 AWS 认证之一。 *AWS 认证数据库* — *专业*考试验证推荐、设计和维护最佳 *AWS 数据库*解决方案的专业知识。
+这是数据库管理员最好的 AWS 认证之一。 `AWS 认证数据库` — `专业`考试验证推荐、设计和维护最佳 `AWS 数据库`解决方案的专业知识。
 
-要获得这个*认证*，你需要参加并通过 *AWS 认证数据库* — *专业*考试(DBS-C01)。如果你想参加这次考试，并且需要准备资源，那么你也可以参加名为 [**终极 AWS 认证数据库专业**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faws-certified-database-specialty-dbs%2F) 的课程，这是开始你的旅程的一个很好的选择。
+要获得这个`认证`，你需要参加并通过 `AWS 认证数据库` — `专业`考试(`DBS-C01`)。如果你想参加这次考试，并且需要准备资源，那么你也可以参加名为 [**终极 AWS 认证数据库专业**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faws-certified-database-specialty-dbs%2F) 的课程，这是开始你的旅程的一个很好的选择。
 
 [![](img/401989c30fc23266a62d4e7c7cae89cd.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faws-certified-database-specialty-dbs%2F)
 
@@ -132,40 +133,44 @@ udemy 上的一门名为 [**AWS 认证高级网络专业**](https://click.linksy
 
 如果你喜欢处理大型数据集，那么这个认证非常适合你，因为你可以学习如何处理复杂的大数据，如设计和数据分析，以及创建分析它们的自动化工具。
 
-*AWS 认证大数据* —专业认证面向执行复杂大数据分析且拥有至少两年经验的个人。
 
-要获得该认证，您需要参加并通过 *AWS 认证数据*分析—专业考试(DAS-C01)。对于大数据开发者来说，这是最好的 AWS 认证之一。
 
-如果你想成为一名 AWS 认证大数据开发人员，那么 udemy 上的这门名为 [**AWS 认证大数据**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faws-certified-big-data-speciality-certification-learnkarts%2F) 的课程可以帮你实现这个目标。
+# AWS 认证大数据
+
+**AWS 认证大数据** —专业认证面向执行复杂大数据分析且拥有至少两年经验的个人。
+
+要获得该认证，您需要参加并通过 **AWS 认证数据分析—专业考试**（`DAS-C01`）。对于大数据开发者来说，这是最好的 AWS 认证之一。
+
+如果你想成为一名 AWS 认证大数据开发人员，那么 Udemy 上的这门名为 [**AWS 认证大数据**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faws-certified-big-data-speciality-certification-learnkarts%2F) 的课程可以帮你实现这个目标。
 
 [![](img/24c50f29e304cda7aecd8083701cfc58.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faws-certified-big-data-speciality-certification-learnkarts%2F)
 
-这就是你在 2023 年的目标的所有**最佳 AWS 认证。你已经看到了许多亚马逊 AWS 认证，你可以在家获得，并开始你的下一个新的职业生涯:开发、设计、保护你的企业 web 应用程序，以及分析数据等等。
+这就是你在 2023 年的目标的所有**最佳 AWS 认证**。你已经看到了许多亚马逊 AWS 认证，你可以在家获得，并开始你的下一个新的职业生涯：开发、设计、保护你的企业 web 应用程序，以及分析数据等等。
 
 我也分类了哪些认证是给初学者的，哪些是给专家的。你可以选择依靠你的经验和技能，但如果你是初学者，我强烈建议你从 AWS 云从业者认证开始，这是最容易的，你只需一周的认真学习就可以通过考试。
 
-其他**认证资源**面向 **IT 专业人士**和 Java 程序员**
+其他**认证资源**面向 **IT 专业人士**和 Java 程序员：
 
-*   [破解 AWS 解决方案架构师专业考试的前 5 门课程](https://javarevisited.blogspot.com/2020/04/top-5-course-to-crack-aws-solution-architect-professional-sap-c01-certification-exam.html)
-*   [如何通过 Spring Core Professional 5.0 认证](https://javarevisited.blogspot.com/2018/08/how-to-crack-spring-core-professional-certification-exam-java-latest.html)
-*   [如何成为 Azure 认证管理员助理？](https://javarevisited.blogspot.com/2020/04/how-to-crack-microsoft-az-103-azure-administrator-associate-exam-certification.html)
-*   [破解 AWS 解决方案架构师认证的 5 大课程](https://javarevisited.blogspot.com/2019/05/top-5-courses-to-crack-aws-solutions-architect-associate-certification-exam-SAA-C01.html#axzz5rHwAwycj)
-*   [破解 Azure 云架构师(AZ-300)考试的前 5 门课程](https://javarevisited.blogspot.com/2019/07/top-5-courses-to-crack-azure-architecture-technologies-certification-az-300-exam.html#axzz6E6VuRMsx)
-*   [破解 AWS DevOps 工程师考试的前 5 门课程](https://javarevisited.blogspot.com/2020/04/top-5-course-to-crack-aws-certified-devops-engineer-professional-exam-certification.html)
-*   [程序员前 5 名 AZ-900 模拟测试](https://javarevisited.blogspot.com/2020/02/top-5-AZ-900-exam-Azure-Fundamentals-certification-practice-tests-and-mock-exams-to.html)
-*   [学习 Docker 和 Kubernetes 的十大课程](https://dev.to/javinpaul/top-10-courses-to-learn-docker-and-kubernetes-for-programmers-4lg0)
-*   [通过谷歌助理云工程师认证的前 5 门课程](https://javarevisited.blogspot.com/2019/07/top-5-google-cloud-platform-gcp-courses-certifications-online.html)
-*   [5 次免费的 AWS 解决方案架构师实践测试](https://javarevisited.blogspot.com/2019/08/top-5-free-aws-solution-architect-Associate-certification-dumps-practice-questions.html)
-*   [如何破解 Azure Fundamentals (AZ-900)认证](https://javarevisited.blogspot.com/2020/04/how-to-crack-microsoft-azure-fundamentals-certification-az-900-exam.html)
-*   [学习 Docker 和 Kubernetes 的十大课程](https://dev.to/javinpaul/top-10-courses-to-learn-docker-and-kubernetes-for-programmers-4lg0)
-*   [如何破解甲骨文 2023 年 Java 认证？](https://medium.freecodecamp.org/how-to-pass-oracles-java-certifications-a-practical-guide-for-developers-e9b607ba6173)
-*   [成为 GCP 准云工程师的前 5 名课程](https://javarevisited.blogspot.com/2020/05/top-5-course-to-crack-google-cloud-associate-cloud-engineer-certification-exam.html) r
-*   [如何通过 AZ-300 Azure 解决方案架构师考试？](https://javarevisited.blogspot.com/2020/04/how-to-crack-microsoft-azure-solution-architect-exam-az-300.html)
-*   [通过谷歌助理云工程师认证的前 5 门课程](https://javarevisited.blogspot.com/2019/07/top-5-google-cloud-platform-gcp-courses-certifications-online.html)
-*   [通过 AWS 云从业者认证的前 5 门课程](https://javarevisited.blogspot.com/2020/02/top-5-courses-to-crack-aws-certified-cloud-practitioner-exam-certification-clf-c01.html)
+* [破解 AWS 解决方案架构师专业考试的前 5 门课程](https://javarevisited.blogspot.com/2020/04/top-5-course-to-crack-aws-solution-architect-professional-sap-c01-certification-exam.html)
+* [如何通过 Spring Core Professional 5.0 认证](https://javarevisited.blogspot.com/2018/08/how-to-crack-spring-core-professional-certification-exam-java-latest.html)
+* [如何成为 Azure 认证管理员助理？](https://javarevisited.blogspot.com/2020/04/how-to-crack-microsoft-az-103-azure-administrator-associate-exam-certification.html)
+* [破解 AWS 解决方案架构师认证的 5 大课程](https://javarevisited.blogspot.com/2019/05/top-5-courses-to-crack-aws-solutions-architect-associate-certification-exam-SAA-C01.html#axzz5rHwAwycj)
+* [破解 Azure 云架构师（AZ-300）考试的前 5 门课程](https://javarevisited.blogspot.com/2019/07/top-5-courses-to-crack-azure-architecture-technologies-certification-az-300-exam.html#axzz6E6VuRMsx)
+* [破解 AWS DevOps 工程师考试的前 5 门课程](https://javarevisited.blogspot.com/2020/04/top-5-course-to-crack-aws-certified-devops-engineer-professional-exam-certification.html)
+* [程序员前 5 名 AZ-900 模拟测试](https://javarevisited.blogspot.com/2020/02/top-5-AZ-900-exam-Azure-Fundamentals-certification-practice-tests-and-mock-exams-to.html)
+* [学习 Docker 和 Kubernetes 的十大课程](https://dev.to/javinpaul/top-10-courses-to-learn-docker-and-kubernetes-for-programmers-4lg0)
+* [通过谷歌助理云工程师认证的前 5 门课程](https://javarevisited.blogspot.com/2019/07/top-5-google-cloud-platform-gcp-courses-certifications-online.html)
+* [5 次免费的 AWS 解决方案架构师实践测试](https://javarevisited.blogspot.com/2019/08/top-5-free-aws-solution-architect-Associate-certification-dumps-practice-questions.html)
+* [如何破解 Azure Fundamentals（AZ-900）认证](https://javarevisited.blogspot.com/2020/04/how-to-crack-microsoft-azure-fundamentals-certification-az-900-exam.html)
+* [学习 Docker 和 Kubernetes 的十大课程](https://dev.to/javinpaul/top-10-courses-to-learn-docker-and-kubernetes-for-programmers-4lg0)
+* [如何破解甲骨文 2023 年 Java 认证？](https://medium.freecodecamp.org/how-to-pass-oracles-java-certifications-a-practical-guide-for-developers-e9b607ba6173)
+* [成为 GCP 准云工程师的前 5 名课程](https://javarevisited.blogspot.com/2020/05/top-5-course-to-crack-google-cloud-associate-cloud-engineer-certification-exam.html)
+* [如何通过 AZ-300 Azure 解决方案架构师考试？](https://javarevisited.blogspot.com/2020/04/how-to-crack-microsoft-azure-solution-architect-exam-az-300.html)
+* [通过谷歌助理云工程师认证的前 5 门课程](https://javarevisited.blogspot.com/2019/07/top-5-google-cloud-platform-gcp-courses-certifications-online.html)
+* [通过 AWS 云从业者认证的前 5 门课程](https://javarevisited.blogspot.com/2020/02/top-5-courses-to-crack-aws-certified-cloud-practitioner-exam-certification-clf-c01.html)
 
-感谢您阅读本文。如果你喜欢这些 *AWS 和云认证*，那么请与你的朋友和同事分享。如果这些问题帮助你通过了考试，那么请把它传播出去，让其他人也能受益。
+感谢您阅读本文。如果你喜欢这些 **AWS 和云认证**，那么请与你的朋友和同事分享。如果这些问题帮助你通过了考试，那么请把它传播出去，让其他人也能受益。
 
-**P. S.** —如果你是 AWS 和云计算的完全初学者，并且正在寻找一些学习 AWS 的免费课程，那么你也可以在 Udemy 上查看来自 Linux Academy 的这个 [**AWS 要点**](http://bit.ly/2hjzvZ4) **(免费课程)**。这是一门很好的入门课程，你可以免费学习。你只需要一个 Udemy 帐户就可以进入本课程。
+**P. S.** —如果你是 AWS 和云计算的完全初学者，并且正在寻找一些学习 AWS 的免费课程，那么你也可以在 Udemy 上查看来自 Linux Academy 的这个 [**AWS 要点**](http://bit.ly/2hjzvZ4)（**免费课程**）。这是一门很好的入门课程，你可以免费学习。你只需要一个 Udemy 帐户就可以进入本课程。
 
-<https://www.java67.com/2018/05/top-5-amazon-web-services-or-aws-courses-to-learn-online.html> 
+<https://www.java67.com/2018/05/top-5-amazon-web-services-or-aws-courses-to-learn-online.html>

@@ -1,3 +1,4 @@
+
 # 课程：目录中的 Java 对象
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/objects/index.html`](https://docs.oracle.com/javase/tutorial/jndi/objects/index.html)
@@ -14,6 +15,6 @@ JNDI 提供了目录的面向对象视图，从而允许将 Java 对象添加到
 
 ## 状态工厂
 
-状态工厂将一个对象转换为另一个对象。输入是对象和可选属性，提供给 Context.bind()，输出是另一个对象和可选属性，将存储在底层命名服务或目录中。有关状态工厂以及如何编写自己的状态工厂的详细信息，请参阅[JNDI 教程](https://docs.oracle.com/javase/jndi/tutorial/objects/state/index.html)。
+状态工厂将一个对象转换为另一个对象。输入是对象和可选属性，提供给`Context.bind()`，输出是另一个对象和可选属性，将存储在底层命名服务或目录中。有关状态工厂以及如何编写自己的状态工厂的详细信息，请参阅[JNDI 教程](https://docs.oracle.com/javase/jndi/tutorial/objects/state/index.html)。
 
 课程的下一部分讨论了如何访问目录中的对象。它描述了可序列化对象如何存储和读取在目录中。有关其他类型的对象，请查看[JNDI 教程](https://docs.oracle.com/javase/jndi/tutorial/objects/index.html)。

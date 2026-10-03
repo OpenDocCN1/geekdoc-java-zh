@@ -1,3 +1,4 @@
+
 # 设计动漫展注册系统
 
 > 原文：<https://medium.com/javarevisited/design-comic-con-registration-system-9ec1cf1bb0cc?source=collection_archive---------2----------------------->
@@ -36,7 +37,7 @@ Marjan Blan | @marjanblan 在 [Unsplash](https://unsplash.com?utm_source=medium&
 
 ## 用户和管理员角色
 
-用户和管理员有不同的角色，可以使用 roles 参数来区分。
+用户和管理员有不同的角色，可以使用 `roles` 参数来区分。
 
 *   管理员可以创建/查看/更新/搜索/删除事件。管理员还可以获得事件的注册用户列表
 *   用户可以注册/取消注册事件、搜索事件、查看事件。
@@ -45,9 +46,9 @@ Marjan Blan | @marjanblan 在 [Unsplash](https://unsplash.com?utm_source=medium&
 
 我们在系统中使用关系数据库，因为我们需要结构化数据及其关系。关系数据库不可伸缩是一个神话。我们也可以扩展关系数据库。这里我们使用主从架构来扩展我们的 RDBMS。主数据库执行写操作，而拥有主数据库副本的其他从数据库将执行繁重的读操作。这将减少我们的数据库延迟。
 
-*   用户数据库:uid(主键)，uname，联系人，电子邮件，预订的座位，eid(外键)
-*   事件数据库:eid(主键)，姓名，位置，城市，国家，座位，费用
-*   支付数据库:pid(主键)，eid(外键)，ispaid
+*   用户数据库：`uid`(主键)，`uname`，`联系人`，`电子邮件`，`预订的座位`，`eid`(外键)
+*   事件数据库：`eid`(主键)，`姓名`，`位置`，`城市`，`国家`，`座位`，`费用`
+*   支付数据库：`pid`(主键)，`eid`(外键)，`ispaid`
 
 ## 贮藏
 
@@ -88,23 +89,23 @@ CDN 有助于在全球范围内维护这项服务。CDN 是一组地理上分布
 
 ## REST APIs
 
-*   /用户？eid=" <value>"返回事件的注册用户列表</value>
-*   /返回所有城市的城市
-*   /事件？city=" <value>"返回该城市的所有事件</value>
-*   /地点？city=" <value>"返回该城市的所有位置</value>
-*   /地点？city=" <value>"&eid=" <value>"返回此城市和此事件的所有地点</value></value>
-*   /事件？city=" <value>"&location=" <value>"返回该城市和该地点的所有事件</value></value>
+*   `/用户？eid=" <value>"`返回事件的注册用户列表
+*   `/`返回所有城市的城市
+*   `/事件？city=" <value>"`返回该城市的所有事件
+*   `/地点？city=" <value>"`返回该城市的所有位置
+*   `/地点？city=" <value>"&eid=" <value>"`返回此城市和此事件的所有地点
+*   `/事件？city=" <value>"&location=" <value>"`返回该城市和该地点的所有事件
 
 ## 技术
 
-*   后端服务器:Java，Spring Boot，Swagger，Hibernate
-*   安全性:春季安全性
-*   数据库:MySQL
-*   服务器:Tomcat
-*   缓存:Redis
-*   通知:阿帕奇卡夫卡
-*   部署:Docker
-*   代码库:Git
-*   负载平衡器:Nginx
+*   后端服务器：Java，Spring Boot，Swagger，Hibernate
+*   安全性：春季安全性
+*   数据库：MySQL
+*   服务器：Tomcat
+*   缓存：Redis
+*   通知：阿帕奇卡夫卡
+*   部署：Docker
+*   代码库：Git
+*   负载平衡器：Nginx
 
 这就是我将如何设计事件注册系统。请随时添加/审查设计，让我知道你将如何处理这样的问题。我会添加更多的系统设计文章，这样我们可以一起学习和设计系统。敬请关注。快乐学习！🎃

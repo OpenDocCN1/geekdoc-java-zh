@@ -1,18 +1,19 @@
+
 # 如何在 YAML 为 POJO 定义地图？
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/yaml-map-pojo>
 
-## 1.概观
+## 1. 概观
 
 在本教程中，我们将介绍如何使用 YAML 文件中定义的属性来配置 POJO 类中的`Map`的值。
 
-## 2.波乔和 YAML
+## 2. POJO 和 YAML
 
 POJO 类是普通的旧 Java 对象。YAML 是一种人类可读的结构化数据格式，它使用缩进来表示嵌套。
 
-### 2.1.简单的`Map`例子
+### 2.1. 简单的`Map`例子
 
-让我们想象一下，我们正在运营一个在线商店，我们正在创建一个翻译服装尺寸的服务。起初，我们只在英国卖衣服。我们想知道标签“S”、“M”、“L”等指的是什么英国尺寸。我们创建我们的 POJO 配置类:
+让我们想象一下，我们正在运营一个在线商店，我们正在创建一个翻译服装尺寸的服务。起初，我们只在英国卖衣服。我们想知道标签“S”、“M”、“L”等指的是什么英国尺寸。我们创建我们的 POJO 配置类：
 
 ```java
 @ConfigurationProperties(prefix = "t-shirt-size")
@@ -25,12 +26,12 @@ public class TshirtSizeConfig {
     }
 
     //getters and setters..
-} 
+}
 ```
 
-注意带有`prefix`值的 [`@ConfigurationProperties`](/web/20220524003218/https://www.baeldung.com/configuration-properties-in-spring-boot) 。我们将在 YAML 文件中的同一个根值下定义映射，这将在下一节中看到。
+注意带有`prefix`值的`@ConfigurationProperties`注解。我们将在 YAML 文件中的同一个根值下定义映射，这将在下一节中看到。
 
-我们还需要记住在我们的`Application.class`上使用以下注释来启用配置属性:
+我们还需要记住在我们的`Application.class`上使用以下注释来启用配置属性：
 
 ```java
 @EnableConfigurationProperties(TshirtSizeConfig.class)
@@ -41,13 +42,13 @@ public class DemoApplication {
 }
 ```
 
-### 2.2.YAML 构型
+### 2.2. YAML 构型
 
 现在我们将`t-shirt-size`添加到我们的 YAML 配置中。
 
-我们可以在我们的`application.yml`文件中使用以下结构:
+我们可以在我们的`application.yml`文件中使用以下结构：
 
-```java
+```yaml
 t-shirt-size:
   simple-mapping:
     XS: 6
@@ -61,13 +62,13 @@ t-shirt-size:
 
 注意我们是如何将`simple-mapping`与破折号一起使用的，但是我们在类中的属性名是`simpleMapping`。带破折号的 YAML 属性将自动转换为代码中的大小写形式。
 
-### 2.3.更复杂的`Map`例子
+### 2.3. 更复杂的`Map`例子
 
 在我们成功的英国商店之后，我们现在需要考虑将尺寸转换成其他国家的尺寸。例如，我们现在想知道在法国和美国标签“S”的尺寸是多少。我们需要在配置中添加另一层数据。
 
-我们可以用更复杂的映射来改变我们的`application.yml`:
+我们可以用更复杂的映射来改变我们的`application.yml`：
 
-```java
+```yaml
 t-shirt-size:
   complex-mapping:
     XS:
@@ -89,17 +90,17 @@ t-shirt-size:
     XL:
       uk: 14
       fr: 42
-      us: 10 
+      us: 10
 ```
 
-POJO 中的相应字段将是地图的地图:
+POJO 中的相应字段将是地图的地图：
 
 ```java
 private Map<String, Map<String, Integer>> complexMapping;
 ```
 
-## 3.结论
+## 3. 结论
 
 在本文中，我们看到了如何在 YAML 配置文件中为简单的 POJO 定义简单和更复杂的嵌套映射。
 
-这篇文章的代码可以在 GitHub 的[上找到](https://web.archive.org/web/20220524003218/https://github.com/eugenp/tutorials/tree/master/spring-boot-modules/spring-boot-properties-3)
+这篇文章的代码可以在 GitHub 的[这里](https://web.archive.org/web/20220524003218/https://github.com/eugenp/tutorials/tree/master/spring-boot-modules/spring-boot-properties-3)找到。

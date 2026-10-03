@@ -1,14 +1,9 @@
+
 # Java 编程语言入门指南
 
+## 引言
 
-
-
-
-
-
-# 引言
-
-本教材面向雅罗斯斯拉夫尔国立大学（YarGU）信息与计算机技术学院“信息系统支持与管理”专业的四年级学生。它描述了 `Java` 编程语言的以及一些相关技术。书中还包含了一些关于面向对象软件编程和设计的通用信息。
+本教材面向雅罗斯拉夫尔国立大学（YarGU）信息与计算机技术学院“信息系统支持与管理”专业的四年级学生。它描述了 `Java` 编程语言以及一些相关技术。书中还包含了一些关于面向对象软件编程和设计的通用信息。
 
 前两章介绍了语言的基础——类型、运算和运算符。这些章节中的大部分材料通过 Java 语言工具与类似的 `C++` 语言工具进行了对比。
 
@@ -20,15 +15,15 @@
 
 手册末尾列出了所讨论主题的主要和额外参考文献。在这些列表中，我想重点推荐书籍 [1]，它对语言机制的理解有非常详细且深入的阐述；还有一本可以作为语言主要工具（尤其是库）指南的书籍。我还推荐一本描述 Java 应用设计的书籍，学习它可能会显著提高程序员的专业水平。
 
-# 1. 数据类型、字面量、变量
+## 1. 数据类型、字面量、变量
 
 基本数据类型。Java 定义了 8 种基本数据类型。包括四种整数类型 `byte`、`short`、`int`、`long`，两种实浮型 `float` 和 `double`，字符类型 `char` 和逻辑类型 `boolean` 类型。其主要特征见表 1.1。与 `C++` 不同，Java 中没有“指针”数据类型。
 
 Java 中基本数据类型的主要特征是，这些类型的变量不是对象。所有其他类型的变量（包括数组和字符串类型变量 `String`）都是对象引用（object references）。更多细节将在节 3.3 中讨论。
 
-字面量。整数字面量可以用十进制、八进制和十六进制指定。十进制字面量直接写入，其余使用类似的前缀：八进制使用 "0"，十六进制使用 "0x"。例如，整数 47 可以表示为 `0x2F`。
+字面量。整数字面量可以用十进制、八进制和十六进制指定。十进制字面量直接写入，其余使用类似的前缀：八进制使用 `"0"`，十六进制使用 `"0x"`。例如，整数 47 可以表示为 `0x2F`。
 
-Long 型常量必须带有 `L` 或 `l`（例如 `47L`）。浮点字面量必须带有 `F` 或 `f`（例如 `3.5F`）。Double 字面量必须带有 `D` 或 `d`（例如 `3.5D`）。
+`Long` 型常量必须带有 `L` 或 `l`（例如 `47L`）。浮点字面量必须带有 `F` 或 `f`（例如 `3.5F`）。`Double` 字面量必须带有 `D` 或 `d`（例如 `3.5D`）。
 
 符号字面量仅限于引号。也可以使用 Unicode 表示。对于后者，字面量写为 `\u`。
 
@@ -39,10 +34,12 @@ Long 型常量必须带有 `L` 或 `l`（例如 `47L`）。浮点字面量必须
 类型转换。Java 中的类型转换分为隐式和显式。隐式转换自动执行。强制转换（Casting）的规则要严格得多。
 
 赋值时满足以下条件会进行自动类型转换：
+
 - 整数类型或 `char` 转换为某种数值类型或实型
 - 所需转换的类型范围更大
 
-表达式中的自动类型转换在参数运算、字符串拼接时执行（更多细节见节 6.3）；
+表达式中的自动类型转换在参数运算、字符串拼接时执行（更多细节见节 6.3）：
+
 - 如果二元运算的操作数之一类型为 `double`，则第二个转换为 `double` 类型；
 - 否则：如果操作数之一类型为 `float`，则第二个转换为 `float` 类型；
 - 否则：如果操作数之一类型为 `long`，则第二个转换为 `long` 类型；
@@ -54,19 +51,14 @@ Long 型常量必须带有 `L` 或 `l`（例如 `47L`）。浮点字面量必须
 int x = 2.5;
 ```
 
-错误是因为在给变量 a 的值加 1 时，结果已转换为 `int` 类型。由于从 `int` 类型到 `short` 的类型转换可能会溢出，因此必须显式地产生：
+错误是因为在给变量 `a` 的值加 1 时，结果已转换为 `int` 类型。由于从 `int` 类型到 `short` 的类型转换可能会溢出，因此必须显式地产生：
 
 ```java
 short a = 5;
 short b = (short)(a + 1); // 错误：需要 short，而不是 int
 ```
 
-
-
-
-通过截断高位产生的收缩整数类型
-
-将实数类型赋值给整数类型产品时，其截断是通过舍弃小数部分并应用之前的位完成的。
+通过截断高位产生的收缩整数类型。将实数类型赋值给整数类型产品时，其截断是通过舍弃小数部分并应用之前的位完成的。
 
 显式类型转换的语法与 `C` 中的强制类型转换相同（参见上文示例）。
 
@@ -132,7 +124,7 @@ public class Binomial {
 }
 ```
 
-# 2. 操作与运算符
+## 2. 操作与运算符
 
 操作的一般特征。大多数 Java 操作与 C++ 操作相似，尽管它们中的某些功能略有不同。由于 Java 中没有指针，这是很自然的。没有用于获取地址 (`&`）、解引用 (`*`）和间接寻址 (`->`）的操作。Java 中的 `.`（点）运算符用于通过对象引用访问对象的字段和方法（详细信息参见第 3.3 节）。
 
@@ -146,7 +138,7 @@ public class Binomial {
 
 比较操作。比较操作包括 `==`, `!=`, `<`, `>`, `<=`, `>=`。它们与相应的 C++ 操作的唯一区别是它们的结果始终是 `boolean`。
 
-逻辑操作。逻辑操作适用于布尔参数并产生布尔结果。包括：一元操作“非” (`!`)，二元“与” (`&&`, `&`)，“或” (`||`, `|`) 和“异或” (`^`)，以及类似于赋值的操作 (`&=`, `|=`, `^=`。
+逻辑操作。逻辑操作适用于布尔参数并产生布尔结果。包括：一元操作“非” (`!`)，二元“与” (`&&`, `&`)，“或” (`||`, `|`) 和“异或” (`^`)，以及类似于赋值的操作 (`&=`, `|=`, `^=`)。
 
 `&&` 和 `||` 只在情况下计算第二个参数的值。相反，`&` 和 `|` 总是计算两个参数。例如：
 
@@ -154,7 +146,8 @@ public class Binomial {
 int x = 10, y = 10;
 if(x == 10 || ++y) System.out.println(y);
 ```
-打印 "ten"，如果我们使用 `|`，结果将是 "eleven"。
+
+打印 `"ten"`，如果我们使用 `|`，结果将是 `"eleven"`。
 
 条件操作。Java 有类似于 C++ 的条件运算符 `?:`：
 
@@ -171,6 +164,7 @@ condition ? expression1 : expression2
 ```
 x = y = ten;
 ```
+
 将 10 赋值给变量 `y`，之后将操作的结果（即 10）赋值给 `x`。
 
 表达式运算符。它的语法为：
@@ -186,8 +180,6 @@ expression ;
 ```java
 x + 1;
 ```
-
-
 
 在 C++ 中是有效的，在 Java 中是无效的，因为它不改变变量的值。
 
@@ -209,11 +201,11 @@ for (i = 0, j = 0; i + j < twenty; ++i, ++j)
 
 `case` 语句中的控制表达式必须是整数类型之一。
 
-Java 不包含 `goto` 语句。相反，它扩展了 `break` 语句和 `continue` 语句来退出多个嵌套循环。它们并不常见，因此在这里不被考虑。它们的描述可以在例如  [2 ] 这样的书书中找到。
+Java 不包含 `goto` 语句。相反，它扩展了 `break` 语句和 `continue` 语句来退出多个嵌套循环。它们并不常见，因此在这里不被考虑。它们的描述可以在例如 [2] 这样的书书中找到。
 
 需要注意的是，Java 不允许程序中存在不可访问的代码（例如，跟在 `return` 语句后面的代码），这会导致编译错误。
 
-# 3. 类和对象
+## 3. 类和对象
 
 核心概念——面向对象编程。Java 编程语言支持面向对象编程（OOP）范式。OOP 的核心概念是类。类是由用户定义的共享数据类型。类可以包含字段（变量）和方法（函数）。类型为“类”的变量被称为对象（或类实例）。每个对象都有自己的类中某些字段的副本。字段的内容决定了该对象在任何给定时间的状态。每个类的一个实例存在一个方法，但是调用任何（非静态）方法只能通过指定的类对象执行。通常，该方法处理的是恰好属于被调用实例类的字段（改变它的状态）。因此，类方法决定了该类所有对象的行为。非常重要的一点是，类的字段或方法本身并不存在于该类的对象之外。
 
@@ -221,9 +213,9 @@ Java 不包含 `goto` 语句。相反，它扩展了 `break` 语句和 `continue
 
 之前的介绍从技术角度（即从编程语言手段的角度）描述了类和对象的概念。然而，也可以给出另一种解释。面向对象编程相对于早期范式（结构化编程）的一个特点是，程序员有机会不仅仅为表示领域的数据处理机制选择语言环境，而是在程序内部对领域进行建模。在这种情况下，程序中的对象（大多数情况下）对应于领域的对象，而类则是预定义领域的通用概念，刻画了相同类型对象的属性和行为。这种编程方法通常是高效的（特别是在开发大型软件系统时，以及在集体开发中），因为程序员能够用领域的语言描述对象之间的交互，而不是用反映计算机内部工作细节的语言。
 
-请注意，与开发面向对象应用原则相关的问题极其广泛，但对于任何专业程序员来说，认真处理这些问题都是必要的。为了进一步学习这些问题，建议首选书籍  [6 ]，以及书籍  [1, 3, 5, 7, 8 ]。
+请注意，与开发面向对象应用原则相关的问题极其广泛，但对于任何专业程序员来说，认真处理这些问题都是必要的。为了进一步学习这些问题，建议首选书籍 [6]，以及书籍 [1, 3, 5, 7, 8]。
 
-## 类声明
+### 类声明
 
 使用以下内容来声明一个类：语法如下：
 
@@ -248,7 +240,7 @@ Java 不包含 `goto` 语句。相反，它扩展了 `break` 语句和 `continue
 
 Java 不允许类之外存在代码，即没有不是字段的局部变量，也没有 C++ 意义上的函数。
 
-## 对象的创建
+### 对象的创建
 
 在 Java 中，所有对象都是动态创建的。在虚拟内存中。在 C++ 中存在的变量对象在 Java 中不存在，类型为某个类的变量实际上不是对象，而是对象的引用。例如：
 
@@ -256,19 +248,19 @@ Java 不允许类之外存在代码，即没有不是字段的局部变量，也
 MyClass myObject;
 ```
 
-这声明了一个名为 myObject 的 MyClass 类型对象引用，但没有创建对象本身（在 C++ 中对应的将是指针声明：MyClass* myObject）。对象的实际创建通过 `new` 运算符完成：
+这声明了一个名为 `myObject` 的 `MyClass` 类型对象引用，但没有创建对象本身（在 C++ 中对应的将是指针声明：`MyClass* myObject`）。对象的实际创建通过 `new` 运算符完成：
 
 ```java
 myObject = new MyClass();
 ```
 
-这里创建了一个 MyClass 的对象（在创建时，调用了无参数构造函数），并将其引用写入变量 myObject。也可以同时完成对象的创建和它的初始化：
+这里创建了一个 `MyClass` 的对象（在创建时，调用了无参数构造函数），并将其引用写入变量 `myObject`。也可以同时完成对象的创建和它的初始化：
 
 ```java
 MyClass myObject = new MyClass();
 ```
 
-## 访问字段和方法
+### 访问字段和方法
 
 一旦对象创建，就可以通过 `.`（点）运算符访问它的字段和方法：
 
@@ -276,15 +268,15 @@ MyClass myObject = new MyClass();
 myObject.someMethod();
 ```
 
-
-
-
 当从同一个对象上调用的方法访问该对象的字段或方法时，可以省略对象的名称或用 `this` 关键字替换。`this` 关键字还用于从另一个 `constructor` 中调用 `constructor` `class`（参见下文示例）。在后者的情况下，此类调用必须是 `constructor` 中的第一条语句。
 
-### 示例
+#### 示例
+
 作为一个示例，考虑 `Box` 类（"box"），它存储某些箱子的尺寸（三个整数）。`Box` 类拥有具有不同参数的重载构造函数，以及一个计算箱子体积的 `volume()` 方法。`SimpleBoxDemo` 类演示了 `box` 类的创建和使用。
 
 为了简化示例，没有使用访问控制（参见 3.10）。在实践中，任何程序员都不应该使用这种方法！
+
+
 
 ```java
 /** Class "Box" */
@@ -321,14 +313,16 @@ public class SimpleBoxDemo
 }
 ```
 
-### 对象的移除
+## 对象的移除
+
 在 Java 中，对象的移除操作不是手动的。在这里，自动垃圾回收机制取代了手动组装。为了确保该机制的工作，`JVM`（Java 虚拟机）会跟踪每个被创建对象的引用数量，一旦某个对象不再剩余引用，它就会成为移除候选对象。对象的移除是定期进行的，并且只有在需要释放的内存变得本质时才会进行。
 
 自动垃圾回收允许规避大部分与内存泄漏相关的问题。遗憾的是，在某些情况下，Java 中仍然会出现此类问题。可以在书中找到示例。
 
 Java 不提供析构函数。由于内存管理由 `JVM` 实现，因此对它们的需求并不常见。如果仍然需要，你应该定义自己的方法并显式地调用它们。这里的例子是内联类中的 `close()` 方法，用于执行 I/O 的关闭流程（参见第 7.1 页）。
 
-### 静态字段和方法
+## 静态字段和方法
+
 静态字段和现有方法存在于每个类的实例，也就是说它们被该类的所有拷贝共享。声明静态字段和方法使用特殊的标识符 `static`：
 
 ```java
@@ -381,6 +375,7 @@ void swap(point p1, point p2)
     p1.y = p2.y;
 }
 ```
+
 这是错误的，因为它只交换了内容，而不是对象本身。要交换对象，我们应该使用：
 
 ```java
@@ -405,7 +400,8 @@ void swap(point p1, point p2)
     p2 = temp;
 }
 ```
-这不起作用，因为变量 `p1` 和 `p2` 是方法的局部变量。为了解决这个问题，我们可以将 point 封装在一个类中：
+
+这不起作用，因为变量 `p1` 和 `p2` 是方法的局部变量。为了解决这个问题，我们可以将 `point` 封装在一个类中：
 
 ```java
 class Wrapper {
@@ -434,14 +430,15 @@ void swap(point p1, point p2)
 }
 ```
 
-### 包与翻译类模块的结构
+## 包与翻译类模块的结构
+
 包是 Java 程序中类型（类和接口）的分组手段。每个包可以包含一个或多个类以及其他包。通过包划分类可以解决命名冲突问题，并实现更高效的访问控制。引用包元素时使用完整路径，该路径由由点分隔的子包组成（例如 `java.util`）。
 
 ```java
 package mypackage.mysubpackage;
 ```
 
-如果缺少 `package`语句，类将属于一个没有的默认包，该包没有子包且对其他包可见。
+如果缺少 `package` 语句，类将属于一个没有的默认包，该包没有子包且对其他包可见。
 
 翻译模块可以包含一个或多个 `import` 语句，允许在引用类时省略包名。例如，如果模块中存在行：
 
@@ -457,15 +454,11 @@ import java.util.HashSet;
 
 翻译模块必须包含 `main` 类（或接口）模块的源码。该类的名称应与翻译模块的文件匹配。该类是唯一可以声明为 `public` 的翻译模块类。该模块还可以包含一个或多个辅助类。
 
-
-
-
-
 在环境变量 `CLASSPATH` 列出的目录中，搜索包含字节码类的文件，这些类位于与包分级结构中类的位置对应的子目录中。
 
-例如，对于 JVM  找到的字节码类 `java.util.HashSet`，它必须位于任何目录环境变量 `CLASSPATH` 下的 `java/util` 子目录中名为 `HashSet.class` 的文件中。通常情况下，它包括当前目录以及包含标准 Java 库的目录。源文件也根据包的分级结构位于文件系统中。
+例如，对于 JVM 找到的字节码类 `java.util.HashSet`，它必须位于任何目录环境变量 `CLASSPATH` 下的 `java/util` 子目录中名为 `HashSet.class` 的文件中。通常情况下，它包括当前目录以及包含标准 Java 库的目录。源文件也根据包的分级结构位于文件系统中。
 
-### 访问控制与封装
+## 访问控制与封装
 
 访问控制主要用于：一方面，防止由于误用或恶意使用导致对象中包含的数据发生未经授权的更改；另一方面是将类的接口与其实现分离来（隐藏实现细节）。使用该类的程序员只能看到它的接口（具有公共访问权限的字段和方法），而可能对类的内部结构一无所知。这允许你更改类的实际实现，而对程序员是透明的。例如，你可以替换为一种更高效的实现，完全重构类的内部结构，而使用该类的程序代码无需更改即可与新版本共同工作。
 
@@ -556,9 +549,6 @@ int hashCode()
 }
 ```
 
-
-
-
 基本类型的包装类。如前所述，Java 中的基本类型不是对象。但在某些情况下，需要将它们表示为对象（例如，为了存储在容器中，请参见第 8.1 节）。为此，它们被用作基本类型的包装类——封装基本类型的类。
 
 对于八种基本类型中的每一种，都有一个对应的包装类。在创建这些类型的实例时，包装类会通过对应类的构造函数传递一个对象：
@@ -587,7 +577,7 @@ static byte parseByte(String s) static short parseShort(String s) static int par
 
 这些方法可以用于转换为基本类型的转换。如果转换失败，将抛出 `NumberFormatException` 异常。
 
-# 4. 继承与多态
+# 继承与多态
 
 ## 继承
 
@@ -616,6 +606,8 @@ public void overridenMethod() {
 
 在下一个示例中，基于 "box" 类创建了一个更专门的 "weight box" 类，它添加了额外的实体字段 "weight" 以及获取它的方法，并且使用了对超类的构造调用。
 
+
+
 ```java
 /** "Box" 类 */
 class Box {
@@ -636,7 +628,7 @@ class Box {
 
     /** 立方体构造函数 */
     public Box(int size) {
-        this (size, size, size);
+        this(size, size, size);
     }
 
     /** 主要构造函数 */
@@ -685,14 +677,13 @@ Java 中多态的实现基于以下规则：
 
 1. 类对象的引用可以强制转换为继承层次结构中给定类之上任何类的对象的引用。这种转换是扩展的，并且可以自动完成。反向转换也可以产生，但总是显式执行。在尝试将对象引用转换为无效类型时不会发生错误。为了检查转换的可用性，需要使用 `instanceof` 操作：
 
-
-
-
-
 ![](img/image00400.jpeg)
-`if(myObject instanceof MyClass) ((MyClass)myObject).doSomethingSpecificForMyClass();`
 
-2. 如果父类的某些方法在子类中被重写，那么在访问这些方法时，即使通过父类对象的引用，也会调用对应的被重写方法。这与 C++ 中的多态实现不同，在上述情况下，只有当相关方法被声明为虚函数（virtual）时才会调用被重写的方法。
+```java
+if (myObject instanceof MyClass) ((MyClass) myObject).doSomethingSpecificForMyClass();
+```
+
+2. 如果父类的某些方法在子类中被重写，那么在访问这些方法时，即使通过父类对象的引用，也会调用对应的被重写方法。这与 C++ 中的多态实现不同，在上述情况下，只有当相关方法被声明为虚函数（`virtual`）时才会调用被重写的方法。
 
 考虑一个例子。假设有一个“几何形状”的基类。它包含一个方法 `area()`，设计用于计算图形的面积。“shape”类的每个子类都重写了该方法，以计算相应几何图形的面积。
 
@@ -726,7 +717,7 @@ class Circle extends Figure
 class triangle extends figure
 {
     private double a, b, c;
-    public Triangle( double a, double b, double c)
+    public Triangle(double a, double b, double c)
     {
         this.a = a; this.b = b; this.c = c;
     }
@@ -748,21 +739,25 @@ public class FiguresPolymorphism
 }
 ```
 
-接口。Java 不允许一个类继承多个类。然而，存在多重继承的局限模拟形式，即“一个类实现多个接口”。函数式接口接近抽象类，但带有某些限制（只允许抽象方法和静态字段），但任何类都可以实现（作为继承的模拟）多个接口。
+## 接口
+
+Java 不允许一个类继承多个类。然而，存在多重继承的局限模拟形式，即“一个类实现多个接口”。函数式接口接近抽象类，但带有某些限制（只允许抽象方法和静态字段），但任何类都可以实现（作为继承的模拟）多个接口。
 
 对于接口的定义，使用以下语法：
 
-`interface interface_name [  extends list_of_interface_ancestors_names ]`
+`interface interface_name [extends list_of_interface_ancestors_names]`
 
-接口的所有方法隐式接收修饰符 `abstract public `，所有接口变量都是 `final static public` 修饰符，并且必须在声明时初始化。不允许在接口中使用特定的访问访问符。
+接口的所有方法隐式接收修饰符 `abstract public`，所有接口变量都是 `final static public` 修饰符，并且必须在声明时初始化。不允许在接口中使用特定的访问访问符。
 
 任何类都可以实现任意数量的接口。对于一个类，实现一个或多个接口，遵循以下语法：
 
-`[ access_spec ] class class_name [ extends superclass_name ] implements list_of_interface_names`
+`[access_spec] class class_name [extends superclass_name] implements list_of_interface_names`
 
 接口名称列表的元素用逗号分隔。如果类被声明实现某些接口，则它必须实现这些接口中声明的所有方法，或者该类必须是抽象类。
 
-接口引用。就像将类对象的引用转换为其父类对象的引用引用，，可以将此类引用转换为该类所实现的任何接口的引用。这种引用的行为与抽象类对象的引用行为完全一致。例如：
+### 接口引用
+
+就像将类对象的引用转换为其父类对象的引用一样，可以将此类引用转换为该类所实现的任何接口的引用。这种引用的行为与抽象类对象的引用行为完全一致。例如：
 
 ```java
 interface Ifc1
@@ -786,7 +781,7 @@ public class InterfRef
     public static void main(String args[])
     {
         MyClass m = new MyClass();
-        Ifc1 ir = m; 
+        Ifc1 ir = m;
         ir.f();
         ((Ifc2)m).g();
         Ifc2 ir2 = m;
@@ -795,16 +790,21 @@ public class InterfRef
 }
 ```
 
-使用继承和多态的指南。开发类时应构建层次结构：子类更私有，……抽象类是一个抽象实体，其细节未完全描述。不遵循这一原则会导致严重的设计错误，体现在类中，增加后续阶段设计的难度。
+## 使用继承和多态的指南
+
+开发类时应构建层次结构：子类更私有，……抽象类是一个抽象实体，其细节未完全描述。不遵循这一原则会导致严重的设计错误，体现在类中，增加后续阶段设计的难度。
 
 …… 尽管抽象类和接口之间存在明显的相似性，但通常它们的用途是有些不同的。……一种匹配抛出的异常对象的类型，或者其后继（不一定是直接后继）的类型。按照以下规则进行搜索：
 
-```markdown
 ## 5. 异常处理
 
-异常概念。异常提供了一种面向对象的机制用于处理程序运行期间的异常情况。与传统的错误处理方法（如返回特殊值或在 C 中使用 `setjmp()` 函数和 `longjmp()`）相比，这种机制允许以更简单、更符合概念的方式处理此类情况。
+### 异常概念
 
-抛出和处理异常。为了抛出异常，使用以下语法：
+异常提供了一种面向对象的机制用于处理程序运行期间的异常情况。与传统的错误处理方法（如返回特殊值或在 C 中使用 `setjmp()` 函数和 `longjmp()`）相比，这种机制允许以更简单、更符合概念的方式处理此类情况。
+
+### 抛出和处理异常
+
+为了抛出异常，使用以下语法：
 
 `throw exception object;`
 
@@ -815,39 +815,37 @@ try
 {
     exception-throwing-operators
 }
-catch ( exception_class_name variable_name)
+catch (exception_class_name variable_name)
 {
     exception_handler_body
 }
 ...
-[ finally
+[finally
 {
     operators
-} ]
+}]
 ```
 
+如果抛出异常的语句不在 `try` 块中，则该方法将退出并继续搜索。这一过程会在调用者方法中进行（可能会重复多次），直到调用该方法的其中一个语句位于 `try` 块中。
 
+处理器将在紧随该 `try` 块的 `catch` 块中进行搜索。
 
+如果未找到合适的处理器，搜索将继续在与外层 `try` 块相关的 `catch` 块中进行（在此也可能发生从一个或多个方法中退出）。
 
-如果抛出异常的语句不在 `try`-块中，则该方法将退出并继续搜索。这一过程会在调用者方法中进行（可能会重复多次），直到调用该方法的其中一个语句位于 `try` 块中。
+如果完全没有找到合适的处理器，异常将由默认处理器捕获，它会打印异常的描述、堆栈跟踪并结束程序运行。
 
-处理器将在紧随数据 `try`-块的 `catch` 块中进行搜索；
+如果找到了合适的处理器，则将执行它，异常对象将作为参数传递给处理器。在处理器执行结束时，控制将转移到紧邻处理完异常块的所有 `catch` 块之后的运算符。
 
-如果未找到合适的处理器，搜索 `Search` 将继续在与外层 `try` 块相关的 `catch` 块中进行（在此也可能发生从一个或多个方法中退出）；
-
-如果完全没有找到合适的处理器，异常将由默认处理器捕获，它会打印键的描述、堆栈跟踪并结束程序运行。
-
-如果找到了合适的处理器，则将执行它，异常对象将作为参数传递给处理器。在处理器执行结束时，控制将转移到紧邻处理完异常块的所有 `catch` 块之后的运算符 `torus`。
-
-子类异常处理器必须在被处理之前存在。父类异常处理器也是如此，否则所有此类异常将由父类异常处理器处理，导致代码中不可用。
+子类异常处理器必须在父类异常处理器之前存在。否则，所有此类异常将由父类异常处理器处理，导致代码中不可用。
 
 在 `finally` 运算符块处，该块的执行不取决于是否抛出了异常：
 
 - 如果发生异常并被处理，`finally` 块会在异常处理器后执行；
 - 如果未找到处理器，则 `finally` 块会在包含块内搜索处理器之前执行；
-- 如果通过运算符 `return` 完成 `try`-块的退出，则 `finally` 块将在退出方法之前执行。
+- 如果通过 `return` 运算符完成 `try` 块的退出，则 `finally` 块将在退出方法之前执行。
 
 ### 示例
+
 考虑一个对段落 3.11 中 `ra` 的改进示例。这个“整数栈”类的实现实现了对栈操作正确性的检查，并在发生错误时抛出 `vaet` 异常。
 
 ```java
@@ -855,13 +853,13 @@ catch ( exception_class_name variable_name)
 class IntStack
 {
     private final int MAXLEN = 64; // 栈的最大尺寸
-    private int s[] = new int [MAXLEN], size = 0;
+    private int s[] = new int[MAXLEN], size = 0;
 
     /** 获取栈的大小 */
     public int getSize() { return size; }
 
     /** 在栈中压入元素 */
-    public void push( int e)
+    public void push(int e)
     {
         if (size < MAXLEN) s[size++] = e;
         else
@@ -884,16 +882,20 @@ public class IntStackExample
     /** 从栈顶移除 n 个元素并打印到屏幕上 */
     static void popAndPrint(IntStack st, int n)
     {
-        for ( int i = 0; i < n; ++i) System.out.println(st.pop());
+        for (int i = 0; i < n; ++i) System.out.println(st.pop());
     }
 
     /** 程序入口 */
     public static void main(String args[])
     {
         IntStack st = new IntStack();
+
         try
         {
-            st.push(3); st.push(5); st.push(7); popAndPrint(st, four);
+            st.push(3);
+            st.push(5);
+            st.push(7);
+            popAndPrint(st, four);
         }
         catch (RuntimeException e)
         {
@@ -916,10 +918,12 @@ thrown out exception: java.lang.RuntimeException: AT stack No elements
 
 注意，通过多个方法“抛出”异常在它们处理过程中是典型的做法——异常在变得可能处理的上下文中被处理，而调用栈在不参与程序员参与的情况下进行“展开”。这一特性在许多方面决定了异常 `ny` 的巨大实用价值。
 
-异常的层次类和从方法中抛出异常。Java 中所有的异常对象都必须属于类本身，继承自 `Throwable` 类，该类有两个子类：`Exception` 和 `Error`。当发生严重错误时，JVM 会抛出 `Error` 类型的异常。按照规定，程序员不应处理此类异常：
+### 异常的层次类和从方法中抛出异常
+
+Java 中所有的异常对象都必须属于类本身，继承自 `Throwable` 类，该类有两个子类：`Exception` 和 `Error`。当发生严重错误时，JVM 会抛出 `Error` 类型的异常。按照规定，程序员不应处理此类异常：
 
 ```java
-catch(Exception e)
+catch (Exception e)
 {
     // ...
 }
@@ -927,9 +931,9 @@ catch(Exception e)
 
 关于异常有一个重要的特性，即 `Exception` 类及其子类的实例，但 `RuntimeException` 类及其子类除外。如果从方法中抛出此类异常，则其类型必须在头部中指定：
 
-`[access_spec] datatype method_name ( argument_list ) [throws list_of_class_exceptions_thrown_by_method]`
+`[access_spec] datatype method_name(argument_list) [throws list_of_class_exceptions_thrown_by_method]`
 
-否则，编译器将给出错误信息。这样做是为了引起程序员注意需要强制处理的异常情况。标准库中的异常相关的有：I/O 错误 ( `IOException` )、数据库访问错误 ( `SQLException` ) 以及其他。在抛出 `RuntimeException` 类及其子类实例的异常时，不需要特殊的声明。在库中，这些异常包括：
+否则，编译器将给出错误信息。这样做是为了引起程序员注意需要强制处理的异常情况。标准库中的异常相关的有：I/O 错误（`IOException`）、数据库访问错误（`SQLException`）以及其他。在抛出 `RuntimeException` 类及其子类实例的异常时，不需要特殊的声明。在库中，这些异常包括：
 
 - `ArithmeticException`：不可接受的算术运算
 - `IndexOutOfBoundsException`：访问数组不存在的元素
@@ -939,7 +943,9 @@ catch(Exception e)
 
 # 字符串
 
-`String` 类。`String` 类是存储和处理字符串的主要类。
+## `String` 类
+
+`String` 类是存储和处理字符串的主要类。
 
 创建 `String` 类的副本可以使用以下构造函数之一：
 
@@ -949,12 +955,11 @@ catch(Exception e)
 - `String(char[] arr)`
 - `String(char[] arr, int first, int count)`
 
-第一个创建一个空字符串，第二个和第三个将 `String` 和 `StringBuffer` 对象的的内容复制到创建的对象中。最后两个构造函数允许基于字符数组或其部分创建字符串。此外，任何类型为 `String` 的对象引用都可以通过分配字符串字面量来初始化：
+第一个创建一个空字符串，第二个和第三个将 `String` 和 `StringBuffer` 对象的内容复制到创建的对象中。最后两个构造函数允许基于字符数组或其部分创建字符串。此外，任何类型为 `String` 的对象引用都可以通过分配字符串字面量来初始化：
 
 ```java
 String filename = "data.txt";
 ```
-
 
 
 
@@ -982,7 +987,7 @@ s = s.toUpperCase();
 - `int indexOf(String subStr, int fromIndex)`: 从指定位置搜索子字符串的第一次出现的位置
 - `int lastIndexOf(String subStr)`: 从指定位置搜索子字符串的最后出现的位置
 - `int lastIndexOf(String subStr, int fromIndex)`: 从指定位置搜索子字符串的最后出现的位置
-- `String substring(int beginIndex, int endIndex)`: 接收子字符串（不包含索引 endIndex!）
+- `String substring(int beginIndex, int endIndex)`: 接收子字符串（不包含索引 `endIndex`!）
 - `String substring(int beginIndex)`: 获取尾部字符串
 - `String concat(String str)`: 字符串拼接
 - `String toUpperCase()`: 字符串转换为大写
@@ -1066,9 +1071,6 @@ System.out.println(p); // 屏幕输出结论：(2.0, 5.0)
 static String format(String format, Object... args)
 ```
 
-
-
-
 它接受一个格式字符串和任意数量的表达式，并将它们按照特定的格式字符串转换为格式化字符串。编写格式字符串的规则通常对应于 `C` 语言中 `printf()` 函数的编写规则。例如：
 
 ```java
@@ -1078,6 +1080,7 @@ System.out.println(String.format("%04d%4.1f", 25, 3.58));
 将输出 "0025 3.6"。
 
 ### StringBuffer 类
+
 `StringBuffer` 类设计用于处理可变字符串。该类的每个对象都包含一个缓冲区，用于存储字符串。当字符串发生变化时，缓冲区的大小可能会自动改变。
 
 在程序中并不总是需要使用 `StringBuffer` 类的对象，因为所有这些相同的操作都可以使用 `String` 类的对象来完成。然而，在某些情况下，使用 `StringBuffer` 类可以提高程序的效率，因为它允许我们避免重复复制修改过的字符串。
@@ -1086,24 +1089,25 @@ System.out.println(String.format("%04d%4.1f", 25, 3.58));
 
 - `StringBuffer()`
 - `int length()` 获取字符串长度
-- `char charAt( int index)` 提取字符
-- `char setCharAt( int index)` 修改字符
+- `char charAt(int index)` 提取字符
+- `char setCharAt(int index)` 修改字符
 - `StringBuffer append(String str)`
 - `StringBuffer append(int i)`
 - `StringBuffer append(Object obj)`
 - `. . .`
 - `StringBuffer insert(int index, String str)`
 - `StringBuffer delete(int beginIndex, int endIndex)`
-- `StringBuffer replace ( int beginIndex, int endIndex, String page)`
+- `StringBuffer replace(int beginIndex, int endIndex, String page)`
 
 在末尾添加字符串（对于所有基本类型和对象类型都有重载版本）
 在给定位置插入字符串
 删除子串
 将一个子串替换另一个
-`StringBuffer reverse( )` 反转字符串
+`StringBuffer reverse()` 反转字符串
 
 #### 表 6.4 `StringBuffer` 类方法
-- `StringBuffer( int capacity)`
+
+- `StringBuffer(int capacity)`
 - `StringBuffer(String str)`
 
 前两个创建一个从开始存储空字符串的对象。第一情况下缓冲区长度为 16，第二情况下为给定长度。第三个构造函数使用给定字符串初始化缓冲区。在这种情况下，缓冲区的大小设置为字符串的长度，并增加 16。
@@ -1126,9 +1130,9 @@ I/O 流。Java 中的输入/输出意味着流类。所有的流都分为字节�
 用于 I/O 的类放在 `java.io` 包中。
 
 ```java
-void write( int a ) throws IOException 向流中写入一个字节/字符
-void write( } a) throws IOException 从当前流写入数组内容
-void write( } [] a, int offset, int len) throws IOException 将数组的部分内容写入流
+void write(int a) throws IOException 向流中写入一个字节/字符
+void write(} a) throws IOException 从当前流写入数组内容
+void write(} [] a, int offset, int len) throws IOException 将数组的部分内容写入流
 void flush() throws IOException 重置缓冲区，刷新到流
 void close() throws IOException 关闭流
 ```
@@ -1137,10 +1141,10 @@ void close() throws IOException 关闭流
 
 ```java
 int read() throws IOException 从当前位置读取一个字节/字符（如果到达文件末尾则返回 -1）
-int read( } [] a) throws IOException 从流读取并填充数组内容（返回实际计数的字节/字符数）
-int read( } [] a, int offset, int len) throws IOException 从流读取并填充数组部分内容
+int read(} [] a) throws IOException 从流读取并填充数组内容（返回实际计数的字节/字符数）
+int read(} [] a, int offset, int len) throws IOException 从流读取并填充数组部分内容
 boolean ready() throws IOException 检查流中数据的可用性（如果方法返回 false，则后续对 `read()` 方法的调用将等待数据，并在接收到数据时才完成）。该方法仅由接口 `Reader` 定义！
-long skip( long n) throws IOException 跳过流中给定数量的字节/字符
+long skip(long n) throws IOException 跳过流中给定数量的字节/字符
 void close() throws IOException 关闭流
 ```
 
@@ -1160,10 +1164,6 @@ OutputStreamWriter(OutputStream out, String charSet)
 与文件相关的字符流。与文件相关的字符流用于处理文本文件。实际上，它们是字节流和执行转换的字符包装流的结合体。在这种情况下始终使用默认编码。
 
 这些流对应于 `FileReader` 和 `FileWriter` 类，具有以下构造函数：
-
-
-
-
 
 ```java
 FileReader(String filename) throws FileNotFoundException
@@ -1214,9 +1214,9 @@ BufferedWriter(Writer out)
 
 此外，缓冲输入字符流增加了方法
 
-```java
-String readLine() throws IOException
-```
+
+
+`String readLine() throws IOException`
 
 用于从输入符号流中读取一行。当到达文件末尾时，该方法返回 `null`。
 
@@ -1246,31 +1246,36 @@ BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 String s = in.readLine();
 ```
 
-**示例。**
+**示例**
 
-接下来的程序将输入文件中仅包含数字（由空格分隔）的行显示在输出文件中。输入和输出文件名通过命令行参数传递给程序。为了定义应该输出到输出文件的字符串，使用了正则表达式（参参见第 6.2 页）。
+接下来的程序将输入文件中仅包含数字（由空格分隔）的行显示在输出文件中。输入和输出文件名通过命令行参数传递给程序。为了定义应该输出到输出文件的字符串，使用了正则表达式（参见第 6.2 页）。
 
 ```java
 import java.io.*;
 
 class NumbersCopier {
+
     /** 程序入口 */
     public static void main(String args[]) {
         if (args.length != 2) {
             //
         }
+
         try {
             //
             System.out.println("程序调用方式错误");
             return;
+
             BufferedReader in = new BufferedReader(new FileReader(args[0]));
             PrintWriter out = new PrintWriter(args[1]);
             String s;
+
             while ((s = in.readLine()) != null) {
                 if (s.matches("[0-9]+")) {
                     out.println(s);
                 }
             }
+
             out.close();
             in.close();
         } catch (IOException e) {
@@ -1284,29 +1289,34 @@ class NumbersCopier {
 
 容器概述。容器是存储其他对象。它们在组织方式、执行基本操作（添加、提取和删除）的时间上有所不同，Java 中支持的容器可以分为三组：数组、集合和关联数组。数组在第 1.5 节中讨论过。它们的特征是创建后无法调整大小。Java 中的所有其他容器在添加和删除时都会动态改变大小。
 
-集合组最大的组。Java 中所有的集合类都是泛化类型（泛型）。泛化类型是一个类或接口，其泛参数是在创建对象时必须指定的类型名称。泛化类型类似于 C++ 模板，其设计初衷是为了确保在编译时对正确类型的控制。它们代表了一种非常灵活且复杂的机制，详细的考虑超出了本手册的范围。关于泛化类型的详细信息可以在文章找到。Java 集合类的参数是它们可以存储的对象类型（在此处及后续，该类型用字母 E 表示）。
+集合组最大的组。Java 中所有的集合类都是泛化类型（泛型）。泛化类型是一个类或接口，其泛参数是在创建对象时必须指定的类型名称。泛化类型类似于 C++ 模板，其设计初衷是为了确保在编译时对正确类型的控制。它们代表了一种非常灵活且复杂的机制，详细的考虑超出了本手册的范围。关于泛化类型的详细信息可以在文章找到。Java 集合类的参数是它们可以存储的对象类型（在此处及后续，该类型用字母 `E` 表示）。
 
-`Collection<E>` 接口。该接口的基本方法见表 8.1。它们都对应于这些实际上独立于集合类型的操作。常用的集合数量包括动态数组、双向链表、集合和有序集合。实现这些集合功能的类描述在第 8.3 页、 8.5 页。
+`Collection<E>` 接口。该接口的基本方法见表 8.1。它们都对应于这些实际上独立于集合类型的操作。常用的集合数量包括动态数组、双向链表、集合和有序集合。实现这些集合功能的类描述在第 8.3 页、第 8.5 页。
 
-关联数组（也使用“字典”和“显示映射”术语）比集合更复杂的数据类型。实际上它们表现为数组，使用如下：- 在集合中添加元素（成功时返回 true） `boolean remove(Object o)` 从集合中删除元素 `boolean contains(Object o)` 验证集合是否包含元素 `int size()` 获取集合中的元素数量 `boolean isEmpty()` 检查集合是否为空 `boolean equals(Object o)` 比较集合的相等性 `Iterator<E> iterator()` 获取集合的迭代器 `Object[] toArray()` 将集合内容按照迭代器的顺序复制到数组中
+关联数组（也使用“字典”和“显示映射”术语）比集合更复杂的数据类型。实际上它们表现为数组，使用如下：
 
-
-
-
+- 在集合中添加元素（成功时返回 `true`）。
+- `boolean remove(Object o)`：从集合中删除元素。
+- `boolean contains(Object o)`：验证集合是否包含元素。
+- `int size()`：获取集合中的元素数量。
+- `boolean isEmpty()`：检查集合是否为空。
+- `boolean equals(Object o)`：比较集合的相等性。
+- `Iterator<E> iterator()`：获取集合的迭代器。
+- `Object[] toArray()`：将集合内容按照迭代器的顺序复制到数组中。
 
 ## 表 8.1. `Collection<E>` 主要接口方法
 
-包含任意对象而非索引。它们在 P. 8.6 中详细描述。
+包含任意对象而非索引。它们在第 8.6 页中详细描述。
 
-## 迭代器 (Iterators)
+## 迭代器（Iterators）
 
 迭代器用于按某种顺序遍历集合。使用迭代器是遍历集合所有元素的最快方法。迭代器类实现了 `Iterator<E>` 接口，该接口定义了三个方法：`hasNext()`、`next()` 和 `remove()`。
 
 通过调用相应集合对象的 `iterator()` 方法可以获取迭代器。初始时，迭代器设置在第一个元素之前。每次调用方法：
 
-![](img/image00401.jpeg)
+![迭代器示意图](img/image00401.jpeg)
 
-```
+```java
 E next()
 ```
 
@@ -1324,10 +1334,11 @@ void remove()
 
 仅允许在调用 `next()` 方法后调用一次 `remove()` 方法。在其他情况下，或者在完全没有调用 `next()` 的情况下，抛出类似 `IllegalStateException` 的异常。
 
-以下质量示例考虑了使用迭代器输出包含 `MyClass` 类型元素集合的用法：
+以下示例考虑了使用迭代器输出包含 `MyClass` 类型元素集合的用法：
 
 ```java
-for (Iterator<MyClass> it = collection.iterator(); it.hasNext(); ) System.out.println(it.next());
+for (Iterator<MyClass> it = collection.iterator(); it.hasNext(); )
+    System.out.println(it.next());
 ```
 
 对于集合（以及数组），还有另一种可选方案，用于循环：
@@ -1339,79 +1350,107 @@ for ([ type of data ] variable : collection)
 它按照 `iterator` 指定的顺序遍历集合内容（对于数组，是从第一个元素到最后一个元素的顺序），而循环头中指定的变量将紧跟指向集合上元素的赋值链接。例如：
 
 ```java
-for(MyClass e : collection) System.out.println(e);
+for (MyClass e : collection)
+    System.out.println(e);
 ```
 
-## 列表与动态数组 (Lists and dynamic arrays)
+## 列表与动态数组（Lists and dynamic arrays）
 
-列表和动态数组——这些是按给定顺序包含任意元素的集合。此类集合中元素的顺序由它们的索引决定，如下与普通数组相同。所有提供此类集合性质功能的类都实现了 `List<E>` 接口（`Collection<E>` 的子接口），其方法见表 [8.2]。
+列表和动态数组——这些是按给定顺序包含任意元素的集合。此类集合中元素的顺序由它们的索引决定，如下与普通数组相同。所有提供此类集合性质功能的类都实现了 `List<E>` 接口（`Collection<E>` 的子接口），其方法见表 8.2。
 
 对于所考虑的集合，定义在接口 `Collection<E>` 中的 `add()` 方法在集合末尾执行插入，而 `remove()` 方法删除指定元素的首次出现项。
 
 标准库包含以下按给定顺序包含任意元素的集合：`LinkedList<E>`、`ArrayList<E>` 和 `Vector<E>`。
 
-`LinkedList<E>` 类是以双向链表形式组织的集合。它提供了按 O(N) 时间复杂度根据索引获取元素，还提供了按 O(1) 时间复杂度在迭代器位置插入和删除元素。
+### `LinkedList<E>`
+
+`LinkedList<E>` 类是以双向链表形式组织的集合。它提供了按 `O(N)` 时间复杂度根据索引获取元素，还提供了按 `O(1)` 时间复杂度在迭代器位置插入和删除元素。
 
 为了创建 `LinkedList<E>` 类的副本，可以使用构造函数：
 
 ```java
 void add(int index, E element) // 在指定位置添加元素
+
 E get(int index) // 根据索引获取元素
+
 E set(int index, E element) // 根据索引更改元素（返回旧元素）
+
 E remove(int index) // 根据索引删除元素（返回被删除的副本）
+
 int indexOf(Object o)
+
 int lastIndexOf(Object o)
+
 ListIterator<E> listIterator()
+
 ListIterator<E> listIterator(int index) // 搜索第一个/最后一个元素（如果失败，则返回 -1）
+
 // 接收在给定元素列表开始建立的列表迭代器
+
 LinkedList()
+
 LinkedList(Collection<? extends E> c)
 ```
 
 除了 `List<E>` 接口中声明的方法外，`LinkedList<E>` 类还提供了插入、获取和删除列表第一个和最后一个元素的方法：
 
 ```java
-void addFirst(Eo)
-void addLast(Eo)
+void addFirst(E o)
+
+void addLast(E o)
+
 E getFirst()
+
 E getLast()
+
 E removeFirst()
+
 E removeLast()
 ```
 
-它们工作的时间复杂度均为 O(1)。`ArrayList<E>` 类表示自己组织为变大小数组的集合。此类数组具有某些初始大小（默认 10），在必要时可以增长。它们以 O(1) 的复杂度通过索引获取元素。插入和删除元素需要 O(N)。为了创建 `ArrayList<E>` 类的副本，使用了：
+它们工作的时间复杂度均为 `O(1)`。
+
+### `ArrayList<E>`
+
+`ArrayList<E>` 类表示自己组织为变大小数组的集合。此类数组具有某些初始大小（默认 10），在必要时可以增长。它们以 `O(1)` 的复杂度通过索引获取元素。插入和删除元素需要 `O(N)`。为了创建 `ArrayList<E>` 类的副本，使用了：
 
 ```java
 ArrayList()
+
 ArrayList(Collection<? extends E> c)
+
 ArrayList(int capacity)
 ```
 
-`ArrayList<E>` 类表示自己组织为变大小数组的集合。此类数组具有某些初始大小（默认 10），在必要时可以增长。它们以 O(1) 的复杂度通过索引获取元素。插入和删除元素需要 O(N)。为了创建 `ArrayList<E>` 类的副本，使用了：
+`ArrayList<E>` 类表示自己组织为变大小数组的集合。此类数组具有某些初始大小（默认 10），在必要时可以增长。它们以 `O(1)` 的复杂度通过索引获取元素。插入和删除元素需要 `O(N)`。为了创建 `ArrayList<E>` 类的副本，使用了：
 
 ```java
 ArrayList()
+
 ArrayList(Collection<? extends E> c)
+
 ArrayList(int capacity)
 ```
 
-`ArrayList<E>` 类表示自己组织为变大小数组的集合。此类数组具有某些初始大小（默认 10），在必要时可以增长。它们以 O(1) 的复杂度通过索引获取元素。插入和删除元素需要 O(N)。为了创建 `ArrayList<E>` 类的副本，使用了：
+`ArrayList<E>` 类表示自己组织为变大小数组的集合。此类数组具有某些初始大小（默认 10），在必要时可以增长。它们以 `O(1)` 的复杂度通过索引获取元素。插入和删除元素需要 `O(N)`。为了创建 `ArrayList<E>` 类的副本，使用了：
 
 ```java
 ArrayList()
+
 ArrayList(Collection<? extends E> c)
+
 ArrayList(int capacity)
 ```
 
-## 对象的排序 (Ordering of objects)
+## 对象的排序（Ordering of objects）
 
-根据特定的比较操作对对象进行排序的方法在 Java 中称为自然排序（natural-ordering）。每个类最多定义一种自然排序方式。另一种排序方法是定义一个外部类（比较），其对象将实现所需类对象的比较。Comparator 类必须实现 `Comparator<T>` 接口，其中参数 T 定义了由此比较器比较的对象类型。Comparator<T> 接口定义了方法：
+根据特定的比较操作对对象进行排序的方法在 Java 中称为自然排序（natural-ordering）。每个类最多定义一种自然排序方式。另一种排序方法是定义一个外部类（比较器），其对象将实现所需类对象的比较。`Comparator` 类必须实现 `Comparator<T>` 接口，其中参数 `T` 定义了由此比较器比较的对象类型。`Comparator<T>` 接口定义了方法：
 
 ```java
 int compare(T obj)
 ```
 
-Java 有两种标准方法来定义此类操作。在第一种，需要排序的对象类实现 `Comparable<T>` 接口。类型参数 T 必须替换为实现类的类名称。例如，如果有一个具有两个实部 re 和 im 字段的“复数”类，并且按照对应复数的模的升序或降序对该类对象进行排序，则 `compareTo` 操作可以定义如下：这种方式：
+Java 有两种标准方法来定义此类操作。在第一种，需要排序的对象类实现 `Comparable<T>` 接口。类型参数 `T` 必须替换为实现类的类名称。例如，如果有一个具有两个实部 `re` 和 `im` 字段的“复数”类，并且按照对应复数的模的升序或降序对该类对象进行排序，则 `compareTo` 操作可以定义如下：
 
 ```java
 class MyClass implements Comparable<MyClass>
@@ -1419,12 +1458,7 @@ class MyClass implements Comparable<MyClass>
 int compareTo(T obj)
 ```
 
-它应该比较调用此方法的对象（this）与传递给此方法的对象，如果此对象大于 obj，则返回一个小于零的值；如果 this.equals(obj) 为 true，则返回零；如果 obj 对象大于此对象，则返回大于零的值。“大于”关系本身可以是任意的，并对应于排序的标准。
-
-
-
-
-
+它应该比较调用此方法的对象（`this`）与传递给此方法的对象；如果此对象大于 `obj`，则返回一个小于零的值；如果 `this.equals(obj)` 为 `true`，则返回零；如果 `obj` 对象大于此对象，则返回大于零的值。“大于”关系本身可以是任意的，并对应于排序的标准。
 
 ```java
 int compare(T o1, T o2)
@@ -1437,20 +1471,20 @@ int compare(T o1, T o2)
 因此，在上面的示例中，与其使用 `compareTo()` 方法，你可以通过以下方式实现 `comparator`：
 
 ```java
-class ComplexNumberLenComp implements Comparator<ComplexNumber>
-{
-    public int compare(ComplexNumber c1, ComplexNumber c2)
-    {
+class ComplexNumberLenComp implements Comparator<ComplexNumber> {
+
+    public int compare(ComplexNumber c1, ComplexNumber c2) {
         double diff = (c1.re * c1.re + c1.im * c1.im)
-        - (c2.re * c2.re + c2.im * c2.im);
-        return ( int )(Math.sign(diff));
+                    - (c2.re * c2.re + c2.im * c2.im);
+
+        return (int) (Math.sign(diff));
     }
 }
 ```
 
 很明显，对于一个类，可以定义任意数量的比较器，因此该方法通常用于程序对对象使用不同排序标准的情况。
 
-许多标准容器处理算法以及自容器都要求你定义对象如何排序。在 P 中介绍了在存储研究机构和处理导入数据时使用多种排序方法的示例。8.8。
+许多标准容器处理算法以及自容器都要求你定义对象如何排序。在第 8.8 页介绍了在存储研究机构和处理导入数据时使用多种排序方法的示例。
 
 ### 集合与有序集合
 
@@ -1460,74 +1494,101 @@ class ComplexNumberLenComp implements Comparator<ComplexNumber>
 
 ```java
 HashSet()
+
 HashSet(Collection<? extends E> c)
 ```
 
-集合由 `SortedSet` 接口表示，并使用 `TreeSet<E>` 类实现它。后者使用平衡二叉树进行存储，这可以保证迭代器按升序遍历集合的顺序。添加、删除和检查元素出现的操作的时间复杂度为 O log N)。
+集合由 `SortedSet` 接口表示，并使用 `TreeSet<E>` 类实现它。后者使用平衡二叉树进行存储，这可以保证迭代器按升序遍历集合的顺序。添加、删除和检查元素出现的操作的时间复杂度为 `O(log N)`。
 
 创建副本类 `TreeSet<E>` 使用以下构造函数：
 
 ```java
 TreeSet()
+
 TreeSet(Collection<? extends E> c)
+
 TreeSet(SortedSet<E> s)
+
 TreeSet(Comparator<? super E> c)
 ```
 
-其中最后一个允许你根据构造函数中比较器确定的任意顺序创建集合（见第 [8.4] 节）。在所有其他情况下，集合的排序按照自然顺序进行。在这种情况下，元素类必须实现 `Comparable<T>` 接口。
+其中最后一个允许你根据构造函数中比较器确定的任意顺序创建集合（见第 8.4 节）。在所有其他情况下，集合的排序按照自然顺序进行。在这种情况下，元素类必须实现 `Comparable<T>` 接口。
 
 ### 关联数组
 
-正如前面提到的，关联数组可以被认为是使用任意对象代替索引的数组。我们可以假设它们将一个键对象集合归约化为一个值对象集合。它们并不是传统意义上的集合，因为它们没有实现 `Collection<E>` 接口。它被 `Map<K, V>` 接口取代，该接口有两个选项。第一个定义了关联数组的键的数据类型，第二个是其值的类型。基本接口方法 `Map<K, V>` 见表 [8.3]。
+正如前面提到的，关联数组可以被认为是使用任意对象代替索引的数组。我们可以假设它们将一个键对象集合归约化为一个值对象集合。它们并不是传统意义上的集合，因为它们没有实现 `Collection<E>` 接口。它被 `Map<K, V>` 接口取代，该接口有两个选项。第一个定义了关联数组的键的数据类型，第二个是其值的类型。基本接口方法 `Map<K, V>` 见表 8.3。
 
-关联数组用于存储集合容器的对。因此，两者的层次结构和属性都是匹配的：类 `HashSet` 和 `TreeSet`分别对应类 `HashMap` 和 `TreeMap`，接口 `SortedSet` 对应接口 `SortedMap`。关联列表主要操作的执行时间与其相关的集合相同。
+关联数组用于存储集合容器的对。因此，两者的层次结构和属性都是匹配的：类 `HashSet` 和 `TreeSet` 分别对应类 `HashMap` 和 `TreeMap`，接口 `SortedSet` 对应接口 `SortedMap`。关联列表主要操作的执行时间与其相关的集合相同。
 
 关联列表没有自己的迭代器。它们的遍历使用通过 `keySet()` 方法返回的键的集合迭代器。以下代码段演示了关联数组的使用：
 
 ```java
 V put(K key, V value) // 添加键值对（返回与键关联的旧值，如果该键不存在则返回 null）
+
 V get(Object key) // 获取值（如果键不在关联数组中则返回 null）
+
 V remove(Object key) // 删除键值对（返回被删除的键值）
+
 boolean containsKey(Object key) // 检查关联数组是否包含该键
+
 int size() // 获取关联数组的大小
+
 void clear() // 清空关联数组
+
 boolean isEmpty() // 检查关联数组是否为空
+
 Set<K> keySet() // 获取键集合
 ```
 
-表 8.3. `Map<K, V>` 的主要方法
+## 表 8.3. `Map<K, V>` 的主要方法
 
 ```java
 TreeMap<String, String> capitals = new TreeMap<String, String>();
+
 capitals.put("Russia", "Moscow");
+
 capitals.put("France", "Paris");
+
 capitals.put("Italy", "London"); // 不正确
+
 capitals.put("Italy", "Rome"); // 修正
+```
+
+
+
+```java
 System.out.println("Capital Italy: " + capitals.get("Italy"));
 
-for (String s : capitals.keySet()) System.out.println(s + ": " + capitals.get(s));
+for (String s : capitals.keySet()) {
+    System.out.println(s + ": " + capitals.get(s));
+}
 ```
 
 ### 继承（遗留）类
 
-除了 `ArrayList<E>`、`HashSet<E>` 和 `HashMap<E>` 之外，还有功能类似的类 `Vector<E>`、`Hashtable<E>` 和 `Dictionary<E>`。这些是所谓的遗留类（legacy classes）。它们的主要目的是提供向后兼容。尽管它们不被视为已过用，但在新程序可能最好避免它们。
+除了 `ArrayList<E>`、`HashSet<E>` 和 `HashMap<E>` 之外，还有功能类似的类 `Vector<E>`、`Hashtable<E>` 和 `Dictionary<E>`。这些是所谓的遗留类（legacy classes）。它们的主要目的是提供向后兼容。尽管它们不被视为已过用，但在新程序中最好避免使用它们。
 
 ```java
 E max(Collection<? extends E> coll)
+
 E max(Collection<? extends E> coll, Comparator<? super T> comp)
+
 E min(Collection<? extends E> coll)
+
 E min(Collection<? extends E> coll, Comparator<? super T> comp)
+
 void sort(List<T> list)
+
 void sort(List<T> list, Comparator super super T> c)
+
 int binarySearch(List<? extends T> list, T key)
+
 int binarySearch(List<? extends T> list, T key, Comparator<? super T> c)
+
 Collection<T> unmodifiableCollection(Collection<? extends T> c)
+
 List<T> unmodifiableList(List<? extends T> c)
 ```
-
-
-
-
 
 特别注意工厂方法，它们会返回不可变的容器包装器（`unmodifiableCollection()`、`unmodifiableList()` 等）。这些方法返回一个实现相应类型容器接口的对象。在使用返回对象进行估计和获取值的方法时，后者的表现方式与原始对象完全相同。当尝试调用任何容器修改方法时，会抛出 `UnsupportedOperationException` 类型的异常。
 
@@ -1535,82 +1596,134 @@ List<T> unmodifiableList(List<? extends T> c)
 
 ```java
 void sort(int[] a) // Sorting array
+
 void sort(T[] a, Comparator<? super T> c)
+
 int binarySearch(int[] a, int key)
+
 int binarySearch(T[] a, T key, Comparator<? super T> c) // 对对象数组进行排序，使用指定的比较器
 
 // 在引用行数组中查找元素索引的二分查找。如果未找到元素，则返回一个等于（元素应该插入的位置减去 1）的值。
+
 boolean equals(int[] a, int[] a2) // 数组的相等性比较
+
 void fill(int[] a, int val) // 给给定数组的所有元素赋值
+
 List<T> asList(T[] a)
+
 List<T> asList(t...a) // 数组/集合转换为列表
 
 import java.util.*;
 
 /** 类 "问卷数据人类" */
+
 class person implements Comparable<Person> {
+
     /** 用于接收的数据字段和方法 */
+
     private String name;
+
     public String getName() { return name; }
+
     private int age;
+
     public int getAge() { return age; }
 
     /** 构造函数 */
+
     public Person(String name, int age) {
+
         this.name = name;
+
         this.age = age;
+
     }
 
     /** 将对象转换为字符串 */
+
     public String toString() {
+
         return name + " (" + age + ")";
+
     }
 
     /** 等等性比较对象 */
+
     public boolean equals(Object obj) {
+
         if (!(obj instanceof Person))
+
             return false;
+
         return ((Person)obj).name.equals(name) && ((Person)obj).age == age;
+
     }
 
     /** 获取哈希码对象 */
+
     public int hashCode() {
+
         return name.hashCode() + age;
+
     }
 
     /** 姓名的比较对象 */
+
     public int compareTo(Person p) {
+
         return name.compareTo(p.name);
+
     }
+
 }
 
 /** 类 "用于年龄比较的比较器" */
+
 class PersonAgeComparator implements Comparator<Person> {
+
     public int compare(Person p1, Person p2) {
+
         return p1.getAge() - p2.getAge();
+
     }
+
 }
 
 public class PersonsSortExample {
-    public static void main(String[] args[]) {
+
+    public static void main(String[] args) {
+
         TreeSet<Person> data = new TreeSet<Person>();
+
         data.add(new Person("Petrov", 31));
+
         data.add(new Person("Ivanov", 45));
+
         data.add(new Person("Smirnov", 20));
+
         data.add(new Person("Smirnov", twenty)); // 此元素已存在
+
         System.out.println(data); // 结论：按姓排序
 
         // 将集合的内容复制到列表
+
         ArrayList<Person> data2 = new ArrayList<Person>(data);
+
         Collections.sort(data2, new PersonAgeComparator());
+
         System.out.println(data2); // 输出：按年龄排序
+
     }
+
 }
 ```
 
 这些程序的结论如下：
+
+```text
 [Ivanov (45) Petrov (31), Smirnov (twenty)]
 [Smirnov (twenty), Petrov (31), Ivanov (45)]
+```
 
 # 9. 多线程编程
 
@@ -1632,6 +1745,7 @@ void start()
 
 ```java
 static void sleep(long millis) throws InterruptedException
+
 void join() throws InterruptedException
 ```
 
@@ -1639,12 +1753,19 @@ void join() throws InterruptedException
 
 ```java
 void run() // 流的入口
+
 void start() // 启动流
+
 void isAlive() // 检查流是否结束
+
 void interrupt() // 设置中断标记
+
 boolean isInterrupted() // 获取中断标记状态
+
 void setPriority(int newPriority) // 修改流优先级
+
 int getPriority() // 流优先级
+
 void setDaemon(boolean on) // 设置守护线程流
 ```
 
@@ -1652,21 +1773,23 @@ void setDaemon(boolean on) // 设置守护线程流
 if (!somethingHappened) yield();
 ```
 
+有时有必要提前终止线程，并可能在未来恢复其执行。为了此，在 `Thread` 类中引入了 `stop()`、`suspend()` 和 `resume()` 方法，但后来它们被认为是不安全的，因为它们允许在停止线程之前执行诸如（例如）释放指定资源等操作，因此可能导致程序挂起或运行异常。在新程序中不应使用这些方法。
 
+控制流的另一种方法是使用 `Thread` 类的特殊标志位 `interrupted`。为了中断当前执行流，使用了 `setInterrupted()` 方法。如果此时流处于挂起状态（调用了 `sleep()`、`join()` 等方法），则它将恢复工作，相应的方法抛出处会抛出一个异常。否则，将设置特殊标志位 `interrupted`。
 
-
-有时有必要提前终止线程，并可能在未来恢复其执行。为了此，在 `Thread` 类中引入了 `stop()`、`suspend()` 和 `resume()` 方法，但后来它们被认为是不安全的，因为它们允许在停止线程之前执行诸如（例如）释放指定资源等操作，因此可能导致程序挂起或运行异常。在新程序中不应使用这些方法。控制流的另一种方法是使用 `Thread` 类的特殊标志位 `interrupted`。为了中断当前执行流，使用了 `setInterrupted()` 方法。如果此时流处于挂起状态（调用了 `sleep()`、`join()` 等方法），则它将恢复工作，相应的方法抛出处会抛出一个异常。否则，将设置特殊标志位 `interrupted`。线程必须通过调用 `isInterrupted()` 方法自行检查该标志位状态，并在已安装了 `interrupted` 标志位（即它被设置为 true）的情况下终止工作，例如：
+线程必须通过调用 `isInterrupted()` 方法自行检查该标志位状态，并在已安装了 `interrupted` 标志位（即它被设置为 `true`）的情况下终止工作，例如：
 
 ```java
 void run()
 {
-    boolean done = false ;
+    boolean done = false;
+
     while (!done)  // 主循环流
     {
         if (isInterrupted())
         {
             // 执行最后的动作
-            return ;
+            return;
         }
     }
 }
@@ -1678,48 +1801,82 @@ void run()
 
 ```java
 class helloThread extends Thread {
+
     /** 流的入口点 */
+
     public void run() {
+
         System.out.println("Hello, world!");
+
         try {
+
             sleep(1000);
+
         } catch(InterruptedException e) {
+
             System.err.println("线程 MyHelloThread 被中断了");
+
         }
+
     }
+
 }
 
 public class SimpleThreadsExample {
+
     public static void main(String args[]) {
+
         Thread t = new HelloThread(); t.start();  // 启动流
+
         try {
+
             t.join();  // 等待流完成
+
         } catch (InterruptedException e) {
+
             System.err.println("主流被中断");
+
         }
+
         System.out.println("线程 MyHelloThread 结束");
+
     }
+
 }
 ```
 
-`runnable` 接口。有时需要向已有的类添加 `Thread` 类的功能。为了实现对 `Thread` 类的继承是不允许的，因为该类已经是其他类的子类。在这种情况下，可以使用 `Runnable` 接口。该接口只定义了一个方法 `void run()`，与线程类中的同名方法相似。
+### `Runnable` 接口
 
-实现 `runnable` 接口的类如下方式使用：创建该类的实例，并将其传递给线程类的构造函数：
+有时需要向已有的类添加 `Thread` 类的功能。为了实现对 `Thread` 类的继承是不允许的，因为该类已经是其他类的子类。在这种情况下，可以使用 `Runnable` 接口。该接口只定义了一个方法 `void run()`，与线程类中的同名方法相似。
+
+实现 `Runnable` 接口的类如下方式使用：创建该类的实例，并将其传递给线程类的构造函数：
+
 `MyRunnableClass r = new MyRunnableClass(); Thread t = new Thread(r); t.start();`
 
 有时将 `Thread` 类对象直接放置在实现 `Runnable` 接口的类内部，并在类的构造函数中初始化：
 
 ```java
 class MyRunnableClass implements runnable {
+
     private Thread thread;
+
     /** 构造函数：创建一个 Thread 类对象并启动它 */
+
     public MyThread() {
-        thread = new Thread( this ); thread.start();
+
+        thread = new Thread(this);
+        thread.start();
+
     }
+
     /** 流的入口点 */
+
     public void run() {
+
         // . . .
+
     }
+
 }
 ```
 
@@ -1731,63 +1888,109 @@ class MyRunnableClass implements runnable {
 
 ```java
 class MyThread extends Thread {
+
     /** 构造函数（保存流名并启动流） */
-    public MyThread(String name) { super (name); start(); }
-    /** 流的入口点 */
-    public void run() {
-        try {
-        }
-        System.out.print("["); Thread.sleep(1); System.out.print(getName()); Thread.sleep(1); System.out.print("]");
-    } catch(InterruptedException e) {
-        System.err.println("线程 " + getName() + " 被中断");
+
+    public MyThread(String name) {
+        super(name);
+        start();
     }
+
+    /** 流的入口点 */
+
+    public void run() {
+
+        try {
+
+        }
+
+        System.out.print("[");
+        Thread.sleep(1);
+        System.out.print(getName());
+        Thread.sleep(1);
+        System.out.print("]");
+
+        } catch(InterruptedException e) {
+
+            System.err.println("线程 " + getName() + " 被中断");
+
+        }
+
+    }
+
 }
 
 public class SyncExample {
+
     public static void main(String[] args) {
-        for ( int i = 0; i < ten; ++i)
+
+        for (int i = 0; i < ten; ++i)
+
             new MyThread(String.valueOf(i));
+
     }
+
 }
 ```
 
 这个示例创建了 10 个线程，每个线程向控制台输出其方括号内的数字并终止。该程序的输出示例：
+
 `[[[[[[[[[1[4320586]79]]]]]]]]]`
 
-因为所有流都同时使用同一个对象（`System.out`），所以不同流的输出结果会混合在一起。并不难让你理解这种状况，即类似对象的联合使用可能会导致错误。还应该考虑到，由于流之间的时间分布具有非确定性特征，因此错误可能不会在每个程序启动时出现，这增加了发现它们的复杂性。在示例中，如果在如果在上面的示例中去掉 ( sleep )，这种效果几乎永远不会发生。
+因为所有流都同时使用同一个对象（`System.out`），所以不同流的输出结果会混合在一起。并不难让你理解这种状况，即类似对象的联合使用可能会导致错误。
 
-同步的核心概念是监视器（monitor）。监视器是一个（隐式的）对象，用于互斥阻塞。在 Java 中，每个对象最初都有自己的监视器。当一个线程进入监视器时，会检查相应的块。如果此时另一个线程尝试进入同一个监视器，它将暂停直到第一个线程出来。Java 中有两种同步类型：同步方法和同步块。
+还应该考虑到，由于流之间的时间分布具有非确定性特征，因此错误可能不会在每个程序启动时出现，这增加了发现它们的复杂性。在示例中，如果在上面的示例中去掉（`sleep`），这种效果几乎永远不会发生。
+
+同步的核心概念是监视器（monitor）。监视器是一个（隐式的）对象，用于互斥阻塞。在 Java 中，每个对象最初都有自己的监视器。当一个线程进入监视器时，会检查相应的块。如果此时另一个线程尝试进入同一个监视器，它将暂停直到第一个线程出来。
+
+Java 中有两种同步类型：同步方法和同步块。
 
 要使一个方法同步，只需在它的头部添加 `synchronized` 关键字即可。同步块（有时称为临界区）具有如下语法：
 
 ```java
 synchronized (object_name) {
+
     // . . .
+
 }
 ```
 
-特别是在给出的示例中，将 try 内容放在同步块中：
+特别是在给出的示例中，将 `try` 内容放在同步块中：
 
 ```java
 synchronized (System.in) {
-    System.out.print("["); Thread.sleep(1); System.out.print(getName()); Thread.sleep(1); System.out.print("]");
+
+    System.out.print("[");
+    Thread.sleep(1);
+    System.out.print(getName());
+    Thread.sleep(1);
+    System.out.print("]");
+
 }
 ```
 
-在这种情况下，进入 `System.in` 对象监视器的线程首先，挂起所有尝试进入同一个监视器的线程，只有在它完全完成结论后才释放监视器。然后监视器包含下一个流并继续。
-
-# 10. 数据库数据访问技术 JDBC 架构。JDBC 是 Java 应用程序的平台无关数据库访问技术。它提供了一组数据访问接口，Java 应用程序通过它们与外部数据库驱动程序交互，并提供了集成这些外部驱动程序到 Java 中的工具。
 
 
 
-这种方法足够灵活，因为 Java 应用程序不需要与数据库（DB）的交互细节分离。数据库只需要提供某些 `JDBC` 接口的实现即可，以便与 Java 应用程序兼容。
+在这种情况下，首先进入`System.in`对象监视器的线程会挂起所有尝试进入同一个监视器的线程，只有在它完全完成结论后才释放监视器。然后监视器包含下一个流并继续。
 
-`JDBC` 类和接口托管在 `java.sql` 包中。关于 `JDBC` 技术的更多信息可以在书籍中找到 [4, 5]。
+# 10. 数据库数据访问技术：JDBC 架构
 
-### 数据库驱动程序
-要连接到数据库，我们必须首先加载与所用数据库对应的驱动程序。Java 的标准发行仅包含这样一个驱动程序 - `JDBC-ODBC` 桥接。该驱动程序桥接了 `JDBC` 接口与连接 Microsoft 数据库的标准接口 `ODBC`（开放数据库连接）。这种方法虽然足够但通通用，因为对于大多数数据库都有相应的 ODBC 驱动。然而，首选的连接方式仍然被认为是使用特定数据库的 `JDBC` 驱动，因为此类驱动通常比 `JDBC-ODBC Bridge` 功能更强、速度更快。此外它们还可以提供跨平台的应用程序变性（使用 `ODBC` 通常只能在 MS Windows 上使用）。`JDBC` 驱动可以在大多数现有 DBMS 的交付中找到，或者通过互联网地址找到：
+`JDBC` 是 Java 应用程序的平台无关数据库访问技术。它提供了一组数据访问接口，Java 应用程序通过它们与外部数据库驱动程序交互，并提供了集成这些外部驱动程序到 Java 中的工具。
 
-`JDBC` 驱动通常以 `jar` 归档的形式提供，必须放在 `CLASSPATH` 列出的任何目录中（cm. P. 3.9），以便 `JVM` 找到所需的驱动程序。
+这种方法足够灵活，因为 Java 应用程序不需要与数据库（DB）的交互细节分离。数据库只需要提供某些`JDBC`接口的实现即可，以便与 Java 应用程序兼容。
+
+`JDBC` 类和接口托管在`java.sql`包中。关于`JDBC`技术的更多信息可以在书籍中找到[4, 5]。
+
+## 数据库驱动程序
+
+要连接到数据库，我们必须首先加载与所用数据库对应的驱动程序。Java 的标准发行仅包含这样一个驱动程序——`JDBC-ODBC`桥接。该驱动程序桥接了`JDBC`接口与连接 Microsoft 数据库的标准接口`ODBC`（开放数据库连接）。
+
+这种方法虽然足够但通用，因为对于大多数数据库都有相应的`ODBC`驱动。然而，首选的连接方式仍然被认为是使用特定数据库的`JDBC`驱动，因为此类驱动通常比`JDBC-ODBC Bridge`功能更强、速度更快。此外，它们还可以提供跨平台的应用程序变性（使用`ODBC`通常只能在 MS Windows 上使用）。
+
+`JDBC`驱动可以在大多数现有 DBMS 的交付中找到，或者通过互联网地址找到。
+
+`JDBC`驱动通常以`jar`归档的形式提供，必须放在`CLASSPATH`列出的任何目录中（参见第 3.9 节），以便`JVM`找到所需的驱动程序。
 
 加载驱动程序通过调用类静态方法完成：
 
@@ -1799,13 +2002,15 @@ static class forName(String classname) throws ClassNotFoundException
 
 ```java
 Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");  // ODBC-JDBC 桥接驱动
+
 Class.forName("com.mysql.jdbc.Driver");  // MySQL Connector/J 驱动
 ```
 
-在无法下载驱动的情况下，将抛出 `classNotFoundException` 。
+在无法下载驱动的情况下，将抛出`classNotFoundException`。
 
-### 连接基础数据
-连接基础数据对应于实现 `connection` 接口的对象类。
+## 连接基础数据
+
+连接基础数据对应于实现`connection`接口的对象类。
 
 创建这些对象使用了静态方法：
 
@@ -1813,42 +2018,51 @@ Class.forName("com.mysql.jdbc.Driver");  // MySQL Connector/J 驱动
 static connection getConnection(String url, String user, String password) throws SQLException
 ```
 
-`DriverManager` 类。该方法的第一个参数定义了连接到数据库的字符串，另外两个是用户名和密码。
+`DriverManager`类。该方法的第一个参数定义了连接到数据库的字符串，另外两个是用户名和密码。
 
-#### 连接字符串
+### 连接字符串
+
 其格式如下：
 
 `jdbc:subprotocol_name:data_source_name`
 
-这里“name subprotocol”定义了数据库的驱动或协议插件，而“data source name”通常是数据库名称。连接字符串还可以包含额外参数 - 例如。它们的格式，即数据源名称的格式，取决于特定的驱动。例如，以下行可用于 `JDBC-ODBC Bridge` 驱动连接到本地计算机上名为 "Clients" 的数据库：
+这里，“name subprotocol”定义了数据库的驱动或协议插件，而“data source name”通常是数据库名称。连接字符串还可以包含额外参数，例如它们的格式，即数据源名称的格式，取决于特定的驱动。
+
+例如，以下行可用于`JDBC-ODBC Bridge`驱动连接到本地计算机上名为“Clients”的数据库：
 
 `jdbc:odbc:Clients`
 
-相关的数据库必须先在 `ODBC` 管理器中注册。另一个示例是：
+相关的数据库必须先在`ODBC`管理器中注册。另一个示例是：
 
 `jdbc:mysql://http://mydbserv.ru:3105/Students?useUnicode=true`
 
-此类连接用于连接到位于地址 [ ](http://mydbserv.ru/) 的服务器 MySQL 上的远程数据库 students。连接将通过端口 3105 建立，传输的行将使用 Unicode 编码。
+此类连接用于连接到位于地址[](http://mydbserv.ru/)的服务器 MySQL 上的远程数据库 students。连接将通过端口 3105 建立，传输的行将使用 Unicode 编码。
 
-### 基础数据的创建和性能请求
-对基础数据的请求封装在实现 `Statement` 接口的类中。每个此类对象对应不多于一个对象，表示产生的数据集。如果需要多个结果集，每个结果集都必须由单独的 `Statement` 对象生成。新的 SQL 查询会关闭由同一 `Statement` 对象创建的现有数据集。
+## 基础数据的创建和性能请求
+
+对基础数据的请求封装在实现`Statement`接口的类中。每个此类对象对应不多于一个对象，表示产生的数据集。如果需要多个结果集，每个结果集都必须由单独的`Statement`对象生成。新的 SQL 查询会关闭由同一`Statement`对象创建的现有数据集。
 
 创建请求使用了方法：
 
 ```java
 Statement createStatement() throws SQLException
-Statement createStatement( int resultSetType, int resultSetConcurrency, int resultSetHoldability) throws SQLException
+
+Statement createStatement(int resultSetType, int resultSetConcurrency, int resultSetHoldability) throws SQLException
 ```
 
-在连接对象上调用。该方法的第二个版本允许设置结果集数据的安装选项。这些参数的可能值见表 10.1  )。为了执行数据库请求，使用了 `Statement` 接口中的以下方法：
+在连接对象上调用。该方法的第二个版本允许设置结果集数据的安装选项。这些参数的可能值见表 10.1。为了执行数据库请求，使用了`Statement`接口中的以下方法：
 
 ```java
 boolean execute(String sql) throws SQLException
+
 ResultSet executeQuery(String sql) throws SQLException
+
 int executeUpdate(String sql) throws SQLException
 ```
 
-第一个方法通常用于不返回结果值的查询（例如，`DROP`），第二个方法用于返回数据集的查询（例如，`SELECT`）。第三个方法用于 `INSERT`、`UPDATE` 和 `DELETE`。它返回添加、删除或更改的记录数。处理结果后后必须通过调用关闭请求：
+第一个方法通常用于不返回结果值的查询（例如，`DROP`），第二个方法用于返回数据集的查询（例如，`SELECT`）。第三个方法用于`INSERT`、`UPDATE`和`DELETE`。它返回添加、删除或更改的记录数。
+
+处理结果后必须通过调用关闭请求：
 
 ```java
 void close() throws SQLException
@@ -1860,71 +2074,86 @@ void close() throws SQLException
 
 ```java
 // 加载驱动并连接数据库
+
 String dbUrl = "jdbc:mysql://localhost/test?useUnicode=true";
+
 Class.forName("com.mysql.jdbc.Driver");
+
 Connection conn = DriverManager.getConnection(dbUrl, "");
+
 Statement s = conn.createStatement();
 
 // 创建表并填充
+
 s.execute("CREATE TABLE people (Id INTEGER AUTO_INCREMENT PRIMARY KEY, Name VARCHAR(40), Telephone VARCHAR(10), Age INTEGER)");
+
 s.execute("INSERT INTO people(Name, Telephone, Age) VALUES (' Ivanov', '12-02-00', 37)");
+
 s.execute("INSERT INTO people(Name, Telephone, Age) VALUES (' Petrov', '43-55-47', 26)");
+
 s.execute("INSERT INTO people(Name, Telephone, Age) VALUES (' Sidorov', '43-88-90', 59)");
 
 // 修改和删除记录
+
 System.out.println("Updated records: " + s.executeUpdate("UPDATE people SET Telephone= '63-16-00' WHERE Name= ' Petrov ' "));
+
 System.out.println("Removed entries: " + s.executeUpdate("DELETE FROM people WHERE Name='Иванов'"));
 
 s.close();
+```
 
-### 遍历数据集
-数据集是实现 `ResultSet` 接口的对象类，封装了执行数据库查询的结果。数据集的能力由其参数定义。这些参数在对象创建时设置 - 请求 `createStatement()` 或 `prepareStatement()` 对象方法（见段落 [10.4], [10.7]）。rsType 参数指定数据集类型，rsConcurrency - 更新模式，rsholdability - 事务提交后游标保留模式。
+## 遍历数据集
 
-数据集包含一个游标，允许你在该集的行之间移动。处理游标的技术与处理集合迭代器的技术非常相似（见第 8.2 节）。首先-初始游标放在第一行数据之前。
+数据集是实现`ResultSet`接口的对象类，封装了执行数据库查询的结果。数据集的能力由其参数定义。这些参数在对象创建时设置——请求`createStatement()`或`prepareStatement()`对象方法（见段落[10.4]、[10.7]）。
+
+`rsType`参数指定数据集类型，`rsConcurrency`指定更新模式，`rsholdability`指定事务提交后游标保留模式。
+
+数据集包含一个游标，允许你在该集的行之间移动。处理游标的技术与处理集合迭代器的技术非常相似（见第 8.2 节）。首先，初始游标放在第一行数据之前。
 
 ```java
 boolean next() throws SQLException
 boolean previous() throws SQLException
 ```
 
-
-
-
-`allow` 允许在字符串集中分别向前向后移动（光标保留在行之间！）。
+`allow`允许在字符串集中分别向前向后移动（光标保留在行之间！）。
 
 ### 方法
 
 ```java
-boolean relative (int rows) throws SQLException
-boolean absolute (int row) throws SQLException
+boolean relative(int rows) throws SQLException
+boolean absolute(int row) throws SQLException
 ```
 
-`allow` 允许在数据集中进行 `relative` 和 `absolute` 的光标定位。如果移动成功，指定的方法返回值 `true`；如果请求的元素不存在，则返回 `false`。注意记录集的实现是基于单位的！为了将光标定位在第一个元素之前和最后一个元素之后，使用了以下方法：
+`allow`允许在数据集中进行`relative`和`absolute`的光标定位。如果移动成功，指定的方法返回值`true`；如果请求的元素不存在，则返回`false`。
+
+注意记录集的实现是基于单位的！为了将光标定位在第一个元素之前和最后一个元素之后，使用了以下方法：
 
 ```java
 void beforeFirst() throws SQLException
 void afterLast() throws SQLException
 ```
 
-上述列出的方法除 `next()` 方法外，都仅在数据集不是单向的情况下（即读取参数 `rsType` 不等于 `TYPE_FORWARD_ONLY`）有效。
+上述列出的方法除`next()`方法外，都仅在数据集不是单向的情况下（即读取参数`rsType`不等于`TYPE_FORWARD_ONLY`）有效。
 
-为了获取数据集最后几行字段的值，当移动了任何定位方法（`next()`、`previous()` 和 `t.` 等），可以使用以下方法：
+为了获取数据集最后几行字段的值，当移动了任何定位方法（`next()`、`previous()`和`t.`等）后，可以使用以下方法：
 
 ```java
 get***(int columnIndex) throws SQLException
 get***(String columnName) throws SQLException
 ```
 
-在这里，替代 Java 数据类型名称的是与参数对应的 SQL 数据类型（参见表 10.2）。所需的字段可以通过数据库中的名称或在请求中的编号来指定（字段编号从一开始！）。除了 `get***` 方法，你还可以使用通用方法 `vat`：
+在这里，替代 Java 数据类型名称的是与参数对应的 SQL 数据类型（参见表 10.2）。所需的字段可以通过数据库中的名称或在请求中的编号来指定（字段编号从一开始！）。
+
+除了`get***`方法，你还可以使用通用方法`vat`：
 
 ```java
 Object getObject(int columnIndex) throws SQLException
 Object getObject(String columnName) throws SQLException
 ```
 
-它将请求字段的值作为对应已存在类型的对象返回（参见表 10.2）。如果该类型是基本类型，则返回其包装类（例如 `Integer` 代替 `int` 等，参见 P. 3.13）。
+它将请求字段的值作为对应已存在类型的对象返回（参见表 10.2）。如果该类型是基本类型，则返回其包装类（例如`Integer`代替`int`等，参见第 3.13 节）。
 
-以下方法可以在屏幕上显示作为方法参数传递的任意表的内容。示例中使用了 `ResultSetMetadata` 类对象，它允许你获取数据集字段的数量和名称。关于此类的更多信息可以在 JDBC 的文档中查找到。
+以下方法可以在屏幕上显示作为方法参数传递的任意表的内容。示例中使用了`ResultSetMetadata`类对象，它允许你获取数据集字段的数量和名称。关于此类的更多信息可以在 JDBC 的文档中查找到。
 
 ```java
 /** 输出数据库表内容 */
@@ -1948,9 +2177,11 @@ throws SQLException
 }
 ```
 
-### 可修改的数据集
+## 可修改的数据集
 
-如果数据集仅包含一个数据库表的字段，且集合中包含该表的主键，同时 `rsConcurrency` 选项设置为 `CONCUR_UPDATABLE`，则可以使用此类数据调用来修改相应的数据库表，而跳过显式的 SQL 语句。为此使用了以下方法：
+如果数据集仅包含一个数据库表的字段，且集合中包含该表的主键，同时`rsConcurrency`选项设置为`CONCUR_UPDATABLE`，则可以使用此类数据调用来修改相应的数据库表，而跳过显式的 SQL 语句。
+
+为此使用了以下方法：
 
 ```java
 void update***(int columnIndex, x) throws SQLException
@@ -1975,7 +2206,7 @@ void deleteRow() throws SQLException
 void moveToInsertRow() throws SQLException
 ```
 
-然后借助方法 `update***()` 完成对新增记录字段的填充。在表中产生新增记录的方法是：
+然后借助方法`update***()`完成对新增记录字段的填充。在表中产生新增记录的方法是：
 
 ```java
 void insertRow() throws SQLException
@@ -1987,16 +2218,18 @@ void insertRow() throws SQLException
 void moveToCurrentRow() throws SQLException
 ```
 
-下一个示例修改了 P. 10.4 示例中从数据库中间修改的集合数据：
+下一个示例修改了第 10.4 节示例中从数据库中间修改的集合数据：
 
 ```java
 Statement s = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 ResultSet r = s.executeQuery("SELECT Id, Name, Telephone, Age " + "FROM people");
+
 // 为所有人的年龄加 1
 while (r.next()) {
     r.updateInt(4, r.getInt(4) + 1);
     r.updateRow();
 }
+
 // 添加新记录
 r.moveToInsertRow();
 r.updateString("Name", "Smirnov");
@@ -2007,12 +2240,15 @@ r.moveToCurrentRow();
 s.close();
 ```
 
-### 使用预编译查询
+## 使用预编译查询
 
-在这些场景中，当向数据库执行大量相似但仅参数不同的请求时，为了提高性能，你可以使用预编译查询。预编译请求对应实现 `PreparedStatement` 类的对象。创建此类对象的方法是：
+在这些场景中，当向数据库执行大量相似但仅参数不同的请求时，为了提高性能，你可以使用预编译查询。预编译请求对应实现`PreparedStatement`类的对象。
+
+创建此类对象的方法是：
 
 ```java
 PreparedStatement prepareStatement(String sql) throws SQLException
+
 PreparedStatement prepareStatement(String sql, int resultSetType, int resultSetConcurrency, int resultSetHoldability) throws SQLException
 ```
 

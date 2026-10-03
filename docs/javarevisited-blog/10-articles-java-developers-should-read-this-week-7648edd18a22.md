@@ -1,3 +1,4 @@
+
 # Java 开发人员本周应该阅读的 10 篇文章
 
 > 原文：<https://medium.com/javarevisited/10-articles-java-developers-should-read-this-week-7648edd18a22?source=collection_archive---------0----------------------->
@@ -110,4 +111,4 @@ Optional 是在 [Java 8](https://medium.freecodecamp.org/these-are-the-best-free
 
 再次感谢所有的作者和出版物，我邀请你们所有人加入 Javareivsited，并在这里为许多志同道合的 Java 开发人员做出贡献。
 
-如果您有任何问题或反馈，请发表评论。**
+如果您有任何问题或反馈，请发表评论。

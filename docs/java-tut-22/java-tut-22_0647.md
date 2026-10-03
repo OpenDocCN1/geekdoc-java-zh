@@ -1,14 +1,14 @@
+
 # 描边和填充图形原语
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/geometry/strokeandfill.html`](https://docs.oracle.com/javase/tutorial/2d/geometry/strokeandfill.html)
 
 您已经知道如何创建不同的几何原语和更复杂的形状。本课程教授如何为图形添加一些颜色和花哨的轮廓，并表示填充和描边：
 
-+   *填充* - 是用纯色、颜色渐变或纹理图案绘制形状内部的过程
++ *填充* - 是用纯色、颜色渐变或纹理图案绘制形状内部的过程
++ *描边* - 是绘制形状轮廓的过程，应用描边宽度、线条样式和颜色属性
 
-+   *描边* - 是绘制形状轮廓的过程，应用描边宽度、线条样式和颜色属性
-
-要将花哨的线条样式和填充图案应用于几何原语，需在呈现之前更改[`Graphics2D`](https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html)上下文中的描边和绘制属性。例如，通过创建适当的[`Stroke`](https://docs.oracle.com/javase/8/docs/api/java/awt/Stroke.html)对象来绘制虚线。在呈现线条之前，将此描边添加到`Graphics2D`上下文中，调用`setStroke`方法。同样，通过创建`GradientPaint`对象并将其添加到`Graphics2D`上下文中，可以将渐变填充应用于`Shape`对象。
+要将花哨的线条样式和填充图案应用于几何原语，需在呈现之前更改`Graphics2D`上下文中的描边和绘制属性。例如，通过创建适当的`Stroke`对象来绘制虚线。在呈现线条之前，将此描边添加到`Graphics2D`上下文中，调用`setStroke`方法。同样，通过创建`GradientPaint`对象并将其添加到`Graphics2D`上下文中，可以将渐变填充应用于`Shape`对象。
 
 以下代码行丰富了几何原语的填充和描边上下文：
 
@@ -26,7 +26,6 @@ g2.draw(new RoundRectangle2D.Double(x, y,
                                    rectWidth,
                                    rectHeight,
                                    10, 10));
-
 ```
 
 ![虚线圆角矩形](img/4ad6995d4cd9a952f1607f9eead72907.png)
@@ -36,7 +35,6 @@ g2.draw(new RoundRectangle2D.Double(x, y,
 redtowhite = new GradientPaint(0,0,color.RED,100, 0,color.WHITE);
 g2.setPaint(redtowhite);
 g2.fill (new Ellipse2D.Double(0, 0, 100, 50));
-
 ```
 
 ![填充渐变颜色的多边形](img/48798a19dd87ecb122bfdf7e494e65d1.png)

@@ -1,3 +1,4 @@
+
 # JUnit 5 假设示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/junit5/junit-5-assumptions-examples/>
@@ -6,22 +7,22 @@
 
 本文向您展示了如何使用 JUnit 5 假设来执行条件测试。
 
-使用的技术:
+使用的技术：
 
-*   Maven 3.6
-*   Java 8
-*   JUnit 5.5.2
+* Maven 3.6
+* Java 8
+* JUnit 5.5.2
 
-## 1.假设
+## 1. 假设
 
 1.1 如果`assumeTrue()`条件为真，则运行测试，否则中止测试。
 
-1.2`assumingThat()`更加灵活，它允许部分代码作为条件测试运行。
+1.2 `assumingThat()`更加灵活，它允许部分代码作为条件测试运行。
 
-AssumptionsTest.java
+`AssumptionsTest.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -65,7 +66,7 @@ public class AssumptionsTest {
 
     }
 
-} 
+}
 ```
 
 输出
@@ -74,13 +75,13 @@ public class AssumptionsTest {
 
 ## 下载源代码
 
-$ git clone [https://github.com/mkyong/junit-examples](http://web.archive.org/web/20221225035521/https://github.com/mkyong/junit-examples)
+```
+$ git clone https://github.com/mkyong/junit-examples
 $ cd junit5-examples
 $ check src/test/java/com/mkyong/AssumptionsTest.java
+```
 
-# 参考
+## 参考
 
-*   [JUnit 5 官方网站](http://web.archive.org/web/20221225035521/https://junit.org/junit5/)
-*   [JUnit 5 假设 JavaDoc](http://web.archive.org/web/20221225035521/https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/Assumptions.html)
-
-<input type="hidden" id="mkyong-current-postId" value="15186">
+* [JUnit 5 官方网站](http://web.archive.org/web/20221225035521/https://junit.org/junit5/)
+* [JUnit 5 假设 JavaDoc](http://web.archive.org/web/20221225035521/https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/Assumptions.html)

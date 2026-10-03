@@ -1,8 +1,9 @@
+
 # 第 15 天—缺少号码
 
 > 原文：<https://medium.com/javarevisited/100-days-challenge-to-cracking-the-coding-interview-e847f9c4661?source=collection_archive---------0----------------------->
 
-## **亚马逊 100 天**
+## 亚马逊 100 天
 
 [**亚马逊 100 天—**](https://leetcode.com/problems/missing-number/) **第 15 天—缺失数字**
 
@@ -14,4 +15,4 @@
 
 # 介绍
 
-嘿，伙计们，今天是我挑战的第三周的**开始。在我开始这篇文章之前，我真的想感谢你们所有人的支持。我感谢以下几点。有…**
+嘿，伙计们，今天是我挑战的第三周的**开始**。在我开始这篇文章之前，我真的想感谢你们所有人的支持。我感谢以下几点。有…

@@ -1,3 +1,4 @@
+
 # 每个开发人员都应该知道的 Mysql 命令
 
 > 原文：<https://medium.com/javarevisited/mysql-commands-that-every-developer-should-know-349a9e1716e7?source=collection_archive---------1----------------------->
@@ -12,7 +13,7 @@ Emile Perron 在 [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=re
 
 ## 1.1 数据库操作
 
-*   登录到数据库:
+*   登录到数据库：
 
 ```
 mysql -uroot -proot

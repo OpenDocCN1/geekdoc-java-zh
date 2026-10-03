@@ -1,3 +1,4 @@
+
 # Spring Boot 的 Enum 映射
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-boot-enum-mapping>
@@ -12,9 +13,9 @@
 
 在处理请求参数时，Spring 依靠几个内置的转换器来处理字符串转换。
 
-通常，当我们传递一个 enum 作为请求参数**时，它使用 [`StringToEnumConverterFactory`](https://web.archive.org/web/20221128144746/https://github.com/spring-projects/spring-framework/blob/main/spring-core/src/main/java/org/springframework/core/convert/support/StringToEnumConverterFactory.java) 将传递的`String`转换为`enum`** `.`
+通常，当我们传递一个`enum`作为请求参数**时，它使用`StringToEnumConverterFactory`将传递的`String`转换为`enum`**。
 
-按照设计，这个转换器调用`Enum.valueOf(Class, String)` **，这意味着给定的字符串必须与声明的枚举常量**之一完全匹配。
+按照设计，这个转换器调用`Enum.valueOf(Class, String)`**，这意味着给定的字符串必须与声明的枚举常量**之一完全匹配。
 
 例如，让我们考虑一下`Level`枚举:
 
@@ -39,30 +40,30 @@ public class EnumMappingController {
 }
 ```
 
-让我们使用 [CURL](/web/20221128144746/https://www.baeldung.com/curl-rest) 向`http://localhost:8080/enummapping/get?level=MEDIUM`发送一个请求:
+让我们使用[CURL](/web/20221128144746/https://www.baeldung.com/curl-rest)向`http://localhost:8080/enummapping/get?level=MEDIUM`发送一个请求:
 
-```java
+```curl
 curl http://localhost:8080/enummapping/get?level=MEDIUM
 ```
 
-handler 方法发回`MEDIUM`，枚举常量`MEDIUM`的名称。
+处理器方法发回`MEDIUM`，枚举常量`MEDIUM`的名称。
 
 现在，让我们通过`medium`而不是`MEDIUM`，看看会发生什么:
 
-```java
+```curl
 curl http://localhost:8080/enummapping/get?level=medium
 {"timestamp":"2022-11-18T18:41:11.440+00:00","status":400,"error":"Bad Request","path":"/enummapping/get"}
 ```
 
 正如我们所看到的，请求被认为是无效的，应用程序失败并显示一个错误:
 
-```java
+```text
 Failed to convert value of type 'java.lang.String' to required type 'com.baeldung.enummapping.enums.Level'; 
 nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [@org.springframework.web.bind.annotation.RequestParam com.baeldung.enummapping.enums.Level] for value 'medium'; 
 ...
 ```
 
-查看堆栈跟踪，我们可以看到 Spring 抛出了`ConversionFailedException.` ，它没有将`medium`识别为枚举常量。
+查看堆栈跟踪，我们可以看到 Spring 抛出了`ConversionFailedException`，它没有将`medium`识别为枚举常量。
 
 ## 3.不区分大小写的枚举映射
 
@@ -72,9 +73,9 @@ Spring 提供了几种方便的方法来解决映射枚举时区分大小写的�
 
 ### 3.1.使用`ApplicationConversionService`
 
-[`ApplicationConversionService`](https://web.archive.org/web/20221128144746/https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/convert/ApplicationConversionService.html) 类附带了一组已配置的转换器和格式化程序。
+`ApplicationConversionService`类附带了一组已配置的转换器和格式化程序。
 
-在这些开箱即用的转换器中，我们发现`StringToEnumIgnoringCaseConverterFactory.` **顾名思义，它以不区分大小写的方式将字符串转换为枚举**。
+在这些开箱即用的转换器中，我们发现`StringToEnumIgnoringCaseConverterFactory`。**顾名思义，它以不区分大小写的方式将字符串转换为枚举**。
 
 首先，我们需要添加和配置`ApplicationConversionService`:
 
@@ -88,7 +89,7 @@ public class EnumMappingConfig implements WebMvcConfigurer {
 }
 ```
 
-该类使用适合大多数 Spring Boot 应用的现成转换器来配置 [`FormatterRegistry`](https://web.archive.org/web/20221128144746/https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/format/FormatterRegistry.html) 。
+该类使用适合大多数 Spring Boot 应用的现成转换器来配置`FormatterRegistry`。
 
 现在，让我们使用一个测试用例来确认一切都按预期工作:
 
@@ -118,7 +119,7 @@ public class EnumMappingIntegrationTest {
 
 首先，我们需要添加它的[依赖关系](https://web.archive.org/web/20221128144746/https://search.maven.org/classic/#search%7Cga%7C1%7Cg%3A%22org.apache.commons%22%20AND%20a%3A%22commons-lang3%22):
 
-```java
+```xml
 <dependency>
     <groupId>org.apache.commons</groupId>
     <artifactId>commons-lang3</artifactId>
@@ -126,7 +127,7 @@ public class EnumMappingIntegrationTest {
 </dependency>
 ```
 
-**这里的基本思想是创建一个转换器，将一个`Level` 常量的字符串表示转换成一个真实的`Level`常量:**
+**这里的基本思想是创建一个转换器，将一个`Level`常量的字符串表示转换成一个真实的`Level`常量**:
 
 ```java
 public class StringToLevelConverter implements Converter<String, Level> {
@@ -144,9 +145,9 @@ public class StringToLevelConverter implements Converter<String, Level> {
 
 **从技术的角度来看，自定义转换器是一个简单的类，它实现了`Converter<S,T>`接口**。
 
-正如我们所见，我们将`String`对象转换成了大写。然后，我们使用 Apache Commons Lang 3 库中的 [`EnumUtils`](https://web.archive.org/web/20221128144746/https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/EnumUtils.html) 实用程序类从大写字符串中获取`Level`常量。
+正如我们所见，我们将`String`对象转换成了大写。然后，我们使用 Apache Commons Lang 3 库中的`EnumUtils`实用程序类从大写字符串中获取`Level`常量。
 
-现在，让我们把最后一块拼图补上。我们需要告诉 Spring 我们新的定制转换器。为此，我们将使用与之前相同的`FormatterRegistry`。**它提供了`addConverter()`方法来注册自定义转换器**:
+现在，让我们把最后一块拼图补上。我们需要告诉 Spring 我们新的定制转换器。为此，我们将使用与之前相同的`FormatterRegistry`。**它提供了`addConverter()`方法来注册自定义转换器**：
 
 ```java
 @Override
@@ -155,7 +156,7 @@ public void addFormatters(FormatterRegistry registry) {
 }
 ```
 
-仅此而已。我们的`StringToLevelConverter`现在已经在 [`ConversionService`](https://web.archive.org/web/20221128144746/https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/core/convert/ConversionService.html) 中了。
+仅此而已。我们的`StringToLevelConverter`现在已经在`ConversionService`中了。
 
 现在，我们可以像使用任何其他转换器一样使用它:
 
@@ -175,15 +176,15 @@ public class StringToLevelConverterIntegrationTest {
 }
 ```
 
-如上图所示，测试用例确认了`“low”` 值被转换为`Level.LOW`。
+如上图所示，测试用例确认了`"low"`值被转换为`Level.LOW`。
 
 ### 3.3.使用自定义属性编辑器
 
 Spring 使用多个内置的[属性编辑器](/web/20221128144746/https://www.baeldung.com/spring-mvc-custom-property-editor)来管理`String`值和 Java 对象之间的转换。
 
-类似地，我们可以创建一个定制的属性编辑器来将`String`对象映射到`Level` 常量。
+类似地，我们可以创建一个定制的属性编辑器来将`String`对象映射到`Level`常量。
 
-例如，让我们将自定义编辑器命名为`LevelEditor`:
+例如，让我们将自定义编辑器命名为`LevelEditor`：
 
 ```java
 public class LevelEditor extends PropertyEditorSupport {
@@ -199,13 +200,13 @@ public class LevelEditor extends PropertyEditorSupport {
 }
 ```
 
-正如我们所看到的，我们需要扩展 [`PropertyEditorSupport`](https://web.archive.org/web/20221128144746/https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/java/beans/PropertyEditorSupport.html) 类并覆盖`setAsText()`方法。
+正如我们所看到的，我们需要扩展`PropertyEditorSupport`类并覆盖`setAsText()`方法。
 
-**覆盖 s `etAsText()`的想法是将给定字符串的大写版本转换成`Level` 枚举**。
+**覆盖`setAsText()`的想法是将给定字符串的大写版本转换成`Level`枚举**。
 
 值得注意的是，`PropertyEditorSupport`也提供了`getAsText()`。将 Java 对象序列化为字符串时会调用它。所以，我们不需要在这里覆盖它。
 
-我们需要注册我们的`LevelEditor`,因为 Spring 不会自动检测定制属性编辑器。**为此，我们需要在我们的[弹簧控制器](/web/20221128144746/https://www.baeldung.com/spring-controllers)** 中创建一个用`@InitBinder`标注的方法:
+我们需要注册我们的`LevelEditor`，因为 Spring 不会自动检测定制属性编辑器。**为此，我们需要在我们的[弹簧控制器](/web/20221128144746/https://www.baeldung.com/spring-controllers)** 中创建一个用`@InitBinder`标注的方法:
 
 ```java
 @InitBinder
@@ -229,7 +230,7 @@ public class LevelEditorIntegrationTest {
 }
 ```
 
-这里要提到的另一件重要的事情是，`EnumUtils.getEnum()`在找到时返回枚举，否则返回`null` 。
+这里要提到的另一件重要的事情是，`EnumUtils.getEnum()`在找到时返回枚举，否则返回`null`。
 
 因此，为了避免`NullPointerException`，我们需要稍微改变一下我们的处理方法:
 

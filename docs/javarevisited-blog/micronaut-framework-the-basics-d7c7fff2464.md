@@ -1,3 +1,4 @@
+
 # Micronaut 框架—基础知识
 
 > 原文：<https://medium.com/javarevisited/micronaut-framework-the-basics-d7c7fff2464?source=collection_archive---------0----------------------->
@@ -6,11 +7,11 @@
 
 ![](img/cf25497ee95d872829c52d17d4a416da.png)
 
-来源:https://micronaut.io/
+来源：https://micronaut.io/
 
-# 什么是 Micronaut
+## 什么是 Micronaut
 
-Micronaut 是一个基于 JVM 的现代框架，用于构建高效、轻量级的微服务应用程序。它提供了一种独特的方法，通过使用提前(AOT)编译来构建微服务，与传统的基于 JVM 的框架相比，这种方法允许更快的启动时间和更低的内存消耗。
+Micronaut 是一个基于 JVM 的现代框架，用于构建高效、轻量级的微服务应用程序。它提供了一种独特的方法，通过使用提前（AOT）编译来构建微服务，与传统的基于 JVM 的框架相比，这种方法允许更快的启动时间和更低的内存消耗。
 
 Micronaut 的 AOT 编译是通过使用 GraalVM 实现的，这是一个高性能、多语言的虚拟机，支持多种语言，包括 [Java](/javarevisited/10-free-courses-to-learn-java-in-2019-22d1f33a3915) 、 [JavaScript](/javarevisited/10-best-online-courses-to-learn-javascript-in-2020-af5ed0801645) 和 [Ruby](/javarevisited/10-best-ruby-on-rails-courses-for-beginners-dca4d66e9f7b) 。GraalVM 允许 Micronaut 提前编译应用程序，从而加快启动速度，降低内存消耗。
 
@@ -22,11 +23,11 @@ Micronaut 的一个突出特性是它能够在云本地环境和传统的基于 
 
 总的来说，Micronaut 是构建微服务应用程序的强大而高效的框架。它对反应式编程、云原生环境和 AOT 编译的支持使其成为构建可伸缩、高性能微服务的绝佳选择。
 
-# 你好世界
+## 你好世界
 
 这个示例创建了一个简单的“hello world”微服务，它侦听指定的端口，并用“hello world”消息响应 HTTP 请求。
 
-首先，我们需要将 Micronaut 依赖项添加到我们的`build.gradle`文件中:
+首先，我们需要将 Micronaut 依赖项添加到我们的`build.gradle`文件中：
 
 ```
 dependencies {
@@ -34,7 +35,7 @@ dependencies {
 }
 ```
 
-接下来，我们可以通过在我们的主类上使用`@MicronautApplication`注释来创建一个 Micronaut 应用程序:
+接下来，我们可以通过在我们的主类上使用`@MicronautApplication`注释来创建一个 Micronaut 应用程序：
 
 ```
 import io.micronaut.runtime.Micronaut;
@@ -48,7 +49,7 @@ public class HelloWorldApplication {
 }
 ```
 
-接下来，我们可以创建一个简单的控制器，它侦听 HTTP 请求并返回“hello world”消息:
+接下来，我们可以创建一个简单的控制器，它侦听 HTTP 请求并返回“hello world”消息：
 
 ```
 import io.micronaut.http.MediaType;
@@ -65,7 +66,7 @@ public class HelloWorldController {
 }
 ```
 
-最后，我们可以通过将`micronaut.server.port`属性添加到我们的`application.yml`文件来指定微服务应该监听的端口:
+最后，我们可以通过将`micronaut.server.port`属性添加到我们的`application.yml`文件来指定微服务应该监听的端口：
 
 ```
 micronaut:
@@ -75,7 +76,7 @@ micronaut:
 
 有了这个配置，我们的微服务将启动并在端口 8080 上监听 HTTP 请求。当收到一个请求时，`HelloWorldController`将处理它并返回一个“hello world”消息。
 
-# 测试
+## 测试
 
 Micronaut 的一个主要优点是它能够在一个“瘦”JVM 中运行测试，这意味着测试可以快速有效地执行。这是通过使用反射和其他性能增强技术来实现的。此外，Micronaut 还提供了一系列测试实用程序，使得为您的应用程序编写测试变得非常容易。
 
@@ -85,11 +86,11 @@ Micronaut 还提供了对集成测试的支持，这允许您测试应用程序�
 
 除了这些测试功能，Micronaut 还支持编写与外部系统交互的测试，例如[数据库](https://javarevisited.blogspot.com/2018/05/top-5-sql-and-database-courses-to-learn-online.html)和 [HTTP 服务器](https://javarevisited.blogspot.com/2015/06/how-to-create-http-server-in-java-serversocket-example.html)。这是通过使用`@MockBean`注释实现的，它允许您轻松地创建外部依赖的模拟实现，允许您在受控环境中测试您的应用程序。
 
-## 单元测试
+### 单元测试
 
 单元测试是孤立地测试应用程序的单个组件或模块的测试。在 Micronaut 中，您可以通过用`@MicronautTest`注释来注释您的测试类来编写单元测试，这将启用 Micronaut 测试基础设施。
 
-然后，您可以使用`[@Inject](https://javarevisited.blogspot.com/2017/04/difference-between-autowired-and-inject-annotation-in-spring-framework.html)`注释来注入您想要测试的组件，并使用标准的 JUnit 或 TestNG 断言来验证组件的行为。这里有一个简单的例子:
+然后，您可以使用`[@Inject](https://javarevisited.blogspot.com/2017/04/difference-between-autowired-and-inject-annotation-in-spring-framework.html)`注释来注入您想要测试的组件，并使用标准的 JUnit 或 TestNG 断言来验证组件的行为。这里有一个简单的例子：
 
 ```
 @MicronautTest
@@ -108,9 +109,9 @@ public class MyServiceTest {
 
 这个测试将使用 Micronaut 测试基础设施来创建一个`MyService`类的实例，然后调用`myService.someMethod()`方法来测试它的行为。`assertEquals()`方法用于验证该方法是否返回预期的结果。
 
-## 集成测试
+### 集成测试
 
-[集成测试](https://www.java67.com/2022/08/springboottest-integration-test-example.html)是测试应用程序中多个组件或模块的集成的测试。在 Micronaut 中，您可以通过使用`@MicronautTest`和`@MicronautDataTest`注释来注释您的测试类来编写集成测试，这将启用 Micronaut 测试基础设施，并允许您从外部来源加载测试数据。然后，您可以使用`@Inject`注释来注入您想要测试的组件，并使用标准的 JUnit 或 TestNG 断言来验证集成组件的行为。这里有一个简单的例子:
+[集成测试](https://www.java67.com/2022/08/springboottest-integration-test-example.html)是测试应用程序中多个组件或模块的集成的测试。在 Micronaut 中，您可以通过使用`@MicronautTest`和`@MicronautDataTest`注释来注释您的测试类来编写集成测试，这将启用 Micronaut 测试基础设施，并允许您从外部来源加载测试数据。然后，您可以使用`@Inject`注释来注入您想要测试的组件，并使用标准的 JUnit 或 TestNG 断言来验证集成组件的行为。这里有一个简单的例子：
 
 ```
 @MicronautTest
@@ -136,7 +137,7 @@ public class MyServiceTest {
 
 这个测试将使用 Micronaut 测试基础设施来创建`MyService`和`DataSource`类的实例，使用`loadTestData()`方法从指定的文件中加载测试数据，然后调用`myService.someMethod()`方法来测试这些组件的集成。`assertEquals()`方法用于验证该方法是否返回预期的结果。
 
-# 摘要
+## 摘要
 
 我希望这个例子能够帮助您了解如何使用 Micronaut 创建一个简单的微服务。当然，Micronaut 的内容远不止这里所展示的，所以请务必查看官方文档以获取更多信息。
 

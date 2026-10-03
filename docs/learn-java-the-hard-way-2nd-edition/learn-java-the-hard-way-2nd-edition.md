@@ -1,17 +1,5 @@
+
 # Java 学习指南，第 2 版
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 在 Twitter 上推文这本书！
 
@@ -19,19 +7,13 @@
 
 此书建议的推特推文内容为：
 
-我正准备使用《难从之路学 Java”来学习编程 #LJTHW
+> 我正准备使用《难从之路学 Java”来学习编程 #LJTHW
 
-此书建议的话题是 #LJTHW。
+此书建议的话题是 `#LJTHW`。
 
 点击此链接在 Twitter 上搜索该标签，了解其他人对这本书的评价：
 
 https://twitter.com/search?q=#LJTHW
-
-
-
-
-
-
 
 ## 前言：在做中学习
 
@@ -64,8 +46,8 @@ Java 并不是一种为初学者设计的语言。我深信，大多数“初级
 - 如何安装 Java 编译器和用于编写程序的文本编辑器
 - 如何创建、编译和运行你的第一个 Java 程序
 - 变量，以及如何从用户和文件获取输入
-- 使用 if 语句进行决策
-- 循环（for, while, do-while）
+- 使用 `if` 语句进行决策
+- 循环（`for`、`while`、`do-while`）
 - 数组
 - 记录（Records）
 
@@ -113,53 +95,47 @@ Android 应用非常复杂，如果你是初学者，一个应用远超你的能
 
 完成学习练习（Study Drills）。然后看练习答案（如果你有的话），将你的解决方案与我的进行对比。到最后，你将能够编写代码，至少学会一点。
 
-
-
-
-
 ### 练习 0：环境搭建
 
-### Windows
+#### Windows
 
-#### 安装好用的文本编辑器 (Notepad++)
+##### 安装好用的文本编辑器 (Notepad++)
 
-- 1. 使用浏览器访问 notepad-plus.org，下载最新版本的 Notepad++ 文本编辑器并安装。你不需要管理员权限。
-- 2. 一旦安装好 Notepad++，运行它并关闭自动完成，因为这对初学者没有好处。打开“设置”菜单并选择“选项”。然后点击左侧列表部分的“自动完成”。最后取消勾选“每次输入时启用自动完成”框，然后点击“关闭”按钮。
-- 3. 最后，在 Notepad++ 运行时，右键点击 Windows 任务栏上的 Notepad++ 按钮并点击“固定到任务栏”。这将使以后启动编程会变得更简单。
+1. 使用浏览器访问 `notepad-plus.org`，下载最新版本的 Notepad++ 文本编辑器并安装。你不需要管理员权限。
+2. 一旦安装好 Notepad++，运行它并关闭自动完成，因为这对初学者没有好处。打开“设置”菜单并选择“选项”。然后点击左侧列表部分的“自动完成”。最后取消勾选“每次输入时启用自动完成”框，然后点击“关闭”按钮。
+3. 最后，在 Notepad++ 运行时，右键点击 Windows 任务栏上的 Notepad++ 按钮并点击“固定到任务栏”。这将使以后启动编程会变得更简单。
 
-#### 打开终端窗口 (PowerShell)
+##### 打开终端窗口 (PowerShell)
 
-- 1. 点击开始按钮打开开始菜单。（在 Windows 8 及更高版本中，你可以直接按 Windows 键 + S 打开搜索框。）在搜索框中输入“powershell”。
-- 2. 从结果列表中选择“PowerShell”。
-- 3. 右键点击任务栏上的 PowerShell 按钮并选择“固定到任务栏”。
-- 4. 在 PowerShell/终端窗口中输入
+1. 点击开始按钮打开开始菜单。（在 Windows 8 及更高版本中，你可以直接按 `Windows` 键 + `S` 打开搜索框。）在搜索框中输入“powershell”。
+2. 从结果列表中选择“PowerShell”。
+3. 右键点击任务栏上的 PowerShell 按钮并选择“固定到任务栏”。
+4. 在 PowerShell/终端窗口中输入：
 
-```
+```powershell
 javac -version
 ```
 
 你可能会看到一条红色的错误信息，显示“无法将 'javac' 识别为 cmdlet、函数...”
 
-这只是意味着 JDK 尚未安装并添加到 PATH 中，这正是我们目前预期的状况。
+这只是意味着 JDK 尚未安装并添加到 `PATH` 中，这正是我们目前预期的状况。
 
+#### 安装 Java SE 开发工具包 (JDK)
 
-
-
-### 练习 0：环境搭建
-
-### 安装 Java SE 开发工具包 (JDK)
-
-- 1. 使用浏览器访问 [Oracle Java 下载页面](#)。
+1. 使用浏览器访问 [Oracle Java 下载页面](#)。
 2. 点击页面左侧顶部的“Java”按钮下载 Java 平台 (JDK) 8u92。点击此按钮将带你进入一个标题为“Java SE Development Kit 8 Downloads”的页面。
 3. 在此页面上，你需要接受许可协议，然后选择列表底部的“Windows x86”版本。下载 8u92 版本或任何更新版本的的文件。
+
 如果你确定运行的是 64 位的 Windows，那么下载“Windows x64”版本的 JDK 也可以的。如果你不确定，则应该下载“x86”（又名 32 位）版本，它可以同时运行在 32 位和 64 位的 Windows 上。
+
 你不需要下载“Demos and Samples”（演示与示例）。
+
 4. 下载完成后，运行 `jdk-8u92-windows-i586.exe` 进行安装。点击“Next >”后，第一次你会看到一个显示 `Install to: C:\Program Files (x86)\Java\jdk1.8.0_92\` 或类似内容的屏幕。记下这个位置；你很快就会用到它。
 5. 一直点击“Next”直到完成。你完全清楚自己在操作什么；最好是直接按照它的要求进行安装。
 
-## 将 JDK 添加到 PATH
+#### 将 JDK 添加到 PATH
 
-- 1. 现在 JDK 已经安装好了，你需要找到它安装目录的确切名称。查看 C 盘中的 Program Files 文件夹，或者如果有的话，查看 `C:\Program Files (x86)`。你正在寻找一个名为 Java 的文件夹。那是一个名为 `jdk1.8.0_92` 的文件夹，里面有一个 `bin` 文件夹。文件夹名称必须包含 `jdk1.8`。确保有一个 bin 文件夹。
+1. 现在 JDK 已经安装好了，你需要找到它安装目录的确切名称。查看 C 盘中的 Program Files 文件夹，或者如果有的话，查看 `C:\Program Files (x86)`。你正在寻找一个名为 Java 的文件夹。那是一个名为 `jdk1.8.0_92` 的文件夹，里面有一个 `bin` 文件夹。文件夹名称必须包含 `jdk1.8`。确保有一个 `bin` 文件夹。
 2. 一旦你点击进入 `bin` 文件夹内部，就可以左键点击文件夹位置，它会变成类似于 `C:\Program Files (x86)\Java\jdk1.8.0_92\bin` 的内容。你可以写下它，或者选中并右键复制到剪贴板。
 3. 一旦 JDK 安装完成并且知道了此位置，打开你的终端窗口（PowerShell）。在 PowerShell 中，输入以下内容：
 
@@ -170,8 +146,6 @@ javac -version
 将所有内容放在同一行，即：
 
 输入或粘贴 `[Environment]::SetEnvironmentVariable("Path","$env:Path;`
-
-### 练习 0：环境搭建
 
 先不要按 ENTER。你可以通过右键点击将其粘贴到 PowerShell 中。
 
@@ -187,9 +161,9 @@ C:\Program Files (x86)\Java\jdk1.8.0_92\bin
 
 一旦 `SetEnvironmentVariable` 命令完成且没有报错，通过在提示符处退出关闭 PowerShell 窗口。如果不关闭 PowerShell 窗口，你刚刚做的更改将不会生效。
 
-### 确保 JDK 已正确安装
+#### 确保 JDK 已正确安装
 
-- 1. 重新启动 PowerShell。
+1. 重新启动 PowerShell。
 2. 在提示符处输入 `javac -version`。
 
 ```bash
@@ -198,7 +172,7 @@ javac -version
 
 你应该会看到类似 `1.8.0_92` 的响应。
 
-- 1. 在提示符处输入 `java -version`。
+3. 在提示符处输入 `java -version`。
 
 ```bash
 java -version
@@ -210,33 +184,31 @@ java -version
 
 如果版本号不匹配，进入控制面板的“添加或删除程序”。删除所有与 Java、JDK、JRE 相关的程序。如果安装了 Eclipse，也将其删除。删除所有与 Java 相关的内容并重新开始。
 
-### 练习 0：环境搭建
-
 然而，如果两个命令都运行成功且没有报错，版本号也匹配，那么恭喜你！让这一切运行起来并不容易，你可能已经具备完成这本书所需的条件！
 
-不过，先不要不要进入下一个练习！我们应该习惯使用命令行进行导航，因为你将在书中书中运行程序。
+不过，先不要进入下一个练习！我们应该习惯使用命令行进行导航，因为你将在书中运行程序。
 
-## 命令行导航 (PowerShell)
+#### 命令行导航 (PowerShell)
 
 你应该创建一个新文件夹来存放你所有的代码。完成这本书后，你将会有 100 个新文件，如果它们都放在一个地方会更好。
 
+#### macOS
 
-
-
-
-## 练习 0：环境配置
+##### 安装 Java SE 开发工具包 (JDK)
 
 1. 点击左上角附近的巨大的“Java”按钮下载 Java 平台 (JDK) 8u92，这将带你进入上一个标题为“Java SE Development Kit 8 Downloads”的另一个页面。
 2. 在此页面上，你必须接受许可协议，然后从列表中间选择“Mac OS X x64”版本。下载 8u92 版本或更高版本的文件。
+
 你不需要下载“Demos and Samples”（演示与示例）。
+
 3. 下载完成后，运行 `jdk-8u92-macos-x64.dmg` 进行安装。
 4. 一直点击“Next”（下一步）直到完成。除非你非常清楚自己在做什么，否则最好测试一下安装程序，除非它要求你。
 
-## 将 JDK 添加到 PATH
+##### 将 JDK 添加到 PATH
 
 你可以跳过这部分，因为在 Apple 计算机上，JDK 安装程序会自动为你完成这一操作。不过，你可能需要关闭并重新打开终端使更改生效。
 
-## 确保 JDK 安装正确
+##### 确保 JDK 安装正确
 
 1. 再次启动终端（Terminal）。
 2. 在提示符处输入 `javac -version`。
@@ -247,19 +219,23 @@ javac -version
 
 你应该会看到类似 `javac 1.8.0_92` 的响应。
 
-1. 输入 `java -version`。
+3. 输入 `java -version`。
 
 ```bash
 java -version
 ```
 
 你应该会看到类似 `java "1.8.0_92"` 的响应。
+
 确保两者报告的版本号相同！如果不是，你可能安装了两个不同（不兼容的）Java 版本，在完成本书中的练习时将会遇到困难。
+
 如果版本号不匹配，请卸载所有与 Java、JDK、JRE 相关的程序。如果安装了 Eclipse，也将其删除。删除所有 Java 相关内容并重新开始。
+
 但是，如果两个命令运行正常且没有报错且版本号匹配，恭喜你！完成这些工作相当困难，你可能已经具备完成书中剩余内容的能力！
+
 不过先不要进入下一个练习！我们要习惯使用命令行进行导航，因为你将通过它运行书中编写的程序。
 
-## 命令行（终端）中的导航
+##### 命令行（终端）中的导航
 
 你应该创建一个新文件夹来存放所有的代码。读完这本书后，你将会有至少 100 个新文件，将它们都放在一个地方会更好。
 
@@ -293,8 +269,6 @@ localhost:Documents mitchell$
 
 ![](img/f5108028d97edf1aaa0cbaa8dee4cc49_19_3.png)
 
-## 练习 0：环境配置
-
 进入 `javahard` 文件夹。之后，输入 `ls`，它应该什么都不列出（毕竟该目录是空的）。
 
 ```bash
@@ -309,11 +283,11 @@ cd
 
 回到终端窗口并执行 `ls` 命令以查看你刚刚创建的文件。
 
-> 如果你觉得酷炫一点，就不需要使用鼠标切换回终端；在 Mac 上可以按 Command + Tab，或者在 Windows 或 Linux 上按 Alt + Tab 来切换应用程序。
+> 如果你觉得酷炫一点，就不需要使用鼠标切换回终端；在 Mac 上可以按 `Command` + `Tab`，或者在 Windows 或 Linux 上按 `Alt` + `Tab` 来切换应用程序。
+>
+> 按住 `Command` 键。保持按住。然后释放一次 `Tab` 键。在按住 `Command` 键的同时，多次按下 `Tab` 键直到你的终端窗口被选中，然后松开 `Command` 键即可。
 
-> 按住 Command 键。保持按住。然后释放一次 Tab 键。在按住 Command 键的同时，多次按下 Tab 键直到你的终端窗口被选中，然后松开 Command 键即可。
-
-## 练习 0：环境配置
+##### 处理烦人的 JAVA_TOOL_OPTIONS 消息
 
 但是，在我的电脑上，运行任何 Java 工具都会向终端窗口打印一条烦人的消息：
 
@@ -321,9 +295,7 @@ cd
 Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayayana.jar
 ```
 
-这是因为 Eclipse 没有这个 JAR 文件无法工作。但我们不会使用 Eclipse，而且这条消息很困扰我，.profile（文件名以点开头，所以它是隐藏的）
-
-## 练习 0：环境配置
+这是因为 Eclipse 没有这个 JAR 文件无法工作。但我们不会使用 Eclipse，而且这条消息很困扰我，`.profile`（文件名以点开头，所以它是隐藏的）
 
 1. 启动你的文本编辑器。点击“Open”（打开）。
 2. 确保你处于“Home”（主）目录。
@@ -331,13 +303,11 @@ Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayayana.jar
 4. 打开名为 `.profile` 的文件。
 5. 在文件末尾添加以下行：
 
+#### Linux
 
+##### 确保 JDK 安装正确
 
-
-
-## 练习 0：环境配置
-
-- 1. 在提示符处输入 `java -version`。
+1. 在提示符处输入 `java -version`。
 
 ```bash
 java -version
@@ -353,13 +323,16 @@ java -version
 
 不过，先不要进入下一个练习！我们应该习惯操作命令行，因为你以后将通过它运行在书中编写的程序。
 
-## 命令行（终端）中的导航
+##### 命令行（终端）中的导航
+
+
 
 你应该创建一个新文件夹来存放所有的代码。在完成这本书后，你将会有至少 100 个新文件，将它们放在一个地方会更好。
 
 > 在下文中，我将交替使用“folder”（文件夹）和“directory”（目录）这两个词。它们的意思相同。“directory”一词要老得多，但从 20 世纪 80 年代开始，图形操作系统使用文件夹图片来表示目录，所以现在也被常用。
 
 ![](img/f5108028d97edf1aaa0cbaa8dee4cc49_23_1.png)
+
 ![](img/f5108028d97edf1aaa0cbaa8dee4cc49_23_2.png)
 
 输入 `ls` 然后按回车键。（那是“list”中的字母“L”。）此命令将列出当前文件夹的内容。
@@ -406,47 +379,43 @@ cd ..
 
 如果你想酷炫一点，就不需要用鼠标切换回终端了：你只需要按键即可。
 
-
-
-
-
 ## 练习 1：一条重要信息
 
-( 和 ) 被称为“parentheses”（括号的复数形式）。其中一个被称为“parenthesis”（单数），但有些人直接称它们为 parens（发音为“puh-RENZ”）。其中一个（()有时被称为“left paren”（左括号），另一个（））被称为“right paren”（右括号），因为括号通常成对出现，且一个在另一个的左侧。出于类似的原因，左括号（)也称为“open paren”（开括号），右括号称为“close paren”（闭合括号）。
+`(` 和 `)` 被称为“parentheses”（括号的复数形式）。其中一个被称为“parenthesis”（单数），但有些人直接称它们为 parens（发音为“puh-RENZ”）。其中一个 `(` 有时被称为“left paren”（左括号），另一个 `)` 被称为“right paren”（右括号），因为括号通常成对出现，且一个在另一个的左侧。出于类似的原因，左括号 `(` 也称为“open paren”（开括号），右括号 `)` 称为“close paren”（闭合括号）。
 
 第 2 行有一个左括号和一个右括号。
 
-[ ] 被称为“brackets”（中括号/括号），但许多程序员称它们为“square brackets”（方括号）以确保没有混淆。在 Java 中，圆和方括号*不是*互换的。括号也是成对出现的，它们被称为“left bracket”（或“open bracket”）和“right bracket”（或“close bracket”）。
+`[ ]` 被称为“brackets”（中括号/括号），但许多程序员称它们为“square brackets”（方括号）以确保没有混淆。在 Java 中，圆和方括号*不是*互换的。括号也是成对出现的，它们被称为“left bracket”（或“open bracket”）和“right bracket”（或“close bracket”）。
 
 第 2 行中，紧挨着有一个左方括号和一个右方括号，整个文件中没有其他括号。
 
-{ } 被称为“braces”（大括号），有些程序员称它们为“curly braces”（花大括号）。它们总是以左右大括号 / 开闭大括号的形式成对出现。
+`{ }` 被称为“braces”（大括号），有些程序员称它们为“curly braces”（花大括号）。它们总是以左右大括号 / 开闭大括号的形式成对出现。
 
-" 是“quotation mark”（引号），但通常缩写为“quote”。它们总是成对出现的。在 Java 中，成对的第一个通常被称为“open quote”（左引号），第二个被称为“close quote”（右引号），尽管它们在两个地方的字符完全相同。第一个引号用于开始某个内容，第二个引号则结束该内容。
+`"` 是“quotation mark”（引号），但通常缩写为“quote”。它们总是成对出现的。在 Java 中，成对的第一个通常被称为“open quote”（左引号），第二个被称为“close quote”（右引号），尽管它们在两个地方的字符完全相同。第一个引号用于开始某个内容，第二个引号则结束该内容。
 
-' 在技术上是“apostrophe”（省号），但几乎所有的程序员都称它们为“single quotes”（单引号）。出于如此，问号经常被称为“double quote”（双引号）。在某些编程语言中，单引号和双引号是可以互换的，但 Java 不是。Java 有时会使用单引号，但在书中它们非常罕见。
+`'` 在技术上是“apostrophe”（省号），但几乎所有的程序员都称它们为“single quotes”（单引号）。出于如此，问号经常被称为“double quote”（双引号）。在某些编程语言中，单引号和双引号是可以互换的，但 Java 不是。Java 有时会使用单引号，但在书中它们非常罕见。
 
-. 在技术上是“period”（句号），但几乎所有的程序员都说“dot”（点）。它们在编程语言中被频繁使用，作为分隔符而不是结束符，因此我们不称它们为 periods。
+`.` 在技术上是“period”（句号），但几乎所有的程序员都说“dot”（点）。它们在编程语言中被频繁使用，作为分隔符而不是结束符，因此我们不称它们为 periods。
 
 这个程序中有四个点（dot）和一个句号（period）。
 
-; 被称为“semicolon”（分号）。它位于键盘上字母 ‘L’ 和引号之间。Java 使用大量的分号，尽管在这个程序中只有两个：一个在第 3 行末尾，另一个在第 4 行末尾。
+`;` 被称为“semicolon”（分号）。它位于键盘上字母 `L` 和引号之间。Java 使用大量的分号，尽管在这个程序中只有两个：一个在第 3 行末尾，另一个在第 4 行末尾。
 
-最后，< 是“less-than sign”（小于号），> 是“greater-than sign”（大于号），但有时它们被用作类似括号的符号。当它们被这样用时，通常被称为“angle brackets”（角括号）。Java 使用角括号，但你不会在书中看到它们。
+最后，`<` 是“less-than sign”（小于号），`>` 是“greater-than sign”（大于号），但有时它们被用作类似括号的符号。当它们被这样用时，通常被称为“angle brackets”（角括号）。Java 使用角括号，但你不会在书中看到它们。
 
 好了，回到逐行分析。你已经正确地输入了第一行。
 
-你应该通过按一次 TAB 键来开始第二行。你的光标将移动几个空格（可能是 4 或 8 个）。然后再次输入单词 `public`，一个空格，单词 `static`，一个空格，单词 `void`，一个空格，单词 `main`，后面跟一个左括号（单词 "main" 和括号之间没有空格）。括号之后有一个空格，大写 'S' 开头的单词 `String`，一对紧挨着的左、右方括号，一个空格，单词 `args`，一个空格，一个右括号，最后一个空格，以及第二个大括号。
+你应该通过按一次 `TAB` 键来开始第二行。你的光标将移动几个空格（可能是 4 或 8 个）。然后再次输入单词 `public`，一个空格，单词 `static`，一个空格，单词 `void`，一个空格，单词 `main`，后面跟一个左括号（单词 "main" 和括号之间没有空格）。括号之后有一个空格，大写 'S' 开头的单词 `String`，一对紧挨着的左、右方括号，一个空格，单词 `args`，一个空格，一个右括号，最后一个空格，以及第二个大括号。
 
 所以，第二行以一个制表符开头，总共七个空格，且 "String" 中的 'S' 是大写的。呼。
 
-第三行以两个制表符开头。你的文本编辑器可能已经让你的光标直接位于 "public" 中的 'p' 下方。如果是这样，你只需要按一次 TAB。如果不是，按两次得到两个制表符。在制表符之后，输入大写 'S' 开头的单词 `System`，然后是一个点（period），然后是单词 `out`，另一个点（单词是 "Print"，尽管末尾没有 'i' 或 'e'），一个左括号，一个空格，一个引号（左引号），句子 `I am determined to learn how to code.`（句子以句号结束），然后是右引号、右括号和分号。
+第三行以两个制表符开头。你的文本编辑器可能已经让你的光标直接位于 "public" 中的 'p' 下方。如果是这样，你只需要按一次 `TAB`。如果不是，按两次得到两个制表符。在制表符之后，输入大写 'S' 开头的单词 `System`，然后是一个点（period），然后是单词 `out`，另一个点（单词是 "Print"，尽管末尾没有 'i' 或 'e'），一个左括号，一个空格，一个引号（左引号），句子 `I am determined to learn how to code.`（句子以句号结束），然后是右引号、右括号和分号。
 
 所以，第 3 行有三个制表符、九个空格、两个点（period）、一对引号、一个左括号，且只有两个大写字母。
 
-第 4 行与第 3 行几乎相同，但第 5 行的句子开头只有一个制表符。你的文本编辑器在那那里为你放了两个制表符，你应该可以通过按一次 BACKSPACE 键来删掉多余的制表符。然后之后，大括号应该与 `public static` 中的 'p' 对齐，因为那是匹配的左大括号所在。
+第 4 行与第 3 行几乎相同，但第 5 行的句子开头只有一个制表符。你的文本编辑器在那那里为你放了两个制表符，你应该可以通过按一次 `BACKSPACE` 键来删掉多余的制表符。然后之后，大括号应该与 `public static` 中的 'p' 对齐，因为那是匹配的左大括号所在。
 
-最后，第 6 行没有制表符，多了一个大括号。你可以在第 6 行后按 ENTER，或者 Java 并不在意。注意我们在文件中有两个左括号和两个大括号。三个左括号和三个右括号。两个“左引号”和两个“右引号”。一个左方括号和一个右方括号。它们总是这样成对的。
+最后，第 6 行没有制表符，多了一个大括号。你可以在第 6 行后按 `ENTER`，或者 Java 并不在意。注意我们在文件中有两个左括号和两个大括号。三个左括号和三个右括号。两个“左引号”和两个“右引号”。一个左方括号和一个右方括号。它们总是这样成对的。
 
 还要注意，每当我们写一个左括号时，下面的行开头制表符就更多，相应的减少。
 
@@ -479,7 +448,7 @@ ls
 
 Java 编译器名为 `javac`（'c' 代表 compiler）。它的正确读音是 "java-see"，尽管很多人读成 "java-ack。（那些人是不对的，但也理解）。
 
-总之，我们使用 javac 这样编译程序：
+总之，我们使用 `javac` 这样编译程序：
 
 ```
 javac FirstProg.java
@@ -522,9 +491,6 @@ public class FirstProg
 
 所以，如果你有任何错误信息，修复它们，然后保存代码，回到终端再次编译。
 
-
-
-
 ## 练习 1：一条重要信息
 
 如果你在文本编辑器中更改了代码，在尝试重新编译之前必须保存文件。如果你没有保存更改，即使文本编辑器中的代码是正确的，你仍然在编译之前保存的旧版本代码。
@@ -547,6 +513,7 @@ java FirstProg
 ## 你应该看到的
 
 | 我决心学习编程。 |
+
 | 今天日期是 |
 
 > 注意，你输入的命令是 `java FirstProg`，而不是 `java FirstProg.java` 甚至 `java FirstProg.class`，尽管 `FirstProg.class` 是在 JVM 中执行的字节文件的名称。
@@ -558,6 +525,7 @@ java FirstProg
 在大多数练习之后，我会列出一些你在输入代码并使其编译运行后应该尝试的额外任务。有些学习练习相当简单，有些则更具挑战性，但你应该始终尝试一下。
 
 - 1. 修改第 4 行引号内的内容以包含今天的日期。做出更改后保存文件，编译文件并再次运行。
+
 - 2. 修改第 3 行引号内的内容，让计算机显示你的名字。
 
 ## 完成学习练习后你应该看到的
@@ -567,6 +535,7 @@ java FirstProg
 ```
 
 > 我，Graham Mitchell，决心学习编程。
+
 > 今天日期是 2015 年 11 月 22 日，星期日。
 
 ## 练习 2：更多打印
@@ -575,7 +544,7 @@ java FirstProg
 
 将以下文本输入到名为 `GasolineReceipt.java` 的单个文件中。确保与我写的完全匹配，包括空格、标点和大小写。
 
-你在第 4 行看到的小竖线 (|) 是“管道”字符，你可以使用 `Shift + 反斜杠 (\)` 来输入它。假设你使用的是普通的美国键盘，管道/反斜键位于退格键（Backspace）和回车键（Enter）之间。
+你在第 4 行看到的小竖线 (`|`) 是“管道”字符，你可以使用 `Shift + 反斜杠 (\)` 来输入它。假设你使用的是普通的美国键盘，管道/反斜键位于退格键（Backspace）和回车键（Enter）之间。
 
 GasolineReceipt.java
 
@@ -598,7 +567,7 @@ public class GasolineReceipt {
 
 注意第一行与上一个作业相同，但类名现在是 `GasolineReceipt` 而不是 `FirstProg`。还要注意，你存放内容的文件名是 `GasolineReceipt.java` 而不是 `FirstProg.java`。这并不是巧合。
 
-在 Java 中，每个文件只能包含一个类，且公共类（public class）的名称必须与文件名匹配（包括大小写），只是文件名以 `.java` 结尾，而公类名不是。
+在 Java 中，每个文件只能包含一个类，且公共类（`public class`）的名称必须与文件名匹配（包括大小写），只是文件名以 `.java` 结尾，而公类名不是。
 
 那么，Java 中的 "public class" 是什么意思呢？我等你长大了再告诉你。说真的，现在就尝试进入那种细节是大多数“初学者”放弃的原因。
 
@@ -611,29 +580,41 @@ java FirstProg
 当你运行它时，你应该看到类似这样的输出：
 
 | +--------------------------------- |
+
 | |              CORNER STORE              |
+
 | | 2015-03-29      04:38PM               |
+
 | |                                   |
+
 | | Gallons:            10.870              |
+
 | | Price/gallon: $ 2.089             |
+
 | |                                   |
+
 | | Fuel total:      $ 22.71          |
+
 | |                                   |
+
 | | +--------------------------------- |
-
-
-
-
 
 ## 练习 3：打印选择
 
 | Alpha |
+
 | Bravo |
+
 | Charlie |
+
 | Delta |
+
 | EchoFoxtrotGolf |
+
 | Hotel |
+
 | India |
+
 | This is a test. |
 
 你能看出其中的区别吗？
@@ -642,85 +623,12 @@ java FirstProg
 
 你还会注意到（在第 8 行）我们可以写一个括号内什么都没有的 `println()` 语句。没有引号，也没有任何内容。该语句指令计算机不打印任何内容，然后将光标移动到下一行的开头。
 
-你可能还会注意到这个程序中有几行是空的（第 5、9、12 和 17 行）。在第一次练习中，当我写道你必须“完全匹配我写的内容，包括空格、标点符号和大小写”时，我并没有完全诚实。Java 编译器会忽略你代码中额外的空行。你可以添加或删除它们，程序的运行结果完全一样。
 
-我的学生指责我“满口谎言”。事实确实。我通过惨痛教训学到，当学生正在学习编程这类困难的内容时，告诉他们真相会让他们感到非常困惑。因此，我会过度简化我的话语，即使这在技术上是不准确的。
 
-如果你已经知道如何编程，并且由于我的这些“谎言”让你感到反感，那么这本书将很难读。但对于那些初学者来说，我向你保证，你起初确实希望我简化问题。我承诺最终会揭示真相。
-
-无论如何，在第 19 行，我又做了一个新尝试。到目前为止，你只在引号内打印过单个字符串（String）。但只要在打印前将这些内容组合起来，打印多个内容也是完全没问题的。
-
-所以在第 19 行，我有三个带引号的“字符串”：单词 "this"、一个空格、单词 "is is"、一个空格、单词 "a"，最后是一个空格，后跟着 "test" 再加一个句号。在这六个字符串之间都有一个加号（"+"），所以第 19 行总共有五个加号。当你把
-
-> 什么是 "String?"？一对引号之间的一系列字符（字母、数字、符号）。我稍后会详细解释。
-
-在字符串之间加上加号时，Java 会将它们相加，形成一个引号内的长字符串，然后一次性显示出来。
-
-如果你的代码中出现错误，很可能是在第 19 行。记住正确地开始和结束所有引号，并确保所有细节正确都是很有挑战性的。
-
-希望今天的课程相对简单。别担心，我会在下节课上补回。
-
-## 练习
-
-- 1. 在代码末尾添加一条打印语句，显示句子“I am learning Java the Hard Way!”。像第 19 行那样将其拆分，使每个字符串中只有两个或三个单词并在之间加上符号。确保空格也包含在内！
-
-脚注：
-
-* *技术上，将较小的单词组合成一个较大的单词被称为“拼接”（concatenation），而不是“相加”。Java 将字符串拼接在一起。*
-
-## 练习 4：转义序列和注释
-
-你是否考虑过，如果我们想在屏幕上显示引号会发生什么？我们所有想要显示的内容都包含在 `println()` 语句的引号之间，在引号*内部*放入一个引号会导致问题。
-
-大多数编程语言都允许使用“转义序列”，你通过某种字符来指示下一个字符应该以正常方式处理。
-
-以下是关于 Java 转义序列的注释。
-命名为 EscapeSequencesComments.java
-
-EscapeSequencesComments.java
-
-```java
-public class EscapeSequencesComments {
-    public static void main(String[] args ) {
-        // 此练习演示了转义序列与注释（如这些）
-        System.out.print("Learn Java\n\tthe\\Hard\\Way\\n");
-        System.out.print("\\TLearn Java the \\Hard\\Way\\n");
-        // System.out.print("Learn Java the Hard Way ");
-        System.out.print("Hello\n"); // 这一行打印 Hello。
-        System.out.print("Jelly\n"); // 这一行打印 Jelly。
-        /* 敏捷的棕色狐狸跳过了一只懒狗。
-        // System.out.print(/* testing */.println("Hard to believe, eh?");
-        System.out.println("Surprised?"/* abcde */ Or what did you expect?");
-        System.out.println("\\ // - =\\ \\\\ "); // 需要 2 个生成 1 个
-        System.out.print("I hope you understand \\escape sequences\\" now.\n");
-        // 以及注释。 )
-    }
-}
-```
-
-当你运行它时，你应该看到这些。
-
-| Learn | Java |
-|---|---|
-| Hard | Way |
-
-```text
-Learn Java
-	Hello
-Jelly
-Hard to believe, eh?
-Surprised?/* abcde */ Or what did you expect?
-\ // - =\ \\\ 
-I hope you understand \escape sequences\ now.
-```
-
-如果你的代码中出现错误，很可能是在第 19 行。记住正确地开始和结束所有引号，并确保所有细节正确都是很有挑战性的。
-
-希望今天的课程相对简单。别担心，我会在下节课上补回。
-
- 练习 3：打印选择
+# 练习 3：打印选择
 
 | Alpha |
+|-------|
 | Bravo |
 | Charlie |
 | Delta |
@@ -731,7 +639,7 @@ I hope you understand \escape sequences\ now.
 
 你能看出其中的区别吗？
 
-`print()` 和 `println()` 都会在屏幕上显示引号的内容。但 `print()` 在完成打印后会移动到新行，而 `println()` 则不会：它显示内容后会将光标留在行尾，以便接下来的打印语句从该行的相同位置开始打印。
+`print()` 和 `println()` 都会在屏幕上显示引号的内容。但 `println()` 在完成打印后会移动到新行，而 `print()` 则不会：它显示内容后会将光标留在行尾，以便接下来的打印语句从该行的相同位置开始打印。
 
 你还会注意到（在第 8 行）我们可以写一个括号内什么都没有的 `println()` 语句。没有引号，也没有任何内容。该语句指令计算机不打印任何内容，然后将光标移动到下一行的开头。
 
@@ -741,11 +649,11 @@ I hope you understand \escape sequences\ now.
 
 如果你已经知道如何编程，并且由于我的这些“谎言”让你感到反感，那么这本书将很难读。但对于那些初学者来说，我向你保证，你起初确实希望我简化问题。我承诺最终会揭示真相。
 
-无论如何，在第 19 行，我又做了一个新尝试。到目前为止，你只在引号内打印过单个字符串（String）。但只要在打印前将这些内容组合起来，打印多个内容也是完全没问题的。
+无论如何，在第 19 行，我又做了一个新尝试。到目前为止，你只在引号内打印过单个字符串（`String`）。但只要在打印前将这些内容组合起来，打印多个内容也是完全没问题的。
 
-所以在第 19 行，我有三个带引号的“字符串”：单词 "this"、一个空格、单词 "is is"、一个空格、单词 "a"，最后是一个空格，后跟着 "test" 再加一个句号。在这六个字符串之间都有一个加号（"+"），所以第 19 行总共有五个加号。当你把
+所以在第 19 行，我有三个带引号的“字符串”：单词 `"this"`、一个空格、单词 `"is is"`、一个空格、单词 `"a"`，最后是一个空格，后跟着 `"test"` 再加一个句号。在这六个字符串之间都有一个加号（`+`），所以第 19 行总共有五个加号。当你把
 
-> 什么是 "String?"？一对引号之间的一系列字符（字母、数字、符号）。我稍后会详细解释。
+> 什么是 `"String"`？一对引号之间的一系列字符（字母、数字、符号）。我稍后会详细解释。
 
 在字符串之间加上加号时，Java 会将它们相加，形成一个引号内的长字符串，然后一次性显示出来。
 
@@ -761,16 +669,15 @@ I hope you understand \escape sequences\ now.
 
 * *技术上，将较小的单词组合成一个较大的单词被称为“拼接”（concatenation），而不是“相加”。Java 将字符串拼接在一起。*
 
-## 练习 4：转义序列和注释
+# 练习 4：转义序列和注释
 
 你是否考虑过，如果我们想在屏幕上显示引号会发生什么？我们所有想要显示的内容都包含在 `println()` 语句的引号之间，在引号*内部*放入一个引号会导致问题。
 
 大多数编程语言都允许使用“转义序列”，你通过某种字符来指示下一个字符应该以正常方式处理。
 
 以下是关于 Java 转义序列的注释。
-命名为 EscapeSequencesComments.java
 
-EscapeSequencesComments.java
+命名为 `EscapeSequencesComments.java`
 
 ```java
 public class EscapeSequencesComments {
@@ -794,8 +701,8 @@ public class EscapeSequencesComments {
 当你运行它时，你应该看到这些。
 
 | Learn | Java |
-|---|---|
-| Hard | Way |
+|-------|------|
+| Hard  | Way  |
 
 ```text
 Learn Java
@@ -806,20 +713,14 @@ Surprised?/* abcde */ Or what did you expect?
 \ // - =\ \\\ 
 I hope you understand \escape sequences\ now.
 ```
-
-如果你的代码中出现错误，很可能是在第 19 行。记住正确地开始和结束所有引号，并确保所有细节正确都是很有挑战性的。
-
-希望今天的课程相对简单。别担心，我会在下节课上补回。
-
- 练习 4：转义序列和注释
 
 > (That's not a good comment, though;任何知道 Java 的程序员都知道这行代码做了什么。通常你应该通过注释解释为什么代码在那里，而不是代码做了什么。你会随着编程水平的提高而写出更好的注释。)
 
-第 8 行了一些了一些事情。\b 是“退格”的转义序列，所以它显示 "Jello"，然后发射一个退格字符。这删除了 "o"，然后显示 "y"（以及一个 \v 到下一行）。
+第 8 行做了一些事情。`\b` 是“退格”的转义序列，所以它显示 "Jello"，然后发射一个退格字符。这删除了 "o"，然后显示 "y"（以及一个 `\v` 到下一行）。
 
-第 9 行和 10 行是一个块注释。块注释以 /*（斜杠星号）开始，以星号斜杠 */ 结束），无论是在同一行还是二十行之后。之间的所有内容都被视为注释并被编译器忽略。
+第 9 行和 10 行是一个块注释。块注释以 `/*`（斜杠星号）开始，以 `*/`（星号斜杠）结束，无论是在同一行还是二十行之后。之间的所有内容都被视为注释并被编译器忽略。
 
-你可以在第 11 行看到块注释的意外示例。在第 12 行你可以看到字符串（引号中的内容）优先于块注释。第 13 行和 14 行证明了要在屏幕上显示反斜杠，必须用另一个反斜杠来转义。这在处理 Windows 风格路径时很重要；尝试打开 "C:\Users\Graham_Mitchell\Desktop\foo.txt" 在 Java 中无法运行，因为编译器会尝试解释 "U"。你需要双写反斜杠。如第 7 和 8 行所示，双斜杠将行标记为注释。事实上，我们可以写：
+你可以在第 11 行看到块注释的意外示例。在第 12 行你可以看到字符串（引号中的内容）优先于块注释。第 13 行和 14 行证明了要在屏幕上显示反斜杠，必须用另一个反斜杠来转义。这在处理 Windows 风格路径时很重要；尝试打开 `"C:\Users\Graham_Mitchell\Desktop\foo.txt"` 在 Java 中无法运行，因为编译器会尝试解释 `"U"`。你需要双写反斜杠。如第 7 和 8 行所示，双斜杠将行标记为注释。事实上，我们可以写：
 
 ```java
 System.out.println("A" ); // prints 'A'
@@ -827,16 +728,13 @@ System.out.println("A" ); // prints 'A'
 
 ...这样完全可行。从斜杠到行尾的内容都会被编译器忽略。
 
-# 练习
+## 练习
 
-- 1. 如果你在 println 单词中间插入块注释会发生什么？在第 13 行尝试一下。然后在第 18 行下方添加一条注释，说明它是否可以编译。如果有效，则保留第 13 行的块注释；如果失败，则将其移除。
-- 2. 重新打开上练习的代码并另存为 PrintingChoicesEscapes.java。重写它，使其具有相同的输出，但只使用带有转义序列的单个 println() 语句。
+- 1. 如果你在 `println` 单词中间插入块注释会发生什么？在第 13 行尝试一下。然后在第 18 行下方添加一条注释，说明它是否可以编译。如果有效，则保留第 13 行的块注释；如果失败，则将其移除。
 
+- 2. 重新打开上练习的代码并另存为 `PrintingChoicesEscapes.java`。重写它，使其具有相同的输出，但只使用带有转义序列的单个 `println()` 语句。
 
-
-
-
-## 练习 5：在变量中保存信息
+# 练习 5：在变量中保存信息
 
 如果程序只能做在屏幕上打印内容的事情，那么程序将非常无聊。我们希望程序具有交互性。
 
@@ -884,35 +782,46 @@ public class CreatingVariables {
 ## 你看到的
 
 > 变量 x 包含 10。
+
 值 400 存储在变量 y 中。
+
 实验花费了 4.71 秒。
+
 最喜欢的无理数是欧拉数：2.718281828459045
+
 希望你不仅仅是 $1.89！
+
 我的名字是 Mr. Graham Mitchell
 
-在第 3 行，我们声明了变量；前三个被命名为 x、y 和 age。这三个变量都是“整数”（integer），这是一种可以存储两个十亿之间数值的变量类型。
+在第 3 行，我们声明了变量；前三个被命名为 `x`、`y` 和 `age`。这三个变量都是“整数”（`int`），这是一种可以存储两个十亿之间数值的变量类型。
 
 整数类型的变量可以存储值 10。它可以存储值 -8192。整数变量可以存储 123456789。它不能存储 3.14，因为它有小数部分。整数变量不能存储 10000000000，因为十亿太大了。
 
-在第 4 行，我们声明了名为 seconds、e 和 checking 的变量。这三个变量是“浮点数”（floating-point），这是一种可以存储带有小数部分的数字的变量类型。“Double”是“双精度浮点数”的缩写。在本书中，我将交替使用“double”和“floating-point”这两个术语。
+在第 4 行，我们声明了名为 `seconds`、`e` 和 `checking` 的变量。这三个变量是“浮点数”（`double`），这是一种可以存储带有小数部分的数字的变量类型。“Double”是“双精度浮点数”的缩写。在本书中，我将交替使用“double”和“floating-point”这两个术语。
 
 * declare - 告诉程序变量的名称（或“标识符”）和类型。
 
 就是那种令人困惑的，但我并没有发明这些术语；我只是教它们。
 
-浮点数变量可以存储值 -8192.71。（它可能有小数部分，但不必有）。双精度浮点数变量可以存储 ±1.79769 × 10^{³⁰⁸} 到 4.94065 × 10⁻³⁰⁸ 之间的几乎任何值。
+浮点数变量可以存储值 -8192.71。（它可能有小数部分，但不必有）。双精度浮点数变量可以存储 ±1.79769 × 10³⁰⁸ 到 4.94065 × 10⁻³⁰⁸ 之间的几乎任何值。
 
-然而，double 的精度有限。注意在第 12 行，我们将值 2.71828182845904523536 存储到变量 `e` 中，但当我在第 22 行输出该值时，只输出了2.718281828459045。double 没有足够的有效位数来存储 2.71828182845904523536 巨大、巨大的值。（而且单精度浮点变量（即 float）的有效位数比 double 少。整数具有完美的精度，但只能存储整数。这就是为什么它们不再被使用。）
+然而，`double` 的精度有限。注意在第 12 行，我们将值 `2.71828182845904523536` 存储到变量 `e` 中，但当我在第 22 行输出该值时，只输出了 `2.718281828459045`。`double` 没有足够的有效位数来存储 `2.71828182845904523536` 巨大、巨大的值。（而且单精度浮点变量（即 `float`）的有效位数比 `double` 少。整数具有完美的精度，但只能存储整数。这就是为什么它们不再被使用。）
 
-我们在本次练习中将看到的最后一种变量类型是 String。在第 5 行，我们声明了 String 变量：firstName、lastName 和 title。String 变量可以存储单词和短语；string 是“字符字符串”的缩写。
+我们在本次练习中将看到的最后一种变量类型是 `String`。在第 5 行，我们声明了 `String` 变量：`firstName`、`lastName` 和 `title`。`String` 变量可以存储单词和短语；string 是“字符字符串”的缩写。
 
-第 7 行到第 9 行初始化了三个整数值。值 10 被存储在 x 中。在此之前，x 存在，但它的值是未定义的。400 存储在 y 中，39 存储在 age 中。
+第 7 行到第 9 行初始化了三个整数值。值 10 被存储在 `x` 中。在此之前，`x` 存在，但它的值是未定义的。400 存储在 `y` 中，39 存储在 `age` 中。
 
-第 11 行到第 13 行给 double 变量赋了初始值，第 15 行到第 17 行初始化了三个 String 变量。第 19 行到 24 行初始化了... 练习 5：在变量中保存信息
+第 11 行到第 13 行给 `double` 变量赋了初始值，第 15 行到第 17 行初始化了三个 `String` 变量。第 19 行到 24 行初始化了...
+
+
+
+# 练习 5：在变量中保存信息
 
 如果程序只能做在屏幕上打印内容的事情，那么程序将非常无聊。我们希望程序具有交互性。
 
 遗憾的是，交互性需要几个不同的概念共同工作，一次性解释所有内容可能会让人困惑。我将一个一个介绍它们。
+
+## 变量
 
 首先是变量！如果你上过代数课，你对数学中的变量概念并不陌生。编程语言也有变量，而且基本概念是相同的：
 
@@ -920,10 +829,10 @@ public class CreatingVariables {
 
 Java 中的变量与数学变量有四个主要区别：
 
-- 1. 变量名可以比一个字母长。
-- 2. 变量可以存储不仅仅是数字；它们还可以存储单词。
-- 3. 在第一次创建变量时，你必须选择该变量将存储什么类型的值。
-- 4. 变量的值（但不是它的类型）在整个程序过程中可以改变。例如，变量 `score` 的初始值可能为 0，但在程序结束时，`score` 可能会存储 413500。
+1. 变量名可以比一个字母长。
+2. 变量可以存储不仅仅是数字；它们还可以存储单词。
+3. 在第一次创建变量时，你必须选择该变量将存储什么类型的值。
+4. 变量的值（但不是它的类型）在整个程序过程中可以改变。例如，变量 `score` 的初始值可能为 0，但在程序结束时，`score` 可能会存储 413500。
 
 好了，讨论足够了。让我们开始看代码吧！我不会告诉你文件名应该叫什么，你得自己想出来。
 
@@ -956,243 +865,42 @@ public class CreatingVariables {
 ## 你看到的
 
 > 变量 x 包含 10。
-值 400 存储在变量 y 中。
-实验花费了 4.71 秒。
-最喜欢的无理数是欧拉数：2.718281828459045
-希望你不仅仅是 $1.89！
-我的名字是 Mr. Graham Mitchell
+>
+> 值 400 存储在变量 y 中。
+>
+> 实验花费了 4.71 秒。
+>
+> 最喜欢的无理数是欧拉数：2.718281828459045
+>
+> 希望你不仅仅是 $1.89！
+>
+> 我的名字是 Mr. Graham Mitchell
 
-在第 3 行，我们声明了变量；前三个被命名为 x、y 和 age。这三个变量都是“整数”（integer），这是一种可以存储两个十亿之间数值的变量类型。
+在第 3 行，我们声明了变量；前三个被命名为 `x`、`y` 和 `age`。这三个变量都是“整数”（`int`），这是一种可以存储两个十亿之间数值的变量类型。
 
-整数类型的变量可以存储值 10。它可以存储值 -8192。整数变量可以存储 123456789。它不能存储 3.14，因为它有小数部分。整数变量不能存储 10000000000，因为十亿太大了。
+整数类型的变量可以存储值 `10`。它可以存储值 `-8192`。整数变量可以存储 `123456789`。它不能存储 `3.14`，因为它有小数部分。整数变量不能存储 `10000000000`，因为十亿太大了。
 
-在第 4 行，我们声明了名为 seconds、e 和 checking 的变量。这三个变量是“浮点数”（floating-point），这是一种可以存储带有小数部分的数字的变量类型。“Double”是“双精度浮点数”的缩写。在本书中，我将交替使用“double”和“floating-point”这两个术语。
+在第 4 行，我们声明了名为 `seconds`、`e` 和 `checking` 的变量。这三个变量是“浮点数”（floating-point），这是一种可以存储带有小数部分的数字的变量类型。“Double”是“双精度浮点数”的缩写。在本书中，我将交替使用“double”和“floating-point”这两个术语。
 
-* declare - 告诉程序变量的名称（或“标识符”）和类型。
+> **declare** - 告诉程序变量的名称（或“标识符”）和类型。
 
 就是那种令人困惑的，但我并没有发明这些术语；我只是教它们。
 
-浮点数变量可以存储值 -8192.71。（它可能有小数部分，但不必有）。双精度浮点数变量可以存储 ±1.79769 × 10^{³⁰⁸} 到 4.94065 × 10⁻³⁰⁸ 之间的几乎任何值。
+浮点数变量可以存储值 `-8192.71`。（它可能有小数部分，但不必有）。双精度浮点数变量可以存储 ±1.79769 × 10³⁰⁸ 到 4.94065 × 10⁻³⁰⁸ 之间的几乎任何值。
 
-然而，double 的精度有限。注意在第 12 行，我们将值 2.71828182845904523536 存储到变量 `e` 中，但当我在第 22 行输出该值时，只输出了2.718281828459045。double 没有足够的有效位数来存储 2.71828182845904523536 巨大、巨大的值。（而且单精度浮点变量（即 float）的有效位数比 double 少。整数具有完美的精度，但只能存储整数。这就是为什么它们不再被使用。）
+然而，`double` 的精度有限。注意在第 12 行，我们将值 `2.71828182845904523536` 存储到变量 `e` 中，但当我在第 22 行输出该值时，只输出了 `2.718281828459045`。`double` 没有足够的有效位数来存储 `2.71828182845904523536` 巨大、巨大的值。（而且单精度浮点变量（即 `float`）的有效位数比 `double` 少。整数具有完美的精度，但只能存储整数。这就是为什么它们不再被使用。）
 
-我们在本次练习中将看到的最后一种变量类型是 String。在第 5 行，我们声明了 String 变量：firstName、lastName 和 title。String 变量可以存储单词和短语；string 是“字符字符串”的缩写。
+我们在本次练习中将看到的最后一种变量类型是 `String`。在第 5 行，我们声明了 `String` 变量：`firstName`、`lastName` 和 `title`。`String` 变量可以存储单词和短语；string 是“字符字符串”的缩写。
 
-第 7 行到第 9 行初始化了三个整数值。值 10 被存储在 x 中。在此之前，x 存在，但它的值是未定义的。400 存储在 y 中，39 存储在 age 中。
+第 7 行到第 9 行初始化了三个整数值。值 `10` 被存储在 `x` 中。在此之前，`x` 存在，但它的值是未定义的。`400` 存储在 `y` 中，`39` 存储在 `age` 中。
 
-第 11 行到第 13 行给 double 变量赋了初始值，第 15 行到第 17 行初始化了三个 String 变量。第 19 行到 24 行初始化了... 练习 5：在变量中保存信息
+第 11 行到第 13 行给 `double` 变量赋了初始值，第 15 行到第 17 行初始化了三个 `String` 变量。第 19 行到 24 行初始化了...
 
-如果程序只能做在屏幕上打印内容的事情，那么程序将非常无聊。我们希望程序具有交互性。
 
-遗憾的是，交互性需要几个不同的概念共同工作，一次性解释所有内容可能会让人困惑。我将一个一个介绍它们。
 
-首先是变量！如果你上过代数课，你对数学中的变量概念并不陌生。编程语言也有变量，而且基本概念是相同的：
+## 练习 6：数学运算
 
-> “变量是一个名称，它指向一个存储值的位置。”
-
-Java 中的变量与数学变量有四个主要区别：
-
-- 1. 变量名可以比一个字母长。
-- 2. 变量可以存储不仅仅是数字；它们还可以存储单词。
-- 3. 在第一次创建变量时，你必须选择该变量将存储什么类型的值。
-- 4. 变量的值（但不是它的类型）在整个程序过程中可以改变。例如，变量 `score` 的初始值可能为 0，但在程序结束时，`score` 可能会存储 413500。
-
-好了，讨论足够了。让我们开始看代码吧！我不会告诉你文件名应该叫什么，你得自己想出来。
-
-```java
-public class CreatingVariables {
-    public static void main(String[] args) {
-        int x, y, age;
-        double seconds, e, checking;
-        String firstName, lastName, title;
-
-        x = 10;
-        y = 400;
-        age = 39;
-        seconds = 4.71;
-        e = 2.7182818284590423536;
-        checking = 1.89;
-
-        firstName = "Graham";
-        lastName = "Mitchell";
-        title = "Mr.";
-
-        System.out.println("The variable x contains " + x + ");
-        System.out.println("The value " + y + " is stored in the variable y.");
-        System.out.println("The experiment took " + seconds + " seconds.");
-        System.out.println("A favorite irrational # " + e + ");
-    }
-}
-```
-
-## 你看到的
-
-> 变量 x 包含 10。
-值 400 存储在变量 y 中。
-实验花费了 4.71 秒。
-最喜欢的无理数是欧拉数：2.718281828459045
-希望你不仅仅是 $1.89！
-我的名字是 Mr. Graham Mitchell
-
-在第 3 行，我们声明了变量；前三个被命名为 x、y 和 age。这三个变量都是“整数”（integer），这是一种可以存储两个十亿之间数值的变量类型。
-
-整数类型的变量可以存储值 10。它可以存储值 -8192。整数变量可以存储 123456789。它不能存储 3.14，因为它有小数部分。整数变量不能存储 10000000000，因为十亿太大了。
-
-在第 4 行，我们声明了名为 seconds、e 和 checking 的变量。这三个变量是“浮点数”（floating-point），这是一种可以存储带有小数部分的数字的变量类型。“Double”是“双精度浮点数”的缩写。在本书中，我将交替使用“double”和“floating-point”这两个术语。
-
-* declare - 告诉程序变量的名称（或“标识符”）和类型。
-
-就是那种令人困惑的，但我并没有发明这些术语；我只是教它们。
-
-浮点数变量可以存储值 -8192.71。（它可能有小数部分，但不必有）。双精度浮点数变量可以存储 ±1.79769 × 10^{³⁰⁸} 到 4.94065 × 10⁻³⁰⁸ 之间的几乎任何值。
-
-然而，double 的精度有限。注意在第 12 行，我们将值 2.71828182845904523536 存储到变量 `e` 中，但当我在第 22 行输出该值时，只输出了2.718281828459045。double 没有足够的有效位数来存储 2.71828182845904523536 巨大、巨大的值。（而且单精度浮点变量（即 float）的有效位数比 double 少。整数具有完美的精度，但只能存储整数。这就是为什么它们不再被使用。）
-
-我们在本次练习中将看到的最后一种变量类型是 String。在第 5 行，我们声明了 String 变量：firstName、lastName 和 title。String 变量可以存储单词和短语；string 是“字符字符串”的缩写。
-
-第 7 行到第 9 行初始化了三个整数值。值 10 被存储在 x 中。在此之前，x 存在，但它的值是未定义的。400 存储在 y 中，39 存储在 age 中。
-
-第 11 行到第 13 行给 double 变量赋了初始值，第 15 行到第 17 行初始化了三个 String 变量。第 19 行到 24 行初始化了... 练习 5：在变量中保存信息
-
-如果程序只能做在屏幕上打印内容的事情，那么程序将非常无聊。我们希望程序具有交互性。
-
-遗憾的是，交互性需要几个不同的概念共同工作，一次性解释所有内容可能会让人困惑。我将一个一个介绍它们。
-
-首先是变量！如果你上过代数课，你对数学中的变量概念并不陌生。编程语言也有变量，而且基本概念是相同的：
-
-> “变量是一个名称，它指向一个存储值的位置。”
-
-Java 中的变量与数学变量有四个主要区别：
-
-- 1. 变量名可以比一个字母长。
-- 2. 变量可以存储不仅仅是数字；它们还可以存储单词。
-- 3. 在第一次创建变量时，你必须选择该变量将存储什么类型的值。
-- 4. 变量的值（但不是它的类型）在整个程序过程中可以改变。例如，变量 `score` 的初始值可能为 0，但在程序结束时，`score` 可能会存储 413500。
-
-好了，讨论足够了。让我们开始看代码吧！我不会告诉你文件名应该叫什么，你得自己想出来。
-
-```java
-public class CreatingVariables {
-    public static void main(String[] args) {
-        int x, y, age;
-        double seconds, e, checking;
-        String firstName, lastName, title;
-
-        x = 10;
-        y = 400;
-        age = 39;
-        seconds = 4.71;
-        e = 2.7182818284590423536;
-        checking = 1.89;
-
-        firstName = "Graham";
-        lastName = "Mitchell";
-        title = "Mr.";
-
-        System.out.println("The variable x contains " + x + ");
-        System.out.println("The value " + y + " is stored in the variable y.");
-        System.out.println("The experiment took " + seconds + " seconds.");
-        System.out.println("A favorite irrational # " + e + ");
-    }
-}
-```
-
-## 你看到的
-
-> 变量 x 包含 10。
-值 400 存储在变量 y 中。
-实验花费了 4.71 秒。
-最喜欢的无理数是欧拉数：2.718281828459045
-希望你不仅仅是 $1.89！
-我的名字是 Mr. Graham Mitchell
-
-在第 3 行，我们声明了变量；前三个被命名为 x、y 和 age。这三个变量都是“整数”（integer），这是一种可以存储两个十亿之间数值的变量类型。
-
-整数类型的变量可以存储值 10。它可以存储值 -8192。整数变量可以存储 123456789。它不能存储 3.14，因为它有小数部分。整数变量不能存储 10000000000，因为十亿太大了。
-
-在第 4 行，我们声明了名为 seconds、e 和 checking 的变量。这三个变量是“浮点数”（floating-point），这是一种可以存储带有小数部分的数字的变量类型。“Double”是“双精度浮点数”的缩写。在本书中，我将交替使用“double”和“floating-point”这两个术语。
-
-* declare - 告诉程序变量的名称（或“标识符”）和类型。
-
-就是那种令人困惑的，但我并没有发明这些术语；我只是教它们。
-
-浮点数变量可以存储值 -8192.71。（它可能有小数部分，但不必有）。双精度浮点数变量可以存储 ±1.79769 × 10^{³⁰⁸} 到 4.94065 × 10⁻³⁰⁸ 之间的几乎任何值。
-
-然而，double 的精度有限。注意在第 12 行，我们将值 2.71828182845904523536 存储到变量 `e` 中，但当我在第 22 行输出该值时，只输出了2.718281828459045。double 没有足够的有效位数来存储 2.71828182845904523536 巨大、巨大的值。（而且单精度浮点变量（即 float）的有效位数比 double 少。整数具有完美的精度，但只能存储整数。这就是为什么它们不再被使用。）
-
-我们在本次练习中将看到的最后一种变量类型是 String。在第 5 行，我们声明了 String 变量：firstName、lastName 和 title。String 变量可以存储单词和短语；string 是“字符字符串”的缩写。
-
-第 7 行到第 9 行初始化了三个整数值。值 10 被存储在 x 中。在此之前，x 存在，但它的值是未定义的。400 存储在 y 中，39 存储在 age 中。
-
-第 11 行到第 13 行给 double 变量赋了初始值，第 15 行到第 17 行初始化了三个 String 变量。第 19 行到 24 行初始化了... 练习 5：在变量中保存信息
-
-如果程序只能做在屏幕上打印内容的事情，那么程序将非常无聊。我们希望程序具有交互性。
-
-遗憾的是，交互性需要几个不同的概念共同工作，一次性解释所有内容可能会让人困惑。我将一个一个介绍它们。
-
-首先是变量！如果你上过代数课，你对数学中的变量概念并不陌生。编程语言也有变量，而且基本概念是相同的：
-
-> “变量是一个名称，它指向一个存储值的位置。”
-
-Java 中的变量与数学变量有四个主要区别：
-
-- 1. 变量名可以比一个字母长。
-- 2. 变量可以存储不仅仅是数字；它们还可以存储单词。
-- 3. 在第一次创建变量时，你必须选择该变量将存储什么类型的值。
-- 4. 变量的值（但不是它的类型）在整个程序过程中可以改变。例如，变量 `score` 的初始值可能为 0，但在程序结束时，`score` 可能会存储 413500。
-
-好了，讨论足够了。让我们开始看代码吧！我不会告诉你文件名应该叫什么，你得自己想出来。
-
-```java
-public class CreatingVariables {
-    public static void main(String[] args) {
-        int x, y, age;
-        double seconds, e, checking;
-        String firstName, lastName, title;
-
-        x = 10;
-        y = 400;
-        age = 39;
-        seconds = 4.71;
-        e = 2.7182818284590423536;
-        checking = 1.89;
-
-        firstName = "Graham";
-        lastName = "Mitchell";
-        title = "Mr.";
-
-        System.out.println("The variable x contains " + x + ");
-        System.out.println("The value " + y + " is stored in the variable y.");
-        System.out.println("The experiment took " + seconds + " seconds.");
-        System.out.println("A favorite irrational # " + e + ");
-    }
-}
-```
-
-## 你看到的
-
-> 变量 x 包含 10。
-值 400 存储在变量 y 中。
-实验花费了 4.71 秒。
-最喜欢的无理数是欧拉数：2.718281828459045
-希望你不仅仅是 $1.89！
-我的名字是 Mr. Graham Mitchell
-
-```
-a is 10, b is 27
-a+b is 37
-a-b is -17
-a+b*3 is 9
-b/2 is 13
-b%10 is 7
-
-x is 1.1
-x*x is 1.2100000000000002
-b/2 is 13```
-
-## Exercise 6: Mathematical Operations
-
-Now that we know how to declare and initialize variables, we can do some mathematics
+现在我们知道如何声明和初始化变量了，可以进行一些数学运算。
 
 ```java
 public class MathOperations {
@@ -1229,9 +937,7 @@ public class MathOperations {
 }
 ```
 
-Wait, I noticed a mistake in the source code provided in the prompt (a missing quote in the first println). I will translate as is: `System.out.println("The variable x contains " + x + ");` (missing closing quote).
-
-### What You See
+### 运行结果
 
 ```
 a + b = 37
@@ -1244,194 +950,45 @@ b % 10 = 7
 doghouse
 ```
 
-The plus sign (+) will add two integers or doubles, or one integer and one floating-point value (in either order). The minus sign (-) will subtract one number from another. Just like addition, it works with two integers, floating-point values, or one integer and one double. An asterisk (*) is used for multiplication. You can also see on line 15 that Java knows about correct order. b is multiplied by 3 and then a is added. A slash (/) is used for division. Notice that when an integer is divided by integer (like on line 17) the result is also an integer and not floating-point. The percent sign (%) is used to mean 'modulus', which is essentially the remainder left after division. On line 19, b is divided by 10 and the remainder (7) is stored into g. Modular arithmetic is a fairly simple mathematical operation that isn't often taught in public school or even university curriculum. Wikipedia's example is good enough: we do modular arithmetic every time we are on a typical 12-hour clock. What time will it be in eight hours? Well, once we hit 12:00 "wrap around", so it will be 3 o'clock. (8+7 = 15, 15-12 = 3)
+加号（`+`）可将两个整数或浮点数相加，也可将一个整数和一个浮点数相加（顺序不限）。减号（`-`）用于一个数减去另一个数。与加法一样，它适用于两个整数、浮点数，或一个整数和一个浮点数。星号（`*`）用于乘法。你也可以在第 15 行看到 Java 了解正确的运算顺序：`b` 先乘以 3，然后再加上 `a`。斜杠（`/`）用于除法。注意当整数除以整数时（如第 17 行），结果也是整数而非浮点数。百分号（`%`）表示“取模”，本质上是除法后剩下的余数。在第 19 行，`b` 除以 10，余数（7）存入 `g`。模运算是一种相当简单的数学运算，但在公立学校甚至大学课程中不常教授。维基百科的例子足够说明：我们每次看典型的 12 小时制时钟时都在做模运算。8 小时后是什么时间？一旦到达 12:00 就会“循环”，所以会是 3 点。（8+7 = 15，15-12 = 3）
 
-> concatenate - to join Strings end-to-end.
-
-```java
-int x = (7+8) % 12; // x has been set to 3
-```
-
-Modular arithmetic is used more than you would think in programming, but I won't be using it much in the book.
-
-## Common Questions
-
-Why is 1.1 equal to 1.1 instead of 1.2?
-
-Why is 0.333333 + 0.666666 equal to 0.999999 instead of 1.0? Sometimes with math we get repeating decimals, and most computers convert numbers to binary before working with them. It turns out that 1/4 is a repeating decimal in binary.
-
-Remember what I said in the last exercise: the problem with doubles is limited precision. You will mostly be able to ignore that fact in this book, but I would like you to keep in the back of your mind that floating-point variables sometimes give you values that are slightly different than you'd expect.
-
-[/content]
-
-*(Note: The user text provided in the prompt was cut off/garbled at the end of the input. I have translated the visible parts based on the logical flow of the Java tutorial "Think First Java" which this text clearly originates from.)*
-
-**Wait, looking closer at the prompt, it seems the user provided some repeated or corrupted text at the end. I will provide the translation for the specific text provided in the "以下是需要翻译的文本" section only.**
-
-Actually, the text provided in the "以下是需要翻译的文本" section contains Exercise 5 and then some garbled repetitions. I will translate exactly what is there.
-
----
-**Revised Translation:**
-
-[content]
-
-## 练习 5：在变量中保存信息
-
-如果程序只能做在屏幕上打印内容的事情，那么程序将非常无聊。我们希望程序具有交互性。
-
-遗憾的是，交互性需要几个不同的概念共同工作，一次性解释所有内容可能会让人困惑。我将一个一个地介绍它们。
-
-首先是变量！如果你上过代数课，你对数学中的变量概念并不陌生。编程语言也有变量，而且基本概念是相同的：
-
-> “变量是一个名称，它指向一个存储值的位置。”
-
-Java 中的变量与数学变量有四个主要区别：
-
-- 1. 变量名可以比一个字母长。
-- 2. 变量可以存储不仅仅是数字；它们还可以存储单词。
-- 3. 在第一次创建变量时，你必须选择该变量将存储什么类型的值。
-- 4. 变量的值（但不是它的类型）在整个程序过程中可以改变。例如，变量 `score` 的初始值可能为 0，但在程序结束时，`score` 可能会存储 413500。
-
-好了，讨论足够了。让我们开始看代码吧！我不会告诉你文件名应该叫什么，你得自己想出来。
+> concatenate - 将字符串首尾相连。
 
 ```java
-public class CreatingVariables {
-    public static void main(String[] args) {
-        int x, y, age;
-        double seconds, e, checking;
-        String firstName, lastName, title;
-
-        x = 10;
-        y = 400;
-        age = 39;
-        seconds = 4.71;
-        e = 2.7182818284590423536;
-        checking = 1.89;
-
-        firstName = "Graham";
-        lastName = "Mitchell";
-        title = "Mr.";
-
-        System.out.println("The variable x contains " + x + ");
-        System.out.println("The value " + y + " is stored in the variable y.");
-        System.out.println("The experiment took " + seconds + " seconds.");
-        System.out.println("A favorite irrational # " + e + ");
-    }
-}
+int x = (7+8) % 12; // x 被设置为 3
 ```
 
-## 你看到的
+模运算在编程中的用途比你想象的多，但在本书中不会大量使用。
 
-> 变量 x 包含 10。
-值 400 存储在变量 y 中。
-实验花费了 4.71 秒。
-最喜欢的无理数是 欧拉数：2.718281828459045
-希望你（拥钱）不仅仅是 $1.89！
-我的名字是 Mr. Graham Mitchell
+## 常见问题
 
-在第 3 行，我们声明了变量；前三个被命名为 x、y 和 age。这三个变量都是“整数”（integer），这是一种可以存储两个十亿之间数值的变量类型。
+为什么 1.1 等于 1.1 而不是 1.2？
 
-整数类型的变量可以存储值 10。它可以存储值 -8192。整数变量可以存储 123456789。它不能存储 3.14，因为它有小数部分。整数变量不能存储 10000000000，因为十亿太大了。
+为什么 0.333333 + 0.666666 等于 0.999999 而不是 1.0？有时数学运算会产生循环小数，而大多数计算机在处理数字前会将其转换为二进制。结果发现 1/4 在二进制中是循环小数。
 
-在第 4 行，我们声明了名为 seconds、e 和 checking 的变量。这三个变量是“浮点数”（floating-point），这是一种可以存储带有小数部分的数字的变量类型。“Double”是“双精度浮点数”的缩写。在本书中，我将交替使用“double”和“floating-point”这两个术语。
+还记得上一个练习我说的吗：`double` 的问题在于精度有限。在本书中你大多可以忽略这一事实，但我希望你记住：浮点变量有时给出的值会比你预期的略有不同。
 
-* declare - 告诉程序变量的名称（或“标识符”）和类型。
+
+
+在第 3 行，我们声明了变量；前三个被命名为 `x`、`y` 和 `age`。这三个变量都是“整数”（integer），这是一种可以存储两个十亿之间数值的变量类型。
+
+整数类型的变量可以存储值 `10`。它可以存储值 `-8192`。整数变量可以存储 `123456789`。它不能存储 `3.14`，因为它有小数部分。整数变量不能存储 `10000000000`，因为十亿太大了。
+
+在第 4 行，我们声明了名为 `seconds`、`e` 和 `checking` 的变量。这三个变量是“浮点数”（floating-point），这是一种可以存储带有小数部分的数字的变量类型。“Double”是“双精度浮点数”的缩写。在本书中，我将交替使用“double”和“floating-point”这两个术语。
+
+`declare` - 告诉程序变量的名称（或“标识符”）和类型。
 
 就是那种令人困惑的，但我并没有发明这些术语；我只是教它们。
 
-浮点数变量可以存储值 -8192.71。（它可能有小数部分，但不必有）。双精度浮点数变量可以存储 ±1.79769 × 10^{³⁰⁸} 到 4.94065 × 10⁻³⁰⁸ 之间的几乎任何值。
+浮点数变量可以存储值 `-8192.71`。（它可能有小数部分，但不必有）。双精度浮点数变量可以存储 `±1.79769 × 10³⁰⁸` 到 `4.94065 × 10⁻³⁰⁸` 之间的几乎任何值。
 
-然而，double 的精度有限。注意在第 12 行，我们将值 2.71828182845904523536 存储到变量 `e` 中，但当我在第 22 行输出该值时，只输出了2.718281828459045。double 没有足够的有效位数来存储 2.71828182845904523536 巨大、巨大的值。（而且单精度浮点变量（即 float）的有效位数比 double 少。整数具有完美的精度，但只能存储整数。这就是为什么它们不再被使用。）
+然而，`double` 的精度有限。注意在第 12 行，我们将值 `2.71828182845904523536` 存储到变量 `e` 中，但当我在第 22 行输出该值时，只输出了 `2.718281828459045`。`double` 没有足够的有效位数来存储 `2.71828182845904523536` 巨大、巨大的值。（而且单精度浮点变量（即 `float`）的有效位数比 `double` 少。整数具有完美的精度，但只能存储整数。这就是为什么它们不再被使用。）
 
-我们在本次练习中将看到的最后一种变量类型是 String。在第 5 行，我们声明了 String 变量：firstName、lastName 和 title。String 变量可以存储单词和短语；string 是“字符字符串”的缩写。
+我们在本次练习中将看到的最后一种变量类型是 `String`。在第 5 行，我们声明了 `String` 变量：`firstName`、`lastName` 和 `title`。`String` 变量可以存储单词和短语；string 是“字符字符串”的缩写。
 
-第 7 行到第 9 行初始化了三个整数值。值 10 被存储在 x 中。在此之前，x 存在，但它的值是未定义的。400 存储在 y 中，39 存储在 age 中。
+第 7 行到第 9 行初始化了三个整数值。值 `10` 被存储在 `x` 中。在此之前，`x` 存在，但它的值是未定义的。`400` 存储在 `y` 中，`39` 存储在 `age` 中。
 
-第 11 行到第 13 行给 double 变量赋了初始值，第 15 行到第 17 行初始化了三个 String 变量。第 19 行到 24 行初始化了... (此处后续为重复/乱码，已按要求不重复输出)
-
-[/content]
-
-*(Self-correction: The input text had a lot of repetition/garbling after the first section. I have translated only the unique content provided in the source block.)* Wait, looking at the prompt's "以下是需要翻译的文本", it is actually a mess of repeated text. I will provide a clean translation of the unique parts. 
-
-**Actually, to follow the instruction "不要重复输出原文", I will only translate the unique sections once.**
-
-[content]
-## 练习 5：在变量中保存信息
-
-如果程序只能做在屏幕上打印内容的事情，那么程序将非常无聊。我们希望程序具有交互性。
-
-遗憾的是，交互性需要几个不同的概念共同工作，一次性解释所有内容可能会让人困惑。我将一个一个地介绍它们。
-
-首先是变量！如果你上过代数课，你对数学中的变量概念并不陌生。编程语言也有变量，而且基本概念是相同的：
-
-> “变量是一个名称，它指向一个存储值的位置。”
-
-Java 中的变量与数学变量有四个主要区别：
-
-- 1. 变量名可以比一个字母长。
-- 2. 变量可以存储不仅仅是数字；它们还可以存储单词。
-- 3. 在第一次创建变量时，你必须选择该变量将存储什么类型的值。
-- 4. 变量的值（但不是它的类型）在整个程序过程中可以改变。例如，变量 `score` 的初始值可能为 0，但在程序结束时，`score` 可能会存储 413500。
-
-好了，讨论足够了。让我们开始看代码吧！我不会告诉你文件名应该叫什么，你得自己想出来。
-
-```java
-public class CreatingVariables {
-    public static void main(String[] args) {
-        int x, y, age;
-        double seconds, e, checking;
-        String firstName, lastName, title;
-
-        x = 10;
-        y = 400;
-        age = 39;
-        seconds = 4.71;
-        e = 2.7182818284590423536;
-        checking = 1.89;
-
-        firstName = "Graham";
-        lastName = "Mitchell";
-        title = "Mr.";
-
-        System.out.println("The variable x contains " + x + ");
-        System.out.println("The value " + y + " is stored in the variable y.");
-        System.out.println("The experiment took " + seconds + " seconds.");
-        System.out.println("A favorite irrational # " + e + ");
-    }
-}
-```
-
-## 你看到的
-
-> 变量 x 包含 10。
-值 400 存储在变量 y 中。
-实验花费了 4.71 秒。
-最喜欢的无理数是欧拉数：2.718281828459045
-希望你不仅仅是 $1.89！
-我的名字是 Mr. Graham Mitchell
-
-在第 3 行，我们声明了变量；前三个被命名为 x、y 和 age。这三个变量都是“整数”（integer），这是一种可以存储两个十亿之间数值的变量类型。
-
-整数类型的变量可以存储值 10。它可以存储值 -8192。整数变量可以存储 123456789。它不能存储 3.14，因为它有小数部分。整数变量不能存储 10000000000，因为十亿太大了。
-
-在第 4 行，我们声明了名为 seconds、e 和 checking 的变量。这三个变量是“浮点数”（floating-point），这是一种可以存储带有小数部分的数字的变量类型。“Double”是“双精度浮点数”的缩写。在本书中，我将交替使用“double”和“floating-point”这两个术语。
-
-* declare - 告诉程序变量的名称（或“标识符”）和类型。
-
-就是那种令人困惑的，但我并没有发明这些术语；我只是教它们。
-
-浮点数变量可以存储值 -8192.71。（它可能有小数部分，但不必有）。双精度浮点数变量可以存储 ±1.79769 × 10^{³⁰⁸} 到 4.94065 × 10⁻³⁰⁸ 之间的几乎任何值。
-
-然而，double 的精度有限。注意在第 12 行，我们将值 2.71828182845904523536 存储到变量 `e` 中，但当我在第 22 行输出该值时，只输出了2.718281828459045。double 没有足够的有效位数来存储 2.71828182845904523536 巨大、巨大的值。（而且单精度浮点变量（即 float）的有效位数比 double 少。整数具有完美的精度，但只能存储整数。这就是为什么它们不再被使用。）
-
-我们在本次练习中将看到的最后一种变量类型是 String。在第 5 行，我们声明了 String 变量：firstName、lastName 和 title。String 变量可以存储单词和短语；string 是“字符字符串”的缩写。
-
-第 7 行到第 9 行初始化了三个整数值。值 10 被存储在 x 中。在此之前，x 存在，但它的值是未定义的。400 存储在 y 中，39 存储在 age 中。
-
-第 11 行到第 13 行给 double 变量赋了初始值，第 15 行到第 17 行初始化了三个 String 变量。第 19 行到 24 行初始化了...
-
-
-
+第 11 行到第 13 行给 `double` 变量赋了初始值，第 15 行到第 17 行初始化了三个 `String` 变量。第 19 行到 24 行初始化了...
 
 ## 练习 7：从人类获取输入
 
@@ -1445,7 +1002,7 @@ public class CreatingVariables {
 
 > ¹库（library）或“模块” - 一段为程序添加额外功能的代码，它可能包含也可能不包含在任何特定的程序中
 
- 练习 7：从人类获取输入
+### 练习 7：从人类获取输入
 
 ```
 法国的首都是哪座城市？
@@ -1459,7 +1016,7 @@ public class CreatingVariables {
 
 ...以此此类。假设你对每个问题都输入了合理的答案，最后看起来应该是这样的：
 
-## 你应该看到的内容
+### 你应该看到的内容
 
 ```
 法国的首都是哪座城市？
@@ -1476,28 +1033,29 @@ Paris
 
 第 3 行和第 4 行希望是无聊的。在第 5 行我们看到了新东西：我们创建了一个名为 "keyboard" 的 "Scanner 对象。（名字不一定非要是 "keyboard"；只要你在代码的每个地方都使用它，就可以使用不同的单词。）这个名为 keyboard 的 Scanner 对象包含了我们称之为函数或“方法”（methods）的能力。在使用 Scanner 对象之前，你必须先创建并命名它。
 
-在第 8 行，我们要求名为 keyboard 的 Scanner 对象为我们做一些事情。说：“Keyboard，运行你的 next() 函数”。Scanner 对象会暂停程序并等待人类输入内容。一旦人类输入了内容并按回车键，Scanner 对象就会将其封装成一个 String 并允许你的代码继续执行。
+在第 8 行，我们要求名为 keyboard 的 Scanner 对象为我们做一些事情。说：“Keyboard，运行你的 `next()` 函数”。Scanner 对象会暂停程序并等待人类输入内容。一旦人类输入了内容并按回车键，Scanner 对象就会将其封装成一个 `String` 并允许你的代码继续执行。
 
-在第 11 行，我们要求 Scanner 对象执行它的 nextInt() 函数。这会暂停程序，等待人类输入内容并按回车键，然后将其封装成整数值（如果可能的话）并继续执行。
+在第 11 行，我们要求 Scanner 对象执行它的 `nextInt()` 函数。这会暂停程序，等待人类输入内容并按回车键，然后将其封装成整数值（如果可能的话）并继续执行。
 
-如果人类在这里输入的不是整数怎么办？尝试再次运行程序，并在第二个问题处输入 41.9 作为答案。
+如果人类在这里输入的不是整数怎么办？尝试再次运行程序，并在第二个问题处输入 `41.9` 作为答案。
 
-程序会崩溃且不再执行其他语句，因为 41.9 无法封装成整数值：41.9 是一个 double（双浮点数）。以后我们将学习处理此类问题的错误检查的方法，但在此期间，如果人类输入了错误导致程序崩溃，我们将归咎于人类没有遵守指示，而不会为此担心。
+程序会崩溃且不再执行其他语句，因为 `41.9` 无法封装成整数值：`41.9` 是一个 `double`（双浮点数）。以后我们将学习处理此类问题的错误检查的方法，但在此期间，如果人类输入了错误导致程序崩溃，我们将归咎于人类没有遵守指示，而不会为此担心。
 
-第 14 行允许人类输入内容，Scanner 对象将尝试将其转换为浮点值，而第 17 行允许人类输入一个 String。（任何内容都可以被封装为 String，包括数字，所以这不太可能会失败）。
+第 14 行允许人类输入内容，Scanner 对象将尝试将其转换为浮点值，而第 17 行允许人类输入一个 `String`。（任何内容都可以被封装为 `String`，包括数字，所以这不太可能会失败）。
 
 尝试多运行几次程序，注意它什么时候崩溃，什么时候不会。
 
 ## 学习练习
 
-- 1. 输入一些不同的内容让程序在第二个问题处崩溃。你输入了什么？在代码末尾添加注释，内容类似 // 当我输入 [空白] 时，第二个问题崩溃。
+- 1. 输入一些不同的内容让程序在第二个问题处崩溃。你输入了什么？在代码末尾添加注释，内容类似 `// 当我输入 [空白] 时，第二个问题崩溃`。
+
 - 2. 输入让程序在第三个问题崩溃的内容。你输入了什么？在代码末尾添加另一个注释，解释为什么会崩溃以及原因。
 
 ## 练习 8：存储人类的回应
 
 在上练习中，你学习了如何暂停程序并允许人类输入内容。但输入的内容去哪里了？当你对第一个问题输入答案 "Paris" 时，那个答案去哪了？嗯，它在输入后就被丢弃了，因为你没有编写任何指令告诉 Scanner 对象将它存储在哪里。这就是今天课程的主题。
 
-```
+```java
 import java.util.Scanner;
 public class RudeQuestions {
     public static void main( String[] args ) {
@@ -1520,13 +1078,9 @@ public class RudeQuestions {
 }
 ```
 
+## 练习 8：存储人类的回答
 
-
-
-
-# 练习 8：存储人类的回答
-
-RudeQuestionsTypesEverywhere.java
+### RudeQuestionsTypesEverywhere.java
 
 ```java
 public class RudeQuestionsTypesEverywhere {
@@ -1556,7 +1110,7 @@ public class RudeQuestionsTypesEverywhere {
 
 呼！你不是很高兴每次使用变量时不需要做这些事情吗？另一方面，你也可以为自己必须声明变量类型而感到一点抱歉。许多现代编程语言都具有“类型推断”（type inference）功能；编译器可以根据你在代码中使用变量的方式来推断它的类型。Python 和 Swift 就是一些可以推断类型的编程语言。Java 没有类型推断，但我写了一些代码，展示了如果它有这个功能，这个练习将会是什么样子。再次，不要尝试输入这段代码；它是无法编译的。
 
-## 练习 8：存储人类的回答（隐式类型）
+### 练习 8：存储人类的回答（隐式类型）
 
 ```java
 public class RudeQuestionsImpliedTypes {
@@ -1590,8 +1144,11 @@ public class RudeQuestionsImpliedTypes {
 ## 学习练习 (Study Drills)
 
 - 1. 当你在程序期待 `double` 类型时输入整数值，程序会崩溃吗？请在代码底部的注释中给出答案，并写下你对为什么会或不会的猜测。
+
 - 2. 当你在程序期待 `String` 时输入数值（整数或小数），程序会崩溃吗？请在代码底部的注释中给出答案，并写下你对为什么会或不会的猜测。
+
 - 3. 输入会导致程序在每个问题上崩溃的内容，并添加注释解释是什么导致崩溃以及原因。
+
 - 4. 添加一个你自定义的新变量。再增加一个问题（不需要很无礼）。让用户将你问题的答案输入你的新变量中，随后在屏幕上显示用户的回答。
 
 ## 练习 9：使用用户输入进行计算
@@ -1625,13 +1182,10 @@ public class BMICalculator {
 | 1.75 | 73 | 23.6734 |
 | 1.80 | 75 | 23.1481 |
 
-
-
-
-
 ## 练习 10：变量只存储数值
 
 | 购买价格是多少？ | 7.99 |
+| :--- | :--- |
 | 商品价格 | 7.99 |
 | 销售税 | 0.0 |
 | 总成本 | 0.0 |
@@ -1640,21 +1194,23 @@ public class BMICalculator {
 
 发生的情况是，在 Java（以及大多数编程语言）中，变量不能存储公式。变量只能存储数值。
 
-看第 10 行。我的学生认为那行代码将 *price * 0.0825* 的公式 存储到了变量 *salesTax* 中，然后稍后人类将数值 7.9 存储到变量中。他们认为在第 17 行打印 *salesTax* 时，计算机实际上以某种方式“运行”了该公式。
+看第 10 行。我的学生认为那行代码将 `price * 0.0825` 的公式 存储到了变量 `salesTax` 中，然后稍后人类将数值 `7.9` 存储到变量中。他们认为在第 17 行打印 `salesTax` 时，计算机实际上以某种方式“运行”了该公式。
 
-事实并非如此。事实上，这个程序本不应该通过编译。变量 *price* 变量在第 10 行甚至还没有一个正确的值。它之所以有一个值，仅仅是因为我在第 8 行声明了它。
+事实并非如此。事实上，这个程序本不应该通过编译。变量 `price` 变量在第 10 行甚至还没有一个正确的值。它之所以有一个值，仅仅是因为我在第 8 行声明了它。
 
-通常我们在程序的顶部声明变量，并在稍后对其进行初始化。但在第 8 行，我同时声明了 *price* 并*初始化*了变量，这被称为“定义”该值。*salesTax* 和 *total* 在第 8 行并没有定义，只是被声明了。
+通常我们在程序的顶部声明变量，并在稍后对其进行初始化。但在第 8 行，我同时声明了 `price` 并*初始化*了变量，这被称为“定义”该值。`salesTax` 和 `total` 在第 8 行并没有定义，只是被声明了。
 
-所以，第 14 行，人类输入的内容并没有*初始化 price*；*price* 已经有一个初始值（0）。但人类输入的（7.99 或其他数字）*在执行之前会被存储到变量中*。ø 被替换成了 7.99。
+所以，第 14 行，人类输入的内容并没有*初始化 price*；`price` 已经有一个初始值（`0`）。但人类输入的（`7.99` 或其他数字）*在执行之前会被存储到变量中*。`0` 被替换成了 `7.99`。
 
-从第 8 行到 13 行，变量 *price* 包含该。当第 14 行执行且我们正在等待人类输入内容时，*price 仍然包含 ø*。但当第 14 行完成后，无论人类输入了什么都被存储到了 price 中，替换了零。从第 15 行到程序结束，变量 *price 包含数值 7.99（或输入的任何内容）*。
+从第 8 行到 13 行，变量 `price` 包含该值。当第 14 行执行且我们正在等待人类输入内容时，`price` 仍然包含 `0`。但当第 14 行完成后，无论人类输入了什么都被存储到了 `price` 中，替换了零。从第 15 行到程序结束，变量 `price` 包含数值 `7.99`（或输入的任何内容）。
 
-通过这一点，我们可以看到第 10 行真正发生了什么。第 10 行*并没有将*公式存储到 *salesTax* 中，但它确实存储了一个值。什么值？它获取了代码中*此时变量 price 的值*（此时是 ø），乘以 0.0825（此时仍为零），并将该零存储到 *salesTax* 中。
+通过这一点，我们可以看到第 10 行真正发生了什么。第 10 行*并没有将*公式存储到 `salesTax` 中，但它确实存储了一个值。什么值？它获取了代码中*此时变量 price 的值*（此时是 `0`），乘以 `0.0825`（此时仍为零），并将该零存储到 `salesTax` 中。
 
-当第 10 行开始时，*salesTax* 的值是未定义的。（*salesTax 已声明但未定义。）到第 10 行结束时，*salesTax 持有数值 ø*。没有任何一行代码改变了 *salesTax*（没有一行以 *salesTax =* 开头的代码），所以值从未改变，当在第 17 行显示时，*salesTax* 仍然是零。
 
-第 11 行也类似。它获取了此时 price 的值（零），并加上了此时 salesTax 的值（也是零），并将和（零）存储到变量 total 中。total 的值从未改变，且 total 并不“记住”它的值来自于一个涉及某些变量的公式。
+
+当第 10 行开始时，`salesTax` 的值是未定义的（`salesTax` 已声明但未定义）。到第 10 行结束时，`salesTax` 持有数值 0。没有任何一行代码改变了 `salesTax`（没有一行以 `salesTax =` 开头的代码），所以值从未改变，当在第 17 行显示时，`salesTax` 仍然是零。
+
+第 11 行也类似。它获取了此时 `price` 的值（零），并加上了此时 `salesTax` 的值（也是零），并将和（零）存储到变量 `total` 中。`total` 的值从未改变，且 `total` 并不“记住”它的值来自于一个涉及某些变量的公式。
 
 事实就是这样。变量存储的是数值，而不是公式。计算机程序不是规则的集合，而是计算机按顺序执行的指令序列，代码中后出现的内容取决于之前发生的情况。
 
@@ -1662,15 +1218,15 @@ public class BMICalculator {
 
 ## 学习练习
 
-- 1. 删除第 8 行的 ' = 0'，使得 *price* 不在第 8 行被定义，仅被声明。当你尝试编译代码时会发生什么？错误信息合理吗？（现在把 = 0 加回来让程序通过编译。）
-- 2. 移动给 salesTax 和 total 赋值的两行代码，让它们出现在 price 被赋予真实值之后。确认程序现在运行符合预期。
-- 3. 既然这些行现在出现在变量 price 被正确赋予真实值之后了，请再次尝试删除第 8 行的 '=0'。程序仍然报错吗？你感到惊讶吗？
+1. 删除第 8 行的 `= 0`，使得 `price` 不在第 8 行被定义，仅被声明。当你尝试编译代码时会发生什么？错误信息合理吗？（现在把 `= 0` 加回来让程序通过编译。）
+2. 移动给 `salesTax` 和 `total` 赋值的两行代码，让它们出现在 `price` 被赋予真实值之后。确认程序现在运行符合预期。
+3. 既然这些行现在出现在变量 `price` 被正确赋予真实值之后了，请再次尝试删除第 8 行的 `=0`。程序仍然报错吗？你感到惊讶吗？
 
 ## 练习 11：变量修改快捷方法
 
 变量的值可以随着程序的运行而发生变化。（除非你编写代码去改变它，否则它不会改变，但我的意思是它是可以改变的。）
 
-事实上，这非常常见。我们经常做的一是对取一个变量并向它加上某些内容。例如，假设变量 x 包含数值 10。我们想给它加 2，使得 x 现在包含 12。
+事实上，这非常常见。我们经常做的一是对取一个变量并向它加上某些内容。例如，假设变量 `x` 包含数值 10。我们想给它加 2，使得 `x` 现在包含 12。
 
 我们可以这样做：
 
@@ -1687,7 +1243,7 @@ int y = 10;      // y 是 10
 y = 2 + y;           // y *变为* (2 加上 y 的当前值)
 ```
 
-这同样有效。第二行的意思是“取 y 的当前值 (10)，加上 2，并将和 (12) 存储到变量 y 中。”所以当第二行代码开始执行时，y 是 10，当执行完毕时，y 是 12。相加的顺序并不重要，所以我们甚至可以这样做：
+这同样有效。第二行的意思是“取 `y` 的当前值 (10)，加上 2，并将和 (12) 存储到变量 `y` 中。”所以当第二行代码开始执行时，`y` 是 10，当执行完毕时，`y` 是 12。相加的顺序并不重要，所以我们甚至可以这样做：
 
 ```
 int m = 10;
@@ -1701,55 +1257,51 @@ m = m + 2;
 ```
 public class VariableChangeShortcuts {
     public static void main(String[] args) {
-    int i, j, k;
+        int i, j, k;
 
-    i = 5;
-    j = 5;
-    k = 5;
+        i = 5;
+        j = 5;
+        k = 5;
 
-    i = 5;
-    j = 5;
-    k = 5;
-    System.out.println("i: " + i + " j: " + j + " k: " + k);
-    i += 3;
-    j -= 3;
-    k *= 3;
-    System.out.println("i: " + i + " j: " + j + " k: " + k);
+        i = 5;
+        j = 5;
+        k = 5;
+        System.out.println("i: " + i + " j: " + j + " k: " + k);
+        i += 3;
+        j -= 3;
+        k *= 3;
+        System.out.println("i: " + i + " j: " + j + " k: " + k);
 
-    i = 5;
-    j = 5;
-    k = 5;
-    System.out.println("i: " + i + " j: " + j + " k: " + k);
-    i += 4;
-    j -= 2;
-    k *= 3;
-    System.out.println("i: " + i + " j: " + j + " k: " + k);
+        i = 5;
+        j = 5;
+        k = 5;
+        System.out.println("i: " + i + " j: " + j + " k: " + k);
+        i += 4;
+        j -= 2;
+        k *= 3;
+        System.out.println("i: " + i + " j: " + j + " k: " + k);
 
-    i = 5;
-    j = 5;
-    k = 5;
-    System.out.println("i: " + i + " j: " + j + " k: " + k);
-    i++;
-    j--;
-    System.out.println("i: " + i + " j: " + j + " k: " + k);
+        i = 5;
+        j = 5;
+        k = 5;
+        System.out.println("i: " + i + " j: " + j + " k: " + k);
+        i++;
+        j--;
+        System.out.println("i: " + i + " j: " + j + " k: " + k);
 
-    i = j = 5;
-    System.out.println("i: " + i + " j: " + j + " k: " + k);
+        i = j = 5;
+        System.out.println("i: " + i + " j: " + j + " k: " + k);
     }
 }
 ```
 
-
-
-
-
 # 练习 11：变量修改快捷键
 
-第 32 行看起来像是一个拼写错误，如果你在自己的代码中这样写，很可能真的是错误。注意我们没有写 `+=`而是写了 `=+.`。这可以通过编译，但它的解释方式不像你预期的那样。编译器看到的是 `i +=;`，即“将 i 设置为正 1”。第 33 行也类似：“将 j 设置为负 2”。所以请注意这一点。
+第 32 行看起来像是一个拼写错误，如果你在自己的代码中这样写，很可能真的是错误。注意我们没有写 `+=`而是写了 `=+`。这可以通过编译，但它的解释方式不像你预期的那样。编译器看到的是 `i = +1;`，即“将 `i` 设置为正 1”。第 33 行也类似：“将 `j` 设置为负 2”。所以请注意这一点。
 
-在第 38 行我们看到了另一个快捷键：“后置自增运算符” `i++` 仅意味着“给 i 中的任何值加 1”。这与编写 `i = i + 1` 或 `i++` 是一样的。给变量加 1 是很常见的（你会看到的）。这就是为什么它有一个专门的快捷键。
+在第 38 行我们看到了另一个快捷键：“后置自增运算符” `i++` 仅意味着“给 `i` 中的任何值加 1”。这与编写 `i = i + 1` 或 `i += 1` 是一样的。给变量加 1 是很常见的（你会看到的）。这就是为什么它有一个专门的快捷键。
 
-最后，在下一行中我们看到了“后置自减运算符”：`j--`。它从 j 的值中减去 1。
+最后，在下一行中我们看到了“后置自减运算符”：`j--`。它从 `j` 的值中减去 1。
 
 今天的课程很特殊，因为这些快捷键是可选的。你可以编写一辈子代码而从未使用它们。但大多数程序员都是懒惰的，不想多输入任何字符，所以如果你阅读他人的代码，你会经常看到这些符号。
 
@@ -1757,8 +1309,8 @@ public class VariableChangeShortcuts {
 
 ## 学习练习
 
-- 1. 在底部添加代码，将 i 的值重置为 5。然后在下一行，仅使用 `-=` 将 i 的值改为 0。接着在随后的行行中，在屏幕上显示 i 的新值。
-- 2. 在另一个学习练习下方添加代码，将 i 的值重置为 5，然后仅使用 `++` 将 i 的值改为 10 并再次显示它。（这需要多于一行代码。）
+1. 在底部添加代码，将 `i` 的值重置为 5。然后在下一行，仅使用 `-=` 将 `i` 的值改为 0。接着在随后的行中，在屏幕上显示 `i` 的新值。
+2. 在另一个学习练习下方添加代码，将 `i` 的值重置为 5，然后仅使用 `++` 将 `i` 的值改为 10 并再次显示它。（这需要多于一行代码。）
 
 （这些学习练习目前还没有视频。）
 
@@ -1766,9 +1318,9 @@ public class VariableChangeShortcuts {
 
 到为止，我们只见过三种类型的变量：
 
-- int 整数：存储数字（正数或负数），没有小数部分。
-- double：“双精度浮点”数（正数或负数），可以有小数部分。
-- String：字符字符串，存储单词、短语、符号、句子等任何内容。
+- `int` 整数：存储数字（正数或负数），没有小数部分。
+- `double`：“双精度浮点”数（正数或负数），可以有小数部分。
+- `String`：字符字符串，存储单词、短语、符号、句子等任何内容。
 
 ```
 import java.util.Scanner;
@@ -1818,6 +1370,7 @@ Second: 4
 3.0 is LESS THAN / EQUAL TO 4.0: true
 3.0 is EQUAL TO 4.0: false
 3.0 is NOT EQUAL TO 4.0: true
+3.0 is GREATER THAN 4.0: false
 3.0 is GREATER THAN / EQUAL TO 4.0: false
 ```
 
@@ -1830,11 +1383,11 @@ true true
 true true
 ```
 
-在第 14 行，布尔变量 `a` 被设置了一个特殊的值：与变量 `y` 比较的结果。如果 x 的值小于 y，则比较为真，布尔值 `true` 存储在 `a` 中。如果比较为假，则布尔值 `false` 存储在 `a` 中。（我认为这比写出来更容易理解。）
+在第 14 行，布尔变量 `a` 被设置了一个特殊的值：与变量 `y` 比较的结果。如果 `x` 的值小于 `y`，则比较为真，布尔值 `true` 存储在 `a` 中。如果比较为假，则布尔值 `false` 存储在 `a` 中。（我认为这比写出来更容易理解。）
 
 第 15 行类似，但比较是“小于等于”，且布尔结果存储在 `b` 中。
 
-第 16 行是“等于”：如果 x 持与 y 相同的值，`c` 将设置为 `true`。第 17 行的比较是“不等于”。第 18 行和第 19 行分别是“大于”和“大于等于”。
+第 16 行是“等于”：如果 `x` 持与 `y` 相同的值，`c` 将设置为 `true`。第 17 行的比较是“不等于”。第 18 行和第 19 行分别是“大于”和“大于等于”。
 
 在第 21 行到 26 行，我们在屏幕上显示了所有布尔变量的值。
 
@@ -1842,18 +1395,17 @@ true true
 
 ## 学习练习
 
-- 1. 为代码添加注释，解释每个布尔表达式的作用。
-- 2. 尝试修改代码使用不同的数字，观察输出发生的变化。
-
-
-
-
+1. 为代码添加注释，解释每个布尔表达式的作用。
+2. 尝试修改代码使用不同的数字，观察输出发生的变化。
 
 ## 练习 14：复合布尔表达式
 
 输入你的年龄：40
+
 输入你的年收入：49000
+
 你有多可爱，分值范围从 0.0 到 10.0？7.5
+
 允许和我的孙子交往吗？false
 
 我们可以看到，对于复杂的布尔表达式，你可以使用括号来分组，并使用符号 `&&` 表示“与”（AND），使用 `||` 表示“或”（OR）。
@@ -1862,9 +1414,9 @@ true true
 
 > 嗯，可能是 Ken Thompson 的主意。Java 语法是模仿 C++ 语法建模的，而 C++ 基本上是复制了 C 的语法，而 C 是经过 B 语法的修改，由 Dennis Ritchie 和 Ken Thompson 发明的。
 
-B 语言曾用于表示“与”和“或”，但它们是“位运算”的：它们只对两个整数起作用，一次处理一个位，对每对位进行位与或位或操作，在每次比较中输出 1 或 0。（使用 `|` 可能是因为它看起来很有数学感，而且 PDP-7 计算机键盘上的键，而 B 最初是为它开发的。）
+B 语言曾用 `&` 和 `|` 表示“与”和“或”，但它们是“位运算”的：它们只对两个整数起作用，一次处理一个位，对每对位进行位与或位或操作，在每次比较中输出 1 或 0。（使用 `|` 可能是因为它看起来很有数学感，而且 PDP-7 计算机键盘上的键，而 B 最初是为它开发的。）
 
-当 Ken 和 Dennis 开始开发 C 语言来取代 B 语言时，他们认为需要一种逻辑上的“与”和“或”，而单符号的内容已经被占用了，所以他们使用两个 & 符号来表示逻辑“与”，使用两条竖线（或“竖线”）表示逻辑“或”。
+当 Ken 和 Dennis 开始开发 C 语言来取代 B 语言时，他们认为需要一种逻辑上的“与”和“或”，而单符号的内容已经被占用了，所以他们使用两个 `&` 符号来表示逻辑“与”，使用两条竖线（或“竖线”）表示逻辑“或”。
 
 对你来说幸运的是，你不需要知道这些。你只需要记住输入什么并确保正确即可。
 
@@ -1873,7 +1425,8 @@ B 语言曾用于表示“与”和“或”，但它们是“位运算”的：
 这里是“与”的真值表：
 
 | 输入 | 输出 |
-| A B | A & B |
+| :--- | :--- |
+| A B | A && B |
 | true true | true |
 | true false | false |
 | false true | false |
@@ -1881,18 +1434,18 @@ B 语言曾用于表示“与”和“或”，但它们是“位运算”的：
 
 ## 练习 14：复合布尔表达式
 
-你是这样阅读这些图表的：让我们假定我们健忘的奶奶决定，只有在邮轮便宜且价格包含酒精的情况下，她才会去邮轮。所以我们假定语句 A 是“邮轮便宜”，陈述 B 是“包含酒精”。表格中的每一行都是一种可能的邮轮情况
+你是这样阅读这些图表的：让我们假定我们健忘的奶奶决定，只有在邮轮便宜且价格包含酒精的情况下，她才会去邮轮。所以我们假定语句 A 是“邮轮便宜”，陈述 B 是“包含酒精”。表格中的每一行都是一种可能的邮轮情况。
 
-第 1 行是两个陈述都为邮轮。奶奶会对 1 号邮轮感到兴奋！是的！“邮轮便宜”且“包含酒精”都是真的，所以“奶奶会去”(A & B) 也是真的。
+第 1 行是两个陈述都为真的邮轮。奶奶会对 1 号邮轮感到兴奋！是的！“邮轮便宜”且“包含酒精”都是真的，所以“奶奶会去”(A && B) 也是真的。
 
-第 2 号邮轮很便宜，但不包含酒精（陈述 B 为假）。所以奶奶不感兴趣：当 A 为真且 B 为假时，(A & B) 为假。
+第 2 号邮轮很便宜，但不包含酒精（陈述 B 为假）。所以奶奶不感兴趣：当 A 为真且 B 为假时，(A && B) 为假。
 
 明白了吗？现在是“或”的真值表：
 
-| A | B | A || B |
-|---|---|---|
+| A | B | A \|\| B |
+| :--- | :--- | :--- |
 | true | true | true |
-| true | false | false |
+| true | false | true |
 | false | true | true |
 | false | false | false |
 
@@ -1904,7 +1457,7 @@ B 语言曾用于表示“与”和“或”，但它们是“位运算”的：
 
 ## 学习训练
 
-- 许多人有两个奶奶。让我们假定另一位奶奶只想开心。添加一个问题“你如何让他们开心？”和一个变量来存储它的答案。添加一个名为 `allowed?` 的布尔变量，并编写一个新的表达式，当这个人接近你的年龄并让你感到开心（快乐值在 10 分中大于 7 分）时，该表达式为真。
+- 许多人有两个奶奶。让我们假定另一位奶奶只想开心。添加一个问题“你如何让他们开心？”和一个变量来存储它的答案。添加一个名为 `allowed` 的布尔变量，并编写一个新的表达式，当这个人接近你的年龄并让你感到开心（快乐值在 10 分中大于 7 分）时，该表达式为真。
 
 （这个学习练习目前还没有视频。）
 
@@ -1925,40 +1478,40 @@ public class AgeMessages {
         age = keyboard.nextInt();
         System.out.println("You are: ");
         if (age < 13) {
-            System.out.println("\too young to create a Facebook account");
+            System.out.println("\ttoo young to create a Facebook account");
         }
         if (age < 16) {
-            System.out.println("\too young to get a driver's license");
+            System.out.println("\ttoo young to get a driver's license");
         }
         if (age < 18) {
-            System.out.println("\too young to get a tattoo");
+            System.out.println("\ttoo young to get a tattoo");
         }
         if (age < 21) {
-            System.out.println("\too young to drink");
+            System.out.println("\ttoo young to drink");
         }
         if (age < 35) {
-            System.out.println("\too young to run for President of the U.S.");
+            System.out.println("\ttoo young to run for President of the U.S.");
         }
     }
 }
 ```
 
-15. 使用 If 语句做决策
+## 练习 15：使用 If 语句做决策
 
-好了，这被称为 if 语句。if 语句以关键字 `if` 开头，后面跟着括号中的“条件”。该条件必须是一个求值为真或否的布尔表达式。注意，当我使用大括号时，里面的内容缩进了一层。该代码块被称为“体部”。
+好了，这被称为 if 语句。if 语句以关键字 `if` 开头，后面跟着括号中的“条件”。该条件必须是一个求值为真或假的布尔表达式。注意，当我使用大括号时，里面的内容缩进了一层。该代码块被称为“体部”。
 
-当 if 语句的条件为真时，会执行体内的代码。当 if 语句的条件为假时，体内的代码将**跳过。你可以在体内部编写任意行数的代码。
+当 if 语句的条件为真时，会执行体内的代码。当 if 语句的条件为假时，体内的代码将**跳过**。你可以在体内部编写任意行数的代码。
 
 如果 if 语句的条件为假，体内的代码永远不会被执行。
 
 ```
-How old are you?
+How old are you? 17
 You are:
-too young to create a Facebook account
-too young to get a driver's license
-too young to get a tattoo
-too young to drink
-too young to run for President of the U.S.
+	too young to create a Facebook account
+	too young to get a driver's license
+	too young to get a tattoo
+	too young to drink
+	too young to run for President of the U.S.
 ```
 
 第二个语句是虚假的，因为 17 小于 18，所以体内的代码被跳过了。
@@ -1969,15 +1522,19 @@ too young to run for President of the U.S.
 
 - 如果输入一个大于 35 的年龄，会打印什么？为什么？
 - 添加另一个 if 语句将年龄与 65 进行比较。如果年龄大于或等于 65，说“你可以退休了！”
-- 对于每个 if 语句，添加另一个相反的 if 语句。例如，如果年龄大于或等于 13，说“可以创建 Facebook 账号”。完成后，无论输入什么年龄，程序都应该显示信息。
+
+
+
+- 对于每个 `if` 语句，添加另一个相反的 `if` 语句。例如，如果年龄大于或等于 13，说“可以创建 Facebook 账号”。完成后，无论输入什么年龄，程序都应该显示信息。
 
 ## 练习 16：更多的 If 语句
 
-这个练习几乎没有新内容。只是更多 if 语句的练习，因为它们非常重要。这也会帮助你记住关系运算符。
+这个练习几乎没有新内容。只是更多 `if` 语句的练习，因为它们非常重要。这也会帮助你记住关系运算符。
 
-ComparingNumbers.java
+### ComparingNumbers.java
 
-```import java.util.Scanner;
+```java
+import java.util.Scanner;
 
 public class ComparingNumbers {
     public static void main(String[] args) {
@@ -2011,10 +1568,6 @@ public class ComparingNumbers {
 }
 ```
 
-
-
-
-
 ## 练习 16：更多的 if 语句
 
 ## 你应该看到的内容
@@ -2033,14 +1586,17 @@ public class ComparingNumbers {
 
 ## 学习训练
 
-- 1. 在第 29 行之后再添加一行代码，内容为 `System.out.println("Hey.");`。对其进行缩进，使其与上面的 `println()` 语句对齐，如下所示：
+1. 在第 29 行之后再添加一行代码，内容为 `System.out.println("Hey.");`。对其进行缩进，使其与上面的 `println()` 语句对齐，如下所示：
+
 ```java
-if ( first != first + " is NOT EQUAL TO " + second );
-    System.out.println("Hey.");
+if (first != second)
+    System.out.println(first + " is NOT EQUAL TO " + second);
+System.out.println("Hey.");
 ```
+
 运行程序，看看发生了什么。"Hey" 的部分是 `if` 语句体部的一部分吗？换句话说，当语句被跳过时，"Hey" 也会被跳过吗？还是说它无论如何都会运行？你怎么想？
 
-- 2. 在最后一个 `if` 语句的体部加上大括号，使得 "Hey" 那一行成为体部的一部分。然后，移除所有其他语句体部的大括号，使得程序中只有最后一个 `if` 语句带有大括号。确认一切运行结果符合预期。
+2. 在最后一个 `if` 语句的体部加上大括号，使得 "Hey" 那一行成为体部的一部分。然后，移除所有其他语句体部的大括号，使得程序中只有最后一个 `if` 语句带有大括号。确认一切运行结果符合预期。
 
 ## 练习 17：否则（带有 else 的 if 语句）
 
@@ -2080,7 +1636,7 @@ if (expensiveDatabaseThatTakes45SecondsToLookup(username, password) == false)
 
 ## 练习 17：否则（带有 else 的 if 语句）
 
-ClubBouncer.java
+### ClubBouncer.java
 
 ```java
 public class ClubBouncer {
@@ -2104,55 +1660,6 @@ public class ClubBouncer {
 > You are allowed to enter the club.
 
 当 `if` 语句的体部没有大括号时，只有条件判断后的第一行代码会被包含在体部中。因此，由于这整个练习中的所有 `if` 语句体部内都只有一行代码，所以这个练习中所有 `if` 语句的大括号都是可选的。你可以删掉它们，程序运行的效果也完全相同。不过，加上它们永远不会错，而且有些程序员无论如何总是会加上大括号。
-
-当 `if` 语句的体部没有大括号时，只有条件判断后的第一行代码会被包含在体部中。因此，由于这整个练习中的所有 `if` 语句体部内都只有一行代码，所以这个练习中所有 `if` 语句的大括号都是可选的。你可以删掉它们，程序运行的效果也完全相同。不过，加上它们永远不会错，而且有些程序员无论如何总是会加上大括号。
-
-当 `if` 语句的体部没有大括号时，只有条件判断后的第一行代码会被包含在体部中。因此，由于这整个练习中的所有 `if` 语句体部内都只有一行代码，所以这个练习中所有 `if` 语句的大括号都是可选的。你可以删掉它们，程序运行的效果也完全相同。不过，加上它们永远不会错，而且有些程序员无论如何总是会加上大括号。
-
-当 `if` 语句的体部没有大括号时，只有条件判断后的第一行代码会被包含在体部中。因此，由于这整个练习中的所有 `if` 语句体部内都只有一行代码，所以这个练习中所有 `if` 语句的大括号都是可选的。你可以删掉它们，程序运行的效果也完全相同。不过，加上它们永远不会错，而且有些程序员无论如何总是会加上大括号。
-
-当 `if` 语句的体部没有大括号时，只有条件判断后的第一行代码会被包含在体部中。因此，由于这整个练习中的所有 `if` 语句体部内都只有一行代码，所以这个练习中所有 `if` 语句的大括号都是可选的。你可以删掉它们，程序运行的效果也完全相同。不过，加上它们永远不会错，而且有些程序员无论如何总是会加上大括号。
-
-当 `if` 语句的体部没有大括号时，只有条件判断后的第一行代码会被包含在体部中。因此，由于这整个练习中的所有 `if` 语句体部内都只有一行代码，所以这个练习中所有 `if` 语句的大括号都是可选的。你可以删掉它们，程序运行的效果也完全相同。不过，加上它们永远不会错，而且有些程序员无论如何总是会加上大括号。
-
-当 `if` 语句的体部没有大括号时，只有条件判断后的第一行代码会被包含在体部中。因此，由于这整个练习中的所有 `if` 语句体部内都只有一行代码，所以这个练习中所有 `if` 语句的大括号都是可选的。你可以删掉它们，程序运行的效果也完全相同。不过，加上它们永远不会错，而且有些程序员无论如何总是会加上大括号。
-
-当 `if` 语句的体部没有大括号时，只有条件判断后的第一行代码会被包含在体部中。因此，由于这整个练习中的所有 `if` 语句体部内都只有一行代码，所以这个练习中所有 `if` 语句的大括号都是可选的。你可以删掉它们，程序运行的效果也完全相同。不过，加上它们永远不会错，而且有些程序员无论如何总是会加上大括号。
-
-当 `if` 语句的体部没有大括号时，只有条件判断后的第一行代码会被包含在体部中。因此，由于这整个练习中的所有 `if` 语句体部内都只有一行代码，所以这个练习中所有 `if` 语句的大括号都是可选的。你可以删掉它们，程序运行的效果也完全相同。不过，加上它们永远不会错，而且有些程序员无论如何总是会加上大括号。
-
-当 `if` 语句的体部没有大括号时，只有条件判断后的第一行代码会被包含在体部中。（注：由于原始文本存在大量重复段落，此处已按要求处理，不再重复输出。）
-
-## 练习 17：否则（带有 else 的 if 语句）
-
-ClubBouncer.java
-
-```java
-public class ClubBouncer {
-    public static void main(String[] args) {
-        int age = 22;
-        boolean onGuestList = false;
-        double allure = 7.5;
-        String gender = "F";
-
-        if (onGuestList || age >= 21 || (gender.equals("F") && allure >= 8)) {
-            System.out.println("You are allowed to enter the club.");
-        } else {
-            System.out.println("You are not allowed to enter the club.");
-        }
-    }
-}
-```
-
-## 你应该看到的内容
-
-> You are allowed to enter the club.
-
-当 `if` 语句的体部没有大括号时，只有条件判断后的第一行代码会被包含在体部中。（注：由于原始文本存在大量重复段落，此处已按要求处理，不再重复输出。）
-
-
-
-
 
 ## 练习 19：带有 If 和 Else 链的互斥
 
@@ -2166,8 +1673,9 @@ public class ClubBouncer {
 
 ## 学习训练
 
-- 1. 去掉第 21 行 `if` 语句前面的 `else`。运行程序，输入 15.5 作为 BMI。你看到这如何让第 21 行的 `if` 语句“脱队”并不再关心之前的 `if` 语句了吗？
-- 2. 不要让人直接输入 BMI，而是让他们输入身高和体重，由程序计算 BMI。
+1. 去掉第 21 行 `if` 语句前面的 `else`。运行程序，输入 15.5 作为 BMI。你看到这如何让第 21 行的 `if` 语句“脱队”并不再关心之前的 `if` 语句了吗？
+
+2. 不要让人直接输入 BMI，而是让他们输入身高和体重，由程序计算 BMI。
 
 ![](img/f5108028d97edf1aaa0cbaa8dee4cc49_85_0.png)
 
@@ -2177,7 +1685,7 @@ public class ClubBouncer {
 
 坦白：尽管我确实就读于德克州大学奥斯汀分校（UT Austin），但我认为这不是他们真实的录取标准。在决定是否申请备用学校时，不要依赖这个程序的输出。
 
-CollegeAdmission.java
+### CollegeAdmission.java
 
 ```java
 import static java.lang.System.*;
@@ -2204,8 +1712,7 @@ public class CollegeAdmission {
             out.print("UNLIKELY ");
         } else // below 390
             out.print("DENIED ");
-    }
-    out.println();
+        out.println();
     }
 }
 ```
@@ -2213,7 +1720,9 @@ public class CollegeAdmission {
 ## 你应该看到的
 
 > Welcome to the UT Austin College Admissions Interface!
+>
 > Please enter your SAT math score (200-800): 730
+>
 > Admittance status: SAFE
 
 现在，针对这个练习中的新内容，我应该解释一下我在程序中采取的快捷方法。你注意到顶部有第二个 `import` 语句了吗？如果没有，说明你的代码没有编译，或者你认为我到处用 `out.println` 而不是 `System.out.println` 是犯了错误。
@@ -2224,18 +1733,14 @@ public class CollegeAdmission {
 
 正因如此，我可以直接使用 `out.println` 而不是 `System.out.println`。
 
-
-
-
-
 ## 练习 21：嵌套 if 语句
 
 ```java
 else {
     title = "Mr.";
 }
-    System.out.println(" " + title + " " + last);
-    }
+System.out.println(" " + title + " " + last);
+}
 ```
 
 ## 你应该看到的内容
@@ -2247,6 +1752,8 @@ else {
 | Mitchell 先生 |
 
 你可能已经发现，我喜欢搞点小花样让你们保持警觉。你注意到我这次做了什么不同的地方吗？
+
+
 
 通常情况下，我会在程序的顶部声明所有的变量并给它们赋值（或“初始化”它们）。但实际上，在你准备好使用变量之前，并不非要声明它。所以这次，我在第一次给变量赋值的同一行中声明了所有变量（`title` 除外）。
 
@@ -2264,14 +1771,16 @@ else {
 
 ## 学习练习
 
-- 1. 将第 31 行的 `else` 改为合适的 `if` 语句，例如：
+1. 将第 31 行的 `else` 改为合适的 `if` 语句，例如：
 
 ```java
 if ( gender.equals("M") )
 ```
 
 注意，程序现在无法编译了。你能发现为什么吗？
+
 这是因为变量在第 6 行声明了，但没有立即赋值。变量在此时必须有一个值，否则在第 36 行打印 `title` 的值时，将无法显示变量的值。我们将尝试显示一个未定义变量的值：它没有值。编译器想要防止这种情况。
+
 当第 31 行是 `else` 时，编译器可以保证无论通过嵌套 `if` 语句的哪个路径，`title` 总是能获得值。一旦我们将其改为普通的 `if` 语句，人类就有了一种方法可以通过输入某些内容让其绕过所有的嵌套 `if` 语句而不给 `title` 赋值。你能想出一个方法吗？
 
 （在提示输入性别时，他们可以输入 20 或更大的年龄，以及一个不同于 "M" 或 "F" 的字母。这样两个性别的 `if` 语句都不会成立。）
@@ -2288,7 +1797,7 @@ String title = "error";
 
 `if` 语句并不是 Java 中比较变量与值之间唯一的方法。有一种叫做 `switch` 的结构。我不经常使用它们，但你还是应该熟悉它们，以防读到别人使用了 `switch` 的代码。
 
-ThirtyDays.java
+### ThirtyDays.java
 
 ```java
 import java.util.Scanner;
@@ -2375,10 +1884,6 @@ public class ThirtyDays {
 `switch` 语句是理解复杂逻辑流的基础。
 
 `switch` 语句是高级编程中必不可少的一部分。
-
-
-
-
 
 ## 练习 23：更多字符串比较
 
@@ -2489,7 +1994,7 @@ public class ThirtyDays {
 - juniper comes BEFORE ruby
 - juniper comes BEFORE visualbasic
 
-## 练习 23：更多字符串比较
+## 练习 23：更多字符串比较（续）
 
 （课程忍不住添加了一些新东西。在第 9 行，我没有使用 Scanner 对象的 `.next()` 方法来读取字符串，而是使用了 Scanner 对象的 `.nextLine()` 方法。区别在于，如果你输入了空格，`.next()` 会停止读取，所以如果你输入 "visual basic"，它只会读取 "visual" 并把剩下的部分留在那里。当你使用 `.nextLine()` 时，它会读取你输入的所有内容，包括空格和制表符——直到你按下回车键并将所有内容合并成一个长字符串存储在变量中）。
 
@@ -2506,29 +2011,31 @@ int n = self.compareTo(other);
 因为如果 `self` 等于 `other` 我们得到 0，如果 `self` 小于 `other` 我们得到一个小于 0 的数，我们可以写：
 
 ```java
- ( self.compareTo(other) <= 0 )
+( self.compareTo(other) <= 0 )
 ```
 
 如果结果小于 0，则 `if` 语句为真；如果结果等于 0，则 `if` 语句也为真。所以这有点像写：
 
 ```java
- ( self <= other )
+( self <= other )
 ```
 
 ……除了我刚刚写的代码实际上无法编译，而 `.compareTo()` 技巧可以。如果你问我的话，这非常酷。这就是核心思想。对于初学者来说这很困惑，用起来稍微困难，但一旦你掌握了就完全不是（这不只是 `.compareTo()` 的问题，到处都是如此，除非你写代码来修复它）。大小写很重要。"Bob" 和 "bob" 是不一样的。因为 Unicode 值的原因，"Bob" 在字母顺序上位于 "bob" 之前。如果你想避免这个问题，有很多方法，比如其中一种：立即将其转换为小写，然后将其与小写形式进行比较。
 
 ## 学习训练
 
-- 1. 使用你喜欢的技巧，让这个程序即使在人类输入不同大小写的情况下也能运行。
+1. 使用你喜欢的技巧，让这个程序即使在人类输入不同大小写的情况下也能运行。
 
-脚注：
+### 脚注
+
 计算机只处理数字。字母不是数字，但有一个巨大的传说，将每个出现过的字符都映射到 1263 个数字之一，这些数字唯一地标识该字符。字母 "B" 的 UTF-8 值是 66；字母 "b" 的值是 98。
 
 ## 练习 24：随机选择数字
 
 我们将花几个练习来学习一些在编程书中并不总是看到的内容：如何让计算机在范围内选择一个数字。这是因为你可以写很多软件而不需要计算机随机挑选数字。然而，随机数能让我们制作一些交互式游戏，这完全值得学习这个略显奇怪的概念的痛苦。
 
-RandomNumbers.java
+### RandomNumbers.java
+
 ```java
 public class RandomNumbers {
     public static void main(String[] args) {
@@ -2556,7 +2063,11 @@ public class RandomNumbers {
         b = 1 + (int)(6*Math.random());
         c = 1 + (int)(6*Math.random());
         d = 1 + (int)(6*Math.random());
+    }
+}
 ```
+
+
 
 ```java
 29  System.out.println("1-6:\t" + a + "\t" + b + "\t" + c + "\t" + d );
@@ -2597,13 +2108,9 @@ public class RandomNumbers {
 65  }
 ```
 
-
-
-
-
 ## 练习 24：随机选择数字
 
-剪刀
+### 输出示例
 
 ```
 1-10: 5 9 3 6
@@ -2619,49 +2126,53 @@ public class RandomNumbers {
 1-10: 2
 ```
 
-注意：你的输出看起来和我的不一样。记住，数字是随机的。
+> **注意**：你的输出看起来和我的不一样。记住，数字是随机的。
 
-Java 有一个内置函数叫做 `Math.random()`。每当你调用这个函数时，它都会产生一个在 [0.0, 1.0) 范围内的随机双数（也就是说，它可能正好是 0.0，但永远不可能是 1.0，而是范围内的某个值）。如果我们将
+### `Math.random()` 详解
+
+Java 有一个内置函数叫做 `Math.random()`。每当你调用这个函数时，它都会产生一个在 `[0.0, 1.0)` 范围内的随机双精度数（也就是说，它可能正好是 `0.0`，但永远不可能是 `1.0`，而是范围内的某个值）。如果我们将
 
 ```java
 double x = Math.random();
 ```
 
-...那么 x 的值可以是 0.0、0.12354、0.3 或 0.99999999，而永远不是 1.0，也不会大于 1.0。在第 6 行，调用了 `Math.random()` 函数，并将结果存储在一个名为 `rps` 的变量中。
+...那么 `x` 的值可以是 `0.0`、`0.12354`、`0.3` 或 `0.99999999`，而永远不是 `1.0`，也不会大于 `1.0`。在第 6 行，调用了 `Math.random()` 函数，并将结果存储在一个名为 `rps` 的变量中。
 
-所以，大约每三次运行中就有一次，`rps` 的随机值会小于 0.3333333。如果是，我们就打印“ROCK”。如果它小于 0.6666667（但由于 `else` 的存在，不会小于 0.3333333），我们就打印“PAPER”。其余时间我们打印“SCISSORS”。
+所以，大约每三次运行中就有一次，`rps` 的随机值会小于 `0.3333333`。如果是，我们就打印“ROCK”。如果它小于 `0.6666667`（但由于 `else` 的存在，不会小于 `0.3333333`），我们就打印“PAPER”。其余时间我们打印“SCISSORS”。
 
 如果你能运行这个程序 1000 次并统计结果，你会发现每个词大约都会出现 1/3 的时间。
 
-思路就是这样。但有时我需要的不是 0 到 1 之间的随机双数；我想要一个 1 到 10 之间的随机整数。或者 1 到 100 之间的。
+思路就是这样。但有时我需要的不是 0 到 1 之间的随机双精度数；我想要一个 1 到 10 之间的随机整数。或者 1 到 100 之间的。
 
 在大多数 Java 版本中，我们无法控制 `Math.random()` 给我们的数值范围，因此我们必须进行一些数学计算来转换这个在 0.0 到 1.0 之间的随机值，使其落在一个不同的范围内。
 
-另一种，Java 中有一个可以导入的类可以提供不同形式的随机数，但要获取特定范围内的单个整数并不容易，所以我目前目前向你展示的方法。
+另一种方法是，Java 中有一个可以导入的类可以提供不同形式的随机数，但要获取特定范围内的单个整数并不容易，所以我目前向你展示的方法。
 
-## 练习 24：随机选择数字
+### 代码分析
 
 在第 18 到 21 行，我们选取了四个新的随机数。我们将它们每一个乘以 10，然后将它们全部转换为整数，最后给每个数字加 1。
 
 这一系列数学操作将每个数字变成一个始终在 1 到 10 之间的数字。
+
 这段代码选取了更多的随机数并执行了相同的步骤，但最终得到了 1 到 6 之间的随机整数。（这是包含边界的，所以 1 和 6 都是可能的。）以下是步骤：
 
-- `Math.random()` 生成一个从 0 到 0.9999999999 的随机双数
+- `Math.random()` 生成一个从 0 到 0.9999999999 的随机双精度数
 - `6*Math.random()` 将其缩放到 0 到 5.9999999999
 - `(int)(6*Math.random())` 将其转换为整数，丢弃小数点后的部分；从 0 到 5
-- `1 + (int)(6*Math.random())` 加1，将其转换为 1 到 6
+- `1 + (int)(6*Math.random())` 加 1，将其转换为 1 到 6
+
 第 32 行让计算机选择一个 1 到 100 之间的随机整数并放入变量 `a` 中。注意 `a` 只包含一个值的副本，所以多次打印 `a` 只会显示同一个数字。打印 `a` 的值并让它再次变化。
 
 下一段代码选取 1 到 100 之间的随机数并将它们放入变量中，然后显示出来。
 
-第 43 行的代码选取了更多的随机数，但由于我们没有给它们加 1，它们的范围是 0 到 99。（从输出上很难判断，但请相信我。如果你运行这个程序 1000 次，第 47 行偶尔会打印 `a`，偶尔会打印 99，但永远是 100。）
+第 43 行的代码选取了更多的随机数，但由于我们没有给它们加 1，它们的范围是 0 到 99。（从输出上很难判断，但请相信我。如果你运行这个程序 1000 次，第 47 行偶尔会打印 `a`，偶尔会打印 99，但永远不会是 100。）
 
 从第 50 行开始，有一段代码选取 10 到 20 之间的随机数：
 
-- `Math.random()` 生成一个从 0 到 0.9999999999 的随机双数
+- `Math.random()` 生成一个从 0 到 0.9999999999 的随机双精度数
 - `11*Math.random()` 使其变为 0 到 10.9999999999
 - `(int)(11*Math.random())` 将其转换为整数 0 到 10
-- `10 + (int)(11*Math.random())` 加10，使其现在是 10 到 20
+- `10 + (int)(11*Math.random())` 加 10，使其现在是 10 到 20
 
 通常，你乘以范围内的随机整数个数。乘以 6 得到六种可能的数字。然后加的数字（截断/转换）被称为“起点”，并在所有数学计算完成后结束。这就是我们乘以 11 的原因，因为我们想要从 10 开始。所以如果我想要 10 到 13 之间的随机数：
 
@@ -2673,18 +2184,18 @@ double x = Math.random();
 int q = lo + (int)((hi-lo+1)* Math.random()); // 从 lo 到 hi
 ```
 
-数值个数是 (hi-lo+1）；+1 是为了考虑到减法得到的是距离而不是点。剩余的代码（从第 57 行开始）显示了一些数学步骤。如果你仍然感到困惑就研究一下，或者就跳过。
+数值个数是 `(hi-lo+1)`；+1 是为了考虑到减法得到的是距离而不是点。剩余的代码（从第 57 行开始）显示了一些数学步骤。如果你仍然感到困惑就研究一下，或者就跳过。
 
-# 练习
+### 练习
 
 - 在底部添加代码，让计算机选取 1 到 3 之间的随机整数并打印在屏幕上。
 - 添加代码选取 5 到 10 之间的随机整数并显示。运行多次程序以确认你的数字始终在该范围内。
 
-（这些练习没有视频。）
+> （这些练习没有视频。）
 
-脚注：
+### 脚注
 
-¹编程中如果计算距离而不是停止点，会出现一种常见的逻辑错误；这被称为“栅栏问题”。这个名字源于以下脑筋急转弯：如果我用一堆略大于一米的木板建造一个五米长的栅，需要多少根柱子？你需要五块板或六根柱子。
+¹ 编程中如果计算距离而不是停止点，会出现一种常见的逻辑错误；这被称为“栅栏问题”。这个名字源于以下脑筋急转弯：如果我用一堆略大于一米的木板建造一个五米长的栅栏，需要多少根柱子？你需要五块板或六根柱子。
 
 ## 练习 25：使用循环循环
 
@@ -2692,7 +2203,7 @@ int q = lo + (int)((hi-lo+1)* Math.random()); // 从 lo 到 hi
 
 在练习了几个循环基础知识后，我们会回到随机数。
 
-EnterPIN.java
+### EnterPIN.java
 
 ```java
 import java.util.Scanner;
@@ -2718,9 +2229,7 @@ public class EnterPIN {
 }
 ```
 
-## 你应该看到的
-
-## 练习 25：使用循环循环
+### 你应该看到的输出
 
 ```
 WELCOME TO THE BANK OF JAVA.
@@ -2735,7 +2244,9 @@ ENTER YOUR PIN: 12345
 PIN ACCEPTED. YOUR ACCOUNT BALANCE IS $425.17
 ```
 
-在第 14 行，你第一次看到了 `while` 循环。两者都有一个条件，被检查是是真是假。如果条件为假，循环和语句将跳过体内的所有代码。而当条件为真时，循环和语句都会执行其体内的所有代码。
+### 代码讲解
+
+在第 14 行，你第一次看到了 `while` 循环。两者都有一个条件，被检查是真是假。如果条件为假，循环和语句将跳过体内的所有代码。而当条件为真时，循环和语句都会执行其体内的所有代码。
 
 唯一的区别是 `if` 语句为真时只执行大括号内的代码一次，而 `while` 循环为真时执行大括号内的代码一次，然后返回再次检查条件。如果条件仍然为真，体内的代码将再次执行。然后它再次检查条件，如果条件为真则再次运行体。
 
@@ -2743,27 +2254,27 @@ PIN ACCEPTED. YOUR ACCOUNT BALANCE IS $425.17
 
 当检查时条件为假时，循环就会跳过体内的所有代码，程序的其余部分将继续。
 
+### 学习练习
 
+1. 在向某人询问 PIN 码之前，先向他们询问密码。（应该是一个字符串）
 
+   在第一个循环之前添加第二个 `while` 循环，只要他们的答案不是正确的密码，该循环就会持续。这样在你完成后，该人必须输入正确的密码，然后输入正确的 PIN 才能看到他们的账户余额。
 
+   记住在比较字符串时需要使用 `.equals()`，而“不等于”的写法如下：
 
-## 学习练习
+   `( ! typedPassword.equals("hunter2") )`
 
-- 1. 在向某人询问 PIN 码之前，先向他们询问密码。（应该是一个字符串）
-  在第一个循环之前添加第二个 `while` 循环，只要他们的答案不是正确的密码，该循环就会持续。这样在你完成后，该人必须输入正确的密码，然后输入正确的 PIN 才能看到他们的账户余额。
-  记住在比较字符串时需要使用 `.equals()`，而“不等于”的写法如下：
-`( ! typedPassword.equals("hunter2") )`
-前面的感叹号表示“不”或“反之”。
+   前面的感叹号表示“不”或“反之”。
 
-（此学习练习暂无视频。）
+> （此学习练习暂无视频。）
 
 ## 练习 26：猜数字游戏
 
 现在你已经学会了如何使用 `while` 循环进行重复，我们将编写一个另一个人类可能真的喜欢运行的程序！你是否像我一样兴奋？！？！
 
-我们还将使用一个随机数，这是你在几几个练习前学过的如何做到的。
+我们还将使用一个随机数，这是你在几个练习前学过的如何做到的。
 
-High.java
+### High.java
 
 ```java
 import java.util.Scanner;
@@ -2796,7 +2307,7 @@ public class High {
 }
 ```
 
-## 你应该看到
+### 你应该看到
 
 ```
 I'm thinking of a number between 1-100.
@@ -2817,32 +2328,36 @@ Sorry, your guess is too high. Try again.
 You guessed it! What are the odds?!
 ```
 
-在第 8 行，计算机从 1 到 100 之间选择一个随机整数并将其存储在变量 *secret* 中。我们让人类来猜数字。
+### 代码讲解
 
-第 15 行开始了一个 `while` 循环。它说：“只要变量 *secret* 的值与变量 *guess* 的值不同……就运行以下代码块。”第 16 行到第 25 行是循环体。每当条件为真时，这十二行代码就会执行一次。
+在第 8 行，计算机从 1 到 100 之间选择一个随机整数并将其存储在变量 `secret` 中。我们让人类来猜数字。
 
-在循环体内，我们有几条语句。我们已经知道人类的猜测与秘密数字不同，否则我们根本不会进入 *while* 循环！但我们不知道猜测是因为太低了还是太高了导致的错误，所以通过这些语句来查明并显示相应的错误信息。
+第 15 行开始了一个 `while` 循环。它说：“只要变量 `secret` 的值与变量 `guess` 的值不同……就运行以下代码块。”第 16 行到第 25 行是循环体。每当条件为真时，这十二行代码就会执行一次。
 
-显示错误信息后，我们允许他们再次猜测。人类（希望如此）输入一个数字，然后将其存储在变量 *guess* 中，覆盖掉该变量中之前的猜测。
+在循环体内，我们有几条语句。我们已经知道人类的猜测与秘密数字不同，否则我们根本不会进入 `while` 循环！但我们不知道猜测是因为太低了还是太高了导致的错误，所以通过这些语句来查明并显示相应的错误信息。
+
+显示错误信息后，我们允许他们再次猜测。人类（希望如此）输入一个数字，然后将其存储在变量 `guess` 中，覆盖掉该变量中之前的猜测。
 
 由于循环体执行完整个过程后，程序会跳回第 15 行并再次检查条件。如果该条件*仍然*为真（他们的猜测仍然不等于秘密数字），整个循环体将再次执行一次。如果条件现在为假（因为他们猜中了），那么整个循环体将被跳过，程序将直接跳转到第 27 行。
 
-如果循环结束，我们就知道条件为假。所以这里这里不需要 `if` 语句；在这里打印“你猜中了”是安全的。
+如果循环结束，我们就知道条件为假。所以这里不需要 `if` 语句；在这里打印“你猜中了”是安全的。
 
-## 学习练习
+### 学习练习
 
-- 1. 这段代码应该更短一些！注意第 18 行和第 19 行与第 22 行和第 23 行相同。这太蠢了；没有理由在两个语句中写相同的代码。
-- 2. 将这两行合并为一份，并放在两个 `if` 语句之后（但仍在 `while` 循环体内部）。
-- 3. 确认程序仍然可以工作。在测试此类程序时，我通常会“作弊”，在第一次猜测之前添加代码来打印秘密数字的值。
-- 4. 那么，一旦我确定一切运行正常，我就把代码删掉。
+1. 这段代码应该更短一些！注意第 18 行和第 19 行与第 22 行和第 23 行相同。这太蠢了；没有理由在两个语句中写相同的代码。
+2. 将这两行合并为一份，并放在两个 `if` 语句之后（但仍在 `while` 循环体内部）。
+3. 确认程序仍然可以工作。在测试此类程序时，我通常会“作弊”，在第一次猜测之前添加代码来打印秘密数字的值。
+4. 那么，一旦我确定一切运行正常，我就把代码删掉。
 
-（此学习练习没有视频。）
+> （此学习练习没有视频。）
 
 ## 练习 27：死循环
 
 有时让学生惊讶的是，创建一个永远重复的循环是如此简单。这些被称为“死循环”，我们有时故意创建它们，但通常它们是逻辑错误的结果。这里有一个例子：
 
-KeepGuessing.java
+### KeepGuessing.java
+
+
 
 ```java
 import java.util.Scanner;
@@ -2895,17 +2410,17 @@ Your guess: That is incorrect. Guess again.
 Your guess: ^C
 ```
 
-程序并没有自动停止；我必须在它不断重复时按下 CTRL-C 来停止。
+程序并没有自动停止；我必须在它不断重复时按下 `CTRL-C` 来停止。
 
-这段代码有一个死循环。第 15 行检查变量 *secret* 的值是否不同变量 *guess* 的值。如果是，它就会执行循环体并跳到第 19 行。
+这段代码有一个死循环。第 15 行检查变量 `secret` 的值是否不同变量 `guess` 的值。如果是，它就会执行循环体并跳到第 19 行。
 
-问题在于，一旦 secret 和 guess 不同，程序永远无法到达改变任何变量的代码，因此循环会无限重复 15 行到 18 行。
+问题在于，一旦 `secret` 和 `guess` 不同，程序永远无法到达改变任何变量的代码，因此循环会无限重复第 15 行到第 18 行。
 
 所以当你编写 `while` 循环的条件时，尽量在心里记住：“我需要确保这个条件最终变为假。”
 
 ## 学习练习
 
-- 1. 修复代码，使其不再包含死循环。
+1. 修复代码，使其不再包含死循环。
 
 ## 练习 28：使用循环进行错误检查
 
@@ -2915,7 +2430,7 @@ Your guess: ^C
 
 但你很快就要进入编写一些错误检查的阶段了。
 
-SafeSquareRoot.java
+### SafeSquareRoot.java
 
 ```java
 import java.util.Scanner;
@@ -2943,12 +2458,6 @@ public class SafeSquareRoot {
 
 ## 你应该看到
 
-
-
-
-
-## 练习 28：用于错误检查的循环
-
 ```
 给我一个数字，我将找出它的平方根。（请不要输入负数。）-8
 我不会对负数开平方根。
@@ -2963,7 +2472,7 @@ public class SafeSquareRoot {
 5.0 的平方根是 2.23606797749979
 ```
 
-从第 12 行开始是一个我们所说的“输入保护循环”的示例。在第 18 行，我们将对变量 `x` 中的任何值开平方根，但在在此之前，我们希望确保它包含一个正数。（Java 并没有对虚数提供内置支持）。我们可以使用内置的绝对值函数 `Math.abs()`，但我正试图演示**错误检查**，好吗？
+从第 12 行开始是一个我们所说的“输入保护循环”的示例。在第 18 行，我们将对变量 `x` 中的任何值开平方根，但在此之前，我们希望确保它包含一个正数。（Java 并没有对虚数提供内置支持）。我们可以使用内置的绝对值函数 `Math.abs()`，但我正试图演示**错误检查**，好吗？
 
 在第 10 行，我们让用户输入一个数字。我们礼貌地要求输入正数，但他们可以输入任何想输入的内容。（他们甚至可以输入 "M Mxyzptlk"，但我们的错误检查技能还不够先进，无法应付这种情况。）
 
@@ -2976,8 +2485,6 @@ public class SafeSquareRoot {
 这样的程序到处都是。你必须这样做，因为人类是不可靠的，而且经常做意料之外的事情。当你的蹒学学爬上笔记本并在程序运行时开始敲击键盘时会发生什么？我们希望程序不要崩溃。
 
 哦，你注意到了吗？我在这个程序里改了一些东西。到目前为止，我在书中每当在屏幕上打印内容时，我都在括号和引号之间留了一个空格，如下：
-
-## 练习 28：使用循环进行错误检查
 
 ```java
 System.out.println("This is a test.");
@@ -3016,7 +2523,8 @@ if ( age < 16 )
 
 总之，在 Java 中创建循环有多种方法。除了 `while` 循环，还有 `do-while` 循环。它们几乎是相同的，因为它们都会检查一个条件。如果条件为真，则执行循环体。如果条件为假，循环体将被跳过（第一次）。那么区别是什么？输入代码，我们来聊聊。
 
-CoinFlip.java
+### CoinFlip.java
+
 ```java
 import java.util.Scanner;
 
@@ -3066,64 +2574,10 @@ Final score: 0
 
 在计算机科学中，`while` 循环被称为“预测试”循环（pre-test，因为它们先检查条件），而 `do-while` 被称为“后测试”循环（post-test，因为它们在之后检查）。
 
-## 练习 29：do-while 
+## 学习练习
 
-在 Java 中创建循环有多种方法。除了 `while` 循环，还有 `do-while` 循环。它们实际上是完全相同的，因为它们都会检查一个条件。如果条件为真，则执行循环体。如果条件为假，循环体将被跳过（第一次）。那么区别是什么？输入代码，我们来聊聊。
+1. 修改代码，使其使用 `while` 循环代替 `do-while` 循环。确保它可以通过编译且运行结果相同。
 
-CoinFlip.java
-```java
-import java.util.Scanner;
-
-public class CoinFlip {
-    public static void main(String[] args) {
-        Scanner keyboard = new Scanner(System.in);
-        String coin, again;
-        int streak = 0;
-        boolean gotHeads;
-
-        do {
-            gotHeads = Math.random() < 0.5;
-            if (gotHeads) {
-                coin = "HEADS";
-            } else {
-                coin = "TAILS";
-            }
-
-            System.out.println("You flipped a " + coin);
-
-            if (gotHeads) {
-                streak++;
-                System.out.print(streak + ". Would you like to flip again? ");
-                again = keyboard.next();
-            } else {
-                System.out.println("You lose!");
-                streak = 0;
-                again = "n";
-            }
-        } while (again.equals("y"));
-        System.out.println("Final score: " + streak);
-    }
-}
-```
-
-### 你看到的是
-
-```
-You flipped a HEADS
-1. Would you like to flip again? y
-You flipped a TAILS
-You lose!
-Final score: 0
-```
-
-`while` 循环和 `do-while` 循环之间只有两个区别：1. `while` 循环在进入循环体之前检查条件，而 `do-while` 循环在之后检查。
-
-
-...要简单得多。
-
-## 学习练习 (Study Drills)
-
-- 1. 修改代码，使其使用 `while` 循环代替 `do-while` 循环。确保它可以通过编译且运行结果相同。
 2. 将其改回 `do-while` 循环。（以后当你忘记如何编写 `do-while` 循环时，你可能会回来看这段代码，我们不希望你唯一的示例被变成了 `while` 循环。）
 
 ## 练习 30：逐个累加数值
@@ -3152,13 +2606,15 @@ num5 = keyboard.nextDouble();
 total = num1+num2+num3+num4+num5;
 ```
 
+
+
 但如果告诉你想输入一百个数字呢？或者一千个？或者*也许*是三个或五个，我不确定？那么你需要不同的方法。你需要一个循环（毕竟我们通过它来重复操作）。你还需要一个变量，在数值出现时一次对其进行累加。一个初始值为“无”并逐个累加数值的变量被称为“累加器”（accumulator）变量，虽然这是一个很老老的词了，如果你的朋友不满四十岁，他们可能没听过。
 
 无论如何，基本思想如下：
 
-练习 30：逐个累加
+## 练习 30：逐个累加
 
-RunningTotal.java
+### RunningTotal.java
 
 ```java
 import java.util.Scanner;
@@ -3185,21 +2641,32 @@ public class RunningTotal {
 ## 你将看到什么
 
 输入一组数值，我会把它们相加。当你输入 0 时我会停止。
+
 Value: 3
+
 目前的总计是: 3
+
 Value: 4
+
 目前的总计是: 7
+
 Value: 5
+
 目前的总计是: 12
+
 Value: 6
+
 目前的总计是: 18
+
 Value: 0
+
 目前的总计是: 18
+
 最终总计是: 18
 
-我们需要两个变量：一个用来存储用户刚刚输入的值（current），另一个用来存储当前的运行总额（嗯……total）。在第 6 行，我们确保在开始时给 `total` 赋值为 0。你很快就会明白为什么了。
+我们需要两个变量：一个用来存储用户刚刚输入的值（`current`），另一个用来存储当前的运行总额（嗯……`total`）。在第 6 行，我们确保在开始时给 `total` 赋值为 0。你很快就会明白为什么了。
 
-练习 30：逐个累加
+### 练习 30：逐个累加
 
 在第 13 行，用户可以输入一个数字。这位于 `do-while` 循环体内部，无论如何它至少运行一次，所以这段代码总是执行。假设他们首先输入了 3。
 
@@ -3209,16 +2676,17 @@ Value: 0
 
 程序再次检查条件，过程继续。最终用户输入了 0，这个 0 被加到总额中（这并不会损坏它），条件为假，因此 `do-while` 循环停止循环。
 
-## 学习练习 (Study Drills)
+## 学习练习
 
-- 1. 重写代码，使用 `while` 循环代替 `do-while` 循环。（最初无法编译。）在循环开始前添加/修改某些内容，使其通过编译并保持正常工作。然后改回 `do-while`。（并保留你为了让 `while` 版本通过编译而做的任何修改。）
-- 2. 当用户输入 0 结束程序时，它会打印“目前的总计”，然后打印“最终总计”。这看起来很尴尬，所以修复代码，当循环即将结束时跳过打印“目前的总计”。不过要确保在其他时候仍然打印。
+1. 重写代码，使用 `while` 循环代替 `do-while` 循环。（最初无法编译。）在循环开始前添加/修改某些内容，使其通过编译并保持正常工作。然后改回 `do-while`。（并保留你为了让 `while` 版本通过编译而做的任何修改。）
+
+2. 当用户输入 0 结束程序时，它会打印“目前的总计”，然后打印“最终总计”。这看起来很尴尬，所以修复代码，当循环即将结束时跳过打印“目前的总计”。不过要确保在其他时候仍然打印。
 
 ## 练习 31：骰子游戏的数值累加
 
 Pig 是一个简单的游戏（如果你想了解更多，可以阅读维基百科上的 Pig 条目）。基本思想是掷骰子。如果你掷出 1，得分就会丢失。如果你掷出其他数字，就将该数字加到你的总分中。你一直这样做，直到你的总分达到 100 或你掷出 1。在本节中，我们将为这个游戏编写电脑 AI。
 
-DiceComputer.java
+### DiceComputer.java
 
 ```java
 import java.util.Scanner;
@@ -3243,14 +2711,11 @@ public class DiceComputer {
 }
 ```
 
-
-
-
 ## 练习 32：名为“猪”（Pig）的骰子游戏
 
 ```java
 26 System.out.print(" so far this round.\n" );
-27 System.out.print("\tWould like to \"roll\"
+27 System.out.print("\tWould like to \"roll\""
 ```
 
 ```java
@@ -3263,52 +2728,94 @@ public class DiceComputer {
 ## 你应该看到的
 
 你有 0 分。
+
 你掷了 6。
+
 本回合目前你有 6 分。
+
 你想再次“掷骰”还是“停止”？掷骰
+
 你掷了 1。
+
 这结束了你的回合。
+
 你以 0 分结束了本回合。
+
 电脑有 0 分。
+
 电脑掷了 2。
+
 本回合目前有 2 分。
+
 电脑将再次掷骰。
+
 电脑掷了 5。
+
 本回合目前有 7 分。
+
 电脑将再次掷骰。
+
 电脑掷了 6。
+
 本回合目前有 13 分。
+
 电脑将再次掷骰。
+
 电脑掷了 6。
+
 本回合目前有 19 分。
+
 电脑将再次掷骰。
+
 电脑掷了 6。
+
 本回合目前有 25 分。
+
 电脑以 25 分结束了本回合。
 
 ...跳过一会儿，老兄
+
 你有 70 分。
+
 你掷了 1。
+
 这结束了你的回合。
+
 你以 70 分结束了本回合。
+
 电脑有 85 分。
+
 电脑掷了 2。
+
 本回合目前有 2 分。
+
 电脑将再次掷骰。
+
 电脑掷了 5。
+
 本回合目前有 7 分。
+
 电脑将再次掷骰。
+
 电脑掷了 6。
+
 本回合目前有 13 分。
+
 电脑将再次掷骰。
+
 电脑掷了 4。
+
 本回合目前有 17 分。
+
 电脑将再次掷骰。
+
 电脑掷了 4。
+
 本回合目前有 21 分。
+
 电脑以 106 分结束了本回合。
+
 电脑赢了。
-```
 
 我们用两个变量开始程序：`ptot` 存储人类的总分，`ctot` 存储电脑的总分。它们都从 0 开始。
 
@@ -3340,123 +2847,160 @@ public class DiceComputer {
 
 一旦玩家的回合结束，我们将 `turnTotal` 累加到 `ptot` 中。如果 `ptot` 大于 100，则游戏结束。否则，如果 `ctot` 大于 100，则游戏也结束。
 
-
-
-
-
 ## 练习题
 
-- 1. 删除第 4 行第一个函数调用末尾的括号，使其看起来像这样：
+1. 删除第 4 行第一个函数调用末尾的括号，使其看起来像这样：
 
 `erebor;`
 
 编译时会发生什么？（然后把括号加回来。）
 
-- 2. 删除第二个函数调用（第 6 行的那个）。你可以直接删除整行代码，也可以在行首处加上斜杠，让编译器认为它是一条注释，如下所示：
+2. 删除第二个函数调用（第 6 行的那个）。你可以直接删除整行代码，也可以在行首处加上斜杠，让编译器认为它是一条注释，如下所示：
 
 `// erebor();`
 
 编译它，但在运行它之前，你认为输出会有什么不同？
 运行它看看你的猜想是否正确。
 
-脚注
-
 ## 练习 34：调用函数绘制旗帜
 
 现在你已经了解了定义函数和调用函数的绝对基础知识，让我们通过定义 11 个函数来练习一下吧！
 
-这个程序中没有数字 0。所有看起来像 O 的地方都是大字母 O。另外注意，36 和 40 使用的是 `print()` 而不是 `println()`。
+这个程序中没有数字 0。所有看起来像 O 的地方都是大字母 O。另外注意，36 和 40 行使用的是 `print()` 而不是 `println()`。
 
-OverlyComplexFlag.java
+### OverlyComplexFlag.java
 
 ```java
 import static java.lang.System.*;
+
 class OverlyComplexFlag {
+
     public static void main(String[] args) {
+
         printTopHalf();
 
         print48Colons();
+
         print480Hs();
+
         print48Colons();
+
         print480Hs();
+
         print48Colons();
+
         print480Hs();
+
     }
 
     public static void print48Colons() {
+
         out.println("|------------------------------------------------------|");
+
     }
 
     public static void print480Hs() {
+
         out.println("|00000000000000000000000000000000000000000000|");
+
     }
 
     public static void print29Colons() {
+
         out.println("|--------------------------------------|");
+
     }
 
     public static void printPledge() {
+
         out.println("I pledge allegiance to the flag.");
+
     }
 
     public static void print290hs() {
+
         out.println("00000000000000000000000000");
+
     }
 
     public static void print6Stars() {
+
         out.print("| * * * * * ");
+
     }
 
     public static void print5Stars() {
+
         out.print("| * * * * ");
+
     }
 
     public static void printSixStarLine() {
+
         print6Stars();
+
         print290hs();
+
     }
 
     public static void printFiveStarLine() {
+
         print5Stars();
+
         print290Colons();
+
     }
 
     public static void printTopHalf() {
+
         out.println("________________________________");
+
         // 上面的一行引号内有1 个空格，然后是 48 个下划线
+
         printSixStarLine();
+
         printFiveStarLine();
+
         printFiveStarLine();
+
         printFiveStarLine();
+
         printSixStarLine();
+
         printFiveStarLine();
+
         printSixStarLine();
+
     }
+
 }
 ```
 
+
+
 ## 练习 34：调用函数绘制旗帜
 
+```
 | | * * * * * | 000000000000000000000000 |
 | :--- | :--- | :--- |
-| * * * * * | :::: |
-| * * * * * | 000000000000000000000000 |
-| * : | :::: |
-| * * * * * | 000000000000000000000000 |
-| * : | :::: |
-| * * * * * | 000000000000000000000000 |
-| * : | :::: |
-| * * * * * | 000000000000000000000000 |
-| * : | :::: |
-| * * * * * | 000000000000000000000000 |
-| * : | :::: |
-| * * * * * | 000000000000000000000000 |
-| * * | | | | | | |
+| * * * * * | :::: | |
+| * * * * * | 000000000000000000000000 | |
+| * : | :::: | |
+| * * * * * | 000000000000000000000000 | |
+| * : | :::: | |
+| * * * * * | 000000000000000000000000 | |
+| * : | :::: | |
+| * * * * * | 000000000000000000000000 | |
+| * : | :::: | |
+| * * * * * | 000000000000000000000000 | |
+| * : | :::: | |
+| * * * * * | 000000000000000000000000 | |
+| * * | | | | | | | |
+```
 
 这个练习太荒谬了。没有任何合理的理由让任何自尊的程序员编写这样的绘制旗帜的代码。写这个程序感觉很愚蠢。但函数是很重要的，我更倾向于使用愚蠢的例子而不是难以追踪的真实例子。那么我们该如何追踪这个程序的执行呢？从开头开始：`main()` 的第一行。`main` 的第一件事是调用 `printTopHalf()` 函数。因此 `main` 暂停并跳转到 `printTopHalf()` 函数，它位于第 53 行。`printTopHalf` 的第一件事移动到第 56 行，这是另一个函数调用！`main()` 仍在等待 `printTopHalf()` 完成，现在 `printTopHalf()` 本身在暂停，等待 `printSixStarLine()` 完成并返回。`printSixStarLine()` 从第 44 行开始，它调用 `print6Stars()` 函数。该函数（谢天谢）只在屏幕上显示某些东西。`print6Stars()` 在第 37 行返回，返回到第二行 (45) `printSixStarLine()`，那里有另一个函数调用。`printSixStarLine()` 结束，返回控制权到第 56 行。在这一点，解释所有的函数将比让你自己追踪执行路径要困惑得多，这在练习题中。
 
 1. 这很糟糕，但我将让你追踪整个程序。打印出代码，拿一把铅笔，每当函数返回时就画线。当你完成时，它看起来应该像一盘意大利面！
-
 2. 在第 27 到 29 行你发现了一个名为 `printPledge()` 的定义。但这个函数的输出从未出现。为什么呢？在 `main()` 的末尾添加一个调用来运行这个函数，这样它就会出现在旗帜下方。
 
 （尽管这个程序很糟糕，我对那个旗帜感到很自豪。如果你用尺子测量一切，你会发现我的旗帜实际上花了很多时间在测量和调整上。）
@@ -3469,80 +3013,120 @@ Yacht 是一种老的骰子游戏，为了商业游戏 Yahtzee 而修改。它�
 
 这个程序不进行评分，它一直掷五个骰子直到它们都一样。运行速度很快，即使尝试很多次也不太花时间。
 
-YachtDice.java
+### YachtDice.java
 
 ```java
 public class YachtDice {
+
     public static void main(String[] args) {
+
         int r1, r2, r3, r4, r5;
+
         boolean allSame;
 
         do {
+
             r1 = 1 + (int)(Math.random()*6);
+
             r2 = 1 + (int)(Math.random()*6);
+
             r3 = 1 + (int)(Math.random()*6);
+
             r4 = 1 + (int)(Math.random()*6);
+
             r5 = 1 + (int)(Math.random()*6);
+
             System.out.print("\nYou rolled: " + r1 + " " + " + r2 + " " + " + " ");
-            System.out.println(r3 + " " + " + r4 + " " + " + r5);
+
+            System.out.println(r3 + " " + " + r4 + " " + " + r5");
+
             showDice(r1);
+
             showDice(r2);
+
             showDice(r3);
+
             showDice(r4);
+
             showDice(r5);
+
             allSame = ( r1 == r2 && r2 == r3 && r3 == r4 && r4 == r5 );
+
         } while (! allSame);
+
         System.out.println("The Yacht!!");
+
     }
 
     public static void showDice(int roll) {}
+
 }
 ```
 
 ```java
 System.out.println("+----+");
+
 if ( roll == 1 ) {
+
     System.out.println("| |");
+
     System.out.println("| o |");
+
     System.out.println("| |");
+
 } else if ( roll == 2 ) {
+
     System.out.println("| o |");
+
     System.out.println("| | |");
+
     System.out.println("| o |");
+
 } else if ( roll == 3 ) {
+
     System.out.println("| o |");
+
     System.out.println("| o |");
+
     System.out.println("| o |");
+
 } else if ( roll == 4 ) {
+
     System.out.println("| o o |");
+
     System.out.println("| | |");
+
     System.out.println("| o o |");
+
 } else if ( roll == 5 ) {
+
     System.out.println("| o o |");
+
     System.out.println("| o |");
+
     System.out.println("| o o |");
+
 } else if ( roll == 6 ) {
+
     System.out.println("| o o |");
+
     System.out.println("| o o |");
+
     System.out.println("| o o |");
+
 }
 ```
 
-
-
-
-
-## 练习 35：使用函数显示骰子
-
-131
+### 程序运行示例
 
 ```
 你掷出了: 4 3 5 2 6
+
 +---+
 |o o |
 |   |
 |o o |
-+---+++
++---+
 +---+
 | o |
 | o |
@@ -3553,7 +3137,9 @@ if ( roll == 1 ) {
 | o |
 |o o |
 +---+
++---+
 | o |
+|   |
 | o |
 +---+
 +---+
@@ -3565,70 +3151,68 @@ if ( roll == 1 ) {
 
 ```
 你掷出了: 3 3 3 3 2
-+---+
-| o |
-| o |
-| o |
-+---+
-+---+
-| o |
-| o |
-| o |
-+---+
-+---+
-| o |
-| o |
-| o |
-+---+
-```
 
-练习 35：使用函数显示骰子
-
-```
++---+
 | o |
 | o |
-| ol |
+| o |
 +---+
 +---+
 | o |
-| |
-| ol
+| o |
+| o |
 +---+
-
++---+
+| o |
+| o |
+| o |
++---+
++---+
+| o |
+| o |
+| o |
++---+
++---+
+| o |
+|   |
+| o |
++---+
 ...等等
 ```
 
+```
 你掷出了: 4 4 4 4 4
-+----
-| o ol
-| |
-| o ol
 +----+
-+----
-| o ol
-| |
-| o ol
+| o o|
+|    |
+| o o|
 +----+
-+----
-| o ol
-| |
-| o ol
 +----+
-+----
-| o ol
-| |
-| o ol
+| o o|
+|    |
+| o o|
 +----+
-+----
-| o ol
-| |
-| o ol
-+---!!
++----+
+| o o|
+|    |
+| o o|
++----+
++----+
+| o o|
+|    |
+| o o|
++----+
++----+
+| o o|
+|    |
+| o o|
++----+
 大骰点（The Yacht）！！
+```
 
 除了第 19 行花哨的布尔表达式外，这个练习中很有意思的地方是一个名为 `showDice` 的单函数。
 
-# 练习 35：使用函数显示骰子
+### 练习 35：使用函数显示骰子
 
 在第 7 行到第 11 行之间，我们选择了五个随机数（每个数字范围在 1 到 6 之间），并将结果存储在五个整型变量 `r1` 到 `r5` 中。
 
@@ -3639,20 +3223,19 @@ if ( roll == 1 ) {
 这里是一些示例：
 
 ```
-showDice;               // 错误（不带括号指的是变量
-                             而不是函数调用）
-showDice();                // 错误（函数调用必须有一个参数，不能为零）
-showDice(1);               // 正确（一个参数正恰好）
-showDice(4);               // 正确
-showDice(1+2);             // 正确
-showDice(r2);              // 正确
-showDice(r5);              // 正确
-showDice(r3-r4 / 2);      // 正确（奇怪但合法）
-showDice(17);              // 正确（尽管它不会显示骰子图片）
-showDice(3, 4);            // 错误（函数调用必须有一个参数，不能有两个）
-showDice(2.0);             // 错误（参数必须是整数，不能是字符串）
-showDice("two");          // 错误（参数必须是整数，不能是字符串）
-showDice(false);           // 错误（参数必须是整数，不能是布尔）
+showDice;               // 错误（不带括号指的是变量而不是函数调用）
+showDice();             // 错误（函数调用必须有一个参数，不能为零）
+showDice(1);            // 正确（一个参数正恰好）
+showDice(4);            // 正确
+showDice(1+2);          // 正确
+showDice(r2);           // 正确
+showDice(r5);           // 正确
+showDice(r3-r4 / 2);    // 正确（奇怪但合法）
+showDice(17);           // 正确（尽管它不会显示骰子图片）
+showDice(3, 4);         // 错误（函数调用必须有一个参数，不能有两个）
+showDice(2.0);          // 错误（参数必须是整数，不能是浮点数）
+showDice("two");        // 错误（参数必须是整数，不能是字符串）
+showDice(false);        // 错误（参数必须是整数，不能是布尔值）
 ```
 
 在所有情况下，参数的副本都会存储在参数中。因此，如果你像 `showDice(3);` 那样调用函数，函数会被调用，值 `3` 将存储在参数 `roll` 中。因此到第 26 行时，变量 `roll` 已经声明并初始化为值 `3`。
@@ -3661,129 +3244,33 @@ showDice(false);           // 错误（参数必须是整数，不能是布尔�
 
 在第 14 行执行了 `showDice` 函数，`roll` 将设置为 `r1` 中的任何值相等。
 
-在第 15 行再次调用了 `showDice`，但这次 `roll` 将设置为 `r2` 中的任何值相等。第 16 行调用 `showDice` 的同时将其参数值设置为 `r3` 的值。以此此类推。
+在第 15 行再次调用了 `showDice`，但这次 `roll` 将设置为 `r2` 中的任何值相等。第 16 行调用 `showDice` 的同时将其参数值设置为 `r3` 的值。以此类推。
 
-# 练习 35：使用函数显示骰子
+### 练习 35：使用函数显示骰子（续）
 
 通过这种方式，我们基本上多次运行同一段代码，但每次掷骰都替换不同的变量。这为我们节省大量的代码。
 
 作为比较，我还写了这个练习的一个不使用函数的简化双骰子版本。注意我必须重复两次完全相同的 `if` 语句序列：每个变量重复一次。还要注意，虽然定义函数比简单的复制粘贴 `if` 语句并更改变量稍微多一点工作，但双骰子版本比五骰子版本长。
 
-YachtDiceNoFunctions java
+### YachtDiceNoFunctions.java
 
-```
+```java
 public class YachtDiceNoFunctions {
+
     public static void main(String[] args) {
+
         int r1
 ```
-    else if ( r1 == 6 ) {
-        System.out.println("o o");
-        System.out.println("o o");
-        System.out.println("o o");
-    }
-    System.out.println("++");
 
-    if ( r2 == 1 ) {
-        System.out.println("o |");
-        System.out.println("o |");
-    } else if ( r2 == 2 ) {
-        System.out.println("o |");
-        System.out.println("o o");
-    } else if ( r2 == 3 ) {
-        System.out.println("o o");
-        System.out.println("o |");
-    } else if ( r2 == 4 ) {
-        System.out.println("o |");
-        System.out.println("o |");
-    } else if ( r2 == 5 ) {
-        System.out.println("o o");
-        System.out.println("o o");
-    } else if ( r2 == 6 ) {
-        System.out.println("o o");
-        System.out.println("o o");
-        System.out.println("o o");
-    }
-    System.out.println("++");
 
-    if ( r3 == 1 ) {
-        System.out.println("o |");
-        System.out.println("o |");
-    } else if ( r3 == 2 ) {
-        System.out.println("o |");
-        System.out.println("o o");
-    } else if ( r3 == 3 ) {
-        System.out.println("o o");
-        System.out.println("o |");
-    } else if ( r3 == 4 ) {
-        System.out.println("o |");
-        System.out.println("o |");
-    } else if ( r3 == 5 ) {
-        System.out.println("o o");
-        System.out.println("o o");
-    } else if ( r3 == 6 ) {
-        System.out.println("o o");
-        System.out.println("o o");
-        System.out.println("o o");
-    }
-    System.out.println("++");
-
-    if ( r4 == 1 ) {
-        System.out.println("o |");
-        System.out.println("o |");
-    } else if ( r4 == 2 ) {
-        System.out.println("o |");
-        System.out.println("o o");
-    } else if ( r4 == 3 ) {
-        System.out.println("o o");
-        System.out.println("o |");
-    } else if ( r4 == 4 ) {
-        System.out.println("o |");
-        System.out.println("o |");
-    } else if ( r4 == 5 ) {
-        System.out.println("o o");
-        System.out.println("o o");
-    } else if ( r4 == 6 ) {
-        System.out.println("o o");
-        System.out.println("o o");
-        System.out.println("o o");
-    }
-    System.out.println("++");
-
-    if ( r5 == 1 ) {
-        System.out.println("o |");
-        System.out.println("o |");
-    } else if ( r5 == 2 ) {
-        System.out.println("o |");
-        System.out.println("o o");
-    } else if ( r5 == 3 ) {
-        System.out.println("o o");
-        System.out.println("o |");
-    } else if ( r5 == 4 ) {
-        System.out.println("o |");
-        System.out.println("o |");
-    } else if ( r5 == 5 ) {
-        System.out.println("o o");
-        System.out.println("o o");
-    } else if ( r5 == 6 ) {
-        System.out.println("o o");
-        System.out.println("o o");
-        System.out.println("o o");
-    }
-    System.out.println("++");
-}
-    System.out.println("The total is " + total + "\n");
-}
-    System.out.println("Doubles! Nice job.");
-
-## What You Should See
-
-1. 添加一个骰子。注意如何通过调用函数显示第 6 个骰子。（别忘了添加涉及第 6 个骰子的布尔表达式。）
 
 ## 练习 36：从函数返回值
 
 有些函数有参数，有些没有。参数是向函数发送值的方法。只有一种方法可以从函数获取值：返回值。这个练习给出了使用三角形公式计算面积的示例。
 
-HeronsFormula.java
+### HeronsFormula.java
+
+```java
 public class HeronsFormula {
     public static void main(String[] args) {
         double a, g;
@@ -3804,30 +3291,28 @@ public class HeronsFormula {
 
     // 这个函数计算边长 a, b, c 的三角形的面积
     public static double triangleArea(int a, int b, int c) {
-        double s = (a+b+c) / 2;
-        double A = Math.sqrt(s*(s-a)*(s-b)*(s-c));
+        double s = (a + b + c) / 2;
+        double A = Math.sqrt(s * (s - a) * (s - b) * (s - c));
         // 计算面积后，你必须“返回”计算出的值：
         return A;
     }
 }
 ```
 
-## 你应该看到
+### 你应该看到
 
 | A triangle with sides 3,3,3 has area 2.0 |
+| :--- |
 | A triangle with sides 3,4,5 has area 6.0 |
 | A triangle with sides 7,8,9 has area 26.83281572999748 |
 | A triangle with sides 5,12,13 has area 30.0 |
 | A triangle with sides 10,9,11 has area 42.2640687119285 |
 | A triangle with sides 8,15,17 has area 60.0 |
 
-
-
-
-
-## 练习 36：从函数返回值
+### 代码解析
 
 如果你需要我提供关于我的车长什么样的信息，那么这些就是参数。如果你已经知道哪辆是我的，你就不需要参数了。
+
 最后你回来并说：“我已完成任务”。这就像一个不返回值的函数。
 
 ```java
@@ -3838,11 +3323,12 @@ rollUpWindows("Toyota", "Corolla", 2008, "blue"); // 如果你需要参数
 在任何情况下，函数都会执行并离开去完成它的工作，但不会返回任何值。现在，看示例 #2：
 
 我们又在我的教室里。我正在在线尝试更新我的汽车保险，网页要求我输入汽车的车牌号。我不记得了，所以我让你去停车场帮我拿。
-最后你回来并告诉我车牌号。可能你把它把它写在了一张废纸上，或者你把它背下来记在了脑子里。当你把它给我时，我亲自把它抄下来。这就像一个返回值的函数。
 
-String plate;
+最后你回来并告诉我车牌号。可能你把它写在了一张废纸上，或者你把它背下来记在了脑子里。当你把它给我时，我亲自把它抄下来。这就像一个返回值的函数。
 
 ```java
+String plate;
+
 plate = retrieveLicensePlate(); // 如果你不需要参数
 plate = retrieveLicensePlate("Toyota", "Corolla", 2008, "blue"); // 如果你需要的话
 ```
@@ -3856,7 +3342,7 @@ retrieveLicensePlate("Toyota", "Corolla", 2008, "blue");
 
 ```java
 // 返回了面积但我们拒绝将其存储到变量中
-tangleArea(3, 3, 3);
+triangleArea(3, 3, 3);
 ```
 
 这通常是一个坏主意，但也许你有你的理由。无论如何，回到代码。
@@ -3869,54 +3355,51 @@ tangleArea(3, 3, 3);
 
 好了，为了确保你能理解为什么函数是值得费劲的，这里有一个不使用函数编写此程序的示例。
 
-HeronsFormulaNoFunction.java
+### HeronsFormulaNoFunction.java
 
 ```java
 public class HeronsFormulaNoFunction {
     public static void main(String[] args) {
-    int a, b, c;
-    double s, A;
+        int a, b, c;
+        double s, A;
 
-    a = 3;
-    b = 3;
-    c = 3;
-    s = (a+b+c) / 2;
-    A = Math.sqrt(s*(s-a)*(s-b)*(s-c));
-    System.out.println("边长为 3,3,3 的三角形面积为 " + A);
+        a = 3;
+        b = 3;
+        c = 3;
+        s = (a + b + c) / 2;
+        A = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+        System.out.println("边长为 3,3,3 的三角形面积为 " + A);
 
-    a = 7;
-    b = 8;
-    c = 9;
-    s = (a+b+c) / 2;
-    A = Math.sqrt(s*(s-a)*(s-b)*(s-c));
-    System.out.println("边长为 7,8,9 的三角形面积为 " + A);
+        a = 7;
+        b = 8;
+        c = 9;
+        s = (a + b + c) / 2;
+        A = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+        System.out.println("边长为 7,8,9 的三角形面积为 " + A);
 
-    a = 3;
-    b = 4;
-    c = 5;
-    s = (a+b+c) / 2;
-    A = Math.sqrt(s*(s-a)*(s-b)*(s-c));
-    System.out.println("边长为 3,4,5 的三角形面积为 " + A);
+        a = 3;
+        b = 4;
+        c = 5;
+        s = (a + b + c) / 2;
+        A = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+        System.out.println("边长为 3,4,5 的三角形面积为 " + A);
 
-    a = 5;
-    b = 5;
-    c = 5;
-    s = (a+b+c) / 2;
-    A = Math.sqrt(s*(s-a)*(s-b)*(s-c));
-    System.out.println("边长为 5,5,5 的三角形面积为 " + A);
+        a = 5;
+        b = 5;
+        c = 5;
+        s = (a + b + c) / 2;
+        A = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+        System.out.println("边长为 5,5,5 的三角形面积为 " + A);
 
-    a = 10;
-    b = 10;
-    c = 10;
-    s = (a+b+c) / 2;
-    A = Math.sqrt(s*(s-a)*(s-b)*(s-c));
-    System.out.println("边长为 10,10,10 的三角形面积为 " + A);
+        a = 10;
+        b = 10;
+        c = 10;
+        s = (a + b + c) / 2;
+        A = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+        System.out.println("边长为 10,10,10 的三角形面积为 " + A);
     }
 }
 ```
-
-
-
 
 ## 练习 37: 形状面积
 
@@ -3954,34 +3437,37 @@ The area is 28.27433882308138
 > 4
 ```
 
-我们在第 50 行定义了一个计算三角形面积的函数（只需要底和高）。它需要两个参数并返回一个 double 类型的值。在第 51 行我们声明了一个变量 A。这个变量是函数的“局部”变量。尽管在第 57 行也声明了一个名为 A 的变量，但它们并不是同一个变量。（这就像有两个名字叫 "Michael" 的朋友；仅仅因为他们名字相同并不意味着他们是同一个人。）
+我们在第 50 行定义了一个计算三角形面积的函数（只需要底和高）。它需要两个参数并返回一个 `double` 类型的值。在第 51 行我们声明了一个变量 `A`。这个变量是函数的“局部”变量。尽管在第 57 行也声明了一个名为 `A` 的变量，但它们并不是同一个变量。（这就像有两个名字叫 "Michael" 的朋友；仅仅因为他们名字相同并不意味着他们是同一个人。）
 
-变量 b（定义在第 23 行）的值在第 26 行的函数调用中被作为参数 base 的初始值传递进去。b 被存储在 base 中是因为 b 刚好排在第一位，而不是因为 base 以 b 开头。计算机并不在乎这些。只有顺序很重要。
+变量 `b`（定义在第 23 行）的值在第 26 行的函数调用中被作为参数 `base` 的初始值传递进去。`b` 被存储在 `base` 中是因为 `b` 刚好排在第一位，而不是因为 `base` 以 `b` 开头。计算机并不在乎这些。只有顺序很重要。
 
-在第 53 行，A 的值被返回给 main，并最终存储在名为 area 的变量中。
+在第 53 行，`A` 的值被返回给 `main`，并最终存储在名为 `area` 的变量中。
 
 在第 62 行开始定义的矩形面积函数中，我做了三件奇怪的事。
 
-首先，形式参数（formal parameters）是第 62 行函数定义中声明的变量，而实参（arguments）是40 行函数调用括号中的变量。这几近是一个巧合，但并没有任何意义。这好比一个名为 "Steven" 的演员扮演一个名为 "Steven" 的角色。来自 `main` 版本 `length` 的值被存储到 `rectangleArea` 的 `length` 变量中，是因为它们都列在括号中，没有其他原因。
+首先，形式参数（formal parameters）是第 62 行函数定义中声明的变量，而实参（arguments）是第 40 行函数调用括号中的变量。这几近是一个巧合，但并没有任何意义。这好比一个名为 "Steven" 的演员扮演一个名为 "Steven" 的角色。来自 `main` 版本 `length` 的值被存储到 `rectangleArea` 的 `length` 变量中，是因为它们都列在括号中，没有其他原因。
 
-其次，我没有费心为第 63 行函数将返回的结果创建一个变量。我直接返回了表达式 `length*width` 的值。函数会计算出该值并直接返回，而从不将其存储在变量中。
+其次，我没有费心为第 63 行函数将返回的结果创建一个变量。我直接返回了表达式 `length * width` 的值。函数会计算出该值并直接返回，而从不将其存储在变量中。
 
-第三，矩形面积值在第 40 行返回给 `main`，但我没有费心将返回值存储在变量中：我直接将其打印到屏幕上。（我在 `HeronsFormula` 中也这样做了，但我没有强调）。这完全没而且非常常见。我们经常调用函数并几乎总是使用函数的返回值，但并不总是需要将返回值存储在自己的变量中。
+第三，矩形面积值在第 40 行返回给 `main`，但我没有费心将返回值存储在变量中：我直接将其打印到屏幕上。（我在 `HeronsFormula` 中也这样做了，但我没有强调）。这完全没问题而且非常常见。我们经常调用函数并几乎总是使用函数的返回值，但并不总是需要将返回值存储在自己的变量中。
 
 最后，在进入下一个主题之前，我应该提到，在 Java 中，函数只能返回一个值。在某些编程语言中，函数可以返回多个值。在 Java 中，函数可以返回一个值或不返回值（如果函数是 `void`），但绝不会返回多个值。
 
 附注：这些函数有点傻。如果我们真的需要一个形状面积计算器，我不确定为一个仅有一行代码的公式创建一个整个函数是否值得。但无论如何，这对解释很有帮助。
 
-## 学习训练
+### 学习训练
 
-- 1. 添加一个计算正方形面积的函数。将其也添加到菜单中。
+1. 添加一个计算正方形面积的函数。将其也添加到菜单中。
 
 ## 练习 38: 使用 Javadoc 重新审视三十天
 
 在上一个练习中，我们写了一些可能可以省略的函数。今天的练习中，我们将重做之前的练习，通过使用函数使其变得更好。
-而且，因为我总是喜欢介绍新东西，我在每个函数的代码上方上方添加了特殊的注释，称为“Javadoc 注释”。你应该把它们输入进去。
 
-ThirtyDaysFunctions.java
+
+
+而且，因为我总是喜欢介绍新东西，我在每个函数的代码上方添加了特殊的注释，称为“Javadoc 注释”。你应该把它们输入进去。
+
+### ThirtyDaysFunctions.java
 
 ```java
 import java.util.Scanner;
@@ -4060,7 +3546,7 @@ public class ThirtyDaysFunctions {
 
 ## 你应该看到的内容
 
-Javadoc 注释的第一行是该对象（类或函数）的单句摘要。然后还有像 @author 或 @return 这样的标签，提供了关于谁编写了代码、函数预期的参数或它将返回值的详细信息。
+Javadoc 注释的第一行是该对象（类或函数）的单句摘要。然后还有像 `@author` 或 `@return` 这样的标签，提供了关于谁编写了代码、函数预期的参数或它将返回值的详细信息。
 
 好了，现在是见证时刻了。像编译代码一样进入终端窗口，输入以下命令：
 
@@ -4068,32 +3554,29 @@ Javadoc 注释的第一行是该对象（类或函数）的单句摘要。然后
 javadoc ThirtyDaysFunctions.java
 ```
 
-javadoc 是随 Java 编译器一起提供的自动生成文档的工具。你通过在类、函数或变量上方编写块注释来直接在代码中编写文档。
+`javadoc` 是随 Java 编译器一起提供的自动生成文档的工具。你通过在类、函数或变量上方编写块注释来直接在代码中编写文档。
 
-注释以 /** 开始，以 /* 结束，其间的每一行都以星号 (*) 开头。
-
-
-
-
+注释以 `/**` 开始，以 `*/` 结束，其间的每一行都以星号 (`*`) 开头。
 
 ## 学习练习
 
-- 1. 查看其中一个内置 Java 类的 javadoc 文档：java.util.Scanner²¹ 。注意看它看起来和 javadoc 工具生成的文档有多相似？所有的官方 Java 文档都是使用 javadoc 工具创建的，学习如何阅读它将成为成为 Java 程序员的重要组成部分。现在不要过度担心细节，只需尝试感受一下它的外观即可。
+1. 查看其中一个内置 Java 类的 javadoc 文档：`java.util.Scanner`²¹ 。注意看它看起来和 javadoc 工具生成的文档有多相似？所有的官方 Java 文档都是使用 javadoc 工具创建的，学习如何阅读它将成为成为 Java 程序员的重要组成部分。现在不要过度担心细节，只需尝试感受一下它的外观即可。
 
 左上角是作为 Java 部分包含的所有代码包列表，在其下方左侧是你可以导入的所有类/库列表，这可以节省你编写代码的时间。专业 Java 程序员做的大部分工作就是编写代码将 Java 库粘合在一起。
 
-现在看这些可能让你感到无从从。没关系，因为你刚刚开始。希望现在没有人指望你能理解其中的很多内容。事实上，程序员只知道内置 Java 库的一小部分，当他们需要做某些新事物时，他们会在互联网上搜索并阅读文档，就像你一样！
+现在看这些可能让你感到无从下手。没关系，因为你刚刚开始。希望现在没有人指望你能理解其中的很多内容。事实上，程序员只知道内置 Java 库的一小部分，当他们需要做某些新事物时，他们会在互联网上搜索并阅读文档，就像你一样！
 
-> ²¹http://docs.oracle.com/javase/7/docs/api/index.html?java/util/Scanner.html
+> ²¹ <http://docs.oracle.com/javase/7/docs/api/index.html?java/util/Scanner.html>
 
 ## 练习 39：导入标准库
 
-在在上一个练习中，你对 Java 中提供的所有内置模块有了一个恐怖的了解。今天我们将观察一个“简单”程序，它花了我大约半小时来编写，因为我花了大量时间在互联网上搜索、导入东西以及尝试不起作用的方法。
-不过，这段代码是可以运行的。它允许人类输入密码（或者实际上任何内容），然后打印你在代码中输入的的内容，别忘记在第 6 行末尾加上 `throws Exception`。
+在上一个练习中，你对 Java 中提供的所有内置模块有了一个恐怖的了解。今天我们将观察一个“简单”程序，它花了我大约半小时来编写，因为我花了大量时间在互联网上搜索、导入东西以及尝试不起作用的方法。
 
-PasswordDigest.java
+不过，这段代码是可以运行的。它允许人类输入密码（或者实际上任何内容），然后打印你在代码中输入的内容，别忘记在第 6 行末尾加上 `throws Exception`。
 
-```
+### PasswordDigest.java
+
+```java
 import java.security.MessageDigest;
 import java.util.Scanner;
 import javax.xml.bind.DatatypeConverter;
@@ -4133,52 +3616,43 @@ F52FB3D2B3B886FF88EF6C4906285F482AF15DDBC29541F94BC526A3F6C7
 ```
 
 在编程早期，当机器开始拥有用户名和密码时，显然你不想在数据库中存储密码本身。相反，它们会存储密码的某种加密哈希。
+
 加密哈希有两个实用的属性：
 
-- 1. 它们是一致的。给定的输入总是产生相同的输出。
-- 2. 它们是单向的。你可以轻松地计算给定输入的输出，但要推算出你给出的某个输入的输入是非常困难或不可能的。
+1. 它们是一致的。给定的输入总是产生相同的输出。
+2. 它们是单向的。你可以轻松地计算给定输入的输出，但要推算出你给出的某个输入的输入是非常困难或不可能的。
 
-SHA-256 是一个非常好的哈希函数，它为给定的输入（或“消息”）产生一个“摘要”，该摘要始终正好是 256 位。在这里，我们没有尝试处理位，而是打印了这些位的十六进制表示。由于每个十六进制（16 进制）数字对应 4 位，因此我们最终得到了 64 个字符的长度。
+`SHA-256` 是一个非常好的哈希函数，它为给定的输入（或“消息”）产生一个“摘要”，该摘要始终正好是 256 位。在这里，我们没有尝试处理位，而是打印了这些位的十六进制表示。由于每个十六进制（16 进制）数字对应 4 位，因此我们最终得到了 64 个字符的长度。
 
-回到 20 世纪 70 年代，当机器开始拥有用户名和密码时，显然你不会想在数据库中存储密码本身。相反，它们会存储密码的某种加密哈希。
-加密哈希有两个实用的属性：
+（注：此处原文中存在重复段落，已去重并保持逻辑通顺）
 
-- 1. 它们是一致的。给定的输入总是产生相同的输出。
-- 2. 它们是单向的。你可以轻松地计算给定输入的输出，但要推算出你给出的某个输入的输入是非常困难或不可能的。
-
-SHA-256 是一个非常好的哈希函数，它为给定的输入（或“消息”）产生一个“摘要”，该摘要始终正好是 256 位。在这里，我们没有尝试处理位，而是打印了这些位的十六进制表示。由于每个十六进制（16 进制）数字对应 4 位，因此我们最终得到了 64 个字符的长度。
-
-（注：此处原文中存在重复段落，翻译已根据要求去重并保持逻辑通）
-
-（如果你真的想安全地存储密码，你应该使用 bcrypt，它是为了这种情况而创建的。不幸的是，它在 Java 中不是内置的，所以你需要下载别人写的 库。）
+（如果你真的想安全地存储密码，你应该使用 `bcrypt`，它是为了这种情况而创建的。不幸的是，它在 Java 中不是内置的，所以你需要下载别人写的库。）
 
 好了，关于密码的话够了，让我们过一遍这段代码。你可能需要打开以下两个项的 javadoc：
 
-- java.security.MessageDigest
-- javax.xml.bind.DatatypeConverter
+- `java.security.MessageDigest`
+- `javax.xml.bind.DatatypeConverter`
 
-在 1 和 3 行我们导入将使用的库。在第 10 行我们创建一个 `MessageDigest` 类型的变量。在这种情况下我们使用的是 "SHA-256"，但 "SHA-1" 也可以。在第 12 和 13 行我们使用 `String` 类的 `getBytes()` 方法，参数为 "UTF-8"。这会将字符串转换为 UTF-8 字节列表，将其作为参数传递给 `MessageDigest` 的 `update` 方法。在第 16 行我们调用 `MessageDigest` 的 `digest` 方法。这给了我们字节列表，但不适合打印在屏幕上，因此我们将字节列表传递给 `DatatypeConverter` 的 `printHexBinary` 方法。它返回一个字符串，我们存储在变量 `hash` 中。然后显示哈希值。
+在第 1 和 3 行我们导入将使用的库。在第 10 行我们创建一个 `MessageDigest` 类型的变量。在这种情况下我们使用的是 `"SHA-256"`，但 `"SHA-1"` 也可以。在第 12 和 13 行我们使用 `String` 类的 `getBytes()` 方法，参数为 `"UTF-8"`。这会将字符串转换为 UTF-8 字节列表，将其作为参数传递给 `MessageDigest` 的 `update` 方法。在第 16 行我们调用 `MessageDigest` 的 `digest` 方法。这给了我们字节列表，但不适合打印在屏幕上，因此我们将字节列表传递给 `DatatypeConverter` 的 `printHexBinary` 方法。它返回一个字符串，我们存储在变量 `hash` 中。然后显示哈希值。
 
-如果这个练习让你感到有些压力，别担心。如果你能完成书中的前 39 个练习，你就能学会做这类事情。你必须学会阅读 javadoc 文档来了解别人已经写了什么以及如何连接它们来实现你的目标。这需要大量的练习！我第一次写这个练习花了半多小时，而我从 80 年代就开始编程了，并从 1996 年开始学习 Java。
+如果这个练习让你感到有些压力，别担心。如果你能完成书中的前 39 个练习，你就能学会做这类事情。你必须学会阅读 javadoc 文档来了解别人已经写了什么以及如何连接它们来实现你的目标。这需要大量的练习！我第一次写这个练习花了半个多小时，而我从 80 年代就开始编程了，并从 1996 年开始学习 Java。
 
 ## 学习练习
 
-- 1. 查看此练习中所有方法的 javadoc 文档：`getInstance`、`getBytes`、`update`、`digest` 和 `printHexBinary`。查看它们期望什么样的参数以及它们返回值的类型。
-- 2. 从第 6 行末尾删除 `throws Exception`。尝试编译。（然后把它还原。）在下一个练习中，我们将稍微了解一下异常。
+1. 查看此练习中所有方法的 javadoc 文档：`getInstance`、`getBytes`、`update`、`digest` 和 `printHexBinary`。查看它们期望什么样的参数以及它们返回值的类型。
+2. 从第 6 行末尾删除 `throws Exception`。尝试编译。（然后把它还原。）在下一个练习中，我们将稍微了解一下异常。
 
 ## 练习 40：写入文件的程序
 
 我们现在将从关注函数中休息一下，去学习一些简单的东西。我们将创建一个可以将信息写入文本文件的程序，而不仅仅是能将内容打印在屏幕上。
 
-在你输入这段代码时，不要漏掉第 4 行末尾的 `throws Exception`。（在这个练习中，我将解释解释它的含义。）
+在你输入这段代码时，不要漏掉第 4 行末尾的 `throws Exception`。（在这个练习中，我将解释它的含义。）
 
-ReceiptRevisited.java
+### ReceiptRevisited.java
 
 ## 你应该做什么
+
 *
-
-
-
 
 没错。当你运行程序时，它看起来似乎什么都没做。但如果你写得正确，它应该会在你代码所在的文件夹中创建一个名为 `receipt.txt` 的文件。你可以使用编写代码时使用的同一个文本编辑器来查看此文件。
 
@@ -4194,27 +3668,30 @@ ReceiptRevisited.java
 
 在这一行中，我们为 `PrintWriter` 变量赋值：指向新 `PrintWriter` 对象的引用。不过，创建 `PrintWriter` 对象需要一个参数。我们提供的参数是一个包含目标输出文件的 `String`。（即要写入的文件的文件名。）
 
-好消息是，一旦设置好了 `PrintWriter` 对象，其他一切都很简单。因为你实际上一直在处理与最开始时非常相似的 `PrintWriter`！这是因为有 `System.out PrintWriter`！
+好消息是，一旦设置好了 `PrintWriter` 对象，其他一切都很简单。因为你实际上一直在处理与最开始时非常相似的 `PrintWriter`！这是因为有 `System.out` `PrintWriter`！
 
 所以在第 7 行，你可以看到向文件写入看起来与在屏幕上打印非常相似。`String` (`+------`) 不会打印在屏幕上。它将作为 `file.txt` 的第一行存储！
 
-## 练习 40：写入文件的程序
-
 如果文件夹中已存在名为 `receipt.txt` 的文件，其内容将被覆盖且不进行警告。如果文件不存在，则将创建它。
+
 练习中另一个重要的行是第 19 行。它实际上保存了文件内容并关闭了它，这样你的程序就无法再对其写入。如果你删掉这一行，你的程序可能会创建一个名为 `receipt.txt` 的文件，但该文件是空的。
+
 好了，在结束练习之前，我想简要讨论一下 `throws Exception`。这不是我们在实际编程中会做的事情，要正确解释它超出了本书的范围，但我想提到它。
+
 在练习的原始版本中，当你在函数的第一行之后加上 `throws Exception` 时，意味着“我在这个函数里写了可能无法运行的内容，如果失败了它就会崩溃（通过抛出异常）”。
-在这种情况下，可能运行失败的是表达式 `new PrintWriter("receipt.txt")`，因为它尝试在当前文件夹中打开一个文件进行写入。如果已经有一个名为 "receipt.txt" 的文件且该文件是只读的，或者文件夹是只读的，或者由于其他原因程序无法获取写入该文件的权限，它就会失败。
+
+在这种情况下，可能运行失败的是表达式 `new PrintWriter("receipt.txt")`，因为它尝试在当前文件夹中打开一个文件进行写入。如果已经有一个名为 `"receipt.txt"` 的文件且该文件是只读的，或者文件夹是只读的，或者由于其他原因程序无法获取写入该文件的权限，它就会失败。
+
 因此，我们应该检测并处理异常，例如：
 
-ReceiptRevisitedException.java
+### ReceiptRevisitedException.java
 
-```
+```java
 import java.io.IOException;
 import java.io.PrintWriter;
 
 public class ReceiptRevisitedException {
-    public static void main(String[] args ) throws {
+    public static void main(String[] args ) throws IOException {
         PrintWriter fileout;
 
         try {
@@ -4226,32 +3703,34 @@ public class ReceiptRevisitedException {
             System.exit(1);
         }
 
-        fileout.println("+----------------------------------+" + );
-        fileout.println("|                               |" );
-        fileout.println("|               CORNER STORE                |" );
-        fileout.println("|                               |" );
-```
-
-```
-fileout.println(" 2014-06-25 04:38PM |" );
-fileout.println("| |" );
-fileout.println(" Gallons: 12.464 |" );
-fileout.println(" Price/gallon: $ 3.459 |" );
-fileout.println("| |" );
-fileout.println(" Fuel total: $ 43.11 |" );
-fileout.println("| |" );
-fileout.println("---------------------------------\-" + " );
-fileout.close();
+        fileout.println("+----------------------------------+");
+        fileout.println("|                               |");
+        fileout.println("|               CORNER STORE                |");
+        fileout.println("|                               |");
+        fileout.println(" 2014-06-25 04:38PM |");
+        fileout.println("| |");
+        fileout.println(" Gallons: 12.464 |");
+        fileout.println(" Price/gallon: $ 3.459 |");
+        fileout.println("| |");
+        fileout.println(" Fuel total: $ 43.11 |");
+        fileout.println("| |");
+        fileout.println("---------------------------------\-");
+        fileout.close();
+    }
 }
 ```
 
+
+
 `try` 块意味着“这段代码可能会抛出异常，但请尝试一下”。如果一切顺利（没有抛出异常），则跳过 `catch` 块。如果抛出了异常，将执行 `catch` 块，抛出的异常将作为参数传递进来。（我将异常命名为 `err`，尽管它可以是任何名字。）
+
 在 `catch` 块内部，我打印了一条合适的错误信息，然后通过调用内置的 `System.exit()` 结束程序。如果你向 `System.exit()` 传递参数 0，程序将结束，0 表示“一切正常”。参数 1 意味着“此程序正在结束，是因为发生了某些问题”。
+
 所以我在本书中不会再使用 `catch` 了，但至少你现在知道通过放置 `throws Exception` 你规避了什么。
 
-## 学习训练 (Study Drills)
+## 学习训练
 
-- 1. 嘿，学会如何使用变量！选择一个每加仑的价格并放入一个 `double` 变量中，让用户输入他们想要多少加仑汽油。计算总费用。
+1. 嘿，学会如何使用变量！选择一个每加仑的价格并放入一个 `double` 变量中，让用户输入他们想要多少加仑汽油。计算总费用。
 
 然后将收据打印到文件中，但替换细节，使文件根据他们输入的内容而看起来不同。我会移除收据右侧的竖线，因为对齐线条会很困难。
 
@@ -4281,9 +3760,9 @@ fileout.close();
 
 好了，看代码！
 
-GettingFromFile.java
+### GettingFromFile.java
 
-```
+```java
 import java.io.File;
 import java.util.Scanner;
 
@@ -4298,29 +3777,27 @@ public class GettingFromFile {
         a = file.nextInt();
         b = file.nextInt();
         c = file.nextInt();
-```
 
-```
         file.close();
         System.out.println("完成.");
         System.out.println("你的名字是 " + name);
         sum = a + b + c;
         System.out.println(a + "+" + c + " = " + sum);
+    }
+}
 ```
 
 ## 你应该看到的
 
 正在从文件中获取名称和数字...完成。
+
 你的名字是 Samantha Showalter
+
 5+6+7 = 18
-
-
-
-
 
 ## 练习训练
 
-- 1. 打开文本文件并更改名称或数字。保存。然后再次运行你的程序（你不需要重新编译；代码没有更改，而且在运行之前它不会打开该文件）。
+1. 打开文本文件并更改名称或数字。保存。然后再次运行你的程序（你不需要重新编译；代码没有更改，而且在运行之前它不会打开该文件）。
 
 ## 练习 42：从文件中获取所有数据
 
@@ -4330,23 +3807,29 @@ public class GettingFromFile {
 
 首先，在代码所在的文件夹中创建一个名为 `some-words.txt` 的新文件。我的文件看起来如下：
 
-some-words.txt
+### some-words.txt
 
 The man in black fled across the desert, and the gunslinger followed.
 
 Ask not what your country can do for you; ask what you can do for your country.
 
 i will be
+
 Moving in the Street of here
+
 bodyfeel 1 inga ro undMe the traffic of
+
 lovely;muscles-sinke x pirin g S
+
 uuddenl
+
 Y
+
 totouch
 
 不过，内容并不太重要，这正是其意义所在！一旦这个文件存在并包含单词，你就应该能够输入并运行下面的代码。
 
-GettingWholeFile.java
+### GettingWholeFile.java
 
 ```java
 import java.io.File;
@@ -4356,42 +3839,38 @@ public class GettingWholeFile {
     public static void main(String[] args) throws Exception {
         int fourLetter = 0;
         int caps = 0;
-    }
-```
 
-## 练习 42：从文件中获取所有数据
+        String fn1 = "some-words.txt";
+        String fn2 = "GettingWholeFile.java";
 
-```java
-9 String fn1 = "some-words.txt";
-10 String fn2 = "GettingWholeFile.java";
+        Scanner wordReadr = new Scanner(new File(fn1));
 
-Scanner wordReadr = new Scanner(new File(fn1));
+        while (wordReadr.hasNext()) {
+            String w = wordReadr.next();
+            if (w.length() == 4) {
+                fourLetter++;
+            }
+        }
+        wordReadr.close();
 
-while (wordReadr.hasNext()) {
-    String w = wordReadr.next();
-    if (w.length() == 4) {
-        fourLetter++;
+        Scanner selfInput = new Scanner(new File(fn2));
+        while (selfInput.hasNext()) {
+            String token = selfInput.next();
+            if (Character.isUpperCase(token.charAt(0))) {
+                caps++;
+            }
+        }
+        selfInput.close();
+
+        System.out.println(fourLetter + " four-letter words in " + fn1 + ");\nSystem.out.println(caps + " words start with capitals in " + fn2 + ");");
     }
 }
-wordReadr.close();
-
-Scanner selfInput = new Scanner(new File(fn2));
-while (selfInput.hasNext()) {
-    String token = selfInput.next();
-    if (Character.isUpperCase(token.charAt(0))) {
-        caps++;
-    }
-}
-selfInput.close();
-```
-
-```java
-System.out.println(fourLetter + " four-letter words in " + fn1 + ");\nSystem.out.println(caps + " words start with capitals in " + fn2 + ");"
 ```
 
 ## 你应该看到
 
 four-letter words in some-words.txt
+
 16 words start with capitals in GettingWholeFile.java
 
 和之前一样，我们创建了一个 `Scanner` 对象并将其附加到从文件中读取（第 12 行）。这次，文件名存储在 `String` 变量中。我们的 `Scanner` 被称为 `wordReadr`，但我们可以叫它任何名字。
@@ -4400,7 +3879,7 @@ four-letter words in some-words.txt
 
 所以只要文件中还有内容，`while (wordReadr.hasNext())` 就会为 `true`（并循环），并在看到所有内容后停止。
 
-## 练习 42：从文件中获取所有数据
+### 练习 42：从文件中获取所有数据
 
 在循环体内部，我们将单个 `String` 读取到一个名为 `w` 的新局部变量中。如果 `w` 的长度为四个字符，我们就给计数器加1。
 
@@ -4424,7 +3903,7 @@ four-letter words in some-words.txt
 
 这是你几个练习之前的硬币游戏，但现在高分被保存了。
 
-CoinFlipSaved.java
+### CoinFlipSaved.java
 
 ```java
 import java.io.File;
@@ -4439,7 +3918,7 @@ public class CoinFlipSaved {
         boolean gotHeads;
 
         File f = new File(saveFileName);
-        if ( f.exists() && f.length() > 0 ) {
+        if (f.exists() && f.length() > 0) {
             Scanner input = new Scanner(f);
             bestName = input.next();
             best = input.nextInt();
@@ -4451,7 +3930,7 @@ public class CoinFlipSaved {
 
         do {
             gotHeads = Math.random() < 0.5;
-            if ( gotHeads ) {
+            if (gotHeads) {
                 coin = "HEADS";
                 streak++;
                 System.out.println("coin is...");
@@ -4461,14 +3940,14 @@ public class CoinFlipSaved {
             }
             System.out.print("Would you like to flip again (y)? ");
             again = keyboard.next();
-        } while ( again.equals("y") )
+        } while (again.equals("y"));
 
         System.out.println("Final score: " + streak);
-        if ( streak > best ) {
+        if (streak > best) {
             System.out.println("That's a high score!");
             System.out.print("Your name: ");
             bestName = keyboard.next();
-        } else if ( streak == best ) {
+        } else if (streak == best) {
             System.out.println("That ties the high score.");
         } else {
             System.out.println("You'll have to do better than " + best);
@@ -4485,30 +3964,40 @@ public class CoinFlipSaved {
 ## 你应该看到
 
 game file doesn't exist or is empty.
+
 coin is... HEADS
+
 That's 1 in row...
+
 Would you like to flip again (y)? y
+
 coin is... HEADS
+
 That's 2 in row...
+
 Would you like to flip again (y)? y
+
 coin is... HEADS
+
 That's 3 in row...
+
 Would you like to flip again (y)? y
+
 coin is... TAILS
+
 Final score: 0
+
 That's a high score!
+
 Your name: Mitchell
-
-
-
-
 
 在第 66 到 69 行，我们将当前的高分以及获得高分者的姓名保存到文件中。这可能是一个新分数，也可能是我们在程序开始时读取的旧值。
 
 ## 学习训练
 
-- 1. 修改程序，使其仅在出现*新*获胜者时才保存高分文件。目前，程序*每次*运行时，它都会从头开始重写高分文件，即使没有任何变化。
-- 2. 用文本编辑器打开高分文件并手动修改它来“黑进”高分文件。用你惊人的手气让你的朋友们印象深刻吧！
+1. 修改程序，使其仅在出现*新*获胜者时才保存高分文件。目前，程序*每次*运行时，它都会从头开始重写高分文件，即使没有任何变化。
+
+2. 用文本编辑器打开高分文件并手动修改它来“黑进”高分文件。用你惊人的手气让你的朋友们印象深刻吧！
 
 ## 练习 44：使用 For 循环进行计数
 
@@ -4516,10 +4005,11 @@ Your name: Mitchell
 
 但这两类循环的设计目的都是只要条件为真就一直运行。如果我们提前知道想要执行某事的多少次，Java 有一种特殊的循环专门用于改变变量的值：`for` 循环。
 
-CountingFor.java
+### CountingFor.java
 
 ```java
 import java.util.Scanner;
+
 public class CountingFor {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
@@ -4574,40 +4064,40 @@ Message: Howdy, y'all!
 
 第 13 行演示了一个非常基础的 `for` 循环。每个 `for` 循环都有三个部分，中间用分号隔开。大多数循环会选择一个变量并在三个部分中使用该变量名。
 
-- 1. 初始化语句告诉你从哪里开始。
-- 2. 只要条件为真，循环就会继续进行。
-- 3. 更新语句控制变量每次如何改变。
+1. 初始化语句告诉你从哪里开始。
+2. 只要条件为真，循环就会继续进行。
+3. 更新语句控制变量每次如何改变。
 
 第一部分（`n=1`）无论循环重复多少次都只发生一次。它发生在循环的开始，通常是为将用于控制循环的变量设置值。在这种情况下，我们的“循环控制变量”是 `n`，它的初始值是 1。这第一部分被称为“初始化”语句。
 
 第二部分（`n <= 5`）是条件，就像 `while` 或 `do-while` 循环一样。`for` 循环是一个预测试循环，就像 `while` 循环，这意味着该条件在循环开始之前就会进行测试。如果条件为真，将执行一次循环体。如果条件为假，则将跳过循环体，循环结束。
 
+
+
 第三部分（`n++`）在循环的每次迭代后运行，在再次检查条件之前运行。记住 `++` 会给变量加 1。第三部分有时被称为“更新语句”。
 
-括号中的三个部分之后是花括号，它包含了循环的“体体”。在 Java 中，你可以将它们单独放在一行。但中间部分（条件）不是一个完整的语句，它只是一个求值为真或假的表达式。因此，如果我们展开这个循环，这些是按顺序将发生的语句：
+括号中的三个部分之后是花括号，它包含了循环的“体”。在 Java 中，你可以将它们单独放在一行。但中间部分（条件）不是一个完整的语句，它只是一个求值为真或假的表达式。因此，如果我们展开这个循环，这些是按顺序将发生的语句：
 
 ```
 n = 1; // 检查 n <= 5，结果为真
 System.out.println(1 + " " + message);
-++; // 所以现在 n 是 2
+n++; // 所以现在 n 是 2
 System.out.println(2 + " " + message);
-++; // 所以现在 n 是 3
+n++; // 所以现在 n 是 3
 System.out.println(3 + " " + message);
-++; // 所以现在 n 是 4
+n++; // 所以现在 n 是 4
 System.out.println(4 + " " + message);
-++; // 所以现在 n 是 5
+n++; // 所以现在 n 是 5
 System.out.println(5 + " " + message);
-++; // 所以现在 n 是 6
+n++; // 所以现在 n 是 6
 // 检查 n <= 5，结果为假。循环停止。
 ```
 
 注意第一部分发生了一次，而第三部分发生了多次。
 
-
-
 ## 练习 45：凯撒密码（遍历字符串）
 
-这本质上就是这样，只不过我们希望偏移量能够“回绕”，因此第 14 到 21 行确保了最终值仍然是一个字母。最后在第 23 行，我们获取 $u$ 的值，将其强制转换为 `char` 并返回。
+这本质上就是这样，只不过我们希望偏移量能够“回绕”，因此第 14 到 21 行确保了最终值仍然是一个字母。最后在第 23 行，我们获取 `u` 的值，将其强制转换为 `char` 并返回。
 
 在 `main()` 函数中，第 27 到 34 行的内容相当无聊。在解释 `for` 循环之前，我需要解释两个 `String` 类方法：`charAt()` 和 `length()`。
 
@@ -4624,7 +4114,7 @@ char c = s.charAt(2);
 
 现在我们可以理解第 36 行的 `for` 循环了。初始化部分声明了一个循环控制变量并将其设置为 0。条件是只要 `i` 小于消息中的字符数。更新部分每次让 `i` 加 1。
 
-在第 37 行，发生了很多操作。我们使用 `charAt()` 方法提取出明文消息的第 $i$ 个字符。该字符和偏移值作为参数传递给 `shiftLetter()` 函数，该函数返回位移后的字母。最后，位移后的字母被附加到 `cipher` 字符串的末尾。
+在第 37 行，发生了很多操作。我们使用 `charAt()` 方法提取出明文消息的第 `i` 个字符。该字符和偏移值作为参数传递给 `shiftLetter()` 函数，该函数返回位移后的字母。最后，位移后的字母被附加到 `cipher` 字符串的末尾。
 
 当循环结束时，它逐个遍历了消息的每个字母，并根据字母位移后的版本构建了新消息。
 
@@ -4632,13 +4122,13 @@ char c = s.charAt(2);
 
 ## 学习训练
 
-- 1. 修改代码从文本文件读取明文消息，而不是让人工手动输入。然后，不要只在屏幕上显示密文，添加代码将密文存储到文件中。
+1. 修改代码从文本文件读取明文消息，而不是让人工手动输入。然后，不要只在屏幕上显示密文，添加代码将密文存储到文件中。
 
 ## 学生常见问题
 
-我应该从文件中读取偏移量，还是仍然让人工手动输入？两种方法都可以。让人工输入更有意义，因为这样你就可以“加密”任何想要的文件。
+**我应该从文件中读取偏移量，还是仍然让人工手动输入？** 两种方法都可以。让人工输入更有意义，因为这样你就可以“加密”任何想要的文件。
 
-我应该写到读取的同一个文件中吗？可能不应该。输出文件应该是不同的。为了获得额外加分，可以让人工输入要加密文件的*名称*，并根据输入文件名生成输出文件名。
+**我应该写到读取的同一个文件中吗？** 可能不应该。输出文件应该是不同的。为了获得额外加分，可以让人工输入要加密文件的*名称*，并根据输入文件名生成输出文件名。
 
 ## 练习 46：嵌套循环
 
@@ -4646,9 +4136,9 @@ char c = s.charAt(2);
 
 （一次“迭代”是指重复过程中的单次操作）
 
-Nesting.Loops.java
+### Nesting.Loops.java
 
-```
+```java
 public static void main(String[] args) {
     // 这是 #1 - 我会称它为 "CN"
     for (char c='A'; c <= 'E'; c++) {
@@ -4673,7 +4163,7 @@ public static void main(String[] args) {
 
 ## 你应该做的
 
-## 练习 46：嵌套循环
+### 练习 46：嵌套循环
 
 ```
 A 1
@@ -4701,31 +4191,30 @@ E 3
 
 ## 学习训练
 
-- 1. 查看第一组嵌套循环（“CN”）。哪个变量变化更快？是由外层循环控制的变量 (c) 还是内层循环控制的变量 (n)？
-- 2. 修改第二组嵌套循环，让“c”循环在内部，而让“n”循环在外部。输出会如何变化？
-- 3. 查看第二组嵌套循环（“AB”）。将 `print()` 语句改为 `println()`。输出会如何变化？（然后将其改回 `print()`）
-- 4. 在指定位置添加 `System.out.println()` 语句（在内层循环的大括号之后，即“b”循环，但仍在外层循环内部）。输出会如何变化？
+1. 查看第一组嵌套循环（“CN”）。哪个变量变化更快？是由外层循环控制的变量 (`c`) 还是内层循环控制的变量 (`n`)？
+2. 修改第二组嵌套循环，让“c”循环在内部，而让“n”循环在外部。输出会如何变化？
+3. 查看第二组嵌套循环（“AB”）。将 `print()` 语句改为 `println()`。输出会如何变化？（然后将其改回 `print()`）
+4. 在指定位置添加 `System.out.println()` 语句（在内层循环的大括号之后，即“b”循环，但仍在外层循环内部）。输出会如何变化？
 
 ## 练习 47：生成并过滤值
 
 嵌套 `for` 循环有时非常有用，因为它们非常紧凑，可以处理大量的组合。多年前，一个学生向我提出了这个问题：“布朗农民想花 $100.00 买羊（$10）、山羊（$3.50）和鸡（$0.50）。每种各买多少只？”
 
+## 练习 48：数组 - 单个变量中的多个值
 
-
-
-# 练习 48：数组 - 单个变量中的多个值
-
-在本次练习中，你将学习两个新知识点。第一个是*超级*重要的，第二个只是挺酷酷的。
+在本次练习中，你将学习两个新知识点。第一个是*超级*重要的，第二个只是挺酷的。
 
 在 Java 中，“数组”（array）是一种变量类型，它虽然有一个名称（“标识符”），但包含多个值。在我看来，在你学会操作数组之前，你不能称自己为真正的程序员。所以，这是一个好消息。你离目标不远了！
 
-```java
-ArrayIntro.java
+### ArrayIntro.java
+
 ```java
 public class ArrayIntro {
+
     public static void main( String[] args ) {
+
         String[] planets = { "Mercury", "Venus", "Earth", "Mars",
-"Jupiter", "Saturn", "Uranus", "Neptune" };
+            "Jupiter", "Saturn", "Uranus", "Neptune" };
 
         for ( String p : planets ) {
             System.out.println("\t" + p.toUpperCase());
@@ -4734,8 +4223,12 @@ public class ArrayIntro {
 }
 ```
 
-## ## 你应该做的
+## 你应该做的
 
+### 练习 48：数组 - 单个变量中的多个值
+
+| 行星 | 大写 |
+| :--- | :--- |
 | 水星 | MERCURY |
 | 金星 | VENUS |
 | 地球 | EARTH |
@@ -4745,9 +4238,7 @@ public class ArrayIntro {
 | 天王星 | URANUS |
 | 海王星 | NEPTUNE |
 
-在第 3 行，我们声明并定义了一个名为 *planets* 的变量。它不仅仅是一个 String；注意方括号。这个变量是一个 String *数组*。这意味着这一个变量持有了所有八个 String，并且它们被分放在不同的槽位，以便我们可以逐个访问它们。
-
-# 练习 48：数组 - 单个变量中的多个值
+在第 3 行，我们声明并定义了一个名为 `planets` 的变量。它不仅仅是一个 String；注意方括号。这个变量是一个 String *数组*。这意味着这一个变量持有了所有八个 String，并且它们被分放在不同的槽位，以便我们可以逐个访问它们。
 
 这一行的大括号其用途与通常不同。所有这些值都括在引号中，因为它们是 String。每个值之间有逗号，整个初始化列表都位于大括号中。末尾有一个分号。
 
@@ -4757,7 +4248,7 @@ public class ArrayIntro {
 
 在第 6 行，你会看到这个 foreach 循环。它的读法是这样的：“对于数组 'planets' 中的每个 String 'p'……”
 
-所以，在这个循环体内部，String 类型 `p` 将获得数组 `planets` 中每个值的拷贝。循环第一次执行时，`p` 将包含数组中第一个值（"Mercury"）的拷贝。第二次执行时，`p` 将包含数组中第二个值（"Venus"）的拷贝。以此此类推，直到数组中的所有值都被处理过。循环将自动停止。
+所以，在这个循环体内部，String 类型 `p` 将获得数组 `planets` 中每个值的拷贝。循环第一次执行时，`p` 将包含数组中第一个值（"Mercury"）的拷贝。第二次执行时，`p` 将包含数组中第二个值（"Venus"）的拷贝。以此类推，直到数组中的所有值都被处理过。循环将自动停止。
 
 在循环体内部（第 7 行？），我们只是在打印 `p` 的当前值以及 `p` 的大写版本。我想，这只是为了好玩吧。
 
@@ -4765,42 +4256,49 @@ public class ArrayIntro {
 
 数组是一项大内容，所以对这次练习来说足够了。我想在你“收工走人”（完成任务）之前，绝对确保你理解了作业中发生了什么。
 
-# 训练题
+## 训练题
 
 - 创建第二个 String 数组，并使用初始化列表将几个值放入其中。
 - 添加第二个 foreach 循环，在屏幕上逐一个地显示新数组中的值。
 
 （目前还没有该训练题的视频。）
 
-# 练习 49：在数组中查找内容
+## 练习 49：在数组中查找内容
 
 更多关于数组的内容！在本次练习中，我们将研究如何找到某个特定值。我们在这里使用的技术有时被称为“线性搜索”，因为它是从数组的第一个槽位开始查找，然后移动到第二个槽位，然后是第三个，以此类推。
 
-ArrayLinearSearch.java
+### ArrayLinearSearch.java
 
 ```java
 import java.util.Scanner;
+
 public class ArrayLinearSearch {
+
     public static void main(String[] args ) {
-    Scanner keyboard = new(System.in);
-    int[] orderNumbers = { 12345, 54321, 101010, 867309, 31415, 271828 };
-    int toFind;
+        Scanner keyboard = new Scanner(System.in);
 
-    System.out.print("There are " + orderNumbers.length);
-    System.out.println(" orders in the database.");
+        int[] orderNumbers = { 12345, 54321, 101010, 867309, 31415, 271828 };
 
-    System.out.print("Orders: ");
-    for ( int num : orderNumbers ) {
-        System.out.print(num + " ");
-    }
-    System.out.println();
+        int toFind;
 
-    System.out.print("Which order to find?");
-    toFind = keyboard.nextInt();
+        System.out.print("There are " + orderNumbers.length);
+        System.out.println(" orders in the database.");
 
-    for ( int num : orderNumbers ) {
-        if ( num == toFind) {
-            System.out.println(num + " found.");
+        System.out.print("Orders: ");
+
+        for ( int num : orderNumbers ) {
+            System.out.print(num + " ");
+        }
+
+        System.out.println();
+
+        System.out.print("Which order to find?");
+        toFind = keyboard.nextInt();
+
+        for ( int num : orderNumbers ) {
+            if ( num == toFind) {
+                System.out.println(num + " found.");
+            }
         }
     }
 }
@@ -4808,19 +4306,15 @@ public class ArrayLinearSearch {
 
 ## 你应该看到的
 
-# 练习 49：在数组中查找内容
+### 练习 49：在数组中查找内容
 
 数据库中有 6 个订单。
 订单: 12345 54321 101010 867309 31415 271828
 想找哪个订单？38753
 
-
-
-
-
 ## 学习练习
 
-- 1. 表达某物*不在*数组中的另一种方法是：*计数*匹配项的数量。然后，当循环结束，如果计数器仍为 0，你就知道它不在那里。
+1. 表达某物*不在*数组中的另一种方法是：*计数*匹配项的数量。然后，当循环结束，如果计数器仍为 0，你就知道它不在那里。
 
 你可以创建一个具有不同值的新数组，或者修改希腊凡人英雄数组中的某些名称以产生一些重复项。然后添加第二个 `for` 循环，使用计数器来判断是否找到了某个值。
 
@@ -4835,16 +4329,17 @@ public class ArrayLinearSearch {
 
 此外，我们一直只是将值放入初始化列表（就是大括号那种）中，这有其局限性：
 
-- 初始化列表列表仅在数组首次声明时有效；你不能在代码的其他地方使用它。
+- 初始化列表仅在数组首次声明时有效；你不能在代码的其他地方使用它。
 - 初始化列表最适合相对较小的数组，如果你在数组中有 1000 多个值，初始化列表将非常不好用。
 - 如果我们希望数组中的值来自文件或其他我们在编写代码时尚不存在的地方，初始化列表就对我们没有帮助。
 
 所以，还有另一种方法在数组中存储值并访问它们。事实上，这比你一直所做的更常见。使用方括号和槽索引，我们可以单独访问数组的各个槽。
 
-ArraySlotAccess.java
+### ArraySlotAccess.java
 
 ```java
 public class ArraySlotAccess {
+
     public static void main( String[] args ) {
         int[] arr = new int[3];
 
@@ -4852,103 +4347,87 @@ public class ArraySlotAccess {
         for ( int i=0; i < arr.length; i++) {
             arr[i] = 1 + (int)(Math.random()*100);
         }
+
+        // 显示数组中的所有值通常是这样
+        System.out.print("Values: ");
+        for (int i=0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+
+        // 让我们一步步拆解...
+        // 逐个将数字放入数组的每个槽中。
+        arr[0] = 6;
+        arr[1] = 7;
+        arr[2] = 8;
+
+        // 逐个显示这些槽中的值。
+        System.out.println("Values: " + arr[0] + " " + arr[1] + " " + arr[2]);
+
+        // 逐个向数组的每个槽中放入 1-100 的随机数。
+        arr[0] = 1 + (int)(Math.random()*100);
+        arr[1] = 1 + (int)(Math.random()*100);
+        arr[2] = 1 + (int)(Math.random()*100);
+
+        // 再次逐个显示它们。
+        System.out.println("Values: " + arr[0] + " " + arr[1] + " " + arr[2]);
+
+        // 这有点傻，但试着理解它。
+        int m = 0;
+        arr[m] = 1 + (int)(Math.random()*100);
+        m = 1;
+        arr[m] = 1 + (int)(Math.random()*100);
+        m = 2;
+        arr[m] = 1 + (int)(Math.random()*100);
+
+        // 再次显示它们。
+        System.out.print("Values: ");
+        m = 0;
+        System.out.print(arr[m] + " ");
+        m = 1;
+        System.out.print(arr[m] + " ");
+        m = 2;
+        System.out.print(arr[m] + " ");
+
+        System.out.println();
+
+        // 这更傻了，但它有效。
+        int n = 0;
+        arr[n] = 1 + (int)(Math.random()*100);
+        n++;
+        arr[n] = 1 + (int)(Math.random()*100);
+        n++;
+        arr[n] = 1 + (int)(Math.random()*100);
+        n++;
+
+        // 再次显示。
+        System.out.print("Values: ");
+        n = 0;
+        System.out.print(arr[n] + " ");
+        n++;
+        System.out.print(arr[n] + " ");
+        n++;
+        System.out.print(arr[n] + " ");
+        System.out.println();
+
+        // 现在这个循环有意义吗？
+        for (int q=0; q < arr.length; q++) {
+            arr[q] = 1 + (int)(Math.random()*100);
+        }
+
+        // 我希望如此。如果不是，再读一遍代码。
+        System.out.print("Values: ");
+        for (int q=0; q < arr.length; q++) {
+            System.out.print(arr[q] + " ");
+        }
+        System.out.println();
     }
-
-    // 显示数组中的所有值通常是这样
-```
-
-```java
-System.out.print("Values: ");
-for (int i=0; i < arr.length; i++) {
-    System.out.print(arr[i] + " ");
 }
-System.out.println();
-```
-
-```java
-// 让我们一步步拆解...
-// 逐个将数字放入数组的每个槽中。
-arr[0] = 6;
-arr[1] = 7;
-arr[2] = 8;
-```
-
-```java
-// 逐个显示这些槽中的值。
-System.out.println("Values: " + arr[0] + " " + arr[1] + " " + arr[2]);
-```
-
-```java
-// 逐个向数组的每个槽中放入 1-100 的随机数。
-arr[0] = 1 + (int)(Math.random()*100);
-arr[1] = 1 + (int)(Math.random()*100);
-arr[2] = 1 + (int)(Math.random()*100);
-```
-
-```java
-// 再次逐个显示它们。
-System.out.println("Values: " + arr[0] + " " + arr[1] + " " + arr[2]);
-```
-
-```java
-// 这有点傻，但试着理解它。
-int m = 0;
-arr[m] = 1 + (int)(Math.random()*100);
-m = 1;
-arr[m] = 1 + (int)(Math.random()*100);
-m = 2;
-arr[m] = 1 + (int)(Math.random()*100);
-```
-
-```java
-// 再次显示它们。
-System.out.print("Values: ");
-m = 0;
-System.out.print(arr[m] + " ");
-m = 1;
-System.out.print(arr[m] + " ");
-m = 2;
-System.out.print(arr[m] + " ");
-```
-
-```java
-System.out.println();
-
-// 这更傻了，但它有效。
-int n = 0;
-arr[n] = 1 + (int)(Math.random()*100);
-n++;
-arr[n] = 1 + (int)(Math.random()*100);
-n++;
-arr[n] = 1 + (int)(Math.random()*100);
-n++;
-
-// 再次显示。
-System.out.print("Values: ");
-n = 0;
-System.out.print(arr[n] + " ");
-n++;
-System.out.print(arr[n] + " ");
-n++;
-System.out.print(arr[n] + " ");
-System.out.println();
-
-// 现在这个循环有意义吗？
-for (int q=0; q < arr.length; q++) {
-    arr[q] = 1 + (int)(Math.random()*100);
-}
-
-// 我希望如此。如果不是，再读一遍代码。
-System.out.print("Values: ");
-for (int q=0; q < arr.length; q++) {
-    System.out.print(arr[q] + " ");
-}
-System.out.println();
 ```
 
 ## 你应该做的
 
-## 练习 51：不使用 foreach 循环的数组
+### 练习 51：不使用 foreach 循环的数组
 
 ```
 Values: 82 42 59
@@ -4958,6 +4437,8 @@ Values: 42 44 78
 Values: 83 93 78
 Values: 61 74 96
 ```
+
+
 
 在第 4 行，我们没有使用初始化列表创建了一个整数数组。3 表示数组的容量为 3。由于我们没有提供值，数组中的每个槽都从 0 开始。
 
@@ -4993,31 +4474,27 @@ Values: 61 74 96
 
 在第 58 到 64 行，我们做了一些可能比 39 行更糟糕的事情。第 58 行和 59 行是相同的，但在第 60 行将 `n` 增加 1 的操作上，我只是说“将 `n` 的值加 1”。所以 `n` 原本是 0；在该语句执行后它包含了 1。
 
-
-
-
-
 ## 练习训练
 
-- 1. 在代码顶部，将数组的容量更改为 1000 而不是 3。不要更改任何其他代码，重新编译并再次运行。猜怎么着？那些 `for` 循环在编写和理解时可能多费一点精力，但一旦写好，它们处理 1000 个值和处理 3 个值的效果一样好。这非常酷。
+1. 在代码顶部，将数组的容量更改为 1000 而不是 3。不要更改任何其他代码，重新编译并再次运行。猜怎么着？那些 `for` 循环在编写和理解时可能多费一点精力，但一旦写好，它们处理 1000 个值和处理 3 个值的效果一样好。这非常酷。
 
 ## 学生常见问题
 
-你为什么在最初几个循环中使用变量 *i* 来存储数组索引，然后在其他地方使用 *m*，在另一个地方使用 *n*，最后使用 *q* 呢？
+你为什么在最初几个循环中使用变量 `i` 来存储数组索引，然后在其他地方使用 `m`，在另一个地方使用 `n`，最后使用 `q` 呢？
 
 你必须那样修改它吗？
 
-不需要。事实上，在实际代码中，我几乎总是在循环中使用 *i* 作为数组索引。（实际上，*i* 是 "index" 的缩写）。但 *i* 并没有什么神奇之处。唯一重要的是你的索引变量按顺序持有 $ \theta $，然后是 1，再是 2 等。你可以反复使用同一个索引变量（大多数人都是这样做），也可以每次都使用不同的变量。
+不需要。事实上，在实际代码中，我几乎总是在循环中使用 `i` 作为数组索引。（实际上，`i` 是 "index" 的缩写）。但 `i` 并没有什么神奇之处。唯一重要的是你的索引变量按顺序持有 0，然后是 1，再是 2 等。你可以反复使用同一个索引变量（大多数人都是这样做），也可以每次都使用不同的变量。
 
 ## 练习 52：最低温度
 
 我创建了一个文本文件，包含了从 1995年1月1日到2013年6月23日德克萨斯州奥斯汀的每日平均气温。由于缺少了一些数据，文件中总共有 6717 个温度值。你在这里查看这些数字：
 
-- https://learnjavatheardway.org/txt/avg-daily-temps-atx.txt
+- https://learnjavathehardway.org/txt/avg-daily-temps-atx.txt
 
 数值单位是华氏度。此练习将从文件（甚至直接通过互联网）读取所有值到一个 `double` 类型的数组中，然后使用循环找到这 17-1/2 年内的最低温度。觉得有趣吗？我们开始吧。
 
-LowestTemperature.java
+### LowestTemperature.java
 
 ```java
 import java.net.URL;
@@ -5025,12 +4502,11 @@ import java.util.Scanner;
 
 public class LowestTemperature {
     public static void main(String[] args) throws Exception {
-        String urlbase = "https://learnjavatheardway.org/txt/";
+        String urlbase = "https://learnjavathehardway.org/txt/";
         double[] temps = arrayFromUrl(urlbase + "avg-daily-temps-atx.txt");
         System.out.println(temps.length + " temperatures in database.");
         double lowest = 9999.99;
-
-        for (int i=0; i<temps.length; i++) {
+        for (int i = 0; i < temps.length; i++) {
             if (temps[i] < lowest) {
                 lowest = temps[i];
             }
@@ -5041,23 +4517,19 @@ public class LowestTemperature {
 }
 ```
 
-## 练习 52：最低温度
-
 ```java
-public static double[] arrayFromUrl( String url ) throws Exception {
+public static double[] arrayFromUrl(String url) throws Exception {
     Scanner fin = new Scanner((new URL(url)).openStream());
     int count = fin.nextInt();
-
     double[] dubs = new double[count];
-
-    for ( int i=0; i<dubs.length; i++)
+    for (int i = 0; i < dubs.length; i++)
         dubs[i] = fin.nextDouble();
     fin.close();
     return dubs;
 }
 
-public static double fToC( double f ) {
-    return (f-32)*5/9;
+public static double fToC(double f) {
+    return (f - 32) * 5 / 9;
 }
 ```
 
@@ -5076,60 +4548,55 @@ double[] temps = new double[6717];
 
 ...而是使用一个函数返回值的数组来初始化该数组！让我们来看看这个函数。
 
-
-
-
-
 ## 练习 53：邮件地址（记录）
 
 今天的练习是关于我所说的“记录”（records）。在 C 和 C++ 编程语言中，它们被称为“结构体”（structs）。数组是一个变量中的一组不同的值，这些值都具有相同的类型，并通过索引（槽位编号）进行区分。而记录是一个变量中的几个不同的值，但这些值可以是不同的类型，并且通过名称（通常称为“字段”）进行区分。^27
 
 将以下代码输入到名为 `MailingAddresses.java` 的文件中。写 `class Address` 的那行是正确的，但你不能将文件命名为 `Address.java`，否则它无法工作。
 
-MailingAddresses.java
+### MailingAddresses.java
 
 ```java
 1 class Address {
-2 String street;
-3 String city;
-4 String state;
-5 int zip;
-6 }
-7
-8 public class MailingAddresses {
-9 public static void main(String[] args) {
-10 Address uno, dos, tres;
-11
-12 uno = new Address();
-13 uno.street = "191 Marigold Lane";
-14 uno.city = "Miami";
-15 uno.state = "FL";
-16 uno.zip = 33179;
-17
-18
-19 dos = new Address();
-20 dos.street = "3029 Los Lane";
-21 dos.city = "Crafton";
-22 dos.state = "PA";
-23 dos.zip = 15205;
-24
-25 tres = new Address();
-26 tres.street = "2693 Hannah Street";
-27 tres.city = "Hickory";
-28 tres.state = "NC";
-29 tres.zip = 28601;
-30
-31 System.out.println(uno.street );
-32 System.out.println(uno.city + " , " + uno.state + " , " + uno.zip );
-33 System.out.println("\n" + dos.street );
-34 System.out.println(dos.city + " , " + dos.state + " , " + dos.zip );
-35 System.out.println("\n" + tres.street );
-36 System.out.println(tres.city + " , " + tres.state + " , " + tres.zip );
-37 }
-38 }
+2     String street;
+3     String city;
+4     String state;
+5     int zip;
+4 }
+6
+7 public class MailingAddresses {
+8     public static void main(String[] args) {
+9         Address uno, dos, tres;
+10
+11         uno = new Address();
+12         uno.street = "191 Marigold Lane";
+13         uno.city = "Miami";
+14         uno.state = "FL";
+15         uno.zip = 33179;
+16
+17         dos = new Address();
+18         dos.street = "3029 Los Lane";
+19         dos.city = "Crafton";
+20         dos.state = "PA";
+21         dos.zip = 15205;
+22
+23         tres = new Address();
+24         tres.street = "2693 Hannah Street";
+25         tres.city = "Hickory";
+26         tres.state = "NC";
+27         tres.zip = 28601;
+28
+29         System.out.println(uno.street);
+30         System.out.println(uno.city + " , " + uno.state + " , " + uno.zip);
+31         System.out.println("\n" + dos.street);
+32         System.out.println(dos.city + " , " + dos.state + " , " + dos.zip);
+33         System.out.println("\n" + tres.street);
+34         System.out.println(tres.city + " , " + tres.state + " , " + tres.zip);
+35     }
+36 }
 ```
 
-^27 它唯一的问题是：Java 实际上并没有记录（records）。事实证明，一个带有方法且只有公共字段的嵌套类工作起来就像结构体一样，只要它不符合“Java 方式”。但我是在乎它是否符合 Java 方式。我已经教学生很长时间了，我相信即使你不理解记录，你也能很好地理解面向对象编程。因此，我用一种完美运行的方式来伪造了它，这种代码在许多不同的编程语言中都是非常棒的代码。某个死板的面向对象 Java 顽胡子会偶然发现这个练习，并给我发一封充满恶意的邮件，指责我做错了，为什么要给这些可怜的“豆豆”填满谎言？哦，好吧。
+^27 它唯一的问题是：Java 实际上并没有记录（records）。事实证明，一个带有方法且只有公共字段的嵌套类工作起来就像结构体一样，只要它不符合“Java 方式”。但我是在乎它是否符合 Java 方式。我已经教学生很长时间了，我相信即使你不理解记录，你也能很好地理解面向对象编程。因此，我用一种完美运行的方式来伪造了它，这种代码在许多不同的编程语言中都是非常棒的代码。某个死板的面向对象 Java 顽固子会偶然发现这个练习，并给我发一封充满恶意的邮件，指责我做错了，为什么要给这些可怜的“豆豆”填满谎言？哦，好吧。
 
 ## 你应该看到的内容
 
@@ -5144,17 +4611,17 @@ Hickory, NC 28601
 
 所以在第 1 到第 6 行，我们定义了一个 `Address` 记录。（我知道它写的是 `class` 而不是 `record`。如果我可以对此做些什么，我保证我会这样做。无论都应该称它为“record”，或者如果你真的想，也可以称它为“struct”。如果你把它叫“class”，会困扰任何热爱面向对象编程的 Java 程序员，而如果你把它叫“struct”，至少 C 和 C++ 程序员会能听懂。）
 
-我们的记录有四个字段。第一个字段是 `String street`。第二个字段是 `String city`。依此类推。然后在第 8 行，我们的“真实”类开始了。在第 10 行，我们声明了三个名为 *uno*、*dos* 和 *tres* 的变量。这些变量不是整数或字符串；它们是 *Address* 类型的记录。每个内部都有四个字段。
+我们的记录有四个字段。第一个字段是 `String street`。第二个字段是 `String city`。依此类推。然后在第 8 行，我们的“真实”类开始了。在第 10 行，我们声明了三个名为 `uno`、`dos` 和 `tres` 的变量。这些变量不是整数或字符串；它们是 `Address` 类型的记录。每个内部都有四个字段。
 
 在第 12 行，我们必须在变量中存储一个 `Address` 对象，因为记住我们只声明了变量，它们还没有被初始化。
 
-处理好之后，你将发现我们可以将字符串 "191 Marigold Lane" 存储到名为 *uno* 的 Address 的 *street* 字段中，这正是我们在第 13 行所做的。第 14 行将字符串 "Miami" 存储到记录 *uno* 的 *city* 字段中。
+处理好之后，你将发现我们可以将字符串 "191 Marigold Lane" 存储到名为 `uno` 的 Address 的 `street` 字段中，这正是我们在第 13 行所做的。第 14 行将字符串 "Miami" 存储到记录 `uno` 的 `city` 字段中。
 
-我不打算去解释程序的其余部分发生了什么，我觉得这已经很清楚了。我想唯一值得提到的是，虽然记录中的三个字段是字符串，但 *zip* 字段是一个整数。记录的字段可以是你想要的任何类型。
+我不打算去解释程序的其余部分发生了什么，我觉得这已经很清楚了。我想唯一值得提到的是，虽然记录中的三个字段是字符串，但 `zip` 字段是一个整数。记录的字段可以是你想要的任何类型。
 
 ## 学习训练
 
-- 1. 在第 10 行创建第四个 Address 变量，并修改代码将你的邮寄地址放在其中。别忘记在底部将其打印出来。
+1. 在第 10 行创建第四个 Address 变量，并修改代码将你的邮寄地址放在其中。别忘记在底部将其打印出来。
 
 ## 常见问题
 
@@ -5164,34 +4631,35 @@ Hickory, NC 28601
 
 ### 练习 54：从文件读取记录
 
-这个练习将向你展示如何从文本文件中读取值到记录中。还有一个循环示例，可以读取整个文件，无论它有多长。如果你在没有连接互联网的机器上运行此程序，这段代码将无法按所示工作，尽管改动很小。代码访问了这个文件，如果你需要，可以下载它。将以下代码输入到名为 `ActorList.java` 的文件中。（写 `class Actor` 的那行是正确的，但你不能将文件命名为 `Actor.java`，否则它无法工作。）
+这个练习将向你展示如何从文本文件中读取值到记录中。还有一个循环示例，可以读取整个文件，无论它有多长。如果你在没有连接互联网的机器上运行此程序，这段代码将无法按所示工作，虽然改动很小。代码访问了这个文件，如果你需要，可以下载它。将以下代码输入到名为 `ActorList.java` 的文件中。（写 `class Actor` 的那行是正确的，但你不能将文件命名为 `Actor.java`，否则它无法工作。）
 
 ```java
 1 import java.util.Scanner;
 2
 3 class Actor {
-4   String name;
-5   String role;
-6   String birthdate;
+4     String name;
+5     String role;
+6     String birthdate;
 7 }
 8
 9 class ActorList {
-10 public static void main(String[] args) throws Exception {
-11    String url = "cast.txt";
-12    Scanner inputFile = new Scanner(new java.io.File(url));
-13    while (inputFile.hasNext()) {
-14      Actor a = getActor(inputFile);
-15      a.name = inputFile.nextLine();
-16      a.role = inputFile.nextLine();
-17      a.birthdate = inputFile.nextLine();
-18      System.out.println(a.name + " played " + a.role + " was born on " + a.birthdate);
-19    }
-20    inputFile.close();
-21  }
-22
-23 static Actor getActor(Scanner input) {
-24    Actor a = new Actor();
-25    return a;
+10     public static void main(String[] args) throws Exception {
+11         String url = "cast.txt";
+12         Scanner inputFile = new Scanner(new java.io.File(url));
+13         while (inputFile.hasNext()) {
+14             Actor a = getActor(inputFile);
+15             a.name = inputFile.nextLine();
+16             a.role = inputFile.nextLine();
+17             a.birthdate = inputFile.nextLine();
+18             System.out.println(a.name + " played " + a.role + " was born on " + a.birthdate);
+19         }
+19         inputFile.close();
+20     }
+21
+22     static Actor getActor(Scanner input) {
+23         Actor a = new Actor();
+24         return a;
+25     }
 26 }
 ```
 
@@ -5199,16 +4667,13 @@ Hickory, NC 28601
 
 ![What You Should See](https://example.com/what_you_should_see.png)
 
-
-
-
 所有其他记录仍在文件中并显示在屏幕上，但它们的值目前没有被存储在任何变量中。
 
 我们可以修复这个问题，但要等到下一次练习。
 
 ## 学习习练
 
-- 1. 在读取所有记录的循环内部添加一个计数器。循环结束后，在屏幕上显示一条关于处理了多少条记录的消息。
+1. 在读取所有记录的循环内部添加一个计数器。循环结束后，在屏幕上显示一条关于处理了多少条记录的消息。
 
 （此学习习练还没有视频。）
 
@@ -5216,7 +4681,7 @@ Hickory, NC 28601
 
 记录很棒，数组更好，但当你将记录放入数组时，这个世界上没有没有什么是你无法用代码实现的。
 
-StudentDatabase.java
+### StudentDatabase.java
 
 ```java
 class Student {
@@ -5226,38 +4691,42 @@ class Student {
 }
 
 public class StudentDatabase {
-    public static void main( String[] args ) {
+    public static void main(String[] args) {
         Student[] db = new Student[3];
-
         db[0] = new Student();
         db[0].name = "Esteban";
         db[0].credits = 43;
         db[0].gpa = 2.9;
-
         db[1] = new Student();
         db[1].name = "Dave";
         db[1].credits = 15;
         db[1].gpa = 4.0;
-
         db[2] = new Student();
         db[2].name = "Michelle";
         db[2].credits = 132;
         db[2].gpa = 3.72;
-
-        for ( int i = 0; i < db.length; i++) {
+        for (int i = 0; i < db.length; i++) {
             System.out.println("Name: " + db[i].name);
             System.out.println("Credit hours: " + db[i].credits);
             System.out.println("GPA: " + db[i].gpa + "\n");
         }
     }
+
     int maxLoc = 0;
+    for (int i = 1; i < db.length; i++)
+        if (db[i].gpa > db[maxLoc].gpa)
+```
 
-for ( int i=1; i<db.length; i++ )
-      if ( db[i].gpa > db[maxLoc].gpa )
-        maxLoc = i;
 
-      System.out.println(db[maxLoc].name + " has the highest GPA.");
-    }
+
+## 练习 55：记录数组
+
+```java
+maxLoc = i;
+
+System.out.println(db[maxLoc].name + " has the highest GPA.");
+
+}
 }
 ```
 
@@ -5292,8 +4761,6 @@ public static void main( String[] args )
 int n;
 ```
 
-## 练习 55：记录数组
-
 ……还没有整数。变量 `n` 可能可以包含一个整数，但它现在目前还没有数字。`n` 被声明为未定义。同样，一旦第 9 行执行完毕，`db` 就是一个可以指向 Student 数组的变量，但仍然未定义。
 
 幸运的是我们不需要等很久；第 10 行通过创建一个具有三个槽位的实际 Student 数组来初始化 `db`。从这一点起，`db` 被定义，`db.length` 为 3，且 `db` 拥有三个合法的索引：0 和 1。
@@ -5308,10 +4775,10 @@ int n;
 
 | 表达式 | 类型 | 描述 |
 | :--- | :--- | :--- |
-| db | Student[] |一个 Student 记录数组 |
-| db[] | Student | 单个 Student 记录（第一个） |
-| db[0].name | String | 数组中第一个 Student 的 name 字段 |
-| db.name | error | 整个数组没有单一的 name 字段 |
+| `db` | `Student[]` | 一个 Student 记录数组 |
+| `db[]` | `Student` | 单个 Student 记录（第一个） |
+| `db[0].name` | `String` | 数组中第一个 Student 的 name 字段 |
+| `db.name` | error | 整个数组没有单一的 name 字段 |
 
 所以第 13 行将值存储到数组中第一条记录的 `name` 字段中。第 14 行和 15 行将值存储到该记录的剩余字段中。第 17 行到 25 行创建并填充了数组中的另外两个记录。
 
@@ -5341,9 +4808,9 @@ if ( db[1].gpa > db[0].gpa )
 
 ## 学习习练
 
-- 1. 将数组容量改为 4 而不是 3。现在编译并运行程序。
-- 2. 添加一些代码将值存到字段中。
-- 3. 添加代码让程序找到学分最少的学生。
+1. 将数组容量改为 4 而不是 3。现在编译并运行程序。
+2. 添加一些代码将值存到字段中。
+3. 添加代码让程序找到学分最少的学生。
 
 ## 练习 56：记录数组（温度回顾）
 
@@ -5352,9 +4819,6 @@ if ( db[1].gpa > db[0].gpa )
 - 文件第一行没有数字告诉有多少条记录。
 - 除了温度外，每条记录还有月份、日期和年份。
 - 文件中有坏数据。特别是，当数据可用时，我们使用 -99 作为无数据标记。
-
-
-
 
 ## 练习 56：从文件读取记录数组（重温温度）
 
@@ -5365,9 +4829,9 @@ if ( db[1].gpa > db[0].gpa )
 
 第 14 行定义了一个记录数组。然而，我们遇到了一个问题：在不提供容量的情况下我们无法定义数组，而在看到文件中有多少条记录之前，我们并不知道容量是多少。这个问题有三种可能的解决方案：
 
-- 1. 不要使用数组。使用其他东西，比如可以随着条目的添加自动增长的数组。这实际上是正确的解决方案，但那个“其他东西”超出了本书的讨论范围。
-- 2. 读取两次文件。第一次只为了统计记录的数量，然后创建一个完美大小的数组。然后将所有值读入数组中，直到速度变慢。
-- 3. 不要担心让数组大小正确。只需让它“足够大”即可。然后在读取记录的同时统计你实际有多少条记录，并在循环中使用实际数量而不是数组的容量。这并不完美，但它可行且简单。编写软件有时需要妥协，这就是其中之一。
+1. 不要使用数组。使用其他东西，比如可以随着条目的添加自动增长的数组。这实际上是正确的解决方案，但那个“其他东西”超出了本书的讨论范围。
+2. 读取两次文件。第一次只为了统计记录的数量，然后创建一个完美大小的数组。然后将所有值读入数组中，直到速度变慢。
+3. 不要担心让数组大小正确。只需让它“足够大”即可。然后在读取记录的同时统计你实际有多少条记录，并在循环中使用实际数量而不是数组的容量。这并不完美，但它可行且简单。编写软件有时需要妥协，这就是其中之一。
 
 第 14 行声明了数组并将其定义为一万槽位：“足够大”。
 
@@ -5379,7 +4843,7 @@ if ( db[1].gpa > db[0].gpa )
 
 但记住，我们的文件中存在“缺失”值。某些日期的温度读数为 -99，因此我们在第 23 行使用一个 `if` 语句来检测是否要将其存入数据库。
 
-在第 24 行出现了一个新东西：Java 关键字 `continue`。`continue` 仅在循环体内部合法法的。它的意思是“跳过循环体内的剩余代码并返回顶部进行下一次迭代”。
+在第 24 行出现了一个新东西：Java 关键字 `continue`。`continue` 仅在循环体内部合法。它的意思是“跳过循环体内的剩余代码并返回顶部进行下一次迭代”。
 
 这有效地丢弃了当前（无效的）记录，因为它跳过了第 25 行和第 26 行，而这两行本应将当前记录存储在数组的下一个可用槽位中，然后增加索引。
 
@@ -5387,8 +4851,11 @@ if ( db[1].gpa > db[0].gpa )
 
 ```java
 if ( e.temperature != -99 ) {
+
   tempDB[i] = e;
+
   i++;
+
 }
 ```
 
@@ -5404,23 +4871,19 @@ if ( e.temperature != -99 ) {
 
 在第 43 行到第 45 行，我们计算了 11 月记录的平均值。这并不完美，但它可行且简单。编写软件有时需要妥协，这就是其中之一。
 
-
-
-
-
 ## 练习 57：一副扑牌
 
 ```java
 String[] names = { " ", "two", "three", "four", "five", "six",
 ```
 
-...但随后我担心我的代码里有一个 Bug，因为很难判断是由于什么都没有打印，还是因为 `names[i]`（或 `names[1]`）的值有问题。所以我我在那两个索引处放置了单词，但把它们全部写成了大写，这样如果它们被打印出来，我就能发现。
+...但随后我担心我的代码里有一个 Bug，因为很难判断是由于什么都没有打印，还是因为 `names[i]`（或 `names[1]`）的值有问题。所以我在那两个索引处放置了单词，但把它们全部写成了大写，这样如果它们被打印出来，我就能发现。
 
 在第 28 行，我们创建了一个变量，我将用来跟踪下一个需要放入 `Card` 的哪个索引。也就是说，我将始终持有数组中下一个可用槽位的索引。
 
 第 29 行定义了我们的包含 52 张牌的数组（索引从 0 到 51）。
 
-第 31 行是另一个 `foreach` 循环。变量 `s` 将被设置为 "clubs"梅花），然后是 "diamonds"方片），接着是 "hearts"红桃），最后是 "spades"黑桃）。
+第 31 行是另一个 `foreach` 循环。变量 `s` 将被设置为 "clubs"（梅花），然后是 "diamonds"（方片），接着是 "hearts"（红桃），最后是 "spades"（黑桃）。
 
 第 32 行开始了另一个 `for` 循环，但它是嵌套的。记住，这个循环的作用是在外层循环改变 `s` ("clubs") 之前，让 `v` 从 2 遍历到 14。
 
@@ -5434,13 +4897,13 @@ String[] names = { " ", "two", "three", "four", "five", "six",
 
 最后，我们将这张牌存储到牌组的下一个可用槽位中（用 `i` 索引），并让 `i` 加 1。
 
-当嵌套循环完成后，就已成功创建了标准牌中的所有 52 张牌，并为它们赋予了与黑杰玩法中使用方式相匹配的值。如果你想确保无误，可以取消第 14 行 `displayDeck()`get的注释。
+当嵌套循环完成后，就已成功创建了标准牌中的所有 52 张牌，并为它们赋予了与黑杰玩法中使用方式相匹配的值。如果你想确保无误，可以取消第 14 行 `displayDeck()` 的注释。
 
 最后一点是 `buildDeck()` 需要返回新的完整的 `Cards` 数组，以便将其存储在 `main()` 方法第 13 行的 `deck` 变量中。
 
 ## 练习
 
--   1. 添加一个名为 `shuffleDeck()` 的函数。它应该接受一个牌数组作为参数且没有返回值（void）。洗牌的一种方法是从 0-51 之间随机选择两个数字，并“交换”这些槽位的牌。然后将该代码放在一个重复大约 1000 次的循环中。这要做到这一点有点棘手。
+1. 添加一个名为 `shuffleDeck()` 的函数。它应该接受一个牌数组作为参数且没有返回值（void）。洗牌的一种方法是从 0-51 之间随机选择两个数字，并“交换”这些槽位的牌。然后将该代码放在一个重复大约 1000 次的循环中。这要做到这一点有点棘手。
 
 在本书的早先版本中，我收到一位数学家的邮件，抱怨我的洗牌方法并不好。特别是，它不仅效率低下，而且是“有偏”的。这意味着某些结果出现的概率比其他结果更高。这是一个非常合理的批评！如果你觉得洗牌代码很容易写并想改进它，请考虑重写 `shuffle()` 函数以使用某种无偏性的方法，例如 Fisher-Yates 洗牌算法。
 
@@ -5448,7 +4911,7 @@ String[] names = { " ", "two", "three", "four", "five", "six",
 
 如果你已经完成了目前为止的所有练习，那么你应该准备好接受这个最终项目了。它比你做过的任何其他练习都长，但并没有最后几个练习困难。
 
-你的最后一个练习是一个基于文本的冒险游戏引擎。我说的引擎是指代码对冒险本身一无所知；故事100%取决于文件内容。更改文件就可以更改游戏玩法。
+你的最后一个练习是一个基于文本的冒险游戏引擎。我说的引擎是指代码对冒险本身一无所知；故事 100% 取决于文件内容。更改文件就可以更改游戏玩法。
 
 所以首先下载一份游戏数据文件的副本，并将其保存到你存放代码的相同文件夹中。
 
@@ -5456,111 +4919,187 @@ String[] names = { " ", "two", "three", "four", "five", "six",
 
 然后，你最好开始打字了。这是一个很长的项目，但我认为它是值得的。
 
-TextAdventureFinal.java
+### TextAdventureFinal.java
 
 ```java
 import java.util.Scanner;
+
 class Room {
+
     int roomNumber;
+
     String roomName;
+
     String description;
+
     int numExits;
+
     String[] exits = new String[10];
+
     int[] destinations = new int[10];
+
 }
+
 public class TextAdventureFinal {
+
     public static void main(String[] args ) {
+
         Scanner keyboard = new Scanner(System.in);
+
         // 从文件初始化房间
+
         Room[] rooms = loadRoomsFromFile("text-adventure-rooms.txt");
+
     }
+
 }
 ```
 
-> ³https://learnjavatheardway.org/txt/text-adventure-rooms.txt
+> ³ https://learnjavatheardway.org/txt/text-adventure-rooms.txt
 
-练习 58：终极项目 - 文本冒险游戏
+### 练习 58：终极项目 - 文本冒险游戏（续）
 
 ```java
 19 showAllRooms(rooms); // 调试
+
 21 // 好，开始游戏吧！
+
 22 int currentRoom = 0;
+
 23 String ans;
+
 24 while (currentRoom >= 0) {
+
 25 Room cur = rooms[currentRoom];
+
 26 System.out.print(cur.description);
+
 27 System.out.print("> ");
+
 28 ans = keyboard.nextLine();
+
 29
+
 32 boolean found = false;
+
 33 for (int i=0; i<cur.numExits; i++) {
+
 34 if (cur.exits[i].equals(ans)) {
+
 35 found = true;
+
 36 break;
+
 37 }
+
 38 }
+
 39 if (!found) {
+
 40 System.out.println("我不明白。");
+
 41 }
+
+}
 ```
 
 ```java
 55 static Room[] loadRoomsFromFile(String filename) {
+
 56 Scanner file = null;
+
 57 try {
+
 58 file = new Scanner(new java.io.File(filename));
-59 catch (java.io.IOException e) {
+
+59 } catch (java.io.IOException e) {
+
 60 System.out.println("无法打开 '" + filename + "'.");
+
 61 return null;
+
 62 }
+
 70 int numRooms = file.nextInt();
+
 71 Room[] rooms = new Room[numRooms];
+
 73 int roomNum = 0;
+
 74 while (file.hasNext()) {
+
 75 Room r = getRoom(file);
+
+}
 ```
 
 ```java
 public static Room getRoom(Scanner f) {
+
 79 if (!f.hasNextInt()) {
+
 80 return null;
+
 81 }
+
 82 Room r = new Room();
+
 83 r.roomNumber = f.nextInt();
+
 84 f.nextLine();
+
 85 r.roomName = f.nextLine();
+
 86 while (f.hasNext()) {
+
 87 String line = f.nextLine();
+
 88 if (line.equals("%%")) {
+
 89 break;
+
 90 }
+
 91 r.description += line + "\n";
+
 92 }
+
 93 // 读取出口
+
 94 for (int i=0; i<r.numExits; i++) {
+
 95 String[] parts = f.nextLine().split(":");
+
 96 r.exits[i] = parts[0];
+
 97 r.destinations[i] = Integer.parseInt(parts[1]);
+
 98 }
+
 99 }
+
+}
 ```
 
 ```java
 109 rooms[roomNum] = r;
+
 110 roomNum++;
+
 111 }
+
 112 file.close();
+
 113 return rooms;
+
 114 }
 ```
 
 
 
-
-
 ## 练习 58：最终项目 - 文本冒险游戏
 
-好了，现在来看代码。第 3 行到第 10 行定义了一个房间的记录（record）。你可以看到为冒险游戏文件中所有的内容都设置了字段。你可能没有猜到的是，字符串 数组（exits）和目标房间编号数组（destinations）的任意容量为 10，并且有一个 `numExits` 字段来跟踪该房间实际上有多少个出口。如果需要一个房间有多于 10 个出口，可以自由增大此容量。
+好了，现在来看代码。第 3 行到第 10 行定义了一个房间的记录（record）。你可以看到为冒险游戏文件中所有的内容都设置了字段。你可能没有猜到的是，字符串数组（`exits`）和目标房间编号数组（`destinations`）的任意容量为 10，并且有一个 `numExits` 字段来跟踪该房间实际上有多少个出口。如果需要一个房间有多于 10 个出口，可以自由增大此容量。
 
 进入 `main()` 函数，第 17 行定义了房间数组，并通过 `loadRoomsFromFile()` 函数进行初始化，我稍后会解释。
 
@@ -5592,7 +5131,7 @@ public static Room getRoom(Scanner f) {
 
 到第 54 行，意味着文件已成功打开。我们读取文件的第一行来获取有多少个房间。第 55 行定义了一个具有适当容量的 `Room` 数组。
 
-第 58 行我创建了一个变量 `roomNum`，它有两个用途：首先，它是 `rooms` 数组中下一个可用槽位的索引；其次，它用于双重检查文件中的房间编号和数组的槽位编号是否一致。如果不一致，说明游戏数据文件存在错误。如果在第 61 行检测到此类错误，程序会报错并退出（System.exit）。
+第 58 行我创建了一个变量 `roomNum`，它有两个用途：首先，它是 `rooms` 数组中下一个可用槽位的索引；其次，它用于双重检查文件中的房间编号和数组的槽位编号是否一致。如果不一致，说明游戏数据文件存在错误。如果在第 61 行检测到此类错误，程序会报错并退出（`System.exit`）。
 
 第 59 行是“读取所有房间”循环的开始。只要文件中还有我们见过的内容，它就会一直运行。这里有一个潜在错误：如果文件顶部的房间数量不对，此循环可能会超出数组范围（例如，如果文件第一行说有 7 个房间，但实际上有 8 个）。
 
@@ -5612,8 +5151,11 @@ public static Room getRoom(Scanner f) {
 
 ```
 line.split(":") 搜索字符串行并拆分它，直到看到冒号。
+
 它返回一个字符串数组。例如，如果 line 包含 "this test"，那么
+
 line.split(":") 将返回一个包含 ("this", "test") 的数组。在我们的情况下，
+
 line 中只有一行，所以它返回类似 ("refrigerator", "3") 的内容。
 ```
 
@@ -5622,10 +5164,6 @@ line 中只有一行，所以它返回类似 ("refrigerator", "3") 的内容。
 再次幸运的是我们，Java 的标准库来救场了。有一个内置函数可以将字符串转换为整数：`Integer.parseInt()`。我们在第 115 行使用它。
 
 记得 `i` 是 `exits` 数组的索引，我们需要在其中存储下一个值。因此第 114 行将 `parts[0]`（出口名称）存储到 `exits` 数组的相应槽位。第 115 行将解析后的整数存储到 `destinations` 数组中。
-
-
-
-
 
 ## 练习 58：最终项目 - 文本冒险游戏
 
@@ -5654,12 +5192,12 @@ line 中只有一行，所以它返回类似 ("refrigerator", "3") 的内容。
 - 你还不面向对象编程 (OOP)。
 - 你并不熟悉标准库。
 
-## 你不熟悉标准库。
+### 你不熟悉标准库。
 
 专业的 Java 程序员花费大量时间编写少量的代码，将他人编写的模块“粘合”在一起。其中许多内容包含在 Java 自身，并且可以被“import”。
 Java 的标准库是以对象包的形式提供的，因此在这一方面取得进步之前，你必须了解面向对象编程。
 
-## 你需要更多的练习。
+### 你需要更多的练习。
 
 我在公立学校教的学生通过完成这本书中的练习来开始学习，但这并不是我要求他们做的全部。他们还必须从零开始编写很多程序。你可以在这里查看作业列表：
 
@@ -5667,14 +5205,14 @@ Programming by Doing³⁴
 
 ³⁴https://programmingbydoing.com/
 
-## 下一步计划
+### 下一步计划
 
 我强烈建议完成这些练习。一旦你完成了，这里还有其他用于练习的资源：
 
 - CodingBat³⁵ - 短小、有针对性的练习题。这些对于准备计算机科学高级位分（AP）考试的学生来说，是极佳的练习。
 - ProjectEuler³⁶ - 一系列具有挑战性的数学/计算机编程问题，解决这些问题需要超越数学本身的洞察力。虽然数学会帮助你找到优雅且高效的方法，但解决大多数问题还需要使用计算机和编程技能。
 
-## 你不懂 OOP。
+### 你不懂 OOP。
 
 Java 是一门面向对象的语言。无论你完成我这些作业时有多出色，在精通 OOP 之前，你永远不能自称是 Java 程序员。
 
@@ -5689,4 +5227,3 @@ Java 是一门面向对象的语言。无论你完成我这些作业时有多出
 
 祝编程愉快！
 - Graham Mitchell
-

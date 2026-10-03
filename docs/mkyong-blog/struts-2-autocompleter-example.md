@@ -1,17 +1,18 @@
+
 # Struts 2 自动完成器示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts2/struts-2-autocompleter-example/>
 
 Download It – [Struts2-AutoCompleter-Example.zip](http://web.archive.org/web/20190304032710/http://www.mkyong.com/wp-content/uploads/2010/06/Struts2-AutoCompleter-Example.zip)
 
-在 Struts 2 中， **< sx:autocompleter >** 标签是一个组合框，当用户在文本框中输入时，它会自动提示下拉建议列表。
+在 Struts 2 中，`<sx:autocompleter>`标签是一个组合框，当用户在文本框中输入时，它会自动提示下拉建议列表。
 
-This feature is implemented by dojo library, So, make sure you include “**struts2-dojo-plugin.jar**” as dependency library, put “**struts-dojo-tags**” tag on top of the page and output its header information via **<sx:head />**.
+该功能由 dojo 库实现，因此请确保将`struts2-dojo-plugin.jar`作为依赖库引入，在页面顶部添加`struts-dojo-tags`标签，并通过`<sx:head />`输出其头部信息。
 
-举个例子，
+举个例子：
 
 ```java
- <%@ taglib prefix="sx" uri="/struts-dojo-tags" %>
+<%@ taglib prefix="sx" uri="/struts-dojo-tags" %>
 <html>
 <head>
 <sx:head />
@@ -19,13 +20,13 @@ This feature is implemented by dojo library, So, make sure you include “**stru
 <body>
 <sx:autocompleter label="What's your lucky number?" 
 name="yourLuckyNumber" autoComplete="false"
-list="{'1','12','13','14'}" /> 
+list="{'1','12','13','14'}" />
 ```
 
-产生以下 HTML
+产生以下 HTML：
 
-```java
- <html> 
+```html
+<html> 
 <head> 
 <script language="JavaScript" type="text/javascript"> 
     // Dojo configuration
@@ -73,21 +74,21 @@ keyName="yourLuckyNumberKey" visibleDownArrow="true" >
 </td>
 </tr>
 <script language="JavaScript" type="text/javascript">
-djConfig.searchIds.push("resultAction_yourLuckyNumber");</script> 
+djConfig.searchIds.push("resultAction_yourLuckyNumber");</script>
 ```
 
-## Struts 2 <autocompleter>示例</autocompleter>
+## Struts 2 `<autocompleter>`示例
 
-一个完整的 **< s:autocompleter >** 标签的例子，当用户在相应的文本框中输入时，生成下拉建议列表。
+一个完整的`<s:autocompleter>`标签的例子，当用户在相应的文本框中输入时，生成下拉建议列表。
 
- ## 1.pom.xml
+### 1. pom.xml
 
 下载 Struts 2 dojo 依赖库。
 
 **pom.xml**
 
-```java
- //...
+```xml
+//...
     <!-- Struts 2 -->
     <dependency>
       <groupId>org.apache.struts</groupId>
@@ -101,17 +102,17 @@ djConfig.searchIds.push("resultAction_yourLuckyNumber");</script>
 	  <artifactId>struts2-dojo-plugin</artifactId>
 	  <version>2.1.8</version>
     </dependency>
-//... 
+//...
 ```
 
- ## 2.动作类
+### 2. 动作类
 
-Action 类来为" **autocompleter** "组件生成 web 框架选项列表。
+Action 类来为`autocompleter`组件生成 web 框架选项列表。
 
 **AutoCompleterAction.java**
 
 ```java
- package com.mkyong.common.action;
+package com.mkyong.common.action;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -168,17 +169,17 @@ public class AutoCompleterAction extends ActionSupport{
 		return NONE;
 	}
 
-} 
+}
 ```
 
-## 3.结果页面
+### 3. 结果页面
 
-通过“ **< s:autocompleter >** ”标签渲染“ **autocompleter** ”组件，通过 Java list 和 OGNL 生成自动下拉建议列表。
+通过`<s:autocompleter>`标签渲染`autocompleter`组件，通过 Java list 和 OGNL 生成自动下拉建议列表。
 
 **autocompleter.jsp**
 
-```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
+```jsp
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib prefix="sx" uri="/struts-dojo-tags" %>
 
 <html>
@@ -204,13 +205,13 @@ list="webframeworks" name="yourFavWebFramework" />
 </s:form>
 
 </body>
-</html> 
+</html>
 ```
 
 **result.jsp**
 
-```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
+```jsp
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 
 <body>
@@ -225,15 +226,15 @@ list="webframeworks" name="yourFavWebFramework" />
 </h2> 
 
 </body>
-</html> 
+</html>
 ```
 
-## 3.struts.xml
+### 4. struts.xml
 
 全部链接起来~
 
-```java
- <?xml version="1.0" encoding="UTF-8" ?>
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
@@ -256,26 +257,21 @@ list="webframeworks" name="yourFavWebFramework" />
   </action>
 </package>
 
-</struts> 
+</struts>
 ```
 
-## 4.演示
+### 5. 演示
 
-*http://localhost:8080/struts 2 example/autocomplete action . action*
+*http://localhost:8080/struts2example/autoCompleterAction.action*
 
-![Struts 2 AutoCompleter example](img/c95633d9457e8d88ed28608263f42420.png "Struts2-AutoCompleter-Example-1")![Struts 2 AutoCompleter example](img/67eee9253dff7fba8738057b9876b3a7.png "Struts2-AutoCompleter-Example-2")Here’s another example to show the use of **JSON** data to provide a list of the select options to the **autocompleter** component – [Struts 2 autocompleter + JSON example](http://web.archive.org/web/20190304032710/http://www.mkyong.com/struts2/struts-2-autocompleter-json-example/).
+![Struts 2 AutoCompleter example](img/c95633d9457e8d88ed28608263f42420.png "Struts2-AutoCompleter-Example-1")![Struts 2 AutoCompleter example](img/67eee9253dff7fba8738057b9876b3a7.png "Struts2-AutoCompleter-Example-2")
+
+这里还有另一个示例，展示如何使用 **JSON** 数据为`autocompleter`组件提供选择选项列表 – [Struts 2 autocompleter + JSON example](http://web.archive.org/web/20190304032710/http://www.mkyong.com/struts2/struts-2-autocompleter-json-example/)。
 
 ## 参考
 
-1.  [Struts 2 自动完成器文档](http://web.archive.org/web/20190304032710/http://struts.apache.org/2.1.8/docs/autocompleter.html)
-2.  [Struts 2 ajax 和 javascript 配方](http://web.archive.org/web/20190304032710/http://struts.apache.org/2.0.14/docs/ajax-and-javascript-recipes.html)
-3.  [Struts 2 组合框示例](http://web.archive.org/web/20190304032710/http://www.mkyong.com/struts2/struts-2-scombobox-combo-box-example/)
+1. [Struts 2 自动完成器文档](http://web.archive.org/web/20190304032710/http://struts.apache.org/2.1.8/docs/autocompleter.html)
+2. [Struts 2 ajax 和 javascript 配方](http://web.archive.org/web/20190304032710/http://struts.apache.org/2.0.14/docs/ajax-and-javascript-recipes.html)
+3. [Struts 2 组合框示例](http://web.archive.org/web/20190304032710/http://www.mkyong.com/struts2/struts-2-scombobox-combo-box-example/)
 
 [auto complete](http://web.archive.org/web/20190304032710/http://www.mkyong.com/tag/auto-complete/) [struts2](http://web.archive.org/web/20190304032710/http://www.mkyong.com/tag/struts2/)
-
-
-
-
-
-
-

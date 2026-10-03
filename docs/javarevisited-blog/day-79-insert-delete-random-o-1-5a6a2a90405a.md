@@ -1,3 +1,4 @@
+
 # 第 79 天—插入、删除、随机 O(1)
 
 > 原文：<https://medium.com/javarevisited/day-79-insert-delete-random-o-1-5a6a2a90405a?source=collection_archive---------0----------------------->

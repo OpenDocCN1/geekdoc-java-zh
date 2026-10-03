@@ -1,3 +1,4 @@
+
 # 分叉/合并
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/concurrency/forkjoin.html`](https://docs.oracle.com/javase/tutorial/essential/concurrency/forkjoin.html)
@@ -18,7 +19,6 @@ if (my portion of the work is small enough)
 else
   split my work into two pieces
   invoke the two pieces and wait for the results
-
 ```
 
 将这段代码封装在一个`ForkJoinTask`子类中，通常使用其中的一个更专门的类型，要么是[`RecursiveTask`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/RecursiveTask.html)（可以返回结果），要么是[`RecursiveAction`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/RecursiveAction.html)。
@@ -75,7 +75,6 @@ public class ForkBlur extends RecursiveAction {
     }
 
   ...
-
 ```
 
 现在你要实现抽象的`compute()`方法，该方法可以直接执行模糊操作，也可以将其拆分为两个较小的任务。一个简单的数组长度阈值有助于确定是执行工作还是拆分任务。
@@ -95,35 +94,31 @@ protected void compute() {
               new ForkBlur(mSource, mStart + split, mLength - split,
                            mDestination));
 }
-
 ```
 
 如果前面的方法在`RecursiveAction`类的子类中，那么设置任务在`ForkJoinPool`中运行就很简单，包括以下步骤：
 
-1.  创建一个代表所有要完成工作的任务。
+1. 创建一个代表所有要完成工作的任务。
 
-    ```java
-    // source image pixels are in src
-    // destination image pixels are in dst
-    ForkBlur fb = new ForkBlur(src, 0, src.length, dst);
+```java
+// source image pixels are in src
+// destination image pixels are in dst
+ForkBlur fb = new ForkBlur(src, 0, src.length, dst);
+```
 
-    ```
+2. 创建将运行任务的`ForkJoinPool`。
 
-1.  创建将运行任务的`ForkJoinPool`。
+```java
+ForkJoinPool pool = new ForkJoinPool();
+```
 
-    ```java
-    ForkJoinPool pool = new ForkJoinPool();
+3. 运行任务。
 
-    ```
+```java
+pool.invoke(fb);
+```
 
-1.  运行任务。
-
-    ```java
-    pool.invoke(fb);
-
-    ```
-
-要查看完整的源代码，包括一些额外的代码来创建目标图像文件，请参见``ForkBlur``示例。
+要查看完整的源代码，包括一些额外的代码来创建目标图像文件，请参见`ForkBlur`示例。
 
 ## 标准实现
 

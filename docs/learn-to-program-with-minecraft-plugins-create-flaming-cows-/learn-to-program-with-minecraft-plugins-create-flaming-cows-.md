@@ -1,14 +1,7 @@
+
 # Minecraft 插件编程入门：使用 CanaryMod 在 Java 中创建火焰牛（第 2 版）
 
-
-
-
-
-
-
 ![](img/9f468df40be6924e00c931230bae6b1a_0_0.png)
-
-
 
 # 赞评
 
@@ -40,73 +33,15 @@
 
 - 苦力怪 (Creeper)
 
-
-
-
-
 ![](img/9f468df40be6924e00c931230bae6b1a_4_0.png)
 
+## 目录
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 10. 安排以后执行任务 135
-- 什么时候会发生？ 135
-- 将代码单独放在一个类中 137
-- 创建一个可运行的任务 138
-- 调度稍后运行 139
-- 调度运行一次，或持续运行 140
-- 插件：CowShooter 140
-- 下一个 143
-
-## 11. 使用配置文件和存储游戏数据 145
-- 使用配置文件 146
-- 插件：SquidBombConfig 149
-- 在数据库中存储游戏数据 151
-- 插件：LocationSnapshot 154
-- 插件：带保存 BackCmd 158
-- 下一个 167
-
-## 12. 保护你的代码安全 169
-- 安装 Git 169
-- 记住更改 170
-- 轻松的撤销 173
-- 访问多个现实 177
-- 备份到云端 180
-- 分享代码 183
-- 下一个 184
-
-## 13. 设计自己的插件 187
-- 有一个想法 188
-- 收集你的材料 188
-- 布局它们 190
-- 尝试每个部分 193
-- 将它们整合在一起 201
-- 仅仅是开始 209
-
-
-
-
-- 安装 Java ............................................................................................ 238
-- 接下来 ................................................................................................ 240
-## A5. 备查表 .......................................................................................... 241
-
-
-
-
+- [10. 安排以后执行任务](#10-安排以后执行任务)
+- [11. 使用配置文件和存储游戏数据](#11-使用配置文件和存储游戏数据)
+- [12. 保护你的代码安全](#12-保护你的代码安全)
+- [13. 设计自己的插件](#13-设计自己的插件)
+- [A5. 备查表](#a5-备查表)
 
 # 致谢
 
@@ -132,15 +67,11 @@ CanaryMod 版权所有 2012-2014，CanaryMod Team，由 PlayBlack 和 Visual Ill
 
 但有时 Minecraft 游戏内置的功能还不够用。你想做更多事情。你想射击带火焰的牛，或者把对手关在实岩做的笼子里。为了实现这些以及许多其他功能，你需要为游戏本身添加特性。
 
-你电脑或手机上的应用程序是用我们称为“编程”的特殊文本编写的。（注：此处原文有大量重复，已去重）
+你电脑或手机上的应用程序是用我们称为“编程”的特殊文本编写的。
 
+要添加或更改 Minecraft 游戏的功能，你必须在服务器上添加或更改 `Java` 程序。这就是你在这本短书中将学到的：通过编写 `Java` 指令（我们称之为“源代码”，或简称为“代码”或“程序”）来用 `Java` 编程，从而为 Minecraft 服务器创建插件。插件只是你添加到现有程序中的一段代码。³
 
-
-
-
-要添加或更改 Minecraft 游戏的功能，你必须在服务器上添加或更改 Java 程序。这就是你在这本短书中将学到的：通过编写 Java 指令（我们称之为“源代码”，或简称为“代码”或“程序”）来用 Java 编程，从而为 Minecraft 服务器创建插件。插件只是你添加到现有程序中的一段代码。³
-
-在我们开始学习插件之前，你需要设置一个本地 Minecraft 服务器进行测试，并安装 Java 编程语言以及其他几个应用程序。我们将在前几章中介绍这些内容。安装东西本身并不好玩，事实上，它无聊得像土一样。但我们将尝试尽可能快地穿过这堆土。
+在我们开始学习插件之前，你需要设置一个本地 Minecraft 服务器进行测试，并安装 `Java` 编程语言以及其他几个应用程序。我们将在前几章中介绍这些内容。安装东西本身并不好玩，事实上，它无聊得像土一样。但我们将尝试尽可能快地穿过这堆土。
 
 事实上，为了帮助你跟踪自己的进度，每个章节末尾的“增长中的工具箱”侧边栏会显示进度条。你将从最基础的泥土开始：
 
@@ -156,15 +87,15 @@ CanaryMod 版权所有 2012-2014，CanaryMod Team，由 PlayBlack 和 Visual Ill
 
 由于我们在有限的空间内要涵盖很多内容，我将尝试先给你展示东西，甚至先让你使用它们，稍后会进行详细解释。当你感觉自己像被扔进了池子的深水区：当你看到一些还不理解的东西时，不要担心。只需让它流过身体；解释很快就会到来。
 
-在很多情况下，即使你不真正理解它是如何工作的，也可以成功地使用它。我可以打开台灯并使用它，而不需要理解电是如何产生的。我甚至可以自己制作一个台灯，而不需要理解如何建造一个大型发电站发电机。我只需要知道你的部分是如何其中的。
+在很多情况下，即使你不真正理解它是如何工作的，也可以成功地使用它。我可以打开台灯并使用它，而不需要理解电是如何产生的。我甚至可以自己制作一个台灯，而不需要理解如何建造一个大型发电站发电机。我只需要知道你的部分是如何融入其中的。
 
 我们将尽可能地关注你的部分是如何融入其中的。
 
-- 3. 有些人还会编写 Minecraft 组（mods），它们发生在图形客户端中，但我们在这里不会涵盖这些内容。
+> 3. 有些人还会编写 Minecraft 模组（mods），它们发生在图形客户端中，但我们在这里不会涵盖这些内容。
 
 # 获取帮助
 
-书籍网站上有一个论坛，用于提问、更新和提示。只需将浏览器指向 https://pragprog.com/book/ahmine2 并点击 Discuss（讨论）选项卡。
+书籍网站上有一个论坛，用于提问、更新和提示。只需将浏览器指向 `https://pragprog.com/book/ahmine2` 并点击 Discuss（讨论）选项卡。
 
 在同一个主页上，有一个 Source Code（源代码）链接，你可以在那里下载本书中的所有源代码。
 
@@ -172,7 +103,7 @@ CanaryMod 版权所有 2012-2014，CanaryMod Team，由 PlayBlack 和 Visual Ill
 
 我等候。
 
-下载的是一个使用 zip 创建的归档文件，因此你需要在桌面上将其解压。你可以使用命令行中的 unzip 命令（适用于 Mac OS X 或 Linux），或者对于 Windows，你可以使用 WinZip 或免费的 7-Zip。
+下载的是一个使用 `zip` 创建的归档文件，因此你需要在桌面上将其解压。你可以使用命令行中的 `unzip` 命令（适用于 Mac OS X 或 Linux），或者对于 Windows，你可以使用 WinZip 或免费的 `7-Zip`。
 
 解压好了？太棒了！
 
@@ -182,25 +113,28 @@ CanaryMod 版权所有 2012-2014，CanaryMod Team，由 PlayBlack 和 Visual Ill
 
 我向你展示的示例代码或命令像这样：
 
-- $ 我为你输入了所有这些内容作为示例。
+- `$ 我为你输入了所有这些内容作为示例。`
 
 对于你应该输入的代码或命令，我将用如下的阴影背景显示它：
 
-> $ 你在这里输入这部分（但不包括美元符号提示符）
+> `$ 你在这里输入这部分（但不包括美元符号提示符）`
 
 *斜体*的内容是占位符；你不需要直接输入它们，而是这样的内容：
 
 ```
 me.chat(string msg);
+```
 
 意味着你会像这样替换斜体部分：
+
+```
 me.chat("Creepers are coming.")
 ```
 
 现在让我们看看如何操作这个小玩意。
 
-- 4. 确切的链接是 https://pragprog.com/titles/ahmine2/ahmine2-code.zip。
-- 5. 可从 http://www.winzip.com 或 http://www.7-zip.org 获取
+> 4. 确切的链接是 `https://pragprog.com/titles/ahmine2/ahmine2-code.zip`。
+> 5. 可从 `http://www.winzip.com` 或 `http://www.7-zip.org` 获取
 
 # 第 1 章：命令你的计算机
 
@@ -214,7 +148,7 @@ me.chat("Creepers are coming.")
 
 命令行是一个强大的工具，既可以在你的本地计算机上工作，也可以在远程计算机上工作。我们将在书的后部分附录 4“如何安装服务器”中介绍如何这样做。你甚至可以使用命令行处理器来编写程序；它本身包含一种完整的编程语言，以及一个帮助你构建和安装的命令列表。如果你已经熟悉使用命令行，请随时跳转到第 22 页的本章末尾。
 
-1. http://en.wikipedia.org/wiki/Colossal_Cave_Adventure
+1. `http://en.wikipedia.org/wiki/Colossal_Cave_Adventure`
 
 ## 使用命令行
 
@@ -222,11 +156,11 @@ me.chat("Creepers are coming.")
 
 我们将尽可能地关注你的部分是如何融入其中的。
 
-- 3. 有些人还会编写 Minecraft 组（mods），它们发生在图形客户端中，但我们在这里不会涵盖这些内容。
+> 3. 有些人还会编写 Minecraft 模组（mods），它们发生在图形客户端中，但我们在这里不会涵盖这些内容。
 
 # 获取帮助
 
-书籍网站上有一个论坛，用于提问、更新和提示。只需将浏览器指向 https://pragprog.com/book/ahmine2 并点击 Discuss（讨论）选项卡。
+书籍网站上有一个论坛，用于提问、更新和提示。只需将浏览器指向 `https://pragprog.com/book/ahmine2` 并点击 Discuss（讨论）选项卡。
 
 在同一个主页上，有一个 Source Code（源代码）链接，你可以在那里下载本书中的所有源代码。
 
@@ -234,7 +168,7 @@ me.chat("Creepers are coming.")
 
 我等候。
 
-下载的是一个使用 zip 创建的归档文件，因此你需要在桌面上将其解压。你可以使用命令行中的 unzip 命令（适用于 Mac OS X 或 Linux），或者对于 Windows，你可以使用 WinZip 或免费的 7-Zip。
+下载的是一个使用 `zip` 创建的归档文件，因此你需要在桌面上将其解压。你可以使用命令行中的 `unzip` 命令（适用于 Mac OS X 或 Linux），或者对于 Windows，你可以使用 WinZip 或免费的 `7-Zip`。
 
 解压好了？太棒了！
 
@@ -244,25 +178,28 @@ me.chat("Creepers are coming.")
 
 我向你展示的示例代码或命令像这样：
 
-- $ 我为你输入了所有这些内容作为示例。
+- `$ 我为你输入了所有这些内容作为示例。`
 
 对于你应该输入的代码或命令，我将用如下的阴影背景显示它：
 
-> $ 你在这里输入这部分（但不包括美元符号提示符）
+> `$ 你在这里输入这部分（但不包括美元符号提示符）`
 
 *斜体*的内容是占位符；你不需要直接输入它们，而是这样的内容：
 
 ```
 me.chat(string msg);
+```
 
 意味着你会像这样替换斜体部分：
+
+```
 me.chat("Creepers are coming.")
 ```
 
 现在让我们看看如何操作这个小玩意。
 
-- 4. 确切的链接是 https://pragprog.com/titles/ahmine2/ahmine2-code.zip。
-- 5. 可从 http://www.winzip.com 或 http://www.7-zip.org 获取
+> 4. 确切的链接是 `https://pragprog.com/titles/ahmine2/ahmine2-code.zip`。
+> 5. 可从 `http://www.winzip.com` 或 `http://www.7-zip.org` 获取
 
 # 第 1 章：命令你的计算机
 
@@ -276,7 +213,7 @@ me.chat("Creepers are coming.")
 
 命令行是一个强大的工具，既可以在你的本地计算机上工作，也可以在远程计算机上工作。我们将在书的后部分附录 4“如何安装服务器”中介绍如何这样做。你甚至可以使用命令行处理器来编写程序；它本身包含一种完整的编程语言，以及一个帮助你构建和安装的命令列表。如果你已经熟悉使用命令行，请随时跳转到第 22 页的本章末尾。
 
-1. http://en.wikipedia.org/wiki/Colossal_Cave_Adventure
+1. `http://en.wikipedia.org/wiki/Colossal_Cave_Adventure`
 
 ## 使用命令行
 
@@ -284,13 +221,7 @@ me.chat("Creepers are coming.")
 
 我们将尽可能地关注你的部分是如何融入其中的。
 
-- 3. 有些人还会编写 Minecraft 组（mods），它们发生在图形客户端中，但我们在这里不会涵盖这些内容。
-
-*(注：由于用户提供的文本中存在大量重复内容，根据“不要重复输出原文”的指令，此处翻译仅涵盖了逻辑重复的结构。为了确保完整性，已按要求翻译了所有段落。由于输入文本本身存在重复，输出已按逻辑进行了处理。)*
-
-
-
-
+> 3. 有些人还会编写 Minecraft 模组（mods），它们发生在图形客户端中，但我们在这里不会涵盖这些内容。
 
 ## 在 Windows 上安装 BusyBox
 
@@ -300,7 +231,7 @@ Mac OS 和 Linux 环境基于 Unix，它们拥有非常丰富的命令行环境�
 
 因此，为了让大家保持一致性，我建议 Windows 用户下载 BusyBox。它会安装一个更专业的、符合 POSIX 标准的 shell 以及常用命令——与 Mac OS X、Linux 以及世界其他地区使用的相同。
 
-要为 Windows 安装命令行和基础命令，请将此文件下载到桌面：http://ftp.tigress.co.uk/public/gl/6.0/busybox/busybox.exe
+要为 Windows 安装命令行和基础命令，请将此文件下载到桌面：`http://ftp.tigress.co.uk/public/gl/6.0/busybox/busybox.exe`
 
 一旦下载到桌面，将文件从 `busybox.exe` 重命名为 `sh.exe`。然后打开一个 `cmd.exe` 窗口并输入以下内容：
 
@@ -319,7 +250,7 @@ C:\Windows\system32\cmd.exe /c sh.exe -l
 
 你也将能够使用用于构建和安装插件的命令脚本。
 
-BusyBox 的主页 http://intgat.tigress.co.uk/my/busybox/index.html 有更多关于 Windows 版 BusyBox 的信息。
+BusyBox 的主页 `http://intgat.tigress.co.uk/my/busybox/index.html` 有更多关于 Windows 版 BusyBox 的信息。
 
 你计算机上的文件和文件夹集合被称为文件系统。在任何时候，在桌面上的 Finder（或资源管理器）窗口或你的命令行 shell 中，都处于某个当前目录中。在桌面上，你可能打开了几个窗口，每个窗口都在查看磁盘上的不同文件夹（目录）。
 
@@ -330,24 +261,26 @@ $ pwd
 /Users/andy/Desktop
 ```
 
-现在尝试一下：打开一个全新的 shell，在做任何其他事情之前，在 $ 后输入 `pwd` ——符号可能有所不同：
+现在尝试一下：打开一个全新的 shell，在做任何其他事情之前，在 `$` 后输入 `pwd` ——符号可能有所不同：
 
 ```
-$pwd
+$ pwd
 ```
 
 这将打印出你的家目录，你所有的 shell 都将从这里开始。
+
+
 
 在每个 shell 中，你运行的所有命令都将在这个特定的当前目录（或工作目录）的概念下运行。许多程序将让你在这里（即当前目录）运行和保存文件。
 
 如果你还没有下载，请将书中附带的文件下载到桌面²，并在那里解压压缩包³。它将解压到名为 `code` 的目录，其中包含了书中所有的示例。
 
-在 `code` 目录下有一系列插件目录，书中的每个插件都有一个。我们将开始查看 HelloWorld 插件文件。在该目录下还有其他文件和子目录。
+在 `code` 目录下有一系列插件目录，书中的每个插件都有一个。我们将开始查看 `HelloWorld` 插件文件。在该目录下还有其他文件和子目录。
 
 下一页的图表显示了如何在这些目录之间导航。
 
 - 2. http://media.pragprog.com/titles/ahmine2/code/ahmine2-code.zip
-- 3. 在命令行使用 unzip，或者在 Windows 上使用 WinZip 或 7-Zip。
+- 3. 在命令行使用 `unzip`，或者在 Windows 上使用 WinZip 或 7-Zip。
 
 从这里开始：
 
@@ -359,7 +292,7 @@ $ cd Desktop
 
 ![](img/9f468df40be6924e00c931230bae6b1a_19_0.png)
 
-（如果不起，请尝试 `cd ~/Desktop`，或者查看本章末尾的提示。）
+（如果不起作用，请尝试 `cd ~/Desktop`，或者查看本章末尾的提示。）
 
 接下来输入以下命令进入 `code` 目录：
 
@@ -371,7 +304,7 @@ $ cd code
 
 ![](img/9f468df40be6924e00c931230bae6b1a_19_1.png)
 
-进入 HelloWorld：
+进入 `HelloWorld`：
 
 ```
 $ cd HelloWorld
@@ -388,12 +321,9 @@ $ ls
 Canary.inf bin/ build.sh dist/ src/
 ```
 
-我的系统（Mac OS X）配置为显示以斜杠结尾的目录。（如果你的不是，输入 `ls -F`）。所以我的当前目录下有两个文件和三个目录。文件类型通常由文件名的最后部分——即后缀表示。这里我有一个 `.sh` 后缀的脚本，和一个 `.inf` 后缀的配置。在 `src/` 目录下有一个 `.java` 文件。（等待，文中说“有一个 .java 文件”，但列表显示的是 `src/`）。
+我的系统（Mac OS X）配置为显示以斜杠结尾的目录。（如果你的不是，输入 `ls -F`）。所以我的当前目录下有两个文件和三个目录。文件类型通常由文件名的最后部分——即后缀表示。这里我有一个 `.sh` 后缀的脚本，和一个 `.inf` 后缀的配置。在 `src/` 目录下有一个 `.java` 文件。
 
 你也将能够使用用于构建和安装插件的命令脚本。
-
-
-
 
 列出你桌面上的文件（使用 `ls`），你将看到你那里的所有文件以及新目录 `myplugins`。让我们进入 `myplugins` 并做一些工作。
 
@@ -442,7 +372,7 @@ helloworld/
 $ cp ~/Desktop/code/HelloWorld/build.sh
 ```
 
-波浪符号（~`）是“我的主目录”的缩写。还有这里——我们必须使用单点！整个命令行的意思是“将此文件复制到当前目录”。
+波浪符号（`~`）是“我的主目录”的缩写。还有这里——我们必须使用单点！整个命令行的意思是“将此文件复制到当前目录”。
 
 你也需要这个文件，所以在这里时也把它复制过来。
 
@@ -474,7 +404,7 @@ $ cp C:/Users/John Smith/code/HelloWorld/build.sh
 
 计算机将此解释为“将 C.Users/John 和 Smith/code/HelloWorld/build.sh 复制到当前目录”。你会得到相应的错误。
 
-你有两个通办法：你可以使用相对路径，通过输入 `..` 表示父级目录，或者你“向上”并进入代码目录：
+你有两个通用的办法：你可以使用相对路径，通过输入 `..` 表示父级目录，或者你“向上”并进入代码目录：
 
 ```
 $ cp ../code/HelloWorld/build.sh
@@ -489,7 +419,7 @@ $ cp "C:/Users/John Smith/code/HelloWorld/build.sh"
 你可能遇到的另一个问题是不在你认为自己所处的目录中。当有疑问时，你始终可以执行 `pwd` 命令查看你的当前工作目录：
 
 ```
-$pwd
+$ pwd
 /Users/andy/Desktop
 ```
 
@@ -554,6 +484,7 @@ $ cat README.txt
 这些是一些可以让探索文件系统变得更有趣的文件。
 
 执行 `ls` 看看还有什么，并在子目录中探索一下。
+
 看看你发现了什么宝藏以及哪些危险。
 
 ## 常用命令
@@ -562,20 +493,20 @@ $ cat README.txt
 
 | 命令 | 描述 |
 |---|---|
-| java | 将 Java 类和 Java 归档 (jars) 作为程序运行 |
-| javac | 将 Java 源码编译为类文件 |
-| cd | 切换目录 |
-| pwd | 打印工作（当前）目录 |
-| ls | 列出目录 |
-| cat | 显示文件内容 |
-| echo | 显示文本 |
-| mkdir | 创建目录 |
-| cp | 复制文件 |
-| mv | 移动或重命名文件 |
-| chmod | 修改文件权限 |
-| . | 表示当前目录 |
-| .. | 表示父级目录 |
-| ~ | 表示主目录 |
+| `java` | 将 Java 类和 Java 归档 (jars) 作为程序运行 |
+| `javac` | 将 Java 源码编译为类文件 |
+| `cd` | 切换目录 |
+| `pwd` | 打印工作（当前）目录 |
+| `ls` | 列出目录 |
+| `cat` | 显示文件内容 |
+| `echo` | 显示文本 |
+| `mkdir` | 创建目录 |
+| `cp` | 复制文件 |
+| `mv` | 移动或重命名文件 |
+| `chmod` | 修改文件权限 |
+| `.` | 表示当前目录 |
+| `..` | 表示父级目录 |
+| `~` | 表示主目录 |
 
 ## 下一步
 
@@ -584,8 +515,6 @@ $ cat README.txt
 ## 总结
 
 你现在已经学会了如何在命令行中导航、创建目录、复制文件以及了解了一些基本的命令。这些都是开发 Java 插件的基础知识。准备好开始你的插件之旅了吗？
-
-
 
 ## 亲自尝试一下
 
@@ -598,15 +527,14 @@ $ cat README.txt
 像我这样做的那样输入以下文本：
 
 ```
-![Sublime Text File Edit Selection Find View Tools Project Help / Creeper/Test.java
-1 public class Creeper {
-2 public static void main(String args[]) {
-3     System.out.println("That's a very niccce program you have there...");
-4 }
-5 }
+public class Creeper {
+    public static void main(String args[]) {
+        System.out.println("That's a very niccce program you have there...");
+    }
+}
 ```
 
-确保完全复制文本，从 “public class” 直到 “}”——包括所有的标点、拼写、大小写和间距——但不要包含行号，因为那些是编辑器的一部分。使用 Delete 键（有时标记为 "backspace"来删除任何错误。
+确保完全复制文本，从 “public class” 直到 “}”——包括所有的标点、拼写、大小写和间距——但不要包含行号，因为那些是编辑器的一部分。使用 Delete 键（有时标记为 "backspace"）来删除任何错误。
 
 现在选择 File -> Save 来保存带有你文本的文件。
 
@@ -619,15 +547,16 @@ $ cat README.txt
 ## Windows 路径
 
 > 提示：当我们使用来自 BusyBox 的 bash shell 时，所有目录都使用正斜杠 ("/")。Windows 系统的其他部分仍使用反斜杠 ("\")。所以 Windows 和安装程序称其为：
-
-```
-C:\Users\username\Desktop\server
-我们将其称为 C:/Users/username/Desktop/server
-```
+>
+> ```
+> C:\Users\username\Desktop\server
+> ```
+>
+> 我们将其称为 `C:/Users/username/Desktop/server`。
 
 ## 安装 Java 语言
 
-“Java” 不仅仅是一个应用程序——它实际上是几个。Java 编译器 `javac`、Java 程序运行器 `java` 以及归档工具 `jar`。`javac` 接收你的文本文件并创建一个它被称为类文件（class file）的魔法垃圾堆。你运行 `java` 命令并告诉它使用那堆垃圾，你的程序就会活起来。我们将在后的学习中详细查看该过程，这就是它的核心。
+“Java” 不仅仅是一个应用程序——它实际上是几个。Java 编译器 `javac`、Java 程序运行器 `java` 以及归档工具 `jar`。`javac` 接收你的文本文件并创建一个它被称为类文件（class file）的魔法垃圾堆。你运行 `java` 命令并告诉它使用那堆垃圾，你的程序就会活起来。我们将在后续的学习中详细查看该过程，这就是它的核心。
 
 你可能已经安装了 Java。尝试运行 Java 编译器 `javac`，看看它是否：
 
@@ -643,7 +572,7 @@ $ java -version
 bash: java: command not found
 ```
 
-你可能还想检查你的 java 版本是否与你的 java 版本一致（应该是一致的，但总会有意外发生）：
+你可能还想检查你的 `javac` 版本是否与你的 `java` 版本一致（应该是一致的，但总会有意外发生）：
 
 ```
 $ java -version
@@ -652,7 +581,7 @@ Java(TM) SE Runtime Environment (build 1.7.0_67-b01)
 Java HotSpot(TM) 64-Bit Server VM (build 24.65-b04, mixed mode)
 ```
 
-如果你需要安装 Java，需要 Java 开发工具包标准版 (JDK SE) 7 或更高版本，你可以为不同的操作系统下载它。根据你的操作系统和供应商，可能安装了 Java，也可能没有，你可能只有 java 而没有 javac，或者你可能拥有一个略有不同的版本。再次，你需要 JDK 1.7 或更高版本来运行书中的示例。
+如果你需要安装 Java，需要 Java 开发工具包标准版 (JDK SE) 7 或更高版本，你可以为不同的操作系统下载它。根据你的操作系统和供应商，可能安装了 Java，也可能没有，你可能只有 `java` 而没有 `javac`，或者你可能拥有一个略有不同的版本。再次，你需要 JDK 1.7 或更高版本来运行书中的示例。
 
 无论你安装什么操作系统，我都强烈建议你对任何安装问题接受所有默认答案，特别是安装位置。如果 Java 及其相关程序不在它们预期的位置，它们可能会变得非常古怪和挑剔。
 
@@ -679,19 +608,14 @@ CreeperTest.java
 现在通过执行 `javac`（Java 编译器）命令对 `CreeperTest.java` 运行 Java 编译器。
 
 ```
-$ java CreeperTest.java
+$ javac CreeperTest.java
 $ ls
 CreeperTest.class CreeperTest.java
 ```
 
 Java 程序首先检查它是否理解你在 `CreeperTest.java` 文件中输入的所有内容。如果没有错误，它会创建一个二进制类文件。
 
-但事实是大多数时候会有错误。如果你收到大量的错误信息，不要担心：你没有弄坏计算机。像 Java 这样的编程语言对大小写是出名的挑剔，
-
-（注：提供的 OCR 文本包含重复段落，已删除以提供连贯的文档流。）
-
-
-
+但事实是大多数时候会有错误。如果你收到大量的错误信息，不要担心：你没有弄坏计算机。像 Java 这样的编程语言对大小写是出名的挑剔。
 
 ## 其他可能不起作用的原因
 
@@ -726,9 +650,9 @@ $ java CreeperTest
 
 也就是说，在编译时必须指定 `.java` 后缀，但在使用 `java` 运行时不要输入 `.class` 部分。
 
-此外，检查是否有针对 `CLASPATH` 的设置（它类似于 `PATH`，但用于 Java 类）。
+此外，检查是否有针对 `CLASSPATH` 的设置（它类似于 `PATH`，但用于 Java 类）。
 
-```bash
+```
 $ echo $CLASSPATH
 ```
 
@@ -742,7 +666,7 @@ $ echo $CLASSPATH
 
 Minecraft 是一个客户端-服务器系统，因此你需要两个部分：用于玩游戏的桌面图形客户端，以及你连接的服务器进程（我们将添加插件）。
 
-# 安装 Minecraft 图形客户端
+## 安装 Minecraft 图形客户端
 
 你可能已经拥有这个部分了，但如果没有，请从 [minecraft.net](http://minecraft.net) 下载适用于电脑的 Minecraft 安装程序。按照安装说明进行安装，但先不要运行它。
 
@@ -752,9 +676,11 @@ Minecraft 是一个客户端-服务器系统，因此你需要两个部分：用
 
 客户端处理图形和声音，并允许你在游戏中输入命令。但目前还没有本地游戏可以连接——最好去获取并下载服务器代码。
 
-# 安装 CanaryMod 服务器
+## 安装 CanaryMod 服务器
 
 现在是有趣的部分了。你将为自己的服务器添加插件，因此你需要 CanaryMod，这是由 CanaryMod 优秀团队提供的特殊 Minecraft 服务器，专为使用插件而设计。
+
+
 
 在桌面上创建一个名为 `server` 的目录（这意味着它位于类似 `/Users/yourname/Desktop/server` 的目录中）：
 
@@ -765,7 +691,7 @@ $ mkdir server
 
 我们把这个目录称为服务器目录，你将在那里安装服务器部分。
 
-# 第 2 章 添加编辑器和 Java · 24
+# 第 2 章 添加编辑器和 Java
 
 CanaryMod 项目以单个 jar 文件的形式提供：`CanaryMod.jar`，它用于运行游戏服务器本身，也是我们用于开发新插件的工具。
 
@@ -777,11 +703,11 @@ CanaryMod 项目以单个 jar 文件的形式提供：`CanaryMod.jar`，它用�
 
 ```bash
 $ cd server
-$pwd
+$ pwd
 /Users/andy/Desktop/server
 $ ls
 CanaryMod-1.7.10-1.1.0.jar
-$ mv CanaryMod*.jar CanaryMod
+$ mv CanaryMod*.jar CanaryMod.jar
 $ ls
 CanaryMod.jar
 ```
@@ -789,13 +715,10 @@ CanaryMod.jar
 书中的示例代码包含一个名为 `runtime` 的子目录。在 `runtime` 目录你会看到一个名为 `start_minecraft` 的启动脚本。使用 `cp` 命令将其复制到你的服务器目录。你仍在该目录中，可以使用 `..` 指向桌面，使用 `.` 指向当前目录 `runtime`：
 
 ```bash
-$ cp ../code/runtime/start_minecraft
+$ cp ../code/runtime/start_minecraft .
 ```
 
-
-
-
-安装 Minecraft 客户端和服务器 • 27
+## 安装 Minecraft 客户端和服务器
 
 当你启动 Minecraft 客户端时，你可以告诉它要使用哪个版本。这需要与你下载的 Canary 版本匹配。在我写这段文字时，Canary 服务器的最新版本是 1.7.10，但你刚刚安装的客户端默认是 Minecraft 1.8，CanaryMod 不支持该版本。那将无法运行。你需要告诉 Minecraft 客户端使用正确的版本。
 
@@ -818,7 +741,7 @@ $ cp ../code/runtime/start_minecraft
 
 Minecraft 1.7.10 版所有 Mojang AB。请勿分发！
 
-报告错误 • 讨论
+报告错误 · 讨论
 
 现在，点击“多人游戏”（Multiplayer）。接下来，你需要添加本地服务器。点击“添加服务器”（Add Server）并为你的服务器输入名称。服务器地址使用 `localhost`，如下所示：
 
@@ -829,13 +752,14 @@ Minecraft 1.7.10 版所有 Mojang AB。请勿分发！
 ![](img/9f468df40be6924e00c931230bae6b1a_40_1.png)
 
 从列表中选择你的服务器，然后点击“加入服务器”（Join Server）。欢迎来到！
+
 如果你立即被断开连接，可能是版本不匹配；请双检你使用的是哪个版本的客户端。
 
 一旦连接成功，你就进入本地 Minecraft 服务器的 Minecraft 世界了。恭喜！
 
 你可以利用这段时间在 Minecraft 世界中进行一些设置。也许在苦力怪来之前，先给自己盖一间漂亮的房子……
 
-## 下节预
+## 下节预告
 
 这是一个非常棒的开始，现在你已经在自己的电脑上运行了一个功能完整的 Minecraft 服务器。
 
@@ -848,7 +772,7 @@ Minecraft 1.7.10 版所有 Mojang AB。请勿分发！
 你现在知道如何：
 
 - 使用命令行终端
-- 使用 Java. javac 进行编译
+- 使用 Java `javac` 进行编译
 - 运行 Minecraft 服务器
 
 完成本章后，你将学会如何：
@@ -857,9 +781,7 @@ Minecraft 1.7.10 版所有 Mojang AB。请勿分发！
 - 使用新插件运行你的本地服务器
 - 连接到你的本地服务器
 
-# 第3章
-
-# 编译并安装插件
+# 第 3 章 编译并安装插件
 
 现在你已经安装了工具，我们将构建一个简单、基础的插件。就插件而言，它的功能不多，但它能确保你能够编译和运行自己的插件，并将作为我们书中将编写的所有插件的起点（骨架）。
 
@@ -879,20 +801,17 @@ Java（Java 程序本身）读取类文件和 `jar` 文件以在计算机上创�
 
 ![](img/9f468df40be6924e00c931230bae6b1a_42_0.png)
 
-
-
-
-如果这些现在看起来像外星人语言或者猫王猫维斯的歌词，请不要气馁。在接下来的几个章节中，我们会理解它的。相反，请关注熟悉的内容：里面有一些英语单词，如 "import"、public" 和 "return"，以及某些可能是句子或语句的内容，它们都以分号（;;）结尾。这里还有一些奇怪的字符，如 "f" 和 "j"，它们似乎很重要。
+如果这些现在看起来像外星人语言或者猫王猫维斯的歌词，请不要气馁。在接下来的几个章节中，我们会理解它的。相反，请关注熟悉的内容：里面有一些英语单词，如 "import"、"public" 和 "return"，以及某些可能是句子或语句的内容，它们都以分号（`;`）结尾。这里还有一些奇怪的字符，如 "f" 和 "j"，它们似乎很重要。
 
 这一切意味着什么呢？嗯，这个插件实现了一个用户命令 `/hello`，它会向 Minecraft 中的所有在线玩家广播传统的苦力怪问候语：“That's a very nice EVERYTHING you have there...”（你那里的东西真不错……）。
 
-注意，该插件的名字在某行声明为 `public class HelloWorld`。这与包含此代码的文件名 HelloWorld.java相同。这段代码还设置为放在一个包（package）中——即一组相关文件——在某行使用了相同的名称。包名全全小写，它也是我们 Java 源代码所在的目录，路径为 `src/helloworld/HelloWorld.java`。
+注意，该插件的名字在某行声明为 `public class HelloWorld`。这与包含此代码的文件名 `HelloWorld.java` 相同。这段代码还设置为放在一个包（package）中——即一组相关文件——在某行使用了相同的名称。包名全小写，它也是我们 Java 源代码所在的目录，路径为 `src/helloworld/HelloWorld.java`。
 
 所有这些地方的名称匹配非常重要；其中任何一个拼写错误都可能导致奇怪的错误。
 
-你使用 import 语句（你会在某行看到这个）来获取插件中需要的其他内容，例如 Canary 库的部分和其他 Java 库。如果你忘记包含你所需的导入项，将会收到一条显示为“cannot find symbol”（找不到符号）的错误，因为 Java 不知道你想什么。为了方便起见，我在第 253 页的附录 7“常用导入”中列出了我们使用的所有导入项列表。
+你使用 `import` 语句（你会在某行看到这个）来获取插件中需要的其他内容，例如 Canary 库的部分和其他 Java 库。如果你忘记包含你所需的导入项，将会收到一条显示为“cannot find symbol”（找不到符号）的错误，因为 Java 不知道你想要什么。为了方便起见，我在第 253 页的附录 7“常用导入”中列出了我们使用的所有导入项列表。
 
-我们插件的代码从某处开始，这里有一个有趣的 `@Command` 注解（一种标签，不是实际代码），它描述了命令本身。最后，命令代码从某处开始
+我们插件的代码从某处开始，这里有一个有趣的 `@Command` 注解（一种标签，不是实际代码），它描述了命令本身。最后，命令代码从某处开始。
 
 我们稍后会查看所有内容，但首先，我们需要让服务器知道我们有一个插件供它加载。
 
@@ -911,7 +830,7 @@ version = 1.0
 
 ### main-class
 
-Java 运行以启动此插件的包和类名 (package.classname)。
+Java 运行以启动此插件的包和类名 (`package.classname`)。
 
 ### name
 
@@ -933,9 +852,9 @@ Java 运行以启动此插件的包和类名 (package.classname)。
 
 为了方便，我为你制作了一个壳脚本 `build.sh`，它将执行三个主要步骤：
 
-- 1. 使用 `javac` 将 .java 源代码编译为 .class 文件。
-- 2. 使用 `jar` 将类文件、清单文件（manifest）和配置文件存档。
-- 3. 将 jar 文件复制到服务器。
+1. 使用 `javac` 将 `.java` 源代码编译为 `.class` 文件。
+2. 使用 `jar` 将类文件、清单文件（manifest）和配置文件存档。
+3. 将 jar 文件复制到服务器。
 
 之后，你需要停止并重启服务器，以便它能够读取更改。
 
@@ -945,20 +864,20 @@ Java 运行以启动此插件的包和类名 (package.classname)。
 MCSERVER=$HOME/Desktop/server
 ```
 
-- 对于较大的项目，当构建更复杂且必须管理许多部分之间的依赖时，人们会使用 Ant、Maven 或 Gradle 等工具。但这对我们这里的需求来说过度了。
+> 对于较大的项目，当构建更复杂且必须管理许多部分之间的依赖时，人们会使用 Ant、Maven 或 Gradle 等工具。但这对我们这里的需求来说过度了。
 
 对于大多数人，如果你的服务器目录位于桌面，它应该可以直接工作。如果没有，你需要编辑 `build.sh` 文件并更改目录，使 `MCSERVER=` 指向你的 Minecraft 服务器目录。`MCSERVER` 设置是脚本知道在哪里找到服务器的方法。
 
 将你的当前目录更改到 HelloWorld 目录。从那里运行你的 `build.sh` 脚本（我们以后每个插件都会这样做）：
 
-```
+```bash
 $ cd
 $ cd Desktop
 $ cd code/HelloWorld
 $ ./build.sh
 ```
 
-（记住，无论你实际上如何到达桌面，从现在起我将只显示 `cdDesktop` 以供参考。你可能需要执行 `cd ~/Desktop` 或从主目录开始进入，取决于你的特定系统）。
+（记住，无论你实际上如何到达桌面，从现在起我将只显示 `cd Desktop` 以供参考。你可能需要执行 `cd ~/Desktop` 或从主目录开始进入，取决于你的特定系统）。
 
 你应该会看到像下面这样的结果：
 
@@ -971,7 +890,7 @@ Completed Successfully.
 
 检查文件是否已安装在服务器目录中：
 
-```
+```bash
 $ cd Desktop
 $ cd server/plugins
 $ ls
@@ -987,111 +906,7 @@ HelloWorld.jar
 - 如果所有内容都编译了但收到错误，确保名称正确。
 - 如果 Minecraft 服务器找不到插件，确保目录正确。
 
-## 第3章 构建并安装插件
 
-你在终端窗口中输入的命令也可以保存到文件中；这样你就可以反复运行它们，而不需要每次都重新输入。我们称之为 *shell script*，它是为计算机编程的另一种方式。
-
-构建插件只比我们在上一个中编译单个 Java 文件稍微复杂一点，但尽管如此，它仍然涉及许多我们不想每次都输入的命令。
-
-为了方便，我为你制作了一个壳脚本 `build.sh`，它将执行三个主要步骤：
-
-- 1. 使用 `javac` 将 .java 源代码编译为 .class 文件。
-- 2. 使用 `jar` 将类文件、清单文件和配置文件存档。
-- 3. 将 jar 文件复制到服务器。
-
-之后，你需要停止并重启服务器，以便它能够读取更改。
-
-构建脚本需要知道你的服务器目录在哪里。在脚本的最顶部，有如下内容：
-
-```
-MCSERVER=$HOME/Desktop/server
-```
-
-- 对于较大的项目，当构建更复杂且必须管理许多部分之间的依赖时，人们会使用 Ant、Maven 或 Gradle 等工具。但这对我们这里的需求来说过度了。
-
-对于大多数人，如果你的服务器目录位于桌面，它应该可以直接工作。如果没有，你需要编辑 `build.sh` 文件并更改目录，使 `MCSERVER=` 指向你的 Minecraft 服务器目录。`MCSERVER` 设置是脚本知道在哪里找到服务器的方法。
-
-将你的当前目录更改到 HelloWorld 目录。从那里运行你的 `build.sh` 脚本（我们以后每个插件都会这样做）：
-
-```
-$ cd
-$ cd Desktop
-$ cd code/HelloWorld
-$ ./build.sh
-```
-
-（记住，无论你实际上如何到达桌面，从现在起我将只显示 `cdDesktop` 以供参考。你可能需要执行 `cd ~/Desktop` 或从主目录开始进入，取决于你的特定系统）。
-
-你应该看到像下面这样的结果：
-
-```
-Compiling with javac...
-Creating file...
-Deploying jar to /Users/andy/Desktop/server/plugins...
-Completed Successfully.
-```
-
-检查文件是否已安装在服务器目录中：
-
-```
-$ cd Desktop
-$ cd server/plugins
-$ ls
-HelloWorld.jar
-```
-
-是的，jar 文件在服务器目录中。成功！
-
-如果你遇到错误，这里有几点需要检查：
-
-- 如果你遇到错误 `/build.sh: Permission denied`（拒绝访问），你可能需要执行 `chmod +x build.sh`。
-- 如果你看到语法错误，确保路径正确。
-- 如果所有内容都编译了但收到错误，确保名称正确。
-- 如果 Minecraft 服务器找不到插件，确保目录正确。
-
-（你在终端窗口中输入的命令也可以保存到文件中；这样你就可以反复运行它们，而不需要每次都重新输入。我们称之为 *shell script*，它是为计算机编程的另一种方式。）
-
-构建插件只比我们在上一个中编译单个 Java 文件稍微复杂一点，但尽管如此，它仍然涉及许多我们不想每次都输入的命令。
-
-为了方便，我为你制作了一个壳脚本 `build.sh`，它将执行三个主要步骤：
-
-- 1. 使用 `javac` 将 .java 源代码编译为 .class 文件。
-- 2. 使用 `jar` 将类文件、清单文件和配置文件存档。
-- 3. 将 jar 文件复制到服务器。
-
-之后，你需要停止并重启服务器，以便它能够读取更改。
-
-构建脚本需要知道你的服务器目录在哪里。在脚本的最顶部，有如下内容：
-
-```
-MCSERVER=$HOME/Desktop/server
-```
-
-- 对于较大的项目，当构建更复杂且必须管理许多部分之间的依赖时，人们会使用 Ant、Maven 或 Gradle 等工具。但这对我们这里的需求来说过度了。
-
-对于大多数人，如果你的服务器目录位于桌面，它应该可以直接工作。如果没有，你需要编辑 `build.sh` 文件并更改目录，使 `MCSERVER=` 指向你的 Minecraft 服务器目录。`MCSERVER` 设置是脚本知道在哪里找到服务器的方法。
-
-将你的当前目录更改到 HelloWorld 目录。从那里运行你的 `build.sh` 脚本（我们以后每个插件都会这样做）：
-
-```
-$ cd
-$ cd Desktop
-$ cd code/HelloWorld
-$ ./build.sh
-```
-
-（记住，无论你实际上如何到达桌面，从现在起我将只显示 `cdDesktop` 以供参考。你可能需要执行 `cd ~/Desktop` 或从主目录开始进入，取决于你的特定系统）。
-
-你应该会看到像下面这样的结果：
-
-```
-Compiling with javac...
-Creating file...
-Deploying jar to /Users/andy/Desktop/server/plugins...
-Completed Successfully.
-```
-
-检查文件是否已安装在服务器目录中：
 
 ```
 $ cd Desktop
@@ -1120,11 +935,11 @@ HelloWorld.jar
 
 ![](img/9f468df40be6924e0c931230bae6b1a_50_.png)
 
-在 Minecraft 中移动
+### 在 Minecraft 中移动
 
 如果你不熟悉 Minecraft 的图形界面（GUI），这里有一些提示。你可以查看一些 YouTube 教程或官方文档获取更多信息。
 
-W、A、S、D 键分别让你向前、向左、向后和向右移动。使用空格键跳跃。
+`W`、`A`、`S`、`D` 键分别让你向前、向左、向后和向右移动。使用空格键跳跃。
 
 使用鼠标控制面向的方向。
 
@@ -1134,23 +949,19 @@ W、A、S、D 键分别让你向前、向左、向后和向右移动。使用空
 
 带有前缀 `/` 字符向 Minecraft 输入命令。你可以通过 `/gamemode c` 将游戏更改为创造模式，通过 `/gamemode s` 回到生存模式。
 
-使用 EZPlugin
+### 使用 EZPlugin
 
 随着我们阅读这本书，我们会更多地讨论 Java 语言，并解释 `HelloWorld.java` 中的所有部分具体的作用。但这些代码的一半现在对你来说并不重要。更重要的是，它在我们处理的每个插件中将完全相同。我们将它移开，这样你就不需要在每个插件中一直看到它。
 
+## 第 3 章 构建并安装插件
 
+在下载的代码中，我包含了一个名为 `EZPlugin` 的特殊库。我将所有对所有插件都相同的内容都移动到了 `EZPlugin.java` 中。这将使接下来的插件变得更小且更易于阅读。
 
-
-
-## 第 3 章 构建并安装插件 • 40
-
-在下载的代码中，我包含了一个名为 EZPlugin 的特殊库。我将所有对所有插件都相同的内容都移动到了 `EZPlugin.java` 中。这将使接下来的插件变得更小且更易于阅读。
-
-所有其他插件（HelloWorld 之外）都依赖于 EZPlugin，因此在继续之前，我们需要先构建它。构建过程会将它安装在服务器的 `lib`（library 的缩写）目录下：
+所有其他插件（HelloWorld 之外）都依赖于 `EZPlugin`，因此在继续之前，我们需要先构建它。构建过程会将它安装在服务器的 `lib`（library 的缩写）目录下：
 
 ![](img/9f468df40be6924e00c931230bae6b1a_51_0.png)
 
-在你的命令行中，将当前目录更改到 EZPlugin 目录。从那里运行 `build_lib.sh` 脚本。对于我来说，我可以从任何地方开始并回到主目录，然后 `cd` 进入 Desktop、`code`，最后 `EZPlugin`：
+在你的命令行中，将当前目录更改到 `EZPlugin` 目录。从那里运行 `build_lib.sh` 脚本。对于我来说，我可以从任何地方开始并回到主目录，然后 `cd` 进入 Desktop、`code`，最后 `EZPlugin`：
 
 ```
 $ cd
@@ -1189,7 +1000,7 @@ $ rm HelloWorld.jar
 $ ls
 ```
 
-现在你可以看到一个更简单的 HelloWorld 版本，它使用了 EZPlugin，并位于 `code/HelloWorldEZ/src/helloworld/HelloWorld.java`：
+现在你可以看到一个更简单的 HelloWorld 版本，它使用了 `EZPlugin`，并位于 `code/HelloWorldEZ/src/helloworld/HelloWorld.java`：
 
 ```
 HelloWorldEZ/src/helloworld/HelloWorld.java
@@ -1210,11 +1021,11 @@ public class HelloWorld extends EZPlugin {
 
 注意，这在顶部有很多导入（imports），而通用的业务逻辑——我们真正感兴趣的部分——位于底部。这将成为我们后续所有插件的骨架。
 
-继续吧，确保你可以构建它，并且它能找到 EZPlugin 库文件：
+继续吧，确保你可以构建它，并且它能找到 `EZPlugin` 库文件：
 
-- cd Desktop
-- cd code/HelloWorldEZ
-- ./build.sh
+- `cd Desktop`
+- `cd code/HelloWorldEZ`
+- `./build.sh`
 
 你应该看到通常的成功输出：
 
@@ -1227,9 +1038,9 @@ Completed Successfully.
 
 如果没有，请双双检查 `EZPlugin.jar` 是否在 `Desktop/server/lib` 中，并根据需要回到 `EZPlugin.jar` 所在目录重新构建。
 
-## 下下来的内容
+## 接下来的内容
 
-恭喜你！你刚刚从源代码编译并安装了一个插件，将其安装在本地服务器上，进行了连接并测试了它！你还构建了 EZPlugin 库并安装了它。
+恭喜你！你刚刚从源代码编译并安装了一个插件，将其安装在本地服务器上，进行了连接并测试了它！你还构建了 `EZPlugin` 库并安装了它。
 
 处理完这些后，我们将在接下来的几章中深入研究构成插件的所有源代码，并了解 Java 的运行机制，这样你就可以编写自己的插件。
 
@@ -1252,9 +1063,7 @@ Completed Successfully.
 - 如何声明和使用函数：Java 指令列表
 - 如何使用 `if`、`for` 和 `while` 语句控制代码
 
-## 第 4 章
-
-## 插件拥有变量、函数和关键字
+## 第 4 章 插件拥有变量、函数和关键字
 
 正如你可能注意到的，插件源代码中有很多我还没有解释的内容。让我们深入研究 Java，看看所有这些文本的含义——这些编程插件的原材料。
 
@@ -1262,7 +1071,7 @@ Completed Successfully.
 
 这些奇怪的字符每一个都有特殊的含义，并且它们被用于不同的地方。这里是一些例子：
 
-```
+```java
 // 注释，这是一个单行注释
 
 /* 这是一个多行
@@ -1275,76 +1084,7 @@ Completed Successfully.
 helloCommand("message");
 ```
 
-括号用于数组或列表：
-
-```java
-int[] numbers = {1, 2, 3};
-```
-
-大括号用于定义代码块：
-
-```java
-if (true) {
-    // 执行某些操作
-}
-```
-
-点用于访问方法或变量：
-
-```java
-System.out.println("Hello");
-```
-
-分号用于结束语句：
-
-```java
-int age = 15;
-```
-
-等号用于赋值：
-
-```java
-age = 20;
-```
-
-双引号用于定义字符串：
-
-```java
-String name = "Java";
-```
-
-单引号用于单字符：
-
-```java
-char grade = 'A';
-```
-
-叹号在 Java 代码中不常用：
-
-```java
-int count = 10; // 这是没的
-```
-
-正如你所见，插件源代码中有很多我还没有解释的内容。让我们深入研究 Java，看看所有这些文本的含义——这些编程插件的原材料。
-
-正如你在 [第 3 章，构建并安装插件，第 31 页](#) 中看到的，Java 程序是一个文本文件。看看 `HelloWorld.java` 中的文本：那里有很多英文单词和一些看起来很奇怪的标点符号。所有内容都有其含义，而且 Java 编译器在读取你的代码时非常挑剔。首先是区分大小写的字符。`Entity` 不等于 `entity`。`Player` 不等于 `player`，所以大小写也很重要。有时你需要使用大写，有时你又需要使用小写。
-
-这些奇怪的字符每一个都有特殊的含义，并且它们被用于不同的地方。这里是一些例子：
-
-```
-// 注释，这是一个单行注释
-
-/* 这是一个多行
-   注释，跨越多行。 */
-```
-
-括号用于调用函数或传递参数：
-
-```java
-helloCommand("message");
-```
-
-括号用于数组或列表：
+方括号用于数组或列表：
 
 ```java
 int[] numbers = {1, 2, 3};
@@ -1396,35 +1136,6 @@ int count = 10; // 这是没的
 
 ## 跟踪数据
 
-恭喜你！你刚刚从源代码编译并安装了一个插件，将其安装在本地服务器上，进行了连接并测试了它！你还构建了 EZPlugin 库并安装了它。
-
-处理完这些后，我们将在接下来的几章中深入研究构成插件的所有源代码，并了解 Java 的运行机制，这样你就可以编写自己的插件。
-
-## 你不断增长的工具箱
-
-![](img/9f468df40be6924e00c931230bae6b1a_53_0.png)
-
-你现在知道了如何：
-
-- 使用命令行 shell
-- 使用 Java 和 `javac` 进行构建
-- 运行 Minecraft 服务器
-- 部署插件
-- 连接到本地服务器
-
-在本章中，我们将处理许多编写 Java 代码的基础知识。有了你工具箱里的这些工具，你将了解：
-
-- Java 中那些奇奇怪字符的含义
-- 如何使用变量存储数字和字符串值
-- 如何声明和使用函数：Java 指令列表
-- 如何使用 `if`、`for` 和 `while` 语句控制代码
-
-
-
-
-
-## 第 4 章 插件拥有变量、函数和关键字 • 46
-
 Java 确实试图防止你将苹果和橘子混为一谈。虽然它不知道你正在将一个 `int` 用作“人类年龄”，但它知道 `int`、`float`、`String` 等之间的区别。它不会允许你混淆这些类型。如果你声明了一个应该存储整数的变量，你就不能尝试向其中存储一个 `String`。这将抛出错误：
 
 ```java
@@ -1442,14 +1153,14 @@ String answer = 42; // 错误！
 ```java
 String str = "1066";
 int value = Integer.parseInt(str);
-// value 没有被设置为数字 1066
+// value 现在被设置为数字 1066
 ```
 
 所以你可以进行转换，但你必须自己完成：Java 不会为你猜测。常见类型转换的列表（包括我们在这里没有涵盖的）请参见附录 5 “速查表”，第 241 页。
 
 让我们试一下。
 
-## 插件：BuildAHouse
+### 插件：BuildAHouse
 
 我为你准备好了一个插件：你只需要声明变量，就可以执行 `buildahouse` 命令。
 
@@ -1459,13 +1170,12 @@ int value = Integer.parseInt(str);
 $ cd Desktop
 $ cd code/BuildAHouse/src/buildahouse
 $ ls
-```
-
 BuildAHouse.java  MyHouse.java
+```
 
 你将要编辑 `MyHouse.java` 文件，它是整个插件中的一小部分（不要看其他的！）。它现在看起来是：
 
-### BuildAHouse/src/buildahouse/MyHouse.java
+#### BuildAHouse/src/buildahouse/MyHouse.java
 
 ```java
 package buildahouse;
@@ -1519,7 +1229,7 @@ Completed Successfully.
 
 砰！你现在进入了你全新的、防苦力的房子，它是根据你通过 `width` 和 `height` 变量指定的精确尺寸建造的。顺便说一下，右键点击可以打开门。
 
-## 不同类型的数字
+### 不同类型的数字
 
 Java 区分了整数（没有小数点，如 8）和带有带小数部分的浮点数（带有小数点，如 10.125）。
 
@@ -1539,16 +1249,15 @@ Java 区分了整数（没有小数点，如 8）和带有带小数部分的浮�
 3.1415f // 现在它是 float，而不是 double。
 ```
 
+
+
 我们稍后需要使用 `float` 来播放音效，这是 Canary 插件设置所需的。（等一下，文本里写的是 "Canary"，但通常是 "plugin"）。
 
+在 `BuildAHouse` 插件中，我有一堆你没看到的代码，它们实际上执行了盖房子的工作，而你只需要声明几个变量。但现在，你将从零开始创建一个整个插件，而且完全由你自己完成。
 
+为了让事情尽可能简单，起初你只需要打印一些值。事实上，让我们把这个插件称为 `Simple` 插件。
 
-
-在 BuildAHouse 插件中，我有一堆你没看到的代码，它们实际上执行了盖房子的工作，而你只需要声明几个变量。但现在，你将从零开始创建一个整个插件，而且完全由你自己完成。
-
-为了让事情尽可能简单，起初你只需要打印一些值。事实上，让我们把这个插件称为 Simple 插件。
-
-首先，你需要为新插件创建一个 `Simple` 目录，其中包含一个 `src/` 子目录、一个 `src/simple` 子目录，以及 `Canary.inf`、`Manifest.txt` 和 `build.sh`，就像我们在 HelloWorldZ 中做的那样。
+首先，你需要为新插件创建一个 `Simple` 目录，其中包含一个 `src/` 子目录、一个 `src/simple` 子目录，以及 `Canary.inf`、`Manifest.txt` 和 `build.sh`，就像我们在 `HelloWorldZ` 中做的那样。
 
 我已经在 `Desktop/` 下提供了一个 `Simple` 目录供你参考，但除非卡住了，否则不要看。你将在 `Desktop` 下创建你自己的 `Simple`。
 
@@ -1570,9 +1279,9 @@ $ ls
 Simple.java
 ```
 
-`Simple.java` 顾其实名；它实际上并没有做任何事情。
+`Simple.java` 顾名思义；它实际上并没有做任何事情。
 
-你将在标有“在此行之后放置你的代码”和“……在此在此行之前完成你的代码”的地方之间添加一些代码，正如在下方列表底部所示。
+你将在标有“在此行之后放置你的代码”和“……在此行之前完成你的代码”的地方之间添加一些代码，正如在下方列表底部所示。
 
 在你的文本编辑器中打开此文件（`Desktop/src/simple/Simple.java`），准备好打字。
 
@@ -1588,20 +1297,22 @@ import net.canarymod.commands.*;
 import net.canarymod.chat.MessageReceiver;
 import net.canarymod.api.entity.living.humanoid.Player;
 import com.pragprog.amine.ez.EZPlugin;
-```
 
-public class Simple extends EZPlugin{
+public class Simple extends EZPlugin {
 
   @Command(aliases = {"simple"},
-  description = "显示简单的变量赋值",
-  permissions = {""},
-  tooltip = "/simple")
+    description = "显示简单的变量赋值",
+    permissions = {""},
+    tooltip = "/simple")
   public void simpleCommand(MessageReceiver caller, String[] parameters) {
+
     if (caller instanceof Player) {
       Player me = (Player)caller;
+
       // 在此行之后放置你的代码：
 
       // ...在此行之前完成你的代码。
+
     }
   }
 }
@@ -1609,9 +1320,9 @@ public class Simple extends EZPlugin{
 
 现在先不用管那些额外的文本。目前只需在所示位置的行上放置新代码，它就能正常工作。以下是你需要做的：
 
-首先，在文件的顶部、其他 import 语句之后添加两个 `import` 语句。输入它们：
+首先，在文件的顶部、其他 `import` 语句之后添加两个 `import` 语句。输入它们：
 
-```
+```java
 import net.canarymod.api.world.effects.SoundEffect;
 import net.canarymod.api.world.position.Location;
 ```
@@ -1626,11 +1337,11 @@ import net.canarymod.api.world.position.Location;
 6. 创建一个名为 `myName` 的字符串，并设置为你的名字。
 7. 使用 `me.chat(string msg)` 向玩家发送聊天消息来显示这些值中的每一个。例如，显示你的名字，类型如下：
 
-使用字符串（如 "My name is"）和加号陈述每条消息。然后添加你的变量。忘记在每个语句的末尾加上分号。
+使用字符串（如 "My name is"）和加号陈述每条消息。然后添加你的变量。不要忘记在每个语句的末尾加上分号。
 
 最后，添加代码在你的所在位置播放音效，使用刚刚声明的浮点数值：
 
-```
+```java
 Location loc = me.getLocation();
 playSound(loc, SoundEffect.Type.GHAST_SCREAM, volume, pitch);
 ```
@@ -1658,12 +1369,9 @@ Deploying jar to /Users/andy/Desktop/server/plugins... evenCompleted Successfull
 4. 重新连接你的 Minecraft 客户端。
 5. 在客户端中输入 `/simple` 并享受音效。
 
+`getServer()` 调用返回某些内容（实际上是一个 `Server`）。一旦我们拥有它，就可以调用该 `Server` 的任何函数。在这种情况下，我们正在调用 `Server` 的 `broadcastMessage()` 函数，并传入一个名为 `msg` 的字符串参数。请看这一行：
 
-
-
-`getServer()` 调用返回某些内容（实际上是一个 `Server`）。一旦我们拥有它，就可以调用该 Server 的任何函数。在这种情况下，我们正在调用 Server 的 `broadcastMessage()` 函数，并传入一个名为 `msg` 的字符串参数。请看这一行：
-
-```
+```java
 Canary.instance().getServer().broadcastMessage(msg);
 ```
 
@@ -1671,7 +1379,7 @@ Canary.instance().getServer().broadcastMessage(msg);
 
 为了让它更清晰，你可以将这一链式调用拆分成独立的部分，看起来像这样：
 
-```
+```java
 instance = Canary.instance();
 server = instance.getServer();
 server.broadcastMessage(msg);
@@ -1682,8 +1390,7 @@ server.broadcastMessage(msg);
 你可以自己定义函数。这里有一个定义名为 `castIntoBlackHole` 新函数的示例。仔细看，因为你之后将自己操作这个。
 
 ```java
-public static void castIntoBlackHole(String playerName)
-{
+public static void castIntoBlackHole(String playerName) {
     // 在这里对玩家做一些有趣的操作...
 }
 ```
@@ -1702,8 +1409,7 @@ public static void castIntoBlackHole(String playerName)
 这是一个返回值的函数示例；它会将你给它的任何数字三倍：
 
 ```java
-public static double multiplyThree(double amt)
-{
+public static double multiplyThree(double amt) {
     double result = amt * 3.0;
     return result;
 }
@@ -1730,36 +1436,37 @@ public static long howlong(int years) {
 
 该函数将接受年份并返回一个 `long` 类型的秒数（一个超大整数）。我们将稍微作个弊来使其变得简单，将年份转换为秒。（如果你需要提示，请查看脚注）⁴
 
-你将此函数添加到 Simple 插件中，并调用该函数来打印它的值，就像我们之前处理你的名字和年龄的那样。
+你将此函数添加到 `Simple` 插件中，并调用该函数来打印它的值，就像我们之前处理你的名字和年龄的那样。
 
 在顶部箭头指向的地方定义函数：
 
 ```java
-17 import net.catamynod.api.world.position.Location;
-18 import com.praprog.ahmine.ez.EZPlugin;
+17 import net.canarymod.api.world.position.Location;
+18 import com.pragprog.amine.ez.EZPlugin;
+
 19
 20 public class MySimple extends EZPlugin {
-21     @Command(aliases = { "mysimple"},
+21     @Command(aliases = { "mysimple" },
 22         description = "Displays Andy's simple var",
-23         permissions = { ""},
+23         permissions = { "" },
 24         toolTip = "/mysimple")
-25 public void mysimpleCommand(MessageReceiver caller,
+25     public void mysimpleCommand(MessageReceiver caller,
 26     if (caller instanceof Player) {
 27         Player me = (Player)caller;
 28         // 在此行之后放置你的代码：
-29
-30         int myAge = 99;
-31         int myAgeDoubled = myAge * 2;
-32         float volume = 0.1f;
-33         float pitch = 1.0f;
-34         double dayOnIO = 152853.5047;
-35         String myName = "Andy Hunt";
-36
-37         me.chat("My age " + myAge);
-38         me.chat("My age doubled " + myAgeDoubled);
+
+29         int myAge = 99;
+30         int myAgeDoubled = myAge * 2;
+31         float volume = 0.1f;
+32         float pitch = 1.0f;
+33         double dayOnIo = 152853.5047;
+34         String myName = "Andy Hunt";
+
+35         me.chat("My age " + myAge);
+36         me.chat("My age doubled " + myAgeDoubled);
 ```
 
-并在你的光标所在处（即第二个箭头处）将其添加到函数中。将其赋值给超大整数（long）并传入一个年龄（我在这里使用 10），如下所示：
+并在你的光标所在处（即第二个箭头处）将其添加到函数中。将其赋值给超大整数（`long`）并传入一个年龄（我在这里使用 10），如下所示：
 
 ```java
 long secondsOld = howlong(10);
@@ -1767,9 +1474,6 @@ long secondsOld = howlong(10);
 
 然后将其打印给玩家，就像其他的 `chat()` 调用一样。
 
-
-
-
 # 第 4 章 插件拥有变量、函数和关键字 • 62
 
 这就像现实世界一样。我们一直都在运行 "if" 语句。如果你的年龄 >= 16，你就被允许开车。如果门没锁，你就可以打开它，否则打不开。如果发送给 Minecraft 的命令等于 "hello"，就发送一条消息。如果你的健康值降为 0，你就死了。
@@ -1777,19 +1481,19 @@ long secondsOld = howlong(10);
 这在 Java 中看起来是这样的：
 
 ```java
-if (something)
+if (something) {
   // 执行这段代码...
 }
 ```
 
-括号中的部分 (something) 可以是任何结果为真或假的内容；换句话说，这是一个布尔条件（稍后我们会详细介绍这一点）。
+括号中的部分 `(something)` 可以是任何结果为真或假的内容；换句话说，这是一个布尔条件（稍后我们会详细介绍这一点）。
 
 如果你需要，你也可以编写当某个条件为真时运行的代码，并指定当它为假时运行什么：
 
 ```java
-if (something)
+if (something) {
   // 如果 something 为真，运行这段代码
-else {
+} else {
   // 如果 something 为假，运行这段代码
 }
 ```
@@ -1804,29 +1508,29 @@ if (myName.equalsIgnoreCase("Notch")) {
 }
 ```
 
-if 语句（无论是否带有 else）对于编程都是至关重要的：通过这种方式让计算机做出决策并假装在“思考”。强大的功能，但用起来非常简单。
+`if` 语句（无论是否带有 `else`）对于编程都是至关重要的：通过这种方式让计算机做出决策并假装在“思考”。强大的功能，但用起来非常简单。
 
 ## 使用布尔条件比较内容
 
-if 语句根据某个条件是否为真来决定运行什么。但什么是真呢？
+`if` 语句根据某个条件是否为真来决定运行什么。但什么是真呢？
 
 除了我们见过的数字和字符串，你还可以创建一个变量来跟踪某个东西是否开启，就像开关一样。在 Minecraft 中，我们将用它来确定各种事情：玩家是否在地面上、一个字符串是否匹配另一个字符串、是使用游戏事件还是忽略它，等等。
 
 ![](img/9f468df40be6924e00c931230bae6b1a_73_0.png)
 
-Java 将这种变量称为布尔（boolean），它可以被赋值为 true 或 false，或者你可以使用任何这些运算符给它赋值数学表达式，所有运算符都会返回 true 或 false：
+Java 将这种变量称为布尔（`boolean`），它可以被赋值为 `true` 或 `false`，或者你可以使用任何这些运算符给它赋值数学表达式，所有运算符都会返回 `true` 或 `false`：
 
 | 运算符 | 描述 |
 | :--- | :--- |
-| == | 等于（两个等号） |
-| != | 不等于 |
-| ! | 取反（所以“非真”为假，“非假”为真） |
-| < | 小于 |
-| > | 大于 |
-| <= | 小于等于 |
-| >= | 大于等于 |
-| && | 与（如果两个都为真，则为真） |
-| || | 或（如果其中一个为真，则为真） |
+| `==` | 等于（两个等号） |
+| `!=` | 不等于 |
+| `!` | 取反（所以“非真”为假，“非假”为真） |
+| `<` | 小于 |
+| `>` | 大于 |
+| `<=` | 小于等于 |
+| `>=` | 大于等于 |
+| `&&` | 与（如果两个都为真，则为真） |
+| `||` | 或（如果其中一个为真，则为真） |
 
 例如，给定这些变量：
 
@@ -1840,21 +1544,23 @@ boolean badone = false;
 
 Java 将计算出这些比较：
 
-- a == 10 为 true
-- b == 6 为 false
-- a < 20 为 true
-- b >= 5 为 true
-- a > 100 为 false
-- result 为 true
-- result 为 false（读作 "not result"——! 返回值的反面）
-- result && badone 为 false（读作 "and"——只有当两者都为真时才为真）
-- result || badone 为 true（读作 "or"——只要其中一个为真即为真）
+- `a == 10` 为 `true`
+- `b == 6` 为 `false`
+- `a < 20` 为 `true`
+- `b >= 5` 为 `true`
+- `a > 100` 为 `false`
+- `result` 为 `true`
+- `!result` 为 `false`（读作 "not result"——`!` 返回值的反面）
+- `result && badone` 为 `false`（读作 "and"——只有当两者都为真时才为真）
+- `result || badone` 为 `true`（读作 "or"——只要其中一个为真即为真）
 
 但这一个并不是你认为的那个；它不会为真：
 
-h = "Hello"; // 陷阱！
-那一个很棘手。对于字符串和对象（下一章会详细介绍），请使用 equals 函数而不是双等号 (=)，如下所示：
-h.equals("Hello"); // 为 true
+`h = "Hello";` // 陷阱！
+
+那一个很棘手。对于字符串和对象（下一章会详细介绍），请使用 `equals` 函数而不是双等号 (`==`)，如下所示：
+
+`h.equals("Hello");` // 为 `true`
 
 - * 以英国数学家乔治·布尔（George Boole）的命名命名，他在 1800 世纪提出了这些思想。
 
@@ -1864,7 +1570,7 @@ h.equalsIgnoreCase("HELLO"); // 为 true
 
 ## 使用循环根据条件重复
 
-当你需要运行一段固定次数的代码时，你会使用 for 循环。但如果你不确定需要循环多少次呢？如果你想只要某个其他条件仍然为真就一直循环下去呢？在这种情况下，你将使用 while 循环。while 循环只要布尔条件为真，就会一直执行某段代码：
+当你需要运行一段固定次数的代码时，你会使用 `for` 循环。但如果你不确定需要循环多少次呢？如果你想只要某个其他条件仍然为真就一直循环下去呢？在这种情况下，你将使用 `while` 循环。`while` 循环只要布尔条件为真，就会一直执行某段代码：
 
 ```java
 while (stillHungry) {
@@ -1873,55 +1579,23 @@ while (stillHungry) {
 }
 ```
 
-在某种程度上，它是 if 语句和 for 循环的混合体：它像 for 循环一样循环代码，但只要条件为真，它就会保持循环，像 if 语句那样测试条件。
 
-是的，如果你忘记将值改为 false，while 将永远持续下去，你的整个 Minecraft 服务器将卡死，直到你杀死它或重启或掉电，以最先发生的情况为准。
+
+在某种程度上，它是 `if` 语句和 `for` 循环的混合体：它像 `for` 循环一样循环代码，但只要条件为真，它就会保持循环，像 `if` 语句那样测试条件。
+
+是的，如果你忘记将值改为 `false`，`while` 将永远持续下去，你的整个 Minecraft 服务器将卡死，直到你杀死它或重启或掉电，以最先发生的情况为准。
 
 ## 亲自尝试一下
 
-现在轮到你自己创建一个循环了。让我们回到 ~/Desktop/code/BuildAHouse/src/buildhouse 下的 MyHouse.java，不要只用下面这段代码创建一个房子：
+现在轮到你自己创建一个循环了。让我们回到 `~/Desktop/code/BuildAHouse/src/buildhouse` 下的 `MyHouse.java`，不要只用下面这段代码创建一个房子：
 
 ```java
 BuildHouse.buildMyHouse(width, height);
 ```
 
-写一个运行十次数的循环，在循环体中调用 `buildMyHouse`。这将建造十个房子。你自己的微城市！
+写一个运行十次的循环，在循环体中调用 `buildMyHouse`。这将建造十个房子。你自己的微城市！
 
-编辑 MyHouse.java 并添加：
-
-```java
-BuildHouse.buildMyHouse(width, height);
-```
-
-编辑 MyHouse.java 并添加一个运行十次的循环，在循环体中调用 `buildMyHouse`。这将建造十个房子。你自己的微城市！
-
-编辑 MyHouse.java 并添加：
-
-```java
-for (int i = 0; i < 10; i++) {
-  BuildHouse.buildMyHouse(width, height);
-}
-```
-
-编辑 MyHouse.java 并添加一个运行十次的循环，在循环体中调用 `buildMyHouse`。这将建造十个房子。你自己的微城市！
-
-编辑 MyHouse.java 并添加：
-
-```java
-for (int i = 0; i < 10; i++) {
-  BuildHouse.buildMyHouse(width, height);
-}
-```
-
-编辑 MyHouse.java 并添加一个运行十次的循环，在循环体中调用 `buildMyHouse`。这将建造十个房子。你自己的微城市！现在是时候让你创建一个循环了。让我们回到 ~/Desktop/code/BuildAHouse/src/buildhouse 下的 MyHouse.java，不要只用下面这段代码创建一个房子：
-
-```java
-BuildHouse.buildMyHouse(width, height);
-```
-
-写一个运行十次数的循环，在循环体中调用 `buildMyHouse`。这将建造十个房子。你自己的微城市！
-
-编辑 MyHouse.java 并添加：
+编辑 `MyHouse.java` 并添加：
 
 ```java
 for (int i = 0; i < 10; i++) {
@@ -1936,19 +1610,19 @@ for (int i = 0; i < 10; i++) {
 这在 Java 中看起来是这样的：
 
 ```java
-if (something)
+if (something) {
   // 执行这段代码...
 }
 ```
 
-括号中的部分 (something) 可以是任何结果为真或假的内容；换句话说，这是一个布尔条件（稍后我们会详细介绍这一点）。
+括号中的部分 (`something`) 可以是任何结果为真或假的内容；换句话说，这是一个布尔条件（稍后我们会详细介绍这一点）。
 
 如果你需要，你也可以编写当某个条件为真时运行的代码，并指定当它为假时运行什么：
 
 ```java
-if (something)
+if (something) {
   // 如果 something 为真，运行这段代码
-else {
+} else {
   // 如果 something 为假，运行这段代码
 }
 ```
@@ -1963,29 +1637,29 @@ if (myName.equalsIgnoreCase("Notch")) {
 }
 ```
 
-if 语句（无论是否带有 else）对于编程都是至关重要的：通过这种方式让计算机做出决策并假装在“思考”。强大的功能，但用起来非常简单。
+`if` 语句（无论是否带有 `else`）对于编程都是至关重要的：通过这种方式让计算机做出决策并假装在“思考”。强大的功能，但用起来非常简单。
 
 ## 使用布尔条件比较内容
 
-if 语句根据某个条件是否为真来决定运行什么。但什么是真呢？
+`if` 语句根据某个条件是否为真来决定运行什么。但什么是真呢？
 
 除了我们见过的数字和字符串，你还可以创建一个变量来跟踪某个东西是否开启，就像开关一样。在 Minecraft 中，我们将用它来确定各种事情：玩家是否在地面上、一个字符串是否匹配另一个字符串、是使用游戏事件还是忽略它，等等。
 
 ![](img/9f468df40be6924e00c931230bae6b1a_73_0.png)
 
-Java 将这种变量称为布尔（boolean），它可以被赋值为 true 或 false，或者你可以使用任何这些运算符给它赋值数学表达式，所有运算符都会返回 true 或 false：
+Java 将这种变量称为布尔（`boolean`），它可以被赋值为 `true` 或 `false`，或者你可以使用任何这些运算符给它赋值数学表达式，所有运算符都会返回 `true` 或 `false`：
 
 | 运算符 | 描述 |
-| |--- | :--- |
-| == | 等于（两个等号） |
-| != | 不等于 |
-| ! | 取反（所以“非真”为假，“非假”为真） |
-| < | 小于 |
-| > | 大于 |
-| <= | 小于等于 |
-| >= | 大于等于 |
-| && | 与（如果两个都为真，则为真） |
-| || | 或（只要其中一个为真，则为真） |
+| :--- | :--- |
+| `==` | 等于（两个等号） |
+| `!=` | 不等于 |
+| `!` | 取反（所以“非真”为假，“非假”为真） |
+| `<` | 小于 |
+| `>` | 大于 |
+| `<=` | 小于等于 |
+| `>=` | 大于等于 |
+| `&&` | 与（如果两个都为真，则为真） |
+| `||` | 或（只要其中一个为真，则为真） |
 
 例如，给定这些变量：
 
@@ -1999,21 +1673,22 @@ boolean badone = false;
 
 Java 将计算出这些比较：
 
-- a == 10 为 true
-- b == 6 为 false
-- a < 20 为 true
-- b >= 5 为 true
-- a > 100 为 false
-- result 为 true
-- result 为 false（读作 "not result"——! 返回值的反面）
-- result && badone 为 false（读作 "and"——只有当两者都为真时才为真）
-- result || badone 为 true（读作 "or"——只要其中一个为真即为真）
+- `a == 10` 为 `true`
+- `b == 6` 为 `false`
+- `a < 20` 为 `true`
+- `b >= 5` 为 `true`
+- `a > 100` 为 `false`
+- `result` 为 `true`
+- `!result` 为 `false`（读作 "not result"——`!` 返回值的反面）
+- `result && badone` 为 `false`（读作 "and"——只有当两者都为真时才为真）
+- `result || badone` 为 `true`（读作 "or"——只要其中一个为真即为真）
 
 但这一个并不是你认为的那个；它不会为真：
 
-h = "Hello"; // 陷阱！
-那一个很棘手。对于字符串和对象（下一章会详细介绍），请使用 equals 函数而不是双等号 (=)，如下所示：
-h.equals("Hello"); // 为 true
+`h = "Hello";` // 陷阱！
+
+那一个很棘手。对于字符串和对象（下一章会详细介绍），请使用 `equals` 函数而不是双等号 (`==`)，如下所示：
+`h.equals("Hello");` // 为 `true`
 
 - * 以英国数学家乔治·布尔（George Boole）的命名命名，他在 1800 世纪提出了这些思想。
 
@@ -2023,7 +1698,7 @@ h.equalsIgnoreCase("HELLO"); // 为 true
 
 ## 使用循环根据条件重复
 
-当你需要运行一段固定次数的代码时，你会使用 for 循环。但如果你不确定需要循环多少次呢？如果你想只要某个其他条件仍然为真就一直循环下去呢？在这种情况下，你将使用 while 循环。while 循环只要布尔条件为真，就会一直执行某段代码：
+当你需要运行一段固定次数的代码时，你会使用 `for` 循环。但如果你不确定需要循环多少次呢？如果你想只要某个其他条件仍然为真就一直循环下去呢？在这种情况下，你将使用 `while` 循环。`while` 循环只要布尔条件为真，就会一直执行某段代码：
 
 ```java
 while (stillHungry) {
@@ -2032,21 +1707,21 @@ while (stillHungry) {
 }
 ```
 
-在某种程度上，它是 if 语句和 for 循环的混合体：它像 for 循环一样循环代码，但只要条件为真，它就会保持循环，像 if 语句那样测试条件。
+在某种程度上，它是 `if` 语句和 `for` 循环的混合体：它像 `for` 循环一样循环代码，但只要条件为真，它就会保持循环，像 `if` 语句那样测试条件。
 
-是的，如果你忘记将值改为 false，while 将永远持续下去，你的整个 Minecraft 服务器将卡死，直到你杀死它或重启或掉电，以最先发生的情况为准。
+是的，如果你忘记将值改为 `false`，`while` 将永远持续下去，你的整个 Minecraft 服务器将卡死，直到你杀死它或重启或掉电，以最先发生的情况为准。
 
 ## 亲自尝试一下
 
-现在是时候让你自己创建一个循环了。让我们回到 ~/Desktop/code/BuildAHouse/src/buildhouse 下的 MyHouse.java，不要只用下面这段代码创建一个房子：
+现在是时候让你自己创建一个循环了。让我们回到 `~/Desktop/code/BuildAHouse/src/buildhouse` 下的 `MyHouse.java`，不要只用下面这段代码创建一个房子：
 
 ```java
 BuildHouse.buildMyHouse(width, height);
 ```
 
-写一个运行十次数的循环，在循环体中调用 `buildMyHouse`。这将建造十个房子。你自己的微城市！
+写一个运行十次的循环，在循环体中调用 `buildMyHouse`。这将建造十个房子。你自己的微城市！
 
-编辑 MyHouse.java 并添加：
+编辑 `MyHouse.java` 并添加：
 
 ```java
 for (int i = 0; i < 10; i++) {
@@ -2054,13 +1729,9 @@ for (int i = 0; i < 10; i++) {
 }
 ```
 
-
-
-
-
 ## 为什么要费劲使用对象？
 
-想象你是你自己宇宙的主神。你花费了几个纪元来排列每一个夸克、每一个原子、每一个分子，一直到行星和星系，完全按照你的意愿来布置。现在，万物运转起来，而你必须同时负责整个宇宙中的每一个亚原子粒子。作为一个孩童般的生物，试图通过处理每一个电子、每个夸克或每个分子来维持宇宙的运行，这工作量太大了了（更不用说极其无聊了）。
+想象你是你自己宇宙的主神。你花费了几个纪元来排列每一个夸克、每一个原子、每一个分子，一直到行星和星系，完全按照你的意愿来布置。现在，万物运转起来，而你必须同时负责整个宇宙中的每一个亚原子粒子。作为一个孩童般的生物，试图通过处理每一个电子、每个夸克或每个分子来维持宇宙的运行，这工作量太大了（更不用说极其无聊了）。
 
 因此，你根据问题发生的规模来处理问题。如果是某颗行星的位置不对，你就移动那颗行星。如果你需要调整一个星系，你就调整那个星系——而不是去处理每一个行星，更不用去处理每个系统、每个行星上的每一个生命形式。
 
@@ -2070,19 +1741,19 @@ for (int i = 0; i < 10; i++) {
 
 这就是我们使用对象来编写代码的原因。这是一种组织数据（在变量中）和行为（在函数中）的方法，当我们需要处理一头牛时，可以像对待牛一样对待它，而不需要处理这头牛的数百万个原子——或者一个生物群、一个世界或一把火炬。
 
-更好的是，我们可以编写代码让只有 `Cow`（牛）拥有函数和数据需求。没有什么比杂乱的函数到处乱跑更糟糕了——你可能会得到一个会锚定的火炬，或者一头会发光的牛。尽管如此，你还是会一大堆函数，而你并不确定哪个函数可以与哪些数据包配合。
+更好的是，我们可以编写代码让只有 `Cow`（牛）拥有函数和数据需求。没有什么比杂乱的函数到处乱跑更糟糕了——你可能会得到一个会锚定的火炬，或者一头会发光的牛。尽管如此，你还是会有一大堆函数，而你并不确定哪个函数可以与哪些数据包配合。
 
 例如，Minecraft 中的一个 `Cow` 对象有很多可以调用的函数。这里是其中几个：
 
-- teleport(Location location)
-- setFireTicks(int ticks)
-- setAge()
-- getAge()
-- swingArm()
+- `teleport(Location location)`
+- `setFireTicks(int ticks)`
+- `setAge()`
+- `getAge()`
+- `swingArm()`
 
 它还维护了一些内部状态：一些变量用来跟踪单只牛的位置、它是否在着火、它的年龄等。
 
-这些都是你通过 `Cow` 对象可以做的事情。但它们对于玩家（player）、箭（arrow）或树（tree）来说就没有意义了。
+这些都是你通过 `Cow` 对象可以做的事情。但它们对于玩家（`Player`）、箭（`Arrow`）或树（`Tree`）来说就没有意义了。
 
 你想把关于牛的事放在 `Cow` 对象中，把关于箭的事放在 `Arrow` 对象中，以此类推。如果你不这样做，事情就会变得异常混乱，你最终可能会写出一堆你再也无法理解或处理的代码。这实际上是一个良好的习惯问题，就像把牛奶保存在冰箱的牛奶盒里，而不是储存在衣柜的椒饼干袋里。继续用这个比喻，你甚至会把玉米片和条豆片混在一起。
 
@@ -2100,33 +1771,30 @@ for (int i = 0; i < 10; i++) {
 
 也就是说，每个玩家都将拥有相同的变量集合（名字、生命值、位置等）以及你可能想要运行的相同函数（设置该玩家的生命值、将玩家传送到新位置之类的）。这正是对象派上用场的地方。你会在 Java 中创建一个对象来代表系统中的每个玩家。你会编写代码对玩家进行操作，无论你当时正在使用哪个玩家，该代码都有效。这正是 Minecraft 开发人员所做的。其工作原理如下：
 
-在 Java 中，你可以定义一组变量和许多使用这些变量的代码，这相当于定义了一个食谱。然后你可以创建并使用从该食谱构建的对象。Java 将这种食谱称为 ***class***（类）。从那个类食谱中，Java 将创建对象。看下图；你有一个示例 `Player`（玩家）类的几个变量和一些函数，以及它可以创建的一些对象。
+在 Java 中，你可以定义一组变量和许多使用这些变量的代码，这相当于定义了一个食谱。然后你可以创建并使用从该食谱构建的对象。Java 将这种食谱称为 `class`（类）。从那个类食谱中，Java 将创建对象。看下图；你有一个示例 `Player`（玩家）类的几个变量和一些函数，以及它可以创建的一些对象。
 
 | Player |
 | :--- |
-| int health; |
-| String name; |
-| Location location; |
-| setHealth(); |
-| teleportTo(); |
-| getName(); |
+| `int health;` |
+| `String name;` |
+| `Location location;` |
+| `setHealth();` |
+| `teleportTo();` |
+| `getName();` |
 
 类就像一个食谱……它可以制作出一堆对象。
 
 ![](img/9f468df40be6924e00c931230bae6b1a_79_0.png)
 
-
-
-
 你还可以运行一些有趣的命令。例如，你可以像 Fred 一样执行命令：
 
-```
-fred.executeCommand("tell mary179 I love you")
+```java
+fred.executeCommand("tell mary179 I love you");
 ```
 
-现在，Mary 会认为是 Fred 给她发了情信。让我们玩玩 Fred 的位置（Location），看看他还能制造什么恶作剧。
+现在，Mary 会认为是 Fred 给她发了情信。让我们玩玩 Fred 的位置（`Location`），看看他还能制造什么恶作剧。
 
-```
+```java
 Location where = fred.getLocation();
 ```
 
@@ -2136,7 +1804,7 @@ Location where = fred.getLocation();
 
 你也可以从零创建一个新位置：
 
-```
+```java
 double x, y, z;
 x = 10;
 y = 0;
@@ -2146,7 +1814,7 @@ Location whereNow = new Location(x, y, z);
 
 或者一步到位：
 
-```
+```java
 Location whereNow = new Location(10, 0, 10);
 ```
 
@@ -2158,7 +1826,7 @@ Location whereNow = new Location(10, 0, 10);
 
 现在，有了位置后，你可以把 Fred 瞬间带走了：
 
-```
+```java
 fred.teleportTo(whereNow);
 ```
 
@@ -2180,7 +1848,9 @@ fred.teleportTo(whereNow);
 
 ```java
 PlayerStuff/src/playerstuff/PlayerStuff.java
+
 package playerstuff;
+
 import net.canarymod.plugin.Plugin;
 import net.canarymod.logger.Logman;
 import net.canarymod.command.canary;
@@ -2207,24 +1877,39 @@ public void playerStuffCommand(MessageReceiver caller, String[] parameters) {
         String msg = "Your display name is " + me.getName();
         me.chat(msg);
         me.getWorld().setRaining(true);
-        me.getWorld().setRainTime(100); // 5 secs
-        float exp = me.getX();
-        int food = me.getHunger();
-        float health = me.getHealth();
-        Location loc = me.getLocation();
+```
 
-        me.chat("your experience points are " + exp + ");
-        me.chat("food is " + food + ");
-        me.chat("health is " + health + ");
-        me.chat("you are at " + printLoc(loc) + ");
-        me.chat("water falls from the sky");
-    }
-}
+
+
+## 第 6 章 添加聊天命令、位置与目标
+
+### 插件：PlayerStuff
+
+```java
+me.getWorld().setRainTime(100); // 5 secs
+
+float exp = me.getX();
+
+int food = me.getHunger();
+
+float health = me.getHealth();
+
+Location loc = me.getLocation();
+
+me.chat("your experience points are " + exp + ");
+
+me.chat("food is " + food + ");
+
+me.chat("health is " + health + ");
+
+me.chat("you are at " + printLoc(loc) + ");
+
+me.chat("water falls from the sky");
 ```
 
 现在安装它：
 
-```
+```bash
 $ cd Desktop
 $ cd code/PlayerStuff
 $ ./build.sh
@@ -2232,7 +1917,7 @@ $ ./build.sh
 
 重启你的服务器并连接你的 Minecraft 客户端。
 
-当你从 Minecraft 客户端输入命令 "/whoami" 时会发生什么？
+当你从 Minecraft 客户端输入命令 `/whoami` 时会发生什么？
 
 这是我的结果：
 
@@ -2249,24 +1934,18 @@ $ ./build.sh
 <FindyHunt>and you are not sleeping.
 ```
 
+---
 
+### 插件：SkyCmd
 
-
-## 第 6 章.添加聊天命令、位置与目标 • 80
-
-除了插件本身，Canary 还需要一个插件的配置文件，命名为 `Canary.json`。你在第 35 页（也就是我们第一次构建插件时）已经看到过关于这个文件的描述了。它告诉服务器关于你的插件的一些基本信息，以便服务器能够加载它。
-
-有了该配置文件和你的代码，Minecraft 服务器就可以像游戏的其他任何部分一样运行你的插件了。
-
-## 插件：SkyCmd
-
-我们将创建一个名为 `SkyCmd` 的新插件。在其中，我们将创建一个命令名称，该命令将让所有生物（而非玩家）飞到空中 50 格高处。这在夜晚当有骨骼和爬行者出没时非常实用。
+我们将创建一个名为 `SkyCmd` 的新插件。在其中，我们将创建一个命令名称，该命令将让所有生物（而非玩家）飞到空中 50 格高处。这在夜晚当有骷髅和爬行者出没时非常实用。
 
 以下是完整的源文件：
 
 ```java
-SkyCmd/src/skycmd/SkyCmd.java
+// SkyCmd/src/skycmd/SkyCmd.java
 package skycmd;
+
 import net.canarymod.plugin.Plugin;
 import net.canarymod.logger.Logman;
 import net.canarymod.Canary;
@@ -2279,19 +1958,21 @@ import java.util.List;
 import com.pragprog.ahme.EZPlugin;
 
 public class SkyCmd extends EZPlugin {
+
     @Command(aliases = { "sky" },
         description = "Fling all creatures into the air",
         permissions = { "" },
         toolTip = "sky")
-    public void skyCommand(MessageReceiver receiver, String[] parameters) {
+    public void skyCommand(MessageReceiver caller, String[] parameters) {
+
         if (caller instanceof Player) {
-            Player me = (Player)caller;
+            Player me = (Player) caller;
             List<LivingEntity> list = me.getWorld().getEntityLivingList();
             for (Entity target : list) {
                 if (!target instanceof Player) {
                     Location loc = target.getLocation();
                     double y = loc.getY();
-                    loc.setY(y+50);
+                    loc.setY(y + 50);
                     target.teleportTo(loc);
                 }
             }
@@ -2302,13 +1983,11 @@ public class SkyCmd extends EZPlugin {
 
 将此与我们最初非常简单的 `HelloWorld.java` 文件进行对比。注意最顶部，`package` 语句和后面的 `public class` 语句现在指向的是 `SkyCmd` 而不是 `HelloWorld`。
 
-让我们仔细看看插件如何处理像 `/sky` 这样的聊天命令。
-
-## 处理聊天命令
+### 处理聊天命令
 
 `@Command` 部分告诉系统此函数 `skyCommand` 负责处理 `/sky` 命令。也就是说，当玩家输入 `/sky` 命令时，你的 `skyCommand` 函数将被调用。
 
-我们我们需要检查的第一点有点笨拙；证明带我们这里的 `MessageReceiver` 可能不是一个 `Player`（玩家）。它可能是一个 `Player` 对象，或者谁知道呢。我们想要确保它确实是一个 `Player`，所以我们将使用 Java 关键字 `instanceof` 来进行显式检查。这会测试该对象是否真的是一个 `Player`。如果是，我们将开始执行聊天的大部分。（如果不是 `Player`，那么它可能是一个控制台命令，如果你允许的话）。
+我们需要检查的第一点有点笨拙；证明带我们这里的 `MessageReceiver` 可能不是一个 `Player`（玩家）。它可能是一个 `Player` 对象，或者谁知道呢。我们想要确保它确实是一个 `Player`，所以我们将使用 Java 关键字 `instanceof` 来进行显式检查。这会测试该对象是否真的是一个 `Player`。如果是，我们将开始执行聊天的大部分。（如果不是 `Player`，那么它可能是一个控制台命令，如果你允许的话）。
 
 `skyCommand` 函数以另一段魔法代码开始，就像我们在第 5 章第 67 页“插件拥有对象”中使用的父/子配方一样。现在我们已经确认了该变量确实是该类型（而不仅仅是 `MessageReceiver` 或任何其他父类或子类），可以使用强制转换符将其转换为该类型。
 
@@ -2318,37 +1997,34 @@ public class SkyCmd extends EZPlugin {
 
 我们将在下一章详细介绍列表的细节，但我们先看 `Location` 对象是如何工作的。在这种情况下，我们在遍历循环时，将变量 `target` 设置为实体中的每一项。如果目标不是玩家，我们就想将其抛向天空，我们通过 `teleportTo()` 修改其位置来实现。
 
-## 第 6 章.添加聊天命令、位置与目标 • 82
+### 使用 Minecraft 坐标
 
 `Location` 对象非常重要——这是你获取和设置 Minecraft 中任何物体坐标的方法。以下是我们如何操作位置来将生物抛向空中。
-
-## 使用 Minecraft 坐标
 
 `Location` 存储三个坐标：x、y 和 z，如下所示。
 
 ![](img/9f468df40be6924e00c931230bae6b1a_92_0.png)
 
-x 值从西（负）向向东（正）移动，z 坐标从北（负）向向南（正）移动，y 则从下（负）向向（正）移动，其中 y 值为 0 位于基岩底层和 64（海平面）之间。这意味着要让一个玩家或其他实体飞向空中，你需要向 y 值增加一些数值。
+x 值从西（负）向东（正）移动，z 坐标从北（负）向南（正）移动，y 则从下（负）向上（正）移动，其中 y 值为 0 位于基岩底层和 64（海平面）之间。这意味着要让一个玩家或其他实体飞向空中，你需要向 y 值增加一些数值。
 
 我们将从 `loc` 获取每个目标的当前值并将其保存为 `y`。接下来我们将更改它。
 
-（注：原文后续部分存在大量重复的段落，已根据核心逻辑内容完成翻译。）
+---
 
-
-
+### 插件：LavaVision
 
 为了增强视觉效果，我在遍历的每个区块上都添加了一个效果：
 `spawnParticle(b.getLocation(), Particle.Type.LAVSPARK);`
 
-LAVASPARK 在我们的视线线上产生了一组很酷的火花。
+`LAVASPARK` 在我们的视线线上产生了一组很酷的火花。
 
-我还添加了一个音效，使用了 `playSound` 函数，它接收一个 Location（位置）和一个 Sound（音效，如果你需要，还可以指定音量和音调）。
+我还添加了一个音效，使用了 `playSound` 函数，它接收一个 `Location`（位置）和一个 `SoundEffect`（音效，如果你需要，还可以指定音量和音调）。
 `playSound(b.getLocation(), SoundEffect.Type.EXPLODE);`
 
-在 Canary 文档中列出了所有可能的效果：canarymod.api.world.effects.SoundEffect.Type。我选择了 EXPLODE——你可以在之后添加音调和两个数字；它们被指定为 float（浮点数），所以记得加上修符。）这里是完整的代码，包含了迭代器效果：
+在 Canary 文档中列出了所有可能的效果：`canarymod.api.world.effects.SoundEffect.Type`。我选择了 `EXPLODE`——你可以在之后添加音调和两个数字；它们被指定为 `float`（浮点数），所以记得加上修饰符。这里是完整的代码，包含了迭代器效果：
 
 ```java
-LavaVision/src/lavavision/LavaVision.java
+// LavaVision/src/lavavision/LavaVision.java
 package lavavision;
 
 import net.canarymod.plugin.Plugin;
@@ -2369,48 +2045,48 @@ import com.canarymod.amine.ez.EZPlugin;
 public class LavaVision extends EZPlugin {
 
     @Command(aliases = {"lavision"},
-	permissions = {"Explode your target into a ball of lava"},
-	type = "",
-	tip = "/lavision")
-
+        permissions = {"Explode your target into a ball of lava"},
+        type = "",
+        tip = "/lavision")
     public void lavaVisionCommand(MessageReceiver caller, String[] args) {
-		if (caller instanceof Player) {
-			Player me = (Player)caller;
-			BlockIterator sitter = new BlockIterator(new LineTracer(me), true);
-			while (sitter.hasNext()) {
-				Block b = sitter.next();
-				spawnParticle(b.getLocation(), Particle.Type.LAVSPARK);
-				if (b.getType() != BlockType.Air) {
-					b.getWorld().setBlockAt(b.getLocation(), BlockType.Lava);
-					playSound(b.getLocation(), SoundEffect.Type.EXPLODE);
-					break;
-				}
-			}
-		}
-	}
+
+        if (caller instanceof Player) {
+            Player me = (Player) caller;
+            BlockIterator sitter = new BlockIterator(new LineTracer(me), true);
+            while (sitter.hasNext()) {
+                Block b = sitter.next();
+                spawnParticle(b.getLocation(), Particle.Type.LAVSPARK);
+                if (b.getType() != BlockType.Air) {
+                    b.getWorld().setBlockAt(b.getLocation(), BlockType.Lava);
+                    playSound(b.getLocation(), SoundEffect.Type.EXPLODE);
+                    break;
+                }
+            }
+        }
+    }
 }
 ```
 
-```
+```bash
 $ cd Desktop
 $ cd code/LavaVision
 $ ./build.sh
 ```
 
-在我们循环时，会为视线上的每个区块生成一个 LAVASPARK 效果。如果我们碰到了不是空气的物体，就会将该区块的类型岩浆（Lava），播放音效并跳出循环。完成。
+在我们循环时，会为视线上的每个区块生成一个 `LAVASPARK` 效果。如果我们碰到了不是空气的物体，就会将该区块的类型设为岩浆（`Lava`），播放音效并跳出循环。完成。
 
-停止并重启服务器，在 Minecraft 中环顾四周并选择一个目标。输入 /lavision 命令并观察岩浆涌出。
+停止并重启服务器，在 Minecraft 中环顾四周并选择一个目标。输入 `/lavision` 命令并观察岩浆涌出。
 
 ![](img/9f46df40be6924e00c931230bae6b1a_96_0.png)
 
-现在轮到你了！
+### 现在轮到你了！
 
-更改此插件使用的效果。将粒子效果类型从 LAVASARK 更改为其他有趣的类型。所有可用效果类型都列在文档中。
+更改此插件使用的效果。将粒子效果类型从 `LAVASARK` 更改为其他有趣的类型。所有可用效果类型都列在文档中。
 3. https://ci.visualillusions.net/job/CanaryLib/javac/net/canarymod/api/world/effects/Particle.Type.html
 
-接下来，将音效从 EXPLODE 更改为更微妙的，也许是 BURP（嗝声）。音效列在文档中。
+接下来，将音效从 `EXPLODE` 更改为更微妙的，也许是 `BURP`（嗝声）。音效列在文档中。
 
-## 下一步
+### 下一步
 
 在这一章中，你学习了如何向插件添加新命令。现在，你可以开始为现有插件添加你自己的新想法，并处理游戏中的位置和区块。但一旦你开始处理大量位置或大量区块时，你就遇到了一个问题：Java 是如何存储这类列表的？你如何处理可能需要按名称或顺序查找的“数据堆”？
 
@@ -2418,25 +2094,27 @@ $ ./build.sh
 
 简而言之，我们将学习如何跟踪各种事物。
 
-# 你不断成大的工具箱
+---
+
+## 你不断增长的工具箱
 
 ![](img/9f46df40be6924e00c931230bae6b1a_97_0.png)
 
 你现在已经知道如何：
 
 - 使用命令行 shell
-- 使用 Java, javac 进行编译
+- 使用 Java, `javac` 进行编译
 - 运行 Minecraft 服务器
 - 部署插件
 - 连接到本地服务器
 - 使用 Java 变量处理数字和字符串
 - 使用 Java 函数
-- 使用 if, for 和 while 语句
+- 使用 `if`、`for` 和 `while` 语句
 - 使用 Java 对象
-- 使用 import 导入 Java 包
-- 使用 new 创建对象
+- 使用 `import` 导入 Java 包
+- 使用 `new` 创建对象
 - 为插件添加新命令
-- 处理位置（location）对象
+- 处理位置（`Location`）对象
 - 查找区块/实体
 
 4. https://ci.visualillusions.net/job/CanaryLib/javadoc/net/canarymod/api/world/effects/SoundEffect.Type.html
@@ -2447,49 +2125,55 @@ $ ./build.sh
 - 使用可以在类任何地方访问的类级变量
 - 管理数据堆
 
+---
+
 # 第 7 章 数组的使用
 
-变量存在于块内部。我们已经见过它的声明和结束括号（ } 符号）。你无法在此之外程序的任何地方使用这个 msg 变量。你可能在其他地方定义了名为 msg 的变量，但它是完全不同的变量。这个 msg 仅在块内可见并可用。我们说它的作用域是局部的。你在函数定义的参数也被视为局部。在 helloCommand 的声明中：
+变量存在于块内部。我们已经见过它的声明和结束括号（`}` 符号）。你无法在此之外程序的任何地方使用这个 `msg` 变量。你可能在其他地方定义了名为 `msg` 的变量，但它是完全不同的变量。这个 `msg` 仅在块内可见并可用。我们说它的作用域是局部的。你在函数定义的参数也被视为局部。在 `helloCommand` 的声明中：
 
 ```java
-public void helloCommand(MessageReceiver, String[]) {
+public void helloCommand(MessageReceiver caller, String[] args) {
 ```
 
-变量 caller 和参数在该函数内可用，但在其他任何地方都不可见。它们是局部的。大部分只需要局部变量。事实上，局部变量的使用是非常安全的。程序的其他部分无法使用或更改它们，而且清楚地知道哪行代码设置了局部变量的值以及在哪里使用了它。
+变量 `caller` 和参数 `args` 在该函数内可用，但在其他任何地方都不可见。它们是局部的。大部分只需要局部变量。事实上，局部变量的使用是非常安全的。程序的其他部分无法使用或更改它们，而且清楚地知道哪行代码设置了局部变量的值以及在哪里使用了它。
 
-## 全局变量
+### 全局变量
 
 但你可以创建范围更广的变量而不仅仅是局部的（我们正要对插件这样做）。
 
 也许你定义了一个许多不同函数都可以使用的变量。也许整个类，甚至整个程序以及所有的库都可以看到并更改它。我们称之为全局变量。
 
-我们以前用过这个，但你还没有见过。让我们偷看一下 EZPlugin，我们在第一个 HelloWorld 插件中使用了它。顶部的类级静态变量，命名为 logger。
+我们以前用过这个，但你还没有见过。让我们偷看一下 `EZPlugin`，我们在第一个 `HelloWorld` 插件中使用了它。顶部的类级静态变量，命名为 `logger`。
 
 ```java
-EZPlugin/src/com/pragprog/amine/ez/EZPlugin.java
-p EZPlugin extends Plugin implements CommandLine {
-  /* 我们所有插件的样板方法 */
-  public static Logger logger;
+// EZPlugin/src/com/pragprog/amine/ez/EZPlugin.java
+package com.pragprog.amine.ez;
 
-  public EZPlugin() {
-    logger = getLogman();
-  }
+public class EZPlugin extends Plugin implements CommandLine {
+    /* 我们所有插件的样板方法 */
+    public static Logger logger;
 
-  @Override
-  public boolean enable() {
-    logger.info("Starting up");
-  }
+    public EZPlugin() {
+        logger = getLogman();
+    }
+
+    @Override
+    public boolean enable() {
+        logger.info("Starting up");
+    }
 }
 ```
 
-我们调用 getLogman 并请求获取 logger 对象。它将其返回给我们，并将其赋值给名为 logger 的变量。logger 的类型是 Logan,
+
+
+我们调用 `getLogman` 并请求获取 `logger` 对象。它将其返回给我们，并将其赋值给名为 `logger` 的变量。`logger` 的类型是 `Logan`。
 
 这就是文档告诉我们它所需要的样子，但请注意我们在该声明中添加了 `static` 关键字。
 
 **Static**（静态）在这里意味着两点：
 
-- * 你可以使用插件的名字访问变量，而无需插件对象。在这种情况下，`HelloWorld.logger` 可以在任何地方（对象内部或外部）处正常工作。
-- * 静态变量（logger）是所有 `HelloWorld` 对象共有的，并且它的生命周期持续在任何对象中局部变量的生命周期之外。
+* 你可以使用插件的名字访问变量，而无需插件对象。在这种情况下，`HelloWorld.logger` 可以在任何地方（对象内部或外部）处正常工作。
+* 静态变量（`logger`）是所有 `HelloWorld` 对象共有的，并且它的生命周期持续在任何对象中局部变量的生命周期之外。
 
 这意味着 `HelloWorld` 对象内的任何函数都可以创建和销毁，但静态变量仍然会在那里，并记住它们的值。
 
@@ -2513,17 +2197,18 @@ public void myFavoriteFunction() {
 
 以下是我们到目前为止故事的总结：
 
-- * 代码块被写在 `{` 和 `}` 内部。
-- * 在代码块体内部声明的变量对于该代码块是局部的。它们在函数结束并返回时消失。
-- * 函数的参数对于该函数是局部的。
-- * 为 `static` 的变量其寿命比函数内部声明的任何局部变量都长。
-
-这是一个简单的插件，它提供了一个 `/caketower` 命令。它的想法是建造一个蛋糕块塔。但代码中有一个涉及局部变量的细微问题，塔可能不会按照你预期的那样出现。让我们来看看。
+* 代码块被写在 `{` 和 `}` 内部。
+* 在代码块体内部声明的变量对于该代码块是局部的。它们在函数结束并返回时消失。
+* 函数的参数对于该函数是局部的。
+* 为 `static` 的变量其寿命比函数内部声明的任何局部变量都长。
 
 ## 插件：CakeTower
 
+这是一个简单的插件，它提供了一个 `/caketower` 命令。它的想法是建造一个蛋糕块塔。但代码中有一个涉及局部变量的细微问题，塔可能不会按照你预期的那样出现。让我们来看看。
+
 ```java
 CakeTower/src/caketower/CakeTower.java
+
 package caketower;
 
 import net.canarymod.plugin.Plugin;
@@ -2537,6 +2222,7 @@ import net.canarymod.api.world.blocks.BlockType;
 import com.pragrah.amine.ez.EZPlugin;
 
 public class CakeTower extends EZPlugin {
+
     public static int cakeHeight = 100;
 
     @Command(aliases = { "caketower" },
@@ -2544,15 +2230,14 @@ public class CakeTower extends EZPlugin {
              permissions = { "" },
              toolTip = "/caketower")
     public void cakeCommand(MessageReceiver caller, String[] parameters) {
+
         if (caller instanceof Player) {
             Player me = (Player)caller;
             me.chat("cake height is " + cakeHeight); // 打印
             cakeHeight = 50;
-
             int cakeHeight;
             cakeHeight = 5;
             me.chat("2) cake height is " + cakeHeight); // 打印
-
             makeCakes(me);
         }
     }
@@ -2562,7 +2247,7 @@ public class CakeTower extends EZPlugin {
         Location loc = me.getLocation();
         loc.setY(loc.getY() + 2);
         setBlockAt(loc, BlockType.Stone);
-        for(int i = 0; i < cakeHeight;i++) {
+        for(int i = 0; i < cakeHeight; i++) {
             loc.setY(loc.getY() + 1);
             setBlockAt(loc, BlockType.Cake);
         }
@@ -2582,43 +2267,18 @@ public class CakeTower extends EZPlugin {
 
 但在第 31 行，我们又声明了一个同名的变量。从这里开始，直到下一个大括号之前，你使用的都是这个变量。它遮蔽了之前的变量。
 
-你可以在 `HelloWorld.java` 中使用 `logger`：
-
-（注：此处原文似乎有代码缺失或逻辑跳跃，根据上下文翻译如下）
-
-注意，我们不需要任何额外的声明；你只需要在插件中任何你想的地方使用 `logger` 即可。这是一个追踪插件中发生情况的实用技巧：添加一个日志记录语句，你就可以打印出代码该点变量的值。
-
-然而，像这样的全局变量也可能是危险的。
-
-它们为什么是危险的？恰恰因为任何人、任何地方都可以更改该的值。也许你知道他们这么做了，但也许你不知道——从现在起，即使“他们”就是“你”。如果出现任何问题，你将不得不检查系统中的每一段代码，以找出哪部分代码错误地设置了变量，以及为什么要这么做。这是一项巨大的工作，并且创造了许多出错的机会。
-
-但有时你确实需要那样的全局变量。你可能不想让任何人更改它，但可能有很多不同的代码段需要引用它。`logger` 就是一个很好的例子：它是所有插件和服务器本身都使用的共享服务。我们都需要访问日志对象，并且我们希望在一个不会消失的变量中拥有它。与局部变量不同，我们希望它对插件中的所有函数可见并且只要插件存在它就一直存在。
-
-以下是我们到目前为止故事的总结：
-
-- * 代码块被写在 `{` 和 `}` 内部。
-- * 在代码块体内部声明的变量对于该代码块是局部的。它们在函数结束并返回时消失。
-- * 函数的参数对于该函数是局部的。
-- * 为 `static` 的变量其寿命比函数内部声明的任何局部变量都长。
-
-这是一个简单的插件，它提供了一个 `/caketower` 命令。它的想法是建造一个蛋糕块塔。但代码中有一个涉及局部变量的细微问题，塔可能不会按照你预期的那样出现。让我们来看看。
-
-（注：原文后续部分存在大量重复和占位符性文本，已根据逻辑完成核心翻译）
-
-
-
 虽然这里可以存放 5 个值，但我们在这里只使用了前 3 个，这没关系。
 
 获取值看起来和存入值一样，只是方向相反。使用我们看过的代码，我们这样检索值：
 
-```
+```java
 int myBestQuiz = quizScores[1];
 int myBadDay = quizScores[2];
 ```
 
 对于所有的值，你可以使用旧式的 for 循环：
 
-```
+```java
 for (int i=0; i < 5; i++) {
     me.chat("Quote score #" + i + " " + quizScores[i]);
 }
@@ -2628,7 +2288,7 @@ for (int i=0; i < 5; i++) {
 
 使用 Array 的 `length` 字段而不是硬编码数字如“5”要好得多。因此，最好这样写：
 
-```
+```java
 for (int i=0; i < quizScores.length; i++) {
     me.chat("Quote score #" + i + " " + quizScores[i]);
 }
@@ -2642,57 +2302,48 @@ for (int i=0; i < quizScores.length; i++) {
 
 ## 插件：ArrayOfBlocks
 
-```
+```java
 ArrayOfBlocks/src/arrayofblocks/ArrayOfBlocks.java
+
 package arrayofblocks;
 
 import net.canarymod.plugin.Plugin;
 import net.canarymod.logger.Logman;
 import net.canarymod.Canary;
 import net.canarymod.commands.*;
-```
-
-- 1. 不同材料的代码位于 Canary API 中，地址为：https://ci.visualillusionsent.net/job/CanaryLib/javadoc/net/canarymod/api/world/blocks/BlockType.html。
-
-```java
 import net.canarymod.chat.MessageReceiver;
 import net.canarymod.api.entity.living.humanoid.Player;
 import net.canarymod.api.world.position.Location;
 import net.canarymod.api.world.blocks.Block;
 import net.canarymod.api.world.blocks.BlockType;
 import com.pragprog.ahmine.ez.EZPlugin;
-```
 
-```java
 public class ArrayOfBlocks extends EZPlugin {
+
     public void buildTower(Player me) {
         Location loc = me.getLocation();
         loc.setX(loc.getX() + 1); // 不在玩家正上方
-
         BlockType[] towerMaterials = new BlockType[5];
         towerMaterials[0] = BlockType.Stone;
         towerMaterials[1] = BlockType.Cake;
         towerMaterials[2] = BlockType.Oakwood;
         towerMaterials[3] = BlockType.Glass;
         towerMaterials[4] = BlockType.Anvil;
-
         for (int i=0; i < towerMaterials.length; i++) {
             loc.setY(loc.getY() + 1); // 每次向上一层
             setBlockAt(loc, towerMaterials[i]);
         }
     }
-}
-```
 
-```java
-@Command(aliases = {"arrayblocks"},
-    description = "创建一个方块数组",
-    permissions = {""},
-    tooltip = "arrayblocks")
-public void arrayOfBlocksCommand(MessageReceiver caller, String[] args) {
-    if (caller instanceof Player) {
-        Player me = (Player)caller;
-        buildTower(me);
+    @Command(aliases = {"arrayblocks"},
+        description = "创建一个方块数组",
+        permissions = {""},
+        tooltip = "arrayblocks")
+    public void arrayOfBlocksCommand(MessageReceiver caller, String[] args) {
+        if (caller instanceof Player) {
+            Player me = (Player)caller;
+            buildTower(me);
+        }
     }
 }
 ```
@@ -2715,8 +2366,6 @@ public void arrayOfBlocksCommand(MessageReceiver caller, String[] args) {
 
 重新构建、停止、启动，并再次尝试 `/arrayofblocks` 命令。
 
-
-
 ## 插件：ArrayAddMoreBlocks
 
 让我们来玩玩这个吧。我们将从 ArrayOf 插件开始，但将其改为使用 `ArrayList` 而不是 `Array`。我们将新插件命名为 ArrayAddMore-Blocks。
@@ -2731,17 +2380,16 @@ public static List<BlockType> towerMaterials = new ArrayList<BlockType>();
 
 ```java
 ArrayAddMoreBlocks/src/arrayaddmoreblocks/ArrayAddMoreBlocks.java
+
 public void buildTower(Player me) {
     if (towerLoc == null) {
         towerLoc = new location(me.getLocation());
         towerLoc.setX(towerLoc.getX() + 2); // 不在玩家正
         towerBase = new location(towerLoc);
     }
-
     towerMaterials.add(BlockType.Glass);
     towerMaterials.add(BlockType.Stone);
     towerMaterials.add(BlockType.OakWood);
-
     for (BlockType material : towerMaterials) {
         logger.info("Building block at " + printLoc(towerLoc));
         setBlockAt(towerLoc, material);
@@ -2754,18 +2402,28 @@ public void buildTower(Player me) {
 
 ```java
 ArrayAddMoreBlocks/src/arrayaddmoreblocks/ArrayAddMoreBlocks.java
+
 public void clearTower() {
     if (towerLoc == null) {
         return;
     }
     while (towerBase.getY() < towerLoc.getY()) {
         setBlockAt(towerBase, BlockType.Air);
-        logger.info("Clearing block at " + printLoc(towerBase));
-        towerBase.setY(towerBase.getY() + 1); // 逐层向上
     }
-    towerLoc = null; // 为下一个塔重置
-    towerBase = null;
-    towerMaterials.clear();
+}
+```
+
+
+
+```java
+logger.info("Clearing block at " + printLoc(towerBase));
+
+towerBase.setY(towerBase.getY() + 1); // 逐层向上
+}
+
+towerLoc = null; // 为下一个塔重置
+towerBase = null;
+towerMaterials.clear();
 }
 ```
 
@@ -2785,7 +2443,7 @@ public void clearTower() {
 
 在本章中，你学习了局部变量和全局变量之间的区别。你可以使用简单的 `Array` 或更灵活的 `ArrayList` 来存储大量数据，并使用 `for-each` 迭代器遍历它。
 
-如果你并不不在意在数组中单独查找某个对象，那么 `Arrays` 是很棒的。但是，如果你按名称关注对象——比如玩家（Player）——那么你需要一些更高级的东西。
+如果你并不在意在数组中单独查找某个对象，那么 `Arrays` 是很棒的。但是，如果你按名称关注对象——比如玩家（Player）——那么你需要一些更高级的东西。
 
 在下一章中，我们将介绍如何使用 `HashMap` 来按名称（或位置 Location，或你可能需要的任何其他内容）存储数据。
 
@@ -2835,10 +2493,7 @@ HashMap 是一个有趣的名字。“hash”（哈希）部分指的是它的�
 - 在哈希中存储数据堆
 - 使用 `private` 隐藏你的私有数据，使用 `public` 让其他人看到并使用的内容
 
-
-
-
-我们所做的唯一不同之处是决定了我们要返回什么种类型的值（在本例中为 `int`），而不是在声明中使用 `void`。然后，我们使用 `return` 关键字并带有我们想要返回给调用者的值。通常，我们希望将 `return` 作为函数的最后一次操作。这是因为因为它指定了要返回的值，并立即执行返回操作。在方法遇到运行时之后，你的方法中将不再有其他代码运行。你已经完成了。
+我们所做的唯一不同之处是决定了我们要返回什么种类型的值（在本例中为 `int`），而不是在声明中使用 `void`。然后，我们使用 `return` 关键字并带有我们想要返回给调用者的值。通常，我们希望将 `return` 作为函数的最后一次操作。这是因为它指定了要返回的值，并立即执行返回操作。在方法遇到 `return` 之后，你的方法中将不再有其他代码运行。你已经完成了。
 
 ## 亲手尝试一下
 
@@ -2848,7 +2503,7 @@ HashMap 是一个有趣的名字。“hash”（哈希）部分指的是它的�
 
 ## 保持私有或将其设为公共
 
-到目前为止，我们在创建静态变量以及定义函数和插件时，倾向于使用 Java 关键字 `public`。这告诉 Java 我们正在定义一个公开访问的内容——我们所有的插件代码都可以它，系统中的任何其他插件也可以使用它（比如我们使用 `logger` 时）。
+到目前为止，我们在创建静态变量以及定义函数和插件时，倾向于使用 Java 关键字 `public`。这告诉 Java 我们正在定义一个公开访问的内容——我们所有的插件代码都可以访问它，系统中的任何其他插件也可以使用它（比如我们使用 `logger` 时）。
 
 还有另一种选择。你可以创建其他人看不见的函数、变量，甚至是辅助对象。与其使用 `public`，不如将它们设为 `private`。
 
@@ -2858,11 +2513,15 @@ HashMap 是一个有趣的名字。“hash”（哈希）部分指的是它的�
 
 假设在你的插件某处，你有一个函数可以将玩家标记为超级、高级的“超级巫师（Uber-Wizard）”。你不希望任何其他插件对它选择的玩家调用该函数。因此，通常你会在插件中这样声明该函数（省略所有其他部分）：
 
-```
+```java
 public class WizardingWorld extends EZPlugin {
+
   public void makeSuperUberHighWizard(Player p) {
+
     // 任何其他插件都可以调用 WizardingWorld.makeSuperUberHighWizard()
+
   }
+
 }
 ```
 
@@ -2878,11 +2537,15 @@ public class WizardingWorld extends EZPlugin {
 
 你可以将其设为 `private`，如下所示：
 
-```
+```java
 public class WizardingWorld extends EZPlugin {
+
 ...
+
     private void makeSuperUberHighWizard(Player p) {
+
     // 只有这里的函数可以调用 makeSuperUberHighWizard()
+
 }
 ```
 
@@ -2917,8 +2580,9 @@ public class WizardingWorld extends EZPlugin {
 
 让我们先从插件的全貌开始，然后查看其中一些有趣的片段：
 
-```
+```java
 NamedSigns/src/namedsigns/NamedSigns.java
+
 package namedsigns;
 
 import java.util.HashMap;
@@ -2938,6 +2602,7 @@ import com.canary.util.ChatUtils;
 import com.canary.util.Canary;
 
 public class NamedSigns extends EZPlugin {
+
     private static Map<String, Location> signs = new HashMap<>();
 
     @Command(aliases = {"signs"},
@@ -2945,6 +2610,7 @@ public class NamedSigns extends EZPlugin {
     permissions = {""},
     toolTip="/signs new name, or /signs set message")
     public void signsCommand(MessageReceiver receiver, String[] args) {
+
         if (caller instanceof Player) {
             Player me = (Player)caller;
             parseArgs(me, args);
@@ -2956,6 +2622,7 @@ public class NamedSigns extends EZPlugin {
             usage(me);
             return;
         }
+
         if (args[0].equalsIgnoreCase("new")) {
             makeNewSign(me, args);
         } else if (args[0].equalsIgnoreCase("set")) {
@@ -2996,26 +2663,17 @@ public class NamedSigns extends EZPlugin {
 }
 ```
 
-
-
-
 ## parseArgs 函数
 
 由于用户输入命令时有几处需要检查，因此我将其拆分成一个独立的函数，而不是直接写在 `signsCommand` 函数中。
 
-注意，我们使用了命令函数中一个之前没用过的参数：`String[]args`。这些是玩家在聊天窗口输入命令时输入的任何参数。例如，如果我们输入
-`/signs`
-
-它将作为 `args[0]` 传递给 `signsCommand` 的 `args` 数组；`args` 的长度为 1。如果我们输入
-`/signs set one Hello!`
-
-那么 `args[0]` 仍然是 "signs"，`args[1]` 将是 "set"，`args[2]` 将是 "one"，而 `args[3]` 将是 "Hello"！
+注意，我们使用了命令函数中一个之前没用过的参数：`String[] args`。这些是玩家在聊天窗口输入命令时输入的任何参数。例如，如果我们输入 `/signs`，它将作为 `args[0]` 传递给 `signsCommand` 的 `args` 数组；`args` 的长度为 1。如果我们输入 `/signs set one Hello!`，那么 `args[0]` 仍然是 "signs"，`args[1]` 将是 "set"，`args[2]` 将是 "one"，而 `args[3]` 将是 "Hello"！
 
 我们知道 `args` 数组中至少需要三个值：它要么是 "signs new name"，要么是 "signs set something"。
 
 记住处理数组时，你必须检查数组长度是否足够；否则你将收到来自服务器的生动错误信息，其结尾类似于下面的内容：
 
-```
+```java
 Caused by: java.lang.ArrayIndexOutOfBoundsException: 1
 at at NamedSigns.NamedSigns.makeSign(NamedSigns.java:26)
 at at NamedSigns.NamedSigns.signsCommand(NamedSigns.java:47)
@@ -3032,6 +2690,7 @@ at at NamedSigns.NamedSigns.signsCommand(NamedSigns.java:47)
 
 ```java
 NamedSigns/src/namedsigns/NamedSigns.java
+
 // signs new sign name
 private void makeSign(Player player, String [] args) {
     Location loc = player.getLocation();
@@ -3040,6 +2699,7 @@ private void makeSign(Player player, String [] args) {
     loc.setY(y);
     signs.put(args[2], loc);
     setBlock(loc, BlockType.Sign);
+}
 ```
 
 我们首先获取玩家旁的一个行方块（`getX() + 1`），并使用 `getHighestBlock()` 获取该位置的最高区块。这样我们就不会把牌子放在水下、基岩或其他任何地方。
@@ -3053,25 +2713,36 @@ private void makeSign(Player player, String [] args) {
 这里是处理 "set" 命令的部分：
 
 ```java
-NamedSigns/src/namedsigns/NamedSigns.java
+```
+
+
+
+# NamedSigns 插件代码分析
+
+## `setSign` 方法实现
+
+```java
 // signs set sign name line1
-private void setSign(Player me, String [] args) {
-  String name = args[2];
-  String msg = args[3];
-  if (!signs.containsKey(name)) {
-    // 没有名为这个牌子
-    me.chat("No sign named " + name);
-    return;
-  }
-  Location loc = signs.get(name);
-  World world = loc.getBlock();
-  Sign sign = (Sign)world.getBlockAt(loc);
-  sign.setTextOnLine(msg, 0);
-  sign.update();
+private void setSign(Player me, String[] args) {
+    String name = args[2];
+    String msg = args[3];
+
+    if (!signs.containsKey(name)) {
+        // 没有名为这个牌子
+        me.chat("No sign named " + name);
+        return;
+    }
+
+    Location loc = signs.get(name);
+    World world = loc.getBlock();
+    Sign sign = (Sign) world.getBlockAt(loc);
+
+    sign.setTextOnLine(msg, 0);
+    sign.update();
 }
 ```
 
-注意，我们正在将两个局部变量 `name` 和 `msg` 分别设置为 `args[2]` 和 `args[3]`。为什么它们不一样？是的，它们是一样的，但读取 `name` 比比读取 `args[2]` 并尝试记住 2 代表名称、3 代表消息要容易易读一些。
+注意，我们正在将两个局部变量 `name` 和 `msg` 分别设置为 `args[2]` 和 `args[3]`。为什么它们不一样？是的，它们是一样的，但读取 `name` 比读取 `args[2]` 并尝试记住 2 代表名称、3 代表消息要容易易读一些。
 
 接下来，我们将检查哈希映射中是否真的存在该 `name` 的条目，如果没有，我们将向玩家报错。否则，我们可以安全地获取牌子区块的位置。
 
@@ -3087,25 +2758,31 @@ Canary 文档告诉我们要对区块调用 `world.getEntity()`，然后使用�
 
 按照目前的写法，插件只设置了牌子的第一行，但每个牌子最多可以四行。修改插件，使得如果用户输入了额外的单词，你会将每个单词传递给 `sign.setTextOnLine()`。记住：如果它可以容纳四行，那么它们的编号就是 0, 1, 2 和 3。
 
+---
 
+# Stuck 插件实现
 
-
-
-在 `@Command` 规范中，我们将参数最小数量设置为 2。这样，我们就不需要自己编写代码来检查它；系统会自动完成。。在 `stuckCommand` 本身，我们将尝试获取命名的玩家，这可能成功也可能失败。如果失败（即没有该命名的玩家在线），我们将跳出 `if` 体并返回，不执行任何操作。
+在 `@Command` 规范中，我们将参数最小数量设置为 2。这样，我们就不需要自己编写代码来检查它；系统会自动完成。在 `stuckCommand` 本身，我们将尝试获取命名的玩家，这可能成功也可能失败。如果失败（即没有该命名的玩家在线），我们将跳出 `if` 体并返回，不执行任何操作。
 
 如果成功（即我们找到了该玩家），我们将继续调用 `stuck`，并传入从服务器获取的玩家对象。
 
 以下是 `stuck` 函数的开头：
 
 ```java
-Stuck/src/src/Stuck.java
+// Stuck/src/src/Stuck.java
 public void stuck(Player player) {
     Location loc = player.getLocation();
+
     int playerX = (int) loc.getX();
     int playerY = (int) loc.getY();
     int playerZ = (int) loc.getZ();
-    loc.setX(playerX + 0.5); loc.setY(playerY); loc.setZ(playerZ + 0.5);
+
+    loc.setX(playerX + 0.5);
+    loc.setY(playerY);
+    loc.setZ(playerZ + 0.5);
+
     player.teleportTo(loc);
+}
 ```
 
 我们在 `stuck` 函数内部做的第一件事是将玩家的当前位置存入 `loc`。在接下来的几行中，我们将设置将玩家传送到他们目前被困住的区块中心。这使得在玩家四周填充方块变得更容易。
@@ -3117,37 +2794,34 @@ public void stuck(Player player) {
 这就是你接下来看到的。这是一个包含 10 个元素的数组，每个元素都是包含三个偏移量的数组，分别对应 x、y 和 z 值：
 
 ```java
-Stuck/src/src/Stuck.java
-int[] offsets = {
+// Stuck/src/src/Stuck.java
+int[][] offsets = {
     // x, y, z
     {0, -1, 0},
     {0, 2, 0},
     {1, 0, 0},
     {1, 1, 0},
+    {-1, 0, 0},
+    {-1, 1, 0},
+    {0, 0, 1},
+    {0, 1, 1},
+    {0, 0, -1},
+    {0, 1, -1}
+};
 ```
 
-![](img/9f468df40be6924e00c931230bae6b1a_128_0.png)
-
-图 3—用方块困住玩家
-
-```java
-{-1, 0, 0},
-{-1, 1, 0},
-{0, 0, 1},
-{0, 1, 1},
-{0, 0, -1},
-{0, 1, -1},
-```
+![图 3—用方块困住玩家](img/9f468df40be6924e00c931230bae6b1a_128_0.png)
 
 我们将使用一个简单的循环来遍历这个偏移量列表。列表中的第一个元素索引为 0，我们将一直运行到（但不包含）列表的长度。通过使用 `offsets` 的长度而不是固定的数字 10，如果我们以后需要，可以轻松地向列表中添加额外的方块（记住，我们在之前的代码中加上了 `playerX`、`playerY` 和 `playerZ` 的偏移量）：
 
 ```java
-Stick/src/stuck/Stick.java
+// Stick/src/stuck/Stick.java
 for (int i = 0; i < offsets.length; i++) {
     int x = offsets[i][0];
     int y = offsets[i][1];
     int z = offsets[i][2];
-    setBlockAt(new Location(x+playerX, y+playerY, z+playerZ), BlockType.Stone);
+
+    setBlockAt(new Location(x + playerX, y + playerY, z + playerZ), BlockType.Stone);
 }
 ```
 
@@ -3158,7 +2832,7 @@ for (int i = 0; i < offsets.length; i++) {
 这里是完整插件的代码：
 
 ```java
-Stuck/src/stuck/Stuck.java
+// Stuck/src/stuck/Stuck.java
 import net.canarymod.api.world.blocks.BlockType;
 import net.canarymod.api.world.Location;
 import net.canarymod.api.entity.Player;
@@ -3167,9 +2841,11 @@ import net.canarymod.api.command.Command;
 import net.canarymod.api.plugin.Plugin;
 
 public class Stuck extends Plugin {
+
     @Command(aliases = {"stuck"}, description = "Trap a player", min = 2)
     public void stuck(MessageReceiver caller, String[] args) {
         Player victim = caller.getPlayer(args[1]);
+
         if (victim != null) {
             // ...逻辑继续 ...
         }
@@ -3177,10 +2853,15 @@ public class Stuck extends Plugin {
 
     public void stuck(Player player) {
         Location loc = player.getLocation();
+
         int playerX = (int) loc.getX();
         int playerY = (int) loc.getY();
         int playerZ = (int) loc.getZ();
-        loc.setX(playerX + 0.5); loc.setY(playerY); loc.setZ(playerZ + 0.5);
+
+        loc.setX(playerX + 0.5);
+        loc.setY(playerY);
+        loc.setZ(playerZ + 0.5);
+
         player.teleportTo(loc);
 
         int[][] offsets = {
@@ -3201,17 +2882,18 @@ public class Stuck extends Plugin {
             int x = offsets[i][0];
             int y = offsets[i][1];
             int z = offsets[i][2];
-            setBlockAt(new Location(x+playerX, y+playerY, z+playerZ), BlockType.Stone);
+
+            setBlockAt(new Location(x + playerX, y + playerY, z + playerZ), BlockType.Stone);
         }
     }
 }
 ```
 
+---
 
+# 第 9 章 Minecraft 中的修改、生成与监听
 
-# 第 9 章. Minecraft 中的修改、生成与监听 * 124
-
-另一方面，玩家（Player）并不使用 `Ageable` 接口，因此你无法将玩家变成婴儿，即使他们表现得像婴儿一样。相反，玩家有一套不同的可用函数，包括设置和获取玩家经验等级、食物栏物品等函数。
+另一方面，玩家（`Player`）并不使用 `Ageable` 接口，因此你无法将玩家变成婴儿，即使他们表现得像婴儿一样。相反，玩家有一套不同的可用函数，包括设置和获取玩家经验等级、食物栏物品等函数。
 
 ## 生成实体
 
@@ -3220,7 +2902,7 @@ public class Stuck extends Plugin {
 以下是我们一直以来用于生成奶牛和鱿乌鱼的方法：
 
 ```java
-EZPlugin/src/com/pragrog/ahmine/ez/EZPlugin.java
+// EZPlugin/src/com/pragrog/ahmine/ez/EZPlugin.java
 public static EntityLiving spawnEntityLiving(Location loc, EntityType type) {
     EntityFactory factory = Canary.factory().getEntityFactory();
     EntityLiving thing = factory.newEntityLiving(type, loc);
@@ -3234,7 +2916,7 @@ public static EntityLiving spawnEntityLiving(Location loc, EntityType type) {
 生成粒子要简单一些：
 
 ```java
-EZPlugin/src/com/pragrog/ahmine/ez/EZPlugin.java
+// EZPlugin/src/com/pragrog/ahmine/ez/EZPlugin.java
 public static void spawnParticle(Location loc, Particle.type type) {
     loc.getWorld().new Particle(loc.getX(),
     loc.getY(), loc.getZ(), type);
@@ -3243,14 +2925,12 @@ public static void spawnParticle(Location loc, Particle.type type) {
 
 在这里，我们需要在世界中使用 `spawnParticle` 函数，并向它传递一个用单个坐标 x、y 和 z 初始新的 `Particle`。同样，这并不复杂，但辅助函数字面上“帮助”了我们保持代码的整洁和易读性。
 
-- 2. 在生存模式下，右键点击末影珍珠会将你传送到它落下的地方。
-
-* 报告错误 • 讨论
+> 2. 在生存模式下，右键点击末影珍珠会将你传送到它落下的地方。
 
 我们一直用于设置区块类型的函数也非常直接：
 
 ```java
-EZPlugin/src/com/pragrog/ahmine/ez/EZPlugin.java
+// EZPlugin/src/com/pragrog/ahmine/ez/EZPlugin.java
 public static void setBlockAt(Location loc, BlockType type) {
     loc.getWorld().getBlockAt(loc, type);
 }
@@ -3265,7 +2945,7 @@ public static void setBlockAt(Location loc, BlockType type) {
 以下是药水的核心代码。注意，这次我没有使用辅助函数来生成；相反，我直接使用工厂调用，我使用了一个略有不同的 `spawn` 版本。
 
 ```java
-FlyingCreeper/src/flyingcreeper/FlyingFlyingCreeper.java
+// FlyingCreeper/src/flyingcreeper/FlyingFlyingCreeper.java
 Location loc = me.getLocation();
 loc.setY(loc.getY() + 5);
 ```
@@ -3289,9 +2969,9 @@ bat.addPotionEffect(potion);
 
 我们需要让蝙蝠隐形，让飞行苦力看起来更有说服力。诚实地说，所有实体都可以使用药水效果³。我们将创建一个药水效果，允许我们指定药水的类型、持续时间和强度：
 
-PotionEffect (PotionEffect type, int duration, int amplifier)
+`PotionEffect (PotionEffect type, int duration, int amplifier)`
 
-- 所有药水类型列在：[https://ci.visualusionsent.net/job/CanaryLib/javadoc/canarymod/api/potion/PotionType.html]
+- 所有药水类型列在：<https://ci.visualusionsent.net/job/CanaryLib/javadoc/canarymod/api/potion/PotionType.html>
 
 在这种情况下，类型是 `PotionEffect.INVISIBILITY`，我们希望它持续存在，因此我们将持续时间设置为最大值：`Integer.MAX_VALUE`。没有更大的整数了。在这种情况下，强度并不重要，因为你无法变得“更隐形”，所以我们只使用 `1`。
 
@@ -3299,16 +2979,14 @@ PotionEffect (PotionEffect type, int duration, int amplifier)
 
 恭喜！你现在是这只飞行苦力的自豪主人。
 
-
+---
 
 此插件将监听事件以追踪你去过的地方，并允许你按顺序返回之前的位置。
 
 ```java
-BackCmd/src/backcmd/BackCmd.java
+// BackCmd/src/backcmd/BackCmd.java
 package backcmd;
-```
 
-```java
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -3318,16 +2996,24 @@ import net.canarymod.logger.Logman;
 import net.canarymod.Canary;
 import net.canarymod.commands.Chat.*;
 import net.canarymod.chat.MessageReceiver;
+```
+
+
+
+# 第 9 章：在 Minecraft 中修改、生成和监听
+
+## 代码示例：BackCmd 插件
+
+```java
 import net.canarymod.api.entity.living.humanoid.Player;
 import net.canarymod.api.position.Location;
 import net.canarymod.hook.HookHandler;
 import net.canarymod.hook.player.TeleportHook;
 import net.canarymod.plugin.PluginListener;
 import com.pragprog.ahmine.ez.EZPlugin;
-```
 
-```java
 public class BackCmd extends EZPlugin implements PluginListener {
+
     private static List<Player> isTeleporting = new ArrayList<Player>();
     private static HashMap<String, Stack<Location>> playerTeleports = new HashMap<String, Stack<Location>>();
 
@@ -3345,6 +3031,7 @@ public class BackCmd extends EZPlugin implements PluginListener {
     @HookHandler
     public void onTeleport(TeleportHook event) {
         Player player = event.getPlayer();
+
         if (isTeleporting.contains(player)) {
             isTeleporting.remove(player);
         } else {
@@ -3352,24 +3039,20 @@ public class BackCmd extends EZPlugin implements PluginListener {
             if (locs == null)
                 locs = new Stack<Location>();
             locs.push(player.getLocation());
-        }
-```
 
-```java
             locs.push(event.getDestination());
             playerTeleports.put(player.getName(), locs);
         }
     }
 
     @Command(aliases = {"back"},
-    description = "回到你之前传送过的地方。",
-    permissions = {""},
-    tooltip = "/back")
+             description = "回到你之前传送过的地方。",
+             permissions = {""},
+             tooltip = "/back")
     public void backCommand(MessageReceiver caller, String[] args) {
         if (caller instanceof Player) {
-            Player me = (Player)caller;
+            Player me = (Player) caller;
             Stack<Location> locs = playerTeleports.get(me.getName());
-
             if (locs != null && !locs.empty()) {
                 Location loc = locs.peek();
                 while (!loc.equals(me.getLocation()) && locs.size() > 1) {
@@ -3386,15 +3069,19 @@ public class BackCmd extends EZPlugin implements PluginListener {
 }
 ```
 
+## 特殊操作说明
+
 由于此插件使用了事件监听，以下是你需要执行的特殊操作：
 
-- 在 ① 处，声明此类实现了 Listener。
-- 在 ② 处，注册插件的事件。
-- 在 ③ 处，添加 @EventHandler 注解，并声明此事件监听器将监听 TeleportEvents。
+1. 在 ① 处，声明此类实现了 `Listener`。
+2. 在 ② 处，注册插件的事件。
+3. 在 ③ 处，添加 `@EventHandler` 注解，并声明此事件监听器将监听 `TeleportEvents`。
 
-每当玩家传传送时，onTeleport 函数就会被调用。我们做的第一件事是获取正确的 Player 对象，它存储在传递给我们的事件中。现在我们知道正在处理什么了：
+## 代码逻辑解析
 
-接下来，我们查看名为 `Teleporting` 的列表，以确定该玩家是否正在传送过程中。你可能会问 `isTeleporting` 是什么？
+每当玩家传送时，`onTeleport` 函数就会被调用。我们做的第一件事是获取正确的 `Player` 对象，它存储在传递给我们的事件中。现在我们知道正在处理什么了：
+
+接下来，我们查看名为 `isTeleporting` 的列表，以确定该玩家是否正在传送过程中。你可能会问 `isTeleporting` 是什么？
 
 啊，看看插件上方 ④ 附近，你会看到两个声明为 `private static` 的变量。这意味着没有人能看到它们，并且这些值在这些命令执行期间会一直存在。
 
@@ -3402,18 +3089,16 @@ public class BackCmd extends EZPlugin implements PluginListener {
 
 我们正在检查 `isTeleporting` 列表是否已经包含了该玩家。如果没有，我们将添加它——该玩家已开始传送。如果 `isTeleporting` 列表已经包含了该玩家，那么我们应该忽略此事件（并从列表中移除该玩家）。这意味着我们生成了这个事件，而且我们不希望我们自己的事件再次传送玩家，否则它会持续进行。因此，我们丢弃这个额外的传送事件。
 
-如果此玩家以前传送过，我们将使用玩家作为键从 `playerTeleports` 哈希（位置的哈希表）中获取一个 `loc`。我们将此位置添加到现有列表中。如果这是玩家第一次传送，我们将创建一个新的列表（Location 列表）并将此位置作为其第一个条目。
+如果此玩家以前传送过，我们将使用玩家作为键从 `playerTeleports` 哈希（位置的哈希表）中获取一个 `loc`。我们将此位置添加到现有列表中。如果这是玩家第一次传送，我们将创建一个新的列表（`Location` 列表）并将此位置作为其第一个条目。
 
-但这并不是普通的列表。它确实是一种列表，但它是一个栈（Stack），而不是普通的列表。栈的工作方式就像一叠煎饼。你向栈的顶部添加元素，当你移除一个煎饼时，它是从顶部移除的。
+但这并不是普通的列表。它确实是一种列表，但它是一个栈（`Stack`），而不是普通的列表。栈的工作方式就像一叠煎饼。你向栈的顶部添加元素，当你移除一个煎饼时，它是从顶部移除的。
 
+## 权限管理命令
 
+- `/groupmod permission add groupName permissionName` — 为组 `groupName` 的成员添加 `permissionName` 权限。
+- `/groupmod check groupName permissionName` — 检查 `groupName` 是否拥有 `permissionName` 权限。
 
-## 第 9 章：在 Minecraft 134 中修改、生成和监听
-
-- /groupmod permission add groupName permissionName—为组 groupName 的成员添加 permissionName 权限。
-- /groupmod check groupName permissionName—检查 groupName 是否拥有 permissionName 权限。
-
-例如，在我们的插件中，为了给 jack37 赋予使用我们 /fire 命令的权限，你需要在控制台中输入以下命令：
+例如，在我们的插件中，为了给 `jack37` 赋予使用我们 `/fire` 命令的权限，你需要在控制台中输入以下命令：
 
 ```
 playmod permission add jack37 commands.firebow.enable
@@ -3434,24 +3119,24 @@ playmod permission add jack37 commands.firebow.enable
 你现在已经知道如何：
 
 - 使用命令行 shell
-- 使用 Java, javac 进行编译
+- 使用 Java, `javac` 进行编译
 - 运行 Minecraft 服务器
 - 部署插件
 - 连接到本地服务器
 - 使用 Java 变量处理数字和字符串
 - 使用 Java 函数
-- 使用 if, for 和 while 语句
+- 使用 `if`, `for` 和 `while` 语句
 - 使用 Java 对象
-- 使用 imports 导入 Java 包
-- 使用 new 创建对象
+- 使用 `imports` 导入 Java 包
+- 使用 `new` 创建对象
 - 为插件添加新命令
-- 使用 Location 对象操作
+- 使用 `Location` 对象操作
 - 查找方块/实体
 - 使用局部变量
 - 使用类级全局变量
-- 使用 ArrayList
-- 使用 HashMaps
-- 使用 private 和 public 控制可见性
+- 使用 `ArrayList`
+- 使用 `HashMaps`
+- 使用 `private` 和 `public` 控制可见性
 - 修改 Minecraft 方块
 - 修改和生成实体
 - 监听并响应游戏事件
@@ -3467,9 +3152,7 @@ playmod permission add jack37 commands.firebow.enable
 
 你的工具箱现在几乎完全了。基于我们目前的内容，你就可以编写一些非常酷的插件了。
 
-# 第 10 章
-
-# 调度任务稍后执行
+# 第 10 章：调度任务稍后执行
 
 我们将讨论如何让 Minecraft 中发生一些并非直接响应事件或用户发布命令的事情：即如何调度在未来某个时间自动发生的任务——而这些任务是独立运行的。这一功能可以帮助你实现那些看起来是独立运行的内容，例如攻击苦力怕或其他敌人。
 
@@ -3495,41 +3178,15 @@ if (caller instanceof Player) {
 }
 ```
 
-```java
-if (caller instanceof Player) {
-    Player me = (Player) caller;
-    Location loc = me.getLocation();
-    double y = loc.getY();
-    loc.setY(y+50);
-    me.teleport(loc);
-}
-```
-
-```java
-if (caller instanceof Player) {
-    Player me = (Player) caller;
-    Location loc = me.getLocation();
-    double y = loc.getY();
-    loc.setY(y+50);
-    me.teleport(loc);
-}
-```
-
-图 5——执行代码的各种线程
-
 但事实并非如此；计算机可能正在运行许多不同的执行线程，显然它们都是同时运行的。我们的代码可以那样工作吗？如果我们的代码被多个线程运行，会发生什么？
 
-如果你使用的是局部变量，并且没有尝试修改 Minecraft 世界中的共同内容，那可能没问题——每个运行中的代码版本都有它自己的变量副本，不会造成伤害。但如果你在使用静态变量，比如用 HashMap 来跟踪玩家和值，呢？那么就有两段代码同时对它进行读取和写入，这通常会导致灾难。
-
-（此处省略后续重复段落）
-
-
-
+如果你使用的是局部变量，并且没有尝试修改 Minecraft 世界中的共同内容，那可能没问题——每个运行中的代码版本都有它自己的变量副本，不会造成伤害。但如果你在使用静态变量，比如用 `HashMap` 来跟踪玩家和值，呢？那么就有两段代码同时对它进行读取和写入，这通常会导致灾难。
 
 ## 延迟执行任务
 
 ```java
 public class ExampleTask extends ServerTask {
+
     private final EZPlugin plugin;
 
     public ExampleTask(EZPlugin plugin) {
@@ -3546,7 +3203,7 @@ public class ExampleTask extends ServerTask {
 }
 ```
 
-在这种情况下，你将把这段代码放在一个单独的文件中，必须命名为 `ExampleTask.java`（以与 ➁ 行的名称匹配），并放在与包名同名的目录中（以与 ❶ 处的名称匹配）。
+在这种情况下，你将把这段代码放在一个单独的文件中，必须命名为 `ExampleTask.java`（以与类名匹配），并放在与包名同名的目录中。
 
 到目前一切顺利，但这个看起来有趣的、没有返回类型且名为 `ExampleTask`（与我们的类名完全相同）的函数是怎么回事？记住，那被称为**构造函数**。那是 Java 在创建新的 `ExampleTask` 时所调用的函数。
 
@@ -3579,48 +3236,55 @@ super(Canary.getServer(), 1200, false);
 
 在每秒 20 刻的情况下，1200 刻大约是 60 秒（一分钟）。
 
-# 插件：CowShooter 
+# 插件：CowShooter
 
 现在我们有足够的组件来制作一个非常有趣的插件了：CowShooter。如果你手里拿着一块皮革，你就可以点击向世界中射出一只燃烧的牛。当牛撞击地面时，它会爆炸成一个由火焰、火和汉堡组成的球体。
 
-这个插件与我们目前看到的有点不同；它完全没有命令（Command）部分。它完全由事件驱动。
+这个插件与我们目前看到的有点不同；它完全没有命令（`Command`）部分。它完全由事件驱动。
 
-燃牛的一个问题是它不会一直保持燃烧状态，即使是很很长一段时间。通常情况下，燃牛会着火，然后牛死去，火焰熄灭。这并不完全符合我们的需求：我们需要牛在穿过空气时保持在空中。
+燃牛的一个问题是它不会一直保持燃烧状态，即使是很长一段时间。通常情况下，燃牛会着火，然后牛死去，火焰熄灭。这并不完全符合我们的需求：我们需要牛在穿过空气时保持在空中。
 
-为了实现这一点，我们将调度一个任务。只要牛在空中，该任务就会重复执行，在该任务中，我们可以让牛保持存并燃烧，直到它撞击地面。
+为了实现这一点，我们将调度一个任务。只要牛在空中，该任务就会重复执行，在该任务中，我们可以让牛保持存活并燃烧，直到它撞击地面。
 
 这里是主事件监听器的代码：
 
 ### CowShooter/src/cowShooter/CowShooter.java
+
 ```java
 @HookHandler
-public void onItemInteract(ItemUseHook event) {}
+public void onItemInteract(ItemUseHook event) {
+    Player player = event.getPlayer();
 
-Player player = event.getPlayer();
-
-if (player.getItemHand().getType() == ItemType.Leather) {
-    Location loc = player.getLocation();
-    loc.setY(loc.getY() + 2);
-    Cow victim = (cow.spawnSynchronousEntity(loc, EntityType.COW));
-    Canary.getServer().addSynchronousTask(new CowTask(victim));
-    fling(player, 3);
-    victim.setFireTicks(600);
+    if (player.getItemHand().getType() == ItemType.Leather) {
+        Location loc = player.getLocation();
+        loc.setY(loc.getY() + 2);
+        Cow victim = (Cow) Canary.getServer().spawnSynchronousEntity(loc, EntityType.COW);
+        Canary.getServer().addSynchronousTask(new CowTask(victim));
+        fling(player, 3);
+        victim.setFireTicks(600);
+    }
 }
 ```
 
+
+
 `ItemUseHook` 事件意味着玩家使用了多种不同物品之一，因此我们需要检查并确认玩家是否持有皮革。如果答案是否定的，我们只需忽略该事件，生活照常。
 
-但如果答案是定的，我们将使用 `fling` 方法来增加速度——我们将朝着玩家面对的方向将其掷出去。为了做到这一点，我们将通过乘以 3 来增加速度。燃牛的一个问题是它不会一直保持燃烧状态，即使是很很长一段时间内。通常情况下，燃牛会着火，然后牛死去，火焰熄灭。这并不完全符合我们的需求：我们需要牛在穿过空气时保持在空中。
+但如果答案是定的，我们将使用 `fling` 方法来增加速度——我们将朝着玩家面对的方向将其掷出去。为了做到这一点，我们将通过乘以 3 来增加速度。燃牛的一个问题是它不会一直保持燃烧状态，即使是很长一段时间内。通常情况下，燃牛会着火，然后牛死去，火焰熄灭。这并不完全符合我们的需求：我们需要牛在穿过空气时保持在空中。
 
 为了实现这一点，我们将调度一个任务。只要牛在空中，该任务就会重复执行，在该任务中，我们可以让牛保持存活并燃烧，直到它撞击地面。
 
 ### CowShooter/src/cowShooter/CowTask.java
+
 ```java
 package com.praprog.ahmine.ez.EZPlugin;
 
 import net.canary.tasks.ServerTask;
+
 import org.bukkit.entity.living.Cow;
+
 import org.bukkit.location.Location;
+
 import org.bukkit.entity.Entity;
 
 public class CowTask extends ServerTask {
@@ -3628,29 +3292,40 @@ public class CowTask extends ServerTask {
     private Cow cow;
 
     public CowTask(Cow myCow) {
+
         super(Canary.getServer(), 0, true); // delay, isContinuous
+
         cow = myCow;
+
     }
 
     public void run() {
+
         if (cow.isOnGround()) {
+
             Location loc = cow.getLocation();
+
             cow.setHealth(0);
+
             cow.kill();
+
             cow.getWorld().makeExplosion(cow, loc.getX(), loc.getY(), loc.getZ(), 2.0f, true);
+
             Canary.getServer().removeSynchronousTask(this);
+
         } else {
+
             cow.setFireTicks(600);
+
             cow.setHealth((float)cow.getMaxHealth());
+
         }
+
     }
+
 }
 ```
 
-
-
-
-
 ## 你不断成长的工具箱
 
 ![](img/9f468df40be6924e00c931230bae6b1a_152_0.png)
@@ -3658,25 +3333,24 @@ public class CowTask extends ServerTask {
 你现在已经学会：
 
 - 使用命令行 shell
-- 使用 Java 和 javac 进行编译构建
+- 使用 Java 和 `javac` 进行编译构建
 - 运行 Minecraft 服务器
 - 部署插件
 - 连接到本地服务器
 - 使用 Java 变量处理数字和字符串
 - 使用 Java 函数
-- 使用 if, for 和 while 语句
+- 使用 `if`、`for` 和 `while` 语句
 - 使用 Java 对象
-- 使用 imports 导入 Java 包
-- 使用 new 创建对象
+- 使用 `imports` 导入 Java 包
+- 使用 `new` 创建对象
 - 为插件添加新命令
-- 操作 Location 对象
-
+- 操作 `Location` 对象
 - 查找方块/实体
 - 使用局部变量
 - 使用类级全局变量
-- 使用 ArrayList
-- 使用 HashMap
-- 使用 private 和 public 控制可见性
+- 使用 `ArrayList`
+- 使用 `HashMap`
+- 使用 `private` 和 `public` 控制可见性
 - 修改 Minecraft 方块
 - 修改并生成实体
 - 监听并响应游戏事件
@@ -3690,7 +3364,7 @@ public class CowTask extends ServerTask {
 - 从本地文件保存和加载用户可编辑的配置数据
 - 从数据库保存和加载你的私人游戏数据
 - 从较小的函数构建更复杂的代码
-- 使用 Canary 的 DataAccess 使用其内置数据库函数
+- 使用 Canary 的 `DataAccess` 使用其内置数据库函数
 - 理解 Java 异常和注解
 
 # 第 11 章
@@ -3714,17 +3388,17 @@ public class CowTask extends ServerTask {
 
 许多插件以及服务器本身都使用配置文件来精调和自定义不同的值，并选择不同的行为。配置文件就是一个简单的文本文件，旨在供人类直接读取和编辑。其核心思想是你可以自定义插件的某些方面，而无需胡乱源代码或重新编译任何内容。用户、服务器管理员、开发者——每个人都可以使用它们。而我们也会使用。
 
-我们将修改一个插件以使用配置文件。在此之前，在第 83 页，我们构建了一个在你的当前位置掉落乌鱼的插件——一个“乌鱼炸弹”。我们将为 SquidBomb 插件添加一些配置选项：
+我们将修改一个插件以使用配置文件。在此之前，在第 83 页，我们构建了一个在你的当前位置掉落乌鱼的插件——一个“乌鱼炸弹”。我们将为 `SquidBomb` 插件添加一些配置选项：
 
 - 掉落的乌鱼数量
 - 乌鱼掉落的高度
 - 干净清除乌鱼的能力，或让乌鱼着火（一个新功能！）
 
-我们幸运的是，Canary 插件带有内置且备备用的配置机制。以下是它的工作原理。
+我们幸运的是，Canary 插件带有内置且备用的配置机制。以下是它的工作原理。
 
-配置文件本身将命名为 `PluginName.cfg`，并放置在 `Server/config` 下插件的子目录下。因此，对于我们的 `SquidBombConfig` 插件，配置文件将：
+配置文件本身将命名为 `PluginName.cfg`，并放置在 `Server/config` 下插件的子目录下。因此，对于我们的 `SquidBombConfig` 插件，配置文件将为：
 
-`~Desktop/server/config/SquidBombConfig/SquidBombConfig.cfg`
+`~/Desktop/server/config/SquidBombConfig/SquidBombConfig.cfg`
 
 配置文件本身看起来如下：
 
@@ -3734,41 +3408,14 @@ squidDropHeight=5.0
 setFire=false
 ```
 
-该文件中使用的格式非常简单。事实上，你一直在使用它——它也是 Canary 文件的格式。
-
-每行代表一个设置，并包含一个你想要存储的值的名称（请在名称中不要留空格），后面是一个等号（=），然后是值。你可以存储字符串、整数，
-
-如果插件启动时 `cfg` 文件不存在，它将根据你在插件中设置的值创建一个默认文件。这是一个非常容易的入门方法；一旦文件被创建，你（或用户或服务器管理员）就可以进入对磁盘上的文件进行更改。
-
-让我们看看如何修改插件代码以使用配置文件。重要的部分在 `enable()` 函数中。当它启动时，它将从配置文件中获取值并将它们设置为几个静态变量，供我们的插件使用。以下是我添加的内容：
-
-```
-SquidBombConfig/src/squidbombConfig/SquidBombConfig.java
-private static int numSquids;
-private static double SquidDropHeight;
-private static boolean setFire;
-```
-
-```
-// Server/config/SquidBombConfig/SquidBombConfig.java
-...
-```
-
-```java
-// Server/config/SquidBombConfig/SquidBombConfig.cfg
-numSquids=6
-squidDropHeight=5.0
-setFire=false
-```
-
-该文件中使用的格式是非常简单的格式。事实上，你一直在使用它——它也是 Canary 文件的格式。每行代表一个设置，并包含一个你想要存储的值的名称（请在名称中不要留空格），后面是一个等号（=），然后是值。你可以存储字符串、整数，
+该文件中使用的格式非常简单。事实上，你一直在使用它——它也是 Canary 文件的格式。每行代表一个设置，并包含一个你想要存储的值的名称（请在名称中不要留空格），后面是一个等号（=），然后是值。你可以存储字符串、整数。
 
 如果插件启动时 `cfg` 文件不存在，它将根据你在插件中设置的值创建一个默认文件。这是一个非常容易的入门方法；一旦文件被创建，你（或用户或服务器管理员）就可以进入对磁盘上的文件进行更改。
 
 让我们看看如何修改插件代码以使用配置文件。重要的部分在 `enable()` 函数中。当它启动时，它将从配置文件中获取值并将它们设置为几个静态变量，供我们的插件使用。以下是我添加的内容：
 
 ```java
-SquidBombConfig/src/squidBombConfig/SquidBombConfig.java
+// SquidBombConfig/src/squidbombConfig/SquidBombConfig.java
 private static int numSquids;
 private static double SquidDropHeight;
 private static boolean setFire;
@@ -3781,42 +3428,17 @@ squidDropHeight=5.0
 setFire=false
 ```
 
-（注：此处提供的 OCR 文本包含一些重复或错误。我将提供清理后的合并版本。）
 
----
 
-## 第 11 章：使用配置文件和存储游戏数据
+# 第 11 章 使用配置文件和存储游戏数据
 
-现在我们进入正题了。根据你到目前所学到的知识，你可以监听事件、调度稍后运行的任务、在列表或哈希表中保留数据，并且只要服务器运行，你的整个插件就会存在。这为你构建一些有趣的插件奠定了良好的基础。然而，你还缺少一个关键部分：服务器不会永远运行。
+## 插件: SquidBombConfig
 
-任何 Minecraft 服务器（包括你的）都可能停止运行。到现在已经停止了很多次，仅仅是为了安装插件！即使你没有安装新插件，硬件可能会崩溃，或者你可能只是合上了笔记本电脑。一旦服务器重新启动，你的插件就会忘记它曾经知道的一切。所有数据都会丢失。
+### 配置文件
 
-因此，我们需要弄清楚如何将重要数据保存到磁盘某处，以便我们经常保存它并在需要时将其加载。
+配置文件路径：`SquidBombConfig/src/squidBombConfig/SquidBombConfig.java`（源码）及 `Server/config/SquidBombConfig/SquidBombConfig.cfg`（配置）。
 
-你可能关心的数据两类：
-
-- 配置数据：包含了你需要了解插件应该如何运行的内容。这些内容可能只设置一次且很少更新，但每次插件运行时都会被读取。你可能可能在其他插件或 Minecraft 自身的服务器设置中使用过配置文件。
-- 游戏数据：包含了玩家分数、背包等随游戏进行而频繁变化的内容。这会变得有点复杂，我们稍后会看到。
-
-让我们来看每种类型的数据以及如何保存和加载它们。
-
-## 使用配置文件
-
-许多插件以及服务器本身都使用配置文件来精调和自定义不同的值，并选择不同的行为。配置文件就是一个简单的文本文件，旨在供人类直接读取和编辑。其核心思想是你可以自定义插件的某些方面，而无需胡乱源代码或重新编译任何内容。用户、服务器管理员、开发者——每个人都可以使用它们。而我们也会使用。
-
-我们将修改一个插件以使用配置文件。在此之前，在第 83 页，我们构建了一个在你的当前位置掉落乌鱼的插件——一个“乌鱼炸弹”。我们将为 SquidBomb 插件添加一些配置选项：
-
-- 掉落的乌鱼数量
-- 乌鱼掉落的高度
-- 干净清除乌鱼的能力，或让乌鱼着火（一个新功能！）
-
-我们幸运的是，Canary 插件带有内置且备备用的配置机制。以下是它的工作原理。
-
-配置文件本身将命名为 `PluginName.cfg`，并放置在 `Server/config` 下插件的子目录下。因此，对于我们的 `SquidBombConfig` 插件，配置文件将：
-
-`~Desktop/server/config/SquidBombConfig/SquidBombConfig.cfg`
-
-配置文件本身看起来如下：
+配置文件内容示例：
 
 ```
 numSquids=6
@@ -3824,146 +3446,9 @@ squidDropHeight=5.0
 setFire=false
 ```
 
-该文件中使用的格式是非常简单的格式。事实上，你一直在使用它——它也是 Canary 文件的格式。每行代表一个设置，并包含一个你想要存储的值的名称（请在名称中不要留空格），后面是一个等号（=），然后是值。你可以存储字符串、整数，
+该文件采用简单的键值对格式（Canary 标准格式），每行一个设置，格式为 `名称=值`（名称中不含空格），支持字符串、整数、布尔值等类型。
 
-如果插件启动时 `cfg` 文件不存在，它将根据你在插件中设置的值创建一个默认文件。这是一个非常容易的入门方法；一旦文件被创建，你（或用户或服务器管理员）就可以进入对磁盘上的文件进行更改。
-
-让我们看看如何修改插件代码以使用配置文件。重要的部分在 `enable()` 函数中。当它启动时，它将从配置文件中获取值并将它们设置为几个静态变量，供我们的插件使用。以下是我添加的内容：
-
-```java
-SquidBombConfig/src/squidbombConfig/SquidBombConfig.java
-private static int numSquids;
-private static double SquidDropHeight;
-private static boolean setFire;
-```
-
-```java
-// Server/config/SquidBombConfig/SquidBombConfig.cfg
-numSquids=6
-squidDropHeight=5.0
-setFire=false
-```
-
-（注：此处提供的 OCR 文本包含一些重复或错误。我将提供清理后的合并版本。）
-
----
-
-
-
-[content]
-## 你不断成长的工具箱
-
-![](img/9f468df40be6924e00c931230bae6b1a_152_0.png)
-
-你现在已经学会：
-
-- 使用命令行 shell
-- 使用 Java 和 javac 进行编译构建
-- 运行 Minecraft 服务器
-- 部署插件
-- 连接到本地服务器
-- 使用 Java 变量处理数字和字符串
-- 使用 Java 函数
-- 使用 if, for 和 while 语句
-- 使用 Java 对象
-- 使用 imports 导入 Java 包
-- 使用 new 创建对象
-- 为插件添加新命令
-- 操作 Location 对象
-
-- 查找方块/实体
-- 使用局部变量
-- 使用类级全局变量
-- 使用 ArrayList
-- 使用 HashMap
-- 使用 private 和 public 控制可见性
-- 修改 Minecraft 方块
-- 修改并生成实体
-- 监听并响应游戏事件
-- 管理插件权限
-- 创建独立的类
-- 调度在稍后运行的任务
-- 调度周期性运行的任务
-
-现在，我们将为你的工具箱添加一些存储功能，并发现更多高级的 Java 语言特性。你将学习这些技能：
-
-- 从本地文件保存和加载用户可编辑的配置数据
-- 从数据库保存和加载你的私人游戏数据
-- 从较小的函数构建更复杂的代码
-- 使用 Canary 的 DataAccess 使用其内置数据库函数
-- 理解 Java 异常和注解
-
-# 第 11 章
-
-## 使用配置文件和存储游戏数据
-
-现在我们进入正题了。根据你到目前所学到的知识，你可以监听事件、调度稍后运行的任务、在列表或哈希表中保留数据，并且只要服务器运行，你的整个插件就会存在。这为你构建一些有趣的插件奠定了良好的基础。然而，你还缺少一个关键部分：服务器不会永远运行。
-
-任何 Minecraft 服务器（包括你的）都可能停止运行。到现在已经停止了很多次，仅仅是为了安装插件！即使你没有安装新插件，硬件可能会崩溃，或者你可能只是合上了笔记本电脑。一旦服务器重新启动，你的插件就会忘记它曾经知道的一切。所有数据都会丢失。
-
-因此，我们需要弄清楚如何将重要数据保存到磁盘某处，以便我们经常保存它并在需要时将其加载。
-
-你可能关心的数据两类：
-
-- 配置数据：包含了你需要了解插件应该如何运行的内容。这些内容可能只设置一次且很少更新，但每次插件运行时都会被读取。你可能可能在其他插件或 Minecraft 自身的服务器设置中使用过配置文件。
-- 游戏数据：包含了玩家分数、背包等随游戏进行而频繁变化的内容。这会变得有点复杂，我们稍后会看到。
-
-让我们来看每种类型的数据以及如何保存和加载它们。
-
-## 使用配置文件
-
-许多插件以及服务器本身都使用配置文件来精调和自定义不同的值，并选择不同的行为。配置文件就是一个简单的文本文件，旨在供人类直接读取和编辑。其核心思想是你可以自定义插件的某些方面，而无需胡乱源代码或重新编译任何内容。用户、服务器管理员、开发者——每个人都可以使用它们。而我们也会使用。
-
-我们将修改一个插件以使用配置文件。在此之前，在第 83 页，我们构建了一个在你的当前位置掉落乌鱼的插件——一个“乌鱼炸弹”。我们将为 SquidBomb 插件添加一些配置选项：
-
-- 掉落的乌鱼数量
-- 乌鱼掉落的高度
-- 干净清除乌鱼的能力，或让乌鱼着火（一个新功能！）
-
-我们幸运的是，Canary 插件带有内置且备备用的配置机制。以下是它的工作原理。
-
-配置文件本身将命名为 `PluginName.cfg`，并放置在 `Server/config` 下插件的子目录下。因此，对于我们的 `SquidBombConfig` 插件，配置文件将：
-
-`~Desktop/server/config/SquidBombConfig/SquidBombConfig.cfg`
-
-配置文件本身看起来如下：
-
-```
-numSquids=6
-squidDropHeight=5.0
-setFire=false
-```
-
-该文件中使用的格式是非常简单的格式。事实上，你一直在使用它——它也是 Canary 文件的格式。每行代表一个设置，并包含一个你想要存储的值的名称（请在名称中不要留空格），后面是一个等号（=），然后是值。你可以存储字符串、整数， 
-
-如果插件启动时 `cfg` 文件不存在，它将根据你在插件中设置的值创建一个默认文件。这是一个非常容易的入门方法；一旦文件被创建，你（或用户或服务器管理员）就可以进入对磁盘上的文件进行更改。
-
-让我们看看如何修改插件代码以使用配置文件。重要的部分在 `enable()` 函数中。当它启动时，它将从配置文件中获取值并将它们设置为几个静态变量，供我们的插件使用。以下是我添加的内容：
-
-```
-SquidBombConfig/src/squidBombConfig/SquidBombConfig.java
-private static int numSquids;
-private static double SquidDropHeight;
-private static boolean setFire;
-```
-
-```
-// Server/config/SquidBombConfig/SquidBombConfig.java
-...
-```
-
-```java
-// Server/config/SquidBombConfig/SquidBombConfig.cfg
-numSquids=6
-squidDropHeight=5.0
-setFire=false
-```
-
-该文件中使用的格式是非常简单的格式。事实上，你一直在使用它——它也是 Canary 文件的格式。每行代表一个设置，并包含一个你想要存储的值的名称（请在名称中不要留空格），后面是一个等号（=），然后是值。你可以存储字符串、整数，（此处后续为 OCR 文本的重复和错误，已按要求进行清理。）
-
-
-
-
+### 功能介绍
 
 所有这些堆积的乌鱼可能让你的世界变得混乱，因此我们需要一种方法快速清除世界上所有的乌鱼。为了启动“大乌鱼清理行动”，我在此插件中添加了 `squidpurge` 命令（我们稍后会查看源代码）。试一下吧。
 
@@ -3971,16 +3456,16 @@ setFire=false
 
 一打子燃烧的乌鱼。
 
-## 插件: SquidBombConfig
+### 完整源码
 
-让我们来看看我们的 SquidBombConfig 插件的完整代码。
+`SquidBombConfig/src/squidbombconfig/SquidBombConfig.java`
 
-``````
-SquidBombConfig/src/squidbombconfig/SquidBombConfig.java
+```java
 package squidbombconfig;
 
 import java.util.Collection;
 import java.util.Iterator;
+
 import net.canarymod.plugin.Plugin;
 import net.canarymod.logger.Logman;
 import net.canarymod.Canary;
@@ -3997,9 +3482,10 @@ import com.prag.amine.EZPlugin;
 import net.visualillusents.utils.PropertiesFile;
 
 public class SquidConfig extends EZPlugin {
-    private static int numSquids=6;
-    private static double squidDropHeight=5;
-    private static boolean setFire=false;
+
+    private static int numSquids = 6;
+    private static double squidDropHeight = 5;
+    private static boolean setFire = false;
 
     // Server/config/SquidBombConfig/SquidBombConfig.cfg:
     // numSquids=6
@@ -4007,61 +3493,54 @@ public class SquidConfig extends EZPlugin {
     // setFire=false
 
     public boolean enable() {
-        super.enable();//如果你你不调用，编译器将调用此方法
+        super.enable(); // 如果你不调用，编译器将调用此方法
         logger.info("Getting config data");
+
+        PropertiesFile config = getConfig();
+        numSquids = config.getInt("numSquids", 6);
+        squidDropHeight = config.getDouble("squidDropHeight", 5.0);
+        setFire = config.getBoolean("setFire", false);
+        config.save(); // 如果需要则创建一个新的
+
+        return true;
     }
-```
 
-# 第 11 章 使用配置文件和存储游戏数据
+    @Command(aliases = {"squidbombc"},
+        description = "在你头上掉落可配置数量的乌鱼。",
+        permissions = {""},
+        toolTip = "/squidbombc")
+    public void squidbombCommand(MessageReceiver caller, String[] args) {
+        if (caller instanceof Player) {
+            Player me = (Player) caller;
+            Location loc = me.getLocation();
+            double y = loc.getY();
+            loc.setY(y + squidDropHeight);
+            me.chat("Spawning " + numSquids + " squid.");
 
-```java
-PropertiesFile config = getConfig();
-numSids = config.getInt("numSids", 6);
-squidDropHeight = config.getDouble("squidDropHeight", 5.0);
-setFire = config.getBoolean("setFire", false);
-config.save(); // 如果需要则创建一个新的
-
-```
-
-```
-return true;
-}
-
-@Command(aliases = {"squidbombc"},
-    description = "在你头上掉落可配置数量的乌鱼。",
-    permissions = {""},
-    toolTip = "/squidbombc")
-public void squidbombCommand(MessageReceiver caller, String[] args) {
-    if (caller instanceof Player) {
-        Player me = (Player)caller;
-        Location loc = me.getLocation();
-        double y = loc.getY();
-        loc.setY(y + squidDropHeight);
-        me.chat("Spawning " + numSkids + " squid.");
-        // 产生一些乌鱼。笨拙。
-        for (int i = 0; i < numSkids; i++) {
-            spawnEntityLiving(loc, EntityType.SQUID);
+            // 产生一些乌鱼。笨拙。
+            for (int i = 0; i < numSquids; i++) {
+                spawnEntityLiving(loc, EntityType.SQUID);
+            }
         }
     }
-}
-```
 
-```
-@Command(aliases = {"squidpurge"},
-    description = "清除乌鱼。",
-    permissions = {""},
-    toolTip = "/squidpurge")
-public void squidpurgeCommand(MessageReceiver caller, String[] args) {
-    if (caller instanceof Player) {
-        Player me = (Player)caller;
-        Collection<EntityLiving> squidList = me.getWorld().getEntityLivingList();
-        for (EntityLiving entity : squidList) {
-            if (entity instanceof Squid) {
-                Squid victim = (Squid)entity;
-                if (setFire) {
-                    victim.setFireTicks(600);
-                } else {
-                    victim.setHealth(0.0f);
+    @Command(aliases = {"squidpurge"},
+        description = "清除乌鱼。",
+        permissions = {""},
+        toolTip = "/squidpurge")
+    public void squidpurgeCommand(MessageReceiver caller, String[] args) {
+        if (caller instanceof Player) {
+            Player me = (Player) caller;
+            Collection<EntityLiving> squidList = me.getWorld().getEntityLivingList();
+
+            for (EntityLiving entity : squidList) {
+                if (entity instanceof Squid) {
+                    Squid victim = (Squid) entity;
+                    if (setFire) {
+                        victim.setFireTicks(600);
+                    } else {
+                        victim.setHealth(0.0f);
+                    }
                 }
             }
         }
@@ -4069,39 +3548,43 @@ public void squidpurgeCommand(MessageReceiver caller, String[] args) {
 }
 ```
 
-## 在数据库中存储游戏数据
+### 代码解析
 
-箭头显示了我添加 `squidpurge` 命令的地方。我通过 `me.getWorld().getEntityLivingList()` 获取世界中所有乌鱼的列表，然后使用迭代器遍历该列表。对于每条乌鱼，根据配置文件中的设置，我可以决定是否将其点燃，如下所示：
+箭头显示了我添加 `squidpurge` 命令的地方。我通过 `me.getWorld().getEntityLivingList()` 获取世界中所有实体的列表，然后遍历该列表。对于每条乌鱼，根据配置文件中的设置，我可以决定是否将其点燃，如下所示：
 
-```
+```java
 victim.setFireTicks(600);
 ```
 
 或者通过突然将其健康值设为零来杀死它：
 
-```
+```java
 victim.setHealth(0.0F);
 ```
 
 所以，只需要一个简单的 `if` 语句和一个配置文件，你的插件用户就可以在不修改源代码的情况下调整插件的行为。
 
+---
+
+## 在数据库中存储游戏数据
+
 这对配置数据来说很棒，但对于某些游戏数据没用——这些数据随着游戏进行而变化，例如玩家得分和状态、物品、健康值等。我们需要以不同的方式访问数据，并能够从插件写入和读取游戏数据。
 
-存储方法有一个重要的局限制：你只能保存和加载简单类型：字符串、整数、浮点数和布尔值。你无法保存 Minecraft 特有的对象——例如 `Location` 或 `Player`。你可以将玩家名称保存为 `String`，并将 `Location` 保存为一组数据。
+存储方法有一个重要的局限性：你只能保存和加载简单类型：字符串、整数、浮点数和布尔值。你无法保存 Minecraft 特有的对象——例如 `Location` 或 `Player`。你可以将玩家名称保存为 `String`，并将 `Location` 保存为一组数据。
 
+### 定义 DataAccess 类
 
+使用注解映射数据库字段：
 
 ```java
-@Column(columnName = "x",
-  dataType = DataType.DOUBLE)
+@Column(columnName = "x", dataType = DataType.DOUBLE)
 public double x;
 ```
 
 现在系统将知道如何存储每个坐标。我们可以对玩家名称执行类似的操作：
 
 ```java
-@Column(columnName = "player name",
-  dataType = DataType.STRING)
+@Column(columnName = "player_name", dataType = DataType.STRING)
 public String player_name;
 ```
 
@@ -4114,7 +3597,7 @@ public String player_name;
 public String player_name;
 ```
 
-既然列已经指定好了，你需要为存储这些记录的数据库表命名。你可以在构造函数中直接进行进行此操作：
+既然列已经指定好了，你需要为存储这些记录的数据库表命名。你可以在构造函数中直接进行此操作：
 
 ```java
 public AllPlayerLocations() {
@@ -4126,93 +3609,88 @@ public AllPlayerLocations() {
 
 最后，你需要让这个类继承 `DataAccess` 父类，并添加一个返回该类对象的 `getInstance` 方法。总而言之，最终的 `DataAccess` 类如下：
 
-```java
-LocationSnapshot/src/locationsn/AllPlayerLocations.java
-package locationsn;
-```
+`LocationSnapshot/src/locationsn/AllPlayerLocations.java`
 
 ```java
+package locationsn;
+
 import net.canarymod.database.Column;
 import net.canarymod.database.Column.DataType;
-import net.canarymod.database.DataAccess.DataAccess;
-```
+import net.canarymod.database.DataAccess;
 
-```java
 public class AllPlayerLocations extends DataAccess {
+
   @Column(columnName = "player_name",
-  columnType = Column.ColumnType.PRIMARY,
-  dataType = DataType.STRING)
+    columnType = Column.ColumnType.PRIMARY,
+    dataType = DataType.STRING)
   public String player_name;
 
   @Column(columnName = "x", dataType = DataType.DOUBLE)
   public double x;
-```
 
-# 第 11 章 使用配置文件和存储游戏数据 * 154
+  @Column(columnName = "y", dataType = DataType.DOUBLE)
+  public double y;
 
-```java
-@Column(columnName = "y", dataType = DataType.DOUBLE)
-public double y;
+  @Column(columnName = "z", dataType = DataType.DOUBLE)
+  public double z;
 
-@Column(columnName = "z", dataType = DataType.DOUBLE)
-public double z;
-
-public AllPlayerLocations() {
+  public AllPlayerLocations() {
     super("all_player_locations");
-}
+  }
 
-public DataAccess getInstance() {
+  public DataAccess getInstance() {
     return new AllPlayerLocations();
+  }
 }
 ```
 
-让我们看看如何在插件中使用这些代码。
+### 插件：LocationSnapshot
 
-## 插件：LocationSnapshot
+这是一个在新插件中使用 `DataAccess`（在本例中为 `AllPlayerLocations`）的示例。针对 `LocationSnapshot`。对于此插件，我们将提供两个新命令：
 
-这是一个在一个新插件中使用 `DataAccess`（在本例中为 `AllPlayerLocations`）的示例。针对 `LocationSnapshot`。对于此插件，我们将提供两个新命令：
-
-- /savesavelations
-- /loadlocations
+- `/savelocations`
+- `/loadlocations`
 
 你可能想将此类功能作为比赛的一部分，在比赛结束时将所有玩家带回起始点。
 
-`savesavelations` 命令正如你预期的那样，会将所有在线玩家的当前位置保存到磁盘。`loadlocations` 读取这些位置并将所有人传送回保存的位置。我们将使用 Canary 的数据库函数结合我们的 `AllPlayerLocations` DataAccess 对象来保存和加载玩家与位置的哈希数据。
+`savelocations` 命令正如你预期的那样，会将所有在线玩家的当前位置保存到磁盘。`loadlocations` 读取这些位置并将所有人传送回保存的位置。我们将使用 Canary 的数据库函数结合我们的 `AllPlayerLocations` DataAccess 对象来保存和加载玩家与位置的哈希数据。
 
-该插件包含两个部分：`savesavelations` 和 `loadLocations`。为了保持代码整洁并养成良好的习惯，我们将每个部分的代码放在它们自己的函数中。
+该插件包含两个部分：`savelocations` 和 `loadLocations`。为了保持代码整洁并养成良好的习惯，我们将每个部分的代码放在它们自己的函数中。
 
-## savelocations
+#### savelocations
 
-`savesavelocations` 的逻辑看起来如下：
+`savelocations` 的逻辑看起来如下：
+
+`LocationSnapshot/src/locationsnapshot/LocationSnapshot.java`
 
 ```java
-LocationSnapshot/src/locationsapshot/LocationSnapshot.java
 private void saveLocations() {
     List<Player> playerList = Canary.getServer().getPlayerList();
+
     // 对于所有玩家...
     for (Player player : playerList) {
         // 保存坐标，而不是位置
         AllPlayerLocations apl = new AllPlayerLocations();
         apl.player_name = player.getDisplayName();
         Location loc = player.getLocation();
-apl.x = loc.getX();
-apl.y = loc.getY();
-apl.z = loc.getZ();
-```
+        apl.x = loc.getX();
+        apl.y = loc.getY();
+        apl.z = loc.getZ();
 
-HashMap<String, Object> search = new HashMap<String, Object>();
-search.put("player_name", player.getDisplayName());
+        HashMap<String, Object> search = new HashMap<String, Object>();
+        search.put("player_name", player.getDisplayName());
 
-```java
-try {
-  Database.get().update(apl, search);
-} catch (DatabaseWriteException e) {
-  logger.error(e);
-  logger.info("error");
+        try {
+            Database.get().update(apl, search);
+        } catch (DatabaseWriteException e) {
+            logger.error(e);
+            logger.info("error");
+        }
+    }
 }
 ```
 
-我们遍历所有在线玩家列表。对于每个玩家，我们将他们的姓名和 x、y- 和 z 坐标放入一个新的 `AllPlayerLocations` 对象中。通过底部的 `update()` 调用，这些内容将被保存到数据库中。
+我们遍历所有在线玩家列表。对于每个玩家，我们将他们的姓名和 x、y、z 坐标放入一个新的 `AllPlayerLocations` 对象中。通过底部的 `update()` 调用，这些内容将被保存到数据库中。
 
 数据库如何知道要更新什么？你必须传递一个 `HashMap`，其中指定你想要更新的记录（如果是第一次执行，则创建）。因此，我们将构建一个快速的哈希映射，告诉数据库“更新名为 `player_name` 字段等于此玩家 `getDisplayName()` 的记录”。
 
@@ -4227,15 +3705,11 @@ try {
 }
 ```
 
-现在有了一些我们以前没见过的东西：这段额外的、神秘的代码是做什么的？
+### 在 Java 中捕获异常
 
-# 在 Java 中捕获异常
+看到被 `try/catch` 关键字包裹的代码块了吗？数据库函数被定义在出现问题时“抛出异常”。
 
-看到被 `try/catch` 关键字包裹的代码块了吗？数据库函数被定义在出现问题时“抛出异常”（throw exceptions）。
-
-
-
-
+---
 
 ## XML 或 SQLite
 
@@ -4247,13 +3721,15 @@ try {
 data-source=xml
 ```
 
+
+
 为了获得更好的性能，你可以直接将该选项更改为 `sqlite`，而无需进行任何额外配置。要使用性能更高的 `mysql` 选项，你需要使用 `server/config/db.cfg` 进行设置并运行一个 MySQL 服务器。
 
 ## 插件：带保存功能的 BackCmd
 
 利用与 `LocationSnapshot` 相同的思路，你为 `BackCmd` 插件添加数据存储功能，以便在服务器重启后保存位置。我将提供大纲和函数签名，但你将编写函数体，即使其运行所需的代码。准备好了！
 
-现在，`BackCmd` 插件比我们简单的 `Location-Snapshot` 要复杂一点。正如你可能记得第 128 页的插件，`BackCmd` 插件为每个玩家跟踪多个位置；它为每个玩家跟踪一个 `Location` 对象的栈（Stack）。
+现在，`BackCmd` 插件比我们简单的 `LocationSnapshot` 要复杂一点。正如你可能记得第 128 页的插件，`BackCmd` 插件为每个玩家跟踪多个位置；它为每个玩家跟踪一个 `Location` 对象的栈（Stack）。
 
 请记住，数据库系统实际上无法存储 `Location` 对象。我们可以存储一个列表并将其作为栈使用，但它只能存储基本类型的列表。它不能存储单独的 x-、y- 和 z 坐标列表，也无法存储数组列表。因此，我们将稍微“作弊”：我们将坐标存储在一个我们编写的字符串中，然后将它们从字符串中提取出来并读取为独立的 `double` 类型。
 
@@ -4281,18 +3757,29 @@ data-source=xml
 
 ```
 BackCmdSave/src/backcmdsave/SavedLocation.java
+
 package backcmdsave;
 
 import java.util.ArrayList;
+
 import java.util.HashMap;
+
 import net.canarymodad.database.Column;
+
 import net.canarymodad.database.Column.DataType;
+
 import net.canarymodad.database.DataAccess;
+
 import net.canarymodad.database.exceptions.*;
+
 import net.canarymodad.api.entity.humanoid.Player;
+
 import net.canarymodad.api.position.Location;
+
 import net.canarymodad.api.world.World;
+
 import net.canarymodad.database.Database;
+
 import net.canarymodad.Canary;
 
 public class SavedLocation extends DataAccess {
@@ -4302,13 +3789,14 @@ public class SavedLocation extends DataAccess {
 
 接下来你需要添加 `@Column` 注解来描述你想保存到数据库的字段。记住，你需要两个字段：
 
-- `player_name` —— 一个字符串，并且为主键，就像我们在 `Location-Snapshot` 插件中使用的那样。
+- `player_name` —— 一个字符串，并且为主键，就像我们在 `LocationSnapshot` 插件中使用的那样。
 - `location_strings` —— 一个字符串列表。要创建一个列表，在注解中添加参数 `isList=true`，并将变量设置为字符串列表：`ArrayList<String>` 而不是普通的 `String`。
 
-尝试一下。你最终得到的应该像像这样的：
+尝试一下。你最终得到的应该像这样的：
 
 ```
 BackCmdSave/src/backcmdsave/SavedLocation.java
+
 @Column(columnName = "player_name",
 columnType = Column.ColumnType.PRIMARY,
       dataType = DataType.STRING)
@@ -4332,6 +3820,7 @@ public ArrayList<String> location_strings;
 
 ```
 BackCmdSave/src/backcmdsave/SavedLocation.java
+
 public SavedLocation() {
     super();
 }
@@ -4403,10 +3892,6 @@ private Location stringToLocation(String str) {
 }
 ```
 
-
-
-
-
 ## 像栈一样操作
 
 尽管这是一个 Access 对象，但我们仍然自由地向它添加其他函数和数据，以帮助更轻松地构建插件。从主插件的角度来看，我们希望能够为给定的玩家将 `SavedLocation` 保存为一组 `Locations` 栈。这意味着我们需要至少暴露一个公共的 `push` 和 `pop` 函数。
@@ -4423,6 +3908,7 @@ private Location stringToLocation(String str) {
 
 ```java
 BackCmdSave/src/backcmdsave/SavedLocation.java
+
 public void push(Location loc) {
     myRead(player_name);
     // 如果存在之前的位置，确保保存的位置是不同的
@@ -4454,6 +3940,7 @@ public Location pop(Location here) {
 
 ```java
 BackCmdSave/src/backCmdmsave/SavedLocation.java
+
 private void push_stack(Location loc) {
   String s = locationToString(loc);
   location_strings.add(s);
@@ -4480,7 +3967,7 @@ private Location pop_stack() {
 
 确保这些内容可以编译，并像照常一样运行 `build.sh`。
 
-#为 BackCmd 添加保存和加载功能
+# 为 BackCmd 添加保存和加载功能
 
 现在你已经有一个知道如何为玩家 `push` 和 `pop` 个位置的 `SavedLocation`，是时候将代码添加到 `BackCmd.java` 并调用它们了。
 
@@ -4493,6 +3980,7 @@ private Location pop_stack() {
 
 ```java
 BackCmddSave/src/backcmdsave/BackCmddSave.java
+
 package backcmdsave;
 ```
 
@@ -4529,6 +4017,7 @@ public void onTeleport(TeleportHook event) {
     SavedLocation sp = new SavedLocation(player.getName());
     sp.push(player.getLocation());
   }
+}
 ```
 
 ```java
@@ -4537,25 +4026,27 @@ description = "回到上一个位置",
 permissions = { "*" })
 public void backCommand(MessageReceiver receiver, String args) {
   if (receiver instanceof Player) {
-    Player player = (Player) receiver;
-    SavedLocation sp = new SavedLocation(player.getName());
-    Location loc = sp.pop(player.getLocation());
-    if (loc != null) {
-      player.teleport(loc);
-    } else {
-      player.sendMessage("没有可以返回的位置。");
-    }
-  }
+```
+
+
+
+```java
+Player player = (Player) receiver;
+
+SavedLocation sp = new SavedLocation(player.getName());
+
+Location loc = sp.pop(player.getLocation());
+
+if (loc != null) {
+    player.teleport(loc);
+} else {
+    player.sendMessage("没有可以返回的位置。");
 }
 ```
 
-
-
-
-
 安装完成后，你应该使用你的名字和邮箱地址对它进行全局配置：
 
-```
+```bash
 $ git config --global user.name "Your Name"
 $ git config --global user.email "you@example.com"
 ```
@@ -4564,11 +4055,11 @@ $ git config --global user.email "you@example.com"
 
 Windows 版本的 Git 发行版包含一个初衷良好但存在问题的 Bash shell 版本。读者告诉我它运行并不良好。在 Windows Git 安装程序中，你应该选择“从 Windows 命令提示符运行 Git”（Run Git from Windows command prompt），而不是选择默认的“Git bash”选项。
 
-此外，你可能会遇到关于行符差异的抱怨。Windows 使用 CR 字符标记行尾，而其他系统只使用 LF。Java 对这两种约定都兼容，而且大多数编辑器可能会警告你它正尝试转换行符：不用担心它。
+此外，你可能会遇到关于行符差异的抱怨。Windows 使用 `CR` 字符标记行尾，而其他系统只使用 `LF`。Java 对这两种约定都兼容，而且大多数编辑器可能会警告你它正尝试转换行符：不用担心它。
 
-每个项目只需要设置一次。让我们现在就在 CowShooter 插件中操作吧。进入 CowShooter 顶层目录并输入 git init：
+每个项目只需要设置一次。让我们现在就在 `CowShooter` 插件中操作吧。进入 `CowShooter` 顶层目录并输入 `git init`：
 
-```
+```bash
 $ cd CowShooter/
 $ ls
 Canary.inf Manifest.txt bin build.sh dist src
@@ -4576,34 +4067,34 @@ $ git init
 Initialized empty Git repository in /Users/andy/Desktop/CowShooter/.git/
 ```
 
-这会创建一个名为 .git 的魔法隐藏目录，Git 将在其中存储它的记忆——即 Git 所说的仓库（repository）。你每个项目只需要这样做一次，在我们的案例中，就是每个插件操作一次。
+这会创建一个名为 `.git` 的魔法隐藏目录，Git 将在其中存储它的记忆——即 Git 所说的仓库（repository）。你每个项目只需要这样做一次，在我们的案例中，就是每个插件操作一次。
 
 ## 记住更改
 
 现在你已经有了 Git，你需要告诉它需要记住你的哪些文件。你实际上并不想记住所有的文件。
 
-通常情况下，你不想存储 .class 或 jar 文件，因为这些文件可以随时重新创建。你绝对想要 Git 记住你所有的 Java 源代码，以及你的插件配置文件和构建脚本。
+通常情况下，你不想存储 `.class` 或 `jar` 文件，因为这些文件可以随时重新创建。你绝对想要 Git 记住你所有的 Java 源代码，以及你的插件配置文件和构建脚本。
 
 所以首先，清理插件目录并删掉多余的垃圾：
 
-```
+```bash
 $ rm -r bin
 $ rm -r dist
 ```
 
-这删除了生成的 .class 和 jar 文件。现在你只剩下一个整洁的目录树，其中包含了你想要记住并跟踪更改的文件。
+这删除了生成的 `.class` 和 `jar` 文件。现在你只剩下一个整洁的目录树，其中包含了你想要记住并跟踪更改的文件。
 
 你使用 `git add <files>...`，其中 `<files>` 可以是单个文件名或目录名。由于你从现在起想要当前目录下的所有内容，你只需要输入 `git add .`。
 
-```
-$ git add
+```bash
+$ git add .
 ```
 
 （记住 `.` 意味着当前目录。）现在 Git 知道要监控所有这些文件了。
 
 但它还没有对你文件的当前状态拍摄快照。要做到这一点，你需要提交（commit）你的更改：
 
-```
+```bash
 $ git commit -a -m 'My first commit'
 ```
 
@@ -4611,11 +4102,11 @@ $ git commit -a -m 'My first commit'
 
 消息非常重要：你通过它告诉自己在修改这些文件时在做什么。如果你使用一个糟糕的描述性消息如“I did stuff”（我做了一些事），那对你没有任何帮助。
 
-让我们尝试一下那个时刻。在 CowShooter 目录下创建一个新文件并命名为 README.txt。在文件中放入任何你想要的内容：插件、你的个人宣言、无意义文本，随你。
+让我们尝试一下那个时刻。在 `CowShooter` 目录下创建一个新文件并命名为 `README.txt`。在文件中放入任何你想要的内容：插件、你的个人宣言、无意义文本，随你。
 
 现在添加文件并提交这次添加：
 
-```
+```bash
 $ git add README.txt
 $ git commit -a -m "Add my personal screed"
 [master 50847c8] Add my personal screed
@@ -4623,30 +4114,28 @@ $ git commit -a -m "Add my personal screed"
 create mode 100644 README.txt
 ```
 
-要查看你提交消息的历史，请使用 git log：
+要查看你提交消息的历史，请使用 `git log`：
 
-```
+```bash
 $ git log
 commit 50847c8a3e60dbc8cf44189420765eb23ebd9a5
 Author: Andy Hunt <andy@toolshed.com>
 Date: Jan 7 15:51:22
-```
 
-> Add my personal screed
+    Add my personal screed
 
-```
 aa58dfaa87fa79b01e2c7ce72bccdd41b7e962d6
 Author: Andy Hunt <andy@toolshed.com>
 Date: Tue 7 15:50:31
-```
 
-首次提交
+    首次提交
+```
 
 这显示了完整的日志记录，包含长版本的提交标识符、作者、日期和日志消息。那些看起来随机的、在密码学上很有有趣的 SHA1 哈希值，实际上标识了每次提交。但它们真的很长。通常你只需要使用哈希的前八个字符作为唯一字符串。
 
 你可以使用以下命令获取相同信息的更简洁报告：
 
-```
+```bash
 $ git log --oneline
 50847c8 Add my personal screed
 aaa58dfa First Commit
@@ -4654,15 +4143,15 @@ aaa58dfa First Commit
 
 提交哈希的短版本就是你所需要的。
 
-所以记住：当你创建一个新文件并让 Git 跟踪它时，不要忘记执行 add：
+所以记住：当你创建一个新文件并让 Git 跟踪它时，不要忘记执行 `add`：
 
-```
+```bash
 $ git add File.java
 ```
 
-然后执行 commit 以在仓库中保存所有文件的快照。你始终可以通过输入以下命令来检查 Git 知道哪些文件，哪些它不知道，哪些已提交，哪些尚未提交：
+然后执行 `commit` 以在仓库中保存所有文件的快照。你始终可以通过输入以下命令来检查 Git 知道哪些文件，哪些它不知道，哪些已提交，哪些尚未提交：
 
-```
+```bash
 $ git status
 # On branch master
 # Untracked files:
@@ -4674,11 +4163,11 @@ nothing added to commit but untracked files present (use "git add")
 
 哎！我可能在某处执行了编译，我们不希望 Git 跟踪它们，但我们也不希望 Git 每次都抱怨。如果这些文件是你关心的，我们会让 Git 跟踪它们，但我们也不希望 Git 每次都抱怨。你可以这样做：
 
-1. 在目录下创建一个名为 .gitignore 的文件。
+1. 在目录下创建一个名为 `.gitignore` 的文件。
 2. 在文件中列出你想要忽略的文件名。
-3. 添加并提交 .gitignore。
+3. 添加并提交 `.gitignore`。
 
-现在 .gitignore 文件看起来像这样：
+现在 `.gitignore` 文件看起来像这样：
 
 ```
 bin/
@@ -4689,27 +4178,21 @@ dist/
 
 假设你不小心从目录中删除了文件。或者你进行了一系列被证明是糟糕主意的编辑，并且你想回去。噢，别担心：我们都经历过。
 
-事实上，让我们现在故意这样做——在 CowShooter 插件中设置的 src/CowTask.java。
+事实上，让我们现在故意这样做——在 `CowShooter` 插件中设置的 `src/CowTask.java`。
 
-在 CowTask.java 的中间随机输入一些如“Zombie cows are coming! Run for your life! Braaaa...”的文本。这将作为我们在文件中犯错误的示例。Java 当然会对我们的僵尸末日发出警告，而你不知道这意味着什么。尝试用 build.sh 编译，你会看到大量的错误信息：
+在 `CowTask.java` 的中间随机输入一些如“Zombie cows are coming! Run for your life! Braaaa...”的文本。这将作为我们在文件中犯错误的示例。Java 当然会对我们的僵尸末日发出警告，而你不知道这意味着什么。尝试用 `build.sh` 编译，你会看到大量的错误信息：
 
-```
+```text
 src/cowshooter/CowTask.java:20: illegal start of type
 Zombie cows are coming! Run for your life! Braaaainsss. ^
-```
 
-```
 src/cowshooter/CowTask.java:20: <identifier> expected
 Zombie cows are coming! Run for your life! Braaaainsss. ^
-```
 
-```
 src/cowshooter/CowTask.java:22: '; expected
     public void run() {
 ^
-```
 
-```
 src/cowshooter/CowTask.java:22: invalid method declaration;
     return type required
     public void run() {"
@@ -4719,9 +4202,9 @@ src/cowshooter/CowTask.java:22: invalid method declaration;
 
 所以这里有一个有趣的问题：你的本地文件中哪些更改与你上一次提交（即拍摄快照）时相比不同？
 
-你可以使用 diff 查看更改了哪些内容：
+你可以使用 `diff` 查看更改了哪些内容：
 
-```
+```bash
 $ cd src
 cd cowshooter
 $ diff CowTask.java
@@ -4737,14 +4220,9 @@ index 4894201..5560d3 100644
     if (cow.isOnGround()) {
 ```
 
+输出顶部有一些杂质，然后是来自 `CowTask.java` 中间的几行，其中两行用加号 (`+`) 标记了。那两行就是添加的行。啊，问题就在这里！添加这些行是个糟糕的主意：事实上，如果直接丢弃上一次提交的所有内容，并将此文件恢复到之前的状态会更好。
 
-
-
-一个简单的撤销 • 175
-
-输出顶部有一些杂质，然后是来自 `CowTask.java` 中间的几行，其中两行用加号 (+) 标记了。那两行就是添加的行。啊，问题就在这里！添加这些行是个糟糕的主意：事实上，如果直接丢弃上一次提交的所有内容，并将此文件恢复到之前的状态会更好。
-
-```
+```bash
 $ git checkout MyMessedUpFile.java
 ```
 
@@ -4752,7 +4230,7 @@ $ git checkout MyMessedUpFile.java
 
 所以对于我们的情况下，我们可以这样做：
 
-```
+```bash
 $ cd src/cowshooter
 $ ls
 CowShooter.java CowTask.java
@@ -4761,7 +4239,7 @@ $ git checkout CowTask.java
 
 现在 `CowTask.java` 回到了一个已知状态。我们甚至可以重新编译：
 
-```
+```bash
 $ cd ~/Desktop/code/CowShooter
 $ ./build.sh
 Compiling javac...
@@ -4774,7 +4252,7 @@ Completed Successfully.
 
 让我们试试看。回到 `CowTask.java` 并再次添加那行糟糕的僵尸代码。但现在用以下命令提交它：
 
-```
+```bash
 $ git commit -a -m 'Added zombie warning'
 [master edee198] Added zombie warning
 1 file changed, 2 insertions(+)
@@ -4782,59 +4260,57 @@ $ git commit -a -m 'Added zombie warning'
 
 现在让它搞得更糟一点。找到这一行：
 
-```
+```java
 private Cow cow;
 ```
 
 并删除它。也将其提交：
 
-```
+```bash
 $ git commit -a -m 'Deleted variable declaration'
 [master 44b39f3] Deleted variable declaration
 1 file changed, 3 deletions(-)
 ```
 
-报告勘误 • 讨论
-
 现在让我们看看 `CowTask.java` 的日志（在 `src/cowshooter/` 目录下）：
 
-```
+```bash
 $ cd ~/Desktop/code/CowShooter/src/cowshooter
 $ git log --oneline CowTask.java
-```
-
 44b39f3 Deleted variable declaration
 e4ee198 Added zombie warning
 aa58fa First Commit
-
 ```
 
 你的提交 ID（那些列在每行上的魔法数字）会与我的不同。但让我们在示例中使用我的吧。
 
 所以在这种情况下，我们想要回到该文件的最后一个已知版本。这意味着我们想要跳过提交 `44b39f3` 和 `e4ee198`，并通过我们的提交 ID `aa58df` 检出此文件，那时生活还美好：
 
-```
+```bash
 $ git checkout aa58df CowTask.java
 ```
 
 （记住，你的提交 ID 将被删除。）
 
 静静而确实，`CowTask.java` 回到了它之前的状态，回到了你添加僵尸文本之前、在你删除那些变量之前。
+
 现在文件实际上发生了变化，就像你手动编辑过一样，所以请确保用适当的消息提交这次最新更改（也许类似于“那是个糟糕的主意：回到重来吧。”）。
 
-```
+```bash
 $ git commit -m 'That was a bad idea'
 1 file changed, 3 insertions(+), 2 deletions(-)
+[master 0b6b051] That was a bad idea
 ```
 
-[master 0b6b051] That was a bad idea
-
 我们糟糕的主意被遗忘了：就像历史一样
-$ $ git log --oneline CowTask.java
+
+```bash
+$ git log --oneline CowTask.java
 0b6b051 That was a bad idea
 44b39f3 Deleted variable declaration
 e4ee198 Added zombie warning
 aa58fa First Commit
+```
 
 而且如果你愿意，你甚至可以回到提交 `44b39f3` 或 `e4ee198` 时的糟糕代码版本。这就是 Git 的美之处：它记得一切，无论好的还是坏的，你总是可以回到过去。
 
@@ -4852,27 +4328,26 @@ Git 有一个非常酷的功能叫做“分支”（branches）。这些不是�
 
 你可以使用 Git 的 `branch` 命令轻松创建一个新时间线，`branch` 本身会列出项目中的所有当前分支：
 
-```
+```bash
 $ git branch
+* master
 ```
-
-- * master
 
 默认只有一个分支。它名为 `master`，你正处于那个时间线中。现在让我们把宇宙分成两部分，并创建一个替代现实！这很简单（先不要输入这个，我们稍后会讲到）：
 
-```
+```bash
 $ git branch cow-plane
 ```
 
 现在你创建了一个新的时间线。但你不在里面；你还在 `master` 中。（输入 `git branch`，你会发现星号仍在 `master` 旁边。）要切换到另一个时间线，输入这个：
 
-```
+```bash
 $ git checkout cow-plane
 ```
 
 是的，又是我们的好朋友 `checkout`。强大的魔法。它现在被传输到了一个不同的现实。你在这里做的任何操作都不会影响 `master` 时间线。你可以编辑文件、删除文件、添加新文件、提交更改——一切。这一切都在 `cow-plane` 宇宙中。你可以随时回到 `master`：
 
-```
+```bash
 $ git checkout master
 ```
 
@@ -4882,28 +4357,32 @@ $ git checkout master
 
 ![img/9f468df40c6924bae6123185](img/9f468df40c6924bae6123185)
 
-*等等，提供的 OCR 文本在后半部分（第185-186页）实际上是乱码/损坏的。我将根据提示中可见的部分提供干净的版本。*
-
-（自我纠正：提示要求我处理提供的 OCR 文本。我将输出实际提供的内容的清理和合并版本。）
-
-
-
 在 `Shooter.java` 中，修改生成行以生成苦力怕（Creeper）而不是牛（Cow）：
+
+```java
 Creeper victim = (Entity)spawnEntity(loc, EntityType.CREEPER);
+```
 
 太棒了！现在在 `Task.java` 中修改顶部的变量：
+
 ```java
 private cow; // 删除这一行
 private creeper; // 添加这一行
 ```
 
 再次将所有从 `cow` 的引用更改为 `creeper`（有很多处）。一旦编译成功，将其提交以确保安全：
+
 ```bash
-git commit -a -m 'Changed to creepers'
+$ git commit -a -m 'Changed to creepers'
 2 files changed, 13 insertions(+), 3 deletions(-)
 ```
 
-当我们在 `master` 分支工作时，如果能将更改合并就很好。为此，你可以使用：
+
+
+## 当我们在 `master` 分支工作时
+
+如果能将更改合并就很好。为此，你可以使用：
+
 ```bash
 git merge play -m 'Bringing over'
 Auto-merging src/Shooter/Shooter.java
@@ -4913,13 +4392,15 @@ src/cow/Shooter.java | ++++++
 
 现在查看 `Shooter.java` 文件，你会发现来自 `play` 分支的更改已经合并。`master` 现在包含了移动到函数的更改以及来自 `cow` 的更改。
 
-在 `play` 中合并更改并不意味着它消失了。`play` 分支仍然存在，只要你愿意，你就可以继续对它操作。如果你真的完成了对它的工作并且再也不想看到它，可以将其删除它：
+在 `play` 中合并更改并不意味着它消失了。`play` 分支仍然存在，只要你愿意，你就可以继续对它操作。如果你真的完成了对它的工作并且再也不想看到它，可以将其删除：
+
 ```bash
 git branch -d play
 Deleted branch (was master).
 ```
 
 正如 `git branch` 所示，这就是现实情况：
+
 ```bash
 git branch
 * master
@@ -4931,17 +4412,19 @@ git branch
 
 要设置它，你需要一个 Git 托管平台的账户。最流行的是 GitHub，尽管许多人也喜欢 Bitbucket。对于打算与他人共享或作为开源提供的代码，GitHub 是标准；而 Bitbucket 更适合你不打算与世界共享的私有项目。两者都提供了简单的 Web 界面帮助你上手。例如，一旦你在 GitHub 上创建了账户，就可以点击按钮创建一个新仓库，你将看到类似下面的屏幕：
 
-img/9f468df40be6924e00c931230bae6b1a188_0.png
+![img/9f468df40be6924e00c931230bae6b1a188_0.png](img/9f468df40be6924e00c931230bae6b1a188_0.png)
 
 为你的项目选择名称，并选择公共（Public）或私有（Private）。GitHub 上的公共仓库免费可用，但私有仓库需要付费。另一方面，Bitbucket 提供免费的无限私有仓库。不要初始化仓库，因为你已经在本地有一个了。只需点击 Repository 按钮，**砰**——搞定了。
 
-1. http://github.com
-2. http://bitbucket.com
+1. <http://github.com>
+2. <http://bitbucket.com>
 
 现在你将看到关于下一步做什么的说明。
-img/9f468df40be6924e00c931230bae6b1a189_0.png
 
-首先，复制并保存顶端仓库的 URL。在示例中，那将是一个本地仓库，请遵循 https://github.com/andyhunt/minecraft.git。由于你已经有一个本地仓库，请按照底部的“从命令行推送现有仓库”的说明进行。我的看起来像这样：
+![img/9f468df40be6924e00c931230bae6b1a189_0.png](img/9f468df40be6924e00c931230bae6b1a189_0.png)
+
+首先，复制并保存顶端仓库的 URL。在示例中，那将是一个本地仓库，请遵循 `https://github.com/andyhunt/minecraft.git`。由于你已经有一个本地仓库，请按照底部的“从命令行推送现有仓库”的说明进行。我的看起来像这样：
+
 ```bash
 git remote add origin https://github.com/andyhunt/minecraft.git
 git push -u origin master
@@ -4950,6 +4433,7 @@ git push -u origin master
 第一个命令设置了一个名为 `origin` 的远程仓库并将其与给定的 URL 关联。接下来，带有 `-u` 选项的 `push` 将 `master` 分支设置为跟踪 `origin`。每当你达到良好的停止点时，都可以运行 `push`，你所有的代码和更改将安全地保存在云端。
 
 你（如果是公共仓库，则可以是任何人）可以通过 `git clone` 将仓库副本克隆到空目录中，从而获取所有代码的副本和更改历史：
+
 ```bash
 mkdir newcopy
 cd newcopy
@@ -4958,42 +4442,39 @@ git clone https://github.com/andyhunt/minecraft.git
 
 ## 友好的代码
 
-当你编写要与他人共享的代码——这意味着与整个世界共享时——你需要多花一点精力来编写“友**”的代码：
+当你编写要与他人共享的代码——这意味着与整个世界共享时——你需要多花一点精力来编写“友好”的代码：
 
--   整洁很重要。将括号放在它们应该在的地方；不要尝试将所有内容挤在一行中，或使用不一致的缩进。对于人类阅读者来说，代码的格式可能与代码本身一样重要。
--   保持紧凑。不要让行或函数显得非常孤单。
--   为你的函数编写注释。解释为什么会有这个函数以及它是做什么的。不要对显而易见的内容进行注释。
-
-
-
+- 整洁很重要。将括号放在它们应该在的地方；不要尝试将所有内容挤在一行中，或使用不一致的缩进。对于人类阅读者来说，代码的格式可能与代码本身一样重要。
+- 保持紧凑。不要让行或函数显得非常孤单。
+- 为你的函数编写注释。解释为什么会有这个函数以及它是做什么的。不要对显而易见的内容进行注释。
 
 接下来，我们将介绍如何从零开始设计并构建自己的插件。
 
 ## 你不断完善的工具箱
 
-![](img/9f468df40be6924e00c931230bae6b1a_192_0.png)
+![img/9f468df40be6924e00c931230bae6b1a_192_0.png](img/9f468df40be6924e00c931230bae6b1a_192_0.png)
 
 你现在已经学会了如何：
 
 - 使用命令行 shell
-- 使用 Java 和 jacac 进行构建
+- 使用 Java 和 `javac` 进行构建
 - 运行 Minecraft 服务器
 - 部署插件
 - 连接到本地服务器
 - 使用 Java 变量处理数字和字符串
 - 使用 Java 函数
-- 使用 if、for 和 while 语句
+- 使用 `if`、`for` 和 `while` 语句
 - 使用 Java 对象
-- 使用 imports 导入 Java 包
-- 使用 new 创建对象
+- 使用 `imports` 导入 Java 包
+- 使用 `new` 创建对象
 - 为插件添加新命令
 - 处理位置对象（location objects）
 - 查找方块/实体
 - 使用局部变量
 - 使用类级全局变量
-- 使用 ArrayLists
-- 使用 HashMaps
-- 使用 private 和 public 控制可见性
+- 使用 `ArrayLists`
+- 使用 `HashMaps`
+- 使用 `private` 和 `public` 控制可见性
 - 修改 Minecraft 方块
 - 修改并生成实体
 - 监听并响应游戏事件
@@ -5004,7 +4485,7 @@ git clone https://github.com/andyhunt/minecraft.git
 - 保存并加载配置数据
 - 从简单函数构建复杂代码
 - 保存并加载插件游戏数据
-- 使用 DataAccess 使用数据库
+- 使用 `DataAccess` 使用数据库
 - 捕获并抛出 Java 异常
 - 使用 Git 跟踪代码更改
 - 回到代码的早期版本（“撤销按钮”）
@@ -5019,9 +4500,7 @@ git clone https://github.com/andyhunt/minecraft.git
 
 你将能够开始编写完全属于你自己的插件了。
 
-## 第 13 章
-
-## 设计你自己的插件
+## 第 13 章：设计你自己的插件
 
 对于目前为止我们过的所有插件，都是由我带路并向你展示该怎么做。在本章中，我将给你一些建议和提示，帮助你从零开始开发自己的插件。我们将一起完成一个新插件的步骤，看看它是如何运作的。
 
@@ -5034,7 +4513,7 @@ git clone https://github.com/andyhunt/minecraft.git
 5. 将它们缝合在一起。
 6. 大功告成！
 
-> **重要提示：**尽管我按顺序列出了这些步骤，而且我们将按顺序进行，但现实世界通常不是那样的。
+> **重要提示：** 尽管我按顺序列出了这些步骤，而且我们将按顺序进行，但现实世界通常不是那样的。
 
 创造力和发明很少遵循从想法到执行的直接线性路径。相反，你会发现某些东西的运行方式并不如你想象的那样。你写的代码完全错误。或者代码完全正确，但并不是你需要的。这完全正常，实际上，这正是编写代码的意义所在。
 
@@ -5042,13 +4521,13 @@ git clone https://github.com/andyhunt/minecraft.git
 
 专业程序员通过采取非常小的步骤来解决这个问题：一次只做一个小小的、易于处理的事，确保它运行正常，然后再继续。每当你意识到自己犯了错误或误解了什么时，立即回去修复。不要想着“等以后再修复”，你不会记得的。听我的没错。
 
-![](img/9f468df40be6924e00c931230bae6b1a_193_0.png)
+![img/9f468df40be6924e00c931230bae6b1a_193_0.png](img/9f468df40be6924e00c931230bae6b1a_193_0.png)
 
-## 第 13 章. 设计你自己的插件 · 188
+## 让我们深入并设计一个新插件
 
-让我们深入并设计一个新插件。我将在我的新插件上执行这些步骤，你也将与我一起为你的新插件做同样的事情。你的插件应该做一些不同的事情。而且花一些时间也没关系；这不是那种你一个晚上就能冲完的章节。
+我将在我的新插件上执行这些步骤，你也将与我一起为你的新插件做同样的事情。你的插件应该做一些不同的事情。而且花一些时间也没关系；这不是那种你一个晚上就能冲完的章节。
 
-## 产生一个想法
+### 产生一个想法
 
 在开始之前，你对想写的内容需要有一个大致的想法。这可能不是一个伟大的主意或完美的想法，这没关系。毕竟这是软件，你被允许改变主意。但我们需要从某个地方开始。
 
@@ -5056,11 +4535,11 @@ git clone https://github.com/andyhunt/minecraft.git
 
 到目前，我完全不知道该如何开始这样的事情。
 
-## 亲自自己尝试一下
+#### 亲自自己尝试一下
 
 你的想法是什么？现在记录下来。如果你卡住了，看看别人写的插件，或者只是浏览 Canary 文档，看看是否有什么能给你灵感。
 
-## 收集材料
+### 收集材料
 
 有了想法后，你就开始“收集材料”。如果你在制作一个手工项目，你会收集所有的原材料（胶水、木头、纸、粘稠的眼睛、钚）和工具（剪刀、锤子、斧头、焊接枪——无论是什么）。我们需要做同样的事。但我们需要哪些材料？
 
@@ -5071,16 +4550,13 @@ git clone https://github.com/andyhunt/minecraft.git
 - 你需要游戏的哪些部分？
 - 可能会出现什么问题？
 
-
-
-
 到目前为止，我们的主插件类应该是这样的：
 
-![](img/9f468df40be6924e00c931230bae6b1a_197_0.png)
+![img/9f468df40be6924e00c931230bae6b1a_197_0.png](img/9f468df40be6924e00c931230bae6b1a_197_0.png)
 
 然后是 `CreeperCowTimer`，它将持有一头牛并处理攻击性牛需要做的事情：
 
-![](img/9f468df40be6924e00c931230bae6b1a_197_1.png)
+![img/9f468df40be6924e00c931230bae6b1a_197_1.png](img/9f468df40be6924e00c931230bae6b1a_197_1.png)
 
 注意，我们还没有进入任何具体细节的细节：你需要在脑海中清楚地理解为什么某个特定的类需要存在。它负责做什么？
 
@@ -5101,37 +4577,37 @@ git clone https://github.com/andyhunt/minecraft.git
 
 所以对于 `CreeperCow` 插件，让我们拿我们收集的材料列表加上步骤列表，想一些函数名称，看看我们需要编写什么代码：
 
-CreeperCow（主插件类）：
+**CreeperCow（主插件类）：**
 
-- * cowList: random();* 我们需要一个随机数，Java 文档说这将返回返回一个 0 到 1 之间的 double。¹
-- * spawnCows():* 创建若干随机数量的牛，不超过设定的的限制。我们将创建一个 `CreeperCowTimer` 来持有每只牛并启动它的计时器。
-- * eventListener():* 一个用于调用 `spawnCows()` 的监听器。
+- `cowList`、`random()`：我们需要一个随机数，Java 文档说这将返回返回一个 0 到 1 之间的 double。¹
+- `spawnCows()`：创建若干随机数量的牛，不超过设定的的限制。我们将创建一个 `CreeperCowTimer` 来持有每只牛并启动它的计时器。
+- `eventListener()`：一个用于调用 `spawnCows()` 的监听器。
 
-CreeperCowTimer（每只牛一个）：
+**CreeperCowTimer（每只牛一个）：**
 
-- * findClosestPlayer():* 可能没有玩家。
-- * jump(Location loc):* 跳到空中且不要在碰撞时死掉。
-- * explode():* 如果我们击中了玩家（或距离足够近），就爆炸并告诉插件移除这只牛。
+- `findClosestPlayer()`：可能没有玩家。
+- `jump(Location loc)`：跳到空中且不要在碰撞时死掉。
+- `explode()`：如果我们击中了玩家（或距离足够近），就爆炸并告诉插件移除这只牛。
 
 这些是我们目前已经想到的，但这让我们可以开始组合一些代码了。这将帮助我们解决剩余的问题，并且可能会引发一些新问题。我们继续吧。
 
-## 亲自尝试一下
+#### 亲自尝试一下
 
 拿几张索引卡或纸片，写下你的主类及其职责，以及它可能需要的 Canary 的任何部分。如果你像我们这里这样需要额外的类（例如用于任务运行器），或者任何你需要跟踪的任何内容，也为它们创建那些卡片。
 
 对于每项责任，写出一个读起来像故事的步骤列表。然后通过你的“材料”列表，初步尝试列出一份函数和变量列表，并问出与我们问过相同的问题。
 
-- 1. http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html#random%28%29
+1. <http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html#random%28%29>
 
 一旦你整理好了列表，就可以开始编写一些代码了——但不要一次写完，正如我们在下一节中看到的。
 
-## 尝试每个部分
+### 尝试每个部分
 
 我们现在开始编写代码，但尽管这令人兴奋，我们希望缓慢地进行。无论你是在这里跟着我操作，还是在编写你自己的插件，请记住一次迈一小步——不要急于。
 
 让我们从创建一个新目录和每个插件需要的常规文件开始。再次，我们将使用 `mkplugin.sh` 脚本开始。不要忘记，你将在桌面上创建你自己的插件；我的版本在 `Desktop/code` 下。
 
-```
+```bash
 ~/Desktop$ .mkplugin.sh CreeperCow
 ~/Desktop$ cd CreeperCow
 ~/CreeperCow ls -a
@@ -5143,7 +4619,7 @@ Canary.inf bin dist
 
 `mkplugin.sh` 脚本贴心地为我们制作了一个 `.gitignore`，它将忽略 `bin/` 和 `dist/` 目录。我们将添加前几个文件并将它们提交作为基准：
 
-```
+```bash
 ~/Desktop/CreeperCow$ git init
 Initialized empty Git repository in /Users/andy/Desktop/CreeperCow/
 ~/Desktop/CreeperCow$ git add -a .gitignore Canary.inf Manifest.txt src
@@ -5158,11 +4634,10 @@ create 100644 src/creepercow/CreeperCow.java
 ```
 
 如果你连接了远程仓库，也可以执行 `git push`。
+
 现在进入代码。
 
 我们知道需要一个监听器来调用 `spawnCows()`。我们知道我们需要一个监听器和 `spawnCows()`，在继续之前，让我们在 `CreeperCow.java` 中开始。
-
-第 13 章，“设计你的插件”，194 页。
 
 ```java
 import canarymod.plugin.PluginListener;
@@ -5196,7 +4671,7 @@ public class CreeperCow extends Plugin implements PluginListener {
 
 现在我们能够运行 `testcows` 命令并看到它正常工作。
 
-```
+```bash
 ~/Desktop/CreeperCow build.sh
 Compiling with javac...
 Creating jar file...
@@ -5206,7 +4681,7 @@ Completed Successfully.
 
 这是一个确保我们一切正确并提交的好机会。
 
-## 亲自尝试一下
+#### 亲自尝试一下
 
 现在你自己来做：使用 `mkplugin.sh` 创建一个新的插件目录，为它设置 Git 仓库，并添加你认为需要的任何函数和数据。如果你需要，可以参考书前面的部分。
 
@@ -5214,7 +4689,7 @@ Completed Successfully.
 
 不要忘记执行 `git commit` 来“保存你的游戏”。
 
-## 填充细节：`spawnCows()` 函数
+### 填充细节：`spawnCows()` 函数
 
 现在我们已经有了测试方法，让我们转向 `spawnCows()` 本身。我们之前注意到我们需要执行以下操作：
 
@@ -5231,12 +4706,13 @@ Completed Successfully.
 
 所以我们需要更改我们为 `spawnCows()` 设置的临时声明，并传入一个东西来指示我们想要这些牛在哪里。它看起来像什么样？
 
-
 让我们从一个位置（Location）开始，然后是一个若干数量的方块区域。该位置将是大正方形的一个角，正方形将在 x 和 z 方向上延伸若干个区块。因此，我们将函数签名更改如下所示：
 
 ```java
 public void spawnCows(Location start, int size) {
 ```
+
+
 
 然后我们可以决定传入什么了。为了测试，我们可以传入你的玩家位置（Player location）和一个你任选的数字。让我们现在写下这些代码。
 
@@ -5308,46 +4784,7 @@ public void spawnCows(Location target, int size, int count) {
 
 我写了一些代码，经过了测试，现在在继续下去之前，我会执行一次 `git commit` 来保存这个世界的状态。
 
-## 自己自己尝试一下
-
-轮到你了！像我在这里这样做一样，开始完善你的函数。不要觉得它们现在必须完成所有功能——只需要足够开始即可（例如，我们这里的牛不会跳跃）。
-
-对于你创建的每个函数，请包含一个测试命令，以便你可以在游戏内部尝试它。
-
-确保你所有的测试命令都能与你目前完成的所有内容正常工作。别忘记用 Git 保存你的进度。
-
-## 填充细节：CreeperCowTimer
-
-早些时候我们决定将跳转、攻击、爆炸牛的代码放入一个新的 `CreeperCowTimer` 类中。最终，我们将它从主 `CreeperCow` 插件中的一个事件中提升出来。
-
-给定一个目标和牛的位置，我们通过取 Location 坐标中 x 和 y 方向的差值创建一个新的 `Vector3D`：这给了我们牛与其目标之间的位移。但对于速度来说这太大了，所以我们将其乘以一个我通过实验发现的方便数字（0.075）。最后，我们设置牛的速度，这将让它以该速度沿着 `Vector3D` 跳跃。
-
-```java
-public class CreeperCowTimer {
-    private Cow cow;
-
-    public void jump(Location target) {
-        Location cowLoc = cow.getLocation();
-        double factor = 0.075;
-        Vector3D v = new Vector3D(
-            (target.getX() - cowLoc.getX()) * factor,
-            (target.getZ() - cowLoc.getZ()) * factor
-        );
-        cow.moveEntity(v.getX() + (Math.random() * -0.1),
-            v.getZ() + (Math.random() * -0.1));
-    }
-}
-```让我们编译并构建它，然后测试一下。
-
-我会登录游戏并尝试命令 `/testspawncows 108`，这将在我当前位置 10x10 方块范围内生成八只牛。
-
-![](img/9f468df40be6924e00c931230bae6b1a_203_0.png)
-
-嘿，我们生成了一些牛！不过它们并不怎么吓。它们只是坐在那里，像牛通常做的那样。我们需要让它们跳跃并攻击。
-
-我写了一些代码，经过了测试，现在在继续下去之前，我会执行一次 `git commit` 来保存这个世界的状态。
-
-## 自己自己尝试一下
+## 自己尝试一下
 
 轮到你了！像我在这里这样做一样，开始完善你的函数。不要觉得它们现在必须完成所有功能——只需要足够开始即可（例如，我们这里的牛不会跳跃）。
 
@@ -5377,12 +4814,8 @@ public class CreeperCowTimer {
     }
 }
 ```
-（注：原文中此处存在逻辑重复或代码中断，翻译已根据上下文保持一致）
 
-
-
-
-## 第 13 章. 设计你的插件 · 202
+## 第 13 章 设计你的插件 · 202
 
 快速浏览 Canary 文档中 `net.canary-mod.hook` 下的事件，就能发现我们需要的：当世界部分加载时使用 `ChunkLoadedHook`，当它被删除时使用 `ChunkUnloadHook`。因此，每当 16x16 的世界区块加载时，我们都会收到一个事件。有一个微小的细节：区块通过区块网格告诉我们它处于哪个位置；你需要乘以 16 才能获得真实的坐标。
 
@@ -5435,6 +4868,12 @@ import net.canarymod.api.DamageType;
 import net.canarymod.world.Chunk;
 import com.pragrog.ahmine.ez.EZPlugin;
 ```
+
+
+
+# CreeperCow 插件代码分析
+
+## 主类：`CreeperCow.java`
 
 ```java
 public class CreeperCow extends EZPlugin implements PluginListener {
@@ -5591,8 +5030,11 @@ public class CreeperCow extends EZPlugin implements PluginListener {
 }
 ```
 
+## 定时器类：`CreeperTimer.java`
+
+### 包声明与导入
+
 ```java
-CreeperCow/src/creepercow/CreeperTimer.java
 package creepercow;
 
 import java.util.List;
@@ -5607,6 +5049,8 @@ import net.canarymod.api.world.blocks.Block;
 import net.canarymod.api.world.blocks.BlockType;
 import net.canarymod.api.tasks.ServerTask;
 ```
+
+### 类定义与核心方法
 
 ```java
 public class CreeperTimer extends ServerTask {
@@ -5667,9 +5111,7 @@ public class CreeperTimer extends ServerTask {
 }
 ```
 
-
-
-
+### 代码片段（疑似 `jump` 方法剩余部分）
 
 ```java
 {target.getZ() - cowLoc.getZ()) * multFactor
@@ -5679,6 +5121,8 @@ v.getY(),
 v.getZ() + (Math.random() * -0.1))
 }
 ```
+
+### 任务运行回调
 
 ```java
 // 用于运行和执行任务体的回调
@@ -5698,9 +5142,12 @@ public void run() {
             jump(pLoc);
         }
     }
+}
 ```
 
-你可能会注意到，我并没有真正实现我在列表中提到的所有内容。例如，我没有检查是否生成了过多的牛，也没有直接杀死目标玩家。我可能会以后把这些加上，或者干脆不管。因为我*认为*这些元素并不意味着我必须把它们写出来。如果需要，我随时可以添加。
+
+
+你可能会注意到，我并没有真正实现我在列表中提到的所有内容。例如，我没有检查是否生成了过多的牛，也没有直接杀死目标玩家。我可能会以后把这些加上，或者干脆不管。因为我认为这些元素并不意味着我必须把它们写出来。如果需要，我随时可以添加。
 
 而且我遇到了一些没想到的问题。例如，当服务器关闭时牛会发生什么？牛仍然会在世界中，但它们不再是苦力牛了，因为插件没有跟踪它们。也许我应该在关闭时让牛消失。或者，也许有额外的牛并不是真的问题？软件程序的事吧。
 
@@ -5719,24 +5166,24 @@ public void run() {
 你现在已经知道如何：
 
 - 使用命令行壳
-- 使用 Java, Javac 进行构建
+- 使用 `Java`、`Javac` 进行构建
 - 运行 Minecraft 服务器
 - 部署插件
 - 连接到本地服务器
-- 使用 Java 变量处理数字和字符串
-- 使用 Java 函数
-- 使用 if, for 和 while 语句
-- 使用 Java 对象
-- 使用 imports 导入 Java 包
-- 使用 new 创建对象
+- 使用 `Java` 变量处理数字和字符串
+- 使用 `Java` 函数
+- 使用 `if`、`for` 和 `while` 语句
+- 使用 `Java` 对象
+- 使用 `imports` 导入 `Java` 包
+- 使用 `new` 创建对象
 - 为插件添加新命令
-- 使用 Location 对象操作
+- 使用 `Location` 对象操作
 - 寻找方块/实体
 - 使用局部变量
 - 使用类级全局变量
-- 使用 ArrayLists
-- 使用 HashMaps
-- 使用 private 和 public 控制可见性
+- 使用 `ArrayLists`
+- 使用 `HashMaps`
+- 使用 `private` 和 `public` 控制可见性
 - 修改 Minecraft 方块
 - 修改并生成实体
 - 监听并响应游戏事件
@@ -5747,9 +5194,9 @@ public void run() {
 - 保存和加载配置数据
 - 从简单函数构建复杂代码
 - 保存和加载插件游戏数据
-- 使用 DataAccess 使用数据库
+- 使用 `DataAccess` 使用数据库
 - 捕获并抛出异常
-- 使用 Git 跟踪代码更改
+- 使用 `Git` 跟踪代码更改
 - 回到代码的早期版本（“撤销按钮”）
 - 同时维护多个版本的代码
 - 将你的代码备份到云端
@@ -5759,9 +5206,9 @@ public void run() {
 
 ## 仅仅是开始
 
-这是一段有趣的旅程，但我们仅仅触及了冰山。你还有更多 Java 需要学习，Canary 也有很多我们在这里涵盖的内容。此外，泛指编程领域还有更多你将在过程中不断发现。
+这是一段有趣的旅程，但我们仅仅触及了冰山。你还有更多 `Java` 需要学习，Canary 也有很多我们在这里涵盖的内容。此外，泛指编程领域还有更多你将在过程中不断发现。
 
-但我希望这对你来说是一个有趣的开始。不要停下！再买几本关于 Java 或其他语言、编程、网页设计的书——随你。永远不要停止阅读和学习。
+但我希望这对你来说是一个有趣的开始。不要停下！再买几本关于 `Java` 或其他语言、编程、网页设计的书——随你。永远不要停止阅读和学习。
 
 当你做出非常酷的东西时，给我发邮件告诉我。
 
@@ -5775,7 +5222,7 @@ andy@pragprog.com
 
 # 如何阅读错误信息
 
-来自 Java 编译器、运行时系统和 Minecraft 服务器的错误信息试图自解释其义，但它们并不总是成功。特别是 Java 编译器，可能会变得非常困惑，并吐出一些毫无帮助的信息。
+来自 `Java` 编译器、运行时系统和 Minecraft 服务器的错误信息试图自解释其义，但它们并不总是成功。特别是 `Java` 编译器，可能会变得非常困惑，并吐出一些毫无帮助的信息。
 
 即使你现在没有遇到特定的错误，也请仔细阅读这整个附录，因为其中的某些信息可能帮助你解读未包含在内的其他错误。
 
@@ -5783,7 +5230,7 @@ andy@pragprog.com
 
 ## Java 错误信息
 
-来自 Java 编译器、运行时系统和 Minecraft 服务器的错误信息试图自解释其义，但它们并不总是成功。特别是 Java 编译器，可能会变得非常困惑，并吐出一些毫无帮助的信息。
+来自 `Java` 编译器、运行时系统和 Minecraft 服务器的错误信息试图自解释其义，但它们并不总是成功。特别是 `Java` 编译器，可能会变得非常困惑，并吐出一些毫无帮助的信息。
 
 即使你现在没有遇到特定的错误，也请仔细阅读这整个附录，因为其中的某些信息可能帮助你解读未包含在内的其他错误。包含了一些你可能会遇到的常见错误信息，以及一些观察和注释。如果你遇到了一个无法理解的错误，且它没有列在这里，请尝试以下方法。
 
@@ -5797,7 +5244,7 @@ symbol : i
 location: HelloWorld
 ```
 
-编译器不知道 i 是什么。
+编译器不知道 `i` 是什么。
 
 但如果我已经声明了变量，仍然遇到错误呢？例如，在调用 `helloCommand` 时，我声明了一个类型为 `MessageReceiver` 的参数 `caller`，但我得到了相同的错误：
 
@@ -5811,20 +5258,26 @@ public void helloCommand(MessageReceiver, String[]) parameters
 这可能表明缺失或写错了导入语句。编译器知道 `caller` 是 `MessageReceiver` 类型的变量，但它不知道 `MessageReceiver` 是什么。在这种情况下，在文件顶部添加
 
 ```java
-import net.canarydom.chat.MessageReceiver;
+import net.canarymod.chat.MessageReceiver;
 ``` 修复错误。
 
 ### 缺少分号 (Missing Semicolon)
 
+```
 src/helloworld.java:6: ';' expected
-import net.canarydom.chat.MessageReceiver
+
+import net.canarymod.chat.MessageReceiver
+```
 
 我们在 import 行末尾忘记了分号。它应该是：
-import net.canarydom.chat.MessageReceiver;
 
-然而，这种错误信息并不总是万无一失的。例如，如果我不小心漏掉了代码块的起始大括号 {，如下所示：
-
+```java
+import net.canarymod.chat.MessageReceiver;
 ```
+
+然而，这种错误信息并不总是万无一失的。例如，如果我不小心漏掉了代码块的起始大括号 `{`，如下所示：
+
+```java
 public void disable() {
   log.info("Stopping.");
 }
@@ -5842,11 +5295,7 @@ public void helloCommand(MessageReceiver, String[]) parameters
 ^
 ```
 
-编译器困惑了：它认为我们可能在 `disable()` 之后应该有一个分号，但实际上我们需要一个起始大括号 {。然后它就不知道正在发生什么，并开始抱怨整个文件的剩余部分都不是预期的。
-
-
-
-
+编译器困惑了：它认为我们可能在 `disable()` 之后应该有一个分号，但实际上我们需要一个起始大括号 `{`。然后它就不知道正在发生什么，并开始抱怨整个文件的剩余部分都不是预期的。
 
 ### javac: 表达式非法起始 (Illegal Start of Expression)
 
@@ -5872,7 +5321,7 @@ src/helloworld/HelloWorld.java:21: "illegal start" 实际上意味着“没有�
 
 ### javac: 类必须公共，应声明在名为...的文件 (Class Is Public, Should Be Declared in a File Named...)
 
-在我的 HelloWorld.java 中，我发挥了创意，在文件末尾添加了另一个类声明：
+在我的 `HelloWorld.java` 中，我发挥了创意，在文件末尾添加了另一个类声明：
 
 ```java
 public class TooMany {
@@ -5890,11 +5339,11 @@ src/helloworld/HelloWorld.java:32: class TooMany is public,
 
 记住，每个类都必须位于一个单独的文件中，文件名与类名相同，并位于与包同名的目录下。
 
-然而，你可以在同一个文件的公共类内部声明一个私有类（private class）。这对于小型辅助类有时很有帮助。
+然而，你可以在同一个文件的公共类内部声明一个私有类（`private class`）。这对于小型辅助类有时很有帮助。
 
-### javac-: 不兼容的类型 (Incompatible Types)
+### javac: 不兼容的类型 (Incompatible Types)
 
-在 BackCmd 插件版本中，我们将玩家位置保存到磁盘，我写了一个拼写错误：playerTeleports 返回的是一个 `Location` 对象的 Stack。但我不小心地将其赋值给一个 `Player` 对象的 Stack，如下：
+在 `BackCmd` 插件版本中，我们将玩家位置保存到磁盘，我写了一个拼写错误：`playerTeleports` 返回的是一个 `Location` 对象的 `Stack`。但我不小心地将其赋值给一个 `Player` 对象的 `Stack`，如下：
 
 ```java
 Stack<Player> locs = playerTeleports.get(player.getName());
@@ -5909,9 +5358,9 @@ required: java.util.Stack<net.canymod.api.entity.living.humanoid.Player>
 Stack<Player> locs = playerTeleports.get(player.getName());
 ```
 
-Java 说它在预期使用 `Player` 的地方发现了一个 `Location`。当然，这完全说反了——那不是我的意思。
+`Java` 说它在预期使用 `Player` 的地方发现了一个 `Location`。当然，这完全说反了——那不是我的意思。
 
-在这样的时刻，像计算机那样思考（在本例中，即像编译器那样思考）真的很有帮助。想象你就是 Java 编译器。你刚刚读完以分号结尾的一行代码，正准备开始下一行。你看到这部分：
+在这样的时刻，像计算机那样思考（在本例中，即像编译器那样思考）真的很有帮助。想象你就是 `Java` 编译器。你刚刚读完以分号结尾的一行代码，正准备开始下一行。你看到这部分：
 
 ```java
 Stack<Player> locs =
@@ -5925,7 +5374,7 @@ Stack<Player> locs =
 playerTeleports.get(player.getName());
 ```
 
-你（编译器）查找了 `playerTeleports.get()` 并发现它返回一个 `Location` 对象的 Stack。嗯，事实并非如此。这里程序员说我们有一个 `Player` 对象的 Stack，而现在代码尝试赋值一个 `Location` 对象的 Stack。从编译器的角度来看，你预期一个 `Player` 却得到了一个 `Location`。
+你（编译器）查找了 `playerTeleports.get()` 并发现它返回一个 `Location` 对象的 `Stack`。嗯，事实并非如此。这里程序员说我们有一个 `Player` 对象的 `Stack`，而现在代码尝试赋值一个 `Location` 对象的 `Stack`。从编译器的角度来看，你预期一个 `Player` 却得到了一个 `Location`。
 
 当然，编译器是错的。
 
@@ -5933,7 +5382,7 @@ playerTeleports.get(player.getName());
 
 在尝试解读编译器错误信息时，请务必记住：它们是从编译器的角度给出的，它无法读取你的心想法。至少目前不能。我们正在努力中。
 
-无论如何，修正 Stack 的类型以匹配问题：
+无论如何，修正 `Stack` 的类型以匹配问题：
 
 ```java
 Stack<Location> locs = playerTeleports.get(player.getName());
@@ -5941,7 +5390,7 @@ Stack<Location> locs = playerTeleports.get(player.getName());
 
 ### Canary 服务器错误信息 (Canary Server Error Messages)
 
-Canary 服务器会在服务器日志（~/Desktop/server/logs/latest.log）中或在你玩游戏时直接在 Minecraft 游戏控制台中显示错误信息。以下是你在使用新插件时可能会的最常见错误。
+Canary 服务器会在服务器日志（`~/Desktop/server/logs/latest.log`）中或在你玩游戏时直接在 Minecraft 游戏控制台中显示错误信息。以下是你在使用新插件时可能会的最常见错误。
 
 ### 服务器日志：插件无法加载 (Plugin Won't Load)
 
@@ -5965,7 +5414,7 @@ java.lang.ClassNotFoundException: helloworld
 
 # 如何阅读文档 (How to Read the Documentation)
 
-很多时候，你需要直接阅读文档来发现如何处理 Block、Player、Creeper 或其他内容。Canary 文档列出了：
+很多时候，你需要直接阅读文档来发现如何处理 `Block`、`Player`、`Creeper` 或其他内容。Canary 文档列出了：
 
 ## Canary 文档 (Canary Documentation)
 
@@ -5988,21 +5437,17 @@ java.lang.ClassNotFoundException: helloworld
 
 ![](img/9f468df40be6924e00c931230bae6b1a_224_0.png)
 
-在左下面板点击 World，你将看到 World 中可以使用的所有函数。点击任何方法或类名查看详细信息。
+在左下面板点击 `World`，你将看到 `World` 中可以使用的所有函数。点击任何方法或类名查看详细信息。
 
 ## Oracle Java 文档 (Oracle Java Documentation)
 
-如果你寻找通用的 Java 类文档，而不仅仅是 Canary 类，请将浏览器指向 Oracle 的文档。它看起来和 Canary 站点非常相似（见图 6，第 219 页的 JavaDoc）。
+如果你寻找通用的 `Java` 类文档，而不仅仅是 Canary 类，请将浏览器指向 Oracle 的文档。它看起来和 Canary 站点非常相似（见图 6，第 219 页的 JavaDoc）。
 
 在左上角，有一个包的滚动列表，包括非常有用的 `java.util` 和 `java.math`。下方是接口（类似于类，但没有自己的函数）以及该包中的类。右侧面板是你点击的类的文档。在这里我进入了 `java.util` 包的 `ArrayList` 类。
 
 类文档在你知道想要什么但需要细节时非常有用。但如果你不知道从哪里开始呢？
 
 ⁶. - http://docs.oracle.com/javase/7/docs/api/
-
-
-
-
 
 # 维基与教程 219
 
@@ -6037,7 +5482,9 @@ java.lang.ClassNotFoundException: helloworld
 需要解决两个主要问题：
 
 - 你需要一种机制让你的朋友在互联网上找到你机器的地址。
-- 你需要让你的 Minecraft 端口 25565 对外开放。
+- 你需要让你的 Minecraft 端口 `25565` 对外开放。
+
+
 
 有几种方法可以实现。最简单的是使用可以为你完成所有工作的软件。你也可以手动处理所有细节，这更有趣但工作量更大。
 
@@ -6051,13 +5498,13 @@ Hamachi 是 LogMein 提供的一款产品，适用于最多五个用户的免费
 
 ## 什么是端口？
 
-在本附录和下一个附录中，你会看到对网络端口以及 Minecraft 默认端口 25565 的引用。端口仅仅是一个约定的数字，允许计算机通过网络进行通信。例如，浏览器使用端口 80 和 443 与 Web 服务器进行交谈。
+在本附录和下一个附录中，你会看到对网络端口以及 Minecraft 默认端口 `25565` 的引用。端口仅仅是一个约定的数字，允许计算机通过网络进行通信。例如，浏览器使用端口 `80` 和 `443` 与 Web 服务器进行交谈。
 
 当你第一次运行它时，LogMeIn 会要求你加入或创建一个网络：
 
 ![](img/9f468df40be6924e00c931230bae6b1a_227_0.png)
 
-你会想要创建一个。我将其命名为 andys_minecraft_server：
+你会想要创建一个。我将其命名为 `andys_minecraft_server`：
 
 ![](img/9f468df40be6924e00c931230bae6b1a_227_1.png)
 
@@ -6065,20 +5512,28 @@ Hamachi 是 LogMein 提供的一款产品，适用于最多五个用户的免费
 
 ![](img/9f468df40be6924e00c931230bae6b1a_227_2.png)
 
-现在告诉你的朋友下载相同的软件，并使用你选定的名称（andys_minecraft_server）加入你的网络。
+现在告诉你的朋友下载相同的软件，并使用你选定的名称（`andys_minecraft_server`）加入你的网络。
 
 他们可以加入你的网络。当他们右键点击你的网络名称时，应该选择“复制 IPv4 地址”，并在 Minecraft 客户端中使用该地址连接到你。
 
 Ping
-Ping 135-621-876.local
+
+Ping `135-621-876.local`
 
 | 访览 Apple 文件共享 (afp://) |
+
 | 访览 Windows 文件共享 (smb://) |
+
 | 聊天 |
+
 | 复制 IPv4 地址 |
+
 | 复制 IPv6 地址 |
-| 复制 135-621-876.local |
+
+| 复制 `135-621-876.local` |
+
 | 逐出... |
+
 | 详情 |
 
 当你不想让朋友连接时，只需点击电源开关图标关闭你的网络。
@@ -6094,7 +5549,7 @@ Ping 135-621-876.local
 - 你可以面向全世界，而不仅仅是你的朋友。
 - 这些是非常有趣且实用的知识。
 
-你需要学习更多关于网络以及互联网如何工作的知识。我将概述重要的步骤，但你可能需要自己进行额外的阅读。最重要的是，我无法给你分步骤的指导，因为每个路由器（或电缆调制解调器、DSL 调制解调器等）都是不同的。但你可以通过 Google 或 http://portforward.com 等信息网站在网上找到。
+你需要学习更多关于网络以及互联网如何工作的知识。我将概述重要的步骤，但你可能需要自己进行额外的阅读。最重要的是，我无法给你分步骤的指导，因为每个路由器（或电缆调制解调器、DSL 调制解调器等）都是不同的。但你可以通过 Google 或 `http://portforward.com` 等信息网站在网上找到。
 
 让我们来看看步骤。
 
@@ -6102,7 +5557,7 @@ Ping 135-621-876.local
 
 ## 静态 DNS 与动态 DNS
 
-IP 地址是任何人都可以使用的数字。 IP 地址通常显示为四个数字。IP 地址每隔几小时就会变化，除非使用动态 DNS。为了获得一个静态名称，你需要从 noip.com 或 dyndns.com 注册。一旦你有了名称，软件会在你的 IP 地址改变时自动更新它。这让你的朋友能够始终通过该名称找到你，即使你的 IP 地址发生了变化。
+IP 地址是任何人都可以使用的数字。IP 地址通常显示为四个数字。IP 地址每隔几小时就会变化，除非使用动态 DNS。为了获得一个静态名称，你需要从 `noip.com` 或 `dyndns.com` 注册。一旦你有了名称，软件会在你的 IP 地址改变时自动更新它。这让你的朋友能够始终通过该名称找到你，即使你的 IP 地址发生了变化。
 
 但是，如果你通过路由器或电缆调制解调器连接到互联网，那么该设备可能也有防火墙。为了让端口对开放，有一些免费的地方：
 
@@ -6137,7 +5592,7 @@ IP 地址是任何人都可以使用的数字。 IP 地址通常显示为四个�
 
 ## 在 Linux 上打开防火墙
 
-如果你使用 IPTables 设置了防火墙，请确保端口 25565 是开放的。
+如果你使用 `IPTables` 设置了防火墙，请确保端口 `25565` 是开放的。
 
 ## 所有操作系统
 
@@ -6150,30 +5605,24 @@ IP 地址是任何人都可以使用的数字。 IP 地址通常显示为四个�
 在更改路由器设置时，你需要谨慎和克制。如果你更改了你不打算更改的内容，可能会搞乱设备并丢失互联网访问。请按照计划操作。然而，每个路由器都是不同的，所以我无法给你提供任何具体的分步骤说明。这里是基础知识：
 
 - 1. 登录你的路由器。你可能已经知道路由器的用户名和密码。如果不知道，可以通过 Google 搜索默认用户名和密码。
-
-
-
-
-
-2. 在某些菜单中，它会有一个“端口转发”（Port Forwarding）部分。在我的路由器上，它被列在“网关”（Gateway）和“转发”（Forwarding）下。
-
-3. 你需要告诉它将外部世界（你的外部 IP，可以通过 http://www.checkip.org 报告）的端口 25565（如果系统询问，请同时选择 TCP 和 UDP）转发到你电脑的内部 IP。
+- 2. 在某些菜单中，它会有一个“端口转发”（Port Forwarding）部分。在我的路由器上，它被列在“网关”（Gateway）和“转发”（Forwarding）下。
+- 3. 你需要告诉它将外部世界（你的外部 IP，可以通过 `http://www.checkip.org` 报告）的端口 `25565`（如果系统询问，请同时选择 TCP 和 UDP）转发到你电脑的内部 IP。
 
 你的电脑有一个内部 IP 地址，用于它与路由器/电缆调制调器之间的通信。你可以在电脑上运行命令来查看此地址：
 
-## Windows
+### Windows
 
-运行 `ifconfig`，并查找“以太网适配器”（Ethernet adapter）或“无线局域网”（Wireless LAN）下的“IPv4 Address”。
+运行 `ipconfig`，并查找“以太网适配器”（Ethernet adapter）或“无线局域网”（Wireless LAN）下的“IPv4 Address”。
 
-## Mac/Linux
+### Mac/Linux
 
 运行 `ifconfig`。你可能可以在 Google 上搜索“inet”后面的“en1”。
 
-你可以在 Google 上搜索更多关于你路由器设置set信息，或者检查 http://portforward.com 等网站获取额外信息。
+你可以在 Google 上搜索更多关于你路由器设置的信息，或者检查 `http://portforward.com` 等网站获取额外信息。
 
 一个复杂的问题是：你的内部 IP 地址可能会经常变化，就像你的 ISP IP 地址可能会变化一样。你也可以从路由器上的 DHCP 服务器让它创建一个 DHCP 留，这样你就能获得相同的内部 IP 地址。你只需要在内部 IP 地址变化时（如果变化的话）进去更改端口转发即可。
 
-如果你偶尔有朋友来，并且不介意设置的麻烦，这种工作方法完全可行。但如果你希望有超过几个人连接，并且服务器 24x7 全天运行，你需要在云端设置一台服务器，这将在第 229 页的附录 4“如何安装云服务器”中详细介绍。
+如果你偶尔有朋友来，并且不介意设置的麻烦，这种工作方法完全可行。但如果你希望有超过几个人连接，并且服务器 `24x7` 全天运行，你需要在云端设置一台服务器，这将在第 229 页的附录 4“如何安装云服务器”中详细介绍。
 
 ## 服务质量 (Quality of Service)
 
@@ -6187,15 +5636,15 @@ IP 地址是任何人都可以使用的数字。 IP 地址通常显示为四个�
 
 ## 如何安装云服务器
 
-你可以在自己的电脑上运行 Minecraft 服务器，但这样做有一些缺点。最大的缺点是你的电脑需要 24x7 开启并连接到互联网。这对于笔记本电脑来说有点困难。此外，你在电脑上做的任何操作都可能减慢 Minecraft 服务器和你所有玩家的速度——而服务器运行的任何操作都会降低你电脑上其他程序的速度。因此，如果有很多人连接你的服务器并玩，你可能更倾向于在云端设置一个远程服务器。
+你可以在自己的电脑上运行 Minecraft 服务器，但这样做有一些缺点。最大的缺点是你的电脑需要 `24x7` 开启并连接到互联网。这对于笔记本电脑来说有点困难。此外，你在电脑上做的任何操作都可能减慢 Minecraft 服务器和你所有玩家的速度——而服务器运行的任何操作都会降低你电脑上其他程序的速度。因此，如果有很多人连接你的服务器并玩，你可能更倾向于在云端设置一个远程服务器。
 
-在云端设置 Minecraft 服务器与在本地设置非常相似，但有一个重要的区别：你无法对运行 Minecraft 服务器的电脑进行物理访问。这意味着没有键盘、没有屏幕、没有电源开关或重启按钮。但不用担心；你如何使用命令行，这已经你需要的了。
+在云端设置 Minecraft 服务器与在本地设置非常相似，但有一个重要的区别：你无法对运行 Minecraft 服务器的电脑进行物理访问。这意味着没有键盘、没有屏幕、没有电源开关或重启按钮。但不用担心；你如何使用命令行，这已经是你需要的了。
 
 我们将在本附录中看看这些意味着什么以及如何与其进行工作。
 
 ## 什么是云？
 
-有人说“云”实际上只是弗吉尼亚州的一大机架计算机。这与事实其实并不遥，因为亚马逊等其他公司确实在该地区（以及加利福尼亚和世界其他许多地方）维护着大型数据中心。“云”只是互联网上某处的一群计算机。
+有人说“云”实际上只是弗吉尼亚州的一大机架计算机。这与事实其实并不遥远，因为亚马逊等其他公司确实在该地区（以及加利福尼亚和世界其他许多地方）维护着大型数据中心。“云”只是互联网上某处的一群计算机。
 
 当人们谈论云端计算机时，指的是一台仅通过互联网访问的电脑，你可能甚至不知道（或不在乎）它的物理位置，并且由他人拥有和维护。如你所见，这是一个非常通用且灵活的定义。市上有各种云服务可用，价格、可靠性以及你花钱所得到的内容范围同样巨大。你可能感兴趣的服务主要分为两类：
 
@@ -6228,10 +5677,6 @@ IP 地址是任何人都可以使用的数字。 IP 地址通常显示为四个�
 - Debian
 - Linux Mint
 
-
-
-
-
 注意，当你直接使用 `ssh` 或 `scp` 而不进行其他操作时，它会要求你输入远程机器的密码。每次都是。这很快就会让人感到厌烦，幸运的是有一种更好的方法来设置远程登录。
 
 ## Windows上的 SSH
@@ -6259,7 +5704,7 @@ $ cd
 $ ssh-keygen -t rsa
 ```
 
-当要求输入密码短（passphrase）时，按回车——此时不要输入任何文本。这将创建一个名为 `.ssh` 的子目录，它位于你的主目录下。由于开头有一个点（(".")），你通常无法通过 `ls` 查看这个目录，除非使用 `ls -a` 可以显示它：
+当要求输入密码短语（passphrase）时，按回车——此时不要输入任何文本。这将创建一个名为 `.ssh` 的子目录，它位于你的主目录下。由于开头有一个点（`.`），你通常无法通过 `ls` 查看这个目录，除非使用 `ls -a` 可以显示它：
 
 ```
 $ ls -a
@@ -6290,7 +5735,7 @@ Server$ mkdir .ssh
 $ scp id_rsa.pub username@example.com:~/.ssh/authorized_keys
 ```
 
-这将把文件拷贝到你主目录（"~"）下的 `.ssh` 目录中，并命名为 `authorized_keys`。如果你以后需要，可以将来自其他机器的密钥添加到此文件中（这就是为什么 "keys" 是复数）。但现在你只有一个条目。
+这将把文件拷贝到你主目录（`~`）下的 `.ssh` 目录中，并命名为 `authorized_keys`。如果你以后需要，可以将来自其他机器的密钥添加到此文件中（这就是为什么 "keys" 是复数）。但现在你只有一个条目。
 
 最后，你需要回到服务器检查并修复文件权限。`.ssh` 目录应该只允许你本人读取和列出，而且在大多数情况下，如果文件权限没有受到限制，`ssh` 将无法工作。这是为了你好。
 
@@ -6302,7 +5747,7 @@ Password:
 Welcome to My Awesome Minecraft Server
 Last login: Mon Feb 16 12:26:13 from xyzzy-plugh
 Server$ cd .ssh
-Server-~/ chmod 700
+Server-~/ chmod 700 .
 Server-~/ chmod 600 authorized_keys
 ```
 
@@ -6324,7 +5769,7 @@ Server$
 环境变量 `PS1` 设置了 bash 的提示符字符串。在那个字符串中，你使用 `\w` 来打印当前目录。所以如果你设置
 
 ```bash
-$ PS1=Server\$ 
+$ PS1="Server\$ "
 ```
 
 你的提示符将返回为
@@ -6360,7 +5805,7 @@ PermitRootLogin no
 sudo service sshd restart
 ```
 
-你可能还想将默认端口从 22 改为其他数字。由于大家都知道端口 22 是 SSH，攻击者会轰炸你的服务器。在同一个文件 `/etc/sshd_config` 中，添加或更改此行：
+你可能还想将默认端口从 `22` 改为其他数字。由于大家都知道端口 `22` 是 SSH，攻击者会轰炸你的服务器。在同一个文件 `/etc/sshd_config` 中，添加或更改此行：
 
 ```
 Port 2345
@@ -6376,12 +5821,11 @@ $ ssh -p 2345 username@example.com
 
 你的 Linux 发行版可能包含了你需要的一切。也可能缺少部分组件。为了方便，Linux 将所有的工具和程序分成不同的软件包。例如，如果你不从事出版工作，你就不需要 TeX 或 Ghostscript。如果你不用 C 或 C++ 编程，你就不需要 GCC。如果你在桌面电脑上，你可能不需要 Gnome 或 KDE 这样的窗口管理器。
 
+
+
 所有这些软件包都可以使用包管理器进行安装、删除、更新和列出。每个主要的 Linux 发行版都使用不同的包管理器。事实上，你几乎可以说包管理器是区分不同发行版的标准。
 
 流行的包管理器命令包括 `yum`、`rpm`、`apt-get` 和 `deb`。
-
-
-
 
 特别地，如果你还没有安装 SSH，你需要安装 `open-ssh` 包，以便以安全的方式登录你的服务器。在 Ubuntu 上，你可以运行类似这样的命令：
 
@@ -6442,6 +5886,7 @@ $ screen -r mcserver
 ```
 
 你将以通常的用户和提示符连接到服务器：
+
 16:47:49 [INFO] Done (1.1635)! 如需帮助，请输入 "help" 或 "?">
 
 要从你的服务器会话中分离，按下 Ctrl-a 然后 d。你将回到原始 shell，而你的服务器仍在后台运行。
@@ -6467,7 +5912,9 @@ Server - $ killall java
 
 - 5. 使用 `noh` 命令（名为“No Hangup”，即不挂断）有一种稍微简单的方法；但是，你会失去轻松向服务器输入命令的能力。
 
-## Server - $ killall -9 java
+```
+Server - $ killall -9 java
+```
 
 这将立即强制杀死所有 Java 进程。就这样。
 
@@ -6481,7 +5928,8 @@ Server - $ killall java
 
 使用 `if` 决定运行哪些代码（`else {}` 部分是可选的）：
 
-```if (true or false comparison) { // 为真
+```java
+if (true or false comparison) { // 为真
     doSomething();
 } else { // 为假
     doOtherThing();
@@ -6492,16 +5940,13 @@ Server - $ killall java
 
 有三种方法对代码块进行循环：
 
-+   - for-each 结构：for(type variable : collection) 示例：for (Player : playerList) { }
-- for 循环：for (int i=0; i<limit; i++) { block }
-- while 循环：while (somethingIsTrue) { block }
+- for-each 结构：`for(type variable : collection)` 示例：`for (Player : playerList) { }`
+- for 循环：`for (int i=0; i<limit; i++) { block }`
+- while 循环：`while (somethingIsTrue) { block }`
 
+## 创建新对象
 
-
-
-# 创建新对象
-
-Foo = new Foo(); Foo 是类名，而 thing 是要赋值给新对象的变量。
+`Foo = new Foo();` `Foo` 是类名，而 `thing` 是要赋值给新对象的变量。
 
 ## 调用函数
 
@@ -6510,22 +5955,28 @@ Foo = new Foo(); Foo 是类名，而 thing 是要赋值给新对象的变量。
 ## Java 可见性修饰符
 
 - **final**（最终）
+
 一旦我设置了这个值，就不要让我或任何其他人改变它。
 
 - **static**（静态）
+
 在任何给定对象之外保留此数据或函数。
+
 你可以根据需要组合使用 `final` 和 `static`。
 
 - **public**（公共）
+
 其他人可以看到并使用此函数或数据。
 
 - **protected**（受保护）
+
 此类以及此包中的其他类可以看到并使用此函数或数据。
 
 - **private**（私有）
+
 只有此类可以看到并使用此函数或数据，子类或同一包中的其他类均不行。
 
-你使用使用 public 或 private 声明，因此此代码将在任何对象之外创建一个公开的、不可变的常量：
+你使用使用 `public` 或 `private` 声明，因此此代码将在任何对象之外创建一个公开的、不可变的常量：
 
 ```java
 public static int pi = 3.1415;
@@ -6534,30 +5985,39 @@ public static int pi = 3.1415;
 ## Java 数据类型转换
 
 ### int 转 double
+
 直接赋值：`int now = 72; double temperature = now;`
 
 ### double 转 int
+
 强制转换：小数部分会被丢弃：`double when = 15.375; int day = (int)when;`
 
 ### String 转 int
+
 使用 `parseInt`：`int foo = Integer.parseInt("365");`
 
 ### String 转 double
+
 使用 `parseDouble`：`double foo = Double.parseDouble("3.1415");`
 
 ### double 转 String
+
 使用 `valueOf`：`String.valueOf(3.1415);`
 
 ### int 转 String
+
 使用 `valueOf`：`String.valueOf(72);`
 
 ### Double 转 String
+
 （使用 Double 类而非基本类型）`Double.toString(3.1415);`
 
 ### Integer 转 String
+
 （使用 Integer 类而非基本类型）`Integer.toString(72);`
 
 字符串拼接会自动转换，结果为字符串：
+
 ```
 "Temperature is 72 degrees."
 ```
@@ -6567,152 +6027,185 @@ public static int pi = 3.1415;
 # 术语表
 
 - **annotation**（注解）
+
 添加到 Java 源代码中的命令，用于修改或添加信息（例如将函数标记为事件处理程序）。
 
 - **argument**（参数）
+
 传递给函数供其使用的值。
 
 - **array**（数组）
+
 一个带有整数偏移索引的值的顺序列表。
 
 - **Array**（Array 类）
+
 实现数组的 Java 类。
 
 - **binary file**（二进制文件）
+
 包含二进制数字且人类不可读的文件。
 
 - **block**（代码块）
+
 一对大括号 `{` 和 `}` 之间的代码语句列表。
 
 - **boolean**（布尔值）
+
 可以等于 `true` 或 `false` 的逻辑值。
 
 - **cast**（强制类型转换）
+
 改变值的解释，通常是从一个对象转换为某个特定父类的类型。
 
 - **class**（类）
+
 一个告诉编译器如何创建对象的配方：即它应该包含哪些数据和函数。
 
 - **client**（客户端）
+
 你运行的软件，通常带有图形界面。连接到服务器。
 
 - **command line**（命令行）
+
 你可以在其中输入命令的终端窗口。
 
 - **compile**（编译）
+
 将人类可读的语言指令的文本文件转换为计算机可以运行的内容（通常是二进制格式）。`javac` 是 Java 编译器。
 
 - **constructor**（构造函数）
+
 类定义中在创建新对象时调用的函数。你可以用它来设置对象的变量等。
 
 - **current directory**（当前目录）
+
 在 shell 中，当前的目录（哈，同义反复！）。
 
 - **deploy**（部署）
+
 将资源安装到服务器环境中。
 
 - **DNS**（域名系统服务）
+
 将如 `example.com` 的域名转换为如 `93.184.216.119` 的 IP 地址的全局系统。
 
 - **double**（双精度浮点数）
+
 一个较大的浮点数。
 
 - **environment variable**（环境变量）
+
 shell 和应用程序所使用的设置。
 
 - **event**（事件）
+
 代表某些真实世界动作的对象，例如鼠标点击。
 
 - **exception**（异常）
+
 中断当前函数并开始运行最外层 `catch` 块的错误；如果没有，则终止程序。
 
 - **executable**（可执行文件）
+
 计算机可以运行的文件，通常是带有底层机器指令的二进制文件，但有时是 shell 运行的文本。
 
 - **file system**（文件系统）
+
 计算机上文件和文件夹（目录）的集合和组织。
 
 - **final**（最终）
+
 指示此变量无法更改的 Java 关键字。
 
 - **float**（单精度浮点数）
+
 一个不那么大的浮点数。
 
 - **floating point**（浮点数）
+
 带有小数点和小数部分的数字，例如 1.25。
 
 - **function**（函数）
+
 一组 Java 指令，声明了返回类型、名称、接收的参数以及 `{` 和 `}` 之间的代码块。
 
 - **global variable**（全局变量）
+
 可以被多个函数和/或多个类使用的变量。
 
 - **hash**（哈希）
+
 一个由任何类型的对象（但通常是字符串）索引的对象列表。
 
 - **HashMap**
+
 实现哈希映射的 Java 类。
 
 - **import**（导入）
+
 一个允许你使用另一个包中的类的 Java 关键字，例如 `java.util.HashMap`（它是 `java.util` 包中的 `HashMap` 类）。
 
 - **inherit**（继承）
+
 从父类使用某些东西。
 
 - **integer**（整数）
+
 没有小数点和没有分数的整数，例如 7。
 
 - **I/O**（输入输出）
+
 从其他地方发送和接收数据，例如文件或通过网络。
 
 - **iterator**（迭代器）
+
 一个允许你从集合中检索一个值的对象。
 
 - **jar**
+
 包含 `.class` 和配置文件的 Java 包。
 
 - **keyword**（关键字）
+
 Java 语言中定义的单词。你可以将其作为变量使用。
 
 - **listener**（监听器）
+
 当发生某些事情时被调用的函数。
 
 - **literal**（字面量）
+
 直接输入的值，如 `123`、`true`。
 
 - **localhost**（本地主机）
+
 计算机的网络名称。
 
 - **local variable**（局部变量）
+
 声明在 `{` 和 `}` 块内的变量。
 
 - **long**（长型整数）
+
 一个很大的整数。
 
 - **map**（映射）见 `HashMap`。
 
-- **null**（空）
-一个通常指向对象但现在没有指向任何内容的特殊值。
-
-- **object**（对象）
-由类构建的变量和函数集合。
-
-- **object-oriented**（面向对象的）
-基于对象的理论的软件。
-
-- **package**（包）
-一组类在一起的类。
-
 - **parameter**（参数）
+
 传递给函数使用的值。
 
 - **path**（路径）
+
 计算机搜索查找命令或其他资源的目录列表。
 
 - **plugin**（插件）
+
 添加到已编译代码中的编译代码。
 
 - **port**（端口）
+
 让计算机通过网络通信的约定编号。例如 80。
 
 - **private**（私有）只有此类可以看到并使用此函数或数据，子类或同一包中的其他类均不行。
@@ -6722,29 +6215,37 @@ Java 语言中定义的单词。你可以将其作为变量使用。
 - **script**（脚本）用解释型语言编写的程序或脚本。
 
 - **server**（服务器）
+
 为其他计算机（客户端）提供服务的计算机或程序。
 
 - **source**（源代码）
+
 计算机程序前的原始代码。
 
 - **string**（字符串）
+
 表示文本的字符序列。
 
 - **static**（静态）在任何给定对象之外保留此数据或函数。
 
 - **task**（任务）
+
 要执行的工作单元。
 
 - **text**（文本）
+
 文字或打印的单词、符号。
 
 - **thread**（线程）
+
 由调度器独立管理的程序指令序列。
 
 - **tick**（滴答）
+
 时间单位，通常用于游戏或模拟。
 
 - **void**（空）
+
 指示函数不返回值的类型。
 
 - **variable**（变量）具有指定名称的存储位置。
@@ -6795,137 +6296,142 @@ import net.visualillusents.utils.Properties;
 ```
 
 # 参考文献
+
 - Travis Smalls. *Pragmatic Version Control Using Git*. Pragmatic Bookshelf, NC and Dallas, TX. 2008.
 - Travis Smalls. *Pragmatic Guide to Git*. Pragmatic Bookshelf, NC and Dallas, TX. 2010.
 
 # 索引
 
 ### 符号
-- (点), 选择部分，44
-- (分号), 终止 Java 语句，44
-- (和符号), 通配符字符，72-242
-- (左括号), 在声明中包含类型，98, 243
-- (星号) 乘法运算符，49, 242
-- (反斜杠), 在路径中，17
-- (大括号) 编码代码块，44, 58, 213
-- (大括号), 43, 95
-- (美元符号), 复合提示符，2, 当前目录，8, 13-74
-- (点), 句号，8, 11, 13
-- (等号), 等于运算符，63, 242
-- (感叹号), 非运算符，63, 242
-- (感叹号符号), 不等于，63, 242
-- (左括号), 小于运算符，63, 242
-- (左括号), 等于，63, 82
-- (减号) 减法运算符，49, 242
-- (减号), 减一，50
-- (圆括号) 包含参数，43, 分组操作，242
-- (百分号) 命令提示符，取余运算符，49, 242
-- (加号), 加法运算符，50
-- (引号) 包含包含空格的目录，11
-- (右括号), 大于运算符，63, 242
-- (右括号), 大于等于运算符，63, 242
-- (分号), 终止 Java 语句，23
-- (斜杠) 除法运算符，49, 242, 前置命令，1, 39
-- /* (斜杠，星号), 注释，43
-- // (双斜杠), 前置注释，43
-- (波浪号), 目录，10, 13
-- || (双竖线), “或”运算符，63, 242
-- (()), 同步函数，139-140
-- (+), 49, 242
-- (&&), “与”运算符和 (&)，63, 242
-- (左括号), 在声明中包含类型，98, 243, 符号，247
-- (in), 内置，61, 总和，56, 28
-- 数组, 二维，121
-- Array 类，94-98, 247
-- 访问元素，95-96
-- 赋值给，95
-- 遍历，96
-- 长度，95
-- ArrayBlocks 插件示例，101-102
 
-### 索引 索引
-- ArrayList, 98–102
-- 访问元素，100
-- 赋值给，100
-- 清空元素，101
-- 声明大小，100
-- BuildHouse 插件示例，46–50
-- BusyBox 应用，4
-- 安装所需的包，237–238
-- 远程访问，232, 237
-- 根访问，235–237
+- `.` (点), 选择部分，44
+- `;` (分号), 终止 Java 语句，44
+- `&` (和符号), 通配符字符，72-242
+- `(` (左括号), 在声明中包含类型，98, 243
+- `*` (星号) 乘法运算符，49, 242
+- `\` (反斜杠), 在路径中，17
+- `{}` (大括号) 编码代码块，44, 58, 213
+- `{}` (大括号), 43, 95
+- `$` (美元符号), 复合提示符，2, 当前目录，8, 13-74
+- `.` (点), 句号，8, 11, 13
+- `=` (等号), 等于运算符，63, 242
+- `!` (感叹号), 非运算符，63, 242
+- `!` (感叹号符号), 不等于，63, 242
+- `<` (左括号), 小于运算符，63, 242
+- `<` (左括号), 等于，63, 82
+- `-` (减号) 减法运算符，49, 242
+- `-` (减号), 减一，50
+- `()` (圆括号) 包含参数，43, 分组操作，242
+- `%` (百分号) 命令提示符，取余运算符，49, 242
+- `+` (加号), 加法运算符，50
+- `"` (引号) 包含包含空格的目录，11
+- `>` (右括号), 大于运算符，63, 242
+- `>=` (右括号), 大于等于运算符，63, 242
+- `;` (分号), 终止 Java 语句，23
+- `/` (斜杠) 除法运算符，49, 242, 前置命令，1, 39
+- `/*` (斜杠，星号), 注释，43
+- `//` (双斜杠), 前置注释，43
+- `~` (波浪号), 目录，10, 13
+- `||` (双竖线), “或”运算符，63, 242
+- `(())`, 同步函数，139-140
+- `(+)`, 49, 242
+- `(&&)`, “与”运算符和 `&`，63, 242
+- `(` (左括号), 在声明中包含类型，98, 243, 符号，247
+- `in`, 内置，61, 总和，56, 28
+- 数组, 二维，121
+- `Array` 类，94-98, 247
+  - 访问元素，95-96
+  - 赋值给，95
+  - 遍历，96
+  - 长度，95
+- `ArrayBlocks` 插件示例，101-102
+
+### 索引
+
+- `ArrayList`, 98–102
+  - 访问元素，100
+  - 赋值给，100
+  - 清空元素，101
+  - 声明大小，100
+- `BuildHouse` 插件示例，46–50
+- `BusyBox` 应用，4
+  - 安装所需的包，237–238
+  - 远程访问，232, 237
+  - 根访问，235–237
 
 ### C
-- CakeTower 插件示例，92–94
-- Canaryfile, 35–36, 80
-- CanaryMod 项目，23, 219, 见 Minecraft class
-- 声明，217–223
-- SSH 密钥，233–235
-- VPS，230
+
+- `CakeTower` 插件示例，92–94
+- `Canaryfile`, 35–36, 80
+- `CanaryMod` 项目，23, 219, 见 Minecraft
+- `class`
+  - 声明，217–223
+  - SSH 密钥，233–235
+  - VPS，230
 - 云，备份到，180–182
-- ArrayBlocks 插件示例，66–98
+- `ArrayBlocks` 插件示例，66–98
 - 数组，94, 241, 见特定数组类型
-- 类，见 HashMap
-- Canaryclass, 24, 见 Minecraft server
+- 类，见 `HashMap`
+- `Canaryclass`, 24, 见 Minecraft server
 - Java 中的大小写敏感，43
 - 转换，81, 115, 244, 237
-- cat 命令，12–13
-- cd 命令，3, 5–9
-- cfg 文件，146–149
-- cmd. 示例，2
+- `cat` 命令，12–13
+- `cd` 命令，3, 5–9
+- `cfg` 文件，146–149
+- `cmd` 示例，2
 - 代码，见源代码
 - 代码块，89–90, 213, 243, 247
 - 代码示例
-- 星号 (*) 乘法运算，49, 242
-- 通配符，24
-- ArrayBlocks 插件示例，101–102
-- ArrayBlocks 插件，96–98
-- BackCmd 插件，128–133, 158–166
-- BuildVerse,46–50
-- CakeTower 插件，92–94
-- Shooter 插件，140–148
+  - `*` (星号) 乘法运算，49, 242
+  - 通配符，24
+  - `ArrayBlocks` 插件示例，101–102
+  - `ArrayBlocks` 插件，96–98
+  - `BackCmd` 插件，128–133, 158–166
+  - `BuildVerse`, 46–50
+  - `CakeTower` 插件，92–94
+  - `Shooter` 插件，140–148
 - 作者，配置文件，36
 - 授权密钥，234
-- 自动补全，在路径中 ($)
-- Shell，见 bash_profile,21
+- 自动补全，在路径中 (`$`)
+- Shell，见 `bash_profile`, 21
 - 二进制文件，31
-- Bitbucket,181, 183
-- Block,设置，125
+- `Bitbucket`, 181, 183
+- `Block`, 设置，125
 - 阻塞对象，84–86
 - 修改，118
 - 查找，84–86
 - 修改，117–122
 - 类型，118
-- Flying 插件，125–126
+- `Flying` 插件，125–126
 - 字体变体，5, 7–37
-- LavaVision,84–86
-- Snapshot 插件，154–157
-- NameCov,67–68
+- `LavaVision`, 84–86
+- `Snapshot` 插件，154–157
+- `NameCov`, 67–68
 - 登录，109–115
-- PlayerStuff,75–77
-- Simple，50–54
-- Sky，80–84
-- SquidBomb 插件，149–151
-- Boolean,见条件
+- `PlayerStuff`, 75–77
+- `Simple`, 50–54
+- `Sky`, 80–84
+- `SquidBomb` 插件，149–151
+- `Boolean`, 见条件
 - 布尔值，241, 247
-- 大括号 (),44, 58, 213
+- 大括号 `()`, 44, 58, 213
 - 结束的数组或哈希值，95
 - 编码块，44, 58, 213
-- 括号 ( | ) ),43, 95
-- build.sh 文件，36–37
+- 括号 `( | )`, 43, 95
+- `build.sh` 文件，36–37
 - 字符，见字符串
 - 类名后缀，22
 - 类，18–19, 31
 - 类，247, 见对象
-- 声明，35, 70–74
-- 设计，190–193
-- 文档，217–212, 243
-- 导入，35, 72–73, 253
-- 多个，在 false，137–138
-- 用途，138
-- 公共，315, 244
-- 与 对象，137
-- CLASSPATH 环境变量，218
+  - 声明，35, 70–74
+  - 设计，190–193
+  - 文档，217–212, 243
+  - 导入，35, 72–73, 253
+  - 多个，在 `false`, 137–138
+  - 用途，138
+  - 公共，315, 244
+  - 与 对象，137
+- `CLASSPATH` 环境变量，218
 - 客户端，见注解
 - 图形客户端-服务器应用程序，xi-iii
 - 云服务器，229–230
@@ -6935,11 +6441,11 @@ import net.visualillusents.utils.Properties;
 - 杀死 Java 进程，235
 - Linux 发行版，230–235
 - 登销，235
-- Stack 插件，118–122
+- `Stack` 插件，118–122
 - 网站，用于
-- @Column 注解，152
+- `@Column` 注解，152
 - 数据库列，152
-- @Command 注解，81–83
+- `@Command` 注解，81–83
 - 命令参数解析，113
 - 命令行，1–3, 248
 - 云服务器，232
@@ -6947,51 +6453,48 @@ import net.visualillusents.utils.Properties;
 - 复制和粘贴，9
 - 默认目录，主目录
 - 启用函数，127, 147
-- 用户许可协议 (EULA)，25
-- (Git 命令)，184
+- 用户许可协议 (`EULA`), 25
+- (`Git` 命令)，184
 - 命令，3, 11-12
-- (Java 命令)，见 java commands：java command
-- (Minecraft 命令)，1, 39
+- (`Java` 命令)，见 `java commands`：`java command`
+- (`Minecraft` 命令)，1, 39
 - 手动设置，223–227
 - 药水效果，125
-- (Shell 命令)，13, 见如此特定的命令
-- DHCP 参考，227
-- 字典，见 HashMap 字典，目录和路径的更改，9-10
+- (`Shell` 命令)，13, 见如此特定的命令
+- `DHCP` 参考，227
+- 字典，见 `HashMap` 字典，目录和路径的更改，9-10
 - 入口，用于，56
 - 环境变量，248
 
-
-
-
 # 索引 260
 
-感叹号，等号
-(!), 不等于运算符，63, 242
+- 感叹号，等号
+  - `(!)`, 不等于运算符，63, 242
 
 ## G
 
 - 可执行文件，248
-- extends 关键字，79
-- EZPlugin 库，40
-- EZPlugin 父类，79
+- `extends` 关键字，79
+- `EZPlugin` 库，40
+- `EZPlugin` 父类，79
 
 ## H
 
 - 游戏数据，存储，145, 151–154
-- 在 SQL 数据库中，151
+  - 在 SQL 数据库中，151
 - 垃圾回收，109
-- getConfigFunction, 147
-- getっていく，128
-- getDestination, 118
-- getEmptyListingList, 81, 151
-- getHealth, 123
-- getInstance, 153
-- getItemHandle, 123
-- getItemLocation, 118
-- getPlayer, 72, 128
-- getServer, 72
-- 哈希 (hash)，249
-- HashMap 类，105–108, 249
+- `getConfigFunction`, 147
+- `getっていく`, 128
+- `getDestination`, 118
+- `getEmptyListingList`, 81, 151
+- `getHealth`, 123
+- `getInstance`, 153
+- `getItemHandle`, 123
+- `getItemLocation`, 118
+- `getPlayer`, 72, 128
+- `getServer`, 72
+- 哈希 (`hash`), 249
+- `HashMap` 类，105–108, 249
   - 访问元素，105
   - 赋值值，105
   - 创建，107, 112
@@ -7006,29 +6509,29 @@ import net.visualillusents.utils.Properties;
   - 拷贝，10, 23
   - 创建，17
   - 可执行文件，248
-  - jar 文件，31, 249
+  - `jar` 文件，31, 249
   - 列表，3, 7
   - 文本文件，12, 251
-  - zip 文件，xiv
-- final 关键字，248
-- final 修饰符，244
+  - `zip` 文件，xiv
+- `final` 关键字，248
+- `final` 修饰符，244
 - 防火墙，开启端口，222–226
-- 堆 (heap)，109
-- HelloWorld 插件示例
+- 堆 (`heap`), 109
+- `HelloWorld` 插件示例
   - 构建，36–37
   - 配置文件，35–36
   - 目录结构，5–32–33
   - 源码，33–35
   - 主目录，3, 10
-- @HookHandler 注解，127, 130
+- `@HookHandler` 注解，127, 130
 - 浮点数，48, 249
-- 浮点 (floats)，48, 248
-- FlyChanger 插件示例，125–126
+- 浮点 (`floats`), 48, 248
+- `FlyChanger` 插件示例，125–126
 
 ## I
 
-- getTextFieldFunction, 115
-- Git, 169–176
+- `getTextFieldFunction`, 115
+- `Git`, 169–176
   - 将成员添加到列表并备份到云端。180–182
   - 用于 Bash shell 的，170
   - 分支，17–180
@@ -7040,20 +6543,20 @@ import net.visualillusents.utils.Properties;
   - 仓库用于，170
   - 状态，172
   - 索引更改，173–179
-- I/O (输入/输出)，249
-- id_rsa_pub 文件，234
-- if 语句，61, 243
-- lfconfig 命令，227
-- import 语句，35, 72–73, 212, 243, 259
+- `I/O` (输入/输出)，249
+- `id_rsa_pub` 文件，234
+- `if` 语句，61, 243
+- `lfconfig` 命令，227
+- `import` 语句，35, 72–73, 212, 243, 259
 - 继承，249
-- 输入/输出，I/O
-- instance 关键字，81
+- 输入/输出, `I/O`
+- `instance` 关键字，81
 - 整数，48–250
 - 物品栏，142
-- IP 地址
-- 文件夹，见目录 (directories)
-- for 语句，60, 94
-- for-statement，100–102, 243
+- `IP` 地址
+- 文件夹，见目录 (`directories`)
+- `for` 语句，60, 94
+- `for-statement`, 100–102, 243
 - 函数，249
   - 参数的，56, 58
   - 调用，56, 59, 244
@@ -7065,33 +6568,33 @@ import net.visualillusents.utils.Properties;
   - 监听器，249
   - 名称，58
   - 参数的，56, 250
-  - 公有的 (public)，273
+  - 公有的 (`public`), 273
   - 参数的作用范围，90
-  - 静态的 (static)，57, 251
-  - super，140
+  - 静态的 (`static`), 57, 251
+  - `super`, 140
   - 任务，138–140
-  - 空 (void)，57, 252
+  - 空 (`void`), 57, 252
 - 用于云服务器的，240
 - 外部，224
 - 内部，227
-- jsoncopy 命令，227
-- isObjectFound 函数，143
+- `jsoncopy` 命令，227
+- `isObjectFound` 函数，143
 - 迭代器，249
-- dict.directory，170
-- GitHub
+- `dict.directory`, 170
+- `GitHub`
   - 备份到云端。181–182
   - 共享代码，183–184
-- gitignore 文件，172
+- `gitignore` 文件，172
 - 全局变量，90–92
 - 图形客户端，见 Minecraft 客户端
 
 ## J
 
-- jar (Java 归档) 文件，31, 249
-- jar 命令，18
-- java 命令，13–22, 31
-- Java 开发 Kit (JDK)，见 JDK
-- java 文件后缀，7, 22
+- `jar` (Java 归档) 文件，31, 249
+- `jar` 命令，18
+- `java` 命令，13–22, 31
+- Java 开发 Kit (`JDK`), 见 `JDK`
+- `java` 文件后缀，7, 22
 - Java 语言，243–244
   - 块结构，89
   - 大小敏感性，43
@@ -7099,19 +6602,22 @@ import net.visualillusents.utils.Properties;
   - 比较运算符，244–245
   - 数据类型，241
   - 数学运算符，244
-  - javac 命令，13, 18–22, 31, 211–215
-    - JDK (Java Development Kit) 未找到：18–19, 23, 38
-    - 循环语句，60, 64, 100–102, 243
-    - mkplugin.sh 文件，51, 193
-    - vm 命令，13
+- `javac` 命令，13, 18–22, 31, 211–215
+- `JDK` (Java Development Kit) 未找到：18–19, 23, 38
+- 循环语句，60, 64, 100–102, 243
+- `mkplugin.sh` 文件，51, 193
+- `vm` 命令，13
+
+## M
+
 - Mac OS
   - 命令行，2
   - 命令行提示符，2
   - 开启防火墙，225
-  - 主类 (main-class)：配置文件，36
-  - make 函数，132
-  - math.function，83
-  - 方法，139
+- 主类 (`main-class`)：配置文件，36
+- `make` 函数，132
+- `math.function`, 83
+- 方法，139
 - Minecraft
   - 构建代码，31, 33, 36, 37, 193–209
     - 配置文件，35–36
@@ -7121,45 +6627,48 @@ import net.visualillusents.utils.Properties;
     - 错误来源，216
     - 暂停，23–24
     - 启动和重启，38
-    - 减号 (–)，减法运算符，49, 242
-    - 减号 (–)，减一，50
-    - mkdir 命令，9–10, 13
+- 减号 (`-`), 减法运算符，49, 242
+- 减号 (`-`), 减一，50
+- `mkdir` 命令，9–10, 13
+
+## L
+
 - Linux
   - 命令行，2
   - 命令行提示符，2
   - 开启防火墙，226
-  - 监听器，127, 130–132
-  - 字面量，50, 241, 249
-  - 面面向编程，67, 250
-  - 对象，67–70，见类 (classes)；特定对象
-    - 创建，74, 244
-    - 部分，72–74
-  - 在线资源，可见性
-- CanaryMod 项目，24
+- 监听器，127, 130–132
+- 字面量，50, 241, 249
+- 面面向编程，67, 250
+- 对象，67–70，见类 (`classes`); 特定对象
+  - 创建，74, 244
+  - 部分，72–74
+- 在线资源，可见性
+- `CanaryMod` 项目，24
 - 动态 DNS 注册，224
-- Git，160
-- IP 地址，检查，224
+- `Git`, 160
+- `IP` 地址，检查，224
 - Oracle 类文档，218，可检查性
 - 本书，219
-- open-sh 包，238
+- `open-sh` 包，238
 
 ## P
 
-- build.sh 文件，36–37
-- mkplugin.sh，51, 193
-- package 语句，35, 243
+- `build.sh` 文件，36–37
+- `mkplugin.sh`, 51, 193
+- `package` 语句，35, 243
 - 包，250
-- 声明，243
-- 导入，73
-- 在云服务器上安装，235–238
-- 安全外壳 (SSH)，232
-- 私有关键字 (private)，108, 244, 250
+  - 声明，243
+  - 导入，73
+  - 在云服务器上安装，235–238
+- 安全外壳 (`SSH`), 232
+- 私有关键字 (`private`), 108, 244, 250
 - 编程语言，见 Java 语言
 - 权限，26, 33
 - 参数，56, 90
 - 父目录，8, 13
-- 括号 () 包含参数，43
-- 百分号 (%) 取模运算符，242
+- 括号 `()` 包含参数，43
+- 百分号 (`%`) 取模运算符，242
 - 随机数，83
 - 远程访问云服务器，232–137
 - 来源，在线来源
@@ -7167,157 +6676,149 @@ import net.visualillusents.utils.Properties;
 
 ## R
 
-- 右尖括号 (<)，大于运算符，63, 242
-- 右等号 (=)，大于等于运算符，63, 242
-- rightClick 函数，118
-- rm 命令，13
-- 云服务器 root 权限，232–237
+- 右尖括号 (`<`), 大于运算符，63, 242
+- 右等号 (`>=`), 大于等于运算符，63, 242
+- `rightClick` 函数，118
+- `rm` 命令，13
+- 云服务器 `root` 权限，232–237
 - 根目录，8
 - 根级别，35, 214, 243, 251
-- 运行时应用程序，见 java 命令
-- playSound 函数，53, 85
-- Player 对象，71–77
-- 检查有效性，81
-- playmost 命令，133
-- PlayerStuff 示例，75–77
-- Plugin 对象，79
-- 插件，210, 252，见 Minecraft 插件
-- 加号 (+) 加法运算符，49, 242
-- 字符串拼接，50
-- 加号 (++)，加一运算符，50
-- 端口，222, 250
-- 检查能力，226
-- 转发，226–227
-- 简单角，50–54
-- Skynd 插件，80–84
-- 引号 (") 包含空格的目录，11
-- 包含字符串，50
-
-## Q
-
-- QoS (服务质量)，227
-- 快速编辑模式，9
-
-## S
-
-- 保存函数，148
-- 任务调度，139–140
+- 运行时应用程序，见 `java` 命令
+- `playSound` 函数，53, 85
+- `Player` 对象，71–77
+  - 检查有效性，81
 
 
 
+## 索引
 
+### 符号
 
-索引 · 263
+- **playmost 命令**, 133
+- **PlayerStuff 示例**, 75–77
+- **Plugin 对象**, 79
+- **插件**, 210, 252，见 Minecraft 插件
+- **加号 (`+`)** 加法运算符, 49, 242
+- **字符串拼接**, 50
+- **加号 (`++`)**，加一运算符, 50
+- **端口**, 222, 250
+- **检查能力**, 226
+- **转发**, 226–227
+- **简单角**, 50–54
+- **Skynd 插件**, 80–84
+- **引号 (`"`)** 包含空格的目录, 11
+- **包含字符串**, 50
 
-source_code, xiv, 31, 251, 另见示例：Java 语言共享, 183–184
-样式实践, 183
-更改跟踪, 169–n176
+### Q
 
-# T
+- **QoS (服务质量)**, 227
+- **快速编辑模式**, 9
 
-表格, 数据库, 152
-任务, 251
-创建, 138–139
-调度运行, 139–140
-同步, 137
-teleport, 128
-teleport 函数, 74, 123
-文本, string
-文本命令, 见命令
-阴影, 93–94, 251
-静态, 91, 251
-版本: 项目, 配置文件, 36
-垂直线, (( )), 或运算符, 63, 242
+### S
 
-虚拟专用服务器 (Virtual Private Server), 见–VPS
-可见性修饰, 244
-访问者权限, 26
-void 关键字, 57, 252
-卷, 53
+- **保存函数**, 148
+- **任务调度**, 139–140
+- **索引**, 263
+- **source_code**, xiv, 31, 251, 另见示例：Java 语言共享, 183–184
+- **样式实践**, 183
+- **更改跟踪**, 169–n176
 
-VPS (虚拟专用服务器), 230, 252
+### T
 
-名称中的空格, 119
-生成, 123
-spawnliving 函数, 83, 124
-spawnparticle 函数, 124
-split fusion, 126
-squidBomConfig 插件示例, 149–151
+- **表格**, 数据库, 152
+- **任务**, 251
+  - **创建**, 138–139
+  - **调度运行**, 139–140
+- **同步**, 137
+- **teleport**, 128
+- **`teleport()` 函数**, 74, 123
+- **文本**, string
+- **文本命令**, 见命令
+- **阴影**, 93–94, 251
+- **静态**, 91, 251
+- **版本**: 项目, 配置文件, 36
+- **垂直线 (`|`)**, 或运算符, 63, 242
+- **虚拟专用服务器 (Virtual Private Server)**, 见–VPS
+- **可见性修饰**, 244
+- **访问者权限**, 26
+- **`void` 关键字**, 57, 252
+- **卷**, 53
+- **VPS (虚拟专用服务器)**, 230, 252
+- **名称中的空格**, 119
+- **生成**, 123
+- **`spawnliving()` 函数**, 83, 124
+- **`spawnparticle()` 函数**, 124
+- **split fusion**, 126
+- **squidBomConfig 插件示例**, 149–151
+- **文本编辑器**, 编辑器尺寸
+- **文本文件**, 251
+- **配置文件**, 作为, 16
+  - **作为 Java 文件**, 18, 31, 43
+  - **作为脚本**, 251
+- **查看内容**, 12
+- **线程**, 135–137, 251
+- **ticks**, 251
 
-文本编辑器, 编辑器尺寸
-文本文件, 251
-配置文件, 作为, 16
-作为 Java 文件, 18, 31, 43
-作为脚本, 251
-查看内容, 12
-线程, 135–137, 251
-ticks, 251
+### W
 
-# W
+- **网站资源**, 见在线资源
+- **`while` 语句**, 64, 243
+- **`who` 命令**, 240
+- **SSH (shell)**, 232
+- **`ssh` 命令**, 232
+- **`ssh` 目录**, 233
+- **SSH 密钥**, 233–235
+- **`sshkey` 命令**, 233
+- **`shhd` 命令**, 233
+- **Windows**
+  - **BusyBox 应用**, 4
+  - **命令行**, 使用, 2, 4
+  - **命令提示符**, 2
+  - **内部 IP 地址**
+  - **告别**, 225
+  - **路径**, 语法, 17
+  - **命令行 QuickEdit 模式**, 9
+- **栈**, 109, 131
+- **服务器启动错误**, 26
+- **`start_minecraft` 脚本**, 24, 239
+- **静态 IP 地址**, 224
+- **`static` 关键字**, 57, 91, 244, 251
+- **字符串**, 50, 241, 251
+  - **连接**, 50, 245
+- **Stuck 插件编辑器**, 15
+- **Sublime Text**, 编辑器
+- **减法运算符 (`-`)**, 50
+- **减法运算符 (`-`)**, 49, 242
+- **`sudo` 命令**, 235–237
+- **`super()` 函数**, 140
+- **符号**, 251
+- **同步任务**, 137
+- **语法高亮**, 16
 
-网站资源, 见在线资源
-while 语句, 64, 243
-who 命令, 240
+### U
 
-SSH (shell,), 232
-ssh 命令, 232
-ssh 目录, 233
-SSH 密钥, 233–235
-sshkey 命令, 233
-shhd 命令, 233
+- **波浪号 (`~`)**, 主目录, 10, 13
+- **时间**, 单位, 见 ticks
+- **`try` 命令**, 155
+- **`.xt` 文件后缀**, 12
+- **不兼容类型**, 215
 
-Windows
+### V
 
-BusyBox 应用, 4
-命令行, 使用, 2, 4
-命令提示符, 2
-内部 IP 地址, 
-告别, 225
-路径, 语法, 17
-命令行 QuickEdit 模式, 9
+- **变量**, 44–46, 89–90, 251
+  - **赋值**, 44–46, 243
+  - **复制**, 102
+  - **声明**, 54
+  - **声明**, 212, 243
+  - **环境变量**, 248
+  - **全局**, 90–92, 249
+  - **局部**, 89, 250
+  - **作用域**, 89
 
-栈, 109, 131
-服务器启动错误, 26
-start_minecraft 脚本, 24, 239
-静态 IP 地址, 224
-static 关键字, 57, 91, 244, 251
-字符串, 50, 241, 251
-连接, 50, 245
-Stuck 插件编辑器, 15
-Sublime Text, 编辑器
-减法运算符 (–), 50
-减法运算符 (–), 49, 242
-sudo 命令, 235–237
-super 函数, 140
-符号, 251
-同步任务, 137
-语法高亮, 16
+### Y
 
-# U
+- **`yum` 命令**, 238
 
-波浪号 (–), 主目录, 10, 13
-时间, 单位, 见 ticks
-try 命令, 155
-xt 文件后缀, 12
-不兼容类型, 215
+### Z
 
-# V
-
-变量, 44–46, 89–90, 251
-赋值, 44–46, 243
-复制, 102
-声明, 54
-声明, 212, 243
-环境变量, 248
-全局, 90–92, 249
-局部, 89, 250
-作用域, 89
-
-# Y
-
-yum 命令, 238
-
-# Z
-
-zip 文件, 214
-
+- **zip 文件**, 214

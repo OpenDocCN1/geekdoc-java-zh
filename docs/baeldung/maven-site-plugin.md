@@ -1,16 +1,20 @@
+
 # Maven 站点插件
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/maven-site-plugin>
 
-[This article is part of a series:](javascript:void(0);)[• Maven Resources Plugin](/web/20220926200101/https://www.baeldung.com/maven-resources-plugin)
-[• Maven Compiler Plugin](/web/20220926200101/https://www.baeldung.com/maven-compiler-plugin)
-[• Quick Guide to the Maven Install Plugin](/web/20220926200101/https://www.baeldung.com/maven-install-plugin)
-[• The Maven Failsafe Plugin](/web/20220926200101/https://www.baeldung.com/maven-failsafe-plugin)
-[• Quick Guide to the Maven Surefire Plugin](/web/20220926200101/https://www.baeldung.com/maven-surefire-plugin)
-[• The Maven Deploy Plugin](/web/20220926200101/https://www.baeldung.com/maven-deploy-plugin)
-[• The Maven Clean Plugin](/web/20220926200101/https://www.baeldung.com/maven-clean-plugin)
-[• The Maven Verifier Plugin](/web/20220926200101/https://www.baeldung.com/maven-verifier-plugin)
-• The Maven Site Plugin (current article)[• Guide to the Core Maven Plugins](/web/20220926200101/https://www.baeldung.com/core-maven-plugins)
+[This article is part of a series:](javascript:void(0);)
+
+- [• Maven Resources Plugin](/web/20220926200101/https://www.baeldung.com/maven-resources-plugin)
+- [• Maven Compiler Plugin](/web/20220926200101/https://www.baeldung.com/maven-compiler-plugin)
+- [• Quick Guide to the Maven Install Plugin](/web/20220926200101/https://www.baeldung.com/maven-install-plugin)
+- [• The Maven Failsafe Plugin](/web/20220926200101/https://www.baeldung.com/maven-failsafe-plugin)
+- [• Quick Guide to the Maven Surefire Plugin](/web/20220926200101/https://www.baeldung.com/maven-surefire-plugin)
+- [• The Maven Deploy Plugin](/web/20220926200101/https://www.baeldung.com/maven-deploy-plugin)
+- [• The Maven Clean Plugin](/web/20220926200101/https://www.baeldung.com/maven-clean-plugin)
+- [• The Maven Verifier Plugin](/web/20220926200101/https://www.baeldung.com/maven-verifier-plugin)
+- The Maven Site Plugin (current article)
+- [• Guide to the Core Maven Plugins](/web/20220926200101/https://www.baeldung.com/core-maven-plugins)
 
 ## 1。概述
 
@@ -20,12 +24,12 @@
 
 ## 2。插件目标
 
-默认情况下，Maven `site`生命周期有两个阶段绑定到`site`插件的目标:`site`阶段绑定到`site`目标，而`site-deploy`阶段绑定到`deploy`目标。
+默认情况下，Maven `site`生命周期有两个阶段绑定到`site`插件的目标：`site`阶段绑定到`site`目标，而`site-deploy`阶段绑定到`deploy`目标。
 
-以下是这些目标的描述:
+以下是这些目标的描述：
 
-*   `site`**–**为单个项目生成一个站点；生成的站点只显示关于 POM 中指定的工件的信息
-*   `deploy`**–**将生成的站点部署到 POM 的`distributionManagement`元素中指定的 URL
+- `site`–为单个项目生成一个站点；生成的站点只显示关于 POM 中指定的工件的信息。
+- `deploy`–将生成的站点部署到 POM 的`distributionManagement`元素中指定的 URL。
 
 除了`site`和`deploy`之外，`site`插件还有其他几个目标来定制生成文件的内容和控制部署过程。
 
@@ -47,4 +51,4 @@
 
 我们可以在 Maven 网站上找到关于这个插件的更多信息。
 
-Next **»**[Guide to the Core Maven Plugins](/web/20220926200101/https://www.baeldung.com/core-maven-plugins)**«** Previous[The Maven Verifier Plugin](/web/20220926200101/https://www.baeldung.com/maven-verifier-plugin)
+[Next **»** Guide to the Core Maven Plugins](/web/20220926200101/https://www.baeldung.com/core-maven-plugins) **«** [Previous The Maven Verifier Plugin](/web/20220926200101/https://www.baeldung.com/maven-verifier-plugin)

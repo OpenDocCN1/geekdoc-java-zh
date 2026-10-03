@@ -1,43 +1,42 @@
+
 # Web 应用
 
-## Web 应用
+有很多 Clojure 类库可以帮助我们创建 Web 应用。现在比较流行使用 Chris Granger 写的 [Noir](http://webnoir.org/)。另外一个简单的、基于 MVC 的框架，使用 Christophe Grand 写的 [Enlive](https://github.com/cgrand/enlive) 来做页面的 template，是 Sean Corfield 写的 [Framework One](https://github.com/seancorfield/fw1-clj)。另一个流行的选择是 James Reeves 写的 Compojure，你可以在这里下载：[`github.com/weavejester/compojure/tree/master`](http://github.com/weavejester/compojure/tree/master)。所有这些框架都是基于 Mark McGranahan 写的 [Ring](https://github.com/mmcgrana/ring)（James Reeves 同学现在在维护）。我们以 Compojure 为例子来稍微介绍一下 Web 应用开发。最新的版本可以通过 Git 来获取：
 
-有很多 Clojure 类库可以帮助我们创建 web 应用。现在比较流行使用 Chris Granger 写的 [Noir](http://webnoir.org/) 。另外一个简单的，基于 MVC 的框架， 使用 Christophe Grand 写的? [Enlive](https://github.com/cgrand/enlive) 来做页面的 template, 是 Sean Corfield 写的 [Framework One](https://github.com/seancorfield/fw1-clj) 。另一个流行的选择是 James Reeves 写的 Compojure，你可以在这里下载： [`github.com/weavejester/compojure/tree/master`](http://github.com/weavejester/compojure/tree/master) 。所有这些框架都是基于 Mark McGranahan 写的 [Ring](https://github.com/mmcgrana/ring) (James Reeves 同学现在在维护). 我们以 Compojure 为例子来稍微介绍一下 web 应用开发。最新的版本可以通过 git 来获取:
-
-```java
-git clone git://github.com/weavejester/compojure.git 
+```bash
+git clone git://github.com/weavejester/compojure.git
 ```
 
-这个命令会在当前目录创建一个叫做 `compojure` 的目录. 另外你还需要从 [`cloud.github.com/downloads/weavejester/compojure/deps.zip`](http://cloud.github.com/downloads/weavejester/compojure/deps.zip) 下载所有依赖的 JAR 包，把 `deps.zip` 下载之后解压在 `compojure` 目录里面的 `deps` 子目录里面：
+这个命令会在当前目录创建一个叫做`compojure`的目录。另外你还需要从[`cloud.github.com/downloads/weavejester/compojure/deps.zip`](http://cloud.github.com/downloads/weavejester/compojure/deps.zip)下载所有依赖的 JAR 包，把`deps.zip`下载之后解压在`compojure`目录里面的`deps`子目录里面。
 
-要获取 `compojure.jar` , 在 compojure 里面运行 `ant` 命令。
+要获取`compojure.jar`，在`compojure`里面运行`ant`命令。
 
-要获取 Compojure 的更新, 切换到 `compojure` 目录下面执行下面的命令:
+要获取 Compojure 的更新，切换到`compojure`目录下面执行下面的命令：
 
-```java
+```bash
 git pull
-ant clean deps jar 
+ant clean deps jar
 ```
 
-所有的 `deps` 目录里面的 jar 包都必须包含在 classpath 里面。一个方法是修改我们的 `clj` 脚本，然后用这个脚本来运行 web 应用. 把 " `-cp $CP` " 添加到 `java` 命令后面去 执行 `clojure.main 添加下面这些行到脚本里面去，以把那些 jar 包包含在` `CP` 里面。
+所有的`deps`目录里面的 JAR 包都必须包含在 classpath 里面。一个方法是修改我们的`clj`脚本，然后用这个脚本来运行 Web 应用。把`-cp $CP`添加到`java`命令后面去，执行`clojure.main`，添加下面这些行到脚本里面去，以把那些 JAR 包包含在`CP`里面。
 
-```java
+```bash
 # Set CP to a path list that contains clojure.jar
 # and possibly some Clojure contrib JAR files.
-COMPOJURE_DIR=<em>path-to-compojure-dir</em>
+COMPOJURE_DIR=path-to-compojure-dir
 COMPOJURE_JAR=$COMPOJURE_DIR/compojure.jar
 CP=$CP:$COMPOJURE_JAR
 for file in $COMPOJURE_DIR/deps/*.jar
 do
   CP=$CP:$file
-done 
+done
 ```
 
-下面是他一个简单的 Compojure web 应用：
+下面是一个简单的 Compojure Web 应用：
 
 ![Compojure input page](img/QNN7Rj.png) ![Compojure output page](img/RVjmqe.png)
 
-```java
+```clojure
 (ns com.ociweb.hello
   (:use compojure))
 
@@ -79,5 +78,5 @@ done
 
 (println (str "browse http://" host ":" port in-path))
 ; -> browse http://localhost:8080/hello
-(run-server {:port port} "/*" (servl 
+(run-server {:port port} "/*" (servlet))
 ```

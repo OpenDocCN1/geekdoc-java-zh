@@ -1,22 +1,23 @@
+
 # Java 树形图指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-treemap>
 
-## 1。概述
+## 1. 概述
 
 在本文中，我们将探索 Java 集合框架(JCF)的`Map`接口的`TreeMap`实现。
 
 `TreeMap`是一个 map 实现，它根据键的自然顺序对条目进行排序，如果用户在构建时提供了比较器，那么使用比较器会更好。
 
-之前，我们已经介绍了 [`HashMap`](/web/20221003101503/https://www.baeldung.com/java-hashmap) 和 [`LinkedHashMap`](/web/20221003101503/https://www.baeldung.com/java-linked-hashmap) 的实现，我们会意识到有相当多的关于这些类如何工作的信息是相似的。
+之前，我们已经介绍了`HashMap`和`LinkedHashMap`的实现，我们会意识到有相当多的关于这些类如何工作的信息是相似的。
 
 在阅读本文之前，强烈推荐阅读上述文章。
 
-## 2。 `TreeMap`中的默认排序
+## 2. `TreeMap`中的默认排序
 
 默认情况下，`TreeMap`根据条目的自然顺序对其进行排序。对于整数，这意味着升序，对于字符串，这意味着字母顺序。
 
-让我们看看测试中的自然排序:
+让我们看看测试中的自然排序：
 
 ```java
 @Test
@@ -34,7 +35,7 @@ public void givenTreeMap_whenOrdersEntriesNaturally_thenCorrect() {
 
 注意，我们以无序的方式放置了整数键，但是在检索键集时，我们确认它们确实是以升序维护的。这是整数的自然排序。
 
-同样，当我们使用字符串时，它们将按自然顺序排序，即按字母顺序排序:
+同样，当我们使用字符串时，它们将按自然顺序排序，即按字母顺序排序：
 
 ```java
 @Test
@@ -52,11 +53,11 @@ public void givenTreeMap_whenOrdersEntriesNaturally_thenCorrect2() {
 
 `TreeMap`与哈希映射和链接哈希映射不同，它不使用哈希原理，因为它不使用数组来存储条目。
 
-## 3。`TreeMap` 中的自定义排序
+## 3. `TreeMap`中的自定义排序
 
 如果我们对`TreeMap`的自然排序不满意，我们还可以在构建树形图时通过比较器定义自己的排序规则。
 
-在下面的例子中，我们希望整数键按降序排列:
+在下面的例子中，我们希望整数键按降序排列：
 
 ```java
 @Test
@@ -75,11 +76,11 @@ public void givenTreeMap_whenOrdersEntriesByComparator_thenCorrect() {
 
 哈希映射不保证存储的键的顺序，特别是不保证这个顺序会随着时间的推移保持不变，但是树映射保证键总是按照指定的顺序排序。
 
-## 4。`TreeMap`排序的重要性
+## 4. `TreeMap`排序的重要性
 
-我们现在知道`TreeMap`按照排序顺序存储所有条目。由于树映射的这个属性，我们可以执行如下查询:找到“最大的”，找到“最小的”，找到所有小于或大于某个值的键，等等。
+我们现在知道`TreeMap`按照排序顺序存储所有条目。由于树映射的这个属性，我们可以执行如下查询：找到“最大的”，找到“最小的”，找到所有小于或大于某个值的键，等等。
 
-下面的代码只涵盖了这些情况中的一小部分:
+下面的代码只涵盖了这些情况中的一小部分：
 
 ```java
 @Test
@@ -103,9 +104,9 @@ public void givenTreeMap_whenPerformsQueries_thenCorrect() {
 }
 ```
 
-## 5。`TreeMap`内部实现
+## 5. `TreeMap`内部实现
 
-`TreeMap`实现`NavigableMap`接口，内部工作基于[红黑树](/web/20221003101503/https://www.baeldung.com/cs/red-black-trees)的原理:
+`TreeMap`实现`NavigableMap`接口，内部工作基于红黑树的原理：
 
 ```java
 public class TreeMap<K,V> extends AbstractMap<K,V>
@@ -126,13 +127,13 @@ public class TreeMap<K,V> extends AbstractMap<K,V>
 
 这意味着操作在较短的分支上花费的时间较短，而在离根最远的分支上花费的时间较长，这是我们不希望发生的情况。
 
-所以在红黑树的设计上就照顾到了这一点。对于每一次插入和删除，树在任何边上的最大高度保持在`O(log n)` 处，即树不断地自我平衡。
+所以在红黑树的设计上就照顾到了这一点。对于每一次插入和删除，树在任何边上的最大高度保持在`O(log n)`处，即树不断地自我平衡。
 
 就像哈希映射和链接哈希映射一样，树映射是不同步的，因此在多线程环境中使用它的规则类似于其他两种映射实现中的规则。
 
-## 6。选择正确的地图
+## 6. 选择正确的地图
 
-看了以前的 [`HashMap`](/web/20221003101503/https://www.baeldung.com/java-hashmap) 和现在的`TreeMap`的 [`LinkedHashMap`](/web/20221003101503/https://www.baeldung.com/java-linked-hashmap) 实现之后，对这三者做一个简单的比较来指导我们哪一个适合哪里是很重要的。
+看了以前的`HashMap`和现在的`LinkedHashMap`、`TreeMap`实现之后，对这三者做一个简单的比较来指导我们哪一个适合哪里是很重要的。
 
 **哈希映射**是一个很好的通用映射实现，可以提供快速的存储和检索操作。然而，它的缺点是条目排列混乱无序。
 
@@ -142,10 +143,10 @@ public class TreeMap<K,V> extends AbstractMap<K,V>
 
 **树形图**通过提供对键排序方式的完全控制，将排序提升到了一个新的层次。另一方面，它提供了比其他两种选择更差的总体性能。
 
-我们可以说,**链接的散列图减少了散列图排序的混乱，而不会导致树图**的性能损失。
+我们可以说，**链接的散列图减少了散列图排序的混乱，而不会导致树图**的性能损失。
 
-## 7。结论
+## 7. 结论
 
-在本文中，我们探索了 Java `TreeMap`类及其内部实现。因为它是一系列通用 Map 接口实现中的最后一个，所以我们也简单讨论了它与其他两个接口最适合的地方。
+在本文中，我们探索了 Java `TreeMap`类及其内部实现。因为它是一系列通用`Map`接口实现中的最后一个，所以我们也简单讨论了它与其他两个接口最适合的地方。
 
 本文中使用的所有示例的完整源代码可以在 GitHub 项目中找到。

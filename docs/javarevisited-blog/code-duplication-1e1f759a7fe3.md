@@ -1,3 +1,4 @@
+
 # 代码复制
 
 > 原文：<https://medium.com/javarevisited/code-duplication-1e1f759a7fe3?source=collection_archive---------0----------------------->
@@ -15,7 +16,7 @@
 很多年前，当我发现代码重复时，我总是会想起 Ryan King 在雅虎论坛上发表的一篇文章中的这段话。
 
 > 所以，复制很糟糕。一个人越讨厌重复，我就越相信他们在管理信息方面的观点。一个程序员，一旦注意到一些冗余，应该会陷入恐慌，开始喘不过气来，结结巴巴地说“El diablo！！El diablo está en mi 软件！”。
-> 
+
 > —瑞安·金
 
 那么当我们发现代码重复时，我们能做些什么呢？我们可以学习去除它的方法。Google 和 StackOverflow 是寻找解决许多常见编程问题的答案的绝佳资源。它们可以是您发现和学习新 API 的第一站，这可能有助于减少您以前编写的一些重复代码。
@@ -57,15 +58,15 @@ public boolean isSomething()
 
 ```
 List<String> list = new ArrayList<>();
-list.add(**"one"**);
-list.add(**"two"**);
-list.add(**"three"**);
+list.add("one");
+list.add("two");
+list.add("three");
 ```
 
 使用 Eclipse 集合[可变工厂模式](/@donraab/as-a-matter-of-factory-part-1-mutable-75cc2c5d72d9)可以如下替换这段代码。
 
 ```
-List<String> list = Lists.***mutable***.with(**"one"**, **"two"**, **"three"**);
+List<String> list = Lists.mutable.with("one", "two", "three");
 ```
 
 这里有一个 StackOverflow 上的回答，展示了用 Eclipse 集合在一行中初始化列表、集合和打包的不同[方法。](https://stackoverflow.com/questions/1005073/initialization-of-an-arraylist-in-one-line/28183168#28183168)
@@ -75,45 +76,45 @@ List<String> list = Lists.***mutable***.with(**"one"**, **"two"**, **"three"**);
 以下代码在 Java 9 之前的 Java 版本中很常见，用于创建静态的不可修改的`List`。
 
 ```
-public static final List<String> *LIST*;
+public static final List<String> LIST;
 
 static
 {
     List<String> newList = new ArrayList<>();
-    newList.add(**"one"**);
-    newList.add(**"two"**);
-    newList.add(**"three"**);
-    *LIST* = Collections.*unmodifiableList*(newList);
+    newList.add("one");
+    newList.add("two");
+    newList.add("three");
+    LIST = Collections.unmodifiableList(newList);
 }
 ```
 
 这可以用普通的旧 Java 更简单地写成如下。
 
 ```
-public static final List<String> ***LIST*** =
-        Collections.*unmodifiableList*(
-                Arrays.*asList*(**"one"**, **"two"**, **"three"**));
+public static final List<String> LIST =
+        Collections.unmodifiableList(
+                Arrays.asList("one", "two", "three"));
 ```
 
 这也可以使用 Eclipse 集合进行替换，如下所示。
 
 ```
 public static final List<String> LIST =
-        Lists.***mutable***.with(**"one"**, **"two"**, **"three"**).asUnmodifiable();
+        Lists.mutable.with("one", "two", "three").asUnmodifiable();
 ```
 
 从 Java 9 开始，您还可以编写以下代码。方法`List.of()`返回一个不可修改的列表。
 
 ```
 public static final List<String> LIST = 
-        List.*of*(**"one"**, **"two"**, **"three"**);
+        List.of("one", "two", "three");
 ```
 
 如果您想拥有一个像没有可变方法的`ImmutableList`这样的契约式不可变接口，您也可以使用 Eclipse 集合中的`ImmutableList`。
 
 ```
 public static final ImmutableList<String> LIST = 
-        Lists.***immutable***.with(**"one"**, **"two"**, **"three"**);
+        Lists.immutable.with("one", "two", "three");
 ```
 
 ## 静态映射初始化模式
@@ -121,43 +122,43 @@ public static final ImmutableList<String> LIST =
 如果在`Map`中有三个或四个以上的键/值对，初始化一个静态的`Map`可能会更有挑战性。
 
 ```
-public static final Map<Integer, String> ***MAP***;
+public static final Map<Integer, String> MAP;
 
 static
 {
     Map<Integer, String> newMap = new HashMap<>();
-    newMap.put(1, **"one"**);
-    newMap.put(2, **"two"**);
-    newMap.put(3, **"three"**);
-    newMap.put(4, **"four"**);
-    newMap.put(5, **"five"**);
-    ***MAP*** = Collections.*unmodifiableMap*(newMap);
+    newMap.put(1, "one");
+    newMap.put(2, "two");
+    newMap.put(3, "three");
+    newMap.put(4, "four");
+    newMap.put(5, "five");
+    MAP = Collections.unmodifiableMap(newMap);
 }
 ```
 
 重构以使用 Eclipse 集合不可修改的映射。
 
 ```
-public static final Map<Integer, String> ***MAP*** =
-        Maps.***mutable***.<Integer, String>empty()
-                .withKeyValue(1, **"one"**)
-                .withKeyValue(2, **"two"**)
-                .withKeyValue(3, **"three"**)
-                .withKeyValue(4, **"four"**)
-                .withKeyValue(5, **"five"**)
+public static final Map<Integer, String> MAP =
+        Maps.mutable.<Integer, String>empty()
+                .withKeyValue(1, "one")
+                .withKeyValue(2, "two")
+                .withKeyValue(3, "three")
+                .withKeyValue(4, "four")
+                .withKeyValue(5, "five")
                 .asUnmodifiable();
 ```
 
 重构使用一个 Eclipse 集合`ImmutableMap`，它的接口中也没有突变方法。
 
 ```
-public static final ImmutableMap<Integer, String> ***MAP*** =
-        Maps.***mutable***.<Integer, String>empty()
-                .withKeyValue(1, **"one"**)
-                .withKeyValue(2, **"two"**)
-                .withKeyValue(3, **"three"**)
-                .withKeyValue(4, **"four"**)
-                .withKeyValue(5, **"five"**)
+public static final ImmutableMap<Integer, String> MAP =
+        Maps.mutable.<Integer, String>empty()
+                .withKeyValue(1, "one")
+                .withKeyValue(2, "two")
+                .withKeyValue(3, "three")
+                .withKeyValue(4, "four")
+                .withKeyValue(5, "five")
                 .toImmutable();
 ```
 
@@ -186,7 +187,7 @@ for (Integer value : source)
 下面是使用 Eclipse Collections `select`方法重构的相同代码。
 
 ```
-MutableList<Integer> source = Lists.***mutable***.with(1, 2, 3, 4, 5);
+MutableList<Integer> source = Lists.mutable.with(1, 2, 3, 4, 5);
 MutableList<Integer> target = source.select(each -> each % 2 ==0);
 ```
 
@@ -208,7 +209,7 @@ for (Integer value : source)
 下面是使用 Eclipse Collections `collect`方法重构的相同代码。
 
 ```
-MutableList<Integer> source = Lists.***mutable***.with(1, 2, 3, 4, 5);
+MutableList<Integer> source = Lists.mutable.with(1, 2, 3, 4, 5);
 MutableList<String> target = source.collect(Object::toString);
 ```
 
@@ -220,12 +221,12 @@ MutableList<String> target = source.collect(Object::toString);
 
 ```
 List<Integer> source = Arrays.asList(1, 2, 3, 4, 5);
-boolean **anyEvens** = false;
+boolean anyEvens = false;
 for (Integer value : source)
 {
     if (value % 2 == 0)
     {
-        **anyEvens** = true;
+        anyEvens = true;
         break;
     }
 }
@@ -234,7 +235,7 @@ for (Integer value : source)
 用 Eclipse Collections `anySatisfy`方法重构。
 
 ```
-MutableList<Integer> source = Lists.***mutable***.with(1, 2, 3, 4, 5);
+MutableList<Integer> source = Lists.mutable.with(1, 2, 3, 4, 5);
 boolean anyEvens = source.anySatisfy(each -> each % 2 == 0);
 ```
 
@@ -242,12 +243,12 @@ boolean anyEvens = source.anySatisfy(each -> each % 2 == 0);
 
 ```
 List<Integer> source = Arrays.asList(1, 2, 3, 4, 5);
-boolean **allEvens** = true;
+boolean allEvens = true;
 for (Integer value : source)
 {
     if (value % 2 != 0)
     {
-        **allEvens** = false;
+        allEvens = false;
         break;
     }
 }
@@ -256,7 +257,7 @@ for (Integer value : source)
 用 Eclipse 集合`allSatisfy`方法重构。
 
 ```
-MutableList<Integer> source = Lists.***mutable***.with(1, 2, 3, 4, 5);
+MutableList<Integer> source = Lists.mutable.with(1, 2, 3, 4, 5);
 boolean allEvens = source.allSatisfy(each -> each % 2 == 0);
 ```
 
@@ -264,12 +265,12 @@ boolean allEvens = source.allSatisfy(each -> each % 2 == 0);
 
 ```
 List<Integer> source = Arrays.asList(1, 2, 3, 4, 5);
-boolean **noneEvens** = true;
+boolean noneEvens = true;
 for (Integer value : source)
 {
     if (value % 2 == 0)
     {
-        **noneEvens** = false;
+        noneEvens = false;
         break;
     }
 }
@@ -278,7 +279,7 @@ for (Integer value : source)
 用 Eclipse 集合`noneSatisfy`方法重构。
 
 ```
-MutableList<Integer> source = Lists.***mutable***.with(1, 2, 3, 4, 5);
+MutableList<Integer> source = Lists.mutable.with(1, 2, 3, 4, 5);
 boolean noneEvens = source.noneSatisfy(each -> each % 2 == 0);
 ```
 
@@ -292,7 +293,7 @@ Eclipse 集合中还有许多其他迭代模式可以帮助您删除重复的代
 
 # 有时代码复制是必要的
 
-有时候，代码复制是解决性能问题的最佳解决方案。Eclipse 集合中一个很好的例子是原始集合。Eclipse Collections 对所有八种原语组合(`boolean`、`byte`、`char`、`double`、`float`、`int`、`long`、`short`)的列表、集合、包、堆栈和地图都有原语集合支持。实现所有这些容器类型的代码几乎是相同的。因此，如果您阅读 IntArrayList 的代码，它看起来会与`ShortArrayList`和`LongArrayList`中的代码非常相似。在您希望为 Java 中的基本类型提供库支持的情况下，重要的是尽可能利用代码生成策略，并且不要手动复制代码。对于 Eclipse 集合，我们使用 [StringTemplate](https://www.stringtemplate.org/) 库，并为每种容器类型编写一次模板，然后使用这些模板生成支持所有原语所需的八种容器类型。
+有时候，代码复制是解决性能问题的最佳解决方案。Eclipse 集合中一个很好的例子是原始集合。Eclipse Collections 对所有八种原语组合(`boolean`、`byte`、`char`、`double`、`float`、`int`、`long`、`short`)的列表、集合、包、堆栈和地图都有原语集合支持。实现所有这些容器类型的代码几乎是相同的。因此，如果您阅读`IntArrayList`的代码，它看起来会与`ShortArrayList`和`LongArrayList`中的代码非常相似。在您希望为 Java 中的基本类型提供库支持的情况下，重要的是尽可能利用代码生成策略，并且不要手动复制代码。对于 Eclipse 集合，我们使用 [StringTemplate](https://www.stringtemplate.org/) 库，并为每种容器类型编写一次模板，然后使用这些模板生成支持所有原语所需的八种容器类型。
 
 在未来，如果 Valhalla 项目的工作成为 JDK 发布的一部分，并且我们获得了对基本类型的通用专门化的支持，我们可能会在 Java 中有新的语言级别策略，以减少我们今天必须生成的支持基本类型的代码量。我非常兴奋地看到这种支持可能会减少我们的代码复制负担。
 

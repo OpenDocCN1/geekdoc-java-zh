@@ -1,17 +1,16 @@
-# jQuery prev()示例
+
+# jQuery prev() 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jquery/jquery-prev-example/>
 
-prev()函数用于获取匹配元素集中的前一个兄弟元素。只有前一个同级的元素被选择，它的子元素将被忽略。
+`prev()`函数用于获取匹配元素集中的前一个兄弟元素。只有前一个同级的元素被选择，它的子元素将被忽略。
 
-这个 prev()函数允许通过“选择器”对其进行过滤。例如，prev('div ')用于获取仅是
+这个`prev()`函数允许通过“选择器”对其进行过滤。例如，`prev('div')`用于获取仅是`<div>`元素的前一个兄弟元素。
 
-元素的前一个兄弟元素。
-
-## jQuery prev()示例
+## jQuery prev() 示例
 
 ```java
- <html>
+<html>
 <head>
 <style type="text/css">
   div,p { 
@@ -96,16 +95,9 @@ prev()函数用于获取匹配元素集中的前一个兄弟元素。只有前�
 
 </script>
 </body>
-</html> 
+</html>
 ```
 
 [http://web.archive.org/web/20190214224036if_/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-prev-example.html](http://web.archive.org/web/20190214224036if_/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-prev-example.html)
 
-[Try Demo](http://web.archive.org/web/20190214224036/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-prev-example.html)[jquery](http://web.archive.org/web/20190214224036/http://www.mkyong.com/tag/jquery/) [jquery traversing](http://web.archive.org/web/20190214224036/http://www.mkyong.com/tag/jquery-traversing/)![](img/b91584fcc5d1b2ecd274fa426d8326cd.png) (function (i,d,s,o,m,r,c,l,w,q,y,h,g) { var e=d.getElementById(r);if(e===null){ var t = d.createElement(o); t.src = g; t.id = r; t.setAttribute(m, s);t.async = 1;var n=d.getElementsByTagName(o)[0];n.parentNode.insertBefore(t, n); var dt=new Date().getTime(); try{i[l][w+y](h,i[l][q+y](h)+'&amp;'+dt);}catch(er){i[h]=dt;} } else if(typeof i[c]!=='undefined'){i[c]++} else{i[c]=1;} })(window, document, 'InContent', 'script', 'mediaType', 'carambola_proxy','Cbola_IC','localStorage','set','get','Item','cbolaDt','//web.archive.org/web/20190214224036/http://route.carambo.la/inimage/getlayer?pid=myky82&amp;did=112239&amp;wid=0')<input type="hidden" id="mkyong-postId" value="5099">
-
-
-
-
-
-
-
+[Try Demo](http://web.archive.org/web/20190214224036/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-prev-example.html) [jquery](http://web.archive.org/web/20190214224036/http://www.mkyong.com/tag/jquery/) [jquery traversing](http://web.archive.org/web/20190214224036/http://www.mkyong.com/tag/jquery-traversing/) ![](img/b91584fcc5d1b2ecd274fa426d8326cd.png) (function (i,d,s,o,m,r,c,l,w,q,y,h,g) { var e=d.getElementById(r);if(e===null){ var t = d.createElement(o); t.src = g; t.id = r; t.setAttribute(m, s);t.async = 1;var n=d.getElementsByTagName(o)[0];n.parentNode.insertBefore(t, n); var dt=new Date().getTime(); try{i[l][w+y](h,i[l][q+y](h)+'&amp;'+dt);}catch(er){i[h]=dt;} } else if(typeof i[c]!=='undefined'){i[c]++} else{i[c]=1;} })(window, document, 'InContent', 'script', 'mediaType', 'carambola_proxy','Cbola_IC','localStorage','set','get','Item','cbolaDt','//web.archive.org/web/20190214224036/http://route.carambo.la/inimage/getlayer?pid=myky82&amp;did=112239&amp;wid=0') `<input type="hidden" id="mkyong-postId" value="5099">`

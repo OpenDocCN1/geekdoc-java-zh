@@ -1,3 +1,4 @@
+
 # 这样做可以使 Java 代码更加简洁
 
 > 原文：<https://medium.com/javarevisited/doing-this-makes-the-java-code-more-concise-72f3d88f1303?source=collection_archive---------4----------------------->

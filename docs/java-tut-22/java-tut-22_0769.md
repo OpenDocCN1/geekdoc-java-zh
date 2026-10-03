@@ -1,3 +1,4 @@
+
 # 何时使用 DOM
 
 > 原文：[`docs.oracle.com/javase/tutorial/jaxp/dom/when.html`](https://docs.oracle.com/javase/tutorial/jaxp/dom/when.html)
@@ -15,7 +16,6 @@
 DOM 中使用的文档模型与 JDOM 或 dom4j 中使用的数据模型之间的主要差异在于：
 
 +   存在于层次结构中的节点类型
-
 +   混合内容的能力
 
 主要是数据层次结构中的“节点”构成的差异主要导致了使用这两种模型进行编程的差异。然而，与其他任何因素相比，混合内容的能力最能解释标准如何定义节点的差异。因此，我们首先来看一下 DOM 的混合内容模型。
@@ -36,10 +36,9 @@ ELEMENT: sentence
    + ELEMENT: bold
      + TEXT: important
    + TEXT: idea.
-
 ```
 
-请注意，sentence 元素包含文本，然后是一个子元素，然后是额外的文本。文本和元素的混合定义了混合内容模型。
+请注意，`sentence`元素包含文本，然后是一个子元素，然后是额外的文本。文本和元素的混合定义了混合内容模型。
 
 ## 节点类型
 
@@ -49,19 +48,16 @@ ELEMENT: sentence
 
 * * *
 
-**注意 -** DOM 节点 API 定义了`nodeValue()`、`nodeType()`和`nodeName()`方法。对于第一个元素节点，`nodeName()`返回`sentence`，而`nodeValue()`返回 null。对于第一个文本节点，`nodeName()`返回`#text`，而`nodeValue()`返回“`This is an`”。重要的一点是，元素的**值**与其**内容**不同。
+**注意** - DOM 节点 API 定义了`nodeValue()`、`nodeType()`和`nodeName()`方法。对于第一个元素节点，`nodeName()`返回`sentence`，而`nodeValue()`返回 null。对于第一个文本节点，`nodeName()`返回`#text`，而`nodeValue()`返回“`This is an`”。重要的一点是，元素的**值**与其**内容**不同。
 
 * * *
 
 在上面的例子中，询问“句子”的“文本”是什么意思？根据您的应用程序，以下任何一种都可能是合理的：
 
 +   这是一个
-
 +   这是一个想法。
-
 +   这是一个重要的想法。
-
-+   这是一个<bold>重要</bold>的想法。
++   这是一个`<bold>重要</bold>`的想法。
 
 ## 一个更简单的模型
 
@@ -79,12 +75,11 @@ ELEMENT: sentence
     </entry>
       ...
 </addressbook>
-
 ```
 
 * * *
 
-**注意 -** 对于像这样非常简单的 XML 数据结构，您还可以使用内置在 Java 平台 1.4 版本中的正则表达式包（`java.util.regex`）。
+**注意** - 对于像这样非常简单的 XML 数据结构，您还可以使用内置在 Java 平台 1.4 版本中的正则表达式包（`java.util.regex`）。
 
 * * *
 
@@ -101,7 +96,6 @@ ELEMENT: sentence
     </entry>
       ...
 </addressbook>
-
 ```
 
 在这里，每个条目都有一些标识性文本，后面跟着其他元素。有了这种结构，程序可以导航到一个条目，调用`text()`来找出它属于谁，并在正确的节点处处理`<email>`子元素。
@@ -117,7 +111,6 @@ ELEMENT: sentence
     The &projectName; <![CDATA[<i>project</i>]]> is
     <?editor: red><bold>important</bold><?editor: normal>.
 </sentence>
-
 ```
 
 这个句子包含一个**实体引用** - 指向在其他地方定义的实体的指针。在这种情况下，实体包含项目的名称。示例还包含一个 CDATA 部分（未解释的数据，类似于 HTML 中的 `<pre>` 数据）以及**处理指令**（`<?...?>`），在这种情况下告诉编辑器在呈现文本时使用的颜色。
@@ -137,7 +130,6 @@ ELEMENT: sentence
        + ELEMENT: bold
           + TEXT: important
        + PI: editor: normal
-
 ```
 
 这个例子描述了 DOM 中可能出现的节点类型。尽管你的应用程序可能大部分时间都能忽略它们，但一个真正健壮的实现需要识别和处理每一个节点。
@@ -151,19 +143,13 @@ ELEMENT: sentence
 为了更加健壮，DOM 应用程序必须做到以下几点：
 
 1.  在搜索元素时：
-
     1.  忽略注释、属性和处理指令。
-
     1.  允许子元素不按预期顺序出现的可能性。
-
     1.  如果不进行验证，则跳过包含可忽略空格的 TEXT 节点。
 
 1.  在提取节点的文本时：
-
     1.  从 CDATA 节点以及文本节点提取文本。
-
     1.  在收集文本时忽略注释、属性和处理指令。
-
     1.  如果遇到实体引用节点或另一个元素节点，则递归（即对所有子节点应用文本提取过程）。
 
 当然，许多应用程序不必担心这些事情，因为它们看到的数据类型将受到严格控制。但如果数据可能来自各种外部来源，那么应用程序可能需要考虑这些可能性。

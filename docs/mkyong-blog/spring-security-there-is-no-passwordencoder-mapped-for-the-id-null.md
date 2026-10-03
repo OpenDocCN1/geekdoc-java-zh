@@ -1,3 +1,4 @@
+
 # spring Security–没有为 id“null”映射的 PasswordEncoder
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-security-there-is-no-passwordencoder-mapped-for-the-id-null/>
@@ -9,8 +10,8 @@
 *   Spring Boot 2.1.2 .版本
 *   发布
 
-```java
- $ curl localhost:8080/books -u user:password
+```
+$ curl localhost:8080/books -u user:password
 
 {
 	"timestamp":"2019-02-22T15:03:49.322+0000",
@@ -18,21 +19,21 @@
 	"error":"Internal Server Error",
 	"message":"There is no PasswordEncoder mapped for the id \"null\"",
 	"path":"/books"
-} 
+}
 ```
 
 日志中的错误
 
-```java
- java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the id "null" 
+```
+java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the id "null"
 ```
 
 下面是配置。
 
-SpringSecurityConfig.java
+`SpringSecurityConfig.java`
 
 ```java
- package com.mkyong.config;
+package com.mkyong.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -51,7 +52,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     }
 
-} 
+}
 ```
 
 ## 解决办法
@@ -62,10 +63,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
 **解决方案 1**–添加密码存储格式，对于纯文本，添加`{noop}`
 
-SpringSecurityConfig.java
+`SpringSecurityConfig.java`
 
 ```java
- package com.mkyong.config;
+package com.mkyong.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -84,15 +85,15 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     }
 
-} 
+}
 ```
 
 **解决方案二**–`UserDetailsService`的`User.withDefaultPasswordEncoder()`
 
-SpringSecurityConfig.java
+`SpringSecurityConfig.java`
 
 ```java
- package com.mkyong.config;
+package com.mkyong.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -115,7 +116,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     }
 
-} 
+}
 ```
 
 ## 参考

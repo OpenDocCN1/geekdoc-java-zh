@@ -1,3 +1,4 @@
+
 # 使用清单属性增强安全性
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/jar/secman.html`](https://docs.oracle.com/javase/tutorial/deployment/jar/secman.html)

@@ -1,31 +1,32 @@
+
 # 如何用正则表达式验证 24 小时格式的时间
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/regular-expressions/how-to-validate-time-in-24-hours-format-with-regular-expression/>
 
-24 小时格式正则表达式模式中的时间
+24 小时格式正则表达式模式中的时间：
 
-```java
- ([01]?[0-9]|2[0-3]):[0-5][0-9] 
+```
+([01]?[0-9]|2[0-3]):[0-5][0-9]
 ```
 
-描述
+描述：
 
-```java
- (				#start of group #1
+```
+(				#start of group #1
  [01]?[0-9]			#  start with 0-9,1-9,00-09,10-19
  |				#  or
  2[0-3]				#  start with 20-23
 )				#end of group #1
  :				#    follow by a semi colon (:)
-  [0-5][0-9]			#      follw by 0..5 and 0..9, which means 00 to 59 
+  [0-5][0-9]			#      follw by 0..5 and 0..9, which means 00 to 59
 ```
 
-24 小时制格式是从 0-23 或 00-23 开始，然后是分号(:)，接着是 00-59。
+24 小时制格式是从 0-23 或 00-23 开始，然后是分号（`:`），接着是 00-59。
 
 ## Java 正则表达式示例
 
 ```java
- package com.mkyong.regex;
+package com.mkyong.regex;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -53,28 +54,28 @@ public class Time24HoursValidator{
 		  return matcher.matches();
 
 	  }
-} 
+}
 ```
 
- ## 匹配的时间格式:
+## 匹配的时间格式
 
-1.“01:00”，“02:00”，“13:00”，
-2。“1:00”，“2:00”，“13:01”，
-3。" 23:59 " 15:00 "
-4 . "00:00″,"0:00"
+1. `01:00`，`02:00`，`13:00`
+2. `1:00`，`2:00`，`13:01`
+3. `23:59`，`15:00`
+4. `00:00`，`0:00`
 
- ## 时间格式不匹配:
+## 时间格式不匹配
 
-1.“24:00”-小时超出范围[0-23]
-2。“12:60”——分钟超出范围[00-59]
-3。“0:0”——分钟格式无效，至少两位数
-4。“13:1”——无效的分钟格式，至少两位数
-5。“101:00”-小时超出范围[0-23]
+1. `24:00`——小时超出范围 [0-23]
+2. `12:60`——分钟超出范围 [00-59]
+3. `0:0`——分钟格式无效，至少两位数
+4. `13:1`——无效的分钟格式，至少两位数
+5. `101:00`——小时超出范围 [0-23]
 
-## 单元测试–时间 24 小时验证测试
+## 单元测试——时间 24 小时验证测试
 
 ```java
- package com.mkyong.regex;
+package com.mkyong.regex;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
@@ -127,13 +128,13 @@ public class Time24HoursValidatorTest {
 	    System.out.println("Time24Hours is valid : " + time + " , " + valid);
 	    Assert.assertEquals(false, valid); 
 	}	
-} 
+}
 ```
 
-## 单元测试–结果
+## 单元测试——结果
 
-```java
- Time24Hours is valid : 01:00 , true
+```
+Time24Hours is valid : 01:00 , true
 Time24Hours is valid : 02:00 , true
 Time24Hours is valid : 13:00 , true
 Time24Hours is valid : 1:00 , true
@@ -172,7 +173,7 @@ PASSED: InValidTime24HoursTest("101:00")
 ===============================================
 mkyong
 Total tests run: 15, Failures: 0, Skips: 0
-=============================================== 
+===============================================
 ```
 
 ## 参考
@@ -188,10 +189,3 @@ Total tests run: 15, Failures: 0, Skips: 0
 </center>
 
 [regex](http://web.archive.org/web/20190311020049/http://www.mkyong.com/tag/regex/) [timestamp](http://web.archive.org/web/20190311020049/http://www.mkyong.com/tag/timestamp/)
-
-
-
-
-
-
-

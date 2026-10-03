@@ -1,3 +1,4 @@
+
 # Spring Boot 让缓存变得简单
 
 > 原文：<https://medium.com/javarevisited/caching-made-easy-in-spring-boot-27d1a545905c?source=collection_archive---------1----------------------->
@@ -18,25 +19,25 @@
 
 我们的计划是，每当我们试图从数据库中读取时，首先检查缓存。如果在缓存中找到，就从缓存中读取，而不是访问数据库。如果没有找到，那么从数据库中读取并填充缓存。
 
-现在让我们看看**的 KeyValuePairServiceImpl** 可能是什么样子:
+现在让我们看看`KeyValuePairServiceImpl`可能是什么样子:
 
-在这个方法 **checkInCache** 中，我们首先在 redis 中查找这个键，如果没有找到，那么从 db 中读取并用这个方法 **getFromDb** 更新缓存。
+在这个方法`checkInCache`中，我们首先在 redis 中查找这个键，如果没有找到，那么从 db 中读取并用这个方法`getFromDb`更新缓存。
 
-在**保存**方法中，我们保存在数据库中，同时更新缓存。
+在`save`方法中，我们保存在数据库中，同时更新缓存。
 
 是的，我明白了，与 redis 相关的逻辑可以被分离到不同的服务或存储库中，这可能会使这个文件看起来不那么难看。但你还是要在某个地方处理这件事，对吗？
 
-嗯，实际上你不必！关于 spring 的事情是，它有如此多的常见用例，以至于在你了解它之后，你会觉得它是如此的明显，以至于你开始觉得有点愚蠢。至少当我第一次在 Spring 中发现**缓存抽象的时候，我是这样认为的。**
+嗯，实际上你不必！关于 spring 的事情是，它有如此多的常见用例，以至于在你了解它之后，你会觉得它是如此的明显，以至于你开始觉得有点愚蠢。至少当我第一次在 Spring 中发现缓存抽象的时候，我是这样认为的。
 
 相信我，非常简单直观。
 
-让我们重写**KeyValuePairServiceImpl**，这样就不用担心缓存什么的了。只有方法和存储库。
+让我们重写`KeyValuePairServiceImpl`，这样就不用担心缓存什么的了。只有方法和存储库。
 
 看到了吗？我们完全去除了与 redis 的交互，而不仅仅是重构。完全移除。这里的每一个方法应用程序都将直接与数据库交互。
 
-现在，如果我们想让 **findByKey** 方法可缓存，我们只需要在它上面添加一个注释。这是什么？……有什么猜测吗？？
+现在，如果我们想让`findByKey`方法可缓存，我们只需要在它上面添加一个注释。这是什么？……有什么猜测吗？？
 
-是的，字面意思是 **@Cachable** ，里面有一些参数。
+是的，字面意思是`@Cachable`，里面有一些参数。
 
 ```
 @Override
@@ -48,15 +49,17 @@ public KeyValuePair findByKey(String key) {
 }
 ```
 
-在这里， **myAwesomeCache** 只是一个任意的名字，不强制但建议使用。因为多个应用程序使用同一个 redis 实例是很正常的。可能会出现这样的情况，多个应用程序用同一个键缓存某些东西！该值参数有助于防止这种情况。
+在这里，`myAwesomeCache`只是一个任意的名字，不强制但建议使用。因为多个应用程序使用同一个 redis 实例是很正常的。可能会出现这样的情况，多个应用程序用同一个键缓存某些东西！该值参数有助于防止这种情况。
 
-**#key** 这里很重要。它将对应于我们希望在缓存期间用作键的带注释的方法参数。如果方法看起来像这样:
+`#key`这里很重要。它将对应于我们希望在缓存期间用作键的带注释的方法参数。如果方法看起来像这样:
 
-公钥值对 findByKey(字符串 myKey)
+```
+public KeyValuePair findByKey(String myKey)
+```
 
-@Cacheble 批注的 key 参数的值需要是 **#myKey** 。
+`@Cacheble`批注的 key 参数的值需要是`#myKey`。
 
-还剩下一点点配置。在您的应用程序的 RedisConfig 中，您必须添加另一个名为**RedisCacheConfiguration**的 **Bean** 。这里是我的 Redis 配置看起来像:
+还剩下一点点配置。在您的应用程序的 RedisConfig 中，您必须添加另一个名为`RedisCacheConfiguration`的`Bean`。这里是我的 Redis 配置看起来像:
 
 让我们看一些行动。为了测试，我很快添加了一个与服务交互的控制器类。使用它，我们将输入一些数据并尝试检索它。
 
@@ -96,7 +99,7 @@ Hibernate: select keyvaluepa0_.id as id1_0_, keyvaluepa0_.key as key2_0_, keyval
 127.0.0.1:6379> KEYS *;127.0.0.1:6379> 1) "myAwesomeCache::greetings"
 ```
 
-好的，Redis 中有一个条目，关键字是**问候语**。这意味着在查询数据库之前，应用程序会查看缓存并做出响应。现在，如果您从 redis 中删除，它将再次从数据库中提取。
+好的，Redis 中有一个条目，关键字是`greetings`。这意味着在查询数据库之前，应用程序会查看缓存并做出响应。现在，如果您从 redis 中删除，它将再次从数据库中提取。
 
 现在，假设您必须更新问候语。你可以很容易地用控制器做到这一点，它将更新数据库。但是旧值仍将在缓存中。为了解决这个问题，我们需要像这样注释 save 方法:
 
@@ -107,9 +110,9 @@ public void save(KeyValuePair keyValuePair) {
     keyValuePairRepository.save(keyValuePair);}
 ```
 
-它要做的是，在保存到[数据库](/javarevisited/7-free-courses-to-learn-database-and-sql-for-programmers-and-data-scientist-e7ae19514ed2)之前，它将从 redis 中删除与 out 参数 keyValuePair 的 key 属性具有相同键的条目。因此，下次检索时，新值将被填充到缓存中。
+它要做的是，在保存到[数据库](/javarevisited/7-free-courses-to-learn-database-and-sql-for-programmers-and-data-scientist-e7ae19514ed2)之前，它将从 redis 中删除与 out 参数`keyValuePair`的 key 属性具有相同键的条目。因此，下次检索时，新值将被填充到缓存中。
 
-可能会出现这样一种情况，您不想缓存所有内容。例如，在这种情况下，我们可以使用 KeyValuePair 来存储许多东西，并且只想缓存包含满足所需条件的键的对象。比如以“frequent _”字符串开头。这是很有可能的:
+可能会出现这样一种情况，您不想缓存所有内容。例如，在这种情况下，我们可以使用`KeyValuePair`来存储许多东西，并且只想缓存包含满足所需条件的键的对象。比如以`frequent_`字符串开头。这是很有可能的:
 
 ```
 @Cacheable(value="myAwesomeCache",key="#key", condition = "#key.startsWith('frequent_')")

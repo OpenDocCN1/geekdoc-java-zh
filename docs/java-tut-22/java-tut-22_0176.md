@@ -1,3 +1,4 @@
+
 # 什么是路径？（以及其他文件系统事实）
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/io/path.html`](https://docs.oracle.com/javase/tutorial/essential/io/path.html)
@@ -6,11 +7,9 @@
 
 本节涵盖以下内容：
 
-+   什么是路径？
-
-+   相对还是绝对？
-
-+   符号链接
++ 什么是路径？
++ 相对还是绝对？
++ 符号链接
 
 ## 什么是路径？
 
@@ -22,14 +21,12 @@
 
 ```java
 /home/sally/statusReport
-
 ```
 
 在 Microsoft Windows 中，`statusReport`由以下表示：
 
 ```java
 C:\home\sally\statusReport
-
 ```
 
 用于分隔目录名称的字符（也称为*分隔符*）特定于文件系统：Solaris OS 使用正斜杠（`/`），而 Microsoft Windows 使用反斜杠（`\`）。

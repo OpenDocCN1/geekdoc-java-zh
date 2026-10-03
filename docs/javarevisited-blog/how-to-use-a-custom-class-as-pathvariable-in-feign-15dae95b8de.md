@@ -1,8 +1,9 @@
-# 如何在 Feign 中将自定义类用作@PathVariable👨‍🏫
+
+# 如何在 Feign 中将自定义类用作`@PathVariable`👨‍🏫
 
 > 原文：<https://medium.com/javarevisited/how-to-use-a-custom-class-as-pathvariable-in-feign-15dae95b8de?source=collection_archive---------3----------------------->
 
-## 在本文中，您将了解我们如何使用两个佯概念来适应外部 API: @PathVariable 和 RequestInterceptor。
+## 在本文中，您将了解我们如何使用两个佯概念来适应外部 API：`@PathVariable` 和 `RequestInterceptor`。
 
 ![](img/bd04e7d123686a687108ac52113eb014.png)
 

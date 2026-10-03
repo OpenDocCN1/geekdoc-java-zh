@@ -1,10 +1,13 @@
-# java string . codepointat()
+
+# Java String.codePointAt()
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/string/code-point-at>
 
-[This article is part of a series:](javascript:void(0);)[• Java String.String()](/web/20220829143229/https://www.baeldung.com/string/constructor)
+[This article is part of a series:](javascript:void(0);)
+[• Java String.String()](/web/20220829143229/https://www.baeldung.com/string/constructor)
 [• Java String.codePointCount()](/web/20220829143229/https://www.baeldung.com/string/code-point-count)
-• Java String.codePointAt() (current article)[• Java String.concat()](/web/20220829143229/https://www.baeldung.com/string/concat)
+• Java String.codePointAt() (current article)
+[• Java String.concat()](/web/20220829143229/https://www.baeldung.com/string/concat)
 [• Java String.contains()](/web/20220829143229/https://www.baeldung.com/string/contains)
 [• Java String.copyValueOf()](/web/20220829143229/https://www.baeldung.com/string/copy-value-of)
 [• Java String.endsWith()](/web/20220829143229/https://www.baeldung.com/string/ends-with)
@@ -45,7 +48,7 @@ public void whenCallCodePointAt_thenDecimalUnicodeReturned() {
 
 ### 投掷
 
-*   `StringIndexOutOfBoundsException`–如果向方法传递了不存在的索引。
+*   `StringIndexOutOfBoundsException` – 如果向方法传递了不存在的索引。
 
 ```java
 @Test(expected = StringIndexOutOfBoundsException.class)

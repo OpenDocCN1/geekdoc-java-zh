@@ -1,3 +1,4 @@
+
 # 面向 Java 开发人员的 5 大春季专业认证考试资源
 
 > 原文：<https://medium.com/javarevisited/top-5-spring-professional-certification-exam-resources-for-java-developers-3ef9fa42fe13?source=collection_archive---------0----------------------->
@@ -14,7 +15,7 @@
 
 它允许程序员按照自己的节奏准备，而且也不是很贵。你所需要的只是一本[学习指南](http://javarevisited.blogspot.sg/2017/06/2-books-to-prepare-for-spring-certification-exam.html#axzz4jK9IIH4S)和一个[春季模拟考试模拟器](https://www.certification-questions.com/practice-exam/spring/professional?affiliateCode=fcff36fd-557a-4713-abf6-973e9924770f&utm_source=Javin&utm_medium=affiliate&utm_campaign=affiliate)。
 
-<https://www.certification-questions.com/practice-exam/spring/professional?affiliateCode=fcff36fd-557a-4713-abf6-973e9924770f&utm_source=Javin&utm_medium=affiliate&utm_campaign=affiliate>  
+<https://www.certification-questions.com/practice-exam/spring/professional?affiliateCode=fcff36fd-557a-4713-abf6-973e9924770f&utm_source=Javin&utm_medium=affiliate&utm_campaign=affiliate>
 
 即使你可以使用 [Spring 框架书籍](http://javarevisited.blogspot.sg/2013/03/5-good-books-to-learn-spring-framework-mvc-java-programmer.html)来准备认证，学习指南也是非常必要的。学习指南比一般的书籍有很多好处，比如它们专注于认证考试。它们完全涵盖所有主题，并有针对主题的评估问题。从考试的角度来看，他们在突出关键概念方面也做得很好。如果你想在[春季认证](https://javarevisited.blogspot.com/2018/08/how-to-crack-spring-core-professional-certification-exam-java-latest.html#axzz5j90KOik7)上取得好成绩，你必须为你的准备选择一个学习指南和一门课程，你会在这篇文章中找到大量优秀的资源。
 
@@ -93,27 +94,29 @@
 
 [![](img/1f0560b7f287d1435137eb44285c892d.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fspring-framework-5-beginner-to-guru%2F)
 
+
+
 以上是准备春季认证的一些最佳资源。我们已经查看了一些关于 Spring core、Spring web developer 考试和 Spring Enterprise Integration Specialist 考试的最佳学习指南。
 
 我还分享了几本[书来学习 Spring 框架](http://www.java67.com/2016/12/5-spring-framework-books-for-java-programmers.html)，然后阅读学习指南来关注考试主题。与传统出版物相比，学习指南提供了几个好处，比如它们涵盖了所有考试主题，还提供了针对主题的测验和选择题，以便更好地准备，但 Udemy 上的课程也很棒，你可以将它们与学习指南和书籍结合使用，以便更好地准备。
 
 > 我还创建了一个 [**春季认证模拟考试**](https://www.udemy.com/course/spring-professional-practice-test-questions-vmware-edu-certification/?referralCode=7419B0A2C8AB79F0520E) ，有 250 多个来自所有考试主题的问题，您可以在 Udemy 上购买。
 
-面向 Java 开发人员的其他 **Spring 认证资源**
+## 面向 Java 开发人员的其他 Spring 认证资源
 
-*   [Spring 框架大师班——初学者到专家](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fspring-tutorial-for-beginners%2F)
-*   [第一次尝试如何破解 Spring 认证](https://javarevisited.blogspot.com/2018/08/how-to-crack-spring-core-professional-certification-exam-java-latest.html#axzz5j90KOik7)
-*   [Java & Moie 的 Core Spring 4.2 认证考试 PDF](http://javaetmoi.com/wp-content/uploads/2016/01/spring-certification-4_2-mock-exam-antoine.pdf)
-*   [Java SE 11 认证书籍和课程](https://javarevisited.blogspot.com/2019/10/top-5-books-courses-to-crack-oracles-java-se-11-certification-OCAJP11.html)
-*   [Spring 认证的好处和优势](https://javarevisited.blogspot.com/2017/07/does-spring-certification-help-in-job-and-career.html)
-*   [深入了解 Spring Boot 的五大课程](https://hackernoon.com/top-5-online-courses-to-learn-spring-boot-in-2019-c2fd7a0282c2)
-*   [春季认证书和 PDF](http://javarevisited.blogspot.sg/2017/06/2-books-to-prepare-for-spring-certification-exam.html)
-*   [从零开始学习春云的 5 大课程](https://javarevisited.blogspot.com/2018/04/top-5-spring-cloud-courses-for-java.html#axzz5eGLL7VBt)
-*   [使用 Spring 学习 RESTful Web 服务的五大课程](https://javarevisited.blogspot.com/2018/02/top-5-restful-web-services-with-spring-courses-for-experienced-java-programmers.html)
-*   [学习 Spring 微服务的 5 大课程](https://javarevisited.blogspot.com/2018/02/top-5-spring-microservices-courses-with-spring-boot-and-spring-cloud.html)
+* [Spring 框架大师班——初学者到专家](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fspring-tutorial-for-beginners%2F)
+* [第一次尝试如何破解 Spring 认证](https://javarevisited.blogspot.com/2018/08/how-to-crack-spring-core-professional-certification-exam-java-latest.html#axzz5j90KOik7)
+* [Java & Moie 的 Core Spring 4.2 认证考试 PDF](http://javaetmoi.com/wp-content/uploads/2016/01/spring-certification-4_2-mock-exam-antoine.pdf)
+* [Java SE 11 认证书籍和课程](https://javarevisited.blogspot.com/2019/10/top-5-books-courses-to-crack-oracles-java-se-11-certification-OCAJP11.html)
+* [Spring 认证的好处和优势](https://javarevisited.blogspot.com/2017/07/does-spring-certification-help-in-job-and-career.html)
+* [深入了解 Spring Boot 的五大课程](https://hackernoon.com/top-5-online-courses-to-learn-spring-boot-in-2019-c2fd7a0282c2)
+* [春季认证书和 PDF](http://javarevisited.blogspot.sg/2017/06/2-books-to-prepare-for-spring-certification-exam.html)
+* [从零开始学习春云的 5 大课程](https://javarevisited.blogspot.com/2018/04/top-5-spring-cloud-courses-for-java.html#axzz5eGLL7VBt)
+* [使用 Spring 学习 RESTful Web 服务的五大课程](https://javarevisited.blogspot.com/2018/02/top-5-restful-web-services-with-spring-courses-for-experienced-java-programmers.html)
+* [学习 Spring 微服务的 5 大课程](https://javarevisited.blogspot.com/2018/02/top-5-spring-microservices-courses-with-spring-boot-and-spring-cloud.html)
 
 感谢你阅读这篇文章，如果你觉得这些资源有用，请与你的朋友和同事分享。如果您有任何其他有助于准备春季认证的资源，请随时与我们分享。
 
 **P.S.** —如果你是一名经验丰富的 Java 开发人员，并且使用 Spring 框架 3 到 5 年，并且希望获得技能认证，我建议你去参加[大卫·梅耶尔的**在线 Spring 模拟测试**](https://www.certification-questions.com/practice-exam/spring/professional?affiliateCode=fcff36fd-557a-4713-abf6-973e9924770f&utm_source=Javin&utm_medium=affiliate&utm_campaign=affiliate)**；这是一个免费的测试。如果你能考到 80%以上，那么你就准备好真正的考试了。**
 
-<https://www.certification-questions.com/practice-exam/spring/professional?affiliateCode=fcff36fd-557a-4713-abf6-973e9924770f&utm_source=Javin&utm_medium=affiliate&utm_campaign=affiliate> 
+<https://www.certification-questions.com/practice-exam/spring/professional?affiliateCode=fcff36fd-557a-4713-abf6-973e9924770f&utm_source=Javin&utm_medium=affiliate&utm_campaign=affiliate>

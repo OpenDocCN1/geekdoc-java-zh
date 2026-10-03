@@ -1,3 +1,4 @@
+
 # 如何通过 Oracle 云基础架构基础 2020 助理(1z 0–1085–20)考试—第 3 部分
 
 > 原文：<https://medium.com/javarevisited/how-to-pass-the-oracle-cloud-infrastructure-foundations-2020-associate-1z0-1085-20-exam-part-3-f625ca183d57?source=collection_archive---------1----------------------->

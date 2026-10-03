@@ -1,53 +1,54 @@
-# jQuery empty()和 remove()示例
+
+# jQuery `empty()`和`remove()`示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jquery/jquery-empty-and-remove-example/>
 
-jQuery **empty()** 和 **remove()** 都是用来移除匹配的元素，只是前者是用来移除匹配元素的子元素；而后者用于完全移除所有匹配的元素。
+jQuery `empty()`和`remove()`都是用来移除匹配的元素，只是前者是用来移除匹配元素的子元素；而后者用于完全移除所有匹配的元素。
 
 ## 例子
 
-2 个 div 标签–“BBox”是“ABox”的子元素。
+2 个 `div`标签–“BBox”是“ABox”的子元素。
 
-```java
- <div class="ABox">
+```
+<div class="ABox">
 	I'm a A box
 	<div class="BBox">I'm a B box</div>
-</div> 
+</div>
 ```
 
-## 1.空()
+## 1.`empty()`
 
-empty()将只移除“ABox”内容和“BBox”子元素。
+`empty()`将只移除“ABox”内容和“BBox”子元素。
 
-```java
- $('.ABox').empty(); 
 ```
-
-新的结果将是:
-
-```java
- <div class="ABox">
-</div> 
-```
-
-## 2.移除()
-
-remove()将完全删除所有“ABox”和“BBox”元素。
-
-```java
- $('.ABox').remove(); 
+$('.ABox').empty();
 ```
 
 新的结果将是:
 
-```java
- //nothing left 
+```
+<div class="ABox">
+</div>
+```
+
+## 2.`remove()`
+
+`remove()`将完全删除所有“ABox”和“BBox”元素。
+
+```
+$('.ABox').remove();
+```
+
+新的结果将是:
+
+```
+//nothing left
 ```
 
 ## 你自己试试
 
-```java
- <html>
+```
+<html>
 <head>
 <script type="text/javascript" src="jquery-1.3.2.min.js"></script>
 
@@ -97,7 +98,7 @@ remove()将完全删除所有“ABox”和“BBox”元素。
 
 </script>
 </body>
-</html> 
+</html>
 ```
 
 [http://web.archive.org/web/20220826132007if_/https://www.mkyong.com/wp-content/uploads/jQuery/jQuery-empty-remove-example.html](http://web.archive.org/web/20220826132007if_/https://www.mkyong.com/wp-content/uploads/jQuery/jQuery-empty-remove-example.html)

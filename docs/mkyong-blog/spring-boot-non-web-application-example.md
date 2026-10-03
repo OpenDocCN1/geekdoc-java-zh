@@ -1,11 +1,12 @@
+
 # Spring Boot 非 web 应用示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-boot-non-web-application-example/>
 
-在 Spring Boot，要创建一个非 web 应用程序，实现`CommandLineRunner`并覆盖`run`方法，例如:
+在 Spring Boot，要创建一个非 web 应用程序，实现`CommandLineRunner`并覆盖`run`方法，例如：
 
 ```java
- import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.CommandLineRunner;
 
 @SpringBootApplication
 public class SpringBootConsoleApplication implements CommandLineRunner {
@@ -23,25 +24,23 @@ public class SpringBootConsoleApplication implements CommandLineRunner {
         //do something
 
     }
-} 
+}
 ```
 
-## 1.项目结构
+## 1. 项目结构
 
 一个标准的 Maven 项目结构。
 
-
-
 ![](img/ee72de96853bfa78f7d1cf3e5732dfdc.png)
 
-## 2.项目依赖性
+## 2. 项目依赖性
 
 仅`spring-boot-starter`
 
-pom.xml
+`pom.xml`
 
-```java
- <project 
+```xml
+<project 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
   http://maven.apache.org/maven-v4_0_0.xsd">
@@ -81,17 +80,17 @@ pom.xml
         </plugins>
     </build>
 
-</project> 
+</project>
 ```
 
-## 3.春天
+## 3. 代码示例
 
-3.1 返回消息的服务。
+### 3.1 返回消息的服务
 
-HelloMessageService.java
+`HelloMessageService.java`
 
 ```java
- package com.mkyong.service;
+package com.mkyong.service;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -110,21 +109,23 @@ public class HelloMessageService {
         return "Hello " + name;
     }
 
-} 
+}
 ```
 
-application.properties
+`application.properties`
 
-```java
- name=mkyong 
+```properties
+name=mkyong
 ```
 
-3.2 `CommandLineRunner`示例。如果您运行这个 Spring Boot，那么`run`方法将是入口点。
+### 3.2 `CommandLineRunner`示例
 
-SpringBootConsoleApplication.java
+如果您运行这个 Spring Boot，那么`run`方法将是入口点。
+
+`SpringBootConsoleApplication.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.mkyong.service.HelloMessageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -150,7 +151,7 @@ public class SpringBootConsoleApplication implements CommandLineRunner {
 
     }
 
-	// Put your logic here.
+    // Put your logic here.
     @Override
     public void run(String... args) throws Exception {
 
@@ -162,15 +163,15 @@ public class SpringBootConsoleApplication implements CommandLineRunner {
 
         exit(0);
     }
-} 
+}
 ```
 
-## 4.演示
+## 4. 演示
 
 打包并运行它。
 
-```java
- ## Go to project directory
+```bash
+## Go to project directory
 ## package it
 $ mvn package
 
@@ -178,7 +179,7 @@ $ java -jar target/spring-boot-simple-1.0.jar
 Hello mkyong
 
 $ java -jar target/spring-boot-simple-1.0.jar "donald trump"
-Hello donald trump 
+Hello donald trump
 ```
 
 ## 下载源代码
@@ -187,20 +188,19 @@ Download – [spring-boot-non-web-example.zip](http://web.archive.org/web/202012
 
 ## 参考
 
-1.  [命令行运行程序 JavaDoc](http://web.archive.org/web/20201209120906/http://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/CommandLineRunner.html)
+1. [命令行运行程序 JavaDoc](http://web.archive.org/web/20201209120906/http://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/CommandLineRunner.html)
 
-Tags : [CommandLineRunner](http://web.archive.org/web/20201209120906/https://mkyong.com/tag/commandlinerunner/) [executable jar](http://web.archive.org/web/20201209120906/https://mkyong.com/tag/executable-jar/) [jar](http://web.archive.org/web/20201209120906/https://mkyong.com/tag/jar/) [spring boot](http://web.archive.org/web/20201209120906/https://mkyong.com/tag/spring-boot/)<input type="hidden" id="mkyong-current-postId" value="14437">
+Tags : [CommandLineRunner](http://web.archive.org/web/20201209120906/https://mkyong.com/tag/commandlinerunner/) [executable jar](http://web.archive.org/web/20201209120906/https://mkyong.com/tag/executable-jar/) [jar](http://web.archive.org/web/20201209120906/https://mkyong.com/tag/jar/) [spring boot](http://web.archive.org/web/20201209120906/https://mkyong.com/tag/spring-boot/)
 
 ### 相关文章
 
-*   [Spring Boot——开始哪个主班](/web/20201209120906/https://mkyong.com/spring-boot/spring-boot-which-main-class-to-start/)
-*   [Maven -如何创建一个 Java 项目](/web/20201209120906/https://mkyong.com/maven/how-to-create-a-java-project-with-maven/)
-*   [Spring Boot -应用程序启动时运行代码](/web/20201209120906/https://mkyong.com/spring-boot/spring-boot-run-code-when-the-application-starts/)
-*   [如何制作 Java exe 文件或可执行 JAR 文件](/web/20201209120906/https://mkyong.com/java/how-to-make-an-executable-jar-file/)
-*   [如何将清单添加到 Jar 文件中](/web/20201209120906/https://mkyong.com/java/how-to-add-your-manifest-into-a-jar-file/)
-
-*   [Java 归档工具(JAR)示例](/web/20201209120906/https://mkyong.com/java/the-java-archive-tool-jar-examples/)
-*   [Java -从资源文件夹中读取文件](/web/20201209120906/https://mkyong.com/java/java-read-a-file-from-resources-folder/)
-*   [如何用 Maven 创建 jar 文件](/web/20201209120906/https://mkyong.com/maven/how-to-create-a-jar-file-with-maven/)
-*   [Gradle -创建一个具有依赖关系的 Jar 文件](/web/20201209120906/https://mkyong.com/gradle/gradle-create-a-jar-file-with-dependencies/)
-*   [Spring Boot Hello World 示例- JSP](/web/20201209120906/https://mkyong.com/spring-boot/spring-boot-hello-world-example-jsp/)
+* [Spring Boot——开始哪个主班](/web/20201209120906/https://mkyong.com/spring-boot/spring-boot-which-main-class-to-start/)
+* [Maven -如何创建一个 Java 项目](/web/20201209120906/https://mkyong.com/maven/how-to-create-a-java-project-with-maven/)
+* [Spring Boot -应用程序启动时运行代码](/web/20201209120906/https://mkyong.com/spring-boot/spring-boot-run-code-when-the-application-starts/)
+* [如何制作 Java exe 文件或可执行 JAR 文件](/web/20201209120906/https://mkyong.com/java/how-to-make-an-executable-jar-file/)
+* [如何将清单添加到 Jar 文件中](/web/20201209120906/https://mkyong.com/java/how-to-add-your-manifest-into-a-jar-file/)
+* [Java 归档工具(JAR)示例](/web/20201209120906/https://mkyong.com/java/the-java-archive-tool-jar-examples/)
+* [Java -从资源文件夹中读取文件](/web/20201209120906/https://mkyong.com/java/java-read-a-file-from-resources-folder/)
+* [如何用 Maven 创建 jar 文件](/web/20201209120906/https://mkyong.com/maven/how-to-create-a-jar-file-with-maven/)
+* [Gradle -创建一个具有依赖关系的 Jar 文件](/web/20201209120906/https://mkyong.com/gradle/gradle-create-a-jar-file-with-dependencies/)
+* [Spring Boot Hello World 示例- JSP](/web/20201209120906/https://mkyong.com/spring-boot/spring-boot-hello-world-example-jsp/)

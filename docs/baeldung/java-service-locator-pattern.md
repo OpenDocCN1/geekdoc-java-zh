@@ -1,36 +1,33 @@
+
 # 服务定位器模式和 Java 实现
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-service-locator-pattern>
 
-## 1。简介
+## 1. 简介
 
-在本教程中，我们将学习 Java 中的**服务定位器设计模式。**
+在本教程中，我们将学习 Java 中的**服务定位器设计模式**。
 
 我们将描述这个概念，实现一个例子，并强调其使用的利与弊。
 
-## 2。理解模式
+## 2. 理解模式
 
 服务定位器模式的目的是按需返回服务实例。这有助于将服务消费者从具体的类中分离出来。
 
-实施将由以下组件组成:
+实施将由以下组件组成：
 
-*   客户端——客户端对象是服务消费者。它负责从服务定位器调用请求
-
-*   服务定位器——是从缓存返回服务的通信入口点
-
-*   缓存——存储服务引用以便以后重用的对象
-
-*   初始化器——在缓存中创建和注册对服务的引用
-
-*   服务——服务组件代表原始服务或它们的实现
+- **客户端**——客户端对象是服务消费者。它负责从服务定位器调用请求
+- **服务定位器**——是从缓存返回服务的通信入口点
+- **缓存**——存储服务引用以便以后重用的对象
+- **初始化器**——在缓存中创建和注册对服务的引用
+- **服务**——服务组件代表原始服务或它们的实现
 
 定位器查找原始服务对象，并根据需要返回。
 
-## 3。实施
+## 3. 实施
 
 现在，让我们从实际出发，通过一个例子来看看这些概念。
 
-首先，我们将创建一个用不同方式发送消息的`MessagingService`接口:
+首先，我们将创建一个用不同方式发送消息的`MessagingService`接口：
 
 ```java
 public interface MessagingService {
@@ -40,7 +37,7 @@ public interface MessagingService {
 }
 ```
 
-接下来，我们将定义上述接口的两个实现，它们通过电子邮件和 SMS 发送消息:
+接下来，我们将定义上述接口的两个实现，它们通过电子邮件和 SMS 发送消息：
 
 ```java
 public class EmailService implements MessagingService {
@@ -57,7 +54,7 @@ public class EmailService implements MessagingService {
 
 `SMSService`类的定义类似于`EmailService`类。
 
-在定义了这两个服务之后，我们必须定义初始化它们的逻辑:
+在定义了这两个服务之后，我们必须定义初始化它们的逻辑：
 
 ```java
 public class InitialContext {
@@ -74,7 +71,7 @@ public class InitialContext {
 
 在组装服务定位器对象之前，我们需要的最后一个组件是缓存。
 
-在我们的例子中，这是一个具有`List`属性的简单类:
+在我们的例子中，这是一个具有`List`属性的简单类：
 
 ```java
 public class Cache {
@@ -87,10 +84,10 @@ public class Cache {
     public void addService(MessagingService newService) {
         // add to the list
     }
-} 
+}
 ```
 
-最后，我们可以实现我们的服务定位器类:
+最后，我们可以实现我们的服务定位器类：
 
 ```java
 public class ServiceLocator {
@@ -116,13 +113,13 @@ public class ServiceLocator {
 
 这里的逻辑相当简单。
 
-该类保存了一个`Cache.`的实例，然后在`getService()`方法中，它将首先检查服务实例的缓存。
+该类保存了一个`Cache`的实例。然后在`getService()`方法中，它将首先检查服务实例的缓存。
 
-然后，如果那是`null,`，它将调用初始化逻辑，并将新对象添加到缓存中。
+然后，如果那是`null`，它将调用初始化逻辑，并将新对象添加到缓存中。
 
-## 4。测试
+## 4. 测试
 
-现在让我们看看如何获得实例:
+现在让我们看看如何获得实例：
 
 ```java
 MessagingService service 
@@ -138,9 +135,9 @@ MessagingService emailService
 String newEmail = emailService.getMessageBody();
 ```
 
-**我们第一次从`ServiceLocator`获取`EmailService`时，一个新的实例被创建并返回**。然后，在下一次调用它之后,`EmailService`将从缓存中返回。
+**我们第一次从`ServiceLocator`获取`EmailService`时，一个新的实例被创建并返回**。然后，在下一次调用它之后，`EmailService`将从缓存中返回。
 
-## 5。服务定位器 vs 依赖注入
+## 5. 服务定位器 vs 依赖注入
 
 乍一看，服务定位器模式可能看起来类似于另一个众所周知的模式——即依赖注入。
 
@@ -160,7 +157,7 @@ String newEmail = emailService.getMessageBody();
 
 尽管如此，服务定位器模式易于编码和理解，是小型应用程序的最佳选择。
 
-## 6。结论
+## 6. 结论
 
 本指南展示了如何以及为什么使用服务定位器设计模式。它讨论了服务定位器设计模式和依赖注入概念之间的主要区别。
 

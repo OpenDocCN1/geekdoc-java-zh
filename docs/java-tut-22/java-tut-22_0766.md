@@ -1,4 +1,5 @@
-# 使用 DTDHandler 和 EntityResolver
+
+# 使用 `DTDHandler` 和 `EntityResolver`
 
 > 原文：[`docs.oracle.com/javase/tutorial/jaxp/sax/using.html`](https://docs.oracle.com/javase/tutorial/jaxp/sax/using.html)
 
@@ -20,25 +21,20 @@
 
 +   `notationDecl(String name, String publicId, String systemId)`
 
-+   `unparsedEntityDecl(String name, String publicId, String systemId, String notationName`
++   `unparsedEntityDecl(String name, String publicId, String systemId, String notationName)`
 
 `notationDecl`方法传递符号的名称和公共或系统标识符，或两者，取决于 DTD 中声明了哪个。`unparsedEntityDecl`方法传递实体的名称、适当的标识符和它使用的符号的名称。
 
-* * *
-
 **注意 -** `DTDHandler`接口由`DefaultHandler`类实现。
-
-* * *
 
 符号也可以用于属性声明。例如，以下声明需要 GIF 和 PNG 图像文件格式的符号。
 
 ```java
 <!ENTITY image EMPTY>
 <!ATTLIST image ...  type  NOTATION  (gif | png) "gif">
-
 ```
 
-在这里，类型声明为 gif 或 png。如果没有指定，则默认为 gif。
+在这里，类型声明为`gif`或`png`。如果没有指定，则默认为`gif`。
 
 无论符号引用用于描述未解析的实体还是属性，都由应用程序进行适当处理。解析器对符号的语义一无所知。它只传递声明。
 

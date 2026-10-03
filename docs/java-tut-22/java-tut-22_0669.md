@@ -1,3 +1,4 @@
+
 # Swing 组件中的打印支持
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/printing/swing.html`](https://docs.oracle.com/javase/tutorial/2d/printing/swing.html)

@@ -1,3 +1,4 @@
+
 # 我在 Udemy 上的 Java SE 8 程序员 II——OCPJP[1z 0–809]模拟测试现已上线！！
 
 > 原文：<https://medium.com/javarevisited/my-java-se-8-programmer-ii-ocpjp-1z0-809-practice-test-on-udemy-is-live-now-15744a016258?source=collection_archive---------3----------------------->
@@ -8,7 +9,7 @@
 
 朋友们好，
 
-我很兴奋地宣布，我的 [**新课程 OCP 1z 0–809 模拟考试**](https://www.udemy.com/course/new-java-se8-programmer-certification-ocpjp-1z0-809-exam-practice-test/?couponCode=LAUNCH) 现在可以在 Udemy 上使用了。
+我很兴奋地宣布，我的[新课程 OCP 1z 0–809 模拟考试](https://www.udemy.com/course/new-java-se8-programmer-certification-ocpjp-1z0-809-exam-practice-test/?couponCode=LAUNCH)现在可以在 Udemy 上使用了。
 
 当我去年第一次启动我的[Java SE 11 1z 0–819 证书考试](https://www.udemy.com/course/java-se-11-certification-exam-1z0-819-practice-tests/?couponCode=BLACKFRIDAY)时，你们中的很多人问我关于 OCAJP 8 和 OCPJP 8 的问题，我认为这是一个好主意，因为这两个证书仍然有效，并且可能是现在成为认证 Java 开发人员最容易的证书。
 
@@ -18,13 +19,13 @@ OCAJP 8 模拟测试仍在进行中，但我希望很快发布，然后我将开
 
 以下是您将在本课程中获得的内容:
 
-1.  5 次全程模拟考试
-2.  350 多个带解释的问题
-3.  与考试主题保持一致
-4.  讲师 QnA
-5.  终身访问，包括移动设备和桌面设备
+1. 5 次全程模拟考试
+2. 350 多个带解释的问题
+3. 与考试主题保持一致
+4. 讲师 QnA
+5. 终身访问，包括移动设备和桌面设备
 
-鉴于其课程发布和节日期间，这里有 [**您的独家 9.9 美元优惠券**](https://www.udemy.com/course/new-java-se8-programmer-certification-ocpjp-1z0-809-exam-practice-test/?couponCode=LAUNCH) 以最低价格在 Udemy 上获取我的课程。
+鉴于其课程发布和节日期间，这里有[您的独家 9.9 美元优惠券](https://www.udemy.com/course/new-java-se8-programmer-certification-ocpjp-1z0-809-exam-practice-test/?couponCode=LAUNCH)以最低价格在 Udemy 上获取我的课程。
 
 [![](img/9a65a7325f637cc934a75d049ec63b09.png)](https://www.udemy.com/course/new-java-se8-programmer-certification-ocpjp-1z0-809-exam-practice-test/?couponCode=LAUNCH)
 

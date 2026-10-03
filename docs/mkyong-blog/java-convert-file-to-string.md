@@ -1,3 +1,4 @@
+
 # Java–将文件转换为字符串
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/java-convert-file-to-string/>
@@ -6,24 +7,24 @@
 
 用于以后测试的文本文件。
 
-c:\\projects\\app.log
+`c:\\projects\\app.log`
 
-```java
- A
+```
+A
 B
 C
 D
-E 
+E
 ```
 
-## 1.Java 11–files . read string
+## 1. Java 11–`Files.readString`
 
 在`java.nio.file.Files`中增加了一个新的方法`Files.readString`，它使得从文件中读取字符串变得更加容易。
 
-FileToString1.java
+`FileToString1.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -47,27 +48,27 @@ public class FileToString1 {
 
     }
 
-} 
+}
 ```
 
 Terminal
 
-```java
- A
+```
+A
 B
 C
 D
-E 
+E
 ```
 
-## 2.Java 8–文件.行
+## 2. Java 8–`Files.lines`
 
 将一个文件转换成一个`Stream`并连接它。
 
-FileToString2.java
+`FileToString2.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -90,7 +91,7 @@ public class FileToString2 {
             String content = lines.collect(Collectors.joining(System.lineSeparator()));
             System.out.println(content);
 
-			// File to List
+            // File to List
             //List<String> list = lines.collect(Collectors.toList());
 
         } catch (IOException e) {
@@ -99,27 +100,27 @@ public class FileToString2 {
 
     }
 
-} 
+}
 ```
 
 Terminal
 
-```java
- A
+```
+A
 B
 C
 D
-E 
+E
 ```
 
-## 3.Java 7–files . read all lines
+## 3. Java 7–`Files.readAllLines`
 
 将文件转换成`List`
 
-FileExample3.java
+`FileExample3.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -139,7 +140,7 @@ public class FileToString3 {
             // Java 8
             // List<String> content = Files.readAllLines(Paths.get(path));
 
-			// Java 7
+            // Java 7
             List<String> content = Files.readAllLines(Paths.get(path), StandardCharsets.UTF_8);
 
             System.out.println(content);
@@ -150,33 +151,33 @@ public class FileToString3 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 Terminal
 
-```java
- [A, B, C, D, E] 
+```
+[A, B, C, D, E]
 ```
 
-## 4.Apache commons me(Apache 公用程式)
+## 4. Apache Commons IO（Apache 公用程式）
 
-pom.xml
+`pom.xml`
 
-```java
- <dependency>
-		<groupId>commons-io</groupId>
-		<artifactId>commons-io</artifactId>
-		<version>2.6</version>
-	</dependency> 
+```xml
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.6</version>
+</dependency>
 ```
 
-FileToString4.java
+`FileToString4.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.apache.commons.io.FileUtils;
 
@@ -199,26 +200,24 @@ public class FileToString4 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 Terminal
 
-```java
- A
+```
+A
 B
 C
 D
-E 
+E
 ```
 
 ## 参考
 
-*   [文件 JavaDocs](http://web.archive.org/web/20220619003338/https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html)
-*   [BufferedReader JavaDocs](http://web.archive.org/web/20220619003338/https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html)
-*   [如何在 Java 中读取文件–buffered reader](http://web.archive.org/web/20220619003338/https://www.mkyong.com/java/how-to-read-file-from-java-bufferedreader-example/)
-*   [Java 8 流–逐行读取文件](http://web.archive.org/web/20220619003338/https://www.mkyong.com/java8/java-8-stream-read-a-file-line-by-line/)
-
-<input type="hidden" id="mkyong-current-postId" value="15091">
+* [文件 JavaDocs](http://web.archive.org/web/20220619003338/https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html)
+* [BufferedReader JavaDocs](http://web.archive.org/web/20220619003338/https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html)
+* [如何在 Java 中读取文件–buffered reader](http://web.archive.org/web/20220619003338/https://www.mkyong.com/java/how-to-read-file-from-java-bufferedreader-example/)
+* [Java 8 流–逐行读取文件](http://web.archive.org/web/20220619003338/https://www.mkyong.com/java8/java-8-stream-read-a-file-line-by-line/)

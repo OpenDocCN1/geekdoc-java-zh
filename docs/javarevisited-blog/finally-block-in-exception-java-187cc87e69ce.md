@@ -1,20 +1,19 @@
-# 异常中的最终阻塞(JAVA)
+
+# 异常中的最终阻塞（JAVA）
 
 > 原文：<https://medium.com/javarevisited/finally-block-in-exception-java-187cc87e69ce?source=collection_archive---------4----------------------->
 
-为了确保程序的所有状态都被执行，我们通过编写一个 [try-and-catch 块来处理异常。](https://javarevisited.blogspot.com/2013/03/0-exception-handling-best-practices-in-Java-Programming.html)
+为了确保程序的所有状态都被执行，我们通过编写一个 [try-and-catch 块来处理异常](https://javarevisited.blogspot.com/2013/03/0-exception-handling-best-practices-in-Java-Programming.html)。
 
-在某些情况下，catch 块之后的语句不会被执行:
+在某些情况下，`catch`块之后的语句不会被执行：
 
-1.当 try 或 catch 块中有 return 语句时
+1. 当`try`或`catch`块中有`return`语句时
+2. 当`try`块中发生异常并且匹配的`catch`块不可用时
+3. 当我们硬推代码从`try`块 [System.exit(0)执行时](https://javarevisited.blogspot.com/2014/11/dont-use-systemexit-on-java-web-application.html)
 
-2.当 try 块中发生异常并且匹配的 catch 块不可用时。
+当你想在`catch`块之后执行语句时，你必须把这些语句放在`finally`块中。
 
-3.当我们硬推代码从 try 块 [System.exit(0)执行时；](https://javarevisited.blogspot.com/2014/11/dont-use-systemexit-on-java-web-application.html)
-
-当你想在 catch 块之后执行语句时，你必须把这些语句放在 finally 块中。
-
-运行时系统总是执行 [finally 块](https://javarevisited.blogspot.com/2012/11/difference-between-final-finally-and-finalize-java.html)中的语句，而不管 try 块中发生了什么
+运行时系统总是执行 [finally 块](https://javarevisited.blogspot.com/2012/11/difference-between-final-finally-and-finalize-java.html)中的语句，而不管`try`块中发生了什么
 
 ```
 public class TestFinallyBlock2{    
@@ -45,11 +44,11 @@ public class TestFinallyBlock2{
     } 
 ```
 
-# **System.exit(0)**
+# System.exit(0)
 
 `System.exit(0)`是`java.lang.System`类中的一个方法，用于终止当前的 Java 虚拟机。它采用一个整数参数，表示虚拟机的退出状态。`0`状态表示虚拟机正常终止，而非零状态表示出现错误。
 
-下面是一个如何在 Java 程序中使用`System.exit(0)`的例子:
+下面是一个如何在 Java 程序中使用`System.exit(0)`的例子：
 
 ```
 public class Main {

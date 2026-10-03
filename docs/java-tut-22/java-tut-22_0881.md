@@ -1,12 +1,12 @@
+
 # 下载扩展
 
 > 原文：[`docs.oracle.com/javase/tutorial/ext/basics/download.html`](https://docs.oracle.com/javase/tutorial/ext/basics/download.html)
 
 下载扩展是 JAR 文件中的一组类（和相关资源）。JAR 文件的清单可以包含引用一个或多个下载扩展的头部。这些扩展可以通过以下两种方式引用：
 
-+   通过`Class-Path`头部
-
-+   通过`Extension-List`头部
++ 通过`Class-Path`头部
++ 通过`Extension-List`头部
 
 请注意，清单中最多只允许一个。通过`Class-Path`头部指示的下载扩展仅在下载它们的应用程序（如 Web 浏览器）的生命周期内下载。它们的优点是客户端上没有安装任何内容；缺点是每次需要时都会下载它们。通过`Extension-List`头部下载的下载扩展将安装到下载它们的 JRE 的`/lib/ext`目录中。它们的优点是第一次需要时下载，随后可以在不下载的情况下使用。但是，正如本教程后面所示，它们部署起来更加复杂。
 
@@ -14,7 +14,6 @@
 
 ```java
 Class-Path: b.jar
-
 ```
 
 那么`b.jar`中的类将作为`a.jar`中的类的扩展类。`a.jar`中的类可以调用`b.jar`中的类，而无需将`b.jar`中的类命名在类路径中。`a.jar`本身可能是扩展，也可能不是。如果`b.jar`不在与`a.jar`相同的目录中，那么`Class-Path`头部的值应设置为`b.jar`的相对路径名。
@@ -33,7 +32,6 @@ public final class RectangleArea {
         return r.width * r.height;
     }
 }
-
 ```
 
 在前一节中，你将`RectangleArea`类放入 JRE 的`lib/ext`目录中，将其转换为已安装扩展。通过将其转换为已安装扩展，任何应用程序都可以使用`RectangleArea`类，就好像它是 Java 平台的一部分。
@@ -59,7 +57,6 @@ public class AreaApplet extends Applet {
                       + RectangleArea.area(r), 10, 10);
     }
 }
-
 ```
 
 此小程序实例化一个 10 `x` 5 的矩形，然后使用`RectangleArea.area`方法显示矩形的面积。
@@ -71,7 +68,6 @@ public class AreaApplet extends Applet {
 ```java
 Manifest-Version: 1.0
 Class-Path: RectangleArea.jar
-
 ```
 
 这个清单中`Class-Path`头的值是`RectangleArea.jar`，没有指定路径，表示`RectangleArea.jar`位于与小程序的 JAR 文件相同的目录中。
@@ -82,7 +78,6 @@ Class-Path: RectangleArea.jar
 
 ```java
 Class-Path: area.jar servlet.jar images/
-
 ```
 
 在`Class-Path`头中，列出的任何不以'`/`'结尾的 URL 都被假定为 JAR 文件。以'`/`'结尾的 URL 表示目录。在上面的例子中，`images/`可能是一个包含小程序或应用程序所需资源的目录。
@@ -92,7 +87,6 @@ Class-Path: area.jar servlet.jar images/
 ```java
 Class-Path: area.jar servlet.jar monitor.jar datasource.jar
   provider.jar gui.jar
-
 ```
 
 未来的版本可能会取消每个标题只能有一个实例的限制，以及将行限制为仅有 72 个字符。
@@ -115,7 +109,6 @@ areatest-Specification-Version: 1.1
 areatest-Implementation-Version: 1.1.2
 areatest-Implementation-Vendor-Id: com.example
 areatest-Implementation-URL: http://www.example.com/test/area.jar
-
 ```
 
 `area.jar`中的清单将提供相应的信息：
@@ -128,14 +121,12 @@ Specification-Version: 1.1
 Implementation-Vendor-Id: com.example
 Implementation-Vendor: Example Tech, Inc
 Implementation-Version: 1.1.2
-
 ```
 
 应用程序和扩展程序都必须由相同的签名者签名。对 jar 文件进行签名会直接修改它们，在清单文件中提供更多信息。签名有助于确保只有可信任的代码被安装。签署 jar 文件的简单方法是首先创建一个密钥库，然后使用该密钥库保存用于应用程序和扩展程序的证书。例如：
 
 ```java
 keytool -genkey -dname "cn=Fred" -alias test  -validity 180
-
 ```
 
 您将被要求输入密钥库和密钥密码。生成密钥后，jar 文件可以被签名：
@@ -143,7 +134,6 @@ keytool -genkey -dname "cn=Fred" -alias test  -validity 180
 ```java
 jarsigner AreaApplet.jar test
 jarsigner area.jar test
-
 ```
 
 您将被要求输入密钥库和密钥密码。有关`keytool`、`jarsigner`和其他安全工具的更多信息，请参阅[Java 2 平台安全工具概述](https://docs.oracle.com/javase/8/docs/technotes/guides/security/SecurityToolsSummary.html)。
@@ -156,7 +146,6 @@ jarsigner area.jar test
   <applet code="AreaApplet.class" archive="AreaApplet.jar"/>
 </body>
 </html>
-
 ```
 
 当页面首次加载时，用户会被告知该应用程序需要安装扩展程序。随后的对话框会通知用户有关已签名的应用程序。接受两者会将扩展程序安装在 JRE 的`lib/ext`文件夹中并运行应用程序。

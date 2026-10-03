@@ -1,8 +1,9 @@
+
 # JAVA-对象和类
 
 > 原文：<https://medium.com/javarevisited/java-objects-classes-3567d2a9de9?source=collection_archive---------3----------------------->
 
-## 什么是对象？什么是课？
+## 什么是对象？什么是类？
 
 ![](img/363060c829216e313dae59fab0510375.png)
 
@@ -14,7 +15,7 @@
 
 **什么是对象？**
 
-对象是具有状态和行为的实时实体。举个例子，猫有颜色、名字和品种等状态。猫也有吃东西和睡觉的行为。一个对象是一个类的实例，我们可以使用**“new”**关键字创建一个类的对象。
+对象是具有状态和行为的实时实体。举个例子，猫有颜色、名字和品种等状态。猫也有吃东西和睡觉的行为。一个对象是一个类的实例，我们可以使用`new`关键字创建一个类的对象。
 
 **JAVA 中的对象**
 
@@ -39,5 +40,7 @@ String color;void sleeping(){ //behaviour
 一个类可以有以下变量类型。
 
 *   [**实例变量**](https://javarevisited.blogspot.com/2012/02/difference-between-instance-class-and.html) **-** 定义在类内但在方法外。当类被初始化时，这些变量也将被初始化。当方法完成时，这些变量将被销毁。
+
 *   [**局部变量**](https://www.java67.com/2016/07/how-to-fix-variable-might-not-have-been-initialized-error-in-java.html) **-** 这些定义在方法、块或构造函数内部的变量称为局部变量。
-*   [**类/静态变量**](https://javarevisited.blogspot.com/2011/11/static-keyword-method-variable-java.html) -【静态】关键字用来创建这些变量。这些变量是在类中声明的。
+
+*   [**类/静态变量**](https://javarevisited.blogspot.com/2011/11/static-keyword-method-variable-java.html) -`static`关键字用来创建这些变量。这些变量是在类中声明的。

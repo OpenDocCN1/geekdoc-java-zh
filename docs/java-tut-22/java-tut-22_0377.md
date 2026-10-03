@@ -1,3 +1,4 @@
+
 # 如何制作窗口（主窗口）
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/components/frame.html`](https://docs.oracle.com/javase/tutorial/uiswing/components/frame.html)
@@ -6,7 +7,7 @@
 
 作为[`JFrame`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html)类的实例实现的窗口具有装饰，如边框、标题，并支持关闭或最小化窗口的按钮组件。具有 GUI 的应用程序通常至少包括一个窗口。小程序有时也使用窗口。
 
-要创建一个依赖于另一个窗口的窗口  例如在另一个窗口最小化时消失  请使用`dialog`而不是`frame.`。要创建出现在另一个窗口内的窗口，请使用内部窗口。
+要创建一个依赖于另一个窗口的窗口 — 例如在另一个窗口最小化时消失 — 请使用`dialog`而不是`frame`。要创建出现在另一个窗口内的窗口，请使用内部窗口。
 
 ## 创建和显示窗口
 
@@ -17,7 +18,6 @@
 以下`FrameDemo`代码显示了如何创建和设置窗口。
 
 ```java
-
 //1\. Create the frame.
 JFrame frame = new JFrame("FrameDemo");
 
@@ -25,7 +25,7 @@ JFrame frame = new JFrame("FrameDemo");
 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 //3\. Create components and put them in the frame.
-*//...create emptyLabel...*
+//...create emptyLabel...
 frame.getContentPane().add(emptyLabel, BorderLayout.CENTER);
 
 //4\. Size the frame.
@@ -33,31 +33,29 @@ frame.pack();
 
 //5\. Show it.
 frame.setVisible(true);
-
 ```
 
 以下是代码的一些细节：
 
-1.  代码的第一行使用允许您设置窗口标题的构造函数创建了一个窗口。另一个经常使用的`JFrame`构造函数是无参数构造函数。
+1. 代码的第一行使用允许您设置窗口标题的构造函数创建了一个窗口。另一个经常使用的`JFrame`构造函数是无参数构造函数。
 
-1.  接下来的代码指定了当用户关闭窗口时发生的情况。`EXIT_ON_CLOSE`操作在用户关闭窗口时退出程序。这种行为适用于此程序，因为程序只有一个窗口，关闭窗口会使程序变得无用。
+2. 接下来的代码指定了当用户关闭窗口时发生的情况。`EXIT_ON_CLOSE`操作在用户关闭窗口时退出程序。这种行为适用于此程序，因为程序只有一个窗口，关闭窗口会使程序变得无用。
 
-    有关更多信息，请参阅响应窗口关闭事件。
+   有关更多信息，请参阅响应窗口关闭事件。
 
-1.  下一部分代码向窗口内容窗格添加了一个空标签。如果您还不熟悉内容窗格以及如何向其添加组件，请阅读向内容窗格添加组件。
+3. 下一部分代码向窗口内容窗格添加了一个空标签。如果您还不熟悉内容窗格以及如何向其添加组件，请阅读向内容窗格添加组件。
 
-    对于具有菜单的窗口，通常会使用`setJMenuBar`方法将菜单栏添加到窗口中。有关详细信息，请参阅如何使用菜单。
+   对于具有菜单的窗口，通常会使用`setJMenuBar`方法将菜单栏添加到窗口中。有关详细信息，请参阅如何使用菜单。
 
-1.  `pack`方法调整框架大小，使得所有内容都达到或超过其首选大小。与`pack`相对的是通过调用`setSize`或`setBounds`（也设置框架位置）来明确建立框架大小。一般来说，使用`pack`比调用`setSize`更可取，因为`pack`让框架布局管理器负责框架大小，布局管理器擅长调整到平台依赖和其他影响组件大小的因素。
+4. `pack`方法调整框架大小，使得所有内容都达到或超过其首选大小。与`pack`相对的是通过调用`setSize`或`setBounds`（也设置框架位置）来明确建立框架大小。一般来说，使用`pack`比调用`setSize`更可取，因为`pack`让框架布局管理器负责框架大小，布局管理器擅长调整到平台依赖和其他影响组件大小的因素。
 
-    这个示例没有设置框架位置，但可以使用`setLocationRelativeTo`或`setLocation`方法很容易地实现。例如，以下代码将框架居中显示在屏幕上：
+   这个示例没有设置框架位置，但可以使用`setLocationRelativeTo`或`setLocation`方法很容易地实现。例如，以下代码将框架居中显示在屏幕上：
 
-    ```java
-    frame.setLocationRelativeTo(null);
+   ```java
+   frame.setLocationRelativeTo(null);
+   ```
 
-    ```
-
-1.  调用`setVisible(true)`使框架显示在屏幕上。有时你可能会看到使用`show`方法。这两种用法是等效的，但为了一致性起见，我们使用`setVisible(true)`。
+5. 调用`setVisible(true)`使框架显示在屏幕上。有时你可能会看到使用`show`方法。这两种用法是等效的，但为了一致性起见，我们使用`setVisible(true)`。
 
 ## 指定窗口装饰
 
@@ -82,32 +80,27 @@ JFrame frame = new JFrame("A window");
 
 //Set the frame icon to an image loaded from a file.
 frame.setIconImage(new ImageIcon(imgURL).getImage());
-
 ```
 
 如前面的代码片段所示，您必须在创建希望影响其装饰的窗口之前调用`setDefaultLookAndFeelDecorated`方法。您使用`setDefaultLookAndFeelDecorated`设置的值将用于随后创建的所有`JFrame`。您可以通过调用`JFrame.setDefaultLookAndFeelDecorated(false)`来切换回使用窗口系统装饰。某些外观和感觉可能不支持窗口装饰；在这种情况下，将使用窗口系统装饰。
 
-创建上述图片框架的应用程序的完整源代码在`FrameDemo2.java`中。除了显示如何选择窗口装饰外，FrameDemo2 还展示了如何禁用所有窗口装饰，并演示了定位窗口的示例。它包括两个创建用作图标的`Image`对象的方法  一个从文件加载，另一个从头开始绘制。
-
-* * *
+创建上述图片框架的应用程序的完整源代码在`FrameDemo2.java`中。除了显示如何选择窗口装饰外，`FrameDemo2`还展示了如何禁用所有窗口装饰，并演示了定位窗口的示例。它包括两个创建用作图标的`Image`对象的方法 — 一个从文件加载，另一个从头开始绘制。
 
 **试试这个：**
 
-1.  单击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 Frame Demo（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 FrameDemo2 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/FrameDemo2Project/FrameDemo2.jnlp)
+1. 单击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 Frame Demo（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 FrameDemo2 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/FrameDemo2Project/FrameDemo2.jnlp)
 
-1.  弹出两个窗口，都带有外观提供的装饰，但具有不同的图标。
+2. 弹出两个窗口，都带有外观提供的装饰，但具有不同的图标。
 
-    Java 外观和感觉在其窗口装饰中显示图标。根据您的窗口系统，该图标可能会在其他地方用于表示窗口，特别是当窗口最小化时。
+   Java 外观和感觉在其窗口装饰中显示图标。根据您的窗口系统，该图标可能会在其他地方用于表示窗口，特别是当窗口最小化时。
 
-1.  弹出一个或多个带有窗口系统装饰的窗口。
+3. 弹出一个或多个带有窗口系统装饰的窗口。
 
-    查看您的窗口系统是否以不同方式处理这些图标。
+   查看您的窗口系统是否以不同方式处理这些图标。
 
-1.  弹出一个或多个没有窗口装饰的窗口。
+4. 弹出一个或多个没有窗口装饰的窗口。
 
-    通过使用各种类型的窗口来查看窗口装饰、窗口系统和框架图标之间的交互。
-
-* * *
+   通过使用各种类型的窗口来查看窗口装饰、窗口系统和框架图标之间的交互。
 
 ## 响应窗口关闭事件
 
@@ -131,15 +124,11 @@ frame.setIconImage(new ImageIcon(imgURL).getImage());
 
 退出应用程序，使用`System.exit(0)`。这仅适用于应用程序。如果在小程序中使用，可能会抛出`SecurityException`。
 
-* * *
-
 **注意：**
 
 `DISPOSE_ON_CLOSE`如果屏幕上只有一个窗口，可能会产生与`EXIT_ON_CLOSE`类似的结果。更准确地说，当 Java 虚拟机（VM）中的最后一个可显示窗口被处理时，VM 可能会终止。详细信息请参见[AWT 线程问题](https://docs.oracle.com/javase/8/docs/api/java/awt/doc-files/AWTThreadIssues.html)。
 
-* * *
-
-默认关闭操作在任何窗口监听器处理窗口关闭事件之后执行。因此，例如，假设您指定默认关闭操作是销毁一个框架。您还实现了一个窗口监听器，测试框架是否是最后一个可见的框架，并在是的情况下保存一些数据并退出应用程序。在这些条件下，当用户关闭一个框架时，窗口监听器将首先被调用。如果它没有退出应用程序，那么默认关闭操作  销毁框架  将会被执行。
+默认关闭操作在任何窗口监听器处理窗口关闭事件之后执行。因此，例如，假设您指定默认关闭操作是销毁一个框架。您还实现了一个窗口监听器，测试框架是否是最后一个可见的框架，并在是的情况下保存一些数据并退出应用程序。在这些条件下，当用户关闭一个框架时，窗口监听器将首先被调用。如果它没有退出应用程序，那么默认关闭操作 — 销毁框架 — 将会被执行。
 
 有关处理窗口关闭事件的更多信息，请参见如何编写窗口监听器。除了处理窗口关闭事件外，窗口监听器还可以对其他窗口状态更改做出反应，例如图标化和激活。
 
@@ -151,49 +140,32 @@ frame.setIconImage(new ImageIcon(imgURL).getImage());
 
 用于使用框架的 API 分为以下几类：
 
-+   创建和设置框架
+- 创建和设置框架
+- 设置窗口大小和位置
+- 与根窗格相关的方法
 
-+   设置窗口大小和位置
-
-+   与根窗格相关的方法
-
-创建和设置一个窗口
+### 创建和设置一个窗口
 
 | 方法或构造函数 | 目的 |
 | --- | --- |
 | [JFrame()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#JFrame--) [JFrame(String)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#JFrame-java.lang.String-) | 创建一个最初不可见的窗口。`String`参数为窗口提供标题。要使窗口可见，请在其上调用`setVisible(true)`。 |
+| [void setDefaultCloseOperation(int)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#setDefaultCloseOperation-int-) [int getDefaultCloseOperation()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#getDefaultCloseOperation--) | 设置或获取用户在此窗口上按下关闭按钮时发生的操作。可能的选择是：`DO_NOTHING_ON_CLOSE`、`HIDE_ON_CLOSE`、`DISPOSE_ON_CLOSE`、`EXIT_ON_CLOSE`。前三个常量在[`WindowConstants`](https://docs.oracle.com/javase/8/docs/api/javax/swing/WindowConstants.html)接口中定义，`JFrame`实现了该接口。`EXIT_ON_CLOSE`常量在[`JFrame`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html)类中定义。 |
+| [void setIconImage(Image)](https://docs.oracle.com/javase/8/docs/api/java/awt/Frame.html#setIconImage-java.awt.Image-) [Image getIconImage()](https://docs.oracle.com/javase/8/docs/api/java/awt/Frame.html#getIconImage--) *(in `Frame`)* | 设置或获取表示窗口的图标。请注意，参数是一个[java.awt.Image](https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html)对象，而不是`javax.swing.ImageIcon`（或任何其他`javax.swing.Icon`实现）。 |
+| [void setTitle(String)](https://docs.oracle.com/javase/8/docs/api/java/awt/Frame.html#setTitle-java.lang.String-) [String getTitle()](https://docs.oracle.com/javase/8/docs/api/java/awt/Frame.html#getTitle--) *(in `Frame`)* | 设置或获取窗口标题。 |
+| [void setUndecorated(boolean)](https://docs.oracle.com/javase/8/docs/api/java/awt/Frame.html#setUndecorated-boolean-) [boolean isUndecorated()](https://docs.oracle.com/javase/8/docs/api/java/awt/Frame.html#isUndecorated--) *(in `Frame`)* | 设置或获取此窗口是否应该装饰。仅在窗口尚未可显示（未打包或显示）时才有效。通常与全屏独占模式一起使用，或者启用自定义窗口装饰。 |
 
-| [void setDefaultCloseOperation(int)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#setDefaultCloseOperation-int-) [int getDefaultCloseOperation()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#getDefaultCloseOperation--) | 设置或获取用户在此窗口上按下关闭按钮时发生的操作。可能的选择是：
 
-+   `DO_NOTHING_ON_CLOSE`
-
-+   `HIDE_ON_CLOSE`
-
-+   `DISPOSE_ON_CLOSE`
-
-+   `EXIT_ON_CLOSE`
-
-前三个常量在[`WindowConstants`](https://docs.oracle.com/javase/8/docs/api/javax/swing/WindowConstants.html)接口中定义，`JFrame`实现了该接口。`EXIT_ON_CLOSE`常量在[`JFrame`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html)类中定义。 |
-
-| [void setIconImage(Image)](https://docs.oracle.com/javase/8/docs/api/java/awt/Frame.html#setIconImage-java.awt.Image-) [Image getIconImage()](https://docs.oracle.com/javase/8/docs/api/java/awt/Frame.html#getIconImage--)
-
-*(in `Frame`)* | 设置或获取表示窗口的图标。请注意，参数是一个[java.awt.Image](https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html)对象，而不是`javax.swing.ImageIcon`（或任何其他`javax.swing.Icon`实现）。 |
-
-| [void setTitle(String)](https://docs.oracle.com/javase/8/docs/api/java/awt/Frame.html#setTitle-java.lang.String-) [String getTitle()](https://docs.oracle.com/javase/8/docs/api/java/awt/Frame.html#getTitle--)
-
-*(in `Frame`)* | 设置或获取窗口标题。 |
-
-| [void setUndecorated(boolean)](https://docs.oracle.com/javase/8/docs/api/java/awt/Frame.html#setUndecorated-boolean-) [boolean isUndecorated()](https://docs.oracle.com/javase/8/docs/api/java/awt/Frame.html#isUndecorated--)
-
-*(in `Frame`)* | 设置或获取此窗口是否应该装饰。仅在窗口尚未可显示（未打包或显示）时才有效。通常与全屏独占模式一起使用，或者启用自定义窗口装饰。 |
 
 | [static void setDefaultLookAndFeelDecorated(boolean)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#setDefaultLookAndFeelDecorated-boolean-) [static boolean isDefaultLookAndFeelDecorated()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#isDefaultLookAndFeelDecorated--) | 确定随后创建的`JFrame`是否应由当前外观提供其窗口装饰（如边框和用于关闭窗口的小部件）。请注意，这只是一个提示，因为某些外观可能不支持此功能。 |
+
 | --- | --- |
 
-设置窗口大小和位置
+## 设置窗口大小和位置
 
 | 方法 | 目的 |
+
 | --- | --- |
+
 | [void pack()](https://docs.oracle.com/javase/8/docs/api/java/awt/Window.html#pack--) *(在`Window`中)* | 调整窗口大小，使其所有内容都达到或超过其首选大小。 |
 
 | [void setSize(int, int)](https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html#setSize-int-int-) [void setSize(Dimension)](https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html#setSize-java.awt.Dimension-)
@@ -213,12 +185,15 @@ frame.setIconImage(new ImageIcon(imgURL).getImage());
 *(在`Component`中)* | 设置或获取窗口左上角的位置。参数分别是*x*和*y*的值。|
 
 | [void setLocationRelativeTo(Component)](https://docs.oracle.com/javase/8/docs/api/java/awt/Window.html#setLocationRelativeTo-java.awt.Component-) *(在`Window`中)* | 将窗口定位在指定组件的中心。如果参数为`null`，窗口将居中显示在屏幕上。要正确居中窗口，应在设置窗口大小后调用此方法。 |
+
 | --- | --- |
 
-与根窗格相关的方法
+## 与根窗格相关的方法
 
 | 方法 | 目的 |
+
 | --- | --- |
+
 | [void setContentPane(Container)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#setContentPane-java.awt.Container-) [Container getContentPane()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#getContentPane--) | 设置或获取框架的内容窗格。内容窗格包含框架内可见的 GUI 组件。 |
 
 | [JRootPane createRootPane()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#createRootPane--) [void setRootPane(JRootPane)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#setRootPane-javax.swing.JRootPane-)
@@ -226,8 +201,11 @@ frame.setIconImage(new ImageIcon(imgURL).getImage());
 [JRootPane getRootPane()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#getRootPane--) | 创建、设置或获取框架的根窗格。根窗格管理框架的内部，包括内容窗格、玻璃窗格等。
 
 | [void setJMenuBar(JMenuBar)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#setJMenuBar-javax.swing.JMenuBar-) [JMenuBar getJMenuBar()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#getJMenuBar--) | 设置或获取框架的菜单栏，以管理框架的一组菜单。 |
+
 | --- | --- |
+
 | [void setGlassPane(Component)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#setGlassPane-java.awt.Component-) [Component getGlassPane()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#getGlassPane--) | 设置或获取框架的玻璃窗格。您可以使用玻璃窗格拦截鼠标事件或在程序 GUI 的顶部绘制。 |
+
 | [void setLayeredPane(JLayeredPane)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#setLayeredPane-javax.swing.JLayeredPane-) [JLayeredPane getLayeredPane()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html#getLayeredPane--) | 设置或获取框架的分层窗格。您可以使用框架的分层窗格将组件放置在其他组件的前面或后面。 |
 
 ## 使用框架的示例
@@ -235,10 +213,17 @@ frame.setIconImage(new ImageIcon(imgURL).getImage());
 本教程中的所有独立应用程序都使用`JFrame`。以下表格列出了一些应用程序，并告诉您每个应用程序的讨论位置。
 
 | 示例 | 描述位置 | 备注 |
+
 | --- | --- | --- |
+
 | `FrameDemo` | 示例说明 | 显示一个带有一个组件的基本框架。 |
+
 | `FrameDemo2` | 指定窗口装饰 | 允许您创建具有各种窗口装饰的框架。 |
+
 | `Framework` |  | 研究如何创建和销毁窗口，实现菜单栏以及退出应用程序。 |
+
 | `LayeredPaneDemo` | 如何使用分层窗格 | 演示如何使用分层窗格（但不是框架的分层窗格）。 |
+
 | `GlassPaneDemo` | 玻璃窗格 | 演示了框架玻璃窗格的使用。 |
+
 | `MenuDemo` | 如何使用菜单 | 展示如何将`JMenuBar`放入`JFrame`中。 |

@@ -1,3 +1,4 @@
+
 # 在 Java 中更好地重构的 3 个高级收集器技巧
 
 > 原文：<https://medium.com/javarevisited/3-advanced-collectors-tips-to-refactor-better-in-java-44fe78d53a36?source=collection_archive---------3----------------------->

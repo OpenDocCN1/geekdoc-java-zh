@@ -1,3 +1,4 @@
+
 # Eclipse 集合中的转换器方法
 
 > 原文：<https://medium.com/javarevisited/converter-methods-in-eclipse-collections-6b9bfc0f2490?source=collection_archive---------1----------------------->
@@ -8,7 +9,7 @@
 
 由 [Kenji Hiranabe](https://twitter.com/hiranabe) 在 [Astah UML](https://astah.net/products/astah-uml/) 中创建的思维导图图像。在他的允许下包括在这里。
 
-# 从一种类型转换到另一种类型
+## 从一种类型转换到另一种类型
 
 在 [Eclipse 集合](https://github.com/eclipse/eclipse-collections)中有许多不同的集合类型。集合类型有`Mutable`和`Immutable`两种。有`Object`和原始收藏类型。有`List`、`Set`、`Bag`、`Stack`、`Map`、`BiMap`、`Multimap`等类型。对于所有的 Eclipse 集合类型和 API，您可以做很多事情。但是如何从一种类型转换成另一种类型呢？
 
@@ -16,23 +17,23 @@
 
 以`to`开头的方法会将集合的内容复制到特定的类型，并且会有线性的时间开销。
 
-# 转换器方法对称性
+## 转换器方法对称性
 
 我将展示在代码中使用 Eclipse 集合从一种类型转换到另一种类型的许多途径。为了这个特殊的目的，我做了一个代码形。
 
-<https://github.com/eclipse/eclipse-collections-kata/tree/master/converter-method-kata>  
+<https://github.com/eclipse/eclipse-collections-kata/tree/master/converter-method-kata>
 
 我将使用 Eclipse 集合中可用的三种不同的 API 来演示转换器方法— `RichIterable`、`IntIterable`(适用于所有原始可迭代对象)和`Collectors2`。
 
 这些 API 之间有很好的对称性，但是在实现 kata 的过程中，我发现缺少了一些东西，所以我在 Eclipse 集合 GitHub repo 中为缺少的 API 打开了新的问题。
 
-# 丰富的转换器方法
+## 丰富的转换器方法
 
 以下方法在`[RichIterable](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html)`(及其子类型)中可用，可用于从一种集合类型转换到另一种集合类型。
 
-**方法:**`[toList](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toList())``[toSet](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toSet())``[toBag](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toBag())``[toStack](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/ordered/OrderedIterable.html#toStack())``[toMap](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toMap(org.eclipse.collections.api.block.function.Function,org.eclipse.collections.api.block.function.Function))``toSortedList``toSortedListBy``toSortedSet``toSortedSetBy``toSortedBag``toSortedBagBy``toSortedMap``toSortedMapBy``toArray``toString`
+**方法：**`[toList](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toList())`、`[toSet](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toSet())`、`[toBag](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toBag())`、`[toStack](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/ordered/OrderedIterable.html#toStack())`、`[toMap](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toMap(org.eclipse.collections.api.block.function.Function,org.eclipse.collections.api.block.function.Function))`、`toSortedList`、`toSortedListBy`、`toSortedSet`、`toSortedSetBy`、`toSortedBag`、`toSortedBagBy`、`toSortedMap`、`toSortedMapBy`、`toArray`、`toString`
 
-## 1.RichIterable: `[toList](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toList())`
+### 1. RichIterable：`[toList](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toList())`
 
 ```
 @Test
@@ -45,7 +46,7 @@ public void toList()
 }
 ```
 
-## 2.RichIterable: `[toSet](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toSet())`
+### 2. RichIterable：`[toSet](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toSet())`
 
 ```
 @Test
@@ -58,7 +59,7 @@ public void toSet()
 }
 ```
 
-## 3.RichIterable: `[toBag](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toBag())`
+### 3. RichIterable：`[toBag](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toBag())`
 
 ```
 @Test
@@ -71,7 +72,7 @@ public void toBag()
 }
 ```
 
-## 4.可订购:`[toStack](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/ordered/OrderedIterable.html#toStack())`
+### 4. 可订购：`[toStack](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/ordered/OrderedIterable.html#toStack())`
 
 ```
 @Test
@@ -86,7 +87,7 @@ public void toStack()
 }
 ```
 
-## 5.RichIterable: `[toMap](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toMap(org.eclipse.collections.api.block.function.Function,org.eclipse.collections.api.block.function.Function))`
+### 5. RichIterable：`[toMap](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toMap(org.eclipse.collections.api.block.function.Function,org.eclipse.collections.api.block.function.Function))`
 
 ```
 @Test
@@ -103,7 +104,7 @@ public void toMap()
 }
 ```
 
-## 6.RichIterable: `[toSortedList](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toSortedList())`
+### 6. RichIterable：`[toSortedList](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toSortedList())`
 
 ```
 @Test
@@ -121,7 +122,7 @@ public void toSortedList()
 }
 ```
 
-## 7.`[toSortedListBy](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toSortedListBy(org.eclipse.collections.api.block.function.Function))`
+### 7. `[toSortedListBy](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toSortedListBy(org.eclipse.collections.api.block.function.Function))`
 
 ```
 @Test
@@ -137,7 +138,7 @@ public void toSortedListByLastName()
 }
 ```
 
-## 8.RichIterable: `[toSortedSet](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toSortedSet())`
+### 8. RichIterable：`[toSortedSet](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toSortedSet())`
 
 ```
 @Test
@@ -157,7 +158,7 @@ public void toSortedSet()
 }
 ```
 
-## 9.`[toSortedSetBy](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toSortedSetBy(org.eclipse.collections.api.block.function.Function))`
+### 9. `[toSortedSetBy](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toSortedSetBy(org.eclipse.collections.api.block.function.Function))`
 
 ```
 @Test
@@ -173,7 +174,7 @@ public void toSortedSetByFirstName()
 }
 ```
 
-## 10.RichIterable: `[toSortedBag](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toSortedBag())`
+### 10. RichIterable：`[toSortedBag](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toSortedBag())`
 
 ```
 @Test
@@ -192,11 +193,15 @@ public void toSortedBag()
 }
 ```
 
-## 11.RichIterable: `[toSortedBagBy](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toSortedBagBy(org.eclipse.collections.api.block.function.Function))`
+### 11. RichIterable：`[toSortedBagBy](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toSortedBagBy(org.eclipse.collections.api.block.function.Function))`
 
-```
+
+
+# 12. RichIterable: `toSortedMap`
+
+```java
 @Test
-public void toSortedBagByAge()
+public void toSortedMapByAge()
 {
     // Convert this.people to a MutableSortedBag<Person> sorted by 
     // age
@@ -208,9 +213,9 @@ public void toSortedBagByAge()
 }
 ```
 
-## 12.RichIterable: `[toSortedMap](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toSortedMap(java.util.Comparator,org.eclipse.collections.api.block.function.Function,org.eclipse.collections.api.block.function.Function))`
+## 12. RichIterable: `toSortedMap`
 
-```
+```java
 @Test
 public void toSortedMap()
 {
@@ -225,9 +230,9 @@ public void toSortedMap()
 }
 ```
 
-## 13.RichIterable: `[toSortedMapBy](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/RichIterable.html#toSortedMapBy(org.eclipse.collections.api.block.function.Function,org.eclipse.collections.api.block.function.Function,org.eclipse.collections.api.block.function.Function))`
+## 13. RichIterable: `toSortedMapBy`
 
-```
+```java
 @Test
 public void toSortedMapByLastName()
 {
@@ -248,9 +253,9 @@ public void toSortedMapByLastName()
 }
 ```
 
-## 14.RichIterable: `toArray`
+## 14. RichIterable: `toArray`
 
-```
+```java
 @Test
 public void toArray()
 {
@@ -261,9 +266,9 @@ public void toArray()
 }
 ```
 
-## 15.RichIterable: `toString`
+## 15. RichIterable: `toString`
 
-```
+```java
 @Test
 public void toStringTest()
 {
@@ -280,13 +285,13 @@ public void toStringTest()
 
 # 原始可迭代转换器方法
 
-以下方法在`[IntIterable](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/IntIterable.html)`和`PrimitiveIterable`的其他子类型上可用。这些方法可用于将一种基本集合类型转换为另一种类型。
+以下方法在`IntIterable`和`PrimitiveIterable`的其他子类型上可用。这些方法可用于将一种基本集合类型转换为另一种类型。
 
-**方法:**`[toList](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/IntIterable.html#toList())``[toSet](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/IntIterable.html#toSet())``[toBag](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/IntIterable.html#toBag())``[toSortedList](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/IntIterable.html#toSortedList())``[toArray](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/api/IntIterable.html#toArray())``toString`
+**方法:** `toList`、`toSet`、`toBag`、`toSortedList`、`toArray`、`toString`
 
-## 1.不可改变:`toList`
+## 1. 不可改变: `toList`
 
-```
+```java
 @Test
 public void toList()
 {
@@ -300,9 +305,9 @@ public void toList()
 }
 ```
 
-## 2.不可改变:`toSet`
+## 2. 不可改变: `toSet`
 
-```
+```java
 @Test
 public void toSet()
 {
@@ -316,9 +321,9 @@ public void toSet()
 }
 ```
 
-## 3.不可改变:`toBag`
+## 3. 不可改变: `toBag`
 
-```
+```java
 @Test
 public void toBag()
 {
@@ -332,9 +337,9 @@ public void toBag()
 }
 ```
 
-## 4.不可改变:`toSortedList`
+## 4. 不可改变: `toSortedList`
 
-```
+```java
 @Test
 public void toSortedList()
 {
@@ -351,9 +356,9 @@ public void toSortedList()
 }
 ```
 
-## 5.不可改变:`toArray`
+## 5. 不可改变: `toArray`
 
-```
+```java
 @Test
 public void toArray()
 {
@@ -363,9 +368,9 @@ public void toArray()
 }
 ```
 
-## 6.不可改变:`toString`
+## 6. 不可改变: `toString`
 
-```
+```java
 @Test
 public void toStringTest()
 {
@@ -379,13 +384,13 @@ public void toStringTest()
 
 # 收集器 2 转换器方法
 
-以下方法在`[Collectors2](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/collector/Collectors2.html)`中可用，可用于从 Java 流转换到 Eclipse 集合类型。
+以下方法在`Collectors2`中可用，可用于从 Java 流转换到 Eclipse 集合类型。
 
-**方法:**`[toList](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/collector/Collectors2.html#toList())``[toSet](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/collector/Collectors2.html#toSet())``[toBag](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/collector/Collectors2.html#toBag())``[toStack](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/collector/Collectors2.html#toStack())``[toMap](https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/collector/Collectors2.html#toMap(org.eclipse.collections.api.block.function.Function,org.eclipse.collections.api.block.function.Function))``toSortedList``toSortedListBy``toSortedSet``toSortedSetBy``toSortedBag``toSortedBagBy``makeString`
+**方法:** `toList`、`toSet`、`toBag`、`toStack`、`toMap`、`toSortedList`、`toSortedListBy`、`toSortedSet`、`toSortedSetBy`、`toSortedBag`、`toSortedBagBy`、`makeString`
 
-## 1.收藏者 2: `toList`
+## 1. 收藏者 2: `toList`
 
-```
+```java
 @Test
 public void toList()
 {
@@ -397,9 +402,9 @@ public void toList()
 }
 ```
 
-## 2.收集者 2: `toSet`
+## 2. 收集者 2: `toSet`
 
-```
+```java
 @Test
 public void toSet()
 {
@@ -411,9 +416,9 @@ public void toSet()
 }
 ```
 
-## 3.收藏者 2: `toBag`
+## 3. 收藏者 2: `toBag`
 
-```
+```java
 @Test
 public void toBag()
 {
@@ -425,9 +430,11 @@ public void toBag()
 }
 ```
 
-## 4.收藏者 2: `toStack`
 
-```
+
+## 4. 收藏者 2：`toStack`
+
+```java
 @Test
 public void toStack()
 {
@@ -439,9 +446,9 @@ public void toStack()
 }
 ```
 
-## 5.收藏者 2: `toMap`
+## 5. 收藏者 2：`toMap`
 
-```
+```java
 @Test
 public void toMap()
 {
@@ -457,9 +464,9 @@ public void toMap()
 }
 ```
 
-## 6.收藏者 2: `toSortedList`
+## 6. 收藏者 2：`toSortedList`
 
-```
+```java
 @Test
 public void toSortedList()
 {
@@ -478,9 +485,9 @@ public void toSortedList()
 }
 ```
 
-## 7.收藏者 2: `toSortedListBy`
+## 7. 收藏者 2：`toSortedListBy`
 
-```
+```java
 @Test
 public void toSortedListByLastName()
 {
@@ -495,9 +502,9 @@ public void toSortedListByLastName()
 }
 ```
 
-## 8.收藏者 2: `toSortedSet`
+## 8. 收藏者 2：`toSortedSet`
 
-```
+```java
 @Test
 public void toSortedSet()
 {
@@ -519,9 +526,9 @@ public void toSortedSet()
 }
 ```
 
-## 9.收藏者 2: `toSortedSetBy`
+## 9. 收藏者 2：`toSortedSetBy`
 
-```
+```java
 @Test
 public void toSortedSetByFirstName()
 {
@@ -537,9 +544,9 @@ public void toSortedSetByFirstName()
 }
 ```
 
-## 10.收藏者 2: `toSortedBag`
+## 10. 收藏者 2：`toSortedBag`
 
-```
+```java
 @Test
 public void toSortedBag()
 {
@@ -561,9 +568,9 @@ public void toSortedBag()
 }
 ```
 
-## 11.收藏者 2: `toSortedBagBy`
+## 11. 收藏者 2：`toSortedBagBy`
 
-```
+```java
 @Test
 public void toSortedBagByAge()
 {
@@ -578,9 +585,9 @@ public void toSortedBagByAge()
 }
 ```
 
-## 12.收藏者 2: `makeString`
+## 12. 收藏者 2：`makeString`
 
-```
+```java
 @Test
 public void toStringTest()
 {
@@ -599,12 +606,12 @@ public void toStringTest()
 
 # 还有更多…
 
-我介绍了 Eclipse 集合中许多可用的转换器方法。在这个过程中，我发现了一些目前缺失的。还有一些方法可用，如`toImmutable`、`toReversed`、`Collectors2`有等价的不可变的`Collector`实现来匹配我在示例中使用的可变实现。另一种可以用来将一个集合转换成另一个集合类型的方法叫做`into`。
+我介绍了 Eclipse 集合中许多可用的转换器方法。在这个过程中，我发现了一些目前缺失的。还有一些方法可用，如`toImmutable`、`toReversed`，`Collectors2`有等价的不可变的`Collector`实现来匹配我在示例中使用的可变实现。另一种可以用来将一个集合转换成另一个集合类型的方法叫做`into`。
 
-```
+```java
 <R extends Collection<T>> R into(R target);
 ```
 
 这个方法在`RichIterable`可用，只要它扩展`java.util.Collection`，它将接受你给它的任何目标`Collection`。作为参数传入的集合是您将得到的集合，其中添加了源集合的所有元素。这将为您提供从一种集合类型转换到另一种集合类型所需的灵活性。
 
-*我是*[*Eclipse Collections*](https://github.com/eclipse/eclipse-collections)*OSS 项目在*[*Eclipse Foundation*](https://projects.eclipse.org/projects/technology.collections)*的项目负责人。* [*月食收藏*](https://github.com/eclipse/eclipse-collections) *为* [*投稿*](https://github.com/eclipse/eclipse-collections/blob/master/CONTRIBUTING.md) *。如果你喜欢这个库，你可以在 GitHub 上让我们知道。*
+我是 [Eclipse Collections](https://github.com/eclipse/eclipse-collections) OSS 项目在 [Eclipse Foundation](https://projects.eclipse.org/projects/technology.collections) 的项目负责人。[月食收藏](https://github.com/eclipse/eclipse-collections) 为 [投稿](https://github.com/eclipse/eclipse-collections/blob/master/CONTRIBUTING.md)。如果你喜欢这个库，你可以在 GitHub 上让我们知道。

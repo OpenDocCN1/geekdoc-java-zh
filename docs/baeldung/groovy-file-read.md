@@ -1,8 +1,9 @@
+
 # 在 Groovy 中读取文件
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/groovy-file-read>
 
-## 1.概观
+## 1. 概观
 
 在这个快速教程中，我们将探索在 [Groovy](/web/20220525131321/https://www.baeldung.com/groovy-language) 中读取文件的不同方式。
 
@@ -10,13 +11,13 @@ Groovy 提供了处理文件的便捷方式。我们将专注于`File`类，它�
 
 让我们在接下来的几节中逐一探讨它们。
 
-## 2.逐行读取一个`File`
+## 2. 逐行读取一个`File`
 
 有许多像`readLine`和`eachLine`这样的[常规 IO 方法](https://web.archive.org/web/20220525131321/http://docs.groovy-lang.org/2.4.7/html/gapi/org/codehaus/groovy/runtime/IOGroovyMethods.html)可用于逐行读取文件。
 
-### 2.1.使用`File.withReader`
+### 2.1. 使用`File.withReader`
 
-先说 [`File`](https://web.archive.org/web/20220525131321/http://docs.groovy-lang.org/next/html/groovy-jdk/java/io/File.html) `.withReader`法。**它在封面下创建了一个新的`BufferedReader`，我们可以使用`readLine` 方法读取内容。**
+先说 [`File`](https://web.archive.org/web/20220525131321/http://docs.groovy-lang.org/next/html/groovy-jdk/java/io/File.html)`.withReader`法。**它在封面下创建了一个新的`BufferedReader`，我们可以使用`readLine`方法读取内容。**
 
 例如，让我们逐行读取一个文件，并打印每一行。我们还将返回行数:
 
@@ -68,7 +69,7 @@ def line
 }
 ```
 
-### 2.2.使用`File.eachLine`
+### 2.2. 使用`File.eachLine`
 
 我们也可以使用`eachLine`方法:
 
@@ -78,7 +79,7 @@ new File("src/main/resources/fileContent.txt").eachLine { line ->
 } 
 ```
 
-### 2.3.使用`File.newInputStream`和`InputStream.eachLine`
+### 2.3. 使用`File.newInputStream`和`InputStream.eachLine`
 
 让我们看看如何使用`InputStream`和`eachLine`来读取文件:
 
@@ -102,11 +103,11 @@ new File("src/main/resources/fileContent.txt").withInputStream { stream ->
 }
 ```
 
-## 3.将一个`File`读入一个`List`
+## 3. 将一个`File`读入一个`List`
 
 有时我们需要将文件的内容读入一系列行中。
 
-### 3.1.使用`File.readLines`
+### 3.1. 使用`File.readLines`
 
 为此，我们可以使用`readLines`方法，将文件读入到`Strings`的`List`中。
 
@@ -135,7 +136,7 @@ def 'Should return File Content in list of lines given filePath' () {
 }
 ```
 
-### 3.2.使用`File.collect`
+### 3.2. 使用`File.collect`
 
 我们还可以使用`collect` API 将文件内容读入到`Strings`的`List`中:
 
@@ -143,7 +144,7 @@ def 'Should return File Content in list of lines given filePath' () {
 def list = new File("src/main/resources/fileContent.txt").collect {it} 
 ```
 
-### 3.3.使用 `as`操作符
+### 3.3. 使用 `as`操作符
 
 我们甚至可以利用`as`操作符将文件的内容读入一个`String`数组:
 
@@ -151,9 +152,9 @@ def list = new File("src/main/resources/fileContent.txt").collect {it}
 def array = new File("src/main/resources/fileContent.txt") as String[]
 ```
 
-## 4.将一个`File`读入一个单独的`String`
+## 4. 将一个`File`读入一个单独的`String`
 
-### 4.1.使用`File.text`
+### 4.1. 使用`File.text`
 
 **我们可以简单地通过使用`File`类**的`text`属性将整个文件读入一个单独的`String`。
 
@@ -184,9 +185,9 @@ Line 3 : String content""")
 }
 ```
 
-### 4.2.使用`File.getText`
+### 4.2. 使用`File.getText`
 
-如果我们使用`getTest(charset)` 方法，我们可以通过提供像 UTF-8 或 ASCII 这样的字符集参数将编码文件的内容读入到`String`中:
+如果我们使用`getTest(charset)`方法，我们可以通过提供像 UTF-8 或 ASCII 这样的字符集参数将编码文件的内容读入到`String`中:
 
 ```java
 String readFileStringWithCharset(String filePath) {
@@ -218,7 +219,7 @@ def 'Should return UTF-8 encoded file content in string given filePath' () {
 }
 ```
 
-## 5.用`File.bytes`读取二进制文件
+## 5. 用`File.bytes`读取二进制文件
 
 Groovy 使得读取非文本或二进制文件变得很容易。**通过使用`bytes`属性，我们可以得到`File`的内容作为`byte`数组**:
 
@@ -249,7 +250,7 @@ def 'Should return binary file content in byte array given filePath' () {
 }
 ```
 
-## 6.结论
+## 6. 结论
 
 在这个快速教程中，我们已经看到了使用`File`类的各种方法以及`BufferedReader`和`InputStream`在 Groovy 中读取文件的不同方式。
 

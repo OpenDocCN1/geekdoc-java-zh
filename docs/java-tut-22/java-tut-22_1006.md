@@ -1,3 +1,4 @@
+
 # 匿名
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/ldap/anonymous.html`](https://docs.oracle.com/javase/tutorial/jndi/ldap/anonymous.html)
@@ -21,5 +22,4 @@ env.put(Context.SECURITY_AUTHENTICATION, "none");
 DirContext ctx = new InitialDirContext(env);
 
 // ... do something useful with ctx
-
 ```

@@ -1,3 +1,4 @@
+
 # Java Lambda 表达式
 
 > 原文：<https://medium.com/javarevisited/java-lambda-expressions-6696793a6c38?source=collection_archive---------1----------------------->
@@ -38,7 +39,7 @@ public void greet(perform()) {
 
 Lambda 表达式可以赋给一个变量。换句话说，可以认为是把一个方法赋给一个变量。
 
-上面显示了一个代表性的结构。从这个结构到 lambda 表达式结构的转换如下:
+上面显示了一个代表性的结构。从这个结构到 lambda 表达式结构的转换如下：
 
 *   当创建一个属于类的方法时，使用访问修饰符是有意义的，但是因为 lambda 表达式与类无关，所以不需要访问修饰符。
 *   不需要指定方法名，因为 lambda 表达式提供的函数将通过变量使用。
@@ -48,7 +49,7 @@ Lambda 表达式可以赋给一个变量。换句话说，可以认为是把一�
 
 lambda 表达式的结构如下例所示。
 
-**注意-1:** 和第 3 行一样，return 关键字对于不使用花括号的单行语法是无效的。
+**注意-1:** 和第 3 行一样，`return`关键字对于不使用花括号的单行语法是无效的。
 
 **注意-2:** While `this`引用可以在静态上下文中创建的匿名内部类中使用；它不能用于在静态上下文中创建的 lambda 表达式。
 
@@ -66,7 +67,7 @@ lambda 表达式的结构如下例所示。
 
 为什么 Java 设计者没有创造一个全新的变量类型？这样做的主要原因是向后兼容。例如，`Thread`类可以使用 lambda 表达式，因为它有一个将`Runnable`函数接口作为参数的构造函数。然而，如果设计者已经创建了一个新的变量类型，那么必须对`Thread`类进行修改，以使用这个新的变量类型。
 
-我们必须为每个 lambda 表达式创建一个函数接口吗？其实是的，但是考虑到这种情况，Java 设计师用 Java 8 在`[java.util.function](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html)` 包下创建了很多功能接口，适合常见用例场景。
+我们必须为每个 lambda 表达式创建一个函数接口吗？其实是的，但是考虑到这种情况，Java 设计师用 Java 8 在`[java.util.function](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html)`包下创建了很多功能接口，适合常见用例场景。
 
 通过使用这个包中的`[BiConsumer](https://docs.oracle.com/javase/8/docs/api/java/util/function/BiConsumer.html)`功能接口，我们可以执行除法过程。这个接口有两种类型，这些类型定义了`accept()`方法的参数类型。同样，这个方法的返回类型是`void`。在这里，通过查看`accept()`方法，我们可以看到，我们将给出两个参数，不会返回任何内容。
 
@@ -82,7 +83,7 @@ lambda 表达式的结构如下例所示。
 
 在本节中，首先，将使用 Java 8 之前的方法，然后使用 Java 8 方法对示例进行改进。
 
-正如您在上面看到的，包含`Person`对象的列表是在 main 方法中创建的。然后，通过创建一个匿名的内部类，这些`Person`对象按照它们的姓氏进行排序。之后，所有的`Person`对象用`printAll()`方法打印，姓氏以`O`开头的`Person`对象用`printLastNameBegginningWithO()`方法打印。
+正如您在上面看到的，包含`Person`对象的列表是在`main`方法中创建的。然后，通过创建一个匿名的内部类，这些`Person`对象按照它们的姓氏进行排序。之后，所有的`Person`对象用`printAll()`方法打印，姓氏以`O`开头的`Person`对象用`printLastNameBegginningWithO()`方法打印。
 
 虽然`printLastNameBegginningWithO()`方法实现了期望的功能，但它并不灵活。例如，当我们想要打印名字以`Y`开头的`Person`对象时，应该编写一个全新的方法。为了提供灵活性，让我们创建一个包含`check()`方法的名为`Condition`的接口，并创建一个将`Condition`接口作为参数的名为`printConditionally()`的方法。该方法将打印满足作为参数传递的条件的`Person`对象。
 
@@ -90,9 +91,9 @@ lambda 表达式的结构如下例所示。
 
 现在，让我们看看如何使用 lambda 表达式摆脱样板代码。
 
-我们提到过 Java 8 中的`java.util.function` 包。我们可以使用内置的`[Predicate](https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html)` 接口来代替我们自己创建的`Condition`接口。
+我们提到过 Java 8 中的`java.util.function`包。我们可以使用内置的`[Predicate](https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html)`接口来代替我们自己创建的`Condition`接口。
 
-可能还需要一个行为传递，因为它不总是仅仅是一个打印过程，所以让我们扩展一下这个例子。为此，我们可以使用`[Consumer](https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html)` 接口。
+可能还需要一个行为传递，因为它不总是仅仅是一个打印过程，所以让我们扩展一下这个例子。为此，我们可以使用`[Consumer](https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html)`接口。
 
 如第 13 行所示，`consumer.accept()`执行通过的打印过程。因此`performConditionally()`变得更加灵活，可以执行许多不同的功能。
 
@@ -102,7 +103,7 @@ lambda 表达式的结构如下例所示。
 
 ## 方法引用
 
-方法引用是 lambda 表达式的一种特殊用法。它们用于使用现有方法以更短、更易读的形式创建 lambda 表达式。有三种类型的方法引用:
+方法引用是 lambda 表达式的一种特殊用法。它们用于使用现有方法以更短、更易读的形式创建 lambda 表达式。有三种类型的方法引用：
 
 **1-静态方法的引用**
 

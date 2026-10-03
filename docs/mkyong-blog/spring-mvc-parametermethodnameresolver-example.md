@@ -1,15 +1,16 @@
+
 # Spring MVC 参数 MethodNameResolver 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring-mvc/spring-mvc-parametermethodnameresolver-example/>
 
-**parametermethodname resolver**，MultiActionController 方法名解析器通过请求参数名将 URL 映射到方法名**，参数名可通过“ **paramName** 属性定制。请参见以下示例:**
+**ParameterMethodNameResolver**，`MultiActionController` 方法名解析器通过请求参数名将 URL 映射到方法名，参数名可通过 `paramName` 属性定制。请参见以下示例：
 
-## 1.多动作控制器
+## 1. 多动作控制器
 
-一个 MultiActionController 示例。
+一个 `MultiActionController` 示例。
 
 ```java
- package com.mkyong.common.controller;
+package com.mkyong.common.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -46,17 +47,17 @@ public class CustomerController extends MultiActionController{
 
 	}
 
-} 
+}
 ```
 
- ## 2.ParameterMethodNameResolver
+## 2. ParameterMethodNameResolver
 
-配置了**参数方法名称解析器**，通过“**参数名称**属性定义参数名称:
+配置了 `ParameterMethodNameResolver`，通过 `paramName` 属性定义参数名称：
 
 ```java
- <beans ...>
+<beans ...>
 
- <bean 
+ <bean
   class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
 
   <bean class="com.mkyong.common.controller.CustomerController">
@@ -67,34 +68,30 @@ public class CustomerController extends MultiActionController{
      </property>
    </bean>
 
-</beans> 
+</beans>
 ```
 
-现在，URL 将通过“action”请求参数名称映射到方法名称:
+现在，URL 将通过 `action` 请求参数名称映射到方法名称：
 
-1.  /customer/*。htm **？action = add**–>add()方法
-2.  /customer/whatever.htm **？action = add**–>add()方法
-3.  /customer/*。htm **？action = update**–>update()方法
-4.  /customer/*。htm **？action = delete**–>delete()方法
-5.  /customer/*。htm **？action = list**–>list()方法
+1. `/customer/*.htm?action=add` --> `add()` 方法
+2. `/customer/whatever.htm?action=add` --> `add()` 方法
+3. `/customer/*.htm?action=update` --> `update()` 方法
+4. `/customer/*.htm?action=delete` --> `delete()` 方法
+5. `/customer/*.htm?action=list` --> `list()` 方法
 
-*附注“ ***** ”指任何文本。*
+*附注：`*` 指任何文本。*
 
-**Note**
-By default, **MultiActionController** is used the [InternalPathMethodNameResolver](http://web.archive.org/web/20190212162210/http://www.mkyong.com/spring-mvc/spring-mvc-multiactioncontroller-example/) to map URL to the corresponds method name. ## 下载源代码
+**注意：**
 
-Download it – [SpringMVC-ParameterMethodNameResolver-Example.zip](http://web.archive.org/web/20190212162210/http://www.mkyong.com/wp-content/uploads/2010/08/SpringMVC-ParameterMethodNameResolver-Example.zip) (7KB)
+默认情况下，`MultiActionController` 使用 [InternalPathMethodNameResolver](http://web.archive.org/web/20190212162210/http://www.mkyong.com/spring-mvc/spring-mvc-multiactioncontroller-example/) 将 URL 映射到对应的方法名。
+
+## 下载源代码
+
+下载链接：[SpringMVC-ParameterMethodNameResolver-Example.zip](http://web.archive.org/web/20190212162210/http://www.mkyong.com/wp-content/uploads/2010/08/SpringMVC-ParameterMethodNameResolver-Example.zip)（7KB）
 
 ## 参考
 
-1.  [参数 MethodNameResolver Javadoc](http://web.archive.org/web/20190212162210/http://static.springsource.org/spring/docs/2.5.x/api/org/springframework/web/servlet/mvc/multiaction/ParameterMethodNameResolver.html)
-2.  [Spring MVC multi action controller 示例](http://web.archive.org/web/20190212162210/http://www.mkyong.com/spring-mvc/spring-mvc-multiactioncontroller-example/)
+1. [ParameterMethodNameResolver Javadoc](http://web.archive.org/web/20190212162210/http://static.springsource.org/spring/docs/2.5.x/api/org/springframework/web/servlet/mvc/multiaction/ParameterMethodNameResolver.html)
+2. [Spring MVC multi action controller 示例](http://web.archive.org/web/20190212162210/http://www.mkyong.com/spring-mvc/spring-mvc-multiactioncontroller-example/)
 
 [spring mvc](http://web.archive.org/web/20190212162210/http://www.mkyong.com/tag/spring-mvc/)
-
-
-
-
-
-
-

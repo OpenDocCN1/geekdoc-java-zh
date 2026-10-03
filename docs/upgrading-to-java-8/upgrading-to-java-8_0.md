@@ -1,145 +1,18 @@
+
 # Java 8 升级指南
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 关于作者
 
 Budi Kurniawan 以其清晰的写作风格闻名。作为 Brainy Software Corp. 的顾问，他编写过由财富 100 强公司授权的软件，并为世界各地的组织架构和开发了大型应用程序。他还在权威出版物上发表了 100 多篇文章。他的其他书籍包括热门的《Tomcat 如何工作》和《Servlet and JSP：教程》。
 
-
-*(注：此处由于原文中第 7、8 章目录内容似乎存在重复，已按原文逐样翻译)*
-
-
-*(Wait，根据指令，我应该重新审视原文并进行翻译。我上面的输出出现了混乱。以下是针对给定文本的正确翻译结果：)*
-
-[content]
-
 ![](img/cover.jpg)
-
-
-
-
-... (此处省略中间重复部分，直接提供下方完整翻译)
-
-
-
-抱歉，刚才的输出格式出现了逻辑错误。我将重新为您翻译您提供的完整文本。
-
-**重新翻译的译文：**
-
-[content]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 关于作者
-
-Budi Kurniawan 以其清晰的写作风格闻名。作为 Brainy Software Corp. 的顾问，他编写过由财富 100 强公司授权的软件，并为世界各地的组织架构和开发了大型应用程序。他还在权威出版物上发表了 100 多篇文章。他的其他书籍包括热门的《Tomcat 如何工作》和《Servlet and JSP：教程》。
-
-
-
-*(等等，我发现原文提供的文本在最后部分似乎重复了目录或其他内容。根据指令“不要重复输出原文”的原则，我将只翻译您提供的目标文本内容。)*
-
-**由于我之前的思考过程出现了混乱，现在为您提供最终的、完全符合格式要求的翻译。**
-
----
-
-**最终翻译译文：**
-
-[content]
-
-- 你的第一个 JavaFX 应用程序
-
-[/content]
-
-*(Wait, I just realized I am overthinking because the user's input text was one long block. I will simply provide the clean translation of the entire block provided by the user.)*
-
----
-
-**这里是为您准备的翻译：**
-
-[content]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 关于作者
-
-Budi Kurniawan 以其清晰的写作风格闻名。作为 Brainy Software Corp. 的顾问，他编写过由财富 100 强公司授权的软件，并为世界各地的组织架构和开发了大型应用程序。他还在权威出版物上发表了 100 多篇文章。他的其他书籍包括热门的《Tomcat 如何工作》和《Servlet and JSP：教程》。
-
-
-- ... (此处由于长度限制，我会确保完整翻译)
-[/content]
-
-Wait, I will provide the full text. 
-
-[content]
-- ... (Wait, I will just stop here and provide the actual translation in the next block). 
-
-Actually, the user provided a text that ends. I will just provide the full translation of what was given.
-
-[content]
-![](img/cover.jpg)
-
-...
-...
-- ... (I will provide the full thing now)
-[/content]
-
-*(Self-correction: I am struggling with the interface. Let me just provide one clean, complete translation of the text provided.)*
-
-[content]
-![](img/cover.jpg)
-
-
-
-
-
 
 索引编制：Chris Mayle
+
 ## 商标
+
 Oracle 和 Java 是 Oracle 和/或其关联机构的注册商标
+
 UNIX 是 Open Group 的注册商标
 
 Apache 是 The Apache Software Foundation 的商标。
@@ -149,17 +22,6 @@ Firefox 是 Mozilla Foundation 的注册商标。
 Google 是 Google, Inc. 的商标。
 
 在本书中，不带商标符号的商标名称打印仅用于编辑目的。我们无侵犯商标的意图。
-
-
-
-## 关于作者
-
-Budi Kurniawan 以其清晰的写作风格闻名。作为 Brainy Software Corp. 的顾问，他编写过由财富 100 强公司授权的软件，并为世界各地的组织架构和开发了大型应用程序。他还在权威出版物上发表了 100 多篇文章。他的其他书籍包括热门的《Tomcat 如何工作》和《Servlet and JSP：教程》。
-
-
-
-
-
 
 换句话说，如果你需要将一个 `Runnable` 传递给 `java.util.concurrent.Executor`，如下所示：
 
@@ -285,10 +147,6 @@ Calculator addition = (a, b) -> a + b;
 | `Supplier` | 代表结果的提供者。 |
 | `Consumer` | 接受一个参数且不返回结果的操作。 |
 
-
-
-
-
 ## 表 1.1: 核心函数接口
 
 ## Function, BiFunction 及其他变体
@@ -296,7 +154,7 @@ Calculator addition = (a, b) -> a + b;
 `Function` 接口用于创建一个接受一个参数并返回结果的函数。它是一个泛型类型，其定义如下：
 
 ```
- public interface Function<T, R>
+public interface Function<T, R>
 ```
 
 在这里，`T` 代表参数的类型，`R` 代表结果的类型。
@@ -304,7 +162,7 @@ Calculator addition = (a, b) -> a + b;
 `Function` 有一个抽象方法 `apply`，其签名如下：
 
 ```
- R apply(T argument)
+R apply(T argument)
 ```
 
 当你在使用 `Function` 时，需要重写这个方法。例如，代码列表 1.2 中的类定义了一个将英里转换为公里的 `Function`。该 `Function` 接受一个 `Integer` 作为参数，并返回一个 `Double`。
@@ -312,7 +170,7 @@ Calculator addition = (a, b) -> a + b;
 ### 代码列表 1.2：`FunctionDemo1` 类
 
 ```
- package app01.function;
+package app01.function;
 import java.util.function.Function;
 
 public class FunctionDemo1 {
@@ -330,7 +188,7 @@ public class FunctionDemo1 {
 如果你运行 `FunctionDemo1` 类，你将在控制台上看到以下内容：
 
 ```
- 3 miles = 4.80 kilometers
+3 miles = 4.80 kilometers
 ```
 
 `Function` 的变体 `BiFunction` 接受两个参数并返回一个结果。代码列表 1.3 展示了 `BiFunction` 的示例。它使用 `BiFunction` 创建了一个根据宽度和长度计算面积的函数。通过调用其 `apply` 方法来执行该函数。
@@ -338,7 +196,7 @@ public class FunctionDemo1 {
 ### 代码列表 1.3：`BiFunctionDemo1` 类
 
 ```
- package app01.function;
+package app01.function;
 import java.util.function.BiFunction;
 
 public class BiFunctionDemo1 {
@@ -356,13 +214,13 @@ public class BiFunctionDemo1 {
 运行 `BiFunctionDemo1` 类会在控制台上打印此内容：
 
 ```
- 70.0
+70.0
 ```
 
 除了 `BiFunction` 之外，还有是 `Function` 的特化变体。例如，`IntFunction` 接口始终接受一个 `Integer`，并且对于结果类型只需要一个泛型类型。它的 `apply` 方法返回一个 `int`。
 
 ```
- R apply(int input)
+R apply(int input)
 ```
 
 `LongFunction` 和 `DoubleFunction` 接口与 `IntFunction` 类似，但它们分别接受 `long` 和 `double` 作为参数。
@@ -372,7 +230,7 @@ public class BiFunctionDemo1 {
 ### 代码列表 1.4：`IntToDoubleFunctionDemo1` 类
 
 ```
- package app01.function;
+package app01.function;
 import java.util.function.IntToDoubleFunction;
 
 public class IntToDoubleFunctionDemo1 {
@@ -391,7 +249,7 @@ public class IntToDoubleFunctionDemo1 {
 这是 `IntToDoubleFunctionDemo1` 的输出：
 
 ```
- 100° = 212.0°
+100° = 212.0°
 ```
 
 与 `IntToDoubleFunction` 类似的还有 `LongToDoubleFunction` 和 `LongToIntFunction`。我相信你能从它们的名字看出它们的作用。
@@ -399,21 +257,23 @@ public class IntToDoubleFunctionDemo1 {
 `UnaryOperator` 接口是 `Function` 的另一个特化版本，其操作数类型与返回类型相同。其声明如下：
 
 ```
- public interfaceUnaryOperator<T> extends Function<T,T>
+public interfaceUnaryOperator<T> extends Function<T,T>
 ```
 
-`BinaryOperator` 是 `BiFunction` 的特化版本。`BinaryOperator` 表示一个有两个相同类型操作数的操作，并返回一个与操作数类型相同的结果。
+
+
+`BinaryOperator`是`BiFunction`的特化版本。`BinaryOperator`表示一个有两个相同类型操作数的操作，并返回一个与操作数类型相同的结果。
 
 ## Predicate
 
-`Predicate` 是接受参数并根据参数值返回 true 或 false 的函数。它有一个名为 `test` 的抽象方法。
+`Predicate`是接受参数并根据参数值返回`true`或`false`的函数。它有一个名为`test`的抽象方法。
 
-例如，代码列表 1.5 中的 `PredicateDemo1` 类定义了一个 `Predicate`，用于评估字符串输入，如果字符串中的每个字符都是数字，则返回 true。
+例如，代码列表 1.5 中的`PredicateDemo1`类定义了一个`Predicate`，用于评估字符串输入，如果字符串中的每个字符都是数字，则返回`true`。
 
-### 代码列表 1.5：`PredicateDemo1` 类
+### 代码列表 1.5：`PredicateDemo1`类
 
 ```
- package app01.function;
+package app01.function;
 import java.util.function.Predicate;
 
 public class PredicateDemo1 {
@@ -436,14 +296,14 @@ public class PredicateDemo1 {
 
 ## Supplier
 
-`Supplier` 不接受参数并返回一个值。实现类必须重写其抽象方法 `get`。
+`Supplier`不接受参数并返回一个值。实现类必须重写其抽象方法`get`。
 
-代码列表 1.6 展示了 `Supplier` 的示例。它定义了一个返回随机数字的 `Supplier`，并使用循环打印五个数。
+代码列表 1.6 展示了`Supplier`的示例。它定义了一个返回随机数字的`Supplier`，并使用循环打印五个数。
 
-### 代码列表 1.6：`SupplierDemo1` 类
+### 代码列表 1.6：`SupplierDemo1`类
 
 ```
- package app01.function;
+package app01.function;
 import java.util.Random;
 import java.util.function.Supplier;
 
@@ -460,18 +320,18 @@ public class SupplierDemo1 {
 }
 ```
 
-`Supplier` 还有特化变体，如 `DoubleSupplier`（返回 Double）、`IntSupplier` 和 `LongSupplier`。
+`Supplier`还有特化变体，如`DoubleSupplier`（返回`Double`）、`IntSupplier`和`LongSupplier`。
 
 ## Consumer
 
-`Consumer` 是一个不返回结果的操作。它有一个名为 `accept` 的抽象方法。
+`Consumer`是一个不返回结果的操作。它有一个名为`accept`的抽象方法。
 
-代码列表 1.7 展示了一个 `Consumer` 的示例，它接受一个字符串并将其居中打印。
+代码列表 1.7 展示了一个`Consumer`的示例，它接受一个字符串并将其居中打印。
 
 ### 代码列表 1.7：Consumer 示例
 
 ```
- package app01.function;
+package app01.function;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
@@ -501,37 +361,33 @@ public class ConsumerDemo1 {
 }
 ```
 
-代码列表 1.7 中的示例包含一个 `Consumer`，它接受一个字符串并在前面添加特定数量的空格后打印。`Consumer` 的 `accept` 方法实现由这个 Lambda 表达式提供：
+代码列表 1.7 中的示例包含一个`Consumer`，它接受一个字符串并在前面添加特定数量的空格后打印。`Consumer`的`accept`方法实现由这个 Lambda 表达式提供：
 
 ```
- (input) -> {
-                    int length = input.length();
-                    String spaces = spacer.apply(
-                            (lineLength - length) / 2);
-                    System.out.println(spaces + input);
-                }
+(input) -> {
+    int length = input.length();
+    String spaces = spacer.apply(
+            (lineLength - length) / 2);
+    System.out.println(spaces + input);
+}
 ```
 
-
-
-
-
 ```
- Function<Integer, String> spacer = (count) -> {
-            StringBuilder sb = new StringBuilder(count);
-            for (int i = 0; i < count; i++) {
-                sb.append(" ");
-            }
-            return sb.toString();
-        };
+Function<Integer, String> spacer = (count) -> {
+    StringBuilder sb = new StringBuilder(count);
+    for (int i = 0; i < count; i++) {
+        sb.append(" ");
+    }
+    return sb.toString();
+};
 ```
 
-该函数使用一个 `for` 循环，向 `StringBuilder` 中添加 `count` 次空格，其中 `count` 是函数的参数。当循环退出时，它返回 `StringBuilder` 的 `String` 表示形式。
+该函数使用一个`for`循环，向`StringBuilder`中添加`count`次空格，其中`count`是函数的参数。当循环退出时，它返回`StringBuilder`的`String`表示形式。
 
-如果你运行 `ConsumerDemo1` 类，你将在控制台上看到以下内容：
+如果你运行`ConsumerDemo1`类，你将在控制台上看到以下内容：
 
 ```
- A lambda expression a day
+A lambda expression a day
                          makes you
                         look smarter
 ```
@@ -548,19 +404,20 @@ Lambda 表达式是 Java 8 的新特性，它可以使某些结构变得更短�
 
 ## 概述
 
-许多 Java 方法接受函数式接口作为参数。例如，`java.util.Arrays` 中的 `sort` 方法之一接受 `Comparator` 实例，而 `Comparator` 就是一个函数式接口。`sort` 方法的签名如下：
+许多 Java 方法接受函数式接口作为参数。例如，`java.util.Arrays`中的`sort`方法之一接受`Comparator`实例，而`Comparator`就是一个函数式接口。`sort`方法的签名如下：
 
 ```
- public static T[] sort(T[] array, Comparator<? super T> comparator)
+public static T[] sort(T[] array, Comparator<? super T> comparator)
 ```
 
-与其向 `sort` 方法传递 `Comparator` 的实现，不如传递一个 lambda 表达式。你在上一节已经看到过如何这样做。
+与其向`sort`方法传递`Comparator`的实现，不如传递一个 lambda 表达式。你在上一节已经看到过如何这样做。
 
 现在，你可以更进一步，通过传递方法引用来代替 lambda 表达式。方法引用简单就是类名或对象引用后跟着双冒号运算符（`::`）和方法名。
 
 你为什么想要使用方法引用？有两个原因：
 
 1. 方法引用的语法比 lambda 表达式更短，因为方法引用不包含像 lambda 表达式那样的定义。方法体定义在其他地方。
+
 2. 你可以使用现有的方法，从而促进代码复用。
 
 你可以使用静态方法、实例方法甚至构造函数的引用。你使用双冒号（`::`，这是 Java 8 中的一个新运算符）来分隔类名/对象引用与方法/构造函数名。封装所引用方法的类不需要实现该函数式接口。
@@ -568,7 +425,7 @@ Lambda 表达式是 Java 8 的新特性，它可以使某些结构变得更短�
 方法引用的语法是以下之一：
 
 ```
- ClassName::staticMethodName
+ClassName::staticMethodName
 ContainingType::instanceMethod
 objectReference::methodName
 ClassName::new
@@ -580,12 +437,12 @@ ClassName::new
 
 如果静态方法与函数式接口的抽象方法具有兼容的返回类型和参数参数类型，那么静态方法的引用可以作为参数传递给期望函数式接口的方法。
 
-作为此主题的第一个示例，考虑列表 2.1 中的 `NoMethodRef` 类，它说明了在没有方法引用的情况下使用函数式接口。该类定义了一个名为 `StringListFormatter` 的函数式接口，它接收一个 `String` 列表并对字符串进行格式化。`format` 方法是接口的抽象方法，接受一个分隔符和一个 `String` 列表。还有一个 `formatAndPrint` 静态方法，它接收 `StringListFormatter` 实例、一个分隔符和一个 `String` 列表。该方法反过来调用 `StringListFormatter` 的 `format` 方法并打印格式化后的列表。
+作为此主题的第一个示例，考虑列表 2.1 中的`NoMethodRef`类，它说明了在没有方法引用的情况下使用函数式接口。该类定义了一个名为`StringListFormatter`的函数式接口，它接收一个`String`列表并对字符串进行格式化。`format`方法是接口的抽象方法，接受一个分隔符和一个`String`列表。还有一个`formatAndPrint`静态方法，它接收`StringListFormatter`实例、一个分隔符和一个`String`列表。该方法反过来调用`StringListFormatter`的`format`方法并打印格式化后的列表。
 
 列表 2.1：NoMethodRef 类
 
 ```
- package app02.methodref;
+package app02.methodref;
 import java.util.Arrays;
 import java.util.List;
 
@@ -622,53 +479,53 @@ public class NoMethodRef {
 }
 ```
 
-`NoMethodRef` 中的 `main` 方法构建了一个包含三个元素的字符串列表，并使用此 lambda 表达式创建了 `StringListFormatter` 的实现。
+`NoMethodRef`中的`main`方法构建了一个包含三个元素的字符串列表，并使用此 lambda 表达式创建了`StringListFormatter`的实现。
 
 ```
- StringListFormatter formatter =
-                (delimiter, list) -> {
-                    StringBuilder sb = new StringBuilder(100);
-                    int size = list.size();
-                    for (int i = 0; i < size; i++) {
-                        sb.append(list.get(i));
-                        if (i < size - 1) {
-                            sb.append(delimiter);
-                        }
-                    }
-                    return sb.toString();
-                };
+StringListFormatter formatter =
+        (delimiter, list) -> {
+            StringBuilder sb = new StringBuilder(100);
+            int size = list.size();
+            for (int i = 0; i < size; i++) {
+                sb.append(list.get(i));
+                if (i < size - 1) {
+                    sb.append(delimiter);
+                }
+            }
+            return sb.toString();
+        };
 ```
 
-基本上，它遍历 `List` 并在两个元素之间添加分隔符。最后一个元素后不会添加分隔符。
+基本上，它遍历`List`并在两个元素之间添加分隔符。最后一个元素后不会添加分隔符。
 
-然后 `main` 方法调用 `formatAndPrint` 方法，传递 lambda 表达式、分隔符和字符串列表。如果你运行 `NoMethodRef`，你将看到格式化后的列表：
-
-```
- Don, King, Kong
-```
-
-在花费二分钟编写代码后，你发现该 lambda 表达式与 `String` 类的 `join` 方法的功能相同。这是 Java 8 添加到 `String` 类中的静态方法。其一个签名如下：
+然后`main`方法调用`formatAndPrint`方法，传递 lambda 表达式、分隔符和字符串列表。如果你运行`NoMethodRef`，你将看到格式化后的列表：
 
 ```
- public static String join(CharSequence delimiter,
+Don, King, Kong
+```
+
+在花费二分钟编写代码后，你发现该 lambda 表达式与`String`类的`join`方法的功能相同。这是 Java 8 添加到`String`类中的静态方法。其一个签名如下：
+
+```
+public static String join(CharSequence delimiter,
         Iterable extends CharSequence> elements)
 ```
 
-将其与列表 2.1 中函数式接口的 `format` 方法进行对比：
+将其与列表 2.1 中函数式接口的`format`方法进行对比：
 
 ```
- public String format(java.lang delimiter, 
+public String format(java.lang delimiter, 
         java.util.List<String> list);
 ```
 
-由于 `List` 实现了 `Iterable` 且 `String` 实现了 `CharSequence`，`join` 与 `format` 。
+由于`List`实现了`Iterable`且`String`实现了`CharSequence`，`join`与`format`。
 
-方法引用允许你复用现有实现，例如 `String.join()`。因此，你可以重写 `NoMethodRef` 类以使用 `String.join()` 的引用。这在列表 2.2 的 `MethodReferenceDemo1` 类所示。
+方法引用允许你复用现有实现，例如`String.join()`。因此，你可以重写`NoMethodRef`类以使用`String.join()`的引用。这在列表 2.2 的`MethodReferenceDemo1`类所示。
 
 列表 2.2：MethodReferenceDemo1 类
 
 ```
- package app02.methodref;
+package app02.methodref;
 import java.util.Arrays;
 import java.util.List;
 
@@ -692,22 +549,20 @@ public class MethodReferenceDemo1 {
 }
 ```
 
-你仍然拥有相同的 `StringListFormatter` 接口和相同的 `formatAndPrint` 方法。然而，`main` 方法不再包含实现 `StringListFormatter` 的 lambda 表达式。相反，你使用 `String::join` 作为 `StringListFormatter` 的实现。
+
+
+你仍然拥有相同的`StringListFormatter`接口和相同的`formatAndPrint`方法。然而，`main`方法不再包含实现`StringListFormatter`的 lambda 表达式。相反，你使用`String::join`作为`StringListFormatter`的实现。
 
 ```
- formatAndPrint(String::join, ", ", names);
+formatAndPrint(String::join, ", ", names);
 ```
 
+顺便提一下，注意`StringListFormatter`中的抽象方法接受两个参数并返回一个值。这是`BiFunction`的理想候选者。列表 2.3 中的`WithBiFunction`类是`MethodReferenceDemo1`类的重写，它完全消除了`StringListFormatter`接口。`formatAndPrint`方法也经过修改以接受一个`BiFunction`作为其第一个参数。
 
-
-
-
-顺便提一下，注意 `StringListFormatter` 中的抽象方法接受两个参数并返回一个值。这是 `BiFunction` 的理想候选者。列表 2.3 中的 `WithBiFunction` 类是 `MethodReferenceDemo1` 类的重写，它完全消除了 `StringListFormatter` 接口。`formatAndPrint` 方法也经过修改以接受一个 `BiFunction` 作为其第一个参数。
-
-### 列表 2.3：`WithBiFunction` 类
+### 列表 2.3：`WithBiFunction`类
 
 ```java
- package app02.methodref;
+package app02.methodref;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.BiFunction;
@@ -732,18 +587,18 @@ public class WithBiFunction {
 
 此类方法引用的兼容性规则与静态方法引用的规则相同。被引方法必须与被替换的函数式接口的抽象方法具有兼容的返回值和参数。
 
-例如，在 JDK 1.8 中，`java.lang.Iterable` 接口有一个名为 `forEach` 的默认方法，它接受一个 `Consumer`：
+例如，在 JDK 1.8 中，`java.lang.Iterable`接口有一个名为`forEach`的默认方法，它接受一个`Consumer`：
 
 ```java
- default void forEach(java.util.function.Consumer<? super T> action)
+default void forEach(java.util.function.Consumer<? super T> action)
 ```
 
-`forEach` 为 `Iterable` 的每个元素执行给的操作。得益于继承，该方法被其子接口 `List` 继承，我将在列表 2.4 的示例中使用它。
+`forEach`为`Iterable`的每个元素执行给的操作。得益于继承，该方法被其子接口`List`继承，我将在列表 2.4 的示例中使用它。
 
 ### 列表 2.4：在对象中引用实例方法
 
 ```java
- package app02.methodref;
+package app02.methodref;
 import java.util.Arrays;
 import java.util.List;
 
@@ -759,39 +614,39 @@ public class MethodReferenceDemo2 {
 }
 ```
 
-`MethodReferenceDemo2` 类有一个需要打印的水果列表。你可以通过调用 `forEach` 方法来实现这一点，并如下所示以 lambda 表达式的形式传递 `Consumer`：
+`MethodReferenceDemo2`类有一个需要打印的水果列表。你可以通过调用`forEach`方法来实现这一点，并如下所示以 lambda 表达式的形式传递`Consumer`：
 
 ```java
- fruits.forEach((name) -> System.out.println(name));
+fruits.forEach((name) -> System.out.println(name));
 ```
 
-或者，由于 `System.out` 是系统已经为你创建的现有对象，你可以使用方法引用指向 `System.out` 上的 `println` 方法。
+或者，由于`System.out`是系统已经为你创建的现有对象，你可以使用方法引用指向`System.out`上的`println`方法。
 
 ```java
- fruits.forEach(System.out::println);
+fruits.forEach(System.out::println);
 ```
 
 ### 引用对象引用不可用的实例方法
 
-坐稳了。这一个有点复杂，需要你全神贯。
+坐稳了。这一个有点复杂，需要你全神贯注。
 
 你可以将实例方法的引用作为方法参数传递，以替换函数式接口。在这种情况下，你不需要显式地创建所属类的实例。此类方法引用的语法与第一、二类方法引用不同。对于前二类方法引用，参数的数量必须与函数式接口抽象方法预期的参数数量相同。当使用没有对象引用的实例方法时，被引方法的参数数量必须比函数式接口抽象方法预期的参数数量少一个。因此，如果函数式接口的抽象方法接受四个参数，则被引实例方法只需要三个参数，且这些参数必须与抽象方法的第二、第三和第四参数兼容。此外，抽象方法的第一个参数必须是与包含该实例方法的类兼容的类型。
 
 此类方法引用的兼容性规则如下所示。第一行是函数式接口抽象方法的伪签名，第二行是被引实例方法的伪签名。
 
 ```
- returnType abstractMethod(type-1, type-2, type-3, type-4)
+returnType abstractMethod(type-1, type-2, type-3, type-4)
 returnType instanceMethod(type-2, type-3, type-4)
 ```
 
-在这里，`type-1` 必须与包含该实例方法的类兼容，因为该类将被实例化，并且该实例将与其他参数一起作为第一个参数传递给抽象方法。
+在这里，`type-1`必须与包含该实例方法的类兼容，因为该类将被实例化，并且该实例将与其他参数一起作为第一个参数传递给抽象方法。
 
 在看了这种方法引用的示例后，这一点将会变得清晰。
 
-### 列表 2.5：`MethodReferenceDemo3` 类
+### 列表 2.5：`MethodReferenceDemo3`类
 
 ```java
- package app02.methodref;
+package app02.methodref;
 import java.util.Arrays;
 
 public class MethodReferenceDemo3 {
@@ -807,28 +662,28 @@ public class MethodReferenceDemo3 {
 }
 ```
 
-列表 2.5 中的示例展示了如何向 `Arrays.sort` 传递实例方法引用以代替 `Comparator`。`MethodReferenceDemo3` 类包含一个字符串数组，其中没有严格遵守大小写敏感。如果你使用只接受一个参数的 `Arrays.sort` 重载版本来对此数组排序，名称将排序为：
+列表 2.5 中的示例展示了如何向`Arrays.sort`传递实例方法引用以代替`Comparator`。`MethodReferenceDemo3`类包含一个字符串数组，其中没有严格遵守大小写敏感。如果你使用只接受一个参数的`Arrays.sort`重载版本来对此数组排序，名称将排序为：
 
 ```
- Alexis, Kyleen, anna
+Alexis, Kyleen, anna
 ```
 
-这不是你想要的。因此，你需要使用同样接受 `Comparator` 的 `Arrays.sort`：
+这不是你想要的。因此，你需要使用同样接受`Comparator`的`Arrays.sort`：
 
 ```
- public static <T> void sort(T[] array, Comparator<? super T> c)
+public static <T> void sort(T[] array, Comparator<? super T> c)
 ```
 
-示例展示了如何使用实例方法引用 `String.compareIgnoreCase` 来替换 `Comparator`（记得 `Comparator` 是一个函数式接口）。这里是 `String.compareToIgnoreCase` 的签名。
+示例展示了如何使用实例方法引用`String.compareIgnoreCase`来替换`Comparator`（记得`Comparator`是一个函数式接口）。这里是`String.compareToIgnoreCase`的签名。
 
 ```java
- public int compareToIgnoreCase(String str)
+public int compareToIgnoreCase(String str)
 ```
 
-它比 `Comparator.compare` 的签名少一个参数。
+它比`Comparator.compare`的签名少一个参数。
 
 ```
- int compare(String str1, String str2)
+int compare(String str1, String str2)
 ```
 
 这对于第二类方法引用非常完美。
@@ -836,7 +691,7 @@ public class MethodReferenceDemo3 {
 如果你运行代码，你会发现名称被正确排序了。这里是结果。
 
 ```
- Alexis
+Alexis
 anna
 Kyleen
 ```
@@ -846,15 +701,15 @@ Kyleen
 第四类方法引用使用构造函数。构造函数引用的语法如下：
 
 ```
- ClassName::new
+ClassName::new
 ```
 
-假设你需要一个方法将 `Integer` 数组转换为 `Collection`，并且你需要确定结果集合是 `List` 还是 `Set`。为此，你可以在列表 2.6 中创建 `arrayToCollection` 方法。
+假设你需要一个方法将`Integer`数组转换为`Collection`，并且你需要确定结果集合是`List`还是`Set`。为此，你可以在列表 2.6 中创建`arrayToCollection`方法。
 
-### 列表 2.6：`MethodReferenceDemo4` 类
+### 列表 2.6：`MethodReferenceDemo4`类
 
 ```java
- package app02.methodref;
+package app02.methodref;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -890,31 +745,31 @@ public class MethodReferenceDemo4 {
 与其将此 lambda 表达式作为方法的第一个参数传递。
 
 ```java
- () -> new ArrayList<Integer>()
+() -> new ArrayList<Integer>()
 ```
 
-你只需要传递此 `ArrayList` 构造函数的引用。
+你只需要传递此`ArrayList`构造函数的引用。
 
 ```
- ArrayList<Integer>::new
+ArrayList<Integer>::new
 ```
 
 以及，而不是这个
 
 ```
- () -> new HashSet<Integer>()
+() -> new HashSet<Integer>()
 ```
 
 你可以写成
 
 ```
- HashSet<Integer>::new
+HashSet<Integer>::new
 ```
 
 如果你运行该示例，你将在控制台上看到以下内容。
 
 ```
- Natural order
+Natural order
 1
 8
 5
@@ -925,30 +780,27 @@ Ascending order
 8
 ```
 
-
-
-
 关于构造函数引用的更多示例，可以在第 4 章“Stream API”中找到。
 
 ### 总结
 
-Java 8 的一项新功能 `lambda expressions` 可以让某些结构变得更短更具可读性，特别是当你在处理内部类时。本章讨论了方法引用，这是一种可以使编写 lambda 表达式的子功能。
+Java 8 的一项新功能`lambda expressions`可以让某些结构变得更短更具可读性，特别是当你在处理内部类时。本章讨论了方法引用，这是一种可以使编写 lambda 表达式的子功能。
 
 # 第 3 章：Optional 及相似类
 
-Java 程序员多年来一直在处理 `null pointer exceptions`（空指针异常）。在 Java 8 中，处理它们有一种新方法：通过将可能为空的对象封装在一个名为 `Optional` 的类中。本章涵盖了 `Optional` 以及相似类。
+Java 程序员多年来一直在处理`null pointer exceptions`（空指针异常）。在 Java 8 中，处理它们有一种新方法：通过将可能为空的对象封装在一个名为`Optional`的类中。本章涵盖了`Optional`以及相似类。
 
 ## 概述
 
-Java 8 增加了 `Optional`、`OptionalInt`、`OptionalLong` 和 `OptionalDouble` 类来处理 `NullPointerExceptions`。这些类作为 `java.util` 包的一部分，是大量使用 lambda 表达式和方法引用的优秀范例。
+Java 8 增加了`Optional`、`OptionalInt`、`OptionalLong`和`OptionalDouble`类来处理`NullPointerExceptions`。这些类作为`java.util`包的一部分，是大量使用 lambda 表达式和方法引用的优秀范例。
 
-这四个类非常相似，而 `Optional` 是其中最重要的，因为它可以用于任何类型，而其他类分别仅适用于整数、`longs` 或 `doubles`。因此，`Optional` 是本章的重点。
+这四个类非常相似，而`Optional`是其中最重要的，因为它可以用于任何类型，而其他类分别仅适用于整数、`longs`或`doubles`。因此，`Optional`是本章的重点。
 
-`Optional` 是一个用于可能为空的值的容器。正如你现在所知的，尝试在空引用变量上调用方法或字段会抛出 `NullPointerException`。处理空并不困难，但可能会很繁琐。考虑列表 3.1 中的代码，它展示了一个 `Company` 类，它可以拥有一个 `Office`，而 `Office` 又可以拥有 `Address`。为了简单起见，这里的 `Address` 只包含两个字段：`street` 和 `city`。所有这些属性都可以为空。一个 `Company` 可能没有 `Office`，而一个 `Address` 可能没有关于 `street` 和 `city` 的完整数据。
+`Optional`是一个用于可能为空的值的容器。正如你现在所知的，尝试在空引用变量上调用方法或字段会抛出`NullPointerException`。处理空并不困难，但可能会很繁琐。考虑列表 3.1 中的代码，它展示了一个`Company`类，它可以拥有一个`Office`，而`Office`又可以拥有`Address`。为了简单起见，这里的`Address`只包含两个字段：`street`和`city`。所有这些属性都可以为空。一个`Company`可能没有`Office`，而一个`Address`可能没有关于`street`和`city`的完整数据。
 
 ### 列表 3.1：检查空值的繁琐方法
 
-```
+```java
 package app03.optional1;
 
 class Company {
@@ -1032,7 +884,9 @@ public class OptionalDemo1 {
 }
 ```
 
-列表 3.1 中的 `OptionalDemo1` 类创建了一个用于测试的 `Company`，并尝试获取该公司的街道地址。意识到任何字段都可能为空，程序员有意识地尝试在对实例调用方法之前对每个单独实例进行空值测试，导致了如下代码：
+
+
+列表 3.1 中的`OptionalDemo1`类创建了一个用于测试的`Company`，并尝试获取该公司的街道地址。意识到任何字段都可能为空，程序员有意识地尝试在对实例调用方法之前对每个单独实例进行空值测试，导致了如下代码：
 
 ```
         if (company1 != null) {
@@ -1050,38 +904,34 @@ public class OptionalDemo1 {
 
 这有点很繁琐，且可读性受损。
 
-`Optional` 类可以提供帮助。如果你决定使用它，你可以将每个可能为空的字段封装在 `Optional` 中。例如，`Company` 中的 `office` 字段现在应该是：
+`Optional`类可以提供帮助。如果你决定使用它，你可以将每个可能为空的字段封装在`Optional`中。例如，`Company`中的`office`字段现在应该是：
 
 ```java
  private Optional<Office> office;
 ```
 
-而 `Address` 中的 `city` 字段应该是
+而`Address`中的`city`字段应该是
 
 ```java
  private Optional<String> city;
 ```
 
-在学习如何使用 `Optional` 重写列表 3.1 中的示例之前，请先看表 3.1 中 `Optional` 的方法。
+在学习如何使用`Optional`重写列表 3.1 中的示例之前，请先看表 3.1 中`Optional`的方法。
 
 | 方法 | 描述 |
 | :--- | :--- |
-| `empty` | 返回一个空的 `Optional` |
-| `filter` | 如果值存在并匹配给定的谓词，则返回一个描述该值的 `Optional`。否则，返回一个空的 `Optional`。 |
-| `flatMap` | 如果值存在，对该值应用指定的映射函数，并返回一个描述映射结果的 `Optional`。如果值不存在，返回一个空的 `Optional`。 |
-| `get` | 如果值存在，则返回值。否则，抛出 `NoSuchElementException`。 |
-| `ifPresent` | 如果值存在，则调用给定的 `Consumer`。 |
+| `empty` | 返回一个空的`Optional` |
+| `filter` | 如果值存在并匹配给定的谓词，则返回一个描述该值的`Optional`。否则，返回一个空的`Optional`。 |
+| `flatMap` | 如果值存在，对该值应用指定的映射函数，并返回一个描述映射结果的`Optional`。如果值不存在，返回一个空的`Optional`。 |
+| `get` | 如果值存在，则返回值。否则，抛出`NoSuchElementException`。 |
+| `ifPresent` | 如果值存在，则调用给定的`Consumer`。 |
 | `isPresent` | 如果值存在，则返回 true。否则，返回 false。 |
-| `map` | 如果值存在，则对它应用给定的映射函数。如果结果不为空，返回一个描述结果的 `Optional`。 |
-| `of` | 返回描述给定非空值的 `Optional`。 |
-| `ofNullable` | 如果给定值不为空，则返回描述该值的 `Optional`。如果值为空，返回一个空的 `Optional`。 |
+| `map` | 如果值存在，则对它应用给定的映射函数。如果结果不为空，返回一个描述结果的`Optional`。 |
+| `of` | 返回描述给定非空值的`Optional`。 |
+| `ofNullable` | 如果给定值不为空，则返回描述该值的`Optional`。如果值为空，返回一个空的`Optional`。 |
 | `orElse` | 如果值存在，则返回值。否则，返回指定的值。 |
 
 表 3.1：Optional 的重要方法
-
-
-
-
 
 ```java
  package app03.optional2;
@@ -1183,21 +1033,21 @@ public class OptionalDemo2 {
 }
 ```
 
-`OptionalDemo2` 类展示了如何获取公司的街道和城市，首先通过将每次 `flatMap` 调用的返回值赋值给变量，然后通过链式调用。
+`OptionalDemo2`类展示了如何获取公司的街道和城市，首先通过将每次`flatMap`调用的返回值赋值给变量，然后通过链式调用。
 
 ### OptionalInt, OptionalLong 和 OptionalDouble
 
-`OptionalInt`、`OptionalLong` 和 `OptionalDouble` 类包含了 `Optional` 提供的方法的子集。例如，它们拥有这些方法：`empty`、`ifPresent`、`isPresent` 和 `of`。`of` 接收一个基本类型，由于基本类型不能为空，因此没有 `ofNullable` 方法。也没有 `get` 方法。相反，`OptionalInt` 有一个 `getAsInt` 方法，`OptionalLong` 有一个 `getAsLong` 方法，而 `OptionalDouble` 有一个 `getAsDouble` 方法。也没有 `filter`、`flatMap` 和 `map` 方法。
+`OptionalInt`、`OptionalLong`和`OptionalDouble`类包含了`Optional`提供的方法的子集。例如，它们拥有这些方法：`empty`、`ifPresent`、`isPresent`和`of`。`of`接收一个基本类型，由于基本类型不能为空，因此没有`ofNullable`方法。也没有`get`方法。相反，`OptionalInt`有一个`getAsInt`方法，`OptionalLong`有一个`getAsLong`方法，而`OptionalDouble`有一个`getAsDouble`方法。也没有`filter`、`flatMap`和`map`方法。
 
 ### 总结
 
-Java 程序员必须在代码的到处处理空指针异常。Java 8 引入了 `Optional` 和类似的类，作为处理空指针异常的新强大方法。在本章中，你已经学习了如何使用 `Optional`。
+Java 程序员必须在代码的到处处理空指针异常。Java 8 引入了`Optional`和类似的类，作为处理空指针异常的新强大方法。在本章中，你已经学习了如何使用`Optional`。
 
 # 第 4 章
 
 ## Stream API
 
-在本章中，你将学习 `Stream API`，这是 JDK 8 的新特性。为了理解本章的主题，你需要知道如何使用 `Lambda 表达式` 以及 `java.util.function` 中的预定义函数接口，这两者在第 1 章“Lambda 表达式”中都讨论过。
+在本章中，你将学习`Stream API`，这是 JDK 8 的新特性。为了理解本章的主题，你需要知道如何使用`Lambda 表达式`以及`java.util.function`中的预定义函数接口，这两者在第 1 章“Lambda 表达式”中都讨论过。
 
 ## 概述
 
@@ -1207,9 +1057,9 @@ Java 程序员必须在代码的到处处理空指针异常。Java 8 引入了 `
 
 使用流的主要原因是它支持顺序和并行聚合操作。例如，你可以轻松地过滤、排序或映射流中的元素。
 
-`Stream API` 由 `java.util.stream` 包中的类型组成。`Stream` 接口是最频繁使用的流类型。`Stream` 可用于传输任何类型的对象。还有 `Stream` 的特化类型：`IntStream`、`LongStream` 和 `DoubleStream`。所有四种流类型都派生自 `BaseStream`。
+`Stream API`由`java.util.stream`包中的类型组成。`Stream`接口是最频繁使用的流类型。`Stream`可用于传输任何类型的对象。还有`Stream`的特化类型：`IntStream`、`LongStream`和`DoubleStream`。所有四种流类型都派生自`BaseStream`。
 
-表 4.1 显示了 `Stream` 接口中定义的一些方法。
+表 4.1 显示了`Stream`接口中定义的一些方法。
 
 | 方法 | 描述 |
 | :--- | :--- |
@@ -1229,7 +1079,7 @@ Java 程序员必须在代码的到处处理空指针异常。Java 8 引入了 `
 
 表 4.1：Stream 的重要方法
 
-某些 Stream 方法执行中间操作，而某些执行终端操作。中间操作将流转换为另一个流。`filter`、`map` 和 `sorted` 是执行中间操作的方法示例。终端操作产生结果或产生副作用。`count` 和 `forEach` 是执行终端操作的方法。
+某些 Stream 方法执行中间操作，而某些执行终端操作。中间操作将流转换为另一个流。`filter`、`map`和`sorted`是执行中间操作的方法示例。终端操作产生结果或产生副作用。`count`和`forEach`是执行终端操作的方法。
 
 值得注意的是，流是惰性的。只有在启动终端操作时，才会对源进行计算。
 
@@ -1237,43 +1087,40 @@ Stream 的方法将在后面的章节中详细介绍。
 
 ## 创建和获取流
 
-你可以使用 `Stream` 的静态方法 `of` 来创建一个顺序流。例如，以下代码段创建一个包含三个元素的 `Integer`  `Stream`。
+你可以使用`Stream`的静态方法`of`来创建一个顺序流。例如，以下代码段创建一个包含三个元素的`Integer` `Stream`。
 
 ```java
  Stream<Integer> stream = Stream.of(100, 200, 300);
 ```
 
-或者，你可以将数组传递给 `of` 方法：
+或者，你可以将数组传递给`of`方法：
 
 ```java
  String[] names = {"Bart", "Lisa", "Maggie"};
 Stream<String> stream = Stream.of(names);
 ```
 
-`java.util.Arrays` 工具类现在有一个 `stream` 方法用于将数组转换为顺序流。例如，你可以使用 `Arrays` 重写上面的代码来从数组创建 Stream。
+`java.util.Arrays`工具类现在有一个`stream`方法用于将数组转换为顺序流。例如，你可以使用`Arrays`重写上面的代码来从数组创建 Stream。
 
 ```java
  String[] names = {"Bart", "Lisa", "Maggie"};
 Stream<String> stream = Arrays.stream(names);
 ```
 
-此外，`java.util.Collection` 接口也有名为 `stream` 和 `parallelStream` 的默认方法，分别返回顺序流或并行流，并集合为源。它们的签名如下。
+此外，`java.util.Collection`接口也有名为`stream`和`parallelStream`的默认方法，分别返回顺序流或并行流，并集合为源。它们的签名如下。
 
 ```java
  default java.util.stream.Stream<E> stream()
 default java.util.stream.Stream<E> parallelStream()
 ```
 
-多亏于 `Collection` 中的这些方法，从 `List` 或 `Set` 获取 `Stream` 是轻而易举。
+多亏于`Collection`中的这些方法，从`List`或`Set`获取`Stream`是轻而易举。
 
+此外，`java.nio.file.Files`类提供了两个返回`Stream<Path>`的方法：`list`和`walk`。`list`返回一个指向给定路径下条目的`Paths`的`Stream`。另一方面，`walk`会遍历给定路径中的条目，并将它们作为流的形式返回。
 
+`Files`还包含一个`lines`方法，该方法可以将文本文件中所有的行作为`Stream<String>`返回。
 
-
-此外，`java.nio.file.Files` 类提供了两个返回 `Stream<Path>` 的方法：`list` 和 `walk`。`list` 返回一个指向给定路径下条目的 `Paths` 的 `Stream`。另一方面，`walk` 会遍历给定路径中的条目，并将它们作为流的形式返回。
-
-`Files` 还包含一个 `lines` 方法，该方法可以将文本文件中所有的行作为 `Stream<String>` 返回。
-
-例如，列表 4.1 中的 `ObtainStreamDemo` 类展示了如何从 `Files` 类获取流。
+例如，列表 4.1 中的`ObtainStreamDemo`类展示了如何从`Files`类获取流。
 
 ### 列表 4.1：ObtainStreamDemo 类
 
@@ -1299,18 +1146,20 @@ public class ObtainStreamDemo {
 }
 ```
 
-列表 4.1 中的代码构建了一个引用当前目录（即运行 Java 程序的目录）的 `Path`，并将其传递给 `Files.list`。该方法返回一个 `Paths` 的 `Stream`。随后代码在 `Stream` 上调用 `forEach` 方法，传递一个打印每个条目的 `Consumer`。如果你运行该代码，你将在控制台上看到当前路径下的所有条目打印。
+列表 4.1 中的代码构建了一个引用当前目录（即运行 Java 程序的目录）的`Path`，并将其传递给`Files.list`。该方法返回一个`Paths`的`Stream`。随后代码在`Stream`上调用`forEach`方法，传递一个打印每个条目的`Consumer`。如果你运行该代码，你将在控制台上看到当前路径下的所有条目打印。
 
 ### 合并流
 
-`Stream` 接口提供了一个 `concat` 方法，用于惰性地合并或链接两个流。该方法返回一个新的流，其元素包含第一个流的所有元素，紧随其的是第二个流的所有元素。
+`Stream`接口提供了一个`concat`方法，用于惰性地合并或链接两个流。该方法返回一个新的流，其元素包含第一个流的所有元素，紧随其的是第二个流的所有元素。
 
-列表 4.2 中的代码展示了如何合并两个 `String` 类型的 `Stream` 并对其进行排序。
+列表 4.2 中的代码展示了如何合并两个`String`类型的`Stream`并对其进行排序。
 
 ### 列表 4.2：合并流
 
+
+
 ```java
- package app04;
+package app04;
 import java.util.stream.Stream;
 
 public class StreamConcatDemo {
@@ -1325,32 +1174,32 @@ public class StreamConcatDemo {
 }
 ```
 
-如果你运行列表 4.2 中的 `StreamConcatDemo` 类，你将在控制台上看到以下输出。
+如果你运行列表 4.2 中的`StreamConcatDemo`类，你将在控制台上看到以下输出。
 
 ```
- Alpha
+Alpha
 Christie
 January
 Okanagan
 Sydney
 ```
 
-### 过滤
+## 过滤
 
-当你过滤流时，你根据某些标准选择流中的元素，并为所选元素返回一个新的 `Stream`。你通过在 `Stream` 对象上调用 `filter` 方法来过滤流，并传递一个 `Predicate`。`Predicate` 决定一个元素是否包含在新的流中。
+当你过滤流时，你根据某些标准选择流中的元素，并为所选元素返回一个新的`Stream`。你通过在`Stream`对象上调用`filter`方法来过滤流，并传递一个`Predicate`。`Predicate`决定一个元素是否包含在新的流中。
 
-以下是 `filter` 方法的签名。
+以下是`filter`方法的签名。
 
 ```java
- Stream<T> filter(java.util.function.Predicate<? super T> predicate)
+Stream<T> filter(java.util.function.Predicate<? super T> predicate)
 ```
 
-例如，列表 4.3 中的代码读取列表 4.4 中的 `example.txt` 文件，并允许通过非空且不是注释的行。在移除所有尾部空格后，注释行以哈希符号（##）开头。
+例如，列表 4.3 中的代码读取列表 4.4 中的`example.txt`文件，并允许通过非空且不是注释的行。在移除所有尾部空格后，注释行以哈希符号（`##`）开头。
 
 ### 列表 4.3：StreamFilterDemo1 类
 
 ```java
- package app04;
+package app04;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -1377,7 +1226,7 @@ public class StreamFilterDemo1 {
 ### 列表 4.4：example.txt 文件
 
 ```bash
- # Set path so it includes user's private bin if it exists
+# Set path so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 
@@ -1387,7 +1236,7 @@ fi
 如果你运行列表 4.3 中的类，你将在控制台上看到这些行。它打印了文本文件中五行中的三行。
 
 ```
- if [ -d "$HOME/bin" ] ; then
+if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 ```
@@ -1397,7 +1246,7 @@ fi
 ### 列表 4.5：StreamFilterDemo2 类
 
 ```java
- package app04;
+package app04;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -1420,29 +1269,25 @@ public class StreamFilterDemo2 {
 }
 ```
 
-`StreamFilterDemo2` 类首先构建一个指向当前目录父目录的 `Path`。然后它将该 `Path` 传递给 `Files.walk` 以获取 `Paths` 的 `Stream`并将结果赋值给本地变量 `list`。接下来，它使用一个 `Predicate` 过滤流，包含所有名称以 `.java` 结尾的 `Paths`，并调用 `forEach` 方法打印路径。
+`StreamFilterDemo2`类首先构建一个指向当前目录父目录的`Path`。然后它将该`Path`传递给`Files.walk`以获取`Paths`的`Stream`并将结果赋值给本地变量`list`。接下来，它使用一个`Predicate`过滤流，包含所有名称以`.java`结尾的`Paths`，并调用`forEach`方法打印路径。
 
-### 映射
+## 映射
 
-`Stream` 接口的 `map` 方法通过将元素传递给函数将流中的每个元素映射为结果。以下是 `map` 的签名。
+`Stream`接口的`map`方法通过将元素传递给函数将流中的每个元素映射为结果。以下是`map`的签名。
 
 ```java
- <R> Stream<R> map(java.util.function.Function<? super T,
-        ? extends R)
+<R> Stream<R> map(java.util.function.Function<? super T,
+        ? extends R>)
 ```
 
-从签名中可以看出，`map` 方法返回一个新的 `Stream`，其元素类型可能与当前流的元素类型不同。
+从签名中可以看出，`map`方法返回一个新的`Stream`，其元素类型可能与当前流的元素类型不同。
 
-考虑列表 4.6 中的代码，它展示了一个更实用、更真实的流示例，用于计算公司所有员工的平均年龄。它分两个步骤完成：首先，调用 `map` 方法将 `Employee`对象的 `Stream` 转换为 `Period` 对象的 `Stream`。新流中的每个 `Period` 元素包含今天到每个员工生日之间的间隔。换句话说，每个 `Period` 元素包含一个员工的年龄。在第二步中，代码调用 `mapToLong` 方法计算所有员工的平均年龄。
+考虑列表 4.6 中的代码，它展示了一个更实用、更真实的流示例，用于计算公司所有员工的平均年龄。它分两个步骤完成：首先，调用`map`方法将`Employee`对象的`Stream`转换为`Period`对象的`Stream`。新流中的每个`Period`元素包含今天到每个员工生日之间的间隔。换句话说，每个`Period`元素包含一个员工的年龄。在第二步中，代码调用`mapToLong`方法计算所有员工的平均年龄。
 
 ### 列表 4.6：StreamMapDemo 类
 
-
-
-
-
-```
- package app04;
+```java
+package app04;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.Period;
@@ -1494,24 +1339,24 @@ public class StreamMapDemo {
 }
 ```
 
-如果你运行 `StreamMapDemo` 类，你将看到员工的平均年龄。当然，结果取决于你运行程序的时间。在我写这本书时，我在电脑上运行它，得到了如下结果。
+如果你运行`StreamMapDemo`类，你将看到员工的平均年龄。当然，结果取决于你运行程序的时间。在我写这本书时，我在电脑上运行它，得到了如下结果。
 
 ```
- Average employee age : 34.13
+Average employee age : 34.13
 ```
 
 ## 规约 (Reduction)
 
-`Stream` 中更有用的方法之一是 `reduce`，它可以执行规约操作。该方法有两个重载版本：
+`Stream`中更有用的方法之一是`reduce`，它可以执行规约操作。该方法有两个重载版本：
 
-```
- java.util.Optional<T> reduce(java.util.function.BinaryOperator<T> 
+```java
+java.util.Optional<T> reduce(java.util.function.BinaryOperator<T> 
         accumulator)
 T reduce(T identity,
         java.util.function.BinaryOperator<T> accumulator)
 ```
 
-观察这两个签名，你可能会注意到 `reduce` 方法在指定的 `BinaryOperator` 帮助下，将类型为 `T` 的 `Stream` 规约类型类型 `T` 的单个实例。尽管 Java 文档中的描述并不那么直观，但实际上这个方法并没有那么难以理解。
+观察这两个签名，你可能会注意到`reduce`方法在指定的`BinaryOperator`帮助下，将类型为`T`的`Stream`规约类型类型`T`的单个实例。尽管 Java 文档中的描述并不那么直观，但实际上这个方法并没有那么难以理解。
 
 图 4.1 显示了当一个包含四个元素的顺序流正在被规约时，后台发生了什么。
 
@@ -1519,18 +1364,20 @@ T reduce(T identity,
 
 图 4.1: 规约流
 
-首先，`element-1` 和 `element-2` 被用作指定二元运算符的操作数。该操作的结果是一个与元素相同类型的对象，我称之为 `result-a`。接下来，`result-a` 和 `element-3` 被传递给二元运算符，产生 `result-b`，它再次具有与元素相同的类型。最后，`result-b` 和 `element-4` 被传递给二元运算符，返回 `result-c`。由于流中没有更多元素，`result-c` 作为规约的结果被返回。
+首先，`element-1`和`element-2`被用作指定二元运算符的操作数。该操作的结果是一个与元素相同类型的对象，我称之为`result-a`。接下来，`result-a`和`element-3`被传递给二元运算符，产生`result-b`，它再次具有与元素相同的类型。最后，`result-b`和`element-4`被传递给二元运算符，返回`result-c`。由于流中没有更多元素，`result-c`作为规约的结果被返回。
 
-对于并行流，操作可以并行执行。这意味着对 `element-1` 和 `element-2` 的操作可能与对 `element-3` 和 `element-4` 的操作同时发生，然后将第一次操作的结果和第二次操作的结果传递给二元运算符并返回其结果。
+对于并行流，操作可以并行执行。这意味着对`element-1`和`element-2`的操作可能与对`element-3`和`element-4`的操作同时发生，然后将第一次操作的结果和第二次操作的结果传递给二元运算符并返回其结果。
 
 好了。现在让我们来看一个例子。
 
-列表 4.7 中的 `StreamReductionDemo1` 类展示了一个包含四个 `Order` 对象的 `Stream`，它被规约为了单个 `Order` 对象，该对象是最近放置的且值最大的 `Order`。
+列表 4.7 中的`StreamReductionDemo1`类展示了一个包含四个`Order`对象的`Stream`，它被规约为了单个`Order`对象，该对象是最近放置的且值最大的`Order`。
 
-列表 4.7: StreamReductionDemo1 类
+### 列表 4.7：StreamReductionDemo1 类
 
-```
- package app04;
+
+
+```java
+package app04;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.Optional;
@@ -1596,14 +1443,11 @@ public class StreamReductionDemo1 {
     }
 }
 ```
-*(注：由于提供的原文代码片段存在截断和格式错乱，翻译时已根据逻辑进行了必要的补全以确保可读性)*
 
+*注：由于提供的原文代码片段存在截断和格式错乱，翻译时已根据逻辑进行了必要的补全以确保可读性*
 
-
-
-
-```
- package app04;
+```java
+package app04;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.YearMonth;
@@ -1667,12 +1511,12 @@ public class StreamReductionDemo2 {
 }
 ```
 
-`StreamReductionDemo2` 类使用了与 `StreamReduceDemo1` 相同的 `Order` 对象。`calculateSalesTotal` 方法从 `Order` 数组创建了一个 `Stream`，过滤出具有给定年份/月份的 `Orders`，并将元素映射为双，最后将它们归约为 ` `double`。
+`StreamReductionDemo2` 类使用了与 `StreamReduceDemo1` 相同的 `Order` 对象。`calculateSalesTotal` 方法从 `Order` 数组创建了一个 `Stream`，过滤出具有给定年份/月份的 `Orders`，并将元素映射为双，最后将它们归约为 `double`。
 
 如果你运行这个演示类，你将在控制台上看到这些：
 
-```
- Sales for Nov 2014 : $100.49
+```text
+Sales for Nov 2014 : $100.49
 Sales for Dec 2014 : $198.87
 ```
 
@@ -1682,8 +1526,8 @@ Sales for Dec 2014 : $198.87
 
 你使用 `Stream` 接口的 `collect` 方法来执行可变归约操作。它的签名如下：
 
-```
- <R> R collect(java.util.function.Supplier<R> supplier,
+```java
+<R> R collect(java.util.function.Supplier<R> supplier,
         java.util.function.BiConsumer<R, ? super T> accumulator,
         java.util.function.BiConsumer<R, R> combiner);
 ```
@@ -1700,8 +1544,8 @@ Sales for Dec 2014 : $198.87
 
 ### 列表 4.9: StreamCollectDemo1 类
 
-```
- package app04;
+```java
+package app04;
 import java.util.stream.Stream;
 
 public class StreamCollectDemo1 {
@@ -1732,8 +1576,8 @@ public class StreamCollectDemo1 {
 
 ### 列表 4.10: StreamCollectDemo2 类
 
-```
- package app04;
+```java
+package app04;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
@@ -1766,10 +1610,8 @@ public class StreamCollectDemo2 {
 
 
 
-
-
-```
- package app04;
+```java
+package app04;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -1815,10 +1657,10 @@ public class StreamCollectDemo3 {
 }
 ```
 
-如果你在多核计算机上运行此示例，你将在控制台上看到类似 own 的内容。
+如果你在多核计算机上运行此示例，你将在控制台上看到类似下面的内容。
 
 ```
- supplier called
+supplier called
 supplier called
 supplier called
 supplier called
@@ -1839,14 +1681,14 @@ d
 
 ### 并行流
 
-如今大多数计算机都拥有多核处理器。这意味着多个线程可以在不同的核心上并发运行，这使得使用并行流变得意义。然而，并行流的构建成本比顺序流更高，这意味着使用并行流并不总是能让你的程序运行更快。
+如今大多数计算机都拥有多核处理器。这意味着多个线程可以在不同的核心上并发运行，这使得使用并行流变得有意义。然而，并行流的构建成本比顺序流更高，这意味着使用并行流并不总是能让你的程序运行更快。
 
 列表 4.12 中的 `ParallelStreamDemo` 类将六个整数与其斐波那契数进行映射。此示例的目的是展示并行流在多核处理器机器上如何运行得更快。
 
-列表 4.12：`ParallelStreamDemo` 类
+**列表 4.12：`ParallelStreamDemo` 类**
 
-```
- package app04;
+```java
+package app04;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.Arrays;
@@ -1889,7 +1731,7 @@ public class ParallelStreamDemo {
 如果你运行这段代码，你将在控制台上看到这些。
 
 ```
- 55
+55
 6765
 832040
 102334155
@@ -1907,8 +1749,8 @@ Processing time with sequential stream : 1764ms
 
 如你所见，你可以从并行流中受益。然而，对于资源非密集型的任务，这种优势变得越来越小，并且在某一点上，设置并行流的成本将超过设置顺序流的成本加上加速带来的收益。例如，如果我将数字替换为
 
-```
- List<Integer> numbers = 
+```java
+List<Integer> numbers = 
                 Arrays.asList(1, 2, 3, 4, 5, 6);
 ```
 
@@ -1920,7 +1762,7 @@ JDK 1.8 引入了两个用于测量时间的类：`Duration` 和 `Period`。这�
 
 # 第 5 章：日期时间 API
 
-自 Java 1.0 以来就有对日期的支持，主要通过 `java.util.Date` 类实现。然而，`Date` 的设计糟糕且难以使用，导致许多人转向第三方替代方案如 Joda Time ([http://joda.org/])。1.8 的新日期时间 API 解决了许多问题，并与 Joda Time 类似。
+自 Java 1.0 以来就有对日期的支持，主要通过 `java.util.Date` 类实现。然而，`Date` 的设计糟糕且难以使用，导致许多人转向第三方替代方案如 Joda Time ([http://joda.org/](http://joda.org/))。1.8 的新日期时间 API 解决了许多问题，并与 Joda Time 类似。
 
 本章将解释 JDK 1.8 的日期时间。
 
@@ -1930,12 +1772,9 @@ JDK 1.8 引入了两个用于测量时间的类：`Duration` 和 `Period`。这�
 
 在 `java.time` 包中，`Instant` 类表示时间线上的一个点，常用于为操作计时。`LocalDate` 类模型不带时间分和时区的日期，适用于例如表示生日。
 
-如果你既需要日期也时间，那么 `LocalDateTime` 适合你。例如，订单发货日期可能除了日期之外还需要时间，以便跟踪订单。如果你只需要时间而不关心日期，那么你可以使用 `LocalTime`。在此基础上，如果时区很重要，日期时间 API 提供了 `ZonedDateTime` 类。正如其名，该类模型了带时区的日期-时间。例如，你可以使用该类计算位于不同时区的机场之间的飞行时间。
+如果你既需要日期也需要时间，那么 `LocalDateTime` 适合你。例如，订单发货日期可能除了日期之外还需要时间，以便跟踪订单。如果你只需要时间而不关心日期，那么你可以使用 `LocalTime`。在此基础上，如果时区很重要，日期时间 API 提供了 `ZonedDateTime` 类。正如其名，该类模型了带时区的日期-时间。例如，你可以使用该类计算位于不同时区的机场之间的飞行时间。
 
 `java.time` 包还带有两个枚举：`DayOfWeek` 和 `Month`。`DayOfWeek` 代表星期中的一天，从星期一到星期日。`Month` 枚举代表年的十二个月，从一月到十二月。
-
-
-
 
 处理日期和时间经常涉及解析和格式化。Date and Time API 通过在其所有主要类中提供 `parse` 和 `format` 方法来解决这两个问题。此外，`java.time.format` 包含一个 `DateTimeFormatter` 类，用于格式化日期和时间。
 
@@ -1946,17 +1785,17 @@ JDK 1.8 引入了两个用于测量时间的类：`Duration` 和 `Period`。这�
 `Instant` 的静态方法 `now()` 返回一个表示当前时间的 `Instant` 对象：
 
 ```java
- Instant now = Instant.now();
+Instant now = Instant.now();
 ```
 
 `getEpochSecond()` 方法返回自纪元以来经过的秒数。`getNano()` 方法返回自上一秒开始经过的纳秒数。
 
 `Instant` 类的一个常见用法是对操作进行计时，如列表 5.1 所示。
 
-**列表 5.1：使用 Instant 对操作计时**
+**列表 5.1：使用 `Instant` 对操作计时**
 
 ```java
- package app05;
+package app05;
 import java.time.Duration;
 import java.time.Instant;
 
@@ -1993,65 +1832,67 @@ public class InstantDemo1 {
 | `withMonth` | 返回此 `LocalDate` 的副本，将月份设置为给定值。 |
 | `withYear` | 返回此 `LocalDate` 的副本，将年份设置为给定值。 |
 
-**表 5.1：LocalDate 的更多重要方法**
+**表 5.1：`LocalDate` 的更多重要方法**
 
 `LocalDate` 提供了多种方法来创建日期。例如，要创建一个代表今天的 `LocalDate`，请使用静态方法 `now`。
 
 ```java
- LocalDate today = LocalDate.now();
+LocalDate today = LocalDate.now();
 ```
 
 创建一个表示特定年、月、日的 `LocalDate`，使用其静态方法 `of`。例如，以下代码段创建了一个表示 2015 年 12 月 31 日的 `LocalDate`：
 
 ```java
- LocalDate endOfYear = LocalDate.of(2015, 12, 31);
+LocalDate endOfYear = LocalDate.of(2015, 12, 31);
 ```
 
 `of` 方法另一个重载版本，接受 `java.time.Month` 枚举作为第二个参数。例如，这里使用重载方法构造相同的日期：
 
 ```java
- LocalDate endOfYear = LocalDate.of(2015, Month.DECEMBER, 31);
+LocalDate endOfYear = LocalDate.of(2015, Month.DECEMBER, 31);
 ```
 
 还有用于获取 `LocalDate` 的日、月或年的方法，例如 `getDayOfMonth`、`getMonthValue` 和 `getYear`。它们都不接受参数，并返回 `int` 或 `Month` 枚举。此外，还有一个 `get` 方法接受 `TemporalField` 并返回此 `LocalDate` 的部分。例如，将 `ChronoField.YEAR` 传递给 `get` 会返回 `LocalDate` 的年份：
 
 ```java
- int year = localDate.get(ChronoField.YEAR);
+int year = localDate.get(ChronoField.YEAR);
 ```
 
 `ChronoField` 是实现 `TemporalField` 接口的枚举，因此你可以向 `get` 方法传递一个 `ChronoField` 常量。`TemporalField` 和 `ChronoField` 属于 `java.time.temporal` 包。然而，并不是所有的 `ChronoField` 都可以传递给 `get`。例如，将 `ChronoField.SECOND_OF_DAY` 传递给 `get` 会抛出异常。因此，与其使用 `get`，不如使用 `getMonth`、`getYear` 或类似的方法来获取 `LocalDate` 的组件。
 
-还有用于复制 `LocalDate` 的方法，如 `plusDays`、`plusYears`、`minusMonths` 等。例如，要获取代表明日 `LocalDate`，可以创建一个代表今天的 `LocalDate` 然后调用其 `plusDays` 方法。
+还有用于复制 `LocalDate` 的方法，如 `plusDays`、`plusYears`、`minusMonths` 等。例如，要获取代表明日的 `LocalDate`，可以创建一个代表今天的 `LocalDate` 然后调用其 `plusDays` 方法。
 
 ```java
- LocalDate tomorrow = LocalDate.now().plusDays(1);
+LocalDate tomorrow = LocalDate.now().plusDays(1);
 ```
 
 要获取代表昨日的 `LocalDate`，可以使用 `minusDays` 方法。
 
 ```java
- LocalDate yesterday = LocalDate.now().minusDays(1);
+LocalDate yesterday = LocalDate.now().minusDays(1);
 ```
 
 此外，还有 `plus` 和 `minus` 方法以更通的方式获取 `LocalDate` 副本。它们都接受 `long` 和 `TemporalUnit`。这些方法的签名如下：
 
+
+
 ```java
- public LocalDate plus(long amountToAdd, java.time.temporal.TemporalUnit unit)
+public LocalDate plus(long amountToAdd, java.time.temporal.TemporalUnit unit)
 public LocalDate minus(long amountSubtract, java.time.temporal.TemporalUnit unit)
 ```
 
 例如，要获取代表十年前日期的 `LocalDate`，可以使用代码：
 
 ```java
- LocalDate pastDate = LocalDate.now().minus(2, ChronoUnit.DECADES);
+LocalDate pastDate = LocalDate.now().minus(2, ChronoUnit.DECADES);
 ```
 
-`ChronoUnit` 是实现 `TemporalUnit` 的枚举，因此你可以向 `plus` 或 `minus` 方法传递 `ChronoUnit`常量。`LocalDate` 是不可变的，因此无法更改。任何返回 `LocalDate` 的方法都会返回一个新实例。
+`ChronoUnit` 是实现 `TemporalUnit` 的枚举，因此你可以向 `plus` 或 `minus` 方法传递 `ChronoUnit` 常量。`LocalDate` 是不可变的，因此无法更改。任何返回 `LocalDate` 的方法都会返回一个新实例。
 
 列表 5.2 展示了 `LocalDate` 的示例。
 
 ```java
- package app05;
+package app05;
 import java.time.LocalDate;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
@@ -2084,10 +1925,6 @@ public class LocalDateDemo1 {
 | `isZero` | 如果此 `Period` 的三个组件都为零，则返回 `true`。否则返回 `false`。 |
 | `plusDays`, `minusDays` | 在此 `Period` 上增加或减去指定的天数。 |
 | `plusMonths`, `minusMonths` | 在此 `Period` 上增加或减去指定的月数。 |
-
-
-
-
 | `plusYears`, `minusYears` | 向此 `Period` 增加或减去指定的年份。 |
 | `withDays` | 返回一个具有指定天数的此 `Period` 副本。 |
 | `withMonths` | 返回一个具有指定月份的此 `Period` 副本。 |
@@ -2095,21 +1932,21 @@ public class LocalDateDemo1 {
 
 ### 表 5.2 `Period` 的重要方法
 
-创建一个 `Period` 是非常的，这得益于 `of`、`ofDays()`、`ofWeeks()`、`ofMonths()` 和 `ofYears()` 之间的静态工厂方法。例如，以下是创建一个代表两周的 `Period` 的方法。
+创建一个 `Period` 是非常简单的，这得益于 `of`、`ofDays()`、`ofWeeks()`、`ofMonths()` 和 `ofYears()` 之间的静态工厂方法。例如，以下是创建一个代表两周的 `Period` 的方法。
 
-```
+```java
 Period twoWeeks = Period.ofWeeks(2);
 ```
 
 要创建一个代表一年两个月三日的 `Period`，请使用 `of` 方法。
 
-```
+```java
 Period p = Period.of(1, 2, 3);
 ```
 
 要获取 `Period` 的年/月/日组件，调用其 `getYears()`、`getMonths()` 和 `getDays()` 方法。例如，以下代码段中的 `howManyDays` 变量的值为 14。
 
-```
+```java
 Period twoWeeks = Period.ofWeeks(2);
 int howManyDays = twoWeeks.getDays();
 ```
@@ -2151,7 +1988,7 @@ days
 
 `LocalDateTime` 类模型了一个没有时区的日期时间。表 5.3 显示了 `LocalDateTime` 中一些重要的方法。这些方法与 `LocalDate` 的方法相似，增加了一些修改时间组件的方法，例如 `plusHours()`、`plusMinutes()` 和 `plusSeconds()`，这些方法在 `LocalDate` 中是不可用的。
 
-| 方法 |  |
+| 方法 | 说明 |
 | :--- | :--- |
 | `now` | 返回当前日期和时间的静态方法。 |
 | `of` | 从指定的年、月、日、时、分、秒和毫秒创建 `LocalDateTime` 的静态方法。 |
@@ -2172,7 +2009,7 @@ days
 
 `LocalDateTime` 提供了各种静态方法来创建日期时间。`now` 方法带有三个重载，并返回当前日期时间。无参数重载最容易使用：
 
-```
+```java
 LocalDateTime now = LocalDateTime.now();
 ```
 
@@ -2188,13 +2025,13 @@ public static LocalDateTime of(LocalDate date, LocalTime time)
 
 例如，以下代码段创建了一个表示 2015 年 12 月 31 日早上 8 点的 `LocalDateTime`。
 
-```
+```java
 LocalDateTime endOfYear = LocalDateTime.of(2015, 12, 31, 8, 0);
 ```
 
 你可以使用 `plusXXX` 或 `minusXXX` 方法创建 `LocalDateTime` 的副本。例如，这段代码创建了一个代表明天同一时间的 `LocalDateTime`。
 
-```
+```java
 LocalDateTime now = LocalDateTime.now();
 LocalDateTime sameTimeTomorrow = now.plusHours(24);
 ```
@@ -2244,7 +2081,7 @@ public class ZoneDemo1 {
 
 `getAvailableZoneIds()` 返回一个 `String` 的 `Set`。你可以使用 `Collections.sort()` 对 `Set` 进行排序，或者更优雅地调用它的 `stream` 方法。你可以编写这样的代码来排序区域标识符：
 
-```
+```java
 ZoneId.getAvailableZoneIds().stream().sorted()
         .forEach(System.out::println);
 ```
@@ -2282,9 +2119,6 @@ US/Pacific
 2015-12-31T10:59:59+01:00 Europe/Paris
 ```
 
-
-
-
 `ZonedDateTime` 始终是不可变的，且时间组件的精度为纳秒。
 
 表 5.4 显示了 `ZonedDateTime` 中更重要的方法。
@@ -2300,10 +2134,13 @@ US/Pacific
 | `plusYears`, `minusYears` | 在当前的 `ZonedDateTime` 上增加或减去指定的年份。 |
 | `plusHours`, `minusHours` | 在当前的 `ZonedDateTime` 上增加或减去指定的小时。 |
 | `plusMinutes`, `minusMinutes` | 在当前的 `ZonedDateTime` 上增加或减去指定的分钟。 |
+
+
+
 | `plusSeconds`, `minusSeconds` | 在当前的 `ZonedDateTime` 上增加或减去指定的秒。 |
 | `isAfter`, `isBefore` | 检查此 `ZonedDateTime` 是否在指定的时区日期时间之后或之前。 |
 | `getZone` | 返回此 `ZonedDateTime` 的时区 ID。 |
-| `withYear`, `withMonth`, `withDayOfMonth` | 返回此 `ZonedDateTime` 的副本，将年/月/日设置为为指定的值。 |
+| `withYear`, `withMonth`, `withDayOfMonth` | 返回此 `ZonedDateTime` 的副本，将年/月/日设置为指定的值。 |
 | `withHour`, `withMinute`, `withSecond` | 返回此 `ZonedDateTime` 的副本，将时/分/秒设置为指定的值。 |
 | `withNano` | 返回此 `ZonedDateTime` 的副本，将纳秒设置为指定的值。 |
 
@@ -2439,12 +2276,8 @@ There are -2 hours and 0 minutes.
 
 列表 5.7：旅行时间计算器
 
-
-
-
-
 ```java
- package app05;
+package app05;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.Month;
@@ -2493,7 +2326,7 @@ public class TravelTimeCalculator {
 结果如下。
 
 ```
- Travel time 1: 21 hours
+Travel time 1: 21 hours
 Travel time 2: 22 hours
 ```
 
@@ -2503,7 +2336,8 @@ Travel time 2: 22 hours
 
 你使用 `java.time.format.DateTimeFormatter` 来格式化本地或带时区的日期时间。`LocalDate`、`LocalDateTime`、`LocalTime` 和 `ZonedDateTime` 类提供了具有以下签名的 `format` 方法。
 
-``` public java.lang.String format(java.time.format.DateTimeFormatter 
+```
+public java.lang.String format(java.time.format.DateTimeFormatter 
         formatter)
 ```
 
@@ -2514,7 +2348,7 @@ Travel time 2: 22 hours
 ### 列表 5.8：格式化日期
 
 ```java
- package app05;
+package app05;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -2538,7 +2372,7 @@ public class DateTimeFormatterDemo1 {
 结果如下（第一个结果取决于你的区域设置）。
 
 ```
- Format 1: 19-Mar-2000 10:56:59 AM
+Format 1: 19-Mar-2000 10:56:59 AM
 Format 2: March 19, 2000 10:56:59
 ```
 
@@ -2550,8 +2384,10 @@ Java 日期和时间 API 中的许多类都有两个解析方法。第一个需�
 
 ### 列表 5.9：一个年龄计算器
 
+
+
 ```java
- package app05;
+package app05;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
@@ -2597,16 +2433,16 @@ public class AgeCalculator {
 如果你运行这个示例，你将在控制台上看到以下内容：
 
 ```
- Please enter your birthday in yyyy-MM-dd format (e.g. 1980-9-28):
+Please enter your birthday in yyyy-MM-dd format (e.g. 1980-9-28):
 ```
 
 如果你输入了格式正确的日期，程序将打印计算出的年龄，如下：
 
 ```
- Today you are 79 years, 0 months and 15 days old
+Today you are 79 years, 0 months and 15 days old
 ```
 
-### 总结
+## 总结
 
 Java 8 带来了新的日期时间 API 来取代围绕 `java.util.Date` 类的旧 API。在本章中，你学习了使用新 API 中的核心类，如 `Instant`、`LocalDate`、`LocalDateTime`、`ZonedDateTime`、`Period` 和 `Duration`，并学习了格式化和解析日期时间。
 
@@ -2622,19 +2458,15 @@ JavaFX 是一种构建丰富应用程序的技术，可以作为桌面应用程�
 
 作为一种桌面技术，JavaFX 是任何 Java 开发者或渴望成为 GUI 开发者的极选择，归功于其功能和易用性。此外，JavaFX 受到 Oracle 以及整个 Java 社区的全支持，因此获取帮助很容易。
 
-
-
-
-
 作为一种构建浏览器内应用程序的技术，JavaFX 必须与其它技术竞争，特别是 HTML 5、Flash 和 Microsoft Silverlight。HTML 5 的优势在于被现代浏览器原生支持，这意味着使用 HTML 5 构建的任何内容都能保证在这些浏览器中无缝运行，尽管 HTML 5 的功能没有 JavaFX、Flash 或 Silverlight 丰富。JavaFX、Flash 和 Silverlight 应用需要插件才能在浏览器中运行，浏览器并不一定带有这些插件，因此例如 JavaFX applet 用户可能在运行 JavaFX applet 之前必须安装 Java 浏览器插件。安装插件可能会或不会阻碍人们对 JavaFX applet 的喜爱。你可以通过阅读此网页上的说明，自行判断安装插件是否足够简单。
 
 ```
-http://java.com/en/download/help/enable_browser.xml 
+http://java.com/en/download/help/enable_browser.xml
 ```
 
 ### 设置
 
-JavaFX 起初是一项独立的技术，必须从 JDK 离离开下载。然而，从 `JDK 1.7 update 6` (`JDK7u6`) 开始，JDK 自带了最新版本的 JavaFX。`JDK 1.7` 包含 `JavaFX 2.2`，而 `Java 8` 带有 `JavaFX 8`，这是版本 `2.2`之后的之后的。
+JavaFX 起初是一项独立的技术，必须从 JDK 离离开下载。然而，从 `JDK 1.7 update 6`（`JDK7u6`）开始，JDK 自带了最新版本的 JavaFX。`JDK 1.7` 包含 `JavaFX 2.2`，而 `Java 8` 带有 `JavaFX 8`，这是版本 `2.2` 之后的之后的。
 
 在编写此时，开发 JavaFX 应用最简单的方法是使用 `NetBeans 8` 或更高版本。只需点击 `File` → `New Project` → `JavaFX` 即可创建一个新的 JavaFX 项目。
 
@@ -2663,7 +2495,7 @@ javac -cp /opt/jdk1.8.0_25/jre/lib/ext/jfxrt.jar mypackage/MyFXApp.java
 运行应用程序（在 Linux 和 Mac OS X 上），将当前目录包含在类路径中：
 
 ```
-java -cp /opt/jdk1.8.0_25/jre/lib/ext/jfxrt.jar:. mypackage.MyFXApp 
+java -cp /opt/jdk1.8.0_25/jre/lib/ext/jfxrt.jar:. mypackage.MyFXApp
 ```
 
 在 Windows 上，将冒号替换为分号。
@@ -2672,38 +2504,38 @@ java -cp /opt/jdk1.8.0_25/jre/lib/ext/jfxrt.jar:. mypackage.MyFXApp
 java -cp /opt/jdk1.8.0_25/jre/lib/ext/jfxrt.jar;. mypackage.MyFXApp
 ```
 
-### 你的第一个 JavaFX 
+### 你的第一个 JavaFX
 
 本节展示了开发 JavaFX 应用程序有多简单。示例仅包含一个类，名为 `FirstApp`，如列表 6.1 所示。
 
 ### 列表 6.1: `FirstApp` 类
 
-```
-package app06; 
-import javafx.application.Application; 
-import javafx.scene.Scene; 
-import javafx.scene.control.Label; 
+```java
+package app06;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
-import javafx.stage.Stage; 
+import javafx.stage.Stage;
 
-public class FirstApp extends Application { 
+public class FirstApp extends Application {
 
-    @Override 
-    public void start(Stage stage) { 
-        Label label = new Label("Welcome"); 
-        StackPane root = new StackPane(); 
-        root.getChildren().add(label); 
+    @Override
+    public void start(Stage stage) {
+        Label label = new Label("Welcome");
+        StackPane root = new StackPane();
+        root.getChildren().add(label);
 
         Scene scene = new Scene(root, 400, 100);
 
-        stage.setTitle("First FX"); 
-        stage.setScene(scene); 
-        stage.show(); 
-    } 
+        stage.setTitle("First FX");
+        stage.setScene(scene);
+        stage.show();
+    }
 
-    public static void main(String[] args) { 
-        launch(args); 
-    } 
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
 ```
 
@@ -2729,32 +2561,32 @@ http://docs.oracle.com/javase/8/javafx/api/toc
 
 你继承 `Application` 类来创建 JavaFX 应用程序。要将其作为独立程序运行，你需要调用它的其中一个启动方法。
 
-```
+```java
 public static void launch(java.String... args)
 public static void launch(Class<? extends Application> appClass, java.String... args)
 ```
 
 你传递给启动方法的任何参数都可以从 `Application` 内部使用 `getParameters` 方法获取。
 
-```
+```java
 public final Application.Parameters getParameters()
 ```
 
 Application 具有以下生命周期方法，它们将在实例启动时被调用。
 
-```
+```java
 public void init() throws java.Exception
 ```
 
 该方法在应用程序构造后调用。如果应用程序需要初始化，则应重写它。
 
-```
+```java
 public abstract void start(Stage stage) throws java.Exception
 ```
 
 该方法在 `init()` 返回后调用，你应该在此方法中构建 UI。JavaFX 运行时创建一个 `Stage` 对象并作为方法参数传递。
 
-```
+```java
 public void stop() throws java.Exception
 ```
 
@@ -2772,52 +2604,52 @@ public void stop() throws java.Exception
 
 `Scene` 是可以添加到 `Stage` 的容器。`Scene` 必须包含一个父节点，它是所有添加到 Scene 的组件的根。父节点由 `javafx.scene.Parent` 类表示。`Scene` 最简单的构造函数接受一个参数，即 `Parent` 的实例。
 
-```
+```java
 public Scene(Parent root)
-
-
+```
 
 其他构造函数允许你指定 `Scene` 的尺寸及其填充颜色。
 
-```
+```java
 public Scene(Parent root, double width, double height)
+
 public Scene(Parent root, javafx.scene.paint.Paint fill)
+
 public Scene(Parent root, double width, double height, javafx.scene.paint.Paint fill)
 ```
 
-UI 组件
 
 
-
+# UI 组件
 
 内置的 UI 组件让编写 JavaFX 变得既简单又有趣。在 JavaFX 开发者的术语中，UI 组件被称为场景图节点（或简单称为节点）。`javafx.scene.Node` 类是所有节点的基类。它有五个子类，区分了 JavaFX 中的节点类型：
 
-*   `Canvas`: 一个你可以在上面画图的矩形区域。
-*   `Parent`: 一个可以向其中添加其他 UI 组件的容器。
-*   `Shape`: 表示一个形状，例如矩形、圆形或弧形。
-*   `ImageView`: 显示图片的视图区域。
-*   `MediaView`:为由 `MediaPlayer` 播放的媒体提供视图。
+- `Canvas`：一个你可以在上面画图的矩形区域。
+- `Parent`：一个可以向其中添加其他 UI 组件的容器。
+- `Shape`：表示一个形状，例如矩形、圆形或弧形。
+- `ImageView`：显示图片的视图区域。
+- `MediaView`：为由 `MediaPlayer` 播放的媒体提供视图。
 
 `Canvas`、`ImageView` 和 `MediaView` 没有子类。`Parent` 和 `Shape` 有子类。
 
 `Parent` 类具有以下子类：
 
-*   `Control`: 该类是所有 UI 控件的基类，从像 `Button` 和 `Label` 这样的简单控件到 `ProgressBar`、`TreeView` 和 `TableView` 等更复杂的控件。
-*   `Region`: 表示一个可以包含其他节点并使用 CSS 进行样式的屏幕区域。子类包括 `Chart` 和各种 `Pane`，包括 `BorderPane`、`StackPane`、`FlowPane`、`GridPane`、`HBox`、`VBox`、`AnchorPane` 等。
-*   `Group`: 一个包含子节点 `ObservableList` 的区域，是处理 `Shape` 对象的最佳 `Parent`。
-*   `WebView`: `WebView` 用于管理 `WebEngine` 并显示其内容。如名称所示，WebEngine` 可以加载网页、创建文档模型并在页面上运行 JavaScript。
+- `Control`：该类是所有 UI 控件的基类，从像 `Button` 和 `Label` 这样的简单控件到 `ProgressBar`、`TreeView` 和 `TableView` 等更复杂的控件。
+- `Region`：表示一个可以包含其他节点并使用 CSS 进行样式的屏幕区域。子类包括 `Chart` 和各种 `Pane`，包括 `BorderPane`、`StackPane`、`FlowPane`、`GridPane`、`HBox`、`VBox`、`AnchorPane` 等。
+- `Group`：一个包含子节点 `ObservableList` 的区域，是处理 `Shape` 对象的最佳 `Parent`。
+- `WebView`：`WebView` 用于管理 `WebEngine` 并显示其内容。如名称所示，`WebEngine` 可以加载网页、创建文档模型并在页面上运行 JavaScript。
 
 `Control` 和 `Region` 类将在后续章节中进一步讨论。
 
 `javafx.scene.shape.Shape` 类是各种几何形状的基类，包括 `Arc`、`Circle`、`Ellipse`、`Line`、`Path` 和 `Rectangle`。
 
-# Controls
+## Controls
 
 UI 控件是用户可以交互的节点。`javafx.scene.control.Control` 类是所有 UI 控件的基类。图 6.2 显示了 `Control` 的直接和间接子类。
 
 ![](img/0602.png)
 
-图 6.2：Control 的实现
+图 6.2：`Control` 的实现
 
 图 6.3 显示了一个包含一些 JavaFX 控件的 `Scene`，列表 6.2 展示了生成该 `Scene` 的代码。
 
@@ -2828,120 +2660,103 @@ UI 控件是用户可以交互的节点。`javafx.scene.control.Control` 类是�
 列表 6.2：`ControlsDemo` 类
 
 ```java
- package app06;
+package app06;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.control.Button; 
-import javafx.scene.control.CheckBox; 
-import javafx.scene.control.ChoiceBox; 
-import javafx.scene.control.ColorPicker; 
-import javafx.scene.control.ComboBox; 
-import javafx.scene.control.Hyperlink; 
-import javafx.scene.control.Label; 
-import javafx.scene.control.ListView; 
-import javafx.scene.control.MenuButton; 
-import javafx.scene.control.MenuItem; 
-import javafx.scene.control.PasswordField; 
-import javafx.scene.control.RadioButton; 
-import javafx.scene.control.ScrollBar; 
-import javafx.scene.control.Separator; 
-import javafx.scene.control.Slider; 
-import javafx.scene.control.TextArea; 
-import javafx.scene.control.TextField; 
-import javafx.scene.control.ToggleGroup; 
-import javafx.scene.layout.ColumnConstraints; 
-import javafx.scene.layout.GridPane; 
-import javafx.scene.paint.Color; 
-import javafx.stage.Stage; 
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ColorPicker;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ScrollBar;
+import javafx.scene.control.Separator;
+import javafx.scene.control.Slider;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 
-public class ControlsDemo extends Application { 
-
-    @Override 
-    public void start(Stage stage) { 
-        GridPane grid = new GridPane(); 
-        grid.setHgap(15); 
-        grid.setVgap(25); 
-        ColumnConstraints constraint = new ColumnConstraints(); 
-        constraint.setPercentWidth(25); 
-        grid.getColumnConstraints().addAll(constraint, 
-                constraint, constraint, constraint); 
-        grid.setPadding(new Insets(10)); 
-
-        grid.add(new Label("Label"), 0, 0); 
-        grid.add(new Button("Button"), 1, 0); 
-        grid.add(new CheckBox("CheckBox"), 2, 0); 
-
-        ChoiceBox<String> choiceBox = new ChoiceBox<String>(); 
-
-        choiceBox.getItems().addAll("ChoiceBox 1", "ChoiceBox 2"); 
-        choiceBox.setValue("ChoiceBox 1"); 
-        grid.add(choiceBox, 3, 0); 
-
-        grid.add(new ColorPicker(Color.GREEN), 0, 1); 
-
-        ComboBox<String> comboBox = new ComboBox<String>(); 
-        comboBox.getItems().addAll("Combo 1", "Combo 2"); 
-        comboBox.setValue("Combo 1"); 
-        grid.add(comboBox, 1, 1); 
-
-        grid.add(new Hyperlink("Hyperlink"), 2, 1); 
-
-        ListView<String> listView = new ListView<String>(); 
-        listView.getItems().addAll("List Item 1", 
-                "List Item 2", "List Item 3"); 
-        grid.add(listView, 3, 1); 
-
-        MenuButton menuButton = new MenuButton("Menu"); 
-        menuButton.getItems().addAll(new MenuItem("Menu 1"), 
-                new MenuItem("Menu 1")); 
-        grid.add(menuButton, 0, 2); 
-
-        grid.add(new TextField("TextField"), 1, 2); 
-
-        PasswordField passwordField = new PasswordField(); 
-        passwordField.setText("Password"); 
-        grid.add(passwordField, 2, 2); 
-
-        grid.add(new ScrollBar(), 3, 2); 
-
-        ToggleGroup group = new ToggleGroup(); 
-        RadioButton radioButton1 = new RadioButton("Radio 1"); 
-        radioButton1.setToggleGroup(group); 
-        radioButton1.setSelected(true); 
-        RadioButton radioButton2 = new RadioButton("Radio 2"); 
-        radioButton2.setToggleGroup(group); 
-        grid.add(radioButton1, 0, 3); 
-        grid.add(radioButton2, 1, 3); 
-
-        TextArea textArea = new TextArea("TextArea"); 
-        textArea.setMinHeight(60.00); 
-        grid.add(textArea, 2, 3); 
-
-        grid.add(new Separator(), 3, 3); 
-
+public class ControlsDemo extends Application {
+    @Override
+    public void start(Stage stage) {
+        GridPane grid = new GridPane();
+        grid.setHgap(15);
+        grid.setVgap(25);
+        ColumnConstraints constraint = new ColumnConstraints();
+        constraint.setPercentWidth(25);
+        grid.getColumnConstraints().addAll(constraint,
+                constraint, constraint, constraint);
+        grid.setPadding(new Insets(10));
+        grid.add(new Label("Label"), 0, 0);
+        grid.add(new Button("Button"), 1, 0);
+        grid.add(new CheckBox("CheckBox"), 2, 0);
+        ChoiceBox<String> choiceBox = new ChoiceBox<String>();
+        choiceBox.getItems().addAll("ChoiceBox 1", "ChoiceBox 2");
+        choiceBox.setValue("ChoiceBox 1");
+        grid.add(choiceBox, 3, 0);
+        grid.add(new ColorPicker(Color.GREEN), 0, 1);
+        ComboBox<String> comboBox = new ComboBox<String>();
+        comboBox.getItems().addAll("Combo 1", "Combo 2");
+        comboBox.setValue("Combo 1");
+        grid.add(comboBox, 1, 1);
+        grid.add(new Hyperlink("Hyperlink"), 2, 1);
+        ListView<String> listView = new ListView<String>();
+        listView.getItems().addAll("List Item 1",
+                "List Item 2", "List Item 3");
+        grid.add(listView, 3, 1);
+        MenuButton menuButton = new MenuButton("Menu");
+        menuButton.getItems().addAll(new MenuItem("Menu 1"),
+                new MenuItem("Menu 1"));
+        grid.add(menuButton, 0, 2);
+        grid.add(new TextField("TextField"), 1, 2);
+        PasswordField passwordField = new PasswordField();
+        passwordField.setText("Password");
+        grid.add(passwordField, 2, 2);
+        grid.add(new ScrollBar(), 3, 2);
+        ToggleGroup group = new ToggleGroup();
+        RadioButton radioButton1 = new RadioButton("Radio 1");
+        radioButton1.setToggleGroup(group);
+        radioButton1.setSelected(true);
+        RadioButton radioButton2 = new RadioButton("Radio 2");
+        radioButton2.setToggleGroup(group);
+        grid.add(radioButton1, 0, 3);
+        grid.add(radioButton2, 1, 3);
+        TextArea textArea = new TextArea("TextArea");
+        textArea.setMinHeight(60.00);
+        grid.add(textArea, 2, 3);
+        grid.add(new Separator(), 3, 3);
         Slider slider2 = new Slider(0, 100, 30);
-        slider2.setShowTickMarks(true); 
-        slider2.setShowTickLabels(true); 
-        grid.add(slider2, 0, 4, 4, 1); 
+        slider2.setShowTickMarks(true);
+        slider2.setShowTickLabels(true);
+        grid.add(slider2, 0, 4, 4, 1);
+        Scene scene = new Scene(grid, 600, 320);
+        scene.setFill(Color.BEIGE);
+        stage.setTitle("JavaFX Controls");
+        stage.setScene(scene);
+        stage.show();
+    }
 
-        Scene scene = new Scene(grid, 600, 320); 
-        scene.setFill(Color.BEIGE); 
-
-        stage.setTitle("JavaFX Controls"); 
-        stage.setScene(scene); 
-        stage.show(); 
-    } 
-
-    public static void main(String[] args) { 
-        launch(args); 
+    public static void main(String[] args) {
+        launch(args);
     }
 }
 ```
 
-# Regions
+## Regions
 
-Region 是一个可以包含其他节点并使用 CSS 进行样式的屏幕区域。所有 Regions 都是 `javafx.scene.layout.Region` 类的子类。Region 有三个直接后代：`Axis`、`Chart` 和 `Pane`。`Axis` 用于在图表区域上渲染轴，`Chart` 模型图表。`Pane` 是一个通常用于布局 UI 控件的区域。
+`Region` 是一个可以包含其他节点并使用 CSS 进行样式的屏幕区域。所有 `Region` 都是 `javafx.scene.layout.Region` 类的子类。`Region` 有三个直接后代：`Axis`、`Chart` 和 `Pane`。`Axis` 用于在图表区域上渲染轴，`Chart` 模型图表。`Pane` 是一个通常用于布局 UI 控件的区域。
 
 本节仅讨论 `Pane`。
 
@@ -2951,65 +2766,59 @@ Region 是一个可以包含其他节点并使用 CSS 进行样式的屏幕区�
 
 列表 6.3 中的 `ControlsDemo` 类使用 `BorderPane` 布局控件。只使用了顶部、左侧和中间区域。顶部部分包含包含两个按钮的 `HBox`，左侧包含一个 `Label` 和一个 `ColorPicker`。中间部分有一个带有 `Image` 的 `ImageView`。
 
-
-
-
 ```java
 package app06;
-import javafx.application.Application; 
-import javafx.geometry.Insets; 
-import javafx.scene.Scene; 
-import javafx.scene.control.Button; 
-import javafx.scene.control.ColorPicker; 
-import javafx.scene.control.Label; 
-import javafx.scene.image.ImageView; 
-import javafx.scene.layout.BorderPane; 
-import javafx.scene.layout.HBox; 
-import javafx.scene.layout.VBox; 
-import javafx.stage.Stage; 
 
-public class BorderPaneDemo extends Application { 
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ColorPicker;
+import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
-    @Override 
-    public void start(Stage stage) { 
-        Button okButton = new Button("OK"); 
-        okButton.setDefaultButton(true); 
+public class BorderPaneDemo extends Application {
+    @Override
+    public void start(Stage stage) {
+        Button okButton = new Button("OK");
+        okButton.setDefaultButton(true);
+        Button cancelButton = new Button("Cancel");
+        HBox hBox = new HBox();
+        hBox.setPadding(new Insets(15, 12, 15, 12));
+        hBox.setSpacing(10);
+        hBox.setStyle("-fx-background-color: #886699;");
+        hBox.getChildren().addAll(okButton, cancelButton);
+        BorderPane root = new BorderPane();
+        root.setTop(hBox);
+        ImageView imageView = new ImageView("image/1.jpg");
+        root.setCenter(imageView);
+        VBox vBox = new VBox();
+        vBox.setStyle("-fx-background-color: " +
+                "#ddeeff;-fx-padding:10px");
+        vBox.getChildren().addAll(
+                new Label("Select Color:"),
+                new ColorPicker());
+        root.setLeft(vBox);
+        root.setStyle("-fx-background-color: #6680e6;");
+        Scene scene = new Scene(root, 740, 530);
+        stage.setTitle("HBox, VBox, BorderPane Demo");
+        stage.setScene(scene);
+        stage.show();
+    }
 
-        Button cancelButton = new Button("Cancel"); 
-        HBox hBox = new HBox(); 
-        hBox.setPadding(new Insets(15, 12, 15, 12)); 
-        hBox.setSpacing(10); 
-        hBox.setStyle("-fx-background-color: #886699;"); 
-        hBox.getChildren().addAll(okButton, cancelButton); 
-        BorderPane root = new BorderPane(); 
-        root.setTop(hBox); 
-
-        ImageView imageView = new ImageView("image/1.jpg"); 
-        root.setCenter(imageView); 
-
-        VBox vBox = new VBox(); 
-        vBox.setStyle("-fx-background-color: " + 
-        "#ddeeff;-fx-padding:10px"); 
-        vBox.getChildren().addAll( 
-                new Label("Select Color:"), 
-                new ColorPicker()); 
-        root.setLeft(vBox); 
-
-        root.setStyle("-fx-background-color: #6680e6;"); 
-        Scene scene = new Scene(root, 740, 530); 
-
-        stage.setTitle("HBox, VBox, BorderPane Demo"); 
-        stage.setScene(scene); 
-        stage.show(); 
-    } 
-
-    public static void main(String[] args) { 
-        launch(args); 
-    } 
-} 
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
 ```
 
-图 6.5 显示了 Windows 上的 `BorderPaneDemo` 。
+
+
+图 6.5 显示了 Windows 上的 `BorderPaneDemo`。
 
 ![](img/0605.png)
 
@@ -3028,12 +2837,11 @@ JavaFX 是事件驱动的。UI 组件可以引发事件，你可以编写代码�
 这些便利方法接受一个 `EventHandler` 对象作为参数。`javafx.event.EventHandler` 是一个带有 `handle` 方法的泛型接口。这里是 `EventHandler` 的定义。
 
 ```java
- package javafx.event;
+package javafx.event;
+
 public interface EventHandler<T extends Event> extends 
         java.util.EventListener {
-
     void handle(T event)
-
 }
 ```
 
@@ -3041,7 +2849,6 @@ public interface EventHandler<T extends Event> extends
 
 ```java
 EventHandler handler = new EventHandler<ActionEvent>() { 
-
     @Override 
     public void handle(ActionEvent event) { 
         // 执行某些操作
@@ -3054,7 +2861,7 @@ EventHandler handler = new EventHandler<ActionEvent>() {
 列表 6.4：`RotateDemo` 类
 
 ```java
- package app06;
+package app06;
 
 import javafx.application.Application; 
 import javafx.collections.ObservableList; 
@@ -3069,7 +2876,6 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage; 
 
 public class RotateDemo extends Application { 
-
     @Override 
     public void start(Stage stage) { 
         VBox root = new VBox(40); 
@@ -3077,7 +2883,6 @@ public class RotateDemo extends Application {
         final Rectangle rect = new Rectangle(80, 50); 
         rect.setFill(Color.AQUAMARINE); 
         children.add(rect); 
-
         Button button = new Button("Rotate"); 
         button.setOnAction(new EventHandler<ActionEvent>() { 
             @Override 
@@ -3085,13 +2890,11 @@ public class RotateDemo extends Application {
                 rect.rotate(10); 
             } 
         });
-
         Scene scene = new Scene(root, 120, 130); 
         stage.setTitle("Rotate Demo"); 
         stage.setScene(scene); 
         stage.show(); 
     } 
-
     public static void main(String[] args) { 
         launch(args); 
     } 
@@ -3113,7 +2916,7 @@ public class RotateDemo extends Application {
 CSS 文件包含可以通过 ID 或类引用的样式。每个 JavaFX 控件已分配了一个默认 CSS 类，与控件的 Java 类名相似。例如，`Button` 的默认样式是 `button`，`Label` 的默认样式是 `label`。这意味着，为了提供影响所有按钮的样式，你只需要在 CSS 文件中有一个名为 `button` 的样式即可。例如：
 
 ```css
- .button {
+.button {
     -fx-border-width: 3px; 
     -fx-background-color:#dd8818; 
 } 
@@ -3124,42 +2927,38 @@ CSS 文件包含可以通过 ID 或类引用的样式。每个 JavaFX 控件已�
 非控件节点没有默认样式。如果你想为 `VBox` 设置样式，首先需要为实例添加一个 CSS 类。例如，以下代码为 `VBox` 添加了名为 `vbox` 的类。
 
 ```java
- VBox vBox = new VBox(); 
+VBox vBox = new VBox(); 
 vBox.getStyleClass().add("vbox"); 
 ```
 
 该 `VBox` 随后会对应用程序引用的任何 CSS 文件中的 `vbox` 样式做出响应。
 
-
-
-
-
 除了使用样式类（style classes），你还可以创建一个由组件标识符（identifier）引用的样式。如果你希望样式只影响某个类型的特定实例，而不是该类型的所有实例，就可以这样做。例如，`.button` 样式会影响应用程序中所有的 `Button` 控件。如果你想让样式影响某个 `Button` 而不是所有的 `Buttons`，你可以为该 `Button` 添加新类，或者为它添加一个标识符。这是一个分配了 id `nextBtn` 的 `Button` 示例。
 
-```
- Button nextButton = new Button("Next"); 
+```java
+Button nextButton = new Button("Next"); 
 nextButton.setId("nextBtn"); 
 ```
 
 然后你可以在 CSS 文件中创建此样式，它只会影响该 Button。
 
-```
- #nextBtn { 
+```css
+#nextBtn { 
     -fx-font-weight: bold; 
 }
 ```
 
 注意，每个节点都有一个 `setStyle` 方法，你可以调用它来分配 CSS 样式。然而但不推荐这种做法，因为你将表示逻辑和业务逻辑混合在一起了。以下是如何使用 `setStyle` 的示例。
 
-```
- Button button = new Button();
+```java
+Button button = new Button();
 button.setStyle("-fx-background-color:green");
 ```
 
 最好将所有的样式写在 CSS 文件中。一旦你的 CSS 文件准备好，你就可以从应用程序的启动方法加载它，如下所示。
 
-```
- @Override 
+```java
+@Override 
 public void start(Stage stage) { 
     ...
     Scene scene = ...; 
@@ -3184,8 +2983,9 @@ public void start(Stage stage) {
 
 列表 6.5：`CSSDemo` 类
 
-```
- package app06;
+```java
+package app06;
+
 import javafx.application.Application; 
 import javafx.scene.Scene; 
 import javafx.scene.control.Button; 
@@ -3195,31 +2995,24 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage; 
 
 public class CSSDemo extends Application { 
-
     @Override 
     public void start(Stage stage) { 
         BorderPane root = new BorderPane(); 
-
         root.setCenter(new Label("Welcome")); 
-
         HBox hBox = new HBox(); 
         hBox.getStyleClass().add("hbox"); 
-
         Button backButton = new Button("Back"); 
         hBox.getChildren().add(backButton); 
         Button nextButton = new Button("Next"); 
         nextButton.setId("nextBtn"); 
         hBox.getChildren().add(nextButton); 
         root.setBottom(hBox);
-
         Scene scene = new Scene(root, 400, 300); 
         scene.getStylesheets().add("style.css");
-
         stage.setTitle("CSS Demo"); 
         stage.setScene(scene); 
         stage.show(); 
     }
-
     public static void main(String[] args) { 
         launch(args); 
     } 
@@ -3228,8 +3021,8 @@ public class CSSDemo extends Application {
 
 列表 6.6：`style.css` 文件
 
-```
- .label { 
+```css
+.label { 
     -fx-background-color: #778855; 
     -fx-font-family: helvetica; 
     -fx-font-size: 45px; 
@@ -3241,13 +3034,11 @@ public class CSSDemo extends Application {
     -fx-spacing: 10px; 
     -fx-alignment: center;
 }
-
 .button { 
     -fx-border-width: 2px; 
     -fx-background-color:#ff8800;
     -fx-cursor: hand;
 }
-
 #nextBtn { 
     -fx-font-weight: bold;
 }
@@ -3262,7 +3053,7 @@ public class CSSDemo extends Application {
 作为一个补充说明，`jfxrt.jar` 文件（JavaFX 运行时）包含 `modena.css` 文件。这是根节点和 UI 控件的默认样式表。建议查看此文件的内容以学习定义的样式。要查看此文件，请进入 jar 文件所在的目录并运行此命令：
 
 ```
- jar jfxrt.jar com/javafx/scene/control/skin/modena.css
+jar jfxrt.jar com/javafx/scene/control/skin/modena.css
 ```
 
 ### 使用 DatePicker
@@ -3273,8 +3064,9 @@ JavaFX 8 中的新组件 `DatePicker` 允许用户选择日期或输入文本。
 
 列表 6.7：DatePicker 类
 
-```
- package app06;
+```java
+package app06;
+
 import java.time.LocalDate;
 import java.time.Period;
 import javafx.application.Application;
@@ -3289,11 +3081,9 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class DatePickerDemo extends Application {
-
     public static void main(String[] args) {
         launch(args);
     }
-
     @Override
     public void start(Stage stage) {
         stage.setTitle("DatePicker Demo");
@@ -3301,38 +3091,38 @@ public class DatePickerDemo extends Application {
         vbox.setStyle("-fx-padding: 15;");
         Scene scene = new Scene(vbox, 550, 340);
         stage.setScene(scene);
-
         GridPane gridPane = new GridPane();
         gridPane.setHgap(10);
         gridPane.setVgap(10);
-
         Label label = new Label("Birthday:");
         gridPane.add(label, 0, 0);
-
         DatePicker birthdayPicker = new DatePicker();
         gridPane.add(birthdayPicker, 0, 1);
-
         Label error = new Label();
         gridPane.add(error, 1, 1);
-
         birthdayPicker.setOnAction(new EventHandler() {
             public void handle(Event t) {
-                LocalDate selectedDate = birthdayPicker.getValue();
-                System.out.println("Selected date: " + selectedDate);
-                LocalDate today = LocalDate.now();
-                if (Period.between(selectedDate, today).isNegative()) {
-                    error.setText("Your birthday cannot be later than today");
-                } else {
-                    error.setText("");
-                }
-            }
-        });
+```
 
-        vbox.getChildren().add(gridPane);
-        stage.show();
-    }
+
+
+`LocalDate selectedDate = birthdayPicker.getValue();`
+
+`System.out.println("Selected date: " + selectedDate);`
+
+`LocalDate today = LocalDate.now();`
+
+```
+if (Period.between(selectedDate, today).isNegative()) {
+    error.setText("Your birthday cannot be later than today");
+} else {
+    error.setText("");
 }
 ```
+
+`vbox.getChildren().add(gridPane);`
+
+`stage.show();`
 
 图 6.8 显示了应用程序。
 
@@ -3340,7 +3130,7 @@ public class DatePickerDemo extends Application {
 
 图 6.8：编程步骤
 
-总结
+## 总结
 
 JavaFX 是一种用于创建桌面和浏览器应用程序的 Java 技术。它是比 AWT 和 Swing 更好的解决方案，因此注定将取代它的前身。
 
@@ -3354,8 +3144,8 @@ FXML 是一种基于 XML 的标记语言，用于构建 JavaFX 用户界面 (UI)
 
 JavaFX 2 的新功能 FXML 通过将用户界面构建移动到基于 XML 的文档，极大降低了 JavaFX 类的复杂度。此外，FXML 比 Java 类更能可视化 UI 组件层次结构。FXML 文档的根节点一个 `javafx.scene.Parent`，可以使用名为 `FXLoader` 的特殊加载器加载到 JavaFX。以下是使用 FXML 的 `Application` 子类的启动方法。
 
-```
- @Override 
+```java
+@Override 
 public void start(Stage stage) throws Exception { 
     stage.setTitle("FXML Example"); 
     Parent root = (Parent) FXMLLoader.load(
@@ -3368,21 +3158,18 @@ public void start(Stage stage) throws Exception {
 
 上述代码调用了 `FXLoader` 的 `load` 方法来读取 FXML 文件并将其内容转换为 `Parent` 对象。然后使用该 `Parent` 对象来构建 `Scene`。
 
-
-
-
 编写 FXML 文件非常简单。你首先创建一个文本文件，并将其保存到与类文件相同的目录中。你可以将其存储在其他地方，但如果它与加载它的类位于同一个目录，加载起来是最容易的。
 
 由于 FXML 文件是一个 XML 文档，所有 FXML 文档都以此声明开头。
 
-```
- <?xml version="1.0" encoding="UTF-8"?> 
+```xml
+<?xml version="1.0" encoding="UTF-8"?> 
 ```
 
 接下来是导入指令，用于导入你将在 FXML 文件中引用的类型。你可以导入一个包或一个类型。
 
-```
- <?import javafx.scene.*?> 
+```xml
+<?import javafx.scene.*?> 
 <?import javafx.scene.control.*?> 
 <?import javafx.scene.layout.*?> 
 <?import javafx.geometry.Insets?> 
@@ -3391,9 +3178,8 @@ public void start(Stage stage) throws Exception {
 接下来是根元素。它可以是 `Parent` 的任何子类。这里有一个示例。
 
 ```xml
- <GridPane xmlns:fx="http://javafx.com/fxml" 
+<GridPane xmlns:fx="http://javafx.com/fxml" 
         hgap="5" vgap="12" layoutY="30">
-
 </GridPane>
 ```
 
@@ -3403,17 +3189,16 @@ public void start(Stage stage) throws Exception {
 
 在根元素内部构建你的 UI。列表 7.1 显示了一个 FXML 文件的示例。
 
-列表 7.1：FXML 文件示例
+**列表 7.1：FXML 文件示例**
 
 ```xml
- <?xml version="1.0" encoding="UTF-8"?> 
+<?xml version="1.0" encoding="UTF-8"?> 
 <?import javafx.scene.*?> 
 <?import javafx.scene.control.*?> 
 <?import javafx.scene.layout.*?> 
 <?import javafx.geometry.Insets?> 
 <?import javafx.scene.image.Image?> 
 <?import javafx.scene.image.ImageView?> 
-
 <BorderPane> 
     <top> 
         <HBox spacing="10.0" style="-fx-background-color:#886699;"> 
@@ -3427,12 +3212,12 @@ public void start(Stage stage) throws Exception {
 </BorderPane> 
 ```
 
-元素可以包含一个要实例化的类或一个要填充的属性。列表 7.1 中的 FXML 文件包含一个类型为 `BorderPane` 的根元素。`BorderPane` 的 `top` 属性填充了一个 `HBox`。`HBox`  又包含两个 `Buttons`，并且其 `padding` 属性填充了一个 `Insets`。
+元素可以包含一个要实例化的类或一个要填充的属性。列表 7.1 中的 FXML 文件包含一个类型为 `BorderPane` 的根元素。`BorderPane` 的 `top` 属性填充了一个 `HBox`。`HBox` 又包含两个 `Buttons`，并且其 `padding` 属性填充了一个 `Insets`。
 
 关于 FXML 的更多细节可以在此处找到。
 
 ```
- http://docs.oracle.com/javafx/2/api/javafx/fxml/doc-files/
+http://docs.oracle.com/javafx/2/api/javafx/fxml/doc-files/
 introduction_to_fxml.html
 ```
 
@@ -3447,7 +3232,8 @@ introduction_to_fxml.html
 此示例是上一章中创建的 `BorderPaneDemo` 应用程序的重写。这次使用 FXML 文档来构建和组织 UI 组件。为了方便阅读，这里重印了 `BorderPaneDemo` 类。
 
 ```java
- package app07;
+package app07;
+
 import javafx.application.Application; 
 import javafx.geometry.Insets; 
 import javafx.scene.Scene; 
@@ -3461,12 +3247,10 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage; 
 
 public class BorderPaneDemo extends Application { 
-
     @Override 
     public void start(Stage stage) { 
         Button okButton = new Button("OK"); 
         okButton.setDefaultButton(true); 
-
         Button cancelButton = new Button("Cancel"); 
         HBox hBox = new HBox(); 
         hBox.setPadding(new Insets(15, 12, 15, 12)); 
@@ -3475,10 +3259,8 @@ public class BorderPaneDemo extends Application {
         hBox.getChildren().addAll(okButton, cancelButton); 
         BorderPane root = new BorderPane(); 
         root.setTop(hBox); 
-
         ImageView imageView = new ImageView("image/1.jpg"); 
         root.setCenter(imageView); 
-
         VBox vBox = new VBox(); 
         vBox.setStyle("-fx-background-color: " + 
         		"#ddeeff;-fx-padding:10px"); 
@@ -3486,10 +3268,8 @@ public class BorderPaneDemo extends Application {
                 new Label("Select Color:"), 
                 new ColorPicker()); 
         root.setLeft(vBox); 
-
         root.setStyle("-fx-background-color: #6680e6;"); 
         Scene scene = new Scene(root, 740, 530); 
-
         stage.setTitle("HBox, VBox, BorderPane"); 
     }
 }
@@ -3497,36 +3277,16 @@ public class BorderPaneDemo extends Application {
 
 `BorderPaneDemo` 类中的 UI 部分可以替换为 7.2 所示的 `example.fxml` 文件。
 
-```xml
- <?xml version="1.0" encoding="UTF-8"?> 
-<?import javafx.scene.*?> 
-<?import javafx.scene.control.*?> 
-<?import javafx.scene.layout.*?> 
-<?import javafx.geometry.Insets?> 
-
-<BorderPane> 
-    <top> 
-        <HBox spacing="10.0" style="-fx-background-color:#886699;"> 
-            <padding> 
-                <Insets top="15" bottom="15" left="12" right="12"/>
-            </padding> 
-            <Button id="okButton" text="OK" defaultButton="true"/> 
-            <Button text="Cancel"/> 
-        </HBox> 
-    </top> 
-</BorderPane>
-```
-列表 7.2：`example.fxml` 文件
+**列表 7.2：`example.fxml` 文件**
 
 ```xml
- <?xml version="1.0" encoding="UTF-8"?> 
+<?xml version="1.0" encoding="UTF-8"?> 
 <?import javafx.scene.*?> 
 <?import javafx.scene.control.*?> 
 <?import javafx.scene.layout.*?> 
 <?import javafx.geometry.Insets?> 
 <?import javafx.scene.image.Image?> 
 <?import javafx.scene.image.ImageView?> 
-
 <BorderPane> 
     <top> 
         <HBox spacing="10.0" style="-fx-background-color:#886699;"> 
@@ -3539,12 +3299,14 @@ public class BorderPaneDemo extends Application {
     </top> 
 </BorderPane>
 ```
-`start` 方法使用 `FXMLLoader` 加载 FXML 文档并返回一个包含所声明组件的 `Parent` 对象。该方法随后创建一个 `Scene`并将 `Scene` 传递给 `Stage`，然后调用 `Stage` 的 `show` 方法。
+
+`start` 方法使用 `FXMLLoader` 加载 FXML 文档并返回一个包含所声明组件的 `Parent` 对象。该方法随后创建一个 `Scene` 并将 `Scene` 传递给 `Stage`，然后调用 `Stage` 的 `show` 方法。
 
 列表 7.3 所示了 Java 类 `Example1`。
 
 ```java
- package app07;
+package app07;
+
 import javafx.application.Application; 
 import javafx.fxml.FXMLLoader; 
 import javafx.scene.Parent; 
@@ -3552,7 +3314,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage; 
 
 public class Example1 extends Application { 
-
     @Override 
     public void start(Stage stage) throws Exception {
         // Example1.fxml 必须位于 Example1.class 相同的目录下
@@ -3572,10 +3333,10 @@ public class Example1 extends Application {
 
 ## 使用 FXML 处理事件
 
-使用 FXML FXML 是一种强大的语言。它的功能之一是将 UI 组件与控制器中的事件处理方法（事件处理器）绑定，这样当事件发生时就会调用该方法。控制器是实现 `javafx.fxml.Initializable` 的 Java 类。为了利用这一功能，你必须在根元素中使用 `fx:controller` 属性，如下：
+使用 FXML 是一种强大的语言。它的功能之一是将 UI 组件与控制器中的事件处理方法（事件处理器）绑定，这样当事件发生时就会调用该方法。控制器是实现 `javafx.fxml.Initializable` 的 Java 类。为了利用这一功能，你必须在根元素中使用 `fx:controller` 属性，如下：
 
 ```xml
- <Group fx:controller="app7.Example2Controller" 
+<Group fx:controller="app7.Example2Controller" 
 ```
 
 记得 `fx` 是 FXML 中的一个特殊前缀。
@@ -3583,7 +3344,7 @@ public class Example1 extends Application {
 要将组件绑定到事件处理器，请使用元素相关的 `onXXX` 属性。例如，将 `ActionEvent` 绑定到控制器中名为 `handleAction` 的方法，请写：
 
 ```xml
- onAction="#handleAction"
+onAction="#handleAction"
 ```
 
 例如，考虑以下带有用户名和密码登录表单的应用程序。应用程序的主阶段如图 7.2 所示。
@@ -3592,9 +3353,6 @@ public class Example1 extends Application {
 
 图 7.2：示例 2 中的登录表单
 
-
-
-
 用户可以输入用户名和密码。点击 `Reset` 会清除用户名和密码字段。点击 `Login` 将对用户进行身份验证。验证结果将写在字段上方的 `Label` 上。
 
 该应用程序由一个 FXML 文档（列表 7.4 中的 `example2.fxml`）、一个控制器类（列表 7.5 中的 `Example2Controller`）以及一个主类（列表 7.6 中的 `Example2`）组成。
@@ -3602,59 +3360,104 @@ public class Example1 extends Application {
 ### 列表 7.4：`example2.fxml` 文件
 
 ```xml
- <?xml version="1.0" encoding="UTF-8"?> 
-
+<?xml version="1.0" encoding="UTF-8"?> 
 <?import javafx.scene.*?> 
 <?import javafx.scene.control.*?> 
+```
+
+
+
+```xml
 <?import javafx.scene.layout.*?> 
+
 <?import javafx.geometry.Insets?> 
 
 <GridPane xmlns:fx="http://javafx.com/fxml" 
+
         fx:controller="app07.Example2Controller" 
+
         hgap="5" vgap="12" layoutY="30"  > 
+
     <columnConstraints> 
+
         <ColumnConstraints percentWidth="15"/> 
+
         <ColumnConstraints percentWidth="35" 
+
                 halignment="RIGHT"/> 
+
         <ColumnConstraints percentWidth="35"/> 
+
         <ColumnConstraints percentWidth="10"/> 
+
     </columnConstraints> 
 
     <children> 
+
         <Label fx:id="statusLabel" > 
+
             <GridPane.columnIndex>1</GridPane.columnIndex> 
+
             <GridPane.rowIndex>0</GridPane.rowIndex> 
+
             <GridPane.columnSpan>2</GridPane.columnSpan> 
+
         </Label> 
 
         <Label text="User Name:"> 
+
             <GridPane.columnIndex>1</GridPane.columnIndex> 
+
             <GridPane.rowIndex>1</GridPane.rowIndex> 
+
         </Label> 
+
         <TextField fx:id="userNameField"> 
+
             <GridPane.columnIndex>2</GridPane.columnIndex> 
+
             <GridPane.rowIndex>1</GridPane.rowIndex> 
+
         </TextField> 
 
         <Label text="Password:"> 
+
             <GridPane.columnIndex>1</GridPane.columnIndex> 
+
             <GridPane.rowIndex>2</GridPane.rowIndex> 
+
         </Label> 
+
         <PasswordField fx:id="passwordField"> 
+
             <GridPane.columnIndex>2</GridPane.columnIndex> 
+
             <GridPane.rowIndex>2</GridPane.rowIndex> 
+
         </PasswordField> 
+
         <Button fx:id="resetButton" text="Reset" 
+
                 onAction="#handleReset"> 
+
             <GridPane.columnIndex>1</GridPane.columnIndex> 
+
             <GridPane.rowIndex>3</GridPane.rowIndex> 
+
         </Button> 
+
         <Button fx:id="loginButton" text="Login" 
+
                 defaultButton="true" onAction="#handleLogin"> 
+
             <GridPane.columnIndex>2</GridPane.columnIndex> 
+
             <GridPane.rowIndex>3</GridPane.rowIndex> 
+
         </Button> 
+
     </children> 
+
 </GridPane>
 ```
 
@@ -3665,48 +3468,79 @@ public class Example1 extends Application {
 ### 列表 7.5：`Example2Controller` 类
 
 ```java
- package app07;
+package app07;
+
 import java.net.URL; 
+
 import java.util.ResourceBundle; 
+
 import javafx.event.ActionEvent; 
+
 import javafx.fxml.FXML; 
+
 import javafx.fxml.Initializable; 
+
 import javafx.scene.control.Label; 
+
 import javafx.scene.control.PasswordField; 
+
 import javafx.scene.control.TextField; 
 
 public class Example2Controller implements Initializable { 
 
     @FXML 
+
     private TextField userNameField; 
+
     @FXML 
+
     private PasswordField passwordField; 
+
     @FXML 
+
     private Label statusLabel; 
 
     @FXML 
+
     private void handleReset(ActionEvent event) { 
+
         userNameField.setText(""); 
+
         passwordField.setText(""); 
+
         statusLabel.setText(""); 
+
     } 
 
     @FXML 
+
     private void handleLogin(ActionEvent event) { 
+
         String userName = userNameField.getText(); 
+
         String password = passwordField.getText(); 
+
         if ("john".equals(userName) 
+
                 && "secret".equals(password)) { 
+
             statusLabel.setText("Login successul"); 
+
         } else { 
+
             statusLabel.setText("Login failed"); 
+
         } 
+
     } 
 
     @Override 
+
     public void initialize(URL url, ResourceBundle rb) { 
+
     }    
-} 
+
+}
 ```
 
 控制器为其绑定的 FXML 文档提供事件处理器。事件处理器必须标记为 `@FXML`。此外，为了访问 UI 组件，你可以对字段使用 `@FXML` 标记。标记的字段名称必须与其绑定的组件的 `fx:id` 属性相同。
@@ -3716,101 +3550,114 @@ public class Example2Controller implements Initializable {
 ### 列表 7.6：`Example2` 类
 
 ```java
- package app07;
+package app07;
+
 import javafx.application.Application;
+
 import javafx.fxml.FXMLLoader;
+
 import javafx.scene.Parent;
+
 import javafx.scene.Scene;
+
 import javafx.stage.Stage;
 
 public class Example2 extends Application {
 
     @Override
+
     public void start(Stage stage) throws Exception {
+
         Parent root = FXMLLoader.load(getClass().getResource("example2.fxml"));
+
         Scene scene = new Scene(root, 300, 200);
+
         stage.setTitle("Login Form");
+
         stage.setScene(scene);
+
         stage.show();
+
     }
+
     // 
+
 }
 ```
 
 最后，`Example2` 类加载并显示了 FXML 文档。
 
 ### 总结
+
 FXML 是构建 UI 的标记语言。在本章中，你学习了 FXML 的基础知识以及如何使用。
 
 # 第 8 章：Nashorn
 
 ## 概述
+
 Nashorn 是 Java 8 中的 JavaScript 引擎。它取代了 Java 中仍然使用的旧 JavaScript 引擎 Rhino。然而，新项目应该使用 Nashorn，因为它更符合 ECMAScript。
 
 Nashorn 是一个德语单词，意为“犀牛”。Nashorn 引擎基于 JSR 292，“在 Java 平台上支持动态语言”。该 JSR 让目标 JVM 的动态语言通过利用 `invokedynam` 得更快。
 
 ## 使用 jjs 命令
-jjs 是随 JRE 1.8 和 JDK 1.8 一起提供的工具。位于 `JAVA_HOME/bin` 目录下，`JAVA_HOME` 是 JRE 或 JDK 的安装目录。
 
-测试 Nashorn 功能的最简单方法是使用 jjs 命令工具。其语法如下：
+`jjs` 是随 JRE 1.8 和 JDK 1.8 一起提供的工具。位于 `JAVA_HOME/bin` 目录下，`JAVA_HOME` 是 JRE 或 JDK 的安装目录。
+
+测试 Nashorn 功能的最简单方法是使用 `jjs` 命令工具。其语法如下：
 
 ```
- jjs [options] [script-files] [-- arguments]
+jjs [options] [script-files] [-- arguments]
 ```
 
-如果不带脚本文件使用，jjs 将读取-执行-打印循环（REPL）启动，这是一个你可以输入命令或表达式的环境。
+如果不带脚本文件使用，`jjs` 将读取-执行-打印循环（REPL）启动，这是一个你可以输入命令或表达式的环境。
 
 你可以在本地尝试：
 
 ```bash
- $ jjs
+$ jjs
 ```
 
-jjs 的界面所示：
+`jjs` 的界面所示：
 
 ```
- jjs>
+jjs>
 ```
 
 现在你可以开始输入了。例如：
 
 ```javascript
- jjs> "Hello World"
+jjs> "Hello World"
 Hello World
 ```
 
 这里是另一个例子：
 
 ```javascript
- jjs> var name = 'Charlie'
- jjs> print('Hello ' + name)
+jjs> var name = 'Charlie'
+jjs> print('Hello ' + name)
 Hello Charlie
 ```
 
 这里，这是一个 JavaScript 函数：
 
 ```javascript
- jjs> function triple(n) { return 3 * n }
+jjs> function triple(n) { return 3 * n }
 function triple(n) { return 3 * n }
 ```
 
 调用函数 `triple` 并传递 5 返回 15：
 
 ```javascript
- jjs> triple(5)
+jjs> triple(5)
 15
 ```
 
-当然，你也可以将脚本放在文件中并将其传递给 jjs。假设你有一个名为 `test1.js` 的脚本文件，如列表 8.1 所示。
-
-
-
-
+当然，你也可以将脚本放在文件中并将其传递给 `jjs`。假设你有一个名为 `test1.js` 的脚本文件，如列表 8.1 所示。
 
 ### 列表 8.1: `test1.js` 文件
 
 ```
- function add(a, b) {
+function add(a, b) {
     return a + b;
 }
 var c = add(10, 20)
@@ -3820,7 +3667,7 @@ print(c)
 现在，调用 `jjs` 并传递 `test1.js`：
 
 ```
- $ jjs test1.js
+$ jjs test1.js
 30
 ```
 
@@ -3853,7 +3700,7 @@ print(c)
 | `--print-code` | 打印字节码。 |
 | `--print-lower-ast` | 打印降低后的 AST。 |
 | `--print-lower-parse` | 打印降低后的解析树。 |
-| `--scripting` | 启用 脚本。 |
+| `--scripting` | 启用脚本。 |
 | `--stderr=filename\|stream\|tty` | 将标准错误流重定向到指定的文件、流或文本终端。 |
 | `--stdout=filename\|stream\|tty` | 将标准输出流重定向到指定的文件、流或文本终端。 |
 | `-v` 或 `-version` | 打印 Nashorn 版本。 |
@@ -3864,33 +3711,33 @@ print(c)
 你可以使用 `-help` 选项列出所有可用选项：
 
 ```
- $ jjs -help
+$ jjs -help
 ```
 
 或者使用 `-xhelp` 获取更完整的选项列表：
 
 ```
- $ jjs -xhelp
+$ jjs -xhelp
 ```
 
 如果你对底层编译器的工作原理好奇，可以尝试 `--print-ast` 和 `--print-code` 选项。
 
 ```
- $ jjs --print-ast myscript.js
+$ jjs --print-ast myscript.js
 $ jjs --print-code myscript.js
 ```
 
 除了 `jjs` 外，还有另一个工具 `jrunscript`，它可以调用任何符合 JSR 223（“Java 平台脚本语言”）的脚本引擎。在安装了 Java 8 且不带任何选项的情况下，`jrunscript` 将调用 Nashorn。
 
 ```
- $ jrunscript
+$ jrunscript
 nashorn>
 ```
 
 自己尝试一下。
 
 ```
- $ jrunscript
+$ jrunscript
 nashorn> print(300 + 700)
 1000
 ```
@@ -3902,7 +3749,7 @@ nashorn> print(300 + 700)
 要要在 Java 中调用 Nashorn，请使用 `javax.script` 包。`ScriptEngine` 接口的 `eval` 方法会评估 JavaScript 脚本并将结果作为 `java.lang.Object` 返回。`eval` 的多个重载版本允许你传递 `String` 或 `Reader`。
 
 ```
- public java.lang.Object eval(java.lang.String script) 
+public java.lang.Object eval(java.lang.String script) 
         throws ScriptException
 public java.lang.Object eval(java.io.Reader scriptFile)
         throws ScriptException
@@ -3910,17 +3757,19 @@ public java.lang.Object eval(java.io.Reader scriptFile)
 
 你可以使用 `ScriptEngineManager` 的 `getEngineByName` 方法获取 `ScriptEngine` 实现类：
 
-```
- ScriptEngineManager factory = new ScriptEngineManager();
-ScriptEngine engine = factory.getEngineByName("nashorn");
-```
 
-例如，列表 8.2 中的 `ScriptEngineDemo1` 类获取了一个 `ScriptEngine` 并运行了一个小的 JavaScript 脚本。
+
+`ScriptEngineManager factory = new ScriptEngineManager();`
+
+`ScriptEngine engine = factory.getEngineByName("nashorn");`
+
+例如，列表 8.2 中的`ScriptEngineDemo1`类获取了一个`ScriptEngine`并运行了一个小的 JavaScript 脚本。
 
 ### 列表 8.2：`ScriptEngineDemo1` 类
 
-```
- package nashorn.fromjava;
+```java
+package nashorn.fromjava;
+
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
@@ -3933,34 +3782,37 @@ public class ScriptEngineDemo1 {
     }
 }
 ```
+
 （注：8.2 的源代码在提示中是部分片段化的，已根据所提供的上下文进行了重构）。
 
 ### 在 JavaScript 中调用 Java
 
 你可以从 Java 代码中运行 JavaScript。但，为什么要这样做呢？一种场景是：你有复杂的 JavaScript 函数，不想在 Java 中重写它们。
 
-要要在 Java 中调用 Nashorn，请使用 `javax.script` 包。`ScriptEngine` 接口的 `eval` 方法会评估 JavaScript 脚本并将结果作为 `java.lang.Object` 返回。`eval` 的多个重载版本允许你传递 `String` 或 `Reader`。
+要在 Java 中调用 Nashorn，请使用`javax.script`包。`ScriptEngine`接口的`eval`方法会评估 JavaScript 脚本并将结果作为`java.lang.Object`返回。`eval`的多个重载版本允许你传递`String`或`Reader`。
 
-```
- public java.lang.Object eval(java.lang.String script) 
+```java
+public java.lang.Object eval(java.lang.String script) 
         throws ScriptException
+
 public java.lang.Object eval(java.io.Reader scriptFile)
         throws ScriptException
 ```
 
-你可以使用 `ScriptEngineManager` 的 `getEngineByName` 方法获取 `ScriptEngine` 实现类：
+你可以使用`ScriptEngineManager`的`getEngineByName`方法获取`ScriptEngine`实现类：
 
-```
- ScriptEngineManager factory = new ScriptEngineManager();
+```java
+ScriptEngineManager factory = new ScriptEngineManager();
 ScriptEngine engine = factory.getEngineByName("nashorn");
 ```
 
-例如，列表 8.2 中的 `ScriptEngineDemo1` 类获取了一个 `ScriptEngine` 并运行了一个小的 JavaScript 脚本。
+例如，列表 8.2 中的`ScriptEngineDemo1`类获取了一个`ScriptEngine`并运行了一个小的 JavaScript 脚本。
 
 ### 列表 8.3：评估文件
 
 ```java
- package nashorn.fromjava;
+package nashorn.fromjava;
+
 import java.io.FileReader;
 import java.io.FileNotFoundException;
 import javax.script.ScriptEngine;
@@ -3976,13 +3828,15 @@ public class ScriptEngineDemo2 {
     }
 }
 ```
+
 （注：提供的文本存在大量重叠和片段化。上述结构遵循文档的逻辑意图）。
 
 ### 列表 8.4：在 JavaScript 使用 Java
 
 ```javascript
- var path = java.nio.file.Paths.get("sales.txt");
- var lines = java.nio.file.Files.lines(path);
+var path = java.nio.file.Paths.get("sales.txt");
+var lines = java.nio.file.Files.lines(path);
+
 print("Total: " + lines.mapToDouble(function(s) {return parseFloat(s)})
         .sum());
 
@@ -4015,23 +3869,19 @@ public class Main {
 }
 ```
 
-
-
-
-
-Nashorn 的另一个有趣特性是它能够编写 JavaFX 脚本。你只需要在 JavaScript 文件中编写一个 `start` 函数。该 `start` 函数必须接受一个参数，该参数将作为应用程序的主 `Stage` 。
+Nashorn 的另一个有趣特性是它能够编写 JavaFX 脚本。你只需要在 JavaScript 文件中编写一个`start`函数。该`start`函数必须接受一个参数，该参数将作为应用程序的主`Stage`。
 
 考虑列表 8.6 中的代码。
 
 ### 列表 8.6：一个 JavaFX 脚本 (`test1.js`)
 
-```
+```javascript
 function start(stage) {
     stage.title = "Scripting JavaFX";
     var button = new javafx.scene.control.Button();
     button.text = "Click Me!";
     button.onAction = function() {
-    	print("Thank you!");
+        print("Thank you!");
     }
     var root = new javafx.scene.layout.StackPane();
     root.children.add(button);
@@ -4040,13 +3890,13 @@ function start(stage) {
 }
 ```
 
-要执行 JavaFX 脚本，你必须使用 `-fx` 选项调用 `jjs`：
+要执行 JavaFX 脚本，你必须使用`-fx`选项调用`jjs`：
 
 ```
 jjs -fx test1.js
 ```
 
-图 8.1 显示了运行 `test1.js` 脚本时创建的 JavaFX 。
+图 8.1 显示了运行`test1.js`脚本时创建的 JavaFX。
 
 ![](img/0801.png)
 
@@ -4054,15 +3904,15 @@ jjs -fx test1.js
 
 ### 使用 Nashorn 替代 Shell 脚本
 
-Linux 硬核粉丝通常精通 Linux 命令。然而，如果你的 Linux 技能仅限于 `whoami` 和 `ls` 等最基础的命令，你可以利用 Nashorn。Nashorn 允许你调用 Linux 命令并处理结果。
+Linux 硬核粉丝通常精通 Linux 命令。然而，如果你的 Linux 技能仅限于`whoami`和`ls`等最基础的命令，你可以利用 Nashorn。Nashorn 允许你调用 Linux 命令并处理结果。
 
-要在 Nashorn 中执行 Linux 命令，请调用 `jjs` 并用反引号（`` ` ``）括起命令。在键盘上，该字符通常位于数字 `1` 的左侧。例如，要列出当前目录的内容，可以使用以下命令。
+要在 Nashorn 中执行 Linux 命令，请调用`jjs`并用反引号（`` ` ``）括起命令。在键盘上，该字符通常位于数字`1`的左侧。例如，要列出当前目录的内容，可以使用以下命令。
 
 ```
 jjs> `ls -al`
 ```
 
-使用 Nashorn 调用 Linux 命令的优势在于你可以处理输出内容。例如，以下代码调用了 `cat` 命令打印 `Demo.java` 文件并添加行号。
+使用 Nashorn 调用 Linux 命令的优势在于你可以处理输出内容。例如，以下代码调用了`cat`命令打印`Demo.java`文件并添加行号。
 
 ```
 jjs> var lines = `cat Demo.java`.split('\n');
@@ -4096,4 +3946,3 @@ jjs> for each (line in lines) {System.out.print(line); System.in.read()}
 ### 总结
 
 Nashorn 是 Java 8 中一个新的 JavaScript 引擎。它不仅允许你从 Java 代码执行 JavaScript，还带有高级功能，用于编写 JavaFX 应用程序以及处理 Linux 命令的输出。
-

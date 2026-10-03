@@ -1,4 +1,5 @@
-# 我是如何在不停止 JVM 的情况下启动 500 万个虚拟线程的。
+
+# 我是如何在不停止 JVM 的情况下启动 500 万个虚拟线程的
 
 > 原文：<https://medium.com/javarevisited/how-i-spun-up-5-million-virtual-threads-without-stalling-the-jvm-1188d806e6bd?source=collection_archive---------0----------------------->
 
@@ -6,9 +7,9 @@
 
 你没看错！这篇文章举例说明了我如何在我的 *M1 Macbook Pro* 上启动**500 万个 Java 虚拟线程**，每个线程休眠 *100 毫秒*而不停止 [JVM](/javarevisited/7-best-courses-to-learn-jvm-garbage-collection-and-performance-tuning-for-experienced-java-331705180686) 。项目织机使这成为可能。
 
-我首先从[这里](https://jdk.java.net/19/)下载了 JDK 19 的早期版本(因为截至 2022 年 7 月 17 日该版本尚未发布)。
+我首先从[这里](https://jdk.java.net/19/)下载了 JDK 19 的早期版本（因为截至 2022 年 7 月 17 日该版本尚未发布）。
 
-我更喜欢使用 [Intellij Idea](/javarevisited/7-best-courses-to-learn-intellij-idea-for-beginners-and-experienced-java-programmers-2e9aa9bb0c05) 。我确保我运行的是 Idea 的最新版本。我创建了一个简单的 Java 项目，项目 SDK 设置为 *JDK 19* 。由于这是我第一次使用 JDK 19，我不得不通过按下“`Add JDK`”按钮，然后按下“`Next`”按钮来添加新下载并解压缩的 JDK(已被添加到`/Library/Java/JavaVirtualMachines`目录中)。
+我更喜欢使用 [Intellij Idea](/javarevisited/7-best-courses-to-learn-intellij-idea-for-beginners-and-experienced-java-programmers-2e9aa9bb0c05) 。我确保我运行的是 Idea 的最新版本。我创建了一个简单的 Java 项目，项目 SDK 设置为 *JDK 19* 。由于这是我第一次使用 JDK 19，我不得不通过按下“`Add JDK`”按钮，然后按下“`Next`”按钮来添加新下载并解压缩的 JDK（已被添加到`/Library/Java/JavaVirtualMachines`目录中）。
 
 [![](img/80b7e6be825d3bee94f0c5d5a3bb8763.png)](https://javarevisited.blogspot.com/2018/09/top-5-courses-to-learn-intellij-idea-java-and-android-development.html)
 
@@ -20,7 +21,7 @@
 
 [![](img/bcddbca2140c6c3d917b7c0941938f5d.png)](https://www.youtube.com/watch?v=g4rPdPxNb5w)
 
-在`App.java`内部，我借助新的`Thread.startVirtualThread()`函数旋转了**100 万个**虚拟线程(以后会升级到 500 万个)。
+在`App.java`内部，我借助新的`Thread.startVirtualThread()`函数旋转了**100 万个**虚拟线程（以后会升级到 500 万个）。
 
 ```
 package com.asavio.loom;
@@ -47,7 +48,7 @@ public class App {
 java: startVirtualThread(java.lang.Runnable) is a preview API and is disabled by default.(use --enable-preview to enable preview APIs)
 ```
 
-为了解决这个问题，在`Preferences -> Build, Execution, Deployment -> Compiler -> Java Compiler`下，我取消了`Use '--release’`选项，并在`Additional Command Line parameters`文本框中添加了以下内容，点击`Apply`，然后点击`OK`。
+为了解决这个问题，在`Preferences -> Build, Execution, Deployment -> Compiler -> Java Compiler`下，我取消了`Use '--release'`选项，并在`Additional Command Line parameters`文本框中添加了以下内容，点击`Apply`，然后点击`OK`。
 
 ```
 --enable-preview --source 19
@@ -103,7 +104,7 @@ public class App {
 
 ![](img/8a55bc81e2b80a36f85e94694ee7114d.png)
 
-*虚拟线程*在`sleep()`或其他大多数阻塞操作被调用时(例如`Future.get()`)不会阻塞。相反，当它们即将被阻塞时，它们**从正在运行的平台线程上卸载**自己，允许其他虚拟线程将自己安装到平台线程上并运行。当虚拟线程准备好恢复执行时(在这种情况下，当睡眠时间耗尽时)，它们会返回到 JVM 的调度程序。你可以在这里阅读更多关于虚拟线程[的内容。](/javarevisited/is-the-thread-per-request-model-a-good-thing-after-project-loom-6d08012839e8)
+*虚拟线程*在`sleep()`或其他大多数阻塞操作被调用时（例如`Future.get()`）不会阻塞。相反，当它们即将被阻塞时，它们**从正在运行的平台线程上卸载**自己，允许其他虚拟线程将自己安装到平台线程上并运行。当虚拟线程准备好恢复执行时（在这种情况下，当睡眠时间耗尽时），它们会返回到 JVM 的调度程序。你可以在这里阅读更多关于虚拟线程[的内容](/javarevisited/is-the-thread-per-request-model-a-good-thing-after-project-loom-6d08012839e8)。
 
 默认情况下，虚拟线程是 [**守护线程**](https://javarevisited.blogspot.com/2012/03/what-is-daemon-thread-in-java-and.html) ，这意味着 JVM 不会等待这些线程完成。因此，我收集了线程并`join`它们，让 [JVM](https://www.java67.com/2019/08/best-books-to-learn-java-virtual-machine-in-depth.html) 等待那一百万个线程的完成。找到下面更新的`startVirtualThreads()`功能。
 
@@ -170,7 +171,7 @@ private static void startVirtualThreads() throws InterruptedException {
 }
 ```
 
-回答是:
+回答是：
 
 ```
 Main Started

@@ -1,22 +1,21 @@
+
 # 50 个 Java 算法练习：提升编程技能的 50 个实用练习
-
-
 
 ![](img/image_rsrc4EG.jpg)
 
-# 50 道 JAVA 算法练习题
+## 50 道 Java 算法练习题
 
-## 引言
+### 引言
 
 算法是计算机科学的核心。它是使用一系列逻辑指令来解决问题的艺术。无论你是想要掌握编程基础的初学者，还是想要提高问题解决能力的资深开发者，这本书都是为为你设计的。
 
-## 题目：Java 中的冒泡排序
+### 题目：Java 中的冒泡排序
 
 编写一个 Java 程序，使用冒泡排序算法对整数数组进行排序。冒泡排序算法通过比较相邻的元素，如果它们的顺序错误则对其进行交换，并重复此过程，直到整个数组排序完毕。
 
 你需要在 Java 中编写冒泡排序逻辑，并确保你的程序运行正确。你也可以添加注释来解释你的代码。
 
-### Java 解决方案示例：
+#### Java 解决方案示例
 
 ```java
 import java.util.Scanner;
@@ -51,13 +50,13 @@ public class TriBubbles {
 
 在这个示例中，我们使用了一个整数数组来存储元素，冒泡排序算法实现在两个 `for` 循环内部。程序要求用户输入数组的大小和元素，然后在最后显示排序后的数组。
 
-## 题目：Java 中的快速排序
+### 题目：Java 中的快速排序
 
 编写一个 Java 程序，使用快速排序算法对整数数组进行排序。快速排序算法是一种基于分治法的高效排序算法。它选择一个基准元素，将数组划分为两个子数组（基准元素元素和基准元素元素），然后递归地对这些子数组进行排序。
 
 你需要在 Java 中编写快速排序逻辑，并确保你的程序运行正确。你也可以添加注释来解释你的代码。
 
-### Java 解决方案示例：
+#### Java 解决方案示例
 
 ```java
 import java.util.Scanner;
@@ -109,13 +108,13 @@ public class QuickSort {
 
 在这个示例中，我们使用了 `quickSort` 方法来对整数数组。程序要求用户输入数组的大小和元素，然后使用递归进行排序。
 
-## 题目：Java 中的合并排序
+### 题目：Java 中的合并排序
 
 编写一个 Java 程序，使用合并排序算法（`MergeSort`）对整数数组进行排序。合并排序基于“分治”方法，通过将数组分为两部分，对这些部分进行排序，然后合并它们以得到一个排序后的数组。
 
 你需要在 Java 中编写合并逻辑并确保你的程序运行正确。你也可以为你的代码添加注释。
 
-### Java 解决方案示例：
+#### Java 解决方案示例
 
 ```java
 import java.util.Scanner;
@@ -185,13 +184,13 @@ public class MergeSort {
 
 在这个示例中，我们使用了 `MergeSort` 算法对整数数组进行排序。程序要求用户输入数组的大小和元素，然后使用递归进行排序。
 
-## 题目：Java 中的选择排序
+### 题目：Java 中的选择排序
 
 编写一个 Java 程序，使用选择排序算法对整数数组进行排序。选择排序算法包括找到数组中的最小元素并将其放在第一个位置，然后对数组的部分重复此过程。
 
 你需要在 Java 中编写 `selectionSort` 逻辑并确保你的程序运行正确。你也可以为你的代码添加注释。
 
-### Java 解决方案示例：
+#### Java 解决方案示例
 
 ```java
 import java.util.Scanner;
@@ -231,10 +230,6 @@ public class SelectionSort {
 }
 ```
 
-
-
-
-
 ```java
 for (int i = 0; i < n; i++) {
     System.out.print(array[i] + " ");
@@ -261,13 +256,21 @@ public static void selectionSort(int[] arr) {
 
 在这个示例中，我们使用了选择排序算法对整数数组进行排序。程序要求用户输入数组的大小和元素，然后使用双重循环在数组的未排序部分找到最小元素并将其放置在正确的位置。此操作重复进行，直到整个数组排序完成。
 
-## Java 中的插入排序
+### Java 中的插入排序
 
 编写一个 Java 程序，使用插入排序算法对整数数组进行排序。插入排序算法由从左到右依次将每个未排序元素插入到已排序元素中的正确位置组成。
 
 你需要在 Java 中编写插入排序的逻辑，并确保你的程序运行正常。你也可以添加注释来解释你的代码。
 
-### Java 解决方案示例：
+#### Java 解决方案示例
+
+
+
+# Java 排序与搜索算法示例
+
+## 插入排序
+
+以下示例演示了如何使用插入排序算法对整数数组进行排序：
 
 ```java
 import java.util.Scanner;
@@ -363,7 +366,7 @@ public class BinarySearch {
 
 编写一个 Java 程序在数组中执行搜索。顺序查找是一种简单的算法，它逐个遍历元素，直到找到正在查找的元素或遍历完数组。
 
-Java 解决方案示例：
+### Java 解决方案示例：
 
 ```java
 import java.util.Scanner;
@@ -402,9 +405,11 @@ public class SequentialSearch {
 
 在这个示例中，我们使用了顺序查找算法在数组中查找元素。程序要求用户输入数组的大小、数组元素以及要搜索的元素。然后执行顺序查找以找到元素，如果找到则显示其位置，否则指示未找到。顺序查找虽然简单，但对于大型数组可能比其他方法效率低，因为它需要遍历数组中的所有元素。
 
+# Java 数学计算示例
+
 ## Java 中计算阶乘
 
-编写一个 Java 程序计算给定数字的阶乘。正整数 n 的阶乘是从 1 到 n 的所有正整数的乘积。
+编写一个 Java 程序计算给定数字的阶乘。正整数 `n` 的阶乘是从 `1` 到 `n` 的所有正整数的乘积。
 
 你需要在 Java 中编写计算阶乘的逻辑，并确保你的程序运行正常。你也可以添加注释来解释你的代码。
 
@@ -417,38 +422,32 @@ public class Factorial {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-```
-
-
-
-
-
-```java
-System.out.print("Enter a positive integer: ");
-
-int n = scanner.nextInt();
-if (n < 0) {
-    System.out.println("The factorial is only defined for positive integers.");
-} else {
-    long result = calculateFactorial(n);
-    System.out.println("The factorial of " + n + " is " + result);
-}
-
-public static long calculateFactorial(int n) {
-    if (n == 0 || n == 1) {
-        return 1; // The factorial of 0 and 1 is 1
+        System.out.print("Enter a positive integer: ");
+        int n = scanner.nextInt();
+        if (n < 0) {
+            System.out.println("The factorial is only defined for positive integers.");
+        } else {
+            long result = calculateFactorial(n);
+            System.out.println("The factorial of " + n + " is " + result);
+        }
     }
-    long factorial = 1;
-    for (int i = 2; i <= n; i++) {
-        factorial *= i;
+
+    public static long calculateFactorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1; // The factorial of 0 and 1 is 1
+        }
+        long factorial = 1;
+        for (int i = 2; i <= n; i++) {
+            factorial *= i;
+        }
+        return factorial;
     }
-    return factorial;
 }
 ```
 
-在这个示例中，我们使用 `for` 循环来计算给定正整数的阶乘。程序要求用户输入一个数字，然后检查它是否为正数。如果是，它通过相乘从 `1` 到 `n` 的所有整数来计算阶乘；否则它指示阶乘仅对正整数定义。`0` 和 `1` 的阶乘定义为 `1`。
+在这个示例中，我们使用`for`循环来计算给定正整数的阶乘。程序要求用户输入一个数字，然后检查它是否为正数。如果是，它通过相乘从`1`到`n`的所有整数来计算阶乘；否则它指示阶乘仅对正整数定义。`0`和`1`的阶乘定义为`1`。
 
-### 语句：在 Java 中计算一系列整数之和
+## 语句：在 Java 中计算一系列整数之和
 
 编写一个 Java 程序来计算一系列整数之和。用户必须输入要相加的整数个数，然后输入这些整数。程序必须计算这些整数的和并显示出来。
 
@@ -477,9 +476,9 @@ public class SumOfIntegers {
 }
 ```
 
-在这个示例中，我们使用 `for` 循环允许用户逐个输入整数。在循环的每次迭代中，输入的整数都会被加到 `sum` 变量中，该变量用于存储总和。一旦输入了所有整数，程序就会显示 `sum`。
+在这个示例中，我们使用`for`循环允许用户逐个输入整数。在循环的每次迭代中，输入的整数都会被加到`sum`变量中，该变量用于存储总和。一旦输入了所有整数，程序就会显示`sum`。
 
-### 语句：在 Java 中计算一个数的幂
+## 语句：在 Java 中计算一个数的幂
 
 编写一个 Java 程序来计算一个数的幂。用户必须输入底数（一个数字）和指数（一个非负整数）。程序必须计算底数相对于指数方的幂的值并显示出来。
 
@@ -520,13 +519,13 @@ public class PowerCalculation {
 }
 ```
 
-在这个示例中，我们使用 `for` 循环来计算 `base` 的幂。程序要求用户输入 `base` 和 `exponent`，检查 `exponent` 是否为非负整数。`0` 的幂定义为 `1`。
+在这个示例中，我们使用`for`循环来计算`base`的幂。程序要求用户输入`base`和`exponent`，检查`exponent`是否为非负整数。`0`的幂定义为`1`。
 
-### 语句：在 Java 中计算最大公约数 (GCD)
+## 语句：在 Java 中计算最大公约数 (GCD)
 
-编写一个 Java 程序来计算两个数的最大公约数 (`GCD`)。`GCD` 是能够同时除尽两个数且无余数的最大整数。
+编写一个 Java 程序来计算两个数的最大公约数（`GCD`）。`GCD`是能够同时除尽两个数且无余数的最大整数。
 
-你需要在 Java 中编写 `GCD` 的逻辑，并确保你的程序正常运行。你也可以添加注释来解释你的代码。
+你需要在 Java 中编写`GCD`的逻辑，并确保你的程序正常运行。你也可以添加注释来解释你的代码。
 
 ### Java 解决方案示例：
 
@@ -555,9 +554,12 @@ public class GCDCalculation {
     }
 }
 ```
+
+
+
 *(注：原文提供的 GCD 代码块在括号闭合处存在语法错误，翻译时已根据逻辑保持完整性对齐)*
 
-### 语句：在 Java 中计算最小公倍数 (LCM)
+## 语句：在 Java 中计算最小公倍数 (LCM)
 
 编写一个 Java 程序来计算两个数的最小公倍数 (`LCM`)。`LCM` 是两个数的公倍数中的最小正整数。
 
@@ -596,9 +598,9 @@ public class LCMCalculation {
 }
 ```
 
-在这个示例中，我们使用欧几里得算法来计算两个数的 `GCD`，然后利用 `GCD` 和 `LCM` 的关系来计算 `LCM`。程序要求用户输入两个数字，然后使用公式 `(a * b) / gcd(a, b)` 计算 `LCM`。
+在这个示例中，我们使用欧几里得算法来计算两个数的`GCD`，然后利用`GCD`和`LCM`的关系来计算`LCM`。程序要求用户输入两个数字，然后使用公式`(a * b) / gcd(a, b)`计算`LCM`。
 
-### 语句：在 Java 中搜索给定范围内的质数
+## 语句：在 Java 中搜索给定范围内的质数
 
 编写一个 Java 程序来查找并显示给定范围内所有的质数。质数是一个大于 1 且只有 1 和它本身两个约数的整数。
 
@@ -617,10 +619,6 @@ public class PrimeNumbersInRange {
     }
 }
 ```
-
-
-
-
 
 ```java
 int min = scanner.nextInt();
@@ -654,7 +652,7 @@ public static boolean isPrime(int num) {
 }
 ```
 
-在这个示例中，我们使用了一个 `isPrime` 函数来检查给定数字是否为质数。程序要求用户输入范围的最小值和最大值，然后使用 `findAndDisplayPrimes` 函数找到并显示该范围内所有的质数。`isPrime` 函数通过检查一个数字是否能被 1 和自身以外的数字整除来判断其是否为质数。注意，2 被认为是第一个质数，程序确保范围内的最小值至少为 2。
+在这个示例中，我们使用了一个`isPrime`函数来检查给定数字是否为质数。程序要求用户输入范围的最小值和最大值，然后使用`findAndDisplayPrimes`函数找到并显示该范围内所有的质数。`isPrime`函数通过检查一个数字是否能被 1 和自身以外的数字整除来判断其是否为质数。注意，2 被认为是第一个质数，程序确保范围内的最小值至少为 2。
 
 ## 题目：在 Java 中计算整数各位数字之和
 
@@ -688,7 +686,7 @@ public class SumOfDigits {
 }
 ```
 
-在这个示例中，我们使用 `while` 循环来计算整数各位数字之和。程序要求用户输入一个数字，然后使用 `while` 循环在每次迭代中提取最后一位，将其累加到和中并从数字中移除该数字。循环一直持续直到数字变为零。程序随后显示各位数字之和。
+在这个示例中，我们使用`while`循环来计算整数各位数字之和。程序要求用户输入一个数字，然后使用`while`循环在每次迭代中提取最后一位，将其累加到和中并从数字中移除该数字。循环一直持续直到数字变为零。程序随后显示各位数字之和。
 
 ## 题目：在 Java 中计算整数的位数
 
@@ -721,7 +719,7 @@ public class CountDigits {
 }
 ```
 
-在这个示例中，我们使用 `while` 循环来统计整数的位数。程序要求用户输入一个数字，然后使用 `while` 循环在每次迭代中增加计数器并删除最后一位。循环一直持续直到数字变为零。程序随后显示该数字的位数。
+在这个示例中，我们使用`while`循环来统计整数的位数。程序要求用户输入一个数字，然后使用`while`循环在每次迭代中增加计数器并删除最后一位。循环一直持续直到数字变为零。程序随后显示该数字的位数。
 
 ## 题目：在 Java 中查找数组的最小值或最大值
 
@@ -785,11 +783,8 @@ public class MinMaxArray {
     }
 }
 ```
-*(注：由于原文提供的 Java 代码存在多处语法错误，如 `if` 括号未闭合、变量 `n` 和 `arr` 未定义等，我在翻译时根据逻辑对代码结构进行了必要的完整性修复，使其可读，同时保留了原文的意图)*
 
-
-
-
+*(注：由于原文提供的 Java 代码存在多处语法错误，如`if`括号未闭合、变量`n`和`arr`未定义等，我在翻译时根据逻辑对代码结构进行了必要的完整性修复，使其可读，同时保留了原文的意图)*
 
 ```java
 public static String reverseString(String input) {
@@ -807,7 +802,7 @@ public static String reverseString(String input) {
 }
 ```
 
-在这个示例中，我们使用字符数组来存储字符串中的字符，然后使用双指针技术来反转字符。程序要求用户输入一个字符串，然后使用 `while` 循环通过交换 `left` 和 `right` 位置的字符来反转字符。最后显示反转后的字符串。
+在这个示例中，我们使用字符数组来存储字符串中的字符，然后使用双指针技术来反转字符。程序要求用户输入一个字符串，然后使用`while`循环通过交换`left`和`right`位置的字符来反转字符。最后显示反转后的字符串。
 
 ## 题目：Java 中的回文验证
 
@@ -851,11 +846,13 @@ public class PalindromeChecker {
 }
 ```
 
-在这个示例中，我们使用一个 `isPalindrome` 函数来检查字符串是否为回文。程序要求用户输入一个字符串，然后使用 `isPalindrome` 函数移除标点、忽略大小写和空格，最后使用双指针技术检查字符串是否为回文。程序会显示一条消息指示字符串是否为回文。
+在这个示例中，我们使用一个`isPalindrome`函数来检查字符串是否为回文。程序要求用户输入一个字符串，然后使用`isPalindrome`函数移除标点、忽略大小写和空格，最后使用双指针技术检查字符串是否为回文。程序会显示一条消息指示字符串是否为回文。
 
 ## 题目：Java 中统计字符字符串中的元音
 
-编写一个 Java 程序统计字符串中元音（字母 a, e, i, o, u）的数量。用户输入一个字符串，程序统计字符串中元音的数量并显示结果。
+
+
+编写一个 Java 程序统计字符串中元音（字母 `a`, `e`, `i`, `o`, `u`）的数量。用户输入一个字符串，程序统计字符串中元音的数量并显示结果。
 
 你需要在 Java 中编写元音计数逻辑，并确保你的程序运行正常。你也可以添加注释来解释你的代码。
 
@@ -887,7 +884,7 @@ public class VowelCounter {
 }
 ```
 
-在这个示例中，我们使用一个 `countVowels` 函数来统计字符串中元音的数量。程序要求用户输入一个字符串，然后使用 `countVowels` 函数将字符串转换为小写，然后逐字符扫描字符串以统计元音。程序随后显示字符串中元音的数量。
+在这个示例中，我们使用一个`countVowels`函数来统计字符串中元音的数量。程序要求用户输入一个字符串，然后使用`countVowels`函数将字符串转换为小写，然后逐字符扫描字符串以统计元音。程序随后显示字符串中元音的数量。
 
 # 题目：Java 中计算数字数组的平均值
 
@@ -968,11 +965,7 @@ public class MedianFinder {
 }
 ```
 
-
-
-
-
-在这个示例中，我们使用了 `Arrays.sort` 方法对整数数组进行排序，这对于寻找中位数至关重要。然后，我们使用逻辑判断根据数组大小的奇偶性来确定中位数。如果数组元素个数为偶数，中位数是两个中间元素的平均值；如果数组元素个数为奇数，中位数就是中间元素。程序最后会显示中位数。
+在这个示例中，我们使用了`Arrays.sort`方法对整数数组进行排序，这对于寻找中位数至关重要。然后，我们使用逻辑判断根据数组大小的奇偶性来确定中位数。如果数组元素个数为偶数，中位数是两个中间元素的平均值；如果数组元素个数为奇数，中位数就是中间元素。程序最后会显示中位数。
 
 ## 题目描述：在 Java 中检查数组中元素的唯一性
 
@@ -1017,7 +1010,7 @@ public class UniqueElementsChecker {
 }
 ```
 
-在这个示例中，我们使用了 `HashSet` 来检查数组中元素的唯一性。程序要求用户输入数组的大小和元素，然后使用 `checkForDuplicates` 函数检查数组是否包含任何重复元素。如果一个元素无法添加到集合中（因为它已经存在），程序将判定为存在重复元素。否则，它会显示所有元素都是唯一的。
+在这个示例中，我们使用了`HashSet`来检查数组中元素的唯一性。程序要求用户输入数组的大小和元素，然后使用`checkForDuplicates`函数检查数组是否包含任何重复元素。如果一个元素无法添加到集合中（因为它已经存在），程序将判定为存在重复元素。否则，它会显示所有元素都是唯一的。
 
 ## 题目描述：在 Java 中合并两个排序数组
 
@@ -1078,7 +1071,7 @@ public class SortedArrayMerger {
 }
 ```
 
-在这个示例中，我们使用了 `mergeSortedArrays` 函数将排序数组合并为一个。程序要求用户输入数组的大小，然后执行合并操作。最后会显示结果。
+在这个示例中，我们使用了`mergeSortedArrays`函数将排序数组合并为一个。程序要求用户输入数组的大小，然后执行合并操作。最后会显示结果。
 
 ## 题目描述：在 Java 中计算数组的累加和
 
@@ -1120,15 +1113,21 @@ public class CumulativeSum {
 }
 ```
 
-在这个示例中，我们使用了 `calculateCumulativeSum` 函数来计算累加和表。程序要求用户输入大小和元素，然后执行计算。
+在这个示例中，我们使用了`calculateCumulativeSum`函数来计算累加和表。程序要求用户输入大小和元素，然后执行计算。
 
 ## 题目描述：在 Java 中将十进制数转换为二进制数
 
 编写一个 Java 程序，将十进制数转换为其二进制表示。用户必须输入一个十进制数，程序必须计算该数字的二进制表示并显示出来。
 
-你需要在 Java 中编写十进制转二进制的逻辑代码，并确保你的程序运行正常。你也可以可以添加注释来解释你的代码。
+你需要在 Java 中编写十进制转二进制的逻辑代码，并确保你的程序运行正常。你也可以添加注释来解释你的代码。
 
 ### Java 解决方案示例：
+
+
+
+# 十进制转二进制与集合操作示例
+
+## 十进制转二进制转换器
 
 ```java
 import java.util.Scanner;
@@ -1140,16 +1139,7 @@ public class DecimalToBinaryConverter {
         System.out.print("Enter a decimal number: ");
         int decimalNumber = scanner.nextInt();
         String binaryNumber = convertDecimalToBinary(decimalNumber);
-    }
-}
-```
-
-
-
-
-```java
-            System.out.println("The binary representation is: " + binaryNumber);
-
+        System.out.println("The binary representation is: " + binaryNumber);
     }
 
     public static String convertDecimalToBinary(int decimal) {
@@ -1167,7 +1157,7 @@ public class DecimalToBinaryConverter {
 }
 ```
 
-在这个示例中，我们使用了 `convertDecimalToBinary` 函数将十进制数转换为二进制表示。程序要求用户输入一个十进制数，然后使用该函数进行转换。转换逻辑包括重复地将十进制数除以 2，并将余数（0 或 1）添加到字符串的开头，以获得二进制表示。最后显示结果。
+在这个示例中，我们使用了`convertDecimalToBinary`函数将十进制数转换为二进制表示。程序要求用户输入一个十进制数，然后使用该函数进行转换。转换逻辑包括重复地将十进制数除以 2，并将余数（0 或 1）添加到字符串的开头，以获得二进制表示。最后显示结果。
 
 ## 题目：在 Java 中在字符串中查找子字符串
 
@@ -1204,11 +1194,11 @@ public class SubstringSearch {
 }
 ```
 
-在这个示例中，我们使用了 `findSubstringPositions` 函数来搜索字符串中子字符串的所有出现。程序要求用户输入主字符串和要搜索的子字符串，然后使用函数找到并显示子字符串出现的所有位置。`indexOf` 方法用于查找子字符串在主字符串中的位置，`while` 循环用于查找所有次数。
+在这个示例中，我们使用了`findSubstringPositions`函数来搜索字符串中子字符串的所有出现。程序要求用户输入主字符串和要搜索的子字符串，然后使用函数找到并显示子字符串出现的所有位置。`indexOf`方法用于查找子字符串在主字符串中的位置，`while`循环用于查找所有次数。
 
 ## 题目：在 Java 中计算两个集合的交集
 
-编写一个 Java 程序来计算两个整数集合的交集。用户必须输入两个集合的元素，程序必须确定并显示两个集合共同拥元素（即交集）。
+编写一个 Java 程序来计算两个整数集合的交集。用户必须输入两个集合的元素，程序必须确定并显示两个集合共同拥有的元素（即交集）。
 
 你需要在 Java 中编写集合交集的计算逻辑，并确保你的程序运行正常。你也可以添加注释来解释你的代码。
 
@@ -1253,11 +1243,11 @@ public class IntersectionOfSets {
 }
 ```
 
-在这个示例中，我们使用了 `findIntersection` 函数来计算两个整数集合的交集。程序要求用户输入两个集合的大小和元素，然后使用该函数找到同时于两个集合的元素。交集元素存储在 `ArrayList` 中并在最后显示。`contains` 方法用于检查一个元素是否存在于某个集合中。
+在这个示例中，我们使用了`findIntersection`函数来计算两个整数集合的交集。程序要求用户输入两个集合的大小和元素，然后使用该函数找到同时属于两个集合的元素。交集元素存储在`ArrayList`中并在最后显示。`contains`方法用于检查一个元素是否存在于某个集合中。
 
 ## 题目：在 Java 中计算两个集合的并集
 
-编写一个 Java 程序来计算两个整数集合的并集。用户必须输入两个集合的元素，程序必须确定并显示至少于一个集合中的元素（即并集）。
+编写一个 Java 程序来计算两个整数集合的并集。用户必须输入两个集合的元素，程序必须确定并显示至少属于一个集合中的元素（即并集）。
 
 你需要在 Java 中编写集合并集的计算逻辑，并确保你的程序运行正常。你也可以添加注释来解释你的代码。
 
@@ -1299,11 +1289,11 @@ public class UnionOfSets {
 }
 ```
 
-在这个示例中，我们使用了 `findUnion` 函数来计算两个整数集合的并集。程序要求用户输入两个集合的大小和元素，然后使用该函数找到至少存在一个集合中的元素。并集元素存储在 `ArrayList` 中并在最后显示。使用 `addAll` 方法将集合的所有元素添加到并集中。
+在这个示例中，我们使用了`findUnion`函数来计算两个整数集合的并集。程序要求用户输入两个集合的大小和元素，然后使用该函数找到至少存在于一个集合中的元素。并集元素存储在`ArrayList`中并在最后显示。使用`addAll`方法将集合的所有元素添加到并集中。
 
 ## 题目：在 Java 中计算两个集合之间的差集
 
-编写一个 Java 程序计算两个整数集合之间的差集。用户必须输入两个集合的元素，程序必须确定并显示存在第一个集合但不在第二个集合中的元素（即差集）。
+编写一个 Java 程序计算两个整数集合之间的差集。用户必须输入两个集合的元素，程序必须确定并显示存在于第一个集合但不在第二个集合中的元素（即差集）。
 
 你需要在 Java 中编写集合差集的计算逻辑，并确保你的程序运行正常。你也可以添加注释来解释你的代码。
 
@@ -1319,50 +1309,52 @@ public class DifferenceOfSets {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the size of the first set: ");
-```
-
-
-
-
-```java
-int size1 = scanner.nextInt();
-HashSet<Integer> set1 = new HashSet<Integer>();
-System.out.println("Enter the elements of the first set:");
-for (int i = 0; i < size1; i++) {
-    set1.add(scanner.nextInt());
-}
-System.out.print("Enter the size of the second set: ");
-int size2 = scanner.nextInt();
-HashSet<Integer> set2 = new HashSet<Integer>();
-System.out.println("Enter the elements of the second set:");
-for (int i = 0; i < size2; i++) {
-    set2.add(scanner.nextInt());
-}
-ArrayList<Integer> difference = findDifference(set1, set2);
-System.out.println("The difference between the two sets is: " + difference);
-}
-
-public static ArrayList<Integer> findDifference(HashSet<Integer> set1, HashSet<Integer> set2) {
-    ArrayList<Integer> difference = new ArrayList<Integer>();
-    for (int num : set1) {
-        if (!set2.contains(num)) {
-            difference.add(num);
+        int size1 = scanner.nextInt();
+        HashSet<Integer> set1 = new HashSet<Integer>();
+        System.out.println("Enter the elements of the first set:");
+        for (int i = 0; i < size1; i++) {
+            set1.add(scanner.nextInt());
         }
+        System.out.print("Enter the size of the second set: ");
+        int size2 = scanner.nextInt();
+        HashSet<Integer> set2 = new HashSet<Integer>();
+        System.out.println("Enter the elements of the second set:");
+        for (int i = 0; i < size2; i++) {
+            set2.add(scanner.nextInt());
+        }
+        ArrayList<Integer> difference = findDifference(set1, set2);
+        System.out.println("The difference between the two sets is: " + difference);
     }
-    return difference;
-}
+
+    public static ArrayList<Integer> findDifference(HashSet<Integer> set1, HashSet<Integer> set2) {
+        ArrayList<Integer> difference = new ArrayList<Integer>();
+        for (int num : set1) {
+            if (!set2.contains(num)) {
+                difference.add(num);
+            }
+        }
+        return difference;
+    }
 }
 ```
 
-在这个示例中，我们使用了 `findDifference` 函数来计算两个整数集合之间的差异。程序要求用户输入两个集合的大小和元素，然后使用该函数找到存在于第一个集合中但不在第二个集合中的元素。差异元素被存储在 `ArrayList` 中并在最后显示。`contains` 方法用于检查某个元素是否存在于第二个集合中。
+在这个示例中，我们使用了`findDifference`函数来计算两个整数集合之间的差异。程序要求用户输入两个集合的大小和元素，然后使用该函数找到存在于第一个集合中但不在第二个集合中的元素。差异元素被存储在`ArrayList`中并在最后显示。`contains`方法用于检查某个元素是否存在于第二个集合中。
 
-### 语句：在 Java 中计算集合的补集
+## 题目：在 Java 中计算集合的补集
 
 编写一个 Java 程序，计算一个整数集合相对于给定全集的补集。用户必须先输入全集的元素，然后输入要计算其补集的集合的元素，程序必须确定并显示存在于全集中但不在给定集合中的元素（即补集）。
 
-你转为在 Java 中编写计算集合补集的逻辑代码，并确保你的程序运行正常。你也可以添加注释来解释你的代码。
+你需要在 Java 中编写计算集合补集的逻辑代码，并确保你的程序运行正常。你也可以添加注释来解释你的代码。
 
 ### Java 解决方案示例：
+
+```java
+// 提示：补集的计算逻辑与差集类似，只不过全集是第一个集合，给定集合是第二个集合。
+// 你可以复用`findDifference`的逻辑，将全集作为第一个参数传入。
+```
+
+
+
 
 ```java
 import java.util.Scanner;
@@ -1403,11 +1395,11 @@ public class SetComplement {
 }
 ```
 
-在这个示例中，我们使用了 `findComplement` 函数来计算全集中的补集。程序要求用户输入两个集合的大小和元素，然后使用该函数找到存在于全集中但不在给定集合中的元素。差异元素被存储在 `ArrayList` 中并在最后显示。
+在这个示例中，我们使用了`findComplement`函数来计算全集中的补集。程序要求用户输入两个集合的大小和元素，然后使用该函数找到存在于全集中但不在给定集合中的元素。差异元素被存储在`ArrayList`中并在最后显示。
 
-### 语句：Java 中的拓扑排序
+## Java 中的拓扑排序
 
-编写一个 Java 程序，对一个用邻接表表示的有向图进行拓扑排序。拓扑排序是一种对图节点进行排序的方法，对于每一条边 u->v，u 都在 v 之前。
+编写一个 Java 程序，对一个用邻接表表示的有向图进行拓扑排序。拓扑排序是一种对图节点进行排序的方法，对于每一条边`u->v`，`u`都在`v`之前。
 
 你需要在 Java 中编写拓扑排序的逻辑，并确保你的程序运行正常。你也可以添加注释来解释你的代码。
 
@@ -1476,7 +1468,7 @@ public class TopologicalSort {
 
 在这个示例中，我们用邻接表表示了一个有向图，并根据节点的入度算法执行了拓扑排序。结果以拓扑排序的形式输出。你可以通过修改边来自定义图，观察拓扑排序结果的变化。
 
-### 语句：Java 中的图深度遍历 (DFS)
+## Java 中的图深度遍历 (DFS)
 
 编写一个 Java 程序，对一个用邻接表表示的无向图进行深度遍历（DFS）。深度遍历是一种通过尽可能深入探索边直到回溯来遍历图中所有节点的技术。
 
@@ -1494,9 +1486,6 @@ public class DepthFirstSearch {
         // 邻接表表示的无向图
         int numNodes = 6;
 ```
-
-
-
 
 ```java
 ArrayList<ArrayList<Integer>> graph = new ArrayList<>(numNodes);
@@ -1611,6 +1600,16 @@ public class BreadthFirstSearch {
 
 ### Java 解决方案示例：
 
+
+
+## Java 实现 Dijkstra 最短路径算法
+
+编写一个 Java 程序，实现 Dijkstra 算法，以找到加权有向图中从起始节点到所有其他节点的最短路径。Dijkstra 算法适用于带有非负权重边的图，它使用贪心策略逐步确定最短路径。
+
+你需要用 Java 编写 Dijkstra 算法的逻辑，并确保你的程序运行正常。你也可以添加注释来解释你的代码。
+
+### Java 解决方案示例：
+
 ```java
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -1688,9 +1687,6 @@ public class DijkstraShortestPath {
     }
 }
 ```
-
-
-
 
 在这个示例中，我们将加权有向图表示为带有边权重的邻接表，然后从一个起始节点执行了 Dijkstra 算法。该程序显示了从起始节点到所有其他节点的最小距离。你可以通过更改边和权重来自定义图，以观察最小距离是如何相应计算的。
 
@@ -1861,9 +1857,9 @@ public class KruskalMinimumSpanningTree {
 
 
 
-编写一个 Java 程序，实现 Prim 算法以寻找无向加权图的最小生成树。最小生成树是一个树形子图，即它不包含环，并且以最小的权重权重跨越原图的所有节点。
+编写一个 Java 程序，实现 `Prim` 算法以寻找无向加权图的最小生成树。最小生成树是一个树形子图，即它不包含环，并且以最小的权重跨越原图的所有节点。
 
-你需要用 Java 编写 Prim 算法的逻辑，并确保你的程序运行正确。你也可以添加注释来解释你的代码。
+你需要用 Java 编写 `Prim` 算法的逻辑，并确保你的程序运行正确。你也可以添加注释来解释你的代码。
 
 ### Java 解决方案示例：
 
@@ -1961,7 +1957,7 @@ public class PrimMinimumSpanningTree {
 }
 ```
 
-在这个示例中，我们使用带有边权重的邻接列表表示无向加权图。然后我们运行 Prim 算法来寻找最小生成树。程序显示了最小生成树的边及其总权重。你可以自定义图的边，以观察 Prim 算法如何在不同的图中寻找最小生成树。
+在这个示例中，我们使用带有边权重的邻接列表表示无向加权图。然后我们运行 `Prim` 算法来寻找最小生成树。程序显示了最小生成树的边及其总权重。你可以自定义图的边，以观察 `Prim` 算法如何在不同的图中寻找最小生成树。
 
 # 陈述：Java 中的旅行商问题算法 (TSP)
 
@@ -2057,9 +2053,6 @@ public class TSPBrute {
 
 ### 部分 1 - 陈述：
 
-
-
-
 编写一个 Java 程序，允许用户输入或表示一个带有顶点和边的图，然后检测该图是否包含环。
 
 ### 第 2 部分 - Java 解决方案示例
@@ -2137,13 +2130,15 @@ public class GraphCycleDetection {
 
 ## Java 中的优化排序
 
-该练习涉及编写一个 Java 程序，实现优化的冒泡排序来对整数数组进行排序。冒泡排序是一种简单的算法，它遍历数组，比较相邻元素并在必要时交换它们以正确正确排序。该算法会持续遍历数组，直到在完整的一次遍历中没有发生任何交换，这表明数组已排序。
 
-### 第 1 部分 - 题目描述
+
+该练习涉及编写一个 Java 程序，实现优化的冒泡排序来对整数数组进行排序。冒泡排序是一种简单的算法，它遍历数组，比较相邻元素并在必要时交换它们以正确排序。该算法会持续遍历数组，直到在完整的一次遍历中没有发生任何交换，这表明数组已排序。
+
+## 第 1 部分 - 题目描述
 
 编写一个 Java 程序，使用冒泡排序算法对整数数组进行排序。优化排序是对经典冒泡排序的改进，它在检测到完整遍历过程中不需要交换时立即停止排序过程。
 
-### 第 2 部分 - Java 解决方案示例
+## 第 2 部分 - Java 解决方案示例
 
 这是一个使用优化冒泡排序对整数数组进行排序的 Java 解决方案示例：
 
@@ -2182,15 +2177,15 @@ public class BubbleOptimized {
 
 此 Java 示例实现了优化的冒泡排序算法来对整数数组进行排序。程序接收数组作为输入，执行冒泡排序然后显示排序后的数组。你可以自定义输入以测试不同数据集的冒泡排序。
 
-## Java 中的桶排序
+# Java 中的桶排序
 
 该练习涉及编写一个 Java 程序，实现桶排序以对整数数组进行升序排序。桶排序是一种非比较算法，它根据元素的值将数组划分为“桶”，并单独对它们进行排序。然后合并排序后的桶以获得最终数组。
 
-### 第 1 部分 - 题目描述
+## 第 1 部分 - 题目描述
 
 编写一个 Java 程序，使用鸽巢排序（pigeonhole sorting）对整数数组进行排序。程序必须考虑整数可能的取值范围，以便将元素分布到抽屉中。
 
-### 第 2 部分 - Java 解决方案示例
+## 第 2 部分 - Java 解决方案示例
 
 这是一个使用鸽巢排序对整数数组进行排序的 Java 解决方案示例：
 
@@ -2246,9 +2241,6 @@ public class BucketSort {
 }
 ```
 
-
-
-
 这是一个使用 Java 实现的示例，通过计数排序算法对整数数组进行排序：
 
 ```java
@@ -2297,15 +2289,15 @@ public class CountingSort {
 
 这个 Java 示例解决方案使用了计数排序算法对整数数组进行排序。程序首先确定可能值的范围，统计每个值的出现次数，然后使用计数器构建一个排序后的数组。你可以自定义输入数组以用不同的数据集测试计数排序。
 
-## 声明：Java 中的梳排序 (Comb Sort)
+# 声明：Java 中的梳排序 (Comb Sort)
 
 该练习涉及编写一个 Java 程序，通过实现梳排序算法来对整数数组进行升序排序。梳排序是冒泡排序的一种变体，它交换固定距离的元素而不是相邻元素，这使得它的效率更高。
 
-### 部分 1 - 声明：
+## 部分 1 - 声明：
 
 编写一个 Java 程序，使用梳排序算法对整数数组进行排序。梳排序从待比较元素之间的一个很大间隙（gap）开始，然后逐渐缩小这个间隙直到变为零，从而高效地进行比较和交换。
 
-### 部分 2 - Java 解决方案示例：
+## 部分 2 - Java 解决方案示例：
 
 这是一个使用梳排序算法对整数数组进行排序的 Java 示例解决方案：
 
@@ -2346,15 +2338,15 @@ public class CombSort {
 
 这个 Java 示例解决方案实现了梳排序算法对整数数组进行排序。程序从待比较元素之间的一个很大间隙开始，然后使用缩小因子逐渐缩小这个间隙。你可以自定义输入数组以用不同的数据集测试梳排序。
 
-## 声明：Java 中的堆排序 (Heapsort)
+# 声明：Java 中的堆排序 (Heapsort)
 
 该练习涉及编写一个 Java 程序，通过实现堆排序算法对整数数组进行升序排序。堆排序是一种基于堆结构的排序算法，允许对数组进行高效排序。
 
-### 部分 1 - 声明：
+## 部分 1 - 声明：
 
 编写一个 Java 程序，使用堆排序算法对整数数组进行排序。该算法首先从数组创建一个堆，然后从堆中逐个提取元素并将其放入排序后的数组中。
 
-### 部分 2 - Java 解决方案示例：
+## 部分 2 - Java 解决方案示例：
 
 这是一个使用堆排序算法对整数数组进行排序的 Java 示例解决方案：
 
@@ -2404,17 +2396,19 @@ public class HeapSort {
 }
 ```
 
-## 声明：Java 中的三分查找
+# 声明：Java 中的三分查找
 
-该练习涉及编写一个 Java 程序来实现对有序数组的三分查找。三分查找是二分查找的一种变变体，它将数组分为三部分。
+该练习涉及编写一个 Java 程序来实现对有序数组的三分查找。三分查找是二分查找的一种变体，它将数组分为三部分。
 
-### 部分 1 - 声明：
+## 部分 1 - 声明：
 
 编写一个 Java 程序在有序数组上执行三分查找。三分查找算法将数组分为三部分，并将目标元素与中间进行比较。如果找到了元素，返回其索引；否则，指示该元素不在数组中。
 
-### 部分 2 - Java 解决方案示例：
+## 部分 2 - Java 解决方案示例：
 
 这是一个针对有序数组三分查找的 Java 示例解决方案：
+
+
 
 ```java
 class TernarySearch {
@@ -2428,6 +2422,7 @@ class TernarySearch {
             System.out.println("元素找到索引处: " + result);
         }
     }
+
     public static int ternarySearch(int[] arr, int target) {
         int left = 0;
         int right = arr.length - 1;
@@ -2455,23 +2450,20 @@ class TernarySearch {
 }
 ```
 
-
-
-
 ```java
-        } else if (arr[mid2] == target) {
-            return mid2;
-        } else if (target < arr[mid1]) {
-            right = mid1 - 1;
-        } else if (target > arr[mid2]) {
-            left = mid2 + 1;
-        } else {
-            left = mid1 + 1;
-            right = mid2 - 1;
-        }
-    }
-    return -1; // 未找到元素
-    }
+} else if (arr[mid2] == target) {
+    return mid2;
+} else if (target < arr[mid1]) {
+    right = mid1 - 1;
+} else if (target > arr[mid2]) {
+    left = mid2 + 1;
+} else {
+    left = mid1 + 1;
+    right = mid2 - 1;
+}
+}
+return -1; // 未找到元素
+}
 }
 ```
 
@@ -2479,13 +2471,13 @@ class TernarySearch {
 
 ## 声明：Java 中的指数查找算法
 
-该练习涉及编写一个 Java 程序来实现 get 指数查找算法。指数查找算法通过递归地将数组划分为指数级大小的子数组，在排序数组中搜索某个元素。
+该练习涉及编写一个 Java 程序来实现 `get` 指数查找算法。指数查找算法通过递归地将数组划分为指数级大小的子数组，在排序数组中搜索某个元素。
 
-### 第一部分 - 声明：
+### 第一部分：声明
 
 编写一个 Java 程序，在整数排序数组中执行指数查找。指数查找算法递归地将数组划分为指数级大小的子数组，并将要搜索的元素与每个子数组中间的元素进行比较。如果找到了该元素，返回其索引。否则，指示数组中不存在该元素。
 
-### 第二部分 - Java 解决方案示例：
+### 第二部分：Java 解决方案示例
 
 这是一个用于指数查找算法的 Java 解决方案示例：
 
@@ -2535,19 +2527,19 @@ public class ExponentialSearch {
 }
 ```
 
-这个 Java 示例解决方案实现了指数查找。该程序接收一个排序数组和一个目标元素作为输入，然后执行指数查找以找到该元素。如果找到了该元素，则返回其索引。否则，将显示一条指示未找到该元素的消息。你可以自定义排序数组和目标值，以对不同的集合执行指数查找。
+这个 Java 示例解决方案实现了指数查找。该程序接收一个排序数组和一个目标元素作为输入，然后执行指数查找以找到该元素。如果找到了该元素，则返回其索引。否则，将显示一条指示未找到该元素的消息。你可以自定义数组和目标值，以对不同的集合执行指数查找。
 
-## 声明：Java 中的侏菇排序（Gnome Sort）
+## 声明：Java 中的侏儒排序（Gnome Sort）
 
-该练习涉及编写一个 Java 程序，实现侏菇排序（`Gnome Sort`），对整数数组进行升序排序。`Gnome Sort` 是一种简单的原地排序算法，从左到右移动数组元素，直到数组排序。
+该练习涉及编写一个 Java 程序，实现侏儒排序（`Gnome Sort`），对整数数组进行升序排序。`Gnome Sort` 是一种简单的原地排序算法，从左到右移动数组元素，直到数组排序。
 
-### 第一部分 - 声明：
+### 第一部分：声明
 
-编写一个 Java 程序，使用 `gnome sort` 算法对整数数组进行排序。`gnome sort` 算法从数组的第一个开始，然后向右移动元素直到它们排序。
+编写一个 Java 程序，使用 `gnome sort` 算法对整数数组进行排序。`gnome sort` 算法从数组的第一个元素开始，然后向右移动元素直到它们排序。
 
-### 第二部分 - Java 解决方案示例：
+### 第二部分：Java 解决方案示例
 
-这是一个使用侏菇排序算法对整数数组进行排序的 Java 解决方案示例：
+这是一个使用侏儒排序算法对整数数组进行排序的 Java 解决方案示例：
 
 ```java
 public class GnomeSort {
@@ -2581,17 +2573,17 @@ public class GnomeSort {
 }
 ```
 
-这个 Java 示例解决方案实现了 `gnome sort`。该程序从数组的第一个开始，向右移动元素直到它们排序。你可以自定义数组以测试不同的集合。
+这个 Java 示例解决方案实现了 `gnome sort`。该程序从数组的第一个元素开始，向右移动元素直到它们排序。你可以自定义数组以测试不同的集合。
 
 ## 声明：Java 中的煎饼排序（Pancake Sort）
 
 该练习涉及编写一个 Java 程序，实现煎饼排序（`Pancake Sort`）对整数数组进行升序排序。`Pancake Sort` 是一种排序算法，按顺序返回数组中的元素。
 
-### 第一部分 - 声明：
+### 第一部分：声明
 
-编写一个 Java 程序，使用 `pancake sort` 算法对整数数组进行排序。`pancake sort` 算法从数组的第一个开始，按顺序返回元素以完成排序。
+编写一个 Java 程序，使用 `pancake sort` 算法对整数数组进行排序。`pancake sort` 算法从数组的第一个元素开始，按顺序返回元素以完成排序。
 
-### 第二部分 - Java 解决方案示例：
+### 第二部分：Java 解决方案示例
 
 这是一个使用 `pancake sort` 算法对整数数组进行排序的 Java 解决方案示例：
 
@@ -2642,7 +2634,6 @@ public class PancakeSort {
 }
 ```
 
-结语
+## 结语
 
 恭喜你，你已经在 Java 的帮助下经历了一段算法世界的奇妙旅程。通过完成书中的 50 个练习，你已经对编程和解决问题的基础概念有了坚实的理解。
-

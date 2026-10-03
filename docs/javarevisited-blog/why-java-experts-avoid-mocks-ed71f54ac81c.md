@@ -1,3 +1,4 @@
+
 # 为什么 Java 专家避免模仿
 
 > 原文：<https://medium.com/javarevisited/why-java-experts-avoid-mocks-ed71f54ac81c?source=collection_archive---------0----------------------->
@@ -14,4 +15,4 @@
 
 *有哪些替代方案？为什么模仿不是“一刀切”的？其他测试替身怎么用？*
 
-# 模拟替代品做什么…
+## 模拟替代品做什么…

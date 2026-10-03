@@ -1,3 +1,4 @@
+
 # Java 中不使用 String 如何求整数的逆序？[已解决]
 
 > 原文：<https://medium.com/javarevisited/how-to-reverse-an-integer-number-without-using-string-in-java-solved-example-b9ef553d0d1f?source=collection_archive---------0----------------------->

@@ -1,16 +1,17 @@
+
 # Java 中的信号量
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-semaphore>
 
-## 1。概述
+## 1. 概述
 
 在这个快速教程中，我们将探索 Java 中的[信号量](/web/20220923173814/https://www.baeldung.com/cs/semaphore)和互斥体的基础知识。
 
-## 2。`Semaphore`
+## 2. `Semaphore`
 
-我们从`java.util.concurrent.Semaphore.` 开始，我们可以使用信号量来限制访问特定资源的并发线程的数量。
+我们从`java.util.concurrent.Semaphore`开始。我们可以使用信号量来限制访问特定资源的并发线程的数量。
 
-在下面的示例中，我们将实现一个简单的登录队列来限制系统中的用户数量:
+在下面的示例中，我们将实现一个简单的登录队列来限制系统中的用户数量：
 
 ```java
 class LoginQueueUsingSemaphore {
@@ -36,13 +37,13 @@ class LoginQueueUsingSemaphore {
 }
 ```
 
-注意我们是如何使用以下方法的:
+注意我们是如何使用以下方法的：
 
-*   `tryAcquire()`–如果许可立即可用，则返回真，否则获取许可，否则返回假，但是`acquire()` 获取许可并阻塞，直到一个许可可用
-*   `release() – release a permit`
-*   `availablePermits() –` 返回当前可用许可证的数量
+* `tryAcquire()` – 如果许可立即可用，则返回真，否则获取许可，否则返回假；但是`acquire()`获取许可并阻塞，直到一个许可可用
+* `release()` – 释放一个许可
+* `availablePermits()` – 返回当前可用许可证的数量
 
-为了测试我们的登录队列，我们将首先尝试达到限制，并检查下一次登录尝试是否会被阻止:
+为了测试我们的登录队列，我们将首先尝试达到限制，并检查下一次登录尝试是否会被阻止：
 
 ```java
 @Test
@@ -59,7 +60,7 @@ public void givenLoginQueue_whenReachLimit_thenBlocked() {
 }
 ```
 
-接下来，我们将查看注销后是否有可用的插槽:
+接下来，我们将查看注销后是否有可用的插槽：
 
 ```java
 @Test
@@ -78,11 +79,11 @@ public void givenLoginQueue_whenLogout_thenSlotsAvailable() {
 }
 ```
 
-## 3。定时`Semaphore`
+## 3. 定时`Semaphore`
 
-接下来，我们将讨论 Apache Commons `TimedSemaphore.` `TimedSemaphore`允许一些许可作为简单的信号量，但是在给定的时间段内，在该时间段之后，时间重置并且所有许可被释放。
+接下来，我们将讨论 Apache Commons `TimedSemaphore`。`TimedSemaphore`允许一些许可作为简单的信号量，但是在给定的时间段内，在该时间段之后，时间重置并且所有许可被释放。
 
-我们可以使用`TimedSemaphore`建立一个简单的延迟队列，如下所示:
+我们可以使用`TimedSemaphore`建立一个简单的延迟队列，如下所示：
 
 ```java
 class DelayQueueUsingTimedSemaphore {
@@ -104,7 +105,7 @@ class DelayQueueUsingTimedSemaphore {
 }
 ```
 
-当我们使用以一秒钟为时间段的延迟队列，并且在一秒钟内使用了所有时隙之后，应该没有可用的时隙:
+当我们使用以一秒钟为时间段的延迟队列，并且在一秒钟内使用了所有时隙之后，应该没有可用的时隙：
 
 ```java
 public void givenDelayQueue_whenReachLimit_thenBlocked() {
@@ -122,7 +123,7 @@ public void givenDelayQueue_whenReachLimit_thenBlocked() {
 }
 ```
 
-但是在休眠一段时间后，**信号量应该复位并释放许可**:
+但是在休眠一段时间后，**信号量应该复位并释放许可**：
 
 ```java
 @Test
@@ -141,11 +142,11 @@ public void givenDelayQueue_whenTimePass_thenSlotsAvailable() throws Interrupted
 }
 ```
 
-## 4。信号量与互斥量
+## 4. 信号量与互斥量
 
 互斥的行为类似于二元信号量，我们可以用它来实现互斥。
 
-在下面的例子中，我们将使用一个简单的二进制信号量来构建一个计数器:
+在下面的例子中，我们将使用一个简单的二进制信号量来构建一个计数器：
 
 ```java
 class CounterUsingMutex {
@@ -176,7 +177,7 @@ class CounterUsingMutex {
 }
 ```
 
-当许多线程试图同时访问计数器时，**它们会被简单地阻塞在一个队列中**:
+当许多线程试图同时访问计数器时，**它们会被简单地阻塞在一个队列中**：
 
 ```java
 @Test
@@ -200,7 +201,7 @@ public void whenMutexAndMultipleThreads_thenBlocked()
 }
 ```
 
-当我们等待时，所有线程都将访问计数器，队列中没有线程剩余:
+当我们等待时，所有线程都将访问计数器，队列中没有线程剩余：
 
 ```java
 @Test
@@ -227,7 +228,7 @@ public void givenMutexAndMultipleThreads_ThenDelay_thenCorrectCount()
 }
 ```
 
-## 5。结论
+## 5. 结论
 
 在本文中，我们探索了 Java 中信号量的基础知识。
 

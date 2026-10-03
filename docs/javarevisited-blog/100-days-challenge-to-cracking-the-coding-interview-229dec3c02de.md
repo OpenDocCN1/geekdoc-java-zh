@@ -1,8 +1,9 @@
+
 # 第 13 天—三个数的最大乘积
 
 > 原文：<https://medium.com/javarevisited/100-days-challenge-to-cracking-the-coding-interview-229dec3c02de?source=collection_archive---------0----------------------->
 
-## **亚马逊 100 天**
+## 亚马逊 100 天
 
 [**亚马逊 100 天—**](https://leetcode.com/problems/maximum-product-of-three-numbers/) **第 13 天—三个数的最大乘积**
 

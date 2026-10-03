@@ -1,3 +1,4 @@
+
 # 2023 年程序员和开发者的 15 门最佳 Udemy 课程
 
 > 原文：<https://medium.com/javarevisited/my-favorite-udemy-online-courses-for-programmers-and-software-engineers-f9d941dd0035?source=collection_archive---------0----------------------->
@@ -6,7 +7,7 @@
 
 路易斯·基根-Skillscouter.com 在 T2 Unsplash 的照片
 
-大家好，毫无疑问，Udemy 是最受欢迎的电子学习平台之一，它帮助越来越多的人学习到有价值的技能，如[编程](https://javarevisited.blogspot.com/2019/03/top-5-online-courses-to-learn-to-code.html)、[编码](https://javarevisited.blogspot.com/2020/05/top-10-udemy-courses-to-learn-python-programming.html)、 [Web 开发](/better-programming/my-5-favorite-courses-to-learn-web-development-in-2019-a5e74167f8b2)、 [App 开发](/@javinpaul/10-frameworks-and-libraries-mobile-application-developers-can-learn-in-2020-e0b91391cade)、 [Python](https://javarevisited.blogspot.com/2018/03/top-5-courses-to-learn-python-in-2018.html) 、 [Java](https://javarevisited.blogspot.com/2018/05/top-5-java-courses-for-beginners-to-learn-online.html) 、 [C/C++](https://javarevisited.blogspot.com/2019/11/top-5-courses-to-learn-c-programming-in.html) 、[数据科学](https://javarevisited.blogspot.com/2018/10/data-science-and-machine-learning-courses-using-python-and-R-programming.html)、[机器学习](/@javinpaul/9-data-science-and-machine-learning-courses-by-harvard-ibm-udemy-and-others-12a0c7c23ec1)、“
+大家好，毫无疑问，Udemy 是最受欢迎的电子学习平台之一，它帮助越来越多的人学习到有价值的技能，如[编程](https://javarevisited.blogspot.com/2019/03/top-5-online-courses-to-learn-to-code.html)、[编码](https://javarevisited.blogspot.com/2020/05/top-10-udemy-courses-to-learn-python-programming.html)、[Web 开发](/better-programming/my-5-favorite-courses-to-learn-web-development-in-2019-a5e74167f8b2)、[App 开发](/@javinpaul/10-frameworks-and-libraries-mobile-application-developers-can-learn-in-2020-e0b91391cade)、[Python](https://javarevisited.blogspot.com/2018/03/top-5-courses-to-learn-python-in-2018.html)、[Java](https://javarevisited.blogspot.com/2018/05/top-5-java-courses-for-beginners-to-learn-online.html)、[C/C++](https://javarevisited.blogspot.com/2019/11/top-5-courses-to-learn-c-programming-in.html)、[数据科学](https://javarevisited.blogspot.com/2018/10/data-science-and-machine-learning-courses-using-python-and-R-programming.html)、[机器学习](/@javinpaul/9-data-science-and-machine-learning-courses-by-harvard-ibm-udemy-and-others-12a0c7c23ec1)。
 
 尽管 Udemy 有各种各样的课程，从编程到摄影，从音乐到数字媒体，但在本文中，我们为程序员和开发人员整理了一份**最佳 Udemy 课程和认证清单。**
 
@@ -48,12 +49,15 @@ Python 是现代软件开发人员的另一项宝贵技能，这可能是 Udemy 
 
 本课程的主要亮点是您将使用真实的项目来学习 Spring 框架。这意味着你将获得一个更加实用的 Spring 实践经验，使你能够更快地学习。
 
-这个课程非常适合有 Java 编程经验的人，但是对于 Spring 来说是全新的。将向您介绍 Spring 和 Spring 模块的许多特性，如 JDBC、AOP 和 Data JPA。这门课程将是你进入春天奇妙世界的完美大门。'
+这个课程非常适合有 Java 编程经验的人，但是对于 Spring 来说是全新的。将向您介绍 Spring 和 Spring 模块的许多特性，如 JDBC、AOP 和 Data JPA。这门课程将是你进入春天奇妙世界的完美大门。
 
-**课程时长:12 小时
-课程评分:4.5 星满分 5 分
-课程讲师:28 分钟官方
-课程价格:$14**
+**课程时长:** 12 小时
+
+**课程评分:** 4.5 星满分 5 分
+
+**课程讲师:** 28 分钟官方
+
+**课程价格:** $14
 
 一旦您购买了本课程，您将终身获得 12 小时的点播视频讲座、13 篇文章和 1 个可下载的教育资源。整个课程内容分为 14 个板块，139 节课。
 
@@ -107,16 +111,19 @@ Python 是现代软件开发人员的另一项宝贵技能，这可能是 Udemy 
 
 从客户端脚本语言开始，JavaScript 走过了漫长的道路，成为了 web 的宠儿，也是唯一一种可以前后创建真正的 web 应用程序的语言。
 
-JavaScript 绝对是现代 web 开发人员的必备技能之一，这本 Udemy 畅销书非常适合学习 JavaScript。由 Jonas *Schmedtmann* 设计的
+JavaScript 绝对是现代 web 开发人员的必备技能之一，这本 Udemy 畅销书非常适合学习 JavaScript。由 Jonas Schmedtmann 设计的。
+
 它是 Udemy 上最受欢迎的 JavaScript 学习课程之一，受到全球超过 209，888 名学生的信任。
 
 本课程最大的优点是它是最新的，涵盖了 ES6 中引入的新 JavaScript 特性和语法。还有一个好处就是非常的动手，你会用 JavaScript 开发出很多有趣的项目。
 
 **这里是加入本课程的链接** — [完整的 JavaScript 课程](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-javascript-course%2F)
 
+
+
 [![](img/2f437402b1341d8e0cb8d184e574976b.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-javascript-course%2F)
 
-## 9.[完整的 Node.js 开发者课程](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-nodejs-developer-course-2%2F)—Udemy 上最好的 Node.js 课程
+## 9. [完整的 Node.js 开发者课程](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-nodejs-developer-course-2%2F) — Udemy 上最好的 Node.js 课程
 
 Node.js 在 JavaScript 的发展中发挥了重要作用。它还改变了 web 应用程序的传统开发方式。这就是为什么 Node.js 是一个现代软件开发人员至关重要的技能之一，这也是在 Udemy 学习 Node.js 的最好课程。
 
@@ -126,7 +133,7 @@ Node.js 在 JavaScript 的发展中发挥了重要作用。它还改变了 web �
 
 [![](img/5e789f5bdb0a92db1f581f4bbd8d0bd9.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-nodejs-developer-course-2%2F)
 
-## 10.机器学习 A-Z—Udemy 上最好的机器学习课程
+## 10. 机器学习 A-Z — Udemy 上最好的机器学习课程
 
 机器学习是近年来最热门的技术之一。具有机器学习经验的程序员也获得了丰厚的报酬。
 
@@ -138,7 +145,7 @@ Node.js 在 JavaScript 的发展中发挥了重要作用。它还改变了 web �
 
 [![](img/1cfec08ea2fad95260d6d424c8ade6b0.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fmachinelearning%2F)
 
-## 11.[完整的 React 大师班](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Freact-the-complete-guide-incl-redux%2F)—Udemy 上的 Best React.js 课程
+## 11. [完整的 React 大师班](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Freact-the-complete-guide-incl-redux%2F) — Udemy 上的 Best React.js 课程
 
 前端开发是一项重要的技能，而 React 是这一领域的一项基本技术。
 
@@ -152,18 +159,18 @@ Node.js 在 JavaScript 的发展中发挥了重要作用。它还改变了 web �
 
 [![](img/3311b1f96790a401c9c39ba40f943075.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Freact-the-complete-guide-incl-redux%2F)
 
-## 12.[面向 Java 开发者的 Docker](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdocker-for-java-developers%2F)【Udemy 上的最佳 Docker 课程】
+## 12. [面向 Java 开发者的 Docker](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdocker-for-java-developers%2F)【Udemy 上的最佳 Docker 课程】
 
-udemy 的这门课程是 Java 课程中最受欢迎的 Docker 之一。这是为那些想学习 Docker 和 Java 编程语言的人准备的。
+Udemy 的这门课程是 Java 课程中最受欢迎的 Docker 之一。这是为那些想学习 Docker 和 Java 编程语言的人准备的。
 
-本课程涵盖了一些基本主题，如运行 docker 容器、将 docker 映像发布到 docker hub、使用 docker swarm、使用 maven 创建 docker 映像等。
+本课程涵盖了一些基本主题，如运行 Docker 容器、将 Docker 映像发布到 Docker Hub、使用 Docker Swarm、使用 Maven 创建 Docker 映像等。
 
-由约翰·汤姆逊创建，他是我最喜欢的 Udemy 导师之一，也是《Spring Framework:[**初学者到大师**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fspring-framework-5-beginner-to-guru%2F) 的作者，这是学习 Docker 最好的 Udemy 课程之一，如果你喜欢约翰的教学风格，这是理论和实践的正确结合，那么你会喜欢这门课程。
+由约翰·汤姆逊创建，他是我最喜欢的 Udemy 导师之一，也是《Spring Framework: [**初学者到大师**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fspring-framework-5-beginner-to-guru%2F) 的作者，这是学习 Docker 最好的 Udemy 课程之一，如果你喜欢约翰的教学风格，这是理论和实践的正确结合，那么你会喜欢这门课程。
 
-要求
+要求：
 
 *   Java 基础知识。
-*   推荐春天的知识。
+*   推荐 Spring 的知识。
 *   Linux 的基础知识。
 
 这门课程是专门为 Java 开发人员开设的。这是一个初级课程，视频总内容为十个小时。
@@ -172,11 +179,11 @@ udemy 的这门课程是 Java 课程中最受欢迎的 Docker 之一。这是为
 
 [![](img/74107eb1be09f8f09f18eb283cf8ad88.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdocker-for-java-developers%2F)
 
-## 13.[iOS&Swift——完整的 iOS 应用开发训练营](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fios-13-app-development-bootcamp%2F)【Udemy 上最好的应用开发课程】
+## 13. [iOS & Swift——完整的 iOS 应用开发训练营](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fios-13-app-development-bootcamp%2F)【Udemy 上最好的应用开发课程】
 
 如果你想学习应用程序开发，那么这可能是 Udemy 上世界上最好的 iOS 开发者课程。它太好了，甚至启发我创建了一个类，这是另一个故事，但这是一个该死的好课程。
 
-余老师很有经验，也很热情。她在 Bootcamp 上教授 iOS 开发，这个课程是这些 boto camp 的在线版本，价格在 8000 美元到 12000 美元之间。
+余老师很有经验，也很热情。她在 Bootcamp 上教授 iOS 开发，这个课程是这些 bootcamp 的在线版本，价格在 8000 美元到 12000 美元之间。
 
 该课程的课程结构非常好，解释清楚，讲授到位。内容是对动画的极好利用，图形让人们很容易理解像 Core ML 2 和 ARKit 2 这样的 iOS 新概念。
 
@@ -186,46 +193,56 @@ udemy 的这门课程是 Java 课程中最受欢迎的 Docker 之一。这是为
 
 [![](img/a25fcd90c10cb970a1351d264087f30c.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fios-13-app-development-bootcamp%2F)
 
-## 14 . [Go:完全开发者指南(Golang)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgo-the-complete-developers-guide%2F)【Udemy 上最好的 Golang 课程】
+## 14. [Go: 完全开发者指南 (Golang)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgo-the-complete-developers-guide%2F)【Udemy 上最好的 Golang 课程】
 
 如果你想在 2023 年学习 Golang 编程语言，那么这是最适合你的 Udemy 课程。通过本课程，你将能够构建带有 Go 例程和通道的大规模并发程序。
 
 该课程还将教你所有关于 Go 的高级特性，以及所有常用数据结构之间的区别。您将学习如何应用接口来简化复杂的程序，并使用类型来使您的代码经得起未来的考验。
 
-**课程时长:9 小时
-课程评分:4.6 星(满分 5 分)
-课程讲师:斯蒂芬·格里德
-课程价格:$14**
+**课程时长：9 小时
+
+课程评分：4.6 星（满分 5 分）
+
+课程讲师：斯蒂芬·格里德
+
+课程价格：$14**
 
 购买本课程后，您将获得超过 9 小时的点播视频讲座、5 篇文章和其他可下载的教育资源。
 
-**以下是参加本课程的链接** — [Go:完整的开发人员指南(Golang)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgo-the-complete-developers-guide%2F)
+**以下是参加本课程的链接** — [Go: 完整的开发人员指南 (Golang)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgo-the-complete-developers-guide%2F)
 
 [![](img/ecfdc297fb497dfc2723474816ced5ff.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgo-the-complete-developers-guide%2F)
 
-## 15.Andrei Neagoie 的《掌握编码面试:数据结构+算法》【UDemy 上的最佳编码面试课程
+## 15. Andrei Neagoie 的《掌握编码面试：数据结构+算法》【Udemy 上的最佳编码面试课程】
 
 这是 Udemy 上从编码面试角度学习数据结构和算法最好的课程之一。本课程涵盖的数据结构是数组、链表、栈、队列、树、散列图和图。
 
 Andrei Negaoie 是一位经验丰富的讲师，他很好地解释了每一种数据结构，还用例子描述了如何执行各种操作。这是一门很长的课程，总共有十四个小时的内容。所以如果你想详细学习数据结构，去上这门课。
 
-如果你想学习编码面试的数据结构和算法，并深入学习 JavaScript 中所有主要的数据结构，那么 ZTM 学院的《掌握编码面试:数据结构+算法》是一个完美的选择。
+如果你想学习编码面试的数据结构和算法，并深入学习 JavaScript 中所有主要的数据结构，那么 ZTM 学院的《掌握编码面试：数据结构+算法》是一个完美的选择。
 
-**这里是加入本课程的链接** — [掌握编码面试:数据结构+算法](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmaster-the-coding-interview-data-structures-algorithms%2F)
+**这里是加入本课程的链接** — [掌握编码面试：数据结构+算法](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmaster-the-coding-interview-data-structures-algorithms%2F)
 
 [![](img/0ebc2fba027cbd25c346d5b5703ff5c3.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmaster-the-coding-interview-data-structures-algorithms%2F)
 
-顺便说一句，如果你喜欢安德烈的教学风格，你可能想去看看他的 [**ZTM 学院**](https://academy.zerotomastery.io/a/aff_fvgz1fnn/external?affcode=441520_zytgk2dn) 在那里你只需每月支付 39 美元的会员费就可以学习他的所有课程。您还可以使用我的代码朋友 10 获得您选择的任何订阅的 10%的折扣。
+顺便说一句，如果你喜欢安德烈的教学风格，你可能想去看看他的 [**ZTM 学院**](https://academy.zerotomastery.io/a/aff_fvgz1fnn/external?affcode=441520_zytgk2dn) 在那里你只需每月支付 39 美元的会员费就可以学习他的所有课程。您还可以使用我的代码朋友 10 获得您选择的任何订阅的 10% 的折扣。
 
-<https://academy.zerotomastery.io/a/aff_c0gnlvf7/external?affcode=441520_zytgk2dn>  
+<https://academy.zerotomastery.io/a/aff_c0gnlvf7/external?affcode=441520_zytgk2dn>
 
-这就是关于程序员和开发人员的最佳 Udemy 课程和认证的全部内容。这些是 Udemy 学习热门和热门技能的畅销书，如 [Java](https://javarevisited.blogspot.com/2020/04/top-5-courses-to-become-full-stack-java-developer-with-Angular-and-Reactjs.html#axzz6Nq9yk7Sc) 、 [Python](/javarevisited/8-projects-you-can-buil-to-learn-python-in-2020-251dd5350d56) 、 [Web 开发](https://dev.to/javinpaul/top-6-courses-to-learn-web-development-best-of-lot-2fae)、 [C++](/javarevisited/top-10-courses-to-learn-c-for-beginners-best-and-free-4afc262a544e) 、 [AWS](/javarevisited/top-10-courses-to-learn-amazon-web-services-aws-cloud-in-2020-best-and-free-317f10d7c21d) 、[数据科学和机器学习](/javarevisited/my-favorite-data-science-and-machine-learning-courses-from-coursera-udemy-and-pluralsight-eafc73acc73f)、 [Node.js](/javarevisited/7-free-courses-to-learn-node-js-in-2020-2f1dd6722b49?source=---------10------------------) 、 [Angular](/javarevisited/10-courses-to-learn-angular-for-web-development-6da1bd2856dc) 、 [Reactjs](/javarevisited/top-10-free-courses-to-learn-react-js-c14edbd3b35f?source=extreme_main_feed----d3a191ac6ed-----5-1--------------------561c2dc6_a2b4_41e0_b7be_1d97edbf631c--8) 、 [Golang](/javarevisited/7-online-courses-to-learn-golang-or-go-programming-languages-in-2020-f599a25cf14a) 、[如果你想在技术和编程领域发展事业。
+这就是关于程序员和开发人员的最佳 Udemy 课程和认证的全部内容。这些是 Udemy 学习热门和热门技能的畅销书，如 [Java](https://javarevisited.blogspot.com/2020/04/top-5-courses-to-become-full-stack-java-developer-with-Angular-and-Reactjs.html#axzz6Nq9yk7Sc)、[Python](/javarevisited/8-projects-you-can-buil-to-learn-python-in-2020-251dd5350d56)、[Web 开发](https://dev.to/javinpaul/top-6-courses-to-learn-web-development-best-of-lot-2fae)、[C++](/javarevisited/top-10-courses-to-learn-c-for-beginners-best-and-free-4afc262a544e)、[AWS](/javarevisited/top-10-courses-to-learn-amazon-web-services-aws-cloud-in-2020-best-and-free-317f10d7c21d)、[数据科学和机器学习](/javarevisited/my-favorite-data-science-and-machine-learning-courses-from-coursera-udemy-and-pluralsight-eafc73acc73f)、[Node.js](/javarevisited/7-free-courses-to-learn-node-js-in-2020-2f1dd6722b49?source=---------10------------------)、[Angular](/javarevisited/10-courses-to-learn-angular-for-web-development-6da1bd2856dc)、[Reactjs](/javarevisited/top-10-free-courses-to-learn-react-js-c14edbd3b35f?source=extreme_main_feed----d3a191ac6ed-----5-1--------------------561c2dc6_a2b4_41e0_b7be_1d97edbf631c--8)、[Golang](/javarevisited/7-online-courses-to-learn-golang-or-go-programming-languages-in-2020-f599a25cf14a)，如果你想在技术和编程领域发展事业。
 
-其他**编程资源文章**您可能喜欢:](/javarevisited/top-10-free-courses-to-learn-jenkins-docker-and-kubernetes-for-devops-in-2020-best-of-lot-62a0541ffeb3)
+其他**编程资源文章**您可能喜欢：
 
 *   [2023 年网络开发者路线图](https://hackernoon.com/the-2019-web-developer-roadmap-ab89ac3c380e)
 *   [五大 Coursera 专业认证，促进您的职业发展](https://javarevisited.blogspot.com/2019/10/top-5-coursera-professional-certificates-for-programmers-IT-professionals.html)
-*   [2023 react . js 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
+*   [2023 React.js 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
+
+
+
+# 学习资源推荐
+
+## 最佳 Coursera 认证
+
 *   [学习 Python 的 10 个最佳 Coursera 认证](https://javarevisited.blogspot.com/2020/02/10-best-coursera-courses--for-python.html)
 *   [面向程序员的 10 大 Pluralsight 课程和认证](https://javarevisited.blogspot.com/2017/12/top-10-pluralsight-courses-java-and-web-developers.html)
 *   [2023 年 Java 开发人员应该学会的 10 件事](https://javarevisited.blogspot.com/2017/12/10-things-java-programmers-should-learn.html#axzz5atl0BngO)
@@ -240,4 +257,4 @@ Andrei Negaoie 是一位经验丰富的讲师，他很好地解释了每一种�
 
 如果你正在寻找面向程序员和开发人员的[免费 Udemy 课程](/javarevisited/10-free-angular-and-react-js-courses-from-udemy-and-coursera-best-of-lot-e67f7d811e6b)，那么你也可以查看我之前列出的[前 20 名 Udemy 免费课程](/javarevisited/100-free-programming-and-web-development-courses-on-udemy-free-resource-center-3f8415eb5e6f)你可以在线加入。该列表与此列表非常相似，但有免费课程。
 
-</javarevisited/100-free-programming-and-web-development-courses-on-udemy-free-resource-center-3f8415eb5e6f> 
+`</javarevisited/100-free-programming-and-web-development-courses-on-udemy-free-resource-center-3f8415eb5e6f>`

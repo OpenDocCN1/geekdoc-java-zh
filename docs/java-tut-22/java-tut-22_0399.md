@@ -1,3 +1,4 @@
+
 # 如何在 Swing 组件中使用 HTML
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/components/html.html`](https://docs.oracle.com/javase/tutorial/uiswing/components/html.html)
@@ -8,7 +9,6 @@
 label = new JLabel("A label");
 label.setFont(new Font("Serif", Font.PLAIN, 14));
 label.setForeground(new Color(0xffffdd));
-
 ```
 
 如果您想在文本中混合字体或颜色，或者想要格式化，如多行，您可以使用 HTML。HTML 格式可以在所有 Swing 按钮、菜单项、标签、工具提示以及使用标签呈现文本的组件（如树和表格）中使用。
@@ -17,10 +17,9 @@ label.setForeground(new Color(0xffffdd));
 
 ```java
 button = new JButton("<html><b><u>T</u>wo</b><br>lines</html>");
-
 ```
 
-这是生成的按钮。 ![Metal 外观中显示 HTML 的按钮的屏幕截图。](img/f6784cdc0c10aa4c9b1321d6cc2cc16e.png)
+这是生成的按钮。![Metal 外观中显示 HTML 的按钮的屏幕截图。](img/f6784cdc0c10aa4c9b1321d6cc2cc16e.png)
 
 ## 一个示例：HtmlDemo
 
@@ -28,17 +27,11 @@ button = new JButton("<html><b><u>T</u>wo</b><br>lines</html>");
 
 ![Metal 外观中 HtmlDemo 的屏幕截图。](img/9ddcadcebdf83dd96b3f871cbf832540.png)
 
-* * *
-
 **试一试：**
 
-1.  单击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 HtmlDemo（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 HtmlDemo 应用程序](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/HtmlDemoProject/HtmlDemo.jnlp)
-
-1.  编辑左侧文本区域中的 HTML 格式，并单击“更改标签”按钮。右侧的标签显示结果。
-
-1.  从左侧的文本区域中删除<html>标记。标签的文本将不再被解析为 HTML。
-
-* * *
+1. 单击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 HtmlDemo（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 HtmlDemo 应用程序](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/HtmlDemoProject/HtmlDemo.jnlp)
+2. 编辑左侧文本区域中的 HTML 格式，并单击“更改标签”按钮。右侧的标签显示结果。
+3. 从左侧的文本区域中删除`<html>`标记。标签的文本将不再被解析为 HTML。
 
 ## 示例 2：ButtonHtmlDemo
 
@@ -67,7 +60,6 @@ b3 = new JButton("<html><center><b><u>E</u>nable</b><br>"
                  + "<font color=#ffffdd>middle button</font>",
                  rightButtonIcon);
 b3.setFont(font);
-
 ```
 
 请注意，我们必须使用`<u>`标签来使使用 HTML 的按钮中的助记字符“D”和“E”被下划线标记。还要注意，当按钮被禁用时，其 HTML 文本不幸地保持为黑色，而不是变为灰色。（请参考[bug #4783068](http://bugs.java.com/bugdatabase/view_bug.do?bug_id=4783068)查看是否情况会发生变化。）

@@ -1,3 +1,4 @@
+
 # 嵌套类
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/javaOO/nested.html`](https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html)
@@ -11,7 +12,6 @@ class OuterClass {
         ...
     }
 }
-
 ```
 
 * * *
@@ -30,20 +30,17 @@ class OuterClass {
         ...
     }
 }
-
 ```
 
-嵌套类是其封闭类的成员。非静态嵌套类（内部类）可以访问封闭类的其他成员，即使它们被声明为 private。静态嵌套类无法访问封闭类的其他成员。作为`OuterClass`的成员，嵌套类可以声明为`private`、`public`、`protected`或*包私有*。（请记住，外部类只能声明为`public`或*包私有*。）
+嵌套类是其封闭类的成员。非静态嵌套类（内部类）可以访问封闭类的其他成员，即使它们被声明为`private`。静态嵌套类无法访问封闭类的其他成员。作为`OuterClass`的成员，嵌套类可以声明为`private`、`public`、`protected`或*包私有*。（请记住，外部类只能声明为`public`或*包私有*。）
 
 ## 为什么使用嵌套类？
 
 使用嵌套类的引人注目的原因包括以下内容：
 
-+   **它是一种逻辑上将仅在一个地方使用的类分组的方法**：如果一个类仅对另一个类有用，则将其嵌入该类并将两者保持在一起是合乎逻辑的。嵌套这样的“辅助类”使其包更加简洁。
-
-+   **它增加了封装性**：考虑两个顶层类 A 和 B，其中 B 需要访问 A 的成员，否则这些成员将被声明为`private`。通过将类 B 隐藏在类 A 中，A 的成员可以被声明为 private，并且 B 可以访问它们。此外，B 本身可以对外部世界隐藏。
-
-+   **它可以导致更易读和易维护的代码**：将小类嵌套在顶层类中可以使代码更接近其使用位置。
++ **它是一种逻辑上将仅在一个地方使用的类分组的方法**：如果一个类仅对另一个类有用，则将其嵌入该类并将两者保持在一起是合乎逻辑的。嵌套这样的“辅助类”使其包更加简洁。
++ **它增加了封装性**：考虑两个顶层类 A 和 B，其中 B 需要访问 A 的成员，否则这些成员将被声明为`private`。通过将类 B 隐藏在类 A 中，A 的成员可以被声明为`private`，并且 B 可以访问它们。此外，B 本身可以对外部世界隐藏。
++ **它可以导致更易读和易维护的代码**：将小类嵌套在顶层类中可以使代码更接近其使用位置。
 
 ## 内部类
 
@@ -58,7 +55,6 @@ class OuterClass {
         ...
     }
 }
-
 ```
 
 `InnerClass`的实例只能存在于`OuterClass`的实例中，并且可以直接访问其封闭实例的方法和字段。
@@ -68,7 +64,6 @@ class OuterClass {
 ```java
 OuterClass outerObject = new OuterClass();
 OuterClass.InnerClass innerObject = outerObject.new InnerClass();
-
 ```
 
 有两种特殊类型的内部类：局部类和匿名类。
@@ -87,17 +82,15 @@ OuterClass.InnerClass innerObject = outerObject.new InnerClass();
 
 ```java
 StaticNestedClass staticNestedObject = new StaticNestedClass();
-
 ```
 
 ## 内部类和嵌套静态类示例
 
-以下示例，`OuterClass`，以及`TopLevelClass`，演示了内部类(`InnerClass`)、嵌套静态类(`StaticNestedClass`)和顶层类(`TopLevelClass`)可以访问`OuterClass`的哪些类成员：
+以下示例，`OuterClass`，以及`TopLevelClass`，演示了内部类（`InnerClass`）、嵌套静态类（`StaticNestedClass`）和顶层类（`TopLevelClass`）可以访问`OuterClass`的哪些类成员：
 
 ### OuterClass.java
 
 ```java
-
 public class OuterClass {
 
     String outerField = "Outer field";
@@ -143,7 +136,6 @@ public class OuterClass {
 ### TopLevelClass.java
 
 ```java
-
 public class TopLevelClass {
 
     void accessMembers(OuterClass outer) {     
@@ -185,7 +177,6 @@ static class StaticNestedClass {
        System.out.println(outerField);
     }
 }
-
 ```
 
 要修复此错误，请通过对象引用访问`outerField`：
@@ -201,7 +192,6 @@ System.out.println(outer.outerField);
 如果特定范围（如内部类或方法定义）中的类型声明（如成员变量或参数名）与封闭范围中的另一个声明具有相同的名称，则声明会*遮蔽*封闭范围的声明。您不能仅通过名称引用被遮蔽的声明。以下示例，`ShadowTest`，演示了这一点：
 
 ```java
-
 public class ShadowTest {
 
     public int x = 0;
@@ -223,7 +213,6 @@ public class ShadowTest {
         fl.methodInFirstLevel(23);
     }
 }
-
 ```
 
 以下是此示例的输出：

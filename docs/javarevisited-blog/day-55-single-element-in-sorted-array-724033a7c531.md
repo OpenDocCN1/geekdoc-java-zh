@@ -1,3 +1,4 @@
+
 # 第 55 天—排序数组中的单个元素
 
 > 原文：<https://medium.com/javarevisited/day-55-single-element-in-sorted-array-724033a7c531?source=collection_archive---------1----------------------->
@@ -14,4 +15,4 @@
 
 # Introduction🛹
 
-嘿伙计们，今天是我挑战的第 55 天。在接下来的 100 天里，我每天都要解决被问到的**编程问题**
+嘿伙计们，今天是我挑战的第 55 天。在接下来的 100 天里，我每天都要解决被问到的**编程问题**。

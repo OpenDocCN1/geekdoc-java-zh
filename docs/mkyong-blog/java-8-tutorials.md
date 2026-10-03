@@ -1,3 +1,4 @@
+
 # Java 8 教程
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/tutorials/java-8-tutorials/>
@@ -6,18 +7,18 @@
 
 一系列 Java 8 的提示和例子，希望你喜欢。
 
-### 常见问题
+## 常见问题
 
 一些常见问题。
 
-*   [Java 8 forEach 示例](/web/20221230032430/https://mkyong.com/java8/java-8-foreach-examples/)
-*   [Java 8 将列表转换为映射](/web/20221230032430/https://mkyong.com/java8/java-8-convert-list-to-map/)
-*   [Java 8 Lambda:比较器示例](/web/20221230032430/https://mkyong.com/java8/java-8-lambda-comparator-example/)
-*   [Java 8 方法引用，双冒号(::)操作符](/web/20221230032430/https://mkyong.com/java8/java-8-method-references-double-colon-operator/)
-*   [Java 8 流过滤器示例](java8/java-8-streams-filter-examples/)
-*   [Java 8 Streams map()示例](/web/20221230032430/https://mkyong.com/java8/java-8-streams-map-examples/)
+* [Java 8 forEach 示例](/web/20221230032430/https://mkyong.com/java8/java-8-foreach-examples/)
+* [Java 8 将列表转换为映射](/web/20221230032430/https://mkyong.com/java8/java-8-convert-list-to-map/)
+* [Java 8 Lambda:比较器示例](/web/20221230032430/https://mkyong.com/java8/java-8-lambda-comparator-example/)
+* [Java 8 方法引用，双冒号(::)操作符](/web/20221230032430/https://mkyong.com/java8/java-8-method-references-double-colon-operator/)
+* [Java 8 流过滤器示例](java8/java-8-streams-filter-examples/)
+* [Java 8 Streams map()示例](/web/20221230032430/https://mkyong.com/java8/java-8-streams-map-examples/)
 
-## 1.功能接口
+## 1. 功能接口
 
 Java 8 引入了`@FunctionalInterface`，一个只有一个抽象方法的接口。编译器会将任何满足函数接口的[定义的接口视为函数接口；这意味着`@FunctionalInterface`注释是可选的。](http://web.archive.org/web/20221230032430/https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html)
 
@@ -32,17 +33,17 @@ Java 8 引入了`@FunctionalInterface`，一个只有一个抽象方法的接口
 | `Supplier<T>` | `T get()` | `LocalDate::now`，`Instant::now` |
 | `Consumer<T>` | `void accept(T t)` | `System.out::println`，`Error::printStackTrace` |
 
-*   [Java 8 函数示例](/web/20221230032430/https://mkyong.com/java8/java-8-function-examples/)
-*   [Java 8 双功能示例](/web/20221230032430/https://mkyong.com/java8/java-8-bifunction-examples/)
-*   [Java 8 二元运算符示例](/web/20221230032430/https://mkyong.com/java8/java-8-binaryoperator-examples/)
-*   [Java 8 一元运算符示例](/web/20221230032430/https://mkyong.com/java8/java-8-unaryoperator-examples/)
-*   [Java 8 谓词示例](/web/20221230032430/https://mkyong.com/java8/java-8-predicate-examples/)
-*   [Java 8 双预测示例](/web/20221230032430/https://mkyong.com/java8/java-8-bipredicate-examples/)
-*   [Java 8 消费者示例](/web/20221230032430/https://mkyong.com/java8/java-8-consumer-examples/)
-*   [Java 8 双消费示例](/web/20221230032430/https://mkyong.com/java8/java-8-biconsumer-examples/)
-*   [Java 8 供应商示例](/web/20221230032430/https://mkyong.com/java8/java-8-supplier-examples/)
+* [Java 8 函数示例](/web/20221230032430/https://mkyong.com/java8/java-8-function-examples/)
+* [Java 8 双功能示例](/web/20221230032430/https://mkyong.com/java8/java-8-bifunction-examples/)
+* [Java 8 二元运算符示例](/web/20221230032430/https://mkyong.com/java8/java-8-binaryoperator-examples/)
+* [Java 8 一元运算符示例](/web/20221230032430/https://mkyong.com/java8/java-8-unaryoperator-examples/)
+* [Java 8 谓词示例](/web/20221230032430/https://mkyong.com/java8/java-8-predicate-examples/)
+* [Java 8 双预测示例](/web/20221230032430/https://mkyong.com/java8/java-8-bipredicate-examples/)
+* [Java 8 消费者示例](/web/20221230032430/https://mkyong.com/java8/java-8-consumer-examples/)
+* [Java 8 双消费示例](/web/20221230032430/https://mkyong.com/java8/java-8-biconsumer-examples/)
+* [Java 8 供应商示例](/web/20221230032430/https://mkyong.com/java8/java-8-supplier-examples/)
 
-## 2.Lambda 表达式和方法引用
+## 2. Lambda 表达式和方法引用
 
 Java 8 引入了 lambda 表达式来实现函数接口的抽象方法。
 
@@ -50,10 +51,10 @@ Java 8 引入了 lambda 表达式来实现函数接口的抽象方法。
 
 回顾一下 JDK 的`Iterable`类，它有一个`default`方法`forEach()`来接受一个函数接口`Consumer`
 
-Iterable.java
+`Iterable.java`
 
 ```java
- public interface Iterable<T> {
+public interface Iterable<T> {
 
     default void forEach(Consumer<? super T> action) {
         Objects.requireNonNull(action);
@@ -63,96 +64,100 @@ Iterable.java
     }
 
    //...
-} 
+}
 ```
 
 首先，我们可以提供一个匿名类作为`forEach`实现。
 
 ```java
- List<String> list = Arrays.asList("node", "java", "python", "ruby");
+List<String> list = Arrays.asList("node", "java", "python", "ruby");
 list.forEach(new Consumer<String>() {       // anonymous class
     @Override
     public void accept(String str) {
         System.out.println(str);
     }
-}); 
+});
 ```
 
 或者，我们可以使用 lambda 表达式来缩短代码，如下所示:
 
 ```java
- List<String> list = Arrays.asList("node", "java", "python", "ruby");
-list.forEach(str -> System.out.println(str)); // lambda expressions 
+List<String> list = Arrays.asList("node", "java", "python", "ruby");
+list.forEach(str -> System.out.println(str)); // lambda expressions
 ```
 
 为了获得更好的可读性，我们可以用方法引用替换 lambda 表达式。
 
 ```java
- List<String> list = Arrays.asList("node", "java", "python", "ruby");
-list.forEach(System.out::println);           // method references 
+List<String> list = Arrays.asList("node", "java", "python", "ruby");
+list.forEach(System.out::println);           // method references
 ```
 
 **延伸阅读> > >** [Java 8 方法引用，双冒号(::)运算符](/web/20221230032430/https://mkyong.com/java8/java-8-method-references-double-colon-operator/)
 
 **注意**
+
 lambda 表达式或方法引用什么都不做，只是对现有方法的另一种方式调用。通过方法引用，它获得了更好的可读性。
 
-### 3.流
+## 3. 流
 
-*   [Java 8 流过滤器示例](java8/java-8-streams-filter-examples/)
-*   [Java 8 Streams map()示例](/web/20221230032430/https://mkyong.com/java8/java-8-streams-map-examples/)
-*   [Java 8 平面图示例](/web/20221230032430/https://mkyong.com/java8/java-8-flatmap-example/)
-*   [Java 8 并行流示例](/web/20221230032430/https://mkyong.com/java8/java-8-parallel-streams-examples/)
-*   [Java 8 Stream.iterate 示例](/web/20221230032430/https://mkyong.com/java8/java-8-stream-iterate-examples/)
-*   [Java 8 流收集器按示例分组](/web/20221230032430/https://mkyong.com/java8/java-8-collectors-groupingby-and-mapping-example/)
-*   [Java 8 从流中过滤空值](/web/20221230032430/https://mkyong.com/java8/java-8-filter-a-null-value-from-a-stream/)
-*   [Java 8 将流转换为列表](/web/20221230032430/https://mkyong.com/java8/java-8-convert-a-stream-to-list/)
-*   [Java 8 流 findFirst()和 findAny()](/web/20221230032430/https://mkyong.com/java8/java-8-stream-findfirst-and-findany/)
-*   [Java 8 Stream.reduce()示例](/web/20221230032430/https://mkyong.com/java8/java-8-stream-reduce-examples/)
-*   [Java 8 将流转换为列表](/web/20221230032430/https://mkyong.com/java8/java-8-convert-a-stream-to-list/)
-*   [Java 8 如何用 Stream 对 BigDecimal 求和？](/web/20221230032430/https://mkyong.com/java8/java-8-how-to-sum-bigdecimal-using-stream/)
-*   [Java 8 流–逐行读取文件](/web/20221230032430/https://mkyong.com/java8/java-8-stream-read-a-file-line-by-line/)
-*   [Java 8 Stream-Convert List<List<String>to List<String>](/web/20221230032430/https://mkyong.com/java/java-8-stream-convert-listliststring-to-liststring/)
-*   [Java 8 Stream–peek()不支持 count()？](/web/20221230032430/https://mkyong.com/java8/java-8-stream-the-peek-is-not-working-with-count/)
-*   [Java 8 使用后应该关闭流吗？](/web/20221230032430/https://mkyong.com/java/java-8-should-we-close-the-stream-after-use/)
-*   [Java 8 将流转换成数组](/web/20221230032430/https://mkyong.com/java8/java-8-how-to-convert-a-stream-to-array/)
-*   [Java 8 如何将 IntStream 转换成整数数组](/web/20221230032430/https://mkyong.com/java8/java-8-how-to-convert-intstream-to-integer/)
-*   [Java 8 如何将 IntStream 转换成 int 或 int 数组](/web/20221230032430/https://mkyong.com/java8/java-8-how-to-convert-intstream-to-int-or-int/)
-*   [Java 8 如何用 stream.sorted()](/web/20221230032430/https://mkyong.com/java8/java-8-how-to-sort-list-with-stream-sorted/) 对列表进行排序
-*   [Java–如何对所有流整数求和](/web/20221230032430/https://mkyong.com/java8/java-how-to-sum-all-the-stream-integers/)
-*   [Java–如何将原始数组转换为列表](/web/20221230032430/https://mkyong.com/java/java-how-to-convert-a-primitive-array-to-list/)
-*   [Java–如何将数组转换成流](/web/20221230032430/https://mkyong.com/java8/java-how-to-convert-array-to-stream/)
-*   [Java–流已经被操作或关闭](/web/20221230032430/https://mkyong.com/java8/java-stream-has-already-been-operated-upon-or-closed/)
+* [Java 8 流过滤器示例](java8/java-8-streams-filter-examples/)
+* [Java 8 Streams map()示例](/web/20221230032430/https://mkyong.com/java8/java-8-streams-map-examples/)
+* [Java 8 平面图示例](/web/20221230032430/https://mkyong.com/java8/java-8-flatmap-example/)
+* [Java 8 并行流示例](/web/20221230032430/https://mkyong.com/java8/java-8-parallel-streams-examples/)
+* [Java 8 Stream.iterate 示例](/web/20221230032430/https://mkyong.com/java8/java-8-stream-iterate-examples/)
+* [Java 8 流收集器按示例分组](/web/20221230032430/https://mkyong.com/java8/java-8-collectors-groupingby-and-mapping-example/)
+* [Java 8 从流中过滤空值](/web/20221230032430/https://mkyong.com/java8/java-8-filter-a-null-value-from-a-stream/)
+* [Java 8 将流转换为列表](/web/20221230032430/https://mkyong.com/java8/java-8-convert-a-stream-to-list/)
+* [Java 8 流 findFirst()和 findAny()](/web/20221230032430/https://mkyong.com/java8/java-8-stream-findfirst-and-findany/)
+* [Java 8 Stream.reduce()示例](/web/20221230032430/https://mkyong.com/java8/java-8-stream-reduce-examples/)
+* [Java 8 将流转换为列表](/web/20221230032430/https://mkyong.com/java8/java-8-convert-a-stream-to-list/)
+* [Java 8 如何用 Stream 对 BigDecimal 求和？](/web/20221230032430/https://mkyong.com/java8/java-8-how-to-sum-bigdecimal-using-stream/)
+* [Java 8 流–逐行读取文件](/web/20221230032430/https://mkyong.com/java8/java-8-stream-read-a-file-line-by-line/)
+* [Java 8 Stream-Convert List<List<String>to List<String>](/web/20221230032430/https://mkyong.com/java/java-8-stream-convert-listliststring-to-liststring/)
+* [Java 8 Stream–peek()不支持 count()？](/web/20221230032430/https://mkyong.com/java8/java-8-stream-the-peek-is-not-working-with-count/)
+* [Java 8 使用后应该关闭流吗？](/web/20221230032430/https://mkyong.com/java/java-8-should-we-close-the-stream-after-use/)
+* [Java 8 将流转换成数组](/web/20221230032430/https://mkyong.com/java8/java-8-how-to-convert-a-stream-to-array/)
+* [Java 8 如何将 IntStream 转换成整数数组](/web/20221230032430/https://mkyong.com/java8/java-8-how-to-convert-intstream-to-integer/)
+* [Java 8 如何将 IntStream 转换成 int 或 int 数组](/web/20221230032430/https://mkyong.com/java8/java-8-how-to-convert-intstream-to-int-or-int/)
+* [Java 8 如何用 stream.sorted()](/web/20221230032430/https://mkyong.com/java8/java-8-how-to-sort-list-with-stream-sorted/) 对列表进行排序
+* [Java–如何对所有流整数求和](/web/20221230032430/https://mkyong.com/java8/java-how-to-sum-all-the-stream-integers/)
+* [Java–如何将原始数组转换为列表](/web/20221230032430/https://mkyong.com/java/java-how-to-convert-a-primitive-array-to-list/)
+* [Java–如何将数组转换成流](/web/20221230032430/https://mkyong.com/java8/java-how-to-convert-array-to-stream/)
+* [Java–流已经被操作或关闭](/web/20221230032430/https://mkyong.com/java8/java-stream-has-already-been-operated-upon-or-closed/)
 
-### 4.新日期时间 API
+## 4. 新日期时间 API
 
 过去，我们使用`Date`和`Calendar`API 来表示和操作日期。
 
-*   `java.util.Date`–日期和时间，以默认时区打印。
-*   `java.util.Calendar`–日期和时间，更多操作日期的方法。
-*   `java.text.SimpleDateFormat`–格式化(日期- >文本)，解析(文本- >日期)日期和日历。
+* `java.util.Date`–日期和时间，以默认时区打印。
+* `java.util.Calendar`–日期和时间，更多操作日期的方法。
+* `java.text.SimpleDateFormat`–格式化(日期- >文本)，解析(文本- >日期)日期和日历。
 
 Java 8 在`java.time`包中创建了一系列新的日期和时间 API。( [JSR310](http://web.archive.org/web/20221230032430/https://jcp.org/en/jsr/detail?id=310) 并受 Joda-time 启发)。
 
-*   `java.time.LocalDate`–无时间、无时区的日期。
-*   `java.time.LocalTime`–无日期、无时区的时间。
-*   `java.time.LocalDateTime`–日期和时间，无时区。
-*   `java.time.ZonedDateTime`–日期和时间，带时区。
-*   `java.time.DateTimeFormatter`–Java . time 的格式化(日期- >文本)、解析(文本- >日期)
-*   `java.time.Instant`–机器的日期和时间，自 Unix 纪元时间(世界协调时 1970 年 1 月 1 日午夜)以来经过的秒数
-*   `java.time.Duration`–以秒和纳秒为单位测量时间。
-*   `java.time.Period`–以年、月、日计量时间。
-*   `java.time.TemporalAdjuster`–调整日期。
-*   `java.time.OffsetDateTime`–{更新我}
+* `java.time.LocalDate`–无时间、无时区的日期。
+* `java.time.LocalTime`–无日期、无时区的时间。
+* `java.time.LocalDateTime`–日期和时间，无时区。
+* `java.time.ZonedDateTime`–日期和时间，带时区。
+* `java.time.DateTimeFormatter`–Java . time 的格式化(日期- >文本)、解析(文本- >日期)
+* `java.time.Instant`–机器的日期和时间，自 Unix 纪元时间(世界协调时 1970 年 1 月 1 日午夜)以来经过的秒数
+* `java.time.Duration`–以秒和纳秒为单位测量时间。
+* `java.time.Period`–以年、月、日计量时间。
+* `java.time.TemporalAdjuster`–调整日期。
+* `java.time.OffsetDateTime`–{更新我}
 
 示例…
 
-*   [Java–如何获取当前日期时间](/web/20221230032430/https://mkyong.com/java/java-how-to-get-current-date-time-date-and-calender/)
-*   [Java–如何获取当前时间戳](/web/20221230032430/https://mkyong.com/java/how-to-get-current-timestamps-in-java/)
-*   [Java–如何将字符串转换成日期](/web/20221230032430/https://mkyong.com/java/how-to-convert-string-to-date-java/)
-*   [Java 8–持续时间和周期示例](/web/20221230032430/https://mkyong.com/java8/java-8-period-and-duration-examples/)
-*   [Java 8–如何将字符串转换为本地日期](/web/20221230032430/https://mkyong.com/java8/java-8-how-to-convert-string-to-localdate/)
-*   [Java 8–如何格式化本地日期时间](/web/20221230032430/https://mkyong.com/java8/java-8-how-to-format-localdatetime/)
+* [Java–如何获取当前日期时间](/web/20221230032430/https://mkyong.com/java/java-how-to-get-current-date-time-date-and-calender/)
+* [Java–如何获取当前时间戳](/web/20221230032430/https://mkyong.com/java/how-to-get-current-timestamps-in-java/)
+* [Java–如何将字符串转换成日期](/web/20221230032430/https://mkyong.com/java/how-to-convert-string-to-date-java/)
+* [Java 8–持续时间和周期示例](/web/20221230032430/https://mkyong.com/java8/java-8-period-and-duration-examples/)
+* [Java 8–如何将字符串转换为本地日期](/web/20221230032430/https://mkyong.com/java8/java-8-how-to-convert-string-to-localdate/)
+* [Java 8–如何格式化本地日期时间](/web/20221230032430/https://mkyong.com/java8/java-8-how-to-format-localdatetime/)
+
+
+
 *   [Java 8–将 Instant 转换为 LocalDateTime](/web/20221230032430/https://mkyong.com/java8/java-convert-instant-to-localdatetime/)
 *   [Java 8–将 Instant 转换为 ZoneDateTime](/web/20221230032430/https://mkyong.com/java8/java-8-convert-instant-to-zoneddatetime/)
 *   [Java 8–将日期转换为本地日期和本地日期时间](/web/20221230032430/https://mkyong.com/java8/java-8-convert-date-to-localdate-and-localdatetime/)

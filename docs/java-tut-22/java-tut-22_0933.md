@@ -1,3 +1,4 @@
+
 # 从套接字读取和写入
 
 > 译文：[`docs.oracle.com/javase/tutorial/networking/sockets/readingWriting.html`](https://docs.oracle.com/javase/tutorial/networking/sockets/readingWriting.html)
@@ -27,21 +28,18 @@ try (
         new BufferedReader(
             new InputStreamReader(System.in))
 )
-
 ```
 
 `try`-with 资源语句中的第一条语句创建了一个新的[`Socket`](https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html)对象，并命名为`echoSocket`。此处使用的`Socket`构造函数需要要连接的计算机的名称和端口号。示例程序使用第一个命令行参数作为计算机的名称（主机名），第二个命令行参数作为端口号。当您在计算机上运行此程序时，请确保您使用的主机名是要连接的计算机的完全限定 IP 名称。例如，如果您的回显服务器在计算机`echoserver.example.com`上运行，并且正在侦听端口号 7，则如果您想将`EchoServer`示例用作您的回显服务器，请先从计算机`echoserver.example.com`运行以下命令：
 
 ```java
 java EchoServer 7
-
 ```
 
 后续，使用以下命令运行`EchoClient`示例：
 
 ```java
 java EchoClient echoserver.example.com 7
-
 ```
 
 `try`-with 资源语句中的第二个语句获取套接字的输出流，并在其上打开名为`out`的`PrintWriter`。类似地，第三个语句获取套接字的输入流，并在其上打开名为`in`的`BufferedReader`。该示例使用读取器和写入器，以便可以通过套接字写入 Unicode 字符。如果您还不熟悉 Java 平台的 I/O 类，请阅读基本 I/O。
@@ -54,23 +52,18 @@ while ((userInput = stdIn.readLine()) != null) {
     out.println(userInput);
     System.out.println("echo: " + in.readLine());
 }
-
 ```
 
 `while`循环中的最后一个语句从与套接字连接的`BufferedReader`中读取一行信息。`readLine`方法会等待服务器将信息回显给`EchoClient`。当`readline`返回时，`EchoClient`将信息打印到标准输出。
 
-`while`循环会一直持续，直到用户输入结束符号。也就是说，`EchoClient`示例从用户那里读取输入，将其发送到 Echo 服务器，从服务器获取响应，并显示它，直到达到输入结束。 （您可以通过按下**Ctrl-C**键来输入结束符号。）然后`while`循环终止，并且 Java 运行时会自动关闭与套接字和标准输入流连接的读取器和写入器，并关闭与服务器的套接字连接。Java 运行时会自动关闭这些资源，因为它们是在`try`-with 资源语句中创建的。Java 运行时会按照它们创建的相反顺序关闭这些资源。（这很好，因为连接到套接字的流应该在套接字本身关闭之前关闭。）
+`while`循环会一直持续，直到用户输入结束符号。也就是说，`EchoClient`示例从用户那里读取输入，将其发送到 Echo 服务器，从服务器获取响应，并显示它，直到达到输入结束。（您可以通过按下**Ctrl-C**键来输入结束符号。）然后`while`循环终止，并且 Java 运行时会自动关闭与套接字和标准输入流连接的读取器和写入器，并关闭与服务器的套接字连接。Java 运行时会自动关闭这些资源，因为它们是在`try`-with 资源语句中创建的。Java 运行时会按照它们创建的相反顺序关闭这些资源。（这很好，因为连接到套接字的流应该在套接字本身关闭之前关闭。）
 
 该客户端程序非常简单直接，因为回显服务器实现了一个简单的协议。客户端向服务器发送文本，服务器将其回显。当您的客户端程序与更复杂的服务器（如 HTTP 服务器）通信时，您的客户端程序也会更复杂。但是，基本原理与本程序中的相同：
 
-1.  打开一个套接字。
-
-1.  打开一个输入流和输出流到套接字。
-
-1.  根据服务器的协议从流中读取和写入数据。
-
-1.  关闭流。
-
-1.  关闭套接字。
+1. 打开一个套接字。
+2. 打开一个输入流和输出流到套接字。
+3. 根据服务器的协议从流中读取和写入数据。
+4. 关闭流。
+5. 关闭套接字。
 
 仅步骤 3 因客户端而异，取决于服务器。其他步骤基本保持不变。

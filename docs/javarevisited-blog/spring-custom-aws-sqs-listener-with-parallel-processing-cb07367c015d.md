@@ -1,3 +1,4 @@
+
 # 具有并行处理的 Spring 自定义 AWS SQS 监听器
 
 > 原文：<https://medium.com/javarevisited/spring-custom-aws-sqs-listener-with-parallel-processing-cb07367c015d?source=collection_archive---------1----------------------->

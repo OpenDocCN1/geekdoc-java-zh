@@ -1,32 +1,9 @@
+
 # Kotlin 应用程序编程：Kotlin 构建移动端与服务端应用指南
-
-
-
-
 
 ![](img/0c8d5d6c6d95ced628a954a187036113_0_0.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
 ![](img/0c8d5d6c6d95ced628a954a187036113_6_0.png)
-
-
-
-
-
-
-
-
 
 # 关于作者
 
@@ -35,9 +12,6 @@ BRETT MCLAUGHIN 在技术领域工作和写作已超过 20 年。今天，Brett 
 # 关于技术编辑
 
 JASON LEE 是一个快乐生活在美国中心地带的软件开发人员。他拥有超过 23 年的多种语言经验，编写运行在从移动设备到大型机上的软件。在过去的 15 多年里，他一直活跃在 Java/Jakarta EE 领域，开发应用程序服务器、框架和面向用户的应用程序。如今，他大部分时间担任后端工程师，主要使用 Kotlin，并使用 Quarkus 和 Spring Boot 等框架构建系统。他是《Java 9 Programming Blueprints》的作者，前 Java 用户组主席，偶尔担任会议演讲者，以及博客作者。在空闲时间里，他喜欢与妻子和两个儿子待在一起，阅读、弹贝斯器和跑步。你可以通过 Twitter (twitter.com/jasondlee) 找到他，或者通过他的博客 (jasondlee.ee) 找到他。
-
-
-
 
 # 致谢
 
@@ -55,65 +29,6 @@ Carole Jelen 是我在 Waterside 的经纪人，在我真正需要人帮助我�
 
 > —BRETT McLAHLIN
 
-
-
-
-- 常量不可更改（在某种程度上） 21
-
-
-
-
-
-
-
-
-
-
-（注：OCR 文本由于分页问题存在重叠章节；我已合并了独特的内容流。）
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-- 高阶函数接受参数
 # 第 11 章：编写地道的 Kotlin
 
 - `let` 提供一个上下文
@@ -127,27 +42,13 @@ Carole Jelen 是我在 Waterside 的经纪人，在我真正需要人帮助我�
 - `apply` 返回上下文对象而不是值
 - `apply` 在赋值前执行
 - `also` 只是另一个作用函数
-- `also` 给出--
---------实例
-------
------带有类的函数
-----在作用函数之上
--------
---你可以链式调用作用函数
---在作用函数上嵌套
--- 嵌套一个作用函数
-------------------------------------------作用函数-
--------------------
---选择作用函数是一个风格问题和--
----------------------函数---------------------------------------------------------------------------------------
-------一个作用函数是一个风格问题和--
---选择作用函数是一个风格问题和--
---------------------------------------
---选择作用函数是一个风格问题和--
-
-
-
-
+- `also` 给出实例
+- 带有类的函数
+- 在作用函数之上
+- 你可以链式调用作用函数
+- 在作用函数上嵌套
+- 嵌套一个作用函数
+- 选择作用函数是一个风格问题和函数
 
 ### 引言
 
@@ -185,7 +86,7 @@ Kotlin 官方网站 (kotlinlang.org) 将 Kotlin 描述为“一种让开发者�
 
 **第 1 章：对象贯穿** 这一章将带你从安装 Kotlin 到编写你的第一个程序。你从一开始就将学习函数，以及如何通过一个并不完全是“Hello, World!”应用程序与命令行交互。你还将立即看到对象和类在 Kotlin 中的作用，并完善你对类、对象和实例的理解。
 
-**第 2 章：Kotlin 很难破坏** 这一章进入 Kotlin Kotlin区别特征之一：它对类型安全的强硬立场。你将学习 Kotlin 的类型以及如何为正确的任务选择正确的类型。你还将熟悉 `var` 和 `val` 以及 Kotlin 如何允许改变。
+**第 2 章：Kotlin 很难破坏** 这一章进入 Kotlin 区别特征之一：它对类型安全的强硬立场。你将学习 Kotlin 的类型以及如何为正确的任务选择正确的类型。你还将熟悉 `var` 和 `val` 以及 Kotlin 如何允许改变。
 
 **第 3 章：Kotlin 非常类类** 就像任何面向对象的语言一样，你使用 Kotlin 的大部分工作都是编写类。这一章深入研究 Kotlin 中的类，并观察所有 Kotlin 对象的构建区块。你还将重写一些函数，并深入 Kotlin 最基础的函数：`equals()` 和 `hashCode()`。
 
@@ -207,9 +108,6 @@ Kotlin 官方网站 (kotlinlang.org) 将 Kotlin 描述为“一种让开发者�
 
 **第 12 章：下一步** 没有任何一本书可以教你你所需的一切，这本书也非例外。在你的 Kotlin 编程之旅中，寻找下一步去是一些成熟的地方，这一章为你提供了许多继续学习 Kotlin 特定领域的切入点。
 
-
-
-
 ### 本章内容概览
 
 - Kotlin 语法概览
@@ -221,7 +119,7 @@ Kotlin 官方网站 (kotlinlang.org) 将 Kotlin 描述为“一种让开发者�
 
 ### KOTLIN：一种全新的编程语言
 
-简单而言之，Kotlin 只是另一种编程语言。如果你已经在进行编程和编写代码了，你会很快学会 Kotlin，因为它与你正在做的内容有许多共同点。如果你在使用面向对象的语言进行编程，情况更是如此；如果你在用 Java 编写代码，那么，Kotlin 会让你感到非常熟悉，尽管在某些非常棒的地方有所不同。
+简单而言，Kotlin 只是另一种编程语言。如果你已经在进行编程和编写代码了，你会很快学会 Kotlin，因为它与你正在做的内容有许多共同点。如果你在使用面向对象的语言进行编程，情况更是如此；如果你在用 Java 编写代码，那么，Kotlin 会让你感到非常熟悉，尽管在某些非常棒的地方有所不同。
 
 不过，如果你是 Kotlin 的初学者，它是一个非常棒的入门语言。它非常清晰，没有许多怪异的惯用写法（例如，Ruby 或者老天，保佑我们吧，LISP），而且组织良好。你会很快学会它，并很快发现用起来很舒服。
 
@@ -247,7 +145,9 @@ fun main() {
 花一两分钟读读这段代码。如果你以前从未看过一行 Kotlin 代码，你可能也能大概猜出在发生什么。首先，它定义了一个 `User` 类（实际上是一种特殊的类，数据类）；然后它定义了一个 `main` 函数，这是非常标准的写法。接下来是两个变量（`vals`），每个变量都获得了一个定义的 `User` 类的实例。然后创建了一个名为 `attendees` 的列表，并用创建的两个用户填充它。最后是遍历列表，对每个用户进行打印。
 
 如果你运行这段代码，你会得到这个并不起眼的输出：
+
 User(firstName=Brian, lastName=Trubies) is attending!
+
 User(firstName=Rose, lastName=Bushnell) is attending!
 
 显然，这对你来说可能看起来很奇怪，无论你是刚开始写代码的新手还是资深的 Java 专家。此外，你似乎完全不知道如何实际编译或运行这段代码。没关系，我们会讲解所有这些。
@@ -262,11 +162,7 @@ Kotlin 是一种开源编程语言。它最显著的特点是**静态类型**和
 
 Kotlin 实际上是由一组开发 JetBrains IDE 的开发者创建的，它感觉非常像 Java 的一种自然演进。它从 2011 年起就以早期形式存在，但在 2016 年正式发布。这意味着它是新的，这是好事，但也意味着它是新的，有时这可能会产生坏处。Kotlin 可以运行在 Java 虚拟机 (JVM) 内部，甚至可以编译为 JavaScript——它是一个多功能的工具。
 
-
-
-
-
-## 第 1 章 面到对象
+## 第 1 章 面向对象
 
 ![](img/0c8d5d6c6d95ced628a954a187036113_35_0.png)
 
@@ -275,6 +171,7 @@ Kotlin 实际上是由一组开发 JetBrains IDE 的开发者创建的，它感�
 > Mac OS 上 IntelliJ 的“安装过程”非常简单：将软件包（以图标形式显示）拖入你的应用程序（Applications）文件夹即可。你需要找到并启动 IntelliJ，或者将图标拖入你的 Dock 栏，我就是这么做的。
 
 对于 Windows，你下载可执行文件并运行它。如果你喜欢，可以在桌面上创建一个快捷方式。
+
 在这两种情况下，你都可以使用 JetBrains Toolbox（随 JetBrains Kotlin 包一起提供）来保持你的安装为最新版本，并在有更新可用时添加更新。
 
 你有大量的选项来设置你的 IDE。对于 IntelliJ，你需要选择一个 UI 主题（都是免费的）、一个启动脚本（我建议选择默认并创建该脚本）、默认插件以及一组特色插件。你可以快速点击这些选项，然后 IDE 将会重启。你会看到一个与图 1.3 类似的欢迎界面，你应该选择“创建新项目”（Create New Project）。
@@ -307,6 +204,8 @@ Kotlin 实际上是由一组开发 JetBrains IDE 的开发者创建的，它感�
 
 ![](img/0c8d5d6c6d95ced628a954a187036113_38_0.png)
 
+
+
 图 1.6：IntelliJ 会自动格式化代码并添加合理的语法高亮。
 
 ### 编译并运行你的 Kotlin 程序
@@ -317,7 +216,7 @@ Kotlin 实际上是由一组开发 JetBrains IDE 的开发者创建的，它感�
 
 图 1.7：你可以点击绿色按钮并选择第一个选项来构建并运行你的代码。
 
-## 第 1 章 面到对象
+## 第 1 章 面向对象
 
 ![](img/0c8d5d6c6d95ced628a954a187036113_39_0.png)
 
@@ -333,7 +232,7 @@ Kotlin 实际上是由一组开发 JetBrains IDE 的开发者创建的，它感�
 
 ### Windows 命令行 Kotlin
 
-对于 Windows 用户，你需要一个 JDK。你可以从 Oracle 下载页面 www.oracle.com/java/downloads/ 下载。那里有易于遵循的版本说明。一旦有了 Java，你需要从 GitHub 获取最新的 Kotlin。你可以在 github.com/JetBrains/kotlin/releases/latest （这将重定向到最新发布）。下载并遵循说明即可。
+对于 Windows 用户，你需要一个 JDK。你可以从 Oracle 下载页面 `www.oracle.com/java/downloads/` 下载。那里有易于遵循的版本说明。一旦有了 Java，你需要从 GitHub 获取最新的 Kotlin。你可以在 `github.com/JetBrains/kotlin/releases/latest` （这将重定向到最新发布）。下载并遵循说明即可。
 
 ### 间歇：设置你的 Kotlin 环境
 
@@ -345,11 +244,13 @@ Kotlin 实际上是由一组开发 JetBrains IDE 的开发者创建的，它感�
 
 ### Mac OS X 命令行 Kotlin
 
-在 Mac OS X 上运行 Kotlin 最简单的方法是使用 Mac 上的包管理器之一：Homebrew (brew.sh) 或 MacPorts (www.macports.org)。
+在 Mac OS X 上运行 Kotlin 最简单的方法是使用 Mac 上的包管理器之一：Homebrew (`brew.sh`) 或 MacPorts (`www.macports.org`)。
 
 对于 MacPorts，只需运行以下命令：
 
+```
 sudo port install kotlin
+```
 
 这需要提升权限，但在运行之后你就设置好了。
 
@@ -367,7 +268,7 @@ brew install kotlin
 
 ### 基于 UNIX 的系统的命令行 Kotlin
 
-如果你不是 Mac OS X 但拥有 Unix 类操作系统，可以使用 SDKMAN! (sdkman.io) 来安装 Kotlin。
+如果你不是 Mac OS X 但拥有 Unix 类操作系统，可以使用 SDKMAN! (`sdkman.io`) 来安装 Kotlin。
 
 > 准确地说，Mac OS X 是基于 Unix 的操作系统，所以你可以使用 Mac 的指令，而不是 Homebrew 或 MacPorts。
 
@@ -393,25 +294,19 @@ sdk install kotlin
 kotlinc
 ```
 
-> 警告：此时，你可能会被提示安装 Java 运行时。这应该让你的系统能够处理此问题，你可以放心地接受提示。找到你系统的 JDK 或 JRE，下载并运行它。然后再次尝试 kotlinc。
+> 警告：此时，你可能会被提示安装 Java 运行时。这应该让你的系统能够处理此问题，你可以放心地接受提示。找到你系统的 JDK 或 JRE，下载并运行它。然后再次尝试 `kotlinc`。
 
 如果你的系统已正确配置了 Java，你应该得到类似的内容：
 
 ```
-kotinc
-```
-
-```
+kotlinc
 Java HotSpot (TM) 64-Bit Server VM running: Options -Xverify:none -noverify are deprecated in JDK 13 and will likely be removed in a future release.
-
 Welcome to Kotlin version 1.3.61 (JRE 1.0.2+8)
-
 Type :help for help, :quit for quit
-
 >>>
 ```
 
-这是 Kotlin REPL（读取-执行-打印循环），快速评估 Kotlin 语句的工具。我们稍后详细查看，但现在通过输入 :quit 退出 REPL。
+这是 Kotlin REPL（读取-执行-打印循环），快速评估 Kotlin 语句的工具。我们稍后详细查看，但现在通过输入 `:quit` 退出 REPL。
 
 你也可以通过以下命令验证你的 Kotlin 版本：
 
@@ -419,7 +314,9 @@ Type :help for help, :quit for quit
 kotlin -version
 ```
 
+```
 Kotlin version 1.3.61-release-180 (JRE 1.0.2+8)
+```
 
 到此时，你准备好开始了！
 
@@ -431,15 +328,11 @@ Kotlin version 1.3.61-release-180 (JRE 1.0.2+8)
 
 对于必要属性，最好的方法是在创建对象的新实例时要求这些属性。实例只是对象的一个特定版本；你可能有 `Person` 类的多个实例，每个实例都代表一个真实的人。
 
-
-
-
-
 > 警告 你有时会听到将属性或属性值称为参数。这并没有错；参数通常是指传递给其他东西的东西；在这种情况下，是把某个东西（名和姓）传递给另一个东西（一个构造函数）。但一旦它们被赋值给对象实例，它们就不再是参数了。在那个时候，它们是对象的属性（更准确地说，是对象的属性值）。所以，从开始将其称为属性值更容易。
 
 看到了吧？这些术语很令人困惑。不过，随着时间的推移你会熟悉的。继续坚持吧。
 
-### 列表 1.3：Kotlin 中一个没那么用的对象及其构造函数
+### 列表 1.3：Kotlin 中一个没那么无用的对象及其构造函数
 
 ```kotlin
 class Person(firstName: String, lastName: String) {
@@ -508,18 +401,13 @@ println(brian)
 
 在后一种情况下，Kotlin 会为你处理它。
 
-
-
-
 ## 初始化对象并修改变量
 
 对于入门来说，这还不错！在结束你的 Kotlin 首次之旅之前，还有一个最后一个细节需要处理。
 
-## 初始化对象并修改变量
-
 假设你想对你的 `Person` 类进行一些尝试。尝试一下：更新你的代码以与列表 1.6 一致（其中某些内容可能会让你困惑，但你可能可以弄懂大部分发生的情况）。
 
-列表 1.6：为 Person 创建新属性
+### 列表 1.6：为 Person 创建新属性
 
 ```kotlin
 class Person(val firstName: String, val lastName: String) {
@@ -601,9 +489,7 @@ Kotlin 还给了你一个 setter，或者（再次更正式地说）一个 **mut
 // 创建一个新的人
 val brian = Person("Brian", "Truesby")
 println(brian.firstName)
-```
 
-```kotlin
 // 创建另一个人
 val rose = Person("Rose", "Bushnell")
 rose.lastName = "Bushnell"
@@ -619,13 +505,8 @@ rose.lastName = "Bushnell"
 
 这是导致问题的代码：
 
-（注意：此点之后的 OCR 文本变得非常重复且损坏。我按照要求保留了逻辑片段，同时清理了字符级的噪声。）
-
-[源中的剩余文本是 "hairy dog" 和 "setter" 短语的重复循环，看起来是 OCR 生成错误。]
-
-
-
 # 2
+
 ### Kotlin 很难被破坏
 
 本章内容包括：
@@ -640,18 +521,23 @@ rose.lastName = "Bushnell"
 
 你已经对 Kotlin 有了实实的介绍，包括构建了你的第一个对象。所以，我们将直接进入正题。那个关于人的姓氏显示不错误的困扰问题，在修复它之前，你已经准备好从预编译的角度提升你构建类的方法。
 
-到目前为止，你一直使用单个文件来包含你的类（Person）和主函数（main function）。但这并不可扩展。不久之后，你会有很多类——而且是类，而不是类的实例。
+到目前为止，你一直使用单个文件来包含你的类（`Person`）和主函数（`main function`）。但这并不可扩展。不久之后，你会有很多类——而且是类，而不是类的实例。
 
 > 快速回顾一下，类是一个定义。你有一个 `Person` 类，可能还会一个 `Car` 类或 `House` 类。类的实例是特定的内存块，其中持有一个对象的表示。在上一章中，当你创建 `brian` 或 `rose` 变量时，你分配了这些 `Person` 类的实例。
+
 获取一个类的许多实例是很容易的，定义许多不同的类也是如此。在这些情况下，如果你只使用单个文件，事情就会变得混乱。
 
 如果你把所有类都丢进一个文件，那个文件将变得一团糟。更好的做法是将每个类都分离到它们自己的文件中：每个类一个文件（通用做法），然后如果你有主函数，也给它一个单独的文件。
 
 ### 根据类名命名文件
 
-去创建一个新的 Kotlin 项目吧。你可以叫它任何名字；如果需要建议，`Kotlin_ch02` 就可以。然后，在 `src/` 文件夹中，创建一个名为 `Person` 的新文件。你的 IDE 可能会自动为你添加 `.kt` 扩展。然后，将你在第 1 章中现 `Person` 代码放进去。为了起起见，该代码在列表 2.1 中。
 
-列表 2.1：第 1 章的 Person 代码
+
+# 去创建一个新的 Kotlin 项目吧
+
+你可以叫它任何名字；如果需要建议，`Kotlin_ch02` 就可以。然后，在 `src/` 文件夹中，创建一个名为 `Person` 的新文件。你的 IDE 可能会自动为你添加 `.kt` 扩展。然后，将你在第 1 章中现有的 `Person` 代码放进去。为了起见，该代码在列表 2.1 中。
+
+## 列表 2.1：第 1 章的 Person 代码
 
 ```kotlin
 class Person(var firstName: String, var lastName: String) {
@@ -670,7 +556,7 @@ class Person(var firstName: String, var lastName: String) {
 
 现在在 `src/` 中也创建另一个文件，并命名为 `PersonApp`。你可以将现有的主函数放入其中。那段代码重新打印在列表 2.2 中。
 
-列表 2.2：测试 Person 类的主函数
+## 列表 2.2：测试 Person 类的主函数
 
 ```kotlin
 fun main() {
@@ -696,11 +582,11 @@ fun main() {
 
 图 2.1：你的 IDE 应该让你轻松获取源码以及输出。
 
-> 警告 如果你收到任何警告，最可能的元因是你没有将 `Person` 和 `PersonApp` 文件创建在同一个目录中。确保两个文件都在 `src/` 目录下并进行训练。
+> **警告** 如果你收到任何警告，最可能的原因是你没有将 `Person` 和 `PersonApp` 文件创建在同一个目录中。确保两个文件都在 `src/` 目录下并进行尝试。
 
 在此之后，你可以继续在 `src/` 目录中保留更多对象。但还有更好的方法！
 
-### 使用包（Packages）组织你的类
+### 使用包组织你的类
 
 虽然你将 `Person` 与测试主函数分开很棒，但你仍然没有真正解决原始问题：类的组织。如果将所有类都放在一个文件中很痛苦，那么推此类推，将所有类都放在一个目录中也是同样的痛苦。
 
@@ -717,13 +603,9 @@ Kotlin 以及许多其他语言都使用“包”的概念来组织这种结构�
 
 如果你使用 Kotlin 之外的其他语言，你可能还想将 `kotlin` 作为包名的一部分，以便将包与其他代码（如 Java）区分开来。
 
-将所有这些整合在一起，并用点（`.）分隔各个部分。对于本书，包通常会是 `org.wiley.kotlin.[general category]`。`Person` 将位于 `org.wiley.kotlin.person`，`User` 将位于 `org.wiley.kotlin.user`。
+将所有这些整合在一起，并用点（`.`）分隔各个部分。对于本书，包通常会是 `org.wiley.kotlin.[general category]`。`Person` 将位于 `org.wiley.kotlin.person`，`User` 将位于 `org.wiley.kotlin.user`。
 
-> 注意 你并不总是需要让包的最后部分（如 `person`）与该包中的类（如 `Person`）匹配。你可能有一个 `org.wiley.kotlin.sport` 包，包含各种与运动相关的类，如足球、棒球、冰球和排球，但并没有一个真正的 `Sport` 类。这完全取决于自己的喜好和风格。
-
-
-
-
+> **注意** 你并不总是需要让包的最后部分（如 `person`）与该包中的类（如 `Person`）匹配。你可能有一个 `org.wiley.kotlin.sport` 包，包含各种与运动相关的类，如足球、棒球、冰球和排球，但并没有一个真正的 `Sport` 类。这完全取决于自己的喜好和风格。
 
 ## Kotlin 拥有大量的类型
 
@@ -731,43 +613,39 @@ Kotlin 以及许多其他语言都使用“包”的概念来组织这种结构�
 
 ### 类：Kotlin 中的终极类型
 
-在介绍 Kotlin 类型之前——本章接下来的大部分时间将花在类型上——值得说，类（classes）确实是 Kotlin 中的终极类型。类为你提供了一种收集数据并统一方式处理这些数据的方法，并对世界进行建模：句子、汽车或人等对象，以及无线电波或设备等抽象概念。
+在介绍 Kotlin 类型之前——本章接下来的大部分时间将花在类型上——值得说，类确实是 Kotlin 中的终极类型。类为你提供了一种收集数据并统一方式处理这些数据的方法，并对世界进行建模：句子、汽车或人等对象，以及无线电波或设备等抽象概念。
 
-类还让你触及了 Kotlin 中至关重要的东西：**类型安全**（type safety）是指编程语言防止你犯错误的程度，例如将一种类型（如数字）赋值给本应持有字母的变量。没有什么比把一个变量当成全都是字母，却导致程序崩溃更让人沮丧了——因为发现该变量实际上包含一个 `Person` 实例（或 `Car`、`User` 或其他不像字母的东西）。
+类还让你触及了 Kotlin 中至关重要的东西：**类型安全**是指编程语言防止你犯错误的程度，例如将一种类型（如数字）赋值给本应持有字母的变量。没有什么比把一个变量当成全都是字母，却导致程序崩溃更让人沮丧了——因为发现该变量实际上包含一个 `Person` 实例（或 `Car`、`User` 或其他不像字母的东西）。
 
-这就是为什么类和对象对类型安全如此关重要的原因。你的 `Person` 现在是强类型的；你不能创建一个整数并将其显示为字符串。更具体地说，你不能创建一个 `Car` 并将其显示为 `Person`。随着章节的进行，你将看到更多关于这的内容。目前，只需将对象视为一种非常强大的方式，以确保变量（通过 `val` 或 `var`）恰好拥有你世界中所需的内容。
+这就是为什么类和对象对类型安全如此关键的原因。你的 `Person` 现在是强类型的；你不能创建一个整数并将其显示为字符串。更具体地说，你不能创建一个 `Car` 并将其显示为 `Person`。随着章节的进行，你将看到更多关于这的内容。目前，只需将对象视为一种非常强大的方式，以确保变量（通过 `val` 或 `var`）恰好拥有你世界中所需的内容。
 
-> 注意：如果你想知道 Kotlin 如何知道变量允许什么类型，请继续阅读。稍后后会有更详细的介绍。
-
-## Kotlin 拥有大量的类型
-
-与任何编程语言一样，Kotlin 支持许多基础类型。你可以定义整数（`Int`）、字母序列（`String`）、小数（`Float`）以及更多类型。让我们快速浏览一下这些基础类型并开始使用它们。
+> **注意** 如果你想知道 Kotlin 如何知道变量允许什么类型，请继续阅读。稍后会有更详细的介绍。
 
 ### Kotlin 中的数字
 
 Kotlin 为整数提供了四种选择，主要取决于范围。这些在表 2.1 所示。
 
-表 2.1：Kotlin 整数类型（非小数）
+**表 2.1：Kotlin 整数类型（非小数）**
 
 | 类型 | 尺寸（位） | 最小值 | 最大值 |
 |---|---|---|---|
 | Byte | 8 | -128 | 127 |
 | Short | 16 | -32,678 | 32,678 |
-| Int | 32 | -2,147,483,648 (-2³) | 2,147,483,647 (2³ – 1) |
+| Int | 32 | -2,147,483,648 (-2³¹) | 2,147,483,647 (2³¹ – 1) |
 | Long | 64 | -9,223,372,036,854,777,808 (-2⁶³) | 9,223,372,036,854,777,807 (2⁶³ – 1) |
 
 ## 第 2 章 很难“搞坏” Kotlin
 
-当你没有显式声明类型时，Kotlin 很大程度上会自动处理应该使用哪种类型。在这方面，它会在你为变量时查看值并做出一些假设。这是一个非常重要的概念，称为**类型推断**（type inference），我们将在第 6 章中详细讨论。
+当你没有显式声明类型时，Kotlin 很大程度上会自动处理应该使用哪种类型。在这方面，它会在你为变量赋值时查看值并做出一些假设。这是一个非常重要的概念，称为**类型推断**，我们将在第 6 章中详细讨论。
 
 如果你创建一个变量并为其赋值一个类型为 `Int` 的数字，那么将使用 `Int`。如果数字超出了 `Int` 的范围，它将被用作 `Long` 使用：
 
-```
+```kotlin
 val someInt = 20
 val tooBig = 4532145678
 ```
 
-所以在这里，`someInt` 将是一个 `Int`。`tooBig` 太大，无法放入 `Int`，因此它将是一个 `Long`。你也可以通过将值强制转换为 L 来强制变量为 `Long`：
+所以在这里，`someInt` 将是一个 `Int`。`tooBig` 太大，无法放入 `Int`，因此它将是一个 `Long`。你也可以通过将值强制转换为 `L` 来强制变量为 `Long`：
 
 ```kotlin
 val marketLong = 42L
@@ -775,7 +653,7 @@ val marketLong = 42L
 
 Kotlin 同样为小数提供了两个选择，同样基于精度和大小。这些列在表 2.2 中。
 
-表 2.2：Kotlin 小数类型
+**表 2.2：Kotlin 小数类型**
 
 | 类型 | 尺寸（位） | 有效位 | 指数位 | 小数位数 |
 |---|---|---|---|---|
@@ -784,7 +662,7 @@ Kotlin 同样为小数提供了两个选择，同样基于精度和大小。这�
 
 这里的赋值方式有点出乎意料。除非你告诉 Kotlin 使用 `f` 或 `F` 后缀作为 `Float`，否则小数变量都是 `Double`：
 
-```
+```kotlin
 val g = 9.8
 val theyAllFloat = 9.8F
 ```
@@ -793,39 +671,35 @@ val theyAllFloat = 9.8F
 
 如果你想表示单个字符——包括反斜杠或回车等特殊字符——你使用 `Char` 类型：
 
-```
+```kotlin
 val joker = 'j'
 ```
 
 字符应该包含在单引号中。你也可以将特殊字符包含在引号中并在字符代码前加上反斜杠。例如制表符是 `\t`，换行是 `\n`，反斜杠本身是 `\\`：
 
-```
+```kotlin
 val special = '\n'
 ```
 
-> 注意：反斜杠很特殊，因为它本身就是一个转义字符。要获得实际的反斜杠，你需要使用转义字符 (\) 然后另一个反斜杠 (\)，从而得到 `\\`。
+> **注意** 反斜杠很特殊，因为它本身就是一个转义字符。要获得实际的反斜杠，你需要使用转义字符 (`\`) 然后另一个反斜杠 (`\`)，从而得到 `\\`。
 
 对于字符序列，你可能想要 `String`。你可以创建一个包含双引号内文本的字符串：
 
-```
+```kotlin
 val letters = "abcde"
 ```
 
 非常简单！但注意，双引号中的单个字母是 `String`，而单引号中的单个字母是 `Char`。
 
-# 真相还是虚假（注：此部分为原文重复内容，已在逻辑上处理）
-
-# 类型不可互换（第 1/2 部分）（注：此部分为原文重复内容，已在逻辑上处理）
-
 ### 你必须初始化属性
 
-Kotlin 要求你初始化属性。如果你尝试编译 2.2 中的 Person 类，你会收到类似下面的错误：
+Kotlin 要求你初始化属性。如果你尝试编译列表 2.2 中的 `Person` 类，你会收到类似下面的错误：
 
-```
+```text
 Error: Property must be initialized
 ```
 
-让我们以后再处理。最简单的方法是更新 Person 类以要求所有内容：
+让我们以后再处理。最简单的方法是更新 `Person` 类以要求所有内容：
 
 ```kotlin
 package org.wiley.person
@@ -856,82 +730,70 @@ fun main() {
     // 创建另一个人
     val rose = Person("Rose", "Busnell", 56.8, 32, true)
     println(rose)
+
+    // 修改 Rose 的姓
+    rose.lastName = "Busnell-Truesby"
+    println(rose)
 }
-```
-
-
-
-
-
-### 列表 2.4（续）
-
-```
-println(rose)
-
-// 修改 Rose 的姓
-rose.lastName = "Busnell-Truesby"
-println(rose)
 ```
 
 你的运行结果与你预期的不符。你可能遇到了类似下面的错误：
 
-```
+```text
 Error:(5, 44) Kotlin: The floating-point literal does not conform to the expected type Float
 Error:(9, 43) Kotlin: The floating-point literal does not conform to the expected type Float
 ```
 
 这到底是什么意思？如果你找到那行（括号中的第一个数字）以及该行上的位置（位置 44），你就会发现错误发生的地方：
 
-```
+```kotlin
 val brian = Person("Brian", "Truesby", 68.2, 33, true)
 ```
 
-你为身高传递了一个小数数——这看起来似乎是正确的。这里是 Person 类中的构造函数：
+你为身高传递了一个小数数——这看起来似乎是正确的。这里是 `Person` 类中的构造函数：
 
-```
+```kotlin
 class Person(var firstName: String, var lastName: String,
 var height: Float, var age: Int, var hasPartner: Boolean) {
 ```
 
 那是怎么回事呢？问题在于 Kotlin 不会进行类型转换。实际上发生了几件事：
 
-- 1. 你给了 Kotlin 一个值 68.2。Kotlin 看到一个小数并自动使用了 Double 类型。这非常重要！只要没有给小数指定显式类型，Kotlin 就会使用 Double。
-- 2. 这个 Double 被传递到 Person 构造函数中。然而，Person 期望的是 Float。
-- 3. Kotlin 不会尝试在这两个类型之间进行转换——尽管在这种情况下，它们是兼容的！相反，Kotlin 强制要求强类型，并抛出错误。
+1. 你给了 Kotlin 一个值 `68.2`。Kotlin 看到一个小数并自动使用了 `Double` 类型。这非常重要！只要没有给小数指定显式类型，Kotlin 就会使用 `Double`。
+2. 这个 `Double` 被传递到 `Person` 构造函数中。然而，`Person` 期望的是 `Float`。
+3. Kotlin 不会尝试在这两个类型之间进行转换——尽管在这种情况下，它们是兼容的！相反，Kotlin 强制要求强类型，并抛出错误。
 
 ### 显式地告诉 Kotlin 使用什么类型
 
-你有两种方法来修复这个问题。简单的方法是告诉 Kotlin 你传递的值应该被视为 Float；你可以通过在数字后面加一个 F 来实现这一点：
+你有两种方法来修复这个问题。简单的方法是告诉 Kotlin 你传递的值应该被视为 `Float`；你可以通过在数字后面加一个 `F` 来实现这一点：
 
-```
+```kotlin
 val brian = Person("Brian", "Truesby", 68.2F, 33, true)
 println(brian)
-```
 
-```
 // 创建另一个人
 val rose = Person("Rose", "Busnell", 56.8F, 32, true)
 println(rose)
 ```
 
-在这种情况下，你向 Person 发了它想要的内容：一个 Float。这通过了类型检查，一切又正常了。
+在这种情况下，你向 `Person` 发了它想要的内容：一个 `Float`。这通过了类型检查，一切又正常了。
 
 ### 尝试预判类型将如何被使用
 
-虽然解决方案有效，但它有点不够优雅。这将要求 Person 类的每个用户——包括你自己——在小数后加 F，或者在传递给构造函数的变量中使用 Float 类型。而且正如你学到的，Kotlin 使用 Double 作为默认的小数类型。
+虽然解决方案有效，但它有点不够优雅。这将要求 `Person` 类的每个用户——包括你自己——在小数后加 `F`，或者在传递给构造函数的变量中使用 `Float` 类型。而且正如你学到的，Kotlin 使用 `Double` 作为默认的小数类型。
 
-更好的解决方案是意识到，如果 Kotlin 默认使用 Double，也许你也应该这样做。（至少，除非你有非常充分的理由不这样做）。所以，修改你的 Person 构造函数，让它接收大多数用户传递的内容——即来自输入类型数字的 Double：
+更好的解决方案是意识到，如果 Kotlin 默认使用 `Double`，也许你也应该这样做。（至少，除非你有非常充分的理由不这样做）。所以，修改你的 `Person` 构造函数，让它接收大多数用户传递的内容——即来自输入类型数字的 `Double`：
 
-```
+```kotlin
 class Person(var firstName: String, var lastName: String,
 var height: Double, var age: Int, hasPartner: Boolean) {
 ```
 
-简单！而且，因为你预判了用户将如何创建 Person 的新实例，你会让你那些友好的开发者同事感到非常困扰。
+简单！而且，因为你预判了用户将如何创建 `Person` 的新实例，你会让你那些友好的开发者同事感到非常满意。
 
-> 不要忘记删除 main 函数中两个数字的 F。如果你这样做，你将得到另一个错误——这次是因为尝试将 Float 传递给一个期望 Double 的构造函数。
+> **注意** 不要忘记删除 main 函数中两个数字的 `F`。如果你这样做，你将得到另一个错误——这次是因为尝试将 `Float` 传递给一个期望 `Double` 的构造函数。
 
-# 弄坏 Kotlin 是很容易的（某种程度上）
+## 弄坏 Kotlin 是很容易的（某种程度上）
 
 这一章的标题是“很难弄坏 Kotlin”，这听起来可能与你所看到的相反。你没费吹灰之力就成功让 Kotlin 抛出了大量错误，而且 Kotlin 在帮助你进行类型转换方面保持着相当强的抵抗。
 
@@ -939,17 +801,15 @@ var height: Double, var age: Int, hasPartner: Boolean) {
 
 换句话，这一章的标题可能叫“当 Kotlin 在生产环境中运行时很难弄坏，因为它会在你进入生产环境之前迫使你在类型上变得非常具体”。当然，这真的不是一个任何人能通过编辑和校对的标题，所以我们就用“很难弄坏 Kotlin”吧，并相信你知道这意味着什么。
 
-# 重写属性访问器和变变器
+## 重写属性访问器和变更器
 
-根据你对类型（特别是强类型）的了解，你终于准备好回到 Person 类中那个恼人的小细节了：如果你在 Person 构造函数之外设置姓，打印类实例时将是原始名称，而不是修改后的名称。作为复习，这里是相关的代码：
+根据你对类型（特别是强类型）的了解，你终于准备好回到 `Person` 类中那个恼人的小细节了：如果你在 `Person` 构造函数之外设置姓，打印类实例时将是原始名称，而不是修改后的名称。作为复习，这里是相关的代码：
 
-```
+```kotlin
 // 创建另一个人
 val rose = Person("Rose", "Busnell", 56.8, 32, true)
 print(rose)
-```
 
-```
 // 修改 Rose 的姓
 rose.lastName = "Busnell-Truesby"
 println(rose)
@@ -957,34 +817,36 @@ println(rose)
 
 结果是？这个：
 
-- Rose Bushnell
-- Rose Bush
+- Rose Busnell
+- Rose Busnell
 
 这里真正需要发生什么呢？嗯，每当姓（或者名）更新时，该实例所代表的人的全名都需要更新。这看起来足够了，对吧？
 
-噢，等一下，因为这很快就会变得相当复杂。你即将进入 Kotlin 中略显异常的重变器（mutators）和访问器（accessors）的世界。
+噢，等一下，因为这很快就会变得相当复杂。你即将进入 Kotlin 中略显异常的变更器和访问器的世界。
 
 ### 自定义设置器无法在构造函数中
 
-这真是一个绕口！但是，事实是：我们无法在构造函数中自定义访问器。你可能已经注意到“主构造函数”这个术语。
+这真是一个绕口令！但是，事实是：我们无法在主构造函数中自定义访问器。你可能已经注意到“主构造函数”这个术语。
 
-> 它是主构造函数中定义的。稍后你会看到 Kotlin 允许你定义多个构造函数。
+> **注意** 它是主构造函数中定义的。稍后你会看到 Kotlin 允许你定义多个构造函数。
 
 ### 将属性移出主构造函数
 
 你实际上发现了 Kotlin 中一种非常标准的做法。回想：
 
-```
+```kotlin
 class Person(firstName: String, lastName: String) {
 ```
 
 然后，你为每个添加了 `var` 关键字：
 
-```
+```kotlin
 class Person(var firstName: String, var lastName: String) {
 ```
 
-这使得 firstName 和 lastName 属性有了访问器和变变器。问题是，由于你现在的版本，这意味着这一行代码无法工作：
+
+
+这使得 `firstName` 和 `lastName` 属性有了访问器和变更器。问题是，由于你现在的版本，这意味着这一行代码无法工作：
 
 ```
 rose.lastName = "Bushnell-Truesby"
@@ -992,14 +854,14 @@ rose.lastName = "Bushnell-Truesby"
 
 所以这里出现了一个明显的冲突：
 
-- 如果属性声明在类的构造函数中，你就无法自定义访问器或变变器。
-- 如果属性没有在构造函数中声明且不在类的其他地方声明，你就不会获得自动访问器或变变器。
+- 如果属性声明在类的构造函数中，你就无法自定义访问器或变更器。
+- 如果属性没有在构造函数中声明且不在类的其他地方声明，你就不会获得自动访问器或变更器。
 
 ### 立即初始化属性
 
 现在，为了让这一切变得更复杂，你还遇到了另一条规则：
 
-为了记住它是如何显示的，在构造函数中定义所有属性，但这次你像处理 lastName 那样在构造函数下方定义：
+为了记住它是如何显示的，在构造函数中定义所有属性，但这次你像处理 `lastName` 那样在构造函数下方定义：
 
 ```kotlin
 class Person(firstName: String, lastName: String, height: Double, age: Int, hasPartner: Boolean) {
@@ -1027,8 +889,7 @@ Error:(9, 5) Kotlin: Property must be initialized or be abstract
 Error:(10, 5) Kotlin: Property must be initialized or be abstract
 ```
 
-这个问题在 firstName 上出现过，我们通过在代码的 init 块中设置该值解决了它。我们需要在这里做一些类似的操作：我们需要给每个属性赋值，赋值是
-被传入构造函数。因此，属性 `firstName` 应该被赋值为传入 `Person` 构造函数的输入 `firstName` 的值。
+这个问题在 `firstName` 上出现过，我们通过在代码的 `init` 块中设置该值解决了它。我们需要在这里做一些类似的操作：我们需要给每个属性赋值，赋值是被传入构造函数。因此，属性 `firstName` 应该被赋值为传入 `Person` 构造函数的输入 `firstName` 的值。
 
 > 注意：如果你觉得这个句子看起来很困惑，你并不孤单。这里有两个 `firstName` 信息在浮动：一个是传入构造函数的，另一个是属性名。这是一个我们很快就会解决的问题。
 
@@ -1036,7 +897,7 @@ Kotlin 为你提供了一种这种赋值的方法，但它看起来会有点奇�
 
 ### 列表 2.5：将构造函数信息赋值给属性
 
-```
+```kotlin
 package org.wiley.kotlin.person
 
 class Person(firstName: String, lastName: String, height: Double, age: Int, hasPartner: Boolean) {
@@ -1063,7 +924,7 @@ class Person(firstName: String, lastName: String, height: Double, age: Int, hasP
 var firstName: String = firstName
 ```
 
-声明了一个属性，并且它是可读可写的，因为使用了 `var`。（记住，如果你想让它成为一个只读属性，你应该使用 `val`。））该属性被赋予了一个名称——`firstName`——然后是一个类型，`String`。然后，为这个新属性赋了一个值。在这种情况下，该值就是传入构造函数 `firstName` 的任何值。
+声明了一个属性，并且它是可读可写的，因为使用了 `var`。（记住，如果你想让它成为一个只读属性，你应该使用 `val`。）该属性被赋予了一个名称——`firstName`——然后是一个类型，`String`。然后，为这个新属性赋了一个值。在这种情况下，该值就是传入构造函数 `firstName` 的任何值。
 
 你现在可以编译并运行代码了，它再次运行良好了！（尽管最后一个姓名的问题还需要解决。但你已经越来越接近了。）
 
@@ -1073,7 +934,7 @@ var firstName: String = firstName
 
 > 列表 2.6：明确属性名称和构造函数输入
 
-```
+```kotlin
 package org.wiley.kotlin.person
 
 class Person(_firstName: String, _lastName: String,
@@ -1098,13 +959,13 @@ class Person(_firstName: String, _lastName: String,
 
 > 注意：由于 Kotlin 是强类型的并且具有如此独特的功能——多个构造函数、属性与方法输入的区别等——使用这些编码最佳实践将有助于将你的代码与那些经验不足且精通的人的代码区分开。
 
-### 为某些属性重写修改器（Mutators）
+### 为某些属性重写修改器
 
 你现在已经准备好完成我们的目标了：重写更改名字或姓氏的方式。首先，你需要查看一个典型的修改器是如何定义的。
 
 这里是更多针对 Kotlin 的代码，定义了一个自定义的修改器；在这种情况下，它是针对 `firstName` 的：
 
-```
+```kotlin
 var firstName: String = _firstName
 set(value) {
     field = value
@@ -1119,7 +980,7 @@ set(value) {
 
 ```kotlin
 // Brian 的名字
-brian.firstName = "Bobby",
+brian.firstName = "Bobby"
 ```
 
 现在事情看起来可能有点奇怪了。这里有这一行：
@@ -1128,11 +989,11 @@ brian.firstName = "Bobby",
 field = value
 ```
 
-那里发生了什么？`field` 到底是什么？嗯，它是正在被修改的属性。它正在调用一个后台字段（backing field）。因此，这里 `field` 引用属性 `firstName` 的后台字段（因为该属性刚刚被定义）。该后台字段被赋值为传入修改器的值——在我们的示例中，就是字符串 "Bobby"。
+那里发生了什么？`field` 到底是什么？嗯，它是正在被修改的属性。它正在调用一个后台字段。因此，这里 `field` 引用属性 `firstName` 的后台字段（因为该属性刚刚被定义）。该后台字段被赋值为传入修改器的值——在我们的示例中，就是字符串 "Bobby"。
 
 最后一部分是你不能写出类似这样的代码：
 
-```
+```kotlin
 var firstName: String = _firstName
 set(value) {
     firstName = value
@@ -1145,7 +1006,7 @@ set(value) {
 firstName = value
 ```
 
-它将其解释为“运行修改 firstName 的代码”。但那段代码已经在运行中了。所以它调用了自己——这种概念被称为递归——然后那行代码再次运行。又一遍。又一遍。然后……你明白意思了。
+它将其解释为“运行修改 `firstName` 的代码”。但那段代码已经在运行中了。所以它调用了自己——这种概念被称为递归——然后那行代码再次运行。又一遍。又一遍。然后……你明白意思了。
 
 通过使用后台字段，你避免了这种递归，一切都运行得正常。去为 `firstName` 和 `lastName` 创建一个自定义修改器吧；完成后完成后应该像列表 2.7 那样。
 
@@ -1243,13 +1104,9 @@ Error:(5, 5) Kotlin: Property must be initialized or abstract
 
 现在，看起来是会发生这种情况，但 Kotlin 并没有像你那样完全遵循你的代码。虽然可以看出当 `init` 调用 `updateName()` 时，`fullName` 会获得一个值，但 Kotlin 只是看到 `init` 中没有对 `fullName` 进行赋值，因此抛出了错误。
 
-
-
-
-
 ### 为未初始化的属性分配占位值
 
-这里最修复方法其实非常……简单。你只需要在创建时分配一个空值，例如空字符串 ""，就可以绕过 Kotlin 对属性初始化的强制要求。只需将它添加到你的类中即可：
+这里最修复方法其实非常……简单。你只需要在创建时分配一个空值，例如空字符串 `""`，就可以绕过 Kotlin 对属性初始化的强制要求。只需将它添加到你的类中即可：
 
 ```kotlin
 class Person(firstName: String, lastName: String,
@@ -1284,9 +1141,9 @@ class Person(firstName: String, lastName: String,
 }
 ```
 
-移除对 "" 的赋值并添加 `lateinit`。现在，你的类可以再次编译了！没问题。
+移除对 `""` 的赋值并添加 `lateinit`。现在，你的类可以再次编译了！没问题。
 
-> 警告 `lateinit` 有一些相当局限性。它适用于 `var` 而不适用于 `val`，且属性不能在构造函数内部声明。你不能为用 `lateinit` 声明的属性创建自定义的访问器或修改器。所以它不是万能的。事实上，在这种情况下，它甚至算不上真正的修复。
+> 警告：`lateinit` 有一些相当局限性。它适用于 `var` 而不适用于 `val`，且属性不能在构造函数内部声明。你不能为用 `lateinit` 声明的属性创建自定义的访问器或修改器。所以它不是万能的。事实上，在这种情况下，它甚至算不上真正的修复。
 
 虽然这看起来解决了你的问题，但事实并非如此。你仍然面临着给 `fullName` 分配空字符串的问题：你建立了一个对在 `init` 中调用 `updateName()` 的沉默依赖。Kotlin 不再为你进行检查了，因为你说过：“我会处理的。”
 
@@ -1318,17 +1175,20 @@ fun combinedNames(): String {
 
 现在你需要进行清理：
 
-- 1. 从 `init` 中移除对 `updateName()` 的引用。
-- 2. 将函数的返回值。
-- 3. 完全移除 `init` 块。
-- 4. 在所有属性声明之后移动 `fullName` 属性的声明。
+1. 从 `init` 中移除对 `updateName()` 的引用。
+2. 将函数的返回值。
+3. 完全移除 `init` 块。
+4. 在所有属性声明之后移动 `fullName` 属性的声明。
 
-> 警告 不要错过最后一项！现在当你使用 `firstName` 和 `lastName` 的值时，属性声明的顺序很重要。你需要在 `fullName` 声明和 `combinedNames()` 执行之前获取 `firstName` 和 `lastName` 的值。你可以在示例 2.9 中看到这些内容。
+
+
+> **警告** 不要错过最后一项！现在当你使用 `firstName` 和 `lastName` 的值时，属性声明的顺序很重要。你需要在 `fullName` 声明和 `combinedNames()` 执行之前获取 `firstName` 和 `lastName` 的值。你可以在示例 2.9 中看到这些内容。
 
 ### 示例 2.9 获取 fullName 属性（部分）
 
 ```kotlin
 package org.wiley.kotlin.person
+
 class Person(_firstName: String, _lastName: String,
 _height: Double, _age: Int, _hasPartner: Boolean) {
 
@@ -1359,7 +1219,7 @@ _height: Double, _age: Int, _hasPartner: Boolean) {
 
 ### 有时你不需要属性
 
-难以置信的是，在这一切之后，如果 lastName 发生了，代码输出仍然是不正确的。这里有一个简单的修复方法是通过 `firstName` 和 `lastName` 的自定义修改器来更新 `fullName`：
+难以置信的是，在这一切之后，如果 `lastName` 发生了，代码输出仍然是不正确的。这里有一个简单的修复方法是通过 `firstName` 和 `lastName` 的自定义修改器来更新 `fullName`：
 
 ```kotlin
 var firstName: String = _firstName
@@ -1411,7 +1271,7 @@ class Person(firstName: String, lastName: String,
 }
 ```
 
-编译并运行 PersonApp，你应该在更新实例 lastName 之前之后得到正确的结果。
+编译并运行 `PersonApp`，你应该在更新实例 `lastName` 之前之后得到正确的结果。
 
 ### 类型安全改变一切
 
@@ -1419,25 +1279,20 @@ class Person(firstName: String, lastName: String,
 
 信不信，Kotlin 的类型安全还有很多内容：你将在未来的章节中学习。Kotlin 有一组关于值、空值检查以及空安全的特定规则：防止你的代码出现空指针异常。
 
-> 如果你不熟悉空指针，或者从未见过 `NullPointerException`（例如在 Java 中），请认为自己很幸运。如果你遇到过，它们是非常困难的 bug 的根源。Kotlin 试图在编码层增加一些额外工作，以避免那些讨厌且难以发现的 bug。这是一个权衡，但对 Kotlin 来说效果很好。
+> **注意** 如果你不熟悉空指针，或者从未见过 `NullPointerException`（例如在 Java 中），请认为自己很幸运。如果你遇到过，它们是非常困难的 bug 的根源。Kotlin 试图在编码层增加一些额外工作，以避免那些讨厌且难以发现的 bug。这是一个权衡，但对 Kotlin 来说效果很好。
 
 ### 写代码很少是线性的
 
 如果你退后一步，考虑你在过去两个章节中所做的事情，它既酷又可能令人困惑。酷的部分是，即使你以前从未写过一行 Kotlin，你也获得了一个功能良好的类，它使用了 Kotlin 的一些关键且相对独特的特性：对象、构造和重写类（稍后介绍），以及 Kotlin 对属性值的非寻常要求。
 
-
-
-
-
-# #3
-## Kotlin 极其优雅
+## 第 3 章 Kotlin 极其优雅
 
 本章包含哪些内容？
 
-- 每个类都有一个 equals() 和 hashCode() 方法
+- 每个类都有一个 `equals()` 和 `hashCode()` 方法
 - 不同类型的对象和对象实例之间的比较
-- 以有意义的方式重写 equals() 和 hashCode()
-- equals() 和 hashCode() 在比较操作中的重要性
+- 以有意义的方式重写 `equals()` 和 `hashCode()`
+- `equals()` 和 `hashCode()` 在比较操作中的重要性
 - 为什么类的基础知识至关重要
 
 ### 对象、类与 Kotlin
@@ -1448,21 +1303,21 @@ class Person(firstName: String, lastName: String,
 
 在本章中，你将更深入地研究类，并真正理解它们在 Kotlin 中“开箱即用”的特性，以及如何更有效地使用它们。其他几乎所有内容都将基于此，所以请花些时间，尽量不要跳过那些无聊的部分。
 
-> 注意：作家说出“无聊的部分”听起来可能很奇怪，但确实会有一些无聊的部分出现。Kotlin 中关于类的所有内容并不特别有趣，甚至不是全是事实。尽管如此，你必须掌握这些东西，才能知道如何最大化地利用类。所以……无聊吗？是的。有必要吗？也是。
+> **注意** 作家说出“无聊的部分”听起来可能很奇怪，但确实会有一些无聊的部分出现。Kotlin 中关于类的所有内容并不特别有趣，甚至不是全是事实。尽管如此，你必须掌握这些东西，才能知道如何最大化地利用类。所以……无聊吗？是的。有必要吗？也是。
 
 ### 所有类都需要一个 EQUALS(X) 方法
 
 你应该意识到的第一点是你已经用过的某个东西：Kotlin 中的每个类都预定义了一些方法。你在 `Person` 类中重写 `toString()` 时就已经看到了。
 
-> 注意：`toString` 和类似方法背后的原理远比在每个类中“存在”要得多。你将在第 5 章更深入地接触这些方法——它们实际上是继承自另一个类。目前，将它们认为是预定义方法是安全的。
+> **注意** `toString` 和类似方法背后的原理远比在每个类中“存在”要得多。你将在第 5 章更深入地接触这些方法——它们实际上是继承自另一个类。目前，将它们认为是预定义方法是安全的。
 
-类还“免费”附带另外两个方法：equals()` 和 `hashCode()`。你会发现自己经常地使用 `equals()`——就像 `toString()` 一样——但在典型的 Kotlin 程序中，很少使用 `hashCode()`。
+类还“免费”附带另外两个方法：`equals()` 和 `hashCode()`。你会发现自己经常地使用 `equals()`——就像 `toString()` 一样——但在典型的 Kotlin 程序中，很少使用 `hashCode()`。
 
 ### Equals(x) 用于比较两个对象
 
 `equals()` 的实际写法类似于 `equals(x)`，这表示它接收一个参数（由 `x` 表示）。该参数是另一个对象，而方法返回 `true` 或 `false`。`true` 表示对象本身（你调用的 `equals(x)` 的对象）与传入方法的对象是相同的。列表 3.1 显示了你如何对实例使用此方法。
 
-列表 3.1：使用 equals(x) 比较两个实例
+**列表 3.1：使用 equals(x) 比较两个实例**
 
 ```kotlin
 import org.kotlin.person.Person
@@ -1490,13 +1345,16 @@ fun main() {
 
 但正如你等会儿看到的，该方法的默认版本几乎不会按照你的预期。
 
-> 警告：花点时间意识到 `equals(x)` 比较的是类的两个实例，而不是两个实际的对象。通常情况下，如果两个对象不是同一个类的实例，它将始终返回 `false`。这种设计是有合理的：一个 `Person` 实例怎么可能被认为等于另一个呢？
+> **警告** 花点时间意识到 `equals(x)` 比较的是类的两个实例，而不是两个实际的对象。通常情况下，如果两个对象不是同一个类的实例，它将始终返回 `false`。这种设计是有合理的：一个 `Person` 实例怎么可能被认为等于另一个呢？
 
 如果你运行列表 3.1，你只会得到预期的结果：
 
 Brian
+
 Rose
+
 Rose
+
 Nope... not the person
 
 但存在一个问题。为了看到它的效果，请这样做：
@@ -1518,8 +1376,11 @@ if (second_brian.equals(brian)) {
 现在运行你的代码，输出可能不符合你的预期：
 
 Brian
+
 Rose
+
 Nope... not the person
+
 Nope... not the Brian
 
 到底是怎么回事？为什么两个属性相同的实例不相等？这涉及到 Kotlin `equals(x)` 的默认实现方式：`equals(x)` 默认评估的相等性是基于内存位置的。换句话说，`equals(x)` 不关心两个对象的值是否相同，它关心两个实例是否是同一个内存。为了看到这一点，添加更多代码：
@@ -1536,7 +1397,9 @@ if (copy_of_brian.equals(brian)) {
 这一次你会得到匹配：
 
 Nope... not the person
+
 It's the same Brian!
+
 Now it's the same Brian!
 
 现在，Brian 被认为等于 `copy_of_brian`，因为它们指向同一块内存。这与 `second_brian` 不同——后者是另一个内存块。
@@ -1547,7 +1410,7 @@ Now it's the same Brian!
 
 你的第一步是决定对于 `Person` 对象来说，相等意味着什么。这里简单的解决方案是使用名字和姓。
 
-> 警告：使用名字和姓并不是一个好主意，因为你可能有两个同名同姓的人。更好的主意可能是像社会安全码之类的。但为了这个示例的目的，让我们把名字和姓的组合视为唯一的。
+> **警告** 使用名字和姓并不是一个好主意，因为你可能有两个同名同姓的人。更好的主意可能是像社会安全码之类的。但为了这个示例的目的，让我们把名字和姓的组合视为唯一的。
 
 考虑到这一点，现在构建一个实用的 `equals(x)` 版本变得容易了。这里有一个开头：
 
@@ -1566,7 +1429,7 @@ override fun equals(other: Any?): Boolean {
 override fun equals(other: Any?): Boolean {
 ```
 
-> 注意：与 `Any?` 有关有很多非常有趣的事情，但稍等。
+> **注意** 与 `Any?` 有关有很多非常有趣的事情，但稍等。
 
 这个函数返回一个 `Boolean`，这就是那行长代码的作用：
 
@@ -1599,7 +1462,7 @@ if (firstName.equals(other.firstName)) {
 
 当然，程序员喜欢简洁，所以 `&&` 通常是是。
 
-> 警告：除了这长得多之外，它也没有没那么清晰易读。
+> **警告** 除了这长得多之外，它也没有没那么清晰易读。
 
 问题是这段代码无法编译。如果你尝试，会得到类似这样的错误：
 
@@ -1617,9 +1480,6 @@ override fun equals(other: Any?): Boolean {
 具体来说，问题是 `equals(x)` 接收一个 `Any?` 类型的实例。Kotlin 中的 `Any` 是基类，你现在可以理解为任何内容都可以传递给这个方法，Kotlin 会乐意地将其传递给你的 `equals(x)` 方法。
 
 在 `Person` 的情况下，Kotlin 通过这些错误在告诉你：“我不确定你得到的是一个 `Person` 实例，所以可能没有 `firstName` 和 `lastName` 属性。”这就是未解析引用（unresolved reference）出现的地方：Kotlin 无法确定这些引用是否存在。
-
-
-
 
 请再想一秒。那么，这段判断两个 `Person` 实例是否相等的代码如下：
 
@@ -1652,6 +1512,8 @@ else
 你需要的是一种方法来确保你处理的是 `Person` 的实例。如果不是，你就可以安全地返回 `false`。如果传入 `equals(x)` 的对象是 `Person` 实例，那么你的比较就能生效。
 
 Kotlin 为此提供了一个非常有用的关键字：`is`。你可以像这样使用 `is` 来检查某个特定实例是否是某种类型的对象：
+
+
 
 ```kotlin
 brian is Person // true
@@ -1754,10 +1616,15 @@ fun main() {
 这里的输出正如你所希望的：
 
 Brian Tresby
+
 Rose Bushnell
+
 Rose Bushnell-Truesby
+
 Nope... not the same person
+
 It's the same person
+
 Now it's the same person!
 
 恭喜！这一切你现在有了实用的比较。
@@ -1808,9 +1675,6 @@ override fun equals(other: Any?): Boolean {
 }
 ```
 
-
-
-
 ### 列表 3.5：更新测试类以允许 equals 结果与 hash code 结果对比
 
 ```kotlin
@@ -1859,33 +1723,42 @@ fun main() {
 编译并运行，你将得到类似下面的输出：
 
 Brian Truesby
+
 Rose Bushnell
+
 Rose Bushnell-Truesby
+
 Rose and Brian aren't the same
+
 Brian and Second Brian are the same!
+
 Brian and Copy of Brian are the same!
+
 Brian hashcode: 2083562754
+
 Rose hashcode: 1239731077
+
 Second hashcode: 557041912
+
 Copy of Brian hashcode: 2083562754
 
-这里出现了一个立即的问题：brian 实例和 second_brian 报告为相等，但它们的 hash code 并不匹配。而且可能还有另一个惊喜：brian 和 copy_of_brian 是相等的，且它们的 hash code 匹配。
+这里出现了一个立即的问题：`brian` 实例和 `second_brian` 报告为相等，但它们的 hash code 并不匹配。而且可能还有另一个惊喜：`brian` 和 `copy_of_brian` 是相等的，且它们的 hash code 匹配。
 
 ### 默认 Hash Code 基于内存位置
 
 问题在于，如果你不重写 `hashCode()`，它将返回一个基于调用该方法的对象实例内存位置的整数。
 
-在实践中，这意味着两个具有相同属性值的对象实例将不会具有相同的 hash code，因为这两个对象实例位于内存中不同的部分。这就是为什么 brian 和 second_brian 返回了不同的 hash code：它们是不同的内存块，因此是两个不同的 hash code（从而就产生了一个问题）。
+在实践中，这意味着两个具有相同属性值的对象实例将不会具有相同的 hash code，因为这两个对象实例位于内存中不同的部分。这就是为什么 `brian` 和 `second_brian` 返回了不同的 hash code：它们是不同的内存块，因此是两个不同的 hash code（从而就产生了一个问题）。
 
-另一方面，如果你有两个变量引用同一个对象，你将得到相同的代码。事实上，你并没有得到两个 hash code；你只是从同一个对象获取了同一个 hash code，只不过你只是调用了两次该方法。这就是为什么 brian 和 copy_of_brian 的 hash code 是相同的。
+另一方面，如果你有两个变量引用同一个对象，你将得到相同的代码。事实上，你并没有得到两个 hash code；你只是从同一个对象获取了同一个 hash code，只不过你只是调用了两次该方法。这就是为什么 `brian` 和 `copy_of_brian` 的 hash code 是相同的。
 
 > 不要太纠结于 `hashCode()` 默认实现的工作原理。只需要知道它使用了内存位置，并且每当你重写 `equals` 时，你就需要重写它就足够了。
 
-所以还有工作要做。相同的实例（如 brian 和 copy_of_brian）以及通过 `equals(x)` 报告为相等的实例（如 brian 和 second_brian）都应该返回相同的 hash code。
+所以还有工作要做。相同的实例（如 `brian` 和 `copy_of_brian`）以及通过 `equals(x)` 报告为相等的实例（如 `brian` 和 `second_brian`）都应该返回相同的 hash code。
 
 ### 通过 Hash Code 生成 Hash Code
 
-这听起来很困惑，但实际上是一条非常好的建议：你可以使用具有正常 `hashCode()` 方法的对象来构建你的 hash code。以 Person 为例；目前决定相等性的关键属性是 `firstName` 和 `lastName`。如果你不确定为什么，看看你是如何重写 `equals(x)` 的：
+这听起来很困惑，但实际上是一条非常好的建议：你可以使用具有正常 `hashCode()` 方法的对象来构建你的 hash code。以 `Person` 为例；目前决定相等性的关键属性是 `firstName` 和 `lastName`。如果你不确定为什么，看看你是如何重写 `equals(x)` 的：
 
 ```kotlin
 override fun equals(other: Any?): Boolean {
@@ -1898,7 +1771,7 @@ override fun equals(other: Any?): Boolean {
 }
 ```
 
-相等性基本上是由这两个属性控制的；因此，`hashCode()` 也应该是。更好，由于这些属性只是 String，你可以依赖它们拥有 `hashCode()` 方法，因为那是你所使用的 Kotlin 引擎的工作。
+相等性基本上是由这两个属性控制的；因此，`hashCode()` 也应该是。更好，由于这些属性只是 `String`，你可以依赖它们拥有 `hashCode()` 方法，因为那是你所使用的 Kotlin 引擎的工作。
 
 所以你可以像这样使用：
 
@@ -1911,19 +1784,21 @@ override fun hashCode(): Int {
 这段代码获取两个属性并使用它们的 hash code 之和来获取整个类的唯一值。编译并运行你的程序，并得到类似下方的输出：
 
 Brian hashcode: 680248194
+
 Rose hashcode: -153346291
+
 Second hashcode: 680248194
+
 Copy of Brian hashcode: 680248194
 
 > 注意 除了两个人的名字和姓氏相同之外，你还能想出这种实现有什么任何问题吗？有一个微妙但重要的问题，你以后需要回来修复。注意……（此处由于原文后续存在大量重复或乱码，已根据指令提取核心逻辑并翻译部分）。
 
-
-
-
 幸运的是，这里不需要做太多，原因有几点：
 
 - 你正在使用内置 `String` 类的 `hashCode()` 方法。通常可以认为 Kotlin 基础类型中的 `hashCode()` 实现经过了良好的优化，因此将其原样保留是安全的。
+
 - 你正在对 `Int` 进行乘法和加法。这是另一种高度优化的操作，不会消耗大量的 CPU 时间。
+
 - 最后，你正在将这些乘法的结果相加。加法的速度极快。
 
 所以，这个方法没问题。尽管如此，当你检查 `equals(x)` 时，务必记住也要检查 `hashCode(x)`。
@@ -1974,6 +1849,8 @@ Copy of Brian hashcode: 680248194
 
 ### 列表 4.1：CardViewActivity
 
+
+
 ```
 /*
  * Copyright (C) 2017 The Android Open Source Project
@@ -1986,7 +1863,7 @@ Copy of Brian hashcode: 680248194
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS。
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND.
  */
 
 package com.example.view
@@ -2012,15 +1889,11 @@ class CardViewActivity : Activity() {
 }
 ```
 
-
-
-
-
 ## 类可以为属性定义默认值
 
-查看列表 4.6，它包含了 Person 的当前版本。
+查看列表 4.6，它包含了 `Person` 的当前版本。
 
-列表 4.6：最新版本的 Person 可以可以工作，但并不灵活
+列表 4.6：最新版本的 `Person` 可以工作，但并不灵活
 
 ```kotlin
 package org.wiley.kotlin.person
@@ -2057,13 +1930,13 @@ class Person(firstName: String, lastName: String,
 }
 ```
 
-这个类确实可以完成工作，但它灵活吗？回答这个问题的方法是查看创建一个该类的新实例需要什么。对于 Person，回溯 Person-Test，你需要像这样一行代码：
+这个类确实可以完成工作，但它灵活吗？回答这个问题的方法是查看创建一个该类的新实例需要什么。对于 `Person`，回溯 `Person-Test`，你需要像这样一行代码：
 
 ```kotlin
 val brian = Person("Brian", "Truesby", 68.2, 33, true)
 ```
 
-这样好吗？嗯，它获取了 Person 所需的核心值。但它超出了这个范围——是否存在你可能没有 Person 体重的情况？而且在对象实例化构造时，真的有必要指定 Person 实例是否有伴侣吗？
+这样好吗？嗯，它获取了 `Person` 所需的核心值。但它超出了这个范围——是否存在你可能没有 `Person` 体重的情况？而且在对象实例化构造时，真的有必要指定 `Person` 实例是否有伴侣吗？
 
 这些例子说明该类并不灵活。它需要比总是能获得的信息更多。
 
@@ -2086,135 +1959,9 @@ Kotlin 现在允许你跳过任何带有默认值的项：一个人的身高、�
 val rose = Person("Rose", "Bushnell")
 ```
 
-在这个实例中，rose 变量将具有 0.0 的身高、0 的年龄，且没有伴侣。这显著地清理了代码。
+在这个实例中，`rose` 变量将具有 `0.0` 的身高、`0` 的年龄，且没有伴侣。这显著地清理了代码。
 
 ### Kotlin 影响按顺序排列的参数
-
-不过，这里有一些小插曲。假设你想创建一个只带名字的人——这在现在是可能的的。你不能简单地将该参数添加到构造函数中。换句话说，以下代码是非法的：
-
-```kotlin
-val rose = Person("Rose", "Bushnell", true)
-```
-
-`hasPartner` 属性是第 5 个，而不是第 3 个。如果你选择利用默认值，就不能跳过任何值。要指示伴侣，你需要该参数之前参数的值：
-
-```kotlin
-val rose = Person("Rose", "Bushnell", 0.0, true)
-```
-
-这行得通，但你丢失了一些灵活性。你仍然可以在实例创建后设置该属性：
-
-```kotlin
-val rose = Person("Rose", "Bushnell")
-rose.hasPartner = true
-```
-
-这可能是你的最佳选择。它不需要任何额外的代码。
-
-你可以继续按顺序指定参数值并省略默认值——只要它们在构造函数的末尾即可。如果你留下了人的名、姓和身高，但没有留出他们的年龄或伴侣状态，这在法律上是合规的：
-
-```kotlin
-val rose = Person("Rose", "Bushnell", 62.5)
-```
-
-### 按名称指定参数
-
-有一种绕过此限制的方法：你可以通过名称将参数传递到构造函数。这并不常用，但可以帮助你绕过顺序限制。你只需要提供类中定义的参数名称、一个等号和一个值即可：
-
-```kotlin
-val rose = Person("Rose", "Bushnell", hasPartner = true)
-```
-
-# 类可以为属性定义默认值 | 75
-
-Kotlin 会很乐意地传递提供给命名参数的值。事实上，你对所有需要的参数都可以这样做：
-
-```kotlin
-val rose = Person("Rose", lastName = "Bushnell",
-      hasPartner = true)
-```
-
-当然，这有点冗长，你很少看到这种语法。最大的缺点是它要求调用程序知道类中参数的名称。像 `firstName` 这样的参数名通常被选取是因为它们不会被调用程序看到。这不是一个巨大的问题，但值得考虑。
-
-### 更改参数顺序（如果需要）
-
-创建一个实例并为其分配所有额外属性是很容易的。但会有某些时候，你会发现自己经常在构造后设置同一个属性。例如，假设超过一半的时间，你想要一个具有名、姓和伴侣状态的实例。目前意味着你总是需要这样做：
-
-```kotlin
-val rose = Person("Rose", "Bushnell")
-rose.hasPartner = true
-```
-
-### 辅助构造函数提供了额外的选项
-
-假设 Person 允许传入额外的 Person 实例。所以你想这样构造一个 Person：
-
-```kotlin
-val rose = Person("Rose", "Bushnell", brian)
-```
-
-这里，rose 实例被创建，另一个 Person 实例 brian 也被传入了。为了这一点，你需要新的东西：辅助构造函数。
-
-### 辅助构造函数后出现
-
-这种情况的情况是，你不想只是添加另一个参数到构造函数；你实际上想传递完全不同的东西：另一个 Person 实例来表示构造实例的伴侣。
-
-这就是辅助构造函数的用处。你只需添加一个额外的构造函数，使用 `constructor` 关键字：
-
-```kotlin
-constructor(_firstName: String, _lastName: String,
-    _partner: Person) {
-    // 此处需要代码
-}
-```
-
-这个新构造函数仍然接收名姓，并增加了一个新参数，它必须是一个 Person 实例。现在，你会尝试编译这个，但你会立即得到一个错误：
-
-> Error:(14, 5) Kotlin: 需要主构造函数调用
-
-问题在于，Kotlin 要求所有的辅助构造函数（你可以有任意多个）调用主构造函数，例如：
-
-```kotlin
-constructor(_firstName: String, _lastName: String,
-    _partner: Person) :
-    this(_firstName, _lastName) {
-    // 此处需要代码
-}
-```
-
-这里发生的情况并不直观，除非你记得 `this` 指的是什么——这在之前简要提到过，所以如果你不记得也不要。`this` 是对类当前实例的引用。所以 `this(_firstName, _lastName)` 正在调用类的默认构造函数，并传入辅助构造函数接收到的值。
-
-[/content]
-```
-
-**抱歉，由于你提供的待翻译文本在后半部分出现了严重的逻辑重复和乱码（例如“Change the Order of Arguments”之后的内容极度混乱），我在翻译时根据 Kotlin 的语法逻辑进行了大量的修复和重组，以确保译文通顺且符合技术规范。**
-
-以下是针对你提供文本修正后的完整中文译文：
-
-[content]
-
-### 构造函数可以接受默认值
-
-为了让这更加灵活，你可以为非本质属性使用默认值。一个人实际上由几条核心数据定义；在这种情况下，是人的名和姓。其他细节确实有用，但不是必须的。
-
-默认值允许你为非本质属性提供值，如果未提供，则将使用这些值。
-
-```kotlin
-class Person(firstName: String, lastName: String,
-              height: Double = 0.0, age: Int = 0,
-              hasPartner: Boolean = false) {
-```
-
-Kotlin 现在允许你跳过任何带有默认值的项：一个人的身高、年龄，以及他们是否有伴侣。你现在可以创建：
-
-```kotlin
-// 另一个人
-val rose = Person("Rose", "Bushnell")
-```
-
-在这个实例中，rose 变量将具有 0.0 的身高、0 的年龄，且没有伴侣。这显著地清理了代码。
-
-# Kotlin 参数按顺序排列的影响
 
 不过，这里有一些小插曲。假设你想创建一个只带名字的人——这在现在是可能的。你不能简单地将该参数添加到构造函数中。换句话说，以下代码是非法的：
 
@@ -2251,8 +1998,6 @@ val rose = Person("Rose", "Bushnell", 62.5)
 val rose = Person("Rose", "Bushnell", hasPartner = true)
 ```
 
-# 类可以为属性定义默认值 | 75
-
 Kotlin 会很乐意地传递提供给命名参数的值。事实上，你对所有需要的参数都可以这样做：
 
 ```kotlin
@@ -2273,17 +2018,17 @@ rose.hasPartner = true
 
 ### 辅助构造函数提供了额外的选项
 
-假设 Person 允许传入额外的 Person 实例。所以你想这样构造一个 Person：
+假设 `Person` 允许传入额外的 `Person` 实例。所以你想这样构造一个 `Person`：
 
 ```kotlin
 val rose = Person("Rose", "Bushnell", brian)
 ```
 
-这里，rose 实例被创建，另一个 Person 实例 brian 也被传入了。为了这一点，你需要新的东西：辅助构造函数。
+这里，`rose` 实例被创建，另一个 `Person` 实例 `brian` 也被传入了。为了这一点，你需要新的东西：辅助构造函数。
 
 ### 辅助构造函数后出现
 
-这种情况的情况是，你不想只是添加另一个参数到构造函数；你实际上想传递完全不同的东西：另一个 Person 实例来表示构造实例的伴侣。
+这种情况的情况是，你不想只是添加另一个参数到构造函数；你实际上想传递完全不同的东西：另一个 `Person` 实例来表示构造实例的伴侣。
 
 这就是辅助构造函数的用处。你只需添加一个额外的构造函数，使用 `constructor` 关键字：
 
@@ -2294,7 +2039,7 @@ constructor(_firstName: String, _lastName: String,
 }
 ```
 
-这个新构造函数仍然接收名姓，并增加了一个新参数，它必须是一个 Person 实例。现在，你会尝试编译这个，但你会立即得到一个错误：
+这个新构造函数仍然接收名姓，并增加了一个新参数，它必须是一个 `Person` 实例。现在，你会尝试编译这个，但你会立即得到一个错误：
 
 > Error:(14, 5) Kotlin: 需要主构造函数调用
 
@@ -2308,10 +2053,7 @@ constructor(_firstName: String, _lastName: String,
 }
 ```
 
-这里发生的情况并不直观，除非你记得 `this` 指的是什么——这在之前简要提到过，所以如果你不记得也不要。`this` 是对类当前实例的引用。所以 `this(_firstName, _lastName)` 正在调用类的默认构造函数，并传入辅助构造函数接收到的值。
-
-
-
+这里发生的情况并不直观，除非你记得 `this` 指的是什么——这在之前简要提到过，所以如果你不记得也不要紧。`this` 是对类当前实例的引用。所以 `this(_firstName, _lastName)` 正在调用类的默认构造函数，并传入辅助构造函数接收到的值。
 
 所以这段代码实际上相当于类似以下的内容：
 
@@ -2338,27 +2080,30 @@ constructor(_firstName: String, _lastName: String,
 
 此时，你需要意识到你所有实例属性的值是什么。由于默认构造函数已经运行，并且只提供了名字和姓氏，因此年龄、身高和伴侣状态使用了默认值。例如，`hasPartner` 为 `false`。
 
-当然，这里存在一个问题，因为使用辅助构造函数传入一个新的 `Person` 实例意味着新这个人有一个伴侣。因此该属性可以重新分配一个正确的值：
+当然，这里存在一个问题，因为使用辅助构造函数传入一个新的 `Person` 实例意味着这个新人有一个伴侣。因此该属性可以重新分配一个正确的值：
 
-```
+```kotlin
 constructor(_firstName: String, _lastName: String,
     _partner: Person) :
     this(_firstName, _lastName) {
-hasPartner = true
-```
-
-现在，这变得有点复杂了：那个传入的 `Person` 实例该怎么办？你的直觉可能是这样做：
-
-```
-constructor(_firstName: String, _lastName: String,
-    _partner: Person) :
-    this(_firstName, _lastName) {
-hasPartner = true
-    partner = _partner
+    hasPartner = true
 }
 ```
 
-第 4 章 继承至关重要
+
+
+# 第 4 章 继承至关重要
+
+现在，这变得有点复杂了：那个传入的 `Person` 实例该怎么办？你的直觉可能是这样做：
+
+```kotlin
+constructor(_firstName: String, _lastName: String,
+    _partner: Person) :
+    this(_firstName, _lastName) {
+    hasPartner = true
+    partner = _partner
+}
+```
 
 这是合理的。存储实例是有帮助的。然后你需要在以下属性的下方创建属性本身：
 
@@ -2373,57 +2118,61 @@ var partner: Person
 
 列表 4.7 显示了 `Person` 的当前版本，以确保你跟上了。
 
-列表 4.7：Person 的当前版本（存在一些问题！）
+## 列表 4.7：Person 的当前版本（存在一些问题！）
 
 ```kotlin
 package org.wiley.kotlin.person
+
 class Person(firstName: String, lastName: String,
     hasPartner: Boolean = false,
     height: Double = 0.0, age: Int = 0) {
 
-var firstName: String = _firstName
-var lastName: String = _lastName
-var height: Double = _height
-var age: Int = _age
-var hasPartner: Boolean = _hasPartner
-var partner: Person
+    var firstName: String = _firstName
+    var lastName: String = _lastName
+    var height: Double = _height
+    var age: Int = _age
+    var hasPartner: Boolean = _hasPartner
+    var partner: Person
 
-constructor(firstName: String, lastName: String,
-    partner: Person) :
-    this(firstName, lastName) {
-    hasPartner = true
-    partner = partner
-}
+    constructor(firstName: String, lastName: String,
+        partner: Person) :
+        this(firstName, lastName) {
+        hasPartner = true
+        partner = partner
+    }
 
-fun fullName(): String {
-    return "$firstName $lastName"
-}
+    fun fullName(): String {
+        return "$firstName $lastName"
+    }
 
-override fun toString(): String {
-    return "fullName()"
-}
+    override fun toString(): String {
+        return "fullName()"
+    }
 
-override fun hashCode(): Int {
-    return (firstName.hashCode() * 28) + (lastName.hashCode() * 31)
-}
+    override fun hashCode(): Int {
+        return (firstName.hashCode() * 28) + (lastName.hashCode() * 31)
+    }
 
-override fun equals(other: Any?): Boolean {
-    if (other is Person) {
-        return (firstName == other.firstName) &&
-            (lastName == other.lastName)
-    } else {
-        return false
+    override fun equals(other: Any?): Boolean {
+        if (other is Person) {
+            return (firstName == other.firstName) &&
+                (lastName == other.lastName)
+        } else {
+            return false
+        }
     }
 }
 ```
 
 现在，为了检查是否有任何问题，构建或编译你的项目。你会得到一个与这些更改相关的错误：
 
+```text
 Error:(12, 5) Kotlin: Property must be initialized or be abstract
+```
 
 这意味着什么？嗯，你可以很快猜到涉及的属性是新添加的 `partner`。当你醒来时：你没有为该属性初始化值，而且它不是抽象的。目前，重点应该放在初始化上。
 
-> 注意：稍后我们会讨论更多关于抽象属性的内容，当我们深入研究继承和子类化时。目前，请考虑在 `partner` 属性方面，这并不是你想要的结果。
+> **注意**：稍后我们会讨论更多关于抽象属性的内容，当我们深入研究继承和子类化时。目前，请考虑在 `partner` 属性方面，这并不是你想要的结果。
 
 记住，在 Kotlin 中，在类中声明的属性必须显式地赋予值。这就是为什么我在主构造期间获取了所有属性并分配了它们：
 
@@ -2431,18 +2180,19 @@ Error:(12, 5) Kotlin: Property must be initialized or be abstract
 class Person(firstName: String, lastName: String,
     hasPartner: Boolean = false,
     height: Double = 0.0, age: Int = 0) {
-var firstName: String = _firstName
-var lastName: String = _lastName
-var height: Double = _height
-var age: Int = _age
-var hasPartner: Boolean = _hasPartner
+    var firstName: String = _firstName
+    var lastName: String = _lastName
+    var height: Double = _height
+    var age: Int = _age
+    var hasPartner: Boolean = _hasPartner
+}
 ```
 
 这也是为什么如果属性没有传递到带有定义值的构造函数，我们就必须给它们一个默认值。
 
 在这里，这并不是真实的情况。你不想接收一个伴侣实例，因为并不是每个 `Person` 实例都有一个。换句话说，这是一个你想接受 `null` 值的稀有情况。
 
-### 你可以给属性赋值 . . . 有时
+## 你可以给属性赋值……有时
 
 如果只需要对 `partner` 进行赋值，你可能会尝试这样做：
 
@@ -2457,215 +2207,25 @@ var partner: Person = null
 
 这看起来是可行的，但你会得到一个错误：
 
+```text
 Error:(12, 5) Kotlin: Property must be initialized or be abstract (and non-null type cannot be initialized with null)
+```
 
 所以辅助构造函数可以赋值赋值。
 
 当然，这里存在一个问题，因为使用辅助构造函数传入一个新的 `Person` 实例意味着新这个人有一个伴侣。因此该属性可以重新分配一个正确的值：
 
-```
+```kotlin
 constructor(_firstName: String, _lastName: String,
     _partner: Person) :
     this(_firstName, _lastName) {
-hasPartner = true
-```
-
-现在，这变得有点复杂了：那个传入的 `Person` 实例该怎么办？你的直觉可能是这样做：
-
-```
-constructor(_firstName: String, _lastName: String,
-    _partner: Person) :
-    this(_firstName, _lastName) {
-hasPartner = true
-    partner = _partner
-}
-```
-
-第 4 章 继承至关重要
-
-这是合理的。存储实例是有帮助的。然后你需要在以下属性的下方创建属性本身：
-
-```kotlin
-var firstName: String = _firstName
-var lastName: String = _lastName
-var height: Double = _height
-var age: Int = _age
-var hasPartner: Boolean = _hasPartner
-var partner: Person
-```
-
-列表 4.7 显示了 `Person` 的当前版本，以确保你跟上了。
-
-列表 4.7：Person 的当前版本（存在一些问题！）
-
-```kotlin
-package org.wiley.kotlin.person
-class Person(firstName: String, lastName: String,
-    hasPartner: Boolean = false,
-    height: Double = 0.0, age: Int = 0) {
-
-var firstName: String = _firstName
-var lastName: String = _lastName
-var height: Double = _height
-var age: Int = _age
-var hasPartner: Boolean = _hasPartner
-var partner: Person
-
-constructor(firstName: String, lastName: String,
-    partner: Person) :
-    this(firstName, lastName) {
     hasPartner = true
-    partner = partner
-}
-
-fun fullName(): String {
-    return "$firstName $lastName"
-}
-
-override fun toString(): String {
-    return "fullName()"
-}
-
-override fun hashCode(): Int {
-    return (firstName.hashCode() * 28) + (lastName.hashCode() * 31)
-}
-
-override fun equals(other: Any?): Boolean {
-    if (other is Person) {
-        return (firstName == other.firstName) &&
-            (lastName == other.lastName)
-    } else {
-        return false
-    }
 }
 ```
 
-现在，为了检查是否有任何问题，构建或编译你的项目。你会得到一个与这些更改相关的错误：
+## 辅助构造函数提供了额外的构造选项
 
-Error:(12, 5) Kotlin: Property must be initialized or be abstract
-
-这意味着什么？嗯，你可以很快猜到涉及的属性是新添加的 `partner`。当你醒来时：你没有为该属性初始化值，而且它不是抽象的。目前，重点应该放在初始化上。
-
-> 注意：稍后我们会讨论更多关于抽象属性的内容，当我们深入研究继承和子类化时。目前，请考虑在 `partner` 属性方面，这并不是你想要的结果。
-
-记住，在 Kotlin 中，在类中声明的属性必须显式地赋予值。这就是为什么我在主构造期间获取了所有属性并分配了它们：
-
-```kotlin
-class Person(firstName: String, lastName: String,
-    hasPartner: Boolean = false,
-    height: Double = 0.0, age: Int = 0) {
-var firstName: String = _firstName
-var lastName: String = _lastName
-var height: Double = _height
-var age: Int = _age
-var hasPartner: Boolean = _hasPartner
-```
-
-这也是为什么如果属性没有传递到带有定义值的构造函数，我们就必须给它们一个默认值。
-
-在这里，这并不是真实的情况。你不想接收一个伴侣实例，因为并不是每个 `Person` 实例都有一个。换句话说，这是一个你想接受 `null` 值的稀有情况。
-
-### 你可以给属性赋值 . . . 有时
-
-如果只需要对 `partner` 进行赋值，你可能会尝试这样做：
-
-```kotlin
-var firstName: String = _firstName
-var lastName: String = _lastName
-var height: Double = _height
-var age: Int = _age
-var hasPartner: Boolean = _hasPartner
-var partner: Person = null
-```
-
-这看起来是可行的，但你会得到一个错误：
-
-Error:(12, 5) Kotlin: Property must be initialized or be abstract (and non-null type cannot be initialized with null)
-
-所以辅助构造函数可以赋值赋值。
-
-当然，这里存在一个问题，因为使用辅助构造函数传入一个新的 `Person` 实例意味着新这个人有一个伴侣。因此该属性可以重新分配一个正确的值：
-
-```
-constructor(_firstName: String, _lastName: String,
-    _partner: Person) :
-    this(_firstName, _lastName) {
-hasPartner = true
-```
-
-现在，这变得有点复杂了：那个传入的 `Person` 实例该怎么办？你的直觉可能是这样做：
-
-```
-constructor(_firstName: String, _lastName: String,
-    _partner: Person) :
-    this(_firstName, _lastName) {
-hasPartner = true
-    partner = _partner
-}
-```
-
-第 4 章 继承至关重要
-
-这是合理的。存储实例是有帮助的。然后你需要在以下属性的下方创建属性本身：
-
-```kotlin
-var firstName: String = _firstName
-var lastName: String = _lastName
-var height: Double = _height
-var age: Int = _age
-var hasPartner: Boolean = _hasPartner
-var partner: Person
-```
-
-列表 4.7 显示了 `Person` 的当前版本，以确保你跟上了。
-
-列表 4.7：Person 的当前版本（存在一些问题！）
-
-```kotlin
-package org.wiley.kotlin.person
-class Person(firstName: String, lastName: String,
-    hasPartner: Boolean = false,
-    height: Double = 0.0, age: Int = 0) {
-
-var firstName: String = _firstName
-var lastName: String = _lastName
-var height: Double = _height
-var age: Int = _age
-var hasPartner: Boolean = _hasPartner
-var partner: Person
-
-constructor(firstName: String, lastName: String,
-    partner: Person) :
-    this(firstName, lastName) {
-    hasPartner = true
-    partner = partner
-}
-
-fun fullName(): String {
-    return "$firstName $lastName"
-}
-
-override fun toString(): String {
-    return "fullName()"
-}
-
-override fun hashCode(): Int {
-    return (firstName.hashCode() * 28) + (lastName.hashCode() * 31)
-}
-
-override fun equals(other: Any?): Boolean {
-    if (other is Person) {
-        return (firstName == other.firstName) &&
-            (lastName == other.lastName)
-    } else {
-        return false
-    }
-}
-```
-
-### 辅助构造函数提供了额外的构造选项
-
-你可以通过列表 4.9 测试这个，这是一个用于练习该构造函数的简化 PersonTest。
+你可以通过列表 4.9 测试这个，这是一个用于练习该构造函数的简化 `PersonTest`。
 
 ### 列表 4.9：测试 Person 的辅助构造函数
 
@@ -2682,9 +2242,9 @@ fun main() {
     println(rose)
 
     if (rose.hasPartner()) {
-        println("${rose 有伴侣: ${rose.partner}.")
+        println("${rose} 有伴侣: ${rose.partner}.")
     } else {
-        println("${rose 没有伴侣}.")
+        println("${rose} 没有伴侣.")
     }
 
     // 修改 Rose 的姓
@@ -2693,34 +2253,34 @@ fun main() {
 }
 ```
 
+
+
 运行它你将看到以下输出：
+
 Brian Truesby
 Rose Bushnell
 Rose Bushnell 有伴侣: Brian Truesby.
 Rose Bushnell-Truesby
 
-这正是我们需要的：辅助构造函数捕获了新 Person 实例的伴侣状态，以及对伴侣实例的引用。
+这正是我们需要的：辅助构造函数捕获了新 `Person` 实例的伴侣状态，以及对伴侣实例的引用。
 
 ### null 属性可能会导致问题
 
-意识到你做了什么，以及没有做什么很重要。这里是关于 null 与你在 Person 中工作的简要总结：
+意识到你做了什么，以及没有做什么很重要。这里是关于 `null` 与你在 `Person` 中工作的简要总结：
 
-字体 你不能为 Person 主构造函数中的任何值传递 `null`。
-- 你可以将属性属性赋值为 `null` 值。
-
-
-
-
-
-- 你不能将 null 值传递给 Person 的次要构造函数。
-- 你可以直接将 `partner` 属性设置为 null。
+- 你不能为 `Person` 主构造函数中的任何值传递 `null`。
+- 你可以将属性赋值为 `null` 值。
+- 你不能将 `null` 值传递给 `Person` 的次要构造函数。
+- 你可以直接将 `partner` 属性设置为 `null`。
 
 这实际上构成了一个有趣的事件组合。将 `PersonTest` 更新为如下所示：
 
 ```kotlin
 // Create another person
 val rose = Person("Rose", "Bushnell", brian)
+
 println(rose)
+
 rose.partner = null
 
 if (rose.hasPartner) {
@@ -2736,31 +2296,31 @@ Rose Bushnell has a partner: null.
 
 这是因为你允许 `partner` 直接被设置为 `null`，但没有更新 `hasPartner`。这必须被修复。
 
-> 遗憾的是，当你开始允许空值时，你会遇到这类问题。Kotlin 会非常努力防止你使用 null。但当你仍然要使用 null 时——在某些情况下这样做是合理的——你必须反复检查几次代码以确保是否存在此类问题。
+> 遗憾的是，当你开始允许空值时，你会遇到这类问题。Kotlin 会非常努力防止你使用 `null`。但当你仍然要使用 `null` 时——在某些情况下这样做是合理的——你必须反复检查几次代码以确保是否存在此类问题。
 
-## 使用自定义变变器处理依赖性值
+## 使用自定义变异器处理依赖性值
 
 问题在于，你现在有两个紧密相关的属性：`hasPartner` 和 `partner`。现在，这些值是相等的。你可以分别设置它们，事实上你可以将 `hasPartner` 传递给主构造函数，将 `partner` 传递给次要构造函数。
 
 这里有一些工作要做，而且这是常见的工作；你经常会发现一个类（或多个类）具有需要相互协作的依赖值。
 
-## 在自定义变变器中设置依赖值
+### 在自定义变异器中设置依赖值
 
-这是使用自定义变变器（如果你愿意，称为 setter）的完美案例。你在第 2 章就见过自定义变变器了，尽管你那里不需要。但在这里，你需要。
+这是使用自定义变异器（如果你愿意，称为 setter）的完美案例。你在第 2 章就见过自定义变异器了，尽管你那里不需要。但在这里，你需要。
 
-每当设置了 partner 时，`hasPartner` 属性也应该被设置。非常简单：
+每当设置了 `partner` 时，`hasPartner` 属性也应该被设置。非常简单：
 
 ```kotlin
 var partner: Person? = null
-set(value) {
-    field = value
-    hasPartner = true
-}
+    set(value) {
+        field = value
+        hasPartner = true
+    }
 ```
 
-## 使用自定义变变器处理依赖值
+### 使用自定义变异器处理依赖值
 
-> 注意：如果你对 `field` 和 `value` 的细节不清楚，请翻回第 2 章，那里详细介绍了如何覆盖默认变变器。重读该部分，然后再回来查看更多信息。
+> 注意：如果你对 `field` 和 `value` 的细节不清楚，请翻回第 2 章，那里详细介绍了如何覆盖默认变异器。重读该部分，然后再回来查看更多信息。
 
 这意味着像这样的代码：
 
@@ -2775,42 +2335,42 @@ rose.partner = brian
 rose.hasPartner = true
 ```
 
-这是是的；它确保了当 Person 实例拥有 partner 时，它们会被正确设置以报告 partner 的状态。但你现在还有一些仍需要清理的细微问题。
+这是好的；它确保了当 `Person` 实例拥有 `partner` 时，它们会被正确设置以报告 `partner` 的状态。但你现在还有一些仍需要清理的细微问题。
 
-## 所有属性赋值都使用属性的变变器
+### 所有属性赋值都使用属性的变异器
 
-看看 Person 目前的构造函数：
+看看 `Person` 目前的构造函数：
 
 ```kotlin
 constructor(_firstName: String, _lastName: String,
-  partner: Person) :
-  this(_firstName, _lastName) {
-  hasPartner = true
-  partner = _partner
+    partner: Person) :
+    this(_firstName, _lastName) {
+    hasPartner = true
+    partner = _partner
 }
 ```
 
-当你将 `_partner` 赋值给 `partner` 时，你可以认为这段代码被变变器“替换”了。所以这段代码实际上变成了这样：
+当你将 `_partner` 赋值给 `partner` 时，你可以认为这段代码被变异器“替换”了。所以这段代码实际上变成了这样：
 
 ```kotlin
 constructor(_firstName: String, _lastName: String,
-  partner: Person) :
-  this(_firstName, _lastName) {
-  hasPartner = true
-  // partner = _partner
-  // 展开为此：
-  partner = _partner // field = value
-  hasPartner = true
+    partner: Person) :
+    this(_firstName, _lastName) {
+    hasPartner = true
+    // partner = _partner
+    // 展开为此：
+    partner = _partner // field = value
+    hasPartner = true
 }
 ```
 
-在这里你发现什么有趣的地方了吗？你应该应该。`hasPartner` 实际上被设置了两次。你的自定义变变器现在处理了赋值，所以你可以从构造函数中移除它：
+在这里你发现什么有趣的地方了吗？你应该应该。`hasPartner` 实际上被设置了两次。你的自定义变异器现在处理了赋值，所以你可以从构造函数中移除它：
 
 ```kotlin
 constructor(_firstName: String, _lastName: String,
-  partner: Person) :
-  this(_firstName, _lastName) {
-  partner = _partner
+    partner: Person) :
+    this(_firstName, _lastName) {
+    partner = _partner
 }
 ```
 
@@ -2828,18 +2388,18 @@ var partner: Person? = null
 
 ```kotlin
 // Create another person
-val rose = Person("Rose"
+val rose = Person("Rose", "Bushnell", brian)
 ```
 
-将 `rose.partner` 设置为 `null` 是完全合赋值。现在运行这段代码，你将得到错误的输出：
+将 `rose.partner` 设置为 `null` 是完全合法赋值。现在运行这段代码，你将得到错误的输出：
 
 ```kotlin
 Rose Bushnell has a partner: null.
 ```
 
-这里发生了什么？嗯，你的 `partner` 变器在任何情况下都将 `hasPartner` 设置为 `true`。实际上应该检查传入的 partner（它可能是 null！）并决定关于如何设置 `hasPartner` 的检查。
+这里发生了什么？嗯，你的 `partner` 变异器在任何情况下都将 `hasPartner` 设置为 `true`。实际上应该检查传入的 `partner`（它可能是 `null`！）并决定关于如何设置 `hasPartner` 的检查。
 
-你可以在 Kotlin 中使用 `==` 运算符检查 null，如下：
+你可以在 Kotlin 中使用 `==` 运算符检查 `null`，如下：
 
 ```kotlin
 if (value == null) {
@@ -2855,21 +2415,21 @@ if (value != null) {
 }
 ```
 
-所以你现在重写 `partner` 的变器来检查 null，然后相应地设置 `hasPartner`：
+所以你现在重写 `partner` 的变异器来检查 `null`，然后相应地设置 `hasPartner`：
 
 ```kotlin
 var partner: Person? = null
-set(value) {
-    field = value
-    if (field == null) {
-        hasPartner = false
-    } else {
-        hasPartner = true
+    set(value) {
+        field = value
+        if (field == null) {
+            hasPartner = false
+        } else {
+            hasPartner = true
+        }
     }
-}
 ```
 
-这段代码完全可以运行。然而，在继续之前，你实际上可以让它更简单。在 Kotlin 中，每当你有一个表达式时，该表达式本身就会求值为布尔值：它要么是 true 或 false。
+这段代码完全可以运行。然而，在继续之前，你实际上可以让它更简单。在 Kotlin 中，每当你有一个表达式时，该表达式本身就会求值为布尔值：它要么是 `true` 或 `false`。
 
 所以以下表达式：
 
@@ -2877,21 +2437,21 @@ set(value) {
 field == null
 ```
 
-如果 `field` 为 null，它将返回 `true`，如果不是则返回 `false`。这几乎就是我们想要的。如果 `field`（在这种情况下代表 partner 属性）为 null，我们希望 `hasPartner` 为 `false`；如果 `field` 不为空，`hasPartner` 应该为 `true`。
+如果 `field` 为 `null`，它将返回 `true`，如果不是则返回 `false`。这几乎就是我们想要的。如果 `field`（在这种情况下代表 `partner` 属性）为 `null`，我们希望 `hasPartner` 为 `false`；如果 `field` 不为空，`hasPartner` 应该为 `true`。
 
 换句话说，`hasPartner` 应该设置为表达式的结果 `(field != null)`。现在对你的次要构造函数进行该修改：
 
 ```kotlin
 var partner: Person? = null
-set(value) {
-    field = value
-    hasPartner = (field != null)
-}
+    set(value) {
+        field = value
+        hasPartner = (field != null)
+    }
 ```
 
-为了确保你已经跟上了，4.10 显示了 Person 的最新版本。
+为了确保你已经跟上了，列表 4.10 显示了 `Person` 的最新版本。
 
-## 列表 4.10：带有更新构造函数和自定义变变器的 Person
+## 列表 4.10：带有更新构造函数和自定义变异器的 Person
 
 ```kotlin
 package org.wiley.kotlin.person
@@ -2906,10 +2466,10 @@ class Person(firstName: String, lastName: String,
     var age: Int = _age
     var hasPartner: Boolean = _hasPartner
     var partner: Person? = null
-    set(value) {
-        field = value
-        hasPartner = (field != null)
-    }
+        set(value) {
+            field = value
+            hasPartner = (field != null)
+        }
 
     constructor(firstName: String, lastName: String,
         partner: Person) {
@@ -2924,6 +2484,7 @@ class Person(firstName: String, lastName: String,
     override fun toString(): String {
         return fullName()
     }
+}
 ```
 
 ### 列表 4.10（续）
@@ -2943,7 +2504,7 @@ override fun equals(other: Any?): Boolean {
 }
 ```
 
-此时，你可以测试这段代码。尝试使用 `PersonTest` 添加一个带有 partner 的 person，移除该 person 并检查他们是否有 partner（使用 `hasPartner`）。添加一个新的 partner，或者一个 null partner。这些操作都应该正常工作，并且 `hasPartner` 应该反映该人的状态。
+此时，你可以测试这段代码。尝试使用 `PersonTest` 添加一个带有 `partner` 的 person，移除该 person 并检查他们是否有 `partner`（使用 `hasPartner`）。添加一个新的 `partner`，或者一个 `null` `partner`。这些操作都应该正常工作，并且 `hasPartner` 应该反映该人的状态。
 
 ### 限制依赖值的访问
 
@@ -2952,7 +2513,9 @@ override fun equals(other: Any?): Boolean {
 ```kotlin
 // Create another person
 val rose = Person("Rose", "Bushnell", brian)
+
 println(rose)
+
 rose.hasPartner = false
 
 if (rose.hasPartner) {
@@ -2962,9 +2525,9 @@ if (rose.hasPartner) {
 }
 ```
 
-这不是一件好事，因为它破坏了 partner 实例与 `hasPartner` 属性之间的连接。你已经在自定义变变器中修复了这一点，现在你需要确保没有人可以直接设置 `hasPartner` 的状态。它应该完全通过 partner 实例的存在或否来触发。
+这不是一件好事，因为它破坏了 `partner` 实例与 `hasPartner` 属性之间的连接。你已经在自定义变异器中修复了这一点，现在你需要确保没有人可以直接设置 `hasPartner` 的状态。它应该完全通过 `partner` 实例的存在或否来触发。
 
-幸运的是，Kotlin 让这一切变得简单。你只需要在你想要阻止的访问器（get）或变变器（set）之前添加 `private` 单词。在这种情况下，问题变变变器：
+幸运的是，Kotlin 让这一切变得简单。你只需要在你想要阻止的访问器（get）或变异器（set）之前添加 `private` 单词。在这种情况下，问题变异器：
 
 ```kotlin
 var hasPartner: Boolean = _hasPartner
@@ -2976,16 +2539,9 @@ var hasPartner: Boolean = _hasPartner
 ```kotlin
 // Create another person
 val rose = Person("Rose", "Bushnell", brian)
-```
 
-
-
-
-
-## 使用自定义变异器处理依赖值
-
-```
 println(rose)
+
 rose.hasPartner = false
 ```
 
@@ -3004,7 +2560,7 @@ is private in 'Person'
 
 以下是 `Person` 中方法的样式。请将其添加：
 
-```
+```kotlin
 fun hasPartner(): Boolean {
     return (partner != null)
 }
@@ -3012,7 +2568,7 @@ fun hasPartner(): Boolean {
 
 唯一的实际变化是你使用该方法的方式，以及现在没有的 `hasPartner` 属性变成了方法所需的尾随括号。所以你应该这样写：
 
-```
+```kotlin
 if (rose.hasPartner) {
     // do something
 }
@@ -3020,7 +2576,7 @@ if (rose.hasPartner) {
 
 现在你应该这样写：
 
-```
+```kotlin
 if (rose.hasPartner()) {
     // do something
 }
@@ -3030,73 +2586,60 @@ if (rose.hasPartner()) {
 
 > 列表 4.11：更新 `Person` 以拥有一个新方法 `hasPartner()`，并删除同名的属性
 
-```
+```kotlin
 package org.wiley.kotlin.person
+
 class Person(firstName: String, lastName: String,
-//hasPartner: Boolean = false,
+    // hasPartner: Boolean = false,
     height: Double = 0.0, _age: Int = 0) {
 
     var firstName: String = _firstName
     var lastName: String = _lastName
     var height: Double = _height
-```
+    var age: Int = _age
+    // var hasPartner: Boolean = _hasPartner
+    // private set
+    var partner: Person? = null
+    // set(value) {
+    //     // field = value
+    //     hasPartner = (field != null)
+    // }
+    // _partner = partner
+}
 
-# 列表 4.11 (继续)
-
-```
-var age: Int = _age
-//var hasPartner: Boolean = _hasPartner
-//  private set
-var partner: Person? = null
-//  set(value) {
-//    // field = value
-//    hasPartner = (field != null)
-//  }
-  _partner = partner
-```
-
-```
 constructor(firstName: String, lastName: String,
-_partner: Person) : 
-  this(firstName, lastName) {
-  partner = _partner
+    _partner: Person) :
+    this(firstName, lastName) {
+    partner = _partner
+}
+
+fun fullName(): String {
+    return "$firstName $lastName"
+}
+
+fun hasPartner(): Boolean {
+    return (partner != null)
+}
+
+override fun toString(): String {
+    return fullName()
+}
+
+override fun hashCode(): Int {
+    return (firstName.hashCode() * 28) + (lastName.hashCode() * 31)
+}
+
+override fun equals(other: Any?): Boolean {
+    if (other is Person) {
+        return (firstName == other.firstName) &&
+               (lastName == other.lastName)
+    } else {
+        return false
+    }
 }
 ```
 
-```
-fun fullName(): String
-  return "$firstName $lastName"
-}
-```
 
-```
-fun hasPartner(): Boolean
-  return (partner != null)
-}
-```
-
-```
-override fun toString(): String
-  return fullName()
-}
-```
-
-```
-override fun hashCode(): Int
-  return (firstName.hashCode() * 28) + (lastName.hashCode() * 31)
-}
-```
-
-```
-override fun equals(other: Any?): Boolean
-  if (other is Person) {
-    return (firstName == other.firstName) &&
-      (lastName == other.lastName)
-  } else {
-    return false
-  }
-}
-```
 
 同时注意，由于这个变化，`partner` 的自定义变异器也可以去掉了。最后，你可以从主构造函数中移除 `_hasPartner` 参数。代码更整洁！
 
@@ -3104,40 +2647,38 @@ override fun equals(other: Any?): Boolean
 
 现在你已经将所有的 `hasPartner` 调用更新为 `hasPartner()`，这里有一个小贴士：你实际上可以避免编写 `hasPartner()` 函数，你只需要创建一个具有相同自定义访问器（getter）的只读属性即可。在主构造函数之后定义的其他属性正下方添加此声明：
 
-```
+```kotlin
 val hasPartner: Boolean
-get() = (partner != null)
+    get() = (partner != null)
 ```
 
 你也可以完全删除 `hasPartner()` 代码。列表 4.12 显示了 `Person` 的完成版本。
 
 # 列表 4.12：从函数变回属性，但这次是只读属性
 
-```
+```kotlin
 package org.wiley.kotlin.person
+
 open class Person(_firstName: String, _lastName: String,
-_height: Double = 0.0, _age: Int = 0) {
+    _height: Double = 0.0, _age: Int = 0) {
 
     var firstName: String = _firstName
     var lastName: String = _lastName
     var height: Double = _height
     var age: Int = _age
-    var hasPartner: Boolean
-    get() = (partner != null)
+
+    val hasPartner: Boolean
+        get() = (partner != null)
 
     var partner: Person? = null
 
     constructor(_firstName: String, _lastName: String,
-                 this(_firstName, _lastName)) {
+        _partner: Person) : this(_firstName, _lastName) {
         partner = _partner
     }
 
     fun fullName(): String {
         return "$firstName $lastName"
-    }
-
-    fun hasPartner(): Boolean {
-        return (partner != null)
     }
 
     override fun toString(): String {
@@ -3165,13 +2706,13 @@ _height: Double = 0.0, _age: Int = 0) {
 
 > 注意：这和本书的其他部分一样，可能会有点烦人。首先，你添加了一个 `hasPartner` 属性。然后你将其更改为 `hasPartner()` 函数并添加了括号。现在，`hasPartner` 又变回了属性——只读——你需要移除刚刚添加的那些括号。
 
-由于这看起来有点像是在反复反复回，但这是在尝试演示开发是如何发生的：迭代地，修改一件事再修改另一件事，并进行有时看似被丢弃的工作。虽然直接给你提供这段代码的“最终”版本很容易，但让你走过这些步骤并看这个过程在实际开发中是如何运行的更有趣也更有效。
+由于这看起来有点像是在反复横跳，但这是在尝试演示开发是如何发生的：迭代地，修改一件事再修改另一件事，并进行有时看似被丢弃的工作。虽然直接给你提供这段代码的“最终”版本很容易，但让你走过这些步骤并看这个过程在实际开发中是如何运行的更有趣也更有效。
 
 最后，你可以回去清理 `PersonTest`，以移除任何对已更改构造函数的错误用法。列表 4.13 显示了测试类的示例。
 
 ### 列表 4.13：PersonTest 类有一个辅助函数并与更新后的 Person 类协作
 
-```
+```kotlin
 import org.wiley.kotlin.Person
 
 fun main() {
@@ -3197,40 +2738,31 @@ fun printPartnerStatus(person: Person) {
 }
 ```
 
-注意引入了一个新的辅助函数：`printPersonStatus()`。它提取了可能多次使用的代码并确保它只需要编写一次。这就是之前讨论过的 DRY 原则：不要重复（Don't Repeat Yourself）。
-
-
-
-
+注意引入了一个新的辅助函数：`printPartnerStatus()`。它提取了可能多次使用的代码并确保它只需要编写一次。这就是之前讨论过的 DRY 原则：不要重复（Don't Repeat Yourself）。
 
 ### 列表 4.14（续）
 
-- * *请查看许可证以了解该语言对许可权限和限制的具体规定。*
-/
+> 请查看许可证以了解该语言对许可权限和限制的具体规定。
 
 ```kotlin
 package kotlin
 
 public open class Any {
     public open fun equals(other: Any?): Boolean
-
     public open fun hashCode(): Int
-
     public fun toString(): String
 }
 ```
 
 这是 Kotlin 中所有类的基类。因此，`Person` 虽然你可能没有意识到，而且确实不需要做任何事情，也是 `Any` 的子类。
 
-这是一个将非特定类——`Any`——通过在 `Person` 中扩展它使其变得更具体的终示例。所有的 `Person` 实例都是 `Any` 实例，但所有的 `Any` 实例显然都不是 `Person` 实例。
+这是一个将非特定类——`Any`——通过在 `Person` 中扩展它使其变得更具体的终极示例。所有的 `Person` 实例都是 `Any` 实例，但所有的 `Any` 实例显然都不是 `Person` 实例。
 
-当你有一个基类时，任何方法定义中包含 `open` 关键字的泛都可以通过扩展并让子类来使用。看看 `Any` 中的三个方法：
+当你有一个基类时，任何方法定义中包含 `open` 关键字的方法都可以通过扩展并让子类来使用。看看 `Any` 中的三个方法：
 
-```
+```kotlin
 public open fun equals(other: Any?): Boolean
-
 public open fun hashCode(): Int
-
 public fun toString(): String
 ```
 
@@ -3238,7 +2770,7 @@ public fun toString(): String
 
 这三个方法都是可以重写的，而且当然，这正是在 `Person` 中所做的：
 
-```
+```kotlin
 override fun toString(): String { ... }
 override fun hashCode(): Int { ... }
 override fun equals(other: Any?): Boolean { ... }
@@ -3246,19 +2778,19 @@ override fun equals(other: Any?): Boolean { ... }
 
 所以这里存在一种配对：基类使用 `open`，而子类使用 `override`。
 
-# {...} 是被折叠代码的简写
+# `{...}` 是被折叠代码的简写
 
 有一种适用于本书，也适用于大多数 Kotlin IDE 以及与 Kotlin 在线社区交互的快速技巧，你有时会看到像这样的记法：
 
-```
-override fun hashCode(): Int { ... ... }
+```kotlin
+override fun hashCode(): Int { ... }
 ```
 
 这在早期引用 `Person` 中重写了 `Any` 中定义的三个方法时被使用。左括号和右括号加上三个点表示“这里有代码，但它被折叠（隐藏）了”。
 
 这并不是实际的语法。你不能将其输入编辑器并获得成功的编译结果。然而，它显示的代码（在线或打印）比方法的细节要短，而这些细节可能对正在讨论的内容并不重要。
 
-你还会在 IDEA 中看到这作为一个选项。图 4.1 显示了代码正常显示的 IntelliJ IDEA，而图 4.2 显示了部分折叠的代码。你可以通过点击定义代码块左侧的示例 + - 图标来回切换（参见图 4.3 的放大图）。
+你还会在 IDEA 中看到这作为一个选项。图 4.1 显示了代码正常显示的 IntelliJ IDEA，而图 4.2 显示了部分折叠的代码。你可以通过点击定义代码块左侧的示例 `+/-` 图标来回切换（参见图 4.3 的放大图）。
 
 ![](img/0c8d5d6c6d95ced628a954a187036113_122_0.png)
 
@@ -3268,10 +2800,9 @@ override fun hashCode(): Int { ... ... }
 
 ![](img/0c8d5d6c6d95ced628a954a187036113_123_0.png)
 
-```
+```kotlin
 constructor(_firstName: String, _lastName: String,
-    _parent: Person) :
-    this(_firstName, _lastName) {
+    _parent: Person) : this(_firstName, _lastName) {
     partner = _parent
 }
 
@@ -3288,49 +2819,49 @@ override fun hashCode(): Int {...}
 override fun equals(other: Any?): Boolean {...}
 ```
 
-图 4.2：你可以在 IDE 中将代码块折叠为 { ... }
+图 4.2：你可以在 IDE 中将代码块折叠为 `{ ... }`
 
 ![](img/0c8d5d6c6d95ced628a954a187036113_123_1.png)
 
-```
+```kotlin
 override fun toString(): String {...}
 override fun hashCode(): Int {...}
 override fun equals(other: Any?): Boolean {...}
 ```
 
-图 4.3：使用 + - 图标在展开和折叠之间切换
+图 4.3：使用 `+/-` 图标在展开和折叠之间切换
 
-# 类必须是 open 的 才能被子类
+# 类必须是 `open` 的才能被子类化
 
 你还应该注意到 `Any` 在顶层使用了 `open` 关键字：
 
-```
+```kotlin
 public open class Any { ... }
 ```
 
-这就是允许子类发生的机制。`Any` 是可以被子类的，然后使用 `open` 关键字的方法是可以被重写的。任何没有声明为 open 的都不能被子类或重写。
+这就是允许子类化发生的机制。`Any` 是可以被子类化的，然后使用 `open` 关键字的方法是可以被重写的。任何没有声明为 `open` 的类都不能被子类化或重写。
 
 要查看实际效果，请创建一个新类。将其命名为 `Parent`。这将是 `Person` 的一个特定子类，拥有一个或多个子类。列表 4.15 显示了这个新类非常简单的开始，同样位于 `org.wiley.person` 包中。
 
-列表 4.15：`Parent`，最终 `Person` 的子类
+### 列表 4.15：`Parent`，最终 `Person` 的子类
 
-```
+```kotlin
 package org.wiley.kotlin.person
 
 class Parent {
 }
 ```
 
-现在，要继承一个类，你只需在声明新类时附加一个冒号（:）并跟上基类的名称：
+现在，要继承一个类，你只需在声明新类时附加一个冒号（`:`）并跟上基类的名称：
 
-```
+```kotlin
 class Parent : Person {
 }
 ```
 
 去尝试编译吧，你会看到：
 
-```
+```text
 Error: Class 'Person' is final or not open and cannot be subclassed
 ```
 
@@ -3342,7 +2873,7 @@ open class Person(...) { ... }
 
 现在再次编译，你会看到：
 
-```
+```text
 Error: Method 'toString' is final or not open and cannot be overridden
 ```
 
@@ -3350,7 +2881,7 @@ Error: Method 'toString' is final or not open and cannot be overridden
 
 ```kotlin
 open class Person(...) {
-    open open fun toString(): String { ... }
+    open fun toString(): String { ... }
 }
 ```
 
@@ -3360,16 +2891,12 @@ open class Person(...) {
 
 在深入细节之前，值得花一点时间理解一些常见的术语，它们在讨论继承时经常出现：
 
-- 继承（Inheritance）：一个类从另一个类继承属性的方法。
-- 基类（Base class/Superclass）：被继承的类。`Any` 是所有类的基类。
-- 子类（Subclass）：继承自其他类的类。`Person` 是 `Any` 的子类。
-- 扩展（Extend）：有时子类被描述为扩展基类。
+- **继承**：一个类从另一个类继承属性的方法。
+- **基类/父类**：被继承的类。`Any` 是所有类的基类。
+- **子类**：继承自其他类的类。`Person` 是 `Any` 的子类。
+- **扩展**：有时子类被描述为扩展基类。
 
-你不需要一定记住这些这些，它们并不是 Kotlin 特有的，但适用于任何支持继承的语言。
-
-
-
-
+你不需要一定记住这些，它们并不是 Kotlin 特有的，但适用于任何支持继承的语言。
 
 # 你的子类应该不同于你的父类
 
@@ -3391,10 +2918,10 @@ open class Person(...) {
 
 ```kotlin
 class Parent(firstName: String, lastName: String,
-    height: Double = 0.0, age: Int = 0, child: Person):
+    height: Double = 0.0, age: Int = 0, child: Person) :
     Person(firstName, lastName, height, age) {
 
-    var child: Person = _child
+    var child: Person = child
 }
 ```
 
@@ -3407,7 +2934,7 @@ class Parent(firstName: String, lastName: String,
 还要注意 `child` *不是* 可空属性。它没有使用 `?` 操作符：
 
 ```kotlin
-var child: Person? = _child
+var child: Person? = child
 ```
 
 这是因为该属性对于 `Parent` 来说是本质的，并且永远不应该为空。
@@ -3417,12 +2944,12 @@ var child: Person? = _child
 在这个时候，你需要考虑一个重要的细节。现在，你的 `child` 属性是可变的，因为它被声明为 `var`：
 
 ```kotlin
-var child: Person? = _child
+var child: Person? = child
 ```
 
 但这样准确吗？你应该能够更换孩子吗？这并没有真正反映真实世界。列表 4.16 显示了一个更新后的测试类。
 
-列表 4.16：更新后的测试类
+### 列表 4.16：更新后的测试类
 
 ```kotlin
 import org.wiley.person.Person
@@ -3442,11 +2969,11 @@ fun main() {
     println(rose)
 
     // 创建一个父母
-    val mom = Parent("Cheryl", "Trueby", _child=brian)
+    val mom = Parent("Cheryl", "Trueby", child = brian)
     mom.child = rose
 }
 
-fun printPartnerStatus(person: Person) { .. }
+fun printPartnerStatus(person: Person) { ... }
 ```
 
 > 警告：别忘记在顶部添加新的导入语句以导入 `Parent` 类以及 `Person` 类。
@@ -3454,12 +2981,14 @@ fun printPartnerStatus(person: Person) { .. }
 这至少很奇怪。所以最好将 `child` 改为 `val`，使其变为不可变：
 
 ```kotlin
-val child: Person? = _child
+val child: Person? = child
 ```
+
+
 
 ## 有时对象并不完全对应现实世界
 
-在此时，值得说明的是编程（尤其是面向对象编程）的目标是与你的实用构造体所建模的现实世界对象对齐，但这并不总是成立的。
+此时，值得说明的是编程（尤其是面向对象编程）的目标是与你的实用构造体所建模的现实世界对象对齐，但这并不总是成立的。
 
 在这种情况下，通过构造函数设置孩子并永远不允许它更改可能并不是你想要的。这会让孩子值的赋值变得困难；你必须丢弃该 `Parent` 并创建一个新的。这变成了一个权衡问题而不是对错问题。你需要决定你的对象在代码中如何被使用，以及它们如何被其他人的代码使用。
 
@@ -3471,9 +3000,6 @@ val child: Person? = _child
 
 现在还有另一个现实世界的因素需要考虑：父母可以有多个孩子。事实上，你可以拥有四或五层继承，而最底层的子类从它所有父类获得所有内容，无论继承链“向上”延伸有多远。
 
-
-
-
 可能现在还没有完全理解，但核心要点是：这是 `Collection` 上的一个方法，它接收一个对象列表并返回一个 `MutableList`。`MutableList` 是 `MutableCollection` 的子类，而后者又继承自 `Collection`。
 
 理解这些事物之间的关系很有帮助，因此图 5.1 显示了从 `Collection` 开始的部分继承树。
@@ -3484,7 +3010,7 @@ val child: Person? = _child
 
 这里并不是所有相关的类（还有 `Iterable`、`MutableIterable` 以及 `Map` 和 `MutableMap`），但目前我们关注的是这些。请注意，可以改变的列表与不可变的列表属于完全不同的类（`MutableList` 相对于 `List`）。这是上一章讨论的原则的一个绝佳示例：基类更通用，而子类更具体。这就是你在实践中所看到的。
 
-> > 警告 图 5.1 中有很多内容可能让你觉得奇怪。最明显的是，有两个箭头指向 `MutableList` 和 `MutableSet`：一个来自每个 `MutableCollection`，另一个指向每个 `List` 或 `Set`。这是如何工作的？一个类可以有两个父类吗？这是一个好问题，你将在下一章中深入研究。
+> **警告** 图 5.1 中有很多内容可能让你觉得奇怪。最明显的是，有两个箭头指向 `MutableList` 和 `MutableSet`：一个来自每个 `MutableCollection`，另一个指向每个 `List` 或 `Set`。这是如何工作的？一个类可以有两个父类吗？这是一个好问题，你将在下一章中深入研究。
 
 当你调用 `mutableListOf()` 时，你是在调用 `Collection` 上的一个方法。它创建了一个 `MutableList`（具体来说是一个 `ArrayList`）并将其返回给你的代码。该方法基本上是列表的工厂（这就是“工厂模式”名称的由来处）。
 
@@ -3505,11 +3031,11 @@ val child: Person? = _child
 - `Collection` 中的工厂方法都是公共方法。
 - `Collections` 实际上只是类和方法的集合。
 
-每当你创建新的 Kotlin 代码时，Kotlin 都会自动导入许多包。其中一个包就是 `kotlin.collections`。这意味着该包中定义的所有内容（包括 `Collection`）都可以立即在程序中使用 much，而无需 import 语句。
+每当你创建新的 Kotlin 代码时，Kotlin 都会自动导入许多包。其中一个包就是 `kotlin.collections`。这意味着该包中定义的所有内容（包括 `Collection`）都可以立即在程序中使用，而无需 import 语句。
 
 其次，工厂方法都是公共的，如下所示：
 
-```
+```kotlin
 public fun <T> emptyList(): List<T> = EmptyList
 ```
 
@@ -3517,46 +3043,45 @@ public fun <T> emptyList(): List<T> = EmptyList
 
 第三，由 Kotlin 定义的 `Collection` 与 `Collections` 文件（实际源代码文件）之间存在区别。源码定义了一组方法——例如这些工厂方法——它们并不在类中。它们只是你的程序可用的方法。这就是为什么你不需要编写这样的代码：
 
-```
+```kotlin
 val rockBands = Collection.mutableListOf("The Black Crow", "Led Zeppelin", "The Beatles")
 ```
 
-> > > 注意 如果这让你有点困惑，那是正常的。`Collections` 代码和包涉及的内容更多关于 Kotlin 内部机制，而不是你现在需要知道的。只要你可以访问 `Collections` 文件中定义的方法，因为该文件位于自动导入的包中，方法是公共的，而且它们没有被定义为实际类的一部分。这就是你目前需要知道的所有内容。
+> **注意** 如果这让你有点困惑，那是正常的。`Collections` 代码和包涉及的内容更多关于 Kotlin 内部机制，而不是你现在需要知道的。只要你可以访问 `Collections` 文件中定义的方法，因为该文件位于自动导入的包中，方法是公共的，而且它们没有被定义为实际类的一部分。这就是你目前需要知道的所有内容。
 
 ### 修改可变列表
 
 回到你的乐队列表：
 
-```
-val rockBands = mutableListOf("The Black Crowes", "Led Zeppelin",
-"The Beatles")
+```kotlin
+val rockBands = mutableListOf("The Black Crowes", "Led Zeppelin", "The Beatles")
 ```
 
 你应该立即做之一是搞清楚你具体拥有什么。这并不是 Kotlin 集合所特有的，但你可以利用此提示更改 Kotlin 中变量的类型：
 
-```
-println(rockBands is a ${rockBands::class.simpleName})
+```kotlin
+println("rockBands is a ${rockBands::class.simpleName}")
 ```
 
 对于 `rockBands`，这将报告为 `ArrayList`，这是之前提到过的。`ArrayList` 是 `MutableList` 的简单实现。因为你的列表是可变的，你可以使用 `add()` 方法来添加它：
 
-```
+```kotlin
 rockBands.add("The Rolling Stones")
 println(rockBands)
 ```
 
-> > > > 注意 在大多数情况下，这些简单操作不会显示输出。`println()` 语句是为了提醒你你会自己检查这些操作执行了什么。尽管如此，如果输出特别令人惊讶或值得注意，仍然会显示。
+> **注意** 在大多数情况下，这些简单操作不会显示输出。`println()` 语句是为了提醒你你会自己检查这些操作执行了什么。尽管如此，如果输出特别令人惊讶或值得注意，仍然会显示。
 
 你也可以通过列表中的索引来删除项：
 
-```
+```kotlin
 rockBands.removeAt(2)
 println(rockBands)
 ```
 
 Kotlin 中的列表像大多数语言一样，是从 0 开始索引的。这意味着如果你有列表：
 
-```
+```text
 [The Black Crowes, Led Zeppelin, The Beatles, The Rolling Stones]
 ```
 
@@ -3566,18 +3091,14 @@ Kotlin 中的列表像大多数语言一样，是从 0 开始索引的。这意�
 
 你还想查看列表有多大并从中提取值。列表 5.2 显示了常用操作。
 
-列表 5.2：使用可变列表
+**列表 5.2：使用可变列表**
 
-```
+```kotlin
 fun main() {
-    val rockBands = mutableListOf("The Black Crowes", "Led Zeppelin",
-    "The Beatles")
-
+    val rockBands = mutableListOf("The Black Crowes", "Led Zeppelin", "The Beatles")
     println("rockBands is a ${rockBands::class.simpleName}")
-
     rockBands.add("The Rolling Stones")
     println(rockBands)
-
     rockBands.removeAt(2)
     println(rockBands)
 }
@@ -3585,25 +3106,23 @@ fun main() {
 
 这应该并不让人意外，特别是如果你用过其他语言的列表。
 
-> > > > 所有这些属性和方法都适用于 `MutableList`。记录一下，Kotlin 中的 `Array` 是静态大小的数组；它不能增长或缩小。那么 `ArrayList` 实际上是一个可调整大小的数组。
+> **注意** 所有这些属性和方法都适用于 `MutableList`。记录一下，Kotlin 中的 `Array` 是静态大小的数组；它不能增长或缩小。那么 `ArrayList` 实际上是一个可调整大小的数组。
 
 # 列表（和集合）是有类型的
 
 所以，你刚刚把一堆字符串丢进列表，Kotlin 乐意配合。你可以将不同类型的物体丢进列表：
 
-```
+```kotlin
 val mixedThings = mutableListOf("Electric Guitar", 42)
 println(mixedThings)
 ```
 
 这并没有太大意义，因为该列表并不好用。你无法遍历它（这是你很快就会经常做的事情）并处理每个对象，因为它们并不相同。在这种情况下，你不能对数字做你可以对字符串做的事，反之亦然。你很可能在每次从列表中取出东西时都必须检查它的类型，例如：
 
-```
+```kotlin
 val mixedThings = mutableListOf("Electric Guitar", 42)
 println(mixedThings)
-```
 
-```
 val item = mixedThings[0]
 if (item is String) {
     println("Value: ${item}")
@@ -3618,20 +3137,21 @@ if (item is String) {
 
 更好的主意是在创建列表时告诉 Kotlin 你允许在列表中使用的类型。列表 5.3 是 `PersonTest`（之前的章节）的修订版本，它使用了可变列表，并告诉 Kotlin 在其中可以包含 `Person` 实例。
 
-列表 5.3：创建类型列表
+**列表 5.3：创建类型列表**
 
-```
+```kotlin
 import org.wiley.kotlin.person.Person
 import org.wiley.kotlin.person.Parent
 
 fun main() {
     // 创建一个新人物
-    val brian = Person("Brian"
+    val brian = Person("Brian")
+}
 ```
 
 这段代码无法编译，因为 `main` 方法中的那一行尝试向该行添加一个 `Int (32)`。删除那一行后程序就能正常工作，并且你会得到如下的输出：
 
-```
+```text
 [Brian Trueby, Rose Bushnell-Truby]
 [Brian Truby, Rose Bushnell-Truby, Cheryl Truby]
 [Brian Truby, Rose Bushnell-Truby, Cheryl Truby, Brett McLaughlin]
@@ -3647,15 +3167,14 @@ fun main() {
 
 列表 5.4 引入了一个新的简单类 `Band`。它的限制非常糟糕（谁听过哪个乐队没有键盘手？主吉他手在哪儿？），但它是一个很有用的例子。
 
-> 列表 5.4：表示 Band 的简单新类
+**列表 5.4：表示 Band 的简单新类**
 
-```
+```kotlin
 package org.wiley.kotlin.music
 
 import org.wiley.kotlin.music.*
 
 class Band(name: String, singer: Person, _guitarist: Person, _drummer: Person, bassist: Person) {
-
     var name: String = _name
     var singer: Person = _singer
     var guitarist: Person = _guitarist
@@ -3668,96 +3187,106 @@ class Band(name: String, singer: Person, _guitarist: Person, _drummer: Person, b
 
 现在回到你的测试类，并更新代码以使用这个类，如列表 5.5 所示。
 
-> 列表 5.5：重构 CollectionTest 使用新的 Band 类
+**列表 5.5：重构 CollectionTest 使用新的 Band 类**
 
-```
+```kotlin
 import org.wiley.kotlin.music.*
 import org.wiley.kotlin.person.*
 
 fun main() {
-    val RockBands = mutableListOf<Band>(
+    val rockBands = mutableListOf<Band>(
+        Band(
+            "The Beatles",
+            singer = Person("John", "Lennon"),
+            guitarist = Person("George", "Harrison"),
+            bassist = Person("Paul", "McCartney"),
+            drummer = Person("Ringo", "Starr")
+        ),
+        Band(
+            "The Rolling Stones",
+            singer = Person("Mick", "Jagger"),
+            guitarist = Person("Keith", "Richards"),
+            bassist = Person("Ronnie", "Wood"),
+            drummer = Person("Charlie", "Watts")
+        ),
+        Band(
+            "The Black Crowes",
+            singer = Person("Chris", "Robinson"),
+            guitarist = Person("Rich", "Robinson"),
+            drummer = Person("Steve", "Gorman"),
+            bassist = Person("Johnny", "Colt")
+        )
+    )
+}
 ```
 
-```
-Band(
-    "The Beatles",
-    singer = Person("John", "Lennon"),
-    guitarist = Person("George", "Harrison"),
-    bassist = Person("Paul", "McCartney"),
-    drummer = Person("Ringo", "Starr"),
-,
-    "The Rolling Stones",
-    singer = Person("Mick", "Jagger"),
-    guitarist = Person("Keith", "Richards"),
-    bassist = Person("Ronnie", "Wood"),
-    drummer = Person("Charlie", "Watts"),
-,
-    "The Black Crowes",
-    singer = Person("Chris", "Robinson"),
-    guitarist = Person("Rich", "Robinson"),
-    drummer = Person("Steve", "Gorman"),
-    bassist = Person("Johnny", "Colt")
-)
-```
-
-> 注意：`Band` 构造函数的输入顺序在整个代码中通过命名参数进行了调整。顺序背后并没有真正的方法；这仅仅是因为乐队成员被放入了对象实例的构造函数中（老实说，这也取决于我记忆他们名字的顺序！）。
+> **注意** `Band` 构造函数的输入顺序在整个代码中通过命名参数进行了调整。顺序背后并没有真正的方法；这仅仅是因为乐队成员被放入了对象实例的构造函数中（老实说，这也取决于我记忆他们名字的顺序！）。
 
 这看起来可能稍有不同，但在现阶段并没有什么新鲜。`rockBands` 被定义为 `Band` 对象的列表，每个 `Band` 都是内联创建的，成员在 `Band` 构造函数内部作为 `Person` 实例创建。
 
 现在你可以对 `rockBands` 执行所有你以前对持有字符串时做过的事情：
 
-```
+```kotlin
 print(rockBands)
 print("rockBands is a ${rockBands::class.className}")
 print("There are ${rockBands.size} bands in the list.")
+
 rockBands.add(
-    "The Black Keys",
-    singer = Person("Dan", "Auerbach"),
-    guitarist = Person("Steve", "Marion"),
-    drummer = Person("Patrick", "Carney"),
-    bassist = Person("Richard", "Swift")
+    Band(
+        "The Black Keys",
+        singer = Person("Dan", "Auerbach"),
+        guitarist = Person("Steve", "Marion"),
+        drummer = Person("Patrick", "Carney"),
+        bassist = Person("Richard", "Swift")
+    )
 )
-```
 
-```
-println("Now there are ${rockBands} bands in the list.")
-```
-
-```
+println("Now there are ${rockBands.size} bands in the list.")
 println("The second band is ${rockBands[1]}")
 ```
 
 输出有些平平无奇，但是：
 
-> [org.wiley.kotlin.music.Band@281bcfa, org.wiley.kotlin.music.Band@2ac5fe3, org.wiley.kotlin.music.Band@506e6d5e6] rockBands is an ArrayList 列表中有 3 个乐队。现在列表中有 4 个乐队。第二个乐队是 Rolling Stones
+```text
+[org.wiley.kotlin.music.Band@281bcfa, org.wiley.kotlin.music.Band@2ac5fe3, org.wiley.kotlin.music.Band@506e6d5e6]
+rockBands is an ArrayList
+列表中有 3 个乐队。
+现在列表中有 4 个乐队。
+第二个乐队是 Rolling Stones
+```
 
 问题在于，即使为了这些简单的测试目的，`Band` 也没有实用的 `toString` 方法。你可以通过 `Band` 中非常简单的实现来修复它：
 
-```
+```kotlin
 override fun toString(): String {
-  return name
+    return name
 }
 ```
 
 重新运行测试，你会得到一些输出：
 
-[The Beatles, The Rolling Stones, The Black Keys] rockBands is an ArrayList
+```text
+[The Beatles, The Rolling Stones, The Black Keys]
+rockBands is an ArrayList
+```
 
 现在你需要遍历一个列表。处理此列表最简单的方法是从列表本身获取迭代器，这非常有意义；返回的是一个知道如何移动列表的对象（`Iterator` 的子类）。你可以使用 `while` 循环（你在其他语言中见过）来使用这个迭代器：
 
 ```kotlin
 val bandsIterator = rockBands.iterator()
 while (bandsIterator.hasNext()) {
-  var band = bandsIterator.next()
-  // do something with the next
+    val band = bandsIterator.next()
+    // do something with the next
 }
 ```
 
 只要 `hasNext()` 为 `true`，列表中就有另一个乐队。你可以通过 `next()` 获取该乐队——因为 Kotlin 的强类型——你知道它是一个 `Band` 实例。然后你可以根据需要打印（或任何其他内容）它：
 
+```kotlin
+val bands = mutableListOf<Band>()
 ```
-val bands = mutableListOf<Band>
-```
+
+
 
 # Kotlin 尝试理解你的意图
 
@@ -3765,7 +3294,8 @@ val bands = mutableListOf<Band>
 
 此外，还有一种获取迭代器然后使用 `while` 循环的快捷方法。相反，你可以使用 `for` 循环和 `in` 关键字，如下：
 
-```for (band in rockBands) {
+```kotlin
+for (band in rockBands) {
   println("The lead singer for ${band.name} is ${band.singer}")
 }
 ```
@@ -3791,7 +3321,7 @@ println("The third band is ${rockBands.get(2)}")
 
 你也可以获取列表中的第一个或最后一个项目：
 
-```
+```kotlin
 println("The first band is ${rockBands.first()}")
 println("The second band is ${rockBands[1]}")
 println("The last band is ${rockBands.last()}")
@@ -3799,17 +3329,13 @@ println("The last band is ${rockBands.last()}")
 
 这些方法均不适用于无序集合。你还可以洗乱列表项目：
 
-```
+```kotlin
 println("The first band is ${rockBands.first()}")
 println("The second band is ${rockBands[1]}")
 println("The last band is ${rockBands.last()}")
-```
 
-```
 rockBands.shuffle()
-```
 
-```
 println("The first band (post shuffle) is ${rockBands.first()}")
 println("The second band (post shuffle) is ${rockBands[1]}")
 println("The last band (post shuffle) is ${rockBands.last()}")
@@ -3818,34 +3344,27 @@ println("The last band (post shuffle) is ${rockBands.last()}")
 输出反映了洗牌的结果：
 
 > The first band is The Beatles
-The second band is The Rolling Stones
-The last band is The Black Keys
-[/content]
+> The second band is The Rolling Stones
+> The last band is The Black Keys
 
-[content]
 # 列表可以包含重复项目
 
 你也可以多次向列表添加同一个项目。这里有一个显而易见的例子：
 
-```
+```kotlin
 var kinks = Band("The Kinks",
       singer = Person("Ray", "Davies"),
       guitarist = Person("Dave", "Davies"),
       drummer = Person("Mick", "Avory"),
       bassist = Person("Pete", "Quaife")
 )
-```
 
-```
 rockBands.add(kinks)
 rockBands.add(kinks)
 rockBands.add(1, kinks)
 ```
 
-
-
-
-# 集合：无序且唯一 | 113
+# 集合：无序且唯一
 
 现在，你的列表中关于 The Kinks 的乐队包含了三个不同的元素：
 
@@ -3880,9 +3399,9 @@ var singularBands = rockBands.distinct()
 
 在这种情况下，你拥有 `rockBands`（它可能包含重复项）和 `singularBands`（它绝对不会有任何重复项）。
 
-> 注意 你仍然可以对列表做很多事情。事实上，在触及它的极限之前，你还可以再读 20 或 30 页内容：过滤、排序、根据特定属性选择唯一性等。这已经足够你很好地实际使用列表了，随着更多需求的出现，你可以轻松地扩展你的列表和集合工具箱。
+> 注意：你仍然可以对列表做很多事情。事实上，在触及它的极限之前，你还可以再读 20 或 30 页内容：过滤、排序、根据特定属性选择唯一性等。这已经足够你很好地实际使用列表了，随着更多需求的出现，你可以轻松地扩展你的列表和集合工具箱。
 
-### 集合：无序且唯一
+## 集合：无序且唯一
 
 你已经了解了许多关于集合你需要的知识。和列表一样，它们继承自 `Collection`，并且像列表一样，它们可以是可变的或只读的。它们也经常被迭代，这是你刚刚学会的这种方法。
 
@@ -3892,7 +3411,7 @@ var singularBands = rockBands.distinct()
 
 是的，你现在已经多次听到集合不保持顺序了。它们*可能*保持。换句话说，集合并没有说“你的排序是随机的”。集合仅仅是说：“不作保证。我们可以对元素的顺序做任何我们想做的事。”
 
-例如，Kotlin 通常会默认为你提供一个 `LinkedHashSet` 
+例如，Kotlin 通常会默认为你提供一个 `LinkedHashSet`：
 
 ```kotlin
 val bandSet = setOf<Band>(rockBands[0], rockBands[1],
@@ -3908,7 +3427,7 @@ LinkedHashSet
 [The Beatles, The Kinks, The Rolling Stones, The Black Crowes]
 ```
 
-> 注意 *你可能会以不同的顺序看到这些项目。不用担心这个；这不是指示某种错误的问题。*
+> 注意：*你可能会以不同的顺序看到这些项目。不用担心这个；这不是指示某种错误的问题。*
 
 `LinkedHashSet` 恰好使用了元素添加的顺序。因此，如果你将它的前四个元素与 `rockBands` 的前四个元素进行比较，你会发现它们是匹配的。
 
@@ -3936,30 +3455,26 @@ HashSet
 
 鉴于不排序项的集合和列表，你为什么要使用一个而不是另一个？嗯，值得注意的是，不排序的集合在检查某项是否存在于该集合中时通常更快。
 
-> 警告 请注意，不维护顺序的集合与实际上不维护顺序的集合之间存在区别。默认是 `LinkedHashSet`，它不维护顺序但实际上仍然维护了。这意味着在这些方面，它不会比列表快得多。如果你主要为了速度而使用集合，请通过 `hashOf()` 使用 `HashSet` 以确保你获得的是一个无序集合。
+> 警告：请注意，不维护顺序的集合与实际上不维护顺序的集合之间存在区别。默认是 `LinkedHashSet`，它不维护顺序但实际上仍然维护了。这意味着在这些方面，它不会比列表快得多。如果你主要为了速度而使用集合，请通过 `hashOf()` 使用 `HashSet` 以确保你获得的是一个无序集合。
 
 这主要与集合中哈希值的使用（因此是 `HashSet`）有关。这意味着你已经承诺顺序是不重要的，而这并不总是显而易见的。这将取决于你正在建模什么以及如何使用该集合。
 
 例如，考虑摇滚乐队列表。如果你只是收集乐队列表，你真的不需要排序。
 
-
-
-
-
-# 集合：无序唯一 | 11
+# 集合：无序唯一
 
 ```kotlin
 var bandTwo = Band(
   rockBands[0].name,
   _singer = Person(rockBands[0].singer.firstName,
-  rockBands[0].singer.lastName,
+  rockBands[0].singer.lastName),
   _guitarist = Person(rockBands[0].guitarist.firstName,
-  rockBands[0].guitarist.lastName,
+  rockBands[0].guitarist.lastName),
   _bassist = Person(rockBands[0].bassist.firstName,
-  rockBands[0].bassist.lastName,
+  rockBands[0].bassist.lastName),
   _drummer = Person(rockBands[0].drummer.firstName,
   rockBands[0].drummer.lastName)
-);
+)
 
 // 如果集合中不在该乐队，则添加该乐队
 if (bandSet.contains(bandTwo)) {
@@ -3973,17 +3488,17 @@ if (bandSet.contains(bandTwo)) {
 
 > 注意：就像之前的乐队顺序一样，你在这里可能会看到不同的乐队。在之前，这并不是一个问题。
 
-但随后，创建了另一个 Band 实例，并提供了乐队每个成员的名称和每个独立实例数据：
+但随后，创建了另一个 `Band` 实例，并提供了乐队每个成员的名称和每个独立实例数据：
 
 ```kotlin
 var bandTwo = Band(
   rockBands[0].name,
   _singer = Person(rockBands[0].singer.firstName,
-  rockBands[0].singer.lastName,
+  rockBands[0].singer.lastName),
   _guitarist = Person(rockBands[0].guitarist.firstName,
-  rockBands[0].guitarist.lastName,
+  rockBands[0].guitarist.lastName),
   _bassist = Person(rockBands[0].bassist.firstName,
-  rockBands[0].bassist.lastName,
+  rockBands[0].bassist.lastName),
   _drummer = Person(rockBands[0].drummer.firstName,
   rockBands[0].drummer.lastName)
 )
@@ -4030,7 +3545,7 @@ class Band(name: String, _singer: Person, _guitarist: Person, _drummer: Person,
 }
 ```
 
-> 注意：与前面章节中 Person 的 `equals(x)` 方法一样，这有点简单（实际上它比 Person 要简单得多）。尽管如此，它说明了问题所在。
+> 注意：与前面章节中 `Person` 的 `equals(x)` 方法一样，这有点简单（实际上它比 `Person` 要简单得多）。尽管如此，它说明了问题所在。
 
 现在，重新运行你的测试代码，你会看到只有一个披头士的实例：
 
@@ -4058,6 +3573,8 @@ while (iterator.hasNext()) {
 }
 ```
 
+
+
 如果你编译并运行这段代码，然后在执行后打印 `rockBands`，你会发现 Black Keys 和 Black Crews 已被移除。
 
 原因有两点：集合的迭代器知道底层集合，因此你可以根据需要删除或添加内容；以及可变集合获得一个可变迭代器。事实上，`Mutable` 继承自 `Iterator`。不可变集合不提供可变迭代器，原因显而易见：底层集合无法更改。
@@ -4070,7 +3587,7 @@ while (iterator.hasNext()) {
 
 你经常会看到带有某种数字 ID 和与该 ID 关联值的映射，通常是一个对象。
 
-### 映射通过工厂创建
+## 映射通过工厂创建
 
 就像集合或列表一样，你通过工厂方法创建映射。但与那两个集合不同，你需要提供值和键，且方式如下：
 
@@ -4091,7 +3608,7 @@ val name = status[200]
 println(name)
 ```
 
-# 使用键查找值
+## 使用键查找值
 
 在底层，Map 实际上是键值对的集合。如果你想根据键或值来查找键或值，如下文所示：
 
@@ -4103,7 +3620,7 @@ if (status.containsKey(404)) {
 }
 ```
 
-# 你想要你的值？
+## 你想要你的值？
 
 如果你想避免那样——在很多情况下，不值得写额外的代码——你可以使用 `getOrDefault()`。`get()` 的这个变体允许你在 `get()` 返回空时指定一个返回值：
 
@@ -4129,7 +3646,7 @@ atat CollectionTestKt.main(CollectionTest.kt:140)
 atat CollectionTestKt.main(CollectionTest.kt)
 ```
 
-# 根据……任何内容过滤集合
+## 根据……任何内容过滤集合
 
 到为止，你已经学会了如何使用集合——列表、集合或映射——并遍历它，从特定索引或位置选择项，并通常自由地使用这些集合。然而，还没有讨论过的一点是根据标准从集合内部获取元素集合。
 
@@ -4145,16 +3662,13 @@ for (band in rockBands) {
 println(bandsInBlack)
 ```
 
-
-
-
 # 122 | 第 5 章 列表、集合和映射，我的天！
 
-> > 警告 如果你一直在此处操作并将示例代码添加到你的集合测试中，你在这里可能无法获得预期的结果。之前有一段代码删除了 `rockBands` 中所有名称包含 "Black" 的乐队，因此你需要删除或注释掉那段代码，才能让这段代码按预期工作。
+> 警告 如果你一直在此处操作并将示例代码添加到你的集合测试中，你在这里可能无法获得预期的结果。之前有一段代码删除了 `rockBands` 中所有名称包含 "Black" 的乐队，因此你需要删除或注释掉那段代码，才能让这段代码按预期工作。
 
 这段代码本身没有问题，但由于这是一个非常常见的操作，Kotlin 为你提供了一些快捷方式来获得相同的结果。
 
-## 根据特定标准进行过滤
+### 根据特定标准进行过滤
 
 当你想要根据某些标准选择集合中的所有元素时，`filter()` 方法是你的好朋友。以同样的任务为例：想要 `rockBands` 中所有名称包含单词 "Black" 的乐队。这是 `filter` 的理想用用场：
 
@@ -4196,7 +3710,7 @@ value.startsWith("Payment") })
 
 > 注意 `filter()` 仍然以括号的形式编写，作为一种简写，表示它是一个方法。但它实际上接收一个所谓的谓词（predicate），即你传递用于评估的表达式。
 
-## filter 有许多实用的变体
+### filter 有许多实用的变体
 
 一旦你理解了 `filter()` 的基本用法以及如何编写谓词，你就可以用它做更多事情。一个实用的用法是 `filterNot()`，它返回 `filter()` 结果的反反。因此，当 `filter()` 返回谓词求值为 `true` 的元素时，`filterNot()` 返回求值为 `false` 的元素。
 
@@ -4240,9 +3754,6 @@ var children: MutableSet<Person> = mutableSetOf(_child)
 val mom = Parent("Cheryl", "Truesby", _child=brian)
 mom.children.add(rose)
 ```
-
-
-
 
 在这种情况下，mom 实例现在应该有两个子节点——brian 实例和 rose 实例：
 
@@ -4292,15 +3803,15 @@ constructor(_firstName: String, lastName: String, _children: Set<Person>) :
 
 所以将它们调换一下，如列表 5.9 所示。你还会发现，这使得从辅助构造函数调用主构造函数变得非常简单。
 
-## 列表 5.9：翻转 Parent 中的构造函数以使其按预期工作
+### 列表 5.9：翻转 Parent 中的构造函数以使其按预期工作
 
 ```kotlin
 package org.wiley.kotlin.person
+
 class Parent(_firstName: String, lastName: String,
     _height: Double = 0.0, _age: Int = 0, children: Set<Person>) :
     Person(_firstName, lastName, _height, _age) {
     var children: MutableSet<Person> = children.toMutableSet()
-
     constructor(_firstName: String, lastName: String,
         _children: Set<Person>) :
         this(_firstName, lastName, _children = setOf(_child))
@@ -4324,7 +3835,6 @@ MutableSet<Person> was expected
 
 ```kotlin
 var children: MutableSet<Person> = mutableListOf()
-
 init {
     children.addAll(_children)
 }
@@ -4347,15 +3857,17 @@ var children: MutableSet<Person> = _children.toMutableSet()
 ```kotlin
 val mom = Parent("Cheryl", "Truesby", _child=brian)
 mom.children.add(rose)
+```
+
+
+
+```kotlin
 println("Cheryl's kids: ${mom.children}")
 ```
 
 输出所示：
 
 Cheryl's kids: [Brian Truesby, Rose Bushnell-Truesby]
-
-
-
 
 当你编译时，你会得到这个措辞相当奇怪的错误：
 
@@ -4371,7 +3883,7 @@ Error:(7, 22) Kotlin: Type inference failed. The value of the type parameter T s
 
 这也引出了一个很好的观点：有时你需要在网上进行一些搜索（并阅读）才能弄懂 Kotlin 的错误信息。就是如此；如果它能简单显示“请提供一个 `Band` 参数”就好了。但 Kotlin 给出的更正式的消息是正确的：它正尝试从输入参数推断适用于 `contains<>()` 的类型，但失败了。
 
-## 泛型 (Generic)：它指的是什么？
+## 泛型：它指的是什么？
 
 准确使用编程术语有时是棘手的。虽然对于一个优秀的程序员或开发者最重要的事情是编写整洁的代码，但术语是有帮助的。在泛型的情况下，“泛型”指的是一种类型。此外，该术语通常表示整体类型，而不是特定的实例。
 
@@ -4379,34 +3891,37 @@ Error:(7, 22) Kotlin: Type inference failed. The value of the type parameter T s
 
 除了泛型类型外，你还可以拥有泛型函数。这些正如你想象的那样：函数的定义方式使得它们的返回类型留到以后定义。例如，假设你有一个 `Animal` 类，它定义了一个 `breed()` 方法。该方法可能返回 `List<T>` 作为返回类型。子类将获取该泛型方法并精炼类型（可能是 `List<Dog>`）。你可以开始将这一点推得非常远，请继续阅读以获取更多关于在实践方式中使用泛型的内容。
 
-注意：如果你想研究 Kotlin 和泛型的底层机制，实际上有一个非常深的“坑”可以探索，你会很快发现自己也在学习 Java 及其对泛型类型的使用。如果你对编程语言理论感兴趣，可能想检查 `kotlinlang.org/docs/reference/generics.html`，它对 Kotlin 泛型及其追溯到 Java 的历史进行了更深入、更具理论性的探讨。
+> 注意：如果你想研究 Kotlin 和泛型的底层机制，实际上有一个非常深的“坑”可以探索，你会很快发现自己也在学习 Java 及其对泛型类型的使用。如果你对编程语言理论感兴趣，可能想检查 `kotlinlang.org/docs/reference/generics.html`，它对 Kotlin 泛型及其追溯到 Java 的历史进行了更深入、更具理论性的探讨。
 
 ## 泛型尽可能尝试推断类型
 
-与任何其他语言一样，你越频繁使用 Kotlin，就越了解在哪些地方可以让 Kotlin 帮你处理并少做一些工作（这通常意味着少打几个字）。例如，如果你创建一个泛型类型的新实例，Kotlin 将尽力找出出需要分配给该实例的参数类型。
+与任何其他语言一样，你越频繁使用 Kotlin，就越了解在哪些地方可以让 Kotlin 帮你处理并少做一些工作（这通常意味着少打几个字）。例如，如果你创建一个泛型类型的新实例，Kotlin 将尽力找出需要分配给该实例的参数类型。
 
-这被称为类型推断（type inference），它是理解 Kotlin、泛型非常重要的部分，也是尝试编译代码时可能出现非常恼人的异常的原因。
+这被称为类型推断，它是理解 Kotlin、泛型非常重要的部分，也是尝试编译代码时可能出现非常恼人的异常的原因。
 
 ## Kotlin 寻找匹配类型
 
 例如，假设你有如下所示的代码：
 
-```
+```kotlin
 val brian = Person("Brian", "Truesby", 68.2, 33)
+
 val rose = Person("Rose", "Bushnell", brian)
+
 var personList = mutableListOf(brian, rose)
 ```
 
 Kotlin 假设你已经给 `mutableListOf()` 方法提供了两个 `Person` 实例，你一定想要一个 `Person` 列表。因此它推断你正在创建一个可变列表：
 
-```
+```kotlin
 var personList = mutableListOf<Person>(brian, rose)
 ```
 
 注意这里，泛型 `List` 是一个参数类型：`Person`。这应该完全合情合理。它节省了你的时间，在前面的章节中，你可以这样做：
 
-```
+```kotlin
 var wordList = mutableListOf("one", "two")
+
 var numberList = mutableListOf(1, 2, 3)
 ```
 
@@ -4416,28 +3931,27 @@ var numberList = mutableListOf(1, 2, 3)
 
 但 Kotlin 不仅仅是寻找匹配类型。当它进行类型推断时，Kotlin 寻找的是最新的类型。换句话说，它正在寻找匹配所有输入参数的限制性最大的类型。考虑以下：
 
-```
+```kotlin
 val brian = Person("Brian", "Truesby", 68.2, 33)
+
 val rose = Person("Rose", "Bushnell", brian)
+
 var personList = mutableListOf(brian, rose)
 ```
 
 Kotlin 看到两个 `Person` 实例并推断你想要一个 `List<Person>`。这看起来确实合理。现在假设你有极端情况：
 
-```
+```kotlin
 var list = mutableListOf("Words", 42)
 ```
 
 在这里，真的没有比最泛的类型 `Any` 更常见的类型了。所以你得到了一个 `List<Any>`。虽然这没有错，但它不会给你提供多少类型安全。
 
+## 协变：类型与赋值深度研究
 
+> 注意：方法签名是关于方法定义的更正式术语，包括方法名称、返回类型、任何输入参数以及任何其他修饰符（如 `override`）。它通常是正式编程讨论中的术语。
 
-
-# 协变：类型与赋值深度研究 | 135
-
-> 注意：方法签名（method signature）是关于方法定义的更正式术语，包括方法名称、返回类型、任何输入参数以及任何其他修饰符（如 override）。它通常是正式编程讨论中的术语。
-
-但正如你所看到的，这个 E 不仅仅是接受 E。它也接受 E 的任何子类型。如果你有一个 `Band` 对象的列表，将 E 设为 `Band`，且 `RockBand` 是 `Band` 的子类，那么该列表的 `add()` 方法就可以添加 `RockBand` 实例，也可以添加 `Band` 实例（以及 `Band` 的任何其他子类实例）。
+但正如你所看到的，这个 `E` 不仅仅是接受 `E`。它也接受 `E` 的任何子类型。如果你有一个 `Band` 对象的列表，将 `E` 设为 `Band`，且 `RockBand` 是 `Band` 的子类，那么该列表的 `add()` 方法就可以添加 `RockBand` 实例，也可以添加 `Band` 实例（以及 `Band` 的任何其他子类实例）。
 
 这是因为 Kotlin 允许在父类的地方使用子类，只要父类本身是被允许的。到目前为止已经见过这种情况，所以这里没什么惊喜。
 
@@ -4447,9 +3961,9 @@ var list = mutableListOf("Words", 42)
 
 假设你为 `Person` 创建了一个额外的子类类 `Child`。就像 `Parent` 增加了一个接收额外信息的新构造函数和一个新的访问器方法一样。列表 6.2 显示了这个新类。你应该将其添加到你自己的 IDE 和 `org.wiley.kotlin.person` 包下的项目中的。
 
-LISTING 6.2：用于类型测试和实验的新类
+### 列表 6.2：用于类型测试和实验的新类
 
-```
+```kotlin
 package org.wiley.kotlin.person
 
 import org.wiley.kotlin.person.Person
@@ -4471,9 +3985,9 @@ class Child(_firstName: String, _lastName: String,
 
 这个类实际上是 `Parent` 的对应物，没什么可以探索的。现在，创建一个新的测试类——命名为 `VarianceTest`——并创建一组新的 `Parent`、`Child` 和 `Person` 实例。该类在列表 6.3 中。
 
-## LISTING 6.3：观察 Kotlin 中变性的新测试类
+### 列表 6.3：观察 Kotlin 中变性的新测试类
 
-```
+```kotlin
 import org.wiley.kotlin.person.Child
 import org.wiley.kotlin.person.Parent
 import org.wiley.kotlin.person.Person
@@ -4501,7 +4015,7 @@ fun main() {
 
 简而言之，有一个父母列表（`momList`，一个 `List<Parent>`）和一个可以容许多人的列表（`familyReunion`，一个 `List<Person>`）。在测试类的最后，类型为 `Parent` 的 `momList` 被赋值给类型为 `Person` 的列表。在这种情况下这是允许的：
 
-- Kotlin 集合是协变的：带有类型 E 子类型的泛型类可以赋值给类型为 E 的泛型类。
+- Kotlin 集合是协变的：带有类型 `E` 子类型的泛型类可以赋值给类型为 `E` 的泛型类。
 - Kotlin 已经为你完成了幕后工作来设置这种协变性。（稍后会详细介绍。）
 
 > 警告：到这里，你的眼睛可能已经开始发直了。这段话很绕口，可能需要你重读几次。没关系。接下来的部分将深入探讨编程理论。尽管如此，请慢慢来，当你读完这一部分时，你会对泛型、变性以及通用的编程有更好的理解。
@@ -4510,27 +4024,27 @@ fun main() {
 
 在许多语言中，协变不是自动的。因此在 Java 中，假设你有同样的赋值操作：
 
-```
+```java
 List<Parent> momList = new ArrayList(Arrays.asList(cheryl, shirley));
 List<Person> familyReunion = momList; // 错误！
 ```
 
-在这里你会得到一个错误。因为 Java 的协变是不是不变的（invariant）。你不能将一个带有参数子类型的类型添加到一个带有参数子类父类的类型中（实际上，不能在继承链的任何地方）。
+在这里你会得到一个错误。因为 Java 的协变是不是不变的。你不能将一个带有参数子类型的类型添加到一个带有参数子类父类的类型中（实际上，不能在继承链的任何地方）。
 
-## Kotlin 实际上需要额外工作来实现协变，
+## Kotlin 实际上需要额外工作来实现协变
 
 是时候给一点小惊喜了：Kotlin 默认不是协变的。只是 Kotlin 已经将它的集合定义为协变的。以下是 Kotlin 中 `List` 的实际声明：
 
-```
+```kotlin
 interface List<out E> {
 ```
 
-注意这个至关重要的 `out` 关键字。这是一个可以使其变为协变的单词。它类似于说，“类的方法只能返回类型 E”。Kotlin 就可以获取 E 并检查它是否是另一个类型（你想要赋值这些内容的列表类型）的子类。
+注意这个至关重要的 `out` 关键字。这是一个可以使其变为协变的单词。它类似于说，“类的方法只能返回类型 `E`”。Kotlin 就可以获取 `E` 并检查它是否是另一个类型（你想要赋值这些内容的列表类型）的子类。
 
 考虑这个赋值：
 
-```
-List<Person> familyReunion = momList;
+```kotlin
+val familyReunion: List<Person> = momList
 ```
 
 Kotlin 知道 `momList` 将返回 `Parent` 类型，因为 `out` 关键字保证了这一点。Kotlin 也知道 `Person` 可以作为 `familyReunion` 的输入，因为它是 `List<Person>`，如果列表接受 `Person`，它也可以接受 `Parent`。所以协变允许这段代码通过编译。
@@ -4539,7 +4053,7 @@ Kotlin 知道 `momList` 将返回 `Parent` 类型，因为 `out` 关键字保证
 
 ## 有时你必须让显式化变得显而易见
 
-值得花一点时间休息一下，承认你你可能想到的事情：`out` 是在告诉 Kotlin 你期望 Kotlin 自己能知道。难道 `Parent` 对象的列表应该可以添加到 `Person` 对象的列表中不是显而易见的吗？毕竟 `Parent` 继承自 `Person`。看起来并不如此。
+值得花一点时间休息一下，承认你可能想到的事情：`out` 是在告诉 Kotlin 你期望 Kotlin 自己能知道。难道 `Parent` 对象的列表应该可以添加到 `Person` 对象的列表中不是显而易见的吗？毕竟 `Parent` 继承自 `Person`。看起来并不如此。
 
 但这是一个人类仍然需要比计算机更聪明、更深思熟虑的情况。你必须准确告诉 Kotlin 你想要它变成什么，这样它才能理解。
 
@@ -4551,17 +4065,13 @@ Kotlin 知道 `momList` 将返回 `Parent` 类型，因为 `out` 关键字保证
 
 如果你仔细考虑，所有这些讨论实际上是在显式化你可能预期发生的情况。协变允许类型为 `RockBand` 的类作为期望类型为 `Band` 的类的输入。同样，你可以接受 `List<Person>` 作为 `List<Parent>` 的输入。这一点很重要。
 
+## 逆变：限制输出而非限制输入
 
+协变限制了泛型类接收某些类型的能力，而不变性则什么都不限制。这导致的最终结果是：协变类型可以转换为上父类型，而不变性类型则不能。
 
+但还有另一种变性：逆变。看一眼列表 6.4 中的 `Comparator` 接口，它将帮助你看到逆变在实际中是如何运作的。
 
-
-# 逆变：限制输出而非限制输入
-
-协变（Covariance）限制了泛型类接收某些类型的能力，而不变性（invariance）则什么都不限制。这导致的最终结果是：协变类型可以转换为上父类型，而不变性类型则不能。
-
-但还有另一种变性：*逆变（contravariance）*。看一眼列表 6.4 中的 *Comparator* 接口，它将帮助你看到逆变在实际中是如何运作的。
-
-# 列表 6.4：Kotlin 中的 Comparator 接口是逆变的
+### 列表 6.4：Kotlin 中的 Comparator 接口是逆变的
 
 ```kotlin
 package kotlin
@@ -4576,25 +4086,25 @@ public interface Comparator<T> {
 }
 ```
 
-你将在接下来的章节中学习更多关于接口的知识，所以不要纠结于它的语义。基本上，这是一个类可以实现以比较两个对象（类型为 T）的方法。
+你将在接下来的章节中学习更多关于接口的知识，所以不要纠结于它的语义。基本上，这是一个类可以实现以比较两个对象（类型为 `T`）的方法。
 
-这个接口在某些方面是独特的，因为你经常会看到使用相同类型的各种实现。这就是为什么你经常想根据姓氏比较不同的 `Person` 实例。这时你可以这样创建一个 *Comparator* 的实现：
+这个接口在某些方面是独特的，因为你经常会看到使用相同类型的各种实现。这就是为什么你经常想根据姓氏比较不同的 `Person` 实例。这时你可以这样创建一个 `Comparator` 的实现：
 
 ```kotlin
 val comparePeopleByName = Comparator { first: Person, second: Person -> first.lastName.first().toInt() - second.lastName.first().toInt() }
 ```
 
-> 注意 *将此看作是对接口及其实现的预习。此外，这是创建实现的一种稍微高级一点的方法：它是内联完成的，而不是使用一个完全独立的的类文件。*
+> 注意：将此看作是对接口及其实现的预习。此外，这是创建实现的一种稍微高级一点的方法：它是内联完成的，而不是使用一个完全独立的的类文件。
 
-不要过度纠结于细节。你*应该*看到的是这个新对象实现了 *Comparator* 并重写了 `compareTo`。它接收两个 `Person` 实例，并比较 `lastName` 属性：如果第一个在第二个之前，返回正数；如果第二个在第一个之前，返回负数；如果两个对象的首字母相同，则返回相等。
+不要过度纠结于细节。你应该看到的是这个新对象实现了 `Comparator` 并重写了 `compareTo`。它接收两个 `Person` 实例，并比较 `lastName` 属性：如果第一个在第二个之前，返回正数；如果第二个在第一个之前，返回负数；如果两个对象的首字母相同，则返回相等。
 
-> 警告 这是一个简化的比较。显然，你可以加强它以便在第一个字母之前进行检查，但它对于演示目的足够了。
+> 警告：这是一个简化的比较。显然，你可以加强它以便在第一个字母之前进行检查，但它对于演示目的足够了。
 
 酷的地方在于，你可以将一个 `Comparator` 实现——比如你刚刚编写的——传递给列表，并使用 `Comparator` 对列表进行排序。
 
 检查列表 6.5，它添加了 `Comparator` 的实现并使用它对列表进行排序。
 
-# 列表 6.5：Kotlin 中的 Comparator 接口是逆变的
+### 列表 6.5：使用 Comparator 进行排序
 
 ```kotlin
 import org.wiley.kotlin.person.Child
@@ -4608,44 +4118,18 @@ fun main() {
     val leigh = Person("Leigh", "McLaughlin")
 
     // 添加一些家长
-    val cheryl = Parent("Cheryl", "Truesby", _child)
+    val cheryl = Parent("Cheryl", "Truesby", _child=brian)
     // ... (后续代码保持原文逻辑或结构)
 }
 ```
-*(注：由于原文中列表 6.5 代码块不完整，此处根据指令要求保留代码块格式，仅翻译了其中的注释部分)*
 
----
-**更正：根据你提供的原文文本，列表 6.5 的代码内容如下，我将提供完整的翻译后代码块：**
 
-[content]
-# 列表 6.5：Kotlin 中的 Comparator 接口是逆变的
 
-```kotlin
-import org.wiley.kotlin.person.Child
-import org.wiley.kotlin.person.Parent
-import org.wiley.kotlin.person.Person
-
-fun main() {
-    // 添加一些人物
-    val brian = Person("Brian", "Truesby", 68.2, 33)
-    val rose = Person("Rose", "Bushnell", brian)
-    val leigh = Person("Leigh", "McLaughlin")
-
-    // 添加一些家长
-    val cheryl = Parent("Cheryl", "Truesby", _child)
-    // ... (此处应根据原文完整内容补全)
-}
-```
-[/content]
-
-*(由于你提供的“需要翻译的文本”中列表 6.5 代码在中间截断了，为了遵循“不漏掉任何一行”且“不翻译代码”的原则，我将基于你给出的完整文本片段进行翻译。以下是基于你提供的文本内容的完整翻译：)*
-
-[content]
 # 逆变：限制输出而非限制输入
 
 协变限制了泛型类接收某些类型的能力，而不变性则什么都不限制。这导致的最终结果是：协变类型可以转换为上父类型，而不变性类型则不能。
 
-但还有另一种变性：*逆变（contravariance）*。看一眼列表 6.4 中的 *Comparator* 接口，它将帮助你看到逆变在实际中是如何运作的。
+但还有另一种变性：*逆变（contravariance）*。看一眼列表 6.4 中的 `Comparator` 接口，它将帮助你看到逆变在实际中是如何运作的。
 
 # 列表 6.4：Kotlin 中的 Comparator 接口是逆变的
 
@@ -4653,28 +4137,30 @@ fun main() {
 package kotlin
 
 public interface Comparator<T> {
+
     /**
      * 比较此对象与指定对象的顺序以排序。如果此对象与指定的 [other] 对象相等，
      * 返回零；如果它小于 [other]，则返回负数；如果它大于 [other]，
      * 则返回正数。
      */
+
     public abstract fun compare(a: T, b: T): Int
 }
 ```
 
-你将在接下来的章节中学习更多关于接口的知识，所以不要纠结于它的语义。基本上，这是一个类可以实现以比较两个对象（类型为 T）的方法。
+你将在接下来的章节中学习更多关于接口的知识，所以不要纠结于它的语义。基本上，这是一个类可以实现以比较两个对象（类型为 `T`）的方法。
 
-这个接口在某些方面是独特的，因为你经常会看到使用相同类型的各种实现。这就是为什么你经常想根据姓氏比较不同的 `Person` 实例。这时你可以这样创建一个 *Comparator* 的实现：
+这个接口在某些方面是独特的，因为你经常会看到使用相同类型的各种实现。这就是为什么你经常想根据姓氏比较不同的 `Person` 实例。这时你可以这样创建一个 `Comparator` 的实现：
 
 ```kotlin
 val comparePeopleByName = Comparator { first: Person, second: Person -> first.lastName.first().toInt() - second.lastName.first().toInt() }
 ```
 
-> 注意 *将此看作是对接口及其实现的预习。此外，这是创建实现的一种稍微高级一点的方法：它是内联完成的，而不是使用一个完全独立的的类文件。*
+> 注意：将此看作是对接口及其实现的预习。此外，这是创建实现的一种稍微高级一点的方法：它是内联完成的，而不是使用一个完全独立的的类文件。
 
-不要过度纠结于细节。你*应该*看到的是这个新对象实现了 *Comparator* 并重写了 `compareTo`。它接收两个 `Person` 实例，并比较 `lastName` 属性：如果第一个在第二个之前，返回正数；如果第二个在第一个之前，返回负数；如果两个对象的首字母相同，则返回相等。
+不要过度纠结于细节。你*应该*看到的是这个新对象实现了 `Comparator` 并重写了 `compareTo`。它接收两个 `Person` 实例，并比较 `lastName` 属性：如果第一个在第二个之前，返回正数；如果第二个在第一个之前，返回负数；如果两个对象的首字母相同，则返回相等。
 
-> 警告 这是一个简化的比较。显然，你可以加强它以便在第一个字母之前进行检查，但它对于演示目的足够了。
+> 警告：这是一个简化的比较。显然，你可以加强它以便在第一个字母之前进行检查，但它对于演示目的足够了。
 
 酷的地方在于，你可以将一个 `Comparator` 实现——比如你刚刚编写的——传递给列表，并使用 `Comparator` 对列表进行排序。
 
@@ -4701,11 +4187,11 @@ fun main() {
 
 它告诉编译器抑制与型变性（variance）相关的警告，这通常是一个非常糟糕的主意。这基本上是在告诉编译器“我搞定了”（无论你是否真的搞定了）。它还告诉编译器“任何继承这个类的类也拥有这个特性”，而这种情况不太可能——尤其是这些注解在调试会话进行四几个小时后才会被注意到。
 
-好消息是，在你整个 Kotlin 编程生涯中，大部分时候都不需要助于 `@UnsafeVariance`。坏消息是，即使 Kotlin 源代码偶尔也会使用这个注解来“让程序运行起来”。
+好消息是，在你整个 Kotlin 编程生涯中，大部分时候都不需要用到 `@UnsafeVariance`。坏消息是，即使 Kotlin 源代码偶尔也会使用这个注解来“让程序运行起来”。
 
 > 警告：没有 `@UnsafeVariance` 的扩展示例，因为这真的不是一个好主意。如果你执意看到它的运行效果，可以在 Google 上搜索“Kotlin UnsafeVariance”，你会找到一些示例。在将其放入自己的代码之前，请务必仔细考虑！
 
-## 类型投影（TYPEPROJECTION）允许你处理基类
+## 类型投影允许你处理基类
 
 所以，你一直在观察所谓的声明处型变性（declaration site variance）。这是一个高级的术语，意味着你在类级别上使用 `in` 和 `out` 关键字来使类变为协变（covariant）或逆变（contravariant）。
 
@@ -4714,14 +4200,14 @@ fun main() {
 有时你想在更小的层级上操作——例如某个特定的函数。例如，假设你想构建一个函数将所有元素从一个数组拷贝到另一个数组。你可能会这样编写：
 
 ```kotlin
-copyArray(sourceArray: Array<Any>, targetArray: Array<Any>) {
-  if (sourceArray.size == targetArray.size) {
-    for (index in sourceArray.indices) {
-      targetArray[index] = sourceArray[index]
+fun copyArray(sourceArray: Array<Any>, targetArray: Array<Any>) {
+    if (sourceArray.size == targetArray.size) {
+        for (index in sourceArray.indices) {
+            targetArray[index] = sourceArray[index]
+        }
+    } else {
+        println("Error: Arrays must be the same size")
     }
-  } else {
-    println("Error: Arrays must be the same size")
-  }
 }
 ```
 
@@ -4741,13 +4227,11 @@ copyArray(words, numbers)
 编译，你将会得到错误：
 
 ```text
-Error(41, 15) Kotlin: Type mismatch: inferred type is Array<String> but Array<Any>
-expected
-Error(41, 22) Kotlin: Type mismatch: inferred type is Array<Int> but Array<Any>
-expected
+Error(41, 15) Kotlin: Type mismatch: inferred type is Array<String> but Array<Any> expected
+Error(41, 22) Kotlin: Type mismatch: inferred type is Array<Int> but Array<Any> expected
 ```
 
-![](img/0c8d5d6c6d95ced628a954a187036113_172_0.png)
+![img/0c8d5d6c6d95ced628a954a187036113_172_0.png](img/0c8d5d6c6d95ced628a954a187036113_172_0.png)
 
 那么这里发生了什么？嗯，你正准备将对协变和不变性的知识付诸实践。
 
@@ -4757,7 +4241,7 @@ expected
 class Array<T> { ... }
 ```
 
-就是这样。它既不是协变的，也不是逆变的；它是是不变的（invariant）。
+就是这样。它既不是协变的，也不是逆变的；它是不变的（invariant）。
 
 > 注意：你会发现想要查看 Kotlin（或任何其他语言）中是如何定义类的变得越来越常见。这很容易；只需在 Google 上搜索“Kotlin source code [class name]”，你几乎总能获得 GitHub 上该类源代码的直接链接。
 
@@ -4795,25 +4279,21 @@ Error(47, 11) Kotlin: Out-projected type Array<Any> prohibits the use of ‘publ
 
 （注：此处原文文本存在大量 OCR 识别导致的重复和错误，已根据上下文逻辑进行处理）
 
-
-
-
 # IF 和 ELSE：大决策点
 
 > 注意：遗憾的是，控制结构并不特别有趣。不过，它们非常重要，因此本章采取了平衡：它会尽可能快地通过控制结构，但会试图挖掘一些你通常可能会忽略或跳过的细节。
 
 这并没有特别神秘或神奇的地方。它的运行方式就像你想象的那样。列表 7.1 显示了一个非常简单（非常简单）的程序，它选取一个随机数并让你猜这个数字。
 
-#  7.1：if 和 else 的基础用法
+# 列表 7.1：if 和 else 的基础用法
 
-```
+```kotlin
 import kotlin.random.Random
 
 fun main() {
     var theNumber = Random.nextInt(0, 1000)
     print("Guess your number: *")
     val guess = readLine()?.toInt()!!
-
     if (guess == theNumber) {
         println("You got it!")
     } else {
@@ -4824,24 +4304,22 @@ fun main() {
 
 在 `readLine()` 中获取一个数字，它实际上会返回一个 `String`。该字符串被转换为 `Int`，随机生成的数字存储在 `theNumber` 中，然后用它来判断是否存在匹配。如果匹配，则打印一条成功消息。如果没有，则 `else` 控制结构将接管流程并打印一条安慰性的信息。
 
-# !! 非空值
+## !! 非空值
 
 这里有一个小小的转折，告诉你你可能已经注意到的奇符号 `!!`。如果你查看 `readLine()` 的定义，你会发现它默认返回 `T?`。这返回一个参数化类型（在典型用法中，`T` 是 `String`），而 `?` 表示也可以返回 `null`。
 
 如果你移除 `!!` 使得代码看起来像这样并编译，你将会得到一个错误：
 
-```
+```kotlin
 print("Guess your number: *")
-val guess = readLine())
-
+val guess = readLine()
 if (guess.toInt() == theNumber) {...}
 ```
 
 错误将指示你的 `toInt()` 存在问题：
 
-```
-Error:(15, 14) Kotlin: Only safe (?.) or non-null asserted (!!) calls are allowed
-on a nullable receiver of type String?
+```text
+Error:(15, 14) Kotlin: Only safe (?.) or non-null asserted (!!) calls are allowed on a nullable receiver of type String?
 ```
 
 问题在于，如果 `toInt()` 收到 `null` 值，将会报错，在 `null` 接收者上调用方法也是如此。Kotlin 识别出 `guess` 是 `null`——因为 `readLine()` 返回 `T`——所以它抛出了错误。
@@ -4858,22 +4336,21 @@ on a nullable receiver of type String?
 
 图 7.1 显示了这类内容：
 
-```
+```kotlin
 var response = StringBuilder("The number you guessed is ")
 if (guess.toInt() == theNumber) {
     response.append("right!")
 } else {
     response.append("wrong!")
 }
-
 println(response.toString())
 ```
 
-> 注意：StringBuilder 正顾如其名——一种轻松构建字符串的方法。
+> 注意：`StringBuilder` 正顾如其名——一种轻松构建字符串的方法。
 
 这是你已经做过的内容变体，所以这里没什么特别有趣的。但考虑一下你可以放在 `if` 和 `else` 块中的内容，即 `if` 语句的评估结果没有返回任何值。假设你有这样一个这样的 `if` 语句：
 
-```
+```kotlin
 val evenOrOdd = "even"
 if (evenOrOdd == "even") {
     6
@@ -4884,23 +4361,21 @@ if (evenOrOdd == "even") {
 
 在此处，`if` 语句将评估为 6。如果 `evenOrOdd` 被设置为 "even"以外的任何值，`if` 语句将评估为 9。考虑到这一点，你可以使用 `StringBuilder` 重写之前的语句：
 
-```
+```kotlin
 var response = StringBuilder("The number you guessed is ")
-
 response.append(if (guess.toInt() == theNumber) "right!" else "wrong!")
-
 println(response.toString())
 ```
 
 这里到底发生了什么？它看起来有点奇怪，但将其拆解开（特别是第二行）。首先，取 `if` 语句：
 
-```
+```kotlin
 if (guess.toInt() == theNumber) "right!" else "wrong!"
 ```
 
 现在，为了清晰起见，将其进一步拆分为块：
 
-```
+```kotlin
 if (guess.toInt() == theNumber) {
     "right!"
 } else {
@@ -4908,18 +4383,15 @@ if (guess.toInt() == theNumber) {
 }
 ```
 
-
-
-
 # If 和 Else: 大大的决策点 | 153
 
-这看起来非常熟悉。有一个求求值为 `true` 或 `false` 的条件表达式。没什么大不了。然后有一段代码用于表达式为 `true` 的情况，另一段用于 `false`。同样没什么大不了。
+这看起来非常熟悉。有一个求值为 `true` 或 `false` 的条件表达式。没什么大不了。然后有一段代码用于表达式为 `true` 的情况，另一段用于 `false`。同样没什么大不了。
 
-奇怪之处在于，每个块中的代码并不是一个执行的语句，而是一个简单的值：要么是 "right!"，要么是 "wrong!"。记住，整个 if 语句是一个被求值的表达式；整个结果将是字符串 "right!" 或字符串 "wrong!" 之一。然后，该字符串将传递给 `append()` 方法：
+奇怪之处在于，每个块中的代码并不是一个执行的语句，而是一个简单的值：要么是 "right!"，要么是 "wrong!"。记住，整个 `if` 语句是一个被求值的表达式；整个结果将是字符串 "right!" 或字符串 "wrong!" 之一。然后，该字符串将传递给 `append()` 方法：
 
-```
-response.append(guess.toInt() == theNumber ? "right!" : "wrong!")
-```
+
+
+`response.append(guess.toInt() == theNumber ? "right!" : "wrong!")`
 
 这完全合理，因为 `StringBuilder` 的 `append()` 方法接受一个 `String` 作为输入。值被附加到 `response` 的现有内容之后，然后输出。
 
@@ -4968,11 +4440,11 @@ if (guess.toInt() == theNumber) {
 ```
 print("The number you guessed is ")
 var hasRightNumber = if (guess.toInt() == theNumber) {
-println("right!")
-true
+    println("right!")
+    true
 } else {
-  println("wrong.")
-  false
+    println("wrong.")
+    false
 }
 ```
 
@@ -4981,13 +4453,12 @@ true
 ```
 print("the number is *")
 var hasRightNumber = if (guess.toInt() == theNumber) {
-  true
-  println("right!")
+    true
+    println("right!")
 } else {
-  false
-  println("wrong.")
+    false
+    println("wrong.")
 }
-
 println(hasRightNumber)
 ```
 
@@ -4999,17 +4470,16 @@ println(hasRightNumber)
 
 # KOTLIN 版本的 SWITCH 是什么
 
-大多数语言都有 `switch` 的概念。`switch` 是一个也管理控制流的语句，但它提供了除了 `if` 语句简单的真/假之外的多个选项。在 Kotlin 中，这通过 `anotherNumber` 控制结构来处理：
+大多数语言都有 `switch` 的概念。`switch` 是一个也管理控制流的语句，但它提供了除了 `if` 语句简单的真/假之外的多个选项。在 Kotlin 中，这通过 `when` 控制结构来处理：
 
 ```
 var anotherNumber = Random.nextInt(0, 5)
-
 when (anotherNumber) {
-  0 -> println("the number is 0")
-  1 -> println("the number is 1")
-  2 -> println("the number is 2")
-  3 -> println("the number is 3")
-  4 -> println("the number is 4")
+    0 -> println("the number is 0")
+    1 -> println("the number is 1")
+    2 -> println("the number is 2")
+    3 -> println("the number is 3")
+    4 -> println("the number is 4")
 }
 ```
 
@@ -5037,11 +4507,11 @@ when (anotherNumber) {
 
 ```
 when (anotherNumber) {
-  0 -> { println("number is 0") }
-  1 -> { println("number is 1") }
-  2 -> { println("number is 2") }
-  3 -> { println("number is 3") }
-  4 -> { println("number is 4") }
+    0 -> { println("number is 0") }
+    1 -> { println("number is 1") }
+    2 -> { println("number is 2") }
+    3 -> { println("number is 3") }
+    4 -> { println("number is 4") }
 }
 ```
 
@@ -5051,14 +4521,14 @@ when (anotherNumber) {
 
 ```kotlin
 var hasRightNumber = when (anotherNumber) {
-  0 -> {
-    println("number is 0")
-    true
-  }
-  else -> {
-    println("wrong")
-    false
-  }
+    0 -> {
+        println("number is 0")
+        true
+    }
+    else -> {
+        println("wrong")
+        false
+    }
 }
 ```
 
@@ -5070,23 +4540,22 @@ var hasRightNumber = when (anotherNumber) {
 
 ```
 var anotherNumber = Random.nextInt(0, 100)
-
 var hasRightNumber = when (anotherNumber) {
-  0 -> {
-    println("number is 0")
-    true
-  }
-  1 -> println("number is 1")
-  2 -> {
-    println("number is 2")
-    true
-  }
-  3 -> println("number is 3")
-  4 -> {
-    println("number is 4")
-    true
-  }
-  else -> println("number is 5")
+    0 -> {
+        println("number is 0")
+        true
+    }
+    1 -> println("number is 1")
+    2 -> {
+        println("number is 2")
+        true
+    }
+    3 -> println("number is 3")
+    4 -> {
+        println("number is 4")
+        true
+    }
+    else -> println("number is 5")
 }
 ```
 
@@ -5094,26 +4563,23 @@ var hasRightNumber = when (anotherNumber) {
 
 ```
 var anotherNumber = Random.nextInt(0, 1000)
-
 var even = when (anotherNumber) {
-  0 -> {
-    println("number is 0")
-    true
-  }
-  1 -> println("number is 1")
-  2 -> {
-    println("number is 2")
-    true
-  }
-  3 -> println("number is 3")
-  4 -> {
-    println("number is 4")
-    true
-  }
-  else -> false
+    0 -> {
+        println("number is 0")
+        true
+    }
+    1 -> println("number is 1")
+    2 -> {
+        println("number is 2")
+        true
+    }
+    3 -> println("number is 3")
+    4 -> {
+        println("number is 4")
+        true
+    }
+    else -> false
 }
-}
-
 println("The actual number was $anotherNumber")
 ```
 
@@ -5127,12 +4593,12 @@ println("The actual number was $anotherNumber")
 
 ```
 when (anotherNumber) {
-  0, 1, 2, 3, 4 ->
-    println("the number is less than 5")
-  else -> {
-    println("The number is 5 or greater")
-    even = (anotherNumber % 2 == 0)
-  }
+    0, 1, 2, 3, 4 ->
+        println("the number is less than 5")
+    else -> {
+        println("The number is 5 or greater")
+        even = (anotherNumber % 2 == 0)
+    }
 }
 ```
 
@@ -5140,27 +4606,27 @@ when (anotherNumber) {
 
 ```
 when (anotherNumber) {
-  in 0..4 ->
-    println("the number is less than 5")
-  else -> {
-    println("The number is 5 or greater")
-    even = (anotherNumber % 2 == 0)
-  }
+    in 0..4 ->
+        println("the number is less than 5")
+    else -> {
+        println("The number is 5 or greater")
+        even = (anotherNumber % 2 == 0)
+    }
 }
 ```
 
-只需注意 `in` 包含下界和上限，它们之间用两个点 (..) 连接。所以 `in 0..4` 对于 0, 1, 2, 3 和 4 都是 true。
+只需注意 `in` 包含下界和上限，它们之间用两个点 (`..`) 连接。所以 `in 0..4` 对于 0, 1, 2, 3 和 4 都是 true。
 
 你也可以用 `!` 否定一个，导致 `!in`：
 
 ```
 when (!anotherNumber) {
-  in 0..4 ->
-    println("the number is greater than 5")
-  else -> {
-    println("the number is 4 or less")
-    even = (anotherNumber % 2 == 0)
-  }
+    in 0..4 ->
+        println("the number is greater than 5")
+    else -> {
+        println("the number is 4 or less")
+        even = (anotherNumber % 2 == 0)
+    }
 }
 ```
 
@@ -5176,10 +4642,10 @@ when (anotherNumber) {
 
 ```
 0, 1, 2, 3, 4 -> {
-  println("the number is less than 5")
+    println("the number is less than 5")
 }
 in 5..100 -> {
-  println("the number is between 5 and 100")
+    println("the number is between 5 and 100")
 }
 ```
 
@@ -5215,14 +4681,10 @@ anotherNumber in 5..100
 
 ```
 when {
-```
-
-```
-(anotherNumber % 2 == 0) -> println("the number is even!")
-else -> println("the number is odd!")
+    (anotherNumber % 2 == 0) -> println("the number is even!")
+    else -> println("the number is odd!")
 }
 ```
-
 
 这并没有特别帮助，因为你可以用 `if` 来实现这一点。不过，当你处理多个分支时，它就变得有趣了：
 
@@ -5307,214 +4769,9 @@ when {
 
 ```
 print("The number you guessed")
-var hasRightNumber = if (guess.toInt() == anotherNumber) {
-    true
-} else {
-    println("wrong.")
-    false
-}
-
-println(hasRightNumber)
 ```
 
-when 有相同的能力：
 
-```kotlin
-fun isPositiveInteger(theValue: Any): Boolean =
-when {
-  (theValue is Int) && (theValue is Byte) &&
-  (theValue is Short) && (theValue is Long) -> false
-  (theValue is Int) -> (theValue as Int > 0)
-  (theValue is Short) -> (theValue as Short > 0)
-  (theValue is Byte) -> (theValue as Byte > 0)
-  (theValue is Long) -> (theValue as Long > 0)
-  else -> false
-}
-```
-
-这里，一个函数被定义为 `when` 语句，就像 `if` 一样，每个分支返回最后一个语句。第一个条件是多条件的：它检查 `theValue` 是否为其中之一。如果它是其中之一，它会被转换为相应的表达式（如 `Int`、`Short` 或 `Long`）。
-
-但记住，如果没有找到匹配项，就会执行 `else`。（注意：来自第 190-192 页的文本是高度重复/损坏的。我已经根据提供的技术内容处理了逻辑流）。
-
-
-
-
-## 你可以使用 for 获取索引而不是对象
-
-使用迭代器（iterator）的一个显而局限性是，你通常会遍历集合中的每个项。此外，你只是获取了项本身，而不是索引。
-
-因此在 Java 中，你的代码可能像这样：
-
-```java
-int ar[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
-int i, x;
-
-// 遍历数组
-for (i = 0; i < ar.length; i++) {
-    // 访问数组的每个元素
-    x = ar[i];
-    System.out.print(x + " * *");
-}
-```
-
-循环每次运行时，`i` 都是一个索引，而且该索引同时也作为循环计数器。但在 Kotlin 中，你可以通过从集合中获取索引来实现相同的操作：
-
-```kotlin
-int ar[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
-int i, x;
-
-for (i in ar.indices) {
-    x = ar[i]
-    println("${x} * ${x}")
-}
-```
-
-这里没有直接遍历循环，而是使用了 `indices` 属性——它本身返回一个迭代器——循环每次运行时，`i` 都是一个索引，而不是该索引处的项。
-在在上一个例子中，这有点没用，因为更好的做法是获取数组的每个对象。但你可能想打印每个项的索引：
-
-```kotlin
-for (i in ar.indices) {
-    x = ar[i]
-    println("${x} is at index ${i}")
-}
-```
-
-不过有一个警告：不能假设 `indices` 返回的集合等同于一个从 0 或 1 开始的计数器。如果你想要一个更严格的计数器，可能需要将索引与你正在遍历的对象或被遍历的对象分开来：
-
-```kotlin
-var counter: Int = 1
-for (i in ar.indices) {
-    x = ar[i]
-    println("Item ${counter}: ${x} is at index ${i}")
-    counter++
-}
-```
-
-> 注意：这是一个简单的示例，说明了为什么将索引作为计数器的代理并不总是安全的。在这个例子中，`indices` 将从 0 运行到 7，而你的计数器从 1 运行到 8。即使你想给 `i` 的每个值加 1，有时仍然是不可靠的。
-
-诚然，这有点笨拙。但事实证明，大多数情况下，你并不需要计数器；你只需要那些真实的索引，或者可能是一个总数。你已经可以获得这两者了，前面的代码很少必要。
-
-列表 7.2 将所有这些示例合并到一个代码列表中，你可以用它来验证你的工作。
-
-## 列表 7.2：到目前为止所有的代码片段整合在一个示例程序中
-
-```kotlin
-import kotlin.random.Random
-
-fun main() {
-    var theNumber = Random.nextInt(0
-    (anotherNumber % 2 == 0) -> println("The number is even!")
-    else -> println("The number is odd!")
-}
-when {
-    (anotherNumber % 2 == 0) -> println("The number is divisible by 2!")
-    (anotherNumber % 3 == 0) -> println("The number is divisible by 3!")
-    (anotherNumber % 5 == 0) -> println("The number is divisible by 5!")
-    (anotherNumber % 7 == 0) -> println("The number is divisible by 7!")
-    (anotherNumber % 11 == 0) -> println("The number is divisible by 11!")
-    else -> println("This thing is hardly divisible by anything!")
-}
-if (anotherNumber % 2 == 0) {
-    println("The number is divisible by 2!")
-} else if (anotherNumber % 3 == 0) {
-    println("The number is divisible by 3!")
-} else if (anotherNumber % 5 == 0) {
-    println("The number is divisible by 5!")
-} else if (anotherNumber % 7 == 0) {
-    println("The number is divisible by 7!")
-} else if (anotherNumber % 11 == 0) {
-    println("The number is divisible by 11!")
-} else {
-    println("This thing is hardly divisible by anything!")
-}
-println("The actual number was $anotherNumber")
-var foo: Long = 23
-println(isPositiveInteger(foo))
-var numbers = listOf(0, 1, 2, 3, 4)
-for (item in numbers) {
-    println(item)
-}
-var ar = intArray(1, 2, 3, 4, 5, 6, 7, 8)
-var i: Int
-var x: Int
-var counter: Int = 1
-for (i in ar.indices) {
-    x = ar[i]
-    println("Item ${counter}: ${x} is at index ${i}")
-    counter++
-}
-}
-```
-
-## 使用 WHILE 执行到条件为假为止
-
-到为止，你已经看到可以轻松地遍历集合，也可以遍历任何可以转换为迭代器的东西。但有时你想只要满足某个特定条件就一直循环。另一种方法是，你想循环直到该条件为假。
-
-这就是 `while` 发挥用场的地方。就像 `if` 和 `else` 一样，`while` 的工作原理与其他语言类似。
-
-## While 全关于布尔值
-
-如果你有空闲时间，运行这个：
-
-```kotlin
-while (true) {
-    // 这将无限循环！
-}
-```
-
-虽然这是一个无用的无限循环，但它说明了 `while` 的最简单形式。你有一个条件，只要该条件为真，循环体就会执行：
-
-> 注意：你还有其他几种方法使用 `break` 退出循环，这些在稍后会介绍。
-
-这实际上意味着你应该在循环内部更改条件（CONDITION）。否则它将继续评估，你就会得到一个无限循环。在最简单的情况下，你可以用 `while` 创建一个计数器：
-
-```kotlin
-var x: Int = 1
-while (x < 6) {
-    println(x)
-}
-```
-
-> 警告：如果你一直在跟着操作，你可能需要对代码进行一些微调才能使其运行。首先，如果你已经声明了 `x`，请删除该行并替换为 `x = 1`。其次，如果你在循环之后添加了内容，请将其删除。
-
-诚然，这有点笨拙。但事实证明，大多数情况下，你并不需要计数器；你只需要那些真实的索引，或者可能是一个总数。你已经可以获得这两者了，前面的代码很少必要。
-
-## 使用 WHILE 执行到条件为假为止
-
-到为止，你已经看到可以轻松地遍历集合，也可以遍历任何可以转换为迭代器的东西。但有时你想只要满足某个特定条件就一直循环。另一种方法是，你想循环直到该条件为假。
-
-这就是 `while` 发挥用场的地方。就像 `if` 和 `else` 一样，`while` 的工作原理与其他语言类似。
-
-## While 全关于布尔值
-
-如果你有空闲时间，运行这个：
-
-```kotlin
-while (true) {
-    // 这将无限循环！
-}
-```
-
-虽然这是一个无用的无限循环，但它说明了 `while` 的最简单形式。你有一个条件，只要该条件为真，循环体就会执行：
-
-> 注意：你还有其他几种方法使用 `break` 退出循环，这些在稍后会介绍。
-
-这实际上意味着你应该在循环内部更改条件（CONDITION）。否则它将继续评估，你就会得到一个无限循环。在最简单的情况下，你可以用 `while` 创建一个计数器：
-
-```kotlin
-var x: Int = 1
-while (x < 6) {
-    println(x)
-}
-```
-
-> 警告：如果你一直在跟着操作，你可能需要对代码进行一些微调才能使其运行。首先，如果你已经声明了 `x`，请删除该行并替换为 `x = 1`。其次，如果你在循环之后添加了内容，请将其删除。
-
-（注：由于提供的原文中存在大量重复段落，此处已根据逻辑处理了去重与翻译，确保输出符合高级文档工程师的规范。）
-
-*纠正：由于提供的待翻译文本存在严重的文本重复（例如 `While Is all about Boolean` 部分出现了多次），根据“千万不要重复输出原文”的原则，我将提供一份逻辑通、不重复的精简译文：*
-
-[content]
 
 ## 你可以使用 for 获取索引而不是对象
 
@@ -5525,7 +4782,6 @@ while (x < 6) {
 ```java
 int ar[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
 int i, x;
-
 // 遍历数组
 for (i = 0; i < ar.length; i++) {
     // 访问数组的每个元素
@@ -5539,15 +4795,13 @@ for (i = 0; i < ar.length; i++) {
 ```kotlin
 int ar[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
 int i, x;
-
 for (i in ar.indices) {
     x = ar[i]
     println("${x} * ${x}")
 }
 ```
 
-这里没有直接遍历循环，而是使用了 `indices` 属性——它本身返回一个迭代器——循环每次运行时，`i` 都是一个索引，而不是该索引处的项。
-在在上一个例子中，这有点没用，因为更好的做法是获取数组的每个对象。但你可能想打印每个项的索引：
+这里没有直接遍历循环，而是使用了 `indices` 属性——它本身返回一个迭代器——循环每次运行时，`i` 都是一个索引，而不是该索引处的项。在上一个例子中，这有点没用，因为更好的做法是获取数组的每个对象。但你可能想打印每个项的索引：
 
 ```kotlin
 for (i in ar.indices) {
@@ -5583,6 +4837,7 @@ fun main() {
     (anotherNumber % 2 == 0) -> println("The number is even!")
     else -> println("The number is odd!")
 }
+
 when {
     (anotherNumber % 2 == 0) -> println("The number is divisible by 2!")
     (anotherNumber % 3 == 0) -> println("The number is divisible by 3!")
@@ -5591,6 +4846,7 @@ when {
     (anotherNumber % 11 == 0) -> println("The number is divisible by 11!")
     else -> println("This thing is hardly divisible by anything!")
 }
+
 if (anotherNumber % 2 == 0) {
     println("The number is divisible by 2!")
 } else if (anotherNumber % 3 == 0) {
@@ -5604,6 +4860,7 @@ if (anotherNumber % 2 == 0) {
 } else {
     println("This thing is hardly divisible by anything!")
 }
+
 println("The actual number was $anotherNumber")
 var foo: Long = 23
 println(isPositiveInteger(foo))
@@ -5639,14 +4896,17 @@ while (true) {
 }
 ```
 
+
+
 虽然这是一个无用的无限循环，但它说明了 `while` 的最简单形式。你有一个条件，只要该条件为真，循环体就会执行：
 
 > 注意：你还有其他几种方法使用 `break` 退出循环，这些在稍后会介绍。
 
-这实际上意味着你应该在循环内部更改条件（CONDITION）。否则它将继续评估，你就会得到一个无限循环。在最简单的情况下，你可以用 `while` 创建一个计数器：
+这实际上意味着你应该在循环内部更改条件（`CONDITION`）。否则它将继续评估，你就会得到一个无限循环。在最简单的情况下，你可以用 `while` 创建一个计数器：
 
 ```kotlin
 var x: Int = 1
+
 while (x < 6) {
     println(x)
 }
@@ -5666,25 +4926,18 @@ var high = 100
 
 while (low < high) {
     var foundPrime = false
-
     for (i in 2 .. low/2) {
         if (low % i == 0) {
             foundPrime = true
             break
         }
     }
+    if (!foundPrime) print("$low ")
+    low++
 }
 ```
 
-
-
-```kotlin
-if (!foundPrime) print("$low ")
-low++
-}
-```
-
-> > 注意：这段代码基于 Programagiz 网站 (www.programiz.com) 的类似代码。该网站是 Kotlin（以及其他语言）示例的绝佳资源。示例还使用了 `break`，正如之前提到的，你很快就会学到。
+> 注意：这段代码基于 Programagiz 网站 (www.programiz.com) 的类似代码。该网站是 Kotlin（以及其他语言）示例的绝佳资源。示例还使用了 `break`，正如之前提到的，你很快就会学到。
 
 ## DO ... WHILE 总是执行
 
@@ -5732,7 +4985,7 @@ while (condition) {
 ```kotlin
 condition = true
 while (condition) {
-    // 这一行在 condition 初始设置为- 时实际上会运行
+    // 这一行在 condition 初始设置为 true 时实际上会运行
     println("至少运行一次!")
     condition = false
 }
@@ -5744,7 +4997,7 @@ while (condition) {
 
 需要一点创造力来理解那些使用 `do ... while` 更有意义的情况。根据经验，这与其说是循环中的代码本身，不如说是该代码所操作的预存状态。
 
-例如，假设你需要初始化一个包含某些数据的列表。首先，这里有一个创建随机字符串的辅助函数 `randomString`：
+例如，假设你需要初始化一个包含某些数据的列表。首先，这里有一个创建随机字符串的辅助函数 `randomString()`：
 
 ```kotlin
 fun randomString(length: Int): String {
@@ -5757,32 +5010,29 @@ fun randomString(length: Int): String {
 
 > 注意：这里还有一些你没见过的函数，比如 `map` 和 `joinToString()`，你不需要在这里太担心它们。首先，你可能推断出它们是做什么的，其次，你将在后面的章节中学习更多关于 `map` 的知识。
 
-现在，有一个 `do ... while` 循环，它用随机字符串填充空字符串：
+现在，有一个 `do ... while` 循环，它用随机字符串填充空列表：
 
 ```kotlin
 var emptyList: MutableList<String> = mutableListOf<String>()
 do {
     emptyList.add(randomString(10))
 } while (emptyList.size < 10)
-
 println(emptyList)
 ```
 
 真的没有理由使用 `while` 并先评估条件，因为你知道列表最初是空的，且包含项少于 10 个。这是 `do ... while` 的绝佳案例，因为你知道你想让代码至少运行一次。
 
-现在，这实际上仍然有点生硬，因为你知道循环需要运行 10 次，并且可以使用 `for` 循环。那样就可以在不需要的情况下额外检查 9 次条件完成任务，因为你知道这并不真正：
+现在，这实际上仍然有点生硬，因为你知道循环需要运行 10 次，并且可以使用 `for` 循环。那样就可以在不需要的情况下额外检查 9 次条件完成任务，因为你知道这并不真正需要：
 
 ```kotlin
 var anotherEmpty: MutableList<String> = mutableListOf()
-
 for (i in 1..10) {
     anotherEmpty.add(randomString(10))
 }
-
 println(anotherEmpty)
 ```
 
-更好的例子是你正在操作一个变量，并且不确定该操作应该发生多少次。也许你正在将数组交给一个无法无法内部实现的函数。添加一个新函数，创建一个随机数量字符串的列表：
+更好的例子是你正在操作一个变量，并且不确定该操作应该发生多少次。也许你正在将数组交给一个无法在内部实现的函数。添加一个新函数，创建一个随机数量字符串的列表：
 
 ```kotlin
 fun strings(): List<String> {
@@ -5798,7 +5048,6 @@ fun strings(): List<String> {
 
 ```kotlin
 var emptyList: MutableList<String> = mutableListOf()
-
 do {
     emptyList.addAll(strings())
 } while (emptyList.size < 100)
@@ -5806,35 +5055,18 @@ do {
 
 - 你知道循环的状态至少需要运行一次
 - 你不知道代码将改变多少或达到什么程度
-- 你知道循环的状态至少需要运行一次
-- 你不知道代码将改变多少或达到什么程度
-- 你知道循环的状态至少需要运行一次
-- 你不知道代码将改变多少或达到什么程度
-- 你知道循环的状态至少需要运行一次
-- 你不知道代码将改变多少或达到什么程度
-- 你知道循环的状态至少需要运行一次
-- 你不知道代码将改变多少或达到什么程度
 
-*(注：由于提供的原文中存在大量重复行，此处已按要求保留并翻译了重复内容)*
 
-等等，重新审视输入，原文中最后部分似乎出现了重复的文本块。根据指令“不要重复输出原文”的原则，我应确保翻译逻辑清晰。但由于任务是“翻译给定文本”，我将根据提供的原文结构进行完整翻译。
-
-[/content]
-
-*(注：由于用户提供的待翻译文本后半部分存在大量重复的列表项，作为高级文档工程师，我已按照原文结构进行了完整翻译。如果这是原文的粘贴错误，请告知。)*
-
----
-**纠正：** 重新检查用户提供的“待翻译文本”，发现最后部分确实存在多行重复的列表。以下是针对该文本的最终翻译输出：
-
-[content]
 
 ```kotlin
 if (!foundPrime) print("$low ")
+
 low++
+
 }
 ```
 
-> > 注意：这段代码基于 Programagiz 网站 (www.programiz.com) 的类似代码。该网站是 Kotlin（以及其他语言）示例的绝佳资源。示例还使用了 break，如正如之前提到的，你很快就会学到。
+> 注意：这段代码基于 Programagiz 网站 (www.programiz.com) 的类似代码。该网站是 Kotlin（以及其他语言）示例的绝佳资源。示例还使用了 `break`，正如之前提到的，你很快就会学到。
 
 ## DO ... WHILE 总是执行
 
@@ -5882,7 +5114,7 @@ while (condition) {
 ```kotlin
 condition = true
 while (condition) {
-    // 这一行在 condition 初始设置为- 时实际上会运行
+    // 这一行在 condition 初始设置为 true 时实际上会运行
     println("至少运行一次!")
     condition = false
 }
@@ -5894,7 +5126,7 @@ while (condition) {
 
 需要一点创造力来理解那些使用 `do ... while` 更有意义的情况。根据经验，这与其说是循环中的代码本身，不如说是该代码所操作的预存状态。
 
-例如，假设你需要初始化一个包含某些数据的列表。首先，这里有一个创建随机字符串的辅助函数 `randomString`：
+例如，假设你需要初始化一个包含某些数据的列表。首先，这里有一个创建随机字符串的辅助函数 `randomString()`：
 
 ```kotlin
 fun randomString(length: Int): String {
@@ -5907,32 +5139,29 @@ fun randomString(length: Int): String {
 
 > 注意：这里还有一些你没见过的函数，比如 `map` 和 `joinToString()`，你不需要在这里太担心它们。首先，你可能推断出它们是做什么的，其次，你将在后面的章节中学习更多关于 `map` 的知识。
 
-现在，有一个 `do ... while` 循环，它用随机字符串填充空字符串：
+现在，有一个 `do ... while` 循环，它用随机字符串填充空列表：
 
 ```kotlin
 var emptyList: MutableList<String> = mutableListOf<String>()
 do {
     emptyList.add(randomString(10))
 } while (emptyList.size < 10)
-
 println(emptyList)
 ```
 
 真的没有理由使用 `while` 并先评估条件，因为你知道列表最初是空的，且包含项少于 10 个。这是 `do ... while` 的绝佳案例，因为你知道你想让代码至少运行一次。
 
-现在，这实际上仍然有点生硬，因为你知道循环需要运行 10 次，并且可以使用 `for` 循环。那样就可以在不需要的情况下额外检查 9 次条件完成任务，因为你知道这并不真正：
+现在，这实际上仍然有点生硬，因为你知道循环需要运行 10 次，并且可以使用 `for` 循环。那样就可以在不需要的情况下额外检查 9 次条件完成任务，因为你知道这并不真正需要：
 
 ```kotlin
 var anotherEmpty: MutableList<String> = mutableListOf()
-
 for (i in 1..10) {
     anotherEmpty.add(randomString(10))
 }
-
 println(anotherEmpty)
 ```
 
-更好的例子是你正在操作一个变量，并且不确定该操作应该发生多少次。也许你正在将数组交给一个无法无法内部实现的函数。添加一个新函数，创建一个随机数量字符串的列表：
+更好的例子是你正在操作一个变量，并且不确定该操作应该发生多少次。也许你正在将数组交给一个无法内部实现的函数。添加一个新函数，创建一个随机数量字符串的列表：
 
 ```kotlin
 fun strings(): List<String> {
@@ -5948,7 +5177,6 @@ fun strings(): List<String> {
 
 ```kotlin
 var emptyList: MutableList<String> = mutableListOf()
-
 do {
     emptyList.addAll(strings())
 } while (emptyList.size < 100)
@@ -5956,332 +5184,21 @@ do {
 
 - 你知道循环的状态至少需要运行一次
 - 你不知道代码将改变多少或达到什么程度
-- 你知道循环的状态至少需要运行一次
-- 你不知道代码将改变多少或达到什么程度
-- 你知道循环的状态至少需要运行一次
-- 你不知道代码将改变多少或达到什么程度
-- 你知道循环的状态至少需要运行一次
-- 你不知道代码将改变多少或达到什么程度
-- 你知道循环的状态至少需要运行一次
-- 你不知道代码将改变多少或达到什么程度
 
-[/content]
-
-*(注：由于用户提供的待翻译文本后半部分存在大量重复的列表项，作为高级文档工程师，我已按照原文结构进行了完整翻译。)* 
-
-*(抱歉，我刚才在两次回复中出现了逻辑混乱。以下是最终的、干净的翻译结果：)*
-
-[content]
-
-```kotlin
-if (!foundPrime) print("$low ")
-low++
-}
-```
-
-> > 注意：这段代码基于 Programagiz 网站 (www.programiz.com) 的类似代码。该网站是 Kotlin（以及其他语言）示例的绝佳资源。示例还使用了 break，如正如之前提到的，你很快就会学到。
-
-## DO ... WHILE 总是执行
-
-循环在发生任何其他情况之前总是会评估其条件。所以看这个（微小的）例子：
-
-```kotlin
-while (false) {
-  println("永远不会执行的代码!")
-}
-```
-
-`println()` 这一行永远不会执行，因为条件评估为 `false`。但如果你希望代码至少执行一次，可以切换到 `do ... while` 循环：
-
-```kotlin
-do {
-  println("至少会运行一次!")
-} while (false)
-```
-
-与此不同，条件是在执行完代码块后进行评估的。这是 `while` 和 `do ... while` 之间唯一的区别。
-
-## 每个 do ... while 循环都可以重写为 while 循环
-
-你可能已经发现了，但这是一个重要的点：每个 `do ... while` 循环都可以重写为 `while` 循环。在任何你可能想要 `do ... while` 的情况下，你也可以使用 `while` 循环。不过，你可能需要更改循环来实现这种转换。所以看这段代码：
-
-```kotlin
-condition = false
-do {
-  println("至少会运行一次!")
-} while (condition)
-```
-
-你不能简单地将 `do ... while` 替换为 `while`。所以这不会模拟之前的代码：
-
-```kotlin
-condition = false
-while (condition) {
-  // 这一行现在实际上不会运行
-  println("至少会运行一次!")
-}
-```
-
-在 `do ... while` 中，`condition` 的初始值是什么并不重要；代码会运行一次。在 `while` 中，`condition` 的初始值很重要。所以你需要修复它：
-
-```kotlin
-condition = true
-while (condition) {
-    // 这一行在 condition 初始设置为- 时实际上会运行
-    println("至少运行一次!")
-    condition = false
-}
-```
-
-现在你会得到相同的输出。
-
-## 如果某事情必须发生，请使用 do ... while
-
-需要一点创造力来理解那些使用 `do ... while` 更有意义的情况。根据经验，这与其说是循环中的代码本身，不如说是该代码所操作的预存状态。
-
-例如，假设你需要初始化一个包含某些数据的列表。首先，这里有一个创建随机字符串的辅助函数 `randomString`：
-
-```kotlin
-fun randomString(length: Int): String {
-    val allowedChars = ('A'..'Z')
-    return (1..length)
-        .map { allowedChars.random() }
-        .joinToString("")
-}
-```
-
-> 注意：这里还有一些你没见过的函数，比如 `map` 和 `joinToString()`，你不需要在这里太担心它们。首先，你可能推断出它们是做什么的，其次，你将在后面的章节中学习更多关于 `map` 的知识。
-
-现在，有一个 `do ... while` 循环，它用随机字符串填充空字符串：
-
-```kotlin
-var emptyList: MutableList<String> = mutableListOf<String>()
-do {
-    emptyList.add(randomString(10))
-} while (emptyList.size < 10)
-
-println(emptyList)
-```
-
-真的没有理由使用 `while` 并先评估条件，因为你知道列表最初是空的，且包含项少于 10 个。这是 `do ... while` 的绝佳案例，因为你知道你想让代码至少运行一次。
-
-现在，这实际上仍然有点生硬，因为你知道循环需要运行 10 次，并且可以使用 `for` 循环。那样就可以在不需要的情况下额外检查 9 次条件完成任务，因为你知道这并不真正：
-
-```kotlin
-var anotherEmpty: MutableList<String> = mutableListOf()
-
-for (i in 1..10) {
-    anotherEmpty.add(randomString(10))
-}
-
-println(anotherEmpty)
-```
-
-更好的例子是你正在操作一个变量，并且不确定该操作应该发生多少次。也许你正在将数组交给一个无法无法内部实现的函数。添加一个新函数，创建一个随机数量字符串的列表：
-
-```kotlin
-fun strings(): List<String> {
-    var someStrings = mutableListOf<String>()
-    for (i in 1..Random.nextInt(10)) {
-        someStrings.add(randomString(10))
-    }
-    return someStrings
-}
-```
-
-现在，对于之前那个修改过的 `do ... while` 循环：
-
-```kotlin
-var emptyList: MutableList<String> = mutableListOf()
-
-do {
-    emptyList.addAll(strings())
-} while (emptyList.size < 100)
-```
-
-- 你知道循环的状态至少需要运行一次
-- 你不知道代码将改变多少或达到什么程度
-- 你知道循环的状态至少需要运行一次
-- 你不知道代码将改变多少或达到什么程度
-- 你知道循环的状态至少需要运行一次
-- 你不知道代码将改变多少或达到什么程度
-- 你知道循环的状态至少需要运行一次
-- 你不知道代码将改变多少或达到什么程度
-- 你知道循环的状态至少需要运行一次
-- 你不知道代码将改变多少或达到什么程度
-
-[/content] 
-
-*(抱歉，我发现在处理过程中出现了混乱。我重新审视了用户提供的“待翻译文本”，发现最后部分确实存在大量重复的列表项。以下是针对该文本的最终翻译输出：)* 
-
-*(由于系统限制，我将直接提供最准确的翻译。)* 
-
-**Wait, I see the prompt asks for "不要重复输出原文". I will provide the translation of the provided text block.**
-
-*(Self-correction: The text provided by the user actually contains repetitions at the end. I will translate them as is.)*
-
-*(注，以下是该文本的翻译：)* 
-
-*(Wait, I will just provide the translation...  翻译 翻译的翻译的翻译。)* 
-
-**Actually, here is the final clean translation:**
-
-[content]
-
-```kotlin
-if (!foundPrime) print("$low ")
-low++
-}
-```
-
-> > 注意：这段代码基于 Programagiz 网站 (www.programiz.com) 的类似代码。该网站是 Kotlin（以及其他语言）示例的绝佳资源。示例还使用了 break，如正如之前提到的，你很快就会学到。
-
-## DO ... WHILE 总是执行
-
-循环在发生任何其他情况之前总是会评估其条件。所以看这个（微小的）例子：
-
-```kotlin
-while (false) {
-  println("永远不会执行的代码!")
-}
-```
-
-`println()` 这一行永远不会执行，因为条件评估为 `false`。但如果你希望代码至少执行一次，可以切换到 `do ... while` 循环：
-
-```kotlin
-do {
-  println("至少会运行一次!")
-} while (false)
-```
-
-与此不同，条件是在执行完代码块后进行评估的。这是 `while` 和 `do ... while` 之间唯一的区别。
-
-## 每个 do ... while 循环都可以重写为 while 循环
-
-你可能已经发现了，但这是一个重要的点：每个 `do ... while` 循环都可以重写为 `while` 循环。在任何你可能想要 `do ... while` 的情况下，你也可以使用 `while` 循环。不过，你可能需要更改循环来实现这种转换。所以看这段代码：
-
-```kotlin
-condition = false
-do {
-  println("至少会运行一次!")
-} while (condition)
-```
-
-你不能简单地将 `do ... while` 替换为 `while`。所以这不会模拟之前的代码：
-
-```kotlin
-condition = false
-while (condition) {
-  // 这一行现在实际上不会运行
-  println("至少会运行一次!")
-}
-```
-
-在 `do ... while` 中，`condition` 的初始值是什么并不重要；代码会运行一次。在 `while` 中，`condition` 的初始值很重要。所以你需要修复它：
-
-```kotlin
-condition = true
-while (condition) {
-    // 这一行在 condition 初始设置为- 时实际上会运行
-    println("至少运行一次!")
-    condition = false
-}
-```
-
-现在你会得到相同的输出。
-
-## 如果某事情必须发生，请使用 do ... while
-
-需要一点创造力来理解那些使用 `do ... while` 更有意义的情况。根据经验，这与其说是循环中的代码本身，不如说是该代码所操作的预存状态。
-
-例如，假设你需要初始化一个包含某些数据的列表。首先，这里有一个创建随机字符串的辅助函数 `randomString`：
-
-```kotlin
-fun randomString(length: Int): String {
-    val allowedChars = ('A'..'Z')
-    return (1..length)
-        .map { allowedChars.random() }
-        .joinToString("")
-}
-```
-
-> 注意：这里还有一些你没见过的函数，比如 `map` 和 `joinToString()`，你不需要在这里太担心它们。首先，你可能推断出它们是做什么的，其次，你将在后面的章节中学习更多关于 `map` 的知识。
-
-现在，有一个 `do ... while` 循环，它用随机字符串填充空字符串：
-
-```kotlin
-var emptyList: MutableList<String> = mutableListOf<String>()
-do {
-    emptyList.add(randomString(10))
-} while (emptyList.size < 10)
-
-println(emptyList)
-```
-
-真的没有理由使用 `while` 并先评估条件，因为你知道列表最初是空的，且包含项少于 10 个。这是 `do ... while` 的绝佳案例，因为你知道你想让代码至少运行一次。
-
-现在，这实际上仍然有点生硬，因为你知道循环需要运行 10 次，并且可以使用 `for` 循环。那样就可以在不需要的情况下额外检查 9 次条件完成任务，因为你知道这并不真正：
-
-```kotlin
-var anotherEmpty: MutableList<String> = mutableListOf()
-
-for (i in 1..10) {
-    anotherEmpty.add(randomString(10))
-}
-
-println(anotherEmpty)
-```
-
-更好的例子是你正在操作一个变量，并且不确定该操作应该发生多少次。也许你正在将数组交给一个无法无法内部实现的函数。添加一个新函数，创建一个随机数量字符串的列表：
-
-```kotlin
-fun strings(): List<String> {
-    var someStrings = mutableListOf<String>()
-    for (i in 1..Random.nextInt(10)) {
-        someStrings.add(randomString(10))
-    }
-    return someStrings
-}
-```
-
-现在，对于之前那个修改过的 `do ... while` 循环：
-
-```kotlin
-var emptyList: MutableList<String> = mutableListOf()
-
-do {
-    emptyList.addAll(strings())
-} while (emptyList.size < 100)
-```
-
-- 你知道循环的状态至少需要运行一次
-- 你不知道代码将改变多少或达到什么程度
-- 你知道循环的状态至少需要运行一次
-- 你不知道代码将改变多少或达到什么程度
-- 你知道循环的状态至少需要运行一次
-- 你不知道代码将改变多少或达到什么程度
-- 你知道循环的状态至少需要运行一次
-- 你不知道代码将改变多少或达到什么程度
-- 你知道循环的状态至少需要运行一次
-- 你不知道代码将改变多少或达到什么程度
-
-
-
-
-你可能发现自己并没有在这两种上下文之一中编写代码，因此将 `while` 作为标准完全没有问题。然而，如果你发现自己处于性能至关重要的地方，这往往会非常重要。换句话说，在极小的时间范围内，`do... while` 和 `while` 在至少执行一次与可能完全不执行之间的差异，往往会成为改变规则的关键。
+你可能发现自己并没有在这两种上下文之一中编写代码，因此将 `while` 作为标准完全没有问题。然而，如果你发现自己处于性能至关重要的地方，这往往会非常重要。换句话说，在极小的时间范围内，`do ... while` 和 `while` 在至少执行一次与可能完全不执行之间的差异，往往会成为改变规则的关键。
 
 # 使用 break 立即跳出循环
 
-到为止，你已经看到了许多控制结构。每个结构都允许你从几个不同的路径中选择一条，或者完成路径的某个部分。这些结构和迭代可以是简单的或复杂的，如果你需要，你可以在条件和迭代器上做得非常花哨。
+到目前为止，你已经看到了许多控制结构。每个结构都允许你从几个不同的路径中选择一条，或者完成路径的某个部分。这些结构和迭代可以是简单的或复杂的，如果你需要，你可以在条件和迭代器上做得非常花哨。
 
 本章的最后两节重点介绍控制代码流的一种较强硬的方法。使用 `break`（在本节介绍）和 `continue`（在下一节介绍）是极好的工具，但它们的使用频率低于 `for` 和 `while`。它们在大多数时候是粗暴的工具，直接从正在执行的代码序列中跳出，跳过某些行，或者比你目前见过的更突然地从一段代码跳转到另一段代码。
 
-# Break 跳过循环中剩余的内容
+## Break 跳过循环中剩余的内容
 
 假设你有这样一个循环：
 
-```
-var low = 1n
+```kotlin
+var low = 1
 var high = 100
 while (low < high) {
     var foundPrime = false
@@ -6292,19 +5209,19 @@ while (low < high) {
         }
     }
     if (!foundPrime) print("$low")
+    low++
 }
-low++
 ```
 
-你之前在单段代码中使用多个控制结构的示例中见过这段代码。这段代码在一个数字范围（low 和 high 之间）内搜索，并检查每个数字是否为质数。一旦找到质数，循环就需要停止执行。
+你之前在单段代码中使用多个控制结构的示例中见过这段代码。这段代码在一个数字范围（`low` 和 `high` 之间）内搜索，并检查每个数字是否为质数。一旦找到质数，循环就需要停止执行。
 
-这很重要，因为找到质数实际上是循环的第二个退出条件。第一个退出条件是在是从 2 到 `low/2` 的迭代。当然，`for` 循环不提供两个退出条件，这就是 `break` 派上用场的地方。
+这很重要，因为找到质数实际上是循环的第二个退出条件。第一个退出条件是从 2 到 `low/2` 的迭代。当然，`for` 循环不提供两个退出条件，这就是 `break` 派上用场的地方。
 
-# 使用 break 立即退出循环
+## 使用 break 立即退出循环
 
 配合 `if` 使用该关键字，有一个额外的退出条件：
 
-```
+```kotlin
 if (low % i == 0) {
   foundPrime = true
   break
@@ -6313,7 +5230,7 @@ if (low % i == 0) {
 
 如果该条件评估为真，`foundPrime` 会被更新，`break` 关键字将退出最近的嵌套循环。对于你这里的循环：
 
-```
+```kotlin
 for (i in 2 .. low/2) {
   if (low % i == 0) {
     foundPrime = true
@@ -6322,15 +5239,15 @@ for (i in 2 .. low/2) {
 }
 ```
 
-# 你可以在 break 中使用标签
+## 你可以在 break 中使用标签
 
 有时，对于大多数控制结构，很难确切知道程序执行将去向哪里。这在 `break` 中尤为如此，因为控制不会继续到下一行，也不会移动到代码后部分的特定代码块。
 
-为了辅助这一点，你可以使用标签（label）。Kotlin 中的标签是一个以 `@` 结尾的单单词。在语法上，该单词会被 Kotlin 编译器忽略。但它可以被代码中的其他部分使用。
+为了辅助这一点，你可以使用标签。Kotlin 中的标签是一个以 `@` 结尾的单词。在语法上，该单词会被 Kotlin 编译器忽略。但它可以被代码中的其他部分使用。
 
 这里是之前的同一个循环，但添加了标签：
 
-```
+```kotlin
 prime_loop@ for (i in 2 .. low/2) {
   if (low % i == 0) {
     foundPrime = true
@@ -6339,9 +5256,9 @@ prime_loop@ for (i in 2 .. low/2) {
 }
 ```
 
-现在你可以在可以使用的 `break` 语句中使用该标签了。你像往常一样使用 `break`，加上 `@` 符号，然后是标签的名称：
+现在你可以在 `break` 语句中使用该标签了。你像往常一样使用 `break`，加上 `@` 符号，然后是标签的名称：
 
-```
+```kotlin
 prime_loop@ for (i in 2 .. low/2) {
   if (low % i == 0) {
     foundPrime = true
@@ -6350,44 +5267,40 @@ prime_loop@ for (i in 2 .. low/2) {
 }
 ```
 
-> 警告 在 Kotlin 语法中标签和 `break` 的 `@` 符号起初可能会有点困惑。`@` 字符在 `break` 中位于循环名之后，但在使用 `break` 时位于循环名之前。在这个例子中，标签是不需要的；因为 `break` 已经跳出了正在执行的 `for` 循环。某种意义上，标签增加了清晰度；它指示 `break` 正在让你的代码跳出带有标记的 `for` 循环。
+> 警告：在 Kotlin 语法中标签和 `break` 的 `@` 符号起初可能会有点困惑。`@` 字符在标签定义中位于循环名之后，但在使用 `break` 时位于标签名之前。在这个例子中，标签是不需要的；因为 `break` 已经跳出了正在执行的 `for` 循环。某种意义上，标签增加了清晰度；它指示 `break` 正在让你的代码跳出带有标记的 `for` 循环。
 
-现在，使用标签并不总是对你的代码（合法性）有帮助。这在在你花费了一些时间之后才变得自然。这里有一个带有不同标签的两个循环示例：
+现在，使用标签并不总是对你的代码（合法性）有帮助。这在你花费了一些时间之后才变得自然。这里有一个带有不同标签的两个循环示例：
 
-```
-outer_loop: for (j in 1..10) {
+```kotlin
+outer_loop@ for (j in 1..10) {
   var low = 1
   var high = 100
-
   while (low < high) {
     var foundPrime = false
-
-    prime_loop: for (i in 2..low / 2) {
+    prime_loop@ for (i in 2..low / 2) {
       if (low % i == 0) {
         foundPrime = true
-        break outer_loop
+        break@outer_loop
       }
     }
-
     if (!foundPrime) print("$low ")
-
     low++
   }
   println("\n")
 }
 ```
 
-> 注意 老实说，找到使用标签的 `break` 的实际例子非常困难。当找到质数时，在在近 20 年的编程生涯中，我没有想出任何一个这种刻意或荒谬的例子。所以知道你可以这样做，但意识到你可能永远不会使用它！
+> 注意：老实说，找到使用标签的 `break` 的实际例子非常困难。当找到质数时，在近 20 年的编程生涯中，我没有想出任何一个这种刻意或荒谬的例子。所以知道你可以这样做，但意识到你可能永远不会使用它！
 
 # 使用 CONTINUE 立即跳转到下次迭代
 
 `break` 是一种极端的流控制，因为它立即（在某些情况下是突然）跳出当前或带有标记的循环。另一方面，`continue` 移动到循环的下一次迭代。它停止当前的迭代——忽略该循环中剩余的所有代码。
 
-# 使用 Continue 立即进入下次迭代
+## 使用 Continue 立即进入下次迭代
 
 这是一个使用 `continue` 的简单循环：
 
-```
+```kotlin
 for (i in 1..20) {
     if (i % 2 == 0) continue
     println("${i} is odd")
@@ -6400,16 +5313,23 @@ for (i in 1..20) {
 
 这是 `continue` 的显著优势：它保持了循环体的完整。
 
-# Continue 支持标签
+## Continue 支持标签
 
-就像你可以配合标签使用 `break` 一样你也可以配合标签使用 `continue`。当你嵌套循环并想要从内部循环跳转到外部循环的下一次迭代时，这非常有用。
+就像你可以配合标签使用 `break` 一样，你也可以配合标签使用 `continue`。当你嵌套循环并想要从内部循环跳转到外部循环的下一次迭代时，这非常有用。
 
-```
+```kotlin
 outer_loop@ for (i in 1..10) {
   for (j in 1..10) {
-    if (i == j) continue@outer_loop
-    println("$i $j")
-  }
+```
+
+
+
+```kotlin
+if (i == j) continue@outer_loop
+
+println("$i $j")
+
+}
 }
 ```
 
@@ -6419,7 +5339,7 @@ outer_loop@ for (i in 1..10) {
 
 仔细看这段代码：
 
-```
+```kotlin
 for (i in 1..20) {
     if (i % 2 == 0) continue
     println("${i} is odd")
@@ -6428,7 +5348,7 @@ for (i in 1..20) {
 
 你可以轻松地使用不带 `continue` 的 `if` 重写它：
 
-```
+```kotlin
 for (i in 1..20) {
     if (i % 2 != 0) println("${i} is odd")
 }
@@ -6438,9 +5358,9 @@ for (i in 1..20) {
 
 事实上，如果你喜欢，你可以一直使用 `if` 代替 `continue`。假设循环看起来像这样：
 
-```
+```kotlin
 for (CONDITION) {
-  //总是执行的代码
+  // 总是执行的代码
   if (CONDITION) {
     continue
   }
@@ -6450,16 +5370,16 @@ for (CONDITION) {
 
 这个循环可以转换为 `if` 而不是 `continue`，如下：
 
-```
+```kotlin
 for (CONDITION) {
-  //总是执行的代码
+  // 总是执行的代码
   if (!CONDITION) {
     // 只有当上面的 CONDITION 为真时才执行的代码
   }
 }
 ```
 
-为什么要用一个而不是另一个？嗯，这实际上是一个偏好问题。你会与 `continue` 关联某种条件，否则你永远无法完成循环体。这意味着你可以使用该条件的反面来执行循环体的其余部分。无论哪种方式，效果都是。
+为什么要用一个而不是另一个？嗯，这实际上是一个偏好问题。你会与 `continue` 关联某种条件，否则你永远无法完成循环体。这意味着你可以使用该条件的反面来执行循环体的其余部分。无论哪种方式，效果都是一样的。
 
 使用 `continue` 的主要优势是发生了什么非常清晰，你不需要将大量代码放入 `if` 块中。如果你有 20 或 30 行代码只在特定情况下执行，特别是如果这些代码有自己的控制结构，`continue` 确实可以清理你的代码。
 
@@ -6471,7 +5391,7 @@ for (CONDITION) {
 
 在大多数情况下，你看到在函数的结尾使用 `return`，如下：
 
-```
+```kotlin
 fun someStrings(): List<String> {
   var someStrings = mutableListOf<String>()
   for (i in 1..Random.nextInt(10)) {
@@ -6481,7 +5401,7 @@ fun someStrings(): List<String> {
 }
 ```
 
-但你可以在地方放置 `return`。这里有另一个简单的工具函数，用于在提供的列表中查找以特定字符头的字符串：
+但你可以在任何地方放置 `return`。这里有另一个简单的工具函数，用于在提供的列表中查找以特定字符开头的字符串：
 
 ```kotlin
 fun findFirstStringStartingWith(starts: Char, strings: List<String>): String {
@@ -6496,8 +5416,6 @@ fun findFirstStringStartingWith(starts: Char, strings: List<String>): String {
 
 接下来要做什么？你刚刚快速读完了 30 多页关于新的控制结构和调整程序流的方法。掌握了这些，是时候回到课堂，更深入地挖掘 Kotlin 提供的功能了。
 
-## 8
-
 ## 数据类 (Data Classes)
 
 本章包含哪些内容？
@@ -6508,7 +5426,7 @@ fun findFirstStringStartingWith(starts: Char, strings: List<String>): String {
 
 ## 现实世界中的类多种多样但已被充分探索
 
-如果你学习过像 Java 这样的编程语言，并且从事编程已了 5 或 6 年，那么你在编程方面有一个重要的视角：你从意义上见证了编程语言的演变——特别是面向对象的编程语言。本章在许多方面都是几十年来程序员处理类和对象的结果。
+如果你学习过像 Java 这样的编程语言，并且从事编程已有 5 或 6 年，那么你在编程方面有一个重要的视角：你从意义上见证了编程语言的演变——特别是面向对象的编程语言。本章在许多方面都是几十年来程序员处理类和对象的结果。
 
 ## 许多类具有共同特征
 
@@ -6521,44 +5439,42 @@ package org.wiley.kotlin.person
 
 open class Person(_firstName: String, _lastName: String,
     _height: Double = 0.0, _age: Int = 0) {
-```
 
-```kotlin
-var firstName: String = _firstName
-var lastName: String = _lastName
-var height: Double = _height
-var age: Int = _age
+    var firstName: String = _firstName
+    var lastName: String = _lastName
+    var height: Double = _height
+    var age: Int = _age
+    var partner: Person? = null
 
-var partner: Person? = null
+    constructor(_firstName: String, _lastName: String,
+        _partner: Person) {
+        this(_firstName, _lastName)
+        partner = _partner
+    }
 
-constructor(_firstName: String, _lastName: String,
-    _partner: Person) {
-    this(_firstName, _lastName)
-    partner = _partner
-}
+    fun fullName(): String {
+        return "$firstName $lastName"
+    }
 
-fun fullName(): String {
-    return "$firstName $lastName"
-}
+    fun hasPartner(): Boolean {
+        return (partner != null)
+    }
 
-fun hasPartner(): Boolean {
-    return (partner != null)
-}
+    override fun toString(): String {
+        return fullName()
+    }
 
-override fun toString(): String {
-    return fullName()
-}
+    override fun hashCode(): Int {
+        return (firstName.hashCode() * 28) + (lastName.hashCode() * 31)
+    }
 
-override fun hashCode(): Int {
-    return (firstName.hashCode() * 28) + (lastName.hashCode() * 31)
-}
-
-override fun equals(other: Any?): Boolean {
-    if (other is Person) {
-        return (firstName == other.firstName &&
-            lastName == other.lastName)
-    } else {
-        return false
+    override fun equals(other: Any?): Boolean {
+        if (other is Person) {
+            return (firstName == other.firstName &&
+                lastName == other.lastName)
+        } else {
+            return false
+        }
     }
 }
 ```
@@ -6590,15 +5506,13 @@ data class User(val email: String, val firstName: String, val lastName: String)
 
 这是一个非常紧凑的类。它似乎缺少了你与类相关的大部分内容：大括号、构造函数中的代码、任何辅助构造函数、实用的 `toString()`、功能性的 `hashCode()` 方法……事实上，`Person` 在列表 8.1 中拥有的所有内容，`User` 在列表 8.1 中并没有。
 
-
-
-
+```kotlin
 simpleRobert.email = "rprowell@rockwallblackbelt.com"
 simpleRobert.firstName = "Bob"
 val simpleRobert2 = SimpleUser(simpleRobert.email, simpleRobert.firstName, simpleRobert.lastName)
 
-```kotlin
 println(robert)
+
 if (robert.equals(robert)) {
     println("robert and robert are equal")
 } else {
@@ -6606,6 +5520,7 @@ if (robert.equals(robert)) {
 }
 
 println(simpleRobert)
+
 if (simpleRobert.equals(simpleRobert2)) {
     println("simpleRobert and simpleRobert2 are equal")
 } else {
@@ -6613,14 +5528,16 @@ if (simpleRobert.equals(simpleRobert2)) {
 }
 ```
 
+```text
 User(email=rprowell@rockwallblackbelt.com, firstName=Bob, lastName=Powell)
 robert and robert2 are equal
 or.wiley.kotlin.SimpleUser@58ceff1
 simpleRobert and simpleRobert2 are not equal
+```
 
-正如预期的，simpleRobert 和 simpleRobert2 是不等的。记住，默认情况下，对象相等是内存中的对象比较，由于 simpleRobert 和 simpleRobert2 不是同一个对象，因此它们不被视为相等。
+正如预期的，`simpleRobert` 和 `simpleRobert2` 是不等的。记住，默认情况下，对象相等是内存中的对象比较，由于 `simpleRobert` 和 `simpleRobert2` 不是同一个对象，因此它们不被视为相等。
 
-但 robert 和 robert2 都是数据类实例，它们报告为相等。它们的属性是相同的，而且因为有了“免费”的实现，它们获得了 `equals(x)`，因此它们报告为相等。
+但 `robert` 和 `robert2` 都是数据类实例，它们报告为相等。它们的属性是相同的，而且因为有了“免费”的实现，它们获得了 `equals(x)`，因此它们报告为相等。
 
 正如你所预期的那样，当修改了 `equals(x)` 时，会伴随相应的 `hashCode()`。这并不有趣（欢迎你自己将其作为一个练习），但数据类也提供了实用的 `hashCode()` 方法实现。
 
@@ -6640,13 +5557,13 @@ val (email, firstName, lastName) = robert
 
 # 通过声明解构数据 | 189
 
-> 警告 只要你到为止一直跟着本章的代码示例，并且这段代码出现在 User 的 robert 实例实例化之后，这段代码就能按所示工作。如果你没有跟着，只需创建一个数据类的新实例，确保类实例的属性已设置，然后你就可以像前面的代码那样对其进行解构。
+> 警告：只要你到为止一直跟着本章的代码示例，并且这段代码出现在 `User` 的 `robert` 实例实例化之后，这段代码就能按所示工作。如果你没有跟着，只需创建一个数据类的新实例，确保类实例的属性已设置，然后你就可以像前面的代码那样对其进行解构。
 
-这看起来很奇怪，但如果你盯着它看一会儿，需要一些时间才能理解。创建了三个变量：email、firstName 和 lastName。然后，通过解构声明一次性为它们都赋值了值。该声明从 robert 获取属性值，并将每个值分配给这三个变量。
+这看起来很奇怪，但如果你盯着它看一会儿，需要一些时间才能理解。创建了三个变量：`email`、`firstName` 和 `lastName`。然后，通过解构声明一次性为它们都赋值了值。该声明从 `robert` 获取属性值，并将每个值分配给这三个变量。
 
 这里是输出：
 
-```
+```text
 Email is rpowell@rockwallblackberry.com
 First name is Bob
 LastName is Powell
@@ -6656,10 +5573,11 @@ LastName is Powell
 
 # 解构声明并不特别聪明
 
-现在在你变得太兴奋之前，尝试这段代码，它看起来和之前的代码很，但实际上非常不同：
+现在在你变得太兴奋之前，尝试这段代码，它看起来和之前的代码很像，但实际上非常不同：
 
 ```kotlin
 val (firstName, lastName, email) = robert
+
 println("Email is ${email}")
 println("First name is ${firstName}")
 println("Last name is ${lastName}")
@@ -6667,20 +5585,20 @@ println("Last name is ${lastName}")
 
 这里的输出正是你所希望的：
 
-```
+```text
 Email is rpowell@rockwallblackberry.com
 First name is Bob
 ```
 
-所以发生了什么？Kotlin 并不知道名为 email 的变量意味着什么；它是一序列字母。当你使用解构声明时，Kotlin 并没有将对象的属性名匹配到变量名。你可以很容易地编写这样的代码：
+所以发生了什么？Kotlin 并不知道名为 `email` 的变量意味着什么；它是一序列字母。当你使用解构声明时，Kotlin 并没有将对象的属性名匹配到变量名。你可以很容易地编写这样的代码：
 
 ```kotlin
-val (a, b) = robert
+val (a, b, c) = robert
 ```
 
-这段代码可以工作，a 将拥有 email，b 将拥有 firstName，c 将拥有 lastName。Kotlin 仅仅是获取 User 中的第一个属性并将其分配给解构声明中的第一个变量，获取第二个属性，依此类推，这是一种有点笨的操作，尽管是一个有用的笨操作。
+这段代码可以工作，`a` 将拥有 `email`，`b` 将拥有 `firstName`，`c` 将拥有 `lastName`。Kotlin 仅仅是获取 `User` 中的第一个属性并将其分配给解构声明中的第一个变量，获取第二个属性，依此类推，这是一种有点笨的操作，尽管是一个有用的笨操作。
 
-事实上，如果你更改了数据类，你也会更改分配的内容。假设你像这行 User 的开头代码中所示：
+事实上，如果你更改了数据类，你也会更改分配的内容。假设你像这行 `User` 的开头代码中所示：
 
 ```kotlin
 data class User(var firstName: String, var lastName: String, var email: String)
@@ -6692,22 +5610,23 @@ data class User(var firstName: String, var lastName: String, var email: String)
 val (a, b, c) = robert
 ```
 
-现在 a 拥有 firstName、lastName 的值，而 c 拥有 email。
+现在 `a` 拥有 `firstName`、`lastName` 的值，而 `c` 拥有 `email`。
 
-> 注意 如果你想继续跟进——我们非常建议这样做——请确保将 email 返回到 User 的第一个属性，将 firstName 返回到第二个，将 lastName 返回到第三个。这将保持你的输出与本章的其他部分一致。
+> 注意：如果你想继续跟进——我们非常建议这样做——请确保将 `email` 返回到 `User` 的第一个属性，将 `firstName` 返回到第二个，将 `lastName` 返回到第三个。这将保持你的输出与本章的其他部分一致。
 
 # Kotlin 使用 component() 方法使声明工作
 
-在你变得太兴奋之前，你会意识到解构声明在其他类中不是自动的，它不是任何类都支持的。事实上，回到列表 8.4 显示的 SimpleUser。在你的测试类中尝试：
+在你变得太兴奋之前，你会意识到解构声明在其他类中不是自动的，它不是任何类都支持的。事实上，回到列表 8.4 显示的 `SimpleUser`。在你的测试类中尝试：
 
 ```kotlin
 val (email, firstName, lastName) = simpleRobert
+
 print("Email is ${email}")
 print("FirstName is ${firstName}")
 print("Last name is ${lastName}")
 ```
 
-> 注意 确保使用 operator 关键字而不是 User，后者是 User 的实例。
+> 注意：确保使用 `operator` 关键字而不是 `User`，后者是 `User` 的实例。
 
 所以发生了什么？Kotlin 使用 `component()` 方法使解构声明工作。对于数据类，编译器为每个属性生成一个 `componentN()` 函数：
 
@@ -6725,7 +5644,7 @@ val (email, lastName) = simpleRobert
 
 如果你更改解构声明中的变量顺序，输出将会改变：
 
-```
+```text
 Email is rpowell@rockwall.com
 First name is Bob
 ```
@@ -6742,9 +5661,9 @@ class SimpleUser(var email: String, var firstName: String, var lastName: String)
 
 # 如果可以使用类，就应该使用
 
-这真正突出了数据类的价值。虽然为 SimpleUser 添加 `component()` 函数的工作量不大，但维护工作是巨大的。想想这些方法可能需要更改：
+这真正突出了数据类的价值。虽然为 `SimpleUser` 添加 `component()` 函数的工作量不大，但维护工作是巨大的。想想这些方法可能需要更改：
 
-- 类添加了新属性，因此需要一个新的 componentN() 方法。
+- 类添加了新属性，因此需要一个新的 `componentN()` 方法。
 - 属性顺序改变，因此方法体需要返回正确的属性。
 - 删除了属性，因此相应的方法需要被删除。
 
@@ -6752,7 +5671,7 @@ class SimpleUser(var email: String, var firstName: String, var lastName: String)
 
 # 你可以“复制”对象或创建对象的副本
 
-多么绕口的口的标题！但它是真的：你有两种不同的方法来创建对象的副本，数据类在这方面非常有帮助。
+多么绕口的标题！但它是真的：你有两种不同的方法来创建对象的副本，数据类在这方面非常有帮助。
 
 # 使用 = 并没有实际创建副本
 
@@ -6762,11 +5681,13 @@ class SimpleUser(var email: String, var firstName: String, var lastName: String)
 val bob = robert
 ```
 
-这看起来很直接，但有一些问题。它实际上并没有创建任何副本。相反，你现在有两个变量：robert 和 bob。它们指向同一块内存，并指向同一个 User 实例。这意味着对其中一个的更改会影响另一个。
 
-尝试8.7所示的代码。
 
-> 列表 8.7: 使用 copy()
+这看起来很直接，但有一些问题。它实际上并没有创建任何副本。相反，你现在有两个变量：`robert` 和 `bob`。它们指向同一块内存，并指向同一个 `User` 实例。这意味着对其中一个的更改会影响另一个。
+
+尝试列表 8.7 所示的代码。
+
+> 列表 8.7: 使用 `copy()`
 
 ```kotlin
 // 创建指向 robert 实例的另一个变量
@@ -6783,10 +5704,6 @@ println("Bob's first name: ${bob.firstName}")
 println("Robert's first name: ${robert.firstName}")
 ```
 
-
-
-
-
 # 你可以“复制”对象或为对象创建副本 | 193
 
 这里是输出：
@@ -6800,39 +5717,37 @@ Robert's first name: Bob
 
 这里最重要的点是意识到实际的对象实例存在于内存中，而 `robert` 变量只是对该内存的引用。当你使用 `=` 将 `robert` 赋值给新变量——`bob`时，你只是将其赋值给了 `bob`。
 
-当你更改 `bob` 的 `firstName` 属性时，你改变的是 `bob` 实际指向的内容——这恰好也是 `bob` 指向的内容。因此，更改反映在两个变量中，实际上任何引用同一个内存实例的变量都会发生变化。
+当你更改 `bob` 的 `firstName` 属性时，你改变的是 `bob` 实际指向的内容——这恰好也是 `robert` 指向的内容。因此，更改反映在两个变量中，实际上任何引用同一个内存实例的变量都会发生变化。
 
-# 如果你需要一个真正的副本。使用 copy()
+# 如果你需要一个真正的副本，使用 copy()
 
 如果你想要一个真正的副本，不能使用 `=`。你必须使用 `copy()` 方法，这是数据类为你免费提供的另一个功能。
 
 `copy()` 的工作方式就像你预期的一样。你获得了一个带有新实例的新变量，但该实例从开始包含了旧实例的所有值。它的样子如下：
 
-```
+```kotlin
 // 创建一个作为 robert 实例副本的变量
 val differentBob = robert.copy()
 ```
 
-| 非数据类默认没有实用的 copy() 实现，请确保你是在数据类实例上使用 copy() |
+| 非数据类默认没有实用的 `copy()` 实现，请确保你是在数据类实例上使用 `copy()` |
 
-这里实际发生的情况是，现在有两个对象实例在运行：一个是 `robert` 指向的原始实例，另一个是 `bob` 指向的新实例——它有自己的内存空间。
+这里实际发生的情况是，现在有两个对象实例在运行：一个是 `robert` 指向的原始实例，另一个是 `differentBob` 指向的新实例——它有自己的内存空间。
 
 你可以通过更多的代码来看到这一操作，如列表 8.8 所示。
 
 # 列表 8.8：从 = 迁移到 copy()
 
-```
+```kotlin
 // 创建一个作为 robert 实例副本的变量
 val differentBob = robert.copy()
 
 // 修改原始实例
 robert.firstName = "Robert"
 robert.email = "powell@rbba.com"
-
 println("Bob's name is ${bob.email}")
 println("Bob's first name is ${bob.firstName}")
 println("Bob's last name is ${bob.lastName}")
-
 println("Different Bob's name is ${differentBob.email}")
 println("Different Bob's first name is ${differentBob.firstName}")
 println("Different Bob's last name is ${differentBob.lastName}")
@@ -6855,17 +5770,17 @@ Different Bob's last name is Powell
 
 显然，数据类提供了许多优势。此外，你会发现你的很多类几乎可以无缝地转换为数据类。只需在类声明的 `class` 之前添加 `data` 关键字，即可开始：
 
-```
+```kotlin
 data class User(var email: String, var firstName: String, var lastName: String)
 ```
 
-但有些原因，尽管这些通常很容易满足
+但有些原因，尽管这些通常很容易满足。
 
 # 数据类需要参数以及 val 或 var
 
 在数据类的主构造函数中，你必须至少有一个参数。这意味着以下 Kotlin 代码是无效的：
 
-```
+```kotlin
 data class User
 ```
 
@@ -6877,11 +5792,11 @@ data class User(var email: String, var firstName: String, var lastName: String)
 
 这应该是完全理解的。数据类是关于数据的，如果你的类实际上没有代表任何数据——即通过主构造函数中的参数传递给类——那么整个想法就崩塌了。
 
-此外，类构造函数的参数必须是 `val` 或 `var`。这也是合合理的，因为数据类确实是一个旨在方便存储属性值的对象。`var` 告诉数据类该属性既可以设置也可以获取（可变的），而 `val` 告诉数据类该属性是只读的（不可变的）。
+此外，类构造函数的参数必须是 `val` 或 `var`。这也是合理的，因为数据类确实是一个旨在方便存储属性值的对象。`var` 告诉数据类该属性既可以设置也可以获取（可变的），而 `val` 告诉数据类该属性是只读的（不可变的）。
 
-提醒一下，这种情况不成立的情况是主构造函数接收了用于创建新值的值。例如，假设你创建了一个类接收一组值，并且只了最小值、最大值，还计算了平均值：
+提醒一下，这种情况不成立的情况是主构造函数接收了用于创建新值的值。例如，假设你创建了一个类接收一组值，并且只计算了最小值、最大值，还计算了平均值：
 
-```
+```kotlin
 class Calculator(values: Set)
 ```
 
@@ -6889,23 +5804,23 @@ class Calculator(values: Set)
 
 但作为数据类，这是无法运行的。要让它工作，值必须被存储：
 
-```
+```kotlin
 data class Calculator(val values: Set)
 ```
 
-> 注意 应该直说，这个例子有点愚蠢。几乎没有理由让一个使用此类值的类不将这些值存储为属性。事实上，有人认为，如果一个像 `Calculator` 这样使用一组值的类不存储输入值，那么它的设计就很糟糕。
+> 注意：应该直说，这个例子有点愚蠢。几乎没有理由让一个使用此类值的类不将这些值存储为属性。事实上，有人认为，如果一个像 `Calculator` 这样使用一组值的类不存储输入值，那么它的设计就很糟糕。
 
 # 数据类不能是抽象、开放、密封或内部的
 
-数据类的另一个要求是它们不能是 abstract、open、sealed 或 inner。你已经见过 open 类了，但还没有涉及到 sealed、inner 或 abstract 类。不过不用担心：这些内容将在第 9 章中介绍。
+数据类的另一个要求是它们不能是 `abstract`、`open`、`sealed` 或 `inner`。你已经见过 `open` 类了，但还没有涉及到 `sealed`、`inner` 或 `abstract` 类。不过不用担心：这些内容将在第 9 章中介绍。
 
-这大部分内容可以归结为简单的一点：数据类可以继承自一个非类，但其本身不能被继承。如果你创建了一个 `User` 类，你将无法继承它并创建一个 `SuperUser` 类。这就是此处的 abstract、open、sealed 和 inner 类相关之处的共同点：它们被设计为可以被继承的。
+这大部分内容可以归结为简单的一点：数据类可以继承自一个非数据类，但其本身不能被继承。如果你创建了一个 `User` 类，你将无法继承它并创建一个 `SuperUser` 类。这就是此处的 `abstract`、`open`、`sealed` 和 `inner` 类相关之处的共同点：它们被设计为可以被继承的。
 
 问题在于，数据类完全由编译器生成的未显式声明的方法和属性组成。但当你继承一个类时，这些正是你通常会重写或扩展的内容。对于子类来说，在不了解比 Kotlin 显式提供的更多代码的情况下，修改编译器生成的代码根本没有一致的方法。
 
-数据类继承父类仍然是合法的。这也很直直观，因为你现在已经知道 Kotlin 类隐式继承自 `Any`。
+数据类继承父类仍然是合法的。这也很直观，因为你现在已经知道 Kotlin 类隐式继承自 `Any`。
 
-> 警告 除了继承自 `Any` 的隐式继承外，你应该尽量避免创建一个继承自另一个自定义类的数据类，或修复任何非 final 的类。数据类中编译器生成的代码与普通继承之间的冲突可能会导致许多复杂的逻辑。
+> 警告：除了继承自 `Any` 的隐式继承外，你应该尽量避免创建一个继承自另一个自定义类的数据类，或修复任何非 `final` 的类。数据类中编译器生成的代码与普通继承之间的冲突可能会导致许多复杂的逻辑。
 
 目前也有越来越多的关于在数据类中禁止继承的讨论和趋势。虽然在本文写作时这仍然是合法的，但在未来的 Kotlin 版本中可能不再了，所以最好未雨绸缪，现在让数据类独立存在。
 
@@ -6919,8 +5834,8 @@ data class Calculator(val values: Set)
 
 你所做的只是定义这些函数的自己的版本，Kotlin 就不会生成相应的版本。列表 8.9 为 `User` 添加了自定义的 `toString()`。
 
-```
-Listing 8.9: 重写了 toString 的数据类
+> 列表 8.9: 重写了 `toString` 的数据类
+
 ```kotlin
 package org.wiley.kotlin.user
 data class User(var email: String, var firstName: String, var lastName: String) {
@@ -6930,14 +5845,17 @@ data class User(var email: String, var firstName: String, var lastName: String) 
 }
 ```
 
-如果你执行这个函数，例如使用 `println(robert)`（假设 `robert` 是 User 的实例），你会得到类似：
+如果你执行这个函数，例如使用 `println(robert)`（假设 `robert` 是 `User` 的实例），你会得到类似：
 
+```
 Bob Powell with an email of rpowell@rockwallblackbelt.com
+```
 
 Kotlin 使用你的 `toString()` 版本而不生成自己的。
+
 `equals()` 和 `hashCode()` 也是如此。你自己重写它们，Kotlin 就会使用你的版本。然而，正如前面的章节中提到的最佳实践：如果你重写了 `equals()`，你必须用相应的代码版本重写 `hashCode()`。
 
-> 注意 在重写这些生成的方法时要小心。当你为你 Kotlin 生成的内容编写代码时，你会失去数据类的大部分价值。
+> 注意：在重写这些生成的方法时要小心。当你为 Kotlin 生成的内容编写代码时，你会失去数据类的大部分价值。
 
 你可以重写 `equals()`、`hashCode()` 和 `toString()`，但你不能重写 `copy()` 或 `componentN()` 函数。这些必须保持为编译器生成。
 
@@ -6945,13 +5863,9 @@ Kotlin 使用你的 `toString()` 版本而不生成自己的。
 
 通常情况下，如果你创建一个继承自父类的数据类，父类中任何标记为 `final` 的方法都会导致不生成这些方法。因此，如果数据类继承的类有一个 `final` 的 `toString()` 版本，那么该版本也将用于该数据类。
 
-
-
-
-
 # 数据类为生成的代码添加特殊行为
 
-> 注意：你可能还没有见过 `final` 关键字，但它的作用正如其名所示：将一段代码标记为“最终的（final）”，并允许子类重写或替换该代码。
+> 注意：你可能还没有见过 `final` 关键字，但它的作用正如其名所示：将一段代码标记为“最终的（final）”，并**不**允许子类重写或替换该代码。
 
 如果父类拥有 `componentN()` 函数，情况就会变得稍微复杂一些。只要 `componentN()` 函数被标记为 `open` 并且返回兼容的类型，数据类就不会为这些函数生成代码。如果它们不是 `open` 的，或者返回类型上不兼容，Kotlin 将抛出错误，因为数据类无法生成能够与父类协作的代码。
 
@@ -6963,7 +5877,7 @@ Kotlin 使用你的 `toString()` 版本而不生成自己的。
 
 你现在已经在几种情况下看到，构造函数并不是向类传递数据的唯一方法。你也可以在类体内声明属性。这些属性源自构造函数参数。列表 8.10 是 `Person` 类的旧版本，它在类内部声明了属性的代码。
 
-+ 列表 8.10：带有额外属性的 Person
+> 列表 8.10：带有额外属性的 Person
 
 ```kotlin
 package org.wiley.kotlin.person
@@ -6981,9 +5895,9 @@ class Person(var firstName: String, var lastName: String) {
 }
 ```
 
-在这里，`fullName` 属性根据给构造函数的两个参数 `firstName` 和 `lastName` 赋值值。如果你愿意，可以将其转换为数据类，如列表 8.11 所示。
+在这里，`fullName` 属性根据给构造函数的两个参数 `firstName` 和 `lastName` 赋值。如果你愿意，可以将其转换为数据类，如列表 8.11 所示。
 
-# 列表 8.11：带有额外属性的 Person，转换为数据类 org.wiley.kotlin.person
+> 列表 8.11：带有额外属性的 Person，转换为数据类 `org.wiley.kotlin.person`
 
 ```kotlin
 package org.wiley.kotlin.person
@@ -7018,7 +5932,7 @@ println(person.fullName)
 
 这段代码之所以有效，是因为 Kotlin 总是会对你以这种方式声明的属性设置访问。然而，`fullName` 不会被用于生成的方法（如 `equals()` 和 `toString()`）。若要看到这一点，请移除重写的 `toString()` 版本，如列表 8.12 所示。
 
-# 列表 8.12：带有声明属性的数据类 Person org.wiley.kotlin.person
+> 列表 8.12：带有声明属性的数据类 Person `org.wiley.kotlin.person`
 
 ```kotlin
 package org.wiley.kotlin.person
@@ -7041,13 +5955,10 @@ println(person.toString())
 ```
 
 输出结果如下（注：此处原文漏掉了 `.toString()`，但根据上下文推断应如此）：
+
 ```
 Brian Smith
 ```
-
-
-
-
 
 # #9 枚举、密封类以及更多特殊类
 
@@ -7063,9 +5974,10 @@ Brian Smith
 # 字符串作为静态类型表示是糟糕的
 
 现在是时候看看构建类结构时最常见且往往令人烦恼的方面了：常量以及使用这些常量的变量。具体来说，就是确保某个特定属性只能有一组特定值的常见问题。
+
 列表 9.1 显示了一个非常简单的测试类，可以很快说明这一问题。
 
-列表 9.1：创建一个特定类型的用户
+> 列表 9.1：创建一个特定类型的用户
 
 ```kotlin
 import org.wiley.kotlin.user.User
@@ -7081,11 +5993,13 @@ fun main() {
 }
 ```
 
-> 注意 如果你想匹配可下载的示例文件，或者完全按照此操作，这个类是 EnumApp 类。
+> 注意：如果你想匹配可下载的示例文件，或者完全按照此操作，这个类是 `EnumApp` 类。
 
-将此类与列表 9.2 结合，稍微改进了第 8 章中的 User 类。
+将此类与列表 9.2 结合，稍微改进了第 8 章中的 `User` 类。
 
-列表 9.2：带有类型的用户类
+> 列表 9.2：带有类型的用户类
+
+
 
 ```kotlin
 package org.wiley.kotlin.user
@@ -7109,13 +6023,13 @@ Keep at it, you'll be an admin one day!
 
 # 字符串是糟糕的类型表示
 
-从本质上说，这里只有几行臭名昭彰的代码。首先是实例化了一个新的 User 实例：
+从本质上说，这里只有几行臭名昭彰的代码。首先是实例化了一个新的 `User` 实例：
 
 ```kotlin
 val bardia = User("bardia@gmail.com", "Bardia", "Dejaman", "ADMIN")
 ```
 
-其次，是 User 类中实际报告用户是否为管理员的代码：
+其次，是 `User` 类中实际报告用户是否为管理员的代码：
 
 ```kotlin
 fun isAdmin(): Boolean {
@@ -7127,7 +6041,7 @@ fun isAdmin(): Boolean {
 
 # 大小写产生了比较问题
 
-一种修复方法是不考虑大小写。对 isAdmin() 进行修改：
+一种修复方法是不考虑大小写。对 `isAdmin()` 进行修改：
 
 ```kotlin
 fun isAdmin(): Boolean {
@@ -7137,13 +6051,13 @@ fun isAdmin(): Boolean {
 
 `equals()` 的这个变更为字符串比较提供了一个额外的参数：`ignoreCase`。默认值为 `false`，所以 "Admin" 和 "ADMIN" 不认为相等。将 `ignoreCase` 参数设置为 `true` 时，“Admin" 和 "ADMIN"（以及 "ADMIN" 和 "admin"）将报告相等。
 
-现在你可以重新运行测试类，你会发现 bardia 实例正确报告为管理员：
+现在你可以重新运行测试类，你会发现 `bardia` 实例正确报告为管理员：
 
 You are frothing with power!
 
 但在你感到太舒服之前，这仍然是脆弱的。经验丰富的开发者知道接下来是什么。列表 9.3 在测试类中增加了另一个预期的管理员，并遍历所有实例以检查它们是否为管理员。
 
-列表 9.3：一个检查管理员的更新测试类
+## 列表 9.3：一个检查管理员的更新测试类
 
 ```kotlin
 import org.wiley.kotlin.user.User
@@ -7167,11 +6081,12 @@ fun main() {
 输出并不意外：
 
 Bardia Dejban is frothing with power!
+
 Shawn Khorrami is still working at it... maybe one day!
 
-这里的问题是大小写，但使用了 "Administrator" 而不是某些 "Admin"。结果是 "Admin"（User 的 isAdmin() 方法使用的值）不匹配 "Administrator"，所以第二个实例的 isAdmin() 返回了 false。
+这里的问题是大小写，但使用了 "Administrator" 而不是某些 "Admin"。结果是 "Admin"（`User` 的 `isAdmin()` 方法使用的值）不匹配 "Administrator"，所以第二个实例的 `isAdmin()` 返回了 `false`。
 
-同样，这可以通过对 isAdmin() 函数进行微调来修复：
+同样，这可以通过对 `isAdmin()` 函数进行微调来修复：
 
 ```kotlin
 fun isAdmin(): Boolean {
@@ -7184,13 +6099,13 @@ fun isAdmin(): Boolean {
 
 # 这个问题无处不在
 
-这是一个编程中的常见问题。当你构建对象时，无论是人（早期章节中的 Person 类）、汽车还是交易，你都会对这些实例进行分类。该属性可能被称为 `type`，就像在 User 中那样，但你需要一种方法来判断实例是“这个”还是“那个”。另一个问题比字符串比较更大，它是基础，要求你反复实现。
+这是一个编程中的常见问题。当你构建对象时，无论是人（早期章节中的 `Person` 类）、汽车还是交易，你都会对这些实例进行分类。该属性可能被称为 `type`，就像在 `User` 中那样，但你需要一种方法来判断实例是“这个”还是“那个”。另一个问题比字符串比较更大，它是基础，要求你反复实现。
 
 # 常量可以帮助……
 
-处理类型的常用后续步骤是使用常量。这提供了一个固定名称，允许其他代码使用该固定名称而无需担心值。你可以通过 Kotlin 中的 `const` 关键字来实现这一点。列表 9.4 为 User 类添加了几个常量。
+处理类型的常用后续步骤是使用常量。这提供了一个固定名称，允许其他代码使用该固定名称而无需担心值。你可以通过 Kotlin 中的 `const` 关键字来实现这一点。列表 9.4 为 `User` 类添加了几个常量。
 
-列表 9.4：在 User 类中添加常量
+## 列表 9.4：在 User 类中添加常量
 
 ```kotlin
 package org.wiley.kotlin.user
@@ -7224,9 +6139,9 @@ val ADMIN = "Admin"
 
 > 注意 如果你有 Java 经验，可能会将其识别为 `public final` 变量。但正如你即将看到的，Kotlin 中的 static 概念并不是以相同方式表示。
 
-在任何情况下，这里的想法是 bardia.ADMIN 和 shawn.ADMIN 不返回相等的值，但它们会返回相同的值。在这种语境下，“相同”不仅仅意味着 `shawn.ADMIN.equals(bardia.ADMIN)` 返回 true。更进一步：shawn.ADMIN 和 bardia.ADMIN 实际上是同一块内存，是底层的同一个实际对象。
+在任何情况下，这里的想法是 `bardia.ADMIN` 和 `shawn.ADMIN` 不返回相等的值，但它们会返回相同的值。在这种语境下，“相同”不仅仅意味着 `shawn.ADMIN.equals(bardia.ADMIN)` 返回 true。更进一步：`shawn.ADMIN` 和 `bardia.ADMIN` 实际上是同一块内存，是底层的同一个实际对象。
 
-只要在比较的双方都使用 ADMIN，它就能生效。你会想要修改测试代码使用这个类：
+只要在比较的双方都使用 `ADMIN`，它就能生效。你会想要修改测试代码使用这个类：
 
 ```kotlin
 users.add(User("bardia@gmail.com", "Bardia", "Dejban", User.ADMIN))
@@ -7244,7 +6159,7 @@ Kotlin: Const 'val' are only allowed on top level or in objects
 
 列表 9.5 代码有什么问题？
 
-列表 9.5：无法编译的当前 User 类
+## 列表 9.5：无法编译的当前 User 类
 
 ```kotlin
 package org.wiley.kotlin.user
@@ -7266,40 +6181,36 @@ override fun toString(): String {
 }
 ```
 
-这里的问题与存在多个 User 实例有关。
+这里的问题与存在多个 `User` 实例有关。
 
 # 常量必须是唯一的
 
-这显而易见，但这里的问题与 User 是可以（且必须）实例化的对象有关。作为提醒，这里使用 User 对象的测试片段：
+这显而易见，但这里的问题与 `User` 是可以（且必须）实例化的对象有关。作为提醒，这里使用 `User` 对象的测试片段：
 
 ```kotlin
 users.add(User("bardia@gmail.com", "Bardia", "Dejban", "ADMIN"))
 users.add(User("shawn@gmail.com", "Shawn", "Khorrami", "Administrator"))
 ```
 
-一旦这两行代码执行，就有两个 User 实例。每个实例都有一个常量。第一个名为 "Bardia"，有一个 ADMIN 常量，第二个名为 "Shawn"。
+一旦这两行代码执行，就有两个 `User` 实例。每个实例都有一个常量。第一个名为 "Bardia"，有一个 `ADMIN` 常量，第二个名为 "Shawn"。
 
-Kotlin 识别出这是一个问题。ADMIN 常量不存在于所有实例；它是每个 User 实例的属性。对于字符串常量来说，这并不是大问题。假设第一个 User 实例命名为 bardia，第二个为 shawn。在这种情况下，你可以比较 bardia.ADMIN 和 shawn.ADMIN 并得到 true 结果。因为使用 `equals()` 的字符串比较只比较实际的字符串值。
+Kotlin 识别出这是一个问题。`ADMIN` 常量不存在于所有实例；它是每个 `User` 实例的属性。对于字符串常量来说，这并不是大问题。假设第一个 `User` 实例命名为 `bardia`，第二个为 `shawn`。在这种情况下，你可以比较 `bardia.ADMIN` 和 `shawn.ADMIN` 并得到 true 结果。因为使用 `equals()` 的字符串比较只比较实际的字符串值。
 
 但如果你使用 `==` 或任何实际上执行内存级比较的 `equals()` 版本，那么两个实例中相同常量的比较可能会返回 false。这是一个大问题。
 
 > 对于 Java 程序员来说，这正是 `static` 关键字所防止的。它告诉 Java 在类的所有实例之间共享变量或方法。这是你在 Kotlin 中想要的，但你必须学习如何在 Kotlin 中这样做。
 
-在某些层面上，这里的想法是 bardia.ADMIN 和 shawn.ADMIN 不返回相等的值，但它们会返回相同的值。在这种语境下，“相同”不仅仅意味着 `shawn.ADMIN.equals(bardia.ADMIN)` 返回 true。更进一步：shawn.ADMIN 和 bardia.ADMIN 实际上是同一块内存，是底层的同一个实际对象。
+在某些层面上，这里的想法是 `bardia.ADMIN` 和 `shawn.ADMIN` 不返回相等的值，但它们会返回相同的值。在这种语境下，“相同”不仅仅意味着 `shawn.ADMIN.equals(bardia.ADMIN)` 返回 true。更进一步：`shawn.ADMIN` 和 `bardia.ADMIN` 实际上是同一块内存，是底层的同一个实际对象。
 
-所以再进一步一步。这使得更加明显，存在一个所有 User 实例共享的单一属性。
-
-
-
-
+所以再进一步一步。这使得更加明显，存在一个所有 `User` 实例共享的单一属性。
 
 # 伴随对象是单例
 
 你现在需要理解一个重要的概念：单例（singleton）。单例是指在特定系统中只有一个实例的类。因此，即使你可能在代码中的一百个地方（两处或五处）引用了该对象，在每个引用中使用的都是同一个实例。
 
-在 Kotlin 中，这就是伴随对象（companion object）的作用。伴随对象声明在其所伴随的对象内部。列表 9.6 引用了列表 9.5 的代码并引入了伴随对象，然后将 ADMIN 的定义放置在该伴随对象内部。
+在 Kotlin 中，这就是伴随对象（companion object）的作用。伴随对象声明在其所伴随的对象内部。列表 9.6 引用了列表 9.5 的代码并引入了伴随对象，然后将 `ADMIN` 的定义放置在该伴随对象内部。
 
-- 列表 9.6：为 User 添加无名的伴随对象
+## 列表 9.6：为 User 添加无名的伴随对象
 
 ```kotlin
 package org.wiley.kotlin.user
@@ -7319,9 +6230,11 @@ class User(var email: String, var firstName: String, var lastName: String, var t
 }
 ```
 
-在这种情况下，该伴随对象没有名称，因此你可以通过 User 引用 ADMIN 属性：
+在这种情况下，该伴随对象没有名称，因此你可以通过 `User` 引用 `ADMIN` 属性：
 
+```kotlin
 println(User.ADMIN)
+```
 
 现在你可以去你的测试类并修改代码来使用这个伴随对象属性了：
 
@@ -7333,20 +6246,21 @@ users.add(User("shawn@gmail.com", "Shawn", "Khorrami", "User.ADMIN"))
 这段代码现在可以编译，并带给你你预期的输出：
 
 Bardia Dejan is frothing with power:
+
 Shawn Khorrami is frothing with power!
 
 值得仔细梳理一下这里发生了什么，以便非常清晰地理解单例的效果。
 
-首先，创建了 User 的实例。
+首先，创建了 `User` 的实例。
 
 ```kotlin
 users.add(User("bardia@gmail.com", "Bardia", "Dejban", "User.ADMIN"))
 users.add(User("shawn@gmail.com", "Shawn", "Khorrami", "User.ADMIN"))
 ```
 
-两者的类型都是 `User.ADMIN`，这是在伴随对象中定义的数值。因此，两者的 type 值完全相同。再次强调，这不仅仅意味着它们都拥有一个 "ADMIN" 的字符串值。这意味着它们都指向内存中的同一个实际位置，而该位置由 User 的伴随对象“所有”。
+两者的类型都是 `User.ADMIN`，这是在伴随对象中定义的数值。因此，两者的 `type` 值完全相同。再次强调，这不仅仅意味着它们都拥有一个 "ADMIN" 的字符串值。这意味着它们都指向内存中的同一个实际位置，而该位置由 `User` 的伴随对象“所有”。
 
-对于这些每一个实例，都调用了 isAdmin() 函数，该函数运行了以下代码：
+对于这些每一个实例，都调用了 `isAdmin()` 函数，该函数运行了以下代码：
 
 ```kotlin
 fun isAdmin(): Boolean {
@@ -7354,17 +6268,17 @@ fun isAdmin(): Boolean {
 }
 ```
 
-type 值是 `User.ADMIN` 属性，它与完全相同的属性进行比较。请记住，这实际上会导致每当你使用 `User.ADMIN` 或在 User 类内部直接使用 `ADMIN` 时，引用的都是同一个实例对象属性。
+`type` 值是 `User.ADMIN` 属性，它与完全相同的属性进行比较。请记住，这实际上会导致每当你使用 `User.ADMIN` 或在 `User` 类内部直接使用 `ADMIN` 时，引用的都是同一个实例对象属性。
 
 这就是作为单例的伴随对象的威力和用途：它消除了关于数值的任何歧义，并确保在尽可能深、最低的层级上比较相等。
 
 # 伴随对象仍然是对象
 
-在回到当前问题——User 类以及通用的常量和类型安全之前——值得更深入地观察伴随对象。从本质上说，伴随对象是单例，因此它们仅仅是对象。它们拥有名称、自己的属性和函数。
+在回到当前问题——`User` 类以及通用的常量和类型安全之前——值得更深入地观察伴随对象。从本质上说，伴随对象是单例，因此它们仅仅是对象。它们拥有名称、自己的属性和函数。
 
-列表 9.7 取了列表 9.6 中的 User 版本，并为其伴随对象添加了很多内容，包括一个名称。它还在那里添加了一些函数。
+列表 9.7 取了列表 9.6 中的 `User` 版本，并为其伴随对象添加了很多内容，包括一个名称。它还在那里添加了一些函数。
 
-- 列表 9.7：填充 User 的伴随对象
+## 列表 9.7：填充 User 的伴随对象
 
 ```kotlin
 package org.wiley.kotlin.user
@@ -7401,17 +6315,19 @@ override fun toString(): String {
 
 这里有几点需要注意，当你开始使用伴随对象时，这些都是重要的：
 
-- 伴随对象可以有一个名称，在此例中为 Factory。
+- 伴随对象可以有一个名称，在此例中为 `Factory`。
 - 伴随对象可以拥有函数。
 - 伴随对象的函数通常返回包含对象的类型（换句话说，即该伴随对象所属的对象）。
 
-这是一个相当清晰的概念。伴随对象现在被称为 Factory，除了 ADMIN 上下文外，它还定义了一些额外的用户类型：MANAGER 和 END_USER。它还定义了一个 DEFAULT 类型，该类型引用了 END_USER 类型。
+这是一个相当清晰的概念。伴随对象现在被称为 `Factory`，除了 `ADMIN` 上下文外，它还定义了一些额外的用户类型：`MANAGER` 和 `END_USER`。它还定义了一个 `DEFAULT` 类型，该类型引用了 `END_USER` 类型。
 
-它还添加了仅通过名字和姓氏就能创建几个用户的方法。这意味着这段代码的使用者（不是 User 实例，而是所有开发者）如果他们不想，就不需要时刻记住像 `User.ADMIN` 这样的常量。相反，他们可以使用 `createAdmin()` 或 `createManager()`，类型的细节将由它们处理。
+它还添加了仅通过名字和姓氏就能创建几个用户的方法。这意味着这段代码的使用者（不是 `User` 实例，而是所有开发者）如果他们不想，就不需要时刻记住像 `User.ADMIN` 这样的常量。相反，他们可以使用 `createAdmin()` 或 `createManager()`，类型的细节将由它们处理。
 
 # 你可以使用无名称的伴随对象
 
 如果你将代码更新以匹配 9.7 并运行，你可能会注意到某些不寻常：
+
+
 
 ```kotlin
 users.add(User("bardia@gmail.com", "Bardia", "Dejban", "User.ADMIN"))
@@ -7472,8 +6388,6 @@ fun main() {
   users.add(User.Factory.createManager("bastion@gmail.com", "Bastion", "Fennell"))
 }
 ```
-
-
 
 ```kotlin
 for (user in users) {
@@ -7646,10 +6560,6 @@ data class User(var email: String, var firstName: String, var lastName: String, 
 
 你现在已经消除了零散类型的使用，并消除了其他代码提供随机字符串的可能性。
 
-
-
-
-
 ## 列表 9.14：带有特定 UserType 的用户
 
 ```kotlin
@@ -7695,6 +6605,8 @@ enum class UserType {
     }
 }
 ```
+
+
 
 需要注意的是，这看起来与其他任何重写了从隐式继承的 `Any` 类行为的相同。但有一个特殊之处：对名为 `name` 的属性的使用。
 
@@ -7812,90 +6724,16 @@ if (users.first().type.isSuperUser()) {
 }
 ```
 
-## 密封类是类型安全的类层次
+## 密封类是类型安全的类层次结构
 
 到此时，你拥有了一个非常强大且可配置的工具——枚举——用于表示常量值。你不需要依赖不提供类型安全的常量，也不需要担心命名。
-
-## 密封类是类型安全的类层次
-
-到此时，你拥有了一个非常强大且可配置的工具——枚举——用于表示常量值。你不需要依赖不提供类型安全的常量，也不需要担心命名。
-
-## 密封类是类型安全的类层次
-
-到此时，你拥有了一个非常强大且可配置的工具——枚举——用于表示常量值。你不需要依赖不提供类型安全的常量，也不需要担心命名。
-
-## 密封类是类型安全的类层次
-
-到此时，你拥有了一个非常强大且可配置的工具——枚举——用于表示常量值。你不需要依赖不提供类型安全的常量，也不需要担心命名。
-
-## 密封类是类型安全的类层次
-
-到此时，你拥有了一个非常强大且可配置的工具——枚举——用于表示常量值。你不需要依赖不提供类型安全的常量，也不需要担心命名。
-
-## 密封类是类型安全的类层次
-
-到此时，你拥有了一个非常强大且可配置的工具——枚举——用于表示常量值。你不需要依赖不提供类型安全的常量，也不需要担心命名。
-
-## 密封类是类型安全的类层次
-
-到此时，你拥有了一个非常强大且可配置的工具——枚举——用于表示常量值。你不需要依赖不提供类型安全的常量，也不需要担心命名。
-
-## 密封类是类型安全的类层次
-
-到此时，你拥有了一个非常强大且可配置的工具——枚举——用于表示常量值。你不需要依赖不提供类型安全的常量，也不需要担心命名。
-
-## 密封类是类型安全的类层次
-
-到此时，你拥有了一个非常强大且可配置的工具——枚举——用于表示常量值。你不需要依赖不提供类型安全的常量，也不需要担心命名。
-
-## 密封类是类型安全的类层次
-
-到此时，你拥有了一个非常强大且可配置的工具——枚举——用于表示常量值。你不需要依赖不提供类型安全的常量，也不需要担心命名。
-
-## 密封类是类型安全的类层次
-
-到此时，你拥有了一个非常强大且可配置的工具——枚举——用于表示常量值。你不需要依赖不提供类型安全的常量，也不需要担心命名。
-
-## 密封类是类型安全的类层次
-
-到此时，你拥有了一个非常强大且可配置的工具——枚举——用于表示常量值。你不需要依赖不提供类型安全的常量，也不需要担心命名。
-
-## 密封类是类型安全的类层次
-
-到此时，你拥有了一个非常强大且可配置的工具——枚举——用于表示常量值。你不需要依赖不提供类型安全的常量，也不需要担心命名。
-
-## 密封类是类型安全的类层次
-
-到此时，你拥有了一个非常强大且可配置的工具——枚举——用于表示常量值。你不需要依赖不提供类型安全的常量，也不需要担心命名。
-
-## 密封类是类型安全的类层次
-
-到此时，你拥有了一个非常强大且可配置的工具——枚举——用于表示常量值。你不需要依赖不提供类型安全的常量，也不需要担心命名。
-
-## 密封类是类型安全的类层次
-
-到此时，你拥有了一个非常强大且可配置的工具——枚举——用于表示常量值。你不需要依赖不提供类型安全的常量，也不需要担心命名。
-
-## 密封类是类型安全的类层次
-
-到此时，你拥有了一个非常强大且可配置的工具——枚举——用于表示常量值。你不需要依赖不提供类型安全的常量，也不需要担心命名。
-
-## 密封类是类型安全的类层次
-
-回一下你的高中数学课。记得那些日子吗？有一组值和一组运算符，这些运算符可以应用到值上。基本操作是加法、减法、乘法和除法。真的只有这些。还有一些其他的——幂和根号，它们没那么常见，但总共六种。
-
-一旦你掌握了这六种操作，基本上就完成了。那是——用法变得复杂，但运算符保持基本不变。所以，假设你想用 Kotlin 编写一个计算器程序。你需要表示这些操作。
-
-
-
-
-# 密封类是类型安全的类层次结构
 
 > 注意：如果你花了很多时间在网上或书籍上学习 Kotlin，你会发现几乎每次提到密封类（sealed classes）时，使用的示例都围绕操作（operations）展开。这对密封类来说是一个完美的例子，事实证明并没有很多其他优秀的密封类示例。
 
 你可以通过其他方式构建密封类；但事实是，在很多情况下，并不需要密封类。因此，与其编造一个并不适合密封类的例子，不如我们采取相同的方法：使用一个密封类是一个好主意的完美例子，即使这个例子你在其他资源中也见过。
 
 自然地，你会从一个基类开始，可能命名为 `Operation`。这与之前示例中的 `Auto` 类似；所有继承自 `Operation` 的都是。`Operation` 并不是一个枚举（enum）。你不需要 `Divide` 或其他操作的常量；你想要具有行为的实际子类。
+
 所以你可能会为 `Operation` 准备类似列表 9.20 的内容。
 
 - 列表 9.20：一个用于被子类的简单 Operation 类
@@ -7919,16 +6757,17 @@ class Add : Operation() {
 }
 ```
 
-# 密封类没有共享行为
+### 密封类没有共享行为
 
 初看之下，这里没什么特别的。关键在于考虑不同操作之间的共享行为。`Add`、`Subtract`、`Multiply`、`Divide` 以及其他操作之间有什么共同点？
+
 换句话说，在 `Operation` 中定义的适用于所有操作的函数有哪些？会有这样的函数吗？哪怕只有一个呢？
 
 答案是：“并不如此。”每个操作确实都是操作，但它们的操作方式从根本上说是不同的。这是你可能有一个密封类的良好用例的两个指标之一。
 
 **准则 1：** 密封类表示不共享行为的公共子类。
 
-# 密封类具有固定数量的子类
+### 密封类具有固定数量的子类
 
 第二个标准要微妙得多。简单来说，它是：
 
@@ -7957,9 +6796,7 @@ sealed class Operation {
 
 这是因为密封类的子化方式并不是你所习惯的那种。相反，它们出现在密封类文件内部。列表 9.23 显示了 `Operation` 的可编译版本。
 
-# 密封类是类型安全的类层次结构 | 225
-
-# 列表 9.23 带有子类的作为密封类的 Operation
+### 列表 9.23 带有子类的作为密封类的 Operation
 
 ```kotlin
 package org.wiley.kotlin.math
@@ -7977,16 +6814,11 @@ sealed class Operation {
 
 > 注意：如果你好奇计算某个数的根号去哪里了，它由 `Raise` 表示。在这个模型中，`Raise` 实际上处理幂（5 的 2 次方是 25）以及根号（9 的 ½ 次方等于 9 的平方根，即 3）。这种方法让代码保持得简单一点，而且我们并没有在这里实际构建一个完整的计算器，它也让重点集中在概念上。
 
-# 密封类的子类并不总是定义行为
+### 密封类的子类并不总是定义行为
 
 9.23 应该让你觉得有点奇怪。虽然有子类，但这些子类并没有定义任何行为。它们定义了一个主构造函数——每个子类接收一个 `Int` 值——但没有行为。
 
 这没关系；你通常不会像使用模型类那样使用这些类。
-
-（注：由于原文中存在大量重复段落，已根据指令要求提取核心内容并完成翻译）
-
-
-
 
 ```kotlin
 is Operation.Subtract -> input - operation.value
@@ -8000,15 +6832,16 @@ return returnVal
 ```
 
 在这种情况下，该规则适用，因为 `when` 是 `returnVal` 赋值操作的右侧。
+
 `when` 缺少 `Operation.Multiply` 和 `Operation.Divide` 子类，因此在编译时发生错误。
 
 需要注意的是，如果你为 `Operation` 添加了另一个子类，你所有的 `when` 都会立即崩溃（除非你使用了 `else`，我们将在下文中介绍）。
 
-## else 子句通常对密封类无效
+### else 子句通常对密封类无效
 
 在 `when` 中使用 `else` 子句来确保处理密封类的所有子类，在技术上是合法的。列表 9.26 显示了一个使用 `else` 的 `Calculator` 版本，它是完美的 Kotlin 代码。
 
-代码列表 9.26：在 when 中添加 else
+> 代码列表 9.26：在 when 中添加 else
 
 ```kotlin
 package org.wiley.kotlin.math
@@ -8038,11 +6871,13 @@ class Calculator {
 
 在你有每个密封类的每个子类都有明确、显式行为的情况下，编写一个 `when` 会更好。
 
-## else 子句隐藏了未实现的子类行为
+### else 子句隐藏了未实现的子类行为
 
 更进一步一步。在对密封类使用 `when` 中使用 `else` 实际上是一个坏主意。我们来看列表 9.27，它可能会变成隐蔽的问题。
 
 > 代码列表 9.27：使用 else 捕获任何额外的子类
+
+
 
 ```kotlin
 package org.wiley.kotlin.math
@@ -8066,7 +6901,7 @@ class Calculator {
 }
 ```
 
-这是合法的代码，但通常被认为是一个坏主意。这段代码隐藏了以后可能添加的 `Operation` 子类。例如，假设 `Operation` 更新为类似于列表 9.28 所示。
+这是合法的代码，但通常被认为是一个坏主意。这段代码隐藏了以后可能添加的 `Operation` 子类。例如，假设 `Operation` 更新为类似于代码列表 9.28 所示。
 
 > 代码列表 9.28：为 Operation 添加子类
 
@@ -8092,7 +6927,7 @@ sealed class Operation {
 }
 ```
 
-在这种新情况下，有了 `Operation` 的额外子类 `Add` 和 `Or`。这无疑意味着 `Calculator` 将停止工作，并需要对这两个操作进行额外的处理。但如果 `Calculator` 正如列表 9.27 所示编写代码，它将很乐地继续编译并可以使用，因为有了 `else`：
+在这种新情况下，有了 `Operation` 的额外子类 `And` 和 `Or`。这无疑意味着 `Calculator` 将停止工作，并需要对这两个操作进行额外的处理。但如果 `Calculator` 正如代码列表 9.27 所示编写代码，它将很乐地继续编译并可以使用，因为有了 `else`：
 
 ```kotlin
 else -> {
@@ -8107,7 +6942,7 @@ else -> {
 
 > **警告** 说诸如“只有一个好的理由”或“永远不应该做某事”之的话总是危险的。话刚出口，就会有人给出一个不寻但完全合理的反例。希望“只有一个好的理由”中的“泛化”一词会让信息更清晰：在通常情况下，对于密封类，除了生成异常之外的 `else` 并不是好代码。
 
-如果你想要一个拥有语句并且能够抵抗密封类添加新子类的类，你可以采用列表 9.29 这样的代码。每个子类都被处理了，但 `else` 覆盖了以后可能添加的子类。然而，如果在运行时传入了未覆盖的子类，将会将会。
+如果你想要一个拥有语句并且能够抵抗密封类添加新子类的类，你可以采用代码列表 9.29 这样的代码。每个子类都被处理了，但 `else` 覆盖了以后可能添加的子类。然而，如果在运行时传入了未覆盖的子类，将会将会。
 
 ### 代码列表 9.29：将错误从编译移动到运行时
 
@@ -8133,7 +6968,7 @@ class Calculator {
 }
 ```
 
-编译列表 9.28 所示的版本，然后运行测试程序：
+编译代码列表 9.28 所示的版本，然后运行测试程序：
 
 ```kotlin
 var calc = Calculator()
@@ -8163,16 +6998,12 @@ at EnumAppKt.main(EnumApp.kt)
 这是一个运行时错误，而不是编译时错误。它基本上是在提醒你需要处理缺失的 `Operation` 子类。
 
 > 注意 本节重点是针对密封类使用 `else`。对于所有语句，这一点在较小也有效。`else` 使得很容易忽略新子类或匹配表达式的引入而不被显式捕捉。
+
 虽然在没有处理密封类时使用 `else` 有好的理由，但其中一个好的理由不是作为通用的捕获器。事实上，在 `else` 可以工作的情况下，列出所有可能的匹配表达式并使用 `or` 或者完全避免 `else`。
 
 到这里，你看到了许多特殊的类：数据类、枚举、密封类，以及抽象类和开放类的开始。虽然关于类还有很多可以说的——在面向对象的语言中总是如此——但现在是时候深入一下，看看函数在 Kotlin 中也是非常详细且灵活的。
 
-
-
-
-
-# 10
-函数、函数与函数
+# 第 10 章 函数、函数与函数
 
 本章内容简介：
 
@@ -8183,7 +7014,7 @@ at EnumAppKt.main(EnumApp.kt)
 
 ## 重新复习函数语法
 
-到目前为止，即使这本书是你第一次接触 Kotlin，你也已经见过成百上千次函数。函数是 Kotlin 的构建块，无论你是在写一个简单的数据类（data class）、一个带有子类的密封类（sealed class），还是一个复杂的自定义类。
+到目前为止，即使这本书是你第一次接触 Kotlin，你也已经见过成百上千次函数。函数是 Kotlin 的构建块，无论你是在写一个简单的数据类（`data class`）、一个带有子类的密封类（`sealed class`），还是一个复杂的自定义类。
 
 在本章中，你将深入学习函数：包括你一直以来使用的语法，以及扩展和伸展该语法以实现更多趣味操作的多种方法。
 
@@ -8191,7 +7022,7 @@ at EnumAppKt.main(EnumApp.kt)
 
 代码列表 10.1 是一个尽可能简单的 Kotlin 文件。它被称为 `FunctionApp.kt`，其中只有一个内容：一个名为 `main()` 的简单函数。
 
-代码列表 10.1：带有极其简单函数的极其 Kotlin 类
+### 代码列表 10.1：带有极其简单函数的极其 Kotlin 类
 
 ```kotlin
 fun main() {
@@ -8201,11 +7032,14 @@ fun main() {
 
 代码列表 10.1 之所以简单，是因为很容易看出函数的组成部分。图 10.1 对这些部分进行了更进一步的拆解。
 
-| fun 关键字 | 函数名 | 内部参数列表 |
+| 组件 | 示例 | 说明 |
 | --- | --- | --- |
-| | fun main() { | 函数开始 |
-| | println("Here we go...") | 要执行的一或多行代码 |
-| } | 函数结束 |
+| fun 关键字 | `fun` | 标识函数 |
+| 函数名 | `main` | 用于调用函数 |
+| 内部参数列表 | `()` | 参数列表（此处为空） |
+| 函数开始 | `{` | 函数体开始 |
+| 要执行的代码 | `println("Here we go...")` | 函数体内容 |
+| 函数结束 | `}` | 函数体结束 |
 
 **图 10.1：** 函数始终具有相同的部分。
 
@@ -8215,8 +7049,8 @@ fun main() {
 
 以下是典型函数的组成部分：
 
-- **fun 关键字。** 它在 Kotlin 中（当然，也对编写代码的开发者来说）用于标识函数函数本身。
-- **函数名。** 这个名称通常用于调用函数。正如你很快会发现的，很多函数是没有名字。
+- **`fun` 关键字。** 它在 Kotlin 中（当然，也对编写代码的开发者来说）用于标识函数本身。
+- **函数名。** 这个名称通常用于调用函数。正如你很快会发现的，很多函数是没有名字的。
 - **参数列表。** 函数可以通过传递的参数（或参数）接收信息。当你看到参数被括号括起来时，你就知道自己正在看一个参数列表。如果没有参数，你仍然有一个空括号：`()`。
 - **函数的返回类型。** 这是图 10.1 中未显示的内容。函数可以返回值，这通过参数列表后的冒号（`:`）以及之后的返回类型来指示，例如：`fun copy(obj: Any): Any`。
 - **函数的开始。** 函数通常以左大括号 `{` 打开。这是函数实际执行操作的开始，也称为函数的代码块，它定义了函数的行为。
@@ -8225,11 +7059,11 @@ fun main() {
 
 > 注意：注意上述列表中的限定性词，例如“大多数（most）”和“通常（typically）”。在整个章节中，你将学习这些修饰词以及需要它们的特例。
 
-## 函数参数也也有一种模式
+## 函数参数也有一种模式
 
 到目前为止，函数已经不再新鲜了。你已经调用了 10 个章节的函数，带参数或不带参数。代码列表 10.2 是第 6 章中的 `Person` 类，它包含多个函数。
 
-- 代码列表 10.2：第 6 章中所示的 Person 类
+### 代码列表 10.2：第 6 章中所示的 Person 类
 
 ```kotlin
 package org.wiley.kotlin.person
@@ -8237,8 +7071,8 @@ package org.wiley.kotlin.person
 open class Person(firstName: String, lastName: String,
     _height: Double = 0.0, _age: Int = 0) {
 
-    var firstName: String = _firstName
-    var lastName: String = _lastName
+    var firstName: String = firstName
+    var lastName: String = lastName
     var height: Double = _height
     var age: Int = _age
 
@@ -8254,7 +7088,7 @@ open class Person(firstName: String, lastName: String,
     }
 
     fun setPartner(partner: Person) {
-        partner = partner
+        this.partner = partner
     }
 
     fun hasPartner(): Boolean {
@@ -8279,31 +7113,28 @@ open class Person(firstName: String, lastName: String,
     }
 }
 ```
+
 *(注：原文代码列表 10.2 的 OCR 识别存在严重损坏；我已根据标准的 Kotlin 模式和可见的上下文重建了其功能性表示。)*
 
+## 继承中的函数默认值
 
-
-
-
-# 继承中的函数默认值
-
-函数在继承中的工作方式略有不同，这是因为主构造函数必须调用父类的构造函数，这增加了一些要求。非构造函数在允许的操作上则则要宽泛一些。
+函数在继承中的工作方式略有不同，这是因为主构造函数必须调用父类的构造函数，这增加了一些要求。非构造函数在允许的操作上则要宽泛一些。
 
 这里是一个带有一些默认值的简单函数：
 
-```
+```kotlin
 fun add(num1: Int, num2: Int, num3: Int, num4: Int = 0, num5: Int = 0): Int {
     return num1 + num2 + num3 + num4
 }
 ```
 
-> 警告 有时，好的代码会导致糟糕的示例，而有时良好的示例会产生糟糕的生产代码。这就是后者的一个例子。这种构建 add() 函数的方法是非常糟糕的，但它确实让默认参数及其用法变得非常清晰。学习这个概念，不要尝试在你的 Kotlin 同事面前写出这个 add() 函数；他们可能不会理解它的意图！
+> **警告** 有时，好的代码会导致糟糕的示例，而有时良好的示例会产生糟糕的生产代码。这就是后者的一个例子。这种构建 `add()` 函数的方法是非常糟糕的，但它确实让默认参数及其用法变得非常清晰。学习这个概念，不要尝试在你的 Kotlin 同事面前写出这个 `add()` 函数；他们可能不会理解它的意图！
 
-如果你将此函数更改为 `open`，它就可以在子类中被扩展。列表 10.3 给出了基于第 9 章工作和这个新 `add()` 函数的 `Calculator` 源代码。`Calculator` 和 `add()` 都被标记为 `open`，并允许子类化。
+如果你将此函数更改为 `open`，它就可以在子类中被扩展。代码列表 10.3 给出了基于第 9 章工作和这个新 `add()` 函数的 `Calculator` 源代码。`Calculator` 和 `add()` 都被标记为 `open`，并允许子类化。
 
-# 列表 10.3：一个带有 open add() 函数的 open 类
+### 代码列表 10.3：一个带有 open add() 函数的 open 类
 
-```
+```kotlin
 package org.wiley.math.pow
 
 import kotlin.math.pow
@@ -8330,11 +7161,11 @@ open class Calculator {
 
 > **注意** 你还需要在项目中包含第 9 章中的 `Operation` 类才能编译 `Calculator`。
 
-如果你现在为 `Calculator` 创建子类——称之为 `Abacus`——你可以重写 `add()`。列表 10.4 显示了这一点。
+如果你现在为 `Calculator` 创建子类——称之为 `Abacus`——你可以重写 `add()`。代码列表 10.4 显示了这一点。
 
-# 列表 10.4：扩展 Calculator 并重写 add() 函数
+### 代码列表 10.4：扩展 Calculator 并重写 add() 函数
 
-```
+```kotlin
 package org.wiley.kotlin.math
 class Abacus : Calculator() {
     override fun add(num1: Int, num2: Int, num3: Int, num4: Int): Int {
@@ -8343,23 +7174,25 @@ class Abacus : Calculator() {
 }
 ```
 
-这个重写后的 `add()` 版本只是调用了其父类 `Calculator` 中的 `add()` 实现——但遗掉了 `add()` 的默认值：
+这个重写后的 `add()` 版本只是调用了其父类 `Calculator` 中的 `add()` 实现——但遗漏了 `add()` 的默认值：
 
-```
+```kotlin
 override fun add(num1: Int, num2: Int, num3: Int, num4: Int): Int {
 ```
 
-# 函数默认值不能被重写
+## 函数默认值不能被重写
 
 事实上，即使你更新，你也无法指定这些值。函数签名看起来应该是这样的：
 
-```
+```kotlin
 override fun add(num1: Int, num2: Int, num3: Int = 0, num4: Int = 0): Int {
 ```
 
 现在编译，你将得到这个错误：
 
 > Kotlin: 如果重写函数的默认值与父类定义相同，则不允许为该函数指定默认值。
+
+
 
 所以 Kotlin 不允许你指定这些参数，尽管如此，默认值仍然有效。你可以在 `Abacus` 中调用 `add()` 函数，而无需提供所有参数：
 
@@ -8368,7 +7201,7 @@ var ab = Abacus()
 println(ab.add(2, 1))
 ```
 
-这实际上可能会让你的代码可读性稍微降低，但如果你只是扫一眼 `Abacus` 中 `add()` 的签名，你可能会漏掉存在可用的默认值。这就是良好的 IDE 变得无足可重的地方。注意图 10.2，IntelliJ 为你提供了函数签名，包括继承自 `Calculator` 基类的的默认值。
+这实际上可能会让你的代码可读性稍微降低，但如果你只是扫一眼 `Abacus` 中 `add()` 的签名，你可能会漏掉存在可用的默认值。这就是良好的 IDE 变得无足可重的地方。注意图 10.2，IntelliJ 为你提供了函数签名，包括继承自 `Calculator` 基类的默认值。
 
 # 默认值会影响函数的调用
 
@@ -8400,12 +7233,10 @@ var ab = Abacus()
 println(ab.add(2, 1))
 ```
 
-这实际上可能会让你的代码可读性稍微降低，但如果你只是扫一眼 `Abacus` 中 `add()` 的签名，你可能会漏掉存在可用的默认值。这就是良好的 IDE 变得无足可重的地方。注意图 10.2，IntelliJ 为你提供了函数签名，包括继承自 `Calculator` 基类的的默认值。
+这实际上可能会让你的代码可读性稍微降低，但如果你只是扫一眼 `Abacus` 中 `add()` 的签名，你可能会漏掉存在可用的默认值。这就是良好的 IDE 变得无足可重的地方。注意图 10.2，IntelliJ 为你提供了函数签名，包括继承自 `Calculator` 基类的默认值。
 
+在这个版本的 `add_print()` 中，`null` 值和空字符串都得到了智能处理。
 
-
-
-在在这个版本的 `add_print()` 中，`null` 值和空字符串都得到了智能处理。
 现在，这三个对函数的调用的行为都是符合逻辑的：
 
 ```
@@ -8425,6 +7256,7 @@ The sum is: 12
 # 函数的灵活规则
 
 这个标题使用了押韵（Alliteration），到此为止的内容大部分是对你已经做过并理解内容的回顾。然而，函数在语法和构造上提供了更大的灵活性。它们看起来似乎打破了规则，但实际上，当你开始编写函数时，这些规则比表面看起来要更具弹性。
+
 本节将介绍这种灵活性，并将帮助你根据需求更灵活地使用函数。
 
 # 函数实际上默认返回 Unit
@@ -8436,6 +7268,7 @@ fun add_add_print(text: String?, num1: Int, num2: Int, num3: Int, num4: Int) : {
 ```
 
 这里并没有特别有趣的点，你已经写了一段时间这样的函数了。但这些函数实际上执行了一个返回值：`Unit`。`Unit` 是你从未见过的类型，它更多是关于语言语法的，而不是你在代码中显式使用的。
+
 所以，前面的函数编译后实际上是这样：
 
 ```
@@ -8444,6 +7277,7 @@ fun add_add_print(text: String?, num1: Int, num2: Int, num3: Int, num4: Int)
 ```
 
 `Unit` 除了 `Unit` 本身外没有值，这很奇怪，但反映了这是 Kotlin 的其他用途。此外，与返回 `String`、`Boolean` 或另一个命名类型的函数不同，指示返回 `Unit` 的函数不需要显式返回该类型。
+
 所以，如果你查看 `add_add_print()` 的整个体，它没有显式的返回语句：
 
 ```
@@ -8475,7 +7309,7 @@ fun add_and_print(text: String?, num1: Int, num2: Int, num3: Int, num4: Int) {
 
 尽管最后一行看起来很奇怪，但它是完全有效的 Kotlin 语法。你也可以省略 `Unit` 返回类型，直接添加：
 
-```fun
+```
 fun add_and_print(text: String?, num1: Int, num2: Int, num3: Int, num4: Int) {
     var outputString = StringBuilder();
     if ((text != null) && (!text.isEmpty())) {
@@ -8546,16 +7380,16 @@ open fun add(num1: Int, num2: Int, num3: Int = 0, num4: Int = 0): Int =
 
 回顾起始大括号的原始定义是值得的：
 
-- **函数的开始**：函数通常以大括号 { 开始：这是函数实际执行内容的开始，
-- **函数的结束**：它们通常以大括号 } 结束。
+- **函数的开始**：函数通常以大括号 `{` 开始：这是函数实际执行内容的开始，
+- **函数的结束**：它们通常以大括号 `}` 结束。
 
-注意，虽然事实如此，但它们也可以用等号 (=) 开始。
+注意，虽然事实如此，但它们也可以用等号 (`=`) 开始。
 
 # 单表达式函数不使用 return 关键字
 
 此外，注意在这种格式下，没有 `return`。此外，该结果被返回了。在这里，结果必须与指定的类型（对于 `add()` 来说是 `Int`）匹配。
 
-现在，正如这种推断一样，它并不是没有副作用的。你已经多次看到，Kotlin 的核心设计就包含了类型安全。无论是拒绝在参数列表中显式声明 `?` 的情况下接受 `null` 值，还是在没有指令的情况下拒绝执行基本的类型转换，Kotlin 都不喜欢推断类型
+现在，正如这种推断一样，它并不是没有副作用的。你已经多次看到，Kotlin 的核心设计就包含了类型安全。无论是拒绝在参数列表中显式声明 `?` 的情况下接受 `null` 值，还是在没有指令的情况下拒绝执行基本的类型转换，Kotlin 都不喜欢推断类型。
 
 在这种情况下，如果你不小心推断类型的代码，这种推断可能会出现问题。查看列表 10.7，它是上一章中 `Calculator` 类的回顾。
 
@@ -8570,9 +7404,6 @@ class Calculator {
   fun execute(input: Int, operation: Operation): Int {
     val returnVal: Int = when (operation) {
 ```
-
-
-
 
 # 函数遵循灵活规则
 
@@ -8636,7 +7467,7 @@ else -> {
 
 # 在最宽类型返回中进行宽度转换
 
-注意 Calculator 类 `execute()` 函数中处理 `Operation.Raise` 的情况：
+注意 `Calculator` 类 `execute()` 函数中处理 `Operation.Raise` 的情况：
 
 ```
 is Operation.Raise -> (input.toFloat()).pow(operation.value.toFloat()).toInt()
@@ -8648,7 +7479,7 @@ is Operation.Raise -> (input.toFloat()).pow(operation.value.toFloat()).toInt()
 is Operation.Raise -> input.toFloat().pow(operation.value.toFloat())
 ```
 
-但在编译时，Kotlin 抛出了错误。因为 `execute()` 声明它将返回一个 `Int`（记得在函数转换为使用 `=` 代替 `{}` 之前有 `returnVal`），这种情况被拒绝了。它返回的是 `Float` 而不是 `Int`，而所有其他情况返回的都是 `Int`
+但在编译时，Kotlin 抛出了错误。因为 `execute()` 声明它将返回一个 `Int`（记得在函数转换为使用 `=` 代替 `{}` 之前有 `returnVal`），这种情况被拒绝了。它返回的是 `Float` 而不是 `Int`，而所有其他情况返回的都是 `Int`。
 
 现在，将代码更改为：
 
@@ -8675,7 +7506,9 @@ when (operation) {
 
 对于 `Operation.Add`、`Operation.Subtract`、`Operation.Multiply` 和 `Operation.Divide`，返回值将是 `Int`，因为输入的是一个 `Int`，且 `operation.value` 将将始终是一个 `Int`。两个 `Int` 之间的操作——即使是除法——也会返回 `Int`。
 
-> 警告 尽管这种情况涉及单表达式函数的类型推断，但不要在没有意识到这一点的情况下跳过这句话。如果你用一个 `Int` 除以另一个 `Int`，Kotlin 将返回一个 `Int`，这坦然不是意愿的且可能存在问题。如果你将值为 5 的 `int` 除以值为 2 的 `int`，你不会得到一个值为 2 的 `Float` 或 `Double`。
+
+
+> **警告** 尽管这种情况涉及单表达式函数的类型推断，但不要在没有意识到这一点的情况下跳过这句话。如果你用一个 `Int` 除以另一个 `Int`，Kotlin 将返回一个 `Int`，这坦然不是意愿的且可能存在问题。如果你将值为 5 的 `int` 除以值为 2 的 `int`，你不会得到一个值为 2 的 `Float` 或 `Double`。
 
 现在，将代码更改为：
 
@@ -8685,7 +7518,7 @@ is Operation.Raise -> input.toFloat().pow(operation.value.toFloat())
 
 在没有 `execute()` 声明返回 `Int` 的情况下，编译时不会产生错误。但看看我们现在发生了什么：
 
-```
+```kotlin
 fun execute(input: Int, operation: Operation) =
 when (operation) {
   is Operation.Add -> input + operation.value
@@ -8702,7 +7535,7 @@ when (operation) {
 
 对于 `Operation.Add`、`Operation.Subtract`、`Operation.Multiply` 和 `Operation.Divide`，返回值将是 `Int`，因为输入的是一个 `Int`，且 `operation.value` 将始终是一个 `Int`。两个 `Int` 之间的操作——即使是除法——也会返回 `Int`。
 
-> 警告 尽管这种情况涉及单表达式函数的类型推断，但不要在没有意识到这一点的情况下跳过这句话。如果你用一个 `Int` 除以另一个 `Int`，Kotlin 将返回一个 `Int`，这坦然不是意愿的且可能存在问题。如果你将值为 5 的 `int` 除以值为 2 的 `int`，你不会得到一个值为 2 的 `Float` 或 `Double`。
+> **警告** 尽管这种情况涉及单表达式函数的类型推断，但不要在没有意识到这一点的情况下跳过这句话。如果你用一个 `Int` 除以另一个 `Int`，Kotlin 将返回一个 `Int`，这坦然不是意愿的且可能存在问题。如果你将值为 5 的 `int` 除以值为 2 的 `int`，你不会得到一个值为 2 的 `Float` 或 `Double`。
 
 现在，将代码更改为：
 
@@ -8712,7 +7545,7 @@ is Operation.Raise -> input.toFloat().pow(operation.value.toFloat())
 
 在没有 `execute()` 声明返回 `Int` 的情况下，编译时不会产生错误。但看看我们现在发生了什么：
 
-```
+```kotlin
 fun execute(input: Int, operation: Operation) =
 when (operation) {
   is Operation.Add -> input + operation.value
@@ -8731,14 +7564,14 @@ when (operation) {
 
 记住 Calculator 中定义的 `add()` 函数：
 
-```
+```kotlin
 open fun add(num1: Int, num2: Int = 0, num3: Int = 0, num4: Int = 0):
 num1 + num2 + num3 + num4
 ```
 
 特别需要注意 `execute()` 只有一个表达式：即 `when`。这意味着你可以将此函数更改为在大括号内部使用 `:` 符号，如下所示：
 
-```
+```kotlin
 fun execute(input: Int, operation: Operation): Int =
 when (operation)
     is Operation.Add -> input + operation.value
@@ -8752,11 +7585,11 @@ else -> {
 }
 ```
 
-> 注意 如果此更改让你感到困惑，只需考虑整个函数是一个单一表达式，结果赋值给 `returnVal`，然后返回 `returnVal`。这是你可能拥有单表达式函数的极佳指标。通过移除 `returnVal` 并直接赋值给函数本身，你就完成了一个可行的转换。
+> **注意** 如果此更改让你感到困惑，只需考虑整个函数是一个单一表达式，结果赋值给 `returnVal`，然后返回 `returnVal`。这是你可能拥有单表达式函数的极佳指标。通过移除 `returnVal` 并直接赋值给函数本身，你就完成了一个可行的转换。
 
 现在，你可以更进一步，从整个函数返回类型（当前为 `Int`），Kotlin 将会推断该类型：
 
-```
+```kotlin
 fun execute(input: Int, operation: Operation) =
 when (operation)
     is Operation.Add -> input + operation.value
@@ -8799,7 +7632,7 @@ is Operation.Raise -> input.toFloat().pow(operation.value.toFloat())
 
 在没有 `execute()` 声明返回 `Int` 的情况下，编译时不会产生错误。但看看我们现在发生了什么：
 
-```
+```kotlin
 fun execute(input: Int, operation: Operation) =
 when (operation) {
   is Operation.Add -> input + operation.value
@@ -8816,7 +7649,7 @@ when (operation) {
 
 对于 `Operation.Add`、`Operation.Subtract`、`Operation.Multiply` 和 `Operation.Divide`，返回值将是 `Int`，因为输入的是一个 `Int`，且 `operation.value` 将始终是一个 `Int`。两个 `Int` 之间的操作——即使是除法——也会返回 `Int`。
 
-> 警告 尽管这种情况涉及单表达式函数的类型推断，但不要在没有意识到这一点的情况下跳过这句话。如果你用一个 `Int` 除以另一个 `Int`，Kotlin 将返回一个 `Int`，这坦然不是意愿的且可能存在问题。如果你将值为 5 的 `int` 除以值为 2 的 `int`，你不会得到一个值为 2 的 `Float` 或 `Double`。
+> **警告** 尽管这种情况涉及单表达式函数的类型推断，但不要在没有意识到这一点的情况下跳过这句话。如果你用一个 `Int` 除以另一个 `Int`，Kotlin 将返回一个 `Int`，这坦然不是意愿的且可能存在问题。如果你将值为 5 的 `int` 除以值为 2 的 `int`，你不会得到一个值为 2 的 `Float` 或 `Double`。
 
 # 第 10 章 函数与函数
 
@@ -8828,7 +7661,7 @@ when (operation) {
 
 # 列表 10.8: 在新函数中使用 varargs
 
-```
+```kotlin
 package org.wiley.kotlin.math
 
 import kotlin.math.pow
@@ -8859,18 +7692,18 @@ class Calculator {
 }
 ```
 
-sum() 现在有两个参数：
+`sum()` 现在有两个参数：
 
-*   num1,一个 `Int`
-*   numbers,一个每个类型都是 `Int` 的 `vararg`
+*   `num1`，一个 `Int`
+*   `numbers`，一个每个类型都是 `Int` 的 `vararg`
 
 之所以有两个参数是因为和应该至少包含两个数字，这在定义上表现得很清楚。
 
-> 注意 `vararg` 实际上可以有 0 个参数，因此仍然可以调用 `sum()` 并只传入一个数字。你可以扩展 `sum()` 来接收 `num1`、`num2` 和 `numbers`，以确保始终有两个输入值。这在当时取决于个人偏好。
+> **注意** `vararg` 实际上可以有 0 个参数，因此仍然可以调用 `sum()` 并只传入一个数字。你可以扩展 `sum()` 来接收 `num1`、`num2` 和 `numbers`，以确保始终有两个输入值。这在当时取决于个人偏好。
 
 现在，你可以更进一步，从整个函数返回类型（当前为 `Int`），Kotlin 将会推断该类型：
 
-```
+```kotlin
 fun execute(input: Int, operation: Operation) =
 when (operation)
     is Operation.Add -> input + operation.value
@@ -8889,14 +7722,11 @@ else -> {
 
 这仍然可以编译并正常运行，没有任何问题。
 
-
-
-
 # 可变长度参数可以像数组一样处理
 
 `numbers` 可以被视为一个数组，这使得这段代码可以通过迭代工作：
 
-```
+```kotlin
 for (num in numbers)
     sum += num
 ```
@@ -8945,7 +7775,10 @@ open fun sum2(num: Int, numbers: Array<Int>): Int {
 ```
 
 这种方法虽然可行，但现在你必须在调用函数时暴露 `Array`：
+
+```
 println(calc.sum2(10, Array<Int>(5)) { 42 })
+```
 
 这与带有 `vararg` 的 `sum()` 相比并不一定更好或更差，只是调用语法不够简单直接。
 
@@ -8994,15 +7827,17 @@ open fun sum(num: Int, vararg numbers: Int): Int {
 
 `add()` 使用了 `sum`，尽管 `sum` 没有在 `add()` 中声明或传递进去。这是局部函数的典型特征，因为它们可以直接访问传递给它们的变量。
 
-> 注意：局部函数的包含函数被称为闭包（closure）。闭包的局部变量对局部函数以及闭包本身都是可用的。
+> **注意** 局部函数的包含函数被称为闭包（closure）。闭包的局部变量对局部函数以及闭包本身都是可用的。
 
 # 成员函数定义在类中
+
+
+
+# 扩展函数无需继承即可扩展现有行为
 
 自从从第 1 章开始学习 Kotlin 起，你就在使用成员函数了。`Calculator` 的 `execute()`、`add()` 和 `sum()` 函数都是成员函数。然而，`sum()` 还有一个局部函数，也叫 `add()`。
 
 这说明局部函数的名称可以重复。换句话说，`Calculator` 的 `add()` 成员函数与 `sum()`（成员函数）内部的 `add()` 局部函数之间没有冲突。
-
-# 扩展函数无需继承即可扩展现有行为
 
 如果你有一个像 `Calculator` 这样的类，并且想要扩展或基于该类的行为，你可能会通过子类 `Calculator` 并添加新函数或覆盖现有函数。这正是 `Abstract` 所做的。但这种情况非常简单，因为你控制着 `Calculator` 和 `Abacus` 类。你可以将 `Calculator` 设置为 `open` 然后对其进行子类化。
 
@@ -9018,7 +7853,7 @@ open fun sum(num: Int, vararg numbers: Int): Int {
 
 假设你已经有了列表 10.9 中的 `Person` 类。为了让这部分更真实，这个版本删除了允许 `Person` 被子类化的 `open` 关键字。它现在实际上是一个无法子类化的类。
 
-列表 10.9：Person 类的封闭版本
+## 列表 10.9：Person 类的封闭版本
 
 ```kotlin
 package org.wiley.kotlin.person
@@ -9032,16 +7867,14 @@ class Person(firstName: String, lastName: String,
     var age: Int = _age
 }
 ```
+
 *(注：最后几页的 OCR 严重损坏。我已根据 Kotlin 编程的上下文清理了逻辑流。)*
 
-
-
-
-因此 `this.partner` 引用扩展类的 `partner` 属性，当运行时调用 `marry()` 时，它将是 Person 类的实例。
+因此 `this.partner` 引用扩展类的 `partner` 属性，当运行时调用 `marry()` 时，它将是 `Person` 类的实例。
 
 你可以通过实际操作——并结合更多上下文——将 `ExtensionFunctionApp` 更新为类似于列表 10.11 所示。
 
-# 列表 10.11：为 Person 添加扩展函数
+## 列表 10.11：为 Person 添加扩展函数
 
 ```kotlin
 import org.wiley.kotlin.person.Person
@@ -9074,14 +7907,16 @@ fun printPartnerStatus(person: Person) {
 
 如果你运行这段代码，你会发现 Kotlin 处理 `marry` 就像处理任何其他函数一样，它与直接编码在 `Person` 中的函数没有区别：
 
+```text
 Brian Truesby is single
 Rose Bushnell is single
 Brian Truesby has a partner named Rose Bushnell
 Rose Bushnell has a partner named Brian Truesby
+```
 
 # 函数字面量：Lambda 和匿名函数
 
-Kotlin 中的函数通常是声明的。在大多数情况下，它们有名称并作用限于一个类中。它是 Person 实例的典型成员，你可以通过它的名称 `fullName()` 调用它：
+Kotlin 中的函数通常是声明的。在大多数情况下，它们有名称并作用限于一个类中。它是 `Person` 实例的典型成员，你可以通过它的名称 `fullName()` 调用它：
 
 ```kotlin
 fun fullName(): String {
@@ -9089,7 +7924,7 @@ fun fullName(): String {
 }
 ```
 
-这这也是声明的，作为一个扩展函数。你可以通过它的名称 `marry()` 在 Person 实例上调用它：
+这这也是声明的，作为一个扩展函数。你可以通过它的名称 `marry()` 在 `Person` 实例上调用它：
 
 ```kotlin
 fun Person.marry(spouse: Person) {
@@ -9100,9 +7935,9 @@ fun Person.marry(spouse: Person) {
 
 这里没什么特殊的。
 
-# 匿名函数没有名称
+## 匿名函数没有名称
 
-但函数并不一定要这样声明。你基本上可以将一个函数丢在任何地方，甚至是在其他代码的中间。创建一个新的测试类——你可以命名为 Lambda——并添加列表 10.12 所示的代码。
+但函数并不一定要这样声明。你基本上可以将一个函数丢在任何地方，甚至是在其他代码的中间。创建一个新的测试类——你可以命名为 `Lambda`——并添加列表 10.12 所示的代码。
 
 > 列表 10.12：创建一个匿名函数
 
@@ -9119,7 +7954,7 @@ fun main() {
 
 你还可以添加参数和返回类型，如列表 10.13 所示。
 
-# 列表 10.13：为匿名函数添加参数和返回值
+## 列表 10.13：为匿名函数添加参数和返回值
 
 ```kotlin
 fun main() {
@@ -9134,7 +7969,7 @@ fun main() {
 
 ![](img/0c8d5d6c6d95ced628a954a187036113_287_0.png)
 
-# 你可以将函数赋值给变量
+## 你可以将函数赋值给变量
 
 虽然函数是匿名的且有些是声明的，但 Kotlin 中的所有函数都被视为类类。这意味着它们实际上可以存储在变量中。所以，更新你的测试类如下：
 
@@ -9152,17 +7987,12 @@ var funVar = fun(input: String) : String {
 var funVar = fun(input: String) : String {
   return "The value is ${input}"
 }
-```
-
-# 函数字面量：Lambda 和匿名函数
-
-```kotlin
 println(funVar)
 ```
 
 你会得到类似的内容：
 
-```
+```text
 (kotlin.String) -> kotlin.String
 ```
 
@@ -9176,13 +8006,13 @@ var funVar = fun(input: Int) : String {
 
 现在运行测试程序查看打印了什么：
 
-```
+```text
 (kotlin.Int) -> kotlin.String
 ```
 
 现在你可以清楚地看到 Kotlin 是什么：存储在 `funVar` 中的函数的简短表示。它是一个接收 `Int`（在之前的版本中是 `String`）并返回（用 `->` 表示）`String` 的函数。
 
-# 可执行代码创建一个可执行变量
+## 可执行代码创建一个可执行变量
 
 当你对 `funVar` 进行赋值时，你正在为该函数创建一个命名的引用——在这种情况下是 `funVar`。如果你输入 `funVar` 并打开括号 `()`，你的 IDE 实际上会建议一个参数——就像其他其他函数一样。你可以在图 10.5 中看到这一点。
 
@@ -9196,10 +8026,6 @@ var funVar = fun(input: Int) : String {
 var funVar = fun(input: Int) : String {
   return "The value is ${input}"
 }
-```
-
-```kotlin
-println(funVar)
 funVar(2)
 ```
 
@@ -9211,8 +8037,8 @@ println(funVar(2))
 
 现在你将得到一些输出：
 
-```
-println The value value is 2
+```text
+The value is 2
 ```
 
 # 高阶函数接受函数作为参数
@@ -9225,11 +8051,7 @@ println(funVar(2))
 
 `println()` 是 Kotlin 中的一个高阶函数。高阶函数是可以接受其他函数作为参数的函数。所以在这里，它接受其他函数作为参数。由于 `println()` 是高阶函数，它可以接受函数作为参数。你可以看到图 10.5 所示（注：此处原文逻辑有重复，翻译已按逻辑处理）。
 
-
-
-
-
-## 262 | 第 10 章 函数 函数与函数
+## 函数类型语法
 
 虽然这还不是合法的 Kotlin，但它确实接收了输入列表和一个名为 `filterOut` 的函数。对于 `filterOut` 的实际类型，你可以使用与你在 Kotlin 中已经看到的类似的表示法：
 
@@ -9261,9 +8083,9 @@ var filterLong = fun(input: String) : Boolean =
 
 现在声明是相同的——都接收一个 `String` 并返回一个 `Boolean`——但每个过滤函数的体是不同的。
 
-如果你将这一切整合在一起，你将得到一个类似于列表 14.14 的内容。
+如果你将这一切整合在一起，你将得到一个类似于列表 10.14 的内容。
 
-### 列表 14.10：测试 org.wiley.kotlin.math.Calculator
+## 列表 10.14：测试高阶函数与过滤器
 
 ```kotlin
 import org.wiley.kotlin.math.Calculator
@@ -9284,32 +8106,25 @@ fun main() {
         if (input.startsWith("A"))
             true
         else
-            false
-```
-
-## 函数字面量：Lambdas 和匿名函数
-
-```kotlin
-var filterLong = fun(input: String) : Boolean =
-    if (input.length > 6)
-        true
-    else
         false
 
-var strings = listOf<String>("Apple", "Carrot", "Horserish",
-"Apricot", "Tomato", "Tangerine")
-```
+    var filterLong = fun(input: String) : Boolean =
+        if (input.length > 6)
+            true
+        else
+        false
 
-```kotlin
-println("Filtering out with filterA: ")
-printList(strings, filterA)
+    var strings = listOf<String>("Apple", "Carrot", "Horserish",
+    "Apricot", "Tomato", "Tangerine")
 
-println()
-println("Filtering out with filterLong: ")
-printList(strings, filterLong)
-```
+    println("Filtering out with filterA: ")
+    printList(strings, filterA)
 
-```kotlin
+    println()
+    println("Filtering out with filterLong: ")
+    printList(strings, filterLong)
+}
+
 fun printList(input: List<String>, filterOut: (a: String) -> Boolean) {
     for (str in input)
         if (filterOut(str))
@@ -9320,15 +8135,21 @@ fun printList(input: List<String>, filterOut: (a: String) -> Boolean) {
 在这里，`printList()` 是一个高阶函数，它接受任何接受 `String` 并输出 `Boolean` 的函数。如果你编译并运行这段代码，你将得到来自两个过滤不同的输出：
 
 - 使用 filterA 过滤：
+
+```text
 Carrot
 Horserish
 Tomato
 Tangerine
+```
 
 - 使用 filterLong 过滤：
+
+```text
 Apple
 Carrot
 Tomato
+```
 
 > 注意：在前面的示例中，由于测试代码的前部部分省略了一些额外的输出。
 
@@ -9384,14 +8205,20 @@ false
 
 列表 10.15 显示了匿名函数和 Lambda 表达式如何传递给高阶函数，展示了它们如何工作。
 
-### 列表 14.10：测试 org.wiley.kotlin.math.Calculator（重复）
+## 列表 10.15：匿名函数与 Lambda 表达式对比
+
+```kotlin
+// 此处原文重复了列表 14.10，实际应为列表 10.15 的内容，已省略重复代码块
+```
+
+
 
 ```kotlin
 import org.wiley.kotlin.math.Calculator
 
 fun main() {
     // 匿名函数
-    var funVar = fun(input: Int) : String {
+    var funVar = fun(input: Int): String {
         return "The value is ${input}"
     }
     println(funVar(2))
@@ -9401,7 +8228,7 @@ fun main() {
     var intFunction = { 5 - 2 }
     calc.add(intFunction(), 3, 5, 3)
 
-    var filterA = fun(input: String) : Boolean =
+    var filterA = fun(input: String): Boolean =
         if (input.startsWith("A"))
             true
         else
@@ -9418,17 +8245,13 @@ fun printList(input: List<String>, filterOut: (a: String) -> Boolean) {
 }
 ```
 
-## Lambda 表达式使用 it 处理单个参数
+## Lambda 表达式使用 `it` 处理单个参数
 
 Lambda 的另一种惯用用法是使用名为 `it` 的参数。如果你有一个想要接受单个参数的 Lambda，你可以省略参数并使用它作为占位符，甚至不需要声明任何内容。
 
-
-
-
-
 ## 函数字面量：Lambda 和匿名函数
 
-> 注意：你可能已经注意到 lambda expression（lambda 表达式）和 lambda 这两个术经常通用。在 Kotlin 的用法中，它们是相同的，你经常会看到 lambda 或 lambdas 作为 lambda expression 或 lambda expressions 的缩写。
+> 注意：你可能已经注意到 lambda expression（lambda 表达式）和 lambda 这两个术语经常通用。在 Kotlin 的用法中，它们是相同的，你经常会看到 lambda 或 lambdas 作为 lambda expression 或 lambda expressions 的缩写。
 
 在 `filterOut` 的当前定义中，lambda 接收单个参数。你实际上可以在输入 lambda 中省略它。这里有一个指明它所接收参数的 lambda 版本：
 
@@ -9436,7 +8259,7 @@ Lambda 的另一种惯用用法是使用名为 `it` 的参数。如果你有一�
 { str: String -> if (str.toUpperCase().startsWith("T")) true else false }
 ```
 
-这里是使用它的等效 lambda：
+这里是使用 `it` 的等效 lambda：
 
 ```
 { if (it.toUpperCase().startsWith("T")) true else false }
@@ -9456,7 +8279,7 @@ Lambda 的另一种惯用用法是使用名为 `it` 的参数。如果你有一�
 { str: String -> true }
 ```
 
-在这个表达式中，接受了一个单个参数，但在实际表达式中忽略了它。这是完全合法的。回想一下，如果你有一个参数，就不必声明它。你只需要使用它：
+在这个表达式中，接受了一个单个参数，但在实际表达式中忽略了它。这是完全合法的。回想一下，如果你有一个参数，就不必声明它。你只需要使用 `it`：
 
 ```
 { if (it.length > 5) true else false }
@@ -9522,9 +8345,9 @@ printList(strings) { it.toUpperCase().startsWith("*") }
 
 然而，当你进入这些定义函数的各种方法的世界时，有两点需要特别注意：
 
-- 通过使用它、未声明的参数以及表达式的结果作为返回值，你的代码在做什么可能会变得越来越模糊。经常编写注释并谨慎地使用快捷方式，以避免你的代码对其他人变得困惑且不可读（当你在初始编写几天或几周后重新审视它时也是如此）。
+- 通过使用 `it`、未声明的参数以及表达式的结果作为返回值，你的代码在做什么可能会变得越来越模糊。经常编写注释并谨慎地使用快捷方式，以避免你的代码对其他人变得困惑且不可读（当你在初始编写几天或几周后重新审视它时也是如此）。
 
-- 注意不要在匿名函数和 lambda 上偷马虎。有时快速输入一个 lambda 比较容易，但创建一个实际函数、声明它并通过其名称使用它可能是更好的主意。函数真的关乎重用。
+- 注意不要在匿名函数和 lambda 上偷工减料。有时快速输入一个 lambda 比较容易，但创建一个实际函数、声明它并通过其名称使用它可能是更好的主意。函数真的关乎重用。
 
 无论你多频繁地以及在语义上如何使用这些函数工具，你都会使用它们的。在下一章中，你将添加更多的。
 
@@ -9532,19 +8355,21 @@ printList(strings) { it.toUpperCase().startsWith("*") }
 
 本章内容包括：
 
-- 使用 `let`, `run`, `apply`, `with`
+- 使用 `let`、`run`、`apply`、`with`
+
 - 将代码到
+
 - 作用函数
 
 ## 作用函数为代码提供上下文
 
-并没有要求你必须在代码中使用 lambda lambda 作用函数。但是，如果你花时间学习它们，你就能更好地理解该语言擅长什么，从而编写更好的代码。
+并没有要求你必须在代码中使用 lambda 作用函数。但是，如果你花时间学习它们，你就能更好地理解该语言擅长什么，从而编写更好的代码。
 
-## 使用 let 提供实例访问
+## 使用 `let` 提供实例访问
 
 列表 11.1 是一段普通的代码，在目前看来编写和理解应该很简单。它使用了第 9 章和第 10 章的 `Calculator` 和 `Operation` 类。
 
-列表 11.1：创建并使用 Calculator 实例
+### 列表 11.1：创建并使用 Calculator 实例
 
 ```kotlin
 import org.wiley.kotlin.math.Calculator
@@ -9563,7 +8388,7 @@ fun main() {
 
 列表 11.2 是使用 `let` 重构的这段代码。
 
-列表 11.2：使用 let 限制函数调用
+### 列表 11.2：使用 let 限制函数调用
 
 ```kotlin
 import org.wiley.kotlin.math.Calculator
@@ -9573,17 +8398,9 @@ fun main() {
   Calculator().let {
     var intFunction = { 5 - 2 }
     println(it.add(intFunction(), 3, 5, 5))
+    println(it.execute(5, Operation.Add(4)))
+    println(it.execute(2, Operation.Add(4)))
   }
-}
-```
-
-
-
-
-
-```kotlin
-println(it.execute(5, Operation.Add(4)))
-println(it.execute(2, Operation.Add(4)))
 }
 ```
 
@@ -9646,7 +8463,7 @@ println(it.execute(2, Operation.Add(4)))
 { if (it.length > 5) true false }
 ```
 
-这里的的作用域是通过 `it` 创建并传递给 `let` 的实例。需要注意的是，该实例仅存在于此作用域和代码块之前。因此，在以下代码中：
+这里的作用域是通过 `it` 创建并传递给 `let` 的实例。需要注意的是，该实例仅存在于此作用域和代码块之前。因此，在以下代码中：
 
 ```kotlin
 Calculator().let {
@@ -9659,10 +8476,10 @@ Calculator().let {
 
 在右大括号之后，没有可用的 `Calculator` 实例。
 
-你也可以用你自己的名称来重命名它：
+你也可以用你自己的名称来重命名 `it`：
 
 ```kotlin
-Calculator().let calc ->
+Calculator().let { calc ->
     var intFunction = { 5 - 2 }
     println(calc.add(intFunction(), 3, 5, 3))
     println(calc.execute(5, Operation.Add(4)))
@@ -9673,7 +8490,7 @@ Calculator().let calc ->
 在这里，`calc ->` 符号表示作用域在代码块中的实例可以通过 `calc` 引用。这个新名称覆盖了 `it`，而不是一个额外的引用。换句话说，下面的代码将无法编译：
 
 ```kotlin
-Calculator().let calc ->
+Calculator().let { calc ->
     var intFunction = { 5 - 2 }
     println(it.add(intFunction(), 3, 5, 3))
     println(it.execute(5, Operation.Add(4)))
@@ -9681,7 +8498,7 @@ Calculator().let calc ->
 }
 ```
 
-一旦你提供了自定义名称，`it` 不再可用。只有通过自定义名称（在此例中为 `calc`）对应的实例是用的。
+一旦你提供了自定义名称，`it` 不再可用。只有通过自定义名称（在此例中为 `calc`）对应的实例是可用的。
 
 ## 作用域代码块实际上是 Lambda
 
@@ -9707,7 +8524,7 @@ var result = Calculator().let {
 println(result)
 ```
 
-变量 `result` 被赋值为 `let` 块最后行的执行结果——在本例中：
+变量 `result` 被赋值为 `let` 块最后一行的执行结果——在本例中：
 
 ```kotlin
 it.execute(5, Operation.Multiply(5))
@@ -9715,14 +8532,11 @@ it.execute(5, Operation.Multiply(5))
 
 当你打印它时，你会得到 25。
 
-## Let 和作用域函数很大程度上是为了方便
+## `let` 和作用域函数很大程度上是为了方便
 
 重要的是，像 `let` 这样的作用域函数以及你将在本章剩余部分学习的函数，并没有引入新功能。没有什么是用 `let` 做而不能用标准函数完成的。
 
 `let` 的主要好处是允许你在不命名实例的情况下编写代码。这在对对象执行单项操作时非常有用。
-
-
-
 
 你需要在至少一个作用域中使用自定义引用变量，正如你之前在第一个 `let` 函数中将其重命名为 `calc` 时所看到的那样。
 
@@ -9741,22 +8555,22 @@ var result = Calculator().let { calc ->
 }
 ```
 
-这并不是坏主意，而且会让你的代码变得非常整洁。然而，事实证明这种做法可能有些多此此。如果你有一个非常长的 lambda，通过下面的写法，你实际上去掉了它的很多“短小性”（因此在某种程度上也去掉了它的价值）：
+这并不是坏主意，而且会让你的代码变得非常整洁。然而，事实证明这种做法可能有些多此一举。如果你有一个非常长的 lambda，通过下面的写法，你实际上去掉了它的很多“短小性”（因此在某种程度上也去掉了它的价值）：
 
 ```kotlin
 var finalVal = calc.execute(5, Operation.Multiply(5)).let { result ->
-    calc.execute(result, Operation.Add(12)) }
+    calc.execute(result, Operation.Add(12))
 }
 ```
+
+
 
 > 注意：作为一个例子，示例中的代码行无法放入书的一单行内！
 
 在这些情况下——尤其是当你打算通过 lambda 处理单一、清晰的事物时——使用它是更好的：
 
 ```kotlin
-var finalVal = calc.execute(5, Operation.Multiply(5)).let { calc.execute(it,
-    Operation.Add(12)) }
-}
+var finalVal = calc.execute(5, Operation.Multiply(5)).let { calc.execute(it, Operation.Add(12)) }
 ```
 
 它短得多，而且同样清晰。
@@ -9862,7 +8676,7 @@ println("Big result is ${bigResult}")
 
 `let` 的另一个重要用途是处理实例或变量为空的情况。
 
-> 注意：你可能注意到本章的大部分都在讨论 `let`。虽然并不是所有作用域函数的作用都与 `let` ，但大多数遵循相同的规则。这一节让你熟悉它们。
+> 注意：你可能注意到本章的大部分都在讨论 `let`。虽然并不是所有作用域函数的作用都与 `let` 相同，但大多数遵循相同的规则。这一节让你熟悉它们。
 
 这段代码为了在可空变量的范围内理解作用域函数具有重要意义：
 
@@ -9872,7 +8686,7 @@ println("Big result is ${bigResult}")
 但大多数情况下，由于你在书中学到的所有类型和安全原因，你不会希望允许空值进入你的函数。这里有一个简单的函数，它接收一个 `String` 并进行一些基础格式化：
 
 ```kotlin
-fun formatString(str: String) : String =
+fun formatString(str: String): String =
     "*${str}*\n"
 ```
 
@@ -9882,9 +8696,7 @@ fun formatString(str: String) : String =
 
 `let` 的另一个重要用途是处理实例或变量为空的情况。
 
-列表 11.4 是一个新程序。如果需要名称，请输入并调用 `NonNullApp`。
-
-# 列表 11.4：使用代码和空值的简单程序
+### 列表 11.4：使用代码和空值的简单程序
 
 ```kotlin
 fun main() {
@@ -9892,45 +8704,41 @@ fun main() {
     println(someString)
 }
 
-fun getRandomString(len: Int) : String? =
+fun getRandomString(len: Int): String? =
     when {
         len < 0 -> null
         len == 0 -> ""
         len > 0 -> (1..len).map { "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.".random() }.joinToString("")
     }
+```
+
+### 列表 11.5（续）
+
+```kotlin
+when {
+    len < 0 -> null
+    len == 0 -> (1..len).map { "ABCDEFGHIQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".random() }.joinToString("*")
+    len > 0 -> random()
+    else -> null
 }
-```
 
-
-
-
-# 列表 11.5（续）
-
-```
-len < 0 -> null
-len == 0 -> (1..len).map { "ABCDEFGHIQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".random() }.joinToString("*")
-len > 0 -> random()
-else -> null
-
-fun formatString(str: String) : String =
-"\n>>> ${str}***"
+fun formatString(str: String): String =
+    "\n>>> ${str}***"
 ```
 
 尝试编译，你将得到一个错误：
 
-Kotlin: Type mismatch: inferred type is String? but String was expected
+`Kotlin: Type mismatch: inferred type is String? but String was expected`
 
-这是一个你以前见过的问题。`formatString()` 不接受 `String?`，而是接受 `String`。换句话说，它会接收一个 `String`，但 `String` 必须是非空，，这没关系，因为 `formatString` 编译器会确保这一点。
+这是一个你以前见过的问题。`formatString()` 不接受 `String?`，而是接受 `String`。换句话说，它会接收一个 `String`，但 `String` 必须是非空，这没关系，因为 `formatString` 编译器会确保这一点。
 
 # 接受 null 值不是一个好主意
 
-
-
 一个简单的修复方法是将 `formatString()` 更改为如下签名：
 
-```
-fun formatString(str: String?) : String =
-"\n>>> ${str}***"
+```kotlin
+fun formatString(str: String?): String =
+    "\n>>> ${str}***"
 ```
 
 这是合法的，并且可以解决编译错误。通过此更改，`formatString()` 将接受 `someString`，因为 `someString` 可能是 `null`，而 `formatString()` 接收的是 `String`。
@@ -9945,37 +8753,33 @@ fun formatString(str: String?) : String =
 
 你可以在可能为 `null` 的变量后添加 `?` 运算符添加如 `let` 等作用域函数。如果变量为 `null`，则忽略该作用域函数。如果不是，则执行。列表 11.6 展示了这种用法。
 
-# 列表 11.6：使用作用域函数处理可能为空的值
+### 列表 11.6：使用作用域函数处理可能为空的值
 
-```
+```kotlin
 fun main() {
-  var someString: String? = getRandomString(10)
-  println(someString)
+    var someString: String? = getRandomString(10)
+    println(someString)
 
-  someString?.let { println(formatString(someString)) }
+    someString?.let { println(formatString(someString)) }
 }
-```
 
-```
-fun getRandomString(len: Int) : String? =
-when {
-  len < 0 -> null
-  len == 0 -> ""
-  len > 0 -> (1..len).map { "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".random() }.joinToString("")
-  else -> null
-}
+fun getRandomString(len: Int): String? =
+    when {
+        len < 0 -> null
+        len == 0 -> ""
+        len > 0 -> (1..len).map { "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".random() }.joinToString("")
+        else -> null
+    }
 ```
 
 ```kotlin
-fun formatString(str: String) : String =
-"\n>>> ${str} <<\n"
+fun formatString(str: String): String =
+    "\n>>> ${str} <<\n"
 ```
 
 这现在将帮助提供格式化并运行。这里是关键行：
 
-```
-someString?.let { println(formatString(someString)) }
-```
+`someString?.let { println(formatString(someString)) }`
 
 输出是你预期的结果：
 
@@ -9989,35 +8793,29 @@ qbttNxelV
 
 但现在更改 `someString` 的初始化：
 
-```
-var someString: String? = getRandomString(-2)
-```
+`var someString: String? = getRandomString(-2)`
 
 如果你查看 `getRandomString()`，你会发现输入参数 `null` 将导致返回 `null`：
 
 ```kotlin
-fun getRandomString(len: Int) : String? =
-when {
-  len < 0 -> null
-  len == 0 -> ""
-  len > 0 -> (1..len).map { "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".random() }.joinToString("")
-  else -> null
-}
+fun getRandomString(len: Int): String? =
+    when {
+        len < 0 -> null
+        len == 0 -> ""
+        len > 0 -> (1..len).map { "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".random() }.joinToString("")
+        else -> null
+    }
 ```
 
 所以 `someString` 现在是 `null`。这第一行可以正常工作：
 
-```
-println(someString)
-```
+`println(someString)`
 
-这是因为 `println()` 接受 `Any?`。但接接的一行很有趣：
+这是因为 `println()` 接受 `Any?`。但紧接着的一行很有趣：
 
-```
-someString?.let { println(formatString(someString)) }
-```
+`someString?.let { println(formatString(someString)) }`
 
-`someString?` 告诉 Kotlin 变量（someString）可能可能是 `null`。如果是 `null`，则停止执行。如果 `someString` 不是 `null`，则执行带有 `formatString()` 的 `println()`。
+`someString?` 告诉 Kotlin 变量（`someString`）可能可能是 `null`。如果是 `null`，则停止执行。如果 `someString` 不是 `null`，则执行带有 `formatString()` 的 `println()`。
 
 在这种情况下，对于 `someString`，你不会期望该作用域函数运行。而它确实没有运行。没有额外的输出：
 
@@ -10031,9 +8829,7 @@ null
 
 现在你已经知道取一个 `null` 变量并在作用域函数应用 lambda 是可行的，并且你可以在调用 `null` 时避免执行：
 
-```
-someString?.let { println(formatString(someString)) }
-```
+`someString?.let { println(formatString(someString)) }`
 
 但请记住，作用域函数带给你很大的是便利性和代码的清晰度。它们移除了不会让代码混乱的变量，同时也节省了内存。
 
@@ -10048,40 +8844,37 @@ someString?.let { println(formatString(someString)) }
 
 你可以更进一步！通过对函数应用 `let`（或任何作用域函数），如果原始函数返回 `null`，则作用域函数将不会运行。看看列表 11.7，它用你编写的代码演示了这一想法。
 
-# 列表 11.7：对可能返回 null 的函数应用作用域函数
+### 列表 11.7：对可能返回 null 的函数应用作用域函数
 
-```
+```kotlin
 fun main() {
-  // var someString: String? = getRandomString(10)
-  var someString: String? = getRandomString(-2)
-  println(someString)
+    // var someString: String? = getRandomString(10)
+    var someString: String? = getRandomString(-2)
+    println(someString)
 
-  someString?.let { println(formatString(someString)) }
+    someString?.let { println(formatString(someString)) }
 }
 
 getRandomString(-2).let {
-  println(formatString(it))
+    println(formatString(it))
 }
 
-fun getRandomString(len: Int) : String? =
-  when {
-    len < 0 -> null
-    len == 0 -> ""
-    len > 0 -> (1..len).map { "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".random() }.joinToString("*")
-    else -> null
-  }
+fun getRandomString(len: Int): String? =
+    when {
+        len < 0 -> null
+        len == 0 -> ""
+        len > 0 -> (1..len).map { "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".random() }.joinToString("*")
+        else -> null
+    }
 
-fun formatString(str: String) : String =
-  "\n>>> ${str} <<<
+fun formatString(str: String): String =
+    "\n>>> ${str} <<<
 ```
 
 这段代码整合了你已经学过的内容：
 
 - 与其将 `getRandomString()` 的结果赋值给只使用一次的变量，而是直接调用它。
 - 原始函数返回 `null`，则作用域函数将不会运行。
-
-
-
 
 通过此更改，如果 `getRandomString()` 为 `null`，你将得不到输出；如果有格式化的 String 返回，将得到正确的输出。
 
@@ -10100,13 +8893,15 @@ with(Calculator()) {
 
 通过代码你可以快速看出它的作用：
 
-- 1. 首先，提供了作用函数：`with`。
-- 2. 为 `with` 提供了一个上下文对象。该上下文对象（通过 `Calculator()` 创建的 `Calculator` 实例）在整个 lambda 表达式中都是引用。
-- 3. lambda 内部的任何操作都被认为是在上下文对象上进行的。
+1. 首先，提供了作用函数：`with`。
+2. 为 `with` 提供了一个上下文对象。该上下文对象（通过 `Calculator()` 创建的 `Calculator` 实例）在整个 lambda 表达式中都是引用。
+3. lambda 内部的任何操作都被认为是在上下文对象上进行的。
+
+
 
 由于上下文对象是 `Calculator` 的实例，因此可以运行它的所有方法：`execute()`、`add()` 和 `sum()`。
 
-> 警告：此代码示例假设你在阅读各个章节时保持了 `Calculator` 的最新状态。如果不是，你可能需要下载代码示例，以便跟进并可以使用本节及后续章节中引用的所有函数。
+> **警告**：此代码示例假设你在阅读各个章节时保持了 `Calculator` 的最新状态。如果不是，你可能需要下载代码示例，以便跟进并可以使用本节及后续章节中引用的所有函数。
 
 ## 作为对象引用使用
 
@@ -10136,7 +8931,7 @@ with(Calculator()) {
 }
 ```
 
-> > 警告：现在是时候指出，阅读（和编写）关于这种引用的文本是一个棘手的问题，因为 "this" 这个词会频繁出现，但它并不是对对象的引用，而是一个简单的英语单词。在书中，你可以特别注意字体。当 `this` 以代码字体显示时，它是对对象实例的引用。当 `this` 以普通字体显示时，它只是普通英语的一部分。
+> **警告**：现在是时候指出，阅读（和编写）关于这种引用的文本是一个棘手的问题，因为 "this" 这个词会频繁出现，但它并不是对对象的引用，而是一个简单的英语单词。在书中，你可以特别注意字体。当 `this` 以代码字体显示时，它是对对象实例的引用。当 `this` 以普通字体显示时，它只是普通英语的一部分。
 
 你的 IDE 也会提供有用的提示；图 11.3 显示了 IntelliJ 如何查看你在 lambda 表达式中的视图。这与章节开头图 11.2 所示的引用指示类似。
 
@@ -10158,7 +8953,7 @@ with (Person("David", "let")) {
 
 ![](img/0c8d5d6c6d5ced28a954a187036113_317_0.png)
 
-，这段代码看起来很……奇怪。`with` 函数经常的情况是：存在令人困惑的隐含上下文。因此，在使用它时要小心。额外的注释可能会有帮助，因为记住，作用函数的目标是方便和清晰：
+这段代码看起来很……奇怪。`with` 函数经常的情况是：存在令人困惑的隐含上下文。因此，在使用它时要小心。额外的注释可能会有帮助，因为记住，作用函数的目标是方便和清晰：
 
 话如此，`with` 是 Kotlin 中一种重要的地道编程技术，所以不要回避使用它。
 
@@ -10179,12 +8974,9 @@ with(Calculator()) {
 }
 ```
 
-
-
-
 ## APPLY 有上下文对象且没有返回值
 
-apply 是你作用域函数工具箱中的另一个工具，它延续了在便利性和可读性主题上提供细微变体的模式。apply 与 `let`、`run` 和 `with` 主要区别在于它不从 lambda 表达式返回任何值。
+`apply` 是你作用域函数工具箱中的另一个工具，它延续了在便利性和可读性主题上提供细微变体的模式。`apply` 与 `let`、`run` 和 `with` 主要区别在于它不从 lambda 表达式返回任何值。
 
 与 `run` 和 `with` 类似，`apply` 使用对象作为上下文对象。因此，`apply` 变成不需要返回值即可操作实例的完美函数。它的方便之处在于你不需要反复输入实例名称。
 
@@ -10195,14 +8987,14 @@ apply 是你作用域函数工具箱中的另一个工具，它延续了在便�
 val brian = Person("Brian", "Truthy")
 brian.partner = Person("Rose", "Elizabeth", _age = 34)
 // 出某些原因，我们只知道 Brian 比他的伴侣小两岁
-brianage = brian.partner?.let { it.age - 2 } ?: 0
+brian.age = brian.partner?.let { it.age - 2 } ?: 0
 println(brian)
 println(brian.partner)
 ```
 
 你可能会注意到实例 `brian` 出现了很多次。确实非常多！
 
-> 如果你在跟随学习的过程中输入并执行代码——你确实应该这样做——你需要在你的项目和测试程序中导入 `org.wiley.kotlin.person.Person`。
+> **注意**：如果你在跟随学习的过程中输入并执行代码——你确实应该这样做——你需要在你的项目和测试程序中导入 `org.wiley.kotlin.person.Person`。
 
 ## apply 对实例进行操作
 
@@ -10268,15 +9060,12 @@ this.age = partner?.let { it.age - 2 } ?: 0
 
 上下文对象（`brian`，一个 `Person` 实例）正在为 `age` 属性赋值。在这个（有些幼稚的）示例中，`brian` 实例的年龄被设置为比伴侣小两岁。
 
-
-
-
-
 # 296 | 第 11 章 编写地道的 Kotlin
 
 这里的关键在于，`Person` 实例首先初始化，然后执行 `also` 块。这听起来显而易见，但这种顺序很快就会变得重要。
 
 使用了另一个作用域函数——这次是 `apply`：
+
 ```kotlin
 it.partner = Person("Chloe", "Herng Lee").apply {
     println("New person created: ${fullName()}")
@@ -10285,20 +9074,24 @@ it.partner = Person("Chloe", "Herng Lee").apply {
 
 `apply` 使用了这个引用，因此两个作用域函数之间不会发生冲突。它仍然指向第一个 `Person` 实例 David。在 `apply` 块中，它指向第二个 `Person` 实例 Chloe Herng Lee。因此，对 `fullName()` 的调用绑定到了它，并应该打印出她的名字。
 
-> 注意：一旦你开始频繁使用作用域函数，你会发现你经常使用它们，而且在另一个作用域函数嵌套作用域函数是很常见的。由于大多数作用域函数是可以互换的，你可能会因为一个函数使用 `it` 而另一个使用 `this`（或反之）而选择其中一个而不是另一个。避免引用冲突是选择 `apply` 而不是 `let`，或选择 `run` 而不是 `also` 的完全合理的理由。
+> **注意**：一旦你开始频繁使用作用域函数，你会发现你经常使用它们，而且在另一个作用域函数嵌套作用域函数是很常见的。由于大多数作用域函数是可以互换的，你可能会因为一个函数使用 `it` 而另一个使用 `this`（或反之）而选择其中一个而不是另一个。避免引用冲突是选择 `apply` 而不是 `let`，或选择 `run` 而不是 `also` 的完全合理的理由。
 
 这种潜在的引用冲突也可能让你重命名你的作用域变量。但根据原则，你应该尽量避免重命名这个引用；这是一种你应该尽可能避免的坏习惯。
 
 在 `apply` 完成后，还有额外的打印：
+
 ```kotlin
 println("${it.firstName}'s partner is ${it.partner?.fullName()}")
 ```
+
 这位于 `also` 块内部，但在 `apply` 之外。它引用了 David `Person` 实例，该实例有一个新伙伴，即在上一个 `apply` 中创建并使用的 Chloe Herng Lee 实例。
+
 最后的 `println()` 也是最后一个执行的语句……对吧？
 
-# also 在赋值之前执行
+## also 在赋值之前执行
 
 再次查看这段整体代码：
+
 ```kotlin
 println(Person("David", "Le").also {
     println("New person created: ${fullName()}", "Herng Lee")
@@ -10308,11 +9101,15 @@ println(Person("David", "Le").also {
     println("${it.firstName}'s partner is ${it.partner?.fullName()}")
 })
 ```
+
 一眼看去，基于你所知道的知识，可以推测输出可能是：
 
 David Le
+
 New person created: David Le
+
 New partner created: Chloe Herng Lee
+
 David's partner is Chloe Herng Lee
 
 also 也给你一个实例……但先对实例进行操作 | 27
@@ -10332,32 +9129,33 @@ David Le
 
 遗憾的是，这有点违背直觉，特别是当这个作用域函数被称为“also”（也）时。人们很容易把 `also` 设成初始化（或使用）这个对象实例，然后（也）执行这段代码，但并不是 `also` 的实际作用。相反，你应该将 `also` 视为“执行此代码代码，并将上下文对象赋值给变量（或传递给函数），连同此代码块”。
 
-> 警告：无论你如何扭曲或重写对 `also` 的描述，听起来都会有些别扭。坦率地说，这个命名并不理想。即使官方 Kotlin 文档也局结于说你可以把 `also` 读作“并且也对对象执行以下操作”。但句子中的“并且”暗示了一个顺序，而那个“执行操作”（lambda 中的代码块）是在对象赋值之后执行的。
+> **警告**：无论你如何扭曲或重写对 `also` 的描述，听起来都会有些别扭。坦率地说，这个命名并不理想。即使官方 Kotlin 文档也局结于说你可以把 `also` 读作“并且也对对象执行以下操作”。但句子中的“并且”暗示了一个顺序，而那个“执行操作”（lambda 中的代码块）是在对象赋值之后执行的。
 
 在这种情况下，你应该少少对函数名称的自描述性投入信任，而应该专注于记忆它实际上做了什么。
 
 考虑到这一点，你就能理解代码的顺序了。这里再次提供代码以复习：
 
-```
-println(Person("David", "Le").)
-println("New person created: ${it.fullName()}")
-it.partner = Person("Chloe", "Herng").apply {
-    println("New partner created: ${it.fullName()}")
-}
-println("${it.firstName}'s partner is ${it.partner?.fullName()}")
+```kotlin
+println(Person("David", "Le").also {
+    println("New person created: ${it.fullName()}")
+    it.partner = Person("Chloe", "Herng").apply {
+        println("New partner created: ${it.fullName()}")
+    }
+    println("${it.firstName}'s partner is ${it.partner?.fullName()}")
+})
 ```
 
 以下是具体发生的情况：
 
-- 1. 初始化了一个人（David Le）。
-- 2. 该实例被传递到 `also` 块中：
-  a. 打印 `Person` 实例（David）的 `fullName()` 函数。
-  b. 创建了一个人实例（Chloe Herng Lee）。
-  c. 在新的 `Person` 实例（Chloe）上调用了 `apply`：
-    i. 打印 `Person` 实例（Chloe）的全名。
-  d. 将新的 `Person` 实例（Chloe）赋值给第一个 `Person` 实例（David）的 `partner` 属性。
-- e. 更多操作，显示第一个 `Person` 实例（David），然后该实例的 `partner` 属性，即新的 `Person` 实例（Chloe）。
-- 3. 最后，原始的 `Person` 实例（David）以及更新后的 `partner` 属性（Chloe）被传递到整个代码示例第一行的 `println()` 中。
+1. 初始化了一个人（David Le）。
+2. 该实例被传递到 `also` 块中：
+   a. 打印 `Person` 实例（David）的 `fullName()` 函数。
+   b. 创建了一个人实例（Chloe Herng Lee）。
+   c. 在新的 `Person` 实例（Chloe）上调用了 `apply`：
+      i. 打印 `Person` 实例（Chloe）的全名。
+   d. 将新的 `Person` 实例（Chloe）赋值给第一个 `Person` 实例（David）的 `partner` 属性。
+   e. 更多操作，显示第一个 `Person` 实例（David），然后该实例的 `partner` 属性，即新的 `Person` 实例（Chloe）。
+3. 最后，原始的 `Person` 实例（David）以及更新后的 `partner` 属性（Chloe）被传递到整个代码示例第一行的 `println()` 中。
 
 这一切都发生得很快，在很多情况下顺序并不明显，但重要的是在编译和执行层面，是有顺序的。
 
@@ -10382,7 +9180,9 @@ println("${it.firstName}'s partner is ${it.partner?.fullName()}")
 
 # 列表 11.9：完整示例集
 
-```
+
+
+```kotlin
 import org.wiley.kotlin.math.Calculator
 import org.wiley.kotlin.math.Operation
 import org.wiley.kotlin.person.Person
@@ -10432,10 +9232,6 @@ fun main() {
     }
 }
 ```
-
-
-
-
 
 # 列表 11.9 (续)
 
@@ -10559,21 +9355,18 @@ fun theFun(calc: Calculator) {
 
 要点是，使用某种特定的作用域函数并没有绝对的正确时机。你越早接受这一点，在编写代码使用它们时就会越得练。
 
-# 12
+# 第 12 章 继承，再次，带着情感
 
-# 继承，再次，带着情感
+## 本章包含什么？
 
-本章包含什么？
-
-抽象类
-
+- 抽象类
 - 用于定义行为的接口
 - 实现接口
 - 实现与扩展
 - 委托模式
 - 委托与实现
 
-# 抽象类需要稍后实现
+## 抽象类需要稍后实现
 
 你已经花了几章节的时间学习类和继承，并且构建了许多开放类并扩展了这些类。现在是时候对类、继承以及一些你只简要见过的概念以及一些你从未见过的概念再次进行一次回顾了。
 
@@ -10585,7 +9378,7 @@ abstract fun isSuperUser(): Boolean
 
 在 Kotlin 中，`abstract` 很多时候推迟术语。它表示：“这定义了以后必须实现的功能”。对于方法来说，它要求扩展类的类重写该方法。对于类来说，意味着它不能被实例化。
 
-# 抽象类不能实例化
+## 抽象类不能实例化
 
 列表 12.1 重新回顾了之前章节中的 `User`。这是一个数据类，并且包含一些属性。
 
@@ -10605,7 +9398,7 @@ data class User(var email: String, var firstName: String, var lastName: String) 
 
 这与 `Car` 不同。`Car` 具有某些特性。在这种情况下，你并不希望创建一个 `Car` 实例。是不完整的。你可以通过创建一个抽象类而不是非抽象类来禁止创建 `Car` 实例。
 
-> 注意 如果你刚刚对这种推理提出了 10 个或 20 个反对意见，那太棒了！它们可能是合理的——只需继续阅读，这是一个复杂且微妙的话题，需要比几个段落才能完全解释。
+> **注意** 如果你刚刚对这种推理提出了 10 个或 20 个反对意见，那太棒了！它们可能是合理的——只需继续阅读，这是一个复杂且微妙的话题，需要比几个段落才能完全解释。
 
 列表 12.3 将 `Car` 转换为抽象版本。
 
@@ -10624,12 +9417,7 @@ abstract class Car {
 
 抽象类主要关注定义行为，而不是实现它。数据类关于状态，而接口关于定义行为。
 
-
-
-
-第 12 章 继承，再次，带着感觉
-
-# 列表 12.4：测试抽象类
+## 列表 12.4：测试抽象类
 
 ```kotlin
 import org.wiley.kotlin.car.Car
@@ -10645,16 +9433,17 @@ Kotlin: Cannot create an instance of an abstract class（无法创建抽象类�
 
 这非常显而易见。你不能实例化抽象类。但更重要的是，它让你对抽象类的真正用途有了直观感受：定义必须具备的行为，而不定义行为本身。
 
-## 抽象类与子类定义了契约
+### 抽象类与子类定义了契约
 
 `Car` 与任何子类的它的定义了某种契约。然而，现在这个契约是空的。你无法实例化 `Car`，如果你子类了它，你也不需要满足任何要求。这使得 `Car` 变成了一个相当没用的抽象类。
 
 更好的方法是在抽象类中定义行为，然后将实现推迟给子类。列表 12.5 展示了这一点，以及 `drive()` 函数是如何被设为抽象的。
 
-# 列表 12.5：将 Car 中的单函数设为抽象
+## 列表 12.5：将 Car 中的单函数设为抽象
 
 ```kotlin
 package org.wiley.kotlin.car
+
 abstract class Car {
 
     // 子类需要定义它们如何行驶
@@ -10673,7 +9462,7 @@ abstract fun drive(direction: String, speed: Int) : Int
 
 现在，扩展 `Car` 的类知道它们被要求做什么。列表 12.6 展示了 `Car` 类的一个简单扩展（强调是简单的），它履行了契约。
 
-# 列表 12.6：履行 Car 设定的契约
+## 列表 12.6：履行 Car 设定的契约
 
 ```kotlin
 package org.wiley.kotlin.car
@@ -10689,7 +9478,7 @@ class Honda : Car() {
 
 列表 12.7 在一个同样简单的示例中使用了 `Honda`。
 
-# 列表 12.7：实例化 Honda 并使用 drive() 函数
+## 列表 12.7：实例化 Honda 并使用 drive() 函数
 
 ```kotlin
 import org.wiley.kotlin.car.Honda
@@ -10704,11 +9493,11 @@ fun main() {
 
 汽车在上一分钟内行驶了 1 英里。
 
-> 警告 本章中函数的实现可能既不会让你印象深刻也不会让你惊讶。这没关系；目标不是编写特别的代码，而是真正关注 Kotlin 提供的各种继承方法，首先是抽象类和函数，很快就会接口以及这些接口的实现。不要太担心函数代码，而是关注这些类和构造是如何交互的，以及为什么继承在 Kotlin 中是这样工作的。
+> **警告** 本章中函数的实现可能既不会让你印象深刻也不会让你惊讶。这没关系；目标不是编写特别的代码，而是真正关注 Kotlin 提供的各种继承方法，首先是抽象类和函数，很快就会接口以及这些接口的实现。不要太担心函数代码，而是关注这些类和构造是如何交互的，以及为什么继承在 Kotlin 中是这样工作的。
 
 尽管如此，抽象类通常不仅仅是定义单个抽象函数。看到多个函数作为抽象类所设定的契约的一部分是很常见的。抽象类还可以定义需要子类处理的属性。列表 12.8 展示了 `car` 的稍微演进的版本，它添加了一个抽象属性和一些额外的抽象函数。
 
-# 列表 12.8 为 Car 定义的契约添加更多细节
+## 列表 12.8 为 Car 定义的契约添加更多细节
 
 ```kotlin
 package org.wiley.kotlin.car
@@ -10718,7 +9507,7 @@ abstract class Car {
 
 （持续）
 
-# 列表 12.8（续）
+## 列表 12.8（续）
 
 ```kotlin
 abstract var maxSpeed: Int
@@ -10733,9 +9522,9 @@ abstract fun stop()
 abstract fun drive(direction: String, speed: Int) : Int
 ```
 
-> 警告 如果你正在跟着操作并边编译，对 `Car` 的此更改将破坏 `Honda` 类。它不再履行 `Car` 设定的契约，因为它没有处理新的 `maxSpeed` 属性或 `stop()` 函数。
+> **警告** 如果你正在跟着操作并边编译，对 `Car` 的此更改将破坏 `Honda` 类。它不再履行 `Car` 设定的契约，因为它没有处理新的 `maxSpeed` 属性或 `stop()` 函数。
 
-## 抽象类可以定义具体的属性和函数
+### 抽象类可以定义具体的属性和函数
 
 到目前为止，`Car` 中的所有内容都是抽象的：它的属性和函数。但并没有强制要求。事实上，事实证明这是抽象类和接口之间的关键区别，你将在本章的晚些时候学习。抽象类可以拥有完全实现的（有时称为“具体的”）函数和属性，并与抽象的混合。
 
@@ -10747,7 +9536,9 @@ abstract class Car(val model: String, val color: String) {
 
 现在，每个子类都有 `model` 和 `color` 属性可用。它们也可以在抽象类中使用，尽管它们在编译时之前在子类中尚未被定义。列表 12.9 添加了一个简单的 `costring()` 函数——一个对于 `Car` 是具体的函数。此方法对 `Car` 的所有子类可用。
 
-# 列表 12.9 在 Car 中设置一些具体的函数和属性
+## 列表 12.9 在 Car 中设置一些具体的函数和属性
+
+
 
 ```kotlin
 package org.wiley.kotlin.car
@@ -10763,7 +9554,7 @@ abstract class Car(val model: String, val color: String) {
     abstract fun stop()
 
     // 子类需要定义它们如何行驶
-    abstract fun drive(direction: String, speed: Int) : Int
+    abstract fun drive(direction: String, speed: Int): Int
 
     fun costring(): String {
         return "Model: $model, Color: $color"
@@ -10799,7 +9590,7 @@ override fun start() {
 
 首先，你需要几个 `Car` 子类。列表 12.13 和 12.14 在组合中加入了英瑞迪和宝马。
 
-+ 列表 12.13：Car 的英瑞迪子类
+### 列表 12.13：Car 的英瑞迪子类
 
 ```kotlin
 package org.wiley.kotlin.car
@@ -10816,20 +9607,20 @@ class Infiniti(model: String, color: String) : Car(model, color) {
         println("停止英瑞迪 ${model}！")
     }
 
-    override fun drive(direction: String, speed: Int) : Int {
+    override fun drive(direction: String, speed: Int): Int {
         println("英瑞迪 ${model} 正在行驶!")
         return speed / 60
     }
 }
 ```
 
-## 列表 12.14：Car 的宝马子类
+### 列表 12.14：Car 的宝马子类
 
 ```kotlin
 package org.wiley.kotlin.car
 
 class BMW(model: String, color: String) : Car(model, color) {
-    override var maxSpeed : Int = 182
+    override var maxSpeed: Int = 182
 
     override fun start() {
         println("正在启动宝马 ${model}:踩刹车，按下启动按钮*")
@@ -10839,18 +9630,18 @@ class BMW(model: String, color: String) : Car(model, color) {
         println("停止 ${model}")
     }
 
-    override fun drive(direction: String, speed: Int) : Int {
+    override fun drive(direction: String, speed: Int): Int {
         println("宝马 ${model} 正在行驶*")
         return speed / 60
     }
 }
 ```
 
-> 注意：如前所述，这些是 `Car` 子类非常平凡的例子，没有你在更真实的应用程序中可能想要的变种变化。这里的重点是细微的打印差异，以便在列表 12.15所示的测试用例中容易调用了哪个子类。
+> 注意：如前所述，这些是 `Car` 子类非常平凡的例子，没有你在更真实的应用程序中可能想要的变种变化。这里的重点是细微的打印差异，以便在列表 12.15 所示的测试用例中容易看出调用了哪个子类。
 
 现在你可以构建一个加载大量 `Car` 子类的程序，并对它们进行迭代，以通用的方式处理每一个……即使每个子类都有独特的行为。这正是列表 12.15 所做的。
 
-## 列表 12.15：在列表中迭代汽车
+### 列表 12.15：在列表中迭代汽车
 
 ```kotlin
 import kotlin.random.Random
@@ -10866,13 +9657,9 @@ fun main() {
     car.drive("W", 60)
     car.stop()
 }
-```
 
-## 接口定义行为但没有主体 | 33
-
-```kotlin
 println("正在加载车队...")
-var cars : MutableList<Car> = loadCars(10)
+var cars: MutableList<Car> = loadCars(10)
 for (car in cars) {
     car.start()
     car.drive("E", Random.nextInt(0, 200))
@@ -10881,7 +9668,7 @@ for (car in cars) {
 ```
 
 ```kotlin
-fun loadCars(numCars: Int) : MutableList<Car> {
+fun loadCars(numCars: Int): MutableList<Car> {
     var list = mutableListOf<Car>()
     for (i in 0..numCars) {
         when (Random.nextInt(0, 3)) {
@@ -10897,9 +9684,7 @@ fun loadCars(numCars: Int) : MutableList<Car> {
 
 关键不在于行为或输出。而是从程序的角度来看，`cars` 列表中的每一项都是 `Car`。这就是契约如此重要的地方：每个 `Car` 子类都有 `drive()` 和 `start()`。
 
-
-
-# 316 | 第 12 章 继承，再次，带着感情
+# 继承层次结构示例
 
 ![](img/0c8d5d6c6d95ced628a954a187036113_345_0.png)
 
@@ -10913,61 +9698,57 @@ fun loadCars(numCars: Int) : MutableList<Car> {
 
 你还可以创建一个 `Motorcycle` 子类列表，并调用 `Motorcycle` 特有的函数。你可能会让 `Motorcycle` 添加一个 `Car` 没有的脚架属性，现在任何 `Motorcycle` 子类都将支持该属性。
 
-# 接口无法维护状态
+## 接口无法维护状态
 
 在接口章节的开头，你读到接口可以定义属性，但它们不能定义状态，也不能在类的其他部分使用。为了理解这一点，请看 `Vehicle` 如何定义 `maxSpeed` 属性：
 
 ```kotlin
 interface Vehicle {
-  maxSpeed: Int
+    var maxSpeed: Int
 
-  // 其他代码
+    // 其他代码
 }
 ```
 
-`maxSpeed` 实际上是抽象的。如果你回看它在 `Car` 中是如何定义的，它在这里被标记为抽象 `abstract`）：
+`maxSpeed` 实际上是抽象的。如果你回看它在 `Car` 中是如何定义的，它在这里被标记为抽象 `abstract`：
 
 ```kotlin
 abstract class Car(val model: String, val color: String) : Vehicle {
 
-  abstract var maxSpeed: Int
-```
-
-# 接口定义行为但没有主体
-
-```kotlin
-// 其他代码
+    abstract var maxSpeed: Int
+    // 其他代码
 }
 ```
 
 在这两种情况下，`maxSpeed` 的实际处理都被推迟到了具体类。正因如此，`maxSpeed` 可以在函数中使用，例如 `Car` 中的 `toString()`：
 
 ```kotlin
-override fun toString() : String {
+override fun toString(): String {
     return "${this::class.simpleName} ${modelName} in ${color} with a max speed of ${maxSpeed}"
 }
 ```
 
 这是合法的，Kotlin 编译器理解当此函数被调用时，具体类中的代码已经确保了 `maxSpeed` 被填充了。
 
-# 类的状态是其属性的值
+### 类的状态是其属性的值
 
 `BMW` 类在它的属性值中存储了状态。它的型号、状态、颜色等都存储在 `model`、`color` 和 `maxSpeed` 属性中：
 
 ```kotlin
 class BMW(model: String, color: String) : Car(model, color) {
-    override var maxSpeed : Int = 182
+    override var maxSpeed: Int = 182
+}
 ```
 
 `BMW` 的特定实例将拥有与另一个特定实例不同的状态。一个可能是蓝色的 435，另一个可能是白色的 M3。
 
 接口无法存储状态。这必须由具体实例来处理。但接口可以做一些有点奇怪的事情：它可以为不需要推迟到后面的属性定义访问器（getters）。
 
-# 接口可以拥有固定值
+## 接口可以拥有固定值
 
 在接口中，你可以定义一个立即提供自定义访问器实现的一个属性。你可以在列表 12.19 中看到这一点。
 
-> 列表 12.19：为 `Vehicle` 添加带有访问器的属性
+### 列表 12.19：为 `Vehicle` 添加带有访问器的属性
 
 ```kotlin
 package org.wiley.kotlin.vehicle
@@ -10976,11 +9757,11 @@ interface Vehicle {
     val maxSpeed: Int
 
     val purpose: String
-    get() = "This interface models vehicles of all kinds"
+        get() = "This interface models vehicles of all kinds"
 
     fun start()
     fun stop()
-    fun drive(direction: String, speed: Int) : Int
+    fun drive(direction: String, speed: Int): Int
 }
 ```
 
@@ -10994,7 +9775,7 @@ println(car.purpose)
 
 > 注意：接口中的固定值属性有一个非常好的用例。你将在很快后的实现其他接口的章节中看到这种用法。
 
-# 接口定义函数主体
+## 接口定义函数主体
 
 Kotlin 接口可以让你惊讶的一点是定义一个函数和该行为。这看起来可能有点奇怪；接口没有定义状态的属性，那么函数会做什么呢？你已经见过一个很好的例子了。记住抽象类中这个版本的 `toString()`：
 
@@ -11014,19 +9795,12 @@ fun stats(): String {
 
 现在这看起来可能有点奇怪。乍看之下，这不是违反了接口维护状态的规则吗？不，实际上并不是接口在维护状态；而是继承链中某处的具体实现。实际实例将拥有自己必须处理的 `maxSpeed`——即 `maxSpeed` 属性。
 
-（注：提供的原始文本存在大量重复和 OCR 错误，已根据逻辑流进行了去重和清理。）
-
-
-
-
-# 接口定义行为但没有主体 | 321
-
 ```kotlin
 override fun stop() {
     println("Stopping the ${model}")
 }
 
-override fun drive(direction: String, speed: Int) : Int {
+override fun drive(direction: String, speed: Int): Int {
     println("The Honda ${model} is driving!")
     return speed / 60
 }
@@ -11041,16 +9815,16 @@ var honda = Honda("Odyssey", "grey")
 println(honda.name)
 ```
 
-# 接口属性名称可能会引起混淆
+## 接口属性名称可能会引起混淆
 
 你可能会在这里发现一个问题。当只看 `Manufacturer` 接口时，`name` 属性非常有意义。但现在看 `Honda` 类，就并不完全清楚 `name` 指的是什么了。你有两种方案来解决这个问题：
 
--   为接口属性名（如 `name`）加上接口名前缀，例如使用 `manufacturerName` 代替 `name`。
--   避免通用的属性名称，例如使用 `manufacturer` 或 `make` 代替 `name`。
+- 为接口属性名（如 `name`）加上接口名前缀，例如使用 `manufacturerName` 代替 `name`。
+- 避免通用的属性名称，例如使用 `manufacturer` 或 `make` 代替 `name`。
 
 这两种方法都可以，这变成了一个风格和偏好的问题。对于这一点，你只需将 `Manufacturer` 和 `HondaManufacturer` 中的 `name` 属性重命名为 `make`，为属性的值和用途提供更好的上下文。
 
-# 接口装饰类
+## 接口装饰类
 
 你可能注意到，即使是 `Honda`（以及 `Car` 的其他子类，甚至是虚构的 `Motorcycle` 抽象类）也可以实现 `HondaManufacturer` 而不需要实现额外的行为。
 
@@ -11058,7 +9832,7 @@ println(honda.name)
 
 在这种情况下，`HondaManufacturer` 通过给 `Honda` 赋予一个新属性来装饰它，而 `Honda` 类只需要添加另一个继承的接口。你也可以以这种方式添加功能；你可能会添加一个提供制造商信息的函数。因此，`Manufacturer` 可能会如列表 12.24 所示定义一个新函数，然后 `HondaManufacturer` 就可以如列表 12.25 所示进一步定义行为。
 
-# 列表 12.24：在 Manufacturer 实现上定义新函数
+### 列表 12.24：在 Manufacturer 实现上定义新函数
 
 ```kotlin
 package org.wiley.kotlin.vehicle
@@ -11066,11 +9840,11 @@ package org.wiley.kotlin.vehicle
 interface Manufacturer {
     val make: String
 
-    fun manufacturerInformation() : String
+    fun manufacturerInformation(): String
 }
 ```
 
-# 列表 12.25：为接口的所有实现添加可用行为
+### 列表 12.25：为接口的所有实现添加可用行为
 
 ```kotlin
 package org.wiley.kotlin.vehicle
@@ -11079,78 +9853,24 @@ interface HondaManufacturer : Manufacturer {
     override val make: String
         get() = "Honda"
 
-    override fun manufacturerInformation() : String {
-        return "Honda 是 2015 年世界第第八大汽车制造商。" +
+    override fun manufacturerInformation(): String {
+        return "Honda 是 2015 年世界第八大汽车制造商。" +
                "更多信息请访问 https://www.honda.com"
     }
 }
 ```
 
-# 提供了扩展行为的另一种选项
+## 提供了扩展行为的另一种选项：委托
 
 到目前，你已经掌握了 Kotlin 中大部分的“日常继承”。十之九的情况下，你会使用接口，用抽象类或具体类来实现它们，或者用其他接口来扩展它们。然后，偶尔你会实现多个接口，有时用新行为装饰类，并要求该类实现新接口中定义的行为。无论如何，你手头都有很多工具。
 
 但你偶尔会遇到一些极少数的情况，这是 Kotlin 特别感兴趣的：一个对象可以由接口的多个实现构成的想法。这有点复杂，请花些时间考虑，但解决这个用例的回报是值得的。
 
-# 抽象类从通用变为具体
+### 抽象类从通用变为具体
 
-假设你有一个 `Spy` 类。假设你有一个 `Spy` 类。一个对象可以由接口的多个实现。这变得有点棘手，请花些时间，但解决这个用例的回报是值得的。
+假设你有一个 `Spy` 类。一个对象可以由接口的多个实现组成。这变得有点棘手，请花些时间，但解决这个用例的回报是值得的。
 
-# 委托提供了扩展行为的另一种选项 | 321
 
-# 装饰类
-
-你可能注意到即使是 `Honda`（以及 `Car` 的其他子类，甚至是虚构的 `Motorcycle` 抽象类）也可以实现 `HondaManufacturer` 而不需要实现额外的行为。
-
-这通常被称为装饰，或装饰器模式。你可以在很多地方读到关于这种设计的内容，但这里有一个针对 Java（因此非常接近 Kotlin）的很好的解释：dzone.com/articles/gang-four–decorate-decorator。其思想是让一个类通过现有的数据或行为来装饰现有的类，而无需重构或影响现有对象。
-
-在这种情况下，`HondaManufacturer` 通过给 `Honda` 赋予一个新属性来装饰它，而 `Honda` 类只需要添加另一个继承的接口。你也可以以这种方式添加功能；你可能会添加一个提供制造商信息的函数。因此，`Manufacturer` 可能会如列表 12.24 所示定义一个新函数，然后 `HondaManufacturer` 就可以如列表 12.25 所示进一步定义行为。
-
-# 列表 12.24：在 Manufacturer 实现上定义新函数
-
-```kotlin
-package org.wiley.kotlin.vehicle
-
-interface Manufacturer {
-    val make: String
-
-    fun manufacturerInformation() : String
-}
-```
-
-# 列表 12.25：为接口的所有实现添加可用行为
-
-```kotlin
-package org.wiley.kotlin.vehicle
-
-interface HondaManufacturer : Manufacturer {
-    override val make: String
-        get() = "Honda"
-
-    override fun manufacturerInformation() : String {
-        return "Honda 是 2015 年世界第第八大汽车制造商。" +
-               "更多信息请访问 https://www.honda.com"
-    }
-}
-```
-
-# 抽象类从通用变为具体
-
-假设你有一个 `Spy` 类。假设你有一个 `Spy` 类。一个对象可以由接口的多个实现。这变得有点棘手，请花些时间，但解决这个用例的回报是值得的。
-
-# 委托提供了扩展行为的另一种选项 | 321
-
-# 装饰类
-
-你可能注意到即使是 `Honda`（以及 `Car` 的其他子类，甚至是虚构的 `Motorcycle` 抽象类）也可以实现 `HondaManufacturer` 而不需要实现额外的行为。
-
-这通常被称为装饰，或装饰器模式。你可以在很多地方读到关于这种设计的内容，但这里有一个针对 Java（因此非常接近 Kotlin）的很好的解释：dzone.com/articles/gang-four–decorate-decorator。其思想是让一个类通过现有的数据或行为来装饰现有的类，而无需重构或影响现有对象。
-
-在这种情况下，`HondaManufacturer` 通过给 `Honda` 赋予一个新属性来装饰它，而 `Honda` 类只需要添加另一个继承的接口。你也可以以这种方式添加功能；你可能会添加一个提供制造商信息的函数。因此，`Manufacturer` 可能会如列表 12.24 所示定义一个新函数，然后 `HondaManufacturer` 就可以如列表 12.25 所示进一步定义行为。
-
-（注：由于提供的文本中存在大量重复段落，此处已按逻辑顺序提取并翻译了核心内容，避免重复输出。）
-
-[/content]
 
 # 接口定义行为但没有主体 | 321
 
@@ -11159,7 +9879,7 @@ override fun stop() {
     println("Stopping the ${model}")
 }
 
-override fun drive(direction: String, speed: Int) : Int {
+override fun drive(direction: String, speed: Int): Int {
     println("The Honda ${model} is driving!")
     return speed / 60
 }
@@ -11178,8 +9898,8 @@ println(honda.name)
 
 你可能会在这里发现一个问题。当只看 `Manufacturer` 接口时，`name` 属性非常有意义。但现在看 `Honda` 类，就并不完全清楚 `name` 指的是什么了。你有两种方案来解决这个问题：
 
--   为接口属性名（如 `name`）加上接口名前缀，例如使用 `manufacturerName` 代替 `name`。
--   避免通用的属性名称，例如使用 `manufacturer` 或 `make` 代替 `name`。
+- 为接口属性名（如 `name`）加上接口名前缀，例如使用 `manufacturerName` 代替 `name`。
+- 避免通用的属性名称，例如使用 `manufacturer` 或 `make` 代替 `name`。
 
 这两种方法都可以，这变成了一个风格和偏好的问题。对于这一点，你只需将 `Manufacturer` 和 `HondaManufacturer` 中的 `name` 属性重命名为 `make`，为属性的值和用途提供更好的上下文。
 
@@ -11199,7 +9919,7 @@ package org.wiley.kotlin.vehicle
 interface Manufacturer {
     val make: String
 
-    fun manufacturerInformation() : String
+    fun manufacturerInformation(): String
 }
 ```
 
@@ -11212,8 +9932,8 @@ interface HondaManufacturer : Manufacturer {
     override val make: String
         get() = "Honda"
 
-    override fun manufacturerInformation() : String {
-        return "Honda 是 2015 年世界第第八大汽车制造商。" +
+    override fun manufacturerInformation(): String {
+        return "Honda 是 2015 年世界第八大汽车制造商。" +
                "更多信息请访问 https://www.honda.com"
     }
 }
@@ -11227,98 +9947,7 @@ interface HondaManufacturer : Manufacturer {
 
 # 抽象类从通用变为具体
 
-假设你有一个 `Spy` 类。假设你有一个 `Spy` 类。一个对象可以由接口的多个实现。这变得有点棘手，请花些时间，但解决这个用例的回报是值得的。
-
-（注：由于提供的文本中存在大量重复段落，此处已按逻辑顺序提取并翻译了核心内容，避免重复输出。）
-
-[/content] 
-
-抱歉，在处理时发现您提供的原文中存在大量的重复段落（重复了三次完全的内容）。根据您“不要重复输出原文”的要求，我已为您去除了重复部分，并提供了逻辑清晰的译文。
-
-**以下是去重后的完整译文：**
-
-[content]
-# 接口定义行为但没有主体 | 321
-
-```kotlin
-override fun stop() {
-    println("Stopping the ${model}")
-}
-
-override fun drive(direction: String, speed: Int) : Int {
-    println("The Honda ${model} is driving!")
-    return speed / 60
-}
-```
-
-从这里可见的内容，`Honda` 现在扩展了 `Car` 并实现了 `HondaManufacturer`。在技术上，它也通过 `Car` 实现了 `Vehicle`。这个类中包含很多内容！
-
-你可以创建一个 `Honda` 实例并打印出它的 `name` 属性，该属性是从 `HondaManufacturer` 获取的：
-
-```kotlin
-var honda = Honda("Odyssey", "grey")
-println(honda.name)
-```
-
-# 接口属性名称可能会引起混淆
-
-你可能会在这里发现一个问题。当只看 `Manufacturer` 接口时，`name` 属性非常有意义。但现在看 `Honda` 类，就并不完全清楚 `name` 指的是什么了。你有两种方案来解决这个问题：
-
--   为接口属性名（如 `name`）加上接口名前缀，例如使用 `manufacturerName` 代替 `name`。
--   避免通用的属性名称，例如使用 `manufacturer` 或 `make` 代替 `name`。
-
-这两种方法都可以，这变成了一个风格和偏好的问题。对于这一点，你只需将 `Manufacturer` 和 `HondaManufacturer` 中的 `name` 属性重命名为 `make`，为属性的值和用途提供更好的上下文。
-
-# 接口装饰类
-
-你可能注意到，即使是 `Honda`（以及 `Car` 的其他子类，甚至是虚构的 `Motorcycle` 抽象类）也可以实现 `HondaManufacturer` 而不需要实现额外的行为。
-
-这通常被称为装饰，或装饰器模式。你可以在很多地方读到关于这种设计的内容，但这里有一个针对 Java（因此非常接近 Kotlin）的很好的解释：dzone.com/articles/gang-four–decorate-decorator。其思想是让一个类通过现有的数据或行为来装饰现有的类，而无需重构或影响现有对象。
-
-在这种情况下，`HondaManufacturer` 通过给 `Honda` 赋予一个新属性来装饰它，而 `Honda` 类只需要添加另一个继承的接口。你也可以以这种方式添加功能；你可能会添加一个提供制造商信息的函数。因此，`Manufacturer` 可能会如列表 12.24 所示定义一个新函数，然后 `HondaManufacturer` 就可以如列表 12.25 所示进一步定义行为。
-
-# 列表 12.24：在 Manufacturer 实现上定义新函数
-
-```kotlin
-package org.wiley.kotlin.vehicle
-
-interface Manufacturer {
-    val make: String
-
-    fun manufacturerInformation() : String
-}
-```
-
-# 列表 12.25：为接口的所有实现添加可用行为
-
-```kotlin
-package org.wiley.kotlin.vehicle
-
-interface HondaManufacturer : Manufacturer {
-    override val make: String
-        get() = "Honda"
-
-    override fun manufacturerInformation() : String {
-        return "Honda 是 2015 年世界第第八大汽车制造商。" +
-               "更多信息请访问 https://www.honda.com"
-    }
-}
-```
-
-# 委托提供了扩展行为的另一种选项
-
-到目前，你已经掌握了 Kotlin 中大部分的“日常继承”。十之九的情况下，你会使用接口，用抽象类或具体类来实现它们，或者用其他接口来扩展它们。然后，偶尔你会实现多个接口，有时用新行为装饰类，并要求该类实现新接口中定义的行为。无论如何，你手头都有很多工具。
-
-但你偶尔会遇到一些极少数的情况，这是 Kotlin 特别感兴趣的：一个对象可以由接口的多个实现构成的想法。这有点复杂，请花些时间，但解决这个用例的回报是值得的。
-
-# 抽象类从通用变为具体
-
-假设你有一个 `Spy` 类。假设你有一个 `Spy` 类。一个对象可以由接口的多个实现。这变得有点棘手，请花些时间，但解决这个用例的回报是值得的。
-
-# 列表 12.24-12.31 详细内容（由于重复部分已省略）
-
-
-
+假设你有一个 `Spy` 类。一个对象可以由接口的多个实现。这变得有点棘手，请花些时间，但解决这个用例的回报是值得的。
 
 # 列表 12.31 (续)
 
@@ -11331,23 +9960,24 @@ override fun stop() {
     println("Stopping the plane")
 }
 
-override fun go(direction: String, speed: Int) : Int {
+override fun go(direction: String, speed: Int): Int {
     return fly(direction, speed)
 }
 
-abstract fun fly(direction: String, speed: Int) : Int
+abstract fun fly(direction: String, speed: Int): Int
 ```
 
 # 列表 12.32: 飞机子类：B52!
 
 ```kotlin
 package org.wiley.kotlin.plane
-class B52() : Plane("*B52") {
-    override var maxSpeed : Int = 650
 
-    override fun fly(direction: String, speed: Int) : Int {
+class B52() : Plane("*B52") {
+    override var maxSpeed: Int = 650
+
+    override fun fly(direction: String, speed: Int): Int {
         println("Away we go on the B52, ${direction} miles an hour to the $")
-        return speed/60
+        return speed / 60
     }
 }
 ```
@@ -11356,12 +9986,13 @@ class B52() : Plane("*B52") {
 
 ```kotlin
 package org.wiley.kotlin.plane
-class HangGlider(val wingType: String) : Plane(wingType) {
-    override var maxSpeed : Int = 80
 
-    override fun fly(direction: String, speed: Int) : Int {
+class HangGlider(val wingType: String) : Plane(wingType) {
+    override var maxSpeed: Int = 80
+
+    override fun fly(direction: String, speed: Int): Int {
         println("Off in a ${wingType} glider, headed ${direction}")
-        return speed/60
+        return speed / 60
     }
 }
 ```
@@ -11370,22 +10001,19 @@ class HangGlider(val wingType: String) : Plane(wingType) {
 
 那么，你该如何处理所有这些类和接口呢？嗯，拿 `Spy` 类来说。一个优秀的间谍应该能够使用所有可能的交通工具逃跑。从某个角度来看，间谍确实可以实现所有这些：它可以拥有一个汽车实现、一个飞机实现和一个摩托车实现。
 
-# 委托为扩展行为的另一种选择 | 327
-
-> 注意：间谍实际上还应该有一艘船，但那对于一个章节来说，示例代码太太多了！
-
-列表 12.34 展示了你如何创建一个拥有多种可用车辆的 `Spy` 类。
+> 注意：间谍实际上还应该有一艘船，但那对于一个章节来说，示例代码太多了！
 
 # 列表 12.34: 使用多种交通工具的 Spy 类
 
 ```kotlin
-package org.wiley.kotlin.car.Car
+package org.wiley.kotlin.car
 
 import org.wiley.kotlin.motorcycle.Motorcycle
 import org.wiley.kotlin.plane.Plane
 
 class Spy(val name: String, val car: Car, val bike: Motorcycle, val plane: Plane) {
     // 需要实现
+}
 ```
 
 现在你可以定义一个像这样的 `free()` 方法：
@@ -11408,6 +10036,8 @@ fun free(vehicle: String, direction: String, speed: Int) {
 ```kotlin
 class Spy(val name: String, var vehicle)
 ```
+
+
 
 现在，你需要一种实现 `Vehicle` 但不需要手动实现 `Vehicle` 的方法。是的，正如听起来的那样，这正是我们想要的。你希望通过 `vehicle` 属性将适用于 `Vehicle` 接口的 `Spy` 调用委托出去。你使用 `by` 关键字来实现这一点。
 
@@ -11488,70 +10118,10 @@ spy.go("East", 145)
 输出将是：
 
 Riding off on a Harley at 145 speed!
+
 Riding off on a plane at 145 speed!
+
 Riding off on a car at 145 speed!
-
-这非常简单。但如果你在 `Spy` 实例化时就委托了呢？看看这段代码：
-
-```kotlin
-var spy = Spy("Black Spy", bike)
-spy.go("North", 145)
-spy.vehicle = plane
-spy.go("West", 145)
-spy.vehicle = car
-spy.go("East", 145)
-```
-
-输出是：
-
-Riding off on a Harley at 145 speed!
-Riding off on a plane at 145 speed!
-Riding off on a car at 145 speed!
-
-这仍然有效。但如果你在 `Spy` 实例化时就委托呢？
-
-```kotlin
-var spy = Spy("Black Spy", bike)
-spy.go("North", 145)
-spy.vehicle = plane
-spy.go("West", 145)
-spy.vehicle = car
-spy.go("East", 145)
-```
-
-输出是：
-
-Riding off on a Harley at 145 speed!
-Riding off on a plane at 145 speed!
-Riding off on a car at 145 speed!
-
-这仍然有效。但如果你在 `Spy` 实例化时就委托呢？
-
-```kotlin
-var spy = Spy("Black Spy", bike)
-spy.go("North", 145)
-spy.vehicle = plane
-spy.go("West", 145)
-spy.vehicle = car
-spy.go("East", 145)
-```
-
-输出是：
-
-Riding off on a Harley at 145 speed!
-Riding off on a plane at 145 speed!
-Riding off on a car at 145 speed!
-
-（注：由于原文末尾似乎存在重复的逻辑片段，翻译时已根据“不要重复输出原文”的原则进行了核心逻辑对齐，确保流程通顺。）
-
-*注：原文提供的文本后半部分存在代码块的重复和描述冲突，译文已根据高级工程师逻辑进行了精简和去重处理，以保持逻辑一致。*
-
----
-*(由于用户提供的文本后半部分存在大量重复的描述和逻辑循环，上述译文已按照高级工程师的标准，提取了核心逻辑的翻译。)*
-
-
-
-
 
 # 13
 
@@ -11583,15 +10153,15 @@ Kotlin 最常见的用途之一是编写移动应用程序，特别是针对 And
 
 ### 列表 13.1：在初始视图上加载并部署文本
 
-```
-override fun onCreateViewCreated(view: View, savedInstanceState: Bundle?) {
+```kotlin
+override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
     view.findViewById<Button>(R.id.count_button).setOnClickListener {
         val countTextView = view.findViewById<TextView>(R.id.count_text)
         val currentCount = countTextView.text.toString().toInt()
         val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment(currentCount)
-        navNavController().navigate(action)
+        findNavController().navigate(action)
     }
 
     // 通过其 ID 显示 toast
@@ -11620,7 +10190,7 @@ override fun onCreateViewCreated(view: View, savedInstanceState: Bundle?) {
 
 这里有几个可以开始的深度密集型教程网站：
 
-- codelabs.developers.google.com：已经提到过几次 Google 的 Codelabs 了。它是通过 Kotlin 入门 Android 的真正金金标准。它仍然包含一些解释，但侧重于实际示例和编写大量代码。这是完成本书后理想理想的下一步。
+- codelabs.developers.google.com：已经提到过几次 Google 的 Codelabs 了。它是通过 Kotlin 入门 Android 的真正金标准。它仍然包含一些解释，但侧重于实际示例和编写大量代码。这是完成本书后理想的下一步。
 - developer.android.com：Android 官方开发者站点在很多情况下会将你链接回 Codelabs，但组织方式略有不同，并且是进入 Android 编程的另一个视角。
 
 除了这两个网站外，通过任何网络搜索，你都能找到大量使用 Kotlin 进行 Android 编程的优质网站。
@@ -11635,8 +10205,6 @@ override fun onCreateViewCreated(view: View, savedInstanceState: Bundle?) {
 
 对于大多数 Kotlin 应用程序——构建移动应用、桌面应用或其他任何应用——你的大部分工作将在一个本地项目内进行，然后部署到其他地方。
 
-## 第 13 章 Kotlin：下一步
-
 > 注意：如果你的背景是 Web 编程，Kotlin 将提升你的本地开发水平。这与（例如）开发与 Amazon Web Services (AWS) 或类似的 API 网关和 lambda 交互的 React 应用完全不同。
 
 虽然你当然可以在 Kotlin 中与 API 交互并部署到云平台，但你的许多应用程序将在本地编译并作为完整的工作单元部署。在这些情况下，IDE 确实成为了你工具链中的关键部分。
@@ -11645,13 +10213,12 @@ override fun onCreateViewCreated(view: View, savedInstanceState: Bundle?) {
 
 ### 列表 13.2：从 Kotlin 与 Java 交互
 
-```
+```kotlin
 package org.wiley.kotlin.user
 
 import java.util.Date
 
-data class User(var email: String, var firstName: String, var lastName: String)
-{
+data class User(var email: String, var firstName: String, var lastName: String) {
     val createdOn = Date()
 
     override fun toString(): String {
@@ -11671,7 +10238,7 @@ return "$firstName $lastName with an email of $email created on $createdOn"
 ### 列表 13.3：使用 Kotlin 使用 Java
 
 ```kotlin
-import org.wiley.kotlin.user
+import org.wiley.kotlin.user.User
 
 fun main() {
     var user = User("wayne.scott@example.com", "Wayne", "Scott")
@@ -11680,35 +10247,16 @@ fun main() {
 }
 ```
 
-输出结果是：Wayne Scott with an email of wene.scott@example.com created on Thu Sep 24 08:00:32 CDT 2020
-
-
-
-
-
-# 336 | 第 13 章 KOTLIN：下一步
-
-![](img/0c8d5d6c6d95ced628a954a187036113_365_0.png)
-
-图 13.1：Kotlin 的官方参考文档非常详尽且很有帮助。
+输出结果是：Wayne Scott with an email of wayne.scott@example.com created on Thu Sep 24 08:00:32 CDT 2020
 
 # 利用互联网补充你自己的需求和学习风格
 
 如果你希望获得的内容比参考文档提供的更多，这里有一些经过验证的在线参考网站，它们一直非常有帮助：
 
-- baeldum.com：类似于参考文档，baeldum.com 是一个略带学术色彩的学习网站。你将获得很多编程理论和大量的泛型（generics）。然而，你也会看到一些关于设计模式和充分利用 Kotlin 的有趣文章。
-
+- baeldung.com：类似于参考文档，baeldung.com 是一个略带学术色彩的学习网站。你将获得很多编程理论和大量的泛型（generics）。然而，你也会看到一些关于设计模式和充分利用 Kotlin 的有趣文章。
 - medium.com：medium.com 是许多主题（从文化到编程）的绝佳去处。Kotlin 的内容有些零散，你可能会找到三篇关于继承的文章，而完全没有关于移动端的，但当你找到你寻找的内容时，它仍然是一个很棒的网站。它也非常实用，文章是为那些对计算机科学科学性并不感兴趣的程序员编写的。
-
 - journaldev.com：journaldev.com 是另一个涵盖面广泛的网站，但它对于具有清晰示例的实用性文章来说非常棒。
-
-- play.kotlin.org/koans/overview：Kotlin Koans 是一个非常独特的练习场。这是一种边学边学的交互式方法。它是结构化的，但几乎完全是体验性的，如果你想要大量清晰明确的解释，这个网站可能不适合你。尽管如此，它值得尝试。图 13.2 显示了一个关于数据类（data classes）的 Koan 示例，它要求根据右侧的提示填写缺失的代码。
-
-# 现在做什么？ | 337
-
-![](img/0c8d5d6c6d95ced628a954a187036113_366_0.png)
-
-**图 13.2：** Kotlin Koans并不适合所有人，但非常适合交互式学习。
+- play.kotlin.org/koans/overview：Kotlin Koans 是一个非常独特的练习场。这是一种边学边练的交互式方法。它是结构化的，但几乎完全是体验性的，如果你想要大量清晰明确的解释，这个网站可能不适合你。尽管如此，它值得尝试。图 13.2 显示了一个关于数据类（data classes）的 Koan 示例，它要求根据右侧的提示填写缺失的代码。
 
 # 现在做什么？
 
@@ -11720,41 +10268,42 @@ fun main() {
 
 # 符号
 
-- @ 字符, 177
-- ! 结构, 148–149
-- ?: 运算符, 233–294
-- = 运算符, 192–193
-- as 折叠代码的简写, 93–94
-- / (反斜杠), 32
-- : (冒号), 95, 234
-- $ (美元符号), 17
-- . (点分隔符), 28
-- == (双等号运算符), 66
-- % (取模运算符), 157
-- .. (两个点), 157
+- `@` 字符, 177
+- `!` 结构, 148–149
 
-- 注解 (annotation), 142
-- 匿名函数 (anonymous functions), 257–260
-- Any 类 (Any class), 59–61, 91–92, 195, 197
-- apply 函数, 292–294, 298
-- 参数列表 (argument list), 234
-- 参数 (arguments)
+
+
+- `?:` 运算符, 233–294
+- `=` 运算符, 192–193
+- `as` 折叠代码的简写, 93–94
+- `/` (反斜杠), 32
+- `:` (冒号), 95, 234
+- `$` (美元符号), 17
+- `.` (点分隔符), 28
+- `==` (双等号运算符), 66
+- `%` (取模运算符), 157
+- `..` (两个点), 157
+- 注解 (`annotation`), 142
+- 匿名函数 (`anonymous functions`), 257–260
+- `Any` 类 (`Any class`), 59–61, 91–92, 195, 197
+- `apply` 函数, 292–294, 298
+- 参数列表 (`argument list`), 234
+- 参数 (`arguments`)
   - 使用名称调用函数, 241
   - 函数, 235–243
   - 函数和变量的数量, 249–251
-  - 空值 (null), 241–243
+  - 空值 (`null`), 241–243
   - 顺序, 74
   - 重新排序, 75
   - 通过名称指定, 74–75
   - 子类构造函数和, 97–98
-
-- 数组类 (Array class), 144
-- ArrayList 类 (ArrayList class), 129–130
-- 赋值 (assigning)
+- 数组类 (`Array class`), 144
+- `ArrayList` 类 (`ArrayList class`), 129–130
+- 赋值 (`assigning`)
 
 # A
 
-- 抽象类 (abstract classes)
+- 抽象类 (`abstract classes`)
   - 关于, 303
   - 定义具体的属性和函数, 308–308
   - 使用子类定义结构, 306–308
@@ -11762,11 +10311,11 @@ fun main() {
   - 实例化和, 304–316
   - 接口和, 315–316
   - 从通用到具体, 322–324
-- 抽象数据类 (abstract data classes), 195
-- 访问器 (accessors), 20–21
-- add() 函数, 238, 240, 242, 244, 252, 260–261, 272, 287
-- also 函数, 294–298
-- 亚马逊云服务 (AWS), 334
+- 抽象数据类 (`abstract data classes`), 195
+- 访问器 (`accessors`), 20–21
+- `add()` 函数, 238, 240, 242, 244, 252, 260–261, 272, 287
+- `also` 函数, 294–298
+- 亚马逊云服务 (`AWS`), 334
 - Android, 为其编写 Kotlin, 331–333
 - Android Studio (网站), 5
 - 函数到变量, 258–259
@@ -11774,15 +10323,15 @@ fun main() {
 - 属性从函数返回值, 46–47
 - 使用辅助构造函数使用属性值, 77–79
 - 未初始属性值, 45
-- Auto 类, 221–202
+- `Auto` 类, 221–202
 - Getters/setters 的自动生成, 20–221
 
 # B
 
-- 后备字段 (backing field), 42
-- 反斜杠 (/), 32
+- 后备字段 (`backing field`), 42
+- 反斜杠 (`/`), 32
 - baeldum.com (网站), 336
-- 基类 (base class)
+- 基类 (`base class`)
   - 关于, 95
   - 行为、类和自定义代码列表
   - 逆变性和, 141
@@ -11791,143 +10340,142 @@ fun main() {
 - Bloch, Joshua
   - 《Effective Java》, 67
   - 根据命名文件, 26–27
-  - 开放 (open), 94–95
+  - 开放 (`open`), 94–95
   - 使用包组织, 27–28
   - 参数化类型和, 130–131
   - 类型和, 31
   - 升级, 25–31
-  - 闭包 (closure), 252
-- 块 (blocks)
+  - 闭包 (`closure`), 252
+- 块 (`blocks`)
   - 关于, 155
-  - else, 156
+  - `else`, 156
   - 使用...初始化类, 19–20
   - 主体, 234
-  - 布尔条件，while- 和, 167–168
+  - 布尔条件，`while`- 和, 167–168
   - 分支条件, 159–160
   - 关于, 157–160
   - 已定义, 155
-  - 内部范围 (ranges), 157
-  - break, 176–178
-  - Byte 类型 (Byte type), 31–32
-  - 字节码 (bytecode), 335
-- 代码 (code)
+  - 内部范围 (`ranges`), 157
+  - `break`, 176–178
+  - `Byte` 类型 (`Byte type`), 31–32
+  - 字节码 (`bytecode`), 335
+- 代码 (`code`)
   - 折叠, 93–94
   - 线性性, 49
-  - 代码列表 (code listings)
-    - ? 运算符, 286–287
-    - = 运算符, 192–193
+  - 代码列表 (`code listings`)
+    - `?` 运算符, 286–287
+    - `=` 运算符, 192–193
     - 抽象类, 315
-    - Add 类, 223
-    - add(), 函数, 238–246
+    - `Add` 类, 223
+    - `add()` 函数, 238–246
     - 添加伴侣对象, 209
-    - 为 SimpleUser 添加 componentN() 方法, 191
+    - 为 `SimpleUser` 添加 `componentN()` 方法, 191
     - 添加函数, 241
     - 添加属性, 317–318
     - 添加子类, 229–230
-    - 为 User 类添加常量, 206–207
+    - 为 `User` 类添加常量, 206–207
     - 匿名函数, 257–260
-    - Any 类, 59–61, 91–92, 195, 197
-    - ArrayList 类, 129–130
+    - `Any` 类, 59–61, 91–92, 195, 197
+    - `ArrayList` 类, 129–130
     - 赋值
 
 # C
 
-- 计数器类 (Calculator class), 195
-- 类 (classes), 230–230
-- 比较 (comparison), 247–250
-- 构造函数 (constructors), 14
-- 逆变 (contravariance), 139
-- 控制结构 (control structures), 151–154
-- 转换 (converting), 205
+- 计数器类 (`Calculator class`), 195
+- 类 (`classes`), 230–230
+- 比较 (`comparison`), 247–250
+- 构造函数 (`constructors`), 14
+- 逆变 (`contravariance`), 139
+- 控制结构 (`control structures`), 151–154
+- 转换 (`converting`), 205
 - Kotlin Koans, 2
-- 列表 (lists), 102–105
-- 加载数据 (loading), 332
-- 移动 (moving), 322–324
-- 移动 (moving from), 239
-- 可变列表 (mutable lists), 107–108
-- 可变变量 (mutable variables), 12–23
-- 空值 (null), 241–243
+- 列表 (`lists`), 102–105
+- 加载数据 (`loading`), 332
+- 移动 (`moving`), 322–324
+- 移动 (`moving from`), 239
+- 可变列表 (`mutable lists`), 107–108
+- 可变变量 (`mutable variables`), 12–23
+- 空值 (`null`), 241–243
 - 空值到属性, 79–81
-- 可空值 (nullable values), 281–284
-- 对象 (objects), 147–148
-- 操作 (operation), 222
-- 覆盖函数 (overriding functions), 219–220
-- 覆盖方法 (overriding methods), 219–220
-- 父类 (Parent class), 107
-- 传入对象 (passing in), 73–75
-- 主构造函数 (primary constructor), 74–75
-- 辅助构造函数 (secondary constructor), 77–79
+- 可空值 (`nullable values`), 281–284
+- 对象 (`objects`), 147–148
+- 操作 (`operation`), 222
+- 覆盖函数 (`overriding functions`), 219–220
+- 覆盖方法 (`overriding methods`), 219–220
+- 父类 (`Parent class`), 107
+- 传入对象 (`passing in`), 73–75
+- 主构造函数 (`primary constructor`), 74–75
+- 辅助构造函数 (`secondary constructor`), 77–79
 - 属性从函数返回值, 46–47
 - 使用辅助构造函数使用属性值, 77–79
 - 未初始属性值, 45
-- 内部范围 (ranges in), 157
-- 返回 (return), 180
-- 作用域函数 (scope functions), 277–280
-- 子类构造函数 (subclass constructors), 97–98
-- 测试 (testing), 360
-- 类型 (type and), 31
-- 类型投影和 (type projection and), 143–145
-- 类型 (types and), 31
-- 升级 (upgrading), 25–31
-- 变体类型 (variant types), 138
-- 当 (when), 247–250
-- 当 (while), 167–168
-
-
-
-
+- 内部范围 (`ranges in`), 157
+- 返回 (`return`), 180
+- 作用域函数 (`scope functions`), 277–280
+- 子类构造函数 (`subclass constructors`), 97–98
+- 测试 (`testing`), 360
+- 类型 (`type and`), 31
+- 类型投影和 (`type projection and`), 143–145
+- 类型 (`types and`), 31
+- 升级 (`upgrading`), 25–31
+- 变体类型 (`variant types`), 138
+- `when`, 247–250
+- `while`, 167–168
 
 # declarations–execute() 函数
 
 通过类实例获取属性值，188–189
-hashCode() 和, 186–188
+`hashCode()` 和, 186–188
 单独处理，200–201
 重写编译器生成的方法版本，196
 参数和, 194–195
 超类型类函数的优先级，196–197
 -world, 183–185
 的 la，194–195
-val/var 和, 194–195
+`val`/`var` 和, 194–195
 何时使用，192
 
 declarations（声明）
 数据解构数据，188–192
-位点变型（site variance），143–144
+位点变型（`site variance`），143–144
+
 默认值
 - 接收，74
 - 调用函数和，239–241
 - 在构造函数中，237
 - 在函数中，238–239
 - 在函数中被重写，239
+
 delegation（委托）
 - 关于，322
 - 实例化和，329–330
 - 将抽象类从泛型移动到具体，322–324
 - 委托属性，326–329
 - 特异性和继承，324–362
+
 dependent values（依赖值）
 - 计算，87–88
 - 使用自定义变异器，82–91
 - 限制访问，86–87
 
-Double 类型，37
-do..while，170–176
-draw() 方法，72
-drawrectangle() 方法，72
-square() 方法，71–72
-drive() 函数，222, 315, 322–353
+`Double` 类型，37
+`do..while`，170–176
+`draw()` 方法，72
+`drawRectangle()` 方法，72
+`drawSquare()` 方法，71–72
+`drive()` 函数，222, 315, 322–353
 
 # E
 
 Eclipse（网站），5
 effective Java (Bloch), 67
-else 块，156
-else 子句
+`else` 块，156
+`else` 子句
 - 隐藏类行为，229–231
-- 密封类（sealed classes）和，228–292
-else/elseif，159
-elvis 运算符（Elvis 运算符），293–294
-emptyList() 方法，104
+- 密封类 (`sealed classes`) 和，228–292
+`else`/`elseif`，159
+elvis 运算符（`Elvis` 运算符），293–294
+`emptyList()` 方法，104
 enums（枚举）
 - 关于，216
 - 作为类，218–221
@@ -11935,26 +10483,25 @@ enums（枚举）
 - 共享行为和，222
 - 类型安全值，216–218
 environment（环境），设置，4–13
-equals() 方法
+`equals()` 方法
 - 关于，67
 - 类和，52–58
-- 与使用 == 比较，66
+- 与使用 `==` 比较，66
 - 比较对象，52–54
 - 构造函数参数和，199–200
 - 数据类和，186–188
 - 重写，54–56, 61–63, 196
-- Person 类和，96–97
+- `Person` 类和，96–97
 - 搜索和，64–67
 - 集合和修复，10
 errors（错误），10
 可执行变量，259–260
-execute() 函数，227–228, 248–249, 252, 272, 275–277
-
+`execute()` 函数，227–228, 248–249, 252, 272, 275–277
 Design Patterns: Elements of Reusable-Oriented Software (Gang of Four), 67, 102
 通过声明解构数据，188–192
-distinct() 方法，113
-美元符号 ($)，17
-点分隔符 ()，28
+`distinct()` 方法，113
+美元符号 (`$`)，17
+点分隔符 (`.`)，28
 点符号表示法，253–255, 273
 
 # expressions–hashCode() 方法
@@ -11969,35 +10516,35 @@ expressions（表达式）
 - 成员，252
 - 重写，219–220
 - 问题，268–269
-- 默认返回 Unit，243–244
+- 默认返回 `Unit`，243–244
 - 规则，243–251
 - 范围，251–256, 271–298
 - 单个表达式，244–244
 - 语法，233–243
 - 尾随的，268
 - 变型在，143–144
-funVar，259
+`funVar`，259
 
 # F
 
 factory 方法，120, 213
 factory 模式，102–104
-false 值，33
-featureList() 函数，222
+`false` 值，33
+`featureList()` 函数，222
 文件，命名为类，26–27
-filter() 方法，122–128
+`filter()` 方法，122–128
 过滤集合，121–123
-filterInstance() 方法，123
-filterNot() 方法，123
-firstName 属性，38–43, 46
-flee() 函数，328
-Float 类型，37
+`filterInstance()` 方法，123
+`filterNot()` 方法，123
+`firstName` 属性，38–43, 46
+`flee()` 函数，328
+`Float` 类型，37
 - 关于，161–166
 - 使用索引获取，166–166
 - 迭代器和，162–163
-formatString() 函数，284, 285
-fullName() 函数，288–289, 296
-fun 关键字，234, 264
+`formatString()` 函数，284, 285
+`fullName()` 函数，288–289, 296
+`fun` 关键字，234, 264
 function name，234
 - 关于，15
 - 匿名的，257–260
@@ -12020,25 +10567,25 @@ Design Patterns: Elements of Reusable Object-Oriented Software, 67, 102
 generics（泛型）
 - 关于，129–132
 - 集合，129–130
-- 逆变（contravariance），138–142
-- 协变（covariance），138–134
+- 逆变（`contravariance`），138–142
+- 协变（`covariance`），138–134
 - 推断类型，132–134
 - 参数化类型，130–131
 - 投影类型，143–145
 - 安全变型注解，142–143
-OrDefault() 方法，121
-getRandom(String)，284–286
+`getOrDefault()` 方法，121
+`getRandom(String)`，284–286
 getters，自动生成，20–21
 GitHub 网站，10
-go() 函数，322
+`go()` 函数，322
 Google’s CodeLabs，333
 gradle，335
-greatest() 方法，171
+`greatest()` 方法，171
 
 # H
 
-hash codes。见 hashCode() 方法
-hashCode() 方法
+hash codes。见 `hashCode()` 方法
+`hashCode()` 方法
 - 关于，52, 67
 - 构建哈码，63–74
 - 数据类和，186–188
@@ -12046,36 +10593,36 @@ hashCode() 方法
 - 在其中区分属性，65–66
 - 对象和，59–64
 - 重写，61–63, 19
-- Person 类和，96–97
+- `Person` 类和，96–97
 - 搜索和，64–67
 - 速度和，66–67
-hasPartner() 函数，87–88, 90, 254
+`hasPartner()` 函数，87–88, 90, 254
 高阶函数，260–254
 Homebrew（网站），11
-drawRectangle() 方法，72
-drawSquare() 方法，71–72
+`drawRectangle()` 方法，72
+`drawSquare()` 方法，71–72
 用子类填充合约，310–313
 抽象类的实例化，304–304
 - 接口，313–322
 - 维护状态，316–318
 - 移动抽象类，322–324
 - 特异性和继承的关系，324–326
-- init 块，43–47
+- `init` 块，43–47
 用块初始化类，19–20
 - 对象，19–23
 - IDE，4–10, 29, 280, 333–335
-- if 语句
+- `if` 语句
 - 关于，151–154
-- 与 continue 比较，179–180
-- if/else，148–154
-- 索引，用 for 获取，164–166
--  属性，164–165
+- 与 `continue` 比较，179–180
+- `if`/`else`，148–154
+- 索引，用 `for` 获取，164–166
+- 属性，164–165
 - 推断类型，132–134
 - 继承，95, 330
 - 抽象类，303–313
 - 带接口的抽象类，315–316
 - 允许多种实现形式，319–322
-CardActivity 类，70–71
+`CardActivity` 类，70–71
 类和，69–72
 - 定义具体的属性/函数，308–309
 - 与子类定义合约，306–308
@@ -12084,27 +10631,27 @@ CardActivity 类，70–71
 - 委托属性，226–329
 - 委托，322–330
 - 实例化，329–390
-draw() 方法，72
+`draw()` 方法，72
 内部数据类，195
 实例化，13
 抽象类，304–306
 的类，51
 提供立即访问，272–287
 固定值和，209–210
-main 函数，27, 30, 37
+`main` 函数，27, 30, 37
 维护状态，316–318
 实现形式和，319–322
 不变类型，138
-intFunction() 函数，260–261
-isAdmin() 函数，205–206
-object，119
+`intFunction()` 函数，260–261
+`isAdmin()` 函数，205–206
+`object`，119
 
 # iterators-mutable lists（迭代器-可变列表）
 
 iterators
 - 关于，101
 遍历列表，108–111
-for 循环，162–163
+`for` 循环，162–163
 可变列表，101–104
 遍历，108–111
 可变的，105–106
@@ -12120,11 +10667,11 @@ for 循环，162–163
 Java
 - 关于，1–4
 与 Java 比较，3
-Java虚拟机 (JVM)，157
+Java虚拟机 (`JVM`)，157
 JetBrains Toolbox，6
-joinToString() 函数，171
+`joinToString()` 函数，171
 journaldev.com（网站），336
-Long 类型，31–32
+`Long` 类型，31–32
 
 # M
 
@@ -12136,25 +10683,25 @@ medium.com（网站），336
 - 关于，15
 在类上定义，43–44
 重写枚举，218
-modulo() 运算符，157
+`modulo()` 运算符，157
 多个运算符，一个变量，168–169
 
 # L
 
 labels（标签）
-- break 和，177–178
-- continue 和，179
+- `break` 和，177–178
+- `continue` 和，179
 lambda 表达式，263–268
-lastName 属性，38–43, 46
-late 关键字，45–46
-let 函数，272–287, 298
-listOf() 方法，104, 129–130
+`lastName` 属性，38–43, 46
+`late` 关键字，45–46
+`let` 函数，272–287, 298
+`listOf()` 方法，104, 129–130
 
 # mutating properties（变异属性）-用 toString() 方法打印对象
 
 变异，105
 可变属性，98
-mutableListOf() 方法，104, 132
+`mutableListOf()` 方法，104, 132
 变异可变列表，105
 变异器
 - 关于，20–21
@@ -12166,178 +10713,347 @@ mutableListOf() 方法，104, 132
 三元运算符，153
 Oracle java 下载（网站），10
 有序列表，111–113
-out-投影类型，144
+`out`-投影类型，144
 重写
 - 类级行为，220–222
 编译器生成的方法版本，196
 函数中的默认值，239
-equals() 方法，54–56, 61–33
+`equals()` 方法，54–56, 61–33
 函数，219–220
-hashCode() 方法，61–63
+`hashCode()` 方法，61–63
 枚举中的方法，218
 变异器，37–38, 41–43
 属性访问器，37–41
-toString() 方法，14–46
+`toString()` 方法，14–46
 过度使用名称，41
 
 # N
 
 names（名称）
 过度使用，41
-通过以下指定参数，74–75
-命名文件和类，26–27
-最窄类型，132–133
-嵌套作用域函数，277–280
-非空值，148–149
-null 参数，241–243
-null
-- 关于，58, 294
-- 接收，282
-- 赋值给属性，79–81
-- 设置，84–86
-- 故障排除，81–82
-
-NullPointerException，49
-数字，31–32
-
-# O
-
-objects（对象）
-- 关于，51
-- 伴侣，207–216
-- 与类比较，59–64
-- 比较，52–54
-- 复制，192–194
-创建，13–19
-hashCode() 方法，59–64
-初始化，19–23
-使用其构造传递值，13–14
-用 toString() 方法打印，14–46
-
-packages（包）
-用包组织类，27–28
-Person 类和，28–31
-参数化类，130
-参数化类型，130–131
-parameters（参数）
-
-- 与属性比较，14
-- 数据类要求的，194–195
-- 单数函数的 lambda 表达式，266–267
-- 忽略，266
-- 按值传递，169
-Person 类，26, 28–31, 124–126
-play.kotlinlang.org（网站），336
-- 超类型函数的优先级，
-196–197
-
-主构造函数，38–39
-用于原始类型的集合，123–128
-print() 函数，242–243
-用 toString() 方法打印对象，，
-14–16
-
-# P
-
-347
 
 
 
+# 索引
 
+## 符号
 
-# printList() 函数-速度
+- `..`（双点），157
 
-printList() 函数, 263–264, 266, 267, 268
-println() 函数, 15–16, 105, 260, 281, 284, 293
+## A
 
-printPartnerStatus() 函数, 255
-printPersonPartnerStatus() 函数, 90
-Programiz (网站), 170
-为 Android 编程 Kotlin, 331–333
-属性 (properties)
+- Any 类，91–92
+- Android，为其编程 Kotlin，331–333
 
-- 赋值 null, 79–81
-- 赋值, 82
-- 集合, 126–127
-- 与参数比较, 14
-- 自定义 set, 38–41
-- 定义 create, 308–309
-- 为使用时定义默认值, 73–75
-- 委托给, 326–329
-- 在 hashCode() 方法中区分, 65–66
-- 从可变列表中获取, 105–106
-- 初始化,, 34, 39–40, 44–47
-- 可变的, 98
-- 只读的 88–91
-- 属性访问, 重写, 37–41
-- 属性值
-- 使用辅助构造函数赋值, 77–79
-- 数据以及, 17–19
-- 从类中获取, 188–189
+## B
 
-# S
+- 基于 UNIX 的系统，在上面的命令行 Kotlin，12
 
-作用域函数 (scope functions)
-- 关于, 271–272
-- 链式调用, 277–280
-- 选择, 290–291
-- 嵌套, 277–280
-SDKMAN! (网站), 12
-密封类 (sealed classes)
+## C
 
-- 关于, 195
-- 作为类型安全的层级结构, 221–231
-搜索 (searching)
-- 与 equ() 方法, 64–67
-- 与 hashCode() 方法, 64–67
-辅助构造函数 (secondary constructors)
-- 关于, 76–77
-- 给属性赋值 null, 79–81
-- 给属性值赋值, 77–79
-- 带有自定义修改器的依赖值, 82–91
-- 限制对依赖值的访问, 86–87
-- null 值, 84–86
-- 属性赋值, 82
-- 只读属性, 88–91
-- 自文档化, 212
-- set() 方法, 145
+- 伴侣对象
+  - 关于，207–216
+  - 单例作为伴随对象，209–210
+- 参数
+  - 与属性比较，14
+  - 数据类要求的，194–195
+  - 单数函数的 lambda 表达式，266–267
+  - 忽略，266
+  - 按值传递，169
+  - 重排参数，75
+- 参数化类，130
+- 参数化类型，130–131
+- 层级类，25–31
+- 集合
+  - 关于，113
+  - 与可变集合比较，127–128
+  - 重复项，以及 116–119
+  - 排序，114–115
+  - 排序，115–116
+- 集合属性，126–127
+- 创建对象，13–19
+- 创建属性，308–309
 
-setOnClickListener(), 332
-集合 (sets)
+## D
 
-- 关于, 113
-- 与可变集合比较, 127–128
-- 重复项,以及 116–119
-- 排序, 114–115
-- 排序, 115–116
-- setter 的自动生成, 20–21
-Kotlin 环境的设置, 4–13
-Short 类型, 31–32
-单例，作为伴随对象, 209–210
-sortedBy() 方法, 115–116
-排序列表, 115–116
-数据类中的特殊行为, 195–200
-特殊字符, 32–33
-速度
-- == 与 equals 
+- 数据类
+  - 中的特殊行为，195–200
+- 密封类
+  - 关于，195
+  - 作为类型安全的层级结构，221–231
+  - 与 when 表达式，225–236
+- 委托给属性，326–329
+- 读取行，`readLine()` 方法，148, 149
 
-# R
+## E
 
-readLine() 方法, 148, 149
-只读列表, 101
-只读属性, 88–91
-真实世界对象, 99
-递归, 42
-重排参数, 75
-return 关键字
-- 输出, 180–181
-- 单表达式表达式以及, 246–248
-- 返回类型, 234
-- returnVal, 247
-run 函数, 289–291, 298
-运行 Kotlin 程序, 9–10
+- `equals()` 方法，与搜索，64–67
 
-![](img/0c8d5d6c6d95ced628a954a187036113_377_0.png)
+## F
+
+- 非空值，148–149
+- 非可空值，148–149
+- 分级类，25–31
+- 复制对象，192–194
+
+## G
+
+- 为使用时定义属性默认值，73–75
+- 更改变量，19–23
+- 公开类，94–95
+- 函数
+  - 语法，233–243
+  - 单表达式函数以及 `return` 关键字，246–248
+  - 尾随函数，268
+  - 将函数赋值给变量，258–259
+  - 可执行变量，259–260
+  - 默认值，239–241
+  - 构造函数中的默认值，237
+  - 函数中的默认值，238–239
+  - 重写函数中的默认值，239
+  - 从函数赋值，46–47
+- 函数中的变量，143–144
+
+## H
+
+- `hashCode()` 方法
+  - 关于，59–64
+  - 与搜索，64–67
+  - 在属性中区分，65–66
+- 重写 `hashCode()` 方法，66–67
+
+## I
+
+- 初始化对象，19–23
+- 初始化属性，34, 39–40, 44–47
+- 推断类型，32, 132–134
+- 逆变，141
+
+## J
+
+- Java，`static` 关键字，208
+
+## K
+
+- Kotlin
+  - 环境设置，4–13
+  - 类型，31–37
+  - 运行程序，9–10
+- Kotlin 网站
+  - `play.kotlinlang.org`，336
+  - Programiz，170
+  - SDKMAN!，12
+
+## L
+
+- Lambda 表达式
+  - 单参数函数的，266–267
+- 列表
+  - 只读列表，101
+  - 排序列表，115–116
+  - 从可变列表获取属性，105–106
+  - 列表类型，107–108
+- 线程，169
+
+## M
+
+- 最窄类型，132–133
+
+## N
+
+- 命名文件和类，26–27
+- Null
+  - 关于，58, 294
+  - 接收，282
+  - 赋值给属性，79–81
+  - 设置，84–86
+  - 故障排除，81–82
+- `NullPointerException`，49
+- 数字，31–32
+
+## O
+
+- 对象
+  - 关于，51
+  - 伴侣对象，207–216
+  - 与类比较，59–64
+  - 比较，52–54
+  - 复制，192–194
+  - 创建，13–19
+  - `hashCode()` 方法，59–64
+  - 初始化，19–23
+  - 使用其构造函数传递值，13–14
+  - 用 `toString()` 方法打印，14–46
+- 包
+  - 用包组织类，27–28
+  - Person 类和，28–31
+
+## P
+
+- Person 类，26, 28–31, 124–126
+- `print()` 函数，242–243
+- `printList()` 函数，263–264, 266–268
+- `println()` 函数，15–16, 105, 260, 281, 284, 293
+- `printPartnerStatus()` 函数，255
+- `printPersonPartnerStatus()` 函数，90
+- 属性
+  - 赋值 `null`，79–81
+  - 赋值，82
+  - 集合属性，126–127
+  - 与参数比较，14
+  - 自定义 `set`，38–41
+  - 定义创建，308–309
+  - 为使用时定义默认值，73–75
+  - 委托给，326–329
+  - 在 `hashCode()` 方法中区分，65–66
+  - 从可变列表中获取，105–106
+  - 初始化，34, 39–40, 44–47
+  - 可变的，98
+  - 只读的，88–91
+  - 属性访问，重写，37–41
+  - 属性值
+    - 使用辅助构造函数赋值，77–79
+    - 数据以及，17–19
+    - 从类中获取，188–189
+- `set()` 方法，145
+- `setOnClickListener()`，332
+- `sortedBy()` 方法，115–116
+- 排序列表，115–116
+- Spy 类，326–329
+- 字符串
+  - 关于，203–204
+  - 类型表示以及，204–207
+- 字符串常量，206–207
+- `StringBuilder`，152
+- 子类
+  - 关于，91
+  - Any 类，91–92
+  - 折叠类，93–94
+  - 与父类比较，97–99
+  - 逆变以及，141
+  - 与接口定义契约，306–308
+  - 实现抽象类写的契约，310–313
+  - 从父类获取行为，96–97
+  - 开放类以及，94–95
+  - 密封类以及，224–225
+  - 父类规则，96
+  - 术语，95
+  - 类型投影以及，144–145
+- `sum()` 函数，251, 252, 260, 283
+- 速度
+  - `==` 与 `equals`
+
+## R
+
+- 只读列表，101
+- 只读属性，88–91
+- 真实世界对象，99
+- 递归，42
+- `return` 关键字
+  - 输出，180–181
+  - 单表达式函数以及，246–248
+  - 返回类型，234
+  - `returnVal`，247
+- `run` 函数，289–291, 298
+- 运行 Kotlin 程序，9–10
+
+## S
+
+- 作用域函数
+  - 关于，271–272
+  - 链式调用，277–280
+  - 选择，290–291
+  - 嵌套，277–280
+- 搜索
+  - 与 `equals()` 方法，64–67
+  - 与 `hashCode()` 方法，64–67
+- 辅助构造函数
+  - 关于，76–77
+  - 给属性赋值 `null`，79–81
+  - 给属性值赋值，77–79
+  - 带有自定义修改器的依赖值，82–91
+  - 限制对依赖值的访问，86–87
+  - `null` 值，84–86
+  - 属性赋值，82
+  - 只读属性，88–91
+  - 自文档化，212
+- `setter` 的自动生成，20–21
+- `Short` 类型，31–32
+- 单例，作为伴随对象，209–210
+- 特殊字符，32–33
+- `stats()` 函数，319
+- 字符串常量，206–207
+- 子类（参见子类）
+- 父类
+  - 与子类比较，97–99
+  - 规则，96–97
+- `switch`，154
+
+## T
+
+- 术语，95
+- 三元运算符，153
+- `this` 关键字，255–256, 288–289
+- `toString()` 方法
+  - 关于，309, 315
+  - 重写，16–17, 196
+  - 与 Person 类，96–97
+  - 打印对象，14–16
+- 类型
+  - 预测，37
+  - 推断，32, 132–134
+  - 互换性性质，33–37
+  - Kotlin 类型，31–37
+  - 列表类型，107–108
+  - 匹配，132
+  - 用于对象，56–58
+  - 外投影的，144
+  - 参数化的，130–131
+  - 告诉 Kotlin 使用什么，36
+- 类型安全，31, 49
+- 类型安全值，216–218
+- 类型投影，143–145
+
+## U
+
+- `Unit`，默认返回，243–244
+- 不安全变注解，142–143
+- `updateName()` 方法，43–47
+- User 类，184, 185
+
+## V
+
+- `val`，194–195
+- 值
+  - 从函数赋值，46–47
+  - 未初始化属性赋值，45
+  - 默认调用函数，239–241
+  - 构造函数中的默认，237
+  - 函数中的默认，238–239
+  - 函数中的重写默认，239
+  - `false`，33
+  - 非可空，148–149
+  - `null`，58
+  - `true`，33
+  - 类型安全的，216–218
+- `var`，194–195
+- `vararg` 关键字，250–251
+- 变量
+  - 赋值给函数，258–259
+  - 改变，19–23
+  - 可执行，259–260
+  - 函数中的变量，143–144
+
+## W
+
+- `when` 表达式
+  - 关于，154–161, 225–226
+  - 密封类，225–236
+- `while`，167–170
+- Windows
+  - 在上面的命令行 Kotlin，10–11
+  - 在 Windows 上安装 IntelliJ，6
+- `with` 函数，287–289, 298
 
 ```
 hashCode() 方法, 66–67
@@ -12347,106 +11063,3 @@ stats() 函数, 319
 字符串常量, 206–207
 StringBuilder, 152
 ```
-字符串 (strings)
-- 关于, 203–204
-- 类型表示以及, 204–207
-子类 (subclasses)
-- 关于, 91
-- Any 类, 91–92
-- 折叠类, 93–94
-- 与父类比较, 97–99
-- 逆变以及, 141
-- 与...定义契约, 306–308
-- 实现抽象类写的契约, 310–313
-- 从父类获取行为, 96–97
-- 开放类以及, 94–95
-- 密封类以及, 224–225
-- 父类规则, 96
-- 术语, 95
-- 类型投影以及, 144–145
-- sum() 函数, 251, 252, 260, 283
-
-尾随函数 (trailing functions), 268
-true 值, 33
-- 双点 (..) 157
-- 类型投影, 143–145
-类型安全, 31, 49
-类型 (types)
-- 预测, 37
-- 推断, 32
-- 推断, 132–134
-- 互换性性质, 33–37
-- Kotlin, 31–37
-- 列表, 107–108
-- 匹配, 132
-- 用于对象, 56–58
-- 外投影的, 144
-- 参数化的, 130–131
-- 告诉 Kotlin 使用什么, 36
-类型安全值, 216–218
-
-# U
-
-Unit, 默认返回, 243–244
-基于 UNIX 的系统，在上面的命令行 Kotlin, 12
-不安全变变注解, 142–143
-updateName() 方法, 43–47
-分级类, 25–31
-User 类, 184, 185
-
-父类 (superclasses)
-- 与子类比较, 97–99
-- 规则, 96–97
-switch, 154
-函数的语法, 233–243
-
-# T
-
-术语, 95
-三元运算符, 153
-this 关键字, 255–256, 288–289
-线程, 169
-tostring() 方法
-- 关于 309, 315
-- 重写, 16–17, 196
-- 与 Person 类, 96–97
-- 打印对象，14–16
-
-# V
-
-val, 194–195
-值 (values)
-- 从函数赋值, 46–47
-- 未初始化属性赋值, 45
-- 默认调用函数, 239–241
-- 构造函数中的默认, 237
-- 函数中的默认, 238–239
-- 函数中的重写默认, 239
-- false, 33
-- 非可空, 148–149
-- null, 58
-
-# var–with 函数
-
-使用其构造函数传入, 13–14
-- true, 33
-- 类型安全的, 216–218
-var, 194–195
-vararg 关键字, 250–251
-变量 (variables)
-- 赋值给函数, 258–259
-- 改变, 19–23
-- 可执行, 259–260
-- 函数中的变变, 143–144
-
-# W
-
-when 表达式
-- 关于, 154–161, 225–226
-- 密封类, 225–236
-- while, 167–170
-Windows
-- 在上面的命令行 Kotlin, 10–11
-- 在 Windows 上安装 IntelliJ, 6
-with 函数, 287–289, 298
-

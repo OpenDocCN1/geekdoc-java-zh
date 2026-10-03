@@ -1,3 +1,4 @@
+
 # 简单的后台任务
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/concurrency/simple.html`](https://docs.oracle.com/javase/tutorial/uiswing/concurrency/simple.html)
@@ -39,7 +40,6 @@ SwingWorker worker = new SwingWorker<ImageIcon[], Void>() {
         }
     }
 };
-
 ```
 
 所有`SwingWorker`的具体子类都实现`doInBackground`；`done`的实现是可选的。

@@ -1,3 +1,4 @@
+
 # 用 JHipster 构建微服务的微服务架构入门
 
 > 原文：<https://medium.com/javarevisited/microservices-architecture-primer-for-building-microservices-with-jhipster-ea037c6bbfb9?source=collection_archive---------1----------------------->
@@ -6,7 +7,7 @@
 
 LinkedIn Learning/Lynda.com
 
-# 介绍
+## 介绍
 
 ![](img/722ca6d0cea96c356e86d3da30700154.png)
 
@@ -16,20 +17,26 @@ LinkedIn Learning/Lynda.com
 
 我们将详细介绍微服务的几个一般特征。如果你想了解更多，请查看 [JHipster Github Repo](https://github.com/jhipster) 。
 
-# 概述
+## 概述
 
 > 微服务架构是一种面向服务的架构，由松散耦合的元素组成，这些元素具有有界的上下文 *—* ***阿德里安·科克罗夫特***
 
 微服务架构风格没有精确的定义。然而，一般来说，在高层次上，微服务架构风格是一种应用程序开发方法，其中您创建一套单独的、独立的服务。
 
-## 微服务:
+### 微服务:
 
 *   在各自独立的进程中运行。
+
 *   是独立可扩展的。
+
 *   可以独立部署。
+
 *   有自己的数据存储。
+
 *   通常围绕单一业务功能构建。
+
 *   使用 HTTP 等轻量级协议与其他微服务通信。
+
 *   是分离的和内聚的。
 
 > 微服务是小型的自治服务，它们协同工作***——Sam Newman***
@@ -38,11 +45,11 @@ LinkedIn Learning/Lynda.com
 
 独立可扩展的服务
 
-# 微服务特征概述— LinkedIn Learning
+## 微服务特征概述— LinkedIn Learning
 
 > 微服务架构风格是一种将单个应用程序开发为一套小型服务的方法，每个应用程序都在自己的进程中运行，并通过轻量级机制进行通信，通常是 HTTP 资源 API ***—马丁·福勒***
 
-## 通过服务的组件化
+### 通过服务的组件化
 
 组件:组件是一个可以独立替换和升级的软件单元。
 
@@ -52,7 +59,7 @@ LinkedIn Learning/Lynda.com
 
 通过服务的组件化
 
-## 围绕产品而非项目组织的服务
+### 围绕产品而非项目组织的服务
 
 **项目:**交付一个软件，然后移交。
 
@@ -62,7 +69,7 @@ LinkedIn Learning/Lynda.com
 
 重要的是利用**跨职能团队**，这样拥有服务的团队就有了实现新功能所需的每个人。他们不应该为了开发新功能而求助于单独的设计、UI 或数据库团队。
 
-## 智能端点和哑管道
+### 智能端点和哑管道
 
 > *成为网络的一部分，而不是在网络的背后* ***—伊恩·罗宾逊***
 
@@ -70,9 +77,9 @@ LinkedIn Learning/Lynda.com
 
 转向服务间的粗粒度通信，以使每条消息完成更多工作，并减少消息总数。
 
-# 附加微服务特性
+## 附加微服务特性
 
-## 分散数据管理
+### 分散数据管理
 
 **有界上下文:**通过将大型模型划分成具有明确定义的相互关系的不同上下文来处理大型模型的方法。
 
@@ -82,7 +89,7 @@ LinkedIn Learning/Lynda.com
 
 每个服务都应该有自己的数据库。每个团队应该可以自由选择最能满足其需求的数据存储。
 
-## 基础设施自动化
+### 基础设施自动化
 
 **自助服务:**允许开发人员调配他们自己的新服务器或虚拟机。
 
@@ -102,16 +109,19 @@ LinkedIn Learning/Lynda.com
 
 还需要复杂的监控和日志记录。
 
-# 想了解更多？
+## 想了解更多？
 
 有兴趣了解这个主题的更多信息吗？然后查看 LinkedIn Learning 上的课程，该课程将涵盖以下内容:
 
 *   微服务架构综述。
+
 *   JHipster 概述。
+
 *   如何使用 JHipster Yeoman 框架创建利用 Java8、Spring、网飞 OSS 和 Angular 的微服务应用的演练。
+
 *   如何将此应用程序部署到 AWS、Azure 和 Cloud Foundry 的演练。
 
-# 请点击这里查看:
+## 请点击这里查看:
 
 [Linkedin Learning:开始 30 天免费试用](//linkedin-learning.pxf.io/c/1252615/469502/8005)
 
@@ -121,6 +131,6 @@ LinkedIn Learning/Lynda.com
 
 JHipster 由 Ippon Technologies([https://www.ippon.tech/](https://www.ippon.tech/))赞助。
 
-# 了解更多关于 JHipster 的信息
+## 了解更多关于 JHipster 的信息
 
 <http://www.jhipster.tech/>  <https://github.com/jhipster> 

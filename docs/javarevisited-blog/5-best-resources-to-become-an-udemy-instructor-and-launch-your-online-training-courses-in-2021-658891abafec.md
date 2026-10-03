@@ -1,3 +1,4 @@
+
 # 如何在 2022 年创建 Udemy 课程并获得被动收入【资源】
 
 > 原文：<https://medium.com/javarevisited/5-best-resources-to-become-an-udemy-instructor-and-launch-your-online-training-courses-in-2021-658891abafec?source=collection_archive---------2----------------------->
@@ -18,7 +19,7 @@
 
 我也有目的地选择了激励性的课程。例如，这个列表中的第一个课程来自一位创作者，[菲尔·艾伯](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fuser%2Fphilipebiner2%2F)，他已经在 Udemy 赚了超过 100 万美元，也许更多。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fuser%2Fphilipebiner2%2F>  
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fuser%2Fphilipebiner2%2F>
 
 他友好地分享了他在其他地方的数据和收入，如 [Teachable](http://sendmeto.teachable.com/lgrZW) 、[thinkfic](http://try.thinkific.com/javinpaul8817)、 [Podia](https://podia.sjv.io/c/3294490/1274189/15666?u=https%3A%2F%2Fwww.podia.com%2F) 、Skillshare、StackSocial 等。这种信息分享非常有激励性，但请注意，没有多少人能做到这一点。
 
@@ -99,8 +100,13 @@ Dan 是一名全职在线课程讲师，在本次培训中，他将向您展示�
 其他**编程资源**你可能喜欢查
 
 *   [托管和销售您的课程的五大在线平台](https://javarevisited.blogspot.com/2020/03/top-5-websites-to-create-online-courses.html)
+
 *   [可教性 vs 思想性 vs 隐蔽性复习](https://javarevisited.blogspot.com/2019/09/teachable-or-udemy-which-platform-is-best-online-course.html)
+
 *   [2022 年 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
+
+
+
 *   [2022 年 React 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
 *   [为什么软件开发人员应该创建在线课程作为副业](https://dev.to/javinpaul/why-sofware-developers-should-create-online-courses-as-a-side-hustle-3011)
 *   [2022 年学习 Python 的十大课程](/better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
@@ -115,6 +121,6 @@ Dan 是一名全职在线课程讲师，在本次培训中，他将向您展示�
 
 感谢您阅读本文。如果你找到了这些成功创建在线课程的资源，请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
-**P. S. -** Teachable 和 Udemy 并不是唯一可以托管和销售在线课程的平台。还有更多选项，如[**thinkfic**](http://try.thinkific.com/javinpaul8817)， [**Podia**](https://podia.sjv.io/c/3294490/1274189/15666?u=https%3A%2F%2Fwww.podia.com%2F) ， [Teachable](https://sendmeto.teachable.com/lgrZW) ，Kajabi，Skillshare 等等。你甚至可以将你的课程发布到多个平台上，从而两全其美。
+**P. S. -** Teachable 和 Udemy 并不是唯一可以托管和销售在线课程的平台。还有更多选项，如[thinkfic](http://try.thinkific.com/javinpaul8817)， [Podia](https://podia.sjv.io/c/3294490/1274189/15666?u=https%3A%2F%2Fwww.podia.com%2F)， [Teachable](https://sendmeto.teachable.com/lgrZW)，Kajabi，Skillshare 等等。你甚至可以将你的课程发布到多个平台上，从而两全其美。
 
-<http://try.thinkific.com/javinpaul8817> 
+<http://try.thinkific.com/javinpaul8817>

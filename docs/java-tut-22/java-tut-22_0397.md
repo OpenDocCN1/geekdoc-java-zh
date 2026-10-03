@@ -1,3 +1,4 @@
+
 # 如何使用工具提示
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/components/tooltip.html`](https://docs.oracle.com/javase/tutorial/uiswing/components/tooltip.html)
@@ -8,7 +9,6 @@
 b1.setToolTipText("Click this button to disable the middle button.");
 b2.setToolTipText("This middle button does not react when you click it.");
 b3.setToolTipText("Click this button to enable the middle button.");
-
 ```
 
 当程序的用户将光标暂停在程序的任何按钮上时，按钮的工具提示将出现。您可以通过运行`ButtonDemo`示例来查看这一点，该示例在如何使用按钮、复选框和单选按钮中有解释。这是当光标暂停在`ButtonDemo`示例中的左按钮上时出现的工具提示的图片。

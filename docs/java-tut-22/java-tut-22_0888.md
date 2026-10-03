@@ -1,3 +1,4 @@
+
 # 课程：类
 
 > 原文：[`docs.oracle.com/javase/tutorial/reflect/class/index.html`](https://docs.oracle.com/javase/tutorial/reflect/class/index.html)
@@ -6,10 +7,7 @@
 
 对于每种类型的对象，Java 虚拟机实例化一个不可变的[`java.lang.Class`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)实例，该实例提供了用于检查对象的运行时属性的方法，包括其成员和类型信息。[`Class`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)还提供了创建新类和对象的能力。最重要的是，它是所有反射 API 的入口点。本课程涵盖了涉及类的最常用的反射操作：
 
-+   检索类对象描述了获取[`Class`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)的方法。
-
-+   检查类修饰符和类型展示了如何访问类声明信息。
-
-+   发现类成员说明了如何列出类中的构造函数、字段、方法和嵌套类。
-
-+   故障排除描述了在使用[`Class`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)时遇到的常见错误。
++ 检索类对象描述了获取[`Class`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)的方法。
++ 检查类修饰符和类型展示了如何访问类声明信息。
++ 发现类成员说明了如何列出类中的构造函数、字段、方法和嵌套类。
++ 故障排除描述了在使用[`Class`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html)时遇到的常见错误。

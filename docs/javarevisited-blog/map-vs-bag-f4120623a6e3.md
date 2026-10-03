@@ -1,3 +1,4 @@
+
 # 地图 vs .包
 
 > 原文：<https://medium.com/javarevisited/map-vs-bag-f4120623a6e3?source=collection_archive---------1----------------------->
@@ -8,7 +9,7 @@
 
 照片由[克里斯·贾维斯](https://unsplash.com/@crissyjarvis?utm_source=medium&utm_medium=referral)在 [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral) 上拍摄
 
-# **用地图数算盘上的珠子**
+## 用地图数算盘上的珠子
 
 这里有一个使用`Map`解决的简单问题。我们如何通过颜色来计算算盘上的珠子数量？首先，我将为`Color`定义一个`enum`。
 
@@ -32,7 +33,7 @@
 
 `merge`和`getOrDefault`方法都是在 Java 8 中添加的，是开发人员在`Map`上理解的有用方法。
 
-# 使用原始地图而不是地图
+## 使用原始地图而不是地图
 
 在 [Eclipse 集合](https://github.com/eclipse/eclipse-collections)中，有对原始地图的支持。有一个`ObjectIntMap`类型和相应的实现可以用来计数珠子。我将使用一个`MutableObjectIntMap`,这样我就可以使用`ObjectIntMaps`工厂类改变映射并创建实现。
 
@@ -42,9 +43,9 @@
 
 一个`MutableObjectIntMap`有一个`addToValue`方法，可以用来在 map 中放入一个新值，或者添加到 map 中的一个现有值。方法`getIfAbsent`可用于查找数值。`0`值是一个`int`，而不是一个`Integer`对象，并且对`addToValue`的任何调用都不会导致任何装箱。
 
-**注意** : Eclipse 集合`HashBag`类利用了一个`MutableObjectIntMap`。
+**注意**：Eclipse 集合`HashBag`类利用了一个`MutableObjectIntMap`。
 
-# 用袋子数算盘上的珠子
+## 用袋子数算盘上的珠子
 
 那么我如何使用来自 [Eclipse 集合](https://github.com/eclipse/eclipse-collections)的`MutableBag`来解决这个问题呢？一个`MutableBag`是一个`Collection`，不是一个`Map`。它有`add`和`remove`方法，我可以用它们来添加单个项目。`MutableBag`也有`addOccurrences`和`removeOccurrences`方法，允许一次添加特定数量的项目。
 
@@ -54,7 +55,7 @@
 
 对于这个用例来说，`Bag`上单独命名的方法比命名为`merge`的单个方法更能揭示意图。注意，在`Color.RED`的情况下，包将从对`occurrencesOf`的调用中返回`0`。`Bag`不会遭受`Map.get`所遭受的`null`问题。如果一个值在`Bag`中不存在，`occurrencesOf`方法总是返回`0`。
 
-# 更多信息
+## 更多信息
 
 还有一些博客提供了关于 Eclipse 集合中的`Bag`类型和支持方法(如`countBy`)的更多细节。以下博客由 Nikhil Nanivadekar 撰写。它描述了 Eclipse 集合中`Bag`类型的许多实现细节，这可以带来内存和性能方面的好处。
 

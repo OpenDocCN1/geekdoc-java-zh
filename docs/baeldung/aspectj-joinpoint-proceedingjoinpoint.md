@@ -1,14 +1,15 @@
+
 # AspectJ 中的 Joinpoint 与 ProceedingJoinPoint
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/aspectj-joinpoint-proceedingjoinpoint>
 
-## 1.介绍
+## 1. 介绍
 
-在这个简短的教程中，我们将了解在`[AspectJ](/web/20220523234138/https://www.baeldung.com/aspectj).`中`JoinPoint`和`ProceedingJoinPoint`接口的区别
+在这个简短的教程中，我们将了解在`[AspectJ](/web/20220523234138/https://www.baeldung.com/aspectj).`中`JoinPoint`和`ProceedingJoinPoint`接口的区别。
 
 我们将用简短的解释和代码示例来介绍它。
 
-## 2.`JoinPoint`
+## 2. `JoinPoint`
 
 `JoinPoint`是一个`AspectJ`接口，由**提供对给定连接点**处可用状态的反射访问，比如方法参数、返回值或抛出的异常。它还提供了关于方法本身的所有静态信息。
 
@@ -48,7 +49,7 @@ public void logExceptions(JoinPoint jp, Exception e) {
 
 通过使用`@AfterThrowing`建议，我们确保只有在异常发生时才进行日志记录。
 
-## 3.`ProceedingJoinPoint`
+## 3. `ProceedingJoinPoint`
 
 `ProceedingJoinPoint`是`JoinPoint`的扩展，它公开了额外的`proceed()`方法。调用时，代码执行跳转到下一个通知或目标方法。**它给了我们控制代码流**并决定是否继续进一步调用的权力。
 
@@ -84,6 +85,6 @@ public Object aroundAdvice(ProceedingJoinPoint pjp) {
 
 例如，该解决方案可用于在网络中断的情况下重试 HTTP 调用。
 
-## 4.结论
+## 4. 结论
 
 在这篇文章中，我们了解了`AspectJ`中`Joinpoint`和`ProceedingJoinPoint`的区别。和往常一样，所有的源代码都可以在 GitHub 的[上获得。](https://web.archive.org/web/20220523234138/https://github.com/eugenp/tutorials/tree/master/spring-aop)

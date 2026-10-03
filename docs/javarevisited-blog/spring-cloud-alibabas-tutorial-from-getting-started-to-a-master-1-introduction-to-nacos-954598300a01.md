@@ -1,3 +1,4 @@
+
 # 春云阿里巴巴从入门到精通教程(一)Nacos 入门
 
 > 原文：<https://medium.com/javarevisited/spring-cloud-alibabas-tutorial-from-getting-started-to-a-master-1-introduction-to-nacos-954598300a01?source=collection_archive---------2----------------------->
@@ -21,7 +22,7 @@ Nacos 致力于帮助我们发现、配置和管理微服务。Nacos 提供了�
 
 ## 1.服务器启动安装
 
-1.  准备环境
+### 1.1 准备环境
 
 Nacos 依靠 [Java 环境](https://javarevisited.blogspot.com/2012/08/how-to-get-environment-variables-in.html)来运行。如果您正在从代码构建和运行 Nacos，您还需要配置一个 [Maven 环境](/javarevisited/6-best-maven-courses-for-beginners-in-2020-23ea3cba89)为此，请确保在以下版本环境中安装和使用它:
 
@@ -29,14 +30,14 @@ Nacos 依靠 [Java 环境](https://javarevisited.blogspot.com/2012/08/how-to-get
 *   64 位 JDK 1.8 以上
 *   maven 3.2 . x+；
 
-2.下载源代码或安装包
+### 1.2 下载源代码或安装包
 
 您可以通过源代码和发行包获得 Nacos。
 
 **从 Github 下载源代码**
 
 ```
-git clone [https://github.com/alibaba/nacos.git](https://github.com/alibaba/nacos.git)
+git clone https://github.com/alibaba/nacos.git
 cd nacos/
 mvn -Prelease-nacos -Dmaven.test.skip=true clean install -U  
 ls -al distribution/target/
@@ -46,15 +47,14 @@ cd distribution/target/nacos-server-${version}/nacos/bin
 
 **下载并编译压缩包**
 
-您可以从最新的稳定版本下载 nacos-server-$version.zip 包。
+您可以从最新的稳定版本下载`nacos-server-$version.zip`包。
 
 ```
-unzip nacos-server-$version.zip or tar -xvf nacos
-server-$version.tar.gz
+unzip nacos-server-$version.zip or tar -xvf nacos-server-$version.tar.gz
 cd nacos/bin
 ```
 
-3.启动服务器
+### 1.3 启动服务器
 
 Linux/Unix/Mac
 
@@ -64,7 +64,7 @@ Linux/Unix/Mac
 sh startup.sh -m standalone
 ```
 
-如果你正在使用 [Ubuntu 系统](https://javarevisited.blogspot.com/2022/03/top-5-free-courses-to-learn-linux-ubuntu.html)，或者如果你运行脚本并得到一个错误消息[[symbol not found]，你可以尝试运行它如下:
+如果你正在使用 [Ubuntu 系统](https://javarevisited.blogspot.com/2022/03/top-5-free-courses-to-learn-linux-ubuntu.html)，或者如果你运行脚本并得到一个错误消息`[[symbol not found]`，你可以尝试运行它如下:
 
 ```
 bash startup.sh -m standalone
@@ -78,35 +78,35 @@ Windows 启动命令:
 cmd startup.cmd
 ```
 
-或者双击 startup.cmd 运行该文件。
+或者双击`startup.cmd`运行该文件。
 
-4.测试 Nacos 服务是否通常
+### 1.4 测试 Nacos 服务是否通常
 
 a.“服务注册”功能:执行后输出“ok”结果
 
 ```
-curl -X POST '[http://127.0.0.1:8848/nacos/v1/ns/instance?serviceName=nacos.naming.serviceName&ip=20.18.7.10&port=8080'](http://127.0.0.1:8848/nacos/v1/ns/instance?serviceName=nacos.naming.serviceName&ip=20.18.7.10&port=8080')
+curl -X POST 'http://127.0.0.1:8848/nacos/v1/ns/instance?serviceName=nacos.naming.serviceName&ip=20.18.7.10&port=8080'
 ```
 
 b.“服务发现”功能:执行后输出相应的数据
 
 ```
-curl -X GET '[http://127.0.0.1:8848/nacos/v1/ns/instance/list?serviceName=nacos.naming.serviceName'](http://127.0.0.1:8848/nacos/v1/ns/instance/list?serviceName=nacos.naming.serviceName')
+curl -X GET 'http://127.0.0.1:8848/nacos/v1/ns/instance/list?serviceName=nacos.naming.serviceName'
 ```
 
 c.“发布配置”功能:执行后输出“真”结果
 
 ```
-curl -X POST "[http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=nacos.cfg.dataId&group=test&content=HelloWorld](http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=nacos.cfg.dataId&group=test&content=HelloWorld)"
+curl -X POST "http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=nacos.cfg.dataId&group=test&content=HelloWorld"
 ```
 
 d.“获取配置”功能:执行后输出“HelloWorld”结果
 
 ```
-curl -X GET "[http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=nacos.cfg.dataId&group=test](http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=nacos.cfg.dataId&group=test)"
+curl -X GET "http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=nacos.cfg.dataId&group=test"
 ```
 
-5.关闭服务器
+### 1.5 关闭服务器
 
 Linux/Unix/Mac
 
@@ -114,21 +114,21 @@ Linux/Unix/Mac
 sh shutdown.sh
 ```
 
-或者双击 shutdown.cmd 运行该文件。
+或者双击`shutdown.cmd`运行该文件。
 
 ## 2.控制台管理功能
 
 1.  默认的 Nacos 系统提供了一个控制台界面
 
-登录地址为:[http://localhost:8848/nacos/](http://localhost:8848/nacos/)(默认监听端口 8848)，默认账号密码为:nacos/nacos
+登录地址为:[http://localhost:8848/nacos/](http://localhost:8848/nacos/)(默认监听端口 8848)，默认账号密码为:`nacos/nacos`
 
 [![](img/bbf3f79422b0a5c0ec961c3b021afdf5.png)](https://javarevisited.blogspot.com/2021/10/top-5-courses-to-learn-kali-linux-in.html)
 
 成功登录后
 
-在公共界面，可以看到我们之前的“发布配置函数”设置的数据 Id:nacos . CFG . dataid
+在公共界面，可以看到我们之前的“发布配置函数”设置的数据 Id:`nacos.cfg.dataId`
 
-点击“细节”，你可以看到值:HelloWorld
+点击“细节”，你可以看到值:`HelloWorld`
 
 [![](img/69c2f17b7e9c6a66d33f3203c212b69b.png)](https://javarevisited.blogspot.com/2021/06/5-websites-to-learn-linux-command-line.html)
 

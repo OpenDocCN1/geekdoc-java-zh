@@ -1,17 +1,14 @@
+
 # 文本组件功能
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/components/generaltext.html`](https://docs.oracle.com/javase/tutorial/uiswing/components/generaltext.html)
 
-[`JTextComponent`](https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html)类是 Swing 文本组件的基础。该类为其所有后代提供以下可定制功能：
+`JTextComponent`类是 Swing 文本组件的基础。该类为其所有后代提供以下可定制功能：
 
 +   一个称为*文档*的模型，用于管理组件的内容。
-
 +   一个视图，用于在屏幕上显示组件。
-
 +   一个称为*编辑器工具包*的控制器，用于读取和写入文本，并使用操作实现编辑功能。
-
 +   支持无限的撤销和重做。
-
 +   可插拔的插入符和支持插入符更改侦听器和导航过滤器。
 
 查看名为`TextComponentDemo`的示例以探索这些功能。尽管`TextComponentDemo`示例包含一个自定义的`JTextPane`实例，但本节讨论的功能被所有`JTextComponent`子类继承。
@@ -24,34 +21,23 @@
 
 **试试这个：**
 
-1.  单击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 TextComponentDemo（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 TextComponentDemo 应用程序](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TextComponentDemoProject/TextComponentDemo.jnlp)
-
-1.  使用鼠标选择文本并将光标放置在文本窗格中。有关选择和光标的信息显示在窗口底部。
-
-1.  通过键盘输入文本。您可以使用键盘上的箭头键或四个 emacs 键绑定（Ctrl-B（向后移动一个字符），Ctrl-F（向前移动一个字符），Ctrl-N（向下移动一行）和 Ctrl-P（向上移动一行））来移动插入符。
-
-1.  打开编辑菜单，并使用其菜单项在文本窗格中编辑文本。在窗口底部的文本区域中进行选择。由于文本区域不可编辑，因此只有一些编辑菜单的命令，如复制到剪贴板，才有效。但需要注意的是，该菜单同时适用于文本组件。
-
-1.  使用“样式”菜单中的项目将不同的样式应用于文本窗格中的文本。
+1.  单击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行`TextComponentDemo`（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 TextComponentDemo 应用程序](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TextComponentDemoProject/TextComponentDemo.jnlp)
+2.  使用鼠标选择文本并将光标放置在文本窗格中。有关选择和光标的信息显示在窗口底部。
+3.  通过键盘输入文本。您可以使用键盘上的箭头键或四个 emacs 键绑定（`Ctrl-B`（向后移动一个字符），`Ctrl-F`（向前移动一个字符），`Ctrl-N`（向下移动一行）和`Ctrl-P`（向上移动一行））来移动插入符。
+4.  打开编辑菜单，并使用其菜单项在文本窗格中编辑文本。在窗口底部的文本区域中进行选择。由于文本区域不可编辑，因此只有一些编辑菜单的命令，如复制到剪贴板，才有效。但需要注意的是，该菜单同时适用于文本组件。
+5.  使用“样式”菜单中的项目将不同的样式应用于文本窗格中的文本。
 
 * * *
 
 使用`TextComponentDemo`示例作为参考点，本节涵盖以下主题：
 
 +   将文本操作与菜单和按钮关联
-
 +   将文本操作与按键绑定
-
 +   实现撤销和重做
-
 +   概念：关于文档
-
 +   实现文档过滤器
-
 +   监听文档更改
-
 +   监听插入符和选择更改
-
 +   概念：关于编辑工具包
 
 ## 将文本操作与菜单和按钮关联
@@ -70,7 +56,6 @@ private HashMap<Object, Action> createActionTable(JTextComponent textComponent) 
         }
         return actions;
     }
-
 ```
 
 以下是从哈希映射中按名称检索操作的方法：
@@ -79,7 +64,6 @@ private HashMap<Object, Action> createActionTable(JTextComponent textComponent) 
 private Action getActionByName(String name) {
     return actions.get(name);
 }
-
 ```
 
 您可以在程序中逐字使用这两种方法。
@@ -92,15 +76,14 @@ protected JMenu createEditMenu() {
     ...
     menu.add(getActionByName(DefaultEditorKit.cutAction));
     ...
-
+}
 ```
 
-此代码通过之前展示的方便方法按名称获取操作。然后将操作添加到菜单中。这就是你需要做的一切。菜单和操作会处理其他所有事情。请注意，操作的名称来自[`DefaultEditorKit`](https://docs.oracle.com/javase/8/docs/api/javax/swing/text/DefaultEditorKit.html)。该工具包提供了基本文本编辑的操作，并且是 Swing 提供的所有编辑工具包的超类。因此，除非被自定义覆盖，否则其功能对所有文本组件都可用。
+此代码通过之前展示的方便方法按名称获取操作。然后将操作添加到菜单中。这就是你需要做的一切。菜单和操作会处理其他所有事情。请注意，操作的名称来自`DefaultEditorKit`。该工具包提供了基本文本编辑的操作，并且是 Swing 提供的所有编辑工具包的超类。因此，除非被自定义覆盖，否则其功能对所有文本组件都可用。
 
 为了效率，文本组件共享操作。通过`getActionByName(DefaultEditorKit.cutAction)`返回的`Action`对象由窗口底部的不可编辑`JTextArea`共享。这种共享特性有两个重要的影响：
 
 +   通常，您不应修改从编辑工具包获取的`Action`对象。如果这样做，更改会影响程序中的所有文本组件。
-
 +   `Action`对象可以在程序中操作其他文本组件，有时会超出您的意图。在这个例子中，即使它是不可编辑的，`JTextArea`也与`JTextPane`共享动作。（在文本区域中选择一些文本，然后选择剪切到剪贴板菜单项。您会听到一声哔声，因为文本区域是不可编辑的。）如果您不想共享，请自行实例化`Action`对象。`DefaultEditorKit`定义了许多有用的`Action`子类。
 
 以下是创建样式菜单并将粗体菜单项放入其中的代码：
@@ -113,7 +96,7 @@ protected JMenu createStyleMenu() {
     action.putValue(Action.NAME, "Bold");
     menu.add(action);
     ...
-
+}
 ```
 
 `StyledEditorKit`提供了`Action`子类来实现对带样式文本的编辑命令。您会注意到，这段代码创建了`BoldAction`类的一个实例，而不是从编辑器工具包中获取动作。因此，这个动作不会与任何其他文本组件共享，更改其名称不会影响任何其他文本组件。
@@ -124,15 +107,12 @@ protected JMenu createStyleMenu() {
 
 `TextComponentDemo`示例中的文本窗格支持四个默认未提供的键绑定。
 
-+   按下 Ctrl-B 将光标向后移动一个字符
++   按下`Ctrl-B`将光标向后移动一个字符
++   按下`Ctrl-F`将光标向前移动一个字符
++   按下`Ctrl-N`将光标向下移动一行
++   按下`Ctrl-P`将光标向上移动一行
 
-+   按下 Ctrl-F 将光标向前移动一个字符
-
-+   按下 Ctrl-N 将光标向下移动一行
-
-+   按下 Ctrl-P 将光标向上移动一行
-
-以下代码将 Ctrl-B 键绑定添加到文本窗格。添加上面列出的其他三个绑定的代码类似。
+以下代码将`Ctrl-B`键绑定添加到文本窗格。添加上面列出的其他三个绑定的代码类似。
 
 ```java
 InputMap inputMap = textPane.getInputMap();
@@ -140,18 +120,16 @@ InputMap inputMap = textPane.getInputMap();
 KeyStroke key = KeyStroke.getKeyStroke(KeyEvent.VK_B,
                                        Event.CTRL_MASK);
 inputMap.put(key, DefaultEditorKit.backwardAction);
-
 ```
 
-首先，代码获取文本组件的输入映射。接下来，它找到代表 Ctrl-B 键序列的`KeyStroke`对象。最后，代码将该键序列绑定到将光标向后移动的`Action`。
+首先，代码获取文本组件的输入映射。接下来，它找到代表`Ctrl-B`键序列的`KeyStroke`对象。最后，代码将该键序列绑定到将光标向后移动的`Action`。
 
 ## 实现撤销和重做
 
 实现撤销和重做有两个部分：
 
 +   记住可撤销的编辑。
-
-+   实现撤销和重做命令 并为其提供用户界面。
++   实现撤销和重做命令并为其提供用户界面。
 
 **第一部分：记住可撤销的编辑**
 
@@ -159,7 +137,6 @@ inputMap.put(key, DefaultEditorKit.backwardAction);
 
 ```java
 protected UndoManager undo = new UndoManager();
-
 ```
 
 现在，让我们看看程序如何发现可撤销的编辑并将其添加到撤销管理器中。
@@ -168,7 +145,6 @@ protected UndoManager undo = new UndoManager();
 
 ```java
 doc.addUndoableEditListener(new MyUndoableEditListener());
-
 ```
 
 我们示例中使用的可撤销编辑侦听器将编辑添加到撤销管理器的列表中：
@@ -182,8 +158,7 @@ protected class MyUndoableEditListener
         undoAction.updateUndoState();
         redoAction.updateRedoState();
     }
-}  
-
+}
 ```
 
 请注意，此方法更新两个对象：`undoAction`和`redoAction`。这些是分别附加到撤销和重做菜单项的操作对象。下一步将向您展示如何创建菜单项以及如何实现这两个操作。有关可撤销编辑侦听器和可撤销编辑事件的一般信息，请参阅如何编写可撤销编辑侦听器。
@@ -210,7 +185,6 @@ menu.add(undoAction);
 redoAction = new RedoAction();
 menu.add(redoAction);
 ...
-
 ```
 
 撤销和重做操作由自定义的`AbstractAction`子类实现：`UndoAction`和`RedoAction`，分别。这些类是示例主类的内部类。
@@ -228,7 +202,6 @@ public void actionPerformed(ActionEvent e) {
     updateUndoState();
     redoAction.updateRedoState();
 }
-
 ```
 
 此方法调用撤销管理器的`undo`方法，并更新菜单项以反映新的撤销/重做状态。
@@ -246,7 +219,6 @@ public void actionPerformed(ActionEvent e) {
     updateRedoState();
     undoAction.updateUndoState();
 }
-
 ```
 
 此方法类似于撤销，只是调用撤销管理器的`redo`方法。
@@ -265,19 +237,15 @@ public void actionPerformed(ActionEvent e) {
 
 与其他 Swing 组件一样，文本组件将其数据（称为*模型*）与数据的视图分开。如果您尚未熟悉 Swing 组件使用的模型-视图分离，请参考使用模型。
 
-文本组件的模型称为*文档*，是实现[`Document`](https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Document.html)接口的类的实例。文档为文本组件提供以下服务：
+文本组件的模型称为*文档*，是实现`Document`接口的类的实例。文档为文本组件提供以下服务：
 
 +   包含文本。文档将文本内容存储在`Element`对象中，这些对象可以表示任何逻辑文本结构，如段落，或共享样式的文本运行。我们在这里不描述`Element`对象。
-
 +   通过`remove`和`insertString`方法支持编辑文本。
-
 +   通知文档侦听器和可撤销编辑侦听器文本更改。
-
 +   管理`Position`对象，跟踪文本中的特定位置，即使文本被修改。
-
 +   允许您获取有关文本的信息，例如其长度以及文本段作为字符串。
 
-Swing 文本包包含`Document`的一个子接口，[`StyledDocument`](https://docs.oracle.com/javase/8/docs/api/javax/swing/text/StyledDocument.html)，它添加了使用样式标记文本的支持。一个`JTextComponent`子类，`JTextPane`，要求其文档是`StyledDocument`而不仅仅是`Document`。
+Swing 文本包包含`Document`的一个子接口，`StyledDocument`，它添加了使用样式标记文本的支持。一个`JTextComponent`子类，`JTextPane`，要求其文档是`StyledDocument`而不仅仅是`Document`。
 
 `javax.swing.text`包提供了以下文档类层次结构，这些类实现了各种`JTextComponent`子类的专门文档：
 
@@ -289,9 +257,11 @@ Swing 文本包包含`Document`的一个子接口，[`StyledDocument`](https://d
 
 ## 实现文档过滤器
 
+
+
 要实现文档过滤器，请创建[`DocumentFilter`](https://docs.oracle.com/javase/8/docs/api/javax/swing/text/DocumentFilter.html)的子类，然后使用`AbstractDocument`类中定义的`setDocumentFilter`方法将其附加到文档上。虽然可能存在不是从`AbstractDocument`继承的文档，但默认情况下，Swing 文本组件使用`AbstractDocument`子类作为其文档。
 
-`TextComponentDemo` 应用程序有一个文档过滤器，`DocumentSizeFilter`，限制文本窗格可以包含的字符数。以下是创建过滤器并将其附加到文本窗格文档的代码：
+`TextComponentDemo`应用程序有一个文档过滤器，`DocumentSizeFilter`，限制文本窗格可以包含的字符数。以下是创建过滤器并将其附加到文本窗格文档的代码：
 
 ```java
 *...//Where member variables are declared:*
@@ -306,7 +276,6 @@ if (styledDoc instanceof AbstractDocument) {
     doc = (AbstractDocument)styledDoc;
     doc.setDocumentFilter(new DocumentSizeFilter(MAX_CHARACTERS));
 } 
-
 ```
 
 为了限制文档中允许的字符数，`DocumentSizeFilter`覆盖了`DocumentFilter`类的`insertString`方法，每次插入文本到文档时都会调用该方法。它还覆盖了`replace`方法，当用户粘贴新文本时最有可能被调用。一般来说，文本插入可能发生在用户键入或粘贴新文本时，或者调用`setText`方法时。这是`DocumentSizeFilter`类对`insertString`方法的实现：
@@ -321,7 +290,6 @@ public void insertString(FilterBypass fb, int offs,
     else
         Toolkit.getDefaultToolkit().beep();
 }
-
 ```
 
 `replace`的代码类似。`DocumentFilter`类定义的方法的[`FilterBypass`](https://docs.oracle.com/javase/8/docs/api/javax/swing/text/DocumentFilter.FilterBypass.html)参数只是一个使文档能够以线程安全方式更新的对象。
@@ -334,11 +302,10 @@ public void insertString(FilterBypass fb, int offs,
 
 文档会通知已注册的文档监听器文档的更改。使用文档监听器在文档中插入或删除文本，或文本样式更改时创建反应。
 
-`TextComponentDemo` 程序使用文档监听器在文本窗格发生更改时更新更改日志。以下代码行将`MyDocumentListener`类的一个实例注册为文本窗格文档的监听器：
+`TextComponentDemo`程序使用文档监听器在文本窗格发生更改时更新更改日志。以下代码行将`MyDocumentListener`类的一个实例注册为文本窗格文档的监听器：
 
 ```java
 doc.addDocumentListener(new MyDocumentListener());
-
 ```
 
 这是`MyDocumentListener`类的实现：
@@ -364,18 +331,17 @@ protected class MyDocumentListener implements DocumentListener {
                 + "." + newline);
     }
 } 
-
 ```
 
-监听器实现了处理三种不同类型文档事件的三种方法：插入、删除和样式更改。`StyledDocument` 实例可以触发这三种类型的事件。`PlainDocument` 实例仅触发插入和删除事件。有关文档监听器和文档事件的一般信息，请参阅如何编写文档监听器。
+监听器实现了处理三种不同类型文档事件的三种方法：插入、删除和样式更改。`StyledDocument`实例可以触发这三种类型的事件。`PlainDocument`实例仅触发插入和删除事件。有关文档监听器和文档事件的一般信息，请参阅如何编写文档监听器。
 
 请记住，此文本窗格的文档过滤器限制了文档中允许的字符数。如果尝试添加的文本超出文档过滤器允许的范围，文档过滤器将阻止更改，并且监听器的`insertUpdate`方法不会被调用。只有在更改已经发生时，文档监听器才会被通知更改。
 
-您可能希望在文档监听器中更改文档的文本。**但是，您绝对不应该在文档监听器中修改文本组件的内容。**如果这样做，程序很可能会死锁。相反，您可以使用格式化文本字段或提供文档过滤器。
+您可能希望在文档监听器中更改文档的文本。但是，您绝对不应该在文档监听器中修改文本组件的内容。如果这样做，程序很可能会死锁。相反，您可以使用格式化文本字段或提供文档过滤器。
 
 ## 监听插入符和选择更改
 
-`TextComponentDemo` 程序使用一个插入符监听器来显示插入符的当前位置，或者如果选择了文本，则显示选择的范围。
+`TextComponentDemo`程序使用一个插入符监听器来显示插入符的当前位置，或者如果选择了文本，则显示选择的范围。
 
 此示例中的插入符监听器类是一个`JLabel`子类。以下是创建插入符监听器标签并将其设置为文本窗格的插入符监听器的代码：
 
@@ -385,7 +351,6 @@ CaretListenerLabel caretListenerLabel = new CaretListenerLabel(
                                                 "Caret Status");
 ...
 textPane.addCaretListener(caretListenerLabel);
-
 ```
 
 插入符监听器必须实现一个方法，即`caretUpdate`，每次插入符移动或选择更改时都会调用该方法。以下是`CaretListenerLabel`对`caretUpdate`的实现：
@@ -412,7 +377,6 @@ public void caretUpdate(CaretEvent e) {
         setText("selection from: " + mark + " to " + dot + newline);
      }
 }
-
 ```
 
 如您所见，此监听器会更新其文本标签以反映插入符或选择的当前状态。监听器从插入符事件对象获取要显示的信息。有关插入符监听器和插入符事件的一般信息，请参阅如何编写插入符监听器。
@@ -433,7 +397,7 @@ Swing 文本包提供以下编辑工具包：
 
 [`DefaultEditorKit`](https://docs.oracle.com/javase/8/docs/api/javax/swing/text/DefaultEditorKit.html)
 
-读取和写入纯文本，并提供一组基本的编辑命令。有关文本系统如何处理换行符的详细信息可以在`DefaultEditorKit` API 文档中找到。简而言之，'\n'字符在内部使用，但在写入文件时使用文档或平台的换行符。所有其他编辑工具包都是`DefaultEditorKit`类的子类。
+读取和写入纯文本，并提供一组基本的编辑命令。有关文本系统如何处理换行符的详细信息可以在`DefaultEditorKit`API 文档中找到。简而言之，`'\n'`字符在内部使用，但在写入文件时使用文档或平台的换行符。所有其他编辑工具包都是`DefaultEditorKit`类的子类。
 
 [`StyledEditorKit`](https://docs.oracle.com/javase/8/docs/api/javax/swing/text/StyledEditorKit.html)
 

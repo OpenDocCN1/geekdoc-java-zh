@@ -1,3 +1,4 @@
+
 # 什么是接口？
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/concepts/interface.html`](https://docs.oracle.com/javase/tutorial/java/concepts/interface.html)
@@ -18,7 +19,6 @@ interface Bicycle {
 
     void applyBrakes(int decrement);
 }
-
 ```
 
 要实现这个接口，你的类的名称会改变（例如，变成一个特定品牌的自行车，比如`ACMEBicycle`），并且在类声明中使用`implements`关键字：
@@ -57,13 +57,8 @@ class ACMEBicycle implements Bicycle {
              speed + " gear:" + gear);
     }
 }
-
 ```
 
 实现一个接口允许一个类更加正式地承诺提供的行为。接口形成了类与外部世界之间的契约，这个契约在编译时由编译器强制执行。如果你的类声称实现了一个接口，那么该接口定义的所有方法必须在类的源代码中出现，类才能成功编译。
 
-* * *
-
 **注意：** 要实际编译`ACMEBicycle`类，你需要在实现的接口方法开头添加`public`关键字。你将在后面关于类和对象以及接口和继承的课程中了解这样做的原因。
-
-* * *

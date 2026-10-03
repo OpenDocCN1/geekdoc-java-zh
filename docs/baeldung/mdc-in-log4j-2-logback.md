@@ -1,18 +1,20 @@
-# 使用映射诊断上下文(MDC)改进了 Java 日志记录
+
+
+# 使用映射诊断上下文（MDC）改进 Java 日志记录
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/mdc-in-log4j-2-logback>
 
-## 1.概观
+## 1. 概观
 
-在本教程中，我们将探索如何使用`Mapped Diagnostic Context` (MDC)来改进应用程序日志记录。
+在本教程中，我们将探索如何使用 `Mapped Diagnostic Context`（MDC）来改进应用程序日志记录。
 
-`Mapped Diagnostic Context`提供了一种方法来丰富日志信息，这些信息在日志记录实际发生的范围内是不可用的，但是对于更好地跟踪程序的执行确实是有用的。
+`Mapped Diagnostic Context` 提供了一种方法来丰富日志信息，这些信息在日志记录实际发生的范围内是不可用的，但是对于更好地跟踪程序的执行确实是有用的。
 
-## 2.为什么使用 MDC
+## 2. 为什么使用 MDC
 
 假设我们要写一个转账的软件。
 
-我们设置了一个`Transfer`类来表示一些基本信息——唯一的转账 id 和发送者的姓名:
+我们设置了一个 `Transfer` 类来表示一些基本信息——唯一的转账 id 和发送者的姓名：
 
 ```java
 public class Transfer {
@@ -37,10 +39,10 @@ public class Transfer {
     public Long getAmount() {
         return amount;
     }
-} 
+}
 ```
 
-为了执行传输，我们需要使用一个由简单 API 支持的服务:
+为了执行传输，我们需要使用一个由简单 API 支持的服务：
 
 ```java
 public abstract class TransferService {
@@ -52,14 +54,14 @@ public abstract class TransferService {
     abstract protected void beforeTransfer(long amount);
 
     abstract protected void afterTransfer(long amount, boolean outcome);
-} 
+}
 ```
 
-可以覆盖`beforeTransfer()`和`afterTransfer()`方法，以便在传输完成前后运行定制代码。
+可以覆盖 `beforeTransfer()` 和 `afterTransfer()` 方法，以便在传输完成前后运行定制代码。
 
-我们将利用`beforeTransfer()`和`afterTransfer()`来**记录一些关于转移的信息。**
+我们将利用 `beforeTransfer()` 和 `afterTransfer()` 来记录一些关于转移的信息。
 
-让我们创建服务实现:
+让我们创建服务实现：
 
 ```java
 import org.apache.log4j.Logger;
@@ -78,21 +80,21 @@ public class Log4JTransferService extends TransferService {
         logger.info(
           "Has transfer of " + amount + "$ completed successfully ? " + outcome + ".");
     }
-} 
+}
 ```
 
-这里要注意的主要问题是，当创建日志消息时，不可能访问`Transfer`对象——只能访问金额，这使得不可能记录交易 id 或发送者。
+这里要注意的主要问题是，当创建日志消息时，不可能访问 `Transfer` 对象——只能访问金额，这使得不可能记录交易 id 或发送者。
 
-让我们设置通常的`log4j.properties`文件来登录控制台:
+让我们设置通常的 `log4j.properties` 文件来登录控制台：
 
 ```java
 log4j.appender.consoleAppender=org.apache.log4j.ConsoleAppender
 log4j.appender.consoleAppender.layout=org.apache.log4j.PatternLayout
 log4j.appender.consoleAppender.layout.ConversionPattern=%-4r [%t] %5p %c %x - %m%n
-log4j.rootLogger = TRACE, consoleAppender 
+log4j.rootLogger = TRACE, consoleAppender
 ```
 
-最后，我们将建立一个小应用程序，它能够通过一个`ExecutorService`同时运行多个传输:
+最后，我们将建立一个小应用程序，它能够通过一个 `ExecutorService` 同时运行多个传输：
 
 ```java
 public class TransferDemo {
@@ -102,7 +104,7 @@ public class TransferDemo {
         TransactionFactory transactionFactory = new TransactionFactory();
         for (int i = 0; i < 10; i++) {
             Transfer tx = transactionFactory.newInstance();
-            Runnable task = new Log4JRunnable(tx);            
+            Runnable task = new Log4JRunnable(tx);
             executor.submit(task);
         }
         executor.shutdown();
@@ -110,7 +112,7 @@ public class TransferDemo {
 }
 ```
 
-注意，为了使用`ExecutorService`，我们需要将`Log4JTransferService` 的执行封装在一个适配器中，因为`executor.submit()`需要一个`Runnable`:
+注意，为了使用 `ExecutorService`，我们需要将 `Log4JTransferService` 的执行封装在一个适配器中，因为 `executor.submit()` 需要一个 `Runnable`：
 
 ```java
 public class Log4JRunnable implements Runnable {
@@ -123,59 +125,59 @@ public class Log4JRunnable implements Runnable {
     public void run() {
         log4jBusinessService.transfer(tx.getAmount());
     }
-} 
+}
 ```
 
-当我们运行同时管理多个传输的演示应用程序时，我们很快发现**日志并不像我们希望的那样有用。**
+当我们运行同时管理多个传输的演示应用程序时，我们很快发现日志并不像我们希望的那样有用。
 
 跟踪每笔转账的执行很复杂，因为记录的唯一有用信息是转账金额和运行该特定转账的线程的名称。
 
-此外，不可能区分由同一线程运行的相同数量的两个不同事务，因为相关的日志行看起来基本相同:
+此外，不可能区分由同一线程运行的相同数量的两个不同事务，因为相关的日志行看起来基本相同：
 
 ```java
 ...
-519  [pool-1-thread-3]  INFO Log4JBusinessService 
+519  [pool-1-thread-3]  INFO Log4JBusinessService
   - Preparing to transfer 1393$.
-911  [pool-1-thread-2]  INFO Log4JBusinessService 
+911  [pool-1-thread-2]  INFO Log4JBusinessService
   - Has transfer of 1065$ completed successfully ? true.
-911  [pool-1-thread-2]  INFO Log4JBusinessService 
+911  [pool-1-thread-2]  INFO Log4JBusinessService
   - Preparing to transfer 1189$.
-989  [pool-1-thread-1]  INFO Log4JBusinessService 
+989  [pool-1-thread-1]  INFO Log4JBusinessService
   - Has transfer of 1350$ completed successfully ? true.
-989  [pool-1-thread-1]  INFO Log4JBusinessService 
+989  [pool-1-thread-1]  INFO Log4JBusinessService
   - Preparing to transfer 1178$.
-1245 [pool-1-thread-3]  INFO Log4JBusinessService 
+1245 [pool-1-thread-3]  INFO Log4JBusinessService
   - Has transfer of 1393$ completed successfully ? true.
-1246 [pool-1-thread-3]  INFO Log4JBusinessService 
+1246 [pool-1-thread-3]  INFO Log4JBusinessService
   - Preparing to transfer 1133$.
-1507 [pool-1-thread-2]  INFO Log4JBusinessService 
+1507 [pool-1-thread-2]  INFO Log4JBusinessService
   - Has transfer of 1189$ completed successfully ? true.
-1508 [pool-1-thread-2]  INFO Log4JBusinessService 
+1508 [pool-1-thread-2]  INFO Log4JBusinessService
   - Preparing to transfer 1907$.
-1639 [pool-1-thread-1]  INFO Log4JBusinessService 
+1639 [pool-1-thread-1]  INFO Log4JBusinessService
   - Has transfer of 1178$ completed successfully ? true.
-1640 [pool-1-thread-1]  INFO Log4JBusinessService 
+1640 [pool-1-thread-1]  INFO Log4JBusinessService
   - Preparing to transfer 674$.
-... 
+...
 ```
 
-**幸，`MDC`能助。**
+幸好，`MDC` 能助。
 
-## 3.Log4j 中的 MDC
+## 3. Log4j 中的 MDC
 
-Log4j 中的`MDC`允许我们在一个类似 map 的结构中填充一些信息，当日志消息被实际写入时，这些信息可以被 appender 访问。
+Log4j 中的 `MDC` 允许我们在一个类似 map 的结构中填充一些信息，当日志消息被实际写入时，这些信息可以被 appender 访问。
 
-MDC 结构以与`ThreadLocal`变量相同的方式在内部附加到执行线程上。
+MDC 结构以与 `ThreadLocal` 变量相同的方式在内部附加到执行线程上。
 
-这是一个高层次的想法:
+这是一个高层次的想法：
 
-1.  用我们想让 appender 使用的信息填充 MDC
-2.  然后记录一条消息
-3.  并最终清除 MDC
+1. 用我们想让 appender 使用的信息填充 MDC。
+2. 然后记录一条消息。
+3. 并最终清除 MDC。
 
 应该更改 appender 的模式，以便检索存储在 MDC 中的变量。
 
-因此，让我们根据这些准则来更改代码:
+因此，让我们根据这些准则来更改代码：
 
 ```java
 import org.apache.log4j.MDC;
@@ -194,46 +196,46 @@ public class Log4JRunnable implements Runnable {
         log4jBusinessService.transfer(tx.getAmount());
         MDC.clear();
     }
-} 
+}
 ```
 
-`MDC.put()`用于在 MDC 中添加一个键和一个对应的值，而`MDC.clear()`清空 MDC。
+`MDC.put()` 用于在 MDC 中添加一个键和一个对应的值，而 `MDC.clear()` 清空 MDC。
 
-现在让我们更改`log4j.properties`来打印我们刚刚存储在 MDC 中的信息。
+现在让我们更改 `log4j.properties` 来打印我们刚刚存储在 MDC 中的信息。
 
-改变转换模式就足够了，对 MDC 中包含的每个条目使用`%X{}`占位符，我们希望记录:
+改变转换模式就足够了，对 MDC 中包含的每个条目使用 `%X{}` 占位符，我们希望记录：
 
 ```java
 log4j.appender.consoleAppender.layout.ConversionPattern=
   %-4r [%t] %5p %c{1} %x - %m - tx.id=%X{transaction.id} tx.owner=%X{transaction.owner}%n
 ```
 
-现在，如果我们运行该应用程序，我们会注意到每一行还包含有关正在处理的事务的信息，这使我们更容易跟踪应用程序的执行:
+现在，如果我们运行该应用程序，我们会注意到每一行还包含有关正在处理的事务的信息，这使我们更容易跟踪应用程序的执行：
 
 ```java
-638  [pool-1-thread-2]  INFO Log4JBusinessService 
+638  [pool-1-thread-2]  INFO Log4JBusinessService
   - Has transfer of 1104$ completed successfully ? true. - tx.id=2 tx.owner=Marc
-638  [pool-1-thread-2]  INFO Log4JBusinessService 
+638  [pool-1-thread-2]  INFO Log4JBusinessService
   - Preparing to transfer 1685$. - tx.id=4 tx.owner=John
-666  [pool-1-thread-1]  INFO Log4JBusinessService 
+666  [pool-1-thread-1]  INFO Log4JBusinessService
   - Has transfer of 1985$ completed successfully ? true. - tx.id=1 tx.owner=Marc
-666  [pool-1-thread-1]  INFO Log4JBusinessService 
+666  [pool-1-thread-1]  INFO Log4JBusinessService
   - Preparing to transfer 958$. - tx.id=5 tx.owner=Susan
-739  [pool-1-thread-3]  INFO Log4JBusinessService 
+739  [pool-1-thread-3]  INFO Log4JBusinessService
   - Has transfer of 783$ completed successfully ? true. - tx.id=3 tx.owner=Samantha
-739  [pool-1-thread-3]  INFO Log4JBusinessService 
+739  [pool-1-thread-3]  INFO Log4JBusinessService
   - Preparing to transfer 1024$. - tx.id=6 tx.owner=John
-1259 [pool-1-thread-2]  INFO Log4JBusinessService 
+1259 [pool-1-thread-2]  INFO Log4JBusinessService
   - Has transfer of 1685$ completed successfully ? false. - tx.id=4 tx.owner=John
-1260 [pool-1-thread-2]  INFO Log4JBusinessService 
-  - Preparing to transfer 1667$. - tx.id=7 tx.owner=Marc 
+1260 [pool-1-thread-2]  INFO Log4JBusinessService
+  - Preparing to transfer 1667$. - tx.id=7 tx.owner=Marc
 ```
 
-## 4.Log4j2 中的 MDC
+## 4. Log4j2 中的 MDC
 
 Log4j2 中也有完全相同的特性，所以让我们看看如何使用它。
 
-我们将首先设置一个使用 Log4j2 记录日志的 *TransferService* 子类:
+我们将首先设置一个使用 Log4j2 记录日志的 `TransferService` 子类：
 
 ```java
 import org.apache.logging.log4j.LogManager;
@@ -251,10 +253,10 @@ public class Log4J2TransferService extends TransferService {
     protected void afterTransfer(long amount, boolean outcome) {
         logger.info("Has transfer of {}$ completed successfully ? {}.", amount, outcome);
     }
-} 
+}
 ```
 
-接下来让我们更改使用 MDC 的代码，在 Log4j2 中实际上它被称为`ThreadContext`:
+接下来让我们更改使用 MDC 的代码，在 Log4j2 中实际上它被称为 `ThreadContext`：
 
 ```java
 import org.apache.log4j.MDC;
@@ -273,14 +275,17 @@ public class Log4J2Runnable implements Runnable {
         log4j2BusinessService.transfer(tx.getAmount());
         ThreadContext.clearAll();
     }
-} 
+}
 ```
 
-同样，`ThreadContext.put()`在 MDC 中添加一个条目，`ThreadContext.clearAll()`删除所有现有条目。
+同样，`ThreadContext.put()` 在 MDC 中添加一个条目，`ThreadContext.clearAll()` 删除所有现有条目。
 
-我们仍然缺少配置日志记录的`log4j2.xml`文件。
+我们仍然缺少配置日志记录的 `log4j2.xml` 文件。
 
-我们可以注意到，指定应该记录哪些 MDC 条目的语法与 Log4j 中使用的语法相同:
+我们可以注意到，指定应该记录哪些 MDC 条目的语法与 Log4j 中使用的语法相同：
+
+
+
 
 ```java
 <Configuration status="INFO">
@@ -400,7 +405,7 @@ public class Slf4jRunnable implements Runnable {
 
 ## 6.MDC 和线程池
 
-**MDC 实现通常使用`ThreadLocal`来存储上下文信息。**这是实现线程安全的一种简单而合理的方法。
+MDC 实现通常使用`ThreadLocal`来存储上下文信息。这是实现线程安全的一种简单而合理的方法。
 
 然而，我们应该小心使用带有线程池的 MDC。
 
@@ -417,7 +422,7 @@ public class Slf4jRunnable implements Runnable {
 
 防止这种情况发生的一个方法是，在每次执行结束时都要记得清理 MDC 上下文。这种方法通常需要严格的人工监督，因此容易出错。
 
-**另一种方法是使用`ThreadPoolExecutor`钩子，并在每次执行后进行必要的清理。**
+另一种方法是使用`ThreadPoolExecutor`钩子，并在每次执行后进行必要的清理。
 
 为此，我们可以扩展`ThreadPoolExecutor`类并覆盖`afterExecute()`钩子:
 

@@ -1,3 +1,4 @@
+
 # 准备使用 ResourceBundle
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/resbundle/prepare.html`](https://docs.oracle.com/javase/tutorial/i18n/resbundle/prepare.html)
@@ -7,11 +8,8 @@
 如果你的应用程序有用户界面，它包含许多与地区相关的对象。要开始，你应该查看源代码，寻找随`Locale`变化的对象。你的列表可能包括从以下类实例化的对象：
 
 +   `字符串`
-
 +   `图像`
-
 +   `颜色`
-
 +   `AudioClip`
 
 你会注意到这个列表不包含代表数字、日期、时间或货币的对象。这些对象的显示格式随`Locale`变化，但对象本身不会变化。例如，你根据`Locale`格式化一个`Date`，但无论`Locale`如何，你都使用相同的`Date`对象。你不需要将这些对象隔离在`ResourceBundle`中，而是使用特殊的区域敏感格式化类对它们进行格式化。你将在日期和时间部分的格式化课程中学习如何做到这一点。
@@ -27,7 +25,5 @@
 你可以根据包含的对象的类别组织你的`ResourceBundle`对象。例如，你可能希望将订单输入窗口的所有 GUI 标签加载到一个名为`OrderLabelsBundle`的`ResourceBundle`中。使用多个`ResourceBundle`对象有几个优点：
 
 +   你的代码更易于阅读和维护。
-
 +   你将避免巨大的`ResourceBundle`对象，这可能需要太长时间加载到内存中。
-
 +   当需要时，您可以通过仅加载每个`ResourceBundle`来减少内存使用量。

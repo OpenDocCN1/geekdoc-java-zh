@@ -1,31 +1,31 @@
+
 # JAX-WS Hello World 示例 RPC 风格
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/webservices/jax-ws/jax-ws-hello-world-example/>
 
-JAX-WS 与 JDK 1.6 捆绑在一起，这使得 Java web 服务开发更容易开发。本教程向您展示了如何执行以下任务:
+JAX-WS 与 JDK 1.6 捆绑在一起，这使得 Java web 服务开发更容易开发。本教程向您展示了如何执行以下任务：
 
-1.  使用 JAX-WS 创建一个基于 SOAP 的 RPC 样式的 web 服务端点。
-2.  手动创建 Java web 服务客户端。
-3.  通过 **wsimport** 工具创建一个 Java web 服务客户端。
-4.  创建一个 Ruby web 服务客户端。
+1. 使用 JAX-WS 创建一个基于 SOAP 的 RPC 样式的 web 服务端点。
+2. 手动创建 Java web 服务客户端。
+3. 通过 `wsimport` 工具创建一个 Java web 服务客户端。
+4. 创建一个 Ruby web 服务客户端。
 
-你会惊奇地发现在 JAX WS 中开发一个 RPC 样式 web 服务是多么简单。
+你会惊奇地发现在 JAX-WS 中开发一个 RPC 样式 web 服务是多么简单。
 
 **Note**
+
 In general words, “*web service endpoint*” is a service which published outside for user to access; where “*web service client*” is the party who access the published service.
 
 ## JAX-WS Web 服务端点
 
 以下步骤显示了如何使用 JAX-WS 来创建 RPC 样式的 web 服务端点。
 
-freestar.config.enabled_slots.push({ placementName: "mkyong_incontent_1", slotId: "mkyong_incontent_1" });
+## 1. 创建 Web 服务端点接口
 
-## 1.创建 Web 服务端点接口
-
-*文件:HelloWorld.java*
+*文件：`HelloWorld.java`*
 
 ```java
- package com.mkyong.ws;
+package com.mkyong.ws;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -39,15 +39,15 @@ public interface HelloWorld{
 
 	@WebMethod String getHelloWorldAsString(String name);
 
-} 
+}
 ```
 
-## 2.创建 Web 服务端点实现
+## 2. 创建 Web 服务端点实现
 
-*文件:HelloWorldImpl.java*
+*文件：`HelloWorldImpl.java`*
 
 ```java
- package com.mkyong.ws;
+package com.mkyong.ws;
 
 import javax.jws.WebService;
 
@@ -60,15 +60,15 @@ public class HelloWorldImpl implements HelloWorld{
 		return "Hello World JAX-WS " + name;
 	}
 
-} 
+}
 ```
 
-## 3.创建端点发布者
+## 3. 创建端点发布者
 
-*文件:HelloWorldPublisher.java*
+*文件：`HelloWorldPublisher.java`*
 
 ```java
- package com.mkyong.endpoint;
+package com.mkyong.endpoint;
 
 import javax.xml.ws.Endpoint;
 import com.mkyong.ws.HelloWorldImpl;
@@ -80,25 +80,25 @@ public class HelloWorldPublisher{
 	   Endpoint.publish("http://localhost:9999/ws/hello", new HelloWorldImpl());
     }
 
-} 
+}
 ```
 
-运行端点发布器，您的“ **hello world web 服务**部署在 URL“**http://localhost:9999/ws/hello**”中。
+运行端点发布器，您的“hello world web 服务”部署在 URL“`http://localhost:9999/ws/hello`”中。
 
-## 4.测试一下
+## 4. 测试一下
 
-您可以通过这个 URL "**http://localhost:9999/ws/hello？wsdl** ”。
+您可以通过这个 URL "`http://localhost:9999/ws/hello?wsdl`"。
 
 ## Web 服务客户端
 
 好了，web 服务已正确部署，现在让我们看看如何创建 web 服务客户端来访问已发布的服务。
 
-## 1.Java Web 服务客户端
+## 1. Java Web 服务客户端
 
-无需工具，您可以创建一个 Java web 服务客户端，如下所示:
+无需工具，您可以创建一个 Java web 服务客户端，如下所示：
 
 ```java
- package com.mkyong.client;
+package com.mkyong.client;
 
 import java.net.URL;
 import javax.xml.namespace.QName;
@@ -123,34 +123,35 @@ public class HelloWorldClient{
 
     }
 
-} 
+}
 ```
 
 *输出*
 
 ```java
- Hello World JAX-WS mkyong 
+Hello World JAX-WS mkyong
 ```
 
-## 2.通过 wsimport 工具的 Java Web 服务客户端
+## 2. 通过 `wsimport` 工具的 Java Web 服务客户端
 
-或者，您可以使用" **wsimport** 工具来解析发布的 wsdl 文件，并生成必要的客户端文件(存根)来访问发布的 web 服务。
+或者，您可以使用"`wsimport`"工具来解析发布的 wsdl 文件，并生成必要的客户端文件（存根）来访问发布的 web 服务。
 
-**Where is wsimport?**
-This **wsimport** tool is bundle with the JDK, you can find it at “*JDK_PATH/bin*” folder.
+**Where is `wsimport`?**
 
-发出“ **wsimport** 命令。
+This `wsimport` tool is bundle with the JDK, you can find it at “`JDK_PATH/bin`” folder.
+
+发出"`wsimport`"命令。
 
 ```java
- wsimport -keep http://localhost:9999/ws/hello?wsdl 
+wsimport -keep http://localhost:9999/ws/hello?wsdl
 ```
 
 它将生成必要的客户端文件，这取决于所提供的 wsdl 文件。在这种情况下，它将生成一个接口和一个服务实现文件。
 
-*文件:HelloWorld.java*
+*文件：`HelloWorld.java`*
 
 ```java
- package com.mkyong.ws;
+package com.mkyong.ws;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -180,13 +181,13 @@ public interface HelloWorld {
         @WebParam(name = "arg0", partName = "arg0")
         String arg0);
 
-} 
+}
 ```
 
-*文件:HelloWorldImplService.java*
+*文件：`HelloWorldImplService.java`*
 
 ```java
- package com.mkyong.ws;
+package com.mkyong.ws;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -258,13 +259,13 @@ public class HelloWorldImplService
 			features);
     }
 
-} 
+}
 ```
 
 现在，创建一个依赖于上面生成的文件的 Java web 服务客户机。
 
 ```java
- package com.mkyong.client;
+package com.mkyong.client;
 
 import com.mkyong.ws.HelloWorld;
 import com.mkyong.ws.HelloWorldImplService;
@@ -280,16 +281,16 @@ public class HelloWorldClient{
 
     }
 
-} 
+}
 ```
 
 这是输出
 
 ```java
- Hello World JAX-WS mkyong 
+Hello World JAX-WS mkyong
 ```
 
-## 3.Ruby Web 服务客户端
+## 3. Ruby Web 服务客户端
 
 web 服务开发经常与其他编程语言混合使用。所以，这里有一个 Ruby web 服务客户端的例子，它被用来访问已发布的 JAX-WS 服务。
 
@@ -306,50 +307,54 @@ data1 = service.getHelloWorldAsString('mkyong')
 
 # Output results.
 puts "getHelloWorldAsString : #{data1}"
-
 ```
 
 输出
 
 ```java
- getHelloWorldAsString : Hello World JAX-WS mkyong 
+getHelloWorldAsString : Hello World JAX-WS mkyong
 ```
 
 ## 跟踪 SOAP 流量
 
-从上到下，展示了 SOAP 信封如何在客户机和服务器之间流动。再次参见#1 web 服务客户端:
+从上到下，展示了 SOAP 信封如何在客户机和服务器之间流动。再次参见#1 web 服务客户端：
 
 ```java
- URL url = new URL("http://localhost:9999/ws/hello?wsdl");
-    QName qname = new QName("http://ws.mkyong.com/", "HelloWorldImplService");
-    Service service = Service.create(url, qname);
+URL url = new URL("http://localhost:9999/ws/hello?wsdl");
+QName qname = new QName("http://ws.mkyong.com/", "HelloWorldImplService");
+Service service = Service.create(url, qname);
 
-    HelloWorld hello = service.getPort(HelloWorld.class);
+HelloWorld hello = service.getPort(HelloWorld.class);
 
-    System.out.println(hello.getHelloWorldAsString("mkyong")); 
+System.out.println(hello.getHelloWorldAsString("mkyong"));
 ```
 
 **Note**
-To monitor SOAP traffic is very easy, see this guide – “[How to trace SOAP message in Eclipse IDE](http://web.archive.org/web/20210131115500/http://www.mkyong.com/webservices/jax-ws/how-to-trace-soap-message-in-eclipse-ide/)“.
 
-## 1.申请一份 WSDL 档案
+To monitor SOAP traffic is very easy, see this guide – “[How to trace SOAP message in Eclipse IDE](http://web.archive.org/web/20210131115500/http://www.mkyong.com/webservices/jax-ws/how-to-trace-soap-message-in-eclipse-ide/)".
 
-首先，客户端向服务端点发送 wsdl 请求，请参见下面的 HTTP 流量:
+## 1. 申请一份 WSDL 档案
 
-**客户端发送请求:**
+首先，客户端向服务端点发送 wsdl 请求，请参见下面的 HTTP 流量：
+
+**客户端发送请求：**
 
 ```java
- GET /ws/hello?wsdl HTTP/1.1
+GET /ws/hello?wsdl HTTP/1.1
 User-Agent: Java/1.6.0_13
 Host: localhost:9999
 Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
-Connection: keep-alive 
+Connection: keep-alive
 ```
 
-**服务器发送响应:**
+**服务器发送响应：**
+
+
+
+## 1. 服务端响应
 
 ```java
- HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 Transfer-encoding: chunked
 Content-type: text/xml;charset=utf-8
 
@@ -402,14 +407,14 @@ Content-type: text/xml;charset=utf-8
 </definitions> 
 ```
 
-## 2.hello.getHelloWorldAsString()
+## 2. `hello.getHelloWorldAsString()`
 
 第二次调用，客户端将方法调用请求放入 SOAP 信封，并将其发送到服务端点。在服务端点，调用请求的方法，将结果放入 SOAP 信封，并将其发送回客户端。
 
 **客户端发送请求:**
 
 ```java
- POST /ws/hello HTTP/1.1
+POST /ws/hello HTTP/1.1
 SOAPAction: ""
 Accept: text/xml, multipart/related, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
 Content-Type: text/xml; charset=utf-8
@@ -431,7 +436,7 @@ Content-Length: 224
 **服务器发送响应:**
 
 ```java
- HTTP/1.1 200 OK
+HTTP/1.1 200 OK
 Transfer-encoding: chunked
 Content-type: text/xml; charset=utf-8
 
@@ -449,4 +454,10 @@ Content-type: text/xml; charset=utf-8
 
 ## 下载源代码
 
-Download It – [JAX-WS-HelloWorld-RPC-Example.zip](http://web.archive.org/web/20210131115500/http://www.mkyong.com/wp-content/uploads/2010/11/JAX-WS-HelloWorld-RPC-Example.zip) (14KB)Tags : [hello world](http://web.archive.org/web/20210131115500/https://mkyong.com/tag/hello-world/) [jax-ws](http://web.archive.org/web/20210131115500/https://mkyong.com/tag/jax-ws/) [web services](http://web.archive.org/web/20210131115500/https://mkyong.com/tag/web-services/)freestar.config.enabled_slots.push({ placementName: "mkyong_leaderboard_btf", slotId: "mkyong_leaderboard_btf" });<input type="hidden" id="mkyong-current-postId" value="7699">
+Download It – [JAX-WS-HelloWorld-RPC-Example.zip](http://web.archive.org/web/20210131115500/http://www.mkyong.com/wp-content/uploads/2010/11/JAX-WS-HelloWorld-RPC-Example.zip) (14KB)
+
+Tags : [hello world](http://web.archive.org/web/20210131115500/https://mkyong.com/tag/hello-world/) [jax-ws](http://web.archive.org/web/20210131115500/https://mkyong.com/tag/jax-ws/) [web services](http://web.archive.org/web/20210131115500/https://mkyong.com/tag/web-services/)
+
+`freestar.config.enabled_slots.push({ placementName: "mkyong_leaderboard_btf", slotId: "mkyong_leaderboard_btf" });`
+
+`<input type="hidden" id="mkyong-current-postId" value="7699">`

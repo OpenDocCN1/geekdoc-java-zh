@@ -1,12 +1,13 @@
+
 # Spring Data MongoDB 可定制游标
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-data-mongodb-tailable-cursors>
 
-## 1.介绍
+## 1. 介绍
 
 在本教程中，我们将讨论如何通过利用带有 [Spring 数据 MongoDB](/web/20220625230955/https://www.baeldung.com/spring-data-mongodb-tutorial) 的可定制游标来将 MongoDB 用作无限数据流。
 
-## 2.可定制光标
+## 2. 可定制光标
 
 当我们执行查询时，数据库驱动程序打开一个游标来提供匹配的文档。默认情况下，当客户端读取所有结果时，MongoDB 会自动关闭游标。因此，旋转会产生有限的数据流。
 
@@ -14,7 +15,7 @@
 
 Spring Data MongoDB 项目帮助我们利用反应式数据库功能，包括可定制的游标。
 
-## 3.设置
+## 3. 设置
 
 为了演示上述特性，我们将实现一个简单的日志计数器应用程序。让我们假设有一个日志聚合器将所有日志收集并保存到一个中心位置——我们的 MongoDB capped 集合。
 
@@ -43,7 +44,7 @@ db.createCollection(COLLECTION_NAME, new CreateCollectionOptions()
 
 第三，我们将使用适当的 [Spring Boot 启动器依赖关系](https://web.archive.org/web/20220625230955/https://search.maven.org/search?q=a:spring-boot-starter-data-mongodb-reactive):
 
-```java
+```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
@@ -51,7 +52,7 @@ db.createCollection(COLLECTION_NAME, new CreateCollectionOptions()
 </dependency>
 ```
 
-## 4.反应式可定制光标
+## 4. 反应式可定制光标
 
 我们可以使用[命令式](#messagelistener)和反应式 MongoDB API 来消费可定制的游标。强烈建议**使用反应型**。
 
@@ -84,7 +85,7 @@ public void close() {
 
 另外，**请注意，如果查询最初没有返回匹配，可定制的游标可能会失效。**换句话说，即使新的持久化文档匹配过滤器查询，订阅者也不能接收它们。这是 MongoDB 可定制游标的一个已知限制。在创建可定制的游标之前，我们必须确保在封顶的集合中有匹配的文档。
 
-## 5.具有反应式存储库的可定制游标
+## 5. 具有反应式存储库的可定制游标
 
 Spring 数据项目为不同的数据存储提供了存储库抽象，包括反应版本。
 
@@ -120,7 +121,7 @@ public void close() {
 }
 ```
 
-## 6.带有`MessageListener`的可定制光标
+## 6. 带有`MessageListener`的可定制光标
 
 然而，如果我们不能使用反应式 API，我们可以利用 Spring 的消息传递概念。
 
@@ -167,7 +168,7 @@ public void close() {
 }
 ```
 
-## 7.结论
+## 7. 结论
 
 MongoDB 带有可定制游标的 capped 集合帮助我们以连续的方式从数据库接收信息。我们可以运行一个查询，该查询将一直给出结果，直到被显式关闭。Spring Data MongoDB 为我们提供了利用可定制游标的阻塞和反应方式。
 

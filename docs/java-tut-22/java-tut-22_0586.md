@@ -1,3 +1,4 @@
+
 # 语言标签过滤和查找
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/locale/matching.html`](https://docs.oracle.com/javase/tutorial/i18n/locale/matching.html)
@@ -22,10 +23,9 @@ public class LanguageTagDemo {
          Locale l = Locale.forLanguageTag("en-US");
      }
 }
-
 ```
 
-请注意，Locale API 只要求您的语言标签在语法上是格式良好的。它不执行任何额外的验证（例如检查标签是否在 IANA 语言子标签注册表中注册）。
+请注意，`Locale` API 只要求您的语言标签在语法上是格式良好的。它不执行任何额外的验证（例如检查标签是否在 IANA 语言子标签注册表中注册）。
 
 ## 什么是语言范围？
 
@@ -70,7 +70,6 @@ public class LanguageTagDemo {
          Locale.LanguageRange range3 = new Locale.LanguageRange("fr-FR",Locale.LanguageRange.MIN_WEIGHT);
      }
 }
-
 ```
 
 示例 2 创建了三种语言范围：英语（美国）、英语（英国）和法语（法国）。这些范围被加权以表达用户的偏好，从最喜欢到最不喜欢的顺序。
@@ -106,7 +105,6 @@ public class LanguageTagDemo {
 
     }
 }
-
 ```
 
 示例 3 创建了与示例 2 相同的三种语言范围，但将它们存储在一个`String`对象中，该对象被传递给`parse(String)`方法。返回的`LanguageRange`对象的`List`是语言优先级列表。
@@ -161,14 +159,14 @@ public class LanguageTagDemo {
         }
     }
 }
-
 ```
 
 该程序的输出是：
 
+```
 en_US
-
 en_GB
+```
 
 返回的列表根据用户的语言优先级列表中指定的权重进行排序。
 
@@ -215,8 +213,7 @@ public class LanguageTagDemo {
             System.out.println(s);
         }
     }
-} 
-
+}
 ```
 
 与以前一样，搜索将匹配并返回“en-US”和“en-GB”（按顺序）。
@@ -226,6 +223,8 @@ public class LanguageTagDemo {
 与语言标记过滤相反，语言标记查找是将语言范围与语言标记集匹配并返回最佳匹配的语言标记的过程。RFC4647 规定：“查找从可用标记列表中产生最佳匹配用户偏好的单个结果，因此在需要单个项目的情况下很有用（并且只能返回一个项目）。例如，如果一个过程要将可读的错误消息插入协议头部，它可能会根据用户的语言优先级列表选择文本。由于该过程只能返回一个项目，因此必须选择一个项目并返回某个项目，即使内容的语言标记都不匹配用户提供的语言优先级列表。”
 
 示例 6：
+
+
 
 ```java
 package languagetagdemo;
@@ -255,7 +254,6 @@ public class LanguageTagDemo {
         System.out.println(result.toString());
     }
 }
-
 ```
 
 与过滤示例相比，在示例 6 中的查找演示返回最佳匹配的一个对象（在这种情况下是`en-US`）。为了完整起见，示例 7 展示了如何使用`String`对象执行相同的查找。
@@ -288,8 +286,7 @@ public class LanguageTagDemo {
         String result = Locale.lookupTag(languageRanges, tags);
         System.out.println(result);
     }
-} 
-
+}
 ```
 
 这个示例返回与用户的语言优先级列表最匹配的单个对象。

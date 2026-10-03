@@ -1,3 +1,4 @@
+
 # 创建一个包
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/package/createpkgs.html`](https://docs.oracle.com/javase/tutorial/java/package/createpkgs.html)
@@ -56,7 +57,6 @@ public class Line extends Graphic
     implements Draggable {
     . . .
 }
-
 ```
 
 如果你不使用`package`语句，你的类型将会进入一个无名包。一般来说，无名包只适用于小型或临时应用程序，或者当你刚开始开发过程时。否则，类和接口应该放在命名包中。

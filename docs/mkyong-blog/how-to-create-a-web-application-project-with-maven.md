@@ -1,36 +1,37 @@
-# maven——如何创建 Java web 应用程序项目
+
+# Maven——如何创建 Java Web 应用程序项目
 
 > 原文：<http://web.archive.org/web/20230101150211/https://www.mkyong.com/maven/how-to-create-a-web-application-project-with-maven/>
 
 ![](img/321d2bca24b23d0bd1b062d9fb84b195.png)
 
-在本教程中，我们将向您展示如何使用 Maven 来管理 Java web 项目。最后，我们将创建一个 Spring MVC web 应用程序，在 JSP 页面上显示当前日期。
+在本教程中，我们将向您展示如何使用 Maven 来管理 Java Web 项目。最后，我们将创建一个 Spring MVC Web 应用程序，在 JSP 页面上显示当前日期。
 
-使用的技术:
+## 使用的技术
 
-1.  Maven 3.5.3
-2.  JDK 8
-3.  释放弹簧 5.1.0
-4.  JUnit 5
-5.  回溯 1.2.3
-6.  Jetty 9.4.x 或 Tomcat 8.5
+1. Maven 3.5.3
+2. JDK 8
+3. 释放弹簧 5.1.0
+4. JUnit 5
+5. 回溯 1.2.3
+6. Jetty 9.4.x 或 Tomcat 8.5
 
-## 1.从 Maven 模板创建一个 web 项目
+## 1. 从 Maven 模板创建一个 Web 项目
 
-从 Maven 模板创建一个 web 项目`maven-archetype-webapp`
+从 Maven 模板创建一个 Web 项目`maven-archetype-webapp`：
 
-```java
- mvn archetype:generate 
-	-DgroupId={project-packaging}
-	-DartifactId={project-name}
-	-DarchetypeArtifactId={maven-template} 
-	-DinteractiveMode=false 
+```bash
+mvn archetype:generate 
+    -DgroupId={project-packaging}
+    -DartifactId={project-name}
+    -DarchetypeArtifactId={maven-template} 
+    -DinteractiveMode=false
 ```
 
-举个例子，
+举个例子：
 
-```java
- D:\>mvn archetype:generate -DgroupId=com.mkyong.web -DartifactId=java-web-project -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+```text
+D:\>mvn archetype:generate -DgroupId=com.mkyong.web -DartifactId=java-web-project -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
 
 [INFO] Scanning for projects...
 [INFO]
@@ -60,29 +61,32 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] Total time: 6.509 s
 [INFO] Finished at: 2018-10-04T15:25:16+08:00
-[INFO] ------------------------------------------------------------------------ 
+[INFO] ------------------------------------------------------------------------
 ```
 
 **Note**
-Actually, this is optional to generate a web project from a Maven web template. You can always generate those folders with the classic `mkdir` command manually.
 
-## 2.Maven 模板
+实际上，使用 Maven Web 模板生成 Web 项目是可选的。您也可以始终手动使用经典的`mkdir`命令生成这些文件夹。
 
-2.1 将创建以下项目目录结构。
+## 2. Maven 模板
+
+### 2.1 创建项目目录结构
+
+将创建以下项目目录结构。
 
 ![](img/dc0a3849e6995431fb83fd6cbec05ba6.png)
 
-*注:上图来自 IntelliJ IDEA，忽略掉那些 IDE 文件夹，比如`.idea``java-web-project.iml`*
+*注：上图来自 IntelliJ IDEA，忽略掉那些 IDE 文件夹，比如`.idea`和`java-web-project.iml`。*
 
-2.2 审核生成的`pom.xml`。
+### 2.2 审核生成的`pom.xml`
 
-pom.xml
+`pom.xml`
 
-```java
- <project  
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-	http://maven.apache.org/maven-v4_0_0.xsd">
+```xml
+<project
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+    http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.mkyong.web</groupId>
   <artifactId>java-web-project</artifactId>
@@ -101,22 +105,24 @@ pom.xml
   <build>
     <finalName>java-web-project</finalName>
   </build>
-</project> 
+</project>
 ```
 
-*P.S 生成的文件没什么价值，我们以后会全部更新。首先删除`web.xml`，我们不需要这个。*
+*P.S. 生成的文件没什么价值，我们以后会全部更新。首先删除`web.xml`，我们不需要这个。*
 
-## 3.更新 POM
+## 3. 更新 POM
 
-3.1 更新`pom.xml`文件，添加 Spring MVC for web framework、JUnit for unit test、Jetty server to test the web project 的依赖项，还有一些 Maven 配置。
+### 3.1 更新`pom.xml`
 
-pom.xml
+更新`pom.xml`文件，添加 Spring MVC for web framework、JUnit for unit test、Jetty server to test the web project 的依赖项，还有一些 Maven 配置。
 
-```java
- <project 
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-		 http://maven.apache.org/maven-v4_0_0.xsd">
+`pom.xml`
+
+```xml
+<project
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+    http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mkyong.web</groupId>
     <artifactId>java-web-project</artifactId>
@@ -213,13 +219,15 @@ pom.xml
         </plugins>
     </build>
 
-</project> 
+</project>
 ```
 
-3.2 显示项目依赖关系。
+### 3.2 显示项目依赖关系
+
+
 
 ```java
- D:\> mvn dependency:tree
+D:\> mvn dependency:tree
 
 ...
 [INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ java-web-project ---
@@ -251,17 +259,17 @@ pom.xml
 [INFO] ------------------------------------------------------------------------
 [INFO] Total time: 0.931 s
 [INFO] Finished at: 2018-10-08T15:55:08+08:00
-[INFO] ------------------------------------------------------------------------ 
+[INFO] ------------------------------------------------------------------------
 ```
 
-## 4.Spring MVC + JSP + LogBack
+## 4. Spring MVC + JSP + LogBack
 
-4.1 创建几个文件来引导 Spring MVC web 项目。
+### 4.1 创建几个文件来引导 Spring MVC Web 项目
 
-SpringConfig.java
+`SpringConfig.java`
 
 ```java
- package com.mkyong.web.config;
+package com.mkyong.web.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -292,13 +300,13 @@ public class SpringConfig implements WebMvcConfigurer {
         viewResolver.setSuffix(".jsp");
         return viewResolver;
     }
-} 
+}
 ```
 
-WebInitializer.java
+`WebInitializer.java`
 
 ```java
- package com.mkyong.web;
+package com.mkyong.web;
 
 import com.mkyong.web.config.SpringConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
@@ -320,13 +328,13 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
         return new String[]{"/"};
     }
 
-} 
+}
 ```
 
-WelcomeController.java
+`WelcomeController.java`
 
 ```java
- package com.mkyong.web.controller;
+package com.mkyong.web.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -354,29 +362,29 @@ public class WelcomeController {
         return "Hello World";
     }
 
-} 
+}
 ```
 
-4.2 将`index.jsp`文件移动到`WEB-INF`文件夹中，并进行更新
+### 4.2 将 `index.jsp` 文件移动到 `WEB-INF` 文件夹中，并进行更新
 
-index.jsp
+`index.jsp`
 
 ```java
- <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <html>
 <body>
 <h1>${msg}</h1>
 <h2>Today is <fmt:formatDate value="${today}" pattern="yyy-MM-dd" /></h2>
 </body>
-</html> 
+</html>
 ```
 
-4.3 记录到控制台。
+### 4.3 记录到控制台
 
-logbacl.xml
+`logbacl.xml`
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
@@ -398,17 +406,17 @@ logbacl.xml
         <appender-ref ref="STDOUT"/>
     </root>
 
-</configuration> 
+</configuration>
 ```
 
-## 5.单元测试
+## 5. 单元测试
 
 一个简单的 Spring MVC 5 + JUnit 5 例子。
 
-TestWelcome.java
+`TestWelcome.java`
 
 ```java
- package com.mkyong.web;
+package com.mkyong.web;
 
 import com.mkyong.web.config.SpringConfig;
 import org.junit.jupiter.api.BeforeEach;
@@ -448,10 +456,10 @@ public class TestWelcome {
                 .andExpect(model().attribute("msg", "Hello World"));
     }
 
-} 
+}
 ```
 
-## 6.目录结构
+## 6. 目录结构
 
 查看最终文件和目录结构。
 
@@ -459,12 +467,16 @@ public class TestWelcome {
 
 看这个 [Maven 标准目录布局](http://web.archive.org/web/20210814204021/https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)。
 
-## 7.演示
+## 7. 演示
 
-7.1 使用 Jetty web 服务器测试 web 项目—`mvn jetty:run`
+### 7.1 使用 Jetty Web 服务器测试 Web 项目
+
+`mvn jetty:run`
+
+
 
 ```java
- D:\> mvn jetty:run
+D:\> mvn jetty:run
 
 [INFO] webAppSourceDirectory not set. Trying src\main\webapp
 [INFO] Reload Mechanic: automatic
@@ -492,21 +504,23 @@ public class TestWelcome {
 [INFO] Started ServerConnector@3355168{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
 [INFO] Started @6271ms
 [INFO] Started Jetty Server
-2018-10-08 15:12:01 [qtp1373051324-19] DEBUG c.m.web.controller.WelcomeController - Welcome to mkyong.com... 
+2018-10-08 15:12:01 [qtp1373051324-19] DEBUG c.m.web.controller.WelcomeController - Welcome to mkyong.com...
 ```
 
-7.2 通过 *http://localhost:8080/* 访问
+### 7.2 通过`http://localhost:8080/`访问
 
 ![](img/686d54c67da42a6e3a03b625eeba8252.png)
 
-P.S CTRL + C 停止 Jetty web 服务器。
+P.S. 按 `CTRL + C` 停止 Jetty Web 服务器。
 
-## 8.部署
+## 8. 部署
 
-8.1 `mvn package`生成 WAR 文件进行部署。
+### 8.1 生成 WAR 文件
+
+`mvn package`生成 WAR 文件进行部署。
 
 ```java
- D:\> mvn package
+D:\> mvn package
 
 ...
 
@@ -521,26 +535,28 @@ P.S CTRL + C 停止 Jetty web 服务器。
 [INFO] ------------------------------------------------------------------------
 [INFO] Total time: 3.844 s
 [INFO] Finished at: 2018-10-08T15:31:12+08:00
-[INFO] ------------------------------------------------------------------------ 
+[INFO] ------------------------------------------------------------------------
 ```
 
 生成的 WAR 的默认目录是`target/finalName`。完成了。
 
 ## 下载源代码
 
-$ git clone [https://github.com/mkyong/maven-examples.git](http://web.archive.org/web/20210814204021/https://github.com/mkyong/maven-examples.git)
+```bash
+$ git clone https://github.com/mkyong/maven-examples.git
 $ cd java-web-project
 $ mvn jetty:run
+```
 
-*http://localhost:8080*
+`http://localhost:8080`
 
 ## 参考
 
-1.  [Maven Surefire 插件——使用 JUnit 5 平台](http://web.archive.org/web/20210814204021/https://maven.apache.org/surefire/maven-surefire-plugin/examples/junit-platform.html)
-2.  [Maven–列出项目的所有插件](http://web.archive.org/web/20210814204021/http://www.mkyong.com/maven/maven-list-all-the-projects-plugins/)
-3.  [Maven–标准目录布局简介](http://web.archive.org/web/20210814204021/https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
-4.  [Apache Tomcat Maven 插件](http://web.archive.org/web/20210814204021/https://tomcat.apache.org/maven-plugin-2.2/)
-5.  [Maven——如何创建一个 Java 项目](http://web.archive.org/web/20210814204021/http://www.mkyong.com/maven/how-to-create-a-java-project-with-maven/)
-6.  [春季 MVC 教程](http://web.archive.org/web/20210814204021/http://www.mkyong.com/tutorials/spring-mvc-tutorials/)
+1. [Maven Surefire 插件——使用 JUnit 5 平台](http://web.archive.org/web/20210814204021/https://maven.apache.org/surefire/maven-surefire-plugin/examples/junit-platform.html)
+2. [Maven–列出项目的所有插件](http://web.archive.org/web/20210814204021/http://www.mkyong.com/maven/maven-list-all-the-projects-plugins/)
+3. [Maven–标准目录布局简介](http://web.archive.org/web/20210814204021/https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
+4. [Apache Tomcat Maven 插件](http://web.archive.org/web/20210814204021/https://tomcat.apache.org/maven-plugin-2.2/)
+5. [Maven——如何创建一个 Java 项目](http://web.archive.org/web/20210814204021/http://www.mkyong.com/maven/how-to-create-a-java-project-with-maven/)
+6. [春季 MVC 教程](http://web.archive.org/web/20210814204021/http://www.mkyong.com/tutorials/spring-mvc-tutorials/)
 
-Tags : [jetty](http://web.archive.org/web/20210814204021/https://mkyong.com/tag/jetty/) [junit 5](http://web.archive.org/web/20210814204021/https://mkyong.com/tag/junit-5/) [maven](http://web.archive.org/web/20210814204021/https://mkyong.com/tag/maven/) [spring mvc](http://web.archive.org/web/20210814204021/https://mkyong.com/tag/spring-mvc/) [web project](http://web.archive.org/web/20210814204021/https://mkyong.com/tag/web-project/)<input type="hidden" id="mkyong-current-postId" value="8444">
+Tags: [jetty](http://web.archive.org/web/20210814204021/https://mkyong.com/tag/jetty/) [junit 5](http://web.archive.org/web/20210814204021/https://mkyong.com/tag/junit-5/) [maven](http://web.archive.org/web/20210814204021/https://mkyong.com/tag/maven/) [spring mvc](http://web.archive.org/web/20210814204021/https://mkyong.com/tag/spring-mvc/) [web project](http://web.archive.org/web/20210814204021/https://mkyong.com/tag/web-project/)

@@ -1,3 +1,4 @@
+
 # 在最后一天进行远程调试—构建 DDTJ 第 10 天
 
 > 原文：<https://medium.com/javarevisited/remote-debugging-on-the-last-day-of-building-ddtj-day-10-b829a3c946cc?source=collection_archive---------2----------------------->
@@ -14,7 +15,7 @@
 
 通过远程调试和 spring boot 的一些命令行技巧，我能够连接到 spring boot VM 并让整个系统正常工作。
 
-# 奇怪的虫子
+## 奇怪的虫子
 
 现在我正处于消灭虫子的阶段。用[远程调试](https://javarevisited.blogspot.com/2011/02/how-to-setup-remote-debugging-in.html)运行春开机宠物诊所 app。启动后端。把它们连接起来，找到一个 bug。修复，冲洗，重复。
 
@@ -24,21 +25,21 @@
 
 另一个问题是，在方法入口事件中，堆栈似乎偶尔会“损坏”。当前方法不在栈顶。据我所知，这不应该发生。但是我可能忽略了文档的细微差别。
 
-# 附加调试器
+## 附加调试器
 
-我们可以使用进程 id 和如下命令来连接调试器:
+我们可以使用进程 id 和如下命令来连接调试器：
 
 ```
 java -jar target/CLI-0.0.6-SNAPSHOT-shaded.jar -pid=62604
 ```
 
-或者我们可以使用插座。注意套接字总是连接到本地主机，因为[远程调试](https://www.java67.com/2018/01/how-to-remote-debug-java-application-in-Eclipse.html)对 jdwp 来说是危险的:
+或者我们可以使用插座。注意套接字总是连接到本地主机，因为[远程调试](https://www.java67.com/2018/01/how-to-remote-debug-java-application-in-Eclipse.html)对 jdwp 来说是危险的：
 
 ```
 java -jar target/CLI-0.0.6-SNAPSHOT-shaded.jar -attach=8000
 ```
 
-请注意，后端应该已经运行之前和宠物诊所演示。我对宠物诊所使用了以下命令:
+请注意，后端应该已经运行之前和宠物诊所演示。我对宠物诊所使用了以下命令：
 
 ```
 java -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000 -jar spring-petclinic-2.5.0-SNAPSHOT.jar -Dagentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000
@@ -46,7 +47,7 @@ java -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=
 
 这可能有点多，但我花了很长时间才把这该死的东西通过 JDWP 连接起来。
 
-# 即将到来的公关和我们下一步该何去何从？
+## 即将到来的公关和我们下一步该何去何从？
 
 这段代码在一个仍然没有运行 spring boot 宠物诊所的 PR 中。因此，我还不想承诺或创造一个公关。不幸的是，两周的假期结束了，我有其他的职责。
 

@@ -1,3 +1,4 @@
+
 # 直接从 URL 读取
 
 > 原文：[`docs.oracle.com/javase/tutorial/networking/urls/readingURL.html`](https://docs.oracle.com/javase/tutorial/networking/urls/readingURL.html)
@@ -23,7 +24,6 @@ public class URLReader {
         in.close();
     }
 }
-
 ```
 
 当您运行该程序时，您应该在命令窗口中看到从`http://www.oracle.com/`位置的 HTML 文件中滚动显示的 HTML 命令和文本内容。或者，程序可能会挂起，或者您可能会看到异常堆栈跟踪。如果出现后两种情况中的任何一种，您可能需要设置代理主机以便程序可以找到 Oracle 服务器。

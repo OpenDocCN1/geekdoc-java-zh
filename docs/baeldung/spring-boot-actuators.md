@@ -1,8 +1,9 @@
+
 # Spring Boot 执行器
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-boot-actuators>
 
-## 1。概述
+## 1. 概述
 
 在这篇文章中，我们介绍 Spring Boot 致动器。**我们将首先介绍基础知识，然后详细讨论 Spring Boot 2.x 和 1.x 中的可用功能**
 
@@ -32,7 +33,7 @@ A quick and practical guide to creating custom Spring Boot starters.[Read more](
 
 Learn about how the Spring Boot supports testing, to write unit tests efficiently.[Read more](/web/20221101065528/https://www.baeldung.com/spring-boot-testing) →
 
-## 2。什么是执行器？
+## 2. 什么是执行器？
 
 本质上，Actuator 为我们的应用带来了生产就绪的特性。
 
@@ -44,7 +45,7 @@ Actuator 主要用于**公开关于正在运行的应用程序**的操作信息�
 
 一旦这种依赖关系出现在类路径上，我们就有了几个现成的端点。与大多数 Spring 模块一样，我们可以很容易地以多种方式配置或扩展它。
 
-### 2.1。入门
+### 2.1. 入门
 
 要启用 Spring Boot 执行器，我们只需要将`spring-boot-actuator`依赖项添加到我们的包管理器中。
 
@@ -59,7 +60,7 @@ Actuator 主要用于**公开关于正在运行的应用程序**的操作信息�
 
 请注意，无论引导版本是什么，这都是有效的，因为版本是在 Spring Boot 材料清单(BOM)中指定的。
 
-## 3。Spring Boot 2.x 致动器
+## 3. Spring Boot 2.x 致动器
 
 在 2.x 中，Actuator 保持了它的基本意图，但是简化了它的模型，扩展了它的功能，并加入了更好的缺省值。
 
@@ -69,7 +70,7 @@ Actuator 主要用于**公开关于正在运行的应用程序**的操作信息�
 
 最后，最新版本现在支持 CRUD 模型，而不是旧的读/写模型。
 
-### 3.1。技术支持
+### 3.1. 技术支持
 
 在其第二个主要版本中，Actuator 现在是技术不可知的，而在 1.x 中，它被绑定到 MVC，因此被绑定到 Servlet API。
 
@@ -81,7 +82,7 @@ Actuator 主要用于**公开关于正在运行的应用程序**的操作信息�
 
 最后，JMX 仍然支持公开端点，无需任何额外的代码。
 
-### 3.2。重要变更
+### 3.2. 重要变更
 
 与以前的版本不同，**致动器的大多数端点被禁用。**
 
@@ -106,42 +107,59 @@ public SecurityWebFilterChain securityWebFilterChain(
 
 我们可以在[全新致动器官方文件](https://web.archive.org/web/20221101065528/https://docs.spring.io/spring-boot/docs/2.0.x/actuator-api/html/)中找到更多细节。
 
-另外，**默认情况下，所有的执行器端点现在都被放置在`/actuator`路径下`.`**
+另外，**默认情况下，所有的执行器端点现在都被放置在`/actuator`路径下。**
 
 与前一版本相同，我们可以使用新属性 `management.endpoints.web.base-path`调整该路径。
 
-### 3.3。预定义的端点
+### 3.3. 预定义的端点
 
 让我们看看一些可用的端点，其中大部分已经在 1.x 中可用了。
 
 此外，**添加了一些端点，删除了一些端点，重组了一些端点**:
 
 *   `/auditevents` 列出与安全审计相关的事件，如用户登录/注销。此外，我们可以在其他字段中按主体或类型进行过滤。
+
 *   `/beans` 返回我们的`BeanFactory`中所有可用的 beans。不像`/auditevents`，它不支持过滤。
-*   `/conditions`，以前被称为/ `autoconfig`，围绕自动配置构建一个条件报告。
+
+*   `/conditions`，以前被称为`/autoconfig`，围绕自动配置构建一个条件报告。
+
 *   `/configprops` 允许我们获取所有的`@ConfigurationProperties` 豆子。
+
 *   `/env` 返回当前环境属性。此外，我们可以检索单个属性。
+
 *   `/flyway` 详细介绍了我们的 Flyway 数据库迁移。
+
 *   `/health` 总结了我们的应用程序的健康状态。
-*   从我们的应用程序使用的 JVM 中构建并返回一个堆转储。
+
+*   `/heapdump` 从我们的应用程序使用的 JVM 中构建并返回一个堆转储。
+
 *   `/info` 返回一般信息。它可能是自定义数据、构建信息或关于最近提交的详细信息。
+
 *   除了 Liquibase 之外，`/liquibase` 的行为与`/flyway` 相似。
+
 *   `/logfile` 返回普通应用程序日志。
+
 *   `/loggers` 使我们能够查询和修改应用程序的日志记录级别。
+
 *   `/metrics` 详细说明我们应用的指标。这可能包括通用指标以及自定义指标。
+
 *   `/prometheus` 返回与前一个类似的指标，但是被格式化以与 Prometheus 服务器一起工作。
+
 *   `/scheduledtasks` 提供我们应用程序中每个预定任务的详细信息。
+
 *   `/sessions` 列出 HTTP 会话，假设我们使用的是 Spring 会话。
+
 *   `/shutdown` 执行应用程序的正常关闭。
+
 *   `/threaddump` 转储底层 JVM 的线程信息。
 
-### 3.4.执行器端点的超媒体
+### 3.4. 执行器端点的超媒体
 
 Spring Boot 添加了一个发现端点，它返回所有可用执行器端点的链接。这将有助于发现执行器端点及其对应的 URL。
 
-**默认情况下，可以通过`/actuator `端点访问该发现端点。**
+**默认情况下，可以通过`/actuator`端点访问该发现端点。**
 
-因此，如果我们向这个 URL 发送一个`GET `请求，它将返回各个端点的执行器链接:
+因此，如果我们向这个 URL 发送一个`GET`请求，它将返回各个端点的执行器链接:
 
 ```java
 {
@@ -170,15 +188,15 @@ Spring Boot 添加了一个发现端点，它返回所有可用执行器端点�
 }
 ```
 
-如上所示，`/actuator `端点报告了`_links `字段下所有可用的执行器端点。
+如上所示，`/actuator`端点报告了`_links`字段下所有可用的执行器端点。
 
 **此外，如果我们配置一个自定义管理基本路径，那么我们应该使用该基本路径作为发现 URL。**
 
-例如，如果我们将`management.endpoints.web.base-path `设置为`/mgmt`，那么我们应该向`/mgmt `端点发送一个请求来查看链接列表。
+例如，如果我们将`management.endpoints.web.base-path`设置为`/mgmt`，那么我们应该向`/mgmt`端点发送一个请求来查看链接列表。
 
 非常有趣的是，当管理基路径被设置为`/`时，发现端点被禁用，以防止与其他映射冲突的可能性。
 
-### 3.5。健康指标
+### 3.5. 健康指标
 
 就像在以前的版本中，我们可以很容易地添加自定义指标。与其他 API 相反，创建自定义健康端点的抽象保持不变。然而，**添加了一个新的接口`ReactiveHealthIndicator`，以实现反应性健康检查。**
 
@@ -204,23 +222,23 @@ public class DownstreamServiceHealthIndicator implements ReactiveHealthIndicator
 
 健康指标的一个方便的特点是我们可以将它们作为层次结构的一部分进行汇总。
 
-因此，按照前面的例子，我们可以将所有下游服务分组到一个`downstream-` `services`类别下。只要每个嵌套的`service`都是可达的，这个类别就是健康的。
+因此，按照前面的例子，我们可以将所有下游服务分组到一个`downstream-services`类别下。只要每个嵌套的`service`都是可达的，这个类别就是健康的。
 
 查看我们关于[健康指标](/web/20221101065528/https://www.baeldung.com/spring-boot-health-indicators)的文章以获得更深入的了解。
 
-### 3.6.健康团体
+### 3.6. 健康团体
 
 **从 Spring Boot 2.2 开始，我们可以将健康指标组织成[组](https://web.archive.org/web/20221101065528/https://github.com/spring-projects/spring-boot/blob/c3aa494ba32b8271ea19dd041327441b27ddc319/spring-boot-project/spring-boot-actuator/src/main/java/org/springframework/boot/actuate/health/HealthEndpointGroups.java#L30)，并对所有组成员应用相同的配置。**
 
-例如，我们可以创建一个名为`custom `的健康组，将其添加到我们的`application.properties`中:
+例如，我们可以创建一个名为`custom`的健康组，将其添加到我们的`application.properties`中:
 
 ```java
 management.endpoint.health.group.custom.include=diskSpace,ping
 ```
 
-这样，`custom `组包含了`diskSpace `和`ping `健康指标。
+这样，`custom`组包含了`diskSpace`和`ping`健康指标。
 
-现在，如果我们调用`/actuator/health `端点，它会在 JSON 响应中告诉我们新的健康组:
+现在，如果我们调用`/actuator/health`端点，它会在 JSON 响应中告诉我们新的健康组:
 
 ```java
 {"status":"UP","groups":["custom"]}
@@ -241,7 +259,7 @@ management.endpoint.health.group.custom.show-components=always
 management.endpoint.health.group.custom.show-details=always
 ```
 
-现在，如果我们向`/actuator/health/custom, `发送同样的请求，我们会看到更多的细节:
+现在，如果我们向`/actuator/health/custom`发送同样的请求，我们会看到更多的细节:
 
 ```java
 {
@@ -277,33 +295,23 @@ management.endpoint.health.group.custom.show-details=when_authorized
 management.endpoint.health.group.custom.status.http-mapping.up=207
 ```
 
-这里，我们告诉 Spring Boot，如果`custom `组的状态是`UP.`，就返回一个 207 HTTP 状态码
+这里，我们告诉 Spring Boot，如果`custom`组的状态是`UP`，就返回一个 207 HTTP 状态码。
 
-### 3.7。Spring Boot 指标 2
+### 3.7. Spring Boot 指标 2
 
-**在 Spring Boot 2.0 中，内部度量标准被千分尺取代**，因此我们可以期待突破性的变化。如果我们的应用程序使用度量服务，如`GaugeService` 或`CounterService`，它们将不再可用。
+**在 Spring Boot 2.0 中，内部度量标准被千分尺取代**，因此我们可以期待突破性的变化。如果我们的应用程序使用度量服务，如`GaugeService`或`CounterService`，它们将不再可用。
 
-相反，我们应该直接与[微米](/web/20221101065528/https://www.baeldung.com/micrometer)互动。在 Spring Boot 2.0 中，我们将获得一个自动配置的类型为`MeterRegistry` 的 bean。
+相反，我们应该直接与[微米](/web/20221101065528/https://www.baeldung.com/micrometer)互动。在 Spring Boot 2.0 中，我们将获得一个自动配置的类型为`MeterRegistry`的 bean。
 
 此外，Micrometer 现在是 Actuator 依赖项的一部分，所以只要 Actuator 依赖项在类路径中，我们就可以开始了。
 
-此外，我们将从`/metrics` 端点获得一个全新的响应:
+此外，我们将从`/metrics`端点获得一个全新的响应:
 
-```java
-{
-  "names": [
-    "jvm.gc.pause",
-    "jvm.buffer.memory.used",
-    "jvm.memory.used",
-    "jvm.buffer.count",
-    // ...
-  ]
-}
-```
 
-如我们所见，没有像 1.x 中那样的实际指标。
 
-要获得特定指标的实际值，我们现在可以导航到所需的指标，例如`/actuator/metrics/jvm.gc.pause`，并获得详细的响应:
+### 3.7. 指标端点详解
+
+如我们所见，没有像 1.x 中那样的实际指标。要获得特定指标的实际值，我们现在可以导航到所需的指标，例如`/actuator/metrics/jvm.gc.pause`，并获得详细的响应:
 
 ```java
 {
@@ -343,9 +351,9 @@ management.endpoint.health.group.custom.status.http-mapping.up=207
 
 现在，度量标准更加全面，不仅包括不同的值，还包括一些相关的元数据。
 
-### 3.8。定制`/info`端点
+### 3.8. 定制 `/info` 端点
 
-`/info` 终点保持不变。**和以前一样，我们可以使用各自的 Maven 或 Gradle 依赖关系**来添加 git 细节:
+`/info` 终点保持不变。和以前一样，我们可以使用各自的 Maven 或 Gradle 依赖关系来添加 git 细节:
 
 ```java
 <dependency>
@@ -354,7 +362,7 @@ management.endpoint.health.group.custom.status.http-mapping.up=207
 </dependency>
 ```
 
-同样，**我们也可以使用 Maven 或 Gradle 插件**来包含构建信息，包括名称、组和版本:
+同样，我们也可以使用 Maven 或 Gradle 插件来包含构建信息，包括名称、组和版本:
 
 ```java
 <plugin>
@@ -370,11 +378,11 @@ management.endpoint.health.group.custom.status.http-mapping.up=207
 </plugin>
 ```
 
-### 3.9。创建自定义端点
+### 3.9. 创建自定义端点
 
 正如我们之前指出的，我们可以创建自定义端点。然而，Spring Boot 2 已经重新设计了实现这一点的方式，以支持新的技术不可知的范式。
 
-**让我们在应用程序中创建一个执行器端点来查询、启用和禁用特性标志**:
+让我们在应用程序中创建一个执行器端点来查询、启用和禁用特性标志:
 
 ```java
 @Component
@@ -412,15 +420,15 @@ public class FeaturesEndpoint {
 }
 ```
 
-为了获得端点，我们需要一个 bean。在我们的例子中，我们为此使用了`@Component`。还有，我们需要用`@Endpoint`来装饰这个 bean。
+为了获得端点，我们需要一个 bean。在我们的例子中，我们为此使用了`@Component`。另外，我们需要用`@Endpoint`来装饰这个 bean。
 
-我们的端点路径由`@Endpoint.`的`id` 参数决定，在我们的例子中，它将请求路由到`/actuator/features`。
+我们的端点路径由`@Endpoint`的`id`参数决定，在我们的例子中，它将请求路由到`/actuator/features`。
 
 准备就绪后，我们可以开始使用以下内容定义操作:
 
-*   `@ReadOperation`:它会映射到 HTTP `GET`。
-*   `@WriteOperation`:它会映射到 HTTP `POST`。
-*   `@DeleteOperation`:它会映射到 HTTP `DELETE`。
+*   `@ReadOperation`: 它会映射到 HTTP `GET`。
+*   `@WriteOperation`: 它会映射到 HTTP `POST`。
+*   `@DeleteOperation`: 它会映射到 HTTP `DELETE`。
 
 当我们用应用程序中的前一个端点运行应用程序时，Spring Boot 将注册它。
 
@@ -445,17 +453,17 @@ public class FeaturesEndpoint {
 此外，对于这种新方法，我们有一些重要的注意事项要记住:
 
 *   不依赖于 MVC。
-*   之前作为方法存在的所有元数据(`sensitive, enabled…)`不再存在。然而，我们可以使用`@Endpoint(id = “features”, enableByDefault = false)`来启用或禁用端点。
+*   之前作为方法存在的所有元数据(`sensitive, enabled…)`不再存在。然而，我们可以使用`@Endpoint(id = "features", enableByDefault = false)`来启用或禁用端点。
 *   不像在 1.x 中，不再需要扩展给定的接口。
 *   与旧的读/写模型相比，我们现在可以使用`@DeleteOperation`来定义`DELETE` 操作。
 
-### 3.10。扩展现有端点
+### 3.10. 扩展现有端点
 
 假设我们希望确保应用程序的生产实例永远不是`SNAPSHOT`版本。
 
 我们决定通过更改返回该信息的执行器端点的 HTTP 状态代码来实现这一点，即`/info`。如果我们的应用碰巧是一个`SNAPSHOT`，我们将得到一个不同的`HTTP` 状态码。
 
-**我们可以使用`@EndpointExtension`注释**，或其更具体的专门化`@EndpointWebExtension` 或`@EndpointJmxExtension`，轻松扩展预定义端点的行为:
+我们可以使用`@EndpointExtension`注释，或其更具体的专门化`@EndpointWebExtension` 或`@EndpointJmxExtension`，轻松扩展预定义端点的行为:
 
 ```java
 @Component
@@ -480,7 +488,7 @@ public class InfoWebEndpointExtension {
 }
 ```
 
-### 3.11。启用所有端点
+### 3.11. 启用所有端点
 
 为了使用 HTTP 访问执行器端点，我们需要启用和公开它们。
 
@@ -492,7 +500,7 @@ public class InfoWebEndpointExtension {
 management.endpoints.web.exposure.include=*
 ```
 
-要显式启用特定端点(例如，`/shutdown), `,我们使用:
+要显式启用特定端点(例如，`/shutdown`), 我们使用:
 
 ```java
 management.endpoint.shutdown.enabled=true
@@ -505,7 +513,7 @@ management.endpoints.web.exposure.include=*
 management.endpoints.web.exposure.exclude=loggers
 ```
 
-## 4。Spring Boot 1.x 致动器
+## 4. Spring Boot 1.x Actuator
 
 在 1.x 中，Actuator 遵循读/写模型，这意味着我们可以从它那里读取数据，也可以向它写入数据。
 
@@ -513,9 +521,9 @@ management.endpoints.web.exposure.exclude=loggers
 
 为了让它工作，Actuator 需要 Spring MVC 通过 HTTP 公开它的端点。不支持其他技术。
 
-### 4.1。端点
+### 4.1. 端点
 
-**在 1.x 中，Actuator 自带安全模型。它利用了 Spring 安全构造，但是需要独立于应用程序的其余部分进行配置。**
+在 1.x 中，Actuator 自带安全模型。它利用了 Spring 安全构造，但是需要独立于应用程序的其余部分进行配置。
 
 此外，大多数端点是敏感的，这意味着它们不是完全公开的，或者大多数信息将被省略，而少数端点则不是，例如`/info`。
 
@@ -526,19 +534,19 @@ management.endpoints.web.exposure.exclude=loggers
 *   `/metrics` 显示当前应用程序的指标信息；默认是敏感的。
 *   `/trace` 显示跟踪信息(默认为最后几个 HTTP 请求)。
 
-我们可以在官方文档中找到[以上现有终点的完整列表。](https://web.archive.org/web/20221101065528/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-endpoints)
+我们可以在[官方文档](https://web.archive.org/web/20221101065528/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-endpoints)中找到以上现有终点的完整列表。
 
-### 4.2。配置现有端点
+### 4.2. 配置现有端点
 
 我们可以使用格式`endpoints.[endpoint name].[property to customize]`定制每个端点的属性。
 
 有三种属性可用:
 
-*   `id`:将通过 HTTP 访问此端点
-*   `enabled`:如果为真，则可以访问；否则不会
-*   `sensitive`:如果为真，那么需要授权通过 HTTP 显示关键信息
+*   `id`: 将通过 HTTP 访问此端点
+*   `enabled`: 如果为真，则可以访问；否则不会
+*   `sensitive`: 如果为真，那么需要授权通过 HTTP 显示关键信息
 
-例如，添加以下属性将定制/ `beans`端点`:` 
+例如，添加以下属性将定制 `/beans` 端点:
 
 ```java
 endpoints.beans.id=springbeans
@@ -546,9 +554,9 @@ endpoints.beans.sensitive=false
 endpoints.beans.enabled=true
 ```
 
-### 4.3。`/health`终点
+### 4.3. `/health` 端点
 
-**`/health`端点用于检查正在运行的应用程序的健康或状态。**
+`/health`端点用于检查正在运行的应用程序的健康或状态。
 
 它通常由监控软件来执行，如果正在运行的实例由于其他原因(例如，数据库的连接问题、磁盘空间不足等)而停止运行或变得不健康，它会向我们发出警报。
 
@@ -566,7 +574,7 @@ endpoints.beans.enabled=true
 
 请注意，这只适用于低于 1.5.0 的 Spring Boot 版本。对于 1.5.0 和更高版本，我们还应该通过设置`management.security.enabled=false`来禁用未授权访问的安全性。
 
-我们还可以**实现我们自己的定制健康指示器**，它可以收集特定于应用程序的任何类型的定制健康数据，并通过`/health`端点自动公开这些数据:
+我们还可以实现我们自己的定制健康指示器，它可以收集特定于应用程序的任何类型的定制健康数据，并通过`/health`端点自动公开这些数据:
 
 ```java
 @Component("myHealthCheck")
@@ -606,7 +614,7 @@ public class HealthCheck implements HealthIndicator {
 }
 ```
 
-### 4.4。`/info`终点
+### 4.4. `/info` 端点
 
 我们还可以定制由`/info`端点显示的数据:
 
@@ -628,46 +636,19 @@ info.app.version=1.0.0
 }
 ```
 
-### 4.5。`/metrics`终点
+### 4.5. `/metrics` 端点
 
 **指标端点发布关于 OS 和 JVM 以及应用级指标的信息。**一旦启用，我们将获得诸如内存、堆、处理器、线程、加载的类、卸载的类、线程池以及一些 HTTP 指标等信息。
 
 这是该端点开箱后的输出:
 
-```java
-{
-    "mem" : 193024,
-    "mem.free" : 87693,
-    "processors" : 4,
-    "instance.uptime" : 305027,
-    "uptime" : 307077,
-    "systemload.average" : 0.11,
-    "heap.committed" : 193024,
-    "heap.init" : 124928,
-    "heap.used" : 105330,
-    "heap" : 1764352,
-    "threads.peak" : 22,
-    "threads.daemon" : 19,
-    "threads" : 22,
-    "classes" : 5819,
-    "classes.loaded" : 5819,
-    "classes.unloaded" : 0,
-    "gc.ps_scavenge.count" : 7,
-    "gc.ps_scavenge.time" : 54,
-    "gc.ps_marksweep.count" : 1,
-    "gc.ps_marksweep.time" : 44,
-    "httpsessions.max" : -1,
-    "httpsessions.active" : 0,
-    "counter.status.200.root" : 1,
-    "gauge.response.root" : 37.0
-} 
-```
 
-为了收集自定义指标，我们支持量表(单值数据快照)和计数器，即递增/递减指标。
+
+为了收集自定义指标，我们支持量表（单值数据快照）和计数器，即递增/递减指标。
 
 让我们在`/metrics`端点中实现我们自己的定制指标。
 
-我们将定制登录流来记录成功和失败的登录尝试:
+我们将定制登录流来记录成功和失败的登录尝试：
 
 ```java
 @Service
@@ -694,7 +675,7 @@ public class LoginServiceImpl {
 }
 ```
 
-输出可能是这样的:
+输出可能是这样的：
 
 ```java
 {
@@ -707,11 +688,11 @@ public class LoginServiceImpl {
 
 请注意，登录尝试和其他与安全相关的事件在 Actuator 中作为审计事件现成可用。
 
-### 4.6。创建新的端点
+## 4.6. 创建新的端点
 
 除了使用 Spring Boot 提供的现有终端，我们还可以创建一个全新的终端。
 
-首先，我们需要让新端点实现`Endpoint<T>`接口:
+首先，我们需要让新端点实现`Endpoint<T>`接口：
 
 ```java
 @Component
@@ -745,19 +726,19 @@ public class CustomEndpoint implements Endpoint<List<String>> {
 
 为了访问这个新端点，使用它的`id`来映射它。换句话说，我们可以练习击中`/customEndpoint`。
 
-输出:
+输出：
 
 ```java
 [ "This is message 1", "This is message 2" ]
 ```
 
-### 4.7。进一步定制
+## 4.7. 进一步定制
 
-出于安全目的，我们可能会选择通过非标准端口公开执行器端点——`management.port` 属性可以很容易地用于配置。
+出于安全目的，我们可能会选择通过非标准端口公开执行器端点——`management.port`属性可以很容易地用于配置。
 
 此外，正如我们已经提到的，在 1.x 中，Actuator 基于 Spring 安全配置自己的安全模型，但独立于应用程序的其他部分。
 
-因此，我们可以更改`management.address`属性来限制可以通过网络访问端点的位置:
+因此，我们可以更改`management.address`属性来限制可以通过网络访问端点的位置：
 
 ```java
 #port used to expose actuator
@@ -772,7 +753,7 @@ management.security.enabled=false
 
 此外，除了`/info`之外的所有内置端点都是默认敏感的。
 
-如果应用程序使用 Spring Security，我们可以通过在`application.properties`文件中定义默认的安全属性(用户名、密码和角色)来保护这些端点:
+如果应用程序使用 Spring Security，我们可以通过在`application.properties`文件中定义默认的安全属性（用户名、密码和角色）来保护这些端点：
 
 ```java
 security.user.name=admin
@@ -780,7 +761,7 @@ security.user.password=secret
 management.security.role=SUPERUSER
 ```
 
-## 5。结论
+## 5. 结论
 
 在这篇文章中，我们谈到了 Spring Boot 执行器。我们首先定义了 Actuator 的含义以及它为我们做了什么。
 

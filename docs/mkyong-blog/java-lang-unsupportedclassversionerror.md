@@ -1,11 +1,12 @@
-# Java . lang . unsupportedclassversionerror
+
+# Java.lang.UnsupportedClassVersionError
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/java-lang-unsupportedclassversionerror/>
 
 启动一个 Java 类，点击这个`java.lang.UnsupportedClassVersionError`，什么是类文件版本 52 56？
 
-```java
- Error: A JNI error has occurred, please check your installation and try again
+```
+Error: A JNI error has occurred, please check your installation and try again
 
 Exception in thread "main" java.lang.UnsupportedClassVersionError: 
 TestHello has been compiled by a more recent version of the Java Runtime (class file version 56.0), 
@@ -29,8 +30,8 @@ this version of the Java Runtime only recognizes class file versions up to 52.0
 
 Java 版本不匹配，这意味着你用`JDK 12 (56)`编译 Java 类，但试图在`JDK 8 (52)`中运行，从[维基百科](http://web.archive.org/web/20220322153341/https://en.wikipedia.org/wiki/Java_class_file)中阅读
 
-```java
- Java SE 13 = 57 (0x39 hex)
+```
+Java SE 13 = 57 (0x39 hex)
 Java SE 12 = 56 (0x38 hex)
 Java SE 11 = 55 (0x37 hex)
 Java SE 10 = 54 (0x36 hex)
@@ -47,16 +48,16 @@ JDK 1.1 = 45 (0x2D hex)
 
 **修复**，用`--release`选项编译 Java 类，目标是 Java 8。
 
-```java
- javac anyName.java --release 8 
+```
+javac anyName.java --release 8 
 ```
 
 或者 Maven。
 
-pom.xml
+`pom.xml`
 
-```java
- <plugin>
+```
+<plugin>
 		<groupId>org.apache.maven.plugins</groupId>
 		<artifactId>maven-compiler-plugin</artifactId>
 		<version>3.8.0</version>
@@ -68,11 +69,13 @@ pom.xml
 ```
 
 **Note**
+
 The key is to make sure both the compile and runtime is using the same JDK.
 
 ## 参考
 
-*   [维基百科–Java 版本历史](http://web.archive.org/web/20220322153341/https://en.wikipedia.org/wiki/Java_version_history)
-*   [维基百科–Java 类文件](http://web.archive.org/web/20220322153341/https://en.wikipedia.org/wiki/Java_class_file)
+* [维基百科–Java 版本历史](http://web.archive.org/web/20220322153341/https://en.wikipedia.org/wiki/Java_version_history)
+
+* [维基百科–Java 类文件](http://web.archive.org/web/20220322153341/https://en.wikipedia.org/wiki/Java_class_file)
 
 <input type="hidden" id="mkyong-current-postId" value="15063">

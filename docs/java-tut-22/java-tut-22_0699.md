@@ -1,3 +1,4 @@
+
 # 使用第三方 Bean
 
 > 原文：[`docs.oracle.com/javase/tutorial/javabeans/quick/addbean.html`](https://docs.oracle.com/javase/tutorial/javabeans/quick/addbean.html)
@@ -10,7 +11,7 @@ JavaBeans 的强大之处在于您可以使用软件组件，而无需编写它�
 
 ## 添加一个 Bean 到 NetBeans 调色板
 
-下载`一个示例 JavaBean 组件，`BumperSticker``。Beans 以 JAR 文件的形式分发。将文件保存在计算机的某个位置。`BumperSticker`是一个图形组件，公开一个名为`go()`的方法，用于启动动画。
+下载一个示例 JavaBean 组件，`BumperSticker`。Beans 以 JAR 文件的形式分发。将文件保存在计算机的某个位置。`BumperSticker`是一个图形组件，公开一个名为`go()`的方法，用于启动动画。
 
 要将`BumperSticker`添加到 NetBeans 调色板中，请从 NetBeans 菜单中选择**工具 > 调色板 > Swing/AWT 组件**。
 
@@ -42,15 +43,11 @@ NetBeans 显示了 JAR 文件中的类列表。选择您希望添加到调色板
 
 将按钮连接到`BumperSticker` bean，就像您已经将第一个按钮连接到文本字段一样。
 
-1.  首先，点击**连接模式**按钮。
-
-1.  点击第二个按钮。NetBeans 会给它一个红色轮廓。
-
-1.  点击`BumperSticker`组件。**连接向导**弹出。
-
-1.  点击**+**旁边的**action**，然后选择**actionPerformed**。点击**下一步 >**。
-
-1.  选择**方法调用**，然后从列表中选择**go()**。点击**完成**。
+1. 首先，点击**连接模式**按钮。
+2. 点击第二个按钮。NetBeans 会给它一个红色轮廓。
+3. 点击`BumperSticker`组件。**连接向导**弹出。
+4. 点击**+**旁边的**action**，然后选择**actionPerformed**。点击**下一步 >**。
+5. 选择**方法调用**，然后从列表中选择**go()**。点击**完成**。
 
 如果您对任何步骤感到不确定，请查看连接应用程序。这里的过程非常相似。
 

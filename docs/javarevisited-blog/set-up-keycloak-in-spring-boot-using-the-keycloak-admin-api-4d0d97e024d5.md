@@ -1,3 +1,4 @@
+
 # 使用 Keycloak 管理 API 在 Spring Boot 设置 Keycloak
 
 > 原文：<https://medium.com/javarevisited/set-up-keycloak-in-spring-boot-using-the-keycloak-admin-api-4d0d97e024d5?source=collection_archive---------0----------------------->

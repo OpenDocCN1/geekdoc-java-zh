@@ -1,10 +1,5 @@
+
 # Java 开发者 GitHub Copilot 指南
-
-
-
-
-
-
 
 《面向 Java 开发者的 GitHub Copilot》是一本不可或缺的指南，探索了 AI 在软件开发中革命性的集成。本书深入探讨了 GitHub Copilot 的变革能力，这是一种 AI 驱动的编程助手，能够简化 Java 开发工作流。从它的诞生到演变，读者将发现 Copilot 的历史和特性，并对其与 Java 开发环境的无缝集成产生见解。通过实用的技巧、案例研究和最佳实践，这一全面的资源将使 Java 开发者充分利用 GitHub Copilot 的潜力，增强项目的生产力、代码质量和创新能力。
 
@@ -30,7 +25,7 @@ GitHub Copilot 设计通过实时建议代码行和整个函数来辅助开发�
 
 - Eclipse：Eclipse 是一款受欢迎的 Java IDE，以其全面的功能而闻名，包括语法高亮、代码补全、调试、重构工具以及通过插件支持各种编程语言。Eclipse 显著提高了程序员的生产力，提供了一个编写、测试和调试代码的集成环境。然而，对于初学者来说，它可能非常消耗资源且复杂。
 
-- IntelliJ IDEA：IntelliJ IDEA 是一个强大且易用的 IDE，它在构建 Eclipse 特性的的基础上提供了额外的增强，如更好的性能、更智能的代码补全、高级重构工具以及与构建系统和版本控制的无缝集成。与 Eclipse 相比，IntelliJ IDEA 简化了开发工作流，提高了代码质量，并提供了更直观的用户体验。
+- IntelliJ IDEA：IntelliJ IDEA 是一个强大且易用的 IDE，它在构建 Eclipse 特性的基础上提供了额外的增强，如更好的性能、更智能的代码补全、高级重构工具以及与构建系统和版本控制的无缝集成。与 Eclipse 相比，IntelliJ IDEA 简化了开发工作流，提高了代码质量，并提供了更直观的用户体验。
 
 - 带有 GitHub Copilot 的 IntelliJ IDEA：将 GitHub Copilot 与 IntelliJ IDEA 集成通过利用人工智能辅助程序员编写代码进一步增强了开发体验。GitHub Copilot 提供智能代码建议、自动补全，甚至根据上下文生成整个代码段，显著减少了手动工作并加速了开发任务。这种集成增强了 IntelliJ IDEA 的能力，使程序员能够更高效地编写代码、探索解决方案并提高生产力。
 
@@ -53,9 +48,6 @@ GitHub Copilot 设计通过实时建议代码行和整个函数来辅助开发�
 - 提问
 
 ```
-```
-</>
-```
 GitHub Copilot 服务
 
 公共代码（例如 pis github repo）
@@ -75,7 +67,7 @@ Codex 特别引人注目的是它根据自然语言提示理解并生成代码�
 
 **下载 IntelliJ IDEA 社区版：**
 
-1. 前往 JetBrains ：JetBrains IntelliJ IDEA Community Edition 下载
+1. 前往 JetBrains：JetBrains IntelliJ IDEA Community Edition 下载
 2. 点击社区版的“Download”按钮。
 
 **运行安装程序：**
@@ -129,9 +121,6 @@ Codex 特别引人注目的是它根据自然语言提示理解并生成代码�
 - 点击图标并选择 Sign in to GitHub（登录 GitHub）。
 - 按照屏幕上的指令完成登录过程并激活 Copilot。
 
-
-
-
 可选配置：
 
 虽然 Copilot 开箱即用，但你也可以对其行为进行进一步配置：
@@ -145,37 +134,44 @@ Codex 特别引人注目的是它根据自然语言提示理解并生成代码�
 
 如需更深层次配置选项和故障排除，请参考 GitHub Copilot 文档：https://docs.github.com/copilot
 
-
 在 IntelliJ IDEA 中创建新项目非常简单。以下是步骤指南：
 
 ### 启动 IntelliJ IDEA
+
 在电脑上启动 IntelliJ IDEA。你可以通过双击桌面上的 IntelliJ IDEA 图标或在开始菜单中找到它来实现。
 
 ### 打开欢迎界面
+
 一旦 IntelliJ IDEA 启动，你将看到欢迎界面。如果你正在处理某个项目，可以关闭它返回欢迎界面。如果欢迎界面不可见，可以通过点击“File” > “Close Project”来访问。
 
 ### 创建新项目
+
 在欢迎界面上，点击“New Project”按钮。或者，你也可以从菜单栏进入“File” > “New” > “Project...”。
 
 这将打开新项目向导。
 
 ### 选择项目类型
+
 在新项目向导中，系统会提示你选择想要创建的项目类型。根据你的需求选择合适的项目类型。例如，你可以为 Java 项目选择“Java”，为 Maven 项目选择“Maven”，为 Gradle 项目选择“Gradle”等。
 
 选择项目类型后，点击“Next”。
 
 ### 配置项目
+
 在下一步中，你需要配置项目设置，例如项目名称、项目位置、项目 SDK（Java 版本）以及任何特定于所选项目类型的额外设置。
 
 确保为项目提供有意义的名称和适当的位置。一旦配置好项目设置，点击“Next”。
 
 ### 完成
+
 检查项目摘要以确保所有设置均正确。点击“Finish”创建项目。
 
 ### 等待项目创建
+
 IntelliJ IDEA 将根据指定的设置创建项目。取决于你的系统速度和项目的复杂度，这可能需要几秒钟。
 
 ### 开始编码
+
 一旦项目创建完成，你将进入加载了新项目的 IntelliJ IDEA 工作区。
 
 你可以通过在项目内创建新类、包或文件来开始编码。
@@ -203,12 +199,19 @@ IntelliJ IDEA 将根据指定的设置创建项目。取决于你的系统速度
 | **类变量** | 在类中使用 `static` 关键字声明。所有实例间共享，并在整个程序运行期间存在。 |
 
 ![](img/dbebbe5e20d39743ff28c8dae042defc_16_0.png)
+
 ![](img/dbebbe5e20d39743ff28c8dae042defc_17_0.png)
+
 ![](img/dbebbe5e20d39743ff28c8dae042defc_18_0.png)
+
 ![](img/dbebbe5e20d39743ff28c8dae042defc_19_0.png)
+
 ![](img/dbebbe5e20d39743ff28c8dae042defc_20_0.png)
+
 ![](img/dbebbe5e20d39743ff28c8dae042defc_21_0.png)
+
 ![](img/dbebbe5e20d39743ff28c8dae042defc_22_0.png)
+
 ![](img/dbebbe5e20d39743ff28c8dae042defc_23_0.png)
 
 ## Hello World
@@ -235,7 +238,6 @@ public class Main {
 
 你将得到如下所示的结果。
 
-
 ![](img/dbebbe5e20d39743ff28c8dae042defc_26_0.png)
 
 另一个例子是获取内存中以字节（byte）为变量的大小
@@ -261,7 +263,7 @@ public class Main {
 
 如下所示
 
-System.out.println("The value of a is: " + a); // The value of a is: 5
+`System.out.println("The value of a is: " + a);` // The value of a is: 5
 
 ```java
 package org.example;
@@ -295,20 +297,21 @@ public class Main {
 | char | 2 | 0 to 65,535 |
 | boolean | 1 | true or false |
 
-
 ![](img/dbebbe5e20d39743ff28c8dae042defc_29_0.png)
 
 上面的图显示了数据类型的两大类：基本数据类型和非基本数据类型。
 
 **基本类型 (Primitive types)** 是 Java 中存储数据的基础单元。它们由语言预定义，表示简单的值。数值类型可以存储数字。它们分为整型和浮点型。
 
-整型 (Integral types) 表示不带小数部分的整数。整型的示例包括 byte、short、int 和 long。
+整型 (Integral types) 表示不带小数部分的整数。整型的示例包括 `byte`、`short`、`int` 和 `long`。
 
-浮点型 (Floating-point types) 表示带有小数部分的数字。浮点类型的示例包括 float 和 double。
+浮点型 (Floating-point types) 表示带有小数部分的数字。浮点类型的示例包括 `float` 和 `double`。
 
-字符类型 char 用于存储单个字符。
+字符类型 `char` 用于存储单个字符。
 
-**非基本类型 (Non-primitive types)** 比基本类型更复杂。它们由程序员创建，可以存储数据集合或用户定义的对象。非基本类型的示例包括 String、数组（arrays）和类（classes）。
+
+
+**非基本类型（Non-primitive types）**比基本类型更复杂。它们由程序员创建，可以存储数据集合或用户定义的对象。非基本类型的示例包括`String`、数组（arrays）和类（classes）。
 
 如下所示：
 
@@ -329,34 +332,33 @@ public class MainApp {
 
 ![](img/dbebbe5e20d39743ff28c8dae042defc_32_0.png)
 
-
 Java 中的流程控制是指控制程序中语句执行顺序的能力。Java 提供了几种控制语句，允许开发者根据条件或循环控制执行流。
 
-### 条件语句 (Conditional Statements)
+## 条件语句（Conditional Statements）
 
-- if 语句：如果指定的条件为真，则执行代码块。
-- if-else 语句：如果条件为真，执行一个代码块；如果条件为假，执行另一个代码块。
-- if-else-if 语句：根据不同的条件执行不同的代码块。
-- switch 语句：根据表达式的不同值执行不同的代码块。
+- `if`语句：如果指定的条件为真，则执行代码块。
+- `if-else`语句：如果条件为真，执行一个代码块；如果条件为假，执行另一个代码块。
+- `if-else-if`语句：根据不同的条件执行不同的代码块。
+- `switch`语句：根据表达式的不同值执行不同的代码块。
 
-### 循环语句 (Looping Statements)
+## 循环语句（Looping Statements）
 
-- for 循环：按照指定的次数执行代码块。
-- while 循环：只要指定的条件为真，就执行代码块。
-- do-while 循环：至少执行一次代码块，然后只要指定的条件为真就继续执行。
-- for-each 循环（增强 for 循环）：遍历数组或集合中的每个元素。
+- `for`循环：按照指定的次数执行代码块。
+- `while`循环：只要指定的条件为真，就执行代码块。
+- `do-while`循环：至少执行一次代码块，然后只要指定的条件为真就继续执行。
+- `for-each`循环（增强`for`循环）：遍历数组或集合中的每个元素。
 
-### 分支语句 (Branching Statements)
+## 分支语句（Branching Statements）
 
-- break 语句：终止循环或 switch 语句，并将控制转移到循环或 switch 之后的语句。
-- continue 语句：跳过循环的当前迭代，并移动到下一次迭代。
+- `break`语句：终止循环或`switch`语句，并将控制转移到循环或`switch`之后的语句。
+- `continue`语句：跳过循环的当前迭代，并移动到下一次迭代。
 
-### 其他控制流语句 (Other Control Flow Statements)
+## 其他控制流语句（Other Control Flow Statements）
 
-- return 语句：退出方法并将控制返回给调用方法。
-- try-catch-finally 块：处理异常并提供一种无论是否发生异常都执行代码的方法。
+- `return`语句：退出方法并将控制返回给调用方法。
+- `try-catch-finally`块：处理异常并提供一种无论是否发生异常都执行代码的方法。
 
-下面是 IntelliJ IDEA 中所有流程控制语句的示例。我们稍后会看到 try、catch 和 finally。
+下面是 IntelliJ IDEA 中所有流程控制语句的示例。我们稍后会看到`try`、`catch`和`finally`。
 
 ```java
 package org.example;
@@ -402,22 +404,20 @@ public class FlowControlExample {
 }
 ```
 
-使用 /explain chat copilot 命令获取 main 方法的解释，如下图所示。
+使用`/explain chat copilot`命令获取`main`方法的解释，如下图所示。
 
 ![](img/dbebbe5e20d39743ff28c8dae042defc_35_0.png)
 
-
-
 在计算机编程中，集合是对解决问题具有共同意义的数据项进行分组，并需要以受控的方式进行操作。
 
-例如项目集合、数字集合、产品集合等
+例如项目集合、数字集合、产品集合等。
 
+- **顺序集合（Sequential collections）**：顺序集合的元素按线性顺序存储。顺序集合的示例包括数组、链表和队列。
+- **关联集合（Associative collections）**：关联集合的元素以键值对的形式存储。关联集合的示例包括映射（maps）和哈希表（hash tables）。
 
-- **顺序集合 (Sequential collections)**：顺序集合的元素按线性顺序存储。顺序集合的示例包括数组、链表和队列。
-- **关联集合 (Associative collections)**：关联集合的元素以键值对的形式存储。关联集合的示例包括映射（maps）和哈希表（hash tables）。
+在 Java 中，集合是作为单个单元表示的对象组。Java 集合框架（`java.util`包）提供了多个类和接口，用于存储和操作对象组。
 
-在 Java 中，集合是作为单个单元表示的对象组。Java 集合框架（java.util 包）提供了多个类和接口，用于存储和操作对象组。
-## java.util 包
+## `java.util`包
 
 顺序集合
 
@@ -427,107 +427,97 @@ public class FlowControlExample {
 
 接口：
 
-- Collection（根接口）：将一组对象表示为一个单元。
-- List：表示允许重复元素的有序集合。
-- Set：表示唯一元素的无序集合。
-- Queue：表示用于在处理前持有元素的集合。
-- Map（不是真正的集合）：表示键和值之间的映射。
+- `Collection`（根接口）：将一组对象表示为一个单元。
+- `List`：表示允许重复元素的有序集合。
+- `Set`：表示唯一元素的无序集合。
+- `Queue`：表示用于在处理前持有元素的集合。
+- `Map`（不是真正的集合）：表示键和值之间的映射。
 
 实现类：
 
-- ArrayList：List 接口的实现，使用可调整数组的数据结构。
-
-
-
-
-
-LinkedList: List 和 Queue 接口的实现，使用了双向链表结构。
-
-HashSet: Set 接口的实现，使用了哈希表进行存储。
-
-TreeSet: Set 接口的实现，使用了树进行存储（按元素排序）。
-
-HashMap: Map 接口的实现，使用了哈希表进行存储。
-
-TreeMap: Map 接口的实现，使用了树进行存储（按键排序）。
-
-
-- Collections 类：提供了操作集合的静态方法，例如排序、搜索和洗牌。
+- `ArrayList`：`List`接口的实现，使用可调整数组的数据结构。
+- `LinkedList`：`List`和`Queue`接口的实现，使用了双向链表结构。
+- `HashSet`：`Set`接口的实现，使用了哈希表进行存储。
+- `TreeSet`：`Set`接口的实现，使用了树进行存储（按元素排序）。
+- `HashMap`：`Map`接口的实现，使用了哈希表进行存储。
+- `TreeMap`：`Map`接口的实现，使用了树进行存储（按键排序）。
+- `Collections`类：提供了操作集合的静态方法，例如排序、搜索和洗牌。
 
 以下是使用 Java 集合（collections）的一些关键特性和优势：
 
 - **可重用性**：集合框架提供了一种处理对象组的标准方式，减少了编写自定义数据结构实现的需求。
 - **性能**：集合的实现针对常用操作进行了高度优化。
-- **线程安全**：某些集合（如 Vector 和 Hashtable）是线程安全的，适用于并发编程。
+- **线程安全**：某些集合（如`Vector`和`Hashtable`）是线程安全的，适用于并发编程。
 - **泛型**：集合可以与泛型类型工作，提供类型安全并避免类型转换问题。
-- **算法**：Collections 类提供了用于排序、搜索和操作集合的各种实用方法。
+- **算法**：`Collections`类提供了用于排序、搜索和操作集合的各种实用方法。
 
-下面是 Java 集合层级结构图
+下面是 Java 集合层级结构图：
 
 ![](img/dbebbe5e20d39743ff28c8dae042defc_39_0.png)
 
-这里是 Map 层级结构图
+这里是`Map`层级结构图：
 
 ![](img/dbebbe5e20d39743ff28c8dae042defc_40_0.png)
 
-让我们简要了解一下主要的集合
+让我们简要了解一下主要的集合。
 
-## Array List
+## `ArrayList`
 
-ArrayList 是 List 接口的可伸缩数组实现。它为我们提供了可以根据需要增长和缩小的动态数组，允许我们存储和操作元素集合。以下是关于 ArrayList 的一些关键点：
-- **有序集合**：ArrayList 保持元素的插入顺序，这意味着元素按照它们被添加的顺序存储。
-- **允许重复**：ArrayList 允许重复元素，这意味着你可以向列表中添加元素的多个实例。
-- **可伸缩数组**：ArrayList 的大小不是固定的，它可以随着元素的添加或删除动态增长或缩小。这与 Java 中固定大小的传统数组不同。
-- **随机访问**：ArrayList 为元素的随机访问提供了常数时间级性能，这意味着你可以以常数时间获取任何索引处的元素。
-- **空元素**：ArrayList 允许空元素，这意味着你可以在列表中存储空值。
-- **线程安全**：ArrayList 默认不是线程安全的。如果你需要在多线程环境中使用 ArrayList，应该对其访问进行同步，或使用线程安全的替代方案，如 Vector 或 CopyOnWriteArrayList。
-- **实现 List 接口**：ArrayList 实现了 List 接口，该接口提供了操作列表元素的方法，如 add()`、`remove()`、`set()` 等。
+`ArrayList`是`List`接口的可伸缩数组实现。它为我们提供了可以根据需要增长和缩小的动态数组，允许我们存储和操作元素集合。以下是关于`ArrayList`的一些关键点：
 
-### ArrayList
-- java.util 包
-- 实现 List 接口
+- **有序集合**：`ArrayList`保持元素的插入顺序，这意味着元素按照它们被添加的顺序存储。
+- **允许重复**：`ArrayList`允许重复元素，这意味着你可以向列表中添加元素的多个实例。
+- **可伸缩数组**：`ArrayList`的大小不是固定的，它可以随着元素的添加或删除动态增长或缩小。这与 Java 中固定大小的传统数组不同。
+- **随机访问**：`ArrayList`为元素的随机访问提供了常数时间级性能，这意味着你可以以常数时间获取任何索引处的元素。
+- **空元素**：`ArrayList`允许空元素，这意味着你可以在列表中存储空值。
+- **线程安全**：`ArrayList`默认不是线程安全的。如果你需要在多线程环境中使用`ArrayList`，应该对其访问进行同步，或使用线程安全的替代方案，如`Vector`或`CopyOnWriteArrayList`。
+- **实现`List`接口**：`ArrayList`实现了`List`接口，该接口提供了操作列表元素的方法，如`add()`、`remove()`、`set()`等。
+
+### `ArrayList`
+
+- `java.util`包
+- 实现`List`接口
 - 最常用的结构
 - 用于存储和管理对象
 
 ### 添加元素
 
-```
+```java
 stringList.add("apple");
 stringList.add("banana");
 stringList.add("orange")
 ```
 
-### 创建 ArrayList
+### 创建`ArrayList`
 
-```
+```java
 ArrayList<String> stringList = new ArrayList<>();
 ```
 
 ### 元素
 
-### ArrayList 方法
+### `ArrayList`方法
 
-```
+```java
 String firstfruit = stringList.get(0); // "apple"
 ```
 
-- size()
-- isEmpty()
-- clear()
-- contains()
-- indexOf()
-- addAll()
+- `size()`
+- `isEmpty()`
+- `clear()`
+- `contains()`
+- `indexOf()`
+- `addAll()`
 
-
-```
+```java
 for (String fruit : stringList) {
     System.out.println(fruit);
 }
 ```
 
-现在使用 github copilot 生成注释 //带有基本操作的 ArrayList 示例你将获得如下屏幕所示的答案
+现在使用`github copilot`生成注释`//带有基本操作的 ArrayList 示例`你将获得如下屏幕所示的答案：
 
-```
+```java
 import java.util.*;
 
 public class ArrayListExample {
@@ -556,7 +546,7 @@ public class ArrayListExample {
 
 ![](img/dbebbe5e20d39743ff28c8dae042defc_43_0.png)
 
-```
+```java
 public class ListExample {
     public static void main(String[] args) {
         // 遍历列表
@@ -581,56 +571,56 @@ public class ListExample {
 }
 ```
 
+```
 "C:\Program Files\Java\jdk-11\bin\java.exe" - -.agent.C:ListExample -fileencoding=UTF-8 -classpath "C:\Program Files\JetBrains\IntelliJ\IDEA Community Edition 2022.3.1\lib\idea.jar;rt=6999;C:\Program Files\JetBrains\IntelliJ\ IDEA Community 
 
 Process finished with exit code 0
+```
+
 ### 另一个使用下方屏幕所示高亮注释的示例
 
+`LinkedList`是`List`和`Deque`（双端队列）接口的双向链表实现。它是一种线性数据结构，元素不存储在连续的内存位置，而是每个元素都是一个独立的对象，持有指向序列中上一个一个元素的引用。以下是关于`LinkedList`的一些关键点：
 
-LinkedList 是 List 和 Deque（双端队列）接口的双向链表实现。它是一种线性数据结构，元素不存储在连续的内存位置，而是每个元素都是一个独立的对象，持有指向序列中上一个一个元素的引用。以下是关于 LinkedList 的一些关键点：
+**有序集合**：`LinkedList`保持元素的插入顺序，与`ArrayList`类似。
 
-**有序集合**：LinkedList 保持元素的插入顺序，与 ArrayList 类似。
+**允许重复**：与`ArrayList`一样，`LinkedList`允许重复元素。
 
-**允许重复**：与 ArrayList 一样，LinkedList 允许重复元素。
+**动态大小**：`LinkedList`的大小不是固定的，它可以随着元素的添加或删除动态增长或缩小。
 
-**动态大小**：LinkedList 的大小不是固定的，它可以随着元素的添加或删除动态增长或缩小。
+**非随机访问**：`LinkedList`不提供元素的随机访问性能。要访问特定索引的元素，需要从列表的开始或结束遍历，导致时间复杂度为`O(n)`，其中`n`是列表的大小。
 
-**非随机访问**：LinkedList 不提供元素的随机访问性能。要访问特定索引的元素，需要从列表的开始或结束遍历，导致时间复杂度为 O(n)，其中 n 是列表的大小。
+**高效的插入和删除**：`LinkedList`擅长在列表开头或中间插入和删除元素。这些操作的时间复杂度为`O(1)`，使得它在任意位置频繁插入和删除时比`ArrayList`更高效。
 
-**高效的插入和删除**：LinkedList 擅长在列表开头或中间插入和删除元素。这些操作的时间复杂度为 O(1)，使得它在任意位置频繁插入和删除时比 ArrayList 更高效。
+**实现`Deque`接口**：`LinkedList`实现了`Deque`接口，使其可以作为双端队列使用，从两端添加或删除元素。
 
-**实现 Deque 接口**：LinkedList 实现了 Deque 接口，使其可以作为双端队列使用，从两端添加或删除元素。
+**线程安全**：与`ArrayList`一样，`LinkedList`默认不是线程安全的。如果你需要在多线程环境中使用`LinkedList`，应该对其访问进行同步，或使用线程安全的替代方案。
 
-**线程安全**：与 ArrayList 一样，LinkedList 默认不是线程安全的。如果你需要在多线程环境中使用 LinkedList，应该对其访问进行同步，或使用线程安全的替代方案。
-
-
-- java.util 包
-- 实现 List 和 Deque 接口
+- `java.util`包
+- 实现`List`和`Deque`接口
 - 表示双向链表数据结构
 - 用于存储和管理对象
 
 ### 添加元素
 
-```
+```java
 stringList.add("apple");
 stringList.add("banana");
 stringList.add("orange")
 ```
 
-### 创建 ArrayList
+### 创建`LinkedList`
 
-```
+```java
 LinkedList stringList = new LinkedList<>();
 ```
 
 ### 元素
 
-```
+```java
 String firstfruit = stringList.get(0); // "apple"
 ```
 
-
-```
+```java
 size()
 isEmpty()
 clear()
@@ -639,17 +629,17 @@ indexOf()
 addAll()
 ```
 
-### 遍历 ArrayList
+### 遍历`LinkedList`
 
-```
+```java
 for (String fruit : stringList) {
     System.out.println(fruit);
 }
 ```
 
-现在尝试在 github copilot 聊天框中输入“给我一个包含主要操作的 LinkedList 示例”，如下所示
+现在尝试在`github copilot`聊天框中输入“给我一个包含主要操作的`LinkedList`示例”，如下所示：
 
-```
+```java
 package org.example;
 
 public class LinkedListExamples {
@@ -677,7 +667,7 @@ public class LinkedListExamples {
 }
 ```
 
-获取结果后，尝试点击下方屏幕所示的符号
+获取结果后，尝试点击下方屏幕所示的符号。
 
 
 
@@ -712,7 +702,6 @@ public class LinkedListExamples {
 ```
 
 你可以针对下方图中高亮显示提问后续问题
-
 
 ```java
 public static void main(String[] args) {
@@ -770,28 +759,34 @@ public class LinkedListExamples {
 }
 ```
 
-在此段代码中，“Element 0" 被插入到 LinkedList 的头部。
+在此段代码中，"Element 0" 被插入到 `LinkedList` 的头部。
 
 - 使用 3 个引用
 
+`HashSet` 是 `Set` 接口的一种实现，是 Java 集合框架的一部分。`Set` 是一个不允许包含重复元素的集合。`HashSet` 类使用哈希表进行存储，为 `add()`、`remove()`、`contains()` 等基本操作提供了常数级性能。
 
-HashSet 是 Set 接口的一种实现，是 Java 集合框架的一部分。Set 是一个不允许包含重复元素的集合。HashSet 类使用哈希表进行存储，为 `add()`、`remove()`、`contains()` 等基本操作提供了常数级性能。
+- **数据结构**：`HashSet` 是 `Set` 接口的一种实现，是 Java 集合框架的一部分。它提供了一种存储元素集合的方法且不允许出现重复。
 
-- **数据结构**：HashSet 是 Set 接口的一种实现，是 Java 集合框架的一部分。它提供了一种存储元素集合的方法且不允许出现重复。
-- **无序性**：与某些其他数据结构不同，HashSet **不维护元素的任何特定顺序**。元素根据它们的**哈希码**存储，其检索顺序是随机的。
-- **唯一元素**：HashSet 确保**不允许重复元素**。如果你尝试向集合中添加重复元素，它将被忽略。
-- **Null 值**：HashSet 允许最多包含一个 **null 值**。如果你尝试添加第二个 null 值，它将被忽略。
-- **非同步性**：默认情况下，HashSet 是**非线程安全的**。如果你计划在多线程环境中使用 HashSet，请考虑对其进行同步处理或使用如 `ConcurrentHashMap` 等线程安全的替代方案。
-- **性能**：HashSet 为 `add()`、`remove()` 和 `contains()` 等基本操作提供了**常数级性能**。然而，这假设用于计算元素哈希码的**哈希函数**能够将元素良好地分布在哈希表的各个桶中。
+- **无序性**：与某些其他数据结构不同，`HashSet` **不维护元素的任何特定顺序**。元素根据它们的**哈希码**存储，其检索顺序是随机的。
 
-实现 Set 接口：HashSet 实现了 Set 接口，这意味着它提供了添加、移除和检查元素是否存在于集合的方法。此外，它还支持并集、交集和差集等操作。
+- **唯一元素**：`HashSet` 确保**不允许重复元素**。如果你尝试向集合中添加重复元素，它将被忽略。
 
+- **Null 值**：`HashSet` 允许最多包含一个 **null 值**。如果你尝试添加第二个 null 值，它将被忽略。
 
-遍历 HashSet
+- **非同步性**：默认情况下，`HashSet` 是**非线程安全的**。如果你计划在多线程环境中使用 `HashSet`，请考虑对其进行同步处理或使用如 `ConcurrentHashMap` 等线程安全的替代方案。
 
-- java.util 包
-- 实现了 Set 接口
+- **性能**：`HashSet` 为 `add()`、`remove()` 和 `contains()` 等基本操作提供了**常数级性能**。然而，这假设用于计算元素哈希码的**哈希函数**能够将元素良好地分布在哈希表的各个桶中。
+
+实现 `Set` 接口：`HashSet` 实现了 `Set` 接口，这意味着它提供了添加、移除和检查元素是否存在于集合的方法。此外，它还支持并集、交集和差集等操作。
+
+遍历 `HashSet`
+
+- `java.util` 包
+
+- 实现了 `Set` 接口
+
 - 代表一个唯一元素集合
+
 - 使用哈希表存储其元素
 
 ```java
@@ -800,20 +795,23 @@ for (String fruit : stringSet) {
 }
 ```
 
-
 ## HashSet 方法
 
 ```java
 HashSet<String> stringSet = new HashSet<>();
 ```
 
-- size() - 返回集合中元素的数量。
-- isEmpty() - 检查集合是否为空。
-- clear() - 移除集合中的所有元素。
-- add(E e) - 向集合中添加元素。
-- remove(Object o) - 从集合中移除元素。
-- addAll(Collection<? extends E> c) - 从另一个集合中添加所有元素
+- `size()` - 返回集合中元素的数量。
 
+- `isEmpty()` - 检查集合是否为空。
+
+- `clear()` - 移除集合中的所有元素。
+
+- `add(E e)` - 向集合中添加元素。
+
+- `remove(Object o)` - 从集合中移除元素。
+
+- `addAll(Collection<? extends E> c)` - 从另一个集合中添加所有元素
 
 ```java
 stringSet.add("apple");
@@ -822,7 +820,6 @@ stringSet.add("orange");
 ```
 
 ### HashSet 与哈希
-
 
 ### 移除元素
 
@@ -834,45 +831,49 @@ stringSet.remove("banana");
 
 ## LinkedHashSet
 
-LinkedHashSet 是 Set 接口的一种实现，是 Java 集合框架的一部分。
-它结合了 HashSet 和 LinkedList 的特性，提供了这两种数据结构的优点。
+`LinkedHashSet` 是 `Set` 接口的一种实现，是 Java 集合框架的一部分。
 
-关于 LinkedHashSet 的关键点：
+它结合了 `HashSet` 和 `LinkedList` 的特性，提供了这两种数据结构的优点。
+
+关于 `LinkedHashSet` 的关键点：
 
 - 插入顺序
 
-LinkedHashSet 中的插入操作存储在哈希表中以便于高效检索。
+`LinkedHashSet` 中的插入操作存储在哈希表中以便于高效检索。
+
 它们也被维护在一个双向链列表中，确保了插入顺序被保留。
 
 当你遍历元素时，它们将按照被插入的相同顺序被检索。
 
 ### 唯一元素：
 
-像其他 Set 实现一样，LinkedHashSet 不允许重复元素。
+像其他 `Set` 实现一样，`LinkedHashSet` 不允许重复元素。
+
 如果你尝试添加重复元素，它将被忽略。
 
+`LinkedHashSet` 最多允许一个 null 元素。
 
-LinkedHashSet 最多允许一个 null 元素。
 如果你尝试添加第二个 null 值，它将被忽略。
 
 ### 非同步性：
 
-默认情况下，LinkedHashSet 不是线程安全的。
+默认情况下，`LinkedHashSet` 不是线程安全的。
+
 在多线程环境中，请考虑对其进行同步处理或使用来自 `ConcurrentLinkedHashMap` 类的 `ConcurrentLinkedHashMap` 等线程安全的替代方案。
 
+`LinkedHashSet` 为 `add()`、`remove()` 和 `contains()` 等基本操作提供常数级性能，类似于 `HashSet`。
 
-LinkedHashSet 为 `add()`、`remove()` 和 `contains()` 等基本操作提供常数级性能，类似于 HashSet。
 然而，按照插入顺序遍历元素具有线性时间复杂度 (O(n))，其中 n 是元素的数量。
 
+`LinkedHashSet` 实现了 `Set` 接口，该接口包含了添加、移除和检查元素存在的方法。
 
-LinkedHashSet 实现了 Set 接口，该接口包含了添加、移除和检查元素存在的方法。
 它还支持并集、交集和差集等集合操作。
 
+- `java.util` 包
 
-- java.util 包
-- 扩展了 HashSet 并实现了 Set 接口
+- 扩展了 `HashSet` 并实现了 `Set` 接口
+
 - 结合了哈希表和链表的特性
-
 
 ```java
 for (String color : colorSet) {
@@ -880,11 +881,9 @@ for (String color : colorSet) {
 }
 ```
 
-
 ```java
 LinkedHashSet<String> colorSet = new LinkedHashSet<>();
 ```
-
 
 ### TreeSet 方法
 
@@ -894,44 +893,42 @@ colorSet.add("green");
 colorSet.add("blue");
 ```
 
-
 ### 移除元素
 
 ```java
 colorSet.remove("green");
 ```
 
-
-
-
 ## TreeSet
 
-让我们探索 TreeSet 的奇妙世界。以下是关于这种多功能数据结构的关键点：
+让我们探索 `TreeSet` 的奇妙世界。以下是关于这种多功能数据结构的关键点：
 
-**数据结构：** TreeSet 是 Set 接口的实现，是 Java 集合框架的一部分。它提供了一种存储元素集合的方法且不允许重复元素。
+**数据结构：** `TreeSet` 是 `Set` 接口的实现，是 Java 集合框架的一部分。它提供了一种存储元素集合的方法且不允许重复元素。
 
 ![](img/dbebbe5e20d39743ff28c8dae042defc_57_0.png)
 
-**排序集合：** TreeSet 自动按升序对其元素进行排序。当你向 TreeSet 中添加元素时，它们将根据自然顺序（如果它们实现了 `Comparable` 接口）或根据创建时提供的自定义 `Comparator` 进行排列。
+**排序集合：** `TreeSet` 自动按升序对其元素进行排序。当你向 `TreeSet` 中添加元素时，它们将根据自然顺序（如果它们实现了 `Comparable` 接口）或根据创建时提供的自定义 `Comparator` 进行排列。
 
-**唯一元素：** 与其他 Set 实现一样，TreeSet 确保不允许重复元素。如果你尝试添加一个集合中已存在的元素，它将被忽略。
+**唯一元素：** 与其他 `Set` 实现一样，`TreeSet` 确保不允许重复元素。如果你尝试添加一个集合中已存在的元素，它将被忽略。
 
-**Null 值：** TreeSet 不允许 `null` 元素。如果你尝试添加 `null` 值，它将抛出 `NullPointerException`。
+**Null 值：** `TreeSet` 不允许 `null` 元素。如果你尝试添加 `null` 值，它将抛出 `NullPointerException`。
 
-**非同步：** 默认情况下，TreeSet 不是线程安全的。如果你计划在多线程中使用 TreeSet，请考虑对其访问进行同步，或使用线程安全的替代方案，如 `ConcurrentSkipListSet`。
+**非同步：** 默认情况下，`TreeSet` 不是线程安全的。如果你计划在多线程中使用 `TreeSet`，请考虑对其访问进行同步，或使用线程安全的替代方案，如 `ConcurrentSkipListSet`。
 
-**性能：** TreeSet 为基本操作（如 `add()`、`remove()` 和 `contains()`）提供对数时间复杂度 (O(log n))。然而，如果你需要按顺序遍历元素，它提供了常数级性能。
+**性能：** `TreeSet` 为基本操作（如 `add()`、`remove()` 和 `contains()`）提供对数时间复杂度 (O(log n))。然而，如果你需要按顺序遍历元素，它提供了常数级性能。
 
-**实现 NavigableSet 接口：** TreeSet  `NavigableSet` 接口，该接口扩展了 `SortedSet` 接口。此扩展提供了额外的方法，用于根据顺序从集合中导航和检索元素。
+**实现 `NavigableSet` 接口：** `TreeSet` 实现 `NavigableSet` 接口，该接口扩展了 `SortedSet` 接口。此扩展提供了额外的方法，用于根据顺序从集合中导航和检索元素。
 
-**自定义 Comparator：** 在创建 TreeSet 时，你可以提供自定义的 `Comparator` 来定义元素的排序顺序。如果没有提供 `Comparator`，元素必须实现 `Comparable` 接口以定义它们的自然顺序。
+**自定义 `Comparator`：** 在创建 `TreeSet` 时，你可以提供自定义的 `Comparator` 来定义元素的排序顺序。如果没有提供 `Comparator`，元素必须实现 `Comparable` 接口以定义它们的自然顺序。
 
-总而言之，TreeSet 结合了排序、唯一性和高效性能的优点，使其成为 Java 中管理元素集合的价值工具！
+总而言之，`TreeSet` 结合了排序、唯一性和高效性能的优点，使其成为 Java 中管理元素集合的价值工具！
 
 ## TreeSet
 
-- java.util 包
-- 实现了 NavigableSet 接口，是 SortedSet 层次结构的一部分
+- `java.util` 包
+
+- 实现了 `NavigableSet` 接口，是 `SortedSet` 层次结构的一部分
+
 - 使用红黑树数据结构存储其元素
 
 ### 遍历 TreeSet:
@@ -959,7 +956,8 @@ numberSet.add(8);
 ```
 
 > TreeSet 方法
-> TreeSet 提供了类似于其他集合类的方法，用于操作和处理集合。此外，它还提供了用于检索大于或等于给定元素的方法：`ceiling()`，以及小于或等于给定元素的方法：`floor()` 等等。
+
+> `TreeSet` 提供了类似于其他集合类的方法，用于操作和处理集合。此外，它还提供了用于检索大于或等于给定元素的方法：`ceiling()`，以及小于或等于给定元素的方法：`floor()` 等等。
 
 ### 移除元素
 
@@ -1008,61 +1006,65 @@ public class HashSetExamples {
 
 ## HashMap
 
-HashMap 是 Map 接口的实现，是 Java 集合框架的一部分。它是一种广泛使用的数据结构，存储键值对并提供对这些对的高效检索和存储。以下是关于 HashMap 的关键点：
+`HashMap` 是 `Map` 接口的实现，是 Java 集合框架的一部分。它是一种广泛使用的数据结构，存储键值对并提供对这些对的高效检索和存储。以下是关于 `HashMap` 的关键点：
 
 ## 关于 HashMap 的关键点：
 
 ### 键值对：
 
-HashMap 以键值对的形式存储数据。
+`HashMap` 以键值对的形式存储数据。
 
 映射中的每个键都与一个值相关，键用于访问其对应的值。
 
 ### 唯一键：
 
-在 HashMap 中，键必须是唯一的。
+在 `HashMap` 中，键必须是唯一的。
 
 如果你尝试插入重复的键，它将替换与现有键关联的值。
 
 ### Null 键和值：
 
-HashMap 允许最多一个 `null` 键，但可以多个 `null` 值。
+`HashMap` 允许最多一个 `null` 键，但可以多个 `null` 值。
 
 如果你尝试添加第二个 `null` 键，它将替换与现有 `null` 键关联的值。
 
 ### 无序集合：
 
-HashMap 不维护元素的特定顺序。
+`HashMap` 不维护元素的特定顺序。
 
 元素根据其哈希码（hash codes）存储，且迭代顺序不保证在不同迭代之间相同。
 
 ### 非同步：
 
-默认情况下，HashMap 不是线程安全的。
+默认情况下，`HashMap` 不是线程安全的。
 
 在多线程环境中，考虑对其访问进行同步，或使用线程安全的替代方案，如 `ConcurrentHashMap`。
 
 ### 性能：
 
-平均情况下，HashMap 为 `get()`、`put()` 和 `remove()` 等基本操作提供常数级性能 (O(1))。
+平均情况下，`HashMap` 为 `get()`、`put()` 和 `remove()` 等基本操作提供常数级性能 (O(1))。
 
 这假设了良好的哈希函数和适当的负载因子管理。
 
 ## 实现 Map 接口：
 
-HashMap 实现了 Map 接口，提供了添加、删除和检索键值对的方法。
+`HashMap` 实现了 `Map` 接口，提供了添加、删除和检索键值对的方法。
 
 它还支持单独处理键和值的方法。
 
 ## HashMap
 
-遍历 HashMap:
+遍历 `HashMap`:
 
-- java.util 包
-- 实现了 Map 接口
+- `java.util` 包
+
+- 实现了 `Map` 接口
+
 - 表示键值对的集合
+
 - 每个键都对应一个值
-- HashMap 使用哈希表存储其条目
+
+- `HashMap` 使用哈希表存储其条目
 
 ```java
 for (String country : populationMap.keySet()) {
@@ -1071,7 +1073,7 @@ for (String country : populationMap.keySet()) {
 }
 ```
 
-创建一个 HashMap
+创建一个 `HashMap`
 
 ```java
 HashMap<String, Integer> populationMap = new HashMap<>();
@@ -1087,24 +1089,29 @@ populationMap.put("India", 1380000000);
 
 ### HashMap 方法:
 
-- size() 返回此映射中映射的数量
-- isEmpty() 检查映射是否为空
-- containsKey(Object key) 检查映射是否包含特定键
-- containsValue(Object value) 检查映射是否包含特定值
-- get(Object key) 返回指定键所映射的值
-- remove(Object key) 从此映射中移除该键的映射
+- `size()` 返回此映射中映射的数量
 
-访问值
+- `isEmpty()` 检查映射是否为空
+
+- `containsKey(Object key)` 检查映射是否包含特定键
+
+
+
+- `containsValue(Object value)` 检查映射是否包含特定值
+- `get(Object key)` 返回指定键所映射的值
+- `remove(Object key)` 从此映射中移除该键的映射
+
+## 访问值
 
 ```java
 int usPopulation = populationMap.get("USA"); // 331000000
 ```
 
-哈希与效率：
+## 哈希与效率
 
-HashMap 使用哈希来高效地管理键值对。每个键都与哈希码关联，用于哈希表中。这允许对键值对进行快速插入、检索和删除。
+`HashMap` 使用哈希来高效地管理键值对。每个键都与哈希码关联，用于哈希表中。这允许对键值对进行快速插入、检索和删除。
 
-移除键值对
+## 移除键值对
 
 ```java
 populationMap.remove("China");
@@ -1114,68 +1121,65 @@ populationMap.remove("China");
 
 ![](img/dbebbe5e20d39743ff28c8dae042defc_63_0.png)
 
-## LinkedHashMap
+# LinkedHashMap
 
-这里是关于 **HashMap** 的细节：
+这里是关于 `HashMap` 的细节：
 
-LinkedHashMap 是 Map 接口的实现，是 Java 集合框架的一部分。
+`LinkedHashMap` 是 `Map` 接口的实现，是 Java 集合框架的一部分。
 
-关于 LinkedHashMap 的关键点：
+关于 `LinkedHashMap` 的关键点：
 
-### 插入顺序：
+## 插入顺序
 
-LinkedHashMap 维护键值对的插入顺序。
+`LinkedHashMap` 维护键值对的插入顺序。
 
-当你遍历 LinkedHashMap 的元素时，它们将按照插入的顺序被检索。
+当你遍历 `LinkedHashMap` 的元素时，它们将按照插入的顺序被检索。
 
-### 键值对：
+## 键值对
 
-与 HashMap 一样，LinkedHashMap 以键值对的形式存储数据。
+与 `HashMap` 一样，`LinkedHashMap` 以键值对的形式存储数据。
 
 映射中的每个键都与一个值相关，键用于访问其对应的值。
 
-### 唯一键：
+## 唯一键
 
-在 LinkedHashMap 中，键必须是唯一的。
+在 `LinkedHashMap` 中，键必须是唯一的。
 
 如果你尝试插入重复的键，它将替换与现有键关联的值。
 
-### Null 键和值：
+## Null 键和值
 
-LinkedHashMap 允许最多一个 `null` 键，但可以多个 `null` 值。
+`LinkedHashMap` 允许最多一个 `null` 键，但可以多个 `null` 值。
 
 如果你尝试添加第二个 `null` 键，它将替换与现有 `null` 键关联的值。
 
-### 访问顺序：
+## 访问顺序
 
-除了维护插入顺序，LinkedHashMap 还可以维护键值对的访问顺序。
+除了维护插入顺序，`LinkedHashMap` 还可以维护键值对的访问顺序。
 
-当你检索或修改与键关联的值，该键值对会移动到链表的末尾，允许你跟踪最近访问访问或修改的条目。
+当你检索或修改与键关联的值，该键值对会移动到链表的末尾，允许你跟踪最近访问或修改的条目。
 
-### 非同步：
+## 非同步
 
-默认情况下，LinkedHashMap 不是线程安全的。
+默认情况下，`LinkedHashMap` 不是线程安全的。
 
 在多线程环境中，考虑对其访问进行同步，或使用线程安全的替代方案，如 `ConcurrentHashMap`。
 
-### 性能：
+## 性能
 
-
-
-
-HashMap 在平均情况下，为 `get()`、`put()` 和 `remove()` 等基本操作提供常数级性能 (O(1))，与 HashMap 类似。
+`HashMap` 在平均情况下，为 `get()`、`put()` 和 `remove()` 等基本操作提供常数级性能 (O(1))，与 `HashMap` 类似。
 
 然而，按照插入顺序遍历元素具有线性时间复杂度 (O(n))，其中 n 是元素的数量。
 
-## LinkedHashMap
+# LinkedHashMap
 
-- 属于 java.util 包
-- 继承自 HashMap
+- 属于 `java.util` 包
+- 继承自 `HashMap`
 - 表示键值对的集合
 - 每个键对应一个相应的值
-- LinkedHashMap 使用哈希表存储其条目
+- `LinkedHashMap` 使用哈希表存储其条目
 
-创建 LinkedHashMap：
+## 创建 LinkedHashMap
 
 ```java
 LinkedHashMap<String, Integer> scoreMap = new LinkedHashMap<String, Integer>();
@@ -1189,17 +1193,19 @@ scoreMap.put('Bob', 87);
 scoreMap.put('Charlie', 92);
 ```
 
-通过键访问值：
+## 通过键访问值
 
 ```java
 int aliceScore = scoreMap.get('Alice'); // 90
 ```
 
-## 键值对
+## 移除键值对
 
 ```java
 scoreMap.remove('Bob');
 ```
+
+## 遍历 LinkedHashMap
 
 ```java
 for (String name : scoreMap.keySet()) {
@@ -1208,9 +1214,9 @@ for (String name : scoreMap.keySet()) {
 }
 ```
 
-让我们看看使用 GitHub Copilot 的示例。像下图中所示所示提问，如果你满意，点击“插入代码”按钮，你的代码就准备好了。
+让我们看看使用 GitHub Copilot 的示例。像下图中所示提问，如果你满意，点击“插入代码”按钮，你的代码就准备好了。
 
-## java.util.LinkedHashMap
+# java.util.LinkedHashMap
 
 ```java
 import java.util.*;
@@ -1244,12 +1250,14 @@ public class LinkedHashMapExamples {
 }
 ```
 
-## Java 集合实现示例
+# Java 集合实现示例
 
-使用基本操作的 LinkedHashMap 示例
+使用基本操作的 `LinkedHashMap` 示例
 
 GitHub Copilot:
-好的，我可以提供一个 Java LinkedHashMap 示例，包含基本操作，如添加元素、删除元素、检查元素是否存在以及遍历 map。
+
+好的，我可以提供一个 Java `LinkedHashMap` 示例，包含基本操作，如添加元素、删除元素、检查元素是否存在以及遍历 map。
+
 以下是代码：
 
 ```java
@@ -1274,66 +1282,67 @@ public class LinkedHashMapExample {
 }
 ```
 
-## TreeMap
+# TreeMap
 
-在 Java 中，TreeMap 是 Map 接口的实现，是 Java 集合框架的一部分。它是一个排序 map，根据键的升序顺序存储其键值对。TreeMap 中的键必须实现 `Comparable` 接口，或者在创建时提供一个自定义的 `Comparator`。
+在 Java 中，`TreeMap` 是 `Map` 接口的实现，是 Java 集合框架的一部分。它是一个排序 map，根据键的升序顺序存储其键值对。`TreeMap` 中的键必须实现 `Comparable` 接口，或者在创建时提供一个自定义的 `Comparator`。
 
-## 关于 TreeMap 的关键点：
+# 关于 TreeMap 的关键点
 
-### 排序的键：
+## 排序的键
 
-TreeMap 根据键的自然顺序或自定义的 `Comparator` 以排序顺序存储其键值对。
+`TreeMap` 根据键的自然顺序或自定义的 `Comparator` 以排序顺序存储其键值对。
 
 当你遍历 map 中的条目时，它们将按照键的排序顺序被检索。
 
-### 键值对：
+## 键值对
 
-与其他 Map 实现一样，TreeMap 以键值对的形式存储数据。map 中的每个键都关联着一个值，并使用键来访问其对应的值。
+与其他 `Map` 实现一样，`TreeMap` 以键值对的形式存储数据。map 中的每个键都关联着一个值，并使用键来访问其对应的值。
 
-### 唯一键：
+## 唯一键
 
-在 TreeMap 中，键必须是唯一的。如果你尝试插入重复的键，它将替换与现有键关联的值。
+在 `TreeMap` 中，键必须是唯一的。如果你尝试插入重复的键，它将替换与现有键关联的值。
 
-### Null 键和值：
+## Null 键和值
 
-TreeMap 不允许 null 键，但可以多个 null 值。如果你尝试添加 null 键，它将抛出 `NullPointerException`。
+`TreeMap` 不允许 `null` 键，但可以多个 `null` 值。如果你尝试添加 `null` 键，它将抛出 `NullPointerException`。
 
-### 非同步：
+## 非同步
 
-默认情况下，TreeMap 不是线程安全的。在多线程环境中，请考虑对其访问进行同步，或使用线程安全的替代方案，如 `ConcurrentSkipListMap`。
+默认情况下，`TreeMap` 不是线程安全的。在多线程环境中，请考虑对其访问进行同步，或使用线程安全的替代方案，如 `ConcurrentSkipListMap`。
 
-### 性能：
+## 性能
 
-TreeMap 为 `get()`、`put()` 和 `remove()` 等基本操作提供了对数时间复杂度 (O(log n))。
+`TreeMap` 为 `get()`、`put()` 和 `remove()` 等基本操作提供了对数时间复杂度 (O(log n))。
 
 然而，如果你需要按照排序顺序遍历条目，它提供了常数级性能。
 
-### 实现 NavigableMap 接口：
+## 实现 NavigableMap 接口
 
-TreeMap 实现了 `NavigableMap` 接口，该接口扩展了 `SortedMap` 接口。
+`TreeMap` 实现了 `NavigableMap` 接口，该接口扩展了 `SortedMap` 接口。
+
 它提供了额外的方法，根据顺序从 map 中导航和检索条目。
 
-### Comparator：
+## Comparator
 
-你可以在创建 TreeMap 时提供一个自定义的 `Comparator` 来定义键的排序顺序。
+你可以在创建 `TreeMap` 时提供一个自定义的 `Comparator` 来定义键的排序顺序。
 
 如果没有提供 `Comparator`，则键必须实现 `Comparable` 接口。
 
-## TreeMap
+# TreeMap
 
-- 属于 java.util 包
+- 属于 `java.util` 包
 - 实现了 `NavigableMap` 接口，是 `SortedMap` 层次的一部分
 - 以排序的方式表示键值对集合
 - 每个键对应一个相应的值
 - 使用红黑树数据结构存储其条目
 
-## 遍历 LinkedHashMap
-
-## 创建 TreeMap：
+## 创建 TreeMap
 
 ```java
 TreeMap<String, Integer> scoreMap = new TreeMap<>();
 ```
+
+## 遍历 TreeMap
 
 ```java
 for (String name : scoreMap.keySet()) {
@@ -1350,7 +1359,7 @@ scoreMap.put("Bob", 87);
 scoreMap.put("Charlie", 90);
 ```
 
-## 通过键访问值：
+## 通过键访问值
 
 ```java
 int aliceScore = scoreMap.get('Alice'); // 90
@@ -1362,9 +1371,9 @@ int aliceScore = scoreMap.get('Alice'); // 90
 scoreMap.remove('Bob');
 ```
 
-TreeMap 方法：
+## TreeMap 方法
 
-TreeMap 提供了与其他类相似的方法，用于操作和查找大于或等于给定键的条目。
+`TreeMap` 提供了与其他类相似的方法，用于操作和查找大于或等于给定键的条目。
 
 让我们看看使用 GitHub Copilot 的示例。像下图中所示提问，如果你满意，点击“插入代码”按钮，你的代码就准备好了。
 
@@ -1400,27 +1409,27 @@ public class LinkedHashMapExamples {
 }
 ```
 
-## Java 异常处理
+# Java 异常处理
 
-异常处理是 Java 中的一种机制，允许你处理程序执行过程中可能运行时错误或异常情况。它提供了一种优雅地处理异常的方法，防止程序意外终止。
+异常处理是 Java 中的一种机制，允许你处理程序执行过程中可能出现的运行时错误或异常情况。它提供了一种优雅地处理异常的方法，防止程序意外终止。
 
-Java，异常是表示异常情况的对象。当发生异常情况时，会创建并抛出一个异常对象。如果异常没有被正确捕获和处理，程序将带有错误信息终止
+在 Java 中，异常是表示异常情况的对象。当发生异常情况时，会创建并抛出一个异常对象。如果异常没有被正确捕获和处理，程序将带有错误信息终止。
 
 ## 什么是 Java 异常？
 
 异常是破坏 Java 程序正常流的异常状态。
+
 它代表执行期间发生的意外事件。
+
 异常是在运行时满足某些条件时抛出的对象。
 
 ## 什么是异常处理？
 
 异常处理是管理 Java 运行时错误的机制。
+
 它允许优雅地处理异常，确保程序不会突然终止。
+
 常见的异常包括 `ClassNotFoundException`、`IOException`、`SQLException` 和 `RemoteException`。
-
-
-
-
 
 语句 9;
 
@@ -1430,39 +1439,43 @@ Java，异常是表示异常情况的对象。当发生异常情况时，会创�
 
 如果有异常处理，剩余语句将继续执行。
 
-## Java 异常类的层次结构：
+## Java 异常类的层次结构
 
-Java 异常层次结构的根类是 java.lang.Throwable。
+Java 异常层次结构的根类是 `java.lang.Throwable`。
 
 它有两个主要的子类：
 
-- Exception：代表检查异常（例如，IOException, SQLException）。
-- Error：代表未检查异常（例如，OutOfMemoryError, StackOverflowError）。
+- `Exception`：代表检查异常（例如，`IOException`, `SQLException`）。
+- `Error`：代表未检查异常（例如，`OutOfMemoryError`, `StackOverflowError`）。
 
-## Java 异常的类型：
+## Java 异常的类型
 
-### 检查异常（Checked Exceptions）：
+### 检查异常（Checked Exceptions）
 
-除 RuntimeException 和 Error 之外的 Throwable 直接子类。
+除 `RuntimeException` 和 `Error` 之外的 `Throwable` 直接子类。
+
 在编译时检查。
-示例：IOException, SQLException。
 
-### 未检查异常（Unchecked Exceptions）：
+示例：`IOException`, `SQLException`。
 
-RuntimeException 的子类。
+### 未检查异常（Unchecked Exceptions）
+
+`RuntimeException` 的子类。
+
 不在编译时进行检查；在运行时检测。
-示例：ArithmeticException, NullPointerException。
 
-## 异常处理关键字：
+示例：`ArithmeticException`, `NullPointerException`。
 
-- try...catch 块：用于捕获异常并处理它们。
-- finally 块：无论是否发生异常，都会执行该块。
-- throw 关键字：显式地抛出异常。
-- throws 关键字：声明方法可能会抛出特定异常。
+## 异常处理关键字
 
-## 使用 Github Copilot 进行异常处理的简单示例
+- `try...catch` 块：用于捕获异常并处理它们。
+- `finally` 块：无论是否发生异常，都会执行该块。
+- `throw` 关键字：显式地抛出异常。
+- `throws` 关键字：声明方法可能会抛出特定异常。
 
-在类开头输入一个注释，按回车和 Tab 键获取所示代码
+## 使用 GitHub Copilot 进行异常处理的简单示例
+
+在类开头输入一个注释，按回车和 Tab 键获取所示代码。
 
 ```java
 import java.util.Scanner;
@@ -1486,44 +1499,46 @@ public class SimpleException {
 }
 ```
 
-使用 GitHub copilot 的“文件未找到”检查异常示例
+使用 GitHub Copilot 的“文件未找到”检查异常示例
 
 ![](img/dbebbe5e20d39743ff28c8dae042defc_73_0.png)
 
-练习：设计一个程序提示用户输入年龄。它提到使用 try-catch 块来处理用户输入非数字值时可能发生的异常。此外，它建议创建一个自定义异常（例如 InvalidAgeException）来处理用户输入负数年龄的情况。
+## 练习
 
-（在编辑器中使用 github copilot 注释而非 GitHub Copilot 聊天，以便在编辑器中练习）
+设计一个程序提示用户输入年龄。它提到使用 `try-catch` 块来处理用户输入非数字值时可能发生的异常。此外，它建议创建一个自定义异常（例如 `InvalidAgeException`）来处理用户输入负数年龄的情况。
 
-答案：
+（在编辑器中使用 GitHub Copilot 注释而非 GitHub Copilot 聊天，以便在编辑器中练习）
 
-## Finally 块
+## 答案
 
-让我们探索 Java 中的 finally 块。
+# Finally 块
 
-### 什么是 finally 块？
+让我们探索 Java 中的 `finally` 块。
 
-finally 块是 Java 异常处理中的关键部分。
+## 什么是 finally 块？
 
-它紧跟在 try 块或 catch 块之后。
+`finally` 块是 Java 异常处理中的关键部分。
 
-无论是否发生异常，finally 块中的代码始终都会执行。
 
-finally 块的作用：
+
+它紧跟在`try`块或`catch`块之后。
+
+无论是否发生异常，`finally`块中的代码始终都会执行。
+
+`finally`块的作用：
 
 ![](img/dbebbe5e20d39743ff28c8dae042defc_74_0.png)
 
-finally 块的主要目的是确保无论受保护代码（try 块内部）发生了什么，都会采取某些操作。
+`finally`块的主要目的是确保无论受保护代码（`try`块内部）发生了什么，都会采取某些操作。
 
-它允许你在即使抛出异常的情况下，也能运行清理类型的的语句或执行必要的任务。
+它允许你在即使抛出异常的情况下，也能运行清理类型的语句或执行必要的任务。
 
-### 使用 finally 块的场景：
+## 使用`finally`块的场景
 
-让我们探索 finally 块可以发挥作用的不同情况：
+让我们探索`finally`块可以发挥作用的不同情况：
 
-- a. 当没有发生异常时：
+- **a. 当没有发生异常时**：在这种情况下，Java程序不会抛出任何异常。`finally`块会在`try`块之后执行。
 
-在这种情况下，Java 程序不会抛出任何异常。
-finally 块会在 try 块之后执行。
 示例：
 
 ```java
@@ -1546,16 +1561,14 @@ class TestFinallyBlock {
 
 输出：
 
+```
 5
-
 finally block is always executed
-
 Rest of the code...
+```
 
-- b. 当发生异常但未被 catch 块处理时：
+- **b. 当发生异常但未被`catch`块处理时**：在这种情况下，代码抛出了异常，但`catch`块无法处理它。尽管如此，`finally`块会在`try`块之后执行，然后程序异常终止。
 
-在这种情况下，代码抛出了异常，但 catch 块无法处理它。
-尽管如此，finally 块会在 try 块之后执行，然后程序异常终止。
 示例：
 
 ```java
@@ -1579,17 +1592,15 @@ public class TestFinally1 {
 
 输出：
 
+```
 Inside the try block
-
 finally block is always executed
-
 Exception in thread "main" java.lang.ArithmeticException: / by zero
 at TestFinally1.main(TestFinallyBlock1.java:8)
+```
 
-- c. 当发生异常并被 catch 块处理时：
+- **c. 当发生异常并被`catch`块处理时**：在这个示例中，Java代码抛出了异常，`catch`块处理了它。随后，`finally`块在`try-catch`块之后执行，其余代码正常执行。
 
-在这个示例中，Java 代码抛出了异常，catch 块处理了它。
-随后，finally 块在 try-catch 块之后执行，其余代码正常执行。
 示例：
 
 ```java
@@ -1613,17 +1624,16 @@ public class TestFinallyBlock2 {
 
 输出：
 
+```
 Inside try block
-
 Exception handled
-
 finally block is always executed
-
 Rest of the code...
+```
 
-记住，finally 块确保了无论是否有异常，都会执行基本的清理或资源管理任务！
+记住，`finally`块确保了无论是否有异常，都会执行基本的清理或资源管理任务！
 
-### 让我们通过 GitHub Copilot 查看 finally 块示例
+### 让我们通过 GitHub Copilot 查看`finally`块示例
 
 ![](img/dbebbe5e20d39743ff28c8dae042defc_79_0.png)
 
@@ -1632,23 +1642,25 @@ Rest of the code...
 ### 什么是多线程？
 
 多线程是 Java 的一项特性，允许程序的两个或多个部分并发执行。
+
 程序的每个部分被称为线程。
+
 线程是单个进程内的轻量级进程。
+
 其目标是通过同时运行多个线程来最大化 CPU 的利用率。
 
-### 创建线程：
+### 创建线程
 
-- 线程可以使用两种机制创建：
+线程可以使用两种机制创建：
 
-#### 继承 Thread 类：
+#### 继承`Thread`类
 
-- 我们创建一个继承 java.lang.Thread 的类。
-- 在该类中重写 `run()` 方法。
-- 线程从 `run()` 方法内部开始生命。
-- 创建我们新类的对象并调用 `start()` 来开始线程执行。
+- 我们创建一个继承`java.lang.Thread`的类。
+- 在该类中重写`run()`方法。
+- 线程从`run()`方法内部开始生命。
+- 创建我们新类的对象并调用`start()`来开始线程执行。
+
 示例：
-
-Java
 
 ```java
 class MultithreadingDemo extends Thread {
@@ -1668,14 +1680,13 @@ public class Multithread {
 }
 ```
 
-#### 实现 Runnable 接口：
+#### 实现`Runnable`接口
 
-- 创建实现 java.lang.Runnable 的新类。
-- 重写该类中的 `run()` 方法。
-- 实例化 Thread 对象并对其调用 `start()`。
+- 创建实现`java.lang.Runnable`的新类。
+- 重写该类中的`run()`方法。
+- 实例化`Thread`对象并对其调用`start()`。
+
 示例：
-
-Java
 
 ```java
 class MultithreadingDemo implements Runnable {
@@ -1695,49 +1706,45 @@ public class Multithread {
 }
 ```
 
-## Thread 类与 Runnable 接口：
+## `Thread`类与`Runnable`接口
 
-继承 Thread：
+**继承`Thread`**：
 
 - 由于 Java 不支持多重继承，无法继承其他类。
-- 提供了 `yield()`、`interrupt()` 等内置方法。
+- 提供了`yield()`、`interrupt()`等内置方法。
 
-实现 Runnable：
+**实现`Runnable`**：
 
 - 允许继承其他基类。
 - 提供了一个可供多个线程使用的对象。
 
-## 多线程的优势：
+## 多线程的优势
 
-- 并发：多个线程并发执行。
-- 内存效率：线程共享内存，节省内存空间。
-- 更快的上下文切换：线程之间的切换比进程切换更快。
-
-
-
-
+- **并发**：多个线程并发执行。
+- **内存效率**：线程共享内存，节省内存空间。
+- **更快的上下文切换**：线程之间的切换比进程切换更快。
 
 记住，多线程对于高效利用系统资源和保持应用程序响应速度至关重要！
 
-使用 GitHub Copilot 的示例
+### 使用 GitHub Copilot 的示例
 
-## 通过扩展 Thread 类并在在聊天框中询问 GitHub Copilot 创建线程
+## 通过扩展`Thread`类并在聊天框中询问 GitHub Copilot 创建线程
 
 ![](img/dbebbe5e20d39743ff28c8dae042defc_83_0.png)
 
-然后在在下一张截图中，你使用 `start` 方法来启动线程
+然后在下一张截图中，你使用`start`方法来启动线程。
 
-让我们像下方突出那样提一个后续问题
+让我们像下方突出那样提一个后续问题：
 
 ![](img/dbebbe5e20d39743ff28c8dae042defc_85_0.png)
 
 GitHub Copilot 的回答如下：
 
-在 Java 中，你不能直接向 `Thread` 的 `run` 方法传递参数，因为它是 `Thread` 类中定义的一个没有任何参数的方法。然而，你可以通过将参数传递给扩展 `Thread` 的类的构造函数，然后在 `run` 方法中使用这些参数来向 `Thread` 传递参数。这是实现方法：
+在 Java 中，你不能直接向`Thread`的`run`方法传递参数，因为它是`Thread`类中定义的一个没有任何参数的方法。然而，你可以通过将参数传递给扩展`Thread`的类的构造函数，然后在`run`方法中使用这些参数来向`Thread`传递参数。这是实现方法：
 
-首先，修改你的 `Thread` 类，包含一个可以接受你需要的参数的构造函数。将这些参数存储为实例变量，然后在 `run` 方法中使用它们。
+首先，修改你的`Thread`类，包含一个可以接受你需要的参数的构造函数。将这些参数存储为实例变量，然后在`run`方法中使用它们。
 
-```
+```java
 package org.example.multithreading;
 
 class MyThread extends Thread {
@@ -1756,9 +1763,9 @@ class MyThread extends Thread {
 }
 ```
 
-我应该如何在 `Thread` 类的 `run` 方法中处理异常？
+我应该如何在`Thread`类的`run`方法中处理异常？
 
-```
+```java
 package org.example.multithreading;
 
 public class ThreadExampleUsingThreadClass {
@@ -1772,22 +1779,23 @@ public class ThreadExampleUsingThreadClass {
 }
 ```
 
-在这个示例中，5 和 7 分别是传递给 `MyThread` 实例 `t1` 和 `t2` 的参数。这些值随后会在每个线程的 `run` 方法中使用。
+在这个示例中，5 和 7 分别是传递给`MyThread`实例`t1`和`t2`的参数。这些值随后会在每个线程的`run`方法中使用。
 
 > 使用 1 次引用
-> 我应该如何在 `Thread` 类的 `run` 方法中处理异常？
+
+> 我应该如何在`Thread`类的`run`方法中处理异常？
 
 让我们看上图中蓝色所示的另一个后续问题，回答如下：
 
 ![](img/dbebbe5e20d39743ff28c8dae042defc_88_0.png)
 
-## 通过实现 Runnable 接口创建线程
+## 通过实现`Runnable`接口创建线程
 
-如果你在最后一张图片中看到 GitHub Copilot 已经提供了一个使用 `Runnable` 接口创建线程的后续建议和问题
+如果你在最后一张图片中看到 GitHub Copilot 已经提供了一个使用`Runnable`接口创建线程的后续建议和问题：
 
-我该如何使用 `Runnable` 接口而不是扩展 `Thread` 类来实现多线程？
+我该如何使用`Runnable`接口而不是扩展`Thread`类来实现多线程？
 
-GitHub Copilot 给出的回答如下，然后运行程序
+GitHub Copilot 给出的回答如下，然后运行程序。
 
 ## 练习：使用 GitHub Copilot 编写线程程序以打印线程的基本状态
 
@@ -1795,60 +1803,61 @@ GitHub Copilot 给出的回答如下，然后运行程序
 
 编写一个 Java 程序来演示不同的线程状态。
 
+```java
 // 创建一个经过所有状态（NEW, RUNNABLE, AND TERMINATED）的线程，
 // 在每个状态转换之间有一个微小的延迟。在每个状态下打印当前状态。
+```
 
 ![](img/dbebbe5e20d39743ff28c8dae042defc_89_0.png)
 
-## 用于 Java 的 Github copilot 和 Spring Boot 基础
+## 用于 Java 的 GitHub Copilot 和 Spring Boot 基础
 
 ![](img/dbebbe5e20d39743ff28c8dae042defc_90_0.png)
 
 ## Java 中的同步
 
-**Java 中的同步** 是多线程环境中管理共享资源并发访问的关键概念。
+**Java 中的同步**是多线程环境中管理共享资源并发访问的关键概念。
+
 让我们探索一下它包含的内容：
 
-### 同步的目的：
+### 同步的目的
 
-同步的目标是确保时间只有一个线程可以访问共享源（如变量、对象或方法）。
+同步的目标是确保同一时间只有一个线程可以访问共享资源（如变量、对象或方法）。
 
 通过防止多个线程同时修改相同的数据，同步有助于避免数据损坏并确保结果的一致性。
 
-### 同步的类型：
+### 同步的类型
 
 在 Java 中主要有两种同步类型：
 
-- 进程同步：处理不同进程之间的同步。
-- 线程同步：关注单个进程内部（线程之间）的同步。
+- **进程同步**：处理不同进程之间的同步。
+- **线程同步**：关注单个进程内部（线程之间）的同步。
 
-### 线程同步：
+### 线程同步
 
 在线程同步中，我们有两个主要概念：
 
-- 互斥：确保线程在共享数据时互不干扰。
+- **互斥**：确保线程在共享数据时互不干扰。通过以下方式实现：
+  - `synchronized`方法：为共享资源锁定对象。
+  - `synchronized`块：允许对同步进行细粒度的控制。
+  - 静态同步：适用于静态方法。
+- **线程间通信（协作）**：促进线程之间的通信。示例包括使用`wait()`、`notify()`和`notifyAll()`。
 
-通过以下方式实现：
-
-- `synchronized` 方法：为共享资源锁定对象。
-- `synchronized` 块：允许对同步进行细粒度的控制。
-- 静态同步：适用于静态方法。
-
-线程间通信（协作）：促进线程之间的通信。
-
-示例包括使用 `wait()`、`notify()` 和 `notifyAll()`。
-
-## Java 中锁的概念：
+## Java 中锁的概念
 
 同步围绕着一个称为锁（lock）或监视器（monitor）的内部实体。
+
 Java 中的每个对象都有关联的锁。
+
 线程在访问其字段之前必须获取对象的锁，并在之后释放它。
-Java 5 引入了 `java.util.concurrent.locks` 包，带有各种锁实现。
-没有同步的示例：
+
+Java 5 引入了`java.util.concurrent.locks`包，带有各种锁实现。
+
+### 没有同步的示例
 
 考虑以下没有同步的示例：
 
-```
+```java
 class Table {
     void printTable(int n) {
         for (int i = 1; i <= 5; i++) {
@@ -1863,20 +1872,16 @@ class Table {
 }
 
 class Thread1 extends Thread {
-```
+    Table t;
 
-```
-Table t;
-
-MyThread1(Table t) {
-    this.t = t;
+    MyThread1(Table t) {
+        this.t = t;
+    }
+    public void run() {
+        t.printTable(5);
+    }
 }
-public void run() {
-    t.printTable(5);
-}
-```
 
-```
 class MyThread2 extends Thread {
     Table t;
 
@@ -1887,9 +1892,7 @@ class MyThread2 extends Thread {
         t.printTable(10);
     }
 }
-```
 
-```
 public class TestSynchronization {
     public static void main(String[] args) {
         Table obj = new Table();
@@ -1901,8 +1904,9 @@ public class TestSynchronization {
 }
 ```
 
-```
 输出（由于缺乏同步导致不一致）：
+
+```
 5
 100
 10
@@ -1915,17 +1919,17 @@ public class TestSynchronization {
 500
 ```
 
-## Java Synchronized 方法：
+## Java `synchronized`方法
 
-当你将一个方法声明为 `synchronized` 时，它就变成了一个同步方法。
+当你将一个方法声明为`synchronized`时，它就变成了一个同步方法。
 
-线程在调用 `synchronized` 方法时会自动获取对象的锁。
+线程在调用`synchronized`方法时会自动获取对象的锁。
 
 当线程完成其任务时，锁会被释放。
 
-## 示例：
+### 示例
 
-```
+```java
 class Table {
     synchronized void printTable(int n) {
         // 同步方法
@@ -1941,13 +1945,17 @@ class Table {
 }
 ```
 
-记住，同步确保了线程安全并防止了多线程应用程序中的数据不一致
+记住，同步确保了线程安全并防止了多线程应用程序中的数据不一致。
 
-练习：尝试使用 GitHub copilot 并根据以下提示词创建
+### 练习：尝试使用 GitHub Copilot 并根据以下提示词创建
 
+```java
 // 设计一个带有两个线程的程序，它们同时增加一个共享计数器变量。
 // 使用 synchronized 关键字或锁对象实现同步，以确保
 // 计数器正确增加而不会产生数据损坏或竞态条件。
+```
+
+
 
 答案：在接下来的两张截图中
 
@@ -1988,8 +1996,7 @@ public class SyncExample {
 
 ### 什么是 Java Executor Framework？
 
-Java Executor Framework 是属于 `java.util.concurrent` 包的。
-
+Java Executor Framework 是属于`java.util.concurrent`包的。
 
 它提供了一种并发管理和执行任务的方法，而无需每次创建新线程。
 
@@ -2010,23 +2017,29 @@ Executor 框架简化了线程管理并增强了代码的可读性。
 ### 线程池的类型
 
 ### 固定线程池
+
 固定线程池在池启动时会创建固定数量的线程。对于工作负载可预测的应用，固定线程池是一个很好的选择。
 
 ## 缓存线程池
+
 缓存线程池根据需要创建新线程，并在空闲时回收它们。这种类型的线程池是工作负载不可预测的应用的良好选择。
 
 ## 定时线程池
+
 定时线程池按指定的间隔执行任务。它是需要定期执行任务的应用的良好选择。
 
 可用于创建和管理线程池的类
 
-- **Executors**: 该类提供了静态方法，用于创建常见类型的线程池。
-- **ThreadPoolExecutor**: 该类提供了一种灵活的创建和管理线程池的方法。
+- `Executors`：该类提供了静态方法，用于创建常见类型的线程池。
+
+- `ThreadPoolExecutor`：该类提供了一种灵活的创建和管理线程池的方法。
 
 ### a. SingleThreadExecutor
 
 创建一个带有单个线程的线程池。
+
 **顺序地**执行任务（一个接一个）。
+
 语法：
 
 ```
@@ -2036,9 +2049,11 @@ ExecutorService executor = Executors.newSingleThreadExecutor();
 ### b. FixedThreadPool (n):
 
 维护数固定数量的线程（由 n 指定）。
+
 任务由这些线程并发执行。
 
 多余的任务存储在队列中。
+
 语法：
 
 ```
@@ -2048,8 +2063,11 @@ ExecutorService fixedPool = Executors.newFixedThreadPool(2);
 ### c. CachedThreadPool:
 
 根据需要创建线程并重用现有线程。
+
 如果没有可用线程，则会创建一个新的。
+
 使用 SynchronousQueue。
+
 语法：
 
 ```
@@ -2059,11 +2077,14 @@ ExecutorService executorService = Executors.newCachedThreadPool();
 ### d. ScheduledExecutor:
 
 用于定期间隔运行或带延迟运行的任务。
-基于 ScheduledExecutorService 接口。
+
+基于`ScheduledExecutorService`接口。
+
 有两种调度方法：
 
-- scheduleAtFixedRate: 以固定间隔执行任务。
-- scheduleWithFixedDelay: 在当前任务完成后开始延迟倒计时。
+- `scheduleAtFixedRate`：以固定间隔执行任务。
+
+- `scheduleWithFixedDelay`：在当前任务完成后开始延迟倒计时。
 
 语法：
 
@@ -2073,7 +2094,7 @@ ScheduledExecutorService scheduledExecutor = Executors.newScheduledThreadPool(1)
 
 ## 使用示例：
 
-假设我们有一个任务类 MyTask：
+假设我们有一个任务类`MyTask`：
 
 ```
 class MyTask implements Runnable {
@@ -2084,8 +2105,9 @@ class MyTask implements Runnable {
 }
 ```
 
-```
 我们可以创建一个执行器并提交任务：
+
+```
 public class ExecutorExample {
     public static void main(String[] args) {
         ExecutorService executor = Executors.newFixedThreadPool(3);
@@ -2100,25 +2122,30 @@ public class ExecutorExample {
 ## 优势：
 
 - 高效的线程重用。
+
 - 简化的线程管理。
+
 - 提高性能和响应速度。
 
 记住，Java Executor 框架是有效管理并发任务的价值工具！
 
 ## 线程池和 Executor
 
-线程池和执行器是 java.util.concurrent 包的一部分，提供了一种强大且灵活的方法来并发管理和执行任务。它们帮助你高效地创建、调度和管理线程，减少与创建和管理单个线程相关的开销。
+线程池和执行器是`java.util.concurrent`包的一部分，提供了一种强大且灵活的方法来并发管理和执行任务。它们帮助你高效地创建、调度和管理线程，减少与创建和管理单个线程相关的开销。
 
 线程池：线程池是预先创建并准备好执行任务的线程线程集合。与其为每个任务创建一个新线程，不如将任务提交到线程池，并将将其分配给其中一个可用的工作线程来执行该任务。当任务完成后，工作线程将返回池中并变为可以执行另一个任务的状态。
 
 线程池有用是因为：
+
 - 它们减少了为短寿命任务创建和销毁线程的开销。
+
 - 它们提供了限制创建线程数量的方法，防止资源耗尽。
+
 - 它们可以帮助更有效地管理线程的生命周期
 
 固定线程池示例
 
-固定线程池使用 Executors.newThreadPool(n) 创建，其中 n 是你想要在池中的线程数。
+固定线程池使用`Executors.newThreadPool(n)`创建，其中 n 是你想要在池中的线程数。
 
 ```
 import java.util.concurrent.ExecutorService;
@@ -2177,7 +2204,7 @@ class Task implements Runnable {
 
 ## 缓存线程池示例
 
-Executors.newCachedThreadPool() 方法提供了一个根据需要创建新线程的线程池，但在可用时将重用之前构造的线程。这些对于执行许多短寿命异步任务的程序是理想的。
+`Executors.newCachedThreadPool()`方法提供了一个根据需要创建新线程的线程池，但在可用时将重用之前构造的线程。这些对于执行许多短寿命异步任务的程序是理想的。
 
 只需在类上尝试下面的注释并使用回车、空格和制表符来完成程序
 
@@ -2208,6 +2235,7 @@ Lambda 演算对编程语言理论和函数式编程产生了巨大影响。
 ## 编程范式的分类：编程范式大致可分为：
 
 - **命令式**：程序由改变语句语句。
+
 - **声明式**：表达逻辑而不指定控制流。
 
 FP 是声明式编程的一个子集。
@@ -2215,6 +2243,7 @@ FP 是声明式编程的一个子集。
 ## 编程语言的分类：基于对函数式编程的支持：
 
 - **纯函数式语言**（例如 Haskell）：仅允许纯函数式程序。
+
 - **函数式语言**（例如 Scala, Clo）：在支持其他范式的同时支持函数式编程。
 
 ## Java（带有 FP 特性）：通过 Java 8+ 特性支持函数式编程
@@ -2222,10 +2251,15 @@ FP 是声明式编程的一个子集。
 Java 函数式编程的核心概念：
 
 - Lambda 表达式：允许代码简洁的匿名函数。
+
 - 方法引用：将方法作为一等公民引用。
-- 函数式接口：只有一个抽象方法的接口（例如 Runnable, Predicate）。
+
+- 函数式接口：只有一个抽象方法的接口（例如 `Runnable`, `Predicate`）。
+
 - 高阶函数：接受其他函数作为参数。
+
 - 不可变性：避免可变状态。
+
 - Stream API：允许对集合进行函数风格的操作。
 
 示例（Lambda 表达式）：
@@ -2243,11 +2277,12 @@ numbers.stream()
 Java 函数式编程的优势：
 
 - 简洁性：用更少的代码表达复杂操作。
+
 - 可读性：关注“做什么”，而不是“怎么做”。
+
 - 并行性：任务更容易进行并行化。
+
 - 可测试性：纯函数更容易测试。
-
-
 
 记住，Java 中的函数式编程可以提高代码质量和可维护性！
 
@@ -2280,7 +2315,9 @@ Java
 ### 箭头运算符 (->):
 
 箭头运算符将参数与 Lambda 体隔开。
+
 它表示接下来的代码代表了 Lambda 的实现。
+
 示例：
 
 ## Java
@@ -2292,7 +2329,9 @@ Java
 ### Lambda 体：
 
 Lambda 体指定了调用 Lambda 表达式时要执行的代码。
+
 如果 Lambda 体只包含单个表达式，可以省略大括号 {}，该表达式将作为 Lambda 表达式的结果。
+
 示例：
 
 ## Java
@@ -2305,6 +2344,7 @@ Lambda 体指定了调用 Lambda 表达式时要执行的代码。
 ### 函数式接口：
 
 Lambda 表达式通常与函数式接口结合使用。
+
 函数式接口是一个有一个抽象方法的接口。
 
 Lambda 表达式提供了一种更简洁的方式来实现这些接口，而无需创建匿名内部类。
@@ -2320,7 +2360,7 @@ interface MyFunction {
 MyFunction add = (x, y) -> x + y;
 ```
 
-我们已经看过没有 Lambda 表达式的 Runnable 接口示例，现在让我们在 GitHub Copilot 的帮助下看看如何使用 Lambda 表达式。
+我们已经看过没有 Lambda 表达式的`Runnable`接口示例，现在让我们在 GitHub Copilot 的帮助下看看如何使用 Lambda 表达式。
 
 答案：
 
@@ -2345,7 +2385,8 @@ public class RunnableExample implements Runnable {
 ```
 
 ### GitHub Copilot Chat
-在 Java 中使用 Lambda 表达式创建 Runnable，我们可以从中学习并改进。
+
+在 Java 中使用 Lambda 表达式创建`Runnable`，我们可以从中学习并改进。
 
 ```java
 // 使用 lambda 表达式的 Runnable 接口示例
@@ -2366,12 +2407,15 @@ public class LambdaRunnable {
 }
 ```
 
-在这个示例中，Lambda 表达式 { ... } 被用于定义 Runnable 接口的实现。Runnable 被传递给 Thread 构造函数。
+在这个示例中，Lambda 表达式`{ ... }`被用于定义`Runnable`接口的实现。`Runnable`被传递给`Thread`构造函数。
 
 - 使用了 4 处引用
-- 你能解释 lambda 表达式如何简化 Java 中 Runnable 实例的创建吗？
 
-如果你想逐行理解所选的代码部分，可以像上面一样选择代码，并在 github copilot 中输入 "/explain"
+- 你能解释 lambda 表达式如何简化 Java 中`Runnable`实例的创建吗？
+
+如果你想逐行理解所选的代码部分，可以像上面一样选择代码，并在 github copilot 中输入`/explain`
+
+
 
 ```java
 package com.example;
@@ -2395,9 +2439,10 @@ public class LambdaRunnableExample {
 
 探索在线程中使用 Lambda 表达式的使用。
 
-Lambda 表达式是 Java 中的一种函数式接口，表示一个可以被执行的命令。它有一个单一的方法 (run)，其中包含代码体。
+Lambda 表达式是 Java 中的一种函数式接口，表示一个可以被执行的命令。它有一个单一的方法 (`run`)，其中包含代码体。
 
-在代码中，使用 Lambda 表达式创建了一个 runnable 对象：
+在代码中，使用 Lambda 表达式创建了一个 `runnable` 对象：
+
 ```java
 Runnable runnable = () -> {
     for (int i = 0; i < 3; i++) {
@@ -2406,7 +2451,7 @@ Runnable runnable = () -> {
 };
 ```
 
-创建了两个线程对象，它们每个都有自己的 runnable。这意味着当每个线程被启动时，它将执行在 runnable 对象中定义的代码。
+创建了两个线程对象，它们每个都有自己的 `runnable`。这意味着当每个线程被启动时，它将执行在 `runnable` 对象中定义的代码。
 
 ```java
 Thread thread1 = new Thread(runnable);
@@ -2416,7 +2461,7 @@ Thread thread2 = new Thread(runnable);
 thread2.start();
 ```
 
-让我们来看另一个使用 Comparator 接口的 Lambda 表达式示例。
+让我们来看另一个使用 `Comparator` 接口的 Lambda 表达式示例。
 
 在 GitHub Copilot Chat 中尝试输入：
 
@@ -2453,6 +2498,7 @@ public class LambdaComparatorExample {
 ## 单抽象方法是函数式接口的核心特征。
 
 **目的：**
+
 函数式接口的设计是为了方便 Lambda 表达式和方法引用的使用。
 
 它们允许你将代码（函数）表示为接口的实例。
@@ -2463,24 +2509,21 @@ public class LambdaComparatorExample {
 
 ## @FunctionalInterface 注解：
 
-为了显式声明一个接口为函数式接口，可以使用 @FunctionalInterface 注解。该注解确保接口仅有一个抽象方法。如果存在多个抽象方法，编译器将标记错误。
+为了显式声明一个接口为函数式接口，可以使用 `@FunctionalInterface` 注解。该注解确保接口仅有一个抽象方法。如果存在多个抽象方法，编译器将标记错误。
 
 ## 函数式接口的示例：
 
 Java SE 8 中的一些内置函数式接口包括：
 
-- Runnable：代表一个可以异步执行的任务。
-- ActionListener：用于处理 GUI 事件。
-- Comparable：用于比较对象。
-- Callable：代表一个返回结果或抛出异常的任务。
+- `Runnable`：代表一个可以异步执行的任务。
+- `ActionListener`：用于处理 GUI 事件。
+- `Comparable`：用于比较对象。
+- `Callable`：代表一个返回结果或抛出异常的任务。
 
 这是一个使用 Lambda 表达式使用函数式接口的示例：
 
 ```java
-Java // Java 8 之前
-```
-
-```java
+// Java 8 之前
 new Thread(new Runnable() {
     @Override
     public void run() {
@@ -2508,7 +2551,7 @@ new Thread(() -> {
 
 上面的代码是在 Java 中使用函数式接口的简单示例。
 
-在顶部声明了一个名为 MathOperation 的函数式接口。函数式接口包含一个抽象方法。在这种情况下，方法是 `operate(int a, int b)`。它接收两个整数作为参数并返回一个整数。
+在顶部声明了一个名为 `MathOperation` 的函数式接口。函数式接口包含一个抽象方法。在这种情况下，方法是 `operate(int a, int b)`。它接收两个整数作为参数并返回一个整数。
 
 ```java
 @FunctionalInterface
@@ -2517,7 +2560,7 @@ interface MathOperation {
 }
 ```
 
-在 `FunctionalInterfaceExample` 类的 `main` 方法中，使用 Lambda 表达式创建了四个 MathOperation 实例。Lambda 表达式是一个接收参数并返回值的短代码块。Lambda 表达式类似于方法，但它们不需要名称，并且可以直接在方法体内实现。
+在 `FunctionalInterfaceExample` 类的 `main` 方法中，使用 Lambda 表达式创建了四个 `MathOperation` 实例。Lambda 表达式是一个接收参数并返回值的短代码块。Lambda 表达式类似于方法，但它们不需要名称，并且可以直接在方法体内实现。
 
 ```java
 MathOperation addition = (a, b) -> a + b;
@@ -2526,9 +2569,9 @@ MathOperation multiplication = (a, b) -> a * b;
 MathOperation division = (a, b) -> a / b;
 ```
 
-每个 Lambda 表达式实现了 MathOperation 接口的 operate 方法。addition 实例相加它的参数，subtraction 实例减去它们，multiplication 实例相乘它们，而 division 实例除以它们。
+每个 Lambda 表达式实现了 `MathOperation` 接口的 `operate` 方法。`addition` 实例相加它的参数，`subtraction` 实例减去它们，`multiplication` 实例相乘它们，而 `division` 实例除以它们。
 
-最后，调用每个 MathOperation 实例的 operate 方法，并传入 10 和 5 作为参数，并将结果打印到控制台。
+最后，调用每个 `MathOperation` 实例的 `operate` 方法，并传入 10 和 5 作为参数，并将结果打印到控制台。
 
 ```java
 System.out.println("Addition: " + addition.operate(10, 5));
@@ -2536,9 +2579,6 @@ System.out.println("Subtraction: " + subtraction.operate(10, 5));
 System.out.println("Multiplication: " + multiplication.operate(10, 5));
 System.out.println("Division: " + division.operate(10, 5));
 ```
-
-
-
 
 这段代码演示了如何在 Java 中使用函数接口和 lambda 表达式来创建简单且可重用的代码。
 
@@ -2690,6 +2730,14 @@ public class MethodReferenceExample {
 
 虽然 Java 是一种面向对象的语言，没有函数式编程语言那样的第一等函数，但 Java 8 引入的 lambda 表达式和函数接口带来了将函数视为值的能力，使得高阶函数成为可能。
 
+
+
+# Java 高阶函数示例
+
+## 接受函数作为参数的高阶函数
+
+以下示例展示了如何将函数作为参数传递给另一个函数：
+
 ```java
 import java.util.function.Function;
 
@@ -2710,6 +2758,8 @@ public class HigherOrderExample {
 
 在 `applyOperation` 内部，提供的函数 `operation`（在这种情况下是 `square`）使用 `x` 调用并返回结果。
 
+## 返回函数的高阶函数
+
 现在有一个返回函数的高阶函数示例：
 
 ```java
@@ -2727,13 +2777,13 @@ public class HigherOrderExample {
 
 在 `main` 方法中，我们调用 `makePower.apply(2)`，它返回一个对其参数平方（取 2 次方）的函数。我们将该函数存储在变量 `square` 中，然后调用 `square.apply(3)` 得到结果 9。
 
-
-
-
+## 高阶函数的应用与优势
 
 高阶函数允许在 Java 中实现强大的函数编程技术，例如函数组合、柯里化和偏函数应用。它们通过将函数视为一等公民，使得代码更具表现力且更加简洁。
 
-在 IntelliJ Idea 中使用 Github Copilot 尝试以下内容：
+## 在 IntelliJ IDEA 中使用 GitHub Copilot 的示例
+
+在 `IntelliJ IDEA` 中使用 `GitHub Copilot` 尝试以下内容：
 
 ```java
 package org.example.functionalprogramming;
@@ -2757,4 +2807,3 @@ public class HigherOrderFunctionsExample {
 ```
 
 ## 感谢
-

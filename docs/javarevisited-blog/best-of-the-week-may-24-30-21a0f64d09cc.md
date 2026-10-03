@@ -1,10 +1,11 @@
+
 # 本周最佳—5 月 24 日/30 日
 
 > 原文：<https://medium.com/javarevisited/best-of-the-week-may-24-30-21a0f64d09cc?source=collection_archive---------3----------------------->
 
 嗨伙计们！我们又迎来了“本周最佳”的另一个约会，回顾上周的最佳文章，在这些文章中，我们发表了许多有趣的文章。让我们看看他们。
 
-# 浏览次数最多的文章
+## 浏览次数最多的文章
 
 [比较 Java 中的 ArrayList 和 linked list](/javarevisited/arraylist-vs-linkedlist-your-next-interview-question-5cd824562be0)作者[维克拉姆·古普塔](https://medium.com/u/7a980d8abe25?source=post_page-----21a0f64d09cc--------------------------------)
 
@@ -18,7 +19,7 @@
 
 [Java 多线程中的死锁、wait()、notify()和 notify all()](/javarevisited/deadlock-wait-notify-and-notifyall-in-java-multi-threading-cf09522a6f74)作者[维克拉姆·古普塔](https://medium.com/u/7a980d8abe25?source=post_page-----21a0f64d09cc--------------------------------)
 
-# 资源文章
+## 资源文章
 
 [React 开发者需要学习的 7 门最佳在线课程 next . js](/javarevisited/7-best-online-courses-to-learn-next-js-for-react-developers-ced862a3864)作者 [javinpaul](https://medium.com/u/bb36d8439904?source=post_page-----21a0f64d09cc--------------------------------)
 

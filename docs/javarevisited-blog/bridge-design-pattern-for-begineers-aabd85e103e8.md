@@ -1,3 +1,4 @@
+
 # 初学者的桥梁设计模式
 
 > 原文：<https://medium.com/javarevisited/bridge-design-pattern-for-begineers-aabd85e103e8?source=collection_archive---------1----------------------->
@@ -6,7 +7,7 @@
 
 杰克·安斯蒂在 [Unsplash](https://unsplash.com/s/photos/bridges?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 上的照片
 
-Bridge 设计模式是四人帮设计模式之一。
+`Bridge`设计模式是四人帮设计模式之一。
 
 桥梁设计模式属于结构设计模式。它帮助我们分离抽象和实现。
 
@@ -36,7 +37,7 @@ public abstract class Notification {
 }
 ```
 
-通知类将有一个数据成员作为`NotificationSender`，也将有一个`send()`方法。NotificationSender 类如下所示。
+`Notification`类将有一个数据成员作为`NotificationSender`，也将有一个`send()`方法。`NotificationSender`类如下所示。
 
 ```
 public interface NotificationSender {
@@ -61,7 +62,7 @@ public class PushNotification extends Notification {
 }
 ```
 
-下面是“TextNotification”类。
+下面是`TextNotification`类。
 
 ```
 public class TextNotification extends Notification {
@@ -77,7 +78,7 @@ public class TextNotification extends Notification {
 }
 ```
 
-我们将有一个发送通知的`PushNotificationSender` 类。
+我们将有一个发送通知的`PushNotificationSender`类。
 
 ```
 package bridgedesignpattern;
@@ -90,7 +91,7 @@ public class PushNotificationSender implements NotificationSender {
 }
 ```
 
-类似的还有`TextNotificationSender` 类会发送文本通知。
+类似的还有`TextNotificationSender`类会发送文本通知。
 
 ```
 package bridgedesignpattern;public class TextNotificationSender implements NotificationSender {
@@ -101,7 +102,7 @@ package bridgedesignpattern;public class TextNotificationSender implements Notif
 }
 ```
 
-现在让我们看看代码是否有效:
+现在让我们看看代码是否有效：
 
 ```
 package bridgedesignpattern;
@@ -119,7 +120,7 @@ public class NotificationSenderImplementation {
 }
 ```
 
-完成后，我们的输出如下:
+完成后，我们的输出如下：
 
 ```
 Push Notification sending.......
@@ -128,8 +129,10 @@ Text Notification sending.......
 
 # 我们取得了什么成就？
 
-*   解耦:实现和[抽象](https://javarevisited.blogspot.com/2017/04/difference-between-abstraction-and-encapsulation-in-java-oop.html)是解耦的，两者都可以单独开发。
+*   解耦：实现和[抽象](https://javarevisited.blogspot.com/2017/04/difference-between-abstraction-and-encapsulation-in-java-oop.html)是解耦的，两者都可以单独开发。
+
 *   跨平台开发的较好解决方案。
+
 *   它有助于两个不兼容的接口协同工作。
 
 编码快乐！！！！

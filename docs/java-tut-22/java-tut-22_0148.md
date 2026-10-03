@@ -1,14 +1,11 @@
+
 # 什么是异常？
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/exceptions/definition.html`](https://docs.oracle.com/javase/tutorial/essential/exceptions/definition.html)
 
 术语*异常*是“异常事件”的简称。
 
-* * *
-
 **定义：** *异常*是程序执行过程中发生的事件，打断了程序正常指令流程。
-
-* * *
 
 当方法内部发生错误时，方法会创建一个对象并将其交给运行时系统。这个对象称为*异常对象*，包含有关错误的信息，包括错误发生时的类型和程序状态。创建异常对象并将其交给运行时系统称为*抛出异常*。
 

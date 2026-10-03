@@ -1,13 +1,14 @@
+
 # 如何用 jQuery 动态添加/删除文本框
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jquery/how-to-add-remove-textbox-dynamically-with-jquery/>
 
-在 jQuery 中，动态添加或删除文本框非常容易。这个想法很简单，只是结合使用 **'counter** '变量，jQuery **createElement()** ， **html()** 和 **remove()** 方法。请参见下面的示例:
+在 jQuery 中，动态添加或删除文本框非常容易。这个想法很简单，只是结合使用`counter`变量、jQuery 的`createElement()`、`html()`和`remove()`方法。请参见下面的示例：
 
 ## jQuery 动态文本框示例
 
 ```java
- <html>
+<html>
 <head>
 <title>jQuery add / remove textbox example</title>
 
@@ -84,9 +85,9 @@ $(document).ready(function(){
 <input type='button' value='Get TextBox Value' id='getButtonValue'>
 
 </body>
-</html> 
+</html>
 ```
 
-[http://web.archive.org/web/20221225130025if_/https://www.mkyong.com/wp-content/uploads/jQuery/jQuery-add-remove-textbox.html](http://web.archive.org/web/20221225130025if_/https://www.mkyong.com/wp-content/uploads/jQuery/jQuery-add-remove-textbox.html)
+<http://web.archive.org/web/20221225130025if_/https://www.mkyong.com/wp-content/uploads/jQuery/jQuery-add-remove-textbox.html>
 
 [Try Demo](http://web.archive.org/web/20221225130025/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-add-remove-textbox.html)<input type="hidden" id="mkyong-current-postId" value="5031">

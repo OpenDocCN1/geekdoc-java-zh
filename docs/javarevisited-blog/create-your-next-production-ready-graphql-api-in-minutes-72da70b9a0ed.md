@@ -1,4 +1,5 @@
-# 在几分钟内创建下一个生产就绪的 GraphQL API。
+
+# 在几分钟内创建下一个生产就绪的 GraphQL API
 
 > 原文：<https://medium.com/javarevisited/create-your-next-production-ready-graphql-api-in-minutes-72da70b9a0ed?source=collection_archive---------2----------------------->
 
@@ -8,7 +9,7 @@
 
 如果我告诉您，您可以在几分钟内创建一个使用 Postgres 实现持久性的全功能 GraphQL 服务器，那会怎么样？如果您将来更改了表模式，您的 GraphQL API 会自动检测到这种更改并自动进行自我更改？你会相信我吗？听起来很神奇，对吧？好吧，我向你保证这里没有魔法。我们将使用一些看起来像魔术一样的库。激动吗？好吧，让我们看看我们今天将使用哪些工具。
 
-**波斯特格里斯:我们心爱的大象。**
+## 波斯特格里斯：我们心爱的大象
 
 ![](img/3efbca83aa7057208b48409bf75ade45.png)
 
@@ -16,13 +17,13 @@
 
 当我说很多的时候，Postgres 有很多特点，哦，天哪，真的很多。事实上，Postgres 比其他任何开源数据库都有更多的特性。你知道 Postgres 也可以处理你的申请的授权部分吗？不仅如此，你还可以用 Postgres 编写你的业务代码。不相信我？今天，我们将做同样的事情，我们的业务代码将只使用 Postgres。
 
-**海报:巫师。**
+## 海报：巫师
 
 ![](img/915d993f3a61d561d12c308b950ddd77.png)
 
 Artem Maltsev 在 [Unsplash](https://unsplash.com/s/photos/wizard?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 上拍摄的照片
 
-PostGraphile 将为我们做所有的繁重工作，它将与 Postgres DB 连接，并将我们的数据库作为 graphQL API 公开。在 Postgtaphile 的官方[网站](https://www.graphile.org/postgraphile/)上，他们已经将其定义为:
+PostGraphile 将为我们做所有的繁重工作，它将与 Postgres DB 连接，并将我们的数据库作为 graphQL API 公开。在 Postgtaphile 的官方[网站](https://www.graphile.org/postgraphile/)上，他们已经将其定义为：
 
 > PostGraphile 会自动检测表、列、索引、关系、视图、类型、函数、注释等——提供一个对数据高度智能的 GraphQL 服务器，当您修改数据库时，它会自动更新自己而无需重新启动。
 
@@ -32,7 +33,7 @@ PostGraphile 将为我们做所有的繁重工作，它将与 Postgres DB 连接
 
 首先，让我们创建两个模式。
 
-```
+```sql
 create schema medium_example_public;
 create schema medium_example_private;
 commit;
@@ -42,7 +43,7 @@ commit;
 
 现在，让我们在公共模式中创建一个表来包含作者的数据。
 
-```
+```sql
 create table medium_example_public.author (
  id               serial primary key,
  name       text not null check (char_length(name) < 80),
@@ -53,7 +54,7 @@ create table medium_example_public.author (
 
 现在每个作家都可以写关于某个主题的文章，所以让我们首先创建一个具有不同主题名称的 [enum](https://www.java67.com/2018/07/java-enum-with-constructor-example.html) ，稍后在帖子的表格中使用。
 
-```
+```sql
 create type medium_example_public.post_topic as enum (
 'Programming',
 'Gaming',
@@ -64,7 +65,7 @@ create type medium_example_public.post_topic as enum (
 
 现在，让我们再创建一个表来存储所有的文章。
 
-```
+```sql
 create table medium_example_public.post (
 id               serial primary key,
 author_id        integer not null references
@@ -78,12 +79,13 @@ created_at       timestamp default now()
 
 到目前为止，我们已经创建了 2 个表，我们还可以在自动生成的文档中添加表和列的注释。所以让我们也这样做吧
 
-```
+```sql
 comment on table medium_example_public.author is 'A user of the medium.';
 comment on column medium_example_public.author.id is 'The primary unique identifier for the person.';
 comment on column medium_example_public.author.name is 'The person’s  name.';
 comment on column medium_example_public.author.about is 'A short description about the user, written by the user.';
-comment on column medium_example_public.author.created_at is 'The time this person was created.';comment on table medium_example_public.post is 'A forum post written by a author.';
+comment on column medium_example_public.author.created_at is 'The time this person was created.';
+comment on table medium_example_public.post is 'A forum post written by a author.';
 comment on column medium_example_public.post.id is 'The primary key for the post.';
 comment on column medium_example_public.post.title is 'The title written by the user.';
 comment on column medium_example_public.post.author_id is 'The id of the author.';
@@ -94,7 +96,7 @@ comment on column medium_example_public.post.created_at is 'The time this post w
 
 现在你已经拥有了运行 GraphQL 的 API 的一切。让我们开始 PostGraphile
 
-```
+```bash
 postgraphile -c postgres://postgres:123456@127.0.0.1/medium --schema medium_example_public
 ```
 
@@ -104,13 +106,14 @@ postgraphile -c postgres://postgres:123456@127.0.0.1/medium --schema medium_exam
 
 令人难以置信的是，我们已经有一些基本的 GraphQL 查询在运行，对吗？如果你想根据你的业务支持一些其他的 GraphQL，那也可以毫不费力地实现。假设您想在文章的正文和标题中搜索一个字符串。我们可以在 Postgres 中编写函数来支持业务操作。例如，我们可以编写下面的函数来搜索文章。
 
-```
+```sql
 create function medium_example_public.search_posts(search text)
 returns setof medium_example_public.post as $$
 select post.*
 from medium_example_public.post as post
 where position(search in post.title) > 0 or position(search in post.body) > 0
-$$ language sql stable;comment on function medium_example_public.search_posts(text) is 'Returns posts containing a given search term.';
+$$ language sql stable;
+comment on function medium_example_public.search_posts(text) is 'Returns posts containing a given search term.';
 ```
 
 你可以看到它是多么简单。现在我们也来测试一下。
@@ -123,7 +126,7 @@ $$ language sql stable;comment on function medium_example_public.search_posts(te
 
 为了 API 的安全性，我们将使用 [JWT 令牌](/javarevisited/top-10-courses-to-learn-spring-security-and-oauth2-with-spring-boot-for-java-developers-8f0222d6066d)。您需要定义 PostGraphile 将用来生成 JWT 令牌的数据类型。我们需要我们的 JWT 令牌来包含关于作者的帐户 id、角色和令牌到期日期的信息。所以我们将在 Postgres 中创建一个类型，如下所示。
 
-```
+```sql
 create type medium_example_public.jwt_token as (
   role text,
   account_id integer,
@@ -133,7 +136,7 @@ create type medium_example_public.jwt_token as (
 
 PostGraphile 将采用这种类型，为我们制作一个 JWT 令牌。我们还需要存储用户的电子邮件和密码，这样一旦用户通过身份验证，我们就可以在输出中给他发送一个 JWT 令牌。让我们在私有模式中为它创建一个表。
 
-```
+```sql
 create table medium_example_private.account (
 account_id        integer primary key references medium_example_public.author(id) on delete cascade,
 email            text not null unique check (email ~* '^.+@.+\..+$'),
@@ -147,7 +150,7 @@ comment on column medium_example_private.account.password is 'password of author
 
 在 account 表中，我们存储了电子邮件 id、散列加密密码和作者 id。现在，让我们创建一个函数，它接受电子邮件和密码作为输入，并在输出中返回 JWT 令牌。
 
-```
+```sql
 create function medium_example_public.authenticate(email text,
 password text) returns medium_example_public.jwt_token as $$
 declare
@@ -161,14 +164,15 @@ else
 return null;
 end if;
 end;
-$$ language plpgsql strict security definer;comment on function medium_example_public.authenticate(text, text) is 'Create a JWT token with 1 day of validity';
+$$ language plpgsql strict security definer;
+comment on function medium_example_public.authenticate(text, text) is 'Create a JWT token with 1 day of validity';
 ```
 
 如果你知道基本的 [SQL](/javarevisited/7-free-courses-to-learn-database-and-sql-for-programmers-and-data-scientist-e7ae19514ed2) ，你就已经知道我们在上面的函数中做了什么。我们正在尝试验证用户，如果电子邮件和密码是正确的，我们发送 JWT，否则返回 null。如果你想知道什么是地穴？这是 Postgres 中的一个函数，它将返回字符串的散列值。
 
 看这么多 SQL 烦不烦？再忍耐我两秒钟。让我们快速地写一个函数来注册一个用户。这个函数将在 account 表和 author 表中插入数据。
 
-```
+```sql
 create function medium_example_public.register_author(
 name text,
 email text,
@@ -188,7 +192,9 @@ $$ language plpgsql strict security definer;
 comment on function medium_example_public.register_author(text, text, text, text) is 'Register an author';
 ```
 
-现在，我们有了注册用户的方法，登录用户的方法，但是嘿！我想我们还是遗漏了一些东西。我知道，我们缺少角色，每个用户都应该有不同的角色，就像用户应该能够在没有帐户的情况下查看和搜索帖子，每个用户只能访问其个人数据。为此，我们将使用 Postgres 的角色，让我们创建 2 个角色:
+
+
+现在，我们有了注册用户的方法，登录用户的方法，但是嘿！我想我们还是遗漏了一些东西。我知道，我们缺少角色，每个用户都应该有不同的角色，就像用户应该能够在没有帐户的情况下查看和搜索帖子，每个用户只能访问其个人数据。为此，我们将使用 Postgres 的角色，让我们创建 2 个角色：
 
 ```
 create role medium_example_anonymous;
@@ -241,10 +247,10 @@ create policy delete_post on medium_example_public.post for delete to forum_exam
 
 如你所见，我们不允许这样做。好了，今天就到这里吧。如果你读到这里，我真的要感谢你。
 
-# **结论**
+## 结论
 
 当你要开始创业时，尽快实现你的想法是非常重要的。在这种情况下，像 Postgraphile 和 Postgres 这样的工具会派上用场。在开发的大部分时间里，我们浪费时间重新创建已经存在的特性，比如 Postgres 中的授权。想象一下，如果你不得不在 [Spring boot](/javarevisited/top-10-courses-to-learn-spring-boot-in-2020-best-of-lot-6ffce88a1b6e) 中做同样的事情，你将会为认证、基于角色的访问写很多代码，而这些你实际上并不需要。我强烈建议你应该尝试一下 PostGraphile。
 
-# 资源
+## 资源
 
-  <https://netflixtechblog.com/beyond-rest-1b76f7c20ef6> 
+<https://netflixtechblog.com/beyond-rest-1b76f7c20ef6>

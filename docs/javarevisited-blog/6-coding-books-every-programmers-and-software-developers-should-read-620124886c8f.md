@@ -1,3 +1,4 @@
+
 # 每个程序员和软件开发人员都应该阅读的 6 本编码书
 
 > 原文：<https://medium.com/javarevisited/6-coding-books-every-programmers-and-software-developers-should-read-620124886c8f?source=collection_archive---------0----------------------->
@@ -9,6 +10,7 @@
 你可以很容易地在 [Java](http://www.java67.com/2018/08/top-10-free-java-courses-for-beginners-experienced-developers.html) 、 [C++](http://www.java67.com/2018/02/5-free-cpp-courses-to-learn-programming.html) 、 [Ruby](http://www.java67.com/2018/02/5-free-ruby-and-rails-courses-to-learn-online.html) 或 [Python](https://javarevisited.blogspot.com/2018/12/10-free-python-courses-for-programmers.html) 中找到程序员，但是找到同时也是优秀程序员的程序员是非常困难的。一些大学有很好的课程和实践课来教授比其他人更好的编程，但是这些伟大的程序员大多数都是自学的程序员，他们通过看书、参加在线课程和自己做事来学习。
 
 重点是自学在编程和编码领域非常重要，你不能仅仅依靠你的学院和大学来使你成为一名专业的程序员，你必须付出额外的努力来使你自己从群体中脱颖而出，还有什么比从那些经历过同样道路的人那里学习编码和编程智慧更好的呢？
+
 Martin Fowler 是软件设计、开发和测试领域的另一位伟人，他关于重构的书是任何严肃的程序员的必读之作。
 
 最近我看到一张信息图，是关于让你成为编程专家的 10 本书的。虽然我不同意他们所有的书，但我绝对同意前 6 本书和最后一本书，这是一本关于设计模式的经典之作。
@@ -19,17 +21,17 @@ Martin Fowler 是软件设计、开发和测试领域的另一位伟人，他关
 
 如果你不熟悉它们，我建议你通过 Udemy 上的 [**面向对象设计和架构的坚实原理**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fsolid-principles-object-oriented-design-architecture%2F) 课程来学习它们。它们完全值得你花费时间和金钱。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fsolid-principles-object-oriented-design-architecture%2F>  
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fsolid-principles-object-oriented-design-architecture%2F>
 
 # 提高编码技能的最佳书籍
 
 这里有一个书单，会让你成为编码和编程方面的专家。如果你遵循这些书中给出的实用建议，你肯定会学到很多关于编码和编程的技巧。
 
-这些不是告诉你如何写一个 for 循环或者如何检查 if 块上的条件的书，因为这可以从任何一本书学到。他们会教你如何使用这些工具来解决现实世界中的问题。
+这些不是告诉你如何写一个 `for` 循环或者如何检查 `if` 块上的条件的书，因为这可以从任何一本书学到。他们会教你如何使用这些工具来解决现实世界中的问题。
 
 ## 1.[重构，改进现有代码的设计](http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672?tag=javamysqlanta-20)
 
-这本书是用 Java 写的，因为它是主要语言，但是它的概念和思想适用于任何面向对象的语言，比如 C++或 c#。这本书将教你如何将一个平庸的代码转换成一个伟大的代码，可以承受生产负荷和现实世界的软件开发噩梦，变化。最棒的是，Martin 实际上是带着你一步一步地学习你经常看到的代码，然后一步一步地转换成更灵活、更有用的代码。通过阅读他的例子，你将了解到[干净代码](http://javarevisited.blogspot.sg/2014/05/law-of-demeter-example-in-java.html)的真正定义。重构也是有经验的程序员的一个特征，因为你的工作领域现在不仅包括改进代码，还包括你的开发伙伴的代码。
+这本书是用 Java 写的，因为它是主要语言，但是它的概念和思想适用于任何面向对象的语言，比如 C++或 C#。这本书将教你如何将一个平庸的代码转换成一个伟大的代码，可以承受生产负荷和现实世界的软件开发噩梦，变化。最棒的是，Martin 实际上是带着你一步一步地学习你经常看到的代码，然后一步一步地转换成更灵活、更有用的代码。通过阅读他的例子，你将了解到[干净代码](http://javarevisited.blogspot.sg/2014/05/law-of-demeter-example-in-java.html)的真正定义。重构也是有经验的程序员的一个特征，因为你的工作领域现在不仅包括改进代码，还包括你的开发伙伴的代码。
 
 **这里是购买本书的链接**——[重构，改进现有代码的设计](http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672?tag=javamysqlanta-20)
 
@@ -44,8 +46,8 @@ Martin Fowler 是软件设计、开发和测试领域的另一位伟人，他关
 1.  [清洁码](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882?tag=javamysqlanta-20)，
 2.  [清洁编码器](https://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073?tag=javamysqlanta-20)，
 3.  [敏捷软件开发:原则、模式和实践](https://www.amazon.com/Software-Development-Principles-Patterns-Practices/dp/0135974445?tag=javamysqlanta-20)，
-4.  [面向 Java 程序员的 UML](https://javarevisited.blogspot.com/2017/07/top-5-books-to-learn-uml-unified-modelling-language-java.html)
-5.  [洁净建筑](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164?tag=javamysqlanta-20)，
+4.  [面向 Java 程序员的 UML](https://javarevisited.blogspot.com/2017/07/top-5-books-to-learn-uml-unified-modelling-language-java.html)，
+5.  [洁净架构](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164?tag=javamysqlanta-20)，
 6.  以及，[极限编程实践。](https://www.amazon.com/Extreme-Programming-Practice-James-Newkirk/dp/0201709376?tag=javamysqlanta-20)
 
 虽然他的大部分书都是十年前的了，但它们仍然很有价值，我相信它们还会继续存在 20 年，或者至少会一直存在到面向对象编程进入商业领域。干净的代码不仅教你做什么，也教你不要做什么。
@@ -54,7 +56,7 @@ Martin Fowler 是软件设计、开发和测试领域的另一位伟人，他关
 
 [![](img/9911805e1294db9427c6d3cc69d14a67.png)](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882?tag=javamysqlanta-20)
 
-《干净的代码》一书有代码味道的章节，这是一个各种程序员常见错误的大集合。它还有一些章节讲述了如何纠正它们，比如如何将一个长的 switch 语句转换成一个更好的基于开闭设计原则的模型，并利用继承和多态的力量。
+《干净的代码》一书有代码味道的章节，这是一个各种程序员常见错误的大集合。它还有一些章节讲述了如何纠正它们，比如如何将一个长的 `switch` 语句转换成一个更好的基于开闭设计原则的模型，并利用继承和多态的力量。
 
 它也有章节解释关于[**面向对象设计的坚实原则**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fsolid-principles-object-oriented-design-architecture%2F) ，这是编写干净代码的关键。事实上，我第一次听说它们是在这本书里，从那以后，它们在编写更好的代码方面帮助了我很多。
 
@@ -96,11 +98,13 @@ Martin Fowler 是软件设计、开发和测试领域的另一位伟人，他关
 
 并且，如果你只是想做一件事，从 Udemy 上的 30 步 课程中的 [**开始用 Junit & Mockito 学习 Java 单元测试。学习 Java 中的单元测试是一门很棒的课程。**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmockito-tutorial-with-junit-examples%2F)
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmockito-tutorial-with-junit-examples%2F>  
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmockito-tutorial-with-junit-examples%2F>
 
 ## 5.[实施精益软件开发:从概念到现金](https://www.amazon.com/Implementing-Lean-Software-Development-Addison-Wesley-ebook/dp/B00HNB3VQE?tag=javamysqlanta-20)
 
 这本书告诉你如何在整个软件组织中推动高价值的变革，并使之持续下去。它向您展示了如何在真实的项目、环境和公司中实施精益。汤姆和玛丽·波彭迪克(poppendieck.com)在世界范围内教授和咨询软件精益原则。她的方法确定了真正的商业价值，并使产品团队认识到这种价值，她的新书《领先精益软件开发》是为各种类型的领导者而写的，比如项目领导者、项目经理、C 级管理人员等等。
+
+
 
 我知道这本书有点晚，但它对你的书本身是一个很好的补充，尤其是如果你渴望成为一名技术领导者或已经在做这份工作。
 
@@ -136,7 +140,7 @@ Martin Fowler 是软件设计、开发和测试领域的另一位伟人，他关
 *   [学习 Python 编程语言的 10 个理由](https://javarevisited.blogspot.sg/2018/05/10-reasons-to-learn-python-programming.html)
 *   [每个程序员都应该读的十大算法书](http://www.java67.com/2015/09/top-10-algorithm-books-every-programmer-read-learn.html)
 *   [每个 Java 开发者都应该学习的 20 个库](https://javarevisited.blogspot.com/2018/01/top-20-libraries-and-apis-for-java-programmers.html)
-*   【Java 开发人员在日常工作中使用的 10 种工具
+*   [Java 开发人员在日常工作中使用的 10 种工具](http://www.java67.com/2018/02/10-books-java-developers-should-read-in.html)
 *   [每个 Java 程序员都应该阅读的 10 本书](http://www.java67.com/2018/02/10-books-java-developers-should-read-in.html)
 *   [深入学习数据结构和算法的 10 门免费课程](http://www.java67.com/2019/02/top-10-free-algorithms-and-data.html)
 *   [十大编程语言开始学习编码](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html)

@@ -1,3 +1,4 @@
+
 # 字节编码和字符串
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/text/string.html`](https://docs.oracle.com/javase/tutorial/i18n/text/string.html)
@@ -10,14 +11,12 @@
 
 ```java
 String original = new String("A" + "\u00ea" + "\u00f1" + "\u00fc" + "C");
-
 ```
 
 当打印时，名为 `original` 的 `String` 如下所示：
 
 ```java
 AêñüC
-
 ```
 
 要将 `String` 对象转换为 UTF-8，调用 `getBytes` 方法并指定适当的编码标识符作为参数。`getBytes` 方法以 UTF-8 格式返回一个字节数组。要从非 Unicode 字节的数组创建 `String` 对象，请使用带有编码参数的 `String` 构造方法。执行这些调用的代码被封装在一个 `try` 块中，以防指定的编码不受支持：
@@ -37,7 +36,6 @@ try {
 catch (UnsupportedEncodingException e) {
     e.printStackTrace();
 }
-
 ```
 
 `StringConverter` 程序打印出 `utf8Bytes` 和 `defaultBytes` 数组中的值，以演示一个重要的观点：转换后的文本长度可能与源文本长度不同。一些 Unicode 字符转换为单个字节，而另一些转换为一对或三元组字节。
@@ -51,7 +49,6 @@ public static void printBytes(byte[] array, String name) {
             UnicodeFormatter.byteToHex(array[k]));
     }
 }
-
 ```
 
 `printBytes` 方法的输出如下。请注意，只有第一个和最后一个字节，即 A 和 C 字符，在两个数组中是相同的：
@@ -70,5 +67,4 @@ defaultBytes[1] = 0xea
 defaultBytes[2] = 0xf1
 defaultBytes[3] = 0xfc
 defaultBytes[4] = 0x43
-
 ```

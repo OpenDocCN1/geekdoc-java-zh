@@ -1,3 +1,4 @@
+
 # 高级文本显示
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/text/advanced.html`](https://docs.oracle.com/javase/tutorial/2d/text/advanced.html)

@@ -1,14 +1,13 @@
+
 # 理解扩展类加载
 
 > 译文：[`docs.oracle.com/javase/tutorial/ext/basics/load.html`](https://docs.oracle.com/javase/tutorial/ext/basics/load.html)
 
 扩展框架利用了类加载委托机制。当运行时环境需要为应用程序加载新类时，它按照以下顺序在以下位置查找类：
 
-1.  **引导类**：`rt.jar`中的运行时类，`i18n.jar`中的国际化类等。
-
-1.  **已安装扩展**：JRE 的`lib/ext`目录中的 JAR 文件中的类，以及系统范围内的特定于平台的扩展目录（例如在 Solaris™操作系统上的`/usr/jdk/packages/lib/ext`，但请注意，此目录仅适用于 Java™ 6 及更高版本）。
-
-1.  **类路径**：包括系统属性`java.class.path`指定路径上的类，包括 JAR 文件中的类。如果类路径上的 JAR 文件具有带有`Class-Path`属性的清单，则还将搜索`Class-Path`属性指定的 JAR 文件。默认情况下，`java.class.path`属性的值为`.`，即当前目录。您可以通过使用`-classpath`或`-cp`命令行选项或设置`CLASSPATH`环境变量来更改该值。命令行选项会覆盖`CLASSPATH`环境变量的设置。
+1. **引导类**：`rt.jar`中的运行时类，`i18n.jar`中的国际化类等。
+2. **已安装扩展**：JRE 的`lib/ext`目录中的 JAR 文件中的类，以及系统范围内的特定于平台的扩展目录（例如在 Solaris™操作系统上的`/usr/jdk/packages/lib/ext`，但请注意，此目录仅适用于 Java™ 6 及更高版本）。
+3. **类路径**：包括系统属性`java.class.path`指定路径上的类，包括 JAR 文件中的类。如果类路径上的 JAR 文件具有带有`Class-Path`属性的清单，则还将搜索`Class-Path`属性指定的 JAR 文件。默认情况下，`java.class.path`属性的值为`.`，即当前目录。您可以通过使用`-classpath`或`-cp`命令行选项或设置`CLASSPATH`环境变量来更改该值。命令行选项会覆盖`CLASSPATH`环境变量的设置。
 
 优先级列表告诉您，例如，只有在要加载的类在`rt.jar`、`i18n.jar`或已安装扩展中的类中未找到时，才会搜索类路径。
 
@@ -20,19 +19,13 @@ Java 平台使用委托模型来加载类。基本思想是每个类加载器都
 
 以下是类加载 API 的一些亮点：
 
-+   `java.lang.ClassLoader`及其子类中的构造函数允许您在实例化新类加载器时指定一个父类加载器。如果您没有明确指定父类加载器，则虚拟机的系统类加载器将被分配为默认父类加载器。
-
-+   当调用`ClassLoader`中的`loadClass`方法加载类时，它按顺序执行以下任务：
-
-    1.  如果类已经被加载，它会返回该类。
-
-    1.  否则，它将搜索新类的任务委托给父类加载器。
-
-    1.  如果父类加载器未找到类，`loadClass`调用`findClass`方法来查找和加载类。
-
-+   如果父类加载器未找到类，则`ClassLoader`的`findClass`方法将在当前类加载器中搜索该类。当您在应用程序中实例化类加载器子类时，可能需要重写此方法。
-
-+   类`java.net.URLClassLoader`用作扩展和其他 JAR 文件的基本类加载器，覆盖了`java.lang.ClassLoader`的`findClass`方法，以在一个或多个指定的 URL 中搜索类和资源。
++ `java.lang.ClassLoader`及其子类中的构造函数允许您在实例化新类加载器时指定一个父类加载器。如果您没有明确指定父类加载器，则虚拟机的系统类加载器将被分配为默认父类加载器。
++ 当调用`ClassLoader`中的`loadClass`方法加载类时，它按顺序执行以下任务：
+  1. 如果类已经被加载，它会返回该类。
+  2. 否则，它将搜索新类的任务委托给父类加载器。
+  3. 如果父类加载器未找到类，`loadClass`调用`findClass`方法来查找和加载类。
++ 如果父类加载器未找到类，则`ClassLoader`的`findClass`方法将在当前类加载器中搜索该类。当您在应用程序中实例化类加载器子类时，可能需要重写此方法。
++ 类`java.net.URLClassLoader`用作扩展和其他 JAR 文件的基本类加载器，覆盖了`java.lang.ClassLoader`的`findClass`方法，以在一个或多个指定的 URL 中搜索类和资源。
 
 要查看一个使用与 JAR 文件相关的 API 的示例应用程序，请参阅本教程中的使用与 JAR 相关的 API 课程。
 
@@ -40,8 +33,6 @@ Java 平台使用委托模型来加载类。基本思想是每个类加载器都
 
 Java 平台的类加载机制体现在`java`命令中。
 
-+   在`java`工具中，`-classpath`选项是设置`java.class.path`属性的简便方式。
-
-+   `-cp`和`-classpath`选项是等效的。
-
-+   `-jar`选项用于运行打包在 JAR 文件中的应用程序。有关此选项的描述和示例，请参阅本教程中的运行 JAR 打包软件课程。
++ 在`java`工具中，`-classpath`选项是设置`java.class.path`属性的简便方式。
++ `-cp`和`-classpath`选项是等效的。
++ `-jar`选项用于运行打包在 JAR 文件中的应用程序。有关此选项的描述和示例，请参阅本教程中的运行 JAR 打包软件课程。

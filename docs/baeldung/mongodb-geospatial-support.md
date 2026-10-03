@@ -1,24 +1,23 @@
+
 # MongoDB 中的地理空间支持
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/mongodb-geospatial-support>
 
-## 1。概述
+## 1. 概述
 
-在本教程中，我们将探索 MongoDB 中的地理空间支持。
+在本教程中，我们将探索 `MongoDB` 中的地理空间支持。我们将讨论如何存储地理空间数据、地理索引和地理空间搜索。我们还将使用多个地理空间搜索查询，如`near`、`geoWithin`和`geoIntersects`。
 
-我们将讨论如何存储地理空间数据、地理索引和地理空间搜索。我们还将使用多个地理空间搜索查询，如`near`、`geoWithin`和`geoIntersects`。
+## 2. 存储地理空间数据
 
-## 2。存储地理空间数据
+首先，让我们看看如何在 `MongoDB` 中存储地理空间数据。
 
-首先，让我们看看如何在 MongoDB 中存储地理空间数据。
+**MongoDB 支持多种 `GeoJSON` 类型存储地理空间数据。**在我们的例子中，我们将主要使用 `Point` 和 `Polygon` 类型。
 
-**MongoDB 支持多种`GeoJSON`类型存储地理空间数据。**在我们的例子中，我们将主要使用`Point`和`Polygon`类型。
+### 2.1. Point
 
-### 2.1。`Point`
+这是最基本和最常见的 `GeoJSON` 类型，**用来表示网格上的一个特定点**。
 
-这是最基本和最常见的`GeoJSON`类型，**用来表示网格上的一个特定点**。
-
-这里，我们有一个简单的对象，在我们的`places`集合`,`中，字段`location`作为`Point`:
+这里，我们有一个简单的对象，在我们的 `places` 集合中，字段 `location` 作为 `Point`：
 
 ```java
 {
@@ -32,13 +31,13 @@
 
 注意首先是经度值，然后是纬度值。
 
-### 2.2。`Polygon`
+### 2.2. Polygon
 
-`Polygon`是稍微复杂一点的`GeoJSON`类型。
+`Polygon` 是稍微复杂一点的 `GeoJSON` 类型。
 
-**我们可以使用`Polygon`来定义一个区域的外部边界**以及内部孔洞(如果需要的话)。
+**我们可以使用 `Polygon` 来定义一个区域的外部边界**以及内部孔洞（如果需要的话）。
 
-让我们看看另一个对象，它的位置被定义为一个`Polygon`:
+让我们看看另一个对象，它的位置被定义为一个 `Polygon`：
 
 ```java
 {
@@ -62,15 +61,15 @@
 
 注意，我们需要在逆时针方向定义外部边界点，在顺时针方向定义球洞边界。
 
-除了这些类型，还有许多其他类型，如`LineString,` `MultiPoint,` `MultiPolygon,` `MultiLineString,`和`GeometryCollection.`
+除了这些类型，还有许多其他类型，如 `LineString`、`MultiPoint`、`MultiPolygon`、`MultiLineString` 和 `GeometryCollection`。
 
-## 3。地理空间索引
+## 3. 地理空间索引
 
-**为了对我们存储的地理空间数据执行搜索查询，我们需要在我们的`location`字段上创建一个地理空间索引。**
+**为了对我们存储的地理空间数据执行搜索查询，我们需要在我们的 `location` 字段上创建一个地理空间索引。**
 
-我们基本上有两种选择:`2d`和`2dsphere`。
+我们基本上有两种选择：`2d` 和 `2dsphere`。
 
-但是首先，让我们定义我们的位置:
+但是首先，让我们定义我们的位置：
 
 ```java
 MongoClient mongoClient = new MongoClient();
@@ -78,49 +77,49 @@ MongoDatabase db = mongoClient.getDatabase("myMongoDb");
 collection = db.getCollection("places");
 ```
 
-### 3.1。`2d`地理空间索引
+### 3.1. 2d 地理空间索引
 
-`2d`索引使我们能够执行基于 2d 平面计算的搜索查询。
+`2d` 索引使我们能够执行基于 2d 平面计算的搜索查询。
 
-我们可以在 Java 应用程序的`location`字段上创建一个`2d`索引，如下所示:
+我们可以在 Java 应用程序的 `location` 字段上创建一个 `2d` 索引，如下所示：
 
 ```java
 collection.createIndex(Indexes.geo2d("location"));
 ```
 
-当然，我们可以在`mongo` shell 中做同样的事情:
+当然，我们可以在 `mongo` shell 中做同样的事情：
 
 ```java
 db.places.createIndex({location:"2d"})
 ```
 
-### 3.2。`2dsphere`地理空间索引
+### 3.2. 2dsphere 地理空间索引
 
-`2dsphere`索引支持基于球体计算的查询。
+`2dsphere` 索引支持基于球体计算的查询。
 
-类似地，我们可以使用与上面相同的`Indexes`类在 Java 中创建一个`2dsphere`索引:
+类似地，我们可以使用与上面相同的 `Indexes` 类在 Java 中创建一个 `2dsphere` 索引：
 
 ```java
 collection.createIndex(Indexes.geo2dsphere("location"));
 ```
 
-或者在`mongo`外壳中:
+或者在 `mongo` 外壳中：
 
 ```java
 db.places.createIndex({location:"2dsphere"})
 ```
 
-## 4。使用地理空间查询进行搜索
+## 4. 使用地理空间查询进行搜索
 
 现在，最激动人心的部分是，让我们使用地理空间查询根据对象的位置来搜索对象。
 
-### 4.1。近查询
+### 4.1. 近查询
 
-让我们从`near. ` **开始，我们可以使用`near`查询来搜索给定距离内的地点。**
+让我们从 `near` 开始。**我们可以使用 `near` 查询来搜索给定距离内的地点。**
 
-`near` 查询同时适用于 `2d` 和 `2dsphere` 索引`.`
+`near` 查询同时适用于 `2d` 和 `2dsphere` 索引。
 
-在下一个示例中，我们将搜索距离给定位置不到 1 公里但超过 10 米的地点:
+在下一个示例中，我们将搜索距离给定位置不到 1 公里但超过 10 米的地点：
 
 ```java
 @Test
@@ -135,7 +134,7 @@ public void givenNearbyLocation_whenSearchNearby_thenFound() {
 }
 ```
 
-以及在`mongo` shell 中的相应查询:
+以及在 `mongo` shell 中的相应查询：
 
 ```java
 db.places.find({
@@ -154,7 +153,7 @@ db.places.find({
 
 请注意，结果是从最近到最远排序的。
 
-同样，如果我们使用一个非常远的位置，我们不会找到任何附近的地方:
+同样，如果我们使用一个非常远的位置，我们不会找到任何附近的地方：
 
 ```java
 @Test
@@ -168,15 +167,15 @@ public void givenFarLocation_whenSearchNearby_thenNotFound() {
 }
 ```
 
-我们还有`nearSphere`方法，它的作用与`near,` 完全一样，只是它使用球面几何来计算距离。
+我们还有 `nearSphere` 方法，它的作用与 `near` 完全一样，只是它使用球面几何来计算距离。
 
-### 4.2。在查询内
+### 4.2. 在查询内
 
-接下来，我们将探索`geoWithin`查询。
+接下来，我们将探索 `geoWithin` 查询。
 
-**`geoWithin`查询使我们能够搜索在给定的`Geometry`** 内完全存在的地方，比如圆、盒子或多边形。这也适用于 `2d` 和 `2dsphere` 指数。
+**`geoWithin` 查询使我们能够搜索在给定的 `Geometry` 内完全存在的地方**，比如圆、盒子或多边形。这也适用于 `2d` 和 `2dsphere` 指数。
 
-在本例中，我们要查找距离给定中心位置 5 km 半径范围内的地点:
+在本例中，我们要查找距离给定中心位置 5 km 半径范围内的地点：
 
 ```java
 @Test
@@ -191,9 +190,9 @@ public void givenNearbyLocation_whenSearchWithinCircleSphere_thenFound() {
 }
 ```
 
-注意，我们需要将距离从 km 转换为弧度(只需除以地球半径)。
+注意，我们需要将距离从 km 转换为弧度（只需除以地球半径）。
 
-结果查询:
+结果查询：
 
 ```java
 db.places.find({
@@ -208,7 +207,7 @@ db.places.find({
 })
 ```
 
-接下来，我们将搜索矩形“盒子”中存在的所有地方。我们需要定义盒子的左下位置和右上位置:
+接下来，我们将搜索矩形“盒子”中存在的所有地方。我们需要定义盒子的左下位置和右上位置：
 
 ```java
 @Test
@@ -226,7 +225,7 @@ public void givenNearbyLocation_whenSearchWithinBox_thenFound() {
 }
 ```
 
-下面是在`mongo` shell 中的相应查询:
+下面是在 `mongo` shell 中的相应查询：
 
 ```java
 db.places.find({
@@ -241,7 +240,7 @@ db.places.find({
 })
 ```
 
-最后，**如果我们想要搜索的区域不是矩形或圆形，我们可以使用多边形来定义一个更具体的区域**:
+最后，**如果我们想要搜索的区域不是矩形或圆形，我们可以使用多边形来定义一个更具体的区域**：
 
 ```java
 @Test
@@ -260,7 +259,7 @@ public void givenNearbyLocation_whenSearchWithinPolygon_thenFound() {
 }
 ```
 
-下面是相应的查询:
+下面是相应的查询：
 
 ```java
 db.places.find({
@@ -277,21 +276,21 @@ db.places.find({
 })
 ```
 
-我们只定义了一个有外部边界的多边形，但是我们也可以给它添加洞。每个孔将是一个`Point`的`List`;
+我们只定义了一个有外部边界的多边形，但是我们也可以给它添加洞。每个孔将是一个 `Point` 的 `List`：
 
 ```java
 geoWithinPolygon("location", points, hole1, hole2, ...)
 ```
 
-### 4.3。相交查询
+### 4.3. 相交查询
 
-最后，我们来看一下`geoIntersects`查询。
+最后，我们来看一下 `geoIntersects` 查询。
 
-**`geoIntersects`查询查找至少与给定的`Geometry.`** 相交的对象，相比之下，`geoWithin`查找完全存在于给定的`Geometry`内的对象。
+**`geoIntersects` 查询查找至少与给定的 `Geometry` 相交的对象**，相比之下，`geoWithin` 查找完全存在于给定的 `Geometry` 内的对象。
 
-该查询仅适用于 `the 2dsphere` 索引。
+该查询仅适用于 `2dsphere` 索引。
 
-让我们在实践中看到这一点，以寻找与`Polygon`相交的任何地方为例:
+让我们在实践中看到这一点，以寻找与 `Polygon` 相交的任何地方为例：
 
 ```java
 @Test
@@ -311,7 +310,7 @@ public void givenNearbyLocation_whenSearchUsingIntersect_thenFound() {
 }
 ```
 
-结果查询:
+结果查询：
 
 ```java
 db.places.find({
@@ -333,8 +332,8 @@ db.places.find({
 })
 ```
 
-## 5。结论
+## 5. 结论
 
-在本文中，我们学习了如何在 MongoDB 中存储地理空间数据，并查看了`2d`和`2dsphere`地理空间索引之间的差异。我们还学习了如何使用地理空间查询在 MongoDB 中进行搜索。
+在本文中，我们学习了如何在 MongoDB 中存储地理空间数据，并查看了 `2d` 和 `2dsphere` 地理空间索引之间的差异。我们还学习了如何使用地理空间查询在 MongoDB 中进行搜索。
 
-像往常一样，这些例子的完整源代码可以在 GitHub 的[上找到。](https://web.archive.org/web/20220628161904/https://github.com/eugenp/tutorials/tree/master/persistence-modules/java-mongodb-2)
+像往常一样，这些例子的完整源代码可以在 [GitHub](https://web.archive.org/web/20220628161904/https://github.com/eugenp/tutorials/tree/master/persistence-modules/java-mongodb-2) 上找到。

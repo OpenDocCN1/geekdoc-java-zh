@@ -1,16 +1,17 @@
+
 # 如何使用 Spring RestTemplate 压缩请求
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-resttemplate-compressing-requests>
 
-## 1。简介
+## 1. 简介
 
 在这个简短的教程中，我们将看看如何发送包含压缩数据的 HTTP 请求。
 
 此外，我们将了解如何配置 Spring web 应用程序，以便它处理压缩请求。
 
-## 2。发送压缩请求
+## 2. 发送压缩请求
 
-首先，让我们创建一个压缩字节数组的方法。这将很快派上用场:
+首先，让我们创建一个压缩字节数组的方法。这将很快派上用场：
 
 ```java
 public static byte[] compress(byte[] body) throws IOException {
@@ -22,7 +23,7 @@ public static byte[] compress(byte[] body) throws IOException {
 }
 ```
 
-接下来，我们需要实现一个`ClientHttpRequestInterceptor`来修改请求。注意，我们将发送适当的 HTTP 压缩头，并调用我们的主体压缩方法:
+接下来，我们需要实现一个`ClientHttpRequestInterceptor`来修改请求。注意，我们将发送适当的 HTTP 压缩头，并调用我们的主体压缩方法：
 
 ```java
 public ClientHttpResponse intercept(HttpRequest req, byte[] body, ClientHttpRequestExecution exec)
@@ -38,7 +39,7 @@ public ClientHttpResponse intercept(HttpRequest req, byte[] body, ClientHttpRequ
 
 此外，我们必须为数据编码添加适当的头。这让目的地端点知道它正在处理 GZIP 压缩数据。
 
-最后，我们将拦截器添加到我们的`RestTemplate` 定义中:
+最后，我们将拦截器添加到我们的`RestTemplate`定义中：
 
 ```java
 @Bean
@@ -49,17 +50,17 @@ public RestTemplate getRestTemplate() {
 } 
 ```
 
-## 3。处理压缩请求
+## 3. 处理压缩请求
 
 默认情况下，大多数 web 服务器不理解包含压缩数据的请求。Spring web 应用程序也不例外。因此，我们需要配置它们来处理这样的请求。
 
 目前，只有 Jetty 和 Undertow web 服务器处理带有 GZIP 格式数据的请求体。请参阅我们关于 [Spring Boot 应用程序配置](/web/20220630140112/https://www.baeldung.com/spring-boot-application-configuration)的文章，以设置 Jetty 或 Undertow web 服务器。
 
-### 3.1.Jetty Web 服务器
+### 3.1. Jetty Web 服务器
 
 在这个例子中，我们通过添加一个 Jetty `GzipHandler`来定制一个 Jetty web 服务器。这个 Jetty 处理程序是为压缩响应和解压缩请求而构建的。
 
-然而，将它添加到 Jetty web 服务器是不够的。我们需要将`inflateBufferSize`设置为大于零的值来启用解压缩:
+然而，将它添加到 Jetty web 服务器是不够的。我们需要将`inflateBufferSize`设置为大于零的值来启用解压缩：
 
 ```java
 @Bean
@@ -77,11 +78,11 @@ public JettyServletWebServerFactory jettyServletWebServerFactory() {
 }
 ```
 
-### 3.2.水下网络服务器
+### 3.2. 水下网络服务器
 
 同样，我们可以定制一个 Undertow web 服务器来为我们自动解压请求。在这种情况下，我们需要添加一个自定义的`RequestEncodingHandler`。
 
-我们配置编码处理程序来处理来自请求的 GZIP 源数据:
+我们配置编码处理程序来处理来自请求的 GZIP 源数据：
 
 ```java
 @Bean
@@ -95,7 +96,7 @@ public UndertowServletWebServerFactory undertowServletWebServerFactory() {
 }
 ```
 
-## 4。结论
+## 4. 结论
 
 这就是我们要让压缩请求工作所需要做的一切！
 

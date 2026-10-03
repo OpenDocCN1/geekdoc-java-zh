@@ -1,3 +1,4 @@
+
 # Spring Boot + JUnit 5 + Mockito
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-boot-junit-5-mockito/>
@@ -6,10 +7,10 @@
 
 在本文中，我们将向您展示如何用 JUnit 5 和 Mockito 进行 Spring Boot 2 集成测试。
 
-*   Spring Boot 2.1.2 .版本
-*   JUnit 5
-*   Mockito 2
-*   maven3
+* Spring Boot 2.1.2 .版本
+* JUnit 5
+* Mockito 2
+* maven3
 
 简而言之，从`spring-boot-starter-test`中排除 junit4，手动包含 JUnit 5 jupiter 引擎，完成。
 
@@ -17,10 +18,10 @@
 
 ## 1.专家
 
-pom.xml
+`pom.xml`
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
@@ -96,13 +97,13 @@ pom.xml
         </plugins>
     </build>
 
-</project> 
+</project>
 ```
 
 显示项目依赖关系。
 
 ```java
- $ mvn dependency:tree
+$ mvn dependency:tree
 
 [INFO] com.mkyong.spring:testing-junit5-mockito:jar:1.0
 [INFO] +- org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE:compile
@@ -167,17 +168,17 @@ pom.xml
 [INFO] |  \- org.junit.jupiter:junit-jupiter-api:jar:5.3.2:test
 [INFO] \- org.springframework.boot:spring-boot-devtools:jar:2.1.2.RELEASE:compile (optional)
 [INFO]    +- org.springframework.boot:spring-boot:jar:2.1.2.RELEASE:compile
-[INFO]    \- org.springframework.boot:spring-boot-autoconfigure:jar:2.1.2.RELEASE:compile 
+[INFO]    \- org.springframework.boot:spring-boot-autoconfigure:jar:2.1.2.RELEASE:compile
 ```
 
-## 2.测试 Spring Boot + JUnit 5 + Mockito。
+## 2.测试 Spring Boot + JUnit 5 + Mockito
 
 2.1 测试下列弹簧部件。
 
-HelloServiceImpl.java
+`HelloServiceImpl.java`
 
 ```java
- package com.mkyong.core.services;
+package com.mkyong.core.services;
 
 import com.mkyong.core.repository.HelloRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -194,13 +195,21 @@ public class HelloServiceImpl implements HelloService {
         return helloRepository.get();
     }
 
-} 
+}
 ```
 
-HelloRepositoryImpl.java
+`HelloRepositoryImpl.java`
+
+
+
+## 1. 项目结构
+
+### 1.1 仓库层
+
+`HelloRepositoryImpl.java`
 
 ```java
- package com.mkyong.core.repository;
+package com.mkyong.core.repository;
 
 import org.springframework.stereotype.Repository;
 
@@ -210,15 +219,15 @@ public class HelloRepositoryImpl implements HelloRepository {
     public String get() {
         return "Hello JUnit 5";
     }
-} 
+}
 ```
 
-2.2 JUnit 5
+### 1.2 JUnit 5 测试
 
-HelloServiceTest.java
+`HelloServiceTest.java`
 
 ```java
- package com.mkyong.core.services;
+package com.mkyong.core.services;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -238,16 +247,15 @@ public class HelloServiceTest {
     void testGet() {
         assertEquals("Hello JUnit 5", helloService.get());
     }
-
-} 
+}
 ```
 
-2.3 Mockito.
+### 1.3 Mockito 测试
 
-HelloServiceMockTest.java
+`HelloServiceMockTest.java`
 
 ```java
- package com.mkyong.core.services;
+package com.mkyong.core.services;
 
 import com.mkyong.core.repository.HelloRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -279,18 +287,17 @@ public class HelloServiceMockTest {
     void testGet() {
         assertEquals("Hello Mockito From Repository", helloService.get());
     }
-
-} 
+}
 ```
 
-## 3.测试 Spring MVC 控制器。
+## 2. 测试 Spring MVC 控制器
 
-3.1 MVC 控制器。
+### 2.1 MVC 控制器
 
-MainController.java
+`MainController.java`
 
 ```java
- package com.mkyong.core.controller;
+package com.mkyong.core.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -304,16 +311,15 @@ public class MainController {
     public String hello() {
         return "Hello Controller";
     }
-
-} 
+}
 ```
 
-3.2 JUnit 5 和 MVC 测试。
+### 2.2 JUnit 5 和 MVC 测试
 
-MainControllerTest.java
+`MainControllerTest.java`
 
 ```java
- package com.mkyong.core.controller;
+package com.mkyong.core.controller;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -341,26 +347,22 @@ public class MainControllerTest {
     public void getHello() throws Exception {
 
         ResponseEntity<String> response = restTemplate.getForEntity(
-			new URL("http://localhost:" + port + "/").toString(), String.class);
+            new URL("http://localhost:" + port + "/").toString(), String.class);
         assertEquals("Hello Controller", response.getBody());
-
     }
-
-} 
+}
 ```
 
-完成了。
+## 3. 下载源代码
 
-## 下载源代码
-
-$ git clone [https://github.com/mkyong/spring-boot.git](http://web.archive.org/web/20221225035521/https://github.com/mkyong/spring-boot.git)
+```bash
+$ git clone https://github.com/mkyong/spring-boot.git
 $ cd testing-junit5-mockito
 $ mvn test
+```
 
-## 参考
+## 4. 参考
 
-*   [Spring Boot 测试](http://web.archive.org/web/20221225035521/https://docs.spring.io/spring-boot/docs/2.1.2.RELEASE/reference/htmlsingle/#boot-features-testing)
-*   [Mockito:为什么不应该对 Autowire 字段使用 InjectMocks 注释](http://web.archive.org/web/20221225035521/https://tedvinke.wordpress.com/2014/02/13/mockito-why-you-should-not-use-injectmocks-annotation-to-autowire-fields/)
-*   [JUnit 5 用户指南](http://web.archive.org/web/20221225035521/https://junit.org/junit5/docs/current/user-guide/)
-
-<input type="hidden" id="mkyong-current-postId" value="14914">
+- [Spring Boot 测试](http://web.archive.org/web/20221225035521/https://docs.spring.io/spring-boot/docs/2.1.2.RELEASE/reference/htmlsingle/#boot-features-testing)
+- [Mockito:为什么不应该对 Autowire 字段使用 InjectMocks 注释](http://web.archive.org/web/20221225035521/https://tedvinke.wordpress.com/2014/02/13/mockito-why-you-should-not-use-injectmocks-annotation-to-autowire-fields/)
+- [JUnit 5 用户指南](http://web.archive.org/web/20221225035521/https://junit.org/junit5/docs/current/user-guide/)

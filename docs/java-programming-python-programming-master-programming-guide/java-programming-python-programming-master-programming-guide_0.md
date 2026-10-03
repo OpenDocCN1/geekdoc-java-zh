@@ -1,17 +1,13 @@
+
 # Java 编程：Python 编程：编程高级指南：一天学会系列（Python, Java, SQL, PHP, HTML, Ruby）
-
-
 
 ![](img/00004.jpeg)
 
-
-
-
 ## 目录
 
-- Java 简介](#
-- 控制语句 或 document.write() 方法有助于调试你的代码。例如：](#
-- 使用 JavaScript 调试器： 构造函数：](#
+- Java 简介
+- 控制语句
+- 使用 JavaScript 调试器
 - JavaScript 原生对象
 - 标准版 (`J2SE`)
 - 企业版 (`J2EE`)
@@ -24,10 +20,6 @@
 
 每个 Java 代码都以 `.java` 扩展名保存。每个 Java 程序包含一个或多个类。每个类都包含一个或多个方法定义，每个方法内部包含几条语句。
 
-
-
-
-
 # 关键字的语法与含义
 
 ```java
@@ -36,7 +28,7 @@ import java.io.*;
 public class MyFirstProgram {
     public static void main(String[] args) {
         //This is my first java program
-        System.out.println“ Hello World !”);
+        System.out.println(" Hello World !");
     }
 }
 ```
@@ -44,28 +36,38 @@ public class MyFirstProgram {
 - `import` 关键字 `import` 用于引入名为 `packages`（包）的 Java 库，包包含了可以在程序使用的预定义函数。
 - `public class MyFirstProgram` - 这是类的定义，关键字 `public` 表示该类对所有人可见，`class` 表示定义为一个类定义。
 - `MyFirstProgram` – 这是类的类名。带有 `main()` 函数的类名必须与源文件名相同。
+
 类的定义被包含在大括号 `{}` 之中。
+
 - `public static void main (String args[])`: 这是程序的主体。由于 `main()` 是驱动函数，它应该始终 `public`（公共的）。
 - `static`: 你需要记住 `main()` 方法应该是 `static`（静态的），因为这使得程序在内存利用上更高效。
 - `void`: 这是方法的返回类型。这意味着 `main()` 方法将不会返回任何内容。
 - `main`: 方法名。解释器仅从 `main()` 方法开始执行。运行程序意味着指示 JVM `load`（加载）从源码编译的 `.class` 文件并从 `main()` 方法开始执行。
 
 `main` 方法的两个用途可以总结为：
+
 1. 测试程序中的所有其他方法
 2. 启动程序的执行
+
 - `String[] args`: 是传递给 `main` 方法的参数。该方法始终接收字符串数组作为输入参数，且数组名称应始终为 `args`。
-注意数据类型大大写字母 `S`，这是因为 `Strings` 是 Java 中的一个类，且所有类名都以大写字母开头。
+
+注意数据类型大大写字母 `S`，这是因为 `String` 是 Java 中的一个类，且所有类名都以大写字母开头。
 
 方法的定义包含在花括号 `{}` 中，在这种情况下，我们希望程序执行的唯一目的是打印“Hello World!”。
+
 要向标准输出控制台打印语句，使用 `System.out.println("");`。注意所有语句必须以分号（`;`）结尾。
-你也可以使用 `System.out.print()` 来显示输出，区别在于 `print ln` 在其打印的每个语句末尾引入一个新行。
+
+你也可以使用 `System.out.print()` 来显示输出，区别在于 `println` 在其打印的每个语句末尾引入一个新行。
+
 我们程序中 `main()` 方法中的另一个语句被称为“注释”语句。这些语句不会被编译，以 `//` 开头的这些语句的作用仅向程序员提供更多关于代码的信息。
+
 Java 完全没有全局变量的概念，但使用 `final`、`static`、`public` 等关键字可以实现同样。
 
 # 面向对象编程
 
 Java 的语法与 C 相似，但编程哲学源自 C++ —— 即 Java 是一种面向对象的语言。
-在我们 ways 看到的第一个示例中，我们有一个类声明，并说明 `main()` 函数负责程序中执行的内容，不过，这并没有让 Java 成为一种 OOP（面向对象）语言，让我们通过示例来更好地理解 OOP —— 对象和类。
+
+在我们看到的第一个示例中，我们有一个类声明，并说明 `main()` 函数负责程序中执行的内容，不过，这并没有让 Java 成为一种 OOP（面向对象）语言，让我们通过示例来更好地理解 OOP —— 对象和类。
 
 ## 过程化方法
 
@@ -76,6 +78,7 @@ Java 的语法与 C 相似，但编程哲学源自 C++ —— 即 Java 是一种
 因此，你可以为每个形状编写一个类文件，这样通过简单的添加新类就可以添加变形虫或修改旋转方法，而不会扰动现有代码。你只需要测试新类，引入的任何新问题都可以轻松追踪到所做的新更改。
 
 ### 示例 1
+
 ```java
 class Movie{
     //变量声明
@@ -84,6 +87,7 @@ class Movie{
 ```
 
 ### 示例 2
+
 ```java
 class Movie{
     //变量声明
@@ -102,42 +106,51 @@ class TestMovie{
 # 变量声明与数据类型
 
 要学习的下一个重要且基础的概念是关于创建有用程序的“变量”和“数据类型”。变量本质上是命名的内存位置，用于存储值。Java 是一种强类型语言，因此类型为 `x` 的变量只能持有类型为 `x` 的值。
+
 例如：
+
 ```java
 int n;
 ```
+
 这里声明变量 `n` 用于存储 `int` 类型的值。声明变量类型确保了 Java 的“类型安全”特性，这反过来有助于“安全性”。
+
 Java 中的变量可以是：
-- 局部变量（原始数据类型如 `int`、`float`、`double`、`Boolean` 等）
+
+- 局部变量（原始数据类型如 `int`、`float`、`double`、`boolean` 等）
 - 引用变量（对象 – 用户定义的类实例）
 
-注意数据类型大写字母 `S`，这是因为 `Strings` 是 Java 中的一个类，且所有类名都以大写字母开头。
+注意数据类型大写字母 `S`，这是因为 `String` 是 Java 中的一个类，且所有类名都以大写字母开头。
 
 ## 字符串
 
-String 是一个类。字符串的一些常用操作：
+`String` 是一个类。字符串的一些常用操作：
+
 ```java
-String str = “Hello”;
+String str = "Hello";
 int len = str.length();
-String concatStr = “hello”+”world”;
+String concatStr = "hello"+"world";
 if (str1 == str2) {
-    System.out.println“strings are equal”);
+    System.out.println("strings are equal");
 }
 ```
 
 ## 引用变量
 
 `Movie m1 = new Movie()`
+
 左侧是持有对象的声明。
+
 ```java
 int[] n;
 n = new int[5];
 ```
+
 注意即使是原始类型的数组，数组也是对象。
 
 ## Equals 操作
 
-我们知道 `==` 和 `!=` 等比较运算符可以用于原始类型，但为了对对象进行比较，不能使用默认运算符，相反 Java 提供了 `equals` 关键字。
+我们知道 `==` 和 `!=` 等比较运算符可以用于原始类型，但为了对对象进行比较，不能使用默认运算符，相反 Java 提供了 `equals` 方法。
 
 ## 列表
 
@@ -145,40 +158,41 @@ n = new int[5];
 import java.util.ArrayList;
 ArrayList myList = new ArrayList<>();
 ```
+
 它允许声明不同数据类型的数组。它提供了多个方法来执行常见的数组操作，如 `add(elem)`、`remove(index)` 用于从列表中添加/删除元素。还有 API 如 `size()` 用于查找长度、`isEmpty()` 或列表是否 `contains()` 给定元素。
 
 让我们来看一个使用目前所学概念的示例：
 
 ```java
-Class MyProgram{
-    public static void main(Strings[] args){
+class MyProgram{
+    public static void main(String[] args){
         //声明并赋值变量
         int num = 10;  
         float fNum = 10.5;
         //打印语句到控制台
-        System.out.println“The value of integer num is : ”+num);
-        System.out.println“The Value of integer fNum is : ”+fNum);
+        System.out.println("The value of integer num is : " + num);
+        System.out.println("The Value of integer fNum is : " + fNum);
         num = num/2;
         fNum = fNum+num;
-        System.out.println“The value of integer num after operation is : ”+num);
-        System.out.println“The Value of integer fNum after operation is : ”+fNum);
+        System.out.println("The value of integer num after operation is : " + num);
+        System.out.println("The Value of integer fNum after operation is : " + fNum);
     }
 }
 ```
 
 输出：
+
 The value of integer num is : 10
+
 The value of integer fNum is : 10.5
+
 The value of integer num after operation is : 5
+
 The value of integer fNum after operation is : 20.5
-
-
-
-
 
 # 控制语句
 
-程序中的控制语句顾如名所示，控制着每个程序的通用流程。它包括诸如 `if else` 的条件语句，或如 `while ()`、`do while()` 等迭代语句。
+程序中的控制语句顾名思义，控制着每个程序的通用流程。它包括诸如 `if else` 的条件语句，或如 `while()`、`do while()` 等迭代语句。
 
 ![](img/00003.jpeg)
 
@@ -186,7 +200,7 @@ The value of integer fNum after operation is : 20.5
 
 语法：
 
-```javascript
+```java
 if(condition)
     do action1;
 else
@@ -201,18 +215,18 @@ else
 
 语法：
 
-```javascript
-Switch(id)
+```java
+switch(id)
 {
-Case id1:
-    Action;
-    Break;
-Case id2:
-    Action;
-    Break;
-….
-Default:
-….
+    case id1:
+        Action;
+        break;
+    case id2:
+        Action;
+        break;
+    ....
+    default:
+        ....
 }
 ```
 
@@ -222,10 +236,10 @@ Default:
 
 语法：
 
-```javascript
+```java
 while(condition)
 {
-    当 condition 为真时执行某些操作;
+    // 当 condition 为真时执行某些操作;
 }
 ```
 
@@ -233,53 +247,60 @@ while(condition)
 
 这同样是一个迭代操作，与 `while()` 循环非常相似，区别在于无论条件是否有效，循环至少会执行一次，因为条件是在 `do` 语句之后才评估的。
 
-语法
+语法：
 
-```javascript
+```java
 do{
-    执行某些操作
+    // 执行某些操作
 }while(condition);
 ```
 
 ### For 循环
 
-语法：`for ( 初始化;条件; 更新)`
+语法：`for ( 初始化; 条件; 更新)`
 
 示例：`for (int i=0; i<5; i++)` 现在将执行该语句 5 次。第一部分声明并为 `counter` 变量初始化一个值，第二部分检查条件，如果条件为真，则进入循环。循环完成后，它执行递增。然后它再次检查条件并继续执行相同操作，直到条件变为假。一旦条件为假，它就会退出循环。
 
 示例：
 
 ```java
-Class MyProgram{
-public static void main(Strings[] args){
-    //声明并赋值变量
-    int num = 5, i;
-    while( num > 0){
-        System.out.println("整数型 Num 的值为："+num);
-        num--;
-    }
-    for(i = 0;i<5; i++)
-        System.out.println("整数型 Num 的值为："+num);
+class MyProgram{
+    public static void main(String[] args){
+        //声明并赋值变量
+        int num = 5, i;
+        while( num > 0){
+            System.out.println("整数型 Num 的值为：" + num);
+            num--;
+        }
+        for(i = 0; i < 5; i++)
+            System.out.println("整数型 Num 的值为：" + num);
     }
 }
 ```
 
 输出：
+
 整数型 Num 的值为：5
+
 整数型 Num 的值为：4
+
 整数型 Num 的值为：3
+
 整数型 Num 的值为：2
+
 整数型 Num 的值为：1
 
 上述程序使用了两个循环语句来执行操作。
 
 # 封装
 
-封装，顾如名所示，将数据胶胶起来。简单来说，它隐藏了数据，从而提供了安全性。传递的参数可以是值传递，也可以是引用传递。在确定使用哪种类型后声明数据类型。类的方法通过对象使用点运算符来访问。
+封装，顾名思义，将数据封装起来。简单来说，它隐藏了数据，从而提供了安全性。传递的参数可以是值传递，也可以是引用传递。在确定使用哪种类型后声明数据类型。类的方法通过对象使用点运算符来访问。
 
 `Movie m1 = new Movie()`
-`M1.printName()` //打印名称
-或 `M1.play(count)` //播放 n 次电影
+
+`m1.printName()` //打印名称
+
+或 `m1.play(count)` //播放 n 次电影
 
 在接下来的示例中，使用 getter 来读取类变量的值，然后为变量设置一个值。
 
@@ -297,7 +318,7 @@ public class GetterSetter{
         return name;
     }
     // setters
-    public void setAge( int newAge){
+    public void setAge(int newAge){
         age = newAge;
     }
     public void setName(String newName){
@@ -307,19 +328,21 @@ public class GetterSetter{
 
 //测试 getter 和 setter 方法的类
 public class TestGetterSetter{
-    public static void main(String args[]){
-        TestGetterSetter gs = new GetterSetter();
+    public static void main(String[] args){
+        GetterSetter gs = new GetterSetter();
         gs.setName("John");
         gs.setAge(30);
-        System.out.println("你的名字是："+gs.getName());
-        System.out.println("你的年龄是："+gs.getAge());
+        System.out.println("你的名字是：" + gs.getName());
+        System.out.println("你的年龄是：" + gs.getAge());
     }
 }
 ```
 
 输出：
+
 你的名字是：John
-你的年龄是：3
+
+你的年龄是：30
 
 ## JavaScript 简介
 
@@ -333,33 +356,37 @@ Java 和 JavaScript 唯一相似之处是它们的名称相似。在功能和概
 
 ## 在 JavaScript 中存储数据
 
-- 本地存储 (Local Storage)：本地存储用于永久存储数据。通过它，可以随时访问该页面的数据。本地存储没有过期日期。如果人们希望数据在一段时间内被反复使用，可以使用本地存储。
-- 会话存储 (Session Storage)：会话存储与本地存储不同，因为它只保留单个会话的数据，并在用户关闭页面后丢弃数据。这种存储用于用于预订的网页。
+- 本地存储 (`Local Storage`)：本地存储用于永久存储数据。通过它，可以随时访问该页面的数据。本地存储没有过期日期。如果人们希望数据在一段时间内被反复使用，可以使用本地存储。
+- 会话存储 (`Session Storage`)：会话存储与本地存储不同，因为它只保留单个会话的数据，并在用户关闭页面后丢弃数据。这种存储用于用于预订的网页。
 
 ## 使用变量和常量存储数据
 
 变量和常量存储数据。变量和常量在 JavaScript 中都有它们自己的重要性。`if` 语句使用这些数据。
 
-变量数据：顾如名所示，这种随时间变化的类型在 JavaScript 中被广泛。变量是动态的。
+变量数据：顾名思义，这种随时间变化的类型在 JavaScript 中被广泛。变量是动态的。
 
 常量数据：常量数据是不改变值的。这种类型的数据是静态的。我们使用这种类型用于不可修改的数据。
 
 ### 创建变量和常量
 
 声明变量
-通过在名称前添加 `var` 关键字来声明变量。例如，如果你想声明 `group` 为变量，只需添加 `var` 关键字。每个变量都应该以 `;`（分号）结束。这使得语句自包含。在使用单词时应小心，因为 JavaScript 是大小敏感的。对于这一点，字母必须与原始一致。
+
+通过在名称前添加 `var` 关键字来声明变量。例如，如果你想声明 `group` 为变量，只需添加 `var` 关键字。每个变量都应该以 `;`（分号）结束。这使得语句自包含。在使用单词时应小心，因为 JavaScript 是大小写敏感的。对于这一点，字母必须与原始一致。
 
 ```javascript
 var Dell;
 ```
+
 上面的对象 `Dell` 是一个变量。
 
 声明常量
+
 在名称前使用 `const` 关键字使其成为常量。这种声明就像声明常量一样。
 
 ```javascript
 const Book;
 ```
+
 上面的示例中 `Book` 是常量。
 
 ### JavaScript 中的决策
@@ -369,6 +396,7 @@ const Book;
 `if` 和 `else` 语句可以用于决策。这将允许程序选择正确的路径。
 
 JavaScript 支持以下条件语句：
+
 1. `if` 语句
 2. `if...else` 语句
 3. `if...else if` 语句
@@ -381,25 +409,24 @@ if( age > 18 ){
     document.write("<b>允许进入酒吧。</b>");
 }
 ```
-输出：允许进入酒吧的（如果给出了 18 以上的数字）
+
+输出：允许进入酒吧（如果给出了 18 以上的数字）
 
 if else 语句：这是 `if` 语句的扩展。如果 `if` 语句为假，系统运行并执行 `else` 块中的语句。
 
 语法：
 
 ```javascript
-if(condition)
+if(condition) {
+    // statements
+} else {
+    // statements
+}
 ```
 
-
-
-
-
-{statements}
-
-else{statements}
-
 示例：
+
+
 
 ```html
 <script type="text/javascript">
@@ -415,18 +442,31 @@ if( age > 18 ){
 ```
 
 输出：
+
 允许进入酒吧（如果给出一个大于 18 的数字）
+
 不允许（如果给出一个小于 18 的数字）
 
-if else if: 这就像是给 if else 语句又添加了一个步骤。这被用于使用一系列条件的情况。
+## if else if
 
-语法：`if(condition){statements};`
+这就像是给 `if else` 语句又添加了一个步骤。这被用于使用一系列条件的情况。
 
-else if(condition){statements}
+语法：
 
-else if(condition){statements}
-
-else{statements}
+```javascript
+if(condition){
+  statements
+}
+else if(condition){
+  statements
+}
+else if(condition){
+  statements
+}
+else{
+  statements
+}
+```
 
 示例：
 
@@ -453,38 +493,51 @@ if( book == "JAVA" ){
 
 “嵌套 if”是指在另一个“if”语句内部的另一个“if”语句。
 
-语法：`if(condition) {if(condition){statement} }`
-
-## switch 和 break 语句
-
-在 switch 语句中将有一个表达式，后面跟着几个不同的语句。这些语句将根据所选表达式的值执行。
-
 语法：
+
 ```javascript
-switch (expression)
-{
-  case condition 1
-: statement(s)
-      break;
-  case condition 2: statement(s)
-                      break;
-.
-.
-,
-  case condition n: statement(s)
-      break;
-  default:
-statement(s)
+if(condition) {
+  if(condition){
+    statement
+  }
 }
 ```
 
-`break` 语句用于表示前面的 switch case 的结束。
+## switch 和 break 语句
+
+在 `switch` 语句中将有一个表达式，后面跟着几个不同的语句。这些语句将根据所选表达式的值执行。
+
+语法：
+
+```javascript
+switch (expression)
+{
+  case condition 1:
+    statement(s)
+    break;
+  case condition 2:
+    statement(s)
+    break;
+  .
+  .
+  .
+  case condition n:
+    statement(s)
+    break;
+  default:
+    statement(s)
+}
+```
+
+`break` 语句用于表示前面的 `switch case` 的结束。
+
+# 第 2 章：JavaScript 中的循环与函数
 
 ## JavaScript 中的循环
 
 ### for 循环
 
-如果人们希望重复执行相同的代码，就会使用循环。“forfor 循环是可以使用的三种循环之一。“for 循环”简单且紧凑。
+如果人们希望重复执行相同的代码，就会使用循环。`for` 循环是可以使用的三种循环之一。`for` 循环简单且紧凑。
 
 它包含以下三点：
 
@@ -493,6 +546,7 @@ statement(s)
 3. 迭代的计数器可以增加也可以减少。
 
 语法：
+
 ```javascript
 for (initialization; test condition; iteration statement){
   如果测试条件为真，则执行的语句(s)
@@ -516,21 +570,32 @@ document.write("Done!!");
 ```
 
 输出：
+
 这将重复 10 次
+
 当前重复： 1
+
 当前重复： 2
+
 当前重复： 3
+
 当前重复： 4
+
 当前重复： 5
+
 当前重复： 6
+
 当前重复： 7
+
 当前重复： 8
+
 当前重复： 9
+
 当前重复： 10
 
-# 第 2 章：JavaScript 中的函数和事件
+## JavaScript 中的函数和事件
 
-## 什么是函数？
+### 什么是函数？
 
 一组在需要时可以在程序中任何地方被重用的代码被称为函数。它减少了人们反复编写相同代码的时间和精力。这减少了代码冗余。使用函数可以编写模块化代码。使用函数可以将一个大程序分成许多或所需的部分。JavaScript 与任何其他编程语言一样，都支持编写模块化代码所需的特征。这是通过使用“函数”来实现的。
 
@@ -543,6 +608,7 @@ JavaScript 还允许人们创建自己的自定义函数。
 在使用函数之前，应该先定义它。`function` 关键字是 JavaScript 中定义函数的常用方法。后面应该紧跟一个唯一的函数名和参数列表。它还应该包含一个带有大括号的语句块。
 
 语法：
+
 ```html
 <script type="text/javascript">
 <!--
@@ -639,7 +705,7 @@ alert(result);
 </script>
 ```
 
-JavaScript 中的事件
+## JavaScript 中的事件
 
 ### 事件
 
@@ -653,7 +719,7 @@ JavaScript 中的事件
 
 这是一种事件，点击时会显示所需的验证或警告等。这被广泛使用。
 
-示例：下面的代码，当点击 onclick hello 按钮时，它会触发 `events` 函数。
+示例：下面的代码，当点击 `onclick hello` 按钮时，它会触发 `events()` 函数。
 
 ```html
 <html>
@@ -674,7 +740,7 @@ function events() {
 
 ### onsubmit 事件类型
 
-`onsubmit` 事件是另一个重要的事件类型。在这里提交表单时会进行验证。如果函数返回 true，则文本将被发送。
+`onsubmit` 事件是另一个重要的事件类型。在这里提交表单时会进行验证。如果函数返回 `true`，则文本将被发送。
 
 示例：
 
@@ -708,10 +774,6 @@ function validation() {
 
 调试是修复 bug 的过程。在开发过程中，调试是正常的一部分。
 
-
-
-
-
 我们编写的代码可能存在逻辑错误或语法错误，这些错误很难识别。很多时候，当 JavaScript 代码包含错误时，什么都不会发生。没有任何消息指示程序中存在错误。
 
 ## 使用验证器 (Validator)
@@ -722,15 +784,16 @@ function validation() {
 
 `alert()` 或 `document.write()` 方法有助于调试你的代码。例如：
 
-```var debugging = true;
+```javascript
+var debugging = true;
 var whichImage = "widget";
 
 if( debugging )
-alert( "swapImage() with argument: " + whichImage );
+  alert( "swapImage() with argument: " + whichImage );
 var swapStatus = swapImage( whichImage );
 
 if( debugging )
-alert( "swapImage() with swapStatus=" + swapStatus );
+  alert( "swapImage() with swapStatus=" + swapStatus );
 ```
 
 ## 使用 JavaScript 调试器 (Debugger)
@@ -879,7 +942,10 @@ JavaScript 包含许多内置对象。它们的行为不受浏览器或运行平
 1. Number 对象
 2. Boolean 对象
 3. [String](https://www.tutorialspoint.com/javascript/strings_object.htm) 对象
-4. JavaScript Math 对象
+
+
+
+# 4. JavaScript Math 对象
 
 ## Number 对象
 
@@ -904,25 +970,23 @@ value = new Number(number);
 | `toLocaleString()` | 该方法接收一个数字并返回它的字符串版本。其格式随网络浏览器的本地化设置而变化。 |
 | `toPrecision()` | 该方法定义了给定数字显示的位数。这包括了小数点两侧的数字。 |
 | `toString()` | 该方法有助于将数字转换为字符串值。 |
-
-
-
-
-
 | `valueOf()` | 此方法表示数字的值。 |
-
 | `valueOfOf()` | 此方法表示数字的值。 |
 
 ## 布尔对象 (Boolean Object)
+
 `Boolean` 对象用于表示可以是“真”（True）或“假”（False）值的值。
 
 ### 语法
+
 可以使用以下语法创建布尔对象：
+
 `var bval = new Boolean(value);`
 
-如果参数 `value` 为以下任何值：空字符串、`null`、`0`、`Nan`、`-0`、`null` 或 `undefined`，则 `Boolean` 对象的初始值为 false。
+如果参数 `value` 为以下任何值：空字符串、`null`、`0`、`NaN`、`-0`、`null` 或 `undefined`，则 `Boolean` 对象的初始值为 false。
 
 ### Boolean 方法
+
 以下是 `Boolean` 对象包含的方法。
 
 | 方法 | 说明 |
@@ -932,15 +996,19 @@ value = new Number(number);
 | `valueOf()` | 此方法用于返回 `Boolean` 对象的原始值。 |
 
 ## 字符串对象 (String Object)
-`string` 对象允许用户处理一组字符，并用辅助方法封装 JavaScript 的字符串原始。
+
+`String` 对象允许用户处理一组字符，并用辅助方法封装 JavaScript 的字符串原始值。
 
 ### 语法
+
 可以使用以下语法创建 `String` 对象：
+
 `var value = new String(string);`
 
 `string` 参数表示一组正确编码的字符。
 
 ### String 方法
+
 以下是 `String` 对象包含的方法。
 
 | 方法 | 说明 |
@@ -950,10 +1018,11 @@ value = new Number(number);
 | `match()` | 此方法用于用正则表达式匹配字符串。 |
 | `toLocaleLowerCase()` | 用于在保持当前区域设置的同时将字符串转换为小写。 |
 | `toLocaleUpperCase()` | 用于在保持当前区域设置的同时将字符串转换为大写。 |
-| `tolowerCase()` | 返回一个其中所有大写字母都转换为小写的字符串。 |
-| `toupperCase()` | 返回一个其中所有小写字母都转换为大写的字符串。 |
+| `toLowerCase()` | 返回一个其中所有大写字母都转换为小写的字符串。 |
+| `toUpperCase()` | 返回一个其中所有小写字母都转换为大写的字符串。 |
 
 ## Math 对象 (Math Object)
+
 它允许用户执行许多常见的数学计算。通过编写对象的名称、点、以及随后的方法名称来调用对象方法。参数写在方法的括号中。
 
 ```javascript
@@ -967,10 +1036,11 @@ document.writeln(Math.sqrt(81));
 | `abs(x)` | `x` 的绝对值 |
 | `ceil(x)` | 将 `x` 舍入为不小于 `x` 的最小整数。 |
 | `round(x)` | 将 `x` 舍入到最近的整数。 |
-| `pow(x , y)` | `X` 的 `y` 次方 |
+| `pow(x, y)` | `x` 的 `y` 次方 |
 | `floor(x)` | 将 `x` 舍入为不大于 `x` 的最大整数。 |
 
 # 结论
+
 我们已经完成了学习 Java 和 JavaScript 编程基础的书。
 
 感谢你购买本书。我希望这本书对你有所帮助，并帮助你理解使用 Java 和 JavaScript 的编程概念。作为高级编程语言，它们很容易学习基础并开始自己编写程序。
@@ -980,22 +1050,20 @@ document.writeln(Math.sqrt(81));
 谢谢！
 
 注册免费计算机培训和电子书！
-[http://freecomputertraining.strikingly.com]
+
+<http://freecomputertraining.strikingly.com>
 
 ## 你可能也会喜欢我的其他书籍！
-- Android 应用开发与编程指南：一天学会！[hyperurl.co/androids]
+
+- Android 应用开发与编程指南：一天学会！<http://hyperurl.co/androids>
 - [PYTHON：学者编程指南：一天学会！](http://hyperurl.co/python)
 - [C++ 编程：学者编程语言：一天学会！](http://smarturl.it/cplusplus)
 - [JAVA：Java 编程、JavaScript、编码：编程指南：一天学会！](http://hyperurl.co/javaos)
 - [SQL：编程指南：JavaScript 和编码：一天学会！](http://smarturl.it/sql)
-- HTML 编程：编程指南：计算机编程：一天学会！[hyperurl.co/html]
-- Swift 编程：一天学会！[hyperurl.co/swift]
+- HTML 编程：编程指南：计算机编程：一天学会！<http://hyperurl.co/html>
+- Swift 编程：一天学会！<http://hyperurl.co/swift>
 
-
-
-
-
-[http://freecomputertraining.strikingly.com]
+<http://freecomputertraining.strikingly.com>
 
 # 引言
 
@@ -1003,7 +1071,7 @@ document.writeln(Math.sqrt(81));
 
 软件可以被视为一种技术文献，它可以同时被计算机和人类阅读，但形式不同。只有当软件是用像英语这样人类可读的语言编写时，人类才能轻松理解它。另一方面，计算机只能理解机器码（0 和 1）形式的指令。因此，开发出了某些可以将高级代码翻译成机器码的特定程序（编译器和解释器）。
 
-尽管高级语言易于理解，但大多数语言都具有复杂的语法，这使得编写和修改大型程序变得繁琐。因此，一些具有简单、清晰语法的高级语言被世世，`Python` 就是其中一种语言。由于其简单的语法、高可读性以及其他各种创新特性，全球的程序员都越来越喜欢 `Python`。最近，由于其简单性，许多大学已采用 `Python` 来向学生教授入门计算机编程。
+尽管高级语言易于理解，但大多数语言都具有复杂的语法，这使得编写和修改大型程序变得繁琐。因此，一些具有简单、清晰语法的高级语言被开发出来，`Python` 就是其中一种语言。由于其简单的语法、高可读性以及其他各种创新特性，全球的程序员都越来越喜欢 `Python`。最近，由于其简单性，许多大学已采用 `Python` 来向学生教授入门计算机编程。
 
 因此，`Python` 不仅在软件开发人员中越来越流行，而且作为学习计算机编程的理想语言也越来越受到欢迎。如果你是编程新手，这本书是学习如何编写代码的理想起点。如果你已经熟悉编程，这本书对你来说将是一本易读的读物，并能让你理解 `Python` 与其他编程语言的不同之处。
 
@@ -1015,7 +1083,7 @@ document.writeln(Math.sqrt(81));
 
 正如你可能已经知道的，`Python` 基本是一种高级编程语言。如果一种语言与机器无关，并且使用英语等人类语言来指定其语法，以便人类可以轻松理解，那么它就被认为是高级语言。程序员只需要处理类英语的语法，而无需担心底层的机器码。尽管市场上有很多高级语言可用，但 `Python` 因其清晰的语法和良好的可读性在软件开发人员中广泛流行。`Python` 中的实际代码行看起来像伪代码，因此易于理解。
 
-为什么编程语言的可读性在软件开发中如此重要？这是因为程序员在阅读代码行上花费的时间比编写代码的时间要多。`Python` 通过度强调代码的可读性使这项任务变得更加简单。此外，与 `Java` 或 `C++` 等其他高级语言相比，`Python` 可以使用较少的代码行完成给的任务。
+为什么编程语言的可读性在软件开发中如此重要？这是因为程序员在阅读代码行上花费的时间比编写代码的时间要多。`Python` 通过强调代码的可读性使这项任务变得更加简单。此外，与 `Java` 或 `C++` 等其他高级语言相比，`Python` 可以使用较少的代码行完成给定的任务。
 
 现在，关于精确的描述，`Python` 可以描述如下：
 
@@ -1051,10 +1119,6 @@ document.writeln(Math.sqrt(81));
 
 脚本语言本质上是用于控制软件应用程序的编程语言。它们支持仅为运行时操作编写的脚本或程序。脚本不被编译而是被解释；而它们所控制的应用程序通常是编译的。因此，脚本与核心应用程序是不同的。脚本和应用程序通常使用不同的语言编写。通常，通过将脚本嵌入应用程序来实现对应用程序的控制。
 
-
-
-
-
 `Python` 中的变量类型可以快速更改，无需产生任何麻烦或错误。在静态编程语言中，这是无法实现的，因为变量类型在程序执行过程中不能更改。`Python` 可以很容易与其他技术集成。`Python` 的设计使其能够轻松地嵌入到其他技术中。由于其简单性、可读性以及易于使用的支持库，程序员在使用 `Python` 工作时效率大大提高。
 
 可以使用 `Python` 轻松开发 Web 服务。如果开展的项目较大或复杂，且需求经常变化，`Python` 是一个理想的编程语言。科学应用利用了 `numeric Python` 和 `Scientific Python` 等工具。
@@ -1065,11 +1129,11 @@ document.writeln(Math.sqrt(81));
 
 可以在 Python 官方网站访问带有二进制文件、当前源代码、文档、最新新闻等的最新版本。
 
-Python 官方网站：http://www.python.org/
+Python 官方网站：<http://www.python.org/>
 
 在这里，你可以从该网站下载 `Python` 的文档。它支持 PDF、HTML 和 PostScript 等多种格式。
 
-Python 文档网站：[www.python.org/doc/](http://www.python.org/doc/)
+Python 文档网站：<http://www.python.org/doc/>
 
 ## 如何安装 Python
 
@@ -1116,16 +1180,17 @@ Python 文档网站：[www.python.org/doc/](http://www.python.org/doc/)
 
 现在，让我们详细学习 `Python` 的一些简单但重要的编程规则。
 
-进入开始菜单->Python-> 'IDLE'（或集成开发环境）。
+进入开始菜单 -> Python -> 'IDLE'（或集成开发环境）。
 
 在 `python` 提示符中输入以下内容并按回车：（不要输入 `>>>`，因为它已经在命令行中存在了）
 
 ### 代码示例 1 - Hello, World!
 
-```
+```python
 >>> print "Hello, World!"
 ```
-输出：- Hello, World!
+
+输出：Hello, World!
 
 这里是另一个示例，显示了如何在屏幕上打印字符串：
 
@@ -1137,7 +1202,7 @@ print ('hi, Michael')
 
 OUTPUT: hi, Michael
 
-上面的程序也可以写如下所示
+上面的程序也可以写如下所示：
 
 ```python
 print 'hi, Michael'
@@ -1155,6 +1220,7 @@ print 'hi, Michael'
 示例：`print 'hi'; print 'Michael'; print 'how are you?';`
 
 输出：
+
 ```
 hi
 Michael
@@ -1181,22 +1247,31 @@ print 'hi, Michael'
 ```python
 # print "food is very bad"
 ```
+
 （没有输出，因为 print 语句在注释之后输入）
 
 ```python
 print "food is tasty" eat it
 ```
+
 （显示了错误，因为我们没有在井号后面放置注释）
 
 ### 多行注释
 
 在 `Python` 中，井号（`#`）符号仅用于编写单行注释。不能使用井号编写多行注释。例如，考虑以下脚本：
 
+
+
+# Python 基础语法
+
+## 注释
+
 ```python
 # 这是
 a Python Script
 print 'hi, Michael'
 ```
+
 上面的脚本会报错，因为注释 `This is a Python Script` 写了两行，但 `#` 符号只允许单行注释。因此，在 `Python` 中编写多行注释，我们可以使用三引号 `'''` 或 `"""`。
 
 示例 1：
@@ -1225,7 +1300,7 @@ print 'hi, Michael'
 print 'I like Python'
 print "I like Python"
 print '''I like Python'''
-print"""I like Python"""
+print """I like Python"""
 ```
 
 上述四个语句给出相同的输出。但是，多行只能使用三引号打印。尝试使用单引号或双引号打印多行字符串会导致错误。
@@ -1233,8 +1308,9 @@ print"""I like Python"""
 示例：
 
 ```python
-print 'I like Python. It is very simple and easy to learn'
+print """I like Python. It is very simple and easy to learn"""
 ```
+
 上面的语句是合法的，因为使用了三引号来打印多行字符串。
 
 让我们看看当上面的脚本更改如下时会发生什么：
@@ -1243,9 +1319,6 @@ print 'I like Python. It is very simple and easy to learn'
 print 'Python is object oriented'''
 ```
 
-
-
-
 上述语句会报错，因为字符串以单引号开头，但以三引号结束。如前所述，字符串的两端需要指定相同类型的引号。
 
 现在，如果你想在屏幕上打印单引号 `''` 作为字符串的一部分，该怎么办呢？
@@ -1253,7 +1326,7 @@ print 'Python is object oriented'''
 例如，如果你想在屏幕上打印字符串 `'Python'`（包括单引号），该怎么办呢？可以使用以下语句实现：
 
 ```python
-print "'Python'" #这里要打印的字符串是 'Python'
+print "'Python'" # 这里要打印的字符串是 'Python'
 ```
 
 OUTPUT: `'Python'`
@@ -1263,7 +1336,7 @@ OUTPUT: `'Python'`
 如果你只想在屏幕上打印一个单引号呢？可以使用以下语句实现：
 
 ```python
-print '' ' '' #单引号位于两个双引号之间
+print "'" # 单引号位于两个双引号之间
 ```
 
 OUTPUT: '
@@ -1283,7 +1356,7 @@ print """ # 要打印的双引号被包含在两个双引号之间。
 `"I am happy"`，迈尔 说道。你可能选择使用单引号或双引号来打印上述句子。假设你写的脚本如下：
 
 ```python
-print "I am happy", said Michael." #将要打印的句子包含在双引号中。
+print "I am happy", said Michael." # 将要打印的句子包含在双引号中。
 ```
 
 上述脚本报错，因为 Python 解释器会困惑，因为它假设字符串开头 `"I am happy"` 处的双引号是 print 语法的一部分，并认为字符串已经结束了。它不会理解那些双引号只是需要作为字符串的一部分打印的字符。我们需要让 Python 知道这些双引号不是 print 语法的一部分。
@@ -1293,7 +1366,7 @@ print "I am happy", said Michael." #将要打印的句子包含在双引号中�
 这里有几个展示反斜杠 `\` 用法的示例：
 
 ```python
-print "\"I am happy\", said Michael." #转义字符串 "I am happy" 周围的双引号
+print "\"I am happy\", said Michael." # 转义字符串 "I am happy" 周围的双引号
 ```
 
 OUTPUT: `"I am happy", said Michael.`
@@ -1301,7 +1374,7 @@ OUTPUT: `"I am happy", said Michael.`
 另一个示例：
 
 ```python
-print 'I am 5\'4 tall' #转义 5 和 4 之间的单引号
+print 'I am 5\'4 tall' # 转义 5 和 4 之间的单引号
 ```
 
 OUTPUT: I am 5'4 tall
@@ -1422,11 +1495,17 @@ print d
 注意你指定的制表、反斜杠和换行符。
 
 OUTPUT:
-I have space before me.
+
+```text
+	 I have space before me.
 My name is in the next line
-It is Michael.
+ It is Michael.
 A sentence can be divided as: \ Michael.
-The backslash '\' is not used in.
+About me:
+	* I am Michael
+	* I like Python
+	* It is very simple and	* easy to learn
+```
 
 ## 第 4 章：Python 中的行缩进
 
@@ -1454,9 +1533,7 @@ print 'The cat is fluffy'
 print 'The bird is chattering'
 ```
 
-
-
-上面的脚本生成了一个“缩进错误” (Indentation Error)；这意味着所有三个语句本应该形成一个块，因此它们应该具有相同的缩进。
+上面的脚本生成了一个“缩进错误”；这意味着所有三个语句本应该形成一个块，因此它们应该具有相同的缩进。
 
 用户可以使用任意数量的空格作为缩进。但必须注意，同一个块内的语句的缩进空格数必须相同。
 
@@ -1500,7 +1577,8 @@ else:
 ```
 
 OUTPUT：
-```
+
+```text
 [Line 3](http://codepad.org/gpkkOzLB#line-3)
   print "abc"
        ^
@@ -1512,12 +1590,14 @@ Indentation Error: unindent does not match any outer indentation level
 来看 Python 的另一个示例：
 
 ### 块 1
+
 ```python
 if 5<10:
-print "abc"
+    print "abc"
 else:
-print "xyz"
+    print "xyz"
 ```
+
 OUTPUT: abc
 
 在上面的块中，`if` 和 `else` 具有相同的缩进，因为它们共同组成了一个控制语句块。同样，`print` 语句应该具有相同的缩进，因为每个 `print` 语句都被视为一个代码块。
@@ -1525,14 +1605,17 @@ OUTPUT: abc
 然而，下面的块将会报错：
 
 ### 块 2
+
 ```python
 if 5<10:
 print "abc"
 else:
 print "xyz"
 ```
+
 OUTPUT:
-```
+
+```text
 [Line 2](http://codepad.org/rnoeN4o0#line-2)
   print "abc"
 IndentationError: expected an indented block
@@ -1543,16 +1626,19 @@ IndentationError: expected an indented block
 考虑另一个语句块：
 
 ### 块 3
+
 ```python
-if 5<10:
-print "abc"
+    if 5<10:
+    print "abc"
 else:
-print "xyz"
+    print "xyz"
 ```
+
 上面的代码输出如下所示：
 
 OUTPUT:
-```
+
+```text
 [Line 1](http://codepad.org/81avkQsU#line-1)
   if 5<10:
   ^
@@ -1562,6 +1648,7 @@ IndentationError: unexpected indent
 因此，在对 Python 代码行进行缩进时应该小心。至于行之间的空格，可以在任何两行代码之间留下任意数量的空行。
 
 示例：
+
 ```python
 if 5<10:
     print '5 is less than 10'
@@ -1569,6 +1656,7 @@ if 5<10:
 else:
     print "xyz"
 ```
+
 在上面的代码块中，`if` 语句和 `else` 语句之间留下了 5 个空行。尽管如此，这对输出没有影响，也没有产生错误。程序员只需要注意行的缩进。
 
 **注意：**尽管可以使用任意数量的空格作为缩进，但使用 4 个空格作为缩进是一个良好的习惯。
@@ -1577,7 +1665,8 @@ else:
 
 在 Python 中，语句以单行结束。新的一行表示前一行的语句已经结束。换句话说，Python 不允许将单个语句写在多行中。
 
-示例：考虑一个用于计算三个数字之数的程序
+示例：考虑一个用于计算三个数字之和的程序
+
 ```python
 a=10
 b=5
@@ -1585,9 +1674,11 @@ c=5
 sum= a+b+c
 print sum
 ```
+
 OUTPUT: 20
 
 现在，尝试通过将第 4 行的表达式分成两行来重写代码：
+
 ```python
 a=10
 b=5
@@ -1596,16 +1687,20 @@ sum= a+
     b+c
 print sum
 ```
+
 OUTPUT:
-```
+
+```text
 [Line 3](http://codepad.org/I13POw#line-3)
   sum= a+
     ^
 Syntax Error: invalid syntax
 ```
+
 在上面的程序中，第 4 行只包含语句的一部分，其延续在后续行中。然而，解释器认为语句在单行处已结束。因此，由于表达式 `sum = a+` 没有关联，生成了错误。
 
 考虑按如下方式编写相同的程序：
+
 ```python
 a=10
 b=5
@@ -1614,9 +1709,11 @@ sum= a
 +b+c
 print sum
 ```
+
 上面的代码没有生成错误，但没有给出预期的输出。这是因为第 4 行的语句以 `a` 结束，解释器认为这就是语句的结束。由于使用了赋值运算符 `=`（你将在下一章中学习），解释器将 `a` 的值赋给 `sum`，使其变为 10。
 
 然而，我们可以使用续行字符 `\` 在多行中编写单个语句。例如：
+
 ```python
 a=10
 b=5
@@ -1625,78 +1722,31 @@ sum= a+\
     b+c
 print sum
 ```
-OUTPUT: 20 尽管可以使用任意数量的空格作为缩进，但使用 4 个空格作为缩进是一个良好的习惯。
 
-## 多行语句
-
-在 Python 中，语句以单行结束。新的一行表示前一行的语句已结束。换句话说，Python 不允许将单个语句写在多行中。
-
-示例：考虑一个用于计算三个数字之数的程序
-```python
-a=10
-b=5
-c=5
-sum= a+b+c
-print sum
-```
 OUTPUT: 20
 
-现在，尝试通过将第 4 行的表达式分成两行来重写代码：
-```python
-a=10
-b=5
-c=5
-sum= a+
-    b+c
-print sum
-```
-OUTPUT:
-```
-[Line 3](http://codepad.org/I13POw#line-3)
-  sum= a+
-    ^
-Syntax Error: invalid syntax
-```
-在上面的程序中，第 4 行只包含语句的一部分，其延续在后续行中。然而，解释器认为语句在单行处已结束。因此，由于表达式 `sum = a+` 没有关联，生成了错误。
+## 运算符
 
-考虑按如下方式编写相同的程序：
-```python
-a=10
-b=5
-c=5
-sum= a
-+b+c
-print sum
-```
-上面的代码没有生成错误，但没有给出预期的输出。这是因为第 4 行的语句以 `a` 结束，解释器认为这就是语句的结束。由于使用了赋值运算符 `=`（你将在下一章中学习），解释器将 `a` 的值赋给 `sum`，使其变为 10。
-
-然而，我们可以使用续行字符 `\` 在多行中编写单个语句。例如：
-```python
-a=10
-b=5
-c=5
-sum= a+\
-    b+c
-print sum
-```
-OUTPUT: 20
-
-
-
-
-| 运算符 |  | 示例 |
+| 运算符 | 说明 | 示例 |
 | :--- | :--- | :--- |
 | `==` | 它是“等于”运算符，用于检查两个操作数的值是否相等。如果它们相等，返回布尔值‘True’，否则返回‘False’。 | `(p == q)` 返回 false（因为 p=10 且 q=5）。 |
+
+
+
+## 关系运算符
+
+| 运算符 | 含义及作用 | 示例 |
+| :--- | :--- | :--- |
 | `!=` | 它是“不等于”运算符，用于检查两个操作数的值是否不同。如果它们的值不同，返回布尔值‘True’，否则返回‘False’。 | `(p != q)` 返回 false |
 | `<>` | 它类似于“不等于”运算符，用于检查两个操作数的值是否不同。如果它们的值不同，返回布尔值‘True’，否则返回‘False’ | `(p <> q)` 返回 false |
-| `>` | 它是“大于”运算符，用于检查第一个操作数是否大于第二个操作数。如果第一个操作数大于第二个操作数，返回布尔值‘True’，否则返回‘False’。 | `(p >q)` 返回 true。 |
+| `>` | 它是“大于”运算符，用于检查第一个操作数是否大于第二个操作数。如果第一个操作数大于第二个操作数，返回布尔值‘True’，否则返回‘False’。 | `(p > q)` 返回 true。 |
 | `<` | 它是“小于”运算符，用于检查第一个操作数是否小于第二个操作数。如果第一个操作数小于第二个操作数，返回布尔值‘True’，否则返回‘False’ | `(p < q)` 返回 false。 |
 | `>=` | 它是“大于等于”运算符，用于检查第一个操作数是否大于或等于第二个操作数。如果第一个操作数大于或等于第二个操作数，返回布尔值‘True’，否则返回‘False’。 | `(p >= q)` 返回 true。 |
 | `<=` | 它是“小于等于”运算符，用于检查第一个操作数是否小于或等于第二个操作数。如果第一个操作数小于或等于第二个操作数，返回布尔值‘True’，否则返回‘False’。 | `(p <= q)` 返回 False。 |
 
 如果你查看下面的示例程序，将更好地理解关系运算符：
 
-### 示例：
+### 示例
 
 ```python
 #!/usr/bin/python
@@ -1739,6 +1789,7 @@ else:
 ```
 
 **输出：**
+
 ```
 p is not equal to q
 p is not equal to q
@@ -1753,7 +1804,7 @@ p is either greater than or equal to q
 p is neither greater than nor equal to q
 ```
 
-### 3. 赋值运算符
+## 3. 赋值运算符
 
 赋值运算符用于将操作数的值存储另一个操作数中。此外，它们也可以用于将计算结果赋值给操作数。Python 中使用的赋值运算符列于下表：
 
@@ -1768,9 +1819,9 @@ p is neither greater than nor equal to q
 | `**=` | 幂赋值运算符，同时执行幂和赋值。它将左操作数升为右操作数的幂并将结果存储在左操作数中。 | `p**=q`（将 `p` 升为 `q` 的幂并将结果存储在 `p` 中），等同于 `p=p**q` |
 | `//=` | 在操作数之间执行地板除法和赋值并将结果存储在左操作数中。地板除法等同于普通除法，不同在于商是向下取整的。 | `p//=q`（将 `p` 除以 `q`并将取整后的商存储在 `p` 中），等同于 `p=p//q` |
 
-如果你查看下面的示例程序，将更好地理解关系运算符：
+如果你查看下面的示例程序，将更好地理解赋值运算符：
 
-### 示例：
+### 示例
 
 ```python
 #!/usr/bin/python
@@ -1778,80 +1829,59 @@ p is neither greater than nor equal to q
 p = 10
 q = 5
 
-if ( p == q ):
-  print " p is equal to q"
-else:
-  print "p is not equal to q"
+p += q
+print "Value of p after p += q:", p
 
-if ( p != q ):
-  print "p is not equal to q"
-else:
-  if ( p <> q ):
-    print "p is not equal to q"
-  else:
-    print "p is equal to q"
+p -= q
+print "Value of p after p -= q:", p
 
-if ( p < q ):
-  print " p is less than q"
-else:
-  print " p is not less than q"
+p *= q
+print "Value of p after p *= q:", p
 
-if ( p > q ):
-  print "p is greater than q"
-else:
-  print "p is not greater than q"
+p /= q
+print "Value of p after p /= q:", p
 
-if ( p <= q ):
-  print "p is either less than or equal to q"
-else:
-  print "p is neither less than nor equal to q"
+p %= q
+print "Value of p after p %= q:", p
 
-if ( p >= q ):
-  print "p is either greater than or equal to q"
-else:
-  print "p is neither greater than nor equal to q"
+p **= q
+print "Value of p after p **= q:", p
+
+p //= q
+print "Value of p after p //= q:", p
 ```
 
 **输出：**
+
 ```
-p is not equal to q
-p is not equal to q
-p is equal to q
-p is less than q
-p is not less than q
-p is greater than q
-p is not greater than q
-p is either less than or equal to q
-p is neither less than nor equal to q
-p is either greater than or equal to q
-p is neither greater than nor equal to q
+Value of p after p += q: 15
+Value of p after p -= q: 10
+Value of p after p *= q: 50
+Value of p after p /= q: 10
+Value of p after p %= q: 0
+Value of p after p **= q: 0
+Value of p after p //= q: 0
 ```
 
-### 4. 位运算符
+## 4. 位运算符
 
 对位（二进制 0 和 1）操作的运算符称为位运算符。Python 中使用的位运算符列于下表：
 
 | 运算符 | 含义及作用 | 示例 |
 | :--- | :--- | :--- |
-| `&` | 位与运算符。它检查两个操作数的每一个位，如果两个操作数中至少有一个为‘0’，则结果为‘0’。示例：br>p: 0010<br>q: 0101<br>----------<br>p&q: 0000 | `p=2, q=5`<br>二进制形式：p=0010, q=0101<br>-----------------<br>`p&q=0000` |
-| `|` | 位或运算符。它检查两个操作数的每一个位，如果两个操作数中至少有一个为‘1’，则结果为‘1’。示例：br>p: 0010<br>q: 0101<br>----------<br>p\|q: 0111 | `p=0010, q=0101`<br>-----------------<br>`p\|q=0111` |
-| `^` | 位异或运算符（互斥或）。它类似于位或运算符，区别在于，如果只在一个操作数中存在‘1’而不在两者中都存在，则结果为‘1’。示例：br>p: 0010<br>q: 0011<br>----------<br>p^q: 0001 | `p=2 and q=3`<br>二进制形式：p=0010, q=0011<br>-----------------<br>`p^q=0001` |
-
-
-
-
-
-| 运算符 | 描述 | 示例 |
-| :--- | :--- | :--- |
+| `&` | 位与运算符。它检查两个操作数的每一个位，如果两个操作数中至少有一个为‘0’，则结果为‘0’。 | `p=2, q=5`<br>二进制形式：p=0010, q=0101<br>-----------------<br>`p&q=0000` |
+| `|` | 位或运算符。它检查两个操作数的每一个位，如果两个操作数中至少有一个为‘1’，则结果为‘1’。 | `p=0010, q=0101`<br>-----------------<br>`p\|q=0111` |
+| `^` | 位异或运算符（互斥或）。它类似于位或运算符，区别在于，如果只在一个操作数中存在‘1’而不在两者中都存在，则结果为‘1’。 | `p=2 and q=3`<br>二进制形式：p=0010, q=0011<br>-----------------<br>`p^q=0001` |
 | `~` | 二进制按位反运算符。它是一个一元运算符，意味着它只对单个位进行操作。它将位翻转为其补位。这意味着 0 被替换为 1，1 被替换为 0。 | `p=2` 在二进制形式下 `p= 0010`，`~p=1101` |
 | `<<` | 二进制左移运算符。该运算符将左操作数的位向左移动。向左移动并丢失的位位数个数由右操作数决定。左侧的位丢失后，右侧将填充相同数量的 0。 | `p=0010`, `p << 2 = 1000` |
 | `>>` | 二进制右移运算符。该运算符将左操作数的位向右移动。向右移动并丢失的位位数个数由右操作数决定。右侧的位丢失后，左侧将填充相同数量的 0。 | `p=0010`, `p >> 2 = 0000` |
 
 二进制左移和右移运算符可以通过以下插图轻松理解：
 
-如果你查看下面的示例程序，将更更好地理解位位运算符：
+如果你查看下面的示例程序，将更好地理解位运算符：
 
-## 示例
+### 示例
+
 ```python
 #!/usr/bin/python
 
@@ -1878,11 +1908,12 @@ r = p >> 2;                       # 15 = 0000 1111
 print "The value of p after binary right shift of is ", r
 ```
 
-**OUTPUT:**
+**输出：**
+
 ```
-Binary AND of p and q gives:12
+Binary AND of p and q gives: 12
 Binary OR of p and q gives: 61
-Binary XOR of p and q gives:49
+Binary XOR of p and q gives: 49
 The value of p after one's complement is -61
 The value of p after binary left shift is 240
 The value of p after binary right shift of is 15
@@ -1898,9 +1929,10 @@ Python 支持以下逻辑运算符：
 | `or` | 两个或多个表达式之间的逻辑“或”运算符，即使给出的表达式中至少有一个为真也会返回真。 | `a=10, b=20, c=0`。表达式 `a>b` 返回假。表达式 `b>c` 返回真。因此，表达式 `(a>b or b>c)` 返回真 |
 | `not` | 逻辑“非”运算符用于反转表达式的逻辑状态 | `a=10, b=20, c=0`。表达式 `a>b` 返回假。表达式 `b>c` 返回真。因此，表达式 `(a>b or b>c)` 返回真。因此，表达式 `not(a>b)` 返回真，`not(b>c)` 返回假，`not(a>b or b>c)` 返回假 |
 
-如果你查看下面的示例程序，将更更好地理解逻辑运算符：
+如果你查看下面的示例程序，将更好地理解逻辑运算符：
 
-## 示例
+### 示例
+
 ```python
 #!/usr/bin/python
 
@@ -1933,7 +1965,8 @@ b= not(p>q or q>r)
 print 'not(p>q or q>r) is', b
 ```
 
-**OUTPUT:**
+**输出：**
+
 ```
 (p>q) is false
 (q>r) is true
@@ -1952,9 +1985,10 @@ not(p>q or q>r) is false
 | `in` | 如果给定的变量是特定序列的成员，该运算符返回真。如果在序列中找不到，则返回假。 | `a in b`。`in` 运算符在 `a` 序列中时返回真。 |
 | `not in` | 如果给定的变量不是特定序列的成员，该运算符返回真。如果在序列中找到了，则返回假。 | `a not in b`。`not in` 运算符在 `a` 不在序列中返回真。 |
 
-如果你查看下面的程序，将更更好地理解成员运算符：
+如果你查看下面的程序，将更好地理解成员运算符：
 
-## 示例
+### 示例
+
 ```python
 #!/usr/bin/python
 p = 10
@@ -1978,7 +2012,8 @@ else:
   print "r is not a member of the list"
 ```
 
-**OUTPUT:**
+**输出：**
+
 ```
 p is a member of the list
 q is not a member of the list
@@ -1994,7 +2029,45 @@ r is a member of the list
 | `is` | 如果操作的变量指向同一个对象，该运算符返回真。 | `a is b`，如果 `id(a)` 等于 `id(b)`，`is` 运算符返回真。 |
 | `is not` | 如果操作的变量不指向同一个对象，该运算符返回真。 | `a is not b`，如果 `id(a)` 不等于 `id(b)`，`is not` 运算符返回真。 |
 
-如果你通过以下程序，可以更更好地理解身份运算符：
+如果你查看下面的程序，将更好地理解身份运算符：
+
+### 示例
+
+```python
+#!/usr/bin/python
+p = 20
+q = 20
+r = 10
+
+if ( p is q ):
+  print "p and q have same identity"
+else:
+  print "p and q do not have same identity"
+
+if ( id(p) == id(q) ):
+  print "p and q have same identity"
+else:
+  print "p and q do not have same identity"
+
+if ( r is not p ):
+  print "r and p do not have same identity"
+else:
+  print "r and p have same identity"
+```
+
+**输出：**
+
+```
+p and q have same identity
+p and q have same identity
+r and p do not have same identity
+```
+
+
+
+| `is not` | 如果操作的变量不指向同一个对象，该运算符返回真。 | `a is not b`，如果 `id(a)` 不等于 `id(b)`，`is not` 运算符返回真。 |
+
+如果你通过以下程序，可以更好地理解身份运算符：
 
 ```python
 #!/usr/bin/python
@@ -2023,6 +2096,7 @@ else:
 ```
 
 **OUTPUT:**
+
 ```
 p and q have the same identity
 p and q have the same identity
@@ -2035,6 +2109,7 @@ p and q do not have the same identity.
 假设你想运行一个 Python 程序，但你不知道如何编写代码。此时，你的朋友可以在记事本中输入代码并保存为 `.py` 扩展的文件，发送给你。你可以下载并在 IDLE 中运行它检查输出。
 
 ### 示例：记事本文件
+
 ```python
 #Demo program
 print "Mary has a little lamb,"
@@ -2044,6 +2119,7 @@ print "her lamb was sure to go."
 ```
 
 **朋友系统上的输出（即命令行中）：**
+
 ```
 Mary had a little lamb,
 It's fleece was white as snow;
@@ -2057,6 +2133,7 @@ And everywhere that Mary went her lamb was sure to go.
 变量用于存储可以在以后阶段访问或更改的值。
 
 ### 示例-变量
+
 ```python
 #variables
 print "Variable demo"
@@ -2072,6 +2149,7 @@ v = 51
 变量也可以包含一组字符。包含文本的变量是字符串。
 
 ### 示例-字符串
+
 ```python
 wor1 = "Good"
 wor2 = "Morning"
@@ -2082,14 +2160,11 @@ print sentence
 ```
 
 **OUTPUT:**
+
 ```
 Good Morning
 Good Morning to you too!
 ```
-
-
-
-
 
 使用循环的主要目的是为了避免重复工作，节省大量的时间和精力。想象一下，如果一个计算需要执行 100 次，手动输入 100 次将非常困难，因此在这样的情况下循环是有益的。
 
@@ -2103,6 +2178,7 @@ while a < 10:
     a = a + 1
     print a
 ```
+
 O/p: `1 2 3 4 5 6 7 8 9`
 
 使用缩进的 While 循环语法：
@@ -2112,7 +2188,9 @@ while {循环继续的条件}:
     {在循环中执行的操作}
     {是否缩进，通常为四个空格}
 ```
+
 `{这里的代码不会循环}` 
+
 `{因为它们没有缩进}`
 
 ---
@@ -2130,6 +2208,7 @@ if a > 5:
 else:
     print "This should happen."
 ```
+
 O/p: `This should happen.`
 
 #### 示例 2：
@@ -2141,6 +2220,7 @@ if z > 7:
 elif z < 7:
     print "This is normal"
 ```
+
 O/p: `This is normal`
 
 注意，在 Python 中 `else if` 被缩写为 `elif`。我们可以使用多个 `elif`，但只能有一个 `else` 语句。每个语句的末尾应该有一个冒号。缩进有助于区分条件语句内部的内容。
@@ -2174,6 +2254,7 @@ while a > 0:
 用于访问列表中的项。
 
 **语法**：`for 迭代变量 in 序列:`
+
     `语句 s`
 
 示例：
@@ -2189,6 +2270,7 @@ for fruit in fruits:             # 第二示例
 ```
 
 **输出**：
+
 ```
 Current Letter: A
 Current Letter: c
@@ -2203,27 +2285,34 @@ Current Letter: g
 ### 第 8 章：函数
 
 #### 定义
+
 函数是执行特定任务的小程序，可以整合到我们的代码中。你可以随时随地创建函数。它节省了在迭代过程中重复系统操作的时间和精力。
 
 #### 函数
+
 Python 有许多内置函数可以通过简单的`调用`它们来使用。`调用`函数意味着向该函数提供贡献并获取输出。
 
 #### 如何调用函数
+
 `函数名(参数)`
+
 `函数名` 决定了你应该使用哪个函数。例如，`raw_input` 是第一个使用的函数。
 
 参数是传递给函数的值。例如，如果是整数，参数将告诉函数要乘以五。在括号内插入数字，函数将返回一个字符串。
 
 #### 使用 raw_input
+
 ```python
 a = raw_input ("Type something:")
 print a
 ```
 
 #### 以你的方式定义
+
 目前一直在使用内置函数，但我们可以创建自己的函数并在任何地方使用它。`def` 运算符在这里创建一个（告诉 Python 要做什么，例如 `+` 指令 Python 执行加法）。
 
 #### def 运算符
+
 ```python
 def function_name(parameter_1, parameter_2):
     {这是函数中的代码}
@@ -2231,12 +2320,17 @@ def function_name(parameter_1, parameter_2):
     {更多代码}
     return {返回给主程序的值}
 ```
+
 `{代码不在函数中}`
+
 `{因为没有缩进}`
+
 记得在以 `def` 开头的行尾加上冒号 `:`。函数不需要依赖主程序。
 
 #### 传递参数
+
 使用参数定义函数
+
 ```python
 def function_name(parameter_1, parameter_2):
     {这是函数中的代码}
@@ -2246,21 +2340,27 @@ def function_name(parameter_1, parameter_2):
 ```
 
 #### 传递参数的方法
+
 `add(5,40)`
+
 当 `add` 程序运行时，会加上两个数字 5 和 40，然后打印结果。`add` 程序没有 `return` 运算符，因此它不会向主程序返回任何内容。它只是相加了作为参数传递的数字，然后将它们打印在屏幕上，主程序无所不知。
 
 除了 `input("Add this: "),input("to this: ")`，你也可以使用变量作为参数。
 
 #### 变量参数
+
 ```python
 num1 = 4
 num2 = 2
 addition(num1,num2)
 ```
+
 在上面的示例中，变量作为参数传递给函数。可以直接向函数传递值：
 
 #### 结果
+
 `add(45,7)`
+
 函数看到的只是传递参数的值。这些值被放在定义 `add` 时提到的变量中（`def add(a,b)` 那一行）。然后函数使用这些参数来执行其任务。
 
 ---
@@ -2270,6 +2370,7 @@ addition(num1,num2)
 现在你已经对 Python 编程的基础有了了解，让我们通过几个简单的 Python 程序来让你更清楚地理解概念：
 
 源代码
+
 ```python
 # 使用嵌套循环进行两个矩阵乘法
 # 3x3 矩阵
@@ -2299,9 +2400,6 @@ for r in result:
     print(r)
 ```
 
-
-
-
 ```python
 if n <= 1:
     return n
@@ -2316,28 +2414,47 @@ nterms = int(input("How many terms? "))
 # 检查项的个数是否有效
 
 if nterms <= 0:
+
     print("Plese enter a positive integer")
+
 else:
+
     print("Fibonacci sequence:")
+
     for i in range(nterms):
+
         print(recur_fibo(i))
+
 ```
 
 Output
 
 ```
+
 How many terms? 10
+
 Fibonacci sequence:
+
 0
+
 1
+
 1
+
 2
+
 3
+
 5
+
 8
+
 13
+
 21
+
 34
+
 ```
 
 # 检查字符串是否为回文的 Python 程序
@@ -2349,13 +2466,21 @@ Fibonacci sequence:
 # 检查字符串是否为回文的 Python 程序
 
 ```python
+
 print "What is the word you would like to check?" # 询问用户想要检查的单词是什么。
+
 x = raw_input("> ") # 用户输入单词。
+
 y = x[::-1] # 反转字符串。
+
 if x.lower() == y.lower(): # 检查字符串是否匹配，这种方法处理了大小写敏感。
+
     print x,"is a palindrome!" # 打印它是回文
+
 else: # 如果不是回文
+
     print x,"is not a palindrome!" # 它将打印它不是回文
+
 ```
 
 让我们在下一节中介绍元组（tuples）和字典（diction）的概念。
@@ -2377,8 +2502,11 @@ else: # 如果不是回文
 示例 - 创建元组
 
 ```python
+
 months= ('January','February','March','April','May','June',
+
 'July','August','September','October','November','  December')
+
 ```
 
 注意，第一行末尾的 `\'` 有助于将代码延续到下一行。它使得长行更具可读性。号后的空格是可选的。
@@ -2413,25 +2541,33 @@ Python 按你输入的顺序，通过从 0 开始的编号索引组织这些值�
 你发现的唯一区别是使用方括号而不是括号。向列表添加值可以使用 `append()` 函数。
 
 ```python
+
 cats = ['Snappy', 'Jessie', 'Chester']
+
 ```
 
 ### 向列表添加项
 
 ```python
+
 cats.append('Catherine')
+
 ```
 
 ### 在列表末尾添加新值
 
 ```python
+
 cats.append(value-to-add)
+
 ```
 
 ### 删除项目
 
 ```python
+
 del cats[1]
+
 ```
 
 ## 字典
@@ -2443,13 +2579,17 @@ del cats[1]
 示例 - 创建字典
 
 ```python
+
 phonebook = {'Emily Everett':678436, 'Peter Power':765834,'Lewis Lame':122345}
+
 ```
 
 ### 向字典添加条目
 
 ```python
+
 phonebook['Ginger Man'] = 123456
+
 ```
 
 上述行表示——键是 'Ginger Man'，值为 123456。
@@ -2457,7 +2597,9 @@ phonebook['Ginger Man'] = 123456
 ### 从字典中移除条目
 
 ```python
+
 del phonebook['Emily Everett']
+
 ```
 
 `del` 操作符删除字典项。
@@ -2482,10 +2624,15 @@ del phonebook['Emily Everett']
 示例 - 定义类
 
 ```python
+
 class class_name:
+
     [statement 1]
+
     [statement 2]
+
     [statement 3]
+
 ```
 
 ### 类的示例
@@ -2493,61 +2640,74 @@ class class_name:
 一个类的示例
 
 ```python
+
 class Shape:
+
     def __init__(self,x,y):
+
         self.x = x
+
         self.y = y
+
         self.description = "这个形状尚未被描述”
+
         self.author = "没有人作者”
+
     def area(self):
+
         return self.x * self.y
-    def perimeter(self):
-        return 2 * self.x + 2 * self.y
-    def describe(self,text):
-        self.description = text
-    def authorName(self,text):
-        self.author = text
-    def scaleSize(self,scale):
-        self.x = self.x * scale
-        self.y = self.y * scale
 ```
 
-在这里创建了描述，并且可以对形状进行操作。形状具有宽度（x）、高度（y）、面积和周长（分别为 `area(self)` 和 `perimeter(self)`）。定义类并不意味着运行代码。
 
-`__init__` 函数在我们创建 Shape 的实例时执行。
 
-`self` 用于引用类中属于它自己的事物。`self` 是类中函数的第一个因子。（要在类或其他地方访问变量和函数，其名称应置于 `self` 和 `.` 之后 `self.variable_name`）。
-
-使用类：
-
-示例 - 创建类
+## 类方法定义
 
 ```python
-rectangle = Shape(100,45)
+def perimeter(self):
+    return 2 * self.x + 2 * self.y
+
+def describe(self, text):
+    self.description = text
+
+def authorName(self, text):
+    self.author = text
+
+def scaleSize(self, scale):
+    self.x = self.x * scale
+    self.y = self.y * scale
 ```
 
-当我们通过类的实例时，提供名称（在本例中为 Shape）并在括号中传递给 `__init__` 函数的值，它运行并给出一个类的实例，赋值给名称 `rectangle`，即类名。
+在这里创建了描述，并且可以对形状进行操作。形状具有宽度（`x`）、高度（`y`）、面积和周长（分别为 `area(self)` 和 `perimeter(self)`）。定义类并不意味着运行代码。
 
-示例 - 从实例外部访问属性
+`__init__` 函数在我们创建 `Shape` 的实例时执行。
 
+`self` 用于引用类中属于它自己的事物。`self` 是类中函数的第一个参数。（要在类或其他地方访问变量和函数，其名称应置于 `self` 和 `.` 之后，即 `self.variable_name`）。
+
+## 使用类
+
+### 示例 - 创建类
+
+```python
+rectangle = Shape(100, 45)
+```
+
+当我们通过类的实例时，提供名称（在本例中为 `Shape`）并在括号中传递给 `__init__` 函数的值，它运行并给出一个类的实例，赋值给名称 `rectangle`，即类名。
+
+### 示例 - 从实例外部访问属性
+
+```python
 # 获取矩形的面积：
-
-`print rectangle.area()`
+print rectangle.area()
 
 # 获取矩形的周长：
-
-`print rectangle.perimeter()`
+print rectangle.perimeter()
 
 # 描述矩形
-
-`rectangle.describe("一个宽矩形”)`
+rectangle.describe("一个宽矩形")
 
 # 将矩形缩小 50%
-
-`rectangle.scaleSize(0.5)`
-
-
-
+rectangle.scaleSize(0.5)
+```
 
 如所示，`self` 在类内部被使用。它给定的名称在类外部时会被应用。我们可以这样做来访问外部的函数。我们并不限制于使用单个实例，还可以为同一个类创建多个实例。
 
@@ -2570,20 +2730,26 @@ rectangle = Shape(100,45)
 
 ```python
 class Shape:
-    def __init__(self,x,y):
+    def __init__(self, x, y):
         self.x = x
         self.y = y
+
     description = "This shape has not been described yet"
     author = "Nobody has claimed to make this shape yet"
+
     def area(self):
         return self.x * self.y
+
     def perimeter(self):
         return 2 * self.x + 2 * self.y
-    def describe(self,text):
+
+    def describe(self, text):
         self.description = text
-    def authorName(self,text):
+
+    def authorName(self, text):
         self.author = text
-    def scaleSize(self,scale):
+
+    def scaleSize(self, scale):
         self.x = self.x * scale
         self.y = self.y * scale
 ```
@@ -2594,7 +2760,7 @@ class Shape:
 
 ```python
 class Square(Shape):
-    def __init__(self,x):
+    def __init__(self, x):
         self.x = x
         self.y = x
 ```
@@ -2612,7 +2778,7 @@ class Square(Shape):
 ```python
 dictionary = {}
 dictionary["DoubleSquare 1"] = DoubleSquare(5)
-dictionary["long rectangle"] = Shape(600,40)
+dictionary["long rectangle"] = Shape(600, 40)
 print dictionary["long rectangle"].area()
 ```
 
@@ -2644,6 +2810,7 @@ def timesfour(input):
 class Piano:
     def __init__(self):
         self.type = raw_input("What type of sky")
+
     def printdetails(self):
         print "The sky is " + self.type + " foot"
 ```
@@ -2654,6 +2821,7 @@ class Piano:
 
 ```python
 import moduletest
+
 cfcpiano = moduletest.Piano()
 cfcpiano.printdetails()
 ```
@@ -2671,7 +2839,9 @@ Python 中有两个基础模块：1. 内置函数和 2. 异常。当 Python 启�
 在 Python 中，你可以构建构建自己的参数列表。你可以通过将所有参数放在一个元组中并调用 `apply` 函数来实现。这个 `apply` 函数也是一个内置函数。这里有一个示例将让你更好地理解 `apply` 函数。
 
 #### 示例：利用 `apply` 函数
+
 文件：`builtin-apply-example-1.py`
+
 ```python
 def function(a, b):
     print a, b
@@ -2682,8 +2852,10 @@ apply(function, (1, 2 + 3))
 
 你可以使用字典作为 `apply` 的第三个参数，向给定的函数传递关键字参数。下面的示例将向你展示如何使用 `apply` 函数传递关键字参数。
 
-#### 示例：使用 `apply` 函数传递关键字参数。
+#### 示例：使用 `apply` 函数传递关键字参数
+
 文件：`builtin-apply-example-2.py`
+
 ```python
 def function(a, b):
     print a, b
@@ -2694,8 +2866,10 @@ apply(function, (), {"b": "frog"})
 
 `apply` 函数广泛用于将子类中的构造函数参数传递给基类或父类。这通常在构造函数中存在大量参数时完成。这里有一个使用 `apply` 函数调用基类函数的示例。
 
-#### 示例：使用 `apply` 函数调用基类函数。
+#### 示例：使用 `apply` 函数调用基类函数
+
 文件：`builtin-apply-example-3.py`
+
 ```python
 class Rectangle:
     def __init__(self, color="white", width=10, height=10):
@@ -2709,7 +2883,7 @@ rect = Rectangle(color="green", height=100, width=100)
 rect = RoundedRectangle(color="blue", height=20)
 ```
 
-Python 2.0 提供了另一种语法。与其使用 `apply`，你可以使用普通的函数调用，并使用 `*` 标记元组，使用 `**` 标记字典。以下两个语句是等等的：
+Python 2.0 提供了另一种语法。与其使用 `apply`，你可以使用普通的函数调用，并使用 `*` 标记元组，使用 `**` 标记字典。以下两个语句是等价的：
 
 ```python
 result = function(*args, **kwargs)
@@ -2721,7 +2895,9 @@ result = apply(function, args, kwargs)
 任何专业的 Python 程序员都知道通过 `import` 语句调用外部模块。但你应该知道 `import` 用于将工作委托给一个名为 `__import__` 的内置函数。这里有一个使用 `import` 函数的示例程序。
 
 ### 示例：使用 `__import__` 函数加载命名模块
+
 文件：`builtin-import-example-1.py`
+
 ```python
 import glob, os
 
@@ -2735,9 +2911,6 @@ for module_file in glob.glob("*-plugin.py"):
     except ImportError:
         pass # 忽略损坏的模块
 ```
-
-
-
 
 # 向所有模块问好
 
@@ -2767,12 +2940,16 @@ class LazyImport:
 
 string = LazyImport("string")
 print string.lowercase
+```
+
+输出：
+```
 abcdefghijklmnopqrstuvwxyz
 ```
 
 对于已经导入的模块，Python 为用户提供了一些基础支持。下面是一个示例，`hello.py` 文件将被加载三次。Python 为你已经导入的模块重载提供了基本支持。下面的示例加载了 `hello.py` 文件三次。
 
-### 示例：实现 reload 函数
+### 示例：实现 `reload` 函数
 
 #### 文件：`builtin-reload-example-1.py`
 
@@ -2782,9 +2959,12 @@ reload(hello)
 reload(hello)
 ```
 
+输出：
+```
 再次问好，欢迎来到节目
 再次问好，欢迎来到节目
 再次问好，欢迎来到节目
+```
 
 `reload` 不会使用变量名，而是使用模块对象关联的模块名。通过此，即使模块被重命名，`reload` 仍然能够找到该（原始）模块。
 
@@ -2812,7 +2992,7 @@ printhello()
 
 ## 文件 I/O
 
-我们使用 `open()` 函数来打开一个新的文本文件。打开文件的模式可以作为参数传递，例如 'r' 表示读取，'w' 表示写入等。
+我们使用 `open()` 函数来打开一个新的文本文件。打开文件的模式可以作为参数传递，例如 `'r'` 表示读取，`'w'` 表示写入等。
 
 ### 示例 - 打开文件
 
@@ -2825,15 +3005,15 @@ openfile.read()
 
 语法：`seek(offset, whence)`。
 
-`whence` 是一个可选程序，它决定了你应该从哪里开始跳转。当 `whence` 的值为 `0` 时；从开头开始计数；如果为 `1`，则从当前光标位置计算字节；如果是 `2`，则从文件末尾计数。
+`whence` 是一个可选参数，它决定了你应该从哪里开始跳转。当 `whence` 的值为 `0` 时；从开头开始计数；如果为 `1`，则从当前光标位置计算字节；如果是 `2`，则从文件末尾计数。
 
-`Offset` 描述了光标应该从 `whence` 移动多少。
+`offset` 描述了光标应该从 `whence` 移动多少。
 
 #### 示例：
 
-`openfile.seek(4,0)` 将光标移动到文件开头后 4 个字符处。
-`openfile.seek(1,1)` 将光标移动到当前光标位置后 1 个字符处。
-`openfile.seek(-7,2)` 将光标移动到文件末尾前 7 个字符处。
+- `openfile.seek(4, 0)` 将光标移动到文件开头后 4 个字符处。
+- `openfile.seek(1, 1)` 将光标移动到当前光标位置后 1 个字符处。
+- `openfile.seek(-7, 2)` 将光标移动到文件末尾前 7 个字符处。
 
 ## 其他 I/O 函数
 
@@ -2849,14 +3029,16 @@ openfile.read()
 
 ```
 Line 1
+
 Line 3
 Line 4
+
 Line 6
 ```
 
 那么 `readlines()` 返回的列表将是：
 
-表 1 - readlines 的结果列表
+**表 1 - readlines 的结果列表**
 
 | 索引 (Index) | 值 (Value) |
 | :--- | :--- |
@@ -2877,13 +3059,12 @@ Pickles 是保存到文件中的对象。对象可以是变量、类、列表、
 
 ### 示例 - pickletest.py
 
-#### `pickletest.py`
-
 #### 序列化对象
 
 ```python
 import pickle
-picklelist = ['one',2,'three','four',5]
+
+picklelist = ['one', 2, 'three', 'four', 5]
 file = open('filename', 'w')
 pickle.dump(picklelist, file)
 file.close()
@@ -2893,12 +3074,20 @@ file.close()
 
 ```python
 import pickle
+```
+
+
+
 picklefile = open('filename', 'r')
+
 unpicklelist = pickle.load(picklefile)
+
 picklefile.close()
 
 for item in unpicklelist:
+
     print item
+
 ```
 
 局限性：
@@ -2916,13 +3105,19 @@ Python 与其他许多语言一样有它自己的 `exceptions`。它会发现抛
 
 ```python
 def menu(list, question):
+
     for entry in list:
+
         print 1 + list.index(entry),
+
         print ") " + entry
+
     return input(question) - 1
 
 # 运行函数
+
 # 记住反斜杠的作用
+
 answer = menu(['A','B','C','D','E','F','H','I'],\
 '你最喜欢哪个字母？ ')
 
@@ -2954,18 +3149,17 @@ return raw_input(question) - 1
 return input(question) - 1
 ```
 
-
-
-
-
-在代码中，如果我们输入一些随机文本而不是给定的 `std` 数据类型会发生什么？这就是异常出现用场的时候。我们可以使用 `try.` 来克服这些异常。
+在代码中，如果我们输入一些随机文本而不是给定的 `std` 数据类型会发生什么？这就是异常出现用场的时候。我们可以使用 `try` 来克服这些异常。
 
 ### 示例 - try 运算符
 
 ```python
 try:
+
     function(world, parameters)
+
 except:
+
     print world.errormsg
 ```
 
@@ -2975,13 +3169,20 @@ except:
 
 ```python
 def menu(list, question):
+
     for entry in list:
+
         print 1 + list.index(entry),
+
         print ") " + entry
+
         try:
+
             return input(question) - 1
+
         except NameError:
-            print "Enter a valid number”
+
+            print "Enter a valid number"
 ```
 
 让我们来看另一个错误。
@@ -2990,8 +3191,11 @@ def menu(list, question):
 
 ```
 Traceback (most recent call last):
+
 File "/home/steven/errortest.py", line 12, in -toplevel-
+
     print 'You picked answer', (answer + 1)
+
 TypeError:unsupported operand type(s) for+: 'NoneType' and 'int'
 ```
 
@@ -3002,9 +3206,13 @@ TypeError:unsupported operand type(s) for+: 'NoneType' and 'int'
 ```python
 answer = menu(['A','B','C','D','E','F','H','I'],
 'Which letter is your favourite? ')
+
 try:
+
     print 'You picked answer', (answer + 1)
+
 except:
+
     print '\nincorrect answer.'
 ```
 
@@ -3016,9 +3224,12 @@ except:
 
 ```python
 print 'Subtraction program, v0.0.1 (beta)'
+
 a = input('Enter a number to subtract from> ')
+
 b = input('Enter the number to subtract> ')
-print a – b
+
+print a - b
 ```
 
 只有提供两个数字时它才有效。如果你提供一个字母，它将显示 `NameError`：
@@ -3027,18 +3238,31 @@ print a – b
 
 ```python
 print 'Subtraction program, v0.0.2 (beta)'
+
 loop = 1
+
 while loop == 1:
+
     try:
+
         a = input('Enter a number to subtract from > ')
+
         b = input('Enter the number to subtract > ')
+
     except NameError:
-        print "\n Subtraction of a letter isn’t possible”
+
+        print "\n Subtraction of a letter isn't possible"
+
         continue
+
     print a - b
+
     try:
+
         loop = input('1 to try again')
+
     except NameError:
+
         loop = 0
 ```
 
@@ -3048,21 +3272,37 @@ while loop == 1:
 
 ```python
 print 'Subtraction prog, v0.3 (alpha)'
+
 loop = 1
+
 while loop == 1:
+
     try:
+
         a = input('Enter a number to subtract from > ')
+
         b = input('Enter the number to subtract > ')
+
     except NameError:
+
         print "\nYou cannot subtract a letter"
+
         continue
+
     except SyntaxError:
-        print "\nDo not enter anything than number”
+
+        print "\nDo not enter anything than number"
+
         continue
+
     print a - b
+
     try:
+
         loop = input('Press 1 to try again > ')
+
     except (NameError,SyntaxError):
+
         loop = 0
 ```
 

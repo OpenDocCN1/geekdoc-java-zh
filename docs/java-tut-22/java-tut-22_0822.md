@@ -1,3 +1,4 @@
+
 # 观察应用程序自由
 
 > 原文：[`docs.oracle.com/javase/tutorial/security/tour2/step1.html`](https://docs.oracle.com/javase/tutorial/security/tour2/step1.html)
@@ -25,7 +26,6 @@ C:\TEST>java GetProps
     About to get java.home property value
       Your JRE installation directory is:
       C:\JDK7.0.0\JRE
-
 ```
 
 这表明应用程序被允许访问所有属性值，如下图所示。

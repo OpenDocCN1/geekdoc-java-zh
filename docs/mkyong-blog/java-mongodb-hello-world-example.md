@@ -1,3 +1,4 @@
+
 # Java + MongoDB hello world 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/mongodb/java-mongodb-hello-world-example/>
@@ -6,33 +7,33 @@
 
 一个简单的 Java + MongoDB hello world 例子——如何连接、创建数据库、集合和文档、保存、更新、删除、获取和显示文档(数据)。
 
-使用的工具和技术:
+使用的工具和技术：
 
-1.  MongoDB 2.2.3
-2.  MongoDB-Java-驱动程序 2.10.1
-3.  JDK 1.6
-4.  Maven 3.0.3
-5.  Eclipse 4.2
+1. MongoDB 2.2.3
+2. MongoDB-Java-驱动程序 2.10.1
+3. JDK 1.6
+4. Maven 3.0.3
+5. Eclipse 4.2
 
 P.S Maven 和 Eclipse 都是可选的，只是我个人最喜欢的开发工具。
 
-## 1.创建一个 Java 项目
+## 1. 创建一个 Java 项目
 
 用 Maven 创建一个[简单的 Java 项目](http://web.archive.org/web/20190220123320/http://www.mkyong.com/maven/how-to-create-a-java-project-with-maven/)。
 
-```java
- mvn archetype:generate -DgroupId=com.mkyong.core -DartifactId=mongodb 
+```
+mvn archetype:generate -DgroupId=com.mkyong.core -DartifactId=mongodb 
   -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false 
 ```
 
- ## 2.获取 Mongo Java 驱动程序
+## 2. 获取 Mongo Java 驱动程序
 
 从 [github](http://web.archive.org/web/20190220123320/https://github.com/mongodb/mongo-java-driver/downloads) 下载 mongo-java 驱动。对于 Maven 用户，mongo-java 驱动程序在`pom.xml`中声明。
 
-pom.xml
+`pom.xml`
 
-```java
- <project ...>
+```
+<project ...>
   <dependencies>
 
 	<dependency>
@@ -69,12 +70,12 @@ pom.xml
 </project> 
 ```
 
- ## 3.Mongo 连接
+## 3. Mongo 连接
 
-连接到 MongoDB 服务器。对于 MongoDB 版本> = 2.10.0，使用`MongoClient`。
+连接到 MongoDB 服务器。对于 MongoDB 版本 >= 2.10.0，使用`MongoClient`。
 
-```java
- // Old version, uses Mongo
+```
+// Old version, uses Mongo
 	Mongo mongo = new Mongo("localhost", 27017);
 
 	// Since 2.10.0, uses MongoClient
@@ -83,42 +84,42 @@ pom.xml
 
 如果 MongoDB 处于安全模式，则需要身份验证。
 
-```java
- MongoClient mongoClient = new MongoClient();
+```
+MongoClient mongoClient = new MongoClient();
 	DB db = mongoClient.getDB("database name");
 	boolean auth = db.authenticate("username", "password".toCharArray()); 
 ```
 
-## 4.Mongo 数据库
+## 4. Mongo 数据库
 
 获取数据库。如果数据库不存在，MongoDB 会为您创建一个。
 
-```java
- DB db = mongo.getDB("database name"); 
+```
+DB db = mongo.getDB("database name"); 
 ```
 
 显示所有数据库。
 
-```java
- List<String> dbs = mongo.getDatabaseNames();
+```
+List<String> dbs = mongo.getDatabaseNames();
 	for(String db : dbs){
 		System.out.println(db);
 	} 
 ```
 
-## 5.Mongo 系列
+## 5. Mongo 系列
 
 获取集合/表格。
 
-```java
- DB db = mongo.getDB("testdb");
+```
+DB db = mongo.getDB("testdb");
 	DBCollection table = db.getCollection("user"); 
 ```
 
 显示所选数据库中的所有集合。
 
-```java
- DB db = mongo.getDB("testdb");
+```
+DB db = mongo.getDB("testdb");
 	Set<String> tables = db.getCollectionNames();
 
 	for(String coll : tables){
@@ -127,14 +128,15 @@ pom.xml
 ```
 
 **Note**
+
 In RDBMS, collection is equal to table.
 
-## 6.保存示例
+## 6. 保存示例
 
 将文档(数据)保存到名为“user”的集合(表)中。
 
-```java
- DBCollection table = db.getCollection("user");
+```
+DBCollection table = db.getCollection("user");
 	BasicDBObject document = new BasicDBObject();
 	document.put("name", "mkyong");
 	document.put("age", 30);
@@ -144,12 +146,12 @@ In RDBMS, collection is equal to table.
 
 参考这个 [Java MongoDB 插入示例](http://web.archive.org/web/20190220123320/http://www.mkyong.com/mongodb/java-mongodb-insert-a-document/)。
 
-## 7.更新示例
+## 7. 更新示例
 
 更新一个文档，其中“name=mkyong”。
 
-```java
- DBCollection table = db.getCollection("user");
+```
+DBCollection table = db.getCollection("user");
 
 	BasicDBObject query = new BasicDBObject();
 	query.put("name", "mkyong");
@@ -165,12 +167,12 @@ In RDBMS, collection is equal to table.
 
 参考这个 [Java MongoDB 更新实例](http://web.archive.org/web/20190220123320/http://www.mkyong.com/mongodb/java-mongodb-update-document/)。
 
-## 8.查找示例
+## 8. 查找示例
 
-找到“name=mkyong”处的文档，并用 DBCursor 显示它
+找到“name=mkyong”处的文档，并用`DBCursor`显示它。
 
-```java
- DBCollection table = db.getCollection("user");
+```
+DBCollection table = db.getCollection("user");
 
 	BasicDBObject searchQuery = new BasicDBObject();
 	searchQuery.put("name", "mkyong");
@@ -184,12 +186,12 @@ In RDBMS, collection is equal to table.
 
 参考这个 [Java MongoDB 搜索查询例子](http://web.archive.org/web/20190220123320/http://www.mkyong.com/mongodb/java-mongodb-query-document/)。
 
-## 9.删除示例
+## 9. 删除示例
 
 找到“name=mkyong”处的文档，并删除它。
 
-```java
- DBCollection table = db.getCollection("user");
+```
+DBCollection table = db.getCollection("user");
 
 	BasicDBObject searchQuery = new BasicDBObject();
 	searchQuery.put("name", "mkyong");
@@ -199,14 +201,14 @@ In RDBMS, collection is equal to table.
 
 参考这个 [Java MongoDB 删除例子](http://web.archive.org/web/20190220123320/http://www.mkyong.com/mongodb/java-mongodb-delete-document/)。
 
-## 10.你好世界
+## 10. 你好世界
 
 让我们回顾一个完整的 Java + MongoDB 示例，不言自明的请参见注释。
 
-App.java
+`App.java`
 
-```java
- package com.mkyong.core;
+```
+package com.mkyong.core;
 
 import java.net.UnknownHostException;
 import java.util.Date;
@@ -294,16 +296,16 @@ public class App {
 
 输出…
 
-```java
- { "_id" : { "$oid" : "51398e6e30044a944cc23e2e"} , "name" : "mkyong" , "age" : 30 , "createdDate" : { "$date" : "2013-03-08T07:08:30.168Z"}}
+```
+{ "_id" : { "$oid" : "51398e6e30044a944cc23e2e"} , "name" : "mkyong" , "age" : 30 , "createdDate" : { "$date" : "2013-03-08T07:08:30.168Z"}}
 { "_id" : { "$oid" : "51398e6e30044a944cc23e2e"} , "age" : 30 , "createdDate" : { "$date" : "2013-03-08T07:08:30.168Z"} , "name" : "mkyong-updated"}
 Done 
 ```
 
 让我们使用`mongo`控制台来检查创建的数据库“testdb”、集合“user”和文档。
 
-```java
- $ mongo
+```
+$ mongo
 MongoDB shell version: 2.2.3
 connecting to: test
 
@@ -326,14 +328,7 @@ Download it – [Java-mongodb-hello-world-example.zip](http://web.archive.org/we
 
 ## 参考
 
-1.  【Java 驱动程序入门
-2.  [Java-MongoDB 驱动程序](http://web.archive.org/web/20190220123320/https://github.com/mongodb/mongo-java-driver/downloads)
+1. [Java 驱动程序入门](http://web.archive.org/web/20190220123320/http://www.mkyong.com/mongodb/java-mongodb-driver/)
+2. [Java-MongoDB 驱动程序](http://web.archive.org/web/20190220123320/https://github.com/mongodb/mongo-java-driver/downloads)
 
 [java](http://web.archive.org/web/20190220123320/http://www.mkyong.com/tag/java/) [mongodb](http://web.archive.org/web/20190220123320/http://www.mkyong.com/tag/mongodb/)
-
-
-
-
-
-
-

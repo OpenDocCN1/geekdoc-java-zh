@@ -1,10 +1,11 @@
+
 # 发现类成员
 
 > 原文：[`docs.oracle.com/javase/tutorial/reflect/class/classMembers.html`](https://docs.oracle.com/javase/tutorial/reflect/class/classMembers.html)
 
 [`Class`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html) 提供了两类方法来访问字段、方法和构造函数：列举这些成员的方法和搜索特定成员的方法。此外，还有用于访问直接在类上声明的成员的方法，以及搜索超接口和超类以查找继承成员的方法。以下表格总结了所有定位成员的方法及其特性。
 
-定位字段的类方法
+**定位字段的类方法**
 
 | [`Class`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html) API | 成员列表？ | 继承成员？ | 私有成员？ |
 | --- | --- | --- | --- |
@@ -13,7 +14,7 @@
 | [`getDeclaredFields()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getDeclaredFields--) | 是 | 否 | 是 |
 | [`getFields()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getFields--) | 是 | 是 | 否 |
 
-定位方法的类方法
+**定位方法的类方法**
 
 | [`Class`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html) API | 成员列表？ | 继承成员？ | 私有成员？ |
 | --- | --- | --- | --- |
@@ -22,7 +23,7 @@
 | [`getDeclaredMethods()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getDeclaredMethods--) | 是 | 否 | 是 |
 | [`getMethods()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getMethods--) | 是 | 是 | 否 |
 
-定位构造函数的类方法
+**定位构造函数的类方法**
 
 | [`Class`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html) API | 成员列表？ | 继承成员？ | 私有成员？ |
 | --- | --- | --- | --- |
@@ -33,10 +34,9 @@
 
 ¹ 构造函数不会被继承。
 
-给定一个类名和感兴趣的成员指示，``ClassSpy``示例使用`get*s()`方法来确定所有公共元素的列表，包括任何继承的元素。
+给定一个类名和感兴趣的成员指示，`ClassSpy`示例使用`get*s()`方法来确定所有公共元素的列表，包括任何继承的元素。
 
 ```java
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -111,7 +111,6 @@ public class ClassSpy {
 	out.format("%n");
     }
 }
-
 ```
 
 这个例子相对紧凑；然而，`printMembers()`方法略显笨拙，因为[`java.lang.reflect.Member`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Member.html)接口自反射最早的实现以来就存在，当引入泛型时，它无法被修改以包含更有用的`getGenericString()`方法。唯一的替代方法是像所示那样进行测试和转换，用`printConstructors()`、`printFields()`和`printMethods()`替换此方法，或者满足于相对简洁的[`Member.getName()`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Member.html#getName--)的结果。
@@ -129,7 +128,6 @@ Package:
 Constructor:
   public java.lang.ClassCastException()
   public java.lang.ClassCastException(java.lang.String)
-
 ```
 
 由于构造函数不会被继承，因此在直接超类[`RuntimeException`](https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html)和其他超类中定义的异常链接机制构造函数（具有[`Throwable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html)参数）将不会被找到。
@@ -148,7 +146,6 @@ Methods:
   public abstract void java.nio.channels.Channel.close() throws
     java.io.IOException
   public abstract boolean java.nio.channels.Channel.isOpen()
-
 ```
 
 接口[`java.nio.channels.ReadableByteChannel`](https://docs.oracle.com/javase/8/docs/api/java/nio/channels/ReadableByteChannel.html)定义了[`read()`](https://docs.oracle.com/javase/8/docs/api/java/nio/channels/ReadableByteChannel.html#read-java.nio.ByteBuffer-)。其余方法是从超级接口继承的。可以通过将`get*s()`替换为`getDeclared*s()`来轻松修改此代码，仅列出实际在类中声明的方法。
@@ -189,10 +186,11 @@ Methods:
   public final void java.lang.Object.wait() hrows java.lang.InterruptedException
   public final native void java.lang.Object.notify()
   public final native void java.lang.Object.notifyAll()
-
 ```
 
-在这些结果的字段部分，枚举常量被列出。虽然这些在技术上是字段，但将它们与其他字段区分开可能是有用的。这个例子可以修改为使用[`java.lang.reflect.Field.isEnumConstant()`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html#isEnumConstant--)来实现这一目的。在本教程的后续部分检查枚举中的``EnumSpy``示例包含了一个可能的实现。
+在这些结果的字段部分，枚举常量被列出。虽然这些在技术上是字段，但将它们与其他字段区分开可能是有用的。这个例子可以修改为使用[`java.lang.reflect.Field.isEnumConstant()`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html#isEnumConstant--)来实现这一目的。在本教程的后续部分检查枚举中的`EnumSpy`示例包含了一个可能的实现。
+
+
 
 在输出的方法部分中，观察到方法名称包含声明类的名称。因此，`toString()`方法是由[`Enum`](https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#toString--)实现的，而不是从[`Object`](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html)继承的。可以通过使用[`Field.getDeclaringClass()`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html#getDeclaringClass--)来修改代码，使这一点更明显。以下片段展示了潜在解决方案的一部分。
 
@@ -202,5 +200,4 @@ if (mbr instanceof Field) {
     out.format("  %s%n", f.toGenericString());
     out.format("  -- declared in: %s%n", f.getDeclaringClass());
 }
-
 ```

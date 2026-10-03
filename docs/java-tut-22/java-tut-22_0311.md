@@ -1,3 +1,4 @@
+
 # Java 网络启动协议
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/deploymentInDepth/jnlp.html`](https://docs.oracle.com/javase/tutorial/deployment/deploymentInDepth/jnlp.html)
@@ -11,9 +12,6 @@ JNLP 由 RIA 的 JNLP 文件启用。JNLP 文件描述了 RIA。JNLP 文件指�
 您可以在以下主题中找到有关通过使用 JNLP 部署 RIA 的更多信息：
 
 +   部署小程序
-
 +   部署 Java Web 启动应用程序
-
 +   JNLP API
-
 +   JNLP 文件的结构

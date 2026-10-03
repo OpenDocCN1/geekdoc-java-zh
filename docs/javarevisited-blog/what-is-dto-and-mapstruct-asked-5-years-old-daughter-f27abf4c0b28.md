@@ -1,3 +1,4 @@
+
 # 什么是 DTO 和 Mapstruct？—问 5 岁女儿:)
 
 > 原文：<https://medium.com/javarevisited/what-is-dto-and-mapstruct-asked-5-years-old-daughter-f27abf4c0b28?source=collection_archive---------1----------------------->

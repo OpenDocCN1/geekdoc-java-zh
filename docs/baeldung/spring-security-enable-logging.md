@@ -1,32 +1,33 @@
+
 # 为 Spring 安全启用日志记录
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-security-enable-logging>
 
-## 1.概观
+## 1. 概观
 
-使用 [弹簧安全](/web/20221208143830/https://www.baeldung.com/security-spring) 时，我们可能需要登录到比默认级别更高的级别。例如，我们可能需要检查用户的角色或端点如何受到保护。或者，我们可能还需要更多关于认证或授权的信息，例如，了解用户无法访问端点的原因。
+使用[弹簧安全](/web/20221208143830/https://www.baeldung.com/security-spring)时，我们可能需要登录到比默认级别更高的级别。例如，我们可能需要检查用户的角色或端点如何受到保护。或者，我们可能还需要更多关于认证或授权的信息，例如，了解用户无法访问端点的原因。
 
 在这个简短的教程中，我们将看到如何修改 Spring 安全日志级别。
 
-## 2.配置 Spring 安全日志记录
+## 2. 配置 Spring 安全日志记录
 
 与任何 Spring 或 Java 应用程序一样，我们可以使用一个[日志库](/web/20221208143830/https://www.baeldung.com/logback)，并为 Spring 安全模块定义一个日志级别。
 
-通常，我们可以在配置文件中编写如下内容:
+通常，我们可以在配置文件中编写如下内容：
 
 ```java
-<logger name="org.springframework.security" level="DEBUG" /> 
+<logger name="org.springframework.security" level="DEBUG" />
 ```
 
-**然而，如果我们正在运行一个 [Spring Boot](/web/20221208143830/https://www.baeldung.com/spring-boot) 应用**，**我们可以在我们的`application.properties`** 文件中进行配置:
+**然而，如果我们正在运行一个[Spring Boot](/web/20221208143830/https://www.baeldung.com/spring-boot)应用**，**我们可以在我们的`application.properties`**文件中进行配置：
 
-```java
+```properties
 logging.level.org.springframework.security=DEBUG
 ```
 
-同样，我们可以使用`yaml`语法:
+同样，我们可以使用`yaml`语法：
 
-```java
+```yaml
 logging:
   level:
     org:
@@ -34,9 +35,9 @@ logging:
         security: DEBUG
 ```
 
-这样，**我们可以查看关于[认证](/web/20221208143830/https://www.baeldung.com/tag/authentication/)或[过滤链](https://web.archive.org/web/20221208143830/https://docs.spring.io/spring-security/reference/servlet/architecture.html#servlet-filterchainproxy)** 的日志。而且，我们甚至可以使用`trace`级别进行更深入的调试。
+这样，**我们可以查看关于[认证](/web/20221208143830/https://www.baeldung.com/tag/authentication/)或[过滤链](https://web.archive.org/web/20221208143830/https://docs.spring.io/spring-security/reference/servlet/architecture.html#servlet-filterchainproxy)**的日志。而且，我们甚至可以使用`trace`级别进行更深入的调试。
 
-此外， **Spring Security 提供了记录关于请求和应用过滤器的特定信息的可能性**:
+此外，**Spring Security 提供了记录关于请求和应用过滤器的特定信息的可能性**：
 
 ```java
 @EnableWebSecurity
@@ -53,9 +54,9 @@ public class SecurityConfig {
 }
 ```
 
-## 3.日志样本
+## 3. 日志样本
 
-最后，为了测试我们的应用程序，让我们定义一个简单的控制器:
+最后，为了测试我们的应用程序，让我们定义一个简单的控制器：
 
 ```java
 @Controller
@@ -69,7 +70,7 @@ public class LoggingController {
 }
 ```
 
-如果我们点击了 `/logging` 端点，我们可以查看我们的日志:
+如果我们点击了`/logging`端点，我们可以查看我们的日志：
 
 ```java
 2022-02-10 21:30:32.104 DEBUG 5489 --- [nio-8080-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /logging] with attributes [permitAll]
@@ -81,7 +82,7 @@ public class LoggingController {
 ```java
 Request received for GET '/logging':
 
-[[email protected]](/web/20221208143830/https://www.baeldung.com/cdn-cgi/l/email-protection)
+[[email protected]](/web/20221208143830/https://www.baeldung.com/cdn-cgi/l/email-protection)
 
 servletPath:/logging
 pathInfo:null
@@ -117,10 +118,10 @@ Security filter chain: [
 ]
 ```
 
-## 4.结论
+## 4. 结论
 
 在本文中，我们研究了一些选项来为 Spring 安全性启用不同的日志记录级别。
 
 我们已经看到了如何为 Spring 安全模块使用`debug`级别。此外，我们还看到了如何记录单个请求的特定信息。
 
-和往常一样，这些例子的代码可以在 GitHub 的[上找到。](https://web.archive.org/web/20221208143830/https://github.com/eugenp/tutorials/tree/master/spring-security-modules/spring-security-web-boot-3)
+和往常一样，这些例子的代码可以在 GitHub 的[上找到](https://web.archive.org/web/20221208143830/https://github.com/eugenp/tutorials/tree/master/spring-security-modules/spring-security-web-boot-3)。

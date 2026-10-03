@@ -1,3 +1,4 @@
+
 # 有界类型参数
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/generics/bounded.html`](https://docs.oracle.com/javase/tutorial/java/generics/bounded.html)
@@ -30,7 +31,6 @@ public class Box<T> {
         integerBox.inspect("some text"); // error: this is still String!
     }
 }
-
 ```
 
 通过修改我们的通用方法以包含这个有界类型参数，编译现在会失败，因为我们对`inspect`的调用仍然包括一个`String`：
@@ -41,7 +41,6 @@ Box.java:21: <U>inspect(U) in Box<java.lang.Integer> cannot
                         integerBox.inspect("10");
                                   ^
 1 error
-
 ```
 
 除了限制你可以用来实例化泛型类型的类型之外，有界类型参数还允许你调用边界中定义的方法：
@@ -59,7 +58,6 @@ public class NaturalNumber<T extends Integer> {
 
     // ...
 }
-
 ```
 
 `isEven`方法通过`n`调用了`Integer`类中定义的`intValue`方法。
@@ -70,7 +68,6 @@ public class NaturalNumber<T extends Integer> {
 
 ```java
 <T extends B1 & B2 & B3>
-
 ```
 
 具有多个边界的类型变量是边界中列出的所有类型的子类型。如果边界中有一个类，它必须首先指定。例如：
@@ -81,12 +78,10 @@ interface B { /* ... */ }
 interface C { /* ... */ }
 
 class D <T extends A & B & C> { /* ... */ }
-
 ```
 
 如果边界`A`没有首先指定，你会得到一个编译时错误：
 
 ```java
 class D <T extends B & A & C> { /* ... */ }  // compile-time error
-
 ```

@@ -1,3 +1,4 @@
+
 # 2023 年有经验的 Java 程序员应该阅读的 10 本书
 
 > 原文：<https://medium.com/javarevisited/top-10-books-experienced-java-programmers-should-read-73481356d279?source=collection_archive---------0----------------------->
@@ -96,21 +97,23 @@ Spring Boot 使得使用 Spring 框架变得更加容易，这也是它日益流
 
 ## 7 .[。休眠提示:70 多种常见休眠问题的解决方案](http://www.java67.com/2017/02/2-best-books-to-learn-hibernate-for-Java-Developers.html)
 
+
+
 这是另一本由另一位博客作者索本·让桑写的实用书。它是最近几周前发布的。它包含了 70 个有用的 Hibernate 技巧，每个使用 Hibernate 的有经验的 Java Web 开发人员都会喜欢。
 
 你可能已经知道了一些建议，但你肯定会发现一些你从未听说过的新建议。
 
 [![](img/f4a65156f2dba374dbf227228abe24c2.png)](https://www.java67.com/2017/02/2-best-books-to-learn-hibernate-for-Java-Developers.html)
 
-## [8。Java 性能:权威指南](http://javarevisited.blogspot.sg/2014/07/top-5-java-performance-tuning-books.html)
+## 8. Java 性能：权威指南
 
 这是我几年前在 Java 7 发布后读的书，但我仍然喜欢参考它。如果您想了解 JVM 内部机制、Java 和 GC 性能调优，以及一些可能影响性能的 Java 特性，这是一本非常好的书。
 
-如果你还没有读过这本书，那么你现在应该读一读。如果你需要一门课程来配合这本书，我建议你加入 Udemy 上的 [**Java 多线程、并发&性能优化**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjava-multithreading-concurrency-performance-optimization%2F) 课程，这是有经验的 Java Web 开发人员最好的课程之一。
+如果你还没有读过这本书，那么你现在应该读一读。如果你需要一门课程来配合这本书，我建议你加入 Udemy 上的 [Java 多线程、并发&性能优化](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjava-multithreading-concurrency-performance-optimization%2F) 课程，这是有经验的 Java Web 开发人员最好的课程之一。
 
 [![](img/347418f527bf1d7931b8ad1d2806f70f.png)](https://javarevisited.blogspot.com/2018/07/top-5-java-performance-tuning-books-for.html#axzz6ieZZarMY)
 
-## [9。现代 Java 在行动](http://www.amazon.com/Java-Action-Lambdas-functional-style-programming/dp/1617291994?tag=javamysqlanta-20)
+## 9. 现代 Java 在行动
 
 这是我最近读过的关于核心 Java 的最好的书之一。它几乎涵盖了 Java SE 8 版本中引入的所有新特性，如 lambda 表达式、流、方法引用和新的日期和时间 API。
 
@@ -120,11 +123,11 @@ Spring Boot 使得使用 Spring 框架变得更加容易，这也是它日益流
 
 [![](img/125c0c26564aa5e23bcf8b7ba33e1657.png)](https://javarevisited.blogspot.com/2016/10/best-books-to-learn-java-8.html)
 
-## [10。弹簧动作](http://www.java67.com/2016/12/5-spring-framework-books-for-java-programmers.html)
+## 10. 弹簧动作
 
 这是旧的 Spring in Action book 的更新版本，涵盖了 Spring 4。如果您想学习如何在 Spring 项目上使用注释，并想了解所有新的特性和改进，这是值得一读的书。
 
-而且，如果你喜欢课程，我强烈建议你把这本书和 Udemy 上约翰·汤姆森的 [**Spring Framework 5:初学者到大师**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fspring-framework-5-beginner-to-guru%2F) 课程结合起来。
+而且，如果你喜欢课程，我强烈建议你把这本书和 Udemy 上约翰·汤姆森的 [Spring Framework 5：初学者到大师](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fspring-framework-5-beginner-to-guru%2F) 课程结合起来。
 
 [![](img/1f0a9cf8bee10b7d776f9d7b6f03b22c.png)](https://medium.com/javarevisited/top-5-books-and-courses-to-learn-restful-web-services-in-java-using-spring-mvc-and-spring-boot-79ec4b351d12?source=---------17------------------)
 
@@ -134,19 +137,17 @@ Spring Boot 使得使用 Spring 框架变得更加容易，这也是它日益流
 
 您可能想探索的其他 **Java 和编程文章**
 
-*   [2023 年 Java 开发者路线图](/javarevisited/the-java-programmer-roadmap-f9db163ef2c2)
-*   [每个程序员都应该读的 10 本书](http://www.java67.com/2015/07/5-books-learn-java-8-functional-programming.html)
-*   [给热心程序员的 10 本算法书](http://www.java67.com/2015/09/top-10-algorithm-books-every-programmer-read-learn.html)
-*   [提高编程技能的 5 本必备书籍](http://www.java67.com/2016/02/5-books-to-improve-coding-skills-of.html)
-*   [初学者最佳核心 Java 书籍](/javarevisited/5-best-core-java-books-for-beginners-20e3f723e3a)
-*   [学习 SQL 和数据库设计的前 5 本书](/javarevisited/5-best-books-to-learn-sql-and-database-design-for-programmers-and-developers-1e7839df2f3e?source=---------7------------------)
-*   [学习 UNIX 和 Linux 操作系统的 10 本书](/javarevisited/10-best-linux-unix-and-system-programming-books-for-beginners-2fe750951c9f?source=---8------2-2-----------------3-----)
-*   [面向 Java 程序员的五大数据结构和算法书籍](http://javarevisited.blogspot.sg/2015/07/5-data-structure-and-algorithm-books-best-must-read.html)
+* [2023 年 Java 开发者路线图](/javarevisited/the-java-programmer-roadmap-f9db163ef2c2)
+* [每个程序员都应该读的 10 本书](http://www.java67.com/2015/07/5-books-learn-java-8-functional-programming.html)
+* [给热心程序员的 10 本算法书](http://www.java67.com/2015/09/top-10-algorithm-books-every-programmer-read-learn.html)
+* [提高编程技能的 5 本必备书籍](http://www.java67.com/2016/02/5-books-to-improve-coding-skills-of.html)
+* [初学者最佳核心 Java 书籍](/javarevisited/5-best-core-java-books-for-beginners-20e3f723e3a)
+* [学习 SQL 和数据库设计的前 5 本书](/javarevisited/5-best-books-to-learn-sql-and-database-design-for-programmers-and-developers-1e7839df2f3e?source=---------7------------------)
+* [学习 UNIX 和 Linux 操作系统的 10 本书](/javarevisited/10-best-linux-unix-and-system-programming-books-for-beginners-2fe750951c9f?source=---8------2-2-----------------3-----)
+* [面向 Java 程序员的五大数据结构和算法书籍](http://javarevisited.blogspot.sg/2015/07/5-data-structure-and-algorithm-books-best-must-read.html)
 
 感谢您阅读本文。如果你喜欢这个给有经验的程序员看的高级 Java 书籍列表，那么请分享给你的朋友和同事。如果您有任何问题、反馈或建议，请在此发表评论。
 
 如果您有任何关于 Java 和相关技术的书籍，您觉得很棒，但不在这个列表中，请提出意见。
 
-**p . s .**——如果你刚刚开始学习 Java，并且正在寻找一些最好的课程来开始你的 Java 之旅，那么你也可以看看这个列表中的 [**最佳核心 Java 课程**](/javarevisited/top-5-java-online-courses-for-beginners-best-of-lot-1e1e240a758) ，这些课程面向初学者和有经验的程序员。
-
-</javarevisited/10-advanced-spring-boot-courses-for-experienced-java-developers-5e57606816bd> 
+**p.s.**——如果你刚刚开始学习 Java，并且正在寻找一些最好的课程来开始你的 Java 之旅，那么你也可以看看这个列表中的 [最佳核心 Java 课程](/javarevisited/top-5-java-online-courses-for-beginners-best-of-lot-1e1e240a758) ，这些课程面向初学者和有经验的程序员。

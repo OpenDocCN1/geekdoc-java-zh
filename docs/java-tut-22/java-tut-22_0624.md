@@ -1,3 +1,4 @@
+
 # 行边界
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/text/line.html`](https://docs.oracle.com/javase/tutorial/i18n/text/line.html)
@@ -7,7 +8,6 @@
 ```java
 BreakIterator lineIterator =
     BreakIterator.getLineInstance(currentLocale);
-
 ```
 
 这个`BreakIterator`确定字符串中文本可以断开以继续到下一行的位置。`BreakIterator`检测到的位置是潜在的换行位置。在屏幕上显示的实际换行可能不同。
@@ -19,7 +19,6 @@ BreakIterator lineIterator =
 ```java
 She stopped.  She said, "Hello there," and then went on.
 ^   ^         ^   ^     ^      ^     ^ ^   ^    ^    ^  ^
-
 ```
 
 潜在的换行位置也会在连字符后立即发生：
@@ -27,7 +26,6 @@ She stopped.  She said, "Hello there," and then went on.
 ```java
 There are twenty-four hours in a day.
 ^     ^   ^      ^    ^     ^  ^ ^   ^
-
 ```
 
 下一个示例将长文本字符串分成固定长度的行，使用名为`formatLines`的方法。该方法使用`BreakIterator`来定位潜在的换行位置。`formatLines`方法简短、简单，并且由于使用了`BreakIterator`，与语言环境无关。以下是源代码：
@@ -56,7 +54,6 @@ static void formatLines(
         end = boundary.next();
     }
 }
-
 ```
 
 `BreakIteratorDemo`程序调用`formatLines`方法如下：
@@ -71,7 +68,6 @@ String moreText =
     "it personally.\"";
 
 formatLines(moreText, 30, currentLocale);
-
 ```
 
 调用`formatLines`的输出为：
@@ -85,5 +81,4 @@ shop window, her dog
 growled. "Sorry Jake," she
 said. "I didn't know you
 would take it personally."
-
 ```

@@ -1,10 +1,11 @@
+
 # 杰克逊树模型示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://www.mkyong.com/java/jackson-tree-model-example/>
 
 在 Jackson 中，我们可以使用`Tree Model`来表示 JSON 结构，并通过`JsonNode`执行 CRUD 操作，类似于 XML DOM 树。这个杰克逊`Tree Model`非常有用，尤其是在 JSON 结构不能很好地映射到 Java 类的情况下。
 
-pom.xml
+`pom.xml`
 
 ```java
  <dependency>
@@ -16,11 +17,11 @@ pom.xml
 
 *用杰克逊 2.9.8 测试的 PS*
 
-## 1.遍历 JSON
+## 1. 遍历 JSON
 
-1.1 Jackson `TreeModel`遍历以下 JSON 文件的示例:
+1.1 Jackson `TreeModel`遍历以下 JSON 文件的示例：
 
-C:\\projects\\user.json
+`C:\projects\user.json`
 
 ```java
  {
@@ -44,7 +45,7 @@ C:\\projects\\user.json
 
 1.2 逐个处理`JsonNode`。
 
-JacksonTreeModelExample1.java
+`JacksonTreeModelExample1.java`
 
 ```java
  package com.mkyong;
@@ -122,11 +123,11 @@ type : phone/work
 ref : 222-222-2222 
 ```
 
-## 2.遍历 JSON 数组
+## 2. 遍历 JSON 数组
 
 2.1 JSON 文件，顶层代表一个数组。
 
-c:\\projects\\user2.json
+`c:\projects\user2.json`
 
 ```java
  [
@@ -167,7 +168,7 @@ c:\\projects\\user2.json
 ] 
 ```
 
-2.2 概念是一样的，只是循环 JSON 数组:
+2.2 概念是一样的，只是循环 JSON 数组：
 
 ```java
  JsonNode rootArray = mapper.readTree(new File("c:\\projects\\user2.json"));
@@ -177,7 +178,7 @@ c:\\projects\\user2.json
 	} 
 ```
 
-JacksonTreeModelExample2.java
+`JacksonTreeModelExample2.java`
 
 ```java
  package com.mkyong;
@@ -267,14 +268,16 @@ type : phone/work
 ref : 444-444-4444 
 ```
 
-## 3.树形模型 CRUD 示例
+## 3. 树形模型 CRUD 示例
 
 3.1 这个例子，向你展示了如何创建、更新和删除 JSON 节点，要修改 JSON 节点，我们需要将其转换为`ObjectNode`。阅读评论，不言自明。
 
-JacksonTreeModelExample3.java
+`JacksonTreeModelExample3.java`
+
+
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -356,13 +359,13 @@ public class JacksonTreeModelExample3 {
         }
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- Before Update {
+Before Update {
   "id" : 1,
   "name" : {
     "first" : "Yong",
@@ -405,14 +408,17 @@ After Update {
     "name" : "Dark Soul 3",
     "price" : 59.9
   } ]
-} 
+}
 ```
 
 ## 参考
 
-*   [使用 Jackson 的 Json 处理:方法#3/3:树遍历](http://web.archive.org/web/20211024095240/http://www.cowtowncoder.com/blog/archives/2009/01/entry_153.html)
-*   [杰克逊数据绑定指南](http://web.archive.org/web/20211024095240/https://github.com/FasterXML/jackson-databind/)
-*   [Jackson 2–将 Java 对象转换成 JSON 从 JSON 转换过来](http://web.archive.org/web/20211024095240/https://www.mkyong.com/java/jackson-2-convert-java-object-to-from-json/)
-*   [stack overflow——使用 Jackson 向 JSON 添加属性](http://web.archive.org/web/20211024095240/https://stackoverflow.com/questions/23271699/adding-property-to-json-using-jackson)
+* [使用 Jackson 的 Json 处理:方法#3/3:树遍历](http://web.archive.org/web/20211024095240/http://www.cowtowncoder.com/blog/archives/2009/01/entry_153.html)
+
+* [杰克逊数据绑定指南](http://web.archive.org/web/20211024095240/https://github.com/FasterXML/jackson-databind/)
+
+* [Jackson 2–将 Java 对象转换成 JSON 从 JSON 转换过来](http://web.archive.org/web/20211024095240/https://www.mkyong.com/java/jackson-2-convert-java-object-to-from-json/)
+
+* [stack overflow——使用 Jackson 向 JSON 添加属性](http://web.archive.org/web/20211024095240/https://stackoverflow.com/questions/23271699/adding-property-to-json-using-jackson)
 
 <input type="hidden" id="mkyong-current-postId" value="9955">

@@ -1,24 +1,25 @@
-# spring @ components can–过滤器类型
+
+# Spring `@ComponentScan` 过滤器类型
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-componentscan-filter-type>
 
-## 1.概观
+## 1. 概观
 
 在之前的教程中，我们学习了 Spring 组件扫描的[基础。](/web/20221001115718/https://www.baeldung.com/spring-component-scanning)
 
-在这篇文章中，我们将看到`[@ComponentScan](https://web.archive.org/web/20221001115718/https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/ComponentScan.html)` 注释`.`中可用的不同类型的过滤器选项
+在这篇文章中，我们将看到`@ComponentScan`注释中可用的不同类型的过滤器选项。
 
-## 2.@ `ComponentScan` 过滤器
+## 2. `@ComponentScan`过滤器
 
-默认情况下，用`@Component, @Repository, @Service, @Controller`标注的类被注册为[Spring bean](/web/20221001115718/https://www.baeldung.com/spring-bean)。同样的情况也适用于使用定制注释进行注释的类，定制注释是用`@Component`进行注释的。我们可以通过使用`@ComponentScan`注释的`includeFilters and`参数来扩展这个行为。
+默认情况下，用`@Component`、`@Repository`、`@Service`、`@Controller`标注的类被注册为[Spring bean](/web/20221001115718/https://www.baeldung.com/spring-bean)。同样的情况也适用于使用定制注释进行注释的类，定制注释是用`@Component`进行注释的。我们可以通过使用`@ComponentScan`注释的`includeFilters`参数来扩展这个行为。
 
-**[`ComponentScan.Filter`](https://web.archive.org/web/20221001115718/https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/ComponentScan.Filter.html):**共有五种滤镜可供选择
+`ComponentScan.Filter`共有五种滤镜可供选择：
 
-*   `ANNOTATION`
-*   `ASSIGNABLE_TYPE`
-*   `ASPECTJ`
-*   `REGEX`
-*   `CUSTOM`
+- `ANNOTATION`
+- `ASSIGNABLE_TYPE`
+- `ASPECTJ`
+- `REGEX`
+- `CUSTOM`
 
 我们将在下一节中详细讨论这些。
 
@@ -28,7 +29,7 @@
 
 **`ANNOTATION`过滤器类型包括或排除组件扫描中用给定注释标记的类别。**
 
-比方说，我们有一个`@Anima` l 注释:
+比方说，我们有一个`@Animal`注释：
 
 ```java
 @Retention(RetentionPolicy.RUNTIME)
@@ -36,14 +37,14 @@
 public @interface Animal { }
 ```
 
-现在，让我们定义一个使用`@Animal`的`Elephant`类:
+现在，让我们定义一个使用`@Animal`的`Elephant`类：
 
 ```java
 @Animal
 public class Elephant { }
 ```
 
-最后，让我们使用`FilterType.ANNOTATION`来告诉 Spring 扫描`@Animal`注释的类:
+最后，让我们使用`FilterType.ANNOTATION`来告诉 Spring 扫描`@Animal`注释的类：
 
 ```java
 @Configuration
@@ -52,7 +53,7 @@ public class Elephant { }
 public class ComponentScanAnnotationFilterApp { }
 ```
 
-正如我们所见，扫描仪很好地接收了我们的`Elephant`:
+正如我们所见，扫描器很好地接收了我们的`Elephant`：
 
 ```java
 @Test
@@ -68,29 +69,29 @@ public void whenAnnotationFilterIsUsed_thenComponentScanShouldRegisterBeanAnnota
 }
 ```
 
-## 4. `FilterType.` `ASSIGNABLE_TYPE`
+## 4. `FilterType.ASSIGNABLE_TYPE`
 
 **`ASSIGNABLE_TYPE`在组件扫描期间过滤所有扩展类或实现指定类型接口的类。**
 
-首先，让我们声明`Animal`接口:
+首先，让我们声明`Animal`接口：
 
 ```java
 public interface Animal { }
 ```
 
-同样，让我们声明我们的`Elephant`类，这次实现`Animal` 接口`:`
+同样，让我们声明我们的`Elephant`类，这次实现`Animal`接口：
 
 ```java
 public class Elephant implements Animal { }
 ```
 
-让我们声明我们的`Cat`类，它也实现了`Animal:`
+让我们声明我们的`Cat`类，它也实现了`Animal`：
 
 ```java
 public class Cat implements Animal { }
 ```
 
-现在，让我们使用`ASSIGNABLE_TYPE` 来引导 Spring 扫描`Animal`-实现类:
+现在，让我们使用`ASSIGNABLE_TYPE`来引导 Spring 扫描`Animal`实现类：
 
 ```java
 @Configuration
@@ -99,7 +100,7 @@ public class Cat implements Animal { }
 public class ComponentScanAssignableTypeFilterApp { }
 ```
 
-我们将看到`Cat`和`Elephant`都被扫描:
+我们将看到`Cat`和`Elephant`都被扫描：
 
 ```java
 @Test
@@ -120,25 +121,25 @@ public void whenAssignableTypeFilterIsUsed_thenComponentScanShouldRegisterBean()
 
 **`REGEX`过滤器检查类名是否匹配给定的正则表达式模式。`FilterType.REGEX`检查简单类名和完全限定类名。**
 
-再次声明我们的`Elephant`类。这次没有实现任何接口或者用任何注释进行注释`:`
+再次声明我们的`Elephant`类。这次没有实现任何接口或者用任何注释进行注释：
 
 ```java
 public class Elephant { }
 ```
 
-让我们再声明一个类`Cat`:
+让我们再声明一个类`Cat`：
 
 ```java
 public class Cat { }
 ```
 
-现在，让我们声明`Loin`类:
+现在，让我们声明`Lion`类：
 
 ```java
-public class Loin { }
+public class Lion { }
 ```
 
-还是用`FilterType`吧。`REGEX`指示 Spring 扫描匹配正则表达式`.*[nt].` 的类，我们的正则表达式计算所有包含`nt:`的内容
+还是用`FilterType.REGEX`吧。指示 Spring 扫描匹配正则表达式`.*[nt].`的类，我们的正则表达式计算所有包含`nt`的内容：
 
 ```java
 @Configuration
@@ -147,7 +148,7 @@ public class Loin { }
 public class ComponentScanRegexFilterApp { }
 ```
 
-这次在我们的测试中，我们将看到 Spring 扫描了`Elephant`，但是没有扫描`Lion` `:`
+这次在我们的测试中，我们将看到 Spring 扫描了`Elephant`，但是没有扫描`Lion`：
 
 ```java
 @Test
@@ -165,11 +166,11 @@ public void whenRegexFilterIsUsed_thenComponentScanShouldRegisterBeanMatchingReg
 
 ## 6. `FilterType.ASPECTJ`
 
-**当我们想用表达式挑出一个复杂的类子集时，我们需要使用`FilterType` `ASPECTJ`。**
+**当我们想用表达式挑出一个复杂的类子集时，我们需要使用`FilterType.ASPECTJ`。**
 
 对于这个用例，我们可以重用与上一节相同的三个类。
 
-让我们使用`FilterType.ASPECTJ`命令 Spring 扫描匹配我们的`AspectJ`表达式的类:
+让我们使用`FilterType.ASPECTJ`命令 Spring 扫描匹配我们的`AspectJ`表达式的类：
 
 ```java
 @Configuration
@@ -180,7 +181,7 @@ public void whenRegexFilterIsUsed_thenComponentScanShouldRegisterBeanMatchingReg
 public class ComponentScanAspectJFilterApp { }
 ```
 
-虽然有点复杂，但是我们这里的逻辑希望 beans 的类名既不是以“L”也不是以“C”开头，所以这又给我们留下了`Elephant` s:
+虽然有点复杂，但是我们这里的逻辑希望 beans 的类名既不是以“L”也不是以“C”开头，所以这又给我们留下了`Elephant`：
 
 ```java
 @Test
@@ -196,11 +197,11 @@ public void whenAspectJFilterIsUsed_thenComponentScanShouldRegisterBeanMatchingA
 }
 ```
 
-## 7.`FilterType.CUSTOM`
+## 7. `FilterType.CUSTOM`
 
-**如果以上过滤器类型都不符合我们的要求，那么** **我们还可以创建一个自定义过滤器类型。**例如，假设我们只想扫描名称不超过五个字符的类。
+**如果以上过滤器类型都不符合我们的要求，那么我们还可以创建一个自定义过滤器类型。**例如，假设我们只想扫描名称不超过五个字符的类。
 
-要创建自定义过滤器，我们需要实现`org.springframework.core.type.filter.TypeFilter`:
+要创建自定义过滤器，我们需要实现`org.springframework.core.type.filter.TypeFilter`：
 
 ```java
 public class ComponentScanCustomFilter implements TypeFilter {
@@ -216,7 +217,7 @@ public class ComponentScanCustomFilter implements TypeFilter {
 }
 ```
 
-还是用`FilterType`吧。`CUSTOM`它使用我们的自定义过滤器`ComponentScanCustomFilter:`传送 Spring 来扫描类
+还是用`FilterType.CUSTOM`吧。它使用我们的自定义过滤器`ComponentScanCustomFilter`，传送 Spring 来扫描类：
 
 ```java
 @Configuration
@@ -225,7 +226,7 @@ public class ComponentScanCustomFilter implements TypeFilter {
 public class ComponentScanCustomFilterApp { }
 ```
 
-现在是时候看看我们定制过滤器的测试用例了`ComponentScanCustomFilter:`
+现在是时候看看我们定制过滤器的测试用例了`ComponentScanCustomFilter`：
 
 ```java
 @Test
@@ -242,8 +243,8 @@ public void whenCustomFilterIsUsed_thenComponentScanShouldRegisterBeanMatchingCu
 }
 ```
 
-## 8.摘要
+## 8. 摘要
 
-在本教程中，我们介绍了与`@ComponentScan.`相关的过滤器
+在本教程中，我们介绍了与`@ComponentScan`相关的过滤器。
 
 像往常一样，完整的代码可以在 GitHub 的[上找到。](https://web.archive.org/web/20221001115718/https://github.com/eugenp/tutorials/tree/master/spring-boot-modules/spring-boot-di)

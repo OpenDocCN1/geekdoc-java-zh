@@ -1,3 +1,4 @@
+
 # 2023 年最值得学习的 5 门 Microsoft SQL Server 在线课程
 
 > 原文：<https://medium.com/javarevisited/5-best-courses-to-learn-microsoft-sql-server-in-depth-e9f11b73c14a?source=collection_archive---------0----------------------->
@@ -10,13 +11,13 @@
 
 随着微软 Azure 越来越受欢迎，市场份额越来越大，对微软 SQL Server 的需求很有可能也会增加，尤其是在云计算领域。对微软 SQL Server DBA 和有 SQL Server 经验的程序员都已经有很高的需求，这也是为什么 2023 年学习 MSSQL 是一个极好的决定。
 
-如果您也是这样想的，并且正在寻找一些很棒的资源来启动您的 SQL Server 之旅，那么您来对地方了。在过去，我分享了许多学习微软 SQL Server 的[免费书籍](http://www.java67.com/2018/01/top-4-free-microsoft-sql-server-books.html)和[课程](https://www.java67.com/2018/02/5-free-oracle-and-microsoft-sql-server-online-courses.html)，这些书真的受到了我的读者的喜欢和赞赏
+如果您也是这样想的，并且正在寻找一些很棒的资源来启动您的 SQL Server 之旅，那么您来对地方了。在过去，我分享了许多学习微软 SQL Server 的[免费书籍](http://www.java67.com/2018/01/top-4-free-microsoft-sql-server-books.html)和[课程](https://www.java67.com/2018/02/5-free-oracle-and-microsoft-sql-server-online-courses.html)，这些书真的受到了我的读者的喜欢和赞赏。
 
 但是他们一直问我关于全面、深入和最好的在线付费课程。在 Facebook Messenger 和 LinkedIn 上分别回答了这些问题后，我决定以一篇文章的形式分享这些课程，我们来了。
 
 在这篇文章中，我将分享一些 2023 年学习微软 SQL Server 的**最佳课程**。他们不是免费的，但他们完全值得你的时间和金钱。我还选择了从头开始教你 SQL Server 的课程。
 
-如果你已经了解 SQL，并且熟悉任何关系数据库，比如 [Oracle](https://www.java67.com/2018/02/5-free-oracle-and-microsoft-sql-server-online-courses.html) 、 [MySQL](/@javinpaul/top-5-courses-to-learn-mysql-in-2020-4ffada70656f) 、Sybase、IBM DB2、 [PostgreSQL](/javarevisited/7-best-free-postgresql-courses-for-beginners-to-learn-in-2021-3bf369d73794) 、SQLite 等。，那么你会学得更快，但这不是必须的。
+如果你已经了解 SQL，并且熟悉任何关系数据库，比如 [Oracle](https://www.java67.com/2018/02/5-free-oracle-and-microsoft-sql-server-online-courses.html) 、 [MySQL](/@javinpaul/top-5-courses-to-learn-mysql-in-2020-4ffada70656f) 、Sybase、IBM DB2、 [PostgreSQL](/javarevisited/7-best-free-postgresql-courses-for-beginners-to-learn-in-2021-3bf369d73794) 、SQLite 等，那么你会学得更快，但这不是必须的。
 
 # 初学者和有经验的开发人员学习 SQL Server 的五大在线课程
 
@@ -28,11 +29,11 @@
 
 尽管如此，即使您没有准备 MSSQL 认证考试，该课程也将帮助您深入了解 Microsoft SQL Server。
 
-## 1.[面向初学者的微软 SQL—Udemy](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmicrosoft-sql-for-beginners%2F)
+## 1.[面向初学者的微软 SQL— Udemy](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmicrosoft-sql-for-beginners%2F)
 
 这是教你如何使用 Microsoft SQL Server 和 T-SQL 语言编写 SQL 查询的最全面的课程之一。
 
-本课程完全侧重于 SQL 查询，您将学习如何选择、更新和删除数据，如何使用 group by 子句，如何使用 [WHERE 和 HAVING](https://javarevisited.blogspot.com/2013/08/difference-between-where-vs-having-clause-SQL-databse-group-by-comparision.html) 筛选行，以及如何使用 SUM、AVG、MAX、MIN 等聚合函数。您还将学习如何使用 ORDER BY 子句对数据进行排序，以及如何使用[将多个表](https://javarevisited.blogspot.com/2012/11/how-to-join-three-tables-in-sql-query-mysql-sqlserver.html#axzz5az3hfsHW)连接在一起以生成报告等。
+本课程完全侧重于 SQL 查询，您将学习如何选择、更新和删除数据，如何使用 `GROUP BY` 子句，如何使用 [WHERE 和 HAVING](https://javarevisited.blogspot.com/2013/08/difference-between-where-vs-having-clause-SQL-databse-group-by-comparision.html) 筛选行，以及如何使用 `SUM`、`AVG`、`MAX`、`MIN` 等聚合函数。您还将学习如何使用 `ORDER BY` 子句对数据进行排序，以及如何使用[将多个表](https://javarevisited.blogspot.com/2012/11/how-to-join-three-tables-in-sql-query-mysql-sqlserver.html#axzz5az3hfsHW)连接在一起以生成报告等。
 
 由于 SQL 查询是任何程序员和开发人员最重要的技能，所以这是学习微软 SQL Server 的一个很好的起点。无论您是一名程序员还是一名有抱负的 DBA，本课程都将为您提供了解 Microsoft SQL Server 更多信息的敲门砖。
 
@@ -46,13 +47,13 @@
 
 老实说，我已经通过阅读 70–461 和 70–761 的书籍学到了大部分的 SQL Server 基础知识，而本课程只是将这些知识推向了一个新的高度。这是一个众所周知的真理，我可以从个人经历中说，当你准备认证时，你会学到很多东西。
 
-接下来你要关注细节，比如*一个 SQL 查询是如何执行的*，【WHERE 和 HAVING 的区别是什么，一个临时表是如何工作的，等等。这在你的头脑中产生了问题和好奇心，这进一步激励你做研究和关注，并最终了解重要的细节。
+接下来你要关注细节，比如*一个 SQL 查询是如何执行的*，[WHERE 和 HAVING 的区别是什么](https://javarevisited.blogspot.com/2013/08/difference-between-where-vs-having-clause-SQL-databse-group-by-comparision.html)，一个临时表是如何工作的，等等。这在你的头脑中产生了问题和好奇心，这进一步激励你做研究和关注，并最终了解重要的细节。
 
-本课程几乎涵盖了开发人员或初级 SQL Server DBA 应该了解的所有内容，如表、SQL SELECT 查询、视图、表、触发器、SQL Server 2012、2014、2016、2017、2019、考试 70–461 和 70–761 等等。
+本课程几乎涵盖了开发人员或初级 SQL Server DBA 应该了解的所有内容，如表、SQL `SELECT` 查询、视图、表、触发器、SQL Server 2012、2014、2016、2017、2019、考试 70–461 和 70–761 等等。
 
 如果你正在准备微软 SQL server 认证，那么这个课程一定会提升你的机会，即使你没有准备，通过学习这个课程你也会学得更好。
 
-**以下是加入本课程的链接—**[70–461，761:使用 Transact-SQL 查询 Microsoft SQL Server](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2F70-461-session-2-querying-microsoft-sql-server-2012%2F)
+**以下是加入本课程的链接—** [70–461，761:使用 Transact-SQL 查询 Microsoft SQL Server](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2F70-461-session-2-querying-microsoft-sql-server-2012%2F)
 
 [![](img/47640196b6666fa196971de906d9c9e1.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2F70-461-session-2-querying-microsoft-sql-server-2012%2F)
 
@@ -70,7 +71,7 @@
 
 或者，Pluralsight 还提供了 [**10 天免费试用**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 和 200 分钟免费观看时间，足以免费接入并完成本课程。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>
 
 ## 4.[微软 SQL Server Reporting Services(SSRS)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmicrosoft-sql-server-reporting-services-ssrs%2F)
 
@@ -92,7 +93,7 @@ Microsoft SQL Server Reporting Services 或 SSRS 是 SQL Server 最重要的功�
 
 如果您不知道，本认证考试面向执行数据库安装、维护和配置任务的数据库管理员，包括设置数据库系统、确保这些系统高效运行，以及定期存储、备份和保护数据免受未经授权的访问。在本课程中，您将学习如何配置数据访问和审计、管理数据库的备份和恢复、管理和监控 SQL Server 实例，以及管理高可用性和灾难恢复。
 
-**以下是参加本课程的链接—**[Microsoft SQL Server 2016 认证(70–764)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fms-sql-server-70-764%2F)
+**以下是参加本课程的链接—** [Microsoft SQL Server 2016 认证(70–764)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fms-sql-server-70-764%2F)
 
 [![](img/b34d2abb421972a2b2877ba86cc867d9.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fms-sql-server-70-764%2F)
 
@@ -102,24 +103,27 @@ Microsoft SQL Server Reporting Services 或 SSRS 是 SQL Server 最重要的功�
 
 许多企业和科技公司使用 Microsoft SQL Server，随着 Microsoft Azure 市场的不断增长，越来越多的公司将选择在云中使用 SQL Server。这意味着对微软 SQL Server 专业人员和从事这些工作的程序员的需求增加。如果你想保持领先地位，让你的简历增色不少，学习 SQL Server 技能将会带来丰厚的回报。
 
-其他**有用的编程资源**你可能喜欢:
+其他**有用的编程资源**你可能喜欢：
 
 *   [学习 SQL 和数据库基础知识的五大课程](https://javarevisited.blogspot.com/2018/05/top-5-sql-and-database-courses-to-learn-online.html)
 *   [2023 年 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html#123)
 *   [学习 MySQL 数据库的前 5 门课程](https://javarevisited.blogspot.com/2018/05/top-5-mysql-courses-to-learn-online.html)
-*   [数据库设计和建模的前五本书](https://javarevisited.blogspot.com/2017/11/top-5-books-to-learn-database-design.html)
-*   [2023 年前端和后端开发者路线图](https://javarevisited.blogspot.com/2019/02/the-2019-web-developer-roadmap.html)
-*   [学习 SQL 和数据库的 7 门免费课程](/javarevisited/7-free-courses-to-learn-database-and-sql-for-programmers-and-data-scientist-e7ae19514ed2)
-*   [学习 Oracle 和 PL/SQL 的前四本书](https://javarevisited.blogspot.com/2017/09/top-4-books-to-learn-oracle-plsql-best-must-read.html)
-*   [每个程序员都应该学习的 10 件事](https://javarevisited.blogspot.com/2019/01/10-things-every-programmer-and-software-engineer-should-know.html)
-*   [面向程序员的五大高级 SQL 书籍](https://javarevisited.blogspot.com/2018/07/top-5-advanced-sql-books-for.html)
-*   [面向程序员和数据库管理员的 5 门免费 T-SQL 和 SQL Server 课程](https://javarevisited.blogspot.com/2018/12/top-5-free-microsoft-sql-server-and-transact-sql-online-courses.html)
-*   [2023 年 Java 开发者应该学会的 11 件事](/javarevisited/9-things-java-programmers-should-learn-in-2018-3f0b2207dfc4)
-*   [2023 年学习 PostgreSQL 的 5 大课程](https://javarevisited.blogspot.com/2020/02/top-5-courses-to-learn-postgresql-in.html)
-*   [学习 Oracle 和 MSSQL 的 10 门免费课程](/javarevisited/top-10-free-courses-to-learn-microsoft-sql-server-and-oracle-database-in-2020-6708afcf4ad7)
+
+
+
+* [数据库设计和建模的前五本书](https://javarevisited.blogspot.com/2017/11/top-5-books-to-learn-database-design.html)
+* [2023 年前端和后端开发者路线图](https://javarevisited.blogspot.com/2019/02/the-2019-web-developer-roadmap.html)
+* [学习 SQL 和数据库的 7 门免费课程](/javarevisited/7-free-courses-to-learn-database-and-sql-for-programmers-and-data-scientist-e7ae19514ed2)
+* [学习 Oracle 和 PL/SQL 的前四本书](https://javarevisited.blogspot.com/2017/09/top-4-books-to-learn-oracle-plsql-best-must-read.html)
+* [每个程序员都应该学习的 10 件事](https://javarevisited.blogspot.com/2019/01/10-things-every-programmer-and-software-engineer-should-know.html)
+* [面向程序员的五大高级 SQL 书籍](https://javarevisited.blogspot.com/2018/07/top-5-advanced-sql-books-for.html)
+* [面向程序员和数据库管理员的 5 门免费 T-SQL 和 SQL Server 课程](https://javarevisited.blogspot.com/2018/12/top-5-free-microsoft-sql-server-and-transact-sql-online-courses.html)
+* [2023 年 Java 开发者应该学会的 11 件事](/javarevisited/9-things-java-programmers-should-learn-in-2018-3f0b2207dfc4)
+* [2023 年学习 PostgreSQL 的 5 大课程](https://javarevisited.blogspot.com/2020/02/top-5-courses-to-learn-postgresql-in.html)
+* [学习 Oracle 和 MSSQL 的 10 门免费课程](/javarevisited/top-10-free-courses-to-learn-microsoft-sql-server-and-oracle-database-in-2020-6708afcf4ad7)
 
 感谢您阅读本文。如果您喜欢这些最好的 Microsoft SQL Server 在线课程，请与您的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
 **P. S.** —如果您是 SQL 和数据库的新手，并且希望在深入了解 PostgreSQL 之前学习数据库基础知识和 SQL 基础知识，那么您也可以在 Udemy 上查看这个 [**Microsoft SQL Server —简介**](http://bit.ly/2DpaKnJ) 课程。这是完全免费的，你只需要一个免费的 Udemy 帐户就可以参加这个课程。
 
-<http://bit.ly/2DpaKnJ> 
+<http://bit.ly/2DpaKnJ>

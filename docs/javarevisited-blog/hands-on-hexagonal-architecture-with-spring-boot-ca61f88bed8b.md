@@ -1,3 +1,4 @@
+
 # Spring Boot 亲自动手的六角形建筑
 
 > 原文：<https://medium.com/javarevisited/hands-on-hexagonal-architecture-with-spring-boot-ca61f88bed8b?source=collection_archive---------0----------------------->

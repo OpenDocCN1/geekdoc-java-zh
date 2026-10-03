@@ -1,4 +1,5 @@
-# 没有为命名空间/和操作名“yourActionName”映射的操作
+
+# 没有为命名空间`/`和操作名`yourActionName`映射的操作
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts2/there-is-no-action-mapped-for-namespace-and-action-name-youractionname/>
 
@@ -6,12 +7,12 @@
 
 许多 Struts 2 开发人员声称他们已经正确配置了 action 类，但是在访问 action 类时遇到了 actions 错误消息。
 
-查看两种模式下的错误信息:
+查看两种模式下的错误信息：
 
- ## 1.“struts.devMode”处于关闭状态(默认)
+### 1. `struts.devMode`处于关闭状态（默认）
 
 ```java
- HTTP Status 404 - 
+HTTP Status 404 - 
 There is no Action mapped for namespace / and action name "yourActionName".
 
 type Status report 
@@ -22,16 +23,16 @@ description The requested resource
 (There is no Action mapped for namespace / and action name "yourActionName".) is not available. 
 ```
 
- ## 2.struts.devMode 已打开
+### 2. `struts.devMode`已打开
 
-在`struts.xml`
+在`struts.xml`中：
 
 ```java
- <constant name="struts.devMode" value="true" /> 
+<constant name="struts.devMode" value="true" /> 
 ```
 
 ```java
- Struts Problem Report
+Struts Problem Report
 
 Struts has detected an unhandled exception:
 
@@ -58,7 +59,7 @@ in your WEB-INF/classes/struts.properties file.
 这里有一个工作动作类配置在`struts.xml`文件中，可能会供你参考使用。
 
 ```java
- <?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
@@ -76,14 +77,8 @@ in your WEB-INF/classes/struts.properties file.
 </struts> 
 ```
 
-假设项目的根上下文是" **Struts2Example** "，那么你可以通过这个 URL 访问上面的动作——
-T3【http://localhost:8080/struts 2 example/ABC action . action
+假设项目的根上下文是`Struts2Example`，那么你可以通过这个 URL 访问上面的动作：
+
+`http://localhost:8080/Struts2Example/abcAction.action`
 
 [struts2](http://web.archive.org/web/20190304030444/http://www.mkyong.com/tag/struts2/)
-
-
-
-
-
-
-

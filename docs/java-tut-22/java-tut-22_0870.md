@@ -1,3 +1,4 @@
+
 # ExampleGame
 
 > 原文：[`docs.oracle.com/javase/tutorial/security/userperm/game.html`](https://docs.oracle.com/javase/tutorial/security/userperm/game.html)
@@ -8,22 +9,19 @@
 
 ```java
 java ExampleGame get
-
 ```
 
 要为用户设置新的最高分值，您可以运行：
 
 ```java
-java ExampleGame set *score* 
-
+java ExampleGame set *score*
 ```
 
 要检索用户当前的最高分，`ExampleGame`只需实例化一个`HighScore`对象并调用其`getHighScore`方法。要为用户设置新的最高分，`ExampleGame`实例化一个`HighScore`对象并调用`setHighScore`，将用户的新最高分传递给它。
 
-这里是`ExampleGame`的源代码，`ExampleGame.java`:
+这里是`ExampleGame`的源代码，`ExampleGame.java`：
 
 ```java
-
 package com.gamedev.games;
 
 import java.io.*;
@@ -57,5 +55,4 @@ public class ExampleGame
 	System.exit(1);
     }
 }
-
 ```

@@ -1,3 +1,4 @@
+
 # 使用打印设置对话框
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/printing/dialog.html`](https://docs.oracle.com/javase/tutorial/2d/printing/dialog.html)

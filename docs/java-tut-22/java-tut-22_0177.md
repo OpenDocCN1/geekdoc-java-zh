@@ -1,14 +1,11 @@
+
 # Path 类
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/io/pathClass.html`](https://docs.oracle.com/javase/tutorial/essential/io/pathClass.html)
 
 [`Path`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)类是 Java SE 7 版本中引入的主要入口点之一，属于[`java.nio.file`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/package-summary.html)包。如果您的应用程序使用文件 I/O，您将希望了解此类的强大功能。
 
-* * *
-
 **版本说明：** 如果您有使用`java.io.File`的 JDK7 之前的代码，您仍然可以通过使用[`File.toPath`](https://docs.oracle.com/javase/8/docs/api/java/io/File.html#toPath--)方法来利用`Path`类的功能。有关更多信息，请参阅旧版文件 I/O 代码。
-
-* * *
 
 正如其名称所示，`Path`类是文件系统中路径的程序表示。`Path`对象包含用于构建路径的文件名和目录列表，并用于检查、定位和操作文件。
 

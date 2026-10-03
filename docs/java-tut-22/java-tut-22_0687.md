@@ -1,3 +1,4 @@
+
 # 介绍 Sequencers
 
 > 原文：[`docs.oracle.com/javase/tutorial/sound/MIDI-seq-intro.html`](https://docs.oracle.com/javase/tutorial/sound/MIDI-seq-intro.html)
@@ -38,27 +39,25 @@
 
 如 Java Sound API 概述中所讨论的，Java Sound API 包括与组成大多数标准 MIDI 消息的原始两个或三字节序列对应的`MidiMessage`对象。`MidiEvent`只是一个`MidiMessage`的打包，以及指定事件发生时间的伴随时间值。（我们可能会说序列实际上包含四或五级数据层次，而不是三级，因为表面上最低级别的`MidiEvent`实际上包含一个更低级别的`MidiMessage`，同样`MidiMessage`对象包含一个组成标准 MIDI 消息的字节数组。）
 
-在 Java Sound API 中，`MidiMessages`可以与定时值关联的另一种方式有两种。 其中一种是上面提到的“何时使用 Sequencer”。 这种技术在不使用 Transmitter 向接收器发送消息和理解时间戳下有详细描述。 在那里，我们看到`Receiver`的`send`方法接受一个`MidiMessage`参数和一个时间戳参数。 那种时间戳只能用微秒表示。
+在 Java Sound API 中，`MidiMessages`可以与定时值关联的另一种方式有两种。其中一种是上面提到的“何时使用 Sequencer”。这种技术在不使用 Transmitter 向接收器发送消息和理解时间戳下有详细描述。在那里，我们看到`Receiver`的`send`方法接受一个`MidiMessage`参数和一个时间戳参数。那种时间戳只能用微秒表示。
 
-`MidiMessage`可以指定其定时的另一种方式是通过封装在`MidiEvent`中。 在这种情况下，定时以稍微更抽象的单位称为*ticks*来表示。
+`MidiMessage`可以指定其定时的另一种方式是通过封装在`MidiEvent`中。在这种情况下，定时以稍微更抽象的单位称为*ticks*来表示。
 
-一个 tick 的持续时间是多少？ 它可以在序列之间变化（但不会在序列内部变化），其值存储在标准 MIDI 文件的头部中。 一个 tick 的大小以两种类型的单位给出：
+一个 tick 的持续时间是多少？它可以在序列之间变化（但不会在序列内部变化），其值存储在标准 MIDI 文件的头部中。一个 tick 的大小以两种类型的单位给出：
 
 +   每四分音符的脉冲（ticks），缩写为 PPQ
++   每帧的 ticks，也称为 SMPTE 时间码（由电影和电视工程师协会采纳的标准）
 
-+   每帧的 ticks，也称为 SMPTE 时间码（由电影和电视工程师协会采用的标准）
+如果单位是 PPQ，一个 tick 的大小被表示为四分音符的一部分，这是一个相对的，而不是绝对的时间值。四分音符是一个音乐持续时间值，通常对应于音乐中的一个节拍（4/4 拍子中的四分之一）。四分音符的持续时间取决于速度，如果序列包含速度变化事件，则音乐中的四分音符的持续时间可能会在音乐过程中变化。因此，如果序列的定时增量（ticks）发生，比如每四分音符发生 96 次，那么每个事件的定时值都以音乐术语来衡量该事件的位置，而不是绝对时间值。
 
-如果单位是 PPQ，一个 tick 的大小被表示为四分音符的一部分，这是一个相对的，而不是绝对的时间值。 四分音符是一个音乐持续时间值，通常对应于音乐中的一个节拍（4/4 拍子中的四分之一）。 四分音符的持续时间取决于速度，如果序列包含速度变化事件，则音乐中的四分音符的持续时间可能会在音乐过程中变化。 因此，如果序列的定时增量（ticks）发生，比如每四分音符发生 96 次，那么每个事件的定时值都以音乐术语来衡量该事件的位置，而不是绝对时间值。
+另一方面，在 SMPTE 的情况下，单位度量绝对时间，而速度的概念不适用。实际上有四种不同的 SMPTE 约定可用，它们指的是每秒的电影帧数。每秒的帧数可以是 24、25、29.97 或 30。使用 SMPTE 时间码，一个 tick 的大小被表示为帧的一部分。
 
-另一方面，在 SMPTE 的情况下，单位度量绝对时间，而速度的概念不适用。 实际上有四种不同的 SMPTE 约定可用，它们指的是每秒的电影帧数。 每秒的帧数可以是 24、25、29.97 或 30。 使用 SMPTE 时间码，一个 tick 的大小被表示为帧的一部分。
-
-在 Java Sound API 中，您可以调用`Sequence.getDivisionType`来了解特定序列中使用的单位类型，即 PPQ 或 SMPTE 单位之一。 然后在调用`Sequence.getResolution`之后可以计算一个 tick 的大小。 如果分割类型是 PPQ，则后一种方法返回每四分音符的 ticks 数，或者如果分割类型是 SMPTE 约定之一，则返回每个 SMPTE 帧的 ticks 数。 在 PPQ 的情况下，可以使用以下公式来获取一个 tick 的大小：
+在 Java Sound API 中，您可以调用`Sequence.getDivisionType`来了解特定序列中使用的单位类型，即 PPQ 或 SMPTE 单位之一。然后在调用`Sequence.getResolution`之后可以计算一个 tick 的大小。如果分割类型是 PPQ，则后一种方法返回每四分音符的 ticks 数，或者如果分割类型是 SMPTE 约定之一，则返回每个 SMPTE 帧的 ticks 数。在 PPQ 的情况下，可以使用以下公式来获取一个 tick 的大小：
 
 ```java
 ticksPerSecond =  
     resolution * (currentTempoInBeatsPerMinute / 60.0);
 tickSize = 1.0 / ticksPerSecond;
-
 ```
 
 以及在 SMPTE 的情况下的这个公式：
@@ -69,11 +68,9 @@ framesPerSecond =
     : (divisionType == Sequence.SMPTE_25 ? 25
       : (divisionType == Sequence.SMPTE_30 ? 30
         : (divisionType == Sequence.SMPTE_30DROP ?
-
             29.97))));
 ticksPerSecond = resolution * framesPerSecond;
 tickSize = 1.0 / ticksPerSecond;
-
 ```
 
 Java Sound API 中对序列中时间的定义与标准 MIDI 文件规范相似。然而，有一个重要的区别。`MidiEvents`中包含的 tick 值衡量的是*累积*时间，而不是*增量*时间。在标准 MIDI 文件中，每个事件的时间信息衡量的是自上一个事件开始以来经过的时间。这被称为增量时间。但在 Java Sound API 中，ticks 不是增量值；它们是前一个事件的时间值*加上*增量值。换句话说，在 Java Sound API 中，每个事件的时间值始终大于序列中前一个事件的时间值（或者相等，如果事件应该同时发生）。每个事件的时间值衡量的是自序列开始以来经过的时间。

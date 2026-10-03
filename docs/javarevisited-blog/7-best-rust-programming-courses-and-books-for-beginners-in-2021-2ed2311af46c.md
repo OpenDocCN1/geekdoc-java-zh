@@ -1,3 +1,4 @@
+
 # 2023 年 9 本最佳 Rust 编程初学者课程和书籍
 
 > 原文：<https://medium.com/javarevisited/7-best-rust-programming-courses-and-books-for-beginners-in-2021-2ed2311af46c?source=collection_archive---------0----------------------->
@@ -6,7 +7,7 @@
 
 [![](img/bb99ea84380c123d52faf6af5c36841c.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Frust-lang%2F)
 
-你好，伙计们，如果你想在 2023 年学习 Rust 编程语言，并寻找有用的资源，如书籍、教程和在线课程，那么你来对地方了。前面我已经分享了 [**最好的 Golang 课程**](/javarevisited/7-online-courses-to-learn-golang-or-go-programming-languages-in-2020-f599a25cf14a) ，而在这篇文章中，我准备分享一些最好的书籍和课程给 2023 年的*从零开始学 Rust。*
+你好，伙计们，如果你想在 2023 年学习 Rust 编程语言，并寻找有用的资源，如书籍、教程和在线课程，那么你来对地方了。前面我已经分享了[**最好的 Golang 课程**](/javarevisited/7-online-courses-to-learn-golang-or-go-programming-languages-in-2020-f599a25cf14a)，而在这篇文章中，我准备分享一些最好的书籍和课程给 2023 年的*从零开始学 Rust。*
 
 Rust 是相对较新(诞生于 2015 年)且功能强大的编程语言之一，它结合了 [C++](https://www.java67.com/2018/02/5-free-cpp-courses-to-learn-programming.html) 的强大功能和 [Java](https://www.java67.com/2018/08/top-10-free-java-courses-for-beginners-experienced-developers.html) 及其他解释型语言的安全性。
 
@@ -14,9 +15,9 @@ Rust 是相对较新(诞生于 2015 年)且功能强大的编程语言之一，�
 
 有很多尝试将 C/C++的强大功能和 Java 提供的安全性结合起来，看起来只有 Rust 做到了。自 2015 年首次亮相以来，Rust 获得了世界和开发者社区的关注。
 
-一个重要的证据是，在过去四年的 StackOverflow 调查中，它被选为最受欢迎的编程语言。其受欢迎程度也与日俱增。根据 GitHub Octoverse 的数据，Rust 是前一年增长第二快的语言，仅次于 [Dart](/javarevisited/my-favorite-flutter-and-dart-programming-courses-for-beginners-9e8355710d78) ，并且在 Google trends 中也在增长。
+一个重要的证据是，在过去四年的 StackOverflow 调查中，它被选为最受欢迎的编程语言。其受欢迎程度也与日俱增。根据 GitHub Octoverse 的数据，Rust 是前一年增长第二快的语言，仅次于 [Dart](/javarevisited/my-favorite-flutter-and-dart-programming-courses-for-beginners-9e8355710d78)，并且在 Google trends 中也在增长。
 
-Rust 的显著优势是它提供的**性能**，这使得它适合系统编程。长期以来，系统编程和嵌入式编程领域一直被像 C/c++这样的语言所主宰。虽然它们提供了对程序和硬件的完全控制，但它们缺乏内存安全性。
+Rust 的显著优势是它提供的**性能**，这使得它适合系统编程。长期以来，系统编程和嵌入式编程领域一直被像 C/C++这样的语言所主宰。虽然它们提供了对程序和硬件的完全控制，但它们缺乏内存安全性。
 
 使用 [C++](/javarevisited/top-10-courses-to-learn-c-for-beginners-best-and-free-4afc262a544e) 也很难编写并发代码，而 [Java](https://javarevisited.blogspot.com/2017/12/10-things-java-programmers-should-learn.html#axzz5atl0BngO) 解决了 C++在安全性和并发性方面的一些问题；这是以牺牲性能为代价的。它提供了安全性，但需要一个庞大的运行时，称为 Java 虚拟机或 JVM。因为它们的运行时间很长，像 Java 这样的语言并不适合系统编程，也从来没有真正进入过这个领域。
 
@@ -73,7 +74,7 @@ Rust 似乎提供了中间地带，同时它提供了极快的速度，这只有
 
 顺便说一句，你需要一个 [**ZTM 会员**](https://academy.zerotomastery.io/a/aff_c0gnlvf7/external?affcode=441520_zytgk2dn) 才能观看这个课程，这个课程每月花费大约 39 美元，但也提供了许多超级吸引人和有用的 30+课程，这些课程是由像他这样的专家创建的。你也可以使用我的代码**朋友 10** 来获得你选择的任何套餐的 10%的折扣。
 
-<https://academy.zerotomastery.io/a/aff_c0gnlvf7/external?affcode=441520_zytgk2dn>  
+<https://academy.zerotomastery.io/a/aff_c0gnlvf7/external?affcode=441520_zytgk2dn>
 
 ## 3.[铁锈基础知识【多视觉课程](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Frust-fundamentals)
 
@@ -85,7 +86,7 @@ Rust 似乎提供了中间地带，同时它提供了极快的速度，这只有
 
 正如我所说，你需要一个 Pluralsight 会员资格才能进入本课程，如果你没有，那么你可以利用他们的 [**10 天免费试用**](http://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 来免费进入本课程。提供 200 分钟的免费观看时间，足够完成这门课程。
 
-<http://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>  
+<http://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>
 
 ## 4.[Rust 编程语言](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Frust-lang%2F)【Udemy 最佳课程】
 
@@ -109,108 +110,110 @@ Rust 似乎提供了中间地带，同时它提供了极快的速度，这只有
 
 还解释了 Rust 特有的所有权原则是如何影响语言和安全的。它还涵盖了数据处理、模式匹配和错误处理。本课程最棒的地方在于，你将构建一个 Rust 项目示例，在这个示例中，你可以使用你在课堂上学到的各种 Rust 概念。
 
-唯一需要的是你需要一点编程经验；从这门课程中获得最大收益。教员没有解释已经提到的基本的东西。如果你已经知道了 C/c++(T19)或 Java(T21 ),并且想学习 Rust 作为第二编程语言，那么这个课程是最适合你的。
 
-**这里是加入这个 Rust 课程的链接**——[Rust 编程语言:完整课程](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Frust-programming-language-complete-tutorial%2F)
+
+唯一需要的是你需要一点编程经验，才能从这门课程中获得最大收益。教员不会解释已经提到的基本东西。如果你已经知道了`C/C++`（T19）或`Java`（T21），并且想学习`Rust`作为第二编程语言，那么这个课程是最适合你的。
+
+**这里是加入这个 Rust 课程的链接**——[Rust 编程语言：完整课程](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Frust-programming-language-complete-tutorial%2F)
 
 [![](img/6ecd9cb384c1789f70ee27867e0419b6.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Frust-programming-language-complete-tutorial%2F)
 
 ## 6. [Rust 编程语言初学者](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-rust-programming-language-for-beginners%2F)【Udemy 课程】
 
-这是 Udemy 上又一门学习 Rust 编程的优秀课程。它是由 Tim Buchalka 的 Learn Programming Academy 创建的，该学院的 [Java 编程课程](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F)是我的最爱。这一次，他与迪韦克·辛格合作，创建了这个关于铁锈的优秀课程。
+这是 Udemy 上又一门学习 Rust 编程的优秀课程。它是由 Tim Buchalka 的 Learn Programming Academy 创建的，该学院的 [Java 编程课程](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F)是我的最爱。这一次，他与迪韦克·辛格合作，创建了这个关于 Rust 的优秀课程。
 
-这是一门非常全面的课程，内容超过 19.5 个小时，几乎涵盖了关于铁锈的一切。即使你没有任何编程经验，也可以通过学习这门课程及其课程设置来学习。
+这是一门非常全面的课程，内容超过 19.5 个小时，几乎涵盖了关于 Rust 的一切。即使你没有任何编程经验，也可以通过学习这门课程及其课程设置来学习。
 
-这门课程适合初学者和中间用户，他们希望成为使用 Rust 编程语言的专家，如果你想在 2023 年学到一些有用的东西，学习 Rust，给你的职业生涯一个推动。
+这门课程适合初学者和中间用户，他们希望成为使用 Rust 编程语言的专家。如果你想在 2023 年学到一些有用的东西，学习 Rust 会给你的职业生涯一个推动。
 
 **这里是加入这个 Rust 课程的链接**——[Rust 编程语言初学者](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-rust-programming-language-for-beginners%2F)
 
 [![](img/4ff843af51ab498ff9856f66d75ba36b.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-rust-programming-language-for-beginners%2F)
 
-## 7.[从零开始学铁锈【教育性免费课程](https://www.educative.io/courses/learn-rust-from-scratch?affiliate_id=5073518643380224)
+## 7. [从零开始学 Rust【教育性免费课程】](https://www.educative.io/courses/learn-rust-from-scratch?affiliate_id=5073518643380224)
 
-这是一个由 Educative 在 2023 年推出的免费、交互式、基于文本的 Rust 编程学习课程。如果你不知道， [Educative](https://www.educative.io?affiliate_id=5073518643380224) 是一个新的在线学习平台，它允许你在同一个窗口中通过基于文本和图像的教程和代码进行学习。
+这是一个由 Educative 在 2023 年推出的免费、交互式、基于文本的 Rust 编程学习课程。如果你不知道，[Educative](https://www.educative.io?affiliate_id=5073518643380224) 是一个新的在线学习平台，它允许你在同一个窗口中通过基于文本和图像的教程和代码进行学习。
 
 虽然 Educative 也有最好的 Rust 课程之一——[Rust 编程终极指南](https://www.educative.io/courses/ultimate-guide-to-rust-programming?affiliate_id=5073518643380224)，但你可以先从这个免费课程开始，尤其是如果你喜欢从免费教程和资源中学习的话。
 
-这个免费课程的目的是用一种实用的方法来教生锈。它从一个简单的“Hello world”程序开始，并继续涵盖常见的概念，如数组、字符串、向量、枚举、结构、特征、泛型、函数和逻辑。最后，它深入到更高级的概念，如生存期和内存管理，这是 Rust 的优势。当你完成的时候，你会很好的掌握铁锈的基本知识；并将准备学习更高级的概念。
+这个免费课程的目的是用一种实用的方法来教 Rust。它从一个简单的“Hello world”程序开始，并继续涵盖常见的概念，如数组、字符串、向量、枚举、结构、特征、泛型、函数和逻辑。最后，它深入到更高级的概念，如生存期和内存管理，这是 Rust 的优势。当你完成的时候，你会很好地掌握 Rust 的基本知识，并将准备学习更高级的概念。
 
 **这里是加入这个互动 Rust 课程的链接**——[从零开始学 Rust](https://www.educative.io/courses/learn-rust-from-scratch?affiliate_id=5073518643380224)
 
 [![](img/9845d9005523abee036b9670254f1e5c.png)](https://www.educative.io/courses/learn-rust-from-scratch?affiliate_id=5073518643380224)
 
-这个课程最大的好处是它是完全免费的，你需要做的就是创建一个教育账号来访问这个课程，顺便说一句，他们也有很多有用的课程，比如系统设计面试课程。如果你喜欢这个平台，我建议你购买一个[教育订阅](https://www.educative.io/subscription?affiliate_id=5073518643380224)，只需 18 美元就可以获得 100 多门课程
+这个课程最大的好处是它是完全免费的，你需要做的就是创建一个 Educative 账号来访问这个课程。顺便说一句，他们也有很多有用的课程，比如系统设计面试课程。如果你喜欢这个平台，我建议你购买一个[教育订阅](https://www.educative.io/subscription?affiliate_id=5073518643380224)，只需 18 美元就可以获得 100 多门课程。
 
-<https://www.educative.io/collection/5668639101419520/5649050225344512?affiliate_id=5073518643380224>  
+<https://www.educative.io/collection/5668639101419520/5649050225344512?affiliate_id=5073518643380224>
 
 # 2023 年学习 Rust 编程的 2 本最佳书籍
 
 现在我们已经看到了最好的 Rust 课程，是时候看看一些你可以在 2023 年学习 Rust 编程语言的书籍了。书籍往往比课程更深入，是课程的补充。如果你真的想掌握 Rust 编程语言，我建议你在学习过程中把书本和在线课程结合起来。
 
-## 1.[全栈锈](https://gumroad.com/a/942568563)
+## 1. [全栈 Rust](https://gumroad.com/a/942568563)
 
-《全栈 Rust:用 Rust 编程语言和朋友构建应用的完整指南》是我在 2023 年学习 Rust 最喜欢的书籍之一。
+《全栈 Rust：用 Rust 编程语言和朋友构建应用的完整指南》是我在 2023 年学习 Rust 最喜欢的书籍之一。
 
-这本书是由 Nate 和他的团队创作的，他们已经撰写了[Ng 书](https://gumroad.com/a/221148275)和 [Fullstack React 书](https://gumroad.com/a/934179955)，这是两本最受欢迎的学习 Angular 和 React 的书。这本书的作者是谷歌的软件工程师安迪·维斯。
+这本书是由 Nate 和他的团队创作的，他们已经撰写了 [Ng 书](https://gumroad.com/a/221148275) 和 [Fullstack React 书](https://gumroad.com/a/934179955)，这是两本最受欢迎的学习 Angular 和 React 的书。这本书的作者是谷歌的软件工程师安迪·维斯。
 
 《Rust》这本书是构建快速、可投入生产的 Rust 应用程序的完整指南。虽然有一些关于如何自学 Rust 编程语言的好资源，但这些其他的书**没有**教的是如何用 Rust 构建*应用*。
 
-全栈锈解决了这个问题。在本书中，我们将向您展示如何使用 Rust 构建**速度惊人的 web 服务器**，**构建命令行工具**，以及使用 **Web Assembly (WASM)** 编译在浏览器中运行的应用程序。
+全栈 Rust 解决了这个问题。在本书中，我们将向您展示如何使用 Rust 构建**速度惊人的 web 服务器**，**构建命令行工具**，以及使用 **Web Assembly（WASM）** 编译在浏览器中运行的应用程序。
 
 这本书最好的一点是它的结构，这本书以一种易于理解的方式来教授 Rust 编程语言的内容、方式和原因。
 
-**这里是购买这本 Rust book**——[full stack Rust](https://gumroad.com/a/942568563)的链接
+**这里是购买这本 Rust 书的链接**——[全栈 Rust](https://gumroad.com/a/942568563)
 
 [![](img/f936e4996975a6dec4c029131a7a6246.png)](https://gumroad.com/a/942568563)
 
-## 2.[锈在行动(书)](https://www.amazon.com/Rust-Action-TS-McNamara/dp/1617294551?tag=javamysqlanta-20)
+## 2. [Rust in Action（书）](https://www.amazon.com/Rust-Action-TS-McNamara/dp/1617294551?tag=javamysqlanta-20)
 
-前面说过，我爱看书，一门课和一本书结合起来学的最多。如果你也喜欢书，并且正在寻找一本关于 Rust 的好书，那么你应该看看 Manning publication 出版的《Rust in Action》。
+前面说过，我爱看书，一门课和一本书结合起来学得最多。如果你也喜欢书，并且正在寻找一本关于 Rust 的好书，那么你应该看看 Manning publication 出版的《Rust in Action》。
 
-这本书通过探索众多的系统编程概念和技术来介绍 Rust 编程语言。你将通过钻研计算机内部工作原理来学习 Rust。像上面所有的课程一样，这本书也教你 Rust 的所有语法，基本的编程概念，像数组、向量和数据结构，但是更深入。您还将了解 Rut 的安全特性和更高级的概念，如生命周期和内存管理。
+这本书通过探索众多的系统编程概念和技术来介绍 Rust 编程语言。你将通过钻研计算机内部工作原理来学习 Rust。像上面所有的课程一样，这本书也教你 Rust 的所有语法、基本的编程概念，像数组、向量和数据结构，但是更深入。您还将了解 Rust 的安全特性和更高级的概念，如生命周期和内存管理。
 
-这是在亚马逊上购买这本书的链接— [Rust in Action](https://www.amazon.com/Rust-Action-TS-McNamara/dp/1617294551?tag=javamysqlanta-20)
+这是在亚马逊上购买这本书的链接——[Rust in Action](https://www.amazon.com/Rust-Action-TS-McNamara/dp/1617294551?tag=javamysqlanta-20)
 
 [![](img/a5e6d45aad37f161ac2d1350761ff353.png)](https://www.amazon.com/Rust-Action-TS-McNamara/dp/1617294551?tag=javamysqlanta-20)
 
-以上就是关于 2023 年学习 Rust 的一些**最好的在线课程和书籍。如果你正在为系统编程和[大数据](/javarevisited/top-10-courses-to-learn-big-data-and-hadoop-best-of-lot-23ef8691633f)寻找一种健壮的语言，你应该学习 Rust。它的需求也在增长，眼下，对懂 Rust 的程序员需求很大。
+以上就是关于 2023 年学习 Rust 的一些**最好的在线课程和书籍**。如果你正在为系统编程和[大数据](/javarevisited/top-10-courses-to-learn-big-data-and-hadoop-best-of-lot-23ef8691633f)寻找一种健壮的语言，你应该学习 Rust。它的需求也在增长，眼下，对懂 Rust 的程序员需求很大。
 
-如果你想成为 Rust 开发者的 n *iche 的一员，你应该加入其中一个课程来学习 Rust。我还附上了一本名为《Rust in Action》的书，以防你更喜欢从书本上学习而不是在线课程。***
+如果你想成为 Rust 开发者的*小众*一员，你应该加入其中一个课程来学习 Rust。我还附上了一本名为《Rust in Action》的书，以防你更喜欢从书本上学习而不是在线课程。
 
 # 2023 年的 Rust 值得学吗？为什么要在 2023 年学 Rust
 
-为什么要学铁锈？ [ZTM 学院的 Rust 专家 Jayson](https://academy.zerotomastery.io/p/learn-rust?affcode=441520_zytgk2dn) 给出了你应该在 22023 年及以后学习 Rust 的五大理由:
+为什么要学 Rust？[ZTM 学院的 Rust 专家 Jayson](https://academy.zerotomastery.io/p/learn-rust?affcode=441520_zytgk2dn) 给出了你应该在 2023 年及以后学习 Rust 的五大理由：
 
-1.  Rust 把开发者放在第一位，这也是它成为最受欢迎的编程语言的原因之一。
-2.  可靠代码
-3.  [WebAssembly](/javarevisited/7-best-webassembly-and-blazor-courses-for-beginners-to-learn-online-8e0cdd61be28) (Wasm)
-4.  行业支持(它不是白“最爱”的编程语言！)
-5.  证实跟踪记录
+1. Rust 把开发者放在第一位，这也是它成为最受欢迎的编程语言的原因之一。
+2. 可靠代码
+3. [WebAssembly](/javarevisited/7-best-webassembly-and-blazor-courses-for-beginners-to-learn-online-8e0cdd61be28)（Wasm）
+4. 行业支持（它不是白“最爱”的编程语言！）
+5. 证实跟踪记录
 
-我对学铁锈有什么看法？我个人认为，Rust 不同于任何其他编程语言，学习 Rust 可能是你在 2023 年可以做出的最佳决定之一。
+我对学 Rust 有什么看法？我个人认为，Rust 不同于任何其他编程语言，学习 Rust 可能是你在 2023 年可以做出的最佳决定之一。
 
 Rust 正迅速成为系统和嵌入式程序员中最受欢迎的语言之一，对 Rust 开发人员的需求也在大幅增长。
 
 即使你对嵌入式和系统编程不感兴趣，Rust 也能通过教你几个主流编程语言没有的新概念，显著提高你的编程技能。
 
-其他**编程文章**你可能喜欢:
+其他**编程文章**你可能喜欢：
 
-*   [2023 年 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
-*   [2023 年学习 Python 的十大课程](/better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
-*   学习 Kubernetes 的 7 门免费在线培训课程
-*   [2023 年要学的 10 种编程语言](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html)
-*   [面向 Java 和 DevOps 工程师的 5 门免费 Docker 课程](http://www.java67.com/2018/02/5-free-docker-courses-for-java-and-DevOps-engineers.html)
-*   [学习 Ruby 编程的 5 大课程](https://www.java67.com/2018/02/5-free-ruby-and-rails-courses-to-learn-online.html)
-*   [2023 年学习 Swift 编程的前 5 门课程](https://javarevisited.blogspot.com/2019/01/top-5-ios-developer-course-to-learn-ios.html)
-*   [2023 年学习 Spring Boot 的 10 门课程](/javarevisited/top-10-courses-to-learn-spring-boot-in-2020-best-of-lot-6ffce88a1b6e)
-*   [学习 Jenkins、Docker 和 Maven 的 10 门免费课程](/javarevisited/top-10-free-courses-to-learn-maven-jenkins-and-docker-for-java-developers-51fa7a1e66f6)
-*   [面向网络开发者的 5 门免费 JavaScript 课程](http://www.java67.com/2018/04/top-5-free-javascript-courses-to-learn.html)
-*   [学习 Java 编程的 5 门免费课程](https://javarevisited.blogspot.com/2018/05/top-5-java-courses-for-beginners-to-learn-online.html)
-*   [2023 年学习 JavaScript 的十大课程](https://javarevisited.blogspot.com/2018/06/top-10-courses-to-learn-javascript-in.html)
-*   [2023 年学习 C 编程的前 5 门课程](https://javarevisited.blogspot.com/2019/11/top-5-courses-to-learn-c-programming-in.html)
+* [2023 年 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
+* [2023 年学习 Python 的十大课程](/better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
+* 学习 Kubernetes 的 7 门免费在线培训课程
+* [2023 年要学的 10 种编程语言](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html)
+* [面向 Java 和 DevOps 工程师的 5 门免费 Docker 课程](http://www.java67.com/2018/02/5-free-docker-courses-for-java-and-DevOps-engineers.html)
+* [学习 Ruby 编程的 5 大课程](https://www.java67.com/2018/02/5-free-ruby-and-rails-courses-to-learn-online.html)
+* [2023 年学习 Swift 编程的前 5 门课程](https://javarevisited.blogspot.com/2019/01/top-5-ios-developer-course-to-learn-ios.html)
+* [2023 年学习 Spring Boot 的 10 门课程](/javarevisited/top-10-courses-to-learn-spring-boot-in-2020-best-of-lot-6ffce88a1b6e)
+* [学习 Jenkins、Docker 和 Maven 的 10 门免费课程](/javarevisited/top-10-free-courses-to-learn-maven-jenkins-and-docker-for-java-developers-51fa7a1e66f6)
+* [面向网络开发者的 5 门免费 JavaScript 课程](http://www.java67.com/2018/04/top-5-free-javascript-courses-to-learn.html)
+* [学习 Java 编程的 5 门免费课程](https://javarevisited.blogspot.com/2018/05/top-5-java-courses-for-beginners-to-learn-online.html)
+* [2023 年学习 JavaScript 的十大课程](https://javarevisited.blogspot.com/2018/06/top-10-courses-to-learn-javascript-in.html)
+* [2023 年学习 C 编程的前 5 门课程](https://javarevisited.blogspot.com/2019/11/top-5-courses-to-learn-c-programming-in.html)
 
 感谢您阅读本文。如果你喜欢这篇文章，那么请分享给你的朋友，如果你有任何问题或反馈，那么请留言。
 
-**P. S.** —如果你对学习 Rust 编程语言感兴趣，但正在寻找一个免费的在线培训课程来开始你的 Rust 之旅，那么你也可以在 Udemy 上查看[**Rust for undergents**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Frust-for-undergrads%2F)—一个免费课程。这是一门学习 Rust 编程语言基础的很棒的课程，而且完全免费。
+**P. S.**——如果你对学习 Rust 编程语言感兴趣，但正在寻找一个免费的在线培训课程来开始你的 Rust 之旅，那么你也可以在 Udemy 上查看[**Rust for Undergrads**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Frust-for-undergrads%2F)——一个免费课程。这是一门学习 Rust 编程语言基础的很棒的课程，而且完全免费。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Frust-for-undergrads%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Frust-for-undergrads%2F>

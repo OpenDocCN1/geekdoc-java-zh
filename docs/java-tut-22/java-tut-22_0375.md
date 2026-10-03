@@ -1,18 +1,15 @@
+
 # 如何使用文件选择器
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/components/filechooser.html`](https://docs.oracle.com/javase/tutorial/uiswing/components/filechooser.html)
 
 文件选择器提供了一个用于浏览文件系统的 GUI，然后从列表中选择文件或目录，或输入文件或目录的名称。要显示文件选择器，通常使用`JFileChooser` API 显示包含文件选择器的模态对话框。另一种呈现文件选择器的方法是将[`JFileChooser`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html)的实例添加到容器中。
 
-* * *
-
 **注意：**
 
-如果您打算将程序作为沙箱 Java Web Start 应用程序进行分发，则应使用 JNLP API 提供的文件服务，而不是使用`JFileChooser` API。这些服务  `FileOpenService` 和 `FileSaveService`  不仅提供了在受限环境中选择文件的支持，还负责实际打开和保存文件。使用这些服务的示例在 JWSFileChooserDemo 中。有关使用 JNLP API 的文档可以在 Java Web Start 课程中找到。
+如果您打算将程序作为沙箱 Java Web Start 应用程序进行分发，则应使用 JNLP API 提供的文件服务，而不是使用`JFileChooser` API。这些服务 — `FileOpenService` 和 `FileSaveService` — 不仅提供了在受限环境中选择文件的支持，还负责实际打开和保存文件。使用这些服务的示例在 `JWSFileChooserDemo` 中。有关使用 JNLP API 的文档可以在 Java Web Start 课程中找到。
 
-* * *
-
-单击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 JWSFileChooserDemo（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。
+单击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 `JWSFileChooserDemo`（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。
 
 ![启动 JWSFileChooserDemo 应用程序](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/JWSFileChooserDemoProject/JWSFileChooserDemo.jnlp)
 
@@ -28,19 +25,12 @@
 
 ![弹出打开或保存对话框的程序](img/75d9b010128cbcd56fbb4804d0da89d0.png)
 
-* * *
-
 **试一试：**
 
-1.  编译并运行示例，参考示例索引。
-
-1.  点击“打开文件”按钮。在文件选择器中浏览，选择一个文件，然后点击对话框的“打开”按钮。
-
-1.  使用“保存文件”按钮来弹出保存对话框。尝试使用文件选择器上的所有控件。
-
-1.  在源文件`FileChooserDemo.java`中，将文件选择模式更改为仅目录模式。（搜索`DIRECTORIES_ONLY`并取消注释包含它的行。）然后重新编译并运行示例。您只能看到并选择目录，而不能选择普通文件。
-
-* * *
+1. 编译并运行示例，参考示例索引。
+2. 点击“打开文件”按钮。在文件选择器中浏览，选择一个文件，然后点击对话框的“打开”按钮。
+3. 使用“保存文件”按钮来弹出保存对话框。尝试使用文件选择器上的所有控件。
+4. 在源文件`FileChooserDemo.java`中，将文件选择模式更改为仅目录模式。（搜索`DIRECTORIES_ONLY`并取消注释包含它的行。）然后重新编译并运行示例。您只能看到并选择目录，而不能选择普通文件。
 
 弹出标准打开对话框只需要两行代码：
 
@@ -48,9 +38,8 @@
 //Create a file chooser
 final JFileChooser fc = new JFileChooser();
 ...
-*//In response to a button click:*
-int returnVal = fc.showOpenDialog(*aComponent*);
-
+//In response to a button click:
+int returnVal = fc.showOpenDialog(aComponent);
 ```
 
 `showOpenDialog`方法的参数指定对话框的父组件。父组件影响对话框的位置以及对话框所依赖的框架。例如，Java 外观将对话框直接放在父组件上。如果父组件在一个框架中，则对话框依赖于该框架。当框架最小化时，此对话框消失，当框架最大化时重新出现。
@@ -74,10 +63,9 @@ public void actionPerformed(ActionEvent e) {
         }
    } ...
 }
-
 ```
 
-`show*Xxx*Dialog`方法返回一个整数，指示用户是否选择了文件。根据文件选择器的使用方式，通常只需检查返回值是否为`APPROVE_OPTION`，然后不更改任何其他值。要获取所选文件（或目录，如果设置文件选择器以允许选择目录），请在文件选择器上调用`getSelectedFile`方法。此方法返回一个[`File`](https://docs.oracle.com/javase/8/docs/api/java/io/File.html)的实例。
+`showXxxDialog`方法返回一个整数，指示用户是否选择了文件。根据文件选择器的使用方式，通常只需检查返回值是否为`APPROVE_OPTION`，然后不更改任何其他值。要获取所选文件（或目录，如果设置文件选择器以允许选择目录），请在文件选择器上调用`getSelectedFile`方法。此方法返回一个[`File`](https://docs.oracle.com/javase/8/docs/api/java/io/File.html)的实例。
 
 该示例获取文件的名称并在日志消息中使用。你可以在`File`对象上调用其他方法，比如`getPath`、`isDirectory`或`exists`来获取有关文件的信息。你也可以调用其他方法，比如`delete`和`rename`来以某种方式更改文件。当然，你可能还想通过使用 Java 平台提供的读取器或写入器类之一来打开或保存文件。有关使用读取器和写入器将数据读取和写入文件系统的信息，请参阅基本 I/O。
 
@@ -85,20 +73,17 @@ public void actionPerformed(ActionEvent e) {
 
 ```java
 int returnVal = fc.showSaveDialog(FileChooserDemo.this);
-
 ```
 
 通过使用相同的文件选择器实例来显示其打开和保存对话框，程序获得以下好处：
 
-+   选择器在使用之间记住当前目录，因此打开和保存版本会自动共享相同的当前目录。
-
-+   你只需自定义一个文件选择器，自定义将应用于打开和保存版本。
+- 选择器在使用之间记住当前目录，因此打开和保存版本会自动共享相同的当前目录。
+- 你只需自定义一个文件选择器，自定义将应用于打开和保存版本。
 
 最后，示例程序中有被注释掉的代码行，让你可以更改文件选择模式。例如，以下代码行使文件选择器只能选择目录，而不能选择文件：
 
 ```java
 fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-
 ```
 
 另一种可能的选择模式是`FILES_AND_DIRECTORIES`。默认值是`FILES_ONLY`。以下图片显示了一个打开对话框，文件选择模式设置为`DIRECTORIES_ONLY`。请注意，至少在 Java 外观中，只有目录可见，而不是文件。
@@ -107,23 +92,17 @@ fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 
 如果你想为除了打开或保存之外的任务创建一个文件选择器，或者想要自定义文件选择器，请继续阅读。我们将讨论以下主题：
 
-+   另一个示例：FileChooserDemo2
-
-+   为自定义任务使用文件选择器
-
-+   过滤文件列表
-
-+   自定义文件视图
-
-+   提供附件组件
-
-+   文件选择器 API
-
-+   使用文件选择器的示例
+- 另一个示例：`FileChooserDemo2`
+- 为自定义任务使用文件选择器
+- 过滤文件列表
+- 自定义文件视图
+- 提供附件组件
+- 文件选择器 API
+- 使用文件选择器的示例
 
 ## 另一个示例：FileChooserDemo2
 
-让我们看看`FileChooserDemo2`示例，这是前一个演示程序的修改版本，使用了更多的`JFileChooser`API。该示例使用了多种方式自定义的文件选择器。与原始示例一样，用户通过按下按钮调用文件选择器。这是文件选择器的图片：
+让我们看看`FileChooserDemo2`示例，这是前一个演示程序的修改版本，使用了更多的`JFileChooser` API。该示例使用了多种方式自定义的文件选择器。与原始示例一样，用户通过按下按钮调用文件选择器。这是文件选择器的图片：
 
 ![带有各种自定义的文件选择器](img/b887b852632c9c8827843f50c9aa157a.png)
 
@@ -140,7 +119,6 @@ fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 ```java
 JFileChooser fc = new JFileChooser();
 int returnVal = fc.showDialog(FileChooserDemo2.this, "Attach");
-
 ```
 
 `showDialog`方法的第一个参数是对话框的父组件。第二个参数是一个`String`对象，提供对话框窗口的标题和批准按钮的标签。
@@ -155,7 +133,7 @@ int returnVal = fc.showDialog(FileChooserDemo2.this, "Attach");
 
 **内置过滤**
 
-通过文件选择器上的特定方法调用来设置过滤。目前，唯一可用的内置过滤器是用于隐藏文件的，例如在 UNIX 系统上以句点（.）开头的文件。默认情况下，不显示隐藏文件。调用`setFileHidingEnabled(false)`以显示隐藏文件。
+通过文件选择器上的特定方法调用来设置过滤。目前，唯一可用的内置过滤器是用于隐藏文件的，例如在 UNIX 系统上以句点（`.`）开头的文件。默认情况下，不显示隐藏文件。调用`setFileHidingEnabled(false)`以显示隐藏文件。
 
 **应用程序控制的过滤**
 
@@ -167,14 +145,12 @@ int returnVal = fc.showDialog(FileChooserDemo2.this, "Attach");
 
 ```java
 fc.addChoosableFileFilter(new ImageFilter());
-
 ```
 
 默认情况下，用户可选择的过滤器列表包括“接受所有”过滤器，该过滤器使用户可以查看所有非隐藏文件。以下示例使用以下代码禁用“接受所有”过滤器：
 
 ```java
 fc.setAcceptAllFileFilterUsed(false);
-
 ```
 
 我们的自定义文件过滤器在 `ImageFilter.java` 中实现，是 `FileFilter` 的子类。`ImageFilter` 类实现了 `getDescription` 方法，返回“Just Images”——一个要放在用户可选择过滤器列表中的字符串。`ImageFilter` 还实现了 `accept` 方法，以便接受所有目录和具有 `.png`、`.jpg`、`.jpeg`、`.gif`、`.tif` 或 `.tiff` 文件扩展名的文件。
@@ -201,7 +177,6 @@ public boolean accept(File f) {
 
     return false;
 }
-
 ```
 
 通过接受所有目录，此过滤器允许用户在文件系统中导航。如果从此方法中省略了粗体行，则用户将受限于选择器初始化的目录。
@@ -232,7 +207,6 @@ public class Utils {
         return ext;
     }
 }
-
 ```
 
 ## 自定义文件视图
@@ -241,7 +215,6 @@ public class Utils {
 
 ```java
 fc.setFileView(new ImageFileView());
-
 ```
 
 `ImageFileView` 类为先前描述的图像过滤器接受的每种类型的图像显示不同的图标。
@@ -251,6 +224,12 @@ fc.setFileView(new ImageFileView());
 **`String getTypeDescription(File f)`**
 
 返回文件类型的描述。这是 `ImageFileView` 对此方法的实现：
+
+
+
+## 文件类型描述与图标获取
+
+以下代码展示了如何根据文件扩展名获取文件的类型描述：
 
 ```java
 public String getTypeDescription(File f) {
@@ -272,12 +251,11 @@ public String getTypeDescription(File f) {
     }
     return type;
 }
-
 ```
 
-**`Icon getIcon(File f)`**
+### `Icon getIcon(File f)`
 
-返回表示文件或其类型的图标。这是 `ImageFileView` 对此方法的实现：
+返回表示文件或其类型的图标。这是`ImageFileView`对此方法的实现：
 
 ```java
 public Icon getIcon(File f) {
@@ -299,18 +277,17 @@ public Icon getIcon(File f) {
     }
     return icon;
 }
-
 ```
 
-**`String getName(File f)`**
+### `String getName(File f)`
 
-返回文件的名称。大多数此方法的实现应返回 `null`，表示外观和感觉应该自行解决。另一个常见的实现返回 `f.getName()`。
+返回文件的名称。大多数此方法的实现应返回`null`，表示外观和感觉应该自行解决。另一个常见的实现返回`f.getName()`。
 
-**`String getDescription(File f)`**
+### `String getDescription(File f)`
 
-返回文件的描述。意图是更具体地描述单个文件。此方法的常见实现返回 `null`，表示外观和感觉应该自行解决。
+返回文件的描述。意图是更具体地描述单个文件。此方法的常见实现返回`null`，表示外观和感觉应该自行解决。
 
-**`Boolean isTraversable(File f)`**
+### `Boolean isTraversable(File f)`
 
 返回目录是否可遍历。大多数此方法的实现应返回`null`以指示外观和感觉应该解决这个问题。一些应用程序可能希望阻止用户进入某种类型的目录，因为它代表一个复合文档。`isTraversable`方法永远不应为非目录返回`true`。
 
@@ -322,7 +299,6 @@ public Icon getIcon(File f) {
 
 ```java
 fc.setAccessory(new ImagePreview(fc));
-
 ```
 
 任何继承自`JComponent`类的对象都可以是附件组件。组件应具有在文件选择器中看起来不错的首选大小。
@@ -359,7 +335,6 @@ public void propertyChange(PropertyChangeEvent e) {
         }
     }
 }
-
 ```
 
 如果`SELECTED_FILE_CHANGED_PROPERTY`是更改的属性，则此方法从文件选择器获取一个`File`对象。`loadImage`和`repaint`方法使用`File`对象加载图像并重绘附件组件。
@@ -368,74 +343,57 @@ public void propertyChange(PropertyChangeEvent e) {
 
 使用文件选择器的 API 分为以下几类：
 
-+   创建和显示文件选择器
+- 创建和显示文件选择器
+- 选择文件和目录
+- 导航文件选择器的列表
+- 自定义文件选择器
 
-+   选择文件和目录
-
-+   导航文件选择器的列表
-
-+   自定义文件选择器
-
-创建和显示文件选择器
+### 创建和显示文件选择器
 
 | 方法或构造函数 | 目的 |
 | --- | --- |
+| `JFileChooser()` `JFileChooser(File)` `JFileChooser(String)` | 创建一个文件选择器实例。当存在`File`和`String`参数时，提供初始目录。 |
+| `int showOpenDialog(Component)` `int showSaveDialog(Component)` `int showDialog(Component, String)` | 显示包含文件选择器的模态对话框。如果用户批准操作，则这些方法返回`APPROVE_OPTION`，如果用户取消操作，则返回`CANCEL_OPTION`。另一个可能的返回值是`ERROR_OPTION`，表示发生了意外错误。 |
 
-| [JFileChooser()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#JFileChooser--) [JFileChooser(File)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#JFileChooser-java.io.File-)
-
-[JFileChooser(String)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#JFileChooser-java.lang.String-) | 创建一个文件选择器实例。当存在`File`和`String`参数时，提供初始目录。 |
-
-| [int showOpenDialog(Component)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#showOpenDialog-java.awt.Component-) [int showSaveDialog(Component)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#showSaveDialog-java.awt.Component-)
-
-[int showDialog(Component, String)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#showDialog-java.awt.Component-java.lang.String-) | 显示包含文件选择器的模态对话框。如果用户批准操作，则这些方法返回`APPROVE_OPTION`，如果用户取消操作，则返回`CANCEL_OPTION`。另一个可能的返回值是`ERROR_OPTION`，表示发生了意外错误。
-
-选择文件和目录
+### 选择文件和目录
 
 | 方法 | 目的 |
 | --- | --- |
-| [void setSelectedFile(File)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#setSelectedFile-java.io.File-) [File getSelectedFile()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#getSelectedFile--) | 设置或获取当前选定的文件或（如果启用了目录选择）目录。 |
-| [void setSelectedFiles(File[])](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#setSelectedFiles-java.io.File:A-) [File[] getSelectedFiles()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#getSelectedFiles--) | 设置或获取当前选定的文件（如果文件选择器设置为允许多选）。 |
+| `void setSelectedFile(File)` `File getSelectedFile()` | 设置或获取当前选定的文件或（如果启用了目录选择）目录。 |
+| `void setSelectedFiles(File[])` `File[] getSelectedFiles()` | 设置或获取当前选定的文件（如果文件选择器设置为允许多选）。 |
+| `void setFileSelectionMode(int)` `void getFileSelectionMode()` `boolean isDirectorySelectionEnabled()` `boolean isFileSelectionEnabled()` | 设置或获取文件选择模式。可接受的值为`FILES_ONLY`（默认值）、`DIRECTORIES_ONLY`和`FILES_AND_DIRECTORIES`。根据当前选择模式解释目录或文件是否可选择。 |
+| `void setMultiSelectionEnabled(boolean)` `boolean isMultiSelectionEnabled()` | 设置或解释是否可以一次选择多个文件。默认情况下，用户只能选择一个文件。 |
+| `void setAcceptAllFileFilterUsed(boolean)` `boolean isAcceptAllFileFilterUsed()` | 设置或获取是否在可选择的过滤器列表中使用`AcceptAll`文件过滤器作为可接受的选择；默认值为`true`。 |
+| `Dialog createDialog(Component)` | 给定一个父组件，创建并返回一个包含此文件选择器的新对话框，依赖于父窗口的框架，并居中于父窗口。 |
 
-| [void setFileSelectionMode(int)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#setFileSelectionMode-int-) [void getFileSelectionMode()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#getFileSelectionMode--)
-
-[boolean isDirectorySelectionEnabled()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#isDirectorySelectionEnabled--) | 检查目录选择是否已启用。
-
-[boolean isFileSelectionEnabled()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#isFileSelectionEnabled--) | 设置或获取文件选择模式。可接受的值为`FILES_ONLY`（默认值）、`DIRECTORIES_ONLY`和`FILES_AND_DIRECTORIES`。根据当前选择模式解释目录或文件是否可选择。
-
-| [void setMultiSelectionEnabled(boolean)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#setMultiSelectionEnabled-boolean-) [boolean isMultiSelectionEnabled()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#isMultiSelectionEnabled--) | 设置或解释是否可以一次选择多个文件。默认情况下，用户只能选择一个文件。 |
-| --- | --- |
-| [void setAcceptAllFileFilterUsed(boolean)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#setAcceptAllFileFilterUsed-boolean-) [boolean isAcceptAllFileFilterUsed()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#isAcceptAllFileFilterUsed--) | 设置或获取是否在可选择的过滤器列表中使用`AcceptAll`文件过滤器作为可接受的选择；默认值为`true`。 |
-| [Dialog createDialog(Component)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#createDialog-java.awt.Component-) | 给定一个父组件，创建并返回一个包含此文件选择器的新对话框，依赖于父窗口的框架，并居中于父窗口。 |
-
-导航文件选择器的列表
+### 导航文件选择器的列表
 
 | 方法 | 目的 |
 | --- | --- |
-| [void ensureFileIsVisible(File)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#ensureFileIsVisible-java.io.File-) | 滚动文件选择器的列表，使指定的文件可见。 |
-| [void setCurrentDirectory(File)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#setCurrentDirectory-java.io.File-) [File getCurrentDirectory()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#getCurrentDirectory--) | 设置或获取在文件选择器的列表中显示的目录。 |
-| [void changeToParentDirectory()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#changeToParentDirectory--) | 将列表更改为显示当前目录的父目录。 |
-| [void rescanCurrentDirectory()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#rescanCurrentDirectory--) | 检查文件系统并更新选择器的列表。 |
-| [void setDragEnabled(boolean)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#setDragEnabled-boolean-) [boolean getDragEnabled()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#getDragEnabled--) | 设置或获取确定是否启用自动拖放处理的属性。有关更多详细信息，请参阅拖放和数据传输。 |
+| `void ensureFileIsVisible(File)` | 滚动文件选择器的列表，使指定的文件可见。 |
+| `void setCurrentDirectory(File)` `File getCurrentDirectory()` | 设置或获取在文件选择器的列表中显示的目录。 |
+| `void changeToParentDirectory()` | 将列表更改为显示当前目录的父目录。 |
+| `void rescanCurrentDirectory()` | 检查文件系统并更新选择器的列表。 |
+| `void setDragEnabled(boolean)` `boolean getDragEnabled()` | 设置或获取确定是否启用自动拖放处理的属性。有关更多详细信息，请参阅拖放和数据传输。 |
 
-自定义文件选择器
+### 自定义文件选择器
 
 | 方法 | 目的 |
 | --- | --- |
-| [void setAccessory(javax.swing.JComponent)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#setAccessory-javax.swing.JComponent-) [JComponent getAccessory()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#getAccessory--) | 设置或获取文件选择器的附件组件。 |
-| [void setFileFilter(FileFilter)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#setFileFilter-javax.swing.filechooser.FileFilter-) [FileFilter getFileFilter()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#getFileFilter--) | 设置或获取文件选择器的主要文件过滤器。 |
-| [void setFileView(FileView)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#setFileView-javax.swing.filechooser.FileView-) [FileView getFileView()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#getFileView--) | 设置或获取选择器的文件视图。 |
+| `void setAccessory(javax.swing.JComponent)` `JComponent getAccessory()` | 设置或获取文件选择器的附件组件。 |
+| `void setFileFilter(FileFilter)` `FileFilter getFileFilter()` | 设置或获取文件选择器的主要文件过滤器。 |
 
-| [FileFilter[] getChoosableFileFilters()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#getChoosableFileFilters--) [void addChoosableFileFilter(FileFilter)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#addChoosableFileFilter-javax.swing.filechooser.FileFilter-) | 设置、获取或修改可供用户选择的文件过滤器列表。 |
 
-[boolean removeChoosableFileFilter(FileFilter)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#removeChoosableFileFilter-javax.swing.filechooser.FileFilter-)
 
-[void resetChoosableFileFilters()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#resetChoosableFileFilters--)
+| [`void setFileView(FileView)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#setFileView-javax.swing.filechooser.FileView-) [`FileView getFileView()`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#getFileView--) | 设置或获取选择器的文件视图。 |
 
-[FileFilter getAcceptAllFileFilter()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#getAcceptAllFileFilter--) | 设置、获取或修改用户可选择的文件过滤器列表。 |
+| [`FileFilter[] getChoosableFileFilters()`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#getChoosableFileFilters--) [`void addChoosableFileFilter(FileFilter)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#addChoosableFileFilter-javax.swing.filechooser.FileFilter-) | 设置、获取或修改可供用户选择的文件过滤器列表。 |
 
-| [void setFileHidingEnabled(boolean)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#setFileHidingEnabled-boolean-) [boolean isFileHidingEnabled()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#isFileHidingEnabled--) | 设置或获取是否显示隐藏文件。 |
-| --- | --- |
-| [void setControlButtonsAreShown(boolean)](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#setControlButtonsAreShown-boolean-) [boolean getControlButtonsAreShown()](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#getControlButtonsAreShown--) | 设置或获取指示文件选择器中是否显示“批准”和“取消”按钮的属性。默认情况下，此属性为 true。 |
+| [`boolean removeChoosableFileFilter(FileFilter)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#removeChoosableFileFilter-javax.swing.filechooser.FileFilter-) [`void resetChoosableFileFilters()`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#resetChoosableFileFilters--) [`FileFilter getAcceptAllFileFilter()`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#getAcceptAllFileFilter--) | 设置、获取或修改用户可选择的文件过滤器列表。 |
+
+| [`void setFileHidingEnabled(boolean)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#setFileHidingEnabled-boolean-) [`boolean isFileHidingEnabled()`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#isFileHidingEnabled--) | 设置或获取是否显示隐藏文件。 |
+
+| [`void setControlButtonsAreShown(boolean)`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#setControlButtonsAreShown-boolean-) [`boolean getControlButtonsAreShown()`](https://docs.oracle.com/javase/8/docs/api/javax/swing/JFileChooser.html#getControlButtonsAreShown--) | 设置或获取指示文件选择器中是否显示“批准”和“取消”按钮的属性。默认情况下，此属性为 `true`。 |
 
 ## 使用文件选择器的示例
 

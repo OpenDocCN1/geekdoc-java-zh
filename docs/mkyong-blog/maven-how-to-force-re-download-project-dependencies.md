@@ -1,4 +1,5 @@
-# maven–如何强制重新下载项目依赖关系？
+
+# Maven – 如何强制重新下载项目依赖关系？
 
 > 原文：<http://web.archive.org/web/20230101150211/https://www.mkyong.com/maven/maven-how-to-force-re-download-project-dependencies/>
 
@@ -7,7 +8,7 @@
 Terminal
 
 ```java
- $ mvn dependency:purge-local-repository
+$ mvn dependency:purge-local-repository
 
 [INFO] Scanning for projects...
 [INFO]
@@ -27,11 +28,11 @@ Downloading from central: https://repo.maven.apache.org/maven2/org/apiguardian/a
 [INFO] ------------------------------------------------------------------------
 [INFO] Total time:  8.086 s
 [INFO] Finished at: 2018-11-20T15:22:28+08:00
-[INFO] ------------------------------------------------------------------------ 
+[INFO] ------------------------------------------------------------------------
 ```
 
 ## 参考
 
-1.  [Maven 依赖:清除-本地-存储库](http://web.archive.org/web/20210814213520/https://maven.apache.org/plugins/maven-dependency-plugin/purge-local-repository-mojo.html)
+1. [Maven 依赖:清除-本地-存储库](http://web.archive.org/web/20210814213520/https://maven.apache.org/plugins/maven-dependency-plugin/purge-local-repository-mojo.html)
 
-Tags : [maven](http://web.archive.org/web/20210814213520/https://mkyong.com/tag/maven/) [maven-faq](http://web.archive.org/web/20210814213520/https://mkyong.com/tag/maven-faq/) [project dependency](http://web.archive.org/web/20210814213520/https://mkyong.com/tag/project-dependency/)<input type="hidden" id="mkyong-current-postId" value="14819">
+Tags : [maven](http://web.archive.org/web/20210814213520/https://mkyong.com/tag/maven/) [maven-faq](http://web.archive.org/web/20210814213520/https://mkyong.com/tag/maven-faq/) [project dependency](http://web.archive.org/web/20210814213520/https://mkyong.com/tag/project-dependency/)

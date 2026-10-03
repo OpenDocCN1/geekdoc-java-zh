@@ -1,3 +1,4 @@
+
 # 带有 Spring 插件的策略设计模式
 
 > 原文：<https://medium.com/javarevisited/the-strategy-design-pattern-with-spring-plugin-e99021c8f6eb?source=collection_archive---------0----------------------->

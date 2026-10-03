@@ -1,3 +1,4 @@
+
 # 提高排序性能
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/text/perform.html`](https://docs.oracle.com/javase/tutorial/i18n/text/perform.html)
@@ -29,7 +30,6 @@ static public void main(String[] args) {
     sortArray(keys);
     printArray(keys);
 }
-
 ```
 
 `sortArray`方法调用`CollationKey.compareTo`方法。`compareTo`方法返回一个整数，如果`keys[i]`对象小于、等于或大于`keys[j]`对象，则返回小于零、等于零或大于零。请注意，程序比较的是`CollationKey`对象，而不是原始单词数组中的`String`对象。以下是`sortArray`方法的代码：
@@ -48,7 +48,6 @@ public static void sortArray(CollationKey[] keys) {
         }
     }
 }
-
 ```
 
 `KeysDemo`程序对`CollationKey`对象数组进行排序，但最初的目标是对`String`对象数组进行排序。为了检索每个`CollationKey`的`String`表示形式，程序在`displayWords`方法中调用`getSourceString`，如下所示：
@@ -59,7 +58,6 @@ static void displayWords(CollationKey[] keys) {
         System.out.println(keys[i].getSourceString());
     }
 }
-
 ```
 
 `displayWords`方法打印以下行：
@@ -69,5 +67,4 @@ apricot
 grape
 lemon
 peach
-
 ```

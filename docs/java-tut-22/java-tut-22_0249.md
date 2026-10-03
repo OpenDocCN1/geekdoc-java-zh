@@ -1,3 +1,4 @@
+
 # 边界匹配器
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/regex/bounds.html`](https://docs.oracle.com/javase/tutorial/essential/regex/bounds.html)
@@ -22,7 +23,6 @@
 以下示例演示了边界匹配器`^`和`$`的使用。如上所述，`^`匹配行的开头，`$`匹配行的结尾。
 
 ```java
-
 Enter your regex: ^dog$
 Enter input string to search: dog
 I found the text "dog" starting at index 0 and ending at index 3.
@@ -38,15 +38,13 @@ I found the text "            dog" starting at index 0 and ending at index 15.
 Enter your regex: ^dog\w*
 Enter input string to search: dogblahblah
 I found the text "dogblahblah" starting at index 0 and ending at index 11.
-
 ```
 
 第一个示例成功，因为模式占据了整个输入字符串。第二个示例失败，因为输入字符串开头包含额外的空格。第三个示例指定了一个允许无限空格，然后在行尾跟着"dog"的表达式。第四个示例要求"dog"必须出现在一行的开头，后面跟着无限数量的单词字符。
 
-要检查模式是否从单词边界开始和结束（而不是在更长字符串中的子字符串），只需在两侧使用`\b`；例如，`\bdog\b`
+要检查模式是否从单词边界开始和结束（而不是在更长字符串中的子字符串），只需在两侧使用`\b`；例如，`\bdog\b`。
 
 ```java
-
 Enter your regex: \bdog\b
 Enter input string to search: The dog plays in the yard.
 I found the text "dog" starting at index 4 and ending at index 7.
@@ -54,13 +52,11 @@ I found the text "dog" starting at index 4 and ending at index 7.
 Enter your regex: \bdog\b
 Enter input string to search: The doggie plays in the yard.
 No match found.
-
 ```
 
 要在非单词边界上匹配表达式，请使用`\B`：
 
 ```java
-
 Enter your regex: \bdog\B
 Enter input string to search: The dog plays in the yard.
 No match found.
@@ -68,13 +64,11 @@ No match found.
 Enter your regex: \bdog\B
 Enter input string to search: The doggie plays in the yard.
 I found the text "dog" starting at index 4 and ending at index 7.
-
 ```
 
 要求匹配仅发生在前一个匹配的末尾，请使用`\G`：
 
 ```java
-
 Enter your regex: dog 
 Enter input string to search: dog dog
 I found the text "dog" starting at index 0 and ending at index 3.
@@ -83,7 +77,6 @@ I found the text "dog" starting at index 4 and ending at index 7.
 Enter your regex: \Gdog 
 Enter input string to search: dog dog
 I found the text "dog" starting at index 0 and ending at index 3.
-
 ```
 
 这里第二个示例只找到一个匹配，因为第二次出现的"dog"不是从前一个匹配的末尾开始的。

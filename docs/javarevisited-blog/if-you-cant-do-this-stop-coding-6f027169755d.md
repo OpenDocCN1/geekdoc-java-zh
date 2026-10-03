@@ -1,8 +1,9 @@
+
 # 如果你不能做到这一点，停止编码
 
 > 原文：<https://medium.com/javarevisited/if-you-cant-do-this-stop-coding-6f027169755d?source=collection_archive---------2----------------------->
 
-## 编写优秀的代码| Java 访问|编程
+## 编写优秀的代码 | Java 访问 | 编程
 
 ## 这不是你想的那样
 

@@ -1,31 +1,32 @@
-# Struts 2 <hidden>隐藏值示例</hidden>
+
+# Struts 2 `<s:hidden>` 隐藏值示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts2/struts-2-shidden-hidden-value-example/>
 
-Download It – [Struts2-Hidden-Example.zip](http://web.archive.org/web/20190304030906/http://www.mkyong.com/wp-content/uploads/2010/06/Struts2-Hidden-Example.zip)
+下载：[Struts2-Hidden-Example.zip](http://web.archive.org/web/20190304030906/http://www.mkyong.com/wp-content/uploads/2010/06/Struts2-Hidden-Example.zip)
 
-在 Struts 2 中，你可以使用 **< s:hidden >** 标签来创建一个 HTML 隐藏字段。
+在 Struts 2 中，你可以使用 `<s:hidden>` 标签来创建一个 HTML 隐藏字段。
 
-```java
- <s:hidden name="url" value="http://www.mkyong.com" /> 
+```
+<s:hidden name="url" value="http://www.mkyong.com" />
 ```
 
 它将呈现为以下 HTML 代码。
 
-```java
- <input type="hidden" name="url" value="http://www.mkyong.com" /> 
+```
+<input type="hidden" name="url" value="http://www.mkyong.com" />
 ```
 
-## Struts 2 <hidden>示例</hidden>
+## Struts 2 `<s:hidden>` 示例
 
-带有 url 隐藏值的页面，并在表单提交后显示隐藏值。
+带有 `url` 隐藏值的页面，并在表单提交后显示隐藏值。
 
- ## 1.行动
+### 1. 动作类
 
-**HiddenAction.java**
+`HiddenAction.java`
 
 ```java
- package com.mkyong.common.action;
+package com.mkyong.common.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -45,17 +46,17 @@ public class HiddenAction extends ActionSupport{
 		return SUCCESS;
 	}
 
-} 
+}
 ```
 
- ## 2.查看页面
+### 2. 视图页面
 
-Struts 2 " **s:hidden** "标记创建一个隐藏的值字段。
+Struts 2 的 `<s:hidden>` 标签用于创建一个隐藏的值字段。
 
-**hidden.jsp**
+`hidden.jsp`
 
 ```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
 </head>
@@ -73,13 +74,13 @@ Struts 2 " **s:hidden** "标记创建一个隐藏的值字段。
 </s:form>
 
 </body>
-</html> 
+</html>
 ```
 
-**welcome.jsp**
+`welcome.jsp`
 
 ```java
- <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 
@@ -92,15 +93,15 @@ Struts 2 " **s:hidden** "标记创建一个隐藏的值字段。
 </h2> 
 
 </body>
-</html> 
+</html>
 ```
 
-## 3.struts.xml
+### 3. `struts.xml`
 
 链接在一起~
 
 ```java
- <?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
@@ -118,24 +119,17 @@ Struts 2 " **s:hidden** "标记创建一个隐藏的值字段。
 	</action>
    </package>
 
-</struts> 
+</struts>
 ```
 
-## 4.演示
+### 4. 演示
 
-*http://localhost:8080/struts 2 example/hidden . action*
+`http://localhost:8080/struts2example/hidden.action`
 
 ![Struts2 hidden value example](img/8ea1ddb5ea307bd9518e27647f23cb6a.png "Struts2-hidden-example")![Struts2 hidden value example](img/352fa32fe4409eca06fe70ca97fcc70f.png "Struts2-hidden-example-1")
 
-## 参考
+### 参考
 
-1.  [Struts 2 隐藏字段文档](http://web.archive.org/web/20190304030906/http://struts.apache.org/2.x/docs/hidden.html)
+1. [Struts 2 隐藏字段文档](http://web.archive.org/web/20190304030906/http://struts.apache.org/2.x/docs/hidden.html)
 
 [hidden value](http://web.archive.org/web/20190304030906/http://www.mkyong.com/tag/hidden-value/) [struts2](http://web.archive.org/web/20190304030906/http://www.mkyong.com/tag/struts2/)
-
-
-
-
-
-
-

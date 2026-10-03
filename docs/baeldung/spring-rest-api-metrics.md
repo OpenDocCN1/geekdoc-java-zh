@@ -1,16 +1,17 @@
+
 # Spring REST API 的指标
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-rest-api-metrics>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将把**基本指标集成到 Spring REST API** 中。
 
 我们将首先使用简单的 Servlet 过滤器构建度量功能，然后使用 Spring Boot 执行器模块。
 
-## 2。`web.xml`
+## 2. `web.xml`
 
-让我们首先在应用程序的`web.xml`中注册一个过滤器——“`MetricFilter`”:
+让我们首先在应用程序的`web.xml`中注册一个过滤器——`MetricFilter`：
 
 ```java
 <filter>
@@ -23,11 +24,11 @@
 </filter-mapping>
 ```
 
-请注意我们是如何映射过滤器以覆盖所有进入的请求–`“/*”`–这当然是完全可配置的。
+请注意我们是如何映射过滤器以覆盖所有进入的请求–`/*`–这当然是完全可配置的。
 
-## 3。Servlet 过滤器
+## 3. Servlet 过滤器
 
-现在，让我们创建自定义过滤器:
+现在，让我们创建自定义过滤器：
 
 ```java
 public class MetricFilter implements Filter {
@@ -59,9 +60,9 @@ public class MetricFilter implements Filter {
 
 还要注意，我们在这里通过调用`doFilter` API 继续执行过滤器链。
 
-## 4。度量-状态代码计数
+## 4. 度量：状态代码计数
 
-接下来，让我们来看看简单的`InMemoryMetricService`:
+接下来，让我们来看看简单的`InMemoryMetricService`：
 
 ```java
 @Service
@@ -90,7 +91,7 @@ public class MetricService {
 
 我们使用内存中的`ConcurrentMap`来保存每种 HTTP 状态代码的计数。
 
-现在，为了显示这个基本指标，我们将把它映射到一个`Controller`方法:
+现在，为了显示这个基本指标，我们将把它映射到一个`Controller`方法：
 
 ```java
 @GetMapping(value = "/status-metric")
@@ -100,7 +101,7 @@ public Map getStatusMetric() {
 }
 ```
 
-下面是一个回答示例:
+下面是一个回答示例：
 
 ```java
 {  
@@ -110,9 +111,9 @@ public Map getStatusMetric() {
 }
 ```
 
-## 5。指标-按请求的状态代码
+## 5. 度量：按请求的状态代码
 
-接下来—**让我们按请求记录计数指标**:
+接下来—**让我们按请求记录计数指标**：
 
 ```java
 @Service
@@ -142,7 +143,7 @@ public class MetricService {
 }
 ```
 
-我们将通过 API 显示指标结果:
+我们将通过 API 显示指标结果：
 
 ```java
 @GetMapping(value = "/metric")
@@ -152,7 +153,7 @@ public Map getMetric() {
 }
 ```
 
-这些指标如下所示:
+这些指标如下所示：
 
 ```java
 {
@@ -168,18 +169,18 @@ public Map getMetric() {
 }
 ```
 
-根据上面的示例，API 具有以下活动:
+根据上面的示例，API 具有以下活动：
 
-*   “7”请求“获取`/users`
-*   其中“6 个”导致“200”状态代码响应，只有一个导致“409”
+- “7”请求“获取`/users`
+- 其中“6 个”导致“200”状态代码响应，只有一个导致“409”
 
-## 6。度量–时间序列数据
+## 6. 度量：时间序列数据
 
-总计数在应用程序中有些用处，但是如果系统已经运行了相当长的时间—**,就很难判断这些指标的实际意义了**。
+总计数在应用程序中有些用处，但是如果系统已经运行了相当长的时间—**就很难判断这些指标的实际意义了**。
 
 为了使数据有意义并易于解释，你需要当时的背景。
 
-现在，让我们构建一个简单的基于时间的指标；我们将记录每分钟的状态代码计数，如下所示:
+现在，让我们构建一个简单的基于时间的指标；我们将记录每分钟的状态代码计数，如下所示：
 
 ```java
 @Service
@@ -208,7 +209,7 @@ public class MetricService {
 }
 ```
 
-而`getGraphData()`:
+而`getGraphData()`：
 
 ```java
 public Object[][] getGraphData() {
@@ -250,7 +251,7 @@ public Object[][] getGraphData() {
 }
 ```
 
-我们现在将它映射到 API:
+我们现在将它映射到 API：
 
 ```java
 @GetMapping(value = "/metric-graph-data")
@@ -260,9 +261,9 @@ public Object[][] getMetricData() {
 }
 ```
 
-最后，我们将使用谷歌图表来呈现它:
+最后，我们将使用谷歌图表来呈现它：
 
-```java
+```html
 <html>
 <head>
 <title>Metric Graph</title>
@@ -292,22 +293,22 @@ $.get("/metric-graph-data",function(mydata) {
 </html>
 ```
 
-## 7。使用 Spring Boot 1.x 致动器
+## 7. 使用 Spring Boot 1.x 致动器
 
 在接下来的几节中，我们将结合 Spring Boot 的执行器功能来展示我们的指标。
 
-首先，我们需要将致动器依赖性添加到我们的`pom.xml`:
+首先，我们需要将致动器依赖性添加到我们的`pom.xml`：
 
-```java
+```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-actuator</artifactId>
 </dependency>
 ```
 
-### 7.1。`MetricFilter`
+### 7.1. `MetricFilter`
 
-接下来——我们可以把`MetricFilter`—变成一个真正的弹簧豆:
+接下来——我们可以把`MetricFilter`—变成一个真正的弹簧豆：
 
 ```java
 @Component
@@ -329,9 +330,9 @@ public class MetricFilter implements Filter {
 
 当然，这是一个微小的简化——但是为了摆脱以前手工连接的依赖关系，这是值得做的。
 
-### 7.2。使用`CounterService`
+### 7.2. 使用`CounterService`
 
-现在让我们使用`CounterService`来统计每个状态代码的出现次数:
+现在让我们使用`CounterService`来统计每个状态代码的出现次数：
 
 ```java
 @Service
@@ -351,9 +352,11 @@ public class MetricService {
 }
 ```
 
-### 7.3。使用`MetricRepository` 导出指标
+### 7.3. 使用`MetricRepository`导出指标
 
-接下来，我们需要使用`MetricRepository`导出指标:
+接下来，我们需要使用`MetricRepository`导出指标：
+
+
 
 ```java
 @Service
@@ -383,13 +386,13 @@ public class MetricService {
 }
 ```
 
-请注意，我们正在存储每分钟的**状态代码的计数。**
+请注意，我们正在存储每分钟的`状态代码的计数`。
 
-### 7.4。Spring Boot `PublicMetrics`
+### 7.4. Spring Boot `PublicMetrics`
 
 我们还可以使用 Spring Boot `PublicMetrics`来导出指标，而不是使用我们自己的过滤器，如下所示:
 
-首先，我们的预定任务是**导出每分钟指标**:
+首先，我们的预定任务是`导出每分钟指标`:
 
 ```java
 @Autowired
@@ -421,7 +424,7 @@ private List<Integer> initializeStatuses(int size) {
 }
 ```
 
-然后，我们将使用**状态代码计数**实际更新指标:
+然后，我们将使用`状态代码计数`实际更新指标:
 
 ```java
 private void updateMetrics(Metric<?> counterMetric, List<Integer> statusCount) {
@@ -446,6 +449,7 @@ private void appendStatusIfNotExist(String status, List<Integer> statusCount) {
 请注意:
 
 *   `PublicMetics`状态计数器名称以`counter.status`开头，例如`counter.status.200.root`
+
 *   我们在列表中记录每分钟的状态计数`statusMetricsByMinute`
 
 **我们可以导出收集到的数据，并将其绘制成图表**，如下所示:
@@ -488,7 +492,7 @@ public Object[][] getGraphData() {
 }
 ```
 
-### 7.5。使用指标绘制图表
+### 7.5. 使用指标绘制图表
 
 最后，让我们通过一个二维数组来表示这些指标，这样我们就可以用图表来表示它们:
 
@@ -544,11 +548,11 @@ public Object[][] getMetricData() {
 ]
 ```
 
-## 8。使用 Spring Boot 2.x 致动器
+## 8. 使用 Spring Boot 2.x 致动器
 
 在 Spring Boot 2 中，Spring Actuator 的 API 见证了一个重大的变化。 **Spring 自己的度量已经被替换为 [`Micrometer`](/web/20220625235338/https://www.baeldung.com/micrometer) 。**因此，让我们用`Micrometer`编写上面相同的指标示例。
 
-### 8.1。将`CounterService`替换为`MeterRegistry`
+### 8.1. 将`CounterService`替换为`MeterRegistry`
 
 由于我们的 Spring Boot 应用已经依赖于启动器，千分尺已经自动配置。我们可以注射`MeterRegistry`而不是`CounterService`。我们可以使用不同类型的`Meter`来获取指标。`Counter`是米中的一种:
 
@@ -568,7 +572,7 @@ public void increaseCount(int status) {
 }
 ```
 
-### 8.2.查看自定义指标
+### 8.2. 查看自定义指标
 
 由于我们的指标现在已经注册到 Micrometer，首先，让我们在应用程序配置中[启用它们。现在我们可以通过导航到`/actuator/metrics`处的致动器端点来查看它们:](/web/20220625235338/https://www.baeldung.com/spring-boot-actuator-enable-endpoints#3-enabling-specific-endpoints)
 
@@ -602,7 +606,7 @@ public void increaseCount(int status) {
 }
 ```
 
-### 8.3。使用`MeterRegistry` 导出计数
+### 8.3. 使用`MeterRegistry` 导出计数
 
 以微米为单位，我们可以使用`MeterRegistry:`导出`Counter`值
 
@@ -624,7 +628,7 @@ private void exportMetrics() {
 }
 ```
 
-### 8.3。发布指标使用`Meters`
+### 8.3. 发布指标使用`Meters`
 
 现在我们也可以使用`MeterRegistry's Meters:`来发布指标
 
@@ -651,11 +655,11 @@ private void updateMetrics(Meter counterMetric, List<Integer> statusCount) {
 }
 ```
 
-## 9。结论
+## 9. 结论
 
 在本文中，我们探索了一些简单的方法来将一些基本的度量功能构建到 Spring web 应用程序中。
 
-注意，计数器**不是线程安全的**——所以如果不使用原子序数之类的东西，它们可能不精确。这是故意的，只是因为 delta 应该很小，100%的准确性不是目标——相反，及早发现趋势才是。
+注意，计数器`不是线程安全的`——所以如果不使用原子序数之类的东西，它们可能不精确。这是故意的，只是因为 delta 应该很小，100%的准确性不是目标——相反，及早发现趋势才是。
 
 当然，在应用程序中记录 HTTP 指标有更成熟的方法，但这是一种简单、轻量级、超级有用的方法，不需要成熟工具的额外复杂性。
 

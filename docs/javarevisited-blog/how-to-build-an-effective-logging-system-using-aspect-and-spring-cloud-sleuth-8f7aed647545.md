@@ -1,3 +1,4 @@
+
 # 如何使用 Aspect 和 Spring Cloud Sleuth 构建有效的日志系统
 
 > 原文：<https://medium.com/javarevisited/how-to-build-an-effective-logging-system-using-aspect-and-spring-cloud-sleuth-8f7aed647545?source=collection_archive---------1----------------------->

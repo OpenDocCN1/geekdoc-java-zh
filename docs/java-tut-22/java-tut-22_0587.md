@@ -1,3 +1,4 @@
+
 # 区域的范围
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/locale/scope.html`](https://docs.oracle.com/javase/tutorial/i18n/locale/scope.html)
@@ -6,15 +7,15 @@ Java 平台不要求您在整个程序中使用相同的`Locale`。如果愿意�
 
 然而，大多数应用程序不是多语言的，它们的区域敏感对象依赖于默认的`Locale`。当 Java 虚拟机启动时由其设置，默认的`Locale`对应于主机平台的区域设置。要确定您的 Java 虚拟机的默认`Locale`，请调用`Locale.getDefault`方法。
 
-* * *
+---
 
 **注意：**
 
-可以独立设置两种用途的默认区域设置：*format*设置用于格式化资源，*display*设置用于菜单和对话框。在 Java SE 7 版本中引入的[`Locale.getDefault(Locale.Category)`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#getDefault-java.util.Locale.Category-)方法接受一个[`Locale.Category`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.Category.html)参数。将`FORMAT`枚举传递给`getDefault(Locale.Category)`方法会返回用于格式化资源的默认区域设置。类似地，传递`DISPLAY`枚举会返回 UI 使用的默认区域设置。相应的[`setDefault(Locale.Category, Locale)`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#setDefault-java.util.Locale.Category-java.util.Locale-)方法允许设置所需类别的区域设置。无参数的`getDefault`方法返回`DISPLAY`的默认值。
+可以独立设置两种用途的默认区域设置：*format*设置用于格式化资源，*display*设置用于菜单和对话框。在 Java SE 7 版本中引入的`Locale.getDefault(Locale.Category)`方法接受一个`Locale.Category`参数。将`FORMAT`枚举传递给`getDefault(Locale.Category)`方法会返回用于格式化资源的默认区域设置。类似地，传递`DISPLAY`枚举会返回 UI 使用的默认区域设置。相应的`setDefault(Locale.Category, Locale)`方法允许设置所需类别的区域设置。无参数的`getDefault`方法返回`DISPLAY`的默认值。
 
 在 Windows 平台上，这些默认值根据 Windows 控制面板中的“标准和格式”和“显示语言”设置进行初始化。
 
-* * *
+---
 
 你不应该通过编程方式设置默认的`Locale`，因为它被所有区域敏感类共享。
 

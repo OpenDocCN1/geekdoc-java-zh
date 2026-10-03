@@ -1,3 +1,4 @@
+
 # 打印多页文档
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/printing/set.html`](https://docs.oracle.com/javase/tutorial/2d/printing/set.html)
@@ -8,7 +9,6 @@
 
 ```java
 BufferedImage[] images = new BufferedImage[10];
-
 ```
 
 然后使用以下代码片段中显示的`print()`方法：
@@ -25,7 +25,6 @@ public int print(Graphics graphics,
         return NO_SUCH_PAGE:
     }
 }
-
 ```
 
 如果文档是连续的，应用程序必须计算每页可以容纳多少内容，并在该点分页。如果文本文档由许多行组成，则应用程序必须计算这些行中有多少可以完全适合一页。[`Point`](https://docs.oracle.com/javase/8/docs/api/java/awt/Point.html)类创建一个表示位置的点(x,y)
@@ -36,14 +35,12 @@ public int print(Graphics graphics,
 Font font = new Font("Serif", Font.PLAIN, 10);
 FontMetrics metrics = graphics.getFontMetrics(font);
 int lineHeight = metrics.getHeight();
-
 ```
 
 `PageFormat`参数描述了页面的可打印区域。特别是，要找到页面的垂直跨度，请使用以下代码片段：
 
 ```java
 double pageHeight = pageFormat.getImageableHeight();
-
 ```
 
 使用以下代码片段计算一页上适合的行数和分页数：
@@ -55,7 +52,6 @@ int[] pageBreaks = new int[numBreaks];
 for (int b=0; b < numBreaks; b++) {
     pageBreaks[b] = (b+1)*linesPerPage; 
 }
-
 ```
 
 使用`print()`方法计算以下原因的可打印区域：
@@ -79,7 +75,6 @@ for (int line=start; line<end; line++) {
     y += lineHeight;
     g.drawString(textLines[line], 0, y);
 }
-
 ```
 
 如果一个文档包含 100 行，每页只能容纳 48 行，则应用程序将打印 3 页，每页在第 48 行和第 96 行之后分页。剩余的 4 行将打印在最后一页上。此示例的完整代码在`PaginationExample.java`中。

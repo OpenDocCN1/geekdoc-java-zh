@@ -1,14 +1,15 @@
+
 # 在 Jackson 中使用树模型节点
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/jackson-json-node-tree-model>
 
-## 1。概述
+## 1. 概述
 
 本教程将重点介绍如何在 Jackson 中使用**树模型节点。**
 
 我们将使用`JsonNode`进行各种转换，以及添加、修改和删除节点。
 
-## 2。创建一个节点
+## 2. 创建一个节点
 
 创建节点的第一步是使用默认构造函数实例化一个`ObjectMapper`对象:
 
@@ -20,7 +21,7 @@ ObjectMapper mapper = new ObjectMapper();
 
 接下来，一旦我们有了`ObjectMapper`，我们有三种不同的方法来创建树节点。
 
-### 2.1。从头开始构建一个节点
+### 2.1. 从头开始构建一个节点
 
 这是无中生有地创建节点的最常见方式:
 
@@ -34,11 +35,11 @@ JsonNode node = mapper.createObjectNode();
 JsonNode node = JsonNodeFactory.instance.objectNode();
 ```
 
-### 2.2。从 JSON 源解析
+### 2.2. 从 JSON 源解析
 
 这种方法在[Jackson–Marshall String to JSON node](/web/20220707143834/https://www.baeldung.com/jackson-json-to-jsonnode)一文中有很好的介绍。更多信息请参考。
 
-### 2.3。从一个对象转换
+### 2.3. 从一个对象转换
 
 通过调用`ObjectMapper`上的`valueToTree(Object fromValue)`方法，可以从 Java 对象转换节点:
 
@@ -87,9 +88,9 @@ public void givenAnObject_whenConvertingIntoNode_thenCorrect() {
 }
 ```
 
-## 3。转换一个节点
+## 3. 转换一个节点
 
-### 3.1。写成 JSON
+### 3.1. 写成 JSON
 
 这是将树节点转换成 JSON 字符串的基本方法，其中目的地可以是`File`、`OutputStream`或`Writer`:
 
@@ -115,7 +116,7 @@ public void givenANode_whenModifyingIt_thenCorrect() throws IOException {
 }
 ```
 
-### 3.2。转换成一个对象
+### 3.2. 转换成一个对象
 
 将`JsonNode`转换成 Java 对象最方便的方法是使用`treeToValue` API:
 
@@ -153,7 +154,7 @@ public void givenANode_whenConvertingIntoAnObject_thenCorrect()
 }
 ```
 
-## 4。操作树节点
+## 4. 操作树节点
 
 我们将使用包含在名为`example.json`的文件中的以下 JSON 元素，作为将要采取的操作的基础结构:
 
@@ -189,7 +190,7 @@ public class ExampleStructure {
 
 请注意，在下面的小节中说明节点上的操作时，将使用树的根。
 
-### 4.1。定位节点
+### 4.1. 定位节点
 
 在处理任何节点之前，我们需要做的第一件事是定位它并将其赋给一个变量。
 
@@ -207,7 +208,7 @@ JsonNode locatedNode = rootNode.path("name").path("last");
 
 我们可以在第 5 节[中看到一个迭代所有节点的例子——迭代节点](#iterating)。
 
-### 4.2。添加新节点
+### 4.2. 添加新节点
 
 可以将一个节点添加为另一个节点的子节点:
 
@@ -251,7 +252,7 @@ public void givenANode_whenAddingIntoATree_thenCorrect() throws IOException {
 }
 ```
 
-### 4.3。编辑节点
+### 4.3. 编辑节点
 
 可以通过调用`set(String fieldName, JsonNode value)`方法来修改`ObjectNode`实例:
 
@@ -277,7 +278,7 @@ public void givenANode_whenModifyingIt_thenCorrect() throws IOException {
 }
 ```
 
-### 4.4。删除一个节点
+### 4.4. 删除一个节点
 
 可以通过调用父节点上的`remove(String fieldName)` API 来删除节点:
 
@@ -305,7 +306,7 @@ public void givenANode_whenRemovingFromATree_thenCorrect() throws IOException {
 }
 ```
 
-## 5。迭代节点
+## 5. 迭代节点
 
 让我们遍历 JSON 文档中的所有节点，并将它们重新格式化为 YAML。
 
@@ -355,7 +356,7 @@ pets:
 
 我们将把根节点传递给一个递归方法。然后，该方法将使用所提供节点的每个子节点调用自身。
 
-### 5.1。测试迭代
+### 5.1. 测试迭代
 
 我们将从创建一个简单的测试开始，该测试检查我们能否成功地将 JSON 转换成 YAML。
 
@@ -378,15 +379,21 @@ public String toYaml(JsonNode root) {
 }
 ```
 
-### 5.2。处理不同的节点类型
+### 5.2. 处理不同的节点类型
 
 我们需要稍微不同地处理不同类型的节点。
 
 我们将在我们的`processNode`方法中这样做:
 
+
+
+以下是一个使用`Jackson`库将`JsonNode`转换为`YAML`的示例。
+
+首先，定义一个`processNode`方法，用于处理不同类型的节点：
+
 ```java
 private void processNode(JsonNode jsonNode, StringBuilder yaml, int depth) {
-    if (jsonNode.isValueNode()) {
+    if (jsonNode.isValueNode()) {
         yaml.append(jsonNode.asText());
     }
     else if (jsonNode.isArray()) {
@@ -400,33 +407,33 @@ private void processNode(JsonNode jsonNode, StringBuilder yaml, int depth) {
 }
 ```
 
-首先，让我们考虑一个值节点。我们简单地调用节点的`asText`方法来获得值的`String`表示。
+首先，让我们考虑一个值节点。我们简单地调用节点的`asText()`方法来获得值的`String`表示。
 
-接下来，让我们看一个数组节点。数组节点中的每一项本身都是一个`JsonNode`，所以我们迭代数组并将每个节点传递给`appendNodeToYaml`方法。我们还需要知道这些节点是数组的一部分。
+接下来，让我们看一个数组节点。数组节点中的每一项本身都是一个`JsonNode`，所以我们迭代数组并将每个节点传递给`appendNodeToYaml()`方法。我们还需要知道这些节点是数组的一部分。
 
-不幸的是，节点本身不包含任何告诉我们这一点的东西，所以我们将传递一个标志到我们的`appendNodeToYaml`方法中。
+不幸的是，节点本身不包含任何告诉我们这一点的信息，所以我们将传递一个标志到`appendNodeToYaml()`方法中。
 
-最后，我们希望迭代每个对象节点的所有子节点。一种选择是使用`JsonNode.elements`。
+最后，我们希望迭代每个对象节点的所有子节点。一种选择是使用`JsonNode.elements()`。
 
-但是，我们不能从元素中确定字段名，因为它只包含字段值:
-
-```java
-Object  {"first": "Tatu", "last": "Saloranta"}
-Value  "Jackson Founder"
-Value  "FasterXML"
-Array  [{"type": "dog", "number": 1},{"type": "fish", "number": 50}]
-```
-
-相反，我们将使用`JsonNode.fields`,因为这使我们能够访问字段名和值:
+但是，我们不能从元素中确定字段名，因为它只包含字段值：
 
 ```java
-Key="name", Value=Object  {"first": "Tatu", "last": "Saloranta"}
-Key="title", Value=Value  "Jackson Founder"
-Key="company", Value=Value  "FasterXML"
-Key="pets", Value=Array  [{"type": "dog", "number": 1},{"type": "fish", "number": 50}]
+Object  {"first": "Tatu", "last": "Saloranta"}
+Value   "Jackson Founder"
+Value   "FasterXML"
+Array   [{"type": "dog", "number": 1},{"type": "fish", "number": 50}]
 ```
 
-对于每个字段，我们将字段名添加到输出中，然后通过将值传递给`processNode`方法，将该值作为子节点进行处理:
+相反，我们将使用`JsonNode.fields()`，因为这使我们能够访问字段名和值：
+
+```java
+Key="name",    Value=Object  {"first": "Tatu", "last": "Saloranta"}
+Key="title",   Value=Value   "Jackson Founder"
+Key="company", Value=Value   "FasterXML"
+Key="pets",    Value=Array   [{"type": "dog", "number": 1},{"type": "fish", "number": 50}]
+```
+
+对于每个字段，我们将字段名添加到输出中，然后通过将值传递给`processNode()`方法，将该值作为子节点进行处理：
 
 ```java
 private void appendNodeToYaml(
@@ -439,21 +446,20 @@ private void appendNodeToYaml(
         processNode(jsonField.getValue(), yaml, depth+1);
         isFirst = false;
     }
-
 }
 ```
 
 从节点上看不出来它有多少祖先。
 
-因此，我们将一个名为 depth 的字段传递到`processNode`方法中进行跟踪，并且我们在每次获得一个子节点时增加这个值，以便我们可以在 YAML 输出中正确地缩进这些字段:
+因此，我们将一个名为`depth`的字段传递到`processNode()`方法中进行跟踪，并且我们在每次获得一个子节点时增加这个值，以便我们可以在`YAML`输出中正确地缩进这些字段：
 
 ```java
 private void addFieldNameToYaml(
   StringBuilder yaml, String fieldName, int depth, boolean isFirstInArray) {
-    if (yaml.length()>0) {
+    if (yaml.length() > 0) {
         yaml.append("\n");
         int requiredDepth = (isFirstInArray) ? depth-1 : depth;
-        for(int i = 0; i < requiredDepth; i++) {
+        for (int i = 0; i < requiredDepth; i++) {
             yaml.append("  ");
         }
         if (isFirstInArray) {
@@ -465,10 +471,11 @@ private void addFieldNameToYaml(
 }
 ```
 
-既然我们已经有了迭代节点并创建 YAML 输出的所有代码，我们可以运行测试来证明它是可行的。
+既然我们已经有了迭代节点并创建`YAML`输出的所有代码，我们可以运行测试来证明它是可行的。
 
-## 6。结论
+## 6. 结论
 
-本文介绍了在 Jackson 中使用树模型时常见的 API 和场景。
+本文介绍了在`Jackson`中使用树模型时常见的`API`和场景。
 
-和往常一样，所有这些例子和代码片段的实现可以在 GitHub 上找到 **[。](https://web.archive.org/web/20220707143834/https://github.com/eugenp/tutorials/tree/master/jackson-modules/jackson)**
+和往常一样，所有这些例子和代码片段的实现可以在 [GitHub](https://web.archive.org/web/20220707143834/https://github.com/eugenp/tutorials/tree/master/jackson-modules/jackson) 上找到。
+

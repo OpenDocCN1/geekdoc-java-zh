@@ -1,8 +1,9 @@
+
 # 不要在你的应用程序中散布第三方依赖
 
 > 原文：<https://medium.com/javarevisited/never-spread-3rd-party-dependencies-across-your-application-604fdd6b4195?source=collection_archive---------2----------------------->
 
-以正确的方式管理您的第三方依赖关系。将第三方依赖的代码与应用程序的其余部分隔离开来。编写可重用的代码。用适当的 JUnit 测试覆盖这个逻辑。
+以正确的方式管理您的第三方依赖关系。将第三方依赖的代码与应用程序的其余部分隔离开来。编写可重用的代码。用适当的 `JUnit` 测试覆盖这个逻辑。
 
 [![](img/7b414e7aee4a63e76f10abb907b60d25.png)](https://javarevisited.blogspot.com/2016/09/top-5-json-library-in-java-JEE.html)
 
@@ -24,4 +25,4 @@
 
 ## 结论
 
-将代码从第三方依赖中分离出来，放入自己的服务层。不要在你的应用程序中散布来自第三方依赖的代码。编写包含 JUnit 和集成测试的可重用代码。它最终会给你带来好处的！
+将代码从第三方依赖中分离出来，放入自己的服务层。不要在你的应用程序中散布来自第三方依赖的代码。编写包含 `JUnit` 和集成测试的可重用代码。它最终会给你带来好处的！

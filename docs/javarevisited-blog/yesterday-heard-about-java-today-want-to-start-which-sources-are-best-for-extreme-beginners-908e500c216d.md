@@ -1,3 +1,4 @@
+
 # 昨天听说了 Java，今天想开始。哪些资料最适合极限初学者？
 
 > 原文：<https://medium.com/javarevisited/yesterday-heard-about-java-today-want-to-start-which-sources-are-best-for-extreme-beginners-908e500c216d?source=collection_archive---------2----------------------->

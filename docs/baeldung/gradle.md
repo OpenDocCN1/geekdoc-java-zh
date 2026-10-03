@@ -1,9 +1,12 @@
+
 # 格拉德勒简介
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/gradle>
 
 [This article is part of a series:](javascript:void(0);)• Introduction to Gradle (current article)[• Ant vs Maven vs Gradle](/web/20220627191442/https://www.baeldung.com/ant-maven-gradle)
+
 [• Writing Custom Gradle Plugins](/web/20220627191442/https://www.baeldung.com/gradle-create-plugin)
+
 [• Creating a Fat Jar in Gradle](/web/20220627191442/https://www.baeldung.com/gradle-fat-jar)
 
 ## 1。概述
@@ -155,7 +158,9 @@ plugins {
 插件 DSL 的局限性是:
 
 *   它不支持`plugins` 块中的 Groovy 代码
+
 *   `plugins` 块需要是项目构建脚本中的顶级语句(在它之前只允许有`buildscripts{}`块)
+
 *   插件 DSL 不能写在脚本插件、`settings.gradle`文件或初始化脚本中
 
 插件 DSL 还在孵化中。DSL 和其他配置可能会在以后的 Gradle 版本中发生变化。
@@ -196,7 +201,7 @@ Gradle 中依赖关系管理的最佳实践是版本控制、动态版本控制�
 
 依赖关系被分组到不同的配置中。**一个配置有一个名字，它们可以互相扩展**。
 
-如果我们应用 Java 插件，我们将有`implementation, testImplementation, runtimeOnly`配置可用于分组我们的依赖项。**`default c`配置延伸`runtimeOnly”.`**
+如果我们应用 Java 插件，我们将有`implementation, testImplementation, runtimeOnly`配置可用于分组我们的依赖项。**`default c`配置延伸`runtimeOnly”。`**
 
 ### 4.2。声明依赖关系
 

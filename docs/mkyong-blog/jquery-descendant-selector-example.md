@@ -1,30 +1,29 @@
-# jQuery–后代选择器示例
+
+# jQuery 后代选择器示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jquery/jquery-descendant-selector-example/>
 
-**jQuery descender selector(X Y)**用于选择与“Y”匹配的所有元素，包括子元素、孙元素、曾孙元素、曾曾孙元素..(任何深度级别)的“X”元素。
+**jQuery 后代选择器（`X Y`）**用于选择与`Y`匹配的所有元素，包括子元素、孙元素、曾孙元素、曾曾孙元素……（任何深度级别）的`X`元素。
 
-举个例子，
+举个例子：
 
-*   **$(' # container div ')**–选择与< div >匹配的所有元素，这些元素是 id 为 container 的元素的后代。
-*   **$(' form input ')**–选择由<输入>匹配的所有元素，这些元素是由<表单>匹配的元素的后代。
+- `$('#container div')` – 选择与`<div>`匹配的所有元素，这些元素是 `id` 为 `container` 的元素的后代。
+- `$('form input')` – 选择由`<input>`匹配的所有元素，这些元素是由`<form>`匹配的元素的后代。
 
 ## jQuery 示例
 
-在本例中，它使用 jQuery 后代选择器向作为
-
-<form>元素后代的所有<input>字段添加一个“红色边框”。</form>
+在本例中，它使用 jQuery 后代选择器向作为`<form>`元素后代的所有`<input>`字段添加一个“红色边框”。
 
 ```java
- <html>
+<html>
 <head>
 <title>jQuery descendant selector example</title>
 
 <script type="text/javascript" src="jquery-1.3.2.min.js"></script>
 
- <style type="text/css">
+<style type="text/css">
   div { padding:8px 0px 8px 8px; }
- </style>
+</style>
 
 </head>
 
@@ -68,9 +67,9 @@ $(document).ready(function(){
 <p> I'm form siblings #4 - P </p>
 
 </body>
-</html> 
+</html>
 ```
 
 [http://web.archive.org/web/20220618072947if_/https://www.mkyong.com/wp-content/uploads/jQuery/jQuery-descendant-selector.html](http://web.archive.org/web/20220618072947if_/https://www.mkyong.com/wp-content/uploads/jQuery/jQuery-descendant-selector.html)
 
-[Try Demo](http://web.archive.org/web/20220618072947/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-descendant-selector.html)<input type="hidden" id="mkyong-current-postId" value="4884">
+[Try Demo](http://web.archive.org/web/20220618072947/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-descendant-selector.html)

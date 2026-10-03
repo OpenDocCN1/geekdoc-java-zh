@@ -1,3 +1,4 @@
+
 # 链接，符号或其他
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/io/links.html`](https://docs.oracle.com/javase/tutorial/essential/io/links.html)
@@ -6,27 +7,20 @@
 
 到目前为止的讨论一直是关于符号或*软*链接，但一些文件系统也支持硬链接。*硬链接*比符号链接更受限制，具体如下：
 
-+   链接的目标必须存在。
-
-+   通常不允许在目录上创建硬链接。
-
-+   硬链接不允许跨分区或卷。因此，它们不能存在于不同文件系统之间。
-
-+   一个硬链接看起来和行为都像一个普通文件，所以它们可能很难找到。
-
-+   从所有方面来看，硬链接与原始文件是相同的实体。它们具有相同的文件权限、时间戳等。所有属性都是相同的。
++ 链接的目标必须存在。
++ 通常不允许在目录上创建硬链接。
++ 硬链接不允许跨分区或卷。因此，它们不能存在于不同文件系统之间。
++ 一个硬链接看起来和行为都像一个普通文件，所以它们可能很难找到。
++ 从所有方面来看，硬链接与原始文件是相同的实体。它们具有相同的文件权限、时间戳等。所有属性都是相同的。
 
 由于这些限制，硬链接不像符号链接那样经常使用，但`Path`方法与硬链接无缝配合。
 
 有几种方法专门处理链接，并在以下部分中介绍：
 
-+   创建符号链接
-
-+   创建硬链接
-
-+   检测符号链接
-
-+   查找链接的目标
++ 创建符号链接
++ 创建硬链接
++ 检测符号链接
++ 查找链接的目标
 
 ## 创建符号链接
 
@@ -43,7 +37,6 @@ try {
     // Some file systems do not support symbolic links.
     System.err.println(x);
 }
-
 ```
 
 `FileAttributes` vararg 使您能够指定在创建链接时原子设置的初始文件属性。但是，这个参数是为将来使用而设计的，目前尚未实现。
@@ -65,7 +58,6 @@ try {
     // file to a directory.
     System.err.println(x);
 }
-
 ```
 
 ## 检测符号链接
@@ -76,7 +68,6 @@ try {
 Path file = ...;
 boolean isSymbolicLink =
     Files.isSymbolicLink(file);
-
 ```
 
 欲了解更多信息，请参阅管理元数据。
@@ -94,7 +85,6 @@ try {
 } catch (IOException x) {
     System.err.println(x);
 }
-
 ```
 
 如果`Path`不是一个符号链接，该方法会抛出`NotLinkException`。

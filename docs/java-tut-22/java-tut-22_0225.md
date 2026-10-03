@@ -1,3 +1,4 @@
+
 # 并发随机数
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/concurrency/threadlocalrandom.html`](https://docs.oracle.com/javase/tutorial/essential/concurrency/threadlocalrandom.html)
@@ -10,5 +11,4 @@
 
 ```java
 int r = ThreadLocalRandom.current() .nextInt(4, 77);
-
 ```

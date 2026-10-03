@@ -1,8 +1,9 @@
+
 # 在 JPA 中使用惰性元素集合
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-jpa-lazy-collections>
 
- ![announcement - icon](img/a1e2b788f68b6fad7e7525b6de9d42ea.png)
+![announcement - icon](img/a1e2b788f68b6fad7e7525b6de9d42ea.png)
 
 JPA can behave very differently depending on the exact circumstances under which it is used. Code that works in our local environment or in staging performs very poorly (or even flat out fails) when thrown against real-scale databases in production environments.
 
@@ -14,17 +15,17 @@ In addition, instrumenting Lightrun Metrics at runtime allows you to track down 
 
 [>> Debugging Spring Persistence and JPA Issues Using Lightrun](/web/20220525125951/https://www.baeldung.com/lightrun-n-jpa)
 
-## 1.概观
+## 1. 概观
 
-JPA 规范提供了两种不同的获取策略:渴望和懒惰。虽然惰性方法有助于避免不必要地加载我们不需要的数据，但有时我们需要读取最初没有加载到封闭的持久化上下文[中的数据](/web/20220525125951/https://www.baeldung.com/jpa-hibernate-persistence-context)。此外，在封闭的持久化上下文中访问惰性元素集合是一个常见的问题。
+JPA 规范提供了两种不同的获取策略：渴望和懒惰。虽然惰性方法有助于避免不必要地加载我们不需要的数据，但有时我们需要读取最初没有加载到封闭的持久化上下文中的数据。此外，在封闭的持久化上下文中访问惰性元素集合是一个常见的问题。
 
-在本教程中，我们将关注如何从惰性元素集合中加载数据。我们将探索三种不同的解决方案:一种涉及 JPA 查询语言，另一种使用实体图，最后一种使用事务传播。
+在本教程中，我们将关注如何从惰性元素集合中加载数据。我们将探索三种不同的解决方案：一种涉及 JPA 查询语言，另一种使用实体图，最后一种使用事务传播。
 
-## 2.元素收集问题
+## 2. 元素收集问题
 
-**默认情况下，JPA 在`@ElementCollection`类型的关联中使用延迟获取策略。**因此，在一个封闭的持久性上下文中对集合的任何访问都会导致一个异常。
+**默认情况下，JPA 在 `@ElementCollection` 类型的关联中使用延迟获取策略。** 因此，在一个封闭的持久性上下文中对集合的任何访问都会导致一个异常。
 
-为了理解这个问题，让我们根据雇员和它的电话列表之间的关系定义一个域模型:
+为了理解这个问题，让我们根据雇员和它的电话列表之间的关系定义一个域模型：
 
 ```java
 @Entity
@@ -49,7 +50,7 @@ public class Phone {
 }
 ```
 
-我们的模型指定一个雇员可以有许多电话。电话列表是一个可嵌入类型 的 **[集合。让我们在这个模型中使用 Spring 存储库:](/web/20220525125951/https://www.baeldung.com/jpa-tagging-advanced)**
+我们的模型指定一个雇员可以有许多电话。电话列表是一个可嵌入类型的集合。让我们在这个模型中使用 Spring 存储库：
 
 ```java
 @Repository
@@ -63,7 +64,7 @@ public class EmployeeRepository {
 } 
 ```
 
-现在，让我们用一个简单的 JUnit 测试用例来重现这个问题:
+现在，让我们用一个简单的 JUnit 测试用例来重现这个问题：
 
 ```java
 public class ElementCollectionIntegrationTest {
@@ -92,11 +93,11 @@ public class ElementCollectionIntegrationTest {
 
 当我们试图访问电话列表时，这个测试**抛出一个异常，因为持久化上下文是关闭的**。
 
-我们可以通过**改变`@ElementCollection`的获取策略来使用急切方法**来解决这个问题。然而，急切地获取数据并不一定是最好的解决方案，因为无论我们是否需要，手机数据总是会被加载。
+我们可以通过**改变 `@ElementCollection` 的获取策略来使用急切方法**来解决这个问题。然而，急切地获取数据并不一定是最好的解决方案，因为无论我们是否需要，手机数据总是会被加载。
 
-## 3.用 JPA 查询语言加载数据
+## 3. 用 JPA 查询语言加载数据
 
-**JPA 查询语言允许我们定制投影信息。**因此，我们可以在我们的`EmployeeRepository`中定义一个新方法来选择员工及其电话:
+**JPA 查询语言允许我们定制投影信息。** 因此，我们可以在我们的 `EmployeeRepository` 中定义一个新方法来选择员工及其电话：
 
 ```java
 public Employee findByJPQL(int id) {
@@ -107,9 +108,9 @@ public Employee findByJPQL(int id) {
 
 上面的查询**使用一个内部连接操作来获取返回的每个雇员的电话列表**。
 
-## 4.用实体图加载数据
+## 4. 用实体图加载数据
 
-另一个可能的解决方案是使用 JPA 的[实体图特性](/web/20220525125951/https://www.baeldung.com/jpa-entity-graph)。**实体图使我们能够选择 JPA 查询将投影哪些字段。**让我们在存储库中再定义一个方法:
+另一个可能的解决方案是使用 JPA 的[实体图特性](/web/20220525125951/https://www.baeldung.com/jpa-entity-graph)。**实体图使我们能够选择 JPA 查询将投影哪些字段。** 让我们在存储库中再定义一个方法：
 
 ```java
 public Employee findByEntityGraph(int id) {
@@ -121,15 +122,15 @@ public Employee findByEntityGraph(int id) {
 } 
 ```
 
-我们可以看到**我们的实体图包括两个属性:姓名和电话**。因此，当 JPA 将其转换为 SQL 时，它会投影相关的列。
+我们可以看到**我们的实体图包括两个属性：姓名和电话**。因此，当 JPA 将其转换为 SQL 时，它会投影相关的列。
 
-## 5.在事务范围内加载数据
+## 5. 在事务范围内加载数据
 
 最后，我们将探索最后一个解决方案。到目前为止，我们已经看到这个问题与持久性上下文生命周期有关。
 
 所发生的是**我们的持久化上下文是[事务范围的](/web/20220525125951/https://www.baeldung.com/jpa-hibernate-persistence-context#transaction_persistence_context)，并且将保持打开直到事务完成**。事务生命周期从存储库方法执行的开始到结束。
 
-因此，让我们创建另一个测试用例，并将我们的持久性上下文配置为绑定到由我们的测试方法启动的事务。我们将保持持久性上下文开放，直到测试结束:
+因此，让我们创建另一个测试用例，并将我们的持久性上下文配置为绑定到由我们的测试方法启动的事务。我们将保持持久性上下文开放，直到测试结束：
 
 ```java
 @Test
@@ -140,9 +141,9 @@ public void whenUseTransaction_thenFetchResult() {
 } 
 ```
 
-**`@Transactional`注释围绕相关测试类的实例配置一个事务代理。**此外，事务与执行它的线程相关联。考虑到默认的事务传播设置，从该方法创建的每个持久性上下文都加入到同一个事务中。因此，事务持久性上下文被绑定到测试方法的事务范围。
+**`@Transactional` 注释围绕相关测试类的实例配置一个事务代理。** 此外，事务与执行它的线程相关联。考虑到默认的事务传播设置，从该方法创建的每个持久性上下文都加入到同一个事务中。因此，事务持久性上下文被绑定到测试方法的事务范围。
 
-## 6.结论
+## 6. 结论
 
 在本教程中，**我们评估了三种不同的解决方案，以解决在封闭的持久性上下文中从惰性关联读取数据的问题**。
 

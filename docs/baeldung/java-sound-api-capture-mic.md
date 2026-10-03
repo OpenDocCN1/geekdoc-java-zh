@@ -1,3 +1,4 @@
+
 # Java 声音 API–捕捉麦克风
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-sound-api-capture-mic>
@@ -12,7 +13,7 @@
 
 **[`TargetDataLine`](https://web.archive.org/web/20220524005437/https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/sound/sampled/TargetDataLine.html)是一种 [`DataLine`](https://web.archive.org/web/20220524005437/https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/sound/sampled/DataLine.html) 对象，我们用它来捕获和读取音频相关的数据，它从麦克风等音频捕获设备中捕获数据。**该接口提供了读取和捕获数据所需的所有方法，它从目标数据行的缓冲区中读取数据。
 
-我们可以调用 AudioSystem 的`getLine`()方法，并为其提供`DataLine.Info`对象，该对象提供音频的所有传输控制方法。 [Oracle 文档](https://web.archive.org/web/20220524005437/https://docs.oracle.com/javase/8/docs/technotes/guides/sound/programmer_guide/chapter2.html)详细解释了 Java Sound API 是如何工作的。
+我们可以调用`AudioSystem`的`getLine()`方法，并为其提供`DataLine.Info`对象，该对象提供音频的所有传输控制方法。 [Oracle 文档](https://web.archive.org/web/20220524005437/https://docs.oracle.com/javase/8/docs/technotes/guides/sound/programmer_guide/chapter2.html)详细解释了 Java Sound API 是如何工作的。
 
 让我们来看一下用 Java 从麦克风捕获音频所需的步骤。
 
@@ -44,7 +45,7 @@ line = (TargetDataLine) AudioSystem.getLine(info);
 
 ### 4.1.建筑`AudioFormat`
 
-`AudioFormat`类定义了什么样的数据可以被`TargetDataLine`实例捕获。所以，第一步是初始化`AudioFormat`类实例，甚至在我们打开一个新的数据行之前。`App class`是应用程序的主类，负责所有的调用。我们在名为`ApplicationProperties`的常量类中定义了`AudioFormat`的属性。我们绕过所有必要的参数来构建`AudioFormat` 实例:
+`AudioFormat`类定义了什么样的数据可以被`TargetDataLine`实例捕获。所以，第一步是初始化`AudioFormat`类实例，甚至在我们打开一个新的数据行之前。`App`类是应用程序的主类，负责所有的调用。我们在名为`ApplicationProperties`的常量类中定义了`AudioFormat`的属性。我们绕过所有必要的参数来构建`AudioFormat`实例:
 
 ```java
 public static AudioFormat buildAudioFormatInstance() {
@@ -63,9 +64,9 @@ public static AudioFormat buildAudioFormatInstance() {
 
 ### 4.2.建筑`TargetDataLine`
 
-我们使用`TargetDataLine`类从麦克风读取音频数据。在我们的例子中，我们获取并运行`TargetDataLine in the SoundRecorder` 类。`getTargetDataLineForRecord()`方法构建了`TargetDataLine instance`。
+我们使用`TargetDataLine`类从麦克风读取音频数据。在我们的例子中，我们获取并运行`TargetDataLine`在`SoundRecorder`类中。`getTargetDataLineForRecord()`方法构建了`TargetDataLine`实例。
 
-我们读取并处理音频输入，并将其转储到`AudioInputStream`对象中。我们创建一个`TargetDataLine` 实例的方法是:
+我们读取并处理音频输入，并将其转储到`AudioInputStream`对象中。我们创建一个`TargetDataLine`实例的方法是:
 
 ```java
 private TargetDataLine getTargetDataLineForRecord() {
@@ -82,7 +83,7 @@ private TargetDataLine getTargetDataLineForRecord() {
 
 ### 4.3.构建和填充`AudioInputStream`
 
-到目前为止，在我们的示例中，我们已经创建了一个`AudioFormat`实例，并将其应用于`TargetDataLine,`，打开数据线以读取音频数据。我们还创建了一个线程来帮助自动运行< em >录音机< /em >实例。我们首先在线程运行时构建一个字节输出流，然后将其转换成一个`AudioInputStream`实例。构建`AudioInputStream` 实例所需的参数是:
+到目前为止，在我们的示例中，我们已经创建了一个`AudioFormat`实例，并将其应用于`TargetDataLine`，打开数据线以读取音频数据。我们还创建了一个线程来帮助自动运行`SoundRecorder`实例。我们首先在线程运行时构建一个字节输出流，然后将其转换成一个`AudioInputStream`实例。构建`AudioInputStream`实例所需的参数是:
 
 ```java
 int frameSizeInBytes = format.getFrameSize();
@@ -90,7 +91,7 @@ int bufferLengthInFrames = line.getBufferSize() / 8;
 final int bufferLengthInBytes = bufferLengthInFrames * frameSizeInBytes;
 ```
 
-请注意，在上面的代码中，我们将 bufferSize 减少了 8。我们这样做是为了使缓冲区和数组具有相同的长度，以便记录器可以在读取数据后立即将数据传送到行中。
+请注意，在上面的代码中，我们将`bufferSize`减少了 8。我们这样做是为了使缓冲区和数组具有相同的长度，以便记录器可以在读取数据后立即将数据传送到行中。
 
 现在我们已经初始化了所有需要的参数，下一步是构建字节输出流。下一步是将生成的输出流(捕获的声音数据)转换成一个`AudioInputStream`实例。
 
@@ -102,7 +103,7 @@ setAudioInputStream(convertToAudioIStream(out, frameSizeInBytes));
 audioInputStream.reset();
 ```
 
-在我们设置`InputStream`之前，我们将构建字节`[OutputStream](/web/20220524005437/https://www.baeldung.com/java-outputstream):`
+在我们设置`InputStream`之前，我们将构建字节`OutputStream`:
 
 ```java
 public void buildByteOutputStream(final ByteArrayOutputStream out, final TargetDataLine line, int frameSizeInBytes, final int bufferLengthInBytes) throws IOException {
@@ -119,7 +120,7 @@ public void buildByteOutputStream(final ByteArrayOutputStream out, final TargetD
 }
 ```
 
-然后我们[将字节`Outstream`转换成一个`AudioInputStream`T3，如下所示:](/web/20220524005437/https://www.baeldung.com/convert-byte-array-to-input-stream)
+然后我们将字节`OutputStream`转换成一个`AudioInputStream`，如下所示:
 
 ```java
 public AudioInputStream convertToAudioIStream(final ByteArrayOutputStream out, int frameSizeInBytes) {
@@ -134,13 +135,13 @@ public AudioInputStream convertToAudioIStream(final ByteArrayOutputStream out, i
 
 ### 4.4.将`AudioInputStream`保存到 Wav 文件
 
-我们已经创建并填充了`AudioInputStream` ，并将其存储为`SoundRecorder`类的成员变量。我们将使用`SoundRecorder`实例 getter 属性在`App`类中检索这个`AudioInputStream`,并将其传递给`WaveDataUtil`类:
+我们已经创建并填充了`AudioInputStream`，并将其存储为`SoundRecorder`类的成员变量。我们将使用`SoundRecorder`实例 getter 属性在`App`类中检索这个`AudioInputStream`，并将其传递给`WaveDataUtil`类:
 
 ```java
 wd.saveToFile("/SoundClip", AudioFileFormat.Type.WAVE, soundRecorder.getAudioInputStream());
 ```
 
-`WaveDataUtil`类有将`AudioInputStream`转换成. wav 文件的代码:
+`WaveDataUtil`类有将`AudioInputStream`转换成`.wav`文件的代码:
 
 ```java
 AudioSystem.write(audioInputStream, fileType, myFile);

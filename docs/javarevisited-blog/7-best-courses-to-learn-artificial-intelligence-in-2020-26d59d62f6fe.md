@@ -1,3 +1,4 @@
+
 # 2023 年学习人工智能的 7 门最佳课程
 
 > 原文：<https://medium.com/javarevisited/7-best-courses-to-learn-artificial-intelligence-in-2020-26d59d62f6fe?source=collection_archive---------0----------------------->
@@ -108,13 +109,15 @@
 
 这个课程是由懒程序员和他的团队创建的，内容都是关于**深度学习**和**神经网络**到**强化学习**的应用。
 
-您还将了解到 **OpenAI Gym** ，这在他的课程中被大量用于练习和演示。它允许世界上任何地方的任何人在标准环境中训练他们的强化学习代理。如果你想深入研究人工智能，那么这是最适合你的课程。
 
-**这里是在线加入本课程的链接**——[高级人工智能:Python 中的深度强化学习](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeep-reinforcement-learning-in-python%2F)
+
+您还将了解到 **OpenAI Gym**，这在他的课程中被大量用于练习和演示。它允许世界上任何地方的任何人在标准环境中训练他们的强化学习代理。如果你想深入研究人工智能，那么这是最适合你的课程。
+
+**这里是在线加入本课程的链接**——[高级人工智能：Python 中的深度强化学习](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeep-reinforcement-learning-in-python%2F)
 
 [![](img/8b05b554aed433a92491a099b4f19147.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeep-reinforcement-learning-in-python%2F)
 
-## 7。人工智能:Python 中的强化学习
+## 7. 人工智能：Python 中的强化学习
 
 如果你不知道，强化学习是 AI 的一大部分，本课程提供了深度强化学习的完整指南。它帮助你在技术层面上理解强化学习。
 
@@ -122,15 +125,15 @@
 
 强化学习最近因在 AI 中做了一些奇妙的事情而出名，比如在 2016 年，我们看到谷歌的 AlphaGo 击败了围棋世界冠军。我们看到人工智能在玩像《毁灭战士》和《超级玛丽》这样的电子游戏。与深度学习非常相似，许多理论是在 70 年代和 80 年代发现的，但直到最近我们才能够直接观察到可能的惊人结果。
 
-**这里是在线加入本课程的链接**——[人工智能:Python 中的强化学习](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fartificial-intelligence-reinforcement-learning-in-python%2F)
+**这里是在线加入本课程的链接**——[人工智能：Python 中的强化学习](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fartificial-intelligence-reinforcement-learning-in-python%2F)
 
 [![](img/f0c98457c28f26bd19eb59f33c154d8a.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fartificial-intelligence-reinforcement-learning-in-python%2F)
 
-谈到社会证明，这门课程已经得到了超过 28000 名学生的信任，平均而言，它得到了近 5000 名参与者的 4.6 分，这是非常了不起的。如果你正在寻找一个纯粹的[人工智能技术课程，](https://javarevisited.blogspot.com/2019/10/top-5-courses-to-learn-artificial-intelligence-AI.html)这是一个加入。
+谈到社会证明，这门课程已经得到了超过 28000 名学生的信任，平均而言，它得到了近 5000 名参与者的 4.6 分，这是非常了不起的。如果你正在寻找一个纯粹的[人工智能技术课程](https://javarevisited.blogspot.com/2019/10/top-5-courses-to-learn-artificial-intelligence-AI.html)，这是一个加入。
 
-以上就是 2023 年用 Python 学习人工智能或 AI 的部分**最佳课程。我试图在每门课程中加入一些人工智能的非技术性课程，比如伟大的吴恩达的《人工智能》,只是为了理解人工智能的商业和一般方面，这远比实际学习如何为特定领域或问题构建人工智能重要得多。
+以上就是 2023 年用 Python 学习人工智能或 AI 的部分**最佳课程**。我试图在每门课程中加入一些人工智能的非技术性课程，比如伟大的吴恩达的《人工智能》，只是为了理解人工智能的商业和一般方面，这远比实际学习如何为特定领域或问题构建人工智能重要得多。
 
-其他**面向程序员的机器学习和 AI 资源****
+**其他面向程序员的机器学习和 AI 资源**
 
 *   [2023 年学习数据科学的 10 本书和课程](/javarevisited/top-10-resources-to-learn-data-science-and-machine-learning-best-of-lot-f153e1f44e89)
 *   [面向数据科学和机器学习的 8 大 Python 库](https://javarevisited.blogspot.com/2018/10/top-8-python-libraries-for-data-science-machine-learning.html)
@@ -150,6 +153,6 @@
 
 感谢您阅读本文。如果你喜欢这些最好的人工智能或 AI 课程，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
 
-**P. S.** —如果你是认真的想进入 AI 和机器学习领域，我也建议你学习 Python，这是机器学习和 AI 最有价值的技能之一。如果你需要资源，看看这个列表中的 [**最好的 Python 课程**](/better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec) ，开始你的旅程。
+**P. S.** — 如果你是认真的想进入 AI 和机器学习领域，我也建议你学习 Python，这是机器学习和 AI 最有价值的技能之一。如果你需要资源，看看这个列表中的 [**最好的 Python 课程**](/better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)，开始你的旅程。
 
-<http://bit.ly/2BY5LJC> 
+<http://bit.ly/2BY5LJC>

@@ -1,12 +1,13 @@
+
 # 注解（Annotations）
 
 注解为程序提供元数据，但是，它不是程序的一部分。它们不会直接影响在注解的代码操作。
 
 注解有如下的使用场景：
 
-*   编译器信息— 编译器用注解检测到错误或抑制警告。
-*   编译时和部署时的处理 — 软件工具可以处理注释的信息来生成代码，XML 文件，等等。
-*   运行时处理 — 有些注解是在运行时进行检查.
+* 编译器信息— 编译器用注解检测到错误或抑制警告。
+* 编译时和部署时的处理 — 软件工具可以处理注释的信息来生成代码，XML 文件，等等。
+* 运行时处理 — 有些注解是在运行时进行检查.
 
 ## 注解的格式
 
@@ -35,7 +36,7 @@ class MyClass() { ... }
 void myMethod() { ... } 
 ```
 
-当只有一个元素名字是 value 时，该名字可以省略，如：
+当只有一个元素名字是`value`时，该名字可以省略，如：
 
 ```java
 @SuppressWarnings("unchecked")
@@ -68,26 +69,26 @@ class MyClass { ... }
 
 Java SE8 开始，注解也可以应用于类型使用（type use），称为类型注解（type annotation）。 这里有些例子：
 
-*   类实例创建表达式
+* 类实例创建表达式
 
 ```java
 new @Interned MyObject() 
 ```
 
-*   类型投射
+* 类型投射
 
 ```java
 myString = (@NonNull String) str; 
 ```
 
-*   实现条款
+* 实现条款
 
 ```java
 class UnmodifiableList<T> implements
         @Readonly List<@Readonly T> { ... } 
 ```
 
-*   抛出异常声明
+* 抛出异常声明
 
 ```java
 void monitorTemperature() throws
@@ -129,7 +130,7 @@ public class Generation3List extends Generation2List {
 } 
 ```
 
-注解的声明，就像在 interface 声明前面添加一个`@`字符(`@`是 AT,即 Annotation Type)。注解类型，其实是接口的一种形式，后面会讲到。就目前而言，你不需要了解。
+注解的声明，就像在`interface`声明前面添加一个`@`字符(`@`是 AT,即 Annotation Type)。注解类型，其实是接口的一种形式，后面会讲到。就目前而言，你不需要了解。
 
 注解的声明的正文，包括注解元素的声明，看起来很像方法。注意，这里可以定义可选的默认值。
 
@@ -172,9 +173,9 @@ import java.lang.annotation.*;
 
 ### Java 语言使用的注解
 
-定义在 java.lang 中的是 `@Deprecated`, `@Override`, 和 `@SuppressWarnings`
+定义在`java.lang`中的是`@Deprecated`, `@Override`, 和`@SuppressWarnings`
 
-`@Deprecated`注解指示，标识的元素是废弃的(deprecated)，不应该再使用。编译器会在任何使用到`@Deprecated`的类，方法，字段的程序时产生警告。当元素是废弃的，它也应该使用 Javadoc 的 `@deprecated` 标识文档化，如下面的例子。两个 Javadoc 注释和注解中的“@”符号的使用不是巧合 - 它们是相关的概念上。另外，请注意 Javadoc 标记开始用小写字母“d”和注解开始以大写字母“D”。
+`@Deprecated`注解指示，标识的元素是废弃的(deprecated)，不应该再使用。编译器会在任何使用到`@Deprecated`的类，方法，字段的程序时产生警告。当元素是废弃的，它也应该使用 Javadoc 的`@deprecated`标识文档化，如下面的例子。两个 Javadoc 注释和注解中的“@”符号的使用不是巧合 - 它们是相关的概念上。另外，请注意 Javadoc 标记开始用小写字母“d”和注解开始以大写字母“D”。
 
 ```java
 // Javadoc comment follows
@@ -223,28 +224,28 @@ void useDeprecatedMethod() {
 
 ### 注解应用于其他注解
 
-注解应用于其他注解称为元注解（ meta-annotations）。java.lang.annotation 中定义了多种元注解。
+注解应用于其他注解称为元注解（ meta-annotations）。`java.lang.annotation`中定义了多种元注解。
 
-`@Retention` 注解指定了标记的注解如何存储：
+`@Retention`注解指定了标记的注解如何存储：
 
-*   RetentionPolicy.SOURCE - 该标记注解只保留在源码级，而由编译器忽略。
-*   RetentionPolicy.CLASS - 该标记注释是由编译器在编译时保留，但由 Java 虚拟机（JVM）忽略。
-*   RetentionPolicy.RUNTIME - 该标记注解由 JVM 保留，因此可以使用在运行时环境。
+* `RetentionPolicy.SOURCE` - 该标记注解只保留在源码级，而由编译器忽略。
+* `RetentionPolicy.CLASS` - 该标记注释是由编译器在编译时保留，但由 Java 虚拟机（JVM）忽略。
+* `RetentionPolicy.RUNTIME` - 该标记注解由 JVM 保留，因此可以使用在运行时环境。
 
 `@Documented`注释表明，只要指定哪些元素应该使用 Javadoc 工具。 （默认情况下，注解不包括在 Javadoc 中。）有关详细信息，请参阅的 [Javadoc 工具页面](https://docs.oracle.com/javase/8/docs/technotes/guides/javadoc/index.html)。
 
-`@Target` 用于标记其他注解，限制什么样的 Java 元素的注解可以应用到。`@Target` 注解指定以下元素类型作为其值之一：
+`@Target`用于标记其他注解，限制什么样的 Java 元素的注解可以应用到。`@Target`注解指定以下元素类型作为其值之一：
 
-*   ElementType.ANNOTATION_TYPE 可以应用于注释类型。
-*   ElementType.CONSTRUCTOR 可以应用于构造体。
-*   ElementType.FIELD 可以应用于一个字段或属性。
-*   ElementType.LOCAL_VARIABLE 可以应用到局部变量。
-*   ElementType.METHOD 可以应用于一方法级注释。
-*   ElementType.PACKAGE 可以应用到一个包声明。
-*   ElementType.PARAMETER 可以应用于方法的参数。
-*   ElementType.TYPE 可以应用于类的任意元素。
+* `ElementType.ANNOTATION_TYPE`可以应用于注释类型。
+* `ElementType.CONSTRUCTOR`可以应用于构造体。
+* `ElementType.FIELD`可以应用于一个字段或属性。
+* `ElementType.LOCAL_VARIABLE`可以应用到局部变量。
+* `ElementType.METHOD`可以应用于一方法级注释。
+* `ElementType.PACKAGE`可以应用到一个包声明。
+* `ElementType.PARAMETER`可以应用于方法的参数。
+* `ElementType.TYPE`可以应用于类的任意元素。
 
-`@Inherited` 指示注释类型可以从超类继承。（默认不是 true）。当用户查询注释类型,类没有这种类型注释，此时从这个类的父类中查询注释类型。这个注释只适用于类的声明。
+`@Inherited`指示注释类型可以从超类继承。（默认不是 true）。当用户查询注释类型,类没有这种类型注释，此时从这个类的父类中查询注释类型。这个注释只适用于类的声明。
 
 `@Repeatable`注解，在 Java SE 8 中引入的，表示该标记的注解可以多次应用到同一声明或类型使用。欲了解更多信息，请参阅重复注解。
 
@@ -254,25 +255,25 @@ Java SE8 之前，注解只能用于声明，从 Java SE8 开始，注解也可�
 
 类型注解为 Java 程序提供了更强的类型检查分析。Java SE 8 版本不提供类型检查的框架，但它可以让你自己写（或下载）类型检查框架，该框架实现了与 Java 编译器一起使用的一个或多个可插拔模块。
 
-例如，要确保在你的程序中一个特定变量从未被分配到 null ,从而避免引发 NullPointerException 异常。您可以编写自定义插件来检查这一点。然后，您可以修改代码以注明这个特定变量，以表明它是永远不会分配给 null。变量声明可能是这样的：
+例如，要确保在你的程序中一个特定变量从未被分配到 null ,从而避免引发`NullPointerException`异常。您可以编写自定义插件来检查这一点。然后，您可以修改代码以注明这个特定变量，以表明它是永远不会分配给 null。变量声明可能是这样的：
 
 ```java
 @NonNull String str; 
 ```
 
-当您编译代码，包括在命令行中的 NonNull 模块，如果它检测到潜在的问题，编译器输出警告，让您可以修改代码以避免错误。在更正代码后，消除所有警告，当程序运行时不会发生此特定错误。
+当您编译代码，包括在命令行中的`NonNull`模块，如果它检测到潜在的问题，编译器输出警告，让您可以修改代码以避免错误。在更正代码后，消除所有警告，当程序运行时不会发生此特定错误。
 
 您可以使用多个类型检查的模块，每个模块检查不同类型的错误。通过这种方式，你可以建立在 Java 类型系统之上，随时随地添加您想要的特定检查。
 
 通过明智地使用类型注解和可插拔的类型检查器，你写的代码，将更强大，更不易出错。
 
-在很多情况下，你不必写自己的类型检查模块。第三方组织已经在做这个工作了。例如，华盛顿大学(the University of Washington)创建的 Checker Framework 。该框架包括一个 NonNull 模块，以及一个正则表达式模块和互斥锁模块。欲了解更多信息，请参见 [Checker Framework](http://types.cs.washington.edu/checker-framework/)。
+在很多情况下，你不必写自己的类型检查模块。第三方组织已经在做这个工作了。例如，华盛顿大学(the University of Washington)创建的 Checker Framework 。该框架包括一个`NonNull`模块，以及一个正则表达式模块和互斥锁模块。欲了解更多信息，请参见 [Checker Framework](http://types.cs.washington.edu/checker-framework/)。
 
 ## 重复注解
 
 若注解包含相同的类型，则被称为重复注解(repeating annotation)，这个是 Java SE 8 之后所支持的。
 
-比如，你正在编写的代码使用计时器服务，使您能够在特定的时间或在某个计划，类似于 UNIX cron 服务运行的方法。现在，你要设置一个计时器，在下午 11:00 运行的方法，doPeriodicCleanup，在每月和每周五的最后一天要设置定时运行，创建一个`@Schedule`注释，并两次将其应用到了 doPeriodicCleanup 方法。在第一次使用指定月的最后一天和第二指定星期五在下午 11 点，使用如下：
+比如，你正在编写的代码使用计时器服务，使您能够在特定的时间或在某个计划，类似于 UNIX cron 服务运行的方法。现在，你要设置一个计时器，在下午 11:00 运行的方法，`doPeriodicCleanup`，在每月和每周五的最后一天要设置定时运行，创建一个`@Schedule`注释，并两次将其应用到了`doPeriodicCleanup`方法。在第一次使用指定月的最后一天和第二指定星期五在下午 11 点，使用如下：
 
 ```java
 @Schedule(dayOfMonth="last")
@@ -292,7 +293,7 @@ public class UnauthorizedAccessException extends SecurityException { ... }
 
 ### 第一步：声明一个重复注解
 
-重复注解用 @Repeatable 元注解标记。下面例子定义一个自定义的 @Schedule 重复注解：
+重复注解用`@Repeatable`元注解标记。下面例子定义一个自定义的`@Schedule`重复注解：
 
 ```java
 import java.lang.annotation.Repeatable;
@@ -305,13 +306,13 @@ public @interface Schedule {
 } 
 ```
 
-`@Repeatable`元注解的值是由 Java 编译器生成存储重复注解的容器注解的类型。在本例中，容器注解的类型是 Schedules，所以重复注解 `@Schedule` 被存储在`@Schedules` 注解中。
+`@Repeatable`元注解的值是由 Java 编译器生成存储重复注解的容器注解的类型。在本例中，容器注解的类型是`Schedules`，所以重复注解`@Schedule`被存储在`@Schedules`注解中。
 
 应用相同注解到声明但没有首先声明它是可重复的，则在编译时会出错。
 
 ### 步骤 2：声明容器注解类型
 
-容器注解类型必须有数组类型的元素 value,而数组类型的组件类型必须是重复注解类型，示例如下：
+容器注解类型必须有数组类型的元素`value`,而数组类型的组件类型必须是重复注解类型，示例如下：
 
 ```java
 public @interface Schedules {
@@ -321,8 +322,10 @@ public @interface Schedules {
 
 ### 检索注解
 
-反射 API 有几种方法可用于检索注解。返回单个注解的方法的行为，如[AnnotatedElement.getAnnotationByType(Class<t class="hljs-class">)</t>](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html#getAnnotationByType-java.lang.Class-)，如果所请求的类型的注解类型只存在一个则仅返回一个注解，则该行为是没有改变的。如果有多个请求类型的注解类型存在，则可以通过先得到他们的容器注解从而获取它们。这种方式下，传统代码继续工作。其他方法是在 Java SE 8 中，通过容器注释扫描到一次返回多个注解，如 [AnnotatedElement.getAnnotations(Class<t class="hljs-class">)</t>](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html#getAnnotations-java.lang.Class-)。见[AnnotatedElement](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html) 类的规范，查看所有的可用方法的信息。
+反射 API 有几种方法可用于检索注解。返回单个注解的方法的行为，如[`AnnotatedElement.getAnnotationByType(Class<T>)`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html#getAnnotationByType-java.lang.Class-)，如果所请求的类型的注解类型只存在一个则仅返回一个注解，则该行为是没有改变的。如果有多个请求类型的注解类型存在，则可以通过先得到他们的容器注解从而获取它们。这种方式下，传统代码继续工作。其他方法是在 Java SE 8 中，通过容器注释扫描到一次返回多个注解，如[`AnnotatedElement.getAnnotations(Class<T>)`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html#getAnnotations-java.lang.Class-)。见[`AnnotatedElement`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AnnotatedElement.html)类的规范，查看所有的可用方法的信息。
 
 ### 设计考虑
 
-当设计一个注解类型，你必须考虑到该类型的注解的基数(cardinality)。现在可以使用一个注释零次，一次，或者，如果注解的类型被标以`@Repeatable`，则不止一次。另外，也可以通过使用`@Target`元注解来限制注解类型在哪里使用。例如，您可以创建一个只能在方法和字段使用可重复的注解类型。精心设计的注解类型是非常重要的，要确保使用注解的程序员感觉越灵活和强大越好。
+
+
+当设计一个注解类型，你必须考虑到该类型的注解的基数（cardinality）。现在可以使用一个注释零次，一次，或者，如果注解的类型被标以`@Repeatable`，则不止一次。另外，也可以通过使用`@Target`元注解来限制注解类型在哪里使用。例如，您可以创建一个只能在方法和字段使用可重复的注解类型。精心设计的注解类型是非常重要的，要确保使用注解的程序员感觉越灵活和强大越好。

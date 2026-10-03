@@ -1,3 +1,4 @@
+
 # 数字
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/data/numbers.html`](https://docs.oracle.com/javase/tutorial/java/data/numbers.html)

@@ -1,20 +1,22 @@
+
 # Wicket CompoundPropertyModel 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/wicket/wicket-compoundpropertymodel-example/>
 
-在 Wicket 中， **CompoundPropertyModel** 类似于 [PropertyModel](http://web.archive.org/web/20190114230013/http://www.mkyong.com/wicket/wicket-propertymodel-example/) ，是将表单组件绑定到对象属性最常用的模型。
+在 Wicket 中，`CompoundPropertyModel` 类似于 `PropertyModel`，是将表单组件绑定到对象属性最常用的模型。
 
-**Note**
-For detail, read this [CompoundPropertyModel article](http://web.archive.org/web/20190114230013/https://cwiki.apache.org/WICKET/working-with-wicket-models.html#WorkingwithWicketmodels-CompoundPropertyModels)
+**注意**
 
-请看下面的例子来展示如何在 Wicket 中使用 CompoundPropertyModel。
+详细信息请阅读这篇 [CompoundPropertyModel 文章](http://web.archive.org/web/20190114230013/https://cwiki.apache.org/WICKET/working-with-wicket-models.html#WorkingwithWicketmodels-CompoundPropertyModels)。
 
-## 1.用户级
+请看下面的例子来展示如何在 Wicket 中使用 `CompoundPropertyModel`。
+
+## 1. 用户类
 
 一个用户类，有两个属性——“姓名”和“年龄”。
 
 ```java
- package com.mkyong.user;
+package com.mkyong.user;
 
 import java.io.Serializable;
 
@@ -25,15 +27,15 @@ public class User implements Serializable{
 
 	//setter and getter methods
 
-} 
+}
 ```
 
- ## 2.CompoundPropertyModel 示例
+## 2. CompoundPropertyModel 示例
 
-使用“ **CompoundPropertyModel** ”将 textbox 组件绑定到“**用户**对象。
+使用 `CompoundPropertyModel` 将 `textbox` 组件绑定到“用户”对象。
 
 ```java
- package com.mkyong.user;
+package com.mkyong.user;
 
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.form.Form;
@@ -74,24 +76,19 @@ public class UserPage extends WebPage {
 		form.add(tAge);
 
 	}
-} 
+}
 ```
 
-在这种情况下，
+在这种情况下：
 
-1.  `new TextField<String>("name")`将绑定到用户对象，**名称属性**
-2.  `new TextField<Integer>("age")`绑定到用户对象，**年龄属性**
+1. `new TextField<String>("name")` 将绑定到用户对象的“名称”属性。
+2. `new TextField<Integer>("age")` 绑定到用户对象的“年龄”属性。
 
-Download It – [Wicket-CompoundPropertyModel-Examples.zip](http://web.archive.org/web/20190114230013/http://www.mkyong.com/wp-content/uploads/2011/05/Wicket-CompoundPropertyModel-Examples.zip) (8KB) ## 参考
+下载：[Wicket-CompoundPropertyModel-Examples.zip](http://web.archive.org/web/20190114230013/http://www.mkyong.com/wp-content/uploads/2011/05/Wicket-CompoundPropertyModel-Examples.zip)（8KB）
 
-1.  [CompoundPropertyModel Javadoc](http://web.archive.org/web/20190114230013/http://wicket.apache.org/apidocs/1.4/org/apache/wicket/model/CompoundPropertyModel.html)
-2.  [使用复合属性模型](http://web.archive.org/web/20190114230013/https://cwiki.apache.org/WICKET/working-with-wicket-models.html#WorkingwithWicketmodels-CompoundPropertyModels)
+## 参考
+
+1. [CompoundPropertyModel Javadoc](http://web.archive.org/web/20190114230013/http://wicket.apache.org/apidocs/1.4/org/apache/wicket/model/CompoundPropertyModel.html)
+2. [使用复合属性模型](http://web.archive.org/web/20190114230013/https://cwiki.apache.org/WICKET/working-with-wicket-models.html#WorkingwithWicketmodels-CompoundPropertyModels)
 
 [wicket](http://web.archive.org/web/20190114230013/http://www.mkyong.com/tag/wicket/)
-
-
-
-
-
-
-

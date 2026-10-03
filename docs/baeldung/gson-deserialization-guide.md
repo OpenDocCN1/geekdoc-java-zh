@@ -1,12 +1,13 @@
+
 # Gson 反序列化指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/gson-deserialization-guide>
 
 在这本食谱中，我们正在探索使用流行的 [Gson 库](https://web.archive.org/web/20221107090238/https://code.google.com/p/google-gson/)将 JSON 解组为 Java 对象的各种方法。
 
-## 1。将 JSON 反序列化为单个基本对象
+## 1. 将 JSON 反序列化为单个基本对象
 
-让我们从简单的开始——我们将**把一个简单的 json 解组到一个 Java 对象—`Foo`**:
+让我们从简单的开始——我们将**把一个简单的 json 解组到一个 Java 对象`Foo`**：
 
 ```java
 public class Foo {
@@ -17,7 +18,7 @@ public class Foo {
 }
 ```
 
-解决方案是:
+解决方案是：
 
 ```java
 @Test
@@ -31,23 +32,23 @@ public void whenDeserializingToSimpleObject_thenCorrect() {
 }
 ```
 
-## 延伸阅读:
+## 延伸阅读：
 
-## [从 Gson 中的序列化中排除字段](/web/20221107090238/https://www.baeldung.com/gson-exclude-fields-serialization)
+### [从 Gson 中的序列化中排除字段](/web/20221107090238/https://www.baeldung.com/gson-exclude-fields-serialization)
 
 Explore the options available to exclude fields from serialization in Gson.[Read more](/web/20221107090238/https://www.baeldung.com/gson-exclude-fields-serialization) →
 
-## [Gson 连载食谱](/web/20221107090238/https://www.baeldung.com/gson-serialization-guide)
+### [Gson 连载食谱](/web/20221107090238/https://www.baeldung.com/gson-serialization-guide)
 
 Learn how to serialize entities using the Gson library.[Read more](/web/20221107090238/https://www.baeldung.com/gson-serialization-guide) →
 
-## [杰克逊 vs Gson](/web/20221107090238/https://www.baeldung.com/jackson-vs-gson)
+### [杰克逊 vs Gson](/web/20221107090238/https://www.baeldung.com/jackson-vs-gson)
 
 Quick and practical guide to serialization with Jackson and Gson.[Read more](/web/20221107090238/https://www.baeldung.com/jackson-vs-gson) →
 
-## 2。将 JSON 反序列化为通用对象
+## 2. 将 JSON 反序列化为通用对象
 
-接下来，让我们使用泛型定义一个对象:
+接下来，让我们使用泛型定义一个对象：
 
 ```java
 public class GenericFoo<T> {
@@ -55,7 +56,7 @@ public class GenericFoo<T> {
 }
 ```
 
-并将一些 json 解组到这种类型的对象中:
+并将一些 json 解组到这种类型的对象中：
 
 ```java
 @Test
@@ -69,9 +70,9 @@ public void whenDeserializingToGenericObject_thenCorrect() {
 }
 ```
 
-## 3。将带有额外未知字段的 JSON 反序列化到对象
+## 3. 将带有额外未知字段的 JSON 反序列化到对象
 
-接下来，让我们反序列化一些复杂的 json，它包含额外的**未知字段**:
+接下来，让我们反序列化一些复杂的 json，它包含额外的**未知字段**：
 
 ```java
 @Test
@@ -85,11 +86,11 @@ public void givenJsonHasExtraValues_whenDeserializing_thenCorrect() {
 }
 ```
 
-如你所见， **Gson 将忽略未知字段**并简单地匹配它能够匹配的字段。
+如你所见，**Gson 将忽略未知字段**并简单地匹配它能够匹配的字段。
 
-## 4。将带有不匹配字段名的 JSON 反序列化到对象
+## 4. 将带有不匹配字段名的 JSON 反序列化到对象
 
-现在，让我们看看 Gson 如何处理包含与我们的`Foo`对象的字段完全不匹配的字段的 json 字符串:
+现在，让我们看看 Gson 如何处理包含与我们的`Foo`对象的字段完全不匹配的字段的 json 字符串：
 
 ```java
 @Test
@@ -105,7 +106,7 @@ public void givenJsonHasNonMatchingFields_whenDeserializingWithCustomDeserialize
 }
 ```
 
-注意，我们注册了一个定制的反序列化器——它能够正确地解析出 json 字符串中的字段，并将它们映射到我们的`Foo`:
+注意，我们注册了一个定制的反序列化器——它能够正确地解析出 json 字符串中的字段，并将它们映射到我们的`Foo`：
 
 ```java
 public class FooDeserializerFromJsonWithDifferentFields implements JsonDeserializer<Foo> {
@@ -122,9 +123,9 @@ public class FooDeserializerFromJsonWithDifferentFields implements JsonDeseriali
 }
 ```
 
-## 5。将 JSON 数组反序列化为 Java 对象数组
+## 5. 将 JSON 数组反序列化为 Java 对象数组
 
-接下来，我们将把 json 数组反序列化为对象的 Java 数组 T2:
+接下来，我们将把 json 数组反序列化为对象的 Java 数组：
 
 ```java
 @Test
@@ -139,9 +140,9 @@ public void givenJsonArrayOfFoos_whenDeserializingToArray_thenCorrect() {
 }
 ```
 
-## 6。将 JSON 数组反序列化为 Java 集合
+## 6. 将 JSON 数组反序列化为 Java 集合
 
-接下来，将 json 数组**直接放入 Java 集合**:
+接下来，将 json 数组**直接放入 Java 集合**：
 
 ```java
 @Test
@@ -155,9 +156,9 @@ public void givenJsonArrayOfFoos_whenDeserializingCollection_thenCorrect() {
 }
 ```
 
-## 7。将 JSON 反序列化为嵌套对象
+## 7. 将 JSON 反序列化为嵌套对象
 
-接下来，让我们定义我们的嵌套对象——**`FooWithInner`**:
+接下来，让我们定义我们的嵌套对象——**`FooWithInner`**：
 
 ```java
 public class FooWithInner {
@@ -171,7 +172,7 @@ public class FooWithInner {
 }
 ```
 
-下面是如何反序列化包含该嵌套对象的输入:
+下面是如何反序列化包含该嵌套对象的输入：
 
 ```java
 @Test
@@ -186,9 +187,9 @@ public void whenDeserializingToNestedObjects_thenCorrect() {
 }
 ```
 
-## 8。使用自定义构造函数反序列化 JSON
+## 8. 使用自定义构造函数反序列化 JSON
 
-最后，让我们看看如何在反序列化期间强制使用特定的构造函数，而不是默认的——无参数构造函数——使用 **`InstanceCreator`** :
+最后，让我们看看如何在反序列化期间强制使用特定的构造函数，而不是默认的——无参数构造函数——使用**`InstanceCreator`**：
 
 ```java
 public class FooInstanceCreator implements InstanceCreator<Foo> {
@@ -200,7 +201,7 @@ public class FooInstanceCreator implements InstanceCreator<Foo> {
 }
 ```
 
-下面是如何在反序列化中使用我们的`FooInstanceCreator`:
+下面是如何在反序列化中使用我们的`FooInstanceCreator`：
 
 ```java
 @Test
@@ -216,7 +217,7 @@ public void whenDeserializingUsingInstanceCreator_thenCorrect() {
 }
 ```
 
-注意，当我们使用下面的构造函数时，`Foo.stringValue`等于`sample`,而不是 null:
+注意，当我们使用下面的构造函数时，`Foo.stringValue`等于`sample`,而不是 null：
 
 ```java
 public Foo(String stringValue) {
@@ -224,7 +225,7 @@ public Foo(String stringValue) {
 }
 ```
 
-## 9。结论
+## 9. 结论
 
 本文展示了如何利用 Gson 库**解析 JSON 输入**——回顾了单个和多个对象的最常见用例。
 

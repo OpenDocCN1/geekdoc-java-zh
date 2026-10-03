@@ -1,3 +1,4 @@
+
 # 里程碑方法
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/applet/appletMethods.html`](https://docs.oracle.com/javase/tutorial/deployment/applet/appletMethods.html)
@@ -20,8 +21,4 @@
 
 许多小程序不需要覆盖`destroy`方法，因为它们的`stop`方法（在`destroy`之前调用）将执行关闭小程序执行所需的所有任务。但是，`destroy`方法适用于需要释放额外资源的小程序。
 
-* * *
-
 **注意：** 尽量保持`destroy`方法的实现尽可能简短，因为不能保证该方法会完全执行。在长`destroy`方法完成之前，Java 虚拟机可能会退出。
-
-* * *

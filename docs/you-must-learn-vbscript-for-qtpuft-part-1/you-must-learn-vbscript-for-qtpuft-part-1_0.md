@@ -1,10 +1,5 @@
+
 # 你为 QTP/UFT 必须学习 VBScript 第一部分
-
-
-
-
-
-***
 
 ## 即将上线！
 
@@ -13,35 +8,37 @@ Jones 先生计划提供免费逐步演示视频，引导人们从 A 到 Z 学�
 ## 订阅接收
 
 1. **30 天内成为 QTP/UFT 高手的 3 个可操作策略**
+
 [`tinyurl.com/3-Tips-For-QTP-UFT`](http://tinyurl.com/3-Tips-For-QTP-UFT)
 
 2. **30 天内成为 Selenium 高手的 3 个可操作策略**
+
 [`tinyurl.com/3-Tips-For-Selenium`](http://tinyurl.com/3-Tips-For-Selenium)
 
-1. **免费视频与网络研讨会通知**
+3. **免费视频与网络研讨会通知**
+
 [`tinyurl.com/Free-QTP-UFT-Selenium`](http://tinyurl.com/Free-QTP-UFT-Selenium)
 
 ## Rex Jones 的联系信息
 
-***
-
 邮箱地址：Rex.Jones@Test4Success.org
+
 LinkedIn：[`www.linkedin.com/in/rexjones34`](https://www.linkedin.com/in/rexjones34)
+
 Twitter: @RexJonesII
+
 Skype: rex.jones34
-
-
-
-
-
-
 
 # 第 7 章 创建和销毁对象
 
 ## 创建对象
+
 ## 属性与方法
+
 ### 多重引用
+
 ### 使用构造函数
+
 ## 销毁对象
 
 # 结论
@@ -64,7 +61,6 @@ Skype: rex.jones34
 
 # 关于作者
 
-
 Rex Allen Jones II 是一位对分享测试知识充满热情的 QA/软件测试员。自 2005 年 2 月以来，他一直在观看网络研讨会、参加座会议并测试应用程序。Jones 先生于 1999 年 6 月毕业于 DeVry 大学，获得计算机信息系统（CIS）学士学位。
 
 目前，Rex 是 Dallas / Fort Worth Mercury 用户组 (DFWMUG) 的顾问和董事会成员，同时是 Dallas / Fort Worth Quality 保证协会 (DFWQAA) 的活跃成员。除了用户组身份外，他还是认证软件测试工程师 (CSTE) 并拥有测试管理方法 (TMap) 认证。
@@ -72,7 +68,6 @@ Rex Allen Jones II 是一位对分享测试知识充满热情的 QA/软件测试
 Jones 先生对功能自动化测试感兴趣的人的建议是学习编程语言。这一建议使他编写了两本书《（第一部分和第二部分）为了 QTP/UFT 你必须学习 VBScript》，这两书针对 `VBScript`，而它是 Unified Functional Testing (UFT，原名为 Quick Test Professional，QTP) 的编程语言。此外，还有两本即将出版的书籍针对 Java（Selenium 的编程语言之一）。
 
 # 关于编辑
-
 
 当 Samantha Mann 没有在通过建设性的编辑标记和注释改进文档内容时，她正在德克萨斯州达拉斯作为一名专业人士享受生活。Samantha 是研究和设计领域的用户体验专家，担任信息技术顾问。在工作之外，她的爱好包括典型的极客式乐趣：自由编辑、阅读、写作以及和她的比特犬一起狂看 Netflix。
 
@@ -82,16 +77,9 @@ Samantha.danae.mann@gmail.com
 
 https://www.linkedin.com/pub/samantha-mann/84/9b7/100
 
-
-
-
-
-
-
 我要感谢我的妻子 Tiffany、孩子们 Olivia Rexe’ 和 Rex III、家人、朋友以及许多提供鼓励的人。写这本书花费了大量时间，你们的支持帮助了这本书得以向前推进。
 
 感谢，
-
 
 Rex Allen Jones II
 
@@ -105,28 +93,25 @@ Visual Basic 是一种完整的编程语言，而 VBScript 是支持脚本的精
 
 VBScript 是为一个可以解释和自动化任务的运行时环境编写的。它使用组件对象模型 (COM) 来访问其运行环境中的元素。软件应用程序、浏览器中的网页、操作系统 (OS) 的外壳以及嵌入式系统都是可以自动化的环境示例。VBScript 可用于以下实例：
 
-*   Windows 管理任务
-*   HTML 页面（作为客户端脚本语言）
-*   服务端脚本语言，在带有 Internet Information Services (IIS)  服务器的原生应用程序提供程序 (ASP) 页面中
-*   嵌入式应用程序
-*   Quick Test Professional (QTP)/Unified Functional Testing (UFT) 用于自动化测试的脚本语言
+* Windows 管理任务
+* HTML 页面（作为客户端脚本语言）
+* 服务端脚本语言，在带有 Internet Information Services (IIS) 服务器的原生应用程序提供程序 (ASP) 页面中
+* 嵌入式应用程序
+* Quick Test Professional (QTP)/Unified Functional Testing (UFT) 用于自动化测试的脚本语言
 
 QTP/UFT 使用 VBScript 作为开发测试脚本的脚本语言。理解 VBScript 将有助于在 QTP/UFT 中创建和维护测试脚本。
 
 本章提供了 QTP/UFT 中 VBScript 构建模块的通用原则，而非详细细节，并将解释以下内容：
 
-*   变量
-*   流程控制
-*   编码标准
+* 变量
+* 流程控制
+* 编码标准
 
 ## 变量
 
 变量是内存中的存储位置（参见第 2 章中的变量和数据类型）。脚本使用变量存储数据以备后后使用。
 
 ## 流程控制
-
-
-
 
 运行脚本时，代码按照特定的层级顺序执行。代码的执行顺序称为流（参见第 5 章流程控制）。简单的脚本从上到下执行，也称为自上而下的程序。脚本引擎从第一条语句开始执行，然后移动到下一条语句，继续向下执行直到到达最后一条语句。在不包含分支或循环的情况下，执行按这种方式进行。
 
@@ -136,9 +121,10 @@ QTP/UFT 使用 VBScript 作为开发测试脚本的脚本语言。理解 VBScrip
 
 ### If 分支
 
-*   `If 语句：当条件为真时执行一组代码
+* `If` 语句：当条件为真时执行一组代码
 
 图 1.1
+
 ![](img/0002.jpg)
 
 ```vb
@@ -149,14 +135,17 @@ If strTest4Success <> Empty Then
     MsgBox strTest4Success
 End If
 ```
+
 输出显示“Test 4 Success has Free Live Training and Free Valuable Videos.”
 
 图 1.2
+
 ![](img/00007.jpg)
 
-*   `If-Then-Else 语句：选择两组代码中的一组执行
+* `If-Then-Else` 语句：选择两组代码中的一组执行
 
 图 1.3
+
 ![](img/00073.jpg)
 
 ```vb
@@ -169,14 +158,17 @@ Else
         MsgBox "Test 4 Success is empty" 
 End If
 ```
+
 输出显示“Test 4 Success is empty.”
 
 图 1.4
+
 ![](img/00022.jpg)
 
-*   `If-Then-ElseIf 语句：选择多组代码中的一组执行
+* `If-Then-ElseIf` 语句：选择多组代码中的一组执行
 
 图 1.5
+
 ![](img/00194.jpg)
 
 ```vb
@@ -193,16 +185,19 @@ Else
     MsgBox "Every master was once a disaster"
 End If
 ```
+
 输出显示“You can master VBScript and QTP / UFT.”
 
 图 1.6
+
 ![](img/00036.jpg)
 
 ### Select Case 分支
 
-*   `Select Case 语句：根据实际值而非真或假来做决策。Select Case 语句为同一个表达式选择多组代码中的一组执行
+* `Select Case` 语句：根据实际值而非真或假来做决策。`Select Case` 语句为同一个表达式选择多组代码中的一组执行
 
 图 1.7
+
 ![](img/00011.jpg)
 
 ```vb
@@ -220,6 +215,7 @@ Select Case strMsg
         MsgBox "Every master was once a disaster"
 End Select
 ```
+
 输出显示“You can master VBScript and QTP / UFT.”
 
 ![](img/00049.jpg)
@@ -228,7 +224,7 @@ End Select
 
 循环反复执行代码行（参见第 5 章中的循环）。当需要重复执行代码块直到条件为真，或者重复执行代码块固定次数时，循环非常有用。大多数程序员使用以下结构：`For Next`和`Do Loop`。
 
-*   `For Next 语句：按指定的次数运行代码
+* `For Next` 语句：按指定的次数运行代码
 
 图 1.9
 
@@ -239,11 +235,12 @@ For i = 1 to 3
     MsgBox "Number " & i
 Next
 ```
+
 输出显示“Number 1”，第二次输出显示“Number 2”，第三次输出显示“Number 3”。
 
 ![](img/00062.jpg)!(images/00141.jpg)!(images/00145.jpg)
 
-*   `For Each-Next 语句：对集合（存储一组数据）或数组（数据的矩阵）中的每个项目运行代码
+* `For Each-Next` 语句：对集合（存储一组数据）或数组（数据的矩阵）中的每个项目运行代码
 
 ![](img/00016.jpg)
 
@@ -256,11 +253,12 @@ For Each i In intAge
     MsgBox "Age: " & i
 Next
 ```
+
 输出显示“Age: 34”，第二次输出显示“Age: 36”，第三次输出显示“Age: 38”。
 
 ![](img/00150.jpg)!(images/00155.jpg)!(images/00176.jpg)
 
-*   `Do Loop 语句：在条件为真时或直到条件为真时循环执行代码
+* `Do Loop` 语句：在条件为真时或直到条件为真时循环执行代码
 
 图 1.13
 
@@ -273,11 +271,13 @@ Do While i < 3
     i = i + 1
 Loop
 ```
-输出显示“Number 1 is less than 3”，第二次输出显示“Number 2 is less than 3。”
+
+输出显示“Number 1 is less than 3”，第二次输出显示“Number 2 is less than 3.”
 
 ![](img/00205.jpg)!(images/00010.jpg)
 
 图 1.15
+
 ![](img/00084.jpg)
 
 ```vb
@@ -288,6 +288,7 @@ Do
     i = i + 1
 Loop Until i > 3
 ```
+
 第一次输出显示“1 is less than or equal to 3”，第二次输出显示“2 is less than or equal to 3”，第三次输出显示“3 is less than or equal to 3”。
 
 ![](img/0170.jpg)!(images/0173.jpg)!(images/0053.jpg)
@@ -299,9 +300,6 @@ Loop Until i > 3
 ## 匈牙利命名法
 
 匈牙利命名法涉及为变量名添加前缀（参见第 2 章变量与数据类型中的匈牙利命名法）。结果在前缀中指示变量范围和类型。这使得程序更容易编写和阅读。例如，`strName` 就是匈牙利命名法。前缀 `str` 定义该变量为字符串。
-
-
-
 
 '(错误的注释) 字符串 "strName" 结合了名和姓
 
@@ -351,25 +349,27 @@ Function NameOfFunctionProcedure ([Argument1], [ArgumentN])
 End Function
 ```
 
-第 1 章概述了变量、流程控制和编码标准的基础原理。第 2 章 将探索变量和匈牙命名法，以及变量数据类型。
+第 1 章概述了变量、流程控制和编码标准的基础原理。第 2 章将探索变量和匈牙命名法，以及变量数据类型。
 
 # 第 2 章变量和数据类型
+
+
 
 变量在 VBScript 中极其重要。变量为脚本存储数据。脚本中的每个输入、输出和处理都使用变量。变量中的数据可以留待以后使用，而某些变量在使用后就会被丢弃。将值放入变量中被称为初始化。值默认或从应用程序放入变量中。数据库也用于存储变量中的值。数据库可以是文本文件、Excel 文件等。
 
 本章将解释以下内容：
 
-*   变量规则
-*   变量类型
-*   变量生命周期/作用域
-*   声明变量
-*   Option Explicit
-*   数据类型
-*   匈牙命名法
+- 变量规则
+- 变量类型
+- 变量生命周期/作用域
+- 声明变量
+- `Option Explicit`
+- 数据类型
+- 匈牙命名法
 
 ## 变量规则
 
-变量可以存储值（`x=3`）或表达式（`x = y + z`）。在给变量赋值时，确保变量名在左侧，值在右侧。变量可以有一个短名称（如“z”），也可以有一个描述性名称（如“strTestPage”）。以下是变量的一些规则：
+变量可以存储值（`x=3`）或表达式（`x = y + z`）。在给变量赋值时，确保变量名在左侧，值在右侧。变量可以有一个短名称（如“z”），也可以有一个描述性名称（如`strTestPage`）。以下是变量的一些规则：
 
 1. 不能超过 255 个字符
 2. 下划线 “_” 是唯一有效的非字母数字字符
@@ -379,24 +379,24 @@ End Function
 
 有类型的变量。以下是每种变量类型的列表：
 
-1.  标量
-2.  数组
-3.  常量
+1. 标量
+2. 数组
+3. 常量
 
 ### 标量
 
 标量变量只包含一个在执行前或执行期间可以更改的值。以下示例包含一个名为“x”的变量，值为“34”。
 
-```
+```vb
 Dim x
 x = 34
 ```
 
 ### 数组
 
-数组变量包含多个值（参见第 6 章中的 数组）。
+数组变量包含多个值（参见第 6 章中的数组）。
 
-```
+```vb
 Dim y(3)
 y(0) = 4
 y(1) = 5
@@ -408,7 +408,7 @@ y(3) = 7
 
 常量变量包含在执行前或执行期间不能更改的值。通常，常量名称使用大写字母。
 
-```
+```vb
 Const NUMBER = 3
 ```
 
@@ -416,7 +416,7 @@ Const NUMBER = 3
 
 字面量是静态（固定的）数据，包含文本、数字或布尔值。`True` 或 `False` 等值就是字面量。以下是字面量的示例：
 
-```
+```vb
 Option Explicit
 Dim datBirthday
 datBirthday = #05/09/12#
@@ -427,7 +427,7 @@ MsgBox "Test For success " & datBirthday
 
 变量的生命周期取决于它的存在性。它可以是局部的或全局的。局部变量在过程内部声明，而全局变量在外部声明。如果变量是局部的，它在过程结束后会被删除。以下是两个拥有同名局部变量的过程示例：
 
-```
+```vb
 Option Explicit
 Call DisplayOldColor
 Call ReturnNewColor
@@ -445,29 +445,25 @@ Function ReturnNewColor()
 End Function
 ```
 
-第一个输出使用局部变量 `strCarColor` 显示“My old car was blue”，而第二个输出使用同名的局部变量显示“My new car is black”。
+第一个输出使用局部变量`strCarColor`显示“My old car was blue”，而第二个输出使用同名的局部变量显示“My new car is black”。
 
 全局变量是在过程外声明的变量。所有过程都可以访问全局变量。因此，它们不能重名。这些变量的生命周期从声明开始，到程序关闭结束。变量的生命周期和作用域是相互关联的。以下是变量作用域的三类型/级别：
 
-*   脚本作用域
-*   过程作用域
-*   类作用域
+- 脚本作用域
+- 过程作用域
+- 类作用域
 
 ### 脚本作用域
 
 脚本作用域（与全局变量相关）是指变量对脚本文件中的所有脚本都可用。这些变量没有在过程或类中声明。以下是具有脚本作用域变量的示例：
 
-```
+```vb
 Option Explicit
 Dim strFirstName
 strFirstName = "Rex"
 Call DisplayFirstName(strFirstName)
 Call Greet(strFirstName)
 ```
-
-
-
-
 
 ```vb
 Sub DisplayFirstName(strFirst)
@@ -479,15 +475,11 @@ Sub Greet(strFirst)
 End Sub
 ```
 
-第一个输出使用全局变量 `strFirstName` 显示“My first name is Rex”，而第二个输出使用全局变量 `strFirstName` 显示“Hello Rex”。两个过程（`DisplayFirstName` 和 `Greet`）都可以访问该全局变量，因为该变量具有脚本级作用域（Script Level Scope，整个文件可用）。
-
-
+第一个输出使用全局变量`strFirstName`显示“My first name is Rex”，而第二个输出使用全局变量`strFirstName`显示“Hello Rex”。两个过程（`DisplayFirstName` 和 `Greet`）都可以访问该全局变量，因为该变量具有脚本级作用域（Script Level Scope，整个文件可用）。
 
 ### 过程级作用域
 
 过程级作用域（Procedure Level Scope 与局部变量相关）是在过程中声明的变量。过程外部的代码无法访问该变量。以下是一个过程级作用域变量的示例：
-
-
 
 ```vb
 Option Explicit
@@ -501,15 +493,11 @@ Sub WroteQTP
 End Sub
 ```
 
-输出通过具有过程级作用域的变量 `strCompany` 显示“Originally, Mercury Interactive wrote QuickTest Professional”。
-
-
+输出通过具有过程级作用域的变量`strCompany`显示“Originally, Mercury Interactive wrote QuickTest Professional”。
 
 ### 类级作用域
 
-类（Class）是一个特殊的结构，包含逻辑分组或属性和方法。在类中使用 `private` 语句声明且位于类内过程之外的变量具有类级作用域。类内部的代码可以访问该变量，但类外部的代码无法访问它。具有类级作用域的变量与具有过程级作用域的变量相似。以下是一个具有类级作用域的变量 `mstrAnimal` 的示例：
-
-
+类（Class）是一个特殊的结构，包含逻辑分组或属性和方法。在类中使用`private`语句声明且位于类内过程之外的变量具有类级作用域。类内部的代码可以访问该变量，但类外部的代码无法访问它。具有类级作用域的变量与具有过程级作用域的变量相似。以下是一个具有类级作用域的变量`mstrAnimal`的示例：
 
 ```vb
 Option Explicit
@@ -537,15 +525,15 @@ End Class
 
 ## 声明变量
 
-我们可以使用 `Dim`、`Public` 或 `Private` 语句来声明变量。无论语句类型类型，所有变量都是可用的。三个语句如下：
+我们可以使用`Dim`、`Public`或`Private`语句来声明变量。无论语句类型类型，所有变量都是可用的。三个语句如下：
 
-1. `Dim` 语句
-2. `Public` 语句
-3. `Private` 语句
+1. `Dim`语句
+2. `Public`语句
+3. `Private`语句
 
 ### Dim 语句
 
-`Dim` 语句允许在分配内存的同时声明一个或多个新变量。该语句用于在脚本级或过程级声明变量。在过程内部不允许使用 `Public` 和 `Private` 语句。如果在类级中使用，`Dim` 语句与 `Public` 语句类似：
+`Dim`语句允许在分配内存的同时声明一个或多个新变量。该语句用于在脚本级或过程级声明变量。在过程内部不允许使用`Public`和`Private`语句。如果在类级中使用，`Dim`语句与`Public`语句类似：
 
 ```vb
 Dim strTestPage
@@ -553,7 +541,7 @@ Dim strTestPage
 
 ### Public 语句
 
-`Public` 语句允许在分配内存的同时声明一个或多个新变量和/数组。该语句用于脚本级或类级，但不用于过程。建议在类中使用 `Public` 语句。以下是 `Public` 语句的语法：
+`Public`语句允许在分配内存的同时声明一个或多个新变量和/数组。该语句用于脚本级或类级，但不用于过程。建议在类中使用`Public`语句。以下是`Public`语句的语法：
 
 ```vb
 Public strTestPage
@@ -561,13 +549,13 @@ Public strTestPage
 
 ### Private 语句
 
-`Private` 语句允许在分配内存的同时声明一个或多个新变量和/数组。该语句用于脚本级或类级，但不用于过程。如果在过程之外声明了 `Private` 语句，则其结果与 `Dim` 语句或 `Public` 语句相同。过程外部的变量整个脚本文件可用（称为全局变量）。这迫使 `Private` 语句运行方式类似于 `Dim` 或 `Public` 语句。以下是 `Private` 语句的语法：
+`Private`语句允许在分配内存的同时声明一个或多个新变量和/数组。该语句用于脚本级或类级，但不用于过程。如果在过程之外声明了`Private`语句，则其结果与`Dim`语句或`Public`语句相同。过程外部的变量整个脚本文件可用（称为全局变量）。这迫使`Private`语句运行方式类似于`Dim`或`Public`语句。以下是`Private`语句的语法：
 
 ```vb
 Private strTestPage
 ```
 
-同一行中允许声明多个变量。然而，脚本和过程中的变量数量存在限制。12
+同一行中允许声明多个变量。然而，脚本和过程中的变量数量存在限制。
 
 ```vb
 Dim strTestPage
@@ -594,33 +582,27 @@ MsgBox strMessage
 
 ## 数据类型
 
-所有变量都有变体数据类型（variant）。`Variant` 是一种特殊的数据类型，根据其使用方式包含不同的信息。信息将以数值或字符串形式存在。数值信息的大小从布尔型到浮点数不等。几类字符串和数值信息被称为子数据类型（Sub-Data Types）。以下是子数据类型：
-
+所有变量都有变体数据类型（variant）。`Variant`是一种特殊的数据类型，根据其使用方式包含不同的信息。信息将以数值或字符串形式存在。数值信息的大小从布尔型到浮点数不等。几类字符串和数值信息被称为子数据类型（Sub-Data Types）。以下是子数据类型：
 
 | 子数据类型 | 说明 |
 | :--- | :--- |
-| Empty | 值为“0”或空值。变量在创建时未初始化，当变量设为空时未对其分配任何值 |
-| Null | 带有无效数据的变量 |
-| Boolean | 包含 True 或 False |
-| Byte | 包含从 0 到 255 的数值 |
-| Integer | 包含从 -32,768 到 32,767 的数值 |
-| Currency | 包含从 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 的货币值 |
-| Long | 包含从 -2,147,483,648 到 2,147,483,647 的数值 |
-| Single | 包含单精度浮点数 |
-| Double | 包含双精度浮点数 |
-| Date (Time) | 包含日期和时间 |
-| String | 包含存储在双引号中的字母数字字符 |
-| Object | 包含一个对象 |
-| Error | 包含错误代码 |
+| `Empty` | 值为“0”或空值。变量在创建时未初始化，当变量设为空时未对其分配任何值 |
+| `Null` | 带有无效数据的变量 |
+| `Boolean` | 包含 `True` 或 `False` |
+| `Byte` | 包含从 0 到 255 的数值 |
+| `Integer` | 包含从 -32,768 到 32,767 的数值 |
+| `Currency` | 包含从 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 的货币值 |
+| `Long` | 包含从 -2,147,483,648 到 2,147,483,647 的数值 |
+| `Single` | 包含单精度浮点数 |
+| `Double` | 包含双精度浮点数 |
+| `Date (Time)` | 包含日期和时间 |
+| `String` | 包含存储在双引号中的字母数字字符 |
+| `Object` | 包含一个对象 |
+| `Error` | 包含错误代码 |
 
 ## 匈牙命名法
 
-
-
-
-
-匈牙命名法（Hungarian Naming Convention）涉及为变量名添加一个前缀。因此，该前缀指示变量的数据类型和作用域。匈牙命名法使程序更容易编写和阅读。如果程序员不确定变量中可能存储什么类型的数据，或者打算在不同时间使用不同类型的数据，最好是使用 `var` 前缀。
-
+匈牙命名法（Hungarian Naming Convention）涉及为变量名添加一个前缀。因此，该前缀指示变量的数据类型和作用域。匈牙命名法使程序更容易编写和阅读。如果程序员不确定变量中可能存储什么类型的数据，或者打算在不同时间使用不同类型的数据，最好是使用`var`前缀。
 
 | 数据类型 | 前缀 | 示例 |
 | :--- | :--- | :--- |
@@ -654,7 +636,7 @@ MsgBox strMessage
 
 可以使用括号覆盖该顺序。放在括号中的操作始终在括号外的操作之前评估。括号内适用标准的优先级规则。以下是示例：
 
-```
+```vb
 y = 3 + 2 * 4 + 5
 y = (3 + 2) * (4 + 5)
 ```
@@ -666,6 +648,7 @@ Dim y
 y = 3 + 2 * 4 + 5
 MsgBox y
 ```
+
 答案是 16。
 
 ![](img/00081.jpg)
@@ -675,6 +658,7 @@ Dim y
 y = (3 + 2) * (4 + 5)
 MsgBox y
 ```
+
 答案是 45。
 
 ![](img/00085.jpg)
@@ -689,7 +673,7 @@ MsgBox y
 
 ## 算术运算符
 
-算术运算符是一个接收操作数并使用它们执行计算的函数。例如，以下表达式 `7 + 4` 使用 `+` 添加两个操作数。以下是优先级顺序：
+算术运算符是一个接收操作数并使用它们执行计算的函数。例如，以下表达式`7 + 4`使用`+`添加两个操作数。以下是优先级顺序：
 
 - `幂`
 - `乘法`
@@ -698,27 +682,27 @@ MsgBox y
 - `取模`
 - `加法`
 - `减法`
-
 - `连接运算符`
 - `比较运算符`
 - `赋值运算符`
 
 ### 幂
 
-幂运算符 `^` 用于将数字提升为幂。以下是幂运算符的示例：
+幂运算符`^`用于将数字提升为幂。以下是幂运算符的示例：
 
 ```vba
 Dim x, y
 y = 7 ^ 2
 MsgBox y
 ```
+
 答案是 49。
 
 ![](img/00090.jpg)
 
 ### 一元取反
 
-一元取反运算符 `-` 表示表达式的负值。以下是一元取反运算符的示例：
+一元取反运算符`-`表示表达式的负值。以下是一元取反运算符的示例：
 
 ```vba
 Dim x
@@ -727,36 +711,40 @@ MsgBox x
 ```
 
 图 3.4
+
 ![](img/00095.jpg)
 
 ### 乘法
 
-乘法运算符 `*` 用于数字相乘。以下是乘法运算符的示例：
+乘法运算符`*`用于数字相乘。以下是乘法运算符的示例：
 
 ```vba
 Dim x
 x = 3 * 4
 MsgBox x
 ```
+
 答案是 12。
 
 ![](img/00099.jpg)
+
 ### 浮点除法
 
-浮点除法运算符 `/` 用于除两个数字并返回浮点数。以下是浮点除法运算符的示例：
+浮点除法运算符`/`用于除两个数字并返回浮点数。以下是浮点除法运算符的示例：
 
 ```vba
 Dim x
 x = 4 / 3
 MsgBox x
 ```
+
 答案是 1.33333333333333
 
 ![](img/00103.jpg)
 
 ### 整数除法
 
-整数除法运算符 `\` 用于除两个数字，丢弃余数并仅返回整数。以下是整数除法运算符的示例：
+整数除法运算符`\`用于除两个数字，丢弃余数并仅返回整数。以下是整数除法运算符的示例：
 
 ```vba
 Dim x
@@ -766,59 +754,70 @@ MsgBox x
 
 ![](img/00106.jpg)
 
-
-
-
-
-取模运算符 (`Mod`) 用于将两个数字相除，并仅返回余数。以下是取模运算符的示例：
+取模运算符（`Mod`）用于将两个数字相除，并仅返回余数。以下是取模运算符的示例：
 
 ### 语法
-```
+
+```vb
 Result = Number1 Mod Number2
 ```
 
 ## Option Explicit
+
 ```vba
 Dim x
 x = 12 Mod 10
 MsgBox x
 ```
+
 答案是 2。
 
 ![](img/00109.jpg)
 
-**注意：** 如果是浮点数，数字将被四舍五入整数。空表达式被视为零 (0)。如果一个或两个表达式为 Null，则结果为 Null。
+**注意：** 如果是浮点数，数字将被四舍五入整数。空表达式被视为零 (0)。如果一个或两个表达式为 `Null`，则结果为 `Null`。
 
 ## 加法
-加法运算符 (`+`) 用于将数字相加并连接字符串。以下是加法运算符的示例：探
+
+加法运算符（`+`）用于将数字相加并连接字符串。以下是加法运算符的示例：
 
 ### 语法
+
 ```vba
 Result = Number1 + Number2
 ```
 
 ## Option Explicit
+
 ```vba
 Dim x
 x = 3 + 4
 MsgBox x
 ```
+
 答案是 7。
 
 图 3.9
+
 ![](img/00113.jpg)
-**注意：** 如果两个表达式都为空，则结果为整数。然而，如果一个表达式为空，则另一个表达式保持不变。如果一个或两个表达式为 Null，则结果为 Null。表达式决定了加法运算符 (`+`）的行为。如果涉及字符串，加法运算符将像连接运算符 (`&`) 一样合并字符串。以下是加法运算符合并字符串的示例：
+
+**注意：** 如果两个表达式都为空，则结果为整数。然而，如果一个表达式为空，则另一个表达式保持不变。如果一个或两个表达式为 `Null`，则结果为 `Null`。表达式决定了加法运算符（`+`）的行为。如果涉及字符串，加法运算符将像连接运算符（`&`）一样合并字符串。以下是加法运算符合并字符串的示例：
 
 ## Option Explicit
+
 ```vba
 Dim strFirstName, strLastName
 strFirstName = "John"
 strLastName = "Doe"
 MsgBox "A common fake name is " + strFirstName + " " + strLastName
 ```
+
 输出显示“A common fake name is John Doe.”
+
 图 3.10
+
 ![](img/00116.jpg)
+
+
 
 以下是一个显示不同类型表达式的成功表：
 
@@ -831,49 +830,61 @@ MsgBox "A common fake name is " + strFirstName + " " + strLastName
 | 其中一个表达式是数值，另一个是字符串 | 错误：类型不匹配 |
 
 ## 减法
-减法运算符 (`-`) 用于计算两个数字之间的差。以下是减法运算符的示例：
+
+减法运算符（`-`）用于计算两个数字之间的差。以下是减法运算符的示例：
+
 ### 语法
+
 ```vba
 Result = Number1 – Number2
 ```
 
-## Option Explicit
+### 强制声明
+
 ```vba
 Dim x
 x = 37 - 3
 MsgBox x
 ```
+
 答案是 34。
 
 图 3.12
+
 ![](img/00119.jpg)
 
-**注意：** 空表达式被视为零 (0)。如果一个或两个表达式为 Null，则结果为 Null。
+**注意：** 空表达式被视为零（0）。如果一个或两个表达式为 `Null`，则结果为 `Null`。
 
 ## 连接
-连接运算符 (`&`) 用于强制连接各个表达式。以下是连接运算符的示例：
+
+连接运算符（`&`）用于强制连接各个表达式。以下是连接运算符的示例：
 
 ### 语法
+
 ```vba
 Result = Expression1 & Expression2
 ```
 
-## Option Explicit
+### 强制声明
+
 ```vba
 Dim strFirstName, strLastName
 strFirstName = "Rex"
 strLastName = "Jones II"
 MsgBox "The author of this eBook is " & strFirstName & " " & strLastName & "."
 ```
+
 答案是“The author of this eBook is Rex Jones II.”
 
 图 3.13
+
 ![](img/00124.jpg)
 
-**注意：** 非字符串表达式将转换为字符串。如果两个表达式均为 Null，则结果也是 Null。然而，如果只有一个表达式为 Null，则该表达式在与其他表达式连接时被视为一个零长度字符串 (" ")。零长度字符串被赋予一个空白值——无值。任何空表达式也会被视为零长度字符串。
+**注意：** 非字符串表达式将转换为字符串。如果两个表达式均为 `Null`，则结果也是 `Null`。然而，如果只有一个表达式为 `Null`，则该表达式在与其他表达式连接时被视为一个零长度字符串（`""`）。零长度字符串被赋予一个空白值——无值。任何空表达式也会被视为零长度字符串。
 
 ## 比较运算符
-比较运算符允许程序员比较两个表达式。比较运算符测试两个表达式是否为真或为假。因此，比较运算符的数据类型是布尔型（Boolean）。以下是一个成功表，作为比较表达式的指南：
+
+比较运算符允许程序员比较两个表达式。比较运算符测试两个表达式是否为真或为假。因此，比较运算符的数据类型是布尔型（`Boolean`）。以下是一个成功表，作为比较表达式的指南：
 
 图 3.14
 
@@ -882,28 +893,32 @@ MsgBox "The author of this eBook is " & strFirstName & " " & strLastName & "."
 | 两个表达式都是数值 | 执行数值比较 |
 | 两个表达式都是字符串 | 执行字符串比较 |
 | 其中一个表达式是数值，另一个是字符串 | 数值表达式小于字符串表达式 |
-| 其中一个表达式为空，另一个是数值 | 执行数值比较，使用零 (0) 作为空表达式 |
-| 其中一个表达式为空，另一个是字符串 | 执行字符串比较，使用零长度字符串 ("") 作为空表达式 |
+| 其中一个表达式为空，另一个是数值 | 执行数值比较，使用零（0）作为空表达式 |
+| 其中一个表达式为空，另一个是字符串 | 执行字符串比较，使用零长度字符串（`""`）作为空表达式 |
 | 两个表达式都为空 | 表达式相等 |
 
 以下按优先级排序的每个比较运算符列表：
+
 * 相等
 * 不等于
 * 小于
 * 大于
 * 小于等于
 * 大于等于
-* 对象等效性 (Is)
+* 对象等效性（`Is`）
 
 ### 等于
-相等运算符 (`=`) 如果 `Expression1` 等于 `Expression2` 则返回 True，否则返回 False。以下是相等运算符的示例：
+
+相等运算符（`=`）如果 `Expression1` 等于 `Expression2` 则返回 `True`，否则返回 `False`。以下是相等运算符的示例：
 
 ### 语法
+
 ```vba
 Expression1 = Expression2
 ```
 
-## Option Explicit
+### 强制声明
+
 ```vba
 Dim x, y
 x = 34
@@ -912,20 +927,25 @@ If x = y Then
     MsgBox x & "equals " & y
 End If
 ```
+
 该表达式是一个真语句，显示 34 等于 34。
 
 图 3.15
+
 ![](img/00128.jpg)
 
 ### 不等于
-不等于运算符 (`<>`) 如果 `Expression1` 不等于 `Expression2` 则返回 True，否则返回 False。以下是不等于运算符的示例：
+
+不等于运算符（`<>`）如果 `Expression1` 不等于 `Expression2` 则返回 `True`，否则返回 `False`。以下是不等于运算符的示例：
 
 ### 语法
+
 ```vba
 Expression1 <> Expression2
 ```
 
-## Option Explicit
+### 强制声明
+
 ```vba
 Dim x, y
 x = 34
@@ -934,20 +954,25 @@ If x <> y Then
     MsgBox x & "does not equal"
 End If
 ```
+
 该表达式是一个真语句，显示 34 不等于 38。
 
 图 3.16
+
 ![](img/00133.jpg)
 
 ### 小于
-小于运算符 (`<`) 如果 `Expression1` 小于 `Expression2` 则返回 True，否则返回 False。以下是小于运算符的示例：
+
+小于运算符（`<`）如果 `Expression1` 小于 `Expression2` 则返回 `True`，否则返回 `False`。以下是小于运算符的示例：
 
 ### 语法
+
 ```vba
 Expression1 < Expression2
 ```
 
-## Option Explicit
+### 强制声明
+
 ```vba
 Dim x, y
 x = 34
@@ -956,20 +981,25 @@ If x < y Then
     MsgBox x & "is less than"
 End If
 ```
+
 该表达式是一个真语句，显示 34 小于 38。
 
 图 3.17
+
 ![](img/00138.jpg)
 
 ### 大于
-大于运算符 (`>`) 如果 `Expression1` 大于 `Expression2` 则返回 True，否则返回 False。以下是大于运算符的示例：
+
+大于运算符（`>`）如果 `Expression1` 大于 `Expression2` 则返回 `True`，否则返回 `False`。以下是大于运算符的示例：
 
 ### 语法
+
 ```vba
 Expression1 > Expression2
 ```
 
-## Option Explicit
+### 强制声明
+
 ```vba
 Dim x, y
 x = 38
@@ -978,20 +1008,25 @@ If x > y Then
     MsgBox x & "is greater than"
 End If
 ```
+
 该表达式是一个真语句，显示 38 大于 34。
 
 图 3.18
+
 ![](img/00143.jpg)
 
 ### 小于等于
-小于等于运算符 (`<=`) 如果 `Expression1` 小于或等于 `Expression2` 则返回 True，否则返回 False。以下是小于等于运算符的示例：
+
+小于等于运算符（`<=`）如果 `Expression1` 小于或等于 `Expression2` 则返回 `True`，否则返回 `False`。以下是小于等于运算符的示例：
 
 ### 语法
+
 ```vba
 Expression1 <= Expression2
 ```
 
-## Option Explicit
+### 强制声明
+
 ```vba
 Dim x, y
 x = 34
@@ -1000,12 +1035,15 @@ If x <= y Then
     MsgBox x & "is less than or equal to"
 End If
 ```
+
 该表达式是一个真语句，显示 34 小于或等于 34。
 
 图 3.19
+
 ![](img/00148.jpg)
 
-## Option Explicit
+### 强制声明
+
 ```vba
 Dim x, y
 x = 34
@@ -1014,20 +1052,25 @@ If x <= y Then
     MsgBox x & "is less than or equal to"
 End If
 ```
+
 该表达式是一个真语句，显示 34 小于或等于 38。
 
 图 3.20
+
 ![](img/00153.jpg)
 
 ### 大于等于
-大于等于运算符 (`>=`) 如果 `Expression1` 大于或等于 `Expression2` 则返回 True，否则返回 False。以下是大于等于运算符的示例：
+
+大于等于运算符（`>=`）如果 `Expression1` 大于或等于 `Expression2` 则返回 `True`，否则返回 `False`。以下是大于等于运算符的示例：
 
 ### 语法
+
 ```vba
 Expression1 >= Expression2
 ```
 
-## Option Explicit
+### 强制声明
+
 ```vba
 Dim x, y
 x = 34
@@ -1036,12 +1079,15 @@ If x >= y Then
     MsgBox x & "is greater than or equal to"
 End If
 ```
+
 该表达式是一个真语句，显示 34 大于或等于 34。
 
 图 3.21
+
 ![](img/00156.jpg)
 
-## Option Explicit
+### 强制声明
+
 ```vba
 Dim x, y
 x = 38
@@ -1050,24 +1096,25 @@ If x >= y Then
     MsgBox x & "is greater than or equal to"
 End If
 ```
+
 输出显示“38 is greater than or equal to 34”
 
 图 3.22
+
 ![](img/00160.jpg)
 
-### 对象等效性 (Is)
+### 对象等效性（`Is`）
 
-
-
-
-对象等效运算符 (Is) 当 `Object1` 和 `Object2` 引用相同的内存位置时，返回 `True`。以下是对象等效运算符 (Is) 的示例：
+对象等效运算符（`Is`）当 `Object1` 和 `Object2` 引用相同的内存位置时，返回 `True`。以下是对象等效运算符（`Is`）的示例：
 
 ### 语法
-```
+
+```vba
 Result = Object1 Is Object2
 ```
 
 ### 强制声明
+
 ```vb
 Dim x, y, z
 Dim intSameNumber
@@ -1082,61 +1129,73 @@ Set y = z
 intSameNumber = x Is y
 MsgBox intSameNumber
 ```
+
 答案是“True.”。
 
 图 3.23
+
 ![](img/00164.jpg)
 
-注意：对象等效运算符 (Is) 不比较值，也不比较一个对象与另一个对象。相反，它检查同一个表达式中的两个对象（`x` 和 `y`）是否引用了同一个对象（`z`），即同一个内存位置。
+**注意：** 对象等效运算符（`Is`）不比较值，也不比较一个对象与另一个对象。相反，它检查同一个表达式中的两个对象（`x` 和 `y`）是否引用了同一个对象（`z`），即同一个内存位置。
 
 ## 逻辑运算符
+
 逻辑运算符用于对表达式执行逻辑操作。通常在控制语句中找到逻辑运算符，以控制程序的流程。每个操作数被视为一个决策，允许程序做出判断。以下是各种逻辑运算符的类型，按优先级排序如下：
 
-* 逻辑非 (Not)
-* 逻辑与 (And)
-* 逻辑或 (Or)
-* 逻辑异或 (Xor)
-* 逻辑等价 (Eqv)
-* 逻辑蕴含 (Imp)
+* 逻辑非（`Not`）
+* 逻辑与（`And`）
+* 逻辑或（`Or`）
+* 逻辑异或（`Xor`）
+* 逻辑等价（`Eqv`）
+* 逻辑蕴含（`Imp`）
 
-### 逻辑非 (Not)
-逻辑非运算符 (Not) 返回表达式的逻辑取反。如果表达式为 `False`，结果为 `True`；如果表达式为 `True`，结果为 `False`。如果表达式为 `Null`，则返回 `Null`。以下是逻辑非运算符的示例：
+### 逻辑非（`Not`）
+
+逻辑非运算符（`Not`）返回表达式的逻辑取反。如果表达式为 `False`，结果为 `True`；如果表达式为 `True`，结果为 `False`。如果表达式为 `Null`，则返回 `Null`。以下是逻辑非运算符的示例：
 
 ### 语法
-```
+
+```vba
 Result = Not Expression
 ```
 
 ### 强制声明
+
 ```vb
 Dim x, y
 x = 10
 y = Not (x < 20)
 MsgBox y
 ```
+
 答案是“False.”。
 
 图 3.24
+
 ![](img/00168.jpg)
 
-以下是逻辑非运算符 (Not) 的真值表：
+以下是逻辑非运算符（`Not`）的真值表：
 
 图 3.25
+
 | 表达式 | 结果 |
 | :--- | :--- |
-| True | False |
-| False | True |
-| Null | Null |
+| `True` | `False` |
+| `False` | `True` |
+| `Null` | `Null` |
 
-### 逻辑与 (And)
-逻辑与运算符 (And) 当两个表达式都为 `True` 时返回 `True`，否则返回 `False`。以下是逻辑与运算符的示例：
+### 逻辑与（`And`）
+
+逻辑与运算符（`And`）当两个表达式都为 `True` 时返回 `True`，否则返回 `False`。以下是逻辑与运算符的示例：
 
 ### 语法
-```
+
+```vba
 Result = Expression1 And Expression2
 ```
 
 ### 强制声明
+
 ```vb
 Dim x, y, z
 x = 10
@@ -1144,30 +1203,36 @@ y = 15
 z = x > 4 And y <= 20
 MsgBox z
 ```
+
 答案是“True.”。
 
 图 3.26
+
 ![](img/00171.jpg)
 
-以下是逻辑与运算符 (And) 的真值表：
+以下是逻辑与运算符（`And`）的真值表：
 
 图 3.27
-| 如果 Expression1 | 如果 Expression2 | Expression1 And Expression2 |
-| :--- | :--- | :--- |
-| True | True | True |
-| True | False | False |
-| False | True | False |
-| False | False | False |
 
-### 逻辑或 (Or)
-逻辑或运算符 (Or) 当一个或两个表达式为 `True` 时返回 `True`，否则返回 `False`。以下是逻辑或运算符的示例：
+| 如果 `Expression1` | 如果 `Expression2` | `Expression1 And Expression2` |
+| :--- | :--- | :--- |
+| `True` | `True` | `True` |
+| `True` | `False` | `False` |
+| `False` | `True` | `False` |
+| `False` | `False` | `False` |
+
+### 逻辑或（`Or`）
+
+逻辑或运算符（`Or`）当一个或两个表达式为 `True` 时返回 `True`，否则返回 `False`。以下是逻辑或运算符的示例：
 
 ### 语法
-```
+
+```vba
 Result = Expression1 Or Expression2
 ```
 
 ### 强制声明
+
 ```vb
 Dim x, y, z
 x = 10
@@ -1175,30 +1240,36 @@ y = 15
 z = x > 4 Or y >= 20
 MsgBox z
 ```
+
 答案是“True.”。
 
 图 3.28
+
 ![](img/00175.jpg)
 
-以下是逻辑或运算符 (Or) 的真值表：
+以下是逻辑或运算符（`Or`）的真值表：
 
 图 3.29
-| 如果 Expression1 | 如果 Expression2 | Expression1 Or Expression2 |
-| :--- | :--- | :--- |
-| True | True | True |
-| True | False | True |
-| False | True | True |
-| False | False | False |
 
-### 逻辑异或 (Xor)
-逻辑异或运算符 (Xor) 当仅有一个有一个表达式为 `True` 时返回 `True`，否则返回 `False`。以下是逻辑异或运算符的示例：
+| 如果 `Expression1` | 如果 `Expression2` | `Expression1 Or Expression2` |
+| :--- | :--- | :--- |
+| `True` | `True` | `True` |
+| `True` | `False` | `True` |
+| `False` | `True` | `True` |
+| `False` | `False` | `False` |
+
+### 逻辑异或（`Xor`）
+
+逻辑异或运算符（`Xor`）当仅有一个表达式为 `True` 时返回 `True`，否则返回 `False`。以下是逻辑异或运算符的示例：
 
 ### 语法
-```
+
+```vba
 Result = Expression1 Xor Expression2
 ```
 
 ### 强制声明
+
 ```vb
 Dim x, y, z
 x = 100
@@ -1206,30 +1277,36 @@ y = 10
 z = x = 200 Xor y > 400
 MsgBox z
 ```
+
 答案是“False.”。
 
 图 3.30
+
 ![](img/00178.jpg)
 
-以下是逻辑异或运算符 (Xor) 的真值表：
+以下是逻辑异或运算符（`Xor`）的真值表：
 
 图 3.31
-| 如果 Expression1 | 如果 Expression2 | Expression1 Xor Expression2 |
-| :--- | :--- | :--- |
-| True | True | False |
-| True | False | True |
-| False | True | True |
-| False | False | False |
 
-### 逻辑等价 (Eqv)
-逻辑等价运算符 (Eqv) 当两个表达式求值为相同的值（`True` 或 `False`）时，返回 `True`。以下是逻辑等价运算符的示例：
+| 如果 `Expression1` | 如果 `Expression2` | `Expression1 Xor Expression2` |
+| :--- | :--- | :--- |
+| `True` | `True` | `False` |
+| `True` | `False` | `True` |
+| `False` | `True` | `True` |
+| `False` | `False` | `False` |
+
+### 逻辑等价（`Eqv`）
+
+逻辑等价运算符（`Eqv`）当两个表达式求值为相同的值（`True` 或 `False`）时，返回 `True`。以下是逻辑等价运算符的示例：
 
 ### 语法
-```
+
+```vba
 Result = Expression1 Eqv Expression2
 ```
 
 ### 强制声明
+
 ```vb
 Dim x, y, z
 x = 100
@@ -1237,30 +1314,36 @@ y = 10
 z = x > 200 Eqv y > 400
 MsgBox z
 ```
+
 答案是“True.”。
 
 图 3.32
+
 ![](img/00183.jpg)
 
-以下是逻辑等价运算符 (Eqv) 的真值表：
+以下是逻辑等价运算符（`Eqv`）的真值表：
 
 图 3.33
-| 如果 Expression1 | 如果 Expression2 | Expression1 Eqv Expression2 |
-| :--- | :--- | :--- |
-| True | True | True |
-| True | False | False |
-| False | True | False |
-| False | False | False |
 
-### 逻辑蕴含 (Imp)
-逻辑蕴含运算符 (Imp) 当 `Expression1` 为 `True` 且 `Expression2` 为 `False` 时返回 `False`。以下是逻辑蕴含运算符的示例：
+| 如果 `Expression1` | 如果 `Expression2` | `Expression1 Eqv Expression2` |
+| :--- | :--- | :--- |
+| `True` | `True` | `True` |
+| `True` | `False` | `False` |
+| `False` | `True` | `False` |
+| `False` | `False` | `False` |
+
+### 逻辑蕴含（`Imp`）
+
+逻辑蕴含运算符（`Imp`）当 `Expression1` 为 `True` 且 `Expression2` 为 `False` 时返回 `False`。以下是逻辑蕴含运算符的示例：
 
 ### 语法
-```
+
+```vba
 Result = Expression1 Imp Expression2
 ```
 
 ### 强制声明
+
 ```vb
 Dim x, y
 x = 45
@@ -1268,24 +1351,28 @@ y = 50
 z = x < 200 Imp y > 40
 MsgBox z
 ```
+
 答案是“True.”。
 
 图 3.34
+
 ![](img/00188.jpg)
 
-以下是逻辑蕴含运算符 (Imp) 的真值表：
+以下是逻辑蕴含运算符（`Imp`）的真值表：
 
 图 3.35
-| 如果 Expression1 | 如果 Expression2 | Expression1 Imp Expression2 |
-| :--- | :--- | :--- |
-| True | True | True |
-| True | False | False |
-| False | True | True |
-| False | False | True |
 
-第三章讨论了六种运算符中的四：算术、连接、比较以及逻辑。第四章](index_split_012.html_filepos110975)将介绍数组，数组存储值与变量相似。
+| 如果 `Expression1` | 如果 `Expression2` | `Expression1 Imp Expression2` |
+| :--- | :--- | :--- |
+| `True` | `True` | `True` |
+| `True` | `False` | `False` |
+| `False` | `True` | `True` |
+| `False` | `False` | `True` |
+
+第三章讨论了六种运算符中的四种：算术、连接、比较以及逻辑。第四章将介绍数组，数组存储值与变量相似。
 
 ## 第四章 数组
+
 数组是存储多个值的矩阵。允许在多个隔间中存储多个信息。隔间将数据划分为特定操作的区域。数组与变量的概念相似，变量只能包含一个值。
 
 * 声明数组和边界
@@ -1293,9 +1380,11 @@ MsgBox z
 * 遍历数组
 
 ## 静态数组类型
+
 静态数组具有固定的索引。无法增加或减少数组的大小。数组在整个生命周期内保持固定大小。因此，程序员必须知道数组中将有多少项。
 
 ### 一维数组
+
 一维数组有一行一列。括号中的数字指定了索引的最大值。索引是表示项目在列表中相对位置的整数下标。以下是一维数组的示例：
 
 ```vb
@@ -1303,10 +1392,8 @@ Dim arrName(2)
 ```
 
 ### 填充一维数组
+
 如果不使用数组函数，新数组将是空的。必须将项目分配给索引才能填充数组。
-
-
-
 
 ```vb
 arrName(0) = "James"
@@ -1316,30 +1403,34 @@ arrName(2) = "Jane"
 
 图 4.2
 
-| NameOfArray(index) | Value | 元素 # |
+| `NameOfArray(index)` | Value | 元素 # |
 | :--- | :--- | :--- |
-| arrName(0) | James | 1 |
-| arrName(1) | Janice | 2 |
-| arrName(2) | Jane | 3 |
+| `arrName(0)` | James | 1 |
+| `arrName(1)` | Janice | 2 |
+| `arrName(2)` | Jane | 3 |
 
-括号中的值填充了特定的索引。此示例将零 (0) 填充为“James”，将一 (1) 填充为“Janice”，将二 (2) 填充为“Jane”。因此，该数组包含从索引 0 开始到索引 2 结束三个元素。0 是下界，2 是上限。数组是基于零的，并且始终具有零的下界。另一方面，VBScript 允许确定上限。上限决定了特定维度可以容纳多少个隔间。数组中的每个隔间被称为元素。一个元素只能容纳一个值。
+括号中的值填充了特定的索引。此示例将零（0）填充为“James”，将一（1）填充为“Janice”，将二（2）填充为“Jane”。因此，该数组包含从索引 0 开始到索引 2 结束三个元素。0 是下界，2 是上限。数组是基于零的，并且始终具有零的下界。另一方面，`VBScript` 允许确定上限。上限决定了特定维度可以容纳多少个隔间。数组中的每个隔间被称为元素。一个元素只能容纳一个值。
 
-### LBound
+### `LBound`
 
 `LBound` 是一个函数，用于返回数组维度的最小下标。以下是 `LBound` 函数的示例：
 
 #### 语法
+
+
+
 ```
 LBound (NameOfArray[, Dimension])
 ```
+
 ----------------------------------
 
 图 4.3
 
 | 参数 |  |
 | :--- | :--- |
-| NameOfArray | 必需。数组变量名 |
-| Dimension | 可选。基础维度定义 1 为列，2 为行。维度可以超过 2 继续下去。默认维度为 1 |
+| `NameOfArray` | 必需。数组变量名 |
+| `Dimension` | 可选。基础维度定义 1 为列，2 为行。维度可以超过 2 继续下去。默认维度为 1 |
 
 图 4.4
 
@@ -1370,17 +1461,19 @@ MsgBox LBound(arrName)
 `UBound` 是一个函数，用于返回数组维度的最大下标。以下是 `UBound` 函数的示例：
 
 #### 语法
+
 ```
 UBound(NameOfArray[, Dimension])
 ```
+
 ----------------------------------
 
 图 4.6
 
 | 参数 | 说明 |
 | :--- | :--- |
-| NameOfArray | 必需。数组变量名 |
-| Dimension | 可选。基础维度定义 1 为列，2 为行。维度可以超过 2 继续下去。默认维度为 1 |
+| `NameOfArray` | 必需。数组变量名 |
+| `Dimension` | 可选。基础维度定义 1 为列，2 为行。维度可以超过 2 继续下去。默认维度为 1 |
 
 图 4.7
 
@@ -1447,17 +1540,19 @@ arrName(1,2) = "Doe"
 `LBound` 是一个函数，用于返回数组维度的最小下标。以下是使用二维数组的 `LBound` 函数的示例：
 
 #### 语法
+
 ```
 LBound(NameOfArray[, Dimension])
 ```
+
 ----------------------------------
 
 图 4.11
 
 | 参数 | 说明 |
 | :--- | :--- |
-| NameOfArray | 必需。数组变量名 |
-| Dimension | 可选。基础维度定义 1 为列，2 为行。维度可以超过 2 继续下去。默认维度为 1 |
+| `NameOfArray` | 必需。数组变量名 |
+| `Dimension` | 可选。基础维度定义 1 为列，2 为行。维度可以超过 2 继续下去。默认维度为 1 |
 
 图 4.12
 
@@ -1491,17 +1586,19 @@ MsgBox LBound(arrName)
 `UBound` 是一个函数，用于返回数组维度的最大下标。以下是 `UBound` 函数的示例：
 
 #### 语法
+
 ```
 UBound(NameOfArray[, Dimension])
 ```
+
 ----------------------------------
 
 图 4.14
 
 | 参数 | 说明 |
 | :--- | :--- |
-| NameOfArray | 必需。数组变量名 |
-| Dimension | 可选。基础维度定义 1 为列，2 为行。维度可以超过 2 继续下去。默认维度为 1 |
+| `NameOfArray` | 必需。数组变量名 |
+| `Dimension` | 可选。基础维度定义 1 为列，2 为行。维度可以超过 2 继续下去。默认维度为 1 |
 
 图 4.15
 
@@ -1535,16 +1632,18 @@ MsgBox UBound(arrName)
 `Array` 函数返回一个包含数组的变体。以下是 `Array` 函数的示例：
 
 #### 语法
+
 ```
 Array (Arglist)
 ```
+
 ----------------------------------
 
 图 4.17
 
 | 参数 | 说明 |
 | :--- | :--- |
-| Arglist | 必需。用逗号分隔的值列表 |
+| `Arglist` | 必需。用逗号分隔的值列表 |
 
 图 4.18
 
@@ -1566,19 +1665,21 @@ MsgBox arrAge(4)
 `Filter` 函数返回一个基于零的数组，它是字符串数组的子集。以下是 `Filter` 函数的示例：
 
 #### 语法
+
 ```
 Filter (Inputstrings, Value[,Include, [,Compare]])
 ```
+
 ----------------------------------
 
 图 4.19
 
 | 参数 | 说明 |
 | :--- | :--- |
-| Inputstrings | 必需。字符串数组 |
-| Value | 可选。搜索字符串 |
-| Include | 可选。布尔值，指示返回包含或排除该值的子集。True 返回包含该值的数组子集。False 返回不包含该值的数组子集。默认值为 True |
-| Compare | 可选。指定用于比较的值之一 0 = vbBinaryCompare：执行二进制比较 1 = vbTextCompare：执行文本比较 |
+| `Inputstrings` | 必需。字符串数组 |
+| `Value` | 可选。搜索字符串 |
+| `Include` | 可选。布尔值，指示返回包含或排除该值的子集。`True` 返回包含该值的数组子集。`False` 返回不包含该值的数组子集。默认值为 `True` |
+| `Compare` | 可选。指定用于比较的值之一 0 = `vbBinaryCompare`：执行二进制比较 1 = `vbTextCompare`：执行文本比较 |
 
 图 4.20
 
@@ -1619,10 +1720,6 @@ Dim arrName()
 
 图 4.22
 
-
-
-
-
 ![](img/00159.jpg)
 
 ### 显式声明
@@ -1633,6 +1730,7 @@ Dim arrAge
 arrAge = Array(7, 14, 21, 28, 34)
 MsgBox arrAge(4)
 ```
+
 输出返回“34。”
 
 图 4.25
@@ -1650,6 +1748,7 @@ arrAge = Array(7, 14, 21, 28, 34)
 ReDim arrAge (8)
 MsgBox arrAge (4)
 ```
+
 输出返回一个空值。
 
 图 4.27
@@ -1668,6 +1767,7 @@ Dim arrAge
 arrAge = Array(7, 14, 21, 28, 34)
 MsgBox arrAge(4)
 ```
+
 输出返回“34。”
 
 图 4.29
@@ -1685,6 +1785,7 @@ arrAge = Array(7, 14, 21, 28, 34)
 ReDim Preserve arrAge(8)
 MsgBox arrAge(4)
 ```
+
 输出仍然返回“34。”
 
 图 4.31
@@ -1713,10 +1814,10 @@ Split (Expression[, Delimiter[, Count[, Compare]]])
 
 | 参数 | 说明 |
 | :--- | :--- |
-| Expression | 表达式是一个包含子字符串和分隔符的字符串，在 `Split` 函数中必须的 |
-| Delimiter | 分隔符是用于识别子字符串边界的字符，在 `Split` 函数中可选。默认值为空格 |
-| Count | 计数是 `Split` 函数中返回的子字符串数量，可选的。-1 表示返回所有子字符串 |
-| Compare | Compare 是可选的，指定用于比较的以下值之一：0 = vbBinaryCompare：执行二进制比较 1 = vbTextCompare：执行文本比较 |
+| `Expression` | 表达式是一个包含子字符串和分隔符的字符串，在 `Split` 函数中必须的 |
+| `Delimiter` | 分隔符是用于识别子字符串边界的字符，在 `Split` 函数中可选。默认值为空格 |
+| `Count` | 计数是 `Split` 函数中返回的子字符串数量，可选的。-1 表示返回所有子字符串 |
+| `Compare` | `Compare` 是可选的，指定用于比较的以下值之一：0 = `vbBinaryCompare`：执行二进制比较 1 = `vbTextCompare`：执行文本比较 |
 
 图 4.33
 
@@ -1728,6 +1829,7 @@ Dim arrColors
 arrColors = Split("Black, White, Red", ",")
 MsgBox arrColors(0)
 ```
+
 由于索引为 0，输出返回“Black,”。索引 1 是“White”，索引 2 是“Red。”
 
 图 4.34
@@ -1748,8 +1850,8 @@ Join (List[, Delimiter])
 
 | 参数 | 说明 |
 | :--- | :--- |
-| List | 列表是一个包含要合并子字符串的一维数组，是必须的 |
-| Delimiter | 分隔符是用于在 `Join` 函数返回的字符串中分隔子字符串的字符，是的。默认为空格 |
+| `List` | 列表是一个包含要合并子字符串的一维数组，是必须的 |
+| `Delimiter` | 分隔符是用于在 `Join` 函数返回的字符串中分隔子字符串的字符，是的。默认为空格 |
 
 图 4.36
 
@@ -1765,6 +1867,7 @@ arrColors(2) = "Red"
 strColors = Join(arrColors)
 MsgBox strColors
 ```
+
 在合并 `arrColors` 索引中的子字符串后，输出返回“Black White Red”，并将结果分配给 `strColors`。
 
 图 4.37
@@ -1792,6 +1895,7 @@ arrName(0,2) = "Jane"
 arrName(1,2) = "Doe"
 MsgBox arrName(0,0)
 ```
+
 输出返回“James。”
 
 图 4.39
@@ -1821,6 +1925,7 @@ arrName(0,3) = "Rex"
 arrName(1,3) = "Allen"
 MsgBox arrName(0,3)
 ```
+
 输出返回“Rex。”数组类型变为动态，添加了 `Preserve`。
 
 图 4.42
@@ -1851,6 +1956,7 @@ MsgBox arrName(0)
 MsgBox arrName(1)
 MsgBox arrName(2)
 ```
+
 第一个输出返回“James”，第二个输出返回“Janice”，第三个输出返回“Jane”。
 
 图 4.45
@@ -1874,6 +1980,7 @@ For i = 0 to 2
     MsgBox arrName(i)
 Next
 ```
+
 第一个输出返回“James”，第二个输出返回“Janice”，第三个输出返回“Jane”。
 
 图 4.47
@@ -1888,6 +1995,8 @@ Next
 
 ![](img/00021.jpg)
 
+
+
 ```vbba
 Option Explicit
 Dim i
@@ -1900,12 +2009,9 @@ For i = LBound(arrName) to UBound(arrName)
 Next
 ```
 
-
-
-
 ![](img/00169.jpg)[](images/00115.jpg)[](images/00118.jpg)
 
-遍历数组的另一种方法是“For Each…Next 语句”。For Each…Next 语句是一种循环，它会为数组中的每个项目重复执行一组语句，而无需使用 `LBound` 和 `UBound` 函数。For Each…Next 语句将在第 5 章中进行解释。以下是 For Each…Next 循环的示例：
+遍历数组的另一种方法是“For Each…Next 语句”。`For Each…Next` 语句是一种循环，它会为数组中的每个项目重复执行一组语句，而无需使用 `LBound` 和 `UBound` 函数。`For Each…Next` 语句将在第 5 章中进行解释。以下是 `For Each…Next` 循环的示例：
 
 图 4.50
 
@@ -1941,6 +2047,7 @@ VBScript 按照从上到下的概念执行。它从脚本的顶部开始，然�
 本章涵盖了：
 
 *   分支结构
+
 *   循环语句
 
 ## 分支结构
@@ -2201,15 +2308,11 @@ End If
 
 输出显示“The number is greater than or equal to 1000”
 
-Select Case 块分支
-
-
-
-
+### Select Case 块分支
 
 `Select…End Select` 结构在评估相同条件的不同可能结果时非常有用。因此，`Select` 语句是带有多个 `Else-If` 的 `If…End If` 块的替代方案。在某些情况下，实现 `Select` 语句比 `Else-If` 语句效率，因为每个 `Else-If` 表达式都会被评估，而 `Select …End Select` 只评估一次。`Select` 块只能用于评估相同表达式的不同变体。以下是 `Select Case` 语句的语法：
 
-### 语法
+#### 语法
 
 ```vb
 Select Case <condition>
@@ -2227,6 +2330,7 @@ End Select
 ```
 
 图 5.15
+
 ![](img/00139.jpg)
 
 ```vb
@@ -2250,14 +2354,16 @@ End Select
 输出显示“Purple is a pretty color”
 
 图 5.16
+
 ![](img/00154.jpg)
 
 第一行评估条件 `strColor`。接着，`Case` 语句检查各种可能性。最后，始终考虑 `Case Else` 块，尽管它是可选的。如果没有任何可能性返回 `True`，则将执行它。添加可选的 `Case Else` 块有两个原因：
 
 1. 为代码添加文档，解释为什么不应该执行它，或者
+
 2. 捕获程序员代码或输入数据的意外变化
 
-## “嵌套 Select Case” 块分支
+## 嵌套 Select Case 块分支
 
 `Select…End Select` 块可以相互嵌套。此外，程序员还可以在 `Select …End Select` 块内部嵌套 `If…End If` 块。以下是一个嵌套的 `Select Case` 块：
 
@@ -2290,6 +2396,7 @@ End Select
 ```
 
 图 5.17
+
 ![](img/00204.jpg)
 
 ```vb
@@ -2326,9 +2433,12 @@ End Select
 输出显示“The color is Light Black and looks gray / grey”
 
 图 5.18
+
 ![](img/00158.jpg)
 
 ## 循环语句
+
+
 
 循环是重复同一块代码的过程。VBScript 有四个用于不同情况的循环语句。这四个循环语句是：
 
@@ -2339,7 +2449,7 @@ End Select
 
 虽然有四个循环语句，但 `While…Wend` 语句的流行已经下降。`While…Wend` 语句工作没有问题，但已被 `Do…Loop` 语句取代。`Do…Loop` 语句执行与 `While…Wend` 语句相同的功能。然而，`Do…Loop` 语句更多功能，因为它具有关键字 `While` 和 `Until`，并且可以使用 `Exit Do` 语句跳出循环。本节将重点关注四个循环语句中的三个。
 
-### For…Next 语句
+## `For…Next` 语句
 
 `For…Next` 循环以有限的次数重复一组语句。以下是 `For…Next` 语法的示例：
 
@@ -2356,14 +2466,15 @@ Next
 
 | 参数 | 描述 |
 | :--- | :--- |
-| Iterator | 被用作循环迭代器的变量 |
-| StartValue | 迭代器的起始值 |
-| EndValue | 迭代器的结束值 |
-| StepExpression | 迭代器在每次循环后根据步进表达式的值变化。默认值为一。 |
-| Statement | 执行的一条或多个语句 |
-| Exit For | 强制跳出循环 |
+| `Iterator` | 被用作循环迭代器的变量 |
+| `StartValue` | 迭代器的起始值 |
+| `EndValue` | 迭代器的结束值 |
+| `StepExpression` | 迭代器在每次循环后根据步进表达式的值变化。默认值为一。 |
+| `Statement` | 执行的一条或多个语句 |
+| `Exit For` | 强制跳出循环 |
 
 图 5.20
+
 ![](img/0033.jpg)
 
 ```vb
@@ -2378,11 +2489,13 @@ Next
 输出显示“Iterator Value: 1”，第二个输出显示“Iterator Value: 3”，第三个输出显示“Iterator Value: 5”。
 
 图 5.21
+
 ![](img/0163.jpg)(images/0166.jpg)(images/0026.jpg)
 
 `For` 块指定了迭代器变量 `intNumber`、起始值一、结束值六以及数值步进表达式。因此，`Next` 块增加步进表达式（示例中为 2）。步进表达式允许 VBScript 跳过二、四、六，而选择一、三、五。步进表达式还允许 VBScript 通过负数减少迭代器值，导致循环反向运行。使用负数时，确保结束值小于起始值。以下是负步进表达式的示例：
 
 图 5.22
+
 ![](img/0068.jpg)
 
 ```vb
@@ -2397,11 +2510,13 @@ Next
 输出显示“Iterator Value: 6”，第二个输出显示“Iterator Value: 4”，第三个输出显示“Iterator Value: 2”。
 
 图 5.23
+
 ![](img/0042.jpg)(images/0177.jpg)(images/0180.jpg)
 
-步进表达式是可选的，如果省略，则默认值为一。以下是不带步进表达式的 For 示例：
+步进表达式是可选的，如果省略，则默认值为一。以下是不带步进表达式的 `For` 示例：
 
 图 5.24
+
 ![](img/0120.jpg)
 
 ```vb
@@ -2412,14 +2527,6 @@ For intNumber = 0 To 2
     MsgBox "Iterator Value: " & intNumber
 Next
 ```
-
-
-
-
-
-[content]
-
-# 下一步
 
 第一次输出显示“Iterator Value: 0”，第二次输出显示“Iterator Value: 1”，第三次输出显示“Iterator Value: 2”。
 
@@ -2433,7 +2540,7 @@ Next
 
 ![](img/00184.jpg)
 
-## 选项
+### 选项
 
 ```vb
 Option Explicit
@@ -2452,7 +2559,7 @@ Next
 
 ![](img/00162.jpg)![](img/00185.jpg)![](img/00006.jpg)
 
-## Exit For 语句
+## `Exit For` 语句
 
 `Exit For` 将控制权移出 `For` 循环并跳转到 `Next` 语句之后的下一行。以下是 `Exit For` 语句的示例：
 
@@ -2484,11 +2591,11 @@ MsgBox "The Exit For statement jumped out of the For Loop and did not display -5
 
 ![](img/00024.jpg)
 
-### For Each…Next 语句
+## `For Each…Next` 语句
 
 `For Each…Next` 语句是一种用于遍历集合（collections）的特殊循环。集合是数据的累积。集合可以是任何类型的数据，但通常由相同类型的对象组成。循环执行组中的每个元素。`For Each…Next` 语句不使用迭代器。因此，程序员无法控制循环运行的次数。循环取决于集合中对象的数量。`For Each…Next` 语句主要用于数组或 `FileSystemObject` (`FSO`)。
 
-数组在第 4 章 中已经介绍过（请参见第 3 章“第二部分 - You Must Learn VBScript for QTP – UFT”中的 FSO）。以下是 `For Each…Next` 语句的语法：
+数组在第 4 章中已经介绍过（请参见第 3 章“第二部分 - You Must Learn VBScript for QTP – UFT”中的 `FSO`）。以下是 `For Each…Next` 语句的语法：
 
 ### 语法
 
@@ -2506,10 +2613,10 @@ Next
 
 | 参数 | 说明 |
 | :--- | :--- |
-| Object | 遍历集合或数组中所有对象的变量。 |
-| Group | 集合或数组的名称 |
-| Statement | 在指定组中执行每个对象的语句或多个语句 |
-| Exit For | 强制跳出循环 |
+| `Object` | 遍历集合或数组中所有对象的变量。 |
+| `Group` | 集合或数组的名称 |
+| `Statement` | 在指定组中执行每个对象的语句或多个语句 |
+| `Exit For` | 强制跳出循环 |
 
 图 5.31
 
@@ -2554,17 +2661,17 @@ Next
 MsgBox "Found the name we were looking for"
 ```
 
-第一次输出显示“Name is James”，第二次输出显示“Name is John”，第三次输出显示“Loop exits when John”，第四次输出显示“Found the name we were looking for。” `Exit For` 语句在找到特定名称“John”时终止 For 循环并跳转到 `Next` 之后的行。名称“Joe”没有显示。
+第一次输出显示“Name is James”，第二次输出显示“Name is John”，第三次输出显示“Loop exits when John”，第四次输出显示“Found the name we were looking for。” `Exit For` 语句在找到特定名称“John”时终止 `For` 循环并跳转到 `Next` 之后的行。名称“Joe”没有显示。
 
 图 5.34
 
 ![](img/0082.jpg)![](img/017.jpg)[](images/029.jpg)
 
-## Do…Loop 语句
+## `Do…Loop` 语句
 
 `Do…Loop` 语句由于 `While` 或 `Until` 关键字，具有多种用法。`Do…Loop` 根据 `While` 或 `Until` 条件执行语句。在 `Do` 语句的开头或结尾放置条件可以控制循环次数。在 `Do` 语句开头放置条件可以决定是否执行语句。类似于 `Exit For` 语句，`Exit Do` 语句可以将控制权移出循环并跳转到 `Loop` 之后的行。`Exit Do` 是可选的。
 
-### Do While
+### `Do While`
 
 `While` 关键字在条件为真时重复语句块。以下是 `Do While` 和 `Do While…Loop` 的语法：
 
@@ -2582,12 +2689,12 @@ Loop
 
 | 参数 | 说明 |
 | :--- | :--- |
-| Do | 开始 Do Loop 的必要参数 |
-| While | 条件为真时继续循环的必要参数 |
-| Condition | 真值表达式。空条件被视为假 |
-| Statement | 在条件为真时重复的语句 |
-| Exit Do | 强制跳出循环 |
-| Loop | 结束 Do Loop 的必要参数 |
+| `Do` | 开始 `Do Loop` 的必要参数 |
+| `While` | 条件为真时继续循环的必要参数 |
+| `Condition` | 真值表达式。空条件被视为假 |
+| `Statement` | 在条件为真时重复的语句 |
+| `Exit Do` | 强制跳出循环 |
+| `Loop` | 结束 `Do Loop` 的必要参数 |
 
 ```vb
 Option Explicit
@@ -2648,13 +2755,11 @@ MsgBox "Iterator is 3 or more"
 
 循环带有 `Loop` 语句的条件，因此如果判定返回真值，则语句至少执行一次。`Do…Loop` 由于 `Exit Do` 语句可以将控制权移出循环并跳转到 `Loop` 之后的行。
 
-[/content]
-
-
+### `Do Until`
 
 `Until` 关键字在条件为 `False` 时重复执行语句块。换句话说，语句将一直重复直到条件变为 `True` 为止。以下是 `Do Until…Loop` 和 `Do…Loop Until` 的语法：
 
-### 语法
+#### 语法
 
 ```
 Do Until condition
@@ -2704,7 +2809,7 @@ MsgBox "Iterator is less than 3"
 
 ![](img/00071.jpg)
 
-### 语法
+#### 语法
 
 ```
 Do
@@ -2743,14 +2848,13 @@ MsgBox "Iterator is less than 3"
 
 ![](img/00140.jpg)
 
-`Do Loop` 的优点在于可以使用关键字 `While` 或 `Until`，并且可以将关键字放置在循环的开头或结尾。通常，人们在编码时会选择其中一个关键字。一个重要的问题是代码是否应该至少执行一次。如果是，则条件将放在循环的末尾。如果不是，则条件将放在循环的开头。第 5 章解释了涵盖分支结构和循环语句的流程控制。第 6 章](#split_014.html_pos19984) 介绍了程序和函数。
+`Do Loop` 的优点在于可以使用关键字 `While` 或 `Until`，并且可以将关键字放置在循环的开头或结尾。通常，人们在编码时会选择其中一个关键字。一个重要的问题是代码是否应该至少执行一次。如果是，则条件将放在循环的末尾。如果不是，则条件将放在循环的开头。第 5 章解释了涵盖分支结构和循环语句的流程控制。第 6 章介绍了程序和函数。
 
 # 第 6 章 程序—函数
 
+
+
 程序和函数互换使用的情况。在本章中，子程序和函数的术语是相同的，函数将用于引用内置函数。程序允许程序员将他们的代码模块化为执行特定任务的命名块……（此处省略原文中大量重复的 "Modularization describes complex code into named blocks of code that perform a specific task" 句子，以遵循指令不重复输出原文的要求）。
-
-
-
 
 ```
 MsgBox intTotal
@@ -2759,14 +2863,17 @@ intFourth = 15
 intTotal = intThird + intFourth
 MsgBox intTotal
 ```
+
 第一个输出显示“37”，第二个输出显示“20。”
 
 图 6.8
+
 ![](img/00189.jpg)![](img/00004.jpg)
 
 上述代码由于额外的变量和更多的代码行而需要较高的维护成本。以下是一个 `Sub Procedure`（子过程）示例，它将产生与相同的结果，但方式更加高效：
 
 图 6.9
+
 ![](img/00135.jpg)
 
 ```vbba
@@ -2780,14 +2887,17 @@ Sub AddNumbers (intFirstNumber, intSecondNumber)
     MsgBox intFirstNumber + intSecondNumber
 End Sub
 ```
+
 第一个输出显示“37”，第二个输出显示“20。”
 
 图 6.10
+
 ![](img/00189.jpg)![](img/00004.jpg)
 
 如果尝试向 `Sub Procedure` 返回值，就会发生错误。以下是一个显示 `Run Error`（运行错误）的示例：
 
 图 6.11
+
 ![](img/00200.jpg)
 
 ```vbba
@@ -2802,9 +2912,11 @@ Sub AddNumbers (intFirstNumber, intSecondNumber)
     MsgBox "Sub Procedure does not return values. The first MsgBox displays a Run Error"
 End Sub
 ```
+
 第 8 行显示 `Run Error`：“Type mismatch: AddNumbers”。
 
 图 6.12
+
 ![](img/00019.jpg)
 
 # Function 过程
@@ -2812,6 +2924,7 @@ End Sub
 一个 `Function Procedure`（函数过程）是一个由 `Function` 和 `End Function` 包围的命名代码块，它执行一个操作并返回一个值。关于关键字 `Public` 和 `Private` 以及声明参数的原则与 `Sub Procedure` 相同。以下是 `Function Procedure` 的语法：
 
 ### 语法
+
 ```vbba
 [Public | Private] Function NameOfFunctionProcedure ([Argument1], [ArgumentN])
     code         
@@ -2820,6 +2933,7 @@ End Function
 ```
 
 图 6.13
+
 ![](img/00032.jpg)
 
 ```vbba
@@ -2834,14 +2948,17 @@ Function MultiplyNumbers (intFirstNumber, intSecondNumber)
     MultiplyNumbers = intFirstNumber * intSecondNumber
 End Function
 ```
+
 输出显示“The total is 100.”
 
 图 6.14
+
 ![](img/00034.jpg)
 
 `Function Procedure` 有两个参数 `intFirstNumber` 和 `intSecondNumber`，它们的名称与变量 `intFirst` 和 `intSecond` 不同。参数和变量可以有相同的名称，但这可能会引起混淆。因此，使用独特且足够相似以识别变量与参数之间关系的名称是有利的。每个参数都为过程内的代码提供了一种从调用代码访问值的方法。以下是调用代码和过程内部代码的拆解：
 
 *   调用代码 = `MsgBox "The total is " & MultiplyNumbers (intFirst, intSecond)`
+
 *   过程内部代码 = `(MultiplyNumbers = intFirstNumber * intSecondNumber)`
 
 调用代码变量将值“25”和“4”传递给过程参数。变量 `intFirst` 将 25 传递给参数 `intFirstNumber`，而 `intSecond` 将 4 传递给参数 `intSecondNumber`。最后消息框 (`MsgBox`) 显示从过程返回的值“100”。注意过程内部的代码。函数名 `MultiplyNumbers` 以及参数 `intFirstNumber` 和 `intSecondNumber` 没有通过 `Dim` 语句显式声明。根据语句 `Function MultiplyNumbers (intFirstNumber, intSecondNumber)`，不需要显式声明，因为它隐式地声明了函数名和参数。然而，如果过程使用了未定义的变量（例如 `intTotal`），程序将遇到错误。`Function Procedures` 只有当值存储在函数名内部时才能返回值。因此，`intFirstNumber = 25` 乘以 `intSecondNumber = 4` 将 100 分配给函数名 `MultiplyNumbers`，该函数将 100 返回给调用代码。
@@ -2851,7 +2968,9 @@ End Function
 使用具有意义的过程名称以使目的清晰是有益的。一种可以采用的好技巧是动词-名词的组合，例如“GetOrder”。程序员可以使用所需的任意数量的参数，尽管过程任务过多的迹象是参数也过多。适用于过程命名的相同规则也适用于变量命名：
 
 1.  不能超过 255 个字符
+
 2.  下划线 `_` 是唯一的非字母数字字符
+
 3.  必须以字母（大写或小写）开头
 
 ## 调用过程的语法
@@ -2863,12 +2982,15 @@ End Function
 `Call` 关键字在调用 `Sub Procedure` 时需要括号。相反，括号可以使用 `Call` 关键字，也可以不带 `Call` 关键字使用。
 
 #### 有效
+
 ### 语法
+
 ```vbba
 NameOfSubProcedure “some value”
 ```
 
 图 6.15
+
 ![](img/00066.jpg)
 
 ```vbba
@@ -2880,17 +3002,23 @@ Sub GreetNeighbor(strNeighbor)
     MsgBox "Hi " & strNeighbor
 End Sub
 ```
+
 输出显示“Hi Joe.”
 
 图 6.16
+
 ![](img/00067.jpg)
+
 ### 语法
+
 ```vbba
 Call NameOfSubProcedure ("some value")
 ```
 
 图 6.17
+
 ![](img/00017.jpg)
+
 ```vbba
 Option Explicit
 
@@ -2900,17 +3028,23 @@ Sub GreetNeighbor(strNeighbor)
     MsgBox "Hi " & strNeighbor
 End Sub
 ```
+
 输出显示“Hi Joe.”
 
 图 6.18
+
 ![](img/00067.jpg)
+
 ### 语法
+
 ```vbba
 NameOfSubProcedure ("some value")
 ```
 
 图 6.19
+
 ![](img/00018.jpg)
+
 ```vbba
 Option Explicit
 
@@ -2920,18 +3054,25 @@ Sub GreetNeighbor(strNeighbor)
     MsgBox "Hi " & strNeighbor
 End Sub
 ```
+
 输出显示“Hi Joe.”
 
 图 6.20
+
 ![](img/00067.jpg)
+
 ### 无效
+
 ### 语法
+
 ```vbba
 Call NameOfSubProcedure "some value"
 ```
 
 图 6.21
+
 ![](img/00016.jpg)
+
 ```vbba
 Option Explicit
 
@@ -2941,9 +3082,11 @@ Sub GreetNeighbor(strNeighbor)
     MsgBox "Hi " & strNeighbor
 End Sub
 ```
+
 显示 `Run Error`：“The test run cannot continue due to a syntax error.”
 
 图 6.22
+
 ![](img/00046.jpg)
 
 ## 调用
@@ -2951,12 +3094,15 @@ End Sub
 `Function Procedure` 的规则不同。括号必须包含参数列表，并且必须省略 `Call` 关键字以从函数接收值。
 
 #### 有效
+
 ### 语法
+
 ```vbba
 MsgBox NameOfFunctionProcedure (some value)
 ```
 
 图 6.23
+
 ![](img/00056.jpg)
 
 ```vbba
@@ -2968,16 +3114,21 @@ Function AddNumbers (intFirstNumber, intSecondNumber, intThirdNumber)
     AddNumbers = intFirstNumber + intSecondNumber + intThirdNumber
 End Function
 ```
+
 输出显示“6.”
 
 图 6.24
+
 ![](img/00181.jpg)
+
 ### 语法
+
 ```vbba
 variable = NameOfFunctionProcedure (some value)
 ```
 
 图 6.25
+
 ![](img/00086.jpg)
 
 ```vbba
@@ -2992,17 +3143,23 @@ Function AddNumbers (intFirstNumber, intSecondNumber, intThirdNumber)
     AddNumbers = intFirstNumber + intSecondNumber + intThirdNumber
 End Function
 ```
+
 输出显示“6.”
 
 图 6.26
+
 ![](img/00181.jpg)
+
 ### 无效
+
 ### 语法
+
 ```vbba
 variable = NameOfFunctionProcedure some value
 ```
 
 图 6.27
+
 ![](img/00003.jpg)
 
 ```vbba
@@ -3017,11 +3174,8 @@ Function AddNumbers (intFirstNumber, intSecondNumber, intThirdNumber)
     AddNumbers = intFirstNumber + intSecondNumber + intThirdNumber
 End Function
 ```
+
 显示 `Run Error`：“The test run cannot continue due to a syntax error.”
-
-
-
-
 
 ```vb
 Function AddNumbers (intFirstNumber, intSecondNumber, intThirdNumber)
@@ -3032,6 +3186,7 @@ End Function
 运行错误显示“由于语法错误，测试运行无法继续。”
 
 图 6.30
+
 ![](img/00057.jpg)
 
 ## 参数声明（ByRef 或 ByVal）
@@ -3039,6 +3194,7 @@ End Function
 根据在过程中的声明方式，参数可以按引用传递（`ByRef`）或按值传递（`ByVal`）表示。如果没有声明，则默认为 `ByRef`。使用 `ByRef` 时，在过程中对值的更改是永久的，并会反映在调用它的代码中。相反，将参数指定为 `ByVal` 意味着过程中的代码可以更改变量的值，但这些更改不是永久的。一旦过程结束，更改就会消失。以下是一个不使用 `ByRef` 和 `ByVal` 声明参数的示例：
 
 图 6.31
+
 ![](img/00047.jpg)
 
 ```vb
@@ -3065,11 +3221,13 @@ End Sub
 第一个输出显示“intFirstNumber = 110”和“intSecondNumber = 110”，而第二个输出显示“intFirst = 110”和“intSecond = 110”。
 
 图 6.32
+
 ![](img/00075.jpg)![](img/00167.jpg)
 
 以下是一个使用 `ByRef` 和 `ByVal` 声明参数的示例：
 
 图 6.33
+
 ![](img/00151.jpg)
 
 ```vb
@@ -3096,6 +3254,7 @@ End Sub
 第一个输出显示“intFirstNumber = 110”和“intSecondNumber = 110”，而第二个输出显示“intFirst = 110”和“intSecond = 100”。
 
 图 6.34
+
 ![](img/00100.jpg)![](img/00048.jpg)
 
 变量 `intFirst` 和 `intSecond` 在脚本级别声明并初始化为 100。参数 `intFirstNumber` 声明为 `ByRef`，参数 `intSecondNumber` 声明为 `ByVal`。两个参数在过程 `ByRef_ByVal` 中都增加了十，输出为“110”。观察 `intFirst` 的值为 110。只有 `intFirst` 在过程之外发生了变化，因为它按引用传递。变量 `intSecond` 按值传递，显示为 100。`ByRef` 值的更改不会反映在过程之外。
@@ -3111,17 +3270,20 @@ MsgBox "Do you want to join Rex Jones for Free Live Training? ", VYesNo, "FREE L
 输出显示“Do you want to join Rex Jones for Free Live Training?”
 
 图 6.35
+
 ![](img/00121.jpg)
+
+
 
 通常，对话框显示一条消息和一个 OK 按钮。此示例显示了一个标题“FREE LIVE TRAINING”、一条消息“Do you want to join Rex Jones for Free Live Training”以及两个按钮 Yes 和 No。在大多数情况下，程序员仅出于调试目的使用 `MsgBox` 函数。因此，可选参数并不是必须的。以下是一些实用的内置函数列表，分为以下几个部分：
 
-*   [数组函数]
-*   [转换函数]
-*   [日期/时间函数]
-*   [格式化函数]
-*   [数学函数]
-*   [杂函数]
-*   [字符串函数]
+- [数组函数]
+- [转换函数]
+- [日期/时间函数]
+- [格式化函数]
+- [数学函数]
+- [杂函数]
+- [字符串函数]
 
 ## 数组函数
 
@@ -3129,13 +3291,13 @@ MsgBox "Do you want to join Rex Jones for Free Live Training? ", VYesNo, "FREE L
 
 | 函数 | 描述 |
 | :--- | :--- |
-| Array | 返回一个包含数组的变体 |
-| Filter | 返回一个零基数组，根据过滤标准包含字符串数组的子集 |
-| IsArray | 返回一个布尔值，指示指定的变量是否为数组 |
-| Join | 返回一个由数组元素组成的字符串 |
-| LBound | 返回维的最小下标 |
-| Split | 返回一个包含指定数量字符串的数组 |
-| UBound | 返回维的最大下标 |
+| `Array` | 返回一个包含数组的变体 |
+| `Filter` | 返回一个零基数组，根据过滤标准包含字符串数组的子集 |
+| `IsArray` | 返回一个布尔值，指示指定的变量是否为数组 |
+| `Join` | 返回一个由数组元素组成的字符串 |
+| `LBound` | 返回维的最小下标 |
+| `Split` | 返回一个包含指定数量字符串的数组 |
+| `UBound` | 返回维的最大下标 |
 
 ## 转换函数
 
@@ -3143,17 +3305,17 @@ MsgBox "Do you want to join Rex Jones for Free Live Training? ", VYesNo, "FREE L
 
 | 函数 | 描述 |
 | :--- | :--- |
-| Asc | 将字符串转换为 ANSI 代码 |
-| CBool | 将表达式转换为布尔变体 |
-| CByte | 将表达式转换为字节变体 |
-| CCur | 将表达式转换为货币变体 |
-| CDate | 将有效的日期时间转换为日期变体 |
-| CDbl | 将表达式转换为双精度浮点变体 |
-| Chr | 将指定的 ANSI 代码转换为字符 |
-| CInt | 将表达式转换为整数变体 |
-| CLng | 将表达式转换为长变体 |
-| CSng | 将表达式转换为单精度浮点变体 |
-| CStr | 将表达式转换为字符串变体 |
+| `Asc` | 将字符串转换为 ANSI 代码 |
+| `CBool` | 将表达式转换为布尔变体 |
+| `CByte` | 将表达式转换为字节变体 |
+| `CCur` | 将表达式转换为货币变体 |
+| `CDate` | 将有效的日期时间转换为日期变体 |
+| `CDbl` | 将表达式转换为双精度浮点变体 |
+| `Chr` | 将指定的 ANSI 代码转换为字符 |
+| `CInt` | 将表达式转换为整数变体 |
+| `CLng` | 将表达式转换为长变体 |
+| `CSng` | 将表达式转换为单精度浮点变体 |
+| `CStr` | 将表达式转换为字符串变体 |
 
 ## 日期/时间函数
 
@@ -3161,36 +3323,32 @@ MsgBox "Do you want to join Rex Jones for Free Live Training? ", VYesNo, "FREE L
 
 | 函数 | 描述 |
 | :--- | :--- |
-| Date | 返回当前系统日期 |
-| DateAdd | 返回增加时间间隔后的日期 |
-| DateDiff | 返回两个日期之间的间隔数 |
-| DatePart | 返回日期的指定部分 |
-| DateSerial | 返回指定年、月、日的日期 |
-| DateValue | 返回日期 |
-| Day | 返回月份中的数字（1 到 31 之间） |
-| FormatDateTime | 返回格式化为日期或时间的表达式 |
-| Hour | 返回小时的数字（0 到 23 之间） |
-| IsDate | 返回一个布尔值，指示评估的表达式是否可以转换为日期 |
-| Minute | 返回分钟的数字（0 到 59 之间） |
-| Month | 返回月份的数字（1 到 12 之间） |
-| MonthName | 返回指定月份的名称 |
-| Now | 返回当前系统日期和时间 |
-| Second | 返回秒的数字（0 到 59 之间） |
-| Time | 返回当前系统时间 |
-| Timer | 返回自午夜 12:00 以来的秒数 |
-| TimeSerial | 返回指定时、分、秒的时间 |
-| TimeValue | 返回时间 |
-| Weekday | 返回星期几（1 到 7 之间） |
-| WeekdayName | 返回指定星期几的名称 |
-| Year | 返回年份的数字 |
+| `Date` | 返回当前系统日期 |
+| `DateAdd` | 返回增加时间间隔后的日期 |
+| `DateDiff` | 返回两个日期之间的间隔数 |
+| `DatePart` | 返回日期的指定部分 |
+| `DateSerial` | 返回指定年、月、日的日期 |
+| `DateValue` | 返回日期 |
+| `Day` | 返回月份中的数字（1 到 31 之间） |
+| `FormatDateTime` | 返回格式化为日期或时间的表达式 |
+| `Hour` | 返回小时的数字（0 到 23 之间） |
+| `IsDate` | 返回一个布尔值，指示评估的表达式是否可以转换为日期 |
+| `Minute` | 返回分钟的数字（0 到 59 之间） |
+| `Month` | 返回月份的数字（1 到 12 之间） |
+| `MonthName` | 返回指定月份的名称 |
+| `Now` | 返回当前系统日期和时间 |
+| `Second` | 返回秒的数字（0 到 59 之间） |
+| `Time` | 返回当前系统时间 |
+| `Timer` | 返回自午夜 12:00 以来的秒数 |
+| `TimeSerial` | 返回指定时、分、秒的时间 |
+| `TimeValue` | 返回时间 |
+| `Weekday` | 返回星期几（1 到 7 之间） |
+| `WeekdayName` | 返回指定星期几的名称 |
+| `Year` | 返回年份的数字 |
 
 ## 格式化函数
 
 图 6.39
-
-
-
-
 
 | 函数 | 描述 |
 | :--- | :--- |
@@ -3267,26 +3425,23 @@ MsgBox "Do you want to join Rex Jones for Free Live Training? ", VYesNo, "FREE L
 | `StrReverse` | 反转字符串 |
 | `UCase` | 将指定字符串转换为大写 |
 
-第 6 章讨论了过程和函数。两种过程是 `Sub 过程` 和 `Function 过程`。`Function 过程` 返回值，而 `Sub 过程` 不返回值。有许多称为`内置函数`的函数允许程序员编写高效的代码。第 7 章描述了创建和销对象的概念。
+第 6 章讨论了过程和函数。两种过程是 `Sub 过程` 和 `Function 过程`。`Function 过程` 返回值，而 `Sub 过程` 不返回值。有许多称为`内置函数`的函数允许程序员编写高效的代码。第 7 章描述了创建和销毁对象的概念。
 
-# 第 7 章 创建和销对象
+# 第 7 章 创建和销毁对象
 
 对象与其他 Sub 数据类型不同，因为它们需要使用单独命令显式创建。与变量一样，对象在内存中有位置，但对象的变量持有对象的引用。
 
 第 7 章将涵盖以下对象原理：
 
-*   `创建对象`
-*   `属性和方法`
-*   `多个引用`
-*   `With 结构`
-*   `销对象`
+- `创建对象`
+- `属性和方法`
+- `多个引用`
+- `With 结构`
+- `销毁对象`
 
 注意：本章中的所有示例都使用了字典对象（字典对象参见第 2 章“部分 2 - 你必须学习用于 QTP – UFT 的 VBScript”。）
 
-
-
-
-可以使用属性和方法来访问对象。属性是与特定对象关联的值的位符。属性可以包含任何类型的数据，包括对另一个对象的引用。方法可以比附加到对象上的过程。方法以过程相同的方式为对象执行特定操作。
+可以使用属性和方法来访问对象。属性是与特定对象关联的值的占位符。属性可以包含任何类型的数据，包括对另一个对象的引用。方法可以比附加到对象上的过程。方法以过程相同的方式为对象执行特定操作。
 
 ### 多重引用
 
@@ -3378,118 +3533,214 @@ VBScript 是支持 QTP/UFT 脚本的脚本语言。理解 VBScript 有助于在 
 - **编码标准**：自动化工程师必须养成良好的编程习惯，例如注释和变量的匈牙利命名法。
 - **流程控制**：分支结构和循环语句是流程控制的两种形式。
 
-
-
-
 # For Next
+
 # Do Loop
+
 # 编码标准
+
 ## 匈牙利命名法
+
 # 显式优于隐式
+
 # 注释
+
 ## 代码模块化
+
 ## 子过程 (Sub Procedure)
+
 ## 函数过程 (Function Procedure)
 
 # 第 2 章 变量与数据类型
+
 ## 变量规则
+
 ## 变量类型
+
 ### 标量
+
 ### 数组
+
 ### 常量
+
 ### 字面量
+
 ## 变量生命周期/作用域
+
 ### 脚本级
+
 ### 过程级
+
 ### 类级
+
 ## 声明变量
+
 ### Dim 语句
+
 ### Public 语句
+
 ### Private 语句
+
 ## Option Explicit
+
 ## 数据类型
+
 ## 匈牙利命名法
 
 # 第 3 章 运算符
+
 ## 算术运算符
+
 ### 幂运算
+
 ### 一元否定
+
 ### 乘法
+
 ### 浮点数除法
+
 ### 整数除法
+
 ### 取模运算
+
 ## 加法
+
 ## 减法
+
 ### 字符串拼接
+
 ## 比较运算符
+
 ### 等于
+
 ### 不等于
+
 ### 小于
+
 ### 大于
+
 ### 小于等于
+
 ### 大于等于
+
 ### 对象等价 (Is)
+
 ## 逻辑运算符
+
 ### 逻辑非 (Not)
+
 ### 逻辑与 (And)
+
 ### 逻辑或 (Or)
+
 ### 逻辑异或 (Xor)
+
 ### 逻辑等价 (Eqv)
+
 ### 逻辑蕴含 (Imp)
 
 # 第 4 章 数组
+
 ## 声明数组与界限
+
 ## 静态数组类型
+
 ### 一维数组
+
 ## 二维数组
+
 ## 数组函数
+
 ### 过滤数组
+
 ## 动态数组类型
+
 ### 调整数组大小
+
 ### 删除数组
+
 ### 分割数组
+
 ### 合并数组
+
 ### 访问数组
+
 ### 遍历数组
 
 # 第 5 章流程控制
+
 ## 分支结构
+
 ### “If”分支
+
 ### Else 分支
+
 ### Else-If 分支
+
 ### 嵌套 If 分支
+
 ### Select Case 分支
+
 ## 循环语句
+
 ### For…Next 语句
+
 ### For Each…Next 语句
+
 ## Do…Loop 语句
+
 ### Do While
+
 ### Do Until
 
 # 第 6 章 过程—函数
+
 ## 子过程
+
 ## 函数过程
+
 ## 过程技术/规则
-###过程调用语法
+
+### 过程调用语法
+
 ### 调用子过程
+
 ### 调用函数过程
+
 ### 参数声明 (ByRef 或 ByVal)
+
 ## 内置函数
+
 ## 数组函数
+
 ## 转换函数
+
 ## 日期/时间函数
+
 ## 格式化函数
+
 ### 数学函数
+
 ### 杂项函数
+
 ### 字符串函数
 
 # 第 7 章 创建与销毁对象
-## 创建对象
-## 属性与方法
-### 多重引用
-### With 
-## 销毁对象
+
+
+
+# 创建对象
+
+# 属性与方法
+
+## 多重引用
+
+### With
+
+# 销毁对象
 
 # 结论
+
 # 参考文献
+
 ## 订阅接收

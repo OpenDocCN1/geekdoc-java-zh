@@ -1,8 +1,9 @@
+
 # 仅允许来自接受位置的具有 Spring 安全性的身份验证
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-security-restrict-authentication-by-geography>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将重点介绍一个非常有趣的安全特性——根据用户的位置来保护他们的帐户。
 
@@ -10,9 +11,9 @@
 
 这是注册系列的[部分，自然是建立在现有代码基础之上的。](/web/20220822105732/https://www.baeldung.com/spring-security-registration)
 
-## 2。用户位置模型
+## 2. 用户位置模型
 
-首先，让我们看看我们的`UserLocation`模型——它保存了关于用户登录位置的信息；每个用户至少有一个与其帐户相关联的位置:
+首先，让我们看看`UserLocation`模型——它保存了关于用户登录位置的信息；每个用户至少有一个与其帐户相关联的位置：
 
 ```java
 @Entity
@@ -44,7 +45,7 @@ public class UserLocation {
 }
 ```
 
-我们将向我们的存储库添加一个简单的检索操作:
+我们将向存储库添加一个简单的检索操作：
 
 ```java
 public interface UserLocationRepository extends JpaRepository<UserLocation, Long> {
@@ -52,14 +53,14 @@ public interface UserLocationRepository extends JpaRepository<UserLocation, Long
 }
 ```
 
-注意到
+注意到：
 
-*   默认情况下，新的`UserLocation`被禁用
-*   每个用户至少有一个与其帐户相关联的位置，这是他们注册时访问应用程序的第一个位置
+- 默认情况下，新的`UserLocation`被禁用
+- 每个用户至少有一个与其帐户相关联的位置，这是他们注册时访问应用程序的第一个位置
 
-## 3。注册
+## 3. 注册
 
-现在，让我们讨论如何修改注册过程以添加默认用户位置:
+现在，让我们讨论如何修改注册过程以添加默认用户位置：
 
 ```java
 @PostMapping("/user/registration")
@@ -72,7 +73,7 @@ public GenericResponse registerUserAccount(@Valid UserDto accountDto,
 }
 ```
 
-在服务实现中，我们将通过用户的 IP 地址获取国家:
+在服务实现中，我们将通过用户的 IP 地址获取国家：
 
 ```java
 public void addUserLocation(User user, String ip) {
@@ -85,7 +86,7 @@ public void addUserLocation(User user, String ip) {
 }
 ```
 
-注意，我们使用 [GeoLite2](https://web.archive.org/web/20220822105732/https://dev.maxmind.com/geoip/geoip2/geolite2/) 数据库从 IP 地址获取国家。为了使用 [GeoLite2](https://web.archive.org/web/20220822105732/https://dev.maxmind.com/geoip/geoip2/geolite2/) ，我们需要 maven 依赖关系:
+注意，我们使用 [GeoLite2](https://web.archive.org/web/20220822105732/https://dev.maxmind.com/geoip/geoip2/geolite2/) 数据库从 IP 地址获取国家。为了使用 [GeoLite2](https://web.archive.org/web/20220822105732/https://dev.maxmind.com/geoip/geoip2/geolite2/) ，我们需要 maven 依赖关系：
 
 ```java
 <dependency>
@@ -95,7 +96,7 @@ public void addUserLocation(User user, String ip) {
 </dependency>
 ```
 
-我们还需要定义一个简单的 bean:
+我们还需要定义一个简单的 bean：
 
 ```java
 @Bean
@@ -107,9 +108,9 @@ public DatabaseReader databaseReader() throws IOException, GeoIp2Exception {
 
 我们已经从 MaxMind 这里加载了 [GeoLite2 国家](https://web.archive.org/web/20220822105732/https://dev.maxmind.com/geoip/geolite2-free-geolocation-data?lang=en)数据库。
 
-## 4。安全登录
+## 4. 安全登录
 
-现在我们已经有了用户的默认国家，我们将在身份验证后添加一个简单的位置检查器:
+现在我们已经有了用户的默认国家，我们将在身份验证后添加一个简单的位置检查器：
 
 ```java
 @Autowired
@@ -125,7 +126,7 @@ public DaoAuthenticationProvider authProvider() {
 }
 ```
 
-这是我们的`DifferentLocationChecker`:
+这是`DifferentLocationChecker`：
 
 ```java
 @Component
@@ -168,11 +169,11 @@ public class DifferentLocationChecker implements UserDetailsChecker {
 }
 ```
 
-请注意，我们使用了 s `etPostAuthenticationChecks()`以便**仅在成功认证**后运行检查——当用户提供正确的凭证时。
+请注意，我们使用了`setPostAuthenticationChecks()`以便**仅在成功认证**后运行检查——当用户提供正确的凭证时。
 
 同样，我们的自定义`UnusualLocationException`是一个简单的`AuthenticationException`。
 
-我们还需要修改我们的`AuthenticationFailureHandler`来定制错误消息:
+我们还需要修改`AuthenticationFailureHandler`来定制错误消息：
 
 ```java
 @Override
@@ -184,7 +185,7 @@ public void onAuthenticationFailure(...) {
 }
 ```
 
-现在，让我们深入了解一下`isNewLoginLocation()` 的实现:
+现在，让我们深入了解一下`isNewLoginLocation()`的实现：
 
 ```java
 @Override
@@ -219,7 +220,7 @@ private NewLocationToken createNewLocationToken(String country, User user) {
 }
 ```
 
-最后，下面是简单的`NewLocationToken`实现——允许用户将新位置与他们的帐户关联起来:
+最后，下面是简单的`NewLocationToken`实现——允许用户将新位置与他们的帐户关联起来：
 
 ```java
 @Entity
@@ -238,9 +239,9 @@ public class NewLocationToken {
 }
 ```
 
-## 5。异地登录事件
+## 5. 异地登录事件
 
-当用户从不同的位置登录时，我们创建了一个`NewLocationToken` 并使用它来触发一个`OnDifferentLocationLoginEvent`:
+当用户从不同的位置登录时，我们创建了一个`NewLocationToken`并使用它来触发一个`OnDifferentLocationLoginEvent`：
 
 ```java
 public class OnDifferentLocationLoginEvent extends ApplicationEvent {
@@ -252,7 +253,9 @@ public class OnDifferentLocationLoginEvent extends ApplicationEvent {
 }
 ```
 
-`DifferentLocationLoginListener`如下处理我们的事件:
+`DifferentLocationLoginListener`如下处理我们的事件：
+
+
 
 ```java
 @Component
@@ -291,13 +294,13 @@ public class DifferentLocationLoginListener
 }
 ```
 
-请注意，**当用户从不同的位置登录时，我们将发送电子邮件通知他们**。
+请注意，当用户从不同的位置登录时，我们将发送电子邮件通知他们。
 
 如果其他人试图登录他们的帐户，他们当然会更改密码。如果他们识别出身份验证尝试，他们将能够将新的登录位置与他们的帐户相关联。
 
-## 6。启用新的登录位置
+## 6. 启用新的登录位置
 
-最后，既然用户已经得到了可疑活动的通知，让我们看看**应用程序将如何处理启用新位置**:
+最后，既然用户已经得到了可疑活动的通知，让我们看看应用程序将如何处理启用新位置：
 
 ```java
 @RequestMapping(value = "/user/enableNewLoc", method = RequestMethod.GET)
@@ -318,7 +321,7 @@ public String enableNewLoc(Locale locale, Model model, @RequestParam("token") St
 }
 ```
 
-而我们的`isValidNewLocationToken()`方法:
+而我们的`isValidNewLocationToken()`方法：
 
 ```java
 @Override
@@ -335,20 +338,20 @@ public String isValidNewLocationToken(String token) {
 }
 ```
 
-简单地说，我们将启用与令牌相关联的`UserLocation`,然后删除令牌。
+简单地说，我们将启用与令牌相关联的`UserLocation`，然后删除令牌。
 
-## 7.限制
+## 7. 限制
 
-为了结束这篇文章，我们需要提到上述实现的一个限制。我们用来确定客户端 IP 的方法是:
+为了结束这篇文章，我们需要提到上述实现的一个限制。我们用来确定客户端 IP 的方法是：
 
 ```java
 private final String getClientIP(HttpServletRequest request) 
 ```
 
-并不总是返回客户端的正确 IP 地址。如果 Spring Boot 应用程序部署在本地，则返回的 IP 地址是(除非有不同的配置)0.0.0.0。由于 MaxMind 数据库中没有该地址，因此无法注册和登录。如果客户端的 IP 地址不在数据库中，也会出现同样的问题。
+并不总是返回客户端的正确 IP 地址。如果 Spring Boot 应用程序部署在本地，则返回的 IP 地址是（除非有不同的配置）`0.0.0.0`。由于 MaxMind 数据库中没有该地址，因此无法注册和登录。如果客户端的 IP 地址不在数据库中，也会出现同样的问题。
 
-## 8。结论
+## 8. 结论
 
-在本教程中，我们重点介绍了一种强大的新机制来为我们的应用程序增加安全性—**根据用户的位置限制意外的用户活动。**
+在本教程中，我们重点介绍了一种强大的新机制来为我们的应用程序增加安全性——根据用户的位置限制意外的用户活动。
 
-和往常一样，完整的实现可以在 GiHub 上找到[。](https://web.archive.org/web/20220822105732/https://github.com/Baeldung/spring-security-registration)
+和往常一样，完整的实现可以在 GitHub 上找到[。](https://web.archive.org/web/20220822105732/https://github.com/Baeldung/spring-security-registration)

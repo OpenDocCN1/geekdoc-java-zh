@@ -1,3 +1,4 @@
+
 # 2023 年学习 Golang/Go 的 10 大在线课程—最佳选择
 
 > 原文：<https://medium.com/javarevisited/7-online-courses-to-learn-golang-or-go-programming-languages-in-2020-f599a25cf14a?source=collection_archive---------0----------------------->
@@ -8,17 +9,17 @@
 
 伙计们，今天，我要分享一种最流行的现代编程语言，叫做 Go 或 Golang。这种强大的编程语言是由 Google 创建的，目的是使他们的软件开发过程更流畅、更好，所以你可以想象这种编程语言带来的强大和简单。
 
-2009 年，谷歌开始创造一种新的编程语言**，这种语言速度快、效率高、编码有趣**，但不影响可读性、生产率和简单性，这就是“如何编程语言”的诞生。
+2009 年，谷歌开始创造一种新的编程语言，这种语言速度快、效率高、编码有趣，但不影响可读性、生产率和简单性，这就是“如何编程语言”的诞生。
 
-即使谷歌的名字还不够，这种编程语言是由 Ken Thompson 创造的，他发明了久经考验的技术，如 [C 编程语言](https://javarevisited.blogspot.com/2019/11/top-5-courses-to-learn-c-programming-in.html)和 [UNIX 操作系统](https://javarevisited.blogspot.com/2018/02/5-courses-to-learn-shell-scripting-in-linux.html)，以及两名谷歌员工 Robert Griesemer 和 Rob Pike 的重要贡献。
+即使谷歌的名字还不够，这种编程语言是由 Ken Thompson 创造的，他发明了久经考验的技术，如 C 编程语言和 UNIX 操作系统，以及两名谷歌员工 Robert Griesemer 和 Rob Pike 的重要贡献。
 
 > Golang 是由谷歌设计的，其固有的快速、可靠和高效得到了网飞、优步，当然还有谷歌等公司的信任。
 
-谷歌专门为其广泛的服务器网络使用 Go，Go 也为谷歌自己的云平台 [GCP](https://javarevisited.blogspot.com/2020/05/top-5-course-to-crack-google-cloud-associate-cloud-engineer-certification-exam.html) 或[谷歌云平台](https://javarevisited.blogspot.com/2019/07/top-5-google-cloud-platform-gcp-courses-certifications-online.html)提供支持。世界各地的软件开发人员在应用程序开发、web 开发、运营和基础设施团队等领域使用 Go。
+谷歌专门为其广泛的服务器网络使用 Go，Go 也为谷歌自己的云平台 GCP 或谷歌云平台提供支持。世界各地的软件开发人员在应用程序开发、web 开发、运营和基础设施团队等领域使用 Go。
 
-也是云原生基础设施和[软件开发](/javarevisited/11-essential-skills-to-become-software-developer-in-2020-c617e293e90e)的流行语言之一。如果你想在 2023 年学习围棋，并寻找一些类似*在线培训课程*的优秀资源，那么你来对地方了。
+也是云原生基础设施和软件开发的流行语言之一。如果你想在 2023 年学习围棋，并寻找一些类似在线培训课程的优秀资源，那么你来对地方了。
 
-在这篇文章中，我将为初学者和有经验的开发人员分享一些学习 Golang 或 [*Go 编程语言*](/@javinpaul/what-is-go-or-golang-programming-language-why-learn-go-in-2020-1cbf0afc71db) *的*最佳课程。所有的课程都是完全在线的，你可以在舒适的办公室或家里学习。**
+在这篇文章中，我将为初学者和有经验的开发人员分享一些学习 Golang 或 Go 编程语言的最佳课程。所有的课程都是完全在线的，你可以在舒适的办公室或家里学习。
 
 # 2023 年学习 Golang 的 10 个最佳在线培训课程
 
@@ -28,7 +29,7 @@
 
 这是另一个在 Udemy 上学习 Go 编程语言(Golang)的基础和高级特性的很棒的课程。
 
-由斯蒂芬·格里德教授，这是一门经过深思熟虑、结构严谨的课程。这也是为数不多的几门课程之一，在这里你将学到 Golang 的一些强大而先进的特性，比如它的**并发模型**和接口类型系统。Stephen Grider 也是我在 Udemy 上最喜欢的导师之一，参加过他的[**Modern React with Redux**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Freact-redux%2F)和其他几门课程，我可以说他的课程完全值得你的时间和金钱。
+由斯蒂芬·格里德教授，这是一门经过深思熟虑、结构严谨的课程。这也是为数不多的几门课程之一，在这里你将学到 Golang 的一些强大而先进的特性，比如它的并发模型和接口类型系统。Stephen Grider 也是我在 Udemy 上最喜欢的导师之一，参加过他的Modern React with Redux和其他几门课程，我可以说他的课程完全值得你的时间和金钱。
 
 谈到社交证明，这门课程受到了超过 34000 名学生的信任，平均而言，它拥有来自近 9300 名参与者的 4.6 分的评分，这很令人惊讶。
 
@@ -50,7 +51,7 @@
 
 [![](img/4b5a78d6cfb4bb971a5bfbb9c30c7d07.png)](https://academy.zerotomastery.io/p/learn-golang?affcode=441520_zytgk2dn)
 
-顺便说一句，你需要一个 [**ZTM 会员**](https://academy.zerotomastery.io/a/aff_c0gnlvf7/external?affcode=441520_zytgk2dn) 来观看这个课程，这个课程每月花费大约 23 美元，但也提供了许多超级吸引人和有用的课程，比如这个 [J *avaScript Web 项目:20 个项目来建立你的投资组合课程* e](https://academy.zerotomastery.io/p/javascript-projects?affcode=441520_zytgk2dn) 。您还可以使用我的代码朋友 10 获得您选择的任何订阅的 10%的折扣。
+顺便说一句，你需要一个 ZTM 会员来观看这个课程，这个课程每月花费大约 23 美元，但也提供了许多超级吸引人和有用的课程，比如这个 JavaScript Web 项目:20 个项目来建立你的投资组合课程。您还可以使用我的代码朋友 10 获得您选择的任何订阅的 10%的折扣。
 
 <https://academy.zerotomastery.io/a/aff_c0gnlvf7/external?affcode=441520_zytgk2dn>  
 
@@ -61,8 +62,10 @@
 本专业介绍来自 Google 的 Go 编程语言，为学习者提供 Go 的特色概述。
 
 这个专精有 3 门课程:
-1。[Go](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fgolang-getting-started)2 入门。[Go](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fgolang-functions-methods)
-3 中的函数、方法、接口。[Go 中的并发性](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fgolang-concurrency)
+
+1. [Go](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fgolang-getting-started) 入门
+2. [Go](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fgolang-functions-methods) 中的函数、方法、接口
+3. [Go 中的并发性](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fgolang-concurrency)
 
 所有这些课程都是 Ian Harris 想出来的，在完成三个课程序列后，学习者将获得使用 Go 创建简洁、高效、干净的应用程序所需的知识和技能。一旦你完成了所有的测验、作业和项目，你还会得到一份结业证书。
 
@@ -72,9 +75,9 @@
 
 [![](img/13841d75e4f52d3cf37785227c1c7f48.png)](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fgoogle-golang)
 
-如果你发现 Coursera 的课程很有用，因为它们是由知名公司如**谷歌**、 **IBM** 、**亚马逊**和世界上最好的大学创建的，我建议你加入 Coursera 的订阅计划 [**Coursera Plus**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus)
+如果你发现 Coursera 的课程很有用，因为它们是由知名公司如谷歌、IBM、亚马逊和世界上最好的大学创建的，我建议你加入 Coursera 的订阅计划 Coursera Plus。
 
-这种单一订阅让你可以无限制地访问他们最受欢迎的**课程**、**专业化**、**专业证书**和**指导项目**。它每年花费大约 399 美元，但是它完全值你的钱，因为你得到了**无限证书**。
+这种单一订阅让你可以无限制地访问他们最受欢迎的课程、专业化、专业证书和指导项目。它每年花费大约 399 美元，但是它完全值你的钱，因为你得到了无限证书。
 
 <https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
 
@@ -82,35 +85,37 @@
 
 这是 2023 年在 Pluralsight 上学习 Golang 的另一个在线课程。如果你有 Pluralsight 会员资格，并且正在寻找一个很棒的 Golang 课程，那么你应该加入这个课程。
 
-这个课程是由 Nigel Poulton 创建的，他是 Pluralsight 上 [Docker Deep Dive](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fdocker-deep-dive-update) 课程的作者，这是我学习 Docker 最喜欢的课程，这个课程也不负众望。
+这个课程是由 Nigel Poulton 创建的，他是 Pluralsight 上 Docker Deep Dive 课程的作者，这是我学习 Docker 最喜欢的课程，这个课程也不负众望。
 
-在本课程中，你将学习如何使用谷歌越来越流行的 Go 编程语言进行编程。从零开始，假设没有任何先验知识，这门课程会让你感觉编写小型围棋程序很舒服，并熟悉这些语言的所有主要特性
+在本课程中，你将学习如何使用谷歌越来越流行的 Go 编程语言进行编程。从零开始，假设没有任何先验知识，这门课程会让你感觉编写小型围棋程序很舒服，并熟悉这些语言的所有主要特性。
 
-。如果你不知道，这门课程的讲师 Nigel Poulton 是一名 Docker 队长和流行技术作者。他以关于云原生技术的引人入胜的视频和书籍而闻名，如 [Docker](https://javarevisited.blogspot.com/2018/02/10-free-docker-container-courses-for-Java-Developers.html#axzz63ewnlq5p) 和 [Kubernetes](https://javarevisited.blogspot.com/2019/05/top-5-courses-to-learn-docker-and-kubernetes-for-devops.html) 。
+如果你不知道，这门课程的讲师 Nigel Poulton 是一名 Docker 队长和流行技术作者。他以关于云原生技术的引人入胜的视频和书籍而闻名，如 Docker 和 Kubernetes。
 
 **这是在线参加本课程的链接** — [围棋基础](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fgo-fundamentals)
 
 [![](img/68a74f376d5b461e8c1f008e5d43eb62.png)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fgo-fundamentals)
 
-顺便说一句，你需要一个 [**Pluralsight 会员**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing) 才能加入这个课程，费用大约是每月 29 美元，每年 299 美元(14%的折扣)，但是完全值得。另类。你也可以使用他们的 [**10 天免费试用**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 来免费观看这个课程。
+顺便说一句，你需要一个 Pluralsight 会员才能加入这个课程，费用大约是每月 29 美元，每年 299 美元(14%的折扣)，但是完全值得。另类。你也可以使用他们的 10 天免费试用 来免费观看这个课程。
 
 <https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>  
 
 ## 5.[学习继续代码学院](https://www.gopjn.com/t/TUJGR0lLR0JHRklJSkhCR0ZISk1N?url=https%3A%2F%2Fwww.codecademy.com%2Flearn%2Flearn-go)
 
-如果你一直在网上学习，那么你可能知道 CodeCademy，这是交互式网上学习的最佳场所之一。我使用过 [CodeCademy](https://www.codecademy.com/pro/community) 学习 Python、Java、Bash 和 JavaScript，我可以说它们提供了最好的学习体验。
+如果你一直在网上学习，那么你可能知道 CodeCademy，这是交互式网上学习的最佳场所之一。我使用过 CodeCademy 学习 Python、Java、Bash 和 JavaScript，我可以说它们提供了最好的学习体验。
 
-你会很高兴知道他们也有一个学习 Go (Golang)编程语言的互动课程，最棒的是它是与[谷歌](https://javarevisited.blogspot.com/2012/01/google-interview-questions-answers-top.html)合作创建的，谷歌也是 [Golang](https://www.java67.com/2019/12/top-5-courses-to-learn-go-or-golang.html) 的创建者和支持者。
+你会很高兴知道他们也有一个学习 Go (Golang)编程语言的互动课程，最棒的是它是与谷歌合作创建的，谷歌也是 Golang 的创建者和支持者。
 
-这是在线学习 Go 编程语言的最具**实践性和互动性的课程**，因为你不仅会听到像变量、条件和函数这样的 Go 基础知识，还会用 Go 编程语言构建几个项目。你将学习语法，参加如何声明函数的测验，并从事像星际旅行社的飞行协调员这样的项目。如果你喜欢**基于项目的**和**互动学习**，这是学习 Go online 的最佳课程。
+这是在线学习 Go 编程语言的最具实践性和互动性的课程，因为你不仅会听到像变量、条件和函数这样的 Go 基础知识，还会用 Go 编程语言构建几个项目。你将学习语法，参加如何声明函数的测验，并从事像星际旅行社的飞行协调员这样的项目。如果你喜欢基于项目的和互动学习，这是学习 Go online 的最佳课程。
 
-“学习围棋”的前四个模块目前正在 CodeCademy 中运行，而且它们**完全免费**。
+“学习围棋”的前四个模块目前正在 CodeCademy 中运行，而且它们完全免费。
 
 这里是在线参加本课程的链接——[继续在代码学院学习](https://www.gopjn.com/t/TUJGR0lLR0JHRklJSkhCR0ZISk1N?url=https%3A%2F%2Fwww.codecademy.com%2Flearn%2Flearn-go)
 
 [![](img/af678243231549f00b19a90937373e10.png)](https://www.gopjn.com/t/TUJGR0lLR0JHRklJSkhCR0ZISk1N?url=https%3A%2F%2Fwww.codecademy.com%2Flearn%2Flearn-go)
 
 ## 6.Go (Golang):完整训练营(Udemy 最佳课程)
+
+
 
 这是另一门很好的课程。去吧，乌代米。本课程最棒的部分是它非常直观，你会发现很多动画有助于你更好地理解这个概念。
 
@@ -191,8 +196,11 @@ Boot.dev 上的[“Go Mastery”课程](https://boot.dev/course/3b39d0f6-f944-4f
 以下是您将在本课程中学到的内容:
 
 1.  数据类型和集合类型
+
 2.  打包、导入和编码基础知识
+
 3.  控制流程和方法
+
 4.  接口和并发支持
 
 在这个过程中，您还将解决 Golang 中的许多编码挑战，以便更好地学习这种编程语言。
@@ -212,21 +220,33 @@ Boot.dev 上的[“Go Mastery”课程](https://boot.dev/course/3b39d0f6-f944-4f
 其他**编程资源**您可能想查看
 
 *   [2023 年 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
+
 *   [2023 年学习 Python 的十大课程](/better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
+
 *   [面向 Java 和 DevOps 工程师的 5 门免费 Docker 课程](http://www.java67.com/2018/02/5-free-docker-courses-for-java-and-DevOps-engineers.html)
+
 *   [学习 Ruby 编程的前 5 门课程](https://www.java67.com/2018/02/5-free-ruby-and-rails-courses-to-learn-online.html)
+
 *   [学习 Java 编程的 5 门免费课程](/javarevisited/10-free-courses-to-learn-java-in-2019-22d1f33a3915)
+
 *   [2023 年学习 JavaScript 的十大课程](https://javarevisited.blogspot.com/2018/06/top-10-courses-to-learn-javascript-in.html)
+
 *   [2023 年学习 Swift 编程的前 5 门课程](https://javarevisited.blogspot.com/2019/01/top-5-ios-developer-course-to-learn-ios.html)
+
 *   [2023 年学习 Spring Boot 的 10 门课程](/javarevisited/top-10-courses-to-learn-spring-boot-in-2020-best-of-lot-6ffce88a1b6e)
+
 *   [学习 Jenkins、Docker 和 Maven 的 10 门免费课程](/javarevisited/top-10-free-courses-to-learn-maven-jenkins-and-docker-for-java-developers-51fa7a1e66f6)
+
 *   [2023 年学习 Java 编程的 10 门课程](/javarevisited/top-5-java-online-courses-for-beginners-best-of-lot-1e1e240a758)
-*   [2023 年学习 C 编程的前 5 门课程](https://javarevisited.blogspot.com/2019/11/top-5-courses-to-learn-c-programming-in.html)
 
-非常感谢您阅读这篇文章。如果你觉得这些 Golang 或 Go 编程语言课程有用且有趣，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
 
-如果你对学习 Go 编程语言感兴趣，但正在寻找免费的在线培训课程，那么你也可以在 Udemy 上查看[**get going:Golang 简介**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgetgoing%2F) 课程。这是完全免费的，你只需要一个免费的 Udemy 帐户就可以进入这个课程，现在已经有 9500 多名学生注册学习围棋了。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgetgoing%2F>  
+* [2023 年学习 C 编程的前 5 门课程](https://javarevisited.blogspot.com/2019/11/top-5-courses-to-learn-c-programming-in.html)
 
-祝 Golang 之旅一切顺利。
+非常感谢您阅读这篇文章。如果你觉得这些 `Golang` 或 `Go` 编程语言课程有用且有趣，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
+
+如果你对学习 `Go` 编程语言感兴趣，但正在寻找免费的在线培训课程，那么你也可以在 `Udemy` 上查看[get going: Golang 简介](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgetgoing%2F)课程。这是完全免费的，你只需要一个免费的 `Udemy` 帐户就可以进入这个课程，现在已经有 9500 多名学生注册学习围棋了。
+
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgetgoing%2F>
+
+祝 `Golang` 之旅一切顺利。

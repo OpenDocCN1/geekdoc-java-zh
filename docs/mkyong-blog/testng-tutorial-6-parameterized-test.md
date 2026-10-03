@@ -1,3 +1,4 @@
+
 # TestNG–参数测试(XML 和@DataProvider)
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/unittest/testng-tutorial-6-parameterized-test/>
@@ -6,12 +7,12 @@
 
 ## 1.用 XML 传递参数
 
-在这个例子中，属性 filename 从`testng.xml`传递，并通过`@Parameters`注入到方法中。
+在这个例子中，属性`filename`从`testng.xml`传递，并通过`@Parameters`注入到方法中。
 
-TestParameterXML.java
+`TestParameterXML.java`
 
 ```java
- package com.mkyong.testng.examples.parameter;
+package com.mkyong.testng.examples.parameter;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -69,22 +70,22 @@ public class TestParameterXML {
 
 	}
 
-} 
+}
 ```
 
-db.properties
+`db.properties`
 
 ```java
- jdbc.driver=com.mysql.jdbc.Driver
+jdbc.driver=com.mysql.jdbc.Driver
 jdbc.url=jdbc:mysql://localhost:3306/mkyongserver
 jdbc.username=mkyong
-jdbc.password=password 
+jdbc.password=password
 ```
 
-testng.xml
+`testng.xml`
 
 ```java
- <!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
 <suite name="test-parameter">
 
     <test name="example1">
@@ -98,25 +99,25 @@ testng.xml
 
     </test>
 
-</suite> 
+</suite>
 ```
 
 输出
 
 ```java
- dbconfig : db.properties
+dbconfig : db.properties
 poolsize : 10
 drivers : com.mysql.jdbc.Driver
 connectionURL : jdbc:mysql://localhost:3306/mkyongserver
 username : mkyong
-password : password 
+password : password
 ```
 
- ## 2.用@DataProvider 传递参数
+## 2.用@DataProvider 传递参数
 
 **2.1** 回顾一个简单的`@DataProvider`例子，传递一个`int`参数。
 
-TestParameterDataProvider.java
+`TestParameterDataProvider.java`
 
 ```java
 package com.mkyong.testng.examples.parameter;
@@ -143,23 +144,22 @@ public class TestParameterDataProvider {
 	}
 
 }
-
 ```
 
 输出
 
 ```java
- PASSED: test(10, 20)
+PASSED: test(10, 20)
 PASSED: test(100, 110)
-PASSED: test(200, 210) 
+PASSED: test(200, 210)
 ```
 
 **2.2**`@DataProvider`是传递一个`object`参数的支持。下面的例子展示了如何传递一个`Map`对象作为参数。
 
-TestParameterDataProvider.java
+`TestParameterDataProvider.java`
 
 ```java
- package com.mkyong.testng.examples.parameter;
+package com.mkyong.testng.examples.parameter;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -221,28 +221,28 @@ public class TestParameterDataProvider {
 
 	}
 
-} 
+}
 ```
 
 输出
 
 ```java
- [Key] : jdbc.url [Value] : jdbc:mysql://localhost:3306/mkyongserver
+[Key] : jdbc.url [Value] : jdbc:mysql://localhost:3306/mkyongserver
 [Key] : jdbc.username [Value] : mkyong
 [Key] : jdbc.driver [Value] : com.mysql.jdbc.Driver
 [Key] : jdbc.password [Value] : password
 PASSED: testConnection({jdbc.url=jdbc:mysql://localhost:3306/mkyongserver, 
-jdbc.username=mkyong, jdbc.driver=com.mysql.jdbc.Driver, jdbc.password=password}) 
+jdbc.username=mkyong, jdbc.driver=com.mysql.jdbc.Driver, jdbc.password=password})
 ```
 
- ## 3.@DataProvider +方法
+## 3.@DataProvider +方法
 
 这个例子向您展示了如何根据测试方法的名称来传递不同的参数。
 
-TestParameterDataProvider.java
+`TestParameterDataProvider.java`
 
 ```java
- package com.mkyong.testng.examples.parameter;
+package com.mkyong.testng.examples.parameter;
 
 import java.lang.reflect.Method;
 import org.testng.Assert;
@@ -281,26 +281,26 @@ public class TestParameterDataProvider {
 
 	}
 
-} 
+}
 ```
 
 输出
 
 ```java
- PASSED: test1(1, 1)
+PASSED: test1(1, 1)
 PASSED: test1(200, 200)
 PASSED: test2("test@gmail.com", "test@gmail.com")
-PASSED: test2("test@yahoo.com", "test@yahoo.com") 
+PASSED: test2("test@yahoo.com", "test@yahoo.com")
 ```
 
-## 4\. @DataProvider + ITestContext
+## 4. @DataProvider + ITestContext
 
 在 TestNG 中，我们可以使用`org.testng.ITestContext`来确定调用当前测试方法的运行时参数。在最后一个例子中，我们将向您展示如何根据包含的组名来传递参数。
 
-TestParameterDataProvider.java
+`TestParameterDataProvider.java`
 
 ```java
- package com.mkyong.testng.examples.parameter;
+package com.mkyong.testng.examples.parameter;
 
 import org.testng.Assert;
 import org.testng.ITestContext;
@@ -345,13 +345,13 @@ public class TestParameterDataProvider {
 
 	}
 
-} 
+}
 ```
 
-testng.xml
+`testng.xml`
 
 ```java
- <!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
 <suite name="test-parameter">
 
   <test name="example1">
@@ -369,28 +369,25 @@ testng.xml
 
   </test>
 
-</suite> 
+</suite>
 ```
 
 输出
 
 ```java
- group : groupA 
+group : groupA
 ```
 
 完成了。
 
 ## 参考
 
-1.  [TestNG @DataProvider](http://web.archive.org/web/20190228162831/http://testng.org/doc/documentation-main.html#parameters-dataproviders)
-2.  [TestNG ITestContext JavaDoc](http://web.archive.org/web/20190228162831/http://testng.org/javadocs/org/testng/ITestContext.html)
-3.  [使用 JDBC 驱动程序连接 MySQL】](http://web.archive.org/web/20190228162831/http://www.mkyong.com/jdbc/how-to-connect-to-mysql-with-jdbc-driver-java/)
+
+
+1. [TestNG @DataProvider](http://web.archive.org/web/20190228162831/http://testng.org/doc/documentation-main.html#parameters-dataproviders)
+
+2. [TestNG ITestContext JavaDoc](http://web.archive.org/web/20190228162831/http://testng.org/javadocs/org/testng/ITestContext.html)
+
+3. [使用 JDBC 驱动程序连接 MySQL](http://web.archive.org/web/20190228162831/http://www.mkyong.com/jdbc/how-to-connect-to-mysql-with-jdbc-driver-java/)
 
 [parameter test](http://web.archive.org/web/20190228162831/http://www.mkyong.com/tag/parameter-test/) [testng](http://web.archive.org/web/20190228162831/http://www.mkyong.com/tag/testng/)
-
-
-
-
-
-
-

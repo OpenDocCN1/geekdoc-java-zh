@@ -1,3 +1,4 @@
+
 # LDAP 错误代码与 JNDI 异常的映射方式
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/ldap/exceptions.html`](https://docs.oracle.com/javase/tutorial/jndi/ldap/exceptions.html)

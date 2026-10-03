@@ -1,8 +1,9 @@
-# 阿帕奇卡夫卡与春天简介
+
+## 阿帕奇卡夫卡与春天简介
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-kafka>
 
-## 1。概述
+### 1. 概述
 
 [Apache Kafka](https://web.archive.org/web/20220712173816/https://kafka.apache.org/) 是一个分布式容错流处理系统。
 
@@ -10,17 +11,17 @@
 
 Spring Kafka 带来了简单而典型的 Spring 模板编程模型，带有一个`KafkaTemplate`和通过`@KafkaListener`注释的消息驱动的 POJOs。
 
-## 延伸阅读:
+#### 延伸阅读:
 
-## [用 Flink 和 Kafka 搭建数据管道](/web/20220712173816/https://www.baeldung.com/kafka-flink-data-pipeline)
+##### [用 Flink 和 Kafka 搭建数据管道](/web/20220712173816/https://www.baeldung.com/kafka-flink-data-pipeline)
 
 Learn how to process stream data with Flink and Kafka[Read more](/web/20220712173816/https://www.baeldung.com/kafka-flink-data-pipeline) →
 
-## [Kafka 与 MQTT 和 MongoDB 的连接示例](/web/20220712173816/https://www.baeldung.com/kafka-connect-mqtt-mongodb)
+##### [Kafka 与 MQTT 和 MongoDB 的连接示例](/web/20220712173816/https://www.baeldung.com/kafka-connect-mqtt-mongodb)
 
 Have a look at a practical example using Kafka connectors.[Read more](/web/20220712173816/https://www.baeldung.com/kafka-connect-mqtt-mongodb) →
 
-## 2。安装和设置
+### 2. 安装和设置
 
 下载安装 Kafka 请参考官方指南[这里](https://web.archive.org/web/20220712173816/https://kafka.apache.org/quickstart)。
 
@@ -40,7 +41,7 @@ Have a look at a practical example using Kafka connectors.[Read more](/web/20220
 
 本文假设服务器使用默认配置启动，并且没有更改服务器端口。
 
-## 3.配置主题
+### 3. 配置主题
 
 以前，我们在 Kafka 中运行命令行工具来创建主题:
 
@@ -76,7 +77,7 @@ public class KafkaTopicConfig {
 }
 ```
 
-## 4。生成消息
+### 4. 生成消息
 
 要创建消息，我们首先需要配置一个 [`ProducerFactory`](https://web.archive.org/web/20220712173816/https://docs.spring.io/spring-kafka/api/org/springframework/kafka/core/ProducerFactory.html) 。这设定了创建卡夫卡 [`Producer`](https://web.archive.org/web/20220712173816/https://kafka.apache.org/0100/javadoc/org/apache/kafka/clients/producer/Producer.html) 实例的策略。
 
@@ -84,7 +85,7 @@ public class KafkaTopicConfig {
 
 实例是线程安全的。因此，在整个应用程序上下文中使用单个实例会带来更高的性能。因此，`KakfaTemplate`实例也是线程安全的，建议使用一个实例。
 
-### 4.1。生产者配置
+#### 4.1. 生产者配置
 
 ```java
 @Configuration
@@ -112,7 +113,7 @@ public class KafkaProducerConfig {
 }
 ```
 
-### 4.2。发布消息
+#### 4.2. 发布消息
 
 我们可以使用`KafkaTemplate`类发送消息:
 
@@ -153,9 +154,9 @@ public void sendMessage(String message) {
 }
 ```
 
-## 5。消费信息
+### 5. 消费信息
 
-### 5.1。消费者配置
+#### 5.1. 消费者配置
 
 对于消费消息，我们需要配置一个`[ConsumerFactory](https://web.archive.org/web/20220712173816/https://docs.spring.io/autorepo/docs/spring-kafka-dist/1.1.3.RELEASE/api/org/springframework/kafka/core/ConsumerFactory.html)`和一个 [`KafkaListenerContainerFactory`](https://web.archive.org/web/20220712173816/https://docs.spring.io/autorepo/docs/spring-kafka-dist/1.1.3.RELEASE/api/org/springframework/kafka/config/KafkaListenerContainerFactory.html) 。一旦这些 bean 在 Spring bean 工厂中可用，就可以使用 [`@KafkaListener`](https://web.archive.org/web/20220712173816/https://docs.spring.io/autorepo/docs/spring-kafka-dist/1.1.3.RELEASE/api/org/springframework/kafka/annotation/KafkaListener.html) 注释来配置基于 POJO 的消费者。
 
@@ -196,7 +197,7 @@ public class KafkaConsumerConfig {
 }
 ```
 
-### 5.2。消费信息
+#### 5.2. 消费信息
 
 ```java
 @KafkaListener(topics = "topicName", groupId = "foo")
@@ -224,21 +225,23 @@ public void listenWithHeaders(
 }
 ```
 
-### 5.3。消费来自特定分区的消息
+#### 5.3. 消费来自特定分区的消息
 
 注意，我们创建的主题`baeldung`只有一个分区。
 
 然而，对于具有多个分区的主题，`@KafkaListener`可以显式地订阅具有初始偏移的主题的特定分区:
 
+
+
 ```java
 @KafkaListener(
   topicPartitions = @TopicPartition(topic = "topicName",
   partitionOffsets = {
-    @PartitionOffset(partition = "0", initialOffset = "0"), 
+    @PartitionOffset(partition = "0", initialOffset = "0"),
     @PartitionOffset(partition = "3", initialOffset = "0")}),
   containerFactory = "partitionsKafkaListenerContainerFactory")
 public void listenToPartition(
-  @Payload String message, 
+  @Payload String message,
   @Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition) {
       System.out.println(
         "Received Message: " + message"
@@ -248,16 +251,16 @@ public void listenToPartition(
 
 由于这个监听器中的`initialOffset`已经被设置为 0，所以每次初始化这个监听器时，来自分区 0 和 3 的所有先前使用的消息都将被重新使用。
 
-如果我们不需要设置偏移量，我们可以使用`@TopicPartition`注释的`partitions`属性只设置没有偏移量的分区:
+如果我们不需要设置偏移量，我们可以使用`@TopicPartition`注释的`partitions`属性，只设置没有偏移量的分区：
 
 ```java
-@KafkaListener(topicPartitions 
+@KafkaListener(topicPartitions
   = @TopicPartition(topic = "topicName", partitions = { "0", "1" }))
 ```
 
-### 5.4。为监听器添加消息过滤器
+### 5.4 为监听器添加消息过滤器
 
-我们可以通过添加自定义过滤器来配置侦听器，以使用特定类型的消息。这可以通过将`[RecordFilterStrategy](https://web.archive.org/web/20220712173816/https://docs.spring.io/spring-kafka/api/org/springframework/kafka/listener/adapter/RecordFilterStrategy.html)`设置为`KafkaListenerContainerFactory`来实现:
+我们可以通过添加自定义过滤器来配置侦听器，以使用特定类型的消息。这可以通过将`RecordFilterStrategy`设置为`KafkaListenerContainerFactory`来实现：
 
 ```java
 @Bean
@@ -273,24 +276,24 @@ public ConcurrentKafkaListenerContainerFactory<String, String>
 }
 ```
 
-然后，我们可以配置一个侦听器来使用这个容器工厂:
+然后，我们可以配置一个侦听器来使用这个容器工厂：
 
 ```java
 @KafkaListener(
-  topics = "topicName", 
+  topics = "topicName",
   containerFactory = "filterKafkaListenerContainerFactory")
 public void listenWithFilter(String message) {
     System.out.println("Received Message in filtered listener: " + message);
 }
 ```
 
-在这个监听器中，所有与过滤器匹配的**消息都将被丢弃。**
+在这个监听器中，所有与过滤器匹配的消息都将被丢弃。
 
-## 6。定制消息转换器
+## 6. 定制消息转换器
 
 到目前为止，我们只讨论了将字符串作为消息发送和接收。然而，我们也可以发送和接收定制的 Java 对象。这需要在`ProducerFactory`中配置适当的串行化器，在`ConsumerFactory`中配置去串行化器。
 
-让我们看一个简单的 bean 类`,`，我们将把它作为消息发送:
+让我们看一个简单的 bean 类`Greeting`，我们将把它作为消息发送：
 
 ```java
 public class Greeting {
@@ -302,18 +305,18 @@ public class Greeting {
 }
 ```
 
-### 6.1。生成自定义消息
+### 6.1 生成自定义消息
 
-在这个例子中，我们将使用`[JsonSerializer](https://web.archive.org/web/20220712173816/https://docs.spring.io/spring-kafka/api/org/springframework/kafka/support/serializer/JsonSerializer.html)`。
+在这个例子中，我们将使用`JsonSerializer`。
 
-让我们看看`ProducerFactory`和 `KafkaTemplate`的代码:
+让我们看看`ProducerFactory`和`KafkaTemplate`的代码：
 
 ```java
 @Bean
 public ProducerFactory<String, Greeting> greetingProducerFactory() {
     // ...
     configProps.put(
-      ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, 
+      ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
       JsonSerializer.class);
     return new DefaultKafkaProducerFactory<>(configProps);
 }
@@ -324,15 +327,15 @@ public KafkaTemplate<String, Greeting> greetingKafkaTemplate() {
 }
 ```
 
-我们可以使用这个新的`KafkaTemplate`来发送`Greeting`消息:
+我们可以使用这个新的`KafkaTemplate`来发送`Greeting`消息：
 
 ```java
 kafkaTemplate.send(topicName, new Greeting("Hello", "World"));
 ```
 
-### 6.2。消费自定义消息
+### 6.2 消费自定义消息
 
-类似地，让我们修改`ConsumerFactory`和`KafkaListenerContainerFactory`来正确地反序列化问候消息:
+类似地，让我们修改`ConsumerFactory`和`KafkaListenerContainerFactory`来正确地反序列化问候消息：
 
 ```java
 @Bean
@@ -340,12 +343,12 @@ public ConsumerFactory<String, Greeting> greetingConsumerFactory() {
     // ...
     return new DefaultKafkaConsumerFactory<>(
       props,
-      new StringDeserializer(), 
+      new StringDeserializer(),
       new JsonDeserializer<>(Greeting.class));
 }
 
 @Bean
-public ConcurrentKafkaListenerContainerFactory<String, Greeting> 
+public ConcurrentKafkaListenerContainerFactory<String, Greeting>
   greetingKafkaListenerContainerFactory() {
 
     ConcurrentKafkaListenerContainerFactory<String, Greeting> factory =
@@ -355,11 +358,11 @@ public ConcurrentKafkaListenerContainerFactory<String, Greeting>
 }
 ```
 
-spring-kafka JSON 序列化器和反序列化器使用 [Jackson](/web/20220712173816/https://www.baeldung.com/jackson) 库，这也是 spring-kafka 项目的可选 Maven 依赖项。
+Spring-Kafka JSON 序列化器和反序列化器使用 Jackson 库，这也是 Spring-Kafka 项目的可选 Maven 依赖项。
 
-所以，让我们把它添加到我们的`pom.xml`:
+所以，让我们把它添加到我们的`pom.xml`：
 
-```java
+```xml
 <dependency>
     <groupId>com.fasterxml.jackson.core</groupId>
     <artifactId>jackson-databind</artifactId>
@@ -367,23 +370,23 @@ spring-kafka JSON 序列化器和反序列化器使用 [Jackson](/web/2022071217
 </dependency>
 ```
 
-不要用杰克逊的最新版本，建议用春天-卡夫卡的`pom.xml`加的版本。
+不要用 Jackson 的最新版本，建议用 Spring-Kafka 的`pom.xml`中添加的版本。
 
-最后，我们需要编写一个监听器来使用`Greeting`消息:
+最后，我们需要编写一个监听器来使用`Greeting`消息：
 
 ```java
 @KafkaListener(
-  topics = "topicName", 
+  topics = "topicName",
   containerFactory = "greetingKafkaListenerContainerFactory")
 public void greetingListener(Greeting greeting) {
     // process greeting message
 }
 ```
 
-## 7 .**。结论**
+## 7. 结论
 
 在本文中，我们介绍了 Apache Kafka 的 Spring 支持的基础知识。我们简单看了一下用于发送和接收消息的类。
 
-本文的完整源代码可以在 GitHub 上找到[。](https://web.archive.org/web/20220712173816/https://github.com/eugenp/tutorials/tree/master/spring-kafka)
+本文的完整源代码可以在 GitHub 上找到。
 
 在运行代码之前，请确保 Kafka 服务器正在运行，并且主题是手动创建的。

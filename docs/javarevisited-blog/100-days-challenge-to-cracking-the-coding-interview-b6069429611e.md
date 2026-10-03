@@ -1,8 +1,9 @@
+
 # 第 27 天——棒球比赛
 
 > 原文：<https://medium.com/javarevisited/100-days-challenge-to-cracking-the-coding-interview-b6069429611e?source=collection_archive---------1----------------------->
 
-## **亚马逊 100 天**
+## 亚马逊 100 天
 
 [**亚马逊 100 天—第 27 天—棒球赛**](https://leetcode.com/problems/baseball-game/)
 

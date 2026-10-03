@@ -1,3 +1,4 @@
+
 # 2023 年深度学习的 8 门最佳 PyTorch 和 Keras 课程
 
 > 原文：<https://medium.com/javarevisited/5-best-pytorch-and-keras-courses-for-deep-learning-in-2021-c9ba377b1170?source=collection_archive---------0----------------------->
@@ -35,7 +36,9 @@ Pytorch 是一个深度学习库，由科技巨头脸书开发，用于构建机
 您将在本课程中学到的东西:
 
 *   将 Keras API 与 TensorFlow 连接，构建机器学习应用。
+
 *   使用 Google collab 和 TensorBoard 来可视化您的深度学习模型。
+
 *   使用 Matplotlib 和 seaborn 实现数据可视化。
 
 您将从 [TensorFlow](https://becominghuman.ai/top-10-courses-to-learn-tensorflow-for-machine-learning-in-2020-39a31e7cd84b) 机器学习库概念开始，因为 Keras 只是 TensorFlow 的一个接口，它将指导您如何使用 Keras APIs 对图像进行分类，预测未来数据，并像人类一样使用 RNN 技术生成文本。
@@ -55,10 +58,15 @@ Pytorch 是一个深度学习库，由科技巨头脸书开发，用于构建机
 以下是您将在本课程中学到的重要内容:
 
 1.  人工神经网络/深度神经网络
+
 2.  时间数列预测法
+
 3.  计算机视觉
+
 4.  如何构建深度强化学习炒股机器人
+
 5.  生成对抗网络
+
 6.  推荐系统
 
 本课程是为想快速学习的人设计的，但也有“深入”部分，以防你想更深入地挖掘理论(如损失函数)和不同类型的梯度下降方法。
@@ -90,7 +98,9 @@ Pytorch 是一个深度学习库，由科技巨头脸书开发，用于构建机
 以下是您将在本课程中学到的重要知识:
 
 *   [深度学习](https://www.java67.com/2019/01/5-free-courses-to-learn-machine-and-deep-learning-in-2019.html)和 [AI](https://www.java67.com/2019/11/top-5-artificial-intelligence-courses.html) 的一些基本概念。
+
 *   使用 Keras 创建深度学习模型。
+
 *   查看其他不同的深度学习库。
 
 **这里是加入本次深度学习课程**——[深度学习简介](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fintroduction-to-deep-learning-with-keras)的链接
@@ -108,107 +118,111 @@ Pytorch 是一个深度学习库，由科技巨头脸书开发，用于构建机
 您将在本课程中学习到:
 
 *   PyTorch 图书馆介绍。
+
 *   创建不同的回归模型。
+
 *   让你的预测更准确。
 
 该程序的另一个独特之处在于，它将带您深入了解如何使用 PyTorch 构建逻辑回归等模型的综合方法，以及如何使用漏失层使预测更加准确。
 
 **这里是加入 PyTorch 课程**——[用 Python 和 PyTorch 进行深度学习](https://www.awin1.com/cread.php?awinmid=6798&awinaffid=631878&clickref=&p=%5B%5Bhttps%3A%2F%2Fwww.edx.org%2Fcourse%2Fdeep-learning-with-python-and-pytorch)的链接
 
+
+
 [![](img/d0dc11ae3e54f113a4e3d414b189fbea.png)](https://www.awin1.com/cread.php?awinmid=6798&awinaffid=631878&clickref=&p=%5B%5Bhttps%3A%2F%2Fwww.edx.org%2Fcourse%2Fdeep-learning-with-python-and-pytorch)
 
-## 6.[py torch 基础](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Ffoundations-pytorch)【plural sight 最佳课程】
+## 6. [PyTorch 基础](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Ffoundations-pytorch)【Pluralsight 最佳课程】
 
 这是 2023 年学习 PyTorch 最好的 Pluralsight 课程。这个在线培训课程将从简单的[深度学习](/javarevisited/top-5-advanced-deep-learning-and-neural-network-courses-to-learn-in-2020-a273f5eddca5)术语开始，如神经元和激活功能，然后带您浏览实际例子。
 
-在本课程中，您将学到:
+在本课程中，您将学到：
 
-*   深度学习概念。
-*   构建 PyTorch 模型。
-*   优化你的[神经网络](https://javarevisited.blogspot.com/2019/08/top-5-courses-to-learn-deep-learning.html)。
+- 深度学习概念。
+- 构建 PyTorch 模型。
+- 优化你的[神经网络](https://javarevisited.blogspot.com/2019/08/top-5-courses-to-learn-deep-learning.html)。
 
 您将学习如何在 PyTorch 模型中选择最佳参数值，并且您应该训练您的神经网络，然后实现一些技术，如梯度下降。
 
-**这里是加入本课程**—[py torch 基础](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Ffoundations-pytorch)的链接
+**这里是加入本课程** — [PyTorch 基础](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Ffoundations-pytorch) 的链接
 
 [![](img/3ef436840c2284976df54789596419b6.png)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Ffoundations-pytorch)
 
-顺便说一句，你需要一个 [Pluralsight 会员](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn)才能参加这个课程，费用大约是每月 29 美元或每年 299 美元。会员资格完全值得你的时间和金钱，我强烈推荐每一个程序员，如果他们有能力让自己跟上时代的话。你也可以使用他们的 [**10 天免费试用**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 来免费获取这门课程。
+顺便说一句，你需要一个 [Pluralsight 会员](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 才能参加这个课程，费用大约是每月 29 美元或每年 299 美元。会员资格完全值得你的时间和金钱，我强烈推荐每一个程序员，如果他们有能力让自己跟上时代的话。你也可以使用他们的 [**10 天免费试用**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 来免费获取这门课程。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>
 
-## 7.使用 PyTorch 制作您的第一个 GAN【教育性最佳课程】
+## 7. 使用 PyTorch 制作您的第一个 GAN【教育性最佳课程】
 
-如果您正在寻找一个令人敬畏的、动手的、基于文本的、交互式的课程来学习 PyTorch，那么这个教育课程就是为您学习 PyTorch 和使用行业标准工具构建 gan 而设计的。
+如果您正在寻找一个令人敬畏的、动手的、基于文本的、交互式的课程来学习 PyTorch，那么这个教育课程就是为您学习 PyTorch 和使用行业标准工具构建 GAN 而设计的。
 
 如果你不知道，Educative 是一个新的在线学习平台，它允许你在浏览器中运行代码，使学习更容易，因为你不需要下载任何软件或设置你的开发环境。
 
-本课程介绍了生成性对抗网络(GANs)和使用 PyTorch 制作自己的实用分步教程。
+本课程介绍了生成性对抗网络（GANs）和使用 PyTorch 制作自己的实用分步教程。
 
-以下是您将在本课程中学到的关键技能:
+以下是您将在本课程中学到的关键技能：
 
-1.  Pytorch 基础
-2.  如何用 PyTorch 制作神经网络
-3.  细化神经网络输出
-4.  CUDA 基础
-5.  甘的基本思想
-6.  使用 GAN 学习简单的 1010 模式
-7.  用 GAN 学习手写数字
-8.  利用 GAN 学习人脸
-9.  卷积高斯条件高斯
+1. PyTorch 基础
+2. 如何用 PyTorch 制作神经网络
+3. 细化神经网络输出
+4. CUDA 基础
+5. GAN 的基本思想
+6. 使用 GAN 学习简单的 1010 模式
+7. 用 GAN 学习手写数字
+8. 利用 GAN 学习人脸
+9. 卷积高斯条件高斯
 
-总的来说，这是一个很好的课程，可以用 Pytorch 制作您的第一个 GAN，并抓住机会在机器学习的前沿工作。
+总的来说，这是一个很好的课程，可以用 PyTorch 制作您的第一个 GAN，并抓住机会在机器学习的前沿工作。
 
-**这里是加入这个课程的链接**——[用 PyTorch 做你的第一个 GAN](https://www.educative.io/courses/make-your-first-gan-pytorch?affiliate_id=5073518643380224)。
+**这里是加入这个课程的链接** — [用 PyTorch 做你的第一个 GAN](https://www.educative.io/courses/make-your-first-gan-pytorch?affiliate_id=5073518643380224)。
 
 [![](img/9f0e1f643d1e814127ce82121988b62c.png)](https://www.educative.io/courses/make-your-first-gan-pytorch?affiliate_id=5073518643380224)
 
-而且，如果你觉得教育平台和他们的互动课程很有用，你还可以获得一个 [**教育订阅**](https://www.educative.io/subscription?affiliate_id=5073518643380224) ，每月只需 14.9 美元，不仅可以访问这门课程，还可以访问他们的 210 多门课程。非常划算，非常适合准备编码面试。
+而且，如果你觉得教育平台和他们的互动课程很有用，你还可以获得一个 [**教育订阅**](https://www.educative.io/subscription?affiliate_id=5073518643380224)，每月只需 14.9 美元，不仅可以访问这门课程，还可以访问他们的 210 多门课程。非常划算，非常适合准备编码面试。
 
-<https://www.educative.io/subscription?affiliate_id=5073518643380224>  
+<https://www.educative.io/subscription?affiliate_id=5073518643380224>
 
-## 8.[Python 中的现代深度学习](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdata-science-deep-learning-in-theano-tensorflow%2F)【Udemy 课程】
+## 8. [Python 中的现代深度学习](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdata-science-deep-learning-in-theano-tensorflow%2F)【Udemy 课程】
 
 如果你想在一门课程中学习 PyTorch 和 Keras，这绝对是适合你的课程。它将向你展示如何使用这两个不同的和其他的[深度学习库](https://www.java67.com/2019/01/5-free-courses-to-learn-machine-and-deep-learning-in-2019.html)如 Theano 和 CNTK。
 
 你将看到如何创建像面部表情识别这样的程序，以及权重初始化和批量归一化等许多技术，使你的模型更加准确，但该课程需要一些深度学习如何工作的基本知识。
 
-你将在本课程中学到:
+你将在本课程中学到：
 
-*   PyTorch 和 Keras 旁边的许多深度学习库。
-*   建立一个面部表情识别程序。
-*   让你的预测更准确的技巧。
+- PyTorch 和 Keras 旁边的许多深度学习库。
+- 建立一个面部表情识别程序。
+- 让你的预测更准确的技巧。
 
-**这里是加入本课程的链接**—[Python 中的现代深度学习](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdata-science-deep-learning-in-theano-tensorflow%2F)
+**这里是加入本课程的链接** — [Python 中的现代深度学习](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdata-science-deep-learning-in-theano-tensorflow%2F)
 
 [![](img/b08da2b58efdabba7fbe1287d5ff66fd.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdata-science-deep-learning-in-theano-tensorflow%2F)
 
-以上就是 PyTorch 和 Keras 上的**最佳深度学习课程。**虽然它们都涵盖了 PyTorch 和 Keras 的基础知识，但其中一些对你来说可能看起来有点深，有点难，有些数学比你预期的要多，但我保证这些课程会让你了解深度学习和人工智能的世界。
+以上就是 PyTorch 和 Keras 上的**最佳深度学习课程。** 虽然它们都涵盖了 PyTorch 和 Keras 的基础知识，但其中一些对你来说可能看起来有点深，有点难，有些数学比你预期的要多，但我保证这些课程会让你了解深度学习和人工智能的世界。
 
-这些也是从 [Udemy](/javarevisited/10-best-udemy-online-courses-for-java-developers-4c9ab70cd01f) 、 [Pluralsight](/javarevisited/top-10-pluralsight-courses-to-learn-programming-and-software-development-during-covid-19-stay-at-30b7d8a4f88f) 和 [edX](/javarevisited/10-free-best-edx-certifications-and-courses-to-learn-online-3473d466f968) 学习 PyTorch 和 Keras 的*最佳在线培训课程，你可以加入其中任何一个课程，深入了解这些基本的机器学习库。
+这些也是从 [Udemy](/javarevisited/10-best-udemy-online-courses-for-java-developers-4c9ab70cd01f)、[Pluralsight](/javarevisited/top-10-pluralsight-courses-to-learn-programming-and-software-development-during-covid-19-stay-at-30b7d8a4f88f) 和 [edX](/javarevisited/10-free-best-edx-certifications-and-courses-to-learn-online-3473d466f968) 学习 PyTorch 和 Keras 的*最佳在线培训课程，你可以加入其中任何一个课程，深入了解这些基本的机器学习库。
 
-其他有用的**数据科学和机器学习**资源*
+其他有用的**数据科学和机器学习**资源：
 
-*   [2023 年学习 Python 的 5 大课程](http://javarevisited.blogspot.sg/2018/03/top-5-courses-to-learn-python-in-2018.html)
-*   [从哈佛和 IBM 学习数据科学的 9 门课程](https://becominghuman.ai/9-data-science-and-machine-learning-courses-by-harvard-ibm-udemy-and-others-12a0c7c23ec1)
-*   [免费学习 Python 编码的五大网站](https://javarevisited.blogspot.com/2019/09/5-websites-to-learn-python-for-free.html)
-*   [5 门免费课程学习机器学习的 R 编程](http://www.java67.com/2018/09/top-5-free-R-programming-courses-for-Data-Science-Machine-Learning-Programmers.html)
-*   [从零开始学习 Python 的前 5 本书](https://javarevisited.blogspot.com/2019/07/top-5-books-to-learn-python-in-2019.html)
-*   [2023 年学习数据科学的 10 门 Coursera 课程](https://javarevisited.blogspot.com/2020/08/top-10-coursera-certifications-to-learn-Data-Science-Visualization-and-Data-Analysis.html#axzz6XbrCHCk9)
-*   [学习熊猫数据分析的 5 门最佳课程](https://becominghuman.ai/5-best-courses-to-learn-pythons-pandas-libary-for-data-analysis-and-data-science-34b62abb0e96)
-*   [为了更好地学习，你可以做的 8 个 Python 项目](/@javinpaul/8-projects-you-can-buil-to-learn-python-in-2020-251dd5350d56)
-*   [排名前五的数据科学和机器学习课程](https://hackernoon.com/top-5-data-science-and-machine-learning-course-for-programmers-e724cfb9940a)
-*   [前 5 名张量流和机器学习课程](https://hackernoon.com/top-5-tensorflow-and-ml-courses-for-programmers-8b30111cad2c)
-*   [8 大 Python 机器学习库](https://javarevisited.blogspot.com/2018/10/top-8-python-libraries-for-data-science-machine-learning.html)
-*   [9 门学习 PyTorch、Keras、Sci-kit 和 MatPlotLib 的课程](https://becominghuman.ai/10-free-courses-to-learn-python-machine-learning-libraries-scikit-learn-numpy-pandas-keras-3c77ba1a6907)
-*   [2023 年程序员可以学习的 10 项技术](http://www.java67.com/2018/01/top-10-web-mobile-and-big-data-framework-libraries-technologies-programmers-should-learn-in-2018.html)
-*   [2023 年学习 Python 的 5 门免费课程](http://www.java67.com/2018/02/5-free-python-online-courses-for-beginners.html)
-*   [日本黄瓜农民如何使用深度学习和 TensorFlow](https://cloud.google.com/blog/products/gcp/how-a-japanese-cucumber-farmer-is-using-deep-learning-and-tensorflow)
-*   每个程序员都应该知道的 10 件事
-*   [学习数据科学数学的 5 门最佳课程](/javarevisited/5-best-mathematics-and-statistics-courses-for-data-science-and-machine-learning-programmers-bf4c4f34e288)
+- [2023 年学习 Python 的 5 大课程](http://javarevisited.blogspot.sg/2018/03/top-5-courses-to-learn-python-in-2018.html)
+- [从哈佛和 IBM 学习数据科学的 9 门课程](https://becominghuman.ai/9-data-science-and-machine-learning-courses-by-harvard-ibm-udemy-and-others-12a0c7c23ec1)
+- [免费学习 Python 编码的五大网站](https://javarevisited.blogspot.com/2019/09/5-websites-to-learn-python-for-free.html)
+- [5 门免费课程学习机器学习的 R 编程](http://www.java67.com/2018/09/top-5-free-R-programming-courses-for-Data-Science-Machine-Learning-Programmers.html)
+- [从零开始学习 Python 的前 5 本书](https://javarevisited.blogspot.com/2019/07/top-5-books-to-learn-python-in-2019.html)
+- [2023 年学习数据科学的 10 门 Coursera 课程](https://javarevisited.blogspot.com/2020/08/top-10-coursera-certifications-to-learn-Data-Science-Visualization-and-Data-Analysis.html#axzz6XbrCHCk9)
+- [学习 Pandas 数据分析的 5 门最佳课程](https://becominghuman.ai/5-best-courses-to-learn-pythons-pandas-libary-for-data-analysis-and-data-science-34b62abb0e96)
+- [为了更好地学习，你可以做的 8 个 Python 项目](/@javinpaul/8-projects-you-can-buil-to-learn-python-in-2020-251dd5350d56)
+- [排名前五的数据科学和机器学习课程](https://hackernoon.com/top-5-data-science-and-machine-learning-course-for-programmers-e724cfb9940a)
+- [前 5 名 TensorFlow 和机器学习课程](https://hackernoon.com/top-5-tensorflow-and-ml-courses-for-programmers-8b30111cad2c)
+- [8 大 Python 机器学习库](https://javarevisited.blogspot.com/2018/10/top-8-python-libraries-for-data-science-machine-learning.html)
+- [9 门学习 PyTorch、Keras、Sci-kit 和 MatPlotLib 的课程](https://becominghuman.ai/10-free-courses-to-learn-python-machine-learning-libraries-scikit-learn-numpy-pandas-keras-3c77ba1a6907)
+- [2023 年程序员可以学习的 10 项技术](http://www.java67.com/2018/01/top-10-web-mobile-and-big-data-framework-libraries-technologies-programmers-should-learn-in-2018.html)
+- [2023 年学习 Python 的 5 门免费课程](http://www.java67.com/2018/02/5-free-python-online-courses-for-beginners.html)
+- [日本黄瓜农民如何使用深度学习和 TensorFlow](https://cloud.google.com/blog/products/gcp/how-a-japanese-cucumber-farmer-is-using-deep-learning-and-tensorflow)
+- 每个程序员都应该知道的 10 件事
+- [学习数据科学数学的 5 门最佳课程](/javarevisited/5-best-mathematics-and-statistics-courses-for-data-science-and-machine-learning-programmers-bf4c4f34e288)
 
 感谢您阅读本文。如果你觉得这些*最好的 PyTorch 和 Keras 在线课程*有用，请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
-**P. S. —** 如果你有兴趣学习 PyTorch 和 Keras，并寻找免费的在线培训课程，你也可以在 Udemy 上查看这个针对初学者的 [**深度学习 py torch**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeep-learning-with-pytorch-for-beginners-part-1%2F)免费课程。这是完全免费的，你只需要一个免费的 Udemy 账户就可以加入这个课程。
+**P. S. —** 如果你有兴趣学习 PyTorch 和 Keras，并寻找免费的在线培训课程，你也可以在 Udemy 上查看这个针对初学者的 [**深度学习 PyTorch**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeep-learning-with-pytorch-for-beginners-part-1%2F) 免费课程。这是完全免费的，你只需要一个免费的 Udemy 账户就可以加入这个课程。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeep-learning-with-pytorch-for-beginners-part-1%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeep-learning-with-pytorch-for-beginners-part-1%2F>

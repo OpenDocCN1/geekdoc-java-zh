@@ -1,4 +1,5 @@
-# 十一、11\. Java NIO: Non-blocking Server 非阻塞服务器
+
+# 十一、Java NIO: Non-blocking Server 非阻塞服务器
 
 > 原文链接：[`tutorials.jenkov.com/java-nio/non-blocking-server.html`](http://tutorials.jenkov.com/java-nio/non-blocking-server.html)
 
@@ -6,7 +7,7 @@
 
 查找关于设计非阻塞服务的相关资料是比较难的，本文提出的解决方案也只能是基于笔者个人的工作经验，构思。如果你有其他的解决方案或者是更好的点子，那么还请不吝赐教。你可以在文章下方的评论区回复，或者可以给我发送邮件，也可以直接在[Twitter](https://twitter.com/jjenkov)上联系我。
 
-虽然本文介绍的一些点子是为 Java NIO 设计的，但是我相信这些思路同样适用于其他编程语言，只要他们也存在和 Selector 类似结构，概念。就目前我的了解来说，这些结构底层 OS 提供的，所以基本上你可以运用到其他编程语言中去。
+虽然本文介绍的一些点子是为 Java NIO 设计的，但是我相信这些思路同样适用于其他编程语言，只要他们也存在和 `Selector` 类似结构，概念。就目前我的了解来说，这些结构底层 OS 提供的，所以基本上你可以运用到其他编程语言中去。
 
 ## 非阻塞服务-GitHub 源码仓（Non-blocking Server - GitHub Repository）
 
@@ -22,19 +23,19 @@
 
 **图片 11.1** non-blocking-server-1
 
-我们的组件（Component）通过 Selector 检查当前 Channel 是否有数据需要写入。此时 component 读入数据，并且根据输入的数据 input 对外提供数据输出 output。这个对外的数据输出 output 被写到了另一个 Channel 中。
+我们的组件（Component）通过 `Selector` 检查当前 `Channel` 是否有数据需要写入。此时 component 读入数据，并且根据输入的数据 input 对外提供数据输出 output。这个对外的数据输出 output 被写到了另一个 `Channel` 中。
 
 一个非阻塞的 IO 管道不必同时需要读和写数据，通常来说有些管道只需要读数据，而另一些管道则只需写数据。
 
 上面的这幅流程图仅仅展示了一个组件。实际上一个管道可能存在多个 component 在处理输入数据。管道的长度取决于管道具体要做的事情。
 
-当然一个非阻塞的 IO 管道他也可以同时从多个 Channel 中读取数据，例如同时冲多个 SocketChannel 中读取数据；
+当然一个非阻塞的 IO 管道他也可以同时从多个 `Channel` 中读取数据，例如同时冲多个 `SocketChannel` 中读取数据；
 
-上面的流程图实际上被简化了，图中的 Component 实际上负责初始化 Selector，从 Channel 中读取数据，而不是由 Channel 往 Selector 压如数据（push），这是简化的上图容易给人带来的误解。
+上面的流程图实际上被简化了，图中的 Component 实际上负责初始化 `Selector`，从 `Channel` 中读取数据，而不是由 `Channel` 往 `Selector` 压如数据（push），这是简化的上图容易给人带来的误解。
 
 ## 非阻塞和阻塞通道比较（Non-blocking vs. Blocking IO Pipelines）
 
-非阻塞 IO 管道和阻塞 IO 管道之间最大的区别是他们各自如何从 Channel（套接字 socket 或文件 file）读写数据。
+非阻塞 IO 管道和阻塞 IO 管道之间最大的区别是他们各自如何从 `Channel`（套接字 socket 或文件 file）读写数据。
 
 IO 管道通常直接从流中（来自于 socket 活 file 的流）读取数据，然后把数据分割为连续的消息。这个处理与我们读取流信息，用 tokenizer 进行解析非常相似。不同的是我们在这里会把数据流分割为更大一些的消息块。我把这个过程叫做 Message Reader.下面是一张说明的插图：
 
@@ -42,7 +43,7 @@ IO 管道通常直接从流中（来自于 socket 活 file 的流）读取数据
 
 **图片 11.2** non-blocking-server-2.png
 
-一个阻塞 IO 管道的使用可以和输入流一样调用，每次从 Channel 中读取一个字节的数据，阻塞自身直到有数据可读。这个流程就是一个阻塞的 Messsage Reader 实现。
+一个阻塞 IO 管道的使用可以和输入流一样调用，每次从 `Channel` 中读取一个字节的数据，阻塞自身直到有数据可读。这个流程就是一个阻塞的 Messsage Reader 实现。
 
 使用阻塞 IO 大大简化了 Message Reader 的实现成本。阻塞的 Message Reader 无需关注没有数据返回的情形，无需关注返回部分数据或者数据解析需要被复用的问题。
 
@@ -68,7 +69,7 @@ IO 管道通常直接从流中（来自于 socket 活 file 的流）读取数据
 
 一个非阻塞的 IO 通道可以用单线程读取多个数据流。这个前提是相关的流可以切换为非阻塞模式（并不是所有流都可以以非阻塞形式操作）。在非阻塞模式下，读取一个流可能返回 0 个或多个字节。如果流还没有可供读取的数据那么就会返回 0，其他大于 1 的返回都表明这是实际读取到的数据；
 
-为了避开没有数据可读的流，我们结合 Java NIO 中的 Selector。一个 Selector 可以注册多个 SelectableChannel 实例。当我们调用 select()或 selectorNow()方法时 Selector 会返回一个有数据可读的 SelectableChannel 实例。这个设计可以如下插图：
+为了避开没有数据可读的流，我们结合 Java NIO 中的 `Selector`。一个 `Selector` 可以注册多个 `SelectableChannel` 实例。当我们调用 `select()`或 `selectorNow()`方法时 `Selector` 会返回一个有数据可读的 `SelectableChannel` 实例。这个设计可以如下插图：
 
 ![non-blocking-server-4.png](http://tutorials.jenkov.com/images/java-nio/non-blocking-server-4.png)
 
@@ -76,7 +77,7 @@ IO 管道通常直接从流中（来自于 socket 活 file 的流）读取数据
 
 ## 读取部分信息(Reading Partial Messages)
 
-当我们冲 SelectableChannel 中读取一段数据后，我们并不知道这段数据是否是完整的一个 message。因为一个数据段可能包含部分 message，也就是说即可能少于一个 message，也可能多一个 message，正如下面这张插图所示意的那样：
+当我们冲 `SelectableChannel` 中读取一段数据后，我们并不知道这段数据是否是完整的一个 message。因为一个数据段可能包含部分 message，也就是说即可能少于一个 message，也可能多一个 message，正如下面这张插图所示意的那样：
 
 ![non-blocking-server-5.png](http://tutorials.jenkov.com/images/java-nio/non-blocking-server-5.png)
 
@@ -85,19 +86,20 @@ IO 管道通常直接从流中（来自于 socket 活 file 的流）读取数据
 要处理这种截断的 message，我们会遇到两个问题：
 
 1.  检测数据段中是否包含一个完整的 message
+
 2.  在 message 剩余部分获取到之前，我们如何处理不完整的 message
 
 检测完整 message 要求 Message Reader 查看数据段中的数据是否至少包含一个完整的 message。如果包含一个或多个完整 message，这些 message 可以被下发到通道中处理。查找完整 message 的过程是个大量重复的操作，所以这个操作必须是越快越好的。
 
 当数据段中有一个不完整的 message 时，无论不完整消息是整个数据段还是说在完整 message 前后，这个不完整的 message 数据都需要在剩余部分获得前存储起来。
 
-检查 message 完整性和存储不完整 message 都是 Message Reader 的职责。为了避免混淆来自不同 Channel 的数据，我们为每一个 Channel 分配一个 Message Reader。整个设计大概是这样的：
+检查 message 完整性和存储不完整 message 都是 Message Reader 的职责。为了避免混淆来自不同 `Channel` 的数据，我们为每一个 `Channel` 分配一个 Message Reader。整个设计大概是这样的：
 
 ![non-blocking-server-6.png](http://tutorials.jenkov.com/images/java-nio/non-blocking-server-6.png)
 
 **图片 11.6** non-blocking-server-6.png
 
-当我们通过 Selector 获取到一个有数据可以读取的 Channel 之后，改 Channel 关联的 Message Reader 会读取数据，并且把数据打断为 Message 块。得到完整的 message 后就可以通过通道下发到其他组件进行处理。
+当我们通过 `Selector` 获取到一个有数据可以读取的 `Channel` 之后，改 `Channel` 关联的 Message Reader 会读取数据，并且把数据打断为 Message 块。得到完整的 message 后就可以通过通道下发到其他组件进行处理。
 
 一个 Message Reader 自然是协议相关的。他需要知道 message 的格式以便读取。如果我们的服务器是跨协议复用的，那他必须实现 Message Reader 的协议-大致类似于接收一个 Message Reader 工厂作为配置参数。
 
@@ -108,6 +110,7 @@ IO 管道通常直接从流中（来自于 socket 活 file 的流）读取数据
 在设计的时候我们需要考虑两个关键因素：
 
 1.  我们希望在拷贝消息数据的时候数据量能尽可能的小，拷贝量越大则性能相对越低；
+
 2.  我们希望完整的消息是以顺序的字节存储，这样方便进行数据的解析；
 
 ### 为每个 Message Reade 分配 Buffer（A Buffer Per Message Reader）
@@ -148,7 +151,7 @@ IO 管道通常直接从流中（来自于 socket 活 file 的流）读取数据
 
 这种扩容也有两个具体的办法。一中是开辟单独的字节数组，然后用一个列表把这些独立数组关联起来。另一种是开辟一些更大的，相互共享的字节数组切片，然后用列表把这些切片和 buffer 关联起来。个人而言，笔者认为第二种切片方案更好一点点，但是它们之前的差异比较小。（译者话：关于这两个办法，我个人觉得概念介绍有点难懂，建议读者也参考一下原文😏）
 
-这种追加扩容的方案不管是用独立数组还是切片都有一个优点，那就是写数据的时候不需要二外的拷贝操作。所有的数据可以直接从 socket（Channel）中拷贝至数组活切片当中。
+这种追加扩容的方案不管是用独立数组还是切片都有一个优点，那就是写数据的时候不需要二外的拷贝操作。所有的数据可以直接从 socket（`Channel`）中拷贝至数组活切片当中。
 
 这种方案的缺点也很明显，就是数据不是存储在一个连续的数组中。这会使得数据的解析变得更加复杂，因为解析器不得不同时查找每一个独立数组的结尾和所有数组的结尾。正因为我们需要在写数据时查找消息的结尾，这个模型在设计实现时会相对不那么容易。
 
@@ -170,11 +173,17 @@ TLV 编码使得内存管理更加简单，这也是 HTTP1.1 协议让人觉得�
 
 ## 写不完整的消息（Writing Partial Messages）
 
-在非阻塞 IO 管道中，写数据也是一个不小的挑战。当你调用一个非阻塞模式 Channel 的 write()方法时，无法保证有多少机字节被写入了 ByteBuffer 中。write 方法返回了实际写入的字节数，所以跟踪记录已被写入的字节数也是可行的。这就是我们遇到的问题：持续记录被写入的不完整的小树知道一个消息中所有的数据都发送完毕。
 
-为了管理不完整消息的写操作，我们需要创建一个 Message Writer。正如前面的 Message Reader，我们也需要每个 Channel 配备一个 Message Writer 来写数据。在每个 Message Writer 中我们记录准确的已经写入的字节数。
 
-为了避免多个消息传递到 Message Writer 超出他所能处理到 Channel 的量，我们需要让到达的消息进入队列。Message Writer 则尽可能快的将数据写到 Channel 里。
+## 非阻塞 IO 管道中的写数据挑战
+
+在非阻塞 IO 管道中，写数据也是一个不小的挑战。当你调用非阻塞模式 `Channel` 的 `write()` 方法时，无法保证有多少字节被写入了 `ByteBuffer` 中。`write` 方法返回了实际写入的字节数，所以跟踪记录已被写入的字节数也是可行的。这就是我们遇到的问题：持续记录被写入的不完整数据，直到一个消息中所有的数据都发送完毕。
+
+## 管理不完整消息的写操作
+
+为了管理不完整消息的写操作，我们需要创建一个 `Message Writer`。正如前面的 `Message Reader`，我们也需要每个 `Channel` 配备一个 `Message Writer` 来写数据。在每个 `Message Writer` 中我们记录准确的已经写入的字节数。
+
+为了避免多个消息传递到 `Message Writer` 超出其所能处理的 `Channel` 的量，我们需要让到达的消息进入队列。`Message Writer` 则尽可能快地将数据写到 `Channel` 里。
 
 下面是一个流程图，展示的是不完整消息被写入的过程：
 
@@ -182,31 +191,32 @@ TLV 编码使得内存管理更加简单，这也是 HTTP1.1 协议让人觉得�
 
 **图片 11.7** non-blocking-server-8.png
 
-为了使 Message Writer 能够持续发送刚才已经发送了一部分的消息，Message Writer 需要被移植调用，这样他就可以发送更多数据。
+为了使 `Message Writer` 能够持续发送刚才已经发送了一部分的消息，`Message Writer` 需要被移植调用，这样它就可以发送更多数据。
 
-如果你有大量的链接，你会持有大量的 Message Writer 实例。检查比如 1 百万的 Message Writer 实例是来确定他们是否处于可写状态是很慢的操作。首先，许多 Message Writer 可能根本就没有数据需要发送。我们不想检查这些实例。其次，不是所有的 Channel 都处于可写状态。我们不想浪费时间在这些非写入状态的 Channel。
+## 大量连接下的优化策略
 
-为了检查一个 Channel 是否可写，可以把它注册到 Selector 上。但是我们不希望把所有的 Channel 实例都注册到 Selector。试想一下，如果你有 1 百万的链接，这里面大部分是空闲的，把 1 百万链接都祖册到 Selector 上。然后调用 select 方法的时候就会有很多的 Channel 处于可写状态。你需要检查所有这些链接中的 Message Writer 以确认是否有数据可写。
+如果你有大量的连接，你会持有大量的 `Message Writer` 实例。检查比如 100 万的 `Message Writer` 实例来确定它们是否处于可写状态是很慢的操作。首先，许多 `Message Writer` 可能根本就没有数据需要发送。我们不想检查这些实例。其次，不是所有的 `Channel` 都处于可写状态。我们不想浪费时间在这些非写入状态的 `Channel` 上。
 
-为了避免检查所有的这些 Message Writer，以及那些根本没有消息需要发送给他们的 Channel 实例，我么可以采用入校两步策略：
+为了检查一个 `Channel` 是否可写，可以把它注册到 `Selector` 上。但是我们不希望把所有的 `Channel` 实例都注册到 `Selector`。试想一下，如果你有 100 万的连接，这里面大部分是空闲的，把 100 万连接都注册到 `Selector` 上。然后调用 `select` 方法的时候就会有很多的 `Channel` 处于可写状态。你需要检查所有这些连接中的 `Message Writer` 以确认是否有数据可写。
 
-1.  当有消息写入到 Message Writer 忠厚，把它关联的 Channel 注册到 Selector 上（如果还未注册的话）。
+为了避免检查所有的这些 `Message Writer`，以及那些根本没有消息需要发送给他们的 `Channel` 实例，我们可以采用以下两步策略：
 
-2.  当服务器有空的时候，可以检查 Selector 看看注册在上面的 Channel 实例是否处于可写状态。每个可写的 channel，使其 Message Writer 向 Channel 中写入数据。如果 Message Writer 已经把所有的消息都写入 Channel，把 Channel 从 Selector 上解绑。
+1.  当有消息写入到 `Message Writer` 队列时，把它关联的 `Channel` 注册到 `Selector` 上（如果还未注册的话）。
+2.  当服务器有空的时候，可以检查 `Selector` 看看注册在上面的 `Channel` 实例是否处于可写状态。每个可写的 `Channel`，使其 `Message Writer` 向 `Channel` 中写入数据。如果 `Message Writer` 已经把所有的消息都写入 `Channel`，把 `Channel` 从 `Selector` 上解绑。
 
-这两个小步骤确保只有有数据要写的 Channel 才会被注册到 Selector。
+这两个小步骤确保只有有数据要写的 `Channel` 才会被注册到 `Selector`。
 
-## 集成（Putting it All Together）
+## 集成
 
-正如你所知到的，一个被阻塞的服务器需要时刻检查当前是否有显得完整消息抵达。在一个消息被完整的收到前，服务器可能需要检查多次。检查一次是不够的。
+正如你所知到的，一个被阻塞的服务器需要时刻检查当前是否有完整消息抵达。在一个消息被完整的收到前，服务器可能需要检查多次。检查一次是不够的。
 
-类似的，服务器也需要时刻检查当前是否有任何可写的数据。如果有的话，服务器需要检查相应的链接看他们是否处于可写状态。仅仅在消息第一次进入队列时检查是不够的，因为一个消息可能被部分写入。
+类似的，服务器也需要时刻检查当前是否有任何可写的数据。如果有的话，服务器需要检查相应的连接看它们是否处于可写状态。仅仅在消息第一次进入队列时检查是不够的，因为一个消息可能被部分写入。
 
-总而言之，一个非阻塞的服务器要三个管道，并且经常执行：
+总而言之，一个非阻塞的服务器要有三个管道，并且经常执行：
 
-*   读数据管道，用来检查打开的链接是否有新的数据到达；
-*   处理数据管道，负责处理接收到的完整消息；
-*   写数据管道，用于检查是否有数据可以写入打开的连接中；
+*   **读数据管道**，用来检查打开的连接是否有新的数据到达；
+*   **处理数据管道**，负责处理接收到的完整消息；
+*   **写数据管道**，用于检查是否有数据可以写入打开的连接中。
 
 这三个管道在循环中重复执行。你可以尝试优化它的执行。比如，如果没有消息在队列中等候，那么可以跳过写数据管道。或者，如果没有收到新的完整消息，你甚至可以跳过处理数据管道。
 
@@ -216,11 +226,11 @@ TLV 编码使得内存管理更加简单，这也是 HTTP1.1 协议让人觉得�
 
 **图片 11.8** non-blocking-server-9.png
 
-假如你还是柑橘这比较复杂难懂，可以去 clone 我们的源码仓： [`github.com/jjenkov/java-nio-server`](https://github.com/jjenkov/java-nio-server) 也许亲眼看到了代码会帮助你理解这一块是如何实现的。
+假如你还是觉得这比较复杂难懂，可以去 clone 我们的源码仓：[`github.com/jjenkov/java-nio-server`](https://github.com/jjenkov/java-nio-server) 也许亲眼看到了代码会帮助你理解这一块是如何实现的。
 
-## 服务器线程模型（Server Thread Model）
+## 服务器线程模型
 
-我们在 GitHub 上的源码中实现的非阻塞 IO 服务使用了一个包含两条线程的线程模型。第一个线程负责从 ServerSocketChannel 接收到达的链接。另一个线程负责处理这些链接，包括读消息，处理消息，把响应写回到链接。这个双线程模型如下：
+我们在 GitHub 上的源码中实现的非阻塞 IO 服务使用了一个包含两条线程的线程模型。第一个线程负责从 `ServerSocketChannel` 接收到达的连接。另一个线程负责处理这些连接，包括读消息，处理消息，把响应写回到连接。这个双线程模型如下：
 
 ![non-blocking-server-10.png](http://tutorials.jenkov.com/images/java-nio/non-blocking-server-10.png)
 

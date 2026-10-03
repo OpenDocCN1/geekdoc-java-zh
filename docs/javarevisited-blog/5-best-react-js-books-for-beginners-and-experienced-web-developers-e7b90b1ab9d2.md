@@ -1,3 +1,4 @@
+
 # 6 本适合初学者和有经验的 Web 开发人员的最佳 React.js 书籍
 
 > 原文：<https://medium.com/javarevisited/5-best-react-js-books-for-beginners-and-experienced-web-developers-e7b90b1ab9d2?source=collection_archive---------0----------------------->
@@ -62,9 +63,9 @@ React 只是众多 [JavaScript (JS)库](/javarevisited/10-of-the-most-popular-ja
 
 这是一本非常棒的书，适合那些正在努力学习 web 技术、想要学习 HTML 以及 Git、JavaScript 等工具的人。这本书将教你关于 web 开发的一切，让你像专家一样构建可伸缩的、生产就绪的 Web 应用程序。
 
-这也是最值得推荐的 React 电子书之一，也是一个全面的学习指南，它将通过简单的课程、大量易于理解的示例、漂亮的插图和经过验证的路线图，教你成为一名自信的 web 开发人员所需知道的一切。
+这也是最值得推荐的 React 电子书之一，也是一个全面的学习指南，它将通过简单的课程、大量易于理解的示例、漂亮的插图和经过验证的路线图，教你成为一名自信的 web 开发人员所需要知道的一切。
 
-您将了解 ReactJS 的内容和原因、JSX、虚拟 DOM、函数与类组件、事件处理和双向绑定、组件生命周期、React 挂钩(useState、useEffect、useMemo、useRef、自定义挂钩、React 应用程序性能优化、React 悬念、React 中的好的和坏的实践、您需要了解的关于 GraphQL 的所有内容，等等
+您将了解 ReactJS 的内容和原因、JSX、虚拟 DOM、函数与类组件、事件处理和双向绑定、组件生命周期、React 挂钩(`useState`、`useEffect`、`useMemo`、`useRef`、自定义挂钩、React 应用程序性能优化、React 悬念、React 中的好的和坏的实践、您需要了解的关于 GraphQL 的所有内容，等等
 
 这本电子书有 400 多页有价值的内容。并且，作者会定期更新这本书。目前，这是第 3 版，你也可以免费获得新版本。
 
@@ -126,6 +127,8 @@ Mark 是另一位值得信赖的软件开发人员，拥有丰富的 React 经�
 
 开发人员能够创建 React 组件，这些组件使用钩子进行更无缝的交互。钩子允许 React 组件共享可重用的有状态逻辑。
 
+
+
 作者 Daniel Bugl 是 React 社区中的一名成功的开发人员和开源贡献者。这本书平均价格在 40 美元左右，对于刚接触 React 的人来说可能有点挑战，但是有经验的 React 开发者会喜欢这本书。
 
 这里是了解这本书更多信息的链接— [学习 React Hooks](https://www.amazon.com/Learn-React-Hooks-refactor-applications-ebook/dp/B07YZ9V9WW?tag=javamysqlanta-20)
@@ -134,7 +137,7 @@ Mark 是另一位值得信赖的软件开发人员，拥有丰富的 React 经�
 
 而且，如果你需要一门课程来配合这本书，我强烈推荐你在 Udemy 上查看完整的 React Web Developer 课程。
 
-<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Freact-2nd-edition%2F>  
+<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Freact-2nd-edition%2F>
 
 作者 Andrew Mead 是一名[全栈开发人员](https://javarevisited.blogspot.com/2019/01/10-web-development-frameworks-fullstack-developer-should-learn.html)，也是一名出色的教师，他对所教授的主题有着深入的了解。这门课程真的很棒，也很实用，我向所有想成为使用 [React](http://javarevisited.blogspot.sg/2018/01/10-frameworks-java-and-web-developers-should-learn.html) 的专业 web 开发人员强烈推荐这门课程。
 
@@ -142,25 +145,25 @@ Mark 是另一位值得信赖的软件开发人员，拥有丰富的 React 经�
 
 其他**编程文章和资源**你可能喜欢
 
-*   [2023 年网络开发者路线图](https://javarevisited.blogspot.com/2019/02/the-2019-web-developer-roadmap.html)
-*   [完整的 React 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
-*   【Java 和 Web 开发者应该学习的 10 个框架
-*   [为有经验的开发者提供的 10 门免费 Java 课程](http://www.java67.com/2018/08/top-10-free-java-courses-for-beginners-experienced-developers.html)
-*   [学习芯泉和 Spring Boot 的 5 门免费课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
-*   [2023 年学习 Docker 的 10 门免费课程](http://www.java67.com/2018/02/5-free-docker-courses-for-java-and-DevOps-engineers.html)
-*   [2023 年 React JS 开发者路线图](https://hackernoon.com/the-2018-react-js-roadmap-4d0a43814c02)
-*   [面向 DevOps 工程师的五大免费 Kubernetes 课程](https://javarevisited.blogspot.com/2019/01/top-5-free-kubernetes-courses-for-DevOps-Engineer.html#axzz5d2bEyYmv)
-*   [2023 年学习 Maven 和 Jenkins 的 5 门免费课程](http://www.java67.com/2018/02/6-free-maven-and-jenkins-online-courses-for-java-developers.html)
-*   [面向程序员的 2023 年 DevOps 路线图](https://javarevisited.blogspot.com/2018/09/the-2018-devops-roadmap-your-guide-to-become-DevOps-Engineer.html)
-*   Web 开发人员应该知道的 10 个 JavaScript 框架
-*   [在线学习的 5 门最佳 React.js 课程](/javarevisited/5-best-react-js-books-for-beginners-and-experienced-web-developers-e7b90b1ab9d2)
-*   [2023 年学习 React Native 的五大课程](/@javinpaul/top-5-react-native-courses-for-mobile-application-developers-b82febdf8a46?source=---------112------------------)
-*   [5 本适合初学者的最佳 React.js 书籍](/javarevisited/5-best-react-js-books-for-beginners-and-experienced-web-developers-e7b90b1ab9d2)
-*   [学习 React 钩子和上下文 API 的 10 门免费课程](/javarevisited/top-10-free-courses-to-learn-react-js-c14edbd3b35f)
-*   [2023 年学习 Angular 和 React 的 10 门免费课程](/javarevisited/10-free-angular-and-react-js-courses-from-udemy-and-coursera-best-of-lot-e67f7d811e6b)
+* [2023 年网络开发者路线图](https://javarevisited.blogspot.com/2019/02/the-2019-web-developer-roadmap.html)
+* [完整的 React 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
+* 【Java 和 Web 开发者应该学习的 10 个框架
+* [为有经验的开发者提供的 10 门免费 Java 课程](http://www.java67.com/2018/08/top-10-free-java-courses-for-beginners-experienced-developers.html)
+* [学习芯泉和 Spring Boot 的 5 门免费课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
+* [2023 年学习 Docker 的 10 门免费课程](http://www.java67.com/2018/02/5-free-docker-courses-for-java-and-DevOps-engineers.html)
+* [2023 年 React JS 开发者路线图](https://hackernoon.com/the-2018-react-js-roadmap-4d0a43814c02)
+* [面向 DevOps 工程师的五大免费 Kubernetes 课程](https://javarevisited.blogspot.com/2019/01/top-5-free-kubernetes-courses-for-DevOps-Engineer.html#axzz5d2bEyYmv)
+* [2023 年学习 Maven 和 Jenkins 的 5 门免费课程](http://www.java67.com/2018/02/6-free-maven-and-jenkins-online-courses-for-java-developers.html)
+* [面向程序员的 2023 年 DevOps 路线图](https://javarevisited.blogspot.com/2018/09/the-2018-devops-roadmap-your-guide-to-become-DevOps-Engineer.html)
+* Web 开发人员应该知道的 10 个 JavaScript 框架
+* [在线学习的 5 门最佳 React.js 课程](/javarevisited/5-best-react-js-books-for-beginners-and-experienced-web-developers-e7b90b1ab9d2)
+* [2023 年学习 React Native 的五大课程](/@javinpaul/top-5-react-native-courses-for-mobile-application-developers-b82febdf8a46?source=---------112------------------)
+* [5 本适合初学者的最佳 React.js 书籍](/javarevisited/5-best-react-js-books-for-beginners-and-experienced-web-developers-e7b90b1ab9d2)
+* [学习 React 钩子和上下文 API 的 10 门免费课程](/javarevisited/top-10-free-courses-to-learn-react-js-c14edbd3b35f)
+* [2023 年学习 Angular 和 React 的 10 门免费课程](/javarevisited/10-free-angular-and-react-js-courses-from-udemy-and-coursera-best-of-lot-e67f7d811e6b)
 
 感谢您阅读本文。如果你喜欢这些免费的 Angular 和 React 课程，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
 
 **附言**——如果你喜欢从在线课程中学习，那么我也建议你去看看 Udemy 上 Maximillian 的[**React 16-完全指南**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Freact-the-complete-guide-incl-redux%2F) 课程。这是快速学习 React.js 的最佳课程之一
 
-<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Freact-the-complete-guide-incl-redux%2F> 
+<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Freact-the-complete-guide-incl-redux%2F>

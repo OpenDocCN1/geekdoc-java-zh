@@ -1,3 +1,4 @@
+
 # 合并两个排序列表
 
 > 原文：<https://medium.com/javarevisited/merge-two-sorted-lists-d7fa94b23f6f?source=collection_archive---------2----------------------->
@@ -8,7 +9,7 @@
 
 合并两个排序列表
 
-# 解决办法
+## 解决办法
 
 我们可以将两个列表合并成一个新列表，并应用一种排序算法，比如冒泡排序、插入或快速排序。我们要做的是实现一个新的算法，其性能为 [NlogN](https://codersite.dev/big-o-notation-analysis-of-algorithms/) 。
 

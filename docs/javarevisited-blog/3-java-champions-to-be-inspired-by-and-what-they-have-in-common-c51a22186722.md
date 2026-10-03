@@ -1,3 +1,4 @@
+
 # 3 位 Java 冠军的灵感来源以及他们的共同点
 
 > 原文：<https://medium.com/javarevisited/3-java-champions-to-be-inspired-by-and-what-they-have-in-common-c51a22186722?source=collection_archive---------0----------------------->

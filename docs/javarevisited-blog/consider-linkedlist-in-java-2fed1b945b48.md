@@ -1,3 +1,4 @@
+
 # 关于在 Java 中使用 LinkedList 的几点思考
 
 > 原文：<https://medium.com/javarevisited/consider-linkedlist-in-java-2fed1b945b48?source=collection_archive---------2----------------------->
@@ -8,7 +9,7 @@
 
 **注意**本文并没有讨论其中一些操作的复杂性，我们知道其中一个操作的性能会更好(例如，在列表的开头添加元素或者随机访问)。这里讨论的用例只是简单地添加项目，以便在以后的某个时刻对其进行迭代。
 
-我的假设是，在所有情况下，当简单地将元素添加到列表末尾时， [**LinkedList**](https://www.java67.com/2012/12/difference-between-arraylist-vs-LinkedList-java.html) 会比 **ArrayList** 执行得更好。然后我会建议我们应该放弃默认输入
+我的假设是，在所有情况下，当简单地将元素添加到列表末尾时，[**LinkedList**](https://www.java67.com/2012/12/difference-between-arraylist-vs-LinkedList-java.html) 会比 **ArrayList** 执行得更好。然后我会建议我们应该放弃默认输入
 
 ```
 List<Object> list = new ArrayList<>();
@@ -22,7 +23,7 @@ List<Object> list = new LinkedList<>();
 
 ***为什么？***
 
-因为一旦内部容器填满， [ArrayList](https://javarevisited.blogspot.com/2015/07/java-arraylist-tutorial.html) 就必须执行调整大小操作，而 [LinkedList](http://www.java67.com/2016/02/how-to-sort-linkedlist-in-java-example.html) 只需追加一个新节点(无论大小如何都是相同的操作)。
+因为一旦内部容器填满，[ArrayList](https://javarevisited.blogspot.com/2015/07/java-arraylist-tutorial.html) 就必须执行调整大小操作，而 [LinkedList](http://www.java67.com/2016/02/how-to-sort-linkedlist-in-java-example.html) 只需追加一个新节点(无论大小如何都是相同的操作)。
 
 ## 测试
 
@@ -58,7 +59,7 @@ epsilon GC 的首次测试结果。
 
 很难说最后一个例子中 ArrayList 和 LinkedList 之间的差异是因为编译器优化对 ArrayList 更有效，还是 GC 的影响，还是因为 [LinkedList](https://www.java67.com/2020/07/how-to-get-first-and-last-element-of-linkedlist-in-java.html) 需要更多内存。要想弄清楚这一点，必须深入研究编译器的 GC 日志。
 
-但是现在，我们可以得出结论，由于这些影响中的任何一个， [ArrayList](https://javarevisited.blogspot.com/2012/01/how-to-sort-arraylist-in-java-example.html) 似乎比 LinkedList 使用一个更真实的设置和一个实际的 GC 运行来执行要好得多。
+但是现在，我们可以得出结论，由于这些影响中的任何一个，[ArrayList](https://javarevisited.blogspot.com/2012/01/how-to-sort-arraylist-in-java-example.html) 似乎比 LinkedList 使用一个更真实的设置和一个实际的 GC 运行来执行要好得多。
 
 ## 最后一些内存方面的考虑
 
@@ -88,7 +89,9 @@ epsilon GC 的首次测试结果。
 **参考文献**
 
 [1]如何计算 Java 对象的内存使用量
+
 [https://www . javax . com/tutorials/memory/object _ memory _ usage . shtml](https://www.javamex.com/tutorials/memory/object_memory_usage.shtml)
 
 [2]内存分析器(MAT)
+
 [https://www.eclipse.org/mat/](https://www.eclipse.org/mat/)

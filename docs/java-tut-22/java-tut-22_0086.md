@@ -1,3 +1,4 @@
+
 # 接口概要
 
 > [`docs.oracle.com/javase/tutorial/java/IandI/summary-interface.html`](https://docs.oracle.com/javase/tutorial/java/IandI/summary-interface.html)

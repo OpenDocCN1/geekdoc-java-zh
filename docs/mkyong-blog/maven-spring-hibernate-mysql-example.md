@@ -1,8 +1,9 @@
+
 # Maven + Spring + Hibernate + MySql 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring/maven-spring-hibernate-mysql-example/>
 
-本例将使用 Maven 创建一个简单的 Java 项目结构，并演示如何在 Spring framework 中使用 Hibernate 对 MySQL 数据库进行数据操作(插入、选择、更新和删除)。
+本例将使用 Maven 创建一个简单的 Java 项目结构，并演示如何在 Spring framework 中使用 Hibernate 对 MySQL 数据库进行数据操作（插入、选择、更新和删除）。
 
 ## 最终项目结构
 
@@ -10,30 +11,30 @@
 
 ![](img/b69fff8136af51ffad243b0a220d7884.png "mavan-spring-hibernate-mysql")
 
-## 1.表格创建
+## 1. 表格创建
 
-在 MySQL 数据库中创建一个“股票”表。SQL 语句如下:
+在 MySQL 数据库中创建一个“股票”表。SQL 语句如下：
 
 ```java
- CREATE TABLE  `mkyong`.`stock` (
+CREATE TABLE `mkyong`.`stock` (
   `STOCK_ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `STOCK_CODE` varchar(10) NOT NULL,
   `STOCK_NAME` varchar(20) NOT NULL,
   PRIMARY KEY (`STOCK_ID`) USING BTREE,
   UNIQUE KEY `UNI_STOCK_NAME` (`STOCK_NAME`),
   UNIQUE KEY `UNI_STOCK_ID` (`STOCK_CODE`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8; 
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 ```
 
-## 2.项目文件结构
+## 2. 项目文件结构
 
-用 Maven 命令' **mvn 原型创建一个快速的项目文件结构:生成**'，[参见这里的例子](http://web.archive.org/web/20220709100523/http://www.mkyong.com/maven/how-to-create-a-project-with-maven-template/)。将其转换为 Eclipse 项目( **mvn eclipse:eclipse** )并导入 Eclipse IDE。
+用 Maven 命令`mvn archetype:generate`创建一个快速的项目文件结构，[参见这里的例子](http://web.archive.org/web/20220709100523/http://www.mkyong.com/maven/how-to-create-a-project-with-maven-template/)。将其转换为 Eclipse 项目（`mvn eclipse:eclipse`）并导入 Eclipse IDE。
 
 ```java
- E:\workspace>mvn archetype:generate
+E:\workspace>mvn archetype:generate
 [INFO] Scanning for projects...
 ...
-Choose a number:  
+Choose a number:
 (1/2/3....) 15: : 15
 ...
 Define value for groupId: : com.mkyong.common
@@ -43,17 +44,17 @@ Define value for package:  com.mkyong.common: : com.mkyong.common
 [INFO] OldArchetype created in dir: E:\workspace\HibernateExample
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESSFUL
-[INFO] ------------------------------------------------------------------------ 
+[INFO] ------------------------------------------------------------------------
 ```
 
-## 3.Pom.xml 文件配置
+## 3. Pom.xml 文件配置
 
-在 Maven 的 pom.xml 文件中添加 Spring、Hibernate、MySQL 及其依赖项。
+在 Maven 的`pom.xml`文件中添加 Spring、Hibernate、MySQL 及其依赖项。
 
 ```java
- <project  
+<project
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
   http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.mkyong.common</groupId>
@@ -128,19 +129,19 @@ Define value for package:  com.mkyong.common: : com.mkyong.common
 	<!-- Hibernate library dependecy end -->
 
   </dependencies>
-</project> 
+</project>
 ```
 
-## 4.模型&博&道
+## 4. 模型、BO 和 DAO
 
-**模型**、**业务对象** (BO)和**数据访问对象** (DAO)模式有助于清楚地识别层，避免弄乱项目结构。
+**模型**、**业务对象**（BO）和**数据访问对象**（DAO）模式有助于清楚地识别层，避免弄乱项目结构。
 
-##### 股票模型
+### 股票模型
 
 稍后存储股票数据的股票模型类。
 
 ```java
- package com.mkyong.stock.model;
+package com.mkyong.stock.model;
 
 import java.io.Serializable;
 
@@ -153,15 +154,15 @@ public class Stock implements Serializable {
 	private String stockName;
 
 	//getter and setter methods...
-} 
+}
 ```
 
-##### 库存业务对象(BO))
+### 库存业务对象（BO）
 
-股票业务对象(BO)接口和实现，它用来存储项目的业务功能，真正的数据库操作(CRUD)工作不应该涉及这个类，相反它有一个 DAO (StockDao)类来做。
+股票业务对象（BO）接口和实现，它用来存储项目的业务功能，真正的数据库操作（CRUD）工作不应该涉及这个类，相反它有一个 DAO（`StockDao`）类来做。
 
 ```java
- package com.mkyong.stock.bo;
+package com.mkyong.stock.bo;
 
 import com.mkyong.stock.model.Stock;
 
@@ -171,11 +172,11 @@ public interface StockBo {
 	void update(Stock stock);
 	void delete(Stock stock);
 	Stock findByStockCode(String stockCode);
-} 
+}
 ```
 
 ```java
- package com.mkyong.stock.bo.impl;
+package com.mkyong.stock.bo.impl;
 
 import com.mkyong.stock.bo.StockBo;
 import com.mkyong.stock.dao.StockDao;
@@ -204,15 +205,15 @@ public class StockBoImpl implements StockBo{
 	public Stock findByStockCode(String stockCode){
 		return stockDao.findByStockCode(stockCode);
 	}
-} 
+}
 ```
 
-##### 股票数据访问对象
+### 股票数据访问对象
 
-一个库存的 dao 接口和实现，DAO 实现类扩展了 Spring 的“ **HibernateDaoSupport** ”，使 Hibernate 支持 Spring 框架。现在，您可以通过 **getHibernateTemplate()** 来执行休眠功能。
+一个库存的 DAO 接口和实现，DAO 实现类扩展了 Spring 的`HibernateDaoSupport`，使 Hibernate 支持 Spring 框架。现在，您可以通过`getHibernateTemplate()`来执行 Hibernate 功能。
 
 ```java
- package com.mkyong.stock.dao;
+package com.mkyong.stock.dao;
 
 import com.mkyong.stock.model.Stock;
 
@@ -223,11 +224,11 @@ public interface StockDao {
 	void delete(Stock stock);
 	Stock findByStockCode(String stockCode);
 
-} 
+}
 ```
 
 ```java
- package com.mkyong.stock.dao.impl;
+package com.mkyong.stock.dao.impl;
 
 import java.util.List;
 
@@ -257,19 +258,19 @@ public class StockDaoImpl extends HibernateDaoSupport implements StockDao{
 		return (Stock)list.get(0);
 	}
 
-} 
+}
 ```
 
-## 5.资源配置
+## 5. 资源配置
 
-在**‘project _ name/main/Java/**’下创建一个“ **resources** ”文件夹，Maven 会将该文件夹下的所有文件视为资源文件。它将用于存储 Spring、Hibernate 和其他配置文件。
+在`project_name/main/java/`下创建一个`resources`文件夹，Maven 会将该文件夹下的所有文件视为资源文件。它将用于存储 Spring、Hibernate 和其他配置文件。
 
-##### 休眠配置
+### Hibernate 配置
 
-为股票表创建一个 Hibernate 映射文件( **Stock.hbm.xml** )，放在“ **resources/hibernate/** 文件夹下。
+为股票表创建一个 Hibernate 映射文件（`Stock.hbm.xml`），放在`resources/hibernate/`文件夹下。
 
 ```java
- <?xml version="1.0"?>
+<?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
@@ -286,30 +287,38 @@ public class StockDaoImpl extends HibernateDaoSupport implements StockDao{
             <column name="STOCK_NAME" length="20" not-null="true" unique="true" />
         </property>
     </class>
-</hibernate-mapping> 
+</hibernate-mapping>
 ```
 
-##### 弹簧配置
+### Spring 配置
 
-数据库相关…
+数据库相关……
 
-为数据库细节创建一个属性文件 **(database.properties** )，放入“**资源/属性**文件夹。将数据库细节和 Spring bean 配置分散到不同的文件中是一种很好的做法。
+为数据库细节创建一个属性文件（`database.properties`），放入`resources/properties`文件夹。将数据库细节和 Spring bean 配置分散到不同的文件中是一种很好的做法。
 
-**数据库.属性**
+**database.properties**
 
 ```java
- jdbc.driverClassName=com.mysql.jdbc.Driver
+jdbc.driverClassName=com.mysql.jdbc.Driver
 jdbc.url=jdbc:mysql://localhost:3306/mkyong
 jdbc.username=root
-jdbc.password=password 
+jdbc.password=password
 ```
 
-为您的数据库创建一个“data source”bean 配置文件( **DataSource.xml** )，从 database.properties 导入属性，放入**的“资源/数据库**文件夹中。
+为您的数据库创建一个“data source”bean 配置文件（`DataSource.xml`），从`database.properties`导入属性，放入`resources/database`文件夹中。
 
 **DataSource.xml**
 
-```java
- <beans 
+
+
+## 1. 配置数据源
+
+创建一个数据源 bean 配置文件（`DataSource.xml`），放入 `resources/database` 文件夹。这里使用 `PropertyPlaceholderConfigurer` 加载 `properties/database.properties` 文件，并通过 `DriverManagerDataSource` 配置数据库连接。
+
+**DataSource.xml**
+
+```xml
+<beans 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
@@ -329,17 +338,17 @@ class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 	<property name="password" value="${jdbc.password}" />
 </bean>
 
-</beans> 
+</beans>
 ```
 
-冬眠相关的…
+## 2. 配置 Hibernate
 
-创建一个会话工厂 bean 配置文件 **(Hibernate.xml** ，放入**“资源/数据库**文件夹。这个 **LocalSessionFactoryBean** 类将在 Spring 应用程序上下文中设置一个共享的 Hibernate SessionFactory。
+创建一个会话工厂 bean 配置文件（`Hibernate.xml`），放入 `resources/database` 文件夹。`LocalSessionFactoryBean` 类将在 Spring 应用程序上下文中设置一个共享的 Hibernate `SessionFactory`。
 
 **Hibernate.xml**
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <beans 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
@@ -367,17 +376,17 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
       </property>	
 
     </bean>
-</beans> 
+</beans>
 ```
 
-*春豆相关…*
+## 3. 配置 Spring Beans
 
-为 BO 和 DAO 类创建一个 bean 配置文件( **Stock.xml** ，放入“ **resources/spring** 文件夹。依赖将 dao (stockDao) bean 注入到 bo (stockBo) bean 中；会话工厂豆到 stockDao。
+为 BO 和 DAO 类创建一个 bean 配置文件（`Stock.xml`），放入 `resources/spring` 文件夹。依赖将 `dao`（`stockDao`）bean 注入到 `bo`（`stockBo`）bean 中；会话工厂 bean 注入到 `stockDao` 中。
 
 **Stock.xml**
 
-```java
- <beans 
+```xml
+<beans 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
@@ -392,15 +401,17 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
    		<property name="sessionFactory" ref="sessionFactory"></property>
    </bean>
 
-</beans> 
+</beans>
 ```
 
-将所有 Spring 的 beans 配置文件导入到一个文件(BeanLocations.xml)中，将其放入“ **resources/config** 文件夹中。
+## 4. 集中管理配置
+
+将所有 Spring 的 beans 配置文件导入到一个文件（`BeanLocations.xml`）中，将其放入 `resources/config` 文件夹。
 
 **BeanLocations.xml**
 
-```java
- <beans 
+```xml
+<beans 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
@@ -412,15 +423,15 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	<!-- Beans Declaration -->
 	<import resource="../beans/Stock.xml"/>
 
-</beans> 
+</beans>
 ```
 
-## 6.运行它
+## 5. 运行示例
 
 你有所有的文件和配置，运行它。
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -456,20 +467,20 @@ public class App
 
     	System.out.println("Done");
     }
-} 
+}
 ```
 
-输出
+## 6. 输出
 
 ```java
- Hibernate: insert into mkyong.stock (STOCK_CODE, STOCK_NAME) values (?, ?)
+Hibernate: insert into mkyong.stock (STOCK_CODE, STOCK_NAME) values (?, ?)
 Hibernate: select stock0_.STOCK_ID as STOCK1_0_, 
 stock0_.STOCK_CODE as STOCK2_0_, stock0_.STOCK_NAME as STOCK3_0_ 
 from mkyong.stock stock0_ where stock0_.STOCK_CODE=?
 Stock [stockCode=7668, stockId=11, stockName=HAIO]
 Hibernate: update mkyong.stock set STOCK_CODE=?, STOCK_NAME=? where STOCK_ID=?
 Hibernate: delete from mkyong.stock where STOCK_ID=?
-Done 
+Done
 ```
 
-Download it – [Spring-Hibernate-Example.zip](http://web.archive.org/web/20220709100523/http://www.mkyong.com/wp-content/uploads/2010/03/Spring-Hibernate-Example.zip)<input type="hidden" id="mkyong-current-postId" value="4033">
+Download it – [Spring-Hibernate-Example.zip](http://web.archive.org/web/20220709100523/http://www.mkyong.com/wp-content/uploads/2010/03/Spring-Hibernate-Example.zip)

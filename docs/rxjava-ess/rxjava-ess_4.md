@@ -1,3 +1,4 @@
+
 # 过滤 Observables
 
 在上一章中，我们学习了使用 RxJava 创建一个 Android 工程以及如何创建一个可观测的列表来填充 RecyclerView。我们现在知道了如何从头、从列表、从一个已存在的传统 Java 函数来创建 Observable。
@@ -125,7 +126,7 @@ Observable.from(apps)
         .subscribe(...); 
 ```
 
-正如听起来那样不值一提，值得注意的是因为 takeLast()方法只能作用于一组有限的序列（发射元素），它只能应用于一个完整的序列。
+正如听起来那样不值一提，值得注意的是因为`takeLast()`方法只能作用于一组有限的序列（发射元素），它只能应用于一个完整的序列。
 
 下图中展示了如何从可观测源中发射最后一个元素来创建一个新的序列：
 
@@ -143,12 +144,14 @@ Observable.from(apps)
 
 如果我们想对一个指定的值仅处理一次该怎么办？我们可以对我们的序列使用`distinct()`函数去掉重复的。就像`takeLast()`一样，`distinct()`作用于一个完整的序列，然后得到重复的过滤项，它需要记录每一个发射的值。如果你在处理一大堆序列或者大的数据记得关注内存使用情况。
 
-下图展示了如何在一个发射 1 和 2 两次的可观测源上创建一个无重的序列： ![](img/chapter4_5.png)
+下图展示了如何在一个发射 1 和 2 两次的可观测源上创建一个无重的序列：
+
+![](img/chapter4_5.png)
 
 为了创建我们例子中序列，我们将使用我们至今已经学到的几个方法：
 
-*   `take()`：它有一小组的可识别的数据项。
-*   `repeat()`：创建一个有重复的大的序列。
+- `take()`：它有一小组的可识别的数据项。
+- `repeat()`：创建一个有重复的大的序列。
 
 然后，我们将应用`distinct()`函数来去除重复。
 
@@ -162,7 +165,7 @@ Observable<AppInfo> fullOfDuplicates = Observable.from(apps)
     .repeat(3); 
 ```
 
-`fullOfDuplicates`变量里把我们已安装应用的前三个重复了 3 次：有 9 个并且许多重复的。然后，我们使用`distinct()`:
+`fullOfDuplicates`变量里把我们已安装应用的前三个重复了 3 次：有 9 个并且许多重复的。然后，我们使用`distinct()`：
 
 ```java
 fullOfDuplicates.distinct()
@@ -196,7 +199,7 @@ fullOfDuplicates.distinct()
 
 如果在一个可观测序列发射一个不同于之前的一个新值时让我们得到通知这时候该怎么做？我们猜想一下我们观测的温度传感器，每秒发射的室内温度：
 
-```java
+```text
 21°...21°...21°...21°...22°... 
 ```
 
@@ -212,13 +215,13 @@ fullOfDuplicates.distinct()
 
 ![](img/chapter4_8.png)
 
-`first()`方法和`last()`方法很容易弄明白。它们从 Observable 中只发射第一个元素或者最后一个元素。这两个都可以传`Func1`作为参数，：一个可以确定我们感兴趣的第一个或者最后一个的谓词：
+`first()`方法和`last()`方法很容易弄明白。它们从 Observable 中只发射第一个元素或者最后一个元素。这两个都可以传`Func1`作为参数：一个可以确定我们感兴趣的第一个或者最后一个的谓词：
 
 下图展示了`last()`应用在一个完成的序列上来创建一个仅仅发射最后一个元素的新的 Observable。
 
 ![](img/chapter4_9.png)
 
-与`first()`和`last()`相似的变量有：`firstOrDefault()`和`lastOrDefault()`.这两个函数当可观测序列完成时不再发射任何值时用得上。在这种场景下，如果 Observable 不再发射任何值时我们可以指定发射一个默认的值
+与`first()`和`last()`相似的变量有：`firstOrDefault()`和`lastOrDefault()`。这两个函数当可观测序列完成时不再发射任何值时用得上。在这种场景下，如果 Observable 不再发射任何值时我们可以指定发射一个默认的值。
 
 # Skip and SkipLast
 
@@ -269,7 +272,7 @@ sensor.sample(30,TimeUnit.SECONDS)
 
 例子中 Observable 将会观测温度 Observable 然后每隔 30 秒就会发射最后一个温度值。很明显，`sample()`支持全部的时间单位：秒，毫秒，天，分等等。
 
-下图中展示了一个间隔发射字母的 Observable 如何采样一个发射数字的 Observable。Observable 的结果将会发射每个已发射字母的最后一组数据：1，4，5.
+下图中展示了一个间隔发射字母的 Observable 如何采样一个发射数字的 Observable。Observable 的结果将会发射每个已发射字母的最后一组数据：1，4，5。
 
 ![](img/chapter4_13.png)
 
@@ -277,11 +280,13 @@ sensor.sample(30,TimeUnit.SECONDS)
 
 # Timeout
 
-假设我们工作的是一个时效性的环境，我们温度传感器每秒都在发射一个温度值。我们想让它每隔两秒至少发射一个，我们可以使用`timeout()`函数来监听源可观测序列,就是在我们设定的时间间隔内如果没有得到一个值则发射一个错误。我们可以认为`timeout()`为一个 Observable 的限时的副本。如果在指定的时间间隔内 Observable 不发射值的话，它监听的原始的 Observable 时就会触发`onError()`函数。
+假设我们工作的是一个时效性的环境，我们温度传感器每秒都在发射一个温度值。我们想让它每隔两秒至少发射一个，我们可以使用`timeout()`函数来监听源可观测序列，就是在我们设定的时间间隔内如果没有得到一个值则发射一个错误。我们可以认为`timeout()`为一个 Observable 的限时的副本。如果在指定的时间间隔内 Observable 不发射值的话，它监听的原始的 Observable 时就会触发`onError()`函数。
+
+
 
 ```java
 Subscription subscription = getCurrentTemperature()
-    .timeout(2,TimeUnit.SECONDS)
+    .timeout(2, TimeUnit.SECONDS)
     .subscribe(new Observer<Integer>() {
 
         @Override
@@ -291,34 +296,34 @@ Subscription subscription = getCurrentTemperature()
 
         @Override
         public void onError(Throwable e) {
-            Log.d("RXJAVA","You should go check the sensor, dude");
+            Log.d("RXJAVA", "You should go check the sensor, dude");
         }
 
         @Override
         public void onNext(Integer currentTemperature) {
             updateDisplay(currentTemperature)
         }
-    }); 
+    });
 ```
 
 和`sample()`一样，`timeout()`使用`TimeUnit`对象来指定时间间隔。
 
-下图中展示了一旦 Observable 超过了限时就会触发`onError()`函数：因为超时后它才到达，所以最后一个元素将不会发射出去。
+下图中展示了一旦`Observable`超过了限时就会触发`onError()`函数：因为超时后它才到达，所以最后一个元素将不会发射出去。
 
 ![](img/chapter4_14.png)
 
 # Debounce
 
-`debounce()`函数过滤掉由 Observable 发射的速率过快的数据；如果在一个指定的时间间隔过去了仍旧没有发射一个，那么它将发射最后的那个。
+`debounce()`函数过滤掉由`Observable`发射的速率过快的数据；如果在一个指定的时间间隔过去了仍旧没有发射一个，那么它将发射最后的那个。
 
 就像`sample()`和`timeout()`函数一样，`debounce()`使用`TimeUnit`对象指定时间间隔。
 
-下图展示了多久从 Observable 发射一次新的数据，`debounce()`函数开启一个内部定时器，如果在这个时间间隔内没有新的数据发射，则新的 Observable 发射出最后一个数据：
+下图展示了多久从`Observable`发射一次新的数据，`debounce()`函数开启一个内部定时器，如果在这个时间间隔内没有新的数据发射，则新的`Observable`发射出最后一个数据：
 
 ![](img/chapter4_15.png)
 
 # 总结
 
-这一章中，我们学习了如何过滤一个可观测序列。我们现在可以使用`filter()`，`skip()`，和`sample()`来创建我们想要的 Observable。
+这一章中，我们学习了如何过滤一个可观测序列。我们现在可以使用`filter()`、`skip()`和`sample()`来创建我们想要的`Observable`。
 
-下一章中，我们将学习如何转换一个序列，将函数应用到每个元素，给它们分组和扫描来创建我们所需要的能完成目标的特定 Observable。
+下一章中，我们将学习如何转换一个序列，将函数应用到每个元素，给它们分组和扫描来创建我们所需要的能完成目标的特定`Observable`。

@@ -1,3 +1,4 @@
+
 # 如何在 Java 中读取 XML 文件—(JDOM 解析器)
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/how-to-read-xml-file-in-java-jdom-example/>
@@ -6,39 +7,39 @@
 
 JDOM 通过提供更简单的 API 和标准的基于 Java 的集合接口，使得 XML 文档的导航更加容易。如果您不介意下载一个小库来解析 XML 文件，JDOM APIs 很容易使用。
 
-*   [1。下载 JDOM 库](#download-the-jdom-library)
-*   [2。读取或解析 XML 文件(JDOM)](#read-or-parse-an-xml-file-jdom)
-*   [3。读取或解析远程 XML 文件(JDOM)](#read-or-parse-a-remote-xml-file-jdom)
-*   [4。包含 XML 的字符串](#string-that-contains-xml)
-*   [5。下载源代码](#download-source-code)
-*   [6。参考文献](#references)
+- [1. 下载 JDOM 库](#1-下载-jdom-库)
+- [2. 读取或解析 XML 文件(JDOM)](#2-读取或解析-xml-文件jdom)
+- [3. 读取或解析远程 XML 文件(JDOM)](#3-读取或解析远程-xml-文件jdom)
+- [4. 包含 XML 的字符串](#4-包含-xml-的字符串)
+- [5. 下载源代码](#5-下载源代码)
+- [6. 参考文献](#6-参考文献)
 
-## 1。下载 JDOM 库
+## 1. 下载 JDOM 库
 
 JDOM 不是 Java 内置 API 的一部分，我们需要下载 JDOM 库。
 
 Maven for JDOM。
 
-pom.xml
+`pom.xml`
 
-```java
- <dependency>
-      <groupId>org.jdom</groupId>
-      <artifactId>jdom2</artifactId>
-      <version>2.0.6</version>
-  </dependency> 
+```xml
+<dependency>
+    <groupId>org.jdom</groupId>
+    <artifactId>jdom2</artifactId>
+    <version>2.0.6</version>
+</dependency>
 ```
 
-## 2。读取或解析 XML 文件(JDOM)
+## 2. 读取或解析 XML 文件(JDOM)
 
 这个例子展示了如何使用 JDOM 来解析 XML 文件。
 
 2.1 一个 XML 文件。
 
-src/main/resources/staff.xml
+`src/main/resources/staff.xml`
 
-```java
- <?xml version="1.0" encoding="utf-8"?>
+```xml
+<?xml version="1.0" encoding="utf-8"?>
 <Company>
     <staff id="1001">
         <name>mkyong</name>
@@ -53,15 +54,15 @@ src/main/resources/staff.xml
         <salary currency="EUR">8000</salary>
         <bio><![CDATA[a & b]]></bio>
     </staff>
-</Company> 
+</Company>
 ```
 
 2.2 解析并打印出所有 XML 元素和节点的 JDOM 示例。
 
-ReadXmlJDomParser.java
+`ReadXmlJDomParser.java`
 
 ```java
- package com.mkyong.xml.jdom;
+package com.mkyong.xml.jdom;
 
 import org.jdom2.Document;
 import org.jdom2.Element;
@@ -74,54 +75,54 @@ import java.util.List;
 
 public class ReadXmlJDomParser {
 
-  private static final String FILENAME = "src/main/resources/staff.xml";
+    private static final String FILENAME = "src/main/resources/staff.xml";
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-      try {
+        try {
 
-          SAXBuilder sax = new SAXBuilder();
-          // XML is a local file
-          Document doc = sax.build(new File(FILENAME));
+            SAXBuilder sax = new SAXBuilder();
+            // XML is a local file
+            Document doc = sax.build(new File(FILENAME));
 
-          Element rootNode = doc.getRootElement();
-          List<Element> list = rootNode.getChildren("staff");
+            Element rootNode = doc.getRootElement();
+            List<Element> list = rootNode.getChildren("staff");
 
-          for (Element target : list) {
+            for (Element target : list) {
 
-              String id = target.getAttributeValue("id");
-              String name = target.getChildText("name");
-              String role = target.getChildText("role");
-              String salary = target.getChildText("salary");
-              String currency = "";
-              if (salary != null && salary.length() > 1) {
-                  // access attribute
-                  currency = target.getChild("salary").getAttributeValue("currency");
-              }
-              String bio = target.getChildText("bio");
+                String id = target.getAttributeValue("id");
+                String name = target.getChildText("name");
+                String role = target.getChildText("role");
+                String salary = target.getChildText("salary");
+                String currency = "";
+                if (salary != null && salary.length() > 1) {
+                    // access attribute
+                    currency = target.getChild("salary").getAttributeValue("currency");
+                }
+                String bio = target.getChildText("bio");
 
-              System.out.printf("Staff id : %s%n", id);
-              System.out.printf("Name : %s%n", name);
-              System.out.printf("Role : %s%n", role);
-              System.out.printf("Salary [Currency] : %,.2f [%s]%n", Float.parseFloat(salary), currency);
-              System.out.printf("Bio : %s%n%n", bio);
+                System.out.printf("Staff id : %s%n", id);
+                System.out.printf("Name : %s%n", name);
+                System.out.printf("Role : %s%n", role);
+                System.out.printf("Salary [Currency] : %,.2f [%s]%n", Float.parseFloat(salary), currency);
+                System.out.printf("Bio : %s%n%n", bio);
 
-          }
+            }
 
-      } catch (IOException | JDOMException e) {
-          e.printStackTrace();
-      }
+        } catch (IOException | JDOMException e) {
+            e.printStackTrace();
+        }
 
-  }
-} 
+    }
+}
 ```
 
 输出
 
-Terminal
+`Terminal`
 
-```java
- Staff id : 1001
+```text
+Staff id : 1001
 Name : mkyong
 Role : support
 Salary [Currency] : 5,000.00 [USD]
@@ -131,32 +132,32 @@ Staff id : 1002
 Name : yflow
 Role : admin
 Salary [Currency] : 8,000.00 [EUR]
-Bio : a & b 
+Bio : a & b
 ```
 
-## 3。读取或解析远程 XML 文件(JDOM)
+## 3. 读取或解析远程 XML 文件(JDOM)
 
 这个示例使用 JDOM 解析器来读取或解析远程或基于网站的 XML 文件。
 
 3.1 访问 Alexa API `https://data.alexa.com/data?cli=10&url=mkyong.com`，它会返回下面的 XML 文件。
 
-```java
- <ALEXA VER="0.9" URL="mkyong.com/" HOME="0" AID="=" IDN="mkyong.com/">
-  <SD>
-    <POPULARITY URL="mkyong.com/" TEXT="20152" SOURCE="panel"/>
-    <REACH RANK="14434"/>
-    <RANK DELTA="+728"/>
-    <COUNTRY CODE="IN" NAME="India" RANK="5322"/>
-  </SD>
-</ALEXA> 
+```xml
+<ALEXA VER="0.9" URL="mkyong.com/" HOME="0" AID="=" IDN="mkyong.com/">
+    <SD>
+        <POPULARITY URL="mkyong.com/" TEXT="20152" SOURCE="panel"/>
+        <REACH RANK="14434"/>
+        <RANK DELTA="+728"/>
+        <COUNTRY CODE="IN" NAME="India" RANK="5322"/>
+    </SD>
+</ALEXA>
 ```
 
 3.2 JDOM 获取网站 Alexa 排名的例子。
 
-ReadXmlAlexaApiJDomParser.java
+`ReadXmlAlexaApiJDomParser.java`
 
 ```java
- package com.mkyong.xml.jdom;
+package com.mkyong.xml.jdom;
 
 import org.jdom2.Document;
 import org.jdom2.Element;
@@ -200,26 +201,26 @@ public class ReadXmlAlexaApiJDomParser {
         }
 
     }
-} 
+}
 ```
 
 输出
 
-Terminal
+`Terminal`
 
-```java
- URL : mkyong.com/
-Alexa Rank : 20152 
+```text
+URL : mkyong.com/
+Alexa Rank : 20152
 ```
 
-## 4。包含 XML 的字符串
+## 4. 包含 XML 的字符串
 
 这个例子展示了 JDOM 如何解析包含 XML 的`String`。
 
-ReadXmlStringJDomParser.java
+`ReadXmlStringJDomParser.java`
 
 ```java
- package com.mkyong.xml.jdom;
+package com.mkyong.xml.jdom;
 
 import org.jdom2.Document;
 import org.jdom2.Element;
@@ -249,37 +250,36 @@ public class ReadXmlStringJDomParser {
         }
 
     }
-} 
+}
 ```
 
 输出
 
-Terminal
+`Terminal`
 
-```java
- mkyong 
+```text
+mkyong
 ```
 
 **注**
+
 更多 JDOM2 示例——[JDOM 2 入门](http://web.archive.org/web/20220626054148/https://github.com/hunterhacker/jdom/wiki/JDOM2-A-Primer)
 
-## 5。下载源代码
+## 5. 下载源代码
 
-$ git 克隆[https://github.com/mkyong/core-java](http://web.archive.org/web/20220626054148/https://github.com/mkyong/core-java)
-
+```bash
+$ git clone https://github.com/mkyong/core-java
 $ cd java-xml
+$ cd src/main/java/com/mkyong/xml/jdom/
+```
 
-$ CD src/main/Java/com/mkyong/XML/JDOM/
+## 6. 参考文献
 
-## 6。参考文献
-
-*   [JDOM 网站](http://web.archive.org/web/20220626054148/http://www.jdom.org/)
-*   [JDOM2 文档](http://web.archive.org/web/20220626054148/https://github.com/hunterhacker/jdom/wiki/JDOM2-A-Primer)
-*   [维基百科–JDOM](http://web.archive.org/web/20220626054148/https://en.wikipedia.org/wiki/JDOM)
-*   [维基百科–用于 XML 处理的 Java API](http://web.archive.org/web/20220626054148/https://en.wikipedia.org/wiki/Java_API_for_XML_Processing)
-*   [Oracle–用于 XML 处理的 Java API(JAXP)](http://web.archive.org/web/20220626054148/https://docs.oracle.com/javase/tutorial/jaxp/index.html)
-*   [如何在 Java 中读取 XML 文件—(DOM 解析器)](http://web.archive.org/web/20220626054148/https://mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/)
-*   [如何在 Java 中读取 XML 文件—(SAX 解析器)](http://web.archive.org/web/20220626054148/https://mkyong.com/java/how-to-read-xml-file-in-java-sax-parser/)
-*   [JAXB hello world 示例](http://web.archive.org/web/20220626054148/https://mkyong.com/java/jaxb-hello-world-example/)
-
-<input type="hidden" id="mkyong-current-postId" value="2489">
+- [JDOM 网站](http://web.archive.org/web/20220626054148/http://www.jdom.org/)
+- [JDOM2 文档](http://web.archive.org/web/20220626054148/https://github.com/hunterhacker/jdom/wiki/JDOM2-A-Primer)
+- [维基百科–JDOM](http://web.archive.org/web/20220626054148/https://en.wikipedia.org/wiki/JDOM)
+- [维基百科–用于 XML 处理的 Java API](http://web.archive.org/web/20220626054148/https://en.wikipedia.org/wiki/Java_API_for_XML_Processing)
+- [Oracle–用于 XML 处理的 Java API(JAXP)](http://web.archive.org/web/20220626054148/https://docs.oracle.com/javase/tutorial/jaxp/index.html)
+- [如何在 Java 中读取 XML 文件—(DOM 解析器)](http://web.archive.org/web/20220626054148/https://mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/)
+- [如何在 Java 中读取 XML 文件—(SAX 解析器)](http://web.archive.org/web/20220626054148/https://mkyong.com/java/how-to-read-xml-file-in-java-sax-parser/)
+- [JAXB hello world 示例](http://web.archive.org/web/20220626054148/https://mkyong.com/java/jaxb-hello-world-example/)

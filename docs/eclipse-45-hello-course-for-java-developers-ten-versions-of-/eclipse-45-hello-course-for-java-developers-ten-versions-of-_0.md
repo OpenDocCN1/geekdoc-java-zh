@@ -1,12 +1,7 @@
+
 # Java 开发者 Eclipse 4.5 入门指南：十个版本的 HelloWorld 展现 Eclipse IDE 的强大功能
 
-
-
 ![](img/calibre_cover.jpg)
-
-
-
-
 
 “抄窃是作者从一个来源窃取；学术积累是作者从多个来源汲取。” —— 匿名
 
@@ -18,25 +13,10 @@ Oholiab 第一定律的推论：只有在没有人想要服务器时，开发人
 
 **警告：** 如果你不够聪明，无法从这些笔记中分辨出珍珠和牛粪，那么你没有权限阅读它们！
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 | :--- | :--- |
 
-
-
-  System.out.println(messageProvider.getMessage());
-}
+```
+System.out.println(messageProvider.getMessage());
 ```
 
 为 `HelloMessageRenderer` 生成 setter 和 getter。
@@ -46,8 +26,8 @@ Oholiab 第一定律的推论：只有在没有人想要服务器时，开发人
 将 `HelloLauncher.java` 的 `main()` 体替换为：
 
 ```java
-HelloMessageRenderer hmr =new HelloMessageRenderer ();
-HelloMessageProvider hmp =new HelloMessageProvider ();
+HelloMessageRenderer hmr = new HelloMessageRenderer();
+HelloMessageProvider hmp = new HelloMessageProvider();
 hmr.setMessageProvider(hmp);
 hmr.render();
 ```
@@ -63,9 +43,6 @@ hmr.render();
 从项目中删除 `HelloWorld.java`。运行 `HelloSeparation`。运行成功。整洁了一些。
 
 ### 练习 10-2：使用接口改进 Hello 分离
-
-
-
 
 将 `HelloSeparation` 复制到 `HelloSeparationWithInterfaces`。（你关闭 `HelloSeparation` 了吗？你已经将 `HelloSeparationWithInterfaces` 设置为打开展开的项目了吗？）我们（最终）将能够通过让 `HelloMessageProvider` 和 `HelloMessageRender` 实现接口来更改消息。
 
@@ -131,6 +108,7 @@ private static MessageSupportFactory instance = null;
 private Properties props = null;
 private MessageRenderer renderer = null;
 private MessageProvider provider = null;
+
 private MessageSupportFactory() {
     props = new Properties();
     try {
@@ -144,8 +122,9 @@ private MessageSupportFactory() {
         ex.printStackTrace();
     }
 }
+
 static {
-    instance = new MessageSupportFactory ();
+    instance = new MessageSupportFactory();
 }
 ```
 
@@ -188,9 +167,6 @@ provider.class=HelloMessageProvider
 
 保存并关闭。
 
-
-
-
 运行 `HelloSeparationWithInterfacesAndFactory2`。它运行并给出了不同的消息。因此，通过简单的文本文件更改应用程序的行为是可能的。无需编译！
 
 ### 问题
@@ -221,7 +197,7 @@ Spring 框架家族的所有者，包括一个简化 Java 企业级应用开发�
 
 在编辑器窗口中打开 `HelloLauncher.java`。将 `main` 内部的代码替换为下面的代码：
 
-```
+```java
 BeanFactory factory = getBeanFactory();
 MessageRenderer mr = (MessageRenderer) factory.getBean("renderer");
 MessageProvider mp = (MessageProvider) factory.getBean("provider");
@@ -229,19 +205,31 @@ mr.setMessageProvider(mp);
 mr.render();
 ```
 
+
+
 点击“BeanFactory with a red squiggle underneath”最右侧带有红色 x 图标的小文件夹。当帮助信息弹出时，双击高亮的 `import 'BeanFactory' …` 行。注意添加到 `HelloLauncher.java` 顶部的导入语句。是的，`getBeanFactory()` 仍然存在问题 - 它还不存在。将下面的方法粘贴到 `HelloLauncher.java` 的 `main()` 下方。
 
 ```java
 private static BeanFactory getBeanFactory() throws Exception {
+
   // 获取 bean 工
+
   DefaultListableBeanFactory factory = new DefaultListableBeanFactory();
+
   // 创建定义读取器
+
   PropertiesBeanDefinitionReader rdr = new PropertiesBeanDefinitionReader(factory);
+
   // 加载配置选项
+
   Properties props = new Properties();
+
   props.load(new FileInputStream("beans.properties"));
+
   rdr.registerBeanDefinitions(props);
+
   return factory;
+
 }
 ```
 
@@ -287,8 +275,6 @@ log4j.appender.myFile.layout.ConversionPattern=%-5p : %m %d{dd-MM-yy HH:mm:ss}%n
 ```
 
 右键点击 "(default package)"。当下拉菜单出现时，点击 "New->Other..."。当 "Select a wizard" 弹出时，点击 "General->File" 然后点击 "Next" 按钮。当 "File" 弹出时，输入 `Log4j.properties` 然后点击 `Finish`。当 `Log4j.properties` 出现在文本编辑器视图中，将上述行粘贴到文件中。如果你没有看到任何错误，保存并关闭。顺便说：这个文件可能可能不会在 Log4j 的 myFile 中保存你想要的信息。但是，你可以测试并查看记录了什么！
-
-
 
 再次，没有错误，你可以运行应用程序。你在“控制台”（Console）中看到了错误的信息：“…Factory…”。在 Java 编辑器中打开 `HelloMessageProvider`，将 `…Factory…` 替换为 `…Spring…`。
 
@@ -381,6 +367,7 @@ import org.springframework.beans.factory.xml.XmlBeanFactory;
 
 ```java
 private String message = "Hello from HelloSeparationWithInterfacesSpringDIAndMoreXml and Eclipse!";
+
 /** (nonJavadoc)
  * @see MessageProvider#getMessage()
  */
@@ -404,7 +391,9 @@ public HelloMessageProvider(String message){
 </bean>
 ```
 
-保存并关闭。如果没有错误，则继续。否则，修复问题。运行应用程序。注意控制台中的消息。文本文件 `beans.xml` 控制消息！
+
+
+保存并关闭。如果没有错误，则继续。否则，修复问题。运行应用程序。注意控制台中的消息。文本文件`beans.xml`控制消息！
 
 ### 问题
 
@@ -434,7 +423,7 @@ public HelloMessageProvider(String message){
 
 什么是 JAR 文件格式？
 
-一种将许多文件聚合成一个的编译封装的平台无关格式。多个 Java 类及其所需的组件（.class 文件、图像、声音和其他资源文件）可以封装在 JAR 文件中，并随后通过单个 HTTP 事务下载到客户端。该格式支持文件压缩和数字签名。
+一种将许多文件聚合成一个的编译封装的平台无关格式。多个 Java 类及其所需的组件（`.class`文件、图像、声音和其他资源文件）可以封装在 JAR 文件中，并随后通过单个 HTTP 事务下载到客户端。该格式支持文件压缩和数字签名。
 
 什么是 WAR 文件格式？
 
@@ -442,15 +431,11 @@ public HelloMessageProvider(String message){
 
 什么是 Jar (Java ARchive)？
 
-
-
-
-
-一种跨平台文件格式，它将多个类文件以及图形、声音文件等其他文件分组（并可能压缩）到一个文件中。通过单个 HTTP 事务即可下载整个 `JAR` 文件。EJB Jar 是 `JAR` 的一种特殊形式，包含一个 EJB。
+一种跨平台文件格式，它将多个类文件以及图形、声音文件等其他文件分组（并可能压缩）到一个文件中。通过单个 HTTP 事务即可下载整个`JAR`文件。EJB Jar 是`JAR`的一种特殊形式，包含一个 EJB。
 
 ### 什么是 JAR 文件 (.jar file)？
 
-一种基于 `PKZIP` 格式的压缩格式（JAR 文件格式），将许多文件聚合到一个文件中。Java 可以在不解压的情况下直接读取 `JAR` 文件。它可以具有（通常具有）相对目录结构。可以使用 `ZIP` 查看器查看（但不能由其创建）。可以使用像 `WinZip` 或 `7UP` 等更强大的 `ZIP` 工具创建。
+一种基于`PKZIP`格式的压缩格式（JAR 文件格式），将许多文件聚合到一个文件中。Java 可以在不解压的情况下直接读取`JAR`文件。它可以具有（通常具有）相对目录结构。可以使用`ZIP`查看器查看（但不能由其创建）。可以使用像`WinZip`或`7UP`等更强大的`ZIP`工具创建。
 
 ### 什么是可执行 jar 文件？
 
@@ -458,7 +443,7 @@ public HelloMessageProvider(String message){
 
 ## 什么是 EAR（Ear 文件）（EAR 文件）（企业级归档文件）？
 
-包含了企业级应用运行所需的所有类和其他资源。通常作为企业级应用或 J2EE 企业级应用的同义词`Ear` 文件部署在应用程序服务器上。
+包含了企业级应用运行所需的所有类和其他资源。通常作为企业级应用或 J2EE 企业级应用的同义词`Ear`文件部署在应用程序服务器上。
 
 ### 什么是提取所需的库？
 
@@ -466,7 +451,7 @@ public HelloMessageProvider(String message){
 
 ### 什么是打包所需的库
 
-将整个库文件 `jars` 复制到可执行 jar 中。
+将整个库文件`jars`复制到可执行 jar 中。
 
 ### 问题
 
@@ -478,45 +463,45 @@ public HelloMessageProvider(String message){
 
 ### 第 7 章
 
-创建新项目的两种方法是什么？提示：点击 `File`。查看下拉菜单，然后在工具栏图标上悬停。
+创建新项目的两种方法是什么？提示：点击`File`。查看下拉菜单，然后在工具栏图标上悬停。
 
-点击 `File->New`。点击工具栏最左侧带有黄色加号的蓝色白色矩形图标 `New`，然后点击 `New`。
+点击`File->New`。点击工具栏最左侧带有黄色加号的蓝色白色矩形图标`New`，然后点击`New`。
 
-在 Java 编辑器中打开 `HelloWorld.java` 的两种方法是什么？
+在 Java 编辑器中打开`HelloWorld.java`的两种方法是什么？
 
-双击 `HelloWorld.java`。右键点击 `HelloWorld.java`。当下拉菜单出现时，点击 `Open`。顺便问一下：点击 `Open With` 会发生什么？
+双击`HelloWorld.java`。右键点击`HelloWorld.java`。当下拉菜单出现时，点击`Open`。顺便问一下：点击`Open With`会发生什么？
 
 关闭 Java 编辑器的另一种方法是什么？
 
-点击编辑器标签页上的 `X`。
+点击编辑器标签页上的`X`。
 
-保存修改后的 `HelloWorld.java` 文件的另一种方法是什么？
+保存修改后的`HelloWorld.java`文件的另一种方法是什么？
 
-点击编辑器标签页上的 `X` 并回答弹出的提示。
+点击编辑器标签页上的`X`并回答弹出的提示。
 
 运行 Hello 项目的另一种方法是什么？
 
-点击 `Run` 菜单下的 `Run`（或 `Run As`）。点击 `Run` 图标（带有白色右三角形的绿球）。顺便问一下：点击启动图标左侧的下拉列表（带有工具箱的带有白色右三角形的绿球）会发生什么？
+点击`Run`菜单下的`Run`（或`Run As`）。点击`Run`图标（带有白色右三角形的绿球）。顺便问一下：点击启动图标左侧的下拉列表（带有工具箱的带有白色右三角形的绿球）会发生什么？
 
 关闭 Hello 项目的另一种方法是什么？
 
-高亮显示该项目，点击 `Project` 菜单，然后选择 `Close Project`。
+高亮显示该项目，点击`Project`菜单，然后选择`Close Project`。
 
 当你看到带有三个点的菜单下拉列表项时，它意味着什么？
 
 点击该项后将出现另一个菜单。
 
-Eclipse 从哪里获取 `@author` 标签的文本？
+Eclipse 从哪里获取`@author`标签的文本？
 
-打开文件管理器并查看 `Users` 文件夹下的名称。
+打开文件管理器并查看`Users`文件夹下的名称。
 
 #### 第 8 章
 
 打开已关闭项目的其他方法是什么？
 
-在 `Project Explorer` 中选择项目。点击 `Project->Open Project`。
+在`Project Explorer`中选择项目。点击`Project->Open Project`。
 
-为什么 `File-> Close` 不关闭已打开的项目？
+为什么`File-> Close`不关闭已打开的项目？
 
 关闭的是编辑窗口。
 
@@ -524,9 +509,9 @@ Eclipse 从哪里获取 `@author` 标签的文本？
 
 我如何为我添加的新方法添加 Javadoc 注释？
 
-输入 `/**[ENTER]`，然后输入 `*/[ENTER]`。
+输入`/**[ENTER]`，然后输入`*/[ENTER]`。
 
-为什么 `Source->Generate Element Comment` 没有给方法添加注释？
+为什么`Source->Generate Element Comment`没有给方法添加注释？
 
 我不确定。它似乎失效了。
 
@@ -534,7 +519,7 @@ Eclipse 从哪里获取 `@author` 标签的文本？
 
 除了点击带有红色 x 的小文件夹来获取帮助，你还可以做什么？
 
-点击 `Help` 菜单。
+点击`Help`菜单。
 
 ## 作者简介
 
@@ -553,9 +538,6 @@ Eclipse 4.5 Hello 课程是他第十三本自出版的书。
 他之前出版过两本大型和一本小型的电子词典（主要是 Java - 分布式计算字典、面向浪漫小说和海军小说读者的 17-19 世纪术语字典以及 CCNA R&S 词典），两本关于电子预订的小型电子书（使用表格创建 EPUB 文档与屏幕文本通信），一份关于日历的短记（格列哥日历笔记），和一个 Calibre 课程。（他认为自己现在更聪明了，所以之前的书籍将重写并重新发行。）
 
 他学会了编写 iPhone 和 iPad 代码，并编写了两本关于 iOS 8 编程的小型电子书《OS X Yosemite 文件系统笔记：一个 Windows 程序员：他并不太喜欢它》。
-
-
-
 
 ### 什么是命令行界面？
 ### 什么是发布（版本）？
@@ -591,7 +573,7 @@ Eclipse 4.5 Hello 课程是他第十三本自出版的书。
 ## 第 5 章：Eclipse 4 文件系统
 ### Eclipse 平台是如何组织信息的？Eclipse 工作区是如何组织信息的？
 ### 工作空间目录中包含什么？
- 项目目录中包含什么？
+项目目录中包含什么？
 ### 工作空间中的 .metadata 文件夹包含什么？
 
 ## 第 6 章：Eclipse 4 IDE
@@ -622,30 +604,30 @@ Eclipse 4.5 Hello 课程是他第十三本自出版的书。
 ### 项目资源管理器（Project Explorer）和包管理器（Package Explorer）有什么区别？
 ### 练习 7-1：创建一个 Hello1 项目
 ### 练习 7-2：创建一个带有 main 的 Hello 项目
-### 练习 7-3：比较 `HelloWorld.java` 和 `Hello1.java`
-### 练习 7-4：关闭 `Hello` 和 `Hello1`
-### 练习 7-5：删除 `Hello1` 项目
-### 练习 7-6：在 `Hello` 项目的 `main` 方法内部添加方法调用
-### 练习 7-7：运行 `Hello` 项目
-### 练习 7-8：为什么 `Hello` 项目会有警告？
-### 练习 7-9：关闭 `Hello` 项目
+### 练习 7-3：比较`HelloWorld.java`和`Hello1.java`
+### 练习 7-4：关闭`Hello`和`Hello1`
+### 练习 7-5：删除`Hello1`项目
+### 练习 7-6：在`Hello`项目的`main`方法内部添加方法调用
+### 练习 7-7：运行`Hello`项目
+### 练习 7-8：为什么`Hello`项目会有警告？
+### 练习 7-9：关闭`Hello`项目
 
 ## 第 8 章：从 Hello 项目创建新项目
 ### 什么是全限定名（fully qualified name）？
 ### 什么是重构（refactoring）？
 ### 什么是启动模式（设计模式）？
 ### 什么是启动器（launcher）？
-### 练习 8-1：复制 `Hello` 项目并将其命名为 `HelloArgs`
-### 练习 8-2：将 `Hello` 项目复制为 `HelloLauncher`
+### 练习 8-1：复制`Hello`项目并将其命名为`HelloArgs`
+### 练习 8-2：将`Hello`项目复制为`HelloLauncher`
 
 # 第 9 章：调试 HelloLauncher
 ### 什么是调试（debugging）？
 ### 什么是断点（breakpoint）？
 ### “切换断点”（Toggle breakpoint）意味着什么？
-### 练习 9-1：调试 `HelloLauncher` 项目
+### 练习 9-1：调试`HelloLauncher`项目
 
 # 第 10 章：通过职责分离减少耦合（更多但更小的类）
-### 什么是 `@Override` 
+### 什么是`@Override`
 ### 什么是耦合（coupling）？
 ### 什么是提供者（provider）？
 ### 什么是渲染器（renderer）？
@@ -662,10 +644,6 @@ Eclipse 4.5 Hello 课程是他第十三本自出版的书。
 ### 什么是父类（parent class）？
 ### 什么是引用（reference）？
 ### 什么是类引用（class reference）？
-
-
-
-
 
 ### 什么是接口引用？
 ### 为什么我关注类引用和接口引用？
@@ -685,7 +663,7 @@ Eclipse 4.5 Hello 课程是他第十三本自出版的书。
 ### 什么是废弃？
 ### 什么是 DI（依赖注入）？
 ### 练习 13-1：使用 Spring 和 DI 改进 Hello 的解耦
-### 练习 13-2：使用 Spring、DI 和更多的 改进 Hello 的解耦
+### 练习 13-2：使用 Spring、DI 和更多的改进 Hello 的解耦
 ### 问题
 
 ## 第 14 章：导出项目，导入现有项目
@@ -711,4 +689,3 @@ Eclipse 4.5 Hello 课程是他第十三本自出版的书。
 ### 第 12 章
 
 ## 作者简介
-

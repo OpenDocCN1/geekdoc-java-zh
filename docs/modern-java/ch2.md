@@ -1,20 +1,19 @@
+
 # Java 8 数据流教程
 
-> 原文：[Java 8 Stream Tutorial](http://winterbe.com/posts/2014/07/31/java8-stream-tutorial-examples/) 
-
-> 译者：[飞龙](https://github.com/wizardforcel)  
-
+> 原文：[Java 8 Stream Tutorial](http://winterbe.com/posts/2014/07/31/java8-stream-tutorial-examples/)
+> 译者：[飞龙](https://github.com/wizardforcel)
 > 协议：[CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-这个示例驱动的教程是Java8数据流（Stream）的深入总结。当我第一次看到`Stream`API时，我非常疑惑，因为它听起来和Java IO的`InputStream` 和 `OutputStream`一样。但是Java8的数据流是完全不同的东西。数据流是单体（Monad），并且在Java8函数式编程中起到重要作用。
+这个示例驱动的教程是 Java 8 数据流（`Stream`）的深入总结。当我第一次看到 `Stream` API 时，我非常疑惑，因为它听起来和 Java IO 的 `InputStream` 和 `OutputStream` 一样。但是 Java 8 的数据流是完全不同的东西。数据流是单体（Monad），并且在 Java 8 函数式编程中起到重要作用。
 
 > 在函数式编程中，单体是一个结构，表示定义为步骤序列的计算。单体结构的类型定义了它对链式操作，或具有相同类型的嵌套函数的含义。
 
-这个教程教给你如何使用Java8数据流，以及如何使用不同种类的可用的数据流操作。你将会学到处理次序以及流操作的次序如何影响运行时效率。这个教程也会详细讲解更加强大的流操作，`reduce`、`collect`和`flatMap`。最后，这个教程会深入探讨并行流。
+这个教程教给你如何使用 Java 8 数据流，以及如何使用不同种类的可用的数据流操作。你将会学到处理次序以及流操作的次序如何影响运行时效率。这个教程也会详细讲解更加强大的流操作，`reduce`、`collect` 和 `flatMap`。最后，这个教程会深入探讨并行流。
 
-如果你还不熟悉Java8的lambda表达式，函数式接口和方法引用，你可能需要在开始这一章之前，首先阅读我的[Java8教程](ch1.md)。
+如果你还不熟悉 Java 8 的 lambda 表达式，函数式接口和方法引用，你可能需要在开始这一章之前，首先阅读我的 [Java 8 教程](ch1.md)。
 
-更新 - 我现在正在编写用于浏览器的Java8数据流API的JavaScript实现。如果你对此感兴趣，请在Github上访问[Stream.js](https://github.com/winterbe/streamjs)。非常期待你的反馈。
+更新 - 我现在正在编写用于浏览器的 Java 8 数据流 API 的 JavaScript 实现。如果你对此感兴趣，请在 Github 上访问 [Stream.js](https://github.com/winterbe/streamjs)。非常期待你的反馈。
 
 ## 数据流如何工作
 
@@ -35,17 +34,17 @@ myList
 // C2
 ```
 
-数据流操作要么是衔接操作，要么是终止操作。衔接操作返回数据流，所以我们可以把多个衔接操作不使用分号来链接到一起。终止操作无返回值，或者返回一个不是流的结果。在上面的例子中，`filter`、`map`和`sorted`都是衔接操作，而`forEach`是终止操作。列表上的所有流式操作请见[数据流的Javadoc](http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)。你在上面例子中看到的这种数据流的链式操作也叫作操作流水线。
+数据流操作要么是衔接操作，要么是终止操作。衔接操作返回数据流，所以我们可以把多个衔接操作不使用分号来链接到一起。终止操作无返回值，或者返回一个不是流的结果。在上面的例子中，`filter`、`map` 和 `sorted` 都是衔接操作，而 `forEach` 是终止操作。列表上的所有流式操作请见[数据流的 Javadoc](http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)。你在上面例子中看到的这种数据流的链式操作也叫作操作流水线。
 
-多数数据流操作都接受一些lambda表达式参数，函数式接口用来指定操作的具体行为。这些操作的大多数必须是无干扰而且是无状态的。它们是什么意思呢？
+多数数据流操作都接受一些 lambda 表达式参数，函数式接口用来指定操作的具体行为。这些操作的大多数必须是无干扰而且是无状态的。它们是什么意思呢？
 
-当一个函数不修改数据流的底层数据源，它就是[无干扰的](http://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#NonInterference)。例如，在上面的例子中，没有任何lambda表达式通过添加或删除集合元素修改`myList`。
+当一个函数不修改数据流的底层数据源，它就是[无干扰的](http://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#NonInterference)。例如，在上面的例子中，没有任何 lambda 表达式通过添加或删除集合元素修改 `myList`。
 
-当一个函数的操作的执行是确定性的，它就是[无状态的](http://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#Statelessness)。例如，在上面的例子中，没有任何lambda表达式依赖于外部作用域中任何在操作过程中可变的变量或状态。
+当一个函数的操作的执行是确定性的，它就是[无状态的](http://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#Statelessness)。例如，在上面的例子中，没有任何 lambda 表达式依赖于外部作用域中任何在操作过程中可变的变量或状态。
 
 ## 数据流的不同类型
 
-数据流可以从多种数据源创建，尤其是集合。`List`和`Set`支持新方法`stream()` 和 `parallelStream()`，来创建串行流或并行流。并行流能够在多个线程上执行操作，它们会在之后的章节中讲到。我们现在来看看串行流：
+数据流可以从多种数据源创建，尤其是集合。`List` 和 `Set` 支持新方法 `stream()` 和 `parallelStream()`，来创建串行流或并行流。并行流能够在多个线程上执行操作，它们会在之后的章节中讲到。我们现在来看看串行流：
 
 ```java
 Arrays.asList("a1", "a2", "a3")
@@ -54,7 +53,7 @@ Arrays.asList("a1", "a2", "a3")
     .ifPresent(System.out::println);  // a1
 ```
 
-在对象列表上调用`stream()`方法会返回一个通常的对象流。但是我们不需要创建一个集合来创建数据流，就像下面那样：
+在对象列表上调用 `stream()` 方法会返回一个通常的对象流。但是我们不需要创建一个集合来创建数据流，就像下面那样：
 
 ```java
 Stream.of("a1", "a2", "a3")
@@ -62,11 +61,11 @@ Stream.of("a1", "a2", "a3")
     .ifPresent(System.out::println);  // a1
 ```
 
-只要使用`Stream.of()`，就可以从一系列对象引用中创建数据流。
+只要使用 `Stream.of()`，就可以从一系列对象引用中创建数据流。
 
-除了普通的对象数据流，Java8还自带了特殊种类的流，用于处理基本数据类型`int`、`long` 和 `double`。你可能已经猜到了它是`IntStream`、`LongStream` 和 `DoubleStream`。
+除了普通的对象数据流，Java 8 还自带了特殊种类的流，用于处理基本数据类型 `int`、`long` 和 `double`。你可能已经猜到了它是 `IntStream`、`LongStream` 和 `DoubleStream`。
 
-`IntStream`可以使用`IntStream.range()`替换通常的`for`循环：
+`IntStream` 可以使用 `IntStream.range()` 替换通常的 `for` 循环：
 
 ```java
 IntStream.range(1, 4)
@@ -77,7 +76,7 @@ IntStream.range(1, 4)
 // 3
 ```
 
-所有这些基本数据流都像通常的对象数据流一样，但有一些不同。基本的数据流使用特殊的lambda表达式，例如，`IntFunction`而不是`Function`，`IntPredicate`而不是`Predicate`。而且基本数据流支持额外的聚合终止操作`sum()`和`average()`：
+所有这些基本数据流都像通常的对象数据流一样，但有一些不同。基本的数据流使用特殊的 lambda 表达式，例如，`IntFunction` 而不是 `Function`，`IntPredicate` 而不是 `Predicate`。而且基本数据流支持额外的聚合终止操作 `sum()` 和 `average()`：
 
 ```java
 Arrays.stream(new int[] {1, 2, 3})
@@ -86,7 +85,7 @@ Arrays.stream(new int[] {1, 2, 3})
     .ifPresent(System.out::println);  // 5.0
 ```
 
-有时需要将通常的对象数据流转换为基本数据流，或者相反。出于这种目的，对象数据流支持特殊的映射操作`mapToInt()`、`mapToLong()` 和 `mapToDouble()`：
+有时需要将通常的对象数据流转换为基本数据流，或者相反。出于这种目的，对象数据流支持特殊的映射操作 `mapToInt()`、`mapToLong()` 和 `mapToDouble()`：
 
 ```java
 Stream.of("a1", "a2", "a3")
@@ -96,7 +95,7 @@ Stream.of("a1", "a2", "a3")
     .ifPresent(System.out::println);  // 3
 ```
 
-基本数据流可以通过`mapToObj()`转换为对象数据流：
+基本数据流可以通过 `mapToObj()` 转换为对象数据流：
 
 ```java
 IntStream.range(1, 4)
@@ -137,7 +136,7 @@ Stream.of("d2", "a2", "b1", "b3", "c")
 
 执行这段代码时，不向控制台打印任何东西。这是因为衔接操作只在终止操作调用时被执行。
 
-让我们通过添加终止操作`forEach`来扩展这个例子：
+让我们通过添加终止操作 `forEach` 来扩展这个例子：
 
 ```java
 Stream.of("d2", "a2", "b1", "b3", "c")
@@ -163,7 +162,7 @@ filter:  c
 forEach: c
 ```
 
-结果的顺序可能出人意料。原始的方法会在数据流的所有元素上，一个接一个地水平执行所有操作。但是每个元素在调用链上垂直移动。第一个字符串`"d2"`首先经过`filter`然后是`forEach`，执行完后才开始处理第二个字符串`"a2"`。
+结果的顺序可能出人意料。原始的方法会在数据流的所有元素上，一个接一个地水平执行所有操作。但是每个元素在调用链上垂直移动。第一个字符串 `"d2"` 首先经过 `filter` 然后是 `forEach`，执行完后才开始处理第二个字符串 `"a2"`。
 
 这种行为可以减少每个元素上所执行的实际操作数量，就像我们在下个例子中看到的那样：
 
@@ -184,11 +183,11 @@ Stream.of("d2", "a2", "b1", "b3", "c")
 // anyMatch: A2
 ```
 
-只要提供的数据元素满足了谓词，`anyMatch`操作就会返回`true`。对于第二个传递`"A2"`的元素，它的结果为真。由于数据流的链式调用是垂直执行的，`map`这里只需要执行两次。所以`map`会执行尽可能少的次数，而不是把所有元素都映射一遍。
+只要提供的数据元素满足了谓词，`anyMatch` 操作就会返回 `true`。对于第二个传递 `"A2"` 的元素，它的结果为真。由于数据流的链式调用是垂直执行的，`map` 这里只需要执行两次。所以 `map` 会执行尽可能少的次数，而不是把所有元素都映射一遍。
 
 ### 为什么顺序如此重要
 
-下面的例子由两个衔接操作`map`和`filter`，以及一个终止操作`forEach`组成。让我们再来看看这些操作如何执行：
+下面的例子由两个衔接操作 `map` 和 `filter`，以及一个终止操作 `forEach` 组成。让我们再来看看这些操作如何执行：
 
 ```java
 Stream.of("d2", "a2", "b1", "b3", "c")
@@ -215,9 +214,9 @@ Stream.of("d2", "a2", "b1", "b3", "c")
 // filter:  C
 ```
 
-就像你可能猜到的那样，`map`和`filter`会对底层集合的每个字符串调用五次，而`forEach`只会调用一次。
+就像你可能猜到的那样，`map` 和 `filter` 会对底层集合的每个字符串调用五次，而 `forEach` 只会调用一次。
 
-如果我们调整操作顺序，将`filter`移动到调用链的顶端，就可以极大减少操作的执行次数:
+如果我们调整操作顺序，将 `filter` 移动到调用链的顶端，就可以极大减少操作的执行次数：
 
 ```java
 Stream.of("d2", "a2", "b1", "b3", "c")
@@ -240,9 +239,9 @@ Stream.of("d2", "a2", "b1", "b3", "c")
 // filter:  c
 ```
 
-现在，`map`只会调用一次，所以操作流水线对于更多的输入元素会执行更快。在整合复杂的方法链时，要记住这一点。
+现在，`map` 只会调用一次，所以操作流水线对于更多的输入元素会执行更快。在整合复杂的方法链时，要记住这一点。
 
-让我们通过添加额外的方法`sorted`来扩展上面的例子：
+让我们通过添加额外的方法 `sorted` 来扩展上面的例子：
 
 ```java
 Stream.of("d2", "a2", "b1", "b3", "c")
@@ -283,7 +282,7 @@ filter:  c
 filter:  d2
 ```
 
-首先，排序操作在整个输入集合上执行。也就是说，`sorted`以水平方式执行。所以这里`sorted`对输入集合中每个元素的多种组合调用了八次。
+首先，排序操作在整个输入集合上执行。也就是说，`sorted` 以水平方式执行。所以这里 `sorted` 对输入集合中每个元素的多种组合调用了八次。
 
 我们同样可以通过重排调用链来优化性能：
 
@@ -312,11 +311,11 @@ Stream.of("d2", "a2", "b1", "b3", "c")
 // forEach: A2
 ```
 
-这个例子中`sorted`永远不会调用，因为`filter`把输入集合减少至只有一个元素。所以对于更大的输入集合会极大提升性能。
+这个例子中 `sorted` 永远不会调用，因为 `filter` 把输入集合减少至只有一个元素。所以对于更大的输入集合会极大提升性能。
 
 ## 复用数据流
 
-Java8的数据流不能被复用。一旦你调用了任何终止操作，数据流就关闭了：
+Java 8 的数据流不能被复用。一旦你调用了任何终止操作，数据流就关闭了：
 
 ```java
 Stream<String> stream =
@@ -327,7 +326,7 @@ stream.anyMatch(s -> true);    // ok
 stream.noneMatch(s -> true);   // exception
 ```
 
-在相同数据流上，在`anyMatch`之后调用`noneMatch`会产生下面的异常：
+在相同数据流上，在 `anyMatch` 之后调用 `noneMatch` 会产生下面的异常：
 
 ```
 java.lang.IllegalStateException: stream has already been operated upon or closed
@@ -338,6 +337,8 @@ java.lang.IllegalStateException: stream has already been operated upon or closed
 ```
 
 要克服这个限制，我们需要为每个我们想要执行的终止操作创建新的数据流调用链。例如，我们创建一个数据流供应器，来构建新的数据流，并且设置好所有衔接操作：
+
+
 
 ```java
 Supplier<Stream<String>> streamSupplier =
@@ -382,7 +383,7 @@ List<Person> persons =
 
 ### `collect`
 
-`collect`是非常有用的终止操作，将流中的元素存放在不同类型的结果中，例如`List`、`Set`或者`Map`。`collect`接受收集器（Collector），它由四个不同的操作组成：供应器（supplier）、累加器（accumulator）、组合器（combiner）和终止器（finisher）。这在开始听起来十分复杂，但是Java8通过内置的`Collectors`类支持多种内置的收集器。所以对于大部分常见操作，你并不需要自己实现收集器。
+`collect`是非常有用的终止操作，将流中的元素存放在不同类型的结果中，例如`List`、`Set`或者`Map`。`collect`接受收集器（`Collector`），它由四个不同的操作组成：供应器（supplier）、累加器（accumulator）、组合器（combiner）和终止器（finisher）。这在开始听起来十分复杂，但是Java8通过内置的`Collectors`类支持多种内置的收集器。所以对于大部分常见操作，你并不需要自己实现收集器。
 
 让我们以一个非常常见的用例来开始：
 
@@ -651,6 +652,8 @@ Integer ageSum = persons
 你可以看到，累加器函数做了所有工作。它首先使用初始值`0`和第一个人Max来调用累加器。接下来的三步中`sum`会持续增加，直到76。
 
 等一下。好像组合器从来没有调用过？以并行方式执行相同的流会揭开这个秘密：
+
+
 
 ```java
 Integer ageSum = persons

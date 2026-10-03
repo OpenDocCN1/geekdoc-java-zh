@@ -1,3 +1,4 @@
+
 # 关闭
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/ldap/close.html`](https://docs.oracle.com/javase/tutorial/jndi/ldap/close.html)
@@ -26,7 +27,6 @@ Context ctx3 = (Context) ctx.lookup("ou=NewHires");
 ctx.close();
 ctx2.close();
 ctx3.close();
-
 ```
 
 ## 强制隐式闭包
@@ -36,7 +36,6 @@ ctx3.close();
 ```java
 Runtime.getRuntime().gc();
 Runtime.getRuntime().runFinalization();
-
 ```
 
 根据程序的状态，执行此过程可能会导致严重（临时）性能下降。如果需要确保连接已关闭，请跟踪`Context`实例并显式关闭它们。

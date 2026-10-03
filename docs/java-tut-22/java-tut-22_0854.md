@@ -1,4 +1,5 @@
-# 验证 JAR 文件签名。
+
+# 验证 JAR 文件签名
 
 > [`docs.oracle.com/javase/tutorial/security/toolfilex/rstep2.html`](https://docs.oracle.com/javase/tutorial/security/toolfilex/rstep2.html)
 
@@ -7,8 +8,7 @@
 当您验证已签名的 JAR 文件时，您验证签名是否有效，以及 JAR 文件是否未被篡改。您可以通过以下命令对`sContract.jar`文件进行此操作：
 
 ```java
-jarsigner -verify -verbose -keystore exampleruthstore sContract.jar 
-
+jarsigner -verify -verbose -keystore exampleruthstore sContract.jar
 ```
 
 您应该看到类似以下内容：
@@ -25,11 +25,9 @@ smk    1147 Wed Jul 29 16:06:12 PDT 1998 contract
  i = at least one certificate was found in identity scope
 
 jar verified.
-
 ```
 
 请务必使用`-verbose`选项运行命令，以获取足够的信息以确保以下内容：
 
-+   合同文件是 JAR 文件中的文件之一，已签名并验证其签名（这就是`s`的意思）。
-
-+   用于验证签名的公钥位于指定的密钥库中，因此您信任它（这就是`k`的意思）。
++ 合同文件是 JAR 文件中的文件之一，已签名并验证其签名（这就是`s`的意思）。
++ 用于验证签名的公钥位于指定的密钥库中，因此您信任它（这就是`k`的意思）。

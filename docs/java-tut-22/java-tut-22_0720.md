@@ -1,76 +1,68 @@
+
 # 从结果集中检索和修改值
 
 > 原文：[`docs.oracle.com/javase/tutorial/jdbc/basics/retrieving.html`](https://docs.oracle.com/javase/tutorial/jdbc/basics/retrieving.html)
 
-下面的方法，`CoffeesTable.viewTable`，输出了 `COFFEES` 表的内容，并演示了 `ResultSet` 对象和游标的使用：
+下面的方法，`CoffeesTable.viewTable`，输出了`COFFEES`表的内容，并演示了`ResultSet`对象和游标的使用：
 
 ```java
-  public static void viewTable(Connection con) throws SQLException {
+public static void viewTable(Connection con) throws SQLException {
     String query = "select COF_NAME, SUP_ID, PRICE, SALES, TOTAL from COFFEES";
     try (Statement stmt = con.createStatement()) {
-      ResultSet rs = stmt.executeQuery(query);
-      while (rs.next()) {
-        String coffeeName = rs.getString("COF_NAME");
-        int supplierID = rs.getInt("SUP_ID");
-        float price = rs.getFloat("PRICE");
-        int sales = rs.getInt("SALES");
-        int total = rs.getInt("TOTAL");
-        System.out.println(coffeeName + ", " + supplierID + ", " + price +
-                           ", " + sales + ", " + total);
-      }
+        ResultSet rs = stmt.executeQuery(query);
+        while (rs.next()) {
+            String coffeeName = rs.getString("COF_NAME");
+            int supplierID = rs.getInt("SUP_ID");
+            float price = rs.getFloat("PRICE");
+            int sales = rs.getInt("SALES");
+            int total = rs.getInt("TOTAL");
+            System.out.println(coffeeName + ", " + supplierID + ", " + price +
+                               ", " + sales + ", " + total);
+        }
     } catch (SQLException e) {
-      JDBCTutorialUtilities.printSQLException(e);
+        JDBCTutorialUtilities.printSQLException(e);
     }
-  }
-
+}
 ```
 
-`ResultSet` 对象是表示数据库结果集的数据表，通常是通过执行查询数据库的语句生成的。例如，当 `CoffeeTables.viewTable` 方法通过 `Statement` 对象 `stmt` 执行查询时，会创建一个 `ResultSet` 对象 `rs`。请注意，可以通过实现 `Statement` 接口的任何对象创建 `ResultSet` 对象，包括 `PreparedStatement`、`CallableStatement` 和 `RowSet`。
+`ResultSet`对象是表示数据库结果集的数据表，通常是通过执行查询数据库的语句生成的。例如，当`CoffeeTables.viewTable`方法通过`Statement`对象`stmt`执行查询时，会创建一个`ResultSet`对象`rs`。请注意，可以通过实现`Statement`接口的任何对象创建`ResultSet`对象，包括`PreparedStatement`、`CallableStatement`和`RowSet`。
 
-通过游标访问 `ResultSet` 对象中的数据。请注意，这个游标不是数据库游标。这个游标是指向 `ResultSet` 中一行数据的指针。最初，游标位于第一行之前。方法 `ResultSet.next` 将游标移动到下一行。如果游标位于最后一行之后，则此方法返回 `false`。此方法使用 `while` 循环重复调用 `ResultSet.next` 方法来迭代 `ResultSet` 中的所有数据。
+通过游标访问`ResultSet`对象中的数据。请注意，这个游标不是数据库游标。这个游标是指向`ResultSet`中一行数据的指针。最初，游标位于第一行之前。方法`ResultSet.next`将游标移动到下一行。如果游标位于最后一行之后，则此方法返回`false`。此方法使用`while`循环重复调用`ResultSet.next`方法来迭代`ResultSet`中的所有数据。
 
 本页涵盖以下主题：
 
-+   ResultSet 接口
-
++   `ResultSet`接口
 +   从行中检索列值
-
 +   游标
++   在`ResultSet`对象中更新行
++   使用`Statement`对象进行批量更新
++   在`ResultSet`对象中插入行
 
-+   在 ResultSet 对象中更新行
+## `ResultSet`接口
 
-+   使用 Statement 对象进行批量更新
+`ResultSet`接口提供了检索和操作执行查询结果的方法，`ResultSet`对象可以具有不同的功能和特性。这些特性包括类型、并发性和游标*保持性*。
 
-+   在 ResultSet 对象中插入行
+### `ResultSet`类型
 
-## ResultSet 接口
+`ResultSet`对象的类型确定了其功能级别在两个方面：游标如何被操作，以及对底层数据源进行的并发更改如何反映在`ResultSet`对象中。
 
-`ResultSet` 接口提供了检索和操作执行查询结果的方法，`ResultSet` 对象可以具有不同的功能和特性。这些特性包括类型、并发性和游标*保持性*。
-
-### ResultSet 类型
-
-`ResultSet` 对象的类型确定了其功能级别在两个方面：游标如何被操作，以及对底层数据源进行的并发更改如何反映在 `ResultSet` 对象中。
-
-`ResultSet` 对象的灵敏度由三种不同的 `ResultSet` 类型之一确定：
+`ResultSet`对象的灵敏度由三种不同的`ResultSet`类型之一确定：
 
 +   `TYPE_FORWARD_ONLY`：结果集无法滚动；其游标仅向前移动，从第一行之前到最后一行之后。结果集中包含的行取决于底层数据库如何生成结果。也就是说，它包含在查询执行时满足查询的行，或者在检索行时满足查询的行。
-
 +   `TYPE_SCROLL_INSENSITIVE`：结果可以滚动；其游标可以相对于当前位置向前和向后移动，并且可以移动到绝对位置。结果集对在打开时对基础数据源进行的更改是不敏感的。它包含在查询执行时满足查询的行，或者在检索行时满足查询的行。
-
 +   `TYPE_SCROLL_SENSITIVE`：结果可以滚动；其游标可以相对于当前位置向前和向后移动，并且可以移动到绝对位置。结果集反映了在结果集保持打开状态时对基础数据源所做的更改。
 
 默认的`ResultSet`类型是`TYPE_FORWARD_ONLY`。
 
 **注意**：并非所有数据库和 JDBC 驱动程序都支持所有`ResultSet`类型。如果指定的`ResultSet`类型受支持，则方法`DatabaseMetaData.supportsResultSetType`返回`true`，否则返回`false`。
 
-### ResultSet 并发性
+### `ResultSet`并发性
 
 `ResultSet`对象的并发性确定支持的更新功能级别。
 
 有两个并发级别：
 
 +   `CONCUR_READ_ONLY`：`ResultSet`对象不能使用`ResultSet`接口进行更新。
-
 +   `CONCUR_UPDATABLE`：`ResultSet`对象可以使用`ResultSet`接口进行更新。
 
 默认的`ResultSet`并发性是`CONCUR_READ_ONLY`。
@@ -86,7 +78,6 @@
 以下`ResultSet`常量可以提供给`Connection`方法`createStatement`，`prepareStatement`和`prepareCall`：
 
 +   `HOLD_CURSORS_OVER_COMMIT`：`ResultSet`游标不会关闭；它们是*可保持的*：当调用`commit`方法时，它们保持打开状态。如果您的应用程序主要使用只读`ResultSet`对象，则可保持的游标可能是理想的。
-
 +   `CLOSE_CURSORS_AT_COMMIT`：在调用`commit`方法时关闭`ResultSet`对象（游标）。在调用此方法时关闭游标可能会提高某些应用程序的性能。
 
 默认的游标可保持性取决于您的 DBMS。
@@ -115,7 +106,6 @@ public static void cursorHoldabilitySupport(Connection conn)
         dbMetaData.supportsResultSetHoldability(
             ResultSet.CLOSE_CURSORS_AT_COMMIT));
 }
-
 ```
 
 ## 从行中检索列值
@@ -125,24 +115,23 @@ public static void cursorHoldabilitySupport(Connection conn)
 例如，以下方法`CoffeesTable.alternateViewTable`，通过编号检索列值：
 
 ```java
-  public static void alternateViewTable(Connection con) throws SQLException {
+public static void alternateViewTable(Connection con) throws SQLException {
     String query = "select COF_NAME, SUP_ID, PRICE, SALES, TOTAL from COFFEES";
     try (Statement stmt = con.createStatement()) {
-      ResultSet rs = stmt.executeQuery(query);
-      while (rs.next()) {
-        String coffeeName = rs.getString(1);
-        int supplierID = rs.getInt(2);
-        float price = rs.getFloat(3);
-        int sales = rs.getInt(4);
-        int total = rs.getInt(5);
-        System.out.println(coffeeName + ", " + supplierID + ", " + price +
-                           ", " + sales + ", " + total);
-      }
+        ResultSet rs = stmt.executeQuery(query);
+        while (rs.next()) {
+            String coffeeName = rs.getString(1);
+            int supplierID = rs.getInt(2);
+            float price = rs.getFloat(3);
+            int sales = rs.getInt(4);
+            int total = rs.getInt(5);
+            System.out.println(coffeeName + ", " + supplierID + ", " + price +
+                               ", " + sales + ", " + total);
+        }
     } catch (SQLException e) {
-      JDBCTutorialUtilities.printSQLException(e);
+        JDBCTutorialUtilities.printSQLException(e);
     }
-  }
-
+}
 ```
 
 作为获取器方法输入的字符串是不区分大小写的。当使用字符串调用获取器方法时，如果有多个列具有与字符串相同的别名或名称，则返回第一个匹配列的值。使用字符串而不是整数的选项设计用于在生成结果集的 SQL 查询中使用列别名和名称。对于在查询中*未*明确命名的列（例如，`select * from COFFEES`），最好使用列号。如果使用列名，开发人员应确保它们通过使用列别名唯一地引用所需的列。列别名有效地重命名了结果集的列。要指定列别名，请在`SELECT`语句中使用 SQL `AS`子句。
@@ -155,21 +144,14 @@ public static void cursorHoldabilitySupport(Connection conn)
 
 如前所述，通过光标访问`ResultSet`对象中的数据，光标指向`ResultSet`对象中的一行。但是，当创建`ResultSet`对象时，光标位于第一行之前。方法`CoffeeTables.viewTable`通过调用`ResultSet.next`方法移动光标。还有其他可用于移动光标的方法：
 
-+   `next`: 将光标向前移动一行。如果光标现在位于一行上，则返回`true`，如果光标位于最后一行之后，则返回`false`。
-
-+   `previous`: 将光标向后移动一行。如果光标现在位于一行上，则返回`true`，如果光标位于第一行之前，则返回`false`。
-
-+   `first`: 将光标移动到`ResultSet`对象中的第一行。如果光标现在位于第一行上，则返回`true`，如果`ResultSet`对象不包含任何行，则返回`false`。
-
-+   `last:`: 将光标移动到`ResultSet`对象中的最后一行。如果光标现在位于最后一行上，则返回`true`，如果`ResultSet`对象不包含任何行，则返回`false`。
-
-+   `beforeFirst`: 将光标定位在`ResultSet`对象的开头，即第一行之前。如果`ResultSet`对象不包含任何行，则此方法不起作用。
-
-+   `afterLast`: 将光标定位在`ResultSet`对象的末尾，即最后一行之后。如果`ResultSet`对象不包含任何行，则此方法不起作用。
-
-+   `relative(int rows)`: 相对于当前位置移动光标。
-
-+   `absolute(int row)`: 将光标定位在参数`row`指定的行上。
++   `next`：将光标向前移动一行。如果光标现在位于一行上，则返回`true`，如果光标位于最后一行之后，则返回`false`。
++   `previous`：将光标向后移动一行。如果光标现在位于一行上，则返回`true`，如果光标位于第一行之前，则返回`false`。
++   `first`：将光标移动到`ResultSet`对象中的第一行。如果光标现在位于第一行上，则返回`true`，如果`ResultSet`对象不包含任何行，则返回`false`。
++   `last`：将光标移动到`ResultSet`对象中的最后一行。如果光标现在位于最后一行上，则返回`true`，如果`ResultSet`对象不包含任何行，则返回`false`。
++   `beforeFirst`：将光标定位在`ResultSet`对象的开头，即第一行之前。如果`ResultSet`对象不包含任何行，则此方法不起作用。
++   `afterLast`：将光标定位在`ResultSet`对象的末尾，即最后一行之后。如果`ResultSet`对象不包含任何行，则此方法不起作用。
++   `relative(int rows)`：相对于当前位置移动光标。
++   `absolute(int row)`：将光标定位在参数`row`指定的行上。
 
 请注意，`ResultSet`的默认灵敏度是`TYPE_FORWARD_ONLY`，这意味着它不能滚动；如果您的`ResultSet`不能滚动，则除了`next`之外，您不能调用任何移动光标的方法。下一节中描述的`CoffeesTable.modifyPrices`方法演示了如何移动`ResultSet`的光标。
 
@@ -180,20 +162,19 @@ public static void cursorHoldabilitySupport(Connection conn)
 以下方法，`CoffeesTable.modifyPrices`，将每行的`PRICE`列乘以参数`percentage`：
 
 ```java
-  public void modifyPrices(float percentage) throws SQLException {
+public void modifyPrices(float percentage) throws SQLException {
     try (Statement stmt =
       con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
-      ResultSet uprs = stmt.executeQuery("SELECT * FROM COFFEES");
-      while (uprs.next()) {
-        float f = uprs.getFloat("PRICE");
-        uprs.updateFloat("PRICE", f * percentage);
-        uprs.updateRow();
-      }
+        ResultSet uprs = stmt.executeQuery("SELECT * FROM COFFEES");
+        while (uprs.next()) {
+            float f = uprs.getFloat("PRICE");
+            uprs.updateFloat("PRICE", f * percentage);
+            uprs.updateRow();
+        }
     } catch (SQLException e) {
-      JDBCTutorialUtilities.printSQLException(e);
+        JDBCTutorialUtilities.printSQLException(e);
     }
-  }
-
+}
 ```
 
 字段`ResultSet.TYPE_SCROLL_SENSITIVE`创建一个`ResultSet`对象，其光标可以相对于当前位置和绝对位置向前和向后移动。字段`ResultSet.CONCUR_UPDATABLE`创建一个可更新的`ResultSet`对象。查看`ResultSet` Javadoc 以了解可以指定的其他字段，以修改`ResultSet`对象的行为。
@@ -204,12 +185,14 @@ public static void cursorHoldabilitySupport(Connection conn)
 
 `Statement`、`PreparedStatement`和`CallableStatement`对象都有一个与之关联的命令列表。该列表可能包含用于更新、插入或删除行的语句；也可能包含 DDL 语句，如`CREATE TABLE`和`DROP TABLE`。但是，它不能包含会产生`ResultSet`对象的语句，比如`SELECT`语句。换句话说，该列表只能包含产生更新计数的语句。
 
+
+
 与`Statement`对象在创建时关联的列表最初为空。您可以使用方法`addBatch`向此列表添加 SQL 命令，并使用方法`clearBatch`清空它。当您完成向列表添加语句时，调用方法`executeBatch`将它们全部发送到数据库以作为一个单元或批量执行。
 
 例如，以下方法，`CoffeesTable.batchUpdate`，使用批量更新向`COFFEES`表添加了四行：
 
 ```java
-  public void batchUpdate() throws SQLException {
+public void batchUpdate() throws SQLException {
     con.setAutoCommit(false);
     try (Statement stmt = con.createStatement()) {
 
@@ -232,14 +215,12 @@ public static void cursorHoldabilitySupport(Connection conn)
       con.setAutoCommit(true);
     }
   }
-
 ```
 
 以下行禁用了`Connection`对象`con`的自动提交模式，这样当调用方法`executeBatch`时，事务将不会自动提交或回滚。
 
 ```java
 con.setAutoCommit(false);
-
 ```
 
 为了正确处理错误，您应该在开始批量更新之前始终禁用自动提交模式。
@@ -250,7 +231,6 @@ con.setAutoCommit(false);
 
 ```java
 int[] updateCounts = stmt.executeBatch();
-
 ```
 
 请注意，`stmt`使用方法`executeBatch`发送插入的批处理，而不是使用方法`executeUpdate`，后者只发送一个命令并返回单个更新计数。数据库管理系统按照添加到命令列表的顺序执行命令，因此它将首先添加 Amaretto 的值行，然后添加 Hazelnut 的行，然后是 Amaretto decaf，最后是 Hazelnut decaf。如果所有四个命令都成功执行，数据库管理系统将按照执行顺序为每个命令返回一个更新计数。指示每个命令影响了多少行的更新计数存储在数组`updateCounts`中。
@@ -263,12 +243,11 @@ int[] updateCounts = stmt.executeBatch();
 
 ```java
 con.setAutoCommit(true);
-
 ```
 
 现在，示例中的每个语句在执行后将自动提交，并且不再需要调用方法`commit`。
 
-### 执行参数化的批量更新
+## 执行参数化的批量更新
 
 还可以进行参数化的批量更新，如下面的代码片段所示，其中`con`是一个`Connection`对象：
 
@@ -297,10 +276,9 @@ pstmt.addBatch();
 int[] updateCounts = pstmt.executeBatch();
 con.commit();
 con.setAutoCommit(true);
-
 ```
 
-### 处理批量更新异常
+## 处理批量更新异常
 
 如果批处理中的一个 SQL 语句产生结果集（通常是查询），或者批处理中的一个 SQL 语句由于其他原因未成功执行，当调用方法`executeBatch`时，将会收到`BatchUpdateException`。
 
@@ -311,7 +289,7 @@ con.setAutoCommit(true);
 `BatchUpdateException`是从`SQLException`派生的。这意味着你可以使用所有`SQLException`对象可用的方法。以下方法，`JDBCTutorialUtilities.printBatchUpdateException`，打印了所有`SQLException`信息以及`BatchUpdateException`对象中包含的更新计数。因为`BatchUpdateException.getUpdateCounts`返回一个`int`数组，代码使用`for`循环打印每个更新计数：
 
 ```java
-  public static void printBatchUpdateException(BatchUpdateException b) {
+public static void printBatchUpdateException(BatchUpdateException b) {
     System.err.println("----BatchUpdateException----");
     System.err.println("SQLState:  " + b.getSQLState());
     System.err.println("Message:  " + b.getMessage());
@@ -322,7 +300,6 @@ con.setAutoCommit(true);
       System.err.print(updateCounts[i] + "   ");
     }
   }
-
 ```
 
 ## 在`ResultSet`对象中插入行
@@ -332,7 +309,7 @@ con.setAutoCommit(true);
 以下方法，`CoffeesTable.insertRow`，通过`ResultSet`对象向`COFFEES`插入一行：
 
 ```java
-  public void insertRow(String coffeeName, int supplierID, float price,
+public void insertRow(String coffeeName, int supplierID, float price,
                         int sales, int total) throws SQLException {
 
     try (Statement stmt =
@@ -353,7 +330,6 @@ con.setAutoCommit(true);
       JDBCTutorialUtilities.printSQLException(e);
     }
   }
-
 ```
 
 此示例调用`Connection.createStatement`方法，带有两个参数，`ResultSet.TYPE_SCROLL_SENSITIVE`和`ResultSet.CONCUR_UPDATABLE`。第一个值使`ResultSet`对象的游标能够向前和向后移动。第二个值，`ResultSet.CONCUR_UPDATABLE`，如果要向`ResultSet`对象插入行，则需要它；它指定它可以被更新。

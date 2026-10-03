@@ -1,16 +1,17 @@
+
 # Java 中的 CDI(上下文和依赖注入)介绍
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-ee-cdi>
 
-## 1。概述
+## 1. 概述
 
-CDI(Contexts and Dependency Injection)是 Java EE 6 及更高版本中包含的标准[依赖注入](https://web.archive.org/web/20220817121616/https://en.wikipedia.org/wiki/Dependency_injection)框架。
+CDI(Contexts and Dependency Injection)是 Java EE 6 及更高版本中包含的标准依赖注入框架。
 
 它允许我们通过特定领域的生命周期上下文来管理有状态组件的生命周期，并以类型安全的方式将组件(服务)注入客户端对象。
 
 在本教程中，我们将深入了解 CDI 最相关的特性，并实现在客户端类中注入依赖项的不同方法。
 
-## 2。DYDI(自己动手依赖注入)
+## 2. DYDI(自己动手依赖注入)
 
 简而言之，根本不需要借助任何框架就可以实现 DI。
 
@@ -43,7 +44,7 @@ public class TextClass {
 public class TextClassFactory {
 
     public TextClass getTextClass() {
-        return new TextClass(new SpecializedTextService(); 
+        return new TextClass(new SpecializedTextService()); 
     }    
 }
 ```
@@ -56,17 +57,17 @@ public class TextClassFactory {
 
 我们能做得更好吗？当然可以。这正是 CDI 的用武之地。
 
-## 3。一个简单的例子
+## 3. 一个简单的例子
 
 CDI 将 DI 变成了一个简单的过程，归结起来就是用一些简单的注释来修饰服务类，并在客户端类中定义相应的注入点。
 
 为了展示 CDI 如何在最基础的层面上实现 DI，让我们假设我们想要开发一个简单的图像文件编辑应用程序。能够打开、编辑、写入、保存图像文件等等。
 
-### 3.1。`“beans.xml”`文件
+### 3.1. `beans.xml` 文件
 
-首先，我们必须在`“src/main/resources/META-INF/”`文件夹中放置一个`“beans.xml”`文件。**即使这个文件根本不包含任何特定的 DI 指令，它也是启动和运行 c DI 所必需的**:
+首先，我们必须在`src/main/resources/META-INF/`文件夹中放置一个`beans.xml`文件。**即使这个文件根本不包含任何特定的 DI 指令，它也是启动和运行 CDI 所必需的**:
 
-```java
+```xml
 <beans  
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
@@ -74,7 +75,7 @@ CDI 将 DI 变成了一个简单的过程，归结起来就是用一些简单的
 </beans>
 ```
 
-### 3.2。服务等级
+### 3.2. 服务等级
 
 接下来，让我们创建对 GIF、JPG 和 PNG 文件执行上述文件操作的服务类:
 
@@ -97,7 +98,7 @@ public class GifFileEditor implements ImageFileEditor {
 
     @Override
     public String editFile(String fileName) {
-      return "Editing GIF file " + fileName;
+        return "Editing GIF file " + fileName;
     }
 
     @Override
@@ -126,7 +127,7 @@ public class PngFileEditor implements ImageFileEditor {
 }
 ```
 
-### 3.3。客户端类
+### 3.3. 客户端类
 
 最后，让我们实现一个客户端类，它在构造函数中接受一个`ImageFileEditor`实现，让我们用`@Inject`注释定义一个注入点:
 
@@ -142,19 +143,19 @@ public class ImageFileProcessor {
 }
 ```
 
-简单地说， **`@Inject`注释是 CDI 的实际主力。它允许我们在客户端类中定义注入点。**
+简单地说，**`@Inject`注释是 CDI 的实际主力。它允许我们在客户端类中定义注入点。**
 
 在这种情况下，`@Inject`指示 CDI 在构造函数中注入一个`ImageFileEditor`实现。
 
 此外，还可以通过在字段(字段注入)和设置器(设置器注入)中使用`@Inject`注释来注入服务。我们稍后将研究这些选项。
 
-### 3.4。建立带有焊缝的`ImageFileProcessor`目标图形
+### 3.4. 建立带有焊缝的`ImageFileProcessor`目标图形
 
 当然，我们需要确保 CDI 将正确的`ImageFileEditor`实现注入到`ImageFileProcessor`类构造函数中。
 
 为此，首先，我们应该获得该类的一个实例。
 
-**由于我们不依赖任何 Java EE 应用服务器来使用 CDI，我们将使用 Java SE 中的 CDI 参考实现 [Weld](https://web.archive.org/web/20220817121616/http://weld.cdi-spec.org/) 来完成这项工作**:
+**由于我们不依赖任何 Java EE 应用服务器来使用 CDI，我们将使用 Java SE 中的 CDI 参考实现 Weld 来完成这项工作**:
 
 ```java
 public static void main(String[] args) {
@@ -176,11 +177,11 @@ public static void main(String[] args) {
 Unsatisfied dependencies for type ImageFileEditor with qualifiers @Default at injection point...
 ```
 
-**我们得到这个异常是因为 CDI 不知道将什么`ImageFileEditor`实现注入到`ImageFileProcessor` 构造函数中。**
+**我们得到这个异常是因为 CDI 不知道将什么`ImageFileEditor`实现注入到`ImageFileProcessor`构造函数中。**
 
 在 CDI 的术语**中，这被称为模糊注入异常**。
 
-### 3.5。`@Default`和`@Alternative`标注
+### 3.5. `@Default`和`@Alternative`标注
 
 解决这种歧义很容易。**默认情况下，CDI 用`@Default`注释来注释一个接口的所有实现。**
 
@@ -208,11 +209,11 @@ public class PngFileEditor implements ImageFileEditor { ... }
 Opening PNG file file1.png 
 ```
 
-此外，用`@Default`注释来注释`PngFileEditor`,并保留其他实现作为替代，将会产生与上面相同的结果。
+此外，用`@Default`注释来注释`PngFileEditor`，并保留其他实现作为替代，将会产生与上面相同的结果。
 
 简而言之，这显示了**我们如何通过简单地切换服务类**中的`@Alternative`注释来非常容易地交换实现的运行时注入。
 
-## 4。现场注射
+## 4. 现场注射
 
 CDI 支持开箱即用的字段和 setter 注入。
 
@@ -223,7 +224,7 @@ CDI 支持开箱即用的字段和 setter 注入。
 private final ImageFileEditor imageFileEditor;
 ```
 
-## 5。设定注射
+## 5. 设定注射
 
 类似地，下面是如何进行 setter 注入:
 
@@ -232,7 +233,7 @@ private final ImageFileEditor imageFileEditor;
 public void setImageFileEditor(ImageFileEditor imageFileEditor) { ... }
 ```
 
-## 6。`@Named`注解
+## 6. `@Named`注解
 
 到目前为止，我们已经学习了如何在客户端类中定义注入点，并使用 `@Inject`、`@Default`和`@Alternative`注释注入服务，这些注释涵盖了大多数用例。
 
@@ -268,7 +269,7 @@ private final @Named("PngFileEditor") ImageFileEditor imageFileEditor;
 public void setImageFileEditor(@Named("PngFileEditor") ImageFileEditor imageFileEditor) { ... }
 ```
 
-## 7。`@Produces`注解
+## 7. `@Produces`注解
 
 有时，一个服务在被注入以处理额外的依赖关系之前，需要完全初始化一些配置。
 
@@ -321,7 +322,7 @@ public class TimeLoggerFactory {
 }
 ```
 
-每当我们得到一个`ImageFileProcessor`实例时，CDI 将扫描`TimeLoggerFactory`类，然后调用`getTimeLogger()`方法(因为它用`@Produces`注释进行了注释)，最后注入`Time Logger`服务。
+每当我们得到一个`ImageFileProcessor`实例时，CDI 将扫描`TimeLoggerFactory`类，然后调用`getTimeLogger()`方法(因为它用`@Produces`注释进行了注释)，最后注入`TimeLogger`服务。
 
 如果我们用`Weld`运行重构的示例应用程序，它将输出以下内容:
 
@@ -329,40 +330,42 @@ public class TimeLoggerFactory {
 Opening PNG file file1.png at: 17:46
 ```
 
-## 8。自定义限定符
+## 8. 自定义限定符
 
 CDI 支持使用自定义限定符来限定依赖项和解决不明确的注入点。
 
-自定义限定符是一个非常强大的功能。它们不仅将语义名称绑定到服务，还绑定了注入元数据。元数据，例如[保留策略](https://web.archive.org/web/20220817121616/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/annotation/RetentionPolicy.html)和合法注释目标([元素类型](https://web.archive.org/web/20220817121616/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/annotation/ElementType.html))。
+自定义限定符是一个非常强大的功能。它们不仅将语义名称绑定到服务，还绑定了注入元数据。元数据，例如保留策略和合法注释目标(元素类型)。
 
 让我们看看如何在我们的应用程序中使用自定义限定符:
 
+
+
 ```java
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD, ElementType.METHOD, ElementType.TYPE, ElementType.PARAMETER})
-public @interface GifFileEditorQualifier {} 
+public @interface GifFileEditorQualifier {}
 ```
 
 ```java
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD, ElementType.METHOD, ElementType.TYPE, ElementType.PARAMETER})
-public @interface JpgFileEditorQualifier {} 
+public @interface JpgFileEditorQualifier {}
 ```
 
 ```java
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD, ElementType.METHOD, ElementType.TYPE, ElementType.PARAMETER})
-public @interface PngFileEditorQualifier {} 
+public @interface PngFileEditorQualifier {}
 ```
 
-现在，让我们将自定义限定符绑定到`ImageFileEditor`实现:
+现在，让我们将自定义限定符绑定到`ImageFileEditor`实现：
 
 ```java
 @GifFileEditorQualifier
-public class GifFileEditor implements ImageFileEditor { ... } 
+public class GifFileEditor implements ImageFileEditor { ... }
 ```
 
 ```java
@@ -372,28 +375,28 @@ public class JpgFileEditor implements ImageFileEditor { ... }
 
 ```java
 @PngFileEditorQualifier
-public class PngFileEditor implements ImageFileEditor { ... } 
+public class PngFileEditor implements ImageFileEditor { ... }
 ```
 
-最后，让我们重构`ImageFileProcessor`类`:`中的注入点
+最后，让我们重构`ImageFileProcessor`类中的注入点：
 
 ```java
 @Inject
-public ImageFileProcessor(@PngFileEditorQualifier ImageFileEditor imageFileEditor, TimeLogger timeLogger) { ... } 
+public ImageFileProcessor(@PngFileEditorQualifier ImageFileEditor imageFileEditor, TimeLogger timeLogger) { ... }
 ```
 
 如果我们再次运行我们的应用程序，它应该生成如上所示的输出。
 
 自定义限定符为将名称和注释元数据绑定到实现提供了一种简洁的语义方法。
 
-此外，**自定义限定符允许我们定义更严格的类型安全注入点(优于@Default 和@Alternative 注释的功能)**。
+此外，自定义限定符允许我们定义更严格的类型安全注入点（优于`@Default`和`@Alternative`注释的功能）。
 
 如果在类型层次结构中只有一个子类型是合格的，那么 CDI 将只注入子类型，而不是基类型。
 
-## 9。结论
+## 9. 结论
 
-毫无疑问， **CDI 使依赖注入成为一件容易的事情**，额外注释的成本对于有组织的依赖注入的收益来说是微不足道的。
+毫无疑问，CDI 使依赖注入成为一件容易的事情，额外注释的成本对于有组织的依赖注入的收益来说是微不足道的。
 
 有时候，DYDI 仍然比 CDI 有优势。比如在开发只包含简单对象图的相当简单的应用程序时。
 
-和往常一样，本文中展示的所有代码示例都可以在 GitHub 上的[处获得。](https://web.archive.org/web/20220817121616/https://github.com/eugenp/tutorials/tree/master/cdi/src/main/java/com/baeldung/dependencyinjection)
+和往常一样，本文中展示的所有代码示例都可以在 GitHub 上[此处获得](https://web.archive.org/web/20220817121616/https://github.com/eugenp/tutorials/tree/master/cdi/src/main/java/com/baeldung/dependencyinjection)。

@@ -1,8 +1,9 @@
+
 # 弹簧座 API + OAuth2 + Angular
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/rest-api-spring-oauth2-angular>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，**我们将使用 OAuth2 保护 REST API，并从一个简单的 Angular 客户端使用它。**
 
@@ -10,23 +11,23 @@
 
 *   授权服务器
 *   资源服务器
-*   UI 授权代码:使用授权代码流的前端应用程序
+*   UI 授权代码：使用授权代码流的前端应用程序
 
-我们将在 Spring Security 5 中使用 OAuth 堆栈。如果你想使用 Spring Security OAuth legacy stack，可以看看之前的这篇文章:[Spring REST API+OAuth 2+Angular(使用 Spring Security OAuth Legacy Stack)](/web/20220707143825/https://www.baeldung.com/rest-api-spring-oauth2-angular-legacy)。
+我们将在 Spring Security 5 中使用 OAuth 堆栈。如果你想使用 Spring Security OAuth legacy stack，可以看看之前的这篇文章：[Spring REST API+OAuth 2+Angular(使用 Spring Security OAuth Legacy Stack)](/web/20220707143825/https://www.baeldung.com/rest-api-spring-oauth2-angular-legacy)。
 
-## 延伸阅读:
+## 延伸阅读
 
-## [使用带有 Spring 安全 OAuth 的 JWT](/web/20220707143825/https://www.baeldung.com/spring-security-oauth-jwt)
+### [使用带有 Spring 安全 OAuth 的 JWT](/web/20220707143825/https://www.baeldung.com/spring-security-oauth-jwt)
 
 A guide to using JWT tokens with Spring Security 5.[Read more](/web/20220707143825/https://www.baeldung.com/spring-security-oauth-jwt) →
 
-## [OAuth2.0 和动态客户端注册(使用 Spring Security OAuth 遗留堆栈)](/web/20220707143825/https://www.baeldung.com/spring-security-oauth-dynamic-client-registration)
+### [OAuth2.0 和动态客户端注册(使用 Spring Security OAuth 遗留堆栈)](/web/20220707143825/https://www.baeldung.com/spring-security-oauth-dynamic-client-registration)
 
 Learn how to define clients dynamically with Spring Security and OAuth2.[Read more](/web/20220707143825/https://www.baeldung.com/spring-security-oauth-dynamic-client-registration) →
 
 让我们直接开始吧。
 
-## 2。OAuth2 授权服务器(AS)
+## 2. OAuth2 授权服务器(AS)
 
 简单地说，**授权服务器是一个发布授权令牌的应用程序。**
 
@@ -36,22 +37,22 @@ Learn how to define clients dynamically with Spring Security and OAuth2.[Read mo
 
 在本教程中，**我们将在一个 Spring Boot 应用中设置一个[嵌入式 Keycloak 服务器。](/web/20220707143825/https://www.baeldung.com/keycloak-embedded-in-a-spring-boot-application/)**
 
-## 3.资源服务器(RS)
+## 3. 资源服务器(RS)
 
 现在我们来讨论资源服务器；这本质上是 REST API，我们最终希望能够使用它。
 
-### 3.1。Maven 配置
+### 3.1. Maven 配置
 
 我们的资源服务器的 pom 与之前的授权服务器 pom 非常相似，除了 Keycloak 部分和**一个额外的 [`spring-boot-starter-oauth2-resource-server`](https://web.archive.org/web/20220707143825/https://search.maven.org/search?q=a:spring-boot-starter-oauth2-resource-server) 依赖**:
 
 ```java
 <dependency>
     <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+    <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
 </dependency>
 ```
 
-### 3.2.安全配置
+### 3.2. 安全配置
 
 由于我们使用的是 Spring Boot，**我们可以使用引导属性定义最低要求的配置。**
 
@@ -108,7 +109,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 这里要注意的另一点是使用方法`cors()`来允许请求上的访问控制头。这一点尤其重要，因为我们正在处理一个 Angular 客户端，我们的请求将来自另一个原始 URL。
 
-### 3.4.模型和存储库
+### 3.3. 模型和存储库
 
 接下来，让我们为我们的模型`Foo`定义一个`javax.persistence.Entity`:
 
@@ -133,7 +134,7 @@ public interface IFooRepository extends PagingAndSortingRepository<Foo, Long> {
 } 
 ```
 
-### 3.4.服务和实施
+### 3.4. 服务和实施
 
 之后，我们将为我们的 API 定义并实现一个简单的服务:
 
@@ -173,7 +174,7 @@ public class FooServiceImpl implements IFooService {
 } 
 ```
 
-### 3.5.样本控制器
+### 3.5. 样本控制器
 
 现在让我们实现一个简单的控制器，通过 DTO 公开我们的`Foo`资源:
 
@@ -223,7 +224,7 @@ public class FooDto {
 }
 ```
 
-## 4。前端—设置
+## 4. 前端——设置
 
 我们现在来看一个简单的客户端前端角度实现，它将访问我们的 REST API。
 
@@ -281,15 +282,17 @@ ng new oauthApp
 
 在下一节中，我们将讨论 Angular 应用程序逻辑。
 
-## 5.使用角度的授权代码流
+## 5. 使用角度的授权代码流
 
 我们将在这里使用 OAuth2 授权代码流。
 
-我们的用例:客户端应用程序向授权服务器请求一个代码，并显示一个登录页面。一旦用户提供他们的有效凭证并提交，授权服务器就给我们代码。然后前端客户端使用它来获取访问令牌。
+我们的用例：客户端应用程序向授权服务器请求一个代码，并显示一个登录页面。一旦用户提供他们的有效凭证并提交，授权服务器就给我们代码。然后前端客户端使用它来获取访问令牌。
 
-### 5.1.家用部件
+### 5.1. 家用部件
 
 让我们从我们的主要组件`HomeComponent`开始，所有的动作都从这里开始:
+
+
 
 ```java
 @Component({
@@ -330,25 +333,25 @@ export class HomeComponent {
   logout() {
     this._service.logout();
   }
-} 
+}
 ```
 
 一开始，当用户没有登录时，只显示登录按钮。单击此按钮后，用户将被导航到 AS 的授权 URL，并在其中键入用户名和密码。成功登录后，用户被重定向回授权代码，然后我们使用该代码检索访问令牌。
 
-### 5.2.应用服务
+## 5.2. 应用服务
 
-现在让我们看看位于`app.service.ts`的`AppService`，它包含了服务器交互的逻辑:
+现在让我们看看位于`app.service.ts`的`AppService`，它包含了服务器交互的逻辑：
 
-*   `retrieveToken()`:使用授权码获取接入令牌
-*   使用 ng2-cookies 库将我们的访问令牌保存在 cookie 中
-*   `getResource()`:使用其 ID 从服务器获取 Foo 对象
-*   `checkCredentials()`:检查用户是否登录
-*   `logout()`:删除访问令牌 cookie 并注销用户
+- `retrieveToken()`：使用授权码获取接入令牌
+- 使用 ng2-cookies 库将我们的访问令牌保存在 cookie 中
+- `getResource()`：使用其 ID 从服务器获取 Foo 对象
+- `checkCredentials()`：检查用户是否登录
+- `logout()`：删除访问令牌 cookie 并注销用户
 
 ```java
 export class Foo {
   constructor(public id: number, public name: string) { }
-} 
+}
 
 @Injectable()
 export class AppService {
@@ -368,7 +371,7 @@ export class AppService {
     let headers = 
       new HttpHeaders({'Content-type': 'application/x-www-form-urlencoded; charset=utf-8'});
 
-      this._http.post('http://localhost:8083/auth/realms/baeldung/protocol/openid-connect/token', 
+    this._http.post('http://localhost:8083/auth/realms/baeldung/protocol/openid-connect/token', 
         params.toString(), { headers: headers })
         .subscribe(
           data => this.saveToken(data),
@@ -401,13 +404,13 @@ export class AppService {
 }
 ```
 
-在`retrieveToken`方法中，我们使用我们的客户端凭证和基本 Auth 向`/openid-connect/token`端点发送一个`POST`来获取访问令牌。参数以 URL 编码的格式发送。在我们获得访问令牌之后，**我们将它存储在一个 cookie 中。**
+在`retrieveToken`方法中，我们使用我们的客户端凭证和基本 Auth 向`/openid-connect/token`端点发送一个`POST`来获取访问令牌。参数以 URL 编码的格式发送。在我们获得访问令牌之后，`我们将它存储在一个 cookie 中。`
 
 cookie 存储在这里特别重要，因为我们只是将 cookie 用于存储目的，而不是直接驱动身份验证过程。这有助于防范跨站点请求伪造(CSRF)攻击和漏洞。
 
-### 5.3.Foo 组件
+## 5.3. Foo 组件
 
-最后，我们的`FooComponent`显示我们的 Foo 细节:
+最后，我们的`FooComponent`显示我们的 Foo 细节：
 
 ```java
 @Component({
@@ -438,13 +441,13 @@ export class FooComponent {
       .subscribe(
          data => this.foo = data,
          error =>  this.foo.name = 'Error');
-    }
+  }
 }
 ```
 
-### 5.5。应用组件
+## 5.5. 应用组件
 
-我们简单的`AppComponent`充当根组件:
+我们简单的`AppComponent`充当根组件：
 
 ```java
 @Component({
@@ -462,7 +465,7 @@ export class FooComponent {
 export class AppComponent { } 
 ```
 
-我们包装所有组件、服务和路线的地方:
+我们包装所有组件、服务和路线的地方：
 
 ```java
 @NgModule({
@@ -483,39 +486,39 @@ export class AppComponent { }
 export class AppModule { } 
 ```
 
-## 7。运行前端
+## 7. 运行前端
 
-1.要运行我们的任何前端模块，我们需要首先构建应用程序:
+1. 要运行我们的任何前端模块，我们需要首先构建应用程序：
 
 ```java
 mvn clean install
 ```
 
-2.然后我们需要导航到我们的 Angular 应用程序目录:
+2. 然后我们需要导航到我们的 Angular 应用程序目录：
 
 ```java
 cd src/main/resources
 ```
 
-3.最后，我们将启动我们的应用:
+3. 最后，我们将启动我们的应用：
 
 ```java
 npm start
 ```
 
-默认情况下，服务器将在端口 4200 上启动；要更改任何模块的端口，请更改:
+默认情况下，服务器将在端口 4200 上启动；要更改任何模块的端口，请更改：
 
 ```java
 "start": "ng serve"
 ```
 
-例如，在`package.json;` 中，要让它在端口 8089 上运行，添加:
+例如，在`package.json`中，要让它在端口 8089 上运行，添加：
 
 ```java
 "start": "ng serve --port 8089"
 ```
 
-## 8。结论
+## 8. 结论
 
 在本文中，我们学习了如何使用 OAuth2 授权我们的应用程序。
 

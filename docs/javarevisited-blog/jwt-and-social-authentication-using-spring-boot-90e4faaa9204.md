@@ -1,3 +1,4 @@
+
 # JWT 和使用 Spring Boot 的社会认证
 
 > 原文：<https://medium.com/javarevisited/jwt-and-social-authentication-using-spring-boot-90e4faaa9204?source=collection_archive---------1----------------------->

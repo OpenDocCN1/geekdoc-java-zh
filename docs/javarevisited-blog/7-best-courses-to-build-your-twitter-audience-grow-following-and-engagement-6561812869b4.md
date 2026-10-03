@@ -1,3 +1,4 @@
+
 # 2023 年发展受众、增加关注和参与度的 7 个最佳 Twitter 课程
 
 > 原文：<https://medium.com/javarevisited/7-best-courses-to-build-your-twitter-audience-grow-following-and-engagement-6561812869b4?source=collection_archive---------0----------------------->
@@ -10,7 +11,7 @@
 
 在过去，我已经分享了[脸书营销](https://javarevisited.blogspot.com/2021/12/5-best-courses-to-learn-facebook.html)、[数字营销](https://javarevisited.blogspot.com/2022/02/top-5-courses-to-learn-digital-marketing.html)和 [Instagram 营销课程](https://javarevisited.blogspot.com/2021/12/5-best-online-courses-for-instagram.html)，在这篇文章中，我将分享**最佳在线课程**你可以加入学习一些可行的技巧，以在 2023 年建立你的 Twitter 受众，增加你的追随者和参与度。
 
-你可能知道 **Twitter** ，很有可能你已经有了一个令人印象深刻的 Twitter 个人资料和大量的观众，但是如果你没有，那么不要担心，你来对地方了。
+你可能知道 **Twitter**，很有可能你已经有了一个令人印象深刻的 Twitter 个人资料和大量的观众，但是如果你没有，那么不要担心，你来对地方了。
 
 Twitter 是最受欢迎的社交媒体平台之一。[程序员](/javarevisited/the-java-programmer-roadmap-f9db163ef2c2)、[开发者](/javarevisited/top-10-online-courses-to-become-a-fullstack-web-developer-in-2020-d608a6b63232)、企业家、创始人、艺术家、运动员、政治家，几乎各个领域的人都出现在 Twitter 上。
 
@@ -18,7 +19,7 @@ Twitter 是最受欢迎的社交媒体平台之一。[程序员](/javarevisited/
 
 如果你想成为一名成功的在线课程创建者或博客作者，那么 Twitter 真的可以帮助你，我可以从我的个人经历中说出这一点。我有大约 2.8 万名推特粉丝，我在推特上呆了超过 11 年。
 
-当我推出我的第一本书， [**寻找 Java 面试**，](https://www.amazon.com/Grokking-Java-Interview-interview-essential/dp/B08VBMD33V?tag=javamysqlanta-20)和我的第一个 Udemy 课程， [**春季认证考试**](https://www.udemy.com/course/spring-professional-practice-test-questions-vmware-edu-certification/?couponCode=UDEMY_SALE_MAY21) 时，正是 Twitter 带来了大部分的销售，那时我才意识到 Twitter 的真正潜力。你可以看到下面的截图，我的大部分销售来自 Twitter。
+当我推出我的第一本书， [**寻找 Java 面试**](https://www.amazon.com/Grokking-Java-Interview-interview-essential/dp/B08VBMD33V?tag=javamysqlanta-20) 和我的第一个 Udemy 课程， [**春季认证考试**](https://www.udemy.com/course/spring-professional-practice-test-questions-vmware-edu-certification/?couponCode=UDEMY_SALE_MAY21) 时，正是 Twitter 带来了大部分的销售，那时我才意识到 Twitter 的真正潜力。你可以看到下面的截图，我的大部分销售来自 Twitter。
 
 [![](img/d722e6b4148321aff239ae5804881563.png)](https://gumroad.com/l/QqjGH)
 
@@ -38,7 +39,7 @@ Twitter 是最受欢迎的社交媒体平台之一。[程序员](/javarevisited/
 
 我知道这一点，因为我一直在 Twitter 上关注该课程的创始人丹尼尔·瓦萨洛(Daniel Vassallo)，我看到他的关注者从几千人增长到现在的 70000 多人。
 
-这个广受欢迎的*T*T[T*witter 受众培养课程*将教你如何创建和优化你的 Twitter 账户以获得更多的关注者。导师解释一切，比如如何写一篇完美的简历，账号应该叫什么名字，发什么微博，不发什么微博等等。](https://gumroad.com/a/703100019/PBkrO)
+这个广受欢迎的 [*Twitter 受众培养课程*](https://gumroad.com/a/703100019/PBkrO) 将教你如何创建和优化你的 Twitter 账户以获得更多的关注者。导师解释一切，比如如何写一篇完美的简历，账号应该叫什么名字，发什么微博，不发什么微博等等。
 
 这门课将近两个小时。它也有退款政策，这意味着如果你不喜欢，那么你可以免费得到你的钱，并保留你学到的技巧，但这很少发生，因为我一直遵循他的一些技巧，效果很好。
 
@@ -57,6 +58,7 @@ Twitter 是最受欢迎的社交媒体平台之一。[程序员](/javarevisited/
 要求
 
 *   一个推特账号。
+
 *   对社交媒体和 Twitter 营销感兴趣。
 
 总的来说，这是一个很好的课程，可以培养你的 Twitter 受众，获得更多的客户，转发&如何获得更多的 Twitter 关注者，以及 2023 年的 Twitter 广告。
@@ -72,7 +74,9 @@ Twitter 是最受欢迎的社交媒体平台之一。[程序员](/javarevisited/
 在这个 1 小时的基于项目的课程中，您将学到
 
 1.  如何创建你的 Twitter 账户
+
 2.  如何浏览 twitter 的仪表板
+
 3.  了解 twitter 的术语和活动。
 
 如果你不知道 [*Coursera 项目*](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourses%3Fquery%3Dguided%2520projects) 非常实用，因为你不需要下载任何东西，但你可以在你的浏览器上运行程序和练习，讲师还会以侧屏视频格式在线教你。对于 Twitter 初学者来说，这是最好的加入课程。
@@ -83,7 +87,7 @@ Twitter 是最受欢迎的社交媒体平台之一。[程序员](/javarevisited/
 
 顺便说一句，如果你计划参加多个 Coursera 课程或专业，那么考虑参加 [**Coursera Plus 订阅**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus) ，它可以让你无限制地访问他们最受欢迎的课程、专业、专业证书和指导项目。它每年花费大约 399 美元，但很值得，因为你可以访问 7000 多门课程和项目，还可以获得无限的证书。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
 ## 4. [Twitter for Business:最佳潜在客户生成系统——Udemy](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Ftwitter-followers-lead-generation-system%2F)
 
@@ -118,9 +122,13 @@ Udemy 的这门课程是专门为那些希望在 Twitter 上获得大量观众�
 以下是您将在本课程中学到的重要内容:
 
 *   如何获得大量的推特粉丝
+
 *   如何将 Twitter 货币化
+
 *   如何从 Twitter 销售产品
+
 *   如何在 Twitter 上获得付费推广
+
 *   如何创造每次都能击中观众的 fire 内容
 
 这个课程最棒的一点是，你将获得可操作的内容，以很小的尺寸分发，你可以立即应用到你的 Twitter 账户。
@@ -136,11 +144,18 @@ Udemy 的这门课程是专门为那些希望在 Twitter 上获得大量观众�
 本课程也是 [**数字营销学院社交媒体营销专业**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fsocial-media-marketing-practice) 的一部分，完成本课程可获得认证。在本课程中，您将学习在 Twitter、Linked In 和 YouTube 上做广告的基本原则。完成本课程后，您将能够:
 
 1.  应用在 Twitter 上发布推文和使用标签的最佳实践
+
 2.  管理和优化 Twitter 广告活动的绩效
+
 3.  在 LinkedIn 上建立公司形象
+
 4.  衡量 LinkedIn 广告活动的绩效
-5.  认识到社交视频和 YouTube 在在线营销中的关键作用
-6.  在 YouTube 上创建引人入胜的广告活动
+
+
+
+## 5. 认识到社交视频和 YouTube 在在线营销中的关键作用
+
+## 6. 在 YouTube 上创建引人入胜的广告活动
 
 本课程还介绍了 B2B 销售和营销的社会销售和个人品牌的概念。它涵盖了传统销售和社交销售之间的差异，以及为什么企业采用社交销售策略来吸引买家。
 
@@ -150,7 +165,7 @@ Udemy 的这门课程是专门为那些希望在 Twitter 上获得大量观众�
 
 顺便说一下，如果你觉得 Coursera 的课程很有用，因为它们是由世界各地知名的公司和大学创建的，我建议你加入 Coursera Plus 的订阅计划，它可以让你无限制地访问他们最受欢迎的课程、专业知识、专业证书和指导项目。每月花费大约 59 美元。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
 以上是你可以参加的关于如何在 2023 年培养 Twitter 用户的最佳在线课程。一个没有足够粉丝的推特账号是没有用的。只有趋势标签对你没有帮助。需要一个合适的策略来吸引观众。在这篇文章中，我们列出了五大课程，这将有助于你理解 Twitter 营销。
 
@@ -162,4 +177,4 @@ Udemy 的这门课程是专门为那些希望在 Twitter 上获得大量观众�
 
 **附言**——如果你渴望在 2023 年建立自己的 Twitter 档案和受众，但正在寻找免费的 Twitter 营销课程，那么你也可以在 Udemy 上查看这个[**Twitter 营销【免费**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmarketing-on-twitter%2F)**】**课程。这个 37 分钟的短期速成班是完全免费的，已经有超过 29，000 人加入了这个课程。
 
-<https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmarketing-on-twitter%2F> 
+<https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmarketing-on-twitter%2F>

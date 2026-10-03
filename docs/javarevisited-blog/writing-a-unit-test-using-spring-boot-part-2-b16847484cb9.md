@@ -1,14 +1,15 @@
-# 使用 Spring Boot 编写单元测试(第 2 部分)
+
+# 使用 Spring Boot 编写单元测试（第 2 部分）
 
 > 原文：<https://medium.com/javarevisited/writing-a-unit-test-using-spring-boot-part-2-b16847484cb9?source=collection_archive---------0----------------------->
 
-在我描述了“ [*如何使用 Spring Boot 和 MongoDB*](/@yigitcannalci/building-a-rest-service-with-spring-boot-and-mongodb-3aa5cd2dce73?source=friends_link&sk=582face6df6e23be283b543ae804552e) 开发 REST 服务”之后，我决定解释一下*如何使用 Spring Boot* 编写单元测试。
+在我描述了“[如何使用 Spring Boot 和 MongoDB](/@yigitcannalci/building-a-rest-service-with-spring-boot-and-mongodb-3aa5cd2dce73?source=friends_link&sk=582face6df6e23be283b543ae804552e) 开发 REST 服务”之后，我决定解释一下*如何使用 Spring Boot* 编写单元测试。
 
 ![](img/830552352f46b45c7ec447ba70c97c83.png)
 
 乌德米
 
-在本教程中，单元测试是在前面的故事中开发的项目[中编写的，所以前面的项目中使用的技术和设置是相同的。](/@yigitcannalci/building-a-rest-service-with-spring-boot-and-mongodb-3aa5cd2dce73?source=friends_link&sk=582face6df6e23be283b543ae804552e)
+在本教程中，单元测试是在前面的故事中开发的项目中编写的，所以前面的项目中使用的技术和设置是相同的。
 
 您可以从这个 [GitHub](https://github.com/ragcrix/StudentInformationSystem) 链接下载项目源代码。
 
@@ -16,7 +17,7 @@
 
 开源代码库
 
-Spring Boot 用`SpringRunner`简化单元测试。用`MockMVC`为 REST 控制器编写单元测试也更容易。为了编写一个单元测试，Spring Boot 启动测试依赖项应该被添加到您的构建配置文件中(对于我们的项目， **pom.xml** )。
+Spring Boot 用`SpringRunner`简化单元测试。用`MockMVC`为 REST 控制器编写单元测试也更容易。为了编写一个单元测试，Spring Boot 启动测试依赖项应该被添加到您的构建配置文件中（对于我们的项目，**pom.xml**）。
 
 ```
 <dependency>
@@ -28,9 +29,9 @@ Spring Boot 用`SpringRunner`简化单元测试。用`MockMVC`为 REST 控制器
 
 这样做之后，我们就可以编写我们的第一个单元测试了。
 
-# StudentService.java 的测试
+## StudentService.java 的测试
 
-在这一节中，我们将为图中所示的**StudentService.java**实现一个单元测试。
+在这一节中，我们将为图中所示的`StudentService.java`实现一个单元测试。
 
 ```
 @Service
@@ -75,7 +76,7 @@ public class StudentServiceImpl implements StudentService {
 
 第二，`@SpringBootTest`注释补充。这个注释为测试类提供了许多特性。更多信息请点击[此处](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/context/SpringBootTest.html)。
 
-然后，添加要测试的类(**StudentService.java**)及其依赖项，如下所示。
+然后，添加要测试的类（`StudentService.java`）及其依赖项，如下所示。
 
 ```
 @RunWith(SpringRunner.class)
@@ -89,7 +90,7 @@ public class StudentServiceTest {
     private StudentRepository studentRepository; ...}
 ```
 
-现在，我们可以编写模拟对象来测试 StudentService.java 了。Ragcrix 和 yigit 被创建。以下值被分配给对象。
+现在，我们可以编写模拟对象来测试`StudentService.java`了。Ragcrix 和 yigit 被创建。以下值被分配给对象。
 
 ```
 private Student ragcrix;
@@ -123,7 +124,7 @@ public void setup() {
     students.add(yigit);
 ```
 
-对于学生服务中的`findAll()`方法，我们需要模仿**StudentRepository.java**中的`findAll()`方法。之后，我们准备写测试方法。为此，编写了`testFindAll_thenStudentListShouldBeReturned()`方法。这个方法只是检查返回数据的大小。
+对于学生服务中的`findAll()`方法，我们需要模仿`StudentRepository.java`中的`findAll()`方法。之后，我们准备写测试方法。为此，编写了`testFindAll_thenStudentListShouldBeReturned()`方法。这个方法只是检查返回数据的大小。
 
 ```
 ...Mockito.*when*(studentRepository.findAll()).thenReturn(students);...@Test
@@ -135,7 +136,7 @@ public void testFindAll_thenStudentListShouldBeReturned() {
 }
 ```
 
-对于学生服务中的`findByStudentNumber()`方法，我们需要模仿**StudentRepository.java**中的`findByStudentNumber()`方法。之后，我们准备写测试方法。对于这一点，`testFindByStudentNumber23_thenRagcrixShouldBeReturned()`法是这样写的。
+对于学生服务中的`findByStudentNumber()`方法，我们需要模仿`StudentRepository.java`中的`findByStudentNumber()`方法。之后，我们准备写测试方法。对于这一点，`testFindByStudentNumber23_thenRagcrixShouldBeReturned()`法是这样写的。
 
 ```
 ...Mockito.*when*(studentRepository.findByStudentNumber
@@ -149,7 +150,7 @@ public void testFindByStudentNumber23_thenRagcrixShouldBeReturned() {
 }
 ```
 
-对于学生服务中的`findByEmail()`、`findAllByOrderByGpaDesc()`、`saveOrUpdateStudent()`、`deleteStudentById()`方法，**、**中的相关方法同样被模仿。然后，StudentService 的测试方法编写如下。
+对于学生服务中的`findByEmail()`、`findAllByOrderByGpaDesc()`、`saveOrUpdateStudent()`、`deleteStudentById()`方法，`StudentRepository.java`中的相关方法同样被模仿。然后，`StudentService`的测试方法编写如下。
 
 ```
  ...Mockito.*when*(studentRepository.findByEmail(yigitEmail))
@@ -198,11 +199,11 @@ public void testDeleteStudentById() {
 
 ![](img/2c3115695f464fe28e73546fb645cf64.png)
 
-StudentServiceTest.java 的测试结果
+`StudentServiceTest.java`的测试结果
 
-# StudentRestController.java 测试
+## StudentRestController.java 测试
 
-Spring Boot 提供了一种为 Rest 控制器编写单元测试的简单方法。在**spring JUnit 4 class runner**和 **MockMVC** 的帮助下，可以创建一个 web 应用上下文来为 Rest 控制器编写单元测试。
+Spring Boot 提供了一种为 Rest 控制器编写单元测试的简单方法。在`SpringJUnit4ClassRunner`和`MockMVC`的帮助下，可以创建一个 web 应用上下文来为 Rest 控制器编写单元测试。
 
 ![](img/657fe5df80b50c6f2bc128060e9e67ae.png)
 
@@ -253,7 +254,9 @@ public void setup() {
 }
 ```
 
-现在，我们准备编写第一个测试方法。对于**StudentRestController.java**中的`getAllStudents()`，编写如下方法。`mvc.perform()`方法用于测试终点。你可以用下面的方法比较预期和实际的数据。
+现在，我们准备编写第一个测试方法。对于`StudentRestController.java`中的`getAllStudents()`，编写如下方法。`mvc.perform()`方法用于测试终点。你可以用下面的方法比较预期和实际的数据。
+
+
 
 在这个测试方法中，当调用`studentService.findAll()`时，将返回一个学生列表。之后，用`mvc.perform()`对控制器中的`getAllStudents()`进行测试。
 
@@ -270,7 +273,7 @@ public void givenStudents_whenGetAllStudents_thenReturnJsonArray() throws Except
 }
 ```
 
-如下所示，其他 **GET** 方法的测试就像`givenStudents_whenGetAllStudents_thenReturnJsonArray()`方法一样编写。
+如下所示，其他 GET 方法的测试就像`givenStudents_whenGetAllStudents_thenReturnJsonArray()`方法一样编写。
 
 ```
 @Test
@@ -295,7 +298,7 @@ public void givenStudent_whenFindAllByOrderByGpaDesc_thenReturnJsonArray() throw
 }
 ```
 
-GET 方法的测试完成后，我们就可以编写 POST 方法测试了。对于控制器中的`saveStudent()`方法，编写`saveStudent_itShouldReturnStatusOk()`方法。在这种方法中，`studentService.saveOrUpdateStudent()`法首先被嘲弄。要保存的**学生** **对象** ( `yigit`)通过`objectMapper`转换为`jsonString`。之后，使用`mvc.perform()`方法测试`/save`终点。
+GET 方法的测试完成后，我们就可以编写 POST 方法测试了。对于控制器中的`saveStudent()`方法，编写`saveStudent_itShouldReturnStatusOk()`方法。在这种方法中，`studentService.saveOrUpdateStudent()`法首先被嘲弄。要保存的学生对象（`yigit`）通过`objectMapper`转换为`jsonString`。之后，使用`mvc.perform()`方法测试`/save`终点。
 
 与编写的其他 GET 方法一样，您也可以测试`/save`端点的返回值。
 
@@ -312,7 +315,7 @@ public void saveStudent_itShouldReturnStatusOk() throws Exception {
 }
 ```
 
-我们在**StudenRestController.java**的最后一个方法是`deleteStudentByStudentNumber()`。对于这个方法，写的是`deleteStudentByStudentNumber_itShouldReturnStatusOk()`。首先，**StudentService.java**中的相关方法像其他测试方法一样被嘲讽。之后用`mvc.perform()`测试`/delete/{studentNumber}`终点。
+我们在`StudenRestController.java`的最后一个方法是`deleteStudentByStudentNumber()`。对于这个方法，写的是`deleteStudentByStudentNumber_itShouldReturnStatusOk()`。首先，`StudentService.java`中的相关方法像其他测试方法一样被嘲讽。之后用`mvc.perform()`测试`/delete/{studentNumber}`终点。
 
 ```
 @Test
@@ -328,6 +331,6 @@ public void deleteStudentByStudentNumber_itShouldReturnStatusOk() throws Excepti
 
 ![](img/c60053d8e335452e9ffbcdd44d9de0b3.png)
 
-StudentRestControllerTest.java 的测试结果
+`StudentRestControllerTest.java`的测试结果
 
 # 感谢您的阅读！🙏你的想法对我很有价值。请随意分享。😄

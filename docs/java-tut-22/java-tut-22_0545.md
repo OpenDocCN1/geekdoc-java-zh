@@ -1,3 +1,4 @@
+
 # 实现摘要
 
 > 原文：[`docs.oracle.com/javase/tutorial/collections/implementations/summary.html`](https://docs.oracle.com/javase/tutorial/collections/implementations/summary.html)
@@ -7,13 +8,9 @@
 Java 集合框架提供了几个核心接口的通用实现：
 
 +   对于`Set`接口，`HashSet`是最常用的实现。
-
 +   对于`List`接口，`ArrayList`是最常用的实现。
-
 +   对于`Map`接口，`HashMap`是最常用的实现。
-
 +   对于`Queue`接口，`LinkedList`是最常用的实现。
-
 +   对于`Deque`接口，`ArrayDeque`是最常用的实现。
 
 每个通用实现提供其接口中包含的所有可选操作。

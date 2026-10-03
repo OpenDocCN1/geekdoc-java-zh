@@ -1,8 +1,9 @@
+
 # 图像到 Base64 字符串转换
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-base64-image-string>
 
-## 1。概述
+## 1. 概述
 
 在这个快速教程中，我们将介绍如何将图像文件编码为 Base64 `String`，然后使用 Apache Common IO 和 Java 8 原生 Base64 特性对其进行解码以检索原始图像。
 
@@ -10,9 +11,9 @@
 
 有关 Base64 转换的更多信息，请点击此处查看本文。
 
-## 2。Maven 依赖关系
+## 2. Maven 依赖关系
 
-让我们将以下依赖项添加到`pom.xml`文件中:
+让我们将以下依赖项添加到`pom.xml`文件中：
 
 ```java
 <dependency>
@@ -24,9 +25,9 @@
 
 你可以在 [Maven Central](https://web.archive.org/web/20221129015308/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22commons-io%22%20AND%20a%3A%22commons-io%22) 上找到最新版本的 Apache Commons IO。
 
-## 3。将图像文件转换为 Base64 `String`
+## 3. 将图像文件转换为 Base64 `String`
 
-首先，我们把文件内容读入一个字节数组，用 Java 8 `Base64`类进行编码:
+首先，我们把文件内容读入一个字节数组，用 Java 8 `Base64`类进行编码：
 
 ```java
 byte[] fileContent = FileUtils.readFileToByteArray(new File(filePath));
@@ -35,18 +36,18 @@ String encodedString = Base64.getEncoder().encodeToString(fileContent);
 
 `encodedString`是`A-Za-z0-9+/`集合中的一个`String`字符，解码器拒绝该集合之外的任何字符。
 
-## 4。将 Base64 `String`转换为图像文件
+## 4. 将 Base64 `String`转换为图像文件
 
-现在我们有了一个 Base64 `String`，让我们将其解码回二进制内容并写入一个新文件:
+现在我们有了一个 Base64 `String`，让我们将其解码回二进制内容并写入一个新文件：
 
 ```java
 byte[] decodedBytes = Base64.getDecoder().decode(encodedString);
 FileUtils.writeByteArrayToFile(new File(outputFileName), decodedBytes);
 ```
 
-## 5。测试我们的代码
+## 5. 测试我们的代码
 
-最后，我们可以通过读取一个文件，将其编码为 Base64 `String`，然后解码回一个新文件来验证代码是否正常工作:
+最后，我们可以通过读取一个文件，将其编码为 Base64 `String`，然后解码回一个新文件来验证代码是否正常工作：
 
 ```java
 public class FileToBase64StringConversionUnitTest {
@@ -83,7 +84,7 @@ public class FileToBase64StringConversionUnitTest {
 }
 ```
 
-## 6。结论
+## 6. 结论
 
 这篇中肯的文章解释了使用 Apache Common IO 和 Java 8 特性将任何文件的内容编码为 Base64 `String`，将 Base64 `String`解码为字节数组并保存到文件的基本原理。
 

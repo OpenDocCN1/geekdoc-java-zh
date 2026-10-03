@@ -1,19 +1,29 @@
+
 # Java 8 面试问题(+答案)
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-8-interview-questions>
 
 [This article is part of a series:](javascript:void(0);)[• Java Collections Interview Questions](/web/20220807183533/https://www.baeldung.com/java-collections-interview-questions)
+
 [• Java Type System Interview Questions](/web/20220807183533/https://www.baeldung.com/java-type-system-interview-questions)
+
 [• Java Concurrency Interview Questions (+ Answers)](/web/20220807183533/https://www.baeldung.com/java-concurrency-interview-questions)
+
 [• Java Class Structure and Initialization Interview Questions](/web/20220807183533/https://www.baeldung.com/java-classes-initialization-questions)
+
 • Java 8 Interview Questions(+ Answers) (current article)[• Memory Management in Java Interview Questions (+Answers)](/web/20220807183533/https://www.baeldung.com/java-memory-management-interview-questions)
+
 [• Java Generics Interview Questions (+Answers)](/web/20220807183533/https://www.baeldung.com/java-generics-interview-questions)
+
 [• Java Flow Control Interview Questions (+ Answers)](/web/20220807183533/https://www.baeldung.com/java-flow-control-interview-questions)
+
 [• Java Exceptions Interview Questions (+ Answers)](/web/20220807183533/https://www.baeldung.com/java-exceptions-interview-questions)
+
 [• Java Annotations Interview Questions (+ Answers)](/web/20220807183533/https://www.baeldung.com/java-annotations-interview-questions)
+
 [• Top Spring Framework Interview Questions](/web/20220807183533/https://www.baeldung.com/spring-interview-questions)
 
-## 1。简介
+## 1. 简介
 
 在本教程中，我们将探讨一些在面试中可能会出现的与 JDK8 相关的问题。
 
@@ -29,26 +39,26 @@ A set of popular Memory Management-related interview questions and of course ans
 
 A set of practical Collections-related Java interview questions[Read more](/web/20220807183533/https://www.baeldung.com/java-collections-interview-questions) →
 
-## 2。Java 8 常识
+## 2. Java 8 常识
 
-### Q1。Java 8 中增加了哪些新特性？
+### Q1. Java 8 中增加了哪些新特性？
 
 Java 8 附带了几个新特性，但最重要的特性如下:
 
 *   **Lambda 表达式**——一种新的语言特性，允许我们将动作视为对象
 *   **方法引用**—使我们能够通过直接使用方法名引用方法来定义 Lambda 表达式
-*   `**Optional**`—用于表达可选性的特殊包装类
+*   `Optional`—用于表达可选性的特殊包装类
 *   **函数接口**——最多一个抽象方法的接口；可以使用 Lambda 表达式提供实现
-*   默认方法让我们能够在抽象方法之外的接口中添加完整的实现
+*   **默认方法**让我们能够在抽象方法之外的接口中添加完整的实现
 *   **Nashorn，JavaScript 引擎**—基于 Java 的引擎，用于执行和评估 JavaScript 代码
-*   **`Stream`API**——一个特殊的迭代器类，允许我们以函数方式处理对象集合
+*   `Stream`API——一个特殊的迭代器类，允许我们以函数方式处理对象集合
 *   **日期 API**—改进的、不可变的、受 JodaTime 启发的日期 API
 
 除了这些新特性，编译器和 JVM 级别的许多特性增强都是在幕后完成的。
 
-## 3。方法引用
+## 3. 方法引用
 
-### Q1。什么是方法引用？
+### Q1. 什么是方法引用？
 
 方法引用是一个 Java 8 构造，可以用来引用一个方法而不用调用它。它用于将方法视为 Lambda 表达式。它们只是作为句法糖来减少一些 lambdas 的冗长。这种方式下的代码:
 
@@ -88,13 +98,13 @@ String::toString;
 
 我们可以通过跟随[这个链接](https://web.archive.org/web/20220807183533/https://www.codementor.io/eh3rrera/using-java-8-method-reference-du10866vx)和[这个](/web/20220807183533/https://www.baeldung.com/java-8-double-colon-operator)来阅读带有完整例子的方法引用的详细描述。
 
-### Q2。String::Valueof 表达式是什么意思？
+### Q2. `String::valueOf`表达式是什么意思？
 
 它是对`String`类的`valueOf`方法的静态方法引用。
 
-## 4。`Optional`
+## 4. `Optional`
 
-### Q1。什么是`Optional`？怎么用？
+### Q1. 什么是`Optional`？怎么用？
 
 `Optional`是 Java 8 中的一个新类，它封装了一个可选值，即要么存在要么不存在的值。它是一个对象的包装器，我们可以把它看作一个包含零个或一个元素的容器。
 
@@ -122,9 +132,9 @@ assertEquals(0, min2);
 
 值得注意的是`Optional`并不是 Scala 中`Option`那样的通用类。不建议我们在实体类中使用它作为字段值，因为它没有实现`Serializable`接口。
 
-## 5。功能接口
+## 5. 功能接口
 
-### Q1。描述标准库中的一些功能接口
+### Q1. 描述标准库中的一些功能接口
 
 `java.util.function`包里有很多功能接口。比较常见的包括但不限于:
 
@@ -138,7 +148,7 @@ assertEquals(0, min2);
 
 有关函数接口的更多信息，请参阅文章[“Java 8 中的函数接口”](/web/20220807183533/https://www.baeldung.com/java-8-functional-interfaces)
 
-### Q2。什么是功能界面？定义功能接口的规则是什么？
+### Q2. 什么是功能界面？定义功能接口的规则是什么？
 
 函数接口是只有一个抽象方法的接口(`default`方法不算)，不多也不少。
 
@@ -164,9 +174,9 @@ Thread thread = new Thread(() -> System.out.println("Hello World!"));
 
 函数接口通常用`@FunctionalInterface`注释来标注，这是信息性的，不影响语义。
 
-## 6。默认方法
+## 6. 默认方法
 
-### Q1。什么是默认方法，我们什么时候使用它？
+### Q1. 什么是默认方法，我们什么时候使用它？
 
 默认方法是具有实现的方法，可以在接口中找到。
 
@@ -187,7 +197,7 @@ public interface Vehicle {
 
 Java 8 引入了默认方法，这样,`Collection`接口可以有一个默认的`forEach`方法的实现，而不需要实现这个接口的类来实现相同的方法。
 
-### Q2。下面的代码会编译吗？
+### Q2. 下面的代码会编译吗？
 
 ```java
 @FunctionalInterface
@@ -202,9 +212,9 @@ public interface Function2<T, U, V> {
 
 是的，代码可以编译，因为它遵循了只定义一个抽象方法的函数接口规范。第二个方法`count`是一个默认方法，它不会增加抽象方法的数量。
 
-## 7。λ表达式
+## 7. λ表达式
 
-### Q1。什么是 Lambda 表达式，它有什么用途？
+### Q1. 什么是 Lambda 表达式，它有什么用途？
 
 简单来说，lambda 表达式是一个函数，我们可以将其作为对象引用和传递。
 
@@ -212,7 +222,7 @@ public interface Function2<T, U, V> {
 
 因此，lambda 表达式是匿名类(如方法参数)的自然替代品。它们的主要用途之一是定义函数接口的内联实现。
 
-### Q2。解释 Lambda 表达式的语法和特征
+### Q2. 解释 Lambda 表达式的语法和特征
 
 lambda 表达式由两部分组成，参数部分和表达式部分由向前箭头分隔:
 
@@ -229,21 +239,21 @@ params -> expressions
 
 要阅读更多关于 Lambda 表达式的内容，请点击[链接](https://web.archive.org/web/20220807183533/https://www.tutorialspoint.com/java8/java8_lambda_expressions.htm)和[链接](/web/20220807183533/https://www.baeldung.com/java-8-lambda-expressions-tips)。
 
-## 8。Nashorn Javascript
+## 8. Nashorn Javascript
 
-### Q1。Java8 中的 Nashorn 是什么？
+### Q1. Java8 中的 Nashorn 是什么？
 
 [Nashorn](/web/20220807183533/https://www.baeldung.com/java-nashorn) 是 Java 8 附带的 Java 平台的新 Javascript 处理引擎。在 JDK 7 之前，Java 平台出于同样的目的使用 Mozilla Rhino 作为 Javascript 处理引擎。
 
 与它的前身相比，Nashorn 提供了更好的符合 ECMA 规范的 JavaScript 规范和更好的运行时性能。
 
-### Q2。什么是 JJS？
+### Q2. 什么是 JJS？
 
 在 Java 8 中，`jjs`是我们用来在控制台执行 Javascript 代码的新的可执行文件或命令行工具。
 
-## 9。数据流
+## 9. 数据流
 
-### Q1。什么是溪流？和集合有什么区别？
+### Q1. 什么是溪流？和集合有什么区别？
 
 简单地说，流是一个迭代器，它的作用是接受一组应用于它所包含的每个元素的动作。
 
@@ -260,7 +270,7 @@ int sum = Arrays.stream(new int[]{1, 2, 3})
 
 与集合的另一个重要区别是，流本质上是延迟加载和处理的。
 
-### Q2。中间运营和终端运营有什么区别？
+### Q2. 中间运营和终端运营有什么区别？
 
 我们将流操作合并到管道中来处理流。所有的操作不是中间的就是终端的。
 
@@ -271,6 +281,8 @@ int sum = Arrays.stream(new int[]{1, 2, 3})
 相反，终端操作终止流水线并启动流处理。在终端操作调用期间，流通过所有中间操作。终端操作包括`forEach`、`reduce, Collect`和`sum`。
 
 为了说明这一点，让我们看一个有副作用的例子:
+
+
 
 ```java
 public static void main(String[] args) {
@@ -289,7 +301,7 @@ public static void main(String[] args) {
 }
 ```
 
-输出如下所示:
+输出如下所示：
 
 ```java
 Stream without terminal operation
@@ -301,19 +313,19 @@ doubling 3
 
 正如我们所看到的，只有当终端操作存在时，才会触发中间操作。
 
-### Q3。`Map`和`flatMap`流操作有什么区别？
+## Q3. `Map`和`flatMap`流操作有什么区别？
 
 `map`和`flatMap`的签名不同。一般来说，`map`操作将其返回值包装在其序数类型中，而`flatMap`没有。
 
 例如，在`Optional`中，`map`操作将返回`Optional<String>`类型，而`flatMap`将返回`String`类型。
 
-因此，在映射之后，我们需要展开(读“展平”)对象来检索值，而在平面映射之后，没有这样的需要，因为对象已经展平了。在`Stream`中，我们将相同的概念应用于映射和平面映射。
+因此，在映射之后，我们需要展开（读“展平”）对象来检索值，而在平面映射之后，没有这样的需要，因为对象已经展平了。在`Stream`中，我们将相同的概念应用于映射和平面映射。
 
 `map`和`flatMap`都是中间流操作，它们接收一个函数并将这个函数应用于流的所有元素。
 
 不同的是，对于`map`，这个函数返回一个值，而对于`flatMap`，这个函数返回一个流。`flatMap`操作将这些流“展平”成一条。
 
-这里有一个例子，我们获取了一个用户姓名和电话列表的地图，并将其“扁平化”为所有使用`flatMap`的用户的电话列表:
+这里有一个例子，我们获取了一个用户姓名和电话列表的地图，并将其“扁平化”为所有使用`flatMap`的用户的电话列表：
 
 ```java
 Map<String, List<String>> people = new HashMap<>();
@@ -326,29 +338,29 @@ List<String> phones = people.values().stream()
     .collect(Collectors.toList());
 ```
 
-### Q4。Java 8 中的流流水线是什么？
+## Q4. Java 8 中的流流水线是什么？
 
-流管道是将操作链接在一起的概念。我们通过将流中可能发生的操作分为两类来实现这一点:中间操作和终端操作。
+流管道是将操作链接在一起的概念。我们通过将流中可能发生的操作分为两类来实现这一点：中间操作和终端操作。
 
 每个中间操作在运行时都返回流本身的一个实例。因此，我们可以设置任意数量的中间操作来处理数据，形成一个处理流水线。
 
 然后必须有一个终端操作返回一个最终值并终止流水线。
 
-## 10。Java 8 日期和时间 API
+## 10. Java 8 日期和时间 API
 
-### Q1。告诉我们 Java 8 中新的日期和时间 API
+### Q1. 告诉我们 Java 8 中新的日期和时间 API
 
 Java 开发人员的一个长期问题是对普通开发人员所需的日期和时间操作的支持不足。
 
 现有的类如`java.util.Date`和`SimpleDateFormatter`不是线程安全的，这给用户带来了潜在的并发问题。
 
-糟糕的 API 设计在旧的 Java 数据 API 中也是一个现实。这里简单举个例子:`java.util.Date`中的年从 1900 开始，月从 1 开始，日从 0 开始，不是很直观。
+糟糕的 API 设计在旧的 Java 数据 API 中也是一个现实。这里简单举个例子：`java.util.Date`中的年从 1900 开始，月从 1 开始，日从 0 开始，不是很直观。
 
 这些问题和其他一些问题导致了第三方日期和时间库的流行，比如 Joda-Time。
 
 为了解决这些问题并在 JDK 提供更好的支持，在包`java.time`下为 Java SE 8 设计了一个新的日期和时间 API，它没有这些问题。
 
-## 11。结论
+## 11. 结论
 
 在本文中，我们探讨了几个带有 Java 8 偏见的重要技术面试问题。这绝不是一个详尽的列表，但它包含了我们认为最有可能在 Java 8 的每个新特性中出现的问题。
 
@@ -356,4 +368,4 @@ Java 开发人员的一个长期问题是对普通开发人员所需的日期和
 
 祝你面试好运。
 
-Next **»**[Memory Management in Java Interview Questions (+Answers)](/web/20220807183533/https://www.baeldung.com/java-memory-management-interview-questions)**«** Previous[Java Class Structure and Initialization Interview Questions](/web/20220807183533/https://www.baeldung.com/java-classes-initialization-questions)
+Next **»** [Memory Management in Java Interview Questions (+Answers)](/web/20220807183533/https://www.baeldung.com/java-memory-management-interview-questions) **«** Previous [Java Class Structure and Initialization Interview Questions](/web/20220807183533/https://www.baeldung.com/java-classes-initialization-questions)

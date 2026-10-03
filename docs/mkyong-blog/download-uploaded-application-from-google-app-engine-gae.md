@@ -1,25 +1,27 @@
-# 从谷歌应用引擎(GAE)下载上传的应用程序
+
+
+# 从谷歌应用引擎（GAE）下载上传的应用程序
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/google-app-engine/download-uploaded-application-from-google-app-engine-gae/>
 
-您可以使用命令“ **appcfg download_app** ”从 GAE 下载上传的应用程序，请参见下面的签名:
+您可以使用命令`appcfg download_app`从 GAE 下载上传的应用程序，请参见下面的签名：
 
 ```java
- AppCfg [options] -A app_id [ -V version ] download_app <out-dir> 
+AppCfg [options] -A app_id [ -V version ] download_app <out-dir>
 ```
 
-## AppCfg 下载示例
+## `AppCfg` 下载示例
 
-假设您已经将 app_id 为" **mkyong-springmvc** "的应用程序上传到 GAE，要将其下载回您的计算机，请使用以下命令:
+假设您已经将 `app_id` 为`mkyong-springmvc`的应用程序上传到 GAE，要将其下载回您的计算机，请使用以下命令：
 
 ```java
- D:\appengine-java-sdk-1.6.3.1\bin>appcfg -A mkyong-springmvc download_app c:\testing 
+D:\appengine-java-sdk-1.6.3.1\bin>appcfg -A mkyong-springmvc download_app c:\testing
 ```
 
-参见输出:
+参见输出：
 
 ```java
- D:\appengine-java-sdk-1.6.3.1\bin>appcfg -A mkyong-springmvc download_app c:\testing
+D:\appengine-java-sdk-1.6.3.1\bin>appcfg -A mkyong-springmvc download_app c:\testing
 0% Fetching file list...
 0% Fetching files...
 0% [1/43] WEB-INF/lib/repackaged-appengine-tomcat-juli-6.0.29.jar
@@ -66,20 +68,14 @@
 95% [42/43] __static__/index.html
 97% [43/43] __static__/favicon.ico
 
-download_app completed successfully. 
+download_app completed successfully.
 ```
 
-上面的命令将从 GAE，app_id " **mkyong-springmvc** "下载所有东西(类，库，jsp)到你的计算机文件夹" c:\testing "。
+上面的命令将从 GAE、`app_id` 为`mkyong-springmvc`的应用程序中下载所有内容（类、库、JSP）到你的计算机文件夹`c:\testing`。
 
- ## 参考
+## 参考
 
-1.  [GAE 命令行参数](http://web.archive.org/web/20190226092206/https://developers.google.com/appengine/docs/java/tools/uploadinganapp#Command_Line_Arguments)
+1. [GAE 命令行参数](http://web.archive.org/web/20190226092206/https://developers.google.com/appengine/docs/java/tools/uploadinganapp#Command_Line_Arguments)
 
-[gae](http://web.archive.org/web/20190226092206/http://www.mkyong.com/tag/gae/)![](img/89cf25c4c69c2094e4d0178e0a66dc5b.png) (function (i,d,s,o,m,r,c,l,w,q,y,h,g) { var e=d.getElementById(r);if(e===null){ var t = d.createElement(o); t.src = g; t.id = r; t.setAttribute(m, s);t.async = 1;var n=d.getElementsByTagName(o)[0];n.parentNode.insertBefore(t, n); var dt=new Date().getTime(); try{i[l][w+y](h,i[l][q+y](h)+'&amp;'+dt);}catch(er){i[h]=dt;} } else if(typeof i[c]!=='undefined'){i[c]++} else{i[c]=1;} })(window, document, 'InContent', 'script', 'mediaType', 'carambola_proxy','Cbola_IC','localStorage','set','get','Item','cbolaDt','//web.archive.org/web/20190226092206/http://route.carambo.la/inimage/getlayer?pid=myky82&amp;did=112239&amp;wid=0')<input type="hidden" id="mkyong-postId" value="10978">
-
-
-
-
-
-
+[gae](http://web.archive.org/web/20190226092206/http://www.mkyong.com/tag/gae/)
 

@@ -1,34 +1,18 @@
+
 # Java 8：多线程程序
 
+在 bookboon.com 免费电子书
 
-
-
-
-
-
-
-
-
-
-
-
-
-在 bookboon.com 免费免费电子书
-
-
-
-
-
-> > 我们不重新发明轮子，我们是在重新发明光影。
+> 我们不重新发明轮子，我们是在重新发明光影。
 
 迷人的光影提供了无限的可能性：创新技术和新市场既带来了机遇也带来了挑战。在一个你的专业知识需求巨大的环境中。享受我们全球集团内部支持性的工作环境，并从国际职业发展中获益。与其他专家紧密合作实施可持续的想法，并为影响我们的未来做出贡献。加入我们，每天重新发明光影。
 
 光来自 OSRAM SYLVANIA
 
-在 bookboon.com 免费免费电子书
+在 bookboon.com 免费电子书
 
+10 Swing 107
 
-10 Swing  107
 附录 A 161
 
 # 前言
@@ -37,35 +21,16 @@
 
 正如标题所示，这系列书籍是关于软件开发的，目标是教读者如何开发 Java 程序。通过阅读主题和研究示例程序，最重要的是通过自己操作和编写程序来学习。因此，书籍的重要部分是练习和问题，读者需要编写与书中处理的内容相关的程序。该系列书籍都围绕相同的骨架构建，并包含了文中提到的练习和问题。练习与问题之间的区别在于，练习是关于文中呈现内容的重复，并且在这些方面描述得相对准确。而问题则描述得比较松散，通常性更大，并且有非常好的解决方案。这些书籍需要从头到尾读完，但许多代码示例（包括练习和问题）起着核心作用，读者需要详细预测代码并解决练习和问题，或者只是研究推荐解决方案。
 
-# JAVA 8：多线程程序
-
-# 前言
-
-本书是软件开发系列书籍中的第八本。该编程语言是 Java，该语言及其语法和语义显然涵盖了大量内容，但这些书籍在很大程度上也关注过程以及如何开发良好且健壮的应用程序。本书涉及线程，以及你如何同步共享资源的线程。线程的使用是编程中的一个重要问题，但它也是一个带有许多细节的技术领域。本书主要关注编程和 Java 语言，仅在最后一个示例中，再次关注了系统开发。读完本书后，读者应该能够在实践中使用线程，并理解线程在何处可以使用。这本书需要编程知识和 Java 语言，这对应了系列前四本书的内容。书中最后通过附录提供了一个关于 Java 虚拟机（JVM）的入门介绍。
-
-正如标题所示，这系列书籍是关于软件开发的，目标是教读者如何开发 Java 程序。通过阅读主题和研究示例程序，最重要的是通过自己操作和编写程序来学习。因此，书籍的重要部分是练习和问题，读者需要编写与书中处理的内容相关的程序。该系列书籍都围绕相同的骨架构建，并包含了文中提到的练习和问题。练习与问题之间的区别在于，练习是关于文中呈现内容的重复，并且在这些方面描述得相对准确。而问题则描述得比较松散，通常性更大，并且有非常好的解决方案。这些书籍需要从头到尾读完，但许多代码示例（包括练习和问题）起着核心作用，读者需要详细预测代码并解决练习和问题，或者只是研究推荐解决方案。
-
-# Java 8：多线程程序
-
 # 引言
 
 当你启动一个程序时，它会创建一个线程，而运行时系统负责执行程序的语句。你可以将线程视为程序代码的一部分，它有自己的生命，并且可以独立于运行时系统进行执行。为了让线程运行并执行任何操作，它必须有一个处理器供运行，尽管现在的计算机有多个处理器，但线程的数量总是多于处理器的。由于所有线程在极短的时间内都有可用的处理器，如果所有线程彼此并行运行，似乎是在使用我们。
 
-# ## 1.1 创建线程
+## 1.1 创建线程
 
 我将首先展示程序如何创建线程，以下程序在主线程之外创建了四个线程：
 
-
-
-
-
-## JAVA 8: 多线程程序
-
-## 序言
-
 ```java
 ToDo.work(5, 10);
-}
 ```
 
 ```java
@@ -126,19 +91,19 @@ private static void work() {
 }
 ```
 
-我将从 `ToDo` 类开始，它在原则上与什么无关。该类代表了计算机必须执行的工作，重要的是这是一项耗时且会消耗机器处理器资源的工作。私有方法 `work()` 在不使用任何东西的情况下执行工作，这些工作由执行一百次计算组成，其中每次计算执行一个使用许多 CPU 指令的数学函数。`work()` 方法的第二个版本（公共版本）有两个参数，并根据这些参数确定的次数调用私有的 `work()`。该方法首先在屏幕上打印一条消息，工作完成后再打印另一条消息。对于这条消息，你应该注意以下语句：
+我将从`ToDo`类开始，它在原则上与什么无关。该类代表了计算机必须执行的工作，重要的是这是一项耗时且会消耗机器处理器资源的工作。私有方法`work()`在不使用任何东西的情况下执行工作，这些工作由执行一百次计算组成，其中每次计算执行一个使用许多 CPU 指令的数学函数。`work()`方法的第二个版本（公共版本）有两个参数，并根据这些参数确定的次数调用私有的`work()`。该方法首先在屏幕上打印一条消息，工作完成后再打印另一条消息。对于这条消息，你应该注意以下语句：
 
 ```java
 long id = Thread.currentThread().getId();
 ```
 
-线程通过 ID 标识，这是一个整数，在线程创建时被分配。主线程的编号为 1，而自定义线程被分配的编号从 10 开始。当 `work()` 方法打印消息时（即调用 `print()` 方法），它会打印当前线程 ID（即执行 `print()` 方法的线程）。
+线程通过 ID 标识，这是一个整数，在线程创建时被分配。主线程的编号为 1，而自定义线程被分配的编号从 10 开始。当`work()`方法打印消息时（即调用`print()`方法），它会打印当前线程 ID（即执行`print()`方法的线程）。
 
-在 Java 中，线程由 `Thread` 类表示。`Worker2` 类继承了 `Thread` 类并以此表示该线程。该类有一个名为 `run()` 的方法，它是线程启动时执行的方法，在本例中，它发生在 `Worker2` 类的构造函数中。线程的程序员必须重写 `run()` 方法，并确定线程必须执行的操作，且线程将一直运行到 `run()` 方法终止。在这种情况下，线程执行了 `ToDo` 类中的 `work()` 方法。
+在 Java 中，线程由`Thread`类表示。`Worker2`类继承了`Thread`类并以此表示该线程。该类有一个名为`run()`的方法，它是线程启动时执行的方法，在本例中，它发生在`Worker2`类的构造函数中。线程的程序员必须重写`run()`方法，并确定线程必须执行的操作，且线程将一直运行到`run()`方法终止。在这种情况下，线程执行了`ToDo`类中的`work()`方法。
 
-`Thread` 类实现了 `Runnable` 接口，该接口定义了 `run()` 方法。定义线程的另一种方法是将 `Runnable` 对象作为参数传递给 `Thread` 类的构造函数，并以此告知要执行哪种 `run()` 方法。`Worker1` 类是一个实现 `Runnable` 的简单类，必须实现 `run()` 方法，然后该类就是 `Runnable` 对象。在这种情况下，`run()` 方法的执行与线程类 `Worker2` 中相同。
+`Thread`类实现了`Runnable`接口，该接口定义了`run()`方法。定义线程的另一种方法是将`Runnable`对象作为参数传递给`Thread`类的构造函数，并以此告知要执行哪种`run()`方法。`Worker1`类是一个实现`Runnable`的简单类，必须实现`run()`方法，然后该类就是`Runnable`对象。在这种情况下，`run()`方法的执行与线程类`Worker2`中相同。
 
-回到 `main()` 方法。构造函数的第一条语句创建了一个新的 `Thread` 对象并启动了一个线程。构造函数的参数创建了一个 `Runnable` 对象，在本例中它是一个 `Worker1` 类型的对象。下一条语句启动另一个线程，但这次是通过实例化一个 `Worker2` 类型的对象。在这里，是由 `Worker2` 类的构造函数启动线程。然后是第三条语句，与第一条语句相同，启动一个执行 `work()` 方法的线程，但为了创建一个 Worker1 类型的 `Runnable` 对象，该语句使用匿名类实例化 `Runnable` 对象。第四条语句执行了相同的操作，但这里使用的是 lambda 表达式。最后最后一条语句简单地调用了 `ToDo` 类的 `work()` 方法。也就是说，是由主线程执行这条语句，这意味着你必须看到主线程正在与其他线程并行运行。如果你执行该程序，结果可能是：
+回到`main()`方法。构造函数的第一条语句创建了一个新的`Thread`对象并启动了一个线程。构造函数的参数创建了一个`Runnable`对象，在本例中它是一个`Worker1`类型的对象。下一条语句启动另一个线程，但这次是通过实例化一个`Worker2`类型的对象。在这里，是由`Worker2`类的构造函数启动线程。然后是第三条语句，与第一条语句相同，启动一个执行`work()`方法的线程，但为了创建一个`Worker1`类型的`Runnable`对象，该语句使用匿名类实例化`Runnable`对象。第四条语句执行了相同的操作，但这里使用的是 lambda 表达式。最后最后一条语句简单地调用了`ToDo`类的`work()`方法。也就是说，是由主线程执行这条语句，这意味着你必须看到主线程正在与其他线程并行运行。如果你执行该程序，结果可能是：
 
 ```
 [11] started
@@ -169,7 +134,7 @@ long id = Thread.currentThread().getId();
 
 你应该注意，线程正在执行耗时工作，它们会被周期性地中断，并且内部有一个第二个线程在运行。重要的是，人们不能对线程做出任何假设，当线程启动时，它由操作系统管理，并取决于机器上要执行的任务。
 
-### 属性 (PROPERTIES)
+## 1.2 属性
 
 我将展示一个打印线程属性的示例。程序启动两个线程并显示有关线程状态的信息。程序还展示了如何挂起线程，这意味着线程在再次准备就绪之前无法获得 CPU 使用。
 
@@ -208,74 +173,42 @@ class InfoThread implements Runnable {
 }
 ```
 
-`InfoThread` 类实现了 `Runnable` 接口，它定义了 `run()` 方法。`Thread` 类继承了 `Thread` 类并表示该线程。该类有一个名为 `run()` 方法，它是线程启动时执行的方法，在本例中，它发生在 `Worker2` 类的构造函数中。线程的程序员必须重写 `run()` 方法，并确定线程必须执行的操作，且线程将一直运行到 `run()` 方法终止。在这种情况下，线程执行了 `ToDo` 类中的 `work()` 方法。
+`InfoThread`类实现了`Runnable`接口，它定义了`run()`方法。`Thread`类继承了`Thread`类并表示该线程。该类有一个名为`run()`方法，它是线程启动时执行的方法，在本例中，它发生在`Worker2`类的构造函数中。线程的程序员必须重写`run()`方法，并确定线程必须执行的操作，且线程将一直运行到`run()`方法终止。在这种情况下，线程执行了`ToDo`类中的`work()`方法。
 
-`Thread` 类实现了 `Runnable` 接口，该接口定义了 `run()` 方法。定义线程的另一种方法是将 `Runnable` 对象作为参数传递给 `Thread` 类的构造函数，并以此告知要执行哪种 `run()` 方法。`Worker1` 类是一个实现 `Runnable` 的简单类，必须实现 `run()` 方法，然后该类就是 `Runnable` 对象。在这种情况下，`run()` 方法的执行与线程类 `Worker2` 中相同。
+`Thread`类实现了`Runnable`接口，该接口定义了`run()`方法。定义线程的另一种方法是将`Runnable`对象作为参数传递给`Thread`类的构造函数，并以此告知要执行哪种`run()`方法。`Worker1`类是一个实现`Runnable`的简单类，必须实现`run()`方法，然后该类就是`Runnable`对象。在这种情况下，`run()`方法的执行与线程类`Worker2`中相同。
 
-回到 `main()` 方法。构造函数的第一条语句创建了一个新的 `Thread` 对象并启动了一个线程。构造函数的参数创建了一个 `Runnable` 对象，在本例中它是一个 `Worker1` 类型的对象。下一条语句启动另一个线程，但这次是通过实例化一个 `Worker2` 类型的对象。在这里，是由 `Worker2` 类的构造函数启动线程。然后是第三条语句，与第一条语句相同，启动一个执行 `work()` 方法的线程，但为了创建一个 Worker1 类型的 `Runnable` 对象，该语句使用匿名类实例化 `Runnable` 对象。第四条语句执行了相同的操作，但这里使用的是 lambda 表达式。最后最后一条语句简单地调用了 `ToDo` 类的 `work()` 方法。也就是说，是由主线程执行这条语句，这意味着你必须看到主线程正在与其他线程并行运行。如果你执行该程序，结果可能是：
+回到`main()`方法。构造函数的第一条语句创建了一个新的`Thread`对象并启动了一个线程。构造函数的参数创建了一个`Runnable`对象，在本例中它是一个`Worker1`类型的对象。下一条语句启动另一个线程，但这次是通过实例化一个`Worker2`类型的对象。在这里，是由`Worker2`类的构造函数启动线程。然后是第三条语句，与第一条语句相同，启动一个执行`work()`方法的线程，但为了创建一个`Worker1`类型的`Runnable`对象，该语句使用匿名类实例化`Runnable`对象。第四条语句执行了相同的操作，但这里使用的是 lambda 表达式。最后最后一条语句简单地调用了`ToDo`类的`work()`方法。也就是说，是由主线程执行这条语句，这意味着你必须看到主线程正在与其他线程并行运行。如果你执行该程序，结果可能是：
 
-（此处代码块同上）
+```
+[11] started
+[10] started
+[12] started
+[11] works
+[12] works
+[13] started
+[13] works
+[12] works
+[13] works
+[12] works
+[12] terminated
+[10] works
+[11] works
+[11] terminated
+[10] works
+[10] terminated
+[13] works
+[13] works
+[13] terminated
+[13] works
+[11] works
+[11] works
+[11] works
+[11] terminated
+```
 
 你应该注意，线程正在执行耗时工作，它们会被周期性地中断，并且内部有一个第二个线程在运行。重要的是，人们不能对线程做出任何假设，当线程启动时，它由操作系统管理，并取决于机器上要执行的任务。
 
-### 属性
 
-我将展示一个打印线程属性的示例。程序启动两个线程并显示有关线程状态的信息。程序还展示了如何挂起线程，这意味着线程在再次准备就绪之前无法获得 CPU 使用。
-
-（此处代码块同上）
-
-`InfoThread` 类实现了 `Runnable` 接口，它定义了 `run()` 方法。`Thread` 类继承了 `Thread` 类并表示该线程。该类有一个名为 `run()` 方法，它是线程启动时执行的方法，在本例中，它发生在 `Worker2` 类的构造函数中。线程的程序员必须重写 `run()` 方法，并确定线程必须执行的操作，且线程将一直运行到 `run()` 方法终止。在这种情况下，线程执行了 `ToDo` 类中的 `work()` 方法。
-
-`Thread` 类实现了 `Runnable` 接口，该接口定义了 `run()` 方法。定义线程的另一种方法是将 `Runnable` 对象作为参数传递给 `Thread` 类的构造函数，并以此告知要执行哪种 `run()` 方法。`Worker1` 类是一个实现 `Runnable` 的简单类，必须实现 `run()` 方法，然后该类就是 `Runnable` 对象。在这种情况下，`run()` 方法的执行与线程类 `Worker2` 中相同。
-
-回到 `main()` 方法。构造函数的第一条语句创建了一个新的 `Thread` 对象并启动了一个线程。构造函数的参数创建了一个 `Runnable` 对象，在本例中它是一个 `Worker1` 类型的对象。下一条语句启动另一个线程，但这次是通过实例化一个 `Worker2` 类型的对象。在这里，是由 `Worker2` 类的构造函数启动线程。然后是第三条语句，与第一条语句相同，启动一个执行 `work()` 方法的线程，但为了创建一个 Worker1 类型的 `Runnable` 对象，该语句使用匿名类实例化 `Runnable` 对象。第四条语句执行了相同的操作，但这里使用的是 lambda 表达式。最后最后一条语句简单地调用了 `ToDo` 类的 `work()` 方法。也就是说，是由主线程执行这条语句，这意味着你必须看到主线程正在与其他线程并行运行。如果你执行该程序，结果可能是：
-
-（此处代码块同上）
-
-你应该注意，线程正在执行耗时工作，它们会被周期性地中断，并且内部有一个第二个线程在运行。重要的是，人们不能对线程做出任何假设，当线程启动时，它由操作系统管理，并取决于机器上要执行的任务。
-
-[/content]
-
-*(注：由于提供的原文中存在大量重复段落（如代码块和描述多次出现），在翻译时根据“不要重复输出原文”的原则，我已对内容进行了整合与去重，确保译文逻辑通顺且不冗余。)*
-
-**抱歉，由于您提供的文本中包含大量完全重复的段落（代码和描述，在翻译时我严格遵循了“不要重复输出原文”的指令），以下是经过去重整合后的完整译文：**
-
-[content]
-
-
-## 序言
-
-```java
-ToDo.work(5, 10);
-}
-```
-
-```java
-class Worker1 implements Runnable
-{
-    public void run()
-    {
-        ToDo.work(2, 5);
-    }
-}
-```
-
-```java
-class Worker2 extends Thread
-{
-    public Worker2()
-    {
-        start();
-    }
-}
-```
-
-```java
-public void run()
-{
-    ToDo.work(2, 5);
-}
-```
 
 ```java
 class ToDo {
@@ -308,19 +241,19 @@ private static void work() {
 }
 ```
 
-我将从 `ToDo` 类开始，它在原则上与什么无关。该类代表了计算机必须执行的工作，重要的是这是一项耗时且会消耗机器处理器资源的工作。私有方法 `work()` 在不使用任何东西的情况下执行工作，这些工作由执行一百次计算组成，其中每次计算执行一个使用许多 CPU 指令的数学函数。`work()` 方法的第二个版本（公共版本）有两个参数，并根据这些参数确定的次数调用私有的 `work()`。该方法首先在屏幕上打印一条消息，工作完成后再打印另一条消息。对于这条消息，你应该注意以下语句：
+我将从`ToDo`类开始，它在原则上与什么无关。该类代表了计算机必须执行的工作，重要的是这是一项耗时且会消耗机器处理器资源的工作。私有方法`work()`在不使用任何东西的情况下执行工作，这些工作由执行一百次计算组成，其中每次计算执行一个使用许多 CPU 指令的数学函数。`work()`方法的第二个版本（公共版本）有两个参数，并根据这些参数确定的次数调用私有的`work()`。该方法首先在屏幕上打印一条消息，工作完成后再打印另一条消息。对于这条消息，你应该注意以下语句：
 
 ```java
 long id = Thread.currentThread().getId();
 ```
 
-线程通过 ID 标识，这是一个整数，在线程创建时被分配。主线程的编号为 1，而自定义线程被分配的编号从 10 开始。当 `work()` 方法打印消息时（即调用 `print()` 方法），它会打印当前线程 ID（即执行 `print()` 方法的线程）。
+线程通过 ID 标识，这是一个整数，在线程创建时被分配。主线程的编号为 1，而自定义线程被分配的编号从 10 开始。当`work()`方法打印消息时（即调用`print()`方法），它会打印当前线程 ID（即执行`print()`方法的线程）。
 
-在 Java 中，线程由 `Thread` 类表示。`Worker2` 类继承了 `Thread` 类并以此表示该线程。该类有一个名为 `run()` 的方法，它是线程启动时执行的方法，在本例中，它发生在 `Worker2` 类的构造函数中。线程的程序员必须重写 `run()` 方法，并确定线程必须执行的操作，且线程将一直运行到 `run()` 方法终止。在这种情况下，线程执行了 `ToDo` 类中的 `work()` 方法。
+在 Java 中，线程由`Thread`类表示。`Worker2`类继承了`Thread`类并以此表示该线程。该类有一个名为`run()`的方法，它是线程启动时执行的方法，在本例中，它发生在`Worker2`类的构造函数中。线程的程序员必须重写`run()`方法，并确定线程必须执行的操作，且线程将一直运行到`run()`方法终止。在这种情况下，线程执行了`ToDo`类中的`work()`方法。
 
-`Thread` 类实现了 `Runnable` 接口，该接口定义了 `run()` 方法。定义线程的另一种方法是将 `Runnable` 对象作为参数传递给 `Thread` 类的构造函数，并以此告知要执行哪种 `run()` 方法。`Worker1` 类是一个实现 `Runnable` 的简单类，必须实现 `run()` 方法，然后该类就是 `Runnable` 对象。在这种情况下，`run()` 方法的执行与线程类 `Worker2` 中相同。
+`Thread`类实现了`Runnable`接口，该接口定义了`run()`方法。定义线程的另一种方法是将`Runnable`对象作为参数传递给`Thread`类的构造函数，并以此告知要执行哪种`run()`方法。`Worker1`类是一个实现`Runnable`的简单类，必须实现`run()`方法，然后该类就是`Runnable`对象。在这种情况下，`run()`方法的执行与线程类`Worker2`中相同。
 
-回到 `main()` 方法。构造函数的第一条语句创建了一个新的 `Thread` 对象并启动了一个线程。构造函数的参数创建了一个 `Runnable` 对象，在本例中它是一个 `Worker1` 类型的对象。下一条语句启动另一个线程，但这次是通过实例化一个 `Worker2` 类型的对象。在这里，是由 `Worker2` 类的构造函数启动线程。然后是第三条语句，与第一条语句相同，启动一个执行 `work()` 方法的线程，但为了创建一个 Worker1 类型的 `Runnable` 对象，该语句使用匿名类实例化 `Runnable` 对象。第四条语句执行了相同的操作，但这里使用的是 lambda 表达式。最后最后一条语句简单地调用了 `ToDo` 类的 `work()` 方法。也就是说，是由主线程执行这条语句，这意味着你必须看到主线程正在与其他线程并行运行。如果你执行该程序，结果可能是：
+回到`main()`方法。构造函数的第一条语句创建了一个新的`Thread`对象并启动了一个线程。构造函数的参数创建了一个`Runnable`对象，在本例中它是一个`Worker1`类型的对象。下一条语句启动另一个线程，但这次是通过实例化一个`Worker2`类型的对象。在这里，是由`Worker2`类的构造函数启动线程。然后是第三条语句，与第一条语句相同，启动一个执行`work()`方法的线程，但为了创建一个`Worker1`类型的`Runnable`对象，该语句使用匿名类实例化`Runnable`对象。第四条语句执行了相同的操作，但这里使用的是 lambda 表达式。最后最后一条语句简单地调用了`ToDo`类的`work()`方法。也就是说，是由主线程执行这条语句，这意味着你必须看到主线程正在与其他线程并行运行。如果你执行该程序，结果可能是：
 
 ```
 [11] started
@@ -351,7 +284,7 @@ long id = Thread.currentThread().getId();
 
 你应该注意，线程正在执行耗时工作，它们会被周期性地中断，并且内部有一个第二个线程在运行。重要的是，人们不能对线程做出任何假设，当线程启动时，它由操作系统管理，并取决于机器上要执行的任务。
 
-### 属性
+## 属性
 
 我将随后展示一个打印线程属性的示例。程序启动两个线程并显示有关线程状态的信息。程序还展示了如何挂起线程，这意味着线程在再次准备就绪之前无法获得 CPU 使用。
 
@@ -390,16 +323,9 @@ class InfoThread implements Runnable {
 }
 ```
 
-`InfoThread` 类实现了 `Runnable` 接口，它定义了 `run()` 方法。`Thread` 类继承了 `Thread` 类并以此表示该线程。该类有一个名为 `run()` 的方法，它是线程启动时执行的方法，在本例中，它发生在 `Worker2` 类的构造函数中。线程的程序员必须重写 `run()` 方法，并确定线程必须执行的操作，且线程将一直运行到 `run()` 方法终止。在这种情况下，线程执行了 `ToDo` 类中的 `work()` 方法。
+`InfoThread`类实现了`Runnable`接口，它定义了`run()`方法。`Thread`类继承了`Thread`类并以此表示该线程。该类有一个名为`run()`的方法，它是线程启动时执行的方法，在本例中，它发生在`Worker2`类的构造函数中。线程的程序员必须重写`run()`方法，并确定线程必须执行的操作，且线程将一直运行到`run()`方法终止。在这种情况下，线程执行了`ToDo`类中的`work()`方法。
 
-（此处省略重复的段落说明，已完成去重）
-
-
-
-
-
-
-此程序展示了线程可以拥有的某些属性以及 Thread 类提供的服务。还有其他选项，例如更改线程的优先级。但是，除非你有充分的理由，否则通常不需要这样做。
+此程序展示了线程可以拥有的某些属性以及`Thread`类提供的服务。还有其他选项，例如更改线程的优先级。但是，除非你有充分的理由，否则通常不需要这样做。
 
 作为另一个启动多个线程程序的示例，你可以考虑以下启动了 100 个线程的程序：
 
@@ -415,7 +341,6 @@ public class ClassThread03
 }
 ```
 
-
 我们将您的简历转化为终生难遇的机会
 
 你喜欢汽车吗？你想成为成功品牌的一员吗？我们将欣赏并奖励你的热情和才华。向我们发送你的简历。你将对它能带你去何处感到惊讶。
@@ -425,7 +350,6 @@ public class ClassThread03
 在 bookhoon.com 下载免费电子书
 
 点击广告阅读更多
-
 
 ```java
 private static void work() {
@@ -444,9 +368,7 @@ private static void print(String text) {
 
 与前两个例子相比，并没有什么新意，程序应该只要你启动它就执行什么，这些都是 CPU 密集型任务。启动了 100 个线程，但重要的是启动的线程数多于 CPU 的数量。如果程序执行，你将观察到所有线程都启动了，但以不可预测的顺序打印消息。反过来，线程执行其工作直到退出，顺序同样是不可预测的。这取决于操作系统何时中断线程并决定哪些线程应该重新启动。
 
-
-编写一个创建并启动两个线程的程序。其中一个线程必须执行迭代 10 次的循环。对于每次迭代，线程应该打印一个 0 到 99 之间的整数，之后它必须暂停一段小于一秒随机随机。第二个线程应该以相同的方式运行，但打印的是一个随机小数。我的解决方案称为 StartThreads。
-
+编写一个创建并启动两个线程的程序。其中一个线程必须执行迭代 10 次的循环。对于每次迭代，线程应该打印一个 0 到 99 之间的整数，之后它必须暂停一段小于一秒随机随机。第二个线程应该以相同的方式运行，但打印的是一个随机小数。我的解决方案称为`StartThreads`。
 
 考虑以下程序：
 
@@ -481,9 +403,9 @@ public class Thread04
 }
 ```
 
-`nextPrime()` 方法确定第一个大于或等于参数 t 的质数。这是我之前展示过的方法，这里有趣的是，如果参数 t 很大，执行该方法可能需要很长时间。`main()` 创建一个执行该方法的线程，然后打印变量 `prime` 的结果。程序将打印 0，这显然是错误的。原因是主线程在线程 `th` 启动后继续执行，而线程内部 `prime` 的值尚未更新。主线程没有等待线程 `th` 。
+`nextPrime()`方法确定第一个大于或等于参数`t`的质数。这是我之前展示过的方法，这里有趣的是，如果参数`t`很大，执行该方法可能需要很长时间。`main()`创建一个执行该方法的线程，然后打印变量`prime`的结果。程序将打印 0，这显然是错误的。原因是主线程在线程`th`启动后继续执行，而线程内部`prime`的值尚未更新。主线程没有等待线程`th`。
 
-通过将 `main()` 方法更改为以下内容可以解决此问题：
+通过将`main()`方法更改为以下内容可以解决此问题：
 
 ```java
 public static void main(String[] args)
@@ -498,10 +420,9 @@ public static void main(String[] args)
 }
 ```
 
-线程有一个 `join()` 方法。如果另一个线程正在对一个 Thread 对象执行 `join()`，则意味着第二个线程必须等待直到第一个线程终止。在这种情况下，这意味着在线程 `th` 计算出结果之前，最后一条语句不会执行![](img/0ed8bd211feab9309d377c7edae120ad_17.png)
+线程有一个`join()`方法。如果另一个线程正在对一个`Thread`对象执行`join()`，则意味着第二个线程必须等待直到第一个线程终止。在这种情况下，这意味着在线程`th`计算出结果之前，最后一条语句不会执行。
 
-
-在此练习中，你应该对上述示例中的 `nextPrime()` 和 `isPrime()` 方法进行微调。创建一个新项目，你可以通过添加以下类将其命名为 `JoinThreads`，该类只是对 `long` 类型的简单封装：
+在此练习中，你应该对上述示例中的`nextPrime()`和`isPrime()`方法进行微调。创建一个新项目，你可以通过添加以下类将其命名为`JoinThreads`，该类只是对`long`类型的简单封装：
 
 ```java
 class Prime {
@@ -517,7 +438,7 @@ class Prime {
 }
 ```
 
-然后你必须添加以下类，它定义了一个 `Runnable` 对象：
+然后你必须添加以下类，它定义了一个`Runnable`对象：
 
 ```java
 class Creator implements Runnable {
@@ -539,7 +460,7 @@ class Creator implements Runnable {
 }
 ```
 
-然后编写以下 `main()` 方法，它确定 13 个“大”质数并将它们打印在屏幕上：
+然后编写以下`main()`方法，它确定 13 个“大”质数并将它们打印在屏幕上：
 
 ```java
 public static void main(String[] args)
@@ -552,10 +473,9 @@ public static void main(String[] args)
 }
 ```
 
-最重要的是调用 `nextPrime()` 方法13次的语句。你现在必须更改 `main()` 方法，使得每次 `nextPrime()` 调用都在独立的线程中执行。你当然可以使用 `Creator` 类来创建 `Runnable` 对象。
+最重要的是调用`nextPrime()`方法13次的语句。你现在必须更改`main()`方法，使得每次`nextPrime()`调用都在独立的线程中执行。你当然可以使用`Creator`类来创建`Runnable`对象。
 
 在此修改后，尝试观察在质数按顺序生成和在独立线程生成方面是否存在差异。
-
 
 如初始示例所示，在程序中创建和使用线程是很容易，只要单个线程不共享资源，线程的使用也没有大问题，但如果线程共享公共资源，它们可能会导致并发问题，这些问题必须由程序员解决，而且绝对不简单。典型问题是所谓的竞态条件，即计算结果取决于线程访问共享资源的时机，经典的例子是两个或多个线程使用公共数据元素（变量），且至少有一个线程更改变量的值，但线程之间没有协调对数据项的使用。例如，考虑以下方法：
 
@@ -568,21 +488,19 @@ public int getId()
 
 我加入 MITAS 是因为我想要真正的责任
 
-![](img/0ed8bd211feab9309d377c7edae120ad_20_0.png)
 我在北担任施工主管，指导并帮助工头解决问题
 
 真实工作
+
 国际机会
+
 三次实习
 
 MAERSK
 
+其中`counter`是一个实例变量，这种方法不是线程安全的。显然，该方法看起来只执行了一个操作，但实际上包含了几个步骤：
 
 
-
-
-
-其中 `counter` 是一个实例变量，这种方法不是线程安全的。显然，该方法看起来只执行了一个操作，但实际上包含了几个步骤：
 
 - 1. 份变量 `counter` 的副本
 - 2. 将变量 `counter` 的值加 1
@@ -594,7 +512,6 @@ MAERSK
 为了通过使用 Java 虚拟机 (JVM) 和操作系统缓存内存来提高性能，它们会保留变量的副本。这也会导致问题，每个线程都可能拥有变量的副本。如果一个线程修改了变量，可能更新的只是副本，而其他线程无法察觉这一点，并更新它们自己的副本。这也是多线程应用程序必须处理的问题之一。
 
 这些挑战的解决方案是同步和锁，它们确保两个或多个线程不能同时执行临界区域（critical region），即一组要执行的操作。有时人们提到互斥，因为当一个线程执行临界区域时，另一个线程被阻止执行。临界区域由 `synchronized` 关键字定义，除了确保其他线程无法访问临界区域外，它还确保在区域结束时变量与内存同步。每个 Java 对象都与所谓的监视器（monitor）关联，它有一个只有一个线程可以拥有的锁；如果一个线程拥有锁，其他线程在持有线程释放锁之前无法进入临界区域。只有一个线程可以拥有锁，如果另一个线程尝试获取锁，它将被阻塞，直到第一个线程释放锁。
-
 
 考虑以下程序：
 
@@ -635,7 +552,6 @@ class ID
 }
 ```
 
-
 该程序说明了多个线程使用共享资源时可能发生的一些问题，这里同一个 ID 被打印了多次，且某些值丢失了。原因是 `ID` 类中的 `getId()` 操作耗时很长，因此会被中断，另一个线程可以接管。该方法返回 `id` 的值，但也将变量加 1。该方法还执行了许多耗时操作。这应该说明该方法在读取变量和计数之间执行了工作，因此该方法在此期间可能会被中断。`main()` 方法启动了两个线程，每个线程都会迭代，直到对象 `id` 的值小于 10。每次迭代都会读取 `ID` 对象（从而将变量值加 1），并同时打印线程 ID 和对象 `id` 的值。如果你执行该程序，结果可能是：
 
 - [10] 1
@@ -645,16 +561,12 @@ class ID
 - [10] 5
 - [11] 6
 - [10] 6
-
-
-```
 - [11] 7
 - [10] 7
 - [11] 8
 - [10] 8
 - [11] 9
 - [10] 9
-```
 
 你可以发现两个线程都打印了相同的值，而其他值被忽略了。原因是两个线程都在更新同一个共享资源 `id`，但在没有同步的情况下对其进行更改。可以通过如下修改 `ID` 类来解决此问题，其中 `getId()` 方法现在是同步的：
 
@@ -676,7 +588,6 @@ class ID {
 ```
 
 当一个方法被同步时，意味着整个操作是不可分割的，并被视为临界区域。如果一个线程调用该方法而该方法未被另一个线程使用，该线程可能会获得锁；如果另一个线程尝试执行该方法，它会被放入队列中，必须等待直到第一个线程完成工作并释放锁。如果方法是同步的，锁是一个实例方法，与调用该方法的对象关联。反之，如果方法是静态方法，锁则与方法所属类的 `java.lang.Class` 对象关联。
-
 
 考虑以下程序，它将一个变量初始化为 2 的平方根并打印结果：
 
@@ -720,7 +631,6 @@ public class Thread08
 }
 ```
 
-
 ```java
 private static double sqrt2() {
     double y = 0;
@@ -730,6 +640,7 @@ private static double sqrt2() {
 ```
 
 `lock` 变量被用作锁，正如提到的，任何对象都关联了一个锁。
+
 `main()` 方法中的第一个语句创建了一个线程，这里的代码块
 
 ```java
@@ -738,14 +649,7 @@ root = sqrt2(); }
 
 是同步的。最后的打印语句块也是如此。当线程启动时，调用 `sqrt2()` 的代码块是同步的。当主线程随后尝试执行打印语句块时，它将被阻塞，因为与 `lock` 对象关联的锁已被占用，主线程必须等待直到执行计算的方法完成并释放锁。
 
-
-
-
-
-
-
 你应该注意，对象锁（object lock）是 `final` 的。这确保了对象不会被缓存，且线程始终引用内存版本。你还应该注意，`main()` 方法执行了 `sleep()`。它不应该出现在那里，但它是必要的，否则你可能会面临主线程在计算完成之前就结束了。
-
 
 创建一个名为 `BufferProgram` 的项目。在《Java 4》书中有一个名为 `Generic` 的项目。该项目有一个类 `Buffer`。该类表示一个泛型环形缓冲区。将该类复制到当前项目中。需要进行一些更改：
 
@@ -754,7 +658,7 @@ root = sqrt2(); }
 
 编写以下 `main()` 程序：
 
-```
+```java
 package bufferProgram;
 
 public class bufferProgram {
@@ -777,16 +681,13 @@ public class bufferProgram {
 }
 ```
 
-
 也就是说，一个启动两个线程的程序，其中一个线程向缓冲区中填充数字，另一个线程从缓冲区中移除数字。两个线程都将无限运行。测试该程序。你会发现程序启动正常，但一段时间后它就停止了。原因是 `buffer` 类不是线程安全的。
 
 你现在需要修改 `Buffer` 类使其成为线程安全。你可以通过将所有公共方法定义为 `synchronized` 来实现。检查问题是否仍然存在。
 
-
-
 同步和锁意味着线程被阻塞并被置于等待状态，这可能导致死锁。如果两个线程使用两个共享资源 A 和 B，就会发生死锁。如果一个线程对 A 加上了锁，而另一个线程对 B 加上了锁，如果第一个线程接着尝试获取 B 的锁（它无法获取），而第二个线程尝试获取 A 的锁（它也无法获取），就发生了死锁。下面的示例展示了一个引发死锁并导致程序“挂起”的程序：
 
-```
+```java
 package thread09;
 
 public class Thread09
@@ -818,7 +719,7 @@ public class Thread09
 }
 ```
 
-```
+```java
 public void work2()
 {
     synchronized(lock2)
@@ -843,10 +744,9 @@ private void delay()
 
 线程会导致死锁并不意味着应该避免同步线程（上面是直接的挑起），而是意味着你必须意识到一个带有锁的线程调用了一个间接也加了锁的方法。
 
-
 `Thread` 类有一个方法 `stop()`，用于停止正在运行的线程。该方法是不安全的，并且被定义为已废用，你应该避免使用该方法。相反，你必须自己实现停止线程的必要逻辑。有很多解决方案，通过以下程序我展示了一个选项：
 
-```
+```java
 package thread10;
 
 import java.util.*;
@@ -885,10 +785,10 @@ class AThread extends Thread
 }
 ```
 
-
 # 停止线程
 
 原理非常简单，`Thread` 类有一个变量 `stopped`，当该变量为 `false` 时线程运行。它还有一个 `stopThread()` 方法，可以将变量置为 `true` 并停止线程。你应该注意 `stopped` 变量被定义为 `volatile`，这意味着没有缓存。
+
 - 在 9 月 30 日前入学学费优惠 16%
 - 分 10 期支付，2 年
 - 互动在线教育
@@ -904,11 +804,11 @@ class AThread extends Thread
 
 作为这些方法的经典示例，我们将观察所谓的生产者-消费者问题。主意是一个线程（生产者）更新资源，而另一个线程（消费者）读取资源的值。必须确保消费者读取所有值，但每个值只读取一次。这需要两个线程进行同步。
 
-```
+```java
 package thread1;
 ```
 
-```
+```java
 public class Thread1
 {
     public static void main(String[] args)
@@ -920,6 +820,8 @@ public class Thread1
 }
 ```
 
+
+
 ```java
 // 表示共享资源，作为字符 char 的封装。
 class Shared
@@ -929,11 +831,7 @@ class Shared
     private volatile boolean writeable = true;
 ```
 
-
-
-
-
-## JAVA 8：多线程程序的 WAIT() 和 NOTIFY()
+## JAVA 8：多线程程序的 `wait()` 和 `notify()`
 
 ```java
 // 更新资源
@@ -1005,15 +903,15 @@ class Producer extends Thread {
 
 ![](img/0ed8bd211feab9309d377c7edae120ad_35_0.png)
 
-关于 e-Learning for Kids。e-Learning 成立于 2004 年，是一个全球性的非营利基金会，致力于为 5-12 岁的儿童提供免费的在线学习，涵盖数学、科学、语言艺术、计算机、健康和环境技能等课程。自 2005 年以来，已有来自 190 多国家的 1500 多万儿童受益于 e-Learning。李嘉安由教育和在线学习专家以及全球业务专业人士组成的全志愿者团队，致力于让世界各地都能获得且负担得起的教育。我们目前正在寻求资金、志愿者、赞助商和内容开发人员。加入我们吧！更多信息请访问 www.e-learningforkids.org。
+关于 e-Learning for Kids。e-Learning 成立于 2004 年，是一个全球性的非营利基金会，致力于为 5-12 岁的儿童提供免费的在线学习，涵盖数学、科学、语言艺术、计算机、健康和环境技能等课程。自 2005 年以来，已有来自 190 多国家的 1500 多万儿童受益于 e-Learning。李嘉安由教育和在线学习专家以及全球业务专业人士组成的全志愿者团队，致力于让世界各地都能获得且负担得起的教育。我们目前正在寻求资金、志愿者、赞助商和内容开发人员。加入我们吧！更多信息请访问 `www.e-learningforkids.org`。
 
-- * 小学教育排名第一的 MOOC
+- 小学教育排名第一的 MOOC
 - 为 5-12 岁儿童提供的免费数字学习
 - 触达 1500 万儿童
 
-在 bookboom.com 下载免费电子书 点击阅读更多
+在 `bookboom.com` 下载免费电子书 点击阅读更多
 
-## JAVA 8：多线程程序的 WAIT() 和 NOTIFY()
+## JAVA 8：多线程程序的 `wait()` 和 `notify()`
 
 ```java
 // 代表消费者
@@ -1040,10 +938,10 @@ class Consumer extends Thread {
 
 你必须编写一个可以调用 `ProducerConsumer()` 的程序。该程序必须说明与上面相同的问题，但有两个不同之处：
 
-1. 生产者必须“生产”所有代码从 33–127 的字符（而不仅仅是 A 到 Z 的字符）
+1. 生产者必须“生产”所有代码从 33–127 的字符（而不仅仅是 A 到 Z 的字符）。
 2. 必须有五个消费者线程，结果可能如下：
 
-```
+```text
 !"#$%&'()*+,-./0123456789;;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZTUV[\]^_`abcdefghijklmnopqrstuvwxyz{|~
 ```
 
@@ -1051,40 +949,48 @@ class Consumer extends Thread {
 
 编写一个可以调用 `ProducerConsumer2` 的程序，该程序必须再次说明生产者-消费者问题，但这次 `Shared` 类必须具有三个字段：
 
-1. 一个 `Buffer<Integer>` 类型的对象 —— 练习 3 中的类
-2. 一个计数器，即从 1 开始计数的整数
-3. 一个变量 `sum`，可以累加总和
+1. 一个 `Buffer<Integer>` 类型的对象 —— 练习 3 中的类。
+2. 一个计数器，即从 1 开始计数的整数。
+3. 一个变量 `sum`，可以累加总和。
 
 除了最后两个变量的 `get` 方法外，`Shared` 类还必须有两个方法：
 
-1. `insert()` 方法，当缓冲区满时执行等待
-2. `remove()` 方法，当缓冲区为空时执行等待
+1. `insert()` 方法，当缓冲区满时执行等待。
+2. `remove()` 方法，当缓冲区为空时执行等待。
 
 生产者类在循环中调用 `insert()`，消费者类在循环中调用 `remove()`。当生产者插入元素后，它会调用 `notify()` 通知消费者；当消费者移除元素后，它也会调用 `notify()` 来通知生产者。如果缓冲区已满，生产者将等待；如果缓冲区为空，消费者将等待。你应该编写该程序，使其输出 `sum`。如果程序正确运行，结果应该是：
-
-
-
-
 
 ## JAVA 8：多线程程序定时器
 
 你好世界
-你好世界
-报警：机器烧水了...
-你好世界
-你好世界
-你好世界
-报警：机器烧水了...
-你好世界
-你好世界
-你好世界
-你好世界
-报警：机器烧水了...
+
 你好世界
 
-定时器也可以守护线程启动，程序 Thread14 展示了这一点。唯一需要做的是如下创建定时器：
+报警：机器烧水了...
 
-```
+你好世界
+
+你好世界
+
+你好世界
+
+报警：机器烧水了...
+
+你好世界
+
+你好世界
+
+你好世界
+
+你好世界
+
+报警：机器烧水了...
+
+你好世界
+
+定时器也可以守护线程启动，程序 `Thread14` 展示了这一点。唯一需要做的是如下创建定时器：
+
+```java
 Timer timer = new Timer(true);
 ```
 
@@ -1098,7 +1004,7 @@ Timer timer = new Timer(true);
 
 在这个问题中，你必须编写一些类来模拟一个检测一个或多个温度计的报警器并向不同的显示设备发送关于温度计显示温度的消息。你应该按照以下指南解决此练习。
 
-- 1) 启动一个可以称为 Alarms 的新项目。添加以下类来表示温度计：
+1. 启动一个可以称为 `Alarms` 的新项目。添加以下类来表示温度计：
 
 ```java
 public class Thermometer
@@ -1120,7 +1026,7 @@ public class Thermometer
 
 你必须编写一个构造函数，使其启动一个定时器，第一次跳动为 1 秒，之后每秒跳动一次。每次定时器跳动时，它应该给 `value` 变量增加一个 -5 到 10 之间的随机值。也就是说，定时器会随机或降低温度，但最多只增加 10。
 
-- 2) 向项目中添加以下接口，该接口应该定义报警器和显示器之间的通信：
+2. 向项目中添加以下接口，该接口应该定义报警器和显示器之间的通信：
 
 ```java
 package alarmer;
@@ -1133,9 +1039,7 @@ public interface IDisplay{
 }
 ```
 
-# JAVA 8：多线程程序
-
-- 3) 下一步，你必须编写一个类来表示可以显示温度的显示器：
+3. 下一步，你必须编写一个类来表示可以显示温度的显示器：
 
 ```java
 public class Display extends Thread implements IDisplay{
@@ -1174,13 +1078,11 @@ public class Display extends Thread implements IDisplay{
 }
 ```
 
-# JAVA 8：多线程程序
-
 ## 定时器
 
- Display 有一个名称并显示特定温度计的温度，名称和温度计都在构造函数中初始化。该类将代表一个线程，因此它继承了 `Thread` 类，且类的构造函数必须启动线程。`run()` 方法在原则上不应该做任何事，只需通过调用忙等待（这是一个循环，执行一个短时间的 `sleep()`）来保持线程存活。该类实现了 `IDisplay` 接口，`show()` 方法只需显示温度，而 `warning()` 方法必须在温度达到临界值（超过 80 度）时发出警告，最后 `error()` 方法演示灾难情况（当温度为 100 度时）。`error()` 方法还必须终止线程。
+`Display` 有一个名称并显示特定温度计的温度，名称和温度计都在构造函数中初始化。该类将代表一个线程，因此它继承了 `Thread` 类，且类的构造函数必须启动线程。`run()` 方法在原则上不应该做任何事，只需通过调用忙等待（这是一个循环，执行一个短时间的 `sleep()`）来保持线程存活。该类实现了 `IDisplay` 接口，`show()` 方法只需显示温度，而 `warning()` 方法必须在温度达到临界值（超过 80 度）时发出警告，最后 `error()` 方法演示灾难情况（当温度为 100 度时）。`error()` 方法还必须终止线程。
 
-- 4) 接下来必须添加一个 `Alarm` 类：
+4. 接下来必须添加一个 `Alarm` 类：
 
 ```java
 public class Alarm
@@ -1197,12 +1099,14 @@ public class Alarm
 ![](img/0ed8bd211feab9309d377c7edae120ad_44_0.png)
 
 立即申请
+
 重新定义你的未来
+
 AXA GLOBAL GRADUATE PROGRAM 2015
 
 重新定义 / 标准
 
-在 bookbo.com 免费下载电子书
+在 `bookbo.com` 免费下载电子书
 
 ```java
 public void addObserver(IDisplay observer)
@@ -1213,9 +1117,7 @@ public void addObserver(IDisplay observer)
 
 该类应该有两个变量，第一个是 `IDisplay` 类型对象的集合，它将接收有关温度计状态的消息。因此，该类必须有一个 `addObserver()` 方法，可以将观察者添加到列表中。第二个变量是 `Thermometer` 对象的数组，即报警器必须监控的温度计。构造函数应该初始化该数组并启动一个定时器，该定时器在 500 毫秒后第一次跳动，之后每 800 毫秒跳动一次。每次定时器跳动时，对于每个温度计，向观察者发送关于该温度计的消息：当温度大于或等于 100 度时发送消息；否则，如果温度超过 80 度则调用 `warning()`；否则否则调用 `show()`。
 
-- 5) 最后，你可以使用以下 `main()` 程序测试你的类：
-
-
+5. 最后，你可以使用以下 `main()` 程序测试你的类：
 
 ```java
 package Alarms
@@ -1231,10 +1133,6 @@ public class Main {
 }
 ```
 
-
-
-
-
 # JAVA 8：多线程程序并发工具
 
 ```java
@@ -1297,7 +1195,9 @@ private boolean isPrime(long n) {
 }
 ```
 
-该程序启动了两个任务，并在独立的线程中执行，因为这些是耗时操作。这两个任务分别定义了一个大质数和数字 e。`PrimeCalculator` 类将任务定义为一个 `Callable` 对象，用于确定大于或等于构造函数参数的第一个质数。`Callable` 看起来类似于 `Runnable`，这两个接口都定义了一个方法（分别为 `call()` 和 `run()`），该方法在相应对象作为线程启动时执行，但 `Callable` 是一个泛型接口，其 `call()` 方法返回类型为参数类型的值。`ECalculator` 类原理上相同。该接口也实现了 `Callable`（使用了另一个类型参数）。构造函数有一个参数 `dec`，`call()` 方法确定带有 `dec` 位小数的数字 e。
+
+
+该程序启动了两个任务，并在独立的线程中执行，因为这些是耗时操作。这两个任务分别定义了一个大质数和数字 `e`。`PrimeCalculator` 类将任务定义为一个 `Callable` 对象，用于确定大于或等于构造函数参数的第一个质数。`Callable` 看起来类似于 `Runnable`，这两个接口都定义了一个方法（分别为 `call()` 和 `run()`），该方法在相应对象作为线程启动时执行，但 `Callable` 是一个泛型接口，其 `call()` 方法返回类型为参数类型的值。`ECalculator` 类原理上相同。该接口也实现了 `Callable`（使用了另一个类型参数）。构造函数有一个参数 `dec`，`call()` 方法确定带有 `dec` 位小数的数字 `e`。
 
 然后是 `main()` 函数，首先发生的事情是创建一个 `ExecutorService` 对象。这是通过调用 `Executors` 类中的静态方法实现的，该方法创建一个可以容纳两个线程的线程池 `Executor` 对象。这种线程池提高了线程创建的效率。然后基于上述内容实例化两个 `Callable` 对象，并启动两个线程，例如：
 
@@ -1313,8 +1213,8 @@ Future<BigDecimal> eTask = executor.submit(callE);
 
 创建一个可以命名为 `Calculations` 的项目。将两个类 `ECalculator` 和 `PrimeCalculator` 复制到项目中。你必须修改这两个类，使得：
 
-- 1. 不再实现 `Callable`，而是实现 `Runnable` 接口
-- 2. 它们不再返回值，而是打印结果
+1. 不再实现 `Callable`，而是实现 `Runnable` 接口。
+2. 它们不再返回值，而是打印结果。
 
 然后你需要添加一个类：
 
@@ -1521,7 +1421,7 @@ private boolean isPrime(long n) {
 }
 ```
 
-该程序启动了两个任务，并在独立的线程中执行，因为这些是耗时操作。这两个任务分别定义了一个大质数和数字 e。`PrimeCalculator` 类将任务定义为一个 `Callable` 对象，用于确定大于或等于构造函数参数的第一个质数。`Callable` 看起来类似于 `Runnable`，这两个接口都定义了一个方法（分别为 `call()` 和 `run()`），该方法在相应对象作为线程启动时执行，但 `Callable` 是一个泛型接口，其 `call()` 方法返回类型为参数类型的值。`ECalculator` 类原理上相同。该接口也实现了 `Callable`（使用了另一个类型参数）。构造函数有一个参数 `dec`，`call()` 方法确定带有 `dec` 位小数的数字 e。
+该程序启动了两个任务，并在独立的线程中执行，因为这些是耗时操作。这两个任务分别定义了一个大质数和数字 `e`。`PrimeCalculator` 类将任务定义为一个 `Callable` 对象，用于确定大于或等于构造函数参数的第一个质数。`Callable` 看起来类似于 `Runnable`，这两个接口都定义了一个方法（分别为 `call()` 和 `run()`），该方法在相应对象作为线程启动时执行，但 `Callable` 是一个泛型接口，其 `call()` 方法返回类型为参数类型的值。`ECalculator` 类原理上相同。该接口也实现了 `Callable`（使用了另一个类型参数）。构造函数有一个参数 `dec`，`call()` 方法确定带有 `dec` 位小数的数字 `e`。
 
 然后是 `main()` 函数，首先发生的事情是创建一个 `ExecutorService` 对象。这是通过调用 `Executors` 类中的静态方法实现的，该方法创建一个可以容纳两个线程的线程池 `Executor` 对象。这种线程池提高了线程创建的效率。然后基于上述内容实例化两个 `Callable` 对象，并启动两个线程，例如：
 
@@ -1537,8 +1437,8 @@ Future<BigDecimal> eTask = executor.submit(callE);
 
 创建一个可以命名为 `Calculations` 的项目。将两个类 `ECalculator` 和 `PrimeCalculator` 复制到项目中。你必须修改这两个类，使得：
 
-- 1. 不再实现 `Callable`，而是实现 `Runnable` 接口
-- 2. 它们不再返回值，而是打印结果
+1. 不再实现 `Callable`，而是实现 `Runnable` 接口。
+2. 它们不再返回值，而是打印结果。
 
 然后你需要添加一个类：
 
@@ -1575,6 +1475,8 @@ public static void main(String[] args)
 # 8. 计数
 
 `CountDownLatch` 是一个同步器，允许一个或多个线程等待，直到一组线程的操作完成。以下程序将展示如何应用 `CountDownLatch` 进行同步。程序启动 N 个线程来计数。
+
+
 
 ```java
 package thread1;
@@ -1628,11 +1530,7 @@ class Worker implements Runnable {
 }
 ```
 
-
-
-
-
-## JAVA 8: 多线程程序 | 并发性工具
+## Java 8：多线程程序 | 并发性工具
 
 ```java
 void print(String text) {
@@ -1642,11 +1540,11 @@ void print(String text) {
 
 `Worker` 类定义了一个可运行对象（任务），用于模拟在机器上执行工作。该对象通过两个 `CountDownLatch` 对象初始化。`run()` 方法开始打印一条线程已启动的消息，但随后会阻塞自己（在门禁处）：
 
-```
+```java
 start.await();
 ```
 
-并等待另一个线程发送信号指示其继续执行。当信号发生时，线程会再次打印文本并执行 `sleep()`（用来说说明线程正在执行操作），当完成后，第二个同步对象会进行计数，这样它就知道何时所有线程都已完成。
+并等待另一个线程发送信号指示其继续执行。当信号发生时，线程会再次打印文本并执行 `sleep()`（用来说明线程正在执行操作）。完成后，第二个同步对象会进行计数，这样它就知道何时所有线程都已完成。
 
 `main()` 方法定义了两个同步对象：
 
@@ -1655,78 +1553,113 @@ final CountDownLatch startLatch = new CountDownLatch(1);
 final CountDownLatch doneLatch = new CountDownLatch(N);
 ```
 
-其中第一个用于阻塞 N 个工作线程的启动，直到主线程打开闸并允许线程继续。第二个用于让主线程等待，直到所有工作线程完成。接下来，为工作线程创建一个可运行对象，并为 N 个线程创建一个 `Executor`。下一个循环将 N 个线程添加到执行器对象中。基于同一个对象启动线程。这些线程会立即启动，但当它们阻塞自己时，在主线程打开闸门之前没有动力。主线程首先执行工作，然后打开闸门（同步对象 `startLatch` 计数减），工作线程就可以继续进行。主线程也继续并执行：
+其中第一个用于阻塞 N 个工作线程的启动，直到主线程打开闸门并允许线程继续。第二个用于让主线程等待，直到所有工作线程完成。
 
-```
+接下来，为工作线程创建一个可运行对象，并为 N 个线程创建一个 `Executor`。下一个循环将 N 个线程添加到执行器对象中。基于同一个对象启动线程。这些线程会立即启动，但当它们阻塞自己时，在主线程打开闸门之前没有动力。
+
+主线程首先执行工作，然后打开闸门（同步对象 `startLatch` 计数减一），工作线程就可以继续进行。主线程也继续并执行：
+
+```java
 doneLatch.await();
 ```
 
 这意味着主线程被阻塞，等待工作线程将同步对象的计数减到 0。
 
-## JAVA 8: 多线程程序
+## Java 8：多线程程序
 
 ## 并发性工具
 
 ### 练习 7
 
-首先创建一个项目 Calculations（练习 6）的副本，并例如将该副本命名为 `Calculations1`。在 NetBeans 中打开该副本。该解决方案存在一个问题：主线程通过长时间等待来等待所有工作线程完成。请使用 `CountDownLatch` 来解决这个问题。
+首先创建一个项目 Calculations（练习 6）的副本，并例如将该副本命名为 `Calculations1`。在 NetBeans 中打开该副本。
 
-## 8.3 循环屏障 (CyclicBarrier)
+该解决方案存在一个问题：主线程通过长时间等待来等待所有工作线程完成。请使用 `CountDownLatch` 来解决这个问题。
 
-`CyclicBarrier` 是一种同步对象，可以确保多个线程在特定的屏障点互相等待。该对象是循环的，因为它在释放等待的线程后可以被重复使用。如果一个程序启动了数量数量线程且它们必须互相等待，那么这种同步机制非常有用。有时你可以将其认为多个线程对一个共同问题执行工作，当所有线程都完成其工作时，任务即完成。
+## 8.3 循环屏障（CyclicBarrier）
 
-以下程序创建并初始化了一个矩阵矩阵。接下来，应用程序确定矩阵每个元素的平方根，必须以这种方式进行：为每行启动一个线程，由该线程处理该行。只有当所有线程都完成工作后，结果才可用，之后原则上各个线程的工作合并为一个完成的结果。显然，这在各个线程完成之前是无法实现的，并且可以使用 `CyclicBarrier` 进行同步。
+`CyclicBarrier` 是一种同步对象，可以确保多个线程在特定的屏障点互相等待。该对象是循环的，因为它在释放等待的线程后可以被重复使用。
+
+如果一个程序启动了数量众多的线程且它们必须互相等待，那么这种同步机制非常有用。有时你可以将其理解为多个线程对一个共同问题执行工作，当所有线程都完成其工作时，任务即完成。
+
+以下程序创建并初始化了一个矩阵。接下来，应用程序确定矩阵每个元素的平方根，必须以这种方式进行：为每行启动一个线程，由该线程处理该行。
+
+只有当所有线程都完成工作后，结果才可用，之后原则上各个线程的工作合并为一个完成的结果。显然，这在各个线程完成之前是无法实现的，并且可以使用 `CyclicBarrier` 进行同步。
 
 ```java
 package thread1;
-```
 
 import java.util.concurrent.*;
 
 public class Thread1 {
+
     private static final int N = 5; // 矩阵的大小
 
     public static void main(String[] args) {
-        float[][] matrix = create();
-        print(matrix);
-        System.out.println(matrix);
-        Solver solver = new Solver(matrix);
-        System.out.println(matrix);
-        print(matrix);
-    }
-}
 
+        float[][] matrix = create();
+
+        print(matrix);
+
+        System.out.println(matrix);
+
+        Solver solver = new Solver(matrix);
+
+        System.out.println(matrix);
+
+        print(matrix);
+
+    }
+
+}
 ```
 
-## JAVA 8: 多线程程序 并发性工具
+## Java 8：多线程程序 | 并发性工具
 
 ```java
 private static float[][] create() {
+
     int n = 0;
+
     float[][] matrix = new float[n][];
+
     for (int r = 0; r < matrix.length; ++r) {
+
         for (int c = 0; c < matrix[r].length; ++c) {
+
             matrix[r][c] = ++n;
+
         }
+
     }
+
     return matrix;
+
 }
 ```
 
 ```java
 private static void print(float[] matrix) {
+
     for (int r = 0; r < matrix.length; ++r) {
+
         for (int c = 0; c < matrix[r].length; ++c) {
+
             System.out.printf("%0.4f", matrix[r][c]);
+
         }
+
         System.out.println();
+
     }
+
 }
 ```
 
 ```java
 class Solver {
+
     private final float[] data; // 矩阵同步树
+
     private final CyclicBarrier barrier; // 同步多个线程工作
 ```
 
@@ -1734,185 +1667,258 @@ class Solver {
 
 # 你对未来有什么期待
 
-无论你对未来的职业生涯有什么要求，一个在许多国家拥有广泛业务的雇主将始终是入场券。在沃尔集团工作意味着在全球几乎 80 个国家拥有超过 10 万朋友和同事。我们提供极佳的职业机会——请查看我们网站 volvogroup.com 的职业板块。我们期待着您的加入！
+无论你对未来的职业生涯有什么要求，一个在许多国家拥有广泛业务的雇主将始终是入场券。在沃尔集团工作意味着在全球几乎 80 个国家拥有超过 10 万朋友和同事。我们提供极佳的职业机会——请查看我们网站 `volvogroup.com` 的职业板块。我们期待着您的加入！
 
-VOLVO
-AB Volvo (public)
-www.volvo.com
+VOLVO  
+AB Volvo (public)  
+`www.volvo.com`
 
-VOLVO TRUCKS | BERNH TRUCKS | MACH TRUCKS | VOLVO BUSES | VOLVO CONSTRUCTION EQUIPMENT | VOLVO PUMPS | VOLVO AERO | VOLVO IT
+VOLVO TRUCKS | BERNH TRUCKS | MACH TRUCKS | VOLVO BUSES | VOLVO CONSTRUCTION EQUIPMENT | VOLVO PUMPS | VOLVO AERO | VOLVO IT  
 VOLVO FINANCIAL SERVICES | VOLVO 3P | VOLVO POLYFORMS | VOLVO PARTS | VOLVO TECHNOLOGY | VOLVO LOGISTICS | BUSINESS AND AREA
 
-在 bookboom.com 免费下载电子书
+在 `bookboom.com` 免费下载电子书。
 
-## JAVA 8: 多线程程序
+## Java 8：多线程程序
 
 ## 并发性工具
 
 ```java
 public Solver(float[] matrix) {
+
     data = matrix;
+
     new CyclicBarrier(matrix.length, new Runnable() {
+
         public void run() { merge(); }
+
     });
+
     for (int r = 0; r < matrix.length; ++r) new Thread(new Worker(r)).start();
+
     synchronized("abc") {
+
         try {
+
             System.out.println("[" + Thread.currentThread().getId() + " waiting]");
+
             "abc".wait();
+
             System.out.println("[" + Thread.currentThread().getId() + " notified]");
+
         } catch (InterruptedException ie) {
+
             System.out.println("main thread interrupted");
+
         }
+
     }
+
 }
 ```
 
 ```java
 void merge() {
+
     System.out.println("merging");
+
     synchronized("abc") {
+
         "abc".notify();
+
     }
+
 }
 ```
 
 ```java
 class Worker implements Runnable {
+
     private final int row;
+
     private boolean done = false;
 
     public Worker(int row) {
+
         this.row = row;
+
     }
 
     public boolean done() {
+
         return done;
+
     }
 
     void work() {
+
         System.out.println("Behandler række: " + row);
+
         for (int i = 0; i < data[row].length; ++i) {
+
             data[row][i] = (float) Math.sqrt(data[row][i]);
+
         }
+
         done = true;
+
     }
 
     public void run() {
+
         while (!done()) {
+
             try {
+
                 work();
+
                 barrier.await();
+
             } catch (Exception ex) {
+
                 return;
+
             }
+
         }
+
     }
+
 }
 ```
 
-## JAVA 8: 多线程程序
+## Java 8：多线程程序 | 并发性工具
 
-## 并发性工具
+在所有线程对屏障执行了 `await()` 之后（所有线程都已到达屏障），屏障对象允许线程继续（在这里意味着它们停止等待）并执行它自己的线程，该线程调用了 `merge()` 方法。
 
-在所有线程对屏障执行了 `await()` 之后（所有线程都已到达屏障），屏障对象允许线程继续（在这里意味着它们停止等待）并执行它自己的线程，该线程调用了 `merge()` 方法。这并没有太大帮助，但它在主线程设置的锁上发送了 `notify()`，结果是主线程继续执行。
+这并没有太大帮助，但它在主线程设置的锁上发送了 `notify()`，结果是主线程继续执行。
 
 如果你运行该程序，将得到结果：
 
-```
+```text
 1,000   2,000   3,000   4,000   5,000
+
 6,000   7,000   8,000   9,000   10,000
-11,000 12,000 13,000 14,000 15,000
-16,000 17,000 18,000 19,000 20,000
-21,000 22,000 23,000 24,000 25,000
+
+11,000  12,000  13,000  14,000  15,000
+
+16,000  17,000  18,000  19,000  20,000
+
+21,000  22,000  23,000  24,000  25,000
 ```
 
-```
+```text
 Behandler række: 0
+
 Behandler række: 1
+
 Behandler række: 2
+
 Behandler række: 3
+
 [1] waiting
+
 Behandler række: 4
+
 merging
+
 [1] notified
 ```
 
-
-
-
-
-# JAVA 8:多线程程序
+# Java 8：多线程程序
 
 # 并发工具
 
 ## 题 2
 
-创建一个新项目，你可以将其命名为 Calculations2。添加以下类，该类包含一个静态方法，用于创建一个小数点前后各 10 位的随机 `BigDecimal`，以及另一个静态方法，用于计算 `BigDecimal` 的平方根。
+创建一个新项目，你可以将其命名为 `Calculations2`。添加以下类，该类包含一个静态方法，用于创建一个小数点前后各 10 位的随机 `BigDecimal`，以及另一个静态方法，用于计算 `BigDecimal` 的平方根。
 
-```
+```java
 abstract class Calc {
+
     private static final int N = 100;
+
     public static final Random rand = new Random();
-    public static final MathContext context = 
+
+    public static final MathContext context =
         new MathContext(N, RoundingMode.HALF_UP);
 
     public static BigDecimal random() {
+
         StringBuilder builder = new StringBuilder();
+
         builder.append((char)('1' + rand.nextInt(9)));
+
         for (int i = 0; i < N; i++) builder.append((char)('0' + rand.nextInt(10)));
+
         builder.append('.');
+
         for (int i = 0; i < N; i++) builder.append((char)('0' + rand.nextInt(10)));
+
         return new BigDecimal(builder.toString());
+
     }
 
     public static BigDecimal sqrt(BigDecimal x) {
+
         BigDecimal value = BigDecimal.ZERO;
+
         if (x.signum() != 0) {
+
             BigInteger t = x.movePointRight(N << 1).toBigInteger();
+
             BigInteger y = t.shiftRight((t.bitLength() + 1) >> 1);
+
             for (BigInteger z = y; ; z = y) {
+
                 y = y.add(t.divide(y)).shiftRight(1);
+
                 if (y.compareTo(z) == 0) break;
+
             }
+
             value = new BigDecimal(y, N);
+
         }
+
         return value;
+
     }
+
 }
 ```
 
-# JAVA 8:多线程程序 并发工具
+# Java 8：多线程程序 | 并发工具
 
 当目标是让 `sqrt()` 方法运行很长时间时，你不需要研究代码。
 
 在主类中添加一个方法，创建一个包含 `n` 个 `BigDecimal` 类型对象的数组，其中这些对象必须使用 `Calc.random()` 方法创建：
 
-```
+```java
 private static BigDecimal[] create(int n)
 {}
 ```
 
 程序现在应该使用该方法创建一个包含 10 个数字的 `BigDecimal` 类型数组，然后程序必须打印方法的结果：
 
-```
+```java
 private static BigDecimal sum1(BigDecimal[] tal)
-{}
 ```
 
-当该方法必须返回数组中数字的平方根时。该方法还必须以纳秒为单位打印计算时间。你可以通过以下方式读取硬件时钟：
+
+
+当该方法必须返回数组中数字的平方根时，该方法还必须以纳秒为单位打印计算时间。你可以通过以下方式读取硬件时钟：
 
 ```
 System.nanoTime()
 ```
 
-当 `sum1()` 方法工作后，编写一个类似的方法 `sum2()`，但它的工作方式是：启动一个工作线程来计算每个平方根。它只能计算和，在所有线程都计算完平方根后，你需要使用 `CyclicBarrier` 同步这些线程。
+当`sum1()`方法工作后，编写一个类似的方法`sum2()`，但它的工作方式是：启动一个工作线程来计算每个平方根。它只能计算和，在所有线程都计算完平方根后，你需要使用`CyclicBarrier`同步这些线程。
 
-检查这两个方法中哪一个性能最好。还要探索更改 `Calc` 类中的位数（常量 `N`）会发生什么。同时检查更改线程数量从而改变数组大小会发生什么。
+检查这两个方法中哪一个性能最好。还要探索更改`Calc`类中的位数（常量`N`）会发生什么。同时检查更改线程数量从而改变数组大小会发生什么。
 
 ## 8.4 EXCHANGER
 
-`Exchanger` 提供了一个同步点，线程在该点交换对象。也就是说，一个线程可以调用 `exchange()` 方法并等待另一个线程执行相同的操作，线程可以交换两个对象。它可能不是最常用的同步对象，但在特定算法的实现中有它的用途。以下程序展示了如何使用 `Exchanger`，其中两个线程交换两个 `Buffer` 类型的对象。`Buffer` 类与上面某些练习中使用的类相同。
+`Exchanger`提供了一个同步点，线程在该点交换对象。也就是说，一个线程可以调用`exchange()`方法并等待另一个线程执行相同的操作，线程可以交换两个对象。它可能不是最常用的同步对象，但在特定算法的实现中有它的用途。以下程序展示了如何使用`Exchanger`，其中两个线程交换两个`Buffer`类型的对象。`Buffer`类与上面某些练习中使用的类相同。
 
 # JAVA 8:多线程程序
 
@@ -1934,69 +1940,60 @@ public class Thread18
     private static final Buffer<Character> buffer2 = new Buffer(10);
     private static char ch = 'Z';
 
-public static void main(String[] args)
-{
-    class Producer implements Runnable
+    public static void main(String[] args)
     {
-        public void run()
+        class Producer implements Runnable
         {
-            Buffer<Character> buffer = buffer1;
-            try
+            public void run()
             {
-                while (true) {
-```
-
-```
-buffer.insert(next());
-Thread.sleep(rand.nextInt(500));
-if (buffer.full()) buffer = exchanger.exchange(buffer);
-}
-} catch (Exception ex) {
-    System.out.println(ex);
-}
-}
-```
-
-```java
-class Consumer implements Runnable {
-    public void run() {
-        Buffer<Character> buffer = buffer2;
-        try {
-            while (true) {
-                Thread.sleep(rand.nextInt(500));
-                if (buffer.empty()) {
-                    buffer = exchanger.exchange(buffer);
-                    System.out.println();
+                Buffer<Character> buffer = buffer1;
+                try
+                {
+                    while (true) {
+                        buffer.insert(next());
+                        Thread.sleep(rand.nextInt(500));
+                        if (buffer.full()) buffer = exchanger.exchange(buffer);
+                    }
+                } catch (Exception ex) {
+                    System.out.println(ex);
                 }
-                System.out.print(buffer.remove());
             }
-        } catch (Exception ex) {
-            System.out.println(ex);
         }
+
+        class Consumer implements Runnable {
+            public void run() {
+                Buffer<Character> buffer = buffer2;
+                try {
+                    while (true) {
+                        Thread.sleep(rand.nextInt(500));
+                        if (buffer.empty()) {
+                            buffer = exchanger.exchange(buffer);
+                            System.out.println();
+                        }
+                        System.out.print(buffer.remove());
+                    }
+                } catch (Exception ex) {
+                    System.out.println(ex);
+                }
+            }
+        }
+
+        new Thread(new Producer()).start();
+        new Thread(new Consumer()).start();
     }
-    new Thread(new Producer()).start();
-    new Thread(new Consumer()).start();
-}
 
-```
-private char next() {
-    if (ch == 'Z') ch = 'A'; else ch++;
-    return ch;
-}
+    private char next() {
+        if (ch == 'Z') ch = 'A'; else ch++;
+        return ch;
+    }
 }
 ```
-
-
-
-```
-
-
 
 ## 8.5 SEMAPHORE
 
-信号量（Semaphore）管理线程访问资源的许可数。信号量是一个值可以大于 0 的整数。如果值大于 0，线程可以获取一个许可。如果值为 0，线程将被阻塞，直到另一个线程释放一个许可。以下程序将展示如何使用信号量：
+信号量（`Semaphore`）管理线程访问资源的许可数。信号量是一个值可以大于 0 的整数。如果值大于 0，线程可以获取一个许可。如果值为 0，线程将被阻塞，直到另一个线程释放一个许可。以下程序将展示如何使用信号量：
 
-```java
+```
 package thread19;
 
 import java.util.*;
@@ -2095,15 +2092,11 @@ class Resource {
 }
 ```
 
-
-
-
-
 # JAVA 8:多线程程序
 
 # 并发工具
 
-```java
+```
 if (used[i])
 {
     used[i] = false;
@@ -2115,7 +2108,7 @@ return false;
 }
 ```
 
-```java
+```
 class Resource
 {
     private static int ID = 0;
@@ -2123,28 +2116,28 @@ class Resource
     private long value; // 资源的 value
 ```
 
-```java
+```
 public Resource()
 {
     id = ++ID;
 }
 ```
 
-```java
+```
 public long getValue()
 {
     return value;
 }
 ```
 
-```java
+```
 public void oldValue(long value)
 {
     this.value += value;
 }
 ```
 
-```java
+```
 public boolean equals(Object obj)
 {
     if (obj == null) return false;
@@ -2153,7 +2146,7 @@ public boolean equals(Object obj)
 }
 ```
 
-```java
+```
 public String toString()
 {
     return String.format("Resource: [%d]", id);
@@ -2162,16 +2155,16 @@ public String toString()
 
 # JAVA 8:多线程程序 并发工具
 
-Resource 类是对 `long` 类型的简单封装，基本上有两个方法：
+`Resource`类是对`long`类型的简单封装，基本上有两个方法：
 
-- 1. getValue()：返回对象的值
-- 2. updateValue()：向对象的值上加一个值
+- 1. `getValue()`：返回对象的值
+- 2. `updateValue()`：向对象的值上加一个值
 
-每个对象在创建时也会被分配一个连续的数字，该数字仅用于标识对象并在 toString() 中为对象命名。
+每个对象在创建时也会被分配一个连续的数字，该数字仅用于标识对象并在`toString()`中为对象命名。
 
-最重要的类是 Resources 类，它是 Resource 对象数组的封装。其思想是线程可能想要获取一个 Resource 对象并对其更新。在此发生期间，对象会被锁定，并在更新后释放。该类创建一个信号量（Semaphore）来检查线程对对象的访问：
+最重要的类是`Resources`类，它是`Resource`对象数组的封装。其思想是线程可能想要获取一个`Resource`对象并对其更新。在此发生期间，对象会被锁定，并在更新后释放。该类创建一个信号量（`Semaphore`）来检查线程对对象的访问：
 
-```java
+```
 private final Semaphore sema = new Semaphore(N, true);
 ```
 
@@ -2186,35 +2179,35 @@ private final Semaphore sema = new Semaphore(N, true);
 
 # JAVA 8:多线程程序 并发工具
 
-这是一个计数信号量，第一个参数表示可以同时使用 Resources 类型对象的线程数。这对应于数组的长度，因为它是可用的 Resource 对象的数量。最后一个参数确保线程阻塞在该信号量上，而不会被饿死且永远不再发生这种情况。在创建 Resources 对象时，信号量的值为 N，有 N 个线程可以使用它。该类还有一个 `boolean` 类型的数组，用于控制哪些 Resource 对象正在使用中。
+这是一个计数信号量，第一个参数表示可以同时使用`Resources`类型对象的线程数。这对应于数组的长度，因为它是可用的`Resource`对象的数量。最后一个参数确保线程阻塞在该信号量上，而不会被饿死且永远不再发生这种情况。在创建`Resources`对象时，信号量的值为`N`，有`N`个线程可以使用它。该类还有一个`boolean`类型的数组，用于控制哪些`Resource`对象正在使用中。
 
-该类有两个公共方法：getResource() 和 putResource()。第一个返回一个可用的 Resource 对象，并开始将信号量减 1（计数）：
+该类有两个公共方法：`getResource()`和`putResource()`。第一个返回一个可用的`Resource`对象，并开始将信号量减 1（计数）：
 
-```java
+```
 sema.acquire();
 ```
 
-如果信号量为 0，当前线程将阻塞并必须等待另一个线程将信号量加 1。否则，信号量减 1，方法继续。在这种情况下，意味着方法 getResource() 调用了同步方法 get()，它必须找到并返回一个 Resource 对象。get() 方法必须同时设置实际使用的对象。putResource() 方法接受一个 Resource 对象作为参数，该方法必须释放此对象。为此，该方法调用了同步方法 unused()，如果对象被使用状态，则将其标记为未使用，方法返回 true。如果是这样，那么 putResource() 方法将执行：
+如果信号量为 0，当前线程将阻塞并必须等待另一个线程将信号量加 1。否则，信号量减 1，方法继续。在这种情况下，意味着方法`getResource()`调用了同步方法`get()`，它必须找到并返回一个`Resource`对象。`get()`方法必须同时设置实际使用的对象。`putResource()`方法接受一个`Resource`对象作为参数，该方法必须释放此对象。为此，该方法调用了同步方法`unused()`，如果对象被使用状态，则将其标记为未使用，方法返回`true`。如果是这样，那么`putResource()`方法将执行：
 
-```java
+```
 sema.release();
 ```
 
-这意味着信号量加 1，同时表示被阻塞的线程现在可以使用 Resource 对象了。
+这意味着信号量加 1，同时表示被阻塞的线程现在可以使用`Resource`对象了。
 
-Worker 类是一个定义了使用 Resource 对象执行任务线程的类。没什么需要解释的，但你必须注意，run() 方法执行 putResource() 是至重要的，否则信号量不会计数。
+`Worker`类是一个定义了使用`Resource`对象执行任务线程的类。没什么需要解释的，但你必须注意，`run()`方法执行`putResource()`是至重要的，否则信号量不会计数。
 
-回到 main() 方法，它启动了一些工作线程。在这里你必须注意，它启动的线程比同时使用 Resources 对象的线程多（两倍）。这是为了说明某些线程被信号量阻塞，随后再次变为未阻塞。
+回到`main()`方法，它启动了一些工作线程。在这里你必须注意，它启动的线程比同时使用`Resources`对象的线程多（两倍）。这是为了说明某些线程被信号量阻塞，随后再次变为未阻塞。
 
 # 练习 8
 
-创建一个可以称为 SemaphoreProgram 的项目。该程序是使用二值信号量和计数信号量的示例。
+创建一个可以称为`SemaphoreProgram`的项目。该程序是使用二值信号量和计数信号量的示例。
 
 # JAVA 8:多线程程序 并发工具
 
-从输入以下类开始，它是 `Map<Integer, String>` 的封装，当要求该类必须写为单例时：
+从输入以下类开始，它是`Map<Integer, String>`的封装，当要求该类必须写为单例时：
 
-```java
+```
 class Storage
 {
     private static int ID = 0; // 对象的连续编号
@@ -2239,9 +2232,9 @@ class Storage
 
 该类应该说明一个由顺序数字标识的名称数据结构。
 
-练习的目标是创建读取名称（执行 getName()）的线程以及添加名称（执行 insert()）的线程。应该允许最多 5 个线程同时读取，而只有一个线程可以添加名称。这必须通过两个信号量来控制。为了让事情更容易，当要求该类必须写为单例时，你应该将两个信号量封装在下面的类中：
+练习的目标是创建读取名称（执行`getName()`）的线程以及添加名称（执行`insert()`）的线程。应该允许最多 5 个线程同时读取，而只有一个线程可以添加名称。这必须通过两个信号量来控制。为了让事情更容易，当要求该类必须写为单例时，你应该将两个信号量封装在下面的类中：
 
-```java
+```
 class StorageLock
 {
     private final Semaphore writeLock = new Semaphore(1);
@@ -2253,11 +2246,19 @@ class StorageLock
     }
 ```
 
-```java
+```
 public void releaseWriteLock() {
     writeLock.release();
 }
 ```
+
+
+
+# JAVA 8：多线程程序
+
+## 并发工具
+
+`public void getReadLock() throws InterruptedException` 方法用于获取读锁：
 
 ```java
 public void getReadLock() throws InterruptedException {
@@ -2265,37 +2266,36 @@ public void getReadLock() throws InterruptedException {
 }
 ```
 
+`public void releaseReadLock()` 方法用于释放读锁：
+
 ```java
 public void releaseReadLock() {
     readLock.release();
 }
 ```
 
-下一步，你必须编写一个 Writer 类，定义一个实现 Runnable 类型的类，它可以向数据结构 Storage 中添加名称：
+下一步，你必须编写一个 `Writer` 类，定义一个实现 `Runnable` 类型的类，它可以向数据结构 `Storage` 中添加名称：
 
 ```java
 class Writer implements Runnable {
     private String[] names;
 ```
 
-![](img/0ed8bd211feab9309d377c7edae120ad_71_0.png)
+![图片](img/0ed8bd211feab9309d377c7edae120ad_71_0.png)
 
 你喜欢汽车吗？你想成为成功品牌的一员吗？我们将奖赏你的热情和才华。向我们发送你的简历。你会惊讶它能带你去哪里。
 
-在 www.employerforlife.com 向我们发送你的简历
+在 `www.employerforlife.com` 向我们发送你的简历
 
 ```java
-public Writer(String[] names)
-{
+public Writer(String[] names) {
     this.names = names;
 }
 ```
 
 ```java
-public void run()
-{
-    for (String name : names)
-    {
+public void run() {
+    for (String name : names) {
         // 设置写锁
         // 添加名称
         // 释放锁
@@ -2304,14 +2304,12 @@ public void run()
 }
 ```
 
-你必须相应地编写一个 Reader 类，定义一个实现 Runnable 类型的类，它可以读取数据结构 Storage 中的名称：
+你必须相应地编写一个 `Reader` 类，定义一个实现 `Runnable` 类型的类，它可以读取数据结构 `Storage` 中的名称：
 
 ```java
 class Reader implements Runnable
-public void run()
-{
-    while (true)
-    {
+public void run() {
+    while (true) {
         // 设置读锁
         // 读取带有随机 id 的名称
         // 释放锁
@@ -2324,20 +2322,14 @@ public void run()
 然后是唯一的主程序了：
 
 ```java
-public class SemaphoreProgram
-{
+public class SemaphoreProgram {
     private static final String[] boys = ... // 包含 10 个男孩名字的数组
     private static final String[] girls = ... // 包含 10 个女孩名字的数组
 }
 ```
 
-# JAVA 8:多线程程序
-
-# 并发工具
-
 ```java
-public static void main(String[] args)
-{
+public static void main(String[] args) {
     // 创建一个指向 Writer 对象的线程添加男孩名字
     // 创建一个指向 Writer 对象的线程来添加女孩名字
     // 创建 10 个 Reader 线程，它们应该是守护线程
@@ -2350,7 +2342,7 @@ public static void main(String[] args)
 
 ## 8.6 PHASER
 
-Phaser 看起来像 CyclicBarrier，但更灵活。与 CyclicBarrier 一样，你可以实现若干线程在屏障处等待，直到最后一个线程到达，但与 CyclicBarrier 等待固定数量的线程不同，Phaser 可作为多个线程的屏障，并且可能存在多个屏障。以下程序在主线程外启动了 5 个线程，这 6 个线程的执行通过一个具有 4 个阶段的 Phaser 对象同步：
+`Phaser` 看起来像 `CyclicBarrier`，但更灵活。与 `CyclicBarrier` 一样，你可以实现若干线程在屏障处等待，直到最后一个线程到达，但与 `CyclicBarrier` 等待固定数量的线程不同，`Phaser` 可作为多个线程的屏障，并且可能存在多个屏障。以下程序在主线程外启动了 5 个线程，这 6 个线程的执行通过一个具有 4 个阶段的 `Phaser` 对象同步：
 
 ```java
 package thread20;
@@ -2358,21 +2350,22 @@ package thread20;
 import java.util.*;
 import java.util.concurrent.*;
 
-public class Thread20{
-    public static void main(String[] args)
-    {
+public class Thread20 {
+    public static void main(String[] args) {
         Phaser phaser = new Phaser(1);
         Thread thread1 = new Thread(new Worker(phaser), "Thread-1");
         Thread thread2 = new Thread(new Worker(phaser), "Thread-2");
         Thread thread3 = new Thread(new Worker(phaser), "Thread-3");
         Thread thread4 = new Thread(new Worker(phaser), "Thread-4");
         Thread thread5 = new Thread(new Worker(phaser), "Thread-5");
+
         System.out.println("\n-Start Phaser ---------------------");
         thread1.start();
         thread2.start();
         thread3.start();
         thread4.start();
         thread5.start();
+
         work(phaser);
         work(phaser);
         work(phaser);
@@ -2380,19 +2373,10 @@ public class Thread20{
 }
 ```
 
-
-
-
-
-# JAVA 8：多线程程序
-## 并发性工具
-
-phaser.arriveDeregister();
-if (phaser.isTerminated()) System.out.println("\n Phaser 对象已终止");
+`phaser.arriveDeregister();` 方法用于注销当前线程，`if (phaser.isTerminated()) System.out.println("\n Phaser 对象已终止");` 用于检查 `Phaser` 对象是否已终止。
 
 ```java
-private static void work(Phaser phaser)
-{
+private static void work(Phaser phaser) {
     int phase = phaser.getPhase();
     phaser.arriveAndAwaitAdvance();
     System.out.println("----- " + phase + " is terminated ----------");
@@ -2400,30 +2384,23 @@ private static void work(Phaser phaser)
 ```
 
 ```java
-class Worker implements Runnable
-{
+class Worker implements Runnable {
     private static final Random rand = new Random();
     private Phaser phaser;
     private double value = 0;
 }
 ```
 
-![](img/0ed8bd211feab9309d377c7edae120ad_74_0.png)
+![图片](img/0ed8bd211feab9309d377c7edae120ad_74_0.png)
 
-> "在丹麦你可以找到优秀的工程工作并提升自己的专业能力。特别是在风电领域，你可以向行业内最优秀的人学习，并在稳定的工作中推进你的职业生涯。”
+> "在丹麦你可以找到优秀的工程工作并提升自己的专业能力。特别是在风电领域，你可以向行业内最优秀的人学习，并在稳定的工作中推进你的职业生涯。"
+>
+> Mireia Mare, 来自西班牙的高级工程师。自2010年起在丹麦的风能行业工作。
 
-Mireia Mare,
-来自西班牙的高级工程师。
-自2010年起在丹麦的风能行业工作。
-
-在 bookboom.com 下载免费电子书，点击广告阅读更多
-
-# JAVA 8：多线程程序
-## 并发性工具
+在 `bookboom.com` 下载免费电子书，点击广告阅读更多
 
 ```java
-public Worker (Phaser phaser)
-{
+public Worker(Phaser phaser) {
     this.phaser = phaser;
     this.phaser.register();
     System.out.println("新线程注册: " + Thread.currentThread().getName());
@@ -2431,8 +2408,7 @@ public Worker (Phaser phaser)
 ```
 
 ```java
-public void run()
-{
+public void run() {
     todo(2);
     todo(3);
     todo(5);
@@ -2442,8 +2418,7 @@ public void run()
 ```
 
 ```java
-private void todo(int t)
-{
+private void todo(int t) {
     System.out.println(Thread.currentThread().getName() + " 已到达屏障且在阶段 " + phaser.getPhaser() + " 中工作，值 = " + value);
     phaser.arriveAwaitAdvance();
     work(rand.nextInt(Integer.MAX_VALUE), t);
@@ -2451,33 +2426,28 @@ private void todo(int t)
 ```
 
 ```java
-private void result()
-{
+private void result() {
     System.out.println(Thread.currentThread().getName() + " 已到达屏障且在阶段 " + phaser.getPhaser() + " 中工作，值 = " + value);
     phaser.arriveAwaitAdvance();
 }
 ```
 
 ```java
-private void delay(int time)
-{
-    try
-    {
+private void delay(int time) {
+    try {
         Thread.sleep(time);
-    } catch (InterruptedException e)
-    {
+    } catch (InterruptedException e) {
     }
 }
 ```
 
 ```java
-private void work(long n, int t)
-{
+private void work(long n, int t) {
     for (int i = 0; i < n; ++i) value = Math.sqrt(t);
 }
 ```
 
-Worker 类定义了次要线程。构造函数接收一个 `Phaser` 对象作为参数，构造函数将该线程注册到 `Phaser` 对象中，成为该对象必须等待的线程之一：
+`Worker` 类定义了次要线程。构造函数接收一个 `Phaser` 对象作为参数，构造函数将该线程注册到 `Phaser` 对象中，成为该对象必须等待的线程之一：
 
 ```java
 this.phaser.register();
@@ -2495,7 +2465,7 @@ phaser.arriveAndAwaitAdvance();
 Phaser phaser = new Phaser(1);
 ```
 
-其中注册了一个线程，即主线程。主线程创建了 5 个其他线程并启动了它们，然后执行 `work()` 方法。这里重要的陈语句是：
+其中注册了一个线程，即主线程。主线程创建了 5 个其他线程并启动了它们，然后执行 `work()` 方法。这里重要的语句是：
 
 ```java
 phaser.arriveAndAwaitAdvance();
@@ -2510,9 +2480,6 @@ phaser.arriveAndAwaitAdvance();
 新线程注册: main
 新线程注册: main
 ```
-
-# JAVA：多线程程序
-## 并发性工具
 
 启动 Phaser
 
@@ -2540,10 +2507,10 @@ Thread-1 已到达屏障且在阶段 2 中工作，值 = 1.73205080768872
 Thread-5 已到达屏障且在阶段 2 中工作，值 = 1.73205080768872
 Thread-3 已到达屏障且在阶段 2 中工作，值 = 1.73205080768872
 Thread-2 已到达屏障且在阶段 2 中工作，值 = 1.73205080768872
+----- 阶段 - 2 已终止
 ```
 
 ```
------ 阶段 - 2 已终止
 Thread-2 已到达屏障且在阶段 3 中工作，值 = 2.23606797749979
 Thread-1 已到达屏障且在阶段 3 中工作，值 = 2.23606797749979
 Thread-3 已到达屏障且在阶段 3 中工作，值 = 2.23606797749979
@@ -2551,10 +2518,7 @@ Thread-5 已到达屏障且在阶段 3 中工作，值 = 2.23606797749979
 Thread-4 已到达屏障且在阶段 3 中工作，值 = 2.23606797749979
 ```
 
-# JAVA：多线程程序
-## 并发性工具
-
-### 8. 锁
+## 8. 锁
 
 如上一章所示，Java 允许使用锁（locks）来同步线程。这没什么解释的，原则上就是与锁一起，但确保锁始终被重新释放是非常重要的，而锁定的一个好位置是在 `finally` 块中。为了方便工作，同步工具定义了接口和类，例如我们使用了以下程序：
 
@@ -2568,57 +2532,48 @@ public class Thread21 {
     public static void main(String[] args) {
         ExecutorService executor = Executors.newFixedThreadPool(3);
         final ReentrantLock lock = new ReentrantLock();
+
         executor.execute(new Worker("A", lock));
         executor.execute(new Worker("B", lock));
         executor.execute(new Worker("C", lock));
+
         try {
             executor.awaitTermination(10, TimeUnit.SECONDS);
         } catch (Exception ex) {
         }
+
         executor.shutdownNow();
     }
 }
 ```
 
 ```java
-class Worker implements Runnable
-{
+class Worker implements Runnable {
     private final Lock lock;
     private final String name;
 
-    Worker(String name, Lock lock)
-    {
+    Worker(String name, Lock lock) {
         this.name = name;
         this.lock = lock;
     }
 
-    public void run()
-    {
+    public void run() {
         System.out.println(name + " start\n\n");
-    lock.lock();
-        try
-        {
-            System.out.printf("%s 临界区域.\n",name);
+        lock.lock();
+        try {
+            System.out.printf("%s 临界区域.\n", name);
             System.out.printf("%s 工作中.\n", name);
             Thread.sleep(2000);
             System.out.printf("%s 终止。\n", name);
-        }
-        catch (Exception ex)
-        {
-        }
-        finally
-        {
+        } catch (Exception ex) {
+        } finally {
             lock.unlock();
         }
     }
 }
 ```
 
-
-
-
-
-# JAVA 8：多线程程序并发工具
+输出结果如下：
 
 - A 开始
 - C 开始
@@ -2634,7 +2589,7 @@ class Worker implements Runnable
 
 基础同步是基于临界区的，使用了 `synchronized`、`wait()` 和 `notify()`，你可以说 `Lock` 替代了 `synchronized` 的使用。同样，`Condition` 类型的对象是替代 `wait()` 和 `notify()` 的对象。下面展示了一个解决生产者消费者问题的程序，其中有两个线程分别更新和读取共享资源，但这次问题是通过 `ReentrantLock` 和 `Condition` 对象来解决的：
 
-![](img/0ed8bd211feab9309d377c7edae120ad_80_0.png)
+![图片](img/0ed8bd211feab9309d377c7edae120ad_80_0.png)
 
 ```java
 package thread22;
@@ -2650,226 +2605,296 @@ public class Thread22 {
 }
 
 class Shared {
-    private char value; // 共享资源
-    private volatile boolean ok = false;
-    private final Lock lock = new ReentrantLock();
-    private final Condition condition = lock.newCondition();
+```
 
-    public Lock getLock() {
-        return lock;
+
+
+# JAVA 8：多线程程序
+
+## 并发工具
+
+该程序与之前的解决方案类似，但你应该注意到`Shared`类是如何使用`Lock`对象创建`Condition`对象的。该对象在`getValue()`和`setValue()`中用于执行`await()`，在临界区内方法执行了对应于`notify()`的`signal()`。
+
+```java
+private char value; // 共享资源
+
+private volatile boolean ok = false;
+
+private final Lock lock = new ReentrantLock();
+
+private final Condition condition = lock.newCondition();
+
+public Lock getLock() {
+
+    return lock;
+
+}
+
+public char getValue() throws InterruptedException {
+
+    lock.lock();
+
+    try {
+
+        while (!ok) condition.await();
+
+        ok = false;
+
+        return value;
+
+    } finally {
+
+        condition.signal();
+
+        lock.unlock();
+
     }
 
-    public char getValue() throws InterruptedException {
-        lock.lock();
-        try {
-            while (!ok) condition.await();
-            ok = false;
-            return value;
-        } finally {
-            condition.signal();
-            lock.unlock();
-        }
+}
+
+public void setValue(char value) throws InterruptedException {
+
+    lock.lock();
+
+    try {
+
+        this.value = value;
+
+        ok = true;
+
+        condition.signal();
+
+    } finally {
+
+        lock.unlock();
+
     }
 
-    public void setValue(char value) throws InterruptedException {
-        lock.lock();
-        try {
-            this.value = value;
-            ok = true;
-            condition.signal();
-        } finally {
-            lock.unlock();
-        }
-    }
 }
 ```
 
 ```java
-        while (ok) condition.await();
-        this.value = value;
-        ok = true;
-        }
-        finally {
-            condition.signal();
-            lock.unlock();
-        }
-    }
+while (ok) condition.await();
+
+this.value = value;
+
+ok = true;
+
 }
 
+finally {
+
+    condition.signal();
+
+    lock.unlock();
+
+}
+```
+
+```java
 class Producer extends Thread {
+
   private final Shared shared;
 
   Producer(Shared shared) {
+
     this.shared = shared;
+
   }
+
   public void run() {
+
     for (char ch = 'A'; ch <= 'Z'; ++ch) {
+
       try {
+
         shared.setValue(ch);
+
       } catch (InterruptedException ex) {
+
       }
+
     }
+
   }
+
 }
-
-class Consumer extends Thread {
-  private final Lock lock;
-  private final Shared shared;
-
-  Consumer(Shared shared) {
-    this.shared = shared;
-    lock = shared.lock();
-  }
 ```
 
 ```java
-  public void run() {
-    char ch = ' ';
-    do {
-        try {
-            lock.lock();
-            System.out.print(ch = shared.getValue());
-        } catch (InterruptedException exception) {
-        } finally {
-            lock.unlock();
-        }
-    } while (ch != 'Z');
-    System.out.println();
+class Consumer extends Thread {
+
+  private final Lock lock;
+
+  private final Shared shared;
+
+  Consumer(Shared shared) {
+
+    this.shared = shared;
+
+    lock = shared.lock();
+
   }
+
+  public void run() {
+
+    char ch = ' ';
+
+    do {
+
+        try {
+
+            lock.lock();
+
+            System.out.print(ch = shared.getValue());
+
+        } catch (InterruptedException exception) {
+
+        } finally {
+
+            lock.unlock();
+
+        }
+
+    } while (ch != 'Z');
+
+    System.out.println();
+
+  }
+
+}
 ```
 
 ![](img/0ed8bd211feab9309d377c7edae120ad_83_0.png)
 
-# JAVA 8：多线程程序
+## 练习 9
 
-# 并发工具
-
-该程序与之前的解决方案类似，但你应该注意到 `Shared` 类是如何使用 `Lock` 对象创建 `Condition` 对象的。该对象在 `getValue()` 和 `setValue()` 中用于执行 `await()`，在临界区内方法执行了对应于 `notify()` 的 `signal()`。
-
-# 练习 9
-
-在这个练习中，你必须解决与练习 5 相同的任务，但这次你不能使用 `synchronized`、`wait()` 和 `notify()`，而必须使用 `Lock` 和 `Condition` 类型。
+在这个练习中，你必须解决与练习 5 相同的任务，但这次你不能使用`synchronized`、`wait()`和`notify()`，而必须使用`Lock`和`Condition`类型。
 
 ## 8.8 读写锁
 
-很多时候，数据结构的调整频率远低于其读取的频率，虽然允许多个线程同时读取该数据结构，但只有少数线程需要更新它。因此，有一种名为 `ReadWriteLock` 的锁，它确保了多个线程可以同时读取数据结构，而只有一个线程可以更新。以下程序创建了一个线程并初始化了一个包含丹麦邮政编码的 `Map<String, String>`，其中邮政编码为键。此外，程序创建了三个方法读取数据结构并在屏幕上打印项目。为了同步线程对数据结构的访问，使用了 `ReadWriteLock`：
+很多时候，数据结构的调整频率远低于其读取的频率，虽然允许多个线程同时读取该数据结构，但只有少数线程需要更新它。因此，有一种名为`ReadWriteLock`的锁，它确保了多个线程可以同时读取数据结构，而只有一个线程可以更新。以下程序创建了一个线程并初始化了一个包含丹麦邮政编码的`Map<String, String>`，其中邮政编码为键。此外，程序创建了三个方法读取数据结构并在屏幕上打印项目。为了同步线程对数据结构的访问，使用了`ReadWriteLock`：
 
 ```java
 package thread23;
 
 import java.util.*;
+
 import java.util.concurrent.*;
+
 import java.util.concurrent.locks.*;
 
 public class Thread23 {
+
     private static final ReadWriteLock lock = new ReentrantReadWriteLock(true);
+
     private static final Map<String, String> dictionary = new HashMap();
+
     private static final List<String> keys = new ArrayList();
+
     private static final Random rand = new Random();
 
     public static void main(String[] args) {
+
         new Thread23().doWork();
+
     }
 
     private void doWork() {
+
         ExecutorService executor = Executors.newFixedThreadPool(4);
+
         executor.submit(new Writer());
-        executor.submit(new Reader());
-    }
-```
 
-```java
         executor.submit(new Reader());
-        executor.submit(new Reader());
-    }
-}
 
-class Reader extends Thread {
-    public void run() {
-        while (true) {
-            try {
-                lock.readLock().lock();
-                System.out.println(Thread.currentThread().getId() + " " + dictionary.get(rand.nextInt(keys.size())));
-            } catch (InterruptedException e) {
-            } finally {
-                lock.readLock().unlock();
-            }
-        }
-    }
-}
-
-class Writer extends Thread {
-    public void run() {
-        for (int i = 0; i < data.length; i++) {
-            try {
-                lock.writeLock().lock();
-                dictionary.put(data[i], data[i]);
-                keys.add(data[i]);
-            } catch (InterruptedException e) {
-            } finally {
-                lock.writeLock().unlock();
-            }
-        }
     }
 }
 ```
 
-# JAVA 8：多线程程序
+```java
+executor.submit(new Reader());
 
-并发工具
+executor.submit(new Reader());
+
+}
+```
 
 ```java
-        executor.submit(new Reader());
-        executor.submit(new Reader());
-    }
-}
-}
-
 class Reader extends Thread {
-    public void run() {
-        while (true) {
-            try {
-                lock.readLock().lock();
-                System.out.println(Thread.currentThread().getId() + " " + dictionary.get(rand.nextInt(keys.size())));
-            } catch (InterruptedException e) {
-            } finally {
-                lock.readLock().unlock();
-            }
-        }
-    }
-}
 
-class Writer extends Thread {
     public void run() {
-        for (int i = 0; i < data.length; i++) {
+
+        while (true) {
+
             try {
-                lock.writeLock().lock();
-                dictionary.put(data[i], data[i]);
-                keys.add(data[i]);
+
+                lock.readLock().lock();
+
+                System.out.println(Thread.currentThread().getId() + " " + dictionary.get(rand.nextInt(keys.size())));
+
             } catch (InterruptedException e) {
+
             } finally {
-                lock.writeLock().unlock();
+
+                lock.readLock().unlock();
+
             }
+
         }
+
     }
+
+}
+```
+
+```java
+class Writer extends Thread {
+
+    public void run() {
+
+        for (int i = 0; i < data.length; i++) {
+
+            try {
+
+                lock.writeLock().lock();
+
+                dictionary.put(data[i], data[i]);
+
+                keys.add(data[i]);
+
+            } catch (InterruptedException e) {
+
+            } finally {
+
+                lock.writeLock().unlock();
+
+            }
+
+        }
+
+    }
+
 }
 ```
 
 ```java
 private static String[] data = {
+
   "8000", "9000",
+
   "1000", "2000",
+
   "3000", "4000",
+
   "5000", "6000",
+
   "7000", "9900"
+
 };
 ```
 
 ![](img/0ed8bd211feab9309d377c7edae120ad_86_0.png)
-
-
-
-
 
 # JAVA 8：多线程程序并发工具
 
@@ -2877,24 +2902,34 @@ private static String[] data = {
 package thread24;
 
 import java.util.*;
+
 public class Thread24
+
 {
+
     public static void main(String[] args) {
+
         List<Integer> list = java.util.Collections.synchronizedList(new ArrayList());
+
         for (int i = 1; i <= 100; ++i) list.add(i);
+
         int sum = 0;
+
         for (Integer t : list) sum += t;
+
         System.out.println(sum);
+
     }
+
 }
 ```
 
 对于其他集合类，也有类似的包装类。然而，这种解决方案也有其缺点，特别是当你在另一个线程更新集合时对该集合进行迭代，可能会导致问题。这将引发异常，因此有必要自己手动加锁。因此，由于其他原因，定义了一些特殊的线程安全集合：
 
-- 1. `BlockingQueue` 是 `java.util.Queue` 的子接口，它实现了阻塞操作：它会等待队列不为空以便返回一个元素，并且会等待直到队列有空间时才添加一个元素。该接口由以下类实现：`ArrayBlockingQueue`、`LinkedBlockingQueue`、`DelayQueue`、`PriorityBlockingQueue` 和 `SynchronousQueue`，间接由 `LinkedBlockingDeque` 和 `LinkedTransferQueue`。
-- 2. `ConcurrentMap` 是 `java.util.Map` 的子接口，定义了线程安全的 `putIfAbsent()`、`remove()` 和 `replace()` 方法。该接口由 `ConcurrentHashMap`、`ConcurrentNavigableMap` 和 `ConcurrentSkipListMap` 实现。
+1. `BlockingQueue`是`java.util.Queue`的子接口，它实现了阻塞操作：它会等待队列不为空以便返回一个元素，并且会等待直到队列有空间时才添加一个元素。该接口由以下类实现：`ArrayBlockingQueue`、`LinkedBlockingQueue`、`DelayQueue`、`PriorityBlockingQueue`和`SynchronousQueue`，间接由`LinkedBlockingDeque`和`LinkedTransferQueue`。
+2. `ConcurrentMap`是`java.util.Map`的子接口，定义了线程安全的`putIfAbsent()`、`remove()`和`replace()`方法。该接口由`ConcurrentHashMap`、`ConcurrentNavigableMap`和`ConcurrentSkipListMap`实现。
 
-这是一个通过 `BlockingQueue` 展示生产者-消费者问题的示例程序：
+这是一个通过`BlockingQueue`展示生产者-消费者问题的示例程序：
 
 ```java
 package thread25;
@@ -2902,86 +2937,124 @@ package thread25;
 import java.util.concurrent.*;
 
 public class Thread25
+
 {
+
     public static void main(String[] args) {
+
 }
 ```
 
-# JAVA 8：多线程程序并发工具
-
 ```java
 final BlockingQueue<Character> queue = new ArrayBlockingQueue(26);
+
 final ExecutorService executor = Executors.newFixedThreadPool(2);
+
 final CountDownLatch latch = new CountDownLatch(2);
+
 executor.execute(new Producer(queue, done));
+
 executor.execute(new Consumer(queue, done));
+
 try {
+
     done.await();
+
 } catch (InterruptedException ex) {
+
     executor.shutdownNow();
+
 }
 ```
 
 ```java
 class Consumer implements Runnable {
+
     private BlockingQueue<Character> queue;
-    private CountDownLatch latch done;
-```
 
-# JAVA 8：多线程程序并发工具
-
-```java
-public Consumer(BlockingQueue<Character> queue, CountDownLatch done)
-{
-    this.queue = queue;
-    this.done = done;
-}
-
-public void run() {
-    char ch = '\00';
-    do {
-        try {
-            System.out.print(ch = queue.take());
-        } catch (InterruptedException ie) {
-        }
-    } while (ch != 'Z');
-    System.out.println(ch);
-    done.countDown();
-}
-```
-
-class Producer implements Runnable
-{
-    private BlockingQueue<Character> queue;
     private CountDownLatch done;
 
-```java
-public Producer(BlockingQueue<Character> queue, CountDownLatch done)
-{
-    this.queue = queue;
-    this.done = done;
+    public Consumer(BlockingQueue<Character> queue, CountDownLatch done)
+
+    {
+
+        this.queue = queue;
+
+        this.done = done;
+
+    }
+
+    public void run() {
+
+        char ch = '\00';
+
+        do {
+
+            try {
+
+                System.out.print(ch = queue.take());
+
+            } catch (InterruptedException ie) {
+
+            }
+
+        } while (ch != 'Z');
+
+        System.out.println(ch);
+
+        done.countDown();
+
+    }
+
 }
 ```
 
 ```java
-public void run() {
-    for (char ch = 'A'; ch <= 'Z'; ++ch) {
-        try {
-            queue.put(ch);
+class Producer implements Runnable
+
+{
+
+    private BlockingQueue<Character> queue;
+
+    private CountDownLatch done;
+
+    public Producer(BlockingQueue<Character> queue, CountDownLatch done)
+
+    {
+
+        this.queue = queue;
+
+        this.done = done;
+
+    }
+
+    public void run() {
+
+        for (char ch = 'A'; ch <= 'Z'; ++ch) {
+
+            try {
+
+                queue.put(ch);
+
+            } catch (InterruptedException ie) {
+
+            }
+
         }
-```
 
-```java
-catch (InterruptedException ie) {
-{
-done.countDown();
-}
+        done.countDown();
+
+    }
+
 }
 ```
 
-代码本身自而易懂，但你需要注意如何创建一个空间容纳 26 个元素的 `BlockingQueue`。还要注意，程序使用了 `CountDownLatch` 来控制 `executor` 对象何时关闭、程序何时终止。
 
-`ConcurrentHashMap` 类的使用方法基本上与 `HashMap` 相同，但它扩展了新的线程安全方法，且不需要锁定整个数据结构。其中一个方法是 `putIfAbsent()`，如果不存在具有相同键的值，则它会添加新的键值对。因此它是首次执行 `getKey()` 和 `put()` 的替代方案，使得操作是不可分割的。`remove()` 方法的工作原理相同，并且添加了 `replace()` 方法。事实上，该类扩展了 30 多个方法，包括对 lambda 表达式和聚合操作的支持。这些更改使得 `ConcurrentHashMap` 适合作为缓存内存的数据结构。
+
+
+代码本身自然而易懂，但你需要注意如何创建一个空间容纳 26 个元素的 `BlockingQueue`。还要注意，程序使用了 `CountDownLatch` 来控制 `executor` 对象何时关闭、程序何时终止。
+
+`ConcurrentHashMap` 类的使用方法基本上与 `HashMap` 相同，但它扩展了新的线程安全方法，且不需要锁定整个数据结构。其中一个方法是 `putIfAbsent()`：如果不存在具有相同键的值，则它会添加新的键值对。因此，它是首次执行 `getKey()` 和 `put()` 的替代方案，使得操作是不可分割的。`remove()` 方法的工作原理相同，并且添加了 `replace()` 方法。事实上，该类扩展了 30 多个方法，包括对 lambda 表达式和聚合操作的支持。这些更改使得 `ConcurrentHashMap` 适合作为缓存内存的数据结构。
 
 ## 练习 11
 
@@ -2989,56 +3062,70 @@ done.countDown();
 
 ```java
 class Worker implements Runnable {
+
     public static enum OPERATION { ADD, REP, REM }
+
     private final ConcurrentMap<String, BigInteger> map; // ConcurrentHashMap
+
     private final CountDownLatch done; // 当线程结束时
+
     private String key; // 键值，两个大写字母
+
     private OPERATION opr; // 要执行的操作
 
     public Worker(ConcurrentMap<String, BigInteger> map, CountDownLatch done, String key, OPERATION opr) {
+
         this.map = map;
+
         this.done = done;
+
         this.key = key;
+
         this.opr = opr;
+
     }
 
-```java
-public void run() 
-{
-    // 方法应该使用 BigInteger 来处理一个
-    // 随机的 n
-    // 随机的 n
-    // 方法应该在 map 中根据 opr 添加、更改或删除一个元素
-    // 最后，方法必须打印操作的结果
-    // 计数器减一
-}
+    public void run() 
+    {
+        // 方法应该使用 BigInteger 来处理一个
+        // 随机的 n
+        // 随机的 n
+        // 方法应该在 map 中根据 opr 添加、更改或删除一个元素
+        // 最后，方法必须打印操作的结果
+        // 计数器减一
+    }
 
-private BigInteger sum(int n) 
-{
-    // 确定并返回 n 的和
-    // 遍历 n
+    private BigInteger sum(int n) 
+    {
+        // 确定并返回 n 的和
+        // 遍历 n
+    }
 }
 ```
 
-# JAVA 8：多线程程序并发工具
+## Java 8：多线程程序并发工具
 
 程序应当编写如下：
+
+```java
 public class MapProgram
 {
     public static final Random rand = new Random();
+
     private static final int N = 2; // 线程数
+
     private static final int M = 5; // 操作次数
 
-```java
-public static void main(String[] args) {
-    CountDownLatch latch = new CountDownLatch(M);
-    ConcurrentMap<String, Integer> map = new ConcurrentHashMap<>();
-    ExecutorService executor = Executors.newFixedThreadPool(N);
-    for (int i = 0; i < N; i++) {
-        executor.submit(new Worker(map, latch, createKey(), operation()));
+    public static void main(String[] args) {
+        CountDownLatch latch = new CountDownLatch(M);
+        ConcurrentMap<String, Integer> map = new ConcurrentHashMap<>();
+        ExecutorService executor = Executors.newFixedThreadPool(N);
+        for (int i = 0; i < N; i++) {
+            executor.submit(new Worker(map, latch, createKey(), operation()));
+        }
+        latch.await(); // 等待完成
+        executor.shutdown();
     }
-    latch.await(); // 等待完成
-    executor.shutdown();
 }
 ```
 
@@ -3054,9 +3141,9 @@ private static String createKey() {
 }
 ```
 
-完成后，你可以尝试并探索更改操作次数 (M) 以及更改并发线程数 (N) 会发生什么。一个带有 5 个线程和 15 次操作的运行示例如下：
+完成后，你可以尝试并探索更改操作次数（`M`）以及更改并发线程数（`N`）会发生什么。一个带有 5 个线程和 15 次操作的运行示例如下：
 
-```
+```text
 REM: TF is not found
 REP: XN is not found
 REP: NV is not found
@@ -3068,14 +3155,11 @@ ADD: DO sum(13340927) = 888990173280128
 ADD: MA sum(121886689) = 74282075863705
 ```
 
+## Java 8：多线程程序
 
+### 并发工具
 
-
-
-# JAVA 8：多线程程序
-# 并发工具
-
-```
+```text
 REP: MC is not found
 REP: LZ is not found
 ADD: HW sum(11880594) = 70574262836715
@@ -3086,16 +3170,18 @@ REP: UJ is not found
 
 ## 8.10 并行性
 
-多线程应用的目标是并行化，即在机器上同时执行多个方法，或者至少在我们看来是由于各个线程交替在极短的时间内运行 CPU。至少在机器只有一个处理器的情况下，这就是一种实现方式；但如今的机器已以多核心 CPU 的形式拥有更多处理器。因此，这些机器具有实现真正并行的机会，即多个线程在它们的核心上同时运行。然而，线程的基础原始操作，以及上述讨论的并发工具对于使用多核心或多处理器并不有效。要真正实现这一点，任务必须是并行的，因此可以分解为相互独立执行的小型任务，最后通过汇总结果来完成。并非所有任务都是如此，但有些任务可以很容易地并行化。为了支持这一点，Java 提供了一个名为 **Fork/Join** 的框架，它专门支持这类任务的解析。
+多线程应用的目标是并行化，即在机器上同时执行多个方法，或者至少在我们看来是由于各个线程交替在极短的时间内运行 CPU。至少在机器只有一个处理器的情况下，这就是一种实现方式；但如今的机器已以多核心 CPU 的形式拥有更多处理器。因此，这些机器具有实现真正并行的机会，即多个线程在它们的核心上同时运行。
 
-Fork/Join 由一个特殊的执行器服务和一个线程池组成，框架中的每个任务都被拆分成更小的部分，并分发（fork）给池中的线程执行。任务会等待子任务完成，并将每个子任务的结果进行合并（join）以得到最终结果。这个过程也是递归的，子任务也可以进一步分为子任务。该框架主要由以下类组成：
+然而，线程的基础原始操作，以及上述讨论的并发工具对于使用多核心或多处理器并不有效。要真正实现这一点，任务必须是并行的，因此可以分解为相互独立执行的小型任务，最后通过汇总结果来完成。并非所有任务都是如此，但有些任务可以很容易地并行化。为了支持这一点，Java 提供了一个名为 **Fork/Join** 的框架，它专门支持这类任务的解析。
 
-- 1. ForkJoinPool
-- 2. ForkJoinTask
-- 3. ForkJoinWorkerThread
-- 4. RecursiveAction
-- 5. RecursiveTask
-- 6. CountedCompleter。
+`Fork/Join` 由一个特殊的执行器服务和一个线程池组成，框架中的每个任务都被拆分成更小的部分，并分发（fork）给池中的线程执行。任务会等待子任务完成，并将每个子任务的结果进行合并（join）以得到最终结果。这个过程也是递归的，子任务也可以进一步分为子任务。该框架主要由以下类组成：
+
+1. `ForkJoinPool`
+2. `ForkJoinTask`
+3. `ForkJoinWorkerThread`
+4. `RecursiveAction`
+5. `RecursiveTask`
+6. `CountedCompleter`
 
 考虑以下程序作为示例：
 
@@ -3126,7 +3212,7 @@ class Thread26
 
 如果你可以构建自己的未来并创造未来会怎样？
 
-一代人的变革就是下一代的现状。在不不的未来，人们可能很快觉得设备曾经必须“插电”是很奇怪的。要达到那种状态，需要一场“转变”。
+一代人的变革就是下一代的现状。在不远的未来，人们可能很快觉得设备曾经必须“插电”是很奇怪的。要达到那种状态，需要一场“转变”。
 
 ```java
 for (int i = 0; i < A.getRows(); ++i)
@@ -3184,28 +3270,27 @@ class Matrix
 }
 ```
 
-这里是 `Matrix` 类，一个简单的矩阵类（使用 `int` 坐标），它本质上是对二维数组的简单封装。程序创建了两个矩阵并打印了它们。其中一个是 2x3 矩阵，另一个是 3x3 矩阵。因此，你可以计算矩阵乘法（第一个矩阵的列数等于第二个矩阵的行数）。
+这里是 `Matrix` 类，一个简单的矩阵类（使用 `int` 坐标），它本质上是对二维数组的简单封装。程序创建了两个矩阵并打印了它们。其中一个是 2×3 矩阵，另一个是 3×3 矩阵。因此，你可以计算矩阵乘法（第一个矩阵的列数等于第二个矩阵的行数）。
 
-这里的 `Matrix` 类是一个简单的矩阵类（使用 `int` 坐标），它本质上是对二维数组的简单封装。程序创建了两个矩阵并打印了它们。其中一个是 2x3 矩阵，另一个是 3x3 矩阵。因此，你可以计算矩阵乘法（第一个矩阵的列数等于第二个矩阵的行数）。
+这里的 `Matrix` 类是一个简单的矩阵类（使用 `int` 坐标），它本质上是对二维数组的简单封装。程序创建了两个矩阵并打印了它们。其中一个是 2×3 矩阵，另一个是 3×3 矩阵。因此，你可以计算矩阵乘法（第一个矩阵的列数等于第二个矩阵的行数）。
 
-如果使用 **Fork/Join** 框架，你可以将程序写成如下形式：
+如果使用 `Fork/Join` 框架，你可以将程序写成如下形式：
 
+## Java 8：多线程程序
 
+### 并发工具
 
+## 练习 12
 
+创建一个名为 `Matrices1` 的新项目。该项目实质上应该是 `Thread26` 项目的副本，因此是一个可以计算两个矩阵乘积的程序，但它应该对这些较大的矩阵进行计时。首先，添加一个方法来创建一个指定行数和列数的矩阵，并用随机的一位整数初始化矩阵。然后你可以使用 1000×2000 和 2000×1000 的矩阵来测试程序。你不能打印矩阵（对于如此大的矩阵，打印并没有意义），但你应该测量并打印矩阵乘法所需的时间。请记住，只测量矩阵乘法的时间。
 
-## JAVA 8: 多线程程序
-# 并发工具
+你必须创建一个名为 `Matrices2` 的类似项目，但这次程序的工作方式应该与 `Thread27` 相同，即矩阵乘法应该是并行的。尝试观察时间上的差异。如果你的机器具有多核处理器，这应该是可以实现的！
 
-# 练习 12
+![](img/0ed8bd211feab9309d377c7ae120ad_101.png)
 
-创建一个名为 Matrices1 的新项目。该项目实质上应该是 Thread26 项目的副本，因此是一个可以计算两个矩阵乘积的程序，但它应该对这些较大的矩阵进行计时。首先，添加一个方法来创建一个指定行数和列数的矩阵，并用随机的一位整数初始化矩阵。然后你可以使用 1000×2000 和 2000×1000 的矩阵来测试程序。你不能打印矩阵（对于如此大的矩阵，打印并没有意义），但你应该测量并打印矩阵乘法所需的时间。请记住，只测量矩阵乘法的时间。
+## 8.1 完成服务（CompletionService）
 
-你必须创建一个名为 Matrices2 的类似项目，但这次程序的工作方式应该与 Thread27 相同，即矩阵乘法应该是并行的。尝试观察时间上的差异。如果你的机器具有多核处理器，这应该是可以实现的![](img/0ed8bd211feab9309d377c7ae120ad_101.png)
-
-## 8.1 完成服务 (CompletionService)
-
-作为最后一个同步工具，我将提到 CompletionService，它是一个将异步任务的创建与结果的处理分离的接口。其思想是生产者使用 `submit()` 在线程中启动 Callable 对象，而消费者可以调用阻塞的 `take()` 来等待结果。
+作为最后一个同步工具，我将提到 `CompletionService`，它是一个将异步任务的创建与结果的处理分离的接口。其思想是生产者使用 `submit()` 在线程中启动 `Callable` 对象，而消费者可以调用阻塞的 `take()` 来等待结果。
 
 ```java
 package thread28;
@@ -3257,37 +3342,40 @@ class ECalculator implements Callable<BigDecimal> {
 }
 ```
 
-在上面的程序中，ECalculator 类和我之前使用的相同——唯一的区别是 `call()` 方法在返回之前打印一段文本。目标是显示在打印结果之前，所有线程都执行完毕。在 `main()` 中按常创建了一个 `ExecutorService` 对象，但它被封装在一个 `CompletionService` 对象中。然后根据 `Callable` 对象启动了 10 个线程，以便每个线程确定位数（这是一个耗时的操作），并对每个线程执行了语句：`completion.take();`
+在上面的程序中，`ECalculator` 类和我之前使用的相同——唯一的区别是 `call()` 方法在返回之前打印一段文本。目标是显示在打印结果之前，所有线程都执行完毕。在 `main()` 中按常创建了一个 `ExecutorService` 对象，但它被封装在一个 `CompletionService` 对象中。然后根据 `Callable` 对象启动了 10 个线程，以便每个线程确定位数（这是一个耗时的操作），并对每个线程执行了语句：`completion.take();`
 
 这意味着主线程会一直等待 10 个工作线程完成。
 
-## 原子变量 (ATOMIC VARIABLE)
+## 原子变量（Atomic Variable）
 
-最后，我将提到一些可以使用的类，用于确保简单变量操作的互斥，而不需要使用锁的代码（锁通常会消耗性能）。事实上，对基本类型变量的简单操作不是线程安全的，它们包含更多的操作，因此可能会被中断。这些类位于
+最后，我将提到一些可以使用的类，用于确保简单变量操作的互斥，而不需要使用锁的代码（锁通常会消耗性能）。事实上，对基本类型变量的简单操作不是线程安全的，它们包含更多的操作，因此可能会被中断。这些类位于：
 
-```
+```text
 java.util.concurrent.atomic
 ```
 
 主要类有：
 
-- AtomicBoolean
-- AtomicInteger
-- AtomicIntegerArray
-- AtomicLong
-- AtomicLongArray
-- AtomicReference
-- AtomicReferenceArray
-- DoubleAccumulator
-- DoubleAdder
-- LongAccumulator
-- LongAdder
+- `AtomicBoolean`
+- `AtomicInteger`
+- `AtomicIntegerArray`
+- `AtomicLong`
+- `AtomicLongArray`
+- `AtomicReference`
+- `AtomicReferenceArray`
+- `DoubleAccumulator`
+- `DoubleAdder`
+- `LongAccumulator`
+- `LongAdder`
 
 ![](img/0ed8bd211feab9309d377c7ae120ad_104.png)
 
+
+
+
 BI 挪威商学院是欧洲最大的商学院之一，每年接待超过 20,000 名学生。我们的课程提供了一个充满活力且多元文化的学习环境，具有国际视野，最终为学生提供满足企业日益增长需求的专业技能。
 
-BI 提供四个两年的全日制科学硕士（MSc）课程，完全采用英语授授，并旨在提供满足市场日益增长需求的专业技能。硕士课程提供了一个具有启发性且多元文化的学习环境，为你开启职业生涯提供最佳平台。
+BI 提供四个两年的全日制科学硕士（MSc）课程，完全采用英语授课，并旨在提供满足市场日益增长需求的专业技能。硕士课程提供了一个具有启发性且多元文化的学习环境，为你开启职业生涯提供最佳平台。
 
 - 商业管理硕士
 - 金融经济学硕士
@@ -3306,7 +3394,7 @@ class ID {
 }
 ```
 
-其中 `getID()` 方法是同步的，因为 `++` 操作不是线程安全的。这种解决方案是有效的，并且在大多数情况下足够了，每当你需要一个新的 ID 时，你都会设置一个锁，而这不是免费的。然而，你可以这样写该类：
+其中`getID()`方法是同步的，因为`++`操作不是线程安全的。这种解决方案是有效的，并且在大多数情况下足够了，每当你需要一个新的 ID 时，你都会设置一个锁，而这不是免费的。然而，你可以这样写该类：
 
 ```java
 import java.util.concurrent.atomic.*;
@@ -3320,7 +3408,7 @@ class ID {
 }
 ```
 
-在这里 `getID()` 也是线程安全的，因为它效率得多，且没有设置锁。
+在这里`getID()`也是线程安全的，因为它效率得多，且没有设置锁。
 
 ## SWING
 
@@ -3333,15 +3421,11 @@ Swing 是单线程的。渲染图形（窗口和组件）并处理事件的线�
 1. 始终由 EDT 创建 GUI 组件
 2. 你不能执行会减慢 EDT 的代码
 
-由于 Swing 是单线程的，Swing 程序应该始终在 EDT 线程中创建 GUI 部分，而永远在另一个线程或主线程中创建组件。大多数 Swing 组件（包括 JFrame）都不是线程安全的。
+由于 Swing 是单线程的，Swing 程序应该始终在 EDT 线程中创建 GUI 部分，而永远在另一个线程或主线程中创建组件。大多数 Swing 组件（包括 `JFrame`）都不是线程安全的。
 
 如果你点击按钮，会弹出一个对话框，你需要在其中选择包含邮政编码的文件（我使用过几次）：
 
 ![](img/0ed8bd211feab9309d377c7ae120ad_107.png)
-
-
-
-
 
 ## JAVA 8:多线程程序 SWING
 
@@ -3409,9 +3493,9 @@ public class Main extends JFrame {
 }
 ```
 
-代码中并没有特殊之处，但有几句语句需要解释。最后一个方法 `busy()` 是一个空方法，需要消耗一些时间。它被用于 `update()` 方法，该方法负责读取带有邮政编码的文件，并在文件中每次读取行时执行一次。结果是更新列表框需要很长时间。`update()` 方法是从按钮的事件处理器调用的，该处理器从显示一个显示当前线程 ID 的消息框开始。同样，`createView()` 方法的最后一条语句显示了当前线程 ID。
+代码中并没有特殊之处，但有几句语句需要解释。最后一个方法`busy()`是一个空方法，需要消耗一些时间。它被用于`update()`方法，该方法负责读取带有邮政编码的文件，并在文件中每次读取行时执行一次。结果是更新列表框需要很长时间。`update()`方法是从按钮的事件处理器调用的，该处理器从显示一个显示当前线程 ID 的消息框开始。同样，`createView()`方法的最后一条语句显示了当前线程 ID。
 
-`main()` 方法如下：
+`main()`方法如下：
 
 ```java
 package thread29;
@@ -3431,12 +3515,15 @@ public class Thread29 {
 # 脑力
 
 到 2020 年，风能可以提供我们地球十分之一的电力。几乎今天，SKF 的专业知识对于运行世界上大部分风力发电机至关重要。
+
 高达 25% 的发电成本与维护有关。得益于我们的在线状态监控和自动化系统，这些成本可以大幅减少。我们让从空中创造廉价能源成为可能。
+
 通过分享我们的经验、专业知识和创造力，行业可以获得超出预期的性能。如果没有能够应对这一挑战的最佳员工？
 
 ### 知识工程的力量
 
 接入知识工程的力量。
+
 访问我们的网站：www.skf.com/knowledge
 
 ![](img/0ed8bd211feab9309d377c7edae120ad_110_1.png)
@@ -3445,11 +3532,11 @@ public class Thread29 {
 
 ## JAVA 8:多线程程序 SWING
 
-该方法在 ***main()*** 方法中打开。它告诉我们消息框是在主线程中打开的（这在预期之中）。如果你在这里点击 OK，你会再次看到消息框：
+该方法在`main()`方法中打开。它告诉我们消息框是在主线程中打开的（这在预期之中）。如果你在这里点击 OK，你会再次看到消息框：
 
 ![](img/0ed8bd211feab9309d377c7edae120ad_111_0.png)
 
-但这次消息框是在 ***MainView*** 类中的 ***createView()*** 方法中打开的，而且仍然是从主线程发生的。这意味着窗口是在主线程中创建的。当你在这里点击 OK 时，主窗口打开。点击按钮，你会得到以下消息框：
+但这次消息框是在`MainView`类中的`createView()`方法中打开的，而且仍然是从主线程发生的。这意味着窗口是在主线程中创建的。当你在这里点击 OK 时，主窗口打开。点击按钮，你会得到以下消息框：
 
 ![](img/0ed8bd211feab9309d377c7edae120ad_111_1.png)
 
@@ -3470,19 +3557,15 @@ public class Thread30 {
 }
 ```
 
-这意味着窗口现在是由事件分发线程——EDT 线程创建的。`MainView` 类保持不变（除了标题栏中的另一个文本），如果你运行程序，你会看到窗口是由事件处理器创建的。`SwingUtilities` 类有许多用于各种上下文的静态方法。对于线程，基本上有三种：
+这意味着窗口现在是由事件分发线程——EDT 线程创建的。`MainView`类保持不变（除了标题栏中的另一个文本），如果你运行程序，你会看到窗口是由事件处理器创建的。`SwingUtilities`类有许多用于各种上下文的静态方法。对于线程，基本上有三种：
 
-- 1. `invokeAndWait()` 有一个 `Runnable` 对象作为参数并在 EDT 线程中执行当前的 `run()` 方法。该方法与 EDT 同步执行，`invokeAndWait()` 会阻塞当前线程直到 EDT 处理完所有事件。当程序必须从 EDT 不同的线程更新 UI 时，使用 `invokeAndWait()`。此方法绝不应从 EDT 中调用。
-- 2. `invokeLater()` 同样有一个 `Runnable` 对象作为参数，并在 EDT 中执行 `run()` 方法，这次是异步执行的，且 `run()` 方法仅在 EDT 处理完待处理事件后执行。当应用程序想要更新用户界面时使用它，该方法可以从任何线程调用。
-- 3. `isEventDispatchThread()` 是一个方法，如果是在 EDT 中执行，则返回 true。
+- 1. `invokeAndWait()`有一个`Runnable`对象作为参数并在 EDT 线程中执行当前的`run()`方法。该方法与 EDT 同步执行，`invokeAndWait()`会阻塞当前线程直到 EDT 处理完所有事件。当程序必须从 EDT 不同的线程更新 UI 时，使用`invokeAndWait()`。此方法绝不应从 EDT 中调用。
+- 2. `invokeLater()`同样有一个`Runnable`对象作为参数，并在 EDT 中执行`run()`方法，这次是异步执行的，且`run()`方法仅在 EDT 处理完待处理事件后执行。当应用程序想要更新用户界面时使用它，该方法可以从任何线程调用。
+- 3. `isEventDispatchThread()`是一个方法，如果是在 EDT 中执行，则返回 true。
 
 然后程序还存在加载邮政编码时运行时没有响应的问题。很显然，通过在工作线程中加载邮政编码可以解决这个问题，但还有更多，因为你可以确保用户界面被正确更新。该问题在 Thread31 项目中得到了，唯一改变的是以下两个方法：
 
 ![](img/0ed8bd211feab9309d377c7edae120ad_113_0.png)
-
-
-
-
 
 # JAVA 8：多线程程序 SWING
 
@@ -3516,21 +3599,21 @@ private void update(File file)
 }
 ```
 
-在事件处理器中，现在启动了一个线程来执行 `update()` 方法。该方法大部分没有变化，但当列表框需要更新时，它会根据上述逻辑在 EDT（事件调度线程）中进行；而当更新在可运行对象中执行时，它通过 `invokeAndWait()` 执行，因此是在线程 EDT 中执行。在这种情况下，使用了 `invokeAndWait()` 而不是 `invokeLater()`，尽管它几乎没有意义，`invokeAndWait()` 确保了没有其他事件悬挂。
+在事件处理器中，现在启动了一个线程来执行`update()`方法。该方法大部分没有变化，但当列表框需要更新时，它会根据上述逻辑在 EDT（事件调度线程）中进行；而当更新在可运行对象中执行时，它通过`invokeAndWait()`执行，因此是在线程 EDT 中执行。在这种情况下，使用了`invokeAndWait()`而不是`invokeLater()`，尽管它几乎没有意义，`invokeAndWait()`确保了没有其他事件悬挂。
 
-如果你尝试运行 `Thread31` 程序，你会发现程序在更新列表框时现在是处于“活跃状态”的。
+如果你尝试运行`Thread31`程序，你会发现程序在更新列表框时现在是处于“活跃状态”的。
 
 # JAVA 8：多线程程序
 
 ## 10.1 SWINGWORKER
 
-有时需要启动一个耗时任务（例如，从文件中加载邮政编码），并减少更新用户界面的次数，仅在任务完成后一次性更新用户界面。你可以使用一个名为 `SwingWorker` 的类。它是一个泛型类，带有两个泛型类型参数：*SwingWorker<T, V>*。它是一个抽象类，至少有一个方法需要被重写。第一个是：
+有时需要启动一个耗时任务（例如，从文件中加载邮政编码），并减少更新用户界面的次数，仅在任务完成后一次性更新用户界面。你可以使用一个名为`SwingWorker`的类。它是一个泛型类，带有两个泛型类型参数：`SwingWorker<T, V>`。它是一个抽象类，至少有一个方法需要被重写。第一个是：
 
 ```java
 protected abstract T doInBackground()
 ```
 
-该方法是在工作线程中执行任务的方法，返回一个第一个参数类型的值（如果没有返回值，将参数类型指定为 `Void`）。当此方法终止时，将执行以下方法：
+该方法是在工作线程中执行任务的方法，返回一个第一个参数类型的值（如果没有返回值，将参数类型指定为`Void`）。当此方法终止时，将执行以下方法：
 
 ```java
 protected void done()
@@ -3542,12 +3625,12 @@ protected void done()
 protected void process(List<V> chunks
 ```
 
-`SwingWorker` 类有两个额外的需要了解的方法：
+`SwingWorker`类有两个额外的需要了解的方法：
 
-- 1. `execute()` 启动一个工作线程
-- 2. `T get()` 等待 `doInBackground()` 终止并返回结果
+- 1. `execute()`启动一个工作线程
+- 2. `T get()`等待`doInBackground()`终止并返回结果
 
-下面展示了如果使用 `SwingWorker` 更新列表框，邮政编码程序必须如何修改。
+下面展示了如果使用`SwingWorker`更新列表框，邮政编码程序必须如何修改。
 
 ```java
 package thread32;
@@ -3581,6 +3664,8 @@ public MainView()
 }
 ```
 
+
+
 ```java
 private void createView()
 {
@@ -3594,13 +3679,11 @@ private void createView()
 }
 ```
 
-
-
 # JAVA 8：多线程程序 SWING
 
 ## 10.2 TIMER
 
-程序 `Thread33` 打开了一个所示的窗口，其中有两个按钮。按钮之间是一个 `JLabel`。点击 Start 按钮，程序会启动一个每秒增加一次数的计时器，数值显示在标签中。点击 Stop 按钮，计时器会停止，你可以点击 Start 重新启动。
+程序`Thread33`打开了一个所示的窗口，其中有两个按钮。按钮之间是一个`JLabel`。点击 Start 按钮，程序会启动一个每秒增加一次数的计时器，数值显示在标签中。点击 Stop 按钮，计时器会停止，你可以点击 Start 重新启动。
 
 代码如下：
 
@@ -3664,10 +3747,6 @@ public class MainView extends JFrame {
 }
 ```
 
-
-
-
-
 # JAVA 8 多线程程序 SWING
 
 ```java
@@ -3719,6 +3798,7 @@ public void stop(ActionEvent e) {
 分析将包括：
 
 - 1. 需求规格书
+
 2. 用户界面原型
 
 ### 11.2.1 需求规格书
@@ -3730,27 +3810,45 @@ public void stop(ActionEvent e) {
 对于每个日期，日历必须显示以下信息：
 
 - 月份中的第几
+
 - 星期几名称
+
 - 如果是周一，显示该年的周数
+
 - 是否为节假日或纪念日的指示
+
 - 创建备注的标记
+
 - 创建预约的标记
+
 - 创建纪念日的标记
 
 对于节假日，程序必须预先编程（知道）以下日期：
 
 - 元旦
+
 - 圣洁周日
+
 - 圣周四四
+
 - 圣周五
+
 - 复活节周日
+
 - 活活节周一
+
 - 祈祷日
+
 - 耶稣升天节
+
 - 圣灵节
+
 - 白星期一
+
 - 圣诞前夜
+
 - 圣诞节
+
 - 第二圣诞节
 
 程序还能够显示自定义的纪念日（例如妻子的生日）。纪念日落在特定日期以及 1582 年后的每年（具有指定起始和结束年份的）。如果纪念日指定为 2/29，且不是闰年，则应使用 3/1 日期。
@@ -3760,9 +3858,13 @@ public void stop(ActionEvent e) {
 关于预约，可以为特定日期和特定时间进行预约。同一天可能会有多个预约，预约原则上是纯文本。预约可以跨越多天。预约还可以有开始时间和结束时间，如果是这样，程序应该在时间冲突时给出警告。当预约时间到达时，程序必须给出一个显示在用户界面上的警告。采用以下方案：
 
 - 1. 警告应在当天开始时（电脑开启时）出现
+
 2. 预约发生前 1 小时
+
 3. 预约发生前 15 分钟
+
 4. 预约发生前 5 分钟
+
 5. 预约发生时，且预约被删除
 
 # 功能：
@@ -3770,9 +3872,13 @@ public void stop(ActionEvent e) {
 导航日历：
 
 - 切换到上一年
+
 - 切换到上个月
+
 - 切换到下个月
+
 - 切换到下一年
+
 - 输入年月且日历必须切换到该月份
 
 程序必须能够将日历保存为逗号分隔的文本文件，格式如下：
@@ -3792,11 +3898,17 @@ JAVA 8：多线程程序
 程序必须具备以下功能：
 
 - 纪念日维护
+
 - 备注维护
+
 - 预约维护
+
 - 视图
+
 - 闹钟（到达某个时间时）
+
 - 定时器（到达某个时间时）
+
 - 计时表
 
 ## 11.2.2 原型
@@ -3804,8 +3916,11 @@ JAVA 8：多线程程序
 原型是一个 Swing 应用程序，显示在窗口中。窗口底部有状态栏，显示：
 
 - 当前月份
+
 - 今天
+
 - 是否设置了闹钟（图标）
+
 - 是否设置了定时器（图标）
 
 ![](img/0ed8bd211feab9309d377c7edae120ad_125.png)
@@ -3823,7 +3938,9 @@ Deloitte 师事务所及关联实体。
 每个日期显示月份中的第几（稍后显示周数），颜色指示是否为节假日。此外，有三个图标，意味着：
 
 - 1. 该日期的备注
+
 2. 该日期的预约
+
 3. 该日期的纪念日
 
 点击图标将得到一个简单的对话框，并且对于预约还可以取消预约。
@@ -3831,24 +3948,35 @@ Deloitte 师事务所及关联实体。
 右键点击特定日期将得到一个菜单，你可以：
 
 - 1. 创建备注
+
 2. 创建预约
+
 3. 创建纪念日
 
 对于工具栏中的图标，适用以下规则：
 
 - 1. 第一个图标（箭头）用于导航日历。
+
 2. 下一个打开一个对话框，你可以导航到特定月份。
+
 3. 第六个图标打开维护备注的对话框。
 
 JAVA 8：多线程程序日历
 
 - 4. 第七个图标打开维护预约的对话框。
+
 5. 下一个显示时钟（外观尚未确定）。
+
 6. 下一个再次是用于计时表的。打开一个对话框来启动或停止计时。
+
 7. 第十个图标打开维护闹钟的对话框。
+
 8. 第八个图标打开维护定时器的对话框。
+
 9. 下一个图标是将日历导出到文本，并打开一个选择期间的对话框。
+
 10. 倒数第二个图标打开维护纪念日的对话框。
+
 11. 最后一个图标是程序设置，但尚未确定是指哪些设置，可能是颜色。
 
 ## 11.3 设计
@@ -3856,12 +3984,17 @@ JAVA 8：多线程程序日历
 设计阶段分五个步骤进行：
 
 - 1. 架构设计
+
 2. 模型层设计
+
 3. 数据访问层 (DAL) 设计
+
 4. 用户界面设计
+
 5. 控制器层设计
 
 设计从创建分析（原型）的 NetBeans 项目副本开始。
+
 副本名为 Calendar1。
 
 ### 11.3.1 架构设计
@@ -3870,10 +4003,6 @@ JAVA 8：多线程程序日历
 
 项目的重点是模型层，它具有相对复杂的算法。
 
-
-
-
-
 # JAVA 8：多线程程序日历
 
 ## 11.3.2 模型层设计
@@ -3881,7 +4010,9 @@ JAVA 8：多线程程序日历
 Java 已经有了表示日期的类，但由于要求日历必须支持从儒略历到格列哥日历的转换，决定实现一个自定义日期类型。该类必须以 YYYYMMDD 格式的 int 类型表示日期：
 
 | 日期 |
+
 | --- |
+
 | value: int |
 
 该类必须有若干方法，以下设计仅展示了最重要的部分，但还会有更多：
@@ -4029,7 +4160,9 @@ public int getWeekNumber() {
 # JAVA 8：多线程程序日历
 
 - * 圣诞节
+
 - 圣诞第二天
+
 - @return 节日的名称或 null +/
 
 ```java
@@ -4075,6 +4208,8 @@ public class Date implements Comparable<Date>
 }
 ```
 
+
+
 ```java
 public class Appointment
 {
@@ -4113,7 +4248,7 @@ public class Anniversary
 import java.util.*;
 ```
 
-JAVA 8：多线程程序日历
+# JAVA 8：多线程程序日历
 
 ```java
 /**
@@ -4138,7 +4273,7 @@ public class MainModel {
 
 我加入是因为我想要真正的责任
 
-img/0ed8bd211feab9309d377c7edae120ad_134_0.png)
+![](img/0ed8bd211feab9309d377c7edae120ad_134_0.png)
 
 ## 11.3.3 DAL 层设计
 
@@ -4180,11 +4315,7 @@ public interface Repository {
 }
 ```
 
-程序随后必须实例化具体的存储库类，我将其命名为 IORep。
-
-
-
-
+程序随后必须实例化具体的存储库类，我将其命名为`IORep`。
 
 ## 11.3.4 用户界面设计
 
@@ -4192,7 +4323,7 @@ public interface Repository {
 
 ![](img/0ed8bd211feab9309d377c7edae120ad_136_0.png)
 
-例如，查看 `NotesView` 是一个显示所选时间段内所有笔记列表的对话框。`NoteView` 是一个关联对话框，用于维护单条笔记。
+例如，查看`NotesView`是一个显示所选时间段内所有笔记列表的对话框。`NoteView`是一个关联对话框，用于维护单条笔记。
 
 除了对话框外，如图所示，还有一个用于维护设置的对话框。目前尚未决定具体包含哪些设置，但选择数据存储的位置将是其中。
 
@@ -4206,8 +4337,8 @@ public interface Repository {
 
 编程按照以下步骤（迭代）进行：
 
-- 1. 导航日历并包括 `Date` 类的实现
-- 2. 实现笔记维护和 `IORepository` 维护
+- 1. 导航日历并包括`Date`类的实现
+- 2. 实现笔记维护和`IORepository`维护
 - 3. 预约和纪念日的实现
 - 4. 实现所有与时钟的功能，包括闹钟和计时器
 - 5. 实现日历的导出
@@ -4215,37 +4346,43 @@ public interface Repository {
 
 ## 11.4.1 迭代 1
 
-迭代从从设计创建一个 NetBeans 项目副本开始。该副本被称为 `Calendar2`。
+迭代从从设计创建一个 NetBeans 项目副本开始。该副本被称为`Calendar2`。
 
-首先，我实现了 `Date` 类。它是程序中最重要、也最全面的类。许多算法都是复杂的，并已记录在代码中。除了 `Date` 类外，模型层还扩展了一个 `CalendarException` 类。
+首先，我实现了`Date`类。它是程序中最重要、也最全面的类。许多算法都是复杂的，并已记录在代码中。除了`Date`类外，模型层还扩展了一个`CalendarException`类。
 
 ![](img/0ed8bd211feab9309d377c7edae120ad_137_0.png)
 
 IE 商学院 欧洲金融时报 管理学硕士 #gobeyond
+
 由于实现梦想是你最大的挑战，IE 商学院提供的英语、西班牙语或双语教学的管理学硕士，通过创新且具有启发性的计划，在职业生涯早期培养高水平的专业人才，帮助他们发挥全部潜力。
+
 >> 选择你的专业领域。
+
 >> 通过所提供的不同选项定制你的硕士学位。
+
 >> 在伦敦、硅谷或上海等地点进行全球沉浸周。
+
 因为你而改变，我们也随你而改变。
+
 www.ie.edu/master-management mim.admissions@ie.edu
 
 在 bookboom.com 免费下载电子书
 
 # JAVA 8：多线程程序日历
 
-主类 `MainDate` 扩展了一个构造函数，该函数的参数是一个 `Date` 对象，并且该类有一个相应的方法。
+主类`MainDate`扩展了一个构造函数，该函数的参数是一个`Date`对象，并且该类有一个相应的方法。
 
-`MainModel` 类被实现为表示 42 天，这是表示一个由 6 行 7 列组成的网格表示的整月所需的日期数量。
+`MainModel`类被实现为表示 42 天，这是表示一个由 6 行 7 列组成的网格表示的整月所需的日期数量。
 
-创建了一个对话框，你可以在其中选择月份并输入年份。由于这是一个非常简单的对话框，因此没有控制器，但在 `calendar.views` 包中添加了三个类：
+创建了一个对话框，你可以在其中选择月份并输入年份。由于这是一个非常简单的对话框，因此没有控制器，但在`calendar.views`包中添加了三个类：
 
 - 1. `GotoEvent`：定义了一个用于选择月份的事件
-- 2. `GotoListener`：为 `GotoEvent` 类型的事件定义了单个事件处理器
+- 2. `GotoListener`：为`GotoEvent`类型的事件定义了单个事件处理器
 - 3. `GotoView`：作为对话框
 
-对原型中的 `Main` 类进行了修改，主要包括为工具栏中的前五个按钮附加事件处理器。
+对原型中的`Main`类进行了修改，主要包括为工具栏中的前五个按钮附加事件处理器。
 
-然后第一次迭代完成，因此你可以导航日历了，但重要的是结果必须经过彻底测试，并且会特别指到 `Date` 类。测试结果最好的方法是使用并导航日历：
+然后第一次迭代完成，因此你可以导航日历了，但重要的是结果必须经过彻底测试，并且会特别指到`Date`类。测试结果最好的方法是使用并导航日历：
 
 - 1. 打开程序并验证当前月份是否显示正确：
    - 正确的日期
@@ -4273,15 +4410,15 @@ www.ie.edu/master-management mim.admissions@ie.edu
 
 ## 11.4.2 迭代 2
 
-迭代从从设计创建一个 NetBeans 项目的副本开始。该副本被称为 `Calendar3`。
+迭代从从设计创建一个 NetBeans 项目的副本开始。该副本被称为`Calendar3`。
 
-我开始实现 `IORepository` 类。首先在 `calendar.models` 中扩展了一个方法：
+我开始实现`IORepository`类。首先在`calendar.models`中扩展了一个方法：
 
 ```java
 getNote
 ```
 
-它返回一个特定的记录。接下来，`IORepository` 实现如下：
+它返回一个特定的记录。接下来，`IORepository`实现如下：
 
 ```java
 public class IORepository implements Serializable {
@@ -4322,14 +4459,18 @@ public List<Anniversary> getAnniversaries() {
 ![](img/0ed8bd211feab9309d377c7edae120ad_140_0.png)
 
 ENGLISH OUT THERE
+
 ENGLISH OUT THERE
+
 点击听取我独特课程前后的录音
+
 在 bookboom.com 免费下载
+
 点击广告阅读更多
 
-作为下一步，我定义了三个模型类 `Anniversary`、`Appointment` 和 `Note`（前两个应在下次迭代中使用）。所有三个类都必须定义为可序列化，并且当单个对象需要排序时，它们必须定义为可比较。实现这三个类非常简单，它们主要由 getter 方法以及对 `equals()` 和 `compareTo()` 的重写组成，但在这里你可以按照描述的方法让 NetBeans 为每个方法创建存根。
+作为下一步，我定义了三个模型类`Anniversary`、`Appointment`和`Note`（前两个应在下次迭代中使用）。所有三个类都必须定义为可序列化，并且当单个对象需要排序时，它们必须定义为可比较。实现这三个类非常简单，它们主要由 getter 方法以及对`equals()`和`compareTo()`的重写组成，但在这里你可以按照描述的方法让 NetBeans 为每个方法创建存根。
 
-我添加了一个 `DataAdapter` 类，用于实例化 `Repository` 类型的对象。该类被写为单例：
+我添加了一个`DataAdapter`类，用于实例化`Repository`类型的对象。该类被写为单例：
 
 ```java
 package calendar.models;
@@ -4360,33 +4501,29 @@ public class DataAdapter {
 }
 ```
 
-
-
-
-
 # JAVA 8：多线程程序日历
 
-有了这些类，我就可以编写用于维护笔记的代码了。首先，`MainView` 类发生了变化，现在当你右键点击日历中的某一天时，它会弹出一个弹出式菜单。该菜单有三个选项：
+有了这些类，我就可以编写用于维护笔记的代码了。首先，`MainView`类发生了变化，现在当你右键点击日历中的某一天时，它会弹出一个弹出式菜单。该菜单有三个选项：
 
 1. 创建笔记
 2. 创建预约
 3. 创建周年纪念
 
-弹出菜单使用了 `JPopupMenu` 构造函数，菜单的定义非常简单，通过在类的构造函数中调用方法完成。对于定义日历中每一天的每个面板，都分配了一个鼠标事件处理器，当你右键点击日历中的某一天时，就会打开弹出菜单。为了维护笔记，我添加了以下类：
+弹出菜单使用了`JPopupMenu`构造函数，菜单的定义非常简单，通过在类的构造函数中调用方法完成。对于定义日历中每一天的每个面板，都分配了一个鼠标事件处理器，当你右键点击日历中的某一天时，就会打开弹出菜单。为了维护笔记，我添加了以下类：
 
 - `NoteController`：用于维护笔记对话框的控制器。
 - `NoteEvent`：定义了一个事件，上述控制器在添加笔记、修改笔记或删除笔记时可以触发。
-- `NoteListener`：定义了 `NoteEvent` 类型事件的监听器。
-- `NoteView`：作为控制器 `NoteController` 的对话框，同时用于创建笔记和编辑笔记。
-- `Filter`：为 `JTable` 定义了一个过滤器。
+- `NoteListener`：定义了`NoteEvent`类型事件的监听器。
+- `NoteView`：作为控制器`NoteController`的对话框，同时用于创建笔记和编辑笔记。
+- `Filter`：为`JTable`定义了一个过滤器。
 - `FilterListener`：定义了过滤器的监听器。
-- `NotesTable`：为 `JTable` 定义了一个数据模型。
-- `Renderer`：为 `JTable` 定义了一个单元格渲染器（CellRenderer）。
-- `NotesView`：打开一个带有 `JTable` 的对话框，显示所有笔记的概述。
+- `NotesTable`：为`JTable`定义了一个数据模型。
+- `Renderer`：为`JTable`定义了一个单元格渲染器（CellRenderer）。
+- `NotesView`：打开一个带有`JTable`的对话框，显示所有笔记的概述。
 
-最后添加了一个 `GUI` 类，带有图形用户界面设计的辅助方法。
+最后添加了一个`GUI`类，带有图形用户界面设计的辅助方法。
 
-如果你右键点击日历中的某一天，并在弹出菜单中选择“创建笔记”，你将看到如下所示窗口（`NoteView` 对话框）：
+如果你右键点击日历中的某一天，并在弹出菜单中选择“创建笔记”，你将看到如下所示窗口（`NoteView`对话框）：
 
 # JAVA 8：多线程程序 #日历
 
@@ -4410,7 +4547,7 @@ www.rug.nl/feb/education
 
 JAVA 8：多线程程序日历
 
-如果你点击工具栏上的笔记图标，你将看到以下窗口（`NotesView` 对话框）：
+如果你点击工具栏上的笔记图标，你将看到以下窗口（`NotesView`对话框）：
 
 ![](img/0ed8bd211feab9309d377c7edae120ad_144_0.png)
 
@@ -4435,47 +4572,44 @@ JAVA 8：多线程程序日历
 
 11. 在中选择“维护笔记”并测试所有笔记是否显示且顺序正确。
 12. 双击其中一条笔记并更改文本。
-13. 双击同一条笔记并更改标题。检查 `JTable` 是否更新。
+13. 双击同一条笔记并更改标题。检查`JTable`是否更新。
 14. 关闭程序。
 15. 再次打开程序。
 16. 选择“维护笔记”。
+
+
+
 17. 测试过滤器。
+
 18. 再次双击之前的同一个笔记并检查更改是否保留。
+
 19. 删除笔记。
+
 20. 关闭程序。
+
 21. 再次打开程序。
+
 22. 选择“维护笔记”。
+
 23. 检查笔记是否已删除。
 
 ## 11.4.3 迭代 3
 
-与之前一样，迭代从从上一个迭代的 NetBeans 项目开始复制副本。副本命名为 `Calendar4`。
+与之前一样，迭代从上一个迭代的 NetBeans 项目开始复制副本。副本命名为 `Calendar4`。
 
 在本次迭代中，任务是实现维护预约和周年纪念这两个功能。此外，包含此迭代的日历应该显示已注册预约、周年纪念以及笔记的日期的图标。实现预约维护是最全面的，因此我将从那里开始。
 
 在此之前，我必须调整模型：
 
 - 实现了 `Time` 类，但发生了一处变化，现在时间仅由小时和分钟组成。在这种情况下，该类用于记录预约上的时间，记录秒没有意义。
+
 - `Appointment` 和 `Anniversary` 两个类必须实现 `Comparable` 接口，以便对象可以进行排序。
+
 - `Repository` 接口扩展了两个新方法，根据给定的 ID 返回 `Appointment` 或 `Anniversary`。
+
 - 更新了 `Repository` 类。首先实现了两个新方法，并编写了所有其他方法存根的代码。代码填充了所有方法存根。
 
-在 bookoon.com 免费下载电子书
-
-JAVA 8：多线程程序
-
-如果你右键点击日历中的某一天并在弹出菜单中选择“创建预约”，你会看到日历中应该显示已注册预约、周年纪念和笔记的图标。实现预约维护是最全面的，因此我将从那里开始。
-
-在此之前，我必须调整模型：
-
-- 实现了 `Time` 类，但发生了一处变化，现在时间仅由小时和分钟组成。在这种情况下，该类用于记录预约上的时间，记录秒没有意义。
-- `Appointment` 和 `Anniversary` 两个类必须实现 `Comparable` 接口，以便对象可以进行排序。
-- `Repository` 接口扩展了两个新方法，根据给定的 ID 返回 `Appointment` 或 `Anniversary`。
-- 更新了 `Repository` 类。首先实现了两个新方法，并编写了所有其他方法存根的代码。代码填充了所有方法存根。
-
-JAVA 8：多线程程序日历
-
-如果你右键点击日历中的某一天并在弹出菜单中选择创建预约，你会看到一个带有 `JTable` 的对话框：![](img/0ed8bd211feab9309d377c7edae120ad_146_0.png) 侧侧显示所有预约的概述。右侧是一个带有 `JTable` 的对话框：![](img/0ed8bd211feab9309d377c7edae120ad_146_1.png) 侧侧显示所有预约的概述。右侧是一个带有 `JTable` 的对话框：![](img/0ed8bd211feab9309d377c7edae120ad_146_2.png) 侧侧显示所有预约的概述。
+如果你右键点击日历中的某一天并在弹出菜单中选择“创建预约”，你会看到一个带有 `JTable` 的对话框，侧侧显示所有预约的概述。右侧是一个带有 `JTable` 的对话框，侧侧显示所有预约的概述。右侧是一个带有 `JTable` 的对话框，侧侧显示所有预约的概述。
 
 在工具栏中选择“维护预约”，你会得到如下窗口：
 
@@ -4498,41 +4632,9 @@ JAVA 8：多线程程序日历
 | 2023-05-01 | 22:00 | 23:00 |
 | 2023-05-01 | 23:00 | 00:00 |
 
-如果你右键点击日历中的某一天并在弹出菜单中选择创建预约，你会看到一个带有 `JTable` 的对话框：![](img/0ed8bd211feab9309d377c7edae120ad_146_0.png) 侧侧显示所有预约的概述。右侧是一个带有 `JTable` 的对话框：![](img/0ed8bd211feab9309d377c7edae120ad_146_1.png) 侧侧显示所有预约的概述。右侧是一个带有 `JTable` 的对话框：![](img/0ed8bd211feab9309d377c7edae120ad_146_2.png) 侧侧显示所有预约的概述。
+如果你右键点击日历中的某一天并在弹出菜单中选择创建预约，你会看到一个带有 `JTable` 的对话框，侧侧显示所有预约的概述。右侧是一个带有 `JTable` 的对话框，侧侧显示所有预约的概述。右侧是一个带有 `JTable` 的对话框，侧侧显示所有预约的概述。
 
-JAVA 8：多线程程序日历
-
-如果你在工具栏中选择“维护预约”，你会得到如下窗口：
-
-| 预约 | 开始 | 结束 |
-|---|---|---|
-| 2023-05-01 | 10:00 | 11:00 |
-| 2023-05-01 | 08:00 | 08:30 |
-| 2023-05-01 | 09:00 | 10:00 |
-| 2023-05-01 | 10:00 | 11:00 |
-| 2023-05-01 | 12:00 | 13:00 |
-| 2023-05-01 | 13:00 | 14:00 |
-| 2023-05-01 | 14:00 | 15:00 |
-| 2023-05-01 | 15:00 | 16:00 |
-| 2023-05-01 | 16:00 | 17:00 |
-| 2023-05-01 | 17:00 | 18:00 |
-| 2023-05-01 | 18:00 | 19:00 |
-| 2023-05-01 | 19:00 | 20:00 |
-| 2023-05-01 | 20:00 | 21:00 |
-| 2023-05-01 | 21:00 | 22:00 |
-| 2023-05-01 | 22:00 | 23:00 |
-| 2023-05-01 | 23:00 | 00:00 |
-
-如果你右键点击日历中的某一天并在弹出菜单中选择创建预约，你会看到一个带有 `JTable` 的对话框：![](img/0ed8bd211feab9309d377c7edae120ad_146_0.png) 侧侧显示所有预约的概述。右侧是一个带有 `JTable` 的对话框：![](img/0ed8bd211feab9309d377c7edae120ad_146_1.png) 侧侧显示所有预约的概述。右侧是一个带有 `JTable` 的对话框：![](img/0ed8bd211feab9309d377c7edae120ad_146_2.png) 侧侧显示所有预约的概述。
-
-
-
-
-[content]
-
-# JAVA 8：多线程程序
-
-# 日历
+# JAVA 8：多线程程序 日历
 
 16. 编辑了 15 号的预约，并设置了开始和结束时间，其中结束时间应小于开始时间。这应该报错。修复了结束时间，使其大于开始时间，并保存了预约。
 
@@ -4540,59 +4642,69 @@ JAVA 8：多线程程序日历
 
 然后是纪念日的维护。此功能与备注的维护类似，当实现相应的模型类时，通过添加以下类型来实现该功能：
 
-- AnniversaryEvent：定义一个事件，当添加、修改或删除纪念日时触发。
-- AnniversaryListener：为类型为 AnniversaryEvent 的事件定义监听器。
-- AnniversaryController：用于控制 AnniversaryView 对话框的控制器类。
-- AnniversaryView：用于维护纪念日的对话框。
-- AnniversaryTable：为 JTable 定义一个数据模型，用于所有纪念日的概览。
-- IntegerRenderer：用于渲染类型为 Integer 类型的单元格。
-- AnniversaryView：此处指显示所有纪念日概览的对话框。
+- `AnniversaryEvent`：定义一个事件，当添加、修改或删除纪念日时触发。
+
+- `AnniversaryListener`：为类型为 `AnniversaryEvent` 的事件定义监听器。
+
+- `AnniversaryController`：用于控制 `AnniversaryView` 对话框的控制器类。
+
+- `AnniversaryView`：用于维护纪念日的对话框。
+
+- `AnniversaryTable`：为 `JTable` 定义一个数据模型，用于所有纪念日的概览。
+
+- `IntegerRenderer`：用于渲染类型为 `Integer` 类型的单元格。
+
+- `AnniversaryView`：此处指显示所有纪念日概览的对话框。
 
 ![](img/0ed8bd211feab9309d377c7edae120ad_149_0.png)
 
 关于 e-Learning for Kids。e-Learning for Kids 成立于 2004 年，是一个全球非营利基金会，致力于为 5-12 岁的儿童提供免费互联网学习支持，涵盖数学、科学、艺术、计算机、语言和环境技能等课程。自 2005 年以来，全球 190 多个国家的 1500 万多儿童受益于由 LU KI An 志愿者工作人员、教育与在线学习专家以及世界范围内致力于改变的业务专业人士提供的。e-Learning for Kids 仍在寻求资金、志愿者、赞助商和企业开发人员。更多信息，请访问 www.e-learningforkids.org。
 
 - 小学教育排名第一的 MOOC
+
 - 5-12 岁儿童的免费数字学习
+
 - 覆盖 1500 万儿童
-
-在 bookboom.com 下载免费电子书
-
-点击广告阅读更多
 
 # JAVA 8：多线程程序 日历
 
 “该函数的测试采用与上述相同的模式，我将在此处省略具体的测试用例。”
 
-日历与原型类似，会为创建备注、预约或纪念日的日期显示图标。如果你点击某个图标，应用程序应分别打开上述对话框（分别对应备注、预约和纪念日），但它们应该只显示当天项目（备注、预约、纪念日）的概览。此外，决定日历也必须显示节假日的图标（即 Date 类已知的节假日）。如果你在此处点击图标，你将得到一个简单的弹出窗口，显示当天的名称：
+日历与原型类似，会为创建备注、预约或纪念日的日期显示图标。如果你点击某个图标，应用程序应分别打开上述对话框（分别对应备注、预约和纪念日），但它们应该只显示当天项目（备注、预约、纪念日）的概览。此外，决定日历也必须显示节假日的图标（即 `Date` 类已知的节假日）。如果你在此处点击图标，你将得到一个简单的弹出窗口，显示当天的名称：
 
 ![](img/0ed8bd211feab9309d377c7edae120ad_150_0.png)
 
 从原则上讲，实现这些更改很容易，但在许多地方都发生了变化：
 
-- 接口 Repository 扩展了三个新方法，用于测试特定某天是否分别有备注、预约或纪念日。
-- 类 IRepository 进行了修改，以实现这三个新方法。
-- 类 MainData 进行了修改，使其不再拥有备注、预约和纪念日的集合。事实上，当该类不再能起太大作用时，可以考虑完全删除，但目前暂时保留以备后后更改。
-- NoteView、AppointmentView 和 AnniversaryView 类均已更新，因为默认构造函数已改为带有两个参数的构造函数，分别为 Date 和监听器。其目的是为了当你点击备注、预约或纪念日的图标之一时，日历可以更新。
-- NoteTable、AppointmentsTable 和 AnniversaryTable 三类进行了修改，添加了默认构造函数和一个从 Date 创建的构造函数，用于创建当天的模型。
-- NotesView、AppointmentsView 和 AnniversaryView 类进行了修改，使得默认构造函数现在接受一个监听器作为参数。同样，原因是这三个集合的变化可能会反映在日历中（必要时必须移除图标）。
-- 最后，更新了 MainView 类以显示图标，并对事件处理进行了了更改。
+- 接口 `Repository` 扩展了三个新方法，用于测试特定某天是否分别有备注、预约或纪念日。
 
-在 bookhoon.com 下载免费电子书
+- 类 `IRepository` 进行了修改，以实现这三个新方法。
 
-# JAVA 8：多线程程序
+- 类 `MainData` 进行了修改，使其不再拥有备注、预约和纪念日的集合。事实上，当该类不再能起太大作用时，可以考虑完全删除，但目前暂时保留以备后后更改。
+
+- `NoteView`、`AppointmentView` 和 `AnniversaryView` 类均已更新，因为默认构造函数已改为带有两个参数的构造函数，分别为 `Date` 和监听器。其目的是为了当你点击备注、预约或纪念日的图标之一时，日历可以更新。
+
+- `NoteTable`、`AppointmentsTable` 和 `AnniversaryTable` 三类进行了修改，添加了默认构造函数和一个从 `Date` 创建的构造函数，用于创建当天的模型。
+
+- `NotesView`、`AppointmentsView` 和 `AnniversaryView` 类进行了修改，使得默认构造函数现在接受一个监听器作为参数。同样，原因是这三个集合的变化可能会反映在日历中（必要时必须移除图标）。
+
+- 最后，更新了 `MainView` 类以显示图标，并对事件处理进行了更改。
 
 我将在此处省略具体的测试用例，但为了测试最新添加的内容以及整个迭代，你需要在随后的几天和几个月创建备注、预约和纪念日，以检查正确的图标是否出现并按预期运行。此外，你必须测试在删除项目时日历是否能正确更新。
 
 ## 11.4.4 迭代 4
 
-迭代从从上一个迭代的 NetBeans 项目创建副本开始。该副本称为 Calendar5。在本次迭代中，必须实现并测试以下功能：
+迭代从上一个迭代的 NetBeans 项目创建副本开始。该副本称为 `Calendar5`。在本次迭代中，必须实现并测试以下功能：
 
-1. Watch（时钟）：在窗口中显示一个手表。
-2. Stopwatch（秒表）：实现一个秒表功能。
-3. Alarm（闹钟）：用户可以设置闹钟，在给定时间后显示警告。
-4. Timer（计时器）：用户可以输入一个时间，当计时器为 0 时显示警告。
-5. Appointments（预约）：当时间到达时，当天的预约必须产生一个警告。
+1. `Watch`（时钟）：在窗口中显示一个手表。
+
+2. `Stopwatch`（秒表）：实现一个秒表功能。
+
+3. `Alarm`（闹钟）：用户可以设置闹钟，在给定时间后显示警告。
+
+4. `Timer`（计时器）：用户可以输入一个时间，当计时器为 0 时显示警告。
+
+5. `Appointments`（预约）：当时间到达时，当天的预约必须产生一个警告。
 
 ## Watch
 
@@ -4604,7 +4716,7 @@ JAVA 8：多线程程序日历
 
 如果你在工具栏点击闹钟，会得到显示当前时间的窗口。你可以调整时。点击开始后，窗口关闭并在日历右下角显示一个图标，表示已设置闹钟。当闹钟时间触发时，会得到如下警告，闹钟功能完成。
 
-上述对话框称为 Watch，是一个没有控制器的简单对话框。它监听 Watch 对象。
+上述对话框称为 `Watch`，是一个没有控制器的简单对话框。它监听 `Watch` 对象。
 
 ## Stopwatch
 
@@ -4614,7 +4726,7 @@ JAVA 8：多线程程序日历
 
 ![](img/0ed8bd211feab9309d377c7edae120ad_152_0.png)
 
-为了实现此功能，模型扩展了一个 Stopwatch 类。还添加了 StopEvent 事件和 StopListener 接口（均在模型层），因为 Stopwatch 类每计数一秒就会触发一次事件。该事件用于在秒表跳动时更新上述对话框。Main 类扩展了一个类型为 Stopwatch 的对象。
+为了实现此功能，模型扩展了一个 `Stopwatch` 类。还添加了 `StopEvent` 事件和 `StopListener` 接口（均在模型层），因为 `Stopwatch` 类每计数一秒就会触发一次事件。该事件用于在秒表跳动时更新上述对话框。`Main` 类扩展了一个类型为 `Stopwatch` 的对象。
 
 ![](img/0ed8bd211feab9309d377c7edae120ad_152_1.png)
 
@@ -4634,11 +4746,6 @@ JAVA 8：多线程程序日历
 
 ![](img/0ed8bd211feab9309d377c7edae120ad_153_0.png)
 
-[/content]
-
-
-
-
 点击右下角的图标会再次打开上面的对话框：
 
 ![](img/0ed8bd211feab9309d377c7edae120ad_154_0.png)
@@ -4654,18 +4761,22 @@ JAVA 8：多线程程序日历
 闹钟和倒计时都使用同一个对话框，该对话框被称为 `WatchView`。
 
 # JAVA 8：多线程程序
+
 ## 日历
 
 ## 预约 (Appointments)
 
-这是本次迭代中关于预约的最后一个功能，以及当当天的预约发生时如何显示警告。与需求规格书相比，决定了更改显示警告的时机。原因为需求规格书中的表述很容易导致产生警告。
+这是本次迭代中关于预约的最后一个功能，以及当天的预约发生时如何显示警告。与需求规格书相比，决定了更改显示警告的时机。原因为需求规格书中的表述很容易导致产生警告。
 
 为了显示警告，定义预约时应带有一个开始时间。在以下情况下应显示警告：
 
-- 1. 预约开始前 1 分钟
-- 2. 预约开始前 5 分钟
-- 3. 预约开始前 15 分钟
-- 4. 预约开始前 1 小时
+1. 预约开始前 1 分钟
+
+2. 预约开始前 5 分钟
+
+3. 预约开始前 15 分钟
+
+4. 预约开始前 1 小时
 
 警告会打开一个与上方类似的弹出窗口，但有一个“取消（Cancel）”按钮。如果你点击它，警告将不再再次出现。
 
@@ -4674,6 +4785,7 @@ JAVA 8：多线程程序日历
 ![](img/0ed8bd211feab9309d377c7edae120ad_155_0.png)
 
 # JAVA 8：多线程程序日历
+
 ## 11.4.5 迭代 5
 
 该迭代与其他迭代一样开始，创建了上一次迭代 NetBeans 项目的副本。该副本被称为 `Calendar6`。这是一个短迭代，只有一个新的对话框，用户必须在其中选择导出日历的期间。日历被导出到该对话框的控制器中。该迭代仅向项目中添加了类：创建文件的 `ExportController` 和作为对话框的 `ExportView`。
@@ -4682,17 +4794,19 @@ JAVA 8：多线程程序日历
 
 该迭代再次创建上一次迭代 NetBeans 项目的副本。该副本被称为 `Calendar7`。在此迭代结束后，编程完成，剩下的工作如下：
 
-- 1. 对整体外观和感觉进行评审。
-- 2. 实现功能选项（工具栏上的最后一个图标）。
-- 3. 代码评审和代码文档编写。
+1. 对整体外观和感觉进行评审。
+
+2. 实现功能选项（工具栏上的最后一个图标）。
+
+3. 代码评审和代码文档编写。
 
 ### 外观和感觉 (Look and feel)
 
-目标是让各个对话框看起来相同，因此它们使用相同的颜色和字体，并确保颜色和字体应用的一性。字体和颜色定义为 `Options` 类中的常量。工作是遍历所有对话框并确保字体和颜色的使用一致。此外，更改了颜色，使其看起来更加中性。最后，替换了一些图标，结果如下所示的主窗口：
+目标是让各个对话框看起来相同，因此它们使用相同的颜色和字体，并确保颜色和字体应用的一致性。字体和颜色定义为 `Options` 类中的常量。工作是遍历所有对话框并确保字体和颜色的使用一致。此外，更改了颜色，使其看起来更加中性。最后，替换了一些图标，结果如下所示的主窗口：
 
 | | | | | | | | | |
 |---|---|---|---|---|---|---|---|
-| 周一 | 星期二 | 周三 | 星期四 | 周五 | 星期六 | 周日 | |
+| 周一 | 星期二 | 周三 | 周四 | 周五 | 周六 | 周日 | |
 | 27 | (13) 28 | 29 | 30 | 31 | | 2 | |
 | 3 | (14) | 5 | 6 | 7 | 8 | 9 | |
 | 10 | (15) 11 | 12 | 13 | 14 | 15 | 16 | |
@@ -4702,6 +4816,8 @@ JAVA 8：多线程程序日历
 
 ### 选项 (Options)
 
+
+
 如果你点击工具栏上的最后一个图标，将得到一个带有四个菜单项目的弹出菜单：
 
 - 1. 数据位置
@@ -4709,40 +4825,40 @@ JAVA 8：多线程程序日历
 - 3. 删除预约
 - 4. 删除纪念日
 
-如果程序使用很长时间，数据文件可能会变得很大，特别是当存储了许多笔记时。应该有一个删除旧数据的选项。三个删除功能原则上是相同的，即获得一个输入两个日期的对话框，从而删除这些日期之间的所有（笔记、预约或纪念日）。这三个删除对话框是相同的，原则上与 `ExportView` 是同一个对话框。因此，有一个所有对话框都继承的抽象类。
+如果程序使用很长时间，数据文件可能会变得很大，特别是当存储了许多笔记时。应该有一个删除旧数据的选项。三个删除功能原则上是相同的，即获得一个输入两个日期的对话框，从而删除这些日期之间的所有（笔记、预约或纪念日）。这三个删除对话框是相同的，原则上与`ExportView`是同一个对话框。因此，有一个所有对话框都继承的抽象类。
 
-包含程序数据的 `calendar.dat` 文件创建在用户主目录下。上述第一个功能的目标是让用户能够选择保存文件的目录，并且同一个用户可以使用多个日历。文件路径必须存储在某处，已决定存储在用户目录下的隐藏文件（`.pa_calendar`）中。更改目录的必要编程放在 `DataAdapter` 类中。同时，定义了两个同步`synchronized`）方法，因为在等待预约的线程之前存在并发问题。
+包含程序数据的`calendar.dat`文件创建在用户主目录下。上述第一个功能的目标是让用户能够选择保存文件的目录，并且同一个用户可以使用多个日历。文件路径必须存储在某处，已决定存储在用户目录下的隐藏文件（`.pa_calendar`）中。更改目录的必要编程放在`DataAdapter`类中。同时，定义了两个同步（`synchronized`）方法，因为在等待预约的线程之前存在并发问题。
 
-### 代码评审 (Code review)
+## 代码评审 (Code review)
 
 在程序编写完成后，我进行了代码评审。这项工作可能花费长时间。除了更新注释和评审代码以直接处理错误和更改不便之处外，在这种情况下我更改了以下内容。
 
-`Main` 类是 `Date` 的包装类，该类并不仅仅是对 `Date` 的深度封装。最初该类本打算具有更多功能，但由于它不再是该类了，我删除了它。这意味着：
+`Main`类是`Date`的包装类，该类并不仅仅是对`Date`的深度封装。最初该类本打算具有更多功能，但由于它不再是该类了，我删除了它。这意味着：
 
-- 1. 该类有三个方法用于测试日期是否关联了预约或纪念日。这三个方法被移动到 `MainModel` 类作为静态方法。
-- 2. `MainModel` 类中所有对 `MainDate` 的引用都更改为 `Date`。
-- 3. `MainView` 类中所有对 `MainDate` 的引用都更改为 `Date`。
+- 1. 该类有三个方法用于测试日期是否关联了预约或纪念日。这三个方法被移动到`MainModel`类作为静态方法。
+- 2. `MainModel`类中所有对`MainDate`的引用都更改为`Date`。
+- 3. `MainView`类中所有对`MainDate`的引用都更改为`Date`。
 
 # JAVA 8：多线程程序
+
 ## 日历
 
-然后删除了 `MainDate` 类。删除一个类始终有遗漏某些内容的风险，但在这种情况下很简单，因为该类仅被用在 `MainModel` 和 `MainView` 中，编译器会找到所有需要更改的地方。
+然后删除了`MainDate`类。删除一个类始终有遗漏某些内容的风险，但在这种情况下很简单，因为该类仅被用在`MainModel`和`MainView`中，编译器会找到所有需要更改的地方。
 
-`MainView` 类有许多简单的内部类，定义了点击工具栏的事件处理器。这些类大部分被移除并由匿名类取代。
+`MainView`类有许多简单的内部类，定义了点击工具栏的事件处理器。这些类大部分被移除并由匿名类取代。
 
-`MainController` 类被更改了，使得显示预约消息的线程从删除所有早于当前日期的预约开始（这些必须删除）。原因是如果程序几天没有使用，否则可能会存在预约。
+`MainController`类被更改了，使得显示预约消息的线程从删除所有早于当前日期的预约开始（这些必须删除）。原因是如果程序几天没有使用，否则可能会存在预约。
 
 ![](img/0ed8bd211feab9309d377c7edae120ad_158_0.png)
 
 > 立即申请
-
-重塑你的未来
-AXA 全球毕业生计划
-2015
-
-重新定义 / 标准 [](https://upload.wikimedia.org/wikipedia/commons/a/ad/AXA_logo.svg)
+> 重塑你的未来
+> AXA 全球毕业生计划
+> 2015
+> 重新定义 / 标准 [](https://upload.wikimedia.org/wikipedia/commons/a/ad/AXA_logo.svg)
 
 # JAVA 8：多线程程序
+
 ## 11.5 测试
 
 现在测试已经完成并应该进行测试，在这种情况下对程序来说是一项相当大量的工作。可以使用以下步骤：
@@ -4762,9 +4878,9 @@ AXA 全球毕业生计划
 
 这次交付程序并运行很简单。应该只有一个 jar 文件和一个图标。安装脚本与我展示的脚本类似，此处不再，但文件夹设置包含以下三个文件：
 
-- 1. Calendar.jar
-- 2. calendar.png
-- 3. calendar.sh
+- 1. `Calendar.jar`
+- 2. `calendar.png`
+- 3. `calendar.sh`
 
 其中最后一个是安装脚本。然后可以从终端执行以下命令来安装并运行：
 
@@ -4772,10 +4888,7 @@ AXA 全球毕业生计划
 ./calendar.sh
 ```
 
-
-
-
-JAVA 8：多线程程序
+# JAVA 8：多线程程序
 
 ## 附录 A
 
@@ -4798,6 +4911,7 @@ Java 虚拟机称为 JVM（Java Virtual Machine），你可以将其想象为能
 ![](img/0ed8bd211feab9309d377c7edae120ad_161_0.png)
 
 赋能个人。改进业务。
+
 BI挪威商学院是欧洲最大的商学院之一，欢迎超过 20,000 名学生。我们的课程提供了一个激发性且多元文化的学习环境，具有国际视野，最终为学生提供满足企业需求的专业技能。
 
 BI 提供四个用英语教学的两年全日制科学硕士（MSc）课程，旨在提供满足企业日益需求的专业技能。MSc 课程提供了一个激发性且多元文化的学习环境，为你开启职业生涯提供最佳平台。
@@ -4833,20 +4947,18 @@ JVM 有几种不同的实现，最重要的是可能是来自 Microsystems 的 J
 
 ![](img/0ed8bd211feab9309d377c7edae120ad_163_1.png)
 
-堆是一个可用区域，用于在运行时分配内存和数组。当程序创建对象或数组时，它会在堆上分配所需的内存，并在 JVM 启动时创建。对象或数组使用的空间只要有引用就存在，当不再有引用时，该空间由垃圾回收器自动释放。JVM 规范没有说明堆将如何实现，它取决于实现，堆的大小是固定的还是根据需要变化的；如果程序没有足够的堆内存，你会得到 OutOfError 异常。
+堆是一个可用区域，用于在运行时分配内存和数组。当程序创建对象或数组时，它会在堆上分配所需的内存，并在 JVM 启动时创建。对象或数组使用的空间只要有引用就存在，当不再有引用时，该空间由垃圾回收器自动释放。JVM 规范没有说明堆将如何实现，它取决于实现，堆的大小是固定的还是根据需要变化的；如果程序没有足够的堆内存，你会得到`OutOfError`异常。
 
-JAVA 8：多线程程序
+# JAVA 8：多线程程序
 
 ## 附录 A
 
-栈用于维护正在执行的方法信息，每当你调用一个方法时，运行系统会在栈上创建一个激活块，该块包含局部变量、参数和返回值以及运行系统使用的操作栈。在方法被调用时创建激活块，在方法由于某种原因终止时移除。每个线程都有自己的栈，每个栈在同一时间只有一个激活的激活块，该块是线程正在执行的方法块。正如堆一样，规范没有说明栈必须如何实现，它可以是固定大小的也可以动态扩展；如果需要的栈超过可用栈，程序将以 StackOverflow 异常停止。
+栈用于维护正在执行的方法信息，每当你调用一个方法时，运行系统会在栈上创建一个激活块，该块包含局部变量、参数和返回值以及运行系统使用的操作栈。在方法被调用时创建激活块，在方法由于某种原因终止时移除。每个线程都有自己的栈，每个栈在同一时间只有一个激活的激活块，该块是线程正在执行的方法块。正如堆一样，规范没有说明栈必须如何实现，它可以是固定大小的也可以动态扩展；如果需要的栈超过可用栈，程序将以`StackOverflow`异常停止。
 
+# JAVA 8：多线程程序
 
-
-JAVA 8：多线程程序
-
-附录 A
+## 附录 A
 
 最后是常量池，用于存储常量。
 
-垃圾回收器。如所述，当使用 `new` 创建对象时，Java 会自动为该对象分配内存，而当该对象不再有引用时，分配的内存也会再次自动释放。这一切都由垃圾回收器处理，垃圾回收器是一个持续运行并管理堆的程序。它是通过一个指针表来实现的，该表指向堆上的单个对象。我们将这些指针称为智能指针，它们并不直接指向具体的对象，而是指向所指对象的引用。垃圾回收器在自己的线程中于后台运行，并定期检查对象的状态。当一个对象不再有引用时，该对象在堆上占用的空间会被释放，指针也会从表中移除。当运行时系统持续地分配和再次释放对象时，堆可能会产生碎片化；如果发生这种情况，垃圾回收器就会对堆进行碎片整理（这意味着移动对象），从而将堆上所有的可用空间汇聚到一个大的连续区域。垃圾回收器的名称便源于此。
+垃圾回收器。如所述，当使用`new`创建对象时，Java 会自动为该对象分配内存，而当该对象不再有引用时，分配的内存也会再次自动释放。这一切都由垃圾回收器处理，垃圾回收器是一个持续运行并管理堆的程序。它是通过一个指针表来实现的，该表指向堆上的单个对象。我们将这些指针称为智能指针，它们并不直接指向具体的对象，而是指向所指对象的引用。垃圾回收器在自己的线程中于后台运行，并定期检查对象的状态。当一个对象不再有引用时，该对象在堆上占用的空间会被释放，指针也会从表中移除。当运行时系统持续地分配和再次释放对象时，堆可能会产生碎片化；如果发生这种情况，垃圾回收器就会对堆进行碎片整理（这意味着移动对象），从而将堆上所有的可用空间汇聚到一个大的连续区域。垃圾回收器的名称便源于此。

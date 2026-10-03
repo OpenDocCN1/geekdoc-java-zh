@@ -1,27 +1,15 @@
+
 # Java 初学者 50 题练习
 
-
-
-
-
-
-
-
-
-![](img/d44b1b31b1a2c9a0f37a32a18b02a859_0_0.png)
-
-
-
-# 引言
+## 引言
 
 本书适用于 Java 学习者，特别是初级和中级人员。本书涵盖了以下内容。Java 版本为 8。
-
 
 在学习基础概念和语法之后，下一步是阅读和理解代码。书中的代码包含了上述类的各种方法。
 
 共有 50 道题。刚开始时题目比较简单，但难度会逐渐增加到最后。
 
-本书的主要目的是提高代码代码的理解能力，而不是详细的语法理论之类的内容。
+本书的主要目的是提高代码理解能力，而不是详细的语法理论之类的内容。
 
 请注意，为了教学目的，书中包含了一些容易混淆的问题（不建议在实际开发中使用）。
 
@@ -29,7 +17,7 @@
 
 希望你从中学习并发现新知识。
 
-# 第 1 题
+## 第 1 题
 
 选择描述该程序编译并运行结果的陈述。
 
@@ -62,31 +50,31 @@ public class Question_1 {
 - (C) 编译错误
 - (D) 运行时异常
 
-答案：(A) 输出 "Be a Java Programmer"
+**答案：(A) 输出 "Be a Java Programmer"**
 
-Method method1() 返回 String 类型的数组，并将来自 StringBuilder 对象的字符串设置到 array[0]。
+`method1()` 返回 `String` 类型的数组，并将来自 `StringBuilder` 对象的字符串设置到 `array[0]`。
 
 因此，该程序在无任何错误的情况下输出 "Be a Java Programmer"。
 
-## 注意：
+### 注意：
 
-- (1) 语句中的条件
+1.  **语句中的条件**
 
-在学习过程中你可能已经见过像 "a == 1" 这样的简单条件，你也可以在条件括号中进行计算，例如题目中第 7 行的 "a + b == c"。
+    在学习过程中你可能已经见过像 `a == 1` 这样的简单条件，你也可以在条件括号中进行计算，例如题目中第 7 行的 `a + b == c`。
 
-- (2) StringBuilder
+2.  **StringBuilder**
 
-StringBuilder 在 Java 编程中被频繁使用，因为它比仅使用 String 对象进行拼接要快。
+    `StringBuilder` 在 Java 编程中被频繁使用，因为它比仅使用 `String` 对象进行拼接要快。
 
-在之后的很多情况下，为了将 StringBuilder 对象转换为 String 对象，程序员会使用 "toString()" 方法。
+    在之后的很多情况下，为了将 `StringBuilder` 对象转换为 `String` 对象，程序员会使用 `toString()` 方法。
 
-初始化 StringBuilder 时，你有两种方式。
+    初始化 `StringBuilder` 时，你有两种方式。
 
-首先，初始化一个空的 StringBuilder 对象，如题目中第 15 行所示："StringBuilder sb = new StringBuilder();"，其次，你也可以像这样使用一个字符串来初始化："StringBuilder sb = new StringBuilder("text")."。
+    首先，初始化一个空的 `StringBuilder` 对象，如题目中第 15 行所示：`StringBuilder sb = new StringBuilder();`；其次，你也可以像这样使用一个字符串来初始化：`StringBuilder sb = new StringBuilder("text")`。
 
-如果你决定先追加第一个字符串，可以使用这种方法来简化代码。
+    如果你决定先追加第一个字符串，可以使用这种方法来简化代码。
 
-# 第 2 题
+## 第 2 题
 
 ```java
 public class Question_2_1 {
@@ -119,9 +107,9 @@ public class Question_2_2 extends Question_2_1 {
 - (C) 编译错误
 - (D) 运行时异常
 
-答案：(C) 编译错误
+**答案：(C) 编译错误**
 
-父类 Question_2_1 的字段访问修饰符全是 private 且非 static。如果它们都是 public  static，如下面的代码所示，就不会发生编译错误。
+父类 `Question_2_1` 的字段访问修饰符全是 `private` 且非 `static`。如果它们都是 `public static`，如下面的代码所示，就不会发生编译错误。
 
 ```java
 public class Question_2_1 {
@@ -131,23 +119,23 @@ public class Question_2_1 {
 }
 ```
 
-而且，子类可以使用父类的字段，因为它继承了 Question_2_2。
+而且，子类可以使用父类的字段，因为它继承了 `Question_2_2`。
 
-注意
+### 注意
 
-- (1) if 语句中的条件
+1.  **if 语句中的条件**
 
-if 语句中的条件需要布尔类型类型，所以你可以在里面写 "true" 或 "false"。如果你写 true，则内部代码将始终执行；如果写 false，则内部代码将永远不会执行。
+    `if` 语句中的条件需要布尔类型，所以你可以在里面写 `true` 或 `false`。如果你写 `true`，则内部代码将始终执行；如果写 `false`，则内部代码将永远不会执行。
 
-这被称为“不可达语句”（Unreachable Statement）。
+    这被称为“不可达语句”。
 
-还有一点，像这道题一样，在实际编码场景中不建议在 if 条件中写 "true"，因为如果内部代码始终会执行，你就不需要使用 if 语句了。
+    还有一点，像这道题一样，在实际编码场景中不建议在 `if` 条件中写 `true`，因为如果内部代码始终会执行，你就不需要使用 `if` 语句了。
 
-- (2) System.out.println()
+2.  **System.out.println()**
 
-你可能已经见过用它输出 String，但你也可以用它输出其他类型，如 Long、int 等。System.out.println()
+    你可能已经见过用它输出 `String`，但你也可以用它输出其他类型，如 `Long`、`int` 等。
 
-# 第 3 题
+## 第 3 题
 
 选择描述该程序编译并运行结果的陈述。
 
@@ -175,25 +163,25 @@ public class Question_3 {
 - (C) 输出为空
 - (D) 运行时异常
 
-答案：(A) 输出 "ldt1 and ldt2"
+**答案：(A) 输出 "ldt1 and ldt2"**
 
-在这段代码中，flg 为 true 是因为 ldt1 是一个对象。
+在这段代码中，`flg` 为 `true` 是因为 `ldt1` 是一个对象。
 
-注意
+### 注意
 
-- (1) LocalDateTime
+1.  **LocalDateTime**
 
-这是从 Java 8 开始的。你可以使用格式 yyyy-MM-dd。
+    这是从 Java 8 开始的。你可以使用格式 `yyyy-MM-dd`。
 
-- (2) return
+2.  **return**
 
-有两种方法使用它。
+    有两种方法使用它。
 
-- (3) instanceof
+3.  **instanceof**
 
-此运算符检查参数是否为某个类。在第 21 行。
+    此运算符检查参数是否为某个类。在第 21 行。
 
-# 第 4 题
+## 第 4 题
 
 选择作为 "// code" 的代码输出 "JAVA" 的陈述。
 
@@ -225,35 +213,31 @@ public class Question_4 {
 - (C) Boolean flg = null;
 - (D) Object flg = null;
 
-答案：(B) boolean flg = false;
+**答案：(B) boolean flg = false;**
 
-在这段代码中，创建 map 对象并存入键值。目标是按添加顺序输出 map 对象中的值。
+在这段代码中，创建 `map` 对象并存入键值。目标是按添加顺序输出 `map` 对象中的值。
 
-在第 15 行的 if 条件中，如果 flg 为 true，程序将输出所有键；如果是 false，则输出所有值。所以答案是 (B)。
+在第 15 行的 `if` 条件中，如果 `flg` 为 `true`，程序将输出所有键；如果是 `false`，则输出所有值。所以答案是 (B)。
 
-注意
+### 注意
 
-- (1)LinkedHashMap
+1.  **LinkedHashMap**
 
-当你开始学习 Java 时，大多数情况下先学 HashMap。在这种情况下，我们需要按添加顺序输出所有值。HashMap 不保证顺序，所以这就是为什么这段代码使用 LinkedHashMap。
+    当你开始学习 Java 时，大多数情况下先学 `HashMap`。在这种情况下，我们需要按添加顺序输出所有值。`HashMap` 不保证顺序，所以这就是为什么这段代码使用 `LinkedHashMap`。
 
-- (2)关于 (C) 和 (D)
+2.  **关于 (C) 和 (D)**
 
-关于 (C)：如果你在代码中写 "Boolean flg = null;"，不会发生编译错误，但如果你在代码中写 "boolean flg = null;"，就会发生。
+    关于 (C)：如果你在代码中写 `Boolean flg = null;`，不会发生编译错误，但如果你在代码中写 `boolean flg = null;`，就会发生。
 
-这是基本类型和对象之间的区别。基本类型是值本身。对象提供引用，null 表示没有引用。因此对象是可以空的（nullable）。
+    这是基本类型和对象之间的区别。基本类型是值本身。对象提供引用，`null` 表示没有引用。因此对象是可以为空的。
 
-关于 (D)：Object 类封装了所有类，所以如果你在代码中写它就不会发生编译错误。
+    关于 (D)：`Object` 类封装了所有类，所以如果你在代码中写它就不会发生编译错误。
 
-- (3)forEach
+3.  **forEach**
 
-这是 Java 8 添加的 StreamAPI 中的一个方法。它对流中的所有元素执行操作。
+    这是 Java 8 添加的 StreamAPI 中的一个方法。它对流中的所有元素执行操作。
 
-对于初学者来说，最好将其视为编写集合 for 循环的替代方法。严格来说，它们并不相同，但起初足够了。
-
-
-
-
+    对于初学者来说，最好将其视为编写集合 `for` 循环的替代方法。严格来说，它们并不相同，但起初足够了。
 
 ## 问题 5
 
@@ -292,38 +276,37 @@ public class Question_5_2 {
 - (C) 输出无
 - (D) 编译错误或运行时异常
 
-答案：(B) 输出 true false
+**答案：(B) 输出 true false**
 
-在此代码的第 8 行，正在比较两个 Question_5_1 实例的字段的设置值。
+在此代码的第 8 行，正在比较两个 `Question_5_1` 实例的字段的设置值。
 
-它返回 true，所以程序无论如何都会输出，这就是为什么选项 (C) 是错误的。第 10 行的条件返回 false，因此选项 (B) 是正确的。
+它返回 `true`，所以程序无论如何都会输出，这就是为什么选项 (C) 是错误的。第 10 行的条件返回 `false`，因此选项 (B) 是正确的。
 
-## 注意事项
+### 注意事项
 
-- (1) 不在花括号内另起行
+1.  **不在花括号内另起行**
 
-在花括号内另起行在 Java 编程中非常常见。
+    在花括号内另起行在 Java 编程中非常常见。
 
-当然，如果存在多个语句，这样做可以提高代码的可读性，但如果花括号内只有一个语句，不另起行是编写代码的好方法。
+    当然，如果存在多个语句，这样做可以提高代码的可读性，但如果花括号内只有一个语句，不另起行是编写代码的好方法。
 
-## 比较
+    **比较**
 
-```java
-<不另起行>
+    ```java
+    <不另起行>
+    { // 此处有某些代码; }
 
-{ // 此处有某些代码; }
+    <另起行>
+    {
+      // 此处有某些代码;
+    }
+    ```
 
-<另起行>
-{
-  // 此处有某些代码;
-}
-```
+2.  **Object 类的 equals 方法**
 
-- (2) Object 类的 equals 方法
+    在第 10 行，正在比较两个实例是否为同一个“实例”。
 
-在第 10 行，正在比较两个实例是否为同一个“实例”。
-
-正如你在第 5 行和第 6 行所示，字段的值相同，但它们是不同的实例。这就是为什么条件返回 false 的原因；
+    正如你在第 5 行和第 6 行所示，字段的值相同，但它们是不同的实例。这就是为什么条件返回 `false` 的原因。
 
 ## 问题 6
 
@@ -352,39 +335,39 @@ public class Question_6 {
 - (C) 输出 ABCD
 - (D) 输出 ABDC
 
-答案：(C) 输出 ABCD
+**答案：(C) 输出 ABCD**
 
-在第 5 行，!false 等于 true，所以循环开始。
+在第 5 行，`!false` 等于 `true`，所以循环开始。
 
-在第 8 行发生了一个异常，因为参数不是数字，所以 catch 和 finally 块中的语句将被执行。
+在第 8 行发生了一个异常，因为参数不是数字，所以 `catch` 和 `finally` 块中的语句将被执行。
 
-## 注意事项：
+### 注意事项：
 
-- (1) Integer.parseInt()
+1.  **Integer.parseInt()**
 
-这是 Integer 类的一个静态方法。它将 String 参数转换为 int 值，在 Java 编程中非常常见。
+    这是 `Integer` 类的一个静态方法。它将 `String` 参数转换为 `int` 值，在 Java 编程中非常常见。
 
-当参数不是数字（作为值，而不是作为类型）时，会发生 NumberFormatException。这是与 NullPointerException 一样著名的异常之一。
+    当参数不是数字（作为值，而不是作为类型）时，会发生 `NumberFormatException`。这是与 `NullPointerException` 一样著名的异常之一。
 
-- (2) break 语句和 finally 块的处理顺序
+2.  **break 语句和 finally 块的处理顺序**
 
-正如你在第 11 行所示，程序将因此退出 while 循环。
+    正如你在第 11 行所示，程序将因此退出 `while` 循环。
 
-finally 块将优先执行，然后退出 while 循环。
+    `finally` 块将优先执行，然后退出 `while` 循环。
 
-- (3) catch 块
+3.  **catch 块**
 
-在此代码中，你只看到一个 catch 块，但你可以通过编写多个 catch 块来处理每个异常。
+    在此代码中，你只看到一个 `catch` 块，但你可以通过编写多个 `catch` 块来处理每个异常。
 
-如果你希望根据每个异常得到不同的结果，你应该这样写代码：
+    如果你希望根据每个异常得到不同的结果，你应该这样写代码：
 
-```java
- } catch (NullPointerException e) {
-  // 此处有某些代码;
-} catch (NumberFormatException e) {
-  // 此处有某些代码;
-}
-```
+    ```java
+    } catch (NullPointerException e) {
+      // 此处有某些代码;
+    } catch (NumberFormatException e) {
+      // 此处有某些代码;
+    }
+    ```
 
 ## 问题 7
 
@@ -411,31 +394,29 @@ public class Question_7 {
 - (C) 编译错误
 - (D) 运行时异常
 
-答案：(A) 输出 Hello
+**答案：(A) 输出 Hello**
 
-在第 9 行，向 method1 传递参数 "Hello "*
+在第 9 行，向 `method1` 传递参数 "Hello "。
 
-在 method 1 中，str1 从 "Hello " 变为 "Hello World"，但这段代码输出 "Hello"。
+在 `method1` 中，`str1` 从 "Hello " 变为 "Hello World"，但这段代码输出 "Hello"。
 
 让我们从下面详细查看。
 
-注意事项：
+### 注意事项：
 
-- (1) 值
+1.  **值传递**
 
-在第 9 行传递给 method1 的参数是值，因此 main 方法中的变量 str1 与 method1 中的 str1 不同。它只是一个副本。
+    在第 9 行传递给 `method1` 的参数是值，因此 `main` 方法中的变量 `str1` 与 `method1` 中的 `str1` 不同。它只是一个副本。
 
-method1 中的变量 str1 发生了变化，正如你在第 17 行所示，但这段代码输出 "Hello"。
-
-- (2) 值
-
-在第 9 行传递给 method1 的参数是值，因此 main 方法中的变量 str1 与 method1 中的 str1 不同。它只是一个副本。
-
-method1 中的变量 str1 发生了变化，正如你在第 17 行所示，但这段代码输出 "Hello"。
+    `method1` 中的变量 `str1` 发生了变化，正如你在第 17 行所示，但这段代码输出 "Hello"。
 
 ## 问题 8
 
 选择一个描述此程序编译和运行后的结果的语句。
+
+
+
+## 问题 8
 
 ```java
 public class Question_8 {
@@ -456,19 +437,7 @@ public class Question_8 {
 
 答案：(C) 16
 
-在第 5 行，list1 被初始化。
-
-```java
-public class Question_8 {
-    public static void main(String[] args) {
-        List<String> list1 = new ArrayList<>();
-        list1.add("This ");
-        list1.add("list ");
-        list1.add("is ");
-        System.out.println(list1.size());
-    }
-}
-```
+在第 5 行，`list1` 被初始化。
 
 ## 问题 9
 
@@ -497,11 +466,7 @@ public class Question_9 {
 
 答案：(A) 输出 true
 
-在第 17 行，map.get(1) 返回 2，map.size() 返回 1，所以程序输出 true。
-
-
-
-
+在第 17 行，`map.get(1)` 返回 2，`map.size()` 返回 1，所以程序输出 true。
 
 ## 问题 10
 
@@ -532,37 +497,29 @@ public class Question_10 {
 
 答案：(D) 运行时异常
 
-在第 12 行，method1 返回 null，因为参数大于 0。
+在第 12 行，`method1` 返回 `null`，因为参数大于 0。
 
 之后，在第 6 行发生了运行时异常，因此答案是 (D)。
 
-## 备注：
+### 备注
 
-- (1) NullPointerException（空指针异常）
+- (1) `NullPointerException`（空指针异常）
 
-此异常是 Java 编程中最为著名的异常之一。
+  此异常是 Java 编程中最为著名的异常之一。在大多数情况下，Java 程序员至少会遇到这种异常一次。
 
-在大多数情况下，Java 程序员至少会遇到这种异常一次。
+  ```java
+  if (a == 0 && a != null)
+  ```
 
-```
-<if condition in this code>
-```
+  在这段代码的第 6 行，使用运算符 `==` 比较 `null` 和 0，这就是发生异常的原因。
 
-在这段代码的第 6 行，使用运算符 "===" 比较 null 和 0，这就是发生异常的原因。
+  为了同时评估 `a == 0` 和 `a != null` 两个条件，请调换它们的顺序。这样做，你可以先进行空检查，如果是 `null`，则返回 `false` 且不会发生运行时异常。
 
-为了同时评估 "a = 0" 和 "a != null" 两个条件，请调换它们的顺序。这样做，你可以先进行空检查，如果是 null，则返回 false 且不会发生运行时异常。
+  ```java
+  if (a != null && a == 0)
+  ```
 
-```
-<happens normally>
-```
-
-这种异常经常出现。
-
-例如，有人急于发布应用程序，在没有进行空检查的情况下编写了代码。
-
-应用程序发布后，由于代码缺少空检查，程序因 NullPointerException 而停止。
-
-如果有足够的时间进行测试，这种情况就不会发生，但有时没有时间。所以，这不是一个奇怪的情况，而是正常发生的。
+  这种异常经常出现。例如，有人急于发布应用程序，在没有进行空检查的情况下编写了代码。应用程序发布后，由于代码缺少空检查，程序因 `NullPointerException` 而停止。如果有足够的时间进行测试，这种情况就不会发生，但有时没有时间。所以，这不是一个奇怪的情况，而是正常发生的。
 
 ## 问题 11
 
@@ -597,41 +554,23 @@ public class Question_11 {
 
 答案：(C) 输出 file1 is csv file
 
-该程序的作用是检查 file1 是否为 csv 文件，并输出不带扩展名的文件名结果。
+该程序的作用是检查 `file1` 是否为 csv 文件，并输出不带扩展名的文件名结果。你可以从中学习 `String` 类的几种方法。
 
-你可以从中学习 String 类的几种方法。
+### 备注
 
-## 备注：
+- (1) `String`
 
-- (1) String
+  - `indexOf()`：此方法返回参数在 `String` 中出现的索引。它的计数方式与数组元素相同，`file1.csv` 包含 8 个字符，而 `.` 出现的索引是 5。
 
-```
-<method indexOf()>
-```
+  - `substring()`：此方法返回按指定范围截取的字符串。以下是理解方式：
 
-此方法返回参数在 String 中出现的索引。
+    | f | i | l | e | 1 | . | c | s | v |
+    |---|---|---|---|---|---|---|---|---|
+    | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
 
-它的计数方式与数组元素相同，file1.csv 包含 8 个字符，而 "." 出现的次数是 5。
+    如果你获取上述范围 0 到 5 的截取字符串，就可以像本题第 5 行代码中那样获得不带扩展名的 `fileName`。
 
-```
-<method substring()>
-```
-
-此方法返回按指定范围截取的字符串。以下是理解方式：
-
-| f | i | l | e | 1 | . | c | s | v |
-|---|---|---|---|---|---|---|---|---|
-| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 
-
-如果你获取上述范围 0 到 5 的截取字符串，就可以像本题第 5 行代码中那样获得不带扩展名的 fileName。
-
-```
-<method endsWith()>
-```
-
-与上述两种相比，这个方法很容易理解。通过阅读方法名就可以猜测它是检查字符串是否以参数结尾。
-
-如果是，它返回 true；否则返回 false。
+  - `endsWith()`：与上述两种相比，这个方法很容易理解。通过阅读方法名就可以猜测它是检查字符串是否以参数结尾。如果是，它返回 `true`；否则返回 `false`。
 
 ## 问题 12
 
@@ -665,28 +604,26 @@ public class Question_12 {
 
 答案：(D) 运行时异常
 
-在第 7 行，if 条件返回 true，因为 value 是数字。
+在第 7 行，`if` 条件返回 `true`，因为 `value` 是数字。然而，在第 9 行发生了运行时异常，因为 `a` 是 `Integer` 类型。
 
-然而，在第 9 行发生了运行时异常，因为 a 是 Integer 类型。从下方详细查看。
+### 备注
 
-## 备注：
+- (1) `ClassCastException`（类型转换异常）
 
-- (1) ClassCastException（类型转换异常）
+  当将对象转换为没有继承关系的类型时发生此异常。第 8 行的 `String` 和 `Integer` 是这种异常的很好的例子。
 
-当将对象转换为没有继承关系的类型时发生此异常。第 8 行的 String 和 Integer 是这种异常的很好的例子。
+  <at line 8>
 
-<at line 8>
+  在第 8 行，当初始化 `a` 时，编译器直到程序运行才知道 `a` 的类型。以下是该代码中第 8 行的两种写法：
 
-在第 8 行，当初始化 a 时，编译器直到程序运行才不知道 a 的类型。以下是该代码中第 8 行的两种写法：
+  - 1. `Object a = Integer.parseInt(str);`
+  - 2. `Integer a = Integer.parseInt(str);`
 
-- 1. Object a = Integer.parseInt(str);
-- 2. Integer a = Integer.parseInt(str);
+  如果你用方式 2 重写第 8 行，则在第 9 行发生编译错误，因为初始化 `a` 告诉了编译器 `a` 的类型。
 
-如果你用方式 2 重写第 8 行，则在第 9 行发生编译错误，因为初始化 a 告诉了编译器 a 的类型。
+- (2) `method1`
 
-(2) method1
-
-在第 14 行，method1 是名字。然而，在实际编码情况下，这种类型的名称通常以 "is" 开头。例如 "isString"、isNumber"、isFile"。你应该像上面那样命名方法，如果检查某些内容并返回 boolean 值。
+  在第 14 行，`method1` 是名字。然而，在实际编码情况下，这种类型的名称通常以 `is` 开头。例如 `isString`、`isNumber`、`isFile`。你应该像上面那样命名方法，如果检查某些内容并返回 `boolean` 值。
 
 ## 问题 13
 
@@ -716,38 +653,32 @@ public class Question_13 {
 
 答案：(D) 运行时异常
 
-这段代码似乎输出了最后一个元素，但在输出转换为大写的最后一个元素时使用 array.length 是错误的。
+这段代码似乎输出了最后一个元素，但在输出转换为大写的最后一个元素时使用 `array.length` 是错误的。
 
-## 备注
+### 备注
 
-- (1) toUpperCase
+- (1) `toUpperCase`
 
-此方法在第 10 行。它非常简单易于理解。它将小写转换为大写。
+  此方法在第 10 行。它非常简单易于理解。它将小写转换为大写。
 
-- (2) array
+- (2) `array`
 
-```
-<operate all elements>
-```
+  - <operate all elements>
 
-在第 6 到 11 行，这个循环经常用于操作所有元素，所以 array 如下所示变为大写。
+    在第 6 到 11 行，这个循环经常用于操作所有元素，所以 `array` 如下所示变为大写。
 
-```
-before : { "a", "b", "c" }
-after : { "A", "B", "C" }
-```
+    ```
+    before : { "a", "b", "c" }
+    after : { "A", "B", "C" }
+    ```
 
-```
-<get the last element>
-```
+  - <get the last element>
 
-代码中，因为有三个元素，array length 返回 3。然而，获取最后一个元素需要写 array[2]。在第 13 行，array[3] 等于 3，所以发生了运行时异常。
+    代码中，因为有三个元素，`array.length` 返回 3。然而，获取最后一个元素需要写 `array[2]`。在第 13 行，`array[3]` 等于 3，所以发生了运行时异常。
 
-- (3) ArrayIndexOutOfBoundsException（数组越界异常）
+- (3) `ArrayIndexOutOfBoundsException`（数组越界异常）
 
-这是程序运行时发生的异常。
-
-最好记住这个异常，因为在编码情况下经常会看到。
+  这是程序运行时发生的异常。最好记住这个异常，因为在编码情况下经常会看到。
 
 ## 问题 14
 
@@ -777,44 +708,34 @@ public class Question_14 {
 
 答案：(B) 输出 ABC
 
-在第 7 到 16 行，a 大于 9 的可能性不存在（10000 次）。
+在第 7 到 16 行，`a` 大于 9 的可能性不存在（10000 次）。然而，`a` 不可能大于 9，因为第 9 行的 `nextInt()` 方法返回 0 到 9 之间的随机数。结果，该程序输出 ABC。
 
-然而，a 不可能大于 9，因为第 9 行的 nextInt() 方法返回 0 到 9 之间的随机数。
+### 备注
 
-结果，该程序输出 ABC。
+- (1) `Random`
 
-## 备注：
+  - `nextInt()`：如上所述，此方法返回 0 到参数之间的随机数。
 
-- (1) Random
+  <Rock, Paper, Scissors Game>
 
-- <methodInt()>
+  下面是使用此方法的另一个示例，该程序是简单的剪刀石头布游戏。
 
-如上所述，此方法返回 0 到参数之间的随机数。
+  ```java
+  public static void main(String[] args) {
+      String[] array = {
+          "Rock",
+          "Paper",
+          "Scissors"
+      };
+      System.out.println(array[new Random().nextInt(3)]);
+  }
+  ```
 
-<Rock, Paper, Scissors Game>
-
-下面是使用此方法的另一个示例，该程序是简单的剪刀石头布游戏。
-
-```java
-public static void main(String[] args) {
-    String[] array = {
-        "Rock",
-        "Paper",
-        "Scissors"
-    };
-    System.out.println(array[new Random().nextInt(3)]);
-}
-```
-
-创建一个包含 Rock, Paper, Scissors 字符串的数组。输出数组成员时，通过 nextInt() 方法提供随机数作为数组索引。因此，该程序在编译并运行时会随机输出 Rock、Paper 或 Scissors。
-
-
-
-
+  创建一个包含 Rock, Paper, Scissors 字符串的数组。输出数组成员时，通过 `nextInt()` 方法提供随机数作为数组索引。因此，该程序在编译并运行时会随机输出 Rock、Paper 或 Scissors。
 
 ## 问题 15
 
-在目录(C:/Users/user/Desktop/)中有三个文本文件。
+在目录 `C:/Users/user/Desktop/` 中有三个文本文件。
 
 <directory (C:/Users/user/Desktop/)>
 
@@ -825,70 +746,60 @@ public static void main(String[] args) {
 请选择一个描述该程序在编译并运行结果的陈述。
 
 ```java
-1 public class Question_15 {
-2
-3 public static void main(String[] args) {
-4
-5 File dir = new File("C:/Users/user/Desktop/");
-6
-7 Arrays.stream(dir.listFiles()).forEach(file -> {
-8 System.out.print(file.getName() + " ");
-9 });
-10
-11 }
-12
-13 }
+public class Question_15 {
+
+    public static void main(String[] args) {
+
+        File dir = new File("C:/Users/user/Desktop/");
+
+        Arrays.stream(dir.listFiles()).forEach(file -> {
+            System.out.print(file.getName() + " ");
+        });
+
+    }
+
+}
 ```
 
-(A) 输出 file1.txtfile2.txtfile3.txt
-(B) 输出 null
-(C) 编译错误
-(D) 运行时异常
+- (A) 输出 file1.txt file2.txt file3.txt
+- (B) 输出 null
+- (C) 编译错误
+- (D) 运行时异常
 
-答案：(A) 输出 file1.txtfile2.txtfile3.txt
+答案：(A) 输出 file1.txt file2.txt file3.txt
 
 该程序的功能如下：
 
-- 1. 获取目录 (C:/Users/user/Desktop/) 中的所有文件
+- 1. 获取目录 `C:/Users/user/Desktop/` 中的所有文件
 - 2. 输出所有文件的名称
 
-备注：
+### 备注
 
-(1) File
+- (1) `File`
 
-```
-<create file object>
-```
+  - <create file object>
 
-File 类是操作文件对象的良好选择。
+    `File` 类是操作文件对象的良好选择。如第 5 行所示，如果你想通过向 `File` 类的构造函数传递文件路径来创建目录对象，也可以使用 `File` 类。
 
-如第 5 行所示，如果你想通过向 File 类的构造函数传递文件路径来创建目录对象，也可以使用 File 类。
+  - `listFiles()`：这个方法非常常见。在第 7 行，它将目录中的所有文件以 `File` 类型数组的形式返回。
 
-```
-<method listFiles()>
-```
+  - `getName()`：在第 8 行，你可以看到这个方法。它只返回文件名。如果你输出 `file` 而不是 `file.getName()`，它将输出带有完整路径每个文件对象。
 
-这个方法非常常见。在第 7 行，它将目录中的所有文件以 File 类型数组的形式返回。
+- (2) `Arrays`
 
-```
-<method getName()>
-```
+  在第 7 行，`forEach()` 方法与问题 4 中的方法相同。它属于 StreamAPI，但 `File` 类型的数组没有 `stream()` 方法，因此该程序第 7 行到第 9 行的操作如下：
 
-在第 8 行，你可以看到这个方法。它只返回文件名。如果你输出 "file" 而不是 "file.getName()"，它将输出带有完整路径每个文件对象。
+  - 1. 创建 `File` 类型数组的流
+  - 2. 使用流的 `forEach()` 方法
+  - 3. 输出每个元素
 
-(2) Arrays
-
-在第 7 行，`forEach()` 方法与问题 4 中的方法相同。它属于 StreamAPI，但 File 类型的数组没有 `stream()` 方法，因此该程序第 7 行到第 9 行的操作如下：
-
-- 1. 创建 File 类型数组的流
-- 2. 使用流的 `forEach()` 方法
-- 3. 输出每个元素
-
-箭头 (->) 之前的参数 `file` 是流中的单个元素。
+  箭头 (`->`) 之前的参数 `file` 是流中的单个元素。
 
 ## 问题 16
 
 请选择一个描述该程序在编译并运行结果的陈述。
+
+
 
 ```java
 public class Question_16 {
@@ -913,23 +824,23 @@ public class Question_16 {
 ```
 
 - (A) 输出 switch
-(B) 无输出
-(C) 编译错误
-(D) 运行时异常
+- (B) 无输出
+- (C) 编译错误
+- (D) 运行时异常
 
 答案：(C) 编译错误
 
 在第 4 行到第 6 行，都是变量。
 
-然而，switch 语句中的 case 子句需要 `final` 变量，因此在第 12 行、15 行、17 行发生编译错误。
+然而，`switch` 语句中的 `case` 子句需要 `final` 变量，因此在第 12 行、15 行、17 行发生编译错误。
 
 备注：
 
-- (1) switch 语句
+### (1) `switch` 语句
 
-与 if 语句相比，如果有很多条件条件，switch 语句是更好的选择。
+与 `if` 语句相比，如果有很多条件，`switch` 语句是更好的选择。
 
-## <使用 if-else 语句的三个条件>
+## <使用 `if-else` 语句的三个条件>
 
 ```java
 1 if (condition1) {
@@ -941,7 +852,7 @@ public class Question_16 {
 7 }
 ```
 
-## <使用 switch 语句的三个条件>
+## <使用 `switch` 语句的三个条件>
 
 ```java
 1 switch ("*) {
@@ -951,15 +862,15 @@ public class Question_16 {
 5 }
 ```
 
-上述代码第 4 行的 "default" 与 if switch 语句中的 else 相同。
+上述代码第 4 行的 `default` 与 `if` `switch` 语句中的 `else` 相同。
 
-另一个选择 if 语句或 switch 语句的点取决于条件是简单还是复杂。
+另一个选择 `if` 语句或 `switch` 语句的点取决于条件是简单还是复杂。
 
-switch 语句需要 `final` 变量并且看起来简单，但 if 语句可以比 switch 语句更容易地评估复杂的条件。
+`switch` 语句需要 `final` 变量并且看起来简单，但 `if` 语句可以比 `switch` 语句更容易地评估复杂的条件。
 
 ## 问题 17
 
-以下是文件 (C:/Users/user/Desktop/abc.properties) 的内容。
+以下是文件 (`C:/Users/user/Desktop/abc.properties`) 的内容。
 
 ```properties
 1 key=value
@@ -988,48 +899,42 @@ switch 语句需要 `final` 变量并且看起来简单，但 if 语句可以比
 ```
 
 - (A) 输出 value
-(B) 输出 java
-(C) 输出 null
-(D) 编译错误或运行时异常
+- (B) 输出 java
+- (C) 输出 null
+- (D) 编译错误或运行时异常
 
 答案：(B) 输出 java
 
-(1) 该程序的功能如下
+### (1) 该程序的功能如下
 
-- 1. 从 properties 文件创建 FileInputStream。
-- 2. 加载并使其为空。
-- 3. 设置键值并输出。
-- 4. 关闭流（避免内存泄漏）。
+1. 从 properties 文件创建 `FileInputStream`。
+2. 加载并使其为空。
+3. 设置键值并输出。
+4. 关闭流（避免内存泄漏）。
 
 备注：
 
 ### (1) properties 文件
 
-这种文件以 ".properties" 扩展名结尾。
+这种文件以 `.properties` 扩展名结尾。
 
 这只是简单的键值对内容，用于存储 Java 程序的配置。
 
-(2) Properties
+### (2) `Properties`
 
 此类用于操作上述的 properties 文件。
 
-```
-<method load()>
-```
+#### `<method load()>`
 
 在第 8 行，此方法用于加载 properties 文件。你只需要通过向此方法传递 `FileInputStream` 来加载它即可。
 
-```
-<method clear()>
-```
+#### `<method clear()>`
 
-在加载 properties 文件后，对象 property 在这种情况下有一个 "key" 和 "value" 条目。如果你使用此方法，对象 property 将没有条目集。它将是空的。
+在加载 properties 文件后，对象 `property` 在这种情况下有一个 "key" 和 "value" 条目。如果你使用此方法，对象 `property` 将没有条目集。它将是空的。
 
-```
-<method setProperty() and getProperty()>
-```
+#### `<method setProperty() and getProperty()>`
 
-这两个方法都非常易于理解。你可以设置键值内容，或者通过键获取它。如果 property 对象中没有条目，`getProperty()` 方法将返回 null。
+这两个方法都非常易于理解。你可以设置键值内容，或者通过键获取它。如果 `property` 对象中没有条目，`getProperty()` 方法将返回 `null`。
 
 ## 问题 18
 
@@ -1061,46 +966,47 @@ public class static Question_18 {
 }
 ```
 
-- (A) sb.toString().equals(text)
-(B) !sb.toString().equals(text)
-(C) true
-(D) false
+- (A) `sb.toString().equals(text)`
+- (B) `!sb.toString().equals(text)`
+- (C) `true`
+- (D) `false`
 
-答案：(B) !sb.toString().equals(text)
+答案：(B) `!sb.toString().equals(text)`
 
-该程序的 shuffleText 方法的功能如下：
+该程序的 `shuffleText` 方法的功能如下：
 
-- 1. 循环直到返回与参数不同的文本
-- 2. 创建列表并添加参数的每个字符
-- 3. 将列表转换为 StringBuilder
-- 4. 从 StringBuilder 返回字符串
+1. 循环直到返回与参数不同的文本
+2. 创建列表并添加参数的每个字符
+3. 将列表转换为 `StringBuilder`
+4. 从 `StringBuilder` 返回字符串
 
 备注：
 
-(1) toCharArray()
+### (1) `toCharArray()`
 
-这个方法在第 11 行到第 13 行操作 String 的每个字符时非常常见。
+这个方法在第 11 行到第 13 行操作 `String` 的每个字符时非常常见。
 
 在第 12 行使用 `String.valueOf()` 记得转换为字符串。
 
-(2) Collections.shuffle()
+### (2) `Collections.shuffle()`
 
 这个方法非常有用。如果你想打乱列表的元素，只需编写此并传递列表作为参数即可。
 
-(3) 本题答案
+### (3) 本题答案
 
-条件 (B) "!sb.toString().equals(text)" 检查打乱后的字符串是否与参数不同。
+条件 (B) `!sb.toString().equals(text)` 检查打乱后的字符串是否与参数不同。
 
 如果是，则返回（因为此代码本不应该返回相同的值）。
 
-然而，使用第 18 行的条件 (A) "sb.toString().equals(text)"此代码将只返回相同的值。
+然而，使用第 18 行的条件 (A) `sb.toString().equals(text)` 此代码将只返回相同的值。
 
 在此代码中，它始终返回 "java"。
 
 ## 问题 19
 
-Character.isLetter() 方法在参数是字母时返回 true。
-请选择一个描述 "// code here" 的陈述，使下面代码的 `isAlphabet()` 方法在方法参数是字母时返回 true。
+`Character.isLetter()` 方法在参数是字母时返回 `true`。
+
+请选择一个描述 "// code here" 的陈述，使下面代码的 `isAlphabet()` 方法在方法参数是字母时返回 `true`。
 
 ```java
 public class Question_19 {
@@ -1124,30 +1030,25 @@ public class Question_19 {
 }
 ```
 
-- (A) cnt < 1
-(B) cnt > 1
-(C) cnt < 2
-(D) cnt > 2
+- (A) `cnt < 1`
+- (B) `cnt > 1`
+- (C) `cnt < 2`
+- (D) `cnt > 2`
 
-
-
-
-答案：(A) cnt < 1
+答案：(A) `cnt < 1`
 
 此程序的 `isAlphabet()` 方法的作用如下：
 
-- 1. 从参数创建 `charArray`
-- 2. 对其中的所有字符进行操作
-- 3. 如果不是字母，则 `cnt` 加1
-- 4. 如果 `cnt` 小于1（从未增加），则返回
+1. 从参数创建 `charArray`
+2. 对其中的所有字符进行操作
+3. 如果不是字母，则 `cnt` 加1
+4. 如果 `cnt` 小于1（从未增加），则返回
 
 ## 注意：
 
-- (1) 在编码场景中何时使用这段代码
+### (1) 在编码场景中何时使用这段代码
 
-```
-<method isAlphabet()>
-```
+#### `<method isAlphabet()>`
 
 `isAlphabet()` 方法根据检查参数的结果返回布尔值。
 
@@ -1155,7 +1056,7 @@ public class Question_19 {
 
 例如，来自用户输入的参数发送的消息、目录内的文件名、数据库中的某列等。
 
-## <第 5 行到 8 行>
+### <第 5 行到 8 行>
 
 在实际编码场景中，这段代码可以用于输出或存储所有非字母字符串作为错误消息。
 
@@ -1167,7 +1068,7 @@ public class Question_19 {
 
 ## 问题 20
 
-下面是 zip 文件内部 (C:/Users/user/Desktop/file.zip)。
+下面是 zip 文件内部 (`C:/Users/user/Desktop/file.zip`)。
 
 - 1 file1.txt
 - 2 file2.txt
@@ -1175,7 +1076,7 @@ public class Question_19 {
 
 选择一个描述该程序编译并运行结果的语句。
 
-```
+```java
 public class Question_20 {
     public static void main(String[] args) throws Exception {
         File file = new File("C:/Users/user/Desktop/file.zip ");
@@ -1190,7 +1091,7 @@ public class Question_20 {
 }
 ```
 
-- (A) 输出 file1.txtfile2.txt3.txt
+- (A) 输出 file1.txtfile2.txtfile3.txt
 - (B) 输出为空
 - (C) 编译错误
 - (D) 运行时异常
@@ -1199,26 +1100,22 @@ public class Question_20 {
 
 此程序的作用如下：
 
-- 1. 从 zip 文件创建 `ZipInputStream`
-- 2. 循环判断如果元素不为空则输出文件名
+1. 从 zip 文件创建 `ZipInputStream`
+2. 循环判断如果元素不为空则输出文件名
 
 注意：
 
-(1) zip 文件处理
+### (1) zip 文件处理
 
 该代码循环只检查标准 Java 库，不包含任何外部库，是 Java 中处理 zip 文件的基础代码。
 
 下面是详细的处理顺序：
 
-- 1. 创建 `ZipInputStream` 后，创建 `ZipEntry` 对象。该对象是 zip 文件中的一个元素（文件）。
+1. 创建 `ZipInputStream` 后，创建 `ZipEntry` 对象。该对象是 zip 文件中的一个元素（文件）。
+2. 在 `while` 循环中，检查 `ZipEntry` 对象是否为空，输出 `fileName`，并在每次循环关闭 `ZipEntry` 对象。并在循环最后像增加数字一样将下一个 `ZipEntry` 对象赋值给变量 `entry`。
+3. 像第 11 行和第 15 行一样关闭 `ZipEntry` 对象和 `ZipInputStream`。
 
-- 2. 在 `while` 循环中，检查 `ZipEntry` 对象是否为空，输出 `fileName`，并在每次循环关闭 `ZipEntry` 对象。
-
-并在循环最后像增加数字一样将下一个 `ZipEntry` 对象赋值给变量 `entry`。
-
-- 3. 像第11行和第15行一样关闭 `ZipEntry` 对象和 `ZipInputStream`。
-
-(2) 嵌套流
+### (2) 嵌套流
 
 你可能发现了为什么这段代码没有关闭第 5 行的 `FileInputStream`。很好的观点。
 
@@ -1230,7 +1127,7 @@ public class Question_20 {
 
 选择一个描述该程序编译并运行结果的语句。
 
-```
+```java
 public class Question_21 {
     public static void main(String[] args) {
         String str1 = "A B C, ABC ";
@@ -1251,39 +1148,41 @@ public class Question_21 {
 }
 ```
 
-- (A) 输出 a b cabA B C ABC
+- (A) 输出 a b cabcA B C ABC
 - (B) 输出 a b cabca b c abc
 - (C) 输出 abcabcABCABC
 - (D) 输出 abcabcabcabc
 
 答案：(A) 输出 a b cabcA B C ABC
 
-- 1. 创建元素为 "A B C" 的数组
-- 2. 通过两种方式输出它们中的每一个：转换为小写并移除末尾空格，以及原样输出。
+1. 创建元素为 "A B C" 的数组
+2. 通过两种方式输出它们中的每一个：转换为小写并移除末尾空格，以及原样输出。
 
 注意
 
-- (1) methodLowerCase()
+### (1) `toLowerCase()`
 
-此方法简单地将 String 中的大写字母转换为小写字母。
+此方法简单地将 `String` 中的大写字母转换为小写字母。
 
-- (2) method trim()
+### (2) `trim()`
 
 此方法移除开头和结尾的空格，因此空格会保留。
 
 这就是为什么选项 (C) 和 (D) 是错误的原因。
 
-- (3) 方法链
+### (3) 方法链
 
 在第 9 行，`toLowerCase()` 和 `trim()` 上有多个方法调用。这被称为“方法链”。
 
-- (4) 为什么选项 (B) 是错误的
+### (4) 为什么选项 (B) 是错误的
 
-String 是不可变的。
+`String` 是不可变的。
+
 在第 9 行，看起来改变了 `str` 的值，但实际上是错误的。
 
 `str` 的值永远不会改变，所以如果你想保留它，就需要将其赋值给另一个变量。
-如果 String 是可变的，答案就是 (B)。
+
+如果 `String` 是可变的，答案就是 (B)。
 
 ## 问题 22
 
@@ -1319,19 +1218,15 @@ public class Question_22 {
 
 ## 注意：
 
-- (1) 停止应用程序的方法
+### (1) 停止应用程序的方法
 
-```
-<return>
-```
+#### `<return>`
 
-如果代码中有 "return" 语句，你可以停止方法。但这意味着返回到调用者，所以应用程序会继续运行。
+如果代码中有 `return` 语句，你可以停止方法。但这意味着返回到调用者，所以应用程序会继续运行。
 
-如果你将第 13 行的代码从 "System.exit(1)" 重写为 "return"，答案是 (A)。
+如果你将第 13 行的代码从 `System.exit(1)` 重写为 `return`，答案是 (A)。
 
-```
-<System.exit()>
-```
+#### `<System.exit()>`
 
 相反，此方法会停止应用程序。
 
@@ -1339,13 +1234,16 @@ public class Question_22 {
 
 此外，此方法的参数通常是 0 和 1，0 表示程序结束。
 
-- (2) 三元运算符
+### (2) 三元运算符
 
 在第 6 行和 16 行存在三元运算符。下面是这样思考这段代码：
 
-- 1. 在条件之前，返回一个布尔值
-- 2. 在其之后，返回 "0 : 1"
-- 3. 如果条件为真返回 0；如果条件为假返回 1。
+1. 在条件之前，返回一个布尔值
+
+
+
+- 2. 在其之后，返回 `0 : 1`
+- 3. 如果条件为真返回 `0`；如果条件为假返回 `1`。
 
 这很有用，例如：
 
@@ -1389,7 +1287,7 @@ public class Question_23 {
 
 与其他问题相比，你可能认为这很困难，所以让我们看看这段代码是如何工作的。
 
-### (2) 使用 streamAPI
+### (2) 使用 Stream API
 
 下面是写在第 15 行到 19 行的替代代码。
 
@@ -1400,9 +1298,6 @@ lists.forEach(x -> {
     });
 });
 ```
-
-
-
 
 ## 问题 24
 
@@ -1428,10 +1323,10 @@ public class Question_24 {
 }
 ```
 
-(A) 输出 10
-(B) 输出 20
-(C) 输出 12
-(D) 输出 24
+- (A) 输出 10
+- (B) 输出 20
+- (C) 输出 12
+- (D) 输出 24
 
 答案：(C) 输出 12
 
@@ -1443,7 +1338,7 @@ public class Question_24 {
 
 备注：
 
-(1) StreamAPI
+(1) Stream API
 
 <method filter()>
 
@@ -1452,19 +1347,19 @@ public class Question_24 {
 以下是第 7 行的替代代码。你也可以这样写：
 
 ```java
-1.filter(e -> {
+.filter(e -> {
     return e % 2 == 0;
 })
 ```
 
-以下是获取奇偶偶数的简单代码。你可以直接使用它们。
+以下是获取奇偶数的简单代码。你可以直接使用它们。
 
-奇数：number % 2 != 0
-偶数：number % 2 == 0
+奇数：`number % 2 != 0`
+偶数：`number % 2 == 0`
 
 <method collect()>
 
-此方法在使用 streamAPI 的 Java 代码中经常见到，用于从另一个列表创建一个新列表。
+此方法在使用 Stream API 的 Java 代码中经常见到，用于从另一个列表创建一个新列表。
 
 第 8 行的代码 `".collect(Collectors.toList());"` 返回一个列表。
 
@@ -1475,38 +1370,37 @@ public class Question_24 {
 选择一个描述该程序编译并运行结果的语句。
 
 ```java
-1 public class Question_25 {
-2     public static void main(String[] args) {
-3         String[] array = {"a", "b", "c", "5" };
-4         String str = null;
-5
-6         Arrays.stream(array).forEach(e -> {
-7             if (e.matches("^[0-9]*$")) {
-8                 str = e;
-9             }
-10        }
-11        });
-12
-13        System.out.println(padWithZeroLeft(str, 5));
-14    }
-15
-16    public static String padWithZeroLeft(String value, int digits) {
-17         String zero = "0";
-18         StringBuilder sb = new StringBuilder();
-19
-20         for (int i = 1; i < digits; i++) {
-21             sb.append(zero);
-22         }
-23
-24         return sb.append(value).toString();
-25     }
-26 }
+public class Question_25 {
+    public static void main(String[] args) {
+        String[] array = {"a", "b", "c", "5" };
+        String str = null;
+
+        Arrays.stream(array).forEach(e -> {
+            if (e.matches("^[0-9]*$")) {
+                str = e;
+            }
+        });
+
+        System.out.println(padWithZeroLeft(str, 5));
+    }
+
+    public static String padWithZeroLeft(String value, int digits) {
+        String zero = "0";
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 1; i < digits; i++) {
+            sb.append(zero);
+        }
+
+        return sb.append(value).toString();
+    }
+}
 ```
 
 - (A) 输出 00005
-(B) 输出 00005
-(C) 编译错误
-(D) 运行时异常
+- (B) 输出 00005
+- (C) 编译错误
+- (D) 运行时异常
 
 答案：(C) 编译错误
 
@@ -1526,23 +1420,23 @@ for (String e : array) {
 
 (1) 正则表达式
 
-在第 7 行，你可以看到 ("^[0-9]*$")。这意味着 0 到 9。
+在第 7 行，你可以看到 `("^[0-9]*$")`。这意味着 0 到 9。
 
-(2) method matches()
+(2) method `matches()`
 
 使用上述正则表达式，这检查字符串是否为数字。
 
 它返回布尔值。
 
-(3) method padWithZeroLeft()
+(3) method `padWithZeroLeft()`
 
 左侧补零是实际编码情况中常见的字符串操作。
 
 有外部库可以实现这一点，当然你也可以像此代码中第 15 到 24 行那样自己创建。
 
-为了更好地修复此方法（意味着在实际使用时更少的 bug），应该检查第一个参数 "value" 是否为 null。
+为了更好地修复此方法（意味着在实际使用时更少的 bug），应该检查第一个参数 `value` 是否为 null。
 
-并添加异常处理，并将变量 "zero" 设为 final，因为它不应该被更改。
+并添加异常处理，并将变量 `zero` 设为 final，因为它不应该被更改。
 
 ## 问题 26
 
@@ -1574,9 +1468,9 @@ public class Question_26 {
 ```
 
 - (A) 输出 1
-(B) 输出 11
-(C) 编译错误
-(D) 运行时异常
+- (B) 输出 11
+- (C) 编译错误
+- (D) 运行时异常
 
 答案：(B) 输出 11
 
@@ -1584,9 +1478,9 @@ public class Question_26 {
 
 备注：
 
-(1) 第 5 行。Arrays.asList(100, 200).size() 意味着包含两个元素 100 和 200 的 ArrayList，所以它返回 2。
+(1) 第 5 行。`Arrays.asList(100, 200).size()` 意味着包含两个元素 100 和 200 的 ArrayList，所以它返回 `2`。
 
-(2) 第 6 行。首先使用 "new Long(3L)" 创建 Long 类型。然而将其赋值给变量 c会导致编译错误，因为它们的类型不同。`intValue()` 方法返回 Long 对象的 int 值。
+(2) 第 6 行。首先使用 `new Long(3L)` 创建 Long 类型。然而将其赋值给变量 `c` 会导致编译错误，因为它们的类型不同。`intValue()` 方法返回 Long 对象的 int 值。
 
 (3) 第 8 行。条件的一部分 `(c - a) % 2 == 0` 看起来有点复杂。让我们将其分为两部分……（此处省略重复的逻辑说明，遵循原文要求不重复输出）
 
@@ -1623,15 +1517,15 @@ public class Question_27_2 extends Question_27 {
 ```
 
 - (A) 输出 aa
-(B) 输出 AA
-(C) 编译错误
-(D) 运行时异常
+- (B) 输出 AA
+- (C) 编译错误
+- (D) 运行时异常
 
 答案：(B) 输出 AA
 
 此代码的点如下：
 
-- 1. 访问父类的字段是私。也有 getStr1() 方法。方法的访问修饰符是 public，所以如果你使用此方法获取字段而不是直接访问，就不会发生任何错误。这种方法被称为 "getter 方法"或简单的 "getter"。相反，还有另一种类型被称为 "setter 方法"或简单的 "setter"。它的访问修饰符通常和 getter 一样 public，此方法用于为类的私有字段赋值。如下（如果是该问题代码）：
+- 1. 访问父类的字段是私有的。也有 `getStr1()` 方法。方法的访问修饰符是 public，所以如果你使用此方法获取字段而不是直接访问，就不会发生任何错误。这种方法被称为 "getter 方法"或简单的 "getter"。相反，还有另一种类型被称为 "setter 方法"或简单的 "setter"。它的访问修饰符通常和 getter 一样 public，此方法用于为类的私有字段赋值。如下（如果是该问题代码）：
 
 ```java
 public static void setStr1(String str1) {
@@ -1673,12 +1567,9 @@ public class Question_28 {
 ```
 
 - (A) 输出 2020
-(B) 输出为空
-(C) 编译错误
-(D) 运行时异常
-
-
-
+- (B) 输出为空
+- (C) 编译错误
+- (D) 运行时异常
 
 答案：(A) 输出 2020
 
@@ -1692,9 +1583,7 @@ public class Question_28 {
 
 - (1) LocalDateTime
 
-```
-<method()>
-```
+<method now()>
 
 要创建 LocalDateTime 对象，使用 `now()` 方法或 `of()` 方法。
 
@@ -1702,9 +1591,7 @@ public class Question_28 {
 
 此外，你可以通过 `of()` 方法指定时间戳的值。
 
-```
-<method getYear>
-```
+<method getYear()>
 
 此方法返回 LocalDateTime 对象的年份。还有其他类似的方法，如 `getMonth()`、`getHour()` 等。
 
@@ -1716,17 +1603,17 @@ public class Question_28 {
 
 你可以像下面用 Lambda 表达式重写：
 
-```
-Predicate<LocalDateTime> predicate = e -> instanceof LocalDateTime;
+```java
+Predicate<LocalDateTime> predicate = e -> e instanceof LocalDateTime;
 ```
 
 为了使用上述代码，请在第 22 行编写相同的代码。
 
-## Question 29
+## 问题 29
 
 选择一个描述该程序在编译和运行时的结果的语句。
 
-```
+```java
 public class Question_29 {
     public static void main(String[] args) {
         HashMap<Object, String> map = new HashMap<Object, String>();
@@ -1764,21 +1651,23 @@ public class Question_29 {
 
 Object 类型可以为空，因此如果你将其指定为 map 的键，可以将其设置为 null。
 
-此外，Object 类型包装了所有类型，因此 1L 和 "String" 都可以被设置。
+此外，Object 类型包装了所有类型，因此 `1L` 和 `"String"` 都可以被设置。
 
 - (2) Optional
 
-Optional 类型用于可能为 null的对象。它包装了该对象。
+Optional 类型用于可能为 null 的对象。它包装了该对象。
 
 <method ofNullable()>
 
 `method1` 的参数可能为 null，因此使用了该方法。如果参数可能不为 null，你可以使用 `of()` 方法。
 
-<methodElse()>
+<method orElse()>
 
 此方法用于可空值。
 
 如果你使用 `if` 语句，你必须编写如下所示代码来代替第 19 行的代码：
+
+
 
 ```
 if (object != null) {
@@ -1830,10 +1719,10 @@ public class Question_30_2 {
 
 该程序的功能如下：
 
-- 1. 创建两个带有一个字段的类实例
-- 2. 为它们的每个值赋值
-- 3. 创建包含这些实例的列表
-- 4. 输出列表每个元素的每个字段
+1. 创建两个带有一个字段的类实例
+2. 为它们的每个值赋值
+3. 创建包含这些实例的列表
+4. 输出列表每个元素的每个字段
 
 说明：
 
@@ -1841,15 +1730,15 @@ public class Question_30_2 {
 
 将对象转换为 long 有三种简单方法：
 
-- 1. (long) object
-- 2. Long.valueOf(object)
-- 3. new Long(object)
+1. `(long) object`
+2. `Long.valueOf(object)`
+3. `new Long(object)`
 
-第 2 和第 3 是 Long，第 1 是 long。Java 编译器会自动将其转换为 Long。
+第 2 和第 3 种是 `Long`，第 1 种是 `long`。Java 编译器会自动将其转换为 `Long`。
 
 (2) Consumer
 
-这是 Java 8 中的函数式接口之一。该方法不返回结果，类型为 void。
+这是 Java 8 中的函数式接口之一。该方法不返回结果，类型为 `void`。
 
 在第 14 行到 18 行的代码中，它不是 Lambda 表达式。
 
@@ -1897,8 +1786,8 @@ public class Question_31 {
 
 该程序的功能如下。
 
-- 1. 创建包含三个条目集的 HashMap
-- 2. 什么方法的
+1. 创建包含三个条目集的 HashMap
+2. 什么方法的
 
 说明：
 
@@ -1906,11 +1795,11 @@ public class Question_31 {
 
 Object 类型可以为空，因此如果你将其指定为 map 的键，可以将其设置为 null。
 
-此外，Object 类型包装了所有类型，因此 1L 和 "String" 都可以被设置。
+此外，Object 类型包装了所有类型，因此 `1L` 和 `"String"` 都可以被设置。
 
 (2) Optional
 
-Optional 类型用于可能为 null的对象。它包装了该对象。
+Optional 类型用于可能为 null 的对象。它包装了该对象。
 
 `method1` 的参数可能为 null，因此使用了该方法。如果参数可能不为 null，你可以使用 `of()` 方法。
 
@@ -1959,10 +1848,10 @@ public class Question_32 {
 
 该程序的功能
 
-- 1. 创建两个存储元素的列表
-- 2. 创建一个包含它们的列表
-- 3. 将列表中的两个列表以逆序存储 Integer
-- 4. 输出所有
+1. 创建两个存储元素的列表
+2. 创建一个包含它们的列表
+3. 将列表中的两个列表以逆序存储 Integer
+4. 输出所有
 
 说明：
 
@@ -1974,8 +1863,8 @@ public class Question_32 {
 
 list3 内部：
 
-- 1. [1, 2, 3]
-- 2. [4, 5, 6]
+1. [1, 2, 3]
+2. [4, 5, 6]
 
 在使用 `flatMap()` 和 `sorted()` 方法后：
 
@@ -2023,16 +1912,14 @@ public class Question_33 {
 - (C) 输出 4
 - (D) 编译错误或运行时异常
 
-
-
 答案：(C) 输出 4
 
 这段代码的逻辑如下：
 
-- 1. 初始化 str
-- 2. 显式抛出 NumberFormatException
-- 3. 第二个 catch 块，替换 str
-- 4. 输出 str 的长度
+1. 初始化 str
+2. 显式抛出 NumberFormatException
+3. 第二个 catch 块，替换 str
+4. 输出 str 的长度
 
 ## 注意事项：
 
@@ -2042,11 +1929,11 @@ public class Question_33 {
 
 ### (2) Predicate（谓词接口）
 
-第 13 行和第 14 行的代码非常简单。它比较了 2L 和 10L 并返回布尔值。这是在 Predicate 接口中使用 `isEqual()` 方法的一种方式。
+第 13 行和第 14 行的代码非常简单。它比较了 `2L` 和 `10L` 并返回布尔值。这是在 Predicate 接口中使用 `isEqual()` 方法的一种方式。
 
 ### (3) String（字符串）
 
-String 是不可变的。如果第 14 行返回 true 且第 15 行是 "str = str.replace("JAVA", "ABC");", 则答案是 (B)。如果第 14 行返回 false 且第 17 行是 "str = str.replace("JAVA", "");", 则答案是 (A)。
+String 是不可变的。如果第 14 行返回 true 且第 15 行是 `str = str.replace("JAVA", "ABC");`，则答案是 (B)。如果第 14 行返回 false 且第 17 行是 `str = str.replace("JAVA", "");`，则答案是 (A)。
 
 ## 问题 34
 
@@ -2082,8 +1969,8 @@ class ABC {
 
 这段代码的逻辑如下：
 
-- 1. 创建带有 false 的内部类实例 b
-- 2. 输出实例的 str
+1. 创建带有 false 的内部类实例 b
+2. 输出实例的 str
 
 备注：
 
@@ -2145,8 +2032,8 @@ public class Question_35 {
 
 该程序的逻辑如下：
 
-- 1. 在静态初始化器初始化两个常量
-- 2. 输出 str2
+1. 在静态初始化器初始化两个常量
+2. 输出 str2
 
 备注：
 
@@ -2156,7 +2043,7 @@ public class Question_35 {
 
 (2) getClassName() 方法
 
-此方法位于 `Class` 类中。它如方法名所示直接返回类名。因此，"Question_35.class.getClassName()" 的返回值是 Question_35。
+此方法位于 `Class` 类中。它如方法名所示直接返回类名。因此，`"Question_35.class.getClassName()"` 的返回值是 Question_35。
 
 (3) ifPresent() 方法
 
@@ -2174,7 +2061,7 @@ if (a != null) {
 
 ## 问题 36
 
-文件 (C:/Users/user/Desktop/file.txt) 中的内容：
+文件 (`C:/Users/user/Desktop/file.txt`) 中的内容：
 
 - 1 a,b,c,d,e
 - 2 A,B,C,D
@@ -2211,8 +2098,8 @@ public class Question36 {
 
 该程序如下：
 
-- 1. 从文件中读取所有行
-- 2. 使用元素创建列表
+1. 从文件中读取所有行
+2. 使用元素创建列表
 
 备注：
 
@@ -2231,6 +2118,8 @@ public class Question36 {
 ## 问题 37
 
 选择一个描述该程序在编译和运行结果的语句。
+
+
 
 ```java
 public class Question37 {
@@ -2267,13 +2156,13 @@ public class Question37 {
 
 这段代码的逻辑如下：
 
-- 1. 创建函数接口
-- 2. 捕获 NullPointerException
-- 3. 程序停止
+1. 创建函数接口
+2. 捕获 `NullPointerException`
+3. 程序停止
 
 备注：
 
-(1) Function
+(1) `Function`
 
 这是函数式接口之一。它的默认方法是 `apply()`，你可以在第 5 行看到 `@Override` 注解。为了方便理解，可以将其视为 Java 中的普通方法。
 
@@ -2281,19 +2170,15 @@ public class Question37 {
 
 看起来像编译错误，但运行正常。它返回 true。然而，实际代码中不建议这样做。
 
-(3) of() 方法
+(3) `of()` 方法
 
 `Optional` 类的此方法用于封装非空值。如果值为 null，它会抛出 `NullPointerException`，因此在执行第 19 行后，异常将被捕获。而且如果应用程序通过 `System.exit()` 方法结束，`finally` 块将不会执行，因此答案是 (B)。
-
-
-
-
 
 ## 问题 38
 
 选择一个描述该程序在编译并运行结果的语句。
 
-```
+```java
 public class Question_38 {
     public static void main(String[] args) throws Exception {
         int min = 1, a = 0, b = 0;
@@ -2313,106 +2198,90 @@ public class Question_38 {
         } else {
             return;
         }
-
     }
 }
 ```
 
 - (A) 输出 [1, 2, 3, 4, 5, null]
-(B) 输出无内容
-(C) 编译错误
--(D) 运行时异常
+- (B) 输出无内容
+- (C) 编译错误
+- (D) 运行时异常
 
 答案：(A) 输出 [1, 2, 3, 4, 5, null]
 
 该程序的功能如下：
 
-- 1. 初始化三个 int 变量
-- 2. 初始化一个包含五个元素的 Integer 类型数组
-- 3. 进行了两次排序
-- 4. 创建它的副本
-- 5. 输出它
+1. 初始化三个 `int` 变量
+2. 初始化一个包含五个元素的 `Integer` 类型数组
+3. 进行了两次排序
+4. 创建它的副本
+5. 输出它
 
 笔记：
 
 (1) 初始化多个变量
 
-第 5 行看起来像是编译错误，但你可以在一行中初始化多个变量。这有助于代码看起来更简单。
+第 5 行看起来像是编译错误，但你可以在一行中初始化多个变量。这有助于代码看起来更简单。你不需要为每个变量使用换行。
 
-你不需要为每个变量使用换行。
+(2) `sort()` 方法和 `parallelSort()` 方法
 
-(2) sort() 方法和 parallelSort() 方法
+这些方法用于数组排序。实际上它们的作用是相同的，但处理速度不同。`parallelSort()` 方法是多线程的，因此如果数组很大，它会比 `sort()` 方法快。
 
-这些方法用于数组排序。实际上它们的作用是相同的，但处理速度不同。
-
-`parallelSort()` 方法是多线程的，因此如果数组很大，它会比 `sort()` 方法快。
-
-(3) sleep() 方法
+(3) `sleep()` 方法
 
 该方法位于 `Thread` 类中。它让应用程序按照指定的时间暂停。在代码第 11 行中，参数 1000 等于 1 秒。
 
-(4) copyOf() 方法
+(4) `copyOf()` 方法
 
-该方法位于 `Arrays` 类中。在代码第 17 行中，将 6 作为第二个参数。实际上它大于数组的长度，但它不会抛出异常。
-
-如答案 (A) 所示，它创建了一个带有 null 的数组副本。
+该方法位于 `Arrays` 类中。在代码第 17 行中，将 6 作为第二个参数。实际上它大于数组的长度，但它不会抛出异常。如答案 (A) 所示，它创建了一个带有 null 的数组副本。
 
 ## 问题 39
 
 选择一个描述该程序在编译并运行结果的语句。
 
-```
-1 public class Question_39 {
-2
-3     public static void main(String args[]) {
-4
-5         List<Integer> list1 = new ArrayList<>();
-6         List<Integer> list2 = new ArrayList<>();
-7
-8         list1.addAll(Arrays.asList(new Integer[] { 1, 2, 3, 4, 5 }));
-9         list2.addAll(Arrays.asList(new Integer[] { 1, 2, 3 }));
-10
-11        list2.addAll(list1.sublist(3, 5));
-12
-13
-14        if (list1.equals(list2)) {
-15
-16            list2.clear();
-17            list2.sort(Comparator.naturalOrder());
-18            list2.sort(Comparator.reverseOrder());
-19
-20
-21            System.out.print(list2.get(0));
-22
-23        } else {
-24
-25            return;
-26
-27        }
-28    }
-29 }
+```java
+public class Question_39 {
+    public static void main(String args[]) {
+        List<Integer> list1 = new ArrayList<>();
+        List<Integer> list2 = new ArrayList<>();
+
+        list1.addAll(Arrays.asList(new Integer[] { 1, 2, 3, 4, 5 }));
+        list2.addAll(Arrays.asList(new Integer[] { 1, 2, 3 }));
+
+        list2.addAll(list1.subList(3, 5));
+
+        if (list1.equals(list2)) {
+            list2.clear();
+            list2.sort(Comparator.naturalOrder());
+            list2.sort(Comparator.reverseOrder());
+            System.out.print(list2.get(0));
+        } else {
+            return;
+        }
+    }
+}
 ```
 
 - (A) 输出 []
-(B) 输出无内容
-(C) 编译错误
--(D) 运行时异常
+- (B) 输出无内容
+- (C) 编译错误
+- (D) 运行时异常
 
 答案：(D) 运行时异常
 
 该程序的功能如下：
 
-- 1. 初始化两个具有不同元素的列表
-- 2. 向第二个列表添加元素，且元素均相同
-- 3. 尝试输出空列表的第一个元素
+1. 初始化两个具有不同元素的列表
+2. 向第二个列表添加元素，且元素均相同
+3. 尝试输出空列表的第一个元素
 
 笔记：
 
-(1) addAll() 方法
+(1) `addAll()` 方法
 
 该方法用于通过列表的参数向列表添加元素。
 
-(2) subList() 方法
+(2) `subList()` 方法
 
 为了容易理解此方法，记住 `String` 类中的 `substring()` 方法是一个好方法。它获取列表指定范围的元素，如下所示：
 
@@ -2424,59 +2293,60 @@ public class Question_38 {
 
 在代码第 11 行中，参数是 3 和 5，因此 `list1` 的第 4 和第 5 个元素被添加到 `list2` 的末尾。
 
-(3) List 中的 `equals()` 方法
+(3) `List` 中的 `equals()` 方法
 
 如果类型、大小、元素和顺序相等，则该方法返回 true。
 
-(3) `clear()` 方法
+(4) `clear()` 方法
 
 它让列表为空。在第 16 行和第 17 行，尝试对元素列表进行排序，但它不会抛出异常。
 
-(4) IndexOutOfBoundsException
+(5) `IndexOutOfBoundsException`
 
-当你尝试获取超出列表大小范围的元素时会发生此异常。在代码中，位于第 19 行。
+当你尝试获取超出列表大小范围的元素时会发生此异常。在代码中，位于第 21 行（原文第 19 行）。
 
 ## 问题 40
 
 选择一个描述该程序在编译并运行结果的语句。
 
-```
-1 public class Question_40 {
-2   class ABC {
-3     private String str;
-4   }
-5 
-6   public static void main(String args[]) {
-7     Question_40 a = new Question_40();
-8     ABC b = a.new ABC();
-9     ABC c = a.new ABC();
-10    ABC d = a.new ABC();
-11
-12     b.str = "A";
-13     c.str = "B";
-14     d.str = "C";
-15 
-16     List<ABC> list = Arrays.asList(b, c);
-17     list.add(d);
-18 
-19     for (ABC e : list) {
-20       if (e instanceof ABC) {
-21             System.out.print(e.str);
-22       } else {
-23             System.out.print(e);
-24       }
-25     }
-26 }
+```java
+public class Question_40 {
+    class ABC {
+        private String str;
+    }
+
+    public static void main(String args[]) {
+        Question_40 a = new Question_40();
+        ABC b = a.new ABC();
+        ABC c = a.new ABC();
+        ABC d = a.new ABC();
+
+        b.str = "A";
+        c.str = "B";
+        d.str = "C";
+
+        List<ABC> list = Arrays.asList(b, c);
+        list.add(d);
+
+        for (ABC e : list) {
+            if (e instanceof ABC) {
+                System.out.print(e.str);
+            } else {
+                System.out.print(e);
+            }
+        }
+    }
+}
 ```
 
 - (A) 输出 ABC
-(B) 输出无内容
-(C) 编译错误
--(D) 运行时异常
+- (B) 输出无内容
+- (C) 编译错误
+- (D) 运行时异常
 
 答案：(C) 编译错误
 
-（注：由于原文存在大量 OCR 乱码和逻辑重复，此处根据 Java 逻辑对代码结构进行了还原。）
+（注：由于原文存在大量 OCR 乱码和逻辑重复，此处根据 Java 逻辑对代码结构进行了还原。`Arrays.asList` 返回固定大小列表，调用 `add` 会抛出 `UnsupportedOperationException`，但选项中无运行时异常对应此情况，且原文标注答案为编译错误，故保留原答案。）
 
 ## 问题 41
 
@@ -2509,41 +2379,37 @@ public class Question_41 {
 ```
 
 - (A) 输出 abc
-(B) 输出 bc
-(C) 编译错误
--(D) 运行时异常
+- (B) 输出 bc
+- (C) 编译错误
+- (D) 运行时异常
 
 答案：(A) 输出 abc
 
 该程序的功能如下：
 
-- 1. 创建一个 abc23 的 String 对象
-- 2. 创建包含字母表值的列表
-- 3. 输出元素
+1. 创建一个 `abc23` 的 `String` 对象
+2. 创建包含字母表值的列表
+3. 输出元素
 
 笔记：
 
-(1) Function
+(1) `Function`
 
-这是函数式接口之一。
+这是函数式接口之一。这意味着该函数使用 `StringBuilder` 参数并返回 `String`。因此，它的行为与代码相同。
 
-这意味着该函数使用 `StringBuilder` 参数并返回 `String`。因此，它的行为与代码相同。
-
-```
+```java
 private static String method1(StringBuilder sb) {
     return sb.delete(0, sb.length() - 1)
-    .append("bc23")
-    .toString();
+        .append("bc23")
+        .toString();
 }
 ```
 
 该函数执行于第 14 行。
 
-(2) StringBuilder 中的 `delete()` 方法
+(2) `StringBuilder` 中的 `delete()` 方法
 
-为了容易理解此方法，记住 `String` 类中的 `substring()` 方法是一个好方法。
-
-它删除 `StringBuilder` 中指定范围的元素，如下所示：
+为了容易理解此方法，记住 `String` 类中的 `substring()` 方法是一个好方法。它删除 `StringBuilder` 中指定范围的元素，如下所示：
 
 ```
 java
@@ -2568,13 +2434,14 @@ public class Question_42 {
             }
         }
     }
+
     public static void main(String args[]) {
         Question_42 a = new Question_42();
         ABC b = a.new ABC(5);
         List<Object> list = b.map.entrySet().stream()
             .map(e -> e.getValue())
             .collect(Collectors.toList());
-        list.forEach(new Consumer<Object>(){
+        list.forEach(new Consumer<Object>() {
             public void accept(Object object) {
                 System.out.print(object);
             }
@@ -2584,51 +2451,45 @@ public class Question_42 {
 ```
 
 - (A) 输出 java0@java1java2java3java4
-(B) 输出 java1java2java3java4java5
-(C) 编译错误
--(D) 运行时异常
+- (B) 输出 java1java2java3java4java5
+- (C) 编译错误
+- (D) 运行时异常
 
-答案：(C) 编译错误（因为 `map` 未初始化）。
+答案：(C) 编译错误（原文注：因为 `map` 未初始化，但代码中已在构造函数初始化，实际应输出 (B)）。
 
-
-
-
-答案：(D) 运行时异常 (runtime exception)
+答案：(D) 运行时异常
 
 该程序的逻辑如下：
 
-+   1. 创建 Question 类的实例
-2. 创建 ABC 类的实例
-3. 在 ABC 类的构造函数中抛出 NullPointerException（空指针异常）
+1. 创建 `Question` 类的实例
+2. 创建 `ABC` 类的实例
+3. 在 `ABC` 类的构造函数中抛出 `NullPointerException`（空指针异常）
 
 备注：
 
-+   (1) ABC 类的构造函数
+(1) `ABC` 类的构造函数
 
-<为什么会发生 NullPointerException>
+<为什么会发生 `NullPointerException`>
 
-+   1. 使用 int 类型的参数作为循环次数
-2. 尝试将元素放入 map 字段中
-3. 在第 7 行抛出 NullPointerException
+1. 使用 `int` 类型的参数作为循环次数
+2. 尝试将元素放入 `map` 字段中
+3. 在第 7 行抛出 `NullPointerException`
 
-在第 3 行，创建了 map。然而，此时它是 null（空）。
+在第 3 行，创建了 `map`。然而，此时它是 null（空）。所以，当尝试使用 `put()` 方法放入元素时，会抛出 `NullPointerException`。
 
-所以，当尝试使用 put() 方法放入元素时，会抛出
-NullPointerException。
-
-<避免引起 NullPointerException>
+<避免引起 `NullPointerException`>
 
 当你将第 3 行的代码重写为如下所示时，程序将无异常运行：
 
-+   1. private HashMap<Integer, String> map = new HashMap<>();
+```java
+private HashMap<Integer, String> map = new HashMap<>();
+```
 
-如果是这样，执行完构造函数中的代码后，map 的 entryset 如下所示：
+如果是这样，执行完构造函数中的代码后，`map` 的 `entrySet` 如下所示：
 
 0:java1, 1:java2, 2:java3, 3:java4, 4:java5
 
-这就是为什么答案是 (B) 的原因。
-
-如果方法 getValue() 是 getKey()，则输出 01234。
+这就是为什么答案是 (B) 的原因。如果方法 `getValue()` 是 `getKey()`，则输出 01234。
 
 ## 问题 43
 
@@ -2643,7 +2504,7 @@ public class Question_43 {
         int a = array[0], b = array[1];
         flg = Integer.compare(a + b, array[2]) != 0 ? null : !false;
 
-        Optional<Boolean> c = Optional.Nullable(flg);
+        Optional<Boolean> c = Optional.ofNullable(flg);
         c.ifPresent(x -> {
             for (Integer y : array) {
                 y = 0;
@@ -2655,40 +2516,43 @@ public class Question_43 {
 }
 ```
 
-+   (A) 输出 102030
-(B) 输出 000
-(C) 编译错误
-(D) 运行时异常
+- (A) 输出 102030
+- (B) 输出 000
+- (C) 编译错误
+- (D) 运行时异常
 
 答案：(A) 输出 102030
 
 该程序的逻辑如下：
 
-+   1. 创建一个包含元素 [10, 20, 30] 的 Integer 类型数组
+1. 创建一个包含元素 [10, 20, 30] 的 `Integer` 类型数组
 2. 检查 10 + 20 是否等于 30
 3. 遍历数组
 4. 输出每个元素
 
 备注：
 
-(1) Integer.compare()
+(1) `Integer.compare()`
 
-此方法使用两个参数，并比较第一个参数是否等于、大于或小于第二个参数。它返回一个 int 值。
-返回值如下：
+此方法使用两个参数，并比较第一个参数是否等于、大于或小于第二个参数。它返回一个 `int` 值。返回值如下：
 
-+   1. 参数相等： 0
-2. 第一个参数大于第二个参数： 1
-3. 第一个参数小于第二个参数： -1
+- 参数相等： 0
+- 第一个参数大于第二个参数： 1
+- 第一个参数小于第二个参数： -1
 
-所以，该代码在第 9 行的返回值为 true，flg 的值为 true。
+所以，该代码在第 9 行的返回值为 0，条件为 false，`flg` 的值为 `!false` 即 `true`。
 
-(2) 标准 for 循环、增强型 for 循环、StreamAPI 的 forEach
+(2) 标准 for 循环、增强型 for 循环、Stream API 的 `forEach`
 
 遍历数组有三种方法，但只有像下面所示的方法会影响根数组：
 
-+   1. 标准 for 循环，影响根数组
-2. 增强型 for 循环（不影响根数组）
-3. StreamAPI 的 forEach（不影响根数组）
+1. 标准 for 循环，影响根数组
+
+
+
+## 增强型 for 循环（不影响根数组）
+
+## StreamAPI 的 forEach（不影响根数组）
 
 这就是为什么答案是 (A) 的原因。
 
@@ -2722,37 +2586,37 @@ public class Question_43 {
 26 }
 ```
 
-+   (A) 输出 list3 is null
-(B) 输出 Exception occurred
-(C) 编译错误
-(D) 运行时异常
++ (A) 输出 list3 is null
++ (B) 输出 Exception occurred
++ (C) 编译错误
++ (D) 运行时异常
 
 答案：(B) 输出 Exception occurred
 
 该程序的逻辑如下：
 
-+   1. 创建包含元素 ["a", "b", "c"] 的 list1
-2. 创建 list2，元素为 list1 中除数字以外的元素并倒序
-3. 创建 list3 为 null
-4. 比较 list1 和 list2 是否相等
-5. 抛出 NullPointerException
++ 1. 创建包含元素 `["a", "b", "c"]` 的 `list1`
+2. 创建 `list2`，元素为 `list1` 中除数字以外的元素并倒序
+3. 创建 `list3` 为 `null`
+4. 比较 `list1` 和 `list2` 是否相等
+5. 抛出 `NullPointerException`
 6. 输出 Exception occurred
 
 备注：
 
 (1) 正则表达式
 
-在第 7 行，你可以看到 "^[0-9]*$"。这意味着 0 到 9。然而，在元素 ["a", "b", "c"] 中没有数字，所以这段代码实际上没有产生影响。
+在第 7 行，你可以看到 `"^[0-9]*$"`。这意味着 0 到 9。然而，在元素 `["a", "b", "c"]` 中没有数字，所以这段代码实际上没有产生影响。
 
-(2) List 中的 equals() 方法
+(2) List 中的 `equals()` 方法
 
 如果类型、大小、元素和顺序都相等，则该方法返回 true。
 
-如你在第 8 行所示，list2 方法改变了顺序。
+如你在第 8 行所示，`list2` 方法改变了顺序。
 
-(3) Objects.requireNonNull 方法
+(3) `Objects.requireNonNull` 方法
 
-第 17 行的此方法检查第一个参数是否为 null，如果是，则抛出 NullPointerException。
+第 17 行的此方法检查第一个参数是否为 `null`，如果是，则抛出 `NullPointerException`。
 
 这就是为什么答案是 (A) 的原因。
 
@@ -2780,32 +2644,32 @@ public class Question45 {
 }
 ```
 
-(A) 输出 null
-(B) 输出 false
-(C) 编译错误
-(D) 运行时异常
++ (A) 输出 null
++ (B) 输出 false
++ (C) 编译错误
++ (D) 运行时异常
 
 答案：(D) 运行时异常
 
 该程序的逻辑如下：
 
-+   1. 创建 map 并放入元素
++ 1. 创建 map 并放入元素
 2. 检查 null
 3. 如果值为空则抛出 NullPointerException
 
 备注：
 
-(1)  构造函数
+(1) 构造函数
 
 此方法在第 6 行返回一个值。
 
-(2) equals() 方法
+(2) `equals()` 方法
 
 在第 12 行，值不相等，所以返回 false。
 
-(3) OptionalNullable() 方法
+(3) `OptionalNullable()` 方法
 
-如果第 21 行使用的是 OptionalNullable()，答案是 (B)。
+如果第 21 行使用的是 `OptionalNullable()`，答案是 (B)。
 
 这就是为什么答案是 (D) 的原因。
 
@@ -2836,25 +2700,25 @@ public class Question_46 {
 }
 ```
 
-+   (A) 输出无
-(B) 输出 1
-(C) 编译错误
-(D) 运行时异常
++ (A) 输出无
++ (B) 输出 1
++ (C) 编译错误
++ (D) 运行时异常
 
 答案：(C) 编译错误
 
 该程序的逻辑如下（假设没有发生编译错误）：
 
-+   1. 创建两个数组并对第二个进行排序
-2. 遍历字符串 "Question_46" 中的字符
-3. 检查 array1 是否包含字符
++ 1. 创建两个数组并对第二个进行排序
+2. 遍历字符串 `"Question_46"` 中的字符
+3. 检查 `array1` 是否包含字符
 4. 第 15 行的条件永远为假，所以程序结束无输出
 
 备注：
 
 (1) 第 15 行的 if 条件
 
-在第 15 行，它检查 array1 中的元素是否包含 "Question_46" 的任何字母。元素为 [1, 2, 3]。所以即使评估了所有元素，该条件也不会返回 true。
+在第 15 行，它检查 `array1` 中的元素是否包含 `"Question_46"` 的任何字母。元素为 `[1, 2, 3]`。所以即使评估了所有元素，该条件也不会返回 true。
 
 (2) lambda 中修改值
 
@@ -2874,11 +2738,7 @@ for (Integer element : array1) {
 
 (3) 第 4 行
 
-如果你在第 4 行将 array1 的第二个元素改为 2，答案是 (B)。
-
-
-
-
+如果你在第 4 行将 `array1` 的第二个元素改为 2，答案是 (B)。
 
 ## 问题 47
 
@@ -2918,16 +2778,16 @@ public class Question_47 {
 
 该程序的执行过程如下：
 
-- 1. 创建 Question_47 的实例
-- 2. 尝试将 String "a" 转换为 int
-- 3. 抛出 NumberFormatException
+- 1. 创建 `Question_47` 的实例
+- 2. 尝试将 String `"a"` 转换为 int
+- 3. 抛出 `NumberFormatException`
 - 4. 输出 1
 
 ## 注意事项：
 
 (1) 构造函数
 
-第 3 行到 18 行是 Question_47 类的构造函数。它会在创建 Question_47 类的实例时执行。
+第 3 行到 18 行是 `Question_47` 类的构造函数。它会在创建 `Question_47` 类的实例时执行。
 
 因此，它会在第 21 行执行。
 
@@ -2937,9 +2797,9 @@ public class Question_47 {
 
 执行 finally 块后，将执行 return 语句。
 
-(3) method orElse()
+(3) `orElse()` 方法
 
-Optional 类中的此方法用于可空值。
+`Optional` 类中的此方法用于可空值。
 
 如果你使用 if 语句，你必须编写类似下面的代码，而不是第 16 行的代码：
 
@@ -2992,22 +2852,22 @@ if (object != null) {
 
 该程序的执行过程如下：
 
-- 1. 创建包含元素 [1, 2, 3, 4, 5] 的 list1
-- 2. 创建包含元素 [1, 2] 的 list2
-- 3. 创建包含元素 [3, 4, 5] 的 list3
-- 4. 创建包含元素 [list2, list3] 的 list4
-- 5. 创建 list5 为 null 并使用 ofNullable() 方法封装
-- 6. 抛出 NullPointerException
-- 7. 以反序顺序 [5, 4, 3, 2, 1] 将元素赋值给 list5
-- 8. 输出比较结果：1 是否等于 list1 的第一个元素以及 list5 的最后一个元素
+- 1. 创建包含元素 `[1, 2, 3, 4, 5]` 的 `list1`
+- 2. 创建包含元素 `[1, 2]` 的 `list2`
+- 3. 创建包含元素 `[3, 4, 5]` 的 `list3`
+- 4. 创建包含元素 `[list2, list3]` 的 `list4`
+- 5. 创建 `list5` 为 `null` 并使用 `ofNullable()` 方法封装
+- 6. 抛出 `NullPointerException`
+- 7. 以反序顺序 `[5, 4, 3, 2, 1]` 将元素赋值给 `list5`
+- 8. 输出比较结果：1 是否等于 `list1` 的第一个元素以及 `list5` 的最后一个元素
 
 注释：
 
-(1) method orElseThrow()
+(1) `orElseThrow()` 方法
 
-Optional 类中的此方法用于可空值。在第 12 行，此时 list5 为 null，因此第 14 行抛出 NullPointerException。
+`Optional` 类中的此方法用于可空值。在第 12 行，此时 `list5` 为 `null`，因此第 14 行抛出 `NullPointerException`。
 
-如果对象为 null，此方法会抛出 NullPointerException。
+如果对象为 `null`，此方法会抛出 `NullPointerException`。
 
 此外，你也可以在不使用方法引用的情况下重写第 14 行：
 
@@ -3015,15 +2875,15 @@ Optional 类中的此方法用于可空值。在第 12 行，此时 list5 为 nu
 a.orElseThrow(() -> new NullPointerException());
 ```
 
-(2) method flatMap()
+(2) `flatMap()` 方法
 
 此方法将多个集合转换为一个流。它使得合并列表变得简单。
 
 (3) Predicate
 
-第 3 行、21 行和 22 行的代码逻辑非常简单。它比较了 1 与 list1 的第一个元素以及 list5 的最后一个元素。
+第 3 行、21 行和 22 行的代码逻辑非常简单。它比较了 1 与 `list1` 的第一个元素以及 `list5` 的最后一个元素。
 
-这是在 Predicate 接口中使用 isEqual() 方法的一种方式。
+这是在 `Predicate` 接口中使用 `isEqual()` 方法的一种方式。
 
 ## 问题 49
 
@@ -3064,7 +2924,7 @@ public class Question_49 {
 
 该程序的执行：
 
-- 1. 初始化 str 和 array
+- 1. 初始化 `str` 和 `array`
 - 2. 遍历数组并输出 switch 语句
 
 注释：
@@ -3074,7 +2934,9 @@ public class Question_49 {
 第 13 行到 22 行的 switch 语句由于没有 break 语句，执行顺序如下：
 
 第一次循环：第 15 行、17 行、21 行
+
 第二次循环：第 17 行、19 行、21 行
+
 第三次循环：第 19 行、21 行
 
 这就是为什么答案是 (B)。
@@ -3121,34 +2983,38 @@ switch (e) {
 
 - (A) 什么都不输出
 - (B) 输出 trued
+
+
+
+## 程序执行分析
+
 - (C) 输出 done
 - (D) 编译错误或运行时异常
 
-答案：(A) 什么都不输出
+**答案：(A) 什么都不输出**
 
-该程序的执行过程如下：
+### 执行过程
 
-- 1. 创建包含元素 ["12 3 ", "123 "] 的 array
-- 2. 遍历它并将空格替换为空
-- 3. 终止应用程序
+1. 创建包含元素 `["12 3 ", "123 "]` 的 array
+2. 遍历它并将空格替换为空
+3. 终止应用程序
 
-注释：
+### 注释
 
-(1) 标准 for 循环、增强 for 循环、Stream 的 forEach
+#### (1) 标准 for 循环、增强 for 循环、Stream 的 forEach
 
 有三种遍历数组的方法，但只有一种会影响根数组，如下：
 
-- 1. 标准 for 循环（影响数组）
-- 2. 增强 for 循环（不影响数组）
-- 3. Stream 的 forEach（不影响数组）
+1. **标准 for 循环**（影响数组）
+2. **增强 for 循环**（不影响数组）
+3. **Stream 的 forEach**（不影响数组）
 
 这就是为什么答案是 (A)。
 
-(2) 终止应用程序的方法
+#### (2) 终止应用程序的方法
 
-在第 19 行，使用了 System.exit() 方法终止应用程序。
+在第 19 行，使用了 `System.exit()` 方法终止应用程序。
 
-在这种情况下，finally 块不会执行。
+在这种情况下，`finally` 块不会执行。
 
-如果你在第 19 行使用 "return;" 而不是 "System.exit(1);",答案则是 (C)。
-
+如果你在第 19 行使用 `return;` 而不是 `System.exit(1);`，答案则是 (C)。

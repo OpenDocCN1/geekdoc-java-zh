@@ -1,3 +1,4 @@
+
 # 对于#IndependencDay 周末，我的 Java 和 Spring 书籍是“支付你想要的，最低 3 美元”。
 
 > 原文：<https://medium.com/javarevisited/for-independencday-weekend-my-java-and-spring-books-are-pay-what-you-want-3-minimum-eacb9cc55f81?source=collection_archive---------1----------------------->

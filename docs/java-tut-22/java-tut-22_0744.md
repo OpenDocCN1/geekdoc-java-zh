@@ -1,3 +1,4 @@
+
 # 监控和管理 Java 虚拟机
 
 > 原文：[`docs.oracle.com/javase/tutorial/jmx/overview/javavm.html`](https://docs.oracle.com/javase/tutorial/jmx/overview/javavm.html)
@@ -26,42 +27,38 @@ Java SE 平台包括符合 JMX 规范的 JConsole 监控和管理工具。JConso
 
 ```java
 -Dcom.sun.management.jmxremote
-
 ```
 
 然而，Java SE 6 平台提供的 JConsole 版本可以连接到支持 Attach API 的任何本地应用程序。换句话说，任何在 Java SE 6 HotSpot VM 中启动的应用程序都会被 JConsole 自动检测到，不需要使用上述命令行选项启动。
 
-1.  启动记事本 Java 应用程序，使用以下命令在终端窗口中：
+1. 启动记事本 Java 应用程序，使用以下命令在终端窗口中：
 
-    ```java
-    java -jar 
-        *jdk_home*/demo/jfc/Notepad/Notepad.jar
+   ```java
+   java -jar 
+       *jdk_home*/demo/jfc/Notepad/Notepad.jar
+   ```
 
-    ```
+   其中`jdk_home`是安装 Java 开发工具包（JDK）的目录。如果您没有运行 Java SE 平台的 6 版本，您将需要使用以下命令：
 
-    其中`jdk_home`是安装 Java 开发工具包（JDK）的目录。如果您没有运行 Java SE 平台的 6 版本，您将需要使用以下命令：
+   ```java
+   java -Dcom.sun.management.jmxremote -jar 
+         *jdk_home*/demo/jfc/Notepad/Notepad.jar
+   ```
 
-    ```java
-    java -Dcom.sun.management.jmxremote -jar 
-          *jdk_home*/demo/jfc/Notepad/Notepad.jar
+2. 一旦 Notepad 打开，在另一个终端窗口中，使用以下命令启动 JConsole：
 
-    ```
+   ```java
+   jconsole
+   ```
 
-1.  一旦 Notepad 打开，在另一个终端窗口中，使用以下命令启动 JConsole：
+   会显示一个新的连接对话框。
 
-    ```java
-    jconsole
+3. 在新连接对话框中，从本地进程列表中选择`Notepad.jar`，然后点击连接按钮。
 
-    ```
+   JConsole 会打开并连接到`Notepad.jar`进程。当 JConsole 打开时，您将看到与 Notepad 相关的监控和管理信息概览。例如，您可以查看应用程序消耗的堆内存量，应用程序当前运行的线程数，以及应用程序消耗的中央处理单元（CPU）容量。
 
-    会显示一个新的连接对话框。
+4. 点击不同的 JConsole 选项卡。
 
-1.  在新连接对话框中，从本地进程列表中选择`Notepad.jar`，然后点击连接按钮。
+   每个选项卡提供了关于 Notepad 运行的 Java 虚拟机不同功能区域的更详细信息。所有呈现的信息都是从本教程中提到的各种 JMX 技术 MXBeans 获取的。所有平台 MXBeans 都可以在 MBeans 选项卡中显示。MBeans 选项卡将在本教程的下一部分中进行讨论。
 
-    JConsole 会打开并连接到`Notepad.jar`进程。当 JConsole 打开时，您将看到与 Notepad 相关的监控和管理信息概览。例如，您可以查看应用程序消耗的堆内存量，应用程序当前运行的线程数，以及应用程序消耗的中央处理单元（CPU）容量。
-
-1.  点击不同的 JConsole 选项卡。
-
-    每个选项卡提供了关于 Notepad 运行的 Java 虚拟机不同功能区域的更详细信息。所有呈现的信息都是从本教程中提到的各种 JMX 技术 MXBeans 获取的。所有平台 MXBeans 都可以在 MBeans 选项卡中显示。MBeans 选项卡将在本教程的下一部分中进行讨论。
-
-1.  要关闭 JConsole，选择连接 -> 退出。
+5. 要关闭 JConsole，选择连接 -> 退出。

@@ -1,3 +1,4 @@
+
 # 较少听到的控制反转类型
 
 > 原文：<https://medium.com/javarevisited/the-less-heard-type-of-inversion-of-control-924e5586377a?source=collection_archive---------1----------------------->
@@ -77,7 +78,9 @@ class OrderService{
 # ServiceLocator 的缺点
 
 1.  依赖关系不明显，而且由于运行时缺少依赖关系，更容易出错。
+
 2.  所有主题都必须包含对服务定位器的引用。
+
 3.  与 DI 相比更难测试
 
 # 结论

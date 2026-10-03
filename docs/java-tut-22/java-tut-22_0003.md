@@ -1,3 +1,4 @@
+
 # 关于 Java 技术
 
 > 原文：[`docs.oracle.com/javase/tutorial/getStarted/intro/definition.html`](https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html)
@@ -8,31 +9,12 @@ Java 技术既是一种编程语言，也是一个平台。
 
 Java 编程语言是一种高级语言，可以用以下所有流行词来描述：
 
-|
-
-+   简单
-
-+   面向对象
-
-+   分布式
-
-+   多线程
-
-+   动态
-
-|
-
-+   架构中立
-
-+   可移植
-
-+   高性能
-
-+   健壮
-
-+   安全
-
-|
+| 简单 | 架构中立 |
+| --- | --- |
+| 面向对象 | 可移植 |
+| 分布式 | 高性能 |
+| 多线程 | 健壮 |
+| 动态 | 安全 |
 
 前述流行词在[《Java 语言环境》](http://www.oracle.com/technetwork/java/langenv-140151.html)一书中有详细解释，该书是由詹姆斯·高斯林和亨利·麦吉尔顿撰写的白皮书。
 

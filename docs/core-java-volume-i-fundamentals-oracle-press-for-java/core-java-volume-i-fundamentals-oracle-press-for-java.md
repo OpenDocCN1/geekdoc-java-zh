@@ -1,18 +1,9 @@
-# 核心 Java 卷 I：基础 (Oracle Press for Java)
 
-
-
-
-
+# 核心 Java 卷 I：基础（Oracle Press for Java）
 
 ![](img/1bda005f6b519fd0924777a921aebffa_0_0.png)
 
-
 ![](img/1bda005f6b519fd0924777a921aebffa_0_1.png)
-
-
-
-
 
 # 关于本电子书
 
@@ -20,46 +11,21 @@ ePUB 是一种开放的行业标准电子书格式。然而，不同阅读设备
 
 许多书籍包含编程代码或配置示例。为了优化这些元素的显示效果，请在单栏屏模式下查看电子书，并将字体大小调整为最小设置。
 
-
-
-
-
 ![](img/1bda005f6b519fd0924777a921aebffa_2_0.png)
 
+## 目录
 
+### 第 11 章 注解
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 11.1. 使用注解
+- 11.1. 使用注解
 - 11.2. 定义注解
 - 11.3. Java API 中的注解
 - 11.4. 运行时处理注解
 - 11.5. 源码级注解处理
 - 11.6. 字节码工程
 
-## 12. Java 平台模块系统
+### 第 12 章 Java 平台模块系统
+
 - 12.1. 模块概念
 - 12.2. 模块命名
 - 12.3. 模块化的“Hello, World!”程序
@@ -75,7 +41,7 @@ ePUB 是一种开放的行业标准电子书格式。然而，不同阅读设备
 - 12.13. 服务加载
 - 12.14. 用于处理模块的工具
 
-## 附录
+### 附录
 
 # 前言
 
@@ -103,7 +69,7 @@ ePUB 是一种开放的行业标准电子书格式。然而，不同阅读设备
 - 注解
 - Java 平台模块系统
 
-随着 Java 类库的爆炸式增长，用一卷书涵盖专业程序员需要知道的所有 Java 特性是不可能的。因此，本书被分为两卷。第一卷集中于 Java 语言的基本概念。第二卷——*核心 Java，第二卷：高级特性*，则进一步探讨了最重要的库。
+随着 Java 类库的爆炸式增长，用一卷书涵盖专业程序员需要知道的所有 Java 特性是不可能的。因此，本书被分为两卷。第一卷集中于 Java 语言的基本概念。第二卷——核心 Java，第二卷：高级特性，则进一步探讨了最重要的库。
 
 在十二个版本中，用户界面编程被认为是基础性的，但现在是时候承认它不再如此，并将其移动到第二卷。该卷包含了这些主题的详细讨论：
 
@@ -118,17 +84,17 @@ ePUB 是一种开放的行业标准电子书格式。然而，不同阅读设备
 - 图形编程
 - 原生方法
 
-在编写书籍时，错误和不准确是不可避免的。我很想了解这些错误。但当然，我希望每个每个只学习一次。你可以在 https://horstmann.com/corejava 找到常见问题和错误修复列表。在勘误页的末尾策略性地放置（以鼓励你先阅读一遍）了一个用于报告 Bug 和建议改进的表。如果我没有回答每一个问题或没有立即回复你，请不要失望。我会阅读所有的电子邮件，并感谢你的投入，这将使本书的未来版本更加清晰、信息丰富。
+在编写书籍时，错误和不准确是不可避免的。我很想了解这些错误。但当然，我希望每个每个只学习一次。你可以在`https://horstmann.com/corejava`找到常见问题和错误修复列表。在勘误页的末尾策略性地放置（以鼓励你先阅读一遍）了一个用于报告 Bug 和建议改进的表。如果我没有回答每一个问题或没有立即回复你，请不要失望。我会阅读所有的电子邮件，并感谢你的投入，这将使本书的未来版本更加清晰、信息丰富。
 
 # 本书简介
 
-**第 1 章** 概述了 Java 区别于其他编程语言的能力。本章解释了语言设计者的目标以及他们成功到了何种程度。随后是 Java 的简史，详细介绍了 Java 如何诞生以及如何演变。
+**第 1 章**概述了 Java 区别于其他编程语言的能力。本章解释了语言设计者的目标以及他们成功到了何种程度。随后是 Java 的简史，详细介绍了 Java 如何诞生以及如何演变。
 
 **第 2 章**中，你将看到如何下载和安装 JDK 以及本书的程序示例。然后我将引导你编译并运行控制台应用程序和图形应用程序。你将看到如何使用原生 JDK、Java IDE 和 JShell 工具。
 
-**第 3 章** 开始讨论 Java 语言。在本章中，我涵盖了基础知识：变量、循环和简单函数。如果你是 C 或 C++ 程序员，这部分内容会非常顺畅，因为这些语言特性的语法本质上与 C 相同。如果你来自 Visual Basic 等非 C 背景，你将仔细阅读这一章。
+**第 3 章**开始讨论 Java 语言。在本章中，我涵盖了基础知识：变量、循环和简单函数。如果你是 C 或 C++ 程序员，这部分内容会非常顺畅，因为这些语言特性的语法本质上与 C 相同。如果你来自 Visual Basic 等非 C 背景，你将仔细阅读这一章。
 
-面向对象编程（OOP）现在是编程实践的主流，而 Java 是一种面向对象的编程语言。**第 4 章**引入了封装，这是面向对象性的两个基本构建块之首，以及 Java 语言实现它的机制——即类和方法。除了 Java 语言的规则外，你还会发现关于合理 OOP 设计的建议。最后，我介绍了神奇的名为 javadoc 工具，它可以将你的代码注释格式化为一组超链接的网页。如果你熟悉 C++，可以快速浏览这一章。
+面向对象编程（OOP）现在是编程实践的主流，而 Java 是一种面向对象的编程语言。**第 4 章**引入了封装，这是面向对象性的两个基本构建块之首，以及 Java 语言实现它的机制——即类和方法。除了 Java 语言的规则外，你还会发现关于合理 OOP 设计的建议。最后，我介绍了神奇的名为`javadoc`工具，它可以将你的代码注释格式化为一组超链接的网页。如果你熟悉 C++，可以快速浏览这一章。
 
 类和封装只是 OOP 故事的一部分，**第 5 章**引入了另一部分——即继承。继承允许你获取现有的类并根据你的需要对其进行修改。这是 Java 编程的一项基本技术。Java 的继承机制与 C++ 非常相似。再次，C++ 程序员可以关注语言之间的差异。
 
@@ -136,12 +102,9 @@ ePUB 是一种开放的行业标准电子书格式。然而，不同阅读设备
 
 **第 7 章**讨论了异常处理——Java 处理“良好的程序可能发生坏事”的健壮机制。异常为你提供了一种高效的方法，将正常处理代码与错误处理代码分离。当然，即使在处理了所有异常情况并强化了程序后，它可能仍然按照预期运行。然后本章转向日志记录。在本章的最后部分，我为你提供了一些实用的调试技巧。
 
-**第 8 章** 提供了泛型编程的概述。泛型编程让你的程序更易读、更安全。我向你展示如何使用强类型并移除难看的不安全转换，以及如何处理为了与旧版本 Java 保持兼容而产生的复杂性。
+**第 8 章**提供了泛型编程的概述。泛型编程让你的程序更易读、更安全。我向你展示如何使用强类型并移除难看的不安全转换，以及如何处理为了与旧版本 Java 保持兼容而产生的复杂性。
 
 **第 9 章**的主题是 Java 平台的集合框架。每当你想要收集多个对象并在以后检索它们时，你应该使用最适合你情况的集合，而不是简单地将元素丢进数组中。本章将向你展示如何利用预构建的标准集合。
-
-
-
 
 第 10 章涵盖了并发，它允许你编写程序并行执行任务。在处理器拥有多个核心且你希望使其保持忙碌的时代，这是 Java 技术的一个重要且令人兴奋的应用。
 
@@ -153,7 +116,7 @@ ePUB 是一种开放的行业标准电子书格式。然而，不同阅读设备
 
 ## 约定
 
-正如许多计算机书籍一样，我使用 `monospace` 类型字体表示计算机代码。
+正如许多计算机书籍一样，我使用`monospace`类型字体表示计算机代码。
 
 > **Note：** 注释带有类似此的“note”图标。
 
@@ -175,15 +138,15 @@ ePUB 是一种开放的行业标准电子书格式。然而，不同阅读设备
 
 ![](img/1bda005f6b519fd0924777a921aebffa_20_4.png)
 
-Java 自带了一个大型编程库，或应用程序编程接口（API）。当你第一次使用 API 调用时，我会在章节末尾添加简短的总结描述。这些描述稍微非正式一些，希望比官方在线 API 文档中的描述更有信息量。接口的名称使用*斜体*，与官方文档一致。类、接口或方法名称后的数字是引入该功能的 JDK 版本，如下例所示：
+Java 自带了一个大型编程库，或应用程序编程接口（API）。当你第一次使用 API 调用时，我会在章节末尾添加简短的总结描述。这些描述稍微非正式一些，希望比官方在线 API 文档中的描述更有信息量。接口的名称使用斜体，与官方文档一致。类、接口或方法名称后的数字是引入该功能的 JDK 版本，如下例所示：
 
 应用程序接口 21
 
 源代码位于书籍配套网站上的程序将以列表（listings）的形式呈现，例如：
 
-# Listing 1.1 NotHelloWorld.java
+## Listing 1.1 `NotHelloWorld.java`
 
-```
+```java
 void main() {
 	System.out.println("We will not use 'Hello'")
 }
@@ -191,47 +154,43 @@ void main() {
 
 ## 示例代码
 
-本书网站 https://horstmann.com/corejava 包含了书中所有的示例代码。有关安装 Java 开发工具包（JDK）和示例代码的更多信息，请参阅第 2 章。
+本书网站`https://horstmann.com/corejava`包含了书中所有的示例代码。有关安装 Java 开发工具包（JDK）和示例代码的更多信息，请参阅第 2 章。
 
 ## 致谢
 
 写一本书总是一项巨大的工程，而重写它似乎并不容易多少，特别是在 Java 技术不断变化的情况下。将一本书变成现实需要许多专注的人员，我很荣幸地感谢整个 Core Java 团队的贡献。
 
-Pearson 的许多个人提供了宝贵的帮助，但他们成功地隐身于幕后。我想让他们知道我有多么感激他们的努力。一如既往，我衷心感谢我的编辑 Greg Doench，他引导了书籍的编写和制作过程，并让我能够无知地忽略幕后所有人的存在。我非常感谢 Julie Nahil 的制作支持，感谢 Dmitry Kirsanov 和 Alina Kirsanova 对手稿的校对。我使用 HTML 和 CSS 编写了这本书，并由 Prince (https://princexml.com) 将其转换为 PDF——我非常推荐的工作流。还要感谢我早期版本的合著者 Gary Cornell，他此已投身其他事业。
+Pearson 的许多个人提供了宝贵的帮助，但他们成功地隐身于幕后。我想让他们知道我有多么感激他们的努力。一如既往，我衷心感谢我的编辑 Greg Doench，他引导了书籍的编写和制作过程，并让我能够无知地忽略幕后所有人的存在。我非常感谢 Julie Nahil 的制作支持，感谢 Dmitry Kirsanov 和 Alina Kirsanova 对手稿的校对。我使用 HTML 和 CSS 编写了这本书，并由 Prince（`https://princexml.com`）将其转换为 PDF——我非常推荐的工作流。还要感谢我早期版本的合著者 Gary Cornell，他此已投身其他事业。
 
 感谢早期版本的众多读者报告了错误并对改进提出了许多周全的建议。我特别感谢优秀的评审团队，他们以惊人的细节关注力审阅了手稿，使我免于许多尴尬的错误。
 
-本版及早期版本的评审员包括：Chuck Allison (Utah Valley University), Lance Andersen (Oracle), Gail Anderson (Anderson Software Group), Paul Anderson (Anderson Software Group), Alec Beaton (IBM), Cliff Berg, Andrew Binstock (Oracle), Joshua Bloch, David Brown, Corky Cartwright, Frank Cohen (PushToTest), Chris Crane (devSolution), Dr. Nicholas J. De Lillo (Manhattan College), Rakesh Dhoopar (Oracle), Ahmad R. Elkomey, Robert Evans (Senior Staff, The Johns Hopkins University Applied Physics Lab), David Geary (Clarity Training), Jim Gish (Oracle), Brian Goetz, Dmitry Kirsanov, Alina Kirsanova, Julie Nahil, Gary Cornell.
+本版及早期版本的评审员包括：Chuck Allison（Utah Valley University）、Lance Andersen（Oracle）、Gail Anderson（Anderson Software Group）、Paul Anderson（Anderson Software Group）、Alec Beaton（IBM）、Cliff Berg、Andrew Binstock（Oracle）、Joshua Bloch、David Brown、Corky Cartwright、Frank Cohen（PushToTest）、Chris Crane（devSolution）、Dr. Nicholas J. De Lillo（Manhattan College）、Rakesh Dhoopar（Oracle）、Ahmad R. Elkomey、Robert Evans（Senior Staff, The Johns Hopkins University Applied Physics Lab）、David Geary（Clarity Training）、Jim Gish（Oracle）、Brian Goetz、Dmitry Kirsanov、Alina Kirsanova、Julie Nahil、Gary Cornell。
 
-
-
-
-## 1.2. Java “白皮书”热词
+## 1.2. Java“白皮书”热词
 
 Java 的作者编写了一份具有影响力的白皮书，解释了他们的设计目标和成就。他们还发布了一份较短的概述，按照以下 11 个热词组织：
 
-- 1. 简单 (Simple)
-- 2. 对象化 (Object-Oriented)
-- 3. 分布式 (Distributed)
-- 4. 健壮 (Robust)
-- 5. 安全 (Secure)
-- 6. 架构无关 (Architecture-Neutral)
-- 7. 可移植性 (Portable)
-- 8. 解释型 (Interpreted)
-- 9. 高性能 (High-Performance)
-- 10. 多线程 (Multithreaded)
-- 11. 动态 (Dynamic)
+- 1. 简单（Simple）
+- 2. 对象化（Object-Oriented）
+- 3. 分布式（Distributed）
+- 4. 健壮（Robust）
+- 5. 安全（Secure）
+- 6. 架构无关（Architecture-Neutral）
+- 7. 可移植性（Portable）
+- 8. 解释型（Interpreted）
+- 9. 高性能（High-Performance）
+- 10. 多线程（Multithreaded）
+- 11. 动态（Dynamic）
 
 在接下来的章节中，你将看到一个包含白皮书摘的总结，介绍了 Java 设计者对每个热词的看法，以及基于我对当前 Java 版本的经验的评论。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_29_0.png)
 
-
 ### 1.2.1. 简单
 
 我们希望构建一个易于编程、无需大量晦涩训练且能利用今天标准实践的系统。因此，尽管我们发现 C++ 并不合适，但我们将 Java 设计得尽可能接近 C++，以使系统更易理解。Java 忽略了 C++ 中许多极少使用、难以理解且令人困惑的特征，根据我们的经验，这些特征带来的麻烦多于收益。
 
-Java 的语法确实是 C++ 语法的清理版本。它不需要头文件、指针算术（甚至不需要指针语法）、联合（unions）、运算符重载、虚基类等。（请参见文中穿插的 C++ 注释以了解更多关于 Java 和 C++ 之间的差异）。然而，设计者并没有试图修复 C++ 的所有笨拙特征。例如，Java 中 `switch` 语句的语法保持不变。如果你了解 C++，你会发现过渡到 Java 语法非常容易。
+Java 的语法确实是 C++ 语法的清理版本。它不需要头文件、指针算术（甚至不需要指针语法）、联合（unions）、运算符重载、虚基类等。（请参见文中穿插的 C++ 注释以了解更多关于 Java 和 C++ 之间的差异）。然而，设计者并没有试图修复 C++ 的所有笨拙特征。例如，Java 中`switch`语句的语法保持不变。如果你了解 C++，你会发现过渡到 Java 语法非常容易。
 
 在 Java 发布时，C++ 实际上并不是最常用的编程语言。许多开发者使用 Visual Basic 及其拖放式编程环境。这些开发者并没有认为 Java 简单。Java 开发环境花了几年时间才赶上。如今，Java 开发环境已远于其他编程语言的环境。
 
@@ -269,6 +228,8 @@ Java 旨在用于网络化/分布式环境。为了这一目标，安全性被�
 
 最初，Java 对下载代码的态度是“放尽管来吧！”。不可信的代码在沙箱环境中执行，在那里不会影响主机系统。用户被保证不会发生任何坏事，因为 Java 代码无论来自哪里，永远无法逃离沙箱。
 
+
+
 然而，Java 的安全模型是复杂的。在第一版 Java 开发工具包（JDK）发布后不久，普林顿大学的一组安全专家发现了允许不可信代码攻击主机的细微漏洞。最初，安全漏洞很快被修复了。不幸的是，随着时间的推移，黑客越来越擅长发现实现中的缺陷。Sun 以及随后的 Oracle 在这方面一直很困难。在了一些备受关注的攻击后，浏览器供应商变得越来越谨慎。一段时间，远程代码必须经过数字签名。
 
 > 注：尽管回想起来，安全模型并没有最初预想的那样成功，但 Java 是领先时代的。微软的一种竞争代码交付机制 ActiveX 依赖数字签名。显然这并不足够：任何微软产品都可以证实，来自知名供应商的程序也会崩溃并造成损害。
@@ -287,11 +248,7 @@ Java 旨在用于网络化/分布式环境。为了这一目标，安全性被�
 
 与 C 和 C++ 不同，规范中没有“依赖于实现”的方面。原始数据类型的大小是指定的，在它们上进行算术操作的行为也是注定的。
 
-例如，Java 中的 `int` 始终是 32 位整数。在 C/C++ 中，`int` 可以是 16 位整数、32 位整数或编译器供应商喜欢的任何大小。唯一的限制是
-
-
-
-`int` 类型的字节数至少要等于 `short int`，且不能多于 `long int`。具有固定大小的数值类型消除了一个重大的移植头疼问题。二进制数据以固定格式存储和传输，消除了对字节序的困惑。字符串以标准的 Unicode 格式保存。
+例如，Java 中的 `int` 始终是 32 位整数。在 C/C++ 中，`int` 可以是 16 位整数、32 位整数或编译器供应商喜欢的任何大小。唯一的限制是 `int` 类型的字节数至少要等于 `short int`，且不能多于 `long int`。具有固定大小的数值类型消除了一个重大的移植头疼问题。二进制数据以固定格式存储和传输，消除了对字节序的困惑。字符串以标准的 Unicode 格式保存。
 
 系统的组成库定义了 Windows 可移植接口。例如，存在一个抽象的 `Window` 类，以及针对 UNIX、Windows 和 Macintosh 的实现类。
 
@@ -299,19 +256,19 @@ Java 旨在用于网络化/分布式环境。为了这一目标，安全性被�
 
 然而，对于所有与用户界面无关的内容，Java 库都很好地让你能够以与平台无关的方式工作。你可以处理文件、正则表达式、XML、日期和时间、数据库、网络连接、线程等，而无需担心底层的操作系统。不仅你的程序是可移植的，Java API 的质量通常比原生 API 更高。
 
-## 1.2.8. 解释型
+### 1.2.8. 解释型
 
 Java 解释器可以在任何已移植了该解释器的机器上直接执行 Java 字节码。由于链接是一个更增量且更轻量化的过程，开发过程可以更加快速且具有探索性。
 
 这曾是一个非常大的跨越。任何用过 Lisp、Smalltalk、Visual Basic、Python、R 或 Scala 的人都知道什么是“快速且具有探索性”的开发过程。你尝试一些东西，并立即看到结果。在 Java 存在的前 20 年里，开发环境并没有关注这种体验。直到 Java 9，`jshell` 工具才开始支持快速且具有探索性的编程。
 
-## 1.2.9. 高性能
+### 1.2.9. 高性能
 
 虽然解释型字节码的性能通常绰绰有余，但在某些情况下需要更高的性能。字节码可以在运行时（即时）翻译成适用于运行该应用程序的特定 CPU 的机器代码。
 
 在 Java 早期，许多用户不同意性能“绰绰有余”的说法。然而在今天，即时编译器（JIT compilers）已经变得非常优秀，足以与传统编译器竞争，而且在某些情况下甚至优于它们，因为它们拥有更多可用信息。例如，即时编译器会监控哪些代码被频繁执行，并仅针对这部分代码进行速度优化。一种更高级的优化是函数调用的消除（或“内联”）。即时编译器知道哪些类已经被加载。当根据当前加载的类集合判断，某个特定函数从未被重写时，它可以使用内联技术，并在必要时可以（在后）撤销该项优化。
 
-## 1.2.10. 多线程
+### 1.2.10. 多线程
 
 多线程的益处是更好的交互响应能力和实时行为。
 
@@ -321,7 +278,7 @@ Java 远超于时代。它是第一个支持并发编程的主流语言。正如
 
 并发编程绝非易事，但 Java 在使其易于管理方面做得非常出色。
 
-## 1.2.11. 动态
+### 1.2.11. 动态
 
 在许多方面，Java 比 C 或 C++ 是一种更动态的语言。它的设计是为了适应不断演变的环境。库可以自由地添加新方法和实例变量，而不会对其客户端产生任何影响。在 Java 中，获取运行时类型信息是非常直接的。
 
@@ -331,7 +288,7 @@ Java 远超于时代。它是第一个支持并发编程的主流语言。正如
 
 ## 1.3. Java Applets 和互联网
 
-这里的想法非常简单：用户将从互联网下载 Java 字节码并在自己的机器上运行它们。在网页上运行的 Java 程序被称为 applet。要使用 applet，你只需要一个支持 Java 的网络浏览器，它会为你执行字节码。你不需要安装任何软件。每当你访问包含 applet 的网页时，你都会获得该程序的最新版本。最重要的是，得益于虚拟机的安全性，你永远不需要担心恶意代码。将 applet 插入网页就像嵌入图片一样。applet 成为页面的一部分，文本环绕着该空间流动。点在于，这张图片是*活的*。它对用户命令做出响应，并在展示 applet 的计算机与提供服务的计算机之间交换数据。
+这里的想法非常简单：用户将从互联网下载 Java 字节码并在自己的机器上运行它们。在网页上运行的 Java 程序被称为 applet。要使用 applet，你只需要一个支持 Java 的网络浏览器，它会为你执行字节码。你不需要安装任何软件。每当你访问包含 applet 的网页时，你都会获得该程序的最新版本。最重要的是，得益于虚拟机的安全性，你永远不需要担心恶意代码。将 applet 插入网页就像嵌入图片一样。applet 成为页面的一部分，文本环绕着该空间流动。点在于，这张图片是活的。它对用户命令做出响应，并在展示 applet 的计算机与提供服务的计算机之间交换数据。
 
 图 1.1 显示了显示分子结构的 Jmol applet。通过鼠标，你可以旋转和缩放每个分子以更好地理解结构。在发明 applet 时，这种操作通过网页无法实现——当时只有 JavaScript 而没有 HTML 画布。
 
@@ -344,15 +301,11 @@ Java 远超于时代。它是第一个支持并发编程的主流语言。正如
 
 本节提供了 Java 演变的简史。它基于各种出版来源（最重要的是 1995 年 7 月份 *SunWorld* 在线杂志对 Java 创造者的采访）。
 
-Java  la追溯到 1991 年，当时由 Patrick Naughton 和 James Gosling（Sun Fellow，也是一位全才计算机大师）领导的 Sun 工程师小组设计一种可以用于电缆机盒等消费设备的小型计算机语言。由于这些设备没有大量的功率或内存，这种语言必须很小并生成非常紧凑的代码。此外，由于不同的制造商可能会选择不同的处理器（CPU），因此该语言不绑定到任何单一架构是非常重要的。该项目的代号为“Green”。对小巧、紧凑且平台无关代码的要求促使团队设计了一种为虚拟机生成中间代码的可移植语言。
-
-
-
-
+Java la追溯到 1991 年，当时由 Patrick Naughton 和 James Gosling（Sun Fellow，也是一位全才计算机大师）领导的 Sun 工程师小组设计一种可以用于电缆机盒等消费设备的小型计算机语言。由于这些设备没有大量的功率或内存，这种语言必须很小并生成非常紧凑的代码。此外，由于不同的制造商可能会选择不同的处理器（CPU），因此该语言不绑定到任何单一架构是非常重要的。该项目的代号为“Green”。对小巧、紧凑且平台无关代码的要求促使团队设计了一种为虚拟机生成中间代码的可移植语言。
 
 Sun 公司的人源自 UNIX 背景，因此他们基于 C++ 构建了语言，而不是 Lisp、Smalltalk 或 Pascal。但正如高斯林（Gosling）在采访中所说：“从始到终，语言只是工具，而不是目的。”高斯林决定将他的语言命名为“Oak”（可能是因为他喜欢 Sun 公司窗外那棵橡树的样子）。Sun 公司的人们后来意识到 Oak 是一个已有的计算机语言名称，于是将其更名为 Java。事实证明，这是一个极具启发性的选择。
 
-1992 年，Green 项目交付了他们的第一个产品，名为“*7*”。这是一个极其智能的遥控器。遗憾的是，Sun 公司没有人人对生产这种产品感兴趣，Green 团队的人不得不寻找其他方式来营销他们的技术。然而，没有任何标准的消费电子公司对此感兴趣。于是，该小组竞标了一个设计有线电视机盒的项目，该盒子能够处理如视频点播等新兴的有线电视业务。但他们没有获得合同。（有趣的是，赢得合同的公司是由创立 Netscape 的吉姆·拉克（Jim Clark）领导的——这家公司对 Java 的成功起了巨大作用。）
+1992 年，Green 项目交付了他们的第一个产品，名为“7”。这是一个极其智能的遥控器。遗憾的是，Sun 公司没有人人对生产这种产品感兴趣，Green 团队的人不得不寻找其他方式来营销他们的技术。然而，没有任何标准的消费电子公司对此感兴趣。于是，该小组竞标了一个设计有线电视机盒的项目，该盒子能够处理如视频点播等新兴的有线电视业务。但他们没有获得合同。（有趣的是，赢得合同的公司是由创立 Netscape 的吉姆·拉克（Jim Clark）领导的——这家公司对 Java 的成功起了巨大作用。）
 
 Green 项目（更名为“First Person, Inc.”）在 1993 年全年和 1994 年上半年时间都在寻找购买其技术的人。但一无所获。（小组创始人之一、最终承担大部分营销工作的帕特里克·诺顿（Patrick Naughton）声称，在尝试销售该技术的过程中积累了 30 万英空里程。）First Person 在 1994 年解散。
 
@@ -387,7 +340,7 @@ Oracle 和其他供应商经常会将某些版本指定为长期支持（LTS）�
 # 表 1.1：Java 语言演变
 
 | 版本 | 年份 | 新语言特性 | 类和接口数量 |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 1.0 | 1996 | 语言本身 | 211 |
 | 1.1 | 1997 | 内部类 | 477 |
 | 1.2 | 1998 | strictfp 修饰符 | 1524 |
@@ -400,44 +353,42 @@ Oracle 和其他供应商经常会将某些版本指定为长期支持（LTS）�
 | 9 | 2017 | 模块、各种语言和库增强 | 6005 |
 | 11 | 2018 | 局部变量类型推断（`var`）、HTTP 客户端、移除的 Java FX、JNLP、Java EE 重叠部分以及 CORBA | 4410 |
 | 17 | 2021 | switch 表达式、文本块、instanceof 模式匹配、记录、密封类 | 4859 |
-
-
-
-
-
 | 版本 | 年份 | 新语言特性 | 类和接口 |
-| --- | --- | --- | --- |
 | 21 | 2023 | 虚拟线程、模式匹配 | 4,882 |
 
-# 1.5 关于 Java 的常见误解
+# 1.5. 关于 Java 的常见误解
 
 本章将通过一个关于 Java 常见误解的注释列表结束。
 
-Java 是 HTML 的扩展。
+## Java 是 HTML 的扩展
 
 Java 是一种编程语言；HTML 是一种描述网页结构的方式。它们之间没有任何没有共同之处，除了曾经存在过 HTML 扩展，用于在网页上放置 Java Applet。
 
-我使用 XML，所以我不需要 Java。
+## 我使用 XML，所以我不需要 Java
 
 Java 是一种编程语言；XML 是一种描述数据的方式。你可以用任何编程语言处理 XML 数据，但 Java API 为 XML 的处理提供了极佳的支持。此外，许多重要的 XML 工具都是用 Java 实现的。更多信息请参阅第二卷。
 
-Java 是一种容易学习的编程语言。
+## Java 是一种容易学习的编程语言
 
 没有任何一种像 Java 这样强大的编程语言是容易的。你总是必须区分编写玩具级程序的易易程度与完成严谨工作的难易程度。此外，请注意，书中只有七章讨论了 Java 语言。两卷书中其余章节都展示了如何使用 Java 库来发挥语言的作用。Java 库包含了数千个类和接口以及数万个函数。幸运的是，你不需要了解其中的每一个，但你确实需要了解惊人数量的项，才能用 Java 编写任何实际的任务。
 
-Java 将成为一种适用于所有平台的通用编程语言。
+## Java 将成为一种适用于所有平台的通用编程语言
 
 这在理论上是可能的。但在实践中，某些领域已被其他语言根深蒂固。Objective C 及其继任者 Swift 不会在 iOS 设备上被取代。浏览器中发生的任何事情都由 JavaScript 控制。Windows 程序用 C++ 或 C# 编写。Java 在服务端编程和跨平台客户端应用方面具有优势。
 
-Java 仅仅是另一种编程语言。
+## Java 仅仅是另一种编程语言
 
 Java 是一种很好的编程语言；大多数程序员倾向于它而非 C、C++ 或 C#。但曾有成百种优秀的编程语言从未获得过广泛普及，而像 C++ 和 Visual Basic 这样有明显缺陷的语言却取得了巨大的成功。
 
-为什么？一种编程语言的成功在很大程度上取决于周围支持系统的实用性，而不是其语法的优雅性。对于你需要的实现的功能，是否有有用、方便且标准的库？是否有工具供应商构建了出色的编程和调试环境？该语言和工具集是否与整个计算基础设施集成？Java 之所以成功是因为它的库让你能够轻松处理网络、Web 应用程序和并发等任务。Java 减少了指针错误是一个加分，所以程序员在使用 Java 时似乎效率更高——但这些因素并不是它成功的根源。
 
-Java 是私有的，因此应该避免使用。
 
-当 Java 最初创建时，Sun 微软公司向分发商和最终用户提供了免费许可。尽管 Sun 对 Java 拥有最终控制权，但他们让许多其他公司参与了语言修订和新库的设计。虚拟机和库的源代码一直是免费提供的，但仅供检查，而不供修改或重新分发。Java 是是“闭源的，但表现友好”。
+## 为什么？
+
+一种编程语言的成功在很大程度上取决于周围支持系统的实用性，而不是其语法的优雅性。对于你需要的实现的功能，是否有有用、方便且标准的库？是否有工具供应商构建了出色的编程和调试环境？该语言和工具集是否与整个计算基础设施集成？Java 之所以成功是因为它的库让你能够轻松处理网络、Web 应用程序和并发等任务。Java 减少了指针错误是一个加分，所以程序员在使用 Java 时似乎效率更高——但这些因素并不是它成功的根源。
+
+## Java 是私有的，因此应该避免使用
+
+当 Java 最初创建时，Sun 微软公司向分发商和最终用户提供了免费许可。尽管 Sun 对 Java 拥有最终控制权，但他们让许多其他公司参与了语言修订和新库的设计。虚拟机和库的源代码一直是免费提供的，但仅供检查，而不供修改或重新分发。Java 是“闭源的，但表现友好”。
 
 这种情况在 2007 年发生了剧烈变化，当时 Sun 宣布未来的 Java 版本将在通用公共许可证（GPL）下提供，这是与 Linux 相同的开源许可。Oracle 已承诺保持 Java 开源。现在有多个开放 Java 实现的提供者，具有不同程度的承诺和支持。
 
@@ -449,15 +400,15 @@ Java 是私有的，因此应该避免使用。
 
 曾有一段时间 Java Applet 运行在网络浏览器内部。如今，Java 程序是运行在网络浏览器之外的独立应用程序。事实上，大多数 Java 程序运行在服务器上，为网页生成代码或计算业务逻辑。
 
-Java 程序是重大的安全风险。
+## Java 程序是重大的安全风险
 
 在 Java 早期，曾有一些广为人知的 Java 安全系统故障的报告。研究人员将其视为寻找 Java 盔甲漏洞并挑战 Applet 模型强大性和复杂性的契机。他们发现的这些性故障很快得到了纠正。后来，出现了更严重的漏洞，Sun 以及后来的 Oracle 对此反应缓慢。浏览器制造商停止了对 Java Applet 的支持。让 Applet 成为可能的安全管理器架构现在已废弃。如今，Java 应用程序的安全性并不亚于其他应用程序。由于虚拟机的保护，它们比用 C 或 C++ 编写的应用程序安全得多。
 
-JavaScript 是 Java 的简易版本。
+## JavaScript 是 Java 的简易版本
 
 JavaScript 是一种可以在网页内部使用的脚本语言，由 Netscape 发明，最初称为 LiveScript。JavaScript 的语法让人联想到 Java，两种语言的名字听起来也很相似，但除此之外它们毫无关系。特别是 Java 是强类型的——编译器可以捕获许多由于类型误用引起的错误。在 JavaScript 中，此类错误只有在程序运行时才能被发现，这使得消除它们变得困难得多。
 
-有了 Java，我可以把桌面电脑换成一台廉价的“网络设备”。
+## 有了 Java，我可以把桌面电脑换成一台廉价的“网络设备”
 
 当 Java 最初发布时，有些人大注认为这将会发生。公司生产了由 Java 驱动的网络计算机原型，但用户尚未准备好放弃强大且方便的桌面电脑，转而使用没有本地存储的限制机器。如今，世界已经改变，对于大多数最终用户来说，重要的平台是手机或平板电脑。这些设备大部分由 Android 平台控制。学习 Java 编程对 Android 也有帮助。
 
@@ -471,22 +422,14 @@ JavaScript 是一种可以在网页内部使用的脚本语言，由 Netscape �
 
 ### 2.1.1 下载 JDK
 
-你可以从 Eclipse Foundation 的 https://adoptium.net 下载 Java 开发包，或者从 Oracle 的 https://www.oracle.com/java/technologies/downloads 下载，亦或可以从许多其他提供者处下载。根据提供者的不同，Java 开发包可能有一个品牌名称，例如 Temurin（Eclipse Foundation）、Corretto（Amazon）或 Zulu（Azul）。品牌名称对 Java 程序员来说并不重要。你应该使用 Java SE 21 (LTS) JDK。请参考表 2.1 下载网站上可能遇到的缩写和术语总结。
+你可以从 Eclipse Foundation 的`https://adoptium.net`下载 Java 开发包，或者从 Oracle 的`https://www.oracle.com/java/technologies/downloads`下载，亦或可以从许多其他提供者处下载。根据提供者的不同，Java 开发包可能有一个品牌名称，例如 Temurin（Eclipse Foundation）、Corretto（Amazon）或 Zulu（Azul）。品牌名称对 Java 程序员来说并不重要。你应该使用 Java SE 21 (LTS) JDK。请参考表 2.1 下载网站上可能遇到的缩写和术语总结。
 
-表 2.1：Java 术语
+**表 2.1：Java 术语**
 
 | 名称 | 缩写 | 解释 |
 |---|---|---|
 | Java 开发包 | JDK | 为编写 Java 程序的程序员提供的软件 |
-| Java 运行时环境 | JRE | 为运行 Java 程序的软件，无需 |
-
-
-
-
-
-| 名称 | 缩写 | 解释 |
-| --- | --- | --- |
-| | | 开发工具。仅支持到 Java 8。你可能想要这个。 |
+| Java 运行时环境 | JRE | 为运行 Java 程序的软件，无需开发工具。仅支持到 Java 8。你可能想要这个。 |
 | 标准版 (Standard Edition) | SE | 用于桌面和简单服务器应用的 Java 平台。你需要它。 |
 | 微型版 (Micro Edition) | ME | 用于小型设备的 Java 平台。 |
 | OpenJDK | — | Java SE 的免费开源实现。 |
@@ -498,13 +441,13 @@ JavaScript 是一种可以在网页内部使用的脚本语言，由 Netscape �
 | Temurin | — | Eclipse 基金会分发的 OpenJDK 版本的品牌。 |
 | Adoptium | — | Eclipse 基金会内部的一个项目，为其分发提供 OpenJDK 版本和基础设施支持。 |
 
-### 2.1.2. 设置 JDK
+### 2.1.2 设置 JDK
 
 下载 JDK 后，你需要安装它并确定它的安装位置——你之后会需要这些信息。
 
 如果你运行的是 Windows 或使用 Mac，只需启动安装程序并选择默认选项即可。
 
-在 Linux 上，将你的 .tar.gz 文件解压到你选择的位置，例如家目录或 /opt。然后将 PATH 设置为 JDK 所在目录的 bin 子目录，例如 /opt/jdk-21.0.4/bin。这通常通过向你的 ~/.bashrc 或 ~/.bash_profile 文件的末尾添加如下行来实现：
+在 Linux 上，将你的`.tar.gz`文件解压到你选择的位置，例如家目录或`/opt`。然后将 PATH 设置为 JDK 所在目录的`bin`子目录，例如`/opt/jdk-21.0.4/bin`。这通常通过向你的`~/.bashrc`或`~/.bash_profile`文件的末尾添加如下行来实现：
 
 ```bash
 export PATH=/opt/jdk-21.0.4/bin:$PATH
@@ -518,23 +461,23 @@ javac --version
 
 并按回车键。你应该得到类似这样的显示：
 
-```
+```text
 javac 21.0.4
 ```
 
 如果你收到的是类似“javac: command not found”或“指定的名称不是内部或外部命令、可运行程序或批文件”的消息，那么你需要双检查你的安装情况。
 
-了解 JDK 在系统上的安装位置通常很有用——参见表 2.2。在本书中，安装目录记为 jdk。例如，当引用 jdk/bin 目录时，我指的是类似 /opt/jdk-17.0.4/bin 或 C:\Program Files\Java\jdk-21\bin 的目录。
+了解 JDK 在系统上的安装位置通常很有用——参见表 2.2。在本书中，安装目录记为`jdk`。例如，当引用`jdk/bin`目录时，我指的是类似`/opt/jdk-17.0.4/bin`或`C:\Program Files\Java\jdk-21\bin`的目录。
 
-**表 2.2:** JDK 安装目录
+**表 2.2：JDK 安装目录**
 
 | 平台 | 示例目录 |
-| --- | --- |
-| Windows (Adoptium) | C:\Program Files\Eclipse Adoptium\jdk-21.0.4.11-hotspot |
-| Windows (Oracle JDK) | C:\Program Files\Java\jdk-21\Library\Java\JavaVirtualMachines\jdk-21.0.4_11.jdk\Contents\Home |
-| Linux | 你解压 .tar.gz 文件的位置，例如 /opt/jdk-21.0.4 |
+|---|---|
+| Windows (Adoptium) | `C:\Program Files\Eclipse Adoptium\jdk-21.0.4.11-hotspot` |
+| Windows (Oracle JDK) | `C:\Program Files\Java\jdk-21\Library\Java\JavaVirtualMachines\jdk-21.0.4_11.jdk\Contents\Home` |
+| Linux | 你解压`.tar.gz`文件的位置，例如`/opt/jdk-21.0.4` |
 
-**注意：** 在 Windows 上，Oracle JDK 安装程序会将目录 C:\Program Files\Common Files\Oracle\Java\javapath 添加到 PATH 环境变量中。该目录仅包含 javac、jav、java 和 jshell 可执行文件。（你将在本章学习如何使用 javac、java 和 jshell。javaw 可执行文件是 Windows 特有的功能，用于启动没有控制台窗口的程序。）Java 开发包中的其他工具可以在 JDK 安装目录的 bin 子目录下找到。调用这些程序时，要么指定完整路径（例如 javadoc 工具的 C:\Program Files\Java\jdk-21\bin\javadoc），要么将 bin 子目录添加到 PATH 环境变量中。实现这一点的方法之一是使用 setx 命令：
+**注意：** 在 Windows 上，Oracle JDK 安装程序会将目录`C:\Program Files\Common Files\Oracle\Java\javapath`添加到 PATH 环境变量中。该目录仅包含`javac`、`jav`、`java`和`jshell`可执行文件。（你将在本章学习如何使用`javac`、`java`和`jshell`。`javaw`可执行文件是 Windows 特有的功能，用于启动没有控制台窗口的程序。）Java 开发包中的其他工具可以在 JDK 安装目录的`bin`子目录下找到。调用这些程序时，要么指定完整路径（例如 javadoc 工具的`C:\Program Files\Java\jdk-21\bin\javadoc`），要么将`bin`子目录添加到 PATH 环境变量中。实现这一点的方法之一是使用`setx`命令：
 
 ```cmd
 setx PATH "%PATH%;c:\Program Files\Java
@@ -542,18 +485,18 @@ setx PATH "%PATH%;c:\Program Files\Java
 
 打开另一个终端窗口使更改生效。
 
-https://adoptium.net 安装程序没有这个问题。它将所有 JDK 工具都添加到 PATH 中。
+`https://adoptium.net`安装程序没有这个问题。它将所有 JDK 工具都添加到 PATH 中。
 
-## 2.1.3. 安装源文件和文档
+### 2.1.3 安装源文件和文档
 
-库源文件以压缩文件 jdk/lib/src.zip 的形式随 JDK 提供。解压该文件即可获取源码。只需执行以下操作：
+库源文件以压缩文件`jdk/lib/src.zip`的形式随 JDK 提供。解压该文件即可获取源码。只需执行以下操作：
 
-- 1. 确保 JDK 已安装，且 jdk/bin 目录在执行路径上。
-- 2. 在你的家目录中创建一个 jsrc 目录。如果你喜欢，可以在终端窗口中操作。
-- 3. 在你的终端窗口中找到 src.zip。
-- 4. 将 src.zip 解压到你的目录。
+1. 确保 JDK 已安装，且`jdk/bin`目录在执行路径上。
+2. 在你的家目录中创建一个`jsrc`目录。如果你喜欢，可以在终端窗口中操作。
+3. 在你的终端窗口中找到`src.zip`。
+4. 将`src.zip`解压到你的目录。
 
-## 2.2. 使用命令行工具
+## 2.2 使用命令行工具
 
 如果你的编程经验来自如 Visual Studio 等开发环境，你已经习惯了内置文本编辑器、编译菜单和调试器的系统。JDK 没有任何与之相似的内容。你通过在终端窗口中输入命令来完成一切。这听起来可能很繁琐，但它是一项基本技能。当你第一次安装 Java 时，你会对开发环境的作用有更好的理解。
 
@@ -561,9 +504,9 @@ https://adoptium.net 安装程序没有这个问题。它将所有 JDK 工具都
 
 让我们从最困难的方法开始：从命令行编译并运行 Java 程序。
 
-- 1. 打开终端窗口。
-- 2. 进入 corejava 目录。（corejava 目录是你安装本书源码的地方，如第 2.1.3 节所示）
-- 3. 输入以下命令：
+1. 打开终端窗口。
+2. 进入`corejava`目录。（`corejava`目录是你安装本书源码的地方，如第 2.1.3 节所示）
+3. 输入以下命令：
 
 ```bash
 javac Welcome.java
@@ -574,11 +517,9 @@ java Welcome
 
 恭喜！你刚刚编译并运行了你的第一个 Java 程序。
 
-发生了什么？javac 程序是 Java 编译器。它将 Welcome.java 文件编译为 Welcome.class 文件。java 程序启动 Java 虚拟机。它执行编译器放置在文件中的字节码。
+发生了什么？`javac`程序是 Java 编译器。它将`Welcome.java`文件编译为`Welcome.class`文件。`java`程序启动 Java 虚拟机。它执行编译器放置在文件中的字节码。
 
 Welcome 程序非常简单。它只是向终端打印了一条消息。你可能喜欢查看列表 2.1 所示的程序内部。你将在下一章看到它是如何工作的。
-
-
 
 ```java
 14 System.out.println();
@@ -590,27 +531,29 @@ Welcome 程序非常简单。它只是向终端打印了一条消息。你可能
 
 请注意以下几点：
 
-- 1. 如果你手动输入程序，请确保正确输入了大写字母和小写字母。特别是类名是 `Welcome` 而不是 `welcome` 或 WELCOME。
-- 2. 编译器需要一个文件名（`Welcome.java`）。当你运行程序时，指定的是类名（`Welcome`），且不需要加 .java 或 .class 扩展名。
-- 3. 如果你收到类似“Bad command or file name”或“javac: command not found”之类的消息，请返回并双检你的安装，特别是可执行文件路径设置。
-- 4. 如果 `javac` 报告找不到文件 `Welcome.java`，你应该检查该文件是否存在于目录中。
+1. 如果你手动输入程序，请确保正确输入了大写字母和小写字母。特别是类名是`Welcome`而不是`welcome`或`WELCOME`。
+2. 编译器需要一个文件名（`Welcome.java`）。当你运行程序时，指定的是类名（`Welcome`），且不需要加`.java`或`.class`扩展名。
+3. 如果你收到类似“Bad command or file name”或“javac: command not found”之类的消息，请返回并双检你的安装，特别是可执行文件路径设置。
+4. 如果`javac`报告找不到文件`Welcome.java`，你应该检查该文件是否存在于目录中。
 
-在 Linux 下，检查你是否对 Welcome.java 使用了正确的大小写。
-在 Windows 下，请使用 `dir` 命令，而不是图形化的资源管理器工具。某些文本编辑器（特别是记事本）坚持为每个文件名添加 .txt 扩展名。如果你使用记事本编辑 Welcome.java，它实际上会将其保存为 Welcome.java.txt。Windows 资源管理器在配合记事本复制时会隐藏 .txt 扩展名，因为它属于“已知文件类型”。在这种情况下，你需要重命名文件，或者在再次保存时给文件名加上引号："Welcome.java"。
+在 Linux 下，检查你是否对`Welcome.java`使用了正确的大小写。
 
-- 5. 如果你启动程序并收到关于 `java.lang.NoClassDefFoundError` 的错误消息，请仔细检查出错类的名称。
-如果你收到关于 welcome（w 为小写）的报错，那么你应该重新执行带大写 W 的 `java Welcome` 命令。一如既往，Java 对大小写是敏感的。
-如果你收到关于 Welcome/java 的报错，意味着你不小心输入了 `java Welcome.java`。请重新执行命令 `java Welcome`。
+在 Windows 下，请使用`dir`命令，而不是图形化的资源管理器工具。某些文本编辑器（特别是记事本）坚持为每个文件名添加`.txt`扩展名。如果你使用记事本编辑`Welcome.java`，它实际上会将其保存为`Welcome.java.txt`。Windows 资源管理器在配合记事本复制时会隐藏`.txt`扩展名，因为它属于“已知文件类型”。在这种情况下，你需要重命名文件，或者在再次保存时给文件名加上引号：`"Welcome.java"`。
+5. 如果你启动程序并收到关于`java.lang.NoClassDefFoundError`的错误消息，请仔细检查出错类的名称。
 
-> 注意：从 Java 11 开始，如果你只有一个源文件，可以跳过 `javac` 命令。此功能旨在 shell 脚本（以“shebang”行 #!/path/to/java 开头），可能用于简单的学生程序。一旦你的程序变得复杂，你就需要使用 `javac`。
+如果你收到关于`welcome`（w 为小写）的报错，那么你应该重新执行带大写 W 的`java Welcome`命令。一如既往，Java 对大小写是敏感的。
+
+如果你收到关于`Welcome/java`的报错，意味着你不小心输入了`java Welcome.java`。请重新执行命令`java Welcome`。
+
+> **注意：** 从 Java 11 开始，如果你只有一个源文件，可以跳过`javac`命令。此功能旨在 shell 脚本（以“shebang”行`#!/path/to/java`开头），可能用于简单的学生程序。一旦你的程序变得复杂，你就需要使用`javac`。
 
 Welcome 程序并不特别有趣。接下来，尝试一个图形应用程序。这个程序是一个简单的图像文件查看器，用于加载并显示图像。和之前一样，从命令行编译并运行程序。
 
-- 1. 打开终端窗口。
-- 2. 切换目录 `corejava/v1ch02/ImageView`。
-- 3. 输入以下内容：
+1. 打开终端窗口。
+2. 切换目录`corejava/v1ch02/ImageView`。
+3. 输入以下内容：
 
-```
+```text
 javac ImageViewer.java
 java ImageViewer
 ```
@@ -648,44 +591,64 @@ public class ImageViewer {
  * 一个带有显示图像标签的框架。
  */
 
-```
-
 class ImageViewerFrame extends JFrame {
+
     private static final int DEFAULT_WIDTH = 
+
     private static final int DEFAULT_HEIGHT
 
     public ImageViewerFrame() {
+
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
         // 使用标签显示图像
+
         var label = new JLabel();
+
         add(label);
 
         // 设置文件选择器
+
         var chooser = new JFileChooser();
+
         chooser.setCurrentDirectory(new File(
 
         // 设置菜单栏
+
         var menuBar = new JMenuBar();
+
         setJMenuBar(menuBar);
 
         var menu = new JMenu("File");
+
         menuBar.add(menu);
 
         var openItem = new JMenuItem("Open");
+
         menu.add(openItem);
+
         addItem.addActionListener(event -> {
+
             }
 ```
 
+
+
 ```java
 // 显示选择对话框
+
 int result = chooser.showOpenDialog(null);
+
 if (result == JFileChooser.APPROVE_VALUE) {
+
     String name = chooser.getSelectedFile().getAbsolutePath();
+
     label.setIcon(new ImageIcon(
+
 var exitItem = new JMenuItem("Exit");
+
 menu.add(exitItem);
+
 exitItem.addActionListener(event -> {
 ```
 
@@ -693,26 +656,22 @@ exitItem.addActionListener(event -> {
 
 在前面的节中，你学习了如何从命令行编译和运行程序。这对于故障排除是一项实用的技能，但对于大多数日常工作，你应该使用集成开发环境。这些环境如此强大且方便，以至于没有它们的情况下工作变得完全没有意义。优秀的选择是免费提供的 Eclipse、IntelliJ IDEA 和 NetBeans。
 
-从 eclipse.org/downloads 下载 Eclipse 开始。存在 Linux、Mac OS 和 Windows 的版本。运行安装程序并选择名为“Eclipse IDE for Java”的安装。以下是开始 Eclipse 的步骤：
+从 `eclipse.org/downloads` 下载 Eclipse 开始。存在 Linux、Mac OS 和 Windows 的版本。运行安装程序并选择名为“Eclipse IDE for Java”的安装。以下是开始 Eclipse 的步骤：
 
-- 1. 启动 Eclipse 后，选择 File -> New -> Project。
-- 2. 从对话框中选择“Java Project”（见图 2.3）。
-- 3. 点击 Next 按钮。*取消勾选“Use location”复选框*。点击 Browse 并导航到 `corejava/v1ch02/Welcome`（图 2.4）。
-- 4. 点击 Finish 按钮。项目现在已创建。
-- 5. 点击左侧面板项目旁边的三角形，直到找到 `Welcome.java` 文件并双击它。你现在应该看到一个显示程序代码的面板（见图 2.5）。
-- 6. 使用右键点击左侧面板中的项目名称（Welcome）。选择 Run -> Run As -> Java Application。程序输出显示在控制面板中。
+1. 启动 Eclipse 后，选择 File -> New -> Project。
+2. 从对话框中选择“Java Project”（见图 2.3）。
+3. 点击 Next 按钮。取消勾选“Use location”复选框。点击 Browse 并导航到 `corejava/v1ch02/Welcome`（图 2.4）。
+4. 点击 Finish 按钮。项目现在已创建。
+5. 点击左侧面板项目旁边的三角形，直到找到 `Welcome.java` 文件并双击它。你现在应该看到一个显示程序代码的面板（见图 2.5）。
+6. 使用右键点击左侧面板中的项目名称（Welcome）。选择 Run -> Run As -> Java Application。程序输出显示在控制面板中。
 
-推测这个程序可能没有拼写错误或 Bug（毕竟它只有几行代码）。让我们假设，你的代码偶尔会包含拼写错误（甚至是语法错误）。尝试一下——例如，通过以下方式更改 String 的大小写来破坏你的文件：
+推测这个程序可能没有拼写错误或 Bug（毕竟它只有几行代码）。让我们假设，你的代码偶尔会包含拼写错误（甚至是语法错误）。尝试一下——例如，通过以下方式更改 `String` 的大小写来破坏你的文件：
 
 ```java
 string greeting = "Welcome to Core Java!";
 ```
 
-注意 string 下方的波浪线。在源代码下方的标签页中，点击 Problems 并展开三角形，直到看到关于未知 string 类型的错误消息（见图 2.6）。点击错误消息。光标将移动到编辑面板中的匹配行，你可以在那里纠正错误。
-
-
-
-
+注意 `string` 下方的波浪线。在源代码下方的标签页中，点击 Problems 并展开三角形，直到看到关于未知 `string` 类型的错误消息（见图 2.6）。点击错误消息。光标将移动到编辑面板中的匹配行，你可以在那里纠正错误。
 
 # Java - Welcome/Welcome.java - Eclipse
 
@@ -726,23 +685,33 @@ string greeting = "Welcome to Core Java!";
  * 版本 1.30 2014-02-27
  * @author Cay Horstmann
  */
+
 public class Welcome {
+
     public static void main(String[] args) {
+
         String greeting = "Welcome to Core Java!";
+
         System.out.println(greeting);
+
         for (int i = 0; i < greeting.length(); i++) {
+
             System.out.print("=");
+
         }
+
         System.out.println();
+
     }
+
 }
 ```
 
-**图 2.6:** Eclipse 中的错误信息
+**图 2.6：** Eclipse 中的错误信息
 
 > **提示：** Eclipse 错误报告通常会伴有一个灯泡图标。点击灯泡可以获取建议的修复列表。
 
-## 2.4. JShell
+## 2.4 JShell
 
 JShell 程序提供了一个“读取-求值-打印循环”，或 REPL。你输入一个 Java 表达式；JShell 评估你的输入，打印结果，并等待你的下一次输入。这是实验的一种极佳方式——比在集成开发环境中编写一个完整的程序要快得多。
 
@@ -750,54 +719,89 @@ JShell 程序提供了一个“读取-求值-打印循环”，或 REPL。你输
 
 ```shell
 jshell
+
 $ jshell
+
 | Welcome to JShell -- Version 21.0.1
+
 | 如需查看入门介绍，请输入: /help intro
+
 \jshell> "Core Java".length()
+
 $1 == 9
+
 \jshell> 5 * $1 - 3
+
 $2 == 42
+
 \jshell> int answer = 6 * 7
+
 answer == 42
+
 \jshell> Math.
+
 <再次按下 tab 键查看所有可能的补全：可能的补全总数：103>
+
 jshell> Math.
+
 remainder(      PI
+
 abs(                absExact(
+
 acos                addExact(      asin(
+
 atan                atan2(           cbrt(
+
 ceil(               ceilDiv(            ceilDivExact(
+
 ceilMod(           clamp(              class
+
 copySign(           cos(                cosh(
+
 decrementExact(   divideExact(      exp(
+
 expm1(             floor(             floorDiv(
+
 floorDivExact(    floorMod(          fma(
+
 getExponent(      hypot(             incrementExact(
+
 log(               log10(           log1p(
+
 max(               min(                multiplyExact(
+
 multiplyFull(    multiplyHigh(negateExact(
+
 nextAfter(       nextDown(          nextUp(
+
 pow(              random(             rint(
+
 round(            scalb(             signum(
+
 sin(               sinh(               sqrt(
+
 subtractExact(   tan(                tanh(
+
 toDegrees(       toIntExact(       toRadians(
+
 ulp(              unsignedMultiplyHigh(
+
 jshell> Math
 ```
 
-图 2.7: 运行 JShell
+图 2.7：运行 JShell
 
 JShell 启动时会显示一条问候语，随后是提示符：
 
-```
+```text
 | Welcome to JShell -- Version 21.0.4
+
 | 如需查看入门介绍，请输入: /help intro
 
 jshell>
 ```
 
-现在输入一个表达式，例如
+现在输入一个表达式，例如：
 
 ```java
 "Core Java".length()
@@ -805,28 +809,29 @@ jshell>
 
 JShell 将返回结果——在这种情况下，是字符串“Core Java”中的字符数。
 
-```
+```text
 $1 ==> 9
 ```
 
 注意，你不需要输入 `System.out.println`。JShell 会自动打印你输入的每个表达式的值。
 
-输出中的 `$1` 表示该结果可以进一步用于计算。例如，如果你输入
+输出中的 `$1` 表示该结果可以进一步用于计算。例如，如果你输入：
 
-```
+```text
 5 * $1 - 3
 ```
 
-响应结果为
+响应结果为：
 
-```
+```text
 $2 => 42
 ```
 
-如果你需要多次使用一个变量，可以给它起一个更有记性的名字。例如，
+如果你需要多次使用一个变量，可以给它起一个更有记性的名字。例如：
 
 ```shell
 jshell> var answer = 6 * 7
+
 answer => 42
 ```
 
@@ -834,58 +839,99 @@ answer => 42
 
 ```shell
 jshell> Math.
+
 remainder(      PI
+
 abs(           a
+
 acos( addExact(      a
+
 atan(
+
 ceil(
+
 ceilMod(
+
 copySign(
+
 decrementExact(
+
 expm1(
+
 floorDivExact(
+
 getExponent(
+
 log(
+
 max(
+
 multiplyFull(
+
 nextAfter(
+
 pow(
+
 round(
+
 sin(
+
 subtractExact(
+
 toDegrees(
+
 ulp(
+
 atan2(
+
 ceilDiv(
+
 clamp(
+
 cos(
+
 ceilExact(
+
 divideExact(
+
 floor(
+
 floorMod(
+
 hypot(
+
 log10(
+
 min(
+
 multiplyHigh(
+
 nextDown(
+
 random()
+
 scalb(
+
 sinh(
+
 tan(
+
 toIntExact(
+
 unsignedMultiplyHigh(
 ```
 
-现在输入 1 并再次按下 Tab 键。方法名被补全为 `log`，你会得到更短的列表：
+现在输入 `1` 并再次按下 Tab 键。方法名被补全为 `log`，你会得到更短的列表：
 
 ```shell
 jshell> Math.log
+
 log( log10( log1p(
 ```
 
 现在你可以手动填写剩余部分：
 
-## 第3章 Java 基础编程结构
+# 第 3 章 Java 基础编程结构
 
 此时，你应该已经成功安装了 JDK 并执行了第 2 章中的示例程序。本章将向你展示数据类型、分支和循环是如何实现的。
 
@@ -895,9 +941,13 @@ log( log10( log1p(
 
 ```java
 public class Welcome {
+
     public static void main(String[] args) {
+
         System.out.println("Hello, World!");
+
     }
+
 }
 ```
 
@@ -913,42 +963,47 @@ javac Welcome.java
 
 标准的命名规范（Java 中）是类名以大写字母开头。如果一个名称包含多个单词，每个单词的首字母都大写。这种在名称中间使用大写字母的做法被称为“驼峰命名法”（camel case）或自称为“CamelCase”。
 
-当你使用
+当你使用以下命令运行编译后的程序时，Java 虚拟机始终从指定类中的 `main` 方法开始执行：
 
 ```bash
 java Welcome
 ```
 
-运行编译后的程序时，Java 虚拟机始终从指定类中的 `main` 方法开始执行。（“方法”一词是 Java 对“函数”的说法。）因此，你的类源码中必须有一个 `main` 方法，代码才能执行。当然，你也可以向类中添加自己的方法，并在 `main` 方法中调用它们。（你将在下一章中看到如何编写自己的方法。）
-
-
-
+“方法”一词是 Java 对“函数”的说法。因此，你的类源码中必须有一个 `main` 方法，代码才能执行。当然，你也可以向类中添加自己的方法，并在 `main` 方法中调用它们。（你将在下一章中看到如何编写自己的方法。）
 
 https://bugs.openjdk.org/browse/JDK-4252539。在 1999 年，该 bug 被标记为“已关闭，不修复”。一位 Sun 工程师添加了一段解释，说明 Java 虚拟机规范并没有规定 `main` 必须是 public 的，并且“修复它会导致潜在的问题”。幸运的是，理性最终胜出。Java 1.4 及更高版本的 Java 启动器强制 `main` 方法必须是 `public`。
 
 当然，让质量保证工程师（他们通常工作过量，且并不总是 Java 细微之处的专家）对 bug 报告做出令人质疑的决定是非常沮丧的。但值得注意的是，在 Java 开源之前，bug 报告及其解决方案就已经公开供任何人审查了。
 
-请注意源代码中的大括号 `{ }`。在 Java 中，就像在 C/C++ 中一样，大括号用于划分程序中的各个部分（通常称为*块*）。在 Java 中，任何方法的代码必须以左大括号 `{` 开始，以右大括号 ` }` 结束。
+请注意源代码中的大括号 `{ }`。在 Java 中，就像在 C/C++ 中一样，大括号用于划分程序中的各个部分（通常称为块）。在 Java 中，任何方法的代码必须以左大括号 `{` 开始，以右大括号 `}` 结束。
 
 大括号的风格引发了无数无用的争议。本书采用的是大括号对齐的风格。由于空白符与 Java 编译器无关，你可以使用任何你喜欢的大括号风格。
 
 目前，不要担心 `static void` 这两个关键字——只需将其看作是让 Java 程序编译所需要的内容即可。到第 4 章结束时，你将完全理解这个咒语。目前需要记住的点是，每个 Java 都必须有一个以后如下声明的 `main` 方法：
 
-```
+```java
 public class ClassName {
+
     public static void main(String[] args) {
+
         program statements
+
     }
+
 }
 ```
 
-> **预览说明：** `public static void` 这种复杂的结构即将被某种更简单的东西所取代。Java 21 有一个预览特性，在 Java 增强提案 (JEP) 445 中进行了描述，它允许你这样写 `main` 方法：
+> **预览说明：** `public static void` 这种复杂的结构即将被某种更简单的东西所取代。Java 21 有一个预览特性，在 Java 增强提案（JEP 445）中进行了描述，它允许你这样写 `main` 方法：
 
-```
+```java
 class FirstSample {
+
     void main() {
+
         System.out.println("We will not use");
+
     }
+
 }
 ```
 
@@ -956,42 +1011,45 @@ class FirstSample {
 
 现在，你需要使用命令行标记来编译并运行程序：
 
-```
+```bash
 javac --enable-preview --source 21 FirstSample
+
 java --enable-preview --source 21 FirstSample
 ```
 
 更简单，因为只有一个源文件，你可以跳过 `javac` 步骤：
 
-```
+```bash
 java --enable-preview --source 21 FirstSample
 ```
 
 在本书中，我们拥抱类和面向对象编程。但对于非常简单的程序，JEP 445 允许你省略类，前提是当然只有一个类。`FirstSample.java` 文件可以简单包含：
 
-```
+```java
 void main() {
+
     System.out.println("We will not use 'Hello");
+
 }
 ```
 
 由于这些功能仍然处于预览阶段，我不会在这一版中使用它们，但在未来，第一个示例程序将会变得简单一点。
 
-> **C++ 注意：** 作为一名 C++ 程序员，你知道什么是 C++ 类。Java 类与 C++ 类 相似，但有一些可能会让你掉入陷阱的差异。例如，在 Java 中，所有函数都是某个类的方法。（标准术语称它们为方法、成员函数。）因此，在 Java 中，你必须为 `main` 方法提供一个外壳类。你可能也熟悉 C++ 中静态成员函数的概念。这些是定义在类内部且不操作对象的成员函数。Java 中的 `main` 方法始终是 `static` 的。最后，与 C/C++ 一样，`void` 关键字表示该方法不返回值。与 C/C++ 不同，`main` 方法不会向操作系统返回“退出状态码”。如果 `main` 方法正常退出，Java 程序的退出码为 0，表示成功完成。要用不同的退出码终止程序，请使用 `System.exit` 方法。
+> **C++ 注意：** 作为一名 C++ 程序员，你知道什么是 C++ 类。Java 类与 C++ 类相似，但有一些可能会让你掉入陷阱的差异。例如，在 Java 中，所有函数都是某个类的方法。（标准术语称它们为方法、成员函数。）因此，在 Java 中，你必须为 `main` 方法提供一个外壳类。你可能也熟悉 C++ 中静态成员函数的概念。这些是定义在类内部且不操作对象的成员函数。Java 中的 `main` 方法始终是 `static` 的。最后，与 C/C++ 一样，`void` 关键字表示该方法不返回值。与 C/C++ 不同，`main` 方法不会向操作系统返回“退出状态码”。如果 `main` 方法正常退出，Java 程序的退出码为 0，表示成功完成。要用不同的退出码终止程序，请使用 `System.exit` 方法。
 
-现在你已经看到了所有 Java 程序的的基本结构，请将注意力转向 `main` 方法的内容：
+现在你已经看到了所有 Java 程序的基本结构，请将注意力转向 `main` 方法的内容：
 
-```
+```java
 {
-  System.out.println("We will not use 'Hello, World");
+    System.out.println("We will not use 'Hello, World");
 }
 ```
 
 大括号标记了方法体的开始和结束。该方法内部只有一条语句。和大多数编程语言一样，你可以将语句视为该语言的句子。在 Java 中，每条语句必须以分号结尾。特别是，换行符并不标记语句的结束，因此语句在需要时可以跨越多行。
 
-`main` 方法的主体包含一条向控制台输出单行文本的语句。在这里，我们正在使用 `System.out` 对象并调用它的 `println` 方法。注意用于调用方法的点号。Java 使用通用语法
+`main` 方法的主体包含一条向控制台输出单行文本的语句。在这里，我们正在使用 `System.out` 对象并调用它的 `println` 方法。注意用于调用方法的点号。Java 使用通用语法：
 
-```
+```text
 object.method(arguments)
 ```
 
@@ -999,19 +1057,21 @@ object.method(arguments)
 
 在这种情况下，Java 中的方法（就像任何编程语言中的函数一样）可以使用零、一个或多个参数。即使方法没有参数，你也必须使用空括号。例如，没有参数的 `println` 方法变体只是打印一个空行。你通过以下调用来执行它：
 
-```
+```java
 System.out.println();
 ```
 
-> 注意：`System.out` 还有一个 `print` 方法，它不会在输出中添加换行符。例如，`System.out.print("Hello")` 会打印 Hello 而不换行。下一次输出将紧接着字母 `o` 之后出现。
 
-# 3.2. 注释
+
+> 注意：`System.out` 还有一个 `print` 方法，它不会在输出中添加换行符。例如，`System.out.print("Hello")` 会打印 `Hello` 而不换行。下一次输出将紧接着字母 `o` 之后出现。
+
+## 3.2. 注释
 
 Java 中的注释与大多数编程语言一样，不会出现在可执行的程序中。因此，你可以根据需要添加任意数量的注释，而不担心代码膨胀。Java 有三种标记注释的方法。最常见的形式是 `//`。用它来编写单行注释。对于较长的注释，可以使用 `/*` 和 `*/` 结束符。最后，第三种注释用于生成文档。这就是 `/**`。
 
-对于 Java 文档，可以使用 `@` 标记。更多关于这种类型的信息，请参见 Javadoc。
+对于 Java 文档，可以使用 `@` 标记。更多关于这种类型的信息，请参见 `Javadoc`。
 
-# 3.3. 数据类型
+## 3.3. 数据类型
 
 Java 是一种强类型语言。这意味着每个变量都必须有类型。Java 有八种基本类型。其中四个是整数类型；两个是浮点数类型；一个是字符类型 `char`，用于 UTF-16 编码（见第 3.3 节）；一个是用于布尔值的布尔类型。
 
@@ -1025,51 +1085,45 @@ Java 是一种强类型语言。这意味着每个变量都必须有类型。Jav
 
 | 类型 | 存储要求 | 范围（包含边界） |
 |---|---|---|
-| byte | 1 字节 | -128 到 127 |
-| short | 2 字节 | -32,768 到 32,767 |
-| int | 4 字节 | -2,147,483,648 到 2,147,483,647（略大于 20 亿） |
-| long | 8 字节 | 9,223,372,036,854,775,808 到 9,223,372,036,854,775,807 |
+| `byte` | 1 字节 | -128 到 127 |
+| `short` | 2 字节 | -32,768 到 32,767 |
+| `int` | 4 字节 | -2,147,483,648 到 2,147,483,647（略大于 20 亿） |
+| `long` | 8 字节 | 9,223,372,036,854,775,808 到 9,223,372,036,854,775,807 |
 
 在大多数情况下，`int` 类型是最实用的。如果你想表示地球的人口，你将需要使用 `long`。`byte` 和 `short` 类型主要用于特殊应用程序，如低级文件处理，或在存储空间紧张的大数组中。
 
-在 Java 中，整数类型的范围不依赖于运行 Java 代码的机器。这减轻了想要将软件从一个平台迁移到另一个平台，甚至在同一平台的不同操作系统之间迁移的程序员的痛苦。相比之下，C 和 C++ 程序为每个处理器使用最高效的整数类型。因此，在 32 位处理器上运行良好的 C 程序
+在 Java 中，整数类型的范围不依赖于运行 Java 代码的机器。这减轻了想要将软件从一个平台迁移到另一个平台，甚至在同一平台的不同操作系统之间迁移的程序员的痛苦。相比之下，C 和 C++ 程序为每个处理器使用最高效的整数类型。因此，在 32 位处理器上运行良好的 C 程序在 16 位系统上可能会出现整数溢出。由于 Java 程序必须在所有机器上运行结果相同，因此各种类型的范围是固定的。
 
-在 16 位系统上可能会出现整数溢出。由于 Java 程序必须在所有机器上运行结果相同，因此各种类型的范围是固定的。
+长整型数字带有后缀 `L` 或 `l`（例如 `40000000000L`）。十六进制数带有前缀 `0x` 或 `0X`（例如 `0CAFE`）。八进制数带有前缀 `0`（例如 `010` 是 8）——无疑，这可能会引起困惑，很少有程序员使用八进制常量。
 
-长整型数字带有后缀 L 或 l（例如 40000000000L）。十六进制数带有前缀 0x 或 0X（例如 0CAFE）。八进制数带有前缀 0（例如 010 是 8）——无疑，这可能会引起困惑，很少有程序员使用八进制常量。
+你可以使用前缀 `0b` 或 `0B` 写二进制数字。例如，`0b1001` 是 9。你可以在数字字面量添加下划线，例如 `1_000_000`（或 `0b1111_0100_0100_0000`）来表示一百万。下划线仅供人类视觉阅读。Java 编译器会简单地移除它们。
 
-你可以使用前缀 0b 或 0B 写二进制数字。例如，0b1001 是 9。你可以在数字字面量添加下划线，例如 1_000_000（或 0b1111_0100_0100_0000）来表示一百万。下划线仅供人类视觉阅读。Java 编译器会简单地移除它们。
+> C++ 注意：在 C 和 C++ 中，`int` 和 `long` 等类型的大小取决于目标平台。在像 8086 这样的 16 位处理器上，整数是 2 字节，但在像 Pentium 或 SPARC 这样的 32 位处理器上，它们是 4 字节。同样，`long` 值在 32 位处理器上是 4 字节，在 64 位处理器上是 8 字节。这些差异使得编写跨平台程序具有挑战性。在 Java 中，所有数值类型的大小都是平台无关的。
 
-> C++ 注意：在 C 和 C++ 中，int 和 long 等类型的大小取决于目标平台。在像 8086这样的 16 位处理器上，整数是 2 字节，但在像 Pentium 或 SPARC 这样的 32 位处理器上，它们是 4 字节。同样，long 值在 32 位处理器上是 4 字节，在 64 位处理器上是 8 字节。这些差异使得编写跨平台程序具有挑战性。在 Java 中，所有数值类型的大小都是平台无关的。
+注意 Java 没有 `int`、`long`、`short` 或 `byte` 类型的无符号版本。
 
-注意 Java 没有 int、long、short 或 byte 类型的无符号版本。
-
-**注意：** 如果你处理的是永远不会为负的整数值，并且确实需要额外的位，你可以在小心的情况下将有符号整数值解释为无符号。例如，与其让一个 byte b 表示 -128 到 127 的范围，你可能想要 0 到 255 的范围。你可以将其存储在 byte 中。只要不溢出，二进制算术、加、减、乘法的性质就能正常工作。对于其他操作，调用 Byte.toUnsignedInt(b) 获取 0 到 255 之间的 int 值，然后处理该整数值并强制转换回 byte。Integer 和 Long 类具有无符号除法和取余的方法。
-
-![](img/1bda005f6b519fd0924777a921aebffa_105_0.png)
+**注意：** 如果你处理的是永远不会为负的整数值，并且确实需要额外的位，你可以在小心的情况下将有符号整数值解释为无符号。例如，与其让一个 `byte b` 表示 -128 到 127 的范围，你可能想要 0 到 255 的范围。你可以将其存储在 `byte` 中。只要不溢出，二进制算术、加、减、乘法的性质就能正常工作。对于其他操作，调用 `Byte.toUnsignedInt(b)` 获取 0 到 255 之间的 `int` 值，然后处理该整数值并强制转换回 `byte`。`Integer` 和 `Long` 类具有无符号除法和取余的方法。
 
 ### 3.3.2. 浮点类型
 
 浮点类型表示带有小数部分的数字。两种浮点类型如表 3.2 所示。
 
-## 表 3.2: 浮点类型
+**表 3.2: 浮点类型**
 
 | 类型 | 存储要求 | 范围 |
 | --- | --- | --- |
-| float | 4 字节 | 约 ±3.40282347 ×10³⁸ (6–7 位有效十进制) |
-| double | 8 字节 | 约 ±1.7976913486231570 ×10³⁰⁸ (15 位有效数字) |
+| `float` | 4 字节 | 约 ±3.40282347 ×10³⁸ (6–7 位有效十进制) |
+| `double` | 8 字节 | 约 ±1.7976913486231570 ×10³⁰⁸ (15 位有效数字) |
 
-double 的名称是指这些数字的精度是 float 类型的两倍。有些人称这些为双倍精度数字。float 的有限精度（6-7 位有效数字）对于许多情况来说是不够的。只有当你使用的库需要它们时，或者当你需要存储大量的此类数字时，才使用 float 值。
+`double` 的名称是指这些数字的精度是 `float` 类型的两倍。有些人称这些为双倍精度数字。`float` 的有限精度（6-7 位有效数字）对于许多情况来说是不够的。只有当你使用的库需要它们时，或者当你需要存储大量的此类数字时，才使用 `float` 值。
 
-Java 20 增加了两个方法（Float.floatToFloat16 和 Float.float16ToFloat），用于在 short 值中存储“半精度” 16 位浮点数。这些方法用于实现神经网络。
+Java 20 增加了两个方法（`Float.floatToFloat16` 和 `Float.float16ToFloat`），用于在 `short` 值中存储“半精度” 16 位浮点数。这些方法用于实现神经网络。
 
-float 类型的数字带有后缀 F 或 f（例如 3.14F）。不带 F 后缀的浮点数（如 3.14 ）始终始终被视为 double 类型。你可以选择性地提供 D 或 d 后缀（例如 3.14D）。
+`float` 类型的数字带有后缀 `F` 或 `f`（例如 `3.14F`）。不带 `F` 后缀的浮点数（如 `3.14`）始终被视为 `double` 类型。你可以选择性地提供 `D` 或 `d` 后缀（例如 `3.14D`）。
 
-E 或 e 表示十进制指数。例如，1.729E3 等于 1729。
+`E` 或 `e` 表示十进制指数。例如，`1.729E3` 等于 1729。
 
-> **注意：** 你可以在十六进制中指定浮点数字面量。例如，0.125 = 2⁻³ 可以写为 0x1.0p-3。在十六进制表示中，你使用 p 而不是 e 来表示指数。（e 是一个十六进制数字）。注意，尾数是用十六进制表示的，指数是用十进制表示的。指数的基数是 2, 10。
-
-![](img/1bda005f6b519fd0924777a921aebffa_107_0.png)
+> **注意：** 你可以在十六进制中指定浮点数字面量。例如，`0.125 = 2⁻³` 可以写为 `0x1.0p-3`。在十六进制表示中，你使用 `p` 而不是 `e` 来表示指数。（`e` 是一个十六进制数字）。注意，尾数是用十六进制表示的，指数是用十进制表示的。指数的基数是 2, 10。
 
 所有浮点运算都遵循 IEEE 754 规范。特别是，有三个特殊的浮点值来表示溢出和错误：
 
@@ -1077,86 +1131,76 @@ E 或 e 表示十进制指数。例如，1.729E3 等于 1729。
 - 负无穷大
 - NaN (不是数字)
 
-例如，一个正浮点数除以 0 的结果是正无穷大。将 0.0 除以 0 或负数的平方根产生 NaN。
+例如，一个正浮点数除以 0 的结果是正无穷大。将 `0.0` 除以 0 或负数的平方根产生 NaN。
 
-**注意：** 常量 Double.POSITIVE_INFINITY、Double.NEGATIVE_INFINITY 和 Double.NaN（以及相应的 Float 常量）表示这些特殊值，但在实践中很少使用。特别是，你不能通过测试
-
-![](img/1bda005f6b519fd0924777a921aebffa_108_0.png)
+**注意：** 常量 `Double.POSITIVE_INFINITY`、`Double.NEGATIVE_INFINITY` 和 `Double.NaN`（以及相应的 `Float` 常量）表示这些特殊值，但在实践中很少使用。特别是，你不能通过测试
 
 ```
 if (x == Double.NaN) // 永远为假
 ```
 
-来检查特定结果是否等于 Double.NaN。所有的“不是数字”值都被认为是不同的。然而，你可以使用 Double.isNaN 方法：
+来检查特定结果是否等于 `Double.NaN`。所有的“不是数字”值都被认为是不同的。然而，你可以使用 `Double.isNaN` 方法：
 
 ```
 if (Double.isNaN(x)) // 检查是否
 ```
 
-**警告：** 浮点数*不适合*不能容忍舍入误差的财务计算。例如，命令 `System.out.println(2.0 - 1.1)` 输出
-
-![](img/1bda005f6b519fd0924777a921aebffa_108_1.png)
-
-0.8999999999999999，而不是你预期的 0.9。
-这种舍入误差由于浮点数是在二进制数字系统中表示的。分数 1/10 没有精确的二进制表示。如果你需要精确表示分数 1/10，请使用 BigDecimal。
+**警告：** 浮点数*不适合*不能容忍舍入误差的财务计算。例如，命令 `System.out.println(2.0 - 1.1)` 输出 `0.8999999999999999`，而不是你预期的 `0.9`。这种舍入误差由于浮点数是在二进制数字系统中表示的。分数 `1/10` 没有精确的二进制表示。如果你需要精确表示分数 `1/10`，请使用 `BigDecimal`。
 
 ### 3.3.3. char 类型
 
-char 类型最初旨在描述单个字符。现在，char 的值包含在单引号中。例如，'A' 是一个值为 65 的字符。
+`char` 类型最初旨在描述单个字符。现在，`char` 的值包含在单引号中。例如，`'A'` 是一个值为 65 的字符。
 
-char 类型表示 16 位的 Unicode 字符。这意味着它可以表示从 U+0000 到 U+FFFF 的任何字符。然而，它只表示基本语言平面 (BMP) 中的字符。要表示 BMP 之外的字符，必须使用两个 char 组成的代理对。
+`char` 类型表示 16 位的 Unicode 字符。这意味着它可以表示从 U+0000 到 U+FFFF 的任何字符。然而，它只表示基本语言平面 (BMP) 中的字符。要表示 BMP 之外的字符，必须使用两个 `char` 组成的代理对。
 
-可以使用字面量或强制转换整数创建 char。char 字面量可以用多种方式创建：
+可以使用字面量或强制转换整数创建 `char`。`char` 字面量可以用多种方式创建：
 
 - 字面量：`char c = 'A';`
 - Unicode 转义：`char c = '\u0041';`
 - 十六进制转义：`char c = '\x41';`
 - 强制转换：`char c = (char) 65;`
 
-char 类型也可以用于数组和字符串。
+`char` 类型也可以用于数组和字符串。
 
 ```java
 char[] characters = {'A', 'B', 'C'};
 String str = "ABC";
 ```
 
-除了 \u 转义序列外，还有几个用于特殊字符的转义 序列，如表 3.3 所示。
+除了 `\u` 转义序列外，还有几个用于特殊字符的转义序列，如表 3.3 所示。
 
-## 表 3.3: 特殊字符的转义序列
+**表 3.3: 特殊字符的转义序列**
 
 | 转义序列 | 名称 | Unicode 值 |
 | --- | --- | --- |
-| \b | 退格 | \u008 |
-| \t | 制表符 | \u009 |
-| \n | 换行符 | \u00a |
-| \r | 回车符 | \u00d |
-| \f | 换符 | \u00c |
-| \" | 双引号 | \u0022 |
-| \' | 单引号 | \u0027 |
-| \\ | 反斜杠 | \u05c |
-| \s | 空格。用于文本块以保留尾部空格。 | \u020 |
-| \ newline | 仅用于文本块：连接下一行 | |
+| `\b` | 退格 | `\u008` |
+| `\t` | 制表符 | `\u009` |
+| `\n` | 换行符 | `\u00a` |
+| `\r` | 回车符 | `\u00d` |
+| `\f` | 换符 | `\u00c` |
+| `\"` | 双引号 | `\u0022` |
+| `\'` | 单引号 | `\u0027` |
+| `\\` | 反斜杠 | `\u05c` |
+| `\s` | 空格。用于文本块以保留尾部空格。 | `\u020` |
+| `\ newline` | 仅用于文本块：连接下一行 | |
 
-> **警告：** Unicode 转义序列在代码解析之前处理。例如，“u0022+\u0022”*不是*由引号包围的加号（U+0022）。相反，\u0022 在解析之前转换为 "，产生 "\+" 或空字符串。
+> **警告：** Unicode 转义序列在代码解析之前处理。例如，`“u0022+\u0022”`*不是*由引号包围的加号（U+0022）。相反，`\u0022` 在解析之前转换为 `"`，产生 `"\+"` 或空字符串。
 
-更隐蔽的是，你必须小心注释中的 \u。注释
+更隐蔽的是，你必须小心注释中的 `\u`。注释
 
 ```
 // \u000A 是一个换行
 ```
 
-会导致语法错误，因为 \u000A 被替换为换行。同样，注释
+会导致语法错误，因为 `\u000A` 被替换为换行。同样，注释
 
 ```
 // look inside c:\users
 ```
 
-会导致语法错误，因为 \u 后面没有跟随四个十六进制数字。
+会导致语法错误，因为 `\u` 后面没有跟随四个十六进制数字。
 
-> **注意：** Unicode 转义序列中可以包含任意数量的 u：\u00E9 和 \u000E9 都表示字符 é。这种奇怪现象是有原因的。考虑一个快乐地使用 Unicode 编码的程序员，由于某些过老的原因，被要求仅以 ASCII 提交代码。转换工具可以将任何大于 U+007F 的字符转换为 Unicode 转义序列
-
-
-并在每个现有的 Unicode 转义字符前添加一个 u。这使得转换是可逆的。例如，é 被转换为 \u00e9，并且可以转换回 \u00e9。
+> **注意：** Unicode 转义序列中可以包含任意数量的 `u`：`\u00E9` 和 `\u000E9` 都表示字符 é。这种奇怪现象是有原因的。考虑一个快乐地使用 Unicode 编码的程序员，由于某些过老的原因，被要求仅以 ASCII 提交代码。转换工具可以将任何大于 U+007F 的字符转换为 Unicode 转义序列，并在每个现有的 Unicode 转义字符前添加一个 `u`。这使得转换是可逆的。例如，é 被转换为 `\u00e9`，并且可以转换回 `\u00e9`。
 
 ### 3.3.4. Unicode 与 `char` 类型
 
@@ -1170,7 +1214,7 @@ Unicode 的设计是为了解决这两个问题。当统一工作在 20 世纪�
 
 Unicode 代码点（即范围从 0 到十六进制 10FFF 的整数）在位中的表示取决于字符编码。你可以将每个字符编码为 21 位的序列，但对于计算机硬件来说是不切实际的。UTF-32 编码简单地将每个代码点放入 32 位中，其中高 11 位为零。这相当浪费空间。互联网上最常见的编码是 UTF-8，每个字符使用一到四个字节。编码的细节请参阅第二卷第 2 章。
 
-Java 字符串使用 UTF-16 编码。它使用由长度为 16 位单位（称为**代码单元（code units）**）构成的变长编码来编码所有的 Unicode 代码点。基本多语言平面中的字符被编码为单个代码单元。所有其他字符都被编码为连续的两个代码单元。这种编码对中的每个代码单元都落入基本多语言平面中 2048 个未使用的值的范围内，该区域被称为**代理区（surrogates area）**（第一个代码单元为 '\uD800' 到 '\uDBFF'，第二个代码单元为 '\uDC00' 到 '\uDFFF'）。这非常聪明，因为你可以立即判断一个编码是单个字符，还是补充字符的第一个部分或第二个部分。例如，啤酒杯表情符号的代码点是 U+1F37A，由两个单元 '\uD83C' 和 '\uDF7A' 编码。（编码算法的描述请参见 https://tools.iet.org/html/rfc2781/。）每个代码单元都以 `char` 值的形式存储。细节并不重要。你只需要知道，单个 Unicode 字符可能需要一个或两个 `char` 值。
+Java 字符串使用 UTF-16 编码。它使用由长度为 16 位单位（称为**代码单元（code units）**）构成的变长编码来编码所有的 Unicode 代码点。基本多语言平面中的字符被编码为单个代码单元。所有其他字符都被编码为连续的两个代码单元。这种编码对中的每个代码单元都落入基本多语言平面中 2048 个未使用的值的范围内，该区域被称为**代理区（surrogates area）**（第一个代码单元为 `'\uD800'` 到 `'\uDBFF'`，第二个代码单元为 `'\uDC00'` 到 `'\uDFFF'`）。这非常聪明，因为你可以立即判断一个编码是单个字符，还是补充字符的第一个部分或第二个部分。例如，啤酒杯表情符号的代码点是 U+1F37A，由两个单元 `'\uD83C'` 和 `'\uDF7A'` 编码。（编码算法的描述请参见 https://tools.iet.org/html/rfc2781/。）每个代码单元都以 `char` 值的形式存储。细节并不重要。你只需要知道，单个 Unicode 字符可能需要一个或两个 `char` 值。
 
 你不能忽略代码单元在 U+FFFF 之上的字符。你的客户很可能使用需要这些字符的语言书写，或者他们可能喜欢在消息中放入表情符号 🍺。
 
@@ -1182,9 +1226,9 @@ Java 字符串使用 UTF-16 编码。它使用由长度为 16 位单位（称为
 
 ### 3.3.5. boolean 类型
 
-`boolean` 类型有两个值：`false` 和 `true`。它用于评估逻辑条件。你不能将其他类型转换为整数（此处原文可能有误，意为不能转换为 boolean）。
+`boolean` 类型有两个值：`false` 和 `true`。它用于评估逻辑条件。你不能将其他类型转换为整数（此处原文可能有误，意为不能转换为 `boolean`）。
 
- 注意：在 Java 中，0 是 `false`，非零值是 `true`。
+注意：在 Java 中，0 是 `false`，非零值是 `true`。
 
 ## 3.4. 变量与常量
 
@@ -1194,7 +1238,7 @@ Java 字符串使用 UTF-16 编码。它使用由长度为 16 位单位（称为
 
 在 Java 中，每个变量都有类型。你通过先放置类型，后跟变量名来声明变量。这里有一些示例：
 
-```
+```java
 double salary;
 int vacationDays;
 long earthPopulation;
@@ -1203,55 +1247,56 @@ boolean done;
 
 注意每个声明末尾的分号。因为声明是一个完整的语句。
 
-变量名的标识符（以及其他名称）由字母、数字、货币符号和“连接符”组成。第一个字符不能是数字。像 '+' 或 '@' 这样的符号不能用于变量名。大小写敏感的：`main` 和 `Main` 是不同的标识符。标识符的长度本质上没有限制。
+变量名的标识符（以及其他名称）由字母、数字、货币符号和“连接符”组成。第一个字符不能是数字。像 `'+'` 或 `'@'` 这样的符号不能用于变量名。大小写敏感的：`main` 和 `Main` 是不同的标识符。标识符的长度本质上没有限制。
 
-“字母”、“数字”和“货币符号”这些术比 Java 要宽得多。字母是任何表示字母的 Unicode 字符。例如，德语使用者可以在变量中使用变音字母 ä；希腊语使用者可以使用 π。同样，数字是 0–9 以及任何表示数字的 Unicode 字符。货币符号是 €,¥ 等。连接符包括下划线字符 `_`、波浪线 `∼` 以及其他。在实践中，大多数程序员坚持使用 A–Z、a–z、0–9 和下划线 `_`。
+“字母”、“数字”和“货币符号”这些术语比 Java 要宽得多。字母是任何表示字母的 Unicode 字符。例如，德语使用者可以在变量中使用变音字母 ä；希腊语使用者可以使用 π。同样，数字是 0–9 以及任何表示数字的 Unicode 字符。货币符号是 €,¥ 等。连接符包括下划线字符 `_`、波浪线 `∼` 以及其他。在实践中，大多数程序员坚持使用 A–Z、a–z、0–9 和下划线 `_`。
 
 提示：如果你真的好奇哪些 Unicode 字符可以作为标识符，可以使用 `Character` 类中的 `isIdentifierStart` 和 `isIdentifierPart` 方法进行检查。
 
-
-
 名称。通常情况下，你不应该拥有两个仅大小写不同的名称。然而，有时很难为变量起一个好的名字。许多程序员会给变量起一个与类型相同的名称，例如：
 
-```
+```java
 Box box; // "Box" 是类型，“box" 是变量
 ```
 
 其他程序员更倾向于为变量使用 "a" 前缀：
 
-```
+```java
 Box aBox;
 ```
 
-## 3.4.2. 初始化变量
+### 3.4.2. 初始化变量
 
 在声明变量后，你必须通过赋值语句显式地初始化它——你永远不能使用未初始化变量的值。例如，Java 编译器会将以下语句序列标记为错误：
 
-```
+```java
 int vacationDays;
 System.out.println(vacationDays); // 错误--变量
 ```
 
-你通过在左侧使用变量名、等号 (=)然后在右侧使用某个带有适当值的 Java 表达式来给之前声明的变量赋值。
+你通过在左侧使用变量名、等号 (`=`) 然后在右侧使用某个带有适当值的 Java 表达式来给之前声明的变量赋值。
 
-```
+```java
 int vacationDays;
 vacationDays = 12;
 ```
 
-你可以在同一行内声明并初始化变量。
-例如：
 
-```
+
+
+你可以在同一行内声明并初始化变量。例如：
+
+```java
 int vacationDays = 12;
 ```
 
-最后，在 Java 中，你可以将声明放在代码的任何位置。
-例如，以下是 Java 中合法的代码：
+最后，在 Java 中，你可以将声明放在代码的任何位置。例如，以下是 Java 中合法的代码：
 
 ```java
 double salary = 65000.0;
+
 System.out.println(salary);
+
 int vacationDays = 12; // 声明变量是允许的
 ```
 
@@ -1259,8 +1304,9 @@ int vacationDays = 12; // 声明变量是允许的
 
 > **注意：** 如果可以从初始值推断出类型，则不需要声明局部变量的类型。只需使用 `var` 关键字代替类型即可：
 
-```
+```java
 var vacationDays = 12; // vacationDays
+
 var greeting = "Hello"; // greeting 是
 ```
 
@@ -1268,13 +1314,13 @@ var greeting = "Hello"; // greeting 是
 
 > C++ 注意：C 和 C++ 区分变量的声明和定义。例如，
 
-```
+```java
 int i = 10;
 ```
 
 是一个定义，而
 
-```
+```java
 extern int i;
 ```
 
@@ -1288,8 +1334,10 @@ extern int i;
 public class Constants {
     public static void main(String[] args) {
         final double CM_PER_INCH = 2.54;
+
         double paperWidth = 8.5;
         double paperHeight = 11;
+
         System.out.println("Paper size in centimeters " + paperWidth * CM_PER_INCH + " by " + paperHeight * CM_PER_INCH);
     }
 }
@@ -1300,14 +1348,13 @@ public class Constants {
 在 Java 中，创建一个常量以便在单个类内的多个方法中使用，可能更为常见。这些通常被称为类常量。使用 `static final` 关键字来设置类常量。以下是使用类常量的示例：
 
 ```java
-public class Constants2
-{
+public class Constants2 {
     public static final double CM_PER_INCH = 2.54;
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         double paperWidth = 8.5;
         double paperHeight = 11;
+
         System.out.println("Paper size in centimeters: " + paperWidth * CM_PER_INCH + " by " + paperHeight * CM_PER_INCH);
     }
 }
@@ -1321,17 +1368,17 @@ public class Constants2
 
 ### 3.4.4. 枚举类型
 
-有时，一个变量应该只持有受限的值。例如，你可能出售四种尺寸的衣服或披萨：小号、中号、大号特号。当然，你可以将这些尺寸编码为整数 1, 2, 3, 4 或字符 S, M, L, 和 X。但这是一个容易出错的设置。变量很容易持有错误的值（例如 Ø 或 m）。
+有时，一个变量应该只持有受限的值。例如，你可能出售四种尺寸的衣服或披萨：小号、中号、大号特号。当然，你可以将这些尺寸编码为整数 `1`、`2`、`3`、`4` 或字符 `S`、`M`、`L` 和 `X`。但这是一个容易出错的设置。变量很容易持有错误的值（例如 Ø 或 `m`）。
 
 每当出现这种情况时，你都可以定义自己的枚举类型。枚举类型具有有限的命名值。例如：
 
-```
+```java
 enum Size { SMALL, MEDIUM, LARGE, EXTRA_LARGE };
 ```
 
 现在你可以声明这种类型的变量了：
 
-```
+```java
 Size s = Size.MEDIUM;
 ```
 
@@ -1339,7 +1386,7 @@ Size s = Size.MEDIUM;
 
 枚举类型将在第 5 章进行更详细的讨论。
 
-## 3.5 运算符
+## 3.5. 运算符
 
 运算符用于组合值。正如你将在后续章节中看到的，Java 拥有一丰富的算术运算符、逻辑运算符和数学函数。
 
@@ -1347,15 +1394,15 @@ Size s = Size.MEDIUM;
 
 Java 中常用的算术运算符 `+`、`-`、`*` 和 `/` 用于加法、减法、乘法和除法。
 
-如果两个操作数都是整数，`/` 运算符表示整数除法；否则表示浮点数除法。整数除以 0 会抛出异常，而浮点数除以 0 会产生无限或 NaN 结果。
+如果两个操作数都是整数，`/` 运算符表示整数除法；否则表示浮点数除法。整数除以 `0` 会抛出异常，而浮点数除以 `0` 会产生无限或 `NaN` 结果。
 
 整数余数（有时称为模）由 `%` 表示。例如，`15 / 2` 是 `7`，`15 % 2` 是 `1`，而 `15.0 / 2` 是 `7.5`。
 
-> **注意：** 当 `%` 的操作数之一为负时，结果也是负数。例如，如果 `n` 是偶数，`n % 2` 为 0；如果 `n` 是奇数，则为 1。
+> **注意：** 当 `%` 的操作数之一为负时，结果也是负数。例如，如果 `n` 是偶数，`n % 2` 为 `0`；如果 `n` 是奇数，则为 `1`。
 
-数学家们数百年前就知道最优的（欧几里得）总是留 0。考虑这个问题：你计算时时针的位置。应用一个调整，并将其归一化为 0 到 11 之间的数字。这很简单：`(position + adjustment) % 12`。但如果 `adjustment` 是负数呢？你可能会得到一个负数。因此你必须引入分支，或者使用 `((position + adjustment) % 12 + 12) % 12`。无论如何，这都很麻烦。
+数学家们数百年前就知道最优的（欧几里得）总是留 `0`。考虑这个问题：你计算时时针的位置。应用一个调整，并将其归一化为 `0` 到 `11` 之间的数字。这很简单：`(position + adjustment) % 12`。但如果 `adjustment` 是负数呢？你可能会得到一个负数。因此你必须引入分支，或者使用 `((position + adjustment) % 12 + 12) % 12`。无论如何，这都很麻烦。
 
-更好的解决方法是使用 `floorMod` 方法：`Math.floorMod(position + adjustment, 12)` 会产生一个 0 到 11 之间的值。遗憾的是，`floorMod` 对于负数除数仍会产生负余数，但这种情况在实践中并没有发生。
+更好的解决方法是使用 `floorMod` 方法：`Math.floorMod(position + adjustment, 12)` 会产生一个 `0` 到 `11` 之间的值。遗憾的是，`floorMod` 对于负数除数仍会产生负余数，但这种情况在实践中并没有发生。
 
 > 注意：Java 语言的声明目标之一是可移植性。无论由哪个虚拟机执行，计算结果都应该是相同的。对于浮点数的算术计算，实现这一点可能异常地困难。`double` 类型使用 64 位存储值，但某些处理器使用 80 位浮点寄存器。这些寄存器在计算步骤中提供了额外的精度。
 
@@ -1371,11 +1418,10 @@ Java 中常用的算术运算符 `+`、`-`、`*` 和 `/` 用于加法、减法�
 
 要计算数字的平方根，请使用 `sqrt` 方法。
 
-
-
 ```java
 double x = 4;
 double y = Math.sqrt(x);
+
 System.out.println(y); // prints 2.0
 ```
 
@@ -1389,7 +1435,7 @@ Java 编程语言没有用于幂运算符：你必须使用 `Math` 类中的 `po
 double y = Math.pow(x, a);
 ```
 
-将 `y` 设置为 x 的 a 次方 (x^a)。`pow` 方法的两个参数都是 `double` 类型，返回的也是 `double` 类型。
+将 `y` 设置为 `x` 的 `a` 次方（`x^a`）。`pow` 方法的两个参数都是 `double` 类型，返回的也是 `double` 类型。
 
 `Math` 类提供了常用的三角函数：
 
@@ -1417,7 +1463,7 @@ Math.clamp(11, 0, 10) // 太大，返回上限
 Math.clamp(3, 0, 10) // 在范围内，返回原值
 ```
 
-最后，三个常量表示了与数学常数 π、τ = 2π 和 e 最可能的近似值：
+最后，三个常量表示了与数学常数 `π`、`τ = 2π` 和 `e` 最可能的近似值：
 
 ```java
 Math.PI
@@ -1441,9 +1487,9 @@ System.out.println("The square root of π is " + s);
 
 **注意：** `Math` 类中的方法使用计算机浮点运算单元的例程以获得最佳性能。如果完全可预测的结果比性能更重要，请使用 `StrictMath` 类。它实现了来自“自由分发数学库”（https://www.netlib.org/fdlibm）的算法，保证在所有平台上的结果完全一致。
 
-> **注意：** `Math` 类提供了几种方法使整数算术更安全。当计算溢出时，数学运算符会静默地返回错误结果。例如，十亿乘以三（1000000000 * 3）的结果为 -129467296，因为最大的 `int` 值略大于二十亿。如果你调用 `Math.multiplyExact(1000000000, 3)`，则会产生异常。你可以捕获该异常或让程序终止，而不是带着错误结果继续运行。还有 `addExact`、`subtractExact`、`incrementExact`、`decrementExact`、`negateExact` 和 `absExact` 方法，参数类型均为 `int` 和 `long`。
+> **注意：** `Math` 类提供了几种方法使整数算术更安全。当计算溢出时，数学运算符会静默地返回错误结果。例如，十亿乘以三（`1000000000 * 3`）的结果为 `-129467296`，因为最大的 `int` 值略大于二十亿。如果你调用 `Math.multiplyExact(1000000000, 3)`，则会产生异常。你可以捕获该异常或让程序终止，而不是带着错误结果继续运行。还有 `addExact`、`subtractExact`、`incrementExact`、`decrementExact`、`negateExact` 和 `absExact` 方法，参数类型均为 `int` 和 `long`。
 
-# 3.5.3. 数值类型之间的转换
+## 3.5.3. 数值类型之间的转换
 
 通常需要从一种数值类型转换为另一种类型。图 3.1 显示了合法的转换。
 
@@ -1451,7 +1497,7 @@ System.out.println("The square root of π is " + s);
 
 **图 3.1：** 数值类型之间的合法转换
 
-图 3.1 中的六个实线箭头表示不丢失信息的转换。三个虚线箭头表示可能会丢失信息的转换。例如，像 123456789 这样的大整数的位数比 `float` 类型能表示的更多。当整数转换为 `float` 时，得到的数值具有正确的数量，但丢失了一些精度。
+图 3.1 中的六个实线箭头表示不丢失信息的转换。三个虚线箭头表示可能会丢失信息的转换。例如，像 `123456789` 这样的大整数的位数比 `float` 类型能表示的更多。当整数转换为 `float` 时，得到的数值具有正确的数量，但丢失了一些精度。
 
 ```java
 int n = 123456789;
@@ -1465,7 +1511,7 @@ float f = n; // f 是 1.23456792E+8
 - 否则，如果两个操作数中有一个是 `long` 类型，则另一个将被转换为 `long`。
 - 否则，两个操作数都将被转换为 `int`。
 
-# 3.5.4. 强制转换
+## 3.5.4. 强制转换
 
 在上一节中，你看到 `int` 值在需要时会自动转换为 `double` 值。另一方面，显然在某些时候你想将 `double` 视为整数。Java 中可以进行数值转换，但当然可能会丢失信息。通过强制转换可能会发生信息丢失。强制转换的语法是在括号中给出目标类型，然后是变量名。例如：
 
@@ -1474,25 +1520,25 @@ double x = 9.997;
 int nx = (int) x;
 ```
 
-现在 `nx` 的值为 9。如果你想将浮点数舍入到最近的整数，请使用 `Math.round`：
+现在 `nx` 的值为 `9`。如果你想将浮点数舍入到最近的整数，请使用 `Math.round`：
 
 ```java
 double x = 9.997;
 int nx = (int) Math.round(x);
 ```
 
-现在 `nx` 的值为 10。
+现在 `nx` 的值为 `10`。
 
-# 3.5.5. 赋值
+## 3.5.5. 赋值
 
-程序员当然知道，数值变量最常见的操作之一是加或减 1。Java 遵循 C 和 C++ 的传统，既有递增和递减运算符：`n++` 将 `n` 的当前值加 1，`n--` 从其减 1。例如，以下代码
+程序员当然知道，数值变量最常见的操作之一是加或减 `1`。Java 遵循 C 和 C++ 的传统，既有递增和递减运算符：`n++` 将 `n` 的当前值加 `1`，`n--` 从其减 `1`。例如，以下代码
 
 ```java
 int n = 12;
 n++;
 ```
 
-将 `n` 变为 13。由于这些运算符改变了变量的值，因此它们不能应用于数字。例如，`4++` 不是合法的语句。
+将 `n` 变为 `13`。由于这些运算符改变了变量的值，因此它们不能应用于数字。例如，`4++` 不是合法的语句。
 
 赋值有一种快捷方式：
 
@@ -1508,11 +1554,11 @@ int x = 1;
 x += 4;
 ```
 
-将 `x` 变为 5。
+将 `x` 变为 `5`。
 
-# 3.5.6. 递增和递减运算符
+## 3.5.6. 递增和递减运算符
 
-这些运算符有两种形式；你刚刚看到了放在操作数之后的后置形式。还有前置形式 `++n`。两者都会将变量的值加 1。它们之间的区别仅在用于表达式内部时出现。前置形式先执行加法；后置形式返回变量的旧值。
+这些运算符有两种形式；你刚刚看到了放在操作数之后的后置形式。还有前置形式 `++n`。两者都会将变量的值加 `1`。它们之间的区别仅在用于表达式内部时出现。前置形式先执行加法；后置形式返回变量的旧值。
 
 ```java
 int m = 7;
@@ -1524,13 +1570,13 @@ int a = 2 * ++m; // 现在 a 是 16，m 是 8
 int b = 2 * n++; // 现在 b 是 14，n 是 8
 ```
 
-许多程序员发现这种行为很困惑。在 Java 中，在表达式中使用 ++ 并不常见。
+许多程序员发现这种行为很困惑。在 Java 中，在表达式中使用 `++` 并不常见。
 
-# 3.5.7. 关系和布尔运算符
+## 3.5.7. 关系和布尔运算符
 
 Java 拥有完整的关系运算符。测试相等性使用双等号 `==`。例如，
 
-```
+```java
 3 == 7
 ```
 
@@ -1538,7 +1584,7 @@ Java 拥有完整的关系运算符。测试相等性使用双等号 `==`。例�
 
 使用 `!=` 表示不相等。例如，
 
-```
+```java
 3 != 7
 ```
 
@@ -1548,45 +1594,43 @@ Java 拥有完整的关系运算符。测试相等性使用双等号 `==`。例�
 
 Java 遵循 C++，使用 `&&` 作为逻辑“与”运算符，使用 `||` 作为逻辑“或”运算符。正如你可以轻松记住的
 
-
-
 从 `!=` 运算符可以看出，感叹号 `!` 是逻辑取反运算符。`&&` 和 `||` 运算符以“短路”方式评估：如果第一个操作数已经确定了值，则不再评估第二个操作数。如果你用 `&&` 运算符组合两个表达式，
 
-```
+```java
 expression1 && expression2
 ```
 
 并且第一个表达式的真值被确定为假，那么结果不可能为真。因此，不会计算第二个表达式的值。这种行为可以用来避免错误。例如，在表达式
 
-```
+```java
 x != 0 && 1 / x > x + y // 避免除以零
 ```
 
-如果 `x` 等于零，第二个操作数永远不会被评估。因此，如果 `x` 为零，则不会计算 `1 / x`，也不会发生除零错误。
+如果 `x` 等于 `0`，第二个操作数永远不会被评估。因此，如果 `x` 为 `0`，则不会计算 `1 / x`，也不会发生除零错误。
 
 同样，如果第一个表达式为真，表达式 `expression1 || expression2` 的值自动为真，而无需评估第二个表达式。
 
-### 3.5.8 条件运算符
+### 3.5.8. 条件运算符
 
 Java 提供了条件运算符 `?:`，它根据布尔表达式选择一个值。表达式
 
-```
+```java
 condition ? expression₁ : expression₂
 ```
 
 如果条件为真，则求值为第一个表达式的值，否则求值为第二个表达式的值。例如，
 
-```
+```java
 x < y ? x : y
 ```
 
 给出 `x` 和 `y` 中的较小值。
 
-### 3.5.9 Switch 表达式
+### 3.5.9. `switch` 表达式
 
 如果你需要在多个值之间进行选择，可以使用 `switch` 表达式，它是在 Java 14 中引入的。它看起来如下：
 
-```
+```java
 String seasonName = switch (seasonCode) {
     case 0 -> "Spring";
     case 1 -> "Summer";
@@ -1596,29 +1640,34 @@ String seasonName = switch (seasonCode) {
 };
 ```
 
-`switch` 关键字后面的表达式被称为选择器表达式，它的值就是选择器。目前，我们只考虑整数类型（`int`, `char`, `byte` 或 `short`）、字符串或枚举类型的常量作为选择器和分支标签。在第 5 章中，你将看到如何与其他类型配合 `switch` 表达式进行模式匹配。
+`switch` 关键字后面的表达式被称为选择器表达式，它的值就是选择器。目前，我们只考虑整数类型（`int`、`char`、`byte` 或 `short`）、字符串或枚举类型的常量作为选择器和分支标签。在第 5 章中，你将看到如何与其他类型配合 `switch` 表达式进行模式匹配。
 
 > 注意：`switch` 表达式像每个表达式一样都有一个值。请注意每个分支中值之前的 `->` 箭头。
 
-> 注意：从 Java 14 开始，`switch` 有四种 (!) 形式。本节重点关注最实用的形式。关于所有形式 `switch` 表达式和语句的彻底讨论，请参见第 3.8.5 节。
+> 注意：从 Java 14 开始，`switch` 有四种（!）形式。本节重点关注最实用的形式。关于所有形式 `switch` 表达式和语句的彻底讨论，请参见第 3.8.5 节。
 
 分支标签必须是与选择器类型匹配的编译时常量。你可以为每个 `case` 提供多个标签，用逗号分隔：
 
-```
-int numLetters = switch (seasonName)
-{
+```java
+int numLetters = switch (seasonName) {
     case "Spring", "Summer", "Winter" -> 6;
     case "Fall" -> 4;
     default -> -1;
-}
+};
 ```
 
 当你对枚举常量使用 `switch` 表达式时，不需要在每个标签中提供枚举名称——它是从 `switch` 值推断出来的。例如：
 
+
+
+
 ```java
 enum Size { SMALL, MEDIUM, LARGE, EXTRA_LARGE };
+
 ..
+
 Size itemSize = ...;
+
 String label = switch (itemSize)
 {
     case SMALL -> "S"; // 不需要使用 Size.S
@@ -1648,11 +1697,11 @@ String label = switch (itemSize)
 
 对于任何整数类型，你都拥有可以直接与构成整数的位操作的运算符。这意味着你可以使用掩码技术来获取数字中的单个位。位运算符是：
 
-& ("与") | ("或") ^ ("异或") ~ ("非")
+`&`（“与”）、`|`（“或”）、`^`（“异或”）、`~`（“非”）。
 
-这些运算符在位模式上工作。例如，如果 `n` 是一个整数变量，那么
+这些运算符在位模式上工作。例如，如果 `n` 是一个整数变量，那么：
 
-```
+```java
 int fourthBitFromRight = (n & 0b1000) / 0b1000;
 ```
 
@@ -1664,11 +1713,11 @@ int fourthBitFromRight = (n & 0b1000) / 0b1000;
 
 还有 `>>` 和 `<<` 运算符，可以将位模式向右或向左移动。当你需要构建位模式来操作掩码时，这些运算符非常方便：
 
-```
+```java
 int fourthBitFromRight = (n & 0b1000) >> 3;
 ```
 
-最后，>>> 用零填充高位，与扩展符号位的 `>>` 不同。移位运算符的右侧操作数会对 32 取模（除非操作数是 `long`，则为 64）。
+最后，`>>>` 用零填充高位，与扩展符号位的 `>>` 不同。移位运算符的右侧操作数会对 32 取模（除非操作数是 `long`，则为 64）。
 
 > **C++ 注意：** 与 C 或 C++ 不同，Java 没有逗号运算符。然而，你可以在 `for` 语句的第一和第三槽中使用逗号分隔的表达式列表。
 
@@ -1678,50 +1727,50 @@ int fourthBitFromRight = (n & 0b1000) >> 3;
 
 ### 3.5.11 括号和运算符层次
 
-表 3.4 显示了运算符的优先级。如果没有使用括号，操作将从左到右执行，表所示的右结合运算符除外。例如，`&&` 的优先级高于 `||`，所以表达式
+表 3.4 显示了运算符的优先级。如果没有使用括号，操作将从左到右执行，表所示的右结合运算符除外。例如，`&&` 的优先级高于 `||`，所以表达式：
 
-```
+```java
 a && b || c
 ```
 
-意味着
+意味着：
 
-```
+```java
 (a && b) || c
 ```
 
-由于 `+=` 是从右到左结合，表达式
+由于 `+=` 是从右到左结合，表达式：
 
-```
+```java
 a += b += c
 ```
 
-意味着
+意味着：
 
-```
+```java
 a += (b += c)
 ```
 
 也就是说，加后 `b` 的值被加到 `a` 上。
 
-**表 3.4:** 运算符优先级
+**表 3.4：** 运算符优先级
 
 | 运算符 | 结合性 |
 |---|---|
-| [] . () (方法调用) | 从左到右 |
-| ! ~ ++ + (一元) - (一元) () (强制转换) new | 从右到左 |
-| * / % | 从左到右 |
-| + - | 从左到右 |
-| << >>> | 从左到右 |
-| < <= > >= instanceof | 从左到右 |
-| == != | 从左到右 |
-| & | 从左到右 |
-| ^ | 从左到右 |
-| | | 从左到右 |
-| && | 从左到右 |
-| || | 从左到右 |
-| ?: | 从右到左 |
-| += *= /= &= |= ^= << >>> >>> | 从右到左 |
+| `[] . ()`（方法调用） | 从左到右 |
+| `! ~ ++ +`（一元）`-`（一元）`()`（强制转换）`new` | 从右到左 |
+| `* / %` | 从左到右 |
+| `+ -` | 从左到右 |
+| `<< >>>` | 从左到右 |
+| `< <= > >= instanceof` | 从左到右 |
+| `== !=` | 从左到右 |
+| `&` | 从左到右 |
+| `^` | 从左到右 |
+| `\|` | 从左到右 |
+| `&&` | 从左到右 |
+| `\|\|` | 从左到右 |
+| `?:` | 从右到左 |
+| `+= *= /= &= \|= ^= << >>> >>>` | 从右到左 |
 
 C++ 注意：与 C 或 C++ 不同，Java 没有逗号运算符。然而，你可以在 `for` 语句的第一和第三槽中使用逗号分隔的表达式列表。
 
@@ -1737,16 +1786,13 @@ C++ 注意：与 C 或 C++ 不同，Java 没有逗号运算符。然而，你可
 
 要在字符串字面量包含“复杂的”字符，请确保源文件使用 UTF-8 编码（这是大多数 IDE 的默认设置）。这样你就可以从网页上粘贴它们，并产生如 "Ciao" 这样的字符串字面量。
 
-
-
-
 过去，程序员们更担心合作者可能使用不同的文件编码，因此他们为 UTF-16 编码提供了转义序列："Ciao 🇮🇹"。
 
 ### 3.6.1. 字符串拼接
 
 Java 和大多数编程语言一样，允许你使用 `+` 来连接（拼接）两个字符串。
 
-```
+```java
 String expletive = "Expletive";
 String PG13 = "deleted";
 String message = expletive + PG13;
@@ -1756,7 +1802,7 @@ String message = expletive + PG13;
 
 当你将一个字符串与一个非字符串的值拼接时，后者会被转换为字符串。例如：
 
-```
+```java
 int age = 13;
 String rating = "PG" + age;
 ```
@@ -1765,7 +1811,7 @@ String rating = "PG" + age;
 
 这一特性通常用于输出语句。例如：
 
-```
+```java
 System.out.println("The answer is " + answer);
 ```
 
@@ -1773,27 +1819,28 @@ System.out.println("The answer is " + answer);
 
 > **注意：** 小心使用带有 `+` 运算符的表达式进行字符串拼接，例如：
 
-```
+```java
 int age = 42;
 String output = "Next year, you'll be " + age++;
 ```
 
 由于 `+` 运算符从左到右求值，结果是 "Next year, you'll be 421."。解决办法是使用括号：
 
-```
+```java
 String output = "Next year, you'll be " + (age++);
 ```
 
 如果你需要将多个字符串组合在一起并用分隔符隔开，请使用静态的 `join` 方法：
 
-```
+```java
 String all = String.join("/ ", "S", "M", "L", "");
+
 // all 是字符串 "S / M / L / XL"
 ```
 
 `repeat` 方法产生一个重复指定次数的字符串：
 
-```
+```java
 String repeated = "Java".repeat(3); // JavaJavaJava
 ```
 
@@ -1801,111 +1848,68 @@ String repeated = "Java".repeat(3); // JavaJavaJava
 
 `split` 方法根据给定的边界将字符串分割成部分。例如：
 
-```
+```java
 "Hello, World!".split(" ")
 ```
 
 产生一个包含两个元素的数组：字符串 "Hello," 和 "World!"（数组在第 3.10 节中介绍）。
 
-`split` 方法的参数是一个正则表达式，描述了分割发生的位置。请参见[第二卷第 2 章](#) 关于正则表达式的详细讨论。[表 3.5](#) 包含了一些实用的模式。
+`split` 方法的参数是一个正则表达式，描述了分割发生的位置。请参见[第二卷第 2 章](#)关于正则表达式的详细讨论。[表 3.5](#)包含了一些实用的模式。
 
 ### 表 3.5：分割模式
 
 | 模式 | 说明 |
 | :--- | :--- |
-| \s+ | 空白字符 |
-| \s*,\s* | 带有可选空格的逗号 |
-| \. | 周期 |
-| \P+ | 任意非字母 |
-| \R | 换行符 |
-| \b | 单词边界 |
-| \b{g} | 字符簇边界（Java 9 起） |
+| `\s+` | 空白字符 |
+| `\s*,\s*` | 带有可选空格的逗号 |
+| `\.` | 周期 |
+| `\P+` | 任意非字母 |
+| `\R` | 换行符 |
+| `\b` | 单词边界 |
+| `\b{g}` | 字符簇边界（Java 9 起） |
 
 沿字符簇（grapheme cluster）边界分割会将字符串分解为人类感知的组成字符：
 
-```
+```java
 "Ciao🇮🇹".split("\b{g}") // 一个包含相应字符的数组
 ```
 
 ### 3.6.3. 索引与子字符串
 
-Java 字符串是 `char` 值的序列。正如你在[第 3.3.4 节](#)中所示，`char` 数据类型用于表示 UTF-16 编码中的 Unicode 点。某些字符可以用单个 `char` 值表示，但许多字符需要多个一个 `char` 值。
+Java 字符串是 `char` 值的序列。正如你在[第 3.3.4 节](#)中所示，`char` 数据类型用于表示 UTF-16 编码中的 Unicode 点。某些字符可以用单个 `char` 值表示，但许多字符需要多个 `char` 值。
 
 > **注意：** 虚拟机并不要求将字符串存储为 `char` 值的序列。为了效率，对于只包含单字节序列的字符串以及所有其他 `char` 序列，这是一个实现细节，它在过去发生过变化，未来也可能变化。
 
 `length` 方法返回给定字符串的 `char` 值个数。例如：
 
-```
+```java
 String greeting = "Ciao";
 int n = greeting.length();
 ```
 
 调用 `s.charAt(n)` 返回位置 `n` 处的 `char` 值，其中 `n` 在于 0 到 `s.length() - 1` 之间（类似于 C++，Java 从 0 开始计算字符串的位置）。例如：
 
-```
+```java
 char first = greeting.charAt(0); // first 是 C
 char last = greeting.charAt(3); // last 是 o
 ```
 
 然而，这些调用并不是非常有用。最后一个值只是字符串的一部分，你通常并不关心这些值是什么。尽管如此，你有时需要知道子字符串在字符串中的位置。使用 `indexOf` 方法：
 
-```
-String sub = " ";
-int start = greeting.indexOf(sub);
-```
-
-恰好，空格的位置或索引是 4，但具体值并不重要。它取决于它之前的字符，以及编码每个字符所需的 `char` 值数量。你可以计算下一个字符开始开始的位置：
-
-```
-int nextStart = start + sub.length(); // 5
-```
-
-恰好，字符串 " " 的长度为 1，但不要硬编码字符串的长度。请始终使用 `length` 方法。你可以使用 `String` 类的 `substring` 方法从较大的字符串中提取子字符串。例如：
-
-```
-String greeting = "Hello, World!";
-int n = greeting.indexOf(",");
-String s = greeting.substring(0, n);
-```
-
-会创建一个由字符 "Hello" 组成的字符串。`substring` 的第二个参数是你不想复制的位置。在我们的案例中，我们复制了从开始但不包括逗号的所有内容。注意字符串 `s.substring(a, b)`。
-
-## 3.6.4. 字符串是不可变的
-
-Java 字符串是 `char` 值的序列。正如你所见的[第 3.3.4 节](#)，`char` 数据类型用于表示 UTF-16 编码中的 Unicode 点。某些字符可以用单个 `char` 值表示，但许多字符需要多个一个 `char` 值。
-
-> **注意：** 虚拟机并不要求将字符串存储为 `char` 值的序列。为了效率，对于只包含单字节序列的字符串以及所有其他 `char` 序列，这是一个实现细节，它在过去发生过变化，未来也可能变化。
-
-`length` 方法返回给定字符串的 `char` 值个数。例如：
-
-```
-String greeting = "Ciao";
-int n = greeting.length();
-```
-
-调用 `s.charAt(n)` 返回位置 `n` 处的 `char` 值，其中 `n` 在于 0 到 `s.length() - 1` 之间（类似于 C++，Java 从 0 开始计算字符串的位置）。例如：
-
-```
-char first = greeting.charAt(0); // first 是 C
-char last = greeting.charAt(3); // last 是 o
-```
-
-然而，这些调用并不是非常有用。最后一个值只是字符串的一部分，你通常并不关心这些值是什么。尽管如此，你有时需要知道子字符串在字符串中的位置。使用 `indexOf` 方法：
-
-```
+```java
 String sub = " ";
 int start = greeting.indexOf(sub);
 ```
 
 恰好，空格的位置或索引是 4，但具体值并不重要。它取决于它之前的字符，以及编码每个字符所需的 `char` 值数量。你可以计算下一个字符开始的位置：
 
-```
+```java
 int nextStart = start + sub.length(); // 5
 ```
 
 恰好，字符串 " " 的长度为 1，但不要硬编码字符串的长度。请始终使用 `length` 方法。你可以使用 `String` 类的 `substring` 方法从较大的字符串中提取子字符串。例如：
 
-```
+```java
 String greeting = "Hello, World!";
 int n = greeting.indexOf(",");
 String s = greeting.substring(0, n);
@@ -1913,7 +1917,48 @@ String s = greeting.substring(0, n);
 
 会创建一个由字符 "Hello" 组成的字符串。`substring` 的第二个参数是你不想复制的位置。在我们的案例中，我们复制了从开始但不包括逗号的所有内容。注意字符串 `s.substring(a, b)`。
 
-## 3.6.4. 字符串是不可变的
+### 3.6.4. 字符串是不可变的
+
+Java 字符串是 `char` 值的序列。正如你所见的[第 3.3.4 节](#)，`char` 数据类型用于表示 UTF-16 编码中的 Unicode 点。某些字符可以用单个 `char` 值表示，但许多字符需要多个 `char` 值。
+
+> **注意：** 虚拟机并不要求将字符串存储为 `char` 值的序列。为了效率，对于只包含单字节序列的字符串以及所有其他 `char` 序列，这是一个实现细节，它在过去发生过变化，未来也可能变化。
+
+`length` 方法返回给定字符串的 `char` 值个数。例如：
+
+```java
+String greeting = "Ciao";
+int n = greeting.length();
+```
+
+调用 `s.charAt(n)` 返回位置 `n` 处的 `char` 值，其中 `n` 在于 0 到 `s.length() - 1` 之间（类似于 C++，Java 从 0 开始计算字符串的位置）。例如：
+
+```java
+char first = greeting.charAt(0); // first 是 C
+char last = greeting.charAt(3); // last 是 o
+```
+
+然而，这些调用并不是非常有用。最后一个值只是字符串的一部分，你通常并不关心这些值是什么。尽管如此，你有时需要知道子字符串在字符串中的位置。使用 `indexOf` 方法：
+
+```java
+String sub = " ";
+int start = greeting.indexOf(sub);
+```
+
+恰好，空格的位置或索引是 4，但具体值并不重要。它取决于它之前的字符，以及编码每个字符所需的 `char` 值数量。你可以计算下一个字符开始的位置：
+
+```java
+int nextStart = start + sub.length(); // 5
+```
+
+恰好，字符串 " " 的长度为 1，但不要硬编码字符串的长度。请始终使用 `length` 方法。你可以使用 `String` 类的 `substring` 方法从较大的字符串中提取子字符串。例如：
+
+```java
+String greeting = "Hello, World!";
+int n = greeting.indexOf(",");
+String s = greeting.substring(0, n);
+```
+
+会创建一个由字符 "Hello" 组成的字符串。`substring` 的第二个参数是你不想复制的位置。在我们的案例中，我们复制了从开始但不包括逗号的所有内容。注意字符串 `s.substring(a, b)`。
 
 过去，程序员们更担心合作者可能使用不同的文件编码，因此他们为 UTF-16 编码提供了转义序列："Ciao 🇮🇹"。
 
@@ -1921,7 +1966,7 @@ String s = greeting.substring(0, n);
 
 Java 和大多数编程语言一样，允许你使用 `+` 来连接（拼接）两个字符串。
 
-```
+```java
 String expletive = "Expletive";
 String PG13 = "deleted";
 String message = expletive + PG13;
@@ -1931,7 +1976,7 @@ String message = expletive + PG13;
 
 当你将一个字符串与一个非字符串的值拼接时，后者会被转换为字符串。例如：
 
-```
+```java
 int age = 13;
 String rating = "PG" + age;
 ```
@@ -1940,7 +1985,7 @@ String rating = "PG" + age;
 
 这一特性通常用于输出语句。例如：
 
-```
+```java
 System.out.println("The answer is " + answer);
 ```
 
@@ -1948,27 +1993,28 @@ System.out.println("The answer is " + answer);
 
 > **注意：** 小心使用带有 `+` 运算符的表达式进行字符串拼接，例如：
 
-```
+```java
 int age = 42;
 String output = "Next year, you'll be " + age++;
 ```
 
 由于 `+` 运算符从左到右求值，结果是 "Next year, you'll be 421."。解决办法是使用括号：
 
-```
+```java
 String output = "Next year, you'll be " + (age++);
 ```
 
 如果你需要将多个字符串组合在一起并用分隔符隔开，请使用静态的 `join` 方法：
 
-```
+```java
 String all = String.join("/ ", "S", "M", "L", "");
+
 // all 是字符串 "S / M / L / XL"
 ```
 
 `repeat` 方法产生一个重复指定次数的字符串：
 
-```
+```java
 String repeated = "Java".repeat(3); // JavaJavaJava
 ```
 
@@ -1976,119 +2022,127 @@ String repeated = "Java".repeat(3); // JavaJavaJava
 
 `split` 方法根据给定的边界将字符串分割成部分。例如：
 
-```
+```java
 "Hello, World!".split(" ")
 ```
 
 产生一个包含两个元素的数组：字符串 "Hello," 和 "World!"（数组在第 3.10 节中介绍）。
 
-`split` 方法的参数是一个正则表达式，描述了分割发生的位置。请参见[第二卷第 2 章](#) 关于正则表达式的详细讨论。[表 3.5](#) 包含了一些实用的模式。
+`split` 方法的参数是一个正则表达式，描述了分割发生的位置。请参见[第二卷第 2 章](#)关于正则表达式的详细讨论。[表 3.5](#)包含了一些实用的模式。
 
 ### 表 3.5：分割模式
 
 | 模式 | 说明 |
 | :--- | :--- |
-| \s+ | 空白字符 |
-| \s*,\s* | 带有可选空格的逗号 |
-| \. | 周期 |
-| \P+ | 任意非字母 |
-| \R | 换行符 |
-| \b | 单词边界 |
-| \b{g} | 字符簇边界（Java 9 起） |
+| `\s+` | 空白字符 |
+| `\s*,\s*` | 带有可选空格的逗号 |
+| `\.` | 周期 |
+| `\P+` | 任意非字母 |
+| `\R` | 换行符 |
+| `\b` | 单词边界 |
+| `\b{g}` | 字符簇边界（Java 9 起） |
 
 沿字符簇（grapheme cluster）边界分割会将字符串分解为人类感知的组成字符：
 
-```
+```java
 "Ciao🇮🇹".split("\b{g}") // 一个包含相应字符的数组
 ```
 
+
+
 ### 3.6.3. 索引与子字符串
 
-Java 字符串是 `char` 值的序列。正如你在[第 3.3.4 节](#)中所示，`char` 数据类型用于表示 UTF-16 编码中的 Unicode 点。某些字符可以用单个 `char` 值表示，但许多字符需要多个一个 `char` 值。
+Java 字符串是 `char` 值的序列。正如你在[第 3.3.4 节](#)中所示，`char` 数据类型用于表示 UTF-16 编码中的 Unicode 点。某些字符可以用单个 `char` 值表示，但许多字符需要多个 `char` 值。
 
 > **注意：** 虚拟机并不要求将字符串存储为 `char` 值的序列。为了效率，对于只包含单字节序列的字符串以及所有其他 `char` 序列，这是一个实现细节，它在过去发生过变化，未来也可能变化。
 
 `length` 方法返回给定字符串的 `char` 值个数。例如：
 
-```
+```java
 String greeting = "Ciao";
+
 int n = greeting.length();
 ```
 
-调用 `s.charAt(n)` 返回位置 `n` 处的 `char` 值，其中 `n` 在于 0 到 `s.length() - 1` 之间（类似于 C++，Java 从 0 开始计算字符串的位置）。例如：
+调用 `s.charAt(n)` 返回位置 `n` 处的 `char` 值，其中 `n` 在 0 到 `s.length() - 1` 之间（类似于 C++，Java 从 0 开始计算字符串的位置）。例如：
 
-```
+```java
 char first = greeting.charAt(0); // first 是 C
+
 char last = greeting.charAt(3); // last 是 o
 ```
 
 然而，这些调用并不是非常有用。最后一个值只是字符串的一部分，你通常并不关心这些值是什么。尽管如此，你有时需要知道子字符串在字符串中的位置。使用 `indexOf` 方法：
 
-```
+```java
 String sub = " ";
+
 int start = greeting.indexOf(sub);
 ```
 
 恰好，空格的位置或索引是 4，但具体值并不重要。它取决于它之前的字符，以及编码每个字符所需的 `char` 值数量。你可以计算下一个字符开始的位置：
 
-```
+```java
 int nextStart = start + sub.length(); // 5
 ```
 
-恰好，字符串 " " 的长度为 1，但不要硬编码字符串的长度。请始终使用 `length` 方法。你可以使用 `String` 类的 `substring` 方法从较大的字符串中提取子字符串。例如：
+恰好，字符串 `" "` 的长度为 1，但不要硬编码字符串的长度。请始终使用 `length` 方法。你可以使用 `String` 类的 `substring` 方法从较大的字符串中提取子字符串。例如：
 
-```
+```java
 String greeting = "Hello, World!";
+
 int n = greeting.indexOf(",");
+
 String s = greeting.substring(0, n);
 ```
 
-会创建一个由字符 "Hello" 组成的字符串。`substring` 的第二个参数是你不想复制的位置。在我们的案例中，我们复制了从开始但不包括逗号的所有内容。注意字符串 `s.substring(a, b)`。
+会创建一个由字符 `"Hello"` 组成的字符串。`substring` 的第二个参数是你不想复制的位置。在我们的案例中，我们复制了从开始但不包括逗号的所有内容。注意字符串 `s.substring(a, b)`。
 
 ## 3.6.4. 字符串是不可变的
 
 过去，程序员们更担心合作者可能使用不同的文件编码，因此他们为 UTF-16 编码提供了转义序列："Ciao 🇮🇹"。
-
-
 
 内存的释放。内存管理通过构造函数、赋值运算符和析构函数显式执行。然而，C++ 字符串是可变的——你可以修改字符串中的单个字符。
 
 ## 3.6.5. 测试字符串的相等性
 
-要测试两个字符串是否相等，请使用 `equals` 方法。表达式
+要测试两个字符串是否相等，请使用 `equals` 方法。表达式：
 
-```
+```java
 s.equals(t)
 ```
 
-如果字符串 `s` 和 `t` 相等则返回 `true`，否则返回 `false`。注意 `s` 和 `t` 可以是字符串变量或字符串字面量。例如，表达式
+如果字符串 `s` 和 `t` 相等则返回 `true`，否则返回 `false`。注意 `s` 和 `t` 可以是字符串变量或字符串字面量。例如，表达式：
 
-```
+```java
 "Hello".equals(greeting)
 ```
 
 是完全合。要测试两个字符串除了字母大小写区别外是否相同，请使用 `equalsIgnoreCase` 方法。
 
-```
+```java
 "Hello".equalsIgnoreCase("hello")
 ```
 
 不要使用 `==` 运算符来测试两个字符串是否相等！它只判断字符串是否存储在相同的位置。当然，如果字符串位于相同的位置，它们必须是相等的。但完全可能在不同的地方存储多个相同字符串的副本。
 
-```
+```java
 String greeting = "Hello"; // 初始化 greeting
+
 greeting == "Hello" // true
+
 greeting.substring(0, greeting.indexOf("l")) == ""
+
 greeting.substring(0, greeting.indexOf("l")).equals("")
 ```
 
 如果虚拟机总是安排让相同的字符串共享，那么你就可以认为字符串字面量是共享的，而不是运行时计算的字符串。因此，永远不要使用 `==` 来比较字符串。始终使用 `equals`。
 
-> C++ 注意：如果你习惯了 C++ 字符串类，你必须特别小心相等性测试。C++ 字符串类重载了 `==` 运算符来测试字符串内容的相等性。在 Java 中，字符串看起来与数字相似。它们有字面量值和 `+` 运算符，但它们实际上是对象。正如你将在下一章看到的，`==` 运算符始终检查两个对象是否是同一个标识。
+> **C++ 注意：** 如果你习惯了 C++ 字符串类，你必须特别小心相等性测试。C++ 字符串类重载了 `==` 运算符来测试字符串内容的相等性。在 Java 中，字符串看起来与数字相似。它们有字面量值和 `+` 运算符，但它们实际上是对象。正如你将在下一章看到的，`==` 运算符始终检查两个对象是否是同一个标识。
 
-C 程序员知道永远不要使用 `==` 来比较 `char*` 字符串，而是使用 `strcmp`。Java 的 `compareTo` 方法是 `strcmp` 的完全等价物。你可以使用
+C 程序员知道永远不要使用 `==` 来比较 `char*` 字符串，而是使用 `strcmp`。Java 的 `compareTo` 方法是 `strcmp` 的完全等价物。你可以使用：
 
-```
+```java
 if (greeting.compareTo("Hello") == 0)
 ```
 
@@ -2096,33 +2150,33 @@ if (greeting.compareTo("Hello") == 0)
 
 ## 3.6.6. 空字符串和 null 字符串
 
-空字符串 `""` 是长度为 0 的字符串。你可以通过调用以下代码来测试字符串是否为空
+空字符串 `""` 是长度为 0 的字符串。你可以通过调用以下代码来测试字符串是否为空：
 
-```
+```java
 if (str.length() == 0)
 ```
 
-或者
+或者：
 
-```
+```java
 if (str.equals(""))
 ```
 
 或者，为了最高的效率：
 
-```
+```java
 if (str.isEmpty())
 ```
 
-空字符串是一个 Java 对象，它持有字符串长度（即 `0`）和空内容。然而，`String` 变量还可以持有一个特殊值，称为 `null`，它表示当前没有对象与该变量关联。要测试字符串是否为 `null`，请使用
+空字符串是一个 Java 对象，它持有字符串长度（即 `0`）和空内容。然而，`String` 变量还可以持有一个特殊值，称为 `null`，它表示当前没有对象与该变量关联。要测试字符串是否为 `null`，请使用：
 
-```
+```java
 if (str == null)
 ```
 
-有时，你需要测试一个字符串既不是 `null` 也不是空。这时使用
+有时，你需要测试一个字符串既不是 `null` 也不是空。这时使用：
 
-```
+```java
 if (str != null && str.length() != 0)
 ```
 
@@ -2138,45 +2192,41 @@ API 注释没有列出特定类的所有方法，而是以简洁的形式呈现�
 
 类名后的数字是引入该方法的 JDK 版本号。如果某个方法在之后添加的，它将有一个单独的版本号。
 
-```
+```java
 java.lang.String 1.0
 ```
 
-- `* char charAt(int index)` 返回指定位置的代码单元。除非你对低级代码单元感兴趣，否则你可能不想调用此方法。
-- `* int length()` 返回字符串的代码单元数量。
-- `* boolean equals(Object other)` 如果字符串等于 `other` 则返回 `true`。
-- `* boolean equalsIgnoreCase(String other)` 如果字符串等于 `other`（除字母大小写区别外）则返回 `true`。
-- `* int compareTo(String other)` 如果字符串在字典序上于 `other` 之前，返回负值；如果字符串在字典序上于 `other` 之后，返回正值；如果字符串相等，则返回 0。
-- `* boolean isEmpty()` 6
-- `* boolean isBlank()` 13 如果字符串为空或由空白字符组成，返回 `true`。
-- `* boolean startsWith(String prefix)`
-- `* boolean endsWith(String suffix)` 如果字符串以 `prefix` 开头或以 `suffix` 结尾，返回 `true`。
-- `* int indexOf(String str)`
-- `* int indexOf(String str, int fromIndex)`
-- `* int indexOf(String str, int fromIndex, int toIndex)` 返回第一个与 `str` 相等的子串的起始位置，从 0 或 `fromIndex` 开始，到 `toIndex` 结束。如果 `str` 不存在，返回 -1。
-- `* int lastIndexOf(String str)`
-- `* int lastIndexOf(String str, int fromIndex)` 返回与 `str` 相等的最后一个子串的起始位置，从字符串末尾或 `fromIndex` 开始。如果 `str` 不存在，返回 -1。
-- `* String replace(CharSequence oldString, CharSequence newString)` 返回通过替换字符串中所有匹配 `oldString` 的子串得到的字符串。你可以提供 `String` 或 `StringBuilder` 作为 `CharSequence` 参数。
-
-- `* String substring(int beginIndex)`
-- `* String substring(int beginIndex, int endIndex)` 返回从 `beginIndex` 到字符串末尾或 `endIndex - 1` 的字符串。
-- `* String toLowerCase()`
-- `* String toUpperCase()` 返回包含原始字符串所有字符的新字符串，其中大写字母转换为小写，或小写字母转换为大写。
-- `* String strip()` 11
-- `* String stripLeading()` 11
-- `* String stripTrailing()` 11 通过消除原始字符串中的前导和结尾、或仅前导或结尾空白来返回新字符串。使用这些方法代替消除 U+0020 字符的老旧 `trim` 方法。
-- `* String join(CharSequence delimiter, CharSequence... elements)` 11 返回用给定的分隔符连接所有元素的新字符串。
-- `* String repeat(int count)` 11 返回重复 `count` 次的字符串。
-- `* String[] split(String regex)` 1.4 找到正则表达式的所有匹配项并通过移除它们分割字符串。返回片段数组，但不包括结尾的空字符串。
+- `char charAt(int index)` 返回指定位置的代码单元。除非你对低级代码单元感兴趣，否则你可能不想调用此方法。
+- `int length()` 返回字符串的代码单元数量。
+- `boolean equals(Object other)` 如果字符串等于 `other` 则返回 `true`。
+- `boolean equalsIgnoreCase(String other)` 如果字符串等于 `other`（除字母大小写区别外）则返回 `true`。
+- `int compareTo(String other)` 如果字符串在字典序上于 `other` 之前，返回负值；如果字符串在字典序上于 `other` 之后，返回正值；如果字符串相等，则返回 0。
+- `boolean isEmpty()` 6
+- `boolean isBlank()` 13 如果字符串为空或由空白字符组成，返回 `true`。
+- `boolean startsWith(String prefix)`
+- `boolean endsWith(String suffix)` 如果字符串以 `prefix` 开头或以 `suffix` 结尾，返回 `true`。
+- `int indexOf(String str)`
+- `int indexOf(String str, int fromIndex)`
+- `int indexOf(String str, int fromIndex, int toIndex)` 返回第一个与 `str` 相等的子串的起始位置，从 0 或 `fromIndex` 开始，到 `toIndex` 结束。如果 `str` 不存在，返回 -1。
+- `int lastIndexOf(String str)`
+- `int lastIndexOf(String str, int fromIndex)` 返回与 `str` 相等的最后一个子串的起始位置，从字符串末尾或 `fromIndex` 开始。如果 `str` 不存在，返回 -1。
+- `String replace(CharSequence oldString, CharSequence newString)` 返回通过替换字符串中所有匹配 `oldString` 的子串得到的字符串。你可以提供 `String` 或 `StringBuilder` 作为 `CharSequence` 参数。
+- `String substring(int beginIndex)`
+- `String substring(int beginIndex, int endIndex)` 返回从 `beginIndex` 到字符串末尾或 `endIndex - 1` 的字符串。
+- `String toLowerCase()`
+- `String toUpperCase()` 返回包含原始字符串所有字符的新字符串，其中大写字母转换为小写，或小写字母转换为大写。
+- `String strip()` 11
+- `String stripLeading()` 11
+- `String stripTrailing()` 11 通过消除原始字符串中的前导和结尾、或仅前导或结尾空白来返回新字符串。使用这些方法代替消除 U+0020 字符的老旧 `trim` 方法。
+- `String join(CharSequence delimiter, CharSequence... elements)` 11 返回用给定的分隔符连接所有元素的新字符串。
+- `String repeat(int count)` 11 返回重复 `count` 次的字符串。
+- `String[] split(String regex)` 1.4 找到正则表达式的所有匹配项并通过移除它们分割字符串。返回片段数组，但不包括结尾的空字符串。
 
 注意：在 API 注释中，有一些参数类型为 `CharSequence`。它是所有字符串所属的接口类型。你将在第 6 章中学习接口类型。现在你只需要知道在看到 `CharSequence` 参数时可以传递 `String` 参数。
 
 ## 3.6.8. 阅读在线 API 文档
 
-正如你看到的，`String` 类有很多方法。此外，标准库中还有数以千的类，拥有更多方法。记住所有有用的类和方法是不可能的。因此，熟悉可以让你查询标准库中所有类和方法的在线 API 文档至关重要。你可以从 Oracle 下载 API 文档并保存到本地，或者将浏览器指向 https://docs.oracle.com/en/java/javase/21/docs/api。
-
-
-
+正如你看到的，`String` 类有很多方法。此外，标准库中还有数以千的类，拥有更多方法。记住所有有用的类和方法是不可能的。因此，熟悉可以让你查询标准库中所有类和方法的在线 API 文档至关重要。你可以从 Oracle 下载 API 文档并保存到本地，或者将浏览器指向 `https://docs.oracle.com/en/java/javase/21/docs/api`。
 
 API 文档包含一个搜索框（见图 3.2）。旧版本具有带有包和类列表的框架。你仍然可以通过点击“Frames”（框架）菜单项来获取这些列表。例如，要获取关于 `String` 类方法的信息，可以在搜索框中输入“String”并选择类型 `java.lang.String`，或者在带有类名的框架中找到链接并点击它。你将看到类描述，如图 3.3 所示。
 
@@ -2187,44 +2237,48 @@ API 文档包含一个搜索框（见图 3.2）。旧版本具有带有包和类
 本文分为两个部分：
 
 - **Java SE**
-Java 平台标准版（Java SE）API 定义了用于通用计算的核心 Java 平台。这些 API 位于以 `java.` 开头的模块中。
+
+  Java 平台标准版（Java SE）API 定义了用于通用计算的核心 Java 平台。这些 API 位于以 `java.` 开头的模块中。
+
 - **JDK**
-Java 开发工具包（JDK）API 特定于 JDK，且不一定在所有 Java SE 平台的实现中都可用。这些 API 位于以 `jdk.` 开头的模块中。
+
+  Java 开发工具包（JDK）API 特定于 JDK，且不一定在所有 Java SE 平台的实现中都可用。这些 API 位于以 `jdk.` 开头的模块中。
 
 | 所有模块 | Java SE | JDK | 其他模块 |
 | :--- | :--- | :--- | :--- |
-| java.base | 定义 Java SE 平台的基础 API。 | | | |
-| java.compiler | 定义语言模型、注解处理和 Java 编译器 API。 | | | |
-| java.datatransfer | 定义应用间及应用内部数据传输的 API。 | | | |
-| java.desktop | 定义 AWT 和 Swing 用户界面工具包，以及用于可访问性、成像、打印和 JavaBeans 的 API。 | | | |
-| java.instrument | 定义允许代理（agents）对运行在 JVM 上的程序进行插桩的服务。 | | | |
-| java.logging | 定义 Java 日志 API。 | | | |
-| java.management | 定义 Java 管理扩展 (JMX) API。 | | | |
+| `java.base` | 定义 Java SE 平台的基础 API。 | | |
+| `java.compiler` | 定义语言模型、注解处理和 Java 编译器 API。 | | |
+| `java.datatransfer` | 定义应用间及应用内部数据传输的 API。 | | |
+| `java.desktop` | 定义 AWT 和 Swing 用户界面工具包，以及用于可访问性、成像、打印和 JavaBeans 的 API。 | | |
+| `java.instrument` | 定义允许代理（agents）对运行在 JVM 上的程序进行插桩的服务。 | | |
+| `java.logging` | 定义 Java 日志 API。 | | |
+| `java.management` | 定义 Java 管理扩展（JMX）API。 | | |
 
-图 3.2：Java API 文档
+**图 3.2：** Java API 文档
 
 # String (Java SE 21 & JDK 21) — Firefox 开发者版
 
 ![](img/1bda005f6b519fd0924777a921aebffa_174_0.png)
 
-模块 java.base
-包 java.lang
+模块 `java.base`  
+包 `java.lang`
 
 ## 类 String
 
-java.lang.Object
-java.lang.String
+`java.lang.Object`  
+`java.lang.String`
 
 **已实现的接口：**
-Serializable, CharSequence, Comparable<String>, Constant, ConstantDesc
+
+`Serializable`, `CharSequence`, `Comparable<String>`, `Constant`, `ConstantDesc`
 
 ```java
 public final class String
-extends Object
-implements Serializable, Comparable<String>, CharSequence, Constant, ConstantDesc
+    extends Object
+    implements Serializable, Comparable<String>, CharSequence, Constant, ConstantDesc
 ```
 
-String 类表示字符串。Java 程序中的所有字符串字面量（如 "abc"）都是此类的实例。
+String 类表示字符串。Java 程序中的所有字符串字面量（如 `"abc"`）都是此类的实例。
 
 字符串是常量的：它们的值在创建后无法更改。String 对象是不可变的，因此它们可以共享。例如：
 
@@ -2236,6 +2290,7 @@ String str = "abc";
 
 ```java
 char data[] = {'a', 'b', 'c'};
+
 String str = new String(data);
 ```
 
@@ -2247,69 +2302,75 @@ String str = new String(data);
 
 # String (Java SE 21 & JDK 21) — Firefox 开发者版
 
-file:///opt/jdk-21-docs/api/java.base/lang/String.html
+`file:///opt/jdk-21-docs/api/java.base/lang/String.html`
 
 概述 模块 包 树 预览 已弃用 Java SE 21 & JDK 21
 
 摘要：嵌套 字段 构造 方法 详情：字段 构造 方法 搜索
 
-# 方法摘要
+## 方法摘要
 
 | 修饰符和类型 | 描述 |
 | :--- | :--- |
-| char | charAt(int index) | 返回索引处的 char 值。 |
-| IntStream | chars() | 返回此序列的 char 值流。 |
-| int | codePointAt(int index) | 返回指定索引处的字符（Unicode 代码点）。 |
-| int | codePointBefore(int index) | 返回指定索引之前的字符（Unicode 代码点）。 |
-| int | codePointCount(int beginIndex, int endIndex) | 返回指定文本范围内的 Unicode 代码点数量。 |
-| IntStream | codePoints() | 返回此序列的代码点值流。 |
-| int | compareTo(String anotherString) | 按字典顺序比较两个字符串。 |
-| int | compareIgnoreCase(String str) | 忽略大小写按字典顺序比较两个字符串。 |
-| String | concat(String str) | 将字符串连接到末尾 |
+| `char` | `charAt(int index)` 返回索引处的 `char` 值。 |
+| `IntStream` | `chars()` 返回此序列的 `char` 值流。 |
+| `int` | `codePointAt(int index)` 返回指定索引处的字符（Unicode 代码点）。 |
+| `int` | `codePointBefore(int index)` 返回指定索引之前的字符（Unicode 代码点）。 |
+| `int` | `codePointCount(int beginIndex, int endIndex)` 返回指定文本范围内的 Unicode 代码点数量。 |
+| `IntStream` | `codePoints()` 返回此序列的代码点值流。 |
+| `int` | `compareTo(String anotherString)` 按字典顺序比较两个字符串。 |
+| `int` | `compareIgnoreCase(String str)` 忽略大小写按字典顺序比较两个字符串。 |
+| `String` | `concat(String str)` 将字符串连接到末尾 |
 
 **图 3.4：** String 类的方法摘要
 
 # String (Java SE 21 & JDK 21) — Firefox 开发者版
 
-file://opt/jdk-21-docs/api/java.base/lang/String...
+`file://opt/jdk-21-docs/api/java.base/lang/String...`
 
 概述 模块 包 类 使用 树 预览 已弃用 索引 帮助
 
 摘要：嵌套 字段 构造 方法 详情：字段 构造 方法 搜索
 
-# compareToIgnoreCase
+## compareToIgnoreCase
 
 ```java
 public int compareToIgnoreCase(String str)
 ```
 
-忽略大小写按字典顺序比较两个字符串。此方法返回一个整数，其符号取决于指定的 String 是否大于、等于或小于此 String。
 
-参数：
-str- 要比较的字符串。
 
-返回值：
-负整数、零或正整数，取决于指定的 String 大于、等于或小于此 String。
+忽略大小写按字典顺序比较两个字符串。此方法返回一个整数，其符号取决于指定的`String`是否大于、等于或小于此`String`。
 
-另另：
-Collator, codePoints()
+**参数：**
+
+`str`—要比较的字符串。
+
+**返回值：**
+
+负整数、零或正整数，取决于指定的`String`大于、等于或小于此`String`。
+
+**另请参阅：**
+
+`Collator`、`codePoints()`
 
 ```java
-public boolean regionMatches(int offset,```
-
-图 3.5：String 方法的详细描述
-
-提示：如果你还没有这样做，现在就在浏览器中下载 JDK 文档！
-
-```
-https://docs.oracle.com/en/javase/21/
+public boolean regionMatches(int offset,
 ```
 
-# 3.6.9. 构建字符串
+图 3.5：`String`方法的详细描述
 
-有时，你需要从较短的字符串（如按键或文件的单词）构建字符串。为了此目的使用字符串拼接是低效的。每次拼接字符串都会创建一个新的 String 对象。使用 `StringBuilder` 类可以避免这个问题。
+**提示：**如果你还没有这样做，现在就在浏览器中下载 JDK 文档！
 
-如果你需要从许多片段构建字符串，请按照以下步骤操作。首先构造一个空 StringBuilder：
+```text
+https://docs.oracle.com/en/java/javase/21/
+```
+
+## 3.6.9. 构建字符串
+
+有时，你需要从较短的字符串（如按键或文件的单词）构建字符串。为了此目的使用字符串拼接是低效的。每次拼接字符串都会创建一个新的`String`对象。使用`StringBuilder`类可以避免这个问题。
+
+如果你需要从许多片段构建字符串，请按照以下步骤操作。首先构造一个空`StringBuilder`：
 
 ```java
 StringBuilder builder = new StringBuilder();
@@ -2321,112 +2382,111 @@ StringBuilder builder = new StringBuilder();
 StringBuilder builder = new StringBuilder("INVOI
 ```
 
-每当你需要添加部分时，调用 `append` 方法。
+每当你需要添加部分时，调用`append`方法。
 
 ```java
 builder.append(str); // 追加字符串
 builder.appendCodePoint(cp); // 追加单个
 ```
 
-当你需要计算代码点时，后一种有时有用。这里有一个例子。国旗 Emoji 由两个代码点组成，每个代码点的范围在 127462（指示字母 A）到 127487（指示字母 Z）之间。现在假设你有一个如 "IT" 的国家字符串。你可以这样计算代码点：
+当你需要计算代码点时，后一种有时有用。这里有一个例子。国旗 Emoji 由两个代码点组成，每个代码点的范围在 127462（指示字母 A）到 127487（指示字母 Z）之间。现在假设你有一个如`"IT"`的国家字符串。你可以这样计算代码点：
 
 ```java
 final int REGIONAL_INDICATOR_SYMBOL_LETTER_A = 12
+
 String country = . . .;
+
 builder.append(country.charAt(0)) - 'A' + REGIONAL
+
 builder.append(country.charAt(1)) - 'A' + REGIONAL
 ```
 
-完成字符串构建后，调用 `toString` 方法。你将得到一个包含 builder 中字符序列的 String 对象。
+完成字符串构建后，调用`toString`方法。你将得到一个包含`builder`中字符序列的`String`对象。
 
 ```java
 String completedString = builder.toString();
 ```
 
-巧妙地，`StringBuilder` 方法返回 builder 对象，因此你可以链式调用多个方法：
+巧妙地，`StringBuilder`方法返回`builder`对象，因此你可以链式调用多个方法：
 
 ```java
 String completedString = new StringBuilder()
-.append(str)
-.appendCodePoint(cp)
-.toString();
+   .append(str)
+   .appendCodePoint(cp)
+   .toString();
 ```
 
-`String` 类没有反转字符串 Unicode 字符的方法，但 `StringBuilder` 有。要反转字符串，请使用此代码段：
+`String`类没有反转字符串 Unicode 字符的方法，但`StringBuilder`有。要反转字符串，请使用此代码段：
 
 ```java
 String reversed = new StringBuilder(original).reverse();
 ```
 
-> **注意：** 反转对于使用两个 `char` 值编码的字符是正确的，但它没有考虑字符簇（grapheme clusters）。
+> **注意：**反转对于使用两个`char`值编码的字符是正确的，但它没有考虑字符簇（grapheme clusters）。
 
+**注意：**旧的`StringBuffer`类比`StringBuilder`低，但它允许多个线程添加或删除字符。如果所有的字符串编辑都发生在单线程中（这通常如此），您应该使用`StringBuilder`。这两个类的 API 是完全相同的。
 
+以下 API 注释包含了`StringBuilder`类最重要的方法。
 
-
-
-**注意：** 旧的 `StringBuffer` 类比 `StringBuilder` 低，但它允许多个线程添加或删除字符。如果所有的字符串编辑都发生在单线程中（这通常如此），您应该使用 `StringBuilder`。这两个类的 API 是完全相同的。
-
-以下 API 注释包含了 `StringBuilder` 类最重要的方法。
-
-```
+```text
 java.lang.StringBuilder 5.0
 ```
 
-- StringBuilder()
-- StringBuilder(CharSequence seq)
-构造一个空构建器，或一个带有给定初始内容的构建器。
-- int length()
-返回构建器或缓冲区的代码单元数。
-- StringBuilder append(String str)
-追加一个字符串并返回字符串构建器。
-- StringBuilder appendCodePoint(int code)
-追加一个代码点，将其转换为一个或两个代码单元，并返回本身。
-- StringBuilder insert(int offset, String str)
-在位置 offset 处插入一个字符串并返回字符串构建器。
-- StringBuilder delete(int startIndex, int endIndex)
-删除从 startIndex 到 endIndex - 1 的偏移的代码单元并返回字符串构建器。
-- StringBuilder repeat(CharSequence cs, int count)
-添加 count 份 cs 的副本并返回字符串构建器。
-- StringBuilder reverse()
-反转此字符串构建器中的代码点并返回构建器。
-- String toString()
-返回一个与构建器或缓冲区内容相同的数据字符串。
+- `StringBuilder()`
+- `StringBuilder(CharSequence seq)`  
+  构造一个空构建器，或一个带有给定初始内容的构建器。
+- `int length()`  
+  返回构建器或缓冲区的代码单元数。
+- `StringBuilder append(String str)`  
+  追加一个字符串并返回字符串构建器。
+- `StringBuilder appendCodePoint(int code)`  
+  追加一个代码点，将其转换为一个或两个代码单元，并返回本身。
+- `StringBuilder insert(int offset, String str)`  
+  在位置`offset`处插入一个字符串并返回字符串构建器。
+- `StringBuilder delete(int startIndex, int endIndex)`  
+  删除从`startIndex`到`endIndex - 1`的偏移的代码单元并返回字符串构建器。
+- `StringBuilder repeat(CharSequence cs, int count)`  
+  添加`count`份`cs`的副本并返回字符串构建器。
+- `StringBuilder reverse()`  
+  反转此字符串构建器中的代码点并返回构建器。
+- `String toString()`  
+  返回一个与构建器或缓冲区内容相同的数据字符串。
 
-### 3.6.10. 文本块 (Text Blocks)
+### 3.6.10. 文本块（Text Blocks）
 
-在 Java 15 中添加的文本块功能使得提供跨行的字符串字面量变得简单。文本块以 `""` 开始，后跟一个换行符。块以另一个 `""` 结束：
+在 Java 15 中添加的文本块功能使得提供跨行的字符串字面量变得简单。文本块以`"""`开始，后跟一个换行符。块以另一个`"""`结束：
 
-```
+```java
 String greeting = """
 Hello
 World
-"""";
+""";
 ```
 
 文本块比等效字符串字面量更容易读写：
 
-```
+```java
 "Hello\nWorld\n"
 ```
 
-这个字符串包含两个 `\n`：一个在 Hello 之后，一个在 World 之后。起始 """ 之后的换行符不包含在字符串字面量中。
+这个字符串包含两个`\n`：一个在 Hello 之后，一个在 World 之后。起始`"""`之后的换行符不包含在字符串字面量中。
 
-如果您不想在最后一行之后有换行，请将结束的 """ 紧跟在最后一个字符之后：
+如果您不想在最后一行之后有换行，请将结束的`"""`紧跟在最后一个字符之后：
 
-```
+```java
 String prompt = """
 Hello, my name is Hal.
-Please enter your name:"""";
+Please enter your name:""";
 ```
 
 文本块特别适合包含其他语言的代码，例如 SQL 或 HTML。您只需要将其粘贴在三引号之间：
 
-```
+```java
 String html = """
 <div class="Warning">
   Beware of those who say "Hello" to the world
 </div>
-"""
+""";
 ```
 
 注意，您不需要转义引号。只有两种情况您需要转义它们：
@@ -2438,21 +2498,23 @@ String html = """
 
 普通字符串中的所有转义序列在文本块中的工作方式相同。
 
-有一个转义序列仅在文本块中有效。行尾之前的 `\` 会将此行和下一行合并。例如，
+有一个转义序列仅在文本块中有效。行尾之前的`\`会将此行和下一行合并。例如：
 
-```
+```java
 """
 Hello, my name is Hal. \
 Please enter your name:""";
 ```
 
-这等同于
+这等同于：
 
+```java
 "Hello, my name is Hal. Please enter your name:"
-
-行结束符通过删除末尾空格并将任何 Windows 行结束符 (\r\n) 转换为简单的换行符 (\n) 来进行归一化。如果您需要保留末尾空格，请将最后一个空格转换为 `\s` 转义符。事实上，这可能正是您 prompt 字符串所需要的。以下字符串以空格结尾：
-
 ```
+
+行结束符通过删除末尾空格并将任何 Windows 行结束符（`\r\n`）转换为简单的换行符（`\n`）来进行归一化。如果您需要保留末尾空格，请将最后一个空格转换为`\s`转义符。事实上，这可能正是您 prompt 字符串所需要的。以下字符串以空格结尾：
+
+```java
 """
 Hello
 """
@@ -2460,31 +2522,31 @@ Hello
 
 对于前导空格的情况更为复杂。考虑一个从左边距缩进的典型变量声明。您也可以对文本块进行缩进：
 
-```
+```java
 String html = """
 <div class="Warning">
 Beware of those who say "Hello" to
 </div>
-"""";
+""";
 ```
 
-文本块中所有行的公共缩进会被减去。实际字符串是
+文本块中所有行的公共缩进会被减去。实际字符串是：
 
-```
+```java
 "<div class=\"Warning\">\n Beware of those who
 ```
 
 注意，第一行和第三行没有缩进。
 
-您可以通过在结束的 "" 之前不留任何空格来始终避免这种缩进剥离。但许多程序员似乎认为文本块缩进后看起来更整洁。您的 IDE 可能会友好地提供使用制表符或空格缩进所有文本块的功能。
+您可以通过在结束的`"""`之前不留任何空格来始终避免这种缩进剥离。但许多程序员似乎认为文本块缩进后看起来更整洁。您的 IDE 可能会友好地提供使用制表符或空格缩进所有文本块的功能。
 
 Java 明智没有规定制表的宽度。所有行的空白前缀必须完全匹配。
 
-在剥离公共缩进时不考虑完全空白行。然而，结束 """ 之前的空格是有意义的。请确保缩进到您想要删除的空格末尾。
+在剥离公共缩进时不考虑完全空白行。然而，结束`"""`之前的空格是有意义的。请确保缩进到您想要删除的空格末尾。
 
-> 警告：注意缩进中混合使用制表符和空格。忽略的空格很容易导致缩进错误的字符串。
+> **警告：**注意缩进中混合使用制表符和空格。忽略的空格很容易导致缩进错误的字符串。
 
-**提示：** 如果文本块包含非 Java 的代码，您可能更倾向于将其放在左边距。它会从 Java 代码中颖而出，并且您有更多空间处理长行。
+**提示：**如果文本块包含非 Java 的代码，您可能更倾向于将其放在左边距。它会从 Java 代码中颖出，并且您有更多空间处理长行。
 
 ## 3.7. 输入与输出
 
@@ -2492,59 +2554,59 @@ Java 明智没有规定制表的宽度。所有行的空白前缀必须完全匹
 
 ### 3.7.1. 读取输入
 
-您已经看到只需通过调用 `System.out.println` 就可以向“标准输出流”（即控制台窗口）打印输出。从“标准输入流” `System.in` 读取并不那么简单。要读取控制台输入，您首先构造一个连接到 `System.in` 的 `Scanner`：
+您已经看到只需通过调用`System.out.println`就可以向“标准输出流”（即控制台窗口）打印输出。从“标准输入流”`System.in`读取并不那么简单。要读取控制台输入，您首先构造一个连接到`System.in`的`Scanner`：
 
-```
+```java
 Scanner in = new Scanner(System.in);
 ```
 
-（构造函数和 new 运算符将在第 4 章详细讨论。）
+（构造函数和`new`运算符将在第 4 章详细讨论。）
 
-现在您可以使用 `Scanner` 的各种方法来读取输入。例如，`nextLine` 方法读取一行。
+现在您可以使用`Scanner`的各种方法来读取输入。例如，`nextLine`方法读取一行。
 
 ```java
 System.out.println("What is your name?");
 String name = in.nextLine();
 ```
 
-这里我们使用 `nextLine` 是因为输入可能包含空格。要读取单个单词（由空白分隔），调用
+这里我们使用`nextLine`是因为输入可能包含空格。要读取单个单词（由空白分隔），调用：
 
-```
+```java
 String firstName = in.next();
 ```
 
-要读取整数，使用 `nextInt`。
+要读取整数，使用`nextInt`：
 
 ```java
 System.out.println("How old are you?");
 int age = in.nextInt();
 ```
 
-同样，`nextDouble` 方法读取浮点数。
+同样，`nextDouble`方法读取浮点数。
 
 示例 3.2 程序请求用户名和年龄，然后打印消息：
 
-```
+```java
 System.out.println("Hello, " + name);
 ```
 
-最后，注意程序开头的
+最后，注意程序开头的：
 
-```
+```java
 import java.util.*;
 ```
 
-`Scanner` 类定义在 `java.util` 包中。每当您使用不在基础 `java.lang` 包中的类时，都需要 `import` 指令。包和 `import` 指令将在第 4 章介绍。
+`Scanner`类定义在`java.util`包中。每当您使用不在基础`java.lang`包中的类时，都需要`import`指令。包和`import`指令将在第 4 章介绍。
 
-> 警告：如果您从控制台运行此程序（通过 `java InputTest`），并使用 Windows，且您的名称包含罗马大小写字母以外的字符（如 Bérère 或 Οδυσς），可能会遇到问题。默认情况下，Windows 终端对 `System.out` 使用旧编码，但对 `Scanner` 不是。结果是乱码。要修复此，在运行程序之前通过执行以下终端命令切换到 UTF-8 编码：
+> **警告：**如果您从控制台运行此程序（通过`java InputTest`），并使用 Windows，且您的名称包含罗马大小写字母以外的字符（如 Bérère 或 Οδυσς），可能会遇到问题。默认情况下，Windows 终端对`System.out`使用旧编码，但对`Scanner`不是。结果是乱码。要修复此问题，在运行程序之前通过执行以下终端命令切换到 UTF-8 编码：
 
-```
+```text
 chcp 65001
 ```
 
 然后，如果您使用 Java 18 或更高版本，一切正常。对于旧版本的 Java，运行程序使用：
 
-```
+```text
 java -Dfile.encoding=utf-8 InputTest
 ```
 
@@ -2554,6 +2616,7 @@ java -Dfile.encoding=utf-8 InputTest
 
 ```java
 import java.util.*;
+
 /**
  * 此程序演示了控制台输入。
  * @version 1.11 2023-08-26
@@ -2578,11 +2641,7 @@ public class InputTest
 }
 ```
 
-**注意：** `Scanner` 类不适合从控制台读取密码，因为输入对任何人都是清晰可见的。使用 `Console` 类的 `readPassword` 方法来读取密码，同时隐藏用户输入。
-
-
-
-
+**注意：**`Scanner`类不适合从控制台读取密码，因为输入对任何人都是清晰可见的。使用`Console`类的`readPassword`方法来读取密码，同时隐藏用户输入。
 
 ```java
 Console cons = System.console();
@@ -2593,161 +2652,158 @@ Arrays.fill(passwd, '*');
 
 出于安全考虑，密码以字符数组而非字符串的形式返回。在你处理完密码后，你应该立即用填充值覆盖数组元素。
 
-使用 `Console` 对象进行输入处理没有使用 `Scanner` 那么方便。你必须一次读取一行输入。它没有用于读取单个单词或数字的方法。
+使用`Console`对象进行输入处理没有使用`Scanner`那么方便。你必须一次读取一行输入。它没有用于读取单个单词或数字的方法。
 
-### java.util.Scanner 5.0
+### `java.util.Scanner` 5.0
 
-- Scanner(InputStream in) 从给定的输入流构造一个 `Scanner` 对象。
-- String nextLine() 读取下一行输入。
-- String next() 读取下一个单词（以空白字符分隔）。
-- int nextInt()
-- double nextDouble() 读取并转换表示整数或浮点数的下一个字符序列。
-- boolean hasNext() 测试输入中是否还有另一个单词。
-- boolean hasNextInt() 测试下一个字符序列是否表示整数或浮点数。
+- `Scanner(InputStream in)`：从给定的输入流构造一个`Scanner`对象。
+- `String nextLine()`：读取下一行输入。
+- `String next()`：读取下一个单词（以空白字符分隔）。
+- `int nextInt()`
+- `double nextDouble()`：读取并转换表示整数或浮点数的下一个字符序列。
+- `boolean hasNext()`：测试输入中是否还有另一个单词。
+- `boolean hasNextInt()`：测试下一个字符序列是否表示整数或浮点数。
 
-```java
+```text
 java.lang.System 1.0
 ```
 
-- static Console console() 6 返回一个 `Console` 对象，用于通过控制台窗口与用户交互，如果这种交互可能，否则返回 `null`。任何在控制台窗口中启动的程序可以使用 `Console` 对象。否则，可用性取决于系统。
+- `static Console console() 6`：返回一个`Console`对象，用于通过控制台窗口与用户交互，如果这种交互可能，否则返回`null`。任何在控制台窗口中启动的程序可以使用`Console`对象。否则，可用性取决于系统。
 
-```java
+```text
 java.io.Console 6
 ```
 
-- char[] readPassword(String prompt, Object... args)
-- String readLine(String prompt, Object... args) 显示提示并读取用户输入直到输入行结束。可选的 `args` 参数用于提供格式化参数，见下一节。
+- `char[] readPassword(String prompt, Object... args)`
+- `String readLine(String prompt, Object... args)`：显示提示并读取用户输入直到输入行结束。可选的`args`参数用于提供格式化参数，见下一节。
 
 ## 3.7.2. 格式化输出
 
-你可以使用 `System.out.print(x)` 语句向控制台打印数字 `x`。该命令将打印具有该类型最大非零数字数的 `x`。例如：
+你可以使用`System.out.print(x)`语句向控制台打印数字`x`。该命令将打印具有该类型最大非零数字数的`x`。例如：
 
 ```java
 double x = 10000.0 / 3.0;
 System.out.print(x);
 ```
 
-打印
+打印：
 
-```
+```text
 3333.3333333333335
 ```
 
 如果你想显示美元和分，这就会是一个问题。
 
-解决方法是使用 `printf` 方法，它遵循了 C 库的经典约定。例如，调用
+解决方法是使用`printf`方法，它遵循了 C 库的经典约定。例如，调用：
 
 ```java
 System.out.printf("%8.2f", x);
 ```
 
-打印字段宽度为 8 个字符，精度为 2 个字符。也就是说，输出包含一个前导空格和七字符
+打印字段宽度为 8 个字符，精度为 2 个字符。也就是说，输出包含一个前导空格和七字符：
 
-```
+```text
 3333.33
 ```
 
-你可以为 `printf` 提供多个参数。例如：
+你可以为`printf`提供多个参数。例如：
 
 ```java
 System.out.printf("Hello, %s. Next year, you'll
 ```
 
+
+
+
 每个以 `%` 字符开头的格式说明符都会替换为相应的参数。结束格式说明符的转换字符指示了值的类型：`f` 是浮点数，`s` 是字符串，`d` 是十进制整数。表 3.6 显示了所有转换字符。
 
 大写变体产生大写字母。例如，`"%8.2E"` 将 3333.33 格式化为 `3.33E+03`，并带有大写的 `E`。
 
-## 表 3.6: printf 的转换
+## 表 3.6：`printf` 的转换
 
 | 转换字符 | 类型 | 示例 |
 |---|---|---|
-| d | 十进制整数 | 159 |
-| x or X | 十六进制整数。若要对十六进制格式进行更多控制，请使用 `HexFormat` 类。 | 9f |
-| o | 八进制整数 | 237 |
-| f or F | 固定点浮点数 | 15.9 |
-| e or E | 指数浮点数 | 1.59e+01 |
-| g or G | 通用浮点数（e 和 f 中较短的） | — |
-| a or A | 十六进制浮点数 | 0x1.fccdp3 |
-| s or S | 字符串 | Hello |
+| `d` | 十进制整数 | 159 |
+| `x` or `X` | 十六进制整数。若要对十六进制格式进行更多控制，请使用 `HexFormat` 类。 | 9f |
+| `o` | 八进制整数 | 237 |
+| `f` or `F` | 固定点浮点数 | 15.9 |
+| `e` or `E` | 指数浮点数 | 1.59e+01 |
+| `g` or `G` | 通用浮点数（`e` 和 `f` 中较短的） | — |
+| `a` or `A` | 十六进制浮点数 | 0x1.fccdp3 |
+| `s` or `S` | 字符串 | Hello |
+| `c` or `C` | 字符 | H |
+| `b` or `B` | 布尔值 | true |
+| `h` or `H` | 哈希码 | 42628b2 |
+| `tx` or `Tx` | 旧的日期时间格式。请使用 `java.time` 类——参见第二卷第 6 章。 | — |
+| `%` | 百号 | % |
+| `n` | 取决于平台的换行符 | — |
 
-| 转换字符 | 类型 | 示例 |
-| --- | --- | --- |
-| c or C | 字符 | H |
-| b or B | 布尔值 | true |
-| h or H | 哈希码 | 42628b2 |
-| tx or Tx | 旧的日期时间格式。请使用 `java.time` 类——参见第二卷第 6 章。 | — |
-| % | 百号 | % |
-| n | 取决于平台的换行符 | — |
+**注意：** 你可以使用 `s` 转换来格式化任意对象。如果任意对象实现了 `Formattable` 接口，则调用该对象的 `format` 方法。否则，将调用 `toString` 方法将对象转换为字符串。`toString` 方法在[第 5 章](https://example.com/chapter-5)中讨论，接口在[第 6 章](https://example.com/chapter-6)中讨论。
 
-**注意：** 你可以使用 `s` 转换来格式化任意对象。如果任意对象实现了 `Formattable` 接口，则调用该对象的 `format` 方法。否则，将调用 `toString` 方法将对象转换为字符串。`toString` 方法在[第 5 章](https://example.com/chapter-5) 中讨论，接口在[第 6 章](https://example.com/chapter-6) 中讨论。
-
-此外，你可以指定控制格式化输出外观的*标志*。[表 3.7](https://example.com/table-3.7) 显示了所有标志。例如，逗号标志添加分组分隔符。也就是说，
+此外，你可以指定控制格式化输出外观的*标志*。[表 3.7](https://example.com/table-3.7)显示了所有标志。例如，逗号标志添加分组分隔符。也就是说，
 
 ```java
 System.out.printf("%.2f", 1000.0 / 3.0);
 ```
 
-产生
+产生：
 
-```
+```text
 3333
 ```
 
-**表 3.7:** `printf` 的标志
+**表 3.7：** `printf` 的标志
 
 | 标志 | 目的 | 示例 |
-| --- | --- | --- |
-| + | 在正数前添加空格。 | |
-| 0 | 添加前导零。 | |
-| - | 字段左对齐。 | |
-| ( | 将负数括在括号内。 | | |
-| , | 添加分组分隔符。 | | |
-| # | 始终包含小数点。 | | |
-| $ | 指定参数索引。 | | |
-| < | 字段左对齐。 | | |
-| > | 字段右对齐。 | | |
-| ^ | 字段中对齐。 | | |
-| # | 为正数打印符号标志。 | | |
-| e | 格式化为科学计数法。 | | |
-
-
-
+|---|---|---|
+| `+` | 在正数前添加空格。 | |
+| `0` | 添加前导零。 | |
+| `-` | 字段左对齐。 | |
+| `(` | 将负数括在括号内。 | |
+| `,` | 添加分组分隔符。 | |
+| `#` | 始终包含小数点。 | |
+| `$` | 指定参数索引。 | |
+| `<` | 字段左对齐。 | |
+| `>` | 字段右对齐。 | |
+| `^` | 字段中对齐。 | |
+| `#` | 为正数打印符号标志。 | |
+| `e` | 格式化为科学计数法。 | |
 
 要写入文件，请构建一个 `PrintWriter` 对象。在构造函数中，提供字符串形式的文件名：
 
-```
+```java
 PrintWriter out = new PrintWriter("myfile.txt");
 ```
 
 如果文件不存在，则会创建它。你可以像以前向 `System.out` 输出时一样使用 `print`、`println` 和 `printf` 命令。
 
-> **注意：** 当你指定相对文件名时，例如 "myfile.txt"、mydirectory/myfile.txt" 或 "../myfile.txt"，该文件相对于启动 Java 虚拟机时的目录。如果你从命令行外壳（command shell）启动程序，通过执行
+> **注意：** 当你指定相对文件名时，例如 `"myfile.txt"`、`"mydirectory/myfile.txt"` 或 `"../myfile.txt"`，该文件相对于启动 Java 虚拟机时的目录。如果你从命令行外壳（command shell）启动程序，通过执行：
 
 ![](img/1bda005f6b519fd0924777a921aebffa_204_0.png)
 
-```
+```bash
 java MyProg
 ```
 
 那么起始目录就是命令行外壳的当前目录。然而，如果你使用集成开发环境（IDE），则由它来控制起始目录。你可以通过此调用找到目录位置：
 
-```
+```java
 String dir = System.getProperty("user.dir");
 ```
 
-如果你在定位文件时遇到困难，可以考虑使用绝对路径名，例如 "c:\mydirectory\myfile.txt" 或 "/home/me/mydirectory/myfile.txt"。
+如果你在定位文件时遇到困难，可以考虑使用绝对路径名，例如 `"c:\mydirectory\myfile.txt"` 或 `"/home/me/mydirectory/myfile.txt"`。
 
-注意：在 Java 18 之前，你必须显式设置字符编码为 UTF-8：
+**注意：** 在 Java 18 之前，你必须显式设置字符编码为 UTF-8：
 
-```
+```java
 PrintWriter out = new PrintWriter("myfile.txt");
 ```
 
-正如你所看到的，访问文件就像使用 `System.in` 和 `System.out` 一样简单。但有一个问题：如果你用一个不存在的文件构造 `Scanner` 或者用一个无法创建的文件名构造 `PrintWriter`，就会发生异常。Java 编译器认为这些异常比例如“除以零”异常要严重得多。在第 7 章中，你将学习处理异常的各种方法。现在，你只需要简单地告诉编译器你已经意识到可能会发生“输入/输出”异常。
+正如你所看到的，访问文件就像使用 `System.in` 和 `System.out` 一样简单。但有一个问题：如果你用一个不存在的文件构造 `Scanner`，或者用一个无法创建的文件名构造 `PrintWriter`，就会发生异常。Java 编译器认为这些异常比例如“除以零”异常要严重得多。在第 7 章中，你将学习处理异常的各种方法。现在，你只需要简单地告诉编译器你已经意识到可能会发生“输入/输出”异常。
 
-你通过在 main 方法上标记 `throws` 子句来实现这一点，如下所示：
+你通过在 `main` 方法上标记 `throws` 子句来实现这一点，如下所示：
 
-```
+```java
 public static void main(String[] args) throws IOException {
     Scanner in = new Scanner(Path.of("myfile.txt"));
     ...
@@ -2756,52 +2812,59 @@ public static void main(String[] args) throws IOException {
 
 你现在已经了解如何读取和写入包含文本数据的文件。对于更高级的主题，例如处理不同的字符编码、处理二进制数据、读取目录和写入 zip 文件，请参阅卷二的第 2 章。
 
-注意：如果你不喜欢异常声明，可以像前面的章节那样，从 `System.in` 读取并写入到 `System.out`。然后使用你的外壳的重定向语法从命令行外壳启动你的程序：
+**注意：** 如果你不喜欢异常声明，可以像前面的章节那样，从 `System.in` 读取并写入到 `System.out`。然后使用你的外壳的重定向语法从命令行外壳启动你的程序：
 
 ![](img/1bda005f6b519fd0924777a921aebffa_206_0.png)
 
-```
+```bash
 java MyProg < myfile.txt > output.txt
 ```
 
-```
+```text
 java.util.Scanner 5.0
 
 - Scanner(Path p) 7
-- Scanner(Path p, Charset charset) 10
-  构造一个从给定路径读取数据的 Scanner，使用默认或给定的字符编码。
-- Scanner(String data)
-  构造一个从给定字符串读取数据的 Scanner。
 
+- Scanner(Path p, Charset charset) 10
+
+  构造一个从给定路径读取数据的 Scanner，使用默认或给定的字符编码。
+
+- Scanner(String data)
+
+  构造一个从给定字符串读取数据的 Scanner。
 ```
+
+```text
 java.io.PrintWriter 1.1
 
-```
-
 - PrintWriter(String fileName)
-- PrintWriter(String fileName, Charset charset) 10
-  构造一个向给定文件名的文件写入数据的 PrintWriter，使用默认或给定的字符编码。
 
+- PrintWriter(String fileName, Charset charset) 10
+
+  构造一个向给定文件名的文件写入数据的 PrintWriter，使用默认或给定的字符编码。
 ```
+
+```text
 java.nio.file.Path 7
 
 - static Path of(String pathname) 11
-  根据给路径名构造 Path。
+
+  根据给定路径名构造 Path。
 ```
 
 # 3.8. 控制流
 
-Java 与任何编程语言一样，都支持条件语句和循环来确定控制流。我将从条件语句开始，然后进入循环，最后对四种形式的 switch 进行深入讨论。
+Java 与任何编程语言一样，都支持条件语句和循环来确定控制流。我将从条件语句开始，然后进入循环，最后对四种形式的 `switch` 进行深入讨论。
 
-> **注意：** Java 的控制流结构与 C 和 C++ 相同，但有几例外。Java 没有 goto，但有一个带标签的 `break` 版本，可以用它跳出嵌套循环（在 C 中你可能使用 goto）。最后，`for` 循环的变体类似于 C# 中的 `foreach` 循环。
+> **注意：** Java 的控制流结构与 C 和 C++ 相同，但有几例外。Java 没有 `goto`，但有一个带标签的 `break` 版本，可以用它跳出嵌套循环（在 C 中你可能使用 `goto`）。最后，`for` 循环的变体类似于 C# 中的 `foreach` 循环。
 
-# 3.8.1. 块范围
+## 3.8.1. 块范围
 
 在学习控制结构之前，你需要了解更多关于块（block）的知识。
 
-块或复合语句由一对括号括起来若干 Java 语句组成。块定义了变量的作用域。一个块可以嵌套另一个块内部。这是一个嵌套在 main 方法块中的块：
+块或复合语句由一对括号括起来若干 Java 语句组成。块定义了变量的作用域。一个块可以嵌套另一个块内部。这是一个嵌套在 `main` 方法块中的块：
 
-```
+```java
 public static void main(String[] args)
 {
     int n;
@@ -2814,7 +2877,7 @@ public static void main(String[] args)
 
 你不能在两个嵌套块中声明同名的局部变量。例如，以下代码是错误的且无法编译：
 
-```
+```java
 public static void main(String[] args)
 {
     int n;
@@ -2827,19 +2890,19 @@ public static void main(String[] args)
 }
 ```
 
-> C++ 注意：在 C++ 中可以在嵌套块内部重新定义变量。
+> **C++ 注意：** 在 C++ 中可以在嵌套块内部重新定义变量。
 
-# 3.8.2. 条件语句
+## 3.8.2. 条件语句
 
-Java 中的条件形式为
+Java 中的条件形式为：
 
-```
+```java
 if (condition)
 ```
 
-在 Java 中，与大多数语言一样，你通常需要在条件为真时执行多个语句。在这种，使用括号来明确：
+在 Java 中，与大多数语言一样，你通常需要在条件为真时执行多个语句。在这种情况下，使用括号来明确：
 
-```
+```java
 if (condition) {
     statement1
     statement2
@@ -2848,7 +2911,7 @@ if (condition) {
 
 `else` 部分总是可选的。`else` 语句（有时称为复合语句）允许你有多个分支（见图 3.8）。例如：
 
-```
+```java
 if (condition >= 2 * target) {
     performance = "Excellent";
 } else if (condition >= 1.5 * target) {
@@ -2860,11 +2923,11 @@ if (condition >= 2 * target) {
 }
 ```
 
-# 3.8.3. 循环
+## 3.8.3. 循环
 
-`while` 循环在条件为真时执行语句（该语句可以是块语句）。其通用形式为
+`while` 循环在条件为真时执行语句（该语句可以是块语句）。其通用形式为：
 
-```
+```java
 while (condition) statement
 ```
 
@@ -2874,7 +2937,7 @@ while (condition) statement
 
 在示例中，我们在循环体中增加计数器并更新当前积累的金额，直到总额超过目标金额。
 
-```
+```java
 while (balance < goal) {
     balance += payment;
     double interest = balance * interestRate / 100;
@@ -2886,14 +2949,12 @@ System.out.println(years + " years.");
 
 （不要依靠这个程序来规划你的退休生活。它缺乏一些周考虑因素，如通货膨胀和你的预期寿命。）
 
-
-
-
-```
+```java
 do statement while (condition);
 ```
 
-该循环执行语句（通常是一个代码块）并仅测试条件。如果条件为真，它会重复执行语句并重新测试条件，以此此类推。
+该循环执行语句（通常是一个代码块）并仅测试条件。如果条件为真，它会重复执行语句并重新测试条件，以此类推。
+
 列表 3.4 计算了你退休账户中的新余额，然后询问你是否准备好退休：
 
 ```java
@@ -2907,16 +2968,17 @@ do {
 } while (input.equals("N"));
 ```
 
-只要用户回答 "N"，循环就会重复（参见图 3.11）。该程序是一个需要至少进入一次的循环的良好示例，因为用户在决定余额是否足够退休之前，需要先看到余额。
+只要用户回答 `"N"`，循环就会重复（参见图 3.11）。该程序是一个需要至少进入一次的循环的良好示例，因为用户在决定余额是否足够退休之前，需要先看到余额。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_221_0.png)
 
-**图 3.11:** `do/while` 语句的流程图
+**图 3.11：** `do/while` 语句的流程图
 
 ## 列表 3.3 Retirement/Retirement.java
 
 ```java
 import java.util.*;
+
 /*
  * 此程序演示了 while 
  * @version 1.20 2004-02-20
@@ -2959,6 +3021,7 @@ public class Retirement
 
 ```java
 import java.util.*;
+
 /**
  * 此程序演示了 do/while 循环
  * @version 1.20 2004-02-10
@@ -3009,11 +3072,11 @@ for (int i = 1; i <= 10; i++)
     System.out.println(i);
 ```
 
-`for` 语句的第一个槽通常持有计数器初始化。第二个槽提供了在每次新循环循环之前测试的条件，第三个槽指定了如何更新计数器。
+`for` 语句的第一个槽通常持有计数器初始化。第二个槽提供了在每次新循环开始之前测试的条件，第三个槽指定了如何更新计数器。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_226_0.png)
 
-**图 3.12:** `for` 语句的流程图
+**图 3.12：** `for` 语句的流程图
 
 尽管 Java 像 C++ 一样允许在 `for` 循环的各个槽中使用几乎任何表达式，但良好的编程习惯有一个不成文规定：这三个槽应该只初始化、测试和更新同一个计数器变量。忽略这一规则可能会写出非常晦涩的循环。
 
@@ -3025,13 +3088,13 @@ for (int i = 10; i > 0; i--)
 System.out.println("发射！");
 ```
 
-**注意：** 在循环中测试浮点数的等效性要小心。像这样的 `for` 循环
+**注意：** 在循环中测试浮点数的等效性要小心。像这样的 `for` 循环：
 
 ```java
 for (double x = 0; x != 10; x += 0.1)
 ```
 
-可能永远不会结束。由于舍入误差，可能无法达到最终值。在这个例子中，x 从 9.99999999999999 跳到 10.09999999999999。
+可能永远不会结束。由于舍入误差，可能无法达到最终值。在这个例子中，`x` 从 9.99999999999999 跳到 10.09999999999999。
 
 在 `for` 循环的第一个槽中声明变量，其作用域仅限于该语句的结束。如果你想在 `for` 循环外部使用该变量，请确保先声明它。
 
@@ -3040,6 +3103,9 @@ int i;
 for (i = 0; i < 10; i++)
     // ...
 ```
+
+
+
 
 `for` 循环的第一个槽可以声明多个变量，第三个槽可以包含逗号分隔的表达式：
 
@@ -3084,9 +3150,9 @@ switch (choice)
 }
 ```
 
-## 3.8.5. 使用 switch 进行多选
+## 3.8.5. 使用 `switch` 进行多选
 
-当需要处理同一个表达式的多种方案时，if/else 结构可能会变得非常臃肿。`switch` 语句使得这变得更容易，特别是对于 Java 14 引入的形式。
+当需要处理同一个表达式的多种方案时，`if/else` 结构可能会变得非常臃肿。`switch` 语句使得这变得更容易，特别是对于 Java 14 引入的形式。
 
 例如，如果你像图 3.13 所示设置了一个具有四个选项的菜单系统，你可以使用如下代码：
 
@@ -3105,14 +3171,11 @@ switch (choice)
 }
 ```
 
+注意这与你在 3.5.9 节中看到的 `switch` 表达式相似之处。与 `switch` 表达式不同，`switch` 语句没有值。每个 `case` 都执行一个操作。
 
+`switch` 语句的“经典”形式可以追溯到 C 语言，从 Java 1.0 起就一直支持。它的形式如下：
 
-
-注意这与你在 3.5.9 节中看到的 switch 表达式相似之处。与 switch 表达式不同，switch 语句没有值。每个 `case` 都执行一个操作。
-
-switch 语句的“经典”形式可以追溯到 C 语言，从 Java 1.0 起就一直支持。它的形式如下：
-
-```
+```java
 int choice = . . . ;
 switch (choice)
 {
@@ -3133,13 +3196,13 @@ switch (choice)
 }
 ```
 
-执行从匹配选择操作值的 `case` 标签开始，并一直持续到下一个 `break` 或 switch 的结束。如果没有一个 `case` 标签匹配，则执行 `default` 子句（如果存在的话）。
+执行从匹配选择操作值的 `case` 标签开始，并一直持续到下一个 `break` 或 `switch` 的结束。如果没有一个 `case` 标签匹配，则执行 `default` 子句（如果存在的话）。
 
 > 注意：可能会触发多个备选方案。如果你忘记在备选方案末尾添加 `break`，执行将穿透（fall through）到下一个备选方案！这种行为显然是危险的，也是错误的常见原因。
 
 为了检测此类问题，请使用 `Xlint:fallthrough` 选项编译你的代码，如下：
 
-```
+```bash
 javac -Xlint:fallthrough Test.java
 ```
 
@@ -3147,13 +3210,13 @@ javac -Xlint:fallthrough Test.java
 
 如果你实际上想使用穿透行为，请在外围的方法上标记 `@SuppressWarnings("fallthrough")` 注解。这样该方法就不会再生成任何警告。（注解是一种向编译器或处理 Java 源代码或类文件的工具提供信息的机制。第二卷对注解有深入的介绍。）
 
-为了保持对称性，Java 14 还引入了带有穿透行为的 switch 表达式，总共共有四种 switch 形式。表 3.8 显示了所有形式。
+为了保持对称性，Java 14 还引入了带有穿透行为的 `switch` 表达式，总共共有四种 `switch` 形式。表 3.8 显示了所有形式。
 
-## 表 3.8：switch 的四种形式
+## 表 3.8：`switch` 的四种形式
 
 | 编号 | 表达式 |
 |---|---|
-| 穿透 | `int numLetters = switch (seasonName) { case "Spring" -> { System.out.println("spring time!"); yield 6; } case "Summer", "Winter" -> 6; case "Fall" -> 4;default -> -1; };` |
+| 穿透 | `int numLetters = switch (seasonName) { case "Spring" -> { System.out.println("spring time!"); yield 6; } case "Summer", "Winter" -> 6; case "Fall" -> 4; default -> -1; };` |
 | 表达式 | ```java
 int numLetters = switch (seasonName)
 {
@@ -3168,48 +3231,48 @@ int numLetters = switch (seasonName)
 }
 ``` |
 
-在穿透变体中，每个 `case` 都以冒号结尾。如果 `case` 以箭头 `->` 结尾，则没有穿透。你不能在一个 switch 语句中混合冒号和箭头。
+在穿透变体中，每个 `case` 都以冒号结尾。如果 `case` 以箭头 `->` 结尾，则没有穿透。你不能在一个 `switch` 语句中混合冒号和箭头。
 
-switch 表达式的每个分支必须产生一个值。最常见的是，每个值跟着 `->` 箭头：
+`switch` 表达式的每个分支必须产生一个值。最常见的是，每个值跟着 `->` 箭头：
 
-```
+```java
 case "Summer", "Winter" -> 6;
 ```
 
 如果不可行，请使用 `yield` 语句。像 `break` 一样，它会终止执行。与 `break` 不同，它还会产生一个值——即表达式的值。
 
-要在 switch 表达式的分支中使用不带穿透的语句，必须使用大括号和 `yield`：
+要在 `switch` 表达式的分支中使用不带穿透的语句，必须使用大括号和 `yield`：
 
-```
+```java
 case "Spring" ->
   System.out.println("spring time!");
   yield 6;
 ```
 
-> **注意：** 在 switch 表达式的分支中抛出异常是合法的。例如：
+> **注意：** 在 `switch` 表达式的分支中抛出异常是合法的。例如：
 
-```
+```java
 default -> throw new IllegalArgumentException();
 ```
 
 异常在第 7 章中有详细介绍。
 
-**警告：** switch 表达式的目的是产生一个值（或因异常失败）。你不被允许“跳出”：
+**警告：** `switch` 表达式的目的是产生一个值（或因异常失败）。你不被允许“跳出”：
 
-```
+```java
 default -> { return -1; } // 错误
 ```
 
-具体来说，你不能在 switch 表达式中使用 `return`、`break` 或 `continue` 语句。（后两者请见第 3.8.6 节。）
+具体来说，你不能在 `switch` 表达式中使用 `return`、`break` 或 `continue` 语句。（后两者请见第 3.8.6 节。）
 
-有许多 switch 的变体，你应该选择哪一个？
+有许多 `switch` 的变体，你应该选择哪一个？
 
 1. 避免穿透形式。需要穿透的情况非常常见。
-2. 优先使用 switch 表达式而不是语句。
+2. 优先使用 `switch` 表达式而不是语句。
 
-如果每个分支都为变量赋值或方法调用计算值，请用表达式 `yield` 该值，然后使用它。例如，
+如果每个分支都为变量赋值或方法调用计算值，请用表达式 `yield` 该值，然后使用它。例如：
 
-```
+```java
 numLetters = switch (seasonName)
 {
     case "Spring", "Summer", "Winter" -> 6
@@ -3218,9 +3281,9 @@ numLetters = switch (seasonName)
 };
 ```
 
-优于
+优于：
 
-```
+```java
 switch (seasonName)
 {
   case "Spring", "Summer", "Winter" ->
@@ -3234,9 +3297,11 @@ switch (seasonName)
 
 ## 3.8.6. 打断控制流的语句
 
-尽管 Java 的设计者保留了 `goto` 为关键字，但他们决定不将其包含在语言中。通常，`goto` 语句被认为是不良的风格。一些程序员觉得反对 `goto` 的力量做得过头（例如参见 Donald Knuth 的著名文章《结构化编程之反对 goto》）。Java 设计者认为，无限制地使用 `goto` 是出错的，但偶尔跳出循环是有益的。他们同意了这一点并增加了一种新的语句——标签 `break` 来支持这种风格。让我们先看无标签的 `break` 语句。`break` 语句可以用于跳出 switch 语句。例如：
+尽管 Java 的设计者保留了 `goto` 为关键字，但他们决定不将其包含在语言中。通常，`goto` 语句被认为是不良的风格。一些程序员觉得反对 `goto` 的力量做得过头（例如参见 Donald Knuth 的著名文章《结构化编程之反对 goto》）。Java 设计者认为，无限制地使用 `goto` 是出错的，但偶尔跳出循环是有益的。他们同意了这一点并增加了一种新的语句——标签 `break` 来支持这种风格。
 
-```
+让我们先看无标签的 `break` 语句。`break` 语句可以用于跳出 `switch` 语句。例如：
+
+```java
 while (years <= 100)
 {
     balance += payment;
@@ -3248,7 +3313,7 @@ while (years <= 100)
 
 现在，如果 `years <= 100` 不成立，循环将退出。但注意 `balance < goal` 在这个版本中重复测试，如下：
 
-```
+```java
 while (years <= 100 && balance < goal)
 {
     balance += payment;
@@ -3261,7 +3326,7 @@ while (years <= 100 && balance < goal)
 
 为了避免这种重复测试，一些程序员倾向于使用标签 `break` 语句。标签 `break` 语句允许你跳出多个循环。当深度嵌套循环内部发生某些情况时，可能需要这样做。注意标签必须位于你想要跳出的外层循环之前。
 
-```
+```java
 Scanner in = new Scanner(System.in);
 int n;
 read_data:
@@ -3284,7 +3349,7 @@ while (. . .) // 这个循环带有标签
 
 **注意：** 奇的是，你可以将标签应用于任何语句，即使是 `if` 语句或块语句，如下：
 
-```
+```java
 label:
 {
   ..
@@ -3298,7 +3363,7 @@ label:
 
 最后，还有一个 `continue` 语句，它和 `break` 语句一样会打断常规控制流。`continue` 语句将控制权转移到最内层循环的头部。这是一个示例：
 
-```
+```java
 Scanner in = new Scanner(System.in);
 while (sum < goal)
 {
@@ -3309,11 +3374,11 @@ while (sum < goal)
 }
 ```
 
-如果 $n < 0$，则 `continue` 语句立即跳转到循环头部，跳过当前迭代的剩余部分。
+如果 `n < 0`，则 `continue` 语句立即跳转到循环头部，跳过当前迭代的剩余部分。
 
 如果 `continue` 语句用于 `for` 循环，它将跳转到 `for` 循环的“更新”部分。例如：
 
-```
+```java
 for (count = 1; count <= 100; count++)
 {
     System.out.print("Enter a number, -1 to quit:");
@@ -3323,13 +3388,11 @@ for (count = 1; count <= 100; count++)
 }
 ```
 
-
-
-如果 n < ø，则 `continue` 语句跳转到 `count++` 语句。
+如果 `n < ø`，则 `continue` 语句跳转到 `count++` 语句。
 
 还有一种标记形式的 `continue` 语句，它可以跳转到匹配标记的循环头部。
 
-> 提示：许多程序员发现 `break` 和 `continue` 语句令人困惑。这些语句完全可选可选——你始终可以在不用它们的情况下表达相同的逻辑。书中没有任何程序使用过 `break` 或 `continue`。
+> 提示：许多程序员发现 `break` 和 `continue` 语句令人困惑。这些语句完全可选——你始终可以在不用它们的情况下表达相同的逻辑。书中没有任何程序使用过 `break` 或 `continue`。
 
 ## 3.9. 大数
 
@@ -3337,28 +3400,28 @@ for (count = 1; count <= 100; count++)
 
 使用静态方法 `valueOf` 将普通数字转换为大数：
 
-```
+```java
 BigInteger a = BigInteger.valueOf(100);
 ```
 
 对于较长的数字，使用带字符串参数的构造函数：
 
-```
+```java
 BigInteger reallyBig
 = new BigInteger("222232244629420445529739893");
 ```
 
 还有常量 `BigInteger.ZERO`、`BigInteger.ONE`、`BigInteger.TWO` 和 `BigInteger.TEN`。
 
-> 注意：在使用 `BigDecimal` 类时，你应该始终使用带字符串参数的构造函数。有一个 `BigDecimal(double)` 构造函数，它本质上容易产生舍入误差：`new BigDecimal(0.1)` 的数字为
+> 注意：在使用 `BigDecimal` 类时，你应该始终使用带字符串参数的构造函数。有一个 `BigDecimal(double)` 构造函数，它本质上容易产生舍入误差：`new BigDecimal(0.1)` 的数字为：
 
-```
+```text
 0.100000000000000005551115123125782702118
 ```
 
 遗憾的是，你不能使用 `+` 和 `*` 等熟悉的数学运算符来组合大数。相反，你必须使用大数类中的 `add` 和 `multiply` 等方法。
 
-```
+```java
 BigInteger c = a.add(b); // c = a + b
 BigInteger d = c.multiply(b.add(BigInteger.valueOf(
 ```
@@ -3369,21 +3432,21 @@ BigInteger d = c.multiply(b.add(BigInteger.valueOf(
 
 列表 3.6 显示列表 3.5 中彩票程序的修改，已更新为支持大数。例如，如果你被邀请参加一个需要从 490 个数字中选出 60 个数字的彩票，你可以使用此程序告诉你中奖概率。概率是 1 比 716395843461995574151162254009293341171612789263493493351134594810468848。祝你好运！
 
-列表 3.5 中的程序计算了语句
+列表 3.5 中的程序计算了语句：
 
-```
+```java
 lotteryOdds = lotteryOdds * (n - i + 1) / i;
 ```
 
-当使用大整数用于 `lotteryOdds` 和 `n` 时，等效语句变为
+当使用大整数用于 `lotteryOdds` 和 `n` 时，等效语句变为：
 
-```
+```java
 lotteryOdds = lotteryOdds
 .multiply(n.subtract(BigInteger.valueOf(i - 1)))
 .divide(BigInteger.valueOf(i));
 ```
 
-### # 列表 3.6 BigIntegerTest/BigIntegerField.java
+### 列表 3.6：`BigIntegerTest/BigIntegerField.java`
 
 ```java
 1 import java.math.*;
@@ -3420,25 +3483,27 @@ public class BigIntegerTest
 34 }
 ```
 
-### # java.math.BigInteger 1.1
+### 3.9.1. `java.math.BigInteger`
 
-- BigInteger add(BigInteger other)
-- BigInteger subtract(BigInteger other)
-- BigInteger multiply(BigInteger other)
-- BigInteger divide(BigInteger other)
-- BigInteger mod(BigInteger other)
-- BigInteger pow(int exponent)
-- BigInteger sqrt()
-- int compareTo(BigInteger other)
-- static BigInteger valueOf(long x)
+- `BigInteger add(BigInteger other)`
+- `BigInteger subtract(BigInteger other)`
+- `BigInteger multiply(BigInteger other)`
 
-- BigDecimal(String digits)
-- BigDecimal add(BigDecimal other)
-- BigDecimal subtract(BigDecimal other)
-- BigDecimal multiply(BigDecimal other)
-- BigDecimal divide(BigDecimal other)
-- BigDecimal divide(BigDecimal other, RoundingMode)
-- int compareTo(BigDecimal other)
+
+
+- `BigInteger divide(BigInteger other)`
+- `BigInteger mod(BigInteger other)`
+- `BigInteger pow(int exponent)`
+- `BigInteger sqrt()`
+- `int compareTo(BigInteger other)`
+- `static BigInteger valueOf(long x)`
+- `BigDecimal(String digits)`
+- `BigDecimal add(BigDecimal other)`
+- `BigDecimal subtract(BigDecimal other)`
+- `BigDecimal multiply(BigDecimal other)`
+- `BigDecimal divide(BigDecimal other)`
+- `BigDecimal divide(BigDecimal other, RoundingMode)`
+- `int compareTo(BigDecimal other)`
 
 ## 3.10 数组
 
@@ -3460,15 +3525,18 @@ int[] a = new int[100]; // 或 var a = new int[100];
 
 该语句声明并初始化了一个长度为 100 的数组。
 
-数组长度不需要是常量：`new int[n]` 创建一个长度为 n 的数组。一旦创建数组，你就不能它的长度（你可以更改单个元素）。如果你在运行时经常需要扩展数组长度，应该使用第五章提到的数组列表。
+数组长度不需要是常量：`new int[n]` 创建一个长度为 `n` 的数组。一旦创建数组，你就不能改变它的长度（你可以更改单个元素）。如果你在运行时经常需要扩展数组长度，应该使用第五章提到的数组列表。
 
 数组的类型不包含长度。例如，前一个示例中的变量 `a` 类型为 `int[]`，可以设置为任何长度的 `int` 数组。
 
 注意：你可以定义数组变量为
+
 ```java
 int[] a;
 ```
+
 或者
+
 ```java
 int a[];
 ```
@@ -3498,44 +3566,40 @@ String[] authors = {
 new int[] { 17, 19, 23, 29, 31, 37 }
 ```
 
-该表达式分配一个新的数组并填充括号内的值。它计算初始值的数量并相应设置数组长度。你可以使用这种语法来
+该表达式分配一个新的数组并填充括号内的值。它计算初始值的数量并相应设置数组长度。你可以使用这种语法来在不创建新变量的情况下重新初始化数组。例如，
 
-在不创建新变量的情况下重新初始化数组。例如，
-
-```
+```java
 smallPrimes = new int[] { 17, 19, 23, 29, 31, 37 };
 ```
 
 是下面的简写：
 
-```
+```java
 int[] anonymous = { 17, 19, 23, 29, 31, 37 };
 smallPrimes = anonymous;
 ```
 
 **注意：** 长度为 0 的数组是合法的。如果你编写了一个计算数组结果的方法，而结果恰好为空，这样的数组就会很有用。构造一个长度为 0 的数组如下：
 
-![](img/1bda005f6b519fd0924777a921aebffa_257_0.png)
-
-```
+```java
 new elementType[0]
 ```
 
 或者
 
-```
+```java
 new elementType[] {};
 ```
 
-注意，长度为 0 的数组不等同于 null。
+注意，长度为 0 的数组不等同于 `null`。
 
-## 3.10.2. 访问数组元素
+### 3.10.2. 访问数组元素
 
 你通过整数*索引*（index）使用下标运算符访问数组的每个单独元素。例如，如果是一个整数数组，那么 `a[i]` 就是数组中索引为 *i* 的元素。
 
 数组元素*从 0 开始编号*。最后一个有效索引是长度减 1。在下例示例中，索引值范围从 0 到 99。一旦创建了数组，你就可以填充数组中的元素，例如，使用循环：
 
-```
+```java
 int[] a = new int[100];
 for (int i = 0; i < 100; i++)
     a[i] = i; // 用数字 0 到 99 填充数组
@@ -3543,32 +3607,32 @@ for (int i = 0; i < 100; i++)
 
 当你创建一个数字数组时，所有元素都初始化为零。`boolean` 数组初始化为 `false`。对象数组初始化为特殊值 `null`，这表示它们（尚）没有持有任何对象。这会让初学者感到惊讶。例如：
 
-```
+```java
 String[] names = new String[10];
 ```
 
-这创建了一个包含十个字符串的数组，它们都为 null。如果你想让数组持有空字符串，必须提供它们：
+这创建了一个包含十个字符串的数组，它们都为 `null`。如果你想让数组持有空字符串，必须提供它们：
 
-```
+```java
 for (int i = 0; i < 10; i++) names[i] = "";
 ```
 
-> > 如果你构造了一个包含 100 个元素的数组，然后尝试访问元素 a[100]（或任何超出 0 到 99 范围的索引），将发生“数组越界”（array index out of bounds）异常。
+> 如果你构造了一个包含 100 个元素的数组，然后尝试访问元素 `a[100]`（或任何超出 0 到 99 范围的索引），将发生“数组越界”（array index out of bounds）异常。
 
 要找到数组的元素数量，使用 `array.length`。例如：
 
-```
+```java
 for (int i = 0; i < a.length; i++)
 System.out.println(a[i]);
 ```
 
-## 3.10.3. “for each”循环
+### 3.10.3. “for each”循环
 
 Java 有一种强大的循环结构，允许你遍历数组（或任何其他元素集合）中的每个元素，而无需费心索引值。
 
 增强型 for 循环
 
-```
+```java
 for (variable : collection) statement
 ```
 
@@ -3576,58 +3640,55 @@ for (variable : collection) statement
 
 例如：
 
-```
+```java
 for (int element : a)
 System.out.println(element);
 ```
 
 在单独行上打印数组的每个元素。
 
-你应该将此循环读作“对于 a 中的每个元素”。Java 语言的设计者考虑过使用如 `foreach` 和 `in` 等关键字。但这个循环是 Java 语言晚期添加的，最终没有人想要破坏已经包含带有这些名称的方法或变量的旧代码（例如 `System.in`）。
+你应该将此循环读作“对于 `a` 中的每个元素”。Java 语言的设计者考虑过使用如 `foreach` 和 `in` 等关键字。但这个循环是 Java 语言晚期添加的，最终没有人想要破坏已经包含带有这些名称的方法或变量的旧代码（例如 `System.in`）。
 
 当然，你可以使用传统的 for 循环来实现相同效果：
 
-```
+```java
 for (int i = 0; i < a.length; i++)
 System.out.println(a[i]);
 ```
 
 然而，“for each”循环更加简洁且更不容易出错，因为你不需要担心那些讨厌的起始和结束索引值。
 
-![](img/1bda005f6b519fd0924777a921aebffa_261_0.png)
-
 > 注意：“for each”循环的循环变量遍历的是数组的元素，而不是索引值。
 
 如果你需要处理集合中的所有元素，“for each”循环是一个比传统循环更愉悦的改进。然而，仍然有很多使用传统 for 循环的机会。例如，你可能不想遍历整个集合，或者你可能在循环内部需要索引值。
 
-提示：有一种更简单的方法可以打印数组的所有值，使用 `Arrays` 类的 `toString` 方法。调用 `Arrays.toString(a)` 返回一个包含数组元素的字符串，用括号括起来并用逗号分隔，如 `[2, 3, 5, 7, 11, 13]`”。要打印数组，只需调用：
+提示：有一种更简单的方法可以打印数组的所有值，使用 `Arrays` 类的 `toString` 方法。调用 `Arrays.toString(a)` 返回一个包含数组元素的字符串，用括号括起来并用逗号分隔，如 `[2, 3, 5, 7, 11, 13]`。要打印数组，只需调用：
 
-```
+```java
 System.out.println(Arrays.toString(a));
 ```
 
-## 3.10.4. 数组复制
+### 3.10.4. 数组复制
 
 你可以将一个数组变量复制到另一个变量，但此时两个变量都指向同一个数组。
 
 如果你实际上想将一个数组的所有值复制到另一个，请使用 `Arrays` 类中的 `copyOf` 方法：
 
-```
+```java
 int[] copiedNumbers = Arrays.copyOf(numbers, length);
 ```
 
 第二个参数是新数组的长度。如果长度小于原始数组，则只复制初始元素。
 
-**注意：** 如果长度大于原始数组，新数组将填充默认值（例如，数字为 0，对象为 null）。
+**注意：** 如果长度大于原始数组，新数组将填充默认值（例如，数字为 0，对象为 `null`）。
 
 或者，你可以使用 `System.arraycopy()` 从一个数组复制特定范围到另一个数组。
-
 
 ```java
 int r = (int) (Math.random() * n);
 ```
 
-将第 i 个结果设置为该索引处的数字。初始情况下，它只是 `r + 1`，但正如你现在看到的，`numbers` 数组的内容在每次抽取后都会发生变化。
+将第 `i` 个结果设置为该索引处的数字。初始情况下，它只是 `r + 1`，但正如你现在看到的，`numbers` 数组的内容在每次抽取后都会发生变化。
 
 ```java
 result[i] = numbers[r];
@@ -3642,7 +3703,7 @@ n--;
 
 关键点在于，每次抽取时选择的是一个索引，而不是实际数值。索引指向一个包含尚未被抽取的数值的数组。
 
-抽取 k 个彩票号码后，对结果数组进行排序以获得更美的输出：
+抽取 `k` 个彩票号码后，对结果数组进行排序以获得更美的输出：
 
 ```java
 Arrays.sort(result);
@@ -3650,7 +3711,7 @@ for (int r : result)
 System.out.println(r);
 ```
 
-# 列表 3.7 LotteryDrawing/LotteryDrawing.java
+## 列表 3.7 LotteryDrawing/LotteryDrawing.java
 
 ```java
 import java.util.*;
@@ -3701,16 +3762,16 @@ public class LotteryDrawing
 }
 ```
 
-java.util.Arrays 1.2
+`java.util.Arrays` 1.2
 
-- `* static String toString(T[]) a` 5.0 返回一个包含 `a` 元素的字符串，用括号括起来并用逗号分隔。在此方法及后续方法中，数组的组件类型 `T` 可以是 `int`, `long`, `short`, `char`, `byte`, `boolean`, `float` 或 `double`。
-- `* static T[] copyOf(T[] a, int end)` 6
-- `* static T[] copyOfRange(T[] a, int start, int end)` 6 返回一个与 `a` 类型相同的数组，长度为 `end` 或 `end - start`，并用 `a` 的值填充。如果 `end` 大于 `a.length`，结果将用 0 或 `false` 值填充。
-- `* static void sort(T[]) a` 使用经过调的快速排序算法对数组进行排序。
-- `* static void fill(T[] a, T v)` 将数组的所有元素设置为 `v`。
-- `* static boolean equals(T[] a, T[] b)` 如果数组长度相同且对应索引处的元素相匹配，则返回 `true`。
+- `static String toString(T[] a)` 5.0 返回一个包含 `a` 元素的字符串，用括号括起来并用逗号分隔。在此方法及后续方法中，数组的组件类型 `T` 可以是 `int`, `long`, `short`, `char`, `byte`, `boolean`, `float` 或 `double`。
+- `static T[] copyOf(T[] a, int end)` 6
+- `static T[] copyOfRange(T[] a, int start, int end)` 6 返回一个与 `a` 类型相同的数组，长度为 `end` 或 `end - start`，并用 `a` 的值填充。如果 `end` 大于 `a.length`，结果将用 0 或 `false` 值填充。
+- `static void sort(T[] a)` 使用经过调的快速排序算法对数组进行排序。
+- `static void fill(T[] a, T v)` 将数组的所有元素设置为 `v`。
+- `static boolean equals(T[] a, T[] b)` 如果数组长度相同且对应索引处的元素相匹配，则返回 `true`。
 
-# 3.10.7. 多维数组
+### 3.10.7. 多维数组
 
 多维数组使用多个索引来访问数组元素。它们被用于表格和其他更复杂的布局。在你有需要这种存储机制之前，可以安全地跳过本节。
 
@@ -3762,7 +3823,7 @@ int[][] magicSquare = {
 for (int j = 0; j < balances[0].length; j++) {
 ```
 
-在抽取 k 个彩票号码后，对结果数组进行排序以获得更优的输出：
+在抽取 `k` 个彩票号码后，对结果数组进行排序以获得更优的输出：
 
 ```java
 Arrays.sort(result);
@@ -3770,7 +3831,9 @@ for (int r : result)
 System.out.println(r);
 ```
 
-# 列表 3.7 LotteryDrawing/LotteryDrawing.java
+## 列表 3.7 LotteryDrawing/LotteryDrawing.java
+
+
 
 ```java
 import java.util.*;
@@ -3821,14 +3884,14 @@ public class LotteryDrawing
 }
 ```
 
-java.util.Arrays 1.2
+## `java.util.Arrays` 1.2
 
-- `* static String toString(T[]) a` 5.0 返回一个包含 `a` 元素的字符串，用括号括起来并用逗号分隔。在此方法及后续方法中，数组的组件类型 `T` 可以是 `int`, `long`, `short`, `char`, `byte`, `boolean`, `float` 或 `double`。
-- `* static T[] copyOf(T[] a, int end)` 6
-- `* static T[] copyOfRange(T[] a, int start, int end)` 6 返回一个与 `a` 类型相同的数组，长度为 `end` 或 `end - start`，并用 `a` 的值填充。如果 `end` 大于 `a.length`，结果将用 0 或 `false` 值填充。
-- `* static void sort(T[]) a` 使用经过调的快速排序算法对数组进行排序。
-- `* static void fill(T[] a, T v)` 将数组的所有元素设置为 `v`。
-- `* static boolean equals(T[] a, T[] b)` 如果数组长度相同且对应索引处的元素相匹配，则返回 `true`。
+- `static String toString(T[]) a` 5.0 返回一个包含 `a` 元素的字符串，用括号括起来并用逗号分隔。在此方法及后续方法中，数组的组件类型 `T` 可以是 `int`、`long`、`short`、`char`、`byte`、`boolean`、`float` 或 `double`。
+- `static T[] copyOf(T[] a, int end)` 6
+- `static T[] copyOfRange(T[] a, int start, int end)` 6 返回一个与 `a` 类型相同的数组，长度为 `end` 或 `end - start`，并用 `a` 的值填充。如果 `end` 大于 `a.length`，结果将用 `0` 或 `false` 值填充。
+- `static void sort(T[]) a` 使用经过调的快速排序算法对数组进行排序。
+- `static void fill(T[] a, T v)` 将数组的所有元素设置为 `v`。
+- `static boolean equals(T[] a, T[] b)` 如果数组长度相同且对应索引处的元素相匹配，则返回 `true`。
 
 # 3.10.7. 多维数组
 
@@ -3836,18 +3899,18 @@ java.util.Arrays 1.2
 
 假设你想创建一个数字表格，显示 10,000 美元的投资在不同利率场景下的增长情况，在这些场景下，利息每年支付并再投资。
 
-| | 5% | 6% | 7% | 8% | 9% |
-|---|---|---|---|---|---|
+|   | 5% | 6% | 7% | 8% | 9% |
+|---|---:|---:|---:|---:|---:|
 | n | 10000.00 | 10000.00 | 10000.00 | 10000.00 | 10000.00 |
-| | 10500.00 | 10600.00 | 10700.00 | 10800.00 | 10900.00 |
-| | 11025.00 | 11236.00 | 11449.00 | 11664.00 | 11881.00 |
-| | 11576.25 | 11910.16 | 12250.43 | 12597.12 | 12950.27 |
-| | 12155.06 | 12624.77 | 13107.96 | 13604.89 | 14115.88 |
-| | 12762.82 | 13382.26 | 14025.52 | 14693.28 | 15386.22 |
-| | 13400.96 | 14185.19 | 15007.30 | 15868.74 | 16771.09 |
-| | 14071.00 | 15036.30 | 16057.81 | 17138.24 | 18280.33 |
-| | 14774.55 | 15938.48 | 17181.86 | 18509.30 | 19925.65 |
-| | 15513.28 | 16894.79 | 18384.59 | 19995.05 | 21718.91 |
+|   | 10500.00 | 10600.00 | 10700.00 | 10800.00 | 10900.00 |
+|   | 11025.00 | 11236.00 | 11449.00 | 11664.00 | 11881.00 |
+|   | 11576.25 | 11910.16 | 12250.43 | 12597.12 | 12950.27 |
+|   | 12155.06 | 12624.77 | 13107.96 | 13604.89 | 14115.88 |
+|   | 12762.82 | 13382.26 | 14025.52 | 14693.28 | 15386.22 |
+|   | 13400.96 | 14185.19 | 15007.30 | 15868.74 | 16771.09 |
+|   | 14071.00 | 15036.30 | 16057.81 | 17138.24 | 18280.33 |
+|   | 14774.55 | 15938.48 | 17181.86 | 18509.30 | 19925.65 |
+|   | 15513.28 | 16894.79 | 18384.59 | 19995.05 | 21718.91 |
 
 你可以将这些信息存储在一个名为 `balances` 的二维维数组中。
 
@@ -3882,7 +3945,7 @@ int[][] magicSquare = {
 for (int j = 0; j < balances[0].length; j++) {
 ```
 
-抽取 k 个彩票号码后，对结果数组进行排序以获得更优的输出：
+抽取 `k` 个彩票号码后，对结果数组进行排序以获得更优的输出：
 
 ```java
 Arrays.sort(result);
@@ -3890,7 +3953,7 @@ for (int r : result)
 System.out.println(r);
 ```
 
-# 列表 3.7 LotteryDrawing/LotteryDrawing.java
+# 列表 3.7 `LotteryDrawing/LotteryDrawing.java`
 
 ```java
 import java.util.*;
@@ -3941,135 +4004,11 @@ public class LotteryDrawing
 }
 ```
 
-java.util.Arrays 1.2
-
-- `* static String toString(T[]) a` 5.0 返回一个包含 `a` 元素的字符串，用括号括起来并用逗号分隔。在此方法及后续方法中，数组的组件类型 `T` 可以是 `int`, `long`, `short`, `char`, `byte`, `boolean`, `float` 或 `double`。
-- `* static T[] copyOf(T[] a, int end)` 6
-- `* static T[] copyOfRange(T[] a, int start, int end)` 6 返回一个与 `a` 类型相同的数组，长度为 `end` 或 `end - start`，并用 `a` 的值填充。如果 `end` 大于 `a.length`，结果将用 0 或 `false` 值填充。
-- `* static void sort(T[]) a` 使用经过调的快速排序算法对数组进行排序。
-- `* static void fill(T[] a, T v)` 将数组的所有元素设置为 `v`。
-- `* static boolean equals(T[] a, T[] b)` 如果数组长度相同且对应索引处的元素相匹配，则返回 `true`。
-
-# 3.10.7. 多维数组
-
-多维数组使用多个索引来访问数组元素。它们被用于表格和其他更复杂的布局。在你有需要这种存储机制之前，可以安全地跳过本节。
-
-假设你想创建一个数字表格，显示 10,000 美元的投资在不同利率场景下的增长情况，在这些场景下，利息每年支付并再投资。
-
-| | 5% | 6% | 7% | 8% | 9% |
-|---|---|---|---|---|---|
-| n | 10000.00 | 10000.00 | 10000.00 | 10000.00 | 10000.00 |
-| | 10500.00 | 10600.00 | 10700.00 | 10800.00 | 10900.00 |
-| | 11025.00 | 11236.00 | 11449.00 | 11664.00 | 11881.00 |
-| | 11576.25 | 11910.16 | 12250.43 | 12597.12 | 12950.27 |
-| | 12155.06 | 12624.77 | 13107.96 | 13604.89 | 14115.88 |
-| | 12762.82 | 13382.26 | 14025.52 | 14693.28 | 15386.22 |
-| | 13400.96 | 14185.19 | 15007.30 | 15868.74 | 16771.09 |
-| | 14071.00 | 15036.30 | 16057.81 | 17138.24 | 18280.33 |
-| | 14774.55 | 15938.48 | 17181.86 | 18509.30 | 19925.65 |
-| | 15513.28 | 16894.79 | 18384.59 | 19995.05 | 21718.91 |
-
-你可以将这些信息存储在一个名为 `balances` 的二维维数组中。
-
-在 Java 中声明二维数组非常简单。例如：
-
-```java
-double[][] balances;
-```
-
-在初始化之前你无法使用该数组。在这种情况下，你可以按照如下方式初始化：
-
-```java
-balances = new double[years][rates];
-```
-
-在其他情况下，如果你知道数组的元素，可以使用简写法来初始化多维数组，而无需调用 `new`。例如：
-
-```java
-int[][] magicSquare = {
-  {16, 3, 2, 13},
-  {5, 10, 11, 8},
-  {9, 6, 7, 12},
-  {4, 15, 14, 1}
-};
-```
-
-一旦初始化了数组，你就可以通过提供一对括号来访问单个元素——例如 `balances[i][j]`。
-
-示例程序存储了一个一维的利率数组和一个二维的 `balances` 数组，对应每年和每个利率。用初始余额初始化数组的第一行：
-
-```java
-for (int j = 0; j < balances[0].length; j++) {
-```
-
-抽取 k 个彩票号码后，对结果数组进行排序以获得更优的输出：
-
-```java
-Arrays.sort(result);
-for (int r : result)
-System.out.println(r);
-```
-
-# 列表 3.7 LotteryDrawing/LotteryDrawing.java
-
-```java
-import java.util.*;
-/**
- * 此程序演示数组操作
- * @version 1.20 2004-02-10
- * @author Cay Horstmann
- */
-public class LotteryDrawing
-{
-    public static void main(String[] args)
-    {
-        Scanner in = new Scanner(System.in);
-
-        System.out.print("多少个数字? ");
-        int k = in.nextInt();
-
-        System.out.print("最大值是多少? ");
-        int n = in.nextInt();
-
-        // 用数字 1 2 3 填充数组
-        int[] numbers = new int[n];
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = i + 1;
-        }
-
-        // 抽取 k 个数字放入数组
-        int[] result = new int[k];
-        for (int i = 0; i < result.length; i++) {
-            // 产生一个 0 到 n 之间的随机索引
-            int r = (int)(Math.random() * n);
-
-            // 选取随机索引处的元素
-            result[i] = numbers[r];
-
-            // 将最后一个元素移动到该位置
-            numbers[r] = numbers[n - 1];
-            n--;
-        }
-
-        // 打印排序后的数组
-        Arrays.sort(result);
-        System.out.println("投注如下:");
-        for (int r : result) {
-            System.out.println(r);
-        }
-    }
-}
-```
-
-# 3.10.8. 锯齿数组
+## 3.10.8. 锯齿数组
 
 到目前为止，你看到的与其它编程语言并没有太大区别。但在背后有一个微妙的机制，你有时可以将其转化为优势：Java 并没有多维数组，只有一维数组。多维数组是通过“数组的数组”的方式来实现的。
 
-
-
-
-
-## 图 3.15: 二维数组
+### 图 3.15：二维数组
 
 表达式 `balances[i]` 指向第 $i$ 个子数组——即表格的第 $i$ 行。它本身是一个数组，而 `balances[i][j]` 指向该数组的第 $j$ 个元素。
 
@@ -4099,8 +4038,10 @@ balances[i + 1] = temp;
 
 ```java
 final int NMAX = 10;
-int[] odds = new int[NMAX + 1][];
+int[][] odds = new int[NMAX + 1][];
 ```
+
+
 
 接下来，分配行：
 
@@ -4122,13 +4063,13 @@ for (int n = 0; n < odds.length; n++)
 
 列表 3.9 给出了完整的程序。
 
-**注意：** 就像一维数组一样，构造某个维度为零的多维数组也是合法的。例如，
+**注意：** 就像一维数组一样，构造某个维度为零的多维数组也是合法的。例如：
 
 ```java
 new int[3][0]
 ```
 
-有三行，每行的长度恰好为零。相比之下，
+有三行，每行的长度恰好为零。相比之下：
 
 ```java
 new int[0][3]
@@ -4136,19 +4077,21 @@ new int[0][3]
 
 没有行。行的长度是不重要的，因为实际上没有分配任何行。换句话说，`new int[0][3]`、`new int[0][4]` 和 `new int[0][]` 是相同的。
 
-## C++ 注意：在 C++ 中，Java 的声明
+## C++ 注意
+
+在 C++ 中，Java 的声明：
 
 ```cpp
 double[][][] balances = new double[10][6]; /
 ```
 
-不等同于
+不等同于：
 
 ```cpp
 double balances[10][6]; // C++
 ```
 
-甚至不是
+甚至不是：
 
 ```cpp
 double (*balances)[6] = new double[10][6];
@@ -4228,14 +4171,11 @@ public class LotteryArray {
 
 对于小型问题，过程化编程工作得很好。但对于较大的问题，对象更为合适。考虑一个简单的对象。在面向对象的风格下，如果某个对象的数据处于错误状态，寻找错误会容易得多。
 
-
-
-
-其他类。事实上，Java 自带一个名为 Object 的“宇宙父类”。所有其他类都继承自这个类。你将在下一章中学习更多关于 Object 类的知识。
+其他类。事实上，Java 自带一个名为 `Object` 的“宇宙父类”。所有其他类都继承自这个类。你将在下一章中学习更多关于 `Object` 类的知识。
 
 当你扩展一个现有的类时，新类将拥有你所扩展的类的所有属性和方法。然后，你提供了仅适用于你新类的新方法和实例字段。通过扩展一个类来获取另一个类的概念被称为继承。更多关于继承的信息，请参见下一章。
 
-## 4.1.2. 对象
+## 4.1.2 对象
 
 要进行面向对象编程（OOP），你应该能够识别对象的三个特征：
 
@@ -4251,7 +4191,7 @@ public class LotteryArray {
 
 这些关键特征可以相互影响。例如，对象的状态可以影响它的行为。（如果一个订单“已发货”或“已支付”，它可能会拒绝要求其添加或删除物品的方法调用。相反，如果订单是“空的”——即尚未订购任何物品——它不应该允许自己被发货。）
 
-## 4.1.3. 识别类
+## 4.1.3 识别类
 
 在传统的过程化程序中，你从顶部的 `main` 函数开始处理过程。在设计面向对象的系统时，没有所谓的“顶部”，OOP 的初学者往往疑惑该从何开始。答案是：识别你的类，然后为每个类添加方法。
 
@@ -4259,19 +4199,19 @@ public class LotteryArray {
 
 例如，在订单处理系统中，一些名词是：
 
-- 物品 (Item)
-- 订单 (Order)
-- 收货地址 (Shipping address)
-- 支付 (Payment)
-- 账户 (Account)
+- 物品（`Item`）
+- 订单（`Order`）
+- 收货地址（`Shipping address`）
+- 支付（`Payment`）
+- 账户（`Account`）
 
-这些名词可能指向 Item、Order 等类。
+这些名词可能指向 `Item`、`Order` 等类。
 
-接下来，寻找动词。物品被添加到订单中。订单被发货或取消。支付被应用于订单中。对于每个动词，如“添加”、“发货”、“取消”或“应用”，你识别出承担该操作主要责任的对象。例如，当一个新物品添加到订单中时，订单对象应该是负责的，因为它知道如何存储和排序物品。也就是说，`add` 应该是 Order 类的一个方法，并以一个 `Item` 对象作为参数。
+接下来，寻找动词。物品被添加到订单中。订单被发货或取消。支付被应用于订单中。对于每个动词，如“添加”、“发货”、“取消”或“应用”，你识别出承担该操作主要责任的对象。例如，当一个新物品添加到订单中时，订单对象应该是负责的，因为它知道如何存储和排序物品。也就是说，`add` 应该是 `Order` 类的一个方法，并以一个 `Item` 对象作为参数。
 
 当然，“名词和动词”只是一个经验法则；只有经验才能帮助你在构建类时，决定哪些名词和动词是重要的。
 
-## 4.1.4. 类之间的关系
+## 4.1.4 类之间的关系
 
 类与类之间常见的关系有：
 
@@ -4279,21 +4219,22 @@ public class LotteryArray {
 - 聚合（“has-a”）
 - 继承（“is-a”）
 
-依赖（或“uses-a”关系）是最明显的，也是最通用的。例如，Order 类使用了 Account 类，因为 Order 对象需要访问 Account 对象来检查信用状态。但 Item 类并不依赖于 Account 类，因为 Item 对象永远不需要担心客户账户。因此，如果一个类的方法使用了或操纵另一个类的对象，那么该类就依赖于另一个类。
+依赖（或“uses-a”关系）是最明显的，也是最通用的。例如，`Order` 类使用了 `Account` 类，因为 `Order` 对象需要访问 `Account` 对象来检查信用状态。但 `Item` 类并不依赖于 `Account` 类，因为 `Item` 对象永远不需要担心客户账户。因此，如果一个类的方法使用了或操纵另一个类的对象，那么该类就依赖于另一个类。
 
-尽量减少相互依赖的类数量。要点在于，如果类 A 不知道类 B的存在，它也就无所谓 B 的任何变化。（这意味着对 B 的更改不会在 A 中引入错误。）在软件工程术语中，你希望尽可能地减少类与类之间的耦合。
+尽量减少相互依赖的类数量。要点在于，如果类 A 不知道类 B 的存在，它也就无所谓 B 的任何变化。（这意味着对 B 的更改不会在 A 中引入错误。）在软件工程术语中，你希望尽可能地减少类与类之间的耦合。
 
-聚合（或“has-a”关系）很容易理解，因为它是具体的；例如，一个 Order 对象包含了 Item 对象。包含意味着类 A 的对象包含了类 B 的对象。
+聚合（或“has-a”关系）很容易理解，因为它是具体的；例如，一个 `Order` 对象包含了 `Item` 对象。包含意味着类 A 的对象包含了类 B 的对象。
 
 > 注意：某些方法论者对聚合的概念表示不屑以鼻，更倾向于使用更通用的“关联”（association）关系。从建模的角度来看，这是可以理解的。但对于程序员来说，“has-a”关系非常有意义。我喜欢使用聚合还有另一个原因：关联的标准表示法不够清晰。参见表 4.1。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_295_0.png)
 
-继承（或“is-a”关系）表示了更特殊类和更通用类之间的关系。例如，RushOrder 类继承自 Order 类。专门的 RushOrder 类具有处理优先级的特殊方法，以及一个用于计算运费的不同方法，但它的其他方法（如添加物品和账单）继承自 Order 类。通常情况下，如果类 D 扩展类 C，类 D 继承类 C 的方法但具有更多功能。
+继承（或“is-a”关系）表示了更特殊类和更通用类之间的关系。例如，`RushOrder` 类继承自 `Order` 类。专门的 `RushOrder` 类具有处理优先级的特殊方法，以及一个用于计算运费的不同方法，但它的其他方法（如添加物品和账单）继承自 `Order` 类。通常情况下，如果类 D 扩展类 C，类 D 继承类 C 的方法但具有更多功能。
 
 许多程序员使用 UML（统一建模语言）符号来绘制描述类之间关系的类图。你可以在图 4.2 中看到此类图的示例。你将类画为矩形，将关系画为带有各种装饰的箭头。表 4.1 显示了本书使用的 UML 符号。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_297_0.png)
+
 图 4.2：类图
 
 表 4.1：类关系的 UML 符号
@@ -4304,17 +4245,17 @@ public class LotteryArray {
 | 聚合 | |
 | 依赖 | |
 
-## 4.2. 使用预定义类
+## 4.2 使用预定义类
 
-在 Java 中，没有类就无法进行任何操作，你已经看到了几个类的用法。然而，并非所有这些类都展示了典型的对象特性。以 Math 类为例。你已经看到可以使用 Math 类的方法（如 `random`），而不需要知道它们是如何实现的——你只需要知道名称和参数类型（如果有）。这就是封装的意义，它对所有类都适用。但它隐藏数据。
+在 Java 中，没有类就无法进行任何操作，你已经看到了几个类的用法。然而，并非所有这些类都展示了典型的对象特性。以 `Math` 类为例。你已经看到可以使用 `Math` 类的方法（如 `random`），而不需要知道它们是如何实现的——你只需要知道名称和参数类型（如果有）。这就是封装的意义，它对所有类都适用。但它隐藏数据。
 
-在下一节中，我们将查看一个更典型的类，Date 类。你将看到如何构造对象并调用它的方法。
+在下一节中，我们将查看一个更典型的类，`Date` 类。你将看到如何构造对象并调用它的方法。
 
-### 4.2.1. 对象和对象变量
+### 4.2.1 对象和对象变量
 
 要操作对象，你首先构造它们并指定它们的初始状态。然后对对象应用方法。
 
-在 Java 语言中，你使用构造方法来构造实例。构造方法是一种构造初始化对象的特殊方法。让我们来看一个例子。Java 标准库包含 Date 类。它的对象描述时间点，例如 GMT 1999 年 12 月 31 日 23:59:59。
+在 Java 语言中，你使用构造方法来构造实例。构造方法是一种构造初始化对象的特殊方法。让我们来看一个例子。Java 标准库包含 `Date` 类。它的对象描述时间点，例如 GMT 1999 年 12 月 31 日 23:59:59。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_299_0.png)
 
@@ -4322,9 +4263,9 @@ public class LotteryArray {
 
 有些地方使用月/日/年，另一些地方则是日/月/年。语言设计者真的能预见到这些问题吗？如果他们做得不好，语言就会变成一个令人不悦的混乱体，而痛苦的程序员对此无能为力。有了类之后，设计任务就交给了库的设计者。如果类不完美，其他程序员可以轻松地编写自己的类来增强或替换系统类。（证明这一点：Java 日期库开始时有点混乱，已经重新设计了两次。）
 
-构造函数的名称与类名相同。因此，`Date` 类的构造函数名为 Date。。要构造一个 `Date` 对象，将构造函数与 `new` 运算符结合，如下：
+构造函数的名称与类名相同。因此，`Date` 类的构造函数名为 `Date`。要构造一个 `Date` 对象，将构造函数与 `new` 运算符结合，如下：
 
-```
+```java
 new Date()
 ```
 
@@ -4332,19 +4273,19 @@ new Date()
 
 如果你愿意，可以将该对象传递给一个方法：
 
-```
+```java
 System.out.println(new Date());
 ```
 
 或者，你可以对刚刚构造的对象应用方法。`Date` 类的方法之一是 `toString` 方法。该方法产生日期的字符串表示。以下是你如何对一个新构造的 `Date` 对象应用 `toString` 方法：
 
-```
+```java
 String s = new Date().toString();
 ```
 
 在这两个示例中，构造的对象只使用了一次。通常，你会希望保留你构造的对象，以便继续使用它们。简单地将对象存储在变量中：
 
-```
+```java
 Date rightNow = new Date();
 ```
 
@@ -4354,15 +4295,15 @@ Date rightNow = new Date();
 
 图 4.3：创建一个新对象
 
-对象和对象变量之间存在重要的区别。例如，语句
+对象和对象变量之间存在重要的区别。例如，语句：
 
-```
+```java
 Date startTime; // startTime 没有引用任何内容
 ```
 
-定义了一个对象变量 `startTime`，它可以引用 `Date` 类型的对象。重要的是，要意识到变量 `startTime` 并不是一个对象，事实上，它甚至还没有引用任何对象。此时，你不能在该变量上使用任何 `Date` 方法。该语句
+定义了一个对象变量 `startTime`，它可以引用 `Date` 类型的对象。重要的是，要意识到变量 `startTime` 并不是一个对象，事实上，它甚至还没有引用任何对象。此时，你不能在该变量上使用任何 `Date` 方法。该语句：
 
-```
+```java
 s = startTime.toString(); // 尚未
 ```
 
@@ -4370,13 +4311,13 @@ s = startTime.toString(); // 尚未
 
 你必须首先初始化 `startTime` 变量。你有两个选择。当然，你可以初始化该变量，使其引用一个新构造的对象：
 
-```
+```java
 startTime = new Date();
 ```
 
 或者，你可以让变量引用一个已的对象：
 
-```
+```java
 startTime = rightNow;
 ```
 
@@ -4384,13 +4325,13 @@ startTime = rightNow;
 
 ![](img/1bda005f6b519fd0924777a921aebffa_303_0.png)
 
-**图 4.4：**引用同一个对象的对象变量
+**图 4.4：** 引用同一个对象的对象变量
 
 重要的是意识到，对象变量实际上并不包含一个对象。它只是引用一个对象。
 
-在 Java 中，任何对象变量的值都是存储在其他地方对象的引用。`new` 运算符的返回值也是一个引用。像这样的语句
+在 Java 中，任何对象变量的值都是存储在其他地方对象的引用。`new` 运算符的返回值也是一个引用。像这样的语句：
 
-```
+```java
 Date startTime = new Date();
 ```
 
@@ -4398,7 +4339,7 @@ Date startTime = new Date();
 
 你可以显式地将对象变量设置为 `null`，表示它当前没有引用任何对象。
 
-```
+```java
 startTime = null;
 ...
 if (startTime != null)
@@ -4407,21 +4348,21 @@ if (startTime != null)
 
 我将在[第 4.3.6 节]详细讨论 `null`。
 
-> **C++ 注意：** 有人错误地认为 Java 对象变量的行为像 C++ 引用。但在 C++ 中没有空引用，且引用不能赋值。你应该将 Java 对象变量类比为 C++ 中的对象指针。例如，
+> **C++ 注意：** 有人错误地认为 Java 对象变量的行为像 C++ 引用。但在 C++ 中没有空引用，且引用不能赋值。你应该将 Java 对象变量类比为 C++ 中的对象指针。例如：
 
-```
+```java
 Date rightNow; // Java
 ```
 
-实际上等同于
+实际上等同于：
 
-```
+```cpp
 Date* rightNow; // C++
 ```
 
 一旦你建立了这种关联，一切就顺理成章了。当然，在通过调用 `new` 进行初始化之前，`Date*` 指针是没有初始化的。C++ 和 Java 的语法几乎相同。
 
-```
+```cpp
 Date* rightNow = new Date(); // C++
 ```
 
@@ -4433,15 +4374,15 @@ Date* rightNow = new Date(); // C++
 
 C++ 通过支持拷贝构造函数和赋值运算符，允许实现自动复制自身的对象。例如，链表的副本是一个具有相同内容的新链表，但具有独立的链接。这使得设计具有相同拷贝行为的类成为可能。
 
-## 4.2.2 Java 库中的 LocalDate 类
+## 4.2.2 Java 库中的 `LocalDate` 类
 
 在前面的示例中，我们使用了标准库中的 `Date` 类。`Date` 类实例代表一个时间点。虽然你不需要知道，但 `Date` 类是标准库的一部分。
 
 库设计者决定将记录时间与为时间点命名的关注点分开。因此，Java 标准库包含两个独立的类：`Date` 类代表时间点，而 `LocalDate` 类以熟悉的日历表示表示日期。将时间测量与日历分离是良好的对象设计。通常，使用不同的类来表示不同的概念是一个好主意。
 
-你不需要构造函数来构造 `LocalDate` 的对象。相反，请使用静态工厂方法为你调用构造函数。表达式
+你不需要构造函数来构造 `LocalDate` 的对象。相反，请使用静态工厂方法为你调用构造函数。表达式：
 
-```
+```java
 LocalDate.now()
 ```
 
@@ -4449,27 +4390,27 @@ LocalDate.now()
 
 你可以通过提供年、月、日来构造特定日期的对象：
 
-```
+```java
 LocalDate.of(1999, 12, 31)
 ```
 
 当然，你通常希望将构造的对象存储在对象变量中：
 
-```
+```java
 LocalDate newYearsEve = LocalDate.of(1999, 12, 31)
 ```
 
 一旦有了 `LocalDate` 对象，你可以通过 `getYear`、`getMonthValue` 和 `getDayOfMonth` 方法获取年、月、日：
 
-```
+
+
+```java
 int year = newYearsEve.getYear(); // 1999
 int month = newYearsEve.getMonthValue(); // 12
 int day = newYearsEve.getDayOfMonth(); // 31
 ```
 
-这看起来似乎没有意义，因为它们与你刚刚构造对象时使用的值完全相同。但有时，你有一个计算出的日期，然后你会想要
-
-调用这些方法以获取更多相关信息。例如，`plusDays` 方法会产生一个新的 `LocalDate`，该日期距离你应用的对象指定的天数：
+这看起来似乎没有意义，因为它们与你刚刚构造对象时使用的值完全相同。但有时，你有一个计算出的日期，然后你会想要调用这些方法以获取更多相关信息。例如，`plusDays` 方法会产生一个新的 `LocalDate`，该日期距离你应用的对象指定的天数：
 
 ```java
 LocalDate aThousandDaysLater = newYearsEve.plusDays(1000);
@@ -4484,7 +4425,7 @@ int day = aThousandDaysLater.getDayOfMonth(); // 26
 
 在库设计者意识到提供独立的类来处理日历更具意义之前，这些方法已经是 `Date` 类的一部分了。当 Java 1.1 引入早期的日历类集时，`Date` 方法被标记为过弃。你仍然可以在程序中使用它们，但如果你这样做，将会收到难看的编译器警告。避免使用过弃方法是一个好主意，因为它们可能会在库的未来版本中被移除。
 
-**提示：** JDK  `jdepscan` 工具用于检查代码是否使用了 Java API 的过弃特性。请参 https://docs.oracle.com/en/java/javase/21/docs/specs/man/jdepscan.html 获取说明。
+**提示：** JDK `jdepscan` 工具用于检查代码是否使用了 Java API 的过弃特性。请参 https://docs.oracle.com/en/java/javase/21/docs/specs/man/jdepscan.html 获取说明。
 
 ## 4.2.3. 变器方法与访问器方法
 
@@ -4529,7 +4470,7 @@ int day = someDay.get(Calendar.DAY_OF_MONTH); // 26
 | 23 | 24 | 25 | 26* | 27 | 28 | 29 |
 | 30 | | | | | | |
 
-当天用星号 (*) 标记。如你所示，程序需要知道如何计算月份的长度和给定日期星期几。
+当天用星号（`*`）标记。如你所示，程序需要知道如何计算月份的长度和给定日期星期几。
 
 让我们过程序的关键步骤。首先，我们构造一个用当前日期初始的对象。
 
@@ -4552,14 +4493,15 @@ DayOfWeek weekday = date.getDayOfWeek();
 int value = weekday.getValue(); // 1 代表周一
 ```
 
+- `DayOfWeek getDayWeek()`
 
+  获取此日期的星期，返回 `DayOfWeek` 类的实例。在 `DayOfWeek` 实例上调用 `getValue` 可以获取 1（周一）到 7（周日）之间的星期。
 
+- `LocalDate plusDays(int n)`
 
-- DayOfWeek getDayWeek()
-获取此日期的星期，返回 `DayOfWeek` 类的实例。在 `DayOfWeek` 实例上调用 `getValue` 可以获取 1（周一）到 7（周日）之间的星期。
-- LocalDate plusDays(int n)
-- LocalDate minusDays(int n)
-返回此日期之后或之前的 n 天日期。
+- `LocalDate minusDays(int n)`
+
+  返回此日期之后或之前的 `n` 天日期。
 
 ## 4.3. 定义自己的类
 
@@ -4655,7 +4597,7 @@ java EmployeeTest
 
 字节码解释器开始运行 `EmployeeTest` 类中 `main` 方法里的代码。这段代码反过来构建了三个新的 `Employee` 对象并向你展示它们的状态。
 
-# 列表 4.2 EmployeeTest/EmployeeTest.java
+## 列表 4.2 EmployeeTest/EmployeeTest.java
 
 ```java
 import java.time.*;
@@ -4779,26 +4721,25 @@ public Employee(String n, double s, int year, int month, int day)
 
 如所见，构造函数的名称与类名相同。当你构建 `Employee` 类对象时，该构造函数就会运行——为实例字段赋予你想要的初始状态。
 
-
-
-
 例如，当你使用如下代码创建 `Employee` 类的实例时：
 
-```
+```java
 new Employee("James Bond", 100000, 1950, 1, 1)
 ```
 
 你按照以下方式设置了实例字段：
 
-```
+
+
+```java
 name = "James Bond";
 salary = 100000;
 hireDay = LocalDate.of(1950, 1, 1); // 1月1日，
 ```
 
-构造函数与其他方法之间存在重要的区别。构造函数只能配合 `new` 运算符结合使用调用。你不能将构造函数应用于现有对象来重置实例字段。例如：
+构造函数与其他方法之间存在重要的区别。构造函数只能配合`new`运算符结合使用调用。你不能将构造函数应用于现有对象来重置实例字段。例如：
 
-```
+```java
 james.Employee("James Bond", 250000, 1950, 1, 1)
 ```
 
@@ -4810,76 +4751,76 @@ james.Employee("James Bond", 250000, 1950, 1, 1)
 - 一个类可以有多个构造函数。
 - 构造函数可以有零、一个或多个参数。
 - 构造函数没有返回值。
-- 构造函数总是通过 `new` 运算符调用。
+- 构造函数总是通过`new`运算符调用。
 
-> **C++ 注意：** 构造函数在 Java 中的工作方式与 C++ 相同。但请记住，所有的 Java 对象都是在堆上构建的，且构造函数必须与 `new` 结合。C++ 程序员忘记使用 `new` 运算符是一个常见错误：
+> **C++ 注意：** 构造函数在 Java 中的工作方式与 C++ 相同。但请记住，所有的 Java 对象都是在堆上构建的，且构造函数必须与`new`结合。C++ 程序员忘记使用`new`运算符是一个常见错误：
 
-```
+```cpp
 Employee number007("James Bond", 100000, 1
 ```
 
 这在 C++ 中可以运行，但在 Java 中不可行。
 
-**注意：** 注意不要引入与实例字段同名的局部变量。例如，下面的构造函数将不会设置 `name` 或 `salary` 实例字段：
+**注意：** 注意不要引入与实例字段同名的局部变量。例如，下面的构造函数将不会设置`name`或`salary`实例字段：
 
-```
+```java
 public Employee(String n, double s, . . .) {
     String name = n; // 错误
-double salary = s; // 错误
-.. 
+    double salary = s; // 错误
+    ..
 }
 ```
 
-构造函数声明了局部变量 `name` 和 `salary`。这些变量只在构造函数内部可见。它们会遮蔽（shadow）同名的实例字段。某些程序员在打字比思考得快时会不小心写出这种代码，因为他们的手指习惯了添加数据类型。这是一种难以追踪的糟糕错误。你必须在所有方法中都要小心，不要使用与实例字段同名的变量名。
+构造函数声明了局部变量`name`和`salary`。这些变量只在构造函数内部可见。它们会遮蔽（shadow）同名的实例字段。某些程序员在打字比思考得快时会不小心写出这种代码，因为他们的手指习惯了添加数据类型。这是一种难以追踪的糟糕错误。你必须在所有方法中都要小心，不要使用与实例字段同名的变量名。
 
-## 4.3.5 使用 var 声明局部变量
+## 4.3.5. 使用`var`声明局部变量
 
-你可以使用 `var` 关键字声明局部变量，而不是指定它们的类型，只要它们的类型可以从初始值推断出来。例如，与其声明
+你可以使用`var`关键字声明局部变量，而不是指定它们的类型，只要它们的类型可以从初始值推断出来。例如，与其声明：
 
-```
+```java
 Employee harry = new Employee("Harry Hacker", 500
 ```
 
 你只需要写：
 
-```
+```java
 var harry = new Employee("Harry Hacker", 50000, 
 ```
 
-这种方式很好，因为它避免了类型名 `Employee` 的重复。
+这种方式很好，因为它避免了类型名`Employee`的重复。
 
-从现在起，在不需要了解 Java API 就能一眼从右侧表达式看出类型的情况下，我将使用 `var` 写法。但我不会在 `int`、`long` 或 `double` 等数值类型上使用 `var`，这样你就不需要关注 `0`、`0L` 和 `0.0` 之间的区别。一旦你更熟悉 Java API，你可能想要更频繁地使用 `var` 关键字。
+从现在起，在不需要了解 Java API 就能一眼从右侧表达式看出类型的情况下，我将使用`var`写法。但我不会在`int`、`long`或`double`等数值类型上使用`var`，这样你就不需要关注`0`、`0L`和`0.0`之间的区别。一旦你更熟悉 Java API，你可能想要更频繁地使用`var`关键字。
 
-注意，`var` 关键字只能用于方法内部的局部变量。你必须始终声明参数和字段的类型。
+注意，`var`关键字只能用于方法内部的局部变量。你必须始终声明参数和字段的类型。
 
-> 注意：许多程序员在认为变量类型显而易见或明显无趣时，会非常随意使用 `var` 关键字。良好的指南见 https://openjdk.org/projects/amber/guides/lvti-style-guide。
+> 注意：许多程序员在认为变量类型显而易见或明显无趣时，会非常随意使用`var`关键字。良好的指南见 <https://openjdk.org/projects/amber/guides/lvti-style-guide>。
 
-### 4.3.6 处理 null 引用
+### 4.3.6. 处理`null`引用
 
-在第 4.2.1 节中，你看到对象变量持有对象的引用，或者使用特殊值 `null` 来表示对象的缺失。
+在第 4.2.1 节中，你看到对象变量持有对象的引用，或者使用特殊值`null`来表示对象的缺失。
 
-这听起来是处理特殊情况（如未知名称或入职日期）的一种方便机制。但你必须非常小心 `null` 值。
+这听起来是处理特殊情况（如未知名称或入职日期）的一种方便机制。但你必须非常小心`null`值。
 
-如果你对 `null` 值应用方法，就会发生 `NullPointerException`（空指针异常）。
+如果你对`null`值应用方法，就会发生`NullPointerException`（空指针异常）。
 
-```
+```java
 LocalDate rightNow = null;
 String s = rightNow.toString(); // NullPointerException
 ```
 
 这是一个严重的错误，类似于“索引越界”异常。如果你的程序没有“捕捉”异常，它就会终止。通常，程序不会捕获这类异常，而是依靠程序员从根本上避免它们。
 
-> 提示：当你的程序因 `NullPointerException` 终止时，堆栈跟踪会显示问题发生在代码的哪一行。从 Java 14 开始，错误信息包含了带有 `null` 值的变量或方法名。例如，在如下调用中
+> 提示：当你的程序因`NullPointerException`终止时，堆栈跟踪会显示问题发生在代码的哪一行。从 Java 14 开始，错误信息包含了带有`null`值的变量或方法名。例如，在如下调用中：
 
-```
+```java
 String s = e.getHireDay().toString();
 ```
 
-错误信息会告诉你是 `e` 为 `null` 还是 `getHireDay()` 返回了 `null`。
+错误信息会告诉你是`e`为`null`还是`getHireDay()`返回了`null`。
 
-定义类时，明确哪些字段可以为 `null` 是好习惯。在我们的示例中，我们不希望 `name` 或 `hireDay` 字段为 `null`。（我们不需要担心 `salary` 字段。它是基本类型，永远不会为 `null`。）
+定义类时，明确哪些字段可以为`null`是好习惯。在我们的示例中，我们不希望`name`或`hireDay`字段为`null`。（我们不需要担心`salary`字段。它是基本类型，永远不会为`null`。）
 
-`hireDay` 字段保证非空。有两种解决方案。“宽容”的方法是将 `null` 转换为：
+`hireDay`字段保证非空。有两种解决方案。“宽容”的方法是将`null`转换为：
 
 ```java
 if (n == null) {
@@ -4887,7 +4828,7 @@ if (n == null) {
 }
 ```
 
-“严厉”的方法是拒绝 `null`：
+“严厉”的方法是拒绝`null`：
 
 ```java
 Objects.requireNonNull(n, "name cannot be null");
@@ -4895,32 +4836,32 @@ Objects.requireNonNull(n, "name cannot be null");
 
 > 注意：每当参数是一个对象引用时，问问自己是否真的想要建模可能存在或不存在的值。如果不是，则采用抛出异常的“严厉”方法。
 
-### 4.3.7 隐式和显式参数
+### 4.3.7. 隐式和显式参数
 
-方法对对象进行操作并访问其实例字段。例如，如下方法
+方法对对象进行操作并访问其实例字段。例如，如下方法：
 
-```
+```java
 public void raiseSalary(double byPercent) {
     double raise = salary * byPercent / 100;
     salary += raise;
 }
 ```
 
-在调用该方法的对象上为 `salary` 字段设置了一个新值。考虑如下调用
+在调用该方法的对象上为`salary`字段设置了一个新值。考虑如下调用：
 
-```
+```java
 number007.raiseSalary(5);
 ```
 
-效果是使 `number007.salary` 的值增加了 5%。具体来说，该调用执行了以下指令：（为了简洁已省略）
+效果是使`number007.salary`的值增加了 5%。具体来说，该调用执行了以下指令：（为了简洁已省略）
 
-调用 `raiseSalary` 方法时传入了两个参数。第一个参数称为**隐式参数**（implicit argument），是方法名之前的 `Employee` 类型对象。第二个参数（方法名后括号内的数字）是**显式参数**（explicit argument）（有些人人将隐式参数称为方法调用的目标或接收者）。
+调用`raiseSalary`方法时传入了两个参数。第一个参数称为**隐式参数**（implicit argument），是方法名之前的`Employee`类型对象。第二个参数（方法名后括号内的数字）是**显式参数**（explicit argument）（有些人人将隐式参数称为方法调用的目标或接收者）。
 
-方法声明为显式参数定义了一个参数变量，即 `double byPercent`。然而，没有为隐式参数声明参数变量。
+方法声明为显式参数定义了一个参数变量，即`double byPercent`。然而，没有为隐式参数声明参数变量。
 
-每个方法都有一个隐式参数，其名称为关键字 `this`，它用隐式参数初始化。如果你喜欢，可以这样写 `raiseSalary` 方法：
+每个方法都有一个隐式参数，其名称为关键字`this`，它用隐式参数初始化。如果你喜欢，可以这样写`raiseSalary`方法：
 
-```
+```java
 public void raiseSalary(double byPercent) {
     double raise = this.salary * byPercent / 100;
     this.salary += raise;
@@ -4952,7 +4893,7 @@ class Employee {
 
 ## 4.3.8. 封装的好处
 
-最后，让我们更仔细地观察 `getName`、`getSalary` 和 `getHireDay` 这些方法。
+最后，让我们更仔细地观察`getName`、`getSalary`和`getHireDay`这些方法。
 
 ```java
 public String getName()
@@ -4971,26 +4912,26 @@ public LocalDate getHireDay()
 
 这些是访问器方法（accessor methods）的例子。由于它们简单地返回实例字段的值，有时被称为字段访问器。
 
-将 name、salary 和 hireDay 字段设为 public（公共）而不是拥有独立的访问器方法不是简单吗？
+将`name`、`salary`和`hireDay`字段设为 public（公共）而不是拥有独立的访问器方法不是简单吗？
 
-使用方法可以为你提供更多的控制和安全性。考虑 `salary` 字段，它只通过 `raiseSalary` 方法更改。如果值出现错误，只需要对该方法进行调试。如果 `salary` 字段是公共的，搞乱值的罪祸首可能出现在任何地方。
+使用方法可以为你提供更多的控制和安全性。考虑`salary`字段，它只通过`raiseSalary`方法更改。如果值出现错误，只需要对该方法进行调试。如果`salary`字段是公共的，搞乱值的罪祸首可能出现在任何地方。
 
 有时，你想获取并设置实例字段的值。这时你需要提供三项内容：
 
-- 一个私有的实例字段
-- 一个公共的字段访问器方法；
+- 一个私有的实例字段。
+- 一个公共的字段访问器方法。
 - 一个公共的字段变器方法（mutator method）。
 
 这比提供单个实例字段要复杂得多，但它有显著的好处。
 
-首先，你可以更改内部实现而不影响该类方法之外的任何代码。例如，如果将 name 的存储改为：
+首先，你可以更改内部实现而不影响该类方法之外的任何代码。例如，如果将`name`的存储改为：
 
 ```java
 String firstName;
 String lastName;
 ```
 
-那么 `getName` 方法可以更改为返回：
+那么`getName`方法可以更改为返回：
 
 ```java
 firstName + " " + lastName
@@ -4998,9 +4939,9 @@ firstName + " " + lastName
 
 这一更改对程序的其余部分是完全不可见的。
 
-当然，访问器和变器方法可能需要大量工作来在旧新数据表示之间进行转换。这引出了我们的第二个益处：变器方法可以执行错误检查，而简单赋值给字段的代码可能不会去费这个麻烦。例如，`setSalary` 方法可能会检查工资永远不会小于 0。
+当然，访问器和变器方法可能需要大量工作来在旧新数据表示之间进行转换。这引出了我们的第二个益处：变器方法可以执行错误检查，而简单赋值给字段的代码可能不会去费这个麻烦。例如，`setSalary`方法可能会检查工资永远不会小于 0。
 
-> **注意：** 注意不要编写返回可变对象引用的访问器方法。在本书的上一个版本中，我在 `Employee` 类中违反了这一规则，`getHireDay` 方法返回了一个 `Date` 类的对象：
+> **注意：** 注意不要编写返回可变对象引用的访问器方法。在本书的上一个版本中，我在`Employee`类中违反了这一规则，`getHireDay`方法返回了一个`Date`类的对象：
 
 ![](img/1bda005f6b519fd0924777a921aebffa_342_0.png)
 
@@ -5017,9 +4958,9 @@ class Employee
 }
 ```
 
-与没有变器方法的 `LocalDate` 类不同，`Date` 类有一个变器方法 `setTimeout`，你可以在其中设置毫秒数。
+与没有变器方法的`LocalDate`类不同，`Date`类有一个变器方法`setTimeout`，你可以在其中设置毫秒数。
 
-`Date` 对象是可变的这一事实破坏了封装！考虑以下破坏代码：
+`Date`对象是可变的这一事实破坏了封装！考虑以下破坏代码：
 
 ```java
 Employee harry = . . .;
@@ -5029,7 +4970,7 @@ d.setTime(d.getTime() - (long) tenYearsInMillis);
 // 让 Harry 增加十年的工龄
 ```
 
-原因是微妙的。`d` 和 `harry.hireDay` 都引用同一个对象（参见[图 4.5]）。对 `d` 应用变器方法会自动更改 `Employee` 对象的私有状态！
+原因是微妙的。`d`和`harry.hireDay`都引用同一个对象（参见[图 4.5]）。对`d`应用变器方法会自动更改`Employee`对象的私有状态！
 
 ![](img/1bda005f6b519fd0924777a921aebffa_345_0.png)
 
@@ -5037,11 +4978,11 @@ d.setTime(d.getTime() - (long) tenYearsInMillis);
 
 你将在[第 6 章](#)看到如何在返回之前通过克隆可变对象来解决这个问题。
 
-更好的补救措施是尽可能使用不可变对象，例如用 `LocalDate` 代替旧的 `Date` 类。
+更好的补救措施是尽可能使用不可变对象，例如用`LocalDate`代替旧的`Date`类。
 
 ## 4.3.9. 基于类的访问权限
 
-你知道方法可以访问其调用的对象的私有数据。人们通常感到惊讶的是，一个方法可以访问其类中所有对象的私有数据。例如，考虑一个比较两个员工的 `equals` 方法。
+你知道方法可以访问其调用的对象的私有数据。人们通常感到惊讶的是，一个方法可以访问其类中所有对象的私有数据。例如，考虑一个比较两个员工的`equals`方法。
 
 ```java
 class Employee {
@@ -5059,7 +5000,7 @@ class Employee {
 if (harry.equals(boss)) . . .
 ```
 
-该方法访问了 `harry` 的私有字段，这并不奇怪。它也访问了 `boss` 的私有字段。这是合，因为 `boss` 是 `Employee` 类型的对象，而 `Employee` 类的方法被允许访问任何 `Employee` 类型对象的私有字段。
+该方法访问了`harry`的私有字段，这并不奇怪。它也访问了`boss`的私有字段。这是合，因为`boss`是`Employee`类型的对象，而`Employee`类的方法被允许访问任何`Employee`类型对象的私有字段。
 
 > **C++ 注意：** C++ 遵循相同的规则。方法可以访问其类中任何对象的私有特性，而不只是隐式参数的。
 
@@ -5067,17 +5008,15 @@ if (harry.equals(boss)) . . .
 
 在实现类时，我们将所有实例字段设为私有，因为公共数据是危险的。但方法呢？虽然大多数方法是公共的，但私有方法在某些情况下是有用的。有时，你可能希望将计算代码拆分为独立的辅助方法。通常，这些辅助方法不应该是公共接口的一部分——它们可能与当前实现太接近，或者需要特殊的协议或调用顺序。此类方法最好实现为私有。
 
-（注：此处原文存在大量重复的段落，根据指令已仅翻译核心内容并去除了冗余重复部分）
-
 实现私有方法，我们将所有实例字段设为私有，因为公共数据是危险的。但方法呢？虽然大多数方法是公共的，但私有方法在某些情况下是有用的。有时，你可能希望将计算代码拆分为独立的辅助方法。通常，这些辅助方法不应该是公共接口的一部分——它们可能与当前实现太接近，或者需要特殊的协议或调用顺序。此类方法最好实现为私有。
 
 ## 4.4. 静态字段和方法
 
-在你看到的所有示例中，主方法都标记了 `static`。我们现在准备讨论这个修饰符的含义。
+在你看到的所有示例中，主方法都标记了`static`。我们现在准备讨论这个修饰符的含义。
 
-## 4.3.1. 静态字段
+### 4.4.1. 静态字段
 
-如果你将字段定义为 `static`，那么该字段就不存在于对象中。每个静态字段只有一个副本。你可以认为静态字段属于类，而不是属于各个对象。例如，假设我们想为每个员工分配一个唯一的标识符。我们在 `Employee` 类中添加一个实例字段 `id` 和一个静态字段 `nextId`：
+如果你将字段定义为`static`，那么该字段就不存在于对象中。每个静态字段只有一个副本。你可以认为静态字段属于类，而不是属于各个对象。例如，假设我们想为每个员工分配一个唯一的标识符。我们在`Employee`类中添加一个实例字段`id`和一个静态字段`nextId`：
 
 ```java
 class Employee {
@@ -5091,33 +5030,31 @@ class Employee {
 }
 ```
 
-每个 `Employee` 对象现在都有自己的 `id` 字段，但只有一个 `nextId` 字段被所有实例共享。即使没有 `Employee` 对象，静态字段 `nextId` 也是存在的。它属于类。
+每个`Employee`对象现在都有自己的`id`字段，但只有一个`nextId`字段被所有实例共享。即使没有`Employee`对象，静态字段`nextId`也是存在的。它属于类。
 
-在构造函数中，我们将下一个可用 ID 分配给新的 `Employee` 对象，然后将其递增：
+在构造函数中，我们将下一个可用 ID 分配给新的`Employee`对象，然后将其递增：
 
 ```java
 id = nextID;
 nextID++;
 ```
 
+假设我们构建了对象`harry`。那么`harry`的`id`字段被设置为静态字段`nextId`的当前值，并且该静态字段的值加 1：
 
-
-假设我们构建了对象 `harry`。那么 `harry` 的 `id` 字段被设置为静态字段 `nextId` 的当前值，并且该静态字段的值加 1：
-
-```
+```java
 harry.id = Employee.nextId;
 Employee.nextId++;
 ```
 
-> **注意：** 如果你不小心将本该想作为实例字段的内容声明为 `static`，编译器不会帮助你发现错误。
+> **注意：** 如果你不小心将本该想作为实例字段的内容声明为`static`，编译器不会帮助你发现错误。
 
-从概念上讲，静态字段（如上例中的 `nextId`）属于类，而不属于任何对象。尽管如此，在 Java 中，你可以通过 `Employee.nextId` 或 `e.nextId` 该字段（其中 `e` 是任何 `Employee` 对象）。在 `Employee` 类的方法内部，你可以使用 `nextId`、`this.nextId` 或 `Employee.nextId`。
+从概念上讲，静态字段（如上例中的`nextId`）属于类，而不属于任何对象。尽管如此，在 Java 中，你可以通过`Employee.nextId`或`e.nextId`访问该字段（其中`e`是任何`Employee`对象）。在`Employee`类的方法内部，你可以使用`nextId`、`this.nextId`或`Employee.nextId`。
 
 因此，关注类中的任何静态声明是一个好主意。静态变量并不常见，值得仔细审查。下一节将讨论的静态常量非常突出，因为它们的名称通常全全大写。
 
-## 4.4.2. 静态常量
+### 4.4.2. 静态常量
 
-静态变量非常罕见。然而，静态常量更为常见。例如，`Math` 类定义了一个静态常量：
+静态变量非常罕见。然而，静态常量更为常见。例如，`Math`类定义了一个静态常量：
 
 ```java
 public class Math {
@@ -5127,11 +5064,11 @@ public class Math {
 }
 ```
 
-你可以在程序中使用 `Math.PI` 访问此常量。
+你可以在程序中使用`Math.PI`访问此常量。
 
-如果省略了 `static` 关键字，那么 `PI` 将是 `Math` 类的实例字段。这意味着，你需要该类的对象才能访问 `PI`，并且每个 `Math` 对象都会有自己的 `PI` 副本。
+如果省略了`static`关键字，那么`PI`将是`Math`类的实例字段。这意味着，你需要该类的对象才能访问`PI`，并且每个`Math`对象都会有自己的`PI`副本。
 
-另一个你使用过很多静态常量是 `System.out`。它在 `System` 类中的声明如下：
+另一个你使用过很多静态常量是`System.out`。它在`System`类中的声明如下：
 
 ```java
 public class System {
@@ -5141,23 +5078,25 @@ public class System {
 }
 ```
 
-正如多次提到的，拥有公共字段永远不是一个好主意，因为每个人都可以修改它们。但是，公共常量（即 `final` 字段）是可以的。由于 `out` 已被声明为 `final`，你不能将另一个打印流赋值给它：
+正如多次提到的，拥有公共字段永远不是一个好主意，因为每个人都可以修改它们。但是，公共常量（即`final`字段）是可以的。由于`out`已被声明为`final`，你不能将另一个打印流赋值给它：
 
 ```java
 System.out = new PrintStream(. . .); // 错误--out
 ```
 
-**注意：** 如果你查看 `System` 类，你会注意到一个 `setOut` 方法，它可以将 `System.out` 设置为不同的流。你可能会奇怪该方法如何改变 `final` 变量的值。然而，`setOut` 方法是一个原生方法（native method），不是用 Java 语言实现的。原生方法可以绕过 Java 语言的访问控制机制。这是一个非常特殊的变通方法，你不应该在程序中模拟它。
+**注意：** 如果你查看`System`类，你会注意到一个`setOut`方法，它可以将`System.out`设置为不同的流。你可能会奇怪该方法如何改变`final`变量的值。然而，`setOut`方法是一个原生方法（native method），不是用 Java 语言实现的。原生方法可以绕过 Java 语言的访问控制机制。这是一个非常特殊的变通方法，你不应该在程序中模拟它。
 
-## 4.4.3. 静态方法
+### 4.4.3. 静态方法
 
-静态方法是不操作对象的方法。例如，`Math` 类的 `pow` 方法就是一个静态方法。表达式
+静态方法是不操作对象的方法。例如，`Math`类的`pow`方法就是一个静态方法。表达式：
 
-```
+```java
 Math.pow(x, a)
 ```
 
-计算 $x^a$ 的幂。它没有使用任何 `Math` 对象来执行任务。换句话说，它没有隐式参数。
+计算 $x^a$ 的幂。它没有使用任何`Math`对象来执行任务。换句话说，它没有隐式参数。
+
+
 
 你可以将静态方法视为没有 `this` 参数的方法。（在非静态方法中，`this` 参数引用方法的隐式参数——参见第 4.3.7 节。）
 
@@ -5183,8 +5122,8 @@ int n = Employee.advanceId();
 
 在两种情况下使用静态方法：
 
-- 当方法不需要访问对象状态时，因为所有需要的参数都是作为显式参数提供的（例如：`Math.pow`）
-- 当方法只需要访问类的静态字段时（例如：`Employee.advanceId`）
+- 当方法不需要访问对象状态时，因为所有需要的参数都是作为显式参数提供的（例如：`Math.pow`）。
+- 当方法只需要访问类的静态字段时（例如：`Employee.advanceId`）。
 
 > **C++ 注意**：静态字段和方法在 Java 和 C++ 中具有相同的功能。然而语法略有不同。在 C++ 中，你使用 `::` 运算符在作用范围之外访问静态字段或方法，例如 `Math::PI`。
 
@@ -5205,7 +5144,7 @@ NumberFormat percentFormatter = NumberFormat.getPercent();
 - 当你使用构造函数时，你无法改变构建对象的类型。例如，`DecimalFormat` 继承自 `NumberFormat`。
 - 构造函数总是构建一个新对象。你可能想要共享实例。
 
-## 4.4.5. main 方法
+## 4.4.5. `main` 方法
 
 请注意，你可以在没有任何对象的情况下调用静态方法。事实上，当程序启动时，还没有任何对象。静态方法执行，并构建程序所需的对象。
 
@@ -5228,15 +5167,15 @@ class Employee {
 }
 ```
 
-要查看 `Employee` 类的演示，只需执行
+要查看 `Employee` 类的演示，只需执行：
 
-```
+```bash
 java Employee
 ```
 
-如果 `Employee` 类是大型应用程序的一部分，你通过以下命令启动应用程序
+如果 `Employee` 类是大型应用程序的一部分，你通过以下命令启动应用程序：
 
-```
+```bash
 java Application
 ```
 
@@ -5252,12 +5191,9 @@ public class Application {
 }
 ```
 
-
-
-
 带有 `String[]` 参数的方法优于无参数的方法。
 
-+   * 如果 `main` 不是静态的，则该类必须有一个无参的构造函数。此时，启动器会构造该类的实例并调用 `main` 方法。
+- 如果 `main` 不是静态的，则该类必须有一个无参的构造函数。此时，启动器会构造该类的实例并调用 `main` 方法。
 
 如果你想尝试此预览功能，请记住使用 `--enable-preview` 标志进行编译和运行。
 
@@ -5265,12 +5201,12 @@ public class Application {
 
 注意，`Employee` 类还有一个运行简单演示的静态方法。尝试执行以下两个命令：
 
-```
+```bash
 java Employee
 java StaticTest
 ```
 
-# 列表 4.3 StaticTest/StaticTest.java
+## 列表 4.3 StaticTest/StaticTest.java
 
 ```java
 /**
@@ -5344,16 +5280,16 @@ public class StaticTest {
   }
 ```
 
-java.util.Objects 7
+## `java.util.Objects` 7
 
-+   * static <T> void requireNull(T obj)
-* static <T> void requireNull(T obj, String message)
-* static <T> void requireNull(T obj, Supplier<String> messageSupplier)
+- `static <T> void requireNull(T obj)`
+- `static <T> void requireNull(T obj, String message)`
+- `static <T> void requireNull(T obj, Supplier<String> messageSupplier)`
 
 如果 `obj` 为 `null`，这些方法将抛出一个不带消息或带有给定消息的 `NullPointerException`。（第 6 章解释了如何使用 `supplier` 延迟地获取值。第 8 章解释了 `<T>` 语法。）
 
-+   * static <T> T requireNonNullElse(T obj, T defaultObj)
-* static <T> T requireNonNullGet(T obj, Supplier<T> defaultSupplier)
+- `static <T> T requireNonNullElse(T obj, T defaultObj)`
+- `static <T> T requireNonNullGet(T obj, Supplier<T> defaultSupplier)`
 
 如果 `obj` 不为 `null` 则返回 `obj`，如果 `obj` 为 `null` 则返回默认对象。
 
@@ -5394,7 +5330,7 @@ tripleValue(percent);
 2. `x` 乘以 3。
 3. 方法结束，变量 `x` 被丢弃。
 
-**图 4.6:** 修改参数没有影响。
+**图 4.6：** 修改参数没有影响。
 
 参数有两种类型：
 
@@ -5422,15 +5358,11 @@ raiseSalary(harry);
 2. `x` 所引的对象被三倍。
 3. 方法结束，`harry` 保持不变。
 
-**图 4.7:** 修改对象参数具有持久影响。
-
-
-
-
+**图 4.7：** 修改对象参数具有持久影响。
 
 列表 4.4 中的程序演示了这些事实。程序首先尝试将一个数值参数的值增加倍，但没有成功：
 
-```
+```text
 Testing tripleValue:
 Before: percent=10.0
 End of method: x=30.0
@@ -5439,18 +5371,18 @@ After: percent=10.0
 
 随后它成功地将员工的薪水增加倍：
 
-```
+```text
 Testing tripleSalary:
 Before: salary=50000.0
 End of method: salary=150000.0
 After: salary=150000.0
 ```
 
-方法执行后，harry 所修改的对象的状态发生了变化。这是因为该方法通过对象引用的副本修改了状态。
+方法执行后，`harry` 所修改的对象的状态发生了变化。这是因为该方法通过对象引用的副本修改了状态。
 
 最后，程序演示了 `swap` 方法的失败：
 
-```
+```text
 Testing swap:
 Before: a=Alice
 Before: b=Bob
@@ -5462,9 +5394,11 @@ After: b=Bob
 
 如你所示，参数变量 `x` 和 `y` 被交换了，但变量 `a` 和 `b` 没有受到影响。
 
-> C++ 事项：C++ 既有值传递也有引用传递。你用 `&` 符号标记引用参数。例如，你可以轻松地实现 `void tripleValue(double& x)` 或 `void swap(Employee& x, Employee& y)` 等方法，它们可以修改对应的引用参数。
+> **C++ 事项：** C++ 既有值传递也有引用传递。你用 `&` 符号标记引用参数。例如，你可以轻松地实现 `void tripleValue(double& x)` 或 `void swap(Employee& x, Employee& y)` 等方法，它们可以修改对应的引用参数。
 
 ## 列表 4.4 ParamTest/ParamTest.java
+
+
 
 ```java
 /**
@@ -5556,7 +5490,7 @@ class Employee // 简化的 Employee 类
 
 ### 4.6.1. 重载
 
-某些类拥有多个一个构造函数。例如，你可以通过以下方式构造一个空的 `StringBuilder` 对象：
+某些类拥有多个一个构造函数。例如，你可以通过以下方式构造一个空的`StringBuilder`对象：
 
 ```java
 var messages = new StringBuilder();
@@ -5568,7 +5502,7 @@ var messages = new StringBuilder();
 var todoList = new StringBuilder("To do:\n");
 ```
 
-这种能力被称为*重载*。当多个方法具有相同名称（在本例中为 `StringBuilder` 构造方法）但参数不同时，就会发生重载。编译器必须确定调用哪个方法。它通过匹配不同方法声明中的参数类型与在特定方法调用中所使用的参数类型来选择正确的方法。如果编译器无法找到匹配项，则会发生编译错误。
+这种能力被称为*重载*。当多个方法具有相同名称（在本例中为`StringBuilder`构造方法）但参数不同时，就会发生重载。编译器必须确定调用哪个方法。它通过匹配不同方法声明中的参数类型与在特定方法调用中所使用的参数类型来选择正确的方法。如果编译器无法找到匹配项，则会发生编译错误。
 
 > **注意：** Java 允许你重载任何方法——而不是构造函数。这是该语言的一个强大特性，因为它允许你通过不同的输入提供多种方式来执行相同的操作。
 
@@ -5580,7 +5514,7 @@ var todoList = new StringBuilder("To do:\n");
 
 ### 4.6.3. 无参数构造函数
 
-许多类包含一个无参数的构造函数，该构造函数用于创建一个状态被设置为适当默认值的对象。例如，这里是 Employee 类的无参数构造函数：
+许多类包含一个无参数的构造函数，该构造函数用于创建一个状态被设置为适当默认值的对象。例如，这里是`Employee`类的无参数构造函数：
 
 ```java
 public Employee() {
@@ -5589,7 +5523,6 @@ public Employee() {
     hireDay = LocalDate.now();
 }
 ```
-
 
 ```cpp
 Employee::Employee(String n, double s, int
@@ -5602,7 +5535,7 @@ Employee::Employee(String n, double s, int
 
 C++ 使用这种特殊的语法来避免不必要的调用无参数构造函数。在 Java 中，没有必要这样做，因为对象没有子对象，只有对其他对象的引用。
 
-## 4.6.4. 显式字段初始化
+### 4.6.4. 显式字段初始化
 
 通过重载类中的构造器方法，你可以构建许多方式来设置类实例字段的初始状态。无论调用哪个构造器，确保每个实例字段都被设置为一个有意义的值始终是一个好主意。
 
@@ -5618,7 +5551,7 @@ class Employee
 
 这种赋值是在构造器执行之前完成的。如果类的的所有构造器都需要为某个特定的实例字段设置值，那么这种语法就特别有用。
 
-初始化值不一定是一个常量。这里有一个使用方法调用来初始化字段的示例。考虑 `Employee` 类，每个员工都有一个 `id` 字段。你可以这样初始化它：
+初始化值不一定是一个常量。这里有一个使用方法调用来初始化字段的示例。考虑`Employee`类，每个员工都有一个`id`字段。你可以这样初始化它：
 
 ```java
 class Employee
@@ -5637,7 +5570,7 @@ class Employee
 }
 ```
 
-## 4.6.5. 参数命名
+### 4.6.5. 参数命名
 
 当你编写非常平凡的构造器时（而且你会写很多这样的构造器），为它们想出参数名称可能会感到有些沮丧。
 
@@ -5651,7 +5584,7 @@ public Employee(String n, double s)
 }
 ```
 
-然而，缺点是，你需要阅读代码才能知道 `n` 和 `s` 参数的含义。
+然而，缺点是，你需要阅读代码才能知道`n`和`s`参数的含义。
 
 有些程序员会在每个参数前加上 "a" 作为前缀：
 
@@ -5665,7 +5598,7 @@ public Employee(String aName, double aSalary)
 
 这样更好。任何读者都能立即理解参数的含义。
 
-另一个常用的技巧依赖于这样一个事实：参数变量会遮蔽（shadow）具有同名的实例字段。例如，如果你调用一个参数 `salary`，那么 `salary` 指的是参数，而不是实例字段。但你仍然可以通过 `this.salary` 访问实例字段。记住，这表示隐式参数——即正在被构造的对象。这里有一个示例：
+另一个常用的技巧依赖于这样一个事实：参数变量会遮蔽（shadow）具有同名的实例字段。例如，如果你调用一个参数`salary`，那么`salary`指的是参数，而不是实例字段。但你仍然可以通过`this.salary`访问实例字段。记住，这表示隐式参数——即正在被构造的对象。这里有一个示例：
 
 ```java
 public Employee(String name, double salary)
@@ -5675,13 +5608,13 @@ public Employee(String name, double salary)
 }
 ```
 
-> **C++ 笔记：** 在 C++ 中，通常会在实例字段前加上下划线或固定字母的前缀（字母 `m` 和 `x` 是常见的选择）。例如，`salary` 字段可能被称为 `_salary`、`mSalary` 或 `xSalary`。Java 程序员通常不这样做。
+> **C++ 笔记：** 在 C++ 中，通常会在实例字段前加上下划线或固定字母的前缀（字母`m`和`x`是常见的选择）。例如，`salary`字段可能被称为`_salary`、`mSalary`或`xSalary`。Java 程序员通常不这样做。
 
-## 4.6.6. 调用另一个构造器
+### 4.6.6. 调用另一个构造器
 
-关键字 `this` 指方法的隐式参数。然而，这个关键字有第二个含义。
+关键字`this`指方法的隐式参数。然而，这个关键字有第二个含义。
 
-如果构造器的第一语句的形式为 `this(...)`，那么该构造器会调用同类中的另一个构造器。这是一个典型的示例：
+如果构造器的第一语句的形式为`this(...)`，那么该构造器会调用同类中的另一个构造器。这是一个典型的示例：
 
 ```java
 public Employee(double s)
@@ -5692,9 +5625,9 @@ public Employee(double s)
 }
 ```
 
-当你调用 `new Employee(60000)` 时，`Employee(double)` 构造器会调用 `Employee(String, double)` 构造器。
+当你调用`new Employee(60000)`时，`Employee(double)`构造器会调用`Employee(String, double)`构造器。
 
-这样使用 `this` 关键字是有用的——你只需要写一次公共的构造代码。
+这样使用`this`关键字是有用的——你只需要写一次公共的构造代码。
 
 C++ 笔记：Java 中的引用与 C++ 中的指针是相同的。但在 C++ 中，你在成员初始化列表中调用另一个构造器：
 
@@ -5702,7 +5635,7 @@ C++ 笔记：Java 中的引用与 C++ 中的指针是相同的。但在 C++ 中�
 Employee(double s) : Employee("Employee #"
 ```
 
-## 4.6.7. 初始化块
+### 4.6.7. 初始化块
 
 你已经见过了两种初始化实例字段的方法：
 
@@ -5741,20 +5674,17 @@ class Employee
 }
 ```
 
-在这个示例中，`id` 字段在对象初始化块中初始化，无论使用哪个构造器来构造对象。初始化块首先运行，然后执行构造器的体体。
+在这个示例中，`id`字段在对象初始化块中初始化，无论使用哪个构造器来构造对象。初始化块首先运行，然后执行构造器的体体。
 
 这种机制永远不是必须的，也不常见。通常将初始化代码放在构造器内部会更直观。
 
 > **注意：** 即使字段在之后才被初始化，在初始化块中设置它们也是合法的。
 
+通过调用`generator.nextInt(n)`或其他的`RandomGenerator`方法来生成随机数。（技术上，`RandomGenerator`是一个接口，是第 6 章中引入的概念。当你调用`RandomGenerator`实例的方法时，不需要担心它。）
 
+**提示：** `RandomGenerator`接口对 Java 1.0 中的`Random`进行了改进，后者的周期非常短，只有$2^8$，之后内部状态就会重复。根据经验，为了生成`n`个随机数，周期至少应为`n^2`。按照规则，如果`n`超过$2^{24}$，经典的`Random`生成器就不再适用，这个数字并不大——大约 1700 万。如今已经有了更好的算法，放弃`Random`类是一个好主意。
 
-
-通过调用 `generator.nextInt(n)` 或其他的 `RandomGenerator` 方法来生成随机数。（技术上，`RandomGenerator` 是一个接口，是第 6 章中引入的概念。当你调用 `RandomGenerator` 实例的方法时，不需要担心它。）
-
-**提示：** `RandomGenerator` 接口对 Java 1.0 中的 `Random` 进行了改进，后者的周期非常短，只有 $2^8$，之后内部状态就会重复。根据经验，为了生成 $n$ 个随机数，周期至少应为 $n^2$。按照规则，如果 $n$ 超过 $2^{24}$，经典的 `Random` 生成器就不再适用，这个数字并不大——大约 1700 万。如今已经有了更好的算法，放弃 `Random` 类是一个好主意。
-
-如果你想在使用 `Random` 类的遗留代码中使用强随机数生成器，可以使用如下静态 `from` 方法：
+如果你想在使用`Random`类的遗留代码中使用强随机数生成器，可以使用如下静态`from`方法：
 
 ```java
 Random generator = Random.from(RandomGenerator.ge)
@@ -5763,14 +5693,15 @@ Random generator = Random.from(RandomGenerator.ge)
 列表 4.5 中的程序展示了本节讨论的许多特性：
 
 - 重载构造函数
-- 使用 `this(.. )` 调用另一个构造函数
+- 使用`this(.. )`调用另一个构造函数
 - 无参数构造函数
 - 对象初始化块
 - 静态初始化块
 - 实例字段初始化
 
-### 列表 4.5
-ConstructorTest/ConstructorTest.java
+#### 列表 4.5
+
+`ConstructorTest/ConstructorTest.java`
 
 ```java
 1 import java.util.random.*;
@@ -5860,17 +5791,17 @@ public int getID()
 }
 ```
 
-java.util.random.RandomGenerator 17
+`java.util.random.RandomGenerator 17`
 
-- int nextInt(int n) 返回 0 到 n-1 之间的随机整数。
-- static RandomGenerator of(String name) 根据给定的算法名称产生一个随机生成器。名为 "L64X128MixRandom" 的算法适用于大多数应用程序。
-- static RandomGenerator getDefault() 返回一个具有 64 位或更多位的强随机生成器。
+- `int nextInt(int n)` 返回 0 到 n-1 之间的随机整数。
+- `static RandomGenerator of(String name)` 根据给定的算法名称产生一个随机生成器。名为 "L64X128MixRandom" 的算法适用于大多数应用程序。
+- `static RandomGenerator getDefault()` 返回一个具有 64 位或更多位的强随机生成器。
 
-```java
-java.util.Random 1.0 19
-```
+`java.util.Random 1.0 19`
 
-- static from(RandomGenerator generator) 返回一个 `Random` 实例，其方法委托给给定的 `RandomGenerator`。这对于遗留代码非常有用。
+
+
+- `static from(RandomGenerator generator)` 返回一个 `Random` 实例，其方法委托给给定的 `RandomGenerator`。这对于遗留代码非常有用。
 
 ## 4.6.8. 对象销毁与 finalize 方法
 
@@ -5886,7 +5817,7 @@ java.util.Random 1.0 19
 
 ### 4.7.1. Record 概念
 
-record 是一种不可变的特殊类形式。这里是定义 Point 的方式：
+record 是一种不可变的特殊类形式。这里是定义 `Point` 的方式：
 
 ```java
 record Point(double x, double y) {
@@ -5912,7 +5843,7 @@ public double x()
 public double y()
 ```
 
-注意访问器的方法是 x 和 y，而不是 getX 和 getY（在 Java 中，实例字段和同名方法是合法的。）
+注意访问器的方法是 `x` 和 `y`，而不是 `getX` 和 `getY`（在 Java 中，实例字段和同名方法是合法的。）
 
 ```java
 var p = new Point(3, 4);
@@ -5928,9 +5859,9 @@ record Point(double x, double y) {
 }
 ```
 
-Java 没有遵循 get 规范，因为这有点乱。对于布尔字段，通常使用 is 而不是 get。而且首字母的大写可能会产生问题。如果一个类有字段 x 和 X 应该怎么办？某些程序员并不高兴，因为他们的遗留类无法简单地转换为 record。但在实践中，许多遗留类是可变的，因此不是转换为 record 的候选者。
+Java 没有遵循 `get` 规范，因为这有点乱。对于布尔字段，通常使用 `is` 而不是 `get`。而且首字母的大写可能会产生问题。如果一个类有字段 `x` 和 `X` 应该怎么办？某些程序员并不高兴，因为他们的遗留类无法简单地转换为 record。但在实践中，许多遗留类是可变的，因此不是转换为 record 的候选者。
 
-除了字段访问器方法外，每个 record 都自动定义了三个方法：toString、equals 和 hashCode。你将在下一章中学习更多关于这些方法的知识。
+除了字段访问器方法外，每个 record 都自动定义了三个方法：`toString`、`equals` 和 `hashCode`。你将在下一章中学习更多关于这些方法的知识。
 
 你可以为 record 添加自己的方法：
 
@@ -5950,10 +5881,7 @@ record Point(double x, double y) {
 
 但这显然不是一个好主意。
 
-
-
-
-**注意：** record 的实例字段自动是 final（不可变）的。然而，它们可能是指向可变对象的引用：
+**注意：** record 的实例字段自动是 `final`（不可变）的。然而，它们可能是指向可变对象的引用：
 
 ```java
 record PointInTime(double x, double y, Date when)
@@ -6125,8 +6053,9 @@ Java 允许你将相关的类、接口和其他类型分组到包中。这有助
 
 访问另一个包中的类有两种方法：
 
-1.  **全限定名：** 使用包名后跟类名。例如，`java.util.LocalDate`。如果频繁使用，这很繁琐。
-2.  **导入语句：** 在文件顶部使用 `import` 语句来提供简写。例如：
+1. **全限定名：** 使用包名后跟类名。例如，`java.util.LocalDate`。如果频繁使用，这很繁琐。
+
+2. **导入语句：** 在文件顶部使用 `import` 语句来提供简写。例如：
 
 ```java
 import java.util.*;
@@ -6150,10 +6079,6 @@ import java.util.Date;
 ```
 
 未使用的导入语句会被移除。
-
-
-
-
 
 ```java
 import java.util.*;
@@ -6211,6 +6136,7 @@ sqrt(pow(x, 2) + pow(y, 2))
 ```java
 Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2))
 ```
+
 清晰得多。
 
 你可以导入枚举常量：
@@ -6276,6 +6202,8 @@ javac PackageTest.java
 
 > 注意：当你使用 IDE 或构建工具时，类文件通常被放置在单独目录树中。
 
+
+
 让我们来看一个更真实的例子，在其中我们没有使用未命名包，而是将类分布在几个包中（`com.horstmann.corejava` 和 `com.mycompany`）。
 
 ```
@@ -6298,12 +6226,11 @@ javac com/horstmann/corejava/Employee.java com/mycompany/PayrollApp.java
 
 **提示：** 当你使用 IDE 或构建工具时，类文件通常被放置在单独目录树中。
 
-## 4.8.5. 包访问
+## 包访问
 
 你已经遇到过 `public` 和 `private` 访问修饰符。标记为 `public` 的特性可以被任何类使用。`private` 特性只能由定义它的类使用。如果你不指定 `public` 或 `private`，该特性（即类、方法或变量）可以被同一包中的所有方法访问。
 
 考虑列表 4.2 中的程序。`Employee` 类没有被定义为 `public` 类。因此，只有同包中的其他类（在这种情况下为未命名包中的 `EmployeeTest`）可以访问它。对于类来说，这是一个合理的默认值。但对于变量来说，这是一个遗憾的选择。
-
 
 变量必须标记为 `private`，否则它们将默认具有包级访问权限（package access）。这显然破坏了封装性。问题在于，非常很容易忘记输入 `private` 关键字。以下是来自 `java.awt` 包中 `Window` 类的示例，它是 JDK 提供的源代码的一部分：
 
@@ -6330,7 +6257,7 @@ package java.awt;
 
 从 1.2 版本开始，JDK 实现者修改了类加载器，显式禁止加载包名以 "java." 开头的用户定义类。当然，你自己的类并从这种保护中受益。另一种机制（现已过时）允许 JAR 声明包为 *sealed*（密封），防止第三方对其进行扩展。现在，我们应该使用模块（modules）来封装包。模块将在第 12 章中详细讨论。
 
-## 4.8.6. 类路径 (Class Path)
+## 类路径 (Class Path)
 
 如你所见，类存储在文件系统的子目录下。类的路径必须与包名匹配。
 
@@ -6340,9 +6267,11 @@ package java.awt;
 
 为了在程序之间共享类，你需要执行以下操作：
 
-- 1. 将你的类文件放在目录中——例如，`/home/user/classdir`。注意，该目录是包树的根目录。如果你添加了类 `com.horstmann.corejava.Employee`，那么 `Employee.class` 文件必须位于子目录 `/home/user/classdir/com/horstmann/corejava` 中。
-- 2. 将任何 JAR 文件放在目录中——例如，`/home/user/archives`。
-- 3. 设置类路径。类路径是所有可以包含类文件的位置集合。
+1. 将你的类文件放在目录中——例如，`/home/user/classdir`。注意，该目录是包树的根目录。如果你添加了类 `com.horstmann.corejava.Employee`，那么 `Employee.class` 文件必须位于子目录 `/home/user/classdir/com/horstmann/corejava` 中。
+
+2. 将任何 JAR 文件放在目录中——例如，`/home/user/archives`。
+
+3. 设置类路径。类路径是所有可以包含类文件的位置集合。
 
 在 UNIX 中，类路径上的元素用冒号分隔：
 
@@ -6359,7 +6288,7 @@ c:\classdir;;;c:\archives\archive.jar
 在两种情况下，点表示当前目录。该类路径包含：
 
 - 根目录 `/home/user/classdir` 或 `c:\classdir;`
-- 当前目录（`. `）以及
+- 当前目录（`.`）以及
 - JAR 文件 `/home/user/archives/archive.jar` 或 `c:\archives\archive.jar`。
 
 你可以为 JAR 文件目录指定通配符，如下：
@@ -6374,17 +6303,9 @@ c:\classdir;;;c:\archives\archive.jar
 c:\classdir;;;c:\archives\*
 ```
 
-在 UNIX 中，`*` 必须经过转义以防止 shell 扩展。archives 目录中的所有 JAR 文件（但不包括 .class 文件）都包含在此类路径中。Java API 总是会被搜索类；不要显式将其包含在类路径。
+在 UNIX 中，`*` 必须经过转义以防止 shell 扩展。archives 目录中的所有 JAR 文件（但不包括 `.class` 文件）都包含在此类路径中。Java API 总是会被搜索类；不要显式将其包含在类路径。
 
-> **注意：** `javac` 编译器始终会在当前目录中查找文件，但 java 虚拟机启动器只有在 "." 目录位于类路径上时才会查找当前目录。如果你没有设置类路径，这并不是问题——默认类路径由“ .” 目录组成。但如果你设置了类路径却忘记包含 "." 目录，你的程序将无错误编译，但无法运行。
-
-类路径列出了所有作为类查找起点的目录和归档文件。考虑我们的示例类路径：
-
-```bash
-/home/user/classdir::/home/user/archives/archive
-```
-
-假设虚拟机正在搜索 `com.horstmann.corejava.Employee` 的类文件。它搜索类路径中的所有位置。如果如果在 `/home/user/classdir/com/horstmann/corejava/Employee.class` 找到它，它就会加载它。如果没有，它会搜索 `/home/user/archives/archive.jar`。如果在那里找到了，它就会加载它。如果在任何地方都找不到，它将抛出 `ClassNotFoundException`。
+> **注意：** `javac` 编译器始终会在当前目录中查找文件，但 java 虚拟机启动器只有在 "." 目录位于类路径上时才会查找当前目录。如果你没有设置类路径，这并不是问题——默认类路径由“.” 目录组成。但如果你设置了类路径却忘记包含 "." 目录，你的程序将无错误编译，但无法运行。
 
 类路径列出了所有作为类查找起点的目录和归档文件。考虑我们的示例类路径：
 
@@ -6396,7 +6317,7 @@ c:\classdir;;;c:\archives\*
 
 （注：原文后续存在大量重复段落，已根据要求不再重复输出）
 
-## 4.8.7. 设置类路径
+## 设置类路径
 
 IDE 和构建工具有它们自己管理类路径的机制。但了解如何手动设置它是个好主意，这样你就可以解决任何配置问题。
 
@@ -6414,7 +6335,7 @@ java -classpath c:\classdir;;;c:\archives\archive
 
 整个命令必须写在一行上。将这样的长命令放在 shell 脚本或批处理文件中更好。
 
-使用 -classpath 选项是设置类路径的首选方法。另一种方法是使用 CLASSPATH 环境变量。取决于取决于 shell。在 Bourne Again shell (bash) 中，使用命令：
+使用 `-classpath` 选项是设置类路径的首选方法。另一种方法是使用 `CLASSPATH` 环境变量。取决于取决于 shell。在 Bourne Again shell (bash) 中，使用命令：
 
 ```bash
 export CLASSPATH=/home/user/classdir::/home/user
@@ -6428,19 +6349,17 @@ set CLASSPATH=c:\classdir;;;c:\archives\archive
 
 类路径将持续到 shell 退出。
 
-> **注意：** 有人建议永久设置 CLASSPATH 环境变量。这通常是一个坏主意。人们会忘记全局设置，并对类无法被正确加载感到惊讶。一个特别不可指责的例子是 Apple 在 Windows 上的 QuickTime 安装程序。多年来，它全局设置 CLASSPATH 指向它需要的 JAR 文件，但没有将当前目录包含在类路径中。结果导致无数 Java 程序员
-
-当他们的程序编译通过但无法运行时，他们会感到抓狂。
+> **注意：** 有人建议永久设置 `CLASSPATH` 环境变量。这通常是一个坏主意。人们会忘记全局设置，并对类无法被正确加载感到惊讶。一个特别不可指责的例子是 Apple 在 Windows 上的 QuickTime 安装程序。多年来，它全局设置 `CLASSPATH` 指向它需要的 JAR 文件，但没有将当前目录包含在类路径中。结果导致无数 Java 程序员当他们的程序编译通过但无法运行时，他们会感到抓狂。
 
 > **警告：** 在过去，有人建议通过完全跳过类路径，将所有 JAR 文件放入 `jre/lib/ext` 目录。这种机制在 Java 9 中已经过时，但它一直是个坏建议。当从扩展目录加载被遗忘已久的类时，很容易产生混淆。
 
 > **注意：** 类也可以从模块路径加载。第 12 章将讨论模块和模块路径。
 
-## 4.9. JAR 文件
+## JAR 文件
 
 当你打包你的应用程序时，你希望给用户提供单个文件，而不是一个装满类文件的目录结构。Java 归档（JAR）文件正是为此目的设计的。JAR 文件可以包含类文件以及图像、声音文件等其他类型。此外，JAR 文件是压缩的，使用了熟悉的 ZIP 压缩格式。
 
-## 4.9.1. 创建 JAR 文件
+### 创建 JAR 文件
 
 使用 `jar` 工具创建 JAR 文件。（在默认 JDK 安装中，它位于 `jdk/bin` 目录。）创建新 JAR 文件最常用的命令使用以下语法：
 
@@ -6462,7 +6381,7 @@ jar options file1 file2 . . .
 
 表 4.2 列出了 `jar` 程序的所有选项。它们与 UNIX `tar` 命令的选项相似。
 
-### 表 4.2：jar 程序选项
+#### 表 4.2：jar 程序选项
 
 | 选项 | 说明 |
 |---|---|
@@ -6481,7 +6400,7 @@ jar options file1 file2 . . .
 
 你可以将应用程序和代码库打包成 JAR 文件。例如，如果你想在 Java 程序中发送邮件，可以使用封装在 `javax.mail.jar` 文件中的库。
 
-## 4.9.2. 清单（Manifest）
+### 清单（Manifest）
 
 除了类文件、图像和其他资源外，每个 JAR 文件都包含一个 `manifest` 文件，用于描述归档的特殊功能。
 
@@ -6523,7 +6442,7 @@ jar ufm MyArchive.jar manifest-additions.mf
 
 > **注意：** 有关 JAR 和清单文件格式的更多信息，请参阅相关章节。
 
-## 4.9.3. 可执行 JAR 文件
+### 可执行 JAR 文件
 
 你可以使用 `jar` 命令的 `e` 选项来指定程序的入口点——即你通常调用 `java` 程序启动器时指定的类：
 
@@ -6550,10 +6469,10 @@ java -jar MyProgram.jar
 取决于操作系统的配置行为：
 
 - 在 Windows 上，Java 运行时为 `.jar` 扩展名创建文件关联。
-- 在 Mac OS 上，操作系统识别 .jar 文件并在双击时执行程序。
+- 在 Mac OS 上，操作系统识别 `.jar` 文件并在双击时执行程序。
 - 在 Linux 上，你可以使用第三方封装工具将 JAR 文件转换为可执行文件。有很多商业和开源产品，例如 [Launch4J](https://launch4j.sourceforge.net) 和 [IzPack](https://izpack.org)。
 
-## 4.9.4. 多版本 JAR 文件
+### 多版本 JAR 文件
 
 随着模块的引入和包的强封装，以前可以的内部 API 不再可用。这可能要求库供应商为不同版本分发代码。多版本 JAR 解决了这种需求。
 
@@ -6573,7 +6492,7 @@ META-INF/
       └ BuildingBlocks.class
 ```
 
-假设 Application 类使用了 `CssParser` 类。那么旧的 `Application.class` 文件可以编译为使用 `com.sun.javafx.css.CssParser`，而 Java 9 版本使用 `javafx.css.CssParser`。
+假设 `Application` 类使用了 `CssParser` 类。那么旧的 `Application.class` 文件可以编译为使用 `com.sun.javafx.css.CssParser`，而 Java 9 版本使用 `javafx.css.CssParser`。
 
 Java 8 不知道 `META-INF/versions` 目录，并将加载旧类。当 Java 9 读取该 JAR 文件时，将使用新版本。
 
@@ -6599,20 +6518,19 @@ javac -d bin/8 --release 8 . .
 
 JDK 带有之前两个版本的 API 符号文件。在 Java 21 中，你可以将 `--release` 设置为 21、20 或 19 进行编译。
 
-
-
-
 更改 API 时，你应该提供新版本的 JAR 文件。
+
+
 
 **注意：** 像 `javap` 等工具尚未经过改造以处理多版本（multi-release）JAR 文件。如果你调用：
 
-```
+```bash
 javap -classpath MyProgram.jar Application
 ```
 
 你将获得类的基准版本（毕竟，它理应该与新版本具有相同的公共 API）。如果你必须查看新版本，请调用：
 
-```
+```bash
 javap -classpath MyProgram.jar!META-INF/
 ```
 
@@ -6620,29 +6538,29 @@ javap -classpath MyProgram.jar!META-INF/
 
 Java 开发工具包中命令的选项传统上使用连字符后跟多字母选项名称，例如：
 
-```
+```bash
 java -jar . .
 ```
 
-```
+```bash
 javac -Xlint:unchecked -classpath . . .
 ```
 
 例外是 `jar` 命令，它遵循 `tar` 命令的经典选项格式，但不加连字符：
 
-```
+```bash
 jar cvf . . .
 ```
 
-JEP 293 (https://openjdk.org/jeps/293) 为向更通用的选项格式迁移提供了指南，从 Java 9 开始。对于大多数 Linux 工具，多字母选项名称前有两个连字符，而常用选项有单字母快捷写。例如，Linux 的 `ls` 命令可以使用“人类可读”选项调用：
+[JEP 293](https://openjdk.org/jeps/293) 为向更通用的选项格式迁移提供了指南，从 Java 9 开始。对于大多数 Linux 工具，多字母选项名称前有两个连字符，而常用选项有单字母快捷写。例如，Linux 的 `ls` 命令可以使用“人类可读”选项调用：
 
-```
+```bash
 ls --human-readable
 ```
 
-或
+或：
 
-```
+```bash
 ls -h
 ```
 
@@ -6650,17 +6568,17 @@ ls -h
 
 带有 `--` 和多个字母的选项参数通过空格或 `=` 分隔：
 
-```
+```bash
 java --class-path /home/user/classdir . . .
 ```
 
-或
+或：
 
-```
+```bash
 java --class-path=/home/user/classdir . . .
 ```
 
-当选项需要传递给另一个工具，且透传机制无法处理空格时，` 形式非常有用。
+当选项需要传递给另一个工具，且透传机制无法处理空格时，`形式`非常有用。
 
 提示：你可以使用 `JDK_JAVA_OPTIONS` 环境变量向 `java` 启动器传递命令行选项：
 
@@ -6670,19 +6588,19 @@ export JDK_JAVA_OPTIONS='--class-path /home/user/
 
 > 注意：根据 JEP 293，不带参数的单字母选项可以组合在一起：
 
-```
+```bash
 jar -c -v -f myapp.jar -m MANIFEST.MF *.cl
 ```
 
-可以简化为
+可以简化为：
 
-```
+```bash
 jar -cv -f myapp.jar -m MANIFEST.MF *.clas
 ```
 
 但目前这不起作用。奇怪的是，
 
-```
+```bash
 jar -cvfm myapp.jar MANIFEST.MF *.class
 ```
 
@@ -6690,13 +6608,13 @@ jar -cvfm myapp.jar MANIFEST.MF *.class
 
 > 注意：根据 JEP 293，单字母选项的参数可以通过空格分隔，或直接跟在选项后面：
 
-```
+```bash
 javac -d outputdir . . .
 ```
 
-或
+或：
 
-```
+```bash
 javac -doutdir . . .
 ```
 
@@ -6712,8 +6630,8 @@ JDK 包含一个非常有用的工具，称为 `javadoc`，它可以从你的源
 
 `javadoc` 程序提取以下项目的信息：
 
-- 模块 (Modules)
-- 包 (Packages)
+- 模块（Modules）
+- 包（Packages）
 - 公有类和接口
 - 公有和保护字段
 - 公有和保护的构造函数和方法
@@ -6730,7 +6648,7 @@ JDK 包含一个非常有用的工具，称为 `javadoc`，它可以从你的源
 
 ### 4.10.2. 类注释
 
-类注释必须放置在任何 import 语句之后，直接位于类定义之前。
+类注释必须放置在任何 `import` 语句之后，直接位于类定义之前。
 
 这是一个类注释的示例：
 
@@ -6751,7 +6669,7 @@ public class Card
 
 常见的 `javadoc` 标签是块标签。它们必须出现在行首并以 `@` 开头，前面可选跟空格、注释分隔符 `/**`（后者通常用于多行注释）。相比之下，内联标签通常封装在大括号中：`{@tag contents}`。内容可能包含括号，但它们必须平衡。例如 `@code` 和 `@link` 标签。
 
-类注释必须放置在任何 import 语句之后，直接位于类定义之前。
+类注释必须放置在任何 `import` 语句之后，直接位于类定义之前。
 
 这是一个类注释的示例：
 
@@ -6779,9 +6697,9 @@ public class Card
 
 每个方法注释必须紧接在其描述的方法之前。除了通用标签外，你还可以使用以下：
 
-- @param 变量描述：此标签将添加到方法的“参数”部分。
-- @return 描述：此标签将添加到方法的“返回值”部分。
-- @throws 类描述：此标签记录该方法可能抛出异常。异常是第 7 章的主题。
+- `@param` 变量描述：此标签将添加到方法的“参数”部分。
+- `@return` 描述：此标签将添加到方法的“返回值”部分。
+- `@throws` 类描述：此标签记录该方法可能抛出异常。异常是第 7 章的主题。
 
 这是一个方法注释的示例：
 
@@ -6836,14 +6754,11 @@ public static final int HEARTS = 1;
 1. 提供一个名为 `package-info.java` 的文件。该文件必须包含初始文档注释（用 `/**` 和 `*/` 分隔），随后是 `package` 语句。它不应包含任何其他代码或注释。
 2. 提供一个名为 `package.html` 的 HTML 文件。`<body>. . . </body>` 标签之间的所有文本将被提取。
 
-
-
-
-要输入等宽代码，请使用 {@code . . }` 代替 `<code>. . </code>`——这样你就不用担心转义代码中的 `<` 和 `&` 等字符了。如果你想在普通字体未使用转义的 `<` 或 `&`，请使用 `@literal{. . }` 标签。
+要输入等宽代码，请使用 `{@code . . }` 代替 `<code>. . </code>`——这样你就不用担心转义代码中的 `<` 和 `&` 等字符了。如果你想在普通字体未使用转义的 `<` 或 `&`，请使用 `@literal{. . }` 标签。
 
 在 HTML `<pre>` 标签中显示多行代码，你可以使用：
 
-```
+```java
 /**
  * ...
  * <pre>{@code
@@ -6864,13 +6779,13 @@ public static final int HEARTS = 1;
 
 无论采用哪种方式，你都不需要转义代码中的 `<` 或字符。但是，括号必须匹配，且你不能包含 `/* ...` 注释。
 
-## 4.10.7. 链接
+### 4.10.7. 链接
 
-你可以使用 `@see` 和 `@link` 标签链接到 javadoc 文档的其他相关部分或外部文档。
+你可以使用 `@see` 和 `@link` 标签链接到 `javadoc` 文档的其他相关部分或外部文档。
 
 `@see reference` 标签会在“另另参见”（see also）部分添加一个超链接。它可以同时用于类和方法。在这里，`reference` 可以是以下内容之一：
 
-```
+```text
 package.class#member label
 <a href=". .">label</a>
 "text"
@@ -6884,7 +6799,7 @@ package.class#member label
 
 这将创建一个指向 `com.horstmann.corejava.Employee` 类中 `raiseSalary(double)` 方法的链接。你可以省略包名，或者同时省略包名和类名。此时成员将在当前包或类中查找。
 
-注意，你必须使用 `#` 而不是点 `.` 来分隔类与方法或变量名。Java 编译器本身非常擅长确定 `.` 作为包、子包、类、内部类以及方法和变量之间分隔符的不同含义。但 javadoc 工具并不十分聪明，所以你必须帮助它。
+注意，你必须使用 `#` 而不是点 `.` 来分隔类与方法或变量名。Java 编译器本身非常擅长确定 `.` 作为包、子包、类、内部类以及方法和变量之间分隔符的不同含义。但 `javadoc` 工具并不十分聪明，所以你必须帮助它。
 
 构造函数有特殊的名称 `<init>`，而不是类名，例如：
 
@@ -6910,7 +6825,7 @@ package.class#member label
 
 如果你愿意，可以在文档注释的任何位置放置指向其他类或方法的链接。在注释中的任何位置插入如下形式的标签：
 
-```
+```java
 {@link package.class#member}
 ```
 
@@ -6930,83 +6845,86 @@ package.class#member label
 
 如果链接应该显示为普通字体而不是等宽字体，请使用 `@plain` 代替 `@link`。
 
-> 注意：如果你的注释包含指向其他文件的链接，例如图像（如图表或用户界面组件图像），请将这些文件放在源文件所在目录的名为 `doc-files` 的子目录中。javadoc 工具将从源目录将 `doc-files` 目录及其内容复制到文档目录。你需要在链接中使用 `doc-files` 目录，例如 `<img src="doc-files/uml.png" alt="UML diagram"/>`。
+> 注意：如果你的注释包含指向其他文件的链接，例如图像（如图表或用户界面组件图像），请将这些文件放在源文件所在目录的名为 `doc-files` 的子目录中。`javadoc` 工具将从源目录将 `doc-files` 目录及其内容复制到文档目录。你需要在链接中使用 `doc-files` 目录，例如 `<img src="doc-files/uml.png" alt="UML diagram"/>`。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_465_0.png)
 
-## 4.10.8. 通用注释
+### 4.10.8. 通用注释
 
 `@since text` 标签创建一个“自”（since）条目。文本可以是引入此特性的任何描述。例如，`@since 1.7.1`。
 
 在类文档注释可以使用以下标签：
 
-- @author name
-此此标签创建一个“作者”（author）条目。你可以有多个 `@author` 标签，每个作者一个。不必强求使用此标签——你的版本控制系统在跟踪作者身份方面工作得更详尽。
+- `@author name`
 
-- @version text
-此标签创建一个“版本”（version）条目。文本可以是对当前版本的任何描述。
+  此标签创建一个“作者”（author）条目。你可以有多个 `@author` 标签，每个作者一个。不必强求使用此标签——你的版本控制系统在跟踪作者身份方面工作得更详尽。
 
-`{value optionalFormat constantReference}` 内联标签插入常量字段的值，自 Java 20 起，它还带有一个可选的 printf 风格格式化器。例如，`@value %X Integer#MAX_VALUE` 产生 7FFFFFFF。
+- `@version text`
+
+  此标签创建一个“版本”（version）条目。文本可以是对当前版本的任何描述。
+
+`{@value optionalFormat constantReference}` 内联标签插入常量字段的值，自 Java 20 起，它还带有一个可选的 `printf` 风格格式化器。例如，`@value %X Integer#MAX_VALUE` 产生 `7FFFFFFF`。
 
 `@deprecated` 标签与 `@Deprecated` 注解一起使用。其后跟的文本将告诉用户何时以及为何发生弃用，并描述替代方案。
 
-@deprecated` 标签与 `@Deprecated` 注解一起使用。其后跟的文本将告诉用户何时以及为何发生弃用，并描述替代方案。
+`@deprecated` 标签与 `@Deprecated` 注解一起使用。其后跟的文本将告诉用户何时以及为何发生弃用，并描述替代方案。
 
-Finally, you use the -d option to add an index.
+Finally, you use the `-d` option to add an index.
 
-## 4.10.9. 代码片段
+### 4.10.9. 代码片段
 
 此功能的目的是在文档中包含代码片段。代码片段是在 Java 18 中引入的。要使用它们，你可以使用：
 
-Finally, you use the -d option to add an index.
-
-
-
+Finally, you use the `-d` option to add an index.
 
 其表示形式的变化不会影响该类的用户，而且更容易发现错误。
 
-- 2. 始终初始化数据。
-Java 不会为你初始化局部变量，但它会初始化对象的实例字段。不要依赖默认值，而要显式地初始化所有变量，可以通过提供默认值或在所有构造函数中设置默认值来实现。
+- **2. 始终初始化数据。**
 
-- 3. 不要在一个类中使用过多的基本类型。
-其核心思想是用其他类来替代对基本类型的多次相关使用。这可以使你的类更容易被理解和修改。例如，替换 `Customer` 类中的以下实例字段：
+  Java 不会为你初始化局部变量，但它会初始化对象的实例字段。不要依赖默认值，而要显式地初始化所有变量，可以通过提供默认值或在所有构造函数中设置默认值来实现。
 
-```
-private String street;
-private String city;
-private String state;
-private int zip;
-```
+- **3. 不要在一个类中使用过多的基本类型。**
 
-替换为一个名为 `Address` 的新类。这样，你就可以轻松地处理地址的变化，例如处理国际地址的需求。
+  其核心思想是用其他类来替代对基本类型的多次相关使用。这可以使你的类更容易被理解和修改。例如，替换 `Customer` 类中的以下实例字段：
 
-- 4. 并非所有字段都需要单独的访问器（accessors）和变变器（mutators）。
+  ```java
+  private String street;
+  private String city;
+  private String state;
+  private int zip;
+  ```
 
-你可能需要获取和设置员工的工资。但一旦对象构建，你肯定不需要更改入职日期。而且，对象通常拥有你不希望他人获取或设置的实例字段，例如 `Address` 类中存储州缩写的数组。
+  替换为一个名为 `Address` 的新类。这样，你就可以轻松地处理地址的变化，例如处理国际地址的需求。
 
-- 5. 拆分职责过多的类。
+- **4. 并非所有字段都需要单独的访问器（accessors）和变器（mutators）。**
 
-这个提示当然是模糊的：“太多”显然取决于观察者的标准。然而，如果有一种明显的方法可以将一个复杂的类拆分为两个在概念上更简单的类，请抓住这个机会。（另一方面，不要做得过头；十个每个只有一个方法的类通常是过度设计了。）
+  你可能需要获取和设置员工的工资。但一旦对象构建，你肯定不需要更改入职日期。而且，对象通常拥有你不希望他人获取或设置的实例字段，例如 `Address` 类中存储州缩写的数组。
 
-这是一个糟糕设计的示例：
+- **5. 拆分职责过多的类。**
 
-```
-public class CardDeck // 糟糕的设计
-{
-    private int[] value;
-    private int[] suit;
+  这个提示当然是模糊的：“太多”显然取决于观察者的标准。然而，如果有一种明显的方法可以将一个复杂的类拆分为两个在概念上更简单的类，请抓住这个机会。（另一方面，不要做得过头；十个每个只有一个方法的类通常是过度设计了。）
 
-    public CardDeck() { . . . }
-    public void shuffle() { . . . }
-    public int getTopValue() { . . . }
-    public int getTopSuit() { . . . }
-    public void draw() { . . . }
-}
-```
+  这是一个糟糕设计的示例：
 
-这个类实际上实现了两个独立的概念：一个扑牌牌（带有 `shuffle` 和 `draw` 方法）以及单张卡牌（带有检查其值和花色的方法）。引入一个代表单张卡牌的 `Card` 类是有意义的。现在有两个类，每个类都有自己的职责。由于 `Card` 类非常简单，可以将其实现为 `record`。此外，与其使用整数值表示花色，使用枚举（enumeration）是更好的选择：
+  ```java
+  public class CardDeck // 糟糕的设计
+  {
+      private int[] value;
+      private int[] suit;
 
-```
+      public CardDeck() { . . . }
+      public void shuffle() { . . . }
+      public int getTopValue() { . . . }
+      public int getTopSuit() { . . . }
+      public void draw() { . . . }
+  }
+  ```
+
+  这个类实际上实现了两个独立的概念：一个扑牌牌（带有 `shuffle` 和 `draw` 方法）以及单张卡牌（带有检查其值和花色的方法）。引入一个代表单张卡牌的 `Card` 类是有意义的。现在有两个类，每个类都有自己的职责。由于 `Card` 类非常简单，可以将其实现为 `record`。此外，与其使用整数值表示花色，使用枚举（enumeration）是更好的选择：
+
+
+
+```java
 public class CardDeck
 {
     private Card[] cards;
@@ -7018,19 +6936,19 @@ public class CardDeck
 }
 ```
 
-```
+```java
 public enum Suit { DIAMONDS, HEARTS, SPADES, CLUBS }
 
 public record Card(int value, Suit suit) {}
 ```
 
-- 6. 让类名和方法的名称反映它们的职责。
+## 6. 让类名和方法的名称反映它们的职责
 
 正如变量应该具有反映其所代表内容的意义名称一样，类也是如此。（标准库确实包含一些可疑的例子，例如描述时间的 `Date` 类。）
 
-一个良好的约定是类名应该是名词（如 `Order`），或者由形容词修饰的名词（如 `RushOrder`）或动名词（“-ing” 单词，如 `BillingAddress`）。对于方法，遵循标准约定：访问方法以小写的 `get` 开头（如 `getSalary`），变变方法使用小写的 `set`（如 `setSalary`）。
+一个良好的约定是类名应该是名词（如 `Order`），或者由形容词修饰的名词（如 `RushOrder`）或动名词（“-ing” 单词，如 `BillingAddress`）。对于方法，遵循标准约定：访问方法以小写的 `get` 开头（如 `getSalary`），变更方法使用小写的 `set`（如 `setSalary`）。
 
-- 7. 优先使用不可变类。
+## 7. 优先使用不可变类
 
 `LocalDate` 类以及 `java.time` 包中的其他类都是不可变的——没有方法可以修改对象的状态。与其变异对象，像 `plusDays` 这样的方法会返回一个带有修改后状态的新对象。
 
@@ -7046,13 +6964,13 @@ public record Card(int value, Suit suit) {}
 
 本章还涵盖了反射（reflection），即在运行程序中发现更多关于类及其属性的能力。反射是一个强大的特性，但不可否认地复杂。由于反射对工具构建者比对应用程序程序员更有趣，你可能第一次阅读时可以略过该章的这部分，以后再回来。
 
-# 5.1. 类、超类和子类
+## 5.1. 类、超类和子类
 
-让我们回到上一章讨论的 `Employee` 类。假设我们在一家公司工作，那里有两种类型的人：员工（employees）和经理（managers）。在现实世界中，每个经理都是员工，但并非每个员工都是经理。这种“是”（*is-a*）的关系是继承的标志。
+让我们回到上一章讨论的 `Employee` 类。假设我们在一家公司工作，那里有两种类型的人：员工（employees）和经理（managers）。在现实世界中，每个经理都是员工，但并非每个员工都是经理。这种“是”（is-a）的关系是继承的标志。
 
 让我们先定义 `Employee` 类：
 
-```
+```java
 public class Employee {
     private String name;
     private double salary;
@@ -7080,9 +6998,9 @@ public class Employee {
 }
 ```
 
-现在，让我们定义一个自 `EmployeeEmployee 类的 `Manager` 类。使用 Java 关键字 `extends` 表示继承。
+现在，让我们定义一个自 `Employee` 类的 `Manager` 类。使用 Java 关键字 `extends` 表示继承。
 
-```
+```java
 public class Manager extends Employee {
     private double bonus;
 
@@ -7103,13 +7021,9 @@ public class Manager extends Employee {
 
 `Manager` 类继承了 `Employee` 类所有的字段和方法，但它也有自己独特的字段和方法。这就是继承的力量：你可以在重用基类代码的同时添加新功能。
 
-## 5.1.1. 定义子类
+### 5.1.1. 定义子类
 
 如所示，`Manager` 类是 `Employee` 类的子类。`Employee` 类是超类、基类或父类。`Manager` 类是子类、派生类或子类。当你初始化子类时，必须使用 `super` 关键字调用超类的构造函数。这确保了在子类添加自己的字段之前，超类已经过正确初始化。
-
-
-
-
 
 ```java
 this.bonus = bonus;
@@ -7128,20 +7042,21 @@ boss.setBonus(5000);
 
 然而，你可以在 `Manager` 对象使用如 `getName` 和 `getHireDay` 等方法。尽管这些方法没有在 `Manager` 类中显式定义，但它们自动继承自 `Employee` 超类。
 
-每个 `Manager` 对象都有四个字段：name、salary、hireDay 和 bonus。其中，`name`、`salary` 和 `hireDay` 字段取取自超类。
+每个 `Manager` 对象都有四个字段：`name`、`salary`、`hireDay` 和 `bonus`。其中，`name`、`salary` 和 `hireDay` 字段取自超类。
 
 **注意：** Java 语言规范规定：
+
 “类中声明为私有的成员不会被该类的子类继承。”多年来，这句话一直困扰着我的读者。规范对“继承”一词的使用非常狭隘。它认为私有字段是未继承的，因为 `Manager` 类无法直接访问它们。因此，每个 `Manager` 对象拥有三个来自超类的字段，但 `Manager` 类并没有“继承”它们。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_482_0.png)
 
-当通过扩展超类来定义子类时，你只需要指示子类与超类之间的*差异*。在设计类时，将最通用的方法放在超类中，将更专门的方法放在子类中。通过移动到超类来提取公共功能是面向对象编程中的常规操作。
+当通过扩展超类来定义子类时，你只需要指示子类与超类之间的差异。在设计类时，将最通用的方法放在超类中，将更专门的方法放在子类中。通过移动到超类来提取公共功能是面向对象编程中的常规操作。
 
 **注意：** 在第 4 章中，你学习了记录（records）：即状态完全由构造函数参数定义的类。你不能扩展记录，记录也无法继承另一个类。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_482_1.png)
 
-## 5.1.2. 方法重写
+### 5.1.2. 方法重写
 
 超类中的某些方法并不适用于 `Manager` 子类。特别是，`getSalary` 方法应该返回基本工资和奖金之和。你需要提供一个新方法来重写超类方法：
 
@@ -7178,7 +7093,7 @@ public double getSalary() {
 
 现在问题是，对 `getSalary` 的调用只是调用了它自己，因为 `Manager` 类有一个 `getSalary` 方法（即我们正在尝试实现的方法）。结果是无限循环地调用同一个方法，导致程序崩溃。
 
-我们需要指示想要调用 `Employee` 超类的 `getSalary` 方法，而不是当前的 `Employee` 类。使用特殊关键字 `super` 来实现此目的。调用
+我们需要指示想要调用 `Employee` 超类的 `getSalary` 方法，而不是当前的 `Employee` 类。使用特殊关键字 `super` 来实现此目的。调用：
 
 ```java
 super.getSalary()
@@ -7193,13 +7108,13 @@ public double getSalary() {
 }
 ```
 
-> **注意：** 有些人认为 `super` 类似于 `this` 引用引用。然而，这种类比并不准确：`super` 并不是指向对象的引用。例如，你不能将 `super` 的值赋值给另一个对象变量。相反，`super` 是一个特殊的关键字，它引导编译器调用超类方法。
+> **注意：** 有些人认为 `super` 类似于 `this` 引用。然而，这种类比并不准确：`super` 并不是指向对象的引用。例如，你不能将 `super` 的值赋值给另一个对象变量。相反，`super` 是一个特殊的关键字，它引导编译器调用超类方法。
 
 正如你所看到的，子类可以添加字段，也可以添加方法或重写超类的方法。然而，继承永远不会夺走任何字段或方法。
 
-C++ 注意：Java 使用关键字 `super` 来调用超类方法。在 C++ 中，你会使用超类名配合 `::` 运算符。例如，`Manager` 类的 `getSalary` 方法将调用 `Employee::getSalary` 而不是 `super.getSalary`。
+**C++ 注意：** Java 使用关键字 `super` 来调用超类方法。在 C++ 中，你会使用超类名配合 `::` 运算符。例如，`Manager` 类的 `getSalary` 方法将调用 `Employee::getSalary` 而不是 `super.getSalary`。
 
-## 5.1.3. 子类构造函数
+### 5.1.3. 子类构造函数
 
 为了完成示例，让我们提供一个构造函数。
 
@@ -7211,19 +7126,19 @@ public Manager(String name, double salary, int year)
 }
 ```
 
-在这里，关键字 `super` 具有不同的含义。指令
+在这里，关键字 `super` 具有不同的含义。指令：
 
 ```java
 super(name, salary, year, month, day);
 ```
 
-是“调用带有 name, salary, year, month, day 参数的 Employee 超类构造函数”的简写。
+是“调用带有 `name`、`salary`、`year`、`month`、`day` 参数的 `Employee` 超类构造函数”的简写。
 
 由于子类构造函数无法访问 `Employee` 类的私有字段，它必须调用超类构造函数。注意 `super` 调用是子类构造函数的第一个语句。
 
-> **注意：** 记住，如果超类有一个无参构造函数，编译器会在子类构造函数自动插入插入对它的调用。如果超类没有无参构造函数，子类构造函数必须使用 `super` 关键字显式调用超类构造函数。
+> **注意：** 记住，如果超类有一个无参构造函数，编译器会在子类构造函数自动插入对它的调用。如果超类没有无参构造函数，子类构造函数必须使用 `super` 关键字显式调用超类构造函数。
 
-C++ 注意：在 C++ 中，子类构造函数将使用初始化列表：
+**C++ 注意：** 在 C++ 中，子类构造函数将使用初始化列表：
 
 ```cpp
 Manager(String name, double salary, int year) 
@@ -7264,7 +7179,7 @@ for (Employee e : staff) {
 
 此循环打印了以下数据：
 
-```
+```text
 Carl Cracker 85000.0
 Harry Hacker 50000.0
 Tony Tester 40000.0
@@ -7272,9 +7187,9 @@ Tony Tester 40000.0
 
 现在 `staff[1]` 和 `staff[2]` 分别打印它们的基本工资，因为它们是 `Employee` 对象。然而，`staff[0]` 是 `Manager` 对象，其 `getSalary` 方法在基本工资基础上增加了奖金。
 
-神奇的是，调用
+神奇的是，调用：
 
-```
+```java
 e.getSalary()
 ```
 
@@ -7284,15 +7199,11 @@ e.getSalary()
 
 对象变量（如变量 `e`）可以引用多个实际类型，这一事实被称为多态性。在运行时自动选择合适的方法被称为动态绑定。我将在本章更详细地讨论这两个主题。
 
-> C++ 注意：在 C++ 中，如果你想实现动态绑定，需要将成员函数声明为 `virtual`。在 Java 中，动态绑定是默认行为；如果你
+> **C++ 注意：** 在 C++ 中，如果你想实现动态绑定，需要将成员函数声明为 `virtual`。在 Java 中，动态绑定是默认行为；如果你不想让一个方法成为虚方法，可以将其标记为 `final`。（我将在本章稍后讨论 `final` 关键字）。
 
+列表 5.1 包含一个程序，展示了 `Employee`（列表 5.2）和 `Manager`（列表 5.3）对象的薪水计算有何不同。
 
-
-如果你不想让一个方法成为虚方法，可以将其标记为 `final`。（我将在本章稍后讨论 `final` 关键字）。
-
-列表 5.1 包含一个程序，展示了 Employee（列表 5.2）和 Manager（列表 5.3）对象的薪水计算何不同。
-
-# Listing 5.1 inheritance/ManagerTest.java
+# Listing 5.1 `inheritance/ManagerTest.java`
 
 ```java
 1 package inheritance;
@@ -7311,7 +7222,8 @@ e.getSalary()
 15
 16 var staff = new Employee[3];
 17
-18 // 用 Manager 填充 staff 数组```
+18 // 用 Manager 填充 staff 数组
+```
 
 ```java
 staff[0] = boss;
@@ -7322,7 +7234,7 @@ for (Employee e : staff) {
     System.out.println("name=" + e.get()
 ```
 
-# Listing 5.2 inheritance/Employee.java
+# Listing 5.2 `inheritance/Employee.java`
 
 ```java
 package inheritance;
@@ -7355,15 +7267,18 @@ public void raiseSalary(double byPercent) {
 }
 ```
 
-# Listing 5.3 inheritance/Manager.java
+# Listing 5.3 `inheritance/Manager.java`
+
+
 
 ```java
 package inheritance;
 
 public class Manager extends Employee {
     private double bonus;
+
     /**
-     * @param name 员工姓名
+     * @param name 員工姓名
      * @param salary 薪水
      * @param year 入职年份
      * @param month 入职月份
@@ -7379,31 +7294,27 @@ public class Manager extends Employee {
         return baseSalary + bonus;
     }
 
-    public void setBonus(double b) 
-```
-
-```java
-{
-  bonus = b;
-}
+    public void setBonus(double b) {
+        bonus = b;
+    }
 }
 ```
 
 ## 5.1.4. 继承层次结构
 
-继承并不止于派生一层类。例如，我们可以有一个扩展 `Manager` 的 `Executive` 类。所有扩展共同父类的类集合称为继承层次结构，如图 5.1 所示。从特定类到其在继承层次结构中祖先类的路径称为其继承链。
+继承并不止于派生一层类。例如，我们可以有一个扩展`Manager`的`Executive`类。所有扩展共同父类的类集合称为继承层次结构，如图 5.1 所示。从特定类到其在继承层次结构中祖先类的路径称为其继承链。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_496_0.png)
 
-图 5.1：Employee 继承层次结构
+图 5.1：`Employee`继承层次结构
 
-从一个远远的祖先类通常有多条下降链。你可以创建扩展 `Employee` 的 `Programmer` 或 `Secretary` 子类，它们与 `Manager` 类（或它们彼此）没有任何关系。这个过程可以根据需要一直持续。
+从一个远远的祖先类通常有多条下降链。你可以创建扩展`Employee`的`Programmer`或`Secretary`子类，它们与`Manager`类（或它们彼此）没有任何关系。这个过程可以根据需要一直持续。
 
-> C++ 注意：在 C++ 中，类可以有多个父类。Java 不支持多继承。关于恢复多继承大部分功能的方法，请参见第 6 章。
+> **C++ 注意：** 在 C++ 中，类可以有多个父类。Java 不支持多继承。关于恢复多继承大部分功能的方法，请参见第 6 章。
 
 ### 5.1.5. 多态
 
-一个简单的规则可以帮助你判断继承是否是你数据的正确设计。“是一个”（is-a）规则规定，子类的每个对象都是父类的对象。例如，每个经理都是员工。因此，让 `Manager` 类成为 `Employee` 类的子类是合理的。自然，相反并不成立——并不是每个员工都是经理。
+一个简单的规则可以帮助你判断继承是否是你数据的正确设计。“是一个”（is-a）规则规定，子类的每个对象都是父类的对象。例如，每个经理都是员工。因此，让`Manager`类成为`Employee`类的子类是合理的。自然，相反并不成立——并不是每个员工都是经理。
 
 表述“是一个”规则的另一种方法是替换原则。该原则规定，当程序期望父类对象时，你可以使用子类对象。
 
@@ -7415,7 +7326,7 @@ e = new Employee(. . .); // Employee 对象
 e = new Manager(. . .); // OK，可以使用 Manager
 ```
 
-在 Java 语言中，对象变量是多态的。类型为 `Employee` 的变量可以引用 `Employee` 类型的对象，也可以引用 `Employee` 类任何子类的对象（如 `Manager`、`Executive`、`Secretary` 等）。
+在 Java 语言中，对象变量是多态的。类型为`Employee`的变量可以引用`Employee`类型的对象，也可以引用`Employee`类任何子类的对象（如`Manager`、`Executive`、`Secretary`等）。
 
 我们在列表 5.1 中利用了这一原则：
 
@@ -7425,13 +7336,13 @@ Employee[] staff = new Employee[3];
 staff[0] = boss;
 ```
 
-在这种情况下，变量 `staff[0]` 和 `boss` 指向同一个对象。然而，编译器认为 `staff[0]` 只是一个 `Employee` 对象。这意味着你可以调用
+在这种情况下，变量`staff[0]`和`boss`指向同一个对象。然而，编译器认为`staff[0]`只是一个`Employee`对象。这意味着你可以调用：
 
 ```java
 boss.getSalary();
 ```
 
-但你不能调用
+但你不能调用：
 
 ```java
 staff[0].setBonus(5000);
@@ -7439,47 +7350,45 @@ staff[0].setBonus(5000);
 
 ## 5.1.6. 理解方法调用
 
-准确切理解方法调用是如何应用的至关重要。假设调用 `x.f(args)`，且 `x` 是类 `C` 的对象。发生的情况如下：
+准确理解方法调用是如何应用的至关重要。假设调用`x.f(args)`，且`x`是类`C`的对象。发生的情况如下：
 
-编译器查看对象的声明类型和方法名。注意，可能存在多个同名为 `f` 但参数类型不同的方法。例如，可能存在方法 `f(int)` 和方法 `f(String)`。编译器列出类 `C` 中所有的 `f` 方法以及父类中所有可见的 `f` 方法。（父类的私有方法不可。）
+1. 编译器查看对象的声明类型和方法名。注意，可能存在多个同名为`f`但参数类型不同的方法。例如，可能存在方法`f(int)`和方法`f(String)`。编译器列出类`C`中所有的`f`方法以及父类中所有可见的`f`方法。（父类的私有方法不可见。）
 
-现在编译器知道了所有可能的待调用候选方法。
+   现在编译器知道了所有可能的待调用候选方法。
 
-接下来，编译器确定方法调用中提供的参数的类型。如果在所有方法 `f` 中，有一个唯一方法的参数类型与参数最匹配，则选择该方法调用。这一过程被称为重载解析。由于类型转换（`int` 转 `double`，`Manager` 转 `Employee` 等），情况可能会变得复杂。如果编译器找不到任何匹配的方法，或者在应用转换后多个方法都匹配，编译器将报告错误。
+2. 接下来，编译器确定方法调用中提供的参数的类型。如果在所有方法`f`中，有一个唯一方法的参数类型与参数最匹配，则选择该方法调用。这一过程被称为重载解析。由于类型转换（`int`转`double`、`Manager`转`Employee`等），情况可能会变得复杂。如果编译器找不到任何匹配的方法，或者在应用转换后多个方法都匹配，编译器将报告错误。
 
-现在编译器知道了需要调用的方法的名称和参数类型。
+   现在编译器知道了需要调用的方法的名称和参数类型。
 
-> 注意：记住，方法的名称和参数类型列表被称为方法的签名。例如，`f(int)` 和 `f(String)` 是两个同名但签名不同的方法。如果你在子类中定义了一个与父类方法签名相同的方法，你就重写了父类方法。
+> **注意：** 记住，方法的名称和参数类型列表被称为方法的签名。例如，`f(int)`和`f(String)`是两个同名但签名不同的方法。如果你在子类中定义了一个与父类方法签名相同的方法，你就重写了父类方法。
 
-返回类型不是签名的一部分。然而，当你重写方法时，需要保持返回类型是兼容的。子类可以将返回类型更改为原始类型的子类型。例如，假设 `Employee` 类有一个方法
+返回类型不是签名的一部分。然而，当你重写方法时，需要保持返回类型是兼容的。子类可以将返回类型更改为原始类型的子类型。例如，假设`Employee`类有一个方法：
 
 ```java
 public Employee getBuddy() { . . . }
 ```
 
-经理绝不会希望有一个低级员工作为伙伴。为了反映这一事实，`Manager` 子类可以重写该方法为
-
-
+经理绝不会希望有一个低级员工作为伙伴。为了反映这一事实，`Manager`子类可以重写该方法为：
 
 ```java
 public Manager getBuddy() { . . . };
 ```
 
-我们说这两个 `getBuddy` 方法具有协变返回类型。
+我们说这两个`getBuddy`方法具有协变返回类型。
 
-- 3. 如果方法是私有的（private）、静态的（static）、最后的（final）或构造函数，那么编译器确切知道要调用哪个方法。（`final` 修符将在下一节中解释）。这被称为静态绑定。否则，要调的方法取决于隐式参数的实际类型，必须在运行时使用动态绑定。在我们的示例中，编译器将生成一条动态绑定调用 `f(String)` 的指令。
+3. 如果方法是私有的（`private`）、静态的（`static`）、最后的（`final`）或构造函数，那么编译器确切知道要调用哪个方法。（`final`修饰符将在下一节中解释）。这被称为静态绑定。否则，要调用的方法取决于隐式参数的实际类型，必须在运行时使用动态绑定。在我们的示例中，编译器将生成一条动态绑定调用`f(String)`的指令。
 
-- 4. 当程序运行并使用动态绑定调用方法时，虚拟机必须调用与 `x` 所引用对象实际类型匹配的方法版本。假设实际类型是 `D`，它是 `C` 的一个子类。如果类 `D` 定义了方法 `f(String)`，则调用该方法。如果没有定义，则在 `D` 的父类中查找方法 `f(String)`，以此此类推。
+4. 当程序运行并使用动态绑定调用方法时，虚拟机必须调用与`x`所引用对象实际类型匹配的方法版本。假设实际类型是`D`，它是`C`的一个子类。如果类`D`定义了方法`f(String)`，则调用该方法。如果没有定义，则在`D`的父类中查找方法`f(String)`，以此类推。
 
 每次调用方法时都执行这种搜索将非常耗时。相反，虚拟机为每个类预先计算一个方法表（method table）。方法表列出了所有方法签名以及实际要调用的方法。
 
 虚拟机可以在加载类后，通过将从类文件中找到的方法与父类的方法表相结合，构建方法表。
 
-当实际调用某个方法时，虚拟机只需进行表查找。在我们的示例中，虚拟机查询类 `D` 的方法表，并查找调用 `f(String)` 的方法。该方法可能是 `D.f(String)` 或 `X.f(String)`，其中 `X` 是 `D` 的某个父类。这种场景中有一个例外：如果调用是 `super.f(param)`，则虚拟机将查询父类的方法表。
+当实际调用某个方法时，虚拟机只需进行表查找。在我们的示例中，虚拟机查询类`D`的方法表，并查找调用`f(String)`的方法。该方法可能是`D.f(String)`或`X.f(String)`，其中`X`是`D`的某个父类。这种场景中有一个例外：如果调用是`super.f(param)`，则虚拟机将查询父类的方法表。
 
-让我们详细查看此过程：列表 5.1 中的调用 `e.getSalary()`。`e` 的声明类型是 `Employee`。`Employee` 类有一个方法，称为 `getSalary`，且没有方法参数。因此，在这种情况下，我们不需要担心重载解析。
+让我们详细查看此过程：列表 5.1 中的调用`e.getSalary()`。`e`的声明类型是`Employee`。`Employee`类有一个方法，称为`getSalary`，且没有方法参数。因此，在这种情况下，我们不需要担心重载解析。
 
-`getSalary` 方法不是 `private`、`static` 或 `final`，因此它是动态绑定的。虚拟机为 `Employee` 和 `Manager` 类生成了表。`Employee` 表显示所有方法都定义在 `Employee` 类本身：
+`getSalary`方法不是`private`、`static`或`final`，因此它是动态绑定的。虚拟机为`Employee`和`Manager`类生成了表。`Employee`表显示所有方法都定义在`Employee`类本身：
 
 ```
 Employee:
@@ -7489,9 +7398,9 @@ Employee:
   raiseSalary(double) -> Employee.raiseSalary(double)
 ```
 
-实际上，这并不是全部故事——正如你在本章后面将看到的，`Employee` 类有一个父类 `Object`，它从中继承了许多方法。我现在忽略这些 `Object` 方法。
+实际上，这并不是全部故事——正如你在本章后面将看到的，`Employee`类有一个父类`Object`，它从中继承了许多方法。我现在忽略这些`Object`方法。
 
-`Manager` 方法表略有不同。它继承了三个方法，重定义了一个方法，并增加了一个方法。
+`Manager`方法表略有不同。它继承了三个方法，重定义了一个方法，并增加了一个方法。
 
 ```
 Manager:
@@ -7502,21 +7411,21 @@ Manager:
   setBonus(double) -> Manager.setBonus(double)
 ```
 
-在运行时，调用 `e.getSalary()` 的解析如下：
+在运行时，调用`e.getSalary()`的解析如下：
 
-- 1. 首先，虚拟机获取 `e` 的实际类型的方法表。这可能是 `Employee`、`Manager` 或 `Employee` 的另一个子类的表。
+1. 首先，虚拟机获取`e`的实际类型的方法表。这可能是`Employee`、`Manager`或`Employee`的另一个子类的表。
 
-- 2. 接着，虚拟机查找 `getSalary()` 签名的定义类。现在它知道要调用哪个方法了。
+2. 接着，虚拟机查找`getSalary()`签名的定义类。现在它知道要调用哪个方法了。
 
-- 3. 最后，虚拟机调用该方法。
+3. 最后，虚拟机调用该方法。
 
-动态绑定有一个非常重要的属性：它使得程序具有**可扩展性**（extensible），而无需修改现有代码。假设添加了一个新类 `Executive`，并且变量 `e` 可能指向该类的对象。包含调用 `e.getSalary()` 的代码不需要重新编译。如果 `e` 恰好指向一个类型为 `Executive` 的对象，则会自动调用 `Executive.getSalary()` 方法。
+动态绑定有一个非常重要的属性：它使得程序具有**可扩展性**（extensible），而无需修改现有代码。假设添加了一个新类`Executive`，并且变量`e`可能指向该类的对象。包含调用`e.getSalary()`的代码不需要重新编译。如果`e`恰好指向一个类型为`Executive`的对象，则会自动调用`Executive.getSalary()`方法。
 
-> **注意：** 当你重写一个方法时，子类方法的可见性必须**至少与父类方法相同**。特别，如果父类方法是 `public` 的，则子类方法也必须声明为 `public`。无意遗漏子类方法的 `public` 修饰符是一个常见错误。编译器会报错，说你正尝试提供更受限的访问权限。
+> **注意：** 当你重写一个方法时，子类方法的可见性必须至少与父类方法相同。特别是，如果父类方法是`public`的，则子类方法也必须声明为`public`。无意遗漏子类方法的`public`修饰符是一个常见错误。编译器会报错，说你正尝试提供更受限的访问权限。
 
-# 5.1.7. 防止继承：Final 类和方法
+# 5.1.7. 防止继承：`final`类和方法
 
-有时，你可能想防止有人创建你某个类的子类。无法被扩展的类被称为 `final` 类，你在类定义中使用 `final` 修符来指示这一点。例如，假设我们想防止他人对 `Executive` 类进行子类。只需使用 `final` 修符声明该类即可：
+有时，你可能想防止有人创建你某个类的子类。无法被扩展的类被称为`final`类，你在类定义中使用`final`修饰符来指示这一点。例如，假设我们想防止他人对`Executive`类进行子类化。只需使用`final`修饰符声明该类即可：
 
 ```java
 public final class Executive extends Manager
@@ -7525,22 +7434,23 @@ public final class Executive extends Manager
 }
 ```
 
-你也可以将类中的特定方法设为 `final`。如果你这样做，那么任何子类都无法重写该方法。（`final` 类中的所有方法自动都是 `final` 的）。例如：
+你也可以将类中的特定方法设为`final`。如果你这样做，那么任何子类都无法重写该方法。（`final`类中的所有方法自动都是`final`的。）例如：
 
 ```java
 public class Employee
 {
   . . .
 
-public final String getName() {
+  public final String getName() {
     return name;
     . . .
+  }
 }
 ```
 
-**注意：** 记住，字段也可以声明为 `final`。然而，如果一个类是 `final` 的，方法并不会自动是 `final` 的。
+**注意：** 记住，字段也可以声明为`final`。然而，如果一个类是`final`的，方法并不会自动是`final`的。
 
-将方法或类设为 `final` 的唯一良理由：它的语义在子类中无法被改变。同样，如果你在构造函数中调用一个方法，应该将其声明为 `final`。否则，它可以在子类中被重写，并可能访问到尚未构造的对象。这里有一个例子：
+将方法或类设为`final`的唯一合理理由：它的语义在子类中无法被改变。同样，如果你在构造函数中调用一个方法，应该将其声明为`final`。否则，它可以在子类中被重写，并可能访问到尚未构造的对象。这里有一个例子：
 
 ```java
 public class Employee {
@@ -7585,39 +7495,36 @@ public class Executive
 }
 ```
 
-当 `Executive` 被实例化时，它的构造函数首先调用 `Manager` 构造函数，接着调用 `Employee` 构造函数，最后调用 `description` 方法。由于多态性，调用的是 `Executive` 类中的 `description` 方法！不幸的是，`Executive` 构造函数尚未完成。`title` 实例变量仍然为 `null`，导致 `NullPointerException`。
+当`Executive`被实例化时，它的构造函数首先调用`Manager`构造函数，接着调用`Employee`构造函数，最后调用`description`方法。由于多态性，调用的是`Executive`类中的`description`方法！不幸的是，`Executive`构造函数尚未完成。`title`实例变量仍然为`null`，导致`NullPointerException`。
 
-在构造函数中调用方法本质上是危险的。构造函数必须完成足够的工作以便该方法成功执行。如果方法可以被重写，确保这一点变得非常。因此因此，在构造函数中只调用 `final` 或 `private` 方法。
+在构造函数中调用方法本质上是危险的。构造函数必须完成足够的工作以便该方法成功执行。如果方法可以被重写，确保这一点变得非常困难。因此，在构造函数中只调用`final`或`private`方法。
 
-> **提示：** 从 Java 21 开始，如果你使用 `-Xlint` 或 `-Xlint:escape` 标志进行编译，当公共类的构造函数调用非 `final` 或 `private` 方法时，编译器会发出警告。
+> **提示：** 从 Java 21 开始，如果你使用`-Xlint`或`-Xlint:escape`标志进行编译，当公共类的构造函数调用非`final`或`private`方法时，编译器会发出警告。
 
-该标志的名字有点不准确，因为存在其他 `this` 引用从构造函数中“逃逸”的情况，而编译器目前无法检测。
+该标志的名字有点不准确，因为存在其他`this`引用从构造函数中“逃逸”的情况，而编译器目前无法检测。
 
-**C++ 注意：** 在 C++ 中，构造函数中的方法调用不是多态的。例如，如果你调用
+**C++ 注意：** 在 C++ 中，构造函数中的方法调用不是多态的。例如，如果你调用 Employee 构造函数中的`getDescription`，它总是会调用`Employee::getDescription`。
 
+一些程序员认为，除非你有充分理由想要多态，否则你应该将所有方法声明为`final`。事实上，在 C++ 和 C# 中，除非你明确要求，否则方法不会使用多态。这可能有点极端，但我同意，在设计类层次结构时，仔细考虑`final`方法和类是一个好主意。
 
-在 Employee 构造函数中的 `getDescription` 中，它总是会调用 `Employee::getDescription`。
+在 Java 早期，一些程序员使用`final`关键字是希望避免动态绑定的开销。如果一个方法没有被重写且其代码很短，那么编译器就可以优化掉该方法调用——这一过程被称为内联（inlining）。例如，内联调用`e.getName()`会将其替换为字段访问`e.name`。这是一项值得的改进——CPU 讨厌分支，因为分支会干扰它们在处理当前指令时预取后续指令的策略。然而，如果`getName`可以在另一个类中被重写，那么编译器就无法对其内联，因为它无法知道重写代码可能会做什么。
 
-一些程序员认为，除非你有充分理由想要多态，否则你应该将所有方法声明为 `final`。事实上，在 C++ 和 C# 中，除非你明确要求，否则方法不会使用多态。这可能有点极端，但我同意，在设计类层次结构时，仔细考虑 `final` 方法和类是一个好主意。
+幸运的是，虚拟机中的即时编译器（JIT compiler）可以比传统编译器做得更好。它确切知道哪些类扩展了给定类，并可以检查是否有类实际上重写了某个方法。如果一个方法很短、被频繁调用且没有被重写，JIT 编译器就可以将其内联。如果虚拟机加载了另一个重写了内联方法的子类怎么办？那么优化器必须撤销内联。这需要时间，但这种情况很少发生。
 
-在 Java 早期，一些程序员使用 `final` 关键字是希望避免动态绑定的开销。如果一个方法没有被重写且其代码很短，那么编译器就可以优化掉该方法调用——这一过程被称为内联（inlining）。例如，内联调用 `e.getName()` 会将其替换为字段访问 `e.name`。这是一项值得的改进——CPU 讨厌分支，因为分支会干扰它们在处理当前指令时预取后续指令的策略。然而，如果 `getName` 可以在另一个类中被重写，那么编译器就无法对其内联，因为它无法知道重写代码可能会做什么。
-
-幸运的是，虚拟机中的即时编译器（JIT compiler）可以比传统编译器做得更好。它确切知道哪些类扩展了给类，并可以检查是否有类实际上重写了某个方法。如果一个方法很短、被频繁调用且没有被重写，J时编译器就可以将其内联。如果虚拟机加载了另一个重写了内联方法的子类怎么办？那么优化器必须撤销内联。这需要时间，但这种情况很少发生。
-
-> **注意：** 枚举（Enumerations）和记录（records）总是性的——你无法扩展它们。
+> **注意：** 枚举（Enumerations）和记录（records）总是`final`的——你无法扩展它们。
 
 ## 5.1.8. 转换
 
-回想第3章，强制将一种类型转换为另一种类型的过程被称为转换（casting）。Java 编程语言对转换有特殊的表示法。例如：
+回想第 3 章，强制将一种类型转换为另一种类型的过程被称为转换（casting）。Java 编程语言对转换有特殊的表示法。例如：
 
 ```java
 double x = 3.405;
 int nx = (int) x;
 ```
 
-将表达式 x 的值转换为整数，并丢弃小数部分。
+将表达式`x`的值转换为整数，并丢弃小数部分。
 
-正如你偶尔需要将浮点数转换为整数一样，你可能需要将对象引用从一个类转换为另一个类。让我们再次使用包含混合 `Employee` 和 `Manager` 对象的数组示例：
+正如你偶尔需要将浮点数转换为整数一样，你可能需要将对象引用从一个类转换为另一个类。让我们再次使用包含混合`Employee`和`Manager`对象的数组示例：
 
 ```java
 var staff = new Employee[3];
@@ -7632,7 +7539,9 @@ staff[2] = new Employee("Tony Tester", 40000, 190);
 Manager boss = (Manager) staff[0];
 ```
 
-你想要进行转换的唯一原因是——在对象的类型代码被临时遗忘后，以完全容量使用该对象。例如，在 `ManagerTest` 类中，`staff` 数组必须是 `Employee` 对象的数组，因为它的某些元素是普通员工。我们需要将数组中的管理类元素转换回来，以便访问它的任何新变量。（注意，在第一部分的示例代码中，我特意避免了转换。我在将其存入数组之前，用一个 `Manager` 对象初始化了 `boss` 变量。我需要正确的类型来设置经理的奖金。）
+你想要进行转换的唯一原因是——在对象的类型代码被临时遗忘后，以完全容量使用该对象。例如，在`ManagerTest`类中，`staff`数组必须是`Employee`对象的数组，因为它的某些元素是普通员工。我们需要将数组中的管理类元素转换回来，以便访问它的任何新变量。（注意，在第一部分的示例代码中，我特意避免了转换。我在将其存入数组之前，用一个`Manager`对象初始化了`boss`变量。我需要正确的类型来设置经理的奖金。）
+
+
 
 如你所知，在 Java 中，每个变量都有一个类型。类型描述了变量所引用的对象类型以及它能做什么。例如，`staff[i]` 指向一个 `Employee` 对象（因此它也可以指向一个 `Manager` 对象）。
 
@@ -7721,7 +7630,7 @@ if (boss instanceof Employee) . . .
 
 当 `instanceof` 模式引入变量时，你可以在同一个表达式中立即使用它：
 
-```
+```java
 Employee e;
 if (e instanceof Executive exec && exec.getTitle()
 ```
@@ -7730,7 +7639,7 @@ if (e instanceof Executive exec && exec.getTitle()
 
 然而，以下代码是编译时错误：
 
-```
+```java
 if (e instanceof Manager exec || exec.getTitle.g
 ```
 
@@ -7738,7 +7647,7 @@ if (e instanceof Manager exec || exec.getTitle.g
 
 这里是使用条件运算符的另一个示例：
 
-```
+```java
 String title = e instanceof Executive exec ? exec
 ```
 
@@ -7775,9 +7684,8 @@ if (p instanceof Point(var a, var b)) distance =
 
 为了更加清晰，你也可以为引入的变量指定显式类型：
 
-```
+```java
 if (p instanceof Point(double a, double b)) ..
-
 ```
 
 记录模式可以嵌套：
@@ -7790,7 +7698,7 @@ if (c instanceof Circle(Point(var a, var b), var
 
 **预览说明：** JEP 443 将未命名变量作为一种预览功能引入。如果你不需要记录模式中的某个变量，可以使用下划线表示它：
 
-```
+```java
 if (p instanceof Point(var a, _)) distance
 ```
 
@@ -7804,7 +7712,7 @@ if (p instanceof Point(var a, _)) distance
 
 在 Java 中，`protected` 字段可以被相同包中的任何类访问。现在考虑位于不同包中的 `Administrator` 子类。`Administrator` 类的方法只能查看 `Administrator` 对象的 `hireDay` 字段，而不能查看其他 `Employee` 对象的。这种限制是为了防止你通过创建子类来获取访问保护字段的权限，从而滥用保护机制。
 
-在实践中，请谨慎使用 `protected` 字段。假设你的类被其他程序员使用，而你在设计时使用了 `protected` 字段。在你不知情的情况下，其他程序员可能会继承你的类并开始访问你的 `protected` 字段。在这种情况下，你无法在不打扰那些程序员的情况下更改你类的实现。。这违背了面向对象编程（OOP）的精神，OOP 鼓励数据封装。
+在实践中，请谨慎使用 `protected` 字段。假设你的类被其他程序员使用，而你在设计时使用了 `protected` 字段。在你不知情的情况下，其他程序员可能会继承你的类并开始访问你的 `protected` 字段。在这种情况下，你无法在不打扰那些程序员的情况下更改你类的实现。这违背了面向对象编程（OOP）的精神，OOP 鼓励数据封装。
 
 `protected` 方法更有意义。如果一个方法使用起来很复杂，类可以将其声明为 `protected`。这表示子类（推测它们很了解自己的祖先）可以被信任正确地使用该方法，而其他类则不能。
 
@@ -7814,16 +7722,16 @@ if (p instanceof Point(var a, _)) distance
 
 以下是 Java 四种访问控制修饰符的总结：
 
-1. 仅类内可见 (private)。
-2. 全局可见 (public)。
-3. 包内及所有子类可见 (protected)。
+1. 仅类内可见 (`private`)。
+2. 全局可见 (`public`)。
+3. 包内及所有子类可见 (`protected`)。
 4. 包内可见——（不幸的）默认值。需要修饰符来区分。
 
 ## 5.2. Object: 宇宙超级父类 (The Cosmic Superclass)
 
 `Object` 类是终极祖先——Java 中的每个类都自 `Object`。然而，你永远不需要写
 
-```
+```java
 public class Employee extends Object
 ```
 
@@ -7833,13 +7741,13 @@ public class Employee extends Object
 
 你可以使用 `Object` 类型的变量来引用任何对象。为了对值进行任何特定操作，你需要对其进行强制转换：
 
-```
+```java
 Employee e = (Employee) obj;
 ```
 
 在 Java 中，只有基本类型（数字、字符）不是对象。所有数组类型，无论是对象还是基本类型，都继承 `Object`。
 
-```
+```java
 Object[] staff = new Employee[10];
 ```
 
@@ -7880,8 +7788,6 @@ public class Employee {
 `getClass` 方法返回对象的类——我们在本章稍后详细讨论该方法。在我们的测试中，两个对象只有在属于同一个类时才相等。
 
 > **提示：** 为了防止 `name` 或 `hireDay` 为 `null` 的情况，请使用 `Objects.equals` 方法。`Objects.equals(a, b)` 的值在两个参数都为 `null` 时为 `true`，如果仅一个为 `null` 则为 `false`，否则为 `a.equals(b)`。使用该方法后，`Employee.equals` 方法的最后语句变为
-
-
 
 ```java
 return Objects.equals(name, other.name)
@@ -7952,45 +7858,36 @@ m.equals(e)
 
 如果你在子类中重新定义 `equals`，请包含对 `super.equals(other)` 的调用。
 
-
-
-
-Object 类中的某个方法，但定义了一个完全无关的方法。
+`Object` 类中的某个方法，但定义了一个完全无关的方法。
 
 你可以通过为意图重写父类方法的标记标记 `@Override` 标签来防止此类错误的发生：
 
-```java
-@Override public boolean equals(Object other)
-```
 
- 如果你犯了错误并正在定义一个新方法，编译器会报告错误。例如，假设你在 Employee 类中添加了以下声明：
+
+如果你犯了错误并正在定义一个新方法，编译器会报告错误。例如，假设你在 `Employee` 类中添加了以下声明：
 
 ```java
 @Override public boolean equals(Employee other)
 ```
 
-系统会报告错误，因为该方法没有重写 Object 父类中的任何方法。
+系统会报告错误，因为该方法没有重写 `Object` 父类中的任何方法。
 
-```java
-java.util.Arrays 1.2
-```
+`java.util.Arrays` 1.2
 
-- *static boolean equals(xxx[] a, xxx[] b)* 5.0 如果数组长度相同且对应位置的元素也相等，则返回 true。数组的组件类型 xxx 可以是 Object, int, long, short, char, byte, boolean, float 或 double。
+- `static boolean equals(xxx[] a, xxx[] b)` 5.0 如果数组长度相同且对应位置的元素也相等，则返回 `true`。数组的组件类型 `xxx` 可以是 `Object`, `int`, `long`, `short`, `char`, `byte`, `boolean`, `float` 或 `double`。
 
-```java
-java.util.Objects 7
-```
+`java.util.Objects` 7
 
-- - *static boolean equals(Object a, Object b)* 如果 a 和 b 都为 null，则返回 true；如果其中仅为一个 null，则返回 false；否则返回 a.equals(b)。
+- `static boolean equals(Object a, Object b)` 如果 `a` 和 `b` 都为 `null`，则返回 `true`；如果其中仅为一个 `null`，则返回 `false`；否则返回 `a.equals(b)`。
 
 ## 5.2.4. hashCode 方法
 
-哈希值是一个根据对象派生的整数。哈希值应该是随机的——如果 x 和 y 是两个不同的对象，那么 x.hashCode() 和 y.hashCode() 不同的概率应该是很大的。表 5.1 列出了 String 类 hashCode 方法产生的一些哈希值示例。
+哈希值是一个根据对象派生的整数。哈希值应该是随机的——如果 `x` 和 `y` 是两个不同的对象，那么 `x.hashCode()` 和 `y.hashCode()` 不同的概率应该是很大的。表 5.1 列出了 `String` 类 `hashCode` 方法产生的一些哈希值示例。
 
-**表 5.1:** 由 hashCode 方法生成的哈希值
+**表 5.1:** 由 `hashCode` 方法生成的哈希值
 
 | String | 哈希值 |
-|--- | --- |
+| --- | --- |
 | Hello | 69609650 |
 | Harry | 69496448 |
 | Hacker | -2141031506 |
@@ -8023,13 +7920,13 @@ System.out.println(t.hashCode() + " " + tb.hashCode());
 | s | 2556 | t | 2556 |
 | sb | 20526976 | tb | 20527144 |
 
-注意字符串 s 和 t 有相同的哈希值，因为对于字符串来说，哈希值是由其内容派生的。string builders sb 和 tb 有不同的哈希值，因为 StringBuilder 类没有定义 hashCode 方法，而 Object 类中的默认 hashCode 方法是从对象的内存地址派生哈希值的。
+注意字符串 `s` 和 `t` 有相同的哈希值，因为对于字符串来说，哈希值是由其内容派生的。`StringBuilder` 对象 `sb` 和 `tb` 有不同的哈希值，因为 `StringBuilder` 类没有定义 `hashCode` 方法，而 `Object` 类中的默认 `hashCode` 方法是从对象的内存地址派生哈希值的。
 
-如果你重定义了 equals 方法，你还需要为用户可能插入到哈希表的对象重定义 hashCode 方法。（我在第 9 章中讨论了哈希表。）
+如果你重定义了 `equals` 方法，你还需要为用户可能插入到哈希表的对象重定义 `hashCode` 方法。（我在第 9 章中讨论了哈希表。）
 
-hashCode 方法应该返回一个整数（可以是负数）。只需组合实例字段的哈希值，使得不同对象的哈希值可能散得很开。
+`hashCode` 方法应该返回一个整数（可以是负数）。只需组合实例字段的哈希值，使得不同对象的哈希值可能散得很开。
 
-例如，这里是 Employee 类的 hashCode 方法：
+例如，这里是 `Employee` 类的 `hashCode` 方法：
 
 ```java
 public class Employee {
@@ -8041,7 +7938,7 @@ public class Employee {
 }
 ```
 
-然而，你可以做得更好。首先，使用空安全的方法 `Objects.hashCode`。如果参数为 null，它返回 0，否则返回在参数上调用 hashCode 的结果。此外，使用静态的 `Double.hashCode` 方法以避免创建 Double 对象：
+然而，你可以做得更好。首先，使用空安全的方法 `Objects.hashCode`。如果参数为 `null`，它返回 `0`，否则返回在参数上调用 `hashCode` 的结果。此外，使用静态的 `Double.hashCode` 方法以避免创建 `Double` 对象：
 
 ```java
 public int hashCode() {
@@ -8051,7 +7948,7 @@ public int hashCode() {
 }
 ```
 
-**注意：** 如果实例变量的取值范围很小，你需要尽可能实现不同的哈希值。考虑日期的哈希。计算 7 * year + 11 * month + 13 * day 会产生很多冲突。相比之下，31 * 12 * year + day 是一个“完美哈希函数”。假设在一个合理的年份范围内，没有两个日期具有相同的哈希值。（`LocalDate` 类支持 +999,999,999 年，其实际的 `hashCode` 方法复杂得多。）
+**注意：** 如果实例变量的取值范围很小，你需要尽可能实现不同的哈希值。考虑日期的哈希。计算 `7 * year + 11 * month + 13 * day` 会产生很多冲突。相比之下，`31 * 12 * year + day` 是一个“完美哈希函数”。假设在一个合理的年份范围内，没有两个日期具有相同的哈希值。（`LocalDate` 类支持 +999,999,999 年，其实际的 `hashCode` 方法复杂得多。）
 
 组合多个哈希值可能是麻烦的。在很多情况下，你只需调用 `Objects.hash` 并传入所有字段。它会组合所有参数的哈希值。那么 `Employee.hashCode` 方法只需为：
 
@@ -8062,7 +7959,7 @@ public int hashCode()
 }
 ```
 
-然而，你需要小心数组。数组的 hashCode 方法取决于它的元素。对于多维数组，请使用 `Arrays.deepHashCode`。
+然而，你需要小心数组。数组的 `hashCode` 方法取决于它的元素。对于多维数组，请使用 `Arrays.deepHashCode`。
 
 **注意：** `Arrays.hashCode(Object[])` 组合了元素的哈希值。以下是其实现：
 
@@ -8081,13 +7978,13 @@ public static int hashCode(Object[] a) {
 
 ## 5.2.5. toString 方法
 
-Object 中的另一个重要方法是 toString 方法，它返回一个表示该对象值的字符串。这是一个典型的例子。Point 类的 toString 方法返回如下字符串：
+`Object` 中的另一个重要方法是 `toString` 方法，它返回一个表示该对象值的字符串。这是一个典型的例子。`Point` 类的 `toString` 方法返回如下字符串：
 
 ```
 java.awt.Point[x=10,y=20]
 ```
 
-大多数（并非所有）toString 方法遵循这种格式：类名，然后是括号内的字段值。这是 Employee 类 toString 方法实现：
+大多数（并非所有）`toString` 方法遵循这种格式：类名，然后是括号内的字段值。这是 `Employee` 类 `toString` 方法实现：
 
 ```java
 public String toString() {
@@ -8098,7 +7995,7 @@ public String toString() {
 }
 ```
 
-实际上，你可以做得更好一点。不要在 toString 方法中硬编码类名，而是调用 `getClass().getName()` 来获取类名的字符串。
+实际上，你可以做得更好一点。不要在 `toString` 方法中硬编码类名，而是调用 `getClass().getName()` 来获取类名的字符串。
 
 ```java
 public String toString() {
@@ -8110,9 +8007,9 @@ public String toString() {
 }
 ```
 
-这种 toString 方法也适用于子类。
+这种 `toString` 方法也适用于子类。
 
-当然，子类程序员应该定义自己的 toString 方法并添加子类的字段。如果父类使用了 `getClass().getName()`，那么子类可以简单地调用 `super.toString()`。例如，这里是 Manager 类的 toString 方法 方法：
+当然，子类程序员应该定义自己的 `toString` 方法并添加子类的字段。如果父类使用了 `getClass().getName()`，那么子类可以简单地调用 `super.toString()`。例如，这里是 `Manager` 类的 `toString` 方法：
 
 ```java
 public class Manager extends Employee {
@@ -8124,22 +8021,20 @@ public class Manager extends Employee {
 }
 ```
 
-
-
 ```java
     + "]";
 }
 ```
 
-现在一个 Manager 对象的打印结果如下：
+现在一个 `Manager` 对象的打印结果如下：
 
 ```
 Manager[name=. . . ,salary=. . . ,hireDay=. . . ][b
 ```
 
 `toString` 方法无处不在，原因非常重要：
-每当使用 `"+"` 运算符将对象与字符串拼接时，Java 编译器会自动调用 `toString`
-方法来获取对象的字符串表示。例如：
+
+每当使用 `"+"` 运算符将对象与字符串拼接时，Java 编译器会自动调用 `toString` 方法来获取对象的字符串表示。例如：
 
 ```java
 var p = new Point(10, 20);
@@ -8210,6 +8105,7 @@ logger.log(INFO, "Current position = " + position)
 **注意：** 在前面的节中，你学习了如何重写 `equals`、`hashCode` 和 `toString` 方法。在极罕见的你需要访问未修改的行为的情况下，请这样做：
 
 - 使用 `==` 代替 `equals` 进行比较
+
 - 调用 `System.identityHashCode(obj)` 或 `Objects.identityToString(obj)` 来获取在你没有重写 `hashCode` 或 `toString` 时本应返回的值
 
 列表 5.4 中的程序测试了 `Employee` 类（列表 5.5）和 `Manager` 类（列表 5.6）的 `equals`、`hashCode` 和 `toString` 方法。
@@ -8314,12 +8210,14 @@ public String toString()
 {
 ```
 
+
+
 ```java
 return getClass().getName() + "[name=" + name + ",salary=" + salary + ",hireDay=" + hireDay + "]";
 }
 ```
 
-# 列表 5.6 equals/Manager.java
+# 列表 5.6：`equals/Manager.java`
 
 ```java
 package equals;
@@ -8342,44 +8240,44 @@ public class Manager extends Employee {
 ```
 
 ```java
-  public boolean equals(Object otherObject) {
+public boolean equals(Object otherObject) {
     if (!super.equals(otherObject)) return false;
     var other = (Manager) otherObject;
     return bonus == other.bonus;
-  }
-  public int hashCode() {
+}
+
+public int hashCode() {
     return Objects.hash(super.hashCode(), bonus);
-  }
-  public String toString() {
+}
+
+public String toString() {
     return super.toString() + "[bonus=" + bonus + "]";
-  }
+}
 }
 ```
 
-```
-
-| java.lang.Object | 1.0 |
+| `java.lang.Object` | 1.0 |
 | :--- | :--- |
 | `getClass()` | 返回一个包含对象信息的类对象。正如你将在本章稍后看到的，Java 有对类的运行时表示。 |
 | `equals(Object otherObject)` | 比较两个对象的相等性；如果对象指向同一内存区域则返回 true，否则返回 false。你应该重写此方法。 |
 | `toString()` | 返回一个表示该对象值的字符串。你应该重写此方法。 |
 
-| java.lang.Class | 1.0 |
+| `java.lang.Class` | 1.0 |
 | :--- | :--- |
 | `getName()` | 返回此类的名称。 |
 | `getSuperclass()` | 返回此类的父类的类对象。 |
 
-| java.lang.System | 1.0 |
+| `java.lang.System` | 1.0 |
 | :--- | :--- |
-| `static identityHashCode(Object x)` | 在没有重写 `hashCode` 时，返回 Object.hashCode() 为 x 返回的哈希码，如果 x 为空则返回 0。 |
+| `static identityHashCode(Object x)` | 在没有重写 `hashCode` 时，返回 `Object.hashCode()` 为 `x` 返回的哈希码，如果 `x` 为空则返回 0。 |
 
 ```java
 java.util.Objects 7
 ```
 
-- *static String identityToString(Object o)* 在没有重写 `toString()` 时，返回 Object.toString() 为 o 返回的字符串，或者返回 o。如果 o 为空则抛出 NullPointerException。
+- `static String identityToString(Object o)`：在没有重写 `toString()` 时，返回 `Object.toString()` 为 `o` 返回的字符串，或者返回 `o`。如果 `o` 为空则抛出 `NullPointerException`。
 
-# 5.3. 通用数组列表
+# 5.3 通用数组列表
 
 在某些编程语言——特别是 C 和 C++ 中——你必须在编译时固定所有数组的大小。程序员讨厌这一点，因为它迫使他们做出不舒服的权衡。一个部门有多少个员工？显然不超过 100 个。如果有一个拥有 150 个员工的巨大部门呢？我们要为每个只有 10 个员工的部门浪费 90 个空位置吗？
 
@@ -8387,57 +8285,55 @@ java.util.Objects 7
 
 ```java
 int actualSize = . . .;
+
 var staff = new Employee[actualSize];
 ```
 
-当然，这段代码并没有完全解决运行时动态修改数组的问题。一旦你设置了数组的大小
+当然，这段代码并没有完全解决运行时动态修改数组的问题。一旦你设置了数组的大小，对于数组的大小，你无法轻易更改它。相反，在 Java 中，你可以使用另一个名为 `ArrayList` 的 Java 类来处理这种常见情况。`ArrayList` 类与数组相似，但它会在你添加和删除元素时自动调整其容量，而不需要任何额外的代码。
 
-
-
-对于数组的大小，你无法轻易更改它。相反，在 Java 中，你可以使用另一个名为 ArrayList 的 Java 类来处理这种常见情况。ArrayList 类与数组相似，但它会在你添加和删除元素时自动调整其容量，而不需要任何额外的代码。
-
-ArrayList 是一个带有类型参数的泛型类。要指定数组列表持有的元素对象的类型，你需要在角括号中附加一个名称，例如 `ArrayList<Employee>`。你将在第 8 章中看到如何定义自己的泛型类，但在使用 ArrayList 类型时，你不需要了解任何这些技术细节。
+`ArrayList` 是一个带有类型参数的泛型类。要指定数组列表持有的元素对象的类型，你需要在角括号中附加一个名称，例如 `ArrayList<Employee>`。你将在第 8 章中看到如何定义自己的泛型类，但在使用 `ArrayList` 类型时，你不需要了解任何这些技术细节。
 
 接下来的章节将向你展示如何操作数组列表。
 
-## 5.3.1. 声明数组列表
+## 5.3.1 声明数组列表
 
 以下是声明并构造一个持有 `Employee` 对象的数组列表的方法：
 
-```
+```java
 ArrayList<Employee> staff = new ArrayList<Employee>
 ```
 
 使用 `var` 关键字避免重复类名是一个好主意：
 
-```
+```java
 var staff = new ArrayList<Employee>();
 ```
 
 如果你不使用 `var` 关键字，可以省略右侧的类型参数：
 
-```
+```java
 ArrayList<Employee> staff = new ArrayList<>();
 ```
 
 这被称为“菱形”语法，因为空括号 `<>` 看起来像菱形。将菱形语法与 `new` 运算符结合使用。编译器会检查新值发生什么。如果它被赋值给变量、传递给方法或从方法返回，那么编译器就会检查变量、参数或方法的泛型类型。它会将该类型放入 `<>` 中。在我们的示例中，新的 `ArrayList<>()` 被赋值给类型为 `ArrayList<Employee>` 的变量。因此，泛型类型是 `Employee`。
 
-> 警告： 如果你使用 `var` 声明 ArrayList，请不要使用菱形语法。如下声明
+> **警告：** 如果你使用 `var` 声明 `ArrayList`，请不要使用菱形语法。如下声明
 
-```
+```java
 var elements = new ArrayList<>();
 ```
 
 会产生一个 `ArrayList<Object>`。
 
-**注意：** 在 Java 5 之前，没有泛型类。相反，只有一个 ArrayList 类，即一个持有 `Object` 类型元素的通用集合。你仍然可以使用不带 `<.>` 后缀的 `ArrayList`。它被视为一种“原始”类型，类型参数被擦除了。
+**注意：** 在 Java 5 之前，没有泛型类。相反，只有一个 `ArrayList` 类，即一个持有 `Object` 类型元素的通用集合。你仍然可以使用不带 `<.>` 后缀的 `ArrayList`。它被视为一种“原始”类型，类型参数被擦除了。
 
 **注意：** 在甚至更早的 Java 版本中，程序员使用 `Vector` 类来实现动态数组。然而，`ArrayList` 类更高效，已经没有使用 `Vector` 类的充分理由了。
 
 使用 `add` 方法向数组列表添加新元素。例如，这里是由于用 `Employee` 对象填充数组列表的：
 
-```
+```java
 staff.add(new Employee("Harry Hacker", . .));
+
 staff.add(new Employee("Tony Tester", . .));
 ```
 
@@ -8445,21 +8341,21 @@ staff.add(new Employee("Tony Tester", . .));
 
 如果你已经知道或大致猜测要存储多少元素，可以在填充数组列表之前调用 `ensureCapacity` 方法：
 
-```
+```java
 staff.ensureCapacity(100);
 ```
 
 该调用分配了一个有一个对象的内部数组。然后，前 100 次 `add` 调用将不会涉及任何昂贵的重新分配。
 
-你也可以向 ArrayList 构造函数传递一个初始容量：
+你也可以向 `ArrayList` 构造函数传递一个初始容量：
 
-```
+```java
 ArrayList<Employee> staff = new ArrayList<>(100);
 ```
 
-> 警告：作为 `new ArrayList<>(100)` 分配数组列表 // 容量为 100 与分配一个新数组不同
+> **警告：** 作为 `new ArrayList<>(100)` 分配数组列表容量为 100 与分配一个新数组不同。
 
-```
+```java
 new Employee[100] // 大小为 100
 ```
 
@@ -8467,13 +8363,13 @@ new Employee[100] // 大小为 100
 
 `size` 方法返回数组列表中的实际元素数量。例如，
 
-```
+```java
 staff.size()
 ```
 
 返回 `staff` 数组列表中的当前元素数量。这等同于对于数组 `a` 的：
 
-```
+```java
 a.length
 ```
 
@@ -8481,18 +8377,18 @@ a.length
 
 一旦修剪了数组列表的大小，添加新元素将再次移动该内存块，这需要时间。只有当你确定不会再向数组列表添加更多元素时，才应该使用 `trimSize`。
 
-> **C++ 注意：** `ArrayList` 类类似于 C++ 的 `vector` 模板。`ArrayList` 和 `vector` 都是泛型类型。但 C++ 的 `vector` 重载了 `[]` 运算符以便于访问元素。Java 没有运算符重载，因此它必须使用显式方法调用。此外，C++ vector 是按值复制的。如果 `a` 和 `b` 是两个 vector，那么赋值 `a = b` 会使 `a` 变成一个与 `b` 长度相同的新 vector，并且所有元素都从 `b` 复制到 `a`。Java 中相同的赋值会使 `a` 和 `b` 都指向同一个数组列表。
+> **C++ 注意：** `ArrayList` 类类似于 C++ 的 `vector` 模板。`ArrayList` 和 `vector` 都是泛型类型。但 C++ 的 `vector` 重载了 `[]` 运算符以便于访问元素。Java 没有运算符重载，因此它必须使用显式方法调用。此外，C++ `vector` 是按值复制的。如果 `a` 和 `b` 是两个 `vector`，那么赋值 `a = b` 会使 `a` 变成一个与 `b` 长度相同的新 `vector`，并且所有元素都从 `b` 复制到 `a`。Java 中相同的赋值会使 `a` 和 `b` 都指向同一个数组列表。
 
-| java.util.ArrayList<E> | |
+| `java.util.ArrayList<E>` | |
 | :--- | :--- |
-| ArrayList<E>() | 构造一个空数组列表 |
-| ArrayList<E>(int initialCapacity) | 具有指定容量的空数组列表 |
-| boolean add(E obj) | 在数组列表末尾追加 obj。始终返回 true |
-| int size() | 返回存储在数组列表中的元素数量。（当然，这不会大于数组列表的容量。） |
-| void ensureCapacity(int capacity) | 确保数组列表有足够的存储给定数量的元素，无需重新分配 |
-| void trimSize() | 将数组列表的容量缩减为当前大小 |
+| `ArrayList<E>()` | 构造一个空数组列表 |
+| `ArrayList<E>(int initialCapacity)` | 具有指定容量的空数组列表 |
+| `boolean add(E obj)` | 在数组列表末尾追加 `obj`。始终返回 true |
+| `int size()` | 返回存储在数组列表中的元素数量。（当然，这不会大于数组列表的容量。） |
+| `void ensureCapacity(int capacity)` | 确保数组列表有足够的存储给定数量的元素，无需重新分配 |
+| `void trimSize()` | 将数组列表的容量缩减为当前大小 |
 
-## 5.3.2. 访问数组列表元素
+## 5.3.2 访问数组列表元素
 
 不幸的是，没有什么是免费的。数组列表的自动增长需要更复杂的语法。
 
@@ -8500,24 +8396,25 @@ a.length
 
 例如，要设置第 `i` 个元素，使用：
 
-```
+```java
 staff.set(i, harry);
 ```
 
 这等同于对于数组的：
 
-```
+```java
 a[i] = harry;
 ```
 
 （和数组一样，索引从零开始。）
 
-> 警告： 在数组列表的大小大于 `i` 之前不要调用 `list.set(i, x)`。例如，以下代码是错误的：
+> **警告：** 在数组列表的大小大于 `i` 之前不要调用 `list.set(i, x)`。例如，以下代码是错误的：
 
 ![](1da005f6b519fd09247a921aebffa570.png)
 
-```
+```java
 var list = new ArrayList<Employee>(100);
+
 list.set(0, x); // 还没有元素 0
 ```
 
@@ -8525,25 +8422,25 @@ list.set(0, x); // 还没有元素 0
 
 要获取数组列表元素，使用：
 
-```
+```java
 Employee e = staff.get(i);
 ```
 
 这等同于：
 
-```
+```java
 Employee e = a[i];
 ```
 
-> **注意：** 当没有泛型类时，原始 ArrayList 类的 `get` 方法只能返回 `Object`。因此，`get` 的调用者必须将返回值转换为所需的类型：
+> **注意：** 当没有泛型类时，原始 `ArrayList` 类的 `get` 方法只能返回 `Object`。因此，`get` 的调用者必须将返回值转换为所需的类型：
 
-```
+```java
 Employee e = (Employee) staff.get(i);
 ```
 
-原始 ArrayList 也很危险。它的 `add` 和 `set` 方法接受任何类型的对象。调用
+原始 `ArrayList` 也很危险。它的 `add` 和 `set` 方法接受任何类型的对象。调用
 
-```
+```java
 staff.set(i, "Harry Hacker");
 ```
 
@@ -8551,8 +8448,9 @@ staff.set(i, "Harry Hacker");
 
 你有时可以通过以下技巧兼得两者——灵活的增长和方便的元素访问。首先，创建一个数组列表并添加所有元素：
 
-```
+```java
 var list = new ArrayList<X>();
+
 while ( . . .)
 {
     x = . . .;
@@ -8562,10 +8460,9 @@ while ( . . .)
 
 当你完成后，使用 `setTo` 方法将元素复制到数组中。
 
-
-
 ```java
 var a = new X[list.size()];
+
 list.toArray(a);
 ```
 
@@ -8573,10 +8470,11 @@ list.toArray(a);
 
 ```java
 int n = staff.size() / 2;
+
 staff.add(n, e);
 ```
 
-位置在 n 及以上的元素将向上移动，以为新条目留出空间。如果插入后数组列表的新大小超过了容量，则该数组列表将重新分配其存储数组。
+位置在 `n` 及以上的元素将向上移动，以为新条目留出空间。如果插入后数组列表的新大小超过了容量，则该数组列表将重新分配其存储数组。
 
 同样，你也可以从数组列表的中间删除一个元素：
 
@@ -8612,11 +8510,13 @@ for (int i = 0; i < staff.size(); i++)
 - 你使用 `size()` 而不是 `length` 来计数元素。
 - 你使用 `a.get(i)` 而不是 `a[i]` 来访问元素。
 
-# 列表 5.7 arrayList/ArrayListTest.java
+# 列表 5.7：`arrayList/ArrayListTest.java`
 
 ```java
 package arrayList;
+
 import java.util.*;
+
 /**
  * This program demonstrates the ArrayList
  * @version 1.11 2012-01-26
@@ -8624,7 +8524,7 @@ import java.util.*;
  */
 public class ArrayListTest {
     public static void main(String[] args) {
-        // fill the staff array list with the
+        // fill the staff array list with
         var staff = new ArrayList<Employee>((
             staff.add(new Employee("Carl Cracker")),
             staff.add(new Employee("Harry Hacker")),
@@ -8645,69 +8545,74 @@ for (Employee e : staff) {
 }
 ```
 
-java.util.ArrayList<E> 1.2
+## `java.util.ArrayList<E>` 1.2
 
-- E set(int index, E obj) 将值 obj 放在数组列表指定的索引处，并返回之前的内容。
-- E get(int index) 获取存储在指定索引的值。
-- void add(int index, E obj) 向上移动元素以便在指定的索引处插入 obj。
-- E remove(int index) 删除给定索引处的元素，将其上方的所有元素向下移动。返回被删除的元素。
+- `E set(int index, E obj)`：将值 `obj` 放在数组列表指定的索引处，并返回之前的内容。
+- `E get(int index)`：获取存储在指定索引的值。
+- `void add(int index, E obj)`：向上移动元素以便在指定的索引处插入 `obj`。
+- `E remove(int index)`：删除给定索引处的元素，将其上方的所有元素向下移动。返回被删除的元素。
 
-## 5.3.3. 类型数组列表与原始数组列表的兼容性
+## 5.3.3 类型数组列表与原始数组列表的兼容性
 
 在你自己的代码中，你总是希望使用类型参数以增加安全性。在本节中，你将看到如何与不使用类型参数的遗留代码交互。
 
 假设你有如下遗留类：
 
 ```java
-public class EmployeeDB{
+public class EmployeeDB {
     public void update(ArrayList list) { . . . }
+
     public ArrayList find(String query) { . . . }
 }
 ```
 
-你可以将带类型的数组列表传递给 update 方法，而无需任何类型转换。
+你可以将带类型的数组列表传递给 `update` 方法，而无需任何类型转换。
 
 ```java
 ArrayList<Employee> staff = . . .;
+
 employeeDB.update(staff);
 ```
 
-staff 对象被直接传递给 update 方法。
 
-> **注意：** 尽管你没有收到编译器的错误或警告，但此调用并不是完全安全的。update 方法可能会向数组列表中添加不是 `Employee` 类型的元素。当检索这些元素时，会发生异常。这听起来很吓，但如果你仔细考虑，这种行为与 Java 引入泛型之前完全一样。虚拟机的完整性从未受到威胁。在这种情况下，你并没有丢失安全性，但也无法从编译时检查中受益。
 
-相反，当你将原始 `ArrayList` 赋值给带类型的时，你会得到一个警告。
+`staff` 对象被直接传递给`update`方法。
+
+> **注意：** 尽管你没有收到编译器的错误或警告，但此调用并不是完全安全的。`update`方法可能会向数组列表中添加不是`Employee`类型的元素。当检索这些元素时，会发生异常。这听起来很吓，但如果你仔细考虑，这种行为与 Java 引入泛型之前完全一样。虚拟机的完整性从未受到威胁。在这种情况下，你并没有丢失安全性，但也无法从编译时检查中受益。
+
+相反，当你将原始`ArrayList`赋值给带类型的时，你会得到一个警告。
 
 ```java
 ArrayList<Employee> result = employeeDB.find(query);
 ```
 
-> **注意：** 要查看警告文本，请使用选项 `-Xlint:unchecked` 进行编译。
+> **注意：** 要查看警告文本，请使用选项`-Xlint:unchecked`进行编译。
 
 使用类型转换并不能消除警告。
 
 ```java
 ArrayList<Employee> result = (ArrayList<Employee>) cast;
+
 // 产生另一个警告
 ```
 
 相反，你会得到一个不同的警告，告诉该类型转换是误导性的。
 
-这是 Java 泛型一个相当遗憾的局限性导致的。为了兼容性，编译器在检查没有违反类型规则后，将所有带类型的数组列表转换为原始 `ArrayList` 对象。在运行的程序中，所有的数组列表都是相同的——运行时没有类型参数。因此，并没有违反类型规则。
+这是 Java 泛型一个相当遗憾的局限性导致的。为了兼容性，编译器在检查没有违反类型规则后，将所有带类型的数组列表转换为原始`ArrayList`对象。在运行的程序中，所有的数组列表都是相同的——运行时没有类型参数。因此，并没有违反类型规则。
 
 ## 5.4. 包装类与自动装箱
 
-有时，你需要将基本类型转换为对象。所有基本类型都有对应的类。例如，`int` 对应 `Integer`。这些包装类的名称非常直观：`Integer`、`Long`、`Float`、`Double`、`Short`、`Character` 和 `Boolean`。（前六继承自公共父类 `Number`。）
+有时，你需要将基本类型转换为对象。所有基本类型都有对应的类。例如，`int`对应`Integer`。这些包装类的名称非常直观：`Integer`、`Long`、`Float`、`Double`、`Short`、`Character`和`Boolean`。（前六继承自公共父类`Number`。）
 
-假设我们想要数组列表。遗憾的是，类型参数不能是基本类型。这时，`Integer` 包装类派上了用场。声明 `ArrayList` 是可以：
+假设我们想要数组列表。遗憾的是，类型参数不能是基本类型。这时，`Integer`包装类派上了用场。声明`ArrayList`是可以：
 
 ```java
 var list = new ArrayList<Integer>();
 ```
 
-> **注意：** `ArrayList<Integer>` 的效率远低于 `int[]`，因为每个值都单独存储在对象内部。只有当程序员的便利比效率更重要时，你才会对小型集合使用这种结构。
+> **注意：** `ArrayList<Integer>`的效率远低于`int[]`，因为每个值都单独存储在对象内部。只有当程序员的便利比效率更重要时，你才会对小型集合使用这种结构。
 
-幸运的是，有一个用的功能可以轻松地向 `ArrayList` 添加 `int` 元素。调用
+幸运的是，有一个用的功能可以轻松地向`ArrayList`添加`int`元素。调用
 
 ```java
 list.add(3);
@@ -8723,7 +8628,7 @@ list.add(Integer.valueOf(3));
 
 > **注意：** 你可能认为拆箱会更一致，但“装箱”（boxing）这个比喻是借自 C#。
 
-相反，当你将一个 `Integer` 对象赋值给 `int` 值时，它会自动拆箱。也就是说，编译器将
+相反，当你将一个`Integer`对象赋值给`int`值时，它会自动拆箱。也就是说，编译器将
 
 ```java
 int n = list.get(i);
@@ -8743,45 +8648,43 @@ Integer n = 3;
 
 编译器会自动插入指令来拆箱对象、增加结果值并将其重新装箱。
 
-在大多数情况下，你会产生一种基本类型及其包装类是同一的错觉。它们仅在一个点上有显著差异：标识性。如你所知，`==` 运算符应用于包装对象时，仅测试是否具有相同的内存位置。以下比较可能会失败：
+在大多数情况下，你会产生一种基本类型及其包装类是同一的错觉。它们仅在一个点上有显著差异：标识性。如你所知，`==`运算符应用于包装对象时，仅测试是否具有相同的内存位置。以下比较可能会失败：
 
 ```java
 Integer a = 1000;
 Integer b = 1000;
+
 if (a == b) . . .
 ```
 
-然而，Java 的实现可能会如果选择的话，将经常出现的值封装成相同的对象，因此这种比较可能会成功。这种歧义并不是你所想要的。解决办法是在比较包装对象时调用 `equals` 方法。
+然而，Java 的实现可能会如果选择的话，将经常出现的值封装成相同的对象，因此这种比较可能会成功。这种歧义并不是你所想要的。解决办法是在比较包装对象时调用`equals`方法。
 
-> **注意：** 自动装箱规范要求 `boolean`、`byte`、小于等于127 的 `char`、`short` 以及在 -128 到 127 之间的 `int` 会被装成固定的
+> **注意：** 自动装箱规范要求`boolean`、`byte`、小于等于 127 的`char`、`short`以及在 -128 到 127 之间的`int`会被装成固定的对象。例如，如果在上一个示例中`a`和`b`被初始化为 100，那么比较将会成功。
 
+**提示：** 永远不要依赖于包装对象的标识性（identity）。不要用`==`比较它们，也不要将它们用锁（参见[第 10 章](#)）。
 
+不要使用包装类的构造函数。它们已经过时并计划被移除。例如，使用`Integer.valueOf(1000)`而永远不要`new Integer(1000)`。或者，简单地依赖自动装箱：`Integer a = 1000`。
 
-
-对象的。例如，如果在上一个示例中 a 和 b 被初始化为 100，那么比较将会成功。
-
-**提示：** 永远不要依赖于包装对象的标识性（identity）。不要用 `==` 比较它们，也不要将它们用锁（参见[第 10 章](#)）。
-
-不要使用包装类的构造函数。它们已经过时并计划被移除。例如，使用 `Integer.valueOf(1000)` 而永远不要 `new Integer(1000)`。或者，简单地依赖自动装箱：`Integer a = 1000`。
-
-自动装箱还有其他细微之处。首先，由于包装类引用可以是 `null`，自动拆箱可能会抛出 `NullPointerException`：
+自动装箱还有其他细微之处。首先，由于包装类引用可以是`null`，自动拆箱可能会抛出`NullPointerException`：
 
 ```java
 Integer n = null;
+
 System.out.println(2 * n); // throws NullPointerException
 ```
 
-此外，如果由于在条件表达式中混合了 Integer 和 Double 类型，那么 Integer 值会被自动拆箱并提升为
+此外，如果由于在条件表达式中混合了`Integer`和`Double`类型，那么`Integer`值会被自动拆箱并提升为
 
 ```java
 Integer n = 1;
 Double x = 2.0;
+
 System.out.println(true ? n : x); // prints 1.0
 ```
 
 最后，让我们强调一下装箱和拆箱是编译器提供的便利功能，而不是虚拟机的功能。编译器在生成类的字节码时会插入必要的调用。虚拟机仅仅是执行这些字节码。
 
-> **预览说明：** Java 的未来版本将允许值类型（value types），即类似于基本类型的用户定义类型——其值不存储在对象内部。例如，一个具有 `double` 字段 `x` 和 `y` 的基本类型 `Point` 的值在内存中仅仅是一个 16 字节块，包含两个相邻的 double 值。你可以复制它，但无法拥有它的引用。
+> **预览说明：** Java 的未来版本将允许值类型（value types），即类似于基本类型的用户定义类型——其值不存储在对象内部。例如，一个具有`double`字段`x`和`y`的基本类型`Point`的值在内存中仅仅是一个 16 字节块，包含两个相邻的 double 值。你可以复制它，但无法拥有它的引用。
 
 在未来的某个时刻，基本类型包装类将成为值类。
 
@@ -8793,27 +8696,29 @@ System.out.println(true ? n : x); // prints 1.0
 int x = Integer.parseInt(s);
 ```
 
-这与 Integer 对象无关——`parseInt` 是一个静态方法。但 Integer 类是放置它的一个好地方。
+这与`Integer`对象无关——`parseInt`是一个静态方法。但`Integer`类是放置它的一个好地方。
 
-> **注意：** `parseInt` 方法及其对应的 `parseDouble` 并不用于解析用户输入。它们支持一种 Java API 中描述的特定格式，该格式与十进制 Java 字面量格式相似，但不包含下划线。要解析人类输入，请使用 `Scanner`。它的 `nextInt` 和 `nextDouble` 方法使用当前区域设置（locale）或你指定的区域设置，以便用户输入他们熟悉的数字和分隔符。
+> **注意：** `parseInt`方法及其对应的`parseDouble`并不用于解析用户输入。它们支持一种 Java API 中描述的特定格式，该格式与十进制 Java 字面量格式相似，但不包含下划线。要解析人类输入，请使用`Scanner`。它的`nextInt`和`nextDouble`方法使用当前区域设置（locale）或你指定的区域设置，以便用户输入他们熟悉的数字和分隔符。
 
-API 注释显示了 Integer 类的一些重要方法。其他数字类实现了对应的方法。
+API 注释显示了`Integer`类的一些重要方法。其他数字类实现了对应的方法。
 
-包装类还定义了常量。对于所有整数包装类型，`MIN_VALUE` 和 `MAX_VALUE` 是该类型的最小最大值。例如，`Integer.MIN_VALUE` 是 -2147483648，`Integer.MAX_VALUE` 是 2147483647。这是一个典型的示例：
+包装类还定义了常量。对于所有整数包装类型，`MIN_VALUE`和`MAX_VALUE`是该类型的最小最大值。例如，`Integer.MIN_VALUE`是 -2147483648，`Integer.MAX_VALUE`是 2147483647。这是一个典型的示例：
 
 ```java
 int largest = Integer.MIN_VALUE; // Replaced with
+
 while (in.hasNext()) largest = Math.max(largest);
 ```
 
-> **注意：** Double 和 Float 类的 `MIN_VALUE` 常数是最小*正*值。如果你想计算最大的浮点数且可能存在负输入，你需要使用：
+> **注意：** `Double`和`Float`类的`MIN_VALUE`常数是最小*正*值。如果你想计算最大的浮点数且可能存在负输入，你需要使用：
 
 ```java
 int largest = -Double.MAX_VALUE; // Do NOT
+
 while (in.hasNextDouble()) largest = Math.max(largest);
 ```
 
-**注意：** 有些人认为包装类可以实现修改数值参数的方法。然而，这是不对的。回想第4 章，编写一个可以增加整数参数的 Java 方法是不可能的，因为 Java 方法的参数总是按值传递的。
+**注意：** 有些人认为包装类可以实现修改数值参数的方法。然而，这是不对的。回想第 4 章，编写一个可以增加整数参数的 Java 方法是不可能的，因为 Java 方法的参数总是按值传递的。
 
 ```java
 public static void triple(int x) // won't
@@ -8822,7 +8727,7 @@ public static void triple(int x) // won't
 }
 ```
 
-我们可以通过使用 `Integer` 代替 `int` 来克服这个问题吗？
+我们可以通过使用`Integer`代替`int`来克服这个问题吗？
 
 ```java
 public static void triple(Integer x) // wo
@@ -8831,25 +8736,21 @@ public static void triple(Integer x) // wo
 }
 ```
 
-问题是 Integer 对象是不可变的：包装内部包含的信息不能改变。你不能使用包装类来创建一个修改数值参数的方法。
+问题是`Integer`对象是不可变的：包装内部包含的信息不能改变。你不能使用包装类来创建一个修改数值参数的方法。
 
-```java
-java.lang.Integer
-```
+### `java.lang.Integer`
 
-- `int intValue()` 返回此 Integer 对象的 int 类型值；重写了 `Number` 类中的 `intValue` 方法。
-- `static String toString(int i)` 返回一个新的 String 对象，用十进制表示数字 `i`。
-- `static String toString(int i, int radix)` 允许你用 `radix` 参数指定的进制表示数字 `i`。
+- `int intValue()`返回此`Integer`对象的 int 类型值；重写了`Number`类中的`intValue`方法。
+- `static String toString(int i)`返回一个新的 String 对象，用十进制表示数字`i`。
+- `static String toString(int i, int radix)`允许你用`radix`参数指定的进制表示数字`i`。
 - `static int parseInt(String s)`
-- `static int parseInt(String s, int radix)` 返回字符串 `s` 中包含数字的整数。该字符串必须表示一个十进制整数（对于第一个方法）或 `radix` 参数指定的进制的整数（对于第二个方法）。
+- `static int parseInt(String s, int radix)`返回字符串`s`中包含数字的整数。该字符串必须表示一个十进制整数（对于第一个方法）或`radix`参数指定的进制的整数（对于第二个方法）。
 - `static Integer valueOf(String s)`
-- `static Integer valueOf(String s, int radix)` 返回一个新的 Integer 对象，初始化为字符串 `s` 中包含数字的整数。
+- `static Integer valueOf(String s, int radix)`返回一个新的`Integer`对象，初始化为字符串`s`中包含数字的整数。
 
-```java
-java.lang.Integer 1.0
-```
+### `java.lang.Integer 1.0`
 
-- `Number parseDouble(String s)` 返回数值，假设字符串表示一个数字。
+- `Number parseDouble(String s)`返回数值，假设字符串表示一个数字。
 
 ## 5.5. 变长参数方法
 
@@ -8867,7 +8768,7 @@ System.out.printf("%d %s", n, "widgets");
 
 尽管一个调用有两个参数而另一个有三个，但它们都调用了同一个方法。
 
-`printf` 方法定义如下：
+`printf`方法定义如下：
 
 ```java
 public class PrintStream {
@@ -8877,16 +8778,18 @@ public class PrintStream {
 }
 ```
 
-在这里，省略号 `...` 是 Java 代码的一部分。它表示该方法可以接收任意数量的对象（除 `fmt` 参数外）。`printf` 方法实际上接收两个参数：格式字符串和一个持有所有参数的 `Object[]` 数组。（如果调用者提供整数或其他基本值，将将其自动装箱为对象）。它现在面临着一项令人讨厌的任务：扫描 `fmt` 字符串并将第 i 个占位符与 `args[i]` 匹配。
+在这里，省略号`...`是 Java 代码的一部分。它表示该方法可以接收任意数量的对象（除`fmt`参数外）。`printf`方法实际上接收两个参数：格式字符串和一个持有所有参数的`Object[]`数组。（如果调用者提供整数或其他基本值，将将其自动装箱为对象）。它现在面临着一项令人讨厌的任务：扫描`fmt`字符串并将第 i 个占位符与`args[i]`匹配。
 
-句话句话，对于 `printf` 的实现者来说，`Object...` 类型与 `Object[]` 完全相同。
+句话句话，对于`printf`的实现者来说，`Object...`类型与`Object[]`完全相同。
 
 你可以定义自己的带有变长参数的方法，并为参数指定任何类型，甚至是基本类型。这是一个简单的示例：计算变数量数值最大值的函数。
 
 ```java
 public static double max(double... values) {
     double largest = Double.NEGATIVE_INFINITY;
+
     for (double v : values) if (v > largest) largest = v;
+
     return largest;
 }
 ```
@@ -8897,7 +8800,7 @@ public static double max(double... values) {
 double m = max(3.1, 40.4, -5);
 ```
 
-编译器将一个新的 `double[] { 3.1, 40.4, -5 }` 传递给 `max` 函数。
+编译器将一个新的`double[] { 3.1, 40.4, -5 }`传递给`max`函数。
 
 **注意：** 传递变长参数类型的数组而不是变长参数是合法的。例如：
 
@@ -8905,7 +8808,7 @@ double m = max(3.1, 40.4, -5);
 System.out.printf("%d %s", new Object[]);
 ```
 
-因此，你可以将一个最后一个参数为数组的现有函数重新定义为带有变长参数的方法，而不会破坏任何现有代码。例如，`MessageFormat.format` 在 Java 5 中这种方式得到了增强。如果你愿意，甚至可以将 `main` 方法声明为：
+因此，你可以将一个最后一个参数为数组的现有函数重新定义为带有变长参数的方法，而不会破坏任何现有代码。例如，`MessageFormat.format`在 Java 5 中这种方式得到了增强。如果你愿意，甚至可以将`main`方法声明为：
 
 ```java
 public static void main(String... args)
@@ -8913,29 +8816,27 @@ public static void main(String... args)
 
 ## 5.6. 抽象类
 
-随着你在继承层次结构向上移动，类变得越来越通用，可能越来越抽象。在某个时刻，祖先类变得如此通用，以至于你更多地将其视为其他类的基础，而不是你想要使用的具有特定实例的类。例如，考虑我们的 `Employee` 类层次结构的扩展。员工是一个人，人也是一个
-
-
-学生。让我们扩展类层次结构以包含 `Person` 和 `Student` 类。图 5.2 显示了这些类之间的继承关系。
+随着你在继承层次结构向上移动，类变得越来越通用，可能越来越抽象。在某个时刻，祖先类变得如此通用，以至于你更多地将其视为其他类的基础，而不是你想要使用的具有特定实例的类。例如，考虑我们的`Employee`类层次结构的扩展。员工是一个人，人也是一个学生。让我们扩展类层次结构以包含`Person`和`Student`类。图 5.2 显示了这些类之间的继承关系。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_593_0.png)
 
-**图 5.2：** Person 及其子类的继承图
+**图 5.2：** `Person`及其子类的继承图
 
-为什么要费力进行如此高层次的抽象？有些属性对每个人来说都有意义，例如姓名。学生和员工都有名字，引入一个共同的超类让我们可以将 `getName` 方法提取到继承层次结构中的更高层次。
+为什么要费力进行如此高层次的抽象？有些属性对每个人来说都有意义，例如姓名。学生和员工都有名字，引入一个共同的超类让我们可以将`getName`方法提取到继承层次结构中的更高层次。
 
-现在让我们添加另一个方法 `getDescription`，其目的是返回该人的简要描述，例如：
+现在让我们添加另一个方法`getDescription`，其目的是返回该人的简要描述，例如：
 
 一个工资为 $50,000.00 的员工，或者一个主修计算机科学的学生
 
-在 `Employee` 和 `Student` 类中实现这个方法很容易。但在 `Person` 类中，你能提供什么信息呢？`Person` 类除了姓名之外，对该人员一无所知。当然，你可以实现 `Person.getDescription()` 来返回一个空字符串。但有更好的方法。如果你使用 `abstract` 关键字，你根本就不需要实现该方法。
+在`Employee`和`Student`类中实现这个方法很容易。但在`Person`类中，你能提供什么信息呢？`Person`类除了姓名之外，对该人员一无所知。当然，你可以实现`Person.getDescription()`来返回一个空字符串。但有更好的方法。如果你使用`abstract`关键字，你根本就不需要实现该方法。
 
 ```java
 public abstract String getDescription();
+
 // 无需实现
 ```
 
-为了清晰起见，包含一个或多个抽象方法的类本身必须被声明为 `abstract`。
+为了清晰起见，包含一个或多个抽象方法的类本身必须被声明为`abstract`。
 
 ```java
 public abstract class Person
@@ -8945,7 +8846,7 @@ public abstract class Person
 }
 ```
 
-除了抽象方法外，抽象类还可以拥有字段和具体方法。例如，`Person` 类存储了人的姓名，并有一个返回该姓名的具体方法。
+除了抽象方法外，抽象类还可以拥有字段和具体方法。例如，`Person`类存储了人的姓名，并有一个返回该姓名的具体方法。
 
 ```java
 public abstract class Person
@@ -8968,13 +8869,13 @@ public abstract class Person
 
 > **提示：** 有些程序员没有意识到抽象类可以拥有具体方法。你应该将公共字段和方法（无论是否抽象）移动父类（无论是否抽象）。
 
-抽象方法是子类中实现方法的占位符。当你扩展一个抽象类时，有两种选择。你可以让部分或全部抽象方法未定义；那么，你必须也将该子类标记为 `abstract`。或者，你可以定义所有方法，此时子类就不再是抽象类。
+抽象方法是子类中实现方法的占位符。当你扩展一个抽象类时，有两种选择。你可以让部分或全部抽象方法未定义；那么，你必须也将该子类标记为`abstract`。或者，你可以定义所有方法，此时子类就不再是抽象类。
 
-例如，我们将定义一个继承自抽象 `Person` 类的 `Student` 类，并实现 `getDescription` 方法。`Student` 类中的任何方法都不是抽象的，因此它不需要被声明为抽象类。
+例如，我们将定义一个继承自抽象`Person`类的`Student`类，并实现`getDescription`方法。`Student`类中的任何方法都不是抽象的，因此它不需要被声明为抽象类。
 
-一个类即使没有抽象方法，也可以被声明为 `abstract`。
+一个类即使没有抽象方法，也可以被声明为`abstract`。
 
-抽象类不能被实例化。也就是说，如果一个类被声明为 `abstract`，就无法创建该类的对象。例如，表达式
+抽象类不能被实例化。也就是说，如果一个类被声明为`abstract`，就无法创建该类的对象。例如，表达式
 
 ```java
 new Person("Vince Vu")
@@ -8988,9 +8889,9 @@ new Person("Vince Vu")
 Person p = new Student("Vince Vu", "Economics");
 ```
 
-在这里，`p` 是抽象类型 `Person` 的变量，指向非抽象子类 `Student` 的实例。
+在这里，`p`是抽象类型`Person`的变量，指向非抽象子类`Student`的实例。
 
-> **C++ 笔记：** 在 C++ 中，抽象方法被称为纯虚函数，并带有尾随的 `= 0` 标记，例如：
+> **C++ 笔记：** 在 C++ 中，抽象方法被称为纯虚函数，并带有尾随的`= 0`标记，例如：
 
 ```cpp
 class Person // C++
@@ -9003,7 +8904,7 @@ public:
 
 如果一个 C++ 类至少有一个纯虚函数，它就是抽象类。在 C++ 中，没有特殊的关键字来表示抽象类。
 
-让我们定义一个继承自抽象类 `Person` 的具体子类 `Student`：
+让我们定义一个继承自抽象类`Person`的具体子类`Student`：
 
 ```java
 public class Student extends Person {
@@ -9013,10 +8914,13 @@ public class Student extends Person {
         super(name);
         this.major = major;
     }
+```
 
-    public String getDescription() {
-        return "a student majoring in " + major;
-    }
+
+
+```java
+public String getDescription() {
+    return "a student majoring in " + major;
 }
 ```
 
@@ -9026,7 +8930,9 @@ public class Student extends Person {
 
 ```java
 var people = new Person[2];
+
 people[0] = new Employee( .. );
+
 people[1] = new Student( .. );
 ```
 
@@ -9047,7 +8953,7 @@ p.getDescription()
 
 你是否可以完全从 `Person` 超类中省略抽象方法，而仅在 `Employee` 和 `Student` 子类中定义 `getDescription` 方法？如果你这样做，你将无法在变量 `p` 上调用 `getDescription` 方法。编译器确保你只调用在类中声明的方法。抽象方法是 Java 语言中的一个重要概念。你最常接口内部遇到它们。关于接口的更多信息，请参阅第 6 章。
 
-## 5.7. 枚举类
+## 5.7 枚举类
 
 你在第 3 章学习了如何定义枚举类型。这里有一个典型的例子：
 
@@ -9057,14 +8963,12 @@ public enum Size { SMALL, MEDIUM, LARGE, EXTRA_LARGE };
 
 当你引用这些常量时，使用类名对其进行修饰，例如 `Size.SMALL`。在三种情况下可以使用不修饰的名字：
 
-- 1. 正如很快就会看到的，枚举可以拥有方法。在枚举的方法内部，你可以使用
-
-未限定名。
-
-- 2. 在 switch 的选择器为枚举类型的情况的情况下，你不需要使用限定符：
+1. 正如很快就会看到的，枚举可以拥有方法。在枚举的方法内部，你可以使用未限定名。
+2. 在 `switch` 的选择器为枚举类型的情况下，你不需要使用限定符：
 
 ```java
 Size s = . . ;
+
 String abbrev = switch (s)
 {
     case SMALL -> "S"
@@ -9072,16 +8976,19 @@ String abbrev = switch (s)
 }
 ```
 
-- 3. 你可以静态导入枚举的所有常量：
+3. 你可以静态导入枚举的所有常量：
 
 ```java
 import com.horstmann.util.Size;
+
 import static com.horstmann.util.Size.*;
+
 . . .
+
 Size s = SMALL;
 ```
 
-> **Caution：** 你不能从默认包中的枚举中静态导入常量。例如，Size 位于默认包中，你无法使用
+> **Caution：** 你不能从默认包中的枚举中静态导入常量。例如，`Size` 位于默认包中，你无法使用：
 
 ```java
 import static Size.*;
@@ -9103,44 +9010,52 @@ public enum Size
     LARGE,
     EXTRA_LARGE,
     XXL,
+
     // 在此处添加更多值并加上逗号
 }
 ```
 
-所有枚举类型都是抽象类 `Enum` 的子类。它们从该类继承许多方法。最有用的方法是 `name`，它返回枚举常量的名称。例如，Size.SMALL.toString() 返回字符串 "SMALL"。
+所有枚举类型都是抽象类 `Enum` 的子类。它们从该类继承许多方法。最有用的方法是 `name`，它返回枚举常量的名称。例如，`Size.SMALL.toString()` 返回字符串 `"SMALL"`。
 
-默认情况下，`toString` 方法返回 name。然而，你可以重写 `toString`，而 `name` 是 final 的。
+默认情况下，`toString` 方法返回 `name`。然而，你可以重写 `toString`，而 `name` 是 `final` 的。
 
-`name` 的反向操作是静态方法 `valueOf`。例如，语句
+`name` 的反向操作是静态方法 `valueOf`。例如，语句：
 
 ```java
 Size s = Enum.valueOf(Size.class, "SMALL");
 ```
 
-将 s 设置为 Size.SMALL。
+将 `s` 设置为 `Size.SMALL`。
 
-每个枚举类型都有一个静态的 `values` 方法，返回枚举所有值的数组。例如，调用
+每个枚举类型都有一个静态的 `values` 方法，返回枚举所有值的数组。例如，调用：
 
 ```java
 Size[] values = Size.values();
 ```
 
-返回包含元素 Size.SMALL、Size.MEDIUM、Size.LARGE 和 Size.EXTRA_LARGE 的数组。
+返回包含元素 `Size.SMALL`、`Size.MEDIUM`、`Size.LARGE` 和 `Size.EXTRA_LARGE` 的数组。
 
-`ordinal` 方法产生枚举常量在枚举声明中的位置，从零开始计数。例如，Size.MEDIUM.ordinal() 返回 1。
+`ordinal` 方法产生枚举常量在枚举声明中的位置，从零开始计数。例如，`Size.MEDIUM.ordinal()` 返回 `1`。
 
 如果你喜欢，可以在枚举类型中添加构造函数、方法和字段。这里有一个示例：
 
 ```java
 public enum Size {
     SMALL("S"), MEDIUM("M"), LARGE("L"), EXTRA_LARGE
+
     private final String abbreviation;
-    Size(String abbreviation) { this.abbreviation = abbreviation; } // 自动为 private
-    public String getAbbreviation() { return abbreviation; }
+
+    Size(String abbreviation) {
+        this.abbreviation = abbreviation;
+    } // 自动为 private
+
+    public String getAbbreviation() {
+        return abbreviation;
+    }
 }
 ```
 
-Note：当枚举拥有字段或方法时，你必须用分号结束常量列表，如上面的所示。
+> **Note：** 当枚举拥有字段或方法时，你必须用分号结束常量列表，如上面的示例所示。
 
 在末尾逗号后加分号是合法的。
 
@@ -9152,22 +9067,26 @@ public enum Size {
     MEDIUM,
     LARGE,
     EXTRA_LARGE {
-        public String toString() { return "XL"; }
+        public String toString() {
+            return "XL";
+        }
     }
 }
 ```
 
-然而，这并不常见。在前面的示例中，EXTRA_LARGE 是 Size 的子类的实例。除此之外，你不能形成枚举的子类。
+然而，这并不常见。在前面的示例中，`EXTRA_LARGE` 是 `Size` 的子类的实例。除此之外，你不能形成枚举的子类。
 
-枚举的构造函数始终是私有的。你可以省略 private 修饰符，如前面的示例。将枚举构造函数声明为 public 或 protected 是语法错误。
+枚举的构造函数始终是私有的。你可以省略 `private` 修饰符，如前面的示例。将枚举构造函数声明为 `public` 或 `protected` 是语法错误。
 
-> **Caution：** 枚举类的构造函数不能在正在构造的实例上调用 switch：
+> **Caution：** 枚举类的构造函数不能在正在构造的实例上调用 `switch`：
 
 ```java
 public enum Size
 {
     SMALL, MEDIUM, LARGE, EXTRA_LARGE;
+
     private final boolean largish;
+
     Size() {
         largish = switch (this) // 错误
         {
@@ -9178,101 +9097,171 @@ public enum Size
 }
 ```
 
-这个奇怪的限制是由枚举 switch 的实现策略引起的。每个 switch 都会查询一个数组，将当前定义的枚举常量序数值映射到 switch 编译时的序数值。这些数组只有在枚举实例构造后才能构建。
+这个奇怪的限制是由枚举 `switch` 的实现策略引起的。每个 `switch` 都会查询一个数组，将当前定义的枚举常量序数值映射到 `switch` 编译时的序数值。这些数组只有在枚举实例构造后才能构建。
 
-在方法中，这样的 switch 可以正常工作。
+在方法中，这样的 `switch` 可以正常工作。
 
 列表 5.12 中的短程序演示了如何处理枚举类型。
 
-> **Note：** Enum 类有一个类型参数，我为了简单起见忽略了它。例如，枚举类型 `Size` 实际上扩展了 `Enum<Size>`。该类型参数用于 `compareTo` 方法。（我在第 6 章讨论了 `compareTo` 方法，在第 8 章讨论了类型参数。）
+> **Note：** `Enum` 类有一个类型参数，我为了简单起见忽略了它。例如，枚举类型 `Size` 实际上扩展了 `Enum<Size>`。该类型参数用于 `compareTo` 方法。（我在第 6 章讨论了 `compareTo` 方法，在第 8 章讨论了类型参数。）
 
-## **Listing 5.12** enums/EnumTest.java
+## Listing 5.12：`enums/EnumTest.java`
 
 ```java
 1 package enums;
+
 2 import java.util.*;
-4 
+
+4
+
 5 //**
+
 6 * 此程序演示了枚举类型
+
 7 * @version 1.0 2004-05-24
+
 8 * @author Cay Horstmann
+
 9 */
+
 10 public class EnumTest
+
 11 {
+
 12   public static void main(String[] args)
+
 13   {
+
 14     var in = new Scanner(System.in);
+
 15     System.out.print("Enter a size: ");
+
 16     String input = in.next().toUpperCase();
+
 17     try {
+
 18         Size size = Enum.valueOf(Size.class, input);
+
 19         System.out.println("size=" + size);
+
 20         System.out.println("abbreviation=" + size.getAbbreviation());
+
 21     } catch (IllegalArgumentException e) {
+
 22         System.out.println("Invalid size: " + input);
+
 23     }
+
 24 }
 ```
-*(注：Listing 5.12 的 OCR 在源文件中乱码了，我将根据常见的 Java 模式和提供的片段重构逻辑，但提示说要保留所有信息。让我重新检查 5.12 的 OCR 文本。）*
+
+注：Listing 5.12 的 OCR 在源文件中乱码了，我将根据常见的 Java 模式和提供的片段重构逻辑，但提示说要保留所有信息。让我重新检查 5.12 的 OCR 文本。
 
 重新评估 5.12 的 OCR：
-```
-1 package enums;
-2 import java.util.*;
-4 
-5 //**
-6 * This program demonstrates enumerated typ
-7 * @version 1.0 2004-05-24
-8 * @author Cay Horstmann
-9 */
-10 public class EnumTest
-11 {
-12   public static void main(String[] args)
-13   {
-14     var in = new Scanner(System.in);
-15     System.out.print("Enter a size: ");
-16     String input = in.next().toUpperCase();
-17     try {
-18         Size size = Enum.valueOf(Size.class, input);
-19         System.out.println("size=" + size);
-20         System.out.println("abbreviation=" + size.getAbbreviation());
-21     } catch (IllegalArgumentException e) {
-22         System.out.println("Invalid size: " + input);
-23     }
-24 }
-```
-（实际上，5.12 的 OCR 文本极其破碎。我将在修复明显的同步问题的基础上输出现有的内容。）
 
-基于可用片段修正后的 Listing 5.12：
 ```java
 1 package enums;
+
 2 import java.util.*;
-4 
+
+4
+
 5 //**
-6 * This program demonstrates enumerated types
+
+6 * This program demonstrates enumerated typ
+
 7 * @version 1.0 2004-05-24
+
 8 * @author Cay Horstmann
+
 9 */
+
 10 public class EnumTest
+
 11 {
+
 12   public static void main(String[] args)
+
 13   {
+
 14     var in = new Scanner(System.in);
+
 15     System.out.print("Enter a size: ");
+
 16     String input = in.next().toUpperCase();
+
 17     try {
+
 18         Size size = Enum.valueOf(Size.class, input);
+
 19         System.out.println("size=" + size);
+
 20         System.out.println("abbreviation=" + size.getAbbreviation());
+
 21     } catch (IllegalArgumentException e) {
+
 22         System.out.println("Invalid size: " + input);
+
 23     }
+
+24 }
+```
+
+实际上，5.12 的 OCR 文本极其破碎。我将在修复明显的同步问题的基础上输出现有的内容。
+
+基于可用片段修正后的 Listing 5.12：
+
+```java
+1 package enums;
+
+2 import java.util.*;
+
+4
+
+5 //**
+
+6 * This program demonstrates enumerated types
+
+7 * @version 1.0 2004-05-24
+
+8 * @author Cay Horstmann
+
+9 */
+
+10 public class EnumTest
+
+11 {
+
+12   public static void main(String[] args)
+
+13   {
+
+14     var in = new Scanner(System.in);
+
+15     System.out.print("Enter a size: ");
+
+16     String input = in.next().toUpperCase();
+
+17     try {
+
+18         Size size = Enum.valueOf(Size.class, input);
+
+19         System.out.println("size=" + size);
+
+20         System.out.println("abbreviation=" + size.getAbbreviation());
+
+21     } catch (IllegalArgumentException e) {
+
+22         System.out.println("Invalid size: " + input);
+
+23     }
+
 24 }
 ```
 
 ## 5.8 Sealed Classes（密封类）
 
-在 Java 中，密封类（sealed class）控制哪些类可以继承自它。除非一个类是 final 的，否则任何人都可以形成子类。如果我们想要这种控制呢？例如，假设我们需要建模这种：数组、数字、字符串、对象或空。一种明显的方法是使用 JSONArray、JSONNumber 等进行建模。通过将 JSONArray、JSONNumber 等声明为 final，我们可以确保没有人形成子类。密封标准不会改变；如果变了，我们作为实现者会添加第七个子类。
+在 Java 中，密封类（`sealed class`）控制哪些类可以继承自它。除非一个类是 `final` 的，否则任何人都可以形成子类。如果我们想要这种控制呢？例如，假设我们需要建模这种：数组、数字、字符串、对象或空。一种明显的方法是使用 `JSONArray`、`JSONNumber` 等进行建模。通过将 `JSONArray`、`JSONNumber` 等声明为 `final`，我们可以确保没有人形成子类。密封标准不会改变；如果变了，我们作为实现者会添加第七个子类。
 
 以下是将 `EnumValue` 类声明为密封的方法：
 
@@ -9281,6 +9270,7 @@ public abstract sealed class EnumValue
 permits JSONArray, JSONNumber
 {
     ...
+}
 ```
 
 定义非许可的子类是错误的：
@@ -9291,16 +9281,13 @@ public class JSONComment extends EnumValue { ... }
 
 密封类允许对领域进行准确的建模。密封类的许可子类必须是可的。它们不能是嵌套在另一个类中的私有类，或者是另一个包中的可见类。对于公共许可子类，规则更为严格。它们必须与密封类在同一个包中。然而，如果你使用了模块（参见第 12 章），那么它们必须在同一个模块中。
 
-> **Note：** 密封类可以在没有 permits 子句的情况下声明。那么它的所有直接子类都必须在同一个文件中声明。没有该文件访问权限的程序员无法形成子类。
+> **Note：** 密封类可以在没有 `permits` 子句的情况下声明。那么它的所有直接子类都必须在同一个文件中声明。没有该文件访问权限的程序员无法形成子类。
 
 然而，正如你在下一章中看到的，你可以使用内部类作为公共子类。
 
-一个文件最多有一个公共类，所以这种安排似乎只有在子类不是 public 的情况下有用。
+一个文件最多有一个公共类，所以这种安排似乎只有在子类不是 `public` 的情况下有用。
 
-密封类的一个重要动机是编译时检查。考虑 `EnumValue` 类的这个方法，其
-
-
-使用了带模式匹配的 switch 表达式（见第 5.9 节）：
+密封类的一个重要动机是编译时检查。考虑 `EnumValue` 类的这个方法，其使用了带模式匹配的 `switch` 表达式（见第 5.9 节）：
 
 ```java
 public String type() {
@@ -9316,11 +9303,11 @@ public String type() {
 }
 ```
 
-编译器可以检查出不需要 default 子句，因为 `JSONValue` 的所有直接子类都作为 case 出现。
+编译器可以检查出不需要 `default` 子句，因为 `JSONValue` 的所有直接子类都作为 `case` 出现。
 
-> 注意：上述 `type` 方法看起来并不非常面向对象。符合 OOP 精神的做法让这六个类中的每一个都提供自己的 `type` 方法，依赖多态而不是 switch。对于开放的层次结构，这是一个很好的方法。但当存在一组固定的类时，在一个方法中包含所有备选项通常更方便。
+> **注意：** 上述 `type` 方法看起来并不非常面向对象。符合 OOP 精神的做法让这六个类中的每一个都提供自己的 `type` 方法，依赖多态而不是 `switch`。对于开放的层次结构，这是一个很好的方法。但当存在一组固定的类时，在一个方法中包含所有备选项通常更方便。
 
-乍一看，密封类（sealed class）的子类必须是 final 的。但对于穷备性测试，我们只需要知道所有的直接子类。如果这些类有进一步的子类也没有问题。例如，我们可以如图 5.3 所示重新组织 JSON 层次结构。
+乍一看，密封类（`sealed class`）的子类必须是 `final` 的。但对于穷备性测试，我们只需要知道所有的直接子类。如果这些类有进一步的子类也没有问题。例如，我们可以如图 5.3 所示重新组织 JSON 层次结构。
 
 **图 5.3：** 表示 JSON 值的完整类层次结构
 
@@ -9344,7 +9331,7 @@ public abstract sealed class JSONPrimitive extends permits JSONString, JSONNumbe
 
 密封类的子类必须指定它是 `sealed`、`final` 还是允许子类化的 `open`。在后者的情况下，必须声明为 `non-sealed`。
 
-> 注意：`non-sealed` 关键字是第一个带连字符的 Java 关键字。这很可能是一个未来的趋势。向语言中添加关键字总是伴随着风险。现有代码可能不再能够编译。因此，`sealed` 是一个“上下文”关键字。你仍然可以声明名为 `sealed` 的变量或方法：
+> **注意：** `non-sealed` 关键字是第一个带连字符的 Java 关键字。这很可能是一个未来的趋势。向语言中添加关键字总是伴随着风险。现有代码可能不再能够编译。因此，`sealed` 是一个“上下文”关键字。你仍然可以声明名为 `sealed` 的变量或方法：
 
 ```java
 int sealed = 1; // 使用上下文关键字是允许的
@@ -9354,40 +9341,42 @@ int sealed = 1; // 使用上下文关键字是允许的
 
 ```java
 int non = 0;
-non = non-sealed; // 是减法，不是
 ```
+
+
+
+`non = non-sealed; //` 是减法，不是
 
 你为什么想要非密封的子类呢？考虑一个具有六个直接子类的 XML 节点类：
 
 ```java
-public abstract sealed class Node permits Element
-CDATASection, EntityReference, ProcessingIn
-{
-  . . .
+public abstract sealed class Node permits Element,
+    CDATASection, EntityReference, ProcessingInstruction {
+    . . .
+}
 ```
 
 我们允许 `Element` 有任意的子类：
 
 ```java
-public non-sealed class Element extends Node
-{
-  . . .
+public non-sealed class Element extends Node {
+    . . .
 }
 
-public class HTMLDivElement extends Element
-{
+public class HTMLDivElement extends Element {
     ...
-n
-}```
+}
+```
 
 在这一节中，你学习了密封类。在下一章中，你将学习接口，它是抽象类的泛化。Java 接口也可以有子类型。密封接口的工作与密封类完全相同，控制直接子类型。
 
-下面的示例程序完善了 JSON 层次结构。`JSONObject` 的实现使用了 `HashMap`，将在第 9 章中介绍。在示例中，我们使用接口而不是抽象类，以便 `JSONNumber` 和 `JSONString` 可以是 record，而 `JSONObject` 和 `JSONNull` 类可以是枚举（enumerations）。record 和枚举可以实现接口，但不能扩展类。
+下面的示例程序完善了 JSON 层次结构。`JSONObject` 的实现使用了 `HashMap`，将在第 9 章中介绍。在示例中，我们使用接口而不是抽象类，以便 `JSONNumber` 和 `JSONString` 可以是 `record`，而 `JSONObject` 和 `JSONNull` 类可以是枚举（enumerations）。`record` 和枚举可以实现接口，但不能扩展类。
 
-# 列表 5.13 sealed/SealedTest.java
+# 列表 5.13 `sealed/SealedTest.java`
 
 ```java
 package sealed;
+
 import java.util.*;
 
 sealed interface JSONValue permits JSONArray, JSONObject {
@@ -9407,25 +9396,32 @@ final class JSONObject extends HashMap<String, JSONValue> {
     public String toString() {
         StringBuilder result = new StringBuilder();
         result.append("{");
+
         for (Map.Entry<String, JSONValue> entry : entry()) {
-          if (result.length() > 1) result.append(", ");
-          result.append(entry.getKey());
-          result.append(": ");
-          result.append(entry.getValue());
+            if (result.length() > 1) result.append(", ");
+            result.append(entry.getKey());
+            result.append(": ");
+            result.append(entry.getValue());
         }
+
         result.append("}");
         return result.toString();
     }
 }
 
-sealed interface JSONPrimitive extends JSONPrimitive permits JSONNumber, JSONString, JSONBoolean
+sealed interface JSONPrimitive extends JSONPrimitive
+    permits JSONNumber, JSONString, JSONBoolean
 
 final record JSONNumber(double value) implements JSONPrimitive {
-  public String toString() { return """" + value + """"; }
+    public String toString() {
+        return """" + value + """";
+    }
 }
 
 final record JSONString(String value) implements JSONPrimitive {
-  public String toString() { return """" + value + """"; }
+    public String toString() {
+        return """" + value + """";
+    }
 }
 
 enum JSONBoolean implements JSONPrimitive {
@@ -9458,6 +9454,7 @@ public class SealedTest {
 ```java
 Employee e = ...;
 String description;
+
 if (e instanceof Executive exec) description = "...";
 else if (e instanceof Manager m) description = "...";
 else description = "A lowly employee with a salary";
@@ -9467,6 +9464,7 @@ else description = "A lowly employee with a salary";
 
 ```java
 Employee e = ...;
+
 String description = switch (e) {
     case Executive exec -> "An executive with a";
     case Manager m -> "A manager who deserves a";
@@ -9474,7 +9472,7 @@ String description = switch (e) {
 };
 ```
 
-注意，与 `instanceof` 模式一样，每个 case 都会声明一个匹配类型的变量。你使用这些变量来访问子类方法（例如示例中的 `getTitle`）。
+注意，与 `instanceof` 模式一样，每个 `case` 都会声明一个匹配类型的变量。你使用这些变量来访问子类方法（例如示例中的 `getTitle`）。
 
 使用 `switch` 表达式形式比 `if` 语句链更简单。`switch` 表达式产生一个值赋值给 `description` 变量。相比之下，使用 `instanceof` 时，条件语句的每个分支都必须设置 `description` 的值。
 
@@ -9499,19 +9497,15 @@ case Employee __ -> "A lowly employee"
 经典的 `switch` 语句对空是敏感的。如果选择器表达式为 `null`，`switch` 将抛出 `NullPointerException`。你可以通过添加 `case null` 来避免这一点：
 
 ```java
-String description = switch (e)
-  case Executive exec -> "An executive with a"
-  case Manager m -> "A manager who deserves a"
-  case null -> "No employee"
-  default -> "A lowly employee with a salary"
-;
+String description = switch (e) {
+    case Executive exec -> "An executive with a";
+    case Manager m -> "A manager who deserves a";
+    case null -> "No employee";
+    default -> "A lowly employee with a salary";
+};
 ```
 
-你可以将 `case null` 与 `default` 结合，但不能与其他任何 case 结合。
-
-
-
-
+你可以将 `case null` 与 `default` 结合，但不能与其他任何 `case` 结合：
 
 ```java
 case null, default -> "No free parking";
@@ -9519,17 +9513,17 @@ case null, default -> "No free parking";
 
 **注意：** 你不能使用 `case _` 来表示默认情况。这是刻意为之，这样你就不需要记住此类情况是否涵盖了 `null`。
 
-## 5.9.2. 守卫 (Guards)
+## 5.9.2. 守卫（Guards）
 
-你可以为模式添加一个条件，称为*守卫*（guard），使用受限的 `when` 关键字。
+你可以为模式添加一个条件，称为*守卫*（guard），使用受限的 `when` 关键字：
 
 ```java
-case Executive exec **when** exec.getTitle().equals("An executive with an impressive title")
+case Executive exec when exec.getTitle().equals("An executive with an impressive title")
 ```
 
 在守护表达式中，你可以使用模式引入的变量。
 
-如果守护表达式不满足，则该 case 不会被选中，并测试下一个 case。
+如果守护表达式不满足，则该 `case` 不会被选中，并测试下一个 `case`。
 
 如果在 `when` 子句中发生异常，`switch` 将抛出该异常。
 
@@ -9537,27 +9531,27 @@ case Executive exec **when** exec.getTitle().equals("An executive with an impres
 
 ```java
 Point p = . . .;
-String description = switch (p)
-{
+
+String description = switch (p) {
     case Point(var x, var y) when x == 0 && y == 0 -> "origin";
     case Point(var x, var _) when x == 0 -> "on y-axis";
     case Point(var _, var y) when y == 0 -> "on x-axis";
-    default -> "not on either axis"
+    default -> "not on either axis";
 };
 ```
 
-注意：记录模式会调用组件访问。在极少数情况下，如果其中一个访问抛出异常，switch 将抛出 MatchException。这只可能发生在自定义访问器上。
+注意：记录模式会调用组件访问。在极少数情况下，如果其中一个访问抛出异常，`switch` 将抛出 `MatchException`。这只可能发生在自定义访问器上。
 
-## 5.9.3. 穷尽性 (Exhaustiveness)
+## 5.9.3. 穷尽性（Exhaustiveness）
 
-任何 switch 表达式都必须是穷尽的：对于可能的选择器值都必须有一个 case。这是一个显而易见的要求，因为表达式必须产生一个值。
+任何 `switch` 表达式都必须是穷尽的：对于可能的选择器值都必须有一个 `case`。这是一个显而易见的要求，因为表达式必须产生一个值。
 
-switch 有几种方法可以实现穷尽：
+`switch` 有几种方法可以实现穷尽：
 
--   针对枚举的每个实例的 case
--   覆盖密封类型（sealed type）所有子类型的非守卫类型模式
--   选择器类型的非守卫类型模式
--   default 子句
+- 针对枚举的每个实例的 `case`
+- 覆盖密封类型（sealed type）所有子类型的非守卫类型模式
+- 选择器类型的非守卫类型模式
+- `default` 子句
 
 守卫模式不能用于穷尽性检查，因为编译器无法评估它们。例如：
 
@@ -9572,17 +9566,17 @@ case Executive exec when exec.getTitle().isBlank()
 case Executive exec -> . . .
 ```
 
-或者
+或者：
 
 ```java
 default -> . . .
 ```
 
-> **注意：** 当密封类型层次结构或枚举类被修改时，之前穷尽的 switch 可能会变为非穷尽。
+> **注意：** 当密封类型层次结构或枚举类被修改时，之前穷尽的 `switch` 可能会变为非穷尽。
 
-如果没有匹配的 case，switch 将抛出 MatchException。
+如果没有匹配的 `case`，`switch` 将抛出 `MatchException`。
 
-经典的 switch 语句不需要是穷尽的。如果没有匹配的 case，则不执行操作。但为了更高的清晰，所有增强 switch 语句必须是穷尽的。如果 switch 语句具有模式、case null 或其他基本类型、基本类型包装类、String 或枚举的选择类型，则它是增强型 switch。
+经典的 `switch` 语句不需要是穷尽的。如果没有匹配的 `case`，则不执行操作。但为了更高的清晰，所有增强 `switch` 语句必须是穷尽的。如果 `switch` 语句具有模式、`case null` 或其他基本类型、基本类型包装类、`String` 或枚举的选择类型，则它是增强型 `switch`。
 
 如果你在没有匹配时不想执行任何操作，请添加：
 
@@ -9590,134 +9584,148 @@ default -> . . .
 default -> {} // 不穿透 (fallthrough)
 ```
 
-或者
+或者：
 
 ```java
 default: break; // 穿透
 ```
 
-> 警告：穷尽性检查并不要求测试选择器值是否为 null。你可以有一个没有 case null 的穷尽 switch。当用 null 选择器调用时，它会抛出 NullPointerException。
+> **警告：** 穷尽性检查并不要求测试选择器值是否为 `null`。你可以有一个没有 `case null` 的穷尽 `switch`。当用 `null` 选择器调用时，它会抛出 `NullPointerException`。
 
-> **警告：** 穷尽性缺少 null 检查对于嵌套记录是有问题的。考虑：
+> **警告：** 穷尽性缺少 `null` 检查对于嵌套记录是有问题的。考虑：
 
 ```java
-record Box<T>(T contents) { }
+record Box<T>(T contents) {}
 
 Box<Box<String>> doubleBoxed = ...;
+
 String unboxed = switch (doubleBoxed) {
     case Box(Box(String s)) -> s;
 };
 ```
 
-如果 doubleBoxed 为 null，switch 将抛出 NullPointerException。相反，如果 doubleBoxed 为 new Box<>(new Box<>(null))，表达式的结果为 null。
+如果 `doubleBoxed` 为 `null`，`switch` 将抛出 `NullPointerException`。相反，如果 `doubleBoxed` 为 `new Box<>(new Box<>(null))`，表达式的结果为 `null`。
 
-然而，如果 doubleBoxed 使用 new Box<>(null 初始化，会发生 MatchException。应该有一个这样的 case：
+然而，如果 `doubleBoxed` 使用 `new Box<>(null)` 初始化，会发生 `MatchException`。应该有一个这样的 `case`：
 
 ```java
 case Box(b) where b == null
 ```
 
-但穷尽检查器忽略了 null。
+但穷尽检查器忽略了 `null`。
 
-## 5.9.4. 支配性 (Dominance)
+## 5.9.4. 支配性（Dominance）
 
-在只有只有常量 case 的经典 switch 中，在两个 case 中使用相同的常量是非法的。因此，分支是不相交的，它们的顺序无关。然而，当 case 是模式时，顺序就变得很重要。case 按顺序检查，并执行第一个匹配的 case。
+在只有常量 `case` 的经典 `switch` 中，在两个 `case` 中使用相同的常量是非法的。因此，分支是不相交的，它们的顺序无关。然而，当 `case` 是模式时，顺序就变得很重要。`case` 按顺序检查，并执行第一个匹配的 `case`。
 
-当编译器发现某个 case 因为前面的 case 而永远不会匹配时，会发生编译时错误。这是一个例子：
+当编译器发现某个 `case` 因为前面的 `case` 而永远不会匹配时，会发生编译时错误。这是一个例子：
 
 ```java
-Employee e = . . . ;
-String description = switch (e)
-{
+Employee e = . . .;
+
+String description = switch (e) {
     case Employee __ -> "A lowly employee";
     case Manager m -> "A manager who deserves a raise";
 };
 ```
 
-由于每个 Manager 都是 Employee，第二个 case 将永远不会匹配。第一个 case 支配了它。
+由于每个 `Manager` 都是 `Employee`，第二个 `case` 将永远不会匹配。第一个 `case` 支配了它。
 
 这种支配性检查有助于发现编程错误，但它并不完美。以下是你需要关注的细微之处：
 
--   守卫模式不用于支配性检查。编译器无法对守卫进行推理。例如，编译器无法判断
+- 守卫模式不用于支配性检查。编译器无法对守卫进行推理。例如，编译器无法判断：
 
 ```java
 case Executive exec when exec.getTitle().isEmpty()
 ```
 
-是否支配了
+是否支配了：
 
 ```java
 case Executive exec when exec.getTitle().isBlank()
 ```
 
--   default 并不支配常量 case。
--   default 支配 case null，尽管它没有涵盖它。
+- `default` 并不支配常量 `case`。
+- `default` 支配 `case null`，尽管它没有涵盖它。
 
-> 提示：虽然可以将 default 放在常量 case 之前，但这是一个很糟糕的主意。务始终将其放在最后。
+> 提示：虽然可以将 `default` 放在常量 `case` 之前，但这是一个很糟糕的主意。务始终将其放在最后。
 
 ## 5.9.5. 模式与常量
 
-数值模式仅在选择器类型为 int, short, char, byte 或其包装类型时才允许。String 模式仅允许选择器类型为 String。例如，以下是不合法的：
+数值模式仅在选择器类型为 `int`、`short`、`char`、`byte` 或其包装类型时才允许。`String` 模式仅允许选择器类型为 `String`。例如，以下是不合法的：
 
 ```java
 case 0 ->
 ```
 
-枚举常量的规则不同。选择器类型必须是枚举类型的父类型；即 Object 或接口（见第 6 章）：
-
-```java
-Object obj = . . .
-String description = switch (obj)
-{
-    case DayOfWeek.FRIDAY -> "TGIF";
-    
-};
-```
-
-## 5.9.6. 变量作用域与穿透 (Variable Scope and Fallthrough)
-
-本节涵盖了执行穿透到下一个 case 时变量的微妙问题。当类型模式或记录模式引入变量时，其作用域延伸到 case 的结束。例如，考虑以下代码中的变量 s：
+枚举常量的规则不同。选择器类型必须是枚举类型的父类型；即 `Object` 或接口（见第 6 章）：
 
 ```java
 Object obj = . . .;
+
+String description = switch (obj) {
+    case DayOfWeek.FRIDAY -> "TGIF";
+};
+```
+
+## 5.9.6. 变量作用域与穿透（Variable Scope and Fallthrough）
+
+本节涵盖了执行穿透到下一个 `case` 时变量的微妙问题。当类型模式或记录模式引入变量时，其作用域延伸到 `case` 的结束。例如，考虑以下代码中的变量 `s`：
+
+```java
+Object obj = . . .;
+
 switch (obj) {
-    case String s when s.length() == 0: System.out
-    default: System.out.println(obj.toString());
+    case String s when s.length() == 0:
+        System.out
+    default:
+        System.out.println(obj.toString());
 }
 ```
 
-你可以在守护句中使用 s，但在下一个 case 中不能。这是合理的，因为当 obj 不是 String 时，执行可能会从该 case 开始。你不能穿透类型模式：
+你可以在守护句中使用 `s`，但在下一个 `case` 中不能。这是合理的，因为当 `obj` 不是 `String` 时，执行可能会从该 `case` 开始。你不能穿透类型模式：
 
 ```java
 switch (obj) {
-    case String s when s.length() > 0: System.out
-    case Integer n: System.out.println(n); // 错误-n 无法绑定。
-    .. ..
+    case String s when s.length() > 0:
+        System.out
+    case Integer n:
+        System.out.println(n); // 错误：n 无法绑定。
+    . . .
 }
 ```
 
-如果执行从第一个 case 穿透到第二个 case 的体，n 将无法绑定。
+如果执行从第一个 `case` 穿透到第二个 `case` 的体，`n` 将无法绑定。
 
 > 预览说明：你可以使用未命名变量穿透到类型模式（Java 21 的预览功能）：
 
 ```java
 switch (obj) {
-    case String s when s.length() == 0: Sys
-    case String _: System.out.println("string");
-    .. ..
-}
 ```
 
 
 
 ```java
+case String s when s.length() == 0: Sys
+
+case String _: System.out.println("string");
+
+.. ..
+
+}
+```
+
+```java
 case null -> "No employee";
+
 default -> "A lowly employee with";
+
 };
+
 System.out.println(description);
 ```
 
-#  5.15 patternMatching/RecordPatternTest.java
+# 5.15 `patternMatching/RecordPatternTest.java`
 
 ```java
 package patternMatching;
@@ -9725,27 +9733,41 @@ package patternMatching;
 record Point(double x, double y) {}
 
 public class RecordPatternTest {
+
     public static void main(String[] args) {
+
         int r = (int)(4 * Math.random());
+
         Point p = switch (r) {
+
             case 0 -> new Point(0, 0);
+
             case 1 -> new Point(1, 0);
+
             case 2 -> new Point(0, 1);
+
             default -> new Point(1, 1);
+
         };
+
         String description = switch (p)
 ```
 
 ```java
 case Point(var x, var y) when
+
 case Point(var x, var __) when
+
 case Point(var _, var y) when
+
 default -> 'not on either axis'
+
 };
+
 System.out.printf("%s %s%n", p, desc
 ```
 
-## 5.10. 反射 (Reflection)
+## 5.10 反射（Reflection）
 
 反射库为你提供了一个非常丰富且复杂的工具集，用于编写动态操作 Java 代码的程序。通过反射，Java 可以支持用户界面生成器、对象关系映射器（ORM）以及许多其他动态查询类能力的开发工具。
 
@@ -9754,18 +9776,19 @@ System.out.printf("%s %s%n", p, desc
 - 在运行时分析类的能力
 - 在运行时检查对象——例如，编写一个适用于所有类的 `toString` 方法
 - 实现泛型数组操作代码
-- 利用 Method 对象，这些对象在 C++ 等语言中像函数指针一样工作
+- 利用 `Method` 对象，这些对象在 C++ 等语言中像函数指针一样工作
 
 反射是一个强大且复杂的机制；然而，它主要令工具构建者感兴趣，而不是应用程序程序员。如果你感兴趣的是编写应用程序，而不是为其他 Java 程序员编写工具，你可以安全地跳过本章的剩余部分，稍后回来查看。
 
-### 5.10.1. Class 类
+### 5.10.1 `Class` 类
 
 在程序运行期间，Java 运行时系统始终在所有对象上维护所谓的“运行时类型识别”（runtime type identification）。这些信息跟踪每个对象所属的类。虚拟机使用这些运行时类型信息来选择执行正确的方法。
 
-然而，你也可以通过操作特殊的 Java 类来访问这些信息。持有这些信息的类有点令人困惑地被称为 `Class`。Object 类中的 `getClass()` 方法返回一个 `Class` 类型的实例。
+然而，你也可以通过操作特殊的 Java 类来访问这些信息。持有这些信息的类有点令人困惑地被称为 `Class`。`Object` 类中的 `getClass()` 方法返回一个 `Class` 类型的实例。
 
 ```java
 Employee e;
+
 ...
 ```
 
@@ -9773,7 +9796,7 @@ Employee e;
 Class cl = e.getClass();
 ```
 
-就像 Employee 对象描述特定员工的属性一样，Class 对象描述特定类的属性。Class 最常用的方法可能是 `getName()`。它返回类的名称。例如，以下语句：
+就像 `Employee` 对象描述特定员工的属性一样，`Class` 对象描述特定类的属性。`Class` 最常用的方法可能是 `getName()`。它返回类的名称。例如，以下语句：
 
 ```java
 System.out.println(e.getClass().getName() + " ");
@@ -9781,39 +9804,43 @@ System.out.println(e.getClass().getName() + " ");
 
 将：
 
-```
+```text
 Employee Harry Hacker
 ```
 
-如果 e 是一个员工，或者
+如果 `e` 是一个员工，或者：
 
-```
+```text
 Manager Harry Hacker
 ```
 
-如果 e 是一个经理。
+如果 `e` 是一个经理。
 
 如果类在包中，包名是类名的一部分：
 
 ```java
 var in = new Scanner(System.in);
+
 Class cl = in.getClass();
+
 String className = cl.getName(); // name 设置在 className 中
 ```
 
-你可以使用静态方法 `forName` 来获取与类名对应的 Class 对象。
+你可以使用静态方法 `forName` 来获取与类名对应的 `Class` 对象。
 
 ```java
 String className = "java.util.Scanner";
+
 Class cl = Class.forName(className);
 ```
 
 如果类名存储在运行时变化的字符串中，请使用此方法。如果 `className` 是类或接口的名字，此方法即可生效。否则，`forName` 方法将抛出一个检查异常。参见第 5.10.2 节，了解如何在使用此方法时提供异常处理程序。
 
-获取 Class 类型对象的第三种方法是一种方便的简写形式。如果 T 是任何 Java 类型（或 `void` 关键字），那么 `T.class` 就是匹配的类对象。例如：
+获取 `Class` 类型对象的第三种方法是一种方便的简写形式。如果 `T` 是任何 Java 类型（或 `void` 关键字），那么 `T.class` 就是匹配的类对象。例如：
 
 ```java
 Class cl1 = Scanner.class; // 如果导入了 java
+
 Class cl2 = int.class;
 ```
 
@@ -9821,9 +9848,9 @@ Class cl2 = int.class;
 Class cl3 = Double[].class;
 ```
 
-注意，Class 对象实际上描述的是一个类型，该类型可能是一个类，也可能不是。例如，`int` 不是一个类，但 `int.class` 仍然 `Class` 类型的对象。
+注意，`Class` 对象实际上描述的是一个类型，该类型可能是一个类，也可能不是。例如，`int` 不是一个类，但 `int.class` 仍然是 `Class` 类型的对象。
 
-注意：Class 类实际上是一个泛型类。例如，`Employee.class` 的类型是 `Class<Employee>`。在本章中，我没有纠结这个问题，因为这会让一个已经抽象的概念更加复杂。对于大多数实际用途，你可以忽略类型参数并使用原始 `Class` 类型。有关 `Class` 的类型参数的更多信息请参见第 8 章。
+注意：`Class` 类实际上是一个泛型类。例如，`Employee.class` 的类型是 `Class<Employee>`。在本章中，我没有纠结这个问题，因为这会让一个已经抽象的概念更加复杂。对于大多数实际用途，你可以忽略类型参数并使用原始 `Class` 类型。有关 `Class` 的类型参数的更多信息请参见第 8 章。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_645_0.png)
 
@@ -9832,28 +9859,33 @@ Class cl3 = Double[].class;
 - `Double[].class.getName()` 返回 `"Ljava.lang.Double;"`
 - `int[].class.getName()` 返回 `"[I"`
 
-虚拟机为每个类型管理一个唯一的 Class 对象。因此，你可以使用 `==` 运算符来比较类对象。例如：
+虚拟机为每个类型管理一个唯一的 `Class` 对象。因此，你可以使用 `==` 运算符来比较类对象。例如：
 
 ```java
 if (e.getClass() == Employee.class) ...
 ```
 
-如果 e 是 Employee 的实例，则此测试通过。与条件 `e instanceof Employee` 不同，如果 e 是子类（如 Manager），则此测试将失败。
+如果 `e` 是 `Employee` 的实例，则此测试通过。与条件 `e instanceof Employee` 不同，如果 `e` 是子类（如 `Manager`），则此测试将失败。
 
 注意：`getName` 方法为数组类型返回了一些奇怪的名称：
 
 ```java
 public String toString() {
+
     return "x";
+
 }
+
 Size.getClass() == Size.class
 ```
 
-如果你有一个 Class 类型的对象，可以使用它来构造类的实例。调用 `getConstructor` 方法获取一个 `Constructor` 类型的对象，然后使用 `newInstance` 方法构造。
+如果你有一个 `Class` 类型的对象，可以使用它来构造类的实例。调用 `getConstructor` 方法获取一个 `Constructor` 类型的对象，然后使用 `newInstance` 方法构造。
 
 ```java
 var className = "java.util.Date";
+
 Class cl = Class.forName(className);
+
 Object obj = cl.getConstructor().newInstance();
 ```
 
@@ -9861,21 +9893,17 @@ Object obj = cl.getConstructor().newInstance();
 
 ![](img/1bda005f6b519fd0924777a921aebffa_647_0.png)
 
-注意：`newInstance` 方法对应于 C++ 中的虚拟构造。然而，C++ 中的虚拟构造并不是语言特性，而是一种需要专用库支持的习惯。Class 类类似于 C++ 中的 `type_info` 类，而 `getClass` 方法等同于 `typeid` 运算符。Java Class 比 `type_info` 灵活得多，尽管 C++ 的 `type_info` 只能返回类型的名称字符串，而无法创建该类型的新对象。
+注意：`newInstance` 方法对应于 C++ 中的虚拟构造。然而，C++ 中的虚拟构造并不是语言特性，而是一种需要专用库支持的习惯。`Class` 类类似于 C++ 中的 `type_info` 类，而 `getClass` 方法等同于 `typeid` 运算符。Java `Class` 比 `type_info` 灵活得多，尽管 C++ 的 `type_info` 只能返回类型的名称字符串，而无法创建该类型的新对象。
 
-### 5.10.2. 声明异常入门
+### 5.10.2 声明异常入门
 
 我将在第 7 章中详细介绍异常处理，在此期间你偶尔会遇到可能抛出异常的方法。
 
 当运行时发生错误时，程序可以“抛出异常”。抛出异常比终止程序更灵活，因为你可以提供一个“捕获”并处理异常的处理器。
 
-
-
-
-
 如果你不提供处理器（handler），程序将终止并在控制台打印一条消息，给出异常的类型。你可能已经在不小心使用 `null` 引用或越界数组边界时遇到过异常报告。
 
-异常有两种类型：*未检查*异常（unchecked exceptions）和*已检查*异常（checked exceptions）。对于已检查的异常，编译器会检查你（即程序员）是否意识到了该异常并准备好处理其后果。然而，许多常见异常（例如边界错误或访问 `null` 引用）是未检查的。编译器并不期望你提供处理器——毕竟，你应该把精力花在避免这些错误上，而不是为它们编写处理器。
+异常有两种类型：未检查异常（unchecked exceptions）和已检查异常（checked exceptions）。对于已检查的异常，编译器会检查你（即程序员）是否意识到了该异常并准备好处理其后果。然而，许多常见异常（例如边界错误或访问 `null` 引用）是未检查的。编译器并不期望你提供处理器——毕竟，你应该把精力花在避免这些错误上，而不是为它们编写处理器。
 
 但并不是所有错误都是可避免的。如果尽管你尽了最大努力异常仍可能发生，那么大多数 Java API 都会抛出已检查的异常。一个例子是 `Class.forName` 方法。你无法确保具有给定名称的类是否存在。在第 7 章，你将看到几种处理异常的策略。现在，我只向你展示最简单的策略。
 
@@ -9883,10 +9911,15 @@ Object obj = cl.getConstructor().newInstance();
 
 ```java
 public static void doSomethingWithClass(String name)
+
 throws ReflectiveOperationException
+
 {
+
     Class cl = Class.forName(name); // might throw
+
     do something with cl
+
 }
 ```
 
@@ -9894,14 +9927,14 @@ throws ReflectiveOperationException
 
 你只需要为已检查的异常提供 `throws` 子句。找出哪些方法抛出已检查异常很容易——每当你调用一个可能抛出已检查异常的方法且没有提供处理器时，编译器就会报错。
 
-## 5.10.3. 资源
+## 5.10.3 资源
 
 类通常具有关联的数据文件，例如：
 
 - 图像和声音文件
 - 带有消息字符串和按钮标签的文本文件
 
-在 Java 中，这种关联文件被称为*资源*（resource）。
+在 Java 中，这种关联文件被称为资源（resource）。
 
 例如，考虑一个显示消息的对话框，如[图 5.4](Figure 5.4) 所示。
 
@@ -9911,25 +9944,26 @@ throws ReflectiveOperationException
 
 当然，面板中的书名和版权将在书的下一个版本中更改。为了方便跟踪这些变化，我们将文本放在一个文件中，而不是将其硬编码为字符串。
 
-但你应该将像 *about.txt* 这样的文件放在哪里呢？当然，简单地将其与其他程序文件一起放在 JAR 文件内部是方便的。
+但你应该将像 `about.txt` 这样的文件放在哪里呢？当然，简单地将其与其他程序文件一起放在 JAR 文件内部是方便的。
 
 `Class` 类提供了用于定位资源文件的有用服务。以下是必要的步骤：
 
-1. 获取拥有资源的类的 Class 对象——例如 `ResourceTest.class`。
-2. 某些方法（例如 `ImageIcon` 类的 `getImage` 方法）接受描述资源位置的 URL。然后你调用
+1. 获取拥有资源的类的 `Class` 对象——例如 `ResourceTest.class`。
+2. 某些方法（例如 `ImageIcon` 类的 `getImage` 方法）接受描述资源位置的 URL。然后你调用：
 
-```java
-URL url = cl.getResource("about.png");
-```
+   ```java
+   URL url = cl.getResource("about.png");
+   ```
 
 3. 否则，使用 `getResourceAsStream` 方法获取读取文件中数据的输入流。
 
 点在于 Java 虚拟机知道如何定位类，因此它可以在相同的位置搜索关联的资源。例如，假设 `ResourceTest` 类位于 `resources` 包中。那么 `ResourceTest.class` 文件位于 `resources` 目录中，你将图标文件放在同一个目录中。
 
-与其将资源文件放在与类文件相同的目录中，你可以提供相对路径或绝对路径，例如
+与其将资源文件放在与类文件相同的目录中，你可以提供相对路径或绝对路径，例如：
 
-```
+```text
 data/about.txt
+
 /corejava/title.txt
 ```
 
@@ -9941,12 +9975,13 @@ data/about.txt
 
 ```java
 if (Modifiers.isStatic(m.getModifiers())) . . .
+
 if (m.accessFlags().contains(AccessFlag.STATIC))
 ```
 
 列表 5.16 是一个演示资源加载的程序。（不用担心读取文本和显示对话框的代码——我们稍后会介绍）。
 
-## 5.10.4. 使用反射分析类的能力
+## 5.10.4 使用反射分析类的能力
 
 这里是反射机制中最重要部分的简单概述，它可以让你检查类的结构。
 
@@ -9958,74 +9993,121 @@ if (m.accessFlags().contains(AccessFlag.STATIC))
 
 `Class` 类的 `getFields`、`getMethods` 和 `getConstructors` 方法返回该类支持的公有字段、方法和构造函数的数组。这包括父类的公共成员。`Class` 类的 `getDeclaredFields`、`getDeclaredMethods` 和 `getDeclaredConstructors` 方法返回由类中声明的所有字段、方法和构造函数的数组。这包括私有的、包级和保护成员，以及具有包访问权限的成员，但不包括父类的成员。
 
-列表 5.17 显示如何打印关于类的所有信息。程序提示你输入类名，并写出所有方法和构造函数的签名以及该类所有实例字段的名称。例如，如果你输入
+列表 5.17 显示如何打印关于类的所有信息。程序提示你输入类名，并写出所有方法和构造函数的签名以及该类所有实例字段的名称。例如，如果你输入：
 
-```
+```text
 java.lang.Double
 ```
 
-程序打印
+程序打印：
+
+```java
+public final static class java.lang.Double extends Number
+
+{
+
+    public java.lang.Double(double d);
+
+    public java.lang.Double(java.lang.String s);
+
+    public boolean equals(java.lang.Object obj);
+
+    public static java.lang.String toString(double d);
+
+    public java.lang.String toString();
+
+    public static int hashCode(double d);
+
+    public int hashCode();
+
+    public static double min(double a, double b);
+
+    public static double max(double a, double b);
+
+    public static native long doubleToRawLongBits();
+
+    public static long doubleToBits(double d);
+
+    public static native double bitsToDouble(long bits);
+
+    public int compareTo(java.lang.Double d);
+
+    public volatile int compareTo(java.lang.Object obj);
+
+    public static int compare(double a, double b);
+
+    public byte byteValue();
+
+    public short shortValue();
+
+    public int intValue();
+
+    public long longValue();
+
+    public float floatValue();
+
+    public double doubleValue();
+
+    public static java.lang.Double valueOf(long s);
+```
 
 
 
 ```java
-public final static class java.lang.Double extends Number
-{
-    public java.lang.Double(double d);
-    public java.lang.Double(java.lang.String s);
+public static java.lang.Double valueOf(double d);
 
-    public boolean equals(java.lang.Object obj);
-    public static java.lang.String toString(double d);
-    public java.lang.String toString();
-    public static int hashCode(double d);
-    public int hashCode();
-    public static double min(double a, double b);
-    public static double max(double a, double b);
-    public static native long doubleToRawLongBits();
-    public static long doubleToBits(double d);
-    public static native double bitsToDouble(long bits);
-    public int compareTo(java.lang.Double d);
-    public volatile int compareTo(java.lang.Object obj);
-    public static int compare(double a, double b);
-    public byte byteValue();
-    public short shortValue();
-    public int intValue();
-    public long longValue();
-    public float floatValue();
-    public double doubleValue();
-    public static java.lang.Double valueOf(long s);
-    public static java.lang.Double valueOf(double d);
-    public static java.lang.String toHexString(double d);
-    public volatile java.lang.Object resolveConstant(java.lang.invoke.MethodHandles$Lookup lookup);
-    public java.lang.Double resolveConstantDesc(String name);
-    public java.util.Optional describeConstable();
-    public boolean isNaN();
-    public static boolean isNaN(double d);
-    public static double sum(double a, double b);
-    public boolean isInfinite();
-    public static boolean isInfinite(double d);
-    public static boolean isFinite(double d);
-    public static double parseDouble(java.lang.String s);
+public static java.lang.String toHexString(double d);
 
-    public static final double POSITIVE_INFINITY;
-    public static final double NEGATIVE_INFINITY;
-    public static final double NaN;
-    public static final double MAX_VALUE;
-    public static final double MIN_NORMAL;
-    public static final double MIN_VALUE;
-    public static final int MAX_EXPONENT;
-    public static final int MIN_EXPONENT;
-    public static final int SIZE;
-    public static final int BYTES;
-    public static final java.lang.Class TYPE;
-    private final double value;
-    private static final long serialVersionUID;
-}
+public volatile java.lang.Object resolveConstant(java.lang.invoke.MethodHandles$Lookup lookup);
+
+public java.lang.Double resolveConstantDesc(String name);
+
+public java.util.Optional describeConstable();
+
+public boolean isNaN();
+
+public static boolean isNaN(double d);
+
+public static double sum(double a, double b);
+
+public boolean isInfinite();
+
+public static boolean isInfinite(double d);
+
+public static boolean isFinite(double d);
+
+public static double parseDouble(java.lang.String s);
+
+public static final double POSITIVE_INFINITY;
+
+public static final double NEGATIVE_INFINITY;
+
+public static final double NaN;
+
+public static final double MAX_VALUE;
+
+public static final double MIN_NORMAL;
+
+public static final double MIN_VALUE;
+
+public static final int MAX_EXPONENT;
+
+public static final int MIN_EXPONENT;
+
+public static final int SIZE;
+
+public static final int BYTES;
+
+public static final java.lang.Class TYPE;
+
+private final double value;
+
+private static final long serialVersionUID;
 ```
 
-这个程序的非凡之处之处在于，它可以分析任何 Java 解释器可以加载的类，而不仅仅是程序编译时可用的类。我们将在下一章中使用这个程序来窥视 Java 编译器自动生成的内部类。
+这个程序的非凡之处在于，它可以分析任何 Java 解释器可以加载的类，而不仅仅是程序编译时可用的类。我们将在下一章中使用这个程序来窥视 Java 编译器自动生成的内部类。
 
-## 列表 5.1 ReflectionTest.java
+## 列表 5.1 `ReflectionTest.java`
 
 ```java
 package reflection;
@@ -10043,6 +10125,7 @@ public class ReflectionTest {
         // 从命令行读取类名
         var in = new Scanner(System.in);
         System.out.println("Enter class name ");
+
         String name;
         if (args.length > 0) {
             name = args[0];
@@ -10052,9 +10135,11 @@ public class ReflectionTest {
 
         Class cl = Class.forName(name);
         String modifiers = Modifier.toString(cl.getModifiers());
+
         if (modifiers.length() > 0) {
             System.out.print(modifiers + " ");
         }
+
         if (cl.isSealed()) {
             System.out.print("sealed ");
         } else if (cl.isEnum()) {
@@ -10073,11 +10158,13 @@ public class ReflectionTest {
         }
 
         System.out.print("\n");
+
         printInterfaces(cl);
         printPermittedSubclasses(cl);
         printConstructors(cl);
         printMethods(cl);
         printFields(cl);
+
         System.out.println();
     }
 
@@ -10087,13 +10174,16 @@ public class ReflectionTest {
      */
     public static void printConstructors(Class<?> cl) {
         Constructor[] constructors = cl.getDeclaredConstructors();
+
         for (Constructor c : constructors) {
             String name = c.getName();
             System.out.print(" " + name + " ");
+
             String modifiers = Modifier.toString(c.getModifiers());
             if (modifiers.length() > 0) {
                 System.out.print(modifiers + " ");
             }
+
             System.out.print("() ");
 
             // 打印参数类型
@@ -10102,8 +10192,10 @@ public class ReflectionTest {
                 if (j > 0) {
                     System.out.print(", ");
                 }
+
                 System.out.print(parameterTypes[j].getName());
             }
+
             System.out.println();
         }
     }
@@ -10114,16 +10206,19 @@ public class ReflectionTest {
      */
     public static void printMethods(Class cl) {
         Method[] methods = cl.getDeclaredMethods();
+
         for (Method m : methods) {
             Class retType = m.getReturnType();
             String name = m.getName();
 
             System.out.print(" ");
+
             // 打印修饰符、返回类型
             String modifiers = Modifier.toString(m.getModifiers());
             if (modifiers.length() > 0) {
                 System.out.print(modifiers + " ");
             }
+
             System.out.print(retType.getName() + " ");
 
             // 打印参数类型
@@ -10132,8 +10227,10 @@ public class ReflectionTest {
                 if (j > 0) {
                     System.out.print(", ");
                 }
+
                 System.out.print(parameterTypes[j].getName());
             }
+
             System.out.println();
         }
     }
@@ -10144,14 +10241,18 @@ public class ReflectionTest {
      */
     public static void printFields(Class cl) {
         Field[] fields = cl.getDeclaredFields();
+
         for (Field f : fields) {
             Class type = f.getType();
             String name = f.getName();
+
             System.out.print(" " + name + ": ");
+
             String modifiers = Modifier.toString(f.getModifiers());
             if (modifiers.length() > 0) {
                 System.out.print(modifiers);
             }
+
             System.out.println(type.getName());
         }
     }
@@ -10163,12 +10264,14 @@ public class ReflectionTest {
     public static void printPermittedSubclasses(Class cl) {
         if (cl.isSealed()) {
             Class<?>[] permittedSubclasses = cl.getPermittedSubclasses();
+
             for (int i = 0; i < permittedSubclasses.length; i++) {
-                if (i == 0)
+                if (i == 0) {
                     System.out.print(" permits ");
                 } else {
                     System.out.print(", ");
                 }
+
                 System.out.print(permittedSubclasses[i].getName());
             }
         }
@@ -10180,6 +10283,7 @@ public class ReflectionTest {
      */
     public static void printInterfaces(Class cl) {
         Class<?>[] interfaces = cl.getInterfaces();
+
         for (int i = 0; i < interfaces.length; i++) {
             if (i == 0) {
                 System.out.print(interfaces[i].getName());
@@ -10192,149 +10296,166 @@ public class ReflectionTest {
 }
 ```
 
-## java.lang.Class 1.0
+## `java.lang.Class` 1.0
 
 | 方法 | 说明 |
 | :--- | :--- |
-| `Field[] getFields()` | 返回包含该类或其父类公共字段 Field 对象的数组。 |
-| `Field[] getDeclaredFields()` | 返回该类所有字段的 Field 对象数组。 |
-| `Method[] getMethods()` | 返回包含 Method 对象的数组：返回公共方法并包括继承的方法。 |
+| `Field[] getFields()` | 返回包含该类或其父类公共字段 `Field` 对象的数组。 |
+| `Field[] getDeclaredFields()` | 返回该类所有字段的 `Field` 对象数组。 |
+| `Method[] getMethods()` | 返回包含 `Method` 对象的数组：返回公共方法并包括继承的方法。 |
 | `Method[] getDeclaredMethods()` | 返回该类或接口的所有方法，但不包括继承的方法。 |
-| `Constructor[] getConstructors()` | 返回包含 Constructor 对象的数组，用于获取所有公共构造函数。 |
-| `Constructor[] getDeclaredConstructors()` | 返回包含 Constructor 对象的数组，用于获取该类的所有的构造函数。 |
+| `Constructor[] getConstructors()` | 返回包含 `Constructor` 对象的数组，用于获取所有公共构造函数。 |
+| `Constructor[] getDeclaredConstructors()` | 返回包含 `Constructor` 对象的数组，用于获取该类的所有构造函数。 |
 
+### `java.lang.reflect.Field` 1.1
 
+### `java.lang.reflect.Method` 1.1
 
+### `java.lang.reflect.Constructor` 1.1
 
+- `Class getDeclaringClass()`
 
-```java
-java.lang.reflect.Field 1.1
-```
+  返回定义此构造函数、方法或字段的 `Class` 对象。
 
-```java
-java.lang.reflect.Method 1.1
-```
+- `Class[] getExceptionTypes()`（在 `Constructor` 和 `Method` 类中）
 
-```java
-java.lang.reflect.Constructor 1.1
-```
+  返回一个 `Class` 对象的数组，表示该方法抛出的异常类型。
 
-- Class getDeclaringClass()
-  返回定义此构造函数、方法或字段的 Class 对象。
-- Class[] getExceptionTypes()（在 Constructor 和 Method 类中）
-  返回一个 Class 对象的数组，表示该方法抛出的异常类型。
-- int getModifiers()
-  返回一个描述此构造函数、方法或字段修饰符的整数。使用 Modifier 类中的方法来分析返回值。
-- Set<AccessFlag> accessFlags() 20
-  返回一个 AccessFlag 枚举类值的集合，用于描述此构造函数、方法或字段的访问修饰符。
-- String getName()
+- `int getModifiers()`
+
+  返回一个描述此构造函数、方法或字段修饰符的整数。使用 `Modifier` 类中的方法来分析返回值。
+
+- `Set<AccessFlag> accessFlags()` 20
+
+  返回一个 `AccessFlag` 枚举类值的集合，用于描述此构造函数、方法或字段的访问修饰符。
+
+- `String getName()`
+
   返回一个表示构造函数、方法或字段名称的字符串。
 
-- Class[] getParameterTypes()（在 Constructor 和 Method 类中）
-  返回一个 Class 对象的数组，表示参数的类型。
-- Class getReturnType()（在 Method 类中）
-  返回一个表示返回类型的 Class 对象。
+- `Class[] getParameterTypes()`（在 `Constructor` 和 `Method` 类中）
 
-```java
-java.lang.reflect.RecordComponent 16
-```
+  返回一个 `Class` 对象的数组，表示参数的类型。
 
-- String getName()
-- Class getType()
+- `Class getReturnType()`（在 `Method` 类中）
+
+  返回一个表示返回类型的 `Class` 对象。
+
+### `java.lang.reflect.RecordComponent` 16
+
+- `String getName()`
+- `Class getType()`
+
   获取此记录组件（record component）的名称和类型。
-- Method getAccessor()
-  返回访问此记录组件的 Method 对象。
 
-```java
-java.lang.reflect.Modifier 1.1
-```
+- `Method getAccessor()`
 
-- static String toString(int modifiers)
-  返回一个字符串，其中包含与 modifiers 中设置的位对应的修饰符。
+  返回访问此记录组件的 `Method` 对象。
 
-- static boolean isAbstract(int modifiers)
-- static boolean isFinal(int modifiers)
-- static boolean isInterface(int modifiers)
-- static boolean isNative(int modifiers)
-- static boolean isPrivate(int modifiers)
-- static boolean isProtected(int modifiers)
-- static boolean isPublic(int modifiers)
-- static boolean isStatic(int modifiers)
-- static boolean isStrict(int modifiers)
-- static boolean isSynchronized(int modifiers)
-- static boolean isVolatile(int modifiers)
+### `java.lang.reflect.Modifier` 1.1
 
-测试 modifiers 值中对应于方法修饰符的位。
+
+
+
+- `static String toString(int modifiers)`  
+  返回一个字符串，其中包含与 `modifiers` 中设置的位对应的修饰符。
+
+- `static boolean isAbstract(int modifiers)`
+- `static boolean isFinal(int modifiers)`
+- `static boolean isInterface(int modifiers)`
+- `static boolean isNative(int modifiers)`
+- `static boolean isPrivate(int modifiers)`
+- `static boolean isProtected(int modifiers)`
+- `static boolean isPublic(int modifiers)`
+- `static boolean isStatic(int modifiers)`
+- `static boolean isStrict(int modifiers)`
+- `static boolean isSynchronized(int modifiers)`
+- `static boolean isVolatile(int modifiers)`
+
+测试 `modifiers` 值中对应于方法修饰符的位。
 
 ## 5.10.5. 使用反射在运行时分析对象
 
 在前面的节中，我们看到了如何找到任何对象的实例字段的名称和类型：
 
-- 获取对应的 Class 对象。
-- 在 Class 对象上调用 `getDeclaredFields`。
+- 获取对应的 `Class` 对象。
+- 在 `Class` 对象上调用 `getDeclaredFields()`。
 
 在本节中，我们将更进一步，实际上查看字段的内容。当然，当你编写程序时，如果一个对象的名称和类型是已知，查看其特定字段的内容是很简单的。但反射允许你查看编译时未知的对象的字段。
 
-实现这一点的关键方法是 Field 类中的 `get` 方法。如果 `f` 是 Field 类型的对象（例如从 `declaredFields` 获取的），且 `obj` 是 f 字段所属的类的对象，那么 `f.get(obj)` 返回一个对象，其值为 `obj` 字段的当前值。这些都有点抽象，让我们来看一个例子。
+实现这一点的关键方法是 `Field` 类中的 `get()` 方法。如果 `f` 是 `Field` 类型的对象（例如从 `declaredFields` 获取的），且 `obj` 是 `f` 字段所属的类的对象，那么 `f.get(obj)` 返回一个对象，其值为 `obj` 字段的当前值。这些都有点抽象，让我们来看一个例子。
 
 ```java
 var harry = new Employee("Harry Hacker", 50000);
+
 Class cl = harry.getClass();
+
 // 代表 Employee 的类对象
+
 Field f = cl.getDeclaredField("name");
+
 // Employee 类的 name 字段
+
 Object v = f.get(harry);
+
 // harry 对象 name 字段的值
+
 // String 对象 "Harry Hacker"
 ```
 
-当然，你也可以设置你所获取到的值。调用 `f.set(obj, value)` 会将对象 `obj` 中由 f 表示的字段设置为新值。
+当然，你也可以设置你所获取到的值。调用 `f.set(obj, value)` 会将对象 `obj` 中由 `f` 表示的字段设置为新值。
 
-实际上，这段代码存在一个问题。由于 name 字段是私有字段，`get` 和 `set` 方法将抛出 `IllegalAccessException`。你只能对可访问的字段进行获取和设置。Java 的安全机制允许你发现对象拥有字段，但除非你有权限，否则它不会让你读写这些字段的值。
+实际上，这段代码存在一个问题。由于 `name` 字段是私有字段，`get()` 和 `set()` 方法将抛出 `IllegalAccessException`。你只能对可访问的字段进行获取和设置。Java 的安全机制允许你发现对象拥有字段，但除非你有权限，否则它不会让你读写这些字段的值。
 
-反射机制的默认行为尊重 Java 的访问控制。然而，你可以通过在 Field、Method 或 Constructor 对象上调用 `setAccessible` 方法来覆盖访问控制。例如：
+反射机制的默认行为尊重 Java 的访问控制。然而，你可以通过在 `Field`、`Method` 或 `Constructor` 对象上调用 `setAccessible()` 方法来覆盖访问控制。例如：
 
 ```java
 f.setAccessible(true); // 现在可以安全调用 f.get(harry) 了
 ```
 
-`setAccessible` 方法是 AccessibleObject 类的方法，它是 Field、Method 和 Constructor 类的公共父类。此功能是为调试器、持久化存储和类似机制提供的。我们将在本节后面使用它来实现一个通用的 `toString` 方法。
+`setAccessible()` 方法是 `AccessibleObject` 类的方法，它是 `Field`、`Method` 和 `Constructor` 类的公共父类。此功能是为调试器、持久化存储和类似机制提供的。我们将在本节后面使用它来实现一个通用的 `toString()` 方法。
 
-如果没有授予访问权限，调用 `setAccessible` 将抛出异常。访问可能会模块系统（第 12 章）或安全管理器（第二卷第 9 章）拒绝。使用安全管理器并不常见，并且自 Java 17 起已被弃用。
+如果没有授予访问权限，调用 `setAccessible()` 将抛出异常。访问可能会被模块系统（第 12 章）或安全管理器（第二卷第 9 章）拒绝。使用安全管理器并不常见，并且自 Java 17 起已被弃用。
 
-例如，本节末尾的示例程序查看 ArrayList 和 Integer 对象的内部。当你使用 Java 9 到 Java 16 运行它时，会出现以下令人不安的消息：
+例如，本节末尾的示例程序查看 `ArrayList` 和 `Integer` 对象的内部。当你使用 Java 9 到 Java 16 运行它时，会出现以下令人不安的消息：
 
-```
+```text
 WARNING: An illegal reflective access operation
+
 WARNING: Illegal reflective access by object ObjectAnalyzer at /books/cj11/code/v1ch05/bin/) to field java.util.ArrayList
+
 WARNING: Please consider reporting this to the maintainers of the java.base module
+
 objectAnalyzer.ObjectAnalyzer
+
 WARNING: Use --illegal-access=warn to enable warn reflective access operations
 ```
 
-当你使用 Java 17 运行时，会发生 `InaccessibleObjectException`。为了让程序继续运行，向未命名模块“打开” java.base 模块。详情请见第 12 章。语法如下：`--add-opens java.base/java.util=UNNAMED`
+当你使用 Java 17 运行时，会发生 `InaccessibleObjectException`。为了让程序继续运行，向未命名模块“打开” `java.base` 模块。详情请见第 12 章。语法如下：`--add-opens java.base/java.util=UNNAMED`
 
-你可以使用此方法查看任何对象。例如，通过调用
+你可以使用此方法查看任何对象。例如，通过调用：
 
 ```java
 var squares = new ArrayList<Integer>();
+
 for (int i = 1; i <= 5; i++) squares.add(i * i);
+
 System.out.println(new ObjectAnalyzer().toString());
 ```
 
-得到输出
+得到输出：
 
-```
+```text
 java.util.ArrayList[elementData=[1, 4, 9, 16, 25]]
 ```
 
-我们可以这样做，让我们来看一个适用于任何类的通用 `toString` 方法（列表 5.18）。通用 `toString` 方法使用 `getDeclaredFields` 获取所有实例字段，并使用 `setAccessible` 使所有字段可访问。对于每个字段，它获取名称和值。每个值通过递归调用 `toString` 转换为字符串。
+我们可以这样做，让我们来看一个适用于任何类的通用 `toString()` 方法（列表 5.18）。通用 `toString()` 方法使用 `getDeclaredFields()` 获取所有实例字段，并使用 `setAccessible()` 使所有字段可访问。对于每个字段，它获取名称和值。每个值通过递归调用 `toString()` 转换为字符串。
 
-通用 `toString` 方法需要处理一些复杂性。引用循环会导致无限递归。因此，ObjectAnalyzer 会跟踪已访问的对象。此外，为了查看数组内部，你需要不同的方法。你将在下一节中学习细节。
+通用 `toString()` 方法需要处理一些复杂性。引用循环会导致无限递归。因此，`ObjectAnalyzer` 会跟踪已访问的对象。此外，为了查看数组内部，你需要不同的方法。你将在下一节中学习细节。
 
-提供通用的 `toString` 方法是非常方便且无疑非常有用的。然而，在你对不再需要实现 `toString` 感到兴奋之前，请记住，不受控访问的日子已经到头。
+提供通用的 `toString()` 方法是非常方便且无疑非常有用的。然而，在你对不再需要实现 `toString()` 感到兴奋之前，请记住，不受控访问的日子已经到头。
 
-你可以使用这个通用 `toString` 方法来实现你自己的类的 `toString` 方法，如下：
+你可以使用这个通用 `toString()` 方法来实现你自己的类的 `toString()` 方法，如下：
 
 ```java
 public String toString()
@@ -10343,43 +10464,63 @@ public String toString()
 }
 ```
 
-# 列表 5.18
+## 列表 5.18
+
 ```java
 public class ObjectAnalyzer {
+
     private final Set<Object> visited = new HashSet<>();
 
     public String toString(Object obj) {
+
         if (obj == null) return "null";
+
         if (visited.contains(obj)) return "(visited)";
+
         visited.add(obj);
+
         Class cl = obj.getClass();
+
         StringBuilder sb = new StringBuilder();
+
         sb.append(cl.getName()).append("[");
+
         Field[] fields = cl.getDeclaredFields();
+
         for (Field f : fields) {
+
             try {
+
                 f.setAccessible(true);
+
                 Object value = f.get(obj);
+
                 sb.append(f.getName()).append("=").append(value).append(", ");
+
             } catch (IllegalAccessException e) {
+
                 sb.append(f.getName()).append("= inaccessible, ");
+
             }
+
         }
+
         sb.append("]");
+
         return sb.toString();
+
     }
 
     public String toString() {
+
         return toString(this);
+
     }
+
 }
 ```
 
-
-
-
-
-# objectAnalyzer/ObjectAnalyzerTest.java
+## `objectAnalyzer/ObjectAnalyzerTest.java`
 
 ```java
 package objectAnalyzer;
@@ -10391,21 +10532,24 @@ import java.util.*;
  * @version 1.13 2018-03-13
  * @author Cay Horstmann
  */
+
 public class ObjectAnalyzerTest
 {
     public static void main(String[] args)
-    throws ReflectiveOperationException
+        throws ReflectiveOperationException
     {
         var squares = new ArrayList<Integer>();
+
         for (int i = 1; i <= 5; i++) {
             squares.add(i * i);
         }
+
         System.out.println(new ObjectAnalyzer(squares));
     }
 }
 ```
 
-# Listing 5.19 objectAnalyzer/ObjectAnalyzer.java
+## 列表 5.19：`objectAnalyzer/ObjectAnalyzer.java`
 
 ```java
 package objectAnalyzer;
@@ -10417,6 +10561,7 @@ import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 
 public class ObjectAnalyzer {
+
     private ArrayList<Object> visited = new ArrayList<>();
 
     /**
@@ -10424,90 +10569,140 @@ public class ObjectAnalyzer {
      * @param obj 一个对象
      * @return 包含对象类信息的字符串
      */
+
     public String toString(Object obj)
         throws ReflectiveOperationException {
+
         if (obj == null) return "null";
+
         if (visited.contains(obj)) return "...";
+
         visited.add(obj);
+
         Class cl = obj.getClass();
+
         if (cl == String.class) return (String)obj;
+
         if (cl.isArray()) {
+
             String r = cl.getComponentType().getName();
+
             for (int i = 0; i < Array.getLength(obj); i++) {
+
                 if (i > 0) r += ",";
+
                 Object val = Array.get(obj, i);
+
                 if (cl.getComponentType().isPrimitive()) {
+
                     r += val;
+
                 } else {
+
                     r += toString(val);
+
                 }
+
             }
+
             return r + "}";
+
         }
 
         String r = cl.getName();
+
         // 检查此类的字段
+
         do {
+
             r += "[";
+
             Field[] fields = cl.getDeclaredFields();
+
             AccessibleObject.setAccessible(true);
+
             // 获取所有字段的名字和值
+
             for (Field f : fields) {
+
                 if (!Modifier.isStatic(f.getModifiers())) {
+
                     if (!r.endsWith("[")) r += ",";
+
                     r += f.getName() + "=";
+
                     Class t = f.getType();
+
                     Object val = f.get(obj);
+
                     if (t.isPrimitive()) {
+
                         r += val;
+
                     } else {
+
                         r += toString(val);
+
                     }
+
                 }
+
             }
+
             r += "]";
+
             cl = cl.getSuperclass();
+
         } while (cl != null);
+
         return r;
+
     }
+
 }
 ```
 
-# java.lang.reflect.AccessibleObject 1.2
+## `java.lang.reflect.AccessibleObject` 1.2
 
-- `void setAccessible(boolean flag)`
+- `void setAccessible(boolean flag)`  
   设置或清除此可访问对象的访问权限标志，如果拒绝访问则抛出 `IllegalAccessException`。
-- `boolean setAccessible()` 
-  设置此可访问对象的访问权限标志，如果拒绝访问则返回 false。
-- `boolean canAccess(Object obj)`
-  检查调用者是否可以通过此字段、方法或构造函数对象访问 obj。对于静态字段、方法或构造函数传递 `null`。
-- `static void setAccessible(AccessibleObject[] array, boolean flag)`
+
+- `boolean setAccessible()`  
+  设置此可访问对象的访问权限标志，如果拒绝访问则返回 `false`。
+
+- `boolean canAccess(Object obj)`  
+  检查调用者是否可以通过此字段、方法或构造函数对象访问 `obj`。对于静态字段、方法或构造函数传递 `null`。
+
+- `static void setAccessible(AccessibleObject[] array, boolean flag)`  
   用于设置对象数组访问权限标志的便利方法。
 
-# java.lang.Class 1.1
+## `java.lang.Class` 1.1
 
 - `Field getField(String name)`
-- `Field[] getFields()`
+- `Field[] getFields()`  
   获取具有给定名称的公共字段，或所有字段的数组。
+
 - `Field getDeclaredField(String name)`
-- `Field[] getDeclaredFields()`
+- `Field[] getDeclaredFields()`  
   获取在此类中声明的具有给定名称的字段，或所有字段的数组。
 
-# java.lang.reflect.Field 1.1
+## `java.lang.reflect.Field` 1.1
 
-- `Object get(Object obj)`
-  获取对象 obj 中由此 Field 对象描述的字段的值。
-- `void set(Object obj, Object newValue)`
-  将对象 obj 中由此 Field 对象描述的字段设置为新值。
+- `Object get(Object obj)`  
+  获取对象 `obj` 中由此 `Field` 对象描述的字段的值。
 
-# 5.10.6. 使用反射编写泛型数组代码
+- `void set(Object obj, Object newValue)`  
+  将对象 `obj` 中由此 `Field` 对象描述的字段设置为新值。
 
-`java.lang.reflect` 包中的 `Array` 类允许你动态创建数组。这被用于例如 `Arrays` 类中 `copyOf` 方法的实现。回想该方法如何用于扩展一个已满的数组。
+## 5.10.6. 使用反射编写泛型数组代码
+
+`java.lang.reflect` 包中的 `Array` 类允许你动态创建数组。这被用于例如 `Arrays` 类中 `copyOf()` 方法的实现。回想该方法如何用于扩展一个已满的数组。
 
 ```java
 var a = new Employee[100];
-..
+
 // 数组已满
+
 a = Arrays.copyOf(a, 2 * a.length);
 ```
 
@@ -10515,13 +10710,20 @@ a = Arrays.copyOf(a, 2 * a.length);
 
 ```java
 public static Object[] badCopyOf(Object[] a, int length) {
+
     var newArray = new Object[length];
+
     System.arraycopy(a, 0, newArray, 0, Math.min(a.length, length));
+
     return newArray;
+
 }
 ```
 
-然而，实际使用生成的数组时存在问题。此代码返回的数组类型是对象数组（Object[]），因为我们使用以下代码行创建了数组：
+
+
+
+然而，实际使用生成的数组时存在问题。此代码返回的数组类型是对象数组（`Object[]`），因为我们使用以下代码行创建了数组：
 
 ```java
 new Object[newLength]
@@ -10529,7 +10731,7 @@ new Object[newLength]
 
 对象数组无法强制转换为 `Employee[]`。在 Java 中，虚拟机会在运行时产生 `ClassCastException`。为了使之可行，我们需要使用反射。关键是使用 `Array` 类创建正确类型的数组。
 
-# Listing 5.20 arrays/CopyTest.java
+## Listing 5.20 arrays/CopyTest.java
 
 ```java
 package arrays;
@@ -10542,8 +10744,7 @@ import java.util.*;
  * @version 1.2 2012-05-04
  * @author Cay Horstmann
  */
-public class CopyTest
-{
+public class CopyTest {
     public static void main(String[] args) {
         int[] a = { 1, 2, 3 };
         int[] b = (int[]) goodCopyOf(a, 10);
@@ -10567,6 +10768,7 @@ public class CopyTest
     public static Object goodCopyOf(Object a, int newLength) {
         Class cl = a.getClass();
         if (!cl.isArray()) return null;
+
         Class componentType = cl.getComponentType();
         int length = Array.getLength(a);
         Object newArray = Array.newInstance(componentType, length);
@@ -10589,45 +10791,53 @@ public class CopyTest
 }
 ```
 
-
-
 ```java
 Object newArray = Array.newInstance(componentType);
 System.arraycopy(a, 0, newArray, 0, N);
 return newArray;
 ```
 
-## java.lang.Class 1.1
+## `java.lang.Class` 1.1
 
-- boolean isArray()
-如果此对象表示数组类型，则返回 true。
-- Class getComponentType()
-如果此对象表示数组类型，则返回描述该组件类型的 Class；否则返回 null。
-- Class arrayType()
-返回描述此对象所表示的组件类型的数组类型的 Class。
+- `boolean isArray()`
 
-## java.lang.reflect.Array 1.1
+  如果此对象表示数组类型，则返回 `true`。
 
-- static Object get(Object array, int index)
-- static xxx getXXX(Object array, int index)
-(xxx 是基本类型 boolean, byte, char, double, float, int, long, 或 short 之一。)这些方法返回给定数组中存储在给定索引处的值。
+- `Class getComponentType()`
 
-- static void set(Object array, int index, Object newValue)
-- static setXxx(Object array, int index, xxx newValue)
-(xxx 是基本类型 boolean, byte, char, double, float, int, long, 或 short 之一。)这些方法将新值存储在给定数组的给定索引处。
+  如果此对象表示数组类型，则返回描述该组件类型的 `Class`；否则返回 `null`。
 
-- static int getLength(Object array) 返回给定数组的长度。
+- `Class arrayType()`
 
-- static Object newInstance(Class componentType, int length)
+  返回描述此对象所表示的组件类型的数组类型的 `Class`。
 
-- static Object newInstance(Class componentType, int[] lengths)
-返回一个具有给定组件类型和给定维度的新数组。
+## `java.lang.reflect.Array` 1.1
+
+- `static Object get(Object array, int index)`
+- `static xxx getXXX(Object array, int index)`
+
+  (`xxx` 是基本类型 `boolean`、`byte`、`char`、`double`、`float`、`int`、`long` 或 `short` 之一。)这些方法返回给定数组中存储在给定索引处的值。
+
+- `static void set(Object array, int index, Object newValue)`
+- `static setXxx(Object array, int index, xxx newValue)`
+
+  (`xxx` 是基本类型 `boolean`、`byte`、`char`、`double`、`float`、`int`、`long` 或 `short` 之一。)这些方法将新值存储在给定数组的给定索引处。
+
+- `static int getLength(Object array)`
+
+  返回给定数组的长度。
+
+- `static Object newInstance(Class componentType, int length)`
+
+- `static Object newInstance(Class componentType, int[] lengths)`
+
+  返回一个具有给定组件类型和给定维度的新数组。
 
 ## 5.10.7. 调用任意方法和构造函数
 
 在 C 和 C++ 中，你可以通过函数指针执行任意函数。从表面上看，Java 并没有方法指针——也就是说没有将方法的位置传递给另一个方法的方法，以便第二个方法稍后调用它。事实上，Java 的设计者曾说过，方法指针是危险且容易出错的，Java 接口和 lambda 表达式（将在下一章讨论）是更优的解决方案。然而，反射机制允许你调用任意方法。
 
-回一下，你可以使用 Field 类的 get 方法来检查对象的字段。同样，Method 类有一个 `invoke` 方法，允许你调用封装在当前 Method 对象中的方法。`invoke` 方法的签名如下：
+回一下，你可以使用 `Field` 类的 `get` 方法来检查对象的字段。同样，`Method` 类有一个 `invoke` 方法，允许你调用封装在当前 `Method` 对象中的方法。`invoke` 方法的签名如下：
 
 ```java
 Object invoke(Object obj, Object... args)
@@ -10637,25 +10847,25 @@ Object invoke(Object obj, Object... args)
 
 对于静态方法，第一个参数会被忽略——你可以将其设置为 `null`。
 
-例如，如果 m1 代表 Employee 类的 `getName` 方法，以下代码展示了你如何调用它：
+例如，如果 `m1` 代表 `Employee` 类的 `getName` 方法，以下代码展示了你如何调用它：
 
 ```java
 String n = (String) m1.invoke(harry);
 ```
 
-如果返回类型是基本类型，`invoke` 方法将返回对应的包装类型。例如，m2 代表 Employee 类的 `Salary` 方法。那么，返回的对象实际上是一个 `Double`，你必须对其进行相应的类型转换。使用自动拆箱将其转换为 `double`：
+如果返回类型是基本类型，`invoke` 方法将返回对应的包装类型。例如，`m2` 代表 `Employee` 类的 `Salary` 方法。那么，返回的对象实际上是一个 `Double`，你必须对其进行相应的类型转换。使用自动拆箱将其转换为 `double`：
 
 ```java
 double s = (Double) m2.invoke(harry);
 ```
 
-如何获取 Method 对象？当然，你可以调用 `getDeclaredMethods` 并遍历返回的 Method 对象数组，直到找到你想要的方法。或者，你可以调用 Class 类的 `getMethod` 方法。这与 `getField` 方法类似，后者接收一个带有字段名的字符串并返回一个 Field 对象。然而，可能存在多个同名的方法，所以你需要小心确保获取的是正确的一个。因此，你还必须提供所需方法的参数类型。`getMethod` 的签名是：
+如何获取 `Method` 对象？当然，你可以调用 `getDeclaredMethods` 并遍历返回的 `Method` 对象数组，直到找到你想要的方法。或者，你可以调用 `Class` 类的 `getMethod` 方法。这与 `getField` 方法类似，后者接收一个带有字段名的字符串并返回一个 `Field` 对象。然而，可能存在多个同名的方法，所以你需要小心确保获取的是正确的一个。因此，你还必须提供所需方法的参数类型。`getMethod` 的签名是：
 
 ```java
 Method getMethod(String name, Class... parameterTypes)
 ```
 
-例如，这里是获取 Employee 类的 `getName` 和 `raiseSalary` 方法指针的方法：
+例如，这里是获取 `Employee` 类的 `getName` 和 `raiseSalary` 方法指针的方法：
 
 ```java
 Method m1 = Employee.class.getMethod("getName");
@@ -10670,9 +10880,9 @@ Constructor cons = cl.getConstructor(String.class);
 Object obj = cons.newInstance("Mary had a little");
 ```
 
-> **注意：** Method 和 Constructor 类继承自 Executable 类。从 Java 17 开始，Executable 类是密封的（sealed），只允许 Method 和 Constructor 作为子类。
+> **注意：** `Method` 和 `Constructor` 类继承自 `Executable` 类。从 Java 17 开始，`Executable` 类是密封的（sealed），只允许 `Method` 和 `Constructor` 作为子类。
 
-现在你已经知道了使用 Method 对象的规则，让我们用它们吧。列表 5.21 是一个打印数学函数（如 `Math.sqrt` 或 `Math.sin`）值表格的程序。输出如下：
+现在你已经知道了使用 `Method` 对象的规则，让我们用它们吧。列表 5.21 是一个打印数学函数（如 `Math.sqrt` 或 `Math.sin`）值表格的程序。输出如下：
 
 | | |
 | :--- | :--- |
@@ -10698,7 +10908,6 @@ import java.lang.reflect.*;
  * @author Cay Horstmann
  */
 public class MethodTest {
-
     public static void main(String[] args) throws ReflectiveException {
         Method f = Math.class.getMethod("sqrt");
         printTable(f, 1.0, 10.0, 10);
@@ -10711,34 +10920,36 @@ public class MethodTest {
      * @param n 行数
      * @param f 一个带有 double 类型的方法
      */
-    public static void printTable(Method f, double from, double to, int n) throws ReflectiveException {
+    public static void printTable(Method f, double from, double to, int n)
+            throws ReflectiveException {
         System.out.println(f);
         double dx = (to - from) / (n - 1);
+
         for (double x = from; x <= to; x += dx) {
             double y = (Double) f.invoke(null, x);
             System.out.printf("%10.4f | %10.4f%n", x, y);
         }
     }
-    
+
     public static double square(double x) {
         return x * x;
     }
 }
 ```
 
-
-
-
 这就是为什么我们将 `name` 字段放在 `Person` 类中，而不是在 `Employee` 和 `Student` 类中重复它。
 
-## 2. 不要使用受保护字段。
+## 2. 不要使用受保护字段
+
 有些程序员认为，将大多数实例字段定义为 `protected`（受保护）是一个好主意，以便“以防万一”，这样子类在需要时就可以访问这些字段。然而，由于两个原因，`protected` 机制并没有提供多少保护。首先，子类的范围是无边界的——任何人都可以为你的类创建一个子类，并编写直接访问 `protected` 实例字段的代码，从而破坏了封装性。其次，在 Java 中，同一个包中的所有类都可以访问 `protected` 字段，无论它们是否为子类。
+
 但是，`protected` 方法可以很有用，用于指示尚未准备好通用且应该在子类中重新定义的方法。
 
-## 3. 使用继承来建模“是”（is–a）关系。
+## 3. 使用继承来建模“是”（is–a）关系
+
 继承是一种实用的代码节省工具，但有时人们会过度使用。例如，假设我们需要一个 `Contractor`（承包工）类。承包工有名字和入职日期，但没有薪水。相反，他们按小时计费，而且他们留的时间不够长以获得加薪。人们倾向于从 `Employee` 派生出一个子类 `Contractor` 并添加一个 `hourlyWage`（时薪）字段。
 
-```
+```java
 public class Contractor extends Employee {
     private double hourlyWage;
     ...
@@ -10749,7 +10960,9 @@ public class Contractor extends Employee {
 
 承包工与员工的关系没有通过“是”测试。承包工不是员工的某种特殊特例。
 
-## 4. 除非所有继承的方法都有意义，否则不要使用继承。假设我们想写一个 `Holiday`（节日）类。显然，每个节日都是一天，而天可以用 `GregorianCalendar` 类的实例来表示，因此我们可以使用继承。
+## 4. 除非所有继承的方法都有意义，否则不要使用继承
+
+假设我们想写一个 `Holiday`（节日）类。显然，每个节日都是一天，而天可以用 `GregorianCalendar` 类的实例来表示，因此我们可以使用继承。
 
 ```java
 class Holiday extends GregorianCalendar { ..
@@ -10764,11 +10977,11 @@ christmas.add(Calendar.DAY_OF_MONTH, 12);
 
 因此，在这个例子中继承是不恰当的。注意，如果你扩展的是一个不可变类，这个问题就不会出现。假设你有一个不可变的日期类，类似于 `LocalDate` 但不是 `final` 的。如果你形成一个 `Holiday` 子类，那么没有方法可以将节日变成非节日。
 
-## 5. 在重写方法时不要更改预期的行为。
+## 5. 在重写方法时不要更改预期的行为
 
 等替换原则（the substitution principle）不仅适用于语法，更重要的是适用于行为。当你重写一个方法时，你不应该在不合理的情况下改变它的行为。编译器并无法帮助你——它无法检查你的重新定义是否符合逻辑。例如，你可以通过重新定义 `add` 方法来“修复” `Holiday` 类中 `add` 方法的问题，也许可以让它什么都不做，或者抛出一个异常，或者跳到下一个节日。
 
-然而，这种修复违反了替换原则。以下语句序列
+然而，这种修复违反了替换原则。以下语句序列：
 
 ```java
 int d1 = x.get(Calendar.DAY_OF_MONTH);
@@ -10778,26 +10991,33 @@ System.out.println(d2 - d1);
 ```
 
 无论 `x` 是 `GregorianCalendar` 类型还是 `Holiday` 类型，都应该期望预期的行为。
-当然，问题就在于此。合理和不合理的人可以就什么是预期行为进行长期的争论。例如，某些作者认为替换原则要求 `Manager.equals` 应该忽略 `bonus` 字段，因为 `Employee.equals` 忽略了它。如果这些讨论是在真空中发生的，它们是没有意义的。归结底，重要的是当你在子类中重写方法时，不要绕过原始设计的意图。
 
-## 6. 使用多态，而不是类型信息。
-每当你发现如下形式的代码时
+当然，问题就在于此。合理和不合理的人可以就什么是预期行为进行长期的争论。例如，某些作者认为替换原则要求 `Manager.equals` 应该忽略 `bonus` 字段，因为 `Employee.equals` 忽略了它。如果这些讨论是在真空中发生的，它们是没有意义的。归根到底，重要的是当你在子类中重写方法时，不要绕过原始设计的意图。
 
-```
+## 6. 使用多态，而不是类型信息
+
+每当你发现如下形式的代码时：
+
+```java
 if (x is of type 1) action1();
 else if (x is of type 2) action2();
-```请考虑多态。
+```
 
-## 7. 不要过度使用反射。
-反射机制允许你在运行时检测字段和方法，这种能力对于系统编程非常有用，但通常是脆弱的。使用反射时，编译器无法帮助你发现错误。你现在已经学习了类、继承和多态。在下一章中，我将介绍两个重要的主题：接口和 Lambda 表达式。
+
+
+请考虑多态。
+
+## 7. 不要过度使用反射
+
+反射机制允许你在运行时检测字段和方法，这种能力对于系统编程非常有用，但通常是脆弱的。使用反射时，编译器无法帮助你发现错误。你现在已经学习了类、继承和多态。在下一章中，我将介绍两个重要的主题：接口和`Lambda`表达式。
 
 # 第6章 接口、Lambda 表达式与内部类
 
 你现在已经学习了类、继承和多态的基础知识。本章向你展示了一些常用的高级技术。
 
-第一个技术叫做**接口**（interfaces），它是描述类应该做什么，而不指定它们如何做的方法。类可以实现一个或多个接口。在讨论了接口后，我们将转向 **Lambda 表达式**，这是一种在稍后执行代码块的简洁方式。使用 Lambda 表达式，你可以以优雅的方式创建回调。
+第一个技术叫做接口（interfaces），它是描述类应该做什么，而不指定它们如何做的方法。类可以实现一个或多个接口。在讨论了接口后，我们将转向`Lambda`表达式，这是一种在稍后执行代码块的简洁方式。使用`Lambda`表达式，你可以以优雅的方式创建回调。
 
-然后我们讨论**内部类**（inner classes）。内部类在技术上相当复杂——它们被定义在类内部，其方法可以访问外部类的字段。当你设计协作类时，内部类是有用的。
+然后我们讨论内部类（inner classes）。内部类在技术上相当复杂——它们被定义在类内部，其方法可以访问外部类的字段。当你设计协作类时，内部类是有用的。
 
 本章以代理（proxies）的讨论结束，它是实现任意接口的对象。代理是构建级工具的特殊构造。第一次阅读时可以跳过该节。
 
@@ -10809,137 +11029,132 @@ else if (x is of type 2) action2();
 
 在 Java 编程语言中，接口不是类，而是对想要符合接口的类的要求。
 
-通常，某些服务的提供者会声明：“如果你的类符合某个接口，那么我就执行该服务。”让我们来看一个具体的例子。`Arrays` 的 `sort` 方法承诺对对象数组进行排序，但有一个条件：对象必须属于实现了 `Comparable` 接口的类。
+通常，某些服务的提供者会声明：“如果你的类符合某个接口，那么我就执行该服务。”让我们来看一个具体的例子。`Arrays`的`sort`方法承诺对对象数组进行排序，但有一个条件：对象必须属于实现了`Comparable`接口的类。
 
-`Comparable` 接口如下：
+`Comparable`接口如下：
 
 ```java
-public interface Comparable
-{
+public interface Comparable {
     int compareTo(Object other);
 }
 ```
 
-在接口，`compareTo` 方法是抽象的——它没有实现。实现 `Comparable` 接口的类需要有一个 `compareTo` 方法，并且该方法必须有一个 Object 参数并返回一个整数。否则，该类也是抽象的——也就是说你不能实例化任何对象。
+在接口中，`compareTo`方法是抽象的——它没有实现。实现`Comparable`接口的类需要有一个`compareTo`方法，并且该方法必须有一个`Object`参数并返回一个整数。否则，该类也是抽象的——也就是说你不能实例化任何对象。
 
-> 注意：从 Java 5 开始，Comparable 接口已增强为泛型。
+> 注意：从 Java 5 开始，`Comparable`接口已增强为泛型。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_707_0.png)
 
 ```java
-public interface Comparable<T>
-{
+public interface Comparable<T> {
     int compareTo(T other); // 参数
 }
 ```
 
-例如，实现 `Comparable<Employee>` 的类必须提供一个方法
-
-
+例如，实现`Comparable<Employee>`的类必须提供一个方法：
 
 ```java
 int compareTo(Employee other)
 ```
 
-你仍然可以使用不带类型参数的“原始” `Comparable` 类型。此时，`compareTo` 方法的参数类型为 `Object`，你必须手动将该 `compareTo` 方法的参数强制转换为所需的类型。我将暂时这么这样做，这样你就不需要同时担心两个新概念了。
+你仍然可以使用不带类型参数的“原始”`Comparable`类型。此时，`compareTo`方法的参数类型为`Object`，你必须手动将该`compareTo`方法的参数强制转换为所需的类型。我将暂时这么这样做，这样你就不需要同时担心两个新概念了。
 
-接口中的所有方法都自动是 `public` 的。因此，在接口中声明方法时，没有提供 `public` 关键字。
+接口中的所有方法都自动是`public`的。因此，在接口中声明方法时，没有提供`public`关键字。
 
-当然，还有一个接口语法无法表达的额外要求：当调用 `x.compareTo(y)` 时，`compareTo` 方法必须比较这两个对象，并返回 `x` 还是 `y` 较大的指示。如果 `x` 小于 `y`，该方法应该返回负数；如果它们相等，返回零；否则返回正数。
+当然，还有一个接口语法无法表达的额外要求：当调用`x.compareTo(y)`时，`compareTo`方法必须比较这两个对象，并返回`x`还是`y`较大的指示。如果`x`小于`y`，该方法应该返回负数；如果它们相等，返回零；否则返回正数。
 
 这个特定的接口只有一个方法。有些接口有多个方法。正如你之后将看到的，接口也可以定义常量。然而，更重要的是接口无法提供的内容。接口永远没有实例字段。在 Java 8 之前，接口中的所有方法都是抽象的。正如你在第 6.1.4 节和第 6.1.5 节中所看到的，现在可以在接口中拥有其他方法了。当然，这些方法不能引用实例字段——接口没有任何实例字段。
 
-现在，假设我们使用 `Arrays` 类的 `sort` 方法对 `Employee` 对象数组进行排序。那么 `Employee` 类必须实现 `Comparable` 接口。
+现在，假设我们使用`Arrays`类的`sort`方法对`Employee`对象数组进行排序。那么`Employee`类必须实现`Comparable`接口。
 
 要让一个类实现接口，你需要执行两个步骤：
 
-- 1. 声明你的类打算实现给定的接口。
-- 2. 为接口中的所有方法提供定义。
+1. 声明你的类打算实现给定的接口。
+2. 为接口中的所有方法提供定义。
 
-要声明一个类实现接口，请使用 `implements` 关键字：
+要声明一个类实现接口，请使用`implements`关键字：
 
 ```java
 class Employee implements Comparable
 ```
 
-当然，现在 `Employee` 类需要提供 `compareTo` 方法。假设我们想根据薪水比较员工。这里是 `compareTo` 方法的一个实现：
+当然，现在`Employee`类需要提供`compareTo`方法。假设我们想根据薪水比较员工。这里是`compareTo`方法的一个实现：
 
 ```java
-public int compareTo(Object otherObject)
-{
+public int compareTo(Object otherObject) {
     Employee other = (Employee) otherObject;
     return Double.compare(salary, other.salary);
 }
 ```
 
-在这里，我们使用了静态的 `Double.compare` 方法，如果第一个参数小于第二个参数，它返回负数；如果相等，返回 0；否则返回正值。
+在这里，我们使用了静态的`Double.compare`方法，如果第一个参数小于第二个参数，它返回负数；如果相等，返回 0；否则返回正值。
 
-> 注意：在接口声明中，`compareTo` 方法没有声明为 `public`，因为接口中的所有方法自动都是 `public`。然而，在实现接口时，你必须将方法声明为 `public`。否则，编译器会认为该方法具有包访问权限（类的默认权限）。编译器随后会抱怨你试图提供一种更严格的访问权限。
+> 注意：在接口声明中，`compareTo`方法没有声明为`public`，因为接口中的所有方法自动都是`public`。然而，在实现接口时，你必须将方法声明为`public`。否则，编译器会认为该方法具有包访问权限（类的默认权限）。编译器随后会抱怨你试图提供一种更严格的访问权限。
 
-我们可以通过为泛型 `Comparable` 接口提供类型参数来做得更好一点：
+我们可以通过为泛型`Comparable`接口提供类型参数来做得更好一点：
 
 ```java
 class Employee implements Comparable<Employee> {
     public int compareTo(Employee other) {
         return Double.compare(salary, other.salary);
     }
+
     ...
 }
 ```
 
-注意，那个难看的 `Object` 参数强制转换消失了。
+注意，那个难看的`Object`参数强制转换消失了。
 
-**提示：** `Comparable` 接口的 `compareTo` 方法返回一个整数。如果对象不相等，返回什么负值或正值并不重要。这种灵活性在比较整数字段时非常有用。例如，假设每个员工都有一个唯一的整数 `id`，你想根据员工 ID 进行排序。你可以简单地返回 `id - other.id`。如果第一个 ID 小于另一个，该值将是一个负值；如果 ID 相同，则为 0；否则为某个正值。然而，有一个限制：整数的范围必须足够小，以至于减法不会溢出。如果你知道 ID 不是负数，或者它们的绝对值最多为 `(Integer.MAX_VALUE - 1) / 2`，那就是安全的。否则，调用静态的 `Integer.compare` 方法。
+**提示：**`Comparable`接口的`compareTo`方法返回一个整数。如果对象不相等，返回什么负值或正值并不重要。这种灵活性在比较整数字段时非常有用。例如，假设每个员工都有一个唯一的整数`id`，你想根据员工 ID 进行排序。你可以简单地返回`id - other.id`。如果第一个 ID 小于另一个，该值将是一个负值；如果 ID 相同，则为 0；否则为某个正值。然而，有一个限制：整数的范围必须足够小，以至于减法不会溢出。如果你知道 ID 不是负数，或者它们的绝对值最多为`(Integer.MAX_VALUE - 1) / 2`，那就是安全的。否则，调用静态的`Integer.compare`方法。
 
-当然，减法技巧适用于浮点数。如果薪水接近但不相等，`salary - other.salary` 的差异可能会舍入为 0。`Double.compare(x, y)` 调用仅在 `x < y` 时返回 -1，在 `x > y` 时返回 1。
+当然，减法技巧适用于浮点数。如果薪水接近但不相等，`salary - other.salary`的差异可能会舍入为 0。`Double.compare(x, y)`调用仅在`x < y`时返回 -1，在`x > y`时返回 1。
 
-> **注意：** `Comparable` 接口的文档建议 `compareTo` 方法应该与 `equals` 方法兼容。也就是说，当 `x.equals(y)` 时，`x.compareTo(y)` 应该正好为零。Java API 中大多数实现 `Comparable` 的类都遵循这一建议。
+> **注意：**`Comparable`接口的文档建议`compareTo`方法应该与`equals`方法兼容。也就是说，当`x.equals(y)`时，`x.compareTo(y)`应该正好为零。Java API 中大多数实现`Comparable`的类都遵循这一建议。
 
-一个显著异常是 `BigDecimal`。考虑 `x = new BigDecimal("1.0")` 和 `y = new BigDecimal("1.00")`。因为数字精度不同，`x.equals(y)` 为 `false`。而 `x.compareTo(y)` 为 0。理想情况下，它不应该是 0，但没有明显的方法来决定哪一个应该在前。
+一个显著异常是`BigDecimal`。考虑`x = new BigDecimal("1.0")`和`y = new BigDecimal("1.00")`。因为数字精度不同，`x.equals(y)`为`false`。而`x.compareTo(y)`为 0。理想情况下，它不应该是 0，但没有明显的方法来决定哪一个应该在前。
 
-另一个异常是 `StringBuilder`，它实现了 `Comparable` 但没有重写 `equals`：
+另一个异常是`StringBuilder`，它实现了`Comparable`但没有重写`equals`：
 
 ```java
 StringBuilder x = new StringBuilder("He");
 StringBuilder y = new StringBuilder("He");
+
 x.equals(y) // false
 x.compareTo(y) // 0
 ```
 
-> 注意：带有双精度操作数的比较运算符与 `Double` 类的对应方法之间存在细微差异。
+> 注意：带有双精度操作数的比较运算符与`Double`类的对应方法之间存在细微差异。
 
-第一个问题是负零 -0.0。当与 `==` 或 `<` 等关系运算符比较时，它与 `0` 不区分。
+第一个问题是负零 -0.0。当与`==`或`<`等关系运算符比较时，它与`0`不区分。
 
-另一个问题是 `NaN`。任何与操作数为 `NaN` 的关系运算符进行比较都会返回 `false`。
+另一个问题是`NaN`。任何与操作数为`NaN`的关系运算符进行比较都会返回`false`。
 
 然而，包装成实例后，它的行为有所不同。
 
-接口的存在是因为 Java 语言是强类型的。在进行方法调用时，编译器需要能够检查该方法是否存在。在 `sort` 方法的某处会有这样的语句：
+接口的存在是因为 Java 语言是强类型的。在进行方法调用时，编译器需要能够检查该方法是否存在。在`sort`方法的某处会有这样的语句：
 
 ```java
-if (a[i].compareTo(a[j]) > 0)
-{
+if (a[i].compareTo(a[j]) > 0) {
     // 重新排列 a[i] 和 a[j]
     ...
 }
 ```
 
-编译器必须知道 `a[i]` 确实有一个 `compareTo` 方法。如果 `a` 是 `Comparable` 对象数组，那么该方法的存在是有保证的，因为每个实现接口的类必须提供该方法。
+编译器必须知道`a[i]`确实有一个`compareTo`方法。如果`a`是`Comparable`对象数组，那么该方法的存在是有保证的，因为每个实现接口的类必须提供该方法。
 
-> 注意：你可能认为 `Arrays` 类中的 `sort` 方法定义为接收 `Comparable[]` 数组，这样如果有人用元素类型未实现 `Comparable` 接口的数组调用 `sort`，编译器就会报错。遗憾事实如此。相反，`sort` 方法接收 `Object[]` 数组并使用笨拙的强制转换：
+> 注意：你可能认为`Arrays`类中的`sort`方法定义为接收`Comparable[]`数组，这样如果有人用元素类型未实现`Comparable`接口的数组调用`sort`，编译器就会报错。遗憾事实如此。相反，`sort`方法接收`Object[]`数组并使用笨拙的强制转换：
 
 ```java
 // 标准库中使用的方法
-if (((Comparable)a[i]).compareTo(a[j]) > 0)
-{
-  // 重新排列 a[i] 和 a[j]
-  ...
+if (((Comparable) a[i]).compareTo(a[j]) > 0) {
+    // 重新排列 a[i] 和 a[j]
+    ...
 }
 ```
 
-如果 `a[i]` 不属于实现 `Comparable` 接口的类，虚拟机将抛出异常。
+如果`a[i]`不属于实现`Comparable`接口的类，虚拟机将抛出异常。
 
-列表 6.1 展示了排序 `Employee` 类实例数组的完整代码（列表 6.2）。
+列表 6.1 展示了排序`Employee`类实例数组的完整代码（列表 6.2）。
 
 # Listing 6.1 interfaces/EmployeeSortTest.java
 
@@ -10953,10 +11168,10 @@ import java.util.*;
  * @version 1.30 2004-02-27
  * @author Cay Horstmann
  */
+
 public class EmployeeSortTest {
     public static void main(String[] args) {
         var staff = new Employee[3];
-
         staff[0] = new Employee("Harry Hacker");
         staff[1] = new Employee("Carl Cracker");
         staff[2] = new Employee("Tony Tester");
@@ -10965,11 +11180,10 @@ public class EmployeeSortTest {
 
         // 打印所有员工的信息
         for (Employee e : staff) {
+        }
     }
 }
 ```
-
-
 
 ```java
 24 System.out.println("name=" + e.get());
@@ -10981,23 +11195,23 @@ public class EmployeeSortTest {
 
 ```java
 1 package interfaces;
-2 
+2
 3 public class Employee implements Comparable
 4 {
 5     private String name;
 6     private double salary;
-7 
+7
 8     public Employee(String name, double salary)
 9     {
 10      this.name = name;
 11      this.salary = salary;
 12  }
-13 
+13
 14  public String getName()
 15  {
 16      return name;
 17  }
-18 
+18
 19  public double getSalary()
 20  {
 21      return salary;
@@ -11016,6 +11230,7 @@ public void raiseSalary(double byPercent) {
  * @return 如果此员工小于另一个员工，则返回负值；
  * 如果工资相同，则返回0
  */
+
 public int compareTo(Employee other) {
     return Double.compare(salary, other.salary);
 }
@@ -11023,25 +11238,25 @@ public int compareTo(Employee other) {
 
 `java.lang.Comparable<T>` 1.0
 
-- `* int compareTo(T other)` 将此对象与其他对象比较，如果此对象小于对象，则返回一个负整数；如果它们相等，则返回零；否则返回一个正整数。
+- `int compareTo(T other)` 将此对象与其他对象比较，如果此对象小于对象，则返回一个负整数；如果它们相等，则返回零；否则返回一个正整数。
 
 `java.util.Arrays` 1.2
 
-- `static void sort(Object[] a)` 对数组 a 中的元素进行排序。数组中的所有元素必须属于实现了 Comparable 接口的类，并且它们必须相互可比较。
+- `static void sort(Object[] a)` 对数组`a`中的元素进行排序。数组中的所有元素必须属于实现了`Comparable`接口的类，并且它们必须相互可比较。
 
 `java.lang.Integer` 1.0
 
-- `static int compare(int x, int y)` 如果 x < y，则返回负整数；如果 x 和 y相等，则返回零；否则返回一个正整数。
+- `static int compare(int x, int y)` 如果`x < y`，则返回负整数；如果`x`和`y`相等，则返回零；否则返回一个正整数。
 
 `java.lang.Double` 1.0
 
-- `static int compare(double x, double y)` 如果 x < y，则返回负整数；如果 x 和 y相等，则返回零；否则返回一个正整数。
+- `static int compare(double x, double y)` 如果`x < y`，则返回负整数；如果`x`和`y`相等，则返回零；否则返回一个正整数。
 
-**注意：** 根据语言标准：“实现者必须确保对于所有 x 和 y，sgn(x.compareTo(y)) = sgn(y.compareTo(x))。（这意味着如果 y.compareTo(x) 抛出异常，则 x.compareTo(y) 必须抛出异常。）”在这里，sgn 是数字的符号：如果 n 为负，则为 -1；如果 n 等于0，则为0；如果 n 为正，则为 1。通俗地说，如果你反转了 compareTo 的参数，结果的符号（但不一定是实际值）也必须发生反转。
+**注意：**根据语言标准：“实现者必须确保对于所有`x`和`y`，`sgn(x.compareTo(y)) = sgn(y.compareTo(x))`。（这意味着如果`y.compareTo(x)`抛出异常，则`x.compareTo(y)`必须抛出异常。）”在这里，`sgn`是数字的符号：如果`n`为负，则为 -1；如果`n`等于 0，则为 0；如果`n`为正，则为 1。通俗地说，如果你反转了`compareTo`的参数，结果的符号（但不一定是实际值）也必须发生反转。
 
-与 equals 方法一样，当涉及到继承时可能会出现问题。
+与`equals`方法一样，当涉及到继承时可能会出现问题。
 
-由于 Manager 继承了 Employee，它实现了 `Comparable<Employee>` 而不是 `Comparable<Manager>`。如果 Manager 选择重写 compareTo，它必须准备好比较经理和员工的情况。它不能将员工强制转换为经理：
+由于`Manager`继承了`Employee`，它实现了`Comparable<Employee>`而不是`Comparable<Manager>`。如果`Manager`选择重写`compareTo`，它必须准备好比较经理和员工的情况。它不能将员工强制转换为经理：
 
 ```java
 class Manager extends Employee {
@@ -11052,29 +11267,31 @@ class Manager extends Employee {
 }
 ```
 
-这违反了“反对称”规则。如果 x 是一个 Employee 而 y 是一个 Manager，那么调用 x.compareTo(y) 不会抛出异常——它只是将 x 和 y 作为员工进行比较。但 y.compareTo(x) 会抛出 ClassCastException。
+这违反了“反对称”规则。如果`x`是一个`Employee`而`y`是一个`Manager`，那么调用`x.compareTo(y)`不会抛出异常——它只是将`x`和`y`作为员工进行比较。但`y.compareTo(x)`会抛出`ClassCastException`。
 
-这与第 5 章讨论的 equals 方法的情况相同，补救措施也是一样的。这里有两种不同的场景。
+这与第 5 章讨论的`equals`方法的情况相同，补救措施也是一样的。这里有两种不同的场景。
 
-如果子类对比较有不同的理解，那么你不应该允许属于不同类的对象进行比较。每个 compareTo 方法应该从如下测试开始：
+如果子类对比较有不同的理解，那么你不应该允许属于不同类的对象进行比较。每个`compareTo`方法应该从如下测试开始：
 
 ```java
-if (getClass() != other.getClass()) { ... }
+if (getClass() != other.getClass()) {
+    ...
+}
 ```
 
-如果有一个通用的子类对象比较算法，只需在父类中提供 compareTo 方法并将其声明为 final 即可。
+如果有一个通用的子类对象比较算法，只需在父类中提供`compareTo`方法并将其声明为`final`即可。
 
-例如，假设你希望经理无论工资如何，都比普通员工高级。那么其他子类（如 Executive 和 Secretary）呢？如果你需要建立一个等级，可以在 Employee 类中提供一个诸如 rank 的方法。让每个子类重写 rank，并实现一个考虑了 rank 值的单个 compareTo 方法。
+例如，假设你希望经理无论工资如何，都比普通员工高级。那么其他子类（如`Executive`和`Secretary`）呢？如果你需要建立一个等级，可以在`Employee`类中提供一个诸如`rank`的方法。让每个子类重写`rank`，并实现一个考虑了`rank`值的单个`compareTo`方法。
 
-## 6.1.2. 接口的属性
+## 6.1.2 接口的属性
 
-接口不是类。特别是你永远无法使用 `new` 运算符来实例化接口：
+接口不是类。特别是你永远无法使用`new`运算符来实例化接口：
 
 ```java
 x = new Comparable(..); // 错误
 ```
 
-然而，尽管你不能构造接口对象，你仍然可以声明接口变量。
+然而，尽管你不能构造接口对象，你仍然可以声明接口变量：
 
 ```java
 Comparable x; // 正确
@@ -11086,13 +11303,15 @@ Comparable x; // 正确
 x = new Employee(..); // 只要 Employee 实现了即可
 ```
 
-接下来，就像你使用 `instanceof` 来检查对象是否属于特定类一样，你也可以使用 `instanceof` 来检查对象是否实现了某个接口：
+接下来，就像你使用`instanceof`来检查对象是否属于特定类一样，你也可以使用`instanceof`来检查对象是否实现了某个接口：
 
 ```java
-if (anObject instanceof Comparable) { ... }
+if (anObject instanceof Comparable) {
+    ...
+}
 ```
 
-就像你可以构建类的层次结构一样，你可以扩展接口。这允许创建从通用到特种的接口链。例如，假设你有一个名为 `Moveable` 的接口。
+就像你可以构建类的层次结构一样，你可以扩展接口。这允许创建从通用到特种的接口链。例如，假设你有一个名为`Moveable`的接口：
 
 ```java
 interface Moveable {
@@ -11100,7 +11319,7 @@ interface Moveable {
 }
 ```
 
-那么，你可以想象有一个名为 `Powered` 的接口：
+那么，你可以想象有一个名为`Powered`的接口：
 
 ```java
 interface Powered extends Moveable {
@@ -11111,16 +11330,20 @@ interface Powered extends Moveable {
 等等，接口可以包含常量：
 
 ```java
+
+
+
+```java
 interface FastMoveable {
     final double speed = 100.0;
 }
 ```
 
-**注意：** 接口隐式地公共。直接子类型必须在同一个源文件中声明。
+**注意：**接口隐式地公共。直接子类型必须在同一个源文件中声明。
 
 ## 6.1.3. 接口与抽象类
 
-如果你读了第 5 章关于抽象类的章节，你可能会奇怪 Java 的设计者为什么要引入接口的概念。为什么 Comparable 就不能简单地是一个抽象类：
+如果你读了第 5 章关于抽象类的章节，你可能会奇怪 Java 的设计者为什么要引入接口的概念。为什么 `Comparable` 就不能简单地是一个抽象类：
 
 ```java
 abstract class Comparable // 为什么不能呢？
@@ -11129,7 +11352,7 @@ abstract class Comparable // 为什么不能呢？
 }
 ```
 
-那么 Employee 类只需扩展这个抽象类并提供 `compareTo` 方法即可：
+那么 `Employee` 类只需扩展这个抽象类并提供 `compareTo` 方法即可：
 
 ```java
 class Employee extends Comparable // 为什么不能呢？
@@ -11138,7 +11361,7 @@ class Employee extends Comparable // 为什么不能呢？
 }
 ```
 
-遗憾的是，使用抽象类来表示通用属性有一个主要问题。一个类只能继承一个类。假设 Employee 类已经继承了另一个类，比如 Person。那么它就不能继承第二个类了。
+遗憾的是，使用抽象类来表示通用属性有一个主要问题。一个类只能继承一个类。假设 `Employee` 类已经继承了另一个类，比如 `Person`。那么它就不能继承第二个类了。
 
 ```java
 class Employee extends Person, Comparable // 错误
@@ -11154,11 +11377,7 @@ class Employee extends Person implements Comparable
 
 相反，接口提供了多重继承的大部分优势，同时避免了复杂性和低效。
 
-**C++ 注意：** C++ 拥有多重继承以及随之而来的问题，如虚基类、支配规则和交叉指针转换。很少有 C++ 程序员使用多重继承，并认为不应该使用。其他程序员建议仅将多重继承用于“mix-in”风格。在 mix-in 风格中，主基类描述父对象，额外的基类（所谓的 mix-ins）提供辅助特性。这种风格类似于 Java 中具有单一父类和额外接口的类。
-
-
-
-
+**C++ 注意：**C++ 拥有多重继承以及随之而来的问题，如虚基类、支配规则和交叉指针转换。很少有 C++ 程序员使用多重继承，并认为不应该使用。其他程序员建议仅将多重继承用于“mix-in”风格。在 mix-in 风格中，主基类描述父对象，额外的基类（所谓的 mix-ins）提供辅助特性。这种风格类似于 Java 中具有单一父类和额外接口的类。
 
 > 提示：你在第 3 章中见过 `CharSequence` 接口。`String` 和 `StringBuilder`（以及其他一些晦涩的类字符串类）实现了这个接口。该接口包含了所有管理字符序列类共有的方法。通用接口鼓励程序员编写使用 `CharSequence` 接口、`StringBuilder` 以及其他类字符串类实例的方法。
 
@@ -11176,8 +11395,11 @@ class Employee extends Person implements Comparable
 
 ```java
 public interface Path
+{
     public static Path of(URI uri) { . . . }
+
     public static Path of(String first, String...
+
     . . .
 ```
 
@@ -11193,6 +11415,7 @@ public interface Path
 public interface Comparable<T>
 {
     default int compareTo(T other) { return 0; }
+
     // 默认情况下，所有元素都是相等的
 }
 ```
@@ -11203,8 +11426,13 @@ public interface Comparable<T>
 public interface Iterator<E>
 {
     boolean hasNext();
+
     E next();
-    default void remove() { throw new UnsupportedOperationException();
+
+    default void remove() {
+        throw new UnsupportedOperationException();
+    }
+
     ....
 }
 ```
@@ -11217,8 +11445,10 @@ public interface Iterator<E>
 public interface Collection
 {
     int size(); // 一个抽象方法
+
     default boolean isEmpty() { return size() == 0; }
-....
+
+    ....
 }
 ```
 
@@ -11299,10 +11529,7 @@ class Student extends Person implements Named {
 
 “类胜出”规则确保了与旧版本 Java 的兼容。如果你向接口添加默认方法，它对默认方法出现之前运行的代码没有影响。
 
-> 警告：你永远无法无法重定义 `Object` 类中任一方法的默认方法。例如，你不能为 `toString` 或 `equals` 定义默认方法，尽管这对于 `List` 等接口来说可能很有吸引力。由于“类胜出”规则的结果，这样的方法
-
-
-永远无法胜过 Object.toString 或 Object.equals。
+> 警告：你永远无法无法重定义 `Object` 类中任一方法的默认方法。例如，你不能为 `toString` 或 `equals` 定义默认方法，尽管这对于 `List` 等接口来说可能很有吸引力。由于“类胜出”规则的结果，这样的方法永远无法胜过 `Object.toString` 或 `Object.equals`。
 
 ## 6.1.7. 接口与回调
 
@@ -11330,6 +11557,7 @@ public interface ActionListener {
 class TimePrinter implements ActionListener {
     public void actionPerformed(ActionEvent event) {
         System.out.println("At the tone, the time: " + Instant.ofEpochMilli(event.getWhen()));
+
         Toolkit.getDefaultToolkit().beep();
     }
 }
@@ -11341,6 +11569,7 @@ class TimePrinter implements ActionListener {
 
 ```java
 var listener = new TimePrinter();
+
 Timer t = new Timer(1000, listener);
 ```
 
@@ -11362,7 +11591,7 @@ t.start();
 
 列表 6.3 展示了定时器及其动作监听器的工作。定时器启动后，程序会弹出一个对话框并等待用户点击 OK 按钮以停止。在程序等待用户期间，当前时间每秒会显示一次。（如果省略了对话框，程序将在主方法退出时立即终止。）
 
-## 列表 6.3 timer/TimerTest.java
+## 列表 6.3 `timer/TimerTest.java`
 
 ```java
 package timer;
@@ -11402,22 +11631,25 @@ class TimePrinter implements ActionListener
 }
 ```
 
-| javax.swing.JOptionPane 1.2 | |
-| :--- | :--- |
-| static void showDialog(Component parent, Object message) | 显示一个带有消息提示和 OK 按钮的对话框。对话框位于父组件的居中。如果 parent 为 null，则对话框在屏幕上居中。 |
 
-| javax.swing.Timer 1.2 | |
-| :--- | :--- |
-| Timer(int interval, ActionListener listener) | 创建一个定时器，每当指定的毫秒间隔结束时，就会通知监听器。 |
-| void start() | 启动定时器。一旦启动，定时器将调用监听器上的 actionPerformed 方法。 |
-| void stop() | 停止定时器。一旦停止，定时器不再调用监听器上的 actionPerformed 方法。 |
 
-| java.awt.Toolkit 1.0 | |
-| :--- | :--- |
-| static Toolkit getDefaultToolkit() | 获取默认工具包。Toolkit 包含关于 GUI 环境的信息。 |
-| void beep() | 发出声音。 |
 
-## 6.1.8. Comparator 接口
+| `javax.swing.JOptionPane` 1.2 | |
+| :--- | :--- |
+| `static void showDialog(Component parent, Object message)` | 显示一个带有消息提示和 OK 按钮的对话框。对话框位于父组件的居中。如果 `parent` 为 `null`，则对话框在屏幕上居中。 |
+
+| `javax.swing.Timer` 1.2 | |
+| :--- | :--- |
+| `Timer(int interval, ActionListener listener)` | 创建一个定时器，每当指定的毫秒间隔结束时，就会通知监听器。 |
+| `void start()` | 启动定时器。一旦启动，定时器将调用监听器上的 `actionPerformed` 方法。 |
+| `void stop()` | 停止定时器。一旦停止，定时器不再调用监听器上的 `actionPerformed` 方法。 |
+
+| `java.awt.Toolkit` 1.0 | |
+| :--- | :--- |
+| `static Toolkit getDefaultToolkit()` | 获取默认工具包。`Toolkit` 包含关于 GUI 环境的信息。 |
+| `void beep()` | 发出声音。 |
+
+## 6.1.8. `Comparator` 接口
 
 在第 6.1.1 节中，你已经看到了如何对对象数组进行排序，只要它们是实现了 `Comparable` 的类的实例。例如，你可以对字符串数组进行排序，因为 `String` 实现了 `Comparable`，并且 `compare` 方法按字典顺序比较字符串。
 
@@ -11443,6 +11675,7 @@ class LengthComparator implements Comparator<String> {
 
 ```java
 var comp = new LengthComparator();
+
 if (comp.compare(words[i], words[j]) > 0) // . .
 ```
 
@@ -11454,10 +11687,11 @@ if (comp.compare(words[i], words[j]) > 0) // . .
 
 ```java
 String[] friends = {"Peter", "Paul", "Mary"};
+
 Arrays.sort(friends, new LengthComparator());
 ```
 
-现在数组变为 ["Paul", "Mary", "Peter"] 或 ["Mary", "Paul", "Peter"]。
+现在数组变为 `["Paul", "Mary", "Peter"]` 或 `["Mary", "Paul", "Peter"]`。
 
 你将在第 6.2 节看到如何使用 Lambda 表达式更方便地使用 `Comparator`。
 
@@ -11471,26 +11705,25 @@ Arrays.sort(friends, String.CASE_INSENSITIVE)
 
 比较器需要满足以下三个规则：
 
-- 反射性：当 x 和 y 相等时，比较器产生 0。
+- 反射性：当 `x` 和 `y` 相等时，比较器产生 `0`。
 - 反对称性：当交换比较器的参数时，结果的符号也会发生反转。
-- 传递性：当 x 在 y 之前且 y 在 z 之前时，那么 x 必须在 z 之前。
+- 传递性：当 `x` 在 `y` 之前且 `y` 在 `z` 之前时，那么 `x` 必须在 `z` 之前。
 
-`Arrays.sort` 使用的算法（称为“Timsort”）不会对所有元素检查这些规则，但它可以以极小的代价检测到规则违规。然后抛出一个异常，消息为“Comparison method violates its general contract!”。对于数组的
-
-
-对于 1,000 个元素来说，使用随机比较器发生这种情况的概率超过 10%。
+`Arrays.sort` 使用的算法（称为“Timsort”）不会对所有元素检查这些规则，但它可以以极小的代价检测到规则违规。然后抛出一个异常，消息为“Comparison method violates its general contract!”。对于数组的 1,000 个元素来说，使用随机比较器发生这种情况的概率超过 10%。
 
 `Collections.shuffle` 方法可以随机打乱列表。要打乱一个数组，首先将其转换为列表，然后对列表进行打乱。
 
-## 6.1.9. 对象克隆 (Object Cloning)
+## 6.1.9. 对象克隆（Object Cloning）
 
 在本节中，我们将讨论 `Cloneable` 接口，它表示一个类提供了一个安全的 `clone` 方法。由于克隆并不常见，而且细节非常技术化，你可能只需要在需要时快速扫一眼这些材料。
 
 为了理解克隆的含义，请回想当你复制一个持有对象引用的变量时会发生什么。原始变量和拷贝都是指向同一个对象的引用（见图 6.1）。这意味着对任何一个变量的修改都会影响另一个。
 
-```
+```java
 var original = new Employee("John Public", 50000);
+
 Employee copy = original;
+
 copy.raiseSalary(10); // 噢——也改变了原始对象
 ```
 
@@ -11500,8 +11733,9 @@ copy.raiseSalary(10); // 噢——也改变了原始对象
 
 如果你希望拷贝是一个新对象，其起始状态与原始对象相同，但状态可以随时间推移而不同，请使用 `clone` 方法。
 
-```
+```java
 Employee copy = original.clone();
+
 copy.raiseSalary(10); // 好的——原始对象未变
 ```
 
@@ -11513,16 +11747,18 @@ copy.raiseSalary(10); // 好的——原始对象未变
 
 图 6.2：浅拷贝
 
-拷贝是浅拷贝的重要吗？这取决于情况。如果原始对象和浅克隆之间共享的子对象是不可变的，那么这种共享就是安全的。如果子对象属于一个不可变类（例如 `String`），这种情况确实会发生。或者，子对象在对象的整个生命周期内可能保持不变，没有变器方法触碰它，也没有方法返回它的引用。
+拷贝是浅拷贝重要吗？这取决于情况。如果原始对象和浅克隆之间共享的子对象是不可变的，那么这种共享就是安全的。如果子对象属于一个不可变类（例如 `String`），这种情况确实会发生。或者，子对象在对象的整个生命周期内可能保持不变，没有变器方法触碰它，也没有方法返回它的引用。
 
 然而，子对象通常是可变的，你必须重新定义 `clone` 方法以实现深拷贝，从而也克隆子对象。在我们的示例中，`hireDay` 字段是 `Date` 类型，它是可变的，因此它也必须被克隆。（出于这个原因，此示例使用了 `Date` 类型的字段，而不是 `LocalDate`。如果 `hireDay` 是 `LocalDate` 类的实例，则不需要进一步的操作。）
 
 对于每个类，你都需要决定：
+
 1. 默认的 `clone` 方法是否足够好；
 2. 通过在可变子对象上调用 `clone` 来修复默认的 `clone` 方法；或者
 3. 不应尝试克隆。
 
 第三种选择实际上是默认选项。要选择第一或第二种方案，类必须：
+
 1. 实现 `Cloneable` 接口；且
 2. 使用 `public` 修饰符重定义 `clone` 方法。
 
@@ -11530,16 +11766,18 @@ copy.raiseSalary(10); // 好的——原始对象未变
 
 为了直观理解这一点，请考虑第 4 章引入的 `Employee` 类。图 6.2 显示了当你使用 `Object` 类的 `clone` 方法克隆此类 `Employee` 对象时发生的情况。正如你所看到的，默认的克隆操作是“浅”的——它不会克隆其他对象内部引用的对象。（图中显示了一个共享的 `Date` 对象。由于稍后会说清楚的原因，此示例使用了 `Employee` 类的一个版本，其中入职日期用 `Date` 表示。）
 
-拷贝是浅拷贝的重要吗？这取决于情况。如果原始对象和浅克隆之间共享的子对象是不可变的，那么这种共享就是安全的。如果子对象属于不可变类（例如 `String`），这种情况确实会发生。或者，子对象在对象的整个生命周期内可能保持不变，没有变器方法触碰它，也没有方法返回它的引用。
+拷贝是浅拷贝重要吗？这取决于情况。如果原始对象和浅克隆之间共享的子对象是不可变的，那么这种共享就是安全的。如果子对象属于不可变类（例如 `String`），这种情况确实会发生。或者，子对象在对象的整个生命周期内可能保持不变，没有变器方法触碰它，也没有方法返回它的引用。
 
 然而，子对象通常是可变的，你必须重新定义 `clone` 方法以实现深拷贝，从而也克隆子对象。在我们的示例中，`hireDay` 字段是 `Date`，它是可变的，因此它也必须被克隆。（出于这个原因，此示例使用了 `Date` 类型的字段，而不是 `LocalDate`。如果 `hireDay` 是 `LocalDate` 类的实例，则不需要进一步的操作。）
 
 对于每个类，你都需要决定：
+
 1. 默认的 `clone` 方法是否足够好；
 2. 通过在可变子对象上调用 `clone` 来修复默认的 `clone` 方法；或者
 3. 不应尝试克隆。
 
 第三种方案实际上是默认选项。要选择第一或第二种方案，类必须：
+
 1. 实现 `Cloneable` 接口；且
 2. 使用 `public` 修饰符重定义 `clone` 方法。
 
@@ -11551,16 +11789,41 @@ copy.raiseSalary(10); // 好的——原始对象未变
 
 图 6.2：浅拷贝
 
-拷贝是浅拷贝的重要吗？这取决于情况。如果原始对象和浅克隆之间共享的子对象是不可变的，那么这种共享就是安全的。如果子对象属于不可变类（例如 `String`），这种情况确实会发生。或者，子对象在对象的整个生命周期内可能保持不变，没有变器方法触碰它，也没有方法返回它的引用。
+拷贝是浅拷贝重要吗？这取决于情况。如果原始对象和浅克隆之间共享的子对象是不可变的，那么这种共享就是安全的。如果子对象属于不可变类（例如 `String`），这种情况确实会发生。或者，子对象在对象的整个生命周期内可能保持不变，没有变器方法触碰它，也没有方法返回它的引用。
 
 然而，子对象通常是可变的，你必须重新定义 `clone` 方法以实现深拷贝，从而也克隆子对象。在我们的示例中，`hireDay` 字段是 `Date`，它是可变的，因此它也必须被克隆。（出于这个原因，此示例使用了 `Date` 类型的字段，而不是 `LocalDate`。如果 `hireDay` 是 `LocalDate` 类的实例，则不需要进一步的操作。）
 
 对于每个类，你都需要决定：
+
 1. 默认的 `clone` 方法是否足够好；
 2. 通过在可变子对象上调用 `clone` 来修复默认的 `clone` 方法；或者
 3. 不应尝试克隆。
 
 第三种方案实际上是默认选项。要选择第一或第二种方案，类必须：
+
+1. 实现 `Cloneable` 接口；且
+2. 使用 `public` 修饰符重定义 `clone` 方法。
+
+注意：`clone` 方法被声明为 `protected`，这意味着你的代码不能简单地调用它。只有 `Employee` 类可以克隆 `Employee` 对象。这种限制是有原因的。考虑 `Object` 类实现 `clone` 的方式。它对对象完全一无所知，因此它只能逐字段地复制。如果对象中的所有实例字段都是数字或其他基本类型，那么复制字段就没问题。但如果对象包含指向子对象的引用，那么复制字段将给你另一个指向该相同子对象的引用，因此原始对象和克隆对象仍然共享某些信息。
+
+为了直观理解这一点，请考虑第 4 章中引入的 `Employee` 类。图 6.2 显示了当你使用 `Object` 类的 `clone` 方法克隆此类 `Employee` 对象时发生的情况。正如你所看到的，默认的克隆操作是“浅”的——它不会克隆其他对象内部引用的对象。（图中显示了一个共享的 `Date` 对象。由于稍后会说清楚的原因，此示例使用了 `Employee` 类的一个版本，其中入职日期用 `Date` 表示。）
+
+![](img/1bda005f6b519fd0924777a921aebffa_751_0.png)
+
+图 6.2：浅拷贝
+
+拷贝是浅拷贝重要吗？这取决于情况。如果原始对象和浅克隆之间共享的子对象是不可变的，那么这种共享就是安全的。如果子对象属于不可变类（例如 `String`），这种情况确实会发生。或者，子对象在对象的整个生命周期内可能保持不变，没有变器方法触碰它，也没有方法返回它的引用。
+
+然而，子对象通常是可变的，你必须重新定义 `clone` 方法以实现深拷贝，从而也克隆子对象。在我们的示例中，`hireDay` 字段是 `Date`，它是可变的，因此它也必须被克隆。（出于这个原因，此示例使用了 `Date` 类型的字段，而不是 `LocalDate`。如果 `hireDay` 是 `LocalDate` 类的实例，则不需要进一步的操作。）
+
+对于每个类，你都需要决定：
+
+1. 默认的 `clone` 方法是否足够好；
+2. 通过在可变子对象上调用 `clone` 来修复默认的 `clone` 方法；或者
+3. 不应尝试克隆。
+
+第三种方案实际上是默认选项。要选择第一或第二种方案，类必须：
+
 1. 实现 `Cloneable` 接口；且
 2. 使用 `public` 修饰符重定义 `clone` 方法。
 
@@ -11574,8 +11837,9 @@ copy.raiseSalary(10); // 好的——原始对象未变
 
 [content]
 
-```
+```java
 Employee copy = original.clone();
+
 copy.raiseSalary(10); // OK--原始对象不变
 ```
 
@@ -11587,45 +11851,52 @@ copy.raiseSalary(10); // OK--原始对象不变
 
 图 6.2：浅拷贝
 
-拷贝是浅拷贝的重要吗？这取决于情况。如果原始对象和浅克隆之间共享的子对象是不可变的，那么这种共享就是安全的。如果子对象属于不可变类（例如 `String`），这种情况确实会发生。或者，子对象在对象的整个生命周期内可能保持不变，没有变器方法触碰它，也没有方法返回它的引用。
+拷贝是浅拷贝重要吗？这取决于情况。如果原始对象和浅克隆之间共享的子对象是不可变的，那么这种共享就是安全的。如果子对象属于不可变类（例如 `String`），这种情况确实会发生。或者，子对象在对象的整个生命周期内可能保持不变，没有变器方法触碰它，也没有方法返回它的引用。
 
 然而，子对象通常是可变的，你必须重新定义 `clone` 方法以实现深拷贝，从而也克隆子对象。在我们的示例中，`hireDay` 字段是 `Date`，它是可变的，因此它也必须被克隆。（出于这个原因，此示例使用了 `Date` 类型的字段，而不是 `LocalDate`。如果 `hireDay` 是 `LocalDate` 类的实例，则不需要进一步的操作。）
 
 对于每个类，你都需要决定：
+
 1. 默认的 `clone` 方法是否足够好；
 2. 通过在可变子对象上调用 `clone` 来修复默认的 `clone` 方法；或者
 3. 不应尝试克隆。
 
 第三种方案实际上是默认选项。要选择第一或第二种方案，类必须：
+
 1. 实现 `Cloneable` 接口；且
 2. 使用 `public` 修饰符重定义 `clone` 方法。
 
 注意：`clone` 方法被声明为 `protected`，这意味着你的代码不能简单地调用它。只有 `Employee` 类可以克隆 `Employee` 对象。这种限制是有原因的。考虑 `Object` 类实现 `clone` 的方式。它对对象完全一无所知，因此它只能逐字段地复制。如果对象中的所有实例字段都是数字或其他基本类型，那么复制字段就没问题。但如果对象包含指向子对象的引用，那么复制字段将给你另一个指向该相同子对象的引用，因此原始对象和克隆对象仍然共享某些信息。
 
 [content]
-[/]
 
 **注意：** 注意在 `Object` 类中，`clone` 方法的返回类型是 `Object`。在子类中，你可以指定正确的返回类型。这是一个协变返回类型的示例（见第 5 章）。
 
 `clone` 方法没有增加 `Object.clone()` 提供的浅拷贝功能。它只是让该方法变为公共。要实现深拷贝，你必须付出更多并克隆可变实例字段。这是一个创建深拷贝的 `clone` 方法示例：
 
+```java
+class Employee implements Cloneable {
+    public Employee clone() throws CloneNotSupportedException {
+        // 调用 super.clone()
 ```
-class Employee implements Cloneable
-{
-  public Employee clone() throws CloneSupportedException {
-    // 调用 super.clone()
-    Employee cloned = (Employee) super.clone();
-    // 克隆字段
-    cloned.hireDay = (Date) hireDay.clone();
-    return cloned;
-  }
-}
+
+
+
+
+```java
+Employee cloned = (Employee) super.clone();
+
+// 克隆字段
+
+cloned.hireDay = (Date) hireDay.clone();
+
+return cloned;
 ```
 
 `Object` 类的 `clone` 方法威胁抛出 `CloneSupportedException`——当对未实现 `Cloneable` 接口的对象调用 `clone` 时这样做。当然，`Employee` 和 `Date` 类实现了 `Cloneable` 接口，所以不会抛出异常。但编译器并不知道。因此，我们声明了异常：
 
-```
-public Employee clone() throws CloneSupportedException
+```java
+public Employee clone() throws CloneNotSupportedException
 ```
 
 注意：捕获异常更好吗？（详情见第 7 章。）
@@ -11636,7 +11907,7 @@ public Employee clone() throws CloneSupportedException
 public Employee clone() {
     try {
         Employee cloned = (Employee) super.clone();
-    } catch (CloneSupportedException e) {
+    } catch (CloneNotSupportedException e) {
         // 因为我们是 final 类，所以这不会发生
     }
 }
@@ -11645,7 +11916,6 @@ public Employee clone() {
 这对于 `final` 类是合适的。否则，最好保留 `throws` 标识符。这样子类就提供了在无法支持克隆时抛出 `CloneSupportedException` 的选择。
 
 你必须小心子类的克隆问题。例如，一旦你为 `Employee` 类定义了 `clone` 方法，任何人都可以它来克隆 `Manager` 对象。`Employee` 的 `clone` 方法能胜任吗？这取决于 `Manager` 类的字段。在我们的案例中，没有问题，因为 `bonus` 字段是基本类型。`Manager` 可能获得了需要深拷贝或不可克隆的字段。
-
 
 无法保证子类的实现者已经修复了 `clone` 方法以执行正确的操作。出于这个原因，`clone` 方法在 `Object` 类中被声明为 `protected`。但如果你希望你的类的用户能够调用 `clone`，你就没有这种奢侈了。
 
@@ -11657,7 +11927,9 @@ public Employee clone() {
 
 ```java
 int[] luckyNumbers = { 2, 3, 5, 7, 11 };
+
 int[] cloned = luckyNumbers.clone();
+
 cloned[5] = 12; // 不改变 lucky
 ```
 
@@ -11665,13 +11937,14 @@ cloned[5] = 12; // 不改变 lucky
 
 ```java
 package clone;
+
 /**
  * 此程序演示了克隆。
  * @version 1.11 2018-03-16
  * @author Cay Horstmann
  */
-public class CloneTest
-{
+
+public class CloneTest {
     public static void main(String[] args) {
         var original = new Employee("John Q.");
         original.setHireDay(2000, 1, 1);
@@ -11688,8 +11961,10 @@ public class CloneTest
 
 ```java
 package clone;
+
 import java.time.*;
 import java.util.*;
+
 public class Employee implements Cloneable {
     private String name;
     private double salary;
@@ -11704,8 +11979,10 @@ public class Employee implements Cloneable {
     public Employee clone() throws CloneNotSupportedException {
         // 调用 Object.clone()
         Employee cloned = (Employee) super.clone();
+
         // 克隆可变字段
         cloned.hireDay = (Date) hireDay.clone();
+
         return cloned;
     }
 
@@ -11736,7 +12013,7 @@ public class Employee implements Cloneable {
 }
 ```
 
-## 6.2. Lambda 表达式
+## 6.2 Lambda 表达式
 
 在后续章节中，你将学习如何使用 Lambda 表达式用简洁的语法定义代码块，以及如何编写使用 Lambda 表达式的代码。
 
@@ -11767,13 +12044,14 @@ class LengthComparator implements Comparator<String> {
     }
 }
 ```
-...
-Arrays.sort(strings, new LengthComparator());
 
+```java
+Arrays.sort(strings, new LengthComparator());
+```
 
 ```java
 Comparator<String> comp =
-    (first, second) // 等同于 (String first, String) -> first.length() - second.length();
+    (first, second) -> first.length() - second.length();
 ```
 
 在这里，编译器可以推导出 `first` 和 `second` 必须是字符串，因为该 lambda 表达式被赋值了一个字符串比较器。（我们将在下一节中详细讨论这种赋值。）
@@ -11783,10 +12061,11 @@ Comparator<String> comp =
 ```java
 ActionListener listener = event ->
     System.out.println("The time is " + Instant.ofEpochMilli(event.getEpoch()));
-    // 而不是 (event) -> . . 或 (ActionEvent)
+
+// 而不是 (event) -> . . 或 (ActionEvent)
 ```
 
-你永远不需要指定 lambda 表达式的结果类型。它总是从上下文中推断出来的。例如，
+你永远不需要指定 lambda 表达式的结果类型。它总是从上下文中推断出来的。例如：
 
 ```java
 (String first, String second) -> first.length()
@@ -11806,6 +12085,7 @@ ActionListener listener = event ->
 
 ```java
 ActionListener listener = _ -> System.out.println("");
+
 Comparator<String> comp = (_, _) -> 0;
 ```
 
@@ -11816,40 +12096,43 @@ Comparator<String> comp = (_, _) -> 0;
 # 列表 6.6 lambda/LambdaTest.java
 
 ```java
-1 package lambda;
-2
-3 import java.util.*;
-4
-5 import javax.swing.*;
-6 import javax.swing.Timer;
-7
-8 /**
-9 * 此程序演示了 lambda 的使用
-10 * @version 1.0 2015-05-12
-11 * @author Cay Horstmann
-12 */
-13 public class LambdaTest
-14 {
-15     public static void main(String[] args)
-16     {
-17         var planets = new String[] { "Mercury",
-18         "Jupiter", "Saturn", "Uranus", "Neptune" };
-19         System.out.println(Arrays.toString(planets));
-20         System.out.println("Sorted in dictionary");
-21         Arrays.sort(planets);
-22         System.out.println(Arrays.toString(planets));
-23         System.out.println("Sorted by length:");
-24         Arrays.sort(planets, (first, second) -> first.length() - second.length());
-25         System.out.println(Arrays.toString(planets));
-26
-var timer = new Timer(1000, event -> {
-    System.out.println("The time is ");
-    timer.start();
+package lambda;
 
-    // 保持程序运行直到用户关闭
-    JOptionPane.showMessageDialog(null, "OK");
-    System.exit(0);
-});
+import java.util.*;
+
+import javax.swing.*;
+import javax.swing.Timer;
+
+/**
+ * 此程序演示了 lambda 的使用
+ * @version 1.0 2015-05-12
+ * @author Cay Horstmann
+ */
+
+public class LambdaTest {
+    public static void main(String[] args) {
+        var planets = new String[] {
+            "Mercury", "Jupiter", "Saturn", "Uranus", "Neptune"
+        };
+
+        System.out.println(Arrays.toString(planets));
+        System.out.println("Sorted in dictionary");
+        Arrays.sort(planets);
+        System.out.println(Arrays.toString(planets));
+        System.out.println("Sorted by length:");
+        Arrays.sort(planets, (first, second) -> first.length() - second.length());
+        System.out.println(Arrays.toString(planets));
+
+        var timer = new Timer(1000, event -> {
+            System.out.println("The time is ");
+            timer.start();
+
+            // 保持程序运行直到用户关闭
+            JOptionPane.showMessageDialog(null, "OK");
+            System.exit(0);
+        });
+    }
+}
 ```
 
 ### 6.2.3 函数式接口
@@ -11860,7 +12143,7 @@ var timer = new Timer(1000, event -> {
 
 > 注意：你可能会奇怪为什么函数式接口必须有一个抽象方法。难道接口中的所有方法不都是抽象的吗？实际上，接口一直可以重新声明 `Object` 类中的方法（如 `toString` 或 `clone`），这些声明并不会使方法变为抽象。（Java API 中的某些接口重新声明 `Object` 方法是为了附加 javadoc 注释。查看 `Comparator` API 示例。）更重要的是，正如你在 6.1.5 节中看到的，接口可以声明非抽象方法。
 
-为了演示向函数式接口的转换，考虑 `Arrays.sort` 方法。它的第二个参数需要一个 `Comparator` 实例，这是一个带有单个方法的接口。只需提供一个 lambda ：
+为了演示向函数式接口的转换，考虑 `Arrays.sort` 方法。它的第二个参数需要一个 `Comparator` 实例，这是一个带有单个方法的接口。只需提供一个 lambda：
 
 ```java
 Arrays.sort(words, (first, second) -> first.length() - second.length());
@@ -11901,7 +12184,8 @@ var timer = new Timer(1000, event -> {
 Java API 定义了许多通用的函数式接口。其中一个接口 `BiFunction<T, U, R>` 描述了具有参数 `T` 和返回类型 `R` 的函数。你可以将 lambda 保存到该类型的变量中：
 
 ```java
-BiFunction<String, String, Integer> comp = (first, second) -> first.length() - second.length();
+BiFunction<String, String, Integer> comp =
+    (first, second) -> first.length() - second.length();
 ```
 
 `java.util.function` 中一个特别用的接口是 `Predicate<T>`：
@@ -11909,7 +12193,14 @@ BiFunction<String, String, Integer> comp = (first, second) -> first.length() - s
 ```java
 public interface Predicate<T> {
     boolean test(T t);
-    // 其他默认和静态方法
+}
+```
+
+
+
+```
+// 其他默认和静态方法
+
 }
 ```
 
@@ -11927,27 +12218,23 @@ public interface Supplier<T> {
 }
 ```
 
-supplier 在调用时没有参数并产生类型为 `T` 的值。Supplier 用于*惰性求值*。例如，考虑调用：
+`supplier` 在调用时没有参数并产生类型为 `T` 的值。`Supplier` 用于*惰性求值*。例如，考虑调用：
 
 ```java
 LocalDate hireDay = Objects.requireNonNullElse(LocalDate.of(1970, 1, 1));
 ```
 
-这不是最优的。我们预计该日期很少为空，因此我们只想在需要时构造默认的 `LocalDate`。通过使用 supplier，我们可以推迟计算：
+这不是最优的。我们预计该日期很少为空，因此我们只想在需要时构造默认的 `LocalDate`。通过使用 `supplier`，我们可以推迟计算：
 
 ```java
 LocalDate hireDay = Objects.requireNonNullElseGet(() -> LocalDate.of(1970, 1, 1));
 ```
 
+作为 API 的用户，你通常不需要关心这种细微差别。考虑 `Arrays.setAll` 方法。它将数组的所有值设置为某个函数的结果，该函数的参数是数组的索引。在这里，我们将所有元素设置为索引的平方：
 
-
-
-
-作为 API 的用户，你通常不需要关心这种细微差别。
-考虑 `Arrays.setAll` 方法。它将数组的所有值设置为某个函数的结果，该函数的参数是数组的索引。在这里，我们将所有元素设置为索引的平方：
-
-```
+```java
 var values = new int[100];
+
 Arrays.setAll(values, i -> i * i); // [0, 1, 4, ...]
 ```
 
@@ -11955,8 +12242,9 @@ Arrays.setAll(values, i -> i * i); // [0, 1, 4, ...]
 
 > Lambda 表达式可以匹配函数式接口中的基本类型和包装类型，这很棒。但如果两种匹配都可能发生，那就是错误。考虑一个提供这些方法的工具类：
 
-```
+```java
 public static int[] fill(int n, IntUnaryOperator op...)
+
 public static Object[] fill(int n, IntFunc func...)
 ```
 
@@ -11968,13 +12256,13 @@ public static Object[] fill(int n, IntFunc func...)
 
 有时，lambda 表达式涉及单个方法。例如，假设你只想在定时器事件发生时打印事件对象。当然，你可以调用：
 
-```
+```java
 var timer = new Timer(1000, event -> System.out.println(event));
 ```
 
 如果能直接将 `println` 方法传递给 `Timer` 构造函数会更好。以下是实现方法：
 
-```
+```java
 var timer = new Timer(1000, System.out::println)
 ```
 
@@ -11984,7 +12272,7 @@ var timer = new Timer(1000, System.out::println)
 
 **注意：** `PrintStream` 类中有十个重载的 `println` 方法（`System.out` 就是它的实例）。编译器需要根据上下文确定使用哪一个。在我们的示例中，方法引用 `System.out::println` 必须转换为一个带有方法的 `ActionListener` 实例：
 
-```
+```java
 void actionPerformed(ActionEvent x)
 ```
 
@@ -11992,13 +12280,13 @@ void actionPerformed(ActionEvent x)
 
 现在假设我们将相同的方法引用赋值给不同的函数式接口：
 
-```
+```java
 Runnable task = System.out::println;
 ```
 
 `Runnable` 函数式接口有一个没有参数的单个抽象方法：
 
-```
+```java
 void run()
 ```
 
@@ -12006,7 +12294,7 @@ void run()
 
 另一个例子，假设你想忽略字母大小写对字符串进行排序。你可以传递此方法表达式：
 
-```
+```java
 Arrays.sort(strings, String::compareToIgnoreCase);
 ```
 
@@ -12026,7 +12314,7 @@ Arrays.sort(strings, String::compareToIgnoreCase);
 
 注意，只有当 lambda 表达式的主体调用单个方法且不做任何其他操作时，才能将其重写为方法引用。考虑 lambda 表达式：
 
-```
+```java
 s -> s.length() == 0
 ```
 
@@ -12034,15 +12322,13 @@ s -> s.length() == 0
 
 | 方法引用 | 等效 Lambda 表达式 | 备注 |
 | :--- | :--- | :--- |
-| separator::equals | x -> separator.equals(x) | 这是一个带有对象和实例方法的方法表达式。lambda 参数作为方法的显式参数传递。 |
-| String::strip | x -> x.strip() | 这是一个带有类和实例方法的方法表达式。lambda 参数变成隐式参数。 |
-| String::concat | (x, y) -> x.concat(y) | 同样，我们有一个实例方法，但这次带有显式参数。和一样，第一个参数变成隐式参数，其余参数传递给方法。 |
-| Integer::valueOf | x -> Integer.valueOf(x) | 这是一个带有静态方法的方法表达式。lambda 参数是特定的。 |
-| Integer::sum | (x, y) -> Integer.sum(x, y) | 这是另一个静态方法，但这次有两个参数。lambda 参数被传递给静态方法。 |
-| String::new | x -> new String(x) | 这是一个构造方法引用——参见第 6.2.6 节。 |
-| String[]::new | n -> new String[n] | 这是一个数组构造方法引用——参见 6.2.6。lambda 参数是数组长度。 |
-
-
+| `separator::equals` | `x -> separator.equals(x)` | 这是一个带有对象和实例方法的方法表达式。lambda 参数作为方法的显式参数传递。 |
+| `String::strip` | `x -> x.strip()` | 这是一个带有类和实例方法的方法表达式。lambda 参数变成隐式参数。 |
+| `String::concat` | `(x, y) -> x.concat(y)` | 同样，我们有一个实例方法，但这次带有显式参数。和一样，第一个参数变成隐式参数，其余参数传递给方法。 |
+| `Integer::valueOf` | `x -> Integer.valueOf(x)` | 这是一个带有静态方法的方法表达式。lambda 参数是特定的。 |
+| `Integer::sum` | `(x, y) -> Integer.sum(x, y)` | 这是另一个静态方法，但这次有两个参数。lambda 参数被传递给静态方法。 |
+| `String::new` | `x -> new String(x)` | 这是一个构造方法引用——参见第 6.2.6 节。 |
+| `String[]::new` | `n -> new String[n]` | 这是一个数组构造方法引用——参见 6.2.6。lambda 参数是数组长度。 |
 
 ```java
 public void greet(ActionEvent event) {
@@ -12059,7 +12345,9 @@ public void greet(ActionEvent event) {
 
 ```java
 ArrayList<String> names = . .;
+
 Stream<Person> stream = names.stream().map(Person::new);
+
 List<Person> people = stream.toList();
 ```
 
@@ -12085,6 +12373,7 @@ Person[] people = stream.toArray(Person[]::new);
 
 ```java
 var dates = new Date[100];
+
 Arrays.setAll(dates, Date::new);
 ```
 
@@ -12100,11 +12389,12 @@ public static void repeatMessage(String text, int delay) {
         System.out.println(text);
         Toolkit.getDefaultToolkit().beep();
     };
+
     new Timer(delay, listener).start();
 }
 ```
 
-考虑一个调用
+考虑一个调用：
 
 ```java
 repeatMessage("Hello", 1000); // 每秒打印一次 Hello
@@ -12132,6 +12422,7 @@ public static void countDown(int start, int delay) {
         start--; // 错误：不能修改 start
         System.out.println(start);
     };
+
     new Timer(delay, listener).start();
 }
 ```
@@ -12144,6 +12435,7 @@ public static void repeat(String text, int count) {
         ActionListener listener = event -> {
             System.out.println(i + ": " + text); // 错误：不能引用发生变化的变量
         };
+
         new Timer(1000, listener).start();
     }
 }
@@ -12155,6 +12447,7 @@ lambda 表达式体的作用域与嵌套块相同。名称冲突和遮蔽的规�
 
 ```java
 Path first = Path.of("/usr/bin");
+
 Comparator<String> comp = (first, second) -> first.length() - second.length(); // 错误：变量已定义
 ```
 
@@ -12164,15 +12457,15 @@ Comparator<String> comp = (first, second) -> first.length() - second.length(); /
 
 ```java
 public class Application {
-  public void init() {
-    ActionListener listener = event -> {
-      System.out.println(this.toString());
+    public void init() {
+        ActionListener listener = event -> {
+            System.out.println(this.toString());
+        }
     }
-  }
 }
 ```
 
-表达式 `this.toString()` 调用的是 `Application` 对象的 `toString` 方法，而不是 `ActionListener` 实例。在 lambda 表达式中使用 `this` 没有特殊之处
+表达式 `this.toString()` 调用的是 `Application` 对象的 `toString` 方法，而不是 `ActionListener` 实例。在 lambda 表达式中使用 `this` 没有特殊之处。
 
 ## 6.2.8. 处理 Lambda 表达式
 
@@ -12181,19 +12474,14 @@ public class Application {
 使用 lambda 的目的是延迟执行。毕竟，如果你想现在执行某些代码，你会直接这样做，而不是将其封装在 lambda 内部。以后执行代码的原因有很多，例如：
 
 - 在单独的线程中运行代码
-
-
-
-
-
--   多次运行代码
--   在算法的正确位置运行代码（例如排序中的比较操作）
--   当某些事件发生时运行代码（按钮被点击、数据到达等）
--   仅在需要时运行代码
+- 多次运行代码
+- 在算法的正确位置运行代码（例如排序中的比较操作）
+- 当某些事件发生时运行代码（按钮被点击、数据到达等）
+- 仅在需要时运行代码
 
 让我们来看一个简单的示例。假设你想重复执行一个动作 $n$ 次。该动作和计数被传递给一个 `repeat` 方法。
 
-```
+```java
 repeat(10, () -> System.out.println("Hello, World"));
 ```
 
@@ -12201,13 +12489,17 @@ repeat(10, () -> System.out.println("Hello, World"));
 
 ```java
 public static void repeat(int n, Runnable action) {
-    for (int i = 0; i < n; i++) action.run();
-}
+```
+
+
+
+```java
+for (int i = 0; i < n; i++) action.run();
 ```
 
 注意，lambda 表达式的体在调用 `action.run()` 时执行。
 
-现在让我们让这个例子变得复杂一点。我们想告诉动作它发生在哪一次迭代中。为此，我们需要选择一个具有带有 `int` 参数且返回 `void` 的方法的函数接口。处理 `int` 值的标准接口是
+现在让我们让这个例子变得复杂一点。我们想告诉动作它发生在哪一次迭代中。为此，我们需要选择一个具有带有 `int` 参数且返回 `void` 的方法的函数接口。处理 `int` 值的标准接口是：
 
 ```java
 public interface IntConsumer {
@@ -12233,44 +12525,36 @@ repeat(10, i -> System.out.println("Countdown: " + i));
 
 | 函数接口 | 参数类型 | 返回类型 | 抽象方法名 |
 | --- | --- | --- | --- |
-| Runnable | 无 | void | run |
-| Supplier<T> | 无 | T | get |
-| Consumer<T> | T | void | accept |
-| BiConsumer<T, U> | T, U | void | accept |
-
-| 函数接口 | 参数类型 | 返回类型 | 抽象方法名 |
-| --- | --- | --- | --- |
-| Function<T, R> | T | R | apply |
-| BiFunction<T, U, R> | T, U | R | apply |
-| UnaryOperator<T> | T | T | apply |
-| BinaryOperator<T> | T, T | T | apply |
-
-| 函数接口 | 参数类型 | 返回类型 | 抽象方法名 |
-| --- | --- | --- | --- |
-| Predicate<T> | T | boolean | test |
-| BiPredicate<T, U> | T, U | boolean | test |
+| `Runnable` | 无 | `void` | `run` |
+| `Supplier<T>` | 无 | `T` | `get` |
+| `Consumer<T>` | `T` | `void` | `accept` |
+| `BiConsumer<T, U>` | `T, U` | `void` | `accept` |
+| `Function<T, R>` | `T` | `R` | `apply` |
+| `BiFunction<T, U, R>` | `T, U` | `R` | `apply` |
+| `UnaryOperator<T>` | `T` | `T` | `apply` |
+| `BinaryOperator<T>` | `T, T` | `T` | `apply` |
+| `Predicate<T>` | `T` | `boolean` | `test` |
+| `BiPredicate<T, U>` | `T, U` | `boolean` | `test` |
 
 表 6.3 列出了针对基本类型 `int`、`long` 和 `double` 的 34 个可用特化。如你在第 8 章所示，使用这些特化接口比通用接口更高效。出于这个原因，在上节的示例中，我使用了 `IntConsumer` 而不是 `Consumer<Integer>`。
 
-表 6.3：基本类型的函数接口
-p, q 是 int, long, double; P Q 是 Int, Long, Double
+# 表 6.3：基本类型的函数接口
+
+`p`、`q` 是 `int`、`long`、`double`；`P`、`Q` 是 `Int`、`Long`、`Double`。
 
 | 函数接口 | 参数类型 | 返回类型 | 方法名 |
 |---|---|---|---|
-| BooleanSupplier | 无 | boolean | getAsBoolean |
-| PSupplier | | p | getAsP |
-| Consumer | p | void | accept |
-| ObjConsumer<T> | T, p | void | accept |
-| PFunction<T> | p | T | apply |
-| PToQFunction | p | q | applyAsQ |
-| ToPFFunction<T> | T | p | applyAsP |
-| PBiFunction<T, U> | T, U | p | applyAsP |
-| PUnaryOperator | p | p | applyAsP |
-
-| 函数接口 | 参数类型 | 返回类型 | 抽象方法名 |
-|---|---|---|---|
-| PBinaryOperator | p, p | p | applyAsp |
-| PPredicate | p | boolean | test |
+| `BooleanSupplier` | 无 | `boolean` | `getAsBoolean` |
+| `PSupplier` |  | `p` | `getAsP` |
+| `Consumer` | `p` | `void` | `accept` |
+| `ObjConsumer<T>` | `T, p` | `void` | `accept` |
+| `PFunction<T>` | `p` | `T` | `apply` |
+| `PToQFunction` | `p` | `q` | `applyAsQ` |
+| `ToPFFunction<T>` | `T` | `p` | `applyAsP` |
+| `PBiFunction<T, U>` | `T, U` | `p` | `applyAsP` |
+| `PUnaryOperator` | `p` | `p` | `applyAsP` |
+| `PBinaryOperator` | `p, p` | `p` | `applyAsp` |
+| `PPredicate` | `p` | `boolean` | `test` |
 
 **提示：** 尽可能对函数类型使用标准接口。例如，假设你写了一个方法来处理符合特定标准的文件。有一个遗留接口 `java.io.Filter`。但如果你使用标准的 `Predicate<File>` 接口，就可以利用创建、适配和组合谓词的方法。不这么做的唯一理由是你已经有了许多产生 `Filter` 实例的有用方法。
 
@@ -12278,16 +12562,14 @@ p, q 是 int, long, double; P Q 是 Int, Long, Double
 
 **注意：** 如果你设计了一个只有一个抽象方法的自定义接口，可以使用 `@FunctionalInterface` 注解对其进行标记。这有两个优点：如果你不小心添加了另一个抽象方法，编译器会给出错误信息；而且 javadoc 页面会显示它。
 
-（注：原文后续部分存在大量重复的句子，已根据要求去重并保留核心逻辑说明）
-
 ## 6.2.9. 创建比较器
 
 `Comparator` 接口有许多方便的静态方法用于创建比较器。这些方法旨在与 lambda 表达式或方法引用配合使用。
 
-静态方法 `comparing` 接收一个“键提取器”函数，将类型 T 映射到可比较的类型（如 `String`）。该函数应用于被比较的对象，然后对返回的键进行比较。例如，假设你有一个 `Person` 对象的数组。以下是如何按名称对它们进行排序：
+静态方法 `comparing` 接收一个“键提取器”函数，将类型 `T` 映射到可比较的类型（如 `String`）。该函数应用于被比较的对象，然后对返回的键进行比较。例如，假设你有一个 `Person` 对象的数组。以下是如何按名称对它们进行排序：
 
 ```java
-Arrays.sort(people, Comparator.comparing(
+Arrays.sort(people, Comparator.comparing(Person::getName));
 ```
 
 这显然比手动实现 `Comparator` 要容易得多。此外，代码更加清晰，因为显而易见我们想按名称比较人员。
@@ -12295,53 +12577,65 @@ Arrays.sort(people, Comparator.comparing(
 你可以使用 `thenComparing` 方法链式比较器来处理平局。例如：
 
 ```java
-Arrays.sort(people,
-Comparator.comparing(Person::getLastName)
-.thenComparing(Person::getFirstName));
+Arrays.sort(
+    people,
+    Comparator.comparing(Person::getLastName)
+        .thenComparing(Person::getFirstName)
+);
 ```
 
 如果两个人的姓相同，则会使用第二个比较器。
 
-这些方法有几种变体。你可以指定一个比较器，用于 `comparing` 和 `thenComparing` 方法提取的键。例如，在例例中，我们按名称的长度对人员进行排序：
+这些方法有几种变体。你可以指定一个比较器，用于 `comparing` 和 `thenComparing` 方法提取的键。例如，在例子中，我们按名称的长度对人员进行排序：
 
 ```java
-Arrays.sort(people, Comparator.comparing(Person:
-(s, t) -> Integer.compare(s.length(), t.length()))
+Arrays.sort(
+    people,
+    Comparator.comparing(
+        Person::getName,
+        (s, t) -> Integer.compare(s.length(), t.length())
+    )
+);
 ```
 
 此外，`comparing` 和 `thenComparing` 方法都有避免对 `int`、`long` 或 `double` 值进行装箱（boxing）的变体：
 
 ```java
-Arrays.sort(people, Comparator.comparing(Person:
-Comparator.comparingInt(String::length)))
+Arrays.sort(
+    people,
+    Comparator.comparing(
+        Person::getName,
+        Comparator.comparingInt(String::length)
+    )
+);
 ```
 
 一种产生上述操作较短但可能没那么优雅的方法是：
 
 ```java
-Arrays.sort(people, Comparator.comparingInt(p ->
+Arrays.sort(people, Comparator.comparingInt(p -> p.getName().length()));
 ```
 
-如果你的键函数可以返回 `null`，你会喜欢 `nullsFirst` 和 `nullLast` 适配器。这些静态方法接收一个现有的比较器并对其进行修改，使其在遇到 `null` 值时不抛出异常，而是将其排为比普通值更或更大。例如，假设 `getMiddleName` 在人员没有中间名时返回 `null`。那么你可以使用
-
-
+如果你的键函数可以返回 `null`，你会喜欢 `nullsFirst` 和 `nullsLast` 适配器。这些静态方法接收一个现有的比较器并对其进行修改，使其在遇到 `null` 值时不抛出异常，而是将其排为比普通值更小或更大。例如，假设 `getMiddleName` 在人员没有中间名时返回 `null`。那么你可以使用：
 
 ```java
-Comparator.comparing(Person::getMiddleName,
-Comparator.nullsFirst(..)).
+Comparator.comparing(
+    Person::getMiddleName,
+    Comparator.nullsFirst(Comparator.naturalOrder())
+);
 ```
 
-`nullsFirst` 方法需要一个比较器——在这种情况下，是一个比较两个字符串的比较器。`naturalOrder` 方法为任何实现 `Comparator` 接口类创建一个比较器。我们需要的是 `Comparator.<String>naturalOrder()`。关于此语法的解释请参阅第 8 章。（幸运的是，泛型类型通常可以被推断。）这是按可能为空的名称进行排序的完整调用。我使用了 `java.util.Comparator.*` 的静态导入，使表达式更具可读性。
+`nullsFirst` 方法需要一个比较器——在这种情况下，是一个比较两个字符串的比较器。`naturalOrder` 方法为任何实现 `Comparator` 接口的类创建一个比较器。我们需要的是 `Comparator.<String>naturalOrder()`。关于此语法的解释请参阅第 8 章。（幸运的是，泛型类型通常可以被推断。）这是按可能为空的名称进行排序的完整调用。我使用了 `java.util.Comparator.*` 的静态导入，使表达式更具可读性。
 
 ```java
-Arrays.sort(people, comparing(Person::getMiddleName))
+Arrays.sort(people, comparing(Person::getMiddleName));
 ```
 
 静态方法 `reverseOrder` 给出自然顺序的反序。若要反转任何比较器，请使用实例方法 `reversed()`。例如，`naturalOrder().reversed()` 与 `reverseOrder()` 相同。
 
 ## 6.3. 内部类
 
-内部类是定义在另一个内部的类。你为什么要这样做呢？有两个原因：
+内部类是定义在另一个类内部的类。你为什么要这样做呢？有两个原因：
 
 - 内部类可以对同一个包中的其他类隐藏。
 - 内部类的方法可以访问其定义所在作用域的数据——包括那些本应是私有的数据。
@@ -12359,13 +12653,14 @@ public:
     {
     public:
         ....
-private:
+    private:
         T data;
         Node* next;
-};
+    };
+
 private:
-Node* head;
-Node* tail;
+    Node* head;
+    Node* tail;
 };
 ```
 
@@ -12375,20 +12670,21 @@ Node* tail;
 
 ### 6.3.1. 使用内部类访问对象状态
 
-内部类的语法相当复杂。出于如此，我展示了一个简单但稍带人工色彩的示例来演示内部类的用法。让我们重构 `TimerTest` 示例并提取出一个 `TalkingClock` 类。会报钟的构造函数有两个参数：公告之间的间隔以及一个开启或关闭蜂声的标志。
+内部类的语法相当复杂。出于此原因，我展示了一个简单但稍带人工色彩的示例来演示内部类的用法。让我们重构 `TimerTest` 示例并提取出一个 `TalkingClock` 类。会报钟的构造函数有两个参数：公告之间的间隔以及一个开启或关闭蜂声的标志。
 
 ```java
-public class TalkingClock{
+public class TalkingClock {
     private int interval;
     private boolean beep;
 
-    public TalkingClock(int interval, boolean beep) { . . . }
-    public void start() { . . . }
+    public TalkingClock(int interval, boolean beep) { ... }
+
+    public void start() { ... }
 
     public class TimePrinter implements ActionListener {
         // 一个内部类
         {
-            . . .
+            ...
         }
     }
 }
@@ -12401,23 +12697,31 @@ public class TalkingClock{
 ```java
 public class TimePrinter implements ActionListener {
     public void actionPerformed(ActionEvent event) {
-        System.out.println("At the tone, the time: " + Instant.ofEpochMilli(event.getWhen()));
+        System.out.println(
+            "At the tone, the time: "
+                + Instant.ofEpochMilli(event.getWhen())
+        );
+
         if (beep) Toolkit.getDefaultToolkit().beep();
     }
 }
 ```
 
-发生了一些惊讶惊讶。`TimePrinter` 类没有名为 `beep` 的实例字段或变量。相反，`beep` 指向创建该 `TimePrinter` 的 `TalkingClock` 对象的字段。正如你所看到的，内部类方法可以访问其自身的字段以及创建它的外部对象的字段。为了让这种工作进行，内部类总是拥有创建它的外部对象的引用（见图 6.3）。
+发生了一些惊讶。`TimePrinter` 类没有名为 `beep` 的实例字段或变量。相反，`beep` 指向创建该 `TimePrinter` 的 `TalkingClock` 对象的字段。正如你所看到的，内部类方法可以访问其自身的字段以及创建它的外部对象的字段。为了让这种工作进行，内部类总是拥有创建它的外部对象的引用（见图 6.3）。
 
 ![](img/1bda005f6b519024777a921ebffa_816_0.png)
 
 **图 6.3：** 内部类对象拥有指向外部对象的引用。
 
-这种引用在内部类的定义中是不可见的。然而，为了说明这一概念，我们将外部对象的引用称为 *outer*。那么 `actionPerformed` 方法等效于：
+这种引用在内部类的定义中是不可见的。然而，为了说明这一概念，我们将外部对象的引用称为 `outer`。那么 `actionPerformed` 方法等效于：
 
 ```java
 public void actionPerformed(ActionEvent event) {
-    System.out.println("At the tone, the time: " + Instant.ofEpochMilli(event.getWhen()));
+    System.out.println(
+        "At the tone, the time: "
+            + Instant.ofEpochMilli(event.getWhen())
+    );
+
     if (outer.beep) Toolkit.getDefaultToolkit().beep();
 }
 ```
@@ -12425,13 +12729,12 @@ public void actionPerformed(ActionEvent event) {
 外部类引用在构造函数中设置。编译器修改所有内部类的构造函数，添加一个外部类引用参数。`TimePrinter` 类没有定义构造函数；因此，编译器合成了一个无参构造函数，生成的代码如下：
 
 ```java
-public TimePrinter(TalkingClock clock)
-{
+public TimePrinter(TalkingClock clock) {
     outer = clock;
 }
 ```
 
-再次请注意 `outer` 不是 Java 关键字。我们只是用它来说明这种机制。当在 `start` 方法中构造 `TimePrinter` 对象时，编译器会将此引用传递给当前的时：
+再次请注意，`outer` 不是 Java 关键字。我们只是用它来说明这种机制。当在 `start` 方法中构造 `TimePrinter` 对象时，编译器会将此引用传递给当前的 `this`：
 
 ```java
 var listener = new TimePrinter(this);
@@ -12441,9 +12744,9 @@ var listener = new TimePrinter(this);
 
 ### 6.3.2. 内部类的特殊语法规则
 
-在前面的节中，我们通过将其命名为 *outer* 来解释了内部类的外部类引用。实际上，外部引用的正确语法稍微复杂。表达式
+在前面的节中，我们通过将其命名为 `outer` 来解释了内部类的外部类引用。实际上，外部引用的正确语法稍微复杂。表达式：
 
-```
+```java
 OuterClass.this
 ```
 
@@ -12456,32 +12759,32 @@ public void actionPerformed(ActionEvent event) {
 }
 ```
 
-相反，你可以更显式地编写内部对象构造函数，使用语法
+相反，你可以更显式地编写内部对象构造函数，使用语法：
 
-
-
-```
+```java
 outerObject.new InnerClass(construction arguments)
 ```
 
 例如：
 
-```
+```java
 ActionListener listener = this.new TimePrinter();
 ```
 
 在这里，新构造的 `TimePrinter` 对象的外部类引用被设置为创建该内部类方法的 `this` 引用。这是最常见的情况。一如既往，`this.` 修饰符是多余的。不过，也可以通过显式命名将外部类引用设置为另一个对象。例如，由于 `TimePrinter` 是一个公共内部类，你可以为任何一个说话闹钟构造一个 `TimePrinter`：
 
-```
+```java
 var jabberer = new TalkingClock(1000, true);
 TalkingClock.TimePrinter listener = jabberer.new TimePrinter();
 ```
 
 注意，当内部类出现在外部类的范围之外时，你通过如下引用它：
 
-```
+```java
 OuterClass.InnerClass
 ```
+
+
 
 > **注意：** 从 Java 16 开始，内部类可以拥有静态成员。在此之前，内部类不允许静态方法，且在内部类中声明的静态字段必须是 `final` 的并使用编译时常量初始化。
 
@@ -12493,30 +12796,32 @@ OuterClass.InnerClass
 
 内部类被翻译成普通的类文件，并用 `$`（美元符号）分隔外部类和内部类名。例如，`TalkingClock` 内部的 `TimePrinter` 类被翻译为类文件 `TalkingClock$TimePrinter.class`。要查看效果，请尝试以下实验：运行第 5 章的 `ReflectionTest` 程序，并提供 `TalkingClock$TimePrinter` 类进行反射。或者，简单地使用 `javap` 工具：
 
-```
+```bash
 javap -private ClassName
 ```
 
 **注意：** 如果你使用 UNIX，请记住在命令行中提供类名时要转义 `$` 字符。也就是说，运行 `ReflectionTest` 或 `javap` 程序时如下：
 
-```
+```bash
 java --classpath ..:/v1ch05 reflection innerClass.TalkingClock\$TimePrinter
 ```
 
-或者
+或者：
 
-```
+```bash
 javap -private innerClass.TalkingClock
 ```
 
 你将得到以下输出：
 
-```
+```text
 public class innerClass.TalkingClock$TimePrinter
 implements java.awt.event.ActionListener
 {
     final innerClass.TalkingClock this$0;
-    public innerClass.TalkingClock$TimePrinter(innerClass.TalkingClock this$0) 
+
+    public innerClass.TalkingClock$TimePrinter(innerClass.TalkingClock this$0)
+
     public void actionPerformed(java.awt.event.ActionEvent e)
 }
 ```
@@ -12531,6 +12836,7 @@ implements java.awt.event.ActionListener
 class TalkingClock
 {
   ...
+
   public void start()
   {
     var listener = new TimePrinter(this);
@@ -12543,6 +12849,7 @@ class TimePrinter implements ActionListener
 {
   private TalkingClock outer;
   ...
+
   public TimePrinter(TalkingClock clock)
   {
     outer = clock;
@@ -12611,23 +12918,21 @@ public void start(int interval, boolean beep) {
 
 为了让 `actionPerformed` 方法中的代码运行，`TimePrinter` 类必须在 `beep` 参数值消失之前，将 `beep` 复制为 `start` 方法的一个局部变量。这确实发生了。在我们的示例中，编译器为该内部类合成了名称 `TalkingClock$1TimePrinter`。如果你再次使用 `ReflectionTest` 程序或 `javap` 工具查看 `TalkingClock$1TimePrinter` 类，你将得到以下输出：
 
-```
+```text
 class TalkingClock$1TimePrinter
 {
     TalkingClock$1TimePrinter();
 
     public void actionPerformed(ActionEvent e)
 
-        final boolean val$beep;
-        final TalkingClock$0 this$0;
+    final boolean val$beep;
+    final TalkingClock$0 this$0;
 }
 ```
 
 ## 6.3.6. 匿名内部类
 
 在使用局部类时，你通常可以更进一步。如果你只想创建该类的单个对象，你甚至不需要给该类命名。这样的类被称为匿名内部类。
-
-
 
 ```java
 public void start(int interval, boolean beep)
@@ -12637,9 +12942,11 @@ public void start(int interval, boolean beep)
         public void actionPerformed(ActionEvent event)
         {
             System.out.println("At the tone, the\n" + Instant.ofEpochMilli(event.getWhen()));
+
             if (beep) Toolkit.getDefaultToolkit().beep();
         }
     };
+
     var timer = new Timer(interval, listener);
     timer.start();
 }
@@ -12656,7 +12963,7 @@ new SuperType(construction arguments)
 }
 ```
 
-在这里，SuperType 可以是一个接口，例如 `ActionListener`；那么内部类就实现了该接口。SuperType 也可以是一个类；那么内部类就扩展了该类。
+在这里，`SuperType` 可以是一个接口，例如 `ActionListener`；那么内部类就实现了该接口。`SuperType` 也可以是一个类；那么内部类就扩展了该类。
 
 匿名内部类不能有构造函数，因为构造函数的名称必须与类的名称相同，而该类是没有名称的。相反，构造参数是传递给父类构造函数的。特别是每当内部类实现接口时，它不能有任何构造参数。尽管如此，你必须提供一组括号，如下：
 
@@ -12672,6 +12979,7 @@ new InterfaceType()
 ```java
 var queen = new Person("Mary");
 // 一个 Person 对象
+
 var count = new Person("Dracula") { . . };
 // 一个扩展 Person 的内部类对象
 ```
@@ -12696,8 +13004,8 @@ var count = new Person("Dracula")
 
 ```java
 public void start(int interval, boolean beep) {
-    var timer = new Timer(interval, event -> { 
-        System.out.println(event); 
+    var timer = new Timer(interval, event -> {
+        System.out.println(event);
         timer.start();
     });
 }
@@ -12711,9 +13019,9 @@ public void start(int interval, boolean beep) {
 var bob = new Object() { String name; System.out.println(bob.name); };
 ```
 
-如果你将 bob 声明为 `Object` 类型，那么 `bob.name` 将无法编译。
+如果你将 `bob` 声明为 `Object` 类型，那么 `bob.name` 将无法编译。
 
-用 `new Object() { String name = "Bob"; }` 构建的对象类型是“带有 String 字段的 Object”。这是一种不可命名的类型——一种你无法用 Java 语法表示的类型。尽管如此，编译器理解该类型，并可以将其设为 bob 变量的类型。
+用 `new Object() { String name = "Bob"; }` 构建的对象类型是“带有 String 字段的 Object”。这是一种不可命名的类型——一种你无法用 Java 语法表示的类型。尽管如此，编译器理解该类型，并可以将其设为 `bob` 变量的类型。
 
 **注意：** 下面这种被称为“双大括号初始化”的技巧利用了内部类语法。假设你想构造一个 array list 并将其传递给一个方法：
 
@@ -12760,10 +13068,10 @@ new Object{}.getClass().getEnclosingClass()
 
 ```java
 package anonymousInnerClass;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.time.*;
-
 import javax.swing.*;
 
 /**
@@ -12772,7 +13080,6 @@ import javax.swing.*;
  * @author Cay Horstmann
  */
 public class AnonymousInnerClassTest {
-
     public static void main(String[] args) {
         var clock = new TalkingClock();
         clock.start(1000, true);
@@ -12799,47 +13106,53 @@ class TalkingClock {
             public void actionPerformed(ActionEvent event)
             {
                 System.out.println("At the tone, the\n" + Instant.ofEpochMilli(event.getWhen()));
+
                 if (beep) Toolkit.getDefaultToolkit().beep();
             }
         };
-        var timer = new Timer(interval, listener);
-        timer.start();
-    }
-}
+```
+
+
+
+```java
+var timer = new Timer(interval, listener);
+
+timer.start();
 ```
 
 ## 6.3.7. 静态类
 
-偶尔，你可能将一个类嵌套另一个类内部，但你不需要嵌套类拥有外部类的引用。你可以通过将嵌套类声明为 `static` 来抑制该引用的生成。
+偶尔，你可能将一个类嵌套另一个类内部，但你不需要嵌套类拥有外部类的引用。你可以通过将嵌套类声明为`static`来抑制该引用的生成。
 
-Java 语言规范将任何在另一个类或接口内部声明的类称为“嵌套类”，将（必然是嵌套的）`static` 类称为“静态类”，并将非 `static` 的嵌套类称为“内部类”。
+Java 语言规范将任何在另一个类或接口内部声明的类称为“嵌套类”，将（必然是嵌套的）`static`类称为“静态类”，并将非`static`的嵌套类称为“内部类”。
 
-以下是你想要执行此操作的典型场景。在 `ArrayAlg` 类中，我们有一个任务是寻找数组中元素的范围。然后你需要返回该范围的起始和结束位置。我们可以通过定义一个持有两个值的 `Range` 类来实现这一点：
+以下是你想要执行此操作的典型场景。在`ArrayAlg`类中，我们有一个任务是寻找数组中元素的范围。然后你需要返回该范围的起始和结束位置。我们可以通过定义一个持有两个值的`Range`类来实现这一点：
 
 ```java
-class Range
-{
+class Range {
     private int from;
     private int to;
 
     public Range(int from) { . . . }
+
     public void extend() { . . . }
+
     ...
 }
 ```
 
-当然，`Range` 是一个极其常见的名称，在大项目中，很有可能其他程序员也有同样的想法，并在同一个包中定义了另一个 `Range` 类。我们可以通过将 `Range` 变为 `ArrayAlg` 的公共内部类来解决此命名冲突。这样，该类对公众已知为 `ArrayAlg.Range`：
+当然，`Range`是一个极其常见的名称，在大项目中，很有可能其他程序员也有同样的想法，并在同一个包中定义了另一个`Range`类。我们可以通过将`Range`变为`ArrayAlg`的公共内部类来解决此命名冲突。这样，该类对公众已知为`ArrayAlg.Range`：
 
 ```java
 ArrayAlg.Range r = ArrayAlg.longestRun(numbers);
 ```
 
-然而，与之前示例使用的内部类不同，我们不希望在 `Range` 对象内部拥有任何其他对象的引用。该引用可以通过将嵌套类声明为 `static` 来抑制：
+然而，与之前示例使用的内部类不同，我们不希望在`Range`对象内部拥有任何其他对象的引用。该引用可以通过将嵌套类声明为`static`来抑制：
 
 ```java
 class ArrayAlg {
     public static class Range {
-...
+        ...
     }
 }
 ```
@@ -12848,40 +13161,37 @@ class ArrayAlg {
 
 ```java
 public static Pair longestRun(double[] values) {
-...
-    Range current = new Range(.. .);
-...
-    if (. .. ) longest = current;
+    ...
+    Range current = new Range(...);
+    ...
+    if (...) longest = current;
 }
 ```
-
-
-
-
 
 ```java
 return longest;
 }
 ```
 
-如果 `Range` 类没有被声明为 `static`，编译器会将构造函数的调用标记为错误。毕竟，没有可用的 `ArrayAlg` 类型的隐式对象来初始化内部类实例。
+如果`Range`类没有被声明为`static`，编译器会将构造函数的调用标记为错误。毕竟，没有可用的`ArrayAlg`类型的隐式对象来初始化内部类实例。
 
 当嵌套类不需要访问外部类对象时，您应该使用静态类。
 
-在这里，我特意将 `Range` 类设为可变。。将 `Range` 类设为不可变并将其声明为 `record` 可能更好。`record` 自动是静态的。
+在这里，我特意将`Range`类设为可变。将`Range`类设为不可变并将其声明为`record`可能更好。`record`自动是静态的。
 
-> 注意：与 `record` 一样，在类或接口内部声明的接口和枚举自动是静态的。
+> 注意：与`record`一样，在类或接口内部声明的接口和枚举自动是静态的。
 
-事实上，
+事实上：
 
 > 注意：在接口内部声明的类自动是静态且公共的。
 
-**注意：** 在 Java 16 之前，无法在内部类内部声明 `static` 类。现在这一限制已被移除。
+**注意：**在 Java 16 之前，无法在内部类内部声明`static`类。现在这一限制已被移除。
 
-列表 6.9 包含了 `ArrayAlg` 类和嵌套类 `Pair` 类的完整源代码。
+列表 6.9 包含了`ArrayAlg`类和嵌套类`Pair`类的完整源代码。
 
-# 列表 6.9
-# staticInnerClass/StaticInnerClassTest.java
+## 列表 6.9
+
+### `staticInnerClass/StaticInnerClassTest.java`
 
 ```java
 package staticInnerClass;
@@ -12895,116 +13205,109 @@ public class StaticInnerClassTest {
     public static void main(String[] args) {
         double[] numbers = {1, 2, 2, 3, 3, 3};
         ArrayAlg.Range r = ArrayAlg.longestRange(numbers);
+
         System.out.println("from = " + r.getFrom());
         System.out.println("to = " + r.getTo());
     }
+}
 ```
 
 ```java
-17 }
-18
-19 class ArrayAlg
-20
-   /**
-    * 索引值的范围。
-    */
-   public static class Range
-   {
-      private int from;
-      private int to;
-
-   /**
-    * 长度为 1 的范围。
-    * @param from 初始索引值
-    */
-   public Range(int from)
-   {
-      this.from = from;
-      this.to = from + 1;
-   }
-
-   /**
-    * 将此范围扩展一个元素。
-    */
-   public void extend()
-   {
-      this.to++;
-45    }
+class ArrayAlg {
     /**
-     * 获取 t 的起始索引值
-     * @return 起始索引
+     * 索引值的范围。
      */
-    public int getFrom()
-    {
-        return from;
-    }
+    public static class Range {
+        private int from;
+        private int to;
 
-    /**
-     * 获取越界后的第一个索引
-     * @return 越界索引
-     */
-    public int getTo()
-    {
-        return to;
-    }
+        /**
+         * 长度为 1 的范围。
+         * @param from 初始索引值
+         */
+        public Range(int from) {
+            this.from = from;
+            this.to = from + 1;
+        }
 
-    /**
-     * 返回范围中的元素数量
-     * @return 元素数量
-     */
-    public int length()
-    {
-        return to - from;
-    }
-}
-/**
- * “运行”（run）是重复值的序列。
- * 1 2 3 3 3 4 4，这些运行序列是（平凡的）
- * 返回最长运行序列的范围。
- * @param values 长度至少为 1 的数组
- * @return 最长运行序列的范围
- */
-public static Range longestRun(double[] values)
-{
-    Range longest = new Range(0);
-    Range current = new Range(0);
-    for (int i = 1; i < values.length; i++)
-    {
-        if (values[i] == values[i - 1])
-            current.extend();
-        else
-        {
-            if (longest.length() < current.length())
-                longest = current;
-            current = new Range(i);
+        /**
+         * 将此范围扩展一个元素。
+         */
+        public void extend() {
+            this.to++;
+        }
+
+        /**
+         * 获取 t 的起始索引值
+         * @return 起始索引
+         */
+        public int getFrom() {
+            return from;
+        }
+
+        /**
+         * 获取越界后的第一个索引
+         * @return 越界索引
+         */
+        public int getTo() {
+            return to;
+        }
+
+        /**
+         * 返回范围中的元素数量
+         * @return 元素数量
+         */
+        public int length() {
+            return to - from;
         }
     }
-    if (longest.length() < current.length())
-        longest = current;
-    return longest;
-}
+
+    /**
+     * “运行”（run）是重复值的序列。
+     * 1 2 3 3 3 4 4，这些运行序列是（平凡的）
+     * 返回最长运行序列的范围。
+     * @param values 长度至少为 1 的数组
+     * @return 最长运行序列的范围
+     */
+    public static Range longestRun(double[] values) {
+        Range longest = new Range(0);
+        Range current = new Range(0);
+
+        for (int i = 1; i < values.length; i++) {
+            if (values[i] == values[i - 1])
+                current.extend();
+            else {
+                if (longest.length() < current.length())
+                    longest = current;
+                current = new Range(i);
+            }
+        }
+
+        if (longest.length() < current.length())
+            longest = current;
+
+        return longest;
+    }
 }
 ```
 
-## 6.4. 服务加载器 (Service Loaders)
+## 6.4. 服务加载器（Service Loaders）
 
-有时，您会使用服务架构开发应用程序。有些平台鼓励这种方法，例如 OSGi (https://osgi.org)，它们被用于开发环境、应用服务器和其他复杂的应用程序。此类平台的范围远远超出了本书的范围，但 JDK 也提供了一种加载服务的简单机制，在此进行了描述。该机制得到了 Java 模块系统的良好支持——见第 12 章。
+有时，您会使用服务架构开发应用程序。有些平台鼓励这种方法，例如 OSGi（https://osgi.org），它们被用于开发环境、应用服务器和其他复杂的应用程序。此类平台的范围远远超出了本书的范围，但 JDK 也提供了一种加载服务的简单机制，在此进行了描述。该机制得到了 Java 模块系统的良好支持——见第 12 章。
 
-通常在提供服务时，程序希望给服务设计者在实现服务功能方面一定的自由度。拥有多个供选择的实现也是理想的。`ServiceLoader` 类可以轻松加载符合通用接口的服务。
+通常在提供服务时，程序希望给服务设计者在实现服务功能方面一定的自由度。拥有多个供选择的实现也是理想的。`ServiceLoader`类可以轻松加载符合通用接口的服务。
 
 定义一个接口（或者，如果您喜欢，一个父类），包含每个服务实例应提供的方法。例如，假设您的服务提供加密功能。
 
 ```java
 package serviceLoader;
 
-public interface Cipher
-{
+public interface Cipher {
     byte[] encrypt(byte[] source, byte[] key);
+
     byte[] decrypt(byte[] source, byte[] key);
 }
 ```
-
-（此处重复的接口块已省略，翻译逻辑一致，保持代码格式）
 
 ```java
 package serviceLoader;
@@ -13013,47 +13316,47 @@ class AESCipher implements Cipher {
     public byte[] encrypt(byte[] source, byte[] key) {
         return source; // 哑位
     }
+
     public byte[] decrypt(byte[] source, byte[] key) {
         return source; // 哑位
     }
 }
 ```
 
-（后续重复的接口定义及方法块已按翻译要求处理）
+（此处重复的接口块已省略，翻译逻辑一致，保持代码格式。）
 
-
-
+（后续重复的接口定义及方法块已按翻译要求处理。）
 
 方法或使用反射来查找构造函数。但你无法实例化接口。你需要在运行中的程序中定义一个新类。
 
 为了解决这个问题，某些程序会生成代码，将其放入文件中，调用编译器，然后加载生成的类文件。自然地，这种方法是缓慢的，而且它还需要将编译器与程序一起部署。代理机制是一个更好的解决方案。代理类可以在运行时创建全新的类。此类代理类实现了你指定的接口。特别地，代理类具有以下方法：
 
-- 所有所指定接口要求的所有方法；以及
-- `Object` 类中定义的所有方法（toString、equals 等）。
+- 所有所指定接口要求的所有方法；
+- `Object`类中定义的所有方法（`toString`、`equals`等）。
 
-然而，你无法在运行时为这些方法定义新代码。相反，你必须提供一个 `invocation handler`（调用处理器）。调用处理器是任何实现了 `InvocationHandler` 接口的类的实例。该接口有一个单一的方法：
+然而，你无法在运行时为这些方法定义新代码。相反，你必须提供一个`invocation handler`（调用处理器）。调用处理器是任何实现了`InvocationHandler`接口的类的实例。该接口有一个单一的方法：
 
-```
+```java
 Object invoke(Object proxy, Method method, Object...
 ```
 
-每当在代理对象上调用某个方法时，调用处理处理器的 `invoke` 方法就会被调用，并带传入原始调用的 `Method` 对象和参数。然后，调用处理器必须弄清楚如何处理该调用。
+每当在代理对象上调用某个方法时，调用处理器的`invoke`方法就会被调用，并传入原始调用的`Method`对象和参数。然后，调用处理器必须弄清楚如何处理该调用。
 
 ## 6.5.2. 创建代理对象
 
-要创建一个代理对象，使用 `Proxy` 类的 `newProxyInstance` 方法。该方法有三个参数：
+要创建一个代理对象，使用`Proxy`类的`newProxyInstance`方法。该方法有三个参数：
 
-- 一个 `class loader`（类加载器）。作为 Java 安全模型的一部分，不同的类加载器可以用于平台类和应用类、从互联网下载的类等。我们将在[第二卷第 9 章]中讨论类加载器。在示例中，我们指定了加载平台类和应用类的“系统类加载器”。
-- 一个 `Class` 对象的数组，每个要实现的接口对应一个对象。
-- 一个调用处理器（invocation handler）。
+- 一个`class loader`（类加载器）。作为 Java 安全模型的一部分，不同的类加载器可以用于平台类和应用类、从互联网下载的类等。我们将在[第二卷第 9 章]中讨论类加载器。在示例中，我们指定了加载平台类和应用类的“系统类加载器”。
+- 一个`Class`对象的数组，每个要实现的接口对应一个对象。
+- 一个调用处理器（`invocation handler`）。
 
 还剩下两个问题。我们如何定义处理器？我们对生成的代理对象可以做什么？答案取决于我们想要通过代理机制解决的问题。当然，这取决于我们想要通过解决的问题。代理可以用于许多目的，例如：
 
-- 将方法调用路由到远程服务器
-- 将用户界面事件与运行程序中的动作相关联
-- 为了调试目的而跟踪方法调用
+- 将方法调用路由到远程服务器；
+- 将用户界面事件与运行程序中的动作相关联；
+- 为了调试目的而跟踪方法调用。
 
-在我们的示例程序中，我们使用代理和调用处理器来跟踪方法调用。我们定义了一个 `TraceHandler` 包装类，它存储了一个被包装的对象。它的 `invoke` 方法简单地打印要调用的方法名称和参数，然后使用被包装的对象作为隐式参数调用该方法。
+在我们的示例程序中，我们使用代理和调用处理器来跟踪方法调用。我们定义了一个`TraceHandler`包装类，它存储了一个被包装的对象。它的`invoke`方法简单地打印要调用的方法名称和参数，然后使用被包装的对象作为隐式参数调用该方法。
 
 ```java
 class TraceHandler implements InvocationHandler {
@@ -13066,12 +13369,10 @@ class TraceHandler implements InvocationHandler {
     public Object invoke(Object proxy, Method m, Object[] args) throws Throwable {
         // 方法名和参数
         ..
-        // 调用实际方法
-```
 
-```java
-return m.invoke(target, args);
-}
+        // 调用实际方法
+        return m.invoke(target, args);
+    }
 }
 ```
 
@@ -13079,48 +13380,55 @@ return m.invoke(target, args);
 
 ```java
 Object value = . . .;
-//构造包装器
+
+// 构造包装器
 var handler = new TraceHandler(value);
+
 // 为一个或多个接口构造代理
 var interfaces = new Class[] { Comparable.class };
+
 Object proxy = Proxy.newProxyInstance(
     ClassLoader.getSystemClassLoader(),
-    new Class[] { Comparable.class }, handler);
+    new Class[] { Comparable.class },
+    handler
+);
 ```
 
-现在，每当在代理上调用接口中的某个方法时，方法名称和参数就会打印出来，并在 `value` 上调用该方法。
+现在，每当在代理上调用接口中的某个方法时，方法名称和参数就会打印出来，并在`value`上调用该方法。
 
-在列表 6.10 显示的程序中，我们使用代理对象来跟踪二分搜索。我们用指向整数 1 . . 1000 的代理填充数组。然后，我们调用 `Arrays` 类的 `binarySearch` 方法在数组中搜索随机整数。最后，我们打印匹配的元素。
+在列表 6.10 显示的程序中，我们使用代理对象来跟踪二分搜索。我们用指向整数 1 . . 1000 的代理填充数组。然后，我们调用`Arrays`类的`binarySearch`方法在数组中搜索随机整数。最后，我们打印匹配的元素。
 
 ```java
 var elements = new Object[1000];
-//用整数 1 到 1000 的代理填充 elements
+
+// 用整数 1 到 1000 的代理填充 elements
 for (int i = 0; i < elements.length; i++) {
     Integer value = i + 1;
     elements[i] = Proxy.newProxyInstance(., .);
 }
 
-//构造一个随机整数
+// 构造一个随机整数
 Integer key = (int) (Math.random() * elements.length);
 
-//搜索 key
+// 搜索 key
 int result = Arrays.binarySearch(elements, key);
 
-//如果找到则打印匹配
-if (result >= 0) System.out.println(elements[result]);
+// 如果找到则打印匹配
+if (result >= 0)
+    System.out.println(elements[result]);
 ```
 
-`Integer` 类实现了 `Comparable` 接口。代理对象属于一个在运行时定义的类（它有一个类似于 $Proxy.$ 的名称）。该类也实现了 `Comparable` 接口。然而，它的 `compareTo` 方法调用了代理对象处理器的 `invoke` 方法。
+`Integer`类实现了`Comparable`接口。代理对象属于一个在运行时定义的类（它有一个类似于`$Proxy$`的名称）。该类也实现了`Comparable`接口。然而，它的`compareTo`方法调用了代理对象处理器的`invoke`方法。
 
-> 注意：正如你在本章稍早看到的，`Integer` 类实际上实现了 `Comparable<Integer>`，在运行时，所有泛型类型都会擦除，代理是使用原始 `Comparable` 类的类对象构造的。
+> 注意：正如你在本章稍早看到的，`Integer`类实际上实现了`Comparable<Integer>`，在运行时，所有泛型类型都会擦除，代理是使用原始`Comparable`类的类对象构造的。
 
-`binarySearch` 方法进行了如下调用：
+`binarySearch`方法进行了如下调用：
 
 ```java
 if (elements[i].compareTo(key) < 0) . .
 ```
 
-由于我们用代理对象填充了数组，因此 `compareTo` 调用了 `TraceHandler` 类的 `invoke` 方法。该方法打印方法名称和参数，然后对被包装的 `Integer` 对象调用 `compareTo`。
+由于我们用代理对象填充了数组，因此`compareTo`调用了`TraceHandler`类的`invoke`方法。该方法打印方法名称和参数，然后对被包装的`Integer`对象调用`compareTo`。
 
 最后，在示例程序的末尾，我们调用了：
 
@@ -13128,9 +13436,11 @@ if (elements[i].compareTo(key) < 0) . .
 System.out.println(elements[result]);
 ```
 
-你可以看到二分搜索算法如何通过每一步将搜索范围减半来定位 key。注意，尽管 `toString` 方法不属于 `Comparable` 接口，它仍然被代理了——正如你在下一节中看到的，`Object` 方法总是被代理的。
+你可以看到二分搜索算法如何通过每一步将搜索范围减半来定位`key`。注意，尽管`toString`方法不属于`Comparable`接口，它仍然被代理了——正如你在下一节中看到的，`Object`方法总是被代理的。
 
-# 列表 6.10 proxy/ProxyTest.java
+## 列表 6.10
+
+### `proxy/ProxyTest.java`
 
 ```java
 package proxy;
@@ -13147,24 +13457,31 @@ import java.util.*;
 public class ProxyTest {
     public static void main(String[] args) {
         var elements = new Object[1000];
-        //用 1 到 1000 的代理填充 elements
+
+        // 用 1 到 1000 的代理填充 elements
         for (int i = 0; i < elements.length; i++) {
             Integer value = i + 1;
             var handler = new TraceHandler(value);
+
             elements[i] = Proxy.newProxyInstance(
                 ClassLoader.getSystemClassLoader(),
-                new Class[] { Comparable.class }, handler);
+                new Class[] { Comparable.class },
+                handler
+            );
         }
 
-        //构造一个随机整数
+        // 构造一个随机整数
         Integer key = (int) (Math.random() * elements.length);
 
-        //搜索 key
+        // 搜索 key
         int result = Arrays.binarySearch(elements, key);
+```
 
-        //如果找到则打印匹配
-        if (result >= 0) System.out.println(elements[result]);
-    }
+
+
+```java
+//如果找到则打印匹配
+if (result >= 0) System.out.println(elements[result]);
 }
 
 /**
@@ -13185,18 +13502,21 @@ class TraceHandler implements InvocationHandler {
     public Object invoke(Object proxy, Method m, Object[] args) throws Throwable {
         //打印隐式参数
         System.out.print(target);
+
         //打印方法名
         System.out.print("." + m.getName());
-        // 打印显式参数
+
+        //打印显式参数
         if (args != null) {
             for (int i = 0; i < args.length; i++) {
                 System.out.print(args[i]);
                 if (i < args.length - 1) System.out.print(", ");
             }
         }
+
         System.out.println("");
 
-        // 调用实际方法
+        //调用实际方法
         return m.invoke(target, args);
     }
 }
@@ -13207,10 +13527,6 @@ class TraceHandler implements InvocationHandler {
 现在你已经看到了代理类的实际运行，让我们回顾一下它们的一些属性。记住，代理类是在运行程序中动态创建的。然而，一旦创建，它们就是普通的类，就像虚拟机中的其他类一样。
 
 所有代理类都继承 `Proxy` 类。代理类只有一个实例字段——调用处理器，它定义在 `Proxy` 超类中。执行代理对象任务所需的任何额外数据必须存储在调用处理器中。例如，当我们在列表 6.10 显示的程序中对 `Comparable` 对象进行代理时，`TraceHandler` 包装了实际对象。
-
-
-
-
 
 所有的代理类都重写了 `Object` 类的 `toString`、`equals` 和 `hashCode` 方法。与所有代理方法一样，这些方法简单调用调用处理器上的 `invoke`。`Object` 类的其他方法（如 `clone` 和 `getClass`）没有被重定义。
 
@@ -13239,16 +13555,16 @@ InvocationHandler handler = (proxy, method, args) -> {
 };
 ```
 
-java.lang.reflect.InvocationHandler 1.3
+### `java.lang.reflect.InvocationHandler` 1.3
 
-- Object invoke(Object proxy, Method method, Object[] args) 定义此方法，用以包含每当在代理对象上调用任何方法时你想要执行的操作。
-- static Object invokeDefault(Object proxy, Method method, Object... args) 16 使用给定参数调用代理实例的默认方法，跳过调用处理器。
+- `Object invoke(Object proxy, Method method, Object[] args)` 定义此方法，用以包含每当在代理对象上调用任何方法时你想要执行的操作。
+- `static Object invokeDefault(Object proxy, Method method, Object... args)` 16 使用给定参数调用代理实例的默认方法，跳过调用处理器。
 
-java.lang.reflect.Proxy 1.3
+### `java.lang.reflect.Proxy` 1.3
 
-- static Class<?> getProxyClass(ClassLoader loader, Class<?>... interfaces) 返回实现给定接口的代理类。
-- static Object newProxyInstance(ClassLoader loader, Class<?>[] interfaces, InvocationHandler handler) 构建一个实现给定接口的代理类的新实例。所有方法都调用给定处理器对象的 `invoke` 方法。
-- static boolean isProxyClass(Class<?> cl) 如果 cl 是代理类，则返回 true。
+- `static Class<?> getProxyClass(ClassLoader loader, Class<?>... interfaces)` 返回实现给定接口的代理类。
+- `static Object newProxyInstance(ClassLoader loader, Class<?>[] interfaces, InvocationHandler handler)` 构建一个实现给定接口的代理类的新实例。所有方法都调用给定处理器对象的 `invoke` 方法。
+- `static boolean isProxyClass(Class<?> cl)` 如果 `cl` 是代理类，则返回 `true`。
 
 关于 Java 编程语言面向对象特征的章节到此结束。接口、lambda 表达式和内部类是你会经常遇到的概念，而克隆、服务加载器和代理主要是库设计者和工具构建者感兴趣的高级技术，而不是应用程序程序员。现在你准备好在第 7 章学习如何处理程序中的异常情况了。
 
@@ -13282,14 +13598,13 @@ java.lang.reflect.Proxy 1.3
 - 物理限制。磁盘可能会满；你可能会耗尽可用内存。
 - 代码错误。方法可能执行 own正确。例如，它可能会交付错误的答案或错误地使用其他方法。计算无效的数组索引、尝试在哈希表中查找不存在的条目或尝试从空栈中弹出都是代码错误的示例。
 
-对方法中错误的传统反应是返回一个错误代码，由调用方法对其进行分析。例如，从文件读取信息的方法通常返回一个 -1 文件结束值标记，而不是标准字符。另一个表示错误状态的常见返回值是 `null` 引用。
+对方法中错误的传统反应是返回一个错误代码，由调用方法对其进行分析。例如，从文件读取信息的方法通常返回一个 `-1` 文件结束值标记，而不是标准字符。另一个表示错误状态的常见返回值是 `null` 引用。
 
-然而，并不总是可以返回错误代码。可能没有明显的方法来区分有效无效数据。一个返回整数的方法不能简单地返回 -1 表示错误；-1 可能是一个有效结果。
+然而，并不总是可以返回错误代码。可能没有明显的方法来区分有效无效数据。一个返回整数的方法不能简单地返回 `-1` 表示错误；`-1` 可能是一个有效结果。
 
-返回 `null` 来指示失败特别有问题。考虑旧 java.io.File 类的 `listFiles` 方法。它返回一个 `File[]` 数组，在失败时返回 `null`。如果程序员没有检查 `null`，在第一次使用返回值时就会发生 `NullPointerException`，从而掩盖了原始问题。
+返回 `null` 来指示失败特别有问题。考虑旧 `java.io.File` 类的 `listFiles` 方法。它返回一个 `File[]` 数组，在失败时返回 `null`。如果程序员没有检查 `null`，在第一次使用返回值时就会发生 `NullPointerException`，从而掩盖了原始问题。
 
-
-class 更加有用。如果失败，它会抛出一个类型明确指示问题性质的异常。
+`class` 更加有用。如果失败，它会抛出一个类型明确指示问题性质的异常。
 
 ## 7.1.1. 异常的分类
 
@@ -13301,11 +13616,11 @@ class 更加有用。如果失败，它会抛出一个类型明确指示问题�
 
 **图 7.1:** Java 中的异常层次结构
 
-注意，所有异常都继承自 `Throwable`，但层次结构立即分为两个分支：Error（错误）和 Exception（异常）。
+注意，所有异常都继承自 `Throwable`，但层次结构立即分为两个分支：`Error`（错误）和 `Exception`（异常）。
 
-Error 层次描述了 Java 运行时系统内部的错误和资源耗尽的情况。你不应该抛出这种类型的对象。如果发生此类内部错误，除了通知用户并尝试优雅地终止程序外，你无能为力。这些情况非常罕见。
+`Error` 层次描述了 Java 运行时系统内部的错误和资源耗尽的情况。你不应该抛出这种类型的对象。如果发生此类内部错误，除了通知用户并尝试优雅地终止程序外，你无能为力。这些情况非常罕见。
 
-在进行 Java 编程时，请关注 Exception 层次。Exception 层次也分为两个分支：派自 `RuntimeException` 的异常和未派自它的异常。通用规则是：`RuntimeException` 的发生是因为你犯了编程错误。任何其他异常的发生是因为某些坏事（例如 I/O 错误）发生在你原本良好的程序上。
+在进行 Java 编程时，请关注 `Exception` 层次。`Exception` 层次也分为两个分支：派自 `RuntimeException` 的异常和未派自它的异常。通用规则是：`RuntimeException` 的发生是因为你犯了编程错误。任何其他异常的发生是因为某些坏事（例如 I/O 错误）发生在你原本良好的程序上。
 
 继承自 `RuntimeException` 的异常包括此类问题：
 
@@ -13313,7 +13628,7 @@ Error 层次描述了 Java 运行时系统内部的错误和资源耗尽的情�
 - 数组越界访问
 - 空指针访问
 
-不继承自 `RuntimeException` 的异常包括
+不继承自 `RuntimeException` 的异常包括：
 
 - 尝试读取文件末尾之后的内容
 - 尝试打开一个不存在的文件
@@ -13335,7 +13650,7 @@ Java 语言规范将任何派自 `Error` 类或 `RuntimeException` 类的异常�
 
 当 Java 方法遇到它无法处理的情况时，它可以抛出异常。这个想法很简单：方法不仅会告诉 Java 编译器它可以返回哪些值，还会告诉编译器可能会出现什么问题。例如，尝试从文件中读取的代码知道文件可能不存在或可能是空的。因此，尝试处理文件中信息的代码将需要通知编译器它可以抛出某种 `IOException`。
 
-你在方法中中声明其可以抛出异常的地方是方法的头部；头部会发生变化以反映该方法可以抛出的已检查异常。例如，这里是标准库中 `FileInputStream` 类的一个构造函数的声明。（关于输入和输出的更多信息，请参见第二卷第二章。）
+你在方法中声明其可以抛出异常的地方是方法的头部；头部会发生变化以反映该方法可以抛出的已检查异常。例如，这里是标准库中 `FileInputStream` 类的一个构造函数的声明。（关于输入和输出的更多信息，请参见第二卷第二章。）
 
 ```java
 public FileInputStream(String name) throws FileNotFoundException
@@ -13350,15 +13665,16 @@ public FileInputStream(String name) throws FileNotFoundException
 - 你犯了导致未检查异常的编程错误（在这种情况下，是 `ArrayIndexOutOfBoundsException`）。
 - 虚拟机或运行时库中发生了内部错误。
 
-如果发生了前两种情况的任何一种，你必须告诉使用你方法的程序员关于该异常的。。为什么呢？任何抛出异常的方法都是潜在的死亡陷阱。如果没有处理器捕获该异常，当前的执行线程将终止。
+如果发生了前两种情况的任何一种，你必须告诉使用你方法的程序员关于该异常的。为什么呢？任何抛出异常的方法都是潜在的死亡陷阱。如果没有处理器捕获该异常，当前的执行线程将终止。
 
 与提供的类的 Java 方法一样，你可以在方法头部通过异常规范声明你的方法可能抛出异常。
 
 ```java
 class MyAnimation {
-  ...
-  public Image loadImage(String s) throws IOException
-  {}
+    ...
+
+    public Image loadImage(String s) throws IOException {
+    }
 }
 ```
 
@@ -13366,26 +13682,29 @@ class MyAnimation {
 
 ```java
 class MyAnimation {
-  ...
-  public Image loadImage(String s) throws FileNotFoundException, IOException
-  {}
+    ...
+
+    public Image loadImage(String s) throws FileNotFoundException, IOException {
+    }
 }
 ```
 
-然而，你不需要声明内部 错误——即继承自 `Error` 的异常。任何代码都可能抛出这些异常，它们完全不受你的控制。
+然而，你不需要声明内部错误——即继承自 `Error` 的异常。任何代码都可能抛出这些异常，它们完全不受你的控制。
 
-同样，你不应该声明继承自 `RuntimeException` 的未检查异常
+同样，你不应该声明继承自 `RuntimeException` 的未检查异常：
 
 ```java
-class MyAnimation
-{
-  ..
-  void drawImage(int i) throws ArrayIndexOutOfBoundsException
-  {
+class MyAnimation {
     ..
-  }
+
+    void drawImage(int i) throws ArrayIndexOutOfBoundsException {
+        ..
+    }
 }
 ```
+
+
+
 
 这些运行时错误完全在你的范围内。如果你如此担心数组索引错误，你应该花时间修复它们，而不是声明它们发生的可能性。
 
@@ -13393,10 +13712,7 @@ class MyAnimation
 
 当然，正如你在许多示例中看到的，除了声明异常外，你也可以捕获它。这样异常就不会抛出方法，因此不需要 `throws` 规范。你将在本章稍后的部分看到如何决定捕获异常或让其他人捕获它。
 
-> 注意：如果你重写了父类方法，子类方法声明的已检查异常不能比父类方法的异常更宽泛。（允许抛出更具体的异常，或者在子类方法不抛出任何异常。）特别是，如果父类方法没有抛出任何已检查异常，子类也不能。例如，如果你重写了 `JComponent.paintComponent`，你的 `paintComponent`
-
-
-该方法不能抛出任何检查异常，因为父类方法没有抛出任何异常。
+> 注意：如果你重写了父类方法，子类方法声明的已检查异常不能比父类方法的异常更宽泛。（允许抛出更具体的异常，或者在子类方法不抛出任何异常。）特别是，如果父类方法没有抛出任何已检查异常，子类也不能。例如，如果你重写了 `JComponent.paintComponent`，你的 `paintComponent` 方法不能抛出任何检查异常，因为父类方法没有抛出任何异常。
 
 当类中的某个方法声明它抛出一个是特定类实例的异常时，它可能会抛出该类的异常或其任何子类的异常。例如，`FileInputStream` 构造函数可能声明它会抛出一个 `IOException`。在这种情况下，你将不知道它是哪种 `IOException`；它可能是一个普通的 `IOException`，可能是各种子类之一的对象，如 `FileNotFoundException`。
 
@@ -13408,7 +13724,7 @@ class MyAnimation
 
 现在，假设你的代码中发生了一些可怕的事情。你有一个方法 `readData`，它正在读取一个承诺包含的文件头：
 
-```
+```text
 Content-length: 1024
 ```
 
@@ -13416,7 +13732,7 @@ Content-length: 1024
 
 你需要决定抛出什么类型的异常。某种 `IOException` 应该是个不错的选择。查阅 Java API 文档，你发现了 `EOFException`，其描述为“信号在输入过程中意外到达文件末尾”。非常完美。以下是抛出它的方法：
 
-```
+```java
 throw new EOFException();
 ```
 
@@ -13424,6 +13740,7 @@ throw new EOFException();
 
 ```java
 var e = new EOFException();
+
 throw e;
 ```
 
@@ -13433,6 +13750,7 @@ throw e;
 String readData(Scanner in) throws EOFException
 {
     ...
+
     while (...)
     {
         if (!in.hasNext()) // 遇到 EOF
@@ -13440,8 +13758,10 @@ String readData(Scanner in) throws EOFException
             if (n < len)
                 throw new EOFException();
         }
+
         ...
     }
+
     return s;
 }
 ```
@@ -13450,14 +13770,15 @@ String readData(Scanner in) throws EOFException
 
 ```java
 String gripe = "Content-length: " + len + ", Received";
+
 throw new EOFException(gripe);
 ```
 
 如你所见，如果现有的异常类之一适用于你，抛出异常是非常简单的。在这种情况下：
 
-- 1. 找到一个合适的异常类。
-- 2. 创建该类的对象。
-- 3. 抛出它。
+1. 找到一个合适的异常类。
+2. 创建该类的对象。
+3. 抛出它。
 
 一旦方法抛出异常，它就不会返回给调用者。这意味着你不需要担心去编写一个默认的返回值或错误代码。
 
@@ -13469,10 +13790,15 @@ throw new EOFException(gripe);
 
 ```java
 class FileFormatException extends IOException {
+
     public FileFormatException() {}
+
     public FileFormatException(String gripe) {
+
         super(gripe);
+
     }
+
 }
 ```
 
@@ -13480,26 +13806,37 @@ class FileFormatException extends IOException {
 
 ```java
 String readData(Scanner in) throws FileFormatException {
+
     . . .
+
     while (. . . .) {
+
         if (ch == -1) // 遇到 EOF {
+
             if (n < len)
+
                 throw new FileFormatException();
+
         }
+
     }
+
     . . .
+
 }
+
 return s;
+
 }
 ```
 
-java.lang.Throwable 1.0
+### `java.lang.Throwable` 1.0
 
 | 方法 | 描述 |
 | :--- | :--- |
-| Throwable() | 构建一个没有详细消息的新型 Throwable 对象。 |
-| Throwable(String message) | 构建一个带有指定详细消息的新型 Throwable 对象。按照惯例，所有派生异常类都支持默认构造函数和带有详细消息的构造函数。 |
-| String getMessage() | 获取 Throwable 对象的详细消息。 |
+| `Throwable()` | 构建一个没有详细消息的新型 `Throwable` 对象。 |
+| `Throwable(String message)` | 构建一个带有指定详细消息的新型 `Throwable` 对象。按照惯例，所有派生异常类都支持默认构造函数和带有详细消息的构造函数。 |
+| `String getMessage()` | 获取 `Throwable` 对象的详细消息。 |
 
 ## 7.2. 捕获异常
 
@@ -13513,10 +13850,15 @@ java.lang.Throwable 1.0
 
 ```java
 try {
+
     代码
+
     更多代码
+
 } catch (类型 e) {
+
     该类型的处理器
+
 }
 ```
 
@@ -13535,7 +13877,9 @@ public void read(String filename)
     try
     {
         var in = new FileInputStream(filename);
+
         int b;
+
         while ((b = in.read()) != -1)
         {
             处理输入
@@ -13552,8 +13896,11 @@ public void read(String filename)
 
 ```java
 public void read(String filename) throws IOException {
+
     var in = new FileInputStream(filename);
+
     int b;
+
     while ((b = in.read()) != -1)
     {
         处理输入
@@ -13569,28 +13916,27 @@ public void read(String filename) throws IOException {
 
 查看 Java API 文档查看哪些方法抛出哪些异常。然后决定你应该处理它们还是将它们添加到 `throws` 列表中。后者的选择并不可耻。将异常引导向胜任的处理器比将其压制要好。
 
-然而，在重写方法时，不允许子类方法添加比父类方法更多的 `throws` 规范。这时，你必须捕获未声明的检查异常。特别是，如果你重写一个
+然而，在重写方法时，不允许子类方法添加比父类方法更多的 `throws` 规范。这时，你必须捕获未声明的检查异常。特别是，如果你重写一个不抛出异常的方法（例如 `Comparable` 中的 `compareTo`），那么你不得不捕获每个受检异常。
 
+> **C++ 注意：** 在 Java 和 C++ 中，捕获异常几乎相同。严格来说，以下代码的对应项是：
 
-不抛出异常的方法（例如 `Comparable` 中的 `compareTo`），那么你不得不捕获每个受检异常。
-
-**C++ 注意：** 在 Java 和 C++ 中，捕获异常几乎相同。严格来说，以下代码的对应项是
-
-```
+```java
 catch (Exception e) // Java
 ```
 
-```
+```cpp
 catch (Exception& e) // C++
 ```
 
 Java 中没有 C++ `catch (. . . )` 的对应项。这在 Java 中不需要，因为所有异常都继承自一个公共父类。
 
-**预览说明：** 有时，你不需要 `catch` 子句中的异常对象。从 Java 21 开始，作为一项预览功能，你可以使用下划线作为未命名变量：
+> **预览说明：** 有时，你不需要 `catch` 子句中的异常对象。从 Java 21 开始，作为一项预览功能，你可以使用下划线作为未命名变量：
 
-```
+```java
 catch (FileNotFoundException _) {
+
     System.exit(0);
+
 }
 ```
 
@@ -13598,29 +13944,37 @@ catch (FileNotFoundException _) {
 
 你可以在 `try` 块中捕获多个异常类型并对每个类型进行不同的处理。为每个类型使用独立的 `catch` 子句，如下例所示：
 
-```
+```java
 try {
+
   可能抛出异常的代码
+
 } catch (FileNotFoundException e) {
+
   针对缺失文件的紧急操作
+
 } catch (UnknownHostException e) {
+
   针对未知主机的紧急操作
+
 } catch (IOException e) {
+
   针对所有其他 I/O 问题的紧急操作
+
 }
 ```
 
 你需要排列 `catch` 子句，使得更具体的异常类型在更通用的类型之前。
 
-异常对象可能包含有关异常性质的信息。要了解更多信息，可以尝试
+异常对象可能包含有关异常性质的信息。要了解更多信息，可以尝试：
 
-```
+```java
 e.getMessage()
 ```
 
-获取详细的错误信息（如果有），或者
+获取详细的错误信息（如果有），或者：
 
-```
+```java
 e.getClass().getName()
 ```
 
@@ -13628,57 +13982,72 @@ e.getClass().getName()
 
 你可以在同一个 `catch` 子句中捕获多个异常类型。例如，假设处理缺失文件和未知主机的操作是相同的。那么你可以合并 `catch` 子句：
 
-```
+```java
 try{
+
     可能抛出异常的代码
+
 } catch (FileNotFoundException | UnknownHostException) {
+
     针对缺失文件和未知主机的紧急操作
+
 }
+
 catch (IOException e)
+
 {
+
   针对所有其他 I/O 问题的紧急操作
+
 }
 ```
 
 只有在捕获互不为对方子类的异常类型时才需要此功能。
 
-当你捕获多个异常时，异常变量是隐式 `final` 的。例如，你不能在子句体内为 `e` 分配不同的值
+当你捕获多个异常时，异常变量是隐式 `final` 的。例如，你不能在子句体内为 `e` 分配不同的值：
 
-```
+```java
 catch (FileNotFoundException | UnknownHostException e)
 ```
 
 捕获多个异常不仅让你的代码看起来更简单，而且更高。生成的字节码包含一个共享 `catch` 子句的单个块。
 
-> **注意：变量的类型并不是 FileNotFoundException | UnknownHostException 这种“联合类型”**，即使你的 IDE 是这样报告的。Java 变量不能具有此类联合类型。`e` 的实际类型是这些类型的最小上界；在这种情况下是 `IOException`。
+> **注意：变量的类型并不是 `FileNotFoundException | UnknownHostException` 这种“联合类型”**，即使你的 IDE 是这样报告的。Java 变量不能具有此类联合类型。`e` 的实际类型是这些类型的最小上界；在这种情况下是 `IOException`。
 
 在大多数情况下，你并不关心。但如果你用 `switch` 分析 `e`，它就很重要。简单的 `switch` 有一个问题——它不是穷尽的：
 
-```
+```java
 catch (FileNotFoundException | UnknownHostException) {
+
     switch (e) // 错误：不穷尽
-{
+    {
+
         case FileNotFoundException fe -> .
+
         case UnknownHostException ue -> .
     }
+
   . .
 ```
 
 你可以通过添加默认子句来解决此问题。然而，重新组织代码并使用独立的 `catch` 子句可能会更清晰。
 
-> 注意：`catch` 子句不考虑密封（sealed）异常层次。假设你提供了
+> 注意：`catch` 子句不考虑密封（sealed）异常层次。假设你提供了：
 
 ```java
 sealed abstract class DomainException ex
 permits FatalDomainException, SurvivableDomainException
 ```
 
-那么 `catch` 子句
+那么 `catch` 子句：
 
-```
+```java
 try {
+
     domainMethod(); // 抛出 DomainException
+
 } catch (FatalDomainException e) { . . }
+
 catch (SurvivableDomainException e) { . . }
 ```
 
@@ -13690,11 +14059,15 @@ catch (SurvivableDomainException e) { . . }
 
 以下是你可以捕获异常并重新抛出的方法：
 
-```
+```java
 try {
+
     访问数据库
+
 } catch (SQLException e) {
+
     throw new ServletException("database error: " + e.getMessage());
+
 }
 ```
 
@@ -13702,24 +14075,29 @@ try {
 
 然而，将原始异常设置为新异常的“原因”（cause）是一个更好的主意：
 
-```
+```java
 try {
+
     访问数据库
+
 } catch (SQLException original) {
+
     var e = new SQLException("database error", original);
+
     throw e;
+
 }
 ```
 
-`SQLException` 类有一个构造函数，你可以向其传递原因。如果你使用一个不支持此点的异常类型，则可以调用
+`SQLException` 类有一个构造函数，你可以向其传递原因。如果你使用一个不支持此点的异常类型，则可以调用：
 
-```
+```java
 e.initCause(original);
 ```
 
 当异常被捕获时，可以获取原始异常：
 
-```
+```java
 Throwable original = caughtException.getCause();
 ```
 
@@ -13731,24 +14109,32 @@ Throwable original = caughtException.getCause();
 
 有时，你只想记录异常并重新抛出它而不做任何更改：
 
-```
+```java
 try {
+
     访问数据库
+
 } catch (Exception e) {
+
     logger.log(level, message, e);
+
     throw e;
+
 }
 ```
 
-这里有一个微妙的点。假设代码在一个方法内部
+这里有一个微妙的点。假设代码在一个方法内部：
 
-```
+```java
 public void updateRecord() throws SQLException
 ```
 
+
+
+
 Java 编译器跟踪 `e` 源自 `try` 块的事实。只要该处唯一的受检异常是 `SQLException` 实例，并且 `e` 在 `catch` 块中没有被更改，那么将包含的方法声明为 `throws SQLException` 就是有效的。
 
-## 7.2.4. finally 子句
+## 7.2.4. `finally` 子句
 
 当你的代码抛出异常时，它会停止处理方法中的剩余代码并退出方法。如果方法获取了一些必须清理的本地资源，就会出现问题。一种解决方案是捕获所有异常，执行清理并重新抛出异常。但这种解决方案是麻烦的，因为你需要在两个地方进行清理——普通代码和异常代码。`finally` 子句可以解决这个问题。
 
@@ -13756,20 +14142,18 @@ Java 编译器跟踪 `e` 源自 `try` 块的事实。只要该处唯一的受检
 
 `finally` 子句无论是否捕获了异常都会执行。在下面的示例中，程序将在任何情况下关闭输入流：
 
-```
+```java
 var in = new FileInputStream(...);
-try
+
+try {
     // 1
     可能抛出异常的代码
     // 2
-} catch (IOException e)
-{
+} catch (IOException e) {
     // 3
     显示错误信息
     // 4
-}
-finally
-{
+} finally {
     // 5
     in.close();
 }
@@ -13782,42 +14166,37 @@ finally
 
 2. 代码抛出了被 `catch` 子句捕获的异常——在我们的例子中是 `IOException`。对于这种情况，程序执行 `try` 块中的代码直到抛出异常。`try` 块中剩余的代码被跳过。程序随后执行匹配的 `catch` 子句，然后执行 `finally` 子句。
 
-如果 `catch` 子句没有抛出异常，程序执行 `finally` 子句后的第一行。在这种场景下，执行通过了点 1、3、4、5 和 6。
+   如果 `catch` 子句没有抛出异常，程序执行 `finally` 子句后的第一行。在这种场景下，执行通过了点 1、3、4、5 和 6。
 
-如果 `catch` 子句抛出了异常，则异常将抛回给调用该方法，执行通过了点 1、3 和 5。
+   如果 `catch` 子句抛出了异常，则异常将抛回给调用该方法，执行通过了点 1、3 和 5。
 
 3. 代码抛出了未被任何 `catch` 子句捕获的异常。在这里，程序执行 `try` 块中的所有代码直到抛出异常。`try` 块中剩余的代码被跳过。然后执行 `finally` 子句的内容，最后将异常抛回给调用该方法。执行通过了点 1 和 5。
 
-
-
-
 你可以在不使用 `catch` 子句的情况下使用 `finally` 子句。例如，考虑以下 `try` 语句：
 
-```
+```java
 InputStream in = . . .;
-try{
+
+try {
     code that might throw exceptions
-}
-finally{
+} finally {
     in.close();
 }
 ```
 
-无论 try 块中是否遇到异常，finally 子句中的 `in.close()` 语句都会执行。当然，如果遇到异常，它会被重新抛出，必须在另一个 `catch` 子句中被捕获。
+无论 `try` 块中是否遇到异常，`finally` 子句中的 `in.close()` 语句都会执行。当然，如果遇到异常，它会被重新抛出，必须在另一个 `catch` 子句中被捕获。
 
-```
+```java
 InputStream in = . . .;
-try{
-    try{
+
+try {
+    try {
         code that might throw exceptions
+    } finally {
+        in.close();
     }
-finally
-{
-  in.close();
-}
-catch (IOException e)
-{
-  show error message
+} catch (IOException e) {
+    show error message
 }
 ```
 
@@ -13825,13 +14204,13 @@ catch (IOException e)
 
 > **注意：** 当 `finally` 子句包含 `return` 语句时，可能会产生意想不到的结果。假设你通过 `return` 语句退出 `try` 块的中间。在方法返回之前，会执行 `finally` 块。如果 `finally` 块也包含 `return` 语句，它将掩盖原始的返回值。考虑这个示例：
 
-```
+```java
 public static int parseInt(String s) {
-  try
-{
-  return Integer.parseInt(s);
-} finally {
-  return 0; // ERROR
+    try {
+        return Integer.parseInt(s);
+    } finally {
+        return 0; // ERROR
+    }
 }
 ```
 
@@ -13839,25 +14218,25 @@ public static int parseInt(String s) {
 
 情况更糟。考虑调用 `parseInt("zero")`。`Integer.parseInt` 方法抛出了 `NumberFormatException`。然后执行 `finally` 子句，`return` 语句吞噬了异常！
 
-`finally` 子句的主体用于清理资源。不要在 `finally` 子句内部放置改变控制流的语句（`return`, `throw`, `break`, `continue`）。
+`finally` 子句的主体用于清理资源。不要在 `finally` 子句内部放置改变控制流的语句（`return`、`throw`、`break`、`continue`）。
 
-## 7.2.5. try-with-Resources 语句
+## 7.2.5. `try-with-Resources` 语句
 
 对于这种代码模式，有一个实用的快捷方法：
 
-```
+```java
 open a resource
+
 try {
     work with the resource
-}
-finally {
+} finally {
     close the resource
 }
 ```
 
-前提是资源属于实现 `AutoCloseable` 接口的类。该接口有一个单一方法
+前提是资源属于实现 `AutoCloseable` 接口的类。该接口有一个单一方法：
 
-```
+```java
 void close() throws Exception
 ```
 
@@ -13865,31 +14244,30 @@ void close() throws Exception
 
 在最简单的情况下，`try-with-resources` 语句的形式如下：
 
-```
-try (Resource res = . . .)
-{
+```java
+try (Resource res = . . .) {
     work with res
 }
 ```
 
 当 `try` 块退出时，会自动调用 `res.close()`。这里是一个典型的示例——读取文件中的所有单词：
 
-```
-try (var in = new Scanner(Path.of("in.txt")))
-{
+```java
+try (var in = new Scanner(Path.of("in.txt"))) {
     while (in.hasNext())
         System.out.println(in.next());
 }
 ```
 
-当块正常退出或发生异常时，`in.close()` 方法都会被调用，正就像你使用了 `finally` 块一样。
+当块正常退出或发生异常时，`in.close()` 方法都会被调用，就像你使用了 `finally` 块一样。
 
-你可以指定多个资源。例如，
+你可以指定多个资源。例如：
 
-```
-try var in = new Scanner(Path.of("in.txt"));
+```java
+try (
+    var in = new Scanner(Path.of("in.txt"));
     var out = new PrintWriter("out.txt")
-{
+) {
     while (in.hasNext()) {
         out.println(in.next().toUpperCase());
     }
@@ -13900,13 +14278,14 @@ try var in = new Scanner(Path.of("in.txt"));
 
 你可以在 `try` 头部中提供之前声明的有效 final（effectively final）变量：
 
-```
+```java
 public static void printAll(String[] lines, PrintStream out) {
     try (out) // effectively final variable
     {
         for (String line : lines) {
             out.println(line);
-    } // out.close() 在这里被调用
+        } // out.close() 在这里被调用
+    }
 }
 ```
 
@@ -13918,45 +14297,59 @@ public static void printAll(String[] lines, PrintStream out) {
 
 > **注意：** `try-with-resources` 语句本身可以拥有 `catch` 子句甚至 `finally` 子句。这些语句会在关闭资源后执行。
 
-## 7.2.6. 分析堆栈跟踪 (Stack Trace)
+## 7.2.6. 分析堆栈跟踪（Stack Trace）
 
 堆栈跟踪是执行过程中特定一点的方法调用的列表。你绝对见过跟踪列表——每当 Java 程序因未捕获的异常终止时，就会显示跟踪列表。你可以通过调用 `Throwable` 的 `printStackTrace` 方法来访问堆栈跟踪的文本描述。
 
 更灵活的方法是 `StackWalker` 类，它产生一个 `StackFrame` 实例流，每个实例描述一个帧。`StackWalker.StackFrame` 类的方法可以获取执行代码的文件名和行号，以及类对象和方法名。`toString` 方法产生一个包含所有信息的格式化字符串。然而，该调用的效率较低，因为尽管调用者可能只需要几帧，但它只提供类名，而不是类对象。`Throwable.getStackTrace` 方法产生一个 `StackElement[]` 数组，其信息与 `StackWalker` 的流类似。你可以通过此调用迭代堆栈帧：
 
-```
+```java
 StackWalker walker = StackWalker.getInstance();
+
 walker.forEach(System.out::println);
 ```
 
 如果你想懒性地处理 `Stream<StackFrame>`，请调用：
 
-```
+```java
 walker.walk(stream -> process frame)
 ```
 
 流处理在第二章中有详细描述。`toString` 方法打印递归函数的跟踪信息。例如，如果你计算 `factorial(3)`，输出如下：
 
-```
+```text
 factorial(3):
+
 StackTraceTest.factorial(StackTraceTest)
+
 StackTraceTest.main(StackTraceTest.java)
+
 factorial(2):
+
 StackTraceTest.factorial(StackTraceTest)
+
 StackTraceTest.factorial(StackTraceTest)
+
 StackTraceTest.main(StackTraceTest.java)
+
 return 1
+
 return 2
+
 return 6
 ```
 
-## Listing 7.1 stackTrace/StackTrace.java
+## Listing 7.1 `stackTrace/StackTrace.java`
 
 ```java
 1 package stackTrace;
+
 2
+
 3 import java.util.*;
+
 4
+
 5 /**
 6 * 显示跟踪功能的程序
 7 * @version 1.10 2017-12-14
@@ -13988,68 +14381,68 @@ return 6
 33         factorial(n);
 34     }
 35 }
-36 ```
-
-
-
-
-- * Throwable initCause(Throwable cause) 1.4 为此对象设置原因，或者如果此对象已经有了原因，则抛出异常。返回此对象。
-- * Throwable getCause() 1.4 获取被设置为此对象原因的异常对象，如果没有设置原因，则返回 null。
-- * StackTraceElement[] getStackTrace() 1.4 获取此对象构造时调用堆栈的轨迹元素。
-- * void addSuppressed(Throwable t) 1.4 向此异常添加一个“被抑制的”（suppressed）异常。这通常发生在 try-with-resources 语句中，其中 t 是 close 方法抛出的异常。
-- * Throwable[] getSuppressed() 1.4 获取此异常的所有“被抑制的”异常。通常，这些异常是 try-with-resources 语句中 close 方法抛出的异常。
-
+36
 ```
+
+- `Throwable initCause(Throwable cause)` 1.4 为此对象设置原因，或者如果此对象已经有了原因，则抛出异常。返回此对象。
+- `Throwable getCause()` 1.4 获取被设置为此对象原因的异常对象，如果没有设置原因，则返回 `null`。
+- `StackTraceElement[] getStackTrace()` 1.4 获取此对象构造时调用堆栈的轨迹元素。
+- `void addSuppressed(Throwable t)` 1.4 向此异常添加一个“被抑制的”（suppressed）异常。这通常发生在 `try-with-resources` 语句中，其中 `t` 是 `close` 方法抛出的异常。
+- `Throwable[] getSuppressed()` 1.4 获取此异常的所有“被抑制的”异常。通常，这些异常是 `try-with-resources` 语句中 `close` 方法抛出的异常。
+
+```text
 java.lang.Exception 1.0
 ```
 
-- * Exception(Throwable cause) 1.4
-- * Exception(String message, Throwable cause) 使用给原因构造 Exception。
+- `Exception(Throwable cause)` 1.4
+- `Exception(String message, Throwable cause)` 使用给原因构造 `Exception`。
 
-```
+```text
 java.lang.RuntimeException 1.0
 ```
 
-- - RuntimeException(Throwable cause) 1.4
-- - RuntimeException(String message, Throwable cause) 1.4
-- - 使用给原因构造 RuntimeException。
+- `RuntimeException(Throwable cause)` 1.4
+- `RuntimeException(String message, Throwable cause)` 1.4
+- 使用给原因构造 `RuntimeException`。
 
-```
+```text
 java.lang.StackWalker 9
 ```
 
-- - static StackWalker getInstance()
-- - static StackWalker getInstance(StackWalker.Option option)
-- - static StackWalker getInstance(Set<StackWalker.Option> options) 获取一个 StackWalker 实例。选项包括 StackWalker.Option 枚举中的 RETAIN_CLASS_REFERENCE, SHOW_HIDDEN_FRAMES 和 SHOW_REFLECT_FRAMES。
-- - forEach(Consumer<? super StackWalker.StackFrame> action) 对每个堆栈帧执行给定的操作，从最近调用的方法开始。
-- - walk(Function<? super Stream<StackWalker.StackFrame,?> extends T> function) 将给定的函数应用于堆栈帧流并返回函数的结果。
+- `static StackWalker getInstance()`
+- `static StackWalker getInstance(StackWalker.Option option)`
+- `static StackWalker getInstance(Set<StackWalker.Option> options)` 获取一个 `StackWalker` 实例。选项包括 `StackWalker.Option` 枚举中的 `RETAIN_CLASS_REFERENCE`、`SHOW_HIDDEN_FRAMES` 和 `SHOW_REFLECT_FRAMES`。
+- `forEach(Consumer<? super StackWalker.StackFrame> action)` 对每个堆栈帧执行给定的操作，从最近调用的方法开始。
+- `walk(Function<? super Stream<StackWalker.StackFrame, ?> extends T> function)` 将给定的函数应用于堆栈帧流并返回函数的结果。
 
-```
+```text
 java.lang.StackWalker.StackFrame 9
 ```
 
-- - String getFileName() 获取包含该元素执行点的源文件名，如果信息不可用则返回 null。
-- - int getLineNumber() 获取包含该元素执行点的源文件行号，如果信息不可用则返回 -1。
-- - String getClassName() 获取包含该元素执行点的类的全限定名。
-- - Class<?> getDeclaringClass() 获取包含该元素执行点的方法的 Class 对象。如果构造堆栈遍历器时没有使用 RETAIN_CLASS_REFERENCE 选项，则抛出异常。
-- - String getMethodName() 获取包含该元素执行点的方法名。构造函数的名称为 <init>。静态初始化器的名称为 <clinit>。你无法区分同名的重载方法。
-- - boolean isNativeMethod() 如果该元素的执行点在原生方法内部，则返回 true。
-- - String toString() 返回一个格式化字符串，包含类名、方法名、文件名以及行号（如果可用）。
 
-java.lang.StackTraceElement 1.4
 
-- - String getFileName() 获取包含该元素执行点的源文件名，如果信息不可用则返回 null。
-- - int getLineNumber() 获取包含该元素执行点的源文件行号，如果信息不可用则返回 -1。
-- - String getClassName() 获取包含该元素执行点的类的全限定名。
-- - String getMethodName() 获取包含该元素执行点的方法名。构造函数的名称为 <init>。静态初始化器的名称为 <clinit>。你无法区分同名的重载方法。
-- - boolean isNativeMethod() 如果该元素的执行点在原生方法内部，则返回 true。
-- - String toString() 返回一个格式化字符串，包含类名、方法名、文件名以及行号（如果可用）。
+- `String getFileName()`：获取包含该元素执行点的源文件名，如果信息不可用则返回 `null`。
+- `int getLineNumber()`：获取包含该元素执行点的源文件行号，如果信息不可用则返回 `-1`。
+- `String getClassName()`：获取包含该元素执行点的类的全限定名。
+- `Class<?> getDeclaringClass()`：获取包含该元素执行点的方法的 `Class` 对象。如果构造堆栈遍历器时没有使用 `RETAIN_CLASS_REFERENCE` 选项，则抛出异常。
+- `String getMethodName()`：获取包含该元素执行点的方法名。构造函数的名称为 `<init>`。静态初始化器的名称为 `<clinit>`。你无法区分同名的重载方法。
+- `boolean isNativeMethod()`：如果该元素的执行点在原生方法内部，则返回 `true`。
+- `String toString()`：返回一个格式化字符串，包含类名、方法名、文件名以及行号（如果可用）。
 
-# 7.3. 异常的使用技巧
+`java.lang.StackTraceElement 1.4`
+
+- `String getFileName()`：获取包含该元素执行点的源文件名，如果信息不可用则返回 `null`。
+- `int getLineNumber()`：获取包含该元素执行点的源文件行号，如果信息不可用则返回 `-1`。
+- `String getClassName()`：获取包含该元素执行点的类的全限定名。
+- `String getMethodName()`：获取包含该元素执行点的方法名。构造函数的名称为 `<init>`。静态初始化器的名称为 `<clinit>`。你无法区分同名的重载方法。
+- `boolean isNativeMethod()`：如果该元素的执行点在原生方法内部，则返回 `true`。
+- `String toString()`：返回一个格式化字符串，包含类名、方法名、文件名以及行号（如果可用）。
+
+## 7.3. 异常的使用技巧
 
 关于异常的正确使用存在相当的争议。一些程序员认为所有检查异常（checked exceptions）都是麻烦，而另一些人似乎认为抛得还不够。我认为异常（即使是检查异常）也有其用武之地，因此我为你提供这些关于正确使用它们的技巧。
 
-### 1. 异常处理不应该取代简单的测试。
+### 1. 异常处理不应该取代简单的测试
 
 作为一个示例，这里有一个代码尝试 10,000,000 次弹出一个空栈。它首先通过检查堆栈是否为空来实现这一点。
 
@@ -14057,7 +14450,7 @@ java.lang.StackTraceElement 1.4
 if (!s.empty()) s.pop();
 ```
 
-接下来，我们强制它弹出堆栈，并捕获 EmptyStackException，该异常告诉我们不应该这样做。
+接下来，我们强制它弹出堆栈，并捕获 `EmptyStackException`，该异常告诉我们不应该这样做。
 
 ```java
 try {
@@ -14066,25 +14459,25 @@ try {
 }
 ```
 
-在我的测试机器上，调用 isEmpty 的版本运行了 0.167 秒。捕获 EmptyStackException 的版本运行了 3.629 秒。
+在我的测试机器上，调用 `isEmpty` 的版本运行了 0.167 秒。捕获 `EmptyStackException` 的版本运行了 3.629 秒。
 
 如你所示，捕获异常花费的时间比执行简单测试长得多。教训是：仅对异常情况使用异常。
 
-### 2. 不要对异常进行细微管理。
+### 2. 不要对异常进行细微管理
 
-一些程序员将每条语句包装在 try 块中。
+一些程序员将每条语句包装在 `try` 块中。
 
 ```java
 PrintStream out;
 Stack s;
 
-for (i = 0; i < 100; i++)
-{
+for (i = 0; i < 100; i++) {
     try {
         s.pop();
     } catch (EmptyStackException e) {
         // 栈为空
     }
+
     try {
         out.writeInt(n);
     } catch (IOException e) {
@@ -14093,12 +14486,11 @@ for (i = 0; i < 100; i++)
 }
 ```
 
-这种方法会破坏你的代码。考虑你想要代码完成的任务。在这里，我们要从栈中弹出 100 个数字并将其保存到文件中。（别担心——这只是个例子。）如果出现问题，我们无能为力。如果栈为空，它将不会被占用。因此，将整个任务包装在 try 块中是有意义的。
+这种方法会破坏你的代码。考虑你想要代码完成的任务。在这里，我们要从栈中弹出 100 个数字并将其保存到文件中。（别担心——这只是个例子。）如果出现问题，我们无能为力。如果栈为空，它将不会被占用。因此，将整个任务包装在 `try` 块中是有意义的。
 
 ```java
 try {
-    for (i = 0; i < 100; i++)
-    {
+    for (i = 0; i < 100; i++) {
         n = s.pop();
         out.writeInt(n);
     }
@@ -14109,20 +14501,19 @@ try {
 
 代码看起来清晰得多。它实现了异常处理的一个承诺：将正常处理与错误处理分离。
 
-### 3. 善用异常层次结构。
+### 3. 善用异常层次结构
 
-- 不要只抛出 Exception 或 RuntimeException。找到一个合适的子类或创建你自己的。
-- 不要只捕获 Exception。这会让你的代码难以阅读和维护。只捕获你预期的异常类。不要捕获 Throwable。你可能会隐藏 OutOfMemoryError。
+- 不要只抛出 `Exception` 或 `RuntimeException`。找到一个合适的子类或创建你自己的。
+- 不要只捕获 `Exception`。这会让你的代码难以阅读和维护。只捕获你预期的异常类。不要捕获 `Throwable`。你可能会隐藏 `OutOfMemoryError`。
 - 尊重检查异常和未检查异常之间的区别。检查异常本质上是负担——不要为逻辑错误抛出它们。（例如，反射库在这里就错了。调用者经常需要捕获永远不会发生的异常）。
-- 不要犹豫将异常转换为更合适的异常。例如，当你在文件中解析整数时，捕获 NumberFormatException 并将其设置为 IOException 或 MySubsystemException 子类的原因。
+- 不要犹豫将异常转换为更合适的异常。例如，当你在文件中解析整数时，捕获 `NumberFormatException` 并将其设置为 `IOException` 或 `MySubsystemException` 子类的原因。
 
-### 4. 不要扼杀异常。
+### 4. 不要扼杀异常
 
-在 Java 中，有一种极大的抑制异常的诱惑。如果你正在编写一个方法，它调用了一个可能百年抛出一次异常的方法，编译器会抱怨，因为你没有在方法的 throws 列表中声明该异常。你不想把它放在 throws 列表中，因为那样编译器会对调用你方法的所有方法都会抱怨。所以你直接把它制服了：
+在 Java 中，有一种极大的抑制异常的诱惑。如果你正在编写一个方法，它调用了一个可能百年抛出一次异常的方法，编译器会抱怨，因为你没有在方法的 `throws` 列表中声明该异常。你不想把它放在 `throws` 列表中，因为那样编译器会对调用你方法的所有方法都会抱怨。所以你直接把它制服了：
 
 ```java
-public Image loadImage(String s)
-{
+public Image loadImage(String s) {
     try {
         可能抛出检查异常的代码
     } catch (Exception e) {
@@ -14131,31 +14522,30 @@ public Image loadImage(String s)
 }
 ```
 
-现在你的代码可以无故障地编译。它会运行良好，除非发生异常。那时，异常将被无静地忽略。如果你认为异常在任何
+现在你的代码可以无故障地编译。它会运行良好，除非发生异常。那时，异常将被无声地忽略。如果你认为异常在任何重要方面都不重要，你应该努力正确地处理它们。
 
-
-重要的是，你应该努力正确地处理它们。
-
-+ 5. 当你检测到错误时，“严厉的爱”比纵容更有效。
+### 5. 当你检测到错误时，“严厉的爱”比纵容更有效
 
 一些程序员担心在检测到错误时抛出异常。也许当调用方法传入无效参数时，返回一个占位值可能比抛出异常更好？例如，当栈空时，`Stack.pop()` 应该返回 `null` 还是抛出一个异常？我认为，在故障发生点抛出 `EmptyStackException` 比在稍后的某个时间发生 `NullPointerException` 要好。
 
-+ 6. 传播异常并不是耻辱的表现。有些程序员觉得他们必须捕获所有抛出的异常。当他们调用一个会抛出异常的方法（例如 `FileInputStream` 的构造方法）时，他们会本能地捕获可能生成的异常。在很多情况下，传播异常实际上比捕获它更好：
+### 6. 传播异常并不是耻辱的表现
+
+有些程序员觉得他们必须捕获所有抛出的异常。当他们调用一个会抛出异常的方法（例如 `FileInputStream` 的构造方法）时，他们会本能地捕获可能生成的异常。在很多情况下，传播异常实际上比捕获它更好：
 
 ```java
 public void readStuff(String filename) throws {
     var in = new FileInputStream(filename);
-...
+    ...
 }
 ```
 
 高层方法通常具有更好的能力向用户报告错误，或放弃失败的命令。
 
-+ 7. 使用标准方法报告空指针和越界异常。
+### 7. 使用标准方法报告空指针和越界异常
 
 `Objects` 类拥有以下方法用于这些常见的检查：
 
-```
+```java
 requireNonNull
 checkIndex
 checkFromToIndex
@@ -14165,8 +14555,7 @@ checkFromIndexSize
 使用它们来对参数验证：
 
 ```java
-public void putData(int position, Object newValue)
-{
+public void putData(int position, Object newValue) {
     Objects.checkIndex(position, data.length);
     Objects.requireNonNull(newValue);
     ...
@@ -14207,7 +14596,7 @@ Java 语言有一个关键字 `assert`。它有两种形式：
 assert condition;
 ```
 
-以及
+以及：
 
 ```java
 assert condition : expression;
@@ -14229,7 +14618,7 @@ assert x >= 0;
 assert x >= 0 : x;
 ```
 
-> **C++ 注意：** C 语言的 `assert` 宏会将断言条件转换为一个字符串，如果断言失败则会打印。例如，如果 `assert(x >= 0)` 失败，它会打印 "x >= 0" 是失败的条件。在 Java 中，条件不会自动成为错误报告的一部分。如果你想看到它，必须将其作为字符串传递给 `AssertionError` 对象：`assert x >= 0 : "x >= 0";`。
+> **C++ 注意：** C 语言的 `assert` 宏会将断言条件转换为一个字符串，如果断言失败则会打印。例如，如果 `assert(x >= 0)` 失败，它会打印 `"x >= 0"` 是失败的条件。在 Java 中，条件不会自动成为错误报告的一部分。如果你想看到它，必须将其作为字符串传递给 `AssertionError` 对象：`assert x >= 0 : "x >= 0";`。
 
 ### 7.4.2. 断言的启用与禁用
 
@@ -14255,17 +14644,19 @@ java -ea -da:MyClass MyApp
 
 某些类不是由类加载器加载的，而是由虚拟机直接加载的。你可以使用这些切换来选择性启用或禁用断言。还可以通过编程控制断言状态。请参见本节末尾的 API 注释。
 
-> **警告**：当断言关闭时，断言条件不会执行。因此，确保条件没有副作用是关重要的。这里有一个你不应该做的示例：
+> **警告**：当断言关闭时，断言条件不会执行。因此，确保条件没有副作用是至关重要的。这里有一个你不应该做的示例：
 
 ```java
 File file = new File(filename);
+
 assert file.delete(); // 错误
 ```
 
-补救措施是将副作用移动到断语句之外：
+补救措施是将副作用移动到断言语句之外：
 
 ```java
 boolean deletionSuccessful = file.delete();
+
 assert deletionSuccessful;
 ```
 
@@ -14273,7 +14664,9 @@ assert deletionSuccessful;
 
 ```java
 public static final boolean ASSERTS = true
+
 ..
+
 if (ASSERTS) assert x >= 0;
 ```
 
@@ -14296,20 +14689,18 @@ Java 语言提供了三种机制来处理系统故障：
 
 ```java
 /**
-对指定数组的指定范围进行排序 排序的范围从 startIndex 开始
-@param a 要排序的数组
-@param endIndex 第一个元素的索引
-```
-
-
-
+ * 对指定数组的指定范围进行排序。排序的范围从 startIndex 开始。
+ *
+ * @param a 要排序的数组
+ * @param endIndex 第一个元素的索引
+ */
 
 /**
  * @param to 最后元素的索引（
  * @throws IllegalArgumentException 如果 fromIndex
  * @throws ArrayIndexOutOfBoundsException 如果 from
  */
-static void sort(int[] a, int fromIndex, int toIr
+static void sort(int[] a, int fromIndex, int toIndex)
 ```
 
 文档指出，如果索引值不正确，方法将抛出异常。这种行为是该方法与其调用者之间契约的一部分。如果你实现了该方法，必须遵守该合约并抛出指定的异常。使用断言（assertions）来代替是不恰当的。
@@ -14318,23 +14709,23 @@ static void sort(int[] a, int fromIndex, int toIr
 
 然而，假设方法的合约略有不同：
 
-```
+```java
 @param a 要排序的数组（不能为 null
 ```
 
-现在，方法的调用者已经收到通知，知即使用 `null` 数组调用该方法是非法的。那么，该方法可以开始使用断言：
+现在，方法的调用者已经收到通知，即使用 `null` 数组调用该方法是非法的。那么，该方法可以开始使用断言：
 
-```
+```java
 assert a != null;
 ```
 
-计算机科学家将这种合约称为前置条件（precond）。原始方法对其参数没有前置条件——它承诺在所有情况下都有定义良好的行为。修改后的方法有一个前置条件：`a` 不为 `null`。如果调用者未能满足前置条件，那么规则失效，方法可以执行任何它想做的事。事实上，在断言存在，方法正是是所做的。它会抛出一个断言错误，有时取决于类加载器的配置，还会抛出空指针异常。
+计算机科学家将这种合约称为前置条件（precondition）。原始方法对其参数没有前置条件——它承诺在所有情况下都有定义良好的行为。修改后的方法有一个前置条件：`a` 不为 `null`。如果调用者未能满足前置条件，那么规则失效，方法可以执行任何它想做的事。事实上，在断言存在时，方法正是这样做的。它会抛出一个断言错误，有时取决于类加载器的配置，还会抛出空指针异常。
 
 ## 7.4.4. 使用断言记录假设
 
-程序员经常使用注释来记录他们的底层假设。考虑这个来自 https://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html 的示例：
+程序员经常使用注释来记录他们的底层假设。考虑这个来自 <https://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html> 的示例：
 
-```
+```java
 if (i % 3 == 0)
   ..
 else if (i % 3 == 1)
@@ -14345,10 +14736,12 @@ else // (i % 3 == 2)
 
 在这种情况下，使用断言代替注释反而更有意义。
 
-```
+```java
 if (i % 3 == 0)
-  ..\nelse if (i % 3 == 1)
-  ..\neelse
+  ..
+else if (i % 3 == 1)
+  ..
+else
 {
   assert i % 3 == 2;
   ..
@@ -14357,7 +14750,7 @@ if (i % 3 == 0)
 
 当然，彻底思考这个问题会更有意义。`i % 3` 的可能值是哪些？如果 `i` 是正数，那么余数必须是 0、1 或 2。如果 `i` 是负数，那么余数可能是 -1 或 -2。因此，真正的假设是 `i` 不是负数。一个更好的断言应该是：
 
-```
+```java
 assert i >= 0;
 ```
 
@@ -14365,19 +14758,16 @@ assert i >= 0;
 
 无论如何，这个示例展示了如何将断言作为程序员的自检查的良好方法。正如你所见，断言是测试和调试的战术工具。相比之下，日志（logging）是程序整个生命周期的策略工具。我们将在下一节检查日志。
 
-```
-java.lang.ClassLoader 1.0
-```
+`java.lang.ClassLoader 1.0`
 
-- - void setDefaultAssertionStatus(boolean b) 1.4 启用或禁用由此类加载器加载的且没有显式类或包断言状态的所有类的断言。
-- void setClassAssertionStatus(String className, boolean b) 1.4 启用或禁用给定类及其内部类的断言。
-- void setPackageAssertionStatus(String packageName, boolean b) 1.4 启用或禁用给定包及其子包中所有类的断言。
+- `void setDefaultAssertionStatus(boolean b) 1.4`：启用或禁用由此类加载器加载的且没有显式类或包断言状态的所有类的断言。
+- `void setClassAssertionStatus(String className, boolean b) 1.4`：启用或禁用给定类及其内部类的断言。
+- `void setPackageAssertionStatus(String packageName, boolean b) 1.4`：启用或禁用给定包及其子包中所有类的断言。
 
-```
+```java
 void clearAssertionStatus() 1.4
-移除所有显式的类和包断言状态
-设置并禁用由此类加载器加载的所有类的
-断言。
+移除所有显式的类和包断言状态，
+设置并禁用由此类加载器加载的所有类的断言。
 ```
 
 ## 7.5. 日志
@@ -14386,23 +14776,25 @@ void clearAssertionStatus() 1.4
 
 ### 7.5.1. 你应该使用 Java 日志框架吗？
 
-Java 有标准的日志框架，通常以其包名 `java.util.logging` 命名，有时简称为 `j.u.1`。然而，其他日志框架具有更多功能并被广泛，例如 Log4j (https://logging.apache.org/log4j/2.x) 和 Logback (https://logback.qos.ch)。
 
-如果你想让代码的用户选择日志框架，你应该使用一个“外面”（façade）库，将日志消息发送到首选框架。一个常用的具有良好 API 的外壳是 SLF4J (https://www.slf4j.org)。另一个外壳是“平台日志 API”（也称为 JEP 264）。它非常基础，但是 JDK 的一部分。外壳有时被称为前端。它提供了程序员用于记录日志消息的 API。后端负责过滤和格式化消息，并将它们存放在某处。后端需要能够由部署者进行配置，通常通过编辑配置文件来完成。
 
-在接下来的章节中，我将向你展示如何使用平台日志 API 作为前端，并将 `java.util.logging` 作为后端。如果你发现前端 API 足够用，这是一个合理的选择，因为你始终可以更换后端。
+Java 有标准的日志框架，通常以其包名`java.util.logging`命名，有时简称为`j.u.1`。然而，其他日志框架具有更多功能并被广泛，例如 Log4j（https://logging.apache.org/log4j/2.x）和 Logback（https://logback.qos.ch）。
 
-`java.util.logging` 后端的功能比其流行的替代方案少，但它足以应对许多用例。由于其简单性，它不容易受到攻击。相比之下，Log4j 的冷门功能为你提供了良好的基础。无论你最终是否使用它们，`java.util.logging` 后端都是用于应用程序日志的。
+如果你想让代码的用户选择日志框架，你应该使用一个“外面”（façade）库，将日志消息发送到首选框架。一个常用的具有良好 API 的外壳是 SLF4J（https://www.slf4j.org）。另一个外壳是“平台日志 API”（也称为 JEP 264）。它非常基础，但是 JDK 的一部分。外壳有时被称为前端。它提供了程序员用于记录日志消息的 API。后端负责过滤和格式化消息，并将它们存放在某处。后端需要能够由部署者进行配置，通常通过编辑配置文件来完成。
+
+在接下来的章节中，我将向你展示如何使用平台日志 API 作为前端，并将`java.util.logging`作为后端。如果你发现前端 API 足够用，这是一个合理的选择，因为你始终可以更换后端。
+
+`java.util.logging`后端的功能比其流行的替代方案少，但它足以应对许多用例。由于其简单性，它不容易受到攻击。相比之下，Log4j 的冷门功能为你提供了良好的基础。无论你最终是否使用它们，`java.util.logging`后端都是用于应用程序日志的。
 
 **注意：** 获取 logger 和记录消息的 API 是前端的一部分——在这种情况下，是平台日志 API。如果你使用不同的前端，API 将会不同。
 
-消息目标、格式化和过滤，以及配置机制是后端的一部分——在这里是 `java.util.logging`。如果你使用不同的后端，请遵循其说明进行配置。
+消息目标、格式化和过滤，以及配置机制是后端的一部分——在这里是`java.util.logging`。如果你使用不同的后端，请遵循其说明进行配置。
 
 ## 7.5.2. 日志基础
 
-平台记录器实现了 `System.Logger` 接口。每个记录器都有一个名称。该名称可以是任意的，但它通常是生成日志方法的类的包名。你可以这样获取一个平台记录器：
+平台记录器实现了`System.Logger`接口。每个记录器都有一个名称。该名称可以是任意的，但它通常是生成日志方法的类的包名。你可以这样获取一个平台记录器：
 
-```
+```java
 System.Logger logger = System.Logger("com.mycompany.myapp")
 ```
 
@@ -14410,29 +14802,29 @@ System.Logger logger = System.Logger("com.mycompany.myapp")
 
 现在你准备好记录日志了：
 
-```
+```java
 logger.log(System.Logger.Level.INFO, "Opening file data.txt")
 ```
 
 记录的打印如下：
 
-```
+```text
 Aug 04, 2022 09:53:34 AM com.mycompany.myapp.Main
 INFO: Opening file data.txt
 ```
 
 注意，时间以及调用类和方法名称会自动包含。
 
-要在程序部署时关闭这些信息消息，你可以配置后端。对于 `java.util.logging` 后端，准备一个包含内容的 `logging.properties` 文件：
+要在程序部署时关闭这些信息消息，你可以配置后端。对于`java.util.logging`后端，准备一个包含内容的`logging.properties`文件：
 
-```
+```properties
 handlers=java.util.logging.ConsoleHandler
 com.mycompany.myapp.level=WARNING
 ```
 
 然后像这样启动应用程序：
 
-```
+```bash
 java -Djava.util.logging.config.file=logging.properties
 ```
 
@@ -14440,28 +14832,24 @@ java -Djava.util.logging.config.file=logging.properties
 
 ## 7.5.3. 平台日志 API
 
-正如你在前面的节中所示，每条记录的消息都有一个级别。`System.Logger.Level` 枚举有以下值，按严重性递减排序：ERROR、WARNING、INFO、DEBUG 和 TRACE。
+正如你在前面的节中所示，每条记录的消息都有一个级别。`System.Logger.Level`枚举有以下值，按严重性递减排序：`ERROR`、`WARNING`、`INFO`、`DEBUG` 和`TRACE`。
 
+提示：使用 import 语句：
 
-
-
-
-提示：使用 import 语句
-
-```
+```java
 import static java.lang.System.Logger.Level.*;
 ```
 
 你可以缩短级别：
 
-```
+```java
 logger.log(INFO, "Opening file " + filename);
 // 而不是使用 System.Logger.Level.INFO
 ```
 
-在上面的示例中，即使消息被抑制，消息 "Opening file " + filename 也会被创建。如果你担心创建消息字符串的开销，可以使用 lambda 表达式来代替：
+在上面的示例中，即使消息被抑制，消息`"Opening file " + filename`也会被创建。如果你担心创建消息字符串的开销，可以使用 lambda 表达式来代替：
 
-```
+```java
 logger.log(INFO, () -> "Opening file " + filename)
 ```
 
@@ -14469,7 +14857,7 @@ logger.log(INFO, () -> "Opening file " + filename)
 
 记录异常是常见操作。日志包含了堆栈跟踪信息。
 
-```
+```java
 catch (IOException ex)
 {
   logger.log(WARNING, "Cannot open file " + file);
@@ -14478,59 +14866,59 @@ catch (IOException ex)
 
 你可以使用模式格式化消息：
 
-```
+```java
 logger.log(WARNING, "Cannot open file {0}", file);
 ```
 
-> **注意：** 这*不是* `printf` 风格的模式。该模式由 `MessageFormat` 类处理，该类用于程序消息的本地化（详情请见第二卷）。在这里，你只需要知道字符串占位符是 `{0}`、`{1}` 等。大括号必须用单引号转义：`'\{`、`'}'`。使用两个单引号 `''` 在消息中包含一个字面量单引号。
+> **注意：** 这不是`printf`风格的模式。该模式由`MessageFormat`类处理，该类用于程序消息的本地化（详情请见第二卷）。在这里，你只需要知道字符串占位符是`{0}`、`{1}`等。大括号必须用单引号转义：`'\{`、`'}'`。使用两个单引号`''`在消息中包含一个字面量单引号。
 
 日志消息可以使用第二卷中引入的资源包机制本地化为不同的语言。
 
 提供格式化字符串的包和键（key）：
 
-```
+```java
 logger.log(WARNING, bundle, "file.bad", filename); // 在包中查找 file.bad
 ```
 
 或者，通过以下方式获取 logger：
 
-```
+```java
 System.Logger logger = System.getLogger("com.my");
 ```
 
-在调用带有 String 参数作为消息或格式的 logger 方法时，该参数会被解释为包中的键。带有 `Object Supplier<String>` 参数的方法不受此影响。
+在调用带有 String 参数作为消息或格式的 logger 方法时，该参数会被解释为包中的键。带有`Object Supplier<String>`参数的方法不受此影响。
 
 这些特性组合（延迟消息计算、添加可抛异常、格式化、使用包）仅支持部分组合而非全部。详情请参阅 API 说明。
 
-# 7.5.4. 日志配置
+## 7.5.4. 日志配置
 
-现在让我们转向日志后端。如前所述，平台日志 API 的默认后端是 `java.util.logging`。后续章节中的信息专门针对该后端。
+现在让我们转向日志后端。如前所述，平台日志 API 的默认后端是`java.util.logging`。后续章节中的信息专门针对该后端。
 
-你可以通过编辑配置文件来更改后端的各种属性。默认配置文件位于 JDK 中的 `conf/logging.properties`。要使用另一个文件，可以在启动应用程序时将 `java.util.logging.config.file` 属性设置为文件位置：
+你可以通过编辑配置文件来更改后端的各种属性。默认配置文件位于 JDK 中的`conf/logging.properties`。要使用另一个文件，可以在启动应用程序时将`java.util.logging.config.file`属性设置为文件位置：
 
-```
+```bash
 java -java.util.logging.config.file=configFile Main
 ```
 
-> **注意：** 在 main 方法中调用 `System.setProperty("java.util.logging.config.file", configFile)` 没有效果，因为 log manager 在 VM 启动期间（在 main 执行之前）就已经初始化了。
+> **注意：** 在 main 方法中调用`System.setProperty("java.util.logging.config.file", configFile)`没有效果，因为 log manager 在 VM 启动期间（在 main 执行之前）就已经初始化了。
 
 你可以通过添加如下行，来指定你自己的 logger 的日志级别：
 
-```
+```properties
 com.mycompany.myapp.level=WARNING
 ```
 
-即在 logger 名称后附加 `.level` 后缀。
+即在 logger 名称后附加`.level`后缀。
 
-> **注意：** 日志配置中的属性不是系统属性。你不能通过 `-D` 命令行选项来设置它们。相反，请将日志属性放入你通过 `-Djava.util.logging.config.file=configFile` 指定的文件中。
+> **注意：** 日志配置中的属性不是系统属性。你不能通过`-D`命令行选项来设置它们。相反，请将日志属性放入你通过`-Djava.util.logging.config.file=configFile`指定的文件中。
 
 你还可以指定根级别：
 
-```
+```properties
 .level=WARNING
 ```
 
-> **注意：** 出历史原因，某些级别在平台日志 API 和 `java.util.logging` 框架中的名称不同。你需要在配置文件中使用后者。**表 7.1** 显示了对应关系。
+> **注意：** 出于历史原因，某些级别在平台日志 API 和`java.util.logging`框架中的名称不同。你需要在配置文件中使用后者。**表 7.1**显示了对应关系。
 
 **表 7.1：** 平台日志与 Java 日志框架的对应级别
 
@@ -14541,39 +14929,39 @@ com.mycompany.myapp.level=WARNING
 | INFO | INFO |
 | DEBUG | FINE |
 
-与包名类似，logger 名称是分层级的。事实上，它们的层级关系比包更复杂。包与其父包之间没有语义关系，但 logger 的父子节点共享某些属性。例如，如果你关闭了到 logger "com.mycompany" 的消息，那么它的子 logger 也会被禁用。
+与包名类似，logger 名称是分层级的。事实上，它们的层级关系比包更复杂。包与其父包之间没有语义关系，但 logger 的父子节点共享某些属性。例如，如果你关闭了到 logger`"com.mycompany"`的消息，那么它的子 logger 也会被禁用。
 
 正如你将在下一节中看到的，logger 实际上并没有将消息发送到控制台——那是 handler（处理器）的工作。handler 也有级别。若要在控制台上看到 DEBUG/FINE 消息，你还需要设置：
 
-```
+```properties
 java.util.logging.ConsoleHandler.level=FINE
 ```
 
-> 注意：log manager 配置中的设置不是系统属性。使用 -D.mycompany.myapp.level=FINE 启动程序对 logger 没有任何影响。
+> 注意：log manager 配置中的设置不是系统属性。使用`-D.mycompany.myapp.level=FINE`启动程序对 logger 没有任何影响。
 
-还可以通过 jconsole 程序在运行中的程序中更改日志级别。详情请参见 .
+还可以通过`jconsole`程序在运行中的程序中更改日志级别。详情请参见。
 
-> **注意：** 从 Java 21 开始，名为 `java.lang.Runtime` 的系统 logger 会记录对 `Runtime.exit` 方法的调用（System.exit 调用该方法来终止虚拟机）。日志包含了堆栈跟踪，因此你可以知道终止请求是如何。要接收日志消息，请在日志配置中设置：
+> **注意：** 从 Java 21 开始，名为`java.lang.Runtime`的系统 logger 会记录对`Runtime.exit`方法的调用（`System.exit`调用该方法来终止虚拟机）。日志包含了堆栈跟踪，因此你可以知道终止请求是如何发生的。要接收日志消息，请在日志配置中设置：
 
-```
+```properties
 java.lang.Runtime.level=FINE
 ```
 
-# 7.5.5. 日志处理器 (Handlers)
+## 7.5.5. 日志处理器（Handlers）
 
-`java.util.logging` API 的后端基于 handler。最简单的 handler 是 `ConsoleHandler`，它将日志记录打印到 `System.err` 流。每个 handler 都有一个级别。默认情况下，ConsoleHandler 将日志记录发送到父节点。它的默认级别是 INFO。
+`java.util.logging` API 的后端基于 handler。最简单的 handler 是`ConsoleHandler`，它将日志记录打印到`System.err`流。每个 handler 都有一个级别。默认情况下，`ConsoleHandler`将日志记录发送到父节点。它的默认级别是 INFO。
 
-要将日志记录发送到其他地方，请添加另一个 handler。`java.util.logging` API 为此提供了两个 handler：`FileHandler` 和 `SocketHandler`。更有趣的是收集记录到文件的 `FileHandler`。`SocketHandler` 将记录发送到指定的主机和端口。
+要将日志记录发送到其他地方，请添加另一个 handler。`java.util.logging` API 为此提供了两个 handler：`FileHandler`和`SocketHandler`。更有趣的是收集记录到文件的`FileHandler`。`SocketHandler`将记录发送到指定的主机和端口。
 
 要添加文件 handler，请在日志属性中提供此条目：
 
-```
+```properties
 handlers=java.util.logging.ConsoleHandler,java.util.logging.FileHandler
 ```
 
 记录以 XML 格式格式化。典型的日志记录形式如下：
 
-```
+```xml
 <record>
   <date>2014-08-04T09:53:34</date>
   <millis>1407146072</millis>
@@ -14587,66 +14975,58 @@ handlers=java.util.logging.ConsoleHandler,java.util.logging.FileHandler
 </record>
 ```
 
-你可以通过在日志属性中设置各种参数来修改文件 handler 的默认行为（见表 7.2）。你可能不想使用默认的日志文件名。使用类似 `%h/%u log` 的模式（模式变量的解释见表 7.3）。文件名中的 `%u` 会为每次应用程序运行生成一个唯一的日志副本。对于长时间运行的程序，开启文件轮转（file rotation）是一个好主意。日志文件按轮转序列保存，例如 `myapp.log.0`、`myapp.log.1`、`myapp.log.2` 等。每当文件超过大小限制时，旧日志会被删除，其他文件被重命名，并创建一个生成号为 n 的新文件。
+你可以通过在日志属性中设置各种参数来修改文件 handler 的默认行为（见表 7.2）。你可能不想使用默认的日志文件名。使用类似`%h/%u log`的模式（模式变量的解释见表 7.3）。文件名中的`%u`会为每次应用程序运行生成一个唯一的日志副本。对于长时间运行的程序，开启文件轮转（file rotation）是一个好主意。日志文件按轮转序列保存，例如`myapp.log.0`、`myapp.log.1`、`myapp.log.2`等。每当文件超过大小限制时，旧日志会被删除，其他文件被重命名，并创建一个生成号为 n 的新文件。
 
-# 表 7.2：FileHandler 配置
+### 表 7.2：FileHandler 配置
 
-| 配置属性 | 描述 | |
-|---|---|---|
-| java.util.logging.FileHandler.level | handler 级别。 | |
-| java.util.logging.FileHandler.append | 为 true 时，日志记录追加到现有文件；否则，每次程序运行时都会打开新文件。 | |
-| java.util.logging.FileHandler.limit | 在打开另一个文件之前向文件中写入近似最大字节数（Ø = 无限制）。 | |
-| java.util.logging.FileHandler.pattern | 文件模式（见表 7.3）。 | |
-| java.util.logging.FileHandler.count | 轮转序列中的日志数量。 | |
-| java.util.logging.FileHandler.filter | 用于过滤日志记录的过滤器（见第 7.5.6 节）。 | |
-| java.util.logging.FileHandler.encoding | 字符编码。 | |
-| java.util.logging.FileHandler.formatter | 每条日志记录的格式化器。 | |
+| 配置属性 | 描述 |
+|---|---|
+| `java.util.logging.FileHandler.level` | handler 级别。 |
+| `java.util.logging.FileHandler.append` | 为 true 时，日志记录追加到现有文件；否则，每次程序运行时都会打开新文件。 |
+| `java.util.logging.FileHandler.limit` | 在打开另一个文件之前向文件中写入近似最大字节数（Ø = 无限制）。 |
+| `java.util.logging.FileHandler.pattern` | 文件模式（见表 7.3）。 |
+| `java.util.logging.FileHandler.count` | 轮转序列中的日志数量。 |
+| `java.util.logging.FileHandler.filter` | 用于过滤日志记录的过滤器（见第 7.5.6 节）。 |
+| `java.util.logging.FileHandler.encoding` | 字符编码。 |
+| `java.util.logging.FileHandler.formatter` | 每条日志记录的格式化器。 |
 
-**表 7.3：日志文件模式变量**
+### 表 7.3：日志文件模式变量
 
 | 变量 | 描述 |
+|---|---|
+| `%h` | 用户的主目录（`user.home`属性）。 |
+| `%t` | 系统的临时目录。 |
+| `%u` | 一个唯一的数字。 |
+| `%g` | 滚动日志的生成次数。如果指定了滚动且模式中不包含`%g`，则使用`%g`后缀。 |
+| `%%` | 百分号字符。 |
 
-
-
-
-
-%h 用户的主目录（user.home 属性）。
-
-%t 系统的临时目录。
-
-%u 一个唯一的数字。
-
-滚动日志的生成次数。如果指定了滚动且模式中不包含 %g，则使用 %g 后缀。
-
-%% 百号字符。
-
-> **注意：** 当 `java.util.logging.Handler.append` 为 `true` 且日志格式为 XML 时，向现有日志文件追加内容时，会输出一个新的 XML 头部。导致的结果不是有效的 XML。
+> **注意：** 当`java.util.logging.Handler.append`为`true`且日志格式为 XML 时，向现有日志文件追加内容时，会输出一个新的 XML 头部。导致的结果不是有效的 XML。
 
 ## 7.5.6. 过滤器和格式化器
 
-除了按日志级别过滤外，每个处理器（handler）都可以有一个实现了 `Filter` 接口的额外过滤器，该接口具有一个方法的函数接口：
+除了按日志级别过滤外，每个处理器（handler）都可以有一个实现了`Filter`接口的额外过滤器，该接口具有一个方法的函数接口：
 
-```
+```java
 boolean isLoggable(LogRecord record)
 ```
 
 要将过滤器安装到处理器中，请在日志配置中添加如下条目：
 
-```
+```properties
 java.util.logging.ConsoleHandler.filter=com.mycom
 ```
 
-`ConsoleHandler` 和 `FileHandler` 类以文本和 XML 格式输出日志记录。不过，你也可以定义自己的格式。扩展 `java.util.logging.Formatter` 类并重写方法：
+`ConsoleHandler`和`FileHandler`类以文本和 XML 格式输出日志记录。不过，你也可以定义自己的格式。扩展`java.util.logging.Formatter`类并重写方法：
 
-```
+```java
 String format(LogRecord record)
 ```
 
-以你喜欢的任何方式格式化记录并返回生成的字符串。在你的 `format` 方法中，你可以通过调用 API 注释中的任一方法获取有关 `LogRecord` 的信息。
+以你喜欢的任何方式格式化记录并返回生成的字符串。在你的`format`方法中，你可以通过调用 API 注释中的任一方法获取有关`LogRecord`的信息。
 
-在你的 `format` 方法中，你可能想要调用方法：
+在你的`format`方法中，你可能想要调用方法：
 
-```
+```java
 String formatMessage(LogRecord record)
 ```
 
@@ -14654,14 +15034,14 @@ String formatMessage(LogRecord record)
 
 许多格式（如 XML）需要环绕格式化记录的头部和尾部。为了实现这一点，请重写以下方法：
 
-```
+```java
 String getHead(Handler h)
 String getTail(Handler h)
 ```
 
 最后，在日志配置中设置格式化器：
 
-```
+```properties
 java.util.logging.FileHandler.formatter=com.mycom
 ```
 
@@ -14669,39 +15049,39 @@ java.util.logging.FileHandler.formatter=com.mycom
 
 日志有如此多的选项，很容易忘记基础知识。下面的配方总结了最常见的操作。
 
-- 1. 对于简单的应用程序，选择单个日志器（logger）。给日志器命名与你的主应用程序包相同的名称是一个好主意，例如 `com.company.myprog`。你始终可以通过调用以下代码获取日志器：
+1. 对于简单的应用程序，选择单个日志器（logger）。给日志器命名与你的主应用程序包相同的名称是一个好主意，例如`com.company.myprog`。你始终可以通过调用以下代码获取日志器：
 
-```
+```java
 System.Logger logger = System.getLogger("com.my
 ```
 
 为了方便起见，你可能想在有大量日志活动的类中添加静态字段：
 
-```
+```java
 private static final System.Logger logger = Sys
 ```
 
-- 2. `java.util.logging` 后端的默认日志配置将所有级别为 `INFO` 或以上的消息记录到控制台。要进行自定义，请准备一个 `logging.properties` 文件，并包含如下条目：
+2. `java.util.logging`后端的默认日志配置将所有级别为`INFO`或以上的消息记录到控制台。要进行自定义，请准备一个`logging.properties`文件，并包含如下条目：
 
-```
+```properties
 handlers=java.util.logging.ConsoleHandler,java. com.mycompany.myapp.level=FINER java.util.logging.ConsoleHandler.level=FINE
 ```
 
 然后使用以下命令启动你的应用：
 
-```
+```bash
 java -Djava.util.logging.config.file=logging.pr
 ```
 
-- 3. 现在你已经准备好尽所情地记录日志了。每当你想调用 `System.out.println` 时，请改为发布一条日志消息：
+3. 现在你已经准备好尽情地记录日志了。每当你想调用`System.out.println`时，请改为发布一条日志消息：
 
-```
+```java
 logger.log(System.Logger.Level.TRACE, "File ope
 ```
 
 记录意外的异常也是一个好主意。例如：
 
-```
+```java
 try
 {
   ...
@@ -14716,249 +15096,303 @@ catch (SomeException e)
 
 运行程序如下：
 
-```
+```bash
 java -Djava.util.logging.config.file=logging.prop
 ```
 
-## 列表 7.2 logging/LoggingImageView.java
+## 列表 7.2：logging/LoggingImageView.java
 
-```
-1 package logging;
-2
-3 import java.awt.*;
-4 import java.awt.event.*;
-5 import java.io.*;
-6 import javax.swing.*;
-7
-8 import static java.lang.System.Logger.Level
-9
-10 /*
-11 12 * 图片查看器程序的修改版
-13 * java -Djava.util.logging.config.file=log
-14 * @version 1.1 2023-09-26
-15 * @author Cay Horstmann
-16 */
-17 public class LoggingImageView
-18 {
-19
-20
-21 public static void main(String[] args)
-22 {
-23 EventQueue.invokeLater(() ->
-24 {
-25 var frame = new ImageViewerP
-26 frame.setTitle("LoggingImage",
-27 frame.setDefaultCloseOperati
-28 System.Logger logger = Syste
-29 logger.log(INFO, "Showing fr
-30 frame.setVisible(true);
-31
-32 }
-33 }
-34
-35 /**
-36 * 显示图片的框架。
-37 */
-38 class ImageViewerFrame extends JFrame
-39 {
-40 private static final int DEFAULT_WIDTH =
-41 private static final int DEFAULT_HEIGHT
-42
-43 private JLabel label;
-44 private static System.Logger logger = Sy
-45
-46 public ImageViewerFrame(
-47 {
-48 logger.log(TRACE, "Entering ImageView
-49 setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT
-50
-51 // 设置菜单栏
-52 var menuBar = new JMenuBar();
-53 setJMenuBar(menuBar);
-54
-55 var menu = new JMenu("File");
-56 menu.add(menu);
-57
-58 var openItem = JMenuItem("Open");
-59 menu.add(openItem);
-60 openItem.addActionListener(new ActionListener() {
-61 62 void actionPerformed(ActionEvent e) {
-63     var chooser = JFileChooser();
-64     int r = chooser.showOpenDialog(frame);
-65     if (r == JFileChooser.APPROVE_OPTION) {
-66         String name = chooser.getSelectedFile().getName();
-67         label.setText(name);
-68     }
-69 }
-70 });
-71
-72 var exitItem = new JMenuItem("Exit");
-73 menu.add(exitItem);
-74 exitItem.addActionListener(new ActionListener() {
-75 76 void actionPerformed(ActionEvent e) {
-77     System.exit(0);
-78 }
-79 });
-80 });
+
+
+
+```java
+package logging;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+import javax.swing.*;
+
+import static java.lang.System.Logger.Level;
+
+/*
+ * 图片查看器程序的修改版
+ * java -Djava.util.logging.config.file=log
+ * @version 1.1 2023-09-26
+ * @author Cay Horstmann
+ */
+public class LoggingImageView {
+    public static void main(String[] args) {
+        EventQueue.invokeLater(() -> {
+            var frame = new ImageViewerP();
+            frame.setTitle("LoggingImage");
+            frame.setDefaultCloseOperation(...);
+            System.Logger logger = System.getLogger(...);
+            logger.log(INFO, "Showing frame");
+            frame.setVisible(true);
+        });
+    }
+}
+
+/**
+ * 显示图片的框架。
+ */
+class ImageViewerFrame extends JFrame {
+    private static final int DEFAULT_WIDTH = ...;
+    private static final int DEFAULT_HEIGHT = ...;
+
+    private JLabel label;
+    private static System.Logger logger = System.getLogger(...);
+
+    public ImageViewerFrame(...) {
+        logger.log(TRACE, "Entering ImageViewerFrame");
+        setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
+
+        // 设置菜单栏
+        var menuBar = new JMenuBar();
+        setJMenuBar(menuBar);
+
+        var menu = new JMenu("File");
+        menu.add(menu);
+
+        var openItem = JMenuItem("Open");
+        menu.add(openItem);
+        openItem.addActionListener(new ActionListener() {
+            void actionPerformed(ActionEvent e) {
+                var chooser = JFileChooser();
+                int r = chooser.showOpenDialog(frame);
+                if (r == JFileChooser.APPROVE_OPTION) {
+                    String name = chooser.getSelectedFile().getName();
+                    label.setText(name);
+                }
+            }
+        });
+
+        var exitItem = new JMenuItem("Exit");
+        menu.add(exitItem);
+        exitItem.addActionListener(new ActionListener() {
+            void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+    }
+}
 ```
 
-## 列表 7.3 logging/WindowHandler.java
+## 列表 7.3 `logging/WindowHandler.java`
 
+```java
+package logging;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+import java.util.logging.*;
+import javax.swing.*;
+
+/**
+ * 在窗口中显示日志的处理器。
+ */
+public class WindowHandler extends StreamHandler {
+    private JFrame frame;
+    private JTextArea output;
+
+    public WindowHandler() {
+        frame = new JFrame("Log Viewer");
+        output = new JTextArea();
+        output.setEditable(false);
+        frame.add(new JScrollPane(output));
+        frame.setSize(200, 200);
+        frame.setVisible(true);
+    }
+
+    public void publish(LogRecord record) {
+        if (!frame.isVisible()) return;
+        super.publish(record);
+        flush();
+    }
+
+    protected void flush() {
+        StringBuilder sb = new StringBuilder();
+        for (LogRecord record : getRecords()) {
+            sb.append(getFormatter().format(record));
+        }
+        output.append(sb.toString());
+        clearRecords();
+    }
+}
 ```
-1 package logging;
-2
-3 import java.awt.*;
-4 import java.awt.event.*;
-5 import java.io.*;
-6 import java.util.logging.*;
-7 import javax.swing.*;
-8
-9 /**
-10 * 在窗口中显示日志的处理器。
-11 */
-12 public class WindowHandler extends StreamHandler {
-13
-14 private JFrame frame;
-15 private JTextArea output;
-16
-17 public WindowHandler() {
-18 frame = new JFrame("Log Viewer");
-19 output = new JTextArea();
-20 output.setEditable(false);
-21 frame.add(new JScrollPane(output));
-22 frame.setSize(200, 200);
-23 frame.setVisible(true);
-24 }
-25
-26 public void publish(LogRecord record) {
-27 if (!frame.isVisible()) return;
-28 super.publish(record);
-29 flush();
-30 }
-31
-32 protected void flush() {
-33 StringBuilder sb = new StringBuilder();
-34 for (LogRecord record : getRecords()) {
-35     sb.append(getFormatter().format(record));
-36 }
-37     output.append(sb.toString());
-38     clearRecords();
-39 }
-40 }
-```
 
-## java.lang.System.Logger
+## `java.lang.System.Logger`
 
-- String getName()
-返回日志器的名称。
-- boolean isLoggable(System.Logger.Level level)
-如果此日志器处理指定级别的日志，则返回 true。
-- void log(System.Logger.Level, String msg)
-- void log(System.Logger.Level, String msg, Throwable thrown)
-- void log(System.Logger.Level, Object obj)
-记录给定的消息和任何 Throwable，或 obj.toString()。
-- void log(System.Logger.Level, Supplier<String> msgSupplier)
-- void log(System.Logger.Level, Supplier<String> msgSupplier, Throwable thrown)
-如果此日志器处理指定级别的日志，调用供应商并记录结果以及提供的
-Throwable。
-- void log(System.Logger.Level, String format,
-Object... params)
-使用给定的参数格式化消息。
+- `String getName()`
 
-- void log(System.Logger.Level level, ResourceBundle bundle, String format, Object... params)
-如果 bundle 为 null，直接使用格式字符串，
-否则使用 format 作为键在资源包中查找。
-然后将格式字符串作为 MessageFormat 使用给定的参数并返回结果。
-- void log(System.Logger.Level level, ResourceBundle bundle, String msg, Throwableable thrown)
-如果 bundle 为 null，记录 msg，否则将 msg 作为键在资源包中查找。如果 thrown 不空，则记录它。
+  返回日志器的名称。
 
-## java.util.logging.Handler
+- `boolean isLoggable(System.Logger.Level level)`
 
-- abstract void publish(LogRecord record)
-将记录发送到目标地。
-- abstract void flush()
-刷新缓冲区数据。
-- abstract void close()
-刷新所有缓冲区数据并释放所有关联资源。
-- Filter getFilter()
-- void setFilter(Filter f)
-获取并设置此处理器的过滤器。
+  如果此日志器处理指定级别的日志，则返回 `true`。
 
+- `void log(System.Logger.Level, String msg)`
 
+- `void log(System.Logger.Level, String msg, Throwable thrown)`
 
+- `void log(System.Logger.Level, Object obj)`
 
+  记录给定的消息和任何 `Throwable`，或 `obj.toString()`。
 
-- Formatter getFormatter()
-- void setFormatter(Formatter f)
+- `void log(System.Logger.Level, Supplier<String> msgSupplier)`
+
+- `void log(System.Logger.Level, Supplier<String> msgSupplier, Throwable thrown)`
+
+  如果此日志器处理指定级别的日志，调用供应商并记录结果以及提供的 `Throwable`。
+
+- `void log(System.Logger.Level, String format, Object... params)`
+
+  使用给定的参数格式化消息。
+
+- `void log(System.Logger.Level level, ResourceBundle bundle, String format, Object... params)`
+
+  如果 `bundle` 为 `null`，直接使用格式字符串；否则使用 `format` 作为键在资源包中查找。
+
+  然后将格式字符串作为 `MessageFormat` 使用给定的参数并返回结果。
+
+- `void log(System.Logger.Level level, ResourceBundle bundle, String msg, Throwableable thrown)`
+
+  如果 `bundle` 为 `null`，记录 `msg`，否则将 `msg` 作为键在资源包中查找。如果 `thrown` 不空，则记录它。
+
+## `java.util.logging.Handler`
+
+- `abstract void publish(LogRecord record)`
+
+  将记录发送到目标地。
+
+- `abstract void flush()`
+
+  刷新缓冲区数据。
+
+- `abstract void close()`
+
+  刷新所有缓冲区数据并释放所有关联资源。
+
+- `Filter getFilter()`
+
+- `void setFilter(Filter f)`
+
+  获取并设置此处理器的过滤器。
+
+- `Formatter getFormatter()`
+
+- `void setFormatter(Formatter f)`
+
   获取并设置此处理器的格式。
-- Level getLevel()
-- void setLevel(Level l)
+
+- `Level getLevel()`
+
+- `void setLevel(Level l)`
+
   获取并设置此处理器的级别。
 
 ```java
 java.util.logging.ConsoleHandler 1.4
 ```
 
-- ConsoleHandler()
+- `ConsoleHandler()`
+
   构造一个新的控制台处理器。
 
 ```java
 java.util.logging.FileHandler 1.4
 ```
 
-- FileHandler(String pattern)
-- FileHandler(String pattern, boolean append)
-- FileHandler(String pattern, int limit, int count)
-- FileHandler(String pattern, int limit, int count, boolean append)
-- FileHandler(String pattern, long limit, int count, boolean append)
-  构造一个文件处理器。模式格式请参见表 7.3。limit 是在打开新日志文件之前的近似最大字节数。count 是循环序列中的文件数量。如果 append 为 true，则记录应追加到现有的日志文件中。
+- `FileHandler(String pattern)`
+
+- `FileHandler(String pattern, boolean append)`
+
+- `FileHandler(String pattern, int limit, int count)`
+
+- `FileHandler(String pattern, int limit, int count, boolean append)`
+
+- `FileHandler(String pattern, long limit, int count, boolean append)`
+
+  构造一个文件处理器。模式格式请参见表 7.3。`limit` 是在打开新日志文件之前的近似最大字节数。`count` 是循环序列中的文件数量。如果 `append` 为 `true`，则记录应追加到现有的日志文件中。
 
 ```java
 java.util.logging.LogRecord 1.4
 ```
 
-- Level getLevel()
+- `Level getLevel()`
+
   获取此记录的日志级别。
-- String getLoggerName()
+
+- `String getLoggerName()`
+
   获取记录此记录的日志器名称。
-- ResourceBundle getResourceBundle()
-- String getResourceName()
-  获取资源包或其名称，用于本地化消息；如果未提供，则返回 null。
-- String getMessage()
+
+- `ResourceBundle getResourceBundle()`
+
+- `String getResourceName()`
+
+  获取资源包或其名称，用于本地化消息；如果未提供，则返回 `null`。
+
+- `String getMessage()`
+
   获取本地化或格式化之前的“原始”消息。
-- Object[] getParameters()
-  获取参数对象，如果未提供则返回 null。
-- Throwable getThrown()
-  获取抛出的对象，如果未提供则返回 null。
-- String getSourceClassName()
-- String getSourceMethodName()
+
+- `Object[] getParameters()`
+
+  获取参数对象，如果未提供则返回 `null`。
+
+- `Throwable getThrown()`
+
+  获取抛出的对象，如果未提供则返回 `null`。
+
+- `String getSourceClassName()`
+
+- `String getSourceMethodName()`
+
   获取记录此记录的代码位置。此信息可能由日志代码提供，也可以从运行时堆栈中自动推断。如果日志代码提供了错误的值或运行代码经过优化导致无法推断精确位置，则可能是不准确的。
-- long getMillis()
+
+- `long getMillis()`
+
   获取创建时间，自 1970 年以来的毫秒。
-- Instant getInstant()
-  作为 java.time.Instant 获取创建时间（参见第卷二第 6 章）。
-- long getSequenceNumber()
+
+- `Instant getInstant()`
+
+  作为 `java.time.Instant` 获取创建时间（参见第卷二第 6 章）。
+
+- `long getSequenceNumber()`
+
   获取此记录的唯一序列号。
-- long getThreadID()
-  获取创建此记录的线程唯一 ID。（getThreadID 方法返回 int 类型 ID。它现在已弃用，因为长时间运行可能会可能会大于 Integer.MAX_VALUE 的线程 ID。）
+
+- `long getThreadID()`
+
+  获取创建此记录的线程唯一 ID。（`getThreadID` 方法返回 `int` 类型 ID。它现在已弃用，因为长时间运行可能会可能会大于 `Integer.MAX_VALUE` 的线程 ID。）
 
 ```java
 java.util.logging.Filter 1.4
 ```
 
-- boolean isLoggable(LogRecord record)
-  如果给定的日志记录应该记录，则返回 true。
+- `boolean isLoggable(LogRecord record)`
+
+  如果给定的日志记录应该记录，则返回 `true`。
 
 ```java
 java.util.logging.Formatter 1.4
 ```
 
-- abstract String format(LogRecord record)
+- `abstract String format(LogRecord record)`
+
   返回格式化给定日志记录后生成的字符串。
-- String getHead(Handler h)
-- String getTail(Handler h)
-  返回包含日志记录的文档头部和尾应出现的字符串。Formatter 超类定义了这些方法返回空字符串；必要时请重写它们。
-- String formatMessage(LogRecord record)
+
+- `String getHead(Handler h)`
+
+- `String getTail(Handler h)`
+
+  返回包含日志记录的文档头部和尾应出现的字符串。`Formatter` 超类定义了这些方法返回空字符串；必要时请重写它们。
+
+- `String formatMessage(LogRecord record)`
+
   返回日志记录的本地化且格式化的消息部分。
 
 # 7.6. 调试技巧
@@ -14973,21 +15407,21 @@ java.util.logging.Formatter 1.4
 System.out.println("x=" + x);
 ```
 
-或者
+或者：
 
 ```java
 logger.log(DEBUG, "x=" + x);
 ```
 
-如果 x 是一个数字，它会被转换为等效字符串。如果 x 是一个对象，Java 会调用它的 toString 方法。记录此对象的状态也很有用。
+如果 `x` 是一个数字，它会被转换为等效字符串。如果 `x` 是一个对象，Java 会调用它的 `toString` 方法。记录此对象的状态也很有用。
 
 ```java
 logger.log(DEBUG, "this=" + this);
 ```
 
-Java 库中的大多数类都非常尽心地重写了 toString 方法，提供有关该类的有用信息。这对调试来说是一个巨大的助力。在你的类中应该应该同样的努力。
+Java 库中的大多数类都非常尽心地重写了 `toString` 方法，提供有关该类的有用信息。这对调试来说是一个巨大的助力。在你的类中应该应该同样的努力。
 
-2. 你可以在每个类中放置一个独立的 main 方法。在里面，放置演示如何使用该类的代码。
+2. 你可以在每个类中放置一个独立的 `main` 方法。在里面，放置演示如何使用该类的代码。
 
 ```java
 public class MyClass {
@@ -15001,9 +15435,9 @@ public class MyClass {
 
 创建几个对象，调用方法，并证明它们中的每一个都做了正确的事。
 
-3. 对于更专业的单元测试，你应该查看来自 https://junit.org 的 JUnit。JUnit 是非常流行的单元测试框架，可以方便地组织用例集。每当你对类进行更改时运行测试，并在发现 bug 时添加另一个测试用例。
+3. 对于更专业的单元测试，你应该查看来自 <https://junit.org> 的 JUnit。JUnit 是非常流行的单元测试框架，可以方便地组织用例集。每当你对类进行更改时运行测试，并在发现 bug 时添加另一个测试用例。
 
-4. 日志代理是一个子类对象，它拦截方法调用，记录它们，然后调用原始方法。例如，如果你在 Random 类的 nextDouble 方法遇到麻烦，可以创建一个匿名子类的实例代理对象：
+4. 日志代理是一个子类对象，它拦截方法调用，记录它们，然后调用原始方法。例如，如果你在 `Random` 类的 `nextDouble` 方法遇到麻烦，可以创建一个匿名子类的实例代理对象：
 
 ```java
 var generator = new Random() {
@@ -15016,7 +15450,9 @@ var generator = new Random() {
 };
 ```
 
-每当调用 nextDouble 方法时，都会记录结果。5. 你可以通过 Throwable 方法从任何异常获取堆栈跟踪。注意，这仅在类为 final 时才有效。
+每当调用 `nextDouble` 方法时，都会记录结果。
+
+5. 你可以通过 `Throwable` 方法从任何异常获取堆栈跟踪。注意，这仅在类为 `final` 时才有效。
 
 ```java
 try {
@@ -15026,7 +15462,7 @@ try {
 }
 ```
 
-6. 通常，堆栈跟踪显示在 System.err 上。如果你想将堆栈跟踪记录到字符串，方法如下：
+6. 通常，堆栈跟踪显示在 `System.err` 上。如果你想将堆栈跟踪记录到字符串，方法如下：
 
 ```java
 StringWriter sw = new StringWriter();
@@ -15035,19 +15471,19 @@ t.printStackTrace(pw);
 String stackTrace = sw.toString();
 ```
 
-7. 在文件中捕获错误通常很有用。然而，错误发送到 System.err 而不是 System.out。因此，你不能简单地通过运行：
+7. 在文件中捕获错误通常很有用。然而，错误发送到 `System.err` 而不是 `System.out`。因此，你不能简单地通过运行：
 
 ```bash
 java MyProgram > errors.txt
 ```
 
-要在同一个文件中捕 System.err 和 System.out，请使用：
+要在同一个文件中捕获 `System.err` 和 `System.out`，请使用：
 
 ```bash
 java MyProgram > errors.txt 2>&1
 ```
 
-8. 让未捕获的堆栈跟踪出现在 System.err 中并不理想。如果用户偶然看到它们，会感到困惑，而且在你需要它们时却不可。更好的方法是记录它们。你可以使用静态 Thread.setDefaultcaughtExceptionHandler 方法更改未捕获异常的处理器：
+8. 让未捕获的堆栈跟踪出现在 `System.err` 中并不理想。如果用户偶然看到它们，会感到困惑，而且在你需要它们时却不可。更好的方法是记录它们。你可以使用静态 `Thread.setDefaultcaughtExceptionHandler` 方法更改未捕获异常的处理器：
 
 ```java
 Thread.setDefaultUncaughtExceptionHandler((t, e) -> {
@@ -15055,9 +15491,12 @@ Thread.setDefaultUncaughtExceptionHandler((t, e) -> {
 });
 ```
 
-9. 要观察类加载，请带有 -verbose 标志启动 Java 虚拟机。你会得到如下输出：
+9. 要观察类加载，请带有 `-verbose` 标志启动 Java 虚拟机。你会得到如下输出：
 
-```
+
+
+
+```text
 [0.012s][info][class, load] opened: /opt/jdk-17.
 [0.034s][info][class, load] java.lang.Object
 [0.035s][info][class, load] java.io.Serializable
@@ -15077,9 +15516,7 @@ Thread.setDefaultUncaughtExceptionHandler((t, e) -> {
 [0.037s][info][class, load] java.lang.Exception
 ```
 
-
-
-```
+```text
 [0.037s][info][class, load] java.lang.RuntimeException
 [0.038s][info][class, load] java.lang.SecurityManager
 ..
@@ -15087,7 +15524,7 @@ Thread.setDefaultUncaughtExceptionHandler((t, e) -> {
 
 这对于诊断类路径（classpath）问题非常有帮助。
 
-- 10. -Xlint 选项告诉编译器发现常见的代码问题。例如，如果你使用以下命令编译：
+- 10. `-Xlint` 选项告诉编译器发现常见的代码问题。例如，如果你使用以下命令编译：
 
 ```bash
 javac -Xlint sourceFiles
@@ -15095,7 +15532,7 @@ javac -Xlint sourceFiles
 
 编译器将报告 `switch` 语句中缺少 `break` 语句。（“lint”一词最初描述一种用于定位 C 程序中潜在问题的工具，但现在泛指应用于任何标记可疑但并非非法的构造的工具。）你将收到类似下面的提示信息：
 
-```
+```text
 warning: [fallthrough] possible fall-through in
 ```
 
@@ -15111,11 +15548,13 @@ javac -Xlint:all,-fallthrough,-serial sourceFiles
 javac --help -X
 ```
 
-- 11. Java VM 支持对 Java 进行监控和管理，允许在虚拟机中安装代理（agents），跟踪内存消耗、线程使用、类加载等。这一功能对于大型和长时间运行的 Java 程序特别重要。作为这些能力的演示，JDK 自带了一个名为 jconsole 的图形工具，它可以显示虚拟机性能统计数据（见图 7.2）。启动你的程序，然后启动 jconsole 从运行的 Java 程序列表中选择你的程序。
+- 11. Java VM 支持对 Java 进行监控和管理，允许在虚拟机中安装代理（agents），跟踪内存消耗、线程使用、类加载等。这一功能对于大型和长时间运行的 Java 程序特别重要。作为这些能力的演示，JDK 自带了一个名为 `jconsole` 的图形工具，它可以显示虚拟机性能统计数据（见图 7.2）。启动你的程序，然后启动 `jconsole` 从运行的 Java 程序列表中选择你的程序。
 
-# Java 监控与控制台
+## Java 监控与控制台
 
+```text
 pid: 18841 | org.eclipse.equinox.launcher_1.4.0.v20161219-1356.jar -os linux -ws gtk -arch x86_64 -showsplash...
+```
 
 概览 内存窗口 线程 类 VM 摘要 MBeans
 
@@ -15145,19 +15584,20 @@ CPU 使用率
 
 CPU 使用率: 0.2%
 
-# 图 7.2: jconsole 程序
+## 图 7.2：`jconsole` 程序
 
-该程序提供了关于运行程序的信息。更多信息请访问 https://www.oracle.com/technical-resources/articles/java/jconsole.html。
+该程序提供了关于运行程序的信息。更多信息请访问 <https://www.oracle.com/technical-resources/articles/java/jconsole.html>。
 
-- 12. Java Flight Recorder（Java 记录器）是 OpenJDK 虚拟机的一种插桩技术，用于收集诊断和剖析数据。你可以使用开源的 VisualVM (https://visualvm.github.io) 和 Java Mission Control (https://adoptium.net/jmc) 来收集和查看飞行记录数据。这些工具也具备 jconsole 能够执行的所有功能。关于后者的详细教程，请参考 https://github.com/thegreystone/jmc-tutorial。
+- 12. Java Flight Recorder（Java 记录器）是 OpenJDK 虚拟机的一种插桩技术，用于收集诊断和剖析数据。你可以使用开源的 VisualVM（<https://visualvm.github.io>）和 Java Mission Control（<https://adoptium.net/jmc>）来收集和查看飞行记录数据。这些工具也具备 `jconsole` 能够执行的所有功能。关于后者的详细教程，请参考 <https://github.com/thegreystone/jmc-tutorial>。
 
-- 13. JDK 带有许多用于监控虚拟机的命令行工具，其用例相互交叉（jcmd, jhsdb, jinfo, jmap, jps, jstat）。`jcmd` 工具是一个很好的起点，因为它涵盖了其中几个用例。运行：
+- 13. JDK 带有许多用于监控虚拟机的命令行工具，其用例相互交叉（`jcmd`、`jhsdb`、`jinfo`、`jmap`、`jps`、`jstat`）。`jcmd` 工具是一个很好的起点，因为它涵盖了其中几个用例。运行：
 
 ```bash
 jcmd
 ```
 
 以获取计算机上所有 Java 进程的列表，包括进程 ID 和主类名。
+
 要列出系统属性或 VM 标志，运行：
 
 ```bash
@@ -15177,7 +15617,7 @@ jcmd pidOrMainClass VM.log output=gc.log what=gc
 jcmd pidOrMainClass Thread.print
 ```
 
-或者
+或者：
 
 ```bash
 jcmd pidOrMainClass Thread.dump_to_file -overwrite
@@ -15213,7 +15653,7 @@ jcmd pidOrMainClass help commandName
 
 泛型类和方法提供了类型安全。在 Java 引入泛型之前，程序员必须使用 `Object` 引用来创建集合，这容易出错且需要手动强制转换。泛型允许你指定类所处理的对象的类型，让编译器能够标记可疑但并非非法的构造。你将得到类似下面的消息：
 
-```
+```text
 warning: [fallthrough] possible fall-through in
 ```
 
@@ -15316,9 +15756,6 @@ files.add(new File("test")); // 只能添加 Str
 
 然而，实现一个泛型类并不简单。使用你代码的程序员希望为你的类型参数接入各种类。他们期望在没有苛刻限制和令人困惑的错误的情况下完成一切。
 
-
-
-
 因此，作为一名泛型程序员，你的工作就是预判你的类所有可能的未来用途。
 
 这能有多难呢？这里有一个标准类库设计者必须解决的典型问题。`ArrayList` 类有一个方法 `addAll` 用于添加另一个集合中的所有元素。程序员可能想将一个 `ArrayList<Manager>` 中的所有元素添加到一个 `ArrayList<Employee>` 中。但，当然，反过来操作不应该是合法的。你如何允许其中一种调用而禁止另一种呢？Java 语言的设计者发明了一种精妙的新概念——`通配符类型`（wildcard type）来解决这个问题。通配符类型相当抽象，但它们允许库构建者使方法变得尽可能灵活。
@@ -15329,7 +15766,7 @@ files.add(new File("test")); // 只能添加 Str
 
 在本章中，我将向你展示实现自己的泛型代码所需的所有知识。然而，我预计大多数读者将主要利用这些知识来帮助排除故障，并满足你对参数化集合类内部机制的好奇。
 
-## 8.2. 定义简单的泛型类
+## 8.2 定义简单的泛型类
 
 泛型类是一个带有一个或多个类型变量的类。在本章中，使用一个简单的 `Pair` 类作为示例。这个类允许我们专注于泛型，而不会被数据存储细节分心。以下是泛型 `Pair` 类的代码：
 
@@ -15377,7 +15814,7 @@ Pair<String>()
 Pair<String>(String, String)
 ```
 
-以及方法
+以及方法：
 
 ```java
 String getFirst()
@@ -15392,7 +15829,9 @@ void setSecond(String)
 
 > C++ 注意：从表面上看，Java 的泛型类与 C++ 的模板类（template classes）相似。唯一明显的区别是 Java 没有特殊的关键字。然而，正如你在整个本章中所看到的，这两种机制之间存在实质差异。
 
-# 列表 8.1 pair1/PairTest1.java
+## 列表 8.1：`pair1/PairTest1.java`
+
+
 
 ```java
 package pair1;
@@ -15431,7 +15870,7 @@ class ArrayAlg {
 
 ## 8.3. 泛型方法
 
-在前面的节中，你已经看到了如何定义泛型类。你也可以带类型参数的定义方法。当你调用泛型方法时，可以在方法名之前放置实际类型：
+在前面的节中，你已经看到了如何定义泛型类。你也可以带类型参数地定义方法。当你调用泛型方法时，可以在方法名之前放置实际类型：
 
 ```java
 class ArrayAlg {
@@ -15458,14 +15897,14 @@ String middle = ArrayAlg.min("hello", "world");
 double middle = ArrayAlg.min(3.14, 1729);
 ```
 
-**提示：** Peter von Ahé 建议如果你想查看编译器为泛型方法推断出什么类型，可以故意引入错误并研究产生的消息。例如，考虑调用 `ArrayAlg.min("Hello", 0, null)`。将结果赋值给 `JButton`，这是不可能的。你会得到错误报告：
+**提示：** Peter von Ahé 建议，如果你想查看编译器为泛型方法推断出什么类型，可以故意引入错误并研究产生的消息。例如，考虑调用 `ArrayAlg.min("Hello", 0, null)`。将结果赋值给 `JButton`，这是不可能的。你会得到错误报告：
 
-```
+```text
 found: java.lang.Object&java.io.Serializable&java.lang.
 java.lang.Object&java.io.Serializable&java.lang..
 ```
 
-用通的话来说，你可以将结果赋值给 `Object`、`Serializable` 或 `Comparable`。
+用通俗的话来说，你可以将结果赋值给 `Object`、`Serializable` 或 `Comparable`。
 
 ## 8.4. 类型变量的边界
 
@@ -15484,7 +15923,6 @@ class ArrayAlg {
 }
 ```
 
-
 ```java
 return smallest;
 }
@@ -15500,17 +15938,17 @@ public static <T extends Comparable> T min(T[] a
 
 实际上，`Comparable` 接口本身就是一个泛型类型。目前，请忽略这种复杂性以及编译器生成的警告。第 8.7 节讨论了如何正确使用带有 `Comparable` 接口的参数。
 
-现在，泛型方法 `min`只能通过实现了 `Comparable` 接口的类数组调用，例如 `String`、`LocalDate` 等。对 `Rectangle` 数组调用 `min` 将导致编译时错误，因为 `Rectangle` 类没有实现 `Comparable`。
+现在，泛型方法 `min` 只能通过实现了 `Comparable` 接口的类数组调用，例如 `String`、`LocalDate` 等。对 `Rectangle` 数组调用 `min` 将导致编译时错误，因为 `Rectangle` 类没有实现 `Comparable`。
 
 > **C++ 注意：** 在 C++ 中，你不能限制模板参数的类型。如果程序员使用不当的类型实例化模板，会在模板代码内部报告一个（通常是晦涩的）错误信息。
 
-你可能会奇怪，为什么在这种情况下我使用 `extends` 关键字而不是 `implements` 关键字——毕竟，`Comparable` 是一个接口。这种写法
+你可能会奇怪，为什么在这种情况下我使用 `extends` 关键字而不是 `implements` 关键字——毕竟，`Comparable` 是一个接口。这种写法：
 
-```
+```java
 <T extends BoundingType>
 ```
 
-表示 `T` 应该是边界类型的*子类型*。`T` 和边界类型都可以是类，也可以是接口。选择 `extends` 关键字是因为它是对子类型概念的合理近似，而且 Java 的设计者不想向语言中添加新的新关键字（如 `sub`）。
+表示 `T` 应该是边界类型的*子类型*。`T` 和边界类型都可以是类，也可以是接口。选择 `extends` 关键字是因为它是对子类型概念的合理近似，而且 Java 的设计者不想向语言中添加新的关键字（如 `sub`）。
 
 一个类型变量可以有多个边界。例如：
 
@@ -15524,52 +15962,53 @@ T extends Comparable & Serializable
 
 在下一个示例程序（列表 8.2）中，我们重写了 `minmax` 方法使其成为泛型。该方法计算泛型数组的最小值和最大值，返回一个 `Pair<T>`。
 
-# 列表 8.2 pair2/PairTest.java
+## 列表 8.2 `pair2/PairTest.java`
 
 ```java
 package pair2;
+
 import java.time.*;
+
 /**
  * @version 1.02 2015-06-21
  * @author Cay Horstmann
  */
-public static class PairTest
-{
-    public static void main(String[] args)
-    {
+public static class PairTest {
+    public static void main(String[] args) {
         LocalDate[] birthdays = {
-          LocalDate.of(1906, 12, 9),
-          LocalDate.of(1815, 12, 10),
-          LocalDate.of(1903, 12, 3),
-          LocalDate.of(1910, 6, 22),
+            LocalDate.of(1906, 12, 9),
+            LocalDate.of(1815, 12, 10),
+            LocalDate.of(1903, 12, 3),
+            LocalDate.of(1910, 6, 22),
         };
         Pair<LocalDate> mm = ArrayAlg.minmax(birthdays);
         System.out.println("min = " + mm.getMin());
         System.out.println("max = " + mm.getMax());
     }
 }
+
 class ArrayAlg {
-  /**
-   * 获取数组的最小值和最大值
-   * @param a 一个类型为 T 的对象数组
-   * @return 一个包含最小和最大值的对
-   */
-  public static <T extends Comparable<T>> Pair<T> minmax(T[] a) {
-    if (a == null || a.length == 0) return null;
-    T min = a[0];
-    T max = a[0];
-    for (int i = 1; i < a.length; i++) {
-      if (min.compareTo(a[i]) > 0) min = a[i];
-      if (max.compareTo(a[i]) < 0) max = a[i];
+    /**
+     * 获取数组的最小值和最大值
+     * @param a 一个类型为 T 的对象数组
+     * @return 一个包含最小和最大值的对
+     */
+    public static <T extends Comparable<T>> Pair<T> minmax(T[] a) {
+        if (a == null || a.length == 0) return null;
+        T min = a[0];
+        T max = a[0];
+        for (int i = 1; i < a.length; i++) {
+            if (min.compareTo(a[i]) > 0) min = a[i];
+            if (max.compareTo(a[i]) < 0) max = a[i];
+        }
+        return new Pair<>(min, max);
     }
-    return new Pair<>(min, max);
-  }
 }
 ```
 
 ## 8.5. 泛型代码与虚拟机
 
-虚拟机并不存在泛型类型的对象——所有对象都属于普通类。泛型实现的早早版本甚至能够将使用泛型的程序编译成可以在 1.0 虚拟机上执行的类文件！在接下来的章节中，你将看到编译器如何“擦除”类型参数，以及这一过程对 Java 程序员意味着什么。
+虚拟机并不存在泛型类型的对象——所有对象都属于普通类。泛型实现的早期版本甚至能够将使用泛型的程序编译成可以在 1.0 虚拟机上执行的类文件！在接下来的章节中，你将看到编译器如何“擦除”类型参数，以及这一过程对 Java 程序员意味着什么。
 
 ### 8.5.1. 类型擦除（Type Erasure）
 
@@ -15587,11 +16026,21 @@ public class Pair {
         this.second = second;
     }
 
-    public Object getFirst() { return first; }
-    public Object getSecond() { return second; }
+    public Object getFirst() {
+        return first;
+    }
 
-    public void setFirst(Object newValue) { first = newValue; }
-    public void setSecond(Object newValue) { second = newValue; }
+    public Object getSecond() {
+        return second;
+    }
+
+    public void setFirst(Object newValue) {
+        first = newValue;
+    }
+
+    public void setSecond(Object newValue) {
+        second = newValue;
+    }
 }
 ```
 
@@ -15611,9 +16060,9 @@ Employee buddy = buddies.getFirst();
 - 调用原始方法 `getFirst`
 - 将返回的 `Object` 强制转换为类型 `Employee`
 
-在访问泛型字段时，也会插入强制转换。假设 `Pair` 类的第一个和第二个字段是公有的（`public`，这可能不是良好的编程风格，但在 Java 中是合法的）。那么表达式
+在访问泛型字段时，也会插入强制转换。假设 `Pair` 类的第一个和第二个字段是公有的（`public`，这可能不是良好的编程风格，但在 Java 中是合法的）。那么表达式：
 
-```
+```java
 Employee buddy = buddies.first;
 ```
 
@@ -15651,20 +16100,19 @@ class DateInterval extends Pair<LocalDate> {
 
 **注意：** 你可能会好奇如果交换边界会发生什么：例如 `Interval<Serializable & Comparable>`。在这种情况下，原始类型用 `Serializable` 替换 `T`，编译器会在需要时插入到 `Comparable` 的强制转换。为了效率考虑，你应该将标记接口（即不包含方法的接口）放在边界列表的末尾。
 
-
-
-
 比第一个小。这个类被擦除为：
 
 ```java
 class DateInterval extends Pair // 擦除后
 {
-    public void setSecond(LocalDate second) { . . 
-    . . 
+    public void setSecond(LocalDate second) {
+        . .
+        . .
+    }
 }
 ```
 
-可能令人惊讶的是，还有一个继承自 `Pair` 的 `setSecond` 方法，即
+可能令人惊讶的是，还有一个继承自 `Pair` 的 `setSecond` 方法，即：
 
 ```java
 public void setSecond(Object second)
@@ -15672,7 +16120,7 @@ public void setSecond(Object second)
 
 这显然是不同的方法，因为它的参数类型不同——`Object` 而不是 `LocalDate`。但它不应该是不同的。考虑以下语句序列：
 
-```
+```java
 var interval = new DateInterval(. . .);
 Pair<LocalDate> pair = interval; // OK--可以赋值
 pair.setSecond(aDate);
@@ -15683,35 +16131,36 @@ pair.setSecond(aDate);
 问题是泛型擦除干扰了多态性。为了解决这个问题，编译器在 `DateInterval` 类中生成了一个桥接方法（bridge method）：
 
 ```java
-public void setSecond(Object second) { setSecond(
+public void setSecond(Object second) {
+    setSecond(
 ```
 
-为了理解为什么这有效，让我们仔细跟踪语句的执行
+为了理解为什么这有效，让我们仔细跟踪语句的执行：
 
-```
+```java
 pair.setSecond(aDate)
 ```
 
-变量 `pair` 的声明类型为 `Pair<LocalDate>`，该类型只有一个名为 `setSecond` 的方法，即 `setSecond(Object)`。虚拟机调用 `pair` 所向的对象上的方法。该对象是 `DateInterval` 类型。因此，调用了 `DateInterval.setSecond(Object)`。该方法是合成的桥接方法。它调用了 `DateInterval.setSecond(LocalDate)`，这正是我们想要的。
+变量 `pair` 的声明类型为 `Pair<LocalDate>`，该类型只有一个名为 `setSecond` 的方法，即 `setSecond(Object)`。虚拟机调用 `pair` 所指向的对象上的方法。该对象是 `DateInterval` 类型。因此，调用了 `DateInterval.setSecond(Object)`。该方法是合成的桥接方法。它调用了 `DateInterval.setSecond(LocalDate)`，这正是我们想要的。
 
 桥接方法可能会变得更加奇怪。假设 `DateInterval` 类也重写了 `getSecond` 方法：
 
 ```java
-class DateInterval extends Pair<LocalDate>
-{
-    public LocalDate getSecond() { return (LocalDA
-    . . .
+class DateInterval extends Pair<LocalDate> {
+    public LocalDate getSecond() {
+        return (LocalDate) ...
+    }
 }
 ```
 
 在 `DateInterval` 类中，有两个 `getSecond` 方法：
 
-```java
+```text
 LocalDate getSecond() // 定义在 DateInterval 中
 Object getSecond() // 重写了方法定义
 ```
 
-你不能像那样编写 Java 代码；拥有两个参数类型相同的方法是非合法的——这里没有任何参数。然而，在虚拟机中，参数类型和返回值指定了一个方法。因此，编译器可以为两个仅在返回值上不同的方法生成字节码，虚拟机将正确处理这种情况。
+你不能像那样编写 Java 代码；拥有两个参数类型相同的方法是非法的——这里没有任何参数。然而，在虚拟机中，参数类型和返回值指定了一个方法。因此，编译器可以为两个仅在返回值上不同的方法生成字节码，虚拟机将正确处理这种情况。
 
 > **注意：** 桥接方法不仅限于泛型类型。你已经在第 5 章中看到，在重写另一个方法时指定一个更具限制性的返回类型是合法的。例如：
 
@@ -15719,9 +16168,8 @@ Object getSecond() // 重写了方法定义
 
 ```java
 public class Employee implements Cloneable {
-{
     public Employee clone() throws CloneNotException {
-}
+    }
 }
 ```
 
@@ -15729,12 +16177,14 @@ public class Employee implements Cloneable {
 
 实际上，`Employee` 类有两个 `clone` 方法：
 
-```java
+```text
 Employee clone() // 上文定义
 Object clone() // 合成的桥接方法
 ```
 
 合成的桥接方法调用新定义的方法。
+
+
 
 总结，你需要记住这些关于 Java 泛型转换的事实：
 
@@ -15745,15 +16195,15 @@ Object clone() // 合成的桥接方法
 
 ## 8.5.4. 调用遗留代码
 
-在设计 Java 泛型时，一个主要目标是允许泛型与遗留代码之间的交互。让我们来看一个遗留代码的具体示例。Swing 用户界面工具包提供了 `JSlider` 类，其“刻度”可以使用包含文本或图像的标签进行自定义。标签通过以下调用设置
+在设计 Java 泛型时，一个主要目标是允许泛型与遗留代码之间的交互。让我们来看一个遗留代码的具体示例。Swing 用户界面工具包提供了 `JSlider` 类，其“刻度”可以使用包含文本或图像的标签进行自定义。标签通过以下调用设置：
 
 ```java
 void setLabelTable(Dictionary table)
 ```
 
-`Dictionary` 类将整数映射到标签。在 Java 5 之前，该类被实现为 `Object` 实例的映射。Java 5 将 `Dictionary` 变成了泛型类，但 `JSlider` 从未更新。此时，没有类型参数的 `Dictionary` 是一个原始类型（raw type）。这就是兼容性发挥的地方。
+`Dictionary` 类将整数映射到标签。在 Java 5 之前，该类被实现为 `Object` 实例的映射。Java 5 将 `Dictionary` 变成了泛型类，但 `JSlider` 从未更新。此时，没有类型参数的 `Dictionary` 是一个原始类型（raw type）。这就是兼容性发挥作用的地方。
 
-当你填充字典时，可以使用泛型类型。
+当你填充字典时，可以使用泛型类型：
 
 ```java
 Dictionary<Integer, Component> labelTable = new Dictionary();
@@ -15761,7 +16211,7 @@ labelTable.put(0, new JLabel(new ImageIcon("one")));
 labelTable.put(20, new JLabel(new ImageIcon("ten")));...
 ```
 
-当你将 `Dictionary<Integer, Component>` 对象传递给 `setLabelTable` 时，编译器会发出警告。
+当你将 `Dictionary<Integer, Component>` 对象传递给 `setLabelTable` 时，编译器会发出警告：
 
 ```java
 slider.setLabelTable(labelTable); // 警告
@@ -15771,58 +16221,23 @@ slider.setLabelTable(labelTable); // 警告
 
 你应该思考一下，并询问 `JSlider` 实际上会对这个 `Dictionary` 对象做什么。在我们的案例中，很明显 `JSlider` 只读取信息，所以你可以忽略该警告。
 
-现在考虑相反的情况，即你获得一个原始类型的对象。在这种情况下，你获得一个原始类型的 `Dictionary` 对象，编译器会发出警告。
-
-```java
-Dictionary<Integer, Component> labelTable = ...;
-```
-
-毕竟，编译器没有办法保证 `setLabelTable` 会对 `Dictionary` 对象做什么。该方法可能会将所有键替换为字符串。这破坏了键类型为 `Integer` 的保证，未来的操作可能会导致类转换异常。
-
-你应该思考一下，并询问 `JSlider` 实际上会对这个 `Dictionary` 对象做什么。在我们的案例中，很明显 `JSlider` 只读取信息，所以你可以忽略该警告。
-
-现在考虑相反的情况，即你获得一个原始类型的对象。在这种情况下，你获得一个原始类型的 `Dictionary` 对象，编译器会发出警告。
-
-```java
-Dictionary<Integer, Component> labelTable = ...;
-```
-
-毕竟，编译器没有办法保证 `setLabelTable` 会对 `Dictionary` 对象做什么。该方法可能会将所有键替换为字符串。这破坏了键类型为 `Integer` 的保证，未来的操作可能会导致类转换异常。
-
-你应该思考一下，并询问 `JSlider` 实际上会对这个 `Dictionary` 对象做什么。在我们的案例中，很明显 `JSlider` 只读取信息，所以你可以忽略该警告。
-
-现在考虑相反的情况，即你获得一个原始类型的对象。在这种情况下，你获得一个原始类型的 `Dictionary` 对象，编译器会发出警告。
-
-```java
-Dictionary<Integer, Component> labelTable = ...;
-```
-
-毕竟，编译器没有办法保证 `setLabelTable` 会对 `Dictionary` 对象做什么。该方法可能会将所有键替换为字符串。这破坏了键类型为 `Integer` 的保证，未来的操作可能会导致类转换异常。
-
-你应该思考一下，并询问 `JSlider` 实际上会对这个 `Dictionary` 对象做什么。在我们的案例中，很明显 `JSlider` 只读取信息，所以你可以忽略该警告。
-
-（注：由于提供的文本中存在大量重复段落，上述译文已根据逻辑进行了合并处理，确保不重复输出且内容完整。）
-
-
-
-
 你始终可以将泛型类型转换为原始类型（raw type）。例如，`Pair<Employee>` 是原始类型 `Pair` 的子类型。这种转换对于与遗留代码交互是必要的。
 
 你能先将其转换为原始类型，然后导致类型错误吗？遗憾的是，你可以这样做。考虑下面这个示例：
 
-```
+```java
 var managerBuddies = new Pair<Manager>(ceo, cfo);
 Pair rawBuddies = managerBuddies; // OK
 rawBuddies.setFirst(new File("..")); // 仅编译时通过
 ```
 
-这听起来很糟糕。但请记住，你的处境并不比旧版本的 Java 糟糕糟糕。虚拟机的安全性不会受到威胁。当使用 `getFirst()` 获取外部对象并将其赋值给 `Manager` 变量时，会抛出 `ClassCastException`，就像在过去的老日子一样。你只是丢失了泛型编程通常提供的额外安全性。
+这听起来很糟糕。但请记住，你的处境并不比旧版本的 Java 糟糕。虚拟机的安全性不会受到威胁。当使用 `getFirst()` 获取外部对象并将其赋值给 `Manager` 变量时，会抛出 `ClassCastException`，就像在过去的老日子一样。你只是丢失了泛型编程通常提供的额外安全性。
 
-最后，泛型类可以扩展或实现其他的泛型类。在这方面，它们与普通类没有区别。例如，`ArrayList<T>` 类实现了 `List<T>` 接口。这意味着一个 `ArrayList<Manager>` 可以转换为 `List<Manager>`。然而，正如你所看到的，`ArrayList<Manager>` *并不是* `ArrayList<Employee>` 或 `List<Employee>`。图 8.2 显示了这些关系。
+最后，泛型类可以扩展或实现其他的泛型类。在这方面，它们与普通类没有区别。例如，`ArrayList<T>` 类实现了 `List<T>` 接口。这意味着一个 `ArrayList<Manager>` 可以转换为 `List<Manager>`。然而，正如你所看到的，`ArrayList<Manager>` 并不是 `ArrayList<Employee>` 或 `List<Employee>`。图 8.2 显示了这些关系。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1020_0.png)
 
-**图 8.2:** 泛型列表类型之间的子类型关系
+**图 8.2：** 泛型列表类型之间的子类型关系
 
 ## 8.7. 通配符类型
 
@@ -15830,9 +16245,9 @@ rawBuddies.setFirst(new File("..")); // 仅编译时通过
 
 ### 8.7.1. 通配符概念
 
-在通配符类型中，允许类型参数变化。例如，通配符类型
+在通配符类型中，允许类型参数变化。例如，通配符类型：
 
-```
+```java
 Pair<? extends Employee>
 ```
 
@@ -15843,12 +16258,8 @@ Pair<? extends Employee>
 ```java
 public static void printBuddies(Pair<Employee> p) {
     Employee first = p.getFirst();
-}
-```
-
-```java
-Employee second = p.getSecond();
-System.out.println(first.getName() + " " + second.getName());
+    Employee second = p.getSecond();
+    System.out.println(first.getName() + " " + second.getName());
 }
 ```
 
@@ -15862,7 +16273,7 @@ public static void printBuddies(Pair<? extends Employee> p)
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1023_0.png)
 
-**图 8.3:** 带有通配符的子类型关系
+**图 8.3：** 带有通配符的子类型关系
 
 我们能通过 `Pair<? extends Employee>` 引用来破坏 `Pair<Manager>` 吗？
 
@@ -15873,6 +16284,7 @@ wildcardBuddies.setFirst(lowlyEmployee); // 编译通过
 ```
 
 是不可能的破坏。对 `setFirst` 的调用是一个类型错误。
+
 为了了解为什么，让我们仔细查看 `Pair<? extends Employee>` 类型。它的方法看起来如下：
 
 ```java
@@ -15880,17 +16292,17 @@ wildcardBuddies.setFirst(lowlyEmployee); // 编译通过
 void setFirst(? extends Employee e)
 ```
 
-调用 `setFirst` 方法是不可能的！考虑调用 `wildcardBuddies.setFirst(lowlyEmployee)`。编译器知道 `setFirst` 的参数具有某个特定类型，该类型扩展了 `Employee`。这个特定类型是 `Employee` 吗？是 `Manager` 还是其他子类？编译器无法得知因此，编译器无法接受 `lowlyEmployee`。出于同样的原因，调用 `wildcardBuddies.setFirst(cio)`（其中 `cio` 是一个 `Manager` 实例）也会失败。编译器必须拒绝除 `null` 之外的所有 `setFirst` 参数。
+调用 `setFirst` 方法是不可能的！考虑调用 `wildcardBuddies.setFirst(lowlyEmployee)`。编译器知道 `setFirst` 的参数具有某个特定类型，该类型扩展了 `Employee`。这个特定类型是 `Employee` 吗？是 `Manager` 还是其他子类？编译器无法得知。因此，编译器无法接受 `lowlyEmployee`。出于同样的原因，调用 `wildcardBuddies.setFirst(cio)`（其中 `cio` 是一个 `Manager` 实例）也会失败。编译器必须拒绝除 `null` 之外的所有 `setFirst` 参数。
 
 `getFirst` 方法继续工作。`getFirst` 的返回值是某个特定类型的实例，该类型是 `Employee` 的子类型。编译器不知道具体类型是什么，但它可以保证赋值给 `Employee` 引用是安全的。
 
-这就是边界通配符（bounded wildcards）背的核心思想。我们现在有了区分安全的访问器方法和不安全的修改器方法。
+这就是边界通配符（bounded wildcards）的核心思想。我们现在有了区分安全的访问器方法和不安全的修改器方法。
 
 ### 8.7.2. 通配符的上界边界
 
 通配符边界类似于类型变量边界，但它们增加了一个功能——你可以指定上界边界，如下：
 
-```
+```java
 ? super Manager
 ```
 
@@ -15928,7 +16340,7 @@ public int compareTo(String other)
 public static <T extends Comparable<T>> Pair<T> r
 ```
 
-这比仅仅使用 `T extends Comparable` 更彻底，并且它对许多类都运行良好。例如，如果你计算 `String` 数组的最小值，那么 `T` 类型为 `String`，而 `String` 是 `Comparable<String>` 的子类型。但在处理 `LocalDate` 数组时我们遇到了问题。事实证明，`LocalDate` 实现了 `ChronoLocalDate`，而 `ChronoLocalDate` 扩展了 `Comparable<ChronoLocalDate>`。因此，`LocalDate` 实现了 `Comparable<ChronoLocalDate>` 但不是 `Comparable<LocalDate>`。
+这比仅仅使用 `T extends Comparable` 更彻底，并且它对许多类都运行良好。例如，如果你计算 `String` 数组的最小值，那么 `T` 类型为 `String`，而 `String` 是 `Comparable<String>` 的子类型。但在处理 `LocalDate` 数组时我们遇到了问题。事实证明，`LocalDate` 实现了 `ChronoLocalDate`，而 `ChronoLocalDate` 扩展了 `Comparable<ChronoLocalDate>`。因此，`LocalDate` 实现了 `Comparable<ChronoLocalDate>`，但不是 `Comparable<LocalDate>`。
 
 在这种情况下，上界提供了帮助：
 
@@ -15936,13 +16348,13 @@ public static <T extends Comparable<T>> Pair<T> r
 public static <T extends Comparable<? super T>> P
 ```
 
-现在 `compare` 方法的形式为
+现在 `compare` 方法的形式为：
 
 ```java
 int compareTo(? super T)
 ```
 
-可能被声明为接受类型 T 的对象，或者（例如当 `T` 是 `LocalDate` 时）其上类。无论如何，这是一个典型的示例。我们有一个经理数组，并将最低和最高放入一个 `Pair` 中。
+可能被声明为接受类型 `T` 的对象，或者（例如当 `T` 是 `LocalDate` 时）其上类。无论如何，这是一个典型的示例。我们有一个经理数组，并将最低和最高放入一个 `Pair` 中。
 
 ```java
 static void minmax(Manager[] a) {
@@ -15963,35 +16375,33 @@ static void minmax(Manager[] a) {
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1027_0.png)
 
-**图 8.4:** 带有上界边界的通配符
+**图 8.4：** 带有上界边界的通配符
 
-
-
-将一个类型为 T 的对象传递给 `compareTo` 方法是安全的。
+将一个类型为 `T` 的对象传递给 `compareTo` 方法是安全的。
 
 对于初学者来说，像 `<T extends Comparable<?>>` 这样的声明看起来很令人生畏。这很遗憾，因为这个声明的意图是通过消除对调用参数的不必要限制，来帮助应用程序程序员的。那些对泛型不感兴趣的应用程序程序员可能会很快学会忽略这些声明，并理所当然地认为库程序员会做正确的事。如果你是一个库程序员，你就需要习惯通配符（wildcards），否则你的用户会诅咒你，并在代码中进行随机的强制转换，直到代码编译通过为止。
 
-> **注意：** 上类型边界（supertype bounds）的另一个常见用途是函数接口的参数类型。例如，`Collection` 接口有一个方法
+> **注意：** 上类型边界（supertype bounds）的另一个常见用途是函数接口的参数类型。例如，`Collection` 接口有一个方法：
+>
+> ```java
+> default boolean removeIf(Predicate<? super T>
+> ```
+>
+> 该方法移除所有符合给定谓词的元素。例如，如果你讨厌哈希码为奇数的员工，你可以像这样删除他们：
+>
+> ```java
+> ArrayList<Employee> staff = . . ;
+> Predicate<Object> oddHashCode = obj ->
+>   staff.removeIf(oddHashCode);
+> ```
+>
+> 你希望能够传递 `Predicate<Object>`，而不仅仅是 `Predicate<Employee>`。上界通配符使得这可能。
 
-```
-default boolean removeIf(Predicate<? super T>
-```
-
-该方法移除所有符合给定谓词的元素。例如，如果你讨厌哈希码为奇数的员工，你可以像这样删除他们：
-
-```
-ArrayList<Employee> staff = . . ;
-Predicate<Object> oddHashCode = obj ->
-  staff.removeIf(oddHashCode);
-```
-
-你希望能够传递 `Predicate<Object>`，而不仅仅是 `Predicate<Employee>`。上界通配符使得这可能。
-
-## 8.7.3. 无边界通配符
+### 8.7.3. 无边界通配符
 
 你甚至可以使用没有任何边界的通配符——例如 `Pair<?>`。从乍看之下，它看起来和原始（raw）`Pair` 类型相同。实际上，这些类型是非常不同的。`Pair<?>` 类型具有如下方法：
 
-```
+```java
 ? getFirst()
 void setFirst(?)
 ```
@@ -16002,7 +16412,7 @@ void setFirst(?)
 
 你为什么要用这种弱的类型呢？它对于非常简单的操作有用。例如，下面的方法测试元组是否包含空引用。它永远不需要实际类型。
 
-```
+```java
 public static boolean hasNulls(Pair<?> p)
 {
     return p.getFirst() == null || p.getSecond() == null;
@@ -16011,23 +16421,23 @@ public static boolean hasNulls(Pair<?> p)
 
 你可以通过将 `hasNulls` 转换为泛型方法来避免使用通配符类型：
 
-```
+```java
 public static <T> boolean hasNulls(Pair<T> p)
 ```
 
 然而，通配符类型的版本看起来更易读。
 
-## 8.7.4. 通配符捕获
+### 8.7.4. 通配符捕获
 
 让我们写一个交换元组元素的方法：
 
-```
+```java
 public static void swap(Pair<?> p)
 ```
 
 通配符不是类型变量，所以我们不能编写使用 `?` 作为类型的代码。换句话说，以下代码是非法的：
 
-```
+```java
 ? t = p.getFirst(); // ERROR
 p.setFirst(p.getSecond());
 p.setSecond(t);
@@ -16035,7 +16445,7 @@ p.setSecond(t);
 
 这就是问题所在，因为我们在交换时需要临时持有第一个元素。幸运的是，这个问题有一个有趣的解决方案。我们可以写一个这样的辅助方法 `swapHelper`：
 
-```
+```java
 public static <T> void swapHelper(Pair<T> p)
 {
   T t = p.getFirst();
@@ -16046,17 +16456,19 @@ public static <T> void swapHelper(Pair<T> p)
 
 注意 `swapHelper` 是一个泛型方法，而 `swap` 不是——它有一个类型为 `Pair<?>` 的固定参数。
 
+
+
 现在我们可以从 `swap` 调用 `swapHelper`：
 
-```
+```java
 public static void swap(Pair<?> p) { swapHelper(p); }
 ```
 
-在这种情况下，`swapHelper` 方法的参数 `T` 捕获了通配符。虽然我们不知道通配符代表什么类型，但它是一个确定的类型，当 `T` 表示该类型时，`<T>swapHelper` 的定义就完全合理。
+在这种情况下，`swapHelper` 方法的参数 `T` 捕获了通配符。虽然我们不知道通配符代表什么类型，但它是一个确定的类型，当 `T` 表示该类型时，`<T> swapHelper` 的定义就完全合理。
 
 当然，在这种情况下，我们并没有被强制使用通配符。我们可以直接实现 `<T> void swap(Pair<T> p)` 作为泛型方法而不使用通配符。然而考虑这个例子，通配符在计算过程中自然出现：
 
-```
+```java
 public static void maxBonus(Manager[] a, Pair<?> result)
 {
     minBonus(a, result);
@@ -16066,7 +16478,7 @@ public static void maxBonus(Manager[] a, Pair<?> result)
 
 在这里，通配符捕获无法避免。通配符捕获在非常有限的情况下是法的。编译器必须能够保证通配符代表一个单一类型。例如，`ArrayList<Pair<T>>` 中的 `T` 永远无法捕获 `ArrayList<Pair<?>>` 中的通配符。`ArrayList` 可能会持有两个 `Pair<?>`，每个都有不同的类型。列表 8.3 程序收集了前面章节提到的各种方法，以便你看到它们。
 
-列表 8.3 pair3/PairTest.java
+### 列表 8.3 `pair3/PairTest.java`
 
 ```java
 package pair3;
@@ -16135,7 +16547,7 @@ class PairAlg {
 }
 ```
 
-## 8.8. 限制与局
+## 8.8. 限制与局限
 
 在后面的章节中，我将讨论在处理 Java 泛型时需要考虑的许多限制。大部分限制都是类型擦除（type erasure）的结果。
 
@@ -16149,19 +16561,19 @@ class PairAlg {
 
 虚拟机中的对象始终有一个特定的非泛型类型。因此，所有的类型查询只产生原始类型。例如：
 
-```
+```java
 if (a instanceof Pair<String>) // ERROR
 ```
 
-可以测试 a 是否为任何类型的 Pair。同样的测试也是如此：
+可以测试 `a` 是否为任何类型的 `Pair`。同样的测试也是如此：
 
-```
+```java
 if (a instanceof Pair<T>) // ERROR
 ```
 
 或者强制转换：
 
-```
+```java
 Pair<String> p = (Pair<String>) a; // warning-cast
 ```
 
@@ -16181,25 +16593,23 @@ if (stringPair.getClass() == employeePair.getClass())
 
 你不能实例化参数化类型的数组，例如：
 
-```
+```java
 var table = new Pair<String>[10]; // ERROR
 ```
 
-这有什么问题？擦除后，table 的类型是 `Pair[]`。你可以将其转换为 `Object[]`：
+这有什么问题？擦除后，`table` 的类型是 `Pair[]`。你可以将其转换为 `Object[]`：
 
-```
+```java
 Object[] objarray = table;
 ```
 
 数组会记住其组件类型，如果你尝试存储错误类型的元素，它会抛出 `ArrayStoreException`：
 
-
-
 ```java
 objarray[0] = "Hello"; // ERROR--component type
 ```
 
-但擦除使得这种机制对于泛型类型失效。赋值语句
+但擦除使得这种机制对于泛型类型失效。赋值语句：
 
 ```java
 objarray[0] = new Pair<Employee>();
@@ -16217,11 +16627,11 @@ objarray[0] = new Pair<Employee>();
 var table = (Pair<String>[]) new Pair<
 ```
 
-结果是不安全的。如果你在 `table[0]` 中存储一个 `Pair<Employee>`，然后对 `table[0].getFirst()` 调用 String 方法，就会得到一个 `ClassCastException`。
+结果是不安全的。如果你在 `table[0]` 中存储一个 `Pair<Employee>`，然后对 `table[0].getFirst()` 调用 `String` 方法，就会得到一个 `ClassCastException`。
 
 提示：如果你需要收集参数化类型对象，只需查看 `ArrayList`：`ArrayList<Pair<String>>` 是安全且有效的。
 
-## 8.8.4. 可变参数警告
+### 8.8.4. 可变参数警告
 
 在上一节中，你看到 Java 不支持泛型数组。在本节中，我将讨论一个相关问题：将泛型实例传递给具有可变参数的方法。
 
@@ -16253,7 +16663,7 @@ public static <E> void addAll(Collection<E> coll, E... elements)
 
 现在可以使用泛型类型调用此方法了。通过使用该注解，你承诺你的方法没有写入参数数组，并且没有将数组传递给可能执行此操作的其他人。请看下文的滥用示例。
 
-`@SafeVarargs` 注解只能用于构造函数以及静态、final 或私有的方法。任何其他方法都可以被重写，导致注解毫无意义。
+`@SafeVarargs` 注解只能用于构造函数以及静态、`final` 或私有的方法。任何其他方法都可以被重写，导致注解毫无意义。
 
 > **警告**：你可以使用 `@SafeVarargs` 注解来绕过创建泛型数组的限制，使用这种方法：
 
@@ -16263,13 +16673,13 @@ public static <E> void addAll(Collection<E> coll, E... elements)
 }
 ```
 
-现在你可以调用
+现在你可以调用：
 
 ```java
 Pair<String>[] table = array(pair1, pair2);
 ```
 
-这看起来很方便，但存在隐藏的危险。代码
+这看起来很方便，但存在隐藏的危险。代码：
 
 ```java
 Object[] objarray = table;
@@ -16278,7 +16688,7 @@ objarray[0] = new Pair<Employee>();
 
 将会运行而不抛出 `ArrayStoreException`，因为数组存储只检查擦除后的类型。当你处理 `table[0]` 时，会在其他地方得到异常。
 
-## 8.8.5. 泛型可变参数不展开原始类型数组
+### 8.8.5. 泛型可变参数不展开原始类型数组
 
 记得你可以将数组传递给可变参数。例如，考虑上一节中的 `add` 方法。当要添加的项恰好在一个数组中时，只需传递该数组。调用行为就像元素被“展开”了一样：
 
@@ -16306,21 +16716,21 @@ addAll(numbers, moreNumbers); // ERROR
 public static <E> List<E> of(E... elements)
 ```
 
-调用
+调用：
 
 ```java
 List.of(moreStrings) // ["Mary", "had", "a", "li"]
 ```
 
-产生一个包含 5 个元素的列表。但是
+产生一个包含 5 个元素的列表。但是：
 
 ```java
 List.of(moreNumbers)
 ```
 
-产生一个包含单个元素的 `List<int[]>`，即包含五个 int 值的数组。类型参数 `E` 无法匹配原始类型 `int`，因此 `moreNumbers` 元素没有展开。
+产生一个包含单个元素的 `List<int[]>`，即包含五个 `int` 值的数组。类型参数 `E` 无法匹配原始类型 `int`，因此 `moreNumbers` 元素没有展开。
 
-## 8.8.6. 你不能实例化变量
+### 8.8.6. 你不能实例化变量
 
 遗憾的是，你不能在表达式中使用类型变量。例如，以下代码是非合法的：
 
@@ -16338,7 +16748,7 @@ public static <T> T createInstance(Class<T> cl) throws Exception {
 }
 ```
 
-## 8.8.7. 你不能构造泛型数组
+### 8.8.7. 你不能构造泛型数组
 
 正如你不能实例化单个泛型一样，你不能实例化数组。原因是不同的——毕竟数组填充了 `null` 值，这看起来构造是安全的。但数组还携带着一个类型，该类型在虚拟机中用于监控数组存储。该类型被擦除了。
 
@@ -16360,7 +16770,7 @@ public class ArrayList<E> {
 }
 ```
 
-这种技术对于我们的 `minmax` 方法不起，因为我们返回的是一个 `T[]` 数组，如果我们欺骗它的类型，会导致运行时错误。假设我们实现：
+这种技术对于我们的 `minmax` 方法不起作用，因为我们返回的是一个 `T[]` 数组，如果我们欺骗它的类型，会导致运行时错误。假设我们实现：
 
 ```java
 public static <T extends Comparable<T>> T[] minmax(T[] array) {
@@ -16369,7 +16779,7 @@ public static <T extends Comparable<T>> T[] minmax(T[] array) {
 }
 ```
 
-调用
+调用：
 
 ```java
 String[] names = ArrayAlg.minmax("Tom", "Dick");
@@ -16386,8 +16796,6 @@ String[] names = ArrayAlg.minmax(String[]::new);
 构造表达式 `String[]::new` 表示一个给定所需长度并构造该长度 `String` 数组的函数。
 
 该方法使用该参数产生正确类型的数组：
-
-
 
 ```java
 public static <T extends Comparable> T[] minmax(
@@ -16407,9 +16815,11 @@ public static <T extends Comparable> T[] minmax(
 }
 ```
 
+
+
 `ArrayList` 类的 `toArray` 方法就没有那么幸运了。它需要产生 `T[]` 数组，但它没有组件类型。因此，有两种变体：
 
-```
+```java
 Object[] toArray()
 T[] toArray(T[]) result
 ```
@@ -16419,6 +16829,7 @@ T[] toArray(T[]) result
 ## 8.8.8. 类型变量在泛型类的静态环境中无效
 
 你不能在静态字段或方法中引用类型变量。
+
 例如，以下这个巧妙的想法是不可行的：
 
 ```java
@@ -16479,7 +16890,7 @@ static <T extends Throwable> void throwAs(Throwable t)
 
 假设此方法包含在一个接口 `Task` 中。当你有一个受检查异常 `e` 并调用
 
-```
+```java
 Task.<RuntimeException>throwAs(e);
 ```
 
@@ -16626,8 +17037,7 @@ public static Object sum(Pair<? extends JSONPrimitive<?>>) {
 
 这个 `switch` 不是完备的。毕竟，可以这样调用 `sum`：
 
-
-sum(Pair.of(new JSONNumber(42), new JSONString("
+`sum(Pair.of(new JSONNumber(42), new JSONString("`
 
 你可以通过添加 JSON 原始类型的其他六种组合并在每种情况下抛出异常，来使 `switch` 语句变得完备。但那是一种运行时检查。如果在编译时拒绝混合配对更好。
 
@@ -16648,7 +17058,7 @@ public static <T extends JSONPrimitive<U>, U> U sum(Pair<?, ?> pair)
 
 现在，调用
 
-sum(Pair.of(new JSONNumber(42), new JSONString(" 将不再通过编译，因为 T 和 U 没有匹配的类型。
+`sum(Pair.of(new JSONNumber(42), new JSONString("` 将不再通过编译，因为 `T` 和 `U` 没有匹配的类型。
 
 遗憾的是，`default` 子句是使 `switch` 变得完备所必需。理论上，有足够的信息来确定配对组件必须是相同类型的实例，但 Java 类型系统无法证明这一点。
 
@@ -16669,7 +17079,7 @@ public static <T extends JSONPrimitive<U>, U> U sum(Pair<?, ?> pair)
 
 Java 编译器不知道如何证明从 `Pair<?>` 到 `Pair<JSONNumber>` 的转换在组件类型为 `JSONNumber` 时是安全的。
 
-## 8.9 反射与泛型
+## 8.9. 反射与泛型
 
 反射允许你在运行时分析任意对象。如果对象是泛型类的实例，你无法获得关于泛型类型参数的信息，因为它们已经被擦除。在接下来的章节中，你将学习可以使用反射发现关于泛型类的什么。
 
@@ -16703,12 +17113,16 @@ java.lang.Class<T>
 ```
 
 - `T cast(Object obj)` 如果 `obj` 为 `null` 或可以转换为类型 `T`，则返回 `obj`，否则抛出 `ClassCastException`。
+
 - `T[] getEnumConstants()` 5.0 如果 `T` 是枚举类型，返回所有值的数组，否则返回 `null`。
+
 - `Class<? super T> getSuperclass()` 返回此类的父类，如果 `T` 不是类或 `Object` 类，则返回 `null`。
+
 - `Constructor<T> getConstructor(Class<?>... parameterTypes)` 1.1
+
 - `Constructor<T> getDeclaredConstructor(Class<?>... parameterTypes)` 1.1 获取公共构造函数，或具有给定参数类型的构造函数。
 
-### 8.9.2. 使用 Class<T> 参数进行类型匹配
+### 8.9.2. 使用 `Class<T>` 参数进行类型匹配
 
 在泛型方法中匹配 `Class<T>` 参数的类型变量有时是有用的。这里有一个经典的示例：
 
@@ -16731,7 +17145,7 @@ makePair(String.class)
 
 Java 泛型的显著特征之一是虚拟机中泛型类型的擦除。也许令人惊讶，被擦除的类保留了其泛型起源的微弱记忆。例如，原始 `Pair` 类知道它源自泛型类 `Pair<T>`，即使一个 `Pair` 对象无法判断它是被构造为 `Pair<String>` 还是 `Pair<Employee>`。
 
-同样地，考虑一个方法
+同样地，考虑一个方法：
 
 ```java
 public static Comparable min(Comparable[] a)
@@ -16751,23 +17165,17 @@ public static <T extends Comparable<? super T>>
 - 通配符参数有一个上类型边界；以及
 - 泛型方法有一个泛型数组参数。
 
-换句话之，你可以重构关于泛型类和方法的所有信息。然而，你不知道特定对象调用是如何解析类型参数的。要表示类型声明，请使用 `java.lang.reflect` 包。`Type` 有以下子类型：
 
-- `Class class`，描述具体类型
-- `TypeVariable interface`，描述类型变量
-- `WildcardType interface`，描述通配符
-- `ParameterizedType interface`，描述类或接口类型
-- `GenericArray interface`，描述数组
+
+换句话说，你可以重构关于泛型类和方法的所有信息。然而，你不知道特定对象调用是如何解析类型参数的。要表示类型声明，请使用`java.lang.reflect`包。`Type`有以下子类型：
+
+- `Class`类，描述具体类型
+- `TypeVariable`接口，描述类型变量
+- `WildcardType`接口，描述通配符
+- `ParameterizedType`接口，描述类或接口类型
+- `GenericArray`接口，描述数组
 
 **图 8.5 显示了继承层次结构。** 注意最后四个子类型是接口——虚拟机会实例化实现这些接口的合适类。
-
-
-
-` 块中。作为高级文档工程师，我已根据你的“**代码块不需要翻译**”的原则，对文本中的描述性部分进行了对齐与翻译。
-
-以下是完整的翻译后的文档内容：
-
-[content]
 
 ```java
 {
@@ -16819,19 +17227,19 @@ else if (type instanceof GenericArray t)
 }
 ```
 
-## 8.9.4. 类型字面量 (Type Literals)
+## 8.9.4. 类型字面量（Type Literals）
 
-有时，你希望通过值的类型来驱动程序行为。例如，在持久化机制中，你可能希望用户指定一种保存特定类对象的方法。这通常通过将 `Class` 对象与操作关联来实现。
+有时，你希望通过值的类型来驱动程序行为。例如，在持久化机制中，你可能希望用户指定一种保存特定类对象的方法。这通常通过将`Class`对象与操作关联来实现。
 
-然而，对于泛型类，类型擦除（erasure）带来了一个问题。当 `ArrayList<Integer>` 和 `ArrayList<String>` 都被擦除为相同的原始 `ArrayList` 类型时，你如何为它们提供不同的操作呢？
+然而，对于泛型类，类型擦除（erasure）带来了一个问题。当`ArrayList<Integer>`和`ArrayList<String>`都被擦除为相同的原始`ArrayList`类型时，你如何为它们提供不同的操作呢？
 
-有一种技巧可以在某些情况下提供缓解。你可以捕获在上一节中遇到的 `Type` 接口的实例。构建如下的匿名子类：
+有一种技巧可以在某些情况下提供缓解。你可以捕获在上一节中遇到的`Type`接口的实例。构建如下的匿名子类：
 
 ```java
 var type = new TypeLiteral<ArrayList<Integer>>() {};
 ```
 
-`TypeLiteral` 构造函数捕获了泛型超类型：
+`TypeLiteral`构造函数捕获了泛型超类型：
 
 ```java
 class TypeLiteral<T>
@@ -16854,11 +17262,11 @@ else
 }
 ```
 
-如果我们在运行时有一个可用的泛型类型，我们就可以与 `TypeLiteral` 进行匹配。我们无法从对象获取泛型类型——因为它被擦除了。但正如你在上一节中看到的，字段和方法参数的泛型类型在虚拟机中是保留的。
+如果我们在运行时有一个可用的泛型类型，就可以与`TypeLiteral`进行匹配。我们无法从对象获取泛型类型——因为它被擦除了。但正如你在上一节中看到的，字段和方法参数的泛型类型在虚拟机中是保留的。
 
 诸如 CDI 和 Guice 等注入框架使用类型字面量来控制泛型类型的注入。书中配套代码中的示例程序展示了一个更简单的例子。给定一个对象，我们列出它的字段（其泛型类型可用），并查找相关的格式化操作。
 
-我们通过空格分隔值来格式化 `ArrayList<Integer>`，通过将字符接到字符串来格式化 `ArrayList<Character>`。任何其他 `ArrayList` 都通过 `ArrayList.toString` 进行格式化。
+我们通过空格分隔值来格式化`ArrayList<Integer>`，通过将字符接到字符串来格式化`ArrayList<Character>`。任何其他`ArrayList`都通过`ArrayList.toString`进行格式化。
 
 # 列表 8.5 genericReflection/TypeLiterals.java
 
@@ -16976,6 +17384,8 @@ public String formatFields(Object obj)
 }
 ```
 
+
+
 ```java
     }
 }
@@ -17015,6 +17425,7 @@ class TypeLiteral<T>
         return otherObject instanceof TypeLiteral otherLiteral
         && type.equals(otherLiteral.type);
     }
+
     public int hashCode()
     {
         return type.hashCode();
@@ -17027,6 +17438,7 @@ class TypeLiteral<T>
  */
 class Formatter {
     private Map<TypeLiteral<?>, Function<?, String>> rules = new HashMap<>();
+
     /**
      * 向此格式化器添加格式化规则
      * @param type 规则适用的类型
@@ -17043,7 +17455,7 @@ class Formatter {
      * @return 包含所有字段名的字符串
      */
     public String formatFields(Object obj)
-        throws IllegalArgumentException 
+        throws IllegalArgumentException
     {
         var result = new StringBuilder();
         for (Field f : obj.getClass().getDeclaredFields())
@@ -17071,9 +17483,9 @@ class Formatter {
 
     public static void main(String[] args) {
         Formatter formatter = new Formatter();
-        formatter.forType(new TypeLiteral<ArrayList<Integer>>() {}, 
+        formatter.forType(new TypeLiteral<ArrayList<Integer>>() {},
             list -> String.join(" ", (ArrayList<Integer>) list));
-        formatter.forType(new TypeLiteral<ArrayList<Character>>() {}, 
+        formatter.forType(new TypeLiteral<ArrayList<Character>>() {},
             list -> String.join("", (ArrayList<Character>) list));
 
         class Sample {
@@ -17087,8 +17499,6 @@ class Formatter {
     }
 }
 ```
-
-
 
 ```java
 java.lang.reflect.GenericArrayType 5.0
@@ -17108,7 +17518,7 @@ java.lang.reflect.GenericArrayType 5.0
 
 ## 9.1. Java 集合框架
 
-Java 的初始版本仅为最常用的数据结构提供了一小部分类：Vector、Stack、Hashtable、BitSet 以及 `Enumeration` 接口（该接口提供了一种访问任意容器中元素的抽象机制）。这无疑是一个明智的决定——开发一个全面的集合类库需要时间和精力的。
+Java 的初始版本仅为最常用的数据结构提供了一小部分类：`Vector`、`Stack`、`Hashtable`、`BitSet` 以及 `Enumeration` 接口（该接口提供了一种访问任意容器中元素的抽象机制）。这无疑是一个明智的决定——开发一个全面的集合类库需要时间和精力的。
 
 随着 Java 1.2 的出现，设计者们认为是时候推出一个完整的数据结构框架了。他们面临着许多相互冲突的设计挑战。他们希望库既小巧又易于学习。他们不想要 C++ 标准模板库（或 STL）那样的复杂性，但又想要获得 STL 所开创的“泛型算法”的优势。他们还希望旧类能够融入到新框架中。正如所有集合类库的设计者那样，他们必须做出艰难的选择，并在这个过程中产生了一系列独特的设计决议。在本节中，我们将探索 Java 集合框架的基本设计，演示如何使用它，并解释一些更具争议的功能背后的原理。
 
@@ -17133,7 +17543,7 @@ public interface Queue<E> // 简化的形式
 
 该接口没有告诉你任何关于队列如何实现的信息。在队列的两种常见实现中，一种使用“循环数组”，另一种使用链表（参见图 9.2）。
 
-**图 9.2:** 队列的实现
+图 9.2：队列的实现
 
 每种实现都可以由实现 `Queue` 接口的类来表示。在 Java API 中，这些类被称为 `ArrayDeque` 和 `LinkedList`。
 
@@ -17188,11 +17598,11 @@ public interface Collection<E>
 
 除了这两个方法外还有几个方法；我们稍后会讨论。
 
-`add` 方法向集合添加元素。如果添加元素实际上更改了集合，则 `add` 方法返回 true；如果集合未改变，则返回 false。例如，如果你尝试向集合添加一个对象而该对象已经存在，则 `add` 请求将无效，因为集合拒绝重复项。
+`add` 方法向集合添加元素。如果添加元素实际上更改了集合，则 `add` 方法返回 `true`；如果集合未改变，则返回 `false`。例如，如果你尝试向集合添加一个对象而该对象已经存在，则 `add` 请求将无效，因为集合拒绝重复项。
 
 `iterator` 方法返回一个实现 `Iterator` 接口的对象。通过该对象，你可以逐个访问集合中的元素。
 
-### 9.1.3. 迭代器 (Iterators)
+### 9.1.3. 迭代器（Iterators）
 
 `Iterator` 接口有四个方法：
 
@@ -17205,7 +17615,7 @@ public interface Iterator<E> {
 }
 ```
 
-通过反复调用 `next` 方法，你可以逐个访问集合中的元素。然而，如果你到达集合的末尾，`next` 方法会抛出 `NoSuchElementException`。因此，你需要在调用 `next` 之前调用 `hasNext` 方法。如果迭代器尚未到达末尾，且至少还有一个元素待访问，则该方法返回 true。如果你想检查集合中的所有元素，请求一个迭代器，只要 `hasNext` 返回 true，就继续调用 `next` 方法。例如：
+通过反复调用 `next` 方法，你可以逐个访问集合中的元素。然而，如果你到达集合的末尾，`next` 方法会抛出 `NoSuchElementException`。因此，你需要在调用 `next` 之前调用 `hasNext` 方法。如果迭代器尚未到达末尾，且至少还有一个元素待访问，则该方法返回 `true`。如果你想检查集合中的所有元素，请求一个迭代器，只要 `hasNext` 返回 `true`，就继续调用 `next` 方法。例如：
 
 ```java
 Collection<String> coll = ...;
@@ -17217,7 +17627,7 @@ while (iter.hasNext())
 }
 ```
 
-你可以用更简洁的“for each”循环来写写这样的循环：
+你可以用更简洁的“for each”循环来写这样的循环：
 
 ```java
 for (String element : coll)
@@ -17227,10 +17637,6 @@ for (String element : coll)
 ```
 
 编译器简单地将“for each”循环翻译成带有迭代器的循环。你为什么要选择一种实现而不是另一种呢？接口并没有说明实现的效率。循环数组在内存效率上更高，因为它具有有限的容量，并且在填满时需要重新分配。事实上，测量结果显示 `ArrayDeque` 的性能通常优于 `LinkedList`。
-
-
-
-
 
 "for each" 循环适用于任何实现了 `Iterable` 接口的对象，该接口包含一个抽象方法：
 
@@ -17246,7 +17652,7 @@ public interface Iterable<E>
 
 与其编写循环，不如你可以使用带有消费元素的 Lambda 表达式调用 `Collection.forEach` 或 `Iterator.forEachRemaining` 方法。该 Lambda 表达式会在集合中的所有元素，或迭代器可以访问的剩余元素上调用。
 
-```
+```java
 coll.forEach(element -> do something with element)
 iter.forEachRemaining(element -> do something with
 ```
@@ -17263,30 +17669,32 @@ Java 集合库中的迭代器与其他库中的迭代器之间存在着重要的
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1100_0.png)
 
-图 9.3: 推进迭代器
+图 9.3：推进迭代器
 
 > **注意：** 这里是另一个有用的类比。你可以认为 `Iterator.next` 等同于 `InputStream.read`。从流中读取字节会自动“消耗”该字节。下一次调用 `read` 会消耗并返回输入中的下一个字节。同样地，反复调用 `next` 允许你读取集合中的所有元素。
 
-`Iterator` 接口的 `remove` 方法会删除由上一次调用 `next()` 返回的元素。在许多情况下，这是合理的——你必须看到该元素，才能判断它是否是应该被删除的那一个。但如果你想删除特定位置的元素，你仍然需要跳过该元素。例如，这里是如何移除字符串集合中的第一个元素的：
 
-```
+
+`Iterator`接口的`remove`方法会删除由上一次调用`next()`返回的元素。在许多情况下，这是合理的——你必须看到该元素，才能判断它是否是应该被删除的那一个。但如果你想删除特定位置的元素，你仍然需要跳过该元素。例如，这里是如何移除字符串集合中的第一个元素的：
+
+```java
 Iterator<String> iter = coll.iterator();
 iter.next(); // 跳过第一个元素
 iter.remove(); // 现在删除它
 ```
 
-更重要的是，`next` 和 `remove` 方法的调用之间存在依赖关系。如果在没有先调用 `next` 的情况下调用 `remove` 是非法的。如果你尝试这样做，将抛出 `IllegalStateException`。
+更重要的是，`next`和`remove`方法的调用之间存在依赖关系。如果在没有先调用`next`的情况下调用`remove`是非法的。如果你尝试这样做，将抛出`IllegalStateException`。
 
 如果你想删除两个相邻元素，不能简单地调用：
 
-```
+```java
 iter.remove();
-iter.remove(); // 
+iter.remove(); //
 ```
 
-相反，你必须先调用 `next` 来跳过要删除的元素。
+相反，你必须先调用`next`来跳过要删除的元素。
 
-```
+```java
 iter.remove();
 iter.next();
 iter.remove(); // OK
@@ -17294,7 +17702,7 @@ iter.remove(); // OK
 
 ## 9.1.4. 泛型工具方法
 
-`Collection` 和 `Iterator` 接口是泛型的，这意味着你可以编写操作任何类型集合的工具方法。例如，这里有一个测试任意集合是否包含给定元素的泛型方法：
+`Collection`和`Iterator`接口是泛型的，这意味着你可以编写操作任何类型集合的工具方法。例如，这里有一个测试任意集合是否包含给定元素的泛型方法：
 
 ```java
 public static <E> boolean contains(Collection<E> c, E obj) {
@@ -17305,7 +17713,7 @@ public static <E> boolean contains(Collection<E> c, E obj) {
 }
 ```
 
-Java 集合框架的设计者认为，这些方法中的某些非常有用，以至于框架应该提供它们。`contains` 方法就是其中之一。事实上，`Collection` 接口声明了相当多的所有类都必须提供的方法：
+Java集合框架的设计者认为，这些方法中的某些非常有用，以至于框架应该提供它们。`contains`方法就是其中之一。事实上，`Collection`接口声明了相当多的所有类都必须提供的方法：
 
 ```java
 int size();
@@ -17324,16 +17732,16 @@ T[] toArray(T[] a);
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1103_0.png)
 
-**注意：** `Set` 接口声明了继承自 `Object` 的 `equals` 和 `hashCode` 方法。技术上没有必要包含这些声明。这只是为添加集合特定的 API 文档提供了一个良好的位置。这些方法中的许多是自言自懂的；你可以在本节末尾找到完整的文档。
+**注意：**`Set`接口声明了继承自`Object`的`equals`和`hashCode`方法。技术上没有必要包含这些声明。这只是为添加集合特定的 API 文档提供了一个良好的位置。这些方法中的许多是自言自懂的；你可以在本节末尾找到完整的文档。
 
-> **注意：** Java 集合框架是在泛型类型引入之前设计的。为了向后兼容，`contains` 和 `remove` 方法的参数是 `Object` 而不是 `E`。`containsAll`、`removeAll` 和 `retainAll` 方法的参数是 `Collection<?>` 而不是 `Collection extends E`。这意味着类型错误可能在编译时无法检测。作为一个示例，考虑这段代码在 `Path` 对象集合中意外删除了字符串：
+> **注意：** Java集合框架是在泛型类型引入之前设计的。为了向后兼容，`contains`和`remove`方法的参数是`Object`而不是`E`。`containsAll`、`removeAll`和`retainAll`方法的参数是`Collection<?>`而不是`Collection extends E`。这意味着类型错误可能在编译时无法检测。作为一个示例，考虑这段代码在`Path`对象集合中意外删除了字符串：
 
 ```java
 Collection<Path> paths = ...;
 paths.remove("/tmp/"); // 可以编译，但会有运行时错误
 ```
 
-当然，这很麻烦。为了方便实现者，框架提供了一个 `AbstractCollection` 类，它将基础方法 `size` 和 `iterator` 设为抽象，但通过它们实现了常规方法。例如：
+当然，这很麻烦。为了方便实现者，框架提供了一个`AbstractCollection`类，它将基础方法`size`和`iterator`设为抽象，但通过它们实现了常规方法。例如：
 
 ```java
 public abstract class AbstractCollection<E>
@@ -17366,9 +17774,9 @@ public abstract class AbstractCollection<E>
 }
 ```
 
-具体的集合类现在可以扩展 `AbstractCollection` 类。具体的集合类负责提供 `iterator` 和 `size` 方法。可变集合还需要 `add` 方法。其他方法已经由 `AbstractCollection` 超类处理过了。然而，如果子类有更高效的实现 `contains` 的方法，可以自由这样做。
+具体的集合类现在可以扩展`AbstractCollection`类。具体的集合类负责提供`iterator`和`size`方法。可变集合还需要`add`方法。其他方法已经由`AbstractCollection`超类处理过了。然而，如果子类有更高效的实现`contains`的方法，可以自由这样做。
 
-这种方法有点过时了。如果这些方法是 `Collection` 接口的默认方法（default methods）将会更好，但在设计 Java 集合框架时还不存在默认方法。然而，已经添加了几个默认方法。其中三个与流有关（在卷 II 中讨论）。请参阅第 9.6.6 节的 `toArray` 方法。此外，还有一个非常有用的方法
+这种方法有点过时了。如果这些方法是`Collection`接口的默认方法（default methods）将会更好，但在设计Java集合框架时还不存在默认方法。然而，已经添加了几个默认方法。其中三个与流有关（在卷II中讨论）。请参阅第9.6.6节的`toArray`方法。此外，还有一个非常有用的方法：
 
 ```java
 default boolean removeItem(Predicate<? super E> filter)
@@ -17376,96 +17784,119 @@ default boolean removeItem(Predicate<? super E> filter)
 
 用于删除满足条件的元素。
 
-
-
 ```java
 java.util.Collection<E>
 ```
-1.2
 
-- Iterator<E> iterator()
-返回一个用于访问集合中元素的迭代器。
+### 1.2
 
-- * int size()
-返回集合中当前存储的元素数量。
+- `Iterator<E> iterator()`
 
-- * boolean isEmpty()
-如果此集合不包含任何元素，则返回 true。
+  返回一个用于访问集合中元素的迭代器。
 
-- * boolean contains(Object obj)
-如果此集合包含一个与 obj 相等的对象，则返回 true。
+- `int size()`
 
-- * boolean containsAll(Collection<?> other)
-如果此集合包含另一个集合中的所有元素，则返回 true。
+  返回集合中当前存储的元素数量。
 
-- * boolean add(E element)
-尝试向集合中添加一个元素。如果因为此调用导致集合发生变化，则返回 true。
+- `boolean isEmpty()`
 
-- * boolean addAll(Collection<? extends E> other)
-将另一个集合中的元素添加到此集合中。如果因为此调用导致集合发生变化，则返回 true。
+  如果此集合不包含任何元素，则返回 true。
 
-- * boolean remove(Object obj)
-尝试从此集合中移除与 obj 相等的对象。如果删除了一个匹配的对象，则返回 true。
+- `boolean contains(Object obj)`
 
-- * boolean removeAll(Collection<?> other)
-从此集合中移除另一个集合中的所有元素。如果因为此调用导致集合发生变化，则返回 true。
+  如果此集合包含一个与`obj`相等的对象，则返回 true。
 
-- * default boolean removeItem(Predicate<? super E> filter)
-移除所有 filter 返回 true 的元素。如果因为此调用导致集合发生变化，则返回 true。
+- `boolean containsAll(Collection<?> other)`
 
-- * void clear()
-移除此集合中的所有元素。
+  如果此集合包含另一个集合中的所有元素，则返回 true。
 
-- * boolean retainAll(Collection<?> other)
-移除此集合中不等于另一个集合中任一元素的元素。如果因为此调用导致集合发生变化，则返回 true。
+- `boolean add(E element)`
 
-- Object[] toArray()
-返回一个集合中对象的数组。
+  尝试向集合中添加一个元素。如果因为此调用导致集合发生变化，则返回 true。
 
-- <T> T[] toArray(IntFunction<T[]> generator) 返回集合中对象的数组。该数组通过 generator 构建，generator 通常是构造函数表达式 `T[]::new`。
+- `boolean addAll(Collection<? extends E> other)`
+
+  将另一个集合中的元素添加到此集合中。如果因为此调用导致集合发生变化，则返回 true。
+
+- `boolean remove(Object obj)`
+
+  尝试从此集合中移除与`obj`相等的对象。如果删除了一个匹配的对象，则返回 true。
+
+- `boolean removeAll(Collection<?> other)`
+
+  从此集合中移除另一个集合中的所有元素。如果因为此调用导致集合发生变化，则返回 true。
+
+- `default boolean removeItem(Predicate<? super E> filter)`
+
+  移除所有`filter`返回 true 的元素。如果因为此调用导致集合发生变化，则返回 true。
+
+- `void clear()`
+
+  移除此集合中的所有元素。
+
+- `boolean retainAll(Collection<?> other)`
+
+  移除此集合中不等于另一个集合中任一元素的元素。如果因为此调用导致集合发生变化，则返回 true。
+
+- `Object[] toArray()`
+
+  返回一个集合中对象的数组。
+
+- `<T> T[] toArray(IntFunction<T[]> generator)`
+
+  返回集合中对象的数组。该数组通过`generator`构建，`generator`通常是构造函数表达式`T[]::new`。
 
 ```java
 java.util.Iterator<E>
 ```
-1.2
 
-- boolean hasNext() 如果还有其他元素可以访问，则返回 true。
+### 1.2
 
-- E next() 返回下一个要访问的对象。如果已到达集合末尾，则抛出 NoSuchElementException。
+- `boolean hasNext()`
 
-- void remove() 移除上一次访问的元素。此方法必须紧随元素访问之后调用。如果自上次元素访问以来集合已被修改过，则此方法将抛出 IllegalStateException。迭代器不要求支持此操作。默认抛出 UnsupportedOperationException。
+  如果还有其他元素可以访问，则返回 true。
 
-- default void forEach(Consumer<? super E> action) 访问元素并将其传递给定的 action，直到没有剩余元素或 action 抛出异常。
+- `E next()`
+
+  返回下一个要访问的对象。如果已到达集合末尾，则抛出`NoSuchElementException`。
+
+- `void remove()`
+
+  移除上一次访问的元素。此方法必须紧随元素访问之后调用。如果自上次元素访问以来集合已被修改过，则此方法将抛出`IllegalStateException`。迭代器不要求支持此操作。默认抛出`UnsupportedOperationException`。
+
+- `default void forEach(Consumer<? super E> action)`
+
+  访问元素并将其传递给定的`action`，直到没有剩余元素或`action`抛出异常。
 
 ## 9.2. 集合框架中的接口
 
-Java 集合框架为不同类型的集合定义了许多接口。这些如图 9.4 所示，但并发编程的接口将在第 10 章介绍。
+Java集合框架为不同类型的集合定义了许多接口。这些如图9.4所示，但并发编程的接口将在第10章介绍。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1110_0.png)
 
-图 9.4：Java 集合框架的接口
+图9.4：Java集合框架的接口
 
-集合有两个基本的接口：Collection 和 Map。正如你所看到的，你通过一个方法向集合中插入元素：
+集合有两个基本的接口：`Collection`和`Map`。正如你所看到的，你通过一个方法向集合中插入元素：
 
 ```java
 boolean add(E element)
 ```
 
-然而，map 存储的是键/值对，你使用 put 方法来插入它们：
+然而，map存储的是键/值对，你使用`put`方法来插入它们：
 
 ```java
 V put(K key, V value)
 ```
 
-要从集合中读取元素，可以使用迭代器访问它们。然而，你可以使用 get 方法从 map 中读取值：
+要从集合中读取元素，可以使用迭代器访问它们。然而，你可以使用`get`方法从map中读取值：
 
 ```java
 V get(Object key)
 ```
 
-List 是一个有序集合。元素被添加到容器的特定位置。元素可以通过两种方式访问：通过迭代器或通过整数索引。后者被称为随机访问（random access），因为元素可以按任何顺序被访问。相比之下，使用迭代器时，必须顺序访问它们。
+`List`是一个有序集合。元素被添加到容器的特定位置。元素可以通过两种方式访问：通过迭代器或通过整数索引。后者被称为随机访问（random access），因为元素可以按任何顺序被访问。相比之下，使用迭代器时，必须顺序访问它们。
 
-List 接口定义了几个用于随机访问的方法：
+`List`接口定义了几个用于随机访问的方法：
 
 ```java
 void add(int index, E element)
@@ -17474,14 +17905,14 @@ E get(int index)
 E set(int index, E element)
 ```
 
-> **注意：** 对于 List<Integer>，有两个 remove 方法：
+> **注意：** 对于`List<Integer>`，有两个`remove`方法：
 
 ```java
 boolean remove(int index) // 移除元素
 boolean remove(Integer o) // 移除元素
 ```
 
-当使用类型为 int 的参数调用 remove 时，会选择第一个方法。此时不考虑装箱（boxing），且没有警告。这可能不是你想要的：
+当使用类型为`int`的参数调用`remove`时，会选择第一个方法。此时不考虑装箱（boxing），且没有警告。这可能不是你想要的：
 
 ```java
 List<Integer> ids = ...;
@@ -17489,13 +17920,13 @@ int id = ...;
 if (id == 0) ids.remove(id); // 移除元素
 ```
 
-**注意：** List 接口的 API 文档定义了列表 equals 方法的行为。要使一个列表等于另一个对象，该对象也必须是某种列表。两个列表必须具有相同的大小。在遍历每个列表时，对应的元素必须相相等。
+**注意：**`List`接口的 API 文档定义了列表`equals`方法的行为。要使一个列表等于另一个对象，该对象也必须是某种列表。两个列表必须具有相同的大小。在遍历每个列表时，对应的元素必须相相等。
 
-坦率地说，Java 集合框架中的 List 接口存在一个问题。有序集合有两种类型，具有截然不同的性能权衡。由数组支持的有序集合具有快速随机访问，使用带整数索引的 List 方法是有意义的。相比之下，链表虽然也是有序的，但随机访问缓慢，最好通过迭代器进行顺序遍历。如果能提供两个接口会更好。
+坦率地说，Java集合框架中的`List`接口存在一个问题。有序集合有两种类型，具有截然不同的性能权衡。由数组支持的有序集合具有快速随机访问，使用带整数索引的`List`方法是有意义的。相比之下，链表虽然也是有序的，但随机访问缓慢，最好通过迭代器进行顺序遍历。如果能提供两个接口会更好。
 
-> **注意：** 为了避免执行随机访问，Java 1.4 引入了一个标记接口 RandomAccess。你可以用它来测试集合是否支持随机访问：
+> **注意：** 为了避免执行随机访问，Java 1.4引入了一个标记接口`RandomAccess`。你可以用它来测试集合是否支持随机访问：
 
-```
+```java
 if (c instanceof RandomAccess)
     随机遍历
 } else
@@ -17503,17 +17934,17 @@ if (c instanceof RandomAccess)
 }
 ```
 
-Set 接口与 Collection 具有相同的实例方法，但方法的行为定义得更紧密。set 的 add 方法应该拒绝重复项。set 的 equals 方法应该定义为：两个 set 具有相同的元素，但不一定具有相同的顺序。hashCode 方法应该定义为：具有相同元素的 set 生成相同的哈希码。
+`Set`接口与`Collection`具有相同的实例方法，但方法的行为定义得更紧密。set的`add`方法应该拒绝重复项。set的`equals`方法应该定义为：两个set具有相同的元素，但不一定具有相同的顺序。`hashCode`方法应该定义为：具有相同元素的set生成相同的哈希码。
 
-如果方法签名相同，为什么要定义单独的接口呢？从概念上讲，并不是所有集合都是 set。创建 Set 接口允许程序员编写只接受 set 的方法。
+如果方法签名相同，为什么要定义单独的接口呢？从概念上讲，并不是所有集合都是set。创建`Set`接口允许程序员编写只接受set的方法。
 
-为了理解为什么这种区别很重要，考虑相等性测试。如果两个列表具有相同顺序的相同元素，则它们相等。如果两个 set 具有相同的元素，则它们相等。
+为了理解为什么这种区别很重要，考虑相等性测试。如果两个列表具有相同顺序的相同元素，则它们相等。如果两个set具有相同的元素，则它们相等。
 
-SortedSet 和 SortedMap 接口暴露了用于排序的比较器对象，并定义了获取集合子视图的方法。我们将在 9.5.3 节讨论这些。
+`SortedSet`和`SortedMap`接口暴露了用于排序的比较器对象，并定义了获取集合子视图的方法。我们将在9.5.3节讨论这些。
 
-NavigableSet 和 NavigableMap 包含了用于在排序 set 和 map 中查找下一个或上一个元素的方法。TreeSet 和 TreeMap 类实现了这些接口。导航操作可以在树数据结构中高效实现。
+`NavigableSet`和`NavigableMap`包含了用于在排序set和map中查找下一个或上一个元素的方法。`TreeSet`和`TreeMap`类实现了这些接口。导航操作可以在树数据结构中高效实现。
 
-Java 21 引入了 SequencedCollection<E> 接口，提供了对集合第一个和最后一个元素的统一访问以及反向遍历。
+Java 21 引入了`SequencedCollection<E>`接口，提供了对集合第一个和最后一个元素的统一访问以及反向遍历。
 
 ```java
 E getFirst()
@@ -17528,73 +17959,62 @@ E removeLast()
 SequencedCollection<E> reversed()
 ```
 
-此前，这些操作由 list、set 和 deque 中的不同方法完成。SequencedSet 子接口将 reversed 方法的返回类型精确为 SequencedSet。SequencedMap 接口为 map 提供了类似的方法。
+此前，这些操作由list、set和deque中的不同方法完成。`SequencedSet`子接口将`reversed`方法的返回类型精确为`SequencedSet`。`SequencedMap`接口为map提供了类似的方法。
 
 ## 9.3. 具体集合
 
-表 9.1 显示了 Java 集合框架中的集合，并简要描述了每个集合类的用途。（为了简单起见，我省略了将在第 10 章讨论的线程安全集合。）
+表9.1显示了Java集合框架中的集合，并简要描述了每个集合类的用途。（为了简单起见，我省略了将在第10章讨论的线程安全集合。）
 
-表 9.1 中的所有类都实现了 Collection 接口，以 Map 结尾的类除外。这些类实现了 Map 接口。我们将在 9.4 节讨论 map。
+表9.1中的所有类都实现了`Collection`接口，以`Map`结尾的类除外。这些类实现了`Map`接口。我们将在9.4节讨论map。
 
-表 9.1：Java 集合框架中的具体集合
-
-| 集合类型 |  | 参见 |
-|---|---|---|
-
-
-
-
-
-| 集合类型 | 说明 | 参见 |
-| --- | --- | --- |
-| ArrayList | 一种动态伸缩的索引序列 | [第 9.3.2节](9.3.2) |
-| LinkedList | 一种允许在任何位置高效插入和删除的有序序列 | [第 9.3.1节](9.3.1) |
-| ArrayDeque | 使用循环数组实现的双端队列 | [第 9.3.5节](9.3.5) |
-| HashSet | 不允许重复元素的无序集合 | [第9.3.3](9.3.3) |
-| TreeSet | 排序集合 | [第 9.4.5节](9.4.5) |
-| EnumSet | 枚举类型值的集合 | [第 9.4.6节](9.4.6) |
-
-| 集合类型 | 说明 | 参见 |
-|---|---|--|
-| LinkedHashSet | 记住元素插入顺序的集合 | [第 9.4.5节](#) |
-| PriorityQueue | 允许高效删除最小元素的集合 | [第 9.3.6节](#) |
-| HashMap | 存储键/值关联的数据结构 | [第 9.4.1节](#) |
-| TreeMap | 键经过排序的映射 | [第 9.4.1节](#) |
-| EnumMap | 键属于枚举类型的映射 | [第 9.4.6节](#) |
-| LinkedHashMap | 记住条目添加顺序的映射 | [第 9.4.5节](#) |
+表9.1：Java集合框架中的具体集合
 
 | 集合类型 | 说明 | 参见 |
 |---|---|---|
-| WeakHashMap | 其值如果未在其他地方使用，则可以被垃圾器回收的映射 | [第 9.4.4节](#section-9.4.4) |
-| HashMap | 键通过 == 而不是 equals 进行比较的映射 | [第 9.4.7节](#section-9.4.7) |
+| `ArrayList` | 一种动态伸缩的索引序列 | [第9.3.2节](9.3.2) |
+| `LinkedList` | 一种允许在任何位置高效插入和删除的有序序列 | [第9.3.1节](9.3.1) |
+| `ArrayDeque` | 使用循环数组实现的双端队列 | [第9.3.5节](9.3.5) |
+| `HashSet` | 不允许重复元素的无序集合 | [第9.3.3节](9.3.3) |
+| `TreeSet` | 排序集合 | [第9.4.5节](9.4.5) |
+| `EnumSet` | 枚举类型值的集合 | [第9.4.6节](9.4.6) |
+| `LinkedHashSet` | 记住元素插入顺序的集合 | [第9.4.5节](#) |
+| `PriorityQueue` | 允许高效删除最小元素的集合 | [第9.3.6节](#) |
+| `HashMap` | 存储键/值关联的数据结构 | [第9.4.1节](#) |
+| `TreeMap` | 键经过排序的映射 | [第9.4.1节](#) |
+| `EnumMap` | 键属于枚举类型的映射 | [第9.4.6节](#) |
+| `LinkedHashMap` | 记住条目添加顺序的映射 | [第9.4.5节](#) |
+| `WeakHashMap` | 其值如果未在其他地方使用，则可以被垃圾器回收的映射 | [第9.4.4节](#section-9.4.4) |
+| `HashMap` | 键通过`==`而不是`equals`进行比较的映射 | [第9.4.7节](#section-9.4.7) |
 
-图 9.5 显示了这些类之间的关系。
+图9.5显示了这些类之间的关系。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1120_0.png)
 
-图 9.5：Java 集合框架中的类
+图9.5：Java集合框架中的类
 
 ## 9.3.1. 链表
 
-在本书的许多示例中，我们已经使用了数组及其动态表亲 ArrayList 类。然而，数组和数组列表有一个主要的缺点。从数组中间删除元素是昂贵的代价，因为被删除元素之后的所有数组元素都必须向数组开头移动（参见图 9.6）。在数组中间插入元素也是如此。
+在本书的许多示例中，我们已经使用了数组及其动态表亲`ArrayList`类。然而，数组和数组列表有一个主要的缺点。从数组中间删除元素是昂贵的代价，因为被删除元素之后的所有数组元素都必须向数组开头移动（参见图9.6）。在数组中间插入元素也是如此。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1121_0.png)
 
-**图 9.6：** 从数组中删除元素
+**图9.6：** 从数组中删除元素
 
-另一个广为人知的数据结构链表解决了这个问题。数组在连续的内存位置中存储对象引用，而链表将每个对象存储在单独的节点中。每个节点还存储了指向序列中下一个节点的引用。在 Java 集合框架中，所有的链表实际上都是双向链的；每个节点还存储了指向其前驱节点的引用（参见图 9.7）。
+另一个广为人知的数据结构链表解决了这个问题。数组在连续的内存位置中存储对象引用，而链表将每个对象存储在单独的节点中。每个节点还存储了指向序列中下一个节点的引用。在Java集合框架中，所有的链表实际上都是双向链的；每个节点还存储了指向其前驱节点的引用（参见图9.7）。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1122_0.png)
 
-图 9.7：双向链表
+图9.7：双向链表
 
-从链表的中间删除元素是一个廉价的操作——只需要更新被删除元素周围的节点（参见图 9.8）。
+从链表的中间删除元素是一个廉价的操作——只需要更新被删除元素周围的节点（参见图9.8）。
+
+
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1123_0.png)
 
 图 9.8：从链表中删除元素
 
-也许你曾经上过数据结构课程，在课程中你学习了如何实现链表。你可能对在链表中删除或添加元素时理理节点关系的过程有不愉快的回忆。如果是这样，你将很高兴地发现，Java 集合框架提供了一个可供你使用的 LinkedList 类。
+也许你曾经上过数据结构课程，在课程中你学习了如何实现链表。你可能对在链表中删除或添加元素时理理节点关系的过程有不愉快的回忆。如果是这样，你将很高兴地发现，Java 集合框架提供了一个可供你使用的`LinkedList`类。
 
 下面的代码示例添加了三个元素，然后删除了第二个：
 
@@ -17612,7 +18032,7 @@ String second = iter.next(); // 访问第二个元素
 iter.remove(); // 删除上一次访问的元素 (B)
 ```
 
-然而，链表和通用集合之间存在着重要的区别。链表是一个有序集合，其中对象的位置很重要。LinkedList 会将对象添加到列表的末尾。但你通常想在列表中间某个位置添加对象。这种依赖位置的方法是迭代器（iterator）的职责，因为迭代器描述了集合中的位置。使用迭代器添加元素仅对于具有自然顺序的集合是有意义的。例如，我们将在下一节中讨论的 set 数据类型没有对其元素施加任何顺序。因此，在 `Iterator` 接口中没有 `add` 方法。相反，Java 集合框架提供了：
+然而，链表和通用集合之间存在着重要的区别。链表是一个有序集合，其中对象的位置很重要。`LinkedList`会将对象添加到列表的末尾。但你通常想在列表中间某个位置添加对象。这种依赖位置的方法是迭代器（iterator）的职责，因为迭代器描述了集合中的位置。使用迭代器添加元素仅对于具有自然顺序的集合是有意义的。例如，我们将在下一节中讨论的`set`数据类型没有对其元素施加任何顺序。因此，在`Iterator`接口中没有`add`方法。相反，Java 集合框架提供了：
 
 ```java
 interface Iterator<E> {
@@ -17624,7 +18044,7 @@ interface Iterator<E> {
 }
 ```
 
-与标准的 Iterator 不同，ListIterator 接口拥有可以反向遍历列表的方法。例如，`previous` 方法返回迭代器左侧。就像 `next` 方法一样，如果你调用了 `previous`，则右侧的元素将被删除。
+与标准的`Iterator`不同，`ListIterator`接口拥有可以反向遍历列表的方法。例如，`previous`方法返回迭代器左侧。就像`next`方法一样，如果你调用了`previous`，则右侧的元素将被删除。
 
 ```java
 interface ListIterator<E> extends Iterator<E> {
@@ -17637,7 +18057,7 @@ interface ListIterator<E> extends Iterator<E> {
 }
 ```
 
-`previous` 方法返回它刚刚经过的元素。例如，下面的代码跳过了第一个元素：
+`previous`方法返回它刚刚经过的元素。例如，下面的代码跳过了第一个元素：
 
 ```java
 LinkedList<String> staff = new LinkedList<>();
@@ -17653,9 +18073,9 @@ iter.add("Juliet"); // 在 Bob 之前添加元素
 
 图 9.9：在链表中添加元素
 
-**注意：** 小心“光标”类比。`remove` 操作并不完全像空格键。在调用 `next` 之后，`remove` 方法确实会删除迭代器左侧的元素。但是，如果你刚刚调用了 `previous`，则右侧的元素将被删除。而且你不能连续调用两次 `remove`。
+**注意：** 小心“光标”类比。`remove`操作并不完全像空格键。在调用`next`之后，`remove`方法确实会删除迭代器左侧的元素。但是，如果你刚刚调用了`previous`，则右侧的元素将被删除。而且你不能连续调用两次`remove`。
 
-与仅取决于迭代器位置的 `add` 方法不同，`remove` 方法依赖于迭代器的状态。最后，`set` 方法用新元素替换由 `next` 或 `previous` 返回的最后一个元素。例如，下面的代码将第一个元素替换为新值：
+与仅取决于迭代器位置的`add`方法不同，`remove`方法依赖于迭代器的状态。最后，`set`方法用新元素替换由`next`或`previous`返回的最后一个元素。例如，下面的代码将第一个元素替换为新值：
 
 ```java
 ListIterator<String> iter = list.listIterator();
@@ -17663,20 +18083,19 @@ String oldValue = iter.next(); // 返回第一个
 iter.set(newValue); // 将第一个元素设为新值
 ```
 
-
-……负责于。在每个迭代器方法的开头，迭代器简单地检查自身的变异计数是否等于集合的计数。如果不相等，它将抛出 `ConcurrentModificationException`。
+……负责于。在每个迭代器方法的开头，迭代器简单地检查自身的变异计数是否等于集合的计数。如果不相等，它将抛出`ConcurrentModificationException`。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1130_0.png)
 
-**注意：** 然而，并发修改的检测存在一个奇特的异常。链表只跟踪列表的*结构性*修改，例如添加和删除链接。`set` 方法*不被视为*结构性修改。你可以为链表附加多个迭代器，所有迭代器都可以调用 `set` 来更改现有链接的内容。这种能力对于在本节稍后讨论的 `Collections` 类中的许多算法是必需的。
+**注意：** 然而，并发修改的检测存在一个奇特的异常。链表只跟踪列表的*结构性*修改，例如添加和删除链接。`set`方法*不被视为*结构性修改。你可以为链表附加多个迭代器，所有迭代器都可以调用`set`来更改现有链接的内容。这种能力对于在本节稍后讨论的`Collections`类中的许多算法是必需的。
 
-现在你已经了解了 `LinkedList` 类的基本方法。使用 `ListIterator` 可以双向遍历链链表的元素，并添加和删除元素。
+现在你已经了解了`LinkedList`类的基本方法。使用`ListIterator`可以双向遍历链链表的元素，并添加和删除元素。
 
-正如你在[第 9.2 节]中看到的，许多其他操作链表的有用方法在 `Collection` 接口中声明。这些方法大部分在 `LinkedList` 类的父类 `AbstractCollection` 中实现。例如，`toString` 方法会对所有元素调用 `toString` 并产生一个格式为 [A, B, C] 的长字符串。这对于调试非常有用。使用 `contains` 方法检查链表中是否存在某个元素。例如，如果链表中已经包含与字符串 "Harry" 相等的字符串，调用 `list.contains("Harry")` 将返回 `true`。
+正如你在[第 9.2 节]中看到的，许多其他操作链表的有用方法在`Collection`接口中声明。这些方法大部分在`LinkedList`类的父类`AbstractCollection`中实现。例如，`toString`方法会对所有元素调用`toString`并产生一个格式为[A, B, C]的长字符串。这对于调试非常有用。使用`contains`方法检查链表中是否存在某个元素。例如，如果链表中已经包含与字符串`"Harry"`相等的字符串，调用`list.contains("Harry")`将返回`true`。
 
-Java 集合框架还提供了一些从理论角度来看有些可疑的方法。链表不支持快速的随机访问。如果你想查看链表的第 $n$ 个元素，你必须从开始处并跳过前 $n-1$ 个元素。没有捷径。出于这个原因，程序员通常不在需要通过整数索引访问元素的情况下使用链表。
+Java 集合框架还提供了一些从理论角度来看有些可疑的方法。链表不支持快速的随机访问。如果你想查看链表的第$n$个元素，你必须从开始处并跳过前$n-1$个元素。没有捷径。出于这个原因，程序员通常不在需要通过整数索引访问元素的情况下使用链表。
 
-尽管如此，`LinkedList` 类提供了一个 `get` 方法，让你能够访问特定元素：
+尽管如此，`LinkedList`类提供了一个`get`方法，让你能够访问特定元素：
 
 ```
 LinkedList<String> list = . . .;
@@ -17692,33 +18111,35 @@ for (int i = 0; i < list.size(); i++)
     do something with list.get(i);
 ```
 
-是效率低得惊人的。每当你查找另一个元素时，搜索都会从列表开始重新开始。`LinkedList` 对象并没有缓存位置信息的努力。
+是效率低得惊人的。每当你查找另一个元素时，搜索都会从列表开始重新开始。`LinkedList`对象并没有缓存位置信息的努力。
 
-> **注意：** `get` 方法有一个微小的优化：如果索引至少为 `size() / 2`，则元素的搜索将从列表末尾开始。
+> **注意：** `get`方法有一个微小的优化：如果索引至少为`size() / 2`，则元素的搜索将从列表末尾开始。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1132_0.png)
 
-列表迭代器接口还有一个方法可以告诉你当前位置的索引。事实上，由于 Java 迭代器在概念上指向元素之间，因此它有两个这样的方法：`nextIndex` 方法返回下次调用 `next` 将返回的元素的整数索引；`previousIndex` 方法返回下次调用 `previous` 将返回的元素的索引。当然，它仅仅比 `nextIndex` 小 1。这些方法对于 `LinkedList` 迭代器是高效的——每个迭代器都维护其当前位置计数。最后，如果你有一个整数索引 $n$，那么 `list.listIterator(n)` 返回一个指向索引为 $n$ 的元素之前的迭代器。也就是说，调用 `next` 产生与 `list.get(n)` 相同的元素，但获取该迭代器是低效的。
+列表迭代器接口还有一个方法可以告诉你当前位置的索引。事实上，由于 Java 迭代器在概念上指向元素之间，因此它有两个这样的方法：`nextIndex`方法返回下次调用`next`将返回的元素的整数索引；`previousIndex`方法返回下次调用`previous`将返回的元素的索引。当然，它仅仅比`nextIndex`小 1。这些方法对于`LinkedList`迭代器是高效的——每个迭代器都维护其当前位置计数。最后，如果你有一个整数索引$n$，那么`list.listIterator(n)`返回一个指向索引为$n$的元素之前的迭代器。也就是说，调用`next`产生与`list.get(n)`相同的元素，但获取该迭代器是低效的。
 
-如果链表只有几个元素，你不必过度担心 `get` 和 `set` 方法的代价。但如此，最初为什么要使用链表呢？使用链表的唯一理由是在列表中间化插入和删除的代价。如果你只有几个元素，可以直接使用 `ArrayList`。
+如果链表只有几个元素，你不必过度担心`get`和`set`方法的代价。但如此，最初为什么要使用链表呢？使用链表的唯一理由是在列表中间化插入和删除的代价。如果你只有几个元素，可以直接使用`ArrayList`。
 
-我建议你远离所有使用整数索引来表示链表位置的方法。如果你对集合进行随机访问，请使用数组或 `ArrayList`，而不是链表。
+我建议你远离所有使用整数索引来表示链表位置的方法。如果你对集合进行随机访问，请使用数组或`ArrayList`，而不是链表。
 
-列表 9.1 中的程序让链表发挥作用。它创建了两个列表，合并它们，然后从第二个列表中删除每个第二个元素，最后测试 `removeAll` 方法。我建议你跟踪程序流并特别注意迭代器。你可能会发现绘制迭代器位置的图会有帮助，如下所示：
+列表 9.1 中的程序让链表发挥作用。它创建了两个列表，合并它们，然后从第二个列表中删除每个第二个元素，最后测试`removeAll`方法。我建议你跟踪程序流并特别注意迭代器。你可能会发现绘制迭代器位置的图会有帮助，如下所示：
 
 | ACE | BDFG |
-| A|CE | BDFG |
-| AB |CE | B|DFG |
+|---|---|
+| A | CE |
+| AB | CE |
+| B | DFG |
 
 注意调用：
 
-```
+```java
 System.out.println(a);
 ```
 
-通过调用 `AbstractCollection` 中的 `toString` 方法打印链表 `a` 中的所有元素。
+通过调用`AbstractCollection`中的`toString`方法打印链表`a`中的所有元素。
 
-# 列表 9.1 linkedList/LinkedListTest.java
+# 列表 9.1 `linkedList/LinkedListTest.java`
 
 ```java
 1 package linkedList;
@@ -17731,6 +18152,7 @@ System.out.println(a);
  * @author Cay Horstmann
  */
 ```
+
 ```java
 public class LinkedListTest {
     public static void main(String[] args) {
@@ -17774,29 +18196,27 @@ public class LinkedListTest {
 }
 ```
 
-
-
-在上一节中，你已经了 `List` 接口以及实现它的 `LinkedList` 类。`List` 接口描述了一个有序集合，其中元素的位置至关重要。访问元素有两种协议：通过迭代器以及通过 `get` 和 `set` 方法进行随机访问。后者并不适用于链表，但对于数组来说，`get` 和 `set` 显然很有意义。Java 集合框架（Java Collections Framework）提供了熟悉的 `ArrayList` 类，它也实现了 `List` 接口。`ArrayList` 封装了一个动态重新分配的对象数组。
+在上一节中，你已经了`List`接口以及实现它的`LinkedList`类。`List`接口描述了一个有序集合，其中元素的位置至关重要。访问元素有两种协议：通过迭代器以及通过`get`和`set`方法进行随机访问。后者并不适用于链表，但对于数组来说，`get`和`set`显然很有意义。Java 集合框架（Java Collections Framework）提供了熟悉的`ArrayList`类，它也实现了`List`接口。`ArrayList`封装了一个动态重新分配的对象数组。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1140_0.png)
 
-**注意：** Java 1.0 附有一个不同的基于数组的集合——`Vector` 类。`Vector` 类的所有方法都是同步的。从两个线程访问 `Vector` 对象是安全的。但如果你只从单个线程访问 vector（这是目前更常见的情况），这种同步就是浪费的。相比之下，`ArrayList` 的方法没有同步的。正如你将在第 10 章中看到的，现在也有更好的安全选择。除非你需要与古老的 API 接口，否则现在没有理由使用 `Vector`。
+**注意：** Java 1.0 附有一个不同的基于数组的集合——`Vector`类。`Vector`类的所有方法都是同步的。从两个线程访问`Vector`对象是安全的。但如果你只从单个线程访问 vector（这是目前更常见的情况），这种同步就是浪费的。相比之下，`ArrayList`的方法没有同步的。正如你将在第 10 章中看到的，现在也有更好的安全选择。除非你需要与古老的 API 接口，否则现在没有理由使用`Vector`。
 
-## 9.3.3. 哈希集合 (Hash Sets)
+## 9.3.3 哈希集合（Hash Sets）
 
 链表和数组允许你指定想要排列元素的顺序。然而，如果你在寻找某个特定元素且不记得它的位置，你就需要访问所有元素直到找到匹配项。如果集合包含很多元素，这可能会非常耗时。如果你不在乎元素的顺序，则某些数据结构可以让你更快地找到元素。缺点是，这些数据结构无法对元素出现的顺序进行任何控制。这些数据结构按照便于自身用途的顺序来组织元素。
 
-一种用于快速查找对象的已知数据结构是哈希表（hash table）。哈希表为每个对象计算一个整数，称为哈希码（hash code）。哈希码以某种方式从对象的实例字段派生，最好是使得不同数据的对象产生不同的代码。表 9.2 列出了几个由 `hashCode` 方法类产生的哈希码示例。
+一种用于快速查找对象的已知数据结构是哈希表（hash table）。哈希表为每个对象计算一个整数，称为哈希码（hash code）。哈希码以某种方式从对象的实例字段派生，最好是使得不同数据的对象产生不同的代码。表 9.2 列出了几个由`hashCode`方法类产生的哈希码示例。
 
-表 9.2：由 `hashCode` 方法产生的哈希码
+表 9.2：由`hashCode`方法产生的哈希码
 
 | String | 哈希码 |
-|---|---|
-| "Lee" | 76268 |
-| "lee" | 107020 |
-| "eel" | 100300 |
+|---|---:|
+| `"Lee"` | 76268 |
+| `"lee"` | 107020 |
+| `"eel"` | 100300 |
 
-如果你定义了自己的类，你就有责任实现自己的 `hashCode` 方法——更多信息请参阅第 5 章。你的实现需要与 `equals` 方法兼容：如果 `a.equals(b)`，那么 `a` 和 `b` 必须具有相同的哈希码。
+如果你定义了自己的类，你就有责任实现自己的`hashCode`方法——更多信息请参阅第 5 章。你的实现需要与`equals`方法兼容：如果`a.equals(b)`，那么`a`和`b`必须具有相同的哈希码。
 
 现在重要的是，哈希可以被快速计算，且该计算仅取决于需要被哈希的对象的状态，而不取决于哈希表中的其他对象。
 
@@ -17806,13 +18226,13 @@ public class LinkedListTest {
 
 **图 9.10：** 哈希表
 
-> **注意：** 在 `HashMap` 的实现中，当桶的大小超过阈值时，桶会从链表变为平衡二叉树。如果哈希函数选择不当导致产生大量冲突，或者恶意代码试图用许多具有相同哈希码的值淹没哈希表，这可以提高性能。
+> **注意：** 在`HashMap`的实现中，当桶的大小超过阈值时，桶会从链表变为平衡二叉树。如果哈希函数选择不当导致产生大量冲突，或者恶意代码试图用许多具有相同哈希码的值淹没哈希表，这可以提高性能。
 
-> **提示：** 如果可能，哈希表的键应该属于实现实现 `Comparable` 接口的类。这样你就能保证不会因为哈希码分布不均而遭受性能低下的影响。
+> **提示：** 如果可能，哈希表的键应该属于实现`Comparable`接口的类。这样你就能保证不会因为哈希码分布不均而遭受性能低下的影响。
 
 如果哈希表太满，就需要进行重新哈希（rehashed）。为了重新哈希表，会创建一个具有更多桶的新表，将所有元素插入新表，并丢弃原表。负载因子（load factor）决定了哈希表何时进行重新哈希。例如，如果负载因子为 0.75（默认值）且表填充率超过 75%，它会自动重新哈希，桶的数量增加一倍。对于大多数应用程序，将负载因子保持在 0.75 是合理的。
 
-如果你想对哈希表的性能有更多控制，可以指定初始桶数。你应该将其设置为预期元素数量除以负载因子。或者，从 Java 19 开始，你可以使用静态 `HashSet` 便利方法来为你完成这项计算：
+如果你想对哈希表的性能有更多控制，可以指定初始桶数。你应该将其设置为预期元素数量除以负载因子。或者，从 Java 19 开始，你可以使用静态`HashSet`便利方法来为你完成这项计算：
 
 ```java
 HashSet<String> strings = HashSet.newHashSet(exp)
@@ -17820,7 +18240,7 @@ HashSet<String> strings = HashSet.newHashSet(exp)
 
 > **注意：** 一某些研究人员认为，将桶的数量设置为质数是一个好主意，以防止键的聚集。然而，这些证据并不是结论性的。Java 集合框架使用的桶数是 2 的幂（默认为 16）。
 
-哈希表可用于实现若干重要数据结构。其中简单的是集合（set）类型。集合是不包含重复元素的集合。集合的 `add` 方法首先尝试在表中查找该对象，只有在它不存在时才添加。集合迭代器按顺序访问所有的桶。由于哈希将元素分散在表中，因此它们是随机顺序被访问的。只有在你不在乎元素的顺序时，才会使用 `HashSet`。
+哈希表可用于实现若干重要数据结构。其中简单的是集合（set）类型。集合是不包含重复元素的集合。集合的`add`方法首先尝试在表中查找该对象，只有在它不存在时才添加。集合迭代器按顺序访问所有的桶。由于哈希将元素分散在表中，因此它们是随机顺序被访问的。只有在你不在乎元素的顺序时，才会使用`HashSet`。
 
 > **警告：** 在变动元素时要小心。如果元素的哈希码发生变化，该元素将不再位于数据结构中的正确位置。
 
@@ -17831,7 +18251,9 @@ var rects = new HashSet<Rectangle>();
 var rect = new Rectangle(5,5);
 ```
 
-## Listing 9.2 set/SetTest.java
+## 列表 9.2 `set/SetTest.java`
+
+
 
 ```java
 package set;
@@ -17882,7 +18304,6 @@ public class SetTest {
 }
 ```
 
-
 ```java
 while (in.hasNext()) {
     String word = in.next();
@@ -17892,29 +18313,37 @@ time(new HashSet<>(), words, repetiti);
 time(new TreeSet<>(), words, repetiti);
 ```
 
-# java.util.HashSet<E> 1.2
+## `java.util.HashSet<E>` 1.2
 
-- HashSet()
+- `HashSet()`
+
   构造一个空的哈集合。
-- HashSet(Collection<? extends E> elements)
+
+- `HashSet(Collection<? extends E> elements)`
+
   构造一个哈集合并添加集合中的所有元素。
-- HashSet(int initialCapacity)
-- HashSet(int initialCapacity, float loadFactor)
+
+- `HashSet(int initialCapacity)`
+
+- `HashSet(int initialCapacity, float loadFactor)`
+
   构造具有指定容量和负载因子的空哈集合，或者使用为 0.75 的负载因子。如果大小/容量的比例超过负载因子，哈希表将重新哈希到一个更大的哈表中。
 
-- static <E> HashSet<E> newHashSet(int numMappings)
-  构造具有足够初始容量的空哈集合，以容纳预期元素数量 (numMappings) 而无需重新哈希。
+- `static <E> HashSet<E> newHashSet(int numMappings)`
+
+  构造具有足够初始容量的空哈集合，以容纳预期元素数量 (`numMappings`) 而无需重新哈希。
 
 ```java
 java.lang.Object 1.0
 ```
 
-- int hashCode()
-  返回此对象的哈希码。哈希码可以是任何整数，正负均可。equals 和 hashCode 的定义必须兼容：如果 x.equals(y) 为真，那么 x.hashCode() 的值必须与 y.hashCode() 相同。
+- `int hashCode()`
+
+  返回此对象的哈希码。哈希码可以是任何整数，正负均可。`equals` 和 `hashCode` 的定义必须兼容：如果 `x.equals(y)` 为真，那么 `x.hashCode()` 的值必须与 `y.hashCode()` 相同。
 
 ## 9.3.4. Tree Sets
 
-TreeSet 类与哈集合类似，但增加了一个改进。TreeSet 是一个排序集合。你可以以任何顺序将元素插入集合中。当你遍历集合时，这些值会自动按排序顺序呈现。例如，假设你插入了三个字符串，然后访问你添加的所有元素。
+`TreeSet` 类与哈集合类似，但增加了一个改进。`TreeSet` 是一个排序集合。你可以以任何顺序将元素插入集合中。当你遍历集合时，这些值会自动按排序顺序呈现。例如，假设你插入了三个字符串，然后访问你添加的所有元素。
 
 ```java
 var sorter = new TreeSet<String>();
@@ -17926,19 +18355,19 @@ for (String s : sorter) System.out.println(s);
 
 然后，值将按排序打印：Amy Bob Carl。正如该类名所示，排序是通过树数据结构实现的。（当前实现使用了红黑树。有关红黑树的详细描述，请参见 Thomas Cormen, Charles Leiserson, Ronald Rivest 和 Clifford Stein 著的《算法导论》，The MIT Press，2022。）每当元素添加到树时，它会被放置在正确的排序位置。因此，迭代器始终按排序访问元素。
 
-向树中添加元素比向哈希表添加元素慢。但它仍然比检查数组或链表中的重复项快得多。如果树包含 n 个元素，平均需要 log2 n 次比较来找到新元素的正确位置。例如，如果树已经包含 1,000 个元素，添加一个新元素大约需要 10 次比较。
+向树中添加元素比向哈希表添加元素慢。但它仍然比检查数组或链表中的重复项快得多。如果树包含 n 个元素，平均需要 `log2 n` 次比较来找到新元素的正确位置。例如，如果树已经包含 1,000 个元素，添加一个新元素大约需要 10 次比较。
 
-**注意：** 为了使用 TreeSet，你必须能够比较元素。元素必须实现 `Comparable` 接口，或者你需要在构造集合时提供一个 `Comparator`。（`Comparable` 和 `Comparator` 接口在第 6 章中引入。）
+**注意：** 为了使用 `TreeSet`，你必须能够比较元素。元素必须实现 `Comparable` 接口，或者你需要在构造集合时提供一个 `Comparator`。（`Comparable` 和 `Comparator` 接口在第 6 章中引入。）
 
-TreeSet 慢多少？运行列表 9.2 中的程序：
+`TreeSet` 慢多少？运行列表 9.2 中的程序：
 
 ```bash
 java set.SetTest ../gutenberg/crsto10.txt 100
 ```
 
-《基督基督仇》有 466,300 个单词，每个单词都被插入了 100 次。在我的测试机器上，TreeSet 几乎慢了 4 倍。如果你不需要数据排序，没有理由为排序开销付出代价。更重要的是，对于某些数据，想出一个排序顺序比写哈希函数困难得多。哈希函数只需要对对象进行相当不错的扰乱，而比较函数必须以完全精确的度区分对象。
+《基督基督仇》有 466,300 个单词，每个单词都被插入了 100 次。在我的测试机器上，`TreeSet` 几乎慢了 4 倍。如果你不需要数据排序，没有理由为排序开销付出代价。更重要的是，对于某些数据，想出一个排序顺序比写哈希函数困难得多。哈希函数只需要对对象进行相当不错的扰乱，而比较函数必须以完全精确的度区分对象。
 
-为了使这种区别更具体，考虑收集矩形集合的任务。如果你使用 TreeSet，你需要提供一个 `Comparator<Rectangle>`。你如何比较两个矩形？通过面积？这行不通。你可能有两个坐标不同但面积相同的矩形，而你想保留它们。比较器必须与 `equals` 兼容；也就是说，只有当元素相等时，比较结果才能为零。矩形有这样的排序顺序（基于其坐标的字典序），但计算起来非常麻烦。相比之下，`Rectangle` 类已经定义了哈希函数。它只需对坐标进行哈希。
+为了使这种区别更具体，考虑收集矩形集合的任务。如果你使用 `TreeSet`，你需要提供一个 `Comparator<Rectangle>`。你如何比较两个矩形？通过面积？这行不通。你可能有两个坐标不同但面积相同的矩形，而你想保留它们。比较器必须与 `equals` 兼容；也就是说，只有当元素相等时，比较结果才能为零。矩形有这样的排序顺序（基于其坐标的字典序），但计算起来非常麻烦。相比之下，`Rectangle` 类已经定义了哈希函数。它只需对坐标进行哈希。
 
 > 注意：如果比较器与元素类型的 `equals` 方法不，集合的相等性可能会给出不一致的结果。这是一个典型的例子：
 
@@ -17960,15 +18389,15 @@ commands.equals(Set.of("quit")) // true
 Set.of("quit").equals(commands) // false
 ```
 
-TreeSet 在比较器返回零时认为两个元素相等。但另一个集合使用的是 `String.equals`。
+`TreeSet` 在比较器返回零时认为两个元素相等。但另一个集合使用的是 `String.equals`。
 
 更好的方法是使用 `String.compare` 排序，并仅将小写字符串插入集合。
 
-> 注意：TreeSet 类实现了 `NavigableSet` 接口。该接口增加了几个用于定位相邻元素的方便方法。详见 API 注释。
+> 注意：`TreeSet` 类实现了 `NavigableSet` 接口。该接口增加了几个用于定位相邻元素的方便方法。详见 API 注释。
 
 列表 9.3 中的程序构建了两个 `Item` 对象集合。第一个按零件号排序。第二个按描述排序，使用了自定义的比较器。
 
-### 列表 9.3 TreeSetTest.java
+### 列表 9.3 `TreeSetTest.java`
 
 ```java
 package treeSet;
@@ -17996,7 +18425,7 @@ public class TreeSetTest {
 }
 ```
 
-### 列表 9.4 Item.java
+### 列表 9.4 `Item.java`
 
 ```java
 package treeSet;
@@ -18012,42 +18441,55 @@ public record Item(String description, int partNumber) implements Comparable<Ite
 }
 ```
 
-java.util.TreeSet<E> 1.2
+## `java.util.TreeSet<E>` 1.2
 
-- TreeSet()
-- TreeSet(Comparator<? super E> comparator)
+- `TreeSet()`
+
+- `TreeSet(Comparator<? super E> comparator)`
+
   构造一个空的哈集合。
-- TreeSet(Collection<? extends E> elements)
-- TreeSet(SortedSet<E> s)
+
+- `TreeSet(Collection<? extends E> elements)`
+
+- `TreeSet(SortedSet<E> s)`
+
   构造一个树集合并添加集合或排序集合中的所有元素（对于后者，使用相同的排序顺序）。
 
-java.util.SortedSet<E> 1.2
+## `java.util.SortedSet<E>` 1.2
 
-- Comparator<? super E> comparator()
-  返回用于排序元素的比较器，如果使用 `Comparable` 接口的 `compare` 方法比较元素，则返回 null。
-- first()
-- last()
+- `Comparator<? super E> comparator()`
+
+  返回用于排序元素的比较器，如果使用 `Comparable` 接口的 `compare` 方法比较元素，则返回 `null`。
+
+- `first()`
+
+- `last()`
+
   返回排序集合中最小或最大的元素。
 
-java.util.NavigableSet<E> 6
+## `java.util.NavigableSet<E>` 6
 
-- higher(E value)
-- lower(E value)
-  返回大于 value 的最小元素或小于 value 的最大元素，如果不存在此类元素，则返回 null。
-- ceiling(E value)
-- floor(E value)
-  返回 >= value 的最小元素或 <= value 的最大元素，如果不存在此类元素，则返回 null。
+- `higher(E value)`
 
-- pollFirst()
-- pollLast()
-  移除并返回集合中最小或最大的元素，如果集合为空，则返回 null。
+- `lower(E value)`
+
+  返回大于 `value` 的最小元素或小于 `value` 的最大元素，如果不存在此类元素，则返回 `null`。
+
+- `ceiling(E value)`
+
+- `floor(E value)`
+
+  返回大于等于 `value` 的最小元素或小于等于 `value` 的最大元素，如果不存在此类元素，则返回 `null`。
+
+- `pollFirst()`
+
+- `pollLast()`
+
+  移除并返回集合中最小或最大的元素，如果集合为空，则返回 `null`。
 
 ## 9.3.5. 队列和双队列
 
-正如我们已经讨论过的，队列让你高效地在最后一个之后添加元素并移除第一个元素。双端队列（deque）让你高效地在两端添加或删除元素。不支持在中间添加元素。`Deque` 接口由 `ArrayDeque` 和 `LinkedList` 类实现，这两个类都提供了根据需要增长的双队列。在第 10 章中，你将看到有界的队列和双队列。
-
-
-
+正如我们已经讨论过的，队列让你高效地在最后一个之后添加元素并移除第一个元素。双端队列（`deque`）让你高效地在两端添加或删除元素。不支持在中间添加元素。`Deque` 接口由 `ArrayDeque` 和 `LinkedList` 类实现，这两个类都提供了根据需要增长的双队列。在第 10 章中，你将看到有界的队列和双队列。
 
 从 `Deque` 接口移动到 `SequencedCollection` 接口，`List` 和 `Set` 接口也扩展了它。这为访问集合的和最后一个元素提供了统一的方法。
 
@@ -18055,44 +18497,70 @@ java.util.NavigableSet<E> 6
 java.util.Queue<E> 5.0
 ```
 
-- boolean add(E e)
-- boolean offer(E e)
+- `boolean add(E e)`
+
+- `boolean offer(E e)`
+
   在此队列的最后一个元素之后添加指定的元素，如果队列未满则返回 `true`。如果队列已满，第一个方法将抛出 `IllegalStateException`，而第二个方法返回 `false`。
-- E remove()
-- E poll()
+
+- `E remove()`
+
+- `E poll()`
+
   移除并返回队列的第一个元素，前提是队列不为空。如果队列为空，第一个方法抛出 `NoSuchElementException`，而第二个方法返回 `null`。
-- E element()
-- E peek()
+
+- `E element()`
+
+- `E peek()`
+
   返回队列头部的元素但不将其移除，前提是队列不为空。如果队列为空，第一个方法抛出 `NoSuchElementException`，而第二个方法返回 `null`。
 
-## java.util.SequencedCollection<E> 21
+## `java.util.SequencedCollection<E>` 21
 
-- void addFirst(E element)
-- void addLast(E element)
+- `void addFirst(E element)`
+
+- `void addLast(E element)`
+
   在此集合的第一个元素之前或最后一个元素之后添加指定的元素。如果集合已满，则抛出 `IllegalStateException`。
-- E removeFirst()
-- E removeLast()
+
+- `E removeFirst()`
+
+- `E removeLast()`
+
   移除并返回集合的第一个或最后一个元素，前提是集合不为空。如果集合为空，则抛出 `NoSuchElementException`。
-- E getFirst()
-- E getLast()
+
+- `E getFirst()`
+
+- `E getLast()`
+
   返回集合的第一个或最后一个元素但不将其移除，前提是集合不为空。如果集合为空，则抛出 `NoSuchElementException`。
 
-## java.util.Deque<E> 6
+## `java.util.Deque<E>` 6
 
-- boolean offerFirst(E element)
-- boolean offerLast(E element)
+- `boolean offerFirst(E element)`
+
+- `boolean offerLast(E element)`
+
   在此双队列的第一个元素之前或最后一个元素之后添加指定的元素。如果队列已满，返回 `false`。
-- E pollFirst()
-- E pollLast()
+
+- `E pollFirst()`
+
+- `E pollLast()`
+
   移除并返回双队列的第一个元素之前或最后一个元素之后的元素，前提是队列不为空。如果队列为空，返回 `null`。
-- E peekFirst()
-- E peekLast()
+
+- `E peekFirst()`
+
+- `E peekLast()`
+
   返回双队列的第一个或最后一个元素但不将其移除，前提是队列不为空。如果队列为空，返回 `null`。
 
-## java.util.ArrayDeque<E> 6
+## `java.util.ArrayDeque<E>` 6
 
-- ArrayDeque()
-- ArrayDeque(int initialCapacity)
+- `ArrayDeque()`
+
+- `ArrayDeque(int initialCapacity)`
+
   构造一个初始容量为 16 或给定初始容量的无界双队列。
 
 ## 9.3.6. 优先级队列
@@ -18105,19 +18573,23 @@ java.util.Queue<E> 5.0
 
 列表 9.5 展示了优先级队列的运行。与 `TreeSet` 的迭代不同，这里的迭代不会按排序顺序访问元素。然而，移除操作总是产生剩余的最小元素。
 
-## 列表 9.5
-priorityQueue/PriorityQueueTest.java
+### 列表 9.5
+
+`priorityQueue/PriorityQueueTest.java`
+
+
 
 ```java
 package priorityQueue;
 
 import java.util.*;
 import java.time.*;
+
 /**
-  * 此程序演示了 PriorityQueue 的用法
-  * @version 1.02 2015-06-26
-  * @author Cay Horstmann
-  */
+ * 此程序演示了 PriorityQueue 的用法
+ * @version 1.02 2015-06-26
+ * @author Cay Horstmann
+ */
 public class PriorityQueueTest {
     public static void main(String[] args) {
         var pq = new PriorityQueue<LocalDate>();
@@ -18137,23 +18609,26 @@ public class PriorityQueueTest {
 }
 ```
 
-## java.util.PriorityQueue 5.0
+## `java.util.PriorityQueue` 5.0
 
-- PriorityQueue()
-- PriorityQueue(int initialCapacity)
-  构造一个用于存储 Comparable 对象的优先级队列。
-- PriorityQueue(int initialCapacity, Comparator<? super E> c)
+- `PriorityQueue()`
+- `PriorityQueue(int initialCapacity)`
+
+  构造一个用于存储 `Comparable` 对象的优先级队列。
+
+- `PriorityQueue(int initialCapacity, Comparator<? super E> c)`
+
   构造一个优先级队列并使用指定的比较器对其元素进行排序。
 
 ## 9.4. Map
 
-Map 是一个将键映射到值的集合。Map 不能包含重复的键；每个键最多映射到一个值。Java 框架为 Map 提供了两种通用的实现：HashMap 和 TreeMap。这两个类都实现了 Map 接口，并且值与键相关。
+Map 是一个将键映射到值的集合。Map 不能包含重复的键；每个键最多映射到一个值。Java 框架为 Map 提供了两种通用的实现：`HashMap` 和 `TreeMap`。这两个类都实现了 `Map` 接口，并且值与键相关。
 
 ### 9.4.1. 基础 Map 操作
 
 你应该选择哈希还是还是树？像 Set 一样，哈希的通常更快，如果你不需要按顺序访问键，则哈希是首选。
 
-这里是设置员工哈希 Map的方法：
+这里是设置员工哈希 Map 的方法：
 
 ```java
 var staff = new HashMap<String, Employee>();
@@ -18161,7 +18636,7 @@ var harry = new Employee("Harry");
 staff.put("987996", harry);
 ```
 
-向 map 添加对象时，必须提供键。在我们的案例中，键是字符串，对应的值是 Employee 对象。要检索对象，必须使用（并记住）键。
+向 map 添加对象时，必须提供键。在我们的案例中，键是字符串，对应的值是 `Employee` 对象。要检索对象，必须使用（并记住）键。
 
 ```java
 var id = "987996";
@@ -18186,10 +18661,10 @@ int score = scores.getOrDefault(id, 0); // 获取 0
 
 `remove` 方法从 map 中移除给定键的元素。`size` 方法返回 map 中条目的数量。
 
-遍历 map 的键和值的简单方法是使用 `forEach` 方法。提供一个接收键和值的 表达式。该表达式会对 map 的每个条目依次调用。
+遍历 map 的键和值的简单方法是使用 `forEach` 方法。提供一个接收键和值的表达式。该表达式会对 map 的每个条目依次调用。
 
 ```java
-scores.forEach((k, v) -> 
+scores.forEach((k, v) ->
     System.out.println("key=" + k + ", value=" + v));
 ```
 
@@ -18197,7 +18672,7 @@ scores.forEach((k, v) ->
 
 与一个键关联，并调用 `get` 方法查找某个值。最后，我们遍历项集。
 
-# 列表 9.6 map/MapTest.java
+## 列表 9.6 `map/MapTest.java`
 
 ```java
 package map;
@@ -18236,70 +18711,80 @@ public class MapTest {
 }
 ```
 
-```java
-java.util.Map<K, V> 1.2
-```
+### `java.util.Map<K, V>` 1.2
 
-- V get(Object key)
-  获取与键关联的值；返回与该键关联的对象，如果在 map 中未找到该键，则返回 null。实现类可以禁止 null 键。
+- `V get(Object key)`
+
+  获取与键关联的值；返回与该键关联的对象，如果在 map 中未找到该键，则返回 `null`。实现类可以禁止 `null` 键。
 
 ```java
 default V getOrDefault(Object key, V defaultValue)
-获取与键关联的值；返回与该键关联的对象，如果在 map 中未
-找到该键，则返回 defaultValue。
 ```
 
-- put(K key, V value)
-  将键和值的关联放入 map 中。如果键已经存在，则新对象将替换之前与该键关联的旧对象。此方法返回键的旧值，如果该键之前不存在，则返回 null。实现类可以禁止 null 键或值。
+获取与键关联的值；返回与该键关联的对象，如果在 map 中未找到该键，则返回 `defaultValue`。
 
-- void putAll(Map<? extends K, ? extends V> entries)
+- `put(K key, V value)`
+
+  将键和值的关联放入 map 中。如果键已经存在，则新对象将替换之前与该键关联的旧对象。此方法返回键的旧值，如果该键之前不存在，则返回 `null`。实现类可以禁止 `null` 键或值。
+
+- `void putAll(Map<? extends K, ? extends V> entries)`
+
   将指定 map 中的所有项添加到此 map 中。
 
-- boolean containsKey(Object key)
-  如果 map 中存在该键，则返回 true。
+- `boolean containsKey(Object key)`
 
-- boolean containsValue(Object value)
-  如果 map 中存在该值，则返回 true。
+  如果 map 中存在该键，则返回 `true`。
 
-- default void forEach(BiConsumer<? super K,? super V> action)
+- `boolean containsValue(Object value)`
+
+  如果 map 中存在该值，则返回 `true`。
+
+- `default void forEach(BiConsumer<? super K,? super V> action)`
+
   将操作应用于此 map 的所有键/值对。
 
-```java
-java.util.HashMap<K, V> 1.2
-```
+### `java.util.HashMap<K, V>` 1.2
 
-* HashMap()
-* HashMap(int initialCapacity)
-* HashMap(int initialCapacity, float loadFactor)
+- `HashMap()`
+- `HashMap(int initialCapacity)`
+- `HashMap(int initialCapacity, float loadFactor)`
+
   构造一个具有指定容量和负载因子的空哈希表（负载因子是一个 0.0 到 1.0 之间的数字，决定了哈希表在达到多少百分比的率时重新哈希到更大的表）。默认负载因子为 0.75。
-* static <K, V> HashMap<K, V> newHashMap(int numMappings)
-  构造具有足够初始容量的空哈希表，以容纳预期的项数（numMappings）而无需重新哈希。
 
-```java
-java.util.TreeMap<K, V> 1.2
-```
+- `static <K, V> HashMap<K, V> newHashMap(int numMappings)`
 
-* TreeMap()
-  为实现了 Comparable 接口的键构造一个空的 TreeMap。
-* TreeMap(Comparator<? super K> c)
+  构造具有足够初始容量的空哈希表，以容纳预期的项数（`numMappings`）而无需重新哈希。
+
+### `java.util.TreeMap<K, V>` 1.2
+
+- `TreeMap()`
+
+  为实现了 `Comparable` 接口的键构造一个空的 `TreeMap`。
+
+- `TreeMap(Comparator<? super K> c)`
+
   构造一个树 map，并使用指定的比较器对其键进行排序。
 
-- TreeMap(Map<? extends K, ? extends V> entries)
+- `TreeMap(Map<? extends K, ? extends V> entries)`
+
   构造一个树 map 并添加 map 中的所有项。
-- TreeMap(SortedMap<? extends K, ? extends V> entries)
+
+- `TreeMap(SortedMap<? extends K, ? extends V> entries)`
+
   构造一个树 map，添加排序 map 中的所有项，并使用与给定排序 map 相同的元素比较器。
 
-```java
-java.util.SortedMap<K, V> 1.2
-```
+### `java.util.SortedMap<K, V>` 1.2
 
-- Comparator<? super K> comparator()
-返回用于排序键的比较器，如果键是通过 Comparable 接口的 compare 方法比较的，则返回 null。
-- K firstKey()
-- K lastKey()
+- `Comparator<? super K> comparator()`
+
+  返回用于排序键的比较器，如果键是通过 `Comparable` 接口的 `compare` 方法比较的，则返回 `null`。
+
+- `K firstKey()`
+- `K lastKey()`
+
   返回 map 中最小或最大的键。
 
-# 9.4.2. 更新 Map 项
+## 9.4.2. 更新 Map 项
 
 处理 map 时一个棘手的部分是更新项。通常情况下，你会获取与键关联的旧值，更新它，然后放回更新后的值。但你必须担心键第一次出现的特殊情况。考虑使用 map 来统计一个单词在文件中出现的次数。当我们看到一个单词时，我们想这样增加计数器：
 
@@ -18307,7 +18792,7 @@ java.util.SortedMap<K, V> 1.2
 counts.put(word, counts.get(word) + 1);
 ```
 
-这种方法可以有效，但在第一次遇到该单词时除外。那种情况下它会返回 null。一个简单的补救办法是使用 `getOrDefault`：
+这种方法可以有效，但在第一次遇到该单词时除外。那种情况下它会返回 `null`。一个简单的补救办法是使用 `getOrDefault`：
 
 ```java
 counts.put(word, counts.getOrDefault(word, 0) + 1);
@@ -18333,11 +18818,9 @@ counts.replace(word, counts.get(word) + 1);
 
 注意 `replace` 仅在键已经存在时起作用。如果你想在键不存在时添加值，请使用 `putIfAbsent`。
 
+键/值对形成了一个集合，因为在 map 中一个键只能有一个副本。以下方法：
 
-
-键/值对形成了一个集合，因为在 map 中一个键只能有一个副本。以下方法
-
-```
+```java
 Set<K> resultSet()
 Collection<V> values()
 Set<Map.Entry<K, V>> entrySet()
@@ -18349,7 +18832,7 @@ Set<Map.Entry<K, V>> entrySet()
 
 例如，你可以枚举 map 的所有键：
 
-```
+```java
 Set<String> keys = map.keySet();
 for (String key : keys)
 {
@@ -18359,7 +18842,7 @@ for (String key : keys)
 
 如果你想同时查看键和值，可以通过枚举条（entries）来避免值的查找。使用以下代码骨架：
 
-```
+```java
 for (Map.Entry<String, Integer> entry : counts.entrySet()) {
     String k = entry.getKey();
     Integer v = entry.getValue();
@@ -18369,7 +18852,7 @@ for (Map.Entry<String, Integer> entry : counts.entrySet()) {
 
 `Map.Entry` 实例与 map 是连接的。你可以使用 entry 对象更新底层 map 中的值。
 
-```
+```java
 for (Map.Entry<String, Integer> entry : counts.entrySet()) {
     String k = entry.getKey();
     Integer v = entry.getValue();
@@ -18379,11 +18862,11 @@ for (Map.Entry<String, Integer> entry : counts.entrySet()) {
 
 反之，如果你通过其他手段更新了值（例如通过调用 map 的 `put` 方法），条 也会随之更新。
 
-如果你想将 entry传递给其他方法，应该通过调用 `Map.Entry.copyOf(entry)` 将它们与 map 解关联。你也可以通过调用 `Map.entry(key, value)` 创建不关联的 `Map.Entry` 实例。每当你需要一对值时，这非常有用。
+如果你想将 entry 传递给其他方法，应该通过调用 `Map.Entry.copyOf(entry)` 将它们与 map 解关联。你也可以通过调用 `Map.entry(key, value)` 创建不关联的 `Map.Entry` 实例。每当你需要一对值时，这非常有用。
 
 **提示：** 你可以使用 `var` 迭代来避免使用繁琐的 `Map.Entry`。
 
-```
+```java
 for (var entry : map.entrySet())
 {
     do something with entry.getKey(), entry.getValue()
@@ -18392,29 +18875,32 @@ for (var entry : map.entrySet())
 
 或者简单地使用 `forEach` 方法：
 
-```
+```java
 map.forEach((k, v) ->
 {
     do something with k, v
 });
 ```
 
-如果你在键集 视图上调用迭代器的 `remove` 方法，你实际上是从 map 中删除了键及其关联的值。然而，你不能向键集视图中添加元素。在不同时添加值的情况下添加键是没有意义的。如果你尝试调用 `add` 方法，它会抛出 `UnsupportedOperationException`。entry 视图也有相同的限制，尽管在概念上添加一个新的键/值对是有意义的。
+如果你在键集视图上调用迭代器的 `remove` 方法，你实际上是从 map 中删除了键及其关联的值。然而，你不能向键集视图中添加元素。在不同时添加值的情况下添加键是没有意义的。如果你尝试调用 `add` 方法，它会抛出 `UnsupportedOperationException`。entry 视图也有相同的限制，尽管在概念上添加一个新的键/值对是有意义的。
 
 - `Set<Map.Entry<K, V>> entrySet()` 返回一个包含 `Map.Entry` 对象的集合视图，即 map 中的键/值对。你可以从该集合中移除元素，这些元素也会从 map 中被移除，但你不能添加任何元素。
+
 - `Set<K> keySet()` 返回一个 map 中所有键的集合视图。你可以从该集合中移除元素，相应的键和关联的值也会从 map 中被移除，但你不能添加任何元素。
+
 - `Collection<V> values()` 返回一个 map 中所有值的集合视图。你可以从该集合中移除元素，被移除的值及其对应的键也会从 map 中被移除，但你不能添加任何元素。
 
-```
-java.util.Map.Entry<K, V>
-```
+### `java.util.Map.Entry<K, V>`
 
-* `K getKey()` 返回此 entry 的键或值。
-* `V getValue()` 返回此 entry 的键或值。
-* `V setValue(V newValue)` 将关联 map 中的值更改为值并返回旧值。
-* `static <K, V> Map.Entry<K,V> copyOf(Map.Entry<? extends K, ?> extends V)` 产生给定 map entry 的拷贝。与 map entry set 中的元素不同，该拷贝不是“活”的（live）。调用 `setValue` 不更新任何 map。
+- `K getKey()` 返回此 entry 的键或值。
 
-# 9.4.4. 弱哈希映射 (Weak Hash Maps)
+- `V getValue()` 返回此 entry 的键或值。
+
+- `V setValue(V newValue)` 将关联 map 中的值更改为值并返回旧值。
+
+- `static <K, V> Map.Entry<K,V> copyOf(Map.Entry<? extends K, ?> extends V)` 产生给定 map entry 的拷贝。与 map entry set 中的元素不同，该拷贝不是“活”的（live）。调用 `setValue` 不更新任何 map。
+
+## 9.4.4. 弱哈希映射（Weak Hash Maps）
 
 Java 集合框架提供了几个针对特殊需求的 map 类，我们将在本节及后续章节中简要讨论它们。
 
@@ -18424,11 +18910,13 @@ Java 集合框架提供了几个针对特殊需求的 map 类，我们将在本�
 
 这是该机制的内部原理。`WeakHashMap` 使用弱引用（weak references）来持有键。`WeakReference` 对象持有对另一个对象的引用——在我们的案例中是哈希键。这类类型的对象会被特殊对待。通常，如果垃圾回收器发现一个对象是弱可及的，它就会回收它。但如果该对象是强可及的，它就会留存。
 
-# 9.4.5. 链接集合和映射 (Linked Sets and Maps)
+## 9.4.5. 链接集合和映射（Linked Sets and Maps）
 
 `LinkedHashSet` 和 `LinkedHashMap` 类记得项目插入的顺序。例如，考虑以下 map：
 
-```
+
+
+```java
 var staff = new LinkedHashMap<String, String>();
 staff.put("144", "Amy Lee");
 staff.put("567", "Harry Hacker");
@@ -18452,11 +18940,11 @@ staff.put("456", "Francesca Cruz");
 
 链接哈希映射还可以使用*访问顺序*（access order），而不是插入顺序。每当你调用 `get` 或 `put`，受影响的 entry 都会从当前位置移除并放在链列表的末尾。（受影响的只是链表中的位置。）要构造这样的 hash map，调用：
 
-```
+```java
 HashMap<K, V>(initialCapacity, 0.75F, true)
 ```
 
-访问顺序对于实现缓存的“最近未使用”策略有用。例如，你可能希望将频繁访问的 留在内存中，并从数据库读取不频繁访问的对象。当表中找不到 entry 且表已满时，你可以获取表的迭代器并移除它枚举的首批元素。那些 entry 就是最少使用的。
+访问顺序对于实现缓存的“最近未使用”策略有用。例如，你可能希望将频繁访问的留在内存中，并从数据库读取不频繁访问的对象。当表中找不到 entry 且表已满时，你可以获取表的迭代器并移除它枚举的首批元素。那些 entry 就是最少使用的。
 
 你甚至可以自动化该过程。创建一个 `LinkedHashMap` 子类并重写 `removeEldestEntry` 方法。该方法在添加新 entry 后被调用。如果方法返回 `true`，则移除最旧的 entry。例如，以下缓存保持大小最多为 100 个元素：
 
@@ -18471,11 +18959,9 @@ var cache = new LinkedHashMap<K, V>(128, 0.75F, true)
 
 你可以检查旧 entry 以决定是否移除它。例如，你可能想检查存储在 eldest 中的时间戳，并在其足够旧时才请求移除。这不会自动移除旧元素，因为 `removeEldestEntry` 方法每个新 entry 只调用一次。你可以在 `removeEldestEntry` 方法中修改 map，例如移除足够旧的初始元素。在这种情况下，你必须返回 `false`。
 
+`EnumSet` 是一种高效的集合实现，其元素属于某种枚举类型（enumerated type）。由于枚举类型的实例数量是有限的，`EnumSet` 在内部简单地实现为位序列。如果集合中存在对应的值，则该对应的位就会被标记。
 
-
-EnumSet 是一种高效的集合实现，其元素属于某种枚举类型（enumerated type）。由于枚举类型的实例数量是有限的，EnumSet 在内部简单地实现为位序列。如果集合中存在对应的值，则该对应的位就会被标记。
-
-EnumSet 类没有公共构造函数。使用静态工厂方法来构造该集合：
+`EnumSet` 类没有公共构造函数。使用静态工厂方法来构造该集合：
 
 ```java
 enum Weekday { MONDAY, TUESDAY, WEDNESDAY, THURSDAY }
@@ -18485,23 +18971,23 @@ EnumSet<Weekday> workday = EnumSet.range(Weekday.MONDAY, Weekday.FRIDAY);
 EnumSet<Weekday> mwf = EnumSet.of(Weekday.MONDAY, Weekday.WEDNESDAY, Weekday.FRIDAY);
 ```
 
-你可以使用 Set 接口的常用方法来修改 EnumSet。
+你可以使用 `Set` 接口的常用方法来修改 `EnumSet`。
 
-EnumMap 是一个键属于某种枚举类型的映射。它简单且高效地实现为值的数组。你需要在构造函数中指定键的类型：
+`EnumMap` 是一个键属于某种枚举类型的映射。它简单且高效地实现为值的数组。你需要在构造函数中指定键的类型：
 
 ```java
 var personInCharge = new EnumMap<Weekday, Employee>();
 ```
 
-**注意：** 在 EnumSet 和 EnumMap 的 API 文档中，你会看到形式如 `E extends Enum<E>` 的奇怪类型参数。这仅仅意味着“E 是一个枚举类型”。所有枚举类型都扩展泛型 Enum 类。例如，Weekday 扩展了 Enum<Weekday>。
+**注意：** 在 `EnumSet` 和 `EnumMap` 的 API 文档中，你会看到形式如 `E extends Enum<E>` 的奇怪类型参数。这仅仅意味着“E 是一个枚举类型”。所有枚举类型都扩展泛型 `Enum` 类。例如，`Weekday` 扩展了 `Enum<Weekday>`。
 
 ## 9.4.7. 标识 Hash Maps
 
-IdentityHashMap 有非常特殊的用途。在这里，键的哈希值不应该通过 `hashCode` 方法计算，而是通过 `System.identityHashCode` 方法计算。Object.hashCode 使用该方法根据对象的内存地址计算哈希码。此外，在比较对象时，IdentityHashMap 使用 `==` 而不是 `equals`。
+`IdentityHashMap` 有非常特殊的用途。在这里，键的哈希值不应该通过 `hashCode` 方法计算，而是通过 `System.identityHashCode` 方法计算。`Object.hashCode` 使用该方法根据对象的内存地址计算哈希码。此外，在比较对象时，`IdentityHashMap` 使用 `==` 而不是 `equals`。
 
 换句话说，不同的键对象即使内容相同，也被认为是不同的。这个类常用于实现对象遍历算法（例如对象序列化），在这些算法中，你需要跟踪哪些对象已经被遍历过了。
 
-> **注意：** Java 20 修复了 IdentityHashMap 中一个引入自 Java 8 的细微 Bug（https://bugs.openjdk.org/browse/JDK-8284901）。两个不常用的方法错误地使用了 `equals` 而不是 `==`：
+> **注意：** Java 20 修复了 `IdentityHashMap` 中一个引入自 Java 8 的细微 Bug（https://bugs.openjdk.org/browse/JDK-8284901）。两个不常用的方法错误地使用了 `equals` 而不是 `==`：
 
 ```java
 void remove(Object key, Object value)
@@ -18514,56 +19000,81 @@ void replace(K key, V oldValue, V newValue)
 
 ### java.util.WeakHashMap<K, V> 1.2
 
-- WeakHashMap()
-- WeakHashMap(int initialCapacity)
-- WeakHashMap(int initialCapacity, float loadFactor)
+- `WeakHashMap()`
+- `WeakHashMap(int initialCapacity)`
+- `WeakHashMap(int initialCapacity, float loadFactor)`
+
   构造一个具有指定容量和负载因子的空哈希映射。
 
 ### java.util.LinkedHashSet<E> 1.4
 
-- LinkedHashSet()
-- LinkedHashSet(int initialCapacity)
-- LinkedHashSet(int initialCapacity, float loadFactor)
+- `LinkedHashSet()`
+- `LinkedHashSet(int initialCapacity)`
+- `LinkedHashSet(int initialCapacity, float loadFactor)`
+
   构造一个具有指定容量和负载因子的空链式哈希集合。
 
 ### java.util.LinkedHashMap<K, V> 1.4
 
-- LinkedHashMap()
-- LinkedHashMap(int initialCapacity)
-- LinkedHashMap(int initialCapacity, float loadFactor)
-- LinkedHashMap(int initialCapacity, float loadFactor, boolean accessOrder)
-  构造一个具有指定容量、负载因子和排序的空链式哈希映射。accessOrder 参数为 true 表示访问顺序，false 表示插入顺序。
-- protected boolean removeEldestEntry(Map.Entry<K, V> eldest)
-  如果你希望移除最旧的条目，应重写此方法并返回 true。eldest 参数是要考虑移除的条目。该方法在条目添加到映射后调用。默认实现返回 false——默认不会移除旧元素。但你可以重新定义此方法以选择性地返回 true——例如，如果旧条目符合某些条件，或者映射超过了特定大小。
+- `LinkedHashMap()`
+- `LinkedHashMap(int initialCapacity)`
+- `LinkedHashMap(int initialCapacity, float loadFactor)`
+- `LinkedHashMap(int initialCapacity, float loadFactor, boolean accessOrder)`
+
+  构造一个具有指定容量、负载因子和排序的空链式哈希映射。`accessOrder` 参数为 `true` 表示访问顺序，`false` 表示插入顺序。
+
+- `protected boolean removeEldestEntry(Map.Entry<K, V> eldest)`
+
+  如果你希望移除最旧的条目，应重写此方法并返回 `true`。`eldest` 参数是要考虑移除的条目。该方法在条目添加到映射后调用。默认实现返回 `false`——默认不会移除旧元素。但你可以重新定义此方法以选择性地返回 `true`——例如，如果旧条目符合某些条件，或者映射超过了特定大小。
 
 ### java.util.EnumSet<E> extends Enum<E> 5.0
 
-- static <E extends Enum<E>> EnumSet<E> allOf(Class<E> enumType)
+- `static <E extends Enum<E>> EnumSet<E> allOf(Class<E> enumType)`
+
   返回一个包含给定枚举类型所有值的可变集合。
-- static <E extends Enum<E>> EnumSet<E> noneOf(Class<E> enumType)
+
+- `static <E extends Enum<E>> EnumSet<E> noneOf(Class<E> enumType)`
+
   返回一个初始为空的可变集合。
-- static <E extends Enum<E>> EnumSet<E> range(E from, E to)
-  返回一个包含从 from 到 to 之间（包含）所有值的可变集合。
-- static <E extends Enum<E>> EnumSet<E> of(E e)
+
+- `static <E extends Enum<E>> EnumSet<E> range(E from, E to)`
+
+  返回一个包含从 `from` 到 `to` 之间（包含）所有值的可变集合。
+
+- `static <E extends Enum<E>> EnumSet<E> of(E e)`
+
   ..
-- static <E extends Enum<E>> EnumSet<E> of(E e1, E e2, E e3, E e4, E e5)
-- static <E extends Enum<E>> EnumSet<E> of(E first, E... rest)
-  返回一个包含给定元素的可变集合，这些元素不能为 null。
-- public static <E extends Enum<E>> EnumSet<E> copyOf(EnumSet<E> s)
-- public static <E extends Enum<E>> EnumSet<E> copyOf(Collection<E> c)
+
+- `static <E extends Enum<E>> EnumSet<E> of(E e1, E e2, E e3, E e4, E e5)`
+
+- `static <E extends Enum<E>> EnumSet<E> of(E first, E... rest)`
+
+  返回一个包含给定元素的可变集合，这些元素不能为 `null`。
+
+- `public static <E extends Enum<E>> EnumSet<E> copyOf(EnumSet<E> s)`
+
+- `public static <E extends Enum<E>> EnumSet<E> copyOf(Collection<E> c)`
+
   创建一个包含给定元素的可变集合。
 
 ### java.util.EnumMap<K, V> 5.0
 
-- EnumMap()
-- EnumMap(int initialCapacity)
-- EnumMap(int initialCapacity, float loadFactor)
+- `EnumMap()`
+- `EnumMap(int initialCapacity)`
+- `EnumMap(int initialCapacity, float loadFactor)`
+
   构造一个具有指定容量和负载因子的空哈希映射。
-- EnumMap(Class<K> keyType)
+
+- `EnumMap(Class<K> keyType)`
+
   构造一个具有给定枚举类型键的空映射。
-- EnumMap(Class<K> keyType, int initialCapacity)
+
+- `EnumMap(Class<K> keyType, int initialCapacity)`
+
   构造一个具有给定枚举类型键和指定容量的空映射。
-- EnumMap(Class<K> keyType, int initialCapacity, float loadFactor)
+
+- `EnumMap(Class<K> keyType, int initialCapacity, float loadFactor)`
+
   构造一个具有给定枚举类型键、指定容量和负载因子的空映射。
 
 ## 9.5. 拷贝与视图
@@ -18620,7 +19131,7 @@ $1 => [Paul, Mary, Peter]
 
 ### 9.5.1. 小集合
 
-List 和 Set 接口有十一个具有零到十个参数的方法，以及一个带有变长参数的 of 方法。
+`List` 和 `Set` 接口有十一个具有零到十个参数的方法，以及一个带有变长参数的 `of` 方法。
 
 参数的数量。为了提高效率，提供了相应的特化实现。
 
@@ -18647,7 +19158,7 @@ var names = new ArrayList<>(List.of("Peter", "Pa")
 
 该方法调用
 
-```
+```java
 Collections.nCopies(n, anObject)
 ```
 
@@ -18663,7 +19174,7 @@ List<String> settings = Collections.nCopies(100,
 
 > **注意：** `Collections` 类包含许多实用方法，其参数或返回值是集合。不要将其与 `Collection` 接口混淆。
 
-> 提示：Java 中没有 `Pair` 类，一些程序员使用 `Map.Entry` 作为一种廉价的对（pair）替代方案。
+> **提示：** Java 中没有 `Pair` 类，一些程序员使用 `Map.Entry` 作为一种廉价的对（pair）替代方案。
 
 ## 9.5.2. 不可修改的拷贝和视图
 
@@ -18692,7 +19203,7 @@ Set<String> nameSet = Set.copyOf(names); // No modifiable
 
 你可以通过八种方法获取不可修改视图：
 
-```
+```java
 Collections.unmodifiableCollection
 Collections.unmodifiableList
 Collections.unmodifiableSet
@@ -18716,6 +19227,8 @@ lookAt(Collections.unmodifiableList(staff));
 `Collections.unmodifiableList` 方法返回一个实现 `List` 接口的类的对象。它的访问方法从 `staff` 集合中检索值。当然，`lookAt` 方法可以调用 `List` 接口的所有方法，而不仅仅是访问器。但所有变异器方法（如 `add`）都已重新定义，变为抛出 `UnsupportedOperationException`，而不是将调用转发给底层集合。
 
 不可修改视图并不会使集合本身变为不可变。你仍然可以通过其原始引用（在我们的例子中为 `staff`）修改集合。你仍然可以对集合中的元素调用变变器方法。
+
+
 
 视图封装的是*接口*而不是实际的集合对象，因此你只能访问接口中定义的方法。例如，`LinkedList` 类具有便利方法 `addFirst` 和 `addLast`，这些方法并不属于 `List` 接口。这些方法无法通过不可修改视图访问。
 
@@ -18848,10 +19361,15 @@ java.util.List 1.2
 ```
 
 - static <E> List<E> of() 9
+
 - static <E> List<E> of(E e1) 9
+
  ...
+
 - static <E> List<E> of(E e1, E e2, E e3, E e4, E e5, E6, E e7, E e8, E e9, E e10) 9
+
 - static <E> List<E> of(E... elements) 9 返回一个给定元素的不可修改列表，这些元素不能为 null。
+
 - static <E> List<E> copyOf(Collection<? extends E> coll) 10 返回给定集合的不可修改副本。
 
 ```
@@ -18859,10 +19377,15 @@ java.util.Set 1.2
 ```
 
 - static <E> Set<E> of() 9
+
 - static <E> Set<E> of(E e1) 9
+
 ...
+
 - static <E> Set<E> of(E e1, E e2, E e3, E e4, E e5, E6, E e7, E e8, E e9, E e10) 9
+
 - static <E> Set<E> of(E... elements) 9 返回一个给定元素的不可修改集合，这些元素不能为 null。
+
 - static <E> Set<E> copyOf(Collection<? extends E> coll) 10 返回给定集合的不可修改副本。
 
 ```
@@ -18870,10 +19393,15 @@ java.util.Map 1.2
 ```
 
 - static <K, V> Map<K, V> of() 9
+
 - static <K, V> Map<K, V> of(K k1, V1) 9
+
 ...
+
 - static <K, V> Map<K, V> of(K k1, V1, K k2, V2, K k3, V3, K k4, V4, K k5, V5, K k6, V6, K k7, V7, K k8, V8, K k9, V9, K k10, V10) 9 返回一个键值对不可修改映射，这些键值不能为 null。
+
 - static <K, V> Map.Entry<K, V> entry(K k, V) 9 返回一个给定键和值的不可修改映射，这些键值不能为 null。
+
 - static <K, V> Map<K, V> of(...) 返回一个不可修改的
 
 ```
@@ -18906,9 +19434,6 @@ java.util.Collections 1.2
 - static <K, V> SortedMap<K, V> checkedSortedMap(SortedMap<K, V>, Class<K>, Class<V>)
 - static <K, V> NavigableMap<K, V> checkedNavigableMap(NavigableMap<K, V>, Class<K>, Class<V>)
 
-
-
-
 * static <E> List<E> nCopies(int n, E value)
   产生一个包含 n 个相同值的不可修改变列表。
 * static <E> List<E> singletonList(E value)
@@ -18929,14 +19454,18 @@ java.util.Collections 1.2
   返回数组中元素的列表视图，该列表是可修改的但不可调整大小。
 
 ```java
+
 java.util.List<E> 1.2
+
 ```
 
 - List<E> subList(int firstIncluded, int firstExcluded)
   返回位置范围内元素的列表视图。
 
 ```java
+
 java.util.SortedSet<E> 1.2
+
 ```
 
 - SortedSet<E> subset(E firstIncluded, E firstExcluded)
@@ -18945,66 +19474,68 @@ java.util.SortedSet<E> 1.2
   返回范围内元素的视图。
 
 ```java
+
 java.util.NavigableSet<E> 6
-```
 
-- NavigableSet<E> subset(E from, boolean fromIncluded, E to, boolean toIncluded)
-- NavigableSet<E> headSet(E to, boolean toIncluded)
-- NavigableSet<E> tailSet(E from, boolean fromIncluded)
-  返回范围内元素的视图。布尔标志决定边界是否包含在视图中。
 
-## java.util.SortedMap<K, V> 1.2
 
-- SortedMap<K, V> subMap(K firstIncluded, K firstExcluded)
-- SortedMap<K, V> headMap(K firstExcluded)
-- SortedMap<K, V> tailMap(K firstIncluded)
-  返回键在范围内的条目映射视图。
 
-## java.util.NavigableMap<K, V> 6
+- `NavigableSet<E> subset(E from, boolean fromIncluded, E to, boolean toIncluded)`
+- `NavigableSet<E> headSet(E to, boolean toIncluded)`
+- `NavigableSet<E> tailSet(E from, boolean fromIncluded)`
 
-- NavigableMap<K, V> subMap(K from, boolean fromIncluded, K to, boolean toIncluded)
-- NavigableMap<K, V> headMap(K from, boolean fromIncluded)
-- NavigableMap<K, V> tailMap(K to, boolean toIncluded)
-  返回键在范围内的条目映射视图。布尔标志决定边界是否包含在视图中。
+返回范围内元素的视图。布尔标志决定边界是否包含在视图中。
 
-## java.util.SequencedCollection<E> 21
+## `java.util.SortedMap<K, V>` 1.2
 
-- SequencedCollection<E> reversed()
-  产生该顺序有序集合的视图，元素按逆序排列。
+- `SortedMap<K, V> subMap(K firstIncluded, K firstExcluded)`
+- `SortedMap<K, V> headMap(K firstExcluded)`
+- `SortedMap<K, V> tailMap(K firstIncluded)`
 
-```java
-java.util.SequencedSet<E> 21
-```
+返回键在范围内的条目映射视图。
 
-- SequencedSet<E> reversed()
-  产生该顺序有序集合的视图，元素按逆序排列。
+## `java.util.NavigableMap<K, V>` 6
 
-```java
-java.util.SequencedMap<E> 21
-```
+- `NavigableMap<K, V> subMap(K from, boolean fromIncluded, K to, boolean toIncluded)`
+- `NavigableMap<K, V> headMap(K from, boolean fromIncluded)`
+- `NavigableMap<K, V> tailMap(K to, boolean toIncluded)`
 
-- SequencedMap<E> reversed()
-  产生该顺序有序映射的视图，键按逆序排列。
+返回键在范围内的条目映射视图。布尔标志决定边界是否包含在视图中。
+
+## `java.util.SequencedCollection<E>` 21
+
+- `SequencedCollection<E> reversed()`
+
+产生该顺序有序集合的视图，元素按逆序排列。
+
+`java.util.SequencedSet<E>` 21
+
+- `SequencedSet<E> reversed()`
+
+产生该顺序有序集合的视图，元素按逆序排列。
+
+`java.util.SequencedMap<E>` 21
+
+- `SequencedMap<E> reversed()`
+
+产生该顺序有序映射的视图，键按逆序排列。
 
 ## 9.6 算法
 
 除了实现集合类外，Java 集合框架还提供了许多实用的算法。在接下来的章节中，你将看到如何使用这些算法，以及如何编写与框架良好协作的自定义算法。
 
-## 9.6.1 泛型算法
+### 9.6.1 泛型算法
 
 泛型接口具有巨大的优势——你只需要实现一次。例如，考虑泛型。在计算最大值时，你只需要实现一个循环。
 
 ```java
 static <T extends Comparable> max(T[] a) {
     if (a.length == 0) throw new NoSuchElementException();
+
     T largest = a[0];
+
     for (int i = 1; i < a.length; i++)
         if (a.i.
-
-
-
-
-
 ```
 
 当然，对于数组，代码会略有不同。
@@ -19014,13 +19545,17 @@ static <T extends Comparable> max(T[] a) {
 ```java
 public static <T extends Comparable> max(Collection<T> col) {
     if (col.isEmpty()) throw new NoSuchElementException();
+
     Iterator<T> iter = col.iterator();
     T largest = iter.next();
+
     while (iter.hasNext()) {
         T next = iter.next();
+
         if (largest.compareTo(next) < 0)
             largest = next;
     }
+
     return largest;
 }
 ```
@@ -19032,16 +19567,17 @@ static <T extends Comparable> max(ArrayList<T>)
 static <T extends Comparable> max(LinkedList<T>)
 ```
 
-## 9.6.2 排序与洗牌
+### 9.6.2 排序与洗牌
 
-计算机老兵有时会回忆他们过去如何使用打孔片进行编程。现在，当然，排序算法是标准库的一部分，Java 语言也不例外。Collections 类中的 `sort` 方法处理实现 List 的集合。
+计算机老兵有时会回忆他们过去如何使用打孔片进行编程。现在，当然，排序算法是标准库的一部分，Java 语言也不例外。`Collections` 类中的 `sort` 方法处理实现 `List` 的集合。
 
 ```java
 var staff = new ArrayList<Employee>();
+
 Collections.sort(staff);
 ```
 
-该方法假设列表元素实现了 `Comparable` 接口。如果你想以其他方式排序列表，可以使用 List 接口的 `sort` 方法并传入一个 `Comparator` 对象。这里是如何按薪水对员工排序：
+该方法假设列表元素实现了 `Comparable` 接口。如果你想以其他方式排序列表，可以使用 `List` 接口的 `sort` 方法并传入一个 `Comparator` 对象。这里是如何按薪水对员工排序：
 
 ```java
 Collections.sort(staff, Comparator.comparingDouble(e -> e.getSalary()));
@@ -19052,9 +19588,6 @@ Collections.sort(staff, Comparator.comparingDouble(e -> e.getSalary()));
 ```java
 Collections.sort(staff, Comparator.reverseOrder(Comparator.comparingDouble(e -> e.getSalary())));
 ```
-
-
-
 
 集合（Collections）不需要实现它们所有的“可选”方法，因此所有带有集合参数的方法必须描述何时将集合传递给算法是安全的。例如，你显然不能将 `modifiableList` 传递给 `sort` 算法。你可以传递什么类型的列表？根据文档，列表必须是可修改的，但不需要是可调整大小。
 
@@ -19067,184 +19600,201 @@ Collections.sort(staff, Comparator.reverseOrder(Comparator.comparingDouble(e -> 
 
 > 注意：在第 6 章中，你已经见过 `Arrays.sort` 方法。它有两个版本，一个用于排序 `Comparable` 实例数组，另一个是带有比较器（comparator）的：
 
-```
+```java
 String[] staff = . . .;
+
 Arrays.sort(staff);
+
 Arrays.sort(staff, Comparator.comparing
 ```
 
-Collections 类有一个 `shuffle` 算法，它的作用与排序相反——它会随机打乱列表中元素的顺序。例如：
+`Collections` 类有一个 `shuffle` 算法，它的作用与排序相反——它会随机打乱列表中元素的顺序。例如：
 
-```
+```java
 ArrayList<Card> cards = . . .;
+
 Collections.shuffle(cards, RandomGenerator.getDet
 ```
 
 如果你提供的列表没有实现 `RandomAccess` 接口，`shuffle` 方法会将元素复制到数组中，打乱数组，然后将打乱后的元素复制回列表。
 
-Listing 9.7 中的程序用 49 个包含 1 到 49 数字的 Integer 对象填充了一个数组列表。然后它随机打乱该列表，并从打乱列表中选择前六个值。最后，它对选定的值进行排序并打印它们。
+Listing 9.7 中的程序用 49 个包含 1 到 49 数字的 `Integer` 对象填充了一个数组列表。然后它随机打乱该列表，并从打乱列表中选择前六个值。最后，它对选定的值进行排序并打印它们。
 
-# Listing 9.7 shuffle/ShuffleTest.java
+### Listing 9.7 `shuffle/ShuffleTest.java`
 
-```
+```java
 1 package shuffle;
+
 2
+
 3 import java.util.*;
+
 4 import java.util.random.*;
+
 5
+
 6 /**
  * 此程序演示了随机洗牌
  * @version 1.13 2023-09-30
  * @author Cay Horstmann
  * */
 public class ShuffleTest {
+
     public static void main(String[] args) {
+
         var numbers = new ArrayList<Integer>();
+
         for (int i = 1; i <= 49; i++) {
             numbers.add(i);
         }
+
         Collections.shuffle(numbers, Random);
+
         List<Integer> winningCombination = numbers;
+
         Collections.sort(winningCombination);
+
         System.out.println(winningCombination);
     }
 }
 ```
 
-java.util.Collections 1.2
+### `java.util.Collections` 1.2
 
-- static <T extends Comparable<? super T>> void sort(List<T> elements) 使用稳定排序算法对列表中的元素进行排序。该算法保证在 O(n log n) 时间内运行，n 是列表的长度。
+- `static <T extends Comparable<? super T>> void sort(List<T> elements)` 使用稳定排序算法对列表中的元素进行排序。该算法保证在 O(n log n) 时间内运行，n 是列表的长度。
+- `static void shuffle(List<??> elements)`
+- `static void shuffle(List<??> elements, Random r)`
+- `static void shuffle(List<??> elements, RandomGenerator r)` 随机打乱列表中元素。该算法运行在 O(n a(n)) 时间内，n 是列表的长度，a(n) 是访问元素的平均时间。
 
-- static void shuffle(List<??> elements)
-- static void shuffle(List<??> elements, Random r)
-- static void shuffle(List<??> elements, RandomGenerator r) 随机打乱列表中元素。该算法运行在 O(n a(n)) 时间内，n 是列表的长度，a(n) 是访问元素的平均时间。
+### `java.util.List<E>` 1.2
 
-java.util.List<E> 1.2
+- `default void sort(Comparator<? super T> comparator)` 使用给定的比较器对此列表进行排序。
 
-- default void sort(Comparator<? super T> comparator) 使用给定的比较器对此列表进行排序。
+### `java.util.Comparator<T>` 1.2
 
-java.util.Comparator<T> 1.2
+- `static <T extends Comparable<? super T>> Comparator<T> reverseOrder()` 返回一个反转 `Comparable` 接口提供的顺序的比较器。
+- `default Comparator<T> reversed()` 返回一个反转此比较器提供的顺序的比较器。
 
-- static <T extends Comparable<? super T>> Comparator<T> reverseOrder() 返回一个反转 Comparable 接口提供的顺序的比较器。
-- default Comparator<T> reversed() 返回一个反转此比较器提供的顺序的比较器。
-
-# 9.6.3. 二分查找
+## 9.6.3 二分查找
 
 要在数组中查找对象，你通常会访问所有元素直到找到匹配项。然而，如果数组是已排序的，你可以查看中间元素，并检查它是否大于你尝试查找的元素。如果是，继续在数组的前半部分查找；否则，在后半部分查找。这使得问题减半，你以相同的方式继续下去。例如，如果数组有 1024 个元素，你将在 10 步后定位匹配项（或确认不存在），而线性搜索在元素存在时平均需要 512 步，在确认不存在时则需要 1024 步。
 
-Collections 类的 `binarySearch` 实现了这种算法。注意，集合必须已经是排过序的，否则算法将返回错误答案。提供集合（必须实现 `List` 接口）和要查找的目标。如果集合不是按 `Comparable` 接口的 `compareTo` 元素排序的，请提供一个比较器对象。
+`Collections` 类的 `binarySearch` 实现了这种算法。注意，集合必须已经是排过序的，否则算法将返回错误答案。提供集合（必须实现 `List` 接口）和要查找的目标。如果集合不是按 `Comparable` 接口的 `compareTo` 元素排序的，请提供一个比较器对象。
 
-```
+```java
 i = Collections.binarySearch(elements, target);
+
 i = Collections.binarySearch(elements, target, c);
 ```
 
-`binarySearch` 方法的非负返回值表示匹配对象的索引。也就是说，在比较顺序下，elements.get(i) 等于 target。如果值为负数，则没有匹配的元素。然而，你可以使用返回值来计算应该将 target 插入集合的哪个位置以保持其排序。在这种情况下，插入点是：
+`binarySearch` 方法的非负返回值表示匹配对象的索引。也就是说，在比较顺序下，`elements.get(i)` 等于 `target`。如果值为负数，则没有匹配的元素。然而，你可以使用返回值来计算应该将 `target` 插入集合的哪个位置以保持其排序。在这种情况下，插入点是：
 
-```
+```java
 if (i < 0)
     insertionPoint = -i - 1;
+
 elements.add(insertionPoint, target);
 ```
 
-二分查找要有意义，需要随机访问。如果你必须通过逐个遍历链表来找到中间元素，你就失去了二分查找的优势。算法将退化为线性搜索。Arrays 类提供了针对原始类型和对象的二分查找实现。
+二分查找要有意义，需要随机访问。如果你必须通过逐个遍历链表来找到中间元素，你就失去了二分查找的优势。算法将退化为线性搜索。`Arrays` 类提供了针对原始类型和对象的二分查找实现。
 
-java.util.Collections 1.2
+### `java.util.Collections` 1.2
 
-- static <T extends Comparable<? super T>> int binarySearch(List<T> elements, T key) 在已排序的列表中查找 key，如果元素类型实现了 `RandomAccess`，则使用二分查找，在所有其他情况下使用线性搜索。这些方法返回 key 的索引，或者如果 key 不存在返回负值；-1 是 key 应该插入以保持排序的位置。
+- `static <T extends Comparable<? super T>> int binarySearch(List<T> elements, T key)` 在已排序的列表中查找 `key`，如果元素类型实现了 `RandomAccess`，则使用二分查找，在所有其他情况下使用线性搜索。这些方法返回 `key` 的索引，或者如果 `key` 不存在返回负值；-1 是 `key` 应该插入以保持排序的位置。
 
-java.util.Arrays 1.2
+### `java.util.Arrays` 1.2
 
-- static int binarySearch(Object[] a, Object key)
-- static int binarySearch(Object[] a, int start, int end, Object key)
-- static <T> int binarySearch(T[] a, T key, Comparator<? super T> c)
-- static <T> int binarySearch(T[] a, int start, int end, T key, Comparator<? super T> c)
-[content]
+- `static int binarySearch(Object[] a, Object key)`
+- `static int binarySearch(Object[] a, int start, int end, Object key)`
+- `static <T> int binarySearch(T[] a, T key, Comparator<? super T> c)`
+- `static <T> int binarySearch(T[] a, int start, int end, T key, Comparator<? super T> c)`
 
-# 9.6.4. 简单算法
+## 9.6.4 简单算法
 
-Collections 类包含了几个简单但实用的算法。其中之一就是本节开头的示例——寻找集合的最大值。其他的还包括从一个列表复制元素到另一个列表、用常量值填充容器以及反转列表。
+`Collections` 类包含了几个简单但实用的算法。其中之一就是本节开头的示例——寻找集合的最大值。其他的还包括从一个列表复制元素到另一个列表、用常量值填充容器以及反转列表。
 
 为什么要在框架中提供这些简单的算法呢？大多数程序员都可以轻松地用简单循环实现它们。我喜欢这些算法，是因为它们让阅读代码的程序员生活更轻松。当你阅读别人编写的循环时，你必须破解原程序员的意图。例如，看这个循环：
 
-```
+```java
 for (int i = 0; i < words.size(); i++)
     if (words.get(i).equals("C++")) words.set(i, "Java");
 ```
 
 现在将循环与调用对比：
 
-```
+```java
 Collections.replaceAll(words, "C++", "Java");
 ```
 
 当你看到方法调用时，立刻就知道代码在做什么。
 
-节末尾的 API 注释描述了 Collections 类中的简单算法。
+节末尾的 API 注释描述了 `Collections` 类中的简单算法。
 
 默认方法 `Collection.removeIf` 和 `List.replaceAll` 稍微复杂一点。你提供 lambda 表达式来测试或转换元素。例如，在这里我们删除所有短单词，并将剩余单词转换为小写：
 
-```
+```java
 words.removeIf(w -> w.length() <= 3);
+
 words.replaceAll(String::toLowerCase);
 ```
 
-
-
-
-**注意：** `removeIf` 的谓词应该只查看正在决定是否删除的元素，而不应该查看集合本身。如果你这样做后者，其行为将取决于具体实现。
+> **注意：** `removeIf` 的谓词应该只查看正在决定是否删除的元素，而不应该查看集合本身。如果你这样做后者，其行为将取决于具体实现。
 
 `removeIf` 方法的数组版本对元素进行两次遍历。它首先找到应该被删除的元素，然后删除所有这些元素。对于其他集合，匹配的元素一旦被找到就会被删除。
 
 由于谓词会读取集合，这就会产生差异。考虑这个示例，其中 `words` 是一个长度为 3 的 `ArrayList`：
 
-```
+```java
 var words = new ArrayList<String>(List.of(
+
 words.removeIf(w -> w.length() == 3));
 ```
+
+
+
 
 在第一次遍历中，所有长度为 3 的单词都被标记为待删除，在第二次遍历中，它们被删除了。
 
 然而，如果 `words` 是一个 `LinkedList` 或 `HashSet`，那么同一个 `removeIf` 的调用只会删除三个字母单词中的一个。在第一次删除后，谓词会测试集合的大小是否为 2。
 
-为什么会有这种差异？朴实的单遍历实现对于基于数组的集合来说效率很低。开发者们并没有立即想到存在一种高效的单遍历算法。等他们考虑到这一点时，为了兼容性，他们决定不使用它——参见 https://bugs.openjdk.org/browse/JDK-8143577。
+为什么会有这种差异？朴实的单遍历实现对于基于数组的集合来说效率很低。开发者们并没有立即想到存在一种高效的单遍历算法。等他们考虑到这一点时，为了兼容性，他们决定不使用它——参见 <https://bugs.openjdk.org/browse/JDK-8143577>。
 
-# java.util.Collections 1.2
+# `java.util.Collections` 1.2
 
-- `static <T> extends Comparable<? super T>> min(Collection<T> elements)`: 返回集合中最小或最大的元素。（参数边界为了清晰起进行了简化。）
-- `static <T> extends Comparable<? super T>> max(Collection<T> elements)`: 返回集合中最小或最大的元素。（参数边界为了清晰起进行了简化。）
-- `static <T> min(Collection<T> elements, Comparator<? super T> c)`: 返回集合中最小元素。
-- `static <T> max(Collection<T> elements, Comparator<? super T> c)`: 返回集合中最大的元素。
-- `static <T> void copy(List<? super T> to, List<T> from)`: 将源列表中的所有元素复制到目标列表相同的位置。目标列表的长度至少与源列表一样。
-- `static <T> void fill(List<? super T> l, T value)`: 将列表的所有位置都设置为相同的值。
-- `static <T> boolean addAll(Collection<? super T> c, T... values)`: 5.0 将所有值添加到给定的集合，如果集合因此发生变化则返回 true。
-- `static <T> boolean replaceAll(List<? super T> l, T oldValue, T newValue)`: 1.4 将所有等于 `oldValue` 的元素替换为 `newValue`。
-- `static int indexOfSubList(List<?> l, List<?> s)`: 1.4 返回 `l` 中等于 `s` 的第一个或最后一个子列表的索引，如果 `l` 没有子列表等于 `s` 则返回 -1。例如，如果 `l` 为 [s, t, a, r] 且 `s` 为 [t, a, r]，那么两个方法都返回索引 1。
-- `static void swap(List<?> l, int i, int j)`: 1.4 交换给定偏移量处的元素。
-- `static void reverse(List<?> l)`: 反转列表中元素的顺序。例如，反转列表 [t, a, r] 得到列表 [r, a, t]。该方法在 O(n) 时间内运行，其中 n 是列表的长度。
-- `static void rotate(List<?> l, int d)`: 1.4 旋转列表中的元素，将索引为 i 的条目移动到位置 (i + d) % l.size()。例如，旋转列表 [t, a, r] 2 位得到列表 [a, r, t]。该方法在 O(n) 时间内运行，其中 n 是列表的长度。
-- `static int frequency(Collection<?> c, Object o)`: 5.0 返回 `c` 中等于对象 `o` 的元素计数。
-- `boolean disjoint(Collection<?> c1, Collection<?> c2)`: 5.0 如果两个集合没有共同元素则返回 true。
+- `static <T> extends Comparable<? super T>> min(Collection<T> elements)`：返回集合中最小或最大的元素。（参数边界为了清晰起进行了简化。）
+- `static <T> extends Comparable<? super T>> max(Collection<T> elements)`：返回集合中最小或最大的元素。（参数边界为了清晰起进行了简化。）
+- `static <T> min(Collection<T> elements, Comparator<? super T> c)`：返回集合中最小元素。
+- `static <T> max(Collection<T> elements, Comparator<? super T> c)`：返回集合中最大的元素。
+- `static <T> void copy(List<? super T> to, List<T> from)`：将源列表中的所有元素复制到目标列表相同的位置。目标列表的长度至少与源列表一样。
+- `static <T> void fill(List<? super T> l, T value)`：将列表的所有位置都设置为相同的值。
+- `static <T> boolean addAll(Collection<? super T> c, T... values)`：5.0 将所有值添加到给定的集合，如果集合因此发生变化则返回 `true`。
+- `static <T> boolean replaceAll(List<? super T> l, T oldValue, T newValue)`：1.4 将所有等于 `oldValue` 的元素替换为 `newValue`。
+- `static int indexOfSubList(List<?> l, List<?> s)`：1.4 返回 `l` 中等于 `s` 的第一个或最后一个子列表的索引，如果 `l` 没有子列表等于 `s` 则返回 -1。例如，如果 `l` 为 `[s, t, a, r]` 且 `s` 为 `[t, a, r]`，那么两个方法都返回索引 1。
+- `static void swap(List<?> l, int i, int j)`：1.4 交换给定偏移量处的元素。
+- `static void reverse(List<?> l)`：反转列表中元素的顺序。例如，反转列表 `[t, a, r]` 得到列表 `[r, a, t]`。该方法在 O(n) 时间内运行，其中 n 是列表的长度。
+- `static void rotate(List<?> l, int d)`：1.4 旋转列表中的元素，将索引为 `i` 的条目移动到位置 `(i + d) % l.size()`。例如，旋转列表 `[t, a, r]` 2 位得到列表 `[a, r, t]`。该方法在 O(n) 时间内运行，其中 n 是列表的长度。
+- `static int frequency(Collection<?> c, Object o)`：5.0 返回 `c` 中等于对象 `o` 的元素计数。
+- `boolean disjoint(Collection<?> c1, Collection<?> c2)`：5.0 如果两个集合没有共同元素则返回 `true`。
 
-## java.util.Collection<T> 1.2
+## `java.util.Collection<T>` 1.2
 
-- `default boolean removeIf(Predicate<? super E> filter)`: 8 移除所有匹配的元素。
+- `default boolean removeIf(Predicate<? super E> filter)`：8 移除所有匹配的元素。
 
-## java.util.List<E> 1.2
+## `java.util.List<E>` 1.2
 
-- `default void replaceAll(UnaryOperator<E> op)`: 8 将操作应用于此列表的所有元素。
+- `default void replaceAll(UnaryOperator<E> op)`：8 将操作应用于此列表的所有元素。
 
 # 9.6.5. 批量操作
 
-有几种操作可以“批量”复制或删除元素。调用
+有几种操作可以“批量”复制或删除元素。调用：
 
-```
+```java
 coll1.removeAll(coll2);
 ```
 
-从 `coll1` 中所有存在于 `coll2` 中的元素。相反，
+从 `coll1` 中删除所有存在于 `coll2` 中的元素。相反：
 
-```
+```java
 coll1.retainAll(coll2);
 ```
 
@@ -19252,13 +19802,13 @@ coll1.retainAll(coll2);
 
 假设你想找到两个集合的交集——即两个集合共有的元素。首先创建一个新集合来存储结果。
 
-```
+```java
 var result = new HashSet<String>(firstSet);
 ```
 
 在这里，我们利用了每个集合都有一个构造函数，其参数是另一个持有初始化值的集合。现在，使用 `retainAll` 方法：
 
-```
+```java
 result.retainAll(secondSet);
 ```
 
@@ -19266,9 +19816,13 @@ result.retainAll(secondSet);
 
 ```java
 Set<String> firstSet = Set.of("a", "b", "c");
+
 Set<String> secondSet = Set.of("b", "c", "d");
+
 Set<String> result = new HashSet<>(firstSet);
+
 result.retainAll(secondSet);
+
 // result 现在包含 ["b", "c"]
 ```
 
@@ -19276,28 +19830,29 @@ result.retainAll(secondSet);
 
 从集合获取数组稍微复杂一点。即使你知道集合包含特定类型的对象，你不能使用类型转换。相反，将数组构造函数传递给 `toArray` 方法：
 
-```
+```java
 List<String> list = List.of("a", "b", "c");
+
 String[] array = list.toArray(String[]::new);
 ```
 
 > **注意：** 在 JDK 11 之前，你必须使用另一种形式的 `toArray`，传递正确类型的数组：
 
-```
+```java
 String[] array = list.toArray(new String[0]);
 ```
 
 此 `toArray` 方法构造另一个相同类型的数组。或者，如果数组长度足够，会被重用：
 
-```
+```java
 String[] array = list.toArray(new String[list.size()
 ```
 
 # 9.6.7. 编写自己的算法
 
-如果你编写自己的算法（事实上，是任何以集合作为参数的方法），你应该尽可能使用*接口*，而不是具体的实现。例如，假设你想处理项目。当然，你可以实现这样的方法：
+如果你编写自己的算法（事实上，是任何以集合作为参数的方法），你应该尽可能使用接口，而不是具体的实现。例如，假设你想处理项目。当然，你可以实现这样的方法：
 
-```
+```java
 public void processItems(ArrayList<Item> items) {
     for (Item item : items) {
         do something with item;
@@ -19307,7 +19862,7 @@ public void processItems(ArrayList<Item> items) {
 
 然而，你现在限制了你方法的调用者——调用者必须以 `ArrayList` 提供项目。如果项目恰好在另一个集合中，它们首先需要重新封装。接受更通用的集合要好得多。
 
-```
+```java
 public void processItems(Collection<Item> items) {
     for (Item item : items) {
         do something with item;
@@ -19317,11 +19872,7 @@ public void processItems(Collection<Item> items) {
 
 现在，任何人可以使用 `ArrayList` 或 `LinkedList`，甚至可以使用在 `List.of` 方法包装的数组来调用此方法。
 
-
-
-
-
-提示：在这种情况下，通过接受一个 `Iterable<Item>` 可以获得更好的效果。`Iterable` 接口有一个抽象方法 `iterator`，增强 for 循环在后台会使用它。`Collection` 接口继承了 `Iterable`。
+提示：在这种情况下，通过接受一个 `Iterable<Item>` 可以获得更好的效果。`Iterable` 接口有一个抽象方法 `iterator`，增强 `for` 循环在后台会使用它。`Collection` 接口继承了 `Iterable`。
 
 相反，如果你的方法返回多个元素，你不希望限制自己未来的改进空间。例如，考虑：
 
@@ -19341,14 +19892,15 @@ public Array<Item> lookupItems(.. ..) {
 
 例如，`JComboBox` 类有两个构造函数：
 
-```
+```java
 JComboBox(Object[] items)
+
 JComboBox(Vector<?> items)
 ```
 
 原因仅仅是时间问题。Swing API 是在 Java 集合框架之前创建的。
 
-## 9.7. 遗留集合 (Legacy Collections)
+## 9.7. 遗留集合（Legacy Collections）
 
 自 Java 首次发布以来，就有许多“遗留”容器类了，那时还没有集合框架。
 
@@ -19358,15 +19910,15 @@ JComboBox(Vector<?> items)
 
 图 9.12：Java 集合框架中的遗留类
 
-## 9.7.1. Hashtable 类
+## 9.7.1. `Hashtable` 类
 
 经典的 `Hashtable` 类与 `HashMap` 类具有相同的目的，并拥有相同的接口。就像 `Vector` 类的方法一样，`Hashtable` 的方法是同步的。如果你不需要与遗留代码兼容，应该使用 `HashMap`。如果你需要并发访问，请使用 `ConcurrentHashMap`——参见第 10 章。
 
-## 9.7.2. Enumeration（枚举）
+## 9.7.2. `Enumeration`（枚举）
 
 遗留集合使用 `Enumeration` 接口来遍历元素序列。`Enumeration` 接口有两个方法：`hasMoreElements` 和 `nextElement`。这些与 `Iterator` 接口的 `hasNext` 和 `next` 方法完全对应。
 
-如果你在遗留类中发现此接口，可以使用 `Collections.list` 将元素收集到 `ArrayList` 中。例如，`LogManager` 类只乐愿以 `Enumeration` 的形式暴露记录器名称。以下是获取所有所有名称的方法：
+如果你在遗留类中发现此接口，可以使用 `Collections.list` 将元素收集到 `ArrayList` 中。例如，`LogManager` 类只乐愿以 `Enumeration` 的形式暴露记录器名称。以下是获取所有名称的方法：
 
 ```java
 ArrayList<String> loggerNames = Collections.list(
@@ -19382,26 +19934,26 @@ LogManager.getLoggerNames().asIterator().forEach(
 
 ```java
 List<InputStream> streams = . . .;
+
 var in = new SequenceInputStream(Collections.enum
+
 // the SequenceInputStream constructor expects
 ```
 
 **注意：** 在 C++ 中，将迭代器作为参数是相当普遍的。幸运的是，在 Java 平台上，很少有程序员使用这种惯用法。传递集合本身比传递迭代器要明得多。集合对象更有用。接收者在需要时始终可以从集合中获取迭代器，而且他们可以使用所有的集合方法。然而，你可能会在某些遗留代码中发现枚举，因为在 Java 1.2 出现 Java 集合框架之前，它是通用集合的唯一可用机制。
 
-java.util.Enumeration<E> 1.0
+### `java.util.Enumeration<E>` 1.0
 
-- boolean hasMoreElements() 返回是否有更多待检查的元素。
-- E nextElement() 返回下一个待检查的元素。如果 `hasMoreElements()` 返回 `false`，请勿调用此方法。
-- default Iterator<E> asIterator() 产生一个遍历枚举元素的迭代器。
+- `boolean hasMoreElements()`：返回是否有更多待检查的元素。
+- `E nextElement()`：返回下一个待检查的元素。如果 `hasMoreElements()` 返回 `false`，请勿调用此方法。
+- `default Iterator<E> asIterator()`：产生一个遍历枚举元素的迭代器。
 
-```
-java.util.Collections 1.2
-```
+### `java.util.Collections` 1.2
 
-- static <T> Enumeration<T> enumeration(Collection<T> c) 返回一个枚举 c 中元素的枚举对象。
-- public static <T> ArrayList<T> list(Enumeration<T> e) 返回一个包含 e 所枚举元素的数组列表。
+- `static <T> Enumeration<T> enumeration(Collection<T> c)`：返回一个枚举 `c` 中元素的枚举对象。
+- `public static <T> ArrayList<T> list(Enumeration<T> e)`：返回一个包含 `e` 所枚举元素的数组列表。
 
-## 9.7.3. 属性映射 (Property Maps)
+## 9.7.3. 属性映射（Property Maps）
 
 属性映射是一种特殊类型的 map 结构。它有三个特征：
 
@@ -19413,7 +19965,9 @@ Java 平台中实现属性映射的类是 `Properties`。属性映射在指定�
 
 ```java
 var settings = new Properties();
+
 settings.setProperty("width", "600.0");
+
 settings.setProperty("filename", "/home/cay/books");
 ```
 
@@ -19431,18 +19985,21 @@ String filename = settings.getProperty("filename")
 String filename = settings.getProperty("filename", "")
 ```
 
-如果属性映射中存在 "filename" 属性，则 `filename` 被设置为该字符串。否则，`filename` 被设置为空字符串。
+如果属性映射中存在 `"filename"` 属性，则 `filename` 被设置为该字符串。否则，`filename` 被设置为空字符串。
 
 如果你觉得在每次调用 `getProperty` 时指定默认值太麻烦了，你可以将所有默认值封装在一个二级属性映射中，并在主属性映射的构造函数提供该 map。
 
 ```java
 var defaultSettings = new Properties();
+
 defaultSettings.setProperty("width", "600");
+
 defaultSettings.setProperty("height", "400");
 ```
 
 ```java
 defaultSettings.setProperty("filename", "");
+
 settings = new Properties(defaultSettings);
 ```
 
@@ -19450,15 +20007,19 @@ settings = new Properties(defaultSettings);
 
 ```java
 var out = new FileWriter("program.properties");
+
 settings.store(out, "Program Properties");
 ```
 
 示例输出如下：
 
-```
+```text
 #Program Properties
+
 width=600
+
 height=400
+
 filename=/home/cay/books
 ```
 
@@ -19466,70 +20027,88 @@ filename=/home/cay/books
 
 ```java
 var in = new FileReader("program.properties");
+
 settings.load(in);
 ```
 
-> **注意：** 如果你使用输入输出流 `load` 和 `store` 方法，则将使用 ISO-8859-1 字符编码，字符 U+0FF 将保存为 Unicode 转义。对于 UTF-8，请像上面的代码那样使用读取器器。在 Java 8 之前，请显式设置字符编码为 `StandardCharsets.UTF_8`。
-
-
+> **注意：** 如果你使用输入输出流 `load` 和 `store` 方法，则将使用 ISO-8859-1 字符编码，字符 U+0FF 将保存为 Unicode 转义。对于 UTF-8，请像上面的代码那样使用读取器。在 Java 8 之前，请显式设置字符编码为 `StandardCharsets.UTF_8`。
 
 ```java
 java.util.Properties 1.0
 ```
 
-* * Properties()
-创建一个空的属性映射。
-* Properties(Properties defaults)
-创建一个带有默认值映射的空属性映射。
-* String getProperty(String key)
-获取与键关联的属性；如果该键在当前表中不存在，则获取默认表中与该键关联的字符串；如果默认表中也不存在该键，则返回 null。
-* String getProperty(String key, String defaultValue)
-如果未找到键，则获取带有默认值的属性。返回与键关联的字符串，如果该表中不存在，则返回默认字符串。
-* Object setProperty(String key, String value)
-设置一个属性。返回给定键之前被设置的值。
-* Set<String> stringPropertyNames()
-返回所有键的集合，包括来自默认映射的键。
-* void load(Reader in) throws IOException
-从读取器加载属性映射。
+
+
+
+## 属性映射
+
+- `Properties()`
+
+  创建一个空的属性映射。
+
+- `Properties(Properties defaults)`
+
+  创建一个带有默认值映射的空属性映射。
+
+- `String getProperty(String key)`
+
+  获取与键关联的属性；如果该键在当前表中不存在，则获取默认表中与该键关联的字符串；如果默认表中也不存在该键，则返回 `null`。
+
+- `String getProperty(String key, String defaultValue)`
+
+  如果未找到键，则获取带有默认值的属性。返回与键关联的字符串，如果该表中不存在，则返回默认字符串。
+
+- `Object setProperty(String key, String value)`
+
+  设置一个属性。返回给定键之前被设置的值。
+
+- `Set<String> stringPropertyNames()`
+
+  返回所有键的集合，包括来自默认映射的键。
+
+- `void load(Reader in) throws IOException`
+
+  从读取器加载属性映射。
 
 ```java
 void store(Writer out, String header)
-将属性映射保存到写入器。header 位于存储文件的第一行。
 ```
+
+将属性映射保存到写入器。`header` 位于存储文件的第一行。
 
 ## 9.7.4. 系统属性
 
-System.getProperty 方法产生用于描述系统信息的 Properties 对象。例如，主目录具有键 `user.home`。
+`System.getProperty` 方法产生用于描述系统信息的 `Properties` 对象。例如，主目录具有键 `user.home`。
 
-你可以使用 getProperty 方法读取它，该方法返回字符串形式的键：
+你可以使用 `getProperty` 方法读取它，该方法返回字符串形式的键：
 
 ```java
 String userDir = System.getProperty("user.home");
 ```
 
-获取虚拟机的 Java 版本，请查找 "java.version" 属性。你会得到一个如 "21.0.1"（对于 Java 8 为 "1.8.0"）的字符串。
+获取虚拟机的 Java 版本，请查找 `"java.version"` 属性。你会得到一个如 `"21.0.1"`（对于 Java 8 为 `"1.8.0"`）的字符串。
 
-**提示：** 如你所见，版本编号在 Java 9 中发生了变化。一个看似微小的变化破坏了许多依赖旧格式的工具。如果你解析版本字符串，请务必阅读 https://openjdk.org/jeps/322get JEP 322，了解未来版本字符串将如何格式化——至少在编号方案再次更改为止。
+**提示：** 如你所见，版本编号在 Java 9 中发生了变化。一个看似微小的变化破坏了许多依赖旧格式的工具。如果你解析版本字符串，请务必阅读 [JEP 322](https://openjdk.org/jeps/322)，了解未来版本字符串将如何格式化——至少在编号方案再次更改为止。
 
-**提示**：要打印所有系统属性，请运行：
+**提示：** 要打印所有系统属性，请运行：
 
 ```bash
 java -XShowSettings:properties
 ```
 
-java.version 系统属性由虚拟机设置，不应更改。其他系统属性可以使用 -D 命令行选项设置：
+`java.version` 系统属性由虚拟机设置，不应更改。其他系统属性可以使用 `-D` 命令行选项设置：
 
 ```bash
 java -Duser.language=fr -Duser.country=CA MyProg
 ```
 
-要在 jshell 中可以使用属性，请这样使用 -R 选项：
+要在 `jshell` 中使用属性，请这样使用 `-R` 选项：
 
 ```bash
 jshell -R-Duser.language=fr -R-Duser.country=CA
 ```
 
-要获取数值或布尔系统属性值，请使用静态方法 Boolean.getBoolean(), Integer.getInteger() 和 Long.getLong():
+要获取数值或布尔系统属性值，请使用静态方法 `Boolean.getBoolean()`、`Integer.getInteger()` 和 `Long.getLong()`：
 
 ```java
 Integer version = Integer.getInteger("java.specification");
@@ -19539,11 +20118,17 @@ Integer version = Integer.getInteger("java.specification");
 java.lang.System 1.0
 ```
 
-* Properties getProperties 获取所有系统属性。应用程序必须具有检索所有属性的权限，否则将抛出安全异常。
-* String getProperty(String key)
-根据指定的键名检索系统属性。
+- `Properties getProperties`
+
+  获取所有系统属性。应用程序必须具有检索所有属性的权限，否则将抛出安全异常。
+
+- `String getProperty(String key)`
+
+  根据指定的键名检索系统属性。
+
 以下属性始终存在：
-```
+
+```text
 java.version
 java.version.date
 java.vendor
@@ -19580,98 +20165,130 @@ stderr.encoding
 java.lang.Boolean 1.0
 ```
 
-* static boolean getBoolean(String name)
-如果给定名称的系统属性值为 "true"忽略大小写），则返回 true，否则返回 false
+- `static boolean getBoolean(String name)`
+
+  如果给定名称的系统属性值为 `"true"`（忽略大小写），则返回 `true`，否则返回 `false`。
 
 ```java
 java.lang.Integer 1.0
 ```
 
-* static Integer getInteger(String nm)
-* static Integer getInteger(String nm, int val)
-* static Integer getInteger(String nm, Integer val)
-返回对给定名称系统属性调用 Integer.decode 的结果。如果不存在给定名称的系统属性，或其值无法解码，则该方法返回默认值，如果未提供，则返回 null。
+- `static Integer getInteger(String nm)`
+- `static Integer getInteger(String nm, int val)`
+- `static Integer getInteger(String nm, Integer val)`
+
+  返回对给定名称系统属性调用 `Integer.decode` 的结果。如果不存在给定名称的系统属性，或其值无法解码，则该方法返回默认值；如果未提供，则返回 `null`。
 
 ```java
 java.lang.Long 1.0
 ```
 
-* static Long getLong(String nm)
-* static Long getLong(String nm, int val)
-* static Long getLong(String nm, Long val)
-返回对给定名称系统属性调用 Long.decode 的结果。如果不存在给定名称的系统属性，或其值无法解码，则该方法返回默认值，如果未提供，则返回 null。
+- `static Long getLong(String nm)`
+- `static Long getLong(String nm, int val)`
+- `static Long getLong(String nm, Long val)`
+
+  返回对给定名称系统属性调用 `Long.decode` 的结果。如果不存在给定名称的系统属性，或其值无法解码，则该方法返回默认值；如果未提供，则返回 `null`。
 
 ## 9.7.5. 栈
 
-从 1.0 版本开始，Java API 就拥有一个 Stack 类，并带有熟悉的 push 和 pop 方法。然而，Stack 类继承了 Vector 类，这从理论角度来看并不令人满意——你可以执行非栈的操作，如在任何地方插入和删除值，而不仅仅是在栈顶。
+从 1.0 版本开始，Java API 就拥有一个 `Stack` 类，并带有熟悉的 `push` 和 `pop` 方法。然而，`Stack` 类继承了 `Vector` 类，这从理论角度来看并不令人满意——你可以执行非栈的操作，如在任何地方插入和删除值，而不仅仅是在栈顶。
 
 ```java
 java.util.Stack<E> 1.0
 ```
 
-* E push(E item)
-将 item 推栈。
-* E pop()
-弹出并返回项。
-* E peek()
-返回栈顶元素。
+- `E push(E item)`
+
+  将 `item` 推栈。
+
+- `E pop()`
+
+  弹出并返回项。
+
+- `E peek()`
+
+  返回栈顶元素。
 
 ## 9.7.6. 位集
 
-BitSet 为你提供了读取、设置和重置位的便利接口。这比使用数组更高效。
+`BitSet` 为你提供了读取、设置和重置位的便利接口。这比使用数组更高效。
 
 ```java
 java.util.BitSet 1.0
 ```
 
-* BitSet(int initialCapacity)
-创建一个位集。
-* int cardinality()
-返回设置位的数量。
-* int length()
-返回最高设置位的索引。
-* int size()
-返回位的数量。
-* boolean get(int bit)
-获取位。
-* void set(int bit)
-设置位。
-* void clear(int bit)
-清除位。
+- `BitSet(int initialCapacity)`
+
+  创建一个位集。
+
+- `int cardinality()`
+
+  返回设置位的数量。
+
+- `int length()`
+
+  返回最高设置位的索引。
+
+- `int size()`
+
+  返回位的数量。
+
+- `boolean get(int bit)`
+
+  获取位。
+
+- `void set(int bit)`
+
+  设置位。
+
+- `void clear(int bit)`
+
+  清除位。
 
 ```java
 java.lang.System 1.0
 ```
 
-* void and(BitSet set)
-与另一个位集进行逻辑与运算。
-* void or(BitSet set)
-与另一个位集进行逻辑或运算。
-* void xor(BitSet set)
-与另一个位集进行逻辑异或运算。
-* void not(BitSet set)
-清除位集中所有已设置的位。
-* IntStream stream()
-产生设置位索引值的流。
+- `void and(BitSet set)`
 
+  与另一个位集进行逻辑与运算。
 
+- `void or(BitSet set)`
 
+  与另一个位集进行逻辑或运算。
+
+- `void xor(BitSet set)`
+
+  与另一个位集进行逻辑异或运算。
+
+- `void not(BitSet set)`
+
+  清除位集中所有已设置的位。
+
+- `IntStream stream()`
+
+  产生设置位索引值的流。
 
 C++ 编译器的优化级别，它以 16 毫秒的时间胜过了 Java。只有当程序运行足够长以触发 Hotspot 即时编译器时，Java 才能匹配这一速度。
 
-# Listing 9.8 sieve/Sieve.java
+# Listing 9.8 `sieve/Sieve.java`
 
 ```java
 1 package sieve;
+
 2
+
 3 import java.util.*;
+
 4
-5 //**
-6 * 此程序运行埃拉托斯特尼筛法
-7 * 直到 2,000,000。
-8 * @version 1.22 2021-06-17
-9 * @author Cay Horstmann
+
+5 /**
+6  * 此程序运行埃拉托斯特尼筛法
+7  * 直到 2,000,000。
+8  * @version 1.22 2021-06-17
+9  * @author Cay Horstmann
 10 */
+
 11 public class Sieve
 12 {
 13     public static void main(String[] s)
@@ -19681,33 +20298,37 @@ C++ 编译器的优化级别，它以 16 毫秒的时间胜过了 Java。只有�
 17         var bitSet = new BitSet(n + 1);
 18         int i;
 19         for (i = 2; i <= n; i++)
-20         bitSet.set(i);
+20             bitSet.set(i);
 ```
 
 ```java
 i = 2;
-        while (i * i <= n) {
-        if (bitSet.get(i)) {
-            int k = i * i;
-            while (k <= n) {
-                bitSet.clear(k);
-                k += i;
-            }
+
+while (i * i <= n) {
+    if (bitSet.get(i)) {
+        int k = i * i;
+        while (k <= n) {
+            bitSet.clear(k);
+            k += i;
         }
-        i++;
+    }
+    i++;
 }
+
 long end = System.nanoTime();
+
 System.out.println(bitSet.cardinality());
-System.out.println((end - start) / 10
+System.out.println((end - start) / 10);
 ```
 
-# Listing 9.9 sieve/sieve.cpp
+# Listing 9.9 `sieve/sieve.cpp`
 
 ```cpp
 /**
  * @version 1.22 2021-06-17
  * @author Cay Horstmann
  */
+
 #include <bitset>
 #include <iostream>
 #include <ctime>
@@ -19717,11 +20338,12 @@ using namespace std;
 int main() {
     const int N = 20000000;
     clock_t cstart = clock();
-
     bitset<N + 1> b;
     int i;
+
     for (i = 2; i <= N; i++) {
         b.set(i);
+
         i = 2;
         while (i * i <= N) {
             if (b.test(i)) {
@@ -19731,8 +20353,8 @@ int main() {
                     k += i;
                 }
             }
+            i++;
         }
-        i++;
     }
 }
 ```
@@ -19745,11 +20367,11 @@ int main() {
 
 那么，多个进程和多个线程之间的区别是什么？本质区别在于，每个进程都有一套完整的自己的变量，而线程则共享相同的数据。这听起来有些风险，而且确实可能如此，正如你在本章后面将看到的。然而，共享变量使得线程之间的通信比进程间通信更高效、更易编程。
 
-此外，在某些操作系统上，线程比进程更“轻量级创建和销毁单个线程的开销比启动新进程要小。
+此外，在某些操作系统上，线程比进程更“轻量级”，创建和销毁单个线程的开销比启动新进程要小。
 
 多线程在实践中极其有用。例如，浏览器应该能够同时下载多个图像。Web 服务器需要能够处理并发请求。图形用户界面（GUI）程序有一个独立的线程用于从宿主操作系统环境中收集用户界面事件。本章将向你展示如何为 Java 应用添加多线程能力。
 
-警告：并发编程可能会变得非常复杂。在本章中，我涵盖了应用程序程序员可能需要的所有工具。然而，对于更复杂的系统级编程，我建议你参考更高级的教程，例如 Brian Goetz 等人编写的《Java并发编程》（Addison-Wesley Professional, 2006）。
+**警告：** 并发编程可能会变得非常复杂。在本章中，我涵盖了应用程序程序员可能需要的所有工具。然而，对于更复杂的系统级编程，我建议你参考更高级的教程，例如 Brian Goetz 等人编写的《Java并发编程》（Addison-Wesley Professional, 2006）。
 
 ## 10.1. 运行线程
 
@@ -19757,31 +20379,31 @@ int main() {
 
 1. 将任务代码放入实现 `Runnable` 接口的类的 `run` 方法中。该接口非常简单，只有一个方法：
 
-```java
-public interface Runnable {
-    void run();
-}
-```
+   ```java
+   public interface Runnable {
+       void run();
+   }
+   ```
 
-由于 `Runnable` 是一个函数接口，你可以使用 lambda 表达式创建一个实例：
+   由于 `Runnable` 是一个函数接口，你可以使用 lambda 表达式创建一个实例：
 
-```java
-Runnable r = () -> {
-    task code
-};
-```
+   ```java
+   Runnable r = () -> {
+       task code
+   };
+   ```
 
 2. 从 `Runnable` 构建一个 `Thread` 对象：
 
-```java
-var t = new Thread(r);
-```
+   ```java
+   var t = new Thread(r);
+   ```
 
 3. 启动线程：
 
-```java
-t.start();
-```
+   ```java
+   t.start();
+   ```
 
 让我们来看使用线程在银行账户之间转移资金的简单程序。我们使用一个存储账户余额的 `Bank` 类。在第一个线程中，我们将资金从一个账户转移到另一个。参见列表 10.2：
 
@@ -19796,6 +20418,7 @@ Runnable r = () -> {
     } catch (InterruptedException e) {
     }
 };
+
 var t = new Thread(r);
 t.start();
 ```
@@ -19816,38 +20439,39 @@ class MyThread extends Thread {
 
 然后构造该子类的对象并调用其 `start` 方法。然而，这种方法不再被推荐。你应该将要并行运行的任务与运行它的机制解耦。正如你在整个本章中所看到的，调度任务执行的方法有很多。
 
-# Listing 10.1 threads/ThreadTest.java
+# Listing 10.1 `threads/ThreadTest.java`
 
 ```java
 1 package threads;
+
 2
+
 3 /**
 4  * @version 1.30 2004-08-01
 5  * @author Cay Horstmann
 6  */
 7 public class ThreadTest {
-    public static final int DELAY = 10;
-    public static final int STEPS = 100;
-    public static final double 
+8     public static final int DELAY = 10;
+9     public static final int STEPS = 100;
+10    public static final double MAX_AMOUNT = 1000;
 
-    public static void main(String[] args) {
-        var bank = new Bank(4, 100000);
-        Runnable task1 = () -> {
-            try {
-                for (int i = 0; i < STEPS; i++) {
-                    double amount = MAX_AMOUNT;
-                    bank.transfer(0, 1, amount);
-                    Thread.sleep((int) (DELAY));
-                }
-            } catch (InterruptedException e) {
-            }
-        };
+11    public static void main(String[] args) {
+12        var bank = new Bank(4, 100000);
 
-        Runnable task2 = () -> {
-            try {
+13        Runnable task1 = () -> {
+14            try {
+15                for (int i = 0; i < STEPS; i++) {
+16                    double amount = MAX_AMOUNT;
+17                    bank.transfer(0, 1, amount);
+18                    Thread.sleep((int) (DELAY));
+19                }
+20            } catch (InterruptedException e) {
+21            }
+22        };
+
+23        Runnable task2 = () -> {
+24            try {
 ```
-
-
 
 ```java
 for (int i = 0; i < STEPS; i++) {
@@ -19855,24 +20479,32 @@ for (int i = 0; i < STEPS; i++) {
     bank.transfer(2, 3, amount);
     Thread.sleep((int) DELAY);
 }
-catch (InterruptedException e) {
+} catch (InterruptedException e) {
 }
 ```
 
-**Listing 10.2** threads/Bank.java
+## Listing 10.2 `threads/Bank.java`
 
 ```java
 package threads;
+
 import java.util.*;
+
 /**
  * 一个包含多个银行账户的银行
  */
-public class Bank
-{
+```
+
+
+
+
+```java
+public class Bank {
     private final double[] accounts;
 
     /**
      * 构造银行。
+     *
      * @param n 账户数量
      * @param initialBalance 初始余额
      */
@@ -19883,6 +20515,7 @@ public class Bank
 
     /**
      * 将资金从一个账户转移到另一个账户。
+     *
      * @param from 要转账的账户索引
      * @param to 要转入的账户索引
      * @param amount 要转账的金额
@@ -19892,6 +20525,7 @@ public class Bank
             System.out.print(Thread.currentThread().getName() + ": 资金不足\n\n");
             return;
         }
+
         accounts[from] -= amount;
         System.out.printf("%10.2f from %d to %d\n", amount, from, to);
         accounts[to] += amount;
@@ -19900,20 +20534,20 @@ public class Bank
 
     /**
      * 获取所有账户余额的总和。
+     *
      * @return 总余额
      */
     public double getTotalBalance() {
         double sum = 0;
-
         for (double a : accounts) {
             sum += a;
         }
-
         return sum;
     }
 
     /**
      * 获取余额中的账户数量。
+     *
      * @return 账户数量
      */
     public int size() {
@@ -19922,17 +20556,17 @@ public class Bank
 }
 ```
 
-java.lang.Thread 1.0
+### `java.lang.Thread` 1.0
 
-- Thread(Runnable target) 构造一个新的线程，并调用指定目标的 `run()` 方法。
-- void start() 启动此线程，导致 `run()` 方法被调用。此方法会立即返回。新线程并发运行。
-- void run() 调用关联的 `Runnable` 的 `run` 方法。
-- static void sleep(long millis)
-- static void sleep(Duration duration) 休指定的毫秒数。
+- `Thread(Runnable target)` 构造一个新的线程，并调用指定目标的 `run()` 方法。
+- `void start()` 启动此线程，导致 `run()` 方法被调用。此方法会立即返回。新线程并发运行。
+- `void run()` 调用关联的 `Runnable` 的 `run` 方法。
+- `static void sleep(long millis)`
+- `static void sleep(Duration duration)` 休指定的毫秒数。
 
-java.lang.Runnable 1.0
+### `java.lang.Runnable` 1.0
 
-- void run() 必须被重写，并为你想要执行的任务提供指令。
+- `void run()` 必须被重写，并为你想要执行的任务提供指令。
 
 ## 10.2. 线程状态
 
@@ -19951,24 +20585,25 @@ java.lang.Runnable 1.0
 
 ### 10.2.1. New Threads
 
-当你使用 `new` 操作符创建线程时（例如 `new Thread(r)`），该线程尚未运行。这意味着它处于 `new` 状态。当线程处于 new 状态时，程序尚未开始执行其内部的代码。在线程运行之前，需要完成一定数量的管理工作。
+当你使用 `new` 操作符创建线程时（例如 `new Thread(r)`），该线程尚未运行。这意味着它处于 `new` 状态。当线程处于 `new` 状态时，程序尚未开始执行其内部的代码。在线程运行之前，需要完成一定数量的管理工作。
 
 ### 10.2.2. Runnable Threads
 
-一旦你调用 `start` 方法，线程就处于 `runnable` 状态。一个可运行的线程可能正在运行，也可能没有运行。这取决于线程调度器是否给予线程运行时间。（不过，Java 规范并没有将其称为一个独立的状态。运行中的线程仍然处于 runnable 状态。）
+一旦你调用 `start` 方法，线程就处于 `runnable` 状态。一个可运行的线程可能正在运行，也可能没有运行。这取决于线程调度器是否给予线程运行时间。（不过，Java 规范并没有将其称为一个独立的状态。运行中的线程仍然处于 `runnable` 状态。）
 
 一旦线程开始运行，它并不一定持续运行。事实上，运行中的线程偶尔暂停是理想的，这样其他线程才有机会运行。线程调度的细节取决于操作系统提供的服务以及线程的性质。
 
-在 Java 21 中，有两种线程：*平台线程（platform threads）和虚拟线程（virtual threads）*。Java平台线程对应于操作系统提供的线程，由操作系统调度其执行。虚拟线程运行在平台线程之上并由 Java 运行时调度。正如你将看到的[第 10.3.1 节]，虚拟线程用于并发任务远多可用平台线程的应用程序。
+在 Java 21 中，有两种线程：平台线程（platform threads）和虚拟线程（virtual threads）。Java 平台线程对应于操作系统提供的线程，由操作系统调度其执行。虚拟线程运行在平台线程之上并由 Java 运行时调度。正如你将看到的第 10.3.1 节，虚拟线程用于并发任务远多可用平台线程的应用程序。
 
 每个处理器每次可以运行一个平台线程。在具有多个处理器的机器上，你可以让多个线程并行运行。如果可运行的线程多于可用处理器，其中某些线程并没有实际运行。它们需要被调度执行。
 
-平台线程使用*抢占式调度（preemptive scheduling）*。每个运行的线程都被赋予一段时间来执行任务。当这段时间耗尽时，操作系统会抢占该线程并给另一个线程工作的机会。在选择下一个平台时，操作系统会考虑线程优先级——更多信息请参见第 10.3.6 节。
+平台线程使用抢占式调度（preemptive scheduling）。每个运行的线程都被赋予一段时间来执行任务。当这段时间耗尽时，操作系统会抢占该线程并给另一个线程工作的机会。在选择下一个平台时，操作系统会考虑线程优先级——更多信息请参见第 10.3.6 节。
 
 虚拟线程使用协作式调度（cooperative scheduling）。虚拟线程只有在调用 `yield` 方法或被阻塞时才会失去控制权。
 
 ```java
 java.lang.Thread 1.0
+
 - static void yield() 向调度器发出信号，愿意让出其他线程。
 ```
 
@@ -19989,6 +20624,7 @@ java.lang.Thread 1.0
 
 ```java
 java.lang.Thread 1.0
+
 - void join() 等待指定的线程终止。
 - void join(long)
 - void join(Duration duration) 等待线程直到指定的时间通过。
@@ -20008,9 +20644,6 @@ java.lang.Thread 1.0
 
 然而，平台线程并不是轻级的。启动它们需要数千条 CPU 指令，并且消耗（至少保留）大量的内存。这限制了 CPU 可以处理平台线程的数量。对于某些类的应用程序来说，这是一个问题。典型的应用程序希望处理大量的并发请求，远多平台线程的数量。应用程序可以处理这些负载，因为任务没有进行 CPU 密集型工作。每个任务大部分时间都花在等待数据库查询或其他外部请求上。
 
-
-
-
 一种解决方案是使用非阻塞 API 来进行请求。与其使用同步调用：
 
 ```java
@@ -20024,13 +20657,13 @@ process(response);
 service.request(parameters, response -> process(response));
 ```
 
-然后，request 的调用将立即返回而不会阻塞，释放其线程以处理额外的请求。当响应可用时，会调用回调。
+然后，`request` 的调用将立即返回而不会阻塞，释放其线程以处理额外的请求。当响应可用时，会调用回调。
 
 非阻塞 API 提供了高吞吐量，但对程序员来说代价是昂贵的。程序员不再可以使用熟悉的序列、分支、循环和异常处理等编程结构，所有的程序逻辑都必须放在回调代码中。
 
 Java 21 中提供的虚拟线程是一个极具吸引力的替代方案。虚拟线程被挂载到平台线程上，并在遇到阻塞操作时卸载。当操作结果可用时，虚拟线程可以再次被调度，并在平台线程可用时重新挂载。
 
-“虚拟线程”这一术语旨在类比虚拟内存。正如虚拟内存被映射到较小的实际 RAM 上，虚拟线程被挂载在数量较少的平台线程上。这些平台线程被称为*载体线程*（carrier threads）。默认情况下，调度器每个处理器使用一个载体线程。这可以通过 `jdk.virtualThreadScheduler.parallelism` 选项进行调整。
+“虚拟线程”这一术语旨在类比虚拟内存。正如虚拟内存被映射到较小的实际 RAM 上，虚拟线程被挂载在数量较少的平台线程上。这些平台线程被称为载体线程（carrier threads）。默认情况下，调度器每个处理器使用一个载体线程。这可以通过 `jdk.virtualThreadScheduler.parallelism` 选项进行调整。
 
 虚拟线程与平台线程具有相同的 API。创建并启动虚拟线程的一种简单方法是：
 
@@ -20040,24 +20673,24 @@ Thread t = Thread.startVirtualThread(myRunnable);
 
 `Thread` 类的 `isVirtual` 方法在线程为虚拟线程时返回 `true`。
 
-```
+```java
 java.lang.Thread 1.0
 ```
 
-- + boolean isVirtual() 21: 当此线程为虚拟线程时返回 true。
-- + static Thread startVirtualThread(Runnable task) 启动并返回运行给定任务的虚拟线程。
+- `boolean isVirtual()` 21：当此线程为虚拟线程时返回 `true`。
+- `static Thread startVirtualThread(Runnable task)` 启动并返回运行给定任务的虚拟线程。
 
-## 10.3.2. 线程中断
+### 10.3.2. 线程中断
 
-线程在其 run 方法返回时终止——通过执行 return 语句、执行完方法体中的最后一条语句，或者发生了未在方法中被捕获的异常。
+线程在其 `run` 方法返回时终止——通过执行 `return` 语句、执行完方法体中的最后一条语句，或者发生了未在方法中被捕获的异常。
 
-> **注意：** 在 Java 的初始版本中，还有一个 stop 方法，另一个线程可以调用它来终止线程。然而，该方法被认为是不安全的，现在会抛出 UnsupportedOperationException 而不是停止线程。
+> **注意：** 在 Java 的初始版本中，还有一个 `stop` 方法，另一个线程可以调用它来终止线程。然而，该方法被认为是不安全的，现在会抛出 `UnsupportedOperationException` 而不是停止线程。
 
-没有办法强制终止线程。但是，可以使用 interrupt 方法来请求终止线程。
+没有办法强制终止线程。但是，可以使用 `interrupt` 方法来请求终止线程。
 
-当对线程调用 interrupt 方法时，线程的中断状态会被设置。这是一个存在于每个线程中的布尔标志。每个线程都应该偶尔检查自己是否被中断过。
+当对线程调用 `interrupt` 方法时，线程的中断状态会被设置。这是一个存在于每个线程中的布尔标志。每个线程都应该偶尔检查自己是否被中断过。
 
-要检查中断状态是否被设置，首先调用静态方法 Thread.currentThread 来获取当前线程，然后调用 isInterrupted 方法：
+要检查中断状态是否被设置，首先调用静态方法 `Thread.currentThread` 来获取当前线程，然后调用 `isInterrupted` 方法：
 
 ```java
 while (!Thread.currentThread().isInterrupted()) {
@@ -20065,95 +20698,83 @@ while (!Thread.currentThread().isInterrupted()) {
 }
 ```
 
-然而，如果线程处于阻塞状态，它就无法检查中断状态。这就是 InterruptedException 出现的地方。当对在 sleep 或 wait 等调用上阻塞的线程调用 interrupt 方法时，该阻塞调用将被 InterruptedException 终止。存在某些无法中断的阻塞 I/O 调用。在这种情况下，当 I/O 操作完成后会抛出 InterruptedException。
+然而，如果线程处于阻塞状态，它就无法检查中断状态。这就是 `InterruptedException` 出现的地方。当对在 `sleep` 或 `wait` 等调用上阻塞的线程调用 `interrupt` 方法时，该阻塞调用将被 `InterruptedException` 终止。存在某些无法中断的阻塞 I/O 调用。在这种情况下，当 I/O 操作完成后会抛出 `InterruptedException`。
 
-语言并没有规定要求被中断的线程必须终止。中断线程仅仅是引起它的注意。被中断的线程可以决定如何响应中断。某些线程非常重要，它们应该处理异常并继续执行。但很多时候，线程只是简单地将中断解释为终止请求。此类线程的 run 方法具有以下形式：
+语言并没有规定要求被中断的线程必须终止。中断线程仅仅是引起它的注意。被中断的线程可以决定如何响应中断。某些线程非常重要，它们应该处理异常并继续执行。但很多时候，线程只是简单地将中断解释为终止请求。此类线程的 `run` 方法具有以下形式：
 
 ```java
 Runnable r = () -> {
-  try {
+    try {
+        ...
+        while (!Thread.currentThread().isInterrupted()) {
+            do more work
+        }
+    } catch (InterruptedException e) {
+        // thread was interrupted
+    } finally {
+        cleanup, if required
+    }
+
+    // 退出 run 方法将终止线程
+};
+```
+
+如果你在每次工作迭代后都调用 `sleep` 方法（或另一个可中断的方法），那么 `isInterrupted` 检查既不是必要的也没有用处的。如果你在中断状态被设置时调用 `sleep` 方法，它不会睡眠。相反，它会清除状态并抛出一个 `InterruptedException`。因此，如果你的循环调用了 `sleep`，请不要检查中断状态。相反，请像这样捕获 `InterruptedException`：
+
+```java
+Runnable r = () -> {
+    try {
+        ...
+        while (more work to do) {
+            do more work
+            Thread.sleep(delay);
+        }
+    } catch (InterruptedException e) {
+        // thread was interrupted during sleep
+    } finally {
+        cleanup, if required
+    }
+}; // 退出 run 方法将终止线程
+```
+
+> **注意：** 有两个非常相似的方法：`interrupted` 和 `isInterrupted`。`interrupted` 方法是一个静态方法，用于检查当前线程是否被中断。此外，调用 `interrupted` 方法会清除线程的中断状态。另一方面，`isInterrupted` 方法是一个实例方法，你可以用它来检查任何线程是否被中断。调用它不会改变中断状态。
+
+你会发现很多发表的代码中，`InterruptedException` 在子任务级别被静默了，如下所示：
+
+```java
+void mySubTask() {
     ...
-    while (!Thread.currentThread().isInterrupted()) {
-      do more work
+    try {
+        sleep(delay);
+    } catch (InterruptedException e) {
+        // thread was interrupted
     }
-  } catch (InterruptedException e) {
-    // thread was interrupted
-  }
-  finally {
-    cleanup, if required
-  }
-  // 退出 run 方法将终止线程
-};
-```
-
-如果你在每次工作迭代后都调用 sleep 方法（或另一个可中断的方法），那么 isInterrupted 检查既不是必要的也没有用处的。如果你在中断状态被设置时调用 sleep 方法，它不会睡眠。相反，它会清除状态 (!) 并抛出一个 InterruptedException。因此，如果你的循环调用了 sleep，请不要检查中断状态。相反，请像这样捕获 InterruptedException：
-
-```java
-Runnable r = () -> {
-  try {
-    ... 
-    while (more work to do) {
-      do more work
-      Thread.sleep(delay);
-    }
-  } catch (InterruptedException e) {
-    // thread was interrupted during sleep
-  }
-  finally {
-    cleanup, if required
-  }
-}
-} // 退出 run 方法将终止线程
-};
-```
-
-**注意：** 有两个非常相似的方法：interrupted 和 isInterrupted。interrupted 方法是一个静态方法，用于检查当前线程是否被中断。此外，调用 interrupted 方法会清除线程的中断状态。另一方面，isInterrupted 方法是一个实例方法，你可以用它来检查任何线程是否被中断。调用它不会改变中断状态。
-
-你会发现很多发表的代码中，InterruptedException 在子任务级别被静默了，如下所示：
-
-```java
-void mySubTask()
-{
-  ...
-  try
-  {
-    sleep(delay);
-  } catch (InterruptedException e)
-  {
-    // thread was interrupted
-  }
 }
 ```
 
 不要这样做！如果你这样做，线程在睡眠期间将无法被中断。你有两个合理的选择：
 
 ```java
-void mySubTask() throws InterruptedException
-{
+void mySubTask() throws InterruptedException {
     ...
     sleep(delay);
-} catch (InterruptedException e) {
-    // thread was interrupted
 }
 ```
 
 等等，OCR 文本在末尾乱码了。让我根据提供的片段重构逻辑流：
 
-有两个非常相似的方法：interrupted 和 isInterrupted。interrupted 方法是一个静态方法，用于检查当前线程是否被中断。此外，调用 interrupted 方法会清除线程的中断状态。另一方面，isInterrupted 方法是一个实例方法，你可以用它来检查任何线程是否被中断。调用它不会改变中断状态。
+有两个非常相似的方法：`interrupted` 和 `isInterrupted`。`interrupted` 方法是一个静态方法，用于检查当前线程是否被中断。此外，调用 `interrupted` 方法会清除线程的中断状态。另一方面，`isInterrupted` 方法是一个实例方法，你可以用它来检查任何线程是否被中断。调用它不会改变中断状态。
 
-你会发现很多发表的代码中，InterruptedException 在子任务级别被静默了，如下所示：
+你会发现很多发表的代码中，`InterruptedException` 在子任务级别被静默了，如下所示：
 
 ```java
-void mySubTask()
-{
-  ...
-  try
-  {
-    sleep(delay);
-  } catch (InterruptedException e)
-  {
-    // thread was interrupted
-  }
+void mySubTask() {
+    ...
+    try {
+        sleep(delay);
+    } catch (InterruptedException e) {
+        // thread was interrupted
+    }
 }
 ```
 
@@ -20161,27 +20782,25 @@ void mySubTask()
 
 ## 10.3.2. 线程中断
 
-线程在其 run 方法返回时终止。
-
-
+线程在其 `run` 方法返回时终止。
 
 覆盖它以返回线程 ID 以外的内容。请改用最终线程方法。
 
-```
+```java
 java.lang.Thread 1.0
 ```
 
-- void setName(String name)
-- String getName()
+- `void setName(String name)`
+- `String getName()`
 - 设置或获取此线程的名称。
-- long threadId() 1.9
+- `long threadId()` 1.9  
   返回此线程的唯一 ID。
 
 ## 10.3.5. 未捕获异常的处理器
 
-线程的 run 方法不能抛出任何受检异常（checked exceptions），但它可以被未检异常（unchecked exception）终止。在这种情况下，线程将终止。
+线程的 `run` 方法不能抛出任何受检异常（checked exceptions），但它可以被未检异常（unchecked exception）终止。在这种情况下，线程将终止。
 
-然而，没有可以使异常传播的 catch 子句。相反，在线程死亡之前，异常会被传递给一个未捕获异常的处理器。
+然而，没有可以使异常传播的 `catch` 子句。相反，在线程死亡之前，异常会被传递给一个未捕获异常的处理器。
 
 处理器必须属于实现 `Thread.UncaughtExceptionHandler` 接口的类。该接口有一个方法：
 
@@ -20189,48 +20808,44 @@ java.lang.Thread 1.0
 void uncaughtException(Thread t, Throwable e)
 ```
 
-你可以通过 `setUncaughtExceptionHandler` 方法为任何线程安装处理器。你也可以通过 `Thread` 类的静态方法 `setDefaultUncaughtExceptionHandler` 为所有线程安装默认处理器。替换的处理器可以使用日志 API 将未捕获异常的报告发送到日志文件中。如果你没有安装默认处理器，默认处理器为 `null`。
+
+
+你可以通过`setUncaughtExceptionHandler`方法为任何线程安装处理器。你也可以通过`Thread`类的静态方法`setDefaultUncaughtExceptionHandler`为所有线程安装默认处理器。替换的处理器可以使用日志 API 将未捕获异常的报告发送到日志文件中。如果你没有安装默认处理器，默认处理器为`null`。
 
 如果你没有为线程安装未捕获异常处理器，它将使用执行以下操作的处理器：
 
-1. 如果线程的线程组有父级，则调用父线程组的 `uncaughtException` 方法。（这并不常见）。
-2. 否则，如果 `Thread.getDefaultUncaughtExceptionHandler` 方法返回一个非 `null` 处理器，则调用它。
-3. 否则，如果 `Throwable` 是已弃类 `ThreadDeath` 类的实例（该类曾被用于停止线程），则什么都不会发生。
-4. 否则，线程名称和 `Throwable` 的堆栈跟踪将打印到 `System.err` 上。
+1. 如果线程的线程组有父级，则调用父线程组的`uncaughtException`方法。（这并不常见）。
+2. 否则，如果`Thread.getDefaultUncaughtExceptionHandler`方法返回一个非`null`处理器，则调用它。
+3. 否则，如果`Throwable`是已弃类`ThreadDeath`类的实例（该类曾被用于停止线程），则什么都不会发生。
+4. 否则，线程名称和`Throwable`的堆栈跟踪将打印到`System.err`上。
 
 这就是你在程序中无疑见过很多次的堆栈跟踪。
 
-**注意：** 从技术上讲，未捕获异常处理器是由线程的线程组定义的。线程组是可以共同管理的线程集合。默认情况下，你创建的所有线程都属于同一个线程组，但也可以建立其他的分组。由于现在对于线程集合已经有了更好的功能，我建议你不要在程序中使用线程组。
+> **注意：** 从技术上讲，未捕获异常处理器是由线程的线程组定义的。线程组是可以共同管理的线程集合。默认情况下，你创建的所有线程都属于同一个线程组，但也可以建立其他的分组。由于现在对于线程集合已经有了更好的功能，我建议你不要在程序中使用线程组。
 
-```
-java.lang.Thread 1.0
-```
+### `java.lang.Thread` 1.0
 
-- static void setDefaultUncaughtExceptionHandler(Thread.UncaughtExceptionHandler handler) 5.0
-- static Thread.UncaughtExceptionHandler getDefaultUncaughtExceptionHandler() 5.0
-- 设置或获取未捕获异常的默认处理器。
+- `static void setDefaultUncaughtExceptionHandler(Thread.UncaughtExceptionHandler handler)` 5.0
+- `static Thread.UncaughtExceptionHandler getDefaultUncaughtExceptionHandler()` 5.0
+  设置或获取未捕获异常的默认处理器。
 
-- void setUncaughtExceptionHandler(Thread.UncaughtExceptionHandler handler) 5.0
-- Thread.UncaughtExceptionHandler getUncaughtExceptionHandler() 5.0
-- 设置或获取未捕获异常的处理器。如果没有安装处理器，则线程组对象即为处理器。
+- `void setUncaughtExceptionHandler(Thread.UncaughtExceptionHandler handler)` 5.0
+- `Thread.UncaughtExceptionHandler getUncaughtExceptionHandler()` 5.0
+  设置或获取未捕获异常的处理器。如果没有安装处理器，则线程组对象即为处理器。
 
-```
-java.lang.Thread.UncaughtExceptionHandler 5.0
-```
+### `java.lang.Thread.UncaughtExceptionHandler` 5.0
 
-- void uncaughtException(Thread t, Throwable e)
-定义用于在线程因未捕获异常终止时记录自定义报告。
+- `void uncaughtException(Thread t, Throwable e)`
+  定义用于在线程因未捕获异常终止时记录自定义报告。
 
-```
-java.lang.ThreadGroup 1.0
-```
+### `java.lang.ThreadGroup` 1.0
 
-- void uncaughtException(Thread t, Throwable e)
-如果存在父级，则调用父线程组的此方法；如果存在默认处理器，则调用 `Thread` 类的默认处理器；否则，向标准错误流打印堆栈跟踪。
+- `void uncaughtException(Thread t, Throwable e)`
+  如果存在父级，则调用父线程组的此方法；如果存在默认处理器，则调用`Thread`类的默认处理器；否则，向标准错误流打印堆栈跟踪。
 
 ## 10.3.6. 线程优先级
 
-每个线程都有一个*优先级*。默认情况下，线程继承构造它的线程的优先级。你可以使用 `setPriority` 方法增加或减少任何平台线程的优先级。你可以将优先级设置为 `MIN_PRIORITY`（在 `Thread` 类中定义为 1）和 `MAX_PRIORITY`（定义为 10）之间的任何值。`NORM_PRIORITY` 定义为 5。
+每个线程都有一个*优先级*。默认情况下，线程继承构造它的线程的优先级。你可以使用`setPriority`方法增加或减少任何平台线程的优先级。你可以将优先级设置为`MIN_PRIORITY`（在`Thread`类中定义为 1）和`MAX_PRIORITY`（定义为 10）之间的任何值。`NORM_PRIORITY`定义为 5。
 
 当平台线程调度程序有机会选择新线程时，它会倾向于优先级更高的线程。然而，由于 Java 虚拟机依赖于宿主平台的线程实现，Java 线程优先级被映射到宿主平台的优先级级别，宿主平台可能有更多或更少的线程优先级级别。
 
@@ -20238,376 +20853,402 @@ java.lang.ThreadGroup 1.0
 
 线程优先级在没有使用操作系统线程的早期 Java 版本中可能很有用。现在你不应该使用它们。
 
-为了向后兼容，所有虚拟线程的优先级都是 `NORM_PRIORITY`。尝试更改优先级没有效果。
+为了向后兼容，所有虚拟线程的优先级都是`NORM_PRIORITY`。尝试更改优先级没有效果。
 
-```
-java.lang.Thread 1.0
-```
+### `java.lang.Thread` 1.0
 
-- void setPriority(int newPriority)
-  设置此线程的优先级。优先级必须在 `Thread.MIN_PRIORITY` 和 `Thread.MAX_PRIORITY` 之间。使用 `Thread.NORM_PRIORITY` 设置普通优先级。
-- static int NORM_PRIORITY
+- `void setPriority(int newPriority)`  
+  设置此线程的优先级。优先级必须在`Thread.MIN_PRIORITY`和`Thread.MAX_PRIORITY`之间。使用`Thread.NORM_PRIORITY`设置普通优先级。
+- `static int NORM_PRIORITY`  
   是 Thread 可以拥有的最低优先级。最小优先级值为 1。
-- static int NORM_PRIORITY
+- `static int NORM_PRIORITY`  
   是 Thread 的默认优先级。默认优先级为 5。
-- static int MAX_PRIORITY
+- `static int MAX_PRIORITY`  
   是 Thread 可以拥有的最高优先级。最大优先级值为 10。
 
 ## 10.3.7. 线程工厂和构建器
 
-你通常希望产生多个具有相同属性的线程。`ThreadFactory` 接口有一个方法：
+你通常希望产生多个具有相同属性的线程。`ThreadFactory`接口有一个方法：
 
-```
+```java
 Thread newThread(Runnable r)
 ```
 
-它产生一个新线程，该线程在启动时将执行给定的 `Runnable`。你可以提供实现此接口的自定义类，或者从 Java 21 开始，使用静态方法 `ofPlatform()` 和 `ofVirtual()` 获取平台或虚拟线程的构建器。然后调用 `unstarted` 或 `start` 获取单个线程，或调用 `factory` 获取具有该构建器配置的工厂。
+它产生一个新线程，该线程在启动时将执行给定的`Runnable`。你可以提供实现此接口的自定义类，或者从 Java 21 开始，使用静态方法`ofPlatform()`和`ofVirtual()`获取平台或虚拟线程的构建器。然后调用`unstarted`或`start`获取单个线程，或调用`factory`获取具有该构建器配置的工厂。
 
-```
+```java
 Thread t = builder.unstarted(myRunnable);
+
 builder.start(myRunnable);
 
 ThreadFactory factory = builder.factory();
 ```
 
-```
-java.util.concurrent.ThreadFactory 5.0
-```
+### `java.util.concurrent.ThreadFactory` 5.0
 
-- void newThread(Runnable r)
+- `void newThread(Runnable r)`  
   创建一个线程，在启动时将执行给定的 Runnable。
 
-```
-java.lang.Thread 1.0
-```
+### `java.lang.Thread` 1.0
 
-- Thread.Builder.ofPlatform() 21
-- Thread.Builder.ofVirtual() 21
+- `Thread.Builder.ofPlatform()` 21
+- `Thread.Builder.ofVirtual()` 21  
   创建平台或虚拟线程的构建器。
 
-```
-java.lang.Thread.Builder 21
-```
+### `java.lang.Thread.Builder` 21
 
-- void name(String prefix, long start)
-- void name(String name)
+- `void name(String prefix, long start)`
+- `void name(String name)`  
   使构建的线程使用给定的前缀和计数命名，或使用给定的名称命名。
-- void factory()
+- `void factory()`  
   产生一个工厂。
-
-- void unstarted(Runnable task)
-- void start(Runnable task)
+- `void unstarted(Runnable task)`
+- `void start(Runnable task)`  
   构造执行给定任务的线程。第二个方法启动线程。
-- Thread.Builder uncaughtExceptionHandler(Thread.UncaughtExceptionHandler handler)
+- `Thread.Builder uncaughtExceptionHandler(Thread.UncaughtExceptionHandler handler)`  
   使构建的线程使用给定的未捕获处理器。
 
-java.lang.Thread.Builder.OfPlatform 21
+### `java.lang.Thread.Builder.OfPlatform` 21
 
-- void daemon()
-- void daemon(boolean on)
+- `void daemon()`
+- `void daemon(boolean on)`  
   除非为 false，否则构建的线程为守护线程。
-- void stackSize(long stackSize)
-- void group(ThreadGroup)
-- void priority(int priority)
+- `void stackSize(long stackSize)`
+- `void group(ThreadGroup)`
+- `void priority(int priority)`  
   使构建的线程具有给定的栈大小提示、组或优先级（不推荐）。
 
-## 10.4 协调任务
+## 10.4. 协调任务
 
 你通常希望将任务分解为子任务，并在结果可用时合并。在后续章节中，你将看到 Java 并发框架用于协调并发任务的工具。
 
 ### 10.4.1. Callable 和 Future
 
-`Runnable` 封装了一个异步运行的任务；你可以将其想象为没有参数没有返回值的异步方法。`Callable` 类似于 `Runnable`，但它返回一个值。`Callable` 接口是一个泛型类型，有一个方法调用。
+`Runnable`封装了一个异步运行的任务；你可以将其想象为没有参数没有返回值的异步方法。`Callable`类似于`Runnable`，但它返回一个值。`Callable`接口是一个泛型类型，有一个方法调用。
 
-```
+```java
 public interface Callable<V>
 {
     V call() throws Exception;
 }
 ```
 
-类型参数是返回值的类型。例如，`Callable<Integer>` 代表最终返回 Integer 对象的异步任务。
+类型参数是返回值的类型。例如，`Callable<Integer>`代表最终返回 Integer 对象的异步任务。
 
-`Future` 持有异步任务的结果。当你调度任务执行时，你会收到一个 Future 对象。使用 Future 对象你可以在结果就绪时获取它。
+`Future`持有异步任务的结果。当你调度任务执行时，你会收到一个`Future`对象。使用`Future`对象你可以在结果就绪时获取它。
 
-`Future<V>` 接口有以下方法：
-
-
+`Future<V>`接口有以下方法：
 
 ```java
 V get()
+
 V get(long timeout, TimeUnit unit)
+
 V resultNow()
+
 Throwable exceptionNow()
+
 void cancel(boolean mayInterrupt)
+
 boolean isCancelled()
+
 boolean isDone()
+
 Future.State state()
 ```
 
-调用第一个 `get` 方法会阻塞直到任务完成。
-第二个 `get` 方法也会阻塞，但如果在任务完成之前超时，它将抛出 `TimeoutException`。
-如果运行任务的线程被中断，两个方法都会抛出 `InterruptedException`。如果任务因异常终止，`get` 方法将抛出 `ExecutionException`，其原因为终止时的异常。
+调用第一个`get`方法会阻塞直到任务完成。第二个`get`方法也会阻塞，但如果在任务完成之前超时，它将抛出`TimeoutException`。如果运行任务的线程被中断，两个方法都会抛出`InterruptedException`。如果任务因异常终止，`get`方法将抛出`ExecutionException`，其原因为终止时的异常。
 
-如果任务已经完成，`get` 会立即返回。
+如果任务已经完成，`get`会立即返回。
 
-`resultNow` 方法是 `get` 的非阻塞版本，只有在你确定任务已成功完成时才应该调用它。如果你知道任务失败了，可以使用 `exceptionNow` 方法获取终止时的异常。
+`resultNow`方法是`get`的非阻塞版本，只有在你确定任务已成功完成时才应该调用它。如果你知道任务失败了，可以使用`exceptionNow`方法获取终止时的异常。
 
-你可以尝试使用 `cancel` 方法取消任务。如果任务尚未启动，它将被取消且永远不会启动。如果任务正在进行中，且 `mayInterrupt` 参数为 `true`，则任务会被中断；否则将运行到完成。
+你可以尝试使用`cancel`方法取消任务。如果任务尚未启动，它将被取消且永远不会启动。如果任务正在进行中，且`mayInterrupt`参数为`true`，则任务会被中断；否则将运行到完成。
 
 > **注意：** Java 中的任务取消始终需要任务实现者的配合。如[第 10.3.2 节]所述，任务需要监控线程的中断状态。
 
-`isDone` 方法在任务已完成（无论成功或失败）或已通过取消时返回 `true`。
+`isDone`方法在任务已完成（无论成功或失败）或已通过取消时返回`true`。
 
-`state` 方法以 `Task.State` 枚举值的形式返回任务状态，共有四个值：
+`state`方法以`Task.State`枚举值的形式返回任务状态，共有四个值：
 
-- RUNNING：任务未完成且未被取消
-- SUCCESS：任务已成功完成
-- FAILED：任务因异常完成
-- CANCELLED：任务已通过取消
+- `RUNNING`：任务未完成且未被取消
+- `SUCCESS`：任务已成功完成
+- `FAILED`：任务因异常完成
+- `CANCELLED`：任务已通过取消
 
-在调用 `resultNow` 或 `exceptionNow` 之前，你应该先调用 `state` 方法。
+在调用`resultNow`或`exceptionNow`之前，你应该先调用`state`方法。
 
-执行 `Callable` 的一种方法是使用 `FutureTask`，它由于同时实现了 `Future` 和 `Runnable` 接口，因此你可以构造一个线程来运行它：
+执行`Callable`的一种方法是使用`FutureTask`，它由于同时实现了`Future`和`Runnable`接口，因此你可以构造一个线程来运行它：
 
 ```java
 Callable<Integer> task = . . .;
+
 var futureTask = new FutureTask<Integer>(task);
+
 var t = new Thread(futureTask); // futureTask is
+
 ...
+
 Integer result = futureTask.get(); // futureTask
 ```
 
-更常见的情况下，你会将 `Callable` 传递给执行器。这是下一节的主题。
+更常见的情况下，你会将`Callable`传递给执行器。这是下一节的主题。
 
-要为 `Runnable` 获取 `Future`，你可以调用：
+要为`Runnable`获取`Future`，你可以调用：
 
 ```java
 var futureTask = new FutureTask<Void>(myRunnable,
 ```
 
-```java
-java.util.concurrent.Callable<V> 5.0
-```
+### `java.util.concurrent.Callable<V>` 5.0
 
-* V call()
+- `V call()`  
   运行一个产生结果的任务。
 
-```java
-java.util.concurrent.Future<V> 5.0
-```
+### `java.util.concurrent.Future<V>` 5.0
 
-* V get()
-* V get(long time, TimeUnit)
-获取结果，阻塞直到结果可用或给定时间过去。如果任务被取消，抛出 `CancellationException`；如果任务未成功完成，抛出原因为终止异常的 `ExecutionException`；如果当前线程被中断，抛出 `InterruptedException`。如果任务在给定时间内未完成，第二个方法抛出 `TimeoutException`。
-* V resultNow()
-如果任务成功完成则获取结果，否则抛出 `IllegalStateException`。
-* Throwable exceptionNow()
-如果任务未成功完成则获取终止异常，否则抛出 `IllegalStateException`。
-* boolean cancel(boolean mayInterrupt)
-尝试取消此任务的执行。如果任务已经启动且 `mayInterrupt` 参数为 `true`，则会被中断。如果取消成功则返回 `true`。
+- `V get()`
+- `V get(long time, TimeUnit)`  
+  获取结果，阻塞直到结果可用或给定时间过去。如果任务被取消，抛出`CancellationException`；如果任务未成功完成，抛出原因为终止异常的`ExecutionException`；如果当前线程被中断，抛出`InterruptedException`。如果任务在给定时间内未完成，第二个方法抛出`TimeoutException`。
+- `V resultNow()`  
+  如果任务成功完成则获取结果，否则抛出`IllegalStateException`。
+- `Throwable exceptionNow()`  
+  如果任务未成功完成则获取终止异常，否则抛出`IllegalStateException`。
+- `boolean cancel(boolean mayInterrupt)`  
+  尝试取消此任务的执行。如果任务已经启动且`mayInterrupt`参数为`true`，则会被中断。如果取消成功则返回`true`。
+- `boolean isCancelled()`  
+  如果任务在完成前被取消，返回`true`。
+- `boolean isDone()`  
+  如果任务已完成（无论成功或失败）或已取消，返回`true`。
+- `Future.State state()`  
+  返回此任务的状态：`RUNNING`、`SUCCESS`、`FAILED`或`CANCELLED`。
 
-- boolean isCancelled()
-如果任务在完成前被取消，返回 `true`。
-- boolean isDone()
-如果任务已完成（无论成功或失败）或已取消，返回 `true`。
-- Future.State state()
-返回此任务的状态：RUNNING、SUCCESS、FAILED 或 CANCELLED。
+### `java.util.concurrent.FutureTask<V>` 5.0
 
-```java
-java.util.concurrent.FutureTask<V> 5.0
-```
-
-- FutureTask(Callable<V> task)
-构造一个既是 `Future<V>` 又是 `Runnable` 的对象。
-- FutureTask(Runnable task, V result)
-构造一个对象，作为 `Runnable` 执行任务，并作为 `Future<V>` 在完成后产生结果。
+- `FutureTask(Callable<V> task)`  
+  构造一个既是`Future<V>`又是`Runnable`的对象。
+- `FutureTask(Runnable task, V result)`  
+  构造一个对象，作为`Runnable`执行任务，并作为`Future<V>`在完成后产生结果。
 
 ## 10.4.2. Executors
 
-构造一个新的平台线程是相当昂销的，因为涉及到与操作系统的交互。如果你的程序创建了大量短命的平台线程，你不应该在每个线程上运行每个任务，而应该使用线程池。线程池包含若干准备好执行你任务的线程。你向池提交 `Runnable` 或 `Callable` 任务，由其中一个线程调用 `run` 或 `call` 方法。方法退出时，线程不会死亡，而是留在那里处理下一个请求。
+构造一个新的平台线程是相当昂销的，因为涉及到与操作系统的交互。如果你的程序创建了大量短命的平台线程，你不应该在每个线程上运行每个任务，而应该使用线程池。线程池包含若干准备好执行你任务的线程。你向池提交`Runnable`或`Callable`任务，由其中一个线程调用`run`或`call`方法。方法退出时，线程不会死亡，而是留在那里处理下一个请求。
 
 执行器是你提交任务的对象。对于平台线程，它就是一个线程池。虚拟线程的创建非常廉价，永远不应该池化。虚拟线程的执行器只需为每个提交的任务启动一个新的虚拟线程。
 
-`Executors` 类有许多静态工厂方法用于构造执行器。表 10.1 列出了最实用的方法。
+`Executors`类有许多静态工厂方法用于构造执行器。表 10.1 列出了最实用的方法。
 
-## **表 10.1:** 常用执行器工厂方法
-
-| 方法 | 说明 |
-| --- | --- |
-| newCachedThreadPool | 根据需要创建新线程；空闲线程保留 60 秒。 |
-| newFixedThreadPool | 池包含一组固定的线程； |
+## 表 10.1：常用执行器工厂方法
 
 | 方法 | 说明 |
 | --- | --- |
-| | 空闲线程被无限保留。 |
-| newSingleThreadExecutor | 一个带有单个线程并执行提交任务的“池”。 |
-| newVirtualThreadPerExecutor | 一个在每个线程上运行每个任务的执行器。 |
+| `newCachedThreadPool` | 根据需要创建新线程；空闲线程保留 60 秒。 |
+| `newFixedThreadPool` | 池包含一组固定的线程；空闲线程被无限保留。 |
+| `newSingleThreadExecutor` | 一个带有单个线程并执行提交任务的“池”。 |
+| `newVirtualThreadPerExecutor` | 一个在每个线程上运行每个任务的执行器。 |
 
-`CachedThreadPool` 方法构造一个立即执行每个任务的线程池，在可用空闲线程时使用它，否则创建新线程。`newFixedThreadPool` 方法构造一个固定大小的线程池。如果提交的任务多于空闲线程，未处理的任务将被放置在队列中。它们会在其他任务完成后被运行。`newSingleThreadExecutor` 是一个大小为 1 的退化池，由单个线程一个接一个执行任务。
+`CachedThreadPool`方法构造一个立即执行每个任务的线程池，在可用空闲线程时使用它，否则创建新线程。`newFixedThreadPool`方法构造一个固定大小的线程池。如果提交的任务多于空闲线程，未处理的任务将被放置在队列中。它们会在其他任务完成后被运行。`newSingleThreadExecutor`是一个大小为 1 的退化池，由单个线程一个接一个执行任务。
 
 当你拥有短命或花费大量时间阻塞的平台线程时，请使用缓存线程池。然而，如果你有线程在不阻塞的情况下努力工作，你不希望同时运行大量它们。为了获得最佳速度，并发线程的数量应该是处理器的核心数。在这种情况下，你应该使用固定线程池来限制并发线程的总数。
 
 使用固定线程池的另一个原因是为了限制并发任务的数量。如果许多任务访问一个只能处理有限数量并发客户端的服务，那么你可以使用池的大小来强制该限制。这是一种相当粗糙的应用程序调优方法，但意外地常见，因为它很容易实现。
 
-> 注意：如果你的应用程序使用虚拟线程，你需要想出替代机制来限制并发请求，例如计数信号量或有界队列。
+> **注意：** 如果你的应用程序使用虚拟线程，你需要想出替代机制来限制并发请求，例如计数信号量或有界队列。
 
 例如，这段代码片段限制了并发请求：
 
 ```java
 private static final int CONCURRENT_REQUESTS = 10;
+
 private static final Semaphore SEMAPHORE = new Semaphore(CONCURRENT_REQUESTS);
+
 ...
+
 public static String get(URI uri) throws Exception
-  var request = HttpRequest.newBuilder().uri(uri).build();
-  SEMAPHORE.acquire();
-  try {
-    return client.send(request, HttpResponse.BodyHandlers.ofString()).body();
-  } finally {
-    SEMAPHORE.release();
-  }
+{
+    var request = HttpRequest.newBuilder().uri(uri).build();
+
+    SEMAPHORE.acquire();
+
+    try
+    {
+        return client.send(request, HttpResponse.BodyHandlers.ofString()).body();
+    }
+    finally
+    {
+        SEMAPHORE.release();
+    }
 }
 ```
 
+
+
+
 ![](img/1bda005f6b519fd0924777a921aebffa_1319_0.png)
 
-在并发请求很多的情况下，`acquire` 方法会阻塞。对于虚拟线程来说，这不是问题。为了有效的扩展，最好将限制移动到压力点，而不是线程池。
+在并发请求很多的情况下，`acquire`方法会阻塞。对于虚拟线程来说，这不是问题。为了有效地扩展，最好将限制移动到压力点，而不是线程池。
 
-单线程执行器对性能分析可能很有有用。如果你临时将缓存线程池替换为单线程池，你可以衡量在没有并发益处的情况下应用程序运行慢了多少。
+单线程执行器对性能分析可能很有用。如果你临时将缓存线程池替换为单线程池，你可以衡量在没有并发益处的情况下应用程序运行慢了多少。
 
+大多数`Executors`工厂方法都有一个带有`ThreadFactory`参数的版本，允许你自定义执行提交任务的线程。如果你为线程池提供了自己的工厂，它应该产生平台线程（platform threads）而不是虚拟线程（virtual threads），因为池化虚拟线程永远没用。如果你想自定义虚拟线程，请向`newThreadPerTaskExecutor`方法传递一个虚拟线程的工厂。
 
+所有的`Executors`工厂方法都返回实现`ExecutorService`接口类的对象。使用以下方法之一向`ExecutorService`提交`Runnable`或`Callable`：
 
-
-大多数 `Executors` 工厂方法都有一个带有 `ThreadFactory` 参数的版本，允许你自定义执行提交任务的线程。如果你为线程池提供了自己的工厂，它应该产生平台线程（platform threads）而不是虚拟线程（virtual threads），因为池化虚拟线程永远没用。如果你想自定义虚拟线程，请向 `newThreadPerTaskExecutor` 方法传递一个虚拟线程的工厂。
-
-所有的 `Executors` 工厂方法都返回实现 `ExecutorService` 接口类的对象。使用以下方法之一向 `ExecutorService` 提交 `Runnable` 或 `Callable`：
-
-```
+```java
 Future<T> submit(Callable<T> task)
+
 Future<?> submit(Runnable task)
+
 Future<T> submit(Runnable task, T result)
 ```
 
-当你调用 `submit` 时，执行器会调度提交的任务。你会得到一个 `Future` 对象，可以使用它获取结果或取消任务。
+当你调用`submit`时，执行器会调度提交的任务。你会得到一个`Future`对象，可以使用它获取结果或取消任务。
 
-第二个 `submit` 方法返回一个 `Future<?>`。`get` 方法会阻塞直到完成，然后返回 `null`。
+第二个`submit`方法返回一个`Future<?>`。`get`方法会阻塞直到完成，然后返回`null`。
 
-> 注意：`java.util.concurrent` API 中的其他方法返回的是 `Future<Void>` 而不是 `Future<?`。在所有实际用途中，这些类型的功能相同。你可以使用实例查询任务状态并阻塞直到任务完成，但没有结果值。
+> 注意：`java.util.concurrent` API中的其他方法返回的是`Future<Void>`而不是`Future<?>`。在所有实际用途中，这些类型的功能相同。你可以使用实例查询任务状态并阻塞直到任务完成，但没有结果值。
 
-第三个版本的 `submit` 返回一个 `Future`，其 `get` 方法在完成后会返回给定的结果对象。
+第三个版本的`submit`返回一个`Future`，其`get`方法在完成后会返回给定的结果对象。
 
-当你完成执行器的工作后，调用 `close` 方法。关闭的执行器不再接受任务。`close` 方法会阻塞直到所有提交的任务完成。（如果调用 `close` 的线程被中断，则提交的任务将被取消。）调用 `close` 的方便方法是使用 `try-with-resources` 语句：
+当你完成执行器的工作后，调用`close`方法。关闭的执行器不再接受任务。`close`方法会阻塞直到所有提交的任务完成。（如果调用`close`的线程被中断，则提交的任务将被取消。）调用`close`的方便方法是使用`try-with-resources`语句：
 
-```
+```java
 try (ExecutorService executor = Executors.newFixedThreadPool(1))
+
   ...
+
   Future<V> f = submit(myCallable);
+
   ...
+
 } // 在此处调用 executor.close()
 ```
 
-**注意：** 某些程序员将执行器视为全局资源。在某些情况下，使用全局执行器是有意义的，但不应该犹豫于拥有本地执行器、提交几个任务然后将其关闭。这在处理虚拟线程时特别有用，因为关闭的阻塞调用并不令人担心。
+**注意：**某些程序员将执行器视为全局资源。在某些情况下，使用全局执行器是有意义的，但不应该犹豫于拥有本地执行器、提交几个任务然后将其关闭。这在处理虚拟线程时特别有用，因为关闭的阻塞调用并不令人担心。
 
-还有其他方法可以关闭执行器：`shutdown`、`shutdownNow` 和 `awaitTermination`。这些方法提供了更细粒度的控制，并且在旧代码中是必要的，因为 `close` 方法是在 Java 19 中引入的。如果你需要用旧版本的 Java 运行本节中的演示程序，请将 `executor.close()` 调用替换为：
+还有其他方法可以关闭执行器：`shutdown`、`shutdownNow`和`awaitTermination`。这些方法提供了更细粒度的控制，并且在旧代码中是必要的，因为`close`方法是在 Java 19 中引入的。如果你需要用旧版本的 Java 运行本节中的演示程序，请将`executor.close()`调用替换为：
 
-```
+```java
 executor.shutdown();
+
 executor.awaitTermination(10, TimeUnit.MINUTES);
 ```
 
 这里总结了你使用执行器的步骤：
 
-- 1. 调用 `Executors` 类的静态方法之一，最常见的是 `newCachedThreadPool`、`newFixedThreadPool` 或 `newVirtualThreadPerTaskExecutor`。
-- 2. 调用 `submit` 提交 `Callable` 或 `Runnable` 对象。
-- 3. 保留返回的 `Future` 对象，以便查询任务状态、获取结果或取消任务。
-- 4. 当你不再想提交任何任务时关闭执行器。
+1. 调用`Executors`类的静态方法之一，最常见的是`newCachedThreadPool`、`newFixedThreadPool`或`newVirtualThreadPerTaskExecutor`。
+2. 调用`submit`提交`Callable`或`Runnable`对象。
+3. 保留返回的`Future`对象，以便查询任务状态、获取结果或取消任务。
+4. 当你不再想提交任何任务时关闭执行器。
 
-> **警告：** 当执行器使用线程工厂的线程时，设置工厂的未捕获异常处理器是无效的。线程池需要安装自己的句处理器来捕获任务异常。
+> **警告：**当执行器使用线程工厂的线程时，设置工厂的未捕获异常处理器是无效的。线程池需要安装自己的句处理器来捕获任务异常。
 
-```
+```text
 java.util.concurrent.Executors 5.0
 ```
 
-- static ExecutorService newCachedThreadPool()
-- static ExecutorService newCachedThreadPool(ThreadFactory threadFactory) 返回一个缓存线程池，它根据需要创建线程并终止空闲 60 秒的线程。
-- static ExecutorService newFixedThreadPool(int threads)
-- static ExecutorService newFixedThreadPool(int threads, ThreadFactory threadFactory) 返回一个使用给定数量线程执行任务的线程池。
+- `static ExecutorService newCachedThreadPool()`
+- `static ExecutorService newCachedThreadPool(ThreadFactory threadFactory)` 返回一个缓存线程池，它根据需要创建线程并终止空闲60秒的线程。
+- `static ExecutorService newFixedThreadPool(int threads)`
+- `static ExecutorService newFixedThreadPool(int threads, ThreadFactory threadFactory)` 返回一个使用给定数量线程执行任务的线程池。
 
-```
+```java
 static ExecutorService newSingleThreadExecutor()
+
 static ExecutorService newSingleThreadExecutor(ThreadFactory threadFactory)
+
 返回一个在单线程中按顺序执行任务的执行器。
 ```
 
-```
+```java
 static ExecutorService VirtualThreadPerTaskExecutor() 21
+
 static ExecutorService newThreadPerTaskExecutor(ThreadFactory threadFactory) 21
+
 返回一个在新虚拟线程中或由给定工厂产生的线程中执行每个任务的执行器。
 ```
 
-java.util.concurrent.ExecutorService 5.0
+## `java.util.concurrent.ExecutorService` 5.0
 
-- Future<T> submit(Callable<T> task)
-- Future<T> submit(Runnable task, T result)
-- Future<?> submit(Runnable task) 提交给定的任务执行。
-- void close() 19 将执行器设置为关闭模式，不再接受新提交，并阻塞直到已提交的任务完成。如果在阻塞期间被中断，正在运行的任务将被中断。
-- void shutdown() 将执行器设置为关闭模式，不再接受新提交。此方法不会阻塞等待提交任务的完成。
-- List<Runnable> shutdownNow() 将执行器设置为关闭模式，中断已启动的任务，并移除尚未启动的任务。返回一个被移除的任务列表。此方法不会阻塞等待提交任务的完成。
-- boolean awaitTermination(long timeout, TimeUnit unit) 阻塞直到所有提交的任务完成、超时通过或阻塞被中断。如果所有任务都完成，则返回 true。
+- `Future<T> submit(Callable<T> task)`
+- `Future<T> submit(Runnable task, T result)`
+- `Future<?> submit(Runnable task)`提交给定的任务执行。
+- `void close()` 19 将执行器设置为关闭模式，不再接受新提交，并阻塞直到已提交的任务完成。如果在阻塞期间被中断，正在运行的任务将被中断。
+- `void shutdown()`将执行器设置为关闭模式，不再接受新提交。此方法不会阻塞等待提交任务的完成。
+- `List<Runnable> shutdownNow()`将执行器设置为关闭模式，中断已启动的任务，并移除尚未启动的任务。返回一个被移除的任务列表。此方法不会阻塞等待提交任务的完成。
+- `boolean awaitTermination(long timeout, TimeUnit unit)`阻塞直到所有提交的任务完成、超时通过或阻塞被中断。如果所有任务都完成，则返回`true`。
 
-# 10.4.3. 调用一组任务
+## 10.4.3. 调用一组任务
 
 通常，你想要启动多个并发任务并获取第一个成功任务的结果，或者合并所有完成任务的结果。
 
-`invokeAny` 方法提交 `Callable` 集合中的所有任务，并阻塞直到其中一个任务成功完成，返回其结果。任何未完成的任务将被取消。你不知道是哪个任务成功了——推测它是完成最快的那一个。如果没有任务成功，则会抛出 `ExecutionException`。
+`invokeAny`方法提交`Callable`集合中的所有任务，并阻塞直到其中一个任务成功完成，返回其结果。任何未完成的任务将被取消。你不知道是哪个任务成功了——推测它是完成最快的那一个。如果没有任务成功，则会抛出`ExecutionException`。
 
 将此方法用于搜索问题，在这种问题中愿意接受任何解决方案。例如，假设你需要找到一个大整数的因数——这是破解 RSA 密码时所需的计算。你可以提交多个任务，每个任务尝试用不同范围的数字进行因式分解。只要这些任务中的一个有了答案，你的计算就可以停止。
 
-`invokeAll` 方法提交 `Callable` 集合中的所有任务，阻塞直到所有任务都完成，并返回一个 `Future` 列表，代表所有任务的解决方案，其顺序与提交任务的顺序相同。你可以这样处理计算结果：
+`invokeAll`方法提交`Callable`集合中的所有任务，阻塞直到所有任务都完成，并返回一个`Future`列表，代表所有任务的解决方案，其顺序与提交任务的顺序相同。你可以这样处理计算结果：
 
-```
+```java
 List<Callable<T>> tasks = . . . ;
+
 List<Future<T>> results = executor.invokeAll(tasks);
+
 for (Future<T> result : results) {
+
     if (result.state() == Future.State.SUCCESS) {
+
         process result.resultNow();
+
     } else {
+
         handle result.exceptionNow();
+
     }
+
 }
 ```
 
-对 `invokeAll` 的调用会阻塞直到所有任务完成。如果你想按照结果可顺序获取结果，请使用 `ExecutorService`。
+对`invokeAll`的调用会阻塞直到所有任务完成。如果你想按照结果可用顺序获取结果，请使用`ExecutorService`。
 
-从通常方式获取执行器开始。然后构建一个 `ExecutorCompletionService`。向完成服务提交任务。该服务管理一个 `Future` 对象的阻塞队列，在提交的任务的结果变为可用时将其包含其中：
+从通常方式获取执行器开始。然后构建一个`ExecutorCompletionService`。向完成服务提交任务。该服务管理一个`Future`对象的阻塞队列，在提交的任务的结果变为可用时将其包含其中：
 
-```
+```java
 var service = new ExecutorCompletionService<T>(executor)
+
 for (Callable<T> task : tasks) service.submit(task);
+
 for (int i = 0; i < tasks.size(); i++) {
+
     Future<T> result = service.take();
+
 }
 ```
 
-列表 10.3 中的程序显示了如何使用 callable 和执行器。在第一次计算中，我们统计目录树中有多少文件包含给定单词。我们为每个文件创建一个单独的任务：
+列表10.3中的程序显示了如何使用`Callable`和执行器。在第一次计算中，我们统计目录树中有多少文件包含给定单词。我们为每个文件创建一个单独的任务：
 
-```
+```java
 Set<Path> files = descendants(Path.of(start));
+
 var tasks = new ArrayList<Callable<Long>>();
+
 for (Path file : files)
+
 {
 ```
 
-```
+```java
 Callable<Long> task = () -> occurrences(word),
+
 tasks.add(task);
+
 }
 ```
 
 然后我们将任务传递给执行器服务：
 
-```
+```java
 ExecutorService executor = Executors.newCachedTh
+
 List<Future<Long>> results = executor.invokeAll(
 ```
 
@@ -20615,97 +21256,142 @@ List<Future<Long>> results = executor.invokeAll(
 
 为了获得合并计数，我们加上所有结果，阻塞直到它们可用：
 
-```
+```java
 long total = 0;
+
 for (Future<Long> result : results)
+
 total += result.get();
 ```
 
 程序还显示了搜索期间花费的时间。在某处解压 JDK 源代码并运行搜索。然后将执行器替换为单线程执行器并再次尝试，看看并发计算是否更快。也尝试使用虚拟线程。
 
-在程序的第二部分，我们搜索包含给定单词的第一个文件。我们使用 `invokeAny` 来并行化
+在程序的第二部分，我们搜索包含给定单词的第一个文件。我们使用`invokeAny`来并行化搜索。
 
-
-搜索。在这里，我们必须更仔细地制定任务。`invokeAny` 方法在任何任务返回结果时立即终止。因此，我们不能让搜索任务返回布尔值来指示成功或失败。我们不希望在某个任务失败时停止搜索。相反，失败的任务会抛出一个 `NoSuchElementException`。此外，当一个任务成功时，其他任务会被取消。因此，我们监控中断状态。如果底层线程被中断，搜索任务会在终止前打印一条消息，这样你就能看到取消是有效的。
+在这里，我们必须更仔细地制定任务。`invokeAny`方法在任何任务返回结果时立即终止。因此，我们不能让搜索任务返回布尔值来指示成功或失败。我们不希望在某个任务失败时停止搜索。相反，失败的任务会抛出一个`NoSuchElementException`。此外，当一个任务成功时，其他任务会被取消。因此，我们监控中断状态。如果底层线程被中断，搜索任务会在终止前打印一条消息，这样你就能看到取消是有效的。
 
 ```java
 public static Callable<Path> searchForTask(String word)
+
 {
+
     return () -> {
+
         try (var in = new Scanner(path)) {
+
             while (in.hasNext()) {
+
                 if (in.next().equals(word)) return null;
+
                 if (Thread.currentThread().isInterrupted()) {
+
                     System.out.println("Search in...");
+
                     return null;
+
                 }
+
             }
+
         } catch (IOException ex) {
+
             return 0;
+
         }
+
         throw new NoSuchElementException();
+
     }
+
 }
 ```
 
-**预览说明：** 就像结构化编程用分支、循环和函数取代了“goto”语句一样，结构化并发是为了寻找能够更容易对并发程序推理的编程构造。
+**预览说明：**就像结构化编程用分支、循环和函数取代了“goto”语句一样，结构化并发是为了寻找能够更容易对并发程序推理的编程构造。
 
-Java 21 包含了结构化并发 API 的预览版。任务被提交到 `StructuredTaskScope` 中。然后 `join` 方法会阻塞，直到根据作用域的关闭策略作用范围关闭（shut down）。该 API 提供了两个简单的策略 `ShutdownOnFailure` 和 `ShutdownOnSuccess`。以下是一个用法示例：
+Java 21包含了结构化并发API的预览版。任务被提交到`StructuredTaskScope`中。然后`join`方法会阻塞，直到根据作用域的关闭策略作用范围关闭（shut down）。该API提供了两个简单的策略`ShutdownOnFailure`和`ShutdownOnSuccess`。以下是一个用法示例：
 
 ```java
 // Java 21 预览 API
+
 try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
+
     Supplier<T1> f1 = scope.fork(callable1);
+
     Supplier<T2> f2 = scope.fork(callable2);
+
     scope.join();
+
     scope.throwIfFailed();
+
     result = combine(f1.get(), f2.get());
+
 }
 ```
 
-当 try 块结束时，我们可以确定所有子任务都已完成。
+当`try`块结束时，我们可以确定所有子任务都已完成。
 
 如果任何子任务失败，作用域将关闭，取消其他任务，并重新抛出第一个异常。
 
 如果当前线程被中断，作用域将关闭，两个任务都会取消。
 
-你可以使用 `ExecutorService.invokeAll` 实现几乎相同的效果，不同的是 `invokeAll` 即使其中一个任务失败，也会等待所有任务完成。如果你更倾向于该策略，实现一个作用域子类是非常简单的。
+你可以使用`ExecutorService.invokeAll`实现几乎相同的效果，不同的是`invokeAll`即使其中一个任务失败，也会等待所有任务完成。如果你更倾向于该策略，实现一个作用域子类是非常简单的。
 
-结构化编程 API 灵活且方便，并为作用域嵌套提供了运行时检查和可观测性特性。
+结构化编程API灵活且方便，并为作用域嵌套提供了运行时检查和可观测性特性。
 
-# 列表 10.3 executors/ExecutorDemo.java
+## 列表10.3 `executors/ExecutorDemo.java`
 
 ```java
 package executors;
 
 import java.io.*;
+
 import java.nio.file.*;
+
 import java.time.*;
+
 import java.util.*;
+
 import java.util.concurrent.*;
+
 import java.util.stream.*;
+
 /**
  * 此程序演示了 Callable
  * @version 1.02 2023-07-27
  * @author Cay Horstmann
  */
+
 public class ExecutorDemo {
+
     /**
      * 统计文件中给定单词的出现次数
      * @return 单词出现的次数
      */
+
     public static long occurrences(String path, String word) {
+
         try (var in = new Scanner(path)) {
+
             int count = 0;
+
             while (in.hasNext()) {
+
                 if (in.next().equals(word)) {
+
                     return count;
+
                 }
+
             }
+
         } catch (IOException ex) {
+
             return 0;
+
         }
+
         return 0;
+
     }
 
     /**
@@ -20713,83 +21399,141 @@ public class ExecutorDemo {
      * @param rootDir 根目录
      * @return 目录所有后代节点的集合
      */
+
     public static Set<Path> descendants(Path root) {
+
         try (Stream<Path> entries = Files.walk(root)) {
+
             return entries.filter(Files::isRegular).collect(Collectors.toSet());
+
         }
+
     }
+
     /**
      * 生成一个搜索单词的任务
      * @param word 要搜索的单词
      * @param path 要搜索的文件
      * @return 返回结果的搜索任务
      */
+
     public static Callable<Path> searchForTask(String word, Path path) {
+
         return () -> {
+
             try (var in = new Scanner(path)) {
+
                 while (in.hasNext()) {
+
                     if (in.next().equals(word)) return path;
+
                     if (Thread.currentThread().isInterrupted()) {
-                        System.out.println("Search in...");
-                        return null;
-                    }
-                }
-                throw new NoSuchElementException();
-            }
-        };
-    }
 
-    public static void main(String[] args)
+
+
+```java
+System.out.println("Search in...");
+
+return null;
+```
+
+```java
+}
+
+}
+
+throw new NoSuchElementException();
+
+}
+
+};
+
+}
+
+public static void main(String[] args)
     throws InterruptedException, ExecutionException {
-        try (var in = new Scanner(System.in)) {
-            System.out.print("Enter base directory: ");
-            String start = in.nextLine();
-            System.out.print("Enter keyword: ");
-            String word = in.nextLine();
 
-            Set<Path> files = descendants(Path.of(start));
-            List<Callable<Long>> tasks = new ArrayList<>();
-            for (Path file : files) {
-                Callable<Long> task = () -> occurrences(file.toString(), word);
-                tasks.add(task);
-            }
-            ExecutorService executor = Executors.newSingleThreadExecutor();
-            // 使用单线程执行器
-            // 加快搜索
-            // ExecutorService executor = Executors.newFixedThreadPool(4);
-            // 尝试虚拟线程
-            // ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor();
-            Instant startTime = Instant.now();
-            List<Future<Long>> results = executor.invokeAll(tasks);
-            long total = 0;
-            for (Future<Long> result : results) {
-                total += result.get();
-            }
-            Instant endTime = Instant.now();
-            System.out.println("Occurrences of " + word + ": " + total);
-            System.out.println("Time elapsed: " + Duration.between(startTime, endTime));
-            executor.close();
+    try (var in = new Scanner(System.in)) {
+
+        System.out.print("Enter base directory: ");
+
+        String start = in.nextLine();
+
+        System.out.print("Enter keyword: ");
+
+        String word = in.nextLine();
+
+        Set<Path> files = descendants(Path.of(start));
+
+        List<Callable<Long>> tasks = new ArrayList<>();
+
+        for (Path file : files) {
+
+            Callable<Long> task = () -> occurrences(file.toString(), word);
+
+            tasks.add(task);
+
         }
+
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+
+        // 使用单线程执行器
+        // 加快搜索
+        // ExecutorService executor = Executors.newFixedThreadPool(4);
+
+        // 尝试虚拟线程
+        // ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor();
+
+        Instant startTime = Instant.now();
+
+        List<Future<Long>> results = executor.invokeAll(tasks);
+
+        long total = 0;
+
+        for (Future<Long> result : results) {
+
+            total += result.get();
+
+        }
+
+        Instant endTime = Instant.now();
+
+        System.out.println("Occurrences of " + word + ": " + total);
+
+        System.out.println("Time elapsed: " + Duration.between(startTime, endTime));
+
+        executor.close();
+
     }
+
+}
+
 }
 ```
 
+要识别线程局部变量的使用，请带有 VM 标志`jdk.traceVirtualThreadLocals`运行程序。当虚拟线程修改线程局部变量时，你将获得一个堆栈跟踪。
 
+> **预览说明：**作用域值（Scoped values）是 Java 21 的一个预览特性，提供了一个比可继承线程局部变量性能更好的版本。作用域值每个线程有一个实例，但它们是不可变的且具有边界生命周期。作用域值会在由`StructuredTaskScope`创建的虚拟线程中被继承。此代码段展示了如何使用它们：
 
-要识别线程局部变量的使用，请带有 VM 标志 `jdk.traceVirtualThreadLocals` 运行程序。当虚拟线程修改线程局部变量时，你将获得一个堆栈跟踪。
-
-> **预览说明：** 作用域值（Scoped values）是 Java 21 的一个预览特性，提供了一个比可继承线程局部变量性能更好的版本。作用域值每个线程有一个实例，但它们是不可变的且具有边界生命周期。作用域值会在由 StructuredTaskScope 创建的虚拟线程中被继承。此代码段展示了如何使用它们：
-
-```
+```java
 public static final ScopedValue<Connection
+
   . . .
+
 ScopedValue.where(CONNECTION, connect(uri,
+
   . . .
+
 public void dowork() {
+
   . . .
+
   Connection connection = CONNECTION.get(
+
   var result = connection.executeQuery(qu
+
   . . .
+
 }
 ```
 
@@ -20801,18 +21545,25 @@ public void dowork() {
 java.lang.ThreadLocal<T> 1.2
 ```
 
-- - T get()
-  获取此线程当前的值。如果第一次调用 get 且从未调用过 set，则通过调用 initialize 获取该值。
-- void set(T t)
+- `T get()`
+
+  获取此线程当前的值。如果第一次调用`get`且从未调用过`set`，则通过调用`initialize`获取该值。
+
+- `void set(T t)`
+
   为此线程设置一个新值。
-- void remove()
+
+- `void remove()`
+
   移除此线程的值。
 
 ## 10.4.5. Fork-Join 框架
 
-某些应用程序使用了大量处于空闲状态的线程。例如，一个每个连接使用一个线程的 Web 服务器。其他应用程序为每个处理器核心使用一个线程，以执行计算密集型任务，例如图像或视频处理。Fork-join 框架的设计旨在支持后者。假设你有一个自然上可以分解为子任务的处理任务，如下所示：
+某些应用程序使用了大量处于空闲状态的线程。例如，一个每个连接使用一个线程的 Web 服务器。其他应用程序为每个处理器核心使用一个线程，以执行计算密集型任务，例如图像或视频处理。Fork-join 框架的设计旨在支持后者。
 
-```
+假设你有一个自然上可以分解为子任务的处理任务，如下所示：
+
+```text
 if (problemSize < threshold)
 {
     直接解决问题
@@ -20829,12 +21580,13 @@ else
 
 在这里，我们讨论一个更简单的例子。假设我们要统计数组中有多少元素符合特定属性。我们将数组一分为二半，计算每个部分的计数，并将它们相加。
 
-为了将递归计算转换为框架可使用的形式，请提供一个扩展 `RecursiveTask<T>`（如果计算产生类型为 T 的结果）或 `RecursiveAction`（如果不产生结果）。重写 `compute` 方法以生成并调用子任务，并合并它们的结果。
+为了将递归计算转换为框架可使用的形式，请提供一个扩展`RecursiveTask<T>`（如果计算产生类型为 T 的结果）或`RecursiveAction`（如果不产生结果）。重写`compute`方法以生成并调用子任务，并合并它们的结果。
 
-```
+```java
 class Counter extends RecursiveTask<Integer>
 {
   ..
+
   protected Integer compute()
   {
     if (to - from < THRESHOLD)
@@ -20853,191 +21605,275 @@ class Counter extends RecursiveTask<Integer>
 }
 ```
 
-`invokeAll` 方法接收数量任务并阻塞直到所有任务完成。`join` 方法产生结果。在这里，我们对每个子任务应用 `join` 并返回总和。
+`invokeAll`方法接收数量任务并阻塞直到所有任务完成。`join`方法产生结果。在这里，我们对每个子任务应用`join`并返回总和。
 
-> 注意：还有一个用于获取当前结果的 `get` 方法，但它并不吸引人，因为它会抛出检查异常，而我们被允许在 `compute` 方法中抛出这些异常。
+> 注意：还有一个用于获取当前结果的`get`方法，但它并不吸引人，因为它会抛出检查异常，而我们被允许在`compute`方法中抛出这些异常。
 
 列表 10.4 显示了完整的示例。
 
 在底层，fork-join 框架使用了一种有效的启发式算法，称为“工作窃取”（work stealing），在可用线程之间平衡负载。每个工作线程都有一个用于任务的双端队列（deque）。工作线程将较小的任务推到自己队列队列的头部。（只有一个线程访问头部，因此不需要锁定）。当一个工作线程空闲时，它会从另一个队列的尾部“窃取”任务（这需要锁定）。通过窃取位于尾部的较大的子任务，下次“窃取”之间会经过更长的时间，从而减少尾部的竞争。
 
-> 警告：Fork-join 池针对非阻塞工作负载进行了优化。如果你向 fork-join 池中添加许多阻塞任务，可能会导致饥饿。可以通过让任务实现 `ForkJoinPool.ManagedBlocker` 接口来克服这一点，但这是一种我们不会讨论的高级技术。
+> 警告：Fork-join 池针对非阻塞工作负载进行了优化。如果你向 fork-join 池中添加许多阻塞任务，可能会导致饥饿。可以通过让任务实现`ForkJoinPool.ManagedBlocker`接口来克服这一点，但这是一种我们不会讨论的高级技术。
 
-# 列表 10.4 forkJoin/ForkJoinTest.java
+## 列表 10.4 `forkJoin/ForkJoinTest.java`
 
-```
+```java
 package forkJoin;
 
 import java.util.concurrent.*;
 import java.util.function.*;
 
-/**n * 此程序演示了 fork-join
+/**
+ * 此程序演示了 fork-join
+ *
  * @version 1.02 2021-06-17
  * @author Cay Horstmann
  */
 public class ForkJoinTest {
 
     public static void main(String[] args) {
+
         final int SIZE = 10000000;
+
         var numbers = new double[SIZE];
+
         for (int i = 0; i < SIZE; i++) number
+
         var counter = new Counter(numbers, 0;
+
         var pool = new ForkJoinPool();
+
         pool.invoke(counter);
+
         System.out.println(counter.join());
+
     }
+
 }
 ```
 
 ```java
 class Counter extends RecursiveTask<Integer> {
+
     public static final int THRESHOLD = 1000;
+
     private double[] values;
+
     private int from;
+
     private int to;
 
     public Counter(double[] values, int from, int to) {
+
         this.values = values;
+
         this.from = from;
+
         this.to = to;
+
     }
 
     protected Integer compute() {
+
         if (to - from < THRESHOLD) {
+
             int count = 0;
+
             for (int i = from; i < to; i++) {
+
                 if (filter.test(values[i])) {
+
                     count++;
+
                 }
+
             }
+
             return count;
+
         } else {
+
             int mid = from + (to - from) / 2;
+
             var first = new Counter(values, from, mid);
+
             var second = new Counter(values, mid, to);
+
             invokeAll(first, second);
+
             return first.join() + second.join();
+
         }
+
     }
+
     private static final Predicate<Double> filter = x -> x > 0.5;
+
 }
 ```
 
 ## 10.5. 同步
 
-在大多数实际应用程序中，我们不知道任何账户有多少钱。但我们知道所有账户的总金额应该保持不变。当此模拟运行时，我们随机选择源账户和目标账户，对银行对象调用 `transfer` 方法，然后睡眠。
+在大多数实际应用程序中，我们不知道任何账户有多少钱。但我们知道所有账户的总金额应该保持不变。当此模拟运行时，我们随机选择源账户和目标账户，对银行对象调用`transfer`方法，然后睡眠。
 
-这里是 Bank 类的代码。
+这里是`Bank`类的代码。
 
 ```java
 class Bank {
+
     private double[] accounts;
 
     public Bank(int size) {
+
         accounts = new double[size];
+
         for (int i = 0; i < size; i++) {
+
             accounts[i] = Math.random() * 1000;
+
         }
+
     }
 
     public void transfer(int from, int to, double amount) {
+
         // 注意：不安全
         accounts[from] -= amount;
+
         accounts[to] += amount;
+
     }
 
     public void totalBalance() {
+
         double total = 0;
+
         for (double account : accounts) {
+
             total += account;
+
         }
+
         System.out.printf("Total Balance: %.2f%n", total);
+
     }
+
 }
 ```
 
 ### 10.5.1. 竞态条件示例
 
-在下一个程序中，如果你不对共享数据进行同步，将会发生什么。在多线程应用程序中，当 `transfer` 方法被多个线程调用时是不安全的。
+在下一个程序中，如果你不对共享数据进行同步，将会发生什么。在多线程应用程序中，当`transfer`方法被多个线程调用时是不安全的。
 
 ```java
 public class Synchronization {
+
     public static void main(String[] args) throws InterruptedException {
+
         Bank bank = new Bank(100);
+
         int MAX_AMOUNT = 1000;
+
         int DELAY = 1;
+
         Runnable r = () -> {
+
             try {
+
                 while (true) {
+
                     int from = (int) (Math.random() * 100);
+
                     int to = (int) (Math.random() * 100);
+
                     double amount = MAX_AMOUNT * Math.random();
+
                     bank.transfer(from, to, amount);
+
                     Thread.sleep((int) (Math.random() * DELAY));
+
                 }
+
             } catch (InterruptedException e) {
+
             }
+
         };
 
         for (int i = 0; i < 5; i++) {
+
             new Thread(r).start();
+
         }
 
         for (int i = 0; i < 10; i++) {
+
             Thread.sleep(1000);
+
             bank.totalBalance();
+
         }
+
     }
+
 }
 ```
 
-
-
 错误可能会很快发生，余额也可能需要很长时间才会损坏。这种情况并不令人产生信心，你可能不想把辛苦挣来的钱存入银行。
 
-看看你是否能找出列表 10.5 中的代码以及列表 10.2 中的 `Bank` 类中的问题。我们将在下一节解开这个谜团。
+看看你是否能找出列表 10.5 中的代码以及列表 10.2 中的`Bank`类中的问题。我们将在下一节解开这个谜团。
 
-# Listing 10.5 unsynch/UnsyncBankTest.java
+## Listing 10.5 `unsynch/UnsyncBankTest.java`
 
 ```java
 package unsynch;
 
 /**
  * 此程序展示了当我们数据损坏时
+ *
  * @version 1.33 2023-07-30
  * @author Cay Horstmann
  */
 public class UnsyncBankTest {
 
     public static final int ACCOUNTS = 100;
+
     public static final double INITIAL_BALANCE = 1000.0;
+
     public static final double MAX_AMOUNT = 100.0;
+
     public static final int DELAY = 10;
 
-    public static void main(String[] args) 
-    {
+    public static void main(String[] args) {
+
         var bank = new Bank(ACCOUNTS, INITIAL_BALANCE);
-        for (int i = 0; i < ACCOUNTS; i++)
-        {
+
+        for (int i = 0; i < ACCOUNTS; i++) {
+
             int fromAccount = i;
-            Runnable r = () ->
-            {
+
+            Runnable r = () -> {
+
                 try
-                {
-                    while (true)
-                    {
-                        int toAccount = (int) (Math.random() * ACCOUNTS);
-                        double amount = Math.random() * MAX_AMOUNT;
-                        bank.transfer(fromAccount, toAccount, amount);
-                        Thread.sleep(DELAY);
-                    }
-                } catch (InterruptedException e)
-                {
-                }
-            };
-            Thread.ofPlatform().start(r);
-        }
+```
+
+
+
+```java
+{
+    while (true) {
+        int toAccount = (int) (Math.random() * ACCOUNTS);
+        double amount = Math.random() * MAX_AMOUNT;
+        bank.transfer(fromAccount, toAccount, amount);
+        Thread.sleep(DELAY);
     }
+} catch (InterruptedException e) {
+}
+};
+
+Thread.ofPlatform().start(r);
+}
+}
 }
 ```
 
@@ -21051,91 +21887,90 @@ accounts[to] += amount;
 
 问题在于这些并不是原子操作。该指令可能会按如下方式处理：
 
-- 1. 将 `accounts[to]` 加载到寄存器中。
-- 2.加上 `amount`。
-- 3. 将结果移回 `accounts[to]`。
+1. 将`accounts[to]`加载到寄存器中。
+2. 加上`amount`。
+3. 将结果移回`accounts[to]`。
 
-现在假设第一个线程执行了步骤 1 和 2，然后被抢占。假设第二个线程唤醒并更新了 `account` 数组中的同一条目。然后，第一个线程唤醒并完成了它的步骤 3。
+现在假设第一个线程执行了步骤 1 和 2，然后被抢占。假设第二个线程唤醒并更新了`account`数组中的同一条目。然后，第一个线程唤醒并完成了它的步骤 3。
 
 该操作抹消了另一个线程的修改。结果是，总数不再正确（见图 10.2）。
 
-![](img/bda005f6b51fd092477a921aebffa_1354_0.png) 图10.2：两个线程并发访问
+![](img/bda005f6b51fd092477a921aebffa_1354_0.png)
 
-`UnsyncBankTest` 程序演示了这种损坏。（在计算 `getTotalBalance` 期间存在微小的概率。）
+图 10.2：两个线程并发访问
+
+`UnsyncBankTest`程序演示了这种损坏。（在计算`getTotalBalance`期间存在微小的概率。）
 
 > 注意：你可以查看类中执行的每条语句的虚拟机字节码。运行命令：
+>
+> ```bash
+> javap -c -v Bank
+> ```
+>
+> 来反编译`Bank.class`文件。例如，该行：
+>
+> ```java
+> accounts[to] += amount;
+> ```
+>
+> 被翻译为以下字节码：
+>
+> ```text
+> aload_0
+> getfield #2; // Field accounts:
+> iload_2
+> dup2
+> daload
+> dload_3
+> dadd
+> dastore
+> ```
 
-```
-javap -c -v Bank
-```
-
-来反编译 `Bank.class` 文件。例如，该行：
-
-```java
-accounts[to] += amount;
-```
-
-被翻译为以下字节码：
-
-```
-aload_0
-getfield #2; // Field accounts:
-iload_2
-dup2
-daload
-dload_3
-dadd
-dastore
-```
-
-这些代码的含义并不重要。重要的是增加指令是由多条指令组成的，执行它们的线程可能会任何指令处被抢占。
+这些代码的含义并不重要。重要的是增加指令是由多条指令组成的，执行它们的线程可能会在任何指令处被抢占。
 
 这种损坏发生的概率有多大？在具有多核的处理器上，损坏的风险很高。通过将打印语句与更新余额的语句交替，我增加了观察到问题的概率。
 
 如果你在负载较高的机器上运行大量线程，即使删除了打印语句，程序仍然会失败。故障可能持续几秒钟，也可能持续几小时。坦率地说，对于程序员来说，没有比不规律出现的错误更糟糕的。
 
-真正的问题是 `transfer` 方法的工作在中间被抢占。如果我们能确保方法在线程失去控制之前执行完成，账户的状态永远不会损坏。
+真正的问题是`transfer`方法的工作在中间被抢占。如果我们能确保方法在线程失去控制之前执行完成，账户的状态永远不会损坏。
 
 ## 10.5.3. 锁对象
 
-保护代码块免受并发访问有两种机制。Java 语言为此目的提供了 `synchronized` 关键字，而 `java.util.concurrent` 包提供了显式的锁类。`synchronized` 关键字自动提供了一个锁以及相关的“条件（condition）”，这对于许多需要显式锁的情况变得既强大又方便。然而，我认为在单独看到锁和条件之后，理解 `synchronized` 关键字会更容易。我在这里以及 10.5.4 节中解释显式类。一旦你理解了这些构建块，就可以在 10.5.6 节中学习 `synchronized` 关键字。
+保护代码块免受并发访问有两种机制。Java 语言为此目的提供了`synchronized`关键字，而`java.util.concurrent`包提供了显式的锁类。`synchronized`关键字自动提供了一个锁以及相关的“条件（condition）”，这对于许多需要显式锁的情况变得既强大又方便。然而，我认为在单独看到锁和条件之后，理解`synchronized`关键字会更容易。我在这里以及 10.5.4 节中解释显式类。一旦你理解了这些构建块，就可以在 10.5.6 节中学习`synchronized`关键字。
 
-使用 `ReentrantLock` 保护代码块的基本框架是：
+使用`ReentrantLock`保护代码块的基本框架是：
 
 ```java
 myLock.lock(); // ReentrantLock 对象
-try{
+
+try {
     critical section
-}
-finally{
+} finally {
     myLock.unlock(); // 确保锁被释放
 }
 ```
 
 这种结构保证了一次只有一个线程进入临界区域。一旦一个线程完成并释放锁，下一个线程就可以进入。
 
-
-
-
-> **注意：** 确保确保关键区域中的代码不会因抛出异常而跳过。如果在该区域结束之前抛出异常，`finally` 子句将释放锁，但对象可能处于受损状态。
+> **注意：** 确保关键区域中的代码不会因抛出异常而跳过。如果在该区域结束之前抛出异常，`finally`子句将释放锁，但对象可能处于受损状态。
 
 ```java
 java.util.concurrent.locks.Lock 5.0
 ```
 
-- `void lock()` 获取此锁；如果锁当前被另一个线程持有，则阻塞。
-- `void unlock()` 释放此锁。
+- `void lock()`获取此锁；如果锁当前被另一个线程持有，则阻塞。
+- `void unlock()`释放此锁。
 
 ```java
 java.util.concurrent.locks.ReentrantLock 5.0
 ```
 
-- `ReentrantLock()` 构造一个重入锁，可用于保护关键区域。
-- `ReentrantLock(boolean fair)` 根据给定的公平性策略构造锁。公平锁倾向于让等待时间最长的线程。然而，这种公平性保证可能会对性能产生重大影响。因此，默认情况下，锁并不要求是公平的。
+- `ReentrantLock()`构造一个重入锁，可用于保护关键区域。
+- `ReentrantLock(boolean fair)`根据给定的公平性策略构造锁。公平锁倾向于让等待时间最长的线程。然而，这种公平性保证可能会对性能产生重大影响。因此，默认情况下，锁并不要求是公平的。
 
 > **注意：** 公平性听起来很不错，但公平锁可能比普通锁慢得多。只有在你真正知道自己在做什么，并且有特定的理由认为公平性对你的程序至关重要时，才应该开启公平锁。即使你使用了公平锁，也无法保证线程调度器是公平的。如果线程调度器选择忽略一个等待锁已久的线程，该线程就没有机会被锁公平对待。
 
-## 10.5.4. 条件对象 (Condition Objects)
+## 10.5.4. 条件对象（Condition Objects）
 
 通常，线程进入关键区域后发现在条件满足之前无法继续。使用*条件对象*（condition object）来管理那些已获取锁但无法进行有用工作的线程。在本节中，我将介绍 Java 库中条件对象的实现。（由于历史原因，条件对象通常被称为*条件变量*（condition variables）。）
 
@@ -21146,7 +21981,7 @@ if (bank.getBalance(from) >= amount)
     bank.transfer(from, to, amount);
 ```
 
-当前线程在测试成功之后和调用 `transfer` 之间被停用是完全可能的。
+当前线程在测试成功之后和调用`transfer`之间被停用是完全可能的。
 
 ```java
 if (bank.getBalance(from) >= amount)
@@ -21154,40 +21989,35 @@ if (bank.getBalance(from) >= amount)
     bank.transfer(from, to, amount);
 ```
 
-当线程再次运行时，账户余额可能已经低于取款金额。你必须确保在测试和转移操作之间，没有其他线程可以修改余额。你通过用锁保护保护测试和转移操作来实现这一点：
+当线程再次运行时，账户余额可能已经低于取款金额。你必须确保在测试和转移操作之间，没有其他线程可以修改余额。你通过用锁保护测试和转移操作来实现这一点：
 
 ```java
-public void transfer(int from, int to, int amount)
-{
+public void transfer(int from, int to, int amount) {
     bankLock.lock();
-    try
-    {
-        while (accounts[from] < amount)
-        {
+    try {
+        while (accounts[from] < amount) {
             // 等待
             ...
         }
         // 转移资金
         ...
-    }
-    finally
-    {
+    } finally {
         bankLock.unlock();
     }
 }
 ```
 
-现在，当账户中没有足够的钱时该怎么办？我们等待直到另一个线程增加了资金。该线程刚刚获得了 `bankLock` 的独占访问权限，因此没有其他线程有机会存款。这就是条件对象大显身场的地方。
+现在，当账户中没有足够的钱时该怎么办？我们等待直到另一个线程增加了资金。该线程刚刚获得了`bankLock`的独占访问权限，因此没有其他线程有机会存款。这就是条件对象大显身场的地方。
 
-锁对象可以拥有一个或多个相关的条件对象。你通过 `newCondition` 方法获取条件对象。习惯上，为每个条件对象命名一个名称，唤起它所代表的条件。例如，我们设置了一个条件对象来代表“资金充足”条件。
+锁对象可以拥有一个或多个相关的条件对象。你通过`newCondition`方法获取条件对象。习惯上，为每个条件对象命名一个名称，唤起它所代表的条件。例如，我们设置了一个条件对象来代表“资金充足”条件。
 
 ```java
-class Bank
-{
-  ...
-  private final Condition sufficientFunds = bankLock.newCondition();
+class Bank {
+    ...
+    private final Condition sufficientFunds = bankLock.newCondition();
 ```
-    如果转移方法发现资金不足，它将调用
+
+如果转移方法发现资金不足，它将调用：
 
 ```java
 sufficientFunds.await();
@@ -21195,55 +22025,53 @@ sufficientFunds.await();
 
 当前线程现在被停用并放弃锁。这让另一个线程能够进入，我们希望它能增加账户余额。
 
-等待获取锁的线程与调用了 `await` 的线程之间存在本质区别。一旦线程调用了 `await` 方法，它就进入了该条件的等待集（wait set）。当锁可用时，线程并不会变为可运行。相反，它保持停用状态，直到另一个线程在同一个条件上调用了 `signalAll` 方法。
+等待获取锁的线程与调用了`await`的线程之间存在本质区别。一旦线程调用了`await`方法，它就进入了该条件的等待集（wait set）。当锁可用时，线程并不会变为可运行。相反，它保持停用状态，直到另一个线程在同一个条件上调用了`signalAll`方法。
 
-当另一个线程转移了资金后，它应该调用
+当另一个线程转移了资金后，它应该调用：
 
 ```java
 sufficientFunds.signalAll();
 ```
 
-此调用会激活所有等待该条件的线程。当线程从等待集中被移除时，它们再次变为可运行状态，调度器最终会激活它们。到那时，它们将尝试重新进入对象。一旦锁可用，其中一个线程将获取锁并从上次停止的地方继续执行，从 `await` 调用中返回。
+此调用会激活所有等待该条件的线程。当线程从等待集中被移除时，它们再次变为可运行状态，调度器最终会激活它们。到那时，它们将尝试重新进入对象。一旦锁可用，其中一个线程将获取锁并从上次停止的地方继续执行，从`await`调用中返回。
 
-此时，线程应该再次测试该条件。无法保证该条件现在已经满足——`signalAll` 方法仅仅是向等待的线程发出信号，表示条件现在可能满足，并且值得再次检查该条件。
+此时，线程应该再次测试该条件。无法保证该条件现在已经满足——`signalAll`方法仅仅是向等待的线程发出信号，表示条件现在可能满足，并且值得再次检查该条件。
 
-> 注意：通常情况下，对 `await` 的调用应该位于如下形式的循环内部：
+> 注意：通常情况下，对`await`的调用应该位于如下形式的循环内部：
+>
+> ```java
+> while (!((OK to proceed))
+>     condition.await();
+> ```
+
+其他线程最终调用`signalAll`方法至关重要。当线程调用`await`时，它没有办法重新激活自己。它寄希望于其他线程。如果它们中没有一个去激活该线程，程序就会挂起。
+
+你何时应该调用`signalAll`？经验法是，每当对象的状态发生可能对等待线程有利的方式变化时，就调用`signalAll`。例如，每当账户余额变化时，都应该给等待线程另一个机会。在我们的示例中，我们在完成转移后调用`signalAll`。
 
 ```java
-while (!((OK to proceed))
-    condition.await();
-```
-
-其他线程最终调用 `signalAll` 方法至关重要。当线程调用 `await` 时，它没有办法重新激活自己。它寄希望于其他线程。如果它们中没有一个去激活该线程，程序就会挂起。
-
-你何时应该调用 `signalAll`？经验法是，每当对象的状态发生可能对等待线程有利的方式变化时，就调用 `signalAll`。例如，每当账户余额变化时，都应该给等待线程另一个机会。在我们的示例中，我们在完成转移后调用 `signalAll`。
-
-```java
-public void transfer(int from, int to, int amount)
-{
+public void transfer(int from, int to, int amount) {
     bankLock.lock();
-    try
-    {
+    try {
         while (accounts[from] < amount)
             sufficientFunds.await();
+
         // 转移资金
         ...
+
         sufficientFunds.signalAll();
-    }
-    finally
-    {
+    } finally {
         bankLock.unlock();
     }
 }
 ```
 
-注意，`signalAll` 的调用并不会立即激活等待线程。它只是解锁等待线程，以便它们在当前线程释放锁后竞争进入对象。
+注意，`signalAll`的调用并不会立即激活等待线程。它只是解锁等待线程，以便它们在当前线程释放锁后竞争进入对象。
 
-另一个方法 `signal` 只从等待集中随机选择一个线程解锁。这比解锁所有线程要高效得多，但存在风险。如果随机选中的线程发现它仍然无法继续，它将再次被阻塞。如果没有其他线程再次调用 `signal`，系统就会死锁。
+另一个方法`signal`只从等待集中随机选择一个线程解锁。这比解锁所有线程要高效得多，但存在风险。如果随机选中的线程发现它仍然无法继续，它将再次被阻塞。如果没有其他线程再次调用`signal`，系统就会死锁。
 
-> 注意：线程只有在拥有该条件的锁时，才能对该条件调用 `await`、`signalAll` 或 `signal`。
+> 注意：线程只有在拥有该条件的锁时，才能对该条件调用`await`、`signalAll`或`signal`。
 
-`synch` 包中的示例程序与列表 10.5 中的 unsynch 版本具有相同的方法，但 `Bank` 类（列表 10.6）使用了锁。你会注意到没有发生任何错误。总余额永远保持在 100,000 美元。没有任何账户出现负余额。（再次，按 Ctrl+C 终止程序。）你可能还会注意到程序运行慢了一些——这是你为同步机制涉及的额外记录工作而付出的代价。
+`synch`包中的示例程序与列表 10.5 中的`unsynch`版本具有相同的方法，但`Bank`类（列表 10.6）使用了锁。你会注意到没有发生任何错误。总余额永远保持在 100,000 美元。没有任何账户出现负余额。（再次，按 Ctrl+C 终止程序。）你可能还会注意到程序运行慢了一些——这是你为同步机制涉及的额外记录工作而付出的代价。
 
 # Listing 10.6 sync/Bank.java
 
@@ -21257,98 +22085,101 @@ import java.util.concurrent.locks.*;
  * 一个拥有许多银行账户的银行
  */
 public class Bank {
-
     private final double[] accounts;
     private final Lock bankLock = new ReentrantLock();
     private final Condition sufficientFunds;
+
+    /**
+     * 构建银行。
+     * @param n 账户数量
+     * @param initialBalance 初始余额
+     */
+    public Bank(int n, double initialBalance) {
+        accounts = new double[n];
+        Arrays.fill(accounts, initialBalance);
+    }
+
+    /**
+     * 将资金从一个账户转到另一个账户
+     * @param from 要转出的账户
+     * @param to 要转入的账户
+     * @param amount 要转的金额
+     */
+    public void transfer(int from, int to, double amount) {
+        bankLock.lock();
+        try {
+            while (accounts[from] < amount) {
+                sufficientFunds.await();
+            }
+
+            System.out.print(Thread.currentThread().getName() + ": ");
+            accounts[from] -= amount;
+            System.out.printf(" %10.2f from %10.2f\n", accounts[from], accounts[to]);
+            accounts[to] += amount;
+            System.out.printf(" Total Balance: %10.2f %n", accounts[from], accounts[to]);
+        } finally {
+            sufficientFunds.signalAll();
+            bankLock.unlock();
+        }
+    }
+
+    /**
+     * 获取所有账户余额的总和。
+     * @return 总余额
+     */
+    public double getTotalBalance() {
+        bankLock.lock();
+        try {
+            double sum = 0;
+            for (double a : accounts) {
+                sum += a;
+            }
+            return sum;
+        } finally {
+            bankLock.unlock();
+        }
+    }
+
+    /**
+     * 获取银行中的账户数量
+     * @return 账户数量
+     */
+    public int size() {
+        return accounts.length;
+    }
+}
 ```
 
 
 
+## `java.util.concurrent.locks.Lock` 5.0
 
+- `Condition newCondition()`
 
-```java
-/**
- * 构建银行。
- * @param n 账户数量
- * @param initialBalance 初始余额
- */
-public Bank(int n, double initialBalance) {
-    accounts = new double[n];
-    Arrays.fill(accounts, initialBalance);
-}
+  返回一个与此锁关联的条件对象。
 
-/**
- * 将资金从一个账户转到另一个账户
- * @param from 要转出的账户
- * @param to 要转入的账户
- * @param amount 要转的金额
- */
-public void transfer(int from, int to, double amount) {
-    bankLock.lock();
-    try {
-        while (accounts[from] < amount) {
-            sufficientFunds.await();
-        }
-        System.out.print(Thread.currentThread().getName() + ": ");
-        accounts[from] -= amount;
-        System.out.printf(" %10.2f from %10.2f\n", accounts[from], accounts[to]);
-        accounts[to] += amount;
-        System.out.printf(" Total Balance: %10.2f %n", accounts[from], accounts[to]);
-    } finally {
-        sufficientFunds.signalAll();
-        bankLock.unlock();
-    }
-}
+## `java.util.concurrent.locks.Condition` 5.0
 
-/**
- * 获取所有账户余额的总和。
- * @return 总余额
- */
-public double getTotalBalance() {
-    bankLock.lock();
-    try {
-        double sum = 0;
-        for (double a : accounts) {
-            sum += a;
-        }
-        return sum;
-    } finally {
-        bankLock.unlock();
-    }
-}
+- `void await()`
 
-/**
- * 获取银行中的账户数量
- * @return 账户数量
- */
-public int size() {
-    return accounts.length;
-}
-```
+  将当前线程放入该条件的等待集中。
 
-## java.util.concurrent.locks.Lock 5.0
+- `void signalAll()`
 
-- - Condition newCondition()
-返回一个与此锁关联的条件对象。
+  唤醒该条件等待集中的所有线程。
 
-## java.util.concurrent.locks.Condition 5.0
+- `void signal()`
 
-- - void await()
-将当前线程放入该条件的等待集中。
-- void signalAll()
-唤醒该条件等待集中的所有线程。
-- void signal()
-唤醒该条件等待集中的随机选择的一个线程。
+  唤醒该条件等待集中的随机选择的一个线程。
 
 ## 10.5.5. 死锁
 
- Locks 和条件无法解决多线程执行中可能出现的所有问题。考虑以下情况：
+`Lock` 和条件无法解决多线程执行中可能出现的所有问题。考虑以下情况：
 
-- 1. 账户 1: $200
-- 2. 账户 2: $300
-- 3. 线程 1: 从账户 1 转 $300 到账户 2
-- 4. 线程 2: 从账户 2 转 $400 到账户 1
+1. 账户 1：$200
+2. 账户 2：$300
+3. 线程 1：从账户 1 转 $300 到账户 2
+4. 线程 2：从账户 2 转 $400 到账户 1
 
 如图 10.4 所示，线程 1 和 2 显然被阻塞了。由于账户 1 和账户 2 的余额不足，它们都无法继续。
 
@@ -21356,16 +22187,16 @@ public int size() {
 
 所有线程都可能被阻塞，因为每个线程都在等待更多的钱。这种情况被称为死锁。在我们的程序中，由于原因不会发生死锁。每个转账金额最多为 $1000。由于有 10 个账户，总金额为 $10,000，任何时候至少有一个账户拥有至少 $1000。因此，从该账户取出资金的线程可以继续执行。
 
-但如果你修改线程的 run 方法以移除 $1000 的交易限制，死锁将迅速发生。尝试一下。将 NACCOUNTS 设置为 10 并运行程序。程序将运行一段时间后挂起。**提示：** 当程序挂起时，按下 Ctrl+C。你将得到一个列出所有线程的转储。每个线程都有堆栈跟踪，告诉它当前阻塞在何处。或者，按照第 7 章的描述运行 jconsole，并查看 Threads 面板（见图 10.5）。
+但如果你修改线程的 `run` 方法以移除 $1000 的交易限制，死锁将迅速发生。尝试一下。将 `NACCOUNTS` 设置为 10 并运行程序。程序将运行一段时间后挂起。**提示：** 当程序挂起时，按下 `Ctrl+C`。你将得到一个列出所有线程的转储。每个线程都有堆栈跟踪，告诉它当前阻塞在何处。或者，按照第 7 章的描述运行 `jconsole`，并查看 Threads 面板（见图 10.5）。
 
 ## Java 监控与管理控制
 
-pid: 553 SynchTest2
+`pid: 553 SynchTest2`
 
 | Threads | |
 | :--- | :--- |
 | Reference Handler | Name: Thread-0 State: WAITING on Bank@0990 Total blocked: 2 Total waited: 59 |
-| Finalizer | Stack trace: java.lang.Object.wait(Native Method)<br>java.lang.Object.wait(Object.java:485)<br>Bank.transfer(Bank.java:29)<br>TransferRunnable.run(TransferRunnable.java:29)<br>java.lang.Thread.run(Thread.java:619) |
+| Finalizer | Stack trace: `java.lang.Object.wait(Native Method)`<br>`java.lang.Object.wait(Object.java:485)`<br>`Bank.transfer(Bank.java:29)`<br>`TransferRunnable.run(TransferRunnable.java:29)`<br>`java.lang.Thread.run(Thread.java:619)` |
 | Thread-0 | |
 | Thread-1 | |
 | Thread-2 | |
@@ -21375,41 +22206,41 @@ pid: 553 SynchTest2
 | Thread-6 | |
 | Thread-7 | |
 
-### 图 10.5：jconsole 中的 Threads 面板
+### 图 10.5：`jconsole` 中的 Threads 面板
 
-pid: 553 SynchTest2
+`pid: 553 SynchTest2`
 
-另一种创建死锁的方法是让线程负责向账户存入资金，而不是从账户中取出资金。在这种情况下，所有线程都可能同时尝试透支同一个账户，导致没有线程可以为其补充资金。在 SynchTest 程序中尝试一下，转到 TransferRunnable 类的 run 方法。在调用 transfer 时，反转 fromAccount 和 toAccount。运行程序，看它如何几乎立即发生死锁。
+另一种创建死锁的方法是让线程负责向账户存入资金，而不是从账户中取出资金。在这种情况下，所有线程都可能同时尝试透支同一个账户，导致没有线程可以为其补充资金。在 `SynchTest` 程序中尝试一下，转到 `TransferRunnable` 类的 `run` 方法。在调用 `transfer` 时，反转 `fromAccount` 和 `toAccount`。运行程序，看它如何几乎立即发生死锁。
 
-这是另一个容易发生死锁的情况。在 SynchTest 程序中将 signalAll 方法更改为 signal。你会发现程序最终会挂起。（再次，将 NACCOUNTS 设置为 10 以更快地观察效果）。与通知所有等待资金资金的线程的 signalAll 不同，signal 方法只唤醒一个线程。如果该线程无法继续，所有线程都可能被阻塞。考虑以下一个正在形成死锁的示例场景：
+这是另一个容易发生死锁的情况。在 `SynchTest` 程序中将 `signalAll` 方法更改为 `signal`。你会发现程序最终会挂起。（再次，将 `NACCOUNTS` 设置为 10 以更快地观察效果）。与通知所有等待资金资金的线程的 `signalAll` 不同，`signal` 方法只唤醒一个线程。如果该线程无法继续，所有线程都可能被阻塞。考虑以下一个正在形成死锁的示例场景：
 
-- 1. 账户 1: $1,990
-- 2. 所有其他账户: 各 $990
-- 3. 线程 1: 从账户 1 转 $995 到账户 2
-- 4. 所有其他线程: 从它们的账户转 $995 到另一个账户
+1. 账户 1：$1,990
+2. 所有其他账户：各 $990
+3. 线程 1：从账户 1 转 $995 到账户 2
+4. 所有其他线程：从它们的账户转 $995 到另一个账户
 
 显然，除线程 1 之外的所有线程都被阻塞了，因为它们的账户中钱不足。线程 1 继续执行。之后，我们处于以下情况：
 
-- 1. 账户 1: $995
-- 2. 账户 2: $1,985
-- 3. 所有其他账户: 各 $990
+1. 账户 1：$995
+2. 账户 2：$1,985
+3. 所有其他账户：各 $990
 
-然后，线程 1 调用 `signal`。signal 方法随机选择一个线程进行唤醒。假设它选择了线程 3。该线程被唤醒后，发现账户中钱不足，并再次调用 `await`。但线程 1 仍在运行。产生了一个新的随机交易，例如：
+然后，线程 1 调用 `signal`。`signal` 方法随机选择一个线程进行唤醒。假设它选择了线程 3。该线程被唤醒后，发现账户中钱不足，并再次调用 `await`。但线程 1 仍在运行。产生了一个新的随机交易，例如：
 
-- 1. 线程 1: 从账户 1 转 $997 到 2
+1. 线程 1：从账户 1 转 $997 到 2
 
 现在，线程 1 也调用了 `await`，所有线程都被阻塞了。系统发生了死锁。这里的罪魁祸首是 `signal` 调用。它只唤醒一个线程，而且可能不是那个能进展的线程。
 
-## 10.5.6. synchronized 关键字
+## 10.5.6. `synchronized` 关键字
 
-在前面的章节中，你看到了如何使用 Lock 和 Condition 对象。在继续下去之前，让我们总结一下锁和条件的关键点：
+在前面的章节中，你看到了如何使用 `Lock` 和 `Condition` 对象。在继续下去之前，让我们总结一下锁和条件的关键点：
 
 - 锁保护代码段，允许一次执行一个线程。
 - 锁管理尝试进入临界区的线程。
 - 锁可以拥有一个或多个条件对象。
 - 每个条件对象管理进入临界区但无法继续的线程。
 
-Lock 和 Condition 接口为程序员提供了高级锁控制。然而，在大多数情况下，你不需要那种控制——可以使用 Java 语言内置的机制。从 1.0 版本以来，每个对象都有一个内置锁。如果方法被声明为 synchronized 关键字，该对象的锁就会保护整个方法。也就是说，调用该方法时，线程必须获取对象的内置锁。
+`Lock` 和 `Condition` 接口为程序员提供了高级锁控制。然而，在大多数情况下，你不需要那种控制——可以使用 Java 语言内置的机制。从 1.0 版本以来，每个对象都有一个内置锁。如果方法被声明为 `synchronized` 关键字，该对象的锁就会保护整个方法。也就是说，调用该方法时，线程必须获取对象的内置锁。
 
 换句话说，
 
@@ -21437,75 +22268,80 @@ public void method()
 }
 ```
 
-例如，而不是使用显式锁，我们可以直接将 Bank 类的 transfer 方法声明为 synchronized。
+例如，而不是使用显式锁，我们可以直接将 `Bank` 类的 `transfer` 方法声明为 `synchronized`。
 
-内置对象锁有一个关联的条件。wait 方法将线程添加到等待集，而 notifyAll/notify 方法唤醒线程。换句话说，调用 wait 或 notifyAll 等同于
+内置对象锁有一个关联的条件。`wait` 方法将线程添加到等待集，而 `notifyAll`/`notify` 方法唤醒线程。换句话说，调用 `wait` 或 `notifyAll` 等同于：
 
 ```java
 intrinsicCondition.await();
+
 intrinsicCondition.signalAll();
 ```
 
+> **注意：** `wait`、`notifyAll` 和 `notify` 方法是 `Object` 类的 `final` 方法。`Condition` 方法必须命名为 `await`、`signalAll` 和 `signal`，以避免与这些方法发生冲突。
 
-
-
-
-> **注意：** wait、notifyAll 和 notify 方法是 Object 类的 final 方法。Condition 方法必须命名为 await、signalAll 和 signal，以避免与这些方法发生冲突。
-
-例如，你可以像这样在 Java 中实现 Bank 类：
+例如，你可以像这样在 Java 中实现 `Bank` 类：
 
 ```java
 class Bank {
+
     private double[] accounts;
 
     public synchronized void transfer(int from, int amount) throws InterruptedException {
+
         while (accounts[from] < amount) {
+
             wait(); // 在内置对象锁上等待
+
         }
+
         accounts[from] -= amount;
+
         accounts[to] += amount;
+
         notifyAll();
+
     }
 
     public synchronized double getTotalBalance() {
+
     }
+
 }
 ```
 
 如你所示，使用 `synchronized` 关键字产生的代码要简洁得多。当然，为了理解这段代码，你必须知道每个对象都有一个内置锁（intrinsic lock），并且该锁有一个内置条件（intrinsic condition）。锁管理尝试进入 `synchronized` 方法的线程。条件管理调用了 `wait` 的线程。
 
-将静态方法声明为 `synchronized` 也是合法的。如果调用该方法，它将获取关联类对象的内置锁。例如，如果 Bank 类有一个静态 `synchronized` 方法，那么当调用它时，Bank.class 对象就会被锁定。结果是，其他线程无法调用该类的此或其他任何其他静态 `synchronized` 方法。
+将静态方法声明为 `synchronized` 也是合法的。如果调用该方法，它将获取关联类对象的内置锁。例如，如果 `Bank` 类有一个静态 `synchronized` 方法，那么当调用它时，`Bank.class` 对象就会被锁定。结果是，其他线程无法调用该类的此或其他任何其他静态 `synchronized` 方法。
 
 内置锁和条件有一些局限性。其中：
 
 - 虚拟线程在获取内置锁时会被固定（pinned）。在释放锁之前，它们无法从其载体线程（carrier thread）中卸载。如果临界区立即退出，固定并不是问题。但如果虚拟线程在被固定期间发生阻塞，可能会严重降低吞吐量，甚至导致载体线程池饥饿。
-
 - 你无法中断正在尝试获取内置锁的线程。使用 `ReentrantLock`，你可以调用 `lockInterruptibly`。
-
 - 在尝试获取内置锁时无法指定超时时间。
-
 - 每个锁只有一个条件可能是低效的。
 
-在代码中应该用什么——Lock 和 Condition 对象还是 `synchronized` 方法？这里是我的建议：
+在代码中应该用什么——`Lock` 和 `Condition` 对象还是 `synchronized` 方法？这里是我的建议：
 
-- 最好既不用 Lock / Condition 也不用 `synchronized` 关键字。在许多情况下，你可以使用 `java.util.concurrent` 包中的某种机制，它们会为你完成所有的锁定工作。例如，在第 10.6.1 节中，你将看到如何使用阻塞队列来同步处理共同任务的线程。
-
+- 最好既不用 `Lock`/`Condition` 也不用 `synchronized` 关键字。在许多情况下，你可以使用 `java.util.concurrent` 包中的某种机制，它们会为你完成所有的锁定工作。例如，在第 10.6.1 节中，你将看到如何使用阻塞队列来同步处理共同任务的线程。
 - 如果 `synchronized` 关键字适用于你的情况，务必使用它。你写的代码更少，出错空间也更小。列表 10.7 显示了用 `synchronized` 方法实现的银行示例。然而，请考虑锁是公共的这一点——见下一节。
-
-- 如果使用虚拟线程，或者你真的需要这些构造提供的额外功能，请使用 Lock / Condition。
+- 如果使用虚拟线程，或者你真的需要这些构造提供的额外功能，请使用 `Lock`/`Condition`。
 
 **提示：** 要找出被固定的线程是否被阻塞，可以从下面的选项之一开始：
 
 ```bash
--Djk.tracePinnedThreads=short
--DDjk.tracePinnedThreads=full
+-Djdk.tracePinnedThreads=short
+
+-Djdk.tracePinnedThreads=full
 ```
 
 你将获得一个显示固定线程在何时阻塞的堆栈跟踪：
 
-```
+```text
 ...
+
 org.apache.tomcat.util.SocketProcessorBase.run
+
 ...
 ```
 
@@ -21513,73 +22349,106 @@ org.apache.tomcat.util.SocketProcessorBase.run
 
 或者，使用 Java Flight Recorder 进行记录，用你喜爱的控制查看器查看，并寻找 `VirtualThreadPinned` 和 `VirtualThreadSubmitFailed` 事件。
 
-# 列表 10.7 synch2/Bank.java
+## 列表 10.7 `synch2/Bank.java`
 
 ```java
 1 package synch2;
+
 2
+
 3 import java.util.*;
+
 4
+
 5 /**
 6   * 一个拥有多个银行账户的银行
 7   */
+
 8 public class Bank
+
 9 {
+
 10  private final double[] accounts;
+
 11
+
 12  /**
 13   * 构造银行。
 14   * @param n 账户数量
 15   * @param initialBalance 初始余额
 16   */
+
 17  public Bank(int n, double initialBalance)
-18  {
+
+18 {
+
 19    accounts = new double[n];
+
 20    Arrays.fill(accounts, initialBalance);
+
 21  }
-22
+
 23 /**
 24   * 将资金从一个账户转到另一个账户
 25   * @param from 从转出的账户
 26   * @param to 转入的账户
 27   * @param amount 要转的金额
 28   */
+
 29  public synchronized void transfer(int from, int to, double amount) throws InterruptedException {
+
 30    while (accounts[from] < amount) {
+
 31        wait();
+
 32    }
+
 33    System.out.print(Thread.currentThread());
+
 34    accounts[from] -= amount;
+
 35    System.out.printf(" %10.2f from %d\n", accounts[to] += amount);
+
 36    System.out.printf(" Total Balance: %d\n", getTotalBalance());
+
 37    notifyAll();
+
 38  }
-39
-40  /**
+
+40 /**
 41   * 获取所有账户余额的总和。
 42   * @return 总余额
 43   */
+
 44  public synchronized double getTotalBalance() {
+
 45    double sum = 0;
+
 46    for (double a : accounts) {
+
 47        sum += a;
+
 48    }
+
 49    return sum;
+
 50  }
-51
-52  /**
+
+52 /**
 53   * 获取银行中账户数量
 54   * @return 账户数量
 55   */
+
 56  public int size() {
+
 57    return accounts.length;
+
 58  }
+
 59}
 ```
 
-
-
-Vector 类的 get 和 set 方法是同步的，但这对我们没有帮助。一个线程完全可能在完成第一次 get 调用后，在 `transfer` 方法中被挂起。此时，另一个线程可能会在同一个位置存储一个不同的值。然而，我们可以劫持锁：
+`Vector` 类的 `get` 和 `set` 方法是同步的，但这对我们没有帮助。一个线程完全可能在完成第一次 `get` 调用后，在 `transfer` 方法中被挂起。此时，另一个线程可能会在同一个位置存储一个不同的值。然而，我们可以劫持锁：
 
 ```java
 public void transfer(Vector<Double> accounts) {
@@ -21591,13 +22460,16 @@ public void transfer(Vector<Double> accounts) {
 }
 ```
 
-这种方法有效，但它完全依赖于 Vector 类对其所有变器方法都使用内部锁（intrinsic lock）这一事实。但这真的是事实吗？Vector 类的文档并没有提供这样的保证。你必须仔细研究源代码，并希望未来的版本不会引入不同同步的变器方法。如你所见，客户端锁是非常脆弱的，通常不建议这样做。
+
+
+
+这种方法有效，但它完全依赖于 `Vector` 类对其所有变异方法都使用内部锁（intrinsic lock）这一事实。但这真的是事实吗？`Vector` 类的文档并没有提供这样的保证。你必须仔细研究源代码，并希望未来的版本不会引入不同同步的变异方法。如你所见，客户端锁是非常脆弱的，通常不建议这样做。
 
 > **注意：** Java 虚拟机对同步方法有内置支持。然而，同步块被编译成一段很长的字节码序列，以管理内部锁。
 
 ## 10.5.8. 监器概念（Monitor Concept）
 
-锁和条件（conditions）是线程同步的强大工具，但它们并不面向对象。多年来，研究人员一直在寻找让多线程安全的方法，而无需强制程序员考虑显式锁。最成功的解决方案之一是由 Per Brinch Hansen 和 Tony Hoare 在 20 世纪 70 年代开的*监器*概念。在 Java 术语中，监器具有以下属性：
+锁和条件（conditions）是线程同步的强大工具，但它们并不面向对象。多年来，研究人员一直在寻找让多线程安全的方法，而无需强制程序员考虑显式锁。最成功的解决方案之一是由 Per Brinch Hansen 和 Tony Hoare 在 20 世纪 70 年代开的监器概念。在 Java 术语中，监器具有以下属性：
 
 - 监器是一个只有一个私有字段的类。
 - 该类的每个对象都有一个与之关联的锁。
@@ -21606,7 +22478,7 @@ public void transfer(Vector<Double> accounts) {
 
 早期版本的监器只有一个条件，语法相当优雅。你可以直接调用 `await accounts[from] >= amount`，而无需使用显式的条件变量。然而，研究表明，无加区分地反复测试条件可能是低效的。这个问题通过显式条件变量得到了解决，每个条件变量管理一组独立的线程。
 
-Java 设计者松散地借鉴了监器概念。Java 中的每个对象都有一个内部锁和一个内部条件。如果一个方法声明了 `synchronized` 关键字，它就表现得像一个监器方法。条件变量通过调用 `wait / notifyAll / notify` 来访问。
+Java 设计者松散地借鉴了监器概念。Java 中的每个对象都有一个内部锁和一个内部条件。如果一个方法声明了 `synchronized` 关键字，它就表现得像一个监器方法。条件变量通过调用 `wait`、`notifyAll` 和 `notify` 来访问。
 
 然而，Java 对象与监器在三个重要方面有所不同，这损害了线程安全：
 
@@ -21616,7 +22488,7 @@ Java 设计者松散地借鉴了监器概念。Java 中的每个对象都有一�
 
 这种对安全的无视让 Per Brinch Hansen 极其愤怒。在对 Java 多线程原语的一篇严厉评论中，他写道：“令我惊讶的是，在监器和并发 Pascal 发明四分之一世纪后，编程界竟然还在认真对待 Java 不安全的并行性。它毫无价值”（引自 *Java’s Insecure Parallelism*, ACM SIGPLAN Notices 34:38–45, April 1999）。
 
-## 10.5.9. volatile 字段（Volatile Fields）
+## 10.5.9. `volatile` 字段（Volatile Fields）
 
 有时，仅仅为了读取或写入一两个实例字段就付出同步代价似乎太奢侈了。毕竟，能出什么错呢？遗憾的是，在现代处理器和编译器面前，充满了错误空间。
 
@@ -21633,7 +22505,9 @@ Java 设计者松散地借鉴了监器概念。Java 中的每个对象都有一�
 
 ```java
 private boolean done;
+
 public synchronized boolean isDone() { return done; }
+
 public synchronized void setDone() { done = true; }
 ```
 
@@ -21641,7 +22515,9 @@ public synchronized void setDone() { done = true; }
 
 ```java
 private volatile done;
+
 public boolean isDone() { return done; }
+
 public void setDone() { done = true; }
 ```
 
@@ -21655,21 +22531,19 @@ public void flipDone() { done = !done; }
 
 可以保证会翻转字段的值。但不能保证读取、翻转和写入的过程是不中断的。
 
-## 10.5.10. final 字段（Final Fields）
+## 10.5.10. `final` 字段（Final Fields）
 
 正如你在上一节中看到的，除非使用锁或 `volatile` 修饰符，否则你无法从多个线程安全地读取字段。
 
 还有一种访问共享字段是安全的状况——当它被声明为 `final` 时。一旦构造函数完成，任何持有对象引用的线程都会看到 `final` 字段的初始化值。
 
-考虑以下
+考虑以下代码：
 
 ```java
-public class Bank
-{
+public class Bank {
     final HashMap<String, Double> accounts;
 
-    public Bank()
-    {
+    public Bank() {
         accounts = new HashMap<>();
     }
 }
@@ -21677,7 +22551,7 @@ public class Bank
 
 在构造函数完成后，其他线程可以看到被初始化的 `accounts` 变量。如果不使用 `final`，无法保证其他线程能看到 `accounts` 的更新值——它们可能都看到 `null`。
 
-当然，对 map的操作不是线程安全的。如果多个线程变异和读取 map，你仍然需要同步。
+当然，对 map 的操作不是线程安全的。如果多个线程变异和读取 map，你仍然需要同步。
 
 > **注意：** 该保证有一个重要的前提：`this` 引用在构造过程中不能逃逸。如果构造函数将 `this` 赋值给另一个对象的字段或将其传递给另一个方法，则引用就会逃逸。
 
@@ -21687,37 +22561,37 @@ public class Bank
 
 只要你没有执行赋值以外的操作，你就可以将共享变量声明为 `volatile`。
 
+`java.util.concurrent.atomic` 包中有很多类，它们使用高效的机器级指令在不使用锁的情况下保证其他操作的原子性。例如，`AtomicInteger` 类具有 `incrementAndGet` 和 `decrementAndGet` 方法，可以原子地增加或减少一个整数。例如，你可以安全地生成如下数字序列：
 
-
-
-
-`java.util.concurrent.atomic` 包中有很多许多类，它们使用高效的机器级指令在不使用锁的情况下保证其他操作的原子性。例如，`AtomicInteger` 类具有 `incrementAndGet` 和 `decrementAndGet` 方法，可以原子地增加或减少一个整数。例如，你可以安全地生成如下数字序列：
-
-```
+```java
 public static final AtomicLong nextNumber = new AtomicLong();
+
 // 在某些线程中 . .
+
 long id = nextNumber.incrementAndGet();
 ```
 
 `incrementAndGet` 方法会原子地递增 `AtomicLong` 并返回自增后的值。也就是说，获取值、加 1、设置值以及产生新值的操作不会被抢占。它保证了即使多个线程并发访问同一个实例，也能计算并返回正确的值。
 
-虽然这些类提供了原子性地设置、累加和减去值的方法，但如果你想进行更复杂的更新，则必须使用 `compareAndSet` 方法。例如，假设你想跟踪不同线程观察到的最大值。以下代码不起作用的：
+虽然这些类提供了原子性地设置、累加和减去值的方法，但如果你想进行更复杂的更新，则必须使用 `compareAndSet` 方法。例如，假设你想跟踪不同线程观察到的最大值。以下代码不起作用：
 
-```
+```java
 public static final AtomicLong largest = new AtomicLong();
+
 // 在某些线程中 . .
+
 largest.set(Math.max(largest.get(), observed));
 ```
 
 这种更新不是原子的。相反，请为变量更新提供一个 lambda 表达式，更新将为你完成。在我们的示例中，我们可以调用：
 
-```
-largest.updateAndGet(x -> Math.max(x, observed))
+```java
+largest.updateAndGet(x -> Math.max(x, observed));
 ```
 
-或者
+或者：
 
-```
+```java
 largest.accumulateAndGet(observed, Math::max);
 ```
 
@@ -21731,17 +22605,18 @@ largest.accumulateAndGet(observed, Math::max);
 
 如果你预判会有高竞争，应该直接使用 `LongAdder` 而不是 `AtomicLong`。方法名称略有不同。调用 `increment` 增加计数器或调用 `add` 增加数量，并调用 `sum` 来检索总和。
 
-```
+```java
 final var adder = new LongAdder();
+
 for (..)
-    executor.submit(() ->
-{
-    while (. . )
-{
-    . . .
-    if (. . .) adder.increment();
-}
-)...
+    executor.submit(() -> {
+        while (. . ) {
+            . . .
+
+            if (. . .) adder.increment();
+        }
+    });
+
 long total = adder.sum();
 ```
 
@@ -21749,15 +22624,17 @@ long total = adder.sum();
 
 `LongAccumulator` 将此思想推广到任意的累加操作。在构造函数中，你提供新的操作以及它的中性元素。要合并新值，请调用 `accumulate`。调用 `get` 获取当前值。以下代码与 `LongAdder` 效果相同：
 
-```
+```java
 final var adder = new LongAccumulator(Long::sum,
+
 // 在某些线程中 . .
+
 adder.accumulate(value);
 ```
 
-内部，累加器拥有变量 $a_1, a_2, \dots, a_n$。在我们的示例中，每个变量都用中性元素 ($\emptyset$) 初始化。
+内部，累加器拥有变量 $a_1, a_2, \dots, a_n$。在我们的示例中，每个变量都用中性元素（$\emptyset$）初始化。
 
-当调用 `accumulate(value v)` 时，其中一个变量会被原子地更新为 $a_1 = op \ v$，其中 $op$ 是以中缀形式编写的累加操作。在我们的示例中，调用 `accumulate` 会对某个 $i$ 计算 $a_1 = a_1 + v$。
+当调用 `accumulate(value v)` 时，其中一个变量会被原子地更新为 $a_1 = op \ v$，其中 `op` 是以中缀形式编写的累加操作。在我们的示例中，调用 `accumulate` 会对某个 $i$ 计算 $a_1 = a_1 + v$。
 
 `get` 的结果是 $a_1 \ op \ a_2 \ op \dots \ op \ a_n$。在我们的示例中，这就是累加器的和，$a_1 + a_2 + \dots + a_n$。
 
@@ -21770,41 +22647,41 @@ adder.accumulate(value);
 有时，你有一个数据结构，只想在第一次需要它时才初始化。并且你想确保初始化只发生一次。与其设计自己的机制，不如利用这样一个事实：虚拟机在类第一次被使用时恰好执行一次静态初始化器。虚拟机通过锁来确保这一点，所以你不需要自己编写。
 
 ```java
-public class OnDemandData
-{
+public class OnDemandData {
     // 私有构造函数以确保只有一个对象
-    private OnDemandData()
-    {
+    private OnDemandData() {
         . . .
     }
 
-    public static OnDemandData getInstance()
-    {
+    public static OnDemandData getInstance() {
         return Holder.INSTANCE;
     }
 
     // 仅在第一次使用时初始化，即在
-    private static class Holder
-    {
+    private static class Holder {
         // VM 保证这是懒性加载的
         static final OnDemandData INSTANCE = new OnDemandData();
     }
 }
 ```
 
-> 注意：使用这种惯用法时，必须确保构造函数不会抛出异常。虚拟机不会再次尝试初始化 Holder 类。
+> 注意：使用这种惯用法时，必须确保构造函数不会抛出异常。虚拟机不会再次尝试初始化 `Holder` 类。
 
 ## 10.5.13. 安全发布
 
 正如你在 10.5.10 中看到的，构造良好的对象的 `final` 字段会被所有线程看到其初始化值。那么非 `final` 字段呢？Java 语言通常不提供保证。例如，考虑：
 
 ```java
-public class BankAccount
-{
+public class BankAccount {
     private double balance;
 
-    public BankAccount(double initialBalance) { balance = initialBalance; }
-    public double getBalance() { return balance; }
+    public BankAccount(double initialBalance) {
+        balance = initialBalance;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
 }
 ```
 
@@ -21819,7 +22696,7 @@ public class BankAccount
 - 在锁保护的任何字段中
 - 构造良好的对象的 `final` 字段中
 
-第三3适用于 `Runnable` 或 `Callable` 是捕获作用域变量的内部类或 lambda 表达式。捕获变量存储在内部类的 `final` 字段中。
+第三项适用于 `Runnable` 或 `Callable` 是捕获作用域变量的内部类或 lambda 表达式。捕获变量存储在内部类的 `final` 字段中。
 
 最后一个条件适用于将对象引用存储在线程安全的数据结构中，例如 `BlockingQueue` 或 `ConcurrentHashMap`。检索线程将看到已发布的对象。
 
@@ -21830,7 +22707,7 @@ public class BankAccount
 在前面的节中，我们讨论了线程间共享变量的风险。有时，你可以通过为每个线程提供自己的实例来避免共享（见第 10.4.4 节）。例如，`SimpleDateFormat` 类不是线程安全的。假设我们有一个静态变量：
 
 ```java
-public static final SimpleDateFormat DATEFORMAT = 
+public static final SimpleDateFormat DATEFORMAT =
 ```
 
 如果两个线程执行如下操作：
@@ -21839,18 +22716,16 @@ public static final SimpleDateFormat DATEFORMAT =
 String DATEFORMAT = DATEFORMAT.format(new Date());
 ```
 
-
-
-
 因此结果可能是垃圾数据，因为 `dateFormat` 使用的内部结构可能会被并发访问所破坏。你可以使用同步机制，但这开销很大；你也可以每次需要时构造本地的 `SimpleDateFormat` 对象，但也很浪费。
 
 要每个线程构造一个实例，请使用以下代码：
 
-```
-public static final ThreadLocal<SimpleDateFormat> threadLocal = ThreadLocal.withInitial(() -> new SimpleDateFormat("yyyy-MM-dd"));
+```java
+public static final ThreadLocal<SimpleDateFormat> threadLocal =
+    ThreadLocal.withInitial(() -> new SimpleDateFormat("yyyy-MM-dd"));
 ```
 
-要访问实际格式化器，请调用
+要访问实际格式化器，请调用：
 
 ```java
 String dateStamp = threadLocal.get().format(new Date());
@@ -21860,29 +22735,30 @@ String dateStamp = threadLocal.get().format(new Date());
 
 > 预览说明：如第 10.4.4 节所示，线程本地变量可能不适用于大量的虚拟线程。Java 21 中的预览功能 Scoped locals 提供了更优异的替代方案。
 
-一个相关的问题是多线程中的随机数生成。`java.util.Random` 类是线程安全的。然而，如果多个线程使用单个共享生成器，产生新随机值并更新生成器状态的计算可能是低下的。
+一个相关的问题是多线程中的随机数生成。`java.util.Random` 类是线程安全的。然而，如果多个线程使用单个共享生成器，产生新随机值并更新生成器状态的计算可能是低效的。
 
 你可以使用 `ThreadLocal` 辅助类为每个线程提供一个独立的生成器。但有一个针对这种情况进行了优化的便利类：
 
-```
+```java
 int random = ThreadLocalRandom.current().nextInt();
 ```
 
 调用 `ThreadLocalRandom.current()` 返回一个具有每个线程状态的随机数生成器。在当前的实现中，它将生成器状态存储在 `Thread` 对象的实例变量中。
 
-```java
-java.lang.ThreadLocal<T>
-```
+
+
+
+# `java.lang.ThreadLocal<T>`
 
 - `static <S> ThreadLocal<S> withInitial(Supplier<? extends S> supplier)`
-创建一个线程本地变量，其初始值通过调用给定的 `supplier` 产生。
 
-```
-java.util.concurrent.ThreadLocalRandom
-```
+  创建一个线程本地变量，其初始值通过调用给定的 `supplier` 产生。
+
+# `java.util.concurrent.ThreadLocalRandom`
 
 - `static ThreadLocalRandom current()`
-返回一个随机生成器类，其状态局部于当前线程。
+
+  返回一个随机生成器类，其状态局部于当前线程。
 
 ## 10.6. 线程安全的集合
 
@@ -21890,34 +22766,34 @@ java.util.concurrent.ThreadLocalRandom
 
 你可以通过提供锁（lock）来保护共享数据结构，但通常选择线程安全的实现更为简单。在接下来的章节中，我们将讨论 Java 库提供的线程安全集合。
 
-### 10.6.1. 阻塞队列 (Blocking Queues)
+### 10.6.1. 阻塞队列（Blocking Queues）
 
 许多线程问题可以使用一个或多个队列进行优雅且安全地表述。生产者线程将项插入队列，消费者线程检索这些项。队列允许你安全地将数据从一个线程传递到另一个线程。例如，考虑我们的银行转账程序。与其直接访问银行对象，转账线程将转账指令对象插入队列并执行转账。只有该线程可以访问银行对象的内部。不需要同步。（当然，线程安全队列类的实现者必须担心锁和条件，但那是他们的问题，不是你的。）
 
-当你在队列满时尝试添加元素，或在队列为空时尝试元素时，阻塞队列会导致线程阻塞。阻塞队列是协调多个线程工作的有用工具。工作线程可以定期将中间结果存入阻塞队列。其他工作线程移除中间结果并对其进行进一步修改。队列会自动平衡工作负载。如果第一组线程运行比第二组慢，第二组将阻塞等待结果。如果第一组线程运行得较快，队列将一直填满，直到第二组追上。表 10.2 显示了阻塞队列的方法。
+当你在队列满时尝试添加元素，或在队列为空时尝试获取元素时，阻塞队列会导致线程阻塞。阻塞队列是协调多个线程工作的有用工具。工作线程可以定期将中间结果存入阻塞队列。其他工作线程移除中间结果并对其进行进一步修改。队列会自动平衡工作负载。如果第一组线程运行比第二组慢，第二组将阻塞等待结果。如果第一组线程运行得较快，队列将一直填满，直到第二组追上。表 10.2 显示了阻塞队列的方法。
 
 | 方法 | 正常操作 | 特殊情况下的操作 |
 | --- | --- | --- |
-| add | 添加元素 | 如果队列满则抛出 `IllegalStateException` |
-| element | 返回头部元素 | 如果队列为空则抛出 `NoSuchElementException` |
-| offer | 添加元素并返回 true | 如果队列满则返回 false |
-| peek | 返回头部元素 | 如果队列为空则返回 `null` |
-| poll | 移除并返回头部元素 | 如果队列为空则返回 `null` |
-| put | 添加元素 | 如果队列满则阻塞 |
-| remove | 移除并返回头部元素 | 如果队列为空则抛出 `NoSuchElementException` |
-| take | 移除并返回头部元素 | 如果队列为空则阻塞 |
+| `add` | 添加元素 | 如果队列满则抛出 `IllegalStateException` |
+| `element` | 返回头部元素 | 如果队列为空则抛出 `NoSuchElementException` |
+| `offer` | 添加元素并返回 `true` | 如果队列满则返回 `false` |
+| `peek` | 返回头部元素 | 如果队列为空则返回 `null` |
+| `poll` | 移除并返回头部元素 | 如果队列为空则返回 `null` |
+| `put` | 添加元素 | 如果队列满则阻塞 |
+| `remove` | 移除并返回头部元素 | 如果队列为空则抛出 `NoSuchElementException` |
+| `take` | 移除并返回头部元素 | 如果队列为空则阻塞 |
 
 阻塞队列方法分为三类，区别在于队列满或为空时执行的动作。如果你将队列作为线程管理工具，请使用 `put` 和 `take` 方法。`add`、`remove` 和 `element` 操作在尝试向队列添加或获取空队列头部时会抛出异常。
 
 > **注意：** `poll` 和 `peek` 方法返回 `null` 以表示失败。因此，向这些队列中插入 `null` 值是非法的。
 
-还有带有超时时间的 `offer` 和 `poll` 方法变体。例如，调用
+还有带有超时时间的 `offer` 和 `poll` 方法变体。例如，调用：
 
-```
+```java
 boolean success = q.offer(x, 100, TimeUnit.MILLISECONDS);
 ```
 
-尝试在 100 毫秒内将元素插入队尾。如果成功，则返回 true；否则在超时后返回 false。同样，调用
+尝试在 100 毫秒内将元素插入队尾。如果成功，则返回 `true`；否则在超时后返回 `false`。同样，调用：
 
 ```java
 Object head = q.poll(100, TimeUnit.MILLISECONDS);
@@ -21927,13 +22803,13 @@ Object head = q.poll(100, TimeUnit.MILLISECONDS);
 
 `put` 方法在队列满时阻塞，`take` 方法在队列为空时阻塞。这些是不带超时的 `offer` 和 `poll`。
 
-`java.util.concurrent` 包提供了阻塞队列的几种变体。默认情况下，`LinkedBlockingQueue` 其容量没有上限，但可以可选指定最大容量。`LinkedBlockingDeque` 是双端版本。`ArrayBlockingQueue` 使用给定的容量和一个可选的公平性参数构造。如果指定了公平性，则等待最长的线程将获得优先处理。一如既，公平性会带来巨大的性能代价，只有当你的问题特别需要时才使用它。
+`java.util.concurrent` 包提供了阻塞队列的几种变体。默认情况下，`LinkedBlockingQueue` 其容量没有上限，但可以可选指定最大容量。`LinkedBlockingDeque` 是双端版本。`ArrayBlockingQueue` 使用给定的容量和一个可选的公平性参数构造。如果指定了公平性，则等待最长的线程将获得优先处理。一如既往，公平性会带来巨大的性能代价，只有当你的问题特别需要时才使用它。
 
-`PriorityBlockingQueue` 是优先级队列，而不是先先队列。元素按优先级顺序移除。队列具有无界容量，但如果队列为空，检索将阻塞。（关于优先级队列的信息，请参见第 9 章。）
+`PriorityBlockingQueue` 是优先级队列，而不是先进先出队列。元素按优先级顺序移除。队列具有无界容量，但如果队列为空，检索将阻塞。（关于优先级队列的信息，请参见第 9 章。）
 
-`TransferQueue` 接口允许生产者线程等待消费者准备好接收一个项。当生产者调用
+`TransferQueue` 接口允许生产者线程等待消费者准备好接收一个项。当生产者调用：
 
-```
+```java
 q.transfer(item);
 ```
 
@@ -21943,27 +22819,23 @@ q.transfer(item);
 
 生产者线程遍历所有子目录下的所有文件并将其放入阻塞队列。此操作很快，如果不加限制，队列将迅速填满文件系统中的所有文件。
 
-我们还启动了大量的搜索线程。每个搜索线程从队列中获取一个文件，打开它，打印所有包含关键字行，然后获取下一个文件。我们使用一个
+我们还启动了大量的搜索线程。每个搜索线程从队列中获取一个文件，打开它，打印所有包含关键字的行，然后获取下一个文件。我们使用一个在不再需要进一步工作时终止应用程序的技巧。为了信号任务已完成，枚举线程会将一个特殊的终止对象放入队列中。（这类似于行李提取传送带上的一个贴有“最后一件行李”标签的虚拟箱。）当搜索线程获取到该特殊对象时，它就会终止，同时会将该对象放回去，供其他消费者看到。
 
-
-在不再需要进一步工作时终止应用程序的技巧。为了信号任务已完成，枚举线程会将一个特殊的终止对象放入队列中。（这类似于行李提取传送带上的一个贴有“最后一件行李”标签的虚拟箱。）当搜索线程获取到该特殊对象时，它就会终止，同时会将该对象放回去，供其他消费者看到。
-
-> 注意：某些程序员使用“毒丸”（poison pill）一词来称这种向消费者发送终止信号的对象。
+> **注意：** 某些程序员使用“毒丸”（poison pill）一词来称这种向消费者发送终止信号的对象。
 
 请注意，不需要显式的线程同步。在该应用程序中，我们使用队列数据结构作为同步机制。
 
 ## 列表 10.8
-blockingQueue/BlockingQueueTest.java
+
+`blockingQueue/BlockingQueueTest.java`
 
 ```java
-1 package blockingQueue;
-2 import java.io.*;
-3 import java.nio.file.*;
-4 import java.util.*;
-5 import java.util.*;
-6 import java.util.concurrent.*;
-```
+package blockingQueue;
 
+import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+import java.util.concurrent.*;
 import java.util.stream.*;
 
 /**
@@ -21986,140 +22858,146 @@ public class BlockingQueueTest {
             Runnable enumerator = () -> {
                 try {
                     enumerate(Path.of(directory
-```
-} catch (IOException e) {
-    e.printStackTrace();
-} catch (InterruptedException e) {
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                }
+            };
+
+            Thread.ofPlatform().start(() -> {
+                for (int i = 1; i <= SEARCH_THREADS; i++) {
+                    Runnable searcher = () -> {
+                        try {
+                            boolean done = false;
+                            while (!done) {
+                                Path file = queue.take();
+                                if (file == TERMINAL) {
+                                    queue.put(file);
+                                    done = true;
+                                } else {
+                                    search(file, H
+                                }
+                            }
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        } catch (InterruptedException e) {
+                        }
+                    };
+                }
+            });
+        }
+    }
+
+    /**
+     * 递归枚举目录下所有的文件
+     * 详见卷二的第 1 和第 2 章
+     * @param directory 在目录中搜索
+     */
+    public static void enumerate(Path directory) {
+        try (Stream<Path> children = Files.list(directory)) {
+            for (Path child : children.toList()) {
+                if (Files.isDirectory(child)) {
+                    enumerate(child);
+                } else {
+                    queue.put(child);
+                }
+            }
+        }
+    }
+
+    /**
+     * 在文件中搜索给定的关键字
+     * @param file 要搜索的文件
+     * @param keyword 要搜索的关键字
+     */
+    public static void search(Path file, String keyword) {
+        try (var in = new Scanner(file)) {
+            int lineNumber = 0;
+            while (in.hasNextLine()) {
+                lineNumber++;
+                String line = in.nextLine();
+                if (line.contains(keyword)) {
+                    System.out.printf("%s:%d:%s"
+                }
+            }
+        }
+    }
 }
-};
-Thread.ofPlatform().start(() -> {
-    for (int i = 1; i <= SEARCH_THREADS; i++) {
-        Runnable searcher = () -> {
-            try {
-                boolean done = false;
-                while (!done) {
-                    Path file = queue.take();
-                    if (file == TERMINAL) {
-                        queue.put(file);
-                        done = true;
-                    } else search(file, H
-});});});});});});
-```
-63 }
-64 catch (IOException e)
-65 {
-66     e.printStackTrace();
-67 }
-68 catch (InterruptedExcept
-69 {
-70 }
-71 };
-72 Thread.ofPlatform().start(searc
-73  }
-74  }
-75  }
-76 
-/**
-  * 递归枚举目录下所有的文件
-  * 详见卷二的第 1 和第 2 章
-  * @param directory 在目录中搜索
-  */
-public static void enumerate(Path direct
-{
-     try (Stream<Path> children = Files.li
-{
-         for (Path child : children.toList(
-             {
-                 if (Files.isDirectory(child))
-                 enumerate(child);
-     else
-```
-91        queue.put(child);
-    92    }
-93  }
-94 }
-
-//**
-  * 在文件中搜索给定的关键字 a
-  * @param file 要搜索的文件
-  * @param keyword 要搜索的关键字
- */
-public static void search(Path file, Str
-{
-     try (var in = new Scanner(file))
-     {
-         int lineNumber = 0;
-         while (in.hasNextLine())
-         {
-             lineNumber++;
-             String line = in.nextLine();
-             if (line.contains(keyword))
-                 System.out.printf("%s:%d:%s"
-     }
-     }
- }
- }
-```java
-java.util.concurrent.ArrayBlockingQueue<E> 5.0
 ```
 
-- ArrayBlockingQueue(int capacity)
-- ArrayBlockingQueue(int capacity, boolean fair)
-根据给定的容量和公平性设置构造阻塞队列。该队列由循环数组实现。
+### `java.util.concurrent.ArrayBlockingQueue<E>` 5.0
 
-```java
-java.util.concurrent.LinkedBlockingQueue<E> 5.0
-```
+- `ArrayBlockingQueue(int capacity)`
+- `ArrayBlockingQueue(int capacity, boolean fair)`
 
-```java
-java.util.concurrent.LinkedBlockingDeque<E> 6
-```
+  根据给定的容量和公平性设置构造阻塞队列。该队列由循环数组实现。
 
-- LinkedBlockingQueue()
-- LinkedBlockingDeque()
-构造一个无界的阻塞队列或双端队列，由链表实现。
-- LinkedBlockingQueue(int capacity)
-- LinkedBlockingDeque(int capacity)
-根据给定的容量构造一个有界的阻塞队列或双端队列，由链表实现。
+### `java.util.concurrent.LinkedBlockingQueue<E>` 5.0
 
-## java.util.concurrent.PriorityBlockingQueue<E> 5.0
+### `java.util.concurrent.LinkedBlockingDeque<E>` 6
 
-- PriorityBlockingQueue()
-- PriorityBlockingQueue(int initialCapacity)
-- PriorityBlockingQueue(int initialCapacity, Comparator<? super E> comparator)
-构造一个由堆实现的无界优先级阻塞队列。初始容量的默认值为 11。如果未指定比较器，则元素必须实现 `Comparable` 接口。
+- `LinkedBlockingQueue()`
+- `LinkedBlockingDeque()`
 
-## java.util.concurrent.BlockingQueue<E> 5.0
+  构造一个无界的阻塞队列或双端队列，由链表实现。
 
-- void put(E)
+- `LinkedBlockingQueue(int capacity)`
+- `LinkedBlockingDeque(int capacity)`
+
+  根据给定的容量构造一个有界的阻塞队列或双端队列，由链表实现。
+
+## `java.util.concurrent.PriorityBlockingQueue<E>` 5.0
+
+- `PriorityBlockingQueue()`
+- `PriorityBlockingQueue(int initialCapacity)`
+- `PriorityBlockingQueue(int initialCapacity, Comparator<? super E> comparator)`
+
+  构造一个由堆实现的无界优先级阻塞队列。初始容量的默认值为 11。如果未指定比较器，则元素必须实现 `Comparable` 接口。
+
+## `java.util.concurrent.BlockingQueue<E>` 5.0
+
+- `void put(E)`
+
   添加元素，在必要时阻塞。
-- take()
+
+- `take()`
+
   移除头元素，在必要时阻塞。
-- offer(E element, long time, TimeUnit)
-  添加给定的元素如果成功则返回 true，阻塞直到元素被添加。
 
-## java.util.concurrent.BlockingDeque<E> 6
+- `offer(E element, long time, TimeUnit)`
 
-- void putFirst(E)
-- void putLast(E)
+  添加给定的元素，如果成功则返回 `true`，阻塞直到元素被添加。
+
+## `java.util.concurrent.BlockingDeque<E>` 6
+
+- `void putFirst(E)`
+- `void putLast(E)`
+
   添加元素，在必要时阻塞。
-- takeFirst()
-- takeLast()
+
+- `takeFirst()`
+- `takeLast()`
+
   移除头或尾元素，在必要时阻塞。
-- offerFirst(E element, long time, TimeUnit)
-- offerLast(E element, long time, TimeUnit)
-  添加给定的元素如果成功则返回 true，阻塞直到元素被添加。
 
-## java.util.concurrent.TransferQueue<E> 7
+- `offerFirst(E element, long time, TimeUnit)`
+- `offerLast(E element, long time, TimeUnit)`
 
-- void transfer(E)
+  添加给定的元素，如果成功则返回 `true`，阻塞直到元素被添加。
+
+## `java.util.concurrent.TransferQueue<E>` 7
+
+- `void transfer(E)`
+
   传输值，直到另一个线程将其移除。
-- boolean tryTransfer(E element, long time, TimeUnit)
-  在给定的超时时间内尝试传输，如果成功则返回 true。
 
-## 10.6.2 高效映射、集合和队列
+- `boolean tryTransfer(E element, long time, TimeUnit)`
 
-java.util.concurrent 包提供了映射、排序集合和队列的高效实现：ConcurrentHashMap、ConcurrentSkipListMap、ConcurrentListListSet 和 ConcurrentLinked
+  在给定的超时时间内尝试传输，如果成功则返回 `true`。
+
+## 10.6.2. 高效映射、集合和队列
+
+`java.util.concurrent` 包提供了映射、排序集合和队列的高效实现：`ConcurrentHashMap`、`ConcurrentSkipListMap`、`ConcurrentSkipListSet` 和 `ConcurrentLinkedQueue`。
 
 这些集合使用了复杂的算法，通过允许访问数据结构的不同部分来减少竞争。
 
@@ -22127,55 +23005,43 @@ java.util.concurrent 包提供了映射、排序集合和队列的高效实现�
 
 这些集合返回弱一致的迭代器。这意味着迭代器可能无法反映构造后发生的所有修改，但它们不会返回重复的值，也不会抛出 `ConcurrentModificationException`。
 
-> 注意：相比之下，java.util 包中集合的迭代器在构造后集合被修改时会抛出 `ConcurrentModificationException`。
+> **注意：** 相比之下，`java.util` 包中集合的迭代器在构造后集合被修改时会抛出 `ConcurrentModificationException`。
 
 并发哈希映射可以高效地支持大量的读取和有限数量的写入。
 
-> 注意：哈希映射将具有相同哈码的所有条目放在同一个“桶”中。某些应用程序使用了糟糕的哈希函数，导致所有条目落入少数桶中，严重降低性能。即使是通常合理的哈希函数（例如 String 类的）也可能出现问题。例如，攻击者可以通过构造大量哈希值相同的字符串来减慢程序。在最近的 Java 版本中，当键类型实现 `Comparable` 时，并发哈希映射会将桶组织为树而不是列表，从而保证 O(log n) 的性能。
+> **注意：** 哈希映射将具有相同哈希码的所有条目放在同一个“桶”中。某些应用程序使用了糟糕的哈希函数，导致所有条目落入少数桶中，严重降低性能。即使是通常合理的哈希函数（例如 `String` 类的哈希函数）也可能出现问题。例如，攻击者可以通过构造大量哈希值相同的字符串来减慢程序。在最近的 Java 版本中，当键类型实现 `Comparable` 时，并发哈希映射会将桶组织为树而不是列表，从而保证 `O(log n)` 的性能。
 
-```java
-java.util.concurrent.ConcurrentLinkedQueue<E> 5.0
-```
+### `java.util.concurrent.ConcurrentLinkedQueue<E>` 5.0
 
-- ConcurrentLinkedQueue<E>() 构造一个可以多线程安全访问的无界非阻塞队列。
+- `ConcurrentLinkedQueue<E>()`
 
-```java
-java.util.concurrent.ConcurrentHashMap<K, V> 5.0
-```
+  构造一个可以多线程安全访问的无界非阻塞队列。
 
-- ConcurrentHashMap<K, V>()
-- ConcurrentHashMap<K, V>(int initialCapacity)
-- ConcurrentHashMap<K, V>(int initialCapacity, float
+### `java.util.concurrent.ConcurrentHashMap<K, V>` 5.0
+
+- `ConcurrentHashMap<K, V>()`
+- `ConcurrentHashMap<K, V>(int initialCapacity)`
+- `ConcurrentHashMap<K, V>(int initialCapacity, float loadFactor, int concurrencyLevel)`
+
+  构造一个可以被多个线程安全访问的哈希映射。初始容量的默认值为 16。如果每个桶的平均负载超过了负载因子，则对表进行重置。默认值为 0.75。并发级别是预估的并发写入线程数。
+
+### `java.util.concurrent.ConcurrentSkipListSet<E>` 6
+
+- `ConcurrentSkipListSet<E>()`
+- `ConcurrentSkipListSet<E>(Comparator<? super E> comp)`
+
+  构造一个可以被多个线程安全访问的有序集合。第一个构造函数要求元素实现 `Comparable` 接口。
+
+### `java.util.concurrent.ConcurrentSkipListMap<K, V>` 6
 
 
-loadFactor, int concurrencyLevel)
-构造一个可以被多个
-线程安全访问的哈希映射。初始容量的默认值为
-16。如果每个桶的平均负载超过了负载
-因子，则对表进行重置。默认值为 0.75。
-并发级别是预估的并发
-写入线程数。
-```
 
-```java
-java.util.concurrent.ConcurrentSkipListSet<E> 6
-```
+- `ConcurrentSkipListMap<K, V>()`
+- `ConcurrentSkipListMap<K, V>(Comparator<? super K> comp)`
 
-- ConcurrentSkipListSet<E>()
-- ConcurrentSkipListSet<E>(Comparator<? super E> comp)
-构造一个可以被多个线程安全访问的有序集合。第一个构造函数要求
-元素实现 `Comparable` 接口。
+构造一个可以被多个线程安全访问的有序映射。第一个构造函数要求键实现 `Comparable` 接口。
 
-```java
-java.util.concurrent.ConcurrentSkipListMap<K, V> 6
-```
-
-- ConcurrentSkipListMap<K, V>()
-- ConcurrentSkipListMap<K, V>(Comparator<? super K> comp)
-构造一个可以被多个线程安全访问的有序映射。第一个构造函数要求
-键实现 `Comparable` 接口。
-
-## 10.6.3. Map 条目的原子化更新
+## 10.6.3. `Map` 条目的原子化更新
 
 `ConcurrentHashMap` 的原始版本只有几个用于原子化更新的方法，这使得编程变得有些笨拙。假设我们想要统计某些特征出现的频率。作为一个简单的例子，假设多个线程遇到了某些单词，我们想要统计它们的频率。
 
@@ -22209,7 +23075,7 @@ map.get(word).incrementAndGet();
 
 遗憾的是，在第一行中，每次增加都会构造一个新的 `AtomicLong`，当它不再被需要时它就会被丢弃。
 
-如今，Java API 提供了使得原子化更新更方便、更高效的方法。`compute` 方法接收一个键和一个用于计算新值的函数。该函数接收键和关联的值（如果没有则则为 `null`），并计算出新值。例如，这里是我们如何更新一个整数计数器映射：
+如今，Java API 提供了使得原子化更新更方便、更高效的方法。`compute` 方法接收一个键和一个用于计算新值的函数。该函数接收键和关联的值（如果没有则为 `null`），并计算出新值。例如，这里是我们如何更新一个整数计数器映射：
 
 ```java
 map.compute(word, (k, v) -> v == null ? 1 : v +
@@ -22243,23 +23109,32 @@ map.merge(word, 1L, Long::sum);
 
 **警告：** 当你使用 `compute` 或 `merge` 时，请记住你提供的函数不应该执行过多的工作。在该函数运行时，对映射的某些更新可能会被阻塞。列表 10.9 中的程序使用并发映射来统计目录中的所有单词。
 
-# 列表 10.9 CHMDemo.java
+## 列表 10.9 `CHMDemo.java`
 
 ```java
 1 package concurrentHashMap;
+
 2
+
 3 import java.io.*;
+
 4 import java.nio.file.*;
+
 5 import java.util.*;
+
 6 import java.util.concurrent.*;
+
 7 import java.util.stream.*;
+
 8
+
 9 /**
  * 此程序演示了并发
  * @version 1.0 2023-07-30
  * @author Caymann
  */
 public class CHMDemo {
+
     public static ConcurrentHashMap<String, Long> map = new ConcurrentHashMap<>();
 
     public static void process(Path file) {
@@ -22280,8 +23155,10 @@ public class CHMDemo {
      */
     public static Set<Path> descendants(Path rootDir)
         throws InterruptedException, IOException {
+
         ExecutorService executor = Executors.newFixedThreadPool(4);
         Path pathToRoot = Path.of(".");
+
         try (Stream<Path> entries = Files.walk(rootDir)) {
             return entries.collect(Collectors.toSet());
         };
@@ -22289,9 +23166,11 @@ public class CHMDemo {
 
     public static void main(String[] args) throws InterruptedException {
         Set<Path> files = descendants(Path.of("."));
+
         for (Path file : files) {
             executor.submit(() -> process(file));
         }
+
         executor.shutdown();
         executor.awaitTermination(1, TimeUnit.MINUTES);
         System.out.println(map);
@@ -22311,142 +23190,133 @@ Java API 为并发映射提供了批量操作，这些操作在其他线程操�
 
 每个操作都有四种版本：
 
-- operationKeys：对键操作。
-- operationValues：对值操作。
-- operation：对键和值操作。
-- operationEntries：对 `Map.Entry` 对象操作。
+- `operationKeys`：对键操作。
+- `operationValues`：对值操作。
+- `operation`：对键和值操作。
+- `operationEntries`：对 `Map.Entry` 对象操作。
 
-在每个操作中，你需要指定一个并行阈值。如果映射包含的元素超过阈值，则对批量操作进行并行。如果你希望批量操作在单线程中运行，请使用 `Long.MAX_VALUE` 作为阈值。如果你希望为批量操作提供最大数量的线程，请使用阈值 1。
+在每个操作中，你需要指定一个并行阈值。如果映射包含的元素超过阈值，则对批量操作进行并行。如果你希望批量操作在单线程中运行，请使用 `Long.MAX_VALUE` 作为阈值。如果你希望为批量操作提供最大数量的线程，请使用阈值 `1`。
 
 让我们先看 `search` 方法。这里是它的版本：
 
 ```java
 U searchKeys(long threshold, Function<? super K
-U searchValues(long threshold, Function<? super 
+U searchValues(long threshold, Function<? super
 U search(long threshold, BiFunction<? super K, ?
- searchEntries(long threshold, Function<?Map.Enti
+searchEntries(long threshold, Function<?Map.Enti
 ```
 
 例如，假设我们想要找到第一个出现超过 1000 次的单词。我们需要搜索键和值：
 
 ```java
-String result = map.search(threshold, (k, v) -> 
+String result = map.search(threshold, (k, v) ->
 ```
-然后结果被设置为第一个匹配项，如果搜索函数对所有输入都返回 null，则设置为 null。
 
-`forEach` 方法有两种变体。第一种简单地为每个 map 条目应用消费者函数，例如：
+然后结果被设置为第一个匹配项，如果搜索函数对所有输入都返回 `null`，则设置为 `null`。
 
-```
+`forEach` 方法有两种变体。第一种简单地为每个 `map` 条目应用消费者函数，例如：
+
+```java
 map.forEach(threshold,
-(k, v) -> System.out.println(k + " -> " + v));
+    (k, v) -> System.out.println(k + " -> " + v));
 ```
 
 第二种变体接收一个额外的转换函数，该函数会首先执行，其结果将传递给消费者函数：
 
-```
+```java
 map.forEach(threshold),
-(k, v) -> k + " -> " + v, // transformer
-System.out::println); // consumer
+    (k, v) -> k + " -> " + v, // transformer
+    System.out::println); // consumer
 ```
 
-转换器可以用作过滤器。每当转换器返回 null 时，该值会被静默跳过。例如，在这里我们只打印值较大的条目：
+转换器可以用作过滤器。每当转换器返回 `null` 时，该值会被静默跳过。例如，在这里我们只打印值较大的条目：
 
-```
+```java
 map.forEach(threshold),
-(k, v) -> v > 1000 ? k + " -> " + v : null, //
-System.out::println); // null 值不会被传递
+    (k, v) -> v > 1000 ? k + " -> " + v : null, //
+    System.out::println); // null 值不会被传递
 ```
 
 `reduce` 操作通过累加函数将输入组合起来。例如，这里是计算所有值之和的方法：
 
-```
+```java
 Long sum = map.reduceValues(threshold, Long::sum);
 ```
 
 与 `forEach` 一样，你也可以提供一个转换函数。在这里我们计算最长键的长度：
 
-```
+```java
 Integer maxLength = map.reduceKeys(threshold, String::length, // transformer
-Integer::max); // accumulator
+    Integer::max); // accumulator
 ```
 
-转换器可以作为过滤器，通过返回 null 来排除不需要的输入。在这里，我们统计有多少个条目的值 > 1000：
+转换器可以作为过滤器，通过返回 `null` 来排除不需要的输入。在这里，我们统计有多少个条目的值 > 1000：
 
-```
+```java
 Long count = map.reduceValues(threshold, v -> v > 1000 ? 1L : null, Long::sum);
 ```
 
-> **注意：** 如果 map 为空，或者所有条目都被过滤掉，`reduce` 操作将返回 null。如果只有一个元素，则返回它的转换结果，且不应用累加器。
+> **注意：** 如果 `map` 为空，或者所有条目都被过滤掉，`reduce` 操作将返回 `null`。如果只有一个元素，则返回它的转换结果，且不应用累加器。
 
-针对 int、long 和 double 输出，有带有 `ToInt`、`ToLong` 和 `Double` 后缀的特化方法。你需要将输入转换为原始类型值，并指定一个默认值和一个累加函数。当 map 为空时，将返回默认值。
+针对 `int`、`long` 和 `double` 输出，有带有 `ToInt`、`ToLong` 和 `Double` 后缀的特化方法。你需要将输入转换为原始类型值，并指定一个默认值和一个累加函数。当 `map` 为空时，将返回默认值。
 
-```
+```java
 long sum = map.reduceValuesToLong(threshold,
-Long::longValue, // transformer to primitive
-0, // default value for empty map
-Long::sum); // primitive type accumulator
+    Long::longValue, // transformer to primitive
+    0, // default value for empty map
+    Long::sum); // primitive type accumulator
 ```
 
-> 警告：这些特化方法的行为与对象版本不同（后者只有一个元素需要考虑的情况）。它们不是返回转换后的元素，而是与默认值进行累加。因此，默认值必须是累加器的单位元素。
+> **警告：** 这些特化方法的行为与对象版本不同（后者只有一个元素需要考虑的情况）。它们不是返回转换后的元素，而是与默认值进行累加。因此，默认值必须是累加器的单位元素。
 
-## 10.6.5. 并发集合视图 (Concurrent Set Views)
+## 10.6.5. 并发集合视图（Concurrent Set Views）
 
-假设你需要一个大型线程安全的 set 而不是 map。并没有 `ConcurrentHashSet` 类，你也比尝试自己创建一个要明。当然，你可以使用带有虚假值的 `ConcurrentHashMap`，但你得到的是 map 而不是 set，并且无法应用 Set 接口的操作。
+假设你需要一个大型线程安全的 `set` 而不是 `map`。并没有 `ConcurrentHashSet` 类，你也比尝试自己创建一个要明智。当然，你可以使用带有虚假值的 `ConcurrentHashMap`，但你得到的是 `map` 而不是 `set`，并且无法应用 `Set` 接口的操作。
 
-静态方法 `newSet` 返回一个 `Set<K>`，它实际上是 `ConcurrentHashMap<K, Boolean>` 的包装器。（所有的 map 值都是 `Boolean.TRUE`，但你并不关心，因为你只是把它当作 set 使用。）
+静态方法 `newSet` 返回一个 `Set<K>`，它实际上是 `ConcurrentHashMap<K, Boolean>` 的包装器。（所有的 `map` 值都是 `Boolean.TRUE`，但你并不关心，因为你只是把它当作 `set` 使用。）
 
-```
+```java
 Set<String> words = ConcurrentHashMap.<String>newSet
 ```
 
-当然，如果你有一个现有的 map，`keySet` 方法产生键的集合。该集合是可变的。如果你删除了集合中的元素，键（及其对应的值）也会从 map 中移除。但向键的集中添加元素是没有意义的，因为没有对应的值要添加。`ConcurrentHashMap` 还有另一个带默认值的 `keySet` 方法，用于向集合中添加元素：
+当然，如果你有一个现有的 `map`，`keySet` 方法产生键的集合。该集合是可变的。如果你删除了集合中的元素，键（及其对应的值）也会从 `map` 中移除。但向键的集合中添加元素是没有意义的，因为没有对应的值要添加。`ConcurrentHashMap` 还有另一个带默认值的 `keySet` 方法，用于向集合中添加元素：
 
-```
+```java
 Set<String> words = map.keySet(1L);
 words.add("Java");
 ```
 
-如果 "Java" 之前不在 `words` 中，它现在有一个值 1。
+如果 `"Java"` 之前不在 `words` 中，它现在有一个值 `1`。
 
 **注意：** 你也可以使用 `Collections.newSetFromMap` 方法，但 `newSet` 更简单且效率更高。
 
-## 10.6.6. 写时复制数组 (Copy on Write Arrays)
+## 10.6.6. 写时复制数组（Copy on Write Arrays）
 
 `CopyOnWriteArrayList` 和 `CopyOnWriteArray` 是线程安全的集合，所有的修改器都会创建底层数组的副本。如果遍历集合的线程远优于修改集合的线程，这种安排非常有用。当你构造一个迭代器时，它包含指向当前数组的引用。如果数组随后被修改，迭代器仍然持有旧数组，但集合的数组会被替换。因此，旧的迭代器拥有一个一致的（可能是过时的）视图，可以在无需任何同步开销的情况下访问它。
 
-## 10.6.7. 并行数组算法 (Parallel Array Algorithms)
+## 10.6.7. 并行数组算法（Parallel Array Algorithms）
 
-`Arrays` 类有一许多并行操作。静态方法 `Arrays.parallelSort` 可以对原始类型或对象的数组进行排序。例如：
+`Arrays` 类有许多并行操作。静态方法 `Arrays.parallelSort` 可以对原始类型或对象的数组进行排序。例如：
 
-```
+```java
 var contents = Files.readString(Path.of("alice.txt"));
 String[] words = contents.split("\\W+"); // split
 Arrays.parallelSort(words);
 ```
 
-排序对象时，你可以提供一个 `Comparator`。
+排序对象时，你可以提供一个 `Comparator`：
 
-```
+```java
 Arrays.parallelSort(words, Comparator.comparing(
 ```
 
 对于所有方法，你都可以提供范围的边界，例如：
 
-```
+```java
 Arrays.parallelSort(words, 0, words.length);
 ```
 
-> **注意：** 如果 map 为空，或者所有条目都被过滤掉，`reduce` 操作将返回 null。如果只有一个元素，则返回它的转换结果，且不应用累加器。
-
-> **注意：** 如果 map 为空，或者所有条目都被过滤掉，`reduce` 操作将返回 null。如果只有一个元素，则返回它的转换结果，且不应用累加器。
-
-> **注意：** 如果 map 为空，或者所有条目都被过滤掉，`reduce` 操作将返回 null。如果只有一个元素，则返回它的转换结果，且不应用累加器。
-
-> **注意：** 如果 map 为空，或者所有条目都被过滤掉，`reduce` 操作将返回 null。如果只有一个元素，则返回它的转换结果，且不应用累加器。
-
-> **注意：** 如果 map 为空，或者所有条目都被过滤掉，`reduce` 操作将返回 null。如果只有一个元素，则返回它的转换结果，且不应用累加器。
-
-
+> **注意：** 如果 `map` 为空，或者所有条目都被过滤掉，`reduce` 操作将返回 `null`。如果只有一个元素，则返回它的转换结果，且不应用累加器。
 
 通常情况下，使用 `java.util.concurrent` 包中定义的集合比使用同步包装器更好。特别是 `ConcurrentHashMap` 经过精心实现，使得多个线程在访问不同的桶（buckets）时可以访问它而不会相互阻塞。唯一的例外是频繁修改的数组列表。在这种情况下，同步的 `ArrayList` 性能可能优于 `CopyOnWriteArrayList`。
 
@@ -22454,12 +23324,15 @@ Arrays.parallelSort(words, 0, words.length);
 java.util.Collections 1.2
 ```
 
-- static <E> Collection<E> synchronizedCollection(Collection<E> c)
-- static <E> List synchronizedList(List<E> c)
-- static <E> Set synchronizedSet(Set<E> c)
-- static <E> SortedSet synchronizedSet(SortedSet<E> c)
-- static <K, V> Map<K, V> synchronizedMap(Map<K, V> c)
-- static <K, V> SortedMap<K, V> synchronizedSortedMap(SortedMap<K, V> c)
+
+
+- `static <E> Collection<E> synchronizedCollection(Collection<E> c)`
+- `static <E> List synchronizedList(List<E> c)`
+- `static <E> Set synchronizedSet(Set<E> c)`
+- `static <E> SortedSet synchronizedSet(SortedSet<E> c)`
+- `static <K, V> Map<K, V> synchronizedMap(Map<K, V> c)`
+- `static <K, V> SortedMap<K, V> synchronizedSortedMap(SortedMap<K, V> c)`
+
 返回该集合的视图，其方法是同步的。
 
 ## 10.7. 异步计算
@@ -22494,7 +23367,7 @@ public CompletableFuture<String> readPage(URI uri) {
             return new String(uri.toURL().openStream());
         }
         catch (IOException e) {
-          throw new UncheckedIOException(e);
+            throw new UncheckedIOException(e);
         }
     }, executor);
 }
@@ -22502,19 +23375,17 @@ public CompletableFuture<String> readPage(URI uri) {
 
 如果你省略了 `executor`，任务将在默认执行器上运行（即由 `ForkJoinPool.commonPool()` 返回的执行器）。你通常不想这样做。
 
-> 注意，`supplyAsync` 方法的第一个参数是 `Supplier<T>`，而不是 `Callable<T>`。这两个接口都描述了没有参数且返回类型为 T 的函数，但 `Supplier` 函数不能抛出检查异常。如你上面的代码所示，那并不是一个明智的选择。
+> 注意，`supplyAsync` 方法的第一个参数是 `Supplier<T>`，而不是 `Callable<T>`。这两个接口都描述了没有参数且返回类型为 `T` 的函数，但 `Supplier` 函数不能抛出检查异常。如你上面的代码所示，那并不是一个明智的选择。
 
-`CompletableFuture` 可以通过两种方式完成：要么带结果，要么带一个未捕获的异常。为了处理这两种情况，请使用 `whenComplete` 方法。提供的函数将带有结果（如果没有则为 null）和异常（如果没有则为 null）调用。
+`CompletableFuture` 可以通过两种方式完成：要么带结果，要么带一个未捕获的异常。为了处理这两种情况，请使用 `whenComplete` 方法。提供的函数将带有结果（如果没有则为 `null`）和异常（如果没有则为 `null`）调用。
 
 ```java
 f.whenComplete((s, t) -> {
-    if (t == null)
-    {
-      Process the result s;
+    if (t == null) {
+        Process the result s;
     }
-    else
-    {
-      Process the Throwable t;
+    else {
+        Process the Throwable t;
     }
 });
 ```
@@ -22524,27 +23395,27 @@ f.whenComplete((s, t) -> {
 ```java
 var f = new CompletableFuture<Integer>();
 executor.execute(() -> {
-  int n = workHard(arg);
-  f.complete(n);
+    int n = workHard(arg);
+    f.complete(n);
 });
 executor.execute(() -> {
-  int n = workSmart(arg);
-  f.complete(n);
+    int n = workSmart(arg);
+    f.complete(n);
 });
 executor.execute(() -> {
-  try {
-    Thread.sleep(timeout);
-    f.completeExceptionally(new TimeoutException());
-  }
-  catch (InterruptedException e) {
-    f.completeExceptionally(e);
-  }
+    try {
+        Thread.sleep(timeout);
+        f.completeExceptionally(new TimeoutException());
+    }
+    catch (InterruptedException e) {
+        f.completeExceptionally(e);
+    }
 });
 ```
 
 在多个线程中对同一个实例调用 `complete` 或 `completeExceptionally` 是安全的。如果 `future` 已经完成，这些调用将没有任何影响。
 
-> **注意：** 与普通的 `Future` 不同，当你调用其 `cancel` 方法时，`CompletableFuture` 的计算不会被中断。`cancel` 只是以 `CancellationException` 异常的方式完成该 `future`。通常情况下，这是合理的，因为 `CompletableFuture` 可能没有单一线程负责负责它的完成。然而，这一限制也适用于 `supplyAsync` 等方法返回的 `CompletableFuture` 实例，这些实例在原则上是可以被中断的。
+> **注意：** 与普通的 `Future` 不同，当你调用其 `cancel` 方法时，`CompletableFuture` 的计算不会被中断。`cancel` 只是以 `CancellationException` 异常的方式完成该 `future`。通常情况下，这是合理的，因为 `CompletableFuture` 可能没有单一线程负责它的完成。然而，这一限制也适用于 `supplyAsync` 等方法返回的 `CompletableFuture` 实例，这些实例在原则上是可以被中断的。
 
 ### 10.7.2. 组合 Completable Futures
 
@@ -22585,31 +23456,26 @@ CompletableFuture<U> future.thenApply(f);
 
 `thenCompose` 方法不是接收 `T -> U` 函数，而是接收一个将 `T` 映射到 `CompletableFuture<U>` 的函数。这听起来相当抽象，但可以非常自然。它是一个最终产生 `U` 的函数。
 
-
-
-
-# 调用
-
-```
+```java
 CompletableFuture<U> future.thenCompose(f);
 ```
 
 它的工作方式与 `thenApply` 完全相同，将 `f` 作用于 `future` 的结果。然而，`f` 的结果并不会立即可用。当结果到达时，组合操作才会完成。
 
-在前面的章节中，你已经看到了了用于处理异常的 `whenComplete` 方法。还有一个 `handle` 方法，它需要一个函数来处理结果或异常并计算出一个新结果。在许多情况下，调用 `exceptionally` 方法反而更简单。该方法在发生异常时会计算一个占位值：
+在前面的章节中，你已经看到了用于处理异常的 `whenComplete` 方法。还有一个 `handle` 方法，它需要一个函数来处理结果或异常并计算出一个新结果。在许多情况下，调用 `exceptionally` 方法反而更简单。该方法在发生异常时会计算一个占位值：
 
-```
+```java
 CompletableFuture<List<URI>> imageLinks = readPage()
-.exceptionally(ex -> "<html></html>")
-.thenApply(this::getImageLinks);
+    .exceptionally(ex -> "<html></html>")
+    .thenApply(this::getImageLinks);
 ```
 
 你可以用同样的方式处理超时：
 
 ```java
 CompletableFuture<List<URI>> imageLinks = readPage()
-.completeOnTimeout("<html></html>", 30, TimeUnit.SECONDS)
-.thenApply(this::getImageLinks);
+    .completeOnTimeout("<html></html>", 30, TimeUnit.SECONDS)
+    .thenApply(this::getImageLinks);
 ```
 
 或者，你可以在超时时抛出异常：
@@ -22624,46 +23490,46 @@ CompletableFuture<String> = readPage(uri).orTimeout(30, TimeUnit.SECONDS);
 
 | 方法 | 参数 | 描述 |
 | --- | --- | --- |
-| thenApply | T -> U | 将函数应用于结果 |
-| thenAccept | T -> void | 类似于 thenApply，但返回结果为 void |
-| thenCompose | T -> CompletableFuture<U> | 在结果上调用该函数并执行返回的 future | |
-| thenRun | Runnable | 执行返回结果为 void 的 Runnable 任务 |
-| handle | (T, Throwable) -> U | 处理错误并产生一个新结果。 |
-| whenComplete | (T, Throwable) -> void | 类似于 handle，但返回结果为 void |
-| exceptionally | Throwable -> U | 从错误计算出一个值 |
-| exceptionallyCompose | Throwable -> CompletableFuture<U> | 在异常上调用函数并执行返回的函数 |
-| completeOnTimeout | T, long, TimeUnit | 如果超时，返回该值作为结果。 |
-| orTimeout | long, TimeUnit | 如果超时，返回一个 TimeoutException。 |
+| `thenApply` | `T -> U` | 将函数应用于结果 |
+| `thenAccept` | `T -> void` | 类似于 `thenApply`，但返回结果为 `void` |
+| `thenCompose` | `T -> CompletableFuture<U>` | 在结果上调用该函数并执行返回的 `future` |
+| `thenRun` | `Runnable` | 执行返回结果为 `void` 的 `Runnable` 任务 |
+| `handle` | `(T, Throwable) -> U` | 处理错误并产生一个新结果 |
+| `whenComplete` | `(T, Throwable) -> void` | 类似于 `handle`，但返回结果为 `void` |
+| `exceptionally` | `Throwable -> U` | 从错误计算出一个值 |
+| `exceptionallyCompose` | `Throwable -> CompletableFuture<U>` | 在异常上调用函数并执行返回的函数 |
+| `completeOnTimeout` | `T, long, TimeUnit` | 如果超时，返回该值作为结果 |
+| `orTimeout` | `long, TimeUnit` | 如果超时，返回一个 `TimeoutException` |
 
-现在让我们转向组合多个 future 的方法（参见[表 10.4](#table-10-4)）。
+现在让我们转向组合多个 future 的方法（参见表 10.4）。
 
 前三个方法并发运行一个 `CompletableFuture<T>` 和一个 `CompletableFuture<U>` 操作，并合并结果。
 
 接下来的三个方法并发运行两个 `CompletableFuture<T>` 操作。一旦其中一个完成，它的结果就会被传递，而另一个的结果会被忽略。
 
-最后，表 10.5 所示的静态方法 `allOf` 和 `anyOf` 接收可变数量的可完成 future，并返回一个 `CompletableFuture<Void>`，该 future 在所有指定的 future 都完成（或其中任何一个完成）时完成完成。`allOf` 方法不产生结果。`anyOf` 方法不会终止剩余的任务。
+最后，表 10.5 所示的静态方法 `allOf` 和 `anyOf` 接收可变数量的可完成 future，并返回一个 `CompletableFuture<Void>`，该 future 在所有指定的 future 都完成（或其中任何一个完成）时完成。`allOf` 方法不产生结果。`anyOf` 方法不会终止剩余的任务。
 
 > 注意：`anyOf` 可能会返回一个以异常完成的 future，即使其他任务已成功完成。
 
 ### 表 10.4：将另一个 Future 与 CompletableFuture<T> 组合
 
 | 方法 | 参数 | 描述 |
-|---|---|--|
-| thenCombine | CompletableFuture<T, U> -> V | 执行两者并使用给定的函数合并结果。 |
-| thenAcceptBoth | CompletableFuture<T, U> -> void | 类似于 thenCombine，但返回结果为 void。 |
-| runAfterBoth | CompletableFuture<?>, Runnable | 在两者都完成后执行 runnable 任务。 |
-| applyToEither | CompletableFuture<T>, T -> V | 当其中一个结果可用时，将其传递给给定的函数。 |
-| acceptEither | CompletableFuture<T>, T -> void | 类似于 applyToEither，但返回结果为 void。 |
-| runAfterEither | CompletableFuture<?>, Runnable | 在其中一个完成后执行 runnable 任务。 |
+| --- | --- | --- |
+| `thenCombine` | `CompletableFuture<T, U> -> V` | 执行两者并使用给定的函数合并结果 |
+| `thenAcceptBoth` | `CompletableFuture<T, U> -> void` | 类似于 `thenCombine`，但返回结果为 `void` |
+| `runAfterBoth` | `CompletableFuture<?>, Runnable` | 在两者都完成后执行 `runnable` 任务 |
+| `applyToEither` | `CompletableFuture<T>, T -> V` | 当其中一个结果可用时，将其传递给给定的函数 |
+| `acceptEither` | `CompletableFuture<T>, T -> void` | 类似于 `applyToEither`，但返回结果为 `void` |
+| `runAfterEither` | `CompletableFuture<?>, Runnable` | 在其中一个完成后执行 `runnable` 任务 |
 
 ### 表 10.5：组合多个 Future
 
 | 方法 | 参数 | 描述 |
 | --- | --- | --- |
-| static allOf | CompletableFuture<...> | 在所有给定的 future 都完成（尽管可能带有异常）后以 void 结果完成。 |
-| static anyOf | CompletableFuture<...> | 在给定的 future 中任意一个完成后完成，产生其结果或异常。 |
+| `static allOf` | `CompletableFuture<...>` | 在所有给定的 `future` 都完成（尽管可能带有异常）后以 `void` 结果完成 |
+| `static anyOf` | `CompletableFuture<...>` | 在给定的 `future` 中任意一个完成后完成，产生其结果或异常 |
 
-**注意：** 对于所示的每种方法，都有两个 `Async` 变体，用于指定“依赖完成”（即在 future 完成后执行的操作）的执行器。其中一个变体使用默认执行器（不推荐），另一个带有一个 `Executor` 参数。
+**注意：** 对于所示的每种方法，都有两个 `Async` 变体，用于指定“依赖完成”（即在 `future` 完成后执行的操作）的执行器。其中一个变体使用默认执行器（不推荐），另一个带有一个 `Executor` 参数。
 
 对于操作流水线，从 `Async` 变体开始以设置所需的执行器，然后使用非 `Async` 方法继续使用相同的执行器。
 
@@ -22672,7 +23538,8 @@ CompletableFuture<String> = readPage(uri).orTimeout(30, TimeUnit.SECONDS);
 列表 10.10 显示了一个完整的程序，该程序读取页面、扫描图像并将其加载到本地。注意 `CompletableFuture` 如何为第一个函数提供参数。第一个异步步骤使用 `composeAsync` 来提供执行器。
 
 #### 列表 10.10
-completableFutures/CompletableFutureDemo.java
+
+`completableFutures/CompletableFutureDemo.java`
 
 ```java
 1 package completableFutures;
@@ -22698,70 +23565,78 @@ completableFutures/CompletableFutureDemo.java
 21     private URI uriToProcess;
 22
 23     public CompletableFuture<String> readPage(URI uri) {
-24         this.uriToProcess = uri;
-25         return CompletableFuture.supplyAsync(() -> {
-26             try {
-27                 var contents = new String(uri.readAllBytes());
-28                 System.out.println("Read page");
-29                 return contents;
-30             } catch (IOException e) {
-31                 throw new UncheckedIOException(e);
-32             }
-33         }, executor);
-34     }
-35
-36     public List<URI> getImageLinks(String text) {
-37         var result = new ArrayList<URI>();
-38         Matcher matcher = IMG_PATTERN.matcher(text);
-39         while (matcher.find()) {
-40             URI uri = URI.create(matcher.group());
-41             result.add(uri);
-42         }
-43         System.out.println("Found links: " + result.size());
-44         return result;
-45     }
-46
-47     public CompletableFuture<List<BufferedImage>> loadImages(List<URI> uris) {
-48         return CompletableFuture.supplyAsync(() -> {
-49             try {
-50                 var result = new ArrayList<BufferedImage>();
-51                 for (URI uri : uris) {
-52                     result.add(ImageIO.read(uri));
-53                     System.out.println("Loaded " + uri);
-54                 }
-55                 return result;
-56             } catch (IOException e) {
-57                 throw new UncheckedIOException(e);
-58             }
-59         }, executor);
-60     }
-61
-62     public void saveImages(List<BufferedImage> images) {
-63         try {
-64             System.out.println("Saving " + images.size());
-65             for (int i = 0; i < images.size(); i++) {
-66                 String filename = "/tmp/image" + i;
-67                 ImageIO.write(images.get(i), "PNG", new File(filename));
-68             }
-69         } catch (IOException e) {
-70             e.printStackTrace();
-71         }
-72     }
-73 }
 ```
 
 
 
 ```java
+this.uriToProcess = uri;
+
+return CompletableFuture.supplyAsync(() -> {
+    try {
+        var contents = new String(uri.readAllBytes());
+        System.out.println("Read page");
+        return contents;
+    } catch (IOException e) {
+        throw new UncheckedIOException(e);
+    }
+}, executor);
 }
+
+public List<URI> getImageLinks(String text) {
+    var result = new ArrayList<URI>();
+    Matcher matcher = IMG_PATTERN.matcher(text);
+    while (matcher.find()) {
+        URI uri = URI.create(matcher.group());
+        result.add(uri);
+    }
+    System.out.println("Found links: " + result.size());
+    return result;
+}
+
+public CompletableFuture<List<BufferedImage>> loadImages(List<URI> uris) {
+    return CompletableFuture.supplyAsync(() -> {
+        try {
+            var result = new ArrayList<BufferedImage>();
+            for (URI uri : uris) {
+                result.add(ImageIO.read(uri));
+                System.out.println("Loaded " + uri);
+            }
+            return result;
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        }
+    }, executor);
+}
+
+public void saveImages(List<BufferedImage> images) {
+    try {
+        System.out.println("Saving " + images.size());
+        for (int i = 0; i < images.size(); i++) {
+            String filename = "/tmp/image" + i;
+            ImageIO.write(images.get(i), "PNG", new File(filename));
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+}
+```
+
+```java
+}
+
 catch (IOException e) {
     throw new UncheckedIOException(e);
 }
+
 executor.shutdown();
 }
+
 public CompletableFutureDemo(URI uri) {
     uriToProcess = uri;
 }
+
 public void run() throws IOException {
     CompletableFuture.completedFuture(uri)
         .thenComposeAsync(this::readPage)
@@ -22769,28 +23644,32 @@ public void run() throws IOException {
         .thenCompose(this::getImages)
         .thenAccept(this::saveImages);
 
-// 或者使用 HTTP 客户端：
-/*
-HttpClient client = HttpClient.newHttpClient()
-HttpRequest request = HttpRequest.newBuilder()...
-client.sendAsync(request, BodyHandler)
-    .thenApply(HttpResponse::body)
-    .thenApply(this::getImageLinks)
+    // 或者使用 HTTP 客户端：
+    /*
+    HttpClient client = HttpClient.newHttpClient();
+
+    HttpRequest request = HttpRequest.newBuilder()...;
+
+    client.sendAsync(request, BodyHandler)
+        .thenApply(HttpResponse::body)
+        .thenApply(this::getImageLinks)
+    */
+}
 ```
 
 ```java
 .thenCompose(this::getImages)
 .thenAccept(this::saveImages);
-/*
+
+public static void main(String[] args)
+    throws IOException, InterruptedException
+{
+    new CompletableFutureDemo(URI.create(
+    ));
 }
-    public static void main(String[] args)
-        throws IOException, InterruptedException
-    {
-        new CompletableFutureDemo(URI.create(
-    }
 ```
 
-## 10.7.3. 用户界面回调中的耗时任务
+## 10.7.3 用户界面回调中的耗时任务
 
 使用线程的原因之一是让程序更具响应性。这在带有用户界面的应用程序中尤为重要。在 Swing、JavaFX 和 Android 中，用户界面组件不是线程安全的，所有的用户界面操作都运行在单个线程中。当你的程序需要执行某些耗时操作时，你不能在用户界面线程中执行这些工作，否则用户界面将会冻结。相反，应该启动另一个工作线程。
 
@@ -22798,33 +23677,39 @@ client.sendAsync(request, BodyHandler)
 
 ```java
 var open = new JButton("Open");
+
 open.addActionListener(event ->
-  { // 错误--耗时任务在 EDT（事件调度线程）上执行
+{
+    // 错误--耗时任务在 EDT（事件调度线程）上执行
     var in = new Scanner(file);
+
     while (in.hasNextLine())
     {
-      String line = in.nextLine();
-      ...
+        String line = in.nextLine();
+        ...
     }
-  });
+});
 ```
 
 相反，请在独立的线程中执行工作。
 
 ```java
 open.addActionListener(event ->
-  { // 正确--耗时任务在独立线程中执行
+{
+    // 正确--耗时任务在独立线程中执行
     Runnable task = () ->
     {
-      var in = new Scanner(file);
-      while (in.hasNextLine())
-      {
-        String line = in.nextLine();
-        ...
-      }
+        var in = new Scanner(file);
+
+        while (in.hasNextLine())
+        {
+            String line = in.nextLine();
+            ...
+        }
     };
+
     executor.execute(task);
-  });
+});
 ```
 
 然而，你不能直接从执行耗时任务的工作线程中更新用户界面。由于 Swing、JavaFX 和 Android 不是线程安全的，你不能从多个线程中操作用户界面元素，否则它们会有被损坏的风险。事实上，JavaFX 和 Android 会检查这一点，如果你尝试从 UI 线程以外的线程访问用户界面，它们会抛出异常。
@@ -22854,9 +23739,6 @@ EventQueue.invokeLater(() -> label.setText(perceived));
 
 假设工作会产生某种结果；因此，`SwingWorker<T, V>` 实现了 `Future`。`get` 方法会阻塞直到结果可用。
 
-
-
-
 在 `done` 方法中，文本区域将更新为完整文本，并禁用取消菜单项。
 
 注意在 Open 菜单项的事件监听器中是如何启动工作线程的。
@@ -22865,26 +23747,25 @@ EventQueue.invokeLater(() -> label.setText(perceived));
 
 # 列表 10.11 swingWorker/SwingWorkerTest.java
 
-```
-1 package swingWorker;
-2
-3 import java.awt.*;
-4 import java.io.*;
-5 import java.util.*;
-6 import java.util.List;
-7 import java.util.concurrent.*;
-8
-9 import javax.swing.*;
-10
-11 /**
-12 * 此程序演示了一个工作线程
-13 * @author Cay Horstmann
-14 * /
-15 * 6
-16 public class SwingWorkerTest
+```java
+package swingWorker;
+
+import java.awt.*;
+import java.io.*;
+import java.util.*;
+import java.util.List;
+import java.util.concurrent.*;
+
+import javax.swing.*;
+
+/**
+ * 此程序演示了一个工作线程
+ * @author Cay Horstmann
+ */
+public class SwingWorkerTest
 ```
 
-```
+```java
 {
     public static void main(String[] args) {
         EventQueue.invokeLaterLater(() -> {
@@ -22911,127 +23792,173 @@ class SwingWorkerFrame extends JFrame {
     private JMenuItem openItem;
     private JMenuItem cancelItem;
     private SwingWorker<String, StringBuilder> progress;
+
     public static final int TEXT_ROWS = 20;
     public static final int TEXT_COLUMNS = 60;
 
     public SwingWorkerFrame() {
-{
-  chooser = new JFileChooser();
-  chooser.setCurrentDirectory(new File(""));
-  textArea = new JTextArea(TEXT_ROWS, TEXT_COLUMNS);
-  add(new JScrollPane(textArea));
+        chooser = new JFileChooser();
+        chooser.setCurrentDirectory(new File(""));
+        textArea = new JTextArea(TEXT_ROWS, TEXT_COLUMNS);
+        add(new JScrollPane(textArea));
+        statusLine = new JLabel(" ");
+        add(statusLine, BorderLayout.SOUTH);
 
-  statusLine = new JLabel(" ");
-  add(statusLine, BorderLayout.SOUTH);
+        var menuBar = new JMenuBar();
+        setMenuBar(menuBar);
 
-  var menuBar = new JMenuBar();
-  setMenuBar(menuBar);
+        var menu = new JMenu("File");
+        menu.add(menu);
 
-  var menu = new JMenu("File");
-  menu.add(menu);
+        openItem = new JMenuItem("Open");
+        menu.add(openItem);
 
-  openItem = new JMenuItem("Open");
-  menu.add(openItem);
-  openItem.addActionListener(event -> {
-    // 显示文件选择对话框
-    int result = chooser.showOpen(this);
-    // 如果选择了文件，则将其设置为
-    if (result == JFileChooser.APPROVE_VALUE) {
-      textArea.setText("");
-      openItem.setEnabled(false);
-      var textReader = new TextReader(chooser.getSelectedFile());
-      textReader.execute();
-      cancelItem.setEnabled(true);
-    }
-  });
+        openItem.addActionListener(event -> {
+            // 显示文件选择对话框
+            int result = chooser.showOpen(this);
 
-  cancelItem = new JMenuItem("Cancel");
-  menu.add(cancelItem);
-  cancelItem.setEnabled(false);
-  cancelItem.addActionListener(event -> {
-    progress.cancel();
-  });
-}
+            // 如果选择了文件，则将其设置为
+            if (result == JFileChooser.APPROVE_VALUE) {
+                textArea.setText("");
+                openItem.setEnabled(false);
+                var textReader = new TextReader(chooser.getSelectedFile());
+                textReader.execute();
+                cancelItem.setEnabled(true);
+            }
+        });
 
-private record ProgressData(int lineNumber, String line) {}
+        cancelItem = new JMenuItem("Cancel");
+        menu.add(cancelItem);
+        cancelItem.setEnabled(false);
 
-private class TextReader extends SwingWorker<String, StringBuilder> {
-    private File file;
-    private StringBuilder text = new StringBuilder();
-    public TextReader(File file) {
-        this.file = file;
+        cancelItem.addActionListener(event -> {
+            progress.cancel();
+        });
     }
 
-    // 下一个方法在后台线程中执行
-    protected StringBuilder doInBackground() {
-{
-  int lineNumber = 0;
-  try (var in = new Scanner(new File(file.getPath()))) {
-    while (in.hasNextLine()) {
-      String line = in.nextLine();
-      lineNumber++;
-      text.append(line).append("\n");
-      var data = new ProgressData(lineNumber, line);
-      publish(data);
-      Thread.sleep(1); // 用于测试
-    }
-  } catch (Exception e) {
-    e.printStackTrace();
-  }
-  return text;
-}
+    private record ProgressData(int lineNumber, String line) {}
 
-// 下列方法在事件分发线程中执行
-protected void process(List<ProgressData> data) {
-{
-  if (isCancelled()) return;
-  var builder = new StringBuilder();
-  for (ProgressData d : data) {
-    builder.append(d.lineNumber()).append(": ").append(d.line()).append("\n");
-  }
-  textArea.append(builder.toString());
-  statusLine.setText("Processing line " + data.get(data.size()-1).lineNumber());
-}
+    private class TextReader extends SwingWorker<String, StringBuilder> {
+        private File file;
+        private StringBuilder text = new StringBuilder();
 
-protected void done() {
-    try {
-        StringBuilder result = get();
-        textArea.setText(result.toString());
-        statusLine.setText("Done");
-    } catch (InterruptedException ex) {
-    } catch (CancellationException ex) {
-        textArea.setText("");
-        statusLine.setText("Cancelled");
-    } catch (ExecutionException ex) {
-        statusLine.setText("Error: " + ex.getCause());
+        public TextReader(File file) {
+            this.file = file;
+        }
+
+        // 下一个方法在后台线程中执行
+        protected StringBuilder doInBackground() {
+            int lineNumber = 0;
+
+            try (var in = new Scanner(new File(file.getPath()))) {
+                while (in.hasNextLine()) {
+                    String line = in.nextLine();
+                    lineNumber++;
+                    text.append(line).append("\n");
+
+                    var data = new ProgressData(lineNumber, line);
+                    publish(data);
+
+                    Thread.sleep(1); // 用于测试
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            return text;
+        }
+
+        // 下列方法在事件分发线程中执行
+        protected void process(List<ProgressData> data) {
+            if (isCancelled()) return;
+
+            var builder = new StringBuilder();
+
+            for (ProgressData d : data) {
+                builder.append(d.lineNumber())
+                    .append(": ")
+                    .append(d.line())
+                    .append("\n");
+            }
+
+            textArea.append(builder.toString());
+        }
     }
-    cancelItem.setEnabled(false);
-    openItem.setEnabled(true);
-}
-}
 }
 ```
 
-## javax.swing.SwingWorker<T, V> 
 
-- `* abstract T doInBackground()` 
+
+```java
+statusLine.setText("Processing line " + data.get(data.size()-1).lineNumber());
+
+}
+
+protected void done() {
+
+    try {
+
+        StringBuilder result = get();
+
+        textArea.setText(result.toString());
+
+        statusLine.setText("Done");
+
+    } catch (InterruptedException ex) {
+
+    } catch (CancellationException ex) {
+
+        textArea.setText("");
+
+        statusLine.setText("Cancelled");
+
+    } catch (ExecutionException ex) {
+
+        statusLine.setText("Error: " + ex.getCause());
+
+    }
+
+    cancelItem.setEnabled(false);
+
+    openItem.setEnabled(true);
+
+}
+
+}
+
+}
+
+```
+
+## `javax.swing.SwingWorker<T, V>`
+
+- `abstract T doInBackground()`
+
   是需要重写的方法，用于执行后台任务并返回工作结果。
-- `* void process(List<V> data)` 
+
+- `void process(List<V> data)`
+
   是需要重写的方法，用于在事件分发线程中处理中间的进度数据。
-- `* void publish(V... data)` 
-  将中间进度数据转发到事件分发线程。在 `doInBackground` 中调用此方法。
-- `* void execute()` 
+
+- `void publish(V... data)`
+
+  将中间进度数据转发到事件分发线程。在`doInBackground`中调用此方法。
+
+- `void execute()`
+
   调度此工作线程在工作线程上执行。
-- `* State getState()` 
-  获取此工作线程的状态——PENDING、STARTED 或 DONE 之一。
 
-## 10.8 进程 (Processes)
+- `State getState()`
 
-到目前为止，你已经看到了如何在单独线程中执行 Java 代码。有时，你需要执行另一个程序。为此，请使用 ProcessBuilder 和 Process 类。
+  获取此工作线程的状态——`PENDING`、`STARTED`或`DONE`之一。
 
-### 10.8.1 构建进程 (Building a Process)
+## 10.8 进程（Processes）
 
-通过带有命令及其参数的 ProcessBuilder 开始。ProcessBuilder 类允许你配置标准输入、输出和错误流。
+到目前为止，你已经看到了如何在单独线程中执行 Java 代码。有时，你需要执行另一个程序。为此，请使用`ProcessBuilder`和`Process`类。
+
+### 10.8.1 构建进程（Building a Process）
+
+通过带有命令及其参数的`ProcessBuilder`开始。`ProcessBuilder`类允许你配置标准输入、输出和错误流。
 
 ```java
 ProcessBuilder pb = new ProcessBuilder("ls", "-l");
@@ -23049,15 +23976,15 @@ pb.directory(new File("/home/user"));
 pb.inheritIO();
 ```
 
-如果你只想继承某些流，将 `Redirect.INHERIT` 传递给 `redirectInput`、`redirectOutput` 或 `redirectError` 方法。例如：
+如果你只想继承某些流，将`Redirect.INHERIT`传递给`redirectInput`、`redirectOutput`或`redirectError`方法。例如：
 
 ```java
 pb.redirectOutput(Redirect.INHERIT);
 ```
 
-### 10.8.2 将流重定向到文件或管道 (Redirecting Streams to Files or Pipes)
+### 10.8.2 将流重定向到文件或管道（Redirecting Streams to Files or Pipes）
 
-通过提供 `File` 对象将进程流重定向到文件：
+通过提供`File`对象将进程流重定向到文件：
 
 ```java
 pb.redirectInput(inputFile)
@@ -23077,9 +24004,9 @@ pb.redirectOutput(Redirect.APPEND);
 pb.redirectErrorStream(true);
 ```
 
-如果你这样做了，就不能再在 ProcessBuilder 上调用 `redirectError` 或在进程上调用 `getErrorStream`。
+如果你这样做了，就不能再在`ProcessBuilder`上调用`redirectError`或在进程上调用`getErrorStream`。
 
-如果你想将一个进程的输出管道到另一个进程的输入（类似于 shell 中的 `|` 运算符），请使用 `startPipeline` 方法。传递 process builder 列表并从最后一个进程读取结果。这里是一个示例，列出目录树唯一的扩展名：
+如果你想将一个进程的输出管道到另一个进程的输入（类似于 Shell 中的`|`运算符），请使用`startPipeline`方法。传递`ProcessBuilder`列表并从最后一个进程读取结果。这里是一个示例，列出目录树唯一的扩展名：
 
 ```java
 Process p = pb.start();
@@ -23089,40 +24016,42 @@ Process p = pb.start();
 
 ```java
 OutputStream in = p.getOutputStream();
+
 InputStream out = p.getInputStream();
+
 InputStream err = p.getErrorStream();
 ```
 
-你可能还想修改进程的环境变量。在这里，链式调用中断了。你需要获取构建器的环境（由 JVM 初始化），运行 JVM 的进程的环境变量，然后插入或删除项：
+你可能还想修改进程的环境变量。在这里，链式调用中断了。你需要获取构建器的环境（由 JVM 初始化）、运行 JVM 的进程的环境变量，然后插入或删除项：
 
 ```java
 Map<String, String> env = pb.environment();
+
 env.put("LANG", "fr_FR");
+
 env.remove("JAVA_HOME");
+
 Process p = pb.start();
 ```
 
-
-
-
-
 ```java
 Process last = processes.getLast();
+
 var result = new String(last.getInputStream()).readAll
 ```
 
 当然，这个特定任务通过在 Java 中进行目录遍历而不是运行四个进程会更高效。第二卷的第 2 章将向你展示如何实现。
 
-## 10.8.2. 运行进程
+### 10.8.3 运行进程
 
-在配置好 builder之后，调用其 `start` 方法来启动进程。如果你将输入、输出和错误流配置为管道，现在就可以向输入流写入内容，并读取输出和错误流。例如：
+在配置好`builder`之后，调用其`start`方法来启动进程。如果你将输入、输出和错误流配置为管道，现在就可以向输入流写入内容，并读取输出和错误流。例如：
 
 ```java
 Process process = new ProcessBuilder("/bin/ls",
     .directory(Path.of("/tmp")).toFile())
     .start();
-try (var in = new Scanner(process.getInputStream()))
-{
+
+try (var in = new Scanner(process.getInputStream())) {
     while (in.hasNextLine())
         System.out.println(in.nextLine());
 }
@@ -23140,8 +24069,8 @@ int result = process.waitFor();
 
 ```java
 long delay = . . . ;
-if (process.waitFor(delay, TimeUnit.SECONDS))
-{
+
+if (process.waitFor(delay, TimeUnit.SECONDS)) {
     int result = process.exitValue();
     ...
 }
@@ -23150,173 +24079,226 @@ else {
 }
 ```
 
-第一次调用 `waitFor` 返回进程的退出值（按照约定，0 表示成功，非零表示错误代码）。第二次调用如果进程没有超时，则返回 `true`。然后，你需要通过调用 `exitValue` 方法来获取退出值。
+第一次调用`waitFor`返回进程的退出值（按照约定，0 表示成功，非零表示错误代码）。第二次调用如果进程没有超时，则返回`true`。然后，你需要通过调用`exitValue`方法来获取退出值。
 
-与其等待进程完成，你也可以让它保持运行，并偶尔调用 `isAlive` 来检查它是否仍然存活。要杀死进程，请调用 `destroy` 或 `destroyForcibly`。这些调用之间的区别取决于平台。在 UNIX 上，前者使用 `SIGTERM` 终止进程，后者使用 `SIGKILL` 终止。（如果 `destroy` 方法可以正常终止进程，则 `supportsNormalTermination` 方法将返回 `true`。）
+与其等待进程完成，你也可以让它保持运行，并偶尔调用`isAlive`来检查它是否仍然存活。要杀死进程，请调用`destroy`或`destroyForcibly`。这些调用之间的区别取决于平台。在 UNIX 上，前者使用`SIGTERM`终止进程，后者使用`SIGKILL`终止。（如果`destroy`方法可以正常终止进程，则`supportsNormalTermination`方法将返回`true`。）
 
-最后，你可以在进程完成时接收一个异步通知。调用 `process.onExit()` 会产生一个 `CompletableFuture<Process>`，你可以用它来调度任何操作。
+最后，你可以在进程完成时接收一个异步通知。调用`process.onExit()`会产生一个`CompletableFuture<Process>`，你可以用它来调度任何操作。
 
 ```java
 process.onExit().thenAccept(
- p -> System.out.println("Exit value: " + p.exit());
+    p -> System.out.println("Exit value: " + p.exit());
 ```
 
-> **注意：** 从 Java 21 开始，名为 `java.lang.ProcessBuilder` 的日志器会在 DEBUG 和 TRACE 日志级别记录由 `Runtime.exec` 和 `ProcessBuilder` 执行的进程。命令参数仅在 TRACE 级别下包含。这两个级别都会记录进程 ID、目录、命令和堆栈跟踪。
+> **注意：** 从 Java 21 开始，名为`java.lang.ProcessBuilder`的日志器会在 DEBUG 和 TRACE 日志级别记录由`Runtime.exec`和`ProcessBuilder`执行的进程。命令参数仅在 TRACE 级别下包含。这两个级别都会记录进程 ID、目录、命令和堆栈跟踪。
 
-## 10.8.3. 进程句柄 (Process Handles)
+## 10.8.4 进程句柄（Process Handles）
 
-要获取有关程序启动的进程或机器上当前运行的任何其他进程的信息，请使用 `ProcessHandle` 接口。你可以通过四种方式获取 `ProcessHandle`：
+要获取有关程序启动的进程或机器上当前运行的任何其他进程的信息，请使用`ProcessHandle`接口。你可以通过四种方式获取`ProcessHandle`：
 
-- 1. 给定 Process 对象 `p`，`p.toHandle()` 产生其 `ProcessHandle`。
-- 2. 给定一个操作系统进程 ID，`ProcessHandle.of(id)` 产生该进程的句柄。
-- 3. `ProcessHandle.current()` 是运行此 Java 虚拟机的进程的句柄。
-- 4. `ProcessHandle.allProcesses()` 产生一个当前进程可见的所有操作系统进程的 `Stream<ProcessHandle>`。
+1. 给定`Process`对象`p`，`p.toHandle()`产生其`ProcessHandle`。
+2. 给定一个操作系统进程 ID，`ProcessHandle.of(id)`产生该进程的句柄。
+3. `ProcessHandle.current()`是运行此 Java 虚拟机的进程的句柄。
+4. `ProcessHandle.allProcesses()`产生一个当前进程可见的所有操作系统进程的`Stream<ProcessHandle>`。
 
 给定一个进程句柄，你可以获取其进程 ID、父进程、子进程及其后代进程：
 
 ```java
 long pid = handle.pid();
+
 Optional<ProcessHandle> parent = handle.parent();
+
 Stream<ProcessHandle> children = handle.children();
+
 Stream<ProcessHandle> descendants = handle.descendants();
 ```
 
-> **注意：** 由 `allProcesses`、`children` 和 `descendants` 方法返回的 `Stream<ProcessHandle>` 只是只是时刻的快照。在你看到它们时，流中的任何进程可能已经终止，而其他进程可能已经启动但并不在流中。
+> **注意：** 由`allProcesses`、`children`和`descendants`方法返回的`Stream<ProcessHandle>`只是时刻的快照。在你看到它们时，流中的任何进程可能已经终止，而其他进程可能已经启动但并不在流中。
 
-`info` 方法产生一个 `ProcessHandle.Info` 对象，其中包含获取进程信息的方法。
+`info`方法产生一个`ProcessHandle.Info`对象，其中包含获取进程信息的方法。
 
 ```java
 Optional<String[]> arguments()
+
 Optional<String> command()
+
 Optional<String> commandLine()
+
 Optional<Instant> startInstant()
+
 Optional<Duration> totalCpuDuration()
+
 Optional<String> user()
 ```
 
-所有这些方法都返回 `Optional` 值，因为特定的操作系统可能无法报告这些信息。
+所有这些方法都返回`Optional`值，因为特定的操作系统可能无法报告这些信息。
 
-为了监控或强制终止进程，`ProcessHandle` 接口拥有与 `Process` 类相同的 `isAlive`、`supportsNormalTermination`、`destroy`、`destroyForcibly` 和 `onExit` 方法。然而，没有等于 `waitFor` 方法。
+为了监控或强制终止进程，`ProcessHandle`接口拥有与`Process`类相同的`isAlive`、`supportsNormalTermination`、`destroy`、`destroyForcibly`和`onExit`方法。然而，没有等于`waitFor`方法。
 
 列表 10.12 显示了如何启动进程并读取其输出，以及如何列出所有 Java 进程。
 
-## 列表10.12 process/ProcessDemo.java
+## 列表 10.12 `process/ProcessDemo.java`
 
 ```java
 1 package process;
+
 2
+
 3 import java.io.IOException;
+
 4 import java.nio.file.Path;
+
 5 import java.util.Scanner;
+
 6
+
 7 /*
 8 * 此程序演示了运行一个进程
 9 * @version 1.1 2023-10-11
 10 * @author Caymann
 11 */
+
 12 public class ProcessDemo {
+
 13 public static void main(String[] args) throws IOException {
+
 14     Process p = new ProcessBuilder("/bin/ls",
+
 15         .directory(Path.of("/tmp")).toFile())
+
 16         .start();
+
 17     try (var in = new Scanner(p.getInputStream())) {
+
 18         while (in.hasNextLine()) {
+
 19             System.out.println(in.nextLine());
+
 20         }
+
 21     }
+
 22     System.out.println("pid: " + p.toHandle().pid());
+
 23     int result = p.waitFor();
+
 24     System.out.println("Exit value: " + result);
+
 25
+
 26     ProcessHandle.allProcesses()
+
 27         .map(ProcessHandle::info)
+
 28         .filter(info -> info.command().isPresent())
+
 29         .forEach(info -> System.out.println(info.command().get()));
+
 30 }
 ```
 
-```java
-java.lang.ProcessBuilder 5.0
+### `java.lang.ProcessBuilder` 5.0
 
-   * ProcessBuilder(String... command)
-   * ProcessBuilder(List<String> command)
-使用给定的命令和参数构建一个进程 builder。
-   * directory(File directory)
-设置进程的工作工作目录。
-   * inheritIO()
-使进程使用虚拟机的标准输入、输出和错误。
-   * redirectStream(boolean redirectStream)
-如果 redirectStream 为 true，进程的标准错误将合并到标准输出中。
-   * redirectInput(File file)
-   * redirectOutput(File file)
-   * redirectError(File file)
-将进程的标准输入、输出或错误重定向到指定的文件。
+- `ProcessBuilder(String... command)`
+- `ProcessBuilder(List<String> command)`
 
-   * redirectInput(Redirect source) 
-   * redirectOutput(Redirect destination) 
-   * redirectError(Redirect destination)
+  使用给定的命令和参数构建一个进程`builder`。
 
-重定向进程的标准输入、输出或错误，其中 destination 是以下之一：
+- `directory(File directory)`
 
-   - Redirect.PIPE—默认行为，通过 Process 对象访问
-   - Redirect.INHERIT—来自虚拟机的流
-   - Redirect.DISCARD
-   - Redirect.from(file)
-   - Redirect.to(file)
-   - Redirect.appendTo(file)
-   * environment() 产生一个可变 map，用于设置进程的环境变量。
-   * start() 启动进程并产生其 Process 对象。
+  设置进程的工作目录。
 
-   * static startPipeline(List<ProcessBuilder> builders) 9 启动进程流水线，将每个进程的标准输出连接到下一个进程的标准输入 java.lang.Process 1.0
+- `inheritIO()`
 
-   * abstract OutputStream getOutputStream()
-获取一个用于写入进程输入流的流。
-   * abstract InputStream getgetInputStream()
-   * abstract InputStream getErrorStream()
-获取用于读取进程输出或错误流的输入流。
-   * abstract int waitFor()
-等待进程完成并产生退出值。
-   * boolean waitFor(long timeout, TimeUnit unit) 8 等待进程完成但不超过给定的超时。如果进程退出则返回 `true`。
-   * abstract int exitValue()
-返回进程的退出值。按照约定，非零退出值表示错误。
-   * boolean isAlive() 8
-检查此进程是否仍然存活。
-```
+  使进程使用虚拟机的标准输入、输出和错误。
+
+- `redirectStream(boolean redirectStream)`
+
+  如果`redirectStream`为`true`，进程的标准错误将合并到标准输出中。
+
+- `redirectInput(File file)`
+- `redirectOutput(File file)`
+- `redirectError(File file)`
+
+  将进程的标准输入、输出或错误重定向到指定的文件。
+
+- `redirectInput(Redirect source)`
+- `redirectOutput(Redirect destination)`
+- `redirectError(Redirect destination)`
+
+  重定向进程的标准输入、输出或错误，其中`destination`是以下之一：
+
+  - `Redirect.PIPE`—默认行为，通过`Process`对象访问。
+  - `Redirect.INHERIT`—来自虚拟机的流。
+  - `Redirect.DISCARD`
+  - `Redirect.from(file)`
+  - `Redirect.to(file)`
+  - `Redirect.appendTo(file)`
+
+- `environment()`
+
+  产生一个可变 map，用于设置进程的环境变量。
+
+- `start()`
+
+  启动进程并产生其`Process`对象。
+
+- `static startPipeline(List<ProcessBuilder> builders)` 9
+
+  启动进程流水线，将每个进程的标准输出连接到下一个进程的标准输入。
+
+### `java.lang.Process` 1.0
+
+- `abstract OutputStream getOutputStream()`
+
+  获取一个用于写入进程输入流的流。
+
+- `abstract InputStream getgetInputStream()`
+- `abstract InputStream getErrorStream()`
+
+  获取用于读取进程输出或错误流的输入流。
+
+- `abstract int waitFor()`
+
+  等待进程完成并产生退出值。
+
+- `boolean waitFor(long timeout, TimeUnit unit)` 8
+
+  等待进程完成但不超过给定的超时。如果进程退出则返回`true`。
+
+- `abstract int exitValue()`
+
+  返回进程的退出值。按照约定，非零退出值表示错误。
+
+- `boolean isAlive()` 8
+
+  检查此进程是否仍然存活。
+
+- `abstract void destroy()`
+
+  终止此进程，可以通过正常或强制的方式。
+
+- `Process destroyForcibly()` 8
+
+  终止此进程，可以通过正常或强制的方式。
+
+- `boolean supportsNormalTermination()` 9
+
+  检查此进程是否可以正常终止或必须强制销毁。
+
+- `ProcessHandle toHandle()` 9
+
+  返回一个描述此进程的`ProcessHandle`。
+
+- `CompletableFuture<Process> onExit()` 9
+
+  返回一个在进程退出时执行的`CompletableFuture`。
+
+### `java.lang.ProcessHandle` 9
 
 
 
-
-
-```java
-abstract void destroy()
-```
-
-```java
-Process destroyForcibly() 8
-终止此进程，可以通过正常或强制的方式。
-```
-
-```java
-boolean supportsNormalTermination() 9
-检查此进程是否可以正常终止
-或必须强制销毁。
-```
-
-```java
-ProcessHandle toHandle() 9
-返回一个描述此进程的 ProcessHandle。
-```
-
-```java
-CompletableFuture<Process> onExit() 9
-返回一个在进程退出时执行的 CompletableFuture。
-```
-
-java.lang.ProcessHandle 9
-
-```java
-static Optional<ProcessHandle> of(long pid)
-```
+`static Optional<ProcessHandle> of(long pid)`
 
 ```java
 static Stream<ProcessHandle> allProcesses()
@@ -23326,9 +24308,7 @@ static Stream<ProcessHandle> allProcesses()
 static ProcessHandle current()
 ```
 
-返回给定
-PID 进程的句柄、所有进程的句柄，或者虚拟
-机器的进程的句柄。
+返回给定`PID`进程的句柄、所有进程的句柄，或者虚拟机的进程的句柄。
 
 ```java
 Stream<ProcessHandle> children()
@@ -23340,19 +24320,19 @@ Stream<ProcessHandle> descendants()
 
 返回此进程的子进程或后代进程的进程句柄。
 
-- - long pid()
-  返回此进程的 PID。
-- ProcessHandle.Info info()
+- `long pid()`  
+  返回此进程的`PID`。
+- `ProcessHandle.Info info()`  
   返回此进程的详细信息。
 
-java.lang.ProcessHandle.Info 9
+## `java.lang.ProcessHandle.Info` 9
 
-- - Optional<String[]> arguments()
-- Optional<String> command()
-- Optional<String> commandLine()
-- Optional<Instant> startInstant()
-- Optional<Duration> totalCpuDuration()
-- Optional<String> user()
+- `Optional<String[]> arguments()`
+- `Optional<String> command()`
+- `Optional<String> commandLine()`
+- `Optional<Instant> startInstant()`
+- `Optional<Duration> totalCpuDuration()`
+- `Optional<String> user()`  
   如果可用，则返回给定的详细信息。
 
 # 第 11 章 注解
@@ -23363,13 +24343,13 @@ java.lang.ProcessHandle.Info 9
 
 要从注解中获益，你需要先选择一个处理工具，并使用你的处理工具理解的注解，然后才能将该工具应用于你的代码。
 
-注解有广泛的用途。例如，JUnit（可在 https://junit.org 获取）使用注解来标记执行测试的方法，并指定如何运行测试。Jakarta Persistence（https://jakarta.ee/specifications/persistence/）使用注解来定义类与数据库表之间的映射，以便对象可以自动持久化，而无需开发者编写 SQL 查询。
+注解有广泛的用途。例如，JUnit（可在<https://junit.org>获取）使用注解来标记执行测试的方法，并指定如何运行测试。Jakarta Persistence（<https://jakarta.ee/specifications/persistence/>）使用注解来定义类与数据库表之间的映射，以便对象可以自动持久化，而无需开发者编写 SQL 查询。
 
 在本章中，你将学习注解语法的细节、如何定义你自己的注解，以及如何编写注解处理器。
 
-> **注意：** 有关注解的引人用法，请查看 JCommander (https://jcommander.org) 和 picocli (https://picocli.info)。这些库使用注解来处理命令行参数。
+> **注意：** 有关注解的引人用法，请查看 JCommander（<https://jcommander.org>）和 picocli（<https://picocli.info>）。这些库使用注解来处理命令行参数。
 
-## 11.1. 使用注解
+## 11.1 使用注解
 
 这是一个简单的注解示例：
 
@@ -23381,11 +24361,11 @@ class CacheTest
 }
 ```
 
-@Test 注解标注了 `checkRandomInsertions` 方法。在 Java 中，注解的使用类似于修饰符（如 `public` 或 `static`）。每个注解的之前都有一个 @ 符号。
+`@Test`注解标注了`checkRandomInsertions`方法。在 Java 中，注解的使用类似于修饰符（如`public`或`static`）。每个注解的之前都有一个`@`符号。
 
-@Test 注解本身本身什么都不做。它需要一个工具才能发挥作用。当运行 JUnit 时，它会找到用 @Test 注解的方法并调用它们。
+`@Test`注解本身本身什么都不做。它需要一个工具才能发挥作用。当运行 JUnit 时，它会找到用`@Test`注解的方法并调用它们。
 
-## 11.1.1. 注解元素
+### 11.1.1 注解元素
 
 注解可以包含称为“元素”（elements）的键值对，例如：
 
@@ -23397,14 +24377,14 @@ class CacheTest
 
 注解元素是以下内容之一：
 
-- * 一个原始类型值
-- 一个 String
-- 一个 Class 对象
+- 一个原始类型值
+- 一个`String`
+- 一个`Class`对象
 - 一个枚举的实例
 - 一个注解
 - 前述元素的数组（但不是数组的数组）
 
-为了说明这些可能性，这里有一个 @BugReport 注解，它并非来自实际库：
+为了说明这些可能性，这里有一个`@BugReport`注解，它并非来自实际库：
 
 ```java
 @BugReport(showStopper=true,
@@ -23417,7 +24397,7 @@ reportedBy={"Harry", "Fred"})
 
 **注意：** 由于注解是由编译器处理的，因此所有元素值必须是编译时常量。
 
-> **警告：** 注解元素的值永远不能为 `null`。
+> **警告：** 注解元素的值永远不能为`null`。
 
 如果一个元素值是一个只有一个单个元素的数组，你可以省略大括号：
 
@@ -23425,13 +24405,13 @@ reportedBy={"Harry", "Fred"})
 @BugReport(reportedBy="Harry") // 与 report 相同
 ```
 
-元素可以有默认值。例如，JUnit 的 @Repeated 注解的 failureThreshold 元素默认值为 `Integer.MAX_VALUE`。因此，注解 @RepeatedTest(value=10) 等同于 @RepeatedTest(value=10, failureThreshold=Integer.MAX_VALUE)。
+元素可以有默认值。例如，JUnit 的`@Repeated`注解的`failureThreshold`元素默认值为`Integer.MAX_VALUE`。因此，注解`@RepeatedTest(value=10)`等同于`@RepeatedTest(value=10, failureThreshold=Integer.MAX_VALUE)`。
 
 在运行此测试时，无论失败多少次，它都会重复十次。
 
-如果元素名称是 `value` 且是你指定的唯一元素，你可以省略 `value=`。例如，@Repeated(10) 等同于 @RepeatedTest(value=10)。
+如果元素名称是`value`且是你指定的唯一元素，你可以省略`value=`。例如，`@Repeated(10)`等同于`@RepeatedTest(value=10)`。
 
-## 11.1.2. 多重和重复注解
+### 11.1.2 多重和重复注解
 
 一个项目可以有多个注解：
 
@@ -23449,7 +24429,7 @@ void testHello()
 void testHello()
 ```
 
-## 11.1.3. 标注声明
+### 11.1.3 标注声明
 
 到目前为止，我们看到注解应用于方法声明。在许多其他地方可以使用注解。它们分为两类：声明和类型使用。声明注解可以出现在：
 
@@ -23457,7 +24437,7 @@ void testHello()
 - 方法
 - 构造器
 - 字段（包括常量）
-- 本地变量（包括在 try-with-resources 语句中的）
+- 本地变量（包括在`try-with-resources`语句中的）
 - 参数
 - 类型参数
 - 包
@@ -23474,13 +24454,13 @@ void testHello()
 @SuppressWarnings("unchecked") List<User>
 ```
 
-等待，在：
+对于方法参数，将注解放在参数类型之前：
 
 ```java
 public User getUser(@NonNull String)
 ```
 
-这对于 record 组件也适用：
+这对于`record`组件也适用：
 
 ```java
 public record Rectangle(@NonNull String)
@@ -23499,103 +24479,103 @@ public class Cache<@NonNull V> { . }
  * 包级文档
  */
 @Generated("horstmann.generator")
-packagehorstmann.generated;
+package horstmann.generated;
 ```
 
-注意注解的 import 语句在包之后。
+注意注解的`import`语句在包之后。
 
-> 注意：本地变量和包的注解在类编译时会被丢弃。因此，它们只能在源码级别被处理。
+> **注意：** 本地变量和包的注解在类编译时会被丢弃。因此，它们只能在源码级别被处理。
 
-## 11.1.4. 标注类型使用
+### 11.1.4 标注类型使用
 
-声明注解提供了有关被声明项目的某些信息。例如，在声明中
+声明注解提供了有关被声明项目的某些信息。例如，在声明中：
 
 ```java
 public User(@NonNull String)
 ```
 
-断言 userId 参数不为空。
+断言`userId`参数不为空。
 
-> **注意：** @NonNull 和 @Localized 注解是 Checker Framework (https://types.washington.edu/checker-framework) 的。通过该框架，你可以在程序中包含断言，例如参数不为空或 String 已经本地化——即适应用户的本地语言。静态分析工具会检查给定代码体中的断言是否有效。
+> **注意：** `@NonNull`和`@Localized`注解是 Checker Framework（<https://types.washington.edu/checker-framework>）的。通过该框架，你可以在程序中包含断言，例如参数不为空或`String`已经本地化——即适应用户的本地语言。静态分析工具会检查给定代码体中的断言是否有效。
 
-现在，假设我们有一个类型为 List<String> 的参数，并且想表示所有的字符串都不空。这就是类型使用注解大显身的时候。将注解放在类型参数之前：List<@NonNull String> 类型使用注解出现在以下位置：
+现在，假设我们有一个类型为`List<String>`的参数，并且想表示所有的字符串都不空。这就是类型使用注解大显身的时候。将注解放在类型参数之前：`List<@NonNull String>`。
 
-- 泛型类型参数：List<@NonNull String>, Comparator.<@NonNull String> reverseOrder()。
-- 数组的任何位置：@NonNull String[] words (words[i][j] 不为空), String @NonNull [][] words (words 不为空), String[] @NonNull [] words (words[i] 不为空)。
-- 超类和接口：class Warning extends @Localized Message。
-- 构造函数调用：new @Localized String(.)。
-- 嵌套类型：Map.@Localized Entry。
-- 强制转换和 instanceof 检查：(@Localized String) text, if (text instanceof @Localized String)。（注解仅供外部工具使用。对强制转换或 instanceof 检查的行为没有影响）。
-- 异常规范：public String read() throws @Localized IOException。
-- 通配符类型和类型边界：List<@Localized extends Message>, List<? extends @Localized Message>
-- 方法和构造器引用：@Localized Message::getText。
+类型使用注解出现在以下位置：
 
-
-
-
+- 泛型类型参数：`List<@NonNull String>`、`Comparator.<@NonNull String> reverseOrder()`。
+- 数组的任何位置：`@NonNull String[] words`（`words[i][j]`不为空）、`String @NonNull [][] words`（`words`不为空）、`String[] @NonNull [] words`（`words[i]`不为空）。
+- 超类和接口：`class Warning extends @Localized Message`。
+- 构造函数调用：`new @Localized String(.)`。
+- 嵌套类型：`Map.@Localized Entry`。
+- 强制转换和`instanceof`检查：`(@Localized String) text`、`if (text instanceof @Localized String)`。（注解仅供外部工具使用。对强制转换或`instanceof`检查的行为没有影响）。
+- 异常规范：`public String read() throws @Localized IOException`。
+- 通配符类型和类型边界：`List<@Localized extends Message>`、`List<? extends @Localized Message>`。
+- 方法和构造器引用：`@Localized Message::getText`。
 
 有几种类型位置是无法注解的：
 
-```
+```java
 @NonNull String.class // Error--无法注解
+
 import java.lang.@NonNull String; // Error--无法注解
 ```
 
-你可以将注解放在 `private` 和 `static` 等其他修饰符之前或之后（不是强制），以便将类型使用注解放在其他修饰符之后，并将声明注解放在其他修饰符之前。例如：
+你可以将注解放在`private`和`static`等其他修饰符之前或之后（不是强制），以便将类型使用注解放在其他修饰符之后，并将声明注解放在其他修饰符之前。例如：
 
-```
+```java
 private @NonNull String text; // 注解 text
+
 @Id private String userId; // 注解变量 userId
 ```
 
-**注意：** 正如你将在第 11.2 节中看到的，注解作者需要指定特定注解出现的位置。如果一个注解既允许用于变量也允许用于类型使用，那么当它被用于变量声明时，变量和类型使用都会被注解。例如，考虑以下情况：
+**注意：** 正如你将在第 11.2 节中看到的，注解作者需要指定特定注解出现的位置。如果一个注解既允许用于变量也用于类型使用，那么当它被用于变量声明时，变量和类型使用都会被注解。例如，考虑以下情况：
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1512_0.png)
 
-```
+```java
 public User getUser(@NonNull String use
 ```
 
-## ## 11.1.5. 让接收者显式化 (Making Receivers Explicit)
+### 11.1.5 让接收者显式化（Making Receivers Explicit）
 
-假设你想对未被方法修改的参数进行注解。
+假设你想对未被方法修改的参数进行注解：
 
-```
+```java
 public class Point
 {
     public boolean equals(@Nullable Object other)
 }
 ```
 
-那么，处理此注解的工具在看到调用时
+那么，处理此注解的工具在看到调用时：
 
-```
+```java
 p.equals(q)
 ```
 
-会推断出 `q` 没有被改变。
+会推断出`q`没有被改变。
 
-但 `p` 呢？
+但`p`呢？
 
-当方法被调用时，接收者变量 `this` 被绑定到 `p`，但它从未被声明，因此你无法对其进行注解。
+当方法被调用时，接收者变量`this`被绑定到`p`，但它从未被声明，因此你无法对其进行注解。
 
 实际上，你可以通过很少使用的语法变体来声明它，以便于添加注解：
 
-```
+```java
 public class Point {
     public boolean equals(@NonNull Point this, @N
 }
 ```
 
-第一个参数被称为接收者参数（receiver parameter）。它必须命名为 `this`。它的类型是正在构造的类。
+第一个参数被称为接收者参数（receiver parameter）。它必须命名为`this`。它的类型是正在构造的类。
 
-> 注意：你只能为方法提供接收者参数，不能为构造函数提供。从概念上讲，构造函数中的 `this` 引用在构造完成之前并不是给定类型的对象。相反，放置在构造函数上的注解描述的是构造对象的属性。
+> **注意：** 你只能为方法提供接收者参数，不能为构造函数提供。从概念上讲，构造函数中的`this`引用在构造完成之前并不是给定类型的对象。相反，放置在构造函数上的注解描述的是构造对象的属性。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1514_0.png)
 
 另一个隐藏参数被传递给内部类的构造函数，即对外部类对象的引用。你也可以让这个参数显式化：
 
-```
+```java
 static class Sequence
 {
   private int from;
@@ -23607,6 +24587,7 @@ static class Sequence
     public Iterator(@NonNull Sequence Sequence) {
       this.current = Sequence.this.from;
     }
+
     ..
   }
 }
@@ -23614,11 +24595,11 @@ static class Sequence
 
 该参数的命名必须与你引用它时一致（`EnclosingClass.this`），它的类型是外部类。
 
-## ## 11.2 定义注解
+### 11.2 定义注解
 
-每个注解都必须由注解接口声明，使用 `@interface` 语法。接口的方法对应于注解的元素。例如，JUnit Test 注解由以下接口定义：
+每个注解都必须由注解接口声明，使用`@interface`语法。接口的方法对应于注解的元素。例如，JUnit Test 注解由以下接口定义：
 
-```
+```java
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface RepeatedTest
@@ -23628,48 +24609,48 @@ public @interface RepeatedTest
 }
 ```
 
-`@interface` 创建了一个真正的 Java 接口。处理注解的工具接收到实现该注解接口的对象。当 JUnit 测试运行器获得实现 `RepeatedTest` 的对象时，它只需调用 `failureThreshold` 方法来获取特定 `RepeatedTest` 注解的失败阈值。
+`@interface`创建了一个真正的 Java 接口。处理注解的工具接收到实现该注解接口的对象。当 JUnit 测试运行器获得实现`RepeatedTest`的对象时，它只需调用`failureThreshold`方法来获取特定`RepeatedTest`注解的失败阈值。
 
-注解接口中的元素声明实际上是方法声明。注解接口的方法没有参数，没有 `throws` 子句，并且不能是泛型的。
+注解接口中的元素声明实际上是方法声明。注解接口的方法没有参数，没有`throws`子句，并且不能是泛型的。
 
-`@Target` 和 `@Retention` 注解是元注解（meta-annotations）。它们注解 `@RepeatedTest` 注解，指示了注解可以出现以及可以被访问的位置。
+`@Target`和`@Retention`注解是元注解（meta-annotations）。它们注解`@RepeatedTest`注解，指示了注解可以出现以及可以被访问的位置。
 
-`@Target` 元注解的值是一个 `ElementType` 对象的数组，指定了注解可以应用的项。你可以指定任意数量的元素类型，并括在大括号中。例如：
+`@Target`元注解的值是一个`ElementType`对象的数组，指定了注解可以应用的项。你可以指定任意数量的元素类型，并括在大括号中。例如：
 
-```
+```java
 @Target({ElementType.FIELD, ElementType.RECORD_COMPONENT})
 public @interface ToString
 ```
 
-表 11.1 显示了所有可能的目标。编译器检查你只在允许的地方使用注解。例如，如果对方法应用 `@ToString` 将导致编译错误。
+表 11.1 显示了所有可能的目标。编译器检查你只在允许的地方使用注解。例如，如果对方法应用`@ToString`将导致编译错误。
 
-> 注意：没有 `@Target` 限制的注解可以用于任何声明，但不能用于类型参数和类型使用。（在支持注解的第一个 Java 版本中，这些是唯一可能的目标。）
+> **注意：** 没有`@Target`限制的注解可以用于任何声明，但不能用于类型参数和类型使用。（在支持注解的第一个 Java 版本中，这些是唯一可能的目标。）
 
-**表 11.1：@Target 注解的元素类型**
+**表 11.1：`@Target`注解的元素类型**
 
 | 元素类型 | 注解应用于 |
 | --- | --- |
-| ANNOTATION_TYPE | 注解类型声明 |
-| MODULE | 模块 |
-| PACKAGE | 包 |
-| TYPE | 类（包括枚举）和接口（包括注解类型） |
-| METHOD | 方法 |
-| CONSTRUCTOR | 构造函数 |
-| FIELD | 字段（包括枚举常量） |
-| PARAMETER | 方法或构造函数参数 |
-| RECORD_COMPONENT | Record 组件 |
-| LOCAL_VARIABLE | 局部变量 |
-| TYPE_PARAMETER | 类型参数 |
+| `ANNOTATION_TYPE` | 注解类型声明 |
+| `MODULE` | 模块 |
+| `PACKAGE` | 包 |
+| `TYPE` | 类（包括枚举）和接口（包括注解类型） |
+| `METHOD` | 方法 |
+| `CONSTRUCTOR` | 构造函数 |
+| `FIELD` | 字段（包括枚举常量） |
+| `PARAMETER` | 方法或构造函数参数 |
+| `RECORD_COMPONENT` | `Record`组件 |
+| `LOCAL_VARIABLE` | 局部变量 |
+| `TYPE_PARAMETER` | 类型参数 |
 
-## ## TYPE_USE 类型的用法
+## `TYPE_USE` 类型的用法
 
-当你对 record 组件进行注解时，该注解将应用于该组件产生的字段和方法，前提是该注解被允许用于字段。例如，在
+当你对`record`组件进行注解时，该注解将应用于该组件产生的字段和方法，前提是该注解被允许用于字段。例如，在：
 
-```
+```java
 @Target(ElementType.TYPE_USE)
 ```
 
-`@Retention` 元注解指定了注解可以被访问的位置。有三种选择：
+`@Retention`元注解指定了注解可以被访问的位置。有三种选择：
 
 1. `RetentionPolicy.SOURCE`：注解对源处理器可用，但不会包含在类文件中。
 2. `RetentionPolicy.CLASS`：注解包含在类文件中，但虚拟机不会加载它们。
@@ -23677,7 +24658,7 @@ public @interface ToString
 
 你将在本章后面的部分看到这三种场景的示例。
 
-还有其他几个元注解——完整列表请参阅 11.3。要为元素指定默认值，请在方法后添加 `default` 子句。例如：
+还有其他几个元注解——完整列表请参阅 11.3。要为元素指定默认值，请在方法后添加`default`子句。例如：
 
 ```java
 public @interface RepeatedTest{
@@ -23696,17 +24677,17 @@ public @interface BugReport{
 }
 ```
 
-> 注意：默认值不会与注解一起存储；而是计算出来的。如果你更改了默认值并重新编译注解，所有已注解的元素将使用新的默认值，即使在已编译的类文件中也是如此。
+> **注意：** 默认值不会与注解一起存储；而是计算出来的。如果你更改了默认值并重新编译注解，所有已注解的元素将使用新的默认值，即使在已编译的类文件中也是如此。
 
-所有注解接口都隐式地扩展 `java.lang.annotation.Annotation` 接口。该接口是一个普通接口，而不是注解接口。请本节末尾的 API 注释了解该接口提供的方法。
+所有注解接口都隐式地扩展`java.lang.annotation.Annotation`接口。该接口是一个普通接口，而不是注解接口。请本节末尾的 API 注释了解该接口提供的方法。
 
 你不能扩展注解接口，永远永远提供实现注解接口的类。相反，源处理工具和虚拟机会在需要时生成代理类和对象。
 
-```
-java.lang.annotation.Annotation 5.0
-```
+## `java.lang.annotation.Annotation` 5.0
 
-- `Class<? extends Annotation> annotationType()` 返回表示此注解对象注解接口的 `Class` 对象。注意在注解对象上调用 `getClass` 将返回实际类，而不是接口。
+
+
+- `Class<? extends Annotation> annotationType()` 返回表示此注解对象注解接口的 `Class` 对象。注意，在注解对象上调用 `getClass` 将返回实际类，而不是接口。
 - `boolean equals(Object other)` 如果 `other` 是与此注解对象实现相同注解接口的对象，且此对象与其他对象的所有元素都相等，则返回 `true`。
 - `hashCode()` 返回与 `equals` 方法兼容的哈希码，该值派自注解接口名称和元素值。
 - `String toString()` 返回包含注解接口名称以及元素名称和值的字符串表示。
@@ -23717,100 +24698,101 @@ Java API 在 `java.lang`、`java.lang.annotation` 和 `javax.annotation` 包中�
 
 | 注解接口 | 适用范围 | 目的 |
 | --- | --- | --- |
-
-
-
 | 覆盖 | 方法 | 检查此方法是否重写了父类方法。 |
-| :--- | :--- | :--- |
-| Serial | 方法 | 检查此方法是否为正确的序列化方法。 |
-| Deprecated | 所有声明 | 将项标记为已弃用。 |
-| SuppressWarnings | 除包以外的所有声明 | 抑制特定类型的警告消息。 |
-| SafeVarargs | 方法和构造函数 | 断言变长参数的使用是安全的。 |
+| `Serial` | 方法 | 检查此方法是否为正确的序列化方法。 |
+| `Deprecated` | 所有声明 | 将项标记为已弃用。 |
+| `SuppressWarnings` | 除包以外的所有声明 | 抑制特定类型的警告消息。 |
+| `SafeVarargs` | 方法和构造函数 | 断言变长参数的使用是安全的。 |
+| `FunctionalInterface` | 接口 | 将接口标记为函数式接口（具有单个抽象方法）。 |
+| `Generated` | 所有声明 | 将项标记为由工具生成的源代码。 |
+| `Target` | 注解（Annotations） | 指定该注解可以应用的位置。 |
+| `Retention` | 注解（Annotations） | 指定该注解可以使用的地方。 |
+| `Documented` | 注解（Annotations） | 指定该注解应包含在被注解项的文档中。 |
+| `Inherited` | 注解 | 指定该注解会被子类继承。 |
+| `Repeatable` | 注解 | 指定该注解可以多次应用于同一个项。 |
 
-| FunctionalInterface | 接口 | 将接口标记为函数式接口（具有单个抽象方法）。 |
-| Generated | 所有声明 | 将项标记为由工具生成的源代码。 |
-| Target | 注解（Annotations） | 指定该注解可以应用的位置。 |
-| Retention | 注解（Annotations） | 指定该注解可以使用的地方。 |
-| Documented | 注解（Annotations） | 指定该注解应包含在被注解项的文档中。 |
-| Inherited | 注解 | 指定该注解会被子类继承。 |
-| Repeatable | 注解 | 指定该注解可以多次应用于同一个项。 |
+### 11.3.1 编译时注解
 
-## 11.3.1. 编译时注解
-
-@Deprecated 注解可以附加到任何不再鼓励使用的项上。当你使用已弃用的项时，编译器会发出警告。此注解的作用与 @deprecated JavaDoc 标签相同。然而，该注解会持续到运行时。
+`@Deprecated` 注解可以附加到任何不再鼓励使用的项上。当你使用已弃用的项时，编译器会发出警告。此注解的作用与 `@deprecated` JavaDoc 标签相同。然而，该注解会持续到运行时。
 
 > 注意：作为 JDK 份的 `jdepscan` 工具可以扫描一组 JAR 文件以查找已弃用的元素。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1525_0.png)
 
-@Override 注解使编译器检查被注解的方法是否真的重写了父类中的方法。例如，如果你声明了：
+`@Override` 注解使编译器检查被注解的方法是否真的重写了父类中的方法。例如，如果你声明了：
 
 ```java
 public class Point {
-    @Override public boolean equals(Point other) {
-        ... 
+    @Override
+    public boolean equals(Point other) {
+        ...
     }
 }
 ```
 
-那么编译器将报告错误——此 `equals` 方法没有重写 Object 类的方法，因为该方法的参数类型是 `Object` 而不是 `Point`。
+那么编译器将报告错误——此 `equals` 方法没有重写 `Object` 类的方法，因为该方法的参数类型是 `Object` 而不是 `Point`。
 
-@Serial 注解检查用于序列化的方法（未在接口中声明）是否具有正确的参数类型。
+`@Serial` 注解检查用于序列化的方法（未在接口中声明）是否具有正确的参数类型。
 
-@SuppressWarnings 注解告诉编译器抑制特定类别的警告消息，例如：
-
-```java
-@SuppressWarnings("unchecked") T[] result = (T[]) Array.newInstance(cl, n);
-```
-
-@SafeVarargs 注解断言方法不会破坏其变长参数（见第 8 章）。
-
-@Generated 注解旨在供代码生成工具使用。任何生成的源代码都可以被注解，以将其区别于程序员提供的代码。例如，代码编辑器可以隐藏生成的代码，或者代码生成器可以移除旧版本的生成代码。每个注解必须包含一个代码生成器的唯一标识符。日期字符串（ISO 8601/RFC 3339格式）和注释字符串是可选的。例如：
+`@SuppressWarnings` 注解告诉编译器抑制特定类别的警告消息，例如：
 
 ```java
-@Generated(value="com.horstmann.generator", date="2015-01-04T12:08:56.235-0700");
+@SuppressWarnings("unchecked")
+T[] result = (T[]) Array.newInstance(cl, n);
 ```
 
-你已经在第 6 章见过 FunctionalInterface 注解。它被用于标记 lambda 表达式的转换目标，例如：
+`@SafeVarargs` 注解断言方法不会破坏其变长参数（见第 8 章）。
+
+`@Generated` 注解旨在供代码生成工具使用。任何生成的源代码都可以被注解，以将其区别于程序员提供的代码。例如，代码编辑器可以隐藏生成的代码，或者代码生成器可以移除旧版本的生成代码。每个注解必须包含一个代码生成器的唯一标识符。日期字符串（ISO 8601/RFC 3339 格式）和注释字符串是可选的。例如：
+
+```java
+@Generated(
+    value = "com.horstmann.generator",
+    date = "2015-01-04T12:08:56.235-0700"
+);
+```
+
+你已经在第 6 章见过 `FunctionalInterface` 注解。它被用于标记 lambda 表达式的转换目标，例如：
 
 ```java
 @FunctionalInterface
-public interface IntFunction<R>
-{
+public interface IntFunction<R> {
     R apply(int value);
 }
 ```
 
 如果你之后添加了另一个抽象方法，编译器将产生错误。
 
-当然，你应该只对描述函数的接口添加此注解。其他接口也具有单个抽象方法（如 AutoCloseable），但它们在概念上并不是函数。
+当然，你应该只对描述函数的接口添加此注解。其他接口也具有单个抽象方法（如 `AutoCloseable`），但它们在概念上并不是函数。
 
-## 11.3.2. 元注解（Meta-Annotations）
+### 11.3.2 元注解（Meta-Annotations）
 
-你已经在第 11.2 节见过 @Target 和 @Retention 元注解。
+你已经在第 11.2 节见过 `@Target` 和 `@Retention` 元注解。
 
-@Documented 元注解为 JavaDoc 等文档工具提供了提示。出于文档目的考虑，Documented 注解应该被视为与其他修饰符（如 private 或 static）一样。相比之下，其他注解不应包含在文档中。
+`@Documented` 元注解为 JavaDoc 等文档工具提供了提示。出于文档目的考虑，`Documented` 注解应该被视为与其他修饰符（如 `private` 或 `static`）一样。相比之下，其他注解不应包含在文档中。
 
-例如，@SuppressWarnings 注解是不记录的。如果一个方法或字段有该注解，它是一个对 JavaDoc 读者没有意义的实现细节。相反，@FunctionalInterface 注解是被记录的，因为对于程序员来说，知道该接口旨在描述一个函数是有用的。
+例如，`@SuppressWarnings` 注解是不记录的。如果一个方法或字段有该注解，它是一个对 JavaDoc 读者没有意义的实现细节。相反，`@FunctionalInterface` 注解是被记录的，因为对于程序员来说，知道该接口旨在描述一个函数是有用的。
 
 图 11.1 显示了文档。
 
-# Predicate (Java SE 21 & JDK 21) — Firefox 开发者版
+# Predicate（Java SE 21 & JDK 21）— Firefox 开发者版
 
 概述 模块 包 类 使用 树 预览 新 弃用 索引 帮助
 
 摘要 嵌套 | 字段 | 构造器 | 方法 详情：字段 | 构造器 | 方法 搜索
 
-模块 java.base
+模块 `java.base`
 
-包 java.util.function
+包 `java.util.function`
 
-# 接口 Predicate<T>
+# 接口 `Predicate<T>`
 
 类型参数：
-T - 谓词输入的类型
+
+`T` - 谓词输入的类型
 
 函数式接口：
+
 这是一个函数式接口，因此可以作为 lambda 表达式或方法引用的赋值目标。
 
 ```java
@@ -23831,17 +24813,17 @@ public interface Predicate<T>
 
 | 修饰符和类型 | 方法 | 描述 |
 | --- | --- | --- |
-| default Predicate<T> | and(Predicate<? super T> other) | 返回一个组合的谓词，表示此谓词与另一个谓词的短路与 |
-| static <T> Predicate<T> | isEqual(Object target) | 返回一个谓词，测试两个参数是否根据 Objects.equals(Object, Object) 相等。 |
-| default Predicate<T> | negate() | 返回一个表示此谓词逻辑否定的谓词。 |
+| `default Predicate<T>` | `and(Predicate<? super T> other)` | 返回一个组合的谓词，表示此谓词与另一个谓词的短路与 |
+| `static <T> Predicate<T>` | `isEqual(Object target)` | 返回一个谓词，测试两个参数是否根据 `Objects.equals(Object, Object)` 相等。 |
+| `default Predicate<T>` | `negate()` | 返回一个表示此谓词逻辑否定的谓词。 |
 
 图 11.1：一个记录的注解
 
-@Inherited 元注解仅适用于类。当一个类具有继承注解时，其所有子类自动具有该注解。这使得创建类似于标记接口（如 Serializable）的注解变得简单。
+`@Inherited` 元注解仅适用于类。当一个类具有继承注解时，其所有子类自动具有该注解。这使得创建类似于标记接口（如 `Serializable`）的注解变得简单。
 
-假设你定义了一个继承注解 @Persistent，表示类对象可以保存到数据库。那么该类的子类会自动标记为持久化。
+假设你定义了一个继承注解 `@Persistent`，表示类对象可以保存到数据库。那么该类的子类会自动标记为持久化。
 
-@Repeatable 元注解允许多次应用于同一个注解。例如，JUnit 的 @Tag 注解是重复的。它可以这样使用：
+`@Repeatable` 元注解允许多次应用于同一个注解。例如，JUnit 的 `@Tag` 注解是重复的。它可以这样使用：
 
 ```java
 @Tag("localized")
@@ -23851,31 +24833,26 @@ void testHello() { . . }
 
 出于历史原因，重复注解的实现者需要提供一个容器注解来持有这些重复注解。
 
-以下是定义 @Tag 注解及其容器的方式：
+以下是定义 `@Tag` 注解及其容器的方式：
 
 ```java
 @Repeatable(Tag.class)
-@interface Tag
-{
+@interface Tag {
     String value();
 }
 
-@interface Tags
-{
+@interface Tags {
     Tag[] value();
 }
 ```
 
-当用户提供两个或多个 @Tag 注解时，它们会被封装到 @Tags 注解中。这增加了处理注解的复杂性，正如你将在下一节中看到的。
+当用户提供两个或多个 `@Tag` 注解时，它们会被封装到 `@Tags` 注解中。这增加了处理注解的复杂性，正如你将在下一节中看到的。
 
-## 11.4. 在运行时处理注解
+## 11.4 在运行时处理注解
 
 到目前为止，你已经学习了如何在源文件中添加注解以及如何定义注解类型。现在是时候看看这些操作可以产生什么结果了。
 
-在本节中，我向你展示一个使用第 5 章见过的反射 API 在运行时处理注解的简单示例。假设我们想要减少实现 toString 方法的繁琐。当然，可以使用反射编写一个通用的 toString 方法，简单地包含所有字段名称和值。但假设我们自定义该过程。我们可能不想包含所有字段，或者想跳过类名和变量名。例如，对于 Point 类，我们倾向于使用 [5,10] 而不是 Point[x=5,y=10]。当然，任何其他改进都是可能的，但让我们保持简单。重点是演示注解处理器可以做什么。
-
-
-
+在本节中，我向你展示一个使用第 5 章见过的反射 API 在运行时处理注解的简单示例。假设我们想要减少实现 `toString` 方法的繁琐。当然，可以使用反射编写一个通用的 `toString` 方法，简单地包含所有字段名称和值。但假设我们自定义该过程。我们可能不想包含所有字段，或者想跳过类名和变量名。例如，对于 `Point` 类，我们倾向于使用 `[5,10]` 而不是 `Point[x=5,y=10]`。当然，任何其他改进都是可能的，但让我们保持简单。重点是演示注解处理器可以做什么。
 
 使用 `@ToString` 注解为你所有希望从此服务中获益的类加上注解。此外，所有应该包含在内的字段也需要被加上注解。该注解的定义如下：
 
@@ -23890,18 +24867,23 @@ public @interface ToString {
 以下是带有注解的 `Point` 和 `Rectangle` 类：
 
 ```java
-@ToString(includeName=false)
+@ToString(includeName = false)
 public class Point {
-    @ToString(includeName=false) private int x;
-    @ToString(includeName=false) private int y;
+    @ToString(includeName = false)
+    private int x;
+
+    @ToString(includeName = false)
+    private int y;
+
     ...
 }
 
 @ToString
 public record Rectangle(
-    @ToString(includeName=false) Point topLeft,
+    @ToString(includeName = false) Point topLeft,
     @ToString int width,
-    @ToString int height) {}
+    @ToString int height
+) {}
 ```
 
 其意图是将矩形表示为字符串 `Rectangle[5, 10],width=20,height=30]`。
@@ -23929,6 +24911,7 @@ boolean isAnnotationPresent(Class<? extends Annotation>)
 ```java
 Class<?> cl = obj.getClass();
 ToString ts = cl.getAnnotation(ToString.class);
+
 if (ts != null && ts.includeName()) . . .
 ```
 
@@ -23954,72 +24937,114 @@ if (ts != null && ts.includeName()) . . .
 
 这是运行时注解 API 的简单但典型的用法。使用反射查找类、字段等；在可能带有注解的元素上调用 `getAnnotation` 或 `getAnnotationsByType` 来检索注解；然后调用注解接口的方法来获取元素值。
 
-# **Listing 11.1** runtimeAnnotations/RuntimeAnnotationDemo.java
+# Listing 11.1 `runtimeAnnotations/RuntimeAnnotationDemo.java`
 
 ```java
 1 package runtimeAnnotations;
-2 
+
+2
+
 3 public class RuntimeAnnotationDemo
+
 4 {
+
 5     public static void main(String[] args)
+
 6     {
-7 var rect = new Rectangle(new Point(5,10);
-8 System.out.println(ToString.toString(rect));
-9 }
+
+7         var rect = new Rectangle(new Point(5,10);
+
+8         System.out.println(ToString.toString(rect));
+
+9     }
+
 10 }
 ```
 
-# Listing 11.2 runtimeAnnotations/ToString.java
+# Listing 11.2 `runtimeAnnotations/ToString.java`
 
 ```java
 1 package runtimeAnnotations;
+
 2
+
 3 import java.lang.reflect.*;
+
 4
+
 5 public class ToStrings
+
 6 {
+
 7   public static String toString(Object obj)
+
 8   {
+
 9     if (obj == null) return "null";
+
 10    Class<?> cl = obj.getClass();
+
 11    ToString ts = cl.getAnnotation(ToString.class);
+
 12    if (ts == null) return obj.toString();
+
 13    var result = new StringBuilder();
+
 14    if (ts.includeName()) result.append(cl.getName());
+
 15    result.append("[");
+
 16    boolean first = true;
+
 17    for (Field f : cl.getDeclaredFields())
+
 18    {
+
 19      ts = f.getAnnotation(ToString.class);
+
 20      if (ts != null) {
+
 21        if (first) first = false; else result.append(",");
+
 22        f.setAccessible(true);
+
 23        if (ts.includeName()) {
+
 24            result.append(f.getName());
+
 25            result.append("=");
+
 26            result.append(f.get(obj));
+
 27        }
+
 28      }
+
 29    }
+
 30    result.append("]");
+
 31    return result.toString();
+
 32}
+
 33}
 ```
 
-# java.lang.reflect.AnnotatedElement 5.0
-
-- boolean isAnnotationPresent(Class<? extends Annotation> annotationType) 如果此项存在指定的注解则返回 true。
-- <T extends Annotation> T getAnnotation(Class<T> annotationType) 获取指定类型的注解，如果项没有该注解则返回 null。
-- <T extends Annotation> T[] getAnnotationsByType(Class<T> annotationType) 获取重复注解类型的所有注解（见 11.3.2）。如果不存在，返回数组。
-- Annotation[] getAnnotations() 获取此项的所有注解，包括继承的注解。如果不存在，返回长度为 0 的数组。
-- Annotation[] getDeclaredAnnotations() 获取此项声明的注解，不包括继承的注解。如果不存在，返回长度为 0 的数组。
 
 
+
+# `java.lang.reflect.AnnotatedElement` 5.0
+
+- `boolean isAnnotationPresent(Class<? extends Annotation> annotationType)`：如果此项存在指定的注解则返回 `true`。
+- `<T extends Annotation> T getAnnotation(Class<T> annotationType)`：获取指定类型的注解，如果项没有该注解则返回 `null`。
+- `<T extends Annotation> T[] getAnnotationsByType(Class<T> annotationType)`：获取重复注解类型的所有注解（见 11.3.2）。如果不存在，返回数组。
+- `Annotation[] getAnnotations()`：获取此项的所有注解，包括继承的注解。如果不存在，返回长度为 0 的数组。
+- `Annotation[] getDeclaredAnnotations()`：获取此项声明的注解，不包括继承的注解。如果不存在，返回长度为 0 的数组。
 
 使用语言模型 API（language model API）来分析源码级注解。与反射 API 不同（反射提供的是类和方法的虚拟机表示），语言模型 API 允许你根据 Java 语言的规则分析 Java 程序。
 
-编译器会生成一棵树，其节点是实现了 `javax.lang.model.element.Element` 接口及其子接口（如 `TypeElement`、`VariableElement`、`ExecutableElement` 等）的类实例。这些是反射类（如 Class、Field/Parameter、Method/Constructor 类）在编译时的对应物。
+编译器会生成一棵树，其节点是实现了 `javax.lang.model.element.Element` 接口及其子接口（如 `TypeElement`、`VariableElement`、`ExecutableElement` 等）的类实例。这些是反射类（如 `Class`、`Field/Parameter`、`Method/Constructor` 类）在编译时的对应物。
 
 我不想详细介绍该 API，但这里有处理注解时需要了解的重点：
 
@@ -24027,7 +25052,9 @@ if (ts != null && ts.includeName()) . . .
 
 ```java
 Set<? extends Element> getElementsAnnotatedWith
+
 Set<? extends Element> getElementsAnnotatedWith
+
 Set<Class<? extends Annotation>> annotation
 ```
 
@@ -24035,11 +25062,11 @@ Set<Class<? extends Annotation>> annotation
 
 ```java
 A getAnnotation(Class<A> annotationType)
+
 A[] getAnnotationsByType(Class<A> annotationType)
 ```
 
 - 来获取给定注解类的注解或重复注解。
-
 - `TypeElement` 代表一个类或接口。`getEnclosedElements` 方法产生其字段和方法的列表。在 `Element` 上调用 `getSimpleName` 或在 `TypeElement` 上调用 `getQualifiedName` 会产生一个 `Name` 对象，该对象可以通过 `toString` 转换为字符串。
 
 ## 11.5.3. 使用注解生成源码
@@ -24049,19 +25076,18 @@ A[] getAnnotationsByType(Class<A> annotationType)
 因此，我们将所有方法添加到工具类 `ToStrings` 中：
 
 ```java
-public class ToStrings
-{
-    public static String toString(Point obj)
-    {
+public class ToStrings {
+    public static String toString(Point obj) {
         // 生成的代码
     }
-    public static String toString(Rectangle obj)
-    {
+
+    public static String toString(Rectangle obj) {
         // 生成的代码
     }
+
     ..
-    public static String toString(Object obj)
-    {
+
+    public static String toString(Object obj) {
         return Objects.toString(obj);
     }
 }
@@ -24071,10 +25097,11 @@ public class ToStrings
 
 ```java
 @ToString
-public class Rectangle
-{
+public class Rectangle {
     ..
+
     @ToString(includeName=false) public int getWidth() { return width; }
+
     @ToString public int getHeight() { return height; }
 }
 ```
@@ -24084,30 +25111,38 @@ public class Rectangle
 ```java
 public static String toString(Rectangle obj) {
     var result = new StringBuilder();
+
     result.append("Rectangle");
+
     result.append("{
 ```
 
 “样板代码”代码是灰色的。以下是为带有 `TypeElement` 的类生成 `toString` 方法的逻辑大纲：
 
 ```java
-private void writeToStringMethod(PrintWriter out, TypeElement te)
-{
+private void writeToStringMethod(PrintWriter out, TypeElement te) {
     String className = te.getQualifiedName().toString();
+
     // 方法头和字符串的声明
+
     Annotation ann = te.getAnnotation(ToString.class);
+
     if (ann != null) {
         // 添加类名
+
         for (Element c : te.getEnclosedElements()) {
             ann = c.getAnnotation(ToString.class);
+
             if (ann != null) {
                 if (ann.includeName()) {
                     // 添加字段
                 }
+
                 // 追加 toString(obj)
             }
         }
     }
+
     // 返回字符串
 }
 ```
@@ -24115,23 +25150,28 @@ private void writeToStringMethod(PrintWriter out, TypeElement te)
 这里是注解处理器的 `process` 方法的大纲。它为每个类创建一个源码文件，并为每个类写入类头和一个方法方法。
 
 ```java
-public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment currentRound)
-{
+public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment currentRound) {
     if (annotations.size() == 0) return true;
+
     try {
-        JavaFileObject sourceFile = processingEnv.getFiler().createSourceFile(te.getQualifiedName().toString());
+        JavaFileObject sourceFile =
+            processingEnv.getFiler().createSourceFile(te.getQualifiedName().toString());
+
         try (var out = new PrintWriter(sourceFile)) {
             // 包和类
+
             for (Element e : currentRound.getElements()) {
                 if (e instanceof TypeElement) {
                     writeToStringMethod(out, (TypeElement) e);
                 }
             }
+
             // toString(Object)
         }
     } catch (IOException e) {
         processingEnv.getMessenger().printMessage(e.getMessage());
     }
+
     return true;
 }
 ```
@@ -24140,6 +25180,7 @@ public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment 
 
 提示：要查看轮次，请运行带有 `-Xprintounds` 标志的 `javac` 命令：
 
+```text
 Round 1:
 input files: {rect.Point, rect.Rectangle}
 annotations: {sourceAnnotations.ToString}
@@ -24154,49 +25195,62 @@ Round 3:
 input files: {}
 annotations: []
 last round: true
+```
 
 运行示例程序，首先构建注解处理器，然后使用它编译演示：
 
-```
+```bash
 javac -Xprintounds -processor sourceAnnotations.ToStringAnnotationProcessor rect.SourceLevelAnnotationDemo
 ```
 
 此示例演示了工具如何收集源码文件注解以生成其他文件。生成的文件不必是源码文件。注解处理器可以选择生成 XML 描述符、属性文件、壳脚本、HTML 文档等。
 
 > **注意：** 有人建议使用注解来消除更大的繁琐工作。如果能自动生成简单的 getter 和 setter 将不是很好吗？例如，注解：
+>
 > ```java
 > @Property private String title;
 > ```
+>
 > 可以产生方法：
+>
 > ```java
 > public String getTitle() { return title; }
+>
 > public void setTitle(String title) { title = title; }
 > ```
-
-然而，这些方法需要添加到同一个类中。这需要编辑源码，而不仅仅是生成另一个文件，超出了注解处理器的能力范围。可以为此目的构建另一个工具，但这种工具违了注解的初衷。注解旨在作为代码项的描述，而不是添加或更改代码的指令。
+>
+> 然而，这些方法需要添加到同一个类中。这需要编辑源码，而不仅仅是生成另一个文件，超出了注解处理器的能力范围。可以为此目的构建另一个工具，但这种工具违了注解的初衷。注解旨在作为代码项的描述，而不是添加或更改代码的指令。
 
 一个名为 Project Lombok 的流行工具找到了绕过这一限制的方法。通过在注解处理期间修改编译器内部数据结构，它可以产生 getter 和 setter 方法。至少目前可行，但它不是标准的 Java。
 
-
 ```java
 ToString ann = te.getAnnotation(ToString.class);
+
 out.println(" var result = new StringBuilder();");
-if (ann.includeName()) out.println(" result.append(\" \");
+
+if (ann.includeName()) out.println(" result.append(\" ");
+
 out.println(" boolean first = true;");
+
 for (Element c : te.getEnclosedElements()) {
     String methodName = c.getSimpleName();
+
     ann = c.getAnnotation(ToString.class);
-    if (ann != null)
-    {
-        if (first) first = false; else out.println(" result.append(\", \");");
-        if (ann.includeName())
-        {
+
+    if (ann != null) {
+        if (first) first = false;
+        else out.println(" result.append(\", \");");
+
+        if (ann.includeName()) {
             String fieldName = methodName.replaceAll("^get", "");
+
             // Turn getWidth into width
+
             out.println(" result.append(" + fieldName);
         }
     }
 }
+
 out.println(" result.append(\")\");");
 out.println(" return result.toString();");
 out.println(" }");
@@ -24204,7 +25258,7 @@ out.println(" }");
 
 ## 11.6. 字节码工程
 
-你已经看到注解可以在运行时或在源代码级别被处理。还有第三种可能性：在字节码层面进行处理。除非注解在源代码级别被移除，否则它们会存在于类文件中。类文件格式有文档说明（参见 [https://docs.oracle.com/javaase/specs/jvms/se21/html]）。该格式相当复杂，在没有特殊库的情况下处理类文件将具有挑战性。其中一个库是 ASM 库，可以在 [https://asm.ow2.org] 下载。下载 `asm-9.6.jar` 和 `asm-9-9.6.jar`并将它们放置在指定的目录中（在指令中称为 asm）。
+你已经看到注解可以在运行时或在源代码级别被处理。还有第三种可能性：在字节码层面进行处理。除非注解在源代码级别被移除，否则它们会存在于类文件中。类文件格式有文档说明（参见 [https://docs.oracle.com/javaase/specs/jvms/se21/html]）。该格式相当复杂，在没有特殊库的情况下处理类文件将具有挑战性。其中一个库是 ASM 库，可以在 [https://asm.ow2.org] 下载。下载 `asm-9.6.jar` 和 `asm-9-9.6.jar` 并将它们放置在指定的目录中（在指令中称为 `asm`）。
 
 ### 11.6.1. 修改类文件
 
@@ -24217,7 +25271,12 @@ out.println(" }");
 那么我们在方法的开头添加以下语句的字节码：
 
 ```java
-System.getLogger(loggerName).log(System.Logger.Level.INFO, "Entering {0}.{1}", className, methodName);
+System.getLogger(loggerName).log(
+    System.Logger.Level.INFO,
+    "Entering {0}.{1}",
+    className,
+    methodName
+);
 ```
 
 例如，如果你将 `Item` 类的 `hashCode` 方法注解为：
@@ -24228,8 +25287,9 @@ System.getLogger(loggerName).log(System.Logger.Level.INFO, "Entering {0}.{1}", c
 
 那么每当调用该方法时，都会打印类似下面的信息：
 
-```
+```text
 Dec 03, 2023 5:58:44 PM set.Item hashCode
+
 INFO: Entering set.Item.hashCode
 ```
 
@@ -24240,31 +25300,47 @@ INFO: Entering set.Item.hashCode
 3. 对于每个方法，检查它是否具有 `LogEntry` 注解。
 4. 如果有，在方法的开头添加以下指令的字节码：
 
-```
+```text
 ldc loggerName
+
 invokestatic System.getLogger(String)
+
 static System.Logger.Level.INFO
+
 ldc "Entering {0}.{1}"
+
 iconst_2
+
 anewarray
+
 dup
+
 iconst_0
+
 ldc className
+
 aastore
+
 dup
+
 iconst_1
+
 ldc methodName
+
 aastore
+
 invokeinterface System.Logger.log(System.Logger
 ```
 
 插入这些字节码听起来很复杂，但 ASM 库让它变得相当简单。我不会详细描述分析和插入字节码的过程。要点是列表 11.5 中的程序编辑了类文件，并在带有 `LogEntry` 注解的方法开头插入了日志调用。
 
-例如，这里是向向列表 11.6 中的 `Item.java` 添加日志指令，其中 `asm` 是你安装 ASM 库的目录：
+例如，这里是向列表 11.6 中的 `Item.java` 添加日志指令，其中 `asm` 是你安装 ASM 库的目录：
 
 ```bash
 javac set/Item.java
+
 javac -classpath .:asm/* bytecodeAnnotations/Entry
+
 java -classpath .:asm/* bytecodeAnnotations.Entry
 ```
 
@@ -24278,27 +25354,43 @@ javap -c set.Item
 
 你可以在 `hashCode`、`equals` 和 `compareTo` 方法开头看到插入的指令。
 
-```
+```text
 public int hashCode();
+
 Code:
+
 0: ldc #42 // String // Method java/lang/String
+
 2: invokestatic #48 // Method java/lang/System
+
 5: getstatic #54 // Field java/lang/System
+
 8: ldc #56 // String Entering {0}.{1}
+
 10: iconst_2
+
 11: anew #4 // class java/lang/Object
+
 14: dup
 ```
 
-```
+```text
 15: iconst_0
+
 16: ldc #58 // String set.Item
+
 18: aastore
+
 19: dup
+
 20: iconst_1
+
 21: ldc #77 // String hashCode
+
 23: aastore
+
 24: invokinterface #65, 4 // InterfaceMethod
+
 // (Ljava/lang/System$Logger;Ljava
 . . .
 ```
@@ -24307,26 +25399,41 @@ Code:
 
 列表 11.7 中的 `SetTest` 程序将 `Item` 对象插入哈希集合中。当你使用修改后的类文件运行它时，将看到日志消息。
 
-```
+```text
 Dec 03, 2023 5:58:44 PM set.Item hashCode
+
 INFO: Entering set.Item.hashCode
+
 Dec 03, 2023 5:58:44 PM set.Item hashCode
+
 INFO: Entering set.Item.hashCode
+
 Dec 03, 2023 5:58:44 PM set.Item hashCode
+
+
+
+
+```text
 INFO: Entering set.Item.hashCode
+
 Dec 03, 2023 5:58:44 PM set.Item equals
+
 INFO: Entering set.Item.equals
 ```
 
 注意当我们两次插入 `equals` 调用。这个例子展示了字节码工程的力量。注解用于向程序添加指令，而字节码编辑工具获取并修改虚拟机指令。
 
-# Listing 11.5 bytecodeAnnotations/EntryLogger.java
+# Listing 11.5 `bytecodeAnnotations/EntryLogger.java`
 
 ```java
 package bytecodeAnnotations;
+
 import java.io.*;
+
 import java.nio.file.*;
+
 import org.objectweb.asm.*;
+
 import org.objectweb.asm.commons.*;
 
 /**
@@ -24334,83 +25441,141 @@ import org.objectweb.asm.commons.*;
  * @version 1.01 2012-01-26
  * @author Cay Horstmann
  */
+
 public class EntryLogger extends ClassVisitor {
+
     private String className;
 
     /**
      * 构造 EntryLogger
      */
+
     public EntryLogger(ClassWriter writer, int access) {
+
         super(Opcodes.ASM9, writer);
+
         this.className = className;
+
     }
 
     public MethodVisitor visitMethod(int access, String name, String desc, String[] exceptions) {
+
         MethodVisitor mv = cv.visitMethod(access, name, desc, exceptions);
+
         return new AdviceAdapter(Opcodes.ASM9, mv) {
+
             private String loggerName;
 
             public AnnotationVisitor visitAnnotation(String desc, boolean visible) {
+
                 if (desc.equals("bytecodeAnnotations/LogEntry")) {
+
                     return new AnnotationVisitor(Opcodes.ASM9, visible) {
+
                         @Override
+
                         public void visit(String name, Object value) {
+
                             loggerName = (String) value;
+
                             return super.visit(name, value);
+
                         }
+
                     };
+
                 }
+
                 return super.visitAnnotation(desc, visible);
+
             }
 
             public void onMethodEnter() {
+
                 if (loggerName != null) {
+
                     /*
                     mv.visitLdc(loggerName);
+
                     mv.visitMethodsn(Opcodes.INVOKATIC, "java/lang/System", "getLogger", "(Ljava/lang/String)Ljava/lang/System$Logger;", false);
+
                     mv.visitLdc(className);
+
                     mv.visitLdc(methodName);
+
                     mv.visitMethodsn(Opcodes.INVOKEVIRTUAL, "java/lang/System$Logger", "log", "(Ljava/lang/System$Level;Ljava/lang/String;[Ljava/lang/Object;)V", false);
                     */
+
                     mv.visitMethodsn(Opcodes.INVOKATIC, "java/lang/System", "getLogger", "(Ljava/lang/String)Ljava/lang/System$Logger;", false);
+
                     mv.visitFieldInsn(Opcodes.GETSTATIC, "java/lang/System$Logger", "INFO", "Ljava/lang/System$Level;");
+
                     mv.visitLdc("Entering {0}.{1}");
+
                     // 创建 Object 数组
+
                     mv.visitTypeInsn(Opcodes.ANEWARRAY, "java/lang/Object");
+
                     mv.visitInsn(Opcodes.CONST_2);
+
                     mv.visitInsn(Opcodes.DUP);
+
                     mv.visitLdc(className);
+
                     mv.visitInsn(Opcodes.AASTORE);
+
                     mv.visitInsn(Opcodes.DUP);
+
                     mv.visitInsn(Opcodes.CONST_1);
+
                     mv.visitLdc(methodName);
+
                     mv.visitInsn(Opcodes.AASTORE);
+
                     mv.visitMethodsn(Opcodes.INVOKEINTERFACE, "java/lang/System$Logger", "log", "(Ljava/lang/System$Level;Ljava/lang/String;[Ljava/lang/Object;)V", 2);
+
                 }
+
             }
+
         };
+
     }
 
     public static void main(String[] args) {
+
         if (args.length == 0) {
+
             System.out.println("USAGE: java EntryLogger <class>");
+
             System.exit(1);
+
         }
+
         Path path = Path.of(args[0]);
+
         var reader = new ClassReader(Files.readAllBytes(path));
+
         var writer = new ClassWriter(reader, ClassWriter.COMPUTE_MAXS);
+
         var entryLogger = new EntryLogger(writer, 0);
+
         reader.accept(entryLogger, 0);
+
         Files.write(path, writer.toByteArray());
+
     }
+
 }
 ```
 
-# Listing 11.6 set/Item.java
+# Listing 11.6 `set/Item.java`
 
 ```java
 package set;
+
 import java.util.*;
+
 import bytecodeAnnotations.*;
 
 /**
@@ -24418,8 +25583,11 @@ import bytecodeAnnotations.*;
  * @version 1.01 2012-01-26
  * @author Cay Horstmann
  */
+
 public class Item {
+
     private String description;
+
     private int partNumber;
 
     /**
@@ -24427,26 +25595,34 @@ public class Item {
      * @param aDescription 项的描述
      * @param aPartNumber 项的部件号
      */
+
     public Item(String aDescription, int aPartNumber) {
+
         description = aDescription;
+
         partNumber = aPartNumber;
+
     }
 
     /**
      * 获取此项的描述。
      * @return 描述
      */
+
     public String getDescription() {
+
         return description;
+
     }
 
     public String toString() {
+
         return "[description=" + description;
+
     }
+
 }
 ```
-
-
 
 ```java
 40 @LogEntry(logger = "com.horstmann")
@@ -24458,7 +25634,7 @@ public class Item {
 46 var other = (Item) otherObject;
 47 return Objects.equals(description, other);
 48 }
-49 
+49
 55 @LogEntry(logger = "com.horstmann")
 52 public int hashCode()
 53 {
@@ -24467,20 +25643,26 @@ public class Item {
 56 }
 ```
 
-# Listing 11.7 set/SetTest.java
+# Listing 11.7 `set/SetTest.java`
 
 ```java
 1 package set;
+
 2
+
 3 import java.util.*;
+
 4 import java.util.logging.*;
+
 5
+
 6 /**
 7 * @version 1.03 2018-05-01
 8 * @author Cay Horstmann */
 ```
 
-/* /
+```java
+/*
 public class SetTest {
     public static void main(String[] args) {
         Logger.getLogger("com.horstmann").set
@@ -24495,9 +25677,10 @@ public class SetTest {
         System.out.println(parts);
     }
 }
+*/
 ```
 
-## 11.6.2. 在加载时修改字节码
+## 11.6.2 在加载时修改字节码
 
 在上一节中，你看到了一个可以编辑类文件的工具。然而，在构建过程中再添加另一个工具可能是繁琐的。一个具吸引力的替代方案是将字节码工程推到加载时，即类加载器加载类的时候。
 
@@ -24507,21 +25690,21 @@ public class SetTest {
 
 构建代理所需的步骤如下：
 
-- 1. 实现一个带有方法的类
+1. 实现一个带有方法的类：
 
 ```java
 public static void premain(String arg, Instrumentation instr)
 ```
 
-该方法在代理被加载时被调用。代理可以获取单个命令行参数，该参数通过 `arg` 参数传递。`instr` 参数可以用于安装各种钩子。清单文件 EntryLoggingAgent.mf：
+该方法在代理被加载时被调用。代理可以获取单个命令行参数，该参数通过 `arg` 参数传递。`instr` 参数可以用于安装各种钩子。清单文件 `EntryLoggingAgent.mf`：
 
-- 2. 创建一个清单文件 EntryLoggingAgent.mf，设置 `Premain-Class` 属性，例如：
+2. 创建一个清单文件 `EntryLoggingAgent.mf`，设置 `Premain-Class` 属性，例如：
 
 ```
 Premain-Class: bytecodeAnnotations.EntryLoggingAgent
 ```
 
-- 3. 将代理代码和清单文件打包成 JAR 文件：
+3. 将代理代码和清单文件打包成 JAR 文件：
 
 ```bash
 javac -classpath :asm/* bytecodeAnnotations/
@@ -24535,7 +25718,7 @@ bytecodeAnnotations/Entry*.class
 java -javaagent:AgentJARFile=agentArgument .
 ```
 
-例如，要使用入口日志代理运行 Test 程序，请调用
+例如，要使用入口日志代理运行 Test 程序，请调用：
 
 ```bash
 javac set/*.java
@@ -24548,9 +25731,9 @@ Listing 11.8 显示了代理代码。该代理安装了一个类文件转换器�
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1571_0.png)
 
-**图 11.3:** 在加载时修改类
+**图 11.3：** 在加载时修改类
 
-# Listing 11.8 bytecodeAnnotations/EntryLoggingAgent.java
+# Listing 11.8 `bytecodeAnnotations/EntryLoggingAgent.java`
 
 ```java
 1 package bytecodeAnnotations;
@@ -24563,23 +25746,37 @@ Listing 11.8 显示了代理代码。该代理安装了一个类文件转换器�
 8  * @version 1.11 2018-05-01
 9  * @author Cay Horstmann
 10 */
-```
 
 public class EntryLoggingAgent {
+
     public static void premain(final String arg, Instrumentation instr) {
+
         instr.addTransformer(new ClassFileTransformer() {
+
             public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ClassLoader classBeingRedefined, ProtectionDomain pd, byte[] data) {
+
                 if (!className.replace("/", ".").equals(arg)) return null;
+
                 var reader = new ClassReader(data);
+
                 var writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+
                 var el = new EntryLogger(writer);
+
                 reader.accept(el, ClassReader.FRAMAVES);
+
                 return writer.toByteArray();
+
             }
+
         });
+
     }
+
 }
 ```
+
+
 
 在本章中，你学习了如何：
 
@@ -24587,7 +25784,7 @@ public class EntryLoggingAgent {
 - 设计你自己的注解接口
 - 实现利用注解的工具
 
-你已经看到了三种处理代码的技术：脚本化、编译 Java 程序以及处理注解。前两种相当直观。另一方面，构建注解工具无疑是复杂的，而且并不是大多数开发者都需要处理的任务。本章为你理解理解你将要遇到的注解工具的内部工作原理提供了背景，并可能激发了你开发自己工具的兴趣。
+你已经看到了三种处理代码的技术：脚本化、编译 Java 程序以及处理注解。前两种相当直观。另一方面，构建注解工具无疑是复杂的，而且并不是大多数开发者都需要处理的任务。本章为你理解你将要遇到的注解工具的内部工作原理提供了背景，并可能激发了你开发自己工具的兴趣。
 
 下一章将讨论 Java 平台模块系统（Java Platform Module System），这是确保 Java 平台完整性的关键特性。
 
@@ -24609,25 +25806,23 @@ public class EntryLoggingAgent {
 
 Java 平台设计者面对巨大的代码雪球，决定他们需要一种提供更多控制的结构化机制。他们查看了现有的模块系统（如 OSGi），发现它们不适合他们的问题。相反，他们设计了一种新系统，称为 Java 平台模块系统，该系统现在是 Java 语言和虚拟机的一部分。该系统已成功地用于 Java API 的模块化，如果你选择，你也可以将其用于你自己的应用程序。本章将向你展示如何声明和使用 Java 平台模块。
 
-一个 Java 平台模块由
+一个 Java 平台模块由：
 
 - 包的集合组成
-
-
--   可选的，资源文件和其他文件（如原生库）
--   该模块中可访问的包列表
--   该模块所依赖的所有模块列表
+- 可选的，资源文件和其他文件（如原生库）
+- 该模块中可访问的包列表
+- 该模块所依赖的所有模块列表
 
 Java 平台在编译时和虚拟机中强制执行封装和依赖关系。
 
 为什么你应该考虑使用 Java 平台模块系统来编写自己的程序，而不是遵循在类路径上使用 JAR 文件的传统方法呢？这里有两个优势：
 
-- 1. **强封装**：你可以控制哪些包是可访问的，而不必担心维护那些你并不打算供公开使用的代码。
-- 2. **可靠的配置**：你避免了常见的类路径问题，例如类重复或类缺失。
+1. **强封装**：你可以控制哪些包是可访问的，而不必担心维护那些你并不打算供公开使用的代码。
+2. **可靠的配置**：你避免了常见的类路径问题，例如类重复或类缺失。
 
 Java 平台模块系统没有解决某些问题，例如模块的版本控制。它不支持指定需要哪一个版本的模块，也不支持在同一个程序中使用模块的多个版本。
 
-这些可能是你需要的的功能，但如果你需要这些功能，就必须使用 Java 平台模块系统以外的机制。
+这些可能是你需要的功能，但如果你需要这些功能，就必须使用 Java 平台模块系统以外的机制。
 
 ## 12.2. 模块的命名
 
@@ -24641,7 +25836,7 @@ Java 平台模块系统没有解决某些问题，例如模块的版本控制。
 
 这种约定防止了模块之间的包名冲突。任何给定的包只能放在一个模块中。如果你的模块名是唯一的，且你的包名以模块名开头，那么你的包名也将是唯一的。
 
-对于不供其他程序员使用的模块，可以使用较短的模块名，例如包含应用程序的模块。仅仅为了说明这是可行的，我将在本章中同样这样做。可能可能是库代码的模块将具有如 `com.horstmann.util` 之类的名称，而包含程序（带有带有 main 方法的类）的模块将具有如 `v1ch12.hellomod` 这样易记的名称。
+对于不供其他程序员使用的模块，可以使用较短的模块名，例如包含应用程序的模块。仅仅为了说明这是可行的，我将在本章中同样这样做。可能是库代码的模块将具有如 `com.horstmann.util` 之类的名称，而包含程序（带有带有 `main` 方法的类）的模块将具有如 `v1ch12.hellomod` 这样易记的名称。
 
 > 注意：模块名仅用于模块声明。在你的 Java 类的源文件中，你永远不会引用模块名；相反，请像过去一样使用包名。
 
@@ -24673,119 +25868,7 @@ v1ch12.hellomod/
 `module-info.java` 文件包含了模块声明：
 
 ```java
-module v1ch12.hellomod
-{
-}
-```
-
-这个模块声明是空的，因为该模块没有向任何人提供任何内容，也不需要任何东西。
-
-现在，像一样编译：
-
-```bash
-javac v1ch12.hellomod/module-info.java v1ch12.hellomod
-```
-
-`module-info.java` 文件看起来不像 Java 源文件，而且当然不能有一个名为 `module-info` 的类，因为类名不能包含连字符。`module` 关键字，以及你在后续章节中看到的 `requires`、`exports` 等关键字，都是“受限关键字”，它们仅在模块声明中具有特殊含义。该文件被编译为类文件 `module.info.class`，其中以二进制形式包含模块定义。
-
-要作为模块化应用程序运行此程序，你需要指定模块路径，它类似于类路径，但包含了模块。你还需要以 `modulename/classname` 的格式指定主类：
-
-```bash
-java --module-path v1ch12.hellomod --module v1ch12.hellomod/com.horstmann.hello.HelloWorld
-```
-
-替代 `--module-path` 和 `--module`，你可以使用 `-p` 和 `-m`：
-
-```bash
-java -p v1ch12.hellomod -m v1ch12.hellomod/com.horstmann.hello.HelloWorld
-```
-
-替代 `--module-path` 和 `--module`，你可以使用 `-p` 和 `-m`：
-
-```bash
-java -p v1ch12.hellomod -m v1ch12.hellomod/com.horstmann.hello.HelloWorld
-```
-
-替代 `--module-path` 和 `--module`，你可以使用 `-p` 和 `-m`：
-
-```bash
-java -p v1ch12.hellomod -m v1ch12.hellomod/com.horstmann.hello.HelloWorld
-```
-
-替代 `--module-path` 和 `--module`，你可以使用 `-p` 和 `-m`：
-
-```bash
-java -p v1ch12.hellomod -m v1ch12.hellomod/com.horstmann.hello.HelloWorld
-```
-
-（注：此处原文似乎出现了重复，翻译员已根据指令要求对逻辑进行对应翻译）
-
-替代 `--module-path` 和 `--module`，你可以使用 `-p` 和 `-m`：
-
-```bash
-java -p v1ch12.hellomod -m v1ch12.hellomod/com.horstmann.hello.HelloWorld
-```
-
-替代 `--module-path` 和 `--module`，你可以使用 `-p` 和 `-m`：
-
-```bash
-java -p v1ch12.hellomod -m v1ch12.hellomod/com.horstmann.hello.HelloWorld
-```
-
-替代 `--module-path` 和 `--module`，你可以使用 `-p` 和 `-m`：
-
-```bash
-java -p v1ch12.hellomod -m v1ch12.hellomod/com.horstmann.hello.HelloWorld
-```
-
-（注：由于原文末尾存在多处重复的命令片段，根据“一定不要重复输出原文”的原则，此处译文仅保留核心逻辑表达）
-
-替代 `--module-path` 和 `--module`，你可以使用 `-p` 和 `-m`：
-
-```bash
-java -p v1ch12.hellomod -m v1ch12.hellomod/com.horstmann.hello.HelloWorld
-```
-
-（注：此处原文末尾存在多处重复的命令片段，根据“一定不要重复输出原文”的原则，此处译文仅保留核心逻辑表达）
-
-替代 `--module-path` 和 `--module`，你可以使用 `-p` 和 `-m`：
-
-```bash
-java -p v1ch12.hellomod -m v1ch12.hellomod/com.horstmann.hello.HelloWorld
-```
-
-（注：此处原文末尾存在多处重复的命令片段...）
-
- 12.3. 模块化的“Hello, World!”程序
-
-让我们把传统的“Hello, World!”程序放入模块中。首先，我们需要将类放入一个包中——“未命名包”不能包含在模块中。这里是：
-
-```java
-package com.horstmann.hello;
-
-public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, Modular World!");
-    }
-}
-```
-
-到目前为止，没有任何变化。要创建一个包含此包的 `v1ch12.hellomod` 模块，你需要添加一个模块声明。将其将其放在一个名为 `module-info.java` 的文件中，并位于基目录下（即包含 `com` 目录的相同目录）。按照约定，基目录的名字与模块名相同。
-
-```
-v1ch12.hellomod/
-  └── module-info.java
-  └── com/
-    └── horstmann/
-      └── hello/
-        └── HelloWorld.java
-```
-
-`module-info.java` 文件包含了模块声明：
-
-```java
-module v1ch12.hellomod
-{
+module v1ch12.hellomod {
 }
 ```
 
@@ -24831,7 +25914,7 @@ public class HelloWorld {
 
 > error: package javax.swing is not visible (package javax.swing is declared in module java.desktop but module v1ch12.hellomod does not read it)
 
-JDK 已经模块化，`javax.swing` 包现在包含 `java.desktop` 模块中。我们的模块需要声明它依赖它：
+JDK 已经模块化，`javax.swing` 包现在包含在 `java.desktop` 模块中。我们的模块需要声明它依赖它：
 
 ```java
 module v1ch12.hellomod {
@@ -24849,24 +25932,19 @@ module v1ch12.hellomod {
 
 模块图中不能有循环——也就是说一个模块不能直接或间接地依赖于自身。
 
-模块不会自动将访问权限传递给其他模块。在我们的示例中，`java.desktop` 模块声明它需要 `java.prefs`，而 `java.prefs` 模块声明它需要 `java.xml`。这并没有赋予 `java.desktop` 使用 `java.xml` 包的权利。它需要显式声明该依赖。从数学术语上讲，依赖关系不是“传递的”。通常情况下，这种行为是理想的，因为
+模块不会自动将访问权限传递给其他模块。在我们的示例中，`java.desktop` 模块声明它需要 `java.prefs`，而 `java.prefs` 模块声明它需要 `java.xml`。这并没有赋予 `java.desktop` 使用 `java.xml` 包的权利。它需要显式声明该依赖。从数学术语上讲，依赖关系不是“传递的”。通常情况下，这种行为是理想的，因为它使要求显式化，但正如你在第 12.11 节所示，在某些情况下你可以放松这一限制。
 
-
-使要求显式化，但正如你在第 12.11 节所示，在某些情况下你可以放松这一限制。
-
-> 注意：本节开头的错误信息指出，我们的 v1ch2.requiremod 模块没有“读取” java.desktop 模块。在 Java 平台模块系统的术语中，模块 M 在以下情况下读取 N：
-
-- 1. M 需要（requires）N。
-- 2. M 需要一个间接需要 N 的模块（参见第 12.11 节）。
-- 3. N 是 M 或 java.base。
+> 注意：本节开头的错误信息指出，我们的 `v1ch2.requiremod` 模块没有“读取” `java.desktop` 模块。在 Java 平台模块系统的术语中，模块 `M` 在以下情况下读取 `N`：
+> - `M` 需要（`requires`）`N`。
+> - `M` 需要一个间接需要 `N` 的模块（参见第 12.11 节）。
+> - `N` 是 `M` 或 `java.base`。
 
 ## 12.5. 导出包
 
 在上一节中，你已经看到一个模块如果想使用另一个模块的包，必须需要该模块。然而，这并不会自动使所需模块中的所有包导出。模块使用 `exports` 关键字声明它的哪些包是可访问的。例如，这里是 `java.xml` 模块声明的一部分：
 
-```
-module java.xml
-{
+```java
+module java.xml {
     exports javax.xml;
     exports javax.xml.catalog;
     exports javax.xml.datatype;
@@ -24876,19 +25954,21 @@ module java.xml
 }
 ```
 
-该模块提供了许多包，但通过不导出它们（例如 `jdk.xml.internal`）来隐藏了其他包。
 
-当一个包被导出时，其 public 和 protected 的类、接口以及它们的 public 和 protected 成员在模块外部是可访问的。（一如既往，protected 类型和成员仅在子类和同一个包中可访问。）
 
-然而，未导出的包在自己的模块外部是不可访问的。这与模块化之前的 Java 有很大不同。在过去，你可以使用任何包中的 public 类，即使它不属于公共 API 的部分。例如，当公共 API未提供适当的功能时，通常建议使用 `sun.misc.BASE64Encoder` 或 `com.sun.rowset.CachedRowSetImpl` 等类。
+该模块提供了许多包，但通过不导出它们（例如`jdk.xml.internal`）来隐藏了其他包。
+
+当一个包被导出时，其`public`和`protected`的类、接口以及它们的`public`和`protected`成员在模块外部是可访问的。（一如既往，`protected`类型和成员仅在子类和同一个包中可访问。）
+
+然而，未导出的包在自己的模块外部是不可访问的。这与模块化之前的 Java 有很大不同。在过去，你可以使用任何包中的`public`类，即使它不属于公共 API 的部分。例如，当公共 API 未提供适当的功能时，通常建议使用`sun.misc.BASE64Encoder`或`com.sun.rowset.CachedRowSetImpl`等类。
 
 如今，你无法再访问 Java 平台 API 中导出的包了，因为它们都包含在模块内部。结果是，某些程序在 Java 9 下将无法运行。当然，没有人承诺过保持非公共 API 的可用性，因此这不应该让人感到意外。
 
-让我们在一个简单的场景中使用 `exports`。我们将准备一个名为 `com.horstmann.greet` 的模块，它导出一个也名为 `com.horstmann.greet` 的包，遵循以下约定：为他人提供代码的模块应以其内部的顶层包命名。还有一个名为 `com.horstmann.greet.internal` 的包，我们没有导出它。
+让我们在一个简单的场景中使用`exports`。我们将准备一个名为`com.horstmann.greet`的模块，它导出一个也名为`com.horstmann.greet`的包，遵循以下约定：为他人提供代码的模块应以其内部的顶层包命名。还有一个名为`com.horstmann.greet.internal`的包，我们没有导出它。
 
-第一个包中有一个 public 的 `Greeter` 接口。
+第一个包中有一个`public`的`Greeter`接口。
 
-```
+```java
 package com.horstmann.greet;
 
 public interface Greeter
@@ -24897,11 +25977,12 @@ public interface Greeter
     {
         return new com.horstmann.greet.internal.GreeterImpl();
     }
+
     String greet(String subject);
 }
 ```
 
-第二个包中有一个实现该接口的类。由于它在第一个包中被访问，所以它是 public 的。
+第二个包中有一个实现该接口的类。由于它在第一个包中被访问，所以它是`public`的。
 
 ```java
 package com.horstmann.greet.internal;
@@ -24915,9 +25996,9 @@ public class GreeterImpl implements Greeter {
 }
 ```
 
-`com.horstmann.greet` 模块包含了这两个包，但只导出第一个：
+`com.horstmann.greet`模块包含了这两个包，但只导出第一个：
 
-```
+```java
 module com.horstmann.greet {
     exports com.horstmann.greet;
 }
@@ -24927,16 +26008,16 @@ module com.horstmann.greet {
 
 我们将应用程序放入第二个模块中，它将需要第一个模块：
 
-```
+```java
 module v1ch12.exportedpkg
 {
     requires com.horstmann.greet;
 }
 ```
 
-> **注意：** `exports` 语句后面跟着包名，而 `requires` 后面跟着的是模块名。
+> **注意：** `exports`语句后面跟着包名，而`requires`后面跟着的是模块名。
 
-我们的应用程序现在使用 `Greeter` 来获取问候：
+我们的应用程序现在使用`Greeter`来获取问候：
 
 ```java
 package com.horstmann.hello;
@@ -24947,8 +26028,8 @@ public class HelloWorld
 {
     public static void main(String[] args)
     {
-      Greeter greeter = Greeter.newInstance();
-      System.out.println(greeter.greet("Modular World"));
+        Greeter greeter = Greeter.newInstance();
+        System.out.println(greeter.greet("Modular World"));
     }
 }
 ```
@@ -24964,6 +26045,7 @@ com.horstmann.greet
       ├ Greeter.java
       └ internal
         └── GreeterImpl.java
+
 v1ch12.exportedpkg
 ├ module-info.java
 └ com
@@ -24972,7 +26054,7 @@ v1ch12.exportedpkg
       └── HelloWorld.java
 ```
 
-要构建此应用程序，首先编译 `com.horstmann.greet` 模块：
+要构建此应用程序，首先编译`com.horstmann.greet`模块：
 
 ```bash
 javac com.horstmann.greet/module-info.java \
@@ -24995,20 +26077,17 @@ java -p com.horstmann.greet:v1ch12.exportedpkg com.horstmann.hello.HelloWorld
 
 这个示例演示了如何隐藏一个包。
 
-
-
-
 ```java
 Optional<String> version = Greeter.class.getVersion();
 ```
 
-产生一个包含版本字符串 "1.0" 的 Optional。
+产生一个包含版本字符串 "1.0" 的`Optional`。
 
 **注意：** 模块于类加载器的等物是层（layer）。Java 平台模块系统将 JDK 模块和应用程序模块加载到引导层（boot layer）。程序可以使用层 API 加载其他模块（该 API 未在书中介绍）。此类程序可能会考虑模块的版本。预计 Java EE 应用程序服务器等程序的开发者将利用层 API 来为模块提供支持。
 
-**提示：** 如果你想将模块加载到 JShell 中，请将 JAR 文件包含在模块路径（module path）中并使用 --add-modules 选项：
+**提示：** 如果你想将模块加载到 JShell 中，请将 JAR 文件包含在模块路径（module path）中并使用`--add-modules`选项：
 
-```
+```bash
 jshell --module-path com.horstmann.greet-1.0.jar
 ```
 
@@ -25025,11 +26104,11 @@ double value = f.getDouble(obj);
 f.setDouble(obj, value * 1.1);
 ```
 
-除非安全管理器不允许访问私有字段，否则调用 `f.setAccessible(true)` 将成功。然而，在带有安全管理器的情况下运行 Java 程序并不常见，而且有许多库使用了反射访问。典型的例子是对象关系映射器（例如 JPA），它们会自动在数据库中持久化对象，以及在对象与 XML 或 JSON 之间转换的库（例如 JAXB 和 JSON-B）。
+除非安全管理器不允许访问私有字段，否则调用`f.setAccessible(true)`将成功。然而，在带有安全管理器的情况下运行 Java 程序并不常见，而且有许多库使用了反射访问。典型的例子是对象关系映射器（例如 JPA），它们会自动在数据库中持久化对象，以及在对象与 XML 或 JSON 之间转换的库（例如 JAXB 和 JSON-B）。
 
-如果你使用此类库，并且又想使用模块，就必须小心。为了演示这个问题，让我们将第 5 章中的 `ObjectAnalyzer` 类放入 `com.horstmann.util` 模块中。该类有一个 `toString` 方法，它使用反射打印对象的字段。
+如果你使用此类库，并且又想使用模块，就必须小心。为了演示这个问题，让我们将第 5 章中的`ObjectAnalyzer`类放入`com.horstmann.util`模块中。该类有一个`toString`方法，它使用反射打印对象的字段。
 
-一个独立的 `v1ch12.openpkg` 模块包含一个简单的 `Country` 类：
+一个独立的`v1ch12.openpkg`模块包含一个简单的`Country`类：
 
 ```java
 package com.horstmann.places;
@@ -25048,7 +26127,7 @@ public class Country
 }
 ```
 
-一个短程序演示了如何分析一个 `Country` 对象：
+一个短程序演示了如何分析一个`Country`对象：
 
 ```java
 package com.horstmann.places;
@@ -25066,11 +26145,13 @@ public class Demo {
 
 现在编译两个模块和 Demo 程序：
 
-```
+```bash
 javac com.horstmann.util/module-info.java \
 com.horstmann.util/com/horstmann/util/ObjectAnalyzer
-avac -p com.horstmann.util v1ch2.openpkg/module
+
+javac -p com.horstmann.util v1ch2.openpkg/module \
 v1ch2.openpkg/com/horstmann/places/*.java
+
 java -p v1ch2.openpkg:com.horstmann.util -m v1ch2
 ```
 
@@ -25080,7 +26161,7 @@ java -p v1ch2.openpkg:com.horstmann.util -m v1ch2
 
 当然，在纯粹的理论中，违反封装并探寻对象的私有成员是错误的。但是对象关系映射或 XML/JSON 绑定等机制是如此常见，以模块系统必须适应它们。
 
-使用 `opens` 关键字，模块可以开放一个包，从而允许对给定包中所有类的实例进行反射访问。以下是我们的模块需要做的：
+使用`opens`关键字，模块可以开放一个包，从而允许对给定包中所有类的实例进行反射访问。以下是我们的模块需要做的：
 
 ```java
 module vich12.openpkg {
@@ -25089,7 +26170,7 @@ module vich12.openpkg {
 }
 ```
 
-有了此更改，`ObjectAnalyzer` 将正常工作。
+有了此更改，`ObjectAnalyzer`将正常工作。
 
 ```java
 open module v1ch12.openpkg
@@ -25098,17 +26179,17 @@ open module v1ch12.openpkg
 }
 ```
 
-开放模块（open module）授予对其所有包的运行时访问权限，仿佛所有包都已声明为 `exports` 和 `opens`。然而，只有显式导出的包在编译时是可访问的。开放模块将模块系统的编译时安全性与传统的宽松的运行时行为结合在一起。
+开放模块（open module）授予对其所有包的运行时访问权限，仿佛所有包都已声明为`exports`和`opens`。然而，只有显式导出的包在编译时是可访问的。开放模块将模块系统的编译时安全性与传统的宽松的运行时行为结合在一起。
 
-回想第 5 章，JAR 文件除了类文件和清单文件（manifest），还可以包含文件资源，这些资源可以使用 `Class.getResourceAsStream` 方法加载，现在也可以通过 `Module.getResourceAsStream` 加载。如果资源存储在与模块中的包匹配的目录中，则该包必须对调用者开放。其他目录中的资源以及类文件和清单文件可以被任何人读取。
+回想第 5 章，JAR 文件除了类文件和清单文件（manifest），还可以包含文件资源，这些资源可以使用`Class.getResourceAsStream`方法加载，现在也可以通过`Module.getResourceAsStream`加载。如果资源存储在与模块中的包匹配的目录中，则该包必须对调用者开放。其他目录中的资源以及类文件和清单文件可以被任何人读取。
 
-> 注意：为了得到一个更真实的示例，我们可以使用 JSON-B 规范将 `Country` 对象转换为 XML 或 JSON。要使用 JSON-B 的 Yasson 实现，请从 Maven Central 下载 `jakarta.json-api-2.1.jar`、`jakarta.json-bind-3.0.jar` 和 `yasson-3.0.jar`。
+> **注意：** 为了得到一个更真实的示例，我们可以使用 JSON-B 规范将`Country`对象转换为 XML 或 JSON。要使用 JSON-B 的 Yasson 实现，请从 Maven Central 下载`jakarta.json-api-2.1.jar`、`jakarta.json-bind-3.0.jar`和`yasson-3.0.jar`。
 
 **注意：** 模块于类加载器的等物是层（layer）。Java 平台模块系统将 JDK 模块和应用程序模块加载到引导层（boot layer）。程序可以使用层 API 加载其他模块（该 API 未在书中介绍）。此类程序可能会考虑模块的版本。预计 Java EE 应用程序服务器等程序的开发者将利用层 API 来为模块提供支持。
 
-**提示：** 如果你想将模块加载到 JShell 中，请将 JAR 文件包含在模块路径（module path）中并使用 --add-modules 选项：
+**提示：** 如果你想将模块加载到 JShell 中，请将 JAR 文件包含在模块路径（module path）中并使用`--add-modules`选项：
 
-```
+```bash
 jshell --module-path com.horstmann.greet-1.0.jar
 ```
 
@@ -25129,29 +26210,26 @@ public Object getFieldValue(Object obj) throws NoSuchFieldException, IllegalAcce
 
 但如果你不想等待呢？Java 平台模块系统提供了两种机制来跨越今天非模块化世界与模块化应用程序之间的鸿沟：自动模块（automatic modules）和未命名模块（unnamed module）。
 
-为了迁移目的，你只需将任何 JAR 文件放在模块路径而非类路径上，即可将其转换为模块。位于模块路径且没有 `module-info.class` 的 JAR 文件被称为*自动模块*。自动模块具有以下属性：
+为了迁移目的，你只需将任何 JAR 文件放在模块路径而非类路径上，即可将其转换为模块。位于模块路径且没有`module-info.class`的 JAR 文件被称为*自动模块*。自动模块具有以下属性：
 
-- 它隐含地对所有模块有一个 `requires` 子句。
+- 它隐含地对所有模块有一个`requires`子句。
 - 它的所有包都是导出（exported）和开放（opened）的。
-- 如果 JAR 文件 `META-INF/MANIFEST.MF` 中存在 `Automatic-Module-Name` 条目，其值将成为模块名。
+- 如果 JAR 文件`META-INF/MANIFEST.MF`中存在`Automatic-Module-Name`条目，其值将成为模块名。
 - 否则，模块名从文件名获取，删除末尾的版本号并将非字母数字字符替换为点。
 
 前两条规则意味着自动模块中的包表现就像在类路径上一样。使用模块路径的原因是为了其他模块，允许它们表达对该模块的依赖。
 
-假设，你正在实现一个处理 CSV 文件并使用 Apache Commons CSV 库的模块。你希望在你的 `module-info.java` 文件中表达你的模块依赖于 Apache Commons CSV。
+假设，你正在实现一个处理 CSV 文件并使用 Apache Commons CSV 库的模块。你希望在你的`module-info.java`文件中表达你的模块依赖于 Apache Commons CSV。
 
-如果你将 `commons-csv-1.9.0.jar` 添加到模块路径，那么你的模块就可以引用该模块。它的名字是 `commons.csv`，因为末尾的版本号 `-1.9.0` 被删除了，非字母数字字符 - 被替换为点。
+如果你将`commons-csv-1.9.0.jar`添加到模块路径，那么你的模块就可以引用该模块。它的名字是`commons.csv`，因为末尾的版本号`-1.9.0`被删除了，非字母数字字符`-`被替换为点。
 
-这个名字可能是一个可以接受的模块名，因为 Commons CSV 是广为人知的，不太可能其他人为不同的模块使用相同的名称。但如果这个 JAR 文件的维护者能够使用他们控制的名称（最好是顶层包名 `org.apache.commons.csv`）作为模块名，会更好。他们只需要添加一行
+这个名字可能是一个可以接受的模块名，因为 Commons CSV 是广为人知的，不太可能其他人为不同的模块使用相同的名称。但如果这个 JAR 文件的维护者能够使用他们控制的名称（最好是顶层包名`org.apache.commons.csv`）作为模块名，会更好。他们只需要添加一行写入 JAR 包内部的`META-INF/MANIFEST.MF`文件。事实上，他们在`commons-csv-1.10.0.jar`中正是这么做的。
 
-
-写入 JAR 包内部的 `META-INF/MANIFEST.MF` 文件。事实上，他们在 `commons-csv-1.10.0.jar` 中正是这么做的。
-
-最终，希望他们能通过添加带有该模块名称的 `module-info.java`，将 JAR 文件转换为真正的模块。其他所有引用该名称 CSV 模块的模块都将继续正常工作。
+最终，希望他们能通过添加带有该模块名称的`module-info.java`，将 JAR 文件转换为真正的模块。其他所有引用该名称 CSV 模块的模块都将继续正常工作。
 
 > **注意：** 模块迁移计划是一场伟大的社会实验，没有人知道它何时会结束。在将第三方 JAR 放置到模块路径之前，请检查它们是否已经模块化，如果不是，请检查它们的清单（manifest）中是否包含模块名称。如果没有，你仍然可以将 JAR 转换为自动模块，但要准备好以后更新模块名称。
 
-为了实验自动 JAR，请从 https://commons.apache.org/proper/commons-csv 下载 Commons CSV 库的 1.9.0 和 1.10.0 版本。配套代码中的 `v2ch9.automod` 包含一个读取带有国家数据的 CSV 文件的简单程序：
+为了实验自动 JAR，请从 https://commons.apache.org/proper/commons-csv 下载 Commons CSV 库的 1.9.0 和 1.10.0 版本。配套代码中的`v2ch9.automod`包含一个读取带有国家数据的 CSV 文件的简单程序：
 
 ```java
 package com.horstmann.places;
@@ -25164,15 +26242,17 @@ public class CSVDemo {
         var in = new FileReader("countries.csv");
         Iterable<CSVRecord> records = CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(in);
         for (CSVRecord record : records) {
-            String name = record.get("Name");
-            double area = Double.parseDouble(record.get("Area"));
-            System.out.println(name + " has area " + area);
-        }
-    }
-}
 ```
 
-要将 `commons-csv-1.9.0.jar` 作为自动模块使用，我们需要通过它的文件名引用它：
+
+
+`String name = record.get("Name");`
+
+`double area = Double.parseDouble(record.get("Area"));`
+
+`System.out.println(name + " has area " + area);`
+
+要将`commons-csv-1.9.0.jar`作为自动模块使用，我们需要通过它的文件名引用它：
 
 ```java
 @SuppressWarnings("module")
@@ -25182,7 +26262,7 @@ module vich12.automod
 }
 ```
 
-对于 `commons-csv-1.10.0.jar`，使用清单中的 `Automatic-Module-Name`：
+对于`commons-csv-1.10.0.jar`，使用清单中的`Automatic-Module-Name`：
 
 ```
 requires org.apache.commons.csv
@@ -25194,17 +26274,18 @@ requires org.apache.commons.csv
 javac -p vich12.automod:commons-csv-1.10.0.jar \
     vich12.automod/com/horstmann/places/CSVDemo.java \
     vich12.automod/module-info.java
+
 java -p vich12.automod:commons-csv-1.10.0.jar \
-    -m vich12.automod/com/horstmann.places.CSVDemo
+    -m vich12.automod/com.horstmann.places.CSVDemo
 ```
 
-# 12.9. 未命名模块
+## 12.9. 未命名模块
 
 任何不在模块路径上的类都是未命名模块的一部分。从技术上讲，可能存在多个未命名模块，但它们共同作用的效果就像一个名为“未命名模块”的单一模块。与自动模块一样，未命名模块可以访问所有其他模块，并且它的所有包都已导出（exported）并打开（opened）。
 
-然而，没有任何显式模块可以访问未命名模块。（显式模块既不是自动模块也不是未命名模块——也就是说，在模块路径上带有 `module-info.class` 的模块）。换句话说，显式模块总是免受“类路径地狱”的影响。
+然而，没有任何显式模块可以访问未命名模块。（显式模块既不是自动模块也不是未命名模块——也就是说，在模块路径上带有`module-info.class`的模块）。换句话说，显式模块总是免受“类路径地狱”的影响。
 
-例如考虑上一节的程序。假设你将 `commons-csv-1.9.0.jar` 放在类路径而不是模块路径上：
+例如考虑上一节的程序。假设你将`commons-csv-1.9.0.jar`放在类路径而不是模块路径上：
 
 ```
 java --module-path v1ch12.automod \
@@ -25228,49 +26309,49 @@ Error occurred during initialization of boot layer java.lang.module.FindExceptio
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1613_0.png)
 
-# 12.10. 用于迁移的命令行标记
+## 12.10. 用于迁移的命令行标记
 
 即使你的程序没有使用模块，在使用 Java 9 及更高版本时也无法逃避模块化世界。你的应用程序代码可能位于未命名模块的类路径上，因此所有包都已导出并打开。尽管如此，代码仍然与已模块化的 Java 平台交互。
 
-从 Java 11 开始，编译时封装被严格执行。然而，在 Java 16 之前，允许运行时访问。默认行为是在每种违规行为首次出现时在控制台上显示警告。从 Java 16 开始，运行时反射访问也被强制执行。为了给你留出时间准备该变化，Java 9 到 16 的 java 启动器有一个 `--illegal-access` 标记，具有四种可能的设置：
+从 Java 11 开始，编译时封装被严格执行。然而，在 Java 16 之前，允许运行时访问。默认行为是在每种违规行为首次出现时在控制台上显示警告。从 Java 16 开始，运行时反射访问也被强制执行。为了给你留出时间准备该变化，Java 9 到 16 的`java`启动器有一个`--illegal-access`标记，具有四种可能的设置：
 
-1. `--illegal-access-permit` 是 Java 9 的默认行为，在第一次违规时打印消息。
-2. `--illegal-access-warn` 在每次违规时打印消息。
-3. `--illegal-access-debug` 在每次违规时打印堆栈跟踪信息。
-4. `--illegal-access-deny` 是 Java 16 的默认值，拒绝所有访问。
+1. `--illegal-access-permit`是 Java 9 的默认行为，在第一次违规时打印消息。
+2. `--illegal-access-warn`在每次违规时打印消息。
+3. `--illegal-access-debug`在每次违规时打印堆栈跟踪信息。
+4. `--illegal-access-deny`是 Java 16 的默认值，拒绝所有访问。
 
-从 Java 17 开始，`--illegal-access` 标记不再可用。`--add-exports` 和 `--add-opens` 标记允许你访问内部 API。指定要导出的模块，在本例中是未命名模块。
+从 Java 17 开始，`--illegal-access`标记不再可用。`--add-exports`和`--add-opens`标记允许你访问内部 API。指定要导出的模块，在本例中是未命名模块。
 
 ```
 --add-opens java.base/java.lang
 ```
 
-现在，假设你的应用程序使用反射访问私有字段或方法。如果应用程序使用此类库，请添加 `--add-opens`。为了更好地管理选项，可以将它们放在通过 `@` 指定的多个文件中。例如：
+现在，假设你的应用程序使用反射访问私有字段或方法。如果应用程序使用此类库，请添加`--add-opens`。为了更好地管理选项，可以将它们放在通过`@`指定的多个文件中。例如：
 
 ```
 java @options1 @options2 MyProg.java
 ```
 
-其中 `options1` 和 `options2` 文件包含 java 参数。选项文件有一些规则：
+其中`options1`和`options2`文件包含`java`参数。选项文件有一些规则：
 
 - 使用空格、制表符或换行符分隔选项。
 - 对于包含空格的参数使用双引号，例如 "Program Files"。
 - 以斜杠结尾的行与下一行合并。
-- 反斜杠必须转义，例如 `C:\\`。
-- 注释行以 `#` 开头。
+- 反斜杠必须转义，例如`C:\\`。
+- 注释行以`#`开头。
 
-# 12.11. 传递性需求
+## 12.11. 传递性需求
 
-在 12.4 节中，你已经看到了 `requires` 语句的基本形式。在本节中，你将看到两种有用的变体。
+在 12.4 节中，你已经看到了`requires`语句的基本形式。在本节中，你将看到两种有用的变体。
 
-在某些情况下，给定模块的用户声明所有所需的模块可能是繁琐的。例如考虑 `java.desktop` 模块。它需要三个模块：`java.prefs`、`java.datatransfer` 和 `java.xml`。`java.prefs` 模块仅在内部使用。然而，`java.datatransfer` 和 `java.xml` 的类出现在公共 API 中，方法如下：
+在某些情况下，给定模块的用户声明所有所需的模块可能是繁琐的。例如考虑`java.desktop`模块。它需要三个模块：`java.prefs`、`java.datatransfer`和`java.xml`。`java.prefs`模块仅在内部使用。然而，`java.datatransfer`和`java.xml`的类出现在公共 API 中，方法如下：
 
 ```
 java.awt.datatransfer.Clipboard java.awt.Toolkit
 java.beans.XMLDecoder(org.xml.sax.InputSource)
 ```
 
-这不是 `java.desktop` 模块的用户应该考虑的。因此，`java.desktop` 模块通过 `transitive` 修饰声明了需求：
+这不是`java.desktop`模块的用户应该考虑的。因此，`java.desktop`模块通过`transitive`修饰声明了需求：
 
 ```java
 module java.desktop
@@ -25282,13 +26363,11 @@ module java.desktop
 }
 ```
 
-任何依赖 java.desktop 的模块现在都会需要这两个模块。
+任何依赖`java.desktop`的模块现在都会需要这两个模块。
 
-> 注意：某些程序员建议，当 Java API 中使用了另一个模块的包时，应该始终使用 `transitive`。但这不是 Java 语言的要求。例如考虑 `java.sql` 模块：
+> 注意：某些程序员建议，当 Java API 中使用了另一个模块的包时，应该始终使用`transitive`。但这不是 Java 语言的要求。例如考虑`java.sql`模块：
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1617_0.png)
-
-
 
 ```java
 module java.sql
@@ -25298,50 +26377,44 @@ module java.sql
 }
 ```
 
-在整个 `java.sql` API 中，仅使用一次 `java.logging` 模块中的包，即 `java.sql.Driver.parentLogger` 方法，它返回一个 `java.util.logging.Logger`。不将此模块需求声明为传递性的（transitive）也是完全可以。那么，只有真正使用该方法的模块才需要声明它们需要 `java.logging`。
+在整个`java.sql` API 中，仅使用一次`java.logging`模块中的包，即`java.sql.Driver.parentLogger`方法，它返回一个`java.util.logging.Logger`。不将此模块需求声明为传递性的（transitive）也是完全可以。那么，只有真正使用该方法的模块才需要声明它们需要`java.logging`。
 
-`requires transitive` 语句的一个引有力的用法是聚合模块——一个不包含任何包且只有传递性要求的模块。其中一个模块是 `java.se` 模块，其声明如下：
+`requires transitive`语句的一个引有力的用法是聚合模块——一个不包含任何包且只有传递性要求的模块。其中一个模块是`java.se`模块，其声明如下：
 
 ```java
 module java.se
 {
     requires transitive java.compiler;
-```
-
-```java
-requires transitive java.datatransfer;
-requires transitive java.desktop;
-...
-requires transitive java.sql;
-requires transitive java.sql.rowset;
-requires transitive java.xml;
-requires transitive java.xml.crypto;
+    requires transitive java.datatransfer;
+    requires transitive java.desktop;
+    ...
+    requires transitive java.sql;
+    requires transitive java.sql.rowset;
+    requires transitive java.xml;
+    requires transitive java.xml.crypto;
 }
 ```
 
-对细粒度模块依赖感兴趣的程序员可以简单地要求 `java.se` 并获取 Java SE 平台的所有模块。
+对细粒度模块依赖感兴趣的程序员可以简单地要求`java.se`并获取 Java SE 平台的所有模块。
 
-最后，还有一种罕见的 `requires static` 变体，它声明模块在编译时必须存在，但在运行时是可选的。有两种用例：
+最后，还有一种罕见的`requires static`变体，它声明模块在编译时必须存在，但在运行时是可选的。有两种用例：
 
-- 1. 访问在编译时处理并声明在不同模块中的注解。
-- 2. 如果可用，则使用不同模块中的类，否则执行其他操作，例如：
+1. 访问在编译时处理并声明在不同模块中的注解。
+2. 如果可用，则使用不同模块中的类，否则执行其他操作，例如：
 
 ```java
 try {
   new oracle.jdbc.driver.OracleDriver();
   ...
-```
-
-```java
 }
 catch (NoClassDefFoundError er) {
     执行其他操作
 }
 ```
 
-# 12.12. 限定导出与打开
+## 12.12. 限定导出与打开
 
-在本节中，你将看到 `exports` 和 `opens` 语句的变体，它们将范围缩小到指定的模块集合。例如，`java.base` 模块包含一条语句：
+在本节中，你将看到`exports`和`opens`语句的变体，它们将范围缩小到指定的模块集合。例如，`java.base`模块包含一条语句：
 
 ```java
 exports sun.net to
@@ -25351,9 +26424,9 @@ exports sun.net to
 
 这种语句被称为**限定导出 (qualified export)**。列出的模块可以访问导出的包，但其他模块不能。
 
-过度使用限定导出可能意味着模块结构设计不良。尽管如此，在现有代码库模块化时，它们可能会出现。在这里，`sun.net` 包被放置在 `java.base` 模块中，因为那里最需要它。然而，其他几个模块也使用了该包。Java 平台设计者不想让 `java.base` 变得更大，也不想让内部的 `sun.net` 包公开。在全新的项目（greenfield project）中，可以设计更加模块化的 API。
+过度使用限定导出可能意味着模块结构设计不良。尽管如此，在现有代码库模块化时，它们可能会出现。在这里，`sun.net`包被放置在`java.base`模块中，因为那里最需要它。然而，其他几个模块也使用了该包。Java 平台设计者不想让`java.base`变得更大，也不想让内部的`sun.net`包公开。在全新的项目（greenfield project）中，可以设计更加模块化的 API。
 
-同样，你可以将 `opens` 语句限制为特定的模块。例如，在[第 12.7 节]，我们可以使用限定打开语句，如下：
+同样，你可以将`opens`语句限制为特定的模块。例如，在[第 12.7 节]，我们可以使用限定打开语句，如下：
 
 ```java
 module v1ch12.openpkg {
@@ -25362,11 +26435,11 @@ module v1ch12.openpkg {
 }
 ```
 
-现在，`com.horstmann.places` 包仅对 `com.horstmann.util` 模块开放。
+现在，`com.horstmann.places`包仅对`com.horstmann.util`模块开放。
 
-# 12.13. 服务加载
+## 12.13. 服务加载
 
-`ServiceLoader` 类（参见[第 6 章））提供了一种轻量级机制，用于匹配服务接口与实现。Java 平台模块系统使得这种机制更易使用。
+`ServiceLoader`类（参见[第 6 章））提供了一种轻量级机制，用于匹配服务接口与实现。Java 平台模块系统使得这种机制更易使用。
 
 这里是对服务加载的快速回顾。一个服务有一个接口和一个或多个可能的实现。这是一个接口的简单示例：
 
@@ -25407,9 +26480,9 @@ for (GreeterService greeter : greeterLoader) {
 }
 ```
 
-在过去，实现是通过包含实现类的 JAR 文件的 `META-INF/services` 目录中放置文本文件提供的。模块系统提供了一种更好的方法。你不需要文本文件，而可以在模块描述符中添加语句。
+在过去，实现是通过包含实现类的 JAR 文件的`META-INF/services`目录中放置文本文件提供的。模块系统提供了一种更好的方法。你不需要文本文件，而可以在模块描述符中添加语句。
 
-提供服务实现的模块添加一个 `provides` 语句，列出服务接口（可能定义在任何模块中）和实现类（必须是该模块的一部分）。这里是来自 `jdk.security.auth` 模块的示例：
+提供服务实现的模块添加一个`provides`语句，列出服务接口（可能定义在任何模块中）和实现类（必须是该模块的一部分）。这里是来自`jdk.security.auth`模块的示例：
 
 ```java
 module jdk.security.auth {
@@ -25424,31 +26497,17 @@ module jdk.security.auth {
 }
 ```
 
-```java
-module jdk.security.auth {
-  ...
-  provides javax.security.auth.spi.LoginModule
-    com.sun.security.auth.module.Krb5LoginModule,
-    com.sun.security.auth.module.UnixLoginModule,
-    com.sun.security.auth.module.JndiLoginModule,
-    com.sun.security.auth.module.KeyStoreLoginModule,
-    com.sun.security.auth.module.LdapLoginModule,
-    com.sun.security.auth.module.NTLoginModule;
-}
-```
+## 12.14. 用于模块的工具
 
-# 12.14. 用于模块的工具
+本节涵盖了 Java 开发工具包（JDK）中的`jdeps`、`jlink`和`jmod`工具。
 
-本节涵盖了 Java 开发工具包（JDK）中的 `jdeps`、`jlink` 和 `jmod` 工具。
-
-`jdeps` 工具分析一组给定 JAR 文件的依赖。例如，假设你想对 JUnit 4 进行模块化。运行：
+`jdeps`工具分析一组给定 JAR 文件的依赖。例如，假设你想对 JUnit 4 进行模块化。运行：
 
 ```
 jdeps -s junit-4.12.jar hamcrest-core-1.3.jar
 ```
 
-`-s` 标志生成摘要输出：
-
+`-s`标志生成摘要输出：
 
 ```
 hamcrest-core-1.3.jar -> java.base
@@ -25463,49 +26522,51 @@ junit-4.12.jar -> java.management
 
 图 12.3：JUnit4 模块图
 
-如果你省略 -s 标志，你将获得模块摘要，以及一个从包到所需的包和模块的映射。如果你添加 -v 标志，列表将把类映射到所需的包和模块。
+如果你省略`-s`标志，你将获得模块摘要，以及一个从包到所需的包和模块的映射。如果你添加`-v`标志，列表将把类映射到所需的包和模块。
 
---generate-module-info 选项会为每个分析的模块生成 module-info 文件：
+`--generate-module-info`选项会为每个分析的模块生成`module-info`文件：
 
 ```
 jdeps --generate-module-info /tmp/junit junit-4.
 ```
 
-**注意：** 还有一个选项可以使用“dot”语言生成图形化输出以描述图图。假设你已经安装了 dot 工具，运行这些命令：
+**注意：** 还有一个选项可以使用“dot”语言生成图形化输出以描述图图。假设你已经安装了`dot`工具，运行这些命令：
 
 ```
 jdeps -s -dotoutput /tmp/junit junit-4
 dot -Png /tmp/junit/summary.dot > /tmp
 ```
 
-然后 `summary.png` 看起来如下所示。
+然后`summary.png`看起来如下所示。
 
 ![](img/1bda005f6b519fd0924777a921aebffa_1629_0.png)
 
-# **图 12.4：** jdeps 的 Dot 输出
+**图 12.4：** `jdeps`的 Dot 输出
 
-使用 `jlink` 工具产生一个无需独立 Java 运行时运行的应用程序。生成的镜像比整个 JDK 小得多。你可以指定想要包含的模块和输出目录。
+使用`jlink`工具产生一个无需独立 Java 运行时运行的应用程序。生成的镜像比整个 JDK 小得多。你可以指定想要包含的模块和输出目录。
 
 ```
 jlink --module-path com.horstmann.greet.jar:v1ch
 --add-modules v1ch12.exportedpkg --output /tmp
 ```
 
-输出目录包含一个 bin 子目录，其中有一个一个 java 可执行文件。如果你运行
+输出目录包含一个`bin`子目录，其中有一个`java`可执行文件。如果你运行
 
 ```
 bin/java -m v1ch12.exportedpkg
 ```
 
-则会调用模块主类的 main 方法。
+则会调用模块主类的`main`方法。
 
-jlink 的意义在于它捆绑了运行应用程序所需的最小模块集。你可以列出所有模块：
+`jlink`的意义在于它捆绑了运行应用程序所需的最小模块集。你可以列出所有模块：
 
 ```
 bin/java --list-modules
 ```
 
-在这个示例中，输出是
+
+
+在这个示例中，输出是：
 
 ```
 v1ch12.exportedpkg
@@ -25513,13 +26574,13 @@ com.horstmann.greet
 java.base@21
 ```
 
-所有模块都包含在运行时镜像文件 lib/modules 中。在我的电脑上，该文件为 29MB，而所有 JDK 模块的运行时镜像占用 133MB。整个应用程序占用 55MB，仅是 JDK 大小的一 fraction。
+所有模块都包含在运行时镜像文件`lib/modules`中。在我的电脑上，该文件为 29MB，而所有 JDK 模块的运行时镜像占用 133MB。整个应用程序占用 55MB，仅是 JDK 大小的一小部分。
 
 这可以作为打包应用程序有用工具的基础。你仍然需要为多个平台生成文件集以及应用程序的启动脚本。
 
-> 注意：可以使用 image 命令检查运行时镜像。然而，该格式是 JVM 内部的，运行时镜像并非供其他工具生成或使用的。
+> 注意：可以使用`image`命令检查运行时镜像。然而，该格式是 JVM 内部的，运行时镜像并非供其他工具生成或使用的。
 
-最后，jmod 工具构建并检查 JDK 带的模块文件。当你查看 JDK 内部的 jmods 目录时，每个模块每个扩展名为 jmod 的文件。不再有 rt.jar 文件。
+最后，`jmod`工具构建并检查 JDK 带的模块文件。当你查看 JDK 内部的`jmods`目录时，每个模块对应一个扩展名为`jmod`的文件。不再有`rt.jar`文件。
 
 与 JAR 文件一样，这些文件包含类文件。此外，它们还可以持有本地代码库、命令、头文件、配置文件和法律声明。JMOD 文件使用 ZIP 格式。你可以使用任何 ZIP 工具检查其内容。
 
@@ -25529,85 +26590,80 @@ java.base@21
 
 # 附录
 
-本附录列出了 Java 语言中所有的关键字和类关键字词。“受限关键字”是仅在模块声明中的关键字，在其他地方是标识符。“受限标识符”是标识符，除非在某些特定位置使用。例如，var 总是标识符，除非在预期类型的地方使用。null、false 和 true 符号不是关键字，而是字面量。
+本附录列出了 Java 语言中所有的关键字和类关键字词。“受限关键字”是仅在模块声明中的关键字，在其他地方是标识符。“受限标识符”是标识符，除非在某些特定位置使用。例如，`var`总是标识符，除非在预期类型的地方使用。`null`、`false`和`true`符号不是关键字，而是字面量。
 
 表 1.1：Java 关键字
 
 | 关键字 | 含义 | 类型 | 参见章节 |
 | --- | --- | --- | --- |
-| abstract | 抽象类或方法 | 关键字 | 5 |
-| assert | 用于定位程序内部错误 | 关键字 | 7 |
-| boolean | 布尔类型 | 关键字 | 3 |
-| break | 跳出 switch 循环 | 关键字 | 3 |
-| byte | 8 位整数类型 | 关键字 | 3 |
-| case | switch 的一个分支 | 关键字 | 3 |
-| catch | try 块中捕获异常的语句 | 关键字 | 7 |
-| char | UTF-16 代码单元的类型 | 关键字 | 3 |
-| class | 定义类类型 | 关键字 | 4 |
-| const | 未使用 | 关键字 | |
-| continue | 在循环结束时继续 | 关键字 | 3 |
-| default | switch 的默认语句，或接口中的默认方法 | 关键字 | 3, 6 |
-| do | do/while 循环的顶部 | 关键字 | 3 |
-| double | 双精度浮点类型 | 关键字 | 3 |
-| else | if 的 else 分句 | 关键字 | 3 |
-| enum | 枚举类型 | 关键字 | 3 |
-| exports | 导出模块的包 | 关键字 | 12 |
-| extends | 定义父类 | 关键字 | 4 |
-| false | 布尔值之一 | 字面量 | 3 |
-| final | 常量，或不可重写的方法 | 关键字 | 5 |
-| finally | try 块中始终执行的部分 | 关键字 | 7 |
-| float | 单精度浮点类型 | 关键字 | 3 |
-| for | 循环类型 | 关键字 | 3 |
-| if | 条件语句 | 关键字 | 3 |
-| implements | 定义类实现的接口 | 关键字 | 6 |
-| import | 导入一个包 | 关键字 | 4 |
-| instanceof | 测试对象是否是某个类的实例 | 关键字 | 5 |
-| int | 32 位整数类型 | 关键字 | 3 |
-| interface | 类可以实现方法的抽象类型 | 关键字 | 6 |
-| long | 64 位整数类型 | 关键字 | 3 |
-| native | 由主机系统实现的方法 | 关键字 | 13 (Vol. II) |
-| new | 分配新对象或数组 | 关键字 | 3 |
-| non-sealed | 可以形成任意子类的密封类型类型 | 关键字 | 5 |
-| null | 空引用 | 字面量 | 3 |
-| module | 声明一个模块 | 受限关键字 | 12 |
-| open | 打开一个模块 | 受限关键字 | 12 |
-| package | 类的包 | 关键字 | 4 |
-| permits | 引入密封类型允许的子类型列表 | 受限标识符 | 3 |
-| private | 仅由类方法访问的特性 | 关键字 | 4 |
-| protected | 仅由类方法、其子类以及同包中的类类访问的特性 | 关键字 | 5 |
-| provides | 表示模块使用服务 | 受限关键字 | 12 |
-| public | 所有类方法可访问的特性 | 关键字 | 4 |
-| record | 定义具有一组最终实例变量的类 | 受限标识符 | 4 |
-| return | 从方法返回 | 关键字 | 3 |
-| sealed |具有受控直接子类的类型 | 受限标识符 | 5 |
-| short | 16 位整数类型 | 关键字 | 3 |
-| static | 类或接口特有的特性，而非类实例的特性 | 关键字 | 3, 6 |
-| strictfp | 使用严格规则进行浮点运算（已过时） | 关键字 | 2 |
-
-
-
-
+| `abstract` | 抽象类或方法 | 关键字 | 5 |
+| `assert` | 用于定位程序内部错误 | 关键字 | 7 |
+| `boolean` | 布尔类型 | 关键字 | 3 |
+| `break` | 跳出 switch 循环 | 关键字 | 3 |
+| `byte` | 8 位整数类型 | 关键字 | 3 |
+| `case` | switch 的一个分支 | 关键字 | 3 |
+| `catch` | try 块中捕获异常的语句 | 关键字 | 7 |
+| `char` | UTF-16 代码单元的类型 | 关键字 | 3 |
+| `class` | 定义类类型 | 关键字 | 4 |
+| `const` | 未使用 | 关键字 | |
+| `continue` | 在循环结束时继续 | 关键字 | 3 |
+| `default` | switch 的默认语句，或接口中的默认方法 | 关键字 | 3, 6 |
+| `do` | do/while 循环的顶部 | 关键字 | 3 |
+| `double` | 双精度浮点类型 | 关键字 | 3 |
+| `else` | if 的 else 分句 | 关键字 | 3 |
+| `enum` | 枚举类型 | 关键字 | 3 |
+| `exports` | 导出模块的包 | 关键字 | 12 |
+| `extends` | 定义父类 | 关键字 | 4 |
+| `false` | 布尔值之一 | 字面量 | 3 |
+| `final` | 常量，或不可重写的方法 | 关键字 | 5 |
+| `finally` | try 块中始终执行的部分 | 关键字 | 7 |
+| `float` | 单精度浮点类型 | 关键字 | 3 |
+| `for` | 循环类型 | 关键字 | 3 |
+| `if` | 条件语句 | 关键字 | 3 |
+| `implements` | 定义类实现的接口 | 关键字 | 6 |
+| `import` | 导入一个包 | 关键字 | 4 |
+| `instanceof` | 测试对象是否是某个类的实例 | 关键字 | 5 |
+| `int` | 32 位整数类型 | 关键字 | 3 |
+| `interface` | 类可以实现方法的抽象类型 | 关键字 | 6 |
+| `long` | 64 位整数类型 | 关键字 | 3 |
+| `native` | 由主机系统实现的方法 | 关键字 | 13 (Vol. II) |
+| `new` | 分配新对象或数组 | 关键字 | 3 |
+| `non-sealed` | 可以形成任意子类的密封类型 | 关键字 | 5 |
+| `null` | 空引用 | 字面量 | 3 |
+| `module` | 声明一个模块 | 受限关键字 | 12 |
+| `open` | 打开一个模块 | 受限关键字 | 12 |
+| `package` | 类的包 | 关键字 | 4 |
+| `permits` | 引入密封类型允许的子类型列表 | 受限标识符 | 3 |
+| `private` | 仅由类方法访问的特性 | 关键字 | 4 |
+| `protected` | 仅由类方法、其子类以及同包中的类访问的特性 | 关键字 | 5 |
+| `provides` | 表示模块使用服务 | 受限关键字 | 12 |
+| `public` | 所有类方法可访问的特性 | 关键字 | 4 |
+| `record` | 定义具有一组最终实例变量的类 | 受限标识符 | 4 |
+| `return` | 从方法返回 | 关键字 | 3 |
+| `sealed` | 具有受控直接子类的类型 | 受限标识符 | 5 |
+| `short` | 16 位整数类型 | 关键字 | 3 |
+| `static` | 类或接口特有的特性，而非类实例的特性 | 关键字 | 3, 6 |
+| `strictfp` | 使用严格规则进行浮点运算（已过时） | 关键字 | 2 |
 
 | 关键字 | 含义 | 类型 | 对应章节 |
 | --- | --- | --- | --- |
-| super | 超类对象或构造函数，或通配符中的下界 | 关键字 | 5 |
-| switch | 选择选择语句或表达式 | 关键字 | 3 |
-| synchronized | 对线程而言是原子性的方法或代码块 | 关键字 | 12 |
-| this | 方法的隐式参数，或该类的构造函数 | 关键字 | 4 |
-| throw | 抛出异常 | 关键字 | 7 |
-| throws | 方法可能抛出的异常 | 关键字 | 7 |
-| to | exports 或 opens 声明的一部分 | 受限关键字 | 12 |
-| transient | 标记不应持久化的数据 | 关键字 | 2 (卷二) |
-| transitive | 修饰 requires 声明 | 受限关键字 | 12 |
-| true | 两个布尔值之一 | 字面量 | 3 |
-| try | 用于捕获异常的代码块 | 关键字 | 7 |
-| uses | 表示模块使用某项服务 | 受限关键字 | 12 |
-| var | 声明一个类型推断的变量 | 受限标识符 | 3 |
-| void | 表示无返回值的方法 | 关键字 | 3 |
-| volatile | 确保字段被多个线程一致地访问 | 关键字 | 12 |
-| when | 引入模式的守卫 | 受限关键字 | 5 |
-| while | 循环 | 关键字 | 3 |
-| with | 在 provides 语句中定义服务类 | 受限关键字 | 12 |
-| yield | 产生 switch 表达式的值 | 受限标识符 | 3 |
-| _ (下划线) | 无名变量或模式（预览特性） | 关键字 | 5 |
-
+| `super` | 超类对象或构造函数，或通配符中的下界 | 关键字 | 5 |
+| `switch` | 选择语句或表达式 | 关键字 | 3 |
+| `synchronized` | 对线程而言是原子性的方法或代码块 | 关键字 | 12 |
+| `this` | 方法的隐式参数，或该类的构造函数 | 关键字 | 4 |
+| `throw` | 抛出异常 | 关键字 | 7 |
+| `throws` | 方法可能抛出的异常 | 关键字 | 7 |
+| `to` | exports 或 opens 声明的一部分 | 受限关键字 | 12 |
+| `transient` | 标记不应持久化的数据 | 关键字 | 2 (卷二) |
+| `transitive` | 修饰 requires 声明 | 受限关键字 | 12 |
+| `true` | 两个布尔值之一 | 字面量 | 3 |
+| `try` | 用于捕获异常的代码块 | 关键字 | 7 |
+| `uses` | 表示模块使用某项服务 | 受限关键字 | 12 |
+| `var` | 声明一个类型推断的变量 | 受限标识符 | 3 |
+| `void` | 表示无返回值的方法 | 关键字 | 3 |
+| `volatile` | 确保字段被多个线程一致地访问 | 关键字 | 12 |
+| `when` | 引入模式的守卫 | 受限关键字 | 5 |
+| `while` | 循环 | 关键字 | 3 |
+| `with` | 在 provides 语句中定义服务类 | 受限关键字 | 12 |
+| `yield` | 产生 switch 表达式的值 | 受限标识符 | 3 |
+| `_` (下划线) | 无名变量或模式（预览特性） | 关键字 | 5 |

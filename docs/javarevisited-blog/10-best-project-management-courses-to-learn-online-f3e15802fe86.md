@@ -1,3 +1,4 @@
+
 # 2023 年在线学习的 10 门最佳项目管理课程
 
 > 原文：<https://medium.com/javarevisited/10-best-project-management-courses-to-learn-online-f3e15802fe86?source=collection_archive---------0----------------------->
@@ -6,9 +7,9 @@
 
 [![](img/3891b801dba4078c8b9ef0bd97f871a5.png)](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fthe-project-management-course-beginner-to-project-manager%2F)
 
-大家好，如果你想在 2023 年成为一名项目经理，或者只是想学习项目管理，并寻找在线课程和书籍等最佳资源，那么你来对地方了。早些时候，我已经分享了 [**最佳 PMP 课程**](/javarevisited/5-best-pmp-certification-courses-and-practice-tests-to-become-a-project-management-professional-in-8c0e7c574995?source=---------11----------------------------) ，在这篇文章中，我将为初学者和有经验的人分享学习项目管理的最佳课程。
+大家好，如果你想在 2023 年成为一名项目经理，或者只是想学习项目管理，并寻找在线课程和书籍等最佳资源，那么你来对地方了。早些时候，我已经分享了[**最佳 PMP 课程**](/javarevisited/5-best-pmp-certification-courses-and-practice-tests-to-become-a-project-management-professional-in-8c0e7c574995?source=---------11----------------------------)，在这篇文章中，我将为初学者和有经验的人分享学习项目管理的最佳课程。
 
-这些课程是从像 [Udemy](/javarevisited/10-best-python-3-courses-on-udemy-ddd4e3ec5dbf) 、 [Coursera](/javarevisited/top-15-free-coursera-courses-and-certifications-for-it-professionals-384207d56f45) 、 [Pluralsight](/javarevisited/top-10-pluralsight-courses-to-learn-programming-and-software-development-during-covid-19-stay-at-30b7d8a4f88f) 和 [edX](/javarevisited/10-free-best-edx-certifications-and-courses-to-learn-online-3473d466f968) 这样的热门在线学习网站上策划的，受到成千上万学习者的信任。你也可以加入他们，成为你一直想成为的项目管理专家。该列表包括初级和中级项目管理课程。
+这些课程是从像 [Udemy](/javarevisited/10-best-python-3-courses-on-udemy-ddd4e3ec5dbf)、[Coursera](/javarevisited/top-15-free-coursera-courses-and-certifications-for-it-professionals-384207d56f45)、[Pluralsight](/javarevisited/top-10-pluralsight-courses-to-learn-programming-and-software-development-during-covid-19-stay-at-30b7d8a4f88f) 和 [edX](/javarevisited/10-free-best-edx-certifications-and-courses-to-learn-online-3473d466f968) 这样的热门在线学习网站上策划的，受到成千上万学习者的信任。你也可以加入他们，成为你一直想成为的项目管理专家。该列表包括初级和中级项目管理课程。
 
 你在城市中看到的每一个成功的项目，比如生产要素和汽车，或者你家里的小东西，比如电脑或冰箱，都是项目，它们都需要一个项目经理来关注所有阶段的每个细节，直到项目完成，我们从中了解到，简单的项目管理就是从头到尾把事情做好。
 
@@ -22,7 +23,7 @@
 
 ## 1.[项目管理课程](/javarevisited/10-best-python-3-courses-on-udemy-ddd4e3ec5dbf)
 
-这是初学者学习项目管理的最全面、最好的课程之一，从项目管理术语的定义、如何启动项目以及项目的各个阶段(如启动和计划阶段，如成本、时间、期望值)开始，最后是执行阶段，并使用 excel 管理项目。
+这是初学者学习项目管理的最全面、最好的课程之一，从项目管理术语的定义、如何启动项目以及项目的各个阶段(如启动和计划阶段，如成本、时间、期望值)开始，最后是执行阶段，并使用 `excel` 管理项目。
 
 以下是加入本课程的链接— [项目管理课程](/javarevisited/10-best-python-3-courses-on-udemy-ddd4e3ec5dbf)
 
@@ -30,7 +31,7 @@
 
 ## 2. [PMP 备考研讨会](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpmp-pmbok6-35-pdus%2F)【Udemy 课程】
 
-本 Udemy 课程将为您准备项目专业管理 PMP，这是一个项目管理学习的国际认证，因此本课程期望您对项目管理有一些了解，并帮助您提高您在该领域的技能，如管理项目范围和成本等。
+本 Udemy 课程将为您准备项目专业管理 `PMP`，这是一个项目管理学习的国际认证，因此本课程期望您对项目管理有一些了解，并帮助您提高您在该领域的技能，如管理项目范围和成本等。
 
 以下是参加本课程的链接— [PMP 考试准备研讨会](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpmp-pmbok6-35-pdus%2F)
 
@@ -38,7 +39,7 @@
 
 ## 3.[项目管理基础](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fproject-management-training-fundamentals-crash-course%2F)
 
-另一个适合初学者的很好的课程，首先向您展示项目管理的一些概念，然后转向集成管理，如何在您的项目中执行这些概念，以及范围管理、成本管理、人力资源(HR)和风险管理等等。
+另一个适合初学者的很好的课程，首先向您展示项目管理的一些概念，然后转向集成管理，如何在您的项目中执行这些概念，以及范围管理、成本管理、人力资源(`HR`)和风险管理等等。
 
 以下是加入本课程的链接— [项目管理基础](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fproject-management-training-fundamentals-crash-course%2F)
 
@@ -54,9 +55,9 @@
 
 ![](img/408ea301a4dfd794cc12dbc66a5b8abf.png)
 
-顺便说一下，除了单独加入这些课程和专业，你还可以加入 [**Coursera Plus**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus) ，这是 Coursera 的一个订阅计划，让你可以无限制地访问他们最受欢迎的课程、专业、专业证书和指导项目。
+顺便说一下，除了单独加入这些课程和专业，你还可以加入 [**Coursera Plus**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus)，这是 Coursera 的一个订阅计划，让你可以无限制地访问他们最受欢迎的课程、专业、专业证书和指导项目。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
 ## 5.[软件工程师项目管理](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fsoftware-engineer-project-management)【plural sight 最佳课程】
 
@@ -70,11 +71,11 @@
 
 我向所有技术专业人士强烈推荐这一订阅，因为它提供了超过 7000 个在线课程的即时访问，以学习任何技术技能。或者，你也可以使用他们的 [**10 天免费通行证**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial) 免费观看这个课程。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial>
 
 ## 6.[项目管理](https://www.awin1.com/cread.php?awinmid=6798&awinaffid=631878&platform=dl&ued=https%3A%2F%2Fwww.edx.org%2Fmicromasters%2Fritx-project-management)【edX 最佳课程】
 
-由罗切斯特理工学院开发的 MicroMaster 计划，旨在通过学习项目管理的生命周期和使用一些工具来执行项目，以及为您的团队创建一个有组织的环境和制作国际项目等，成为一名成功的项目经理。
+由罗切斯特理工学院开发的 `MicroMaster` 计划，旨在通过学习项目管理的生命周期和使用一些工具来执行项目，以及为您的团队创建一个有组织的环境和制作国际项目等，成为一名成功的项目经理。
 
 以下是参加本课程的链接— [项目管理](https://www.awin1.com/cread.php?awinmid=6798&awinaffid=631878&platform=dl&ued=https%3A%2F%2Fwww.edx.org%2Fmicromasters%2Fritx-project-management)
 
@@ -82,7 +83,7 @@
 
 ## 7.[面向初学者的真实项目管理](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fproject-management-detailed-training-for-beginners-by-amirkhan%2F)【Udemy】
 
-一个小型的初学者课程教你如何管理项目，从一些定义开始，如运营和项目与 PMO 部门之间的区别以及项目管理的好处，最后学习和应用项目管理的五个阶段。
+一个小型的初学者课程教你如何管理项目，从一些定义开始，如运营和项目与 `PMO` 部门之间的区别以及项目管理的好处，最后学习和应用项目管理的五个阶段。
 
 以下是加入本课程的链接— [初学者真实项目管理](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fproject-management-detailed-training-for-beginners-by-amirkhan%2F)
 
@@ -114,13 +115,15 @@
 
 **以下是参加本课程** — [Asana 2023 —项目管理工具](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fasana-project-management-tool%2F)的链接
 
+
+
 [![](img/d455b0942fbac0873baa22ab9a9c944b.png)](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fasana-project-management-tool%2F)
 
-以上就是 2023 年要加入的**最佳项目管理课程。如果你想在 2023 年学习项目管理，那么你可以参加这些课程，学习项目管理工具、实践和流程，开始你的项目经理生涯。**
+以上就是 2023 年要加入的最佳项目管理课程。如果你想在 2023 年学习项目管理，那么你可以参加这些课程，学习项目管理工具、实践和流程，开始你的项目经理生涯。
 
 这份名单包括来自像 [Udemy](/javarevisited/10-best-udemy-online-courses-for-java-developers-4c9ab70cd01f) 、 [Coursera](/javarevisited/10-best-coursera-courses-for-web-development-and-web-design-9ec54ed92dd9) 、 [Pluralsight](/javarevisited/7000-free-pluralsight-courses-to-build-in-demand-tech-skills-without-leaving-your-house-40edb50a8cf2) 和 [edX](/javarevisited/10-free-best-edx-certifications-and-courses-to-learn-online-3473d466f968) 这样的网站的最好的免费和付费课程，这些课程可能会让你成为一名专业的项目经理，也为你准备 PMP 认证，如果你获得了这个认证，你就可以建立一个成功的职业生涯。
 
-您可能喜欢的其他**编程和开发资源**文章
+## 您可能喜欢的其他编程和开发资源文章
 
 *   [Python 和 JavaScript——从哪个开始比较好？](https://javarevisited.blogspot.com/2019/05/python-vs-javascript-which-programming-language-beginners-should-learn.html)
 *   [2023 年学习 Java 的十大课程](/javarevisited/top-5-java-online-courses-for-beginners-best-of-lot-1e1e240a758)
@@ -138,8 +141,8 @@
 *   [程序员的 10 门 Python 课程和认证](/better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
 *   [Python vs . Java——初学者应该学习哪种编程语言？](https://javarevisited.blogspot.com/2018/06/java-vs-python-which-programming-language-to-learn-first.html)
 
-非常感谢您阅读这篇文章。如果你觉得这些*最佳项目管理课程*有用，那么请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
+非常感谢您阅读这篇文章。如果你觉得这些最佳项目管理课程有用，那么请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
 **附言** —如果你想学习项目管理并寻找免费的在线课程来启动你的项目管理之旅，那么你也可以查看 Udemy 的这个免费的 [**项目管理简介| PM101 培训课程**](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fproject-management-101-pm101%2F) 。超过 11，000 人已经参加了这个课程学习项目管理。
 
-<https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fproject-management-101-pm101%2F> 
+<https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fproject-management-101-pm101%2F>

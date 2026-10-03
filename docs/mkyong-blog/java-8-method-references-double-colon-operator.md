@@ -1,59 +1,61 @@
-# Java 8 方法引用，双冒号(::)运算符
+
+# Java 8 方法引用，双冒号（`::`）运算符
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java8/java-8-method-references-double-colon-operator/>
 
-在 Java 8 中，双冒号(::)操作符被称为方法引用。参考下面的例子:
+在 Java 8 中，双冒号（`::`）操作符被称为方法引用。参考下面的例子：
 
 打印列表的匿名类。
 
 ```java
- List<String> list = Arrays.asList("node", "java", "python", "ruby");
+List<String> list = Arrays.asList("node", "java", "python", "ruby");
 list.forEach(new Consumer<String>() {       // anonymous class
     @Override
     public void accept(String str) {
         System.out.println(str);
     }
-}); 
+});
 ```
 
-匿名类-> Lambda 表达式。
+匿名类 -> Lambda 表达式。
 
 ```java
- List<String> list = Arrays.asList("node", "java", "python", "ruby");
-list.forEach(str -> System.out.println(str)); // lambda 
+List<String> list = Arrays.asList("node", "java", "python", "ruby");
+list.forEach(str -> System.out.println(str)); // lambda
 ```
 
-Lambda 表达式->方法引用。
+Lambda 表达式 -> 方法引用。
 
 ```java
- List<String> list = Arrays.asList("node", "java", "python", "ruby");
-list.forEach(System.out::println);          // method references 
+List<String> list = Arrays.asList("node", "java", "python", "ruby");
+list.forEach(System.out::println);          // method references
 ```
 
-**匿名类->λ表达式- >方法引用**
+**匿名类 -> λ 表达式 -> 方法引用**
 
 **注意**
+
 lambda 表达式或方法引用什么都不做，只是对现有方法的另一种方式调用。通过方法引用，它获得了更好的可读性。
 
-有四种方法引用:
+有四种方法引用：
 
-*   对静态方法的引用`ClassName::staticMethodName`
-*   引用特定对象的实例方法`Object::instanceMethodName`
-*   引用特定类型的任意对象的实例方法`ContainingType::methodName`–
-*   对构造函数的引用`ClassName::new`
+- 对静态方法的引用：`ClassName::staticMethodName`
+- 引用特定对象的实例方法：`Object::instanceMethodName`
+- 引用特定类型的任意对象的实例方法：`ContainingType::methodName`
+- 对构造函数的引用：`ClassName::new`
 
-## 1.静态法
+## 1. 静态方法
 
-λ表达式。
+λ 表达式。
 
 ```java
- (args) -> ClassName.staticMethodName(args) 
+(args) -> ClassName.staticMethodName(args)
 ```
 
-方法参考。
+方法引用。
 
 ```java
- ClassName::staticMethodName 
+ClassName::staticMethodName
 ```
 
 1.1 这个例子打印一个字符串列表，方法引用一个静态方法`SimplePrinter::print`。
@@ -61,7 +63,7 @@ lambda 表达式或方法引用什么都不做，只是对现有方法的另一�
 Java8MethodReference1a.java
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.Arrays;
 import java.util.List;
@@ -95,7 +97,7 @@ class SimplePrinter {
     public static void print(String str) {
         System.out.println(str);
     }
-} 
+}
 ```
 
 1.2 这个例子将一个字符串列表转换成一个整数列表，方法引用一个静态方法`Integer::parseInt`。
@@ -103,15 +105,15 @@ class SimplePrinter {
 Integer.java
 
 ```java
- public static int parseInt(String s) throws NumberFormatException {
-        return parseInt(s,10);
-  } 
+public static int parseInt(String s) throws NumberFormatException {
+    return parseInt(s, 10);
+}
 ```
 
 Java8MethodReference1b.java
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.Arrays;
 import java.util.List;
@@ -146,7 +148,7 @@ public class Java8MethodReference1b {
 
     }
 
-} 
+}
 ```
 
 1.3 此示例连接两个`Integer`并返回一个`String`。它将方法引用静态方法`IntegerUtils::join`作为参数传递给另一个接受`BiFunction`的方法。
@@ -154,7 +156,7 @@ public class Java8MethodReference1b {
 Java8MethodReference1c.java
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.function.BiFunction;
 
@@ -164,11 +166,11 @@ public class Java8MethodReference1c {
 
         // anonymous class
         String result1 = playTwoArgument(1, 2, new BiFunction<Integer, Integer, String>() {
-                  @Override
-                  public String apply(Integer a, Integer b) {
-                      return IntegerUtils.join(a, b);
-                  }
-              });                                                                   // 3
+            @Override
+            public String apply(Integer a, Integer b) {
+                return IntegerUtils.join(a, b);
+            }
+        });                                                                   // 3
 
         // lambda
         String result1 = playTwoArgument(1, 2, (a, b) -> IntegerUtils.join(a, b));  // 3
@@ -179,33 +181,33 @@ public class Java8MethodReference1c {
     }
 
     private static <R> R playTwoArgument(Integer i1, Integer i2,
-        BiFunction<Integer, Integer, R> func) {
+                                         BiFunction<Integer, Integer, R> func) {
         return func.apply(i1, i2);
     }
 
 }
 
-class IntegerUtils{
+class IntegerUtils {
 
     public static String join(Integer a, Integer b) {
         return String.valueOf(a + b);
     }
 
-} 
+}
 ```
 
-## 2.对特定对象的实例方法的引用
+## 2. 对特定对象的实例方法的引用
 
-λ表达式。
+λ 表达式。
 
 ```java
- (args) -> object.instanceMethodName(args) 
+(args) -> object.instanceMethodName(args)
 ```
 
-方法参考。
+方法引用。
 
 ```java
- object::instanceMethodName 
+object::instanceMethodName
 ```
 
 2.1 这个例子按照薪水对一个`Employee`列表进行排序。我们可以引用一个特定对象`ComparatorProvider`的实例方法`compareBySalary`。
@@ -213,7 +215,7 @@ class IntegerUtils{
 Java8MethodReference2
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
@@ -265,13 +267,13 @@ class ComparatorProvider {
         return o1.getAge().compareTo(o2.getAge());
     }
 
-} 
+}
 ```
 
 Employee.java
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.math.BigDecimal;
 
@@ -282,63 +284,64 @@ public class Employee {
     BigDecimal salary;
 
     // generated by IDE, getters, setters, constructor, toString
-} 
+}
 ```
 
 输出
 
 ```java
- Employee{name='zilap', age=5, salary=100}
+Employee{name='zilap', age=5, salary=100}
 Employee{name='ali', age=25, salary=2500}
 Employee{name='mkyong', age=38, salary=3800}
-Employee{name='unknown', age=99, salary=9999} 
+Employee{name='unknown', age=99, salary=9999}
 ```
 
-## 3.对特定类型的任意对象的实例方法的引用。
+## 3. 对特定类型的任意对象的实例方法的引用
 
-这种说法有点混乱，不需要什么解释，请看下面的例子:
+这种说法有点混乱，不需要什么解释，请看下面的例子：
 
-λ表达式。
+λ 表达式。
 
 ```java
- // arg0 is the first argument
+// arg0 is the first argument
 (arg0, rest_of_args) -> arg0.methodName(rest_of_args)
 
 // example, assume a and b are String
-(a, b) -> a.compareToIgnoreCase(b) 
+(a, b) -> a.compareToIgnoreCase(b)
 ```
 
-方法参考。
+方法引用。
 
 ```java
- // first argument type
+// first argument type
 arg0_Type::methodName
 
 // arg0 is type of ClassName
 ClassName::methodName
 
 // example, a is type of String
-String::compareToIgnoreCase 
+String::compareToIgnoreCase
 ```
 
-对于`(String a, String b)`，其中`a`和`b`为任意名称，`String`为其任意类型。这个例子使用了对特定类型`String`的任意对象`a`(第一个参数)的实例方法`compareToIgnoreCase`的方法引用。
+对于`(String a, String b)`，其中`a`和`b`为任意名称，`String`为其任意类型。这个例子使用了对特定类型`String`的任意对象`a`（第一个参数）的实例方法`compareToIgnoreCase`的方法引用。
 
 3.1 查看本[方法参考](http://web.archive.org/web/20220801141236/https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html)中的正式示例
 
 ```java
- String[] stringArray = { "Barbara", "James", "Mary", "John",
-                "Patricia", "Robert", "Michael", "Linda" };
-  Arrays.sort(stringArray, String::compareToIgnoreCase); 
+String[] stringArray = { "Barbara", "James", "Mary", "John",
+        "Patricia", "Robert", "Michael", "Linda" };
+Arrays.sort(stringArray, String::compareToIgnoreCase);
 ```
 
 我们传递了一个方法引用`String::compareToIgnoreCase`作为`Arrays.sort`的比较器。
 
 **讲解**
-复习`Arrays.sort`方法签名:
+
+复习`Arrays.sort`方法签名：
 
 ```java
- public static <T> void sort(T[] a, Comparator<? super T> c) {
-} 
+public static <T> void sort(T[] a, Comparator<? super T> c) {
+}
 ```
 
 在上面的例子中，`Arrays.sort`期望一个`Comparator<String>`。`Comparator`是一个函数接口，它的抽象方法`compare`匹配`BiFunction<String, String, Integer>`，它带两个参数`String`并返回一个`int`。
@@ -346,41 +349,43 @@ String::compareToIgnoreCase
 Comparator.java
 
 ```java
- @FunctionalInterface
+@FunctionalInterface
 public interface Comparator<T> {
     int compare(T o1, T o2);  // this matches BiFunction<String, String, Integer>
-} 
+}
 ```
 
-查看`BiFunction`方法签名:
+查看`BiFunction`方法签名：
 
 BiFunction.java
 
 ```java
- @FunctionalInterface
+@FunctionalInterface
 public interface BiFunction<T, U, R> {
-      R apply(T t, U u);
-} 
+    R apply(T t, U u);
+}
 ```
 
-**延伸阅读——**[Java 8 双函数示例](/web/20220801141236/https://mkyong.com/java8/java-8-bifunction-examples/)
 
-below lambda 为`BiFunction<String,String,Integer>`提供了实现，因此`Arrays.sort`接受 below lambda 表达式作为有效语法。
+
+**延伸阅读——** [Java 8 双函数示例](/web/20220801141236/https://mkyong.com/java8/java-8-bifunction-examples/)
+
+`below lambda`为`BiFunction<String,String,Integer>`提供了实现，因此`Arrays.sort`接受`below lambda`表达式作为有效语法。
 
 ```java
- (String a, String b) -> a.compareToIgnoreCase(b) // return int
+(String a, String b) -> a.compareToIgnoreCase(b) // return int
 
 // a is type of String
 // method reference
-String::compareToIgnoreCase 
+String::compareToIgnoreCase
 ```
 
 3.2 让我们看另一个例子。
 
-Java8MethodReference3a.java
+`Java8MethodReference3a.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.function.BiPredicate;
 import java.util.function.Function;
@@ -418,15 +423,15 @@ public class Java8MethodReference3a {
         return func.test(s1, s2);
     }
 
-} 
+}
 ```
 
 3.3 让我们看另一个例子，自定义对象。
 
-Java8MethodReference3b.java
+`Java8MethodReference3b.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -482,41 +487,41 @@ class Invoice {
     Integer qty;
 
     // generated by IDE, setters, gettes, constructor, toString
-} 
+}
 ```
 
-第一个参数是一种类型的`InvoiceCalculator`。因此，我们可以引用特定类型`InvoiceCalculator`的任意对象`f`的实例方法(`normal or promotion`)。
+第一个参数是一种类型的`InvoiceCalculator`。因此，我们可以引用特定类型`InvoiceCalculator`的任意对象`f`的实例方法（`normal`或`promotion`）。
 
 ```java
- (f, o) -> f.normal(o))
+(f, o) -> f.normal(o))
 (f, o) -> f.promotion(o))
 
 InvoiceCalculator::normal
-InvoiceCalculator::promotion 
+InvoiceCalculator::promotion
 ```
 
 明白了吗？没有更多的例子🙂
 
-## 4.对构造函数的引用。
+## 4. 对构造函数的引用
 
 λ表达式。
 
 ```java
- (args) -> new ClassName(args) 
+(args) -> new ClassName(args)
 ```
 
 方法参考。
 
 ```java
- ClassName::new 
+ClassName::new
 ```
 
 4.1 对默认构造函数的引用。
 
-Java8MethodReference4a.java
+`Java8MethodReference4a.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
@@ -557,15 +562,15 @@ class Invoice {
     }
 
     //... generated by IDE
-} 
+}
 ```
 
-4.2 对接受参数的构造函数的引用—`Invoice(BigDecimal unitPrice)`
+4.2 对接受参数的构造函数的引用——`Invoice(BigDecimal unitPrice)`
 
-Java8MethodReference4b.java
+`Java8MethodReference4b.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -613,30 +618,30 @@ class Invoice {
     }
 
     //... generated by IDE
-} 
+}
 ```
 
 输出
 
 ```java
- Invoice{no='null', unitPrice=9.99, qty=null}
+Invoice{no='null', unitPrice=9.99, qty=null}
 Invoice{no='null', unitPrice=2.99, qty=null}
-Invoice{no='null', unitPrice=8.99, qty=null} 
+Invoice{no='null', unitPrice=8.99, qty=null}
 ```
 
 完成了。
 
 ## 参考
 
-*   [Java 8 方法参考:如何使用](http://web.archive.org/web/20220801141236/https://www.codementor.io/@eh3rrera/using-java-8-method-reference-du10866vx)
-*   [了解 Java 8 方法引用](http://web.archive.org/web/20220801141236/http://moandjiezana.com/blog/2014/understanding-method-references/)
-*   [λ表达式的翻译](http://web.archive.org/web/20220801141236/http://cr.openjdk.java.net/~briangoetz/lambda/lambda-translation.html)
-*   [Java 教程–方法参考](http://web.archive.org/web/20220801141236/https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html)
-*   [Java 8 教程](/web/20220801141236/https://mkyong.com/tutorials/java-8-tutorials/)
-*   [Java 8 函数示例](/web/20220801141236/https://mkyong.com/java8/java-8-function-examples/)
-*   [Java 8 双功能示例](/web/20220801141236/https://mkyong.com/java8/java-8-bifunction-examples/)
-*   [Java 8 谓词示例](/web/20220801141236/https://mkyong.com/java8/java-8-predicate-examples/)
-*   [Java 8 双预测示例](/web/20220801141236/https://mkyong.com/java8/java-8-bipredicate-examples/)
-*   [Java 8 供应商示例](/web/20220801141236/https://mkyong.com/java8/java-8-supplier-examples/)
+* [Java 8 方法参考：如何使用](http://web.archive.org/web/20220801141236/https://www.codementor.io/@eh3rrera/using-java-8-method-reference-du10866vx)
+* [了解 Java 8 方法引用](http://web.archive.org/web/20220801141236/http://moandjiezana.com/blog/2014/understanding-method-references/)
+* [λ表达式的翻译](http://web.archive.org/web/20220801141236/http://cr.openjdk.java.net/~briangoetz/lambda/lambda-translation.html)
+* [Java 教程——方法参考](http://web.archive.org/web/20220801141236/https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html)
+* [Java 8 教程](/web/20220801141236/https://mkyong.com/tutorials/java-8-tutorials/)
+* [Java 8 函数示例](/web/20220801141236/https://mkyong.com/java8/java-8-function-examples/)
+* [Java 8 双功能示例](/web/20220801141236/https://mkyong.com/java8/java-8-bifunction-examples/)
+* [Java 8 谓词示例](/web/20220801141236/https://mkyong.com/java8/java-8-predicate-examples/)
+* [Java 8 双预测示例](/web/20220801141236/https://mkyong.com/java8/java-8-bipredicate-examples/)
+* [Java 8 供应商示例](/web/20220801141236/https://mkyong.com/java8/java-8-supplier-examples/)
 
 <input type="hidden" id="mkyong-current-postId" value="15538">

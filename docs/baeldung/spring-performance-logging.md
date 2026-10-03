@@ -1,20 +1,21 @@
+
 # 春季性能记录
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-performance-logging>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将研究 Spring 框架为性能监控提供的几个基本选项。
 
-## 2。`PerformanceMonitorInterceptor`
+## 2. `PerformanceMonitorInterceptor`
 
-一个简单的解决方案是获得我们方法执行时间的基本监控功能，我们可以利用 Spring AOP(面向方面编程)中的`PerformanceMonitorInterceptor`类。
+一个简单的解决方案是获得我们方法执行时间的基本监控功能，我们可以利用 Spring AOP（面向方面编程）中的`PerformanceMonitorInterceptor`类。
 
 Spring AOP 允许在应用程序中定义横切关注点，这意味着代码拦截一个或多个方法的执行，以便添加额外的功能。
 
 `PerformanceMonitorInterceptor`类是一个拦截器，它可以与任何要同时执行的自定义方法相关联。这个类使用一个`StopWatch`实例来确定方法运行的开始和结束时间。
 
-让我们创建一个简单的`Person`类和一个`PersonService`类，其中包含我们将监控的两个方法:
+让我们创建一个简单的`Person`类和一个`PersonService`类，其中包含我们将监控的两个方法：
 
 ```java
 public class Person {
@@ -40,7 +41,7 @@ public class PersonService {
 }
 ```
 
-为了利用 Spring monitoring 拦截器，我们需要定义一个切入点和顾问:
+为了利用 Spring monitoring 拦截器，我们需要定义一个切入点和顾问：
 
 ```java
 @Configuration
@@ -83,15 +84,15 @@ public class AopConfiguration {
 
 最后，`@EnableAspectJAutoProxy`注释使 [AspectJ 支持](/web/20220628105252/https://www.baeldung.com/aspectj)我们的 beans。简而言之，AspectJ 是一个库，它通过像`@Pointcut`这样方便的注释使 Spring AOP 的使用变得更加容易。
 
-创建配置之后，我们需要**将拦截器类的日志级别设置为`TRACE`** ，因为这是它记录消息的级别。
+创建配置之后，我们需要**将拦截器类的日志级别设置为`TRACE`**，因为这是它记录消息的级别。
 
-比如使用 Jog4j，我们可以通过`log4j.properties`文件来实现这一点:
+比如使用 Jog4j，我们可以通过`log4j.properties`文件来实现这一点：
 
 ```java
 log4j.logger.org.springframework.aop.interceptor.PerformanceMonitorInterceptor=TRACE, stdout
 ```
 
-对于`getAge()`方法的每次执行，我们将在控制台日志中看到`TRACE`消息:
+对于`getAge()`方法的每次执行，我们将在控制台日志中看到`TRACE`消息：
 
 ```java
 2017-01-08 19:19:25 TRACE 
@@ -100,11 +101,11 @@ log4j.logger.org.springframework.aop.interceptor.PerformanceMonitorInterceptor=T
   running time (millis) = 10
 ```
 
-## 3。自定义性能监控拦截器
+## 3. 自定义性能监控拦截器
 
 如果我们希望**对性能监控**的完成方式有更多的控制，我们可以实现我们自己的定制拦截器。
 
-为此，让我们扩展`AbstractMonitoringInterceptor`类并覆盖 `invokeUnderTrace()`方法来记录方法的开始、结束和持续时间，以及如果方法执行持续时间超过 10 ms 时的警告:
+为此，让我们扩展`AbstractMonitoringInterceptor`类并覆盖`invokeUnderTrace()`方法来记录方法的开始、结束和持续时间，以及如果方法执行持续时间超过 10 ms 时的警告：
 
 ```java
 public class MyPerformanceMonitorInterceptor extends AbstractMonitoringInterceptor {
@@ -141,7 +142,7 @@ public class MyPerformanceMonitorInterceptor extends AbstractMonitoringIntercept
 
 需要遵循与前一节中相同的将定制拦截器关联到一个或多个方法的步骤。
 
-让我们为`PersonService`的 `getAge()`方法定义一个切入点，并将它与我们创建的拦截器关联起来:
+让我们为`PersonService`的`getAge()`方法定义一个切入点，并将它与我们创建的拦截器关联起来：
 
 ```java
 @Pointcut("execution(public int com.baeldung.performancemonitor.PersonService.getAge(..))")
@@ -160,13 +161,13 @@ public Advisor myPerformanceMonitorAdvisor() {
 }
 ```
 
-让我们将定制拦截器的日志级别设置为`INFO`:
+让我们将定制拦截器的日志级别设置为`INFO`：
 
 ```java
 log4j.logger.com.baeldung.performancemonitor.MyPerformanceMonitorInterceptor=INFO, stdout
 ```
 
-g `etAge()`方法的执行产生了以下输出:
+`getAge()`方法的执行产生了以下输出：
 
 ```java
 2017-01-08 19:19:25 INFO PersonService:26 - 
@@ -181,7 +182,7 @@ g `etAge()`方法的执行产生了以下输出:
   Method execution longer than 10 ms!
 ```
 
-## 4。结论
+## 4. 结论
 
 在这个快速教程中，我们介绍了 Spring 中简单的性能监控。
 

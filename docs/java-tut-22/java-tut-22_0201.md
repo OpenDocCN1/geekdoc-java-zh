@@ -1,3 +1,4 @@
+
 # 中断
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/concurrency/interrupt.html`](https://docs.oracle.com/javase/tutorial/essential/concurrency/interrupt.html)
@@ -22,7 +23,6 @@ for (int i = 0; i < importantInfo.length; i++) {
     // Print a message
     System.out.println(importantInfo[i]);
 }
-
 ```
 
 许多抛出`InterruptedException`的方法，如`sleep`，设计为在接收到中断时取消当前操作并立即返回。
@@ -37,7 +37,6 @@ for (int i = 0; i < inputs.length; i++) {
         return;
     }
 }
-
 ```
 
 在这个简单的例子中，代码只是检测中断并在接收到中断时退出线程。在更复杂的应用程序中，抛出`InterruptedException`可能更合理：
@@ -46,7 +45,6 @@ for (int i = 0; i < inputs.length; i++) {
 if (Thread.interrupted()) {
     throw new InterruptedException();
 }
-
 ```
 
 这使得中断处理代码可以集中在`catch`子句中。

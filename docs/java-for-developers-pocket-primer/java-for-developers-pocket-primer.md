@@ -1,134 +1,63 @@
+
 # Java 开发者 Java 入门指南
-
-
-
-
-
-
-
-
 
 在我们的 Telegram 频道获取更多 Java 书籍：https://t.me/javalib
 
 ![](img/12066447fb3262172bd10949450d978a_1_0.png)
 
-
-
-
-
-
-
-
 ![](img/12066447fb3262172bd10949450d978a_3_0.png)
 
-
-
-
-
-
-O. Campesato. 面开发者的 JAVA 口袋版指南。
-
-
-
-
+O. Campesato. 面向开发者的 JAVA 口袋版指南。
 
 我想将这本书献给我的父母，给他们的生活带来快乐。
 
-![](img/12066447fb3262172bd10949450d78a_6_0.png)
+![](img/12066447fb3262172bd10949450d978a_6_0.png)
 
 序言 xiii
 
-
-
 本章总结 87
-
-
-
-
 
 整数数字相加
 
 通过递归反转字符串
 
-
-
-
 Java 方法重载
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - 总结 180
-
-
-
-
 
 在我们的 Telegram 频道获取更多 Java 书籍：https://t.me/javalib
 
 ## 前言
 
-## 目标是什么？
+### 目标是什么？
 
 本书的目标是为对 Java 编程语言较新的人提供相当详尽的 Java 开发介绍。对于这种长度的书来说，最大的挑战是充分涵盖 Java 的一些基本方面，而这些方面主要通过 Java 8 的代码示例进行说明。在本书出版时，Java 17 已经是正式发布版本。如果你计划编写 Java 应用程序，你需要确定包含你应用程序所需功能的 Java 版本，然后你就可以确定需要安装的版本了。
 
-## 为什么关注 JAVA？
+### 为什么关注 JAVA？
 
-问得好！如果你使用现代浏览器，你可能了解过“浏览器大战”，以及同一浏览器不同版本之间出现的不兼容性问题（以及当问题版本被停用时的如释负）。
+问得好！如果你使用现代浏览器，你可能了解过“浏览器大战”，以及同一浏览器不同版本之间出现的不兼容性问题（以及当问题版本被停用时的如释负负）。
 
-幸运的是，Java 不同版本之间的情况要良得多（不满意的主要来源是专有版本）。
+幸运的是，Java 不同版本之间的情况要好得多（不满意的主要来源是专有版本）。
 
-
-
-
-
-## 代码示例使用的开发栈是什么？
+### 代码示例使用的开发栈是什么？
 
 书中的代码示例是在运行 OS X 10.10 (Mavericks) 的 MacBook Pro 上使用 Java 13 的早期发布版本开发的。
 
-## 为什么有这么多短代码示例？
+### 为什么有这么多短代码示例？
 
 本书是为 Java 开发初学者编写的。代码示例旨在帮助你理解各种 Java 接口，这就是为什么每个代码示例的长度最多只有两页（通常少于一页）。重点是提供你可能在 Java 应用程序中需要的 Java 特性代码。较短的代码示例意味着本书可以包含更多的 Java API。
 
-## 目录是如何确定的？
+### 目录是如何确定的？
 
 决策过程尽可能客观，涉及了几个标准。第一个标准是包含 Java 应用中常见的“必会”概念。第二个标准是包含对 Java 初学者有益的“有上添锦”的功能。第三个标准涉及对于想要编写“严肃” Java 应用程序的人可能有用且相关的 Java API。
 
 此类 API 的示例包括社交连接（Facebook 和 Twitter）。第四个标准涉及书中 Java 应用程序所需要的 Java API。
 
-## 哪些 Java 主题被排除了？为什么？
+### 哪些 Java 主题被排除了？为什么？
 
-不符合上一节所列出的任何标准的 Java 特性均未包含在书中。因此，书中没有涵盖 Java Native Interface (JNI)，它允许 Java 调用 C/C++ 函数。此外，书中未涵盖 AWT、Java Swing、JavaFX、Java Servlets、JSPs、JAXB、JAXP、JAXR、JEE 和 Java Security。不过，你可以在许多在线博客文章中找到这些主题的内容。
+不符合上一节所列出的任何标准的 Java 特性均未包含在书中。因此，书中没有涵盖 `Java Native Interface (JNI)`，它允许 Java 调用 C/C++ 函数。此外，书中未涵盖 AWT、Java Swing、JavaFX、Java Servlets、JSPs、JAXB、JAXP、JAXR、JEE 和 Java Security。不过，你可以在许多在线博客文章中找到这些主题的内容。
 
-## 读完这本书后我应该读什么？
+### 读完这本书后我应该读什么？
 
 这个问题的答案差异很大，主要因为答案在很大程度上取决于你的目标。具体来说，你需要决定准备好投入多少精力来进一步提高你的知识。在你的技术专业知识方面取得重大进展所需的时间也取决于你目前的技术知识水平和经验。例如，经理、学生和专业 Java 开发人员（以及其他）的需求显然是不同的。
 
@@ -138,7 +67,7 @@ Java 方法重载
 
 # 第 1 章
 
-### Java 简介
+## Java 简介
 
 本章介绍了 Java 的基本特性，以及说明这些特性的代码示例。在许多情况下，随附的 Java 代码示例是简洁的，特别是当代码目的直观易懂时。本书的文件包含了额外的代码示例，用于说明本章中未涵盖的其他 Java 特性。
 
@@ -152,13 +81,13 @@ Java 方法重载
 
 另一个细节是：本章最后的代码示例被标记为“可选”，因为你可以跳过它们直接进入第 2 章，而不会影响连贯性。之所以包含它们，以防你渴望看到超出本章其他代码示例所插图的基础概念的代码示例。
 
-## Java 简要介绍
+### Java 简要介绍
 
 Java 是一种面向对象的编程语言，它允许你在许多不同的硬件平台上运行代码，包括台式电脑、移动设备和树莓派。
 
 你需要为每个打算运行 Java 代码的平台安装特定平台的 Java 发行版（详细信息见下一节）。尽管 Java 17 是 Java 的当前生产版本，但较早版本的 Java 仍然受到支持。
 
-### Java 发布日期
+#### Java 发布日期
 
 以下项目列表包含了 Java 的发布日期，范围从 Java 7 到 Java 18：
 
@@ -175,11 +104,11 @@ Java 是一种面向对象的编程语言，它允许你在许多不同的硬件
 - Java SE 17 (2021年9月)
 - Java SE 18 (2022年7月)
 
-如你所见，Java 7 和 Java 9 之间经历了六年时间，之后新版本的发布速度变得更加了。以下链接包含一张 Java 路线图：https://medium.com/javavisited/the-java-roadmap-f9db163c2
+如你所见，Java 7 和 Java 9 之间经历了六年时间，之后新版本的发布速度变得更加快了。以下链接包含一张 Java 路线图：https://medium.com/javavisited/the-java-roadmap-f9db163c2
 
 如果你想了解在不同 Java 版本中引入的特性，请访问：https://www.javatpoint.com/history-of-java
 
-### 下载 Java 版本（简短版）
+#### 下载 Java 版本（简短版）
 
 鉴于有许多 Java 版本可供，你如何决定哪个版本最适合你？答案可能涉及以下之一：
 
@@ -190,11 +119,11 @@ Java 是一种面向对象的编程语言，它允许你在许多不同的硬件
 
 另一点需要记住：如果你想满足上述列表中的所有要求，也可以下载多个版本的 Java。在你确定了适合你的 Java 版本后，请访问以下位置：
 
-### 选择 Java 版本（详细版）
+#### 选择 Java 版本（详细版）
 
 在本书印刷时，Java 17 已可用，且 Java 18 将于 2022 年 7 月发布。旧版本 Java 的发布周期有时涉及三年或更久，而较新的 Java 版本每六个月发布一次。较新版本的更新集通常要小得多。
 
-## Java 8 和 Java 11
+### Java 8 和 Java 11
 
 Java 8 和 Java 11 曾拥有 LTS（长期支持）状态，目前 Java 17 拥有 LTS 状态。由于各种因素，某些公司仍在使用 Java 8，它是 Java 历史上最重要的发布之一。如果你感兴趣，Oracle 网站包含了 Java 8 的特性列表。事实上，Java 8 在所有后续版本（包括 Java 17）中都能正常工作。
 
@@ -204,17 +133,9 @@ Java 8 和 Java 11 曾拥有 LTS（长期支持）状态，目前 Java 17 拥有
 
 https://www.oracle.com/java/technologies/java-se-support-roadmap.html
 
-## Java 版本号
+### Java 版本号
 
-在 Java 8 之前，编号格式为 1.x。因此，Java 7 也称为 Java 1.7，Java 8 称为 Java 8。但是，从 Java 9 开始，这种命名习惯已被废弃。例如，你
-
-
-
-
-
-# 4 • Java 开发者快速指南
-
-输入命令 `java -version`，如果你的机器上安装了 Java 13，你将看到类似下面的输出：
+在 Java 8 之前，编号格式为 1.x。因此，Java 7 也称为 Java 1.7，Java 8 称为 Java 8。但是，从 Java 9 开始，这种命名习惯已被废弃。例如，你输入命令 `java -version`，如果你的机器上安装了 Java 13，你将看到类似下面的输出：
 
 ```
 java 13.0.1 2019-10-15
@@ -222,11 +143,11 @@ Java (TM) SE Runtime Environment (build 13.0.1+9)
 Java HotSpot (TM) 64-Bit Server VM (build 13.0.1+9), mixed mode, (sharing)
 ```
 
-目标是牢掌握 Java 13，然后通过学习 Java 13 之后版本中的新特性来增加你的知识。
+目标是牢牢掌握 Java 13，然后通过学习 Java 13 之后版本中的新特性来增加你的知识。
 
 ### JRE 与 JDK
 
-JRE（Java 运行环境）允许你运行 Java 代码，这意味着 Java 提供了 `java` 命令行工具。如果你使用的是 Unix/Linux 类型的机器，请输入以下命令：
+`JRE`（Java 运行环境）允许你运行 Java 代码，这意味着 Java 提供了 `java` 命令行工具。如果你使用的是 Unix/Linux 类型的机器，请输入以下命令：
 
 ```
 $ which java
@@ -238,25 +159,25 @@ $ which java
 $ /usr/bin/java
 ```
 
-另一方面，JDK（Java 开发工具包）允许你编译和运行 Java 代码。虽然在 Java 8 之前 JRE 和 JDK 是分开下载的，但它们已经合并了，即从 Java 9 开始，Java 下载包是包含 JRE 的 JDK。
+另一方面，`JDK`（Java 开发工具包）允许你编译和运行 Java 代码。虽然在 Java 8 之前 `JRE` 和 `JDK` 是分开下载的，但它们已经合并了，即从 Java 9 开始，Java 下载包是包含 `JRE` 的 `JDK`。
 
 ### Java 分发
 
-有多个网站提供多种 Java JDK：OpenJDK 项目、OracleJDK 和 AdoptOpenJDK。OpenJDK 项目是唯一包含 Java 源代码的站点。
+有多个网站提供多种 Java JDK：`OpenJDK` 项目、`OracleJDK` 和 `AdoptOpenJDK`。`OpenJDK` 项目是唯一包含 Java 源代码的站点。
 
-Oracle 提供的 JDK 可以在 Java 应用程序中免费使用。但它不支持对旧版本的更新：例如，一旦 Java 13 可发布，对 Java 12 的更新就停止了。Oracle 还提供了 OracleJDK，但它仅在开发期间免费使用：如果你将代码部署到生产环境，则必须向 Oracle 支付费用（Oracle 将为你提供额外的支持）。
+Oracle 提供的 JDK 可以在 Java 应用程序中免费使用。但它不支持对旧版本的更新：例如，一旦 Java 13 可发布，对 Java 12 的更新就停止了。Oracle 还提供了 `OracleJDK`，但它仅在开发期间免费使用：如果你将代码部署到生产环境，则必须向 Oracle 支付费用（Oracle 将为你提供额外的支持）。
 
-你也可以使用 AdoptOpenJDK，它由不同的开发者和供应商开发，并且免费提供（与 OpenJDK 一样）。
+你也可以使用 `AdoptOpenJDK`，它由不同的开发者和供应商开发，并且免费提供（与 `OpenJDK` 一样）。
 
 ### Java IDE
 
-许多人更倾向于在 IDE 中工作，并且许多编程语言都有非常好的 IDE 可用。例如，如果你计划开发 Android 应用，在 Android Studio 中进行开发是值得的，它是对不熟悉命令行的人来说的一种备选方案。
+许多人更倾向于在 IDE 中工作，并且许多编程语言都有非常好的 IDE 可用。例如，如果你计划开发 Android 应用，在 `Android Studio` 中进行开发是值得的，它是对不熟悉命令行的人来说的一种备选方案。
 
-如果你想在 IDE（集成开发环境）中编写 Java 代码，有多种支持 Java 的 IDE，例如 NetBeans 和 Eclipse。
+如果你想在 IDE（集成开发环境）中编写 Java 代码，有多种支持 Java 的 IDE，例如 `NetBeans` 和 `Eclipse`。
 
 ### Java 简介
 
-然而，此书侧重于从命令行操作 Java，你可以使用任选的文本编辑器创建 Java 类（或者如果你喜欢的话，也可以从 IDE 创建）。从命令行开发 Java 代码涉及简单的步骤，例如更新 `CLASPATH` 环境变量以包含 JAR 文件，有时也包括编译后的 Java 类。
+然而，此书侧重于从命令行操作 Java，你可以使用任选的文本编辑器创建 Java 类（或者如果你喜欢的话，也可以从 IDE 创建）。从命令行开发 Java 代码涉及简单的步骤，例如更新 `CLASSPATH` 环境变量以包含 JAR 文件，有时也包括编译后的 Java 类。
 
 本章还包含一个简短的章节，展示了如何创建一个包含编译后的 Java 代码的简单 JAR 文件，在将该 JAR 文件添加到 `CLASSPATH` 变量后，你将看到如何在你自己的 JAR 文件中调用自定义的 Java 代码。请记住，书中的 Java 代码示例很短（通常很简单），因此你不需要 IDE。
 
@@ -266,14 +187,14 @@ Java 支持其他编译型语言中常见的原始数据类型集合。此外，
 
 某些数据结构（如哈希表）不支持原始数据类型，因此必须基于类的对应类型。例如，如果你需要哈希表来维护一组整数，你需要创建一个包含每个整数的 `Integer` 对象并将其添加到哈希表中。当你从该哈希表中检索特定的基于 `Integer` 的值对象时，然后提取它的 `int` 值。这种方法比简单地在哈希表中存储和检索 `int` 涉及稍多一点的代码。此外，Java 提供了八种作为语言关键字的原始数据类型：
 
-- byte: 16 位有符号补码整数
-- int: 32 位有符号补码整数
-- long: 64 位有符号补码整数
-- float: 单精度 32 位 IEEE 754 浮点数
-- boolean: true 或 false
-- char: 有符号 16 位 Unicode 字符
+- `byte`: 16 位有符号补码整数
+- `int`: 32 位有符号补码整数
+- `long`: 64 位有符号补码整数
+- `float`: 单精度 32 位 IEEE 754 浮点数
+- `boolean`: true 或 false
+- `char`: 有符号 16 位 Unicode 字符
 
-书书中大多数涉及算术的代码示例都使用整数和浮点数。
+书中大多数涉及算术的代码示例都使用整数和浮点数。
 
 ### Java 注释
 
@@ -299,16 +220,18 @@ Java 支持单行注释和多行注释，两者在此处均有展示：
 /* 第一条注释 // 第二条注释的开始 第一条注释的结束 */
 ```
 
+### Java 运算符
+
 Java 支持常见的算术运算符，其标准优先级（幂）高于乘法和除法，这两者的优先级都高于加减法。此外，Java 支持以下运算符：
 
 | 类型 | 运算符 |
 | :--- | :--- |
-| 算术 | +, -, *, /, % |
-| 赋值 | =, -=, *=, /=, %= ^= |
-| 位运算 | &, |, ^, ~, <<, >> |
-| 逻辑 | &&, || |
-| 关系 | ==, !=, >, <= |
-| 三元 | ? |
+| 算术 | `+`, `-`, `*`, `/`, `%` |
+| 赋值 | `=`, `-=`, `*=`, `/=`, `%=`, `^=` |
+| 位运算 | `&`, `|`, `^`, `~`, `<<`, `>>` |
+| 逻辑 | `&&`, `||` |
+| 关系 | `==`, `!=`, `>`, `<=` |
+| 三元 | `?` |
 
 ### Java 运算符的优先级
 
@@ -316,271 +239,35 @@ Java 支持常见的算术运算符，其标准优先级（幂）高于乘法和
 
 | 类型 | 运算符 |
 | :--- | :--- |
-| 后置 | ++ |
-| 一元 | ++, ~ |
-| 乘法 | *, % |
-| 加法 | +, - |
-| 移位 | >>, << |
-| 关系 | >=, <= |
-|  way | ==, != |
-| 逻辑 | &&, || |
-| 三元 | ? |
-| 赋值 | =, -=, *=, /=, %= ^= |
+| 后置 | `++` |
+| 一元 | `++`, `~` |
+| 乘法 | `*`, `%` |
+| 加法 | `+`, `-` |
+| 移位 | `>>`, `<<` |
+| 关系 | `>=`, `<=` |
+| 关系 | `==`, `!=` |
+| 逻辑 | `&&`, `||` |
+| 三元 | `?` |
+| 赋值 | `=`, `-=`, `*=`, `/=`, `%=`, `^=` |
 
-运算符优先级决定了表达式中项的分组方式，这反过来决定了表达式的求值方式。高优先级运算符先于低优先级运算符执行。Java 运算符从高到低优先级排列如下：
 
-| 类型 | 运算符 |
-| :--- | :--- |
-| 后置 | ++ |
-| 一元 | ++, ~ |
-| 乘法 | *, % |
-| 加法 | +, - |
-| 移位 | >>, << |
-| 关系 | >=, <= |
-|  way性 | ==, != |
-| 逻辑 | &&, || |
-| 三元 | ? |
-| 赋值 | =, -=, *=, /=, %= ^= |
 
-运算符优先级决定了表达式中项的分组方式，这反过来决定了表达式的求值方式。高优先级运算符先于低优先级运算符执行。Java 运算符从高到低优先级排列如下：
-
-| 类型 | 运算符 |
-| :--- | :--- |
-| 后置 | ++ |
-| 一元 | ++, ~ |
-| 乘法 | *, % |
-| 加法 | +, - |
-| 移位 | >>, << |
-| 关系 | >=, <= |
-| 关系性 | ==, != |
-| 逻辑 | &&, || |
-| 三元 | ? |
-| 赋值 | =, -=, *=, /=, %= ^= |
-
-运算符优先级决定了表达式中项的分组方式，这反过来决定了表达式的求值方式。高优先级运算符先于低优先级运算符执行。Java 运算符从高到低优先级排列如下：
-
-| 类型 | 运算符 |
-| :--- | :--- |
-| 后置 | ++ |
-| 一元 | ++, ~ |
-| 乘法 | *, % |
-| 加法 | +, - |
-| 移位 | >>, << |
-| 关系 | >=, <= |
-| 关系性 | ==, != |
-| 逻辑 | &&, || |
-| 三元 | ? |
-| 赋值 | =, -=, *=, /=, %= ^= |
-
-运算符优先级决定了表达式中项的分组方式，这反过来决定了表达式的求值方式。高优先级运算符先于低优先级运算符执行。Java 运算符从高到低优先级排列如下：
-
-| 类型 | 运算符 |
-| :--- | :--- |
-| 后置 | ++ |
-| 一元 | ++, ~ |
-| 乘法 | *, % |
-| 加法 | +, - |
-| 移位 | >>, << |
-| 关系 | >=, <= |
-| 关系性 | ==, != |
-| 逻辑 | &&, || |
-| 三元 | ? |
-| 赋值 | =, -=, *=, /=, %= ^= |
-
-运算符优先级决定了表达式中项的分组方式，这反过来决定了表达式的求值方式。高优先级运算符先于低优先级运算符执行。Java 运算符从高到低优先级排列如下：
-
-| 类型 | 运算符 |
-| :--- | :--- |
-| 后置 | ++ |
-| 一元 | ++, ~ |
-| 乘法 | *, % |
-| 加法 | +, - |
-| 移位 | >>, << |
-| 关系 | >=, <= |
-| 关系性 | ==, != |
-| 逻辑 | &&, || |
-| 三元 | ? |
-| 赋值 | =, -=, *=, /=, %= ^= |
-
-运算符优先级决定了表达式中项的分组方式，这反过来决定了表达式的求值方式。高优先级运算符先于低优先级运算符执行。Java 运算符从高到低优先级排列如下：
-
-| 类型 | 运算符 |
-| :--- | :--- |
-| 后置 | ++ |
-| 一元 | ++, ~ |
-| 乘法 | *, % |
-| 加法 | +, - |
-| 移位 | >>, << |
-| 关系 | >=, <= |
-| 关系性 | ==, != |
-| 逻辑 | &&, || |
-| 三元 | ? |
-| 赋值 | =, -=, *=, /=, %= ^= |
-
-运算符优先级决定了表达式中项的分组方式，这反过来决定了表达式的求值方式。高优先级运算符先于低优先级运算符执行。Java 运算符从高到低优先级排列如下：
-
-| 类型 | 运算符 |
-| :--- | :--- |
-| 后置 | ++ |
-| 一元 | ++, ~ |
-| 乘法 | *, % |
-| 加法 | +, - |
-| 移位 | >>, << |
-| 关系 | >=, <= |
-| 关系性 | ==, != |
-| 逻辑 | &&, || |
-| 三元 | ? |
-| 赋值 | =, -=, *=, /=, %= ^= |
-
-运算符优先级决定了表达式中项的分组方式，这反过来决定了表达式的求值方式。高优先级运算符先于低优先级运算符执行。Java 运算符从高到低优先级排列如下：
-
-| 类型 | 运算符 |
-| :--- | :--- |
-| 后置 | ++ |
-| 一元 | ++, ~ |
-| 乘法 | *, % |
-| 加法 | +, - |
-| 移位 | >>, << |
-| 关系 | >=, <= |
-| 关系性 | ==, != |
-| 逻辑 | &&, || |
-| 三元 | ? |
-| 赋值 | =, -=, *=, /=, %= ^= |
-
-运算符优先级决定了表达式中项的分组方式，这反过来决定了表达式的求值方式。高优先级运算符先于低优先级运算符执行。Java 运算符从高到低优先级排列如下：
-
-| 类型 | 运算符 |
-| :--- | :--- |
-| 后置 | ++ |
-| 一元 | ++, ~ |
-| 乘法 | *, % |
-| 加法 | +, - |
-| 移位 | >>, << |
-| 关系 | >=, <= |
-| 关系性 | ==, != |
-| 逻辑 | &&, || |
-| 三元 | ? |
-| 赋值 | =, -=, *=, /=, %= ^= |
-
-运算符优先级决定了表达式中项的分组方式，这反过来决定了表达式的求值方式。高优先级运算符先于低优先级运算符执行。Java 运算符从高到低优先级排列如下：
-
-| 类型 | 运算符 |
-| :--- | :--- |
-| 后置 | ++ |
-| 一元 | ++, ~ |
-| 乘法 | *, % |
-| 加法 | +, - |
-| 移位 | >>, << |
-| 关系 | >=, <= |
-| 关系性 | ==, != |
-| 逻辑 | &&, || |
-| 三元 | ? |
-| 赋值 | =, -=, *=, /=, %= ^= |
-
-运算符优先级决定了表达式中项的分组方式，这反过来决定了表达式的求值方式。高优先级运算符先于低优先级运算符执行。Java 运算符从高到低优先级排列如下：
-
-| 类型 | 运算符 |
-| :--- | :--- |
-| 后置 | ++ |
-| 一元 | ++, ~ |
-| 乘法 | *, % |
-| 加法 | +, - |
-| 移位 | >>, << |
-| 关系 | >=, <= |
-| 关系性 | ==, != |
-| 逻辑 | &&, || |
-| 三元 | ? |
-| 赋值 | =, -=, *=, /=, %= ^= |
-
-运算符优先级决定了表达式中项的分组方式，这反过来决定了表达式的求值方式。高优先级运算符先于低优先级运算符执行。Java 运算符从高到低优先级排列如下：
-
-| 类型 | 运算符 |
-| :--- | :--- |
-| 后置 | ++ |
-| 一元 | ++, ~ |
-| 乘法 | *, % |
-| 加法 | +, - |
-| 移位 | >>, << |
-| 关系 | >=, <= |
-| 关系性 | ==, != |
-| 逻辑 | &&, || |
-| 三元 | ? |
-| 赋值 | =, -=, *=, /=, %= ^= |
-
-运算符优先级决定了表达式中项的分组方式，这反过来决定了表达式的求值方式。高优先级运算符先于低优先级运算符执行。Java 运算符从高到低优先级排列如下：
-
-| 类型 | 运算符 |
-| :--- | :--- |
-| 后置 | ++ |
-| 一元 | ++, ~ |
-| 乘法 | *, % |
-| 加法 | +, - |
-| 移位 | >>, << |
-| 关系 | >=, <= |
-| 关系性 | ==, != |
-| 逻辑 | &&, || |
-| 三元 | ? |
-| 赋值 | =, -=, *=, /=, %= ^= |
-
-运算符优先级决定了表达式中项的分组方式，这反过来决定了表达式的求值方式。高优先级运算符先于低优先级运算符执行。Java 运算符从高到低优先级排列如下：
-
-| 类型 | 运算符 |
-| :--- | :--- |
-| 后置 | ++ |
-| 一元 | ++, ~ |
-| 乘法 | *, % |
-| 加法 | +, - |
-| 移位 | >>, << |
-| 关系 | >=, <= |
-| 关系性 | ==, != |
-| 逻辑 | &&, || |
-| 三元 | ? |
-| 赋值 | =, -=, *=, /=, %= ^= |
-
-运算符优先级决定了表达式中项的分组方式，这反过来决定了表达式的求值方式。高优先级运算符先于低优先级运算符执行。Java 运算符从高到到优先级优先级  ：
-
-|  | 运算符 |
-| :--- | --- |
-| 置 |  |
-| 一元 |,,, |
-   法 |  % |
-| 法 | | - |
-   位 | |,, |
-    | |,, |
-     |,,, |
-
-   | &&,, |
-
- 三元 | | |
-  赋值 | =, -=, *=, /=, %= ^= |
-
-（抱歉，由于系统在处理表格时出现了重复错误，以下是为您重新翻译的正确部分：
-
-[content]
-
-### Java 数据类型、运算符及其优先级
-
-Java 支持其他编译型语言中常见的原始数据类型集合。此外，Java 还提供了基于对象的对应类型。例如，原始数据类型 `int`、`double` 和 `float` 分别对应基于类的类型 `Integer`、`Double` 和 `Float`。
-
-（此处由于前面的逻辑异常导致输出出现了混乱，我将为您提供完整且准确的翻译：）
-
-[content]
-### Java 数据类型、运算符及其优先级
+# Java 数据类型、运算符及其优先级
 
 Java 支持其他编译型语言中常见的原始数据类型集合。此外，Java 还提供了基于对象的对应类型。例如，原始数据类型 `int`、`double` 和 `float` 分别对应基于类的类型 `Integer`、`Double` 和 `Float`。
 
 某些数据结构（如哈希表）不支持原始数据类型，因此基于类的对应类型是必要的。例如，如果你需要哈希表来维护一组整数，你需要创建一个包含每个整数的 `Integer` 对象并将其添加到哈希表中。当你从该哈希表中检索特定的基于 `Integer` 的值对象时，然后提取它的 `int` 值。这种方法比简单地在哈希表中存储和检索 `int` 涉及稍多一点的代码。此外，Java 提供了八种语言关键字的原始数据类型：
 
-- byte: 16 位有符号补码整数
-- int: 32 位有符号补码整数
-- long: 64 位有符号补码整数
-- float: 单精度 32 位 IEEE 754 浮点数
-- boolean: true 或 false
-- char: 有符号 16 位 Unicode 字符
+- `byte`：16 位有符号补码整数
+- `int`：32 位有符号补码整数
+- `long`：64 位有符号补码整数
+- `float`：单精度 32 位 IEEE 754 浮点数
+- `boolean`：true 或 false
+- `char`：有符号 16 位 Unicode 字符
 
-书书中大多数涉及算术的代码示例都使用整数和浮点数。
+本书中大多数涉及算术的代码示例都使用整数和浮点数。
 
-### Java 注释
+## Java 注释
 
 Java 支持单行注释和多行注释，两者在此处均有展示：
 
@@ -608,46 +295,41 @@ Java 支持常见的算术运算符，其标准优先级（幂）高于乘法和
 
 | 类型 | 运算符 |
 | :--- | :--- |
-| 算术 | +, -, *, /, % |
-| 赋值 | =, -=, *=, /=, %= ^= |
-| 位运算 | &, |, ^, ~, <<, >> |
-| 逻辑 | &&, || |
-| 关系 | ==, !=, >, <= |
-| 三元 | ? |
+| 算术 | `+`, `-`, `*`, `/`, `%` |
+| 赋值 | `=`, `-=`, `*=`, `/=`, `%=`, `^=` |
+| 位运算 | `&`, `|`, `^`, `~`, `<<`, `>>` |
+| 逻辑 | `&&`, `||` |
+| 关系 | `==`, `!=`, `>`, `<=` |
+| 三元 | `?` |
 
-### Java 运算符的优先级
+## Java 运算符的优先级
 
 运算符优先级决定了表达式中项的分组方式，这反过来决定了表达式的求值方式。高优先级运算符先于低优先级运算符执行。Java 运算符从高到低优先级排列如下：
 
 | 类型 | 运算符 |
 | :--- | :--- |
-| 后置 | ++ |
-| 一元 | ++, ~ |
-| 乘法 | *, % |
-| 加法 | +, - |
-| 移位 | >>, << |
-| 关系 | >=, <= |
-| 关系性 | ==, != |
-| 逻辑 | &&, || |
-| 三元 | ? |
-| 赋值 | =, -=, *=, /=, %= ^= |
+| 后置 | `++` |
+| 一元 | `++`, `~` |
+| 乘法 | `*`, `%` |
+| 加法 | `+`, `-` |
+| 移位 | `>>`, `<<` |
+| 关系 | `>=`, `<=` |
+| 关系性 | `==`, `!=` |
+| 逻辑 | `&&`, `||` |
+| 三元 | `?` |
+| 赋值 | `=`, `-=`, `*=`, `/=`, `%=`, `^=` |
 
-（注：由于原文文本在后部分出现了大量的重复和乱码，以上翻译已根据您提供的逻辑结构进行了修复和对齐。）
+# Java 简介
 
+在一个 Java 文件中可以有多个类，但只能有一个公共类（`public`），且文件中的该公共类名必须与文件名匹配。
 
-
-
-### Java 简介
-
-类。在一个 Java 文件中可以有多个类，但只能有一个公共类（public），且文件中的该公共类名必须与文件名匹配。
-
-打开命令行窗口，导航到包含 MyClass.java 的目录，使用 `javac` 可执行文件从命令行编译 MyClass.java：
+打开命令行窗口，导航到包含 `MyClass.java` 的目录，使用 `javac` 可执行文件从命令行编译 `MyClass.java`：
 
 ```
 javac MyClass.java
 ```
 
-Java 可执行文件会创建一个名为 MyClass.class 的文件，该文件包含 Java 字节码。使用 Java 可执行文件启动 Java 字节码（不要包含扩展名）：
+Java 可执行文件会创建一个名为 `MyClass.class` 的文件，该文件包含 Java 字节码。使用 Java 可执行文件启动 Java 字节码（不要包含扩展名）：
 
 ```
 java MyClass
@@ -659,13 +341,13 @@ java MyClass
 Exception in thread "main" java.lang.NoSuchMethodError: main
 ```
 
-注意：Java 源代码的文件名必须与其中的公共 Java 类匹配。例如，文件 MyClass.java 必须定义一个名为 MyClass 的 Java 类。
+注意：Java 源代码的文件名必须与其中的公共 Java 类匹配。例如，文件 `MyClass.java` 必须定义一个名为 `MyClass` 的 Java 类。
 
-我们可以修复上一个列表 1.2 中的错误，该列表包含一个 `main` 方法，它作为从命令行启动 Java 类的初始“入口点”。
+我们可以修复上一个列表 1.2 中的错误，该列表包含一个 `main()` 方法，它作为从命令行启动 Java 类的初始“入口点”。
 
-### 列表 1.2：MyClass.java
+## 列表 1.2：MyClass.java
 
-```
+```java
 public class MyClass
 {
     // 此代码没有任何作用
@@ -673,7 +355,7 @@ public class MyClass
 }
 ```
 
-列表 1.2 包含公共静态方法 `main()`，其返回类型为 `void`，因为它不返回任何内容。`main()` 方法是静态的（static），这确保了当我们从命令行启动 Java 类时它是可用的。现在重新编译代码：
+列表 1.2 包含公共静态方法 `main()`，其返回类型为 `void`，因为它不返回任何内容。`main()` 方法是静态的（`static`），这确保了当我们从命令行启动 Java 类时它是可用的。现在重新编译代码：
 
 ```
 javac MyClass.java
@@ -685,15 +367,15 @@ javac MyClass.java
 java MyClass
 ```
 
-你现在已经成功地创建、编译并启动了一个名为 MyClass 的 Java 类，它除了编译成功外，仍然什么都没做。下一步涉及在 Java 类中显示文本字符串，这将在下一节中讨论。
+你现在已经成功地创建、编译并启动了一个名为 `MyClass` 的 Java 类，它除了编译成功外，仍然什么都没做。下一步涉及在 Java 类中显示文本字符串，这将在下一节中讨论。
 
-### “HELLO WORLD”示例
+## “HELLO WORLD”示例
 
 列表 1.3 显示了 `HelloWorld.java` 的内容，向你展示了如何从 Java 类打印字符串 "Hello World"。
 
 ### 列表 1.3：HelloWorld.java
 
-```
+```java
 public class HelloWorld {
     public static void main(String args[]) {
         System.out.println("Hello World");
@@ -701,7 +383,7 @@ public class HelloWorld {
 }
 ```
 
-### 列表 1.3 中的代码显示了一个名为 `main()` 的例程，它包含一个 `System.out.println()` 语句，用于打印字符串 "Hello World"。打开终端编译并启动列表 1.3 中的 Java 代码：
+列表 1.3 中的代码显示了一个名为 `main()` 的例程，它包含一个 `System.out.println()` 语句，用于打印字符串 "Hello World"。打开终端编译并启动列表 1.3 中的 Java 代码：
 
 ```
 javac HelloWorld.java
@@ -715,10 +397,13 @@ java HelloWorld
 
 上一个命令的输出在这里：
 
+```
 Hello World
+```
+
 现在你已经看到创建和编译一个简单的 Java 程序有多容易了，让我们来看看在 Java 中处理数字的示例。
 
-### 数字处理
+## 数字处理
 
 列表 1.4 显示了 `Numbers.java` 的内容，向你展示了如何处理整数和小数值。在代码示例中，我们将略过 Java 字符串的细节，但将在本章稍后部分进行详细讨论。
 
@@ -735,19 +420,17 @@ public class Numbers {
         Double b1 = 3.2, b2 = 5.7;
         System.out.println("a1: "+a1+" a2: "+a2);
         System.out.println("b1: "+b1+" b2: "+b2);
-```
 
-### Java 简介
+        String s1 = "3", s2 = "5";
+        String t1 = s1.toString();
+        String t2 = Integer.toString(s1);
 
-```java
-    String s1 = "3", s2 = "5";
-    String t1 = s1.toString();
-    String t2 = Integer.toString(s1);
-
-    System.out.println("s1: " + s1);
-    System.out.println("s2: " + s2);
-    System.out.println("t1: " + t1);
-    System.out.println("t2: " + t2);
+        System.out.println("s1: " + s1);
+        System.out.println("s2: " + s2);
+        System.out.println("t1: " + t1);
+        System.out.println("t2: " + t2);
+    }
+}
 ```
 
 列表 1.4 定义了 Java 类 `Numbers` 和一个包含算术计算的 `main()` 方法。作为早期预览，列表 1.4 包含了 `Integer` 类，它是基本类型的“包装器”。`Integer` 类有一些有用方法，例如 `toString()`，它可以将整数值转换为其字符串。注意使用 `Math.ceil()` 方法来寻找数字的向上位。输入以下命令启动编译后的代码：
@@ -768,17 +451,7 @@ t1: 3
 t2: 3
 ```
 
-列表 1.4 定义了 Java 类 `Numbers` 和一个包含算术计算的 `main()` 方法。作为早期预览，列表 1.4 包含了 `Integer` 类，它是基本类型的“包装器”。`Integer` 类有一些有用方法，例如 `toString()`，它可以将整数值转换为其字符串。注意使用 `Math.ceil()` 方法来寻找数字的向上位。输入以下命令启动编译后的代码：
-
-```
-java Numbers
-```
-
-上一个命令的输出是：
-
-*注：此处根据原文逻辑重复了部分内容，但由于用户提供的原始文本中存在大量重复段落，已按要求逻辑进行对应翻译）*
-
-### 进制转换
+## 进制转换
 
 Java 中的数字默认是 10 进制，但也支持二进制、八进制和十六进制。如输出所示：
 
@@ -786,7 +459,7 @@ Java 中的数字默认是 10 进制，但也支持二进制、八进制和十�
 hex
 ```
 
-### 随机数
+## 随机数
 
 列表 1.5 显示了 `RandomNumbers.java` 的内容，向你展示了如何处理 Java 中的随机数。虽然我们现在只简单介绍，但将在后文中进行更详细的讨论。
 
@@ -806,10 +479,7 @@ public class RandomNumbers {
 }
 ```
 
-*注：原文文本中存在严重的段落重复错乱。*
-```
-
-### 内置数学函数
+## 内置数学函数
 
 Java 支持许多数学函数。列表 1.6 显示了 `MathFunctions.java` 的内容，向你展示了如何调用各种数学函数。
 
@@ -818,26 +488,33 @@ Java 支持许多数学函数。列表 1.6 显示了 `MathFunctions.java` 的内
 ```java
 public class MathFunctions {
     public static void main(String args[]) {
-        double a = 7, b = 3;
+```
 
-        // b 的平方根：
-        System.out.println("Square root of b: " + Math.sqrt(b));
 
-        // a 的 b次方：
-        System.out.println("Power of a and b is:"+Math.pow(a,b));
 
-        // a 和 b 的对数：
-        System.out.println("Logarithm of a: " + Math.log(a));
-        System.out.println("Logarithm of b: " + Math.log(b));
+## Java 代码示例
 
-        // 自然数 e (~2.71828...) 的 a次方：
-        System.out.println("Exponential of a: "+Math.exp(a));
+### 数学运算
 
-        // 两个数字的最小值和最大值
-        System.out.println("Minimum of a and b: "+Math.min(a,b));
-        System.out.println("Maximum of a and b: "+Math.max(a,b));
-    }
-}
+```java
+double a = 7, b = 3;
+
+// b 的平方根：
+System.out.println("Square root of b: " + Math.sqrt(b));
+
+// a 的 b次方：
+System.out.println("Power of a and b is:" + Math.pow(a, b));
+
+// a 和 b 的对数：
+System.out.println("Logarithm of a: " + Math.log(a));
+System.out.println("Logarithm of b: " + Math.log(b));
+
+// 自然数 e (~2.71828...) 的 a次方：
+System.out.println("Exponential of a: " + Math.exp(a));
+
+// 两个数字的最小值和最大值
+System.out.println("Minimum of a and b: " + Math.min(a, b));
+System.out.println("Maximum of a and b: " + Math.max(a, b));
 ```
 
 列表 1.6 展示了如何计算平方根、指数值和对数，以及一对数字的最小值和最大值。运行列表 1.6 中的代码，你将看到以下输出：
@@ -852,19 +529,15 @@ Minimum of a and b: 3.0
 Maximum of a and b: 7.0
 ```
 
-
-
-
-
 ### 使用内置三角函数
 
 列表 1.7 显示了 `TrigFunctions.java` 的内容，它展示了如何对涉及三角函数的数字进行各种操作。
 
-### 列表 1.7：TrigFunctions.java
+#### 列表 1.7：TrigFunctions.java
 
 ```java
-public class TrigFunctions{
-    public static void main(String args[]){
+public class TrigFunctions {
+    public static void main(String args[]) {
         // 默认单位是度:
         double a = 45;
 
@@ -872,13 +545,13 @@ public class TrigFunctions{
         double b = Math.toRadians(a);
 
         // a 的正弦、余弦和正切:
-        System.out.println("Sine of a: " +Math.sin(a));
-        System.out.println("Cosine of a: " +Math.cos(a));
-        System.out.println("Tangent of a: " +Math.tan(a));
+        System.out.println("Sine of a: " + Math.sin(a));
+        System.out.println("Cosine of a: " + Math.cos(a));
+        System.out.println("Tangent of a: " + Math.tan(a));
 
         // a 的反正弦和双正弦:
-        System.out.println("Arc Sine of a: " +Math.asin(a));
-        System.out.println("Hyperbolic Sine of a: " +Math.sinh(a));
+        System.out.println("Arc Sine of a: " + Math.asin(a));
+        System.out.println("Hyperbolic Sine of a: " + Math.sinh(a));
     }
 }
 ```
@@ -895,9 +568,9 @@ Hyperbolic Sine of a: 1.746713552872547E19
 
 ### 使用位运算
 
-本节将向如何对数字进行位运算。
+本节将介绍如何对数字进行位运算。
 
-### 列表 1.8：Bitwise.java
+#### 列表 1.8：Bitwise.java
 
 ```java
 public class Bitwise {
@@ -911,15 +584,16 @@ public class Bitwise {
     public static void main(String[] args) {
         int num1, num2;
 
-        num1 = 5; // 二进制: 00101
+        num1 = 5;  // 二进制: 00101
         num2 = 10; // 二进制: 01010
 
         System.out.println("num1: " + num1);
         System.out.println("num2: " + num2);
         System.out.println("~num1: " + (~num1));
-        System.out.println("num1&num2: " + (num1&num2));
-        System.out.println("num1|num2: " + (num1|num2));
-        System.out.println("num1^num2: " + (num1^num2));
+        System.out.println("num1&num2: " + (num1 & num2));
+        System.out.println("num1|num2: " + (num1 | num2));
+        System.out.println("num1^num2: " + (num1 ^ num2));
+
         System.out.println("num1-num2");
 
         num1 = 16; // 二进制: 010000
@@ -928,9 +602,9 @@ public class Bitwise {
         System.out.println("num1: " + num1);
         System.out.println("num2: " + num2);
         System.out.println("~num1: " + (~num1));
-        System.out.println("num1&num2: " + (num1&num2));
-        System.out.println("num1|num2: " + (num1|num2));
-        System.out.println("num1^num2: " + (num1^num2));
+        System.out.println("num1&num2: " + (num1 & num2));
+        System.out.println("num1|num2: " + (num1 | num2));
+        System.out.println("num1^num2: " + (num1 ^ num2));
     }
 }
 ```
@@ -944,7 +618,6 @@ num2: 10
 num1^num2: 15
 num1&num2: 0
 num1|num2: 15
-
 num1: 16
 num2: 32
 ~num1: -17
@@ -967,11 +640,11 @@ char chl = 'Z';
 
 列表 1.9 显示了 `CharStrings.java` 的内容，展示了如何定义字符、数组和字符串。
 
-### 列表 1.9：CharStrings.java
+#### 列表 1.9：CharStrings.java
 
 ```java
 public class CharStrings {
-    public static void main(String args[]){
+    public static void main(String args[]) {
         char ch1 = 'Z';
         char ch2 = ' ';
         char[] chars = {'h', 'e', 'l', 'o'};
@@ -980,7 +653,6 @@ public class CharStrings {
 
         System.out.println("ch1: " + ch1);
         System.out.println("ch2: " + ch2);
-
         System.out.print("chars: ");
         for (char ch : chars) {
             System.out.print(ch);
@@ -990,7 +662,7 @@ public class CharStrings {
 }
 ```
 
-1.9 首先初始化变量 `ch1` 为值 'Z'，并将变量 `ch2` 初始化为空格。1.9 打印了 `ch1` 和 `ch2` 的值。1.9 遍历了 `chars` 数组并打印其内容。
+列表 1.9 首先初始化变量 `ch1` 为值 'Z'，并将变量 `ch2` 初始化为空格。列表 1.9 打印了 `ch1` 和 `ch2` 的值。列表 1.9 遍历了 `chars` 数组并打印其内容。
 
 ### 字符串中的特殊字符
 
@@ -998,7 +670,7 @@ Java 处理字符串中的特殊字符的方式与处理任何字母或数字相
 
 在之前的输出中，空格和制表符之间没有可见区别，你可以在 vi 编辑器中看到。首先，
 
-### 列表 1.10：MyStrings.java
+#### 列表 1.10：MyStrings.java
 
 列表 1.10 定义了 Java 类 `MyStrings` 以及一个 `main()` 方法，该方法初始化了名称、特殊字符和空白字符的字符串。
 
@@ -1020,7 +692,7 @@ public class MyStrings {
 }
 ```
 
-这三个 *println()* 语句显示了它们的值，如下：
+这三个 `println()` 语句显示了它们的值，如下：
 
 ```
 str1: John str2: Sally
@@ -1028,13 +700,7 @@ str3: *?) str4: .+@
 str5: 
 ```
 
-
-
-
-
-# Java 简介 • 19
-
-将前面代码的输出重定向到名为 out1 的文件（或其他方便的名称）。接下来，用 vi 编辑器打开该文件，然后输入 :set list，之后你会看到如下输出：
+将前面代码的输出重定向到名为 out1 的文件（或其他方便的名称）。接下来，用 vi 编辑器打开该文件，然后输入 `:set list`，之后你会看到如下输出：
 
 ```
 str1: John str2: Sally$
@@ -1044,7 +710,7 @@ str5: $
 str6: ^IS
 ```
 
-$ 表示行结束，它出现在前述输出的每一行末尾。注意最后一行显示了 ^IS，这表示存在制表符，该制表符是列表 1.10 中变量 `str6` 的值。
+`$` 表示行结束，它出现在前述输出的每一行末尾。注意最后一行显示了 `^IS`，这表示存在制表符，该制表符是列表 1.10 中变量 `str6` 的值。
 
 ### 新的 new 运算符
 
@@ -1052,7 +718,7 @@ $ 表示行结束，它出现在前述输出的每一行末尾。注意最后一
 
 列表 1.11 显示了 `ShowPeople.java` 的内容，该程序使用 `new` 运算符初始化两个字符串并打印它们的值。
 
-### 列表 1.11: ShowPeople.java
+#### 列表 1.11: ShowPeople.java
 
 ```java
 public class ShowPeople {
@@ -1072,20 +738,18 @@ public class ShowPeople {
 
         System.out.println(str1);
         System.out.println(str2);
+        System.out.println(str3);
+        System.out.println(str4);
+
+        // error: 非静态变量 str5 无法
+        // 从静态上下文中引用：
+        // str5 = new String("another string");
+        // str6 = new String("yet another string");
     }
+}
 ```
 
-```java
-System.out.println(str3);
-System.out.println(str4);
-
-// error: 非静态变量 str5 无法
-// 从静态上下文中引用：
-// str5 = new String("another string");
-// str6 = new String("yet another string");
-```
-
-列表 1.11 包含一个 `main()` 程，它定义并初始化了字符串 `str1` 到 `str4` 并打印了其内容。列表 1.11 的输出为：
+列表 1.11 包含一个 `main()` 方法，它定义并初始化了字符串 `str1` 到 `str4` 并打印了其内容。列表 1.11 的输出为：
 
 ```
 My name is John Smith
@@ -1096,51 +760,46 @@ My name is Jane Andrews
 
 列表 1.11 中的代码包含硬编码的值，因此没有重用性。例如，假设你想打印包含人员姓名的数组中定义的所有名字。也许你想打印从这些数组中随机选择的名称。你可能还会从命令行获取一个人的名和姓，然后打印该人的名字。
 
-下一节提供了更多关于 Java String 类中 "==" 和 `equals()` 方法之间区别的详细信息。
+下一节提供了更多关于 Java String 类中 `==` 和 `equals()` 方法之间区别的详细信息。
 
 ### 字符串的相等性
 
-与其他语言不同，"==" 运算符并不确定两个字符串是否相同：该运算符仅确定两个变量是否引用相同的内存位置。`equals()` 方法比较两个字符串的内容，而 `==` 运算符匹配字符串的对象或引用。
+与其他语言不同，`==` 运算符并不确定两个字符串是否相同：该运算符仅确定两个变量是否引用相同的内存位置。`equals()` 方法比较两个字符串的内容，而 `==` 运算符匹配字符串的对象或引用。
 
 列表 1.12 显示了 `EqualStrings.java` 的内容，它说明了如何比较两个字符串并确定它们是否具有相同的值或引用（两者都有）。
 
-### 列表 1.12: EqualStrings.java
+#### 列表 1.12: EqualStrings.java
 
 ```java
 import java.io.IOException;
 
-public class EqualStrings
-{
-    public static void main(String[] args) throws IOException
-    {
+public class EqualStrings {
+    public static void main(String[] args) throws IOException {
         String str1 = "Pizza";
         String str2 = "Pizza";
-```
 
-```java
         if (str1.equals(str2))
-          System.out.println("str1 and str2: equal values");
-
+            System.out.println("str1 and str2: equal values");
         if (str1 == str2)
-          System.out.println("str1 and str2: equal references");
+            System.out.println("str1 and str2: equal references");
 
         String str3 = "Pasta";
         String str4 = new String("Pasta");
 
         if (str3.equals(str4))
-          System.out.println("str3 and str4: equal values");
+            System.out.println("str3 and str4: equal values");
         else
-          System.out.println("str3 and str4: unequal values");
+            System.out.println("str3 and str4: unequal values");
 
         if (str3 == str4)
-          System.out.println("str3 and str4: equal references");
+            System.out.println("str3 and str4: equal references");
         else
-          System.out.println("str3 and str4: unequal values");
+            System.out.println("str3 and str4: unequal values");
     }
 }
 ```
 
-列表 1.12 定义了 Java `EqualStrings` 以及一个 `main()` 方法，该方法定义了字符串变量 `str1`、`str2`、`str3` 和 `str4`。运行 1.12 中的代码，将看到如下输出：
+列表 1.12 定义了 Java `EqualStrings` 以及一个 `main()` 方法，该方法定义了字符串变量 `str1`、`str2`、`str3` 和 `str4`。运行列表 1.12 中的代码，将看到如下输出：
 
 ```
 str1 and str2: equal values
@@ -1149,23 +808,22 @@ str3 and str4: unequal values
 str3 and str4: references
 ```
 
+
+
 当你创建一个字符串字面量时，JVM（Java 虚拟机）会检查该字符串是否存在于所谓的“字符串池”中。如果该字符串于池中，Java 将返回它的引用；否则将创建一个新的字符串实例（并将其放入池中）。下一节包含一个 Java 代码示例，说明如何确定两个字符串是否相同。
 
-### 比较字符串
+## 比较字符串
 
 列表 1.13 显示了 `CompareStrings.java` 的内容，它说明了如何比较两个字符串并确定它们是否具有相同的值或相同的引用（两者都有）。
 
 ### 列表 1.13: CompareStrings.java
 
 ```java
-public class CompareStrings
-{
-    public CompareStrings(){}
-    public static void main(String[] args)
-    {
+public class CompareStrings {
+    public CompareStrings() {}
+    public static void main(String[] args) {
         String line1 = "This is a simple sentence";
         String line2 = "this is a simple sentence";
-
         System.out.println(line1);
     }
 }
@@ -1179,7 +837,7 @@ This is a simple sentence
 
 （等待，OCR 文字说：“line1 和 line2 是不区分大小写的，line1 是混合大小写的”）
 
-# 在 Java 中搜索子字符串
+## 在 Java 中搜索子字符串
 
 列表 1.14 显示了 `SearchString.java` 的内容，说明了如何使用 `indexOf()` 方法确定一个字符串是否是另一个字符串的子字符串。注意此代码示例涉及一个 `if` 语句，将在章节的最后一个代码示例中进行详细讨论。
 
@@ -1190,7 +848,6 @@ public class SearchString {
     public static void main(String args[]) {
         int index;
         String str1 = "zz", str2 = "Pizza";
-
         index = str2.indexOf(str1);
         if (index < 0) {
             System.out.println(str1 + " is not a substring of " + str2);
@@ -1207,14 +864,9 @@ public class SearchString {
 zz is not a substring of Pizza
 ```
 
-### 解析字符串
+## 解析字符串
 
 Java 支持命令行参数，这使得你能够从命令行使用不同的命令行值启动程序。比较
-
-
-
-
-# Java 简介 * 25
 
 使用 `equals()` 方法判断两个 Java 字符串的值是否相同。虽然某些语言使用 "=" 来比较字符串，但在 Java 中，"=" 仅比较字符串的两个引用（而不是值）。
 
@@ -1242,7 +894,7 @@ String rev = new StringBuilder(original).reverse().toString();
 
 https://docs.oracle.com/javase/7/docs/api/java/lang/String.html
 
-### 重写 Java 的 toString() 方法（可选）
+## 重写 Java 的 toString() 方法（可选）
 
 你已经已经在 Java 类中看到了几个 `toString()` 方法的示例，包括 `Integer.toString()` 和 `Character.toString()`。`Object` 类是 Java 中所有类的父类，它的 `toString()` 方法返回 Java 中任何对象的字符串表示。`Object` 类的默认 `toString()` 方法显示对象类名及其哈希值的组合，这是一种用以区分同一 Java 类中不同实例的机制。这里是默认 `toString()` 方法的示例：
 
@@ -1263,29 +915,27 @@ public class OverrideToString {
 
     @Override
     public String toString() {
-}
-```
+        return fname + " " + lname;
+    }
 
-# 26 * 开发者 Java 指南
-
-```java
-public String toString() {
-    return fname + " " + lname;
-}
-
-public static void main (String[] args) {
-    OverrideToString ots = new OverrideToString();
-    System.out.println("Overriding toString(): "+ots.toString());
+    public static void main(String[] args) {
+        OverrideToString ots = new OverrideToString();
+        System.out.println("Overriding toString(): " + ots.toString());
+    }
 }
 ```
 
 列表 1.16 包含了变量 `fname`、`lname` 以及拼接 `fname` 和 `lname` 值的 `toString` 方法。运行列表 1.16 中的代码，你将看到以下输出：
 
+```
 Overriding toString(): John Smith
+```
 
 顺便一下，如果你“注释掉”列表 1.16 中的 `toString()` 方法，你将看到默认 `toString()` 方法的输出：
 
+```
 OverrideToString@4dc63996
+```
 
 ## 自动装箱与拆箱（可选）
 
@@ -1331,50 +981,41 @@ for (int i = 1; i < 50; i += 2)
 作为自动装箱的另一个示例，考虑以下方法：
 
 ```java
-public static int sumEven(List<Integer> items)
-{
+public static int sumEven(List<Integer> items) {
     int sum = 0;
-
-    for (Integer i: items)
+    for (Integer i : items)
         if (i % 2 == 0)
 ```
-
-
-
 
 ### 列表 2.1: Conditional.java
 
 ```java
-public class Conditional
-{
+public class Conditional {
     int x = 12, y = 15;
     public Conditional() {}
     public void IfElseLogic() {
         if (x % 2 == 0) {
-            System.out.println("x is even: "+x);
+            System.out.println("x is even: " + x);
         } else if (x % 4 == 0) {
-            System.out.println("x is divisible by 4: "+x);
+            System.out.println("x is divisible by 4: " + x);
         } else {
-            System.out.println("x is odd: "+x);
+            System.out.println("x is odd: " + x);
         }
-
         if (x % 2 == 0) {
             if (x % 4 == 0) {
-                System.out.println("x is divisible by 4: "+x);
+                System.out.println("x is divisible by 4: " + x);
             }
         }
-
         if (y % 3 == 0 && y % 5 == 0) {
-            System.out.println("y is divisible by 3 and 5: "+y);
+            System.out.println("y is divisible by 3 and 5: " + y);
         } else if (y % 3 == 0) {
-            System.out.println("y is divisible only by 3: "+y);
+            System.out.println("y is divisible only by 3: " + y);
         } else if (y % 5 == 0) {
-            System.out.println("y is divisible only by 5: "+y);
+            System.out.println("y is divisible only by 5: " + y);
         } else {
-            System.out.println("y is not divisible by 3 or 5: "+y);
+            System.out.println("y is not divisible by 3 or 5: " + y);
         }
     }
-
     public static void main(String args[]) {
         Conditional c1 = new Conditional();
         c1.IfElseLogic();
@@ -1382,19 +1023,21 @@ public class Conditional
 }
 ```
 
-列表 2.1 定义了 Java 类 Conditional 以及公共方法 IfElseLogic，该方法对整数变量 x 和 y 执行取模运算，x 和 y 分别地被初始化为值 12 和 15。
+列表 2.1 定义了 Java 类 `Conditional` 以及公共方法 `IfElseLogic`，该方法对整数变量 `x` 和 `y` 执行取模运算，`x` 和 `y` 分别地被初始化为值 12 和 15。
 
-如果 `x % 2` 等于 0，则 x 是偶数；如果 `x % 4` 等于 0，则 x 是 4 的倍数；如果 `y % 3` 等于 0，则 y 是 3 的倍数。列表 2.1 包含了 if-else 块，其中一个嵌套块。尝试确定代码的输出。运行列表 2.1 中的代码，你将看到以下输出：
+如果 `x % 2` 等于 0，则 `x` 是偶数；如果 `x % 4` 等于 0，则 `x` 是 4 的倍数；如果 `y % 3` 等于 0，则 `y` 是 3 的倍数。列表 2.1 包含了 if-else 块，其中一个嵌套块。尝试确定代码的输出。运行列表 2.1 中的代码，你将看到以下输出：
 
+```
 x is even: 12
 x is divisible by 4: 12
 y is divisible by 3 and 5: 15
+```
 
 你可以创建更复杂的布尔表达式，涉及“与”(and)、“或”(or)和“非”(not) 的组合。使用列表 2.1 中的代码作为基准，你可以添加自己的代码。下一节将展示如何在 Java 中处理涉及数字和字符串的布尔表达式。
 
-### 处理布尔表达式
+## 处理布尔表达式
 
-本节展示了如何根据各种类型的比较创建布尔表达式。列表 2.2 显示了 BooleanExamples.java 的内容，它比较了整数、double 和字符。虽然大多数结果符合你的预期，但请看你可以如何预测然后比较你的答案。
+本节展示了如何根据各种类型的比较创建布尔表达式。列表 2.2 显示了 `BooleanExamples.java` 的内容，它比较了整数、double 和字符。虽然大多数结果符合你的预期，但请看你可以如何预测然后比较你的答案。
 
 ### 列表 2.2: BooleanExamples.java
 
@@ -1405,65 +1048,52 @@ public class BooleanExamples {
         int int1 = 5;
         double double1 = 3.53;
         double double2 = 54.88;
-
         System.out.println("int1 = " + int1);
         System.out.println("double1 = " + double1);
         System.out.println("double2 = " + double2);
         System.out.println("");
-
         System.out.println("int1 < 5: " + (int1 < 5));
         System.out.println("double1 > double2: " + (double1 > double2));
         System.out.println("");
-
         // int1 和 double 提升
         System.out.println("int1 >= double1: " + (int1 >= double1));
         System.out.println("double1 <= 3: " + (double1 <= 3));
         System.out.println("");
-
         // 处理字符
         char char1 = 'A';
         char char2 = 'C';
-
         System.out.println("char1 = " + char1);
         System.out.println("char2 = " + char2);
         // 字典序比较
         System.out.println("char1 < char2: " + (char1 < char2));
-
         // A: 65, B: 66, C: 67, ..., Z: 90
         // a: 97, b: 98, c: 99, ..., z: 122
         // char2 提升为十进制值 (67)
+        System.out.println("10 > char2: " + (10 > char2));
+        System.out.println("");
+        boolean mixed = (int1 == 5) || char1 < 'A' && double1 != 21.8;
+        System.out.println("mixed: " + mixed);
+        System.out.println("");
+        // 处理布尔值
+        boolean bool1 = false;
+        boolean bool2 = true;
+        System.out.println("bool1: " + bool1);
+        System.out.println("bool2: " + bool2);
+        System.out.println("bool1 == bool2: " + (bool1 == bool2));
+        System.out.println("bool1 = bool2: " + (bool1 = bool2));
+        System.out.println("");
+        String str1 = new String("Pizza1");
+        String str2 = new String("Pizza2");
+        System.out.println("str1: " + str1);
+        System.out.println("str2: " + str2);
+        // 比较 str1 和 str2
+        System.out.println("str1 == str2: " + (str1 == str2));
+        System.out.println("str1 = str2: " + (str1 = str2));
     }
 }
 ```
 
-## 开发者 Java Pocket指南
 
-```java
-System.out.println("10 > char2: " + (10 > char2));
-System.out.println("");
-boolean mixed = (int1 == 5) || char1 < 'A' && double1 != 21.8;
-System.out.println("mixed: " + mixed);
-System.out.println("");
-
-// 处理布尔值
-boolean bool1 = false;
-boolean bool2 = true;
-
-System.out.println("bool1: " + bool1);
-System.out.println("bool2: " + bool2);
-System.out.println("bool1 == bool2: " + (bool1 == bool2));
-System.out.println("bool1 = bool2: " + (bool1 = bool2));
-System.out.println("");
-
-String str1 = new String("Pizza1");
-String str2 = new String("Pizza2");
-System.out.println("str1: " + str1);
-System.out.println("str2: " + str2);
-
-// 比较 str1 和 str2
-System.out.println("str1 == str2: " + (str1 == str2));
-System.out.println("str1 = str2: " + (str1 = str2));
-```
 
 列表 2.2 包含了各种数据类型，包括整数、浮点值、字符值和布尔值。运行列表 2.2 中的代码你将看到以下输出：
 
@@ -1471,68 +1101,61 @@ System.out.println("str1 = str2: " + (str1 = str2));
 int1 = 5
 double1 = 3.53
 double2 = 54.88
-
 int1 < 5: false
 double1 > double2: false
-
 int1 >= double1: true
 double1 <= 3: false
-
 char1 = A
 char2 = C
 char1 < char2: true
 10 > char2: false
-
 mixed: true
 bool1: false
 bool2: true
 bool1 == bool2: false
 bool1 = bool2: true
-
 str1: Pizza1
 str2: Pizza2
 str1 == str2: false
 str1 = str2: true
 ```
 
-注意加粗显示的输出：第一部分显示为 true，尽管 bool1 被赋值为 false。这是因为 "=" 运算符是一个赋值运算符；因此，bool1 被赋值为 bool2 的值，导致 bool1 的新值为 true。
+注意加粗显示的输出：第一部分显示为 true，尽管 `bool1` 被赋值为 false。这是因为 `=` 运算符是一个赋值运算符；因此，`bool1` 被赋值为 `bool2` 的值，导致 `bool1` 的新值为 true。
 
-类似地，第二个加粗的输出显示了字符串 Pizza2，因为 "=" 运算符赋值了字符串 Pizza2。
+类似地，第二个加粗的输出显示了字符串 Pizza2，因为 `=` 运算符赋值了字符串 Pizza2。
 
 下一节将展示如何在 Java 中处理涉及数字和字符串的布尔表达式。
 
-java.util 包包含 Date 类，该类封装了当前日期。Date 支持空构造函数，该构造函数将对象初始化为自 1970 年 1 月 1 日午以来的毫秒数。
+`java.util` 包包含 `Date` 类，该类封装了当前日期。`Date` 支持空构造函数，该构造函数将对象初始化为自 1970 年 1 月 1 日午以来的毫秒数。
 
-### 当前日期和时间
+## 当前日期和时间
 
-列表 2.3 显示了 DateTime.java 的内容，说明了如何配合 toString() 方法使用 Date 对象。
+列表 2.3 显示了 `DateTime.java` 的内容，说明了如何配合 `toString()` 方法使用 `Date` 对象。
 
 ### 列表 2.3: DateTime.java
 
 ```java
 import java.util.Date;
 
-public class DateDemo
-{
-    public static void main(String[] args)
-    {
+public class DateDemo {
+
+    public static void main(String[] args) {
+
         // 实例化 Date
         Date date = new Date();
 
         // 使用 toString() 显示时间和日期
         System.out.println(date.toString());
+
     }
+
 }
 ```
 
 Java 还提供了几种用于日历日期的方法，其中一些所示：
 
-- getTime() 返回自 1970 年 1 月 1 日午以来的毫秒数
-- before(), after() 和 equals()
-
-
-
-
+- `getTime()` 返回自 1970 年 1 月 1 日午以来的毫秒数
+- `before()`、`after()` 和 `equals()`
 
 ```java
 SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd");
@@ -1560,6 +1183,7 @@ try {
 `Thu Aug 13 09:51:52 CDT 2021`
 
 `java.time` 包（稍后会讨论）包含一些常用的类，在这里提供了：
+
 - `LocalDate`
 - `LocalDateTime`
 - `Period`
@@ -1567,15 +1191,13 @@ try {
 
 如果你需要在 Java 代码中处理日期，请搜索详细的解释和 Java 代码示例。
 
-### 使用 Unicode、i18n 和 i10n
+## 使用 Unicode、i18n 和 i10n
 
 本节讨论了 Java 对 UTF-8 和 Unicode 的支持，并提供了一个显示中文和假名文本的代码示例。Unicode 标准为每种语言的每个字符提供了一个唯一的数字。此外，Unicode 在主流操作系统、搜索引擎、浏览器、笔记本电脑和智能手机上都得到了支持。截至 2019 年 5 月，Unicode 包含了 137,994 个字符，涵盖了现代和历史脚本，以及多种符号和表情。Unicode 可以通过不同的编码实现，包括 UTF-8、UTF-16 和 UTF-32（以及其他编码），这些编码提供了完整的 Unicode 支持。
 
-Java 支持 UTF-8，它是 Web 上的主流编码（用于 94% 的网站）。UTF-8 对前 128 个代码点使用一个字节，对其他字符最多使用 4 个字节。前 128 个 Unicode 代码点代表 ASCII 字符，这意味着任何 ASCII 文本都是 UTF-8。有关 Unicode 的更多信息，请参阅维基百科页面：
-https://en.wikipedia.org/wiki/Unicode
+Java 支持 UTF-8，它是 Web 上的主流编码（用于 94% 的网站）。UTF-8 对前 128 个代码点使用一个字节，对其他字符最多使用 4 个字节。前 128 个 Unicode 代码点代表 ASCII 字符，这意味着任何 ASCII 文本都是 UTF-8。有关 Unicode 的更多信息，请参阅维基百科页面：https://en.wikipedia.org/wiki/Unicode
 
-此外，访问 Unicode 官网获取更多信息：
-https://home.unicode.org/
+此外，访问 Unicode 官网获取更多信息：https://home.unicode.org/
 
 示例 2.6 显示了 `Unicode.java` 的内容，其中包含一些 Unicode 代码片段。
 
@@ -1583,13 +1205,19 @@ https://home.unicode.org/
 
 ```java
 public class Unicode {
+
     public Unicode() {}
+
     public static void main(String[] args) {
+
         String mand = "你好";
         String hira = "こんにちは";
+
         System.out.println("中文: " + mand);
         System.out.println("假名: " + hira);
+
     }
+
 }
 ```
 
@@ -1602,7 +1230,7 @@ public class Unicode {
 
 i18n 的实现涉及一个包含键值对的文件，每种语言一个文件。Java 使用 `Bundle` 类和算法来确定选择哪种语言和地区，这些已经在每个用户的笔记本电脑或桌面上设置好了。例如，一个包含美式英语和意大利语的文件可能如下：
 
-```text
+```
 hello: ciao
 goodbye: ciao
 friend: amico
@@ -1619,13 +1247,15 @@ friend: amico
 ### 示例 2.7: I10NumberFormats.java
 
 ```java
+import java.util.Locale;
+import java.text.NumberFormat;
+
 public class I10NumberFormats {
-    import java.util.Locale;
-    import java.text.NumberFormat;
 
     public I10NumberFormats() {}
 
     public static void main(String[] args) {
+
         double d = 123456.789;
 
         NumberFormat nf1 = NumberFormat.getInstance(Locale.US);
@@ -1635,53 +1265,51 @@ public class I10NumberFormats {
         System.out.println(nf1.format(d));
         System.out.println(nf2.format(d));
         System.out.println(nf3.format(d));
+
     }
+
 }
 ```
 
+## Java 异常处理
 
+为了方便起见，这里列出了一些较早 Java 异常的导入语句：
 
+- `java.io.IOException`
+- `java.lang.ArithmeticException`
+- `java.lang.NumberFormatException`
+- `java.lang.ArrayIndexOutOfBoundsException`
+- `java.net.MalformedURLException`
+- `java.util.InputMismatchException`
 
-
-40 Java 开发者快速指南
-
-为了方便起见，这里这里列出了一些较早 Java 异常的导入语句：
-
-- java.io.IOException;
-- java.lang.ArithmeticException;
-- java.lang.NumberFormatException;
-- java.lang.ArrayIndexOutOfBoundsException;
-- java.net.MalformedURLException;
-- java.util.InputMismatchException;
-
-本章后后的 Java 代码示例包含了上述异常的示例（即：本书未讨论与 SQL 相关的异常）。
+本章后续的 Java 代码示例包含了上述异常的示例（即：本书未讨论与 SQL 相关的异常）。
 
 Java 提供了两种异常：检出异常（checked exceptions）和未检异常（unchecked exceptions），这两者将在接下来的章节中进行讨论。
 
 ### 检出异常
 
-检出异常（也称为编译异常）由编译器在编译期间进行检查：这样做可以确认异常是否已由程序员处理。如果没有处理，系统将显示编译错误。例如，SQLException、IOException、InvocationTargetException 和 ClassNotFoundException 都是检出异常。
+检出异常（也称为编译异常）由编译器在编译期间进行检查：这样做可以确认异常是否已由程序员处理。如果没有处理，系统将显示编译错误。例如，`SQLException`、`IOException`、`InvocationTargetException` 和 `ClassNotFoundException` 都是检出异常。
 
 ### 未检异常
 
 未检异常（也称为运行时异常）在 Java 程序执行期间发生。通常情况下，运行时异常在编译过程中会被忽略。它们在编译程序时不会被检查。示例包括错误的 API 调用和逻辑错误。Java 中的未检异常包括以下几种：
 
-- ArrayIndexOutOfBoundsException
-- NullPointerException
-- IllegalArgumentException
-- IllegalStateException
+- `ArrayIndexOutOfBoundsException`
+- `NullPointerException`
+- `IllegalArgumentException`
+- `IllegalStateException`
 
-当你的代码尝试访问不存在的数组元素时，会发生 ArrayIndexOutOfBoundsException：即索引值无效（太大或为负）。
+当你的代码尝试访问不存在的数组元素时，会发生 `ArrayIndexOutOfBoundsException`：即索引值无效（太大或为负）。
 
-当你的代码尝试访问一个未初始化的对象时，会发生 NullPointerException。
+当你的代码尝试访问一个未初始化的对象时，会发生 `NullPointerException`。
 
-当向方法传递了错误的参数类型时，会发生 IllegalArgumentException。例如，如果一个方法期望 int 类型的变量，而你传递了一个不兼容类型的变量，或者传递了一个 null 变量，你就会看到此异常。
+当向方法传递了错误的参数类型时，会发生 `IllegalArgumentException`。例如，如果一个方法期望 `int` 类型的变量，而你传递了一个不兼容类型的变量，或者传递了一个 `null` 变量，你就会看到此异常。
 
-当环境状态与正在执行的操作不匹配时，会发生 IllegalStateException。
+当环境状态与正在执行的操作不匹配时，会发生 `IllegalStateException`。
 
 ### throws 关键字
 
-*throws* 关键字表示如果方法中发生了指定的异常，该方法可能抛出的异常类型，在这种情况下，可能会发生以下情况：
+`throws` 关键字表示如果方法中发生了指定的异常，该方法可能抛出的异常类型，在这种情况下，可能会发生以下情况：
 
 - 调用者方法处理了抛出的异常，或者
 - 它的“父级”处理了该异常，或者
@@ -1689,47 +1317,55 @@ Java 提供了两种异常：检出异常（checked exceptions）和未检异常
 
 如果异常没有被调用方法链中的任何方法处理，则会抛出异常并停止程序执行。
 
-或者，你可以将代码包含在 try/catch/finally 块中，其中 catch 块指定了捕获的异常。你可以包含多个 catch 块，每个 catch 块捕获特定的异常：第一个 catch 是最具体的（例如 *DivisionByZero*），而最后一个 catch 块是最“通用”的（例如 Exception）。
+或者，你可以将代码包含在 `try/catch/finally` 块中，其中 `catch` 块指定了捕获的异常。你可以包含多个 `catch` 块，每个 `catch` 块捕获特定的异常：第一个 `catch` 是最具体的（例如 `DivisionByZero`），而最后一个 `catch` 块是最“通用”的（例如 `Exception`）。
 
 ### Throwable 类
 
-*Throwable* 类是所有异常和错误的超类。请记住以下规则：不要在 catch 句中捕获 *Throwable* 异常，因为这将会捕获所有的错误以及所有的异常。错误由 JVM 抛出以表示严重问题（应用程序并不打算处理它们）。典型的示例包括 *OutOfMemoryError* 或 *OverflowError*。两者都是由应用程序控制之外的情况引起的，且无法处理。
+`Throwable` 类是所有异常和错误的超类。请记住以下规则：不要在 `catch` 句中捕获 `Throwable` 异常，因为这将会捕获所有的错误以及所有的异常。错误由 JVM 抛出以表示严重问题（应用程序并不打算处理它们）。典型的示例包括 `OutOfMemoryError` 或 `OverflowError`。两者都是由应用程序控制之外的情况引起的，且无法处理。
 
 另一个建议：避免在捕获异常后再次抛出相同的异常。这样做会为同一个异常生成多个错误信息。
 
 ### 获取用户输入并处理异常
 
-涉及用户输入的代码示例包含一个 try 块，尝试某些操作，例如将字符串转换为数字。如果用户提供了非数字输入，转换将失败，此时 catch 块将捕获发生的错误，并执行 catch 块中的代码。
+涉及用户输入的代码示例包含一个 `try` 块，尝试某些操作，例如将字符串转换为数字。如果用户提供了非数字输入，转换将失败，此时 `catch` 块将捕获发生的错误，并执行 `catch` 块中的代码。
 
-此外，你可以在 catch 块之后包含一个 finally 块（是的，允许包含多个 catch 块），它会在几乎每种情况下被执行（该规则的“例外”涉及调用 *System.exit(1)* 语句）。请注意，如果你在一个无法抛出异常的类中使用 try/catch 块，Java 将在你尝试编译代码时提醒你。
+此外，你可以在 `catch` 块之后包含一个 `finally` 块（是的，允许包含多个 `catch` 块），它会在几乎每种情况下被执行（该规则的“例外”涉及调用 `System.exit(1)` 语句）。请注意，如果你在一个无法抛出异常的类中使用 `try/catch` 块，Java 将在你尝试编译代码时提醒你。
 
-代码示例向你展示了两个尚未讨论的内容。首先，你将看到如何使用 import 语句来访问为我们处理底层细节现有类，这样我们就不需要“重复轮子”。Java 导入语句非常强大，书中几乎所有的代码示例都使用了它们。
+代码示例向你展示了两个尚未讨论的内容。首先，你将看到如何使用 `import` 语句来访问为我们处理底层细节现有类，这样我们就不需要“重复轮子”。Java 导入语句非常强大，书中几乎所有的代码示例都使用了它们。
 
-其次，你将学习如何使用 try/catch 块来处理尝试将输入字符串转换为整数或浮点值时可能发生的异常。System.in.read() 将输入字符串视为 ASCII 值，这意味着输入字符串“0”会被转换为 48，“1”会被转换为 49，依此类推。
+其次，你将学习如何使用 `try/catch` 块来处理尝试将输入字符串转换为整数或浮点值时可能发生的异常。`System.in.read()` 将输入字符串视为 ASCII 值，这意味着输入字符串“0”会被转换为 48，“1”会被转换为 49，依此类推。
 
-列表 2.9 显示了 UserInput.java 的内容，该程序提示用户输入字符串，然后尝试将该字符串转换为数字。这是本部分中最简单的示例，没有用于处理任何异常的 try/catch 代码块。
+列表 2.9 显示了 `UserInput.java` 的内容，该程序提示用户输入字符串，然后尝试将该字符串转换为数字。这是本部分中最简单的示例，没有用于处理任何异常的 `try/catch` 代码块。
 
 ### 列表 2.9: UserInput.java
 
 ```java
 import java.util.Scanner;
+
 public class UserInput {
-    public static void main (String args[]) {
+
+    public static void main(String args[]) {
+
         System.out.print("Enter a number: ");
         Scanner scan = new Scanner(System.in);
         int num1 = scan.nextInt();
         System.out.println("you entered a number");
+
     }
+
 }
 ```
 
-列表 2.9 提示用户输入，这些输入由 Scanner 类的实例变量 scan 进行处理。Scanner 的 nextInt() 方法将输入转换为整数值，并赋值给变量 num1，然后通过 System.out.println() 语句打印。以下是启动代码时的输出：
+列表 2.9 提示用户输入，这些输入由 `Scanner` 类的实例变量 `scan` 进行处理。`Scanner` 的 `nextInt()` 方法将输入转换为整数值，并赋值给变量 `num1`，然后通过 `System.out.println()` 语句打印。以下是启动代码时的输出：
 
+```
 Enter a number: 123
 you entered a number
+```
 
 当用户输入非数字字符串时，输出如下：
 
+```
 Enter a number: x123
 Exception in thread "main" java.util.InputMismatchException
     at java.util.Scanner.throwFor(Scanner.java:840)
@@ -1737,10 +1373,11 @@ Exception in thread "main" java.util.InputMismatchException
     at java.util.Scanner.nextInt(Scanner.java:2091)
     at java.util.Scanner.nextInt(Scanner.java:2050)
     at UserInput.main(UserInput.java:9)
+```
 
 由于此异常在列表 2.9 中未被捕获，可以看到堆栈跟踪。
 
-让我们检查列表 2.10，它显示了 UserInput.java 的内容，该程序提示用户输入字符串。注意此代码示例包含一个 try/catch 块，尝试将输入字符串转换为数字。
+让我们检查列表 2.10，它显示了 `UserInput.java` 的内容，该程序提示用户输入字符串。注意此代码示例包含一个 `try/catch` 块，尝试将输入字符串转换为数字。
 
 ### 列表 2.10: UserInput.java
 
@@ -1749,50 +1386,63 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class UserInput2 {
+
     public static void main(String args[]) {
+
         System.out.print("Enter a number: ");
         Scanner scan = new Scanner(System.in);
-    }
 
-    try {
-        int num1 = scan.nextInt();
-        System.out.println(num1+" is a number");
-    } catch (InputMismatchException ime) {
-        System.out.println("You did not enter a number");
-        System.out.println("==> Before the stack trace...");
-        ime.printStackTrace();
-        System.out.println("==> After the stack trace...");
+        try {
+            int num1 = scan.nextInt();
+            System.out.println(num1 + " is a number");
+        } catch (InputMismatchException ime) {
+            System.out.println("You did not enter a number");
+            System.out.println("==> Before the stack trace...");
+            ime.printStackTrace();
+        }
     }
 }
 ```
 
+
+
+System.out.println("==> After the stack trace...");
+
+}
+
+}
+
+```
+
 列表 2.10 包含一个 try/catch 代码块，其中 try 块包含输入相关的代码，catch 块包含在发生错误时调用的代码。特别是，我们知道当用户输入无法转换为数字的字符串时会发生错误。当你启动代码时的输出如下：
 
+```
 Enter a number: 123
 123 is a number
+```
 
 当你输入非数字字符串时，输出如下：
 
 ```
 Enter a number: x123
+
 You did not enter a number
+
 ==> Before the stack trace...
+
 java.util.InputMismatchException
     at java.util.Scanner.throwFor(Scanner.java:840)
     at java.util.Scanner.next(Scanner.java:1461)
     at java.util.Scanner.nextInt(Scanner.java:2091)
     at java.util.Scanner.nextInt(Scanner.java:2050)
     at UserInput2.main(UserInput.java:12)
+
 ==> After the stack trace...
 ```
 
-
-
-
-
 ### 解析用户输入和处理异常
 
-Integer 类包含两个用于解析字符串的方法（即将字符串转换为数字）：
+`Integer` 类包含两个用于解析字符串的方法（即将字符串转换为数字）：
 
 ```java
 static int parseInt(String s)
@@ -1810,17 +1460,27 @@ import java.io.Console;
 import java.lang.NumberFormatException;
 
 public class UserInput {
-    public static void main (String[] args) {
+
+    public static void main(String[] args) {
+
         Console input = System.console();
+
         String strl = input.readLine("Enter a number: ");
 
         try {
+
             int numl = Integer.parseInt(strl);
-            System.out.println(strl+" is a number");
+
+            System.out.println(strl + " is a number");
+
         } catch (NumberFormatException nfe) {
-            System.out.println(strl+" is not a number");
+
+            System.out.println(strl + " is not a number");
+
         }
+
     }
+
 }
 ```
 
@@ -1828,13 +1488,17 @@ public class UserInput {
 
 此时，我们已经获得了用户输入的内容，可以使用 `try/catch` 块来判断输入字符串是否可以转换为数字。当你运行代码时的输出如下：
 
+```
 Enter a number: 123
 123 is a number
+```
 
 当你输入非数字字符串时的输出如下：
 
+```
 Enter a number: x123
 x123 is not a number
+```
 
 列表 2.11 中的代码正确处理了输入非数字字符串的情况。请注意，这里没有堆栈跟踪（stack trace），我们可以轻松地看到转换为整数值失败的情况。此外，我们还可以处理输入字符串为浮点数的情况。
 
@@ -1847,37 +1511,56 @@ import java.io.Console;
 import java.lang.NumberFormatException;
 
 public class UserInput {
+
     public static void main(String[] args) {
+
         Console input = System.console();
+
         String strl = input.readLine("Enter a number: ");
 
         try {
+
             int numl = Integer.parseInt(strl);
+
             System.out.println(strl + " is a number");
+
         } catch (NumberFormatException nfe) {
+
             System.out.println(strl + " is not an integer");
 
             try {
+
                 float decl = Float.parseFloat(strl);
+
                 System.out.println(decl + " is a decimal value");
+
             } catch (NumberFormatException nfe2) {
+
                 System.out.println(strl + " is not a decimal");
+
             }
+
         }
+
     }
+
 }
 ```
 
 列表 2.12 的代码与列表 2.11 相同，唯一的区别是：`try/catch` 块包含了第二个 `try/catch` 块，它尝试将用户输入转换为浮点数。因此，代码对输入字符串进行了两次尝试，之后代码判断输入是非数字字符串。当你运行代码时的输出如下：
 
+```
 Enter a number: 123.4
 123.4 is not an integer
 123.4 is a decimal value
+```
 
 当你输入非数字字符串时的输出如下：
 
+```
 Enter a number: x123
 x123 is not a number
+```
 
 ### 嵌套异常
 
@@ -1892,19 +1575,31 @@ import java.io.Console;
 import java.lang.NumberFormatException;
 
 public class UserInput {
+
     public static void main(String[] args) {
+
         Console input = System.console();
+
         String strl = input.readLine("Enter a number: ");
 
         try {
+
             int numl = Integer.parseInt(strl);
-            System.out.println(strl+" is a number");
+
+            System.out.println(strl + " is a number");
+
         } catch (NumberFormatException nfe) {
-            System.out.println(strl+" is not a number");
+
+            System.out.println(strl + " is not a number");
+
         } finally {
+
             System.out.println("Conversion attempt finished.");
+
         }
+
     }
+
 }
 ```
 
@@ -1916,37 +1611,62 @@ public class UserInput {
 import java.lang.NumberFormatException;
 
 public class String1 {
+
     int x;
     int y;
 
     public void convert(String str) {
+
         try {
+
             x = Integer.parseInt(str);
+
             System.out.println("x: " + x);
+
         } catch (NumberFormatException nfe) {
+
             System.out.println("x: " + str + " is not an integer");
+
         } finally {
+
             System.out.println("Conversion of x finished.");
+
         }
+
     }
 
     public void convert(String str) {
+
         try {
+
             y = (int) Double.parseDouble(str);
+
             System.out.println("y: " + y);
+
         } catch (NumberFormatException nfe) {
+
             System.out.println("y: " + str + " is not a decimal");
+
         } finally {
+
             System.out.println("Conversion of y finished.");
+
         }
+
     }
 
     public static void main(String[] args) {
+
         String1 s1 = new String1();
+
         s1.convert("123");
+
         s1.convert("123.4");
+
         s1.convert("x123");
+
     }
+
 }
 ```
 
@@ -1960,39 +1680,64 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class DivideBy {
+
     public static void main(String[] args) {
+
         int number = 3, denom = 0;
         double ratio = 0.0;
 
         System.out.print("Enter a number: ");
+
         Scanner scan = new Scanner(System.in);
 
         try {
+
             denom = scan.nextInt();
-            System.out.println(denom+" is a number");
+
+            System.out.println(denom + " is a number");
 
             try {
-                ratio = (double)number/denom;
+
+                ratio = (double) number / denom;
+
                 System.out.println("1ratio = " + ratio);
+
             } catch (ArithmeticException ae) {
+
                 System.out.println("=> 1Divide by zero");
+
             } finally {
+
                 System.out.println("first finally block");
+
             }
+
         } catch (InputMismatchException ime) {
+
             System.out.println("You did not enter a number");
+
             System.out.println("Trying to divide by zero");
+
         }
 
         try {
-            ratio = (double)number/denom;
+
+            ratio = (double) number / denom;
+
             System.out.println("2ratio = " + ratio);
+
         } catch (ArithmeticException ae) {
+
             System.out.println("=> 2Divide by zero");
+
         } finally {
+
             System.out.println("second finally block");
+
         }
+
     }
+
 }
 ```
 
@@ -2001,9 +1746,6 @@ public class DivideBy {
 ### 总结
 
 本章向你介绍了使用 `if-then` 语句和嵌套 `if-then` 语句处理多重条件逻辑。接下来你学习了如何与 `Date` 类工作，以及你如何将字符串转换为指定格式的日期。
-
-
-
 
 你还学习了如何处理 Unicode，并参考了一个涉及日语和中文文本字符串的示例。随后，你还对国际化（i18n）和本地化（l10n）进行了简要介绍。
 
@@ -2027,7 +1769,7 @@ public class DivideBy {
 
 ## 什么是 Java 类？
 
-正如你在之前的代码示例所示，Java 类由方法和数据组成，对象是 Java 类的实例。对象通过 `new` 关键字创建。文件名和文件内部的类名必须相同。例如，文件 MyClass.java 必须包含一个名为 `MyClass` 的公共类。Java 类可以包含其他 Java 类，但 Java 也支持匿名内部类概念，这种类通常用于 GUI 控件中监听器的实现。
+正如你在之前的代码示例所示，Java 类由方法和数据组成，对象是 Java 类的实例。对象通过 `new` 关键字创建。文件名和文件内部的类名必须相同。例如，文件 `MyClass.java` 必须包含一个名为 `MyClass` 的公共类。Java 类可以包含其他 Java 类，但 Java 也支持匿名内部类概念，这种类通常用于 GUI 控件中监听器的实现。
 
 一个类只能通过 `extends` 关键字继承一个类；因此，Java 不支持类的多继承。然而，一个类可以通过 `implements` 关键字实现多个接口。抽象类包含至少一个必须由子类实现的方法。因此，抽象类不能被直接实例化，但实现父类抽象方法的子类是可以实例化的。
 
@@ -2041,11 +1783,13 @@ Java 方法可以是公共（public）、受保护（protected）或私有（pri
 
 这里是一些使用 `private` 和 `public` 关键字的示例：
 
-```
-private String fname = "Dave"
-public String getName() { return fname; }
-public void setName(String newName) { fname = newName; }
-```
+
+
+private `String fname = "Dave"`
+
+public `String getName()` { return `fname`; }
+
+public `void setName(String newName)` { `fname = newName`; }
 
 类中的 setter（set方法）和 getter（get方法）分别是访问器（accessors）和变异器（mutators）。
 
@@ -2059,49 +1803,67 @@ Java 中的变量有三种范围：局部、实例和静态。局部变量声明
 
 ### 列表 3.1: JavaVars.java
 
-```
+```java
 public class JavaVars {
+
     // 所有实例共享一个 x1
+
     public static int x1 = 10;
 
     // 每个实例拥有独立的 x2
+
     public int x2 = 20;
 
     public void display() {
+
         // 局部变量 x3 无法从其他方法访问：
+
         int x3 = 30;
 
-        System.out.println("Display x1 = "+x1);
-        System.out.println("Display x2 = "+x2");
-        System.out.println("Display x3 = "+x3");
+        System.out.println("Display x1 = " + x1);
+
+        System.out.println("Display x2 = " + x2);
+
+        System.out.println("Display x3 = " + x3);
+
     }
 
     public static void main(String args[]) {
+
         JavaVars jv1 = new JavaVars();
+
         System.out.println("Invoking display from jv1");
+
         jv1.display();
 
         JavaVars jv2 = new JavaVars();
+
         jv2.x1 = 1000;
+
         jv2.x2 = 345;
+
         System.out.println("Invoking display from jv2");
+
         jv2.display();
 
         System.out.println("Invoking display from jv1");
+
         jv1.display();
+
     }
+
 }
 ```
 
 列表 3.1 定义了 `JavaVars` 类，以及静态变量 `x1`、类变量 `x2` 和局部变量 `x3`，它们分别初始化为 10、20 和 30。注意 `x3` 是局部变量，因为它定义在 `display()` 方法内部。
 
-现在你已经了静态、实例和局部变量之间的差异，接下来的节将提供关于静态方法的更多细节。
+现在你已经了解静态、实例和局部变量之间的差异，接下来的节将提供关于静态方法的更多细节。
 
 ### 静态方法
 
 静态变量的声明方式与实例变量相同，但带有 `static` 关键字。如果你将一个方法声明为 `static`，该方法只能更新静态变量而非非静态方法。静态方法的一个关键点是可以在不实例化对象的情况下引用静态方法。例如，代码段 `MyClass.myStaticMethod(userId)` 调用了静态方法 `myStaticMethod(userId)`，其参数 `userId` 的类型定义在 `MyClass` 类中。
 
-相反，非静态方法只能通过类的实例可用。请记住关于静态方法的以下几：
+相反，非静态方法只能通过类的实例可用。请记住关于静态方法的以下几点：
 
 - 它们只能调用其他静态方法。
 - 它们只能访问静态数据。
@@ -2110,50 +1872,46 @@ public class JavaVars {
 
 列表 3.2 显示了 `StaticMethod.java` 的内容，说明了如何在 Java 类中定义和调用静态方法。
 
-```
-public class StaticMethod
-{
+```java
+public class StaticMethod {
+
   // 一个非静态方法
-  public void display() {
-```
+  public void display1() {
+    System.out.println("Inside display1");
+  }
 
+  // a static method:
+  public static void display2() {
+    System.out.println("Inside display2");
+  }
 
-```java
-{
-  System.out.println("Inside display1");
+  public static void main(String args[]) {
+    System.out.println("Inside main()");
+
+    // cannot invoke non-static method:
+    //StaticMethod.display1();
+
+    // this works correctly:
+    StaticMethod.display2();
+
+    // this works correctly:
+    StaticMethod sm = new StaticMethod();
+    sm.display1();
+  }
 }
 ```
 
-```java
-// a static method:
-public static void display2() {
-  System.out.println("Inside display2");
-}
-```
-
-```java
-public static void main(String args[]) {
-  System.out.println("Inside main()");
-  // cannot invoke non-static method:
-  //StaticMethod.display1();
-  // this works correctly:
-  StaticMethod.display2();
-  // this works correctly:
-  StaticMethod sm = new StaticMethod();
-  sm.display1();
-}
-```
-
-Listing 32 定义了 `StaticMethod` 类、非静态方法 `display1()` 以及静态方法 `display2()`。因此，`main()` 方法可以直接调用 `display2()` 方法，而无需 `StaticMethod` 类的实例。接下来，`main()` 方法将变量 `sm` 初始化为 `StaticMethod` 类的实例，随后 `sm` 调用了方法 `display1()`，这是一个非静态方法。
+列表 3.2 定义了 `StaticMethod` 类、非静态方法 `display1()` 以及静态方法 `display2()`。因此，`main()` 方法可以直接调用 `display2()` 方法，而无需 `StaticMethod` 类的实例。接下来，`main()` 方法将变量 `sm` 初始化为 `StaticMethod` 类的实例，随后 `sm` 调用了方法 `display1()`，这是一个非静态方法。
 
 ### 其他静态类型
 
-正如你在上一节中看到的，，Java 类中的静态方法可以在不实例化对象的情况下被调用。此外，你可以定义一个只包含静态方法的 Java 类，每个方法都可以在不实例化对象的情况下被调用。
+正如你在上一节中看到的，Java 类中的静态方法可以在不实例化对象的情况下被调用。此外，你可以定义一个只包含静态方法的 Java 类，每个方法都可以在不实例化对象的情况下被调用。
 
 > 静态块（也称为静态初始化块）是一组指令，当 Java 类加载到内存时会执行一次。静态块用于在对象构造之前初始化，如下：
 
 ```java
 class MyClass {
+
   int x;
   int y;
 
@@ -2173,7 +1931,7 @@ class MyClass {
 static block executed
 ```
 
-本章的下一部分将向你展示如何定义 geters 方法和 setters 方法（分别称为访问器和变异器）。
+本章的下一部分将向你展示如何定义 getters 方法和 setters 方法（分别称为访问器和变异器）。
 
 ### 什么是访问器和变异器？
 
@@ -2181,84 +1939,52 @@ static block executed
 
 本节的示例向你展示如何定义一个 Java 类，该类仅代表人的两个属性：名和姓，以说明如何调用此类中的其他方法。现实中的类会包含许多其他属性，在你阅读此示例后，你能够轻松地扩展此代码以实现真实的示例。
 
-Listing 3.3 显示了 `Person.java` 的内容，其中包含了用于跟踪人的姓的私有 `String` 变量，以及允许你访问任何人的名和姓的方法。
+列表 3.3 显示了 `Person.java` 的内容，其中包含了用于跟踪人的姓的私有 `String` 变量，以及允许你访问任何人的名和姓的方法。
 
 ### 列表 3.3: Person.java
 
 ```java
-public class Person
-{
+public class Person {
+
     private String firstName;
     private String lastName;
 
-    public Person(String firstName, String lastName)
-    {
+    public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public String getFirstName()
-    {
+    public String getFirstName() {
         return(this.firstName);
     }
 
-    public String getLastName()
-    {
+    public String getLastName() {
         return(this.lastName);
     }
 
-    public static void main(String[] args[])
-    {
+    public static void main(String[] args) {
         Person p1 = new Person("John", "Smith");
         Person p2 = new Person("Jane", "Andrews");
+
         System.out.println("My name is " + 
-            p1.getFirstName()+" " +
+            p1.getFirstName() + " " +
             p1.getLastName());
-        System.out.println("My name is "+
-p2.getFirstName()+" "+
-p2.getLastName());
+
+        System.out.println("My name is " +
+            p2.getFirstName() + " " +
+            p2.getLastName());
     }
 }
 ```
 
-Listing 3.3 定义了 `Person` 类和一个 `main()` 方法，该方法将变量 `p1` 和 `p2` 初始化为 `Person` 类的实例，但在构造函数中使用不同的值。`main()` 方法的后续部分显示了 `p1` 和 `p2`变量的内容：
+列表 3.3 定义了 `Person` 类和一个 `main()` 方法，该方法将变量 `p1` 和 `p2` 初始化为 `Person` 类的实例，但在构造函数中使用不同的值。`main()` 方法的后续部分显示了 `p1` 和 `p2` 变量的内容：
 
+```
 My name is John Smith
 My name is Jane Andrews
-
-你可以增强 Listing 3.3 中的代码，读取存储在 ASCII 文件、CSV 文件、XML 文件甚至 Web 服务返回的 JSON 字符串中的姓名列表。
-
-
-
-
-
-# 60 开发者 Java Pocket指南
-
-```java
-public static void main(String args[]) {
-    ArrayExamples2 ae2 = new ArrayExamples2();
-    ae2.initializeArrays();
-    ae2.calculateTotals();
-    ae2.displayCelsiusResults();
-    ae2.displayNames();
-}
 ```
 
-列表 3.5 定义了 `ArrayExamples2` 类，该类初始化了各种标量变量以及三个类型为 `double`、`int` 和 `String` 的数组。列表 3.5 的后续部分定义了属于 `ArrayExamples2` 类的几个方法。
-
-`initializeArrays()` 方法初始化 `celsiusValues` 和 `celsiusValues2` 数组，它们分别包含随机生成的浮点数和整数。`calculateTotals()` 方法计算 `celsiusValues` 和 `celsiusValues2` 数组的和。`displayCelsiusResults()` 方法显示 `celsiusValues` 和 `celsiusValues2` 数组的和。最后，`displayNames()` 方法显示列表 3.5 顶部定义的 `names` 数组中的字符串。
-
-列表 3.5 的最后是 `main()` 方法，它创建了 `ArrayExamples2` 类的实例并调用了属于该类的四个方法。
-
-运行列表 3.5 中的代码，你将看到在第 1 章运行 Java 类 `ArrayExamples2` 时看到的相同输出：
-
-+ Name 1: Tic
-Name 2: Tac
-Name 3: Toe
-Total Celsius: 249.4551395046531
-Avg Celsius: 20.787928292054424
-Total Celsius: 243.0
-Avg Celsius: 20.0
+你可以增强列表 3.3 中的代码，读取存储在 ASCII 文件、CSV 文件、XML 文件甚至 Web 服务返回的 JSON 字符串中的姓名列表。
 
 ### 定义构造函数和访问器
 
@@ -2268,13 +1994,13 @@ Avg Celsius: 20.0
 
 ```java
 public class ArrayExamples3 {
+
     private int arraySize = 12;
     private int maxCelsius = 40;
     private double intSumCelsius = 0;
     private double intAvgCelsius = 0;
     private double dblSumCelsius = 0.0;
     private double dblAvgCelsius = 0.0;
-
     private double[] celsiusValues = new double[arraySize];
     private int[] celsiusValues2 = new int[arraySize];
     private String[] names = {"Tic", "Tac", "Toe"};
@@ -2288,63 +2014,37 @@ public class ArrayExamples3 {
 
     private void initializeArrays() {
         // initialize arrays with random values
-        for (int i=0; i<arraySize; i++) {
-            celsiusValues[i] = (int) maxCelsius*Math.random();
+        for (int i = 0; i < arraySize; i++) {
+            celsiusValues[i] = (int) maxCelsius * Math.random();
             celsiusValues2[i] = (int) celsiusValues[i];
         }
     }
 
     private void calculateTotals() {
         // calculate the array sums
-        for (int i=0; i<arraySize; i++) {
+        for (int i = 0; i < arraySize; i++) {
             intSumCelsius += celsiusValues2[i];
             dblSumCelsius += celsiusValues[i];
         }
-        dblAvgCelsius = dblSumCelsius/arraySize;
-        intAvgCelsius = (int) (intSumCelsius/arraySize);
+        dblAvgCelsius = dblSumCelsius / arraySize;
+        intAvgCelsius = (int) (intSumCelsius / arraySize);
     }
 
     private void displayCelsiusResults() {
-        System.out.println("Total Celsius: "+dblSumCelsius);
-        System.out.println("Avg Celsius: "+dblAvgCelsius);
-        System.out.println("Total Celsius2: "+intSumCelsius);
-        System.out.println("Avg Celsius2: "+intAvgCelsius);
+        System.out.println("Total Celsius: " + dblSumCelsius);
+        System.out.println("Avg Celsius: " + dblAvgCelsius);
+        System.out.println("Total Celsius2: " + intSumCelsius);
+        System.out.println("Avg Celsius2: " + intAvgCelsius);
     }
 
     private void displayNames() {
         // display the contents of the names array;
-        for (int i=0; i<names.length; i++) {
-            System.out.println("Name "+(i+1)+": "+names[i]);
+        for (int i = 0; i < names.length; i++) {
+            System.out.println("Name " + (i + 1) + ": " + names[i]);
         }
     }
 }
 ```
-
-## 开发者 Java Pocket指南
-
-```java
-public String getFirstName() {
-    return names[0];
-}
-
-public static void main(String args[]) {
-    ArrayExamples3 ae3 = new ArrayExamples3();
-    String name0 = ae3.getFirstName();
-    System.out.println("First name: "+name0);
-}
-```
-
-列表 3.6 定义了 `ArrayExamples` 类和一个 `main()` 方法，该方法将变量 `ae3` 初始化为 `ArrayExamples3` 类的实例。注意，该类具有列表 3.5 中定义的相同方法。运行列表 3.6 中的代码，你将看到与上节中 `ArrayExamples2` 相似的输出：
-
-Total Celsius: 230.365808921479
-Avg Celsius: 19.917150743456582
-Total Celsius2: 224.0
-Avg Celsius2: 18.0
-
-Name 1: Tic
-Name 2: Tac
-Name 3: Toe
-First name: Tic
 
 ### 访问器、变异器与 this 关键字
 
@@ -2354,57 +2054,57 @@ First name: Tic
 
 ```java
 public class Employee {
+
     private String empid;
     private int grade;
     private double years;
-
-    public Employee(String empid, int grade, double years) {
-        this.empid = empid;
-        this.grade = grade;
-        this.years = years;
-    }
-
-    public String getEmpid() {
-        return empid;
-    }
-
-    public void setEmpid(String empid) {
-        this.empid = empid;
-    }
-
-    public int getGrade() {
-        return grade;
-    }
-
-    public void setGrade(int grade) {
-        this.grade = grade;
-    }
-
-    public double getYears() {
-        return years;
-    }
-
-    public void setYears(double years) {
-        this.years = years;
-    }
-
-    public static void main(String args[]) {
-        Employee empl = new Employee("2000", 10, 5);
-        System.out.println("Local empid: "+empl.getEmpid());
-        System.out.println("Instance empid: none");
-        System.out.println("Instance empid: "+empl.getEmpid());
-        System.out.println("Grade: "+empl.getGrade());
-        empl.setGrade(18);
-        System.out.println("Grade: "+empl.getGrade());
-    }
-}
 ```
 
 
 
+# 方法与构造函数
 
+```java
+public Employee(String empid, int grade, double years) {
+    this.empid = empid;
+    this.grade = grade;
+    this.years = years;
+}
 
-# 方法与构造函数 • 65
+public String getEmpid() {
+    return empid;
+}
+
+public void setEmpid(String empid) {
+    this.empid = empid;
+}
+
+public int getGrade() {
+    return grade;
+}
+
+public void setGrade(int grade) {
+    this.grade = grade;
+}
+
+public double getYears() {
+    return years;
+}
+
+public void setYears(double years) {
+    this.years = years;
+}
+
+public static void main(String args[]) {
+    Employee empl = new Employee("2000", 10, 5);
+    System.out.println("Local empid: " + empl.getEmpid());
+    System.out.println("Instance empid: none");
+    System.out.println("Instance empid: " + empl.getEmpid());
+    System.out.println("Grade: " + empl.getGrade());
+    empl.setGrade(18);
+    System.out.println("Grade: " + empl.getGrade());
+}
+```
 
 ```java
 private int grade;
@@ -2412,9 +2112,7 @@ private double years;
 ```
 
 ```java
-public Employee(String empId, int grade, double
-years)
-{
+public Employee(String empId, int grade, double years) {
     this.empId = empId;
     this.grade = grade;
     this.years = years;
@@ -2422,51 +2120,47 @@ years)
 ```
 
 ```java
-public void setGrade(int grade)
-{
+public void setGrade(int grade) {
     this.grade = grade;
 }
 ```
 
 ```java
-public int getGrade()
-{
+public int getGrade() {
     return (this.grade);
 }
 ```
 
 ```java
-public ArrayEmployees Employees()
-{
+public ArrayEmployees Employees() {
     Employee[] empList = new Employee[3];
     String[] ids = {"1000", "2000", "3000"};
     int[] grades = {10, 11, 12};
     int[] years = {2, 3, 4};
-
-    for (int i=0; i<empList.length; i++) {
+    for (int i = 0; i < empList.length; i++) {
         empList[i] = new Employee(ids[i], grades[i], years[i]);
     }
-
-    for (int i=0; i<empList.length; i++) {
+    for (int i = 0; i < empList.length; i++) {
         Employee emp = empList[i];
         int grade = emp.getGrade();
-        System.out.println("Grade emp "+(i+1)+": "+grade);
+        System.out.println("Grade emp " + (i + 1) + ": " + grade);
     }
 }
 ```
 
 ```java
-public static void main(String args[])
-{
+public static void main(String args[]) {
     ArrayEmployees arrEmps = new ArrayEmployees();
 }
 ```
 
 列表 3.8 定义了 `ArrayEmployees` 类，该类包含了 `Employee` 类的定义。现在运行列表 3.8 中的代码，你将看到以下输出：
 
+```
 Grade for emp #1: 10
 Grade for emp #2: 11
 Grade for emp #3: 12
+```
 
 # 66 * 开发者 Java 快速指南
 
@@ -2478,7 +2172,7 @@ ArrayEmployees.class
 ArrayEmployees$Employee.class
 ```
 
-### 静态方法
+## 静态方法
 
 静态方法可以直接从 Java 类进行调用，而非静态方法只能从 Java 类的实例调用。例如，如果 `staticMethod()` 是 `classB` 的静态方法，那么以下语句是合法的：
 
@@ -2489,13 +2183,13 @@ classB.staticMethod();
 然而，如果 `nonStaticMethod()` 是 `classB` 的非静态方法，那么以下语句是合法的：
 
 ```java
-Class B b = new ClassB();
+ClassB b = new ClassB();
 b.nonStaticMethod();
-//此行是非法的：
+// 此行是非法的：
 classB.nonStaticMethod();
 ```
 
-类的每个实例都包含一个实例变量的副本，但所有实例共享一个静态变量的副本。如果在其中一个实例中修改了静态变量，那么修改后的值对该类的所有其他实例都可用，包括在静态变量被修改后创建的实例。如果 `x`, `y`, 和 `z` 是类中的静态变量，并且它们的值被修改了，那么修改后的值在该类的所有实例中都可用。
+类的每个实例都包含一个实例变量的副本，但所有实例共享一个静态变量的副本。如果在其中一个实例中修改了静态变量，那么修改后的值对该类的所有其他实例都可用，包括在静态变量被修改后创建的实例。如果 `x`、`y` 和 `z` 是类中的静态变量，并且它们的值被修改了，那么修改后的值在该类的所有实例中都可用。
 
 请记住以下区别：实例变量在创建实例时初始化，而类变量在类创建时初始化。
 
@@ -2507,7 +2201,6 @@ classB.nonStaticMethod();
 public class DataTypesVars {
     // 一个静态变量
     static int club = 5;
-
     // 四个类变量
     int length = 4;
     int myInt = 123;
@@ -2515,65 +2208,55 @@ public class DataTypesVars {
     double total = 10.0;
 
     public DataTypesVars() {}
+
     public void calculations() {
-```
+        // 局部变量
+        double dbl2 = myDouble / length;
+        int myAvg = (int) (total / length);
+        System.out.println("length: " + ((++length));
+        System.out.println("dbl2: " + dbl2);
+        System.out.println("myAvg: " + myAvg);
+        System.out.println("");
+    }
 
-```java
-{
-  // 局部变量
-  double dbl2 = myDouble/length;
-  int myAvg = (int)(total/length);
+    public static void printClub() {
+        // 访问非静态变量将导致编译错误
+        System.out.println("club: " + ((++club));
+    }
 
-  System.out.println("length: " + ((++length));
-  System.out.println("dbl2: " + +dbl2);
-  System.out.println("myAvg: " + +myAvg);
-  System.out.println("");
-}
-
-public static void printClub() {
-  // 访问非静态变量
-  // 将导致编译错误
-  System.out.println("club: " + ((++club));
-}
-
-public static void main(String[] args) {
-  DataVars.printClub();
-  DataVars dtvl1 = new DataVars();
-  dtvl1.calculations();
-
-  DataVars.printClub();
-  DataVars dtvl2 = new DataVars();
-  dtvl2.calculations();
+    public static void main(String[] args) {
+        DataTypesVars.printClub();
+        DataTypesVars dtvl1 = new DataTypesVars();
+        dtvl1.calculations();
+        DataTypesVars.printClub();
+        DataTypesVars dtvl2 = new DataTypesVars();
+        dtvl2.calculations();
+    }
 }
 ```
 
-列表 3.9 定义了 `DataVars` 类和一个 `main()` 方法，该方法调用静态方法 `printClub()`，该方法包含一个 `System.out` 语句用于显示 `club` 变量的自增值。`main()` 方法的下一部分将变量 `dtvl` 初始化为 `DataVars` 类的实例，然后调用 `calculations()` 方法来显示在该列表顶部定义的标量变量的值。`main()` 方法中的最后一个代码块也调用了 `calculations()` 方法并显示了变量 `dtvl` 的值。列表 3.9 的输出如下：
+列表 3.9 定义了 `DataTypesVars` 类和一个 `main()` 方法，该方法调用静态方法 `printClub()`，该方法包含一个 `System.out` 语句用于显示 `club` 变量的自增值。`main()` 方法的下一部分将变量 `dtvl1` 初始化为 `DataTypesVars` 类的实例，然后调用 `calculations()` 方法来显示在该列表顶部定义的标量变量的值。`main()` 方法中的最后一个代码块也调用了 `calculations()` 方法并显示了变量 `dtvl2` 的值。列表 3.9 的输出如下：
 
 ```
 club: 6
 length: 5
 dbl2: 24.6
 myAvg: 2
-
 club: 7
 length: 5
 dbl2: 24.6
 myAvg: 2
 ```
 
-注意静态变量 `club` 的值在 `dtvl` 和 `dtvl2` 中是不同的。然而，非静态变量 `length` 在方法内部被递增。
+注意静态变量 `club` 的值在 `dtvl1` 和 `dtvl2` 中是不同的。然而，非静态变量 `length` 在方法内部被递增。
 
 （注：此处由于原文文本存在大量逻辑混乱和重复，翻译时已根据语意进行理顺，保留了核心技术术语与格式。）
 
-
-
-
-
-### 第四个“HELLO WORLD”示例
+## 第四个“HELLO WORLD”示例
 
 列表 3.13 显示了 `HelloWorld4.java` 的内容，该程序从一个类中打印字符串“Hello World”。
 
-列表 3.13: HelloWorld4.java
+### 列表 3.13: HelloWorld4.java
 
 ```java
 public class HelloWorld {
@@ -2581,18 +2264,22 @@ public class HelloWorld {
         System.out.println("Constructor1");
         sayHello();
     }
+
     public HelloWorld(int x) {
         System.out.println("Constructor2");
         sayHello();
     }
+
     public HelloWorld(int x, int y) {
         System.out.println("Constructor3");
         sayHello();
     }
+
     public void sayHello() {
         System.out.println("Hello World from HelloWorld");
     }
-    public static void main(String[] args[]) {
+
+    public static void main(String[] args) {
         HelloWorld hw1 = new HelloWorld();
         HelloWorld hw2 = new HelloWorld(10);
         HelloWorld hw3 = new HelloWorld(10, 40);
@@ -2600,7 +2287,7 @@ public class HelloWorld {
 }
 ```
 
-列表 3.13 定义了 `HelloWorld` 类和几个构造函数。如你所见，这些构造函数带有零或多个参数，并且每个构造函数都调用了名为 `sayHello()` 方法，该方法包含一个 `print()` 语句。
+列表 3.13 定义了 `HelloWorld` 类和几个构造函数。如你所见，这些构造函数带有零或多个参数，并且每个构造函数都调用了名为 `sayHello()` 的方法，该方法包含一个 `print()` 语句。
 
 这次，`main()` 方法包含了在以下代码块中创建三个 `HelloWorld` 类实例：
 
@@ -2610,13 +2297,13 @@ HelloWorld hw2 = new HelloWorld(10);
 HelloWorld hw3 = new HelloWorld(10, 40);
 ```
 
-前面的代码块在不带任何参数的情况下从 `HelloWorld` 类实例化了一个名为 `hw1` 对象，这意味着执行了空构造函数。
+前面的代码块在不带任何参数的情况下从 `HelloWorld` 类实例化了一个名为 `hw1` 的对象，这意味着执行了空构造函数。
 
 接下来，实例化了名为 `hw2` 的对象，这次提供了值 `10` 作为参数，这匹配了列表 3.13 中的第二个构造函数。
 
 最后，前面的代码块使用两个参数从 `HelloWorld` 类实例化了名为 `hw3` 的对象，这匹配了列表 3.13 中的第三个构造函数。
 
-列表 3.13 中的每个构造函数都会打印一个字符串并调用 `sayHello()` 方法，该方法会打印字符串“Hello from HelloWorld4.”。运行 3.13 中的代码，你将看到以下输出：
+列表 3.13 中的每个构造函数都会打印一个字符串并调用 `sayHello()` 方法，该方法会打印字符串“Hello from HelloWorld”。运行列表 3.13 中的代码，你将看到以下输出：
 
 ```
 Constructor1
@@ -2631,15 +2318,14 @@ Hello from HelloWorld
 
 该系列示例中的下一个代码示例说明了如何从一个构造函数调用另一个构造函数。
 
-### 第五个“HELLO WORLD”示例
+## 第五个“HELLO WORLD”示例
 
 列表 3.14 显示了 `HelloWorld5.java` 的内容，该程序从一个 Java 类打印字符串“Hello World”。
 
 ### 列表 3.14: HelloWorld5.java
 
 ```java
-public class HelloWorld5
-{
+public class HelloWorld5 {
     public HelloWorld5() {
         this(10);
         System.out.println("Constructor1");
@@ -2659,7 +2345,7 @@ public class HelloWorld5
         System.out.println("Hello World from HelloWorld5");
     }
 
-    public static void main (String args[]) {
+    public static void main(String args[]) {
         HelloWorld hw1 = new HelloWorld5();
         HelloWorld hw2 = new HelloWorld5(10);
         HelloWorld hw3 = new HelloWorld5(10, 40);
@@ -2677,7 +2363,7 @@ HelloWorld hw2 = new HelloWorld5(10);
 HelloWorld hw3 = new HelloWorld5(10, 40);
 ```
 
-前面的代码块与列表 3.14 HelloWorld5.java 中的对应代码块相同。然而，如你所见，输出是不同的（你能猜到发生了什么吗？）：
+前面的代码块与列表 3.14 `HelloWorld5.java` 中的对应代码块相同。然而，如你所见，输出是不同的（你能猜到发生了什么吗？）：
 
 ```
 Hello World from HelloWorld5
@@ -2699,13 +2385,13 @@ Constructor3
 call to this must be first statement in constructor
 ```
 
-结束了关于创建 Java类的讨论。
+结束了关于创建 Java 类的讨论。
 
-### 匿名内部类
+## 匿名内部类
 
 内部类是在另一个类的文件中定义的类。具体来说，如果 `ClassA.java` 包含 `ClassB`，那么 `ClassB` 就是一个内部类。列表 3.15 定义了 `Regular.java` 的内容，说明了如何定义内部类。
 
-列表 3.15: Regular.java
+### 列表 3.15: Regular.java
 
 ```java
 public class Regular {
@@ -2714,21 +2400,32 @@ public class Regular {
             System.out.println("Inside constructor");
         }
     }
+
     class Nested2 {
         public Nested2() {
             System.out.println("Inside2 constructor");
         }
     }
+
     public Regular() {
         System.out.println("Inside constructor");
         Nested nest = new Nested();
         Nested2 nest2 = new Nested2();
     }
+
     public static void main(String args[]) {
-        System.out.println("Inside main()");
-        Regular reg = new Regular();
-    }
+```
+
+
+
+System.out.println("Inside main()");
+
+Regular reg = new Regular();
+
 }
+
+}
+
 ```
 
 列表 3.15 定义了 `Regular` 类以及内部类 `Nested` 和 `Nested2`。注意后者不包含 `public` 关键字。现在编译 3.15 中的代码，你将在目录中发现以下文件：
@@ -2779,10 +2476,8 @@ public class Regular2
     public static void main(String[] args) {
         System.out.println("Inside main()");
         Regular2 reg2 = new Regular2();
-
         System.out.println("Instantiating Nested inside main()");
         Nested nest = new Nested();
-
         // 非静态变量无法在静态文中引用：
         Nested2 nest2 = new Nested2();
     }
@@ -2804,7 +2499,7 @@ Inside Nested constructor
 
 如你所知，Java 类可以扩展一个类并实现任意数量的接口。相比之下，匿名内部类只能实现一个接口。此外，匿名内部类是私有的（即其他公共类无法访问它们），而命名内部类只能被封闭类使用。
 
-小心不要无意中将命名内部类与在多个处使用的类（这种情况不太可能发生）误认为是匿名类。建议，当它们只使用一次时（例如 GUI 中按钮点击的事件处理器），使用匿名内部类；如果它们在代码中被多次，则使用命名内部类。Java 中的匿名类可以具有如下初始化器：
+小心不要无意中将命名内部类与在多个处使用的类（这种情况不太可能发生）误认为是匿名类。建议，当它们只使用一次时（例如 GUI 中按钮点击的事件处理器），使用匿名内部类；如果它们在代码中被多次使用，则使用命名内部类。Java 中的匿名类可以具有如下初始化器：
 
 ```java
 {
@@ -2828,14 +2523,9 @@ Inside Nested constructor
 
 由于匿名类没有构造函数，你如何将非构造函数变量从 B 传递给 A，其中 B 是 A 的子类？一种可能性涉及使用（静态）命名内部类。
 
+### 列表 3.17：SingleInstance.java
 
-
-
-Listing 3.17 显示了 SingleInstance.java 的内容，它展示了如何在类中定义私有构造函数。
-
-#  3.17：SingleInstance.java
-
-```
+```java
 class PrivateConstructor {
     static PrivateConstructor instance = null;
     public int prime = 37;
@@ -2858,13 +2548,10 @@ public class SingleInstance {
     public static void main(String[] args[]) {
         PrivateConstructor inst1 = PrivateConstructor.getInstance();
         PrivateConstructor inst2 = PrivateConstructor.getInstance();
-
         System.out.println("Before update:");
         System.out.println("Value of inst1.prime = " + inst1.prime);
         System.out.println("Value of inst2.prime = " + inst2.prime);
-
         inst1.prime = inst1.prime + 64;
-
         System.out.println("After update:");
         System.out.println("Value of inst1.prime = " + inst1.prime);
         System.out.println("Value of inst2.prime = " + inst2.prime);
@@ -2872,13 +2559,13 @@ public class SingleInstance {
 }
 ```
 
-Listing 3.17 定义了内部类 PrivateConstructor，它包含一个私有构造函数，其中变量 `instance` 的初始值为 `null`。变量 `instance` 仅初始化一次，这确保了 `PrivateConstructor` 类只有一个实例。
+列表 3.17 定义了内部类 `PrivateConstructor`，它包含一个私有构造函数，其中变量 `instance` 的初始值为 `null`。变量 `instance` 仅初始化一次，这确保了 `PrivateConstructor` 类只有一个实例。
 
-Listing 3.17 还定义了 `SingleInstance` 类、一个公共构造函数以及一个 `main()` 方法，该方法将变量 `inst1` 和 `inst2` 初始化为 `PrivateConstructor`类的实例。
+列表 3.17 还定义了 `SingleInstance` 类、一个公共构造函数以及一个 `main()` 方法，该方法将变量 `inst1` 和 `inst2` 初始化为 `PrivateConstructor` 类的实例。
 
 接下来，两个 `print()` 语句显示了整数变量 `prime`（`PrivateConstructor` 类中的一个公共变量）的值，其初始值为 37。实例变量 `inst1` 和 `inst2` 的变量 `prime` 值均为 37。
 
-`main()` 方法的下一部分将变量 `prime` 的值加了 64，并通过两个 `print()` 语句显示其更新后的值。运行 Listing 3.17 中的代码，你将看到以下输出：
+`main()` 方法的下一部分将变量 `prime` 的值加了 64，并通过两个 `print()` 语句显示其更新后的值。运行列表 3.17 中的代码，你将看到以下输出：
 
 ```
 Before update:
@@ -2899,10 +2586,9 @@ Value of inst2.prime = 101
 
 `MyClass.java` 将包含以下代码：
 
-```
+```java
 package com.acme.dept;
 import com.acme.employees.Employee;
-
 public class MyClass extends MyBase implements BaseInfo {
     private Employee emp;
     // 代码在此处
@@ -2956,86 +2642,13 @@ public class Employee {
 
 包的使用允许你有同名的类，只要它们位于不同的包中。要使用这些类，你必须导入它们或使用它们的全限定名。
 
-[/content] (Wait, I noticed the source text provided at the end of the user request seems to contain repeated examples or parts of the prompt. I will provide the translation for the specific text provided in the final block.)
 
-抱歉，我发现用户提供的“待翻译文本”在最后似乎包含了重复的示例或提示内容。我将针对你提供的“以下是需要翻译的文本”部分进行完整翻译：
 
-[content]
-Listing 3.17 显示了 SingleInstance.java 的内容，它展示了如何在类中定义私有构造函数。
+```java
+private Employee emp;
 
-### 列表 3.17：SingleInstance.java
+// 代码在此处
 
-```
-class PrivateConstructor {
-    static PrivateConstructor instance = null;
-    public int prime = 37;
-
-    // 私有构造函数在类外部不可访问
-    private PrivateConstructor() {}
-
-    // 用于构造实例的方法：
-    static public PrivateConstructor getInstance() {
-        // 仅创建一次实例：
-        if (instance == null) {
-            instance = new PrivateConstructor();
-        }
-        return instance;
-    }
-}
-
-public class SingleInstance {
-    public SingleInstance() {}
-    public static void main(String[] args[]) {
-        PrivateConstructor inst1 = PrivateConstructor.getInstance();
-        PrivateConstructor inst2 = PrivateConstructor.getInstance();
-
-        System.out.println("Before update:");
-        System.out.println("Value of inst1.prime = " + inst1.prime);
-        System.out.println("Value of inst2.prime = " + inst2.prime);
-
-        inst1.prime = inst1.prime + 64;
-
-        System.out.println("After update:");
-        System.out.println("Value of inst1.prime = " + inst1.prime);
-        System.out.println("Value of inst2.prime = " + inst2.prime);
-    }
-}
-```
-
-Listing 3.17 定义了内部类 PrivateConstructor，它包含一个私有构造函数，其中变量 `instance` 的初始值为 `null`。变量 `instance` 仅初始化一次，这确保了 `PrivateConstructor` 类只有一个实例。
-
-Listing 3.17 还定义了 `SingleInstance` 类、一个公共构造函数以及一个 `main()` 方法，该方法将变量 `inst1` 和 `inst2` 初始化为 `PrivateConstructor`类的实例。
-
-接下来，两个 `print()` 语句显示了整数变量 `prime`（`PrivateConstructor` 类中的一个公共变量）的值，其初始值为 37。实例变量 `inst1` 和 `inst2` 的变量 `prime` 值均为 37。
-
-`main()` 方法的下一部分将变量 `prime` 的值加了 64，并通过两个 `print()` 语句显示其更新后的值。运行 Listing 3.17 中的代码，你将看到以下输出：
-
-```
-Before update:
-Value of inst1.prime = 37
-Value of inst2.prime = 37
-After update:
-Value of inst1.prime = 101
-Value of inst2.prime = 101
-```
-
-### JAVA import 语句
-
-你可以使用 `import` 语句将 Java 类导入到你的 Java 类中。例如，假设文件 `MyClass.java` 在包 `com.acme.dept` 中，并且你想导入包为 `com.acme.employees` 的 `Employee` 类。`MyClass.java` 文件必须出现在以下目录结构中：
-
-```
-<your-top-directory>.com/acme/dept/MyClass.java
-```
-
-`MyClass.java` 将包含以下代码：
-
-```
-package com.acme.dept;
-import com.acme.employees.Employee;
-
-public class MyClass extends MyBase implements BaseInfo {
-    private Employee emp;
-    // 代码在此处
 }
 ```
 
@@ -3043,17 +2656,17 @@ public class MyClass extends MyBase implements BaseInfo {
 
 你可以导入属于某个包的所有 Java 类。例如，以下 `import` 语句导入了 `com.acme.employees` 包中的所有类：
 
-```
+```java
 import com.acme.employees.*;
 ```
 
 编译器将只导入你的代码所需的 Java 类，因此你可以使用通配符语句或包中特定的显式 Java 类。然而，在许多情况下，显式地导入程序所需的 Java 类可能比依赖编译器是更好的编码实践。
 
-### JAVA package 语句
+## JAVA package 语句
 
 Java 支持在其他语言（如 Ada）中可用的包（package）构造结构。请注意，包名必须作为 Java 文件的第一个非注释行出现。包是一种区分出现在多个位置的同名 Java 文件的方便方法。此功能类似于 XML 中命名空间（namespaces）的使用。
 
-例如，假设你现在现在 `com.acme.employees` 包中有一个名为 `Employee` 的 Java 文件，在 `com.acme.dept` 包中有一个第二个名为 `Employee` 的 Java 文件，在 `com.acme.employees.internal` 包中有一个第三个名为 `Employee` 的文件。这些文件必须出现在以下目录结构中：
+例如，假设你现在在 `com.acme.employees` 包中有一个名为 `Employee` 的 Java 文件，在 `com.acme.dept` 包中有一个第二个名为 `Employee` 的 Java 文件，在 `com.acme.employees.internal` 包中有一个第三个名为 `Employee` 的文件。这些文件必须出现在以下目录结构中：
 
 ```
 <your-top-directory>.com/acme/employees/Employee.java
@@ -3065,31 +2678,37 @@ Java 支持在其他语言（如 Ada）中可用的包（package）构造结构�
 
 ```java
 package com.acme.employees;
+
 public class Employee {
+
     // 代码在此处
+
 }
 ```
 
 ```java
 package com.acme.dept;
+
 public class Employee {
+
     // 代码在此处
+
 }
 ```
 
 ```java
 package com.acme.employees.internal;
+
 public class Employee {
+
     // 代码在此处
+
 }
 ```
 
 包的使用允许你有同名的类，只要它们位于不同的包中。要使用这些类，你必须导入它们或使用它们的全限定名。
 
-
-
-
-### 包语句的一个示例 (2)
+## 包语句的一个示例 (2)
 
 前一节中的 Java 类 `LongEmployee` 将重构为四个 Java 类：`Employee.java`、`EmpDetails.java`、`Person.java` 和 `Address.java`，它们都属于同一个包。在这个示例中，`Employee` 实体包含一个 `EmpDetails` 实体、一个 `Person` 实体和一个 `Address` 实体。因此，`Employee` 实体与其他实体之间是一一对的关系。然而，`Employee` 实体与 `Address` 实体建立一对多的关系也是可能的。
 
@@ -3101,22 +2720,33 @@ public class Employee {
 
 ```java
 package com.employees;
+
 public class Employee {
+
     private Person person;
+
     private Address address;
+
     private EmpDetails empDetails;
 
     private String firstName;
+
     private String lastName;
 
     private String street;
+
     private String city;
+
     private String state;
 
     private String empId;
+
     private int grade;
+
     private double years;
+
     public Employee(String firstName, String lastName, String street, String city, String state, String empId, int grade, double years) {
+
         this.firstName = firstName;
         this.lastName = lastName;
         this.person = new Person(firstName, lastName);
@@ -3129,21 +2759,25 @@ public class Employee {
         this.years = years;
         this.empDetails = new EmpDetails(empId, grade, years);
     }
+
     public Person getPerson() {
         return this.person;
     }
+
     public Address getAddress() {
         return this.address;
     }
+
     public EmpDetails getEmpDetails() {
         return this.empDetails;
     }
+
     public void printDetails() {
         person = this.getPerson();
         address = this.getAddress();
         empDetails = this.getEmpDetails();
-        System.out.println("First Name: "+person.getFirstName());
-        System.out.println("Last Name: "+person.getLastName());
+        System.out.println("First Name: " + person.getFirstName());
+        System.out.println("Last Name: " + person.getLastName());
     }
 
     public static void main(String args[]) {
@@ -3175,19 +2809,21 @@ this.person = new Person(firstName, lastName);
 this.address = new Address(street, city, state);
 ```
 
-第三个代码段实例化了类型为 `empDetails` 的对象 `empDetails`：
+第三个代码段实例化了类型为 `EmpDetails` 的对象 `empDetails`：
 
 ```java
 this.empDetails = new EmpDetails(empId, grade, years);
 ```
 
-列表 3.20 显示了属于 `com.employees` 包的 `empDetails.java` 内容。
+列表 3.20 显示了属于 `com.employees` 包的 `EmpDetails.java` 内容。
 
 ### 列表 3.20: EmpDetails.java
 
 ```java
 package com.employees;
+
 public class EmpDetails {
+
     private String empId;
     private int grade;
     private double years;
@@ -3212,10 +2848,6 @@ public class EmpDetails {
 }
 ```
 
-
-
-
-
 # 循环、数组与递归
 
 本章包含了涉及 Java 中 `for` 循环、`while` 循环、数组和递归的各种代码示例。
@@ -3234,8 +2866,9 @@ public class EmpDetails {
 
 ### 列表 4.1：ForLoops1.java
 
-```
+```java
 public class ForLoops1 {
+
     private int maxCount = 8;
     private double sum1 = 0;
 
@@ -3244,12 +2877,12 @@ public class ForLoops1 {
     public void calculateAverage() {
         for(int i=0; i<maxCount; i++) {
             sum1 += i;
-            System.out.println("Partial sum: "+sum1);
+            System.out.println("Partial sum: " + sum1);
         }
 
         double avg = sum1/maxCount;
-        System.out.println("Total: "+sum1);
-        System.out.println("Average: "+avg);
+        System.out.println("Total: " + sum1);
+        System.out.println("Average: " + avg);
     }
 
     public static void main(String args[]) {
@@ -3274,7 +2907,7 @@ Total: 28.0
 Average: 3.5
 ```
 
-### 判断闰年
+## 判断闰年
 
 列表 4.2 显示了 `LeapYear.java` 的内容，用于判断一个正整数是否为闰年。闰年是 4 的倍数，但排除不是 400 倍数的世纪。根据前面的定义，1700、1800 和 1900 不是闰年，而 2000 是闰年。
 
@@ -3284,11 +2917,14 @@ Average: 3.5
 
 ### 列表 4.2：LeapYear.java
 
-```
+```java
 public class LeapYear {
+
     public LeapYear() {}
+
     // 闰年是4的倍数，
     // 除非不是400倍数的世纪
+
     public void checkYear(int year) {
         if(year % 4 == 0) {
             if(year % 100 == 0) {
@@ -3302,6 +2938,7 @@ public class LeapYear {
             System.out.println(year + " is not a leap year");
         }
     }
+
     public static void main(String[] args[]) {
         LeapYear ly = new LeapYear();
         int[] years = {1234, 1900, 2000, 2020, 3000, 5588};
@@ -3323,7 +2960,7 @@ public class LeapYear {
 5588 is a leap year
 ```
 
-### 整数循环
+## 整数循环
 
 对于本节的 Java 代码，记住 `int` 类型变量有对应的字符串。列表 4.3 展示了如何将整数值转换为字符串。
 
@@ -3331,6 +2968,7 @@ public class LeapYear {
 
 ```java
 public class MyIntegers {
+
     public static void main(String[] args) {
         int[] myInts = {1, 2, 3, 4, 5};
         for (int i = 0; i < myInts.length; i++) {
@@ -3342,7 +2980,7 @@ public class MyIntegers {
 
 列表 4.3 使用增强 for 循环来遍历整数数组。增强 for 循环提供了更简单的数组遍历语法。
 
-### 检查回文
+## 检查回文
 
 回文是指正反读（例如从左到右）相同的数字或字符序列。例如，字符串 "Bob" 是回文，但 "1234" 不是。列表 4.4 显示了 `Palindromes.java` 的内容，检查指定的字符串或数字是否为回文。
 
@@ -3350,33 +2988,63 @@ public class MyIntegers {
 
 ```java
 public class Palindromes {
+
     public Palindromes() {}
-    public void check(String str) {
-        int result = 0;
-        int len = str.length();
-        for (int i = 0; i < len / 2; i++) {
-            if (str.charAt(i) != str.charAt(len - 1 - i)) {
-                result = 1;
-                break;
-            }
+```
+
+
+
+```java
+public void check(String str) {
+
+    int result = 0;
+
+    int len = str.length();
+
+    for (int i = 0; i < len / 2; i++) {
+
+        if (str.charAt(i) != str.charAt(len - 1 - i)) {
+
+            result = 1;
+
+            break;
+
         }
-        if (result == 0) {
-            System.out.println(str + " is a palindrome");
-        } else {
-            System.out.println(str + " is not a palindrome");
-        }
+
     }
-    public static void main(String[] args) {
-        String[] names = {"Dave", "BobB", "radar", "rotor"};
-        int[] numbers = {1234, 767, 1234321, 101};
-        Palindromes pall = new Palindromes();
-        for (String name : names) {
-            pall.check(name);
-        }
-        for (int num : numbers) {
-            pall.check(Integer.toString(num));
-        }
+
+    if (result == 0) {
+
+        System.out.println(str + " is a palindrome");
+
+    } else {
+
+        System.out.println(str + " is not a palindrome");
+
     }
+
+}
+
+public static void main(String[] args) {
+
+    String[] names = {"Dave", "BobB", "radar", "rotor"};
+
+    int[] numbers = {1234, 767, 1234321, 101};
+
+    Palindromes pall = new Palindromes();
+
+    for (String name : names) {
+
+        pall.check(name);
+
+    }
+
+    for (int num : numbers) {
+
+        pall.check(Integer.toString(num));
+
+    }
+
 }
 ```
 
@@ -3390,28 +3058,39 @@ public class Palindromes {
 
 ```java
 public class Triangular1 {
+
     private int maxCount1 = 8;
+
     private double sum1 = 0;
 
     public Triangular1() {}
 
     public void nestedLoop() {
+
         for(int i=2; i<maxCount1; i++) {
+
             for(int j=1; j<i; j++) {
+
                 System.out.print(j);
+
             }
+
             System.out.println();
+
         }
+
     }
 
     public static void main(String args[]) {
+
         Triangular1 fl1 = new Triangular1();
+
         fl1.nestedLoop();
+
     }
+
 }
 ```
-
-
 
 列表 4.5 定义了 `Triangular` 类，该类包含 `nestedLoop()` 方法，用于显示三角形的数字。
 
@@ -3421,56 +3100,76 @@ public class Triangular1 {
 12
 123
 1234
-12345
+1235
 123456
 
 ### 哥德巴赫猜
 
-哥德巴赫猜指出，每一个大于 4 的偶数都可以表示为两个质数的之和。例如，12 = 5 + 7，14 = 3 + 11，14 = 7 + 7，22 = 5 + 17，以及 22 = 11 + 11，这说明某些偶数可以表示为多一组质数的之和。本节中的代码示例将验证 6 到 50 之间偶数的哥德巴赫猜。
+哥德巴赫猜指出，每一个大于 4 的偶数都可以表示为两个质数之和。例如，12 = 5 + 7，14 = 3 + 11，14 = 7 + 7，22 = 5 + 17，以及 22 = 11 + 11，这说明某些偶数可以表示为多组质数之和。本节中的代码示例将验证 6 到 50 之间偶数的哥德巴赫猜。
 
 列表 4.6 显示了 `GoldbachConjecture.java` 的内容，它寻找所有之和等于偶数的质数对。
 
 ### 列表 4.6：GoldbachConjecture.java
 
-```
+```java
 public class GoldbachConjecture {
+
     int PRIME = 1;
+
     int COMPOSITE = 0;
 
     public GoldbachConjecture() {}
 
     public int prime(int num) {
+
         int div = 2;
+
         while (div < num) {
+
             if(num % div != 0) {
+
                 ++div;
+
             } else {
+
                 return COMPOSITE;
+
             }
+
         }
+
         return PRIME;
+
     }
+
 }
-```
 
-# 96 * 开发者 Java 口袋指南
-
-```
 public void findPrimeFactors(int evenNum) {
+
     for (int num=3; num<=evenNum/2; num+=1) {
+
         if(this.prime(num) == 1 && (this.prime(evenNum-num) == 1)) {
+
             System.out.println(evenNum + " = " + num + " + " + (evenNum-num));
+
         }
+
     }
+
 }
 
- static void main(String args[]) {
+static void main(String args[]) {
+
     int upperBound = 30;
 
     GoldbachConjecture gbach = new GoldbachConjecture();
+
     for (int num=4; num<=upperBound; num+=2) {
+
         gbach.findPrimeFactors(num);
+
     }
+
 }
 ```
 
@@ -3498,19 +3197,20 @@ public void findPrimeFactors(int evenNum) {
 26 = 3 + 23
 26 = 7 + 19
 26 = 13 + 13
-```
-
 28 = 5 + 23
 28 = 11 + 17
 30 = 7 + 23
 30 = 11 + 19
 30 = 13 + 17
+```
 
 ### 基础循环的变体
 
-之前包含 `for` 循环的代码示例具有相同的结构：初始化、逻辑测试和增量。本节向你展示了一些可能有用的变体。代码示例非常简洁：大多数它们没有循环体，虽然几个代码片段是显而易见的，但其中一些可能需要你编写一些代码来确定它们的输出。将 `i` 从 5 递减到 0：
+之前包含 `for` 循环的代码示例具有相同的结构：初始化、逻辑测试和增量。本节向你展示了一些可能有用的变体。代码示例非常简洁：大多数它们没有循环体，虽然几个代码片段是显而易见的，但其中一些可能需要你编写一些代码来确定它们的输出。
 
-```
+将 `i` 从 5 递减到 0：
+
+```java
 for (int i=5; i>=0; i--) { ... }
 ```
 
@@ -3544,7 +3244,7 @@ for(); { ... }
 
 下面的 `print()` 语句是无效的：
 
-```
+```java
 for(int i=0; i<5; i++)
 System.out.println(":i: " +i)
 System.out.println(":i: " +i)
@@ -3582,41 +3282,51 @@ for (int i=0; i<=5; i++) {
 }
 ```
 
-你可以想象想象，在使用这些块时很容易意外引入 Bug：只有在必要时使用它们。
+你可以想象，在使用这些块时很容易意外引入 Bug：只有在必要时使用它们。
 
 ### 使用 WHILE 循环
 
 选择 `for` 循环还是 `while` 循环取决于你的喜好；有时 `while` 循环更清晰。列表 4.7 显示了 `WhiteLoops.java` 的内容，它遍历一组数字并打印它们的值。
 
-列表 4.7：WhiteLoops.java
+### 列表 4.7：WhiteLoops.java
 
 ```java
 public class WhiteLoops {
+
   private int maxCount = 8;
+
   private double sum1 = 0;
 
   public WhiteLoops() {}
 
   public void calculateAverage() {
+
     int i=0;
+
     while(i<maxCount) {
+
       sum1 += i;
+
       i++;
+
     }
+
     double avg = sum1/maxCount;
+
     System.out.println("Average: "+avg);
+
   }
 
   public static void main(String args[]) {
+
     WhiteLoops wll = new WhiteLoops();
+
     wll.calculateAverage();
+
   }
+
 }
 ```
-
-
-
-102 • 开发者 Java 快速入门指南
 
 ```java
 case 4: theMonth = "May";
@@ -3627,8 +3337,7 @@ default: theMonth = "After May";
 System.out.println("Month: "+theMonth);
 ```
 
-列表 10 定义了 `Switch` 类，其 `main()` 方法包含一个 `switch()` 语句，该语句将整数变量 `month` 的值与其对应的月份进行“匹配”。
-具体而言，值 0 代表一月，值 1 代表二月，依此类推，直到值 11 对应 12 月。运行列表 4.10 中的代码，你将看到以下输出：
+列表 10 定义了 `Switch` 类，其 `main()` 方法包含一个 `switch()` 语句，该语句将整数变量 `month` 的值与其对应的月份进行“匹配”。具体而言，值 0 代表一月，值 1 代表二月，依此类推，直到值 11 对应 12 月。运行列表 4.10 中的代码，你将看到以下输出：
 
 Month: after May
 
@@ -3650,10 +3359,12 @@ Java 数组包含相同类型的元素，这些元素可以是基本类型，也
 
 ```java
 import java.lang.ArrayIndexOutOfBoundsException;
+
 public class SimpleArray
 {
     public SimpleArray() {
     }
+
     public static void main(String[] args) {
         int index = 5;
         int[] numbers = {3, 5, 19, -123};
@@ -3662,8 +3373,6 @@ public class SimpleArray
     }
 }
 ```
-
-## 循环、数组与递归 • 103
 
 ```java
 for(int num : numbers) {
@@ -3706,19 +3415,17 @@ private String[] letters = {"a", "b", "c"};
 
 以下代码段分别声明了元素为 `String`、`double`、`int` 和 `MyClass` 的数组：
 
-- String wordlist[];
-- double prices[];
-- int intValues[];
-- MyClass myClasses[];
-
-104 • 开发者 Java 快速入门指南
+- `String wordlist[];`
+- `double prices[];`
+- `int intValues[];`
+- `MyClass myClasses[];`
 
 书中使用的另一种等效方法在此所示：
 
-- String[] wordList;
-- double[] prices;
-- int[] intValues;
-- MyClass[] myClasses;
+- `String[] wordList;`
+- `double[] prices;`
+- `int[] intValues;`
+- `MyClass[] myClasses;`
 
 列表 4.12 显示了 `Arrays1.java` 的内容，说明了如何声明数组并初始化数组的元素。
 
@@ -3734,36 +3441,35 @@ private String[] letters = {"a", "b", "c"};
 
 ```java
 public class BubbleSort {
+
     public BubbleSort() {
+
     public void sortNumbers() {
+
         int[] numbers = {-3, 50, 10, 5, 20, 300, -200};
+
         System.out.println("Original array:");
+
         for (int i=0; i<numbers.length; i++) {
+
             System.out.print(numbers[i]+" ");
+
         }
+
         System.out.println();
 
         for(int i=0; i<numbers.length-1; i++) {
+
             for(int j=i+1; j<numbers.length; j++) {
-                if (numbers[i] > numbers[j]) {
-                    int temp = numbers[i];
-                    numbers[i] = numbers[j];
-                    numbers[j] = temp;
-                }
-            }
-        }
+```
 
-        System.out.println("Sorted array:");
-        for(int i=0; i<numbers.length; i++) {
-            System.out.print(numbers[i]+" ");
-        }
-        System.out.println();
-    }
 
-    public static void main(String args[]) {
-        BubbleSort bs = new BubbleSort();
-        bs.sortNumbers();
-    }
+
+```java
+if (numbers[i] > numbers[j]) {
+    int temp = numbers[i];
+    numbers[i] = numbers[j];
+    numbers[j] = temp;
 }
 ```
 
@@ -3771,17 +3477,16 @@ public class BubbleSort {
 
 该方法包含一个嵌套循环，用于遍历包含整数值的 `numbers` 数组的元素。给定一个索引位置 `i`，代码检查大于 `i` 的索引位置的内容。如果这些位置之一（我们称为位置 `j`）的数组值大于索引 `i` 处的数组值，则交换数组元素 `numbers[i]` 和 `numbers[j]`（使用整数 `temp` 作为临时值）。运行列表 4.13 中的代码，你将看到以下输出：
 
+```
 Original array:
 -3 50 10 5 20 300 -200
 Sorted array:
 -200 -3 5 10 20 50 300
+```
 
 ## JAVA 多维数组
 
 除了一维数组外，Java 还支持多维数组。列表 4.14 显示了 `MultiDimArrays.java` 的内容，说明了如何初始化二维数组。
-
-
-
 
 列表 4.14 的输出如下：
 
@@ -3790,17 +3495,14 @@ Sorted array:
 (0,1): 5.0
 (0,2): 10.0
 (0,3): 15.0
-
 (1,0): 5.0
 (1,1): 10.0
 (1,2): 15.0
 (1,3): 20.0
-
 (2,0): 10.0
 (2,1): 15.0
 (2,2): 20.0
 (2,3): 25.0
-
 (3,0): 15.0
 (3,1): 20.0
 (3,2): 25.0
@@ -3817,52 +3519,63 @@ Avg Value: 15.0
 
 ```java
 public class MultiDimArrays2 {
+
     public MultiDimArrays2() {
-}
+    }
+
     public void array1D() {
         // 声明/初始化一个一维数组：
         int arr1[] = {1,2,3,4,5,6,7,8,9};
-        System.out.println("Contents of 1D array:
-```
-
-```
-{
-  for(int j=0; j<3; j++) {
-    System.out.print(arr2[i][j] + " ");
-    System.out.println();
-  }
-}
-```
-
-```java
-public void Array3D() {
-  // 声明/初始化一个三维数组；
-  int arr3[][][] = {{1,2,3}, {4,5,6}, {7,8,9}}, {11,12,13}, {14,15,16}, {17,18,19}}, {21,22,23}, {24,25,26}, {27,28,29}};
-  System.out.println("Contents of 3D array");
-  for(int i=0; i<3; i++) {
-    for(int j=0; j<3; j++) {
-      for(int k=0; k<3; k++) {
-        System.out.print(arr3[i][j][k] + " ");
-      }
-      System.out.println();
+        System.out.println("Contents of 1D array:");
+        for(int i=0; i<9; i++) {
+            System.out.print(arr1[i] + " ");
+        }
+        System.out.println();
     }
-    System.out.println();
-  }
+
+    public void array2D() {
+        // 声明/初始化一个二维数组：
+        int arr2[][] = {{1,2,3}, {4,5,6}, {7,8,9}};
+        System.out.println("Contents of 2D array:");
+        for(int i=0; i<3; i++) {
+            for(int j=0; j<3; j++) {
+                System.out.print(arr2[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public void array3D() {
+        // 声明/初始化一个三维数组；
+        int arr3[][][] = {
+            {{1,2,3}, {4,5,6}, {7,8,9}},
+            {{11,12,13}, {14,15,16}, {17,18,19}},
+            {{21,22,23}, {24,25,26}, {27,28,29}}
+        };
+        System.out.println("Contents of 3D array");
+        for(int i=0; i<3; i++) {
+            for(int j=0; j<3; j++) {
+                for(int k=0; k<3; k++) {
+                    System.out.print(arr3[i][j][k] + " ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String args[]) {
+        MultiDimArrays2 mda2 = new MultiDimArrays2();
+        mda2.array1D();
+        mda2.array2D();
+        mda2.array3D();
+    }
 }
 ```
 
-```java
-public static void main(String args[]) {
-  MultiDimArrays mda2 = new MultiDimArrays(2);
-  mda2.Array1D();
-  mda2.Array2D();
-  mda2.Array3D();
-}
-```
+列表 4.15 定义了 `MultiDimArrays2` 类，它将变量 `mda2` 初始化为 `MultiDimArrays2` 类的实例。接下来，`array1D()` 方法定义并初始化了一个一维数组，随后通过一个循环打印该数组的值。
 
-列表 4.15 定义了 `MultiDimArrays2` 类，它将变量 `mda2` 初始化为 `MultiDimArrays2` 类的实例。接下来，`Array1D()` 方法定义并初始化了一个一维数组，随后通过一个循环打印该数组的值。
-
-接下来，`Array2D()` 方法定义并初始化了一个二维数组，随后通过一个嵌套循环打印该数组的值。同样，`Array3D()` 方法定义并初始化了一个三维数组，随后通过一个三重嵌套循环打印该数组的值。列表 4.15 的输出为：
+接下来，`array2D()` 方法定义并初始化了一个二维数组，随后通过一个嵌套循环打印该数组的值。同样，`array3D()` 方法定义并初始化了一个三维数组，随后通过一个三重嵌套循环打印该数组的值。列表 4.15 的输出为：
 
 ```
 Contents of 1D array:
@@ -3871,10 +3584,6 @@ Contents of 2D array:
 1 2 3
 4 5 6
 7 8 9
-```
-
-## 110 开发者 Java 入门指南
-
 Contents of 3D array:
 1 2 3
 4 5 6
@@ -3885,6 +3594,7 @@ Contents of 3D array:
 21 22 23
 24 25 26
 27 28 29
+```
 
 ## 处理字符与字符串
 
@@ -3894,14 +3604,14 @@ Contents of 3D array:
 
 ```java
 public class DisplayChars {
+
     public static void main(String args[]) {
         char chr, up, lwr;
         String line = "Some text";
         String lower = line.toLowerCase();
         String upper = line.toUpperCase();
-
-        System.out.println("Line: "+line);
-        System.out.println("Length: "+line.length()+"\n");
+        System.out.println("Line: " + line);
+        System.out.println("Length: " + line.length() + "\n");
         for (int i=0; i < line.length(); i++) {
             chr = line.charAt(i);
             lwr = lower.charAt(i);
@@ -3926,7 +3636,6 @@ public class DisplayChars {
 ```
 Line: Some text
 Length: 9
-
 Character is uppercase
 Character: S
 Character is lowercase
@@ -3945,78 +3654,46 @@ Character is lowercase
 Character: x
 ```
 
-
-
-
-# 114 • 开发者 Java 快速指南
-
-```java
-lname = lastNames[index];
-System.out.println("My name is "+
-fame+" "+lname);
-
-public static void main(String[] args) {
-    PersonRandom pa = new PersonRandom();
-    pa.displayNames();
-}
-```
-
-列表 4.19 与列表 4.16 中的代码非常相似：重要的区别在于名称是通过随机生成的数字选择的，如下：
-
-```java
-index = (int)(maxRange*Math.random());
-```
-
-运行列表 4.19 中的代码，你将看到以下输出：
-
-My name is Jane Smith
-My name is John Jones
-My name is Jane Smith
-My name is Jane Smith
-My name is Bob Stone
-My name is John Jones
-
-注意，尽管只有 3 个人，但有 6 行输出。这是可能的，因为随机生成的数字始终在 0 到 2 之间，这意味着我们可以生成数百行输出。当然，会有很多重复的输出行，因为总只有 3 个不同的个人。
-
 ## STRINGBUFFER 和 STRING 类
 
-回想一下 String 类创建一个不可变的字符序列，对于大字符串，这可能会消耗大量的内存。StringBuilder 类是 String 类的替代方案，它支持可变的字符序列。
+回想一下 `String` 类创建一个不可变的字符序列，对于大字符串，这可能会消耗大量的内存。`StringBuilder` 类是 `String` 类的替代方案，它支持可变的字符序列。
 
-StringBuilder 类有许多有用方法，每个方法的返回类型都是 `StringBuilder`，如下所示：
+`StringBuilder` 类有许多有用方法，每个方法的返回类型都是 `StringBuilder`，如下所示：
 
-- capacity()
-- charAt()
-- delete()
-- codePointAt()
-- codePointBefore()
-- codePointCount()
-- deleteCharAt()
-- ensureCapacity()
-- getChars()
-- length()
-- replace()
-- reverse()
-- subSequence()
+- `capacity()`
+- `charAt()`
+- `delete()`
+- `codePointAt()`
+- `codePointBefore()`
+- `codePointCount()`
+- `deleteCharAt()`
+- `ensureCapacity()`
+- `getChars()`
+- `length()`
+- `replace()`
+- `reverse()`
+- `subSequence()`
 
-StringBuffer 类与 StringBuilder 类相似。尽管它们都通过创建可变字符序列提供了 String 类的替代方案，但它们在同步方面具有不同的行为。
+`StringBuffer` 类与 `StringBuilder` 类相似。尽管它们都通过创建可变字符序列提供了 `String` 类的替代方案，但它们在同步方面具有不同的行为。
 
-StringBuilder 类不是线程安全的，而 StringBuffer 类保证同步。因此，如果你需要线程安全的代码，请使用 StringBuffer 类；如果你的代码是单线程的，请使用 StringBuilder 类，因为它在大多数情况下会更快。
+`StringBuilder` 类不是线程安全的，而 `StringBuffer` 类保证同步。因此，如果你需要线程安全的代码，请使用 `StringBuffer` 类；如果你的代码是单线程的，请使用 `StringBuilder` 类，因为它在大多数情况下会更快。
 
 ### 使用 StringBuilder 和 StringBuffer 类的 Java 示例
 
-列表 4.20 显示了 ReverseString.java 的内容，它使用 StringBuilder 类和 StringBuffer 类来反转字符串。
+列表 4.20 显示了 `ReverseString.java` 的内容，它使用 `StringBuilder` 类和 `StringBuffer` 类来反转字符串。
 
 ### 列表 4.20: ReverseString.java
 
 ```java
 public class ReverseString {
+
     private int maxCount1 = 8;
     private double sum = 0;
 
     public ReverseString() {}
 
     public void reverse(String str) {
-        System.out.println("Original: "+str);
+        System.out.println("Original: " + str);
         int strlen = str.length();
         char[] strArray = str.toCharArray();
         for (int i=0; i<strlen/2; i++) {
@@ -4024,57 +3701,49 @@ public class ReverseString {
             strArray[i] = strArray[strlen-1-i];
             strArray[strlen-1-i] = temp;
         }
-        System.out.println("Reversed: "+valueOf(strArray));
+        System.out.println("Reversed: " + String.valueOf(strArray));
 
-        char[] strArray = new char[str.length()];
+        char[] strArray2 = new char[str.length()];
         for (int i=0; i<strlen/2; i++) {
             char temp = str.charAt(i);
-            strArray[i] = str.charAt(strlen-1-i);
-            strArray[strlen-1-i] = temp;
+            strArray2[i] = str.charAt(strlen-1-i);
+            strArray2[strlen-1-i] = temp;
         }
-        System.out.println("Reversed1: "+String.valueOf(strArray));
+        System.out.println("Reversed1: " + String.valueOf(strArray2));
+    }
+
+    public void reverse2(String str) {
+        String reversed = "";
+        for(int i=str.length()-1; i>=0; i--) {
+            reversed += str.charAt(i);
+        }
+        System.out.println("Reversed2: " + reversed);
+    }
+
+    public void reverse3(String str) {
+        StringBuilder reversed = new StringBuilder(str);
+        System.out.println("Reversed3: " + reversed.reverse());
+    }
+
+    public void reverse4(String str) {
+        StringBuilder reversed = new StringBuilder();
+        for(int i=str.length()-1; i>=0; i--) {
+            reversed.append(str.charAt(i));
+        }
+        System.out.println("Reversed4: " + reversed);
+    }
+
+    public static void main(String[] args) {
+        ReverseString rs = new ReverseString();
+        rs.reverse("abcd");
+        rs.reverse2("abcd");
+        rs.reverse3("abcd");
+        rs.reverse4("abcd");
     }
 }
 ```
 
-```java
-public void reverse2(String str) {
-    String reversed = "";
-    for(int i=str.length()-1; i>=0; i--) {
-        reversed += str.charAt(i);
-    }
-    System.out.println("Reversed2: "+reversed);
-}
-```
-
-```java
-public void reverse3(String str) {
-    StringBuilder reversed = new StringBuilder(str);
-    System.out.println("Reversed3: "+reversed.reverse());
-}
-```
-
-```java
-public void reverse4(String str) {
-    StringBuilder reversed = new StringBuilder();
-    for(int i=str.length()-1; i>=0; i--) {
-        reversed.append(str.charAt(i));
-    }
-    System.out.println("Reversed4: "+reversed);
-}
-```
-
-```java
-public static void main(String[] args) {
-    ReverseString rs = new ReverseString();
-    rs.reverse("abcd");
-    rs.reverse2("abcd");
-    rs.reverse3("abcd");
-    rs.reverse4("abcd");
-}
-```
-
-列表 4.20 定义了 ReverseString 类，它包含了四个可以反转字符串的方法。`reverse()` 方法包含两个循环，使用临时变量交换字符数组中的元素，从最左和最右的字符对开始，向字符变量 `strArray` 的中间点移动，第一个循环交换 `strArray` 中的字符，该数组初始化的大小足够容纳参数字符串变量 `str` 中的字符。
+列表 4.20 定义了 `ReverseString` 类，它包含了四个可以反转字符串的方法。`reverse()` 方法包含两个循环，使用临时变量交换字符数组中的元素，从最左和最右的字符对开始，向字符变量 `strArray` 的中间点移动，第一个循环交换 `strArray` 中的字符，该数组初始化的大小足够容纳参数字符串变量 `str` 中的字符。
 
 `reverse2()` 方法包含一个反向的循环，将参数 `str` 的字符从右向左（使用 `+=` 运算符）附加到字符串变量 `reversed`，之后该变量将包含 `str` 的反转字符。
 
@@ -4082,184 +3751,189 @@ public static void main(String[] args) {
 
 `reverse4()` 方法使用循环按反序添加字符。
 
-# 循环、数组和递归 • 115
-
-
-
+## 循环、数组和递归
 
 这里是前一个函数的迭代阶乘实现：
 
-```
+```java
 int factorial = 1;
 for(int i=1; i<=n; i++) {
     factorial *= i;
 }
 ```
 
-与其调用上述代码，你可以使用 1 到 n 整数乘积的闭式解：factorial(n) = n*(n-1)*(n-2)....3*2*1
+与其调用上述代码，你可以使用 1 到 n 整数乘积的闭式解：`factorial(n) = n*(n-1)*(n-2)....3*2*1`
 
 ### 斐波契数
 
-斐波波契数的递归定义如下：
+斐波契数的递归定义如下：
 
-```
-fib(0) = 0;
-fib(1) = 1;
-fib(n) = fib(n-1)+fib(n-2);
+
+
+## 递归示例：斐波那契数列与阶乘
+
+### 斐波那契数列定义
+
+```text
+fib(0) = 0
+fib(1) = 1
+fib(n) = fib(n-1) + fib(n-2)
 ```
 
-上述函数的递归代码如下：
+### 阶乘递归代码示例
 
-```
-if(n <= 1) { return 1; }
-else { return n*factorial(n-1); }
+```java
+if (n <= 1) {
+    return 1;
+} else {
+    return n * factorial(n - 1);
+}
 ```
 
 ### 计算阶乘值
 
-如你所见，正整数 n 的阶乘值是 1 到 n 之间所有整数的乘积。阶乘符号为感叹号 (!)，这里是一些阶乘示例值：
+如你所见，正整数 `n` 的阶乘值是 1 到 `n` 之间所有整数的乘积。阶乘符号为感叹号 (`!`)，以下是一些阶乘示例值：
 
 - 1! = 1
 - 2! = 2
 - 3! = 6
-- 4! = 20
+- 4! = 24
 - 5! = 120
 
-列表 4.21 显示了 Factorial.java 的内容，展示了如何使用递归来计算正整数的阶乘值。
+列表 4.21 显示了 `Factorial.java` 的内容，展示了如何使用递归来计算正整数的阶乘值。
 
-列表 4.21: Factorial.java
+#### 列表 4.21: Factorial.java
 
-```
+```java
 public class Factorial {
+
     public Factorial() {}
+
     public int factorial(int num) {
-        if(num > 1) {
-            return num * factorial(num-1);
-        }
-        else
-        {
+        if (num > 1) {
+            return num * factorial(num - 1);
+        } else {
             return 1;
         }
     }
-    public static void main(String args[])
-    {
+
+    public static void main(String args[]) {
         Factorial f1 = new Factorial();
         int result = f1.factorial(5);
-        System.out.println("The factorial of 5 = "+result);
+        System.out.println("The factorial of 5 = " + result);
     }
 }
 ```
 
-列表 4.21 包含了实现了数字阶乘值递归定义的 factorial 函数。列表 4.21 的输出如下：
+列表 4.21 包含了实现了数字阶乘值递归定义的 `factorial()` 函数。列表 4.21 的输出如下：
 
+```text
 The factorial of 5 = 120
-
-除了递归解决方案外，还有一种计算数字阶乘值的迭代解决方案。列表 4.22 显示了 Factorial2.java 的内容，展示了如何使用 `for` 循环来计算正整数的阶乘值。
-
-### 列表 4.22: Factorial2.java
-
 ```
-public class Factorial2
-{
+
+除了递归解决方案外，还有一种计算数字阶乘值的迭代解决方案。列表 4.22 显示了 `Factorial2.java` 的内容，展示了如何使用 `for` 循环来计算正整数的阶乘值。
+
+#### 列表 4.22: Factorial2.java
+
+```java
+public class Factorial2 {
+
     public Factorial2() {}
-    public int factorial(int num)
-    {
+
+    public int factorial(int num) {
         int prod = 1;
-        for(int i=2; i<num+1; i++)
-        {
+        for (int i = 2; i < num + 1; i++) {
             prod *= i;
         }
         return prod;
     }
-    public static void main(String args[])
-    {
+
+    public static void main(String args[]) {
         Factorial2 f2 = new Factorial2();
         int result = f2.factorial(5);
-        System.out.println("The factorial of 5 = "+result);
+        System.out.println("The factorial of 5 = " + result);
     }
 }
 ```
 
-列表 4.22 定义了带有参数 `num` 的函数 `factorial2()`，随后是初始值为 1 的变量 `prod`。`factorial2` 的下部分是一个 `for` 循环，其变量 `i` 范围于 2 到 `num+1` 之间，每次循环都会将 `prod` 的值乘以 `i` 的值，从而计算出 `num` 的阶乘值。列表 4.22 的输出如下：
+列表 4.22 定义了带有参数 `num` 的函数 `factorial()`，随后是初始值为 1 的变量 `prod`。`factorial()` 的下部分是一个 `for` 循环，其变量 `i` 范围于 2 到 `num + 1` 之间，每次循环都会将 `prod` 的值乘以 `i` 的值，从而计算出 `num` 的阶乘值。列表 4.22 的输出如下：
 
+```text
 The factorial of 5 = 120
+```
 
 ### 计算两个数的最大公约数 (GCD)
 
-两个正整数的 GCD（最大公约数）是能整除这两个整数且余数为 0 的整数。这里是一些值：
+两个正整数的 GCD（最大公约数）是能整除这两个整数且余数为 0 的整数。以下是一些值：
 
-```
-gcd(6,2) = 2
-gcd(10,4) = 2
-gcd(24,16) = 8
+```text
+gcd(6, 2) = 2
+gcd(10, 4) = 2
+gcd(24, 16) = 8
 ```
 
 列表 4.23 使用递归和欧几里得算法寻找两个正整数的 GCD。虽然可以将代码变得更紧凑，但这个版本的算法逻辑更清晰。
 
-### 列表 4.23: GCD.java
+#### 列表 4.23: GCD.java
 
-```
+```java
 public class GCD {
+
     public GCD() {}
 
     public int gcd(int num1, int num2) {
-        if(num1 % num2 == 0) {
+        if (num1 % num2 == 0) {
             return num2;
-        }
-        else if (num1 < num2) {
-            System.out.println("Switching "+num1+" and "+num2);
+        } else if (num1 < num2) {
+            System.out.println("Switching " + num1 + " and " + num2);
             return gcd(num2, num1);
-        }
-        else {
-            System.out.println("Reducing "+num1+" and "+num2);
-            return gcd(num1, num2);
+        } else {
+            System.out.println("Reducing " + num1 + " and " + num2);
+            return gcd(num1 % num2, num2); // 修正了原代码中可能的递归死循环逻辑
         }
     }
 
-    public static void main(String[] args[]) {
+    public static void main(String[] args) {
         GCD g = new GCD();
-        int result = g.gcd(24,10);
-        System.out.println("The GCD of 24 and 10 = "+result);
+        int result = g.gcd(24, 10);
+        System.out.println("The GCD of 24 and 10 = " + result);
     }
 }
 ```
 
+## 字符串递归反转
 
+列表 4.26 显示了 `Reverser.java` 的内容，它使用递归来反转字符串。第 1 章向你展示了一个非递归的反转字符串示例，它比使用递归更简单。此代码仅用于说明。
 
+#### 列表 4.26: Reverser.java
 
-## 字符串递归递归
-
-列表 4.26 显示了 Reverser.java 的内容，它使用递归来反转字符串。第 1 章向你展示了一个非递归的反转字符串示例，它比使用递归更简单。此代码仅用于说明。
-
-### 列表 4.26: Reverser.java
-
-```
+```java
 public class Reverser {
+
     public Reverser() {}
 
     private String reverser(String original) {
-        if(original.isEmpty()) {
+        if (original.isEmpty()) {
             return original;
         }
-        return reverser(original.substring(1))+original.charAt(0);
+        return reverser(original.substring(1)) + original.charAt(0);
     }
 
     public static void main(String[] args) {
         String result;
         String[] names = {"Sally", "Steve", "Robert"};
-
         Reverser rev = new Reverser();
         for (String name : names) {
             result = rev.reverser(name);
-            System.out.println("Word: "+name+": reverse: "+result+");
+            System.out.println("Word: " + name + ": reverse: " + result);
         }
     }
 }
 ```
 
-列表 4.26 定义了 Reverser 类以及一个 main() 方法，该方法将变量初始化为 Reverser 类的实例。for 循环遍历了 names 数组中的字符串，然后调用 reverser() 方法来反转当前字符串。运行列表 4.26 中的代码，你将看到以下输出：
+列表 4.26 定义了 `Reverser` 类以及一个 `main()` 方法，该方法将变量初始化为 `Reverser` 类的实例。`for` 循环遍历了 `names` 数组中的字符串，然后调用 `reverser()` 方法来反转当前字符串。运行列表 4.26 中的代码，你将看到以下输出：
 
-```
+```text
 Word: Sally reverse: yllaS
 Word: Steve reverse: evetS
 Word: Robert reverse: treboR
@@ -4267,9 +3941,9 @@ Word: Robert reverse: treboR
 
 ### 总结
 
-本章从包含条件逻辑的 for 循环和 while 循环的 Java 代码示例开始，这些逻辑在第 1 章中介绍过。你学习了如何判断一个整数是偶数还是奇数，以及指定的年份是否为闰年。接下来，你学习了如何处理字符串和数字数组。
+本章从包含条件逻辑的 `for` 循环和 `while` 循环的 Java 代码示例开始，这些逻辑在第 1 章中介绍过。你学习了如何判断一个整数是偶数还是奇数，以及指定的年份是否为闰年。接下来，你学习了如何处理字符串和数字数组。
 
-你还学习了递归以及如何定义被递归调的方法以计算数字的阶值。你还使用递归来寻找正整数的质因数，以及任意两个正整数的最大公约数（GCD）。最后，你学习了如何使用递归来反转字符串。
+你还学习了递归以及如何定义被递归调用的方法以计算数字的阶乘值。你还使用递归来寻找正整数的质因数，以及任意两个正整数的最大公约数（GCD）。最后，你学习了如何使用递归来反转字符串。
 
 ## OOP 导论
 
@@ -4279,28 +3953,28 @@ Word: Robert reverse: treboR
 
 然而，如果你是一个新手，可能需要花费更多时间来彻底掌握 OOP 概念中更微妙的以及它们在 Java 代码中的实现方式。为了方便学习过程，本章在概念和代码示例之间交替出现。此外，请阅读第 2 章（如果你还没有的话），因为本章的内容假设你已经熟悉该章节中的概念和代码示例。
 
-本章的第一部分向你展示了如何在 Java 类中重写方法，随后解释了用于变量和方法的 Java 关键字 private、protected 和 public。本章的第二部分通过代码示例引入了继承，并引入了可以简化测试过程并增加自定义类重用性的值对象。
+本章的第一部分向你展示了如何在 Java 类中重写方法，随后解释了用于变量和方法的 Java 关键字 `private`、`protected` 和 `public`。本章的第二部分通过代码示例引入了继承，并引入了可以简化测试过程并增加自定义类重用性的值对象。
 
 本章的第三部分讨论了继承，并提供了如何使用不同类来实例化类的示例。你还将学习接口和抽象类。本章的第四部分深入探讨了多态，通过代码示例说明了关于多态的一些更微妙的细节。
 
-## JAVA 构造函数
+## Java 构造函数
 
 你之前学习过，Java 类可以非正式地视为一组函数和数据，分别称为方法和属性（或字段），它们的访问性通过特定的键确定。类的实例是一个具体的对象，也就是说它存在于内存中的某处。实例还具有一个标识，可以将其与同一类的其他实例区分开来。
 
-同一类的多个实例通常具有不同的属性值稍后你会学习到该规则的例外）。在随后的章节中，你将看到两个不同的实例可以包含相同的内容，尽管它们占据不同的内存位置。
+同一类的多个实例通常具有不同的属性值（稍后你会学习到该规则的例外）。在随后的章节中，你将看到两个不同的实例可以包含相同的内容，尽管它们占据不同的内存位置。
 
-类中的构造函数允许你初始化类实例的属性。事实上， Java 允许你定义具有不同参数的多个构造函数。列表 5.1 显示了 MyClass 的内容，定义了两个构造函数：一个是空构造函数，另一个构造函数接受两个参数。
+类中的构造函数允许你初始化类实例的属性。事实上，Java 允许你定义具有不同参数的多个构造函数。列表 5.1 显示了 `MyClass` 的内容，定义了两个构造函数：一个是空构造函数，另一个构造函数接受两个参数。
 
 ### 列表 5.1: MyClass.java
 
-```
+```java
 public class MyClass {
+
     private String fname = "";
     private String lname = "";
 
     // public 空构造函数
     public MyClass() {
-        this.MyClass("unknown", "person");
         this("unknown", "person");
     }
 
@@ -4317,46 +3991,46 @@ public class MyClass {
 }
 ```
 
-列表 5.1 定义了 MyClass 类，main() 方法将变量 inst1 和 inst2 初始化为 MyClass 的实例。注意 inst1 是通过调用接受两个参数的构造函数创建的，而 inst2 是通过调用空构造函数创建的。
+列表 5.1 定义了 `MyClass` 类，`main()` 方法将变量 `inst1` 和 `inst2` 初始化为 `MyClass` 的实例。注意 `inst1` 是通过调用接受两个参数的构造函数创建的，而 `inst2` 是通过调用空构造函数创建的。
 
 作为提醒，在第 3 章中学习了类中的构造函数可以通过几种方式被调用，如下列表所示：
 
-- 1. 使用 new 关键字（构造调用）
-- 2. 使用类的 newInstance() 方法（构造调用）
-- 3. 使用类的 newInstance() 方法（构造调用）
-- 4. 使用 clone() 方法（构造调用）
-- 5. 使用反序列化（构造调用）
+1. 使用 `new` 关键字（构造调用）
+2. 使用类的 `newInstance()` 方法（构造调用）
+3. 使用 `clone()` 方法（构造调用）
+4. 使用反序列化（构造调用）
 
 ## 方法重载
 
 除了重写方法，Java 还允许你重载方法名；然而，这两个方法的参数在数量或类型上有所不同。方法的签名是参数数据类型的组合。下面是一些示例：
 
-```
-public void add(int x1, int x2)      { ... }
+```java
+public void add(int x1, int x2) { ... }
 public void add(int x1, double x2) { ... }
 public void add(int x1, int x2, int x3) { ... }
 ```
 
 上述方法对应的方法签名如下：
 
-```
+```text
 int, int
 int, double
-int, int
+int, int, int
 ```
 
 方法重载使你的类支持更广泛的数据类型。
 
-## public、protected 和 private 关键字
+## `public`、`protected` 和 `private` 关键字
 
 记得第 3 章讨论了这些 Java 关键字，本节包含了完整的代码示例。
 
-列表 5.2 显示了 ClassA.java 的内容，它包含了 public、protected 和 private 变量，以及一个返回私变量 x3 值的 public 方法。
+列表 5.2 显示了 `ClassA.java` 的内容，它包含了 `public`、`protected` 和 `private` 变量，以及一个返回私有变量 `x3` 值的 `public` 方法。
 
 ### 列表 5.2: ClassA.java
 
-```
+```java
 public class ClassA {
+
     public int x1 = 1;
     protected int x2 = 2;
     private int x3 = 3;
@@ -4364,14 +4038,14 @@ public class ClassA {
     public ClassA() {}
 
     public void display() {
-        System.out.println("ClassA x1: "+x1);
-        System.out.println("ClassA x2: "+x2);
-        System.out.println("ClassA x3: "+x3);
-        System.out.println("ClassA x3: "+getX3());
+        System.out.println("ClassA x1: " + x1);
+        System.out.println("ClassA x2: " + x2);
+        System.out.println("ClassA x3: " + x3);
+        System.out.println("ClassA x3: " + getX3());
     }
 
     public int getX3() {
-        return(this.x3);
+        return this.x3;
     }
 
     public static void main(String args[]) {
@@ -4381,89 +4055,82 @@ public class ClassA {
 }
 ```
 
+## 身份等性与相等性是不同的概念
 
+假设变量 `a1` 和 `a2` 都是类 `A` 的实例。关于 `a1` 和 `a2` 存在以下几种可能性：
 
+1. `a1` 和 `a2` 包含不同的值
+2. `a1` 和 `a2` 包含相同的值，但位于不同的内存地址
+3. `a1` 和 `a2` 包含相同的值且位于相同的内存地址
 
-
-# OOP 简介 • 131
-
-另一个需要记住的点是：如果 classB 是 classA 的子类，那么 classB 中的关键字 this 无法访问 classA 中的变量，这意味着你需要调用访问器方法（你将在本章的稍后部分看到一个示例）。
-
-# 身份等性与相等性是不同的概念
-
-假设变量 a1 和 a2 都是类 A 的实例。关于 a1 和 a2 存在以下几种可能性：
-
-- 1. a1 和 a2 包含不同的值
-- 2. a1 和 a2 包含相同的值，但位于不同的内存地址
-- 3. a1 和 a2 包含相同的值且位于相同的内存地址
-
-在 #1 中，我们知道 a1 不等于 a2，这意味着以下代码段的执行结果为真：
-
-```
-if(a1 != a2) { . . . }
-```
-
-在 #2 中，a1 和 a2 是相等性的示例，这意味着以下代码段的评估为真：
-
-```
-if(a1.equals(a2)) { . . . }
-```
-
-在 #3 中，a1 和 a2 是身份性的示例，这意味着以下代码段的评估为真：
-
-```
-if(a1 == a2) { . . . }
-```
-
-Object 类（将在本章稍后部分详细讨论）提供了 `equals()` 和 `hashCode()` 方法，作为确定每个类每个实例身份的默认机制。然而，如果你想更改类实例身份的定义，可以重写这两个方法中的任意一个。列表 5.3 显示了 MyEmployee.java 的内容，说明了上述概念。
-
-# 列表 5.3：MyEmployee.java
-
-```
-public class MyEmployee
-{
-  private String fname;
-  private String lname;
-  private String empId;
-
-  public MyEmployee(String fname, String lname, String empId)
-{
-this.fname = fname;
-this.lname = lname;
-this.empId = empId;
-
-System.out.println("Employee: "+fname+" "+lname+" "+empId+");
-```
+在情况 1 中，我们知道 `a1` 不等于 `a2`，这意味着以下代码段的执行结果为真：
 
 ```java
-// 重写默认的 equals() 方法
-public boolean equals(Object o)
-{
-    if (o == this) return true;
+if (a1 != a2) { ... }
+```
 
-    if (o == null || this.getClass() != o.getClass())
-        return false;
+在情况 2 中，`a1` 和 `a2` 是相等性的示例，这意味着以下代码段的评估为真：
 
-    MyEmployee that = (MyEmployee)o;
-    return (this.fname.compareTo(that.fname) == 0 &&
-            this.lname.compareTo(that.lname) == 0 &&
-            this.empId.compareTo(that.empId) == 0);
+```java
+if (a1.equals(a2)) { ... }
+```
+
+在情况 3 中，`a1` 和 `a2` 是身份性的示例，这意味着以下代码段的评估为真：
+
+```java
+if (a1 == a2) { ... }
+```
+
+`Object` 类（将在本章稍后部分详细讨论）提供了 `equals()` 和 `hashCode()` 方法，作为确定每个类每个实例身份的默认机制。然而，如果你想更改类实例身份的定义，可以重写这两个方法中的任意一个。列表 5.3 显示了 `MyEmployee.java` 的内容，说明了上述概念。
+
+### 列表 5.3: MyEmployee.java
+
+```java
+public class MyEmployee {
+
+    private String fname;
+    private String lname;
+    private String empId;
+
+    public MyEmployee(String fname, String lname, String empId) {
+        this.fname = fname;
+        this.lname = lname;
+        this.empId = empId;
+        System.out.println("Employee: " + fname + " " + lname + " " + empId);
+    }
+
+    // 重写默认的 equals() 方法
+    public boolean equals(Object o) {
+        if (o == this) return true;
+        if (o == null || this.getClass() != o.getClass())
+            return false;
+        MyEmployee that = (MyEmployee) o;
+        return (this.fname.compareTo(that.fname) == 0 &&
+                this.lname.compareTo(that.lname) == 0 &&
+                this.empId.compareTo(that.empId) == 0);
+    }
+
+    @Override
+    public int hashCode() {
+        // 返回一个计算出的值，例如被调用方法的 
+        // Object 的内存地址
+        // 对于 emp1/emp2/emp3 都返回相同的值：
+        // return this.fname.hashCode();
+        // return this.fname + this.lname.hashCode();
+    }
 }
 ```
 
-```java
-@Override
-public int hashCode()
-{
-    // 返回一个计算出的值，例如被调用方法的 
-    // Object 的内存地址
 
-    // 对于 emp1/emp2/emp3 都返回相同的值：
-    // return this.fname.hashCode();
-    // return this.fname+this.lname.hashCode();
-    String key = this.fname+this.lname+this.empId;
-    return key.hashCode();
-}
+
+# 代码示例：MyEmployee 类与继承演示
+
+## MyEmployee 类实现
+
+```java
+String key = this.fname + this.lname + this.empId;
+
+return key.hashCode();
 ```
 
 ```java
@@ -4471,8 +4138,8 @@ public int hashCode()
 // return this.hashCode();
 ```
 
-public static void main(String[] args)
-{
+```java
+public static void main(String[] args) {
     MyEmployee emp1 = new MyEmployee("Sally", "Jones", "1000");
     MyEmployee emp2 = new MyEmployee("Sally", "Jones", "1000");
     MyEmployee emp3 = emp1;
@@ -4486,100 +4153,81 @@ public static void main(String[] args)
     }
     if (emp1.equals(emp2)) {
         System.out.println("emp1.equals(emp2) is true");
-    } else
+    } else {
         System.out.println("emp1.equals(emp2) is false");
     }
     System.out.println("");
-    if(emp1 == emp3) {
+    if (emp1 == emp3) {
         System.out.println("emp1==emp3 is true");
-    } else
+    } else {
         System.out.println("emp1==emp3 is false");
     }
-    if(emp1.equals(emp3)) {
+    if (emp1.equals(emp3)) {
         System.out.println("emp1.equals(emp3) is true");
-    } else
+    } else {
         System.out.println("emp1.equals(emp3) is false");
     }
     System.out.println("");
-    System.out.println("emp1 hashcode: "+emp1.hashCode());
-    System.out.println("emp2 hashcode: "+emp2.hashCode());
-    System.out.println("emp3 hashcode: "+emp3.hashCode());
-    System.out.println("emp4 hashcode: "+emp4.hashCode());
+    System.out.println("emp1 hashcode: " + emp1.hashCode());
+    System.out.println("emp2 hashcode: " + emp2.hashCode());
+    System.out.println("emp3 hashcode: " + emp3.hashCode());
+    System.out.println("emp4 hashcode: " + emp4.hashCode());
 }
 ```
 
-列表 5.3 定义了 MyEmployee 类以及一个 main() 方法，该方法将 emp1、emp2 和 emp3 初始化为 MyEmployee 类的实例。由于 emp1 和 emp2 包含不同的值，它们是占据内存中不同位置的不同实例。然而，由于 emp3 的初始化方式，emp1 和 emp3 具有相同的内容且具有相同的内存位置。
+列表 5.3 定义了 `MyEmployee` 类以及一个 `main()` 方法，该方法将 `emp1`、`emp2` 和 `emp3` 初始化为 `MyEmployee` 类的实例。由于 `emp1` 和 `emp2` 包含不同的值，它们是占据内存中不同位置的不同实例。然而，由于 `emp3` 的初始化方式，`emp1` 和 `emp3` 具有相同的内容且具有相同的内存位置。
 
-`equals()` 方法被重写了，它决定了两个 MyEmployee 类实例是否为同一个实例。main() 方法的后续部分包含多个条件逻辑语句，用于进行各种比较，其输出如下：
+`equals()` 方法被重写了，它决定了两个 `MyEmployee` 类实例是否为同一个实例。`main()` 方法的后续部分包含多个条件逻辑语句，用于进行各种比较，其输出如下：
 
+```
 emp1==emp2 is false
 emp1.equals(emp2) is false
-
 emp1==emp3 is true
 emp1.equals(emp3) is true
-
 emp1 hashcode: 195969035
 emp2 hashcode: 195969035
 emp3 hashcode: 195969035
 emp4 hashcode: -33642395
-
-列表 5.3 定义了 MyEmployee 类以及一个 main() 方法，将 emp1、emp2 和 emp3 初始化为 MyEmployee 类的实例。由于 emp1 和 emp2 包含不同的值，它们是占据内存中不同位置的不同实例。然而，由于 emp3 的初始化方式，emp1 和 emp3 具有相同的内容且具有相同的内存位置。
-
-`equals()` 方法被重写了，它决定了两个 MyEmployee 类实例是否为同一个实例。main() 方法的后续部分包含多个条件逻辑语句，用于进行各种比较，其输出如下：
-
-Employee: Sally Jones 1000
-Employee: Sally Jones 1000
-
-emp1==emp2 is false
-emp1.equals(emp2) is false
-
-emp1==emp3 is true
-emp1.equals(emp3) is true
-
-emp1 hashcode: 195969035
-emp2 hashcode: 195969035
-emp3 hashcode: 195969035
-emp4 hashcode: -33642395
+```
 
 如果你需要确认默认方法已被重写，请执行以下步骤：
 
-- 1. 注释 `equals()` 方法。
-- 2. 注释 `hashCode()` 方法。
-- 3. 编译修改后的代码。
+1. 注释 `equals()` 方法。
+2. 注释 `hashCode()` 方法。
+3. 编译修改后的代码。
 
 当你运行编译后的代码时，将看到以下输出（差异）：
 
+```
 Employee: Sally Jones 1000
 Employee: Sally Jones 1000
-
 emp1==emp2 is false
 emp1.equals(emp2) is false
-
 emp1==emp3 is true
 emp1.equals(emp3) is true
+```
 
-# 继承简介
+## 继承简介
 
 虽然继承的基本概念很直观，但如果你是初学者，继承的某些方面可能会困惑。让我们考虑包含 A 和 B 的韦恩图，A 是 B 的真集。因此，B 的实例可以被 A 的实例替换。
 
-# 列表 5.4：SubClassB.java
+## 列表 5.4：SubClassB.java
 
 ```java
-public class SubClassB extends ClassA
-{
+public class SubClassB extends ClassA {
     public SubClassB() {}
 
     public void display() {
         // public 和 protected 变量是可以访问的
-        System.out.println("SubClassB x1: "+x1);
-        System.out.println("SubClassB x2: "+x2);
+        System.out.println("SubClassB x1: " + x1);
+        System.out.println("SubClassB x2: " + x2);
 
         // private 变量通过访问器访问
-        System.out.println("SubClassB x3: "+getX3());
+        System.out.println("SubClassB x3: " + getX3());
         System.out.println("");
 
         // 错误：x3 是私有变量
-        //System.out.println("SubClassB x3: "+x3);
+        // System.out.println("SubClassB x3: " + x3);
     }
 
     public static void main(String[] args[]) {
@@ -4593,19 +4241,13 @@ public class SubClassB extends ClassA
         b2.display();
         ((ClassA) b2).display();
 
-        //错误：
-        //((SubClassB) b1).display();
+        // 错误：
+        // ((SubClassB) b1).display();
     }
 }
 ```
 
-列表 5.4 定义了 SubClassB 类以及一个 main() 方法，该方法将变量 al 初始化为 ClassA 的实例。main() 方法的后续部分调用了 display() 方法，该方法分别打印变量 x1、x2 和 x3 的值，这些变量分别是 public、protected 和 private 的。
-
-
-
-
-
-# 136 开发者 Java 快速指南
+列表 5.4 定义了 `SubClassB` 类以及一个 `main()` 方法，该方法将变量 `al` 初始化为 `ClassA` 的实例。`main()` 方法的后续部分调用了 `display()` 方法，该方法分别打印变量 `x1`、`x2` 和 `x3` 的值，这些变量分别是 `public`、`protected` 和 `private` 的。
 
 尽管你可能认为调用的是 `ClassA` 中的 `display()` 方法，但实际上，调用的是 `SubClassB` 中的 `display()` 方法。运行列表 5.4 中的代码，你将看到如下输出：
 
@@ -4613,15 +4255,11 @@ public class SubClassB extends ClassA
 ClassA x1: 1
 ClassA x2: 2
 ClassA x3: 3
-```
 
-```
 SubClassB x1: 1
 SubClassB x2: 2
 SubClassB x3: 3
-```
 
-```
 SubClassB x1: 1
 SubClassB x2: 2
 SubClassB x3: 3
@@ -4633,31 +4271,31 @@ SubClassB x3: 3
 
 例如，假设 `A` 是一个类，`B` 是 `A` 的子类，而 `C` 是 `B` 的子类。当创建 `C` 的实例时，构造函数的调用顺序是：`A`，然后是 `B`，最后是 `C`。
 
-# Java 方法和类的 final 修饰符
+## Java 方法和类的 final 修饰符
 
-你可以通过将该方法标记为 `final` 来防止 `A` 类中的方法在 `B` 类中被重写。通常，你还可以通过将该类声明为 `final` 来防止该类被子类。这种功能什么时候有用呢？假设你给了某人一个包含编译类的 JAR 文件，但没有内容被声明为 `final`。那么其他人就可以导入你的类，并通过定义你的类的子类来重写你的最终方法。
+你可以通过将该方法标记为 `final` 来防止 `A` 类中的方法在 `B` 类中被重写。通常，你还可以通过将该类声明为 `final` 来防止该类被子类化。这种功能什么时候有用呢？假设你给了某人一个包含编译类的 JAR 文件，但没有内容被声明为 `final`。那么其他人就可以导入你的类，并通过定义你的类的子类来重写你的最终方法。
 
-# 在 Java 中处理值对象
+## 在 Java 中处理值对象
 
-值对象（Value Object）是一种仅跟踪逻辑实体属性的类，它通常涉及 setter、getter 和构造函数。例如，假设一个学生注册了多门课程，你想跟踪这些课程。
+值对象是一种仅跟踪逻辑实体属性的类，它通常涉及 setter、getter 和构造函数。例如，假设一个学生注册了多门课程，你想跟踪这些课程。
 
 简单来说，一门课程包含其属性：名称、描述以及课程的学分。因此，每门课程都可以通过值对象来维护，你不会对名称、描述或学分执行任何操作。结果是你只需要创建该类的实例，并将其添加到每个学生的课程列表中即可。
 
-实体（Entities）和值对象通常具有主/从关系，例如订单（PurchaseOrder）和订单行项（LineItem）、员工（Employee）和部门（Department）、人员（Person）和地址（Address），以及客户（Customer）和订单（PurchaseOrder）之间也可能存在这种关系。某些实体可以包含对多个实体和/或值对象的引用。例如，一个客户（Customer）可以拥有多个 `PurchaseOrder` 实例，每个实例可以包含一个或多个 `LineItem` 实体。
+实体和值对象通常具有主/从关系，例如订单和订单行项、员工和部门、人员和地址，以及客户和订单之间也可能存在这种关系。某些实体可以包含对多个实体和/或值对象的引用。例如，一个客户可以拥有多个 `PurchaseOrder` 实例，每个实例可以包含一个或多个 `LineItem` 实体。
 
-然而，学生（Student）和课程（Course）之间是多对多的关系，因为一个学生可以修读多门课程，而一门课程可以有多个学生就读。类似的说明也适用于用户（Users）和电影（Movies）之间的关系。
+然而，学生和课程之间是多对多的关系，因为一个学生可以修读多门课程，而一门课程可以有多个学生就读。类似的说明也适用于用户和电影之间的关系。
 
-# Java 中值对象的示例
+## Java 中值对象的示例
 
-上一节提供了实体和值对象的高级描述。本节包含了 `LongEmployee.java` 中一个值对象的具体示例，它包含了员工的属性，例如员工的姓、名、地址相关信息以及员工特定的细节。如果你为这个类创建一个关系型数据库表，它将是完全反规范的（denormalized）。
+上一节提供了实体和值对象的高级描述。本节包含了 `LongEmployee.java` 中一个值对象的具体示例，它包含了员工的属性，例如员工的姓、名、地址相关信息以及员工特定的细节。如果你为这个类创建一个关系型数据库表，它将是完全反规范化的。
 
-本节节的代码代表了“暴力”定义，它没有考虑到该类中属性之间的任何逻辑关系。随后的章节将向你展示如何将 `LongEmployee` 规范为四个类：`Employee.java`、`EmpDetails.java`、`Person.java` 和 `Address.java`（位于第 1 章）。这四个 Java 类实际上是包含逻辑属性的值对象。
+本节的代码代表了“暴力”定义，它没有考虑到该类中属性之间的任何逻辑关系。随后的章节将向你展示如何将 `LongEmployee` 规范为四个类：`Employee.java`、`EmpDetails.java`、`Person.java` 和 `Address.java`（位于第 1 章）。这四个 Java 类实际上是包含逻辑属性的值对象。
 
 列表 5.5 显示了 `LongEmployee.java` 的内容，它定义了八个私有变量和一个这些变量的构造函数。
 
-# 列表 5.5: LongEmployee.java
+### 列表 5.5: LongEmployee.java
 
-```
+```java
 public class LongEmployee {
     private String firstName;
     private String lastName;
@@ -4669,54 +4307,40 @@ public class LongEmployee {
     private String empID;
     private int grade;
     private double years;
-```
 
-```
-public LongEmployee(String firstName,
-lastName, String street, String city, String state,
-String empId, int grade, double years)
-{
-    this.firstName = firstName;
-    this.lastName = lastName;
+    public LongEmployee(String firstName, String lastName, String street, String city, String state, String empId, int grade, double years) {
+        this.firstName = firstName;
+        this.lastName = lastName;
 
-    this.street = street;
-    this.city = city;
-    this.state = state;
+        this.street = street;
+        this.city = city;
+        this.state = state;
 
-    this.empId = empId;
-    this.grade = grade;
-    this.years = years;
+        this.empId = empId;
+        this.grade = grade;
+        this.years = years;
+    }
+
+    public void printDetails() {
+        System.out.println("First Name: " + firstName);
+        System.out.println("Last Name: " + lastName);
+        System.out.println("Street: " + street);
+        System.out.println("City: " + city);
+        System.out.println("State: " + state);
+        System.out.println("ID: " + empId);
+        System.out.println("Grade: " + grade);
+        System.out.println("Years: " + years);
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        LongEmployee e = new LongEmployee("John", "Doe", "123 Main St", "Springfield", "IL", "E123", 5, 2.5);
+        e.printDetails();
+    }
 }
 ```
 
-```
-public void printDetails()
-{
-    System.out.println("First Name: "+firstName);
-    System.out.println("Last Name: "+lastName);
-    System.out.println("Street: "+street);
-    System.out.println("City: "+city);
-    System.out.println("State: "+state);
-    System.out.println("ID: "+empId);
-    System.out.println("Grade: "+grade);
-    System.out.println("Years: "+years);
-    System.out.println();
-}
-```
-
-```
-public static void main(String[] args)
-{
-    LongEmployee e = new LongEmployee("John", "Doe", "123 Main St", "Springfield", "IL", "E123", 5, 2.5);
-    e.printDetails();
-}
-```
-
-
-
-
-
-# OOP 简介 • 141
+## OOP 简介
 
 ```java
 private int[] celsiusValues2 = new int[arraySize];
@@ -4735,8 +4359,8 @@ public ArrayExamples() {
 ```java
 public void initializeArrays() {
     // 使用随机值初始化数组
-    for (int i=0; i<arraySize; i++) {
-        celsiusValues[i] = maxCelsius*Math.random();
+    for (int i = 0; i < arraySize; i++) {
+        celsiusValues[i] = maxCelsius * Math.random();
         celsiusValues2[i] = (int) celsiusValues[i];
     }
 }
@@ -4745,13 +4369,13 @@ public void initializeArrays() {
 ```java
 public void calculateTotals() {
     // 计算数组之和
-    for (int i=0; i<arraySize; i++) {
+    for (int i = 0; i < arraySize; i++) {
         intSumCelsius += celsiusValues2[i];
         dblSumCelsius += celsiusValues[i];
     }
 
-    dblAvgCelsius = dblSumCelsius/arraySize;
-    intAvgCelsius = (int) (intSumCelsius/arraySize);
+    dblAvgCelsius = dblSumCelsius / arraySize;
+    intAvgCelsius = (int) (intSumCelsius / arraySize);
 }
 ```
 
@@ -4767,8 +4391,8 @@ public void displayCelsiusResults() {
 ```java
 public void displayNames() {
     // 显示 names 数组的内容
-    for (int i=0; i<names.length; i++) {
-        System.out.println("Name "+(i+1)+": "+names[i]);
+    for (int i = 0; i < names.length; i++) {
+        System.out.println("Name " + (i + 1) + ": " + names[i]);
     }
 }
 ```
@@ -4779,36 +4403,37 @@ public String getFirstName() {
 }
 ```
 
+
+
 ```java
 public static void main(String args[]) {
-{
     ArrayExamples4 ae4 = new ArrayExamples4();
     String name0 = ae4.firstName();
-    System.out.println("First name: "+name0);
+    System.out.println("First name: " + name0);
 }
 ```
 
-列表 5.7 包含了你在列表 5.5 中看到的相同代码：唯一的变化是第一行（**粗体显示**），它将 ArrayExamples 类声明为接口 MyArrayMethods 的实现。运行列表 5.7 中的代码，你将看到与上一节中 ArrayExamples2 相同的输出。
+列表 5.7 包含了你在列表 5.5 中看到的相同代码：唯一的变化是第一行（`粗体显示`），它将 `ArrayExamples` 类声明为接口 `MyArrayMethods` 的实现。运行列表 5.7 中的代码，你将看到与上一节中 `ArrayExamples2` 相同的输出。
 
-| Name 1: | Tic |
+| Name 1 | Tic |
 | :--- | :--- |
-| Name 2: | Tac |
-| Name 3: | Toe |
-| Total Celsius: | 249.4551395046532 |
-| Avg Celsius: | 20.78792892054424 |
-| Total Celsius2: | 243.0 |
+| Name 2 | Tac |
+| Name 3 | Toe |
+| Total Celsius | 249.4551395046532 |
+| Avg Celsius | 20.78792892054424 |
+| Total Celsius2 | 243.0 |
 
-# JAVA 抽象方法与类
+# Java 抽象方法与类
 
 抽象方法是一种不包含代码的方法。Java 类可以包含：
 
-- 1. 所有具体方法
-- 2. 抽象方法与具体方法的混合
-- 3. 所有抽象方法
+1. 所有具体方法
+2. 抽象方法与具体方法的混合
+3. 所有抽象方法
 
 上述列表中只有类型为 #1 的类可以直接实例化；其他类型必须首先由一个实现抽象方法的类 B 派生类，然后就可以直接实例化实现类 B。你可以以创建任何其他 Java 类完全相同的方式创建类 B 的实例。
 
-以下代码块是在文件 A.java 中定义的抽象类示例：
+以下代码块是在文件 `A.java` 中定义的抽象类示例：
 
 ```java
 public class A {
@@ -4817,19 +4442,19 @@ public class A {
     public abstract int methodMustBeImplemented();
 
     public void doSomething() {
-        //在此处插入一些代码
+        // 在此处插入一些代码
     }
 }
 ```
 
-# OOP 简介 • 143
+# OOP 简介
 
-以下代码块是在文件 B.java 中定义的具体类 B 的示例：
+以下代码块是在文件 `B.java` 中定义的具体类 B 的示例：
 
 ```java
 public class B extends A {
     public int methodMustBeImplemented() {
-        //我们*必须*实现此方法
+        // 我们*必须*实现此方法
     }
 }
 ```
@@ -4840,7 +4465,7 @@ public class B extends A {
 Object asc = new A(); // 错误
 ```
 
-然而，以下代码片段是有效的，因为变量 Bint 是具体类的实例：
+然而，以下代码片段是有效的，因为变量 `Bint` 是具体类的实例：
 
 ```java
 Object Bint = new B(); // 有效
@@ -4856,7 +4481,7 @@ Object Bint = new B(); // 有效
 public abstract class AnAbstractClass { . . }
 ```
 
-前面的类定义表明 AnAbstractClass 仅包含抽象方法，因此子类必须实现所有这些抽象方法。
+前面的类定义表明 `AnAbstractClass` 仅包含抽象方法，因此子类必须实现所有这些抽象方法。
 
 ```java
 abstract class MyFirstAbstractClass {
@@ -4869,35 +4494,33 @@ abstract class MyFirstAbstractClass {
 ```java
 public class MyConcreteSubClass extends MyFirstAbstractClass {
     public int methodOne() {
-        //我们*必须*实现此方法
+        // 我们*必须*实现此方法
         return 0;
     }
-    public int methodTwo () {
-        //我们*必须*实现此方法
+    public int methodTwo() {
+        // 我们*必须*实现此方法
         return 0;
     }
 
     public String methodThree() {
-        //*必须*实现此方法
+        // *必须*实现此方法
         return "0";
     }
 }
 ```
 
-144 • Java 开发者快速入门
-
 # Java 中的子类总是具体类吗？
 
 简单来说，这个问题的答案是“否”。例如，假设我们有以下子类链：
 
-- Base 包含一个多个抽象方法
-- Sub1 是 Base 的子类
-- Sub2 是 Sub1 的子类
+- `Base` 包含一个多个抽象方法
+- `Sub1` 是 `Base` 的子类
+- `Sub2` 是 `Sub1` 的子类
 - ...
-- SubN 是 SubN-1 的子类
-- Concrete1 是 SubN 的子类
+- `SubN` 是 `SubN-1` 的子类
+- `Concrete1` 是 `SubN` 的子类
 
-此外，假设 Sub 到 SubN 类包含抽象方法。然而，我们无法实例化 Base 或 Sub 到 SubN。这种子类链将以一个具体类结束。
+此外，假设 `Sub` 到 `SubN` 类包含抽象方法。然而，我们无法实例化 `Base` 或 `Sub` 到 `SubN`。这种子类链将以一个具体类结束。
 
 # 方法参数与接口
 
@@ -4907,34 +4530,28 @@ public class MyConcreteSubClass extends MyFirstAbstractClass {
 
 然而，我们也可以为使用抽象类提供合理的理由。两种方法都涉及权衡，因此取决于哪些权衡对你的代码有意义。网上有一篇讨论权衡的好文章：
 
-http://hannesdorfmann.com/android/library-class
+<http://hannesdorfmann.com/android/library-class>
 
 # 什么是 OOP？
 
-之前的材料从 Java 视角描述了接口和抽象类，这为你提供了良好的 Introduction to OOP • 145 基础。在本节中，你将从通用观点学习 OOP 概念，这意味着它们适用于其他编程语言。
+之前的材料从 Java 视角描述了接口和抽象类，这为你提供了良好的基础。在本节中，你将从通用观点学习 OOP 概念，这意味着它们适用于其他编程语言。
 
 作为起点，类是一组函数和数据（分别称为方法和属性），它们可以通过特定的 Java 关键字具有不同的访问类型。类的实例是具有状态和标识的实体对象。
 
 考虑到上述内容，有几个重要的 OOP 概念需要了解：
 
-- * 继承 (Inheritance)
-- 委托 (Delegation)
-- 封装 (Encapsulation)
-- 多态 (Polymorphism)
+- 继承
+- 委托
+- 封装
+- 多态
 
-继承指的是两个类 A 和 B 之间的关系：如果 B 是 A 的子类，则说 B 继承自 A。
+**继承**指的是两个类 A 和 B 之间的关系：如果 B 是 A 的子类，则说 B 继承自 A。
 
-委托指的是对象的组合。例如，如果 A 包含 B、C 和 D 的实例，那么 A 可以将功能块委托给这些类。
+**委托**指的是对象的组合。例如，如果 A 包含 B、C 和 D 的实例，那么 A 可以将功能块委托给这些类。
 
-封装指的是在类 A 的方法内部执行一组操作，这些代码对其他方法和类不可见。
+**封装**指的是在类 A 的方法内部执行一组操作，这些代码对其他方法和类不可见。
 
-多态涉及一个类作为不同的类表现。例如，如果类 A 有子类 B，B 有子类 C，那么类 C 的实例可以作为 B 的实例，也可以作为 A 的实例。
-
-
-
-
-
-146 • Java 开发者简便指南
+**多态**涉及一个类作为不同的类表现。例如，如果类 A 有子类 B，B 有子类 C，那么类 C 的实例可以作为 B 的实例，也可以作为 A 的实例。
 
 这里有一个几何学中的简单示例，矩形是一个四边形，而正方形是一个四条边相等且四个内角均为 90 度的四边形。
 
@@ -4944,7 +4561,7 @@ http://hannesdorfmann.com/android/library-class
 
 ## 公有类 Rectangle
 
-```
+```java
 public class Rectangle {
     public int width, length;
     public Rectangle() { ... }
@@ -4954,7 +4571,7 @@ public class Rectangle {
 
 ## 公有类 Square
 
-```
+```java
 public class Square {
     public int side;
     public Square() { ... }
@@ -4962,9 +4579,9 @@ public class Square {
 }
 ```
 
-下面的代码段包含 `extends` 关键字，表示 Square 是 Rectangle 类的子类：
+下面的代码段包含 `extends` 关键字，表示 `Square` 是 `Rectangle` 类的子类：
 
-```
+```java
 public class Square extends Rectangle { . . }
 ```
 
@@ -4982,7 +4599,7 @@ Java 层次结构中的顶层类是 `Object`，所有其他 Java 类都继承自
 
 ## 封装
 
-封装涉及使用访问器（accessors）和变异器（mutators）来“屏蔽” Java 类内部属性（如变量）免受其他类的影响。使用访问器还允许你在不修改公共 API 的情况下重构 Java 类中的代码。因此，其他类可以访问属性的值（通过访问器），而无需知道这些属性是如何计算的。
+封装涉及使用访问器和变异器来“屏蔽” Java 类内部属性（如变量）免受其他类的影响。使用访问器还允许你在不修改公共 API 的情况下重构 Java 类中的代码。因此，其他类可以访问属性的值（通过访问器），而无需知道这些属性是如何计算的。
 
 封装指的是将类的内部细节与“外部世界”分离或隔离开来。封装之所以重要，是因为因为它防止了其他程序员修改类的内部细节，这反过来可能会改变类中方法的意图行为，并可能导致它们失败。
 
@@ -4990,31 +4607,31 @@ Java 层次结构中的顶层类是 `Object`，所有其他 Java 类都继承自
 
 另一个例子是你的手机：每当你升级硬件或下载后续版本的内部软件时，你通常不知道新功能的具体细节（或已修复的漏洞）。因此，封装使你能够进行内部更改而不影响系统的其他部分（如其他类）。
 
-作为一种简单的实现，Person.java 类（在第 1 章定义）定义了一个具有两个属性的人：名字和姓氏，它们是私有的 String 变量。该类定义了两个公共访问方法，其他类可以通过这些方法获取 Person 类实例的名字和姓氏。
+作为一种简单的实现，`Person.java` 类（在第 1 章定义）定义了一个具有两个属性的人：名字和姓氏，它们是私有的 `String` 变量。该类定义了两个公共访问方法，其他类可以通过这些方法获取 `Person` 类实例的名字和姓氏。
 
 ## 多态
 
-多态意味着“具有多种形式”。例如，一个人可以拥有多个角色：既是一个班级的学生，也是另一个班级的老师。通过多态，我们可以在不同的类中以多种方式执行操作，所有这些类都实现了同一个接口。例如，Mammal 接口可以被 Cat 类、Dog 类和 Lion 类实现。如果 Mammal 接口包含 `speak()` 方法，那么上述三个类每个都有该方法的自己的实现，它们可能会输出文本“Meow”、“Woof”和“Roar”。
+多态意味着“具有多种形式”。例如，一个人可以拥有多个角色：既是一个班级的学生，也是另一个班级的老师。通过多态，我们可以在不同的类中以多种方式执行操作，所有这些类都实现了同一个接口。例如，`Mammal` 接口可以被 `Cat` 类、`Dog` 类和 `Lion` 类实现。如果 `Mammal` 接口包含 `speak()` 方法，那么上述三个类每个都有该方法的自己的实现，它们可能会输出文本“Meow”、“Woof”和“Roar”。
 
 正如你所知的列表 5.4 所示，当类具有继承关系时，我们可以在赋值语句中使用子类替换类，在处表示如下：
 
-```
+```java
 ClassA b2 = new SubClassB();
 b2.display();
 ((ClassA) b2).display();
 ```
 
-注意，前面的代码块赋值语句的左侧是赋值语句右侧的父（super）类，因此你可以执行以下操作：
+注意，前面的代码块赋值语句的左侧是赋值语句右侧的父类，因此你可以执行以下操作：
 
 - 左侧类可以被右侧类的父类或右侧类本身替换
 - 左侧实例只能“看到”左侧类中的方法
 - 左侧实例必须强制转换为右侧类才能“看到”右侧类中的方法
 
-列表 5.8、列表 5.9 和列表 5.10 分别显示 BaseClass2.java、SubClass2.java 和 SubClassB.java 的内容。注意 BaseClass2.java 有一个子类 SubClassC.java。
+列表 5.8、列表 5.9 和列表 5.10 分别显示 `BaseClass2.java`、`SubClass2.java` 和 `SubClassB.java` 的内容。注意 `BaseClass2.java` 有一个子类 `SubClassC.java`。
 
 ## 列表 5.8：BaseClass2.java
 
-```
+```java
 public class BaseClass2 {
     public BaseClass2() {
         System.out.println("Inside BaseClass2");
@@ -5031,11 +4648,11 @@ public class BaseClass2 {
 }
 ```
 
-列表 5.8 定义了 BaseClass2 类、一个非空构造函数、两个简单方法，以及一个 main 方法，该 main 方法初始化变量 bc 为 BaseClass2 的实例。构造函数被调用，打印出 Inside BaseClass2。注意，greetings() 或 hello() 方法都没有调用。
+列表 5.8 定义了 `BaseClass2` 类、一个非空构造函数、两个简单方法，以及一个 `main` 方法，该 `main` 方法初始化变量 `bc` 为 `BaseClass2` 的实例。构造函数被调用，打印出 Inside BaseClass2。注意，`greetings()` 或 `hello()` 方法都没有调用。
 
 ## 列表 5.9：SubClassC.java
 
-```
+```java
 public class SubClassC extends BaseClass2 {
     public SubClassC() {
         System.out.println("Inside SubClassC");
@@ -5061,48 +4678,44 @@ public class SubClassC extends BaseClass2 {
 }
 ```
 
-列表 5.9 定义了 SubClassC、一个非空构造函数和两个简单方法，以及一个 main 方法，该 main 方法初始化变量 cl 为 SubClassC 的实例。当构造函数被调用时，打印出 Inside SubClassC。接下来，代码段 cl1.hello() 调用了 SubClassC 的 hello() 方法，打印 Hello from SubClassC。
+列表 5.9 定义了 `SubClassC`、一个非空构造函数和两个简单方法，以及一个 `main` 方法，该 `main` 方法初始化变量 `cl` 为 `SubClassC` 的实例。当构造函数被调用时，打印出 Inside SubClassC。接下来，代码段 `cl1.hello()` 调用了 `SubClassC` 的 `hello()` 方法，打印 Hello from SubClassC。
 
-现在我们将讨论代码中最感兴趣的部分。下面的代码段声明了类型为 BaseClass2 的 bl1，但将 bl1 初始化为 SubClassC 的实例并调用了 hello() 方法：
+现在我们将讨论代码中最感兴趣的部分。下面的代码段声明了类型为 `BaseClass2` 的 `bl1`，但将 `bl1` 初始化为 `SubClassC` 的实例并调用了 `hello()` 方法：
 
-```
+```java
 BaseClass2 bl1 = new SubClassC();
 bl.hello();
 ```
 
+上述代码段的输出是什么？它会调用 `BaseClass2` 的 `hello()` 方法还是 `SubClassC` 的 `hello()` 方法？
 
+以下代码段将 `b1` 强制转换为 `SubClassC` 的实例，然后调用 `hello()` 方法：
 
-
-
-## 150 开发者 Java 入门指南
-
-上述代码段的输出是什么？它会调用 BaseClass2 的 hello() 方法还是 SubClassC 的 hello() 方法？
-以下代码段将 b1 强制转换为 SubClassC 的实例，然后调用 hello() 方法：
-
-```
+```java
 ((SubClassC)b1).goodbye();
 ```
 
-上述片段调用了 SubClassC 的 hello() 方法，这是一个合理的推断。然而，尽管下面的代码片段与上述代码片段相似，但它无法工作（SubClassD 定义在列表 5.10 中）：
+上述片段调用了 `SubClassC` 的 `hello()` 方法，这是一个合理的推断。然而，尽管下面的代码片段与上述代码片段相似，但它无法工作（`SubClassD` 定义在列表 5.10 中）：
 
-```
+```java
 //((SubClassD)b1).goodbye();
 ```
 
-上述代码片段失败的原因如下：尽管 SubClassD 继承了 SubClassC，但它不能作为 SubClassC 的可替代类型，因为 SubClassD 可能包含 SubClassC 不可见的方法。
-接下来的代码片段声明了类型为 BaseClass2 的 b2，然后将 b2 初始化为 SubClassD 的实例，这是有效的，因为 BaseClassD 被定义为 BaseClass2 的子类：
+上述代码片段失败的原因如下：尽管 `SubClassD` 继承了 `SubClassC`，但它不能作为 `SubClassC` 的可替代类型，因为 `SubClassD` 可能包含 `SubClassC` 不可见的方法。
 
-```
+接下来的代码片段声明了类型为 `BaseClass2` 的 `b2`，然后将 `b2` 初始化为 `SubClassD` 的实例，这是有效的，因为 `BaseClassD` 被定义为 `BaseClass2` 的子类：
+
+```java
 BaseClass2 b2 = new SubClassD();
 b2.hello();
 ((SubClassD)b2).goodbye();
 ```
 
-在我们运行列表 5.9 中的代码之前，我们需要定义类 SubClassD，它显示在列表 5.10 中。
+在我们运行列表 5.9 中的代码之前，我们需要定义类 `SubClassD`，它显示在列表 5.10 中。
 
 ## 列表 5.10: SubClassD.java
 
-```
+```java
 public class SubClassD extends SubClassC
 {
     public SubClassD()
@@ -5125,19 +4738,19 @@ public class SubClassD extends SubClassC
 }
 ```
 
-## OOP 简介 • 151
 
-列表 5.10 定义了类ClassD 类以及 main() 方法，该方法将变量 sd 初始化为 SubClassD 的实例。随后调用了构造函数，片段显示 sd.greetings() 调用了来自 SubClassD 的 greetings() 方法。
 
-接下来，greetings() 方法调用了 greetings() 方法，该方法没有在 SubClassD 中定义（定义在列表 5.9 中），也没有在 SubClassD 的父类 SubClassC 中定义。
+列表 5.10 定义了类 `ClassD` 以及 `main()` 方法，该方法将变量 `sd` 初始化为 `SubClassD` 的实例。随后调用了构造函数，片段显示 `sd.greetings()` 调用了来自 `SubClassD` 的 `greetings()` 方法。
 
-事实上，greetings() 方法定义在 BaseClass2 中，它是 SubClassC 的父类。greetings() 方法显示以下字符串：
+接下来，`greetings()` 方法调用了 `greetings()` 方法，该方法没有在 `SubClassD` 中定义（定义在列表 5.9 中），也没有在 `SubClassD` 的父类 `SubClassC` 中定义。
+
+事实上，`greetings()` 方法定义在 `BaseClass2` 中，它是 `SubClassC` 的父类。`greetings()` 方法显示以下字符串：
 
 ```
 Greetings from BaseClass2
 ```
 
-编译 BaseClass2.java、SubClassC.java 和 SubClassD.java，现在运行以下命令：
+编译 `BaseClass2.java`、`SubClassC.java` 和 `SubClassD.java`，现在运行以下命令：
 
 ```
 java BaseClass2
@@ -5163,7 +4776,7 @@ Inside SubClassD
 Greetings from BaseClass2
 ```
 
-类 SubClassD 是 BaseClass2 的子类，包含 greetings() 方法，而 SubClassD 本身并不包含 greetings() 方法。然而，由于 BaseClass2 和 SubClassD 之间的继承关系，SubClassD 的实例可以调用 greetings() 方法，Java 将 BaseClass2 类中找到该方法并执行它。运行以下命令：
+类 `SubClassD` 是 `BaseClass2` 的子类，包含 `greetings()` 方法，而 `SubClassD` 本身并不包含 `greetings()` 方法。然而，由于 `BaseClass2` 和 `SubClassD` 之间的继承关系，`SubClassD` 的实例可以调用 `greetings()` 方法，Java 将在 `BaseClass2` 类中找到该方法并执行它。运行以下命令：
 
 ```
 java SubClassC
@@ -5188,53 +4801,60 @@ Hello from SubClassC
 ## 开发者 Java 入门指南
 
 Invocation #3
+
 Goodbye from SubClassC
+
 Invocation #4
+
 Inside BaseClass2
+
 Inside SubClassD
+
 Hello from SubClassD
+
 Invocation #5
+
 Goodbye from SubClassD
 
-有趣的代码位于 SubClassC 的 main() 程中。接下来的部分将解释哪些代码是正确的，哪些代码是错误的，随后是一组规则，帮助你判断赋值语句的正确性。
+有趣的代码位于 `SubClassC` 的 `main()` 程中。接下来的部分将解释哪些代码是正确的，哪些代码是错误的，随后是一组规则，帮助你判断赋值语句的正确性。
 
-以下代码片段是正确的，因为 c1 是 SubClassC 的实例：
+以下代码片段是正确的，因为 `c1` 是 `SubClassC` 的实例：
 
 ```
 SubClassC c1 = new SubClassC();
 ```
 
-你可以用父类替换上述代码段左侧的类。由于 BaseClass2 是 SubClassC 的父类，因此 #2 中的代码是正确的：
+你可以用父类替换上述代码段左侧的类。由于 `BaseClass2` 是 `SubClassC` 的父类，因此 #2 中的代码是正确的：
 
 ```
 BaseClass2 b1 = new SubClassC();
 ```
 
-接下来，b1 在右侧使用类 SubClassC 实例化，这意味着我们可以将 b1 “向下转换”为 SubClassC 的实例，因此 #3 中的代码是正确的：
+接下来，`b1` 在右侧使用类 `SubClassC` 实例化，这意味着我们可以将 `b1` “向下转换”为 `SubClassC` 的实例，因此 #3 中的代码是正确的：
 
 ```
-(SubClassC)b1.goodbye();
+((SubClassC)b1).goodbye();
 ```
 
-然而，SubClassD 不是 SubClassC 的父类，且显然不等于 SubClassC，因此此行代码是错误的：
+然而，`SubClassD` 不是 `SubClassC` 的父类，且显然不等于 `SubClassC`，因此此行代码是错误的：
 
 ```
 // ((SubClassD)b1).goodbye();
 ```
 
-由于 BaseClass2 是 SubClassD 的父类，因此 #4 中的代码是正确的：
+由于 `BaseClass2` 是 `SubClassD` 的父类，因此 #4 中的代码是正确的：
 
 ```
 BaseClass2 b2 = new SubClassD();
 ```
 
-接下来，b2 在右侧使用类 SubClassD 实例化，这意味着我们可以将 b2 “向下转换”为 SubClassD 的实例，因此 #5 中的代码是正确的：
+接下来，`b2` 在右侧使用类 `SubClassD` 实例化，这意味着我们可以将 `b2` “向下转换”为 `SubClassD` 的实例，因此 #5 中的代码是正确的：
 
 ```
 ((SubClassD)b2).goodbye();
 ```
 
-以下代码片段是错误的，因为 c2 不是 SubClassC 的实例：
+以下代码片段是错误的，因为 `c2` 不是 `SubClassC` 的实例：
 
 ```
 SubClassC c2 = new SubClassD();
@@ -5244,42 +4864,31 @@ SubClassC c2 = new SubClassD();
 
 本章介绍了继承和多态。此外，你学习了接口以及方法与变量之间的区别。接下来，你学习了封装和多态。
 
-## 171
-
 ## 6 数据结构
 
 本章介绍了各种数据结构，例如哈希映射和链表，以及如何使用它们。本章的第一部分讨论了遗留类，随后是迭代器的概述。本章的第二部分深入探讨了常用的数据结构。本章的最后部分讨论了遗留数据结构。
 
-## 172
-
 ## 遗留数据结构
 
-Java 工具包提供了以下接口和类：BitSet、Enumeration、Hashtable、Properties、Stack 和 Vector。从版本2开始，Java 引入了名为 Collection 的框架。
-
-## 174
-## 156 • 开发者 Java 入门指南
-
-非同步类不是线程安全的，适用于不涉及多线程竞争条件的情况。例如，只读操作不需要同步。
-
-由于需要，集合框架的优点之一是提供了线程安全的对应方案以备不时。在深入研究集合之前，让我们简单回顾一下迭代器，即在 Java 不同版本中使用的代码示例。
+Java 工具包提供了以下接口和类：`BitSet`、`Enumeration`、`Hashtable`、`Properties`、`Stack` 和 `Vector`。从版本 2 开始，Java 引入了名为 `Collection` 的框架。
 
 ## 迭代器
 
 本节讨论了迭代器的概念以及不同类型的迭代器。你将看到在 Java 早期版本执行迭代的代码。如果你已经接触过迭代器，可以快速跳过本节。
 
-## 什么是迭代器？
+### 什么是迭代器？
 
 迭代器允许按顺序访问集合中的所有元素。实际上，迭代器允许你遍历（循环）对象集合。你可以使用迭代器遍历数组元素、目录中的文件以及图的顶点。迭代器不会改变给定的集合，但对集合元素执行的操作可能会改变集合。
 
-## 主动与被动
+### 主动与被动
 
-在主动迭代器的情况下，客户端控制迭代器的创建以及主动迭代器的迭代。相比之下，被动迭代器控制其对集合的迭代。注意，主动迭代器用于 Java 8 之前，而被动迭代器用于后后的 Java 版本。
+在主动迭代器的情况下，客户端控制迭代器的创建以及主动迭代器的迭代。相比之下，被动迭代器控制其对集合的迭代。注意，主动迭代器用于 Java 8 之前，而被动迭代器用于后续的 Java 版本。
 
-## Enumeration: 旧式迭代
+### Enumeration: 旧式迭代
 
-在 Java 的初始版本中，迭代器模式是通过 Enumeration 类（遗留代码的一部分）实现的，如示例所示：
+在 Java 的初始版本中，迭代器模式是通过 `Enumeration` 类（遗留代码的一部分）实现的，如示例所示：
 
-```
+```java
 Vector words = new Vector();
 
 // 用一些字符串填充 words
@@ -5291,21 +4900,18 @@ while (e.hasMoreElements()) {
 }
 ```
 
-
-
-
 注意，前面的 `while` 循环调用了 `e.nextElement()` 来访问变量 `e`（这是一个 `Enumeration`）中的下一个元素。
 
-## 迭代器：第二种迭代风格
+### 迭代器：第二种迭代风格
 
 在 Java 1.2 到 1.4 中，以下代码块演示了如何使用 `Iterator` 执行迭代：
 
-```
+```java
 List words = new LinkedList();
 
 // populate 'words'
 //
-Iterator item = words.iterator();
+Iterator iter = words.iterator();
 while (iter.hasNext()) {
   String word = (String) iter.next();
   System.out.println(word);
@@ -5314,23 +4920,23 @@ while (iter.hasNext()) {
 
 让我们看看如何使用泛型来执行迭代，正如该节所述。
 
-## 泛型：第三种迭代风格
+### 泛型：第三种迭代风格
 
 在 Java 1.2 到 1.4 中，以下代码块演示了如何使用 `for` 循环执行迭代：
 
-```
+```java
 List<String> words = new LinkedList<String>();
 
 // populate 'words'
 //
-for (String word: words) {
+for (String word : words) {
   System.out.println(word);
 }
 ```
 
 Java 7 引入了“菱形运算符”，在此所示：
 
-```
+```java
 List<String> words = new LinkedList<>();
 ```
 
@@ -5338,21 +4944,21 @@ List<String> words = new LinkedList<>();
 
 顺便提到，`List` 是一个接口，而 `LinkedList` 是实现 `List` 接口的具体类。请阅读第 6 章关于用子类替换类的解释：当用实现该接口的类来替换接口时，情况也是如此。
 
-## forEach：第四种迭代风格
+### forEach：第四种迭代风格
 
 Java 8 支持使用 `forEach()` 循环执行迭代，如下所示：
 
-```
+```java
 List<String> words = new LinkedList<>();
 
 // populate 'words'
 // . . .
-words.forEach(name -> System.out.println(word));
+words.forEach(word -> System.out.println(word));
 ```
 
 上述代码块包含一个 lambda 表达式，它本质上是一个匿名函数。当你需要执行一个只执行一次的代码块时，lambda 表达式非常有用，例如按钮点击事件的事件处理器。
 
-## 流：第五种迭代风格
+### 流：第五种迭代风格
 
 Java 8 及更高版本引入了包含惰性操作（lazy operators）和终端操作符（terminal operators）的类。惰性操作是不立即执行的操作符，而终端操作符的执行会触发惰性操作的执行。终端操作符是惰性操作序列中的最后一个操作符。这里有一个幽默的类比（借自 Venkat Subramanian），可能帮助理解惰性操作和终端操作符之间的区别：
 
@@ -5366,7 +4972,7 @@ Java 8 及更高版本引入了包含惰性操作（lazy operators）和终端�
 
 作为简短预览，以下代码块涉及菱形运算符来初始化变量 `words`，随后调用了 `stream()` 方法。链式调用触发了 `filter()` 操作符（这是一个惰性操作），然后调用了 `forEach()` 操作符（这是一个终端操作符）：
 
-```
+```java
 List<String> words = new LinkedList<>();
 // populate 'words'
 // . . .
@@ -5381,15 +4987,11 @@ words.stream()
 
 本节包含了集合框架（Collection framework）中定义的接口列表，以及关于其用途的简单描述。你将在本章后部分看到涉及其中某些接口的代码示例。
 
-`Collection` 接口允许你处理对象组；它位于集合层次结构的最顶端。
-
-`List` 接口扩展了 `Collection`，`List` 实例存储有序的元素集合。
-
-`Set` 接口包含与 `Collection` 相同的方法，并限制集合必须包含唯一元素。`SortedSet` 扩展了 `Set` 以处理排序集合。
-
-`Map` 将唯一的键（keys）映射到值（values），`Map.Entry` 是 `Map` 类的内部类，用于描述 map 中的一个元素（键/值对）。
-
-`SortedMap` 扩展了 `Map` 使键按升序排列。`Enumeration` 是一个遗留接口，定义了用于对对象集合进行枚举（一次获取一个）获取元素的方法。正如你在前一节中看到的，`Iterator` 替代了 `Enumeration` 接口。
+- `Collection` 接口允许你处理对象组；它位于集合层次结构的最顶端。
+- `List` 接口扩展了 `Collection`，`List` 实例存储有序的元素集合。
+- `Set` 接口包含与 `Collection` 相同的方法，并限制集合必须包含唯一元素。`SortedSet` 扩展了 `Set` 以处理排序集合。
+- `Map` 将唯一的键（keys）映射到值（values），`Map.Entry` 是 `Map` 类的内部类，用于描述 map 中的一个元素（键/值对）。
+- `SortedMap` 扩展了 `Map` 使键按升序排列。`Enumeration` 是一个遗留接口，定义了用于对对象集合进行枚举（一次获取一个）获取元素的方法。正如你在前一节中看到的，`Iterator` 替代了 `Enumeration` 接口。
 
 ## 集合类
 
@@ -5399,21 +5001,21 @@ Java 提供了两种类型实现 `Collection` 接口的集合类：一些提供�
 
 这里是标准集合类的详细列表，及其用途的简单描述：
 
-- AbstractCollection: 实现 `Collection` 接口的大部分
-- AbstractList: 扩展 `AbstractCollection` 并实现 `List` 接口
-- AbstractSequentialList: 扩展 `AbstractList` 用于使用顺序而非随机访问的集合
-- LinkedList: 通过扩展 `AbstractSequentialList` 实现链表
-- ArrayList: 通过扩展 `AbstractList` 实现动态数组
-- AbstractSet: 扩展 `AbstractCollection` 并实现 `Set` 接口
-- HashSet: 扩展 `AbstractSet` 用于哈希表
-- LinkedHashSet: 扩展 `HashSet` 允许插入顺序
-- TreeSet: 实现存储在树中的集合
-- AbstractMap: 实现 `Map` 接口的大部分
-- HashMap: 扩展 `AbstractMap` 使用哈希表
-- TreeMap: 扩展 `AbstractMap` 使用树
-- WeakHashMap: 扩展 `AbstractMap` 使用弱引用哈希表
-- LinkedHashMap: 扩展 `HashMap` 允许插入顺序
-- IdentityHashMap: 扩展 `AbstractMap` 在比较时使用引用相等
+- `AbstractCollection`：实现 `Collection` 接口的大部分
+- `AbstractList`：扩展 `AbstractCollection` 并实现 `List` 接口
+- `AbstractSequentialList`：扩展 `AbstractList` 用于使用顺序而非随机访问的集合
+- `LinkedList`：通过扩展 `AbstractSequentialList` 实现链表
+- `ArrayList`：通过扩展 `AbstractList` 实现动态数组
+- `AbstractSet`：扩展 `AbstractCollection` 并实现 `Set` 接口
+- `HashSet`：扩展 `AbstractSet` 用于哈希表
+- `LinkedHashSet`：扩展 `HashSet` 允许插入顺序
+- `TreeSet`：实现存储在树中的集合
+- `AbstractMap`：实现 `Map` 接口的大部分
+- `HashMap`：扩展 `AbstractMap` 使用哈希表
+- `TreeMap`：扩展 `AbstractMap` 使用树
+- `WeakHashMap`：扩展 `AbstractMap` 使用弱引用哈希表
+- `LinkedHashMap`：扩展 `HashMap` 允许插入顺序
+- `IdentityHashMap`：扩展 `AbstractMap` 在比较时使用引用相等
 
 在本章后部分，你将看到涉及列表中某些类的代码示例，可以在网上查询剩余类的信息。
 
@@ -5423,26 +5025,23 @@ Java 提供了两种类型实现 `Collection` 接口的集合类：一些提供�
 
 这六个集合接口（`Collection`、`Set`、`List`、`Map`、`SortedSet` 和 `SortedMap`）提供了相应的静态工厂方法，如下：
 
-- public static <T> Collection<T> synchronizedCollection(Collection<T> c);
-- public static <T> Set<T> synchronizedSet(Set<T> s);
-- public static <T> List<T> synchronizedList(List<T> list);
-- public static <K,V> Map<K,V> synchronizedMap(Map<K,V> m);
-- public static <T> SortedSet<T> synchronizedSortedSet(SortedSet<T> s);
-- public static <K,V> Map<K,V> synchronizedSortedMap(Map<K,V> m);
+- `public static <T> Collection<T> synchronizedCollection(Collection<T> c);`
+- `public static <T> Set<T> synchronizedSet(Set<T> s);`
+- `public static <T> List<T> synchronizedList(List<T> list);`
+- `public static <K,V> Map<K,V> synchronizedMap(Map<K,V> m);`
+- `public static <T> SortedSet<T> synchronizedSortedSet(SortedSet<T> s);`
+- `public static <K,V> Map<K,V> synchronizedSortedMap(Map<K,V> m);`
 
 上述列表的方法返回一个同步的（即线程安全的）集合，它涉及指定的“底层”集合。注意，对底层集合的操作必须通过返回的集合进行以确保串行访问。通过以下代码片段创建同步集合：
 
-```
+```java
 List<Type> list = Collections.synchronizedList(new ArrayList<Type>())
 ```
 
 在对返回集合进行迭代时，你必须手动进行同步。这种要求是因为迭代涉及对集合的多次调用，这些调用必须作为一个原子操作来处理。以下是迭代包装集合的示例：
 
-
-
 ```java
-Collection<Type> coll =
-Collections.synchronizedCollection(myCollection);
+Collection<Type> coll = Collections.synchronizedCollection(myCollection);
 synchronized(coll) {
   for (Type elem : coll) {
     someMethod(elem);
@@ -5456,7 +5055,7 @@ synchronized(coll) {
 
 本节描述了若干种小型实现，当你不需要它们的全部功能时，这些实现比通用型实现更方便、更高效。本节中的所有实现都是通过静态工厂方法创建的，而不是通过公共类。
 
-## 数组的 List 视图
+### 数组的 List 视图
 
 在查看代码之前，回想一下关于 `List` 和 `ArrayList` 的以下细节：
 
@@ -5481,9 +5080,11 @@ Integer[] array = new Integer[itemList.size()];
 array = itemList.toArray(array);
 ```
 
-## 不变多副本列表
+### 不变多副本列表
 
 Java 提供了 `Collections.nCopies()` 方法，允许你创建一个由相同元素重复副本组成的 `List`。以下是一个示例调用：
+
+
 
 ```java
 List<Type> myList = new ArrayList<Type>(
@@ -5491,6 +5092,7 @@ Collections.nCopies(1000, (Type)null));
 ```
 
 请确保将上述片段中的 `Type` 单词替换为具体类，例如 `Integer` 或 `Decimal`。
+
 作为代码片段的变体，你可以使用以下代码初始化一个包含 1000 个元素的 `ArrayList`：
 
 ```java
@@ -5499,6 +5101,7 @@ Collections.nCopies(1000, (Type)null));
 ```
 
 作为第三个示例，你可以将另一个字符串的多个副本添加到类型为 `List<String>` 的变量中，如下代码所示：
+
 ```java
 myTools.addAll(Collections.nCopies(10, "hammer"));
 ```
@@ -5507,7 +5110,7 @@ myTools.addAll(Collections.nCopies(10, "hammer"));
 
 ## ARRAYLIST 类
 
-在上一节中，你已经看到了了 `ArrayList` 类的示例。有趣的是，`ArrayList` 类既有数组的属性，也有列表的属性。
+在上一节中，你已经看到了 `ArrayList` 类的示例。有趣的是，`ArrayList` 类既有数组的属性，也有列表的属性。
 
 因此，`ArrayList` 支持 `insert()`、`remove()` 和 `findAt()` 方法，这些方法分别用于插入、删除和查找元素。这些方法使得 `ArrayList` 适用于插入和删除操作。
 
@@ -5552,9 +5155,6 @@ public class ArrayListChars {
 
 列表 6.1 定义了 `ArrayListChars` 类。第一个循环遍历字符串的每个字符，检查它是否已存在列表中。如果不在，则将其添加。第二个循环随后打印列表中存储的所有唯一字符。
 
-
-
-
 列表 6.3 定义了 `HashMap1` 类，其 `main()` 方法使用字符串和字符初始化了各种集合相关的类。列表 6.3 的输出为：
 
 ```
@@ -5574,7 +5174,7 @@ Values = [Cat, Car]
 
 列表 6.4 显示了 `HashSetChars.java` 的内容，展示了如何创建一个 `HashSet` 并更新其内容。
 
-## 列表 6.4：HashSetChars.java
+### 列表 6.4：HashSetChars.java
 
 ```java
 import java.util.HashSet;
@@ -5618,7 +5218,9 @@ public class HashSetChars {
 
 接下来，一个 `while` 循环在 `HashSet sl` 中搜索 `chr`；如果未找到，则将 `chr` 添加到 `sl`。此过程对变量的每个字符重复执行。列表 6.4 的输出为：
 
+```
 Characters: [, d, e, a, L, n, o, l, h, i, w, t, r]
+```
 
 ## LINKEDLIST
 
@@ -5626,7 +5228,7 @@ Characters: [, d, e, a, L, n, o, l, h, i, w, t, r]
 
 列表 6.5 显示了 `LinkedListChars.java` 的内容，展示了如何将文本字符串中的字符追加到 `LinkedList` 中并显示其内容。此代码只追加尚未追加到列表中的字符。
 
-## 列表 6.5：LinkedListChars.java
+### 列表 6.5：LinkedListChars.java
 
 ```java
 import java.util.LinkedList;
@@ -5668,7 +5270,9 @@ public class LinkedListChars {
 
 接下来，一个 `for` 循环从 `LinkedList` 内容中搜索 `chr`；如果未找到，则将 `chr` 添加到 `ql`。此过程对变量 `line` 的每个字符重复执行。运行列表 6.5 中的代码，将看到以下输出：
 
+```
 Characters: [L, i, n, e, o, a, d, l, t, w, h, r]
+```
 
 ## QUEUE 类
 
@@ -5680,7 +5284,7 @@ Characters: [L, i, n, e, o, a, d, l, t, w, h, r]
 
 列表 6.6 显示了 `Queue` 的内容，你你想显示创建的条目。
 
-## 列表 6.6：QueueChars.java
+### 列表 6.6：QueueChars.java
 
 ```java
 import java.util.LinkedList;
@@ -5714,7 +5318,7 @@ public class QueueChars {
 
 正如你之前看到的，`TreeSet` 是一个 `Set` 接口，由 `LinkedList` 类实现。列表 6.7 显示了 `TreeSet1.java` 的内容，展示了如何创建一个 `Set` 并更新其内容。
 
-## 列表 6.7：TreeSet1.java
+### 列表 6.7：TreeSet1.java
 
 ```java
 import java.util.Iterator;
@@ -5754,12 +5358,10 @@ public class TreeSet1 {
     }
 }
 ```
+
 (注：由于用户提供的待翻译文本在列表 6.6 和 6.7 部分存在部分逻辑断层和重复描述，翻译时已根据上下文和 Markdown 结构进行了对齐，以确保中文表述通顺。)
 
-
-
-
-# 列表 6.9: Collections2.java
+## 列表 6.9: Collections2.java
 
 ```java
 import java.util.ArrayList;
@@ -5791,20 +5393,24 @@ public class Collections2 {
 
 在显示 `nums` 的内容、最小值和最大值之后，`sort()` 方法对 `nums` 的元素进行排序，然后显示排序后的内容。运行列表 6.9 的输出结果：
 
+```
 nums: [40, 10, 30, 20]
 Min: 10
 Max: 40
 Sort: [10, 20, 30, 40]
+```
 
 你的编程任务可能还需要需要其他数据结构，例如树、图、双向链表和循环链表。虽然 Java 没有为这些数据结构提供内置类，但你可以定义自己的自定义类来实现这些数据结构。
 
+
+
 作为一个简单的示例，下一节将展示如何定义一个单向链表，其元素是自定义 Java 类的实例。
 
-# 对象的链表
+## 对象的链表
 
 列表 6.10 显示了 `Emp` 类的内容，该类包含了与员工相关的信息。
 
-# 列表 6.10: Emp.java
+### 列表 6.10: Emp.java
 
 ```java
 package com.acme;
@@ -5826,7 +5432,7 @@ public class Emp {
 
 列表 6.11 显示了 `EmpLinkedList.java` 的内容，展示了如何创建一个由自定义 `Emp` 类实例组成的员工链表。
 
-# 列表 6.11: EmpLinkedList.java
+### 列表 6.11: EmpLinkedList.java
 
 ```java
 package com.acme;
@@ -5852,56 +5458,49 @@ public class EmpLinkedList {
         empList.add(emp3);
         System.out.println("Employee count: "+empList.size());
     }
-```
 
-```java
-public void removeEmployees(int index)
-{
-    if (empList.size() != 0) {
-        System.out.println("Removing employee at index "+index);
-        empList.remove(index);
-    }
-    else {
-        System.out.println("List is empty");
-    }
-}
-```
-
-```java
-public void displayEmployees()
-{
-    System.out.println("*** Employee List ***");
-    for (int i = 0; i < empList.size(); i++) {
-        Emp emp = empList.get(i);
-        System.out.println(emp.name);
-    }
-}
-```
-
-```java
-public void findEmployee(String name)
-{
-    for (int i = 0; i < empList.size(); i++) {
-        Emp emp = empList.get(i);
-        if (emp.name.equals(name)) {
-            System.out.println("Found employee: "+emp.id);
-            return;
+    public void removeEmployees(int index)
+    {
+        if (empList.size() != 0) {
+            System.out.println("Removing employee at index "+index);
+            empList.remove(index);
+        }
+        else {
+            System.out.println("List is empty");
         }
     }
-    System.out.println("Employee not found");
+
+    public void displayEmployees()
+    {
+        System.out.println("*** Employee List ***");
+        for (int i = 0; i < empList.size(); i++) {
+            Emp emp = empList.get(i);
+            System.out.println(emp.name);
+        }
+    }
+
+    public void findEmployee(String name)
+    {
+        for (int i = 0; i < empList.size(); i++) {
+            Emp emp = empList.get(i);
+            if (emp.name.equals(name)) {
+                System.out.println("Found employee: "+emp.id);
+                return;
+            }
+        }
+        System.out.println("Employee not found");
+    }
+
+    public static void main(String[] args) {
+        EmpLinkedList list = new EmpLinkedList();
+        list.addInitialEmployees();
+        list.displayEmployees();
+        list.findEmployee("Jane Smith");
+    }
 }
 ```
 
-```java
-public static void main(String[] args) {
-    EmpLinkedList list = new EmpLinkedList();
-    list.addInitialEmployees();
-    list.displayEmployees();
-    list.findEmployee("Jane Smith");
-}
-```
-
-# 泛型方法
+## 泛型方法
 
 泛型方法允许你为多个数据集指定方法。例如，你可以写一个方法来对对象数组进行排序。泛型方法提供了编译时检查，这意味着你可以在编译期间捕捉无效类型。定义泛型方法的规则如下：
 
@@ -5942,23 +5541,22 @@ public class Generic1 {
 `main()` 方法初始化了三个数组：一个整数数组、浮点数数组和一个字符数组。`main()` 方法的剩余部分调用了三次 `printArray()` 方法来显示所有三个数组的内容。列表 6.12 在：
 
 Array integer contains:
+
 1 2 3 4 5 
 
 Array doubleArray contains:
+
 1.1 2.2 3.3 4.4 
 
 Array characterArray contains:
+
 H E L L O
-
-
-
-
 
 ## 通用类
 
 泛型类在 Java 类定义中包含一个类型参数。与泛型方法一样，泛型类的类型参数部分可以有一个或多个由逗号分隔的类型参数。这些类被称为参数类或参数化类型，因为它们接受一个或多个参数。列表 6.13 显示了 Box.java 的内容，展示了一个泛型类。
 
-列表 6.13: Box.java
+### 列表 6.13: Box.java
 
 ```java
 public class Box<T>
@@ -5974,12 +5572,12 @@ public class Box<T>
     }
 
     public static void main(String[] args)
-{
+    {
         Box<Integer> integerBox = new Box<Integer>();
         Box<String> stringBox = new Box<String>();
 
         integerBox.add(new Integer(10));
-        boundingBox.add(new String("Hello World"));
+        stringBox.add(new String("Hello World"));
 
         System.out.printf("Integer Value :%d\n\n", integerBox.get());
         System.out.printf("String Value :%s\n", stringBox.get());
@@ -6098,9 +5696,6 @@ java.util.Collection 包中的新方法有：
 
 在本章中，你学习了一些常用接口，随后学习了 DataInputStream。Java 输入流从流中读取数据，而 Java 输出流则向流写入数据。
 
-
-
-
 流与文件 • 183
 
 `java.io` 中也存在接口，例如 `DataInput` 和 `DataOutput`。请记住，首选实践是在方法参数中以及实例化对象时，指定接口（而不是具体对象或原始类型）作为参数。这样做的原因是，你可以传递（直接或间接地）任何实现了所指定接口的类实例。当你看到本章中使用 `java.io` 包的 `DataInput` 和 `DataOutput` 接口的示例时，请记住这一点。
@@ -6110,6 +5705,8 @@ java.util.Collection 包中的新方法有：
 ## 抽象输入类
 
 正如上一节学到的，`InputStream` 是一个抽象类，基于 `InputStream` 的类中的每个方法都会抛出 `java.IOException`，而该异常又是 `Exception` 类的子类。`InputStream` 提供了一个 `read()` 方法（及其变体）来从输入流中读取数据。由于 `read()` 方法会等待数据可用，因此 `read()` 方法是一个“阻塞”方法。
+
+
 
 当应用程序进行 API 调用并“等待”结果时，如果应用程序并不等待结果，则该 API 是一个异步 API，通常 API 会指定一个“回调”函数，当结果返回给应用程序时调用它。
 
@@ -6132,7 +5729,7 @@ A a1 = new A();
 A a2 = new B();
 ```
 
-执行类似读取操作的另一种方法是使用以下代码片段
+执行类似读取操作的另一种方法是使用以下代码片段：
 
 ```
 FileInputStream fis = new FileInputStream("/path/and/fileName");
@@ -6144,7 +5741,7 @@ FileInputStream fis = new FileInputStream("/path/and/fileName");
 
 ## FilterInputStream 类
 
-`FilterInputStream` 类是一个抽象类，它本质上充当 `InputStream` 接口中方法的“透传”闸门。关于 `FilterInputStream` 类的一个有趣事实是，你可以进行多次嵌套反，，所示：
+`FilterInputStream` 类是一个抽象类，它本质上充当 `InputStream` 接口中方法的“透传”闸门。关于 `FilterInputStream` 类的一个有趣事实是，你可以进行多次嵌套，如下所示：
 
 ```
 InputStream is1 = getInputStream();
@@ -6163,7 +5760,7 @@ fis3 = new FilterInputStream(new FilterInputStream(new FilterInputStream(is)));
 
 ## BufferedInputStream 类
 
-`BufferedInputStream` 类实现了 `InputStream` 中的方法。此外，`BufferedInputStream` 类更高效地处理更大块的数据（正如你对缓冲类所期的那样）。如果有需要，你可以执行“包装”操作，如下代码片段所示：
+`BufferedInputStream` 类实现了 `InputStream` 中的方法。此外，`BufferedInputStream` 类更高效地处理更大块的数据（正如你对缓冲类所期望的那样）。如果有需要，你可以执行“包装”操作，如下代码片段所示：
 
 ```
 InputStream is = new BufferedInputStream(new FileInputStream("a.txt"));
@@ -6171,7 +5768,7 @@ InputStream is = new BufferedInputStream(new FileInputStream("a.txt"));
 
 上述代码片段从 `a.txt` 创建了一个缓冲输入流，这让你能够利用流的缓冲特性。
 
-## DataInput 类
+## DataInputStream 类
 
 `DataInputStream` 类实现了 `DataInput` 接口。某些方法包括 `readFully()`、`skipBytes()`、`readInt()`、`readLong()`、`readFloat()` 和 `readDouble()`，它们在更复杂的流上运行良好。以下代码块包含 `DataInputStream` 的示例：
 
@@ -6187,10 +5784,11 @@ while (dis.available() > 0) {
 
 ## 从控制台读取输入
 
-从控制台读取输入的 Java 代码涉及将 `System.in` 包装在 `InputStreamReader` 中，然后是 `BufferedReader` 以创建缓冲区。前述语句的代码所示：
+从控制台读取输入的 Java 代码涉及将 `System.in` 包装在 `InputStreamReader` 中，然后是 `BufferedReader` 以创建缓冲区。前述语句的代码如下所示：
 
 ```
-BufferedReader br = new BufferedReader(new InputStreamReader(System.in));```
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+```
 
 下一节包含读取行向输入的完整代码示例。
 
@@ -6198,7 +5796,7 @@ BufferedReader br = new BufferedReader(new InputStreamReader(System.in));```
 
 列表 7.1 显示了 `ReadUserInput` 的内容，它包装了 `System` 的 `DataInputStream` 以从命令行读取用户输入，然后显示每行用户输入。
 
-## 列表 7.1: ReadUserInput.java
+### 列表 7.1: ReadUserInput.java
 
 ```java
 import java.io.DataInput;
@@ -6214,8 +5812,8 @@ public class ReadUserInput {
                 line = dis.readLine();
                 if(line != null && line.length() > 0) {
                     String trim = line.trim();
-                    System.out.println("Original: " +line);
-                    System.out.println("Trimmed: " +trim);
+                    System.out.println("Original: " + line);
+                    System.out.println("Trimmed: " + trim);
                 } else {
                     break;
                 }
@@ -6225,23 +5823,23 @@ public class ReadUserInput {
 }
 ```
 
-7.1 定义了 `ReadUserInput` 类，其 `main()` 方法初始化变量 `dis` 为 `DataInputStream` 实例，该实例包装了标准输入 `System`。列表 7.1 的后续部分是一个 `try/catch` 块，包含一个无限执行的 `for` 循环（即直到没有额外的命令行用户输入）。该循环读取用户提供的行并修剪外部空格。后续部分在原始行和修剪后的行前后添加字符 `x`，然后打印结果。列表 7.1 的示例输出在此：
+列表 7.1 定义了 `ReadUserInput` 类，其 `main()` 方法初始化变量 `dis` 为 `DataInputStream` 实例，该实例包装了标准输入 `System.in`。列表 7.1 的后续部分是一个 `try/catch` 块，包含一个无限执行的 `for` 循环（即直到没有额外的命令行用户输入）。该循环读取用户提供的行并修剪外部空格。后续部分在原始行和修剪后的行前后添加字符 `x`，然后打印结果。列表 7.1 的示例输出如下：
 
 Original: xqwerx
+
 Trimmed: xqwerx
+
 asdf
+
 Original: x x asdf x
+
 Trimmed: xasdfx
 
 ## 读取字符向用户输入
 
-7.2 显示了 `BufferedRead.java` 的内容，它从命令行读取输入，然后显示每行用户输入。
+列表 7.2 显示了 `BufferedRead.java` 的内容，它从命令行读取输入，然后显示每行用户输入。
 
-
-
-
-
-# 列表 7.2：BufferedRead.java
+### 列表 7.2：BufferedRead.java
 
 ```java
 import java.io.BufferedReader;
@@ -6253,7 +5851,7 @@ public class BufferedRead {
         char chr;
 
         // 使用 System.in 创建一个 BufferedReader
-        BufferedReader br = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("输入字符或输入 'x' 退出");
 
@@ -6261,30 +5859,38 @@ public class BufferedRead {
         do {
             chr = (char) br.read();
             if (chr != '\n') {
-                System.out.println("char: "+chr);
+                System.out.println("char: " + chr);
             }
         } while (chr != 'x');
     }
 }
 ```
 
-列表 7.2 定义了类Read 类以及 main() 方法，该方法将变量 `br` 初始化为 `BufferedReader` 类的实例，该实例包装了 `InputStreamReader` 类，而后者又包装了 `System.in`。列表 7.2 的示例输出如下：
+列表 7.2 定义了 `BufferedRead` 类以及 `main()` 方法，该方法将变量 `br` 初始化为 `BufferedReader` 类的实例，该实例包装了 `InputStreamReader` 类，而后者又包装了 `System.in`。列表 7.2 的示例输出如下：
 
 输入字符或输入 'x' 退出
+
 as
+
 char: a
+
 char: s
+
 char: d
+
 q
+
 char: q
+
 char: e
+
 char: x
 
-# 读取文本文件
+## 读取文本文件
 
-列表 7.3 显示了 ReadTextFile.java 的内容，该类打开一个文本文件并读取其内容。
+列表 7.3 显示了 `ReadTextFile.java` 的内容，该类打开一个文本文件并读取其内容。
 
-# 列表 7.3：ReadTextFile.java
+### 列表 7.3：ReadTextFile.java
 
 ```java
 import java.io.*;
@@ -6301,7 +5907,7 @@ class ReadTextFile {
                 new DataInputStream(new FileInputStream(inputFile));
 
             while ((line = is.readLine()) != null) {
-                System.out.println("Line: "+line);
+                System.out.println("Line: " + line);
             }
         } catch (IOException ie) {
             ie.printStackTrace();
@@ -6317,7 +5923,7 @@ class ReadTextFile {
 }
 ```
 
-列表 7.3 定义了 ReadTextFile 类以及包含一个 try/catch/finally 块的 main() 方法。在 try 块内部，变量 `is` 是 `DataInputStream` 类的实例，它包装了指向 `text.txt` 的 `FileInputStream`。代码的下部分包含一个 while 循环，它逐行读取 `text.txt` 的内容并打印每一行。如果发生错误（例如文件缺失），则将调用 catch 块。如注释所示，finally 块并没有关闭输入流（在代码中该部分目前被注释掉了）。为了在 finally 块中关闭输入流，你必须在 try 块之外声明变量，以便在 finally 块中可以访问：
+列表 7.3 定义了 `ReadTextFile` 类以及包含一个 `try/catch/finally` 块的构造函数。在 `try` 块内部，变量 `is` 是 `DataInputStream` 类的实例，它包装了指向 `text.txt` 的 `FileInputStream`。代码的下一部分包含一个 `while` 循环，它逐行读取 `text.txt` 的内容并打印每一行。如果发生错误（例如文件缺失），则将调用 `catch` 块。如注释所示，`finally` 块并没有关闭输入流（在代码中该部分目前被注释掉了）。为了在 `finally` 块中关闭输入流，你必须在 `try` 块之外声明变量，以便在 `finally` 块中可以访问：
 
 ```java
 DataInputStream is = null;
@@ -6333,10 +5939,12 @@ try {
 运行列表 7.3 中的代码，你将看到以下输出：
 
 Line: line one
+
 Line: line two
+
 Line: line three
 
-file.txt 的内容所示：
+`file.txt` 的内容如下所示：
 
 ```
 line one
@@ -6344,13 +5952,13 @@ line two
 line three
 ```
 
-# 读取 CSV 文件
+## 读取 CSV 文件
 
 另一种技术涉及使用正则表达式的 `split()` 方法。尽管出于兼容性考虑保留了 `StringTokenizer` 类，但建议使用 `java.util.regex` 包中的 `split()` 方法。`String.split()` 方法的一个优势是它支持多个分隔符，因为它基于正则表达式，而 `StringTokenizer` 只能指定单个分隔符。
 
-列表 7.4 显示了 ReadCSV1.java 的内容，该类以行为导向的方式读取文本文件中的名称。
+列表 7.4 显示了 `ReadCSV1.java` 的内容，该类以行为导向的方式读取文本文件中的名称。
 
-# 列表 7.4：ReadCSV1.java
+### 列表 7.4：ReadCSV1.java
 
 ```java
 import java.io.*;
@@ -6362,27 +5970,29 @@ public class ReadCSV1 {
     private String delim = ",";
     private DataInputStream is;
 
-    try {
-        is = new DataInputStream(new FileInputStream(inputFile));
-        while ((line = is.readLine()) != null) {
-            if(line.startsWith("#")) {
-                // 跳过注释行
-            } else {
-                // 使用 StringTokenizer 类：
-                StringTokenizer st = new StringTokenizer(line, delim);
-                fname = (String)st.nextToken();
-                lname = (String)st.nextToken();
-                System.out.println("My name is "+fname+" "+lname);
+    public ReadCSV1() {
+        try {
+            is = new DataInputStream(new FileInputStream(inputFile));
+            while ((line = is.readLine()) != null) {
+                if(line.startsWith("#")) {
+                    // 跳过注释行
+                } else {
+                    // 使用 StringTokenizer 类：
+                    StringTokenizer st = new StringTokenizer(line, delim);
+                    fname = (String)st.nextToken();
+                    lname = (String)st.nextToken();
+                    System.out.println("My name is " + fname + " " + lname);
 
-                // 使用 split 方法拆分：
-                String[] person = line.split(delim);
-                System.out.println("My name is "+person[0]+" "+person[1]);
+                    // 使用 split 方法拆分：
+                    String[] person = line.split(delim);
+                    System.out.println("My name is " + person[0] + " " + person[1]);
+                }
             }
+        } catch (IOException ie) {
+            ie.printStackTrace();
+        } finally {
+            is.close();
         }
-    } catch (IOException ie) {
-        ie.printStackTrace();
-    } finally {
-        is.close();
     }
 
     public static void main (String args[]) {
@@ -6391,18 +6001,21 @@ public class ReadCSV1 {
 }
 ```
 
-列表 7.4 定义了 ReadCSV 类，包含一个构造函数和一个 try/catch/finally 块。try 块包含一个 while 循环，逐行读取 `names.txt` 的内容。如果行的第一个字符是 `#`，则该行被忽略；即它被视为注释行。否则，该行通过 `StringTokenizer` 实例被拆分为标记（单词）。`fname` 和 `lname` 变量通过连续调用 `nextToken()` 方法进行初始化，然后使用以下代码片段打印 person：
-`System.out.println("My name is "+fname+" "+lname);`
+列表 7.4 定义了 `ReadCSV1` 类，包含一个构造函数和一个 `try/catch/finally` 块。`try` 块包含一个 `while` 循环，逐行读取 `names.txt` 的内容。如果行的第一个字符是 `#`，则该行被忽略；即它被视为注释行。否则，该行通过 `StringTokenizer` 实例被拆分为标记（单词）。`fname` 和 `lname` 变量通过连续调用 `nextToken()` 方法进行初始化，然后使用以下代码片段打印 person：
 
-main 方法的最后部分包含一个 catch 块来捕获错误，以及一个 finally 块来关闭输入文件。运行列表 7.4 中的代码，你将看到以下输出：
+`System.out.println("My name is " + fname + " " + lname);`
+
+`main` 方法的最后部分包含一个 `catch` 块来捕获错误，以及一个 `finally` 块来关闭输入文件。运行列表 7.4 中的代码，你将看到以下输出：
 
 My name is Jane Smith
+
 My name is John Jones
+
 My name is Bob Stone
 
 列表 7.5 显示了列表 7.4 引用的 `names.txt` 内容。
 
-# 列表 7.5：names.txt
+### 列表 7.5：names.txt
 
 ```
 #first name and last name
@@ -6417,11 +6030,13 @@ Bob, Stone
 String[] person = line.split(",| ");
 ```
 
-# 向文本文件写入数据
+## 向文本文件写入数据
 
-列表 7.6 显示了 WriteTextFile1.java 的内容，它读取一个文本文件并创建一个内容相同的新文件，模拟复制命令。
+列表 7.6 显示了 `WriteTextFile1.java` 的内容，它读取一个文本文件并创建一个内容相同的新文件，模拟复制命令。
 
-# 列表 7.6：WriteTextFile1.java
+### 列表 7.6：WriteTextFile1.java
+
+
 
 ```java
 import java.io.*;
@@ -6454,11 +6069,7 @@ class WriteTextFile {
 }
 ```
 
-
-
-
-
-# 流与文件 • 193
+# 流与文件
 
 ```java
 class AppendToFile {
@@ -6486,6 +6097,7 @@ class AppendToFile {
 如果发生错误，`catch` 块将显示消息；否则 `finally` 块将关闭输出文件。运行列表 7.7 中的代码以查看 `twolines.txt` 文件的内容，如下：
 
 第一行
+
 第二行
 
 # PrintWriter 类
@@ -6500,15 +6112,13 @@ class AppendToFile {
 
 由 `PrintStream` 打印的所有字符都将使用底层平台的默认字符编码转换为字节。注意，在涉及写入字符而非字节的情况下，优先使用 `PrintWriter` 类。
 
-194 • 开发者 Java 入门指南
-
 此外，`PrintStream` 类的方法不会抛出 I/O 异常；它们会设置一个可以通过 `checkError()` 方法访问的布尔标志（与 `PrintWriter` 类一样）。
 
 # 在文件中统计单词和字符
 
 列表 7.8 展示了 `WordsAndChars.java` 的内容，该程序统计文本文件 `Words.txt` 中的单词数和字符数，该文件的内容在列表 7.9 中。
 
-# 列表 7.8: WordsAndChars.java
+## 列表 7.8: WordsAndChars.java
 
 ```java
 import java.io.*;
@@ -6547,11 +6157,10 @@ public class WordsAndChars {
 接下来，一个 `for` 循环统计当前分词行中的单词（标记）数量，然后更新总字符数。注意，字符数没有考虑到 `Words.txt` 文件中单词之间的空格。`main()` 方法的最后部分包含一个 `catch()` 块和一个 `finally()` 块，包含了通常的功能。列表 7.8 的输出在此：
 
 Word Count: 11
+
 Char Count: 43
 
-列表 7.9 展示了列表 7.8 中使用的 `Words.txt` 内容。
-
-# 列表 7.9: Words.txt
+## 列表 7.9: Words.txt
 
 ```
 First line of text
@@ -6565,7 +6174,7 @@ The third line
 
 列表 7.10 展示了 `SearchWord.java` 的内容，它说明了如何在文本文件中搜索字符串。
 
-# 列表 7.10: SearchWord.java
+## 列表 7.10: SearchWord.java
 
 ```java
 import java.io.*;
@@ -6574,10 +6183,6 @@ public class SearchCount {
     private int wordCount=0;
     private String search="line", delim = " ";
 ```
-
-
-
-
 
 # 目录操作
 
@@ -6590,9 +6195,9 @@ Java 提供了两种创建目录的方法：`mkdir()` 方法和 `mkdirs()` 方�
 
 幸运的是，`mkdirs()` 方法会同时创建目录和所有中间目录，这处理了上一个列表中提到的第二种情况。列表 7.12 显示了文件 `CreateDir.java` 的内容，该文件创建了目录 `/tmp/user/java/bin`。
 
-# 列表 7.12：CreateDir.java
+## 列表 7.12：CreateDir.java
 
-```
+```java
 import java.io.*;
 import java.io.File;
 
@@ -6612,9 +6217,9 @@ public class CreateDir {
 
 列表 7.13 显示了 `ListDirectory.java` 的内容，它显示了 `/tmp` 目录的内容。
 
-# 列表 7.13：ListDirectory.java
+## 列表 7.13：ListDirectory.java
 
-```
+```java
 import java.io.File;
 public class ListDirectory {
     public static void main(String args[]) {
@@ -6649,9 +6254,9 @@ Java 序列化是通过反射执行的，以便从要序列化的对象的字段
 
 `ObjectOutputStream` 类用于序列化对象。列表 7.14 显示了 `Employee.java` 的内容，它将被另外两个类序列化后进行反序列化。
 
-# 列表 7.14：Employee.java
+## 列表 7.14：Employee.java
 
-```
+```java
 public class Employee implements java.io.Serializable {
   public String name;
   public String address;
@@ -6670,9 +6275,9 @@ public class Employee implements java.io.Serializable {
 
 注意：将对象序列化到文件时，Java 的标准惯是给文件赋予 `.ser` 扩展名。
 
-# 列表 7.15：Serialize.java
+## 列表 7.15：Serialize.java
 
-```
+```java
 import java.io.*;
 
 public class Serialize {
@@ -6705,14 +6310,16 @@ public class Serialize {
 
 列表 7.16 显示了 `Deserialize.java` 的内容，它展示了如何反序列化对象。
 
-# 列表 7.16：Deserialize.java
+## 列表 7.16：Deserialize.java
+
+
 
 ```java
 import java.io.*;
 
 public class Deserialize {
     private static String serFile = "/tmp/employee.ser";
-    public static void main(String [] args) {
+    public static void main(String[] args) {
         Employee object1 = null;
         try {
             // Read the object from the file:
@@ -6750,9 +6357,10 @@ number = 5000
 # 反射
 
 Java 反射是一项强大的功能，它允许程序通过查找成员名称来检查自身的属性。
+
 列表 7.17 显示了 `ShowMyMethods.java` 的内容，展示了如何显示 `ShowMyMethods` 类中的方法。
 
-列表 7.17：ShowMyMethods.java
+## 列表 7.17：ShowMyMethods.java
 
 ```java
 import java.lang.reflect.*;
@@ -6779,12 +6387,8 @@ public class ShowMyMethods
 }
 ```
 
-
-
-
-# 流与文件 • 203
-
 接下来，`main()` 方法包含一个 `try/catch` 块用于初始化变量 `clz`，然后获取 `ShowMyMethods` 类中的方法数组。
+
 `main()` 方法的最后部分包含一个循环，该循环遍历数组 `m` 并显示其内容。列表 7.17 中的代码你将看到如下输出：
 
 ```
@@ -6796,7 +6400,7 @@ method: public static void ShowMyMethods.main(java.lang.String())
 
 如你所见，列表 7.17 包含以下被注释的代码段：
 
-```
+```java
 //Class clz = Class.forName(args[0]);
 ```
 
@@ -6806,29 +6410,27 @@ method: public static void ShowMyMethods.main(java.lang.String())
 
 尽管介绍非常简短，但你可能已经体会到了反射在 Java 类加载器中的用处，这是另一个有趣的（更高级的）话题。可以上网搜索关于 Java 反射和类层级的更多详细信息。
 
-# 注解 (ANNOTATIONS)
+# 注解
 
 Java 注解为编译器提供信息。例如，Java 提供了 `@Override` 注解，你可以使用它（通过在方法前指定 `@Override`）指示被注解的方法正在重写同名的方法。
+
 Java 还支持 `@Deprecated` 和 `@SuppressWarnings` 分别将方法标记为已弃并抑制警告信息。注解减少了你需要手动编写的样板代码。此外，注解可以为编译器提供编译信息，其他工具可以进行相应的处理。
 
 列表 7.18：MyAnnotation.java 展示了如何使用 Java 注解。
 
-# 列表 7.18：MyAnnotation.java
+## 列表 7.18：MyAnnotation.java
 
-```
+```java
 class ClassA
 {
     public ClassA()
     {
         this.simpleMethod();
     }
-```
 
-204 • 开发者 Java 快速入门
-
-```java
-public void simpleMethod() {
-    System.out.println("Inside simpleMethod in classA");
+    public void simpleMethod() {
+        System.out.println("Inside simpleMethod in classA");
+    }
 }
 
 public class MyAnnotation extends ClassA {
@@ -6849,22 +6451,25 @@ public class MyAnnotation extends ClassA {
 ```
 
 列表 7.18 定义了内部类 `ClassA` 和继承 `ClassA` 的类 `MyAnnotation`：这两个类都包含 `simpleMethod()` 方法，该方法在 `MyAnnotation` 中被重写。
+
 列表 7.18 还定义了一个 `main()` 方法，将变量 `ma` 初始化为 `MyAnnotation` 的实例，然后调用 `simpleMethod()`。注意事件的级联顺序：`MyAnnotation` 的构造函数调用了后者的构造函数。接下来，`ClassA` 的构造函数调用了 `simpleMethod()`，它显示了属于 `MyAnnotation` 的指定消息，而不是 `ClassA` 中的 `simpleMethod()`。
-此此外，`MyAnnotation` 的构造函数也调用了 `simpleMethod()`，这意味着相同的文本会被显示两次。运行列表 7.18 中的代码，你将看到如下输出：
+
+此外，`MyAnnotation` 的构造函数也调用了 `simpleMethod()`，这意味着相同的文本会被显示两次。运行列表 7.18 中的代码，你将看到如下输出：
 
 ```
 Inside simpleMethod in MyAnnotation
 Inside simpleMethod in MyAnnotation
 ```
 
-# 总结 (SUMMARY)
+# 总结
 
 本章从 Java 流和面向流的类的快速概述开始。通过使用面向流的代码从命令行获取用户输入的示例，你学习了某些支持缓冲操作的接口和类。
+
 然后，你学习了如何读取文本文件的内容、将文本行分词为单词以及如何将数据写入文本文件。接着学习了如何对自定义类进行序列化和反序列化，以及如何统计文件中字符串出现的次数。
 
 # Java 与 SQL
 
-本章包含代码示例，演示了如何从 Java 访问 MySQL 表中的数据。上一章包含了展示如何在 Java 中处理流流的代码示例，这对于本章的某些内容很有帮助。
+本章包含代码示例，演示了如何从 Java 访问 MySQL 表中的数据。上一章包含了展示如何在 Java 中处理流的代码示例，这对于本章的某些内容很有帮助。
 
 本章的第一部分简要介绍了 SQL（结构化查询语言）并解释了主要的 SQL 语句类型：DCL、DDL 和 DML。本章的第二部分介绍了 MySQL 数据库，并向你展示了创建和删除表的各种方法。
 
@@ -6883,26 +6488,26 @@ SQL 是 Structured Query Language（结构化查询语言）的缩写，用于�
 
 以下子节提供了上述列表中每个项的额外信息。
 
-# 什么是 DCL？
+## 什么是 DCL？
 
 DCL 是 Data Control Language（数据控制语言）的缩写，指任何包含 `GRANT` 或 `REVOKE` 关键字的 SQL 语句。这些关键字分别从任何数据库用户授予或撤销访问权限。
 
 例如，以下 SQL 语句授予了用户 ABC 视图和修改 `employee` 表中记录的权限：
 
-```
+```sql
 GRANT ALL ON employee
 TO ABC;
 ```
 
 `GRANT` 允许用户向其他用户授予权限。相比之下，以下 SQL 语句从 ABC 处撤销了对 `employee` 表的 `UPDATE` 权限：
 
-```
+```sql
 REVOKE UPDATE
 ON employee
 FROM ABC;
 ```
 
-# 什么是 DDL？
+## 什么是 DDL？
 
 DDL 是 Data Definition Language（数据定义语言）的缩写，指任何包含以下关键字的 SQL 语句：
 
@@ -6915,44 +6520,42 @@ DDL 是 Data Definition Language（数据定义语言）的缩写，指任何包
 
 上述关键字列表可以出现在引用表作为视图（后文讨论）的 SQL 语句中。以下是使用这些关键字的部分示例：
 
-```
+```sql
 ALTER TABLE
 CREATE/DROP/ATE views
 CREATE TABLE abc as (SELECT * from def);
 ```
 
-# DELETE、DROP 还是 TRUNCATE
+### DELETE、DROP 还是 TRUNCATE
 
 这些之间存在重要差异。`DELETE` 关键字和 `TRUNCATE` 关键字都可以从表中删除数据，但性能存在显著差异。考虑以下 SQL 语句（两者都会删除表的所有行）：
 
-```
+```sql
 DELETE FROM customers;
 TRUNCATE customers;
 DROP TABLE customers;
 ```
 
-# Java 与 SQL • 207
-
 `DELETE` 语句处理表中的所有行，而 `TRUNCATE` 语句执行一次操作删除所有行。因此，当表包含大量行时，`TRUNCATE` 比 `DELETE` 快得多。相比之下，`DROP` 语句删除了行和表本身。
 
 当然，如果你想删除表的子集，则必须指定 `WHERE` 子句，因此所需的 SQL 语句可能如下：
 
-```
-DELETE FROM customers;
+```sql
+DELETE FROM customers
 WHERE cust_id < 10000;
 ```
 
-# 什么是 DQL？
+## 什么是 DQL？
 
 DQL 是 Data Query Language（数据查询语言）的缩写，指任何包含 `SELECT` 关键字的 SQL 语句。注意，DQL 可以涉及选择部分数据，也可以涉及删除部分数据，如下所示的 SQL 语句：
 
-```
+```sql
 SELECT *
 FROM customers
 WHERE cust_id < 10000;
 ```
 
-```
+```sql
 DELETE FROM customers
 WHERE cust_id IN
 (SELECT cust_id FROM customers
@@ -6961,7 +6564,7 @@ WHERE cust_id < 10000);
 
 虽然上述两个语句的效果相同，但第一个比第二个高效，后者也被称为相关子查询，因为在外部 SQL 查询和内部 SQL 查询中引用了同一个表。
 
-# 什么是 DML？
+## 什么是 DML？
 
 DML 是 Data Manipulation Language（数据操作语言）的缩写，指对数据库中一个或多个表执行查询的 SQL 语句。DML 语句是包含任何以下关键字的 SQL 语句：
 
@@ -6973,15 +6576,9 @@ DML 是 Data Manipulation Language（数据操作语言）的缩写，指对数�
 - EXPLAIN PLAN
 - LOCK TABLE
 
-
-
-
-
-# 208 • 开发者 Java 快速指南
-
 在大多数情况下，前面的关键字会修改一个或多个表中现有的数据值。下面的 SQL 语句指定了 `INSERT` 关键字向 `user` 表插入一个新行（`user` 表在本章稍后定义）：
 
-```
+```sql
 INSERT INTO user VALUES (1000, 'Developer');
 ```
 
@@ -7000,7 +6597,7 @@ UPDATE tax_info
 SET tax_rate = tax_rate + 0.05;
 ```
 
-# 什么是 TCL？
+## 什么是 TCL？
 
 TCL 是事务控制语言（Transaction Control Language）的缩写，指包含以下关键字的 SQL 语句：
 
@@ -7021,7 +6618,7 @@ https://dev.mysql.com/downloads/
 
 MySQL 版本及其安装程序。
 
-# 登录 MySQL
+## 登录 MySQL
 
 你可以使用以下命令以 root 用户身份登录 MySQL，它会提示你输入密码：
 
@@ -7031,7 +6628,7 @@ $ mysql -u root -p
 
 如果你通过 DMG 文件安装了 MySQL，当你启动前面的命令时，会提示输入 root 密码。
 
-# 创建 MySQL 数据库
+## 创建 MySQL 数据库
 
 登录 MySQL 并调用以下命令创建 `mytools` 数据库：
 
@@ -7056,13 +6653,13 @@ Empty set (0 sec)
 
 前面的输出是有意义的，因为 `mytools` 数据库是空的。
 
-# 创建和删除表
+## 创建和删除表
 
-在 MySQL 中创建表有三种方法，与其他 RDBMS一样。一种方法是手动（在下一节显示）；另一种方法（如所示）调用包含 SQL 命令的文件；第三种方法涉及将 SQL 文件重定向到 MySQL 可执行文件。
+在 MySQL 中创建表有三种方法，与其他 RDBMS 一样。一种方法是手动（在下一节显示）；另一种方法（如所示）调用包含 SQL 命令的文件；第三种方法涉及将 SQL 文件重定向到 MySQL 可执行文件。
 
 下一节介绍了如何使用 MySQL 提示符显式定义 SQL 语句来手动创建表。
 
-# 手动创建 MySQL 表
+### 手动创建 MySQL 表
 
 本节介绍了如何手动创建在本章后面提到的表。具体来说，你将看到如何创建以下表：
 
@@ -7072,7 +6669,9 @@ Empty set (0 sec)
 
 登录 MySQL 并选择 `mytools` 数据库，调用列表 8.1、8.2 和 8.3 中的 SQL 文件分别创建 `customers`、`weather` 和 `friends` 表。列表 8.1 显示了 `customers.sql` 的内容，它定义了 `customers` 表的结构并填充了数据。
 
-# 列表 8.1：customers.sql
+## 列表 8.1：customers.sql
+
+
 
 ```sql
 DROP TABLE IF EXISTS customers;
@@ -7145,10 +6744,10 @@ SET tax_rate = tax_rate + 0.05;
 
 TCL 是事务控制语言（Transaction Control Language）的缩写，指包含以下关键字的 SQL 语句：
 
-- COMMIT
-- ROLLBACK
-- SAVEPOINT
-- SET TRANSACTION
+- `COMMIT`
+- `ROLLBACK`
+- `SAVEPOINT`
+- `SET TRANSACTION`
 
 `COMMIT` 关键字将 SQL 语句或事务的结果提交到数据库，而 `ROLLBACK` 关键字的作用相反。`SAVEPOINT` 关键字标识一个后续事务可以回滚的点，当 SQL 语句中出现 `ROLLBACK` 时发生。`SET TRANSACTION` 语句用于指定事务的各种特性，例如事务的开始。当事务完成后，调用 `COMMIT` 关键字或 `ROLLBACK` 关键字。
 
@@ -7199,7 +6798,7 @@ Empty set (0 sec)
 
 # 创建和删除表
 
-在 MySQL 中创建表有三种方法，与其他 RDBMS一样。一种方法是手动（在下一节显示）；另一种方法（如所示）调用包含 SQL 命令的文件；第三种方法涉及将 SQL 文件重定向到 MySQL 可执行文件。
+在 MySQL 中创建表有三种方法，与其他 RDBMS 一样。一种方法是手动（在下一节显示）；另一种方法（如所示）调用包含 SQL 命令的文件；第三种方法涉及将 SQL 文件重定向到 MySQL 可执行文件。
 
 下一节介绍了如何使用 MySQL 提示符显式定义 SQL 语句来手动创建表。
 
@@ -7207,9 +6806,9 @@ Empty set (0 sec)
 
 本节介绍了如何手动创建在本章后面提到的表。具体来说，你将看到如何创建以下表：
 
-- customers
-- friends
-- weather
+- `customers`
+- `friends`
+- `weather`
 
 登录 MySQL 并选择 `mytools` 数据库，调用列表 8.1、8.2 和 8.3 中的 SQL 文件分别创建 `customers`、`weather` 和 `friends` 表。列表 8.1 显示了 `customers.sql` 的内容，它定义了 `customers` 表的结构并填充了数据。
 
@@ -7363,13 +6962,9 @@ from weather
 where city = 'abc';
 ```
 
-
-
-
-
 # LIMIT 关键字
 
-LIMIT 关键字限制了结果集中的行数。例如，weather 表包含 11 行，如下所示：
+`LIMIT` 关键字限制了结果集中的行数。例如，`weather` 表包含 11 行，如下所示：
 
 ```sql
 SELECT COUNT(*) FROM weather;
@@ -7381,7 +6976,7 @@ SELECT COUNT(*) FROM weather;
 1 row in set (0.001 sec)
 ```
 
-如果只想只想查看 weather 表中的三行，而不是所有的行，请执行以下 SQL 查询：
+如果只想只想查看 `weather` 表中的三行，而不是所有的行，请执行以下 SQL 查询：
 
 ```sql
 SELECT city, state
@@ -7405,13 +7000,13 @@ SQL 允许你通过多种方式删除表中的所有数据。其中一种方法�
 DELETE * from customers;
 ```
 
-然而，如果数据库表具有大量行，一种更快的方法是 TRUNCATE 语句，如下所示：
+然而，如果数据库表具有大量行，一种更快的方法是 `TRUNCATE` 语句，如下所示：
 
 ```sql
 TRUNCATE customers;
 ```
 
-上述两个命令都涉及从表中删除行而不删除表。如果你想删除表中的行以及表本身，请使用 DROP 语句，如下所示：
+上述两个命令都涉及从表中删除行而不删除表。如果你想删除表中的行以及表本身，请使用 `DROP` 语句，如下所示：
 
 ```sql
 DROP TABLE IF EXISTS customers;
@@ -7421,9 +7016,11 @@ DROP TABLE IF EXISTS customers;
 
 上一节向你展示了如何删除表中所有的行，而本节向你展示了如何删除表中的子集，这涉及到为你想要从表中删除的行指定一个条件。
 
-以下 SQL 语句删除了 customers 表中名为 JOHN 的行：
+以下 SQL 语句删除了 `customers` 表中名为 JOHN 的行：
 
-接接的 SQL 语句删除了 customers 表中名为 JOHN 的行，以及 purchase_orders 表中与 JOHN 相关的行：
+
+
+接接的 SQL 语句删除了 `customers` 表中名为 JOHN 的行，以及 `purchase_orders` 表中与 JOHN 相关的行：
 
 ```sql
 DELETE
@@ -7432,9 +7029,9 @@ Where FNAME = 'JOHN'
 CASCADE;
 ```
 
-上述语句被称为级联删除（cascading delete），当表中的行与 purchase_orders 表存在一对多的关系时，它非常有用；因此，如果你从 customers 表中删除一个“子”行，你可能也删除 purchase_orders 表中的对应行。
+上述语句被称为级联删除（cascading delete），当表中的行与 `purchase_orders` 表存在一对多的关系时，它非常有用；因此，如果你从 `customers` 表中删除一个“子”行，你可能也删除 `purchase_orders` 表中的对应行。
 
-你也可以在 DELETE 中指定 LIMIT 关键字，示例所示：
+你也可以在 `DELETE` 中指定 `LIMIT` 关键字，示例所示：
 
 ```sql
 DELETE
@@ -7443,23 +7040,23 @@ Where FNAME = 'JOHN'
 LIMIT 1;
 ```
 
-上述语句将删除一行，但存在一个异常：如果你在 customers 表的定义中指定了 `ON DELETE CASCADE`，上述 SQL 查询将删除所有名字等于 JOHN 的行。
+上述语句将删除一行，但存在一个异常：如果你在 `customers` 表的定义中指定了 `ON DELETE CASCADE`，上述 SQL 查询将删除所有名字等于 JOHN 的行。
 
-# 什么是 SQL 索引？
+## 什么是 SQL 索引？
 
 索引是一种能够从数据库表中更快地检索记录的结构，从而提高性能。索引包含一个与表中每行相对应的条目，而索引本身存储在树形结构中。SQL 允许你为一个表定义一个或多个索引，随后的章节将提供一些指南。
 
 类比地，书的索引允许你搜索某个单词或术语并找到相关的页码，然后你就可以跳转到那些页面。显然，使用书索引比顺序查看书的每一页快得多。
 
-# 索引的类型
+## 索引的类型
 
 唯一索引（unique index）可以防止列中的重复值，前提是该列也具有唯一索引，如果表具有主键，则可以自动完成。
 
 聚集索引（clustered index）会更改表中行的顺序，然后根据键值执行搜索。一个表只能有一个聚集索引。
 
-MySQL 引入了不可见索引（invisible indexes），查询优化器无法使用这些索引。MySQL 确保当引用的列中的数据被修改时，这些索引保持最新。你可以通过在创建表时声明其可见性，或通过 ALTER TABLE 命令使索引变为不可见（本章将不讨论这一点）。
+MySQL 引入了不可见索引（invisible indexes），查询优化器无法使用这些索引。MySQL 确保当引用的列中的数据被修改时，这些索引保持最新。你可以通过在创建表时声明其可见性，或通过 `ALTER TABLE` 命令使索引变为不可见（本章将不讨论这一点）。
 
-# 创建索引
+## 创建索引
 
 在表上创建索引可以通过两种方式定义，如下：
 
@@ -7487,16 +7084,16 @@ CREATE INDEX idx_lname ON customers(lname);
 Query OK, 0 rows affected 0.03 sec
 ```
 
-# 索引的开销
+## 索引的开销
 
 索引占用存储空间。通常情况下，当引用的列中的数据被修改时，MySQL 会确保这些索引是最新的。如果使用索引执行 SQL 语句，性能通常比不使用索引快。然而，如果索引过多，可能会增加更新索引的时间，这可能会导致性能下降。
 
-# 定义索引的考虑因素
+## 定义索引的考虑因素
 
 在定义索引之前，你应该考虑以下因素：
 
 1. 索引可以提高查询速度。
-2. 索引会减慢插入（INSERT）、更新（UPDATE）和删除（DELETE）操作的速度。
+2. 索引会减慢插入（`INSERT`）、更新（`UPDATE`）和删除（`DELETE`）操作的速度。
 3. 索引占用额外的磁盘空间。
 
 在定义索引之前，考虑以下 SQL 语句：
@@ -7511,7 +7108,7 @@ WHERE lname = 'Smith';
 
 https://dev.mysql.com/doc/refman/5.7/en/packet-large
 
-# 在 Java 中连接 MySQL
+## 在 Java 中连接 MySQL
 
 在编译并运行 Java 代码之前，你需要执行两个步骤。
 
@@ -7525,15 +7122,16 @@ https://dev.mysql.com/downloads/connector/j
 export CLASSPATH=$CLASSPATH::.mysql-connector-java-8.0.18.jar
 ```
 
-列表 8.4 显示了 MySQLCONNECT.java 的内容，说明了如何连接到 MySQL 数据库。
+列表 8.4 显示了 `MySQLCONNECT.java` 的内容，说明了如何连接到 MySQL 数据库。
 
-# 列表 8.4: MySQLCONNECT.java
+### 列表 8.4: MySQLCONNECT.java
 
 ```java
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+
 class MySQLCONNECT {
     public static void main(String[] args[]) {
         try {
@@ -7557,11 +7155,7 @@ class MySQLCONNECT {
 }
 ```
 
-
-
-
-
-# 218 • 开发者 Java 快速入门指南
+## 218 • 开发者 Java 快速入门指南
 
 ```java
 finally { }
@@ -7572,26 +7166,24 @@ finally { }
 /* java.sql.SQLException: 服务器时区值 'PDT' 无法无法识别或代表多个时区。如果你想利用时区支持，必须配置服务器或 JDBC 驱动程序（通过 `serverTimeZone` 配置属性）以使用更具体的时区值。 */
 ```
 
-列表 8.4 以几个 `import` 语句开始，这些语句指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASPATH` 环境变量中（否则代码将无法成功编译）。
+列表 8.4 以几个 `import` 语句开始，这些语句指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASSPATH` 环境变量中（否则代码将无法成功编译）。
 
 下一部分代码初始化了字符串变量 `URL`、`USER` 和 `PASS`。如果需要，请将 `mysql` 替换为你自己的数据库（现有数据库或新数据库），并为 `PASS` 指定正确的值。列表 8.4 的后续部分是 `main()` 方法，它包含一个 `try/catch` 块，在其中建立数据库连接。如果发生错误，`catch()` 块将显示描述所遇错误的堆栈跟踪信息。运行列表 8.4 中的代码，你将看到以下输出：
 
 Successfully connected to MySQL
 
-# 删除并重建 MYSQL 表
+## 删除并重建 MYSQL 表
 
 在编译和运行本节中的代码之前，请确保你已经执行了上一节中的两个步骤。列表 8.5 显示了 Java 类 `MySQLDROPTABLE.java` 的内容，它展示了如何连接到 MySQL 数据库并重建表。
 
-# 列表 8.5: MySQLDROPTABLE.java
+### 列表 8.5: MySQLDROPTABLE.java
 
 ```java
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-```
 
-```java
 class MySQLDROPTABLE {
   public static void main(String[] args[]) {
     try {
@@ -7599,7 +7191,7 @@ class MySQLDROPTABLE {
       //Class.forName("com.mysql.jdbc.Driver");
       Class.forName("com.mysql.cj.jdbc.Driver");
 
-// mytools/root/yourpassword = database/username/
+      // mytools/root/yourpassword = database/username/
       Connection conn = DriverManager.getConnection(
   "jdbc:mysql://127.0.0.1:3360/mytools?serverTimeZone=UTC",
   "root", "yourpassword");
@@ -7622,10 +7214,11 @@ class MySQLDROPTABLE {
       System.out.println(e);
     } finally {
     }
+  }
 }
 ```
 
-列表 8.5 以几个 `import` 语句开始，这些语句指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASPATH` 环境变量中（否则代码将无法成功编译）。
+列表 8.5 以几个 `import` 语句开始，这些语句指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASSPATH` 环境变量中（否则代码将无法成功编译）。
 
 下一部分代码初始化了字符串变量 `URL`、`USER` 和 `PASS`。你必须将 `mytools` 替换为你自己的数据库（现有数据库或新数据库），并为 `PASS` 指定正确的值。
 
@@ -7648,11 +7241,11 @@ desc employees;
 +-------+------+------+
 ```
 
-# 向 MYSQL 表插入数据
+## 向 MYSQL 表插入数据
 
 列表 8.6 显示了 `MySQLINSERT.java` 的内容，它展示了如何向表中插入数据。
 
-# 列表 8.6: MySQLINSERT.java
+### 列表 8.6: MySQLINSERT.java
 
 ```java
 import java.sql.Connection;
@@ -7667,7 +7260,7 @@ class MySQLINSERT {
             //Class.forName("com.mysql.jdbc.Driver");
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-// mytools/root/yourpassword = database/username/
+            // mytools/root/yourpassword = database/username/
             Connection conn = DriverManager.getConnection(
   "jdbc:mysql://127.0.0.1:3360/mytools?serverTimeZone=UTC",
   "root", "yourpassword");
@@ -7701,7 +7294,7 @@ class MySQLINSERT {
 }
 ```
 
-8.6 以几个 `import` 语句开始，这些语句指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASPATH` 环境变量中（否则代码将无法成功编译）。
+列表 8.6 以几个 `import` 语句开始，这些语句指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASSPATH` 环境变量中（否则代码将无法成功编译）。
 
 下一部分代码初始化了字符串变量 `URL`、`USER` 和 `PASS`。你必须将 `mysql` 替换为你自己的数据库（现有数据库或新数据库），并为 `PASS` 指定正确的值。
 
@@ -7714,11 +7307,13 @@ select * from employees;
 2 rows in set (0.001 sec)
 ```
 
-# 从 MYSQL 表查询数据
+## 从 MYSQL 表查询数据
 
 列表 8.7 显示了 `MySQLSELECT.java` 的内容，它展示了如何从数据库表中查询数据。
 
-# 列表 8.7: MySQLSELECT.java
+### 列表 8.7: MySQLSELECT.java
+
+
 
 ```java
 import java.sql.Connection;
@@ -7756,10 +7351,6 @@ class MySQLSELECT {
 }
 ```
 
-
-
-
-
 ```java
 {
   System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getString(3));
@@ -7771,7 +7362,7 @@ class MySQLSELECT {
 }
 ```
 
-列表 8.7 起于几个导入语句，这些语句指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 CLASSP 环境变量中（否则，代码将无法成功编译）。
+列表 8.7 起于几个导入语句，这些语句指定了位于 JDBC JAR 文件中的 Java 类，该文件也包含在 `CLASSP` 环境变量中（否则，代码将无法成功编译）。
 
 下部分代码初始化了字符串变量 `URL`、`USER` 和 `PASS`。你必须将 `mytools` 替换为你自己的数据库（现有数据库或新数据库），并为 `PASS` 指定正确的值。
 
@@ -7824,7 +7415,7 @@ class MySQLSELECT {
 - 调用 `System.exit()`
 - Java 类加载器
 - Java 类加载器的类型
-- java.lang.ClassLoader 方法
+- `java.lang.ClassLoader` 方法
 
 ### 总结
 
@@ -8098,83 +7689,92 @@ class MySQLSELECT {
 - 搜索, 195–196
 - WriteText, 191–192
 
-
-
-
 # 开发者 Java 快速指南
 
-P
-回文, 93–94
-私有构造函数, 76–78
+### P
 
-R
-递归, 117
-- 整数加, 118
-- 阶乘值, 118–119
-- 斐波那契数列, 119
-- 2 的幂, 118
-- verser() 方法, 125
+- 回文, 93–94
+- 私有构造函数, 76–78
 
-从控制台读取输入, 185–186
-流相关的类, 182
-结构化查询语言 (SQL)
-- 级联删除, 2114
-- DCL, 206
-- DDL, 206
-- DELETE 语句, 213–214
-- DML, 207–208
-- DQL, 207
-- EXISTS 关键字, 212
-- GROUP BY 和 HAVING, 212
-- 索引, 214
+### R
+
+- 递归, 117
+  - 整数加, 118
+  - 阶乘值, 118–119
+  - 斐波那契数列, 119
+  - 2 的幂, 118
+  - verser() 方法, 125
+- 从控制台读取输入, 185–186
+- 流相关的类, 182
+- 结构化查询语言 (SQL)
+  - 级联删除, 2114
+  - DCL, 206
+  - DDL, 206
+  - DELETE 语句, 213–214
+  - DML, 207–208
+  - DQL, 207
+  - EXISTS 关键字, 212
+  - GROUP BY 和 HAVING, 212
+  - 索引, 214
+    - 聚簇索引, 215
+      - 创建, 215
+      - 定义索引的注意事项, 216
+      - 不可见索引, 215
+      - 性能影响, 215–216
+    - 唯一索引, 214
+  - JOIN 关键字, 212
+  - LIMIT 关键字, 213
+  - MySQL (见 MySQL)
+  - SELECT 关键字, 211–212
+  - TCL, 208
+  - TRUNCATE 和 DROP, 213
+- switch 语句, 101–102
+
+### S
+
+- 变量作用域
+  - 实例变量, 52, 54
+  - 局部变量, 52, 53
+  - 静态变量, 54
+- 序列化, 199–201
+- 单例模式, 76
+- SQL 索引, 214
   - 聚簇索引, 215
     - 创建, 215
     - 定义索引的注意事项, 216
     - 不可见索引, 215
-    - 性能影响, 215–216
-  - 唯一索引, 214
-- JOIN 关键字, 212
-- LIMIT 关键字, 213
-- MySQL (见 MySQL)
-- SELECT 关键字, 211–212
-- TCL, 208
-- TRUNCATE 和 DROP, 213
-switch 语句, 101–102
 
-S
-变量作用域
-- 实例变量, 52, 54
-- 局部变量, 52, 53
-- 静态变量, 54
-序列化, 199–201
-单例模式, 76
-SQL 索引, 214
-- 聚簇索引, 215
-  - 创建, 215
-  - 定义索引的注意事项, 216
-  - 不可见索引, 215
-  - 性能影响, 215–216
-  - 唯一索引, 214
+
+
+- 性能影响, 215–216
+- 唯一索引, 214
+
 静态块, 55
+
 静态方法, 54–55, 66–67
 
 流
-- BufferedInputStream 类, 184–185
-- DataInputStream 类, 185
+
+- `BufferedInputStream` 类, 184–185
+- `DataInputStream` 类, 185
 - 描述, 181
-- FileInputStream 类, 183–184
-- FilterInputStream 类, 184
-- InputStream 类, 183
+- `FileInputStream` 类, 183–184
+- `FilterInputStream` 类, 184
+- `InputStream` 类, 183
 - 读取面向字符的用户输入, 186–187
 
 T
-this 关键字, 62–64
+
+`this` 关键字, 62–64
+
 事务控制语言 (TCL), 208
-try/catch/finally 代码块, 47–48
+
+`try/catch/finally` 代码块, 47–48
 
 U
+
 Unicode, 35–36
 
 W
-while 循环, 98–99
 
+`while` 循环, 98–99

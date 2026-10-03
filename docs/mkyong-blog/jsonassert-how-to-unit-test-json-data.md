@@ -1,84 +1,83 @@
+
 # JSONAssert——如何对 JSON 数据进行单元测试
 
 > 原文：<http://web.archive.org/web/20230101150211/https://www.mkyong.com/java/jsonassert-how-to-unit-test-json-data/>
 
-![](img/0211bde3fd4f181dfc556d4fadea940d.png)
-
 在 Java 中，我们可以使用`JSONAssert`轻松地对 JSON 数据进行单元测试。
 
-## 1.专家
+## 1. 专家
 
-pom.xml
+`pom.xml`
 
 ```java
- <dependency>
-		<groupId>org.skyscreamer</groupId>
-		<artifactId>jsonassert</artifactId>
-		<version>1.5.0</version>
-	</dependency> 
+<dependency>
+    <groupId>org.skyscreamer</groupId>
+    <artifactId>jsonassert</artifactId>
+    <version>1.5.0</version>
+</dependency>
 ```
 
-## 2.JSON 对象
+## 2. JSON 对象
 
 为了测试 JSON 对象，无论严格与否，字段顺序都无关紧要。如果扩展字段很重要，则启用严格模式。
 
-2.1 当`strictMode`关闭时。
+### 2.1 当`strictMode`关闭时
 
 ```java
- JSONObject actual = new JSONObject();
-	actual.put("id", 1);
-	actual.put("name", "mkyong");
-	actual.put("age", 37);
+JSONObject actual = new JSONObject();
+actual.put("id", 1);
+actual.put("name", "mkyong");
+actual.put("age", 37);
 
-	JSONAssert.assertEquals("{id:1}", actual, false); 					//Pass, extended fields doesn't matter
-	JSONAssert.assertEquals("{name:\"mkyong\"}", actual, false);		//Pass
-	JSONAssert.assertEquals("{name:\"mkyong\", age:37}", actual, false);//Pass
-	JSONAssert.assertEquals("{name:mkyong, id:1}", actual, false);		//Pass
-	JSONAssert.assertEquals("{id:1, age:37}", actual, false);			//Pass 
+JSONAssert.assertEquals("{id:1}", actual, false);                  // Pass, extended fields doesn't matter
+JSONAssert.assertEquals("{name:\"mkyong\"}", actual, false);      // Pass
+JSONAssert.assertEquals("{name:\"mkyong\", age:37}", actual, false); // Pass
+JSONAssert.assertEquals("{name:mkyong, id:1}", actual, false);    // Pass
+JSONAssert.assertEquals("{id:1, age:37}", actual, false);         // Pass
 ```
 
-2.2 当`strictMode`开启时。
+### 2.2 当`strictMode`开启时
 
 ```java
- String actual = "{\"name\":\"mkyong\",\"id\":1,\"age\":37}";
+String actual = "{\"name\":\"mkyong\",\"id\":1,\"age\":37}";
 
-	JSONAssert.assertEquals("{id:1, name:\"mkyong\", age:37}", actual, true); //Pass, fields order doesn't matter
-	JSONAssert.assertEquals("{age:37, id:1, name:\"mkyong\"}", actual, true); //Pass
+JSONAssert.assertEquals("{id:1, name:\"mkyong\", age:37}", actual, true); // Pass, fields order doesn't matter
+JSONAssert.assertEquals("{age:37, id:1, name:\"mkyong\"}", actual, true); // Pass
 
-	JSONAssert.assertEquals("{name:\"mkyong\"}", actual, true); 		// Fail, extended fields must match
-	JSONAssert.assertEquals("{name:\"mkyong\", age:37}", actual, true); // Fail, extended fields must match 
+JSONAssert.assertEquals("{name:\"mkyong\"}", actual, true);       // Fail, extended fields must match
+JSONAssert.assertEquals("{name:\"mkyong\", age:37}", actual, true); // Fail, extended fields must match
 ```
 
-## 3.JSON 数组
+## 3. JSON 数组
 
 为了测试 JSON 数组，无论严格与否，扩展字段必须匹配。如果字段顺序很重要，则启用严格模式。
 
-3.1 当`strictMode`关闭时。
+### 3.1 当`strictMode`关闭时
 
 ```java
- String result = "[1,2,3,4,5]";
+String result = "[1,2,3,4,5]";
 
-	JSONAssert.assertEquals("[1,2,3,4,5]", result, false); // Pass
-	JSONAssert.assertEquals("[5,3,2,1,4]", result, false); // Pass, fields order doesn't matter
-	JSONAssert.assertEquals("[1,2,3,4]", result, false);   // Fail, extended fields must match 
+JSONAssert.assertEquals("[1,2,3,4,5]", result, false); // Pass
+JSONAssert.assertEquals("[5,3,2,1,4]", result, false); // Pass, fields order doesn't matter
+JSONAssert.assertEquals("[1,2,3,4]", result, false);   // Fail, extended fields must match
 ```
 
-3.2 当`strictMode`开启时。
+### 3.2 当`strictMode`开启时
 
 ```java
- String result = "[1,2,3,4,5]";
+String result = "[1,2,3,4,5]";
 
-	JSONAssert.assertEquals("[1,2,3,4,5]", result, true); // Pass
-	JSONAssert.assertEquals("[5,3,2,1,4]", result, true); // Fail, fields order must match.
-	JSONAssert.assertEquals("[1,2,3,4]", result, true);   // Fail, extended fields must match 
+JSONAssert.assertEquals("[1,2,3,4,5]", result, true); // Pass
+JSONAssert.assertEquals("[5,3,2,1,4]", result, true); // Fail, fields order must match.
+JSONAssert.assertEquals("[1,2,3,4]", result, true);   // Fail, extended fields must match
 ```
 
-## 4.Spring Boot + JSONAssert
+## 4. Spring Boot + JSONAssert
 
-4.1 对于 Spring Boot，`JSONAssert`捆绑在`spring-boot-starter-test`中
+### 4.1 对于 Spring Boot，`JSONAssert`捆绑在`spring-boot-starter-test`中
 
 ```java
- +- org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE:test
++- org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE:test
 [INFO] |  +- org.springframework.boot:spring-boot-test:jar:2.1.2.RELEASE:test
 [INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:2.1.2.RELEASE:test
 [INFO] |  +- com.jayway.jsonpath:json-path:jar:2.4.0:test
@@ -94,13 +93,13 @@ pom.xml
 [INFO] |  +- org.hamcrest:hamcrest-library:jar:1.3:test
 [INFO] |  +- org.skyscreamer:jsonassert:jar:1.5.0:test     <<-------- JSONAssert
 [INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
-[INFO] |  \- org.xmlunit:xmlunit-core:jar:2.6.2:test 
+[INFO] |  \- org.xmlunit:xmlunit-core:jar:2.6.2:test
 ```
 
-4.2 用`JSONAssert`进行简单的弹簧靴集成测试
+### 4.2 用`JSONAssert`进行简单的 Spring Boot 集成测试
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.json.JSONException;
 import org.junit.Test;
@@ -148,7 +147,7 @@ public class BookControllerRestTemplateTest {
         headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<String> entity = new HttpEntity<>(bookInJson, headers);
 
-        //Try exchange
+        // Try exchange
         ResponseEntity<String> response = restTemplate.exchange("/books", HttpMethod.POST, entity, String.class);
 
         String expectedJson = "{\"status\":400,\"errors\":[\"Author is not allowed.\"]}";
@@ -159,15 +158,15 @@ public class BookControllerRestTemplateTest {
 
     }
 
-} 
+}
 ```
 
-用 Spring Boot 2 号进行了测试
+用 Spring Boot 2 进行了测试。
 
 ## 参考
 
 *   JSONassert
-*   [Jackson 2–将 Java 对象转换成 JSON 从 JSON 转换过来](http://web.archive.org/web/20210814120549/https://www.mkyong.com/java/jackson-2-convert-java-object-to-from-json/)
-*   [弹簧支架集成测试示例](/web/20210814120549/https://mkyong.com/spring-boot/spring-rest-integration-test-example/)
+*   [Jackson 2 – 将 Java 对象转换成 JSON 从 JSON 转换过来](http://web.archive.org/web/20210814120549/https://www.mkyong.com/java/jackson-2-convert-java-object-to-from-json/)
+*   [Spring REST 集成测试示例](/web/20210814120549/https://mkyong.com/spring-boot/spring-rest-integration-test-example/)
 
-Tags : [json](http://web.archive.org/web/20210814120549/https://mkyong.com/tag/json/) [spring test](http://web.archive.org/web/20210814120549/https://mkyong.com/tag/spring-test/) [unit test](http://web.archive.org/web/20210814120549/https://mkyong.com/tag/unit-test/)<input type="hidden" id="mkyong-current-postId" value="14934">
+标签：`json` `spring test` `unit test`

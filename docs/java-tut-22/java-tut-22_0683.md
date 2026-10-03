@@ -1,3 +1,4 @@
+
 # 使用文件和格式转换器
 
 > 原文：[`docs.oracle.com/javase/tutorial/sound/converters.html`](https://docs.oracle.com/javase/tutorial/sound/converters.html)
@@ -18,13 +19,9 @@
 
 +   `AudioSystem`类提供了方法，用于将来自`AudioInputStream`的音频数据流存储到特定类型的音频文件中（换句话说，写入文件），从音频文件中提取音频字节流（`AudioInputStream`）（换句话说，读取文件），以及将音频数据从一种数据格式转换为另一种数据格式。本页分为三个部分，解释了这三种活动。
 
-* * *
-
 **注意：**
 
 Java Sound API 的实现不一定提供全面的设施来读取、写入和转换不同数据和文件格式的音频。它可能仅支持最常见的数据和文件格式。然而，服务提供者可以开发和分发扩展这一集合的转换服务，正如你稍后将在提供采样音频服务中看到的那样。`AudioSystem`类提供了允许应用程序了解可用转换的方法，稍后在转换文件和数据格式下描述。
-
-* * *
 
 ## 读取声音文件
 
@@ -37,10 +34,9 @@ Java Sound API 的实现不一定提供全面的设施来读取、写入和转�
 第一个是`getAudioFileFormat`方法的三个变体：
 
 ```java
-    static AudioFileFormat getAudioFileFormat (java.io.File file)
-    static AudioFileFormat getAudioFileFormat(java.io.InputStream stream)
-    static AudioFileFormat getAudioFileFormat (java.net.URL url)
-
+static AudioFileFormat getAudioFileFormat (java.io.File file)
+static AudioFileFormat getAudioFileFormat(java.io.InputStream stream)
+static AudioFileFormat getAudioFileFormat (java.net.URL url)
 ```
 
 如上所述，返回的`AudioFileFormat`对象告诉你文件类型、文件中数据的长度、编码、字节顺序、通道数、采样率和每个样本的位数。
@@ -48,10 +44,9 @@ Java Sound API 的实现不一定提供全面的设施来读取、写入和转�
 第二种文件读取功能由这些`AudioSystem`方法提供。
 
 ```java
-    static AudioInputStream getAudioInputStream (java.io.File file)
-    static AudioInputStream getAudioInputStream (java.net.URL url)
-    static AudioInputStream getAudioInputStream (java.io.InputStream stream)
-
+static AudioInputStream getAudioInputStream (java.io.File file)
+static AudioInputStream getAudioInputStream (java.net.URL url)
+static AudioInputStream getAudioInputStream (java.io.InputStream stream)
 ```
 
 这些方法给你一个对象（一个`AudioInputStream`），让你使用`AudioInputStream`的读取方法读取文件的音频数据。我们马上会看到一个例子。
@@ -60,9 +55,9 @@ Java Sound API 的实现不一定提供全面的设施来读取、写入和转�
 
 1.  从文件中获取一个`AudioInputStream`对象。
 
-1.  创建一个字节数组，用于存储文件中连续的数据块。
+2.  创建一个字节数组，用于存储文件中连续的数据块。
 
-1.  重复从音频输入流中读取字节到数组中。在每次迭代中，对数组中的字节执行一些有用的操作（例如，你可以播放它们、过滤它们、分析它们、显示它们或将它们写入另一个文件）。
+3.  重复从音频输入流中读取字节到数组中。在每次迭代中，对数组中的字节执行一些有用的操作（例如，你可以播放它们、过滤它们、分析它们、显示它们或将它们写入另一个文件）。
 
 以下代码片段概述了这些步骤：
 
@@ -102,7 +97,6 @@ try {
 } catch (Exception e) {
   // Handle the error...
 }
-
 ```
 
 让我们看看上面代码示例中发生了什么。首先，外部的`try`子句通过调用`AudioSystem.getAudioInputStream(File)`方法实例化了一个`AudioInputStream`对象。此方法透明地执行了所有必要的测试，以确定指定的文件实际上是 Java Sound API 支持的声音文件类型。如果正在检查的文件（例如此示例中的`fileIn`）不是声音文件，或者是某种不受支持的声音文件类型，将抛出`UnsupportedAudioFileException`异常。这种行为很方便，因为应用程序员不需要测试文件属性，也不需要遵守任何文件命名约定。相反，`getAudioInputStream`方法负责处理验证输入文件所需的所有底层解析和验证。然后，外部的`try`子句创建了一个名为`audioBytes`的字节数组，长度是任意固定的。我们确保其字节长度等于整数帧数，这样我们就不会最终只读取部分帧或更糟糕的是只读取部分样本。这个字节数组将作为一个缓冲区，临时保存从流中读取的一块音频数据。如果我们知道我们将只读取非常短的声音文件，我们可以使此数组与文件中的数据长度相同，通过从`AudioInputStream`的`getFrameLength`方法返回的帧数长度来推导其字节长度。（实际上，我们可能会使用`Clip`对象。）但为了避免在一般情况下耗尽内存，我们会一次读取一个缓冲区的文件。
@@ -120,7 +114,6 @@ try {
 ```java
 static int write(AudioInputStream in, 
   AudioFileFormat.Type fileType, File out)
-
 ```
 
 请注意，第二个参数必须是系统支持的文件类型之一（例如，AU、AIFF 或 WAV），否则`write`方法将抛出`IllegalArgumentException`。为了避免这种情况，您可以通过调用此`AudioSystem`方法来测试特定`AudioInputStream`是否可以写入特定类型的文件：
@@ -128,7 +121,6 @@ static int write(AudioInputStream in,
 ```java
 static boolean isFileTypeSupported
   (AudioFileFormat.Type fileType, AudioInputStream stream)
-
 ```
 
 只有在支持特定组合时才会返回`true`。
@@ -138,7 +130,6 @@ static boolean isFileTypeSupported
 ```java
 static AudioFileFormat.Type[] getAudioFileTypes() 
 static AudioFileFormat.Type[] getAudioFileTypes(AudioInputStream stream) 
-
 ```
 
 其中第一个返回系统可以写入的所有文件类型，第二个仅返回系统可以从给定音频输入流写入的文件类型。
@@ -152,7 +143,6 @@ if (AudioSystem.isFileTypeSupported(fileType,
     audioInputStream)) {
   AudioSystem.write(audioInputStream, fileType, fileOut);
 }
-
 ```
 
 上面的第一个语句创建了一个新的`File`对象`fileOut`，带有用户或程序指定的路径名。第二个语句从名为`fileFormat`的预先存在的`AudioFileFormat`对象中获取文件类型，该对象可能已从其他声音文件（例如，在上面的读取声音文件中读取的文件）中获取。 （您可以选择提供您想要的任何支持的文件类型，而不是从其他地方获取文件类型。例如，您可以删除第二个语句，并将上面代码中的其他两个`fileType`出现替换为`AudioFileFormat.Type.WAVE`。）
@@ -170,6 +160,8 @@ if (AudioSystem.isFileTypeSupported(fileType,
 本节介绍了在 Java Sound API 中转换音频文件类型的基础知识。再次，我们提出一个假设的程序，其目的是从任意输入文件中读取音频数据并将其写入类型为 AIFF 的文件中。当然，输入文件必须是系统能够读取的类型，输出文件必须是系统能够写入的类型。（在此示例中，我们假设系统能够写入 AIFF 文件。）示例程序不执行任何数据格式转换。如果输入文件的数据格式无法表示为 AIFF 文件，则程序简单地通知用户存在问题。另一方面，如果输入音频文件已经是 AIFF 文件，则程序会通知用户无需转换。
 
 以下函数实现了刚才描述的逻辑：
+
+
 
 ```java
 public void ConvertFileToAIFF(String inputPath, 
@@ -224,7 +216,6 @@ public void ConvertFileToAIFF(String inputPath,
     return;
   }
 }
-
 ```
 
 如前所述，此示例函数`ConvertFileToAIFF`的目的是查询输入文件，以确定它是否是 AIFF 音频文件，如果不是，则尝试将其转换为 AIFF 格式，生成一个新的副本，其路径名由第二个参数指定。（作为练习，您可以尝试使此函数更通用，以便不总是转换为 AIFF，而是根据新的函数参数指定的文件类型进行转换。）请注意，副本的音频数据格式——即新文件模仿原始输入文件的音频数据格式。
@@ -254,7 +245,6 @@ public void ConvertFileToAIFF(String inputPath,
 ```java
 AudioInputStream getAudioInputStream(AudioFormat
     format, AudioInputStream stream)
-
 ```
 
 此函数返回一个`AudioInputStream`，该流是使用指定的`AudioFormat``format`转换`stream`的结果。如果`AudioSystem`不支持转换，此函数会抛出`IllegalArgumentException`。
@@ -264,7 +254,6 @@ AudioInputStream getAudioInputStream(AudioFormat
 ```java
 boolean isConversionSupported(AudioFormat targetFormat,
     AudioFormat sourceFormat)
-
 ```
 
 在这种情况下，我们将`stream.getFormat()`作为第二个参数传递。
@@ -274,7 +263,6 @@ boolean isConversionSupported(AudioFormat targetFormat,
 ```java
 AudioFormat(float sampleRate, int sampleSizeInBits,
     int channels, boolean signed, boolean bigEndian)
-
 ```
 
 使用线性 PCM 编码和给定参数构造一个`AudioFormat`，或者：
@@ -283,7 +271,6 @@ AudioFormat(float sampleRate, int sampleSizeInBits,
 AudioFormat(AudioFormat.Encoding encoding, 
     float sampleRate, int sampleSizeInBits, int channels,
     int frameSize, float frameRate, boolean bigEndian) 
-
 ```
 
 还构造了一个`AudioFormat`，但允许您指定编码、帧大小和帧速率，除了其他参数。
@@ -293,7 +280,6 @@ AudioFormat(AudioFormat.Encoding encoding,
 ```java
 AudioFormat outDataFormat = new AudioFormat((float) 8000.0,
 (int) 8, (int) 1, true, false);
-
 ```
 
 由于上面的`AudioFormat`构造函数描述了一个具有 8 位样本的格式，因此构造函数的最后一个参数，指定样本是大端还是小端，是无关紧要的。（大端与小端只有在样本大小大于一个字节时才是一个问题。）
@@ -307,7 +293,6 @@ AudioInputStream lowResAIS;
     lowResAIS = AudioSystem.getAudioInputStream
       (outDataFormat, inFileAIS);
   }
-
 ```
 
 不管我们在何处插入这段代码，只要它在构建`inFileAIS`之后即可。如果没有`isConversionSupported`测试，如果请求的特定转换不受支持，调用将失败并抛出`IllegalArgumentException`。（在这种情况下，控制将转移到我们函数中适当的`catch`子句。）
@@ -319,23 +304,17 @@ AudioInputStream lowResAIS;
 ```java
 AudioSystem.write(lowResAIS, AudioFileFormat.Type.AIFF, 
   outFile);
-
 ```
 
 对我们之前的函数进行这几处修改，可以产生一个能够转换任何指定输入文件的音频数据和文件格式的东西，前提是系统支持转换。
 
 ## 学习可用的转换方式
 
-几个`AudioSystem`方法会测试它们的参数，以确定系统是否支持特定的数据格式转换或文件写入操作。（通常，每个方法都与另一个方法配对，执行数据转换或写入文件。）其中一个查询方法`AudioSystem.isFileTypeSupported`在我们的示例函数`ConvertFileToAIFF`中被使用，以确定系统是否能够将音频数据写入 AIFF 文件。相关的`AudioSystem`方法`getAudioFileTypes(AudioInputStream)`返回给定流支持的所有文件类型的完整列表，作为`AudioFileFormat.Type`实例的数组。该方法：BEGINCODE boolean isConversionSupported(AudioFormat.Encoding encoding，
-
-AudioFormat 格式）
-
-用于确定是否可以从具有指定音频格式的音频输入流中获取具有指定编码的音频输入流。类似地，该方法：
+几个`AudioSystem`方法会测试它们的参数，以确定系统是否支持特定的数据格式转换或文件写入操作。（通常，每个方法都与另一个方法配对，执行数据转换或写入文件。）其中一个查询方法`AudioSystem.isFileTypeSupported`在我们的示例函数`ConvertFileToAIFF`中被使用，以确定系统是否能够将音频数据写入 AIFF 文件。相关的`AudioSystem`方法`getAudioFileTypes(AudioInputStream)`返回给定流支持的所有文件类型的完整列表，作为`AudioFileFormat.Type`实例的数组。该方法：`boolean isConversionSupported(AudioFormat.Encoding encoding, AudioFormat format)`用于确定是否可以从具有指定音频格式的音频输入流中获取具有指定编码的音频输入流。类似地，该方法：
 
 ```java
 boolean isConversionSupported(AudioFormat newFormat,
                               AudioFormat oldFormat) 
-
 ```
 
 告诉我们是否可以通过将具有音频格式`oldFormat`的`AudioInputStream`转换为具有指定音频格式`newFormat`的`AudioInputStream`来获得`AudioInputStream`。（这个方法在前一节代码片段中被调用，用于创建低分辨率音频输入流`lowResAIS`。）

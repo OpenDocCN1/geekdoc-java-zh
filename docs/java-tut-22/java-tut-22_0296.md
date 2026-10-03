@@ -1,3 +1,4 @@
+
 # 使用 JNLP API 访问客户端
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/doingMoreWithRIA/usingJNLPAPI.html`](https://docs.oracle.com/javase/tutorial/deployment/doingMoreWithRIA/usingJNLPAPI.html)
@@ -6,25 +7,36 @@
 
 接下来显示文本编辑器小程序。
 
-//&lt;![CDATA[ var attributes = { code:'TextEditorApplet.class', archive:'examples/dist/applet_JNLP_API/applet_JNLP_API.jar', width:500, height:300} ; var parameters = { jnlp_href: 'examples/dist/applet_JNLP_API/texteditor_applet.jnlp' }; deployJava.runApplet(attributes, parameters, '1.6'); //]]&gt;
+```
+//<![CDATA[
+var attributes = {
+    code: 'TextEditorApplet.class',
+    archive: 'examples/dist/applet_JNLP_API/applet_JNLP_API.jar',
+    width: 500,
+    height: 300
+};
+var parameters = {
+    jnlp_href: 'examples/dist/applet_JNLP_API/texteditor_applet.jnlp'
+};
+deployJava.runApplet(attributes, parameters, '1.6');
+//]]>
+```
 
-* * *
+---
 
-**注意：** 如果您看不到小程序运行，请至少安装[Java SE 开发工具包（JDK）6 更新 10](http://www.oracle.com/technetwork/java/javase/downloads/index.html)版本。
+**注意：** 如果您看不到小程序运行，请至少安装 [Java SE 开发工具包（JDK）6 更新 10](http://www.oracle.com/technetwork/java/javase/downloads/index.html) 版本。
 
-* * *
-
-* * *
+---
 
 **注意：** 如果您看不到示例运行，可能需要在浏览器中启用 JavaScript 解释器，以便部署工具包脚本能够正常运行。
 
-* * *
+---
 
-`TextEditor`和`TextEditorApplet`类布局用户界面并将其显示为小程序。`FileHandler`类包含了关于使用基于 JNLP API 的服务的核心功能。
+`TextEditor` 和 `TextEditorApplet` 类布局用户界面并将其显示为小程序。`FileHandler` 类包含了关于使用基于 JNLP API 的服务的核心功能。
 
 记住，本主题中描述的技术也适用于 Java Web Start 应用程序。
 
-要使用 JNLP 服务，首先检索对服务的引用。`FileHandler`类的`initialize`方法检索 JNLP 服务的引用，如下面的代码片段所示：
+要使用 JNLP 服务，首先检索对服务的引用。`FileHandler` 类的 `initialize` 方法检索 JNLP 服务的引用，如下面的代码片段所示：
 
 ```java
 private static synchronized void initialize() {
@@ -38,10 +50,9 @@ private static synchronized void initialize() {
         ...
     }
 }
-
 ```
 
-在获得所需服务的引用之后，调用服务上的方法执行必要的操作。`FileHandler`类的`open`方法调用[`FileOpenService`](https://docs.oracle.com/javase/8/docs/jre/api/javaws/jnlp/javax/jnlp/FileOpenService.html)类的`openFileDialog`方法以显示文件选择器。`open`方法返回所选文件的内容。
+在获得所需服务的引用之后，调用服务上的方法执行必要的操作。`FileHandler` 类的 `open` 方法调用 [`FileOpenService`](https://docs.oracle.com/javase/8/docs/jre/api/javaws/jnlp/javax/jnlp/FileOpenService.html) 类的 `openFileDialog` 方法以显示文件选择器。`open` 方法返回所选文件的内容。
 
 ```java
 public static String open() {
@@ -54,10 +65,9 @@ public static String open() {
         return null;
     }
 }
-
 ```
 
-类似地，`FileHandler`类的`save`和`saveAs`方法调用[`FileSaveService`](https://docs.oracle.com/javase/8/docs/jre/api/javaws/jnlp/javax/jnlp/FileSaveService.html)类的相应方法，以使用户能够选择文件名并将文本区域的内容保存到磁盘。
+类似地，`FileHandler` 类的 `save` 和 `saveAs` 方法调用 [`FileSaveService`](https://docs.oracle.com/javase/8/docs/jre/api/javaws/jnlp/javax/jnlp/FileSaveService.html) 类的相应方法，以使用户能够选择文件名并将文本区域的内容保存到磁盘。
 
 ```java
 public static void saveAs(String txt) {
@@ -76,16 +86,14 @@ public static void saveAs(String txt) {
         ioe.printStackTrace(System.out);
     }
 }
-
 ```
 
 在运行时，当 RIA 尝试打开或保存文件时，用户会看到一个安全对话框，询问他们是否允许该操作。只有在用户允许 RIA 访问其环境时，操作才会继续进行。
 
-下面显示了`FileHandler`类的完整源代码。
+下面显示了 `FileHandler` 类的完整源代码。
 
 ```java
-
-// add javaws.jar to the classpath during compilation 
+// add javaws.jar to the classpath during compilation
 import javax.jnlp.FileOpenService;
 import javax.jnlp.FileSaveService;
 import javax.jnlp.FileContents;
@@ -187,13 +195,12 @@ public class FileHandler {
         return sb.toString();
     }
 }
-
 ```
 
-* * *
+---
 
-**注意：** 要编译具有对`javax.jnlp`包中类的引用的 Java 代码，请在类路径中包含`<你的 JDK 路径>/jre/lib/javaws.jar`。在运行时，Java 运行环境软件会自动使这些类对 RIA 可用。
+**注意：** 要编译具有对 `javax.jnlp` 包中类的引用的 Java 代码，请在类路径中包含 `<你的 JDK 路径>/jre/lib/javaws.jar`。在运行时，Java 运行环境软件会自动使这些类对 RIA 可用。
 
-* * *
+---
 
 下载源代码以进一步尝试*文本编辑器小程序*示例。

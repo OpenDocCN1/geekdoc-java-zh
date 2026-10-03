@@ -1,8 +1,9 @@
+
 # 使用 Raspberry Pi 作为 HDMI 摄像头
 
 > 原文：<https://medium.com/javarevisited/using-a-raspberry-pi-as-hdmi-camera-92af84aafee2?source=collection_archive---------0----------------------->
 
-# TL；DR；是的，您可以构建自己的 Raspberry Pi HQ 摄像机，用作 ATEM Mini 的 HDMI 信号源
+## TL；DR；是的，您可以构建自己的 Raspberry Pi HQ 摄像机，用作 ATEM Mini 的 HDMI 信号源
 
 寻找一款价格实惠的 HDMI 输出相机？用树莓派 Zero 2 自己做一个吧！
 
@@ -12,15 +13,15 @@
 
 Raspberry Pi Zero 2 带 HQ 摄像头，采用 3D 打印外壳
 
-# 一些历史…从儿童程序员到视频编辑再到编程
+## 一些历史…从儿童程序员到视频编辑再到编程
 
-当我 11 岁得到 Commodore 64 时，我开始编程。从那以后，技术、编程和电影制作一直是我最感兴趣的。这就是为什么我去了电影学院，开始了我的视频编辑职业生涯。商业视频、CD-r om、DVD、互联网视频都是即将到来的新技术。当我需要将视频作品转换成多媒体项目时，我就是这样成为全职程序员的。
+当我 11 岁得到 Commodore 64 时，我开始编程。从那以后，技术、编程和电影制作一直是我最感兴趣的。这就是为什么我去了电影学院，开始了我的视频编辑职业生涯。商业视频、CD-rom、DVD、互联网视频都是即将到来的新技术。当我需要将视频作品转换成多媒体项目时，我就是这样成为全职程序员的。
 
 当时的视频编辑工作室是一个非常复杂和昂贵的系统，包含许多设备和电缆，需要大量的技术技能来调整一切。当电脑编辑出现时，当一台电脑能够取代几乎所有如此复杂的系统时，整个视频世界发生了天翻地覆的变化。
 
-由于我目前正在用 Raspberry Pi 进行大量实验，并希望在演示和视频中展示这一点，我正在寻找一种理想的解决方案来进行屏幕和相机录制。是的， [OBS(开放式广播软件)](https://obsproject.com/)是一个很棒的工具，但它并不是我想要的…回到硬件视频解决方案对我来说是最理想的解决方案！
+由于我目前正在用 Raspberry Pi 进行大量实验，并希望在演示和视频中展示这一点，我正在寻找一种理想的解决方案来进行屏幕和相机录制。是的，[OBS(开放式广播软件)](https://obsproject.com/)是一个很棒的工具，但它并不是我想要的…回到硬件视频解决方案对我来说是最理想的解决方案！
 
-# ATEM 迷你专业版
+## ATEM 迷你专业版
 
 Blackmagicdesign 设计的 [ATEM Mini 在我的愿望清单上已经有很长时间了。该设备有 4 个 HDMI 输入和 2 个音频输入，您可以录制到 USB-C 驱动器，或直接将其用作计算机的外部 USB 网络摄像头，例如视频通话。](https://www.blackmagicdesign.com/products/atemmini)
 
@@ -30,23 +31,23 @@ Blackmagicdesign 设计的 [ATEM Mini 在我的愿望清单上已经有很长时
 
 大多数时候，我把它当作一个昂贵的视频开关，在一个显示器上显示我的许多树莓派中的一个。但是我想用几个摄像机来扩展我的设置，以便能够在视频录制或现场会议期间显示测试设置。
 
-# 选择 HDMI 摄像机
+## 选择 HDMI 摄像机
 
 由于 ATEM 迷你有四个 HDMI 输入，所以你所有的信号源都需要一个 HDMI 输出…对于树莓 Pi 的桌面屏幕来说，这不是问题(只要你有正确类型的电缆，从迷你或微型 HDMI 到全 HDMI)。对于相机来说，这有点难，但你有几个选择，都相当昂贵。
 
-# DSLR 照相机
+### DSLR 照相机
 
 大多数 DSLR 相机都有 HDMI 输出，但你必须小心选择哪一个，因为不是所有的相机都提供“干净的输出”，这意味着没有观众信息在这个输出上。在为此目的购买相机之前，请确保搜索它是否提供这种清晰的输出。
 
-# 摄像机或 GoPro
+### 摄像机或 GoPro
 
 与 DSLR 相机相同的问题:确保有一个干净的 HDMI 输出。
 
-# 网络摄像头
+### 网络摄像头
 
 抱歉，没找到带 HDMI 输出的…
 
-# HDMI 摄像头
+### HDMI 摄像头
 
 这里有几个选择。
 
@@ -123,33 +124,35 @@ Dec 12 19:17:08 raspberrypi libcamera-hello[891]: [0:05:40.618657773] [893]  INF
 Dec 12 19:17:08 raspberrypi libcamera-hello[891]: [0:05:41.156818620] [893]  INFO RPI raspberrypi.cpp:1636 Dropping frame at the request of the IPA (6 left)
 ```
 
-# 3D 打印外壳
+## 3D 打印外壳
 
 下一步，让我们将摄像机安装在外壳中。如果你有一台 3D 打印机，这是一个简单的步骤，因为有完整的树莓 Pi 和零的设计。
 
-# 树莓 Pi 4 + HQ 摄像头
+### 树莓 Pi 4 + HQ 摄像头
 
 Prusa printers 网站上的项目，一步一步地在 Adafruit 上组装:
 
 *   [打印文件](https://www.prusaprinters.org/prints/32718-raspberry-pi-hq-camera-case)
+
 *   [逐步组装](https://learn.adafruit.com/raspberry-pi-hq-camera-case/)
 
 ![](img/733516a1e3a924180b9eac182a847ac4.png)![](img/f7d295ac4d715592a5b6fa22f059909d.png)![](img/adcd9e1a74245d37cb0da3963a2a7ec3.png)
 
 带 HQ 摄像头模块的 Raspberry Pi 4 外壳
 
-# 树莓派 Zero + HQ 相机
+### 树莓派 Zero + HQ 相机
 
 前一个项目的混搭也适用于零的住宅:
 
 *   [打印文件](https://www.prusaprinters.org/prints/48519-raspberry-pi-zero-webcam-hq-camera/)
+
 *   2M 螺钉(相机和 Pi)和 2.5M 螺钉(关闭外壳)
 
 ![](img/5a6d7dfe9d04d0b5823bb2b7217eab7f.png)![](img/1941dddcf3aeba92aabb0279f70f6903.png)![](img/4d9e7b6107bcffa3a0e111a8645cc2fe.png)![](img/df3497468bce948974c59d6b6cdf2a89.png)![](img/0bf1038bf7ed15e15d97affdb4be00b6.png)![](img/b571b5a8198566eb5c247e4f8d810a0a.png)
 
 带 HQ 摄像头模块的 Raspberry Pi Zero (2)外壳
 
-# 结论
+## 结论
 
 Raspberry Pi 相机的质量对于我的使用案例来说已经足够好了。正如你在上面的视频中所看到的，相机的移动并不太平滑，但固定的视图显示例如一个电子项目是完美的。我可能仍然需要在一些更好的闪电中进行调查，因为我桌子上方的 LED 面板似乎也会产生一些“噪音”。
 
@@ -157,8 +160,8 @@ Raspberry Pi 相机的质量对于我的使用案例来说已经足够好了。�
 
 你可以在[“用 ATEM 迷你和树莓皮相机进行多机位录制”](https://frankdelporte.medium.com/multicam-recordings-with-atem-mini-and-raspberry-pi-cameras-a2ba0569411)中找到更多“幕后”和最终编辑。
 
-# 额外小费
+## 额外小费
 
 寻找专业的视频编辑解决方案？Blackmagicdesign 不仅生产所有价位的视频硬件产品，还免费提供精彩的[达芬奇解决方案](https://www.blackmagicdesign.com/products/davinciresolve/)！这个程序将编辑、色彩校正、视觉效果、动画和音频后期制作全部结合在一个软件工具中！有一个额外功能的付费版本，但我没有错过我需要创建的视频，我想我仍然只使用了一小部分的可能性…
 
-*原载于*[*https://web techie . be*](https://webtechie.be/post/2021-12-20-raspberry-pi-as-hdmi-camera-for-atem-mini/)*。*
+*原载于*[*https://webtechie.be*](https://webtechie.be/post/2021-12-20-raspberry-pi-as-hdmi-camera-for-atem-mini/)*。*

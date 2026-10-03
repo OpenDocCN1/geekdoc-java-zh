@@ -1,3 +1,4 @@
+
 # 2023 年 Java 开发人员的 10 门最佳 Udemy 课程
 
 > 原文：<https://medium.com/javarevisited/10-best-udemy-online-courses-for-java-developers-4c9ab70cd01f?source=collection_archive---------1----------------------->
@@ -90,29 +91,31 @@ Git 是目前最流行的版本控制系统。它不同于 SVN 或 CVS，因为�
 
 **这里是加入本课程**——[Maven 速成班](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fmavencrashcourse%2F)的链接
 
+
+
 [![](img/a0f9e460611e46559e258d6a2b66608e.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fmavencrashcourse%2F)
 
-## 8.[Docker Mastery:Docker 船长的全套工具集](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fdocker-mastery%2F)
+## 8. [Docker Mastery：Docker 船长的全套工具集](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fdocker-mastery%2F)
 
-Docker 是 2023 年 Java 开发者需要学习的另一项必备技能。Docker 为您的移动和 web 应用程序提供了一种新的开发和部署方式。在当前的分布式开发和实现世界中，它越来越成为一项基本技能。
+Docker 是 2023 年 Java 开发者需要学习的另一项必备技能。Docker 为您的移动和 Web 应用程序提供了一种新的开发和部署方式。在当前的分布式开发和实现世界中，它越来越成为一项基本技能。
 
 本课程不仅介绍了 Docker 的概况，还提供了不同 Docker 工具的完整概述。
 
-**这里是加入本课程的链接**——[码头工人掌握:码头工人船长的全套工具](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fdocker-mastery%2F)
+这里是加入本课程的链接——[码头工人掌握：码头工人船长的全套工具](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fdocker-mastery%2F)。
 
 [![](img/e4a0a382505daa3d138934344bee385c.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fdocker-mastery%2F)
 
-## 9.[弹簧框架 5 的反应式编程](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Freactive-programming-with-spring-framework-5%2F)
+## 9. [弹簧框架 5 的反应式编程](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Freactive-programming-with-spring-framework-5%2F)
 
 约翰·汤姆逊教授的另一门优秀的高级课程，特别关注 Spring 5 的反应式编程。
 
-本课程提供构建反应式应用程序的实践经验，利用反应式数据类型和[web flux](/javarevisited/7-best-webflux-and-reactive-spring-boot-courses-for-java-programmers-33b7c6fa8995)——这两者都是 Spring Framework 5 的新特性。
+本课程提供构建反应式应用程序的实践经验，利用反应式数据类型和 [WebFlux](/javarevisited/7-best-webflux-and-reactive-spring-boot-courses-for-java-programmers-33b7c6fa8995)——这两者都是 Spring Framework 5 的新特性。
 
-**这里是加入本课程** — [用 Spring 框架 5 进行反应式编程](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Freactive-programming-with-spring-framework-5%2F)的链接
+这里是加入本课程的链接——[用 Spring 框架 5 进行反应式编程](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Freactive-programming-with-spring-framework-5%2F)。
 
 [![](img/1a42070a357038f3130794e91d9174b3.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Freactive-programming-with-spring-framework-5%2F)
 
-## 10. [Java 多线程，并发，&性能优化](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjava-multithreading-concurrency-performance-optimization%2F)
+## 10. [Java 多线程、并发，& 性能优化](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjava-multithreading-concurrency-performance-optimization%2F)
 
 多线程和并发性是 Java 开发人员最需要的技能之一。对很好理解多线程和并发的 Java 开发人员要求很高，但同时，这也是很难掌握的课题之一。
 
@@ -120,41 +123,41 @@ Docker 是 2023 年 Java 开发者需要学习的另一项必备技能。Docker 
 
 我把它放在第一位是有原因的，因为这可能是列表中最重要的课程，强烈推荐每个 Java 开发人员都去学习。
 
-**这里是加入本课程的链接** — [Java 多线程、并发、&性能优化](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjava-multithreading-concurrency-performance-optimization%2F)
+这里是加入本课程的链接——[Java 多线程、并发，& 性能优化](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjava-multithreading-concurrency-performance-optimization%2F)。
 
 [![](img/fe9b86b494e5cc270e0fe258e68f1572.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fjava-multithreading-concurrency-performance-optimization%2F)
 
-## 11.[重构金字塔(Java) —逐渐清理代码](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpyramid-of-refactoring-java-interpreter-factories%2F)
+## 11. [重构金字塔（Java）——逐渐清理代码](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpyramid-of-refactoring-java-interpreter-factories%2F)
 
-这是 Java 开发人员提高编码技能的又一门高级课程。你将逐渐学习如何编写干净的代码，并注意到新出现的[设计模式](/javarevisited/7-best-online-courses-to-learn-object-oriented-design-pattern-in-java-749b6399af59)，如解释器、流畅构建器、工厂方法
+这是 Java 开发人员提高编码技能的又一门高级课程。你将逐渐学习如何编写干净的代码，并注意到新出现的[设计模式](/javarevisited/7-best-online-courses-to-learn-object-oriented-design-pattern-in-java-749b6399af59)，如解释器、流畅构建器、工厂方法。
 
 这是“重构金字塔”系列的第一个模块，致力于实现干净的代码。这个系列还有几门课程。
 
 讲师使用重构技术，并实时执行所有更改，这有助于您理解重构如何提高代码质量。如果你对代码质量很认真，那么这个课程会给你很大帮助。
 
-**这里是加入本课程的链接**——[重构金字塔(Java)——逐步清理代码](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpyramid-of-refactoring-java-interpreter-factories%2F)
+这里是加入本课程的链接——[重构金字塔（Java）——逐步清理代码](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpyramid-of-refactoring-java-interpreter-factories%2F)。
 
 [![](img/63157f2f65981e92b55b14a5157429d5.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpyramid-of-refactoring-java-interpreter-factories%2F)
 
 以上是针对 Java 和 Web 开发人员的一些顶级 Udemy 课程。Udemy 定期举办[疯狂促销](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&offerid=323058.9410&type=3&subid=0)，每门课程只需 10 美元，这是购买你喜欢的课程的绝佳机会，然后你可以在方便的时候选修。Udemy 让你可以终身使用你购买的课程，这意味着你可以随时制作。
 
-其他**编程文章**你可能喜欢
+其他**编程文章**你可能喜欢：
 
-*   [2023 年 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
-*   [2023 年 Java 程序员应该学会的 10 件事](https://javarevisited.blogspot.com/2017/12/10-things-java-programmers-should-learn.html#axzz5atl0BngO)
-*   [2023 年前端和后端开发者路线图](https://javarevisited.blogspot.com/2019/02/the-2019-web-developer-roadmap.html)
-*   [2023 年你可以学习的 10 种编程语言](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html)
-*   [每个 Java 开发人员都应该知道的 10 个工具](http://www.java67.com/2018/04/10-tools-java-developers-should-learn.html)
-*   [学习 Java 编程语言的 10 个理由](http://javarevisited.blogspot.sg/2013/04/10-reasons-to-learn-java-programming.html)
-*   [Java 和 Web 开发者应该学习的 10 个框架](http://javarevisited.blogspot.sg/2018/01/10-frameworks-java-and-web-developers-should-learn.html)
-*   [Udemy 与 plural sight——哪个对编码员更好](https://javarevisited.blogspot.com/2019/10/udemy-vs-pluralsight-review-which-is-better-to-learn-code.html)
-*   [2023 年成为更好的 Java 开发人员的 10 个技巧](http://javarevisited.blogspot.sg/2018/05/10-tips-to-become-better-java-developer.html)
-*   [2023 年需要学习的 5 大 Java 框架](http://javarevisited.blogspot.sg/2018/04/top-5-java-frameworks-to-learn-in-2018_27.html)
-*   [2023 年学习 Python 的 10 个理由](https://javarevisited.blogspot.com/2018/05/10-reasons-to-learn-python-programming.html)
-*   每个 Java 开发人员都应该知道的 10 个测试库
+- [2023 年 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
+- [2023 年 Java 程序员应该学会的 10 件事](https://javarevisited.blogspot.com/2017/12/10-things-java-programmers-should-learn.html#axzz5atl0BngO)
+- [2023 年前端和后端开发者路线图](https://javarevisited.blogspot.com/2019/02/the-2019-web-developer-roadmap.html)
+- [2023 年你可以学习的 10 种编程语言](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html)
+- [每个 Java 开发人员都应该知道的 10 个工具](http://www.java67.com/2018/04/10-tools-java-developers-should-learn.html)
+- [学习 Java 编程语言的 10 个理由](http://javarevisited.blogspot.sg/2013/04/10-reasons-to-learn-java-programming.html)
+- [Java 和 Web 开发者应该学习的 10 个框架](http://javarevisited.blogspot.sg/2018/01/10-frameworks-java-and-web-developers-should-learn.html)
+- [Udemy 与 PluralSight——哪个对编码员更好](https://javarevisited.blogspot.com/2019/10/udemy-vs-pluralsight-review-which-is-better-to-learn-code.html)
+- [2023 年成为更好的 Java 开发人员的 10 个技巧](http://javarevisited.blogspot.sg/2018/05/10-tips-to-become-better-java-developer.html)
+- [2023 年需要学习的 5 大 Java 框架](http://javarevisited.blogspot.sg/2018/04/top-5-java-frameworks-to-learn-in-2018_27.html)
+- [2023 年学习 Python 的 10 个理由](https://javarevisited.blogspot.com/2018/05/10-reasons-to-learn-python-programming.html)
+- 每个 Java 开发人员都应该知道的 10 个测试库
 
 感谢您阅读本文。如果你喜欢 Udemy 的这些 Java 和 Web 开发课程，请与你的朋友分享。如果您有任何问题或反馈，请留言。
 
-**P.S.** —如果你在考虑学习 2023 年新的编程语言，寻找思路，可以看看我关于 2023 年 十大编程语言 [**的帖子。**](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html)
+**P.S.**——如果你在考虑学习 2023 年新的编程语言，寻找思路，可以看看我关于 2023 年十大编程语言[的帖子](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html)。
 
-</javarevisited/5-best-programming-languages-to-get-a-sofware-developer-job-in-google-3d8c83c444d6> 
+</javarevisited/5-best-programming-languages-to-get-a-sofware-developer-job-in-google-3d8c83c444d6>

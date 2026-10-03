@@ -1,3 +1,4 @@
+
 # 让我们在 Google Cloud 中部署我们的在线代码执行器
 
 > 原文：<https://medium.com/javarevisited/lets-deploy-our-online-code-executor-in-google-cloud-e76a9fabac57?source=collection_archive---------0----------------------->
@@ -10,8 +11,8 @@
 
 # 本系列教程
 
-1.  在 Google Cloud 中部署我们的在线代码执行器(本教程)
-2.  [了解判断 0 的 API](/p/c433d8db060d)
-3.  [创建在线代码编辑器前端](/javascript-in-plain-english/lets-develop-an-online-code-editor-compiler-like-hackerrank-702881803eee)
+1. 在 Google Cloud 中部署我们的在线代码执行器（本教程）
+2. [了解判断 0 的 API](/p/c433d8db060d)
+3. [创建在线代码编辑器前端](/javascript-in-plain-english/lets-develop-an-online-code-editor-compiler-like-hackerrank-702881803eee)
 
 # 视频教程

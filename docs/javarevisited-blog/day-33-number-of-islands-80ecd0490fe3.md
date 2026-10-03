@@ -1,8 +1,9 @@
+
 # 第 33 天—岛屿数量
 
 > 原文：<https://medium.com/javarevisited/day-33-number-of-islands-80ecd0490fe3?source=collection_archive---------1----------------------->
 
-## **亚马逊 100 天**
+## 亚马逊 100 天
 
 ![](img/e9a22b29bdd6374dc993f19c41010d37.png)
 

@@ -1,3 +1,4 @@
+
 # SpringBoot3 有哪些新功能？
 
 > 原文：<https://medium.com/javarevisited/what-are-the-new-features-of-springboot3-6ddba9af664?source=collection_archive---------0----------------------->
@@ -10,4 +11,4 @@
 
 到目前为止，Spring Boot 3 已经发布了 6 个版本，累计 5 个里程碑版本，2 个 RC 候选版本。现在跟着我看看 Spring Boot 3.0 会有哪些重大变化。
 
-# 1.Java17
+## 1. Java17

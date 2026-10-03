@@ -1,4 +1,5 @@
-# Spring Boot WebFlux +服务器发送的事件示例
+
+# Spring Boot WebFlux + 服务器发送的事件示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-boot-webflux-server-sent-events-example/>
 
@@ -13,7 +14,7 @@
 在 Spring 中，返回 JSON 和 header `MediaType.TEXT_EVENT_STREAM_VALUE`
 
 ```java
- @RestController
+@RestController
 public class CommentController {
 
     @GetMapping(path = "/comment/stream", 
@@ -22,13 +23,13 @@ public class CommentController {
         //...
     }
 
-} 
+}
 ```
 
 在 Javascript 中，使用`EventSource`向上述端点发送请求。
 
 ```java
- function loadComments () {
+function loadComments () {
 
     this.source = null;
 
@@ -63,17 +64,19 @@ window.onload = function() {
 };
 window.onbeforeunload = function() {
     comment.stop();
-} 
+}
 ```
 
-## 1.项目目录
+## 1. 项目目录
 
-![project directory](img/9b0c42cd24c4b239e68b2a9dbf9deabd.png) ## 2.专家
+![project directory](img/9b0c42cd24c4b239e68b2a9dbf9deabd.png)
 
-pom.xml
+## 2. 专家
+
+`pom.xml`
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
@@ -154,13 +157,15 @@ pom.xml
         </plugins>
     </build>
 
-</project> 
+</project>
 ```
 
 显示项目依赖关系。
 
+
+
 ```java
- $ mvn dependency:tree
+$ mvn dependency:tree
 
 [INFO] com.mkyong.spring.reactive:webflux-thymeleaf-sse:jar:1.0
 [INFO] +- org.springframework.boot:spring-boot-starter-webflux:jar:2.1.2.RELEASE:compile
@@ -245,17 +250,19 @@ pom.xml
 [INFO]    |  \- org.springframework:spring-context:jar:5.1.4.RELEASE:compile
 [INFO]    |     +- org.springframework:spring-aop:jar:5.1.4.RELEASE:compile
 [INFO]    |     \- org.springframework:spring-expression:jar:5.1.4.RELEASE:compile
-[INFO]    \- org.springframework.boot:spring-boot-autoconfigure:jar:2.1.2.RELEASE:compile 
+[INFO]    \- org.springframework.boot:spring-boot-autoconfigure:jar:2.1.2.RELEASE:compile
 ```
 
- ## 3.Spring Boot +春网流量
+## 3. Spring Boot + Spring WebFlux
 
-3.1 基于 Spring WebFlux 注释的控制器。启用数据流。写`produces = MediaType.TEXT_EVENT_STREAM_VALUE`
+### 3.1 基于 Spring WebFlux 注释的控制器
 
-CommentController.java
+启用数据流。写`produces = MediaType.TEXT_EVENT_STREAM_VALUE`。
+
+`CommentController.java`：
 
 ```java
- package com.mkyong.reactive.controller;
+package com.mkyong.reactive.controller;
 
 import com.mkyong.reactive.model.Comment;
 import com.mkyong.reactive.repository.CommentRepository;
@@ -277,13 +284,13 @@ public class CommentController {
         return this.commentRepository.findAll();
     }
 
-} 
+}
 ```
 
-MainController.java
+`MainController.java`：
 
 ```java
- package com.mkyong.reactive.controller;
+package com.mkyong.reactive.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -297,15 +304,15 @@ public class MainController {
         return "index";
     }
 
-} 
+}
 ```
 
-3.2 在`repository`中，返回一个`Flux`对象。
+### 3.2 在`repository`中，返回一个`Flux`对象
 
-CommentRepository.java
+`CommentRepository.java`：
 
 ```java
- package com.mkyong.reactive.repository;
+package com.mkyong.reactive.repository;
 
 import com.mkyong.reactive.model.Comment;
 import reactor.core.publisher.Flux;
@@ -314,56 +321,19 @@ public interface CommentRepository {
 
     Flux<Comment> findAll();
 
-} 
+}
 ```
 
-ReactiveCommentRepository.java
+`ReactiveCommentRepository.java`
+
+
+
+## 3.3 生成随机注释的 utils 类
+
+`CommentGenerator.java`
 
 ```java
- package com.mkyong.reactive.repository;
-
-import com.mkyong.reactive.model.Comment;
-import com.mkyong.reactive.utils.CommentGenerator;
-import org.springframework.stereotype.Repository;
-import reactor.core.publisher.Flux;
-
-import java.time.Duration;
-import java.util.Arrays;
-import java.util.List;
-
-@Repository
-public class ReactiveCommentRepository implements CommentRepository {
-
-    @Override
-    public Flux<Comment> findAll() {
-
-        //simulate data streaming every 1 second.
-        return Flux.interval(Duration.ofSeconds(1))
-                .onBackpressureDrop()
-                .map(this::generateComment)
-                .flatMapIterable(x -> x);
-
-    }
-
-    private List<Comment> generateComment(long interval) {
-
-        Comment obj = new Comment(
-			CommentGenerator.randomAuthor(), 
-			CommentGenerator.randomMessage(), 
-			CommentGenerator.getCurrentTimeStamp());
-        return Arrays.asList(obj);
-
-    }
-
-} 
-```
-
-3.3 生成随机注释的 utils 类。
-
-CommentGenerator.java
-
-```java
- package com.mkyong.reactive.utils;
+package com.mkyong.reactive.utils;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -401,15 +371,15 @@ public class CommentGenerator {
     public static String getCurrentTimeStamp() {
         return dtf.format(LocalDateTime.now());
     }
-} 
+}
 ```
 
-3.4 评论模式。
+## 3.4 评论模式
 
-Movie.java
+`Movie.java`
 
 ```java
- package com.mkyong.reactive.model;
+package com.mkyong.reactive.model;
 
 public class Comment {
 
@@ -418,15 +388,15 @@ public class Comment {
     private String timestamp;
 
     //getter, setter and constructor
-} 
+}
 ```
 
-3.5 开始 Spring Boot。
+## 3.5 开始 Spring Boot
 
-CommentWebApplication.java
+`CommentWebApplication.java`
 
 ```java
- package com.mkyong.reactive;
+package com.mkyong.reactive;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -438,17 +408,17 @@ public class CommentWebApplication {
         SpringApplication.run(CommentWebApplication.class, args);
     }
 
-} 
+}
 ```
 
-## 4.百里香叶
+## 4. 百里香叶
 
 百里香模板中没有特殊的反应标签，只是使用了普通的循环。
 
-resources/templates/index.html
+`resources/templates/index.html`
 
-```java
- <!DOCTYPE html>
+```html
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -490,17 +460,17 @@ resources/templates/index.html
 
 </body>
 
-</html> 
+</html>
 ```
 
-## 5.JavaScript 事件源。
+## 5. JavaScript 事件源
 
 关键是使用 Javascript `EventSource`类发送请求并监听`message`事件，并将流数据反应性地更新到一个表中。
 
-resources/static/js/main.js
+`resources/static/js/main.js`
 
-```java
- function loadComments () {
+```javascript
+function loadComments () {
 
     this.source = null;
 
@@ -553,17 +523,17 @@ window.onload = function() {
 };
 window.onbeforeunload = function() {
     comment.stop();
-} 
+}
 ```
 
-## 6.单元测试
+## 6. 单元测试
 
 `WebTestClient`对[流响应](http://web.archive.org/web/20190308020548/https://docs.spring.io/spring/docs/current/spring-framework-reference/testing.html#webtestclient-stream)进行单元测试
 
-TestCommentWebApplication.java
+`TestCommentWebApplication.java`
 
 ```java
- package com.mkyong.reactive;
+package com.mkyong.reactive;
 
 import com.mkyong.reactive.model.Comment;
 import org.junit.jupiter.api.Test;
@@ -602,43 +572,42 @@ public class TestCommentWebApplication {
 
     }
 
-} 
+}
 ```
 
-## 7.演示
+## 7. 演示
 
-```java
- $ mvn spring-boot:run
+```bash
+$ mvn spring-boot:run
 
-2019-02-11 15:41:17.657  INFO 257192 --- [  restartedMain] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port(s): 8080 
+2019-02-11 15:41:17.657  INFO 257192 --- [  restartedMain] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port(s): 8080
 ```
 
-URL =*http://localhost:8080*
+URL = `http://localhost:8080`
+
 数据是流式的，每 1 秒就会显示随机评论。
 
 ![](img/b877f3a8b0c9603e6f8ec3085a390b9e.png)
 
 ## 下载源代码
 
-$ git clone [https://github.com/mkyong/spring-boot.git](http://web.archive.org/web/20190308020548/https://github.com/mkyong/spring-boot.git)
+```bash
+$ git clone https://github.com/mkyong/spring-boot.git
 $ cd webflux-thymeleaf-serversentevent
 $ mvn spring-boot:run
+```
 
 ## 参考
 
-*   [事件来源](http://web.archive.org/web/20190308020548/https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
-*   [服务器发送的事件](http://web.archive.org/web/20190308020548/https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events)
-*   [使用服务器发送的事件](http://web.archive.org/web/20190308020548/https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
-*   [百里香叶与弹簧网反应](http://web.archive.org/web/20190308020548/https://github.com/thymeleaf/thymeleafsandbox-biglist-reactive)
-*   [Spring WebFlux Workshop](http://web.archive.org/web/20190308020548/https://bclozel.github.io/webflux-workshop/)
-*   [Spring Boot WebFlux +百里香叶反应示例](http://web.archive.org/web/20190308020548/https://www.mkyong.com/spring-boot/spring-boot-webflux-thymeleaf-reactive-example/)
-*   [写作测试–流响应](http://web.archive.org/web/20190308020548/https://docs.spring.io/spring/docs/current/spring-framework-reference/testing.html#webtestclient-stream)
+- [事件来源](http://web.archive.org/web/20190308020548/https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
+- [服务器发送的事件](http://web.archive.org/web/20190308020548/https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events)
+- [使用服务器发送的事件](http://web.archive.org/web/20190308020548/https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
+- [百里香叶与弹簧网反应](http://web.archive.org/web/20190308020548/https://github.com/thymeleaf/thymeleafsandbox-biglist-reactive)
+
+
+
+* [Spring WebFlux Workshop](http://web.archive.org/web/20190308020548/https://bclozel.github.io/webflux-workshop/)
+* [Spring Boot WebFlux +百里香叶反应示例](http://web.archive.org/web/20190308020548/https://www.mkyong.com/spring-boot/spring-boot-webflux-thymeleaf-reactive-example/)
+* [写作测试–流响应](http://web.archive.org/web/20190308020548/https://docs.spring.io/spring/docs/current/spring-framework-reference/testing.html#webtestclient-stream)
 
 [junit 5](http://web.archive.org/web/20190308020548/http://www.mkyong.com/tag/junit-5/) [reactive](http://web.archive.org/web/20190308020548/http://www.mkyong.com/tag/reactive/) [spring boot](http://web.archive.org/web/20190308020548/http://www.mkyong.com/tag/spring-boot/) [sse](http://web.archive.org/web/20190308020548/http://www.mkyong.com/tag/sse/) [thymeleaf](http://web.archive.org/web/20190308020548/http://www.mkyong.com/tag/thymeleaf/) [webflux](http://web.archive.org/web/20190308020548/http://www.mkyong.com/tag/webflux/)
-
-
-
-
-
-
-

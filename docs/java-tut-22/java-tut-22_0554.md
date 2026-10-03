@@ -1,3 +1,4 @@
+
 # 日期时间设计原则
 
 > 原文：[`docs.oracle.com/javase/tutorial/datetime/overview/design.html`](https://docs.oracle.com/javase/tutorial/datetime/overview/design.html)
@@ -15,7 +16,6 @@ API 中的方法被明确定义，其行为清晰可预期。例如，使用`nul
 ```java
 LocalDate today = LocalDate.now();
 LocalDate payday = today.with(TemporalAdjusters.lastDayOfMonth()).minusDays(2);
-
 ```
 
 ## 不可变
@@ -25,7 +25,6 @@ LocalDate payday = today.with(TemporalAdjusters.lastDayOfMonth()).minusDays(2);
 ```java
 LocalDate dateOfBirth = LocalDate.of(2012, Month.MAY, 14);
 LocalDate firstBirthday = dateOfBirth.plusYears(1);
-
 ```
 
 ## 可扩展

@@ -1,4 +1,5 @@
-# JavaScript 的历史:你需要知道的一切
+
+# JavaScript 的历史：你需要知道的一切
 
 > 原文：<https://medium.com/javarevisited/history-of-javascript-everything-you-need-to-know-43ab62f3e0f4?source=collection_archive---------2----------------------->
 
@@ -6,7 +7,7 @@
 
 JavaScript 是谁发现的？
 
-您知道 JavaScript 目前是世界上最常用的语言吗？它被全球 69.7%的发达国家使用！更重要的是，世界上有超过 19 亿个网站[和](https://www.internetlivestats.com/total-number-of-websites/)[使用 JavaScript。](https://w3techs.com/technologies/details/cp-javascript)
+您知道 JavaScript 目前是世界上最常用的语言吗？它被全球 69.7% 的发达国家使用！更重要的是，世界上有超过 19 亿个网站[和](https://www.internetlivestats.com/total-number-of-websites/)[使用 JavaScript。](https://w3techs.com/technologies/details/cp-javascript)
 
 [![](img/09980073068d9b81fdb14c28b6cb5a14.png)](https://javarevisited.blogspot.com/2018/06/top-10-courses-to-learn-javascript-in.html)
 

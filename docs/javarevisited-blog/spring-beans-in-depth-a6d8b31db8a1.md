@@ -1,3 +1,4 @@
+
 # 深度春豆
 
 > 原文：<https://medium.com/javarevisited/spring-beans-in-depth-a6d8b31db8a1?source=collection_archive---------0----------------------->
@@ -8,7 +9,7 @@
 
 哈桑·阿尔巴里在 [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral) 上的照片
 
-嗨伙计们！今天我想深入探讨 Spring Beans:什么是 bean，如何使用它，bean 的作用域是什么，bean 的生命周期是什么。
+嗨伙计们！今天我想深入探讨 Spring Beans：什么是 bean，如何使用它，bean 的作用域是什么，bean 的生命周期是什么。
 
 # 介绍
 

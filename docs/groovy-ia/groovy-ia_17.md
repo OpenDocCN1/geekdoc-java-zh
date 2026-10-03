@@ -1,6 +1,5 @@
-# 实战 Groovy: 用 Groovy 更迅速地对 Java 代码进行单元测试
 
-null
+# 实战 Groovy: 用 Groovy 更迅速地对 Java 代码进行单元测试
 
 不久以前，developerWorks 的作者 Andrew Glover 撰写了一篇介绍 Groovy 的文章，该文章是 *alt.lang.jre* 系列的一部分，而 Groovy 是一个新提议的用于 Java 平台的标准语言。读者对这篇文章的反应非常热烈，所以我们决定开办这个专栏，提供使用这项热门新技术的实用指导。本文是第一期，将介绍使用 Groovy 和 JUnit 对 Java 代码进行单元测试的一个简单策略。
 
@@ -24,7 +23,7 @@ null
 
 例如，对于高性能、事务密集型、企业级应用程序，Groovy 脚本通常不太适合；在这些情况下，您最好的选择 *可能*是普通的 J2EE 系统。但另一方面，一些脚本 —— 特别是用 Groovy 编写的脚本 —— 会非常有用，因为它能迅速地为小型的、非常特殊的、不是性能密集型的应用程序（例如配置系统/生成系统）快速制作原型。对于报表应用程序来说，Groovy 脚本也是近乎完美的选择，而最重要的是，对单元测试更是如此。
 
-* * *
+---
 
 ## 为什么用 Groovy 进行单元测试？
 
@@ -34,7 +33,7 @@ null
 
 事实上，令人放松的类 Java 语法、对标准 Java 库的重用以及快捷的生成-运行周期，这些都使 Groovy 成为快速开发单元测试的理想替代品。但是会说的不如会做的，还是让我们在代码中看看它的实际效果！
 
-* * *
+---
 
 ## JUnit 和 Groovy
 
@@ -76,7 +75,7 @@ class RegexFilterTest extends TestCase {
 
 不管您是否熟悉 Groovy，清单 2 中的代码对您来说应当很面熟，因为它只不过是没有分号、访问修饰符或变量类型的 Java 代码而已！上面的 JUnit 测试中有一个测试用例 `testSimpleRegex()`，它试图断言 `RegexPackageFilter` 用正则表达式 `"java.*"` 正确地找到了与 “ `java.lang.String`”匹配的对象。
 
-* * *
+---
 
 ## Groovy 扩展了 JUnit
 
@@ -84,7 +83,7 @@ class RegexFilterTest extends TestCase {
 
 与 StrutsTestCase 和 DbUnit 一样，Groovy 对 JUnit 的 `TestCase` 的扩展给您的工具箱带来了一些重要的新特性。这个特殊的扩展允许您通过 `groovy` 命令运行测试套件，而且提供了一套新的 `assert` 方法。可以用这些方法很方便地断言脚本的运行是否正确，以及断言各种数组类型的长度和内容等。
 
-* * *
+---
 
 ## 享受 GroovyTestCase 的快乐
 
@@ -160,7 +159,7 @@ class StringSplitTest extends GroovyTestCase {
 } 
 ```
 
-* * *
+---
 
 ## 其他方法
 
@@ -189,15 +188,17 @@ Groovy 还提供了一个标准的 JUnit 测试套件，叫作 `GroovyTestSuite`
 
 运行一个自己喜欢的 JUnit Groovy 脚本，实在是很简单，只要在 Eclipse 中找到对应的运行配置就可以了。
 
-* * *
+---
 
 ## 用 Ant 和 Maven 进行测试
 
 这个像 JUnit 一样的框架的美妙之处还在于，它可以把整套测试作为 build 的一部分运行，不需要人工进行干预。随着越来越多的人把测试用例加入代码基（code base），整体的测试套件日益增长，形成一个极好的回归平台（regression platform）。更妙的是，Ant 和 Maven 这样的 build 框架已经加入了报告特性，可以归纳 Junit 批处理任务运行的结果。
 
-把一组 Groovy 测试用例整合到某一个构建中的最简单的方法是把它们编译成普通的 Java 字节码，然后把它们包含在 Ant 和 Maven 提供的标准的 Junit 批命令中。幸运的是，Groovy 提供了一个 Ant 标签，能够把未编译的 Groovy 脚本集成到字节码中，这样，把脚本转换成有用的字节码的处理工作就变得再简单不过。例如，如果正在使用 Maven 进行构建工作，那么只需在 maven.xml 文件中添加两个新的目标、在 project.xml 中添加两个新的相关性、在 build.properties 文件中添加一个简单的标志就可以了。
 
-我要从更新 maven.xml 文件开始，用新的目标来编译示例脚本，如清单 8 所示：
+
+把一组 Groovy 测试用例整合到某一个构建中的最简单的方法是把它们编译成普通的 Java 字节码，然后把它们包含在 Ant 和 Maven 提供的标准的 JUnit 批命令中。幸运的是，Groovy 提供了一个 Ant 标签，能够把未编译的 Groovy 脚本集成到字节码中，这样，把脚本转换成有用的字节码的处理工作就变得再简单不过。例如，如果正在使用 Maven 进行构建工作，那么只需在`maven.xml`文件中添加两个新的目标、在`project.xml`中添加两个新的相关性、在`build.properties`文件中添加一个简单的标志就可以了。
+
+我要从更新`maven.xml`文件开始，用新的目标来编译示例脚本，如清单 8 所示：
 
 ##### 清单 8\. 定义 Groovyc 目标的新 maven.xml 文件
 
@@ -220,13 +221,13 @@ Groovy 还提供了一个标准的 JUnit 测试套件，叫作 `GroovyTestSuite`
  </goal> 
 ```
 
-上面代码中发生了以下几件事。第一，我定义一个名为 `run-groovyc` 的新目标。该目标有两个前提条件， `java:compile` 编译示例源代码， `test:compile` 编译普通的 Java-JUnit 类。我还用 `&lt;path&gt;` 标签创建了一个 classpath。在该例中，classpath 把 build 目录（保存编译后的源文件）和与它相关的所有依存关系（即 JAR 文件）整合在一起。接着，我还用 `&lt;taskdef&gt;` Ant 标签定义了 `groovyc` 任务。
+上面代码中发生了以下几件事。第一，我定义一个名为`run-groovyc`的新目标。该目标有两个前提条件，`java:compile`编译示例源代码，`test:compile`编译普通的 Java-JUnit 类。我还用`<path>`标签创建了一个 classpath。在该例中，classpath 把 build 目录（保存编译后的源文件）和与它相关的所有依存关系（即 JAR 文件）整合在一起。接着，我还用`<taskdef>` Ant 标签定义了`groovyc`任务。
 
-而且，请您注意我在 classpath 中是如何告诉 Maven 到哪里去找 `org.codehaus.groovy.ant.Groovyc` 这个类。在示例的最后一行，我定义了 `&lt;groovyc&gt;` 标签，它会编译在 `test/groovy` 目录中发现的全部 Groovy 脚本，并把生成的 *.class* 文件放在 `target/test-classes` 目录中。
+而且，请您注意我在 classpath 中是如何告诉 Maven 到哪里去找`org.codehaus.groovy.ant.Groovyc`这个类。在示例的最后一行，我定义了`<groovyc>`标签，它会编译在`test/groovy`目录中发现的全部 Groovy 脚本，并把生成的`*.class*`文件放在`target/test-classes`目录中。
 
 ### 一些重要细节
 
-为了编译 Groovy 脚本，并运行生成的字节码，我必须要通过 project.xml 文件定义两个新的依存关系（ *groovy* 和 *asm*），如清单 9 所示：
+为了编译 Groovy 脚本，并运行生成的字节码，我必须要通过`project.xml`文件定义两个新的依存关系（`groovy`和`asm`），如清单 9 所示：
 
 ##### 清单 9\. project.xml 文件中的新的依存关系
 
@@ -243,7 +244,7 @@ Groovy 还提供了一个标准的 JUnit 测试套件，叫作 `GroovyTestSuite`
   </dependency> 
 ```
 
-一旦将脚本编译成普遍的 Java 字节码，那么任何标准的 JUnit 运行器就都能运行它们。因为 Ant 和 Maven 都拥有 JUnit 运行器标签，所以下一步就是让 JUnit 挑选新编译的 Groovy 脚本。而且，因为 Maven 的 JUnit 运行器使用模式匹配来查找要运行的测试套件，所以需要在 build.properties 文件中添加一个特殊标记，如清单 10 所示，该标记告诉 Maven 去搜索类而不是搜索 .java 文件。
+一旦将脚本编译成普遍的 Java 字节码，那么任何标准的 JUnit 运行器就都能运行它们。因为 Ant 和 Maven 都拥有 JUnit 运行器标签，所以下一步就是让 JUnit 挑选新编译的 Groovy 脚本。而且，因为 Maven 的 JUnit 运行器使用模式匹配来查找要运行的测试套件，所以需要在`build.properties`文件中添加一个特殊标记，如清单 10 所示，该标记告诉 Maven 去搜索类而不是搜索`.java`文件。
 
 ##### 清单 10\. Maven 项目的 build.properties 文件
 
@@ -251,7 +252,7 @@ Groovy 还提供了一个标准的 JUnit 测试套件，叫作 `GroovyTestSuite`
  maven.test.search.classdir = true 
 ```
 
-最后，我在 maven.xml 文件中定义了一个测试目标（ `goal`），如清单 11 所示。这样做可以确保 在单元测试运行之前，使用新的 `run-groovyc` 目标编译 Groovy 脚本。
+最后，我在`maven.xml`文件中定义了一个测试目标（`goal`），如清单 11 所示。这样做可以确保在单元测试运行之前，使用新的`run-groovyc`目标编译 Groovy 脚本。
 
 ##### 清单 11\. maven.xml 的新目标
 
@@ -266,7 +267,7 @@ Groovy 还提供了一个标准的 JUnit 测试套件，叫作 `GroovyTestSuite`
 
 有了新定义的两个目标（一个用来编译脚本，另外一个用来运行 Java 和 Groovy 组合而成的单元测试），剩下的事就只有运行它们，检查是不是每件事都顺利运行！
 
-在清单 12 中，您可以看到，当我运行 Maven，给 `test` 传递目标之后，会发生了什么，它首先包含 `run-groovyc` 目标（而该目标恰好还包含 `java:compile` 和 `test:compile` 这两个目标），然后包含 Maven 中自带的标准的 `test:test` 目标。请注意观察目标 `test:test` 是如何处理新生成的 Groovy 脚本（在该例中，是新 *编译的* Groovy 脚本） *以及*普通的 Java JUnit 测试。
+在清单 12 中，您可以看到，当我运行 Maven，给`test`传递目标之后，会发生了什么，它首先包含`run-groovyc`目标（而该目标恰好还包含`java:compile`和`test:compile`这两个目标），然后包含 Maven 中自带的标准的`test:test`目标。请注意观察目标`test:test`是如何处理新生成的 Groovy 脚本（在该例中，是新*编译的* Groovy 脚本）*以及*普通的 Java JUnit 测试。
 
 ##### 清单 12\. 运行新的测试目标
 
@@ -294,12 +295,12 @@ Total time: 42 seconds
 Finished at: Tue Sep 21 17:37:08 EDT 2004 
 ```
 
-* * *
+---
 
 ## 结束语
 
-在 *实战 Groovy* 系列的第一期中，您学习了 Groovy 这个令人兴奋的脚本语言最实用的应用当中的一个。对于越来越多开发人员而言，单元测试是开发过程的重要组成部分；而使用 Groovy 和 JUnit 对 Java 代码进行测试就变成了轻而易举的事情。
+在*实战 Groovy*系列的第一期中，您学习了 Groovy 这个令人兴奋的脚本语言最实用的应用当中的一个。对于越来越多开发人员而言，单元测试是开发过程的重要组成部分；而使用 Groovy 和 JUnit 对 Java 代码进行测试就变成了轻而易举的事情。
 
-Groovy 简单的语法、内部的灵活性，使其成为迅速编写有效的 JUnit 测试、将测试整合到自动编译中的一个优秀平台。对于像我一样为代码质量发狂的人来说，这种组合极大地减少了我的 *神经紧张*，还让我可以得到我想做得最好的东西：编写“防弹”软件。快点行动吧。
+Groovy 简单的语法、内部的灵活性，使其成为迅速编写有效的 JUnit 测试、将测试整合到自动编译中的一个优秀平台。对于像我一样为代码质量发狂的人来说，这种组合极大地减少了我的*神经紧张*，还让我可以得到我想做得最好的东西：编写“防弹”软件。快点行动吧。
 
-因为这是一个新的系列，所以我非常希望您能一起来推动它前进。如果您对 Groovy 有什么想了解的事情，请 发邮件给我，让我知道您的要求！我希望您会继续支持本系列的下一期，在下期中，我将介绍用 Groovy 进行 Ant 脚本编程。
+因为这是一个新的系列，所以我非常希望您能一起来推动它前进。如果您对 Groovy 有什么想了解的事情，请发邮件给我，让我知道您的要求！我希望您会继续支持本系列的下一期，在下期中，我将介绍用 Groovy 进行 Ant 脚本编程。

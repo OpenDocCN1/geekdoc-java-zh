@@ -1,3 +1,4 @@
+
 # 如何编写内部框架监听器
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/events/internalframelistener.html`](https://docs.oracle.com/javase/tutorial/uiswing/events/internalframelistener.html)
@@ -12,15 +13,9 @@
 
 **试试这个：**
 
-1.  点击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 InternalFrameEventDemo（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 InternalFrameEventDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/InternalFrameEventDemoProject/InternalFrameEventDemo.jnlp)
-
-1.  点击**显示内部框架**按钮，打开事件生成器内部框架。
-
-    在显示区域中应该看到一个“内部框架已打开”的消息。
-
-1.  尝试各种操作，看看会发生什么。例如，点击事件生成器以激活它。点击事件监视器以使事件生成器停用。点击事件生成器的装饰以将窗口图标化、最大化、最小化和关闭。
-
-    查看如何编写窗口监听器以获取有关您将看到的事件类型的信息。
+1. 点击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 InternalFrameEventDemo（[下载 JDK 7 或更高版本](http://www.oracle.com/technetwork/java/javase/downloads/index.html)）。或者，要自行编译和运行示例，请参考示例索引。![启动 InternalFrameEventDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/InternalFrameEventDemoProject/InternalFrameEventDemo.jnlp)
+2. 点击**显示内部框架**按钮，打开事件生成器内部框架。在显示区域中应该看到一个“内部框架已打开”的消息。
+3. 尝试各种操作，看看会发生什么。例如，点击事件生成器以激活它。点击事件监视器以使事件生成器停用。点击事件生成器的装饰以将窗口图标化、最大化、最小化和关闭。查看如何编写窗口监听器以获取有关您将看到的事件类型的信息。
 
 * * *
 
@@ -87,7 +82,6 @@ public class InternalFrameEventDemo ...
         ...
     }
 }
-
 ```
 
 ## 内部框架监听器 API

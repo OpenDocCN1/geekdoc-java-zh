@@ -1,3 +1,4 @@
+
 # 枚举类型
 
 > 原文：[`docs.oracle.com/javase/tutorial/reflect/special/enum.html`](https://docs.oracle.com/javase/tutorial/reflect/special/enum.html)

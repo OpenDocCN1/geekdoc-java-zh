@@ -1,3 +1,4 @@
+
 # 2023 年技术领导和项目经理的 6 本最佳软件开发和项目管理书籍
 
 > 原文：<https://medium.com/javarevisited/6-best-software-development-and-project-management-books-for-tech-leads-and-project-managers-5a82a6fbed6b?source=collection_archive---------0----------------------->
@@ -117,4 +118,4 @@ Peopleware 是另一个关于项目管理的永恒经典。如果你猜对了，
 
 **附言——**如果你正在准备项目管理专业认证(PMP)，并且需要一些资源来准备和深入学习项目管理，那么我强烈推荐你去看看 Udemy 上的 [**实用项目管理课程**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeeply-practical-project-management%2F) 。对于新晋升的项目经理和管理数十个项目的经验丰富的项目经理来说，这都是一门很棒的课程。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeeply-practical-project-management%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fdeeply-practical-project-management%2F>

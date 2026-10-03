@@ -1,3 +1,4 @@
+
 # Trail: 集合
 
 > 原文：[`docs.oracle.com/javase/tutorial/collections/index.html`](https://docs.oracle.com/javase/tutorial/collections/index.html)

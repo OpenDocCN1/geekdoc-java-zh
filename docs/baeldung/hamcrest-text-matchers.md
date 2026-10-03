@@ -1,16 +1,17 @@
+
 # Hamcrest 文本匹配器
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/hamcrest-text-matchers>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将探索 Hamcrest 文本匹配器。
 
-我们之前在用 Hamcrest 进行的[测试中讨论了 Hamcrest 匹配器，在本教程中我们将只关注`Text`匹配器。](/web/20221208143845/https://www.baeldung.com/java-junit-hamcrest-guide)
+我们之前在用 Hamcrest 进行的测试中讨论了 Hamcrest 匹配器，在本教程中我们将只关注`Text`匹配器。
 
-## 2。Maven 配置
+## 2. Maven 配置
 
-首先，我们需要向我们的`pom.xml`添加以下依赖项:
+首先，我们需要向`pom.xml`添加以下依赖项：
 
 ```java
 <dependency>
@@ -25,13 +26,13 @@
 
 现在，我们将深入研究 Hamcrest 文本匹配器。
 
-## 3。文本相等匹配器
+## 3. 文本相等匹配器
 
 当然，我们可以使用标准的`isEqual()`匹配器来检查两个字符串是否相等。
 
-此外，我们有两个特定于`String`类型的匹配器:`equalToIgnoringCase()`和`equalToIgnoringWhiteSpace().`
+此外，我们有两个特定于`String`类型的匹配器：`equalToIgnoringCase()`和`equalToIgnoringWhiteSpace()`。
 
-让我们检查两个`Strings`是否相等——忽略大小写:
+让我们检查两个`String`是否相等——忽略大小写：
 
 ```java
 @Test
@@ -43,7 +44,7 @@ public void whenTwoStringsAreEqual_thenCorrect() {
 }
 ```
 
-我们还可以检查两个`Strings`是否相等——忽略前导和尾随空格:
+我们还可以检查两个`String`是否相等——忽略前导和尾随空格：
 
 ```java
 @Test
@@ -55,9 +56,9 @@ public void whenTwoStringsAreEqualWithWhiteSpace_thenCorrect() {
 }
 ```
 
-## 4。空文本匹配器
+## 4. 空文本匹配器
 
-我们可以通过使用`blankString()`和`blankOrNullString()`匹配器来检查`String`是否为空，这意味着它只包含空白:
+我们可以通过使用`blankString()`和`blankOrNullString()`匹配器来检查`String`是否为空，这意味着它只包含空白：
 
 ```java
 @Test
@@ -71,7 +72,7 @@ public void whenStringIsBlank_thenCorrect() {
 }
 ```
 
-另一方面，如果我们想验证一个`String`是否为空，我们可以使用`emptyString()`匹配器:
+另一方面，如果我们想验证一个`String`是否为空，我们可以使用`emptyString()`匹配器：
 
 ```java
 @Test
@@ -85,9 +86,9 @@ public void whenStringIsEmpty_thenCorrect() {
 }
 ```
 
-## 5。模式匹配器
+## 5. 模式匹配器
 
-我们还可以使用`matchesPattern()`函数检查给定文本是否匹配正则表达式:
+我们还可以使用`matchesPattern()`函数检查给定文本是否匹配正则表达式：
 
 ```java
 @Test
@@ -98,9 +99,9 @@ public void whenStringMatchPattern_thenCorrect() {
 }
 ```
 
-## 6。子字符串匹配器
+## 6. 子字符串匹配器
 
-我们可以通过使用`containsString()`函数或`containsStringIgnoringCase():`来确定一个文本是否包含另一个子文本
+我们可以通过使用`containsString()`函数或`containsStringIgnoringCase()`来确定一个文本是否包含另一个子文本：
 
 ```java
 @Test
@@ -112,7 +113,7 @@ public void whenVerifyStringContains_thenCorrect() {
 }
 ```
 
-如果我们希望子字符串按照特定的顺序排列，我们可以调用`stringContainsInOrder()`匹配器:
+如果我们希望子字符串按照特定的顺序排列，我们可以调用`stringContainsInOrder()`匹配器：
 
 ```java
 @Test
@@ -123,7 +124,7 @@ public void whenVerifyStringContainsInOrder_thenCorrect() {
 }
 ```
 
-接下来，让我们看看如何检查一个`String`以一个给定的`String`开始:
+接下来，让我们看看如何检查一个`String`以一个给定的`String`开始：
 
 ```java
 @Test
@@ -135,7 +136,7 @@ public void whenVerifyStringStartsWith_thenCorrect() {
 }
 ```
 
-最后，我们可以检查一个`String`是否以指定的`String`结束:
+最后，我们可以检查一个`String`是否以指定的`String`结束：
 
 ```java
 @Test
@@ -147,8 +148,8 @@ public void whenVerifyStringEndsWith_thenCorrect() {
 }
 ```
 
-## 7。结论
+## 7. 结论
 
 在这个快速教程中，我们探索了 Hamcrest 文本匹配器。
 
-和往常一样，例子的完整源代码可以在 GitHub 上找到[。](https://web.archive.org/web/20221208143845/https://github.com/eugenp/tutorials/tree/master/testing-modules/hamcrest)
+和往常一样，例子的完整源代码可以在 GitHub 上找到。

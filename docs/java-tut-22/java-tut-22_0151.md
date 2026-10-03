@@ -1,3 +1,4 @@
+
 # try 块
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/exceptions/try.html`](https://docs.oracle.com/javase/tutorial/essential/exceptions/try.html)
@@ -9,7 +10,6 @@ try {
     *code*
 }
 *catch and finally blocks . . .*
-
 ```
 
 在示例中标记为`*code*`的部分包含一个或多个可能会抛出异常的合法代码行。（`catch`和`finally`块将在接下来的两个小节中解释。）
@@ -32,7 +32,6 @@ public void writeList() {
     }
     catch and finally blocks  . . .
 }
-
 ```
 
 如果在`try`块中发生异常，该异常将由与之关联的异常处理程序处理。要为`try`块关联一个异常处理程序，必须在其后放置一个`catch`块；下一节，catch 块，将向你展示如何做到这一点。

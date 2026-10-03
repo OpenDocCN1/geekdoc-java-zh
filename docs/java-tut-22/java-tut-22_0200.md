@@ -1,3 +1,4 @@
+
 # 暂停执行与睡眠
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/concurrency/sleep.html`](https://docs.oracle.com/javase/tutorial/essential/concurrency/sleep.html)
@@ -6,10 +7,9 @@
 
 提供了两个重载版本的`sleep`：一个指定以毫秒为单位的睡眠时间，另一个指定以纳秒为单位的睡眠时间。然而，这些睡眠时间不能保证是精确的，因为它们受到底层操作系统提供的设施的限制。此外，睡眠时间可以被中断，我们将在稍后的章节中看到。无论如何，你不能假设调用`sleep`会精确地暂停线程指定的时间段。
 
-``SleepMessages``示例使用`sleep`以四秒的间隔打印消息：
+`SleepMessages`示例使用`sleep`以四秒的间隔打印消息：
 
 ```java
-
 public class SleepMessages {
     public static void main(String args[])
         throws InterruptedException {
@@ -30,7 +30,6 @@ public class SleepMessages {
         }
     }
 }
-
 ```
 
 注意，`main`声明了它会`throws InterruptedException`。这是一个异常，当另一个线程在`sleep`处于活动状态时中断当前线程时会抛出。由于这个应用程序没有定义另一个线程来引起中断，所以它不会去捕获`InterruptedException`。

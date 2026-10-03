@@ -1,14 +1,13 @@
+
 # 存储和读取对象
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/objects/store.html`](https://docs.oracle.com/javase/tutorial/jndi/objects/store.html)
 
 应用程序和服务可以以不同的方式使用目录来存储和定位对象：
 
-+   存储（对象的副本）对象本身。
-
-+   存储对象的引用。
-
-+   存储描述对象的属性。
++ 存储（对象的副本）对象本身。
++ 存储对象的引用。
++ 存储描述对象的属性。
 
 一般来说，Java 对象的序列化形式包含对象的状态和对象的引用，以紧凑的寻址信息表示，可用于联系对象。一些示例在查找对象课程中给出。对象的属性用于描述对象的属性；属性可能包括寻址和/或状态信息。
 
@@ -16,13 +15,10 @@
 
 在将对象存储在目录中时，所有应用程序都使用以下方法之一：
 
-+   [`Context.bind()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html#bind-javax.naming.Name-java.lang.Object-)
-
-+   [`DirContext.bind()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/directory/DirContext.html#bind-javax.naming.Name-java.lang.Object-javax.naming.directory.Attributes-)
-
-+   [`Context.rebind()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html#rebind-javax.naming.Name-java.lang.Object-)
-
-+   [`DirContext.rebind()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/directory/DirContext.html#rebind-javax.naming.Name-java.lang.Object-javax.naming.directory.Attributes-)
++ [`Context.bind()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html#bind-javax.naming.Name-java.lang.Object-)
++ [`DirContext.bind()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/directory/DirContext.html#bind-javax.naming.Name-java.lang.Object-javax.naming.directory.Attributes-)
++ [`Context.rebind()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/Context.html#rebind-javax.naming.Name-java.lang.Object-)
++ [`DirContext.rebind()`](https://docs.oracle.com/javase/8/docs/api/javax/naming/directory/DirContext.html#rebind-javax.naming.Name-java.lang.Object-javax.naming.directory.Attributes-)
 
 应用程序将要存储的对象传递给这些方法之一。然后，根据服务提供商支持的对象类型，对象将被转换为底层目录服务可接受的表示形式。
 
@@ -32,17 +28,15 @@
 
 对于存储以下对象类型，请参考 JNDI 教程：
 
-+   [Referenceable 对象和 JNDI `Reference`s](https://docs.oracle.com/javase/jndi/tutorial/objects/storing/reference.html)
++ [Referenceable 对象和 JNDI `Reference`s](https://docs.oracle.com/javase/jndi/tutorial/objects/storing/reference.html)
 
-    添加、替换或移除绑定课程中的 bind()示例使用 Referenceable 对象。
+  添加、替换或移除绑定课程中的`bind()`示例使用`Referenceable`对象。
 
-+   [带有属性的对象（`DirContext`）](https://docs.oracle.com/javase/jndi/tutorial/objects/storing/dircontext.html)
++ [带有属性的对象（`DirContext`）](https://docs.oracle.com/javase/jndi/tutorial/objects/storing/dircontext.html)
++ [RMI（Java 远程方法调用）对象（包括使用 IIOP 的对象）](https://docs.oracle.com/javase/jndi/tutorial/objects/storing/remote.html)
++ [CORBA 对象](https://docs.oracle.com/javase/jndi/tutorial/objects/storing/corba.html)
 
-+   [RMI（Java 远程方法调用）对象（包括使用 IIOP 的对象）](https://docs.oracle.com/javase/jndi/tutorial/objects/storing/remote.html)
-
-+   [CORBA 对象](https://docs.oracle.com/javase/jndi/tutorial/objects/storing/corba.html)
-
-* * *
+---
 
 **在继续之前：** 要成功运行这些示例，您必须在服务器中关闭模式检查，或者将附带本教程的`Java 模式`添加到服务器中。这项任务通常由目录服务器的管理员执行。有关更多信息，请参阅软件设置课程。
 

@@ -1,3 +1,4 @@
+
 # 放置位置渲染
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/dnd/droplocation.html`](https://docs.oracle.com/javase/tutorial/uiswing/dnd/droplocation.html)
@@ -17,7 +18,6 @@ class Repainter extends PropertyChangeListener {
 }
 
 comp.addPropertyChangeListener("dropLocation", newRepainter());
-
 ```
 
 这里是`paintComponent`方法的一个示例：
@@ -26,12 +26,11 @@ comp.addPropertyChangeListener("dropLocation", newRepainter());
 public void paintComponent(Graphics g) {
     super.paintComponent(g);
 
-    DropLocation loc= getDropLocation();
+    DropLocation loc = getDropLocation();
     if (loc == null) {
         return;
     }
 
     renderPrettyIndicatorAt(loc);
 }
-
 ```

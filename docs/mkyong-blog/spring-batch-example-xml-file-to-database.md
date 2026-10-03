@@ -1,47 +1,48 @@
-# Spring 批处理示例 MongoDB 数据库的 XML 文件
+
+# Spring 批处理示例：XML 文件到 MongoDB 数据库
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring-batch/spring-batch-example-xml-file-to-database/>
 
-在本教程中，我们将向您展示如何配置一个 Spring 批处理作业，将数据从一个 XML 文件( **XStream** library)读入一个 no SQL 数据库( **MongoDB** )。此外，创建一个单元测试用例来启动和测试批处理作业。
+在本教程中，我们将向您展示如何配置一个 Spring 批处理作业，将数据从一个 XML 文件（**XStream** library）读入一个 NoSQL 数据库（**MongoDB**）。此外，创建一个单元测试用例来启动和测试批处理作业。
 
-使用的工具和库
+## 使用的工具和库
 
-1.  maven3
-2.  Eclipse 4.2
-3.  JDK 1.6
-4.  弹簧芯 3.2.2 .释放
-5.  春季批次 2.2.0 .发布
-6.  春季批量测试 2.2.0 .发布
-7.  春季 OXM 3.2.2 .发布
-8.  MongoDB Java 驱动程序 2.11.2
-9.  MongoDB 2.2.3
-10.  jUnit 4.11
-11.  测试 6.8.5
+1. `maven3`
+2. `Eclipse 4.2`
+3. `JDK 1.6`
+4. `spring-core 3.2.2.RELEASE`
+5. `spring-batch 2.2.0.RELEASE`
+6. `spring-batch-test 2.2.0.RELEASE`
+7. `spring-oxm 3.2.2.RELEASE`
+8. `MongoDB Java 驱动程序 2.11.2`
+9. `MongoDB 2.2.3`
+10. `jUnit 4.11`
+11. `TestNG 6.8.5`
 
-这个例子是 XML 文件(阅读器)MongoDB(编写器)。
+这个例子是 XML 文件（阅读器）→ MongoDB（编写器）。
 
-## 1.简单的 Java 项目
+## 1. 简单的 Java 项目
 
-1.用 Maven 创建一个快速启动 Java 项目，转换并导入到 Eclipse IDE 中。
+1. 用 Maven 创建一个快速启动 Java 项目，转换并导入到 Eclipse IDE 中。
 
 ```java
- $ mvn archetype:generate -DgroupId=com.mkyong -DartifactId=SpringBatchExample2 
+$ mvn archetype:generate -DgroupId=com.mkyong -DartifactId=SpringBatchExample2 
   -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false 
 ```
 
 ```java
- $ cd SpringBatchExample/
+$ cd SpringBatchExample/
 $ mvn eclipse:eclipse 
 ```
 
- ## 2.项目相关性
+## 2. 项目相关性
 
-在`pom.xml`中声明所有项目依赖关系
+在`pom.xml`中声明所有项目依赖关系。
 
-pom.xml
+`pom.xml`
 
 ```java
- <project  
+<project  
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
 	http://maven.apache.org/maven-v4_0_0.xsd">
@@ -154,20 +155,20 @@ pom.xml
 </project> 
 ```
 
- ## 3.项目目录结构
+## 3. 项目目录结构
 
 回顾最终的项目结构，了解下一步要做的事情。
 
 ![spring batch - xml to mongodb](img/09718d4d158ac8ca42a17e36e79c79c1.png)
 
-## 4.XML 文件
+## 4. XML 文件
 
 这是资源文件夹中的 XML 文件。
 
-resources/xml/report.xml
+`resources/xml/report.xml`
 
 ```java
- <?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <report>
     <record id="1">
         <date>6/1/2013</date>
@@ -190,14 +191,14 @@ resources/xml/report.xml
 </report> 
 ```
 
-## 5.读取 XML 文件
+## 5. 读取 XML 文件
 
-在 Spring batch 中，我们可以使用`StaxEventItemReader`读取 XML 文件，使用`XStreamMarshaller`将 XML 值和属性映射到一个对象。
+在 Spring Batch 中，我们可以使用`StaxEventItemReader`读取 XML 文件，使用`XStreamMarshaller`将 XML 值和属性映射到一个对象。
 
-resources/spring/batch/jobs/job-report.xml
+`resources/spring/batch/jobs/job-report.xml`
 
 ```java
- <!-- ...... -->
+<!-- ...... -->
     <bean id="xmlItemReader" 
            class="org.springframework.batch.item.xml.StaxEventItemReader">
 	<property name="fragmentRootElementName" value="record" />
@@ -224,10 +225,10 @@ resources/spring/batch/jobs/job-report.xml
     <bean id="reportConverter" class="com.mkyong.converter.ReportConverter" /> 
 ```
 
-Report.java
+`Report.java`
 
 ```java
- package com.mkyong.model;
+package com.mkyong.model;
 
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
@@ -248,10 +249,10 @@ public class Report {
 
 要将 XML 值映射到像`Date`和`BigDecimal`这样的“复杂”数据类型，您需要附加一个自定义的`converter`来手动转换和映射值。
 
-ReportConverter.java
+`ReportConverter.java`
 
 ```java
- package com.mkyong.converter;
+package com.mkyong.converter;
 
 import java.math.BigDecimal;
 import java.text.NumberFormat;
@@ -328,11 +329,13 @@ public class ReportConverter implements Converter {
 } 
 ```
 
-## 6.MongoDB 数据库
 
-定义一个 mongodb 实例和一个`mongoTemplate`。
 
-resources/spring/batch/config/database.xml
+## 6. MongoDB 数据库
+
+定义一个`mongodb`实例和一个`mongoTemplate`。
+
+`resources/spring/batch/config/database.xml`
 
 ```java
  <beans 
@@ -355,11 +358,11 @@ resources/spring/batch/config/database.xml
 </beans> 
 ```
 
-## 7.弹簧批芯设置
+## 7. 弹簧批芯设置
 
 定义`jobRepository`和`jobLauncher`。
 
-resources/spring/batch/config/context.xml
+`resources/spring/batch/config/context.xml`
 
 ```java
  <beans 
@@ -385,11 +388,11 @@ resources/spring/batch/config/context.xml
 </beans> 
 ```
 
-## 8.春季批处理作业
+## 8. 春季批处理作业
 
-一个 Spring 批处理作业，读取`report.xml`文件，映射到一个`Report`对象，并将其写入`MongoDB`。看评论，应该不言自明。
+一个 Spring 批处理作业，读取`report.xml`文件，映射到一个`Report`对象，并将其写入`MongoDB`。看注释，应该不言自明。
 
-resources/spring/batch/jobs/job-report.xml
+`resources/spring/batch/jobs/job-report.xml`
 
 ```java
  <beans 
@@ -451,11 +454,11 @@ resources/spring/batch/jobs/job-report.xml
 </beans> 
 ```
 
-## 9.单元测试
+## 9. 单元测试
 
 用 jUnit 或 TestNG 框架对其进行单元测试。首先，您必须手动声明`JobLauncherTestUtils`。
 
-test/resources/spring/batch/config/test-context.xml
+`test/resources/spring/batch/config/test-context.xml`
 
 ```java
  <beans 
@@ -472,7 +475,7 @@ test/resources/spring/batch/config/test-context.xml
 
 jUnit 示例
 
-AppTest.java
+`AppTest.java`
 
 ```java
  package com.mkyong;
@@ -513,7 +516,7 @@ public class AppTest {
 
 测试示例
 
-AppTest2.java
+`AppTest2.java`
 
 ```java
  package com.mkyong;
@@ -575,13 +578,13 @@ system.indexes
 > 
 ```
 
-## 10.作业元数据怎么样？
+## 10. 作业元数据怎么样？
 
-对不起，我还没有解决这个问题的方法。据我所知，作业元数据需要关系数据库，以确保作业的可重启性和回滚。按照设计，MongoDB 没有“可靠的”事务管理。
+对不起，我还没有解决这个问题的方法。据我所知，作业元数据需要关系数据库，以确保作业的可重启性和回滚。按照设计，`MongoDB`没有“可靠的”事务管理。
 
-解决方案 1:创建另一个关系数据库来存储作业元数据，嗯……这听起来很愚蠢，但很有效。你有更好的主意吗？
+解决方案 1：创建另一个关系数据库来存储作业元数据，嗯……这听起来很愚蠢，但很有效。你有更好的主意吗？
 
-解决方案 2:等待 Spring 的团队对此提出解决方案。
+解决方案 2：等待 Spring 的团队对此提出解决方案。
 
 ## 下载源代码
 
@@ -589,17 +592,16 @@ Download it – [SpringBatch-XML-MongoDB-Example.zip](http://web.archive.org/web
 
 ## 参考
 
-1.  [XStream 转换器教程](http://web.archive.org/web/20190223082222/http://xstream.codehaus.org/converter-tutorial.html)
-2.  [对非 RDBMS 的 Spring 批量支持](http://web.archive.org/web/20190223082222/http://forum.springsource.org/archive/index.php/t-97452.html)
-3.  [Spring 批处理 XML 项读取器和写入器](http://web.archive.org/web/20190223082222/http://static.springsource.org/spring-batch/reference/html/readersAndWriters.html#xmlReadingWriting)
-4.  [Spring Batch–配置和运行作业](http://web.archive.org/web/20190223082222/http://static.springsource.org/spring-batch/reference/html/configureJob.html)
-5.  [用 Maven 创建一个 Java 项目](http://web.archive.org/web/20190223082222/http://www.mkyong.com/maven/how-to-create-a-java-project-with-maven/)
+1. [XStream 转换器教程](http://web.archive.org/web/20190223082222/http://xstream.codehaus.org/converter-tutorial.html)
+
+2. [对非 RDBMS 的 Spring 批量支持](http://web.archive.org/web/20190223082222/http://forum.springsource.org/archive/index.php/t-97452.html)
+
+3. [Spring 批处理 XML 项读取器和写入器](http://web.archive.org/web/20190223082222/http://static.springsource.org/spring-batch/reference/html/readersAndWriters.html#xmlReadingWriting)
+
+
+
+4. [Spring Batch–配置和运行作业](http://web.archive.org/web/20190223082222/http://static.springsource.org/spring-batch/reference/html/configureJob.html)
+
+5. [用 Maven 创建一个 Java 项目](http://web.archive.org/web/20190223082222/http://www.mkyong.com/maven/how-to-create-a-java-project-with-maven/)
 
 [mongodb](http://web.archive.org/web/20190223082222/http://www.mkyong.com/tag/mongodb/) [spring batch](http://web.archive.org/web/20190223082222/http://www.mkyong.com/tag/spring-batch/) [xml](http://web.archive.org/web/20190223082222/http://www.mkyong.com/tag/xml/)
-
-
-
-
-
-
-

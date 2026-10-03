@@ -1,14 +1,15 @@
+
 # 使用 Project Reactor 以编程方式创建序列
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/flux-sequences-reactor>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将使用[项目反应器基础知识](/web/20220628145912/https://www.baeldung.com/reactor-core)来学习一些创建 [`Flux` es](https://web.archive.org/web/20220628145912/https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html) 的技术。
 
-## 2。Maven 依赖关系
+## 2. Maven 依赖关系
 
-让我们从几个依赖项开始。我们需要`[reactor-core](https://web.archive.org/web/20220628145912/https://search.maven.org/search?q=g:io.projectreactor%20AND%20a:reactor-core&core=gav) `和 [`reactor-test`](https://web.archive.org/web/20220628145912/https://search.maven.org/search?q=g:io.projectreactor%20AND%20a:reactor-test) :
+让我们从几个依赖项开始。我们需要`[reactor-core](https://web.archive.org/web/20220628145912/https://search.maven.org/search?q=g:io.projectreactor%20AND%20a:reactor-core&core=gav) `和 [`reactor-test`](https://web.archive.org/web/20220628145912/https://search.maven.org/search?q=g:io.projectreactor%20AND%20a:reactor-test) :
 
 ```java
 <dependency>
@@ -24,7 +25,7 @@
 </dependency>
 ```
 
-## 3。同步发射
+## 3. 同步发射
 
 创建一个`Flux`最简单的方法就是`Flux#` `generate`。**该方法依靠生成器函数来生成一系列项目。**
 
@@ -36,7 +37,7 @@ public class SequenceGenerator {
 }
 ```
 
-### 3.1。具有新状态的发电机
+### 3.1. 具有新状态的发电机
 
 让我们看看如何用 Reactor 生成[斐波那契数列](https://web.archive.org/web/20220628145912/https://en.wikipedia.org/wiki/Fibonacci_number):
 
@@ -55,6 +56,7 @@ public Flux<Integer> generateFibonacciWithTuples() {
 不难看出这个 [`generate`](https://web.archive.org/web/20220628145912/https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#generate-java.util.concurrent.Callable-java.util.function.BiFunction-) 方法以两个函数作为它的参数——一个`Callable`和一个`BiFunction`:
 
 *   `Callable`函数设置发生器的初始状态——在本例中，它是一个带有元素`0`和`1`的 [`Tuples`](https://web.archive.org/web/20220628145912/https://projectreactor.io/docs/core/release/api/reactor/util/function/Tuples.html)
+
 *   `BiFuntion`函数是一个生成器，消耗一个 [`SynchronousSink`](https://web.archive.org/web/20220628145912/https://projectreactor.io/docs/core/release/api/reactor/core/publisher/SynchronousSink.html) ，然后用水槽的`next`方法和当前状态每轮发射一个物品
 
 顾名思义，`SynchronousSink`对象是同步工作的。然而，**注意，我们不能在每个生成器调用中多次调用这个对象的`next`方法。**
@@ -78,7 +80,7 @@ public void whenGeneratingNumbersWithTuplesState_thenFibonacciSequenceIsProduced
 
 正如我们所见，**生成器返回一个新的状态**对象，将在下一次传递中使用。**虽然没有必要这样做。**我们可以为生成器的所有调用重用一个状态实例。
 
-### 3.2。具有可变状态的发电机
+### 3.2. 具有可变状态的发电机
 
 假设我们想要生成具有循环状态的斐波那契数列。为了演示这个用例，让我们首先定义一个类:
 
@@ -134,17 +136,17 @@ public void whenGeneratingNumbersWithCustomClass_thenFibonacciSequenceIsProduced
 }
 ```
 
-### 3.3。无状态变体
+### 3.3. 无状态变体
 
 `generate`方法有[的另一个变体](https://web.archive.org/web/20220628145912/https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#generate-java.util.function.Consumer-)，它只有一个类型为`Consumer<SynchronousSink>`的参数。这种变体只适合于产生预定的序列，因此没有那么强大。那我们就不详细介绍了。
 
-## 4。异步发射
+## 4. 异步发射
 
 同步发射不是程序化创建`Flux`的唯一解决方案。
 
 相反，**我们可以使用`create`和`push`操作符以异步方式在一轮发射中产生多个项目。**
 
-### 4.1。`create`法
+### 4.1. `create`法
 
 **使用 [`create`](https://web.archive.org/web/20220628145912/https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#create-java.util.function.Consumer-) 方法，我们可以从多个线程中产生项目。**在这个例子中，我们将从两个不同的来源收集元素到一个序列中。
 
@@ -162,9 +164,9 @@ public class SequenceCreator {
 
 与`generate`操作符不同，**`create`方法不维护状态。**传递给这个方法的发射器从外部源接收元素，而不是自己生成项目，**。**
 
-同样，我们可以看到`create`操作符要求我们输入一个 [`FluxSink`](https://web.archive.org/web/20220628145912/https://projectreactor.io/docs/core/release/api/reactor/core/publisher/FluxSink.html) 而不是一个`SynchronousSink`。有了`FluxSink`、**，我们可以根据需要多次调用`next() `。**
+同样，我们可以看到`create`操作符要求我们输入一个 [`FluxSink`](https://web.archive.org/web/20220628145912/https://projectreactor.io/docs/core/release/api/reactor/core/publisher/FluxSink.html) 而不是一个`SynchronousSink`。有了`FluxSink`、**，我们可以根据需要多次调用`next() `。**
 
-在我们的例子中，我们将为列表`items`中的每个项目调用`next()`，一个接一个地发出每个项目。我们马上就会看到如何填充`items `。
+在我们的例子中，我们将为列表`items`中的每个项目调用`next()`，一个接一个地发出每个项目。我们马上就会看到如何填充`items `。
 
 在这种情况下，我们的外部源是一个虚构的`consumer`字段，尽管这也可能是一些可观察到的 API。
 
@@ -225,21 +227,23 @@ assertThat(consolidated).containsExactlyInAnyOrder(0, 1, 1, 0, 1, 1, 2);
 
 `create`方法有[的另一个变体](https://web.archive.org/web/20220628145912/https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#create-java.util.function.Consumer-reactor.core.publisher.FluxSink.OverflowStrategy-)，接受类型`[OverflowStrategy](https://web.archive.org/web/20220628145912/https://projectreactor.io/docs/core/release/api/reactor/core/publisher/FluxSink.OverflowStrategy.html)`的参数。顾名思义，当下游跟不上发布者时，这个论点管理反压力。**默认情况下，发布者会缓冲这种情况下的所有元素。**
 
-### 4.2。`push`法
+### 4.2. `push`法
 
-除了`create`操作符之外，`Flux`类还有另一个静态方法来异步发出序列，即 [`push`](https://web.archive.org/web/20220628145912/https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#push-java.util.function.Consumer-) 。除了一次只允许一个生产线程发出信号之外，这个方法就像`create`、**一样工作。**
 
-我们可以用`push`替换刚才例子中的`create`方法，代码仍然可以编译
+
+除了`create`操作符之外，`Flux`类还有另一个静态方法来异步发出序列，即[`push`](https://web.archive.org/web/20220628145912/https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#push-java.util.function.Consumer-)。除了一次只允许一个生产线程发出信号之外，这个方法就像`create`一样工作。
+
+我们可以用`push`替换刚才例子中的`create`方法，代码仍然可以编译。
 
 然而，有时我们会看到断言错误，因为`push`操作符阻止了`FluxSink#next`在不同的线程上被并发调用。因此，**只有当我们不打算使用多线程时，才应该使用`push`。**
 
-## 5。处理顺序
+## 处理顺序
 
-到目前为止，我们看到的所有方法都是静态的，允许从给定的源创建序列。**`Flux`API 还提供了一个名为`[handle](https://web.archive.org/web/20220628145912/https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#handle-java.util.function.BiConsumer-)`的实例方法，用于处理发行商制作的序列。**
+到目前为止，我们看到的所有方法都是静态的，允许从给定的源创建序列。**`Flux` API 还提供了一个名为`handle`的实例方法，用于处理发行商制作的序列。**
 
 这个`handle`操作符处理一个序列，进行一些处理，并可能删除一些元素。在这方面，**我们可以说`handle`操作符就像`map`和`filter`一样工作。**
 
-让我们看一下`handle`方法的简单说明:
+让我们看一下`handle`方法的简单说明：
 
 ```java
 public class SequenceHandler {
@@ -253,11 +257,11 @@ public class SequenceHandler {
 }
 ```
 
-在这个例子中，`handle`操作符接受一个数字序列，如果是偶数，则用值除以`2`。如果值是奇数，操作符不做任何事情，这意味着这样的数字被忽略。
+在这个例子中，`handle`操作符接受一个数字序列，如果是偶数，则用值除以2。如果值是奇数，操作符不做任何事情，这意味着这样的数字被忽略。
 
-另一件需要注意的事情是，与`generate`方法一样， **`handle`采用了`SynchronousSink`，并且只允许一个接一个的排放。**
+另一件需要注意的事情是，与`generate`方法一样，**`handle`采用了`SynchronousSink`，并且只允许一个接一个的排放。**
 
-最后，我们需要测试一些东西。让我们最后一次使用`StepVerifier`来确认我们的处理程序工作正常:
+最后，我们需要测试一些东西。让我们最后一次使用`StepVerifier`来确认我们的处理程序工作正常：
 
 ```java
 @Test
@@ -273,10 +277,10 @@ public void whenHandlingNumbers_thenSequenceIsMappedAndFiltered() {
 }
 ```
 
-在斐波那契数列的前 10 项中有四个偶数:`0`、`2`、`8`和`34`，因此我们将参数传递给了`expectNext`方法。
+在斐波那契数列的前 10 项中有四个偶数：`0`、`2`、`8`和`34`，因此我们将参数传递给了`expectNext`方法。
 
-## 6。结论
+## 结论
 
 在本文中，我们介绍了可以用来以编程方式生成序列的`Flux` API 的各种方法，特别是`generate`和`create`操作符。
 
-本教程的源代码可以在 GitHub 上的[处获得。这是一个 Maven 项目，应该能够按原样运行。](https://web.archive.org/web/20220628145912/https://github.com/eugenp/tutorials/tree/master/reactor-core)
+本教程的源代码可以在 GitHub 上的[处获得](https://web.archive.org/web/20220628145912/https://github.com/eugenp/tutorials/tree/master/reactor-core)。这是一个 Maven 项目，应该能够按原样运行。

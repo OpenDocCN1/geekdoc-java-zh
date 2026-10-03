@@ -1,70 +1,64 @@
+
 # 如何创建半透明和形状窗口
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/misc/trans_shaped_windows.html`](https://docs.oracle.com/javase/tutorial/uiswing/misc/trans_shaped_windows.html)
 
 从 Java 平台标准版 6（Java SE 6）更新 10 版本开始，您可以向您的 Swing 应用程序添加半透明和形状窗口。本页面涵盖以下主题：
 
-+   支持的功能
-
-+   确定平台的功能
-
-+   如何实现统一半透明度
-
-+   如何实现每像素半透明度
-
-+   如何实现形状窗口
-
-+   Java SE Release 6 Update 10 API
++ 支持的功能
++ 确定平台的功能
++ 如何实现统一半透明度
++ 如何实现每像素半透明度
++ 如何实现形状窗口
++ Java SE Release 6 Update 10 API
 
 ## 支持的功能
 
 此功能作为 JDK 7 版本中的公共 AWT 包的一部分，采用三种形式，如下：
 
-+   您可以创建一个具有*统一*半透明度的窗口，其中每个像素具有相同的半透明度（或 alpha 值）。以下屏幕截图显示了一个具有 45%半透明度的窗口。![一个半透明窗口](img/0f9b19593b11047fc9a945f5689aeebd.png)
++ 您可以创建一个具有*统一*半透明度的窗口，其中每个像素具有相同的半透明度（或 alpha 值）。以下屏幕截图显示了一个具有 45%半透明度的窗口。![一个半透明窗口](img/0f9b19593b11047fc9a945f5689aeebd.png)
 
-    * * *
+  * * *
 
-    **试试这个：**
+  **试试这个：**
 
-    单击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 TranslucentWindowDemo 示例。此示例需要[JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html)或更高版本。或者，要执行编译和运行示例，请参考示例索引。
+  单击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 `TranslucentWindowDemo` 示例。此示例需要[JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html)或更高版本。或者，要执行编译和运行示例，请参考示例索引。
 
-    ![启动 TranslucentWindowDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TranslucentWindowDemoProject/TranslucentWindowDemo.jnlp)
+  ![启动 TranslucentWindowDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/TranslucentWindowDemoProject/TranslucentWindowDemo.jnlp)
 
-    * * *
+  * * *
 
-+   您可以创建一个具有*每像素*半透明度的窗口，其中每个像素都有自己的 alpha 值。使用此功能，您可以例如创建一个通过定义 alpha 值梯度而逐渐消失的窗口。以下屏幕截图显示了一个从顶部（完全半透明）到底部（完全不透明）具有渐变半透明度的窗口。![一个具有每像素半透明度的窗口。](img/a7d78abb1444a94ae2a73d90bf467363.png)
++ 您可以创建一个具有*每像素*半透明度的窗口，其中每个像素都有自己的 alpha 值。使用此功能，您可以例如创建一个通过定义 alpha 值梯度而逐渐消失的窗口。以下屏幕截图显示了一个从顶部（完全半透明）到底部（完全不透明）具有渐变半透明度的窗口。![一个具有每像素半透明度的窗口。](img/a7d78abb1444a94ae2a73d90bf467363.png)
 
-    * * *
+  * * *
 
-    **试试这个：**
+  **试试这个：**
 
-    单击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 GradientTranslucentWindowDemo 示例。此示例需要[JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html)或更高版本。或者，要自行编译和运行示例，请参考示例索引。
+  单击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 `GradientTranslucentWindowDemo` 示例。此示例需要[JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html)或更高版本。或者，要自行编译和运行示例，请参考示例索引。
 
-    ![启动 GradientTranslucentWindowDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/GradientTranslucentWindowDemoProject/GradientTranslucentWindowDemo.jnlp)
+  ![启动 GradientTranslucentWindowDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/GradientTranslucentWindowDemoProject/GradientTranslucentWindowDemo.jnlp)
 
-    * * *
+  * * *
 
-+   您可以创建具有任何 `Shape` 对象的窗口，可以定义。形状窗口可以是不透明的，也可以使用统一的或逐像素的半透明度。以下屏幕截图显示了一个椭圆形状的窗口，透明度为 30%。![一个椭圆形状的窗口。](img/add22be2046d4f755effb7d8c0bb592c.png)
++ 您可以创建具有任何 `Shape` 对象的窗口，可以定义。形状窗口可以是不透明的，也可以使用统一的或逐像素的半透明度。以下屏幕截图显示了一个椭圆形状的窗口，透明度为 30%。![一个椭圆形状的窗口。](img/add22be2046d4f755effb7d8c0bb592c.png)
 
-    * * *
+  * * *
 
-    **试试这个：**
+  **试试这个：**
 
-    点击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 ShapedWindowDemo 示例。此示例需要[JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html)或更高版本。或者，要自行编译和运行示例，请参考示例索引。
+  点击“启动”按钮以使用[Java™ Web Start](http://www.oracle.com/technetwork/java/javase/javawebstart/index.html)运行 `ShapedWindowDemo` 示例。此示例需要[JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html)或更高版本。或者，要自行编译和运行示例，请参考示例索引。
 
-    ![启动 ShapedWindowDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/ShapedWindowDemoProject/ShapedWindowDemo.jnlp)
+  ![启动 ShapedWindowDemo 示例](https://docs.oracle.com/javase/tutorialJWS/samples/uiswing/ShapedWindowDemoProject/ShapedWindowDemo.jnlp)
 
-    * * *
+  * * *
 
 ## 确定平台的功能
 
 并非所有平台都支持所有这些功能。当代码尝试在不支持这些功能的平台上调用 `setShape` 或 `setOpacity` 方法时，会抛出 `UnsupportedOperationException` 异常。因此，最佳实践是首先检查平台是否支持您要实现的功能。`GraphicsDevice` 类提供了 [`isWindowTranslucencySupported(GraphicsDevice.WindowTranslucency)`](https://docs.oracle.com/javase/8/docs/api/java/awt/GraphicsDevice.html#isWindowTranslucencySupported-java.awt.GraphicsDevice.WindowTranslucency-) 方法，您可以用于此目的。您将一个在 [`GraphicsDevice.WindowTranslucency`](https://docs.oracle.com/javase/8/docs/api/java/awt/GraphicsDevice.WindowTranslucency.html) 中定义的三个枚举值之一传递给此方法：
 
-+   `TRANSLUCENT` – 底层平台支持具有统一半透明度的窗口，其中每个像素具有相同的 alpha 值。
-
-+   `PERPIXEL_TRANSLUCENT` – 底层平台支持具有逐像素半透明度的窗口。此功能用于实现渐隐窗口。
-
-+   `PERPIXEL_TRANSPARENT` – 底层平台支持自定义形状的窗口。
++ `TRANSLUCENT` – 底层平台支持具有统一半透明度的窗口，其中每个像素具有相同的 alpha 值。
++ `PERPIXEL_TRANSLUCENT` – 底层平台支持具有逐像素半透明度的窗口。此功能用于实现渐隐窗口。
++ `PERPIXEL_TRANSPARENT` – 底层平台支持自定义形状的窗口。
 
 `GraphicsConfiguration` 类还提供了 [`isTranslucencyCapable`](https://docs.oracle.com/javase/8/docs/api/java/awt/GraphicsConfiguration.html#isTranslucencyCapable--) 方法，用于确定给定 `GraphicsConfiguration` 对象是否支持 `PERPIXEL_TRANSLUCENT` 半透明度。
 
@@ -90,7 +84,6 @@ boolean isPerPixelTranslucencySupported =
     gd.isWindowTranslucencySupported(PERPIXEL_TRANSLUCENT);
 boolean isShapedWindowSupported =
     gd.isWindowTranslucencySupported(PERPIXEL_TRANSPARENT);
-
 ```
 
 * * *
@@ -103,7 +96,7 @@ boolean isShapedWindowSupported =
 
 你可以通过在`Window`类中调用[`setOpacity(float)`](https://docs.oracle.com/javase/8/docs/api/java/awt/Window.html#setOpacity-float-)方法来创建每个像素具有相同透明度的窗口。传递给该方法的`float`参数表示窗口的透明度，应该是介于 0 和 1 之间的值。数字越小，窗口越透明。还有一个对应的[`getOpacity`](https://docs.oracle.com/javase/8/docs/api/java/awt/Window.html#getOpacity--)方法。
 
-``TranslucentWindowDemo.java``示例创建一个 55% 不透明（45% 半透明）的窗口。如果底层平台不支持半透明窗口，示例将退出。与不透明度相关的代码显示为粗体。
+`TranslucentWindowDemo.java`示例创建一个 55% 不透明（45% 半透明）的窗口。如果底层平台不支持半透明窗口，示例将退出。与不透明度相关的代码显示为粗体。
 
 ```java
 import java.awt.*;
@@ -153,7 +146,6 @@ public class TranslucentWindowDemo extends JFrame {
         });
     }
 }
-
 ```
 
 注意按钮也受到统一的透明度影响。设置不透明度会影响整个窗口，包括窗口包含的任何组件。
@@ -168,19 +160,17 @@ public class TranslucentWindowDemo extends JFrame {
 
 要确定窗口是否使用每个像素的半透明效果，可以使用[`isOpaque`](https://docs.oracle.com/javase/8/docs/api/java/awt/Window.html#isOpaque--)方法。
 
-以下是实现示例所需的步骤。 
+以下是实现示例所需的步骤。
 
-1.  在窗口上调用 `setBackground(new Color(0,0,0,0))`。
+1. 在窗口上调用 `setBackground(new Color(0,0,0,0))`。
+2. 创建一个覆盖 `paintComponent` 方法的 `JPanel` 实例。
+3. 在 `paintComponent` 方法中，创建一个 `GradientPaint` 实例。
+4. 在示例中，矩形的顶部具有 alpha 值为 0（最透明），底部具有 alpha 值为 255（最不透明）。`GradientPaint` 类会平滑地插值矩形从顶部到底部的 alpha 值。
+5. 将 `GradientPaint` 实例设置为面板的绘制方法。
 
-1.  创建一个覆盖 `paintComponent` 方法的 `JPanel` 实例。
+这是 `GradientTranslucentWindowDemo.java` 示例的代码。如果底层平台不支持像素级半透明，此示例将退出。与创建渐变窗口相关的代码以粗体显示。
 
-1.  在 `paintComponent` 方法中，创建一个 `GradientPaint` 实例。
 
-1.  在示例中，矩形的顶部具有 alpha 值为 0（最透明），底部具有 alpha 值为 255（最不透明）。`GradientPaint` 类会平滑地插值矩形从顶部到底部的 alpha 值。
-
-1.  将 `GradientPaint` 实例设置为面板的绘制方法。
-
-这是 ``GradientTranslucentWindowDemo.java`` 示例的代码。如果底层平台不支持像素级半透明，此示例将退出。与创建渐变窗口相关的代码以粗体显示。
 
 ```java
 import java.awt.*;
@@ -248,18 +238,17 @@ public class GradientTranslucentWindowDemo extends JFrame {
         });
     }
 }
-
 ```
 
-请注意，按钮不受像素级半透明的影响。设置像素级半透明会影响背景像素。如果您想要一个窗口只对背景像素产生统一的半透明效果，可以调用 `setBackground(new Color(0,0,0,alpha))`，其中 `alpha` 指定您期望的半透明度。
+请注意，按钮不受像素级半透明的影响。设置像素级半透明会影响背景像素。如果您想要一个窗口只对背景像素产生统一的半透明效果，可以调用`setBackground(new Color(0,0,0,alpha))`，其中`alpha`指定您期望的半透明度。
 
 ## 如何实现形状窗口
 
-你可以通过在 `Window` 类中调用 [`setShape(Shape)`](https://docs.oracle.com/javase/8/docs/api/java/awt/Window.html#setShape-java.awt.Shape-) 方法来创建一个具有形状的窗口。传递给该方法的 `Shape` 参数决定了窗口的裁剪方式。当在窗口上设置形状时，窗口装饰不会重新形成新的形状，因此在无装饰窗口上设置形状效果最佳。
+你可以通过在`Window`类中调用[`setShape(Shape)`](https://docs.oracle.com/javase/8/docs/api/java/awt/Window.html#setShape-java.awt.Shape-)方法来创建一个具有形状的窗口。传递给该方法的`Shape`参数决定了窗口的裁剪方式。当在窗口上设置形状时，窗口装饰不会重新形成新的形状，因此在无装饰窗口上设置形状效果最佳。
 
-设置窗口形状的最佳实践是在组件事件监听器的 `componentResized` 方法中调用 `setShape`。这种做法将确保为窗口的实际大小正确计算形状。以下示例使用了这种方法。
+设置窗口形状的最佳实践是在组件事件监听器的`componentResized`方法中调用`setShape`。这种做法将确保为窗口的实际大小正确计算形状。以下示例使用了这种方法。
 
-``ShapedWindowDemo.java`` 示例创建了一个椭圆形状的窗口，透明度为 70%。如果底层平台不支持形状窗口，示例将退出。如果底层平台不支持半透明性，则示例将使用标准不透明窗口。您可以修改此示例以创建一个同时使用像素级半透明的形状窗口。
+`ShapedWindowDemo.java`示例创建了一个椭圆形状的窗口，透明度为 70%。如果底层平台不支持形状窗口，示例将退出。如果底层平台不支持半透明性，则示例将使用标准不透明窗口。您可以修改此示例以创建一个同时使用像素级半透明的形状窗口。
 
 与窗口形状相关的代码以粗体显示。
 
@@ -333,12 +322,11 @@ public class ShapedWindowDemo extends JFrame {
         });
     }
 }
-
 ```
 
 ## Java SE 6 Update 10 API
 
-在更新版本中更改公共 API 是不允许的，因此当在 Java SE 6 Update 10 版本中添加了半透明和形状窗口功能时，它是在私有的 `com.sun.awt.AWTUtilities` 类中实现的。对于 JDK 7 版本，此功能已移至公共 AWT 包。以下表格显示了私有方法如何映射到公共方法。
+在更新版本中更改公共 API 是不允许的，因此当在 Java SE 6 Update 10 版本中添加了半透明和形状窗口功能时，它是在私有的`com.sun.awt.AWTUtilities`类中实现的。对于 JDK 7 版本，此功能已移至公共 AWT 包。以下表格显示了私有方法如何映射到公共方法。
 
 | Java SE 6 Update 10 中的方法 | JDK 7 中的等效方法 |
 | --- | --- |

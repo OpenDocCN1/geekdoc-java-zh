@@ -1,3 +1,4 @@
+
 # 2023 年 6 个最佳 JIRA 课程、教程和培训班
 
 > 原文：<https://medium.com/javarevisited/6-best-online-courses-to-learn-jira-for-beginners-and-experienced-it-professionals-4a21fb014520?source=collection_archive---------0----------------------->
@@ -8,7 +9,7 @@
 
 image _ courses—udemy
 
-如果你在敏捷项目中工作，那么你会遇到 JIRA，它是计划、项目管理和 bug 跟踪最流行的工具之一。几乎所有的软件组织都在他们的软件开发中使用 JIRA，这使得它成为软件开发人员、团队领导、技术领导、T2 scrum master 和项目经理的基本工具。
+如果你在敏捷项目中工作，那么你会遇到 JIRA，它是计划、项目管理和 bug 跟踪最流行的工具之一。几乎所有的软件组织都在他们的软件开发中使用 JIRA，这使得它成为软件开发人员、团队领导、技术领导、scrum master 和项目经理的基本工具。
 
 如果你想在 2023 年学习 JIRA，并寻找最好的在线培训课程，那么你来对地方了。过去，我曾分享过[免费的敏捷课程](https://javarevisited.blogspot.com/2018/01/top-5-free-agile-courses-for-programmers.html#axzz5QneAh3Kg)和[书籍](https://javarevisited.blogspot.com/2017/06/top-5-books-to-learn-agile-and-scrum-methodology.html)，在这篇文章中，我将为初学者和有经验的开发人员分享**在线学习 JIRA 的最佳课程**。
 
@@ -130,24 +131,29 @@ JIRA 是 Atlassian 公司提供的一款用于问题和 bug 跟踪的综合软�
 
 *   [完整的 Java 开发者路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html#axzz6N3akNoox)
 *   [面向 Java 和 DevOps 专业人员的 10 门免费 Docker 课程](https://javarevisited.blogspot.sg/2018/02/10-free-docker-container-courses-for-Java-Developers.html)
-*   [我最喜欢为有经验的人学习 DevOps 的课程](https://javarevisited.blogspot.com/2018/09/10-devops-courses-for-experienced-java-developers.html)
-*   [2023 年 Java 开发人员应该学习的 10 种工具](http://www.java67.com/2018/04/10-tools-java-developers-should-learn.html)
-*   [5 免费弹簧框架和 Spring Boot 课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
-*   [学习 Jenkins 自动化和开发运维的五大课程](https://javarevisited.blogspot.com/2018/09/top-5-jenkins-courses-for-java-and-DevOps-Programmers.html)
-*   [2023 年学习 Kubernetes 的 7 门免费在线课程](/javarevisited/7-free-online-courses-to-learn-kubernetes-in-2020-3b8a68ec7abc)
-*   [完整的 DevOps 开发者路线图](/hackernoon/the-2018-devops-roadmap-31588d8670cb)
-*   [学习亚马逊网络服务我最喜欢的课程](https://javarevisited.blogspot.com/2020/05/top-5-amazon-web-services-aws-courses-for-beginners-and-experienced-programmers.html)
-*   [学习 Docker、Kubernetes 和 Jenkins 的 10 门免费课程](/javarevisited/top-10-free-courses-to-learn-jenkins-docker-and-kubernetes-for-devops-in-2020-best-of-lot-62a0541ffeb3)
-*   [5 门免费 Selenium 课程学习自动化测试](https://javarevisited.blogspot.sg/2018/02/top-5-selenium-webdriver-with-java-courses-for-testers.html)
-*   [学习 Azure 云平台的前 5 门课程](https://javarevisited.blogspot.com/2020/09/top-5-courses-to-learn-microsoft-azure.html)
-*   [面向程序员的 10 门 Docker 和 Kubernetes 课程](https://dev.to/javinpaul/top-10-courses-to-learn-docker-and-kubernetes-for-programmers-4lg0)
-*   [面向 Java 开发人员的 6 门 Maven 课程](http://www.java67.com/2018/02/6-free-maven-and-jenkins-online-courses-for-java-developers.html)
-*   [2023 年 Java 开发人员应该学会的 10 件事](http://javarevisited.blogspot.sg/2017/12/10-things-java-programmers-should-learn.html#axzz53ENLS1RB)
-*   [面向 Java JEE 开发者的 5 大 Hibernate 和 JPA 课程](http://javarevisited.blogspot.sg/2018/01/top-5-hibernate-and-jpa-courses-for-java-programmers-learn-online.html)
-*   [程序员学习 AWS 和云的 10 门免费课程](/javarevisited/top-10-courses-to-learn-amazon-web-services-aws-cloud-in-2020-best-and-free-317f10d7c21d)
+
+
+
+# 推荐课程与资源列表
+
+- [我最喜欢为有经验的人学习 DevOps 的课程](https://javarevisited.blogspot.com/2018/09/10-devops-courses-for-experienced-java-developers.html)
+- [2023 年 Java 开发人员应该学习的 10 种工具](http://www.java67.com/2018/04/10-tools-java-developers-should-learn.html)
+- [5 免费弹簧框架和 Spring Boot 课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
+- [学习 Jenkins 自动化和开发运维的五大课程](https://javarevisited.blogspot.com/2018/09/top-5-jenkins-courses-for-java-and-DevOps-Programmers.html)
+- [2023 年学习 Kubernetes 的 7 门免费在线课程](/javarevisited/7-free-online-courses-to-learn-kubernetes-in-2020-3b8a68ec7abc)
+- [完整的 DevOps 开发者路线图](/hackernoon/the-2018-devops-roadmap-31588d8670cb)
+- [学习亚马逊网络服务我最喜欢的课程](https://javarevisited.blogspot.com/2020/05/top-5-amazon-web-services-aws-courses-for-beginners-and-experienced-programmers.html)
+- [学习 Docker、Kubernetes 和 Jenkins 的 10 门免费课程](/javarevisited/top-10-free-courses-to-learn-jenkins-docker-and-kubernetes-for-devops-in-2020-best-of-lot-62a0541ffeb3)
+- [5 门免费 Selenium 课程学习自动化测试](https://javarevisited.blogspot.sg/2018/02/top-5-selenium-webdriver-with-java-courses-for-testers.html)
+- [学习 Azure 云平台的前 5 门课程](https://javarevisited.blogspot.com/2020/09/top-5-courses-to-learn-microsoft-azure.html)
+- [面向程序员的 10 门 Docker 和 Kubernetes 课程](https://dev.to/javinpaul/top-10-courses-to-learn-docker-and-kubernetes-for-programmers-4lg0)
+- [面向 Java 开发人员的 6 门 Maven 课程](http://www.java67.com/2018/02/6-free-maven-and-jenkins-online-courses-for-java-developers.html)
+- [2023 年 Java 开发人员应该学会的 10 件事](http://javarevisited.blogspot.sg/2017/12/10-things-java-programmers-should-learn.html#axzz53ENLS1RB)
+- [面向 Java JEE 开发者的 5 大 Hibernate 和 JPA 课程](http://javarevisited.blogspot.sg/2018/01/top-5-hibernate-and-jpa-courses-for-java-programmers-learn-online.html)
+- [程序员学习 AWS 和云的 10 门免费课程](/javarevisited/top-10-courses-to-learn-amazon-web-services-aws-cloud-in-2020-best-and-free-317f10d7c21d)
 
 感谢阅读到目前为止。如果你喜欢这些在线课程来深入了解 JIRA，那么请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
-**p . s .**——如果你热衷于学习 JIRA，但在寻找免费的在线课程，那么你也可以看看这个 [**适合初学者的 JIRA——在你的 Udemy 项目课程中有效地使用 JIRA**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fatlassian-jira-for-beginners%2F)。在这个 2 小时的免费课程中，您将学习如何在任何项目中有效地使用 Atlassian JIRA 工具。这是完全免费的，你只需要一个 Udemy 帐户就可以注册这门课程。
+**p.s.**——如果你热衷于学习 JIRA，但在寻找免费的在线课程，那么你也可以看看这个[**适合初学者的 JIRA——在你的 Udemy 项目课程中有效地使用 JIRA**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fatlassian-jira-for-beginners%2F)。在这个 2 小时的免费课程中，您将学习如何在任何项目中有效地使用 Atlassian JIRA 工具。这是完全免费的，你只需要一个 Udemy 帐户就可以注册这门课程。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fatlassian-jira-for-beginners%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fatlassian-jira-for-beginners%2F>

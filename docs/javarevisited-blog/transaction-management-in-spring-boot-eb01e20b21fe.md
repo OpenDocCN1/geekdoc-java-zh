@@ -1,3 +1,4 @@
+
 # Spring Boot 的交易管理
 
 > 原文：<https://medium.com/javarevisited/transaction-management-in-spring-boot-eb01e20b21fe?source=collection_archive---------0----------------------->
@@ -8,9 +9,9 @@
 
 有两种类型的交易管理，即
 
-1.  *陈述性*
-2.  *纲领性*
+1. *陈述性*
+2. *纲领性*
 
-# 1.声明式事务管理
+# 1. 声明式事务管理
 
 声明式事务管理是最广泛使用的方法，其中…

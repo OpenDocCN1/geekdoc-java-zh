@@ -1,16 +1,16 @@
+
 # 现实 Java：助你掌握 Java 生态系统 (Tech Today)
-
-
 
 ![](img/9781394275731.jpg)
 
+## 图 14.2：Swagger APIs
 
+## 图 14.3：执行 API
 
-### 2. 图 14.2：Swagger APIs
-### 3. 图 14.3：执行 API
-### 4. 图 14.4：Log4J
+## 图 14.4：Log4J
 
 ## 指南
+
 1. 封面
 2. 扉页
 3. 引言
@@ -27,6 +27,7 @@
 14. 用户协议结束
 
 ## 页面
+
 1. v
 2. xx
 3. xxx
@@ -196,10 +197,6 @@
 167. 165
 168. 166
 169. 167
-
-
-
-
 169. 168
 170. 169
 171. 170
@@ -430,43 +427,39 @@
 396. 399
 397. 400
 408. 407
-
-
-
-
--   404. 408
--   405. 409
--   406. 410
--   407. 411
--   408. 412
--   409. 413
--   410. 415
--   411. 416
--   412. 417
--   413. 418
--   414. 419
--   415. 420
--   416. 421
--   417. 422
--   418. 423
--   419. 424
--   420. 425
--   421. 426
--   422. 427
--   423. 428
--   424. 429
--   425. 430
--   426. vi
--   427. vii
--   428. ix
--   429. xi
--   430. xiii
--   431. xv
--   432. 431
+- 404. 408
+- 405. 409
+- 406. 410
+- 407. 411
+- 408. 412
+- 409. 413
+- 410. 415
+- 411. 416
+- 412. 417
+- 413. 418
+- 414. 419
+- 415. 420
+- 416. 421
+- 417. 422
+- 418. 423
+- 419. 424
+- 420. 425
+- 421. 426
+- 422. 427
+- 423. 428
+- 424. 429
+- 425. 430
+- 426. vi
+- 427. vii
+- 428. ix
+- 429. xi
+- 430. xiii
+- 431. xv
+- 432. 431
 
 # 引言
 
-**恭喜你掌握了 Java 基础知识！** 你已经走过了循环、switch 语句和异常处理的历程，理解了 Lambda 和流（Streams），并开始熟悉 Java 核心 API。你已经建立了坚实的基础，这绝非一项同小成就——你已经准备好开启你 Java 工程师的精英生涯了！
+**恭喜你掌握了 Java 基础知识！** 你已经走过了循环、`switch` 语句和异常处理的历程，理解了 Lambda 和流（Streams），并开始熟悉 Java 核心 API。你已经建立了坚实的基础，这绝非一项同小成就——你已经准备好开启你 Java 工程师的精英生涯了！
 
 但 Java 不僅是一门语言；它是一个庞大的生态系统，充满了工具、平台、库和 API，它们赋予了你将 Java 的能力扩展到企业级开发的每一个角落。
 
@@ -476,7 +469,7 @@
 
 本书从简要回顾 Java 历史开始，提供的见解将加深你对该语言演变及其当前方向的理解。从那里开始，我们将深入核心工具：你将熟悉 IDE（集成开发环境）、版本控制和构建工具，这些是任何 Java 开发者工具箱的骨干。
 
-接下来，我们将探索一系列基础库和框架——日志（logging）、Spring、测试工具和 Project Lombok——它们能提高你的生产力和代码质量。随后，书籍将讨论并发和正则表达式等更高级的话，这些对于编写高效、强大的代码至关重要，并继续讨论切面关注点，如面向切面的编程（AOP）和性能优化。
+接下来，我们将探索一系列基础库和框架——日志（logging）、`Spring`、测试工具和 `Project Lombok`——它们能提高你的生产力和代码质量。随后，书籍将讨论并发和正则表达式等更高级的话，这些对于编写高效、强大的代码至关重要，并继续讨论切面关注点，如面向切面的编程（AOP）和性能优化。
 
 最后，我们以一个专门介绍每个 Java 开发者库中都应该拥额外工具和技术的章节作为结束。
 
@@ -516,9 +509,6 @@ Java 由 James Gosling 在 Sun Microsystems 公司创建，并于 1995 年向世
 
 JCP（Java 社区进程）有一个执行委员会（相当于 Java 的董事会），许多组织都是成员，以确保社区得到代表。一些过去或未来的成员是拥有自己 JDK（Java 开发包）的竞争对手，例如 Amazon、Azul 和 Microsoft。其他是互补的，特别是集成开发环境（IDE）提供商，如 Eclipse 和 JetBrains。还有一些仅仅是 Java 的坚定支持者，如 BellSoft 和富士通。最后，还有社区成员如 SouJava（巴西 Java 用户组）和 Ken Fogel（个人成员）。
 
-
-
-
 在 Oracle 接手后引入的变更之一是更频繁且可预测的发布计划。注意图 1.1 所示，发布频率和发布月份都有所不同。在某些情况下，Java 用户必须等待五个以上才能等到新版本。
 
 ![时间线显示了 Java 的发布情况。2004 年 3 月发布 Java 5，2006 年 12 月发布 Java 6，2011 年 7 月发布 Java 7， 2014 年发布 Java 8。](img/c01f001.png)
@@ -546,7 +536,7 @@ JCP（Java 社区进程）有一个执行委员会（相当于 Java 的董事会
 
 **表 1.1**: Java 发布
 
-![时间线显示了 LTS 版本。包括 2018 年 9 月的 Java 11，2021 年 9 月的 Java 17，预测于 2027 年 9 月发布的 Java 29，以及预测于 2029 年 9 月发布的 Java 33。]](images/c01f002.png)
+![时间线显示了 LTS 版本。包括 2018 年 9 月的 Java 11，2021 年 9 月的 Java 17，预测于 2027 年 9 月发布的 Java 29，以及预测于 2029 年 9 月发布的 Java 33。](images/c01f002.png)
 
 **图 1.2**: LTS 发布计划，包含未来预测
 
@@ -562,7 +552,9 @@ Java 语言随时间演变了很大程度。通过观察随时间添加的关键
 
 在 Java 5 之前，编译器无法知道你意图在列表中放入什么。Java 5 引入了`泛型`，允许你指定类型，在以下示例中，为 `String`：
 
-```
+
+
+```java
 1:  import java.util.ArrayList;
 2:  import java.util.List;
 3:
@@ -584,15 +576,15 @@ Java 语言随时间演变了很大程度。通过观察随时间添加的关键
 
 现在我们已经告知了编译器我们的意图，它成了我们的助手。如果我们尝试向 `buildingNames` 添加 `Integer` 或 `LocalDate` 或其他内容，编译器将产生错误。
 
-你可能在奇怪为什么第 7 行没有写 `new ArrayList<>()` 而是使用了较长的版本。菱形运算符 (`<>`) 是在 Java 7 中添加的，而这个示例是为了 Java 5 的。尽管如此，这显示了语言的演变！
+你可能在奇怪为什么第 7 行没有写 `new ArrayList<>()` 而是使用了较长的版本。菱形运算符（`<>`）是在 Java 7 中添加的，而这个示例是为了 Java 5 的。尽管如此，这显示了语言的演变！
 
-### 从 Java 8 开始函数式编程
+## 从 Java 8 开始函数式编程
 
 `函数式编程`是一种更具声明式的编写代码的方法。你指定你想做什么，而不是处理对象的状态。你更关注表达式而不是循环。
 
 Java 8 引入了 lambda 表达式和方法引用，以方便编写带有`延迟执行`的代码，也称为“稍后运行的代码”。这两种都能让你轻松地将可执行代码传递给方法。在下面的代码中，你可以看到两个 lambda 和一个方法引用：
 
-```
+```java
 1:  import java.util.Arrays;
 2:  import java.util.List;
 3:
@@ -622,7 +614,7 @@ Java 8 引入了 lambda 表达式和方法引用，以方便编写带有`延迟�
 
 你可能注意到我们在第 8 行没有调用 `List.of()` 而是使用 `Arrays.asList()`。`List.of()` 是在 Java 9 中添加的！
 
-### 从 Java 11 开始编写模块
+## 从 Java 11 开始编写模块
 
 `Java 模块系统`(JPMS) 在更高的层次对代码进行分组。模块的主要目的是为开发者提供一组包。它类似于 JAR 文件，不同之处在于可以选择哪些包是可以外部访问的。许多公司选择不使用模块，事实上它们是可选的。
 
@@ -645,23 +637,20 @@ book-module
 
 这个示例显示的是 `.class` 文件而不是 `.java` 文件，因为 JAR 文件包含执行字节码。但是。你不希望模块的调用者引用 `PrivateHelper`。这就是 `module-info` 文件发挥作用的地方：
 
-```
+```java
 module com.wiley.realworldjava.modulecode {
    exports com.wiley.realworldjava.modulecode.utils;
    requires java.sql;
 }
 ```
 
-
-
-
 `module` 关键字让 Java 知道我们在这里指定一个模块，而不是 `class` 或 `interface` 或其他 Java 顶层类型。`exports` 指令告诉 Java 调用者可以直接从他们的代码中引用 `utils` 包。由于 `module-info` 文件中没有提到 `internal` 包，因此调用者无法直接使用它，只能通过 `BookUtils` 使用。最后，`requires` 指令指定我们使用了 `java.sql` 模块，该模块由 Oracle 随 JDK 提供。我们还使用了另一个名为 `java.base` 的模块，但它是自动提供的，不需要手动指定。它包含了 `String` 和 `List` 等常用类。
 
-### Java 17 中的文本块和记录
+## Java 17 中的文本块和记录
 
 很难从 Java 17 中选出一个最喜爱的，所以我们选了两个。文本块（Text blocks）也被称为 `multiline strings`。文本块是在 Java 15 中引入的。与模块一样，我们将它们列在支持它们的功能的第一个 LTS 版本下。你可以在这里看到一个被三个双引号（`"""`）包围的文本块：
 
-```
+```java
 1:  public class Java17TextBlocks {
 2:
 3:     public static void main(String[] args) {
@@ -687,11 +676,11 @@ Potato,Vegetable
 *
 ```
 
-注意，我们文本块的缩进被保留了，而用于 IDE 格式化的偶然空格则没有被保留。还要注意，第 9 行的三引号会在字符串中引入一个空行。如果你想省略末尾的换行符，将三个结束双引号（`"""）放在第 8 行末尾。
+注意，我们文本块的缩进被保留了，而用于 IDE 格式化的偶然空格则没有被保留。还要注意，第 9 行的三引号会在字符串中引入一个空行。如果你想省略末尾的换行符，将三个结束双引号（`"""`）放在第 8 行末尾。
 
 记录（Records）是在 Java 17 中引入的，它们在创建不可变类时消除了大量的模板代码。这个示例中使用了一个简单的记录：
 
-```
+```java
 1:  public class Java17Records {
 2:
 3:     record Coordinate(double x, double y) {}
@@ -724,7 +713,7 @@ Coordinate[x=1.2, y=5.9]
 
 当你需要一个简单的不可变类时，记录非常方便。你可以在记录体中覆盖方法或添加你自己的方法。当你需要更多自定义能力或 setter（例如用于 Java Persistence API (JPA) 实体）时，Project Lombok 可能更符合你的需求。详情请参见第 8 章“使用 Project Lombok 使用注解驱动代码”。
 
-### 学习 Java 21 的虚拟线程
+## 学习 Java 21 的虚拟线程
 
 很久以前，Java 使用原始的 `Thread` 类进行并发。虽然这仍然是并发的低级单元，但语言随后添加了 `Executors` 类以及更强大的并发技术，如 fork-join 和 `parallelStream()`。然而，并行化并不是免费的；除了线程本身的内存资源外，还有设置和协调成本。
 
@@ -734,7 +723,7 @@ Coordinate[x=1.2, y=5.9]
 
 随着 Java 语言不断增加功能，你可能会好奇功能是如何被移除的。首先，开发者会将类或方法标记为 `deprecated`（弃用），这意味着不鼓励进一步使用但仍然允许。假设你想让用户停止向 `magicNumber()` 传递参数。
 
-```
+```java
 1:  public class DeprecationExample {
 2:     /**
 3:      * 返回一个数字
@@ -757,13 +746,12 @@ Coordinate[x=1.2, y=5.9]
 
 第 8 行显示了 `forRemoval` 属性，该属性是在 Java 9 中添加的。它用于指示未来是否会移除该代码。请参阅第 2 章“了解你的 IDE：成功的秘诀”获取更多信息。IDE 会将弃用的代码显示为警告。
 
-
-
-
 Java 生态系统的变化主要来自三个方面。
 
 - **错误修复（Bug fixes）：** Java 对在错误数据库中报告的错误提供修复。你不太可能遇到这些更改，但意识到 Java 致力于修复报告的错误是非常重要的。
+
 - **Java 增强提案（JEPs）：** 例如，虚拟线程是 `JEP 444`。某些 Java 特性在确定为最终版本之前会先以预览形式发布。虚拟线程在 Java 19 中作为 `JEP 425` 进行了首次预览，在 Java 20 中作为 `JEP 436` 进行了第二次预览，最后在 Java 21 中完全发布。
+
 - **Java 规范请求（JSRs）：** JSR 比 JEP 规模更大、影响力更深。例如，Lambda 是 `JSR 335`。
 
 尽管 Java 致力于六个月一个发布周期，但它非常重视语言本身及 API 的后兼容性。使用较版本的 Java 不应该阻止你的代码编译或运行。向后兼容性并不总是能满足，但 Oracle 努力尽可能地减少变化。
@@ -773,12 +761,19 @@ Java 生态系统的变化主要来自三个方面。
 ## 进一步参考
 
 - `https://docs.oracle.com/en/java/javase/15/text-blocks/index.html`
+
   Oracle 关于文本块（text blocks）的指南
+
 - `https://docs.oracle.com/en/java/javase/14/language/records.html`
+
   Oracle 关于记录（records）的指南
+
 - *OCP Certified Professional Java SE 17 Developer Study Guide* (Sybex, 2022)
+
   Jeanne 的认证学习指南，提供了所有特性的更多细节
+
 - *The Java Module System* (Manning, 2019)
+
   关于模块的详尽书籍
 
 ## 总结
@@ -800,7 +795,9 @@ Java 生态系统的变化主要来自三个方面。
 在本章中，我们将查看“三巨头”IDE——IntelliJ、Eclipse 和 Visual Studio Code，并涵盖以下主题：
 
 - **熟悉你的快捷键：** 你的 IDE 是生产力工具，你通常可以通过他们对快捷键的使用来识别编程专业人士。快捷键有很多，但在本节中，我们将讨论一些最重要的快捷键以及如何学习它们，并向你展示如何发现更多技巧。
+
 - **专业的代码重构：** 如果你像我们一样进行尽可能多的代码审查，你就可以很容易地通过他们如何在整个代码库中重复代码片段来识别出非专业人士。你将看到你的 IDE 如何帮助你定位和纠正“复制粘贴”的代码。
+
 - **其他生产力秘籍：** 你不应该忘记，你 IDE 的首要目的是*编辑*！我们将回顾一些强大但鲜为人知的编辑功能。
 
 本章显然并不试图成为每个功能的详尽指南。你可以从用户手册中获得这些内容。相反，我们将强调利用你的 IDE 功能来极大提高你生产力的技巧。
@@ -815,6 +812,8 @@ Visual J++ 本可以赢得 IDE 战争，如果不是他们与 Java 创始人太�
 
 快进 25 年，你会发现 IntelliJ 和 Eclipse 仍在创新，而 Microsoft Visual Studio 现在提供了 Java 支持，并且一直在稳定增长，特别是在年轻开发者或那些从 JavaScript 或 Python 等其他语言起步的人中。几年前，IntelliJ 引入了一个免费的“社区版”（CE）来与其他免费产品竞争。CE 拥有人们每天使用的大部分功能，其中最显著的例外是它缺少特殊的 Spring 集成；当然，它仍然可以工作，但如果你想要丰富的 IntelliJ 风格 Spring 体验，他们要求你付费。
 
+
+
 在我们拙见中，IntelliJ 有一个显著的特征：它非常关注开发者体验，因此该 IDE 可以完成任何你想象的事情。你可以通过查看菜单看到有很多功能。有一个内置的代码定位器可以在不同的文件中查找重复代码，即使在大型代码库中也是如此，而且重构直观、精确且可靠！尽管，Eclipse 仍然被广泛使用，而 Visual Studio 在功能和影响力上都在增长。
 
 在本章中，我们将讨论这三大 IDE，从强调 IntelliJ 开始，最后讨论它与 Eclipse 以及 Visual Studio 之间的区别。在本书的其余部分，我们将主要使用 IntelliJ。尽管如此，如果你是忠实的 Eclipse 或 VS Code 用户，这里的大部分讨论都可以轻松转换，主要区别在于快捷键和菜单选项。IntelliJ 为其所有重要功能都提供了快捷键，你可以根据喜意添加和修改这些快捷键。你还可以选择一个 Eclipse 主题，以防你有 Eclipse 经验。其他 IDE 也提供了基础的按键映射，并允许你创建自己的自定义映射。但如果你喜欢快捷键的力量，你会发现 IntelliJ 开箱提供的快捷键最多。
@@ -824,10 +823,6 @@ Visual J++ 本可以赢得 IDE 战争，如果不是他们与 Java 创始人太�
 让我们从查看 IntelliJ 开始。即使你计划使用 Eclipse 或 VS Code，也请阅读这一部分，因为其他章节假设你已经阅读了整个章节。它是我们最喜欢的 IDE，谁知道呢，一旦你看到它能做什么，你可能会决定尝试 IntelliJ！
 
 ## 开始新项目
-
-
-
-
 
 当你想启动一个新项目时，可以从几个选项中选择，如图 2.1 所示。
 
@@ -858,11 +853,17 @@ Visual J++ 本可以赢得 IDE 战争，如果不是他们与 Java 创始人太�
 在大多数情况下，你会克隆一个现有项目，但每个项目都有一个起点，如果是这种情况，你需要在创建项目后将你的新项目添加到版本控制中。要执行此，请执行以下步骤。（我们使用的是 GitHub，但其他类型类型的仓库过程是类似的。关于 Git 的更多信息，请参阅第 3 章。）
 
 1.  在浏览器中在 GitHub 上创建一个仓库并获取 URL。
+
 2.  在 IntelliJ 中，从下拉菜单选择菜单项 `VCS` ➪ `Enable Version Control Integration`。
+
 3.  选择版本控制系统（在我们的案例中 `Git`）。
+
 4.  向你的项目添加一些文件，可能还有一个 `README.md` 文件。
+
 5.  选择菜单项 `Git` ➪ `Commit`。
+
 6.  现在向远程执行 push（选择菜单 `Git` ➪ `Push`，或按下 `Ctrl+Shift+K/Cmd+Shift+K`）。
+
 7.  在 `Push Commits` 窗口中，点击 `Define Remote` 按钮。
 
 现在你可以导航到你提供的 URL，在那里你会找到你的代码，如图 2.3 所示。
@@ -880,7 +881,9 @@ Visual J++ 本可以赢得 IDE 战争，如果不是他们与 Java 创始人太�
 运行类的 `main()` 方法有许多方法。虽然所有方法都需要一个 `run configuration`（包含主类、运行时参数、要使用的 Java 版本等），但如果你直接运行应用程序，IntelliJ 将为你创建一个带有默认值的配置。要运行应用程序，你可以执行以下操作之一：
 
 *   点击类名左侧的绿色箭头，如图 2.4 所示。
+
 *   点击 `main()` 方法左侧的绿色箭头。
+
 *   右键点击类编辑器。
 
 ![一个窗口显示了 IDE 中的右键菜单。运行和调试选项被高亮显示。](img/c02f004.png)
@@ -906,16 +909,14 @@ Visual J++ 本可以赢得 IDE 战争，如果不是他们与 Java 创始人太�
 例如，要获取最近工作过的文件列表，按下 `Ctrl+E/Cmd+E`。记住它需要几次，所以请遵循这条建议：
 
 1.  在菜单中查找。
+
 2.  关闭菜单。
+
 3.  使用快捷键。
 
 ### 导航你的代码库
 
 你希望能够在代码库中穿行而无需过多的鼠标点击。IDE 让这变得简单。
-
-
-
-
 
 在 IntelliJ 中打开类文件，请使用快捷键 `Ctrl+N/Cmd+O`。你不需要输入整个文件名，可以使用驼峰命名法（camel case）来输入名称部分的前缀。例如，图 2.9 显示了你如何通过输入 `OrPro` 来查找 `OrderProcessor` 的开头。
 
@@ -964,7 +965,9 @@ Visual J++ 本可以赢得 IDE 战争，如果不是他们与 Java 创始人太�
 首先是处理行时使用的三个快捷键：
 
 *   `Ctrl+D/Cmd+D` 复制当前行。
+
 *   `Ctrl+Y/Cmd+Backspace` 删除当前行。
+
 *   `Ctrl+Alt+Up Arrow/Option+Up Arrow` 分别将行向上或向下移动。
 
 接下来，当你想要查找代码中的错误和警告时，使用 `F2` 查找光标后的错误，使用 `Shift+F2` 从光标向向导航。
@@ -980,10 +983,6 @@ Visual J++ 本可以赢得 IDE 战争，如果不是他们与 Java 创始人太�
 ### 调试程序
 
 本章 GitHub 仓库中的示例代码是一个模拟订单处理系统，客户可以订单零件，系统将（模拟）验证客户的付费账户以及库存。如果订单成功，将发送成功邮件。否则，将发送订单取消邮件。（在我们的示例中，它只是在控制台打印消息。）
-
-
-
-
 
 首先，你需要导入项目。你可以使用菜单项 `File` ➪ `New` ➪ `Project From Version Control` 并提供 GitHub URL [`https://github.com/realworldjava/Ch02-IDEs`](https://github.com/realworldjava/Ch02-IDEs)。
 
@@ -1031,16 +1030,15 @@ Visual J++ 本可以赢得 IDE 战争，如果不是他们与 Java 创始人太�
 
 ### 使用 Hot Swap 进行调试
 
-在调试期间，你可能会发现程序中的 Bug（毕竟这叫调试！）。许多人认为在每次更改后都需要重启应用程序；然而，事实并非总是如此。如果你做了简单的更改，不需要重启会话。只需重新编译你修改的类（选择菜单项 `Build` ➪ `Recompile` 或按 `Ctrl+Shift+F9/Cmd+Shift+F9`），*好了*，Java 的 `Hot Swap` 功能会加载类，你的程序就能正常运行。不过有些注意事项：Hot Swap 仅在没有更改类签名时才有效。这意味着不能有任何类变量或实例变量、没有新增或删除的方法，也没有方法签名或注解更改。如果你在进行这些较大的更改后尝试 Hot Swap，IDE 会警告你 Hot Swap 未生效，你需要重启程序。
+
+
+在调试期间，你可能会发现程序中的 Bug（毕竟这叫调试！）。许多人认为在每次更改后都需要重启应用程序；然而，事实并非总是如此。如果你做了简单的更改，不需要重启会话。只需重新编译你修改的类（选择菜单项 `Build` ➪ `Recompile` 或按 `Ctrl+Shift+F9/Cmd+Shift+F9`），好了，Java 的 `Hot Swap` 功能会加载类，你的程序就能正常运行。不过有些注意事项：`Hot Swap` 仅在没有更改类签名时才有效。这意味着不能有任何类变量或实例变量、没有新增或删除的方法，也没有方法签名或注解更改。如果你在进行这些较大的更改后尝试 `Hot Swap`，IDE 会警告你 `Hot Swap` 未生效，你需要重启程序。
 
 调试是一项至关重要的技能，它可以让 IDE 为展示代码的执行流程。每个 IDE 都具有与这里描述类似的调试功能。在下一节中，我们将讨论另一项重要的技能：代码重构。
 
 ## 重构你的代码
 
 正如首次普及“重构”术语的伟大的马丁·福勒所言，“任何傻瓜都能写出计算机能懂的代码。优秀的程序员写出人类能看懂的代码。”
-
-
-
 
 重构是通过应用已知的模式来重新组织代码以改进现有代码的艺术。重构的示例包括移除冗余变量和消除复制粘贴的代码。但请记住，重构是有风险的：当你更改现有代码时，你就暴露了引入回归问题的机会；也就是说，你面临着破坏原有正常功能的风险。这正是 IDE 大显用场的地方。你看，主要的 IDE 都提供了 `Refactor`（重构）菜单，而自动化重构比手动重构要安全得多。
 
@@ -1112,9 +1110,6 @@ IDE 将提议用提取出的方法替换其他地方，如图图 2.23 所示。
 
 [FIGURE 2.26]](#c02.xhtml_R_c02-fig-0026): 第 8 行的变量声明没有增加清晰度；内联它。
 
-
-
-
 可以通过点击代码中变量的任何出现处将其内联（例如，你可以在图 2.26 第 6 行看到插入光标的位置），然后按下 `Ctrl+Alt+N`/`Cmd+Option+N`。之前的更改效果可以在图 2.27 中看到。
 
 ![一个窗口的截图，显示变量 integer 在第八行被内联并高亮显示。](img/c02f027.png)
@@ -1174,15 +1169,15 @@ IntelliJ 提供了一些选项来更整洁地组织代码。这可以让你的�
 
 #### 组织导入
 
-保持导入整洁是一件很容易；只需使用 Code ➪ Optimize Imports（优化导入）菜单选项（`Ctrl+Alt+O`/`Ctrl+Option+O`）。此选项会删除未使用的导入并对其进行排序，使其更有组织。
+保持导入整洁是一件很容易；只需使用 `Code ➪ Optimize Imports`（优化导入）菜单选项（`Ctrl+Alt+O`/`Ctrl+Option+O`）。此选项会删除未使用的导入并对其进行排序，使其更有组织。
 
 #### 格式化代码
 
-要格式化代码，可以点击菜单项 Code ➪ Reformat（格式化代码）（`Ctrl+Alt+L`/`Cmd+Option+L`），这将应用于整个文件的格式。如果你选择了一段代码片段，该命令将仅格式化选中的部分。你还可以在项目管理器中选择一个包或目录，该相同命令将格式化该目录下的所有内容。
+要格式化代码，可以点击菜单项 `Code ➪ Reformat`（格式化代码）（`Ctrl+Alt+L`/`Cmd+Option+L`），这将应用于整个文件的格式。如果你选择了一段代码片段，该命令将仅格式化选中的部分。你还可以在项目管理器中选择一个包或目录，该相同命令将格式化该目录下的所有内容。
 
 格式化命令能够识别被格式化的文件类型，并对 Java、JSON、CSS、XML 等应用适当的格式。
 
-格式化使用了每种文件类型的标准格式，但你可以调整某些内容，例如在赋值的等号周围添加空格，或者在方法声明末尾放置大括号的位置。这些设置可以在 Windows 的 File 菜单或 Mac 的 IntelliJ 菜单下找到。然后选择 Settings ➪ Code Style（代码样式）对应每种文件类型。例如，图 2.28 显示了 Java 选项。
+格式化使用了每种文件类型的标准格式，但你可以调整某些内容，例如在赋值的等号周围添加空格，或者在方法声明末尾放置大括号的位置。这些设置可以在 Windows 的 `File` 菜单或 Mac 的 `IntelliJ` 菜单下找到。然后选择 `Settings ➪ Code Style`（代码样式）对应每种文件类型。例如，图 2.28 显示了 Java 选项。
 
 ![设置窗口的截图。一个带有硬换行设置的对话框覆盖了设置窗口。](img/c02f028.png)
 
@@ -1192,20 +1187,22 @@ IntelliJ 提供了一些选项来更整洁地组织代码。这可以让你的�
 
 我们即使在经验丰富的开发者中经常发现的一种代码异味是异常处理。我们反感任何包含 `throw new Exception("some message");` 的代码。处理异常的方法是尽早处理异常。如果你必须抛出异常，请抛出尽可能具体的异常。
 
-我们用来发现修复异常处理机会的技术是搜索 `catch(Exception e)` 实例。如果方法签名中有 `throws Exception` 子句，直接删除它。然后从 `catch` 块的 `Exception` 单词中删除一个字符，这将导致 IDE 认为异常未被处理，并在每个必须处理的异常下标上红线。如果没有，你可以使用 Unwrap 功能解包 `try-catch` 块。只需将光标置于 `try-catch` 块内部并按下 `Ctrl+Shift+Delete`/`Cmd+Shift+Delete`。系统会提示解包 try。确认后，它就消失了。
+我们用来发现修复异常处理机会的技术是搜索 `catch(Exception e)` 实例。如果方法签名中有 `throws Exception` 子句，直接删除它。然后从 `catch` 块的 `Exception` 单词中删除一个字符，这将导致 IDE 认为异常未被处理，并在每个必须处理的异常下标上红线。如果没有，你可以使用 `Unwrap` 功能解包 `try-catch` 块。只需将光标置于 `try-catch` 块内部并按下 `Ctrl+Shift+Delete`/`Cmd+Shift+Delete`。系统会提示解包 try。确认后，它就消失了。
 
 #### 代码比较
 
-我们应该提到另一个禁忌：重复代码。如果你认为某些文件相似且可能需要重构，你可以在项目管理器中选择两个或多个文件，并选择菜单项 View ➪ Compare Files（比较文件）（`Ctrl+D`/`Cmd+D`）进行并排比较。这将并排打开文件，你可以在其中一侧进行编辑。
+我们应该提到另一个禁忌：重复代码。如果你认为某些文件相似且可能需要重构，你可以在项目管理器中选择两个或多个文件，并选择菜单项 `View ➪ Compare Files`（比较文件）（`Ctrl+D`/`Cmd+D`）进行并排比较。这将并排打开文件，你可以在其中一侧进行编辑。
 
-同样，你可以将选择的内容复制到剪贴板，然后进行另一个选择，右键并选择 Compare Clipboard（与剪贴板比较）
+同样，你可以将选择的内容复制到剪贴板，然后进行另一个选择，右键并选择 `Compare Clipboard`（与剪贴板比较）
 
 ### 使用列模式
 
 某些情况下你需要编辑文件中的相似行，例如，需要在这些行前面添加一个公共函数。要开启列模式，请遵循以下步骤：
 
 1. 按一次 `Ctrl/Option`。
+
 2. 再次按下，这次按住不放。
+
 3. 按下方向键，直到选中你想要编辑的整列。（见图 2.29。）
 
 现在你可以将剪贴板内容粘贴到该列，也可以原地编辑。按下 `End` 键可以将光标移动到行尾，按下 `Home` 键可以将其回到开头。你还可以使用 `Ctrl+Left Arrow`/`Cmd+Option+Shift+Left Arrow` 和 `Ctrl+Right Arrow`/`Cmd+Option+Shift+Left Arrow` 左右移动移动单词。
@@ -1217,10 +1214,6 @@ IntelliJ 提供了一些选项来更整洁地组织代码。这可以让你的�
 **图 2.29**: 选择列模式
 
 然后按下 `End` 键，光标将移动到每行的末尾，如图 2.30](#c02.xhtml_c02-fig-0030)所示。
-
-
-
-
 
 ![一个窗口的截图，显示了六行 R G B 三元组。光标位于六行的末尾。这是通过按下 end 键实现的。 ](img/c02f030.png)
 
@@ -1260,7 +1253,9 @@ IntelliJ 提供了一些选项来更整洁地组织代码。这可以让你的�
 
 现在你已经了解了 IntelliJ，是时候看看 Eclipse 了。首先，需要理解两个重要的词汇差异。在 IntelliJ 中，你打开一个*项目*（project），它由一个或多个*模块*（modules）组成。在 Eclipse 中，你打开一个*工作空间*（workspace），它同样由一个或多个*模块*组成。因此，*项目*在不同的 IDE 中含义不同：在 IntelliJ 中，*项目*指的是顶级实体，而在 Eclipse 中它指的是可构建的产物。Eclipse 是开源的，因此免费使用。它来自 IBM 和 Oracle 等大公司的贡献。
 
-要在 Eclipse 中开始，通过选择 `File` ➪ `New` ➪ `Java Project` 打开一个新项目，如图图 2.35 所示。
+
+
+要在 Eclipse 中开始，通过选择 `File` ➪ `New` ➪ `Java Project` 打开一个新项目，如图 2.35 所示。
 
 ![一个窗口的截图显示了选择 Java 项目的过程。File, new, java project。 ](img/c02f035.png)
 
@@ -1270,52 +1265,45 @@ IntelliJ 提供了一些选项来更整洁地组织代码。这可以让你的�
 
 运行 Java 有三种常见方式：
 
-*   选择绿色箭头图标上的下拉菜单并选择 `Run As` ➪ `Java Application`，如图图 2.36 所示。
-
+*   选择绿色箭头图标上的下拉菜单并选择 `Run As` ➪ `Java Application`，如图 2.36 所示。
 *   右键点击 Java 类名并选择。
-
 *   选择 `Run` 菜单，然后选择 `Java Application`。
 
 ![一个窗口的截图显示了运行应用程序。箭头被选中。 ](img/c02f036.png)
 
 **图 2.36**: 在 Eclipse 中运行应用程序
 
-## 了解 VS CODE
+## 了解 VS Code
 
 Visual Studio (VS) Code 有它自己的词汇。与 Eclipse 类似，顶级实体是工作空间。VS Code 是一个*编辑器*，而不是集成开发环境。
 
 与 IntelliJ 和 Eclipse 类似，它将那些称为*扩展*而不是插件。插件在 Windows 上位于 `File` ➪ `Preferences` ➪ `Extensions`，在 Mac 上位于 `Code` ➪ `Settings`。
 
-当你在 VS Code 中打开新窗口时，有三个选项。你可以打开磁盘上的文件夹、从版本控制获取代码，或者创建一个新的 Java 项目，如图图 2.37 所示。
+当你在 VS Code 中打开新窗口时，有三个选项。你可以打开磁盘上的文件夹、从版本控制获取代码，或者创建一个新的 Java 项目，如图 2.37 所示。
 
 ![一个标题为 no 的窗口截图。Open folder, clone repository 和 create java project 是此窗口中的三个选项。 ](img/c02f037.png)
 
 **图 2.37**: 在 VS Code 中创建项目
 
-如果你选择创建一个新项目，首先会被问你想使用哪种构建工具。现在可以选择不任何构建工具。在第 4 章 中，你将学习 Maven 和 Gradle 等构建工具。然后会被要求导航到你想存储项目的目录。最后，输入项目名称。
+如果你选择创建一个新项目，首先会被问你想使用哪种构建工具。现在可以选择不任何构建工具。在第 4 章中，你将学习 Maven 和 Gradle 等构建工具。然后会被要求导航到你想存储项目的目录。最后，输入项目名称。
 
 运行 Java 程序有三种常见方式：
 
-*   点击文件中的 `Run` 文本，如图图 2.38 所示。
-
+*   点击文件中的 `Run` 文本，如图 2.38 所示。
 *   右键点击 Java 类名并选择 `Run Java`。
-
 *   在 `Run` 菜单上，选择 `Run Without Debugging`。
 
 ![一个窗口的截图显示了一个 Java 程序。在 public class app 函数中，run debug 被高亮。 ](img/c02f038.png)
 
 **图 2.38**: 在 VS Code 中运行应用程序
 
-
-
-
 以调试模式运行的选项位于相同的位置。VS Code 将运行和调试启动配置的保存设置为“启动配置”（launch configuration）。点击左侧导航栏中的图标（显示箭头和虫子）可以获取创建启动配置的选项，如图 2.39 所示。
 
 ![一张窗口截图，左侧导航栏包含搜索、复制等图标。选中了箭头和虫子图标。右侧显示运行和调试选项。](img/c02f039.png)
 
-**图 2.39**:在 VS Code 中创建启动配置
+**图 2.39**: 在 VS Code 中创建启动配置
 
-如果你计划使用 VS Code，我们建议查看设置。在 Windows 上，选择文件（File）➪ 偏好（Preferences）➪ 设置（Settings）。在 Mac 上，选择 Code ➪ 设置（Settings）➪ 设置（Settings）。
+如果你计划使用 VS Code，我们建议查看设置。在 Windows 上，选择文件（`File`）➪ 偏好（`Preferences`）➪ 设置（`Settings`）。在 Mac 上，选择 `Code` ➪ 设置（`Settings`）➪ 设置（`Settings`）。
 
 VS Code 有许多键盘快捷键。我们将在“比较 IDE”部分探索其中一些。一个特别实用的快捷键是打开命令面板的快捷键。按下 `Ctrl+Shift+P/Cmd+Shift+P` 即可打开面板，你可以输入任何 VS Code 命令 get！
 
@@ -1332,18 +1320,18 @@ VS Code 有许多键盘快捷键。我们将在“比较 IDE”部分探索其�
 | 用于自定义 IDE 行为的可选库 | 插件 (Plugin) | 插件 (Plugin) | 扩展 (Extension) |
 | 运行的保存设置 | 运行配置 (Run configuration) | 运行配置 (Run configuration) | 启动配置 (Launch configuration) |
 
-**表 2.1**:IDE 术语
+**表 2.1**: IDE 术语
 
 | 命令 | INTELLIJ | ECLIPSE | VS CODE |
 | --- | --- | --- | --- |
-| 运行任何命令 | Shift+Shift | Ctrl+3/ Cmd+3 | Ctrl+Shift+P/ Cmd+Shift+P |
-| 打开文件 | Ctrl+N/ Cmd+O | Ctrl+Shift+T/ Cmd+Shift+R | Ctrl+P/ Cmd+P |
-| 运行应用程序 | Shift+F10/ Ctrl+R | Ctrl+Shift+F11/ Cmd+Shift+F11 | Ctrl+F5 |
-| 提取方法 | Ctrl+Alt+M/ Cmd+Alt+M | Ctrl+Alt+M/ Cmd+Option+M | Ctrl+Shift+R 然后 Ctrl+E |
-| 组织导入 | Ctrl+Alt+O/ Ctrl+Option+O | Ctrl+Shift+O/ Cmd+Shift+O | Option+Shift+O/ Alt+Shift+0 |
-| 代码格式化 | Ctrl+Alt+L/ Ctrl+Option+L | Ctrl+Shift+F/ Cmd+Shift+F | Ctrl+Shift+I/ Cmd+Shift+I |
+| 运行任何命令 | `Shift+Shift` | `Ctrl+3`/ `Cmd+3` | `Ctrl+Shift+P`/ `Cmd+Shift+P` |
+| 打开文件 | `Ctrl+N`/ `Cmd+O` | `Ctrl+Shift+T`/ `Cmd+Shift+R` | `Ctrl+P`/ `Cmd+P` |
+| 运行应用程序 | `Shift+F10`/ `Ctrl+R` | `Ctrl+Shift+F11`/ `Cmd+Shift+F11` | `Ctrl+F5` |
+| 提取方法 | `Ctrl+Alt+M`/ `Cmd+Alt+M` | `Ctrl+Alt+M`/ `Cmd+Option+M` | `Ctrl+Shift+R` 然后 `Ctrl+E` |
+| 组织导入 | `Ctrl+Alt+O`/ `Ctrl+Option+O` | `Ctrl+Shift+O`/ `Cmd+Shift+O` | `Option+Shift+O`/ `Alt+Shift+0` |
+| 代码格式化 | `Ctrl+Alt+L`/ `Ctrl+Option+L` | `Ctrl+Shift+F`/ `Cmd+Shift+F` | `Ctrl+Shift+I`/ `Cmd+Shift+I` |
 
-**表 2.2**:IDE 快捷键摘要
+**表 2.2**: IDE 快捷键摘要
 
 ## 更多参考文献
 
@@ -1368,9 +1356,6 @@ IDE 可以说是 Java 生态系统中最重要的项目，你作为程序员的�
 # 3. 使用 Git、Jira 和 Confluence 进行跨企业协作
 
 当一个开发者团队正在开发一个应用程序时，协作至关重要，否则人们会互相干扰代码。当团队遍布在全球范围内（从印度到美国）时，情况变得更加复杂。
-
-
-
 
 让我们来看一个使用 Git 的开发人员的一天。假设你想对某些文件进行更改。首先，你 `clone` 远程仓库，这会将该仓库的副本（包括所有历史）放在你的计算机上。接下来，你对文件进行所需的更改。
 
@@ -1414,7 +1399,7 @@ Git 在每个安装中都维护着三个关键区域：
 
 ### 标签 (Tagging)
 
-`tags` 类似于分支，区别在于它们是静态的。分支指针会持续移动到最新提交，而标签指针永远不会移动，因此它捕获了你的代码库在特定时刻的状态。标签就像是提交哈 的一个人类可读的名称。
+`tags` 类似于分支，区别在于它们是静态的。分支指针会持续移动到最新提交，而标签指针永远不会移动，因此它捕获了你的代码库在特定时刻的状态。标签就像是提交哈的一个人类可读的名称。
 
 ### 合并 (Merging)
 
@@ -1480,9 +1465,6 @@ git commit -am "Some meaningful commit message"
 
 安装 Git，请访问 [`https://git-scm.com/downloads`](https://git-scm.com/downloads)。你将找到适用于 Windows、macOS 和 Linux 的安装说明。
 
-
-
-
 Git for Windows 通常可以在标准的 Windows 命令行 shell 中运行，但许多开发者倾向于使用与 Git for Windows 一起安装的 Git Bash。Git Bash 是流行的 Unix/Linux `bash` shell 在 Windows 下实现，它可以识别所有的 Linux 命令（如 `grep`、`ls` 和 `ps`），非常适合具有 Unix/Linux 背景的开发者。
 
 安装 Git 后，请设置你的邮箱和名称。
@@ -1501,6 +1483,8 @@ git config --global user.email you@example.com
 让我们通过遵循典型的命令序列直接开始吧。我们建议你通过输入所有命令来跟进；这种体验将帮助你对 Git 工作流产生直观的理解。
 
 首先，请 fork（派生）本书的仓库。Fork 是对现有仓库创建一个你自己的个人的副本的过程。从理论上，你可以直接使用原始仓库而不进行 fork；然而，该仓库是只读的，因此你无法推送更改。fork 后的副本将成为你自己的，你可以随意操作。
+
+
 
 前往项目仓库 [`https://github.com/realworldjava/Ch03-Collaboration`](https://github.com/realworldjava/Ch03-Collaboration)。如图 3.1 所示，fork 该项目仓库。这会在你的用户 ID 下创建一个新仓库，例如 `https://github.com/<your git id>/Ch03-Collaboration`。
 
@@ -1522,11 +1506,12 @@ git config --global user.email you@example.com
 git clone https://github.com/<your git id>/Ch03-Collaboration
 ```
 
-这将在当前目录下克隆并初始化仓库，使你对其进行工作。（git clone 将直接将所有文件移动到当前目录，因此你总是希望从空目录开始。）克隆操作只会带来默认分支并下载远程分支列表。如果你想检出其他分支，需要显式地检出它们。
+这将在当前目录下克隆并初始化仓库，使你对其进行工作。（`git clone` 将直接将所有文件移动到当前目录，因此你总是希望从空目录开始。）克隆操作只会带来默认分支并下载远程分支列表。如果你想检出其他分支，需要显式地检出它们。
 
 接下来我们将看到 `checkout` 和 `switch` 命令的示例。
 
 1. 请 `cd` 进入目录 `main/java/com/wiley/realworldjava/gitplay`。
+
 2. 那里有一个文件（参见列表 3.1）。
 
 为了让编辑和编译更简单，请从版本控制在你的 IDE 中创建一个新项目。参考第 2 章“了解你的 IDE：成功的秘诀”，学习如何从版本控制创建项目。
@@ -1547,15 +1532,15 @@ Untracked files:
         .idea/
 ```
 
-现在你不想提交你的 `.idea` 目录（毕竟，你不想将你动态的 .idea 状态强加于他人甚至包括未来的你自己），你绝对不想提交你的编译输出目录；Git 是用于源码的，而不是编译输出的。
+现在你不想提交你的 `.idea` 目录（毕竟，你不想将你动态的 `.idea` 状态强加于他人甚至包括未来的你自己），你绝对不想提交你的编译输出目录；Git 是用于源码的，而不是编译输出的。
 
 如果能告诉 Git 完全忽略此类文件，那不是太好了吗？幸运的是，Git 提供了一种忽略选定文件和目录的功能。要这样做，请在项目根目录下创建一个名为 `.gitignore` 的文件，并包含要忽略的文件和目录的名称。你可以包含精确的文件名（`temp.txt`）、通配符（`temp*.*`）或目录。通过指定目录名称可以忽略整个目录。例如：
 
 * `/logs/` 将忽略根目录下的 `logs` 目录。
-* `logs/` 将忽略任何层级名为 `logs` 的目录。
-* 不带路径分隔符的 `logs` 将匹配 `logs/` 目录。
 
-不带路径分隔符的 `logs` 将匹配 `logs/` 目录。
+* `logs/` 将忽略任何层级名为 `logs` 的目录。
+
+* 不带路径分隔符的 `logs` 将匹配 `logs/` 目录。
 
 使用 `switch` 切换到现有分支，可以使用以下命令：
 
@@ -1603,10 +1588,6 @@ git add GitDemo.java
 ```
 
 查看 `git status`，它显示如下：
-
-
-
-
 
 ```
 On branch refactoring1
@@ -1678,7 +1659,7 @@ git merge origin my-branch
 
 在合并到 `develop` 和其他共享分支时，使用“非快进式”（`no-ff`）开关是一个良好的习惯。
 
-```git
+```
 git checkout develop
 git merge –no-ff my-branch 
 ```
@@ -1793,10 +1774,6 @@ git switch -c refactoring3
 
 新的 *refactoring3* 分支包含原始版本的 `GitDemo`，见 Listing 3.1。让我们添加一些新代码（第 19 行到第 22 行）。
 
-
-
-
-
 ```
 14: public static void main(String[] args) {
 15:    GitDemo demo = new GitDemo("Hello, Git!");
@@ -1859,22 +1836,24 @@ git merge --abort
 
 尝试一下，变变，原始代码就恢复了！相反，你可以选择修复它——删除行 `<<<<<<< HEAD`、`=======` 和 `>>>>>>> refactoring1`，并根据你的喜调整代码。
 
-```
-14: public static void main(String[] args) {
-15:    GitDemo demo = new GitDemo("Hello, Git!");
-16:
-17:    // Display the initial description
-18:    demo.displayDescription();
-19:  
-20:    // Make more changes and commit
-21:    demo.description = "Git is fun and easy, and very powerful.";
-22:    demo.displayDescription();
-23: }
+
+
+```java
+public static void main(String[] args) {
+    GitDemo demo = new GitDemo("Hello, Git!");
+
+    // Display the initial description
+    demo.displayDescription();
+
+    // Make more changes and commit
+    demo.description = "Git is fun and easy, and very powerful.";
+    demo.displayDescription();
+}
 ```
 
-然后调用 `git add` 标记冲突已解决，并调用 `git commit` 告诉 Git 继续合并。
+然后调用`git add`标记冲突已解决，并调用`git commit`告诉 Git 继续合并。
 
-```
+```bash
 git add GitDemo.java
 git commit -m "resolved conflict"
 ```
@@ -1883,20 +1862,20 @@ git commit -m "resolved conflict"
 
 ### 使用 Pull/Merge Requests/合并请求
 
-当你在协作环境中工作时，特别是在大型开源项目中，企业会为大团队分配读取权限，并将写入权限仅留给“提交者”（committers）。在这种情况下，团队可能具有创建分支的能力，但可能没有合并到 `main` 和 `develop` 等主共享分支的能力。在更极端的情况下，团队被要求克隆仓库并在克隆中进行所有更改。
+当你在协作环境中工作时，特别是在大型开源项目中，企业会为大团队分配读取权限，并将写入权限仅留给“提交者”（committers）。在这种情况下，团队可能具有创建分支的能力，但可能没有合并到`main`和`develop`等主共享分支的能力。在更极端的情况下，团队被要求克隆仓库并在克隆中进行所有更改。
 
 在这些企业中，当你想要将更改合并到主仓库的主分支时，你需要以拉取请求（pull request）的形式向管理员提出请求。要创建拉取请求，你需要登录提供者并选择创建新拉取请求（GitLab 中 merge request）的选项。
 
 ### 使用 Git Log
 
-我们看到 `git log` 命令列出了当前分支上所有的提交。
+我们看到`git log`命令列出了当前分支上所有的提交。
 
-你可以为 `git log` 命令添加各种选项来控制提交范围、格式化选项、图表选项等内容。我们在这里不会深入讨论这些内容；请参阅 [`https://git-scm.com/docs/git-log`](https://git-scm.com/docs/git-log) 中的 Git 文档。
+你可以为`git log`命令添加各种选项来控制提交范围、格式化选项、图表选项等内容。我们在这里不会深入讨论这些内容；请参阅[`https://git-scm.com/docs/git-log`](https://git-scm.com/docs/git-log)中的 Git 文档。
 
-我们在这里提到的一个选项是命名恰当的 `--oneline`，它会显示每行一个简洁的日志。当你添加 `--graph` 选项时，它还会显示分支的图形化视图。
+我们在这里提到的一个选项是命名恰当的`--oneline`，它会显示每行一个简洁的日志。当你添加`--graph`选项时，它还会显示分支的图形化视图。
 
-```
-git log --graph --oneline 
+```bash
+git log --graph --oneline
 ```
 
 以下显示了当前分支的提交历史：
@@ -1916,8 +1895,8 @@ git log --graph --oneline
 
 你也可以通过添加分支名称来显示任何特定分支的提交历史。
 
-```
-git log --graph --oneline refactoring1 
+```bash
+git log --graph --oneline refactoring1
 * f162588 (refactoring1) added a display
 * 822d223 (main) Formatting
 * 55de6c6 (origin/main, origin/HEAD) added detail
@@ -1925,34 +1904,31 @@ git log --graph --oneline refactoring1
 * ed46f26 Initial commit
 ```
 
-
-
-
-6. 将分支 `refactoring3` 复制到 `refactoring3a`。
+6. 将分支`refactoring3`复制到`refactoring3a`。
 
 ```bash
 git branch -c refactoring3a
 ```
 
-7. 将 `feature` 合并到 `refactoring3a`（与上一次合并一样，可能会出现带有默认提交消息的 Git 窗口；你可以保留该消息并像之前一样输入 `:q`）。
+7. 将`feature`合并到`refactoring3a`（与上一次合并一样，可能会出现带有默认提交消息的 Git 窗口；你可以保留该消息并像之前一样输入`:q`）。
 
 ```bash
 git merge feature
 ```
 
-8. 切换到 `refactoring3`。
+8. 切换到`refactoring3`。
 
 ```bash
 git switch refactoring3
 ```
 
-9. 将 `feature` 变基到 `refactoring3`。
+9. 将`feature`变基到`refactoring3`。
 
 ```bash
 git rebase feature
 ```
 
-10. 比较顶部的 `refactoring3a`（合并）和底部的 `refactoring3`（变基）日志。你可以看到 `rebase` 将提交历史移动到了目标分支的末尾，而 `merge` 创建了一个新的 `merge` 。
+10. 比较顶部的`refactoring3a`（合并）和底部的`refactoring3`（变基）日志。你可以看到`rebase`将提交历史移动到了目标分支的末尾，而`merge`创建了一个新的`merge`。
 
 ```bash
 git log --graph --oneline refactoring3
@@ -1978,16 +1954,16 @@ git log --graph --oneline refactoring3a
 | * 607d6bb changes to feature for rebase
 * | 4821d9c more changes to refactoring3
 |/
-* 502f3b3 resolved conflict 
+* 502f3b3 resolved conflict
 ```
 
-无论哪种方式，代码都是相同的，但 `rebase` 产生了更干净的历史。那么缺点是什么呢？我们为什么会使用 `merge` 而不是 `rebase`？
+无论哪种方式，代码都是相同的，但`rebase`产生了更干净的历史。那么缺点是什么呢？我们为什么会使用`merge`而不是`rebase`？
 
-答案是 `rebase` 会重写你的提交历史。记得，我们提到提交 ID 包含了之前的版本信息。现在，由于我们把提交历史移动到了分支的末尾，之前的版本发生了变化，因此提交 ID 也发生了变化。这为什么不好呢？如果你独自在一个分支上工作，并且没有将你的工作合并到任何其他分支，那么这并没有坏。但如果你正在进行协作，或者你已经将此分支合并到任何其他共享分支，那么任何共享该工作的人在将该工作合并回自己的代码时都会遇到困难。
+答案是`rebase`会重写你的提交历史。记得，我们提到提交 ID 包含了之前的版本信息。现在，由于我们把提交历史移动到了分支的末尾，之前的版本发生了变化，因此提交 ID 也发生了变化。这为什么不好呢？如果你独自在一个分支上工作，并且没有将你的工作合并到任何其他分支，那么这并没有坏。但如果你正在进行协作，或者你已经将此分支合并到任何其他共享分支，那么任何共享该工作的人在将该工作合并回自己的代码时都会遇到困难。
 
-正如图 3.6 所示，`refactoring3` 和 `refactoring3a` 两个分支具有完全相同的版本，但 `refactoring3a`（合并分支）由两个合并到单个提交的并行分支组成，而 `refactoring3`（变基分支）是一条直线的分支。
+正如图 3.6 所示，`refactoring3`和`refactoring3a`两个分支具有完全相同的版本，但`refactoring3a`（合并分支）由两个合并到单个提交的并行分支组成，而`refactoring3`（变基分支）是一条直线的分支。
 
-![窗口截图显示了合并和变基日志。它在五列中包含了分支类型、提交消息、分支名称、用户和提交 ID。 ](img/c03f006.png)
+![窗口截图显示了合并和变基日志。它在五列中包含了分支类型、提交消息、分支名称、用户和提交 ID。](img/c03f006.png)
 
 图 3.6: 合并与变基
 
@@ -1995,20 +1971,20 @@ git log --graph --oneline refactoring3a
 
 你已经学习了在分支上开发更改，然后将这些更改合并或变基到其他分支。但如果你想选择性地从一个分支向另一个分支集成部分而非全部更改会发生什么？
 
-Git 以 `cherry-picking` 的形式为这个问题提供了解决方案。`cherry-picking` 是从一个分支将特定提交应用到另一个分支的能力。要执行此操作，切换到目标分支，找到你想要挑选的提交的 ID，然后调用 `git cherry-pick` 命令。你不需要指定整个提交 ID；只需能够唯一标识该提交的前几个字符即可。例如，要将提交 ID `4954034c…` 挑选到 `refactoring1` 分支，请执行以下操作：
+Git 以`cherry-picking`的形式为这个问题提供了解决方案。`cherry-picking`是从一个分支将特定提交应用到另一个分支的能力。要执行此操作，切换到目标分支，找到你想要挑选的提交的 ID，然后调用`git cherry-pick`命令。你不需要指定整个提交 ID；只需能够唯一标识该提交的前几个字符即可。例如，要将提交 ID`4954034c…`挑选到`refactoring1`分支，请执行以下操作：
 
 ```bash
 git switch refactoring1
 git cherry-pick 4954
 ```
 
-记住，如果你在同步操作，你的提交 ID 将不同的，所以请使用 `git log` 找到一个要挑选的 ID。注意：在很多情况下，`cherry-picking` 会导致你需要解决的合并冲突，因此要谨慎。在这种情况下，我们遇到了冲突；像以前一样手动解决它，并调用以下命令继续：
+记住，如果你在同步操作，你的提交 ID 将不同的，所以请使用`git log`找到一个要挑选的 ID。注意：在很多情况下，`cherry-picking`会导致你需要解决的合并冲突，因此要谨慎。在这种情况下，我们遇到了冲突；像以前一样手动解决它，并调用以下命令继续：
 
 ```bash
 git commit -am "Cherry picked and then resolved conflict"
 ```
 
- Git 礼貌地响应：
+Git 礼貌地响应：
 
 ```
 1 file changed, 8 insertions(+)
@@ -2016,15 +1992,15 @@ git commit -am "Cherry picked and then resolved conflict"
 
 ### 回退与重置 (Reverting and Resetting)
 
-如何撤销一个提交？有两种方法：`git revert` 和 `git reset`。
+如何撤销一个提交？有两种方法：`git revert`和`git reset`。
 
-`git revert <commit id>` 创建一个新的提交，将文件恢复到该提交 ID 的状态。
+`git revert <commit id>`创建一个新的提交，将文件恢复到该提交 ID 的状态。
 
-`git reset <commit id>` 更具侵入性；它实际上会更改历史并丢弃提交 ID 之后的提交。此命令有三种用法：
+`git reset <commit id>`更具侵入性；它实际上会更改历史并丢弃提交 ID 之后的提交。此命令有三种用法：
 
-`git reset --soft <commit id>` 将当前分支的指针指向指定的提交。但是，它保留了你在工作目录和暂存区中所做的任何更改。这产生了“取消提交”你的更改的效果。
+`git reset --soft <commit id>`将当前分支的指针指向指定的提交。但是，它保留了你在工作目录和暂存区中所做的任何更改。这产生了“取消提交”你的更改的效果。
 
-`git reset –hard <commit id>` 也会重置分支指针指向指定的提交。但是，它会丢弃工作目录和暂存区的所有更改。
+`git reset –hard <commit id>`也会重置分支指针指向指定的提交。但是，它会丢弃工作目录和暂存区的所有更改。
 
 ### 使用 IDE 支持进行优化
 
@@ -2038,7 +2014,7 @@ git commit -am "Cherry picked and then resolved conflict"
 
 #### 跟踪新文件
 
-文件第一次被跟踪时，它将显示为绿色，表示这是一个从未提交的新跟踪文件，如图 3.8 所示。（被圈出的 `HelloWorld` 类是绿色的。）
+文件第一次被跟踪时，它将显示为绿色，表示这是一个从未提交的新跟踪文件，如图 3.8 所示。（被圈出的`HelloWorld`类是绿色的。）
 
 如果文件是在外部创建的（也许被移动到项目中），你仍然可以跟踪它；只需右键点击文件并选择 Git 然后 Add。这将将其添加到暂存区，如图 3.9 所示。
 
@@ -2052,15 +2028,11 @@ git commit -am "Cherry picked and then resolved conflict"
 
 暂存更改是一种常见操作，因此为了方便，我们将 Ctrl+Alt+A 设置为此操作的 Windows 映射快捷键。请参阅第 2 章创建快捷键。
 
-
-
-
-
-要提交更改，请选择菜单选项 `Git/Commit`（Windows 快捷键为 `Ctrl+K`；Mac 快捷键为 `Cmd+K`）。这将打开 `commit` 窗口，你可以在其中看到所有已暂存的文件。
+要提交更改，请选择菜单选项`Git/Commit`（Windows 快捷键为`Ctrl+K`；Mac 快捷键为`Cmd+K`）。这将打开`commit`窗口，你可以在其中看到所有已暂存的文件。
 
 受跟踪文件的更改会自动暂存并显示在 commit 窗口中，但如果你还没有准备好提交，可以通过取消勾选 commit 窗口中文件名旁边的选框来取消暂存。
 
-在 commit 窗口中点击右键会弹出上下文窗口。那里的大多数选项都是一而易见的，但请注意 `New Changelist`（新建更改列表）选项（参见图 3.10）。IntelliJ 确保你一次只能提交一个更改列表，因此如果你暂时将某些文件排除在提交之外，可以创建一个新的更改列表并将这些文件移动到该列表中，以分离你的提交。
+在 commit 窗口中点击右键会弹出上下文窗口。那里的大多数选项都是一而易见的，但请注意`New Changelist`（新建更改列表）选项（参见图 3.10）。IntelliJ 确保你一次只能提交一个更改列表，因此如果你暂时将某些文件排除在提交之外，可以创建一个新的更改列表并将这些文件移动到该列表中，以分离你的提交。
 
 ![提交上下文窗口的截图。侧边栏选择了 commit 选项。在 commit 对话框中，选择了新的更改列表选项。](img/c03f010.png)
 
@@ -2070,7 +2042,7 @@ git commit -am "Cherry picked and then resolved conflict"
 
 如果你双击 commit 窗口中的文件，将打开差异查看器（diff-viewer）窗口，并行显示旧版本和当前版本。你可以直接在差异查看器窗口中进行编辑。如果你想忽略空格更改、空行更改等，可以选择差异查看器窗口顶部选择器中的选项。
 
-`F7` 是一个跳转到下一个更改的便捷快捷键。`Shift+F7` 将返回到上一个更改。当你到达文件末尾并再次点击 `F7` 时，IntelliJ 将提示你移动到下一个文件。
+`F7`是一个跳转到下一个更改的便捷快捷键。`Shift+F7`将返回到上一个更改。当你到达文件末尾并再次点击`F7`时，IntelliJ 将提示你移动到下一个文件。
 
 更改的行将显示在差异查看器窗口中，如图 3.11 所示，带有浅蓝色高亮和侧边缘的复选框。你可以通过勾选或取消勾选差异查看器窗口中每个更改旁边的选框来选择提交哪些更改。只有选中的更改会被提交。如果你右键点击某个更改，可以选择将其更改发送到另一个更改列表，这样对该文件的提交将不会包含这些更改。
 
@@ -2082,71 +2054,104 @@ git commit -am "Cherry picked and then resolved conflict"
 
 当你有不想提交的代码时，最好用非常显眼的符号将其包起来，如下所示。这将防止意外提交！
 
-```
+```java
 ///////// Don't Commit ///////////
 someCodeToNotCommit();
 someMoreCodeToNotCommit();
 ///////// Don't Commit ///////////
 ```
 
-`Git` 菜单提供了所有描述的命令以及更多，如你在图 3.12 中所示。
+`Git`菜单提供了所有描述的命令以及更多，如你在图 3.12 中所示。
 
 ![一个包含工具、git、窗口和帮助等标签页的窗口截图。选择了 git 标签页。下拉菜单包含 commit、push、update project、merge、rebase 和 github 等选项。](img/c03f012.png)
 
 **图 3.12**: IntelliJ Git 菜单
 
-*   **Commit:** 将所有跟踪文件的更改提交到本地仓库。
-*   **Push:** 将更改推送到远程服务器。
-*   **Update Project:** 从选定的远程服务器获取当前检出分支中所有文件的最新版本；使用 `Git` ➪ `Update Project` 或 `Ctrl+T`（Mac 上 `Cmd+T`）。
-*   **Pull:** 从选定的远程仓库更新特定分支。
-*   **Fetch:** 从服务器更新特定分支，而不实际检出它。如果发生冲突，你可以在这里解决。
-*   **Merge:** 将分支合并到当前分支。
-*   **Rebase:** 将当前分支变基到另一个分支上。
-*   **Branches:** 为分支操作提供菜单。
-*   **New Tag:** 为当前提交创建标签。
-*   **Reset:** 将分支重置到之前的状态。
-*   **Show Log:** 显示提交历史。
-*   **Patch:** 为更改生成或应用补丁。
-*   **Uncommitted Changes:** 显示尚未提交的更改。
-*   **Shelve:** 临时搁存更改。
-*   **Show Shelf:** 显示搁存的更改。
-*   **Stash:** 类似于搁存，但使用 Git stash 功能。
-*   **Unstash:** 恢复储存的更改。
-*   **Rollback:** 将文件恢复到原始状态。
-*   **Show Local Changes:** 显示本地更改列表。
+- **Commit:** 将所有跟踪文件的更改提交到本地仓库。
 
-*   **Uncommitted Changes:** 这一项值得探索子菜单；参见图 3.13![![一个菜单的截图，包含以下选项：Patch, uncommitted changes, git hub, 和 clone。选择了 uncommitted changes。](img/c03f013.png)
+- **Push:** 将更改推送到远程服务器。
+
+- **Update Project:** 从选定的远程服务器获取当前检出分支中所有文件的最新版本；使用`Git` ➪`Update Project`或`Ctrl+T`（Mac 上`Cmd+T`）。
+
+- **Pull:** 从选定的远程仓库更新特定分支。
+
+- **Fetch:** 从服务器更新特定分支，而不实际检出它。如果发生冲突，你可以在这里解决。
+
+- **Merge:** 将分支合并到当前分支。
+
+- **Rebase:** 将当前分支变基到另一个分支上。
+
+- **Branches:** 为分支操作提供菜单。
+
+- **New Tag:** 为当前提交创建标签。
+
+- **Reset:** 将分支重置到之前的状态。
+
+- **Show Log:** 显示提交历史。
+
+- **Patch:** 为更改生成或应用补丁。
+
+- **Uncommitted Changes:** 显示尚未提交的更改。
+
+- **Shelve:** 临时搁存更改。
+
+- **Show Shelf:** 显示搁存的更改。
+
+- **Stash:** 类似于搁存，但使用 Git stash 功能。
+
+- **Unstash:** 恢复储存的更改。
+
+- **Rollback:** 将文件恢复到原始状态。
+
+- **Show Local Changes:** 显示本地更改列表。
+
+- **Uncommitted Changes:** 这一项值得探索子菜单；参见图 3.13
+
+![一个菜单的截图，包含以下选项：Patch, uncommitted changes, git hub, 和 clone。选择了 uncommitted changes。](img/c03f013.png)
 
 **图 3.13**: 未提交的更改
 
-*   **Shelve:** 临时搁存更改。
-*   **Show Shelf:** 显示搁存的更改。
-*   **Stash:** 类似于搁存，但使用 Git stash 功能。
-*   **Unstash:** 恢复储存的更改。
-*   **Rollback:** 将文件恢复到原始状态。
-*   **Show Local Changes:** 显示本地更改列表。
+- **Shelve:** 临时搁存更改。
 
-*   **Current File:** 这一项值得探索子菜单；参见图 3.14![![一个菜单的截图，包含以下选项：Patch, uncommitted changes, git hub, 和 clone。选择了 current file 选项。子菜单显示 commit file, add, annotate with git blame, 和 compare with revision。](img/c03f014.png)
+- **Show Shelf:** 显示搁存的更改。
+
+- **Stash:** 类似于搁存，但使用 Git stash 功能。
+
+- **Unstash:** 恢复储存的更改。
+
+- **Rollback:** 将文件恢复到原始状态。
+
+- **Show Local Changes:** 显示本地更改列表。
+
+- **Current File:** 这一项值得探索子菜单；参见图 3.14
+
+![一个菜单的截图，包含以下选项：Patch, uncommitted changes, git hub, 和 clone。选择了 current file 选项。子菜单显示 commit file, add, annotate with git blame, 和 compare with revision。](img/c03f014.png)
 
 **图 3.14**: 当前文件
 
-*   **Commit File:** 打开 commit 窗口，你可以在其中选择要提交的更改。
-*   **Add:** 告诉 Git 跟踪新文件。
-*   **Annotate with Git Blame:** 在侧边缘显示最后更新文件每一行的人名。
-*   **Show Diff:** 以差异查看器窗口的形式并行显示当前文件与拉取时的版本差异。
-*   **Compare with Revision:** 提供最近提交列表供你与本地状态对比。
-*   **Compare with Branch:** 提供分支列表供你与本地状态对比。
-*   **Show History:** 显示此文件的所有提交，并允许你与之前的状态对比。
-*   **Show History for Method:** 显示当前方法的所有提交，并允许你与之前的状态对比。
-*   **Show History for Selection:** 仅在你选择内容时出现。此菜单项显示该选择内容的所有提交，并允许你与之前的状态对比。
+- **Commit File:** 打开 commit 窗口，你可以在其中选择要提交的更改。
 
-你可以通过右键点击编辑器中的文件并选择 Git 获取更广泛的 Git 选项，如图 3.15 所示。
+- **Add:** 告诉 Git 跟踪新文件。
+
+- **Annotate with Git Blame:** 在侧边缘显示最后更新文件每一行的人名。
+
+- **Show Diff:** 以差异查看器窗口的形式并行显示当前文件与拉取时的版本差异。
+
+- **Compare with Revision:** 提供最近提交列表供你与本地状态对比。
+
+- **Compare with Branch:** 提供分支列表供你与本地状态对比。
+
+- **Show History:** 显示此文件的所有提交，并允许你与之前的状态对比。
+
+- **Show History for Method:** 显示当前方法的所有提交，并允许你与之前的状态对比。
+
+- **Show History for Selection:** 仅在你选择内容时出现。此菜单项显示该选择内容的所有提交，并允许你与之前的状态对比。
+
+
+
+你可以通过右键点击编辑器中的文件并选择 `Git` 获取更广泛的 Git 选项，如图 3.15 所示。
 
 ![一个 git 上文菜单的截图。选择了 Git。下拉菜单显示 commit file, show diff, show history, push, pull, rebase, braches, clone, 等。](img/c03f015.png)
-
-
-
-
 
 # 图 3.15 (c03.xhtml_R_c03-fig-0015): Git 右键菜单
 
@@ -2160,7 +2165,7 @@ IntelliJ 拥有一个 `Git Log` 窗口，你可以通过点击左下角的 `Git`
 
 另一个你应该了解的功能是 `Git ➪ History`。你可以在任何受管理的文件上点击右键，并选择 `Git ➪ History` 来获取该文件所有版本的列表。当你发现某些东西损坏并想要定位到上一次良好的版本时，它简直是救星。你可以获取整个文件的历史记录，也可以选择部分内容并仅查看该部分的历史。
 
-在相关新闻中，IntelliJ 还提供了 `local-history` 功能，你你可以在没有 Git 的情况下获取快速的版本历史，甚至对于未被 Git 跟踪的文件也是如此。
+在相关新闻中，IntelliJ 还提供了 `local-history` 功能，你可以在没有 Git 的情况下获取快速的版本历史，甚至对于未被 Git 跟踪的文件也是如此。
 
 ## 使用 Markdown 语言创建 README 文件
 
@@ -2217,12 +2222,19 @@ Markdown 支持六级标题。要指定一级标题，以 `#` 开头该行，后
 要指定代码，你可以使用“三反引号”语法指定语言和代码。Markdown 识别许多语言标签，包括：
 
 *   `java`
+
 *   `python`
+
 *   `javascript`
+
 *   `html`
+
 *   `css`
+
 *   `markdown`（用于嵌套代码块）
+
 *   `bash`
+
 *   `sql`
 
 这里有一个例子：
@@ -2257,19 +2269,13 @@ public class HelloMarkdown {
 
 1. 第一步是从 `main` 分支创建一个名为 `develop` 的新分支。这是一次性任务。`develop` 分支是一个收集分支，但没有直接提交到 `develop`。`develop` 分支只从其他分支合并。一旦 `develop` 创建，它将在整个项目生命周期内一直存在。
 
-
-
-
-
 ## 工作流概述
 
 2. 当一个功能达成一致后，将为该功能创建一个 `feature` 分支。通常，业务部门会为该功能定义需求，并在像 `Jira` 这样的跟踪系统中进行跟踪（我们将在下一节中介绍）。跟踪系统会为该需求分配一个键，尽管功能分支的命名是灵活的，但通常会给它一个以 `feature/` 开头的名称，后跟键值和一个极短但具有解释性的描述（不允许有空格，请使用连字符）。一个功能分支名称示例可能类似于 `feature/RWJ-1234-add-ui-login`，其中 `RWJ-1234` 是这个新“添加 UI 登录”功能的 Jira 键。
 
 3. 当团队在自己的功能分支上工作时，他们会继续开发代码并进行提交。构建服务器会在每次提交时运行构建。更多详情请参阅第 4 章，“使用 Maven、Gradle 和 Jenkins 自动化你的 CI/CD 构建”。
 
-
-
-4. 当一个功能被认为完成时，它会被合并回 `develop` 分支。请记住，在你工作期间，`develop` 分支一直在并行进化，因为其他团队成员也在编写自己的代码。因此，它看起来会与你最初创建功能分支时不同。因此，再次需要一个新的新的构建和测试周期，这正是构建服务器所做的。
+4. 当一个功能被认为完成时，它会被合并回 `develop` 分支。请记住，在你工作期间，`develop` 分支一直在并行进化，因为其他团队成员也在编写自己的代码。因此，它看起来会与你最初创建功能分支时不同。因此，再次需要一个新的构建和测试周期，这正是构建服务器所做的。
 
 5. `develop` 分支已准备好发布。从 `develop` 创建一个新的名为 `release` 的分支，命名为 `release/` 后跟发布版本号。但过程并未此结束。现在发布分支已经切分，开发可以在 `develop` 分支上继续演进用于未来的发布，而只有本次发布会在 `release` 分支上维护。
 
@@ -2288,12 +2294,14 @@ public class HelloMarkdown {
 ### Gitflow 的一些优势：
 
 *   功能是隔离的，这使得易于隔离管理你自己的功能变更。
+
 *   易于维护不同的版本。
+
 *   功能是分离的，允许你决定在发布中包含哪些功能。
 
 ## 使用 JIRA 进行企业流程协作
 
-在过去，软件开发是使用瀑布模型方法的。这是一种阶段性的、顺序的方法，进度像瀑布一样向下流。。
+在过去，软件开发是使用瀑布模型方法的。这是一种阶段性的、顺序的方法，进度像瀑布一样向下流。
 
 首先准备并批准了功能性需求。然后是设计阶段，紧接着是实施阶段，该阶段将持续一段时间。最后，将进行测试、部署并交付给客户。整个过程可能需要几个月或几年时间，最后客户可能满意也可能不满意，而且分配资源很困难，因为阶段是顺序的，在开始需要业务分析师（BA），中间需要架构师和开发人员，最后需要测试人员和发布人员。
 
@@ -2316,9 +2324,6 @@ Jira 使用这种层级结构为管理层提供自上而下的视图（他们可
 ### 创建项目
 
 问题分配给项目。如果你加入一个现有团队，通常会设置一个或多个项目。如果你需要创建一个新项目，转到 Projects 标签并选择 Create Project，选择合适的模板并按照那里的说明进行操作。
-
-
-
 
 每个模板都有对应的看板类型。例如，对于软件开发，你可以选择看板式（Kanban）、Scrum 等。我们将在示例项目中使用 Scrum。Scrum 允许你在有时间限制的冲刺（sprints）中管理交付，默认周期为两周。看板没有时间限制，但它将看板划分为若干列，代表不同的任务或团队，并且看板上的每一列都有一个 `WIP`（进行中数量）限制，如图图 3.20
 
@@ -2376,7 +2381,9 @@ Jira 的真正价值从 `board`（看板）开始。我们的示例项目是一�
 
 **图 3.26**: 创建冲刺
 
-创建了一些 Jira 问题后，可以将 `jiras` 拖放到适当的冲刺中，如图图 3.27 所示。
+
+
+创建了一些 Jira 问题后，可以将 `jiras` 拖放到适当的冲刺中，如图 3.27 所示。
 
 一旦冲刺分配，可以通过点击顶部的 `Start Sprint` 按钮来启动。
 
@@ -2388,7 +2395,7 @@ Jira 的真正价值从 `board`（看板）开始。我们的示例项目是一�
 
 项目管理员可以添加维护用户并分配角色。点击左下角的齿轮图标并点击 `Access`。添加你的用户并分配角色。
 
-用户添加到项目后，点击左侧的 `Back To Project`。现在你可以分配用户问题，如图图 3.28 所示。
+用户添加到项目后，点击左侧的 `Back To Project`。现在你可以分配用户问题，如图 3.28 所示。
 
 ![Jira 窗口截图。选择了 `access` 选项。右侧显示详细信息，`add people` 选项被高亮。](img/c03f028.png)
 
@@ -2404,12 +2411,9 @@ Jira 的真正价值从 `board`（看板）开始。我们的示例项目是一�
 
 点击右侧的 `Create Column` `+` 号按钮添加列。
 
-![显示四个维护项目的窗口截图。现在看板管理员可以添加新列、重命名现有列、重新调整顺序，并为每一列分配一个工作流中的状态，如图图 3.30 所示。](img/c03f030.png)
+![显示四个维护项目的窗口截图。现在看板管理员可以添加新列、重命名现有列、重新调整顺序，并为每一列分配一个工作流中的状态，如图 3.30 所示。](img/c03f030.png)
 
 **图 3.30**: 列维护
-
-
-
 
 随着看板上填充的 Jira 越来越多，区分不同的问题可能会变得困难。例如，在每日站期间，团队成员可能会在不同的人之间切换，询问你昨天完成了什么，今天将要做什么，以及是否有任何阻碍。当轮到你时，如果能只显示你的 Jira 并隐藏所有其他 Jira，不是很方便吗？这就是过滤器的用途。
 
@@ -2417,7 +2421,7 @@ Jira 的真正价值从 `board`（看板）开始。我们的示例项目是一�
 
 ### 查看我的问题
 
-通过选择 图 3.31 中的 `Filters/My Open Issues`，你可以查看跨看板和待办列表的所有所有问题。
+通过选择图 3.31 中的 `Filters/My Open Issues`，你可以查看跨看板和待办列表的所有问题。
 
 在同一个屏幕上，你可以点击 `Switch To JQL` 在 `JQL` 中输入查询。
 
@@ -2427,7 +2431,7 @@ Jira 的真正价值从 `board`（看板）开始。我们的示例项目是一�
 
 ### 使用 JQL 查询
 
-`Jira 查询语言` (`JQL`) 为任何用户提供了根据特定标准选择 Jira 的功能。它是一种简单的语言；你指定一个或多个字段以及这些字段的值，以及一个 `order by` 子句。
+`Jira 查询语言`（`JQL`）为任何用户提供了根据特定标准选择 Jira 的功能。它是一种简单的语言；你指定一个或多个字段以及这些字段的值，以及一个 `order by` 子句。
 
 一个 `JQL` 查询由一个或多个字段选择子句以及一个 `order by` 子句组成。字段选择子句由 `AND` 或 `OR` 分隔，并可以使用括号进行分组。
 
@@ -2481,7 +2485,7 @@ Jira 的真正价值从 `board`（看板）开始。我们的示例项目是一�
 
 **表 3.4**: 特殊运算符
 
-你还可以使用通配符 (`*`) 进行部分匹配。例如，此查询查找所有摘要以 `improvement` 开头的 Jira：
+你还可以使用通配符（`*`）进行部分匹配。例如，此查询查找所有摘要以 `improvement` 开头的 Jira：
 
 ```
 summary ~* "improvement*
@@ -2501,13 +2505,13 @@ project = "Value Mark" and assignee = currentUser() AND resolution = Unresolved 
 
 ### 批量更改
 
-你可以根据 JQL 查询修改选定的 Jira。在 JQL 界面上，你可以点击 `Bulk Change` 按钮，然后点击你想更改的每个旁边的复选框，如 图 3.32 所示。
+你可以根据 JQL 查询修改选定的 Jira。在 JQL 界面上，你可以点击 `Bulk Change` 按钮，然后点击你想更改的每个旁边的复选框，如图 3.32 所示。
 
 ![窗口截图，显示了批量更改按钮的特视图。下拉菜单显示两个选项，标记为“批量更改三个问题”和“从 CSV 导入问题”。](img/c03f032.png)
 
 **图 3.32**: 批量编辑
 
-然后你可以选择编辑选中的问题、将它们移动到新项目、转换它们的状态等，如 图 3.33 和 图 3.34 所示。
+然后你可以选择编辑选中的问题、将它们移动到新项目、转换它们的状态等，如图 3.33 和图 3.34 所示。
 
 ![批量操作窗口的截图，显示第 2/4 步，标记“选择操作”。显示了问题的选择框。选中了转换。下方是“下一步”和“取消”选项。](img/c03f033.png)
 
@@ -2529,9 +2533,6 @@ git commit -m "Implemented credentials validation. VM-8"
 
 然后你可以在 Jira 单中查看相关的提交列表。
 
-
-
-
 要创建您自己的 Confluence 云版本，请访问 [`https://www.atlassian.com/software/confluence`](https://www.atlassian.com/software/confluence)。
 
 Confluence 分为多个 `spaces`（空间），代表不同的团队。空间可以设置权限，规定谁可以在空间内查看、编辑和创建页面。在空间内部，可以对单个页面进行更细粒度的限制，例如，如果您正在协作编写某个页面但尚未准备好分享，您可以仅为该页面的工作组开放权限，并限制其他人。
@@ -2548,11 +2549,11 @@ Confluence 分为多个 `spaces`（空间），代表不同的团队。空间可
 
 ![Confluence 窗口的截图。Valve Mark Financial Advisory Service 的海报被插入到新入职人员页面内容中。](img/c03f035.png)
 
-**图 3.35**:插入图像
+**图 3.35**: 插入图像
 
 ![一个窗口截图，显示表格被插入在海报下方。右侧，点击表格会显示背景颜色、添加行列以及删除行列的选项。](img/c03f036.png)
 
-**图 3.36**:插入表格
+**图 3.36**: 插入表格
 
 表 3.5 显示了一些实用的宏，让您直观感受功能。请随时根据心情尝试它们。
 
@@ -2634,128 +2635,9 @@ Confluence 分为多个 `spaces`（空间），代表不同的团队。空间可
 - `https://www.atlassian.com/software/confluence/jira`
 - `https://www.atlassian.com/software/confluence/jira`
 - `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira`
-- `https://www.atlassian.com/software/confluence/jira` 
-[/content] (Wait, I see some repeated text in the source prompt, I will provide the clean translation of the unique content) 
 
-Actually, looking at the instructions "do not repeat the original text", I will translate the provided block once. 
 
-[content]
+
 要创建您自己的 Confluence 云版本，请访问 [`https://www.atlassian.com/software/confluence`](https://www.atlassian.com/software/confluence)。
 
 Confluence 分为多个 `spaces`（空间），代表不同的团队。空间可以设置权限，规定谁可以在空间内查看、编辑和创建页面。在空间内部，可以对单个页面进行更细粒度的限制，例如，如果您正在协作编写某个页面但尚未准备好分享，您可以仅为该页面的工作组开放权限，并限制其他人。
@@ -2785,18 +2667,33 @@ Confluence 分为多个 `spaces`（空间），代表不同的团队。空间可
 | 操作符 | 描述 |
 | --- | --- |
 | Table | 创建表格 |
+
+
+
 | Code Snippet | 创建格式化代码 |
+
 | Table | 创建表格 |
+
 | Code Snippet | 创建格式化代码 |
+
 | Table | 创建表格 |
+
 | Code Snippet | 创建格式化代码 |
+
 | Table | 创建表格 |
+
 | Code Snippet | 创建格式化代码 |
+
 | Table | 创建表格 |
+
 | Code Snippet | 创建格式化代码 |
+
 | Table | 创建表格 |
+
 | Code Snippet | 创建格式化代码 |
+
 | Table | 创建表格 |
+
 | Code Snippet | 创建格式化代码 |
 
 ## REFERENCES
@@ -2816,10 +2713,7 @@ Confluence 分为多个 `spaces`（空间），代表不同的团队。空间可
 - `https://www.atlassian.com/software/confluence/jira`
 - `https://www.atlassian.com/software/confluence/jira`
 
-
-
-
-让我们从构建一个简单的 Maven 项目开始，然后深入研究 Maven 的一些特性。每个 Maven 项目都有一个 `pom.xml` 文件。POM 代表项目对象模型（Project Object Model），是一个包含我们项目构建信息的 XML 文件。关于 XML 的更多信息，请参阅附录 中的“XML 和 JSON”。最短的 `pom.xml` 文件看起来如下：
+让我们从构建一个简单的 Maven 项目开始，然后深入研究 Maven 的一些特性。每个 Maven 项目都有一个`pom.xml`文件。POM 代表项目对象模型（Project Object Model），是一个包含我们项目构建信息的 XML 文件。关于 XML 的更多信息，请参阅附录中的“XML 和 JSON”。最短的`pom.xml`文件看起来如下：
 
 ```
 1:  <?xml version="1.0" encoding="UTF-8"?>
@@ -2839,17 +2733,17 @@ Confluence 分为多个 `spaces`（空间），代表不同的团队。空间可
 
 第 1–8 行是样板代码，你将把它们放在每个 POM 文件中。它们声明此 XML 文件旨在解析为 Maven POM。通常情况下，当你创建一个新项目时，你的 IDE 会为你生成这些代码。或者，你也可以从另一个 Maven 项目复制/粘贴这些样板代码。
 
-第 10–12 行是你指定 Maven 项目坐标所在的地方。`groupId` 通常映射到包名，或者包名的前缀。它创建了一个命名空间以避免与其他 Maven 构制品发生冲突。`artifactId` 代表 `groupId` 下的特定项目名称。最后，`version` 标签允许你为每次构建分配一个版本号，以便你随时间推移查看和引用之前的版本。在代码发布之前，你会为版本分配 `SNAPSHOT` 后缀，这告诉 Maven 这不是最终的“发布（release）”版本。（你将在后续章节中学习更多关于版本的知识）。这三个标签合在一起被称为你项目的 GAV（group id, artifact id, version）坐标。
+第 10–12 行是你指定 Maven 项目坐标所在的地方。`groupId`通常映射到包名，或者包名的前缀。它创建了一个命名空间以避免与其他 Maven 构制品发生冲突。`artifactId`代表`groupId`下的特定项目名称。最后，`version`标签允许你为每次构建分配一个版本号，以便你随时间推移查看和引用之前的版本。在代码发布之前，你会为版本分配`SNAPSHOT`后缀，这告诉 Maven 这不是最终的“发布（release）”版本。（你将在后续章节中学习更多关于版本的知识）。这三个标签合在一起被称为你项目的 GAV（group id, artifact id, version）坐标。
 
-在命令行运行构建，你可以在包含 `pom.xml` 文件的目录下执行 `mvn verify`，这将执行以下所有操作：
+在命令行运行构建，你可以在包含`pom.xml`文件的目录下执行`mvn verify`，这将执行以下所有操作：
 
-1.  下载构建所需的任何依赖并将它们存储在你的 Maven 缓存中。
-2.  将 `src/main/resources` 中的任何文件复制到 `target/classes`。
-3.  编译 `src/main/java` 中的任何代码，并将结果存储在 `target/classes`。
-4.  将 `src/test/resources` 的任何文件复制到 `target/test-classes`。
-5.  编译 `src/test/java` 中的任何代码，并将结果存储在 `target/test-classes`。
-6.  以单元测试的形式运行检查，以验证构建有效并符合某些质量标准。
-7.  创建一个名为 `<artifactId>-<version>.jar` 的 JAR 文件（在本例中为 `basic-pom-1.0.0-SNAPSHOT.jar`），包含现在 `target/classes` 中的文件，并将其存储在 `target` 中。
+1. 下载构建所需的任何依赖并将它们存储在你的 Maven 缓存中。
+2. 将`src/main/resources`中的任何文件复制到`target/classes`。
+3. 编译`src/main/java`中的任何代码，并将结果存储在`target/classes`。
+4. 将`src/test/resources`的任何文件复制到`target/test-classes`。
+5. 编译`src/test/java`中的任何代码，并将结果存储在`target/test-classes`。
+6. 以单元测试的形式运行检查，以验证构建有效并符合某些质量标准。
+7. 创建一个名为`<artifactId>-<version>.jar`的 JAR 文件（在本例中为`basic-pom-1.0.0-SNAPSHOT.jar`），包含现在`target/classes`中的文件，并将其存储在`target`中。
 
 对于一个只有 13 行的 POM 来说，工作量很大，而且大部分是样板代码。这就是“约定优于配置（convention over configuration）”的力量。由于我们没有进行说明，Maven 假设了默认值：我们要编译并测试代码，并将结果存储在 JAR 文件中！
 
@@ -2876,18 +2770,17 @@ org/apache/maven/plugins/maven-compiler-plugin/3.11.0/
 maven-compiler-plugin-3.11.0.pom (9.8 kB at 28 kB/s)
 ```
 
-
-
-
-
 | `integration-test` | `package` + 运行任何集成测试（参见第 7 章）。 |
+
 | `verify` | `integration-test` + 确认包有效。 |
+
 | `install` | `verify` + 将包安装到你的本地 Maven 仓库，以供其他构建使用。 |
+
 | `deploy` | `install` + 将包发布到你的机器之外。 |
 
 **表 4.1**](#c04.xhtml_R_c04-tbl-0001): Maven 默认生命周期阶段
 
-与 `verify` 成为好朋友吧，因为它是你在本地机器上运行的最常用的 Maven 阶段。如果你正在处理多个相互关联的项目，你将需要 `install`，但那不应该是你的“首选”，因为它的运行耗时更长，而且通常不需要。
+与`verify`成为好朋友吧，因为它是你在本地机器上运行的最常用的 Maven 阶段。如果你正在处理多个相互关联的项目，你将需要`install`，但那不应该是你的“首选”，因为它的运行耗时更长，而且通常不需要。
 
 ### 探索 POM
 
@@ -2915,7 +2808,7 @@ maven-compiler-plugin-3.11.0.pom (9.8 kB at 28 kB/s)
 </dependencies>
 ```
 
-你可以在 `<properties>` 标签中定义任意数量的属性。在这种情况下，有一个名为 `eclipse.collections.version` 值为 `11.1.0` 的属性。若要使用该属性，请引用 `${}` 占位符内部的变量名，Maven 将自动用占位符替换为属性值。
+你可以在`<properties>`标签中定义任意数量的属性。在这种情况下，有一个名为`eclipse.collections.version`值为`11.1.0`的属性。若要使用该属性，请引用`${}`占位符内部的变量名，Maven 将自动用占位符替换为属性值。
 
 #### 指定项目信息
 
@@ -2952,11 +2845,11 @@ maven-compiler-plugin-3.11.0.pom (9.8 kB at 28 kB/s)
 
 #### 理解版本号
 
-在编写代码时，你会使用像 `1.0.0-SNAPSHOT` 的 `SNAPSHOT` 版本。一旦你准备好发布，`SNAPSHOT` 后缀会被删除，变为 `1.0.0`。
+在编写代码时，你会使用像`1.0.0-SNAPSHOT`的`SNAPSHOT`版本。一旦你准备好发布，`SNAPSHOT`后缀会被删除，变为`1.0.0`。
 
 你可能注意到版本号由点分隔的三个部分组成。Maven 构件通常遵循语义版本化。第一个数字随主版本号递增，这可能会引入新的应用程序编程接口（API）或破坏性功能。第二个数字用于次要版本，通常是兼容的、可能经过改进的版本。第三部分通常用于修复错误修复。
 
-并非所有项目都遵循这种命名规范，但大多数项目都遵循其变体，例如在名称末尾添加 `.beta` 或 `.release` 以提供更多信息。
+并非所有项目都遵循这种命名规范，但大多数项目都遵循其变体，例如在名称末尾添加`.beta`或`.release`以提供更多信息。
 
 此外，低于 1.0.0 的数字通常意味着预发布版本（prerelease）。因此，0.2.6 可能意味着项目尚未准备好进行全初始发布。
 
@@ -2973,24 +2866,32 @@ maven-compiler-plugin-3.11.0.pom (9.8 kB at 28 kB/s)
 让我们看看编译器插件。使用你喜爱的搜索 [maven compiler plugin](https://maven.apache.org/plugins/maven-compiler-plugin)，如图 4.2 所示。
 
 | 版本 | 含义 |
+
 | --- | --- |
+
 | `0.0.1-SNAPSHOT` | 开始工作。 |
+
 | `0.0.1` | 测试就绪。 |
+
 | `0.0.2-SNAPSHOT` | 噢，我们发现了一个 bug。处理 bug。 |
+
 | `0.0.2` | bug 已修复。再次准备就绪。 |
+
 | `1.0.0-SNAPSHOT` | 黄金时间。准备 1.0。 |
+
 | `1.0.0` | 分发 1.0。 |
+
 | `1.0.1-SNAPSHOT` | 噢，又是 bug。处理 bug。 |
+
 | `1.0.1` | bug 已修复。这次我们搞定了。 |
+
 | `1.1.1-SNAPSHOT` | 是时候进行次要改进了。 |
+
 | `1.1.1` | 分发次要改进。 |
+
 | `2.0.0-SNAPSHOT` | 下一个主版本发布工作 |
 
 **表 4.2**](#c04.xhtml_c04-tbl-0002): 版本号示例
-
-
-
-
 
 ```
 <groupId>com.wiley.realworldjava.maven</groupId>
@@ -3016,11 +2917,13 @@ maven-compiler-plugin-3.11.0.pom (9.8 kB at 28 kB/s)
 </build>
 ```
 
-注意 `configuration` 标签。那是“goals”（目标）文档中参数存放的地方。在这种情况下，它指定了你希望使用 Java 21 来进行编译并生成字节码。
+注意`configuration`标签。那是“goals”（目标）文档中参数存放的地方。在这种情况下，它指定了你希望使用 Java 21 来进行编译并生成字节码。
 
 文档中的示例之一是关于如何“传递编译器参数”（Pass Compiler Arguments），如下所示：
 
-```
+
+
+```xml
 <project>
    […]
    <build>
@@ -3050,21 +2953,21 @@ maven-compiler-plugin-3.11.0.pom (9.8 kB at 28 kB/s)
 
 现在你已经理解了如何阅读插件的文档，我们可以介绍其他常用的插件。每个插件都有自定义的配置选项，你可以在在项目中使用它们时查阅这些选项。以下常用插件属于 `org.apache.maven.plugins` 组 ID：
 
-* `maven-assembly-plugin`：为文件组合创建 zip 文件。这在部署到具有不同设置的多个环境时非常有用。
-* `maven-compiler-plugin`：编译你的代码。
-* `maven-dependency-plugin`：用于处理依赖的各种目标，例如列出或解压它们。
-* `maven-deploy-plugin`：将创建的产制品上传到二进制仓库。
-* `maven-enforcer-plugin`：如果你的 POM 不符合指定规则，则构建失败。
-* `maven-failsafe-plugin`：运行集成测试。详情请参见第 7 章。
-* `maven-install-plugin`：用创建的产制品更新你的本地仓库。
-* `maven-jar-plugin`：创建 JAR 文件产制品。
-* `maven-javadoc-plugin`：为你的项目创建 Javadoc HTML 页面。
-* `maven-release-plugin`：发布软件的各种目标，包括标记仓库和更新 POM 版本号。
-* `maven-resources-plugin`：将源码和测试资源复制到输出目录。
-* `maven-shade-plugin`：创建一个包含你的类以及所有依赖项类的 uber-jar。
-* `maven-site-plugin`：生成包含当前项目信息的 HTML 页面，如 Javadoc 和发布说明。
-* `maven-source-plugin`：创建包含项目源码的 JAR 文件。
-* `maven-surefire-plugin`：运行单元测试。详情请参见第 7 章。
+- `maven-assembly-plugin`：为文件组合创建 zip 文件。这在部署到具有不同设置的多个环境时非常有用。
+- `maven-compiler-plugin`：编译你的代码。
+- `maven-dependency-plugin`：用于处理依赖的各种目标，例如列出或解压它们。
+- `maven-deploy-plugin`：将创建的产制品上传到二进制仓库。
+- `maven-enforcer-plugin`：如果你的 POM 不符合指定规则，则构建失败。
+- `maven-failsafe-plugin`：运行集成测试。详情请参见第 7 章。
+- `maven-install-plugin`：用创建的产制品更新你的本地仓库。
+- `maven-jar-plugin`：创建 JAR 文件产制品。
+- `maven-javadoc-plugin`：为你的项目创建 Javadoc HTML 页面。
+- `maven-release-plugin`：发布软件的各种目标，包括标记仓库和更新 POM 版本号。
+- `maven-resources-plugin`：将源码和测试资源复制到输出目录。
+- `maven-shade-plugin`：创建一个包含你的类以及所有依赖项类的 uber-jar。
+- `maven-site-plugin`：生成包含当前项目信息的 HTML 页面，如 Javadoc 和发布说明。
+- `maven-source-plugin`：创建包含项目源码的 JAR 文件。
+- `maven-surefire-plugin`：运行单元测试。详情请参见第 7 章。
 
 并不是所有插件都在同一个组 ID 中。有些是由其他组织提供的。例如，静态分析工具 Sonar 就提供了一个插件。它的组 ID 为 `org.sonarsource.scanner.maven`，构 ID 为 `sonar-maven-plugin`。你可以从组 ID 看出它是由 SonarSource 而非 Apache 提供的。
 
@@ -3078,7 +2981,7 @@ maven-compiler-plugin-3.11.0.pom (9.8 kB at 28 kB/s)
 
 父 POM 使用 `pom` 包装类型。这告诉 Maven 不要期望有 Java 代码，而是只发布 POM 文件。这里有一个示例：
 
-```
+```xml
 <groupId>com.wiley.realworldjava.maven</groupId>
 <artifactId>parent</artifactId>
 <version>1.0.0-SNAPSHOT</version>
@@ -3151,11 +3054,7 @@ maven-compiler-plugin-3.11.0.pom (9.8 kB at 28 kB/s)
 
 子 POM 如何指定它想要使用某个依赖项或插件？看一个使用这个父级的子 POM：
 
-
-
-
-
-```
+```xml
 <artifactId>child</artifactId>
 <version>1.0.0-SNAPSHOT</version>
 
@@ -3186,7 +3085,7 @@ maven-compiler-plugin-3.11.0.pom (9.8 kB at 28 kB/s)
 
 假设你不需要父 POM 中的 `eclipse-collections` 依赖。没问题——只需在子 POM 中省略该依赖项，它就会被忽略：
 
-```
+```xml
 <artifactId>child-without-dependency</artifactId>
 <version>1.0.0-SNAPSHOT</version>
 
@@ -3223,7 +3122,7 @@ module-parent
 
 首先，让我们来看父 POM：
 
-```
+```xml
 <groupId>com.wiley.realworldjava.maven</groupId>
 <artifactId>module-parent</artifactId>
 <version>1.0.0-SNAPSHOT</version>
@@ -3241,7 +3140,7 @@ POM 包含了一个新的 `modules` ，其中包含了来自项目子目录的�
 
 接下来，我们将查看 `module-util` POM，它非常简单，只引用了父模块：
 
-```
+```xml
 <artifactId>module-util</artifactId>
 <version>1.0.0-SNAPSHOT</version>
 
@@ -3254,7 +3153,7 @@ POM 包含了一个新的 `modules` ，其中包含了来自项目子目录的�
 
 `module-service` POM 执行了相同的操作，但还指定了一个依赖：
 
-```
+```xml
 <artifactId>module-services</artifactId>
 <version>1.0.0-SNAPSHOT</version>
 
@@ -3318,6 +3217,8 @@ BOM 像你在父 POM 中看到的那样使用依赖管理。BOM 证明了其中�
 
 使用 BOM 的常用方法是在 POM 的 `dependencyManagement` 中指定它：
 
+
+
 ```xml
 <groupId>com.wiley.realworldjava.maven</groupId>
 <artifactId>using-bom</artifactId>
@@ -3340,89 +3241,82 @@ BOM 像你在父 POM 中看到的那样使用依赖管理。BOM 证明了其中�
 </dependencyManagement>
 ```
 
-注意 `scope` 是 `import`，这只在 `type` 为 `pom` 时才允许。此作用会扩展导入的依赖项，就像你直接将它们包含在 `dependencyManagement` 中一样。这比你输入它们要易读得多。
+注意`scope`是`import`，这只在`type`为`pom`时才允许。此作用会扩展导入的依赖项，就像你直接将它们包含在`dependencyManagement`中一样。这比你输入它们要易读得多。
 
-#### 发布你的项目
+## 发布你的项目
 
-在某个时刻，你完成了项目的初始工作并准备好发布它。`maven-release-plugin` 有许多目标。你可以像运行 `mvn verify` 一样从命令行运行它们。最重要的四个：
+在某个时刻，你完成了项目的初始工作并准备好发布它。`maven-release-plugin`有许多目标。你可以像运行`mvn verify`一样从命令行运行它们。最重要的四个：
 
 - `release-clean`：清理之前发布的临时文件。
-- `release-prepare`：检查项目是否处于发布状态。例如，POM 不能引用 `SNAPSHOT` 依赖，因为这将导致无法重复的发布。`release-prepare` 更新 POM 中的版本号。
+- `release-prepare`：检查项目是否处于发布状态。例如，POM不能引用`SNAPSHOT`依赖，因为这将导致无法重复的发布。`release-prepare`更新POM中的版本号。
 - `release-perform`：在版本控制中标记标签并将制品存储在二进制仓库中。
-- `release-rollback`：从失败的 `prepare` 中恢复 POM 文件。
+- `release-rollback`：从失败的`prepare`中恢复POM文件。
 
-### 在 IDE 中了解 Maven
+## 在 IDE 中了解 Maven
 
-正如你在第 2 章 中所示，使用集成开发环境 (IDE) 可能比从命令行运行要高效得多。由于构建是一个如此基础的操作，我们在三个主要的 IDE 中都展示了它。
+正如你在第 2 章中所示，使用集成开发环境 (IDE) 可能比从命令行运行要高效得多。由于构建是一个如此基础的操作，我们在三个主要的 IDE 中都展示了它。
 
+### 使用 IntelliJ
 
-
-
-
-# 使用 IntelliJ
-
-当你拥有一个 Maven 项目时，右侧边栏中有一个代表 Maven 的小写“m”图标。点击它可以展开 Maven 窗口。如图 4.3 所示，展开 Lifecycle（生命）选项。你可以双击所需的 goal（例如 `verify`）来运行构建，或右键点击获取更多选项。
+当你拥有一个 Maven 项目时，右侧边栏中有一个代表 Maven 的小写“m”图标。点击它可以展开 Maven 窗口。如图 4.3 所示，展开 Lifecycle（生命）选项。你可以双击所需的 goal（例如`verify`）来运行构建，或右键点击获取更多选项。
 
 ![一个标题为 Maven 的窗口截图。右侧边栏有一个代表 Maven 的小写“m”图标。点击它可以展开 Maven 窗口。](img/c04f003.png)
 
-**图 4.3**:在 IntelliJ 中运行 Maven
+**图 4.3**：在 IntelliJ 中运行 Maven
 
 IntelliJ 为 Maven 提供了其他选项。例如，有效 POM（effective POM）对于查看应用所有继承设置后你的 POM 状态非常有用。图 4.4 显示，你可以通过右键点击项目并选择 Maven 菜单来找到此选项。
 
 ![一张截图显示了右键点击项目 Maven 并选择 Maven 菜单。高亮显示了 Effective POM 选项。](img/c04f004.png)
 
-**图 4.4**:在 IntelliJ 中查看有效 POM
+**图 4.4**：在 IntelliJ 中查看有效 POM
 
 如果你的项目有很多依赖项，你可能会发现右键点击 Maven 边栏中的项目并选择 Analyze Dependencies（分析依赖）很有用。在列表中，你可以点击任何依赖项并查看它的来源，即使它是传递性依赖。
 
-# 使用 Eclipse
+### 使用 Eclipse
 
 在 Eclipse 中，你通过右键点击 Package Explorer 中的项目并选择 Run 菜单来运行 Maven 构建。图 4.6 显示了该菜单，你可以在其中点击选择要运行的 goal。
 
-Eclipse 还允许你通过打开 `pom.xml` 文件来查看有效 POM 和依赖层次结构。如图 4.7 所示，编辑器都有这两者的标签页。
+Eclipse 还允许你通过打开`pom.xml`文件来查看有效 POM 和依赖层次结构。如图 4.7 所示，编辑器都有这两者的标签页。
 
-# 使用 VS Code
+### 使用 VS Code
 
 在 VS Code 中，左下角有一个“Maven”折叠菜单。展开后，你就会看到图 4.8 所示的 goals。你可以右键点击其中任何一个来运行 Maven 构建。
 
-要查看有效 POM，右键点击 `pom.xml` 文件并在菜单中选择 Maven。然后点击 Show Effective POM，如图 4.9 所示。
+要查看有效 POM，右键点击`pom.xml`文件并在菜单中选择 Maven。然后点击 Show Effective POM，如图 4.9 所示。
 
 ![一张截图描述了通过右键点击运行作为命令时的以下运行配置下拉菜单：Maven build, maven clean, maven install, maven test, 和 maven verify。](img/c04f006.png)
 
-**图 4.6**:在 Eclipse 中运行 Maven
+**图 4.6**：在 Eclipse 中运行 Maven
 
 ![一张编程窗口的截图，下方有以下标签：Overview, dependencies, dependency hierarchy, effective POM, 和 pom.xml。](img/c04f007.png)
 
-**图 4.7**:在 Eclipse 中查看有效 POM
+**图 4.7**：在 Eclipse 中查看有效 POM
 
 ![一张标题为 Maven 的截图显示了基本的 pom 展开、plugins、dependencies 和 profiles。](img/c04f008.png)
 
-**图 4.8**:在 VS Code 中运行 Maven
+**图 4.8**：在 VS Code 中运行 Maven
 
 ![一张近视图截图显示了点击 maven 后显示的 new module 和 effective POM 下拉菜单。](img/c04f009.png)
 
-**图 4.9**:在 VS Code 中运行 Maven
+**图 4.9**：在 VS Code 中运行 Maven
 
 虽然 VS Code 中有一个依赖列表，但它目前还没有达到 IntelliJ 和 Eclipse 的水平。
 
-# 为企业级配置 Maven 设置
+## 为企业级配置 Maven 设置
 
 在企业中，很少直接将 Maven Central 作为二进制仓库。相反，会使用如 JFrog Artifactory 或 Sonatype Nexus 的二进制仓库作为代理。这种安排带来的益处包括：
 
-*   **性能：** 制品从互联网下载一次并缓存在内网中，以便快速访问。
-*   **安全性：** 它对谁可以访问特定制品提供了控制，并在向开发者提供之前对制品进行安全漏洞扫描。
-*   **匿名性：** 你的组织只有一个向互联网发送请求，随后所有其他调用都来自缓存。这防止了泄露某个制品在贵组织的使用频率。
-*   **审计：** 仓库通常需要身份验证，使得查看谁下载了哪些制品成为可能。
-*   **自定义仓库：** 企业二进制仓库可以托管 Maven Central 中没有的内部和第三方库。
+- **性能**：制品从互联网下载一次并缓存在内网中，以便快速访问。
+- **安全性**：它对谁可以访问特定制品提供了控制，并在向开发者提供之前对制品进行安全漏洞扫描。
+- **匿名性**：你的组织只有一个向互联网发送请求，随后所有其他调用都来自缓存。这防止了泄露某个制品在贵组织的使用频率。
+- **审计**：仓库通常需要身份验证，使得查看谁下载了哪些制品成为可能。
+- **自定义仓库**：企业二进制仓库可以托管 Maven Central 中没有的内部和第三方库。
 
-所有的通用 Maven 设置都配置在一个名为 `settings.xml` 的文件中，包括仓库位置、验证凭据、默认配置和其他配置设置。
+所有的通用 Maven 设置都配置在一个名为`settings.xml`的文件中，包括仓库位置、验证凭据、默认配置和其他配置设置。
 
-你可以在一个或两个放置 `settings.xml` 文件。全局属性（如二进制仓库的 URL）通常配置在 `<maven install>/conf/settings.xml` 中。用户属性（如令牌密码，理想情况下已加密）可以包含在 `settings.xml` 中。
+你可以在一个或两个放置`settings.xml`文件。全局属性（如二进制仓库的 URL）通常配置在`<maven install>/conf/settings.xml`中。用户属性（如令牌密码，理想情况下已加密）可以包含在`settings.xml`中。
 
-
-
-
-要在命令行中运行构建，请在包含 `build.gradle` 的目录下执行 `./gradlew build`。
+要在命令行中运行构建，请在包含`build.gradle`的目录下执行`./gradlew build`。
 
 这将在屏幕上产生大量的动态输出。Gradle 不像 Maven 那样顺序记录所有输出，而是根据当前的构建进度动态更新控制台输出。最后，它会显示结果摘要：
 
@@ -3446,17 +3340,17 @@ BUILD SUCCESSFUL in 0s
 
 此输出中列出的任务与 Maven 的输出相似。它们会编译项目、运行任何测试并创建产物。创建的文件位于以下位置：
 
-- `build/lib`: 包含 `basic-gradle-1.0.0.jar` 文件。
-- `build/classes`: 包含编译生成的类文件。它们被分为 `build/classes/java/main` 和 `build/classes/java/test`。
-- `build/resources`: 包含资源的副本，分为 `build/resources/main` 和 `build/resources/test`。
+- `build/lib`：包含`basic-gradle-1.0.0.jar`文件。
+- `build/classes`：包含编译生成的类文件。它们被分为`build/classes/java/main`和`build/classes/java/test`。
+- `build/resources`：包含资源的副本，分为`build/resources/main`和`build/resources/test`。
 
 ### 理解 Gradle 本地仓库和依赖
 
-与 Maven 类似，Gradle 将下载的产物存储在本地。在你的主目录下，有一个 `.gradle` 子目录。在 Windows 上，它是 `C:\Users\<your id>\.gradle`。在 Linux 和 Mac 上，它是 `/Users/<your id>/.gradle`。
+与 Maven 类似，Gradle 将下载的产物存储在本地。在你的主目录下，有一个`.gradle`子目录。在 Windows 上，它是`C:\Users\<your id>\.gradle`。在 Linux 和 Mac 上，它是`/Users/<your id>/.gradle`。
 
-为了让构建更快，Gradle 保存的内容远不止产物多。下载的依赖存储在目录 `.gradle/caches/modules-2/files-2.1` 中。
+为了让构建更快，Gradle 保存的内容远不止产物多。下载的依赖存储在目录`.gradle/caches/modules-2/files-2.1`中。
 
-例如，`eclipse-collections` 下载的文件在此目录下：
+例如，`eclipse-collections`下载的文件在此目录下：
 
 ```
 .gradle/caches/modules-2/files-2.1/org.eclipse.collections/
@@ -3465,7 +3359,7 @@ BUILD SUCCESSFUL in 0s
 
 该目录有一个以哈希命名的子目录，这确认了文件已成功下载。该子目录包含了实际的 JAR 文件。
 
-要在 Groovy 中指定此依赖项，请将其添加到 `build.gradle` 文件的依赖部分。
+要在 Groovy 中指定此依赖项，请将其添加到`build.gradle`文件的依赖部分。
 
 ```groovy
 dependencies {
@@ -3474,7 +3368,7 @@ dependencies {
 }
 ```
 
-这些是你之前在 Maven 中看到的相同坐标。`implementation` 指定了它是最常见的依赖类型——用于编译的依赖。注意，当需要区分产物时，也允许使用 `classifier`。
+这些是你之前在 Maven 中看到的相同坐标。`implementation`指定了它是最常见的依赖类型——用于编译的依赖。注意，当需要区分产物时，也允许使用`classifier`。
 
 Gradle 支持使用单个值简写指定依赖的完整组（group）、名称（name）和版本（version）：
 
@@ -3486,7 +3380,7 @@ dependencies {
 
 在这种语法中，坐标是一个由冒号分隔的单个字符串。
 
-对应的 Kotlin 语法将包含在 `build.gradle.kts` 文件中，如下：
+对应的 Kotlin 语法将包含在`build.gradle.kts`文件中，如下：
 
 ```kotlin
 dependencies {
@@ -3509,7 +3403,7 @@ dependencies {
 }
 ```
 
-Groovy 使用 `def` 来声明变量。`${}` 语法告诉 Gradle 替换变量值。你需要使用双引号才能使该扩展生效。在 Groovy 中，单引号字符串不支持此功能。
+Groovy 使用`def`来声明变量。`${}`语法告诉 Gradle 替换变量值。你需要使用双引号才能使该扩展生效。在 Groovy 中，单引号字符串不支持此功能。
 
 相比之下，Kotlin 构建文件也可以使用变量：
 
@@ -3522,11 +3416,11 @@ dependencies {
 }
 ```
 
-两者之间的唯一区别是 Groovy 使用 `def` 声明变量，而 Kotlin 使用 `val` 声明不可变变量，使用 `var` 声明可变变量。由于版本在构建文件中声明后保持不变，此示例使用了 `val`。
+两者之间的唯一区别是 Groovy 使用`def`声明变量，而 Kotlin 使用`val`声明不可变变量，使用`var`声明可变变量。由于版本在构建文件中声明后保持不变，此示例使用了`val`。
 
 ### 使用 Java 插件
 
-在 Maven 中，你看到有很多插件，如 `maven-compiler-plugin`、`maven-surefire-plugin` 和 `maven-jar-plugin`。在 Gradle 中，Java 插件包含了大部分此类功能。Java 插件文档链接位于“进一步参考（Further References）”部分。它记录了你可以进行的自定义。例如，下面的示例设置了要使用的 Java 版本：
+在 Maven 中，你看到有很多插件，如`maven-compiler-plugin`、`maven-surefire-plugin`和`maven-jar-plugin`。在 Gradle 中，Java 插件包含了大部分此类功能。Java 插件文档链接位于“进一步参考（Further References）”部分。它记录了你可以进行的自定义。例如，下面的示例设置了要使用的 Java 版本：
 
 ```groovy
 java {
@@ -3569,25 +3463,21 @@ Java 插件页面包含了测试、Javadoc 和打包的配置。它还包含了�
 
 ### 查找依赖
 
-无论你是使用 Maven 还是 Gradle，都经常需要查找 Maven Central 中项目的坐标。查找它们的方法是访问 `https://central.sonatype.com` 并搜索你的产物。结果页面提供了 Maven 和 Gradle 变体的下拉菜单，你可以将其复制/粘贴到构建文件中。
+无论你是使用 Maven 还是 Gradle，都经常需要查找 Maven Central 中项目的坐标。查找它们的方法是访问`https://central.sonatype.com`并搜索你的产物。结果页面提供了 Maven 和 Gradle 变体的下拉菜单，你可以将其复制/粘贴到构建文件中。
 
-
-
-
-
-然而，有一种更快的方法。如果你在你喜爱的搜索引擎上搜索“maven central”和构品名称，第一个结果很可能是 [`https://mvnrepository.com`](https://mvnrepository.com)。例如，搜索“maven central eclipse collections”将带你进入 [`https://mvnrepository.com/artifact/org.eclipse.collections/eclipse-collections`](https://mvnrepository.com/artifact/org.eclipse.collections/eclipse-collections)。Maven Repository 网站由一位西班牙开发者构建，它拥有与 Maven Central 相同的信息。在书中提到 URL 时，我们使用 [`mvnrepository.com`](http://mvnrepository.com)，因为它的搜索引擎优化做得得更好。
+然而，有一种更快的方法。如果你在你喜爱的搜索引擎上搜索“maven central”和构品名称，第一个结果很可能是[`https://mvnrepository.com`](https://mvnrepository.com)。例如，搜索“maven central eclipse collections”将带你进入[`https://mvnrepository.com/artifact/org.eclipse.collections/eclipse-collections`](https://mvnrepository.com/artifact/org.eclipse.collections/eclipse-collections)。Maven Repository 网站由一位西班牙开发者构建，它拥有与 Maven Central 相同的信息。在书中提到 URL 时，我们使用[`mvnrepository.com`](http://mvnrepository.com)，因为它的搜索引擎优化做得得更好。
 
 图 4.14 显示了当你点击构品的特定版本时显示的选项。
 
-在编写本文时，我们为本章的示例选择了 Eclipse Collections `11.1.0` 版本。注意，有一个更高的版本 `12.0.0.M3`。`M3` 代表“里程碑 3（milestone 3）”。里程碑发布是用于测试新功能的公开发布版本，在最终版本之前发布。由于在生产代码中使用里程碑依赖并不常见，因此我们选择了最新发布的版本。
+在编写本文时，我们为本章的示例选择了 Eclipse Collections `11.1.0`版本。注意，有一个更高的版本`12.0.0.M3`。`M3`代表“里程碑 3（milestone 3）”。里程碑发布是用于测试新功能的公开发布版本，在最终版本之前发布。由于在生产代码中使用里程碑依赖并不常见，因此我们选择了最新发布的版本。
 
 在图 4.14 中，在关于后续版本的警告下方，有许多构建系统的标签页。选择你的构建系统，复制依赖信息，并将其粘贴到你的 POM 或 Gradle 构建文件中。
 
 ![一个标题为 eclipse collections main library 的查找依赖窗口的截图。它显示了诸如许可证、类别、标签、文件、日期、排名、用户（user by）、备注以及 Gradle 部分中的新版本等信息。](img/c04f014.png)
 
-**图 4.14**: 查找依赖项
+**图 4.14**：查找依赖项
 
-# 集成 JENKINS
+## 集成 JENKINS
 
 Jenkins 将自己标记为“开源自动化服务器”，事实上，Jenkins 可以自动化几乎所有的内容。然而，大多数人将其视为一个持续集成/持续部署 (CI/CD) 节点，因为它的重点是构建和部署。
 
@@ -3595,13 +3485,15 @@ Jenkins 是开源且免费的。Cloudbees 销售一个带有专有内容和支�
 
 在本节中，你将学习如何安装 Jenkins、安装哪些常用插件以及如何运行构建。
 
-## 安装 Jenkins
+
+
+# 安装 Jenkins
 
 要安装 Jenkins，你可以前往“进一步参考”中的下载页面。你会发现该页面上有许多选择。
 
-首先决定你想要稳定版（stable version）还是每周发布版（weekly release）。稳定包每月发布一次， Jenkins 会在此期间对它们进行安全修复和 Bug 修复。每三个月，其中一个稳定版本将成为长期支持 (LTS) 版本。在家里运行时，任何版本都可以。企业通常会选择 LTS 版本或由供应商支持的版本。我们将在示例中使用最新的稳定版本。
+首先决定你想要稳定版（stable version）还是每周发布版（weekly release）。稳定包每月发布一次，Jenkins 会在此期间对它们进行安全修复和 Bug 修复。每三个月，其中一个稳定版本将成为长期支持（LTS）版本。在家里运行时，任何版本都可以。企业通常会选择 LTS 版本或由供应商支持的版本。我们将在示例中使用最新的稳定版本。
 
-接下来，你必须决定 Jenkins 下载的格式。一种方案是获取 Web 归档 (WAR) 文件，以便在 Tomcat 这样的 Web 应用服务器上运行。或者，你可以获取操作系统软件包并安装为二进制文件或 Docker 镜像。我们将在本章中使用 Docker 镜像作为示例。下载 Docker 的链接也在“进一步参考”部分。在个人机器上尝试 Jenkins 时，这些选项中的任何一个都可以。
+接下来，你必须决定 Jenkins 下载的格式。一种方案是获取 Web 归档（WAR）文件，以便在 Tomcat 这样的 Web 应用服务器上运行。或者，你可以获取操作系统软件包并安装为二进制文件或 Docker 镜像。我们将在本章中使用 Docker 镜像作为示例。下载 Docker 的链接也在“进一步参考”部分。在个人机器上尝试 Jenkins 时，这些选项中的任何一个都可以。
 
 对于 Docker，首先打开“Docker Desktop”应用程序以确保 Docker 正在你的机器上运行。然后打开命令行并运行以下命令来下载最新的稳定 Jenkins 版本：
 
@@ -3609,7 +3501,7 @@ Jenkins 是开源且免费的。Cloudbees 销售一个带有专有内容和支�
 docker pull jenkins/jenkins
 ```
 
-输出将类似于所示所示，其中 Docker 镜像的每一层都在被下载：
+输出将类似于所示，其中 Docker 镜像的每一层都在被下载：
 
 ```
 Using default tag: latest
@@ -3637,7 +3529,7 @@ docker.io/jenkins/jenkins:latest
 docker run --name jenkins -p 8080:8080 jenkins/jenkins
 ```
 
-此命令为你的 Docker 容器命名为“jenkins”，以便以后引用。它还暴露了 8080 端口，以便你可以在浏览器浏览器中访问它。如果该端口在你的机器上被占用，请自行更换。
+此命令为你的 Docker 容器命名为“jenkins”，以便以后引用。它还暴露了 8080 端口，以便你可以在浏览器中访问它。如果该端口在你的机器上被占用，请自行更换。
 
 控制台输出将包含类似下面的消息：
 
@@ -3650,9 +3542,9 @@ Please use the following password to proceed:
 
 记住这个密码，然后访问 `http://localhost:8080`。Jenkins 会询问你想要“安装建议的插件”还是“选择要安装的插件”。选择建议的插件以便开始。如果你观察安装期间屏幕，你会发现 Jenkins 下载的不只是插件。就像 Maven 和 Gradle 依赖一样，Jenkins 插件也依赖其他插件。因此，Jenkins 会下载这些传递依赖。
 
-接下来 Jenkins 询问你设置管理员用户。记住你选择的用户名和密码，因为你需要它们登录。最后， Jenkins 要求确认 URL。使用默认的 `http://localhost:8080` 即可。Jenkins 将显示“Jenkins is ready!”界面。开始使用 Jenkins。
+接下来 Jenkins 询问你设置管理员用户。记住你选择的用户名和密码，因为你需要它们登录。最后，Jenkins 要求确认 URL。使用默认的 `http://localhost:8080` 即可。Jenkins 将显示“Jenkins is ready!”界面。开始使用 Jenkins。
 
-### 学习术语
+## 学习术语
 
 Jenkins 术语包含你可能熟悉的词。在本节中，你将学习这些术语以理解发生的情况。
 
@@ -3662,22 +3554,19 @@ Jenkins `job`（任务）指的是你想要运行的配置。`build`（构建）
 
 配置任务有几种选择。例如，任务可以配置为 `freestyle` 任务（自由风格任务）或 `pipeline` 任务（流水线任务）。
 
+任务是由 `triggers`（触发器）启动的。一种常见的触发类型是源代码提交。毕竟，只有当你自动化构建并在每次发生变化时启动构建时，持续集成才能生效。你也可以使用基于时间的触发器，它根据指定的计划启动。例如，你可能希望在夜间运行缓慢测试。你可以让一个任务触发另一个任务，这是链联任务类型的有用策略。最后，你可以让 Jenkins 外部事件通过 API 触发任务。
 
+`dashboard`（仪表板）列出了所有的任务。你可以在 `folders`（文件夹）中对其进行组织。事实上，你可以嵌套任意层级的文件夹。你还可以创建 `views`（视图）来控制显示的内容。
 
+Jenkins 在 `workspace`（工作空间）中存储构建文件。构建文件的示例包括从 Git 检出的文件以及来自 Maven 或 Gradle 构建的目标或构建目录。由构建创建的项目被称为 `artifacts`（产物）。产物可以被 `archived`（存档），这样即使工作空间被删除，你也可以在 Jenkins 中看到它们。
 
-任务是由`triggers`（触发器）启动的。一种常见的触发类型是源代码提交。毕竟，只有当你自动化构建并在每次发生变化时启动构建时，持续集成才能生效。你也可以使用基于时间的触发器，它根据指定的计划启动。例如，你可能希望在夜间运行缓慢测试。你可以让一个任务触发另一个任务，这是链联任务类型的有用策略。最后，你可以让 Jenkins 外部事件通过 API 触发任务。
-
-`dashboard`（仪表板）列出了所有的任务。你可以在`folders`（文件夹）中对其进行组织。事实上，你可以嵌套任意层级的文件夹。你还可以创建`views`（视图）来控制显示的内容。
-
-Jenkins 在 `workspace`（工作空间）中存储构建文件。构建文件的示例包括从 Git 检出的文件以及来自 Maven 或 Gradle 构建的目标或构建目录。由构建创建的项目被称为 `artifacts`（产物）。产物可以被`archived`（存档），这样即使工作空间被删除，你也可以在 Jenkins 中看到它们。
-
-### 创建任务
+## 创建任务
 
 在接下来的章节中，你将学习如何创建三种任务。
 
-*   一个简单的自由风格任务（freestyle job）
-*   一个运行 Maven 的任务
-*   一个运行 Gradle 和流水线（pipeline）的任务
+- 一个简单的自由风格任务（freestyle job）
+- 一个运行 Maven 的任务
+- 一个运行 Gradle 和流水线（pipeline）的任务
 
 自由风格任务要求你使用 Jenkins 用户界面指定构建配置。与流水线相比，自由风格方法的学习曲线更简单，并且适用于大多数情况。自由风格任务让你通过左侧导航栏中的链接查看工作空间。
 
@@ -3685,14 +3574,14 @@ Jenkins 在 `workspace`（工作空间）中存储构建文件。构建文件的
 
 流水线有两种类型：脚本式流水线（scripted）和声明式流水线（declarative）。在书中，我们为 Maven 使用脚本式流水线，为 Gradle 使用声明式流水线，以便你可以看到每种示例。流水线任务在特定构建上提供工作空间链接，而不是在任务级别。
 
-#### 创建简单的自由风格任务
+### 创建简单的自由风格任务
 
 要创建一个任务，请遵循以下步骤：
 
-1.  点击左侧导航栏中的 `New Item`（新建项目）。
-2.  给它命名（在示例中为 `freestyle-timer`）。
-3.  选择任务类型 `Freestyle Project`（自由风格项目）。
-4.  点击 `OK`。
+1. 点击左侧导航栏中的 `New Item`（新建项目）。
+2. 给它命名（在示例中为 `freestyle-timer`）。
+3. 选择任务类型 `Freestyle Project`（自由风格项目）。
+4. 点击 `OK`。
 
 Jenkins 将创建任务并自动带你进入配置界面。任务中有几个配置区域，如图 4.15 所示。
 
@@ -3702,7 +3591,7 @@ Jenkins 将创建任务并自动带你进入配置界面。任务中有几个配
 
 `Source Code Management`（源码管理）允许你指定你正在使用的版本控制系统。推荐的插件包含了 `Git`。如果你使用不同的 VCS，可以从 Jenkins Plugin Manager 页面为其安装插件。还有仓库 URL 和连接所需的任何凭据的字段。
 
-`Build Triggers`（构建触发器）是你选择什么来启动构建的地方。在示例中，我们将使用使用 `Build Periodically`（定期构建）来展示如何使用计划。还有 GitHub 提交触发器和轮询仓库的选项。告诉 GitHub 启动构建的触发器被称为 `push`。相比之下，`polling`（轮询）请求仓库定期检查是否有更改，如果有则执行构建。
+`Build Triggers`（构建触发器）是你选择什么来启动构建的地方。在示例中，我们将使用 `Build Periodically`（定期构建）来展示如何使用计划。还有 GitHub 提交触发器和轮询仓库的选项。告诉 GitHub 启动构建的触发器被称为 `push`。相比之下，`polling`（轮询）请求仓库定期检查是否有更改，如果有则执行构建。
 
 `Build Environment`（构建环境）允许你配置有关 Jenkins 如何行为的信息。例如，你可以让 Jenkins 为每个日志条目添加时间戳，或者设置 Jenkins 何时杀死长时间运行的构建策略。
 
@@ -3776,7 +3665,7 @@ H * * * *
 
 当你跳出计划文本区域时，Jenkins 会显示任务上次运行的时间和下一次运行的时间。这是检查你的表达式是否符合预期的方便方法。
 
-现在是时候添加构建步骤了。如果你在 Linux/Mac 上，选择 `Execute Shell`，如果你在 Windows 上，选择“Execute Windows Batch Command”。执行何种方式，输入以下命令：
+现在是时候添加构建步骤了。如果你在 Linux/Mac 上，选择 `Execute Shell`，如果你在 Windows 上，选择“Execute Windows Batch Command”。无论何种方式，输入以下命令：
 
 ```
 echo "hello"
@@ -3839,22 +3728,24 @@ echo "hello"
 
 `Build Triggers` 是你选择什么来启动构建的地方。在示例中，我们将使用 `Build Periodically` 来展示如何使用计划。还有 GitHub 提交触发器和轮询仓库的选项。告诉 GitHub 启动构建的触发器被称为 `push`。相比之下，`polling`（轮询）请求仓库定期检查是否有更改，如果有则执行构建。
 
+
+
 `Build Environment` 允许你配置有关 Jenkins 如何行为的信息。例如，你可以让 Jenkins 为每个日志条目添加时间戳，或者设置 Jenkins 何时杀死长时间运行的构建策略。
 
 `Build Steps` 是实际的构建，你可以在这里配置运行一个或多个构建步骤。例如，你可以让 Jenkins 从命令行运行命令，或者在此处配置 Maven 构建。
 
 `Post-build Actions` 允许你处理构建结果。例如，你可以发送电子邮件通知或发布报告。
 
-#### 创建 Maven 自由风格任务
+## 创建 Maven 自由风格任务
 
 在创建 Maven 任务之前，你需要配置 Jenkins 以运行 Maven。为此，请遵循以下步骤：
 
-1.  点击左侧导航栏中的 `Manage Jenkins`。
-2.  选择 `Tools`。
-3.  在 Maven Installations 部分点击 `Add Maven`。
-4.  输入如 `Maven 3.9` 的名称。
-5.  保留默认选项，这将在你第一次构建时从互联网下载最新的 Maven 3.9。图 4.18 显示了配置。
-6.  点击 `Save`。
+1. 点击左侧导航栏中的 `Manage Jenkins`。
+2. 选择 `Tools`。
+3. 在 Maven Installations 部分点击 `Add Maven`。
+4. 输入如 `Maven 3.9` 的名称。
+5. 保留默认选项，这将在你第一次构建时从互联网下载最新的 Maven 3.9。图 4.18 显示了配置。
+6. 点击 `Save`。
 
 现在 Maven 配置完成后，你可以创建一个新的自由风格任务。下一步是从 GitHub 拉取代码。Jenkins 有一个 `Source Code Management` 提供了 `Git` 单选按钮。输入你想要代码的仓库 URL。例如，本章使用了 [`https://github.com/realworldjava/Ch04-CICD`](https://github.com/realworldjava/Ch04-CICD)。
 
@@ -3867,9 +3758,7 @@ https://github.com/realworldjava/Ch04-CICD HEAD" returned status code 128:
 
 ![一张 Maven 窗口配置截图。它询问名称以及一个确认自动安装的复选框。该复选框已选中。](img/c04f018.png)
 
-
-
-# **图 4.18**](#c04.xhtml_R_c04-fig-0018): Maven 工具配置
+**图 4.18**: Maven 工具配置
 
 企业内部仓库需要身份验证。
 
@@ -3879,7 +3768,7 @@ https://github.com/realworldjava/Ch04-CICD HEAD" returned status code 128:
 
 ![一张 git 窗口的截图。它要求输入仓库、URL 以及要构建的分支，并使用提到的版本和目标调用顶层 maven 目标。](img/c04f019.png)
 
-# **图 4.19**](#c04.xhtml_R_c04-fig-0019): Maven 自由风格作业配置
+**图 4.19**: Maven 自由风格作业配置
 
 ## 创建 Gradle 自由风格作业
 
@@ -3891,23 +3780,21 @@ https://github.com/realworldjava/Ch04-CICD HEAD" returned status code 128:
 
 ![一个 invoke gradle script 作业配置窗口的截图。它描述了标记为 invoke gradle 和 ue gradle wrapper 的两个选项。使用了 gradle wrapper 选项。它要求 wrap location、tasks 和 root build script。](img/c04f020.png)
 
-# **图 4.20**](#c04.xhtml_R_c04-fig-0020): Gradle 自由风格作业配置
+**图 4.20**: Gradle 自由风格作业配置
 
 ## 创建 Maven 流水线
 
 Pipeline Maven Integration 插件使得编写使用 Maven 的流水线变得更加容易，因此在创建流水线之前先安装它：
 
-1.  点击左侧导航栏中的 Manage Jenkins（管理 Jenkins）。
-2.  点击 Plugins（插件）。
-3.  点击左侧导航栏中的 Available Plugins（可用插件）。
-4.  在搜索栏中输入 `Pipeline Maven` 以过滤可用插件列表。
-5.  点击插件名称左侧的复选框。
-6.  点击 Install（安装）。
-7.  点击 Restart Jenkins When Installation Is Complete And No Jobs Are Running（安装完成且无作业运行时运行时重启 Jenkins）左侧的复选框。
+1. 点击左侧导航栏中的 Manage Jenkins（管理 Jenkins）。
+2. 点击 Plugins（插件）。
+3. 点击左侧导航栏中的 Available Plugins（可用插件）。
+4. 在搜索栏中输入 `Pipeline Maven` 以过滤可用插件列表。
+5. 点击插件名称左侧的复选框。
+6. 点击 Install（安装）。
+7. 点击 Restart Jenkins When Installation Is Complete And No Jobs Are Running（安装完成且无作业运行时运行时重启 Jenkins）左侧的复选框。
 
 这将导致 Jenkins 重启。现在你已经有了插件，可以准备创建流水线了。选择一个流水线。Pipeline Maven Integration 插件使得编写使用 Maven 的流水线变得更加容易，因此在创建流水线之前先安装它：
-
-
 
 你还可以创建 `views`（视图）作为查看任务的另一种方式。点击任务列表上方加号 (`+`) 来创建一个新视图。默认情况下提供一个可配置的 `list view`（列表视图）。你可以手动选择包含在视图的任务，也可以提供一个正则表达式来指定模式。第 10 章，“使用正则表达式进行模式匹配”将介绍如何通用使用正则表达式。列表视图还让你控制显示哪些列。视图还可以遍历文件夹。
 
@@ -3999,14 +3886,11 @@ public void run(int count) {
 }
 ```
 
-
-
-
 随着你 Java 职业生涯的成熟，是时候将那些 `System.out.println` 调用替换为日志框架了。在本章中，你将学习日志框架的优点，学习如何使用最常用的框架，并对比这些日志框架以选择出最适合你的一个。由于许多日志框架的许多概念都是相同的，即使你打算在工作中使用不同的日志框架，也请先阅读“使用 Java Util Logging（Using Java Util Logging）”部分。此外，每个日志框架都许多许多功能。本章涵盖了最常用的功能，但如果你有更特殊的需求，请检查文档。例如，所有的日志框架都允许你通过 Java 代码设置日志配置，而不是通过更常用的外部文件方式。
 
 你可能会看到人们用“日志库”代替“日志框架”。本章使用“框架”一词，但我们指的是同一种东西。
 
-# 需要超越打印
+## 需要超越打印
 
 有许多理由说明你应该选择使用日志框架而不是 `println` 方法调用。其中一个原因是你可以控制记录的量。虽然你在排排除故障时可能想输出 `count` 的值，但一旦你的应用程序有了许多用户，这只会让日志变得杂乱！日志框架允许你在代码中保留这些日志语句，但允许你指定一个日志级别，从而在每个环境中只打印你实际想要记录的消息。
 
@@ -4016,7 +3900,7 @@ public void run(int count) {
 
 日志框架可以通过存储消息进行异步记录，使你的应用程序更快，而不是让你的程序停等待缓慢的 I/O 输出操作实时发生。最后，日志框架可以处理日志文件的轮转，这样你就有最新的日志可用，而不是让磁盘空间不断增加。
 
-# 使用 Java Util Logging
+## 使用 Java Util Logging
 
 Java Util Logging 直接内置在 Java 中；不需要通过 Maven 或 Gradle 引入依赖。事实上，Java Util Logging 从 Java 1.4 开始就被包含了！以下展示了一个简单的日志记录示例：
 
@@ -4044,7 +3928,9 @@ Logger.getLogger("com.wiley.realworldjava.logging.jul.BasicLogging");
 
 但如果你进行重构并更改了类名，就会面临过时的风险。更好的方法是使用 `class.getName()`，这样当类被重命名时，日志器的名称会自动重命名。
 
-第 9 行是日志语句。Java Util Logging 中的 `severe()` 告诉日志记录器使用最高优先级的日志级别。运行这段代码会输出如下内容：
+
+
+第 9 行是日志语句。Java Util Logging 中的`severe()`告诉日志记录器使用最高优先级的日志级别。运行这段代码会输出如下内容：
 
 ```
 Feb 11, 2024 9:16:22 PM com.wiley.realworldjava.logging.jul.BasicLogging main
@@ -4056,14 +3942,14 @@ SEVERE: Something bad happened!
 * 日期和时间
 * 全限定类名
 * 方法名
-* 日志级别（SEVERE`）
+* 日志级别（`SEVERE`）
 * 日志消息
 
-在接后的章节中，你将看到更多关于使用 Java Util Logging 的细节。
+在接下来的章节中，你将看到更多关于使用 Java Util Logging 的细节。
 
 ## 比较日志级别
 
-理解日志级别的概念是非常重要的。你可以作为环境变量或启动属性为你的程序设置日志级别。假设程序被设置为使用 `WARNING` 日志级别。（在下一节中，你将学习如何设置日志级别。）让我们来看以下三个日志语句的输出：
+理解日志级别的概念是非常重要的。你可以作为环境变量或启动属性为你的程序设置日志级别。假设程序被设置为使用`WARNING`日志级别。（在下一节中，你将学习如何设置日志级别。）让我们来看以下三个日志语句的输出：
 
 ```
 private static final Logger LOGGER = 
@@ -4085,7 +3971,7 @@ Feb 11, 2024 9:25:48 PM com.wiley.realworldjava.logging.jul.BasicConfig main
 WARNING: be careful
 ```
 
-注意 `severe()` 和 `warning()` 调用是如何记录的，但 `info()` 调用没有被记录。Java Util Logging 只记录目标日志级别或更高级别的请求。
+注意`severe()`和`warning()`调用是如何记录的，但`info()`调用没有被记录。Java Util Logging 只记录目标日志级别或更高级别的请求。
 
 Java Util Logging 有七个级别。表 5.1 显示了日志级别及其预期用途。
 
@@ -4101,7 +3987,7 @@ Java Util Logging 有七个级别。表 5.1 显示了日志级别及其预期用
 | `ALL` | 所有消息的特殊选项。 |
 | `OFF` | 指定不记录的特殊选项。 |
 
-表 5.2 显示了当级别设置为 INFO 时的情况。
+表 5.2 显示了当级别设置为 `INFO` 时的情况。
 
 | LOGGING LEVEL | `SEVERE()` | `WARNING()` | `INFO()` | `FINE()` | `FINER()` | `FINEST()` |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -4116,7 +4002,7 @@ Java Util Logging 有七个级别。表 5.1 显示了日志级别及其预期用
 
 ## 格式化值
 
-通常，你想记录变量值而不仅仅是静态消息。内置的 `String.format` 方法为 Java Util Logging 格式化值。例如：
+通常，你想记录变量值而不仅仅是静态消息。内置的`String.format`方法为 Java Util Logging 格式化值。例如：
 
 ```
 LOGGER.severe(String.format("%s: %.1f is %d/%d", "Division", 1.5, 3, 2));
@@ -4128,16 +4014,13 @@ LOGGER.severe(String.format("%s: %.1f is %d/%d", "Division", 1.5, 3, 2));
 SEVERE: Division: 1.5 is 3/2
 ```
 
-此示例使用了常用的格式化占位符：`%s`（字符串）、`%f`（浮点数）和 `%d`（整数）。这些占位符会被随后的值替换。它们还展示了如何指定浮点数小数点后所需的数字位数。这段代码没有显式调用 `Formatter` 类，但它在 `String.format` 内部被调用。除了之前提到的，还有许多其他占位符，请参考 Javadoc `Formatter` 类。
+此示例使用了常用的格式化占位符：`%s`（字符串）、`%f`（浮点数）和`%d`（整数）。这些占位符会被随后的值替换。它们还展示了如何指定浮点数小数点后所需的数字位数。这段代码没有显式调用`Formatter`类，但它在`String.format`内部被调用。除了之前提到的，还有许多其他占位符，请参考 Javadoc `Formatter`类。
 
 ## 传递基础配置
 
 Java Util Logging 自带默认配置，因此你可以开始记录日志而无需提供任何外部配置。但你很快就会想对其进行自定义。
 
-
-
-
-默认配置文件位于你 Java 目录下的 `conf` 文件夹中，文件名为 `logging.properties`。例如，在 Windows 上，其路径可能如下：
+默认配置文件位于你 Java 目录下的`conf`文件夹中，文件名为`logging.properties`。例如，在 Windows 上，其路径可能如下：
 
 ```
 c:\Program Files\Java\jdk21\conf\logging.properties
@@ -4150,16 +4033,16 @@ c:\Program Files\Java\jdk21\conf\logging.properties
    Home/conf/logging.properties
 ```
 
-由于此文件位于 `Java` 目录，你不应该修改其内容。更好的做法为你的日志属性指定一个自定义位置。例如，项目中的 `src/main/resources` 是一个常用的位置，因为该文件会与你的项目一起存储在版本控制中。该位置还会导致文件被 `Maven` 或 `Gradle` 自动放在编译源文件相同的位置。因此，它在运行时作为类路径（classpath）资源可用，你无需进行任何额外工作即可访问它。
+由于此文件位于`Java`目录，你不应该修改其内容。更好的做法为你的日志属性指定一个自定义位置。例如，项目中的`src/main/resources`是一个常用的位置，因为该文件会与你的项目一起存储在版本控制中。该位置还会导致文件被`Maven`或`Gradle`自动放在编译源文件相同的位置。因此，它在运行时作为类路径（classpath）资源可用，你无需进行任何额外工作即可访问它。
 
-首先，设置一个基础日志配置文件。这个文件显示了用于表 5.2 的 `WARNING` 级别：
+首先，设置一个基础日志配置文件。这个文件显示了用于表 5.2 的`WARNING`级别：
 
 ```
 .level= WARNING
 handlers= java.util.logging.ConsoleHandler
 ```
 
-要让 Java 使用此文件，你需要设置 `java.util.logging.config.file` 系统属性。其中一种方法是在命令行中设置。
+要让 Java 使用此文件，你需要设置`java.util.logging.config.file`系统属性。其中一种方法是在命令行中设置。
 
 ```
 java -Djava.util.logging.config.file=src/main/resources/
@@ -4167,11 +4050,11 @@ java -Djava.util.logging.config.file=src/main/resources/
    logging/jul/BasicConfigCommandLine.java
 ```
 
-要了解如何使用这些工具设置系统属性，请参见第 2 章“了解你的 IDE：成功的秘诀”；第 4 章“使用 `Maven`、`Gradle` 和 `Jenkins` 自动化你的 CI/CD 构建”；第 6 章“了解 Spring Framework”。
+要了解如何使用这些工具设置系统属性，请参见第 2 章“了解你的 IDE：成功的秘诀”；第 4 章“使用`Maven`、`Gradle`和`Jenkins`自动化你的 CI/CD 构建”；第 6 章“了解 Spring Framework”。
 
 另一种设置系统属性的方法是在代码中。这在实际代码中并不是常见方法。这种方法通常不推荐，因为更改位置需要重新编译。然而，本章的使用了这种方法来方便使用各种属性文件。
 
-由于属性必须在实例化 `Logger` 之前设置，因此它是在 `static` 块中完成的。
+由于属性必须在实例化`Logger`之前设置，因此它是在`static`块中完成的。
 
 ```java
 import java.util.logging.Logger;
@@ -4191,13 +4074,13 @@ import java.util.logging.Logger;
 
 ### 设置日志输出目标
 
-到目前为止，示例都使用了 `ConsoleHandler`。以下是最常用的处理器：
+到目前为止，示例都使用了`ConsoleHandler`。以下是最常用的处理器：
 
-*   `ConsoleHandler`：写入 `System.err`
-*   `FileHandler`：写入文件，可选地进行轮转
-*   `SocketHandler`：写入远程计算机的端口
+* `ConsoleHandler`：写入`System.err`
+* `FileHandler`：写入文件，可选地进行轮转
+* `SocketHandler`：写入远程计算机的端口
 
-以下配置显示了如何使用 `FileHandler` 的基本功能：
+以下配置显示了如何使用`FileHandler`的基本功能：
 
 ```
 1: .level= WARNING
@@ -4208,9 +4091,9 @@ import java.util.logging.Logger;
 6: java.util.logging.FileHandler.count = 2
 ```
 
-第 4 行指定了日志文件的去向。在示例中，它们位于代码的根目录下。在实际应用中，绝对路径是最常见的。`%u` 表示使用唯一数字。每个文件都会获得一个数字以避免命名冲突。
+第 4 行指定了日志文件的去向。在示例中，它们位于代码的根目录下。在实际应用中，绝对路径是最常见的。`%u`表示使用唯一数字。每个文件都会获得一个数字以避免命名冲突。
 
-第 5 行说明了每个文件应包含多少字节。通常这个数字会大得多，比如 100,000，但为了演示，我们使用了一个较小的数字。一旦超过这个数字，将自动开始一个新文件。如果你省略了 `FileHandler.limit` 属性，文件将没有上限，可能导致文件变得大无法管理。
+第 5 行说明了每个文件应包含多少字节。通常这个数字会大得多，比如 100,000，但为了演示，我们使用了一个较小的数字。一旦超过这个数字，将自动开始一个新文件。如果你省略了`FileHandler.limit`属性，文件将没有上限，可能导致文件变得大无法管理。
 
 第 6 行指定了最多两个日志文件。针对一个产生大量数据的程序运行此配置会创建两个文件：
 
@@ -4221,7 +4104,7 @@ java-log-0.log1
 
 其余的数据就会丢失。这就是*日志轮转*（log rotation）的含义；旧数据会被轮转并被最新数据替换。注意，如果你遗掉了第 6 行，Java Util Logging 将继续生成文件，可能会耗尽你磁盘上的所有空间！通常，你会在磁盘上保留一周或一个月的日志等等，但这很大取决于你的团队和你的应用程序。
 
-每个文件包含类似以下的内容。这种格式被称为可扩展标记语言（XML）。关于 XML 的更多详细信息，请参阅附录“读取和写入 XML、JSON 和 YAML”。每个处理器都有一个默认格式。`ConsoleHandler` 使用文本格式。`FileHandler` 使用 XML。
+每个文件包含类似以下的内容。这种格式被称为可扩展标记语言（XML）。关于 XML 的更多详细信息，请参阅附录“读取和写入 XML、JSON 和 YAML”。每个处理器都有一个默认格式。`ConsoleHandler`使用文本格式。`FileHandler`使用 XML。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -4242,11 +4125,11 @@ java-log-0.log1
 </log>
 ```
 
-格式的一部分是原始文本，如 `DATE=` 和 `MESSAGE=`。`%1` 插入日期，`%5` 插入消息。其他的（例如 `$s%n`）`SimpleFormatter` 的 Javadoc 提供了更多细节。
+格式的一部分是原始文本，如`DATE=`和`MESSAGE=`。`%1`插入日期，`%5`插入消息。其他的（例如`$s%n`）`SimpleFormatter`的 Javadoc 提供了更多细节。
 
 ### 懒性日志
 
-到目前为止，输出都是简单的 `String`。有时你想记录的内容构造成本很高，你希望在不记录时避免构造。在这种情况下，你可以使用 lambda，这样在满足日志级别时才会构造消息：
+到目前为止，输出都是简单的`String`。有时你想记录的内容构造成本很高，你希望在不记录时避免构造。在这种情况下，你可以使用 lambda，这样在满足日志级别时才会构造消息：
 
 ```java
 public static void main(String[] args) {
@@ -4260,7 +4143,7 @@ private static String generateMessage() {
 
 ### 日志器继承
 
-目前示例一直使用 `.level` 来指定日志级别。`.`（点）表示根日志器。你可以指定不同级别的日志器，如下例所示。日志级别将适用于指定的日志器及其任何子类。如果存在重叠的规范，最具体的规范将生效。
+目前示例一直使用`.level`来指定日志级别。`.`（点）表示根日志器。你可以指定不同级别的日志器，如下例所示。日志级别将适用于指定的日志器及其任何子类。如果存在重叠的规范，最具体的规范将生效。
 
 假设我们有以下配置，设置了三个日志级别规则：
 
@@ -4275,11 +4158,7 @@ Java Util Logging 构建的日志层级结构如图 5.1
 
 **图 5.1**: 日志层级
 
-以下示例创建了一个我们恰当命名为 `com.wiley.realworldjava.logging.jul.MultipleLevelsLogging` 的日志器：
-
-
-
-
+以下示例创建了一个我们恰当命名为`com.wiley.realworldjava.logging.jul.MultipleLevelsLogging`的日志器：
 
 ```java
 package com.wiley.realworldjava.logging.jul;
@@ -4301,7 +4180,7 @@ public class MultipleLevelsLogging {
 }
 ```
 
-Java Util Logging 会寻找它能找到的最特定的 logger。在这种情况下，它是 `com.wiley.realworldjava.logging.jul` logger，因此使用了 `SEVERE` 级别，并且 `Parent logging` 仅为 `MultipleLevelsLogging` 记录一次。相比之下，下面的类使用了 `com.wiley.realworldjava.logging.jul.child` logger，我们之前将其配置为在 `WARNING` 级别记录日志，因此导致 `Child logging` 被打印两次，一次针对 `SEVERE`，一次针对 `WARNING`：
+Java Util Logging 会寻找它能找到的最特定的 logger。在这种情况下，它是`com.wiley.realworldjava.logging.jul` logger，因此使用了`SEVERE`级别，并且`Parent logging`仅为`MultipleLevelsLogging`记录一次。相比之下，下面的类使用了`com.wiley.realworldjava.logging.jul.child` logger，我们之前将其配置为在`WARNING`级别记录日志，因此导致`Child logging`被打印两次，一次针对`SEVERE`，一次针对`WARNING`：
 
 ```java
 package com.wiley.realworldjava.logging.jul.child;
@@ -4320,9 +4199,9 @@ public class ChildLogging {
 }
 ```
 
-当没有其他匹配的 logger 时，会使用根 logger。如果我们创建了一个名为 `com.wiley` 的 logger，它将使用 `INFO` 级别的根 logger。
+当没有其他匹配的 logger 时，会使用根 logger。如果我们创建了一个名为`com.wiley`的 logger，它将使用`INFO`级别的根 logger。
 
-你也可以对 logger 的名称使用继承，这些名称不需要反映应用程序的包和类。在下面的示例中，你可以看到三级的 logger：根 logger、`custom` 和 `custom.child`：
+你也可以对 logger 的名称使用继承，这些名称不需要反映应用程序的包和类。在下面的示例中，你可以看到三级的 logger：根 logger、`custom`和`custom.child`：
 
 ```properties
 .level= INFO
@@ -4331,7 +4210,9 @@ custom.child.level= WARNING
 handlers=java.util.logging.ConsoleHandler
 ```
 
-这一次，logger 是使用 logger 的名称（`custom` 和 `custom.child`）创建的，而不是包名和类名。父/子关系仍然存在。事实上，两个 logger 都可以在同一个类中使用运行！
+这一次，logger 是使用 logger 的名称（`custom`和`custom.child`）创建的，而不是包名和类名。父/子关系仍然存在。事实上，两个 logger 都可以在同一个类中使用运行！
+
+
 
 ```java
 public class MultipleLevelsLoggingWithManualHierarchy {
@@ -4359,9 +4240,28 @@ Log4j 是最古老的 Java 日志框架之一，甚至早于 Java Util Logging�
 
 | 工具 | 语法 |
 | --- | --- |
-| Maven | ```xml\n<dependency>\n    <groupId>org.apache.logging.log4j</groupId>\n    <artifactId>log4j-api</artifactId>\n    <version>2.22.1</version>\n</dependency>\n<dependency>\n    <groupId>org.apache.logging.log4j</groupId>\n    <artifactId>log4j-core</artifactId>\n    <version>2.22.1</version>\n</dependency>\n``` |
-| Gradle (Groovy) | ```groovy\nimplementation group: 'org.apache.logging.log4j',\n    name: 'log4j-api, version: '2.22.1'\nimplementation group: 'org.apache.logging.log4j',\n    name: 'log4j-core', version: '2.22.1'\n``` |
-| Gradle (Kotlin) | ```kotlin\nimplementation("org.apache.logging.log4j:log4j-api:2.22.1")\nimplementation("org.apache.logging.log4j:log4j-core:2.22.1")\n``` |
+| Maven | ```xml
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.22.1</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.22.1</version>
+</dependency>
+``` |
+| Gradle (Groovy) | ```groovy
+implementation group: 'org.apache.logging.log4j',
+    name: 'log4j-api, version: '2.22.1'
+implementation group: 'org.apache.logging.log4j',
+    name: 'log4j-core', version: '2.22.1'
+``` |
+| Gradle (Kotlin) | ```kotlin
+implementation("org.apache.logging.log4j:log4j-api:2.22.1")
+implementation("org.apache.logging.log4j:log4j-core:2.22.1")
+``` |
 
 **表 5.3**: 将 Log4j 指定为依赖
 
@@ -4372,7 +4272,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class BasicLogging {
-
    private static final Logger LOGGER = LogManager.getLogger();
 
    public static void main(String[] args) {
@@ -4380,9 +4279,6 @@ public class BasicLogging {
    }
 }
 ```
-
-
-
 
 这两条日志语句的消息部分如下：
 
@@ -4402,7 +4298,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class LoggingWithPrintf {
-
     private static final Logger LOGGER = LogManager.getLogger();
 
     public static void main(String[] args) {
@@ -4464,58 +4359,49 @@ public class LoggingWithPrintf {
 
 在第 2 行，文件将日志级别设置为 `WARN`，用于记录有关配置错误的警告。第 4–6 行随后创建了一个控制台输出器，模式为 `"%m%n"`，用于包含消息并跟换行符。第 8–16 行创建日志器。第 8–12 行定义了 `com.wiley.realworldjava` 日志器。第 13–15 行定义了 `Root` 日志器。
 
-
-
-
 `.json`/`.jsn` 和 `.yaml`/`.yml` 版本的配置要求你在项目中添加一些额外的依赖。这两者都使用了流行的 `Jackson` 库中不同的 API 进行解析。这些 API 不会作为 `Log4j` 本身的传递依赖，因为它们是可选依赖，只有在你在使用 JSON 或 YAML 时才需要，而对于属性或 XML 格式不需要。
 
 要使用 `Log4j2`，请在 Maven Central 上查找依赖：[`https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind`](https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind) 和 [`https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml`](https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml)。为你的构建工具查找最新版本号。参见表 5.5 和 表 5.6，分别获取 JSON 和 YAML 的额外依赖（使用的是本文编写时的最新版本号）。请注意，你指定的任一依赖都会将 `jackson-core` 作为传递依赖引入。
 
 | 工具 | 语法 |
 | --- | --- |
-| Maven |
-```xml
+| Maven | ```xml
 <dependency>
     <groupId>com.fasterxml.jackson.core</groupId>
     <artifactId>jackson-databind</artifactId>
     <version>2.16.1</version>
 </dependency>
 ``` |
-| Gradle (Groovy) |
-```groovy
+| Gradle (Groovy) | ```groovy
 implementation group: 'com.fasterxml.jackson.core',
    name: 'jackson-databind', version: '2.16.1'
 ``` |
-| Gradle (Kotlin) |
-```kotlin
+| Gradle (Kotlin) | ```kotlin
 implementation(
   "com.fasterxml.jackson.core:jackson-databind:2.16.1")
 ``` |
 
-#### 表 5.5: 指定 JSON 所需的 Log4j Jackson 依赖 |
+#### 表 5.5: 指定 JSON 所需的 Log4j Jackson 依赖
 
 | 工具 | 语法 |
 | --- | --- |
-| Maven |
-```xml
+| Maven | ```xml
 <dependency>
     <groupId>com.fasterxml.jackson.dataformat</groupId>
     <artifactId>jackson-dataformat-yaml</artifactId>
     <version>2.16.1</version>
 </dependency>
 ``` |
-| Gradle (Groovy) |
-```groovy
+| Gradle (Groovy) | ```groovy
 implementation group: 'com.fasterxml.jackson.dataformat',
    name: 'jackson-dataformat-yaml', version: '2.16.1'
 ``` |
-| Gradle (Kotlin) |
-```kotlin
+| Gradle (Kotlin) | ```kotlin
 implementation("com.fasterxml.jackson.dataformat:"
   + "jackson-dataformat-yaml:2.16.1")
 ``` |
 
-#### 表 5.6: 指定 YAML 所需的 Log4j Jackson 依赖 |
+#### 表 5.6: 指定 YAML 所需的 Log4j Jackson 依赖
 
 以下显示了之前示例用 JSON 格式表示的配置。`Log4j` 支持 `.json` 和 `.jsn` 文件扩展名。文件内容相同。
 
@@ -4562,7 +4448,6 @@ Configuration:
       target: SYSTEM_OUT
       PatternLayout:
         Pattern: "%m%n"
-
   Loggers:
     logger:
       -
@@ -4589,39 +4474,46 @@ JSON 和 YAML 示例与 XML 示例使用了相同的概念。唯一的区别是�
 * `RollingRandomAccessFile`：写入具有文件滚动和缓冲功能的文件。
 * 还有更多：`Log4j` 包含了超过 25 种 appender。
 
-
-
-
-
 ```json
 {
    "configuration": {
       "status": "warn",
       "appenders": {
          "RollingFile": {
-            "name":"FILE",
-            "fileName":"java-log.log",
-            "filePattern":"java-log-%d{yyyy-MM-dd}-%i.log.gz",
-            "PatternLayout": {
-               "pattern":"%m%n"
-            },
-            "Policies": {
-               "TimeBasedTriggeringPolicy" : {},
-               "SizeBasedTriggeringPolicy": {
-                  "size":"1 MB"
-               }
-            },
-           "DefaultRolloverStrategy": {
-             "max":"3"
-           }
-       }
-    },
-    "loggers": {
-      "root": {
-        "level": "error",
-        "AppenderRef": {
-          "ref": "FILE"
+```
+
+
+
+### 配置示例
+
+以下是一个 JSON 格式的 Log4j 配置示例，展示了滚动文件追加器的配置方式：
+
+```json
+{
+  "appenders": {
+    "RollingFile": {
+      "name": "FILE",
+      "fileName": "java-log.log",
+      "filePattern": "java-log-%d{yyyy-MM-dd}-%i.log.gz",
+      "PatternLayout": {
+        "pattern": "%m%n"
+      },
+      "Policies": {
+        "TimeBasedTriggeringPolicy": {},
+        "SizeBasedTriggeringPolicy": {
+          "size": "1 MB"
         }
+      },
+      "DefaultRolloverStrategy": {
+        "max": "3"
+      }
+    }
+  },
+  "loggers": {
+    "root": {
+      "level": "error",
+      "AppenderRef": {
+        "ref": "FILE"
       }
     }
   }
@@ -4632,26 +4524,25 @@ JSON 和 YAML 示例与 XML 示例使用了相同的概念。唯一的区别是�
 
 ```yaml
 Configuration:
-   status: warn
-   appenders:
-      RollingFile:
-        - name: FILE
-          fileName: $java-log.log
-          filePattern: java-log-%d{yyyy-MM-dd}-%i.log.gz
-          PatternLayout:
-             pattern: "%m%n"
-          Policies:
-             TimeBasedTriggeringPolicy:
-             SizeBasedTriggeringPolicy:
-               size: 1 MB
-           DefaultRollOverStrategy:
-             max: 3
-
-   Loggers:
-      Root:
-         level: error
-         AppenderRef:
-           ref: FILE
+  status: warn
+  appenders:
+    RollingFile:
+      - name: FILE
+        fileName: $java-log.log
+        filePattern: java-log-%d{yyyy-MM-dd}-%i.log.gz
+        PatternLayout:
+          pattern: "%m%n"
+        Policies:
+          TimeBasedTriggeringPolicy:
+          SizeBasedTriggeringPolicy:
+            size: 1 MB
+        DefaultRollOverStrategy:
+          max: 3
+  Loggers:
+    Root:
+      level: error
+      AppenderRef:
+        ref: FILE
 ```
 
 ### 选择日志输出格式
@@ -4666,7 +4557,7 @@ Configuration:
 
 日志可以读取到其他系统中或存储起来供日后手动阅读。如果你将日志导入另一个系统，请选择最易于消费系统读取的布局。如果你是自己读取，`CSV` 或 `Pattern` 布局是最好的。
 
-Pattern 布局有很多特殊的格式化字符。以下是文档中常用的常用示例：
+`Pattern` 布局有很多特殊的格式化字符。以下是文档中常用的常用示例：
 
 ```
 %d %p %c{1.} [%t] %m%n
@@ -4676,7 +4567,7 @@ Pattern 布局有很多特殊的格式化字符。以下是文档中常用的常
 
 * `%d`：使用默认日期格式的日期。
 * `%p`：日志级别（例如，`INFO`）。
-* `%c{1.`：显示完全限定类名的多少部分。括号中的部分提供了期望的格式。在此示例中，`%c` 表示类名，`{1.}` 表示显示一个完全展开的项，即类名本身以及包名每个部分的首字母，结果为 `c.w.r.l.l.LoggingWithPropertiesConfig`。
+* `%c{1.}`：显示完全限定类名的多少部分。括号中的部分提供了期望的格式。在此示例中，`%c` 表示类名，`{1.}` 表示显示一个完全展开的项，即类名本身以及包名每个部分的首字母，结果为 `c.w.r.l.l.LoggingWithPropertiesConfig`。
 * `[%t]`：大括号中的方法名。
 * `%m`：日志消息。
 * `%n`：换行符。
@@ -4685,7 +4576,7 @@ Pattern 布局有很多特殊的格式化字符。以下是文档中常用的常
 
 Log4j 的惰性日志与 Java Util Logging 类似。你使用 Lambda 表达式来组合日志消息。只有当日志级别需要记录消息时，Lambda 才会被执行：
 
-```
+```java
 public static void main(String[] args) {
    LOGGER.error(() -> generateMessage());
 }
@@ -4705,7 +4596,7 @@ SLF4J 代表 Simple Logging Façade for Java（Java 简单日志门）。你已�
 | --- | --- |
 | Maven |  
 
-```
+```xml
 <dependency>
     <groupId>org.slf4j</groupId>
     <artifactId>slf4j-api</artifactId>
@@ -4713,28 +4604,28 @@ SLF4J 代表 Simple Logging Façade for Java（Java 简单日志门）。你已�
 </dependency>
 ```
 
- | |
+ |
 | Gradle (Groovy) |  
 
-```
+```groovy
 implementation group: 'org.slf4j',
     name: 'slf4j-api', version: '2.0.12'
 ```
 
- | |
+ |
 | Gradle (Kotlin) |  
 
-```
+```kotlin
 implementation("org.slf4j:slf4j-api:2.0.12")
 ```
 
- | |
+ |
 
 **表 5.7**：指定 SLF4J 为依赖
 
 在接下来的章节中，我们将介绍使用 SLF4J 的基础知识以及如何配置它使用不同的底层日志记录。
 
-### 省省略日志框架
+### 省略日志框架
 
 在接下来的示例中，指定的唯一项是 `slf4j-api`。这足够编译，但无法运行：
 
@@ -4743,7 +4634,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class NoUnderlying {
-
    private static final Logger LOGGER = LoggerFactory.getLogger(NoUnderlying.class);
 
    public static void main(String[] args) {
@@ -4756,7 +4646,7 @@ public class NoUnderlying {
 
 ```
 [main] ERROR com.wiley.realjava.logging.SLF4J.Slf4Simple
-   - just to know 
+   - just to know
 ```
 
 SLF4J 不知道使用哪个框架。详情请见 https://www.slf4j.org/codes#noProviders。它默认输出到 `System.err`。
@@ -4767,7 +4657,7 @@ SLF4J 不知道使用哪个框架。详情请见 https://www.slf4j.org/codes#noP
 
 ```
 [main] ERROR com.wiley.realjava.logging.SLF4J.Slf4Simple
-   - just to know 
+   - just to know
 ```
 
 将 SLF4J 与其他日志框架配合使用比 `slf4j-simple` 更常见，正如我们在本节后面将所示。但首先，让我们涵盖如何使用 SLF4J 本身。
@@ -4784,11 +4674,7 @@ SLF4J 有五个日志级别。表 5.9 显示了日志级别及其预期用途。
 | `DEBUG` | 记录调试信息。 |
 | `TRACE` | 记录细粒度消息，通常显示应用程序流。 |
 
-
-
-
-
-# 表 5.9: SLF4J 日志级别
+**表 5.9**：SLF4J 日志级别
 
 ## 值格式化
 
@@ -4799,7 +4685,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Slf4jWithParameters {
-
    private static final Logger LOGGER = LoggerFactory
       .getLogger(Slf4jWithParameters.class);
 
@@ -4877,17 +4762,40 @@ SLF4J 通过检查类路径中的依赖项来选择使用的日志框架作为 `
 
 | 工具 | 语法 |
 | --- | --- |
-| Maven | \```xml\n<dependency>\n    <groupId>org.slf4j</groupId>\n    <artifactId>slf4j-jdk14</artifactId>\n    <version>2.0.12</version>\n</dependency>\n``` |
-| Gradle (Groovy) | \```groovy\nimplementation group: 'org.slf4j',\n    name: 'slf4j-jdk14', version: '2.0.12'\n``` |
-| Gradle (Kotlin) | \```kotlin\nimplementation("org.slf4j:slf4j-jdk14:2.0.12")\n``` |
+| Maven |  
 
-表 5.10: 指定 Java Util Logging 作为 SLF4J Provider 的依赖
+```xml
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-jdk14</artifactId>
+    <version>2.0.12</version>
+</dependency>
+```
 
-接下来查看 Maven 项目结构，如图 5.2](#c05.xhtml_c05-fig-0002) 所示。你可以看到只有 `slf4j-api` 和 `slf4j-jdk14` 被设置为依赖。
+ |
+| Gradle (Groovy) |  
+
+```groovy
+implementation group: 'org.slf4j',
+    name: 'slf4j-jdk14', version: '2.0.12'
+```
+
+ |
+| Gradle (Kotlin) |  
+
+```kotlin
+implementation("org.slf4j:slf4j-jdk14:2.0.12")
+```
+
+ |
+
+**表 5.10**：指定 Java Util Logging 作为 SLF4J Provider 的依赖
+
+接下来查看 Maven 项目结构，如图 5.2 所示。你可以看到只有 `slf4j-api` 和 `slf4j-jdk14` 被设置为依赖。
 
 ![SLF4J 的 Maven 结构截图。它包含以下嵌套文件夹：Src, main, java, com. wiley, resources 以及外部库。](img/c05f002.png)
 
-图 5.2: SLF4J 的 Maven 
+**图 5.2**：SLF4J 的 Maven 结构
 
 日志配置文件告诉 Java Util Logging 将 `WARNING` 及以上的日志输出到控制台：
 
@@ -4917,11 +4825,9 @@ public class Slf4jWithParameters {
 
 
 
+# 表 5.11: 将 Log4j 指定为 SLF4J 提供者依赖
 
-
-# 表 5.11](#c05.xhtml_R_c05-tbl-0011): 将 Log4j 指定为 SLF4J 提供者依赖
-
-更新 `pom.xml` 后，下一步是为 Log4j 创建日志配置：
+更新`pom.xml`后，下一步是为 Log4j 创建日志配置：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -4945,7 +4851,7 @@ public class Slf4jWithParameters {
 
 此时，项目的结构如图 5.3 所示。
 
-注意配置现在使用了 Log4j 的 `warn` 而不是 Java Util Logging 的 `WARNING`。关键在于所有更改都在依赖和配置文件中，而不是 Java 代码中。现在不进行任何更改运行 Java 代码，将得到以下输出：
+注意配置现在使用了 Log4j 的`warn`而不是 Java Util Logging 的`WARNING`。关键在于所有更改都在依赖和配置文件中，而不是 Java 代码中。现在不进行任何更改运行 Java 代码，将得到以下输出：
 
 ```
 2024-02-18 12:32:17,719 [ERROR] uh oh
@@ -4958,24 +4864,24 @@ public class Slf4jWithParameters {
 
 ![Log4J 日志的 Maven 结构截图。它包含以下嵌套的文件夹：Src, main, java, com. wiley, resources 以及外部库的扩展。](img/c05f003.png)
 
-# 图 5.3](#c05.xhtml_R_c05-fig-0003): Log4J 的 Maven 结构
+# 图 5.3: Log4J 的 Maven 结构
 
 ## 使用 LOGBACK
 
 本章的最后一个日志框架是 Logback。Log4j 和 Logback 都是今天企业中流行的选择。Logback 的设计旨在改进 Log4j，例如提高性能。Logback 实际上原生使用 SLF4J，而不是提供单独的 API。事实上，Logback 的创始人 Ceki Gülcü 也是 SLF4J 的创始人！这意味着你在上一节中学到的所有内容都适用。
 
-要开始使用，你需要 `slf4j-api` 和两个 Logback 特有的文件。前往 Maven Central 的 [`https://mvnrepository.com/artifact/ch.qos.logback/logback-classic`](https://mvnrepository.com/artifact/ch.qos.logback/logback-classic) 和 [`https://mvnrepository.com/artifact/ch.qos.logback/logback-core`](https://mvnrepository.com/artifact/ch.qos.logback/logback-core)。找到适用于你构建工具的最新版本号，并将其替换表 5.12 中显示的内容。
+要开始使用，你需要`slf4j-api`和两个 Logback 特有的文件。前往 Maven Central 的 [`https://mvnrepository.com/artifact/ch.qos.logback/logback-classic`](https://mvnrepository.com/artifact/ch.qos.logback/logback-classic) 和 [`https://mvnrepository.com/artifact/ch.qos.logback/logback-core`](https://mvnrepository.com/artifact/ch.qos.logback/logback-core)。找到适用于你构建工具的最新版本号，并将其替换表 5.12 中显示的内容。
 
 | 工具 | 语法 |
 | --- | --- |
 | Maven | |
-```
+```xml
 <dependency>
   <groupId>ch.qos.logback</groupId>
   <artifactId>logback-classic</artifactId>
   <version>1.5.0</version>
 </dependency>
-``` | |
+```
 | Gradle (Groovy) | |
 ```
 implementation group: 'ch.qos.logback',
@@ -4983,21 +4889,19 @@ implementation group: 'ch.qos.logback',
 implementation group: 'ch.qos.logback',
     name: 'logback-core', version: '1.5.0'
 ```
- | |
 | Gradle (Kotlin) | |
 ```
 implementation("ch.qos.logback:logback-core:1.5.0")
 implementation("ch.qos.logback:logback-classic:1.5.0")
 ```
- | |
 
-# 表 5.12](#c05.xhtml_R_c05-tbl-0012): 将 Logback 指定为依赖
+# 表 5.12: 将 Logback 指定为依赖
 
-注意 `logback-core` 是主要的日志代码。`logback-classic` 添加了额外功能，包括作为 SLF4J 提供者。在使用 Logback 时，你应该始终包含这两个依赖项。由于 Logback 使用了 SLF4J API，你可以参考 SLF4J 章节来处理完全相同的内容，例如格式化值。
+注意`logback-core`是主要的日志代码。`logback-classic`添加了额外功能，包括作为 SLF4J 提供者。在使用 Logback 时，你应该始终包含这两个依赖项。由于 Logback 使用了 SLF4J API，你可以参考 SLF4J 章节来处理完全相同的内容，例如格式化值。
 
 使用 Logback 的简单程序与之前的 SLF4J 示例一样：
 
-```
+```java
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -5037,12 +4941,12 @@ Logback 与 SLF4J 相同的级别，表 5.13 显示了它们的用途。
 
 ### 传递基础配置
 
-与 Log4j 一样，有一个 `configurationFile`。Logback 首先按以下顺序查找：
+与 Log4j 一样，有一个`configurationFile`。Logback 首先按以下顺序查找：
 
-*   `src/test` 中的 `logback-test.xml`
-*   标准执行的 `logback.xml`
+*   `src/test`中的`logback-test.xml`
+*   标准执行的`logback.xml`
 
-最后，如果没有找到配置，Logback 使用默认配置，向控制台输出 `DEBUG` 级别的日志。
+最后，如果没有找到配置，Logback 使用默认配置，向控制台输出`DEBUG`级别的日志。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -5070,20 +4974,16 @@ Logback 与 SLF4J 相同的级别，表 5.13 显示了它们的用途。
 
 之前的示例使用了控制台 Appender。以下是较常用的 Appender 类：
 
-*   `ConsoleAppender`: 写入 `System.out`（可以更改为 `System.err`）。
+*   `ConsoleAppender`: 写入`System.out`（可以更改为`System.err`）。
 *   `FileAppender`: 写入文件。
 *   `RollingFileAppender`: 带有文件滚动的写入文件。
 *   **以及更多：** 许多可以记录到数据库或队列。甚至有针对特定供应商（如 Gmail）的电子邮件 Appender。
 
-现在你将学习如何使用 `RollingFileAppender` 类。每个 Appender 都有若干控制行为的属性。完整列表请参见章节末尾。对于滚动文件，这控制了名称、格式、如何处理滚动以及何时清理旧文件。
+现在你将学习如何使用`RollingFileAppender`类。每个 Appender 都有若干控制行为的属性。完整列表请参见章节末尾。对于滚动文件，这控制了名称、格式、如何处理滚动以及何时清理旧文件。
 
 此示例在一天后或 10 KB 后（以先到为准）进行文件滚动。
 
-
-
-
-
-```
+```xml
 <configuration>
    <appender name="ROLLING" 
       class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -5107,7 +5007,7 @@ Logback 与 SLF4J 相同的级别，表 5.13 显示了它们的用途。
 </configuration>
 ```
 
-与 Log4j 一样，该配置指定了正在写入日志的文件名以及滚动文件的命名规范。由于 `fileNamePattern` 以 `.gz` 结尾，它会被自动压缩。
+与 Log4j 一样，该配置指定了正在写入日志的文件名以及滚动文件的命名规范。由于`fileNamePattern`以`.gz`结尾，它会被自动压缩。
 
 我们在这里将最大文件大小设置为 10 KB，比我们为 Log4j 设置的 1 MB 要小。原因是 Logback 每隔 60 秒才会检查一次是否超过文件大小限制，而 Log4j 检查文件大小的频率更高。因此，我们在示例中设置了较小的尺寸，以便你可以直接看到文件的滚动，而不需要等待长时间。
 
@@ -5122,15 +5022,15 @@ java-log.log
 
 ### 选择日志输出格式
 
-本节中的示例使用了 `%msg%n`，它仅表示消息内容和换行。幸运的是，Logback 支持多种选项。首先，你必须选择想要使用的布局（layout）。以下是常见的布局类：
+本节中的示例使用了`%msg%n`，它仅表示消息内容和换行。幸运的是，Logback 支持多种选项。首先，你必须选择想要使用的布局（layout）。以下是常见的布局类：
 
-*   `PatternLayout`：纯文本格式字符串，如 `%msg%n`，用以指定你想要包含的内容
+*   `PatternLayout`：纯文本格式字符串，如`%msg%n`，用以指定你想要包含的内容
 *   `HTMLLayout`：使用模式和 CSS 的 HTML 格式
 *   `XMLLayout`：使用 Log4j XML 格式
 
 或者，你可以创建一个自定义格式。
 
-`PatternLayout` 通常是最好的，因为它有很多特殊的格式化字符。以下是文档中常用的一个示例：
+`PatternLayout`通常是最好的，因为它有很多特殊的格式化字符。以下是文档中常用的一个示例：
 
 ```
 %d{dd MMM yyyy:HH:mm:ss.SSS} [%method] %level - %msg%n
@@ -5152,7 +5052,7 @@ java-log.log
 
 ### 确定编码标准
 
-在本章中，我们定义的所有日志器都是 `private static final` 常量。有些人喜欢将日志器设为实例变量。你应该检查你的团队是否有任何规则或约定，并遵循这些规则。
+在本章中，我们定义的所有日志器都是`private static final`常量。有些人喜欢将日志器设为实例变量。你应该检查你的团队是否有任何规则或约定，并遵循这些规则。
 
 ### 性能设计
 
@@ -5174,38 +5074,42 @@ java-log.log
 
 `Log injection`（日志注入）是指对方通过包含你未预期的文本来破坏你的日志。考虑这条日志语句：
 
-```
+```java
 LOGGER.info("Invalid name: {}", name);
 ```
 
-如果 `name` 来自用户输入，它可能包含任何内容。这种恶意示例被称为 `log forging`（日志伪造），这是一种渗透技术，黑客向变量中注入特殊字符，向你的日志中添加伪造的数据。
+如果`name`来自用户输入，它可能包含任何内容。这种恶意示例被称为`log forging`（日志伪造），这是一种渗透技术，黑客向变量中注入特殊字符，向你的日志中添加伪造的数据。
 
 ### 日志聚合与转发
 
-公司通常将多个应用程序的日志副本存储在一个地方以便分析，例如以便于检测模式、运行查询和提供监控。他们还希望日志发送到特定位置以便搜索。名为 `forwarders`（转发器）工具类专门为了将本地日志移动到中心位置而存在。
-
-
-
+公司通常将多个应用程序的日志副本存储在一个地方以便分析，例如以便于检测模式、运行查询和提供监控。他们还希望日志发送到特定位置以便搜索。名为`forwarders`（转发器）工具类专门为了将本地日志移动到中心位置而存在。
 
 - [`https://docs.oracle.com/en/java/javase/21/docs/api/java.logging/java/util/logging/FileHandler.html`](https://docs.oracle.com/en/java/javase/21/docs/api/java.logging/java/util/logging/FileHandler.html): 用于配置文件日志
 - [`https://docs.oracle.com/en/java/javase/21/docs/api/java.logging/java/util/logging/SimpleFormatter.html`](https://docs.oracle.com/en/java/javase/21/docs/api/java.logging/java/util/logging/SimpleFormatter.html): 用于自定义日志格式
 - [`https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Formatter.html`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Formatter.html): 格式化语法
 
 ## Log4j
+
 - [`https://logging.apache.org/log4j/2.x/javadoc/log4j-api/index.html`](https://logging.apache.org/log4j/2.x/javadoc/log4j-api/index.html): Log4j 文档
 - [`https://logging.apache.org/log4j/2.x/manual/appenders.html`](https://logging.apache.org/log4j/2.x/manual/appenders.html): Appenders（挂载器）完整文档
 - [`https://logging.apache.org/log4j/2.x/manual/layouts.html`](https://logging.apache.org/log4j/2.x/manual/layouts.html): Layouts（布局布局）完整文档
 
 ## SLF4J
+
 - [`https://www.SLF4J.org/manual.html`](https://www.slf4j.org/manual.html): SLF4J 文档
+
+
+
 - [`https://www.SLF4J.org/api/org/slf4j/simple/SimpleLogger.html`](https://www.slf4j.org/api/org/slf4j/simple/SimpleLogger.html): 如果想配置 `slf4j-simple` 的系统属性
 
 ## Logback
+
 - [`https://logback.qos.ch/manual`](https://logback.qos.ch/manual): Logback 文档
 - [`https://logback.qos.ch/manual/appenders.html`](https://logback.qos.ch/manual/appenders.html): Appenders（挂载器）完整文档
 - [`https://logback.qos.ch/manual/layouts.html`](https://logback.qos.ch/manual/layouts.html): Layouts（布局）完整文档
 
 ## 总结
+
 - Java Util Logging 内置于 Java。
 - Log4j 和 Logback 是直接的日志框架。
 - SLF4J 是其他日志框架（如 Java Util Logging、Log4j 和 Logback）的门面/封装。
@@ -5274,10 +5178,6 @@ public class MortgageCalculatorServiceImpl implements MortgageCalculatorService 
 Spring 提供了多种方法定义 bean。我们将从传统的 XML 配置方法开始。更现代的方法使用注解和配置类取代 XML 文件，但 XML 方法在遗留应用中仍被广泛使用，因此我们从这里开始。随着本章的进行，你可以在 Git 分支中找到各种完成状态。我们会在每个节开始时提到分支名称，你可以检出该分支并跟踪工作代码。对于 XML 配置，你可以在 Git 分支 `xml-config` 中找到完成的代码。
 
 让我们将配置文件命名为 `applicationContext.xml`，这是 Spring 使用的传统名称。按照约定，Spring 期望位于 `src/main/resources` 目录：
-
-
-
-
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -5416,28 +5316,27 @@ public class App {
 
 
 
-
-
 此示例的完成代码位于 Git 分支 `component-scan` 中。我们的应用程序是一个简单的服务，因此我们将为 `MortgageCalculatorServiceImpl` 类添加 `@Service` 注解，以表示我们的计算器正在执行一个服务。我们还为 `App` 添加了 `@Component` 注解，告诉 Spring 我们希望以 bean 的形式访问此类。
 
 现在我们可以从 `AppConfig` 类中删除 bean 声明，只需添加要扫描的包即可：
 
-``` even6: @Configuration
-7: @ComponentScan(basePackages = "com.wiley.realworldjava")
-8: public class AppConfig {
-9: }
+```java
+@Configuration
+@ComponentScan(basePackages = "com.wiley.realworldjava")
+public class AppConfig {
+}
 ```
 
 要使用这种方法，请将 `App` 类中第 17 和 18 行的 `ApplicationContext` 初始化器替换为以下内容，并传入配置类名：
 
-```
+```java
 ApplicationContext context = 
    new AnnotationConfigApplicationContext(AppConfig.class);
 ```
 
 我们甚至可以完全删除 `Configuration` 类，只需将要扫描的包名传递给 `ApplicationContext` 初始化器即可：
 
-```
+```java
 ApplicationContext context
        = new AnnotationConfigApplicationContext("com.wiley.realworldjava");
 ```
@@ -5456,7 +5355,7 @@ Spring 允许你在资源文件中定义属性，并在特定的 profile 文件�
 
 对于抵押贷款计算器，让我们添加以下属性：
 
-```
+```properties
 default.interestRate=3.5
 preferred.mortgage.holder=ABC Mortgage, Inc.
 country=United States
@@ -5464,7 +5363,7 @@ country=United States
 
 在 `@Configuration` 类（或任何 Spring 管理的类）中，在类名上方添加 `@PropertySource` 注解，并传入属性文件名。例如：
 
-```
+```java
 @Configuration
 @PropertySource("classpath:application.properties")
 public class AppConfig {
@@ -5476,7 +5375,7 @@ public class AppConfig {
 
 例如，要将之前 `application.properties` 中的 `default.interestRate` 注入到名为 `defaultInterestRate` 的 `double` 类型变量中，你可以在任何 Spring 管理的类中如下如下声明该变量：
 
-```
+```java
 @Value("${default.interestRate}")
 private double defaultInterestRate;
 ```
@@ -5485,7 +5384,7 @@ private double defaultInterestRate;
 
 另一种，你可以将该占位符作为构造函数参数包含进来。例如，让我们如下包含默认利率占位符：
 
-```
+```java
 public MortgageCalculatorServiceImpl(
    @Value("${default.interestRate}")
    double defaultInterestRate) {
@@ -5499,7 +5398,7 @@ public MortgageCalculatorServiceImpl(
 
 例如，假设你的应用程序根据环境具有不同的数据库属性或调用不同的 REST 端点 URL。你可以创建特定环境的属性文件。例如，为 dev 环境创建一个属性文件，将其命名为 `application-dev.properties`。为 prod 创建另一个，命名为 `application-prod.properties`。将所有这些属性保留在 resources 文件夹中。然后从你的 `@Configuration` 类中添加 `@PropertySource` 注解，指定 profile 占位符，如下：
 
-```
+```java
 @Configuration
 @PropertySource("classpath:application.properties")
 @PropertySource(
@@ -5551,13 +5450,13 @@ Monthly Payment: $1531.17
 
 区别在于在 dev 中，我们没有在 `application-dev.properties` 中指定默认利率，因此程序获取了 `application.properties` 中的默认值。
 
-```
+```properties
 default.interestRate=3.5
 ```
 
 然而，对于 prod profile，程序看到了 `application-prod.properties` 中的覆盖属性，因此在计算时使用了该值。
 
-```
+```properties
 default.interestRate=6.2
 ```
 
@@ -5566,9 +5465,6 @@ default.interestRate=6.2
 ## 使用 Spring Boot 加速开发
 
 Spring Boot 是一个非常方便的框架，它消除了 Spring 应用所需的许多脚架工作和设置。
-
-
-
 
 它使用了“启动器依赖”（starter-dependencies）的概念，即 Maven/Gradle 的物料清单（BOM）依赖，这意味着它们为特定的用例引入了所有所需的依赖项。你通过其名称就可以大致判断该启动器的用途，例如，`spring-boot-starter-web` 用于构建 Spring MVC Web 应用程序，`spring-starter-security` 用于通过身份验证和授权为你的应用程序添加安全性。
 
@@ -5602,7 +5498,7 @@ Spring 提供了一个名为 Initializr（这是他们的拼写！）的网站�
 
 最后，点击 Create 生成模块。你可以在 IDE 中看到新模块。打开 `pom.xml` 文件，你会发现 Spring Boot 生成了对 Spring Boot 父项目的引用。
 
-```
+```xml
 <parent>
    <groupId>org.springframework.boot</groupId>
    <artifactId>spring-boot-starter-parent</artifactId>
@@ -5618,10 +5514,6 @@ Spring 提供了一个名为 Initializr（这是他们的拼写！）的网站�
 [**图 6.6**]](#c06.xhtml_R_c06-fig-0006)：在 IntelliJ 中选择依赖项。
 
 POM 还包含对 `spring-boot-starter-web`（因为你选择了 Spring Web）以及 `spring-boot-starter-test` 的引用，后者总是会被包含的。
-
-
-
-
 
 通过调用以下命令启动应用程序：
 
@@ -5646,6 +5538,8 @@ java -jar target/mtgcalc-0.0.1-SNAPSHOT.jar
 ## 使用 Spring MVC
 
 让我们为项目添加一些包。我们将执行基础性工作的计算类放在 `service` 包下。Web 应用端点定义在 Spring `Controller` 类中（稍后定义），因此我们将将其放在 `controller` 包中。所以，让我们创建 `com.wiley.realworldjava.mtgcalc.service` 和 `com.wiley.realworldjava.mtgcalc.controller` 包。你可以直接将原始项目中的 `MortgageCalculatorService` 和 `MortgageCalculatorServiceImpl` 类复制并粘贴到新的 Spring Boot `mtgcalc` 项目中。
+
+
 
 要添加 Web 功能，我们需要添加控制器类。这是一个带有 `@RestController` 注解的类。在 `com.wiley.realworldjava.mtgcalc.controller` 包中创建 `MortgageController` 类。为该类添加方法并使用 `@GetMapping("/my-endpoint")` 进行注解；只需将 `/my-endpoint` 重命名为你希望在调用该方法时引用的 URL 端点。让我们通过实现一个简单的“Hello, World”端点来尝试：
 
@@ -5735,10 +5629,6 @@ http://localhost:8081/mtg/payment?principal=100000&years=30&interest=6.5
 此代码足以提供浏览器页面，但对于真正的面向资源的 RESTful Web 服务 API，你通常希望提供更多关于响应的信息，例如详细的响应状态和响应头消息。
 
 对方法签名进行简单修改即可将响应封装在泛型 `ResponseEntity` 中，这是一个特殊的 Spring 类，你可以用它嵌入响应元数据。例如，让我们在响应中嵌入名为 `"Request time"` 的头部，它将包含请求的时间。
-
-
-
-
 
 ```
 @GetMapping("/payment")
@@ -5831,7 +5721,7 @@ public class Response {
 45: }
 ```
 
-第 28 行将此方法声明为 POST 请求并绑定到端点 `/payment`。注意，这与我们的 GET 端点相同的 URL。当你作为 POST 调用调用 `/payment` 时，它将调用新方法；但当你作为 GET 调用调用相同的 URL 时，它将调用原始方法。
+第 28 行将此方法声明为 POST 请求并绑定到端点 `/payment`。注意，这与我们的 GET 端点相同的 URL。当你作为 POST 调用调用 `/payment` 时，它将调用新方法；但当你作为 GET 调用相同的 URL 时，它将调用原始方法。
 
 在第 31 行中，`@RequestBody` 注解告诉 Spring 将 JSON 负载转换为参数类型，在此例中，是 `Mortgage` 对象的 Java `List`。请参阅附录关于 JSON 的部分以了解更多关于底层如何实现从 JSON 反序列化为 Java 对象的。
 
@@ -5854,9 +5744,6 @@ public class MortgageException extends RuntimeException{
   }
 }
 ```
-
-
-
 
 随后，通过为类添加 `@ControllerAdvice` 注解并为你的异常实现方法，来创建全局异常处理器；在这种情况下，我们只实现了一个名为 `handleException` 的此类方法。该方法必须带有 `@ExceptionHandler` 注解，并且必须接受要处理的异常作为唯一的方法参数。
 
@@ -5906,6 +5793,8 @@ http://localhost:8081/mtg/payment?principal=100000&years=-30&interest=6.7
 **图 6.10**: 来自 ControllerAdvice 的响应
 
 ## 使用 ACTUATOR 检查你的应用程序
+
+
 
 Actuator 是一个你会在基于 Spring 的应用程序中想要使用的有用插件。它暴露了一些标准化端点，可以提供关于应用的丰富信息。这些端点被 Prometheus、Grafana 和其他可观测性应用使用。（我们在第 12 章“监控你的应用程序：Java 生态系统中的可观测性”中介绍了可观测性。）本节的代码位于 `actuator` 分支。
 
@@ -6024,21 +5913,16 @@ management.endpoints.web.exposure.include=*
 
 * **窃听者**: 秘密获取网络中传输数据的个人或程序。
 * **加密**: 为了防止未经授权而对数据进行编码的过程。
-
-    * **对称加密**: 发送者和接收者使用相同的密钥来加密/解密数据。如果密钥被发现则存在风险。
-    * **非对称加密**: 使用*公钥*加密数据，但只能使用服务器已有的私钥解密。这确保了窃听者无法解密数据。同样，数据可以使用私钥加密并使用公钥解密。这样做是为了确保数据确实是由已发送者发送的。
+  * **对称加密**: 发送者和接收者使用相同的密钥来加密/解密数据。如果密钥被发现则存在风险。
+  * **非对称加密**: 使用*公钥*加密数据，但只能使用服务器已有的私钥解密。这确保了窃听者无法解密数据。同样，数据可以使用私钥加密并使用公钥解密。这样做是为了确保数据确实是由已发送者发送的。
 * **证书**: 包含公钥和其他信息（如颁发机构的名称）的数字文档。
 * **证书机构**: 颁发和维护证书的信誉良好的。
 * **安全套字层 (SSL)**: 用于在互联网上传加密数据的协议。使用证书机构颁发的证书。
 * **传输层安全 (TLS)**: SSL 的下一代、更安全的版本。
-
-
-
-
-*   **超文本传输协议 (HTTP)**: 一种用于 Web 和 Web 服务器之间传输数据的开放协议。默认使用 80 端口，但可以轻松修改。
-*   **HTTPS**: 使用 SSL 的 HTTP 安全版本。默认使用 443 端口。
-*   **身份验证 (Authentication)**: 验证你的真实身份。例如，你可以输入用户名和密码，应用程序会以安全的方式检查这些凭据。
-*   **授权 (Authorization)**: 验证经过身份验证的用户是否有权查看其正尝试访问的资源。
+* **超文本传输协议 (HTTP)**: 一种用于 Web 和 Web 服务器之间传输数据的开放协议。默认使用 80 端口，但可以轻松修改。
+* **HTTPS**: 使用 SSL 的 HTTP 安全版本。默认使用 443 端口。
+* **身份验证 (Authentication)**: 验证你的真实身份。例如，你可以输入用户名和密码，应用程序会以安全的方式检查这些凭据。
+* **授权 (Authorization)**: 验证经过身份验证的用户是否有权查看其正尝试访问的资源。
 
 这些都是你在常见的安全对话中会听到的通用安全相关术语。现在，让我们来看看 Spring 是如何整合这些内容来保护你的应用程序的。
 
@@ -6061,9 +5945,6 @@ Spring Security 默认使用 `session-based`（基于会话的）身份验证。
 应用程序也可以选择 `token-based`（基于令牌的）身份验证。在这种情况下，一个包含信息的 JWT 被生成并在请求头中传递。
 
 通过这种方式，`SecurityContext` 将保持有效，直到会话结束。
-
-
-
 
 现在重新构建并启动应用程序，尝试调用该端点。在浏览器中，系统会提示输入凭据。如果你运行此 `curl` 命令，你将看到 401 HTTP 返回码，这表示未经授权。
 
@@ -6110,14 +5991,14 @@ curl -X POST -H "Content-Type: application/json"
 
 ## 进一步参考
 
-* [`http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm`](http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm`)
-    * Roy Fielding 关于 REST 的原始论文
+* [`http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm`](http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
+  * Roy Fielding 关于 REST 的原始论文
 * [`https://start.spring.io`](https://start.spring.io)
-    * Initializr
+  * Initializr
 * [`https://docs.spring.io/spring-framework/reference/index.html`](https://docs.spring.io/spring-framework/reference/index.html)
-    * Spring Framework 文档
+  * Spring Framework 文档
 * [`https://www.base64encode.org`](https://www.base64encode.org)
-    * Base 64 编码器
+  * Base 64 编码器
 * *RESTful Web Services* (O'Reilly 2007)
 * *Spring in Action* (Manning, 2022)
 
@@ -6141,17 +6022,15 @@ Maven 和 Gradle 都使用一种主张的方法进行构建。它们期望主代
 
 图 7.1 显示了结构内部是如何组织的，这在第 4 章中看起来应该。`src/main/java` 目录包含应用程序的 Java 代码，而 `src/main/resources` 目录包含非 Java 制品，如 XML 和属性文件。`src/main` 结构中的所有代码都用于生产。
 
+
+
 ![截图显示了 Maven 的测试组织。它包含以下嵌套文件夹：Src, main, java, com. wiley, resources, test 和 target。](img/c07f001.png)
 
 **图 7.1**: Maven 中的测试组织
 
 相比之下，`src/test` 目录结构是为了确保 `src/main` 中的代码正如广告所言。与 `src/test` 类似，`java` 和 `resources` 子目录也存在于 `src/test` 中，以分离 Java 代码与其他文件。这种并行的目录结构很快就会变成习惯。我们的项目包含一个名为 `Bingo` 的类。你会注意到 `Bingo` 有*两个*测试类。`BingoTest` 是单元测试，`BingoIT` 是集成测试。是的，`IT` 代表*集成测试*，它测试系统中两个或多个部分之间的交互。集成测试通常与 REST API 或数据库交互，或利用文件系统，而单元测试则通过 Mock（mocks）来抽象这些细节，我们将在本章稍些时候看到。
 
-### 在 Maven 构建中配置 JUnit
-
-
-
-
+## 在 Maven 构建中配置 JUnit
 
 你可以在 Maven Central 上查找最新版本的 JUnit（[`https://mvnrepository.com/artifact/org.junit/junit-bom`](https://mvnrepository.com/artifact/org.junit/junit-bom)），在本文写作时该版本为 `5.10.2`。这是材料清单 (BOM) 和 `junit-jupiter` 节点本身的版本。如果你需要回顾 BOM 是什么或依赖管理是如何工作的，请参第 4 章。
 
@@ -6252,10 +6131,6 @@ org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
 
 Maven 提供了许多选项来控制 Surefire 和 Failsafe 的行为。例如，你可以传递系统属性、控制测试是否并行运行、包含/排除特定的测试模式、决定测试失败是否会导致构建失败等等等等。
 
-
-
-
-
 ```gradle
 dependencies {
     testImplementation(platform('org.junit:junit-bom:5.10.2'))
@@ -6320,7 +6195,7 @@ FAILURE: Build failed with an exception.
 
 **图 7.3**: Gradle 中的 JUnit 输出
 
-#### 使用测试驱动开发探索测试
+### 使用测试驱动开发探索测试
 
 现在你已经了解了如何组织测试并查看结果，是时候编写测试了。在本示例中，我们将使用测试驱动开发（TDD）。
 
@@ -6329,8 +6204,11 @@ FAILURE: Build failed with an exception.
 这种方法确保了你的所有代码都经过了测试。它还帮助你在编写每部分代码之前思考代码的行为。由于你是一个测试用例一次地编写代码，你会发发自己在编写过程中需要进行重构。这是预期的！测试让重构变得安全，因为你保证拥有完整的测试覆盖率。`红-绿-重构`这个短语被用来总结 TDD 过程。
 
 1. **红（Red）：** 编写一个测试。在早期阶段，测试应该失败（或代码应该有编译错误）。我们称之为“红色”，但某些 IDE 用黄色显示失败而不是红色。尽管如此，它仍然是一个错误或失败，流程依然适用。
+
 2. **绿（Green）：** 使测试通过。添加使测试通过所需的所有代码。
+
 3. **重构（Refactor）：** 进行任何必要的更改，使代码更整洁、更容易理解。
+
 4. 从新测试开始重新开始。
 
 如果需要，你可以通过添加测试的一部分并在完成测试之前使其通过编译来做得更细粒度。或者，你可以只添加一个断言而不是整个测试。
@@ -6383,12 +6261,9 @@ public class Robot {
 }
 ```
 
-
-
-
 现在是第一个重构机会了。`setComponent()` 这个名字并不能说明问题。毕竟，设置器（setter）是*替换*当前值，而我们在这里是在进行添加。使用重构（Refactor）菜单，让你的 IDE 将 `setComponent()` 方法重命名为更合适的 `addComponent()`。现在，让我们为“保持重量小于 120”这一需求编写一个测试。为此，让我们导入 JUnit 方便的 `assertThrows()` 方法并使用它来编写测试。
 
-```
+```java
 @Test
 void overweight() {
    robot.addComponent(100);
@@ -6399,6 +6274,8 @@ void overweight() {
       "Cannot add component. Robot would be too heavy", e.getMessage());
 }
 ```
+
+
 
 `assertThrows()` 方法确认代码确实抛出了你所预期的异常，并返回该异常，你可以对它进行额外的断言检查。运行此测试将失败，并显示以下内容：
 
@@ -6420,12 +6297,12 @@ public void addComponent(int weight) {
 }
 ```
 
-虽然这段代码可以工作，但我们可以考虑更多重构的机会。其中一种重构是将硬编码的值 125 提取到一个常量，我们可以将其命名为 `MAX_WEIGHT`。另一个重构机会是注意到方法参数与实例变量名称相同，因此你可能想将 `weight` 重命名为 `componentWeight`，最终得到的重构后的方法如下：
+虽然这段代码可以工作，但我们可以考虑更多重构的机会。其中一种重构是将硬编码的值 `125` 提取到一个常量，我们可以将其命名为 `MAX_WEIGHT`。另一个重构机会是注意到方法参数与实例变量名称相同，因此你可能想将 `weight` 重命名为 `componentWeight`，最终得到的重构后的方法如下：
 
 ```java
 public void addComponent(int componentWeight) {
    int newWeight = this.weight + componentWeight;
-   if (newWeight> MAX_WEIGHT) {
+   if (newWeight > MAX_WEIGHT) {
       throw new IllegalArgumentException(
          "Cannot add component. Robot would be too heavy");
    }
@@ -6435,9 +6312,9 @@ public void addComponent(int componentWeight) {
 
 在本节中，我们通过 JUnit 5 的一些特性查看了 TDD。到此我们对 TDD 的介绍结束。后续章节将涵盖更多的 JUnit 5 特性。
 
-## 学习 JUNIT
+## 学习 JUnit
 
-在上一节中，我们开始探索 JUnit 5，但获得更全面的理解是很，这样你才能高效地阅读和编写 JUnit 测试。在本节中，我们将涵盖许多额外特性，并在适用情况下提到相应的 JUnit 4 语法，以防你正在处理旧代码库。
+在上一节中，我们开始探索 JUnit 5，但获得更全面的理解是很重要的，这样你才能高效地阅读和编写 JUnit 测试。在本节中，我们将涵盖许多额外特性，并在适用情况下提到相应的 JUnit 4 语法，以防你正在处理旧代码库。
 
 ### 查看测试流
 
@@ -6510,7 +6387,7 @@ AfterAll
 
 ### 跳过测试
 
-有时你有一个只写了一部分或已损坏的测试。但失败的测试会导致你的构建失败，那么程序员该怎么办？JUnit 提供了 `@Disabled` 注解，你可以可以使用它来跳过测试。这是一个示例：
+有时你有一个只写了一部分或已损坏的测试。但失败的测试会导致你的构建失败，那么程序员该怎么办？JUnit 提供了 `@Disabled` 注解，你可以使用它来跳过测试。这是一个示例：
 
 ```java
 @Test @Disabled("需要完成实现")
@@ -6527,7 +6404,7 @@ JUnit 5 提供了一个辅助类 `org.junit.jupiter.api.Assertions`，它包含�
 
 ```java
 int expected = 3;
-int actual = 1+2;
+int actual = 1 + 2;
 assertEquals(expected, actual);
 ```
 
@@ -6544,7 +6421,7 @@ assertEquals(expected, actual, "数字不相等");
 这里显示了一些常用的断言：
 
 ```java
-assertNotEquals(4, 1+2, "不等");
+assertNotEquals(4, 1 + 2, "不等");
 assertTrue(true, "true");
 assertFalse(false, "false");
 assertNull(null, "非为空");
@@ -6555,11 +6432,7 @@ assertNotNull("cat", "非为空");
 
 虽然 `assertEquals()` 和 `assertNotEquals()` 方法检查对象的相等性，但它们并不检查引用是否*指向同一个实例*。对于这一点，你需要 `assertSame()` 和 `assertNotSame()` 方法。在以下示例中，所有断言均通过：
 
-
-
-
-
-```
+```java
 List<Integer> expected = List.of(5);
 List<Integer> actual = List.of(5);
 assertSame(actual, actual, "same");
@@ -6571,14 +6444,14 @@ assertEquals(expected, actual, "equality");
 
 数组是一种特殊的类型。由于它们没有用于检查内容的 `equals()` 方法，因此 `Assertions` 提供了专门的方法来比较它们。
 
-```
+```java
 int[] expected = new int[] {5};
 int[] actual = new int[] {5};
 assertArrayEquals(expected, actual, "values");
 assertNotEquals(expected, actual, "reference");
 ```
 
-在前面的代码中，值是相同的，所以 `assertArrayEquals()` 通过了断言通过。由于它们是不同的数组，`assertNotEquals()` 方法也通过了。
+在前面的代码中，值是相同的，所以 `assertArrayEquals()` 通过了断言。由于它们是不同的数组，`assertNotEquals()` 方法也通过了。
 
 ### 断言异常
 
@@ -6615,7 +6488,7 @@ assertEquals("Must be positive", actual.getMessage(), "Message");
 
 ### 程序化失败
 
-有时你需要失败测试。例如，假设有一个 `if/else` 子句，`else` 部分永远应该发生。所以在 `else` 子句中，你可以包含此指令：
+有时你需要失败测试。例如，假设有一个 `if/else` 子句，`else` 部分永远不应该发生。所以在 `else` 子句中，你可以包含此指令：
 
 ```java
 fail("Fail here");
@@ -6625,9 +6498,9 @@ fail("Fail here");
 
 ### 使用 Assume 逻辑验证条件
 
-我们已经看到当你想跳过测试时，可以使用 `@Disabled` 注解。但有一种方法可以更细粒度的控制，你可以使用 JUnit 的 `assume` 方法。assert 方法验证测试的结果，而 assume 方法在执行测试之前验证某些条件。两个 `assume` 方法如下：
+我们已经看到当你想跳过测试时，可以使用 `@Disabled` 注解。但有一种方法可以更细粒度地控制，你可以使用 JUnit 的 `assume` 方法。assert 方法验证测试的结果，而 assume 方法在执行测试之前验证某些条件。两个 `assume` 方法如下：
 
-```
+```java
 assumeTrue(actual);
 assumeFalse(actual);
 ```
@@ -6659,7 +6532,7 @@ void values(String value) {
 
 图 7.4: 参数化测试输出
 
-除了 `@ValueSource`，还有其他类型的源。例如，`@CsvSource` 从文件读取。`@MethodSource`是最通用的；它允许将从静态方法返回的值注入到测试方法的签名中。在下面的示例中，我们使用 `@MethodSource` 传递测试数据和预期值：
+除了 `@ValueSource`，还有其他类型的源。例如，`@CsvSource` 从文件读取。`@MethodSource` 是最通用的；它允许将从静态方法返回的值注入到测试方法的签名中。在下面的示例中，我们使用 `@MethodSource` 传递测试数据和预期值：
 
 ```java
 static List<Object[]> fetchTestData() {
@@ -6686,7 +6559,7 @@ void values(String value, int expected) {
 
 ## 使用常用测试库
 
-JUnit 生态系统包含许多开源库。本节涵盖了一些用的库。
+JUnit 生态系统包含许多开源库。本节涵盖了一些常用的库。
 
 ### 使用 AssertJ 编码
 
@@ -6695,7 +6568,6 @@ AssertJ 是一个包含许多“流式”单行断言的库。要在你的 Maven
 | 工具 | 语法 |
 | --- | --- |
 | Maven | |
-
 ```xml
 <dependency>
    <groupId>org.assertj</groupId>
@@ -6743,7 +6615,7 @@ AssertJ 拥有许多针对字符串、列表、文件等的自定义断言。这
 
 大多数情况下，输入 `assertThat()` 并使用 IDE 的自动补全将显示所有断言方法。“进一步引用”部分的指南和 JavaDoc 会告诉你哪里可以找到更多细节。这还只是 `assertj-core`！对于特定需求，还有特定的 AssertJ 库。
 
-除了 `assertThat()` 的自定义断言外，AssertJ 还提供了软断言，你可以轻松地收集多个失败失败并在测试失败时一次性列出它们。这对于端到端的集成测试或监控测试特别有用，因为你可以一次性获取所有错误的列表。
+除了 `assertThat()` 的自定义断言外，AssertJ 还提供了软断言，你可以轻松地收集多个失败并在测试失败时一次性列出它们。这对于端到端的集成测试或监控测试特别有用，因为你可以一次性获取所有错误的列表。
 
 这是编写软断言的基本方法：
 
@@ -6756,7 +6628,6 @@ void callingAssertAll() {
    softly.assertAll();
  }
 ```
-
 
 
 
@@ -6777,20 +6648,17 @@ to be less than or equal to:
 at SoftAssertionsTest.callingAssertAll(SoftAssertionsTest.java:15)
 ```
 
-有一点注意：你必须在断言链的末尾调用 `assertAll()`，尽管有多种方法可以避免忘记调用 `assertAll()`。示例请参见“进一步参考”中的 [`Selikoff.net`](http://Selikoff.net) 博客文章。
+有一点注意：你必须在断言链的末尾调用`assertAll()`，尽管有多种方法可以避免忘记调用`assertAll()`。示例请参见“进一步参考”中的 [`Selikoff.net`](http://Selikoff.net) 博客文章。
 
-### 使用 JUnit Pioneer 特性进行编码
+## 使用 JUnit Pioneer 特性进行编码
 
 JUnit Pioneer 库包含了许多针对 JUnit 5 的有用扩展。某些功能甚至有一天会被 JUnit 5 吸收。
 
 要在你的 Maven 或 Gradle 构建中使用 JUnit Pioneer 库，请前往 Maven Central（[`https://mvnrepository.com/artifact/org.junit-pioneer/junit-pioneer`](https://mvnrepository.com/artifact/org.junit-pioneer/junit-pioneer)）并找到适用于你构建工具的最新版本。表 7.3 显示了在本文编写时每个工具的具体情况。
 
 | 工具 | 语法 |
-
 | --- | --- |
-
 | Maven | |
-
 ```
 <dependency>
     <groupId>org.junit-pioneer</groupId>
@@ -6799,18 +6667,16 @@ JUnit Pioneer 库包含了许多针对 JUnit 5 的有用扩展。某些功能甚
     <scope>test</scope>
 </dependency>
 ```
-
 | Gradle (Groovy) | `testImplementation group: 'org.junit-pioneer', name: 'junit-pioneer', version: '2.2.0'` |
-
 | Gradle (Kotlin) | `testImplementation("org.junit-pioneer:junit-pioneer:2.2.0")` |
 
 表 7.3: 指定 JUnit Pioneer 为依赖
 
 在本节中，你将看到三个功能，以感受该项目的功能。
 
-#### 禁用到某个日期
+### 禁用到某个日期
 
-第一个功能解决了 `@Disabled` 的局限性。禁用测试时的一个常见问题是会忘记重新启用它。JUnit Pioneer 提供了一个注解，让你在测试到期前一直保持禁用状态。
+第一个功能解决了`@Disabled`的局限性。禁用测试时的一个常见问题是会忘记重新启用它。JUnit Pioneer 提供了一个注解，让你在测试到期前一直保持禁用状态。
 
 如果你忘记了该测试，它将在过期后自动重新启用。你将“突然”收到一个失败并记起该测试的存在，此时你可以决定是否延长过期日期，或者决定是否是时候修复该测试了。又或者测试可能毫不费力地通过了，因为你设置的过期时间恰好是环境条件修复之后。这段代码展示了如何使用该注解：
 
@@ -6823,7 +6689,7 @@ void waitingForServiceAvailability() {
 }
 ```
 
-`reason` 是可选的，但建议加上，以便你记得为什么要禁用该测试。当日期在未来时，测试将像 `@Disabled` 一样被跳过。如果日期在过去，测试将运行，并输出一条不再被禁用的消息。
+`reason`是可选的，但建议加上，以便你记得为什么要禁用该测试。当日期在未来时，测试将像`@Disabled`一样被跳过。如果日期在过去，测试将运行，并输出一条不再被禁用的消息。
 
 ```
 timestamp = 2024-03-24T09:40:36.068881, DisabledUntilExtension = The `date`
@@ -6856,9 +6722,9 @@ Test execution #1 (of up to 10) failed ~> will retry in 0 ms…
 
 对于属性（如等待多长时间以及考虑哪些异常）有可选参数。
 
-#### 与系统属性交互
+### 与系统属性交互
 
-Java 有全局系统属性，这在测试时可能很麻烦。一种方法是调用 `System.setProperty()` 传入你想要的值，然后在测试结束时恢复它。虽然这可行，但你必须仔细编写代码。你还需要确保你的构建工具设置为一次运行一个测试，这会减慢构建速度。
+Java 有全局系统属性，这在测试时可能很麻烦。一种方法是调用`System.setProperty()`传入你想要的值，然后在测试结束时恢复它。虽然这可行，但你必须仔细编写代码。你还需要确保你的构建工具设置为一次运行一个测试，这会减慢构建速度。
 
 ```java
 @Test
@@ -6874,9 +6740,9 @@ void maskProperty() {
 }
 ```
 
-#### 使用笛卡尔测试
+### 使用笛卡尔测试
 
-`CartesianTest` 注解允许指定多个参数以生成测试用例。这是一个示例：
+`CartesianTest`注解允许指定多个参数以生成测试用例。这是一个示例：
 
 ```java
 class SomeCartesianTest {
@@ -6890,16 +6756,20 @@ class SomeCartesianTest {
 }
 ```
 
-在这个示例中，`cartesianTest` 方法将针对 `time` 和 `tide` 的所有组合执行。也就是说，它将运行 `(1, 3)`、`(1, 4)`、`(2, 3)` 和 `(2, 4)`。
+在这个示例中，`cartesianTest`方法将针对`time`和`tide`的所有组合执行。也就是说，它将运行`(1, 3)`、`(1, 4)`、`(2, 3)`和`(2, 4)`。
 
-#### 了解其他功能
+### 了解其他功能
 
 除了本节的功能外，其他有用功能还包括：
 
-*   **`@JsonSource`**: 为 `@ParameterizedTest` 传递 JSON 字符串。
-*   **`@JsonClasspathSource`**: 为 `@ParameterizedTest` 传递 JSON 文件的路径。
+*   **`@JsonSource`**: 为`@ParameterizedTest`传递 JSON 字符串。
+
+*   **`@JsonClasspathSource`**: 为`@ParameterizedTest`传递 JSON 文件的路径。
+
 *   **`@IntRangeSource`**: 为参数化测试传递数字范围。除了增量值外，你还可以指定最小值和最大值。其他数值基本类型也有相应的注解。
+
 *   **`@DefaultLocale`**: 让你在特定的区域（如国家或语言）运行测试，而不是依赖于系统默认。
+
 *   **`@DefaultTimeZone`**: 让你在特定的时区运行测试，而不是依赖于系统默认。
 
 ## Mock 对象
@@ -6910,21 +6780,21 @@ Mock 是*测试替身*（test double）的一种类型，使用了真实类以�
 
 *   **Dummy（哑对象）**: 传入方法签名但从未被使用的对象。提供它们是为了满足方法签名。
 
-
-
-
 *   **Fake (伪造)**：具有某些工作实现，但比其模拟的服务要简单得的对象。
-*   **Stubs (存桩)**：对预期的调用提供伪造响应的对象。
-*   **Spy (间谍)**：结合了真实行为和模拟行为，并/或验证关于调用次数的信息的对象。
-*   **Mocks (模拟)**：预先编程以验证某些期望的对象，例如某个方法被调用了 `n` 次。
 
-Mock 框架提供了创建所有这些对象的 API。在本章中，我们将介绍一些流行的 Mock 框架：`Mockito`、`EasyMock` 和 `Spring MockMvc`。
+*   **Stubs (存桩)**：对预期的调用提供伪造响应的对象。
+
+*   **Spy (间谍)**：结合了真实行为和模拟行为，并/或验证关于调用次数的信息的对象。
+
+*   **Mocks (模拟)**：预先编程以验证某些期望的对象，例如某个方法被调用了`n`次。
+
+Mock 框架提供了创建所有这些对象的 API。在本章中，我们将介绍一些流行的 Mock 框架：`Mockito`、`EasyMock`和`Spring MockMvc`。
 
 ### 使用 Mockito 进行 Mock
 
-Mockito 是许多应用程序中使用的流行 Mock 框架。Mockito 将许多 Mock 类型合并到一个单一的 `mock` 注解中。它还有 `spy` 的概念，这是一种混合类型，默认使用真实的类实现，但允许你对某些方法进行打桩。
+Mockito 是许多应用程序中使用的流行 Mock 框架。Mockito 将许多 Mock 类型合并到一个单一的`mock`注解中。它还有`spy`的概念，这是一种混合类型，默认使用真实的类实现，但允许你对某些方法进行打桩。
 
-要在 Maven 或 Gradle 构建中使用 Mockito，你需要包含两个依赖项。第一个依赖是库本身，即 `mockito-core`。此外，`mockito-junit-jupiter` 提供集成支持。访问 Maven Central (`https://mvnrepository.com/artifact/org.mockito/mockito-core`) 和 (`https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter`) 并找到适用于你构建工具的最新版本号。表 7.4 显示了在本书时每个工具对应的写法。
+要在 Maven 或 Gradle 构建中使用 Mockito，你需要包含两个依赖项。第一个依赖是库本身，即`mockito-core`。此外，`mockito-junit-jupiter`提供集成支持。访问 Maven Central (`https://mvnrepository.com/artifact/org.mockito/mockito-core`) 和 (`https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter`) 并找到适用于你构建工具的最新版本号。表 7.4 显示了在本书时每个工具对应的写法。
 
 | 工具 | 语法 |
 | --- | --- |
@@ -6943,7 +6813,7 @@ Mockito 是许多应用程序中使用的流行 Mock 框架。Mockito 将许多 
     <version>5.11.0</version>
     <scope>test</scope>
 </dependency>
-``` |
+```
 | Gradle (Groovy) | `testImplementation group: 'org.mockito', name: 'mockito-core', version: '5.11.0'` `testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '5.11.0'` |
 | Gradle (Kotlin) | `testImplementation("org.mockito:mockito-core:5.11.0")` `testImplementation("org.mockito:mockito-junit-jupiter:5.11.0")` |
 
@@ -6957,7 +6827,7 @@ public interface ScoreService {
 }
 ```
 
-现在，你想单元测试一个名为 `Dashboard` 的类，它使用了名为 `ScoreService` 的接口。
+现在，你想单元测试一个名为`Dashboard`的类，它使用了名为`ScoreService`的接口。
 
 ```java
 Public class Dashboard {
@@ -6975,7 +6845,7 @@ Public class Dashboard {
 }
 ```
 
-注意构造函数接收的是一个接口。`Dashboard` 类不知道也不在乎它使用的是 `ScoreService` 的什么实现。这是一种良好的实践，因为它使代码变得可测试，因为允许你对实现进行 Mock。
+注意构造函数接收的是一个接口。`Dashboard`类不知道也不在乎它使用的是`ScoreService`的什么实现。这是一种良好的实践，因为它使代码变得可测试，因为允许你对实现进行 Mock。
 
 ```java
 @ExtendWith(MockitoExtension.class)
@@ -7002,9 +6872,9 @@ public class DashboardTest {
 }
 ```
 
-我们测试的第 1 行告诉 JUnit 这是一个 Mockito 测试。第 6 行的 `@Mock` 注解告诉 JUnit 向变量 `scoreServiceMock` 注入 `ScoreService` 的 Mock 实例。Mock 允许你在没有真实类实例甚至没有该实现存在的情况下指定行为。第 16 行和第 17 行向 Mock 注册了期望的行为（这在技术上讲使其变成了一个 `stub`）。当 `dashboard` 请求 Mock 获取得分时，Mock 会根据参数返回 76 或 91。第 23 行确认了 `retrieveScore()` 刚好被调用了两次（从这个意义上说，它是一个 mock）。
+我们测试的第 1 行告诉 JUnit 这是一个 Mockito 测试。第 6 行的`@Mock`注解告诉 JUnit 向变量`scoreServiceMock`注入`ScoreService`的 Mock 实例。Mock 允许你在没有真实类实例甚至没有该实现存在的情况下指定行为。第 16 行和第 17 行向 Mock 注册了期望的行为（这在技术上讲使其变成了一个`stub`）。当`dashboard`请求 Mock 获取得分时，Mock 会根据参数返回 76 或 91。第 23 行确认了`retrieveScore()`刚好被调用了两次（从这个意义上说，它是一个 mock）。
 
-`@Mock` 注解仅对实例变量有效。创建 Mock 的另一种语法所示：
+`@Mock`注解仅对实例变量有效。创建 Mock 的另一种语法所示：
 
 ```java
 ScoreService scoreServiceMock = mock(ScoreService.class);
@@ -7013,24 +6883,38 @@ ScoreService scoreServiceMock = mock(ScoreService.class);
 这种替代语法允许你创建局部变量。由于 Mock 对象可能很难理解，让我们换一种方式来看代码流：
 
 1. 测试的第 6–7 行让 Mockito 注入一个 Mock `ScoreService`。
-2. 测试的第 11 行将该 Mock 传递给 `Dashboard` 的构造函数，将其存储在 `service` 变量中。
-3. 测试的第 16 行告诉 Mock 如果以及调用 `retrieveScore(1)` 时该做什么。
-4. 测试的第 17 行告诉 Mock 如果以及调用 `retrieveScore(2)` 时该做什么。
-5. 测试的第 20 行调用了 `Dashboard`，这是被测试的代码。
-6. 第 20 行中的 `dashboard.getScores(2)` 调用在流中创建了一个从 1 到 2 的范围，表面上是为了获取范围内每个元素的得分。
-7. 流中的第一次调用是 `service.retrieveScore(1)`。
+
+2. 测试的第 11 行将该 Mock 传递给`Dashboard`的构造函数，将其存储在`service`变量中。
+
+3. 测试的第 16 行告诉 Mock 如果以及调用`retrieveScore(1)`时该做什么。
+
+4. 测试的第 17 行告诉 Mock 如果以及调用`retrieveScore(2)`时该做什么。
+
+5. 测试的第 20 行调用了`Dashboard`，这是被测试的代码。
+
+6. 第 20 行中的`dashboard.getScores(2)`调用在流中创建了一个从 1 到 2 的范围，表面上是为了获取范围内每个元素的得分。
+
+7. 流中的第一次调用是`service.retrieveScore(1)`。
+
 8. Mock 查询了初始设置的期望并返回了请求的 76。
-9. 接下来是 `service.retrieveScore(2)`。
+
+9. 接下来是`service.retrieveScore(2)`。
+
 10. Mock 再次查询初始设置的期望并返回请求的 91。
-11. `getScore()` 方法完成并将控制权交回测试。
+
+11. `getScore()`方法完成并将控制权交回测试。
+
 12. 测试的第 21 行断言列表值。
-13. 第 23 行是 `verify()` 调用，此时 Mock 在想：“你说过你计划调用两次；让我检查一下是否发生了。是的，你确实调用了两次。没问题！”
+
+13. 第 23 行是`verify()`调用，此时 Mock 在想：“你说过你计划调用两次；让我检查一下是否发生了。是的，你确实调用了两次。没问题！”
 
 现在你理解了流程，是时候在接下来的章节中介绍最重要的 Mockito 特性了。
 
 #### 配置 When/Then
 
-要告诉 Mock 在进行指定调用时该做什么，请从 `Mockito.when()` 开始。使用静态导入很常见，这样你就不需要输入 `Mockito` 类名。`when()` 方法接受你将调用的方法作为参数。你可以传递你预期的参数或像 `anyInt()` 这样的匹配器。最后，你指定一个或多个返回值。`thenReturn()` 方法接受一个变长参数，因此你可以为后续调用指定要返回的值。
+
+
+要告诉 Mock 在进行指定调用时该做什么，请从`Mockito.when()`开始。使用静态导入很常见，这样你就不需要输入`Mockito`类名。`when()`方法接受你将调用的方法作为参数。你可以传递你预期的参数或像`anyInt()`这样的匹配器。最后，你指定一个或多个返回值。`thenReturn()`方法接受一个变长参数，因此你可以为后续调用指定要返回的值。
 
 ```java
 when(scoreServiceMock.retrieveScore(1)).thenReturn(76);
@@ -7038,7 +6922,7 @@ when(scoreServiceMock.retrieveScore(anyInt())).thenReturn(76);
 when(scoreServiceMock.retrieveScore(anyInt())).thenReturn(76, 82);
 ```
 
-如果你想让 Mock 抛异常而不是返回值，可以通过调用 `thenThrow()` 来，如下所示：
+如果你想让 Mock 抛异常而不是返回值，可以通过调用`thenThrow()`来，如下所示：
 
 ```java
 when(scoreServiceMock.retrieveScore(anyInt()))
@@ -7047,17 +6931,14 @@ when(scoreServiceMock.retrieveScore(anyInt()))
 
 有很多匹配器可以传递而不是直接传递原始类型或对象引用。例如：
 
-*   **特定类型的任何值**：`any(Class<T>)` 或 `anyXXX()` 匹配原始类型、List、Set、Map 或 Collection。
-*   **相等性**：`eq(X)` 匹配原始或对象 `X`。
-*   **空检查**：`isNull()` 或 `isNotNull()` 根据是否为 `null` 进行匹配。
-*   **字符串操作**：`contains(String)`、`matches(Pattern)`、`startsWith(String)` 或 `endsWith(String)` 如果 `String` 操作返回 `true` 则匹配。
+* **特定类型的任何值**：`any(Class<T>)`或`anyXXX()`匹配原始类型、List、Set、Map 或 Collection。
+* **相等性**：`eq(X)`匹配原始或对象`X`。
+* **空检查**：`isNull()`或`isNotNull()`根据是否为`null`进行匹配。
+* **字符串操作**：`contains(String)`、`matches(Pattern)`、`startsWith(String)`或`endsWith(String)`如果`String`操作返回`true`则匹配。
 
-#### 验证调用
+## 验证调用
 
-
-
-
-检查你预期的方法是否真的被调用通常很有用。如果你对一个 mock 调用设置了存根（stub），但在测试代码中从未执行过该调用，`Mockito` 默认会为此失败。你可以通过以下方式告诉 `Mockito` 在此类情况下不要失败：
+检查你预期的方法是否真的被调用通常很有用。如果你对一个 mock 调用设置了存根（stub），但在测试代码中从未执行过该调用，`Mockito`默认会为此失败。你可以通过以下方式告诉`Mockito`在此类情况下不要失败：
 
 ```java
 @Mock(strictness =  Mock.Strictness.LENIENT)
@@ -7074,17 +6955,17 @@ verify(scoreServiceMock, atMostOnce()).retrieveScore(1);
 verify(scoreServiceMock, never()).retrieveScore(9);
 ```
 
-上一个代码块的第一行和第二行代码等同于告诉 `Mockito` 验证 `retrieveScore()` 调用恰好被执行了一次。（由于验证某事恰好发生一次是最常见的，因此它是默认的。）可选的验证模式允许你轻松指定给定参数下 mock 调用应该发生多少次。此外，你还可以使用上一节中的匹配器（matchers）。例如，以下代码表示验证恰好有一次带有任意 `int` 参数的调用：
+上一个代码块的第一行和第二行代码等同于告诉`Mockito`验证`retrieveScore()`调用恰好被执行了一次。（由于验证某事恰好发生一次是最常见的，因此它是默认的。）可选的验证模式允许你轻松指定给定参数下 mock 调用应该发生多少次。此外，你还可以使用上一节中的匹配器（matchers）。例如，以下代码表示验证恰好有一次带有任意`int`参数的调用：
 
 ```java
 verify(scoreServiceMock, times(1)).retrieveScore(anyInt());
 ```
 
-### Mock 具体类
+## Mock 具体类
 
 上一个示例使用了接口。然而，并不是所有的类都有接口，你不应该为了测试而专门添加接口。
 
-这次你有了一个新类 `DashboardViewer`。它使用了 `Dashboard` 类。
+这次你有了一个新类`DashboardViewer`。它使用了`Dashboard`类。
 
 ```java
 public class DashboardViewer {
@@ -7104,7 +6985,7 @@ public class DashboardViewer {
 }
 ```
 
-要对此进行单元测试，你不必进入 `Dashboard` 的实现类并担心 `ScoreService`。幸运的是，你不需要这样做。通过 mock 具体的 `Dashboard` 类，你可以隔离地测试 `DashboardViewer`。
+要对此进行单元测试，你不必进入`Dashboard`的实现类并担心`ScoreService`。幸运的是，你不需要这样做。通过 mock 具体的`Dashboard`类，你可以隔离地测试`DashboardViewer`。
 
 ```java
 1:  @ExtendWith(MockitoExtension.class)
@@ -7134,13 +7015,13 @@ public class DashboardViewer {
 25: }
 ```
 
-通过 `Mockito` 的流程与之前 mock 接口的示例类似。第 6–7 行注入了一个 mock，这次是一个具体类而不是接口。第 16 行声明了预期的调用和相关的返回值。第 21 行调用了被测试的代码。`DashboardViewer` 类请求 mock 获取分数。该类通过断言数据格式化正确来结束。这里不需要调用可选的 `verify()` 来验证逻辑是否正确。毕竟，如果 mock 没有被调用，第 21 行将无法获得正确的数据。注意 `ScoreService` 没有被提到。`DashboardViewer` 或 `DashboardViewerTest` 都对 `Dashboard` 的真实实现一无所知！
+通过`Mockito`的流程与之前 mock 接口的示例类似。第 6–7 行注入了一个 mock，这次是一个具体类而不是接口。第 16 行声明了预期的调用和相关的返回值。第 21 行调用了被测试的代码。`DashboardViewer`类请求 mock 获取分数。该类通过断言数据格式化正确来结束。这里不需要调用可选的`verify()`来验证逻辑是否正确。毕竟，如果 mock 没有被调用，第 21 行将无法获得正确的数据。注意`ScoreService`没有被提到。`DashboardViewer`或`DashboardViewerTest`都对`Dashboard`的真实实现一无所知！
 
-### Mock 静态方法
+## Mock 静态方法
 
-注入 mock 对于实例变量或方法参数有效，但如果你想 mock 一个静态方法调用怎么办？由于静态方法直接在被测试的代码中，你不能简单地注入对象。幸运的是，你仍然可以使用 `Mockito` 来 mock 它！
+注入 mock 对于实例变量或方法参数有效，但如果你想 mock 一个静态方法调用怎么办？由于静态方法直接在被测试的代码中，你不能简单地注入对象。幸运的是，你仍然可以使用`Mockito`来 mock 它！
 
-假设 `DashboardViewer` 有一个你需要测试的新方法。
+假设`DashboardViewer`有一个你需要测试的新方法。
 
 ```java
 public String header() {
@@ -7149,7 +7030,7 @@ public String header() {
 }
 ```
 
-测试这需要为 `LocalDate.now()` 静态方法请求一个 mock。
+测试这需要为`LocalDate.now()`静态方法请求一个 mock。
 
 ```java
 @Test
@@ -7167,19 +7048,19 @@ void header() {
 }
 ```
 
-`mockStatic()` 方法创建了一个在 `try with resources` 块内可用的 mock。`when/thenReturn` 结构与非静态 mock 相同，因此你现在应该看起来熟悉了。
+`mockStatic()`方法创建了一个在`try with resources`块内可用的 mock。`when/thenReturn`结构与非静态 mock 相同，因此你现在应该看起来熟悉了。
 
-### 使用 EasyMock 进行 Mock
+## 使用 EasyMock 进行 Mock
 
-`Mockito` 和 `EasyMock` 之间的概念是类似的。能够读懂两者将让你受益匪浅。
+`Mockito`和`EasyMock`之间的概念是类似的。能够读懂两者将让你受益匪浅。
 
-#### 指定 EasyMock 依赖
+### 指定 EasyMock 依赖
 
-`Mockito` 和 `EasyMock` 之间的概念是类似的。能够读懂两者将让你受益匪浅。
+`Mockito`和`EasyMock`之间的概念是类似的。能够读懂两者将让你受益匪浅。
 
 | 工具 | 语法 |
 | --- | --- |
-| Maven |  ```xml
+| Maven | ```xml
 <dependency>
     <groupId>org.easymock</groupId>
     <artifactId>easymock</artifactId>
@@ -7190,7 +7071,7 @@ void header() {
 | Gradle (Groovy) | `testImplementation 'org.easymock:5.2.0'` |
 | Gradle (Kotlin) | `testImplementation("org.easymock:5.2.0")` |
 
-查看使用 EasyMock 的 `Dashboard` 单元测试，你会看到一些熟悉的概念
+查看使用 EasyMock 的`Dashboard`单元测试，你会看到一些熟悉的概念
 
 ```java
 1:  @ExtendWith(MockitoExtension.class)
@@ -7222,9 +7103,6 @@ void header() {
 27: }
 ```
 
-
-
-
 ### 依赖
 
 | 工具 | 配置 |
@@ -7242,9 +7120,9 @@ void header() {
 
 **表 7.6**](#c07.xhtml_R_c07-tbl-0006): 指定 Spring Boot Starter Test 为依赖
 
-首先，我们将创建三个示例类来展示如何使用 `MockMvc` 来测试控制器。该示例是一个比赛跟踪器服务，用于获取比赛中的当前比赛编号。第一个类是应用程序的一部分，无论你有多少个测试类，它都只存在一次。
+首先，我们将创建三个示例类来展示如何使用`MockMvc`来测试控制器。该示例是一个比赛跟踪器服务，用于获取比赛中的当前比赛编号。第一个类是应用程序的一部分，无论你有多少个测试类，它都只存在一次。
 
-```
+```java
 @SpringBootApplication
 public class DashboardApp {
 
@@ -7255,7 +7133,7 @@ public class DashboardApp {
 }
 ```
 
-如果我们正在运行它，`SpringBootApplication` 将启动真实的应用程序。尽管这只是一个测试，但 `MockMvc` 需要它存在才能判断你的 Spring 是否可以正常工作。接下来是控制器引用的 `MatchTrackerService`：
+如果我们正在运行它，`SpringBootApplication`将启动真实的应用程序。尽管这只是一个测试，但`MockMvc`需要它存在才能判断你的 Spring 是否可以正常工作。接下来是控制器引用的`MatchTrackerService`：
 
 ```java
 @Service
@@ -7294,7 +7172,7 @@ public class DashboardController {
 }
 ```
 
-这个简单的控制器使用了依赖注入（如你在第 6 章中所学习的那样）来获取 `MatchTrackerService`。它使用从服务返回的数据来形成良好的显示。你可能认为你可以可以直接使用 `Mockito` 或 `EasyMock` 测试 `DashboardController` 类，你是对的！你可以直接注入依赖并测试 `displayCurrentMatch()` 逻辑。但 `MockMvc` 增加的功能是可以使用 REST 调用测试你的端点，并让 Spring 完成所有的依赖注入和测试，以确保你的注解和 Spring 配置是正确的。
+这个简单的控制器使用了依赖注入（如你在第 6 章中所学习的那样）来获取`MatchTrackerService`。它使用从服务返回的数据来形成良好的显示。你可能认为你可以可以直接使用`Mockito`或`EasyMock`测试`DashboardController`类，你是对的！你可以直接注入依赖并测试`displayCurrentMatch()`逻辑。但`MockMvc`增加的功能是可以使用 REST 调用测试你的端点，并让 Spring 完成所有的依赖注入和测试，以确保你的注解和 Spring 配置是正确的。
 
 ```java
 1:  @SpringBootTest
@@ -7320,13 +7198,15 @@ public class DashboardController {
 21: }
 ```
 
-第 `1` 行和 `2` 行告诉 JUnit 使用 `MockMvc` 进行测试。第 `5` 行和 `6` 行自动装配 `MockMvc` 对象以供测试使用。第 `8` 行和 `9` 行创建一个使用 `Mockito` 的 mock。第 `13` 行设置了 mock 的预期配置。第 `15–17` 行使用 `MockMvc` 调用 `/match`。这模拟了当应用程序实际运行时你在浏览器中可以进行的调用！该调用断言了 HTTP 状态码和预期值。最后，第 `19` 行使用 `Mockito` 验证 mock 上上调用了预期方法。`MockMvc` 许多许多功能，例如检查头和内容类型的方法。
+
+
+第`1`行和`2`行告诉 JUnit 使用`MockMvc`进行测试。第`5`行和`6`行自动装配`MockMvc`对象以供测试使用。第`8`行和`9`行创建一个使用`Mockito`的 mock。第`13`行设置了 mock 的预期配置。第`15–17`行使用`MockMvc`调用`/match`。这模拟了当应用程序实际运行时你在浏览器中可以进行的调用！该调用断言了 HTTP 状态码和预期值。最后，第`19`行使用`Mockito`验证 mock 上上调用了预期方法。`MockMvc`许多许多功能，例如检查头和内容类型的方法。
 
 ## 衡量测试覆盖率
 
 好了，你写测试写得很愉快。但你如何知道你写的内容是否有意义呢？第一步是确保你的代码大部分都被测试覆盖了！现在并不是万无一失的指标，因为可能会写出覆盖大量代码的糟糕测试，例如如果你忽略了或编写了糟糕的断言。但假设你在这些断言上做得很好，那么覆盖率就是你想要检查的下一步。
 
-最常用的覆盖率工具是开源的 `JaCo`，代表 Java Code Coverage（Java 代码覆盖率）。它最初被称为 `EEmma`，所以你仍然会在文档和 URL 中看到那个名字。`JaCo` 报告你的 `.class` 文件中被测试的字节码百分比。`JaCo` 与 `Maven` 和 `Gradle` 构建配合，并与 SonarQube 集成。表 7.7 显示了 JaCo 的 IDE 集成。
+最常用的覆盖率工具是开源的`JaCo`，代表 Java Code Coverage（Java 代码覆盖率）。它最初被称为`EEmma`，所以你仍然会在文档和 URL 中看到那个名字。`JaCo`报告你的`.class`文件中被测试的字节码百分比。`JaCo`与`Maven`和`Gradle`构建配合，并与 SonarQube 集成。表 7.7 显示了 JaCo 的 IDE 集成。
 
 | IDE | 集成 |
 | --- | --- |
@@ -7357,24 +7237,21 @@ class MatchTest {
 }
 ```
 
-`Match` 构造函数被完全执行，`setWin()` 方法也是，因此它们都有 100% 的覆盖率。`setTie()` 方法没有被执行，因此其覆盖率为 0%。
+`Match`构造函数被完全执行，`setWin()`方法也是，因此它们都有 100% 的覆盖率。`setTie()`方法没有被执行，因此其覆盖率为 0%。
 
-`getFormatted()` 方法更有趣味性，因为它被部分测试了。特别是，`else` 块被测试运行了。这意味着第 `21` 行没有被覆盖。此外，第 `20` 行被部分覆盖。在这种情况下是 `if` 分支没有测试。
+`getFormatted()`方法更有趣味性，因为它被部分测试了。特别是，`else`块被测试运行了。这意味着第`21`行没有被覆盖。此外，第`20`行被部分覆盖。在这种情况下是`if`分支没有测试。
 
 覆盖工具在各种类别下报告覆盖率。在我们的示例中，类覆盖率是 100%，因为该类被触及了，尽管是部分。方法覆盖率只有 75%，因为四个方法中有一个没有被覆盖。其他类别可能包括行、分支和语句覆盖。
 
 ### 在 IDE 中查看覆盖率
 
-在 `IntelliJ` 或 `Eclipse` 中，查看测试覆盖率非常简单。只需覆盖模式运行你的 `JUnit` 测试即可。图 7.5 显示了 IntelliJ 中的此选项，而图 7.6 显示了 Eclipse 中的它。
+在`IntelliJ`或`Eclipse`中，查看测试覆盖率非常简单。只需覆盖模式运行你的`JUnit`测试即可。图 7.5 显示了 IntelliJ 中的此选项，而图 7.6 显示了 Eclipse 中的它。
 
 ![在 IntelliJ 中运行代码覆盖率的截图。高亮了带有覆盖选项的 match test。](img/c07f005.png)
 
 ![在 Eclipse 中运行代码覆盖率的截图。高亮了覆盖和 JUnit 测试选项。](img/c07f006.png)
 
-
-
-
-一旦你运行了一个或多个带有覆盖率的测试，可以在两个位置查看结果。首先是覆盖率报告。图 7.7 显示了 IntelliJ 的 `JaCoCo` 报告，图 7.8 显示了 Eclipse 的 `JaCoCo` 报告。注意，即使底层的计算器相同，IDE 也会以不同的方式对结果进行分类。
+一旦你运行了一个或多个带有覆盖率的测试，可以在两个位置查看结果。首先是覆盖率报告。图 7.7 显示了 IntelliJ 的`JaCoCo`报告，图 7.8 显示了 Eclipse 的`JaCoCo`报告。注意，即使底层的计算器相同，IDE 也会以不同的方式对结果进行分类。
 
 ![窗口截图，显示了 IntelliJ 的 JaCoCo 报告。表格有一个表头为 elements、class、method、line 和 branch 的列。](img/c07f007.png)
 
@@ -7394,7 +7271,7 @@ class MatchTest {
 
 对于 Maven，生成覆盖率报告的第一步是从 Maven Central 找到所需的插件，位于 [`https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin`](https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin)。
 
-然后，你将插件添加到 POM 文件的 `<build>` 部分。
+然后，你将插件添加到 POM 文件的`<build>`部分。
 
 ```xml
 <plugin>
@@ -7412,9 +7289,9 @@ class MatchTest {
 </plugin>
 ```
 
-运行 Maven 构建会在 target 目录下创建一个 `jacoco.exec` 文件。`.exec` 文件扩展名使其很容易识别出该文件来自 JaCoCo。它包含了如果你在开启覆盖率的情况下运行项目中的所有测试，你的 IDE 会生成的相同数据。事实上，你的 IDE 可以读取 `jacoco.exec` 文件，以直接在类文件上显示覆盖率，或者通过 Sonar 与你其他的 Sonar 报告中一起显示覆盖率结果。
+运行 Maven 构建会在 target 目录下创建一个`jacoco.exec`文件。`.exec`文件扩展名使其很容易识别出该文件来自 JaCoCo。它包含了如果你在开启覆盖率的情况下运行项目中的所有测试，你的 IDE 会生成的相同数据。事实上，你的 IDE 可以读取`jacoco.exec`文件，以直接在类文件上显示覆盖率，或者通过 Sonar 与你其他的 Sonar 报告中一起显示覆盖率结果。
 
-对于 Gradle，设置更加短。只需在 `plugins` 部分添加 ID `jacoco` 即可。当你进行构建时，会创建一个 `jacoco` 目录，并在其中包含一个 `test.exec` 文件。
+对于 Gradle，设置更加短。只需在`plugins`部分添加 ID`jacoco`即可。当你进行构建时，会创建一个`jacoco`目录，并在其中包含一个`test.exec`文件。
 
 ## 使用 INTELLIJ 优化你的测试
 
@@ -7497,9 +7374,6 @@ org.opentest4j.AssertionFailedError: seasons ==>
 
 ### 使用行为驱动开发（BDD）
 
-
-
-
 行为驱动开发 (BDD) 是一种测试实践，它使用一种来自用户群的自然语言语法。测试使用以下格式结构化：
 
 ```
@@ -7508,23 +7382,23 @@ When the customer logs in
 Then an option to call or text should appear.
 ```
 
-`given`、`when` 和 `then` 是 BDD 的标准用语。如果你要说的内容超过了一个短语能容纳的范围，可以使用多个 `and` 或 `but` 子句来开启新的一行。
+`given`、`when`和`then`是 BDD 的标准用语。如果你要说的内容超过了一个短语能容纳的范围，可以使用多个`and`或`but`子句来开启新的一行。
 
 有很多支持 BDD 的测试库。
 
 *   `Cucumber`: 最常用的 BDD 库，使用 Ruby 编写。
-*   `Cucumber-JVM`: `Cucumber` 的扩展，使用 Java 编写。
-*   `JBehave`: 使用 Java 编写，专注于将 `given/when/then` 故事视为一系列步骤。
+*   `Cucumber-JVM`: `Cucumber`的扩展，使用 Java 编写。
+*   `JBehave`: 使用 Java 编写，专注于将`given/when/then`故事视为一系列步骤。
 
 ### 测试契约
 
 测试 API、HTTP 调用或微服务的契约通常很有用。消费者驱动契约 (CDC) 测试允许你独立地测试组件，同时确保组件符合契约要求。
 
-契约有两个：`provider`（提供者）提供 API，而 `consumer`（消费者）调用 API。两者都需要遵守契约，否则违规测试将失败。
+契约有两个：`provider`（提供者）提供 API，而`consumer`（消费者）调用 API。两者都需要遵守契约，否则违规测试将失败。
 
 要使用 CDC，你需要创建一个契约，它可以生成提供者和客户端存根（stubs）。例如，你可以指定一个 HTTP 请求并编码期望的状态、标头和响应。这代表了消费者和提供者之间的协议或“契约”（pact）。
 
-管理 CDC 的两个流行框架是 `Spring Cloud Contract` 和 `Pact`。`Spring Cloud Contract` 使用 Groovy 或 YAML 编写契约，并生成测试来验证契约。`Spring Cloud Contract` 也可以与 `Pact` 集成。在第 6 章中，我们介绍过 `Spring Cloud Contract`。
+管理 CDC 的两个流行框架是`Spring Cloud Contract`和`Pact`。`Spring Cloud Contract`使用 Groovy 或 YAML 编写契约，并生成测试来验证契约。`Spring Cloud Contract`也可以与`Pact`集成。在第 6 章中，我们介绍过`Spring Cloud Contract`。
 
 ### 理解黄金大师模式 (Golden Master Pattern)
 
@@ -7553,7 +7427,7 @@ void testWithAssertions() {
 
 虽然这种方法可行，但它比需要的更难读。它也很脆弱。如果我们对期望输出进行更改以重新排列行顺序并添加另一列，我们必须修改多处代码。
 
-`golden master` 模式为断言粒度细节提供了一种替代方案。下面的示例演示了该模式的使用。注意，你根据结果的长短将期望结果存储在变量或文件中，然后与它进行比较：
+`golden master`模式为断言粒度细节提供了一种替代方案。下面的示例演示了该模式的使用。注意，你根据结果的长短将期望结果存储在变量或文件中，然后与它进行比较：
 
 ```
 @Test
@@ -7573,11 +7447,11 @@ void testWithGoldenMaster() {
 
 早些时候你了解到代码覆盖率并不足以判断测试的好坏。确保测试良好的方法之一是进行代码审查。另一种方法是`变异测试`(mutation testing)。当你运行变异测试时，变异测试库会插入微小的变化并运行测试。如果测试失败，那是好事。这意味着测试检测到了变化。如果测试仍然通过，说明它们不够彻底。
 
-例如，变异测试可能会删掉一个 `if` 语句，或者可能会将 `<` 改为 `<=`。由于可能的变异非常多，变异测试库会自动为你处理这些。在 Java 中，`PIT (PITest)` 框架生成变异并报告结果。它可以与你的构建工具和 IDE 集成。`PIT` 曾代表 Parallel Isolated Test（并行隔离测试）。随着它的演变（或变异），该缩写不再适用，但名称保留了下来。
+例如，变异测试可能会删掉一个`if`语句，或者可能会将`<`改为`<=`。由于可能的变异非常多，变异测试库会自动为你处理这些。在 Java 中，`PIT (PITest)`框架生成变异并报告结果。它可以与你的构建工具和 IDE 集成。`PIT`曾代表 Parallel Isolated Test（并行隔离测试）。随着它的演变（或变异），该缩写不再适用，但名称保留了下来。
 
 ### 在 DRY 与 DAMP 之间做出选择
 
-在开发中，我们学习编写 `DRY` 代码：“不要重复你你自己”（don't repeat yourself）。这个思想是代码不应该有重复，重复可能会导致维护问题，当某处发生更改而另一处未更改时导致代码不同步。
+在开发中，我们学习编写`DRY`代码：“不要重复你你自己”（don't repeat yourself）。这个思想是代码不应该有重复，重复可能会导致维护问题，当某处发生更改而另一处未更改时导致代码不同步。
 
 这对于通用代码来说是一个重要原则，但测试的可读性更。因此，对于测试，“描述性且有意义的短语”（DAMP）通常会发挥作用。这并不意味着你应该忽略测试中的重复。它意味着你应该学会识别什么时候重复是可以接受的。
 
@@ -7600,7 +7474,9 @@ public final class Shift {
 
 以 DAMP 方式测试，你可以编写以下代码：
 
-```
+
+
+```java
 @Test
 void moveUp() {
    Coords original = new Coords(4, 7);
@@ -7622,7 +7498,7 @@ void moveDown() {
 
 注意代码非常相似。但是所有的逻辑都是内联的，非常易读。将其重构为 DRY 会得到：
 
-```
+```java
 private static final int X = 4;
 
 private void assertCoords(Coords actual, int expectedX, int expectedY) {
@@ -7649,43 +7525,52 @@ void moveDown() {
 
 ## 更多参考文献
 
-*   `https://junit.org/junit5/docs/current/user-guide`:https://junit.org/junit5/docs/current/user-guide: JUnit 5 用户指南
-*   `https://github.com/junit-team/junit5-samples`:https://github.com/junit-team/junit5-samples: 按构建工具划分的示例项目
-*   `https://assertj.github.io/doc`:https://assertj.github.io/doc: AssertJ 文档
-*   `https://www.javadoc.io/doc/org.assertj/assertj-core/latest/org/assertj/core/api/Assertions.html`:http://www.javadoc.io/doc/org.assertj/assertj-core/latest/org/assertj/core/api/Assertions.html: AssertJ 断言 Javadoc
+*   `https://junit.org/junit5/docs/current/user-guide`：JUnit 5 用户指南
 
+*   `https://github.com/junit-team/junit5-samples`：按构建工具划分的示例项目
 
+*   `https://assertj.github.io/doc`：AssertJ 文档
 
-
+*   `https://www.javadoc.io/doc/org.assertj/assertj-core/latest/org/assertj/core/api/Assertions.html`：AssertJ 断言 Javadoc
 
 *   [`https://www.selikoff.net/2024/03/23/multiple-ways-of-using-soft-asserts-in-junit-5`](http://www.selikoff.net/2024/03/23/multiple-ways-of-using-soft-asserts-in-junit-5)
+
     在不调用 `assertAll()` 的情况下使用软断言（Soft Assertions）的方法。
 
 *   [`https://junit-pioneer.org/docs`](https://junit-pioneer.org/docs)
+
     JUnit Pioneer 文档
 
 *   [`https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html`](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html)
+
     Mockito 文档
 
 *   [`https://easymock.org/user-guide.html`](https://easymock.org/user-guide.html)
+
     EasyMock 文档
 
 *   [`https://docs.spring.io/spring-framework/reference/testing/spring-mvc-test-framework.html`](https://docs.spring.io/spring-framework/reference/testing/spring-mvc-test-framework.html)
+
     Spring MockMvc 文档
 
 *   [`www.eclemma.org/userdoc/index.html`](http://www.eclemma.org/userdoc/index.html)
+
     JaCoCo 文档
 
 *   [`https://openclover.org/documentation`](https://openclover.org/documentation)
+
     Clover 文档
 
 *   [`https://docs.pact.io`](https://docs.pact.io)
+
     Pact 文档
 
 *   [`https://spring.io/projects/spring-cloud-contract`](https://spring.io/projects/spring-cloud-contract)
+
     Spring Cloud Contract 文档
 
 *   [`https://pitest.org/quickstart`](https://pitest.org/quickstart)
+
     PIT 文档
 
 ## 总结
@@ -7693,8 +7578,11 @@ void moveDown() {
 在本章中，你学习了如何使用 Java 编写测试。关键概念包括：
 
 *   使用 JUnit 进行断言和测试流控制
+
 *   使用 Mockito、EasyMock 和 Spring MockMvc 创建 mock 对象
+
 *   测量测试覆盖率以识别缺失的测试
+
 *   测试的类型
 
 # 8：使用 Project Lombok 的注解驱动代码
@@ -7728,7 +7616,9 @@ Project Lombok 是生活中的一种小巧便利。Lombok 使用简单的注解�
 要在 Eclipse 中安装 Lombok，请按照以下步骤操作：
 
 1.  访问 [`https://projectlombok.org/download`](https://projectlombok.org/download) 下载最新版本的 Lombok。
+
 2.  点击 Install/Update 按钮安装 Lombok。
+
 3.  重启 Eclipse 即可使用。
 
 ![一张设置窗口的截图。在侧边栏中选择了注解处理器。右侧详情包含一个名为“启用注解处理”的复选框，已选中并高亮显示。](img/c08f001.png)
@@ -7748,8 +7638,10 @@ VS Code 的两个主要的 Java 扩展（Oracle 和 Microsoft）都包含了 Lom
 要在 Maven 或 Gradle 中引入 Lombok，你可以去 Maven 中央 [`https://mvnrepository.com/artifact/org.projectlombok/lombok`](https://mvnrepository.com/artifact/org.projectlombok/lombok) 查找最新的 “lombok”版本号。在写作期间，表 8.1 显示了每种配置的情况。
 
 | 工具 | 语法 |
+
 | --- | --- |
-| Maven | \```xml
+
+| Maven | ```xml
 <dependency>
     <groupId>org.projectlombok</groupId>
     <artifactId>lombok</artifactId>
@@ -7757,10 +7649,12 @@ VS Code 的两个主要的 Java 扩展（Oracle 和 Microsoft）都包含了 Lom
     <scope>provided</scope>
 </dependency>
 ``` |
-| Gradle (Groovy) | \```groovy
+
+| Gradle (Groovy) | ```groovy
 compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
 ``` |
-| Gradle (Kotlin) | \```kotlin
+
+| Gradle (Kotlin) | ```kotlin
 compileOnly("org.projectlombok:lombok:1.18.30")
 ``` |
 
@@ -7772,12 +7666,10 @@ compileOnly("org.projectlombok:lombok:1.18.30")
 javac -cp lombok.jar etc.jar my-project
 ```
 
-
-
-
 学习 Lombok 注解的最佳方法是看到它们实际运行。让我们从一个示例开始，创建一个名为 `User` 的类，它包含用户 ID、名称、地址以及可能的其他实例变量。首先，我们将用不使用 Lombok 的传统方法来实现。
 
 ### 传统方法
+
 该类有三个成员：`userID`、`name` 和 `address`。
 
 ```java
@@ -7871,18 +7763,26 @@ public class User {
 这段代码看起来和原始代码相似！但如果你在 IDE 中跟随操作，你会发现 final `userID` 下的红色下划线消失了，因为构造函数现在是自动生成的。Lombok 的 `@Data` 注解会自动向你的类中生成字节码，实现以下功能：
 
 * `toString()`
+
 * `equals()`
+
 * `hashCode()`
+
 * 所有字段的 Getter
+
 * 所有非 final 字段的 Setter
+
 * 一个必需参数的构造函数，包含未赋值的 final、非静态、非空实例变量
+
 * `canEquals()`，用于特殊情况（例如，如果你需要为继承重新定义等效性）
 
 Lombok 不会触碰你的源代码；它只是在编译后将模板代码织入你的字节码中。
 
+
+
 你很快就会发现可以通过更具体的注解单独重织这些方法，以进行更细粒度的控制：`@ToString`、`@EqualsAndHashCode`、`@Getter`、`@Setter` 和 `@RequiredArgsConstructor`。
 
-### 自动生成 @Getter 和 @Setter 方法
+## 自动生成 `@Getter` 和 `@Setter` 方法
 
 你已经看到可以在类名上使用 `@Data` 来自动生成构造函数以及所有的 getter、setter 等。但有时你想要覆盖自动生成的行为；例如，你可能想将访问级别从默认的 `public` 更改为更具限制的 `protected`。或者你可能不希望你的类是一个 `Data` 类，但确实想生成一些 getter 和 setter。这时你可以使用 `@Getter` 和/或 `@Setter` 注解。
 
@@ -7930,7 +7830,7 @@ public class Automobile {
 public boolean isUsed()
 ```
 
-默认情况下，自动生成的 getter 和 setter 具有 public 权限，但你可以通过指定访问方法属性来更改它。以下代码表示生成私有的 `Setter`：
+默认情况下，自动生成的 getter 和 setter 具有 `public` 权限，但你可以通过指定访问方法属性来更改它。以下代码表示生成私有的 `Setter`：
 
 ```java
 import lombok.AccessLevel;
@@ -7963,7 +7863,7 @@ public class Automobile {
 }
 ```
 
-这将为你的所有变量生成 public getter 和 setter。如果你想更改特定字段的访问级别，可以对它们单独进行注解，这将覆盖默认行为。你也可以指定 `AccessLevel.NONE` 以防止生成该访问器。
+这将为你的所有变量生成 `public` getter 和 setter。如果你想更改特定字段的访问级别，可以对它们单独进行注解，这将覆盖默认行为。你也可以指定 `AccessLevel.NONE` 以防止生成该访问器。
 
 ```java
 import lombok.AccessLevel;
@@ -7993,14 +7893,11 @@ public class Automobile {
 * `AccessLevel.PROTECTED`：生成 `protected` 访问方法。
 * `AccessLevel.PUBLIC`：生成 `public` 访问方法。
 
-### 使用 @ToString
+## 使用 `@ToString`
 
 你可以对任何类使用 `@ToString` 注解，它将生成一个包含所有非静态字段的 `public String()` 方法。某些选项允许你控制哪些字段被包含。默认情况下，所有非静态字段都是包含的。你可以通过对它们单独注解 `@ToString.Exclude` 来排除某些字段。
 
-
-
-
-```
+```java
 import lombok.AllArgsConstructor;
 import lombok.ToString;
 
@@ -8050,7 +7947,7 @@ public class User {
 User (userID=123, name=John Jones, friends=[William, Alok, Heather]
 ```
 
-### 使用 @EqualsAndHashCode
+## 使用 `@EqualsAndHashCode`
 
 Java 编程的基本规则之一是 `equals()` 和 `hashCode()` 方法必须保持一致；即：任何 `equals()` 相等的对象必须返回相同的 `hashCode()`。此外，我们更希望不同的实例产生不同的哈希码。
 
@@ -8084,7 +7981,7 @@ public class Automobile {
 
 你可以看到 `color` 已被从 `equals` 和 `hashCode` 方法中排除。因此，`car1` 和 `car2` 是相等的，因为它们仅在颜色上不同。然而，`car2` 和 `car3` 不相等，因为它们在 `Model` 上不同。
 
-### 使用 @AllArgsConstructor, @RequiredArgsConstructor 和 @NoArgsConstructor 注解生成构造函数
+## 使用 `@AllArgsConstructor`, `@RequiredArgsConstructor` 和 `@NoArgsConstructor` 注解生成构造函数
 
 构造函数是常见的模板代码，任何需要被实例化的类都需要它。如果你在类中有 `final` 且非静态的实例字段，它们必须在构造函数中赋值。
 
@@ -8122,7 +8019,7 @@ public User(int userID)
 public User(int userID, String name, String address)
 ```
 
-### 使用 @Log 及更多注解将日志器织入到你的代码库中
+## 使用 `@Log` 及更多注解将日志器织入到你的代码库中
 
 在第 5 章“使用日志框架捕获应用程序状态”中，你已经了 Java 世界中一些常用的日志框架。幸运的是，Project Lombok 为创建所有常见的日志器提供了注解，以及许多不常用的日志器甚至是自定义日志器，这样你就可以开始记录日志，而无需用创建日志器的工厂方法来弄乱代码。
 
@@ -8170,23 +8067,19 @@ Slf4j 是任何日志实现的封装器。Lombok `@Slf4j` 注解使用的默认�
 
 此外，你可以在 `lombok.config` 文件中进行许多微调来覆盖 Lombok 的默认设置。只需将 `lombok.config` 包含在 Java 源码根目录或其目录下。该配置文件将适用于该目录及其子下的所有源文件。
 
-
-
-
-
 例如，假设你想将默认的 `log` 变量名更改 `logger`。你可以在 `lombok.config` 文件中指定以下配置：
 
-```
-lombok.log.fieldName=logger
-```
 
-或者考虑日志记录器被创建为静态（static）的事实。但假设你想将它们改为非静态，例如为了避免与同一类的不同实例之间产生竞争。这时你可以在 `lombok.config` 中包含以下内容：
+
+`lombok.log.fieldName=logger`
+
+或者考虑日志记录器被创建为静态（`static`）的事实。但假设你想将它们改为非静态，例如为了避免与同一类的不同实例之间产生竞争。这时你可以在`lombok.config`中包含以下内容：
 
 ```
 lombok.log.fieldIsStatic=false
 ```
 
-若要查看带有描述的 `lombok.config` 配置键完整列表，请使用以下命令：
+若要查看带有描述的`lombok.config`配置键完整列表，请使用以下命令：
 
 ```
 java -jar lombok.jar config -g ---verbose
@@ -8196,7 +8089,7 @@ java -jar lombok.jar config -g ---verbose
 
 ## 从代码库中移除 Lombok (DELOMBOKING YOUR CODEBASE)
 
-有时你可能想看到 Lombok 织入你类中的代码，例如当出现问题时，你想更仔细地查看问题代码。Delombok 是包含在 `lombok.jar` 中的一个工具，它会递归地“还原”你提供的源路径中的每个 `.java` 文件，并在你提供的目录中创建一个“还原后”的版本。例如，以下是在 Windows 上使用它的方法：
+有时你可能想看到 Lombok 织入你类中的代码，例如当出现问题时，你想更仔细地查看问题代码。Delombok 是包含在`lombok.jar`中的一个工具，它会递归地“还原”你提供的源路径中的每个`.java`文件，并在你提供的目录中创建一个“还原后”的版本。例如，以下是在 Windows 上使用它的方法：
 
 ```
 java -jar .\lombok.jar delombok .\src\ -d src-no-lombok
@@ -8208,33 +8101,39 @@ java -jar .\lombok.jar delombok .\src\ -d src-no-lombok
 java -jar lombok.jar delombok src -d src-no-lombok
 ```
 
-你也可以为某些 IDE 安装 Delombok 插件。例如，IntelliJ 提供了命名恰当的 Delombok 插件。安装该插件可以在构建（Build）菜单中添加“Delombok Project”选项，并与你的 `src` 目录并行创建一个 `delombok` 文件夹。
+你也可以为某些 IDE 安装 Delombok 插件。例如，IntelliJ 提供了命名恰当的 Delombok 插件。安装该插件可以在构建（Build）菜单中添加“Delombok Project”选项，并与你的`src`目录并行创建一个`delombok`文件夹。
 
 ## 参考文献 (FURTHER REFERENCES)
 
 * [`https://projectlombok.org`](https://projectlombok.org)
+
   Lombok 安装、功能和社区的完整指南
 
 ## 总结 (SUMMARY)
 
-在本章中，你查看了 Project Lombok 提供的用于消除大量样板代码最重要的注解，你了解了如何覆盖默认行为，并学习了如何对你的代码进行“Delombok”。还有更多的注解，以及配置开关可以修改你所看到的注解的行为，因此请参阅 [`projectlombok.org`](http://projectlombok.org) 上优秀的 Project Lombok 文档。
+在本章中，你查看了 Project Lombok 提供的用于消除大量样板代码最重要的注解，你了解了如何覆盖默认行为，并学习了如何对你的代码进行“Delombok”。还有更多的注解，以及配置开关可以修改你所看到的注解的行为，因此请参阅[`projectlombok.org`](http://projectlombok.org)上优秀的 Project Lombok 文档。
 
 具体来说，你学习了以下注解：
 
-* `@Data`: 在你的字节码中注入（织入）`toString`、`equals` 和 `hashCode`，以及所有字段的 getter、所有非 final 字段的 setter，以及一个需要参数的构造函数。
-* `@Getter` 和 `@Setter`: 在你的字节码中织入 getter 和 setter 方法。
-* `@ToString`: 根据部分或全部实例变量值织入 `toString` 方法。
-* `@EqualsAndHashCode`: 根据你喜好的部分或全部实例变量值织入 `equals` 和 `hashCode` 方法。
-* `@NoArgsConstructor`、`@RequiredArgsConstructor` 和 `@AllArgsConstructor`: 在你的字节码中织入构造函数。
-* `@Log`、`@Slf4j`、`@Log4j2` 等：创建一个静态日志类变量。
+* `@Data`: 在你的字节码中注入（织入）`toString`、`equals`和`hashCode`，以及所有字段的 getter、所有非 final 字段的 setter，以及一个需要参数的构造函数。
+
+* `@Getter`和`@Setter`: 在你的字节码中织入 getter 和 setter 方法。
+
+* `@ToString`: 根据部分或全部实例变量值织入`toString`方法。
+
+* `@EqualsAndHashCode`: 根据你喜好的部分或全部实例变量值织入`equals`和`hashCode`方法。
+
+* `@NoArgsConstructor`、`@RequiredArgsConstructor`和`@AllArgsConstructor`: 在你的字节码中织入构造函数。
+
+* `@Log`、`@Slf4j`、`@Log4j2`等：创建一个静态日志类变量。
 
 # 9 使用 Java 并发并行你的应用程序
 
-直说吧：并发是困难的。我们人类习惯于以同步的方式思考。但如果我们希望拥有能够处理数百万次请求的 Web 服务器，如果我们希望每小时提取并转换数万个文件，或者如果我们通常地想让应用程序具有高性能，我们需要并发执行任务。线程（Thread）是 Java 并并发的单元，多个线程可以同时运行。挑战在于多个线程可以共享公共资源，如果某些线程在写而另一些在读，可能会导致意外的结果。要让你的应用程序线程安全，你需要考虑两个或多个并发线程如何相互作用，以及当多个线程尝试访问同一资源时会发生什么。坦率地说，有工具、规则和框架可以让这些事情变得简单。
+直说吧：并发是困难的。我们人类习惯于以同步的方式思考。但如果我们希望拥有能够处理数百万次请求的 Web 服务器，如果我们希望每小时提取并转换数万个文件，或者如果我们通常地想让应用程序具有高性能，我们需要并发执行任务。线程（`Thread`）是 Java 并并发的单元，多个线程可以同时运行。挑战在于多个线程可以共享公共资源，如果某些线程在写而另一些在读，可能会导致意外的结果。要让你的应用程序线程安全，你需要考虑两个或多个并发线程如何相互作用，以及当多个线程尝试访问同一资源时会发生什么。坦率地说，有工具、规则和框架可以让这些事情变得简单。
 
-在本章中，我们将回顾一些低级并发基础知识，然后介绍引入 Java 语言用于同步的高级并发工具，特别是 `CompletableFuture` 和虚拟线程。
+在本章中，我们将回顾一些低级并发基础知识，然后介绍引入 Java 语言用于同步的高级并发工具，特别是`CompletableFuture`和虚拟线程。
 
-传统上，你通过向 `Thread` 构造函数传递一个 `Runnable` 并在新创建线程上调用 `start()` 来启动线程。Java 21 引入了一些创建和启动线程的新模式，我们将在本章中看到这种新方法。最后，我们将查看 Spring 中包含的一些并发工具。
+传统上，你通过向`Thread`构造函数传递一个`Runnable`并在新创建线程上调用`start()`来启动线程。Java 21 引入了一些创建和启动线程的新模式，我们将在本章中看到这种新方法。最后，我们将查看 Spring 中包含的一些并发工具。
 
 ## 理解并发基础 (UNDERSTANDING CONCURRENCY BASICS)
 
@@ -8248,7 +8147,7 @@ Java 是首批将并发作为语言原生部分引入的语言之一。最初所
 
 但 Java 21 引入了虚拟线程，整个线程子系统被重写以支持它们。传统的平台线程绑定到操作系统，而虚拟线程被挂载和卸载到平台线程（我们称为载体线程）上执行。当虚拟线程等待任何阻塞操作（例如 I/O 操作）时，Java 会挂起它并将其卸载自平台线程，释放它为其他进程执行更多工作。当虚拟线程准备好继续时（例如睡眠操作完成或 I/O 套接返回了字节），Java 将该虚拟线程重新挂载到可用的平台线程（可能与原始线程不同）。这种安排极大简化了高性能线程操作的创建和管理。虚拟线程为你处理线程管理，允许你消除回调方法并以更舒适的同步方式编程。
 
-在线程中运行作业有几种方法。最少用的方法重写 `Thread` 的 `run` 方法：
+在线程中运行作业有几种方法。最少用的方法重写`Thread`的`run`方法：
 
 ```
 new Thread() {
@@ -8259,10 +8158,7 @@ new Thread() {
 }.start();
 ```
 
-
-
-
-另一种常见的方法是向线程提供一个 `Runnable` 实例（在我们的案例中 `doSomeWork()` 是一个执行某些工作的方法）：
+另一种常见的方法是向线程提供一个`Runnable`实例（在我们的案例中`doSomeWork()`是一个执行某些工作的方法）：
 
 ```java
 // 创建一个定义了要执行任务的 Runnable:
@@ -8276,13 +8172,13 @@ Runnable someRunnable = new Runnable() {
 new Thread(someRunnable).start();
 ```
 
-你可以通过将 `Runnable` 定义为 Lambda 表达式来消除一些样板代码。以下代码与之前的代码等效：
+你可以通过将`Runnable`定义为 Lambda 表达式来消除一些样板代码。以下代码与之前的代码等效：
 
 ```java
 new Thread(()-> doSomeWork()).start();
 ```
 
-一种更现代且方便的创建和启动线程的方法是使用 Java 21 中引入的 `Thread` 类工厂方法之一。这些方法使用*链式*（fluent）构建模式来配置、启动并返回线程。
+一种更现代且方便的创建和启动线程的方法是使用 Java 21 中引入的`Thread`类工厂方法之一。这些方法使用*链式*（fluent）构建模式来配置、启动并返回线程。
 
 ```java
 Thread thread = Thread
@@ -8290,7 +8186,7 @@ Thread thread = Thread
    .start(() -> doSomeWork());
 ```
 
-使用这种语法，你可以在一个命令中创建一个新线程，以 `Runnable` 函数式接口的形式提供功能（编码为 `()-> doSomeWork()`），并启动它。
+使用这种语法，你可以在一个命令中创建一个新线程，以`Runnable`函数式接口的形式提供功能（编码为`()-> doSomeWork()`），并启动它。
 
 你可以使用构建器语法可选地配置属性，如线程名称、线程组、守护线程、优先级等，如下所示：
 
@@ -8303,7 +8199,7 @@ Thread thread = Thread.ofPlatform()
    .start(() -> doSomeWork());
 ```
 
-要创建一个线程但不启动它，请使用 `.unstarted()` 代替 `.start()`。
+要创建一个线程但不启动它，请使用`.unstarted()`代替`.start()`。
 
 ```java
 Thread thread = Thread.ofPlatform()
@@ -8314,7 +8210,7 @@ Thread thread = Thread.ofPlatform()
    .unstarted(() -> doSomeWork());
 ```
 
-你稍后可以使用 `.start()` 启动该线程。
+你稍后可以使用`.start()`启动该线程。
 
 ```java
 thread.start();
@@ -8322,7 +8218,7 @@ thread.start();
 
 你可以使用类似的语法来启动虚拟线程，我们将在后面的“虚拟线程”章节中介绍。
 
-你还将看到创建和启动线程的其他方法，例如 `ExecutorService` 和 `CompletableFuture`。
+你还将看到创建和启动线程的其他方法，例如`ExecutorService`和`CompletableFuture`。
 
 ### 处理线程竞态
 
@@ -8335,9 +8231,13 @@ thread.start();
 在幸运路径下，当请求进入时 Thread 1 更新计数器，过程如下：
 
 *   步骤 1：Thread 1 读取计数器并发现其值为 34。
+
 *   步骤 2：在 Thread 1 有机会将计数器更新为 35 之前，Thread 2 也读取了计数器并发现其值为 34。
+
 *   步骤 3：Thread 1 在不知道 Thread 2 的情况下，将计数器增加到 35。
+
 *   步骤 4：同样，Thread 2 在在不知道 Thread 1 的情况下，也将计数器增加到 35。
+
 *   结果：两个线程都更新了计数器，但由于不幸的交织，只记录了一次点击。这并不好。这就是所谓的*竞态*（race condition），我们的工作是在多线程代码中防止这种情况。
 
 我们来演示这种竞态：
@@ -8384,16 +8284,20 @@ thread.start();
 [图 9.2](https://example.org/fig2): 带有竞态的计数器
 
 *   步骤 1：Thread 1 读取计数器并发现其值为 34。
+
 *   步骤 2：在 Thread 1 有机会将计数器更新为 35 之前，Thread 2 也读取了计数器并发现其值为 34。
+
 *   步骤 3：Thread 1 在不知道 Thread 2 的情况下，将计数器增加到 35。
+
 *   步骤 4：同样，Thread 2 在在不知道 Thread 1 的情况下，也将计数器增加到 35。
+
 *   步骤 5：Thread 1 将 35 写回计数器。
+
 *   步骤 6：Thread 2 将 35 写回计数器。
+
 *   结果：看吧，两个线程都更新了计数器，但由于不幸的交织，只记录了一次点击。
 
-
-
-long 和 double 是特例，它们不提供此类保证。这些是 64 位的值，由两个 32 位的字组成。`long` 或 `double` 变量完全可能返回完全不一致的数据，如图 9.3 所示，其中 `Thread 1` 正在设置一个值为 `AAAABBBB` 的 64 位值，而 `Thread 2` 正在设置 `CCCCDD`。结果是 `Thread 1` 在高字中设置了 `AAAA`，`Thread 2` 在低字中设置了 `DDDD`，产生了一个任何线程都未设置过的混合值。
+`long`和`double`是特例，它们不提供此类保证。这些是 64 位的值，由两个 32 位的字组成。`long`或`double`变量完全可能返回完全不一致的数据，如图 9.3 所示，其中`Thread 1`正在设置一个值为`AAAABBBB`的 64 位值，而`Thread 2`正在设置`CCCCDD`。结果是`Thread 1`在高字中设置了`AAAA`，`Thread 2`在低字中设置了`DDDD`，产生了一个任何线程都未设置过的混合值。
 
 ![一个包含三个块的示意图。块 1 中的 Thread 1 具有高位低位变量，块 2 中的 thread 2 具有高位低位变量。thread 1 的高变量和 thread 2 的低变量被写入块 3 中。](img/c09f003.png)
 
@@ -8401,17 +8305,19 @@ long 和 double 是特例，它们不提供此类保证。这些是 64 位的值
 
 ### 使用 volatile 关键字
 
-为了确保变量字段的读取和写入者是原子的，你可以将该字段声明为 `volatile`。
+为了确保变量字段的读取和写入者是原子的，你可以将该字段声明为`volatile`。
 
-但 `volatile` 的含义不仅仅是原子操作。
+但`volatile`的含义不仅仅是原子操作。
 
-你会发现，操作系统为每个 CPU 核心以及每个线程分配了它们自己的内存区域。一个核心访问另一个核心的内存寄存器可能会减慢程序的运行速度，因此 Java 的设计者赋予了每个线程自由，允许通过从“黄金源”（即官方值）读取值到其自身的本地缓存中来优化操作。此后，该线程可以引用该本地值，即使在此期间另一个线程可能已经更改了黄金源。当你不担心共享访问时，这是一个极大的优化。然而，当多个线程对同一个变量进行读写时，你将希望确保所有线程都能从同一个位置看到相同的值。这就是 `volatile` 的工作。`volatile` 关键字告诉 Java：“这个值是 `volatile` 的（意味着‘频繁变化’）；请务必始终从主位置访问最新值。”
+你会发现，操作系统为每个 CPU 核心以及每个线程分配了它们自己的内存区域。一个核心访问另一个核心的内存寄存器可能会减慢程序的运行速度，因此 Java 的设计者赋予了每个线程自由，允许通过从“黄金源”（即官方值）读取值到其自身的本地缓存中来优化操作。此后，该线程可以引用该本地值，即使在此期间另一个线程可能已经更改了黄金源。当你不担心共享访问时，这是一个极大的优化。然而，当多个线程对同一个变量进行读写时，你将希望确保所有线程都能从同一个位置看到相同的值。这就是`volatile`的工作。`volatile`关键字告诉 Java：“这个值是`volatile`的（意味着‘频繁变化’）；请务必始终从主位置访问最新值。”
 
-每当变量被标记为 `volatile`，对该变量的任何获取（gets）或设置（sets）都将来自主位置，而不是 CPU 缓存。此外（注意这里），如果任何 `volatile` 变量在任何时候对某个线程可见，那么即使是非 `volatile` 变量的任何获取或设置，也将保证从黄金源刷新。
+每当变量被标记为`volatile`，对该变量的任何获取（gets）或设置（sets）都将来自主位置，而不是 CPU 缓存。此外（注意这里），如果任何`volatile`变量在任何时候对某个线程可见，那么即使是非`volatile`变量的任何获取或设置，也将保证从黄金源刷新。
 
 但不仅如此，这与 Java 内存模型（Java Memory Model）有关。
 
-在 Java 中，编译器和运行时都有重排操作的。例如，在以下代码的第 11 行和第 12 行中，`count` 和 `total` 是独立的，因此 Java 可以重排它们的计算并并行执行来优化操作。然而，第 13 行依赖于两者，因此第 13 行必须按照定义的顺序执行。这被称为 `happens-before`（发生于）逻辑。任何给定线程都能保证其看到的变量顺序与它们实际发生的顺序是一致的。
+在 Java 中，编译器和运行时都有重排操作的。例如，在以下代码的第 11 行和第 12 行中，`count`和`total`是独立的，因此 Java 可以重排它们的计算并并行执行来优化操作。然而，第 13 行依赖于两者，因此第 13 行必须按照定义的顺序执行。这被称为`happens-before`（发生于）逻辑。任何给定线程都能保证其看到的变量顺序与它们实际发生的顺序是一致的。
+
+
 
 ```
 10: double value = 10.0;
@@ -8420,11 +8326,10 @@ long 和 double 是特例，它们不提供此类保证。这些是 64 位的值
 13: total = count + value;
 }
 ```
+
 （注：源代码中的原始代码块是不完整/碎片化的；我根据提供的关于 `count`、`total` 和第 13 行的上下文重建了逻辑结构）。
 
 每当变量被标记为 `volatile`，对该变量的任何获取（gets）或设置（sets）都将来自主位置，而不是 CPU 缓存。此外（注意这里），如果任何 `volatile` 变量在任何时候对某个线程可见，那么即使是非 `volatile` 变量的任何获取或设置，也将保证从黄金源刷新。
-
-
 
 有一个例外。当线程处于 `synchronized` 块中时，它可以对锁调用 `wait`。当该线程处于 `WAITING` 状态（或者如果它调用了 `someObject.wait(long)`，则处于 `TIMED_WAITING` 状态）时，另一个线程可以进入锁定在同一个锁实例上的 `synchronized` 块。通过这种方式，许多线程可以获取同一个锁实例并对锁调用 `wait`，实际上所有线程都在同一个锁上等待。最后，另一个线程可以通过调用 `synchronized(someObject)` 获取 `someObject` 锁，然后调用 `someObject.notify()` 来唤醒一个随机线程，或者调用 `someObject.notifyAll()` 来唤醒所有等待的线程。嗯，现在会有很多线程拥有同一个锁吗？并不完全是。被“唤醒”的线程实际上会切换到 `BLOCKED` 状态，并等待 `RUNNING` 线程退出 `synchronized` 块以释放锁，此时，线程调度器将选择一个等待的线程并将其切换到 `RUNNING` 状态。
 
@@ -8484,13 +8389,16 @@ public void someMethod(){
 当然，`Object` 类是所有其他类的祖先。这些线程间通信方法定义在 `Object` 类中：
 
 - `wait(time)` 其中 `time` 是 `long` 类型
+
 - `wait(time,nanos)` 其中 `time` 是 `long`，`nanos` 是 `int`
+
 - `notify()`
+
 - `notifyAll()`
 
 `synchronized` 的缺点是，当一个 `RUNNABLE` 线程拥有同步锁时，任何尝试获取同一个锁的其它线程都会被阻塞，也就是说被强制等待，且没有好的方法来取消。当我们查看一些高级并发组件（如 `ReentrantLock`）时，我们将看到创建可以取消的锁的方法。
 
-### 探索堆、栈和元空间
+## 探索堆、栈和元空间
 
 在 Java 中，内存被分为三个主要区域：堆（heap）、栈（stack）和元空间（Metaspace）。
 
@@ -8511,9 +8419,6 @@ Java 中的标准数据结构如 `HashMap`、`ArrayList` 等在并发情况下�
 `ConcurrentSkipListMap` 是另一个由跳表（Skip List）数据结构支持的 `ConcurrentMap` 实现。跳表使用有趣的算法来查找数据。（参见“进一步引用”章节。）
 
 `CopyOnWriteArrayList` 是一种并发 `List`，它通过向原始数组的副本写入数据来工作，写入完成之前不会返回给读者，之后原始数组会被丢弃。它实现了 `List` 接口，因此你可以像对待任何 `List` 实现一样使用 `add(data)`、`get()` 等。
-
-
-
 
 ```
 Thread: main processing: was
@@ -8538,31 +8443,43 @@ Thread: ForkJoinPool.commonPool-worker-3 processing: the
 Java 为许多常见的并发用例提供了高级别的组件，使得并发编程变得更容易上手。在本节中，我们将涵盖几个常用的组件，包括：
 
 * `ReentrantLock`
+
 * `Phaser`
+
 * `Runnable`、`Callable` 和 `Future`
+
 * `ExecutorService`
+
 * `CompletableFuture`
+
 * 虚拟线程 (Virtual threads)
 
 我们将首先介绍这些概念，然后在章节稍后的部分查看一些代码示例。
 
 ### 使用 ReentrantLock 进行锁
 
-`ReentrantLock` 为同步提供了组件化的解决方案，解决了一些与同步相关的挑战。在使用虚拟线程时，它也至关重要，正如你在“介绍虚拟线程”部分中看到的。。
+`ReentrantLock` 为同步提供了组件化的解决方案，解决了一些与同步相关的挑战。在使用虚拟线程时，它也至关重要，正如你在“介绍虚拟线程”部分中看到的。
 
 `ReentrantLock` 实现了 `Lock` 接口，该接口包含以下方法：
 
 * `void lock()`：请求锁，如有必要则等待锁可用。
+
 * `void lockInterruptibly()`：行为类似于 `lock()`，区别在于，如果另一个线程在请求线程等待时中断了它，该线程将抛出一个 `InterruptedException` 并取消对锁的请求。
+
 * `boolean tryLock()`：尝试获取锁，如果锁可用则返回 `true`。否则返回 `false`。
+
 * `tryLock(long, TimeUnit)`：行为与 `tryLock()` 相同，区别在于它等待指定时间后取消对锁的请求。
+
 * `void unlock()`：释放锁。
+
 * `Condition newCondition()`：允许对线程间通信进行更细粒度的控制。
 
 `Condition` 有自己的 API，与 `Lock` 协调工作。最常见的有：
 
 * `void await()`：等待当前线程被唤醒或被中断。
+
 * `void signal()`：唤醒等待此锁的线程。在运行的线程释放锁之前，该线程不会真正唤醒。
+
 * `void signalAll()`：唤醒所有等待的线程。这些线程不会立即唤醒；相反，它们必须等待运行线程释放锁，即使如此，它们也会在每个线程释放锁时一个接一个唤醒。
 
 你可能记得我们之前提到过，如果一个线程尝试获取一个被另一个线程持有的同步锁（synchronized lock），没有办法让被阻塞的线程退回。从方法签名可以清楚地看出——它不会抛出 `InterruptedException`，因此没有办法中断它！
@@ -8585,7 +8502,7 @@ Java 为许多常见的并发用例提供了高级别的组件，使得并发编
 
 我们不会深入探讨这些 API，因为 `Phaser` 结合了这些功能。你通过提供数量的许可（permits）来创建一个 `Phaser`。你可以通过调用 `arriveAndAwait()` 使用 `Phaser` 代替 `CyclicBarrier`。注意 `awaitAdvance` 中的参数指的是阶段（phase）。Phaser 可以重用，并且每当它耗尽许可时，就会启动一个新的阶段。
 
-`Phaser` 也可以作为作为 `CountdownLatch` 使用。等待的线程（例如 Web 服务器）将调用 `awaitAdvance(int)` 来等待以便继续。我们将在本章节稍后的 `PingNetPong` 代码中使用 `Phaser` 作为倒计时锁。
+`Phaser` 也可以作为 `CountdownLatch` 使用。等待的线程（例如 Web 服务器）将调用 `awaitAdvance(int)` 来等待以便继续。我们将在本章节稍后的 `PingNetPong` 代码中使用 `Phaser` 作为倒计时锁。
 
 ### 使用 Runnable, Callable 和 Future
 
@@ -8596,10 +8513,6 @@ Java 为许多常见的并发用例提供了高级别的组件，使得并发编
 `Callable` 的引入是为了弥补这些缺陷。`Callable` 拥有一个返回泛型结果的 `call` 方法并可以抛出检查异常。
 
 但如果线程是异步执行的，启动线程的进程如何能获取它产生的任何结果呢？一种简单的方法是通过 `Future` 接口。`Future` 提供了检查计算是否完成以及获取结果的方法。它还有强制 future 在带有或不带异常的情况下完成的方法。
-
-
-
-
 
 `TimeUnit unit)` | 可以告诉线程将其结果返回给 `Future`，其他线程将等待该结果。 |
 
@@ -8627,13 +8540,15 @@ ExecutorService executor = Executors.newFixedThreadPool(10);
 
 `ExecutorService` 接口扩展了 `AutoCloseable`，因此你可以使用 try-with-resources 块来创建它。一旦所有处理中的线程已返回线程池，并且池中没有线程在等待可用线程，`ExecutorService` 就会终止，try-with-resources 块也将退出。因此实际上，try-with-resources 确保了所有线程在继续之前都会完成。
 
-`Executors.newSingleThreadExecutor()` 返回一个仅有一个线程的线程池。这相当于调用带有一个线程的 `Executors.newThreadPoolExecutor(1)`。为什么我们需要为它创建一个特殊的执行器而不是直接创建一个只有一个线程的固定 `ThreadPoolExecutor` 呢？因为它保证了顺序，这在你需要确保任务按顺序执行时非常有用，例如在控制按钮按下等内容的 UI 事件分发线程中。更重要的是，如果这些线程中的一个在执行期间由于某些异常而终止，将创建一个新线程来取代它的位置。
 
-### 使用 ExecutorService 进行调度
 
-`ScheduledExecutorService` 是 `ExecutorService` 的扩展，它可以调度任务按固定间隔执行一次或多次。`schedule()` 方法接受一个 `Runnable` 或 `Callable` 以及一个初始延迟。`scheduleAtFixedRate()` 方法接受一个 `Runnable`、初始延迟（可以是 0）、重复延迟周期以及一个 `TimeUnit` 实例。所有这些方法都返回 `ScheduledFuture` 实例。在 `scheduleAtFixedRate()` 方法的情况下，`ScheduledFuture` 不返回任何有用的内容，但你可以调用它的 `cancel()` 方法来取消调定的任务。
+`Executors.newSingleThreadExecutor()` 返回一个仅有一个线程的线程池。这相当于调用带有一个线程的`Executors.newThreadPoolExecutor(1)`。为什么我们需要为它创建一个特殊的执行器而不是直接创建一个只有一个线程的固定`ThreadPoolExecutor`呢？因为它保证了顺序，这在你需要确保任务按顺序执行时非常有用，例如在控制按钮按下等内容的 UI 事件分发线程中。更重要的是，如果这些线程中的一个在执行期间由于某些异常而终止，将创建一个新线程来取代它的位置。
 
-要创建一个 `ScheduledThreadPoolExecutor`，传入池大小，例如：
+## 使用 ExecutorService 进行调度
+
+`ScheduledExecutorService`是`ExecutorService`的扩展，它可以调度任务按固定间隔执行一次或多次。`schedule()`方法接受一个`Runnable`或`Callable`以及一个初始延迟。`scheduleAtFixedRate()`方法接受一个`Runnable`、初始延迟（可以是 0）、重复延迟周期以及一个`TimeUnit`实例。所有这些方法都返回`ScheduledFuture`实例。在`scheduleAtFixedRate()`方法的情况下，`ScheduledFuture`不返回任何有用的内容，但你可以调用它的`cancel()`方法来取消调定的任务。
+
+要创建一个`ScheduledThreadPoolExecutor`，传入池大小，例如：
 
 ```
 ScheduledExecutorService executor = Executors.newScheduledThreadPool(10);
@@ -8648,7 +8563,7 @@ ScheduledExecutorService executor =
 
 每个任务一个虚拟线程执行器是一种特殊的执行器，它在虚拟线程上运行其任务。（目前请将虚拟线程视为普通线程，只是轻量得多。）
 
-为虚拟线程创建 `ExecutorService` 与创建任何其他 `ExecutorService` 一样简单。只需调用：
+为虚拟线程创建`ExecutorService`与创建任何其他`ExecutorService`一样简单。只需调用：
 
 ```
 ExecutorService executor = Executors. newVirtualThreadPerTaskExecutor();
@@ -8656,7 +8571,7 @@ ExecutorService executor = Executors. newVirtualThreadPerTaskExecutor();
 
 该方法不接受池大小参数，因为正如我们所说的，我们从不对虚拟线程进行池化。
 
-虚拟线程没有调度执行器，但通过向 `newScheduledThreadPool()` 方法提供一个虚拟 `ThreadFactory`（可选参数），可以很容易地拼凑出一个：
+虚拟线程没有调度执行器，但通过向`newScheduledThreadPool()`方法提供一个虚拟`ThreadFactory`（可选参数），可以很容易地拼凑出一个：
 
 ```
 ThreadFactory factory = Thread.ofVirtual().factory();
@@ -8670,25 +8585,25 @@ x.scheduleAtFixedRate(()-> logger.info(counter.incrementAndGet()),
 
 ## 使用 CompletableFuture 构建响应代码
 
-`CompletableFuture` 是一个方便的并发工具，可用于启动线程、合并线程结果以及触发操作。
+`CompletableFuture`是一个方便的并发工具，可用于启动线程、合并线程结果以及触发操作。
 
 ### CompletableFuture 使用的函数式接口
 
-`CompletableFuture` 使用了几个你希望熟悉的函数式接口。这些接口的名称可能并不直观，所以让我们深入研究 `CompletableFuture` 版本之前，让我们先回顾一下每个接口的同步示例。
+`CompletableFuture`使用了几个你希望熟悉的函数式接口。这些接口的名称可能并不直观，所以让我们深入研究`CompletableFuture`版本之前，让我们先回顾一下每个接口的同步示例。
 
-本节中的所有示例在 `FunctionalInterfaceTests` 类中都有对应的测试器。注意我们使用 Lambda 表达式来定义这些实现。
+本节中的所有示例在`FunctionalInterfaceTests`类中都有对应的测试器。注意我们使用 Lambda 表达式来定义这些实现。
 
-##### 接口：Runnable
+#### 接口：Runnable
 
 *   类名：`java.lang.Runnable`
 *   方法：`run()`
-*   不接受参数且无返回值；`Runnable` 通常提供供给给 `Thread`的功能。
+*   不接受参数且无返回值；`Runnable`通常提供供给给`Thread`的功能。
 
-##### 接口：Supplier<T>
+#### 接口：Supplier\<T>
 
 *   类名：`java.util.function.Supplier`
 *   方法：`get()`
-*   不接受参数，执行某些过程并产生结果。例如，这段代码定义了一个产生 100 到 200 之间随机整数的 `Supplier`。
+*   不接受参数，执行某些过程并产生结果。例如，这段代码定义了一个产生 100 到 200 之间随机整数的`Supplier`。
 
 ```
  @Test
@@ -8713,17 +8628,13 @@ Next random:165
 Next random:182
 ```
 
-在这里重要的是我们的 `Supplier` 不接受输入参数并返回一个值。
+在这里重要的是我们的`Supplier`不接受输入参数并返回一个值。
 
-##### 接口：Consumer<T>
+#### 接口：Consumer\<T>
 
 *   类名：`java.util.function.Consumer`
 *   方法：`accept(T t)`
-*   接受单个参数；无返回值。例如，这段代码定义了一个 `Consumer`，接受一个可变的 Integer 值列表并在原地将每个值翻倍：
-
-
-
-
+*   接受单个参数；无返回值。例如，这段代码定义了一个`Consumer`，接受一个可变的 Integer 值列表并在原地将每个值翻倍：
 
 ```java
 @Test
@@ -8745,9 +8656,9 @@ public void testConsumerAccept(){
 [20, 40, 60, 80]
 ```
 
-这里需要注意的是，我们的 `Consumer` 接受一个输入参数但没有返回值；它只是在原处修改了输入。`Consumer` 的其他用途可能是打印计算结果或将结果存储到数据库中，而无需实际向调用者返回任何内容。
+这里需要注意的是，我们的`Consumer`接受一个输入参数但没有返回值；它只是在原处修改了输入。`Consumer`的其他用途可能是打印计算结果或将结果存储到数据库中，而无需实际向调用者返回任何内容。
 
-有时你可能想要链用多个 `Consumer`，以便在同一个输入上执行多个操作。`Consumer` 支持 `andThen(Consumer after)` 方法，该方法会产生一个新的 `Consumer`，它先执行第一个操作，然后执行 `after` 操作。例如：
+有时你可能想要链用多个`Consumer`，以便在同一个输入上执行多个操作。`Consumer`支持`andThen(Consumer after)`方法，该方法会产生一个新的`Consumer`，它先执行第一个操作，然后执行`after`操作。例如：
 
 ```java
 @Test
@@ -8776,10 +8687,10 @@ Message: Hello, World!
 Uppercase: HELLO, WORLD!
 ```
 
-### 接口：Function<T, R> (T 是参数类型；R 是返回类型)
+### 接口：Function\<T, R> (T 是参数类型；R 是返回类型)
 
 *   包：`java.util.function.Function`
-*   结合了 `Supplier` 和 `Consumer`；接受一个输入并返回一个结果。它包含了额外的方法，用于链用多个 `Function` 以产生一个新的 `Function`。例如，让我们定义一个接受 Integer 值并将其翻倍的函数：
+*   结合了`Supplier`和`Consumer`；接受一个输入并返回一个结果。它包含了额外的方法，用于链用多个`Function`以产生一个新的`Function`。例如，让我们定义一个接受 Integer 值并将其翻倍的函数：
 
 ```java
 @Test
@@ -8802,7 +8713,7 @@ public void testFunctionApply() {
 2⁵ = 25
 ```
 
-`andThen` 方法用于根据两个现有函数组合新函数。在下面的示例中，我们定义了一个名为 `personToFullName` 的 `Function`。然后我们使用 `personToFullName` `andThen` String `toUpperCase()` 组合了一个新的 `Function`。当调用这个新组合的函数时，它会将 person 实例转换为全名的大写值。
+`andThen`方法用于根据两个现有函数组合新函数。在下面的示例中，我们定义了一个名为`personToFullName`的`Function`。然后我们使用`personToFullName` `andThen` String `toUpperCase()`组合了一个新的`Function`。当调用这个新组合的函数时，它会将 person 实例转换为全名的大写值。
 
 ```java
 @Test
@@ -8837,9 +8748,9 @@ public void testFunctionAndThen() {
 MARY JONES
 ```
 
-我们只是想再次强调，调用 `andThen` 方法的声明（在此例中为 `personToUpperCaseFullName`）并没有对输入参数执行任何操作。相反，它组合了一个新的 `Function`，当该函数被应用于其输入参数时，它会执行基础函数（在本例中为 `personToFullName`），然后将该调用的结果传递给 `andThen` 函数（在本例中为 String 类的 `toUpperCase` 函数）。
+我们只是想再次强调，调用`andThen`方法的声明（在此例中为`personToUpperCaseFullName`）并没有对输入参数执行任何操作。相反，它组合了一个新的`Function`，当该函数被应用于其输入参数时，它会执行基础函数（在本例中为`personToFullName`），然后将该调用的结果传递给`andThen`函数（在本例中为 String 类的`toUpperCase`函数）。
 
-与 `andThen` 的是 `compose` 方法，作用与 `andThen` 相反；使用 `compose` 时，先应用函数参数，然后应用基础函数。例如，我们可以使用 `compose` 如下所示重写之前的 `andThen` 代码：
+与`andThen`的是`compose`方法，作用与`andThen`相反；使用`compose`时，先应用函数参数，然后应用基础函数。例如，我们可以使用`compose`如下所示重写之前的`andThen`代码：
 
 ```java
 @Test
@@ -8866,10 +8777,10 @@ public void testFunctionCompose() {
 }
 ```
 
-### 接口：BiFunction<T, U, R> (T 和 U 是参数类型；R 是返回类型)
+### 接口：BiFunction\<T, U, R> (T 和 U 是参数类型；R 是返回类型)
 
 *   包：`java.util.function.BiFunction`
-*   接受两个输入并返回一个结果。例如，让我们定义一个 `BiFunction`，接受直角三角形的两边（a 和 b）并使用勾股定理计算第三边（c）。
+*   接受两个输入并返回一个结果。例如，让我们定义一个`BiFunction`，接受直角三角形的两边（a 和 b）并使用勾股定理计算第三边（c）。
 
 ```java
 @Test
@@ -8885,9 +8796,9 @@ public void testBiFunction(){
 
 ### CompletionStage
 
-`CompletableFuture` 实现了 `CompletionStage` 接口，该接口包含了用于供应和链用异步计算的方法。
+`CompletableFuture`实现了`CompletionStage`接口，该接口包含了用于供应和链用异步计算的方法。
 
-`CompletionStage` 方法包括：
+`CompletionStage`方法包括：
 
 *   `thenAccept(Consumer)`
 *   `thenApply(Function)`
@@ -8895,22 +8806,21 @@ public void testBiFunction(){
 *   `thenCompose(Function, CompletionStage)`
 *   `thenCombine(CompletionStage, BiFunction)`
 
-这些是同步形式，每个方法都有异步版本，例如 `thenAcceptAsync()` 和 `thenApplyAsync()`。
+这些是同步形式，每个方法都有异步版本，例如`thenAcceptAsync()`和`thenApplyAsync()`。
 
 ### 使用 CompletableFuture 整合一切
 
-`CompletableFuture` 是 Java 对响应式代码的首次尝试。响应式代码意味着异步运行，但通过信号另一个进程已完成来立即*响应*，从而通知该进程处理结果。
+`CompletableFuture`是 Java 对响应式代码的首次尝试。响应式代码意味着异步运行，但通过信号另一个进程已完成来立即*响应*，从而通知该进程处理结果。
 
-在下面的代码中，第 15 行是使用 `CompletableFuture.supplyAsync()` 方法启动并发线程的标准方法，该方法接受一个 `Supplier` 实例。记得之前关于 `Supplier` 接口的节中，`Supplier` 不接受参数并产生结果。使用 Java 线程，没有办法*询问*线程在完成时提供结果；相反，你必须自己实现一种信号机制。`CompletableFuture` 解决了这个问题。正如你在第 46 行所见，当线程调用 `completableFuture.get()` 方法时，线程将*等待*直到计算出结果，然后立即获取结果。
+在下面的代码中，第 15 行是使用`CompletableFuture.supplyAsync()`方法启动并发线程的标准方法，该方法接受一个`Supplier`实例。记得之前关于`Supplier`接口的节中，`Supplier`不接受参数并产生结果。使用 Java 线程，没有办法*询问*线程在完成时提供结果；相反，你必须自己实现一种信号机制。`CompletableFuture`解决了这个问题。正如你在第 46 行所见，当线程调用`completableFuture.get()`方法时，线程将*等待*直到计算出结果，然后立即获取结果。
 
-你会注意到我们没有需要创建或启动 `Thread` 实例，也没有需要提供 `ExecutorService`。相反，`CompletableFuture` 在后台为我们完成了所有工作。
+你会注意到我们没有需要创建或启动`Thread`实例，也没有需要提供`ExecutorService`。相反，`CompletableFuture`在后台为我们完成了所有工作。
+
+接下来，我们想告诉`CompletableFuture`，一旦它计算出结果，就应该接收（`thenAccept()`）一个`Consumer`。请记住，`Consumer`接受一个参数，执行一个过程并且不返回结果。这对于我们的情况非常完美，因为我们只想打印某些内容，而不是返回任何内容。
 
 
 
-
-接下来，我们想告诉 `CompletableFuture`，一旦它计算出结果，就应该接收（`thenAccept()`）一个 `Consumer`。请记住，`Consumer` 接受一个参数，执行一个过程并且不返回结果。这对于我们的情况非常完美，因为我们只想打印某些内容，而不是返回任何内容。
-
-现在，如果我们想在继续执行之前等待 `thenAccept()` 完成，可以将 `thenAccept()` 赋值给一个新的 `CompletableFuture` 实例。在早先显示的第一个 `CompletableFuture` 中，我们调用了 `get()` 方法来等待结果直到其就绪。我们不能在 `thenAccept()` `CompletableFuture` 上调用 `get()`，因为它是一个 `Consumer`，所以它不会产生任何结果。对于这种情况，你可以调用 `completableFuture.join()`，它将等待直到消费者完成处理，而不需要期望任何结果。
+现在，如果我们想在继续执行之前等待`thenAccept()`完成，可以将`thenAccept()`赋值给一个新的`CompletableFuture`实例。在早先显示的第一个`CompletableFuture`中，我们调用了`get()`方法来等待结果直到其就绪。我们不能在`thenAccept()` `CompletableFuture`上调用`get()`，因为它是一个`Consumer`，所以它不会产生任何结果。对于这种情况，你可以调用`completableFuture.join()`，它将等待直到消费者完成处理，而不需要期望任何结果。
 
 ```
 7:  @Log4j2
@@ -8989,12 +8899,9 @@ public void testBiFunction(){
    INFO  c.w.r.c.C - CompletableFuture #2 is complete.
 ```
 
-第 28 行展示了你如何提供一个 `Consumer`。
+第 28 行展示了你如何提供一个`Consumer`。
 
-
-
-
-当虚拟线程执行时，它在后台会被分配给一个平台线程。你可以在图 9.6 第 590 行看到，当它被挂起时会调用 `sleepNanos()`，这基本上告诉线程调度器将其挂起（即将其从载体线程上卸载）一段时间，然后取消挂起；即将其分配到 JVM 线程池中可用的平台线程。因此，单个平台线程可以执行许多虚拟线程。
+当虚拟线程执行时，它在后台会被分配给一个平台线程。你可以在图 9.6 第 590 行看到，当它被挂起时会调用`sleepNanos()`，这基本上告诉线程调度器将其挂起（即将其从载体线程上卸载）一段时间，然后取消挂起；即将其分配到 JVM 线程池中可用的平台线程。因此，单个平台线程可以执行许多虚拟线程。
 
 如果写一些代码来创建线程，让它们多次唤醒和睡眠，并每次捕获它们的载体线程以观察它们的变化，将会非常有趣。
 
@@ -9104,9 +9011,6 @@ Summary
    INFO  c.w.r.c.VTS - ForkJoinPool-1-worker-4
 ```
 
-
-
-
 ```
 Summary
 2024-07-23 18:20:41 [main]
@@ -9130,6 +9034,8 @@ Summary
    INFO  c.w.r.c.VTS - ForkJoinPool-1-worker-1
 ```
 
+
+
 线程钉（Pinning）不会破坏你的代码；它仍然会执行。然而，它会阻止你获得虚拟线程带来的优势。为了防止发生线程钉，请将所有的 `synchronized` 锁替换为 `ReentrantLock` 实例。
 
 如果你正在将应用程序迁移到虚拟线程，这一点非常重要。代码在 `synchronized` 锁下仍然可以工作，但除非你进行这些更改，否则无法提供你预期的性能优势。
@@ -9142,7 +9048,7 @@ Summary
 - `TransferQueue`：`BlockingQueue` 的扩展，用于生产者线程将其内容传输给消费者。生产者将等待直到有消费者线程接受其内容，同理，消费者在需要时也会等待数据可用。
 - `CompletionService`：当你有许多线程产生内容且不在乎顺序时，这是一个非常有用的组件；我们只是想在每个结果可用时处理它。
 
-### 线程间通信
+## 线程间通信
 
 并发中的一个常见问题是线程间通信，即组中的每个线程必须完成某些工作，然后信号下一个线程执行后续操作。
 
@@ -9152,7 +9058,7 @@ Java 提供了线程间通信的原生支持。许多线程可以在同一个锁
 
 代码如下：
 
-```
+```java
 10: public class PingNetPong{
 11:    public static void main(String[] args){
 12:       new PingNetPong().playPingPong(3);
@@ -9228,6 +9134,7 @@ Java 提供了线程间通信的原生支持。许多线程可以在同一个锁
 82:    }
 83: }
 ```
+
 我们首先在第 16 行创建一个 `ReentrantLock` 来管理我们的同步。
 
 第 17、18 和 19 行为我们想要信号的每个状态创建了新的 `Condition` 对象。
@@ -9236,21 +9143,17 @@ Java 提供了线程间通信的原生支持。许多线程可以在同一个锁
 
 第 23 行创建了一个具有 3 个许可的 `Phaser`，在第 29、45 和 66 行中，我们的三个线程每个在启动时都会信号其到达。第 77 行的 `phaser.awaitAdvance(0)` 等待所有线程信号它们已启动，这样它就可以通过第 79 行调用 `ping.signal()` 来启动进程。但在调用信号之前，它必须在第 78 行锁定。
 
-### Spring 中的并发支持
+## Spring 中的并发支持
 
 如果你的项目使用 Spring 框架，可以使用一些组件和注解来方便地提供并发支持。在使用这些或其他任何 Spring 注解时，你需要注意一些事项。
 
-
-
-
-
-*   被注解的类必须由 Spring 管理。这意味着该实例必须是一个 bean，或者是一个带有 `@Component`、`@Service` 等注解的类。
-*   它必须使用 `@Autowired` 或构造函数注入等方式进行注入。
-*   如果直接从同一个类中的另一个方法调用被 `@Async` 注解的方法，它将不会在单独线程中执行。这是因为如果你从同一个类内部调用该方法，你并没有调用一个 Spring 管理的方法。
+- 被注解的类必须由 Spring 管理。这意味着该实例必须是一个 bean，或者是一个带有 `@Component`、`@Service` 等注解的类。
+- 它必须使用 `@Autowired` 或构造函数注入等方式进行注入。
+- 如果直接从同一个类中的另一个方法调用被 `@Async` 注解的方法，它将不会在单独线程中执行。这是因为如果你从同一个类内部调用该方法，你并没有调用一个 Spring 管理的方法。
 
 现在，让我们来看主要的 Spring 并发注解。
 
-### 使用 @Async/@@EnableAsync
+### 使用 @Async/@EnableAsync
 
 Spring 提供了 `@Async` 注解，它可以应用于任何方法的签名之上，以便当该方法被调用时，它会立即返回并在单独线程中处理其功能。要使用 `@Async` 注解，你必须告诉 Spring 启用异步处理。你可以通过对任何由 Spring 管理的类（通常是 Spring Boot Application 类，或者某些 `@Configuration` 类，或者是包含 `@Async` 的类）添加 `@EnableAsync` 注解来实现。
 
@@ -9264,7 +9167,7 @@ Spring 提供了 `@Async` 注解，它可以应用于任何方法的签名之上
 
 首先，我们用错误的方法来做一遍。你能看出 `AsyncDemo` 类中这段代码的问题所在吗？
 
-```
+```java
 public void incorrectAsync(){
   performHeads("Incorrect");
   performTails("Incorrect");
@@ -9294,7 +9197,7 @@ public void incorrectAsync(){
 
 为了修复这个问题，让我们从 `@SpringBootApplication` 类中调用这些方法，在我们的案例中是 `ConcurrencyApplication`。运行此应用程序并注意 `AsyncDemo` 实例被注入到变量 `asyncDemo` 中。然后 `run` 方法进行了以下调用：
 
-```
+```java
 log.info("Starting perform heads and perform tails");
 asyncDemo.performHeads("Correct");
 ayncDemo.performTails("Correct");
@@ -9317,13 +9220,13 @@ ayncDemo.performTails("Correct");
    INFO  c.w.r.concurrency.AD - Correct Heads
 ```
 
-### 使用 @Scheduled/@@EnableScheduling
+### 使用 @Scheduled/@EnableScheduling
 
 你还可以告诉 Spring 调度一个任务，从指定时间（默认是现在）开始，每隔指定的毫秒运行一次。
 
 这种方式的示例也在我们的 `AsyncDemo` 类中，方法 `fixedRateTest()` 如下如下：
 
-```
+```java
 @Scheduled(initialDelay = 20000, fixedRate = 1000)
 public void fixedRateTest(){
    log.info("Fixed rate");
@@ -9338,7 +9241,7 @@ public void fixedRateTest(){
 
 我们的 `AsyncDemo` 类自动注入了一个 `TaskExecutor` 实例，该实例在 `useTaskExecutor()` 方法中用于并行执行 `performHeads()` 和 `performTails()` 方法。
 
-```
+```java
 @Autowired TaskExecutor taskExecutor;
        . . .
 public void useTaskExecutor(){
@@ -9347,9 +9250,7 @@ public void useTaskExecutor(){
 }
 ```
 
-从交替的输出和日志中的两个线程名称，你可以看到这两个方法正在并行调用：
-
-
+从交替的输出和日志中的两个线程名称，你可以看到这两个方法正在并行调用。
 
 
 
@@ -9367,9 +9268,8 @@ public void useTaskExecutor(){
 2024-07-21 12:44:08 [task-2]
    INFO  c.w.r.concurrency.AD - using TaskExecutor Tails
 ```
-```
 
-### 理解 @Transactional
+### 理解 `@Transactional`
 
 虽然 `@Transactional` 并不是专门的并发注解，但它在我们微服务驱动的世界中，对于管理事务和确保数据一致性至关重要，我们至少应该提到它。在编程世界中，当我们说一个部分调用是一个事务时，我们的意思是这些部分要么全部完成，要么全部回滚。
 
@@ -9456,9 +9356,6 @@ file:///C:/Documents/happy_birthday_sis.pdf
 
 在将正则表达式添加到 Java 代码之前，你可能希望熟悉正则表达式语法。为了开发你的正则表达式，请随身携带正则表达式测试器。网上有很多此类工具。我们喜欢 [`https://regex101.com`](https://regex101.com)，它为所有正则功能提供完整支持。
 
-
-
-
 正则表达式在不同的编程语言和环境中相似类似的，但它们并不总是完全相同。在 `Regex101` 网站上，你可以在左侧导航栏中选择 `Java` 变体，以获取 `Java` 的精确语法和选项。图 10.2 显示了网站上的 `\d+:` 示例。
 
 ![正则表达式窗口的截图。在变体菜单中，选择了 java 68。正则表达式输入在给定的栏中。右侧显示了说明。](img/c10f002.png)
@@ -9533,9 +9430,6 @@ xxx{0,}
 ![带有字符的表格。标记了 A, G, E, E, K。数字显示它们之间的位置。](img/c10f002.png)
 
 图 10.3: 边界
-
-
-
 
 如果你想从一组预定义的字符集中选取零个或多个字符序列，那么字符类会很有用。但如果你想匹配一个字符序列或另一个字符序列呢？你可以使用 `|`（管道符号）字符来提供选项。例如，你可以通过这种方式决定午餐吃什么：
 
@@ -9639,15 +9533,17 @@ String[] words = text.split(" ");
 System.out.println(Arrays.toString(words)); // [java, book]
 ```
 
-
-
-
 此模式匹配由一个或多个相邻连字符和空格组成的分隔符。在使用 `split()` 方法时，请确保你的分隔符不会匹配零字符字符串，否则你将得到一组单字符，如例例所示：
 
-```
+
+
+```java
 String text = "123 - 456 - 789";
+
 String[] words = text.split("[- ]*"); // matches zero or more characters
+
 System.out.println(words.length);         // 11
+
 System.out.println(Arrays.asList(words)); // [1, 2, 3,, 4, 5, 6,, 7, 8, 9]
 ```
 
@@ -9655,10 +9551,13 @@ System.out.println(Arrays.asList(words)); // [1, 2, 3,, 4, 5, 6,, 7, 8, 9]
 
 如果正则表达式匹配了文本的开头或结尾，你可能会感到惊讶。在这个示例中，它同时匹配了这两者：
 
-```
+```java
 String text = "- 123 - 456 - 789 -";
+
 String[] words = text.split("[- ]+");
+
 System.out.println(words.length);
+
 System.out.println(Arrays.asList(words));
 ```
 
@@ -9668,33 +9567,43 @@ System.out.println(Arrays.asList(words));
 
 虽然 `split()` 最常用的调用方式只传入正则表达式，但也有一个接受两个参数的变体。第二个参数是一个称为 `limit` 的数字，用于自定义 `split()` 的行为。虽然第二个参数较少使用，但了解它是有好的。以下示例展示了这些差异：
 
-```
+```java
 String text = "- 123 - 456 - 789 -";
+
 String[] limit0 = text.split("[- ]+", 0);
+
 System.out.println(limit0.length); // 4
+
 System.out.println(Arrays.asList(limit0)); // [, 123, 456, 789]
 
 String[] limit3 = text.split("[- ]+", 3);
+
 System.out.println(limit3.length); // 3
+
 System.out.println(Arrays.asList(limit3)); // [, 123, 456]
 
 String[] limitNegative = text.split("[- ]+", -1);
+
 System.out.println(limitNegative.length); // 5
+
 System.out.println(Arrays.asList(limitNegative)); // [, 123, 456, 789]
 ```
 
-从第一次调用中可以看出，当 limit 为 `0` 时，输出与不传递 limit 就调用 `split()` 相同。实际上，在后台，`split(regex)` 方法调用了 `split(regex, 0)`。
+从第一次调用中可以看出，当 `limit` 为 `0` 时，输出与不传递 `limit` 就调用 `split()` 相同。实际上，在后台，`split(regex)` 方法调用了 `split(regex, 0)`。
 
-传递一个正数作为 limit 更有趣；它将结果数组限制为该数字数量的最大元素大小。如果有更多的匹配项，只有前 n-1 个（其中 `n` 是 limit）会被分割，超出部分将作为最后一个项合并。在第二次调用中，我们提供了一个为 `3` 的 limit。由于以分隔符开头，第一个元素是空字符串，第二个元素是 `123`，第三个是整个字符串的剩余部分。
+传递一个正数作为 `limit` 更有趣；它将结果数组限制为该数字数量的最大元素大小。如果有更多的匹配项，只有前 `n-1` 个（其中 `n` 是 `limit`）会被分割，超出部分将作为最后一个项合并。在第二次调用中，我们提供了一个为 `3` 的 `limit`。由于以分隔符开头，第一个元素是空字符串，第二个元素是 `123`，第三个是整个字符串的剩余部分。
 
-传递任何负 `int` 返回的结果与传递零 limit 相同，不同之处如果末尾有匹配项，它会被包含在内。这会在数组中多给出一个元素。
+传递任何负 `int` 返回的结果与传递零 `limit` 相同，不同之处如果末尾有匹配项，它会被包含在内。这会在数组中多给出一个元素。
 
-最后，Java 21 增加了另一个名为 `splitWithDelimiters()` 的方法。它的行为与带有正 limit 值的 `split()` 相同，但它也将匹配的分隔符作为返回数组的元素。这些分隔符元素不计入 limit。例如：
+最后，Java 21 增加了另一个名为 `splitWithDelimiters()` 的方法。它的行为与带有正 `limit` 值的 `split()` 相同，但它也将匹配的分隔符作为返回数组的元素。这些分隔符元素不计入 `limit`。例如：
 
-```
+```java
 String text = "- 123 - 456 - 789 -";
+
 String[] limit3 = text.splitWithDelimiters("[- ]+", 3);
+
 System.out.println(limit3.length); // 3
+
 System.out.println(Arrays.asList(limit3)); // [, -, 123, -, 456]
 ```
 
@@ -9708,19 +9617,25 @@ System.out.println(Arrays.asList(limit3)); // [, -, 123, -, 456]
 
 `String` 类上的 `matches()` 方法告知你正则表达式是否匹配了整个目标。然而，通常你并不想匹配整个目标，而是想扫描文本以找到所有匹配特定正则表达式的区域。你可以使用 `matcher.find()` 方法来实现，如下：
 
-```
+```java
 11: String text = "java book";
+
 12: Pattern pattern = Pattern.compile("\\w+");
+
 13: Matcher matcher = pattern.matcher(text);
+
 14: while (matcher.find()) {
+
 15:    System.out.println(matcher.group());
+
 16: }
 ```
 
 这段代码输出以下内容：
 
-```
+```text
 java
+
 book
 ```
 
@@ -9728,23 +9643,28 @@ book
 
 `group()` 方法不带参数时返回整个匹配项。你也可以提供一个可选的 `int` 参数来访问特定的组：
 
-```
+```java
 String text = "java book";
+
 Pattern pattern = Pattern.compile("\\w+");
+
 Matcher matcher = pattern.matcher(text);
+
 while (matcher.find()) {
+
    String chars = matcher.group(); // 这里的匹配项
+
    System.out.println(chars);
+
 }
 ```
 
 这段代码输出以下内容：
 
-```
+```text
 java
+
 book
-```
-```
 ```
 
 注意 `world` 中的 `d` 是被省略的，因为它不是一对单词字符。组索引是根据括号进行编号的。等等？为什么我们要从 1 开始计数？难道 Java 的索引不是从 0 开始的吗？答案是 `group(0)` 用于返回整个匹配项，因此为了访问特定的组，必须从 1 开始计数。
@@ -9753,37 +9673,53 @@ book
 
 `String` 类的 `replaceFirst()` 和 `replaceAll()` 方法在你想替换第一个匹配项或所有匹配项时非常好。但如果你想要更具体的替换逻辑；例如，假设你想替换每一个可能的匹配项。幸运的是，你也可以用 `Pattern` 和 `Matcher` 实现。这个有趣的方法会将每个偶数单词（一个或多个字母）转换为大写：
 
-
-
-
-
-```
+```java
 20: String text = "-->The---quick---brown---fox---jumped!!";
+
 21: StringBuffer buffer = new StringBuffer();
+
 22: Pattern pattern = Pattern.compile("\\w+");
+
 23: Matcher matcher = pattern.matcher(text);
+
 24: boolean flip = false;
+
 25: for(int i = 0; matcher.find(); i++) {
+
 26:    String group = matcher.group();
+
 27:    flip = !flip;
+
 28:    if(flip) {
+
 29:       group = group.toUpperCase();
+
 30:    }
+
 31:    matcher.appendReplacement(buffer, group);
+
 32:    System.out.println(i + "." + buffer);
+
 33: }
+
 34: matcher.appendTail(buffer);
+
 35: System.out.println(buffer);
 ```
 
 输出如下：
 
-```
+```text
 0.-->THE
+
 1.-->THE---quick
+
 2.-->THE---quick---BROWN
+
 3.-->THE---quick---BROWN---fox
+
 4.-->THE---quick---BROWN---fox---JUMPED
+
 -->THE---quick---BROWN---fox---JUMPED!!
 ```
 
@@ -9799,22 +9735,31 @@ book
 
 尝试另一个例子，你认为这段代码会做什么？
 
-```
+```java
 String text = "java book";
+
 StringBuffer buffer = new StringBuffer();
+
 Pattern pattern = Pattern.compile("(\\w)(\\w)(\\w)(\\w)");
+
 Matcher matcher = pattern.matcher(text);
+
 while (matcher.find()) {
+
    matcher.appendReplacement(buffer, "$1 $2 $3 $4\n");
+
 }
+
 matcher.appendTail(buffer);
+
 System.out.println(buffer);
 ```
 
 它输出以下内容：
 
-```
+```text
 j a v a
+
  b o o k
 ```
 
@@ -9822,23 +9767,33 @@ j a v a
 
 如果你想在替换中包含某些正则命令字符的字面值（例如反斜杠或美元符号）怎么办？`quoteReplacement()` 方法告诉 Java 使用字面值而不是它们的特殊含义。例如：
 
-```
+```java
 String text = "java book";
+
 StringBuffer buffer = new StringBuffer();
+
 Pattern pattern = Pattern.compile("(\\w)(\\w)(\\w)(\\w)");
+
 Matcher matcher = pattern.matcher(text);
+
 while (matcher.find()) {
+
    // 包含字面的 \ 和 $
+
    String replacement = Matcher.quoteReplacement("\\$1.00");
+
    matcher.appendReplacement(buffer, replacement);
+
 }
+
 matcher.appendTail(buffer);
+
 System.out.println(buffer);
 ```
 
 这次的输出如下：
 
-```
+```text
 \$1.00 \$1.00
 ```
 
@@ -9848,19 +9803,25 @@ System.out.println(buffer);
 
 `Pattern` 提供了一个非常有用的拆分方法，该方法在 `String` 上无法直接使用。通过 `Pattern`，你可以创建一个 `Stream<String>` 而不是 `String[]`。例如：
 
-```
+```java
 String text = "- 123 - 456 - 789 -";
+
 Pattern pattern = Pattern.compile("[- ]+");
+
 Stream<String> stream = pattern.splitAsStream(text);
+
 stream.forEach(a -> System.out.println("*" + a + "*"));
 ```
 
 这段代码输出以下内容：
 
-```
+```text
 **
+
 *123*
+
 *456*
+
 *789*
 ```
 
@@ -9880,39 +9841,57 @@ stream.forEach(a -> System.out.println("*" + a + "*"));
 
 以下示例使用了前两个标志：
 
-```
+```java
 String text = """
+
    Real-World Java: Helping You Navigate the Java Ecosystem
+
    Victor Grazi
+
    Jeanne Boyarsky""";
 
 Pattern pattern = Pattern.compile("real.*sky", Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+
 Matcher matcher = pattern.matcher(text);
 
 if (matcher.find()) {
+
    System.out.println("I got this book!");
+
 }
+
 else {
+
    System.out.println("I should have gotten book!");
+
 }
 ```
 
-在之前的代码中，位运算符 (`|`) 组合了标志。`CASE_INSENSITIVE` 标志将正则表达式中的小写 `r` 匹配输入中的大写 `R`。`DOTALL` 将字符串中的换行符视为任何字符。
+在之前的代码中，位运算符（`|`）组合了标志。`CASE_INSENSITIVE` 标志将正则表达式中的小写 `r` 匹配输入中的大写 `R`。`DOTALL` 将字符串中的换行符视为任何字符。
 
 与其将这些标志作为参数传递给 `compile` 方法，不如将它们直接嵌入正则模式中。当你将正则传递给 `String.matches()` 方法时，这特别有用，因为该方法没有接受单独标志的版本。
 
 之前的示例可以使用嵌入标志的形式如下：
 
-```
+```java
 String text = """
+
    Real-World Java: Helping You Navigate the Java Ecosystem
+
    Victor Grazi
+
    Jeanne Boyarsky""";
+
 if (text.matches("(?i)(?s)real.*sky")) {
+
    System.out.println("I got this book!");
+
 }
+
 else {
+
    System.out.println("I should have gotten this book!");
+
 }
 ```
 
@@ -9922,49 +9901,55 @@ else {
 
 ```java
 String text = """
+
    Real-World Java: Helping You Navigate the Java Ecosystem
+
    Victor Grazi
+
    Jeanne Boyarsky""";
+
 Pattern pattern = Pattern.compile(".*[iy]$", Pattern.MULTILINE);
+
 Matcher matcher = pattern.matcher(text);
+
 while (matcher.find()) {
+
    System.out.println(matcher.group());
+
 }
 ```
 
-正则表达式匹配任何以 *i* 或 *y* 结尾的内容。由于处于 `MULTILINE` 模式，它将找到所有以 *i* 或 *y* 结尾的行。
 
 
+正则表达式匹配任何以`i`或`y`结尾的内容。由于处于`MULTILINE`模式，它将找到所有以`i`或`y`结尾的行。
 
-
-
-`MULTILINE` 标志用 `$` 匹配每个换行符。由于 Victor Grazi 和 Jeanne Boyarsky 分别以 `i` 和 `y`结尾，因此两行都会输出。如果没有该标志，只有 Jeanne 的那行会被输出，因为此时 `$` 只匹配 `String` 的结尾。
+`MULTILINE`标志用`$`匹配每个换行符。由于 Victor Grazi 和 Jeanne Boyarsky 分别以`i`和`y`结尾，因此两行都会输出。如果没有该标志，只有 Jeanne 的那行会被输出，因为此时`$`只匹配`String`的结尾。
 
 # 探索高级正则表达式语法
 
 到目前为止，你看到的基础正则表达式语法。现在让我们通过查看更细粒度控制的语法来更上一层。
 
-首先，我们将查看正向和负向的断瞻与后行查找。这些语法允许你根据相邻文本来改变匹配内容。之后，你将看到如何指定贪婪、懒惰和独占量量符。
+首先，我们将查看正向和负向的断瞻与后行查找。这些语法允许你根据相邻文本来改变匹配内容。之后，你将看到如何指定贪婪、懒惰和独占量词。
 
 ## 查看相邻文本
 
-到目前为止，本章中的正则表达式直接匹配输入文本。但如果你想相对于输入中的其他文本查找匹配项呢？针对这种情况有四种类型的结构。假设你有文本 `dev.java/playground` 并想匹配 `java`。然而，你只想在上下文满足某些条件时才匹配。这四种方法如下：
+到目前为止，本章中的正则表达式直接匹配输入文本。但如果你想相对于输入中的其他文本查找匹配项呢？针对这种情况有四种类型的结构。假设你有文本`dev.java/playground`并想匹配`java`。然而，你只想在上下文满足某些条件时才匹配。这四种方法如下：
 
-*   **正向断瞻 (Positive look-ahead)：** 检查某个模式是否紧跟在后面。例如，“仅当字母 `g` 紧跟在单词 `play` 之后时匹配。”
-*   **负向断瞻 (Negative look-ahead)：** 检查某个模式是否没有紧跟在后面。例如，“仅当字母没有紧跟在单词 `java` 之后时匹配。”
-*   **正向后行查找 (Positive look-behind)：** 检查某个模式是否紧跟在前面。例如，“仅当点出现在 `java` 之前时匹配。”
-*   **负向后行查找 (Negative look-behind)：** 检查某个模式是否没有紧跟在前面。例如，“仅当数字没有出现在 `java` 之前时匹配。”
+*   **正向断瞻 (Positive look-ahead)：** 检查某个模式是否紧跟在后面。例如，“仅当字母`g`紧跟在单词`play`之后时匹配。”
+*   **负向断瞻 (Negative look-ahead)：** 检查某个模式是否没有紧跟在后面。例如，“仅当字母没有紧跟在单词`java`之后时匹配。”
+*   **正向后行查找 (Positive look-behind)：** 检查某个模式是否紧跟在前面。例如，“仅当点出现在`java`之前时匹配。”
+*   **负向后行查找 (Negative look-behind)：** 检查某个模式是否没有紧跟在前面。例如，“仅当数字没有出现在`java`之前时匹配。”
 
-正向断瞻使用语法 `(?=X)`，其中 `X` 是要在断瞻中使用的正则表达式。正向后行查找在语法中增加了 `<`，变为 `(?<=X)`。你可以记住这一点，因为小于符号指向左侧，即是“之前”的方向。负向断瞻和后行查找在 `?` 之后使用 `!` 而不是 `=` 来表示否定。
+正向断瞻使用语法`(?=X)`，其中`X`是要在断瞻中使用的正则表达式。正向后行查找在语法中增加了`<`，变为`(?<=X)`。你可以记住这一点，因为小于符号指向左侧，即是“之前”的方向。负向断瞻和后行查找在`?`之后使用`!`而不是`=`来表示否定。
 
-表 10.5 回顾了这些构造结构的语法。对于后行查找，注意 `java` 位于括号中。这表示我们想要查找整个单词 `java` 之前，而不仅仅是最后一个 `a` 之前。
+表 10.5 回顾了这些构造结构的语法。对于后行查找，注意`java`位于括号中。这表示我们想要查找整个单词`java`之前，而不仅仅是最后一个`a`之前。
 
 | NAME | SYNTAX | EXAMPLE | DESCRIPTION |
 | --- | --- | --- | --- |
-| 正向断瞻 | `(?=X)` | `play(?=g)` | 如果紧跟一个 `g`，则匹配单词 `play`。 |
-| 负向断瞻 | `(?!X)` | `java(?![a-z])` | 如果没有紧跟小写字母，则匹配单词 `java`。 |
-| 正向后行查找 | `(?<=X)` | `(?<=[.])(java)` | 如果前面紧跟字面量点，则匹配单词 `java`。 |
-| 负向后行查找 | `(?<!X)` | `(?<![0-9])(java)` | 如果前面不是不是数字，则匹配单词 `java`。 |
+| 正向断瞻 | `(?=X)` | `play(?=g)` | 如果紧跟一个`g`，则匹配单词`play`。 |
+| 负向断瞻 | `(?!X)` | `java(?![a-z])` | 如果没有紧跟小写字母，则匹配单词`java`。 |
+| 正向后行查找 | `(?<=X)` | `(?<=[.])(java)` | 如果前面紧跟字面量点，则匹配单词`java`。 |
+| 负向后行查找 | `(?<!X)` | `(?<![0-9])(java)` | 如果前面不是数字，则匹配单词`java`。 |
 
 表 10.5：正向/负向断瞻/后行查找模式
 
@@ -9976,15 +9961,15 @@ once upon a time
 
 让我们看看某些模式是如何匹配的：
 
-*   `on`: 这个示例（不带断瞻或后行查找）匹配字母 `on` 且没有进一步限制，匹配了两个两个字母的实例：`on`ce up`on` a time。
-*   `on(?=ce)`: 这个正向断瞻示例匹配后面跟随字母 `ce` 的字母 `on`，结果匹配了两个字母的 `once` upon a time。
-*   `on(?!ce)`: 这个负向断瞻示例匹配后面*没有*跟随字母 `ce` 的字母 `on`，结果匹配了两个字母的 `once up`on` a time。
-*   `(?<=up)on`: 这个正向后行查找仅当 `on` 紧跟在字母 `up` 之后时匹配它们，结果匹配了两个字母的 `once up`on` a time。
-*   `(?<!up)on`: 这个负向后行查找在 `on` 不是紧跟在字母 `up` 之后时才匹配它们，结果匹配了两个字母的 `on`ce upon a time。
+*   `on`: 这个示例（不带断瞻或后行查找）匹配字母`on`且没有进一步限制，匹配了两个字母的实例：`on`ce up`on` a time。
+*   `on(?=ce)`: 这个正向断瞻示例匹配后面跟随字母`ce`的字母`on`，结果匹配了两个字母的`once` upon a time。
+*   `on(?!ce)`: 这个负向断瞻示例匹配后面*没有*跟随字母`ce`的字母`on`，结果匹配了两个字母的`once up`on` a time。
+*   `(?<=up)on`: 这个正向后行查找仅当`on`紧跟在字母`up`之后时匹配它们，结果匹配了两个字母的`once up`on` a time。
+*   `(?<!up)on`: 这个负向后行查找在`on`不是紧跟在字母`up`之后时才匹配它们，结果匹配了两个字母的`on`ce upon a time。
 
-## 区分量量符
+## 区分量词
 
-在章节早期，你学习了量量符。表 10.1 列出了最常见的。但还有很多，表 10.6 提供了完整的列表。注意懒惰量量符增加一个 `?`，而独占量量符增加 `+`。让我们了解它们的含义。
+在章节早期，你学习了量词。表 10.1 列出了最常见的。但还有很多，表 10.6 提供了完整的列表。注意懒惰量词增加一个`?`，而独占量词增加`+`。让我们了解它们的含义。
 
 | DESCRIPTION | GREEDY | RELUCTANT | POSSESSIVE |
 | --- | --- | --- | --- |
@@ -9995,23 +9980,25 @@ once upon a time
 | 三或更多 | `J{3,}` | `J{3,}?` | `J{3,}+` |
 | 三、四或五 | `J{3,5}` | `J{3,5}?` | `J{3,5}+` |
 
-表 10.6：所有量量符
+表 10.6：所有量词
 
-假设你有以下文本，并想匹配任何后面跟着 `row your boat` 的字符。你预期会有多少匹配项？
+假设你有以下文本，并想匹配任何后面跟着`row your boat`的字符。你预期会有多少匹配项？
 
 ```
 Poem:
+
 Row, row, row your boat,
+
 Gently down the stream,
+
 Merrily, merrily, merrily, merrily
+
 Life is but a dream.
+
 Row, row, row your boat … dream
 ```
 
-正确答案取决于你使用哪种量量符！
-
-
-
+正确答案取决于你使用哪种量词！
 
 如果你移动空格形成这种模式，情况会变得更有趣：
 
@@ -10019,7 +10006,7 @@ Row, row, row your boat … dream
 (row)*+ your boat
 ```
 
-占有量化符首先捕获文本的前三个字母：`row`。由于输入的第四个字符是空格，且后面没有跟着 `your boat`，因此它无法匹配成功，所以这三个字符被忽略了。接着考虑下一个单词 `row`。这次它后面跟着一个空格和 `your boat`。太棒了！有量化符版本找到了匹配项。
+占有量化符首先捕获文本的前三个字母：`row`。由于输入的第四个字符是空格，且后面没有跟着`your boat`，因此它无法匹配成功，所以这三个字符被忽略了。接着考虑下一个单词`row`。这次它后面跟着一个空格和`your boat`。太棒了！有量化符版本找到了匹配项。
 
 ```
 row row your boat
@@ -10027,22 +10014,22 @@ row row your boat
 
 ## 识别常见错误
 
-在第 4 章“使用 Maven、Gradle 和 Jenkins 自动化你的 CI/CD 构建”中，你学习了 `SonarQube` 是一种常见的静态分析工具。它 true 一个名为 `SonarLint` 的 IDE 插件。`Sonar` 非常擅长识别正则表达式中的常见问题，以及 Java 代码本身。
+在第 4 章“使用 Maven、Gradle 和 Jenkins 自动化你的 CI/CD 构建”中，你学习了`SonarQube`是一种常见的静态分析工具。它提供一个名为`SonarLint`的 IDE 插件。`Sonar`非常擅长识别正则表达式中的常见问题，以及 Java 代码本身。
 
 表 10.7 显示了一些亮点。理解这些常见错误也将帮助你更好地理解如何编写正则表达式。
 
 | 代码 | 错误之处 |
 | --- | --- |
-| `[ab]&#124;a` | `a` 是多余的；`[ab]` 实现了相同的功能。 |
+| `[ab]&#124;a` | `a`是多余的；`[ab]`实现了相同的功能。 |
 | `x = x` `.replaceAll("\\.\\.\\...",` \n `";")` | 完全不需要正则表达式。这样做的效果相同且更易读：`x = x` \n `.replace("…", "");` |
 | `<.+?>` | 这会产生不必要的回溯。更具体的正则表达式可以避免这种回溯：`<[^>]+>` |
-| `$[a-z]^` | 锚符方向反了。正确的写法应该是：`^[a-z]$` | 作为记忆辅助，`^` 指向上，表示开头。`$` 代表钱，即底线。 |
-| `(?=a)b` | 这是不可能的。你已经知道下一个字符是 `b`，所以对 `a` 的正向先行断言始终为假。因此，单独的 `b` 就能匹配相同的结果。 |
-| `a++abc` | 这是不可能的。由于 `a++` 是占有的，它会消耗掉所有连续的 `a` 实例，所以后面不能再有另一个。 |
+| `$[a-z]^` | 锚符方向反了。正确的写法应该是：`^[a-z]$` | 作为记忆辅助，`^`指向上，表示开头。`$`代表钱，即底线。 |
+| `(?=a)b` | 这是不可能的。你已经知道下一个字符是`b`，所以对`a`的正向先行断言始终为假。因此，单独的`b`就能匹配相同的结果。 |
+| `a++abc` | 这是不可能的。由于`a++`是占有的，它会消耗掉所有连续的`a`实例，所以后面不能再有另一个。 |
 
 **表 10.7**: 正则表达式错误示例
 
-`SonarQube` 还有一条规则用于确保你的正则表达式不要太复杂。正则表达式是你工具箱中的工具，而不是用于每项任务的工具！
+`SonarQube`还有一条规则用于确保你的正则表达式不要太复杂。正则表达式是你工具箱中的工具，而不是用于每项任务的工具！
 
 ## 使用正则表达式编码
 
@@ -10082,20 +10069,17 @@ file:///C:/Documents/happy_birthday_sis.pdf
 
 第 10-14 行创建了一个包含想要测试的 URI 的文本块。第 16-19 行使用自解释变量清晰地说明我们想要匹配的内容。第 16 行提供了匹配两个或更多斜杠的英文描述。第 17 行匹配一个或多个字符，捕获结果以供后续匹配。第 18 行匹配除斜杠以外的一个或多个字符，同样捕获结果。
 
-第 19-20 行将这些子表达式组合成最终的正则表达式。第 22-23 行创建了 `Pattern` 和 `Matcher`。最后，第 24-27 行遍历三个匹配的 URI，并获取所需信息的匹配组。
+第 19-20 行将这些子表达式组合成最终的正则表达式。第 22-23 行创建了`Pattern`和`Matcher`。最后，第 24-27 行遍历三个匹配的 URI，并获取所需信息的匹配组。
 
-作为另一个例子，在上一章中，你需要解析关于虚拟线程的信息。使用正则表达式实现此点的有两种良好方法。一种是使用与之前示例类似的方法，使用 `Pattern` 和 `Matcher`。
+作为另一个例子，在上一章中，你需要解析关于虚拟线程的信息。使用正则表达式实现此点的有两种良好方法。一种是使用与之前示例类似的方法，使用`Pattern`和`Matcher`。
 
 ```java
 String text = "VirtualThread/runnable@ForkJoinPool";
 ```
 
+`JUnit Pioneer`库也支持正则表达式。例如，你可以根据显示名称（display name）来禁用测试。在这种情况下，代码禁用了所有名称较长的月份测试：
 
-
-
-`JUnit Pioneer` 库也支持正则表达式。例如，你可以根据显示名称（display name）来禁用测试。在这种情况下，代码禁用了所有名称较长的月份测试：
-
-```
+```java
 static List<String> months() {
    return List.of("January", "February", "March", "April", "May",
       "June", "July", "August", "September", "October",
@@ -10112,25 +10096,24 @@ void shortMonths(String reason) {
 
 ### 为 Log4j 编写正则表达式
 
-有时，你需要超越日志级别的限制，来限制 Log4J 记录的内容。名为 `filters`（过滤器）的功能允许你根据消息中的值来自定义日志的内容。假设你的审计部门不允许你记录 `secret` 单词。你可以在挂载器（appender）上设置一个过滤器来忽略整行，如下所示：
+有时，你需要超越日志级别的限制，来限制 Log4J 记录的内容。名为`filters`（过滤器）的功能允许你根据消息中的值来自定义日志的内容。假设你的审计部门不允许你记录`secret`单词。你可以在挂载器（appender）上设置一个过滤器来忽略整行，如下所示：
 
-```
+```xml
 <RegexFilter regex=".* secret .*" onMatch="DENY" onMismatch="ACCEPT"/>
 ```
 
-上述代码告诉 Log4J 跳过任何包含两边都有空格的 `secret` 消息。
+上述代码告诉 Log4J 跳过任何包含两边都有空格的`secret`消息。
 
 ### 为 Bean Validation 编写正则表达式
 
 豆验证框架（bean validation framework）提供了许多验证器来检查 JavaBean 是否具有预期值。
 
-其中一个验证器是 `@Pattern`，它使用正则表达式：
+其中一个验证器是`@Pattern`，它使用正则表达式：
 
-```
+```java
 import jakarta.validation.constraints.Pattern;
 
 public class Bean {
-
     @Pattern(regexp = "[A-Z]+")
     private String uppercaseLetters;
 
@@ -10144,20 +10127,19 @@ public class Bean {
 }
 ```
 
-在此示例中，如果 `uppercaseLetters` 包含小写字母或任何非字母字符，验证将失败。
+在此示例中，如果`uppercaseLetters`包含小写字母或任何非字母字符，验证将失败。
 
 ### 为 Spring 编写正则表达式
 
-Spring 在 Spring MVC 中使用正则表达式来帮助获取 URL 的部分并转换为变量。例如，在这个控制器中，一个数字序列被匹配并赋值给变量 `bookId`：
+Spring 在 Spring MVC 中使用正则表达式来帮助获取 URL 的部分并转换为变量。例如，在这个控制器中，一个数字序列被匹配并赋值给变量`bookId`：
 
-```
+```java
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TheController {
-
    @RequestMapping("/book/{bookId:[0-9]+}")
    public String getBookById(@PathVariable("bookId") String bookId) {
       String result = // build return value
@@ -10166,24 +10148,26 @@ public class TheController {
 }
 ```
 
-在前面的代码中，Spring 获取类似 `/books/469` 的 URL 并将 469 存储在 `bookId` 参数中。使用正则表达式让你在指定应该匹配的格式时具有极大的灵活性。
+
+
+在前面的代码中，Spring 获取类似 `/books/469` 的 URL 并将 `469` 存储在 `bookId` 参数中。使用正则表达式让你在指定应该匹配的格式时具有极大的灵活性。
 
 ## 进一步参考
 
 * [`https://www.pluralsight.com/courses/playbook-regular-expressions-java-fundamentals`](https://www.pluralsight.com/courses/playbook-regular-expressions-java-fundamentals)
-    * Victor 在 Pluralsight 上的正则表达式课程
+  * Victor 在 Pluralsight 上的正则表达式课程
 * [`https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/regex/Pattern.html`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/regex/Pattern.html)
-    * Java Pattern 文档
+  * Java Pattern 文档
 * [`https://regex101.com`](https://regex101.com)
-    * 正则表达式测试器
+  * 正则表达式测试器
 * [`https://commons.apache.org/proper/commons-csv`](https://commons.apache.org/proper/commons-csv)
-    * Apache Commons CSV
+  * Apache Commons CSV
 * [`https://opencsv.sourceforge.net`](https://opencsv.sourceforge.net)
-    * Open CSV
+  * Open CSV
 * [`https://commons.apache.org/proper/commons-validator`](https://commons.apache.org/proper/commons-validator)
-    * Apache Commons Validator
+  * Apache Commons Validator
 * [`https://regexcrossword.com`](https://regexcrossword.com)
-    * 用于更好地学习正则表达式的交叉谜
+  * 用于更好地学习正则表达式的交叉谜
 * *Introducing Regular Expressions* (O'Reilly, 2012)
 * *Regular Expressions Cookbook* (O'Reilly, 2012)
 
@@ -10197,9 +10181,7 @@ public class TheController {
 * 内置的 Java API 支持正则表达式。
 * 正则表达式也用于各种库。
 
-# 11
-
-以面向切面的方式编码
+# 11 以面向切面的方式编码
 
 并不是你所有的 Java 代码都写在你的 Java 代码中。虽然这个悖论听起来像某个禅宗公案，但它有效地为本章关于 `aspects`（切面）的编码铺定了基础，切面是正交函数，当满足某些条件时可以触发执行。我们将展示切面的益处以及如何编写自己的切面。
 
@@ -10207,15 +10189,19 @@ public class TheController {
 
 想象以下场景——你收到一个新需求，要修改每个 REST 端点，使其开始时捕获开始时间并记录消息，结束时记录调用时间。
 
-```
+```java
 public void someEndpoint(){
+
    long start = System.currentTimeMillis();
+
    log.info("Starting someEndpoint");
 
    // 执行一些操作
 
    long duration = System.currentTimeMillis() - start;
+
    log.info("Completed someEndpoint.{}ms", duration);
+
 }
 ```
 
@@ -10243,39 +10229,49 @@ public void someEndpoint(){
 
 原始代码如下：
 
-```
+```java
 @RestController
+
 public class ProductController {
 
    private final Map<String, Product> productMap = new HashMap<>();
 
    @PostMapping("/product")
+
    public void addProduct(@RequestBody Product product) {
+
       productMap.put(product.getStyleNum(), product);
+
    }
 
    @DeleteMapping("/product")
+
    public Product removeProduct(String styleNumber){
+
       return productMap.remove(styleNumber);
+
    }
 
    @GetMapping("/product")
+
    public Collection<Product> listProducts(){
+
       return productMap.values();
+
    }
+
 }
 ```
 
-
-
-
-
 让我们利用 Spring AOP 的魔法来添加老板要求的日志记录。第一步是创建一个 `aspect`（切面）组件，它定义了描述要拦截方法的切点（pointcut）模式，以及提供了在命中切点时要调用的代码的通知（advice）实现。切面类就是一个标准的 Java 类，同时标记了 `@Aspect` 和 `@Component` 注解。记得在你的类中导入这些包：
 
-```
+```java
 import org.aspectj.lang.JoinPoint;
+
 import org.aspectj.lang.annotation.Aspect;
+
 import org.aspectj.lang.annotation.Before;
+
 import org.springframework.stereotype.Component;
 ```
 
@@ -10285,7 +10281,7 @@ import org.springframework.stereotype.Component;
 
 #### 端点：
 
-```
+```text
 POST localhost:8081/product
 ```
 
@@ -10300,7 +10296,7 @@ POST localhost:8081/product
 
 运行应用程序并触发该端点以添加产品；你将看到包含日志消息的输出：
 
-```
+```text
 ===============> called addProduct
 ```
 
@@ -10316,65 +10312,65 @@ Spring 看到了你的 `@Aspect` 注解，并引入了一个不可见的 AOP 代
 
 此外，对于列表 11.1 中的上一个切面，还有一些重要的点需要观察。
 
-*   `@Before` 注解告诉运行时在方法被调用*之前*调用此代码。
-*   要调用的方法体 `logAddOperations()` 被称为 `advice`（通知）。
-*   以 `execution` 开头的部分定义了切点：用于匹配方法的模式（被匹配的方法称为 `join point`，即连接点），以应用此 `advice`（通知）。
+* `@Before` 注解告诉运行时在方法被调用*之前*调用此代码。
+* 要调用的方法体 `logAddOperations()` 被称为 `advice`（通知）。
+* 以 `execution` 开头的部分定义了切点：用于匹配方法的模式（被匹配的方法称为 `join point`，即连接点），以应用此 `advice`（通知）。
 
 这就是 AOP 的通用流程。让我们仔细看看这些 API。你会发现 `JoinPoint` 类有几个非常有用的访问器。这里显示的是 `getSignature().getName()`。让我们看看其他 API：`getArgs()`。
 
-*   返回一个包含所有参数的 `Object[]`。例如：
+* 返回一个包含所有参数的 `Object[]`。例如：
 
-    ```
-    Product{styleNum='123', description='IPhone'}]
-    ```
+  ```text
+  Product{styleNum='123', description='IPhone'}]
+  ```
 
-*   `getKind()`：返回调用种类的 `String` 字符串表示。例如：
+* `getKind()`：返回调用种类的 `String` 字符串表示。例如：
 
-    ```
-    method-execution
-    ```
+  ```text
+  method-execution
+  ```
 
-*   `getThis()` 和 `getTarget()`：返回包含被插织方法的类的实例的 `toString()` 表示。例如：
+* `getThis()` 和 `getTarget()`：返回包含被插织方法的类的实例的 `toString()` 表示。例如：
 
-    ```
-    com.wiley.realworldjava.aop.product.ProductController@29b5747 
-    - 被插织的实例
-    ```
+  ```text
+  com.wiley.realworldjava.aop.product.ProductController@29b5747 
+  - 被插织的实例
+  ```
 
-*   `toLongString()`：返回切点的长字符串表示。例如：
+* `toLongString()`：返回切点的长字符串表示。例如：
 
-    ```
-    execution(public com.wiley.realworldjava.aop.product.Product com.wiley
-    .realworldjava.aop.product.ProductController.addProduct(com.wiley
-    .realworldjava.aop.product.Product))
-    ```
+  ```text
+  execution(public com.wiley.realworldjava.aop.product.Product com.wiley
+  .realworldjava.aop.product.ProductController.addProduct(com.wiley
+  .realworldjava.aop.product.Product))
+  ```
 
-*   `toShortString()`：返回切点的短格式表示。例如：
+* `toShortString()`：返回切点的短格式表示。例如：
 
-    ```
-    execution(ProductController.addProduct(..))
-    ```
+  ```text
+  execution(ProductController.addProduct(..))
+  ```
 
-*   `toString()`：返回切点的中间态 `String` 表示。例如：
+* `toString()`：返回切点的中间态 `String` 表示。例如：
 
-    ```
-    execution(Product com.wiley.realworldjava.aop.product.
-    ProductController.addProduct(Product))
-    ```
+  ```text
+  execution(Product com.wiley.realworldjava.aop.product.
+  ProductController.addProduct(Product))
+  ```
 
-*   `getSignature()`：`Signature` 是一个包含调用更多详细信息的类。例如：
+* `getSignature()`：`Signature` 是一个包含调用更多详细信息的类。例如：
 
-    ```
-    Product com.wiley.realworldjava.aop.product.ProductController
-    .addProduct(Product)
-    ```
+  ```text
+  Product com.wiley.realworldjava.aop.product.ProductController
+  .addProduct(Product)
+  ```
 
-*   `getStaticPart()`：`StaticPart` 仅包含关于连接点的静态信息。例如：
+* `getStaticPart()`：`StaticPart` 仅包含关于连接点的静态信息。例如：
 
-    ```
-    execution(Product com.wiley.realworldjava.aop.product.
-    ProductController.addProduct(Product))
-    ```
+  ```text
+  execution(Product com.wiley.realworldjava.aop.product.
+  ProductController.addProduct(Product))
+  ```
 
 一个重要的陷阱是，Spring AOP 只会对由 Spring 管理的类进行插织，例如 `Component`、`Bean`、`Service` 等。如果某些数据是参数或返回值，你的通知可以引用未受 Spring 管理的其他数据。你很快就会看到一些示例，但切点必须引用 Spring 管理的方法。
 
@@ -10384,12 +10380,12 @@ Spring 看到了你的 `@Aspect` 注解，并引入了一个不可见的 AOP 代
 
 让我们在图 11.2 中更仔细地观察它。
 
-*   `@Before("execution(`：告诉切面匹配任何方法。
-*   `public`：仅匹配公共方法。
-*   `*`：返回类型。
-*   `com.wiley.realworldjava.aop.product.ProductController`：全限定类名。
-*   `.addProduct`：方法名。
-*   `(..)`：零或多个参数。
+* `@Before("execution(`：告诉切面匹配任何方法。
+* `public`：仅匹配公共方法。
+* `*`：返回类型。
+* `com.wiley.realworldjava.aop.product.ProductController`：全限定类名。
+* `.addProduct`：方法名。
+* `(..)`：零或多个参数。
 
 ![切点表达式包含以下参数。执行前调用、仅匹配公共方法、返回类型、全限定类名、方法名以及参数列表。](img/c11f002.png)
 
@@ -10399,13 +10395,13 @@ Spring 看到了你的 `@Aspect` 注解，并引入了一个不可见的 AOP 代
 
 你可以使用 `*` 作为通配符匹配方法、类或包名中的任意字符范围。例如：
 
-*   方法通配符：`execution(* add*(..))`匹配任何方法。
-*   包通配符：`execution(* com.wiley.realworldjava..*.(..))`匹配 `com.wiley.realworldjava` 或其任何子包中的任何方法。
-*   类名通配符：`execution(* your.package.name.*Controller*.(..))`匹配任何包含 `Controller` 类的任何方法。
+* 方法通配符：`execution(* add*(..))`匹配任何方法。
+* 包通配符：`execution(* com.wiley.realworldjava..*.(..))`匹配 `com.wiley.realworldjava` 或其任何子包中的任何方法。
+* 类名通配符：`execution(* your.package.name.*Controller*.(..))`匹配任何包含 `Controller` 类的任何方法。
 
 同样，你可以在返回类型中指定 `*`。例如，以下内容将匹配返回以 `Pr` 开头并 `ct` 结尾的类的 `ProductController` 的 `addProduct` 方法。因此，它将匹配 `Product`、`Prospect` 和 `Predict`！
 
-```
+```text
 com.wiley.realworldjava.aop.product.Pr*ct com.wiley.realworldjava.aop.product.ProductController.addProduct(..)
 ```
 
@@ -10415,7 +10411,7 @@ com.wiley.realworldjava.aop.product.Pr*ct com.wiley.realworldjava.aop.product.Pr
 
 例如，以下内容匹配 `com.wiley.realworldjava.aop.product` 包或其子包中的任何零参数方法：
 
-```
+```text
 execution(* com.wiley.realworldjava.aop.product..*Controller*())
 ```
 
@@ -10425,11 +10421,7 @@ execution(* com.wiley.realworldjava.aop.product..*Controller*())
 
 按照你已经学习的方法从执行切点开始，只需将其标记为 `@AfterReturning` 注解即可。
 
-
-
-
-
-```
+```java
 @AfterReturning(pointcut =   "execution(public * com.wiley.realworldjava.aop.product."
    +"ProductController.addProduct(com.wiley.realworldjava.aop.product.Product))")
 public void logAfterReturning(JoinPoint joinPoint){
@@ -10439,7 +10431,7 @@ public void logAfterReturning(JoinPoint joinPoint){
 
 对 `addProduct()` 的调用显示在日志中。
 
-```
+```text
 =====> called after returning addProduct
 ```
 
@@ -10447,7 +10439,7 @@ public void logAfterReturning(JoinPoint joinPoint){
 
 这种情况，你可以对切点应用一些“签名魔法”来包含返回值，如下所示：
 
-```
+```java
 @AfterReturning("execution(public * com.wiley.realworldjava.aop.product."
   + "ProductController.addProduct(com.wiley.realworldjava.aop.product.Product))",   returning = "product")
 public void logAfterReturning(JoinPoint joinPoint, Product product){
@@ -10458,18 +10450,18 @@ public void logAfterReturning(JoinPoint joinPoint, Product product){
 
 现在对 `addProduct()` 的调用会显示在日志中。
 
-```
+```text
  ===> called after returning addProduct  returned:Product{styleNum=’123’, 
   description=’IPhone’}
 ```
 
 `@AfterReturning` 建议允许你调整返回值并将调整后的值返回给用户。例如，假设需求是返回全大写的描述。该建议可以写如下：
 
+
+
+`@AfterReturning(value = "execution(public * com.wiley.realworldjava.aop.product.ProductController.addProduct(com.wiley.realworldjava.aop.product.Product))", returning = "product")`
+
 ```
-@AfterReturning (value = 
-   "execution(public * com.wiley.realworldjava.aop.product."
-   + "ProductController.addProduct(com.wiley.realworldjava.aop.product.Product))",
-   returning = "product")
 public void descriptionToUpperCase(JoinPoint joinPoint, Product product){
    logger.info("===> called after returning {}. Returned {}.",
       joinPoint.getSignature().getName(), product) ;
@@ -10477,28 +10469,27 @@ public void descriptionToUpperCase(JoinPoint joinPoint, Product product){
 }
 ```
 
-### 使用 @AfterThrowing
+### 使用 `@AfterThrowing`
 
 该建议仅在被增强的方法通过抛出异常异常结束结束时被触发。你可以通过使用 `throwing` 参数将异常添加到方法调用中来捕获该异常。
 
 让我们我们的 `ProductController` 类中添加以下内容以模拟异常。对 `/products-exception` 端点的调用将始终抛出 `IOException`。
 
 ```
- @GetMapping("/products-exception")
-   public Collection<Product> listProductsWithException() throws IOException {
-      throw new IOException("An IOException to handle");
-   }
+@GetMapping("/products-exception")
+public Collection<Product> listProductsWithException() throws IOException {
+   throw new IOException("An IOException to handle");
+}
 ```
 
 现在在你的 `LoggingAspect1` 类中添加以下切点：
 
 ```
- @AfterThrowing(value = "execution(public * com.wiley.realworldjava.aop.product."
-      + "ProductController.listProductsWithException())", throwing = "cause")
-   public void logAfterReturning(JoinPoint joinPoint, Throwable cause){
-      logger.info("===> called after throwing {}. Throwing:{}",
-         joinPoint.getSignature().toShortString(),cause) ;
-   }
+@AfterThrowing(value = "execution(public * com.wiley.realworldjava.aop.product.ProductController.listProductsWithException())", throwing = "cause")
+public void logAfterReturning(JoinPoint joinPoint, Throwable cause){
+   logger.info("===> called after throwing {}. Throwing:{}",
+      joinPoint.getSignature().toShortString(),cause) ;
+}
 ```
 
 在这种情况下，我们在方法中捕获了 `Throwable` 引起。使用 Postman，让我们向我们的新端点发送一个 `GET` 调用。
@@ -10514,11 +10505,11 @@ localhost:8081/products-exception
    Throwing: java.io.IOException: An IOException to handle
 ```
 
-### 使用 @After
+### 使用 `@After`
 
 `@After` 与 `@AfterReturning` 和 `@AfterThrowing` 类似，不同之处你无法访问结果或任何抛出的异常。它适用于方法结束时的通用清理、日志记录或可观测性采集。
 
-### 使用 @Around
+### 使用 `@Around`
 
 `@Around` 提供了对增强方法的更细粒度的访问。通过 `@Around`，你可以在方法调用之前之后进行增强，修改任何结果，处理或修改任何异常，甚至可以完全跳过目标调用。
 
@@ -10527,16 +10518,14 @@ localhost:8081/products-exception
 让我们在 `ProductController` 中添加一个名为 `/connection` 的新 `POST` 端点。
 
 ```
- @PostMapping("/connection")
-   public Connection getDbConnection(@RequestBody Properties config) 
-      throws SQLException, ClassNotFoundException {
-
-      Connection connection = createDBConnection(config.getProperty("driver"), 
-         config.getProperty("url"), config.getProperty("username"), 
-         config.getProperty("password"));
-
-      return connection;
-   }
+@PostMapping("/connection")
+public Connection getDbConnection(@RequestBody Properties config) 
+   throws SQLException, ClassNotFoundException {
+   Connection connection = createDBConnection(config.getProperty("driver"), 
+      config.getProperty("url"), config.getProperty("username"), 
+      config.getProperty("password"));
+   return connection;
+}
 ```
 
 其思路是使用如下包含连接信息的 JSON 负载调用此端点：
@@ -10555,7 +10544,7 @@ localhost:8081/products-exception
 让我们用 AOP 纠正这一点，使用 `@Around` 建议，在每组 `Properties` 第一次调用此方法时懒懒加载相应的连接，然后将其保存在缓存中以供后续调用。
 
 ```
- 1:  private final Map<String, Connection> connectionCache = new HashMap<>();
+1:  private final Map<String, Connection> connectionCache = new HashMap<>();
 2:
 3:  @Around("execution(public * com.wiley.realworldjava.aop.product."
 4:    + "ProductController.getDbConnection(Properties))")
@@ -10593,12 +10582,9 @@ localhost:8081/products-exception
 
 在第 23 行我们发现了连接，所以我们完全跳过了实际的方法调用并直接返回该缓存实例。
 
-
-
-
 但你应该谨慎使用它。如果你的开发团队没有意识到这一点，他们可能会浪费大量沮丧的开发周期，试图理解为什么他们的产品描述被转换成了大写，为什么他们的断点（breakpoints）没有触发，或者为什么他们的方法调用是从缓存中获取的而不是运行它们的实现！
 
-### 使用 @Pointcut
+### 使用 `@Pointcut`
 
 现在是讨论复用的好时机。假设你想创建一个用于日志的 `@Before` 建议、一个用于记录时间的 `@After` 建议，以及一个用于缓存的 `@Around` 建议。你必须重复编写三次执行切点（execution pointcut）！而且上天的是，如果你想对切点进行细微更改，你需要记住所有需要修改的地方。这时 `@Pointcut` 注解登场了。`@Pointcut` 允许你为切点表达式指定一个短名称，然后使用该名称来代替切点表达式。
 
@@ -10724,6 +10710,11 @@ public void NotPointcut() {
 
 ```java
 import java.lang.annotation.ElementType;
+```
+
+
+
+```java
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
@@ -10734,11 +10725,11 @@ public @interface Cache {
 }
 ```
 
-接下来，将新的 `@Cache` 注解与切点关联。
+接下来，将新的`@Cache`注解与切点关联。
 
 ```java
 @Pointcut("@annotation(com.wiley.realworldjava.aop.Cache)")
-public void cacheMethod(){
+public void cacheMethod() {
 }
 ```
 
@@ -10748,7 +10739,7 @@ public void cacheMethod(){
 @Around("cacheMethod()")
 public Object cacheMethodResults(ProceedingJoinPoint joinPoint) throws Throwable {
    // 每个参数组合将被分别缓存。
-   // 创建表示参数的 MultiKey（   // MultiKey 允许定义任意数量的组件）：
+   // 创建表示参数的 MultiKey（MultiKey 允许定义任意数量的组件）：
    Object[] args = joinPoint.getArgs();
    Object[] argsLong = new Object[args.length + 1];
    System.arraycopy(args, 0, argsLong, 1, args.length);
@@ -10756,19 +10747,17 @@ public Object cacheMethodResults(ProceedingJoinPoint joinPoint) throws Throwable
    // 因此将方法和签名作为数组的第一个元素添加到 MultiKey 中
    argsLong[0] = joinPoint.toLongString();
    MultiKey key = new MultiKey(argsLong);
-
    Object result = methodCache.get(key);
-   if(result==null) {
+   if (result == null) {
       logger.info("没有缓存。Aspect 继续执行原始调用!");
       try {
          result = joinPoint.proceed();
          logger.info("Aspect 为后续调用缓存了连接");
          methodCache.put(key, result);
-      } catch(Throwable throwable) {
+      } catch (Throwable throwable) {
          throw throwable;
       }
-   }
-   else {
+   } else {
       logger.info("Aspect 从缓存获取了连接!");
    }
    return result;
@@ -10780,14 +10769,10 @@ private final Map<String, Object> methodCache = new HashMap<>();
 
 最后，在任何你想调用它的地方应用新的注解即可。
 
-
-
-
-
-```
+```java
 @Cache
 @PostMapping("/connection")
-public Connection getDbConnection(@RequestBody Properties config) 
+public Connection getDbConnection(@RequestBody Properties config)
    throws SQLException, ClassNotFoundException {
    Connection connection = createDBConnection(config.getProperty("driver"),
    config.getProperty("url"), config.getProperty("username"),
@@ -10796,24 +10781,24 @@ public Connection getDbConnection(@RequestBody Properties config)
 }
 ```
 
-现在对 `getDbConnection()` 的调用将在首次调用时创建一个新连接，并在后续调用中返回缓存版本。
+现在对`getDbConnection()`的调用将在首次调用时创建一个新连接，并在后续调用中返回缓存版本。
 
 尝试使用以下 Postman `POST` 请求正文进行测试：
 
 ```json
 {
     "driver": "com.mysql.cj.jdbc.Driver",
-    "url":"jdbc:mysql://localhost:3306/products",
-    "username":"vgrazi",
-    "password":"pa55w0rd"
+    "url": "jdbc:mysql://localhost:3306/products",
+    "username": "vgrazi",
+    "password": "pa55w0rd"
 }
 ```
 
-让我们再来看另一个 `@Around` 的常见示例。我们将定义一个名为 `@Timing` 的注解，它将记录标记了 `@Timing` 注解的方法调用的执行时间。
+让我们再来看另一个`@Around`的常见示例。我们将定义一个名为`@Timing`的注解，它将记录标记了`@Timing`注解的方法调用的执行时间。
 
 ```java
 @Pointcut("@annotation(com.wiley.realworldjava.aop.aspects.Timing)")
-public void timingAnnotationMethod(){
+public void timingAnnotationMethod() {
 }
 
 @Around("timingAnnotationMethod()")
@@ -10825,15 +10810,15 @@ public Object cacheTimingResults(ProceedingJoinPoint joinPoint) throws Throwable
    // 获取结束时间
    long end = System.currentTimeMillis();
    // 记录耗时
-   logger.info(">>>> Call to {} took {} ms.", joinPoint.toString(), end-start);
+   logger.info(">>>> Call to {} took {} ms.", joinPoint.toString(), end - start);
    // 返回调用结果
    return result;
 }
 ```
 
-注意，此方法返回一个结果。如果它被应用于 `void` 方法会怎样？答案是 `joinPoint.proceed()` 调用将返回 `null`，而最终的返回结果调用也将返回 `null`，调用者会忽略它，因为他们期望的是一个 `void` 返回。
+注意，此方法返回一个结果。如果它被应用于`void`方法会怎样？答案是`joinPoint.proceed()`调用将返回`null`，而最终的返回结果调用也将返回`null`，调用者会忽略它，因为他们期望的是一个`void`返回。
 
-# 12 进一步参考
+## 12 进一步参考
 
 *   [`https://docs.spring.io/spring-framework/reference/core/aop.html`](https://docs.spring.io/spring-framework/reference/core/aop.html)
     Spring AOP 的完整文档
@@ -10846,8 +10831,8 @@ public Object cacheTimingResults(ProceedingJoinPoint joinPoint) throws Throwable
 
 *   切面（Aspects）允许你指定切点（pointcut），用于描述拦截哪些方法以及在拦截方法调用时采取什么操作。
 *   连接点（join point）是代码插入的地方。
-*   切点可以命名以便重用，并可以使用 `&&`、`||` 和 `!` 进行组合。
-*   主要的建议类型有 `@After`、`@AfterReturning`、`@AfterThrowing`、`@Around` 和 `@Pointcut`。
+*   切点可以命名以便重用，并可以使用`&&`、`||`和`!`进行组合。
+*   主要的建议类型有`@After`、`@AfterReturning`、`@AfterThrowing`、`@Around`和`@Pointcut`。
 
 # 监控你的应用程序：Java 生态中的可观测性
 
@@ -10873,7 +10858,7 @@ public Object cacheTimingResults(ProceedingJoinPoint joinPoint) throws Throwable
 
 ### 启动测试应用程序
 
-本章的仓库包含一个 Spring Boot 测试应用程序 `ObservabilityApplication`。要启动它，运行以下命令：
+本章的仓库包含一个 Spring Boot 测试应用程序`ObservabilityApplication`。要启动它，运行以下命令：
 
 ```bash
 mvn clean verify
@@ -10886,7 +10871,7 @@ java -jar observability-0.1-SNAPSHOT.jar
 http://localhost:8081/actuator/prometheus
 ```
 
-该应用程序的 POM 文件包含 `micrometer-registry-prometheus` 依赖。此依赖会自动暴露以下端点：
+该应用程序的 POM 文件包含`micrometer-registry-prometheus`依赖。此依赖会自动暴露以下端点：
 
 ```
 http://localhost:8081/actuator/prometheus
@@ -10908,23 +10893,20 @@ Prometheus 拥有各种导出器，这些插件与你的应用程序、中间件
 docker pull prom/node-exporter
 ```
 
-不过这并不是严格要求的。如果镜像不存在，`run` 命令将拉取镜像。要运行 node exporter 容器，请调用：
+不过这并不是严格要求的。如果镜像不存在，`run`命令将拉取镜像。要运行 node exporter 容器，请调用：
 
 ```bash
 docker run --name=node_exporter -p 9100:9100 prom/node-exporter
 ```
 
-
-
-
-`Node Exporter` 默认运行在端口 `9100` 上。要验证导出器正在运行，请访问 `http://localhost:9100`。你将看到一个包含版本号的网页，如下所示：
+`Node Exporter`默认运行在端口`9100`上。要验证导出器正在运行，请访问`http://localhost:9100`。你将看到一个包含版本号的网页，如下所示：
 
 ```
 Version: (version=1.8.2, branch=HEAD,
 revision=f1e0e8360aa60b6cb5e5cc1560bed348fc2c1895)
 ```
 
-URL `http://localhost:9100/metrics` 暴露了导出器输出所有指标。如果这些看起来像是一堆乱码，不要担心；那是 Prometheus 的抓取格式，我们很快就会解释它。
+URL `http://localhost:9100/metrics`暴露了导出器输出所有指标。如果这些看起来像是一堆乱码，不要担心；那是 Prometheus 的抓取格式，我们很快就会解释它。
 
 ### 安装 Prometheus
 
@@ -10936,7 +10918,7 @@ Prometheus 二进制文件负责跟踪指标并包含一个用于查询的 UI。
 docker pull prom/prometheus
 ```
 
-将 第 12 章 仓库根目录下的 `prometheus.yml` 文件复制到你的工作目录。我们将在下一节解释该文件。在 Windows 上运行以下命令：
+将第 12 章仓库根目录下的`prometheus.yml`文件复制到你的工作目录。我们将在下一节解释该文件。在 Windows 上运行以下命令：
 
 ```
 docker run --name prometheus -p 9090:9090
@@ -10950,15 +10932,15 @@ docker run --name prometheus -p 9090:9090
 -v ./prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
 ```
 
-Docker 的 `-v` 标志代表卷（volume）。它允许你将本地计算机上的 Docker 文件或目录映射到 Docker 容器。在这种情况下，它允许你提供自己的 `prometheus.yml` 文件。我们从 Prometheus 发行版中复制了它并进行了一些修改。
+Docker 的`-v`标志代表卷（volume）。它允许你将本地计算机上的 Docker 文件或目录映射到 Docker 容器。在这种情况下，它允许你提供自己的`prometheus.yml`文件。我们从 Prometheus 发行版中复制了它并进行了一些修改。
 
-Prometheus 默认运行在端口 `9090`。你可以访问 `http://localhost:9090` 来确认 Prometheus 已启动。正如你想象的，初始启动之后，你应该运行 `docker start prometheus`。
+Prometheus 默认运行在端口`9090`。你可以访问`http://localhost:9090`来确认 Prometheus 已启动。正如你想象的，初始启动之后，你应该运行`docker start prometheus`。
 
 ### 配置抓取
 
-在上一节中，你引用了 YAML 配置文件 `prometheus.yml`。（有关 YAML 的更多信息，请参阅附录）。该文件配置你的 Prometheus 以识别你的导出器和其他应用程序，以便它知道去抓取它们。
+在上一节中，你引用了 YAML 配置文件`prometheus.yml`。（有关 YAML 的更多信息，请参阅附录）。该文件配置你的 Prometheus 以识别你的导出器和其他应用程序，以便它知道去抓取它们。
 
-在 `prometheus.yml` 的 `scrape_configs` 下，你可以看到由 Prometheus 提供的以下代码。我们添加了加粗的行。
+在`prometheus.yml`的`scrape_configs`下，你可以看到由 Prometheus 提供的以下代码。我们添加了加粗的行。
 
 ```
 21: scrape_configs:
@@ -10983,11 +10965,13 @@ Prometheus 默认运行在端口 `9090`。你可以访问 `http://localhost:9090
 40:      metrics_path: '/actuator/prometheus'
 ```
 
+
+
 第 24 行的第一个抓取配置任务命名为 `prometheus`。Prometheus 是自知的，因此它导出自己的指标，这就是我们配置 Prometheus 抓取自己的地方。
 
-第 32–34 行配置 Prometheus 抓取 `node_exporter`，第 37–40 行告诉它抓取 Spring Boot 。第 34 行和 39 行使用 `host.docker.internal`，这是 Docker 引用主机机器的方式。否则，它将在 Prometheus 容器内部查找端点。
+第 32–34 行配置 Prometheus 抓取 `node_exporter`，第 37–40 行告诉它抓取 Spring Boot。第 34 行和 39 行使用 `host.docker.internal`，这是 Docker 引用主机机器的方式。否则，它将在 Prometheus 容器内部查找端点。
 
-让我们探索 Prometheus 界面。从浏览器窗口启动 `http://localhost:9090` 上的 Prometheus  。选择 Status ➪ Configuration 以查看此实例中配置的所有抓取，如图 12.1 所示。注意我们在之前的 YAML 中配置的两个 job 名称都出现在此截图中。
+让我们探索 Prometheus 界面。从浏览器窗口启动 `http://localhost:9090` 上的 Prometheus。选择 Status ➪ Configuration 以查看此实例中配置的所有抓取，如图 12.1 所示。注意我们在之前的 YAML 中配置的两个 job 名称都出现在此截图中。
 
 ![一个名为 Prometheus 的窗口截图。标签页包括 alerts、graphs、status 和 help。status 标签被选中。出现了下拉菜单。配置选项被高亮显示。](img/c12f001.png)
 
@@ -11019,19 +11003,19 @@ Prometheus 界面提供了一种探索 PromQL 的方法。从浏览器窗口启�
 
 查询结果通常如下：
 
-*   **Prefix**: 表示指标名称
-*   **Suffix**: 表示单位
-*   **Aggregate**: 表示类型
-*   **Labels**: 带有标签
+* **Prefix**: 表示指标名称
+* **Suffix**: 表示单位
+* **Aggregate**: 表示类型
+* **Labels**: 带有标签
 
 Prometheus 界面提供了一种探索 PromQL 的方法。从浏览器窗口启动 `http://localhost:9090` 上的 Prometheus 界面。选择 Status ➪ Configuration 查看此实例中配置的所有抓取，如图 12.1 所示。注意我们在之前的 YAML 中配置的两个 job 名称都出现在此截图中。
 
 查询结果通常如下：
 
-*   **Prefix**: 表示指标名称
-*   **Suffix**: 表示单位
-*   **Aggregate**: 表示类型
-*   **Labels**: 带有标签
+* **Prefix**: 表示指标名称
+* **Suffix**: 表示单位
+* **Aggregate**: 表示类型
+* **Labels**: 带有标签
 
 Prometheus 是时间序列数据库，你可以使用名为 PromQL 的语言对其进行查询。PromQL 允许你选择、切片和聚合时间序列数据。
 
@@ -11039,17 +11023,14 @@ Prometheus 界面提供了一种探索 PromQL 的方法。从浏览器窗口启�
 
 查询结果通常如下：
 
-*   **Prefix**: 表示指标名称
-*   **Suffix**: 表示单位
-*   **Aggregate**: 表示类型
-*   **Labels**: 带有标签
+* **Prefix**: 表示指标名称
+* **Suffix**: 表示单位
+* **Aggregate**: 表示类型
+* **Labels**: 带有标签
 
 Prometheus 是时间序列数据库，你可以使用名为 PromQL 的语言对其进行查询。PromQL 允许你选择、切片和聚合时间序列数据。
 
 Prometheus 界面提供了一种探索 PromQL 的方法。从浏览器窗口启动 `http://localhost:9090` 上的 Prometheus 界面。选择 Status ➪ Configuration 查看此实例中配置的所有抓取，如图 12.1 所示。注意我们在之前的 YAML 中配置的两个 job 名称都出现在此截图中。
-
-
-
 
 `instance vector`（实例向量，在给定时间指标的所有标签的列表，在本例中为 `node_cpu_seconds_total`）显示在图表下方。你可以通过点击列表中的项来取消或重新选择实例。默认情况下，Prometheus 显示过去一小时的表，但你可以通过点击图表左侧时间选择器周围的 `–` 和 `+` 号来更改。
 
@@ -11059,15 +11040,15 @@ Prometheus 支持广泛的函数，包括聚合函数、速率计算、取值调
 
 `rate` 函数计算指定时间窗口内 `range vector`（范围向量）的每秒变化率。范围向量本质上是某个时间范围内的实例向量序列。从数学角度上讲，它是一个矩阵。例如，`node_cpu_seconds_total{mode="idle"}[5m]` 是一个范围向量，代表过去 5 分钟内所有的实例向量。
 
-`rate(node_cpu_seconds_total{mode=“idle”}[5m])` 计算每个五分钟窗口开始和结束之间空闲时间的变化率。这代表空闲时间比例，它永远不会大于 1，表示 CPU 完全空闲。从 1 减去该结果即可得到 CPU 利用率。让我们将其乘以 100 以将其转换为百分比利用率，产生如下公式：
+`rate(node_cpu_seconds_total{mode="idle"}[5m])` 计算每个五分钟窗口开始和结束之间空闲时间的变化率。这代表空闲时间比例，它永远不会大于 1，表示 CPU 完全空闲。从 1 减去该结果即可得到 CPU 利用率。让我们将其乘以 100 以将其转换为百分比利用率，产生如下公式：
 
 ```
 (1-rate(node_cpu_seconds_total{mode="idle"}[5m]))*100
 ```
 
-这产生了每个逻辑核心的 CPU 利用率图表，如图图 12.6 所示。这台笔记本电脑有四个核心，你可以通过点击你想显示的项并取消其他项来查看每个核心的利用率。
+这产生了每个逻辑核心的 CPU 利用率图表，如图 12.6 所示。这台笔记本电脑有四个核心，你可以通过点击你想显示的项并取消其他项来查看每个核心的利用率。
 
-![ Prometheus 中随时间变化的空闲 CPU 秒数折线图。多个黑色时间序列显示了波动，标签指示了监控的不同实例和作业。](img/c12f006.png)
+![Prometheus 中随时间变化的空闲 CPU 秒数折线图。多个黑色时间序列显示了波动，标签指示了监控的不同实例和作业。](img/c12f006.png)
 
 图 12.6：每个核心的 CPU 利用率图
 
@@ -11079,13 +11060,13 @@ Prometheus 支持广泛的函数，包括聚合函数、速率计算、取值调
 
 你可以看到图 12.7 中的图表与图 12.6 类似，区别在于只有一条趋势线，显示了所有核心的平均 CPU 利用率。
 
-![ Prometheus 查询界面的截图显示了 CPU 空闲时间指标。图表描绘了在指定时间段内空闲 CPU 秒数的剧下降。](img/c12f007.png)
+![Prometheus 查询界面的截图显示了 CPU 空闲时间指标。图表描绘了在指定时间段内空闲 CPU 秒数的剧下降。](img/c12f007.png)
 
 图 12.7：CPU 利用率，所有核心的平均值
 
-在这些情况中，我们都展示了随时间变化的实例向量图表。如果你回到 Table（标签）页，你将看到向量中每个实例的最新值。你可以通过指定范围将其更改范围向量，例如 `node_cpu_seconds_total{mode="idle"}[5m]` 显示在指定范围内（在本例中为五分钟）内，每 15 秒（Prometheus 默认值）每个核心的 CPU 空闲时间，如图图 12.8 所示。
+在这些情况中，我们都展示了随时间变化的实例向量图表。如果你回到 Table（标签）页，你将看到向量中每个实例的最新值。你可以通过指定范围将其更改范围向量，例如 `node_cpu_seconds_total{mode="idle"}[5m]` 显示在指定范围内（在本例中为五分钟）内，每 15 秒（Prometheus 默认值）每个核心的 CPU 空闲时间，如图 12.8 所示。
 
-![ Prometheus 查询界面的截图，显示空闲模式的 CPU 秒数统计数据。表格列出了带有时间戳以及相关实例和作业的值。](img/c12f008.png)
+![Prometheus 查询界面的截图，显示空闲模式的 CPU 秒数统计数据。表格列出了带有时间戳以及相关实例和作业的值。](img/c12f008.png)
 
 图 12.8：CPU 范围向量
 
@@ -11103,7 +11084,7 @@ Prometheus 仅显示实例向量的图表，而不显示范围向量。我们已
 
 * **+**: 加法
 * **-**: 减法
-* ***** 乘法
+* **\***: 乘法
 * **/**: 除法
 * **%**: 取模
 * **^**: 幂
@@ -11115,7 +11096,7 @@ Prometheus 仅显示实例向量的图表，而不显示范围向量。我们已
 * `>`: 大于
 * `<`: 小于
 * `>=`: 大于等于
-* `<=` 小于
+* `<=`: 小于
 
 我们看到了聚合函数 `avg`。以下是其他聚合函数：
 
@@ -11150,17 +11131,13 @@ Prometheus 仅显示实例向量的图表，而不显示范围向量。我们已
 
 **Spring Boot Actuator** 暴露了各种端点来监控应用程序，例如 `/health`、`/metrics`、`/info` 等。它还与 Micrometer 集成以提供更详细的指标。
 
-
-
-
-
 通过包含这些工具，你可以监控应用程序的指标，以积累指标并对应用程序的性能和健康状况进行洞察。
 
-## Micrometer 和 Actuator 的依赖
+### Micrometer 和 Actuator 的依赖
 
 如示例应用程序所示，这些依赖已包含在 POM 中：
 
-```
+```xml
 <dependency>
    <groupId>io.micrometer</groupId>
    <artifactId>micrometer-core</artifactId>
@@ -11201,7 +11178,7 @@ management.prometheus.metrics.export.enabled=true
 
 为了计数，Prometheus 使用 Micrometer 命中计数器。让我们计算一下访问 GET 端点的命中次数：
 
-```
+```java
 23: private Counter hitCounter;
 
 37: public MortgageController(MeterRegistry meterRegistry) {
@@ -11228,21 +11205,23 @@ management.prometheus.metrics.export.enabled=true
 105: }
 ```
 
-在第 38–40 行中我们创建了 `hitCounter`，它是一个 Micrometer `Counter`。在第 95 行中我们增加了计数器的值。
 
-通过浏览器（访问 `http://localhost:8081/mtg/payment?principal=100000&years=30&interest=6.1`（或使用 Postman 或 curl，如我们在第 6 章中所做）多次调用此 `/payment` 端点。然后在 Prometheus (`http://localhost:9090`) 中输入指标 `payments_get_counter_total` 并点击 Execute 查看增长情况。尝试在 Prometheus 的 Table 标签页和 Graph 标签页中查看。
+
+在第 38–40 行中，我们创建了 `hitCounter`，它是一个 Micrometer `Counter`。在第 95 行中，我们增加了计数器的值。
+
+通过浏览器访问 `http://localhost:8081/mtg/payment?principal=100000&years=30&interest=6.1`，或使用 Postman 或 `curl`，如第 6 章所示，多次调用 `/payment` 端点。然后在 Prometheus（`http://localhost:9090`）中输入指标 `payments_get_counter_total` 并点击 Execute，查看增长情况。尝试在 Prometheus 的 Table 标签页和 Graph 标签页中查看。
 
 ### 捕捉波动值
 
-计数器非常适合捕捉稳定增长的值，但它不能用于捕捉波动值，例如查询时间、CPU 利用率等性能指标。Micrometer gauge 专为捕获此类波动性指标而设计。让我们创建一个 gauge 来捕捉我们 POST 端点的查询时间。
+计数器非常适合捕捉稳定增长的值，但它不能用于捕捉波动值，例如查询时间、CPU 利用率等性能指标。Micrometer gauge 专为捕获此类波动性指标而设计。让我们创建一个 gauge 来捕捉 POST 端点的查询时间。
 
-```
+```java
 43: Gauge.builder("payments_query_duration_gauge", this::getDuration)
 44:    .description("Duration of payment queries in seconds.")
 45:    .register(meterRegistry);
 ```
 
-就像我们处理计数器时一样，我们调用 `builder()` 方法并传入指标名称（在此例中为 `payments_query_duration_gauge`），并将其注册到 meter registry 实例。与计数器不同，gauge 绑定到一个 getter 方法，在此例中为 `getDuration()`。
+就像处理计数器时一样，我们调用 `builder()` 方法并传入指标名称（在此例中为 `payments_query_duration_gauge`），并将其注册到 meter registry 实例。与计数器不同，gauge 绑定到一个 getter 方法，在此例中为 `getDuration()`。
 
 当你在 Micrometer 中创建 gauge 时，必须提供一个返回指标当前值的 getter 方法引用。然后每当 Prometheus 抓取应用程序端点时，它都会调用此 getter 方法来获取当前值。
 
@@ -11256,16 +11235,16 @@ management.prometheus.metrics.export.enabled=true
 
 要将值记录到直方图中，请将值传递给 `record` 方法：
 
-```
+```java
 histogramTimer.record(delaySecs, TimeUnit.SECONDS);
 ```
 
 以下是代码：
 
-```
+```java
 61: @PostMapping("/payment")
 62: public ResponseEntity<Response> calculateMonthlyPayment(
-63:    @RequestBody List<Mortgage> mortgages) 
+63:    @RequestBody List<Mortgage> mortgages)
 64:    throws InterruptedException
 65:    LocalDateTime start = LocalDateTime.now();
 66:    long time = -1;
@@ -11296,7 +11275,8 @@ histogramTimer.record(delaySecs, TimeUnit.SECONDS);
 
 等等，我在上面的代码段中漏了 `histogramTimer` 的初始化：
 
-```java47: this.histogramTimer = Timer.builder("payments_duration_seconds")
+```java
+47: this.histogramTimer = Timer.builder("payments_duration_seconds")
 48:    .serviceObjectives(
 49:       Duration.of(500, ChronoUnit.MILLIS),
 50:       Duration.of(1000, ChronoUnit.MILLIS),
@@ -11312,35 +11292,34 @@ histogramTimer.record(delaySecs, TimeUnit.SECONDS);
 
 请注意 Prometheus 的桶是累积的。第一个桶（第 49 行）表示小于或等于 500 毫秒。第二个桶表示小于或等于 1000 毫秒。因此，如果某个操作耗时 400 毫秒，它会被记录到两个桶中。
 
+这是来自第 6 章的 POST 请求，添加了代码用于捕获指标。在第 65 行，我们获取了开始时间，并将用它来计算调用时间。在第 77 行和第 79 行，我们添加了 1 秒到 4 秒的人工延迟，这样我们就能看到直方图的作用。在第 82 行，我们捕获了调用计时，在第 87 行，我们将其记录在 Micrometer 中，由 Prometheus 进行抓取。
 
+注意，我们在第 49–55 行中以毫秒创建了桶（buckets）。我们使用毫秒而不是秒是为了捕捉秒级的数据（因为参数必须是长整型整数），但我们在第 87 行中以秒为单位记录指标。Micrometer 会为我们处理转换。
 
-
-这是来自第 6 章的 POST 请求，添加了代码用于捕获指标。在第 65 行我们获取了开始时间，并将用它来计算调用时间。在第 77 行和第 79 行，我们添加了 1 秒到 4 秒的人工延迟，这样我们就能看到直方图的作用。在第 82 行，我们捕获了调用计时，在第 87 行，我们将其记录在 Micrometer 中，由 Prometheus 进行抓取。注意，我们在第 49–55 行中以毫秒创建了桶（buckets）。我们使用毫秒而不是秒是为了捕捉秒级的数据（因为参数必须是长整型整数），但我们在第 87 行中以秒为单位记录指标。Micrometer 会为我们处理转换。
-
-调用几次 `mtg/payments` POST 端点。Prometheus 默认每 15 秒 抓取一次，因此在每次调用之间留出这段时间。你的 `payments_query_duration_seconds` Prometheus 图表看起来应该像图 12.10。
+调用几次 `mtg/payments` POST 端点。Prometheus 默认每 15 秒抓取一次，因此在每次调用之间留出这段时间。你的 `payments_query_duration_seconds` Prometheus 图表看起来应该像图 12.10。
 
 ![一张 prometheus 图表的截图显示了支付查询执行持续随时间的变化。折线图具有几条处于不同高度的水平线，代表不同的查询持续时间桶。](img/c12f010.png)
 
-图 12.10: 直方图
+**图 12.10**：直方图
 
-### 添加告警管理器 (ALERT MANAGER)
+### 添加告警管理器（ALERT MANAGER）
 
 Alert Manager 是独立于 Prometheus 的独立安装。它与 Prometheus 集成，允许你配置规则，当配置的指标在可配置的时间间隔内超过某些指定的边界时发送通知。通知可以通过电子邮件和/或短信和/或使用 Web Hook 的任何其他方式发送。
 
 首先运行以下命令拉取 Alert Manager。你将在稍后的章节中运行它。
 
-```
+```bash
 docker pull quay.io/prometheus/alertmanager
 ```
 
 在运行 Alert Manager 之前，你必须对其进行配置。章节仓库根目录下有一个 `alertmanager.yml` 文件，如下所示。如果你有 SMTP 服务器信息，请替换相应内容。
 
-```
+```yaml
 global:
   smtp_smarthost: 'smtp server'         # 电子邮件 SMTP 服务器
   smtp_from: 'sender@my_company.com'    # 你的电子邮件
   smtp_auth_username: 'username'        # 你的用户名
-  smtp_auth_password: 'pa55w0rd'        # SMTP 密码 
+  smtp_auth_password: 'pa55w0rd'        # SMTP 密码
 
 route:
   # 默认接收器（下方定义）用于发送告警
@@ -11364,13 +11343,13 @@ inhibit_rules:
 
 接下来，让我们创建一个规则。一个真实的例子是当我们的平均 CPU 利用率（跨所有核心）在 5 分钟内超过 80%。根据我们对 PromQL 查询的知识，我们可以编写该查询。如果空闲 CPU 指标是 `node_cpu_seconds_total{mode="idle"}`，那么我们需要捕获非空闲时间大于 80% 的情况。其表达式如下：
 
-```
- 1 - avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[5m]))> .8
+```promql
+1 - avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) > .8
 ```
 
 仓库中还包含名为 `alert.rules.yml` 的文件，如下：
 
-```
+```yaml
 10: groups:
 11:   - name: windows-alerts
 12:     rules:
@@ -11391,11 +11370,13 @@ inhibit_rules:
 
 我们需要告诉 Prometheus 我们的 Alert Manager 和规则，以及检查违规的频率。`prometheus-with-alerts.yml` 在 `global` 正下方且处于相同的缩进级别添加了 `alerting` 部分。
 
-```
+```yaml
 # Alertmanager 配置
+
 global:
   # 将抓取间隔设置为 15 秒。默认为 1 分钟。
   scrape_interval: 15s
+
   # 每 15 秒评估一次规则。默认为 1 分钟。
   evaluation_interval: 15s
 
@@ -11412,70 +11393,64 @@ rule_files:
 
 如果你有 SMTP 服务器，可以启动 Alert Manager 并将其指向 `alertmanager.yml`。
 
-```
+```bash
 docker run -p 9093:9093 -v $(pwd)/alertmanager.yml:/etc/alertmanager/alertmanager.yml quay.io/prometheus/alertmanager
 ```
 
-在运行 Alert Manager 之前，你必须配置它。章节仓库根目录下有一个 `alertmanager.yml` 文件，如下所示。如果你有 SMTP 服务器信息，请替换相应内容。
-
-（注：此处原文中似乎存在重复段落，根据指令要求已进行去重处理，以确保不重复输出原文，翻译已根据逻辑进行了整合）
-
-
-
-
 保存并返回可以添加可视化的页面。点击“添加”（Add）并添加一行；将其命名为 `Infrastructure`。我们将向该行添加可视化内容，以显示基础设施的性能指标。
 
-悬停在“行标题”（Row title）上会显示一个齿轮图标，点击它可以为您的行命名，如图 12.14
+悬停在“行标题”（Row title）上会显示一个齿轮图标，点击它可以为您的行命名，如图 12.14。
 
-**图 12.14**: 添加行标题
+**图 12.14**：添加行标题
 
-接下来选择 添加 ➪ 可视化（Visualization）。在右上角，你可以选择可视化类型。我们将使用默认的时间序列（time series）并为面板命名为 `CPU`。图下方是输入 PromQL 查询的地方。点击“代码”（Code）并使用以下查询：
+接下来选择“添加 ➪ 可视化”（Visualization）。在右上角，你可以选择可视化类型。我们将使用默认的时间序列（time series）并为面板命名为 `CPU`。图下方是输入 PromQL 查询的地方。点击“代码”（Code）并使用以下查询：
 
-```
-100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) 
+```promql
+100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
 ```
 
 这是 CPU 利用率的公式。然后点击查询表达式上方的“运行查询”（Run Queries）。你应该能看到与图 12.15 类似的图表。
 
-![ Prometheus 仪表板中标题为 CPU 的图表面板，显示随时间变化的 CPU 使用数据。界面左侧包含查询、数据转换和告警设置选项，右侧为面板配置选项。](img/c12f015.png)
+![Prometheus 仪表板中标题为 CPU 的图表面板，显示随时间变化的 CPU 使用数据。界面左侧包含查询、数据转换和告警设置选项，右侧为面板配置选项。](img/c12f015.png)
 
-**图 12.15**: 添加图表面板
+**图 12.15**：添加图表面板
 
 保存，并点击顶部的“Real World Java”返回仪表板。从标题栏抓取该图表，并将其拖入 `Infrastructure` 行中。
 
-同样地，添加一个名为 `Memory,` 的新可视化对象，并输入以下查询：
+同样地，添加一个名为 `Memory` 的新可视化对象，并输入以下查询：
 
-```
-100 - (avg by (instance) (rate(node_memory_MemAvailable_bytes [5m])) 
-/ avg by (instance) (node_memory_MemAvailable_bytes
-) * 100)
+```promql
+100 - (avg by (instance) (rate(node_memory_MemAvailable_bytes[5m]))
+/ avg by (instance) (node_memory_MemAvailable_bytes) * 100)
 ```
 
-然后保存面板并将其拖动到 `CPU` 图表的右侧。你应该看到类似图 12.16 的内容。
+
+
+然后保存面板并将其拖动到`CPU`图表的右侧。你应该看到类似图 12.16 的内容。
 
 ![仪表板截图显示了主机 host.docker.internal:9100 随时间变化的 CPU 和内存使用情况。CPU 图在 08:00 处有一个峰值，而内存图在 95% 到 98% 之间波动。](img/c12f016.png)
 
-**图 12.16**: 添加第二个图表面板
+**图 12.16**：添加第二个图表面板
 
 时间选择器默认为六小时，但你可以通过选择不同的时间范围来尝试。
 
 时间序列只是许多可用图表类型之一。我们鼓励你通过编辑图表并选择各种类型来尝试其他类型。然后尝试不同的指标并制定你自己的查询。
 
-## 日志与追踪 (LOGGING AND TRACING)
+## 日志与追踪（LOGGING AND TRACING）
 
 分布式日志和追踪密切相关，并在企业级系统中非常流行，特别是在现代的微服务架构中。
 
 分布式日志是指为所有日志提供一个公共位置，以便你可以在一个地方从所有应用程序的日志中过滤、聚合和提取指标。
 
-分布式追踪的最简单层面是指与单个请求相关的所有调用保持公共跟踪 ID（trace ID），并将该 ID 包含在所有的分布式日志消息中，无论是由哪个服务执行的记录。还有框架允许你视觉化与调用相关的跳转。
+分布式追踪的最简单层面是指与单个请求相关的所有调用保持公共跟踪 ID（`trace ID`），并将该 ID 包含在所有的分布式日志消息中，无论是由哪个服务执行的记录。还有框架允许你视觉化与调用相关的跳转。
 
 ### 介绍日志功能
 
-分布式日志领域的关键参与者有 Elasticsearch（ELK 栈中的“E”）、Splunk 和 Loki。Splunk 和 Elasticsearch 最受欢迎，而 Elasticsearch 在较小的公司中更为常见。Loki 是该领域最新的入场者，得益于它与 Grafana 的无缝集成以及类似于 Prometheus 中 PromQL 的 LogQL 语言，它也拥有大量的粉丝。
+分布式日志领域的关键参与者有 Elasticsearch（ELK 栈中的“E”）、Splunk 和 Loki。Splunk 和 Elasticsearch 最受欢迎，而 Elasticsearch 在较小的公司中更为常见。Loki 是该领域最新的入场者，得益于它与 Grafana 的无缝集成以及类似于 Prometheus 中 PromQL 的 `LogQL` 语言，它也拥有大量的粉丝。
 
 无论你的企业使用哪种类型，分布式日志都是任何基于服务的企业的关键组件。我们提到的所有选择都是可扩展且高可用的。
 
-Logstash 是一个转发服务，可以过滤、转换并传输策略性日志消息到 Elasticsearch。Kibana 是 Elasticsearch 的分析和可视化组件，你可以在其中无缝地探索你的数据，这些工具（Elasticsearch, Kibana, Logstash）组成了“ELK”栈。
+`Logstash` 是一个转发服务，可以过滤、转换并传输策略性日志消息到 Elasticsearch。`Kibana` 是 Elasticsearch 的分析和可视化组件，你可以在其中无缝地探索你的数据，这些工具（Elasticsearch、Kibana、Logstash）组成了“ELK”栈。
 
 Elasticsearch 是一个 Java 应用，其下载发行版自带了 Java 运行时。
 
@@ -11483,62 +11458,60 @@ Elasticsearch 是一个 Java 应用，其下载发行版自带了 Java 运行时
 
 在 Elasticsearch 中，索引（index）是存储的基本单元。它大致对应于关系数据库中的表，因为它存储了相关的文档。
 
-为了收集数据，Elasticsearch 提供了 Logstash 工具（ELK 中的 L）。Logstash 是一个 `ETL` 工具，用于收集、过滤和转换源数据并转发到 Elasticsearch。
+为了收集数据，Elasticsearch 提供了 Logstash 工具（ELK 中的 L）。Logstash 是一个`ETL`工具，用于收集、过滤和转换源数据并转发到 Elasticsearch。
 
-Logstash 流水线（pipelines）由三个阶段组成。
+Logstash 流水线（pipelines）由三个阶段组成：
 
-* **输入（Input）**：从配置的源收集数据，利用广泛可用的输入插件。
-* **过滤（Filter）**：这是转换阶段，使用过滤器通过解析、清洗和丰富数据来转换数据。
-* **输出（Output）**：这是转发阶段，将数据移动到目的地。
+- **输入（Input）**：从配置的源收集数据，利用广泛可用的输入插件。
+- **过滤（Filter）**：这是转换阶段，使用过滤器通过解析、清洗和丰富数据来转换数据。
+- **输出（Output）**：这是转发阶段，将数据移动到目的地。
 
 你可以通过在 Logstash 中指定相应的输入、过滤和输出阶段来配置流水线。
 
-Elasticsearch 提供了自己的分析和仪表板工具 Kibana（ELK 中的 K）。默认情况下，Kibana 监听 5601 端口，因此通过 `localhost:5601` 访问。我们选择了“选择自己的”（Choose your own）集成，并看到了图 12.17 中的屏幕。Kibana 现在已连接到 Elasticsearch，后者位于默认端口 9200。
+Elasticsearch 提供了自己的分析和仪表板工具 Kibana（ELK 中的 K）。默认情况下，Kibana 监听 5601 端口，因此通过`localhost:5601`访问。我们选择了“选择自己的”（Choose your own）集成，并看到了图 12.17 中的屏幕。Kibana 现在已连接到 Elasticsearch，后者位于默认端口 9200。
 
 ![Elastic 界面欢迎页截图，包含观测、安全和分析部分。页面提供了数据的选项，如添加集成、尝试示例数据或上传文件](img/c12f017.png)
 
-**图 12.17**: Kibana 落地页
+**图 12.17**：Kibana 落地页
 
 Kibana 提供了一些示例数据，可以在首页尝试“尝试示例数据”（Try sample data）。标记为“其他数据集”（Other sample data sets）的下拉菜单包含如示例电子商务订单的数据。
 
-概念上与分布式日志相似，*分布式追踪*（distributed tracing）是一种跟踪请求在分布式系统中不同组件之间路径的技术。在现代微服务中，一个请求可能由许多服务处理，如果出现问题，我们需要一种方法来探索与失败调用相关的日志。追踪工具可以在请求流过系统时提供实时视觉化。它们为每个请求的所有调用应用唯一的“跟踪 ID”（trace ID），帮助你理解服务如何交互，并允许你诊断问题和提高性能。
+概念上与分布式日志相似，分布式追踪（distributed tracing）是一种跟踪请求在分布式系统中不同组件之间路径的技术。在现代微服务中，一个请求可能由许多服务处理，如果出现问题，我们需要一种方法来探索与失败调用相关的日志。追踪工具可以在请求流过系统时提供实时视觉化。它们为每个请求的所有调用应用唯一的“跟踪 ID”（`trace ID`），帮助你理解服务如何交互，并允许你诊断问题和提高性能。
 
 #### 追踪关键概念
 
-追踪的基本单元 span（span）是与单个请求和单个服务相关的唯一 ID。每个 span 捕获与该请求和服务相关的关联数据，例如服务名称和执行时间。追踪（trace）是组成管理给定请求的所有 span 的集合。
+追踪的基本单元 `span`（span）是与单个请求和单个服务相关的唯一 ID。每个 `span` 捕获与该请求和服务相关的关联数据，例如服务名称和执行时间。追踪（`trace`）是组成管理给定请求的所有 `span` 的集合。
 
 自行协调这些工作将是一项困难的任务，因为你的追踪工具需要拦截每个请求和响应，以确保跨跳转之间应用公共的跟踪 ID。此外，日志需要使用工具分配的跟踪 ID 进行标记。
 
-
-
-OpenTelemetry 是一套广泛采用的可观测性规范，也是用于通过所有流行语言 API 管理指标（metrics）、日志（logs）和链路（traces）的开源实现。其他流行的实现包括 `Jaeger` 和 `Zipkin`，它们可以收集、存储、可视化和分析你的日志和指标。
+OpenTelemetry 是一套广泛采用的可观测性规范，也是用于通过所有流行语言 API 管理指标（metrics）、日志（logs）和链路（traces）的开源实现。其他流行的实现包括`Jaeger`和`Zipkin`，它们可以收集、存储、可视化和分析你的日志和指标。
 
 ### 在 Spring Boot 应用中实现链路
 
-Micrometer Tracing 是一个开源插件，你可以将其添加到 Spring Boot 应用中，它可以拦截传入和流出的调用，以确保管理请求的所有服务共享一个通用的 trace ID。
+Micrometer Tracing 是一个开源插件，你可以将其添加到 Spring Boot 应用中，它可以拦截传入和流出的调用，以确保管理请求的所有服务共享一个通用的`trace ID`。
 
-只需在 Maven 或 Gradle 依赖中添加 `micrometer-tracing` 端点即可。截至编写本文时，该依赖为 `io.micrometer:micrometer-tracing:1.3.5`，它与 Spring Boot 3 及更高版本兼容。早期的 Spring Boot 使用 `Spring Cloud Sleuth` 来实现相同的目的。这些工具的奇妙之处在于，一旦你包含了该依赖，就不需要更改你的任何代码。
+只需在 Maven 或 Gradle 依赖中添加`micrometer-tracing`端点即可。截至编写本文时，该依赖为`io.micrometer:micrometer-tracing:1.3.5`，它与 Spring Boot 3 及更高版本兼容。早期的 Spring Boot 使用`Spring Cloud Sleuth`来实现相同的目的。这些工具的奇妙之处在于，一旦你包含了该依赖，就不需要更改你的任何代码。
 
 ## 进一步参考
 
 - Prometheus
-    - [`https://prometheus.io/docs/introduction/overview`](https://prometheus.io/docs/introduction/overview): Prometheus 文档
-    - [`https://prometheus.io/download`](https://prometheus.io/download): Prometheus 和 Linux Node Exporter
-    - [`https://github.com/prometheus-community/windows_exporter/releases`](https://github.com/prometheus-community/windows_exporter/releases): Windows Exporter
-    - [`https://github.com/prometheus/node_exporter`](https://github.com/prometheus/node_exporter): Node Exporter 标记
-    - [`https://github.com/prometheus-community/windows_exporter/blob/master/README.md`](https://github.com/prometheus-community/windows_exporter/blob/master/README.md): Windows Exporter 标记
-    - [`https://prometheus.io/download/#alertmanager`](https://prometheus.io/download/#alertmanager): Alert Manager
+  - [`https://prometheus.io/docs/introduction/overview`](https://prometheus.io/docs/introduction/overview)：Prometheus 文档
+  - [`https://prometheus.io/download`](https://prometheus.io/download)：Prometheus 和 Linux Node Exporter
+  - [`https://github.com/prometheus-community/windows_exporter/releases`](https://github.com/prometheus-community/windows_exporter/releases)：Windows Exporter
+  - [`https://github.com/prometheus/node_exporter`](https://github.com/prometheus/node_exporter)：Node Exporter 标记
+  - [`https://github.com/prometheus-community/windows_exporter/blob/master/README.md`](https://github.com/prometheus-community/windows_exporter/blob/master/README.md)：Windows Exporter 标记
+  - [`https://prometheus.io/download/#alertmanager`](https://prometheus.io/download/#alertmanager)：Alert Manager
 - 其他工具
-    - [`https://docs.docker.com/engine/install`](https://docs.docker.com/engine/install): 下载 Docker
-    - [`https://grafana.com/grafana/download`](https://grafana.com/grafana/download): Grafana
-    - [`https://www.elastic.co/downloads/elasticsearch`](https://www.elastic.co/downloads/elasticsearch): Elastic Search
-    - [`https://www.elastic.co/downloads/logstash`](https://www.elastic.co/downloads/logstash): Logstash
-    - [`https://www.elastic.co/downloads/kibana`](https://www.elastic.co/downloads/kibana): Kibana
-    - [`https://www.7-zip.org/download.html`](https://www.7-zip.org/download.html): 7-Zip
-    - [`https://opentelemetry.io`](https://opentelemetry.io): OpenTelemetry 文档
-    - [`https://docs.micrometer.io/tracing/reference/index.html`](https://docs.micrometer.io/tracing/reference/index.html): Micrometer tracing
-    - [`https://www.jaegertracing.io`](https://www.jaegertracing.io): Jaeger 文档
-    - [`https://zipkin.io`](https://zipkin.io): Zipkin 文档
+  - [`https://docs.docker.com/engine/install`](https://docs.docker.com/engine/install)：下载 Docker
+  - [`https://grafana.com/grafana/download`](https://grafana.com/grafana/download)：Grafana
+  - [`https://www.elastic.co/downloads/elasticsearch`](https://www.elastic.co/downloads/elasticsearch)：Elastic Search
+  - [`https://www.elastic.co/downloads/logstash`](https://www.elastic.co/downloads/logstash)：Logstash
+  - [`https://www.elastic.co/downloads/kibana`](https://www.elastic.co/downloads/kibana)：Kibana
+  - [`https://www.7-zip.org/download.html`](https://www.7-zip.org/download.html)：7-Zip
+  - [`https://opentelemetry.io`](https://opentelemetry.io)：OpenTelemetry 文档
+  - [`https://docs.micrometer.io/tracing/reference/index.html`](https://docs.micrometer.io/tracing/reference/index.html)：Micrometer tracing
+  - [`https://www.jaegertracing.io`](https://www.jaegertracing.io)：Jaeger 文档
+  - [`https://zipkin.io`](https://zipkin.io)：Zipkin 文档
 
 ## 总结
 
@@ -11548,17 +11521,17 @@ Micrometer Tracing 是一个开源插件，你可以将其添加到 Spring Boot 
 
 想象你正在在线购物或访问你喜爱的新闻网站或电影网站。你预计网页加载需要多久？答案可能不超过几秒钟。在线商家知道，性能缓慢意味着客户的流失。这不仅适用于普通日子，网站还必须确保它们能够处理需求的大幅激增，例如超级碗期间，或者像黑色星期五或网络一这样的日子，当时美国的零售网站预计会有海量的在线购物量。
 
-当你学习编程时，性能通常不是你的首要考虑因素。但在企业中，性能是留住客户和管理运营成本的关键组件。毕竟，服务器是需要钱的，因此最大化服务器性能意味着可以使用更少的服务器，从而获得更高的利润。同样，当你部署到 `AWS` 等云环境时，你是根据使用量计费的，因此我们再次看到提高性能可以降低成本。
+当你学习编程时，性能通常不是你的首要考虑因素。但在企业中，性能是留住客户和管理运营成本的关键组件。毕竟，服务器是需要钱的，因此最大化服务器性能意味着可以使用更少的服务器，从而获得更高的利润。同样，当你部署到`AWS`等云环境时，你是根据使用量计费的，因此我们再次看到提高性能可以降低成本。
 
 另一方面，计算机科学的先驱之一唐纳德·纳斯（Donald Knuth）在《程序设计艺术》中写道：“过早优化是万恶之源。”因此，识别问题热点所在何处及其影响程度至关重要，这样你就可以对它们进行排序并优先处理重要问题。我们喜欢说“先编写正确性代码，再对性能进行修正”。
 
-在本章中，你将学习基础性能概念、如何在 `Java` 中编写高效代码，以及如何对你的应用程序进行性能调优。你还将学习一些可以帮助你生成代码代码常用工具。
+在本章中，你将学习基础性能概念、如何在`Java`中编写高效代码，以及如何对你的应用程序进行性能调优。你还将学习一些可以帮助你生成代码代码常用工具。
 
 ## 学习概念和术语
 
 让我们先介绍一些通用性能概念和术语，然后进入 Java 特有的概念。之后，你将学习如何编写更高效的代码。
 
-让我们从定义开始：`performance` 被定义为系统在给定负载下的运行速度和效率。如果你访问一个网站，需要 10 秒才能加载，你会抱怨它慢且性能不佳。`Scalability`（扩展性）衡量的是系统在增加负载时的表现能力。`Horizontal scalability`（水平扩展）指的是通过增加更多资源（即机器）实现的收益。例如，如果一半请求在一台机器上处理，另一半在另一台机器上处理，你就实现了水平扩展。相比之下，`vertical scalability`（垂直扩展）是指通过向同一台机器增加资源所获得的收益。例如，如果你升级了 CPU 或增加了内存，你就实现了垂直扩展。
+让我们从定义开始：`performance`被定义为系统在给定负载下的运行速度和效率。如果你访问一个网站，需要 10 秒才能加载，你会抱怨它慢且性能不佳。`Scalability`（扩展性）衡量的是系统在增加负载时的表现能力。`Horizontal scalability`（水平扩展）指的是通过增加更多资源（即机器）实现的收益。例如，如果一半请求在一台机器上处理，另一半在另一台机器上处理，你就实现了水平扩展。相比之下，`vertical scalability`（垂直扩展）是指通过向同一台机器增加资源所获得的收益。例如，如果你升级了 CPU 或增加了内存，你就实现了垂直扩展。
 
 以下是一些重要的性能指标：
 
@@ -11569,89 +11542,112 @@ Micrometer Tracing 是一个开源插件，你可以将其添加到 Spring Boot 
 以下是讨论性能时使用的其他术语：
 
 - `Caching`（缓存）：将数据存储在内存中以加速缓慢操作。
-- `Bottleneck`（瓶颈）或 `hot spot`（热点）：导致性能不可接受的部分。
+- `Bottleneck`（瓶颈）或`hot spot`（热点）：导致性能不可接受的部分。
 - `Profiler`（分析器）：用于识别应用程序潜在热点的工具类。
 - `Memory leak`（内存泄漏）：程序消耗内存但不释放的情况。
-- `Just-in-time (JIT) compilation`（即时编译）：这是 `JVM` 的一种能力，它可以发现应用程序使用中的模式并将字节码替换为优化的原生代码。
+- `Just-in-time (JIT) compilation`（即时编译）：这是`JVM`的一种能力，它可以发现应用程序使用中的模式并将字节码替换为优化的原生代码。
 
 ## 基准测试
 
-假设你识别了代码中一段缓慢的部分。也许它“锁定”了你的 CPU，导致机器过载。也许它按顺序执行操作，而本可以并行运行。*Benchmarking*（基准测试）允许你测量运行代码特定部分所需的时间。在做出更改之前之后运行基准测试可以让你看到是否让程序变快了。你将看到使用内置 Java API 进行基准测试的示例，然后学习如何使用库来获得更准确的结果。
+假设你识别了代码中一段缓慢的部分。也许它“锁定”了你的 CPU，导致机器过载。也许它按顺序执行操作，而本可以并行运行。基准测试（`Benchmarking`）允许你测量运行代码特定部分所需的时间。在做出更改之前之后运行基准测试可以让你看到是否让程序变快了。你将看到使用内置 Java API 进行基准测试的示例，然后学习如何使用库来获得更准确的结果。
 
 ### 使用内置 Java API 进行基准测试
-
-
-
 
 斐波那契数列是自然界和计算机科学中为人知的数列。它从 0 和 1 开始，之后每一项都是前两项之和：0,1,1,2,3,5,8……。
 
 下面的示例展示了计算斐波那契数列特定位置数值的一种低效方法。在这个示例中，如果你传入 6，它将返回 8，因为那是序列中的第六项。由于每个项都是通过前两个数字相加得出的，这种低效算法会计算前两个数字并将它们相加。它通过递归的方式执行操作，这会导致重复计算相同的信息。
 
-```
+```java
 public static void main(String[] args) {
 
    final int nanosPerSecond = 1_000_000_000;
+
    long start = System.nanoTime();
+
    long recursive = fibonacci(50);
+
    long end = System.nanoTime();
 
    System.out.println(recursive);
+
    System.out.printf("Took %d seconds", (end-start)/nanosPerSecond);
+
 }
+
 public static long fibonacci(int number) {
+
    if (number <= 1) return number;
 
    return fibonacci(number - 1) + fibonacci(number - 2);
+
 }
 ```
 
-我们的其中一次运行显示该代码的输出如下：
+我们的一次运行显示该代码的输出如下：
 
-```
+```text
 12586269025
+
 Took 36 seconds
 ```
 
 计算这个结果需要 36 秒是一个非常长时间。幸运的是，解决这个问题不需要递归。让我们不使用递归重写这段代码并比较性能：
 
-```
+```java
 public static void main(String[] args) {
 
    final int nanosPerSecond = 1_000_000_000;
+
    long start = System.nanoTime();
+
    long recursive = fibonacci(50);
+
    long end = System.nanoTime();
 
    System.out.println(recursive);
+
    System.out.printf("Took %d seconds", (end-start)/nanosPerSecond);
+
 }
+
 public static long fibonacci(int number) {
+
    long previous = 0, current = 1;
+
    long result = 0;
 
    for (int i = 1; i < number; i++) {
+
       result = previous + current;
+
       previous = current;
+
       current = result;
+
    }
+
    return result;
+
 }
 ```
 
 这次的输出小于一秒。完成相同任务的速度快得多！我们从这个示例可以看出，尽管完成一项任务有很多方法，但某些方法的性能可能比其他方法更好。始终仔细思考你的方法。虽然递归适用于许多情况，但在这种情况下它是错误的方法，因为它反复重新计算相同的中间结果。
 
-```
+```text
 12586269025
+
 Took 0 seconds
 ```
+
+
 
 ## 微基准测试 (Microbenchmarking)
 
 上一个示例中的代码非常低效，我们甚至不需要详细的基准测试就能看到时间的改进。但在现实生活中，我们通常必须定位并调整代码部分以进行微调。微基准测试是指测量小型、隔离代码部分的性能的行为。
 
-编写精确且良好的基准测试是困难的。你必须确保没有竞争任务（如日志记录、垃圾回收等）同时发生，否则可能会影响基准测试。你还必须确保 JVM 不会以使测试失效的方式优化代码。例如，应用程序可能包含产生未使用结果的代码部分。JVM 可能将此类部分视为死代码并将其优化掉使其不运行！此外，JVM 会尽可能优化代码，因此在循环中，后期运行可能比早期运行更快。或者 JIT 编译器可能会将字节码转换为原生代码。所有这些因素都会严重偏斜优化启动之前生成的任何基准测试。
+编写精确且良好的基准测试是困难的。你必须确保没有竞争任务（如日志记录、垃圾回收等）同时发生，否则可能会影响基准测试。你还必须确保 `JVM` 不会以使测试失效的方式优化代码。例如，应用程序可能包含产生未使用结果的代码部分。`JVM` 可能将此类部分视为死代码并将其优化掉使其不运行！此外，`JVM` 会尽可能优化代码，因此在循环中，后期运行可能比早期运行更快。或者 `JIT` 编译器可能会将字节码转换为原生代码。所有这些因素都会严重偏斜优化启动之前生成的任何基准测试。
 
-幸运的是，有 Java Microbenchmark Harness (JMH) 存在你就不需要担心此类优化，只需专注于测量你的代码。JMH 维护者建议使用 JMH 模板 `jmh-java-benchmark-archetype` 来生成新项目。你可以将项目添加为依赖以便运行你的代码：
+幸运的是，有 Java Microbenchmark Harness (`JMH`) 存在你就不需要担心此类优化，只需专注于测量你的代码。`JMH` 维护者建议使用 `JMH` 模板 `jmh-java-benchmark-archetype` 来生成新项目。你可以将项目添加为依赖以便运行你的代码：
 
 ```
 mvn archetype:generate
@@ -11662,7 +11658,7 @@ mvn archetype:generate
    ... (此处省略部分)
 ```
 
-该命令运行了 `archetype:generate` 目标，使用指定的 Maven 模板生成新项目。第一个 `-D` 系统属性表示不需要提示确认。接下来两个属性指定 JMH 模板。最后三个属性用于为项目分配 GAV（组 ID、制品 ID 和版本）。
+该命令运行了 `archetype:generate` 目标，使用指定的 Maven 模板生成新项目。第一个 `-D` 系统属性表示不需要提示确认。接下来两个属性指定 `JMH` 模板。最后三个属性用于为项目分配 GAV（组 ID、制品 ID 和版本）。
 
 生成的代码是一个 Maven 项目。该模板创建了一个名为 `MyBenchmark.java` 的 Java 类，包含一个空方法。让我们用以下代码替换它，其中包含上一个示例中缓慢的 `fibonacci()` 实现方法签名的调用：
 
@@ -11673,28 +11669,24 @@ import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.infra.Blackhole;
 
 public class MyBenchmark {
-
    @Benchmark
    public static void benchmark(Blackhole blackhole) {
       long result = fibonacci(50);
       blackhole.consume(result);
    }
+
    public static long fibonacci(int number) {
       long previous = 0, current = 1;
       long result = 0;
-
-   for (int i = 1; i < number; i++) {
-      result = previous + current;
-      previous = current;
-      current = result;
+      for (int i = 1; i < number; i++) {
+         result = previous + current;
+         previous = current;
+         current = result;
+      }
+      return result;
    }
-   return result;
 }
 ```
-
-
-
-
 
 ```
 # Run progress: 80.00% complete, ETA 00:01:40
@@ -11709,15 +11701,12 @@ Iteration   2: 3080164130.908 ops/s
 Iteration   3: 3095501587.777 ops/s
 Iteration   4: 3088198606.124 ops/s
 Iteration   5: 3084219015.220 ops/s
-
 Result "com.wiley.realworldjava.jmh.MyBenchmark.benchmark":
    3054970163.963 ±(99.9%) 129045935.961 ops/s
 (min, avg, max) = (2229602431.413, 3054970163.963, 3110210135.698),
    stdev = 172272632.473
   CI (99.9%): [2925924228.001, 3184016099.924] (assumes normal distribution)
-
 # Run complete. Total time: 00:08:21
-
 Benchmark               Mode  Cnt           Score           Error  Units
 MyBenchmark.benchmark  thrpt   25  3054970163.963 ± 129045935.961  ops/s
 ```
@@ -11728,7 +11717,7 @@ MyBenchmark.benchmark  thrpt   25  3054970163.963 ± 129045935.961  ops/s
 
 ```
 @Benchmark @BenchmarkMode(Mode.AverageTime)
- @OutputTimeUnit(TimeUnit.MICROSECONDS)
+@OutputTimeUnit(TimeUnit.MICROSECONDS)
 ```
 
 这一次，你将分别为较慢和较快的实现得到如下的输出：
@@ -11738,35 +11727,33 @@ Iteration   1: 35172416.167 µs/op
 Iteration   1: ≈ 10-3 µs/op
 ```
 
+
+
 输出单位是 `μs/op`，意味着每次操作的微秒数。对于较快的代码，你可以看到输出使用了科学计数法，因为结果比微秒小得多。对于较慢的代码，你看到的是每次操作微秒数的很大数字。
 
 作为开发者，选择对你所测量的代码有意义的模式和单位取决于你。表 13.1 显示了 `Mode` 的选项，而表 13.2 显示了 `TimeUnit` 的选项。如果你不指定，将使用 `Mode.Throughput` 和 `TimeUnit.SECONDS`。
 
-| @BENCHMARKMODE | 描述 |
-
+| `@BenchmarkMode` | 描述 |
 | --- | --- |
-
 | `Mode.Throughput` | 单位时间内的操作数 |
 | `Mode.AverageTime` | 单次操作的平均时间 |
 | `Mode.SampleTime` | 最小、最大和平均时间 |
 | `Mode.SingleShotTime` | 无预热的单次运行时间 |
 | `Mode.All` | 包含以上所有 |
 
-TABLE 13.1: JMH 基准模式
+**表 13.1**: JMH 基准模式
 
-| @OUTPUTTIMEUNIT | 描述 |
-
+| `@OutputTimeUnit` | 描述 |
 | --- | --- |
-
 | `TimeUnit.NANOSECONDS` | 微秒千分之一为单位 |
 | `TimeUnit.MICROSECONDS` | 毫秒千分之一为单位 |
 | `TimeUnit.MILLISECONDS` | 秒千分之一为单位 |
 | `TimeUnit.SECONDS` | 秒为单位 |
 | `TimeUnit.MINUTES` | 分为单位 |
-| `TimeUnit.HOURS` | 小为单位 |
+| `TimeUnit.HOURS` | 小时为单位 |
 | `TimeUnit.DAYS` | 天为单位 |
 
-TABLE 13.2: JMH 输出时间单位
+**表 13.2**: JMH 输出时间单位
 
 ## 调整 JVM 设置
 
@@ -11776,43 +11763,9 @@ TABLE 13.2: JMH 输出时间单位
 
 在本节中，你将学习如何控制内存。在应用这些设置之前，请记住“过早优化是万恶之根源”。
 
-在本节中，你将学习如何控制内存。在应用这些设置之前，请记住“过早优化是万恶之根源”。
-
-在本节中，你将学习如何控制内存。在应用这些设置之前，请记住“过早优化是万恶之根源”。
-
-在本节中，你将学习如何控制内存。在应用这些设置之前，请记住“过早优化是万恶之根源”。
-
-在本节中，你将学习如何控制内存。在应用这些设置之前，请记住“过早优化是万恶之根源”。
-
-在本节中，你将学习如何控制内存。在应用这些设置之前，请记住“过早优化是万恶之根源”。
-
-在本节中，你将学习如何控制内存。在应用这些设置之前，请记住“过早优化是万恶之根源”。
-
-在本节中，你将学习如何控制内存。在应用这些设置之前，请记住“过早优化是万恶之根源”。
-
-在本节中，你将学习如何控制内存。在应用这些设置之前，请记住“过早优化是万恶之根源”。
-
-在本节中，你将学习如何控制内存。在应用这些设置之前，请记住“过早优化是万恶之根源”。
-
-在本节中，你将学习如何控制内存。在应用这些设置之前，请记住“过早优化是万恶之根源”。
-
-在本节中，你将学习如何控制内存。在应用这些设置之前，请记住“过早优化是万恶之根源”。
-
-在本节中，你将学习如何控制内存。在应用这些设置之前，请记住“过早优化是万恶之根源”。
-
 ### 垃圾回收
 
 你可能熟悉垃圾回收（GC）的概念。Java 将内存分为不同的代（新生代、老年代等）。对象最初在 Eden 区创建。当 Eden 区满时，就会触发一次 Minor GC（新生 GC）。存活的对象会被移动到 Survivor 区。
-
-在本节中，你将学习如何控制内存设置。在应用这些设置之前，请记住“过早优化是万恶之根源”。
-
-在本节中，你将学习如何控制内存设置。在应用这些设置之前，请记住“过早优化是万恶之根源”。
-
-在本节中，你将学习如何控制内存设置。在应用这些设置之前，请记住“过早优化是万恶之根源”。
-
-在本节中，你将学习如何控制内存设置。在应用这些设置之前，请记住“过早优化是万恶之根源”。
-
-在本节中，你将学习如何控制内存设置。在应用这些设置之前，请记住“过早优化是万恶之根源”。
 
 ### 堆大小
 
@@ -11820,31 +11773,24 @@ TABLE 13.2: JMH 输出时间单位
 
 ### 存活区比例
 
-你可以通过 `-XX:SurvivorRatio` 调整 Eden 区与两个 Survivor 区 之间的空间比例。
-
-在本节中，你将学习如何控制内存设置。在应用这些设置之前，请记住“过早优化是万恶之根源”。
-
-在本节中，你将学习如何控制内存设置。在应用这些设置之前，请记住“过早优化是万恶之根源”。
+你可以通过 `-XX:SurvivorRatio` 调整 Eden 区与两个 Survivor 区之间的空间比例。
 
 ### 元空间
 
-MetSpace 是用于存储类元数据的区域，它位于 Native Memory 中，在 Java 8 之后取代了永久代（PermGen）。你可以通过 `-XX:MaxMetasSize` 限制其大小。
-
-
-
+Metaspace 是用于存储类元数据的区域，它位于 Native Memory 中，在 Java 8 之后取代了永久代（PermGen）。你可以通过 `-XX:MaxMetaspaceSize` 限制其大小。
 
 无论你使用哪种垃圾回收器，都可以配置某些大小：
 
-- `-Xmn`: 新一代（Eden + Survivor 空间）的初始和最大大小。如果这个数字太小，垃圾回收可能会发生得频繁。如果它太大，垃圾回收可能会很慢且频率较低。Oracle 建议范围为堆大小的 25 比例到 50 %。或者，如果你想为初始和最大新生代大小配置单独的值，可以使用 `-XX:NewSize` 和 `-XX:MaxNewSize`。
+- `-Xmn`: 新一代（Eden + Survivor 空间）的初始和最大大小。如果这个数字太小，垃圾回收可能会发生得频繁。如果它太大，垃圾回收可能会很慢且频率较低。Oracle 建议范围为堆大小的 25% 到 50%。或者，如果你想为初始和最大新生代大小配置单独的值，可以使用 `-XX:NewSize` 和 `-XX:MaxNewSize`。
 - `-XX:MaxMetaspaceSize`: 元空间（Metaspace）必须保持可用的最大大小。
 - `-XX:MetaspaceSize`: 元空间的初始大小。当它第一次填满时，将运行一次垃圾回收。
-- `-XX:MaxTenuringThreshold`: 对象在晋到老年代（tenured space）之前在 S0 和 S1 之间切换的次数。
+- `-XX:MaxTenuringThreshold`: 对象在晋升到老年代（tenured space）之前在 S0 和 S1 之间切换的次数。
 
 特定的垃圾回收器具有你可以调优的自定义设置。如果你发现需要调整垃圾回收器，请查看 Java 文档页面的高级垃圾收集部分获取详情。
 
 ### 使用串行垃圾回收 (Serial Garbage Collection)
 
-串行垃圾回收是一种旧类型，在当前实践中很少使用。不过，在学习其他类型之前了解它是它是好的。
+串行垃圾回收是一种旧类型，在当前实践中很少使用。不过，在学习其他类型之前了解它是好的。
 
 使用串行垃圾回收器时，当一个线程执行垃圾回收时，整个应用程序都会停止。这被称为 `stop-the-world`（停世界）。在某些应用程序中，这种暂停是可以接受的。但在对性能有要求的情况下，这是不可接受的！
 
@@ -11858,11 +11804,11 @@ Oracle 的文档说串行垃圾回收器适用于小型简单的应用程序。�
 
 ### 使用 G1GC
 
-垃圾优先垃圾回收器（G1GC）为具有大量可用内存的多核服务器设计。它通过将堆划分为逻辑区域来工作，这允许 G1GC 同时逐个清理所有代。结果是暂停是非常稀少的，停世界并不是问题。
+垃圾优先垃圾回收器（G1GC）为具有大量可用内存的多核服务器设计。它通过将堆划分为逻辑区域来工作，这允许 G1GC 同时逐个清理所有代。结果是暂停非常稀少，停世界并不是问题。
 
 虽然仍然存在 Eden、幸存和老年代区域，但它们分布在整个堆的不同逻辑区域中。结果是，G1GC 将是大型堆的更好的算法。
 
-你可能在想这听起来很棒，并好奇为什么 G1GC 不一直被一直使用。主要原因是它需要大量的 RAM。G1GC 建议堆大小为 6GB 或更高。如果你没有在大型内存空间下工作，并行回收可能更适合你。
+你可能在想这听起来很棒，并好奇为什么 G1GC 不一直被使用。主要原因是它需要大量的 RAM。G1GC 建议堆大小为 6GB 或更高。如果你没有在大型内存空间下工作，并行回收可能更适合你。
 
 Oracle/Open JDK 默认使用 G1GC。但是，如果你依赖于这个垃圾回收器，你仍然应该指定选项 `-XX:+UseG1GC`。
 
@@ -11901,15 +11847,12 @@ JMeter 是一个流行的开源负载测试工具。负载测试意味着在高�
 **图 13.3**: JMeter HTTP GET 请求
 
 - **Name**: 这是请求的显示名称，在案例中为“View status”。
-- **Server name or IP**: 我们使用了 localhost，因为测试在笔记本电脑上运行。在这里可以使用服务器名称或 DNS 别名。
-- **Port number**: 我们使用了 8080，对应于示例 Web 应用程序使用的默认端口。
-- **HTTP request**: 我们选择 GET，通常与不改变数据的查询 HTTP 方法。
+- **Server name or IP**: 我们使用了 `localhost`，因为测试在笔记本电脑上运行。在这里可以使用服务器名称或 DNS 别名。
+- **Port number**: 我们使用了 `8080`，对应于示例 Web 应用程序使用的默认端口。
+- **HTTP request**: 我们选择 `GET`，通常与不改变数据的查询 HTTP 方法。
 - **Path**: 这是 URL 的剩余部分。确保以斜杠开头，在本例中为 `/status`。
 
 对更新数据的操作进行负载测试也很常见，让我们创建另一个 HTTP 请求，如图 13.4 所示。像 `GET` 示例一样，有一个名称、服务器名称和端口号。这次 HTTP 请求是 `POST`，因为我们正尝试更改借用物品的状态。URL 再次以斜杠开头：`/borrowItem`。这次我们在底部提供了 `itemId` 参数 `basketball`，这是我们 POST 请求的要求。
-
-
-
 
 对于本次测试，我们将创建一个名为 `/returnItem` 的 POST 端点。其配置与图 13.4 相同，只是 URL 不同。
 
@@ -11923,7 +11866,7 @@ JMeter 是一个流行的开源负载测试工具。负载测试意味着在高�
 
 `.jmx` 文件保存在仓库的 `src/main/resources` 中。你可以打开 JMeter UI 并选择文件（File）➪ 打开（Open），查看书中使用的所有设置。
 
-JMX 文件是一个 XML 文件。你将在附录 中的“读取和写入 XML、JSON 和 YAML”中学习 XML。目前，只需知道 XML 是一种结构化文本格式，如果你好奇内部内容，可以使用文本编辑器打开文件。
+JMX 文件是一个 XML 文件。你将在附录中的“读取和写入 XML、JSON 和 YAML”中学习 XML。目前，只需知道 XML 是一种结构化文本格式，如果你好奇内部内容，可以使用文本编辑器打开文件。
 
 ### 运行负载测试
 
@@ -11935,9 +11878,9 @@ JMX 文件是一个 XML 文件。你将在附录 中的“读取和写入 XML、
 jmeter -n -t RecCenter.jmx
 ```
 
-`-n` 选项表示非 GUI 模式，即 CLI 模式（否则 JMeter 将启动其 UI）。`-t` 选项表示测试文件，后面应接你的 JMX 文件名。还有许多其他选项；例如，`-l` 指定日志文件名为，`-o` 指定输出目录。如果你需要代理服务器访问互联网，`-H` 指定代理主机，`-P` 指定代理端口。还有许多其他选项，请查阅文档。
+`-n` 选项表示非 GUI 模式，即 CLI 模式（否则 JMeter 将启动其 UI）。`-t` 选项表示测试文件，后面应接你的 JMX 文件名。还有许多其他选项；例如，`-l` 指定日志文件名，`-o` 指定输出目录。如果你需要代理服务器访问互联网，`-H` 指定代理主机，`-P` 指定代理端口。还有许多其他选项，请查阅文档。
 
-JMeter 会自动创建一个 `jmeter.log` 文件。输出包含关于每个线程的信息，包括名称（`Borrowers`）、线程组和编号（`1-2` 等）。在例例中，只有一个线程组在运行，因此所有数字都以 `1-` 开头。共有五个线程，因此第二个数字范围从一到五：
+JMeter 会自动创建一个 `jmeter.log` 文件。输出包含关于每个线程的信息，包括名称（`Borrowers`）、线程组和编号（`1-2` 等）。在示例中，只有一个线程组在运行，因此所有数字都以 `1-` 开头。共有五个线程，因此第二个数字范围从一到五：
 
 ```
 INFO o.a.j.t.JMeterThread: Thread started: Borrowers 1-1
@@ -11960,11 +11903,13 @@ INFO o.a.j.r.Summariser: summary =     30 in 00:00:01 =   23.0/s
    Avg:    46 Min:     2 Max:  1014 Err:     0 (0.00%)
 ```
 
+
+
 在例例中，测试计划要求使用五个线程。看到某些线程在其他线程启动之前就已经完成，我们可以得出结论它们并不是同时启动的。你可能会注意到有成对的“done”和“finished”。在 JMeter 中，“done”表示成功。相比之下，“finished”意味着线程已停止。`done` 线程总是 `finished` 的，但并不是所有 `finished` 线程都经历了 `done`；有些以失败结束。
 
 此外，输出以请求耗时的总结结尾，其中包含了最大值、最小值和平均值。
 
-### 分析结果
+## 分析结果
 
 `summary.csv` 文件默认包含许多列。如果你想要特定的格式，可以在创建 JMX 文件时在 JMeter UI 中进行自定义。前几列如下：
 
@@ -12002,14 +11947,14 @@ timeStamp,elapsed,responseCode,threadName
 观察此输出，你可以发现 `View status` 操作总是很快的。前几次耗时明显更长，这是正常的。当应用程序首次启动时，JVM 正在寻找运行代码的最佳方式。事实上，大多数人在进行性能测试会在 JMeter 之外运行应用程序，以排除这些启动数据。
 
 ```
-    if (itemAvailability.getOrDefault(itemId, Boolean.FALSE)) {
-       itemAvailability.put(itemId, Boolean.FALSE);
-       sleep(1_000);
-    } else {
-       model.addAttribute("message", "Sorry, item not available");
-       // 如果不可用，等待五秒
-       sleep(5_000);
-    }
+if (itemAvailability.getOrDefault(itemId, Boolean.FALSE)) {
+   itemAvailability.put(itemId, Boolean.FALSE);
+   sleep(1_000);
+} else {
+   model.addAttribute("message", "Sorry, item not available");
+   // 如果不可用，等待五秒
+   sleep(5_000);
+}
 ```
 
 ```java
@@ -12030,10 +11975,6 @@ public String borrowItem(@RequestParam(name="itemId", required=true)
 
 难怪如此。代码等待了一秒或五秒。这是一个糟糕的实现选择，而负载测试突出了这一点。编写这段代码的开发者可以从益于代码审查。然而，这里有一个更严重的问题。第 53 行和 54 行不是线程安全的。看到这里，开发者决定通过将 `borrowItem()` 和 `returnItem()` 设置为同步来“修复”代码，然后再次运行 JMeter 以查看影响：
 
-
-
-
-
 ```
 timeStamp,elapsed,label,responseCode,threadName
 1.7228E+12,196,View status,200,Borrowers 1-1
@@ -12052,7 +11993,7 @@ timeStamp,elapsed,label,responseCode,threadName
 1.7228E+12,15010,Return,200,Borrowers 1-5
 ```
 
-开发者很快意识到这并不是一个好的改动。`Borrow` 操作现在变慢得多，而且性能问题也蔓到了 `Return` 操作。我们建议这段代码的作者重读 第 9 章 以更好地理解并发！尽管如此，这仍然 JMeter 的一次很好的演示。
+开发者很快意识到这并不是一个好的改动。`Borrow` 操作现在变慢得多，而且性能问题也蔓到了 `Return` 操作。我们建议这段代码的作者重读第 9 章以更好地理解并发！尽管如此，这仍然 JMeter 的一次很好的演示。
 
 ## 使用 JDK 工具
 
@@ -12070,9 +12011,9 @@ JDK 安装包附带了许多帮助定位性能热点的工具。我们将在后�
 
 Java Flight Recorder (JFR) 是一个用于 JVM 的监控工具。JFR 主要关注测量类型的事件：
 
-*   **Instant（瞬时）**：一旦发生指定的活动立即记录。
-*   **Duration（持续时间）**：如果活动超过指定的长度则记录。
-*   **Sample（采样）**：周期性捕捉活动。
+* **Instant（瞬时）**：一旦发生指定的活动立即记录。
+* **Duration（持续时间）**：如果活动超过指定的长度则记录。
+* **Sample（采样）**：周期性捕捉活动。
 
 Java Flight Recorder 将事件记录到名为 `flight.jfr` 的文件中。你可以通过命令行执行 `jfr` 命令来生成文本报告，也可以直接在 Java Mission Control 中以视觉化格式查看结果。下一节将介绍 Java Mission Control。
 
@@ -12103,18 +12044,14 @@ Java Mission Control 是一个用于查看 Java Flight Recorder 信息的界面�
 
 遵循“进一步参考”部分的下载链接后，你应该解压或解包下载的文件。然后从命令行启动 Java Mission Control。接下来转到文件 ➪ 打开，并选择上一节中的 `.jfr` 文件。图 13.7 显示了一些示例 JFR 内存输出，它是每个类分配内存的快照，按从多到少排序。
 
-
-
-
-
 在左侧导航栏中，你可以看到 Mission Control 的其他任务报告，例如：
 
-*   **文件 I/O**：列出在输入/输出操作上花费的时间
-*   **锁实例 (Lock Instances)**：列出等待监器锁的进程
-*   **方法分析 (Method Profiling)**：显示使用 CPU 最多的调用的堆栈跟踪
-*   **线程转储 (Thread Dumps)**：显示在不同时间点运行的线程
-*   **垃圾回收 (Garbage Collection)**：包括使用了哪个垃圾回收器，以及显示停顿时间和可用堆内存的图表
-*   **进程 (Processes)**：显示 JVM 之外使用大量 CPU 的其他进程
+* **文件 I/O**：列出在输入/输出操作上花费的时间
+* **锁实例 (Lock Instances)**：列出等待监器锁的进程
+* **方法分析 (Method Profiling)**：显示使用 CPU 最多的调用的堆栈跟踪
+* **线程转储 (Thread Dumps)**：显示在不同时间点运行的线程
+* **垃圾回收 (Garbage Collection)**：包括使用了哪个垃圾回收器，以及显示停顿时间和可用堆内存的图表
+* **进程 (Processes)**：显示 JVM 之外使用大量 CPU 的其他进程
 
 ![内存分析面板的截图，显示了类内存使用情况，包括各种 Java 类的最大尺寸、存活大小和总分配的数据，并突出了它们的内存消耗情况。](img/c13f007.png)
 
@@ -12187,57 +12124,91 @@ private List<String> numberOfEmails;
 public String emailSummary(Model model) {
     readFile();
     Map<Integer, Long> byMonth = calculateTotals();
+```
 
-    model.addAttribute("byMonth", byMonth);
-    return "emailSummary";
+
+
+```java
+model.addAttribute("byMonth", byMonth);
+
+return "emailSummary";
+
 }
 
 private Map<Integer, Long> calculateTotals() {
-    return numberOfEmails.stream()
-       .map(Integer::parseInt)
-       .collect(Collectors.groupingBy(Function.identity(),
-       TreeMap::new, Collectors.counting()));
+
+return numberOfEmails.stream()
+
+.map(Integer::parseInt)
+
+.collect(Collectors.groupingBy(Function.identity(),
+
+TreeMap::new, Collectors.counting()));
+
 }
 
 private void readFile() {
-    Path path = Path.of("src/main/resources/lastYear.txt");
-    List<String> fileData;
-    try {
-       fileData = Files.readAllLines(path);
-    } catch (IOException e) {
-       throw new UncheckedIOException(e);
-    }
-    if (numberOfEmails == null || 
-          numberOfEmailsChangedLastRead(numberOfEmails, fileData)) {
-       numberOfEmails = fileData;
-    }
+
+Path path = Path.of("src/main/resources/lastYear.txt");
+
+List<String> fileData;
+
+try {
+
+fileData = Files.readAllLines(path);
+
+} catch (IOException e) {
+
+throw new UncheckedIOException(e);
+
+}
+
+if (numberOfEmails == null ||
+
+numberOfEmailsChangedLastRead(numberOfEmails, fileData)) {
+
+numberOfEmails = fileData;
+
+}
+
 }
 
 private boolean numberOfEmailsChangedLastRead(
-    List<String> numberOfEmails, List<String> fileData) {
-    if (numberOfEmails.size() != fileData.size()) {
-       return false;
-    }
-    for (int i = 0; i < numberOfEmails.size(); i++) {
-       for (int j = 0; j < fileData.size(); j++) {
-          if (i == j && 
-             ! numberOfEmails.get(i).equals(fileData.get(j))) {
-             return false;
-          }
-       }
-    }
-    return true;
+
+List<String> numberOfEmails, List<String> fileData) {
+
+if (numberOfEmails.size() != fileData.size()) {
+
+return false;
+
+}
+
+for (int i = 0; i < numberOfEmails.size(); i++) {
+
+for (int j = 0; j < fileData.size(); j++) {
+
+if (i == j &&
+
+!numberOfEmails.get(i).equals(fileData.get(j))) {
+
+return false;
+
+}
+
+}
+
+}
+
+return true;
+
 }
 ```
 
-
-
-
-第一个问题出现在第 14 行，我们每当用户请求报告时都会读取一次文件。该文件包含去年的数据，并且不会发生变化。I/O 和网络操作通常是应用程序中最昂贵的部分。考虑是否可以缓存数据或批量处理操作通常对你的性能有所帮助。在这种情况下，文件只需要读取一次。如果文件会发生变化，你可以检查时间戳，或让另一个进程使缓存失效，以避免每次都读取。
+第 14 行出现了第一个问题：我们每当用户请求报告时都会读取一次文件。该文件包含去年的数据，并且不会发生变化。I/O 和网络操作通常是应用程序中最昂贵的部分。考虑是否可以缓存数据或批量处理操作，通常对你的性能有所帮助。在这种情况下，文件只需要读取一次。如果文件会发生变化，你可以检查时间戳，或让另一个进程使缓存失效，以避免每次都读取。
 
 即使我们有比较文件内容的需求，`numberOfEmailsChangedSinceLastRead()` 的实现也是一种非常糟糕的方法，因为它的比较内容太多太多了。整个方法可以写成如下：
 
-```
+```java
 return numberOfEmails.equals(fileData);
 ```
 
@@ -12249,25 +12220,43 @@ return numberOfEmails.equals(fileData);
 
 以下是更高效版本的代码：
 
-```
+```java
 10: private Map<String, Long> emailSummary = getEmailSummary();
-11: 
+
+11:
+
 12: @GetMapping("/emailSummary")
+
 13: public String emailSummary(Model model) {
+
 14:    model.addAttribute("byMonth", emailSummary);
+
 15:    return "emailSummary";
+
 16: }
+
 17: private Map<String, Long> getEmailSummary() {
+
 18:    Path path = Path.of("src/main/resources/lastYear.txt");
+
 19:    List<String> fileData;
+
 20:    try {
+
 21:       fileData = Files.readAllLines(path);
+
 22:    } catch (IOException e) {
+
 23:       throw new UncheckedIOException(e);
+
 24:    }
+
 25:    return fileData.stream()
+
 26:       .collect(Collectors.groupingBy(Function.identity(),
+
 27:       TreeMap::new, Collectors.counting()));
+
 28: }
 ```
 
@@ -12275,76 +12264,102 @@ return numberOfEmails.equals(fileData);
 
 ### 使用 SonarQube
 
-正如你在第 4 章“使用 Maven、Gradle 和 Jenkins 自动化你的 CI/CD 构建”中所学到的，你可以在 IDE 中运行 SonarLint，或者在构建中运行 SonarQube。它们都提供了一组标记为 `performance` 的规则。表 13.4 显示了它可以检测检测的规则示例。
+正如你在第 4 章“使用 Maven、Gradle 和 Jenkins 自动化你的 CI/CD 构建”中所学到的，你可以在 IDE 中运行 SonarLint，或者在构建中运行 SonarQube。它们都提供了一组标记为 `performance` 的规则。表 13.4 显示了它可以检测的规则示例。
 
 | 规则 | 原因 |
 | --- | --- |
-| 不应在循环中使用 + 拼接字符串。 | `StringBuilder` 更具效率。 |
+| 不应在循环中使用 `+` 拼接字符串。 | `StringBuilder` 更具效率。 |
 | 当同时需要键和值时，应该迭代遍历 `entrySet()`。 | 使用 `entrySet()` 比不断调用 `get()` 稍微快。 |
 | 不应使用同步类 `Vector`、`Hashtable`、`Stack` 和 `StringBuffer`。 | 这些 API 在访问任何内容时都会锁定整个集合。它们在很久以前就被更高效的版本取代了。 |
 | 持有锁时应使用 `wait(...)` 代替 `Thread.sleep(...)`。 | 可能会导致扩展性问题和潜在的死锁。优先使用响应式的 `wait()`，因为它在被通知时就会唤醒，而 `sleep()` 必须完成睡眠时间。 |
 
-**表 13.4**](#c13.xhtml_R_c13-tbl-0004)：Sonar 性能规则示例
+**表 13.4**：Sonar 性能规则示例
 
 ### 考虑性能
 
 当你进行性能调优时，可能会发现问题出在少数领域之一。本节提供了一个清单，在用性能分析器确定原因后，可以使用它作为关于每个瓶颈需要考虑内容的参考。
 
 #### 网络/带宽
-* 批量/减少网络调用次数
-* 避免返回不必要的数据
-* 缓存数据
+
+- 批量/减少网络调用次数
+- 避免返回不必要的数据
+- 缓存数据
 
 #### CPU
-* 使用更高效的算法
-* 使用并行化（参见第 9 章“使用日志框架捕获应用程序状态”）
-* 如果使用数据库，使用连接池
+
+- 使用更高效的算法
+- 使用并行化（参见第 9 章“使用日志框架捕获应用程序状态”）
+- 如果使用数据库，使用连接池
 
 ## 进一步参考
 
-* Java Performance (O'Reilly, 2020)
-* [`https://github.com/openjdk/jmh`](https://github.com/openjdk/jmh)
-    JMH
-* [`https://docs.oracle.com/en/java/javase/21/docs/specs/man/java.html`](https://docs.oracle.com/en/java/javase/21/docs/specs/man/java.html)
-    `java.html`
+- Java Performance (O'Reilly, 2020)
+- [`https://github.com/openjdk/jmh`](https://github.com/openjdk/jmh)
+  - JMH
+- [`https://docs.oracle.com/en/java/javase/21/docs/specs/man/java.html`](https://docs.oracle.com/en/java/javase/21/docs/specs/man/java.html)
+  - `java.html`
 
-
-
-
-
-```
+```java
 4:  /**
-5:   * An object that contains information about 
+
+5:   * An object that contains information about
+
 6:   * topics the reader may want to learn.
+
 7:   *
-8: * <p><b> There is a lot more to learn!b>
+
+8:   * <p><b> There is a lot more to learn!b>
+
 9:   * To use:
+
 10:  * {@snippet lang = java:
+
 11:  *      Learning learning = new Learning();
+
 12:  *      learning.addTopic("Docker");
+
 13:  * }</p>
+
 14:  */
+
 15: public class Learning {
+
 16:    private Set<String> topics;
+
 17:    /**
+
 18:      * Creates a new Learning object
+
 19:      */
+
 20:    public Learning() {
+
 21:       topics = new HashSet<>();
+
 22:    }
+
 23:    /**
+
 24:      * Stores a topic the reader wishes to learn.
+
 25:      *
+
 26:      * @param topic the name of the topic to learn
+
 27:      * @return {@code true} if this topic was not already stored
+
 28:      */
+
 29:    public boolean addTopic(String topic) {
+
 30:       return topics.add(topic);
+
 31:    }
+
 32: }
 ```
 
-第 4–14 行、17–19 行和 23–28 行了三个三个 avadoc 注释。如你从第 8 行所示，Javadoc 注释可以包含一组 HTML 标签。第 10–13 行显示了 Java 18 添加的特性，它允许你的 IDE 和其他生成的文档使用 Java 和其他特定语言的代码示例来格式化 Javadoc 的部分。第 26 行和 27 行显示了 `@param` 和 `@return` 注解，它们提供了关于方法参数和返回类型的信息。Javadoc 还有许多功能，例如额外的包级文档。有关关于编写 Javadoc 的更多信息，请参见“进一步参考”。
+第 4–14 行、17–19 行和 23–28 行有三个 Javadoc 注释。如你从第 8 行所示，Javadoc 注释可以包含一组 HTML 标签。第 10–13 行显示了 Java 18 添加的特性，它允许你的 IDE 和其他生成的文档使用 Java 和其他特定语言的代码示例来格式化 Javadoc 的部分。第 26 行和第 27 行显示了 `@param` 和 `@return` 注解，它们提供了关于方法参数和返回类型的信息。Javadoc 还有许多功能，例如额外的包级文档。有关编写 Javadoc 的更多信息，请参见“进一步参考”。
 
 你可以在构建过程中生成 Javadoc。例如，在 `<reporting>` 标签中使用 `maven-javadoc-plugin` 会导致在运行 `maven site` 时创建 Javadoc。
 
@@ -12356,81 +12371,121 @@ return numberOfEmails.equals(fileData);
 
 Kotlin 是一种用于编写 Android 应用程序的流行语言，并正成为 Java 的流行替代方案。Java 代码可以调用 Kotlin 代码，反之亦然。Kotlin 允许你编写更简洁的代码，并提供方便的特性，例如在编译时而不是运行时捕获空指针错误。以下示例显示了一些 Kotlin 特性：
 
-```
+```kotlin
 1:  package com.wiley.realworldjava.more
+
 2:
+
 3:  class Destination(val city: String, val state: String)
+
 4:
+
 5:  fun countCitiesInCalifornia(cities: List<Destination>): Int {
+
 6:     return cities.count { it.state == "California" }
+
 7:  }
+
 8:
+
 9:  fun main() {
+
 10:    val cities = listOf(Destination("Atlanta", "Georgia"),
+
 11:       Destination("San Jose", "California"),
+
 12:       Destination("Denver", "Colorado"),
+
 13:       Destination("San Diego", "California"))
-14: 
+
+14:
+
 15:    val californiaCityCount = countCitiesInCalifornia(cities)
+
 16:    print("Visited ${cities.size} cities " +
+
 17:       "starting with ${cities.first().city}");
+
 18:    println(" including $californiaCityCount in California")
+
 19: }
 ```
 
 与 Java 一样，第 1 行的 `package` 语句是可选的。第 3 行显示了如何创建一个类（data class）。这些与 Java records 类似，用一行代码即可创建一个简单的数据结构。参数声明中的 `val` 意味着数据类型是不可变的，相比之下，`var` 是可变的。与 Java 不同，类型声明 `String` 位于参数名之后。
 
-第 5–6 行显示了如何在 Kotlin 中创建函数；该函数接受一个名为 `cities` 的单 `List` 参数并返回一个 `Int`。该实现使用一个简洁的函数式编程语句来计算 `state` 为 "California" 的 `Destination` 值的数量。与 Java 类似，使用了 lambda 表达式来封装匹配逻辑。然而，它比 Java 更简洁。不需要 lambda 变量，因为 `it` 是默认提供的。
+第 5–6 行显示了如何在 Kotlin 中创建函数；该函数接受一个名为 `cities` 的单 `List` 参数并返回一个 `Int`。该实现使用一个简洁的函数式编程语句来计算 `state` 为 `"California"` 的 `Destination` 值的数量。与 Java 类似，使用了 lambda 表达式来封装匹配逻辑。然而，它比 Java 更简洁。不需要 lambda 变量，因为 `it` 是默认提供的。
 
 第 9 行声明了一个 `main` 方法，它比所有 Java 程序员熟悉的 `public static void main(String[] args)` 要短得多。`args` 参数是可选的，由于我们没有使用它，所以省略了它。第 10–13 行使用 `listOf()` 函数创建了一个不可变列表。注意，在实例化 `Destination` 对象时没有使用 `new` 关键字。
 
-第 16–18 行显示了输出的简洁代码。在打印时省略了 `System.out`。此外，使用了 `$` 符号，这意味着当在字符串中使用带有 `$` 符号的变量时，变量会被求值，例如 `$californiaCityCount`。此外，可以在 `${}` 中配置代码，允许在字符串内部直接调用方法。最后，注意到使用的是 `size` 而不是 `size()`，因为 Kotlin 将 `size`作为一个属性提供。
+第 16–18 行显示了输出的简洁代码。在打印时省略了 `System.out`。此外，使用了 `$` 符号，这意味着当在字符串中使用带有 `$` 符号的变量时，变量会被求值，例如 `$californiaCityCount`。此外，可以在 `${}` 中配置代码，允许在字符串内部直接调用方法。最后，注意到使用的是 `size` 而不是 `size()`，因为 Kotlin 将 `size` 作为一个属性提供。
 
 ## 示例示例 Groovy
 
 Groovy 是一种脚本语言，这意味着你不需要编译它。以下是 Kotlin 示例翻译成 Groovy：
 
-```
+```groovy
 1:  class Destination {
+
 2:     String city
+
 3:     String state
+
 4:
+
 5:     Destination(String city, String state) {
+
 6:        this.city = city
+
 7:        this.state = state
+
 8:     }
+
 9:  }
+
 10:
+
 11: private static int countCitiesInCalifornia(List<Destination> cities) {
+
 12:    cities.count { it.state == "California" }
+
 13: }
-14: 
+
+14:
+
 15: def cities = [
+
 16:    new Destination("Atlanta", "Georgia"),
+
 17:    new Destination("San Jose", "California"),
+
 18:    new Destination("Denver", "Colorado"),
+
 19:    new Destination("San Diego", "California")
+
 20: ]
+
 21:
+
 22: def californiaCityCount = countCitiesInCalifornia(cities)
+
 23: print "Visited ${cities.size()} cities " +
+
 24:    "starting with ${cities.first().city}"
+
 25: println " including $californiaCityCount in California"
 ```
 
-在 Groovy 中 `package` 声明也是可选的。第 1–9 行创建了一个类。虽然根据实例变量提供了属性，但必须编写构造函数才能调用。
-
-第 11–13 行使用看起来熟悉的签名声明了一个函数。实现与 Kotlin 版本相同，尽管方法有返回值但缺少了 `return` 关键字。如果你省略了 `return`，Groovy 会自动返回函数最后一个语句产生的值。
-
-注意不需要 `main` 方法！第 15–20 行使用方括号 `[]` 包裹内容创建一个可变列表。与 Kotlin 不同，注意创建对象实例时需要 `new`。
-
-第 22 行显示当你不想编码变量的类型时，Groovy 使用 `def`。第 23–25 行与 Kotlin 相同，但使用的是 `size()`。
-
- 示例示例 Scala Scala 是一种编译语言，旨在高效地处理大量数据以及用于分布式系统。此外，Scala 内置了对许多函数式编程模式的支持。为了熟悉语法，这里是将你在 Kotlin 和 Groovy 中看到的示例重写为 Scala 代码：
 
 
+在 Groovy 中`package`声明也是可选的。第 1–9 行创建了一个类。虽然根据实例变量提供了属性，但必须编写构造函数才能调用。
 
+第 11–13 行使用看起来熟悉的签名声明了一个函数。实现与 Kotlin 版本相同，尽管方法有返回值但缺少了`return`关键字。如果你省略了`return`，Groovy 会自动返回函数最后一个语句产生的值。
 
+注意不需要`main`方法！第 15–20 行使用方括号`[]`包裹内容创建一个可变列表。与 Kotlin 不同，注意创建对象实例时需要`new`。
+
+第 22 行显示当你不想编码变量的类型时，Groovy 使用`def`。第 23–25 行与 Kotlin 相同，但使用的是`size()`。
+
+示例示例 Scala 是一种编译语言，旨在高效地处理大量数据以及用于分布式系统。此外，Scala 内置了对许多函数式编程模式的支持。为了熟悉语法，这里是将你在 Kotlin 和 Groovy 中看到的示例重写为 Scala 代码：
 
 ```
 1:  package com.wiley.realworldjava.more
@@ -12460,28 +12515,30 @@ Groovy 是一种脚本语言，这意味着你不需要编译它。以下是 Kot
 25: }
 ```
 
+
+
 你可以看到不同的 JVM 语言具有一些共同元素。Scala 在创建函数时使用 `def`，就像 Groovy 一样。`val` 声明和 `Int` 类型类似于 Kotlin。
 
 也有一些独特的元素。第 3 行显示了 `case` 类，这是一种用于生成不可变数据结构的类类型。泛型是可用的，但 Java 使用 `<` 和 `>`，而 Scala 使用方括号，如你在第 8 行的 `List[Destination]` 类型声明中看到的那样。其实现方式看起来与 Groovy 很熟悉，只是 `_` 被用作默认的 lambda 变量。
 
-第 12 行使用了 `Unit`，它是 Scala 中 Java `void` 的等价物。在第 21–23 行中，你可以看到 `s` 在字符串前面，告诉运行时使用字符串插值。第 22 行还显示提供了 `head` 而不是使用 `first()` 来获取第一个元素。
+第 12 行使用了 `Unit`，它是 Scala 中 Java `void` 的等价物。在第 21–23 行中，你可以看到 `s` 在字符串前面，告诉运行时使用字符串插值。第 22 行还显示提供了 `head`，而不是使用 `first()` 来获取第一个元素。
 
 ## 探索 JAKARTA EE
 
 正如我们在第 1 章“我们是如何到达这里的：Java 简史”中所提到的，Jakarta EE（企业版）是企业级应用中 Spring 的替代方案。Jakarta EE 在开源之前被称为 Java EE。
 
-你在 Spring 中看到的一些概念依赖于 Jakarta EE。例如，在第 6 章“了解 Spring 框架”中，你学习了过滤器（filters）也称为 servlet 过滤器（servlet filters）。A 是处理请求并返回响应的子类。最常见的类型是 `jakarta.servlet.http.HttpServlet`，用于 Web 请求和响应。
+你在 Spring 中看到的一些概念依赖于 Jakarta EE。例如，在第 6 章“了解 Spring 框架”中，你学习了过滤器（filters），也称为 servlet 过滤器（servlet filters）。`A` 是处理请求并返回响应的子类。最常见的类型是 `jakarta.servlet.http.HttpServlet`，用于 Web 请求和响应。
 
 Jakarta EE 被组织成各种规范（specifications），你可以只使用你需要的部分。例如，核心配置文件（core profile）用于微服务，而 Web 配置文件（web profile）用于 Web 应用程序。
 
-表 14.1 让你了解 Jakarta EE 中提供的功能。你可能会注意到这张表格的行数多于表 6.1 中列出的 Spring 项目。这是因为 Jakarta EE 项目的粒度更细。Jakarta EE 和 Spring 是极好的竞争对手，并提供了你预期的的大部分常用功能。你所属的机构可能会有自己的偏好，所以你应该使用那个！
+表 14.1 让你了解 Jakarta EE 中提供的功能。你可能会注意到这张表格的行数多于表 6.1 中列出的 Spring 项目。这是因为 Jakarta EE 项目的粒度更细。Jakarta EE 和 Spring 是极好的竞争对手，并提供了你预期的大部分常用功能。你所属的机构可能会有自己的偏好，所以你应该使用那个！
 
 | 项目 | 描述 |
 | --- | --- |
 | Jakarta EE Platform | Jakarta EE 最常用部分的伞形项目，包括核心配置文件 |
 | Jakarta Batch | 用于批处理 |
 | Jakarta Enterprise | 用于企业级组件 |
-| Jakarta Faces | 用于 Web 框架
+| Jakarta Faces | 用于 Web 框架 |
 | Jakarta Mail | 用于发送邮件 |
 | Jakarta Messaging | 使用消息机制 |
 | Jakarta Persistence | 支持持久化 |
@@ -12490,485 +12547,55 @@ Jakarta EE 被组织成各种规范（specifications），你可以只使用你�
 | Jakarta Transactions | 支持事务 |
 | Jakarta XML Binding | XML 映射 |
 
-表 14.1 让你了解 Jakarta EE 中提供的功能。
-
--注意到-表格的行度
-。你可能会注意到这张表格的行数多于表 6.1 中列出的 Spring 项目。这是  1 更 c0
-- -000    theSpring Framework 了解 Spring 框架。你      学习了过滤器（filters）也称为 servlet 过滤器（servlet filters）。A 是处理请求并返回响应的子类。最常见的类型是 `jakarta.servlet.http.HttpServlet`，用于 Web 请求和响应。
-
-Jakarta EE 被组织成各种规范（specifications），你可以只使用你需要的部分。例如，核心配置文件（core profile）用于微服务，而 Web 配置文件（web profile）用于 Web 应用程序。
-
-[表 14.1 让你了解 Jakarta EE 中提供的功能。你可能会注意到这张表格的行数多于表 6.1 中列出的 Spring 项目。这是因为 Jakarta EE 项目的粒度更细。Jakarta EE 和 Spring 是极好的竞争对手，并提供了你预期的的大部分常用功能。你所属的机构可能会有自己的偏好，所以你应该使用那个！
-
-| 项目 | 描述 |
-| --- | --- |
-| Jakarta EE Platform | Jakarta EE 最常用部分的伞形项目，包括核心配置文件 |
-| Jakarta Batch | 用于批处理 |
-| Jakarta Enterprise | 用于企业级组件 |
-| Jakarta Faces | 用于 Web 框架 |
-| Jakarta Mail | 用于发送邮件 |
-| Jakarta Messaging | 使用消息机制 |
-| Jakarta Persistence | 支持持久化 |
-| Jakarta RESTful Web | 用于 RESTful 服务 |
-| Jakarta Security | 添加身份认证 |
-| Jakarta Transactions | 支持事务 |
-| Jakarta XML Binding | XML 映射 |
-
-[/content]
-
-Wait, I repeated some parts above. Let me re-translate the provided text properly according to the instructions.
-
-[content]
-(The code block is not translated, so I will translate the text starting from "You can see different JVM languages...".)
-
-[content]
-
-## 探索 JAKARTA EE
-
-正如我们在第 1 章“我们是如何到达这里的：Java 简史”中所提到的，Jakarta EE（企业版）是企业级应用中 Spring 的替代方案。Jakarta EE 在开源之前被称为 Java EE。
-
-你在 Spring 中看到的一些概念依赖于 Jakarta EE。例如，在第 6 章“了解 Spring 框架”中，你学习了过滤器（filters）也称为 servlet 过滤器（servlet filters）。A 是处理请求并返回响应的子类。最常见的类型是 `jakarta.servlet.http.HttpServlet`，用于 Web 请求和响应。
-
-Jakarta EE 被组织成各种规范（specifications），你可以只使用你需要的部分。例如，核心配置文件（core profile）用于微服务，而 Web 配置文件（web profile）用于 Web 应用程序。
-
-表 14.1 让你了解 Jakarta EE 中提供的功能。你可能会注意到这张表格的行数多于表 6.1 中列出的 Spring 项目。这是因为 Jakarta EE 项目的粒度更细。Jakarta EE 和 Spring 是极好的竞争对手，并提供了你预期的的大部分常用功能。你所属的机构可能会有自己的偏好，所以你应该使用那个！
-
-| 项目 | 描述 |
-| --- | --- |
-| Jakarta EE Platform | Jakarta EE 最常用部分的伞形项目，包括核心配置文件 |
-| Jakarta Batch | 用于批处理 |
-| Jakarta Enterprise | 用于企业级组件 |
-| Jakarta Faces | 用于 Web 框架 |
-| Jakarta Mail | 用于发送邮件 |
-| Jakarta Messaging | 使用消息机制 |
-| Jakarta Persistence | 支持持久化 |
-| Jakarta RESTful Web | 用于 RESTful 服务 |
-| Jakarta Security | 添加身份认证 |
-| Jakarta Transactions | 支持事务 |
-| Jakarta XML Binding | XML 映射 |
-
-[/content]
-
-Wait, the user-provided text is much longer. Let's provide the full translation of the text provided in the final prompt.
-
-[content]
-你可以看到不同的 JVM 语言具有一些共同元素。Scala 在创建函数时使用 `def`，就像 Groovy 一样。`val` 声明和 `Int` 类型返回值类似于 Kotlin。
-
-也有一些独特的元素。第 3 行显示了 `case` 类，这是一种用于生成不可变数据结构的类类型。泛型是可用的，但 Java 使用 `<` 和 `>`，而 Scala 使用方括号，如你在第 8 行的 `List[Destination]` 类型声明中看到的那样。其实现方式看起来与 Groovy 很熟悉，只是 `_` 被用作默认的 lambda 变量。
-
-第 12 行使用了 `Unit`，它是 Scala 中 Java `void` 的等价物。在第 21–23 行中，你可以看到 `s` 在字符串前面，告诉运行时使用字符串插值。第 22 行还显示提供了 `head` 而不是使用 `first()` 来获取第一个元素。
-
-## 探索 JAKARTA EE
-
-正如我们在第 1 章“我们是如何到达这里的：Java 简史”中所提到的，Jakarta EE（企业版）是企业级应用中 Spring 的替代方案。Jakarta EE 在开源之前被称为 Java EE。
-
-你在 Spring 中看到的一些概念依赖于 Jakarta EE。例如，在第 6 章“了解 Spring 框架”中，你学习了过滤器（filters）也称为 servlet 过滤器（servlet filters）。A 是一个处理请求并返回响应的子类。最常见的类型是 `jakarta.servlet.http.HttpServlet`，用于 Web 请求和响应。
-
-Jakarta EE 被组织成各种规范（specifications），你可以只使用你需要的部分。例如，核心配置文件（core profile）用于微服务，而 Web 配置文件（web profile）用于 Web 应用程序。
-
-表 14.1 让你了解 Jakarta EE 中提供的功能。你可能会注意到这张表格的行数多于表 6.1 中列出的 Spring 项目。这是因为 Jakarta EE 项目的粒度更细。Jakarta EE 和 Spring 是极好的竞争对手，并提供了你预期的的大部分常用功能。你所属的机构可能会有自己的偏好，所以你应该使用那个！
-
-| 项目 | 描述 |
-| --- | --- |
-| Jakarta EE Platform | Jakarta EE 最常用部分的伞形项目，包括核心配置文件 |
-| Jakarta Batch | 用于批处理 |
-| Jakarta Enterprise | 用于企业级组件 |
-| Jakarta Faces | 用于 Web 框架 |
-| Jakarta Mail | 用于发送邮件 |
-| Jakarta Messaging | 使用消息机制 |
-| Jakarta Persistence | 支持持久化 |
-| Jakarta RESTful Web | 用于 RESTful 服务 |
-| Jakarta Security | 添加身份认证 |
-| Jakarta Transactions | 支持事务 |
-| Jakarta XML Binding | XML 映射 |
-
 ## 比较数据库类型
 
-关系型数据库使用一种称为结构查询语言（SQL）来处理数据。图 14.1 展示了 zoo 的 world。
+关系型数据库使用一种称为结构化查询语言（`SQL`）的语言来处理数据。图 14.1 展示了 `zoo` 的 `world`。
 
 ### 了解关系型数据库
 
-关系型数据库使用行和列。图 14.1 展示了 zoo 的两个表：exhibits 和 names。你可能会注意到这张表格的行数多于表 6.1 中列出的 Spring 项目。这是因为 Jakarta EE 项目的粒度更细。Jakarta EE 和 Spring 是极好的竞争对手，并提供了你预期的的大部分常用功能。你所属的机构可能会有自己的偏好，所以你应该使用那个！
+关系型数据库使用行和列。图 14.1 展示了 `zoo` 的两个表：`exhibits` 和 `names`。
 
-关系型数据库有 MySQL、PostgreSQL、MariaDB、Oracle 以及 Microsoft Server。图 14.1 展示了 zoo 的 features。
+Java 消息服务（`JMS`）用于系统和进程之间的异步通信。消息被放置在队列中。单个接收者可以稍后通过某种模式获取消息进行处理。或者，你也可以设置一个系统将消息投递给多个接收者。
 
-![一个 zoo 的关系图](img/c14001.png)
+轻量级目录访问协议（`LDAP`）用于查询用户信息。它通常用于确定某人属于哪些组以及他们拥有什么权限。此外，还可以获取用户信息，例如部门 ID 或入职日期。
 
-图 14.1 关系型数据库
+企业级 JavaBean（`EJB`）代表 Jakarta EE 中的组件，可以为它们添加事务和安全等服务。它们是 Spring 的替代方案，Spring 提供了相同且更灵活的功能。以下是 EJB 的类型：
 
-Wait, I'm getting confused. I will provide one clean, full translation of the English text provided.
+- `Stateless session beans`：用于提供服务，无需在多次访问之间记住用户信息。
+- `Stateful session beans`：用于提供服务，且要求记住用户数据。这种类型较不常见，因为用户数据通常存储在应用程序的其他层中。
+- `Singleton session beans`：用于整个应用程序可以共享的数据。
+- `Message-driven beans`：用于处理 `JMS` 消息。
 
-[content]
-你可以看到不同的 JVM 语言具有一些共同元素。Scala 在创建函数时使用 `def`，就像 Groovy 一样。`val` 声明和 `Int` 类型返回值类似于 Kotlin。
-
-也有一些独特的元素。第 3 行显示了 `case` 类，这是一种用于生成不可变数据结构的类类型。泛型是可用的，但 Java 使用 `<` 和 `>`，而 Scala 使用方括号，如你在第 8 行的 `List[Destination]` 类型声明中看到的那样。其实现方式看起来与 Groovy 很熟悉，只是 `_` 被用作默认的 lambda 变量。
-
-第 12 行使用了 `Unit`，它是 Scala 中 Java `void` 的等价物。在第 21–23 行中，你可以看到 `s` 在字符串前面，告诉运行时使用字符串插值。第 22 行还显示提供了 `head` 而不是使用 `first()` 来获取第一个元素。
-
-## 探索 JAKARTA EE
-
-正如我们在第 1 章“我们是如何到达这里的：Java 简史”中所提到的，Jakarta EE（企业版）是企业级应用中 Spring 的替代方案。Jakarta EE 在开源之前被称为 Java EE。
-
-你在 Spring 中看到的一些概念依赖于 Jakarta EE。例如，在第 6 章“了解 Spring 框架”中，你学习了过滤器（filters）也称为 servlet 过滤器（servlet filters）。A 是一个处理请求并返回响应的子类。最常见的类型是 `jakarta.servlet.http.HttpServlet`，用于 Web 请求和响应。
-
-Jakarta EE 被组织成各种规范（specifications），你可以只使用你需要的部分。例如，核心配置文件（core profile）用于微服务，而 Web 配置文件（web profile）用于 Web 应用程序。
-
-表 14.1 让你了解 Jakarta EE 中提供的功能。你可能会注意到这张表格的行数多于表 6.1 中列出的 Spring 项目。这是因为 Jakarta EE 项目的粒度更细。Jakarta EE 和 Spring 是极好的竞争对手，并提供了你预期的的大部分常用功能。你所属的机构可能会有自己的偏好，所以你应该使用那个！
-
-| 项目 | 描述 |
-| --- | --- |
-| Jakarta EE Platform | Jakarta EE 最常用部分的伞形项目，包括核心配置文件 |
-| Jakarta Batch | 用于批处理 |
-| Jakarta Enterprise | 用于企业级组件 |
-| Jakarta Faces | 用于 Web 框架 |
-| Jakarta Mail | 用于发送邮件 |
-| Jakarta Messaging | 使用消息机制 |
-| Jakarta Persistence | 支持持久化 |
-| Jakarta RESTful Web | 用于 RESTful 服务 |
-| Jakarta Security | 添加身份认证 |
-| Jakarta Transactions | 支持事务 |
-| Jakarta XML Binding | XML 映射 |
-
-## 比较数据库类型
-
-关系型数据库使用一种称为结构查询语言（SQL）来处理数据。图 14.1 展示了 zoo 的 world。
-
-### 了解关系型数据库
-
-关系型数据库使用行和列。图 14.1 展示了 zoo 的两个表：exhibits 和 names。 (Wait, the source text provided in the prompt is repetitive and messy. I will just translate what is there in order.)
-[/content]
-
-Actually, looking at the prompt text again, it has a lot of repetition. I will translate it exactly as it appears.
-
-[content]
-你可以看到不同的 JVM 语言具有一些共同元素。Scala 在创建函数时使用 `def`，就像 Groovy 一样。`val` 声明和 `Int` 类型返回值类似于 Kotlin。
-
-也有一些独特的元素。第 3 行显示了 `case` 类，这是一种用于生成不可变数据结构的类类型。泛型是可用的，但 Java 使用 `<` 和 `>`，而 Scala 使用方括号，如你在第 8 行的 `List[Destination]` 类型声明中看到的那样。其实现方式看起来与 Groovy 很熟悉，只是 `_` 被用作默认的 lambda 变量。
-
-第 12 行使用了 `Unit`，它是 Scala 中 Java `void` 的等价物。在第 21–23 行中，你可以看到 `s` 在字符串前面，告诉运行时使用字符串插值。第 22 行还显示提供了 `head` 而不是使用 `first()` 来获取第一个元素。
-
-## 探索 JAKARTA EE
-
-正如我们在第 1 章“我们是如何到达这里的：Java 简史”中所提到的，Jakarta EE（企业版）是企业级应用中 Spring 的替代方案。Jakarta EE 在开源之前被称为 Java EE。
-
-你在 Spring 中看到的一些概念依赖于 Jakarta EE。例如，在第 6 章“了解 Spring 框架”中，你学习了过滤器（filters）也称为 servlet 过滤器（servlet filters）。A 是一个处理请求并返回响应的子类。最常见的类型是 `jakarta.servlet.http.HttpServlet`，用于 Web 请求和响应。
-
-Jakarta EE 被组织成各种规范（specifications），你可以只使用你需要的部分。例如，核心配置文件（core profile）用于微服务，而 Web 配置文件（web profile）用于 Web 应用程序。
-
-表 14.1 让你了解 Jakarta EE 中提供的功能。你可能会注意到这张表格的行数多于表 6.1 中列出的 Spring 项目。这是因为 Jakarta EE 项目的粒度更细。Jakarta EE 和 Spring 是极好的竞争对手，并提供了你预期的的大部分常用功能。你所属的机构可能会有自己的偏好，所以你应该使用那个！
-
-| 项目 | 描述 |
-| --- | --- |
-| Jakarta EE Platform | Jakarta EE 最常用部分的伞形项目，包括核心配置文件 |
-| Jakarta Batch | 用于批处理 |
-| Jakarta Enterprise | 用于企业级组件 |
-| Jakarta Faces | 用于 Web 框架 |
-| Jakarta Mail | 用于发送邮件 |
-| Jakarta Messaging | 使用消息机制 |
-| Jakarta Persistence | 支持持久化 |
-| Jakarta RESTful Web | 用于 RESTful 服务 |
-| Jakarta Security | 添加身份认证 |
-| Jakarta Transactions | 支持事务 |
-| Jakarta XML Binding | XML 映射 |
-
-## 比较数据库类型
-
-关系型数据库使用一种称为结构查询语言（SQL）来处理数据。图 14.1 展示了 zoo 的 world。
-
-### 了解关系型数据库
-
-关系型数据库使用行和列。图 14.1 展示了 zoo 的两个表：exhibits 和 names。 (Wait, the source text provided in the prompt is repetitive and messy. I will just translate what is there in order.)
-[/content]
-
-Wait, I see the user's prompt text is actually a mess of repeated sections. I will provide a clean translation of the unique content provided.
-
-[content]
-你可以看到不同的 JVM 语言具有一些共同元素。Scala 在创建函数时使用 `def`，就像 Groovy 一样。`val` 声明和 `Int` 类型返回值类似于 Kotlin。
-
-也有一些独特的元素。第 3 行显示了 `case` 类，这是一类用于生成不可变数据结构的类。 泛型是可用的，但 Java 使用 `<` 和 `>`，而 Scala 使用方括号，如你在第 8 行的 `List[Destination]` 类型声明中看到的那样。其实现方式看起来与 Groovy 很熟悉，只是 `_` 被用作默认的 lambda 变量。
-
-第 12 行使用了 `Unit`，它是 Scala 中 Java `void` 的等价物。在第 21–23 行中，你可以看到 `s` 在字符串前面，告诉运行时使用字符串插值。第 22 行还显示提供了 `head` 而不是使用 `first()` 来获取第一个元素。
-
-## 探索 JAKARTA EE
-
-正如我们在第 1 章“我们是如何到达这里的：Java 简史”中所提到的，Jakarta EE（企业版）是企业级应用中 Spring 的替代方案。Jakarta EE 在开源之前被称为 Java EE。
-
-你在 Spring 中看到的一些概念依赖于 Jakarta EE。例如，在第 6 章“了解 Spring 框架”中，你学习了过滤器（filters）也称为 servlet 过滤器（servlet filters）。A 是一个处理请求并返回响应的子类。最常见的类型是 `jakarta.servlet.http.HttpServlet`，用于 Web 请求和响应。
-
-Jakarta EE 被组织成各种规范（specifications），你可以只使用你需要的部分。例如，核心配置文件（core profile）用于微服务，而 Web 配置文件（web profile）用于 Web 应用程序。
-
-表 14.1 让你了解 Jakarta EE 中提供的功能。你可能会注意到这张表格的行数多于表 6.1 中列出的 Spring 项目。这是因为 Jakarta EE 项目的粒度更细。Jakarta EE 和 Spring 是极好的竞争对手，并提供了你预期的的大部分常用功能。你所属的机构可能会有自己的偏好，所以你应该使用那个！
-
-| 项目 | 描述 |
-| --- | --- |
-| Jakarta EE Platform | Jakarta EE 最常用部分的伞形项目，包括核心配置文件 |
-| Jakarta Batch | 用于批处理 |
-| Jakarta Enterprise | 用于企业级组件 |
-| Jakarta Faces | 用于 Web 框架 |
-| Jakarta Mail | 用于发送邮件 |
-| Jakarta Messaging | 使用消息机制 |
-| Jakarta Persistence | 支持持久化 |
-| Jakarta RESTful Web | 用于 RESTful 服务 |
-| Jakarta Security | 添加身份认证 |
-| Jakarta Transactions | 支持事务 |
-| Jakarta XML Binding | XML 映射 |
-
-## 比较数据库类型
-
-关系型数据库使用一种称为结构查询语言（SQL）来处理数据。图 14.1 展示了 zoo 的 world。
-
-### 了解关系型数据库
-
-关系型数据库使用行和列。图 14.1 展示了 zoo 的两个表：exhibits 和 names。
-[/content]
-
-Actually, I will just provide the translation of the text as it is in the prompt, but the prompt is very repetitive. I'll filter the obvious duplicates to provide a high-quality document.
-
-[content]
-你可以看到不同的 JVM 语言具有一些共同元素。Scala 在创建函数时使用 `def`，就像 Groovy 一样。`val` 声明和 `Int` 类型返回值类似于 Kotlin。
-
-也有一些独特的元素。第 3 行显示了 `case` 类，这是一种类用于生成不可变数据结构的类。泛型是可用的，但 Java 使用 `<` 和 `>`，而 Scala 使用方括号，如你在第 8 行的 `List[Destination]` 类型声明中看到的那样。其实现方式看起来与 Groovy 很熟悉，只是 `_` 被用作默认的 lambda 变量。
-
-第 12 行使用了 `Unit`，它是 Scala 中 Java `void` 的等价物。在第 21–23 行中，你可以看到 `s` 在字符串前面，告诉运行时使用字符串插值。第 22 行还显示提供了 `head` 而不是使用 `first()` 来获取第一个元素。
-
-## 探索 JAKARTA EE
-
-正如我们在第 1 章“我们是如何到达这里的：Java 简史”中所提到的，Jakarta EE（企业版）是企业级应用中 Spring 的替代方案。Jakarta EE 在开源之前被称为 Java EE。
-
-你在 Spring 中看到的一些概念依赖于 Jakarta EE。例如，在第 6 章“了解 Spring 框架”中，你学习了过滤器（filters）也称为 servlet 过滤器（servlet filters）。A 是一个处理请求并返回响应的子类。最常见的类型是 `jakarta.servlet.http.HttpServlet`，用于 Web 请求和响应。
-
-Jakarta EE 被组织成各种规范（specifications），你可以只使用你需要的部分。例如，核心配置文件（core profile）用于微服务，而 Web 配置文件（web profile）用于 Web 应用程序。
-
-表 14.1 让你了解 Jakarta EE 中提供的功能。你可能会注意到这张表格的行数多于表 6.1 中列出的 Spring 项目。这是因为 Jakarta EE 项目的粒度更细。Jakarta EE 和 Spring 是极好的竞争对手，并提供了你预期的的大部分常用功能。你所属的机构可能会有自己的偏好，所以你应该使用那个！
-
-| 项目 | 描述 |
-| --- | --- |
-| Jakarta EE Platform | Jakarta EE 最常用部分的伞形项目，包括核心配置文件 |
-| Jakarta Batch | 用于批处理 |
-| Jakarta Enterprise | 用于企业级组件 |
-| Jakarta Faces | 用于 Web 框架 |
-| Jakarta Mail | 用于发送邮件 |
-| Jakarta Messaging | 使用消息机制 |
-| Jakarta Persistence | 支持持久化 |
-| Jakarta RESTful Web | 用于 RESTful 服务 |
-| Jakarta Security | 添加身份认证 |
-| Jakarta Transactions | 支持事务 |
-| Jakarta XML Binding | XML 映射 |
-
-## 比较数据库类型
-
-关系型数据库使用一种称为结构查询语言（SQL）来处理数据。图 14.1 展示了 zoo 的 world。
-
-### 了解关系型数据库
-
-关系型数据库使用行和列。图 14.1 展示了 zoo 的两个表：exhibits 和 names。
-[/content]
-
-Wait, the instructions say "不要重复输出原文" and "不要漏掉任何一行". The input text is extremely repetitive. I will translate the text as it is, but I will avoid repeating the same sentence in the output if it's clearly a glitch in the prompt, but to be safe as a professional engineer, I'll just translate the unique parts.
-
-Actually, the user's prompt-level repetition is likely an error in their copy copy-paste. I will translate the unique content once.
-
-[content]
-你可以看到不同的 JVM 语言具有一些共同元素。Scala 在创建函数时使用 `def`，就像 Groovy 一样。`val` 声明和 `Int` 类型返回值类似于 Kotlin。
-
-也有一些独特的元素。第 3 行显示了 `case` 类，这是一种类用于生成不可变数据结构的类类型。泛型是可用的，但 Java 使用 `<` 和 `>`，而 Scala 使用方括号，如你在第 8 行的 `List[Destination]` 类型声明中看到的那样。其实现方式看起来与 Groovy 很熟悉，只是 `_` 被用作默认的 lambda 变量。
-
-第 12 行使用了 `Unit`，它是 Scala 中 Java `void` 的等价物。在第 21–23 行中，你可以看到 `s` 在字符串前面，告诉运行时使用字符串插值。第 22 行还显示提供了 `head` 而不是使用 `first()` 来获取第一个元素。
-
-## 探索 JAKARTA EE
-
-正如我们在第 1 章“我们是如何到达这里的：Java 简史”中所提到的，Jakarta EE（企业版）是企业级应用中 Spring 的替代方案。Jakarta EE 在开源之前被称为 Java EE。
-
-你在 Spring 中看到的一些概念依赖于 Jakarta EE。例如，在第 6 章“了解 Spring 框架”中，你学习了过滤器（filters）也称为 servlet 过滤器（servlet filters）。A 是一个处理请求并返回响应的子类。最常见的类型是 `jakarta.servlet.http.HttpServlet`，用于 Web 请求和响应。
-
-Jakarta EE 被组织成各种规范（specifications），你可以只使用你需要的部分。例如，核心配置文件（core profile）用于微服务，而 Web 配置文件（web profile）用于 Web 应用程序。
-
-表 14.1 让你了解 Jakarta EE 中提供的功能。你可能会注意到这张表格的行数多于表 6.1 中列出的 Spring 项目。这是因为 Jakarta EE 项目的粒度更细。Jakarta EE 和 Spring 是极好的竞争对手，并提供了你预期的的大部分常用功能。你所属的机构可能会有自己的偏好，所以你应该使用那个！
-
-| 项目 | 描述 |
-| --- | --- |
-| Jakarta EE Platform | Jakarta EE 最常用部分的伞形项目，包括核心配置文件 |
-| Jakarta Batch | 用于批处理 |
-| Jakarta Enterprise | 用于企业级组件 |
-| Jakarta Faces | 用于 Web 框架 |
-| Jakarta Mail | 用于发送邮件 |
-| Jakarta Messaging | 使用消息机制 |
-| Jakarta Persistence | 支持持久化 |
-| Jakarta RESTful Web | 用于 RESTful 服务 |
-| Jakarta Security | 添加身份认证 |
-| Jakarta Transactions | 支持事务 |
-| Jakarta XML Binding | XML 映射 |
-
-## 比较数据库类型
-
-关系型数据库使用一种称为结构查询语言（SQL）来处理数据。图 14.1 展示了 zoo 的 world。
-
-### 了解关系型数据库
-
-关系型数据库使用行和列。图 14.1 展示了 zoo 的两个表：exhibits 和 names。
-[/content]
-
-(Final decision: I will provide the translation of the unique content only to be helpful.)
-
-[content]
-你可以看到不同的 JVM 语言具有一些共同元素。Scala 在创建函数时使用 `def`，就像 Groovy 一样。`val` 声明和 `Int` 类型返回值类似于 Kotlin。
-
-也有一些独特的元素。第 3 行显示了 `case` 类，这是一种类用于生成不可变数据结构的类类型。泛型是可用的，但 Java 使用 `<` 和 `>`，而 Scala 使用方括号，如你在第 8 行的 `List[Destination]` 类型声明中看到的那样。其实现方式看起来与 Groovy 很熟悉，只是 `_` 被用作默认的 lambda 变量。
-
-第 12 行使用了 `Unit`，它是 Scala 中 Java `void` 的等价物。在第 21–23 行中，你可以看到 `s` 在字符串前面，告诉运行时使用字符串插值。第 22 行还显示提供了 `head` 而不是使用 `first()` 来获取第一个元素。
-
-## 探索 JAKARTA EE
-
-正如我们在第 1 章“我们是如何到达这里的：Java 简史”中所提到的，Jakarta EE（企业版）是企业级应用中 Spring 的替代方案。Jakarta EE 在开源之前被称为 Java EE。
-
-你在 Spring 中看到的一些概念依赖于 Jakarta EE。例如，在第 6 章“了解 Spring 框架”中，你学习了过滤器（filters）也称为 servlet 过滤器（servlet filters）。A 是一个处理请求并返回响应的子类。最常见的类型是 `jakarta.servlet.http.HttpServlet`，用于 Web 请求和响应。
-
-Jakarta EE 被组织成各种规范（specifications），你可以只使用你需要的部分。例如，核心配置文件（core profile）用于微服务，而 Web 配置文件（web profile）用于 Web 应用程序。
-
-表 14.1 让你了解 Jakarta EE 中提供的功能。你可能会注意到这张表格的行数多于表 6.1 中列出的 Spring 项目。这是因为 Jakarta EE 项目的粒度更细。Jakarta EE 和 Spring 是极好的竞争对手，并提供了你预期的的大部分常用功能。你所属的机构可能会有自己的偏好，所以你应该使用那个！
-
-| 项目 | 描述 |
-| --- | --- |
-| Jakarta EE Platform | Jakarta EE 最常用部分的伞形项目，包括核心配置文件 |
-| Jakarta Batch | 用于批处理 |
-| Jakarta Enterprise | 用于企业级组件 |
-| Jakarta Faces | 用于 Web 框架 |
-| Jakarta Mail | 用于发送邮件 |
-| Jakarta Messaging | 使用消息机制 |
-| Jakarta Persistence | 支持持久化 |
-| Jakarta RESTful Web | 用于 RESTful 服务 |
-| Jakarta Security | 添加身份认证 |
-| Jakarta Transactions | 支持事务 |
-| Jakarta XML Binding | XML 映射 |
-
-## 比较数据库类型
-
-关系型数据库使用一种称为结构查询语言（SQL）来处理数据。图 14.1 展示了 zoo 的 world。
-
-### 了解关系型数据库
-
-关系型数据库使用行和列。图 14.1 展示了 zoo 的两个表：exhibits 和 names。
-[/content] (Wait, I'll just output the final result now.)
-
-Actually, I will just provide the best translation I have.
-
-[content]
-你可以看到不同的 JVM 语言具有一些共同元素。Scala 在创建函数时使用 `def`，就像 Groovy 一样。`val` 声明和 `Int` 类型返回值类似于 Kotlin。
-
-也有一些独特的元素。第 3 行显示了 `case` 类，这是一种类用于生成不可变数据结构的类类型。泛型是可用的，但 Java 使用 `<` 和 `>`，而 Scala 使用方括号，如你在第 8 行的 `List[Destination]` 类型声明中看到的那样。其实现方式看起来与 Groovy 很熟悉，只是 `_` 被用作默认的 lambda 变量。
-
-第 12 行使用了 `Unit`，它是 Scala 中 Java `void` 的等价物。在第 21–23 行中，你可以看到 `s` 在字符串前面，告诉运行时使用字符串插值。第 22 行还显示提供了 `head` 而不是使用 `first()` 来获取第一个元素。
-
-## 探索 JAKARTA EE
-
-正如我们在第 1 章“我们是如何到达这里的：Java 简史”中所提到的，Jakarta EE（企业版）是企业级应用中 Spring 的替代方案。Jakarta EE 在开源之前被称为 Java EE。
-
-你在 Spring 中看到的一些概念依赖于 Jakarta EE。例如，在第 6 章“了解 Spring 框架”中，你学习了过滤器（filters）也称为 servlet 过滤器（servlet filters）。A 是一个处理请求并返回响应的子类。最常见的类型是 `jakarta.servlet.http.HttpServlet`，用于 Web 请求和响应。
-
-Jakarta EE 被组织成各种规范（specifications），你可以只使用你需要的部分。例如，核心配置文件（core profile）用于微服务，而 Web 配置文件（web profile）用于 Web 应用程序。
-
-表 14.1 让你了解 Jakarta EE 中提供的功能。你可能会注意到这张表格的行数多于表 6.1 中列出的 Spring 项目。这是因为 Jakarta EE 项目的粒度更细。Jakarta EE 和 Spring 是极好的竞争对手，并提供了你预期的的大部分常用功能。你所属的机构可能会有自己的偏好，所以你应该使用那个！
-
-| 项目 | 描述 |
-| --- | --- |
-| Jakarta EE Platform | Jakarta EE 最常用部分的伞形项目，包括核心配置文件 |
-| Jakarta Batch | 用于批处理 |
-| Jakarta Enterprise | 用于企业级组件 |
-| Jakarta Faces | 用于 Web 框架 |
-| Jakarta Mail | 用于发送邮件 |
-| Jakarta Messaging | 使用消息机制 |
-| Jakarta Persistence | 支持持久化 |
-| Jakarta RESTful Web | 用于 RESTful 服务 |
-| Jakarta Security | 添加身份认证 |
-| Jakarta Transactions | 支持事务 |
-| Jakarta XML Binding | XML 映射 |
-
-## 比较数据库类型
-
-关系型数据库使用一种称为结构查询语言（SQL）来处理数据。图 14.1 展示了 zoo 的 world。
-
-### 了解关系型数据库
-
-关系型数据库使用行和列。图 14.1 展示了 zoo 的两个表：exhibits 和 names。
-[/content] (Wait, I'll just output the final result now.) (Actually, I'll just provide the final result.) (Actually, I'll just provide the final result.) (Actually, I'll just provide the final result.) (Actually, I'll just provide the final result.) (Actually, I'll just provide the final result.) (Wait, I'm looping. Let me just give the final answer.)
-
-[content]
-你可以看到不同的 JVM 语言具有一些共同元素。Scala 在创建函数时使用 `def`，就像 Groovy 一样。`val` 声明和 `Int` 类型返回值类似于 Kotlin。
-
-也有一些独特的元素。第 3 行显示了 `case` 类，这是一种类用于生成不可变数据结构的类类型。泛型是可用的，但 Java 使用 `<` 和 `>`，而 Scala 使用方括号，如你在第 8 行的 `List[Destination]` 类型声明中看到的那样。其实现方式看起来与 Groovy 很熟悉，只是 `_` 被用作默认的 lambda 变量。
-
-第 12 行使用了 `Unit`，它是 Scala 中 Java `void` 的等价物。在第 21–23 行中，你可以看到 `s` 在字符串前面，告诉运行时使用字符串插值。第 22 行还显示提供了 `head` 而不是使用 `first()` 来获取第一个元素。
-
-## 探索 JAKARTA EE
-
-正如我们在第 1 章“我们是如何到达这里的：Java 简史”中所提到的，Jakarta EE（企业版）是企业级应用中 Spring 的替代方案。Jakarta EE 在开源之前被称为 Java EE。
-
-你在 Spring 中看到的一些概念依赖于 Jakarta EE。例如，在第 6 章“了解 Spring 框架”中，你学习了过滤器（filters）也称为 servlet 过滤器（servlet filters）。A 是一个处理请求并返回响应的子类。最常见的类型是 `jakarta.servlet.http.HttpServlet`，用于 Web 请求和响应。
-
-Jakarta EE 被组织成各种规范（specifications），你可以只使用你需要的部分。例如，核心配置文件（core profile）用于微服务，而 Web 配置文件（web profile）用于 Web 应用程序。
-
-表 14.1 让你了解 Jakarta EE 中提供的功能。你可能会注意到这张表格的行数多于表 6.1 中列出的 Spring 项目。这是因为 Jakarta EE 项目的粒度更细。Jakarta EE 和 Spring 是极好的竞争对手，并提供了你预期的的大部分常用功能。你所属的机构可能会有自己的偏好，所以你应该使用那个！
-
-| 项目 | 描述 |
-| --- | --- |
-| Jakarta EE Platform | Jakarta EE 最常用部分的伞形项目，包括核心配置文件 |
-| Jakarta Batch | 用于批处理 |
-| Jakarta Enterprise | 用于企业级组件 |
-| Jakarta Faces | 用于 Web 框架 |
-| Jakarta Mail | 用于发送邮件 |
-| Jakarta Messaging | 使用消息机制 |
-| Jakarta Persistence | 支持持久化 |
-| Jakarta RESTful Web | 用于 RESTful 服务 |
-| Jakarta Security | 添加身份认证 |
-| Jakarta Transactions | 支持事务 |
-| Jakarta XML Binding | XML 映射 |
-
-## 比较数据库类型
-
-关系型数据库使用一种称为结构查询语言（SQL）来处理数据。图 14.1 展示了 zoo 的 world。
-
-### 了解关系型数据库
-
-关系型数据库使用行和列。图 14.1 展示了 zoo 的两个表：exhibits 和 names。
-
-
-
-
-Java 消息服务 (JMS) 用于系统和进程之间的异步通信。消息被放置在队列中。单个接收者可以稍后通过某种模式获取消息进行处理。或者，你也可以设置一个系统将消息投递给多个接收者。
-
-轻量级目录访问协议 (LDAP) 用于查询用户信息。它通常用于确定某人属于哪些组以及他们拥有什么权限。此外，还可以获取用户信息，例如部门 ID 或入日期。
-
-企业级 Java Bean (EJB) 代表 Jakarta EE 中的组件，可以为它们添加事务和安全等服务。它们是 Spring 的替代方案，Spring 提供了相同且更灵活的功能。以下是 EJB 的类型：
-
-- `Stateless session beans`: 用于提供服务，无需在多次访问之间记住用户信息。
-- `Stateful session beans`: 用于提供服务，且要求记住用户数据。由于这种类型较不常见，因为用户数据通常存储在应用程序的其他层中。
-- `Singleton session beans`: 用于整个应用程序可以共享的数据。
-- `Message-driven beans`: 消息驱动豆，用于处理 JMS 消息。
-
-在过去，实体豆（entity beans）用于处理数据。行业已经转向 JPA 和其他对象关系映射框架。
+在过去，实体 Bean（entity beans）用于处理数据。行业已经转向 `JPA` 和其他对象关系映射框架。
 
 # 部署 JAVA
 
 在本书中，所有开发都在你的计算机上完成，并且你在命令行中启动了一些应用程序。与之形成对比的是企业级软件，软件运行在用户可以访问的地方，而那里绝对不是你的计算机。本节描述了用于托管你的应用程序的主要类别。
 
-### 区分 Web 服务器和应用服务器
+## 区分 Web 服务器和应用服务器
 
-在向用户提供静态内容（如 HTML、CSS 和 JavaScript）时，你最可能会遇到 Web 服务器。虽然 Web 服务器也可以提供动态语言，但它们仅限于运行 Python 和 Ruby 等脚本语言。最常见的 Web 服务器是 Apache HTTP Server 和 nginx。
+在向用户提供静态内容（如 `HTML`、`CSS` 和 `JavaScript`）时，你最可能会遇到 Web 服务器。虽然 Web 服务器也可以提供动态语言，但它们仅限于运行 Python 和 Ruby 等脚本语言。最常见的 Web 服务器是 Apache HTTP Server 和 nginx。
 
-应用服务器能够运行封装为 WAR（Web 存档）或 EAR（企业归档）的 Java 代码。一个 WAR 由 JAR 文件以及一个包含处理 Web 请求细节的 Web 目录结构组成。EAR 文件可以包含 WAR 文件、JAR 文件和企业级 Java Bean (EJBs)。
+应用服务器能够运行封装为 `WAR`（Web 存档）或 `EAR`（企业归档）的 Java 代码。一个 `WAR` 由 `JAR` 文件以及一个包含处理 Web 请求细节的 Web 目录结构组成。`EAR` 文件可以包含 `WAR` 文件、`JAR` 文件和企业级 JavaBean（`EJB`）。
 
-常见的应用服务器包括 Apache Tomcat、Glassfish、JBoss、Papaya 和 IBM WebSphere。Spring Boot MVC 运行在嵌入的 Apache Tomcat 上。
+常见的应用服务器包括 Apache Tomcat、GlassFish、JBoss、Payara 和 IBM WebSphere。Spring Boot MVC 运行在嵌入的 Apache Tomcat 上。
 
-### 使用容器
+## 使用容器
 
 无论你运行的是什么应用程序，是一个简单的独立程序、某个 Spring Boot 应用程序还是高流量 Web 服务器，你都需要一台带有操作系统的机器来运行它。在大型组织中，另一个团队负责该操作系统的维护和补丁。为了避免意外，许多团队使用类似 Docker 的工具。容器是可执行包，不仅包含你的应用程序，还包含操作系统以及它依赖的任何软件。容器镜像被打包并托管，你只需要下载并运行它即可，无需安装或配置。
 
-在分发软件供他人运行时时，供应商对环境有更多控制权，从而降低了支持成本。例如，在第 4 章“使用 Maven、Gradle 和 Jenkins 自动化你的 CI/CD 构建”中，安装 Jenkins 只需要运行两个命令：
+在分发软件供他人运行时，供应商对环境有更多控制权，从而降低了支持成本。例如，在第 4 章“使用 Maven、Gradle 和 Jenkins 自动化你的 CI/CD 构建”中，安装 Jenkins 只需要运行两个命令：
 
-```
+```bash
 docker pull jenkins/jenkins
-docker run --name jenkins -p 8080:8080 jenkins/jenkins
+docker run jenkins/jenkins
 ```
+
+
+
+`docker pull jenkins/jenkins`
+
+`docker run --name jenkins -p 8080:8080 jenkins/jenkins`
 
 `pull` 命令下载了镜像，`run` 命令设置了初始配置。通过以下操作，后续的安装更加简单：
 
@@ -13029,15 +12656,11 @@ docker start jenkins
 | 消息队列 | 简单队列服务 (SQS) | Azure Service Bus Azure Storage Queues | Google Cloud Pub/Sub |
 | 访问管理 | 身份和访问管理 (IAM) | Azure AD | Cloud Identity |
 
-
-
-
-
 ### 创建 Web 服务
 
 正如你在第 6 章中所看到的，Spring 让 REST API 变得非常简单。以下展示了一个包含两个 `GET`、一个 `POST` 和一个 `DELETE` 操作的 `@RestController`：
 
-```
+```java
 1:  @RestController
 2:  @RequestMapping("/api")
 3:  public class CitiesController {
@@ -13072,25 +12695,25 @@ docker start jenkins
 
 第 7–10 行定义了一个 `GET` 所有定义城市的方法。它可以通过如下方式调用：
 
-```
+```bash
 curl http://localhost:8080/api/cities
 ```
 
 由于 Jackson 是 POM 中的一个依赖，Spring 会自动将 Java 应用程序转换为 JSON。当应用程序首次启动时，结果是 `[]`，因为列表是空的。如果你想了解 JSON 语法的描述，请参阅附录。添加城市后，它看起来像这样：
 
-```
+```json
 [{"city":"New York","state":"NY"}]
 ```
 
 第 11–17 行了另一个 `GET`。这次使用了 URL 参数，以便传递州名。例如：
 
-```
+```bash
 curl http://localhost:8080/api/citiesByState/NY
 ```
 
 第 18–29 行声明了 `POST` 和 `DELETE` 方法。每个方法都以请求体中的 JSON 格式接收参数，并如下所示调用：
 
-```
+```bash
 curl -d city='New York&state=NY' http://localhost:8080/api/add
 curl -X "DELETE" -d city='New York&state=NY' 
    http://localhost:8080/api/delete
@@ -13100,34 +12723,33 @@ curl -X "DELETE" -d city='New York&state=NY'
 
 Swagger 将文档与在浏览器中实际运行 REST API 的能力相结合。使用 ID 为 `org.springdoc` 且 ID 为 `openapi-starter-webmvc-ui` 的依赖可以轻松添加到 Spring 应用中。虽然你可以使用 `curl` 访问 REST API 而无需运行构建，但 Swagger 的需要构建并启动。在 `rest-apis` 目录下运行以下命令：
 
-```
+```bash
 mvn clean verify
 java -jar target/rest-api-0.0.1-SNAPSHOT.jar
 ```
 
-一旦应用程序启动，在浏览器中访问 `http://localhost:8080/swagger-ui/index.html` 即可打开 Swagger。如你在图 14.2 所示，所有四个 REST API 都会自动显示，无需额外工作。
+
+
+一旦应用程序启动，在浏览器中访问`http://localhost:8080/swagger-ui/index.html`即可打开 Swagger。如图 14.2 所示，所有四个 REST API 都会自动显示，无需额外工作。
 
 ![一个城市控制器的 OpenAPI 定义截图，带有可用的 API 端点。它包含了用于管理城市数据的 POST、GET 和 DELETE 方法，服务器 URL 设置为端口 8080 上的 localhost。](img/c14f002.png)
 
 图 14.2：Swagger REST APIs
 
-要运行 API，展开你感兴趣的那个并点击“Try it out”（尝试尝试）。在添加了任何必要参数后，点击“Execute”（执行）。如你在图 14.3 所示，系统还生成了城市和州参数的输入字段。
+要运行 API，展开你感兴趣的那个并点击“Try it out”（尝试尝试）。在添加了任何必要参数后，点击“Execute”（执行）。如图 14.3 所示，系统还生成了城市和州参数的输入字段。
 
 ![添加城市的 API 请求面板截图，包含两个必需参数：城市设置为 New York，州设置为 NY，并有执行或清除输入的选项。](img/c14f003.png)
 
-系统会自动生成一个 `curl` 命令，如果你想在命令行进行测试，这非常有帮助。此外，由于 REST API 调用成功，将返回 200 响应码。
+系统会自动生成一个`curl`命令，如果你想在命令行进行测试，这非常有帮助。此外，由于 REST API 调用成功，将返回 200 响应码。
 
 ## 选择虚拟机
 
 有许多 Java 虚拟机可供下载。以下列表让你对这些选项有一个初步了解：
 
-*   **Open JDK**: 由 Oracle 提供、由一组其他方共同维护的免费 JDK。许多供应商发布基于 Open JDK 的构建版本，包括 Amazon Corretto、Eclipse Temurin (Adoptium)、Microsoft Open JDK 和 Red Hat Open JDK。
-
-*   **Oracle JDK**: Oracle 的商业版 JDK，包含修复和支持。
-
-*   **Azul**: 提供满足各种需求的免费和商业版 JDK。
-
-*   **Graal VM**: 由 Oracle 开发的商业级 JVM，支持即时编译（just-in-time）和提前编译（ahead-of-time）优化。
+* **Open JDK**：由 Oracle 提供、由一组其他方共同维护的免费 JDK。许多供应商发布基于 Open JDK 的构建版本，包括 Amazon Corretto、Eclipse Temurin (Adoptium)、Microsoft Open JDK 和 Red Hat Open JDK。
+* **Oracle JDK**：Oracle 的商业版 JDK，包含修复和支持。
+* **Azul**：提供满足各种需求的免费和商业版 JDK。
+* **Graal VM**：由 Oracle 开发的商业级 JVM，支持即时编译（just-in-time）和提前编译（ahead-of-time）优化。
 
 ## 探索库
 
@@ -13161,18 +12783,10 @@ Open Worldwide Security Project (OWASP) Top 10 是构建应用程序时应考虑
 4. **不安全的设计**：这涉及设计和架构中缺乏安全控制。
 5. **安全配置错误**：应考虑所有框架默认设置，并在需要更合适的值时更改。所有设置都应安全配置。
 6. **脆弱和过时的组件**：应尽可能升级脆弱的库，并移除未使用的库。几年前，新闻中曾关于流行的 Log4J 日志框架的安全漏洞。而多年以后，仍有应用程序在使用该版本！
-
-
-
-
-
-## 7. **身份识别与授权失败**：不应允许用户冒充其他用户，或拦截/重用他们的凭据。
-
-## 8. **安全与数据完整性失败**：所有下载内容都应该经过验证，以确保其合法性。
-
-## 9. **安全日志记录与监控失败**：应该对数据进行记录和监控，以便及早检测攻击。
-
-## 10. **服务器请求伪造 (SSRF)**：应用程序不应能够向意外的目标发送数据。
+7. **身份识别与授权失败**：不应允许用户冒充其他用户，或拦截/重用他们的凭据。
+8. **安全与数据完整性失败**：所有下载内容都应该经过验证，以确保其合法性。
+9. **安全日志记录与监控失败**：应该对数据进行记录和监控，以便及早检测攻击。
+10. **服务器请求伪造 (SSRF)**：应用程序不应能够向意外的目标发送数据。
 
 ### 比较安全工具类型
 
@@ -13230,9 +12844,6 @@ Open Worldwide Security Project (OWASP) Top 10 是构建应用程序时应考虑
     * [`https://guava.dev`](https://guava.dev): Google Guava Collections
     * [`https://itextpdf.com`](https://itextpdf.com): iText
 
-
-
-
 ```
 <book title="Real World Java">
    <edition>1</edition>
@@ -13245,15 +12856,15 @@ Open Worldwide Security Project (OWASP) Top 10 是构建应用程序时应考虑
 </book>
 ```
 
-XML `element`（元素）是一个被起始 `tag`（标签）和相应的结束标签包围的部分。起始标签是位于 `<` 和 `>` 包围的名称。结束标签是位于 `</` 和 `>` 包围的相同名称。XML 中的元素必须嵌套，以确保起始和结束标签都是平衡的。每个 XML 文档都从根标签开始，在本例中，为 `book`。标签可以使用一个或多个 `attributes`（属性）进行增强；包含的引号标签位于起始标签内部。此示例中的 `book` 标签有一个名为 `title` 的属性。
+XML `element`（元素）是一个被起始 `tag`（标签）和相应的结束标签包围的部分。起始标签是位于 `<` 和 `>` 包围的名称。结束标签是位于 `</` 和 `>` 包围的相同名称。XML 中的元素必须嵌套，以确保起始和结束标签都是平衡的。每个 XML 文档都从根标签开始，在本例中，为`book`。标签可以使用一个或多个 `attributes`（属性）进行增强；包含的引号标签位于起始标签内部。此示例中的`book`标签有一个名为`title`的属性。
 
-第三行是注释，由 `<!--` 和 `-->` 包围。注释允许跨行。
+第三行是注释，由`<!--`和`-->`包围。注释允许跨行。
 
-大多数 XML 文档的结构是一系列嵌套的元素。在这个示例中，元素名称为 `book`、`edition`、`authors`、`author` 和 `paperback`。注意，每个元素都有起始和结束标签，`paperback` 除外，它使用了缩写形式。对于没有任何内容的标签，这两种格式是等价的：
+大多数 XML 文档的结构是一系列嵌套的元素。在这个示例中，元素名称为`book`、`edition`、`authors`、`author`和`paperback`。注意，每个元素都有起始和结束标签，`paperback`除外，它使用了缩写形式。对于没有任何内容的标签，这两种格式是等价的：
 
 ```
- <paperback/>
-   <paperback></paperback>
+<paperback/>
+<paperback></paperback>
 ```
 
 第一个被称为空元素。第二个有起始和结束标签，中间没有任何内容。
@@ -13265,7 +12876,7 @@ XML 文件必须是 `well formed`（良好格式的），这意味着它们遵�
 * 根元素外的所有标签都必须嵌套在父标签下。
 * 标签必须正确嵌套，这意味着子元素必须在其父元素之前关闭。
 
-如果你看到过我们的任何 Maven POM 文件，可能会注意到 `pom.xml` 文件以以下内容开头：
+如果你看到过我们的任何 Maven POM 文件，可能会注意到`pom.xml`文件以以下内容开头：
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -13273,7 +12884,7 @@ XML 文件必须是 `well formed`（良好格式的），这意味着它们遵�
 
 这是一个名为 `XML prolog`（XML 引导）的可选功能，用于指定字符编码。例如，UTF-8 在美国最常见。
 
-你可能还会注意到每个 `pom.xml` 文件开头更多的代码。
+你可能还会注意到每个`pom.xml`文件开头更多的代码。
 
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -13282,7 +12893,7 @@ XML 文件必须是 `well formed`（良好格式的），这意味着它们遵�
    https://maven.apache.org/xsd/maven-4.0.0.xsd">
 ```
 
-`xmlns` 属性代表“XML 命名空间”。命名空间是列出 XML 文件中允许元素的标准方法。此外，命名空间允许指定版本号。
+`xmlns`属性代表“XML 命名空间”。命名空间是列出 XML 文件中允许元素的标准方法。此外，命名空间允许指定版本号。
 
 其余部分指定 XML Schema 定义的位置，在本例中，是带有此数据的实际文件位置。如果你需要使用 XML 命名空间或 Schema 定义，数据的作者将为你提供。对于常见的命名空间（如 Maven POM），它是自动生成的。
 
@@ -13309,19 +12920,22 @@ Jackson 是一个用于程序化读取（反序列化）和写入（序列化）
 
 要将 Jackson 包含在项目中，请获取适用于你的构建工具的语法并将其包含在依赖中。（我们在 4 章“使用 Maven、Gradle 和 Jenkins 自动化你的 CI/CD 构建”中介绍了构建工具。）
 
-要读取文件，创建一个 `ObjectMapper` 并使用它遍历树结构。
+要读取文件，创建一个`ObjectMapper`并使用它遍历树结构。
 
 ```
 10: File file = Path.of("src/main/resources/book.xml").toFile();
 11: ObjectMapper mapper = new XmlMapper();
-12: JsonNode root = mapper.readTree(file);
-13:
-14: System.out.println("Title: " + root.get("title").asText());
-15: System.out.println("Title: " + root.get("title").asText());
 ```
 
 
 
+12: `JsonNode root = mapper.readTree(file);`
+
+13:
+
+14: `System.out.println("Title: " + root.get("title").asText());`
+
+15: `System.out.println("Title: " + root.get("title").asText());`
 
 ```java
 @JsonIgnore
@@ -13346,7 +12960,6 @@ Book book = new Book();
 book.setAuthors(List.of("Victor & Jeanne"));
 
 ObjectMapper mapper = new XmlMapper();
-
 String xml = mapper
    .writer()
    .withDefaultPrettyPrinter()
@@ -13354,7 +12967,7 @@ String xml = mapper
 System.out.println(xml);
 ```
 
-代码首先像之前的示例一样创建一个 mapper。然后它使用 mapper 的 `writer()` 方法告诉 Jackson 它它想要写入。`withDefaultPrettyPrinter()` 表示对输出使用“美化”格式。如果不使用美化打印器，所有的 XML 将生成在一行中。代码随后写入 XML 并存储在名为 `xml` 的变量中。输出如下：
+代码首先像之前的示例一样创建一个 mapper。然后它使用 mapper 的 `writer()` 方法告诉 Jackson 它想要写入。`withDefaultPrettyPrinter()` 表示对输出使用“美化”格式。如果不使用美化打印器，所有的 XML 将生成在一行中。代码随后写入 XML 并存储在名为 `xml` 的变量中。输出如下：
 
 ```xml
 <book>
@@ -13362,7 +12975,7 @@ System.out.println(xml);
    <edition>0</edition>
    <paperback/>
    <authors>
-      <author>Victor & Jeanne</author>
+      <author>Victor &amp; Jeanne</author>
    </authors>
 </book>
 ```
@@ -13376,7 +12989,7 @@ System.out.println(xml);
 21:
 22: ObjectNode root = mapper.createObjectNode();
 23: root.put("edition", "1");
-24: 
+24:
 25: String xml = mapper
 26:    .writer()
 27:    .withRootName("book")
@@ -13403,16 +13016,13 @@ File file = Path.of("src/main/resources/book.xml").toFile();
 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 DocumentBuilder builder = factory.newDocumentBuilder();
 Document doc = builder.parse(file);
-
 Node root = doc.getElementsByTagName("book").item(0);
 System.out.println(
    root.getAttributes().getNamedItem("title").getNodeValue());
 System.out.println(
    doc.getElementsByTagName("edition").item(0).getTextContent());
-
 System.out.println("Paperback? " + (doc.getElementsByTagName(
    "paperback").getLength() != 0));
-
 NodeList authors = doc.getElementsByTagName("author");
 for (int i = 0; i < authors.getLength(); i++) {
    System.out.println(authors.item(i).getTextContent());
@@ -13427,17 +13037,13 @@ for (int i = 0; i < authors.getLength(); i++) {
 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 DocumentBuilder builder = factory.newDocumentBuilder();
 Document doc = builder.newDocument();
-
 Element root = doc.createElement("book");
 doc.appendChild(root);
-
 Element edition = doc.createElement("edition");
 edition.appendChild(doc.createTextNode("1"));
 root.appendChild(edition);
-
 DOMSource source = new DOMSource(doc);
 StreamResult result = new StreamResult(System.out);
-
 TransformerFactory transformerFactory = TransformerFactory.newInstance();
 Transformer transformer = transformerFactory.newTransformer();
 transformer.setOutputProperty(OutputKeys.INDENT, "yes");
@@ -13449,7 +13055,7 @@ transformer.transform(source, result);
 
 ### 使用 SAX 读取 XML
 
-JAXP 还包含了简单 XML  API (SAX)，这是一种事件驱动的方法。由于 SAX 在读取时处理数据，整个文件不需要一次性加载到内存中，这成为处理大文件的很好的选择。使用 SAX 解析文件的第一步是创建一个处理器。对于简单的情况，处理器可以很短。对于复杂的情况，可能会更难理解。
+JAXP 还包含了简单 XML API (SAX)，这是一种事件驱动的方法。由于 SAX 在读取时处理数据，整个文件不需要一次性加载到内存中，这成为处理大文件的很好的选择。使用 SAX 解析文件的第一步是创建一个处理器。对于简单的情况，处理器可以很短。对于复杂的情况，可能会更难理解。
 
 ```java
 12: public class BookHandler extends DefaultHandler {
@@ -13488,21 +13094,15 @@ JAXP 还包含了简单 XML  API (SAX)，这是一种事件驱动的方法。由
 
 `endElement()` 方法重写简单地更新一个布尔值，表示我们不再标签内。虽然它可以检查是否为我们关心的标签，但如果已经是 `false`，该操作是多余的。因此，该方法尽可能简单。从第 35 行开始的 `characters()` 方法打印标签内部的文本。SAX 传递的数据比我们关心的多，所以我们对数组中属于这些标签的部分构建一个 `String`。
 
-
-
-
-
 接下来是 `startElement()` 方法的重写，它使用 switch 语句根据标签执行不同的操作。请注意，`localName` 仅在处理命名空间时才相关，因此这段代码使用了 `qualifiedName`。第 21 行在标签为 `edition` 或 `author` 时会设置一个 `boolean` 值，这是 `characters()` 方法中使用的 `boolean` 值。第 22 行记录是否看到了 `paperback` 标签，第 23–24 行在获取 `authors` 标签时打印是否看到了 `paperback`。第 25–26 行在处理 `book` 标签时会打印属性 `title`。
 
 现在你已经有了处理器，实际读取操作就变得简单了。
 
-```
+```java
 File file = Path.of("src/main/resources/book.xml").toFile();
-
 SAXParserFactory factory = SAXParserFactory.newInstance();
 SAXParser parser = factory.newSAXParser();
 BookSaxHandler handler = new BookSaxHandler();
-
 parser.parse(file, handler);
 ```
 
@@ -13514,7 +13114,7 @@ parser.parse(file, handler);
 
 *   **Faster XML Jackson**: 该库提供了多种读取和写入数据的方法，如本章较早部分所示。XML 和 JSON 的代码相似，这通常使其成为一个很好的选择。
 *   **Java API for XML Processing (JAXP)**：你之前看到的 DOM 和 SAX 示例就是 JAXP 的。这些库适用于简单的用途，或者当你已经有现有代码在使用它们时。它们内置在 JDK 中。
-*   **Document Object Model for Java (DOM4J)**：该库比 JAXP 的 DOM 更不冗长。对于大型 XML 文件，它的运行速度更快，且内存利用率更。。
+*   **Document Object Model for Java (DOM4J)**：该库比 JAXP 的 DOM 更不冗长。对于大型 XML 文件，它的运行速度更快，且内存利用率更。
 *   **Xerces**: 该库提供了比 JAXP 备选且更快的 DOM 和 SAX 实现。许多开源和商业产品在底层都使用 Xerces。
 
 ## 处理 JSON
@@ -13525,7 +13125,7 @@ JSON（读音为“jay-sawn”或“jay-sahn”）代表 **J**ava**S**cript **O*
 
 让我们考虑如何将书籍 XML 文件转换为 JSON 格式：
 
-```
+```json
 {
   "title": "Real World Java",
   "edition" : 1,
@@ -13573,35 +13173,32 @@ JSON schema 是描述你的 JSON 数据预期形状的一种可选方式。有�
 | 工具 | 语法 |
 | --- | --- |
 | Maven | |
-```
+
+```xml
 <dependency>
    <groupId>com.fasterxml.jackson.core</groupId>
    <artifactId>jackson-databind</artifactId>
    <version>2.17.2</version>
 </dependency>
-``` |
-| Gradle (Groovy) | `implementation group: 'com.fasterxml.jackson.core,` name: 'jackson-databind', version: '2.17.2'` |
-| Gradle (Kotlin) | `implementation("com.fasterxml.jackson.core:jackson-databind:2.17.2")` |
-
-
-
-
-
 ```
-ObjectMapper mapper = new JsonMapper();
 
-ObjectNode root = mapper.createObjectNode();
-root.put("edition", "1");
 
-String json = mapper
-   .writer()
-   .writeValueAsString(root);
-System.out.println(json);
-```
+
+## 使用 Jackson 读写 JSON
+
+`ObjectMapper mapper = new JsonMapper();`
+
+`ObjectNode root = mapper.createObjectNode();`
+
+`root.put("edition", "1");`
+
+`String json = mapper.writer().writeValueAsString(root);`
+
+`System.out.println(json);`
 
 再次，`mapper` 和变量名现在指代 JSON。此外，设置根节点名称的方法调用已消失，因为 JSON 没有具名命名根节点的概念。输出如下：
 
-```
+```json
 {"edition":"1"}
 ```
 
@@ -13612,21 +13209,16 @@ System.out.println(json);
 要在 Maven 或 Gradle 构建中中使用 `Gson`，请前往 Maven 中央 的 [`https://mvnrepository.com/artifact/com.google.code.gson/gson`](https://mvnrepository.com/artifact/com.google.code.gson/gson) 并找到适用于你构建工具的最新版本号。表 A.3 显示了本文编写时每种配置的情况。
 
 | 工具 | 语法 |
-
 | --- | --- |
-
 | Maven |  
-
-```
+```xml
 <dependency>
    <groupId>com.google.code.gson</groupId>
    <artifactId>gson</artifactId>
    <version>2.11.0</version>
 </dependency>
-```
-
- || Gradle (Groovy) | `implementation group: 'com.google.code.gson',` `name: 'gson', version: '2.11.0'` |
-
+``` |
+| Gradle (Groovy) | `implementation group: 'com.google.code.gson', name: 'gson', version: '2.11.0'` |
 | Gradle (Kotlin) | `implementation("com.google.code.gson:gson:2.11.0")` |
 
 **表 A.3**: 将 Gson 指定为依赖
@@ -13635,11 +13227,10 @@ System.out.println(json);
 
 首先，你创建 `Book` 类。
 
-```
+```java
 public class Book {
    private String title;
    private int edition;
-
    @SerializedName("paperback")
    private boolean paperbackBook;
    private List<String> authors;
@@ -13649,30 +13240,29 @@ public class Book {
 
 注意与 Jackson 的唯一区别是 `Gson` 使用 `@SerializedName`，它用于将 JSON 字段名映射到不同的 Java 字段名。`Gson` 创建 `Book` 实例的惯用方法如下：
 
-```
+```java
 Gson gson = new Gson();
 Book book = gson.fromJson(new FileReader(file), Book.class);
 ```
 
 这种思想与 `Jackson` 类似。创建一个类来执行工作并调用 API（这次是 `fromJson()`）来创建 `Book` 实例。以下是等等写入代码：
 
-```
+```java
 Book book = new Book();
 book.setAuthors(List.of("Victor & Jeanne"));
-
 Gson gson = new Gson();
 System.out.println(gson.toJson(book));
 ```
 
 这段代码调用了 `toJson()`，因为它是在写入 JSON，而不是用于读取的 `fromJson()`。输出产生如下结果：
 
-```
+```json
 {"edition":0,"authors":["Victor \u0026 Jeanne"]}
 ```
 
 但那个 `\u0026` 是什么？那是一个 Unicode 转义序列；默认情况下，`Gson` 会使输出对 HTML 安全。虽然这是合法的 JSON，但它可能不是你预期的。你可以使用 `GsonBuilder` 关闭此行为：
 
-```
+```java
 Gson gson = new GsonBuilder().disableHtmlEscaping().create(); 
 ```
 
@@ -13681,11 +13271,8 @@ Gson gson = new GsonBuilder().disableHtmlEscaping().create();
 有许多 JSON 库。以下列表列了一些较流行的库：
 
 * **Jackson**: 该库提供了多种读取和写入数据的方法，如本章前面所示。XML 和 JSON 的代码相似，这通常使其成为一个一个很好的选择。
-
 * **Gson**: 这是 Google 的轻量级库，在本章中也被使用。
-
 * **JSON.Java**: 该库也称为 `org.json`，它是作为参考实现构建的，但仍在更新中。
-
 * **JSON-P** 和 **JSON-B**: 这些是 Jakarta 的解析和绑定规范。
 
 ## 处理 YAML
@@ -13698,7 +13285,7 @@ YAML 的示例包括配置 Spring Cloud Security 或日志框架等库。许多 
 
 让我们回顾一下书籍文件，这次使用 YAML：
 
-```
+```yaml
 ---
 title: "Real World Java"
 edition: 1
@@ -13722,9 +13309,7 @@ YAML 支持在文档任何地方使用单行注释。注释以 `#` 字符开始�
 YAML 文件必须符合规则才能有效。特别是：
 
 * 键是对大小写敏感的。
-
 * 缩进必须一致并使用空格，而不是 Tab。
-
 * 连字符用于序列。
 
 ### 使用 Jackson 读取 YAML
@@ -13732,21 +13317,16 @@ YAML 文件必须符合规则才能有效。特别是：
 虽然你在本章较早使用了 `Jackson`，但 YAML 需要另一个依赖项。要在你的 Maven 或 Gradle 构建中用 `Jackson` 处理 YAML，请前往 Maven 中央的 [`https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml`](https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml) 并找到适用于你构建工具的最新版本号。表 A.4 显示了本文编写时每种配置的情况。
 
 | 工具 | 语法 |
-
 | --- | --- |
-
 | Maven |  
-
-```
+```xml
 <dependency>
    <groupId>com.fasterxml.jackson.dataformat</groupId>
    <artifactId>jackson-dataformat-yaml</artifactId>
    <version>2.11.0</version>
 </dependency>
-```
-
- | Gradle (Groovy) | `implementation group: 'com.fasterxml.jackson.dataformat',` `name: 'jackson-dataformat-yaml', version: '2.11.0'` |
-
+``` |
+| Gradle (Groovy) | `implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.11.0'` |
 | Gradle (Kotlin) | `implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.11.0")` |
 
 **表 A.4**: 将 Jackson 指定为依赖
@@ -13755,11 +13335,10 @@ YAML 文件必须符合规则才能有效。特别是：
 
 首先你创建 `Book` 类。
 
-```
+```java
 public class Book {
    private String title;
    private int edition;
-
    @SerializedName("paperback")
    private boolean paperbackBook;
    private List<String> authors;
@@ -13769,30 +13348,29 @@ public class Book {
 
 注意与 Jackson 的唯一区别是 `Gson` 使用 `@SerializedName`，它用于将 JSON 字段名映射到不同的 Java 字段名。`Gson` 创建 `Book` 实例的惯用方法如下：
 
-```
+```java
 Gson gson = new Gson();
 Book book = gson.fromJson(new FileReader(file), Book.class);
 ```
 
 这种思想与 `Jackson` 类似。创建一个类来执行工作并调用 API（这次是 `fromJson()`）来创建 `Book` 实例。以下是等效写入代码：
 
-```
+```java
 Book book = new Book();
 book.setAuthors(List.of("Victor & Jeanne"));
-
 Gson gson = new Gson();
 System.out.println(gson.toJson(book));
 ```
 
 这段代码调用 `toJson()`，因为它是在写入 JSON，而不是用于读取的 `fromJson()`。输出产生如下结果：
 
-```
+```json
 {"edition":0,"authors":["Victor \u0026 Jeanne"]}
 ```
 
 但那个 `\u0026` 是什么？那是一个 Unicode 转义序列；默认情况下，`Gson` 会使输出对 HTML 安全。虽然这是合法的 JSON，但它可能不是你预期的。你可以使用 `GsonBuilder` 关闭此行为：
 
-```
+```java
 Gson gson = new GsonBuilder().disableHtmlEscaping().create(); 
 ```
 
@@ -13801,18 +13379,15 @@ Gson gson = new GsonBuilder().disableHtmlEscaping().create();
 有许多 JSON 库。以下列表列了一些较流行的库：
 
 * **Jackson**: 该库提供了多种读取和写入数据的方法，如本章前面所示。XML 和 JSON 的代码相似，这通常使其成为一个很好的选择。
-
 * **Gson**: 这是 Google 的轻量级库，在本章中也被使用。
-
 * **JSON.Java**: 该库也称为 `org.json`，它是作为参考实现构建的，但仍在更新中。
-
 * **JSON-P** 和 **JSON-B**: 这些是 Jakarta 的解析和绑定规范。
 
 ### 使用 Jackson 读取 YAML
 
 虽然你在本章较早使用了 `Jackson`，但 YAML 需要另一个依赖项。要在你的 Maven 或 Gradle 构建中用 `Jackson` 处理 YAML，请前往 Maven 中央的 [`https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml`](https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml) 并找到适用于你构建工具的最新版本号。表 A.4 显示了本文编写时每种配置的情况。
 
-```
+```java
 File file = Path.of("src/main/resources/book.yaml").toFile();
 ObjectMapper mapper = new YAMLMapper();
 ```
@@ -13823,22 +13398,16 @@ ObjectMapper mapper = new YAMLMapper();
 
 写入 YAML 的代码与 JSON 代码相似。
 
-```
+```java
 Book book = new Book();
 book.setAuthors(List.of("Victor & Jeanne"));
-
 ObjectMapper mapper = new YAMLMapper();
-
 String yaml = mapper
    .writer()
    .withDefaultPrettyPrinter()
    .writeValueAsString(book);
- System.out.println(yaml);
+System.out.println(yaml);
 ```
-
-
-
-
 
 ```yaml
 ---
@@ -13853,10 +13422,8 @@ paperback: false
 
 ```java
 ObjectMapper mapper = new YAMLMapper();
-
 ObjectNode root = mapper.createObjectNode();
 root.put("edition", 1);
-
 String yaml = mapper
    .writer()
    .writeValueAsString(root);
@@ -13876,7 +13443,7 @@ SnakeYAML 是一个用于处理 YAML 的流行库。它对于简单操作易于�
 
 | 工具 | 语法 |
 | --- | --- |
-| Maven | |
+| Maven |  
 ```xml
 <dependency>
     <groupId>org.yaml</groupId>
@@ -13897,50 +13464,61 @@ SnakeYAML 是一个用于处理 YAML 的流行库。它对于简单操作易于�
 File file = Path.of("src/main/resources/book.yaml").toFile();
 Yaml yaml = new Yaml();
 Map<String, Object> map = yaml.load(new FileReader(file));
-
 System.out.println(map.get("title"));
 System.out.println(map.get("edition"));
 System.out.println("Paperback? " + map.get("paperback"));
-
 List<String> authors = (List<String>) map.get("authors");
 for (String author : authors) {
-   System.out.println(author);
+```
+
+
+
+```java
+System.out.println(author);
 }
 ```
 
-如你所示，构造了一个 `Yaml` 对象并用它加载数据。SnakeYAML 的优势是数据被加载到 `Map` 中，你可以将其打印出来查看读取了什么。缺点是，对于任何想要赋值给变量的数据（例如将 `authors` 为 `List<String>`），都需要进行类型转换。
+如你所示，构造了一个`Yaml`对象并用它加载数据。SnakeYAML 的优势是数据被加载到`Map`中，你可以将其打印出来查看读取了什么。缺点是，对于任何想要赋值给变量的数据（例如将`authors`为`List<String>`），都需要进行类型转换。
 
 ```java
 File file = Path.of("src/main/resources/book.yaml").toFile();
+
 Constructor constructor = new Constructor(Book.class, new LoaderOptions());
+
 Yaml yaml = new Yaml(constructor);
 
 Book book = yaml.load(new FileReader(file));
 
 System.out.println(book.getTitle());
+
 System.out.println(book.getEdition());
+
 System.out.println(book.isPaperback());
+
 System.out.println(book.getAuthors());
 ```
 
-要将数据加载到 Java 对象中，你需要创建一个 `Constructor` 类，然后创建一个 `Yaml` 对象。虽然这对于基础类有效，但如果你想更改来自 YAML 的名称或指定泛型类型，就会变得困难。
+要将数据加载到 Java 对象中，你需要创建一个`Constructor`类，然后创建一个`Yaml`对象。虽然这对于基础类有效，但如果你想更改来自 YAML 的名称或指定泛型类型，就会变得困难。
 
-从 `Map` 创建 YAML 是简单的。
+从`Map`创建 YAML 是简单的。
 
 ```java
 Map<String, String> map = new HashMap<>();
+
 map.put("edition", "1");
 
 DumperOptions options = new DumperOptions();
+
 options.setDefaultFlowStyle(DumperOptions.FlowStyle.BLOCK);
 
 Yaml yaml = new Yaml(options);
 
 String output = yaml.dump(map);
+
 System.out.println(output);
 ```
 
-调用 `dump()` 会创建包含指定唯一值的 YAML：
+调用`dump()`会创建包含指定唯一值的 YAML：
 
 ```yaml
 edition: '1'
@@ -13950,1076 +13528,1078 @@ edition: '1'
 
 ```java
 11: Book book = new Book();
+
 12: book.setAuthors(List.of("Victor & Jeanne"));
+
 13:
+
 14: DumperOptions options = new DumperOptions();
+
 15: options.setDefaultFlowStyle(DumperOptions.FlowStyle.BLOCK);
+
 16:
+
 17: Representer representer = new Representer(options);
+
 18: representer.addClassTag(Book.class, Tag.MAP);
+
 19:
+
 20: Yaml yaml = new Yaml(representer, options);
+
 21:
+
 22: String output = yaml.dump(book);
+
 23: System.out.println(output);
 ```
+
+
 
 在第 11 行和 12 行，我们创建一个 `Book` 实例。接下来，我们创建一个 `DumperOptions` 实例来配置 YAML。在这个示例中，流样式被设置为 `BLOCK`，这导致 `Victor & Jeanne` 在连字符后显示，因为它是一个 `List`。如果你不指定 `BLOCK`，YAML 有另一种更简洁的替代样式输出。
 
 第 17 行和 18 行定义了 `Representer`。由于 SnakeYAML 会自动输出类名的标签，因此配置了 `Representer` 以不包含该标签（如果你不这样做的话）。
 
+## A
 
+- `Akka`，391
+- Alert Manager，341–344，349
+- 报警，326
+- `ALL` 日级别，132，140，156
+- `@AllArgsConstructor` 注解，244–245
+- “始终绿色”，36
+- 基于注解的切入点，321–323
+- 注解驱动代码。参见 Lombok
+- Apache Commons，309，391
+- Apache Commons Validator，306，309
+- Apache HTTP Server，385
+- Apache Kafka，391
+- Apache PDF Box，391
+- Apache POI，391
+- Apache Tomcat，385
+- APIs，文档化，389–390
+- `appendReplacement()` 方法，296–297
+- `appendTail()` 方法，296–297
+- 应用服务器，385
+- 应用
+  - 使用 Actuator 检查，185–187
+  - 优化，372–375
+  - 并行化（参见 Java concurrency），393
+  - 使用 Spring Security 进行防护，187–192
+- `@Around` 类型，317–319
+- Jenkins 中的产制品，116
+- 《计算机程序设计》（Knuth），351
+- `@Aspect` 注解，314
+- AspectJ，323
+- 面向切面编程
+  - 关于，311
+  - 创建示例，312–314
+  - 切面的必要性，311–312
+  - 切入点表达式语言，315–323
+- 断言消息，228–229
+- `assertAll()` 方法，212
+- `assertEquals()` 方法，208
+- 断言，363
+- AssertJ，211–212，234
+- `assertNotEquals()` 方法，208
+- `assertThat()` 方法，211–212
+- `assertThrows()` 方法，209
+- `assume` 方法，用于验证条件，209–210
+- 非对称加密，187
+- `@Async` 注解，278–280
+- 原子操作，编码，254–255
+- 属性（XML），396
+- 身份认证，188
+- 授权，188
+- 代码的自动格式化，32
+- 自动化测试
+  - 关于，195–196
+  - 断言逻辑，207–209
+  - 行为驱动开发，231
+  - 代码校准，225–226
+  - 编码
+    - 使用 JUnit 特性，212–214
+    - 使用 AssertJ，211–212
+  - 常用测试库，211–214
+  - 配置
+    - Gradle 构建中的 JUnit，200–202
+    - Maven 构建中的 JUnit，197–200
+  - 使用 TestMe 创建测试模版，230
+  - 使用 DAMP 实现 DRY，232–233
+  - 黄金主模式，231–232
+  - JUnit，205–211
+  - 测量测试覆盖率，225–228
+  - 模拟（mocking）
+    - 使用 EasyMock，211–222
+    - 使用 Mockito，215–221
+    - 对象，215–225
+    - 使用 Spring MockMvc，222–225
+  - 导航测试，229–230
+  - 使用 IntelliJ 优化测试，228–230
+  - 测试参数化，210
+  - 构建中运行覆盖率，227–228
+  - 跳过测试，207
+  - `test` 目录，196–197
+  - 测试流，205–207
+  - 测试运行，229
+  - 测试
+    - 基础，196–205
+    - 合约，231
+    - 变异测试，232
+  - 使用测试驱动开发，202–205
+  - 使用 `assume` 逻辑验证条件，209–210
+  - 查看
+    - 断言消息，228–229
+    - IDE 中的代码覆盖率，226–227
+  - Azul，390
 
+## B
 
-* Akka, 391
-* Alert Manager, 341–344, 349
-* 报警, 326
-* `ALL` 日级别, 132, 140, 156
-* `@AllArgsConstructor` 注解, 244–245
-* “始终绿色,” 36
-* 基于注解的切入点, 321–323
-* 注解驱动代码。参见 Lombok
-* Apache Commons, 309, 391
-* Apache Commons Validator, 306, 309
-* Apache HTTP Server, 385
-* Apache Kafka, 391
-* Apache PDF Box, 391
-* Apache POI, 391
-* Apache Tomcat, 385
-* APIs, 文档化, 389–390
-* `appendReplacement()` 方法, 296–297
-* `appendTail()` 方法, 296–297
-* 应用服务器, 385
-* 应用
-    * 使用 Actuator 检查, 185–187
-    * 优化, 372–375
-    * 并行化（参见 Java concurrency–393
-    * 使用 Spring security 进行防护, 187–192
-* `@Around` 类型, 317–319
-* Jenkins 中的产制品, 116
-* 《计算机程序设计》(Knuth), 351
-* `@Aspect` 注解, 314
-* AspectJ, 323
-* 面向切面编程
-    * 关于, 311
-    * 创建示例, 312–314
-    * 切面的必要性, 311–312
-    * 切入点表达式语言, 315–323
-* 断言消息, 228–229
-* `assertAll()` 方法, 212
-* `assertEquals()` 方法, 208
-* 断言, 363
-* AssertJ, 211–212, 234
-* `assertNotEquals()` 方法, 208
-* `assertThat()` 方法, 211–212
-* `assertThrows()` 方法, 209
-* assume 方法，用于验证条件, 209–210
-* 非对称加密, 187
-* `@Async` 注解, 278–280
-* 原子操作, 编码, 254–255
-* 属性 (XML), 396
-* 身份认证, 188
-* 授权, 188
-* 代码的自动格式化, 32
-* 自动化测试
-    * 关于, 195–196
-    * 断言逻辑, 207–209
-    * 行为驱动开发, 231
-    * 代码校准, 225–226
-    * 编码
-        * 使用 JUnit 特性, 212–214
-        * 使用 AssertJ, 211–212
-    * 常用测试库, 211–214
-    * 配置
-        * Gradle 构建中的 JUnit, 200–202
-        * Maven 构建中的 JUnit, 197–200
-    * 使用 TestMe 创建测试模版, 230
-    * 使用 DAMP 实现 DRY, 232–233
-    * 黄金主模式, 231–232
-    * JUnit, 205–211
-    * 测量测试覆盖率, 225–228
-    * 模拟 (mocking)
-        * 使用 EasyMock, 211–222
-        * 使用 Mockito, 215–221
-        * 对象, 215–225
-        * 使用 Spring MockMvc, 222–225
-    * 导航测试, 229–230
-    * 使用 IntelliJ 优化测试, 228–230
-    * 测试参数化, 210
-    * 构建中运行覆盖率, 227–228
-    * 跳过测试, 207
-    * `test` 目录, 196–197
-    * 测试流, 205–207
-    * 测试运行, 229
-    * 测试
-        * 基础, 196–205
-        * 合约, 231
-        * 变异测试, 232
-    * 使用测试驱动开发, 202–205
-    * 使用 assume 逻辑验证条件, 209–210
-    * 查看
-        * 断言消息, 228–229
-        * IDE 中的代码覆盖率, 226–227
-    * Azul, 390
-### B
-* 待办区域, 76
-* 回溯, 302
-* 基础认证, 188
-* BDD (行为驱动开发), 231
-* Bean 周期，使用 Spring 作用域, 167
-* Bean 验证，使用正则表达式, 307
-* Beck, Kent (作者)
-    * 重构：改进代码设计, 40
-    * `@BeforeAll` 方法, 205–207
-    * `@BeforeEach` 方法, 205–207
-    * 行为控制, 298
-* 行为驱动开发 (BDD), 231
-* 基准测试 (benchmarking)
-    * 关于, 352
-    * 使用内置 APIs, 353–354
-    * 微基准测试, 354
-* `BiFunction` 接口, 268
-* 大 O 表示法, 373
-* 物清单 (BOM), 102
-* 按位运算符 (|), 299
-* Confluence 中的空白页, 84
-* `BLOCKED`, 257
-* Confluence 中的博客文章, 84
-* Blue Ocean 插件, 125
-* 使用看板, 76
-* 物清单 (BOM), 102
-* `boolean tryLock()` 方法, 261–262
-* Borland J, 12
-* 瓶颈, 352
-* 边界匹配, 287–288
-* Git 中的分支, 43, 53
-* Bug 修复, 8
-* 构建失败分析插件, 125
-* Jenkins 中的构建步骤, 116
-* 构建工具, 88
-* `builder()` 方法, 340
-* 内置并发，支持 Java 流, 260–261
-* Burd, Barry (作者)
-    * 《Java For Dummies》1
-### C
-* 缓存, 352
-* `Callable` 接口, 262–263
-* 回调方法, 250
-* 调用 `String` 方法, 291–294
-* 验证调用, 219
-* Jenkins 中的功能, 126
-* 捕获组, 292–293
-* 载线程, 250, 271
-* JUnit Pioneer 中的笛卡尔测试, 214
-* `CASE-INSENSITIVE` 标记, 298
-* 证书, 187
-* 证书颁发机构, 187
+- 待办区域，76
+- 回溯，302
+- 基础认证，188
+- BDD（行为驱动开发），231
+- Bean 周期，使用 Spring 作用域，167
+- Bean 验证，使用正则表达式，307
+- Beck，Kent（作者）
+  - 重构：改进代码设计，40
+  - `@BeforeAll` 方法，205–207
+  - `@BeforeEach` 方法，205–207
+  - 行为控制，298
+- 行为驱动开发（BDD），231
+- 基准测试（benchmarking）
+  - 关于，352
+  - 使用内置 APIs，353–354
+  - 微基准测试，354
+- `BiFunction` 接口，268
+- 大 O 表示法，373
+- 物清单（BOM），102
+- 按位运算符（`|`），299
+- Confluence 中的空白页，84
+- `BLOCKED`，257
+- Confluence 中的博客文章，84
+- Blue Ocean 插件，125
+- 使用看板，76
+- `boolean tryLock()` 方法，261–262
+- Borland J，12
+- 瓶颈，352
+- 边界匹配，287–288
+- Git 中的分支，43，53
+- Bug 修复，8
+- 构建失败分析插件，125
+- Jenkins 中的构建步骤，116
+- 构建工具，88
+- `builder()` 方法，340
+- 内置并发，支持 Java 流，260–261
+- Burd，Barry（作者）
+  - 《Java For Dummies》，1
 
+## C
 
+- 缓存，352
+- `Callable` 接口，262–263
+- 回调方法，250
+- 调用 `String` 方法，291–294
+- 验证调用，219
+- Jenkins 中的功能，126
+- 捕获组，292–293
+- 载线程，250，271
+- JUnit Pioneer 中的笛卡尔测试，214
+- `CASE-INSENSITIVE` 标记，298
+- 证书，187
+- 证书颁发机构，187
+- 认证，重命名，8
+- 更改
+  - 批量修改，82–83
+  - 原则，8–9
+  - 在 Jenkins 中读取，126
+- 字符类，288–290
+- 字符，转义，290–291
+- 变基拾取（cherry-picking），60
+- CI/CD。参见持续集成/持续交付（CI/CD）
+- Claim 插件，125
+- `clean` 阶段，93
+- 克隆，通过 SSH，47–48
+- 云，386–387，394
+- Clover，233
+- 代码
+  - 注解驱动，参见 Lombok
+  - 自动格式化，32–34
+  - 覆盖率的计算，225–226
+  - 比较，34
+  - 调试，参见调试代码
+  - 重复，26–30
+  - 重构，参见重构代码
+  - 用于 Bean 验证的正则表达式，307
+  - 重新排序，20–21
+  - 在构建中运行覆盖率，227–228
+  - 测试中代码，204
+  - 在 IDE 中查看覆盖率，226–227
+- 代码库，导航，19–20
+- 编码
+  - 原子子操作，254–255
+  - 使用 Java 的函数式编程，8，4–5
+  - Java 中的泛型，5，4
+  - 使用 JUnit Pioneer 特性，212–214
+  - 来自 Java 的模块，11，5–6
+  - 正则表达式
+    - 用于 Apache Commons Validator，306
+    - 用于 JUnit，306–307
+    - 用于 Log4j，307
+    - 用于 Spring，308
+  - 使用正则表达式，304–306
+  - 标准，159
+  - 使用 Java 的文本块和记录（records），17，6–7
+  - 使用 AssertJ，211–212
+- 协作
+  - 关于，41–42
+  - 与 Confluence 使用，83–86
+  - 与 Git 使用，42–72
+  - 与 Jira 使用，72–83
+- 集合，并发，259–260
+- 列模式，34–35
+- 在 Jira 中添加列，78–79
+- 逗号分隔值（CSV）文件，148
+- 提交哈希，43
+- 提交窗口，63
+- 提交，区分，43
+- 常见漏洞与暴露（CVEs），392
+- `@CommonsLog` 注解，246
+- 比较操作符，81
+- `compile` 阶段，92
+- `compileOnly`，110
+- 从 Javadoc 编译，239
+- `CompletableFuture`，创建响应代码，265–271
+- `CompletionService`，275
+- `CompletionStage` 接口，268–269
+- 组件扫描，169–170
+- 抽象类，模拟，220–221
+- 并发集合，259–260
+- Java 并发编程（Lea），281
+- `Condition()` 方法，261–262
+- `CONFIG` 日志级别，132
+- 配置
+  - Jenkins 中的凭据，120–121
+  - 使用 Spring profiles 的环境特定，171–173
+  - JUnit
+    - 在 Gradle 构建中，200–202
+    - 在 Maven 构建中，197–200
+  - Maven 设置，106
+  - 内存设置，357–358
+  - 传递
+    - 在 Java Logging 中，133–134
+    - 在 Log4j 中，141
+  - 插件，94–97
+  - 抓取（scrapes），328–330
+  - Spring 框架，164–170
+  - `then()` 方法，218–219
+  - `when()` 方法，218–219
+- Confluence，83–86
+- 将 Jira 连接到 Git，83
+- `Console` 渲染器，145
+- 控制台日志，142
+- `ConsoleAppender` 类，157
+- 构造函数注入，179
+- 构造函数
+  - 生成，244–245
+  - 多多个，217
+- `Consumer` 接口，266
+- 容器，385–386，394
+- 持续交付：通过构建、测试和部署实现的可靠发布（Humble and Farley），128
+- 持续集成/持续交付（CI/CD）
+  - 关于，87–88
+  - 构建
+    - 使用 Gradle，106–112
+    - 使用 Maven，88–106
+  - 查找依赖，112–114
+  - 与 Jenkins 集成，120–121
+  - 实践，126
+  - 使用 Sonar 扫描，127
+  - 合约，231
+- 复制和粘贴，快捷键，20
+- `CountLatch` 方法，261–262
+- 创建、读取、更新（CRUD），383–384
+- CRUD（创建、读取、更新），383
+- CSV（逗号分隔值）文件，148
+- 自定义认证，188
+- `@CustomLog` 注解，246
+- 自定义 Spring 框架属性，170–173
+- CVEs（常见漏洞与暴露），392
+- `CyclicBarrier` API，262
 
+## D
 
-* 认证，重命名，8
-* 更改
-    * 批量修改，82–83
-    * 原则，8–9
-    * 在 Jenkins 中读取，126
-* 字符类，288–290
-* 字符，转义，290–291
-* 变基拾取（cherry-picking），60
-* CI/CD。参见持续集成/持续交付 (CI/CD)
-* Claim 插件，125
-* `clean` 阶段，93
-* 克隆，通过 SSH，47–48
-* 云，386–387, 394
-* Clover，233
-* 代码
-    * 注解驱动参见 Lombok
-    * 自动格式化，32–34
-    * 覆盖率的计算，225–226
-    * 比较，34
-    * 调试参见调试代码
-    * 重复，26–30
-    * 重构参见重构代码
-    * 用于 Bean 验证的正则表达式，307
-    * 重新排序，20–21
-    * 在构建中运行覆盖率，227–228
-    * 测试中代码，204
-    * 在 IDE 中查看覆盖率，226–227
-* 代码库，导航，19–20
-* 编码
-    * 原子子操作，254–255
-    * 使用 Java 的函数式编程，8, 4–5
-    * Java 中的泛型，5, 4
-    * 使用 JUnit Pioneer 特性，212–214
-    * 来自 Java 的模块，11, 5–6
-    * 正则表达式
-        * 用于 Apache Commons Validator，306
-        * 用于 JUnit，306–307
-        * 用于 Log4j，307
-        * 用于 Spring，308
-    * 使用正则表达式，304–306
-    * 标准，159
-    * 使用 Java 的文本块和记录（records），17, 6–7
-    * 使用 AssertJ，211–212
-* 协作
-    * 关于，41–42
-    * 与 Confluence 使用，83–86
-    * 与 Git 使用，42–72
-    * 与 Jira 使用，72–83
-* 集合，并发，259–260
-* 列模式，34–35
-* 在 Jira 中添加列，78–79
-* 逗号分隔值 (CSV) 文件，148
-* 提交哈希，43
-* 提交窗口，63
-* 提交，区分，43
-* 常见漏洞与暴露 (CVEs)，392
-* `@CommonsLog` 注解，246
-* 比较操作符，81
-* `compile` 阶段，92
-* `compileOnly`，110
-* 从 javadoc 编译，239
-* `CompletableFuture`，创建响应代码，265–271
-* `CompletionService`，275
-* `CompletionStage` 接口，268–269
-* 组件扫描，169–170
-* 抽象类，模拟，220–221
-* 并发集合，259–260
-* Java 并发编程 (Lea)，281
-* `Condition()` 方法，261–262
-* `CONFIG` 日志级别，132
-* 配置
-    * Jenkins 中的凭据，120–121
-    * 使用 Spring profiles 的环境特定，171–173
-    * JUnit
-        * 在 Gradle 构建中，200–202
-        * 在 Maven 构建中，197–200
-    * Maven 设置，106
-    * 内存设置，357–358
-    * 传递
-        * 在 Java Logging 中，133–134
-        * 在 Log4j 中，141
-    * 插件，94–97
-    * 抓取（scrapes），328–330
-    * Spring 框架，164–170
-    * `then()` 方法，218–219
-    * `when()` 方法，218–219
-* Confluence，83–86
-* 将 Jira 连接到 Git，83
-* `Console` 渲染器，145
-* 控制台日志，142
-* `ConsoleAppender` 类，157
-* 构造函数注入，179
-* 构造函数
-    * 生成，244–245
-    * 多多个，217
-* `Consumer` 接口，266
-* 容器，385–386, 394
-* 持续交付：通过构建、测试和部署实现的可靠发布 (Humble and Farley)，128
-* 持续集成/持续交付 (CI/CD)
-    * 关于，87–88
-    * 构建
-        * 使用 Gradle，106–112
-        * 使用 Maven，88–106
-    * 查找依赖，112–114
-    * 与 Jenkins 集成，120–121
-    * 实践，126
-    * 使用 Sonar 扫描，127
-    * 合约，231
-    * 复制和粘贴，快捷键，20
-    * `CountLatch` 方法，261–262
-    * 创建、读取、更新 (CRUD)，383–384
-    * CRUD（创建、读取、更新），383
-    * CSV（逗号分隔值）文件，148
-    * 自定义认证，188
-    * `@CustomLog` 注解，246
-    * 自定义 Spring 框架属性，170–173
-    * CVEs (常见漏洞与暴露)，392
-    * `CyclicBarrier` API，262
-### D
-* 守护线程，251
-* DAMP（描述性且有意义的短语），232–233
-* `Dashboard` 类，220–221
-* Dashboard View 插件，125, 126
-* 仪表板化
-    * 关于，326
-    * 使用 Grafana，344–347
-    * 在 Jenkins 中，116
-* DAST（动态应用安全测试），393
-* 数据库，比较类型，382–384
-* `@Data` 注解，240–241
-* `DEBUG` 日志级别，140, 150, 156
-* 调试代码
-    * 关于，22
-    * 程序，22–23
-    * 正则表达式，303
-    * 远程，25
-    * 加速，24
-    * 使用 Hot Swap，26
-* 延迟执行，4–5
-* 依赖
-    * 查找，112–114
+- 守护线程，251
+- DAMP（描述性且有意义的短语），232–233
+- `Dashboard` 类，220–221
+- Dashboard View 插件，125，126
+- 仪表板化
+  - 关于，326
+  - 使用 Grafana，344–347
+  - 在 Jenkins 中，116
+- DAST（动态应用安全测试），393
+- 数据库，比较类型，382–384
+- `@Data` 注解，240–241
+- `DEBUG` 日志级别，140，150，156
+- 调试代码
+  - 关于，22
+  - 程序，22–23
+  - 正则表达式，303
+  - 远程，25
+  - 加速，24
+  - 使用 Hot Swap，26
+- 延迟执行，4–5
+- 依赖
+  - 查找，112–114
+  - Maven，90–92
+  - 用于 Micrometer 和 Actuator，337
+  - 依赖图，104
+- 依赖注入（DI），164
+- `deploy` 阶段，92
+- 部署 Java，384–387
+- 弃用，7–8
+- 描述性且有意义的短语（DAMP），232–233
+- 反序列化，395
+- 性能设计，159
+- `develop` 分支，71
+- DI（依赖注入），164
+- 差异查看窗口，64–69
+- 摘要认证，188
+- 在 JUnit Pioneer 中禁用，213
+- 分布追踪，348
+- Docker，128，328，350
+- 文档类型定义（DTD），397
+- Confluence 中的文档页面，84
+- API 文档化，389–390
+- 使用 DOM 读取/写入 XML，401–402
+- 领域特定语言（DSL），108
+- 不要重复自己（DRY），232–233
+- 点（`.`），136，290
+- Driessen，Vincent，86
+- DRY（不要重复自己），232–233
+- DSL（领域特定语言），108
+- DTD（文档类型定义），397
+- 哑对象，215
+- 避免重复代码，26–30
+- 动态应用安全测试（DAST），393
 
+## E
 
+- 使用 EasyMock 进行 Mock，221–222
+- 窃听者，187
+- Eclipse
+  - 关于，12–13，36–37
+  - IDE 集成，225
+  - 在 Eclipse 中安装 Lombok，237
+  - 使用，104
+  - 网站，40
+- Eclipse Collections，91，391
+- 生态系统
+  - 关于，377–378
+  - 构建 REST APIs，387–390
+  - 选择虚拟机，390
+  - 比较
+    - 数据库类型，382–384
+    - JVM 语言，379–381
+  - 部署 Java，384–387
+  - 集成，384
+  - Jakarta EE，381–382
+  - 库，390
+  - 监控变化，393
+  - 应用安全，391–393
+  - 编写 Javadoc，378–379
+- 利用编辑器，32–35
+- Elastic Search，350
+- 元素（XML），396
+- `@EnableAsync` 注解，278–280
+- 使用 `@EnableScheduling` 进行调度，280
+- 加密，187
+- `endElement()` 方法，403
+- 使用 Jira 进行企业协作，72–83
+- 环境
+  - 为 Lombok 准备，236–239
+  - 设置变量，177
+  - 喜欢 Jira 的 epics，75
+  - `eq()` 方法，219
+  - `equals()` 方法，208
+  - `@EqualsHashCode` 注解，244
+- Spring 框架中的错误处理，183
+- `ERROR` 日志级别，140，150，156
+- 转义字符，290
+- ETL（提取、转换和加载），347
+- 评估频率，343
+- 断言异常，208
+- 与 `ExecutorService` 协调，263–265
+- 安装导出器，327
+- 扩展标记语言（XML）
+  - 关于，135，148，396
+  - 比较库，403
+  - 格式，396
+  - 读取
+    - 使用 DOM，401–402
+    - 使用 Jackson，397–399
+    - 使用 SAX，402–403
+  - 使用配置文件，165–167
+  - 网站，412–413
+  - 写入
+    - 使用 DOM，401–402
+    - 使用 Jackson，399–401
+- 扩展样式表语言（XSLT），397
+- 提取、转换和加载（ETL），347
+- 极端编程，72
 
+## F
 
-* Maven, 90–92
-* 用于 Micrometer 和 Actuator, 337
-* 依赖图, 104
-* 依赖注入 (DI), 164
-* `deploy` 阶段, 92
-* 部署 Java, 384–387
-* 弃用, 7–8
-* 描述性且有意义的短语 (DAMP), 232–233
-* 反序列化, 395
-* 性能设计, 159
-* develop 分支, 71
-* DI (依赖注入), 164
-* 差异查看窗口, 64–69
-* 摘要认证, 188
-* 在 JUnit Pioneer 中禁用, 213
-* 分布追踪, 348
-* Docker, 128, 328, 350
-* 文档类型定义 (DTD), 397
-* Confluence 中的文档页面, 84
-* API 文档化, 389–390
-* 使用 DOM 读取/写入 XML, 401–402
-* 领域特定语言 (DSL), 108
-* 不要重复自己 (DRY), 232–233
-* 点 (.), 136, 290
-* Driessen, Vincent, 86
-* DRY (不要重复自己), 232–233
-* DSL (领域特定语言), 108
-* DTD (文档类型定义), 397
-* 哑对象, 215
-* 避免重复代码, 26–30
-* 动态应用安全测试 (DAST), 393
+- 假对象，215
+- Farley，David（作者）
+  - *持续交付：通过构建、测试和自动化实现可靠发布*，128
+- `FATAL` 日志级别，140
+- `feature` 分支，70
+- 在 Git 中获取，51
+- `fetch()` 方法，210
+- Field，Roy，193
+- `File` appender，145
+- `FileAppender` 类，157
+- 过滤器，188
+- `FINE` 日志级别，132
+- `FINER` 日志级别，132
+- `FINEST` 日志级别，132
+- 固定数量池，263–264
+- 控制行为的标志，298
+- Jenkins 文件夹，16
+- 格式
+  - 用于 JSON，404
+  - 用于 XML，396
+  - 用于 YAML，408
+- 值格式化
+  - 在 Java Log 中，132
+  - 在 Log4j 中，140
+  - 在 SL4J 中，151
+- 表单认证，188
+- 日志转发，160
+- Fowler，Martin
+  - *重构：改进现有代码的设计*，40
+- 使用正则表达式的框架，306
+- 自由风格任务
+  - 在 Gradle 中，122
+  - 在 Jenkins 中，116，117
+  - 在 Maven 中，119
+- `Function` 接口，267–268
+- `CompleableFuture` 的函数式接口，265–268
+- 函数式编程，使用 Java 进行，8，4
+- `Future` 接口，262–263
 
-### E
-* 使用 EasyMock 进行 Mock, 221–222
-* 窃听者, 187
-* Eclipse
-    * 关于, 12–13, 36–37
-    * IDE 集成, 225
-    * 在 Eclipse 中安装 Lombok, 237
-    * 使用, 104
-    * 网站, 40
-* Eclipse Collections, 91, 391
-* 生态系统
-    * 关于, 377–378
-    * 构建 REST APIs, 387–390
-    * 选择虚拟机, 390
-    * 比较
-        * 数据库类型, 382–384
-        * JVM 语言, 379–381
-    * 部署 Java, 384–387
-    * 集成, 384
-    * Jakarta EE, 381–382
-    * 库, 390
-    * 监控变化, 393
-    * 应用安全, 391–393
-    * 编写 Javadoc, 378–379
-* 利用编辑器, 32–35
-* Elastic Search, 350
-* 元素 (XML), 396
-* `@EnableAsync` 注解, 278–280
-* 使用 `@EnableScheduling` 进行调度, 280
-* 加密, 187
-* `endElement()` 方法, 403
-* 使用 Jira 进行企业协作, 72–83
-* 环境
-    * 为 Lombok 准备, 236–239
-    * 设置变量, 177
-    * 喜欢 Jira 的 epics, 75
-    * `eq()` 方法, 219
-    * `equals()` 方法, 208
-    * `@EqualsHashCode` 注解, 244
-* Spring 框架中的错误处理, 183
-* `ERROR` 日志级别, 140, 150, 156
-* 转义字符, 290
-* ETL (提取、转换和加载), 347
-* 评估频率, 343
-* 断言异常, 208
-* 与 `ExecutorService` 协调, 263–265
-* 安装导出器, 327
-* 扩展标记语言 (XML)
-    * 关于, 135, 148, 396
-    * 比较库, 403
-    * 格式, 396
-    * 读取
-        * 使用 DOM, 401–402
-        * 使用 Jackson, 397–399
-        * 使用 SAX, 402–403
-    * 使用配置文件, 165–167
-    * 网站, 412–413
-    * 写入
-        * 使用 DOM, 401–402
-        * 使用 Jackson, 399–401
-* 扩展样式表语言 (XSLT), 397
-* 提取、转换和加载 (ETL), 347
-* 极端编程, 72
+## G
 
-### F
-* 假对象, 215
-* Farley, David (作者)
-    * *持续交付: 通过构建、测试和自动化实现可靠发布*, 128
-* `FATAL` 日志级别, 140
-* feature 分支, 70
-* 在 Git 中获取, 51
-* `fetch()` 方法, 210
-* Field, Roy, 193
-* `File` appender, 145
-* `FileAppender` 类, 157
-* 过滤器, 188
-* `FINE` 日志级别, 132
-* `FINER` 日志级别, 132
-* `FINEST` 日志级别, 132
-* 固定数量池, 263–264
-* 控制行为的标志, 298
-* Jenkins 文件夹, 16
-* 格式
-    * 用于 JSON, 404
-    * 用于 XML, 396
-    * 用于 YAML, 408
-* 值格式化
-    * 在 Java Log 中, 132
-    * 在 Log4j 中, 140
-    * 在 SL4J 中, 151
-* 表单认证, 188
-* 日志转发, 160
-* Fowler, Martin
-    * *重构：改进现有代码的设计*, 40
-* 使用正则表达式的框架, 306
-* 自由风格任务
-    * 在 Gradle 中, 122
-    * 在 Jenkins 中, 116, 117
-    * 在 Maven 中, 119
-* `Function` 接口, 267–268
-* `CompleableFuture` 的函数式接口, 265–268
-* 函数式编程, 使用 Java 进行, 8, 4
-* `Future` 接口, 262–263
+- G1GC（首次垃圾回收），360
+- 垃圾回收，259，358–360
+- First Generation Garbage Collector（G1GC），360
+- 泛型，Java 编码，5，4
+- `getArgs()` API，314
+- `getCarriers()` 方法，275
+- `getFormatted()` 方法，226
+- `getKind()` API，314
+- `getSignature()` API，314
 
-### G
-* G1GC (首次垃圾回收), 360
-* 垃圾回收, 259, 358–360
-* First Generation Garbage Collector (G1GC), 360
-* 泛型, Java 编码, 5, 4
-* `getArgs()` API, 314
-* `getCarriers()` 方法, 275
-* `getFormatted()` 方法, 226
-* `getKind()` API, 314
-* `getSignature()` API, 314
+### APIs
 
+- `getStaticPart()` API，314
+- `getTarget()` API，314
+- `@Getter` 方法，自动生成，241–242
+- `getThis()` API，314
+- `@Flogger` 注解，246
 
+### Git
 
+- 关于，42
+- 分支，43，53–54
+- 择拣（cherry-picking），60
+- 将 Jira 连接到，83
+- 使用 Markdown 语言创建 README 文件，69–70
+- 区分提交，43
+- 显示 `git status`，43
+- 获取，51–52
+- 安装，45
+- 核心概念，42–43
+- 合并，44，51–52
+- 使用 IDE 支持进行优化，61–69
+- 拉取，51–52
+- 读取日志，44
+- 变基（rebasing），57–59
+- 重置，60–61
+- 解决合并冲突，54–55
+- 回滚（reverting），60–61
+- 暂存更改，44–45
+- 打标签，43
+- 使用 `git log` 命令，56–57
+- 使用 Gitflow 进行协作，70–72
+- 使用拉取请求/合并请求，55
+- 示例说明工作流，45–51
 
+### Git Commands
 
-## APIs
-* `getStaticPart()` API, 314
-* `getTarget()` API, 314
-* `@Getter` 方法, 自动生成, 241–242
-* `getThis()` API, 314
-* `@Flogger` 注解, 246
+- `git add` 命令，44–45
+- `git cherry-pick` 命令，60
+- `git fetch` 命令，51–52
+- `git log` 命令，44，56–57
+- `git merge` 命令，51–52
+- `git pull` 命令，52
+- `git reset` 命令，60–61
+- `git revert` 命令，60–61
+- `git status` 命令，43
 
-## Git
-    * 关于, 42
-    * 分支, 43, 53–54
-    * 择拣 (cherry-picking), 60
-    * 将 Jira 连接到, 83
-    * 使用 Markdown 语言创建 README 文件, 69–70
-    * 区分提交, 43
-    * 显示 `git status`, 43
-    * 获取, 51–52
-    * 安装, 45
-    * 核心概念, 42–43
-    * 合并, 44, 51–52
-    * 使用 IDE 支持进行优化, 61–69
-    * 拉取, 51–52
-    * 读取日志, 44
-    * 变基 (rebasing), 57–59
-    * 重置, 60–61
-    * 解决合并冲突, 54–55
-    * 回滚 (reverting), 60–61
-    * 暂存更改, 44–45
-    * 打标签, 43
-    * 使用 `git log` 命令, 56–57
-    * 使用 Gitflow 进行协作, 70–72
-    * 使用拉取请求/合并请求, 55
-    * 示例说明工作流, 45–51
+### Classes and Tools
 
-## Git Commands
-* `git add` 命令, 44–45
-* `git cherry-pick` 命令, 60
-* `git fetch` 命令, 51–52
-* `git log` 命令, 44, 56–57
-* `git merge` 命令, 51–52
-* `git pull` 命令, 52
-* `git reset` 命令, 60–61
-* `git revert` 命令, 60–61
-* `git status` 命令, 43
-
-## Classes and Tools
-* `GitDemo` 类, 53–54
-* Gitflow, 用于于, 70–72
-* GitHub, 22
-* Goetz, Brian (作者)
-    * *Java Concurrency in Practice,* 281
-* 黄金主模式 (golden master pattern), 231–232
-* Google Guava Collections, 391
-* Gosling, James (Java 创造者), 2
-* Goyvaerts, Jan (作者)
-    * *Regular Expressions Cookbook,* 309
-* Graal VM, 390
-* Gradle
-    * 关于, 106
-    * 使用...构建基础项目, 107–109
-    * 在...中配置 JUnit, 200
-    * 依赖, 109–110
-    * 在...中包含 Lombok, 238
-    * 在集成环境中 (IDE), 111
-    * 本地仓库, 109–110
-    * 设置属性,
-        * 指定 AssertJ 作为依赖, 211
-        * 指定 EasyMock 作为依赖, 221
-        * 指定 Gson 作为依赖, 407
-        * 指定 Jackson 作为依赖, 398, 405, 409
-        * 指定 JUnit 作为依赖, 212
-        * 指定 Log4j 作为依赖, 138, 144
-        * 指定 Logback 作为依赖, 155
-        * 指定 Lombok 作为依赖, 238
-        * 指定 Mockito 作为依赖, 216
-        * 指定 SLF4J 作为依赖, 149, 152
-        * 指定 SnakeYAML 作为依赖, 411
-        * 指定 Spring Boot 作为依赖, 223
-    * 变量, 110
-    * 使用 Java 插件, 110–111
-    * 网站, 128
-* Grafana, 344–347, 350
-* Groovy, 108, 138, 144, 149, 150, 152, 155, 211, 212, 216, 221, 223, 238, 380, 398, 405, 407, 409, 411
-* `group()` 方法, 295
-* 使用 Gson 读写 JSON, 407–408
+- `GitDemo` 类，53–54
+- Gitflow，用于于，70–72
+- GitHub，22
+- Goetz，Brian（作者）
+  - *Java Concurrency in Practice*，281
+- 黄金主模式（golden master pattern），231–232
+- Google Guava Collections，391
+- Gosling，James（Java 创造者），2
+- Goyvaerts，Jan（作者）
+  - *Regular Expressions Cookbook*，309
+- Graal VM，390
+- Gradle
+  - 关于，106
+  - 使用构建基础项目，107–109
+  - 在其中配置 JUnit，200
+  - 依赖，109–110
+  - 在其中包含 Lombok，238
+  - 在集成环境中（IDE），111
+  - 本地仓库，109–110
+  - 设置属性
+    - 指定 AssertJ 作为依赖，211
+    - 指定 EasyMock 作为依赖，221
+    - 指定 Gson 作为依赖，407
+    - 指定 Jackson 作为依赖，398，405，409
+    - 指定 JUnit 作为依赖，212
+    - 指定 Log4j 作为依赖，138，144
+    - 指定 Logback 作为依赖，155
+    - 指定 Lombok 作为依赖，238
+    - 指定 Mockito 作为依赖，216
+    - 指定 SLF4J 作为依赖，149，152
+    - 指定 SnakeYAML 作为依赖，411
+    - 指定 Spring Boot 作为依赖，223
+  - 变量，110
+  - 使用 Java 插件，110–111
+  - 网站，128
+- Grafana，344–347，350
+- Groovy，108，138，144，149，150，152，155，211，212，216，221，223，238，380，398，405，407，409，411
+- `group()` 方法，295
+- 使用 Gson 读写 JSON，407–408
 
 ## H
-* *Head First Java, 3rd Edition,* 1
-* 堆, 259
-* 直方图, 339–341
-* 水平扩展性, 352
-* 热点, 352
-* 使用 Hot Swap 调试, 26
-* `HTMLLayout` 类, 158
-* HT (超文本协议), 188
-* HTTPS, 188
-* Humble, Jez (作者)
-    * *Continuous Delivery: Reliable Software through Build, Test, and Automation,* 128
+
+- *Head First Java, 3rd Edition*，1
+- 堆，259
+- 直方图，339–341
+- 水平扩展性，352
+- 热点，352
+- 使用 Hot Swap 调试，26
+- `HTMLLayout` 类，158
+- HT（超文本协议），188
+- HTTPS，188
+- Humble，Jez（作者）
+  - *Continuous Delivery: Reliable Software through Build, Test, and Automation*，128
 
 ## I
-    * IAST (交互式应用安全), 393
-    * 等等请求, 81
-    * `implementation`, 110
-    * `import`, 92
-    * 导入, 32
-    * `INFO` 级别, 132, 140, 150
-    * 输入/输出 (I/O), 159
-    * `install` 阶段, 92
-    * 安装
-        * 导出器, 327
-        * Git, 45
-        * Jenkins, 114
-        * VS Code, 237
-        * Eclipse, 237
-        * IntelliJ, 236
-    * 历史, 12–13
-    * JSON 和, 404
-    * 快捷键, 18–22
-    * 在 Maven 中, 103–106
-    * 使用...进行优化, 61–69
-    * 重构代码, 26–32
-    * 开始新项目, 13–16
-    * 查看代码覆盖, 226–227
-    * Visual Studio (VS) Code, 37–39
-    * XML 和, 396
-    * YAML 和, 409
-    * 实例向量, 332
-    * 集成开发环境 (IDE)
-        * 关于, 11–12
-        * 比较, 39–40
-        * 创建运行配置, 16–18
-        * 调试代码, 26–32
-        * Eclipse, 36–37
-        * 利用编辑器, 32–35
-        * 扩展, 35–36
 
-
-
-
-
-* `integration-test` 阶段，92
-* IntelliJ
-    * 关于，13, 14, 36
-    * IDE 集成，225
-    * 在其中安装 Lombok，236–237
-    * 使用...优化测试，228–230
-    * 性能分析器，371
-    * Spring-178 Initializer，173
-    * 使用，103–104
-* IntelliJ IDEA, 40
-* 交互式应用安全测试 (IAST)，393
-* 线程间通信，276–278
-* 引入正则表达式，309
-* 控制反转 (IoC)，164
-* I/O (输入/输出)，159
-* IoC (控制反转)，164
-* 在 Jira 中的问题，74–75, 80
-* iText, 391
-
-### J
-* Jackson
-    * 读取
-        * 使用...读取 JSON，405–406
-        * 使用...读取 XML，397–399
-        * 使用...读取 YAML，409–410
-    * 写入
-        * 使用...写入 JSON，406–407
-        * 使用...写入 XML，399–401
-        * 使用...写入 YAML，410
-* JaCoCo (Java 代码覆盖)，225, 233
-* Jakarta EE, 8, 381–382, 394
-* JAR (Java 档)，5
-* Java
-    * 关于，1
-    * APIs
-        * 使用 Java 内置进行基准测试，353–354
-        * 在...中使用正则表达式，291–299
-    * 流中内置的并发支持，260–261
-    * 并发
-        * 关于，249–252
-        * `@Async` 注解，278–280
-        * 使用 `CompletableFuture` 构建响应式代码，265–271
-        * `Callable` 接口，262–263
-        * 编写原子操作，254–255
-        * Spring 框架中的并发支持，278–281
-        * 并发集合，259–260
-        * 使用 `Phaser` 控制线程访问，262
-        * 与 `ExecutorService` 协调，263–265
-        * `@EnableAsync` 注解，278–280
-        * `@nableScheduling` 注解，280
-        * `Future` 接口，262–263
-        * 堆，259
-        * 线程间通信，276–278
-        * 使用 `ReentrantLock` 加锁，261–262
-        * 元空间，259
-        * `Runnable` 接口，262–263
-        * `@Scheduled` 注解，280
-        * 栈，259
-        * 同步，257–259
-        * 线程竞争，252–254
-        * `ThreadPoolExecutor`，280–281
-        * `@Transactional`，281
-        * 状态转换，256–257
-        * 使用 Java 内置并发支持，260–261
-        * 使用并发组件降低复杂度，261–278
-        * 使用 `volatile` 关键字，255–256
-        * 虚拟线程，271–275
-    * 部署，384–387
-    * ...的管理，2–3
-    * ...的版本，4–7
-    * Java  (JAR)，5
-    * Java 代码覆盖 (JaCoCo)，225, 233
-    * Java 并发实战 (Goetz)，281
-    * Java 并发，281
-    * Java 配置类，167–169
-    * Java 数据库连接 (JDBC)，360
-    * Java 增强提案 (JEPs)，9
-    * Java 企业版 (JEE)，307
-    * Java 飞行记录 (JFR)，366–368
-    * Java For Dummies (Burd)，1
-    * Java 消息服务 (JMS)，384
-    * Java 微基准框架 (JMH)，354
-    * Java Mission Control，368–369, 376
-    * Java 性能，375
-    * Java 模块系统 (JPMS)，5
-    * Java 插件，110–111
-    * Java 规范请求 (JSRs)，9
-    * Java Util Logging
-        * 关于，130–131
-        * 与其他框架比较，160
-        * 比较日志级别，131–132
-        * 格式化值，132–133
-        * 继承日志器，136–137
-        * 懒性日志，135
-        * 传递基础配置，133–134
-        * 设置日志目标，134–135
-        * 网站，161
-    * Java VisualVM，376
-    * Javadoc
-        * 关于，393
-        * 从...编译，239
-        * 插件，125
-        * 写入，378–379
-    * JavaScript 对象表示法 (JSON)
-        * 关于，148, 404
-        * 比较库，408
-        * ...的格式，404
-        * 读取
-            * 使用 Gson 读取 JSON，407–408
-            * 使用 Jackson 读取 JSON，405–406
-        * 网站，413
-        * 写入
-            * 使用 Gson 写入 JSON，406–407
-            * 使用 Jackson 写入 JSON，407–408
-    * Java 模块系统 (Par)，9
-    * 使用 JConsole 监控，369–370
-    * JDBC (Java 数据库连接)，360
-    * JDK 工具
-        * 关于，365–366
-        * Java 飞行记录 (JFR)，366–368
-        * 使用 JConsole 监控，369–370
-        * 使用 `jstat` 命令报告，371–372
-        * 使用 VisualVM，370
-        * 在 Java Mission Control 中可视化，368–369
-    * JEE (Java 企业版)，307
-    * Jenkins
-        * 关于，114
-        * 能力，126
-        * 在其中配置凭据，120–121
-        * 创建任务，116–125
-        * 安装，114–116
-        * ...的术语，116
-        * 网站，128
-    * JEPs (Java 增强提案)，9
-    * JFR (Java 飞行记录)，366–368
-    * Jira
-        * 关于，72
-        * 添加
-            * 列，78–79
-            * 用户，78
-        * 连接 Git，83
-        * 创建
-            * 问题，74–75
-            * 项目，73–74
-
-
-
-
-
-*   迭代 (sprints), 76–78
-*   入门, 72–73
-*   链接到史诗 (epics), 75
-*   批量修改, 82–83
-*   插件, 125
-*   使用 Jira 查询语言 (JQL) 查询, 80–82
-*   使用过滤器, 80
-*   查看问题, 80
-*   使用看板操作, 76
-*   Jira 查询语言 (JQL)，查询, 80–82
-*   JIT (即时编译), 352
-*   JMeter, 360–365, 375, 376
-*   JMH (Java 微基准测试), 354
-*   JMS (Java 消息服务), 384
-*   `@JBossLog` 注解, 246
-*   任务，在 Jenkins 中
-    *   在 Jenkins 中创建, 116–126
-*   JPMS (Java 平台模块系统 ), 5
-*   JQL (Jira 查询语言)，使用查询, 80–82
-*   JSON. 查看 JavaScript 对象表示法 (JSON)
-*   JSON Web Token (JWT) 认证, 188
-*   JSRs (Java 规范请求), 9
-*   `jstat` 命令，报告报告, 371–372
-*   JUnit
-    *   断言逻辑, 207–209
-    *   编码
-        *   使用 Pioneer 特性, 212–214
-        *   用于正则表达式, 306–307
-    *   配置
-        *   在 Gradle 构建中, 200–202
-        *   在 Maven 构建中, 197–200
-    *   参数化测试, 210
-    *   跳过测试, 207
-    *   测试流, 205–207
-    *   使用 assume 方法验证条件, 209–210
-    *   网站, 233
-*   JUnit Pioneer, 233
-*   即时 (JIT) 编译, 352
-*   JVM 语言
-    *   比较, 379–381
-    *   网站, 393–394
-*   JVM 设置, 357–360
-*   JWT (JSON Web Token) 认证, 188
-
-### K
-*   看板管理 (Kanban), 72
-*   快捷键
-    *   关于, 18–19, 21–22
-    *   复制和粘贴, 20
-    *   导航代码库, 19–20
-    *   重排序代码, 20–21
-*   Kibana, 348, 350
-*   Kira, 72
-*   Knuth, Donald
-    *   《计算机程序设计》 351
-*   Kotlin, 108, 138, 144, 149, 150, 152, 155, 211, 212, 216, 221, 223, 238, 379, 398, 405, 407, 411
-*   Kubernetes, 386
-
-### L
-*   日志语言选择, 159
-*   延迟, 352
-*   懒性日志
-    *   在 Java Logging 中, 135
-    *   在 Log4j 中, 148
-    *   在 SLF4J 中, 151
-*   LDAP (轻量级目录协议)认证, 188
-*   Lea, Doug
-    *   Java 并发编程, 281
-*   Levithan, Steven
-    *   《正则表达式教程》 309
-*   库, 211–214, 390–391, 394
-*   生命周期阶段区分, 92–93
-*   轻量级目录协议 (LDAP)认证, 188
-*   在 Jira 中链接到史诗, 75
-*   Linux Node Exporter, 349
-*   监听器, 363
-*   `listOf()` 函数, 379
-*   运行负载测试, 363–364
-*   `localName` 属性, 399
-*   日志伪造, 159
-*   日志注入, 159
-*   日志滚动, 26
-*   防止日志篡改, 159
-*   Log4j
-    *   关于, 138–139
-    *   选择日志输出格式, 148
-    *   用于正则表达式编码, 307
-    *   常见漏洞与披露 (CVEs) 和, 392
-    *   比较
-        *   配置文件格式, 142–145
-        *   日志级别, 139–140
-        *   与其他日志框架比较, 160
-    *   格式化值, 140–141
-    *   懒性日志, 148
-    *   传递配置, 141
-    *   设置目的地, 145
-    *   网站, 233
-*   Logback
-    *   关于, 155–156
-    *   选择日志输出格式, 158–159
-    *   比较
-        *   日志级别, 156
-        *   与其他日志框架比较, 160
-    *   格式化值, 157–158
-    *   懒性日志, 148
-    *   传递配置, 141
-    *   网站, 233
-*   日志，织入代码库, 247–248
-*   日志框架
-    *   关于, 129–130
-    *   聚合日志, 160
-    *   日志语言选择, 159
-    *   与 `println` 方法比较, 130
-    *   比较, 160
-    *   性能设计, 159
-    *   确定编码标准, 159
-    *   转发日志, 160
-    *   忽略, 149–150
-    *   防止日志篡改, 159
-    *   使用 Java Logging, 130–137
-    *   使用 Log4j, 138–148
-    *   使用 Logback, 155–159
-    *   使用 SLF4J, 139–155
-    *   与其他一起使用 SLF4J, 152–155
-
-
-
-
-
+- IAST（交互式应用安全），393
+- 等等请求，81
+- `implementation`，110
+- `import`，92
+- 导入，32
+- `INFO` 级别，132，140，150
+- 输入/输出（I/O），159
+- `install` 阶段，92
 - 安装
-    - 在 VS Code 中，237
-    - 在 Eclipse 中，237
-    - 在 IntelliJ 中，236–237
+  - 导出器，327
+  - Git，45
+  - Jenkins，114
+  - VS Code，237
+  - Eclipse，237
+  - IntelliJ，236
+- 历史，12–13
+- JSON 和，404
+- 快捷键，18–22
+- 在 Maven 中，103–106
+- 使用 IDE 进行优化，61–69
+- 重构代码，26–32
+- 开始新项目，13–16
+- 查看代码覆盖率，226–227
+- Visual Studio（VS）Code，37–39
+- XML 和，396
+- YAML 和，409
+- 实例向量，332
+- 集成开发环境（IDE）
+  - 关于，11–12
+  - 比较，39–40
+  - 创建运行配置，16–18
+  - 调试代码，26–32
+  - Eclipse，36–37
+  - 利用编辑器，32–35
+  - 扩展，35–36
+- `integration-test` 阶段，92
+- IntelliJ
+  - 关于，13，14，36
+  - IDE 集成，225
+  - 在其中安装 Lombok，236–237
+  - 使用其优化测试，228–230
+  - 性能分析器，371
+  - Spring Initializer，173
+  - 使用，103–104
+- IntelliJ IDEA，40
+- 交互式应用安全测试（IAST），393
+- 线程间通信，276–278
+- 引入正则表达式，309
+- 控制反转（IoC），164
+- I/O（输入/输出），159
+- IoC（控制反转），164
+- 在 Jira 中的问题，74–75，80
+- iText，391
+
+## J
+
+- Jackson
+  - 读取
+    - 使用 Jackson 读取 JSON，405–406
+    - 使用 Jackson 读取 XML，397–399
+    - 使用 Jackson 读取 YAML，409–410
+  - 写入
+    - 使用 Jackson 写入 JSON，406–407
+    - 使用 Jackson 写入 XML，399–401
+    - 使用 Jackson 写入 YAML，410
+- JaCoCo（Java 代码覆盖），225，233
+- Jakarta EE，8，381–382，394
+- JAR（Java 档），5
+- Java
+  - 关于，1
+  - APIs
+    - 使用 Java 内置 API 进行基准测试，353–354
+    - 在 Java 中使用正则表达式，291–299
+  - 流中内置的并发支持，260–261
+  - 并发
+    - 关于，249–252
+    - `@Async` 注解，278–280
+    - 使用 `CompletableFuture` 构建响应式代码，265–271
+    - `Callable` 接口，262–263
+    - 编写原子操作，254–255
+    - Spring 框架中的并发支持，278–281
+    - 并发集合，259–260
+    - 使用 `Phaser` 控制线程访问，262
+    - 与 `ExecutorService` 协调，263–265
+    - `@EnableAsync` 注解，278–280
+    - `@EnableScheduling` 注解，280
+    - `Future` 接口，262–263
+    - 堆，259
+    - 线程间通信，276–278
+    - 使用 `ReentrantLock` 加锁，261–262
+    - 元空间，259
+    - `Runnable` 接口，262–263
+    - `@Scheduled` 注解，280
+    - 栈，259
+    - 同步，257–259
+    - 线程竞争，252–254
+    - `ThreadPoolExecutor`，280–281
+    - `@Transactional`，281
+    - 状态转换，256–257
+    - 使用 Java 内置并发支持，260–261
+    - 使用并发组件降低复杂度，261–278
+    - 使用 `volatile` 关键字，255–256
+    - 虚拟线程，271–275
+  - 部署，384–387
+  - Java 的管理，2–3
+  - Java 的版本，4–7
+  - Java（JAR），5
+  - Java 代码覆盖（JaCoCo），225，233
+  - Java 并发实战（Goetz），281
+  - Java 并发，281
+  - Java 配置类，167–169
+  - Java 数据库连接（JDBC），360
+  - Java 增强提案（JEPs），9
+  - Java 企业版（JEE），307
+  - Java 飞行记录（JFR），366–368
+  - Java For Dummies（Burd），1
+  - Java 消息服务（JMS），384
+  - Java 微基准框架（JMH），354
+  - Java Mission Control，368–369，376
+  - Java 性能，375
+  - Java 模块系统（JPMS），5
+  - Java 插件，110–111
+  - Java 规范请求（JSRs），9
+  - Java Util Logging
+    - 关于，130–131
+    - 与其他框架比较，160
+    - 比较日志级别，131–132
+    - 格式化值，132–133
+    - 继承日志器，136–137
+    - 懒性日志，135
+    - 传递基础配置，133–134
+    - 设置日志目标，134–135
+    - 网站，161
+  - Java VisualVM，376
+  - Javadoc
+    - 关于，393
+    - 从 Javadoc 编译，239
+    - 插件，125
+    - 写入，378–379
+  - JavaScript 对象表示法（JSON）
+    - 关于，148，404
+    - 比较库，408
+    - JSON 的格式，404
+    - 读取
+      - 使用 Gson 读取 JSON，407–408
+      - 使用 Jackson 读取 JSON，405–406
+    - 网站，413
+    - 写入
+      - 使用 Gson 写入 JSON，406–407
+      - 使用 Jackson 写入 JSON，407–408
+  - Java 模块系统（Par），9
+  - 使用 JConsole 监控，369–370
+  - JDBC（Java 数据库连接），360
+  - JDK 工具
+    - 关于，365–366
+    - Java 飞行记录（JFR），366–368
+    - 使用 JConsole 监控，369–370
+    - 使用 `jstat` 命令报告，371–372
+    - 使用 VisualVM，370
+    - 在 Java Mission Control 中可视化，368–369
+  - JEE（Java 企业版），307
+  - Jenkins
+    - 关于，114
+    - 能力，126
+    - 在其中配置凭据，120–121
+    - 创建任务，116–125
+    - 安装，114–116
+    - Jenkins 的术语，116
+    - 网站，128
+  - JEPs（Java 增强提案），9
+  - JFR（Java 飞行记录），366–368
+  - Jira
+    - 关于，72
+    - 添加
+      - 列，78–79
+      - 用户，78
+    - 连接 Git，83
+    - 创建
+      - 问题，74–75
+      - 项目，73–74
+- 迭代（sprints），76–78
+- 入门，72–73
+- 链接到史诗（epics），75
+- 批量修改，82–83
+- 插件，125
+- 使用 Jira 查询语言（JQL）查询，80–82
+- 使用过滤器，80
+- 查看问题，80
+- 使用看板操作，76
+- Jira 查询语言（JQL），查询，80–82
+- JIT（即时编译），352
+- JMeter，360–365，375，376
+- JMH（Java 微基准测试），354
+- JMS（Java 消息服务），384
+- `@JBossLog` 注解，246
+- 任务，在 Jenkins 中
+  - 在 Jenkins 中创建，116–126
+- JPMS（Java 平台模块系统），5
+- JQL（Jira 查询语言），使用查询，80–82
+- JSON。查看 JavaScript 对象表示法（JSON）
+- JSON Web Token（JWT）认证，188
+- JSRs（Java 规范请求），9
+- `jstat` 命令，报告，371–372
+- JUnit
+  - 断言逻辑，207–209
+  - 编码
+    - 使用 Pioneer 特性，212–214
+    - 用于正则表达式，306–307
+  - 配置
+    - 在 Gradle 构建中，200–202
+    - 在 Maven 构建中，197–200
+  - 参数化测试，210
+  - 跳过测试，207
+  - 测试流，205–207
+  - 使用 `assume` 方法验证条件，209–210
+  - 网站，233
+- JUnit Pioneer，233
+- 即时（JIT）编译，352
+- JVM 语言
+  - 比较，379–381
+  - 网站，393–394
+- JVM 设置，357–360
+- JWT（JSON Web Token）认证，188
+
+## K
+
+- 看板管理（Kanban），72
+- 快捷键
+  - 关于，18–19，21–22
+  - 复制和粘贴，20
+  - 导航代码库，19–20
+  - 重排序代码，20–21
+- Kibana，348，350
+- Kira，72
+- Knuth，Donald
+  - 《计算机程序设计》，351
+- Kotlin，108，138，144，149，150，152，155，211，212，216，221，223，238，379，398，405，407，411
+- Kubernetes，386
+
+## L
+
+- 日志语言选择，159
+- 延迟，352
+- 懒性日志
+  - 在 Java Logging 中，135
+  - 在 Log4j 中，148
+  - 在 SLF4J 中，151
+- LDAP（轻量级目录协议）认证，188
+- Lea，Doug
+  - Java 并发编程，281
+- Levithan，Steven
+  - 《正则表达式教程》，309
+- 库，211–214，390–391，394
+- 生命周期阶段区分，92–93
+- 轻量级目录协议（LDAP）认证，188
+- 在 Jira 中链接到史诗，75
+- Linux Node Exporter，349
+- 监听器，363
+- `listOf()` 函数，379
+- 运行负载测试，363–364
+- `localName` 属性，399
+- 日志伪造，159
+- 日志注入，159
+- 日志滚动，26
+- 防止日志篡改，159
+- Log4j
+  - 关于，138–139
+  - 选择日志输出格式，148
+  - 用于正则表达式编码，307
+  - 常见漏洞与披露（CVEs）和，392
+  - 比较
+    - 配置文件格式，142–145
+    - 日志级别，139–140
+    - 与其他日志框架比较，160
+  - 格式化值，140–141
+  - 懒性日志，148
+  - 传递配置，141
+  - 设置目的地，145
+  - 网站，233
+- Logback
+  - 关于，155–156
+  - 选择日志输出格式，158–159
+  - 比较
+    - 日志级别，156
+    - 与其他日志框架比较，160
+  - 格式化值，157–158
+  - 懒性日志，148
+  - 传递配置，141
+  - 网站，233
+- 日志，织入代码库，247–248
+- 日志框架
+  - 关于，129–130
+  - 聚合日志，160
+  - 日志语言选择，159
+  - 与 `println` 方法比较，130
+  - 比较，160
+  - 性能设计，159
+  - 确定编码标准，159
+  - 转发日志，160
+  - 忽略，149–150
+  - 防止日志篡改，159
+  - 使用 Java Logging，130–137
+  - 使用 Log4j，138–148
+  - 使用 Logback，155–159
+  - 使用 SLF4J，139–155
+  - 与其他一起使用 SLF4J，152–155
+- 安装
+  - 在 VS Code 中，237
+  - 在 Eclipse 中，237
+  - 在 IntelliJ 中，236–237
 - 准备环境，236–239
 - 使用 `@Data` 注解，240–241
-- 使用 `@EqualsAndHashCode，244
-- 使用 `@ToString，243
+- 使用 `@EqualsAndHashCode`，244
+- 使用 `@ToString`，243
 - 使用 `@Log` 将日志器织入代码库，245–246
-- 网站，243, 247
-- 长期支持 (LTS)，3, 114
+- 网站，243，247
+- 长期支持（LTS），3，114
 
 ## M
-- 宏 (Confluence)，86
+
+- 宏（Confluence），86
 - Markdown 语言，用于创建 README 文件，69–70
-- 匹配，查找，291–292, 295–296
-- `matches()` 方法，291–292, 295–296
+- 匹配，查找，291–292，295–296
+- `matches()` 方法，291–292，295–296
 - Maven
-    - 关于，88
-    - 依赖清单 (BOM)，102–103
-    - 使用构建基础项目，89–90
-    - 常用插件，94–97
-    - 配置
-        - 在 JUnit 中，197–200
-        - 设置，106
-    - 创建流水线，122–124
-    - 依赖，90–92
-    - 区分生命周期阶段，92–93
-    - 特性，102–103
-    - 在自由风格任务 (freestyle jobs) 中，119–121
-    - 在项目中包含 Lombok，238
-    - 在集成开发环境 (IDE) 中，103–106
-    - 父级 POM，98–102
-    - POM，93–94
-    - 发布项目，103
-    - 仓库，90–92
-    - 设置系统属性，102, 150
-    - 指定
-        - 将 AssertJ 作为依赖，211
-        - 将 EasyMock 作为依赖，221
-        - 将 Gson 作为依赖，407
-        - 将 Jackson 作为依赖，398, 405, 409
-        - 将 JUnit Pioneer 作为依赖，212
-        - 将 Log4j 作为依赖，138, 144
-        - 将 Logback 作为依赖，155
-        - 将 Lombok 作为依赖，238
-        - 将 Mockito 作为依赖，215
-        - 将 SLF4J 作为依赖，149, 152
-        - 将 SnakeYAML 作为依赖，411
-        - 将 Spring Boot Starter 作为依赖，223
-    - 网站，128
+  - 关于，88
+  - 依赖清单（BOM），102–103
+  - 使用构建基础项目，89–90
+  - 常用插件，94–97
+  - 配置
+    - 在 JUnit 中，197–200
+    - 设置，106
+  - 创建流水线，122–124
+  - 依赖，90–92
+  - 区分生命周期阶段，92–93
+  - 特性，102–103
+  - 在自由风格任务（freestyle jobs）中，119–121
+  - 在项目中包含 Lombok，238
+  - 在集成开发环境（IDE）中，103–106
+  - 父级 POM，98–102
+  - POM，93–94
+  - 发布项目，103
+  - 仓库，90–92
+  - 设置系统属性，102，150
+  - 指定
+    - 将 AssertJ 作为依赖，211
+    - 将 EasyMock 作为依赖，221
+    - 将 Gson 作为依赖，407
+    - 将 Jackson 作为依赖，398，405，409
+    - 将 JUnit Pioneer 作为依赖，212
+    - 将 Log4j 作为依赖，138，144
+    - 将 Logback 作为依赖，155
+    - 将 Lombok 作为依赖，238
+    - 将 Mockito 作为依赖，215
+    - 将 SLF4J 作为依赖，149，152
+    - 将 SnakeYAML 作为依赖，411
+    - 将 Spring Boot Starter 作为依赖，223
+  - 网站，128
 - 会议记录，在 Confluence 中，84
 - 成员重命名，31
 - 内存泄漏，352
 - 内存设置，357
-- 在 Git 中合并，44, 51, 54
+- 在 Git 中合并，44，51，54
 - 元空间，259
-- 指标，326, 337
+- 指标，326，337
 - 微基准测试，354–357
-- Micrometer，336, 350
+- Micrometer，336，350
 - 微服务，388
 - Microsoft Visual++，12
 - mock 对象
-    - 关于，215
-    - 模拟
-        - 使用 EasyMock，221–222
-        - 使用 Mockito，215–221
-        - 使用 Spring MockMvc，222–225
+  - 关于，215
+  - 模拟
+    - 使用 EasyMock，221–222
+    - 使用 Mockito，215–221
+    - 使用 Spring MockMvc，222–225
 - 使用 Mockito 模拟，215–221
 - `mockStatic()` 方法，221
 - 模块
-    - 添加到现有项目，16
-    - 从 Java 编码，11, 5
-    - 使用 JConsole 监控，369–370
+  - 添加到现有项目，16
+  - 从 Java 编码，11，5
+  - 使用 JConsole 监控，369–370
 - `MULTILINE` 标志，298
 - 多行字符串。参见文本块
-- 多模块项目 (POM)，100–102
+- 多模块项目（POM），100–102
 - 变异测试，232
 
 ## N
+
 - 日志器名称，131
 - 负向前瞻/后后，300
 - 网络延迟，352
 - `NEW`，256
 - 节点导出器，327
-- no-ff 合并，52
+- `no-ff` 合并，52
 - `@NoArgsConstructor` 注解，244–245
 - NoSQL 数据库，384
 - 在 Jenkins 中通知用户，126
 
 ## O
+
 - OAuth2，188
 - 可观测性
-    - 关于，325–326
-    - 添加 Alert Manager，341–344
-    - 配置抓取，328–330
-    - 创建自定义指标，337–341
-    - 使用 Grafana 仪表板，344–347
-    - 从 Prometheus 开始，326–341
-    - 安装
-        - 导出器，327
-        - Prometheus，328–330
-    - 日志记录，337–341
-    - 启动应用，326
-    - 追踪，349
+  - 关于，325–326
+  - 添加 Alert Manager，341–344
+  - 配置抓取，328–330
+  - 创建自定义指标，337–341
+  - 使用 Grafana 仪表板，344–347
+  - 从 Prometheus 开始，326–341
+  - 安装
+    - 导出器，327
+    - Prometheus，328–330
+  - 日志记录，337–341
+  - 启动应用，326
+  - 追踪，349
 - 使用 Prometheus HTTP API，336–337
-- `OFF` 日志级别，132, 140, 156
+- `OFF` 日志级别，132，140，156
 - 偏移量，333
 - Open CSV，309
 - Open JDK，390
-- Open 应用安全项目 (OWASP) 前 10，391
+- Open 应用安全项目（OWASP）前 10，391
 - OpenID Connect，188
-- OpenTelemetry，349, 350
-- 操作符，81, 82
+- OpenTelemetry，349，350
+- 操作符，81，82
 - 选择，290
 - Oracle，2
 - Oracle JDK，390
 
 ## P
+
 - `package` 阶段，92
 - Pact，233
 - 并行垃圾回收，359–360
-- 并行化应用。参见 Java, 并发
+- 并行化应用。参见 Java，并发
 - `parallelStream()` 方法，260–261
-- 参数，32, 219
+- 参数，32，219
 - 父级 POM，98–100
-- Parlog, Nicolai (作者)
-    - *Java Module System*，9
+- Parlog，Nicolai（作者）
+  - *Java Module System*，9
 - `parse()` 方法，403
 - 传递
-    - 基础配置
-        - 在 Log4j 中，141
-        - 在 Logback 中，156–157
-        - 在 SLF4J 中，152
-    - Java 用日志的配置，133–134
+  - 基础配置
+    - 在 Log4j 中，141
+    - 在 Logback 中，156–157
+    - 在 SLF4J 中，152
+  - Java 用日志的配置，133–134
 - 补丁，66
 - 模式文件，148
 - 模式匹配，使用正则表达式，283–308
 - `PatternLayout` 类，158
 - 模式，处理方式，294–298
 - 性能
-    - 关于，351–352
-    - 微基准测试，352–357
-    - 概念和术语，352
-    - 注意事项，375
-
-
-
-
-
-- 已定义，352
-- 设计用于，159
-- `JVM` 设置，357–360
-- 优化应用程序，372–375
-- 使用 `JMeter` 测试，360–365
-- 使用 `JDK` 工具，365–372
+  - 关于，351–352
+  - 微基准测试，352–357
+  - 概念和术语，352
+  - 注意事项，375
+  - 已定义，352
+  - 设计用于，159
+  - `JVM` 设置，357–360
+  - 优化应用程序，372–375
+  - 使用 `JMeter` 测试，360–365
+  - 使用 `JDK` 工具，365–372
 - `Phaser`，控制线程访问，262
 - `Jenkins` 中的流水线任务，116
 - 流水线
-    - Gradle, 124–125
-    - Maven, 122–124
+  - Gradle，124–125
+  - Maven，122–124
 - 平台线程，250
 - 插件
-    - 配置，94–97
-    - Java,110–111
-    - `Jenkins`,125
-- 加号 (`+`)，291
+  - 配置，94–97
+  - Java，110–111
+  - `Jenkins`，125
+- 加号（`+`），291
 - 切入点语言
-    - `..` 通配符，316
-    - `*` 通配符，315–316
-    - 关于，315
-    - 基于注解的切入点，321–323
-    - 合并切入点，320–321
-    - 使用 `@After`，317
-    - 使用 `@AfterReturning`，316–317
-    - 使用 `@AfterThrowing`，317
-    - 使用 `@Around`，317–319
-    - 使用 `@Pointcut`，319–320
+  - `..` 通配符，316
+  - `*` 通配符，315–316
+  - 关于，315
+  - 基于注解的切入点，321–323
+  - 合并切入点，320–321
+  - 使用 `@After`，317
+  - 使用 `@AfterReturning`，316–317
+  - 使用 `@AfterThrowing`，317
+  - 使用 `@Around`，317–319
+  - 使用 `@Pointcut`，319–320
 - `@Pointcut` 类型，319–320
 - 切入点
-    - 基于注解的，321–323
-    - 合并，320–321
-    - 已定义，312
+  - 基于注解的，321–323
+  - 合并，320–321
+  - 已定义，312
 - POM
-    - 多模块项目，100–102
-    - 父项目，98–102
-    - 属性，93
-    - 指定项目信息，93–94
-    - 版本号，94
+  - 多模块项目，100–102
+  - 父项目，98–102
+  - 属性，93
+  - 指定项目信息，93–94
+  - 版本号，94
 - 正向先行断言/后行断言，300
 - 主键，382
 - 变更原则，8–9
@@ -15029,398 +14609,383 @@ edition: '1'
 - 分析器，352
 - 程序，调试，22–23
 - 项目
-    - 添加
-        - 向现有项目添加模块，16
-        - 提交到版本控制，15
-    - 创建
-        - 从现有源码创建，14
-        - 在 Jira 中创建，73–74
-        - 从零创建，13–14
-        - 从版本控制创建，15
-    - Gradle，107–109
-    - Maven，89–90
-    - 在 Maven 中发布，103
-    - 指定信息，93–94
-    - 开始新项目，13–16
-    - 工作流，76
-    - Prometheus，327–328, 349
-    - Prometheus HTTP APIs，336–337
-    - Prometheus 查询语言 (PromQL)，330–336
-    - 属性
-        - 使用 Spring 自定义，170–173
-        - 注入，170–171
-        - POM，93
-        - 原型范围，167
-        - `provided`，92
-        - provided ，238
-        - 在 Git 中拉取，51–52
-        - 拉取/合并请求，55
-        - 推送，326
-- Q
-    - 量词
-        - 区分，301–303
-        - 指定常用的，286–287
-    - 查询，移除，332
-    - 使用 Jira 查询语言 (JQL)，80–82
-- R
-    - 竞态条件，253
-    - 范围向量，333
-    - RASP (运行时应用安全)，393
-    - 读取
-        - Jenkins 中的变更，26
-        - git 日志，44
-        - JSON
-            - 使用 Gson，407–408
-            - 使用 Jackson，405–406
-        - XML
-            - 使用 DOM，401–402
-            - 使用 Jackson，397–399
-            - 使用 SAX，402–403
-        - YAML
-            - 使用 Jackson，409–410
-            - 使用 SnakeYAML，410–412
-    - README 文件，创建 Markdown 语言，69–70
-    - `readTree()` 方法，399
-    - `readValue()` 方法，399
-    - `ReadWriteLock`，275
-    - 在 Git 中变基，57–59
-    - records，从 Java 编码，17, 6–7
-    - 红-绿-重构，202
-    - `ReentrantLock`，261–262
-    - 重构代码
-        - 关于，26
-        - 避免重复代码，26–30
-        - 更改签名，32
-        - 内联，31
-        - 重命名成员，31
-    - *重构：改进既有代码的设计* (Beck and Fowler)，40
-    - 代码的格式化，32–34
-    - Regex101，285–286
-    - 回归测试，195
-    - 正则表达式
-        - 关于，283
-        - 调用 `String` 方法，291–294
-        - 选择选项，290
-        - 编码
-            - 使用 Apache Commons，306
-            - 使用验证，307
-            - 使用 JUnit，306
-            - 使用 Log4j，307
-            - 使用 Spring，308
-        - 使用标志控制行为，298
-        - 调试，303
-        - 区分量词，301–303
-        - 转义字符，290
-        - 识别错误，304
-        - 匹配边界，287–288
-        - 邻近文本，300–301
-        - 模式匹配，283–308
-        - 指定常用的量词，286–287
-        - 语法，291–300
-        - 使用
-            - 框架和工具，306–308
-            - 使用 Java API，291–299
-        - 使用处理
-            - 通用字符类，288–290
-            - 模式，294–298
-- *正则表达式食指南* (Goyvaerts and Levithan)，309
+  - 添加
+    - 向现有项目添加模块，16
+    - 提交到版本控制，15
+  - 创建
+    - 从现有源码创建，14
+    - 在 Jira 中创建，73–74
+    - 从零创建，13–14
+    - 从版本控制创建，15
+  - Gradle，107–109
+  - Maven，89–90
+  - 在 Maven 中发布，103
+  - 指定信息，93–94
+  - 开始新项目，13–16
+  - 工作流，76
+  - Prometheus，327–328，349
+  - Prometheus HTTP APIs，336–337
+  - Prometheus 查询语言（PromQL），330–336
+  - 属性
+    - 使用 Spring 自定义，170–173
+    - 注入，170–171
+    - POM，93
+    - 原型范围，167
+    - `provided`，92
+    - `provided`，238
+    - 在 Git 中拉取，51–52
+    - 拉取/合并请求，55
+    - 推送，326
+
+## Q
+
+- 量词
+  - 区分，301–303
+  - 指定常用的，286–287
+- 查询，移除，332
+- 使用 Jira 查询语言（JQL），80–82
+
+## R
+
+- 竞态条件，253
+- 范围向量，333
+- RASP（运行时应用安全），393
+- 读取
+  - Jenkins 中的变更，26
+  - Git 日志，44
+  - JSON
+    - 使用 Gson，407–408
+    - 使用 Jackson，405–406
+  - XML
+    - 使用 DOM，401–402
+    - 使用 Jackson，397–399
+    - 使用 SAX，402–403
+  - YAML
+    - 使用 Jackson，409–410
+    - 使用 SnakeYAML，410–412
+- README 文件，创建 Markdown 语言，69–70
+- `readTree()` 方法，399
+- `readValue()` 方法，399
+- `ReadWriteLock`，275
+- 在 Git 中变基，57–59
+- records，从 Java 编码，17，6–7
+- 红-绿-重构，202
+- `ReentrantLock`，261–262
+- 重构代码
+  - 关于，26
+  - 避免重复代码，26–30
+  - 更改签名，32
+  - 内联，31
+  - 重命名成员，31
+- *重构：改进既有代码的设计*（Beck and Fowler），40
+- 代码的格式化，32–34
+- Regex101，285–286
+- 回归测试，195
+- 正则表达式
+  - 关于，283
+  - 调用 `String` 方法，291–294
+  - 选择选项，290
+  - 编码
+    - 使用 Apache Commons，306
+    - 使用验证，307
+    - 使用 JUnit，306
+    - 使用 Log4j，307
+    - 使用 Spring，308
+  - 使用标志控制行为，298
+  - 调试，303
+  - 区分量词，301–303
+  - 转义字符，290
+  - 识别错误，304
+  - 匹配边界，287–288
+  - 邻近文本，300–301
+  - 模式匹配，283–308
+  - 指定常用的量词，286–287
+  - 语法，291–300
+  - 使用
+    - 框架和工具，306–308
+    - 使用 Java API，291–299
+  - 使用处理
+    - 通用字符类，288–290
+    - 模式，294–298
+- *正则表达式食指南*（Goyvaerts and Levithan），309
 - 关系型数据库，382–383
 - 发布分支，7–10
 - 远程调试，25
 - 重命名，识别的，8
 - 重命名
-    - 认证，8
-    - 成员，31
+  - 认证，8
+  - 成员，31
 - 重排序
-    - 代码，20–21
-    - 操作，255
+  - 代码，20–21
+  - 操作，255
 - `replace()` 方法，293
 - `replaceAll()` 方法，296–297
-- `replaceFirst()` 方法，292–293, 296–297
+- `replaceFirst()` 方法，292–293，296–297
 - 仓库
-    - 在 Git 中，42
+  - 在 Git 中，42
+  - Gradle，109–110
+  - Maven，90–92
+- 表述性状态转移（REST）。参见 REST APIs
+- 请求范围（request scope），167
+- `@RequestParam`，180
+- `@RequiredArgsConstructor` 注解，244–245
+- Git 中的重置（resetting），60–61
+- 响应时间，352
+- 创建 REST APIs，387–390
+- RESTful Web Services，193
+- 弃用，7–8
+- 在 JUnit Pioneer 中重试测试，213
+- Git 中的回滚（reverting），60–61
+- 基于角色的授权策略插件，125
+- `RollingFile` 适配器，145
+- `RollingFileAppender` 类，157
+- `RollingRandomAccessFile` 适配器，145
+- 创建运行配置，16–18
+- `RUNNABLE`，256
+- `Runnable` 接口，262–263，265
+- `runtime`，92
+- 运行时应用安全防护（RASP），393
+- `runtimeOnly`，110
+- RxJava，391
 
+## S
 
-
-
-
-* Gradle, 109–110
-* Maven, 90–92
-* 表述性状态转移 (REST)。参见 REST APIs
-* 请求范围 (request scope), 167
-* `@RequestParam`, 180
-* `@RequiredArgsConstructor` 注解, 244–245
-* Git 中的重置 (resetting), 60–61
-* 响应时间, 352
-* 创建 REST APIs, 387–390
-* RESTful Web Services, 193
-* 弃用, 7–8
-* 在 JUnit Pioneer 中重试测试, 213
-* Git 中的回滚 (reverting), 60–61
-* 基于角色的授权策略插件, 125
-* `RollingFile` 适配器, 145
-* `RollingFileAppender` 类, 157
-* `RollingRandomAccessFile` 适配器, 145
-* 创建运行配置, 16–18
-* `RUNNABLE`, 256
-* `Runnable` 接口, 262–263, 265
-* `runtime`, 92
-* 运行时应用安全防护 (RASP), 393
-* `runtimeOnly`, 110
-* RxJava, 391
-
-### S
-* SACMJD (Sun 认证 Java 开发大师), 8
-* SAST (静态应用安全测试), 393
-* Scala, 381
-* 使用 Sonar 扫描, 127
-* `schedule()` 方法, 264–265
-* `scheduleAtFixedRate()` 方法, 264–265
-* 使用 `@Scheduled` 调度, 280
-* 调度
-    * 使用 `ExecutorService`, 264–265
-    * 使用 `@Scheduled`/`@EnableScheduling`, 280
-* SCJA (Sun 认证 Java  way), 8
-* SCJP (Sun 认证 Java 专业人员), 8
-* `scope` 标签, 91–92
-* 使用 Spring 管理 Bean 的生命周期, 167
-* 配置爬取 (scrapes), 328–330
-* 爬取 (scraping), 326
-* Scrum, 72
-* 通过 SSH (Secure Shell) 克隆, 47–48
-* SSL (安全套接层), 187
-* 应用安全, 187–192, 391–393
-* 安全, 394
-* 语义化版本, 94
-* `Semaphore`, 275
-* 序列垃圾回收, 359
-* 服务帐户, 120
-* Servlet 过滤器, 188
-* 会话范围 (session scope), 167
-* 基于会话的认证, 189
-* 自动生成 `@Setter` 方法, 241–242
-* `set()` 方法, 226
-* 7-Zip, 350
-* `SEVERE` 日志级别, 132
-* 更改签名, 32
-* 使用 SAX (Simple API for XML), 402–403
-* Simple Logging Facade for Java (SLF4J)
-    * 概述, 149
-    * 与框架对比, 160
-    * 日志级别对比, 150
-    * 格式化值, 151
-    * 懒性日志, 151
-    * 忽略日志框架, 149
-    * 基础配置, 152
-    * 指定, 150
-    * 使用其他日志框架, 152
-    * 网站, 161
-* 单例范围 (singleton scope), 167
-* Skip List 算法, 281
-* 跳过测试, 207
-* `@Slf4j` 注解, 246
-* 使用 SnakeYAML 读写, 410–412
-* 使用 Sonar 扫描, 127
-* SonarQube, 127, 128, 374
-* 特殊操作符, 82
-* `split()` 方法, 293–294
-* 拆分 (splitting), 293–294, 298
-* Spring AOP, 323
-* Spring Boot 在应用中的追踪, 349
-* Spring Boot Actuator, 336–337
-* Spring framework
-    * 概述, 163–164
-    * 编写正则表达式, 308
-    * 并发支持, 278–281
-    * 配置, 164–170
-    * 使用属性自定义, 170–173
-    * 错误处理, 183–185
-    * 使用 Spring Boot 改进开发, 173–178
-    * 使用 Spring initializer 初始化 Spring Boot 项目, 173–174
-    * 使用 Actuator 检查应用, 185–187
-    * 项目, 192
-    * 使用 Spring security 安全应用, 187–192
-    * Spring MVC, 178–183, 222–222
-    * 使用组件, 169–170
-    * 使用 IntelliJ Initializer, 173–174
-    * 使用 Java 配置, 167–169
-    * 使用 XML 文件, 165–167
-    * 网站, 193
-* Spring in Action, 193
-* 创建间谍 (spy), 76
-* 存对象, 215
-* SQL (结构化语言), 383
-* 通过 SSH (Secure Shell) 克隆, 47
-* SSL (安全套接层), 187
-* Git 中的暂存区 (staging area), 259
-* 暂存区, 42
-* `StampedLock`, 275
-* 编码标准, 159
-* `startElement()` 方法, 403
-* 启动依赖 (starter-dependencies), 173
-* 创建新项目, 13
-* 静态应用安全测试 (SAST), 393
-* 模拟 (mocking), 221
-* STAX (STream API for XML), 397
-* 停停世界 (stop-the-world), 359
-* `Stream`, 298
-* `stream()` 方法, 260–261
-* STAX (STream API for XML), 397
-* 字符串插值, 380
-* `String` 方法调用, 291–294
-* SQL (结构化语言), 383
-* 存根对象, 215
-* 摘要, 339–341
-* 总结线程状态, 257
-
-
-
-
-* 在 JUnit Pioneer 中, 214
-* Maven 中的设置, 102
-* `System.currentTimeInMillis()`, 354
-* `System.nanoTime()`, 354
+- SACMJD（Sun 认证 Java 开发大师），8
+- SAST（静态应用安全测试），393
+- Scala，381
+- 使用 Sonar 扫描，127
+- `schedule()` 方法，264–265
+- `scheduleAtFixedRate()` 方法，264–265
+- 使用 `@Scheduled` 调度，280
+- 调度
+  - 使用 `ExecutorService`，264–265
+  - 使用 `@Scheduled`/`@EnableScheduling`，280
+- SCJA（Sun 认证 Java way），8
+- SCJP（Sun 认证 Java 专业人员），8
+- `scope` 标签，91–92
+- 使用 Spring 管理 Bean 的生命周期，167
+- 配置爬取（scrapes），328–330
+- 爬取（scraping），326
+- Scrum，72
+- 通过 SSH（Secure Shell）克隆，47–48
+- SSL（安全套接层），187
+- 应用安全，187–192，391–393
+- 安全，394
+- 语义化版本，94
+- `Semaphore`，275
+- 序列垃圾回收，359
+- 服务帐户，120
+- Servlet 过滤器，188
+- 会话范围（session scope），167
+- 基于会话的认证，189
+- 自动生成 `@Setter` 方法，241–242
+- `set()` 方法，226
+- 7-Zip，350
+- `SEVERE` 日志级别，132
+- 更改签名，32
+- 使用 SAX（Simple API for XML），402–403
+- Simple Logging Facade for Java（SLF4J）
+  - 概述，149
+  - 与框架对比，160
+  - 日志级别对比，150
+  - 格式化值，151
+  - 懒性日志，151
+  - 忽略日志框架，149
+  - 基础配置，152
+  - 指定，150
+  - 使用其他日志框架，152
+  - 网站，161
+- 单例范围（singleton scope），167
+- Skip List 算法，281
+- 跳过测试，207
+- `@Slf4j` 注解，246
+- 使用 SnakeYAML 读写，410–412
+- 使用 Sonar 扫描，127
+- SonarQube，127，128，374
+- 特殊操作符，82
+- `split()` 方法，293–294
+- 拆分（splitting），293–294，298
+- Spring AOP，323
+- Spring Boot 在应用中的追踪，349
+- Spring Boot Actuator，336–337
+- Spring framework
+  - 概述，163–164
+  - 编写正则表达式，308
+  - 并发支持，278–281
+  - 配置，164–170
+  - 使用属性自定义，170–173
+  - 错误处理，183–185
+  - 使用 Spring Boot 改进开发，173–178
+  - 使用 Spring Initializer 初始化 Spring Boot 项目，173–174
+  - 使用 Actuator 检查应用，185–187
+  - 项目，192
+  - 使用 Spring Security 安全应用，187–192
+  - Spring MVC，178–183，222–222
+  - 使用组件，169–170
+  - 使用 IntelliJ Initializer，173–174
+  - 使用 Java 配置，167–169
+  - 使用 XML 文件，165–167
+  - 网站，193
+- Spring in Action，193
+- 创建间谍（spy），76
+- 存对象，215
+- SQL（结构化语言），383
+- 通过 SSH（Secure Shell）克隆，47
+- SSL（安全套接层），187
+- Git 中的暂存区（staging area），259
+- 暂存区，42
+- `StampedLock`，275
+- 编码标准，159
+- `startElement()` 方法，403
+- 启动依赖（starter-dependencies），173
+- 创建新项目，13
+- 静态应用安全测试（SAST），393
+- 模拟（mocking），221
+- STAX（Stream API for XML），397
+- 停止世界（stop-the-world），359
+- `Stream`，298
+- `stream()` 方法，260–261
+- 字符串插值，380
+- `String` 方法调用，291–294
+- 存根对象，215
+- 摘要，339–341
+- 总结线程状态，257
+- 在 JUnit Pioneer 中，214
+- Maven 中的设置，102
+- `System.currentTimeInMillis()`，354
+- `System.nanoTime()`，354
 
 ## T
 
-* Git 中的标签标记, 43
-* TDD (测试驱动开发), 196
-* 模板化 URL, 186
-* `TERMINATED`, 257
-* Jenkins 术语, 116
-* `test`, 92
-* `test` 目录，暂存, 196
-* 测试双胞 (test double), 215
-* `test` 阶段, 92
-* 测试驱动开发 (TDD), 196, 202–205
-* `testImplementation`, 110
-* 测试
-    * 使用 JMeter, 360–365
-    * 用于...工具 (参见 自动化测试工具)
-* TestMe, 使用创建测试模板代码, 230
-* TestNG, 195
-* 文本块，从 Java 编码 17, 6–7
-* `then()` 方法，配置, 218–219
-* 线程访问，使用 `Phaser` 控制, 262
-* 线程争用, 252–254
-* 线程组, 361, 363
-* 线程优先级, 251
-* 线程状态, 256–257
-* `ThreadPoolTaskExecutor`，启动线程, 280–281
-* 线程，使用 `ThreadPoolTaskExecutor` 启动, 280–281
-* 吞吐量, 352
-* `TIMED_WAITING`, 257
-* 定器, 363
-* TLS (传输层安全), 188
-* 基于令牌的认证, 189
-* 令牌，生成, 120
-* `toLongString()` API, 314
-* 工具化, 349
-* 工具，使用正则表达式, 306–308
-* `toShortString()` API, 314
-* `toString()` API, 314
-* `@ToString` 注解, 243
-* `TRACE` 日志级别, 140, 150, 156
-* 追踪, 326, 348–349
-* `@Transactional`, 281
-* `TransferQueue`, 275
-* 传递性依赖, 90
-* 传输层安全 (TLS), 188
-* 触发器，在 Jenkins 中, 116
-* 基于主干开发, 70
-* `tryLock()` 方法, 261
+- Git 中的标签标记，43
+- TDD（测试驱动开发），196
+- 模板化 URL，186
+- `TERMINATED`，257
+- Jenkins 术语，116
+- `test`，92
+- `test` 目录，暂存，196
+- 测试双胞（test double），215
+- `test` 阶段，92
+- 测试驱动开发（TDD），196，202–205
+- `testImplementation`，110
+- 测试
+  - 使用 JMeter，360–365
+  - 用于工具（参见自动化测试工具）
+- TestMe，使用创建测试模板代码，230
+- TestNG，195
+- 文本块，从 Java 编码 17，6–7
+- `then()` 方法，配置，218–219
+- 线程访问，使用 `Phaser` 控制，262
+- 线程争用，252–254
+- 线程组，361，363
+- 线程优先级，251
+- 线程状态，256–257
+- `ThreadPoolTaskExecutor`，启动线程，280–281
+- 线程，使用 `ThreadPoolTaskExecutor` 启动，280–281
+- 吞吐量，352
+- `TIMED_WAITING`，257
+- 定时器，363
+- TLS（传输层安全），188
+- 基于令牌的认证，189
+- 令牌，生成，120
+- `toLongString()` API，314
+- 工具化，349
+- 工具，使用正则表达式，306–308
+- `toShortString()` API，314
+- `toString()` API，314
+- `@ToString` 注解，243
+- `TRACE` 日志级别，140，150，156
+- 追踪，326，348–349
+- `@Transactional`，281
+- `TransferQueue`，275
+- 传递性依赖，90
+- 传输层安全（TLS），188
+- 触发器，在 Jenkins 中，116
+- 基于主干开发，70
+- `tryLock()` 方法，261
 
 ## U
 
-* `UNICODE_CASE` 标记, 298
-* `UNICODE_CLASS` 标记, 298
-* 统一资源标识符 (URI), 47
-* 包装, 33
-* URI (统一资源标识符), 47
-* 用户，在 Jira 中, 78, 126
+- `UNICODE_CASE` 标记，298
+- `UNICODE_CLASS` 标记，298
+- 统一资源标识符（URI），47
+- 包装，33
+- URI（统一资源标识符），47
+- 用户，在 Jira 中，78，126
 
 ## V
 
-* `validate` 阶段, 92
-* 值
-    * 分桶化, 339–341
-    * 捕获波动, 338–339
-    * 格式化
-        * 在 Java Util 中, 132–133
-        * 在 Log4j 中, 140–141
-        * 在 SLF4J 中, 151
-    * 替换, 292–293, 296–297
-* 变量，指定, 110
-* VCS (版本控制系统), 42
-* `verify` 阶段, 92
-* 验证
-    * 调用, 219
-    * 使用逻辑条件, 209–210
-* 版本控制
-    * 添加项目到, 15
-    * 从...创建项目, 15
-* 版本控制系统 (VCS), 42
-* 版本号 (POM), 94
-* 版本, 4–7
-* 垂直扩展性, 352
-* Victor 在 Pluralsight 上的正则表达式课程, 308
-* 在 Jira 中查看问题, 80
-* 视图，在 Jenkins 中, 126
-* 虚拟机，选择, 390
-* 虚拟线程, 7, 250, 271–275
-* Visual Studio (VS) Code
-    * 关于, 37–39
-    * IDE 集成, 225
-    * 在...安装 Lombok, 237
-    * 使用, 104–106
-    * 网站, 40
-* VisualVM, 370–371
-* `void await()` 方法, 261–262
-* `void lock()` 方法, 261–262
-* `void lockInterruptibility()` 方法, 261–262
-* `void signal()` 方法, 261–262
-* `void signalAll()` 方法, 261–262
-* `void unlock()` 方法, 261–262
-* `volatile` 关键字, 255
-* VS (参见 Visual Studio)
+- `validate` 阶段，92
+- 值
+  - 分桶化，339–341
+  - 捕获波动，338–339
+  - 格式化
+    - 在 Java Util 中，132–133
+    - 在 Log4j 中，140–141
+    - 在 SLF4J 中，151
+  - 替换，292–293，296–297
+- 变量，指定，110
+- VCS（版本控制系统），42
+- `verify` 阶段，92
+- 验证
+  - 调用，219
+  - 使用逻辑条件，209–210
+- 版本控制
+  - 添加项目到，15
+  - 从中创建项目，15
+- 版本控制系统（VCS），42
+- 版本号（POM），94
+- 版本，4–7
+- 垂直扩展性，352
+- Victor 在 Pluralsight 上的正则表达式课程，308
+- 在 Jira 中查看问题，80
+- 视图，在 Jenkins 中，126
+- 虚拟机，选择，390
+- 虚拟线程，7，250，271–275
+- Visual Studio（VS）Code
+  - 关于，37–39
+  - IDE 集成，225
+  - 在其中安装 Lombok，237
+  - 使用，104–106
+  - 网站，40
+- VisualVM，370–371
+- `void await()` 方法，261–262
+- `void lock()` 方法，261–262
+- `void lockInterruptibility()` 方法，261–262
+- `void signal()` 方法，261–262
+- `void signalAll()` 方法，261–262
+- `void unlock()` 方法，261–262
+- `volatile` 关键字，255
+- VS（参见 Visual Studio）
 
 ## W
 
-* `TIMED_WAITING`, 257
-* 定器, 363
-* TLS (传输层安全), 188
-* 基于令牌的认证, 189
-* 令牌，生成, 120
-* `toLongString()` API, 314
-* 工具化, 349
-* 工具，使用正则表达式, 306–308
-* `toShortString()` API, 314
-* `toString()` API, 314
-* `@ToString` 注解, 243
-* `TRACE` 日志级别, 140, 150, 156
-* 追踪, 326, 348–349
-* `@Transactional`, 281
-* `TransferQueue`, 275
-* 传递性依赖, 90
-* 传输层安全 (TLS), 188
-* 触发器，在 Jenkins 中, 116
-* 基于主干开发, 70
-* `tryLock()` 方法, 261
+- `TIMED_WAITING`，257
+- 定时器，363
+- TLS（传输层安全），188
+- 基于令牌的认证，189
+- 令牌，生成，120
+- `toLongString()` API，314
+- 工具化，349
+- 工具，使用正则表达式，306–308
+- `toShortString()` API，314
+- `toString()` API，314
+- `@ToString` 注解，243
+- `TRACE` 日志级别，140，150，156
+- 追踪，326，348–349
+- `@Transactional`，281
+- `TransferQueue`，275
+- 传递性依赖，90
+- 传输层安全（TLS），188
+- 触发器，在 Jenkins 中，116
+- 基于主干开发，70
+- `tryLock()` 方法，261
 
+## Z
 
+- `Zipkin`，350
 
-
-* 使用 `Jackson`，`409–410`
-* 使用 `SnakeYAML`，`410–412`
-* 网站，`413`
-* 写作
-    * 使用 `Jackson`，`410`
-    * 使用 `SnakeYAML`，`410–412`
-
-### Z
-* `Zipkin`，`350`
-
-版权 © 2025 John Wiley & Sons, Inc. 版留所有权利，包括文本和数据挖掘、AI 训练及类似技术。
+版权 © 2025 John Wiley & Sons, Inc. 保留所有权利，包括文本和数据挖掘、AI 训练及类似技术。
 
 由 John Wiley & Sons, Inc. 出版，位于新泽西州霍霍肯。
 
@@ -15428,19 +14993,14 @@ edition: '1'
 
 ISBN：`9781394275724`（平装），`9781394275748`（ePDF），`9781394275731`（ePub）
 
-本出版物的任何部分均不得以任何形式或通过方式（电子、机械、复印、录制、扫描或其他）复制、存储在检索系统中或传输，除非根据 1976 年美国版权法法第 107 条或第 108 条的规定，且未经出版者的事先书面许可，或通过向 Copyright Clearance Center, Inc. 支付每份费用获得授权（222 Rosewood Drive, Danvers, MA 01923，`(978) 750-8400`，传真 `(978) 750-4470`，或在网页上[`www.copyright.com`](http://www.copyright.com)）。向出版者申请许可应通过：John Wiley & Sons, Inc. 许可部门，111 River Street, Hoboken, NJ 07030，`(201) 748-6011`，传真 `(201) 748-6008`，或在线访问[`www.wiley.com/go/permission`](http://www.wiley.com/go/permission)。
+本出版物的任何部分均不得以任何形式或通过任何方式（电子、机械、复印、录制、扫描或其他）复制、存储在检索系统中或传输，除非根据 1976 年美国版权法第 107 条或第 108 条的规定，且未经出版者的事先书面许可，或通过向 Copyright Clearance Center, Inc. 支付每份费用获得授权（222 Rosewood Drive, Danvers, MA 01923，`(978) 750-8400`，传真 `(978) 750-4470`，或在网页上 [`www.copyright.com`](http://www.copyright.com)）。向出版者申请许可应通过：John Wiley & Sons, Inc. 许可部门，111 River Street, Hoboken, NJ 07030，`(201) 748-6011`，传真 `(201) 748-6008`，或在线访问 [`www.wiley.com/go/permission`](http://www.wiley.com/go/permission)。
 
-**商标：** `WILEY` 和 Wiley 标志是 John Wiley & Sons, Inc. 及其/或关联公司在美国及其他国家的商标或注册商标，未经书面许可不得使用。`Java` 是 Oracle America, Inc. 的商标或注册商标。所有其他商标均为其各自所有者的财产。John Wiley & Sons, Inc. 与书中提到的任何产品或供应商均无关联。
+**商标：** `WILEY` 和 Wiley 标志是 John Wiley & Sons, Inc. 及其或关联公司在美国及其他国家的商标或注册商标，未经书面许可不得使用。`Java` 是 Oracle America, Inc. 的商标或注册商标。所有其他商标均为其各自所有者的财产。John Wiley & Sons, Inc. 与书中提到的任何产品或供应商均无关联。
 
-**责任限制/免责声明：** 尽管出版者和作者在准备本书时已尽到最大努力，但他们对本书内容的准确性或完备性均不作任何陈述或保证，并特别否认任何关于畅销性或适用于特定用途的暗示保证。销售代表或书面销售材料不得创建或扩大任何保证。本文包含的建议和策略可能不适用于您的情况。
+**责任限制/免责声明：** 尽管出版者和作者在准备本书时已尽到最大努力，但他们对本书内容的准确性或完备性均不作任何陈述或保证，并特别否认任何关于适销性或适用于特定用途的暗示保证。销售代表或书面销售材料不得创建或扩大任何保证。本文包含的建议和策略可能不适用于您的情况。
 
-
-
-
-
-Jeanne 在与写书工作重叠的艰难月份里，亲自感谢 Dani、Janeice、Kim、Norm、Scott 和 Shweta。她还想感谢 Scott 的耐心，因为 Jeanne 同时在撰写两本书（即此本和 *Oracle Certified Professional Java 21 Developer Study Guide*）。非常感谢 Victor，他构思了这本书的创意，并作为一名出色的合著者将其付诸现实。最后，Jeanne 感谢 [`CodeRanch.com](http://coderanch.com) 的所有新程序员以及 FIRST 机器人团队 FRC 694 和 FTC 310/479，是他们不断提醒她，让她关注新程序员的思维方式。
+Jeanne 在与写书工作重叠的艰难月份里，亲自感谢 Dani、Janeice、Kim、Norm、Scott 和 Shweta。她还想感谢 Scott 的耐心，因为 Jeanne 同时在撰写两本书（即此本和 *Oracle Certified Professional Java 21 Developer Study Guide*）。非常感谢 Victor，他构思了这本书的创意，并作为一名出色的合著者将其付诸现实。最后，Jeanne 感谢 [`CodeRanch.com`](http://coderanch.com) 的所有新程序员以及 FIRST 机器人团队 FRC 694 和 FTC 310/479，是他们不断提醒她，让她关注新程序员的思维方式。
 
 # WILEY 用户许可协议
 
-请访问 [www.wiley.com/go/eula](http://www.wiley.com/go/eula) 访问 Wiley 电子书用户许可协议 (EULA)。
-
+请访问 [www.wiley.com/go/eula](http://www.wiley.com/go/eula) 访问 Wiley 电子书用户许可协议（EULA）。

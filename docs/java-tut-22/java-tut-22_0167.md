@@ -1,3 +1,4 @@
+
 # 字符流
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/io/charstreams.html`](https://docs.oracle.com/javase/tutorial/essential/io/charstreams.html)
@@ -41,7 +42,6 @@ public class CopyCharacters {
         }
     }
 }
-
 ```
 
 `CopyCharacters`与`CopyBytes`非常相似。最重要的区别在于，`CopyCharacters`使用`FileReader`和`FileWriter`进行输入和输出，而不是`FileInputStream`和`FileOutputStream`。请注意，`CopyBytes`和`CopyCharacters`都使用一个`int`变量进行读取和写入。但是，在`CopyCharacters`中，`int`变量在其最后 16 位中保存字符值；而在`CopyBytes`中，`int`变量在其最后 8 位中保存`byte`值。
@@ -91,7 +91,6 @@ public class CopyLines {
         }
     }
 }
-
 ```
 
 调用`readLine`返回带有行的文本。`CopyLines`使用`println`输出每一行，该方法会附加当前操作系统的行终止符。这可能与输入文件中使用的行终止符不同。

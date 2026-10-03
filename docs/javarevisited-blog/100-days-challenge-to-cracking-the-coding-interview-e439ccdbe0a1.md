@@ -1,8 +1,9 @@
+
 # 第 14 天—反向链表
 
 > 原文：<https://medium.com/javarevisited/100-days-challenge-to-cracking-the-coding-interview-e439ccdbe0a1?source=collection_archive---------0----------------------->
 
-## **亚马逊 100 天**
+## 亚马逊 100 天
 
 [**100 天到亚马逊**](https://leetcode.com/problems/reverse-linked-list/)**—第 14 天—反向链表**
 

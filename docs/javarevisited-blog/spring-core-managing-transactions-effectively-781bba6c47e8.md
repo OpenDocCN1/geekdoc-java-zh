@@ -1,3 +1,4 @@
+
 # Spring Core:有效管理事务
 
 > 原文：<https://medium.com/javarevisited/spring-core-managing-transactions-effectively-781bba6c47e8?source=collection_archive---------0----------------------->

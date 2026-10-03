@@ -1,8 +1,9 @@
-# 未检查异常  争议
+
+# 未检查异常 — 争议
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/exceptions/runtime.html`](https://docs.oracle.com/javase/tutorial/essential/exceptions/runtime.html)
 
-因为 Java 编程语言不要求方法捕获或指定未检查异常（`RuntimeException`，`Error`及其子类），程序员可能会倾向于编写仅抛出未检查异常的代码，或者使所有异常子类继承自`RuntimeException`。这两种捷径使程序员能够编写代码，而不必理会编译器错误，也不必指定或捕获任何异常。尽管这对程序员来说可能很方便，但它绕过了`catch`或`specify`要求的意图，可能会给使用您的类的其他人造成问题。
+因为 Java 编程语言不要求方法捕获或指定未检查异常（`RuntimeException`、`Error`及其子类），程序员可能会倾向于编写仅抛出未检查异常的代码，或者使所有异常子类继承自`RuntimeException`。这两种捷径使程序员能够编写代码，而不必理会编译器错误，也不必指定或捕获任何异常。尽管这对程序员来说可能很方便，但它绕过了`catch`或`specify`要求的意图，可能会给使用您的类的其他人造成问题。
 
 设计者为什么决定强制一种方法来指定在其范围内可能抛出的所有未捕获的已检查异常？方法可能抛出的任何`Exception`都是方法的公共编程接口的一部分。调用方法的人必须了解方法可能抛出的异常，以便他们可以决定如何处理这些异常。这些异常与方法的编程接口一样重要，就像它的参数和`return`值一样。
 

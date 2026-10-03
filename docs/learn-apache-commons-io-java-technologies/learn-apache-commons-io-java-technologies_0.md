@@ -1,9 +1,7 @@
+
 # Learn Apache Commons IO [Java 技术]
 
-
-
 ![](img/cover.jpeg)
-
 
 我想将这本书献给使用它的学生们。祝愿你们未来职业成功，并希望你们永停止学习。
 
@@ -49,7 +47,7 @@ Apache Commons IO 库提供了以下类别的类：
 * `FileUtils` ― 提供了操作文件的方法，如移动、打开、检查存在性、读取文件等。这些方法使用 `File` 对象。
 * `IOCase` ― 提供了字符串操作和比较的方法。
 * `FileSystemUtils` ― 提供了获取磁盘驱动器上可用空间的方法。
-* `LineIterator` ― 提供了一种了一种处理基于行的文件的灵活方式。
+* `LineIterator` ― 提供了一种处理基于行的文件的灵活方式。
 
 ### 过滤器类
 
@@ -85,7 +83,6 @@ Apache Commons IO 库提供了以下类别的类：
 * `NullInputStream` ― 吸收所有数据。
 * `TeeInputStream` ― 将输出发送到两个流。
 * `ByteArrayInputStream` ― JDK 的版本。
-* `CountingInputStream` ― 计数字节数。
 * `CountingInputStream` ― 计数字节数。
 * `ProxyInputStream` ― 更改代理流。
 * `LockableInputStream` ― 创建锁并。
@@ -129,13 +126,8 @@ export PATH=/path/to/java:$PATH
 要编写 Java 程序，你需要一个文本编辑器。市场上有很多先进的集成开发环境 (IDE)。但目前，你可以考虑以下以下之一 ―
 
 * `Notepad` ― 在 Windows 机器上，你可以使用任何简单的文本编辑器，如记事本（本教程推荐）、TextPad。
-
-
-
-
-
-* **Netbeans** — 这是一个开源且免费的 Java IDE，可以从 `https://www.netbeans.org/index.html` 下载。
-* **Eclipse** — 同样也是一个由 eclipse 开源社区开发的 Java IDE，可以从 `https://www.eclipse.org/` 下载。
+* `Netbeans` — 这是一个开源且免费的 Java IDE，可以从 `https://www.netbeans.org/index.html` 下载。
+* `Eclipse` — 同样也是一个由 eclipse 开源社区开发的 Java IDE，可以从 `https://www.eclipse.org/` 下载。
 
 ## 下载 Common IO 归包
 
@@ -243,6 +235,7 @@ public class IOTester {
 它将打印以下结果：
 
 Welcome to TutorialsPoint. Simply Easy Learning.
+
 Welcome to TutorialsPoint. Simply Easy Learning.
 
 # FileUtils
@@ -320,139 +313,11 @@ public class IOTester {
     }
 }
 ```
+
 （注：此处根据原文逻辑保持代码块不变，但上方已翻译注释）
 
-```java
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.io.FileUtils;
 
-public class IOTester {
-    public static void main(String[] args) {
-        try {
-            //Using BufferedReader
-            readUsingTraditionalWay();
-            //Using IOUtils
-            readUsingIOUtils();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-    }
 
-    // 使用 buffered reader 逐行读取文件
-    public static void readUsingTraditionalWay() throws IOException {
-        try (BufferedReader bufferReader = new BufferedReader(new InputStreamReader(
-                new FileInputStream("input.txt")))) {
-            String line;
-            while ((line = bufferReader.readLine()) != null) {
-                System.out.println(line);
-            }
-        }
-    }
-
-    // 使用 IOUtils 一性读取文件
-    public static void readUsingIOUtils() throws IOException {
-        try (InputStream in = new FileInputStream("input.txt")) {
-            System.out.println(IOUtils.toString(in, "UTF-8"));
-        }
-    }
-}
-```
-（注：原文示例中 FileUtils 示例后的代码块似乎重复了 IOUtils 的内容，根据指令要求“代码块不需要翻译”，此处保留原文样貌。）
-
-## 输出
-
-它将打印以下结果。
-
-Welcome to TutorialsPoint. Simply Easy Learning.
-Welcome to TutorialsPoint. Simply Easy Learning.
-
-# FilenameUtils
-
-提供了处理文件名的方法，无需使用 `File` 对象。它适用于不同的操作系统。
-
-## 类声明
-
-以下是 `org.apache.commons.io.FileUtils` 类的声明——
-
-```java
-public class FileUtils
-extends Object
-```
-
-## FilenameUtils 的特性
-
-该类定义了文件名中的六个部分。考虑一个示例位置 `C:\dev\`，这些部分为：
-
-* 前缀 `C:\`
-* 相对路径 `dev\`
-* 绝对路径 `C:\dev\`
-* 文件名 `file.txt`
-* 基础文件名 `file`
-* 扩展名 `txt`
-
-要要识别目录，请为文件名添加分隔符。
-
-## FilenameUtils 类示例
-
-IOTester.java
-
-```java
-import java.io.IOException;
-import org.apache.commons.io.FilenameUtils;
-
-public class IOTester {
-    public static void main(String[] args) {
-        try {
-            //Using FilenameUtils
-            usingFilenameUtils();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
-    public static void usingFilenameUtils() throws IOException {
-        String path = "C:\\dev\\project\\file.txt";
-        System.out.println("Full Path: " + FilenameUtils.getFullPath(path));
-        System.out.println("Relative Path: " + FilenameUtils.getPath(path));
-        System.out.println("Prefix: " + FilenameUtils.getPrefix(path));
-        System.out.println("Extension: " + FilenameUtils.getExtension(path));
-        System.out.println("Base: " + FilenameUtils.getBaseName(path));
-        System.out.println("Name: " + FilenameUtils.getName(path));
-
-        String filename = "C:/commons/io/../lang/project.xml";
-        System.out.println("Normalized Path: " + FilenameUtils.normalize(filename));
-    }
-}
-```
-
-## 输出
-
-它将打印以下结果。
-
-Full Path: C:\dev\project\file.txt
-Relative Path: dev\project\
-Prefix: C:\
-Extension: txt
-Base: file
-Name: file.txt
-Normalized Path: C:\commons\lang\project.xml
-
-[/content]
-```
-
-*(注：由于原文文本在 `FileUtils` 示例部分存在代码块重复的错误（重复了 IOUUtils 的代码），我严格遵循“代码块不需要翻译且不漏掉”的原则，仅翻译了描述性文字，并对 `FilenameUtils` 示例进行了逻辑自洽的呈现，以确保文档可读性。)*
-
-**纠正：** 重新审视原文，原文 `FileUtils` 示例后的代码块确实是 `IOUtils` 的代码拷贝。为了符合“不要漏掉任何一行”的指令，我在最终翻译中保留了所有结构。
-
----
-以下是重新整理的纯净翻译版本：
-
-[content]
 * **Netbeans** — 这是一个开源且免费的 Java IDE，可以从 `https://www.netbeans.org/index.html` 下载。
 * **Eclipse** — 同样也是一个由 eclipse 开源社区开发的 Java IDE，可以从 `https://www.eclipse.org/` 下载。
 
@@ -639,14 +504,19 @@ public class IOTester {
     }
 }
 ```
-*(注：原文中 FileUtils 示例后的代码块确实重复了 IOUUtils 的内容，此处按要求保留。)*
+
+
+
+*(注：原文中 `FileUtils` 示例后的代码块确实重复了 `IOUtils` 的内容，此处按要求保留。)*
 
 ## 输出
 
 它将打印以下结果。
 
+```
 Welcome to TutorialsPoint. Simply Easy Learning.
 Welcome to TutorialsPoint. Simply Easy Learning.
+```
 
 # FilenameUtils
 
@@ -672,11 +542,11 @@ extends Object
 * 基础文件名 `file`
 * 扩展名 `txt`
 
-要要识别目录，请为文件名添加分隔符。
+要识别目录，请为文件名添加分隔符。
 
 ## FilenameUtils 类示例
 
-IOTester.java
+`IOTester.java`
 
 ```java
 import java.io.IOException;
@@ -711,6 +581,7 @@ public class IOTester {
 
 它将打印以下结果。
 
+```
 Full Path: C:\dev\project\file.txt
 Relative Path: dev\project\
 Prefix: C:\
@@ -718,25 +589,22 @@ Extension: txt
 Base: file
 Name: file.txt
 Normalized Path: C:\commons\lang\project.xml
-
-
-
+```
 
 以下是 `FileSystemUtils` 类的示例 −
 
 ```java
 IOTester.java
 
-import java . io . IOException ;
-
-import org . apache . commons . io . FileSystemUtils ;
+import java.io.IOException;
+import org.apache.commons.io.FileSystemUtils;
 
 public class IOTester {
-    public static void main ( String [] args ) {
+    public static void main(String[] args) {
         try {
-            System . out . println ( "Free Space " + FileSystemUtils . freeSpaceKb ( "C:/" ) + " Bytes" );
-        } catch ( IOException e ) {
-            System . out . println ( e . getMessage ());
+            System.out.println("Free Space " + FileSystemUtils.freeSpaceKb("C:/") + " Bytes");
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 }
@@ -746,7 +614,9 @@ public class IOTester {
 
 它将打印以下结果。
 
+```
 Free Space 61355640 kb
+```
 
 # IOCase
 
@@ -758,7 +628,7 @@ IO 大写敏感性的枚举。不同的操作系统对文件名的大小写敏�
 
 ```java
 public enum IOCase
-extends Enum < IOCase > implements Serializable
+extends Enum<IOCase> implements Serializable
 ```
 
 ## IOCase 枚举示例
@@ -768,30 +638,30 @@ extends Enum < IOCase > implements Serializable
 ```java
 IOTester.java
 
-import java . io . IOException ;
-
-import org . apache . commons . io . IOCase ;
+import java.io.IOException;
+import org.apache.commons.io.IOCase;
 
 public class IOTester {
-    public static void main ( String [] args ) {
+    public static void main(String[] args) {
         try {
-            usingIOCase ();
-        } catch ( IOException e ) {
-            System . out . println ( e . getMessage ());
+            usingIOCase();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 
-    public static void usingIOCase () throws IOException {
-        String text = "Welcome to TutorialsPoint. Simply Easy Learning." ;
-        String text1 = "WELCOME TO TUTORIALSPOINT. SIMPLY EASY LEARNING." ;
-        System . out . println ( "Ends with Learning (case sensitive): " +
-        IOCase . SENSITIVE . checkEndsWith ( text1 , "Learning." ));
-        System . out . println ( "Ends with Learning (case insensitive): " +
-        IOCase . INSENSITIVE . checkEndsWith ( text1 , "Learning." ));
-        System . out . println ( "Equality Check (case sensitive): " +
-        IOCase . SENSITIVE . checkEquals ( text , text1 ));
-        System . out . println ( "Equality Check (case insensitive): " +
-        IOCase . INSENSITIVE . checkEquals ( text , text1 ));
+    public static void usingIOCase() throws IOException {
+        String text = "Welcome to TutorialsPoint. Simply Easy Learning.";
+        String text1 = "WELCOME TO TUTORIALSPOINT. SIMPLY EASY LEARNING.";
+
+        System.out.println("Ends with Learning (case sensitive): " +
+            IOCase.SENSITIVE.checkEndsWith(text1, "Learning."));
+        System.out.println("Ends with Learning (case insensitive): " +
+            IOCase.INSENSITIVE.checkEndsWith(text1, "Learning."));
+        System.out.println("Equality Check (case sensitive): " +
+            IOCase.SENSITIVE.checkEquals(text, text1));
+        System.out.println("Equality Check (case insensitive): " +
+            IOCase.INSENSITIVE.checkEquals(text, text1));
     }
 }
 ```
@@ -800,10 +670,12 @@ public class IOTester {
 
 它将打印以下结果。
 
+```
 Ends with Learning (case sensitive): false
 Ends with Learning (case insensitive): true
-Equality Check ( case sensitive): false
-Equality Check ( case insensitive): true
+Equality Check (case sensitive): false
+Equality Check (case insensitive): true
+```
 
 # LineIterator
 
@@ -815,46 +687,45 @@ Equality Check ( case insensitive): true
 
 ```java
 public class LineIterator
-extends Object implements Iterator < String >, Closeable
+extends Object implements Iterator<String>, Closeable
 ```
 
 ## LineIterator 类示例
 
 这里是我们需要解析的输入文件 −
 
+```
 Welcome to TutorialsPoint. Simply Easy Learning.
 Learn web technologies,
 prepare exams,
 code online,
 all at one place.
+```
 
 ```java
 IOTester.java
 
-import java . io . File ;
-
-import java . io . IOException ;
-
-import org . apache . commons . io . FileUtils ;
-
-import org . apache . commons . io . LineIterator ;
+import java.io.File;
+import java.io.IOException;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.LineIterator;
 
 public class IOTester {
-    public static void main ( String [] args ) {
+    public static void main(String[] args) {
         try {
-            usingLineIterator ();
-        } catch ( IOException e ) {
-            System . out . println ( e . getMessage ());
+            usingLineIterator();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 
-    public static void usingLineIterator () throws IOException {
-        //get 文件对象
-        File file = FileUtils . getFile ( "input.txt" );
-        try ( LineIterator lineIterator = FileUtils . lineIterator ( file )) {
-            System . out . println ( "Contents of input.txt" );
-            while ( lineIterator . hasNext ()) {
-                System . out . println ( lineIterator . next ());
+    public static void usingLineIterator() throws IOException {
+        //获取文件对象
+        File file = FileUtils.getFile("input.txt");
+        try (LineIterator lineIterator = FileUtils.lineIterator(file)) {
+            System.out.println("Contents of input.txt");
+            while (lineIterator.hasNext()) {
+                System.out.println(lineIterator.next());
             }
         }
     }
@@ -865,12 +736,14 @@ public class IOTester {
 
 它将打印以下结果。
 
+```
 Contents of input.txt
 Welcome to TutorialsPoint. Simply Easy Learning.
 Learn web technologies,
 prepare exams,
 code online,
 all at one place.
+```
 
 # NameFileFilter
 
@@ -889,43 +762,44 @@ extends AbstractFileFilter implements Serializable
 
 这里是我们需要解析的输入文件 −
 
+```
 Welcome to TutorialsPoint. Simply Easy Learning.
-打印当前目录下的所有文件和目录，然后过滤一个名为 Input.txt 的文件。
+```
+
+打印当前目录下的所有文件和目录，然后过滤一个名为 `Input.txt` 的文件。
 
 ```java
 IOTester.java
 
-import java . io . File ;
-
-import java . io . IOException ;
-
-import org . apache . commons . io . IOCase ;
-
-import org . apache . commons . io . filefilter . NameFileFilter ;
+import java.io.File;
+import java.io.IOException;
+import org.apache.commons.io.IOCase;
+import org.apache.commons.io.filefilter.NameFileFilter;
 
 public class IOTester {
-    public static void main ( String [] args ) {
+    public static void main(String[] args) {
         try {
-            usingNameFileFilter ();
-        } catch ( IOException e ) {
-            System . out . println ( e . getMessage ());
+            usingNameFileFilter();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 
-    public static void usingNameFileFilter () throws IOException {
+    public static void usingNameFileFilter() throws IOException {
         //获取当前目录
-        File currentDirectory = new File ( "." );
+        File currentDirectory = new File(".");
         //获取当前目录下所有文件和目录的名称
-        String [] files = currentDirectory . list ();
-        System . out . println ( "All files and Folders.\n" );
-        for ( int i = 0 ; i < files . length ; i ) {
-            System . out . println ( files [ i ]);
+        String[] files = currentDirectory.list();
+        System.out.println("All files and Folders.\n");
+        for (int i = 0; i < files.length; i++) {
+            System.out.println(files[i]);
         }
-        System . out . println ( "\nFile with name input.txt\n" );
-        String [] acceptedNames = { "input" , "input.txt" };
-        String [] filesNames = currentDirectory . list ( new NameFileFilter ( acceptedNames , IOCase . INSENSITIVE ) );
-        for ( int i = 0 ; i < filesNames . length ; i ) {
-            System . out . println ( filesNames [ i ]);
+
+        System.out.println("\nFile with name input.txt\n");
+        String[] acceptedNames = {"input", "input.txt"};
+        String[] filesNames = currentDirectory.list(new NameFileFilter(acceptedNames, IOCase.INSENSITIVE));
+        for (int i = 0; i < filesNames.length; i++) {
+            System.out.println(filesNames[i]);
         }
     }
 }
@@ -935,6 +809,7 @@ public class IOTester {
 
 它将打印以下结果。
 
+```
 All files and Folders.
 .classpath
 .project
@@ -943,6 +818,7 @@ bin
 input.txt
 src
 File with name input.txt
+```
 
 # WildcardFilter
 
@@ -961,49 +837,100 @@ extends AbstractFileFilter implements Serializable
 
 这里是我们需要解析的输入文件 −
 
+```
 Welcome to TutorialsPoint. Simply Easy Learning.
-打印当前目录下的所有文件和目录，然后过滤一个以 t 结尾的文件。
+```
+
+打印当前目录下的所有文件和目录，然后过滤一个以 `t` 结尾的文件。
 
 ```java
 IOTester.java
 
-import java . io . File ;
-
-import java . io . IOException ;
-
-import org . apache . commons . io . filefilter . WildcardFilter ;
+import java.io.File;
+import java.io.IOException;
+import org.apache.commons.io.filefilter.WildcardFilter;
 
 public class IOTester {
-    public static void main ( String [] args ) {
+    public static void main(String[] args) {
         try {
-            usingWildcardFilter ();
-        } catch ( IOException e ) {
-            System . out . println ( e . getMessage ());
+            usingWildcardFilter();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 
-    public static void usingWildcardFilter () throws IOException {
+    public static void usingWildcardFilter() throws IOException {
         //获取当前目录
-        File currentDirectory = new File ( "." );
+        File currentDirectory = new File(".");
         //获取当前目录下所有文件和目录的名称
-        String [] files = currentDirectory . list ();
-        System . out . println ( "All files and Folders.\n" );
-        for ( int i = 0 ; i < files . length ; i ) {
-            System . out . println ( files [ i ]);
+        String[] files = currentDirectory.list();
+```
+
+
+
+# 文件过滤器与文件监控
+
+## SuffixFileFilter
+
+根据后缀过滤文件。用于检索特定类型的文件。
+
+### 类声明
+
+以下是`org.apache.commons.io.filefilter.SuffixFileFilter`类的声明 −
+
+```java
+public class SuffixFileFilter
+extends AbstractFileFilter implements Serializable
+```
+
+### SuffixFileFilter 类示例
+
+这里是我们需要解析的输入文件 −
+
+```
+Welcome to TutorialsPoint. Simply Easy Learning.
+```
+
+打印当前目录下的所有文件和目录，然后过滤一个扩展名为`txt`的文件。
+
+```java
+import java.io.File;
+import java.io.IOException;
+import org.apache.commons.io.filefilter.SuffixFileFilter;
+
+public class IOTester {
+
+    public static void main(String[] args) {
+        try {
+            usingSuffixFileFilter();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
-        System . out . println ( "\nFile ending with t.\n" );
-        String [] filesNames = currentDirectory . list ( new WildcardFilter ( "*t" ) );
-        for ( int i = 0 ; i < filesNames . length ; i ) {
-            System . out . println ( filesNames [ i ]);
+    }
+
+    public static void usingSuffixFileFilter() throws IOException {
+        //获取当前目录
+        File currentDirectory = new File(".");
+        //获取当前目录下所有文件和目录的名称
+        String[] files = currentDirectory.list();
+        System.out.println("All files and Folders.\n");
+        for (int i = 0; i < files.length; i++) {
+            System.out.println(files[i]);
+        }
+        System.out.println("\nFile ending with t.\n");
+        String[] filesNames = currentDirectory.list(new WildcardFilter("*t"));
+        for (int i = 0; i < filesNames.length; i++) {
+            System.out.println(filesNames[i]);
         }
     }
 }
 ```
 
-## 输出
+### 输出
 
 它将打印以下结果。
 
+```
 All files and Folders.
 .classpath
 .project
@@ -1014,129 +941,30 @@ src
 File ending with t
 .project
 input.txt
-
-# SuffixFileFilter
-
-根据后缀过滤文件。用于检索特定类型的文件。
-
-## 类声明
-
-以下是 `org.apache.commons.io.filefilter.SuffixFileFilter` 类的声明 −
-
-```java
-public class SuffixFileFilter
-extends AbstractFileFilter implements Serializable
 ```
 
-## SuffixFileFilter 类示例
-
-这里是我们需要解析的输入文件 −
-
-Welcome to TutorialsPoint. Simply Easy Learning.
-打印当前目录下的所有文件和目录，然后过滤一个扩展名为 txt 的文件。
-
-```java
-IOTester.java
-
-import java . io . File ;
-
-import java . io . IOException ;
-
-import org . apache . commons . io . filefilter . SuffixFileFilter ;
-
-public class IOTester {
-    public static void main ( String [] args ) {
-        try {
-            usingSuffixFileFilter ();
-        } catch ( IOException e ) {
-            System . out . println ( e . getMessage ());
-        }
-    }
-
-    public static void usingSuffixFileFilter () throws IOException {
-        //获取当前目录
-        File currentDirectory = new File ( "." );
-        //获取当前目录下所有文件和目录的名称
-        String [] files = currentDirectory . list ();
-        System . out . println ( "All files and Folders.\n" );
-        for ( int i = 0 ; i < files . length ; i ) {
-            System . out . println ( files [ i }]);
-        }
-        System . out . println ( "\nFile with extension txt\n" );
-        String [] acceptedExtensions = { ".txt" };
-        String [] filesNames = currentDirectory . list ( new SuffixFileFilter ( acceptedExtensions , IOCase . INSENSITIVE ) );
-        for ( int i = 0 ; i < filesNames . length ; i ) {
-            System . out . println ( filesNames [ i }]);
-        }
-    }
-}
-```
-
-
-
-
-```java
-System.out.println(e.getMessage());
-}
-
-}
-
-public static void usingSuffixFileFilter() throws IOException {
-    //获取当前目录
-    File currentDirectory = new File(".");
-    //获取当前目录下所有文件和目录的名称
-    String[] files = currentDirectory.list();
-    System.out.println("All files and Folders.\n");
-    for (int i = 0; i < files.length; i++) {
-        System.out.println(files[i]);
-    }
-    System.out.println("\nFile with extenstion txt\n");
-    String[] filesNames = currentDirectory.list(new SuffixFileFilter("txt"));
-    for (int i = 0; i < filesNames.length; i++) {
-        System.out.println(filesNames[i]);
-    }
-}
-}
-```
-
-## 输出
-
-它将打印出以下结果。
-
-All files and Folders.
-
-.classpath
-.project
-.settings
-bin
-input.txt
-src
-
-File with extenstion txt
-input.txt
-
-# PrefixFileFilter
+## PrefixFileFilter
 
 根据前缀过滤文件。
 
-## 类声明
+### 类声明
 
-以下是 `org.apache.commons.io.filefilter.PrefixFileFilter` 类的声明 −
+以下是`org.apache.commons.io.filefilter.PrefixFileFilter`类的声明 −
 
 ```java
 public class PrefixFileFilter
 extends AbstractFileFilter implements Serializable
 ```
 
-## PrefixFileFilter 类示例
+### PrefixFileFilter 类示例
 
 这里是我们需要解析的输入文件 −
 
+```
 Welcome to TutorialsPoint. Simply Easy Learning.
+```
 
-让我们打印当前目录下的所有文件和目录，然后过滤出以 input 开头的文件。
-
-IOTester.java
+让我们打印当前目录下的所有文件和目录，然后过滤出以`input`开头的文件。
 
 ```java
 import java.io.File;
@@ -1144,6 +972,7 @@ import java.io.IOException;
 import org.apache.commons.io.filefilter.PrefixFileFilter;
 
 public class IOTester {
+
     public static void main(String[] args) {
         try {
             usingPrefixFileFilter();
@@ -1170,44 +999,44 @@ public class IOTester {
 }
 ```
 
-## 输出
+### 输出
 
 它将打印出以下结果。
 
+```
 All files and Folders.
-
 .classpath
 .project
 .settings
 bin
 input.txt
 src
-
 File with extenstion txt
 input.txt
+```
 
-# OrFileFilter
+## OrFileFilter
 
-跨文件过滤器列表提供条件“或”（OR）逻辑。如果列表中的任何过滤器返回 true，则返回 true。否则，返回 false。
+跨文件过滤器列表提供条件“或”（OR）逻辑。如果列表中的任何过滤器返回`true`，则返回`true`。否则，返回`false`。
 
-## 类声明
+### 类声明
 
-以下是 `org.apache.commons.io.filefilter.OrFileFilter` 类的声明 −
+以下是`org.apache.commons.io.filefilter.OrFileFilter`类的声明 −
 
 ```java
 public class OrFileFilter
 extends AbstractFileFilter implements ConditionalFileFilter, Serializable
 ```
 
-## OrFileFilter 类示例
+### OrFileFilter 类示例
 
 这里是我们需要解析的输入文件 −
 
+```
 Welcome to TutorialsPoint. Simply Easy Learning.
+```
 
-让我们打印当前目录下的所有文件和目录，然后过滤出以 . 开头或以 t 结尾的文件。
-
-IOTester.java
+让我们打印当前目录下的所有文件和目录，然后过滤出以`.`开头或以`t`结尾的文件。
 
 ```java
 import java.io.File;
@@ -1217,6 +1046,7 @@ import org.apache.commons.io.filefilter.PrefixFileFilter;
 import org.apache.commons.io.filefilter.WildcardFileFilter;
 
 public class IOTester {
+
     public static void main(String[] args) {
         try {
             usingOrFileFilter();
@@ -1244,47 +1074,47 @@ public class IOTester {
 }
 ```
 
-## 输出
+### 输出
 
 它将打印出以下结果。
 
+```
 All files and Folders.
-
 .classpath
 .project
 .settings
 bin
 input.txt
 src
-
 File starting with . or ends with t
 .classpath
 .project
 .settings
 input.txt
+```
 
-# AndFileFilter
+## AndFileFilter
 
-跨文件过滤器列表提供条件“与”（And）逻辑。如果列表中的所有过滤器都返回 true，则返回 true。否则，返回 false。
+跨文件过滤器列表提供条件“与”（And）逻辑。如果列表中的所有过滤器都返回`true`，则返回`true`。否则，返回`false`。
 
-## 类声明
+### 类声明
 
-以下是 `org.apache.commons.io.filefilter.AndFileFilter` 类的声明 −
+以下是`org.apache.commons.io.filefilter.AndFileFilter`类的声明 −
 
 ```java
 public class AndFileFilter
 extends AbstractFileFilter
 ```
 
-## AndFileFilter 示例
+### AndFileFilter 示例
 
 这里是我们需要解析的输入文件 −
 
+```
 Welcome to TutorialsPoint. Simply Easy Learning.
+```
 
-让我们打印当前目录下的所有文件和目录，然后过滤出以 . 开头且以 t 结尾的文件。
-
-IOTester.java
+让我们打印当前目录下的所有文件和目录，然后过滤出以`.`开头且以`t`结尾的文件。
 
 ```java
 import java.io.File;
@@ -1294,6 +1124,7 @@ import org.apache.commons.io.filefilter.PrefixFileFilter;
 import org.apache.commons.io.filefilter.WildcardFileFilter;
 
 public class IOTester {
+
     public static void main(String[] args) {
         try {
             usingAndFileFilter();
@@ -1321,55 +1152,62 @@ public class IOTester {
 }
 ```
 
-## 输出
+### 输出
 
 它将打印出以下结果。
 
+```
 All files and Folders.
-
 .classpath
 .project
 .settings
 bin
 input.txt
 src
-
 File starting with . and ends with t
 .classpath
 .project
 .settings
 input.txt
+```
 
-# FileEntry
+## FileEntry
 
 提供文件或目录的状态、特定时间点的文件属性。
 
-## 类声明
+### 类声明
 
-以下是 `org.apache.commons.io.monitor.FileEntry` 类的声明 −
+以下是`org.apache.commons.io.monitor.FileEntry`类的声明 −
 
 ```java
 public class FileEntry
-extends Object implements Serializable
 ```
+
+
+
+# FileEntry
+
+`extends Object implements Serializable`
 
 ## 特性
 
-FileEntry 类对象提供特定时间点的以下文件属性。
+`FileEntry` 类对象提供特定时间点的以下文件属性。
 
 - `getName()` – 文件名。
 - `exists()` – 检查文件是否存在。
 - `isDirectory()` – 检查是否为目录。
 - `lastModified()` – 最后修改时间。
-- `listFiles()` –目录内容。
+- `listFiles()` – 目录内容。
 
 ## FileEntry 类示例
 
-这里是我们需要解析的输入文件 −
+这里是我们需要解析的输入文件：
 
+```
 Welcome to TutorialsPoint. Simply Easy Learning.
+```
 
-IOTester.java
+`IOTester.java`
 
 ```java
 import java.io.File;
@@ -1397,16 +1235,13 @@ public class IOTester {
 }
 ```
 
+它将打印以下结果：
 
-
-
-它将打印以下结果。
-
-监控的文件：`input.txt`
-
-文件名：`input.txt`
-
-是否为目录：`false`
+```
+监控的文件：input.txt
+文件名：input.txt
+是否为目录：false
+```
 
 # FileAlterationObserver
 
@@ -1425,75 +1260,81 @@ extends Object implements Serializable
 
 这里是我们需要解析的输入文件：
 
+```
 Welcome to TutorialsPoint. Simply Easy Learning.
+```
 
-IOTester.java
+`IOTester.java`
 
 ```java
-import java . io . File ;
-import java . io . IOException ;
-import org . apache . commons . io . FileDeleteStrategy ;
-import org . apache . commons . io . FileUtils ;
-import org . apache . commons . io . monitor . FileAlterationListenerAdaptor ;
-import org . apache . commons . io . monitor . FileAlterationMonitor ;
-import org . apache . commons . io . monitor . FileAlterationObserver ;
+import java.io.File;
+import java.io.IOException;
+import org.apache.commons.io.FileDeleteStrategy;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.monitor.FileAlterationListenerAdaptor;
+import org.apache.commons.io.monitor.FileAlterationMonitor;
+import org.apache.commons.io.monitor.FileAlterationObserver;
 
 public class IOTester {
-    public static void main ( String [] args ) {
+    public static void main(String[] args) {
         try {
-            usingFileAlterationObserver ();
-        } catch ( IOException e ) {
-            System . out . println ( e . getMessage ());
+            usingFileAlterationObserver();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 
-    public static void usingFileAlterationObserver () throws IOException {
+    public static void usingFileAlterationObserver() throws IOException {
         //get the file object
-        File inputFile = FileUtils . getFile ( "input.txt" );
-        String absolutePath = inputFile . getAbsolutePath ();
-        String parent = absolutePath . substring ( 0 , absolutePath . indexOf ( "input.txt" ));
-        File parentDirectory = FileUtils . getFile ( parent );
-        FileAlterationObserver observer = new FileAlterationObserver ( parentDirectory );
-        observer . addListener ( new FileAlterationListenerAdaptor () {
+        File inputFile = FileUtils.getFile("input.txt");
+        String absolutePath = inputFile.getAbsolutePath();
+        String parent = absolutePath.substring(0, absolutePath.indexOf("input.txt"));
+        File parentDirectory = FileUtils.getFile(parent);
+        FileAlterationObserver observer = new FileAlterationObserver(parentDirectory);
+        observer.addListener(new FileAlterationListenerAdaptor() {
             @Override
-            public void onDirectoryCreate ( File file ) {
-                System . out . println ( "Folder created: " + file . getName ());
+            public void onDirectoryCreate(File file) {
+                System.out.println("Folder created: " + file.getName());
             }
+
             @Override
-            public void onDirectoryDelete ( File file ) {
-                System . out . println ( "Folder deleted: " + file . getName ());
+            public void onDirectoryDelete(File file) {
+                System.out.println("Folder deleted: " + file.getName());
             }
+
             @Override
-            public void onFileCreate ( File file ) {
-                System . out . println ( "File created: " + file . getName ());
+            public void onFileCreate(File file) {
+                System.out.println("File created: " + file.getName());
             }
+
             @Override
-            public void onFileDelete ( File file ) {
-                System . out . println ( "File deleted: " + file . getName ());
+            public void onFileDelete(File file) {
+                System.out.println("File deleted: " + file.getName());
             }
         });
+
         //create a monitor to check changes after every 500 ms
-        FileAlterationMonitor monitor = new FileAlterationMonitor ( 500 , observer );
+        FileAlterationMonitor monitor = new FileAlterationMonitor(500, observer);
         try {
-            monitor . start ();
+            monitor.start();
             //create a new directory
-            File newFolder = new File ( "test" );
-            File newFile = new File ( "test1" );
-            newFolder . mkdirs ();
-            Thread . sleep ( 1000 );
-            newFile . createNewFile ();
-            Thread . sleep ( 1000 );
-            FileDeleteStrategy . NORMAL . delete ( newFolder );
-            Thread . sleep ( 1000 );
-            FileDeleteStrategy . NORMAL . delete ( newFile );
-            Thread . sleep ( 1000 );
-            monitor . stop ( 10000 );
-        } catch ( IOException e ) {
-            System . out . println ( e . getMessage ());
-        } catch ( InterruptedException e ) {
-            System . out . println ( e . getMessage ());
-        } catch ( Exception e ) {
-            System . out . println ( e . getMessage ());
+            File newFolder = new File("test");
+            File newFile = new File("test1");
+            newFolder.mkdirs();
+            Thread.sleep(1000);
+            newFile.createNewFile();
+            Thread.sleep(1000);
+            FileDeleteStrategy.NORMAL.delete(newFolder);
+            Thread.sleep(1000);
+            FileDeleteStrategy.NORMAL.delete(newFile);
+            Thread.sleep(1000);
+            monitor.stop(10000);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        } catch (InterruptedException e) {
+            System.out.println(e.getMessage());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 }
@@ -1501,17 +1342,18 @@ public class IOTester {
 
 ## 输出
 
-它将打印以下结果。
+它将打印以下结果：
 
+```
 Folder created: test
-
 File created: test1
 Folder deleted: test
 File deleted: test1
+```
 
 # FileAlterationMonitor
 
-代表一个产生监控线程的线程，按指定的间隔触发任何注册的 FileAlterationObserver。
+代表一个产生监控线程的线程，按指定的间隔触发任何注册的 `FileAlterationObserver`。
 
 ## 类声明
 
@@ -1526,83 +1368,96 @@ extends Object implements Runnable
 
 这里是我们需要解析的输入文件：
 
+```
 Welcome to TutorialsPoint. Simply Easy Learning.
+```
 
-IOTester.java
+`IOTester.java`
 
 ```java
-import java . io . File ;
-import java . io . IOException ;
-import org . apache . commons . io . FileDeleteStrategy ;
-import org . apache . commons . io . FileUtils ;
-import org . apache . commons . io . monitor . FileAlterationListenerAdaptor ;
-import org . apache . commons . io . monitor . FileAlterationMonitor ;
-import org . apache . commons . io . monitor . FileAlterationObserver ;
+import java.io.File;
+import java.io.IOException;
+import org.apache.commons.io.FileDeleteStrategy;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.monitor.FileAlterationListenerAdaptor;
+import org.apache.commons.io.monitor.FileAlterationMonitor;
+import org.apache.commons.io.monitor.FileAlterationObserver;
 
 public class IOTester {
-    public static void main ( String [] args ) {
+    public static void main(String[] args) {
         try {
-            usingFileAlterationMonitor ();
-        } catch ( IOException e ) {
-            System . out . println ( e . getMessage ());
+            usingFileAlterationMonitor();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 
-    public static void usingFileAlterationMonitor () throws IOException {
+    public static void usingFileAlterationMonitor() throws IOException {
         //get the file object
-        File inputFile = FileUtils . getFile ( "input.txt" );
-        String absolutePath = inputFile . getAbsolutePath ();
-        String parent = absolutePath . substring ( 0 , absolutePath . indexOf ( "input.txt" ));
-        File parentDirectory = FileUtils . getFile ( parent );
-        FileAlterationObserver observer = new FileAlterationObserver ( parentDirectory );
-        observer . addListener ( new FileAlterationListenerAdaptor () {
+        File inputFile = FileUtils.getFile("input.txt");
+        String absolutePath = inputFile.getAbsolutePath();
+        String parent = absolutePath.substring(0, absolutePath.indexOf("input.txt"));
+        File parentDirectory = FileUtils.getFile(parent);
+        FileAlterationObserver observer = new FileAlterationObserver(parentDirectory);
+        observer.addListener(new FileAlterationListenerAdaptor() {
             @Override
-            public void onDirectoryCreate ( File file ) {
-                System . out . println ( "Folder created: " + file . getName ());
+            public void onDirectoryCreate(File file) {
+                System.out.println("Folder created: " + file.getName());
             }
+
             @Override
-            public void onDirectoryDelete ( File file ) {
-                System . out . println ( "Folder deleted: " + file . getName ());
+            public void onDirectoryDelete(File file) {
+                System.out.println("Folder deleted: " + file.getName());
             }
+
             @Override
-            public void onFileCreate ( File file ) {
-                System . out . println ( "File created: " + file . getName ());
+            public void onFileCreate(File file) {
+                System.out.println("File created: " + file.getName());
             }
+
             @Override
-            public void onFileDelete ( File file ) {
-                System . out . println ( "File deleted: " + file . getName ());
+            public void onFileDelete(File file) {
+                System.out.println("File deleted: " + file.getName());
             }
         });
+
         //create a monitor to check changes after every 500 ms
-        FileAlterationMonitor monitor = new FileAlterationMonitor ( 500 , observer );
+        FileAlterationMonitor monitor = new FileAlterationMonitor(500, observer);
         try {
-            monitor . start ();
+            monitor.start();
             //create a new directory
-            File newFolder = new File ( "test" );
-            File newFile = new File ( "test1" );
-            newFolder . mkdirs ();
-            Thread . sleep ( 1000 );
-            newFile . createNewFile ();
-            Thread . sleep ( 1000 );
-            FileDeleteStrategy . NORMAL . delete ( newFolder );
-            Thread . sleep ( 1000 );
-            FileDeleteStrategy . NORMAL . delete ( newFile );
-            Thread . sleep ( 1000 );
-            monitor . stop ( 10000 );
-        } catch ( IOException e ) {
-            System . out . println ( e . getMessage ());
-        } catch ( InterruptedException e ) {
-            System . out . println ( e . getMessage ());
-        } catch ( Exception e ) {
-            System . out . println ( e . getMessage ());
+            File newFolder = new File("test");
+            File newFile = new File("test1");
+            newFolder.mkdirs();
+            Thread.sleep(1000);
+            newFile.createNewFile();
+            Thread.sleep(1000);
+            FileDeleteStrategy.NORMAL.delete(newFolder);
+            Thread.sleep(1000);
+            FileDeleteStrategy.NORMAL.delete(newFile);
+            Thread.sleep(1000);
+            monitor.stop(10000);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        } catch (InterruptedException e) {
+            System.out.println(e.getMessage());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 }
 ```
 
+以下是 `org.apache.commons.io.comparator.SizeFileComparator` 类的声明：
+
+```java
+```
 
 
-以下是 `org.apache.commons.io.comparator.SizeFileComparator` 类的声明——
+
+# `SizeFileComparator`
+
+`SizeFileComparator` 类声明如下：
 
 ```java
 public class SizeFileComparator
@@ -1611,37 +1466,36 @@ extends Object implements Serializable
 
 ## `SizeFileComparator` 类示例
 
-这里是我们需要解析的输入文件−
+这里是我们需要解析的输入文件：
 
 欢迎来到 TutorialsPoint。简单易学。
 
-IOTester.java
+`IOTester.java`
 
 ```java
-import java . io . File ;
-import java . io . FileFilter ;
-import java . io . IOException ;
-import org . apache . commons . io . comparator . SizeFileComparator ;
-import org . apache . commons . io . filefilter . FileFileFilter ;
+import java.io.File;
+import java.io.FileFilter;
+import java.io.IOException;
+import org.apache.commons.io.comparator.SizeFileComparator;
+import org.apache.commons.io.filefilter.FileFileFilter;
 
 public class IOTester {
-    public static void main ( String [] args ) {
+    public static void main(String[] args) {
         try {
-            usingSizeFileComparator ();
-        } catch ( IOException e ) {
-            System . out . println ( e . getMessage ());
+            usingSizeFileComparator();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 
-    public static void usingSizeFileComparator () throws IOException {
+    public static void usingSizeFileComparator() throws IOException {
         //获取当前目录
-        File currentDirectory = new File ( "." );
-        SizeFileComparator comparator = new SizeFileComparator ();
-        File [] sortedFiles =
-            comparator . sort ( currentDirectory . listFiles (( FileFilter ) FileFileFilter . FILE ));
-        System . out . println ( "Sorted By Size: " );
-        for ( File file : sortedFiles ) {
-            System . out . println ( file . getName () + ", size(kb) :"+ file . length ());
+        File currentDirectory = new File(".");
+        SizeFileComparator comparator = new SizeFileComparator();
+        File[] sortedFiles = comparator.sort(currentDirectory.listFiles((FileFilter) FileFileFilter.FILE));
+        System.out.println("Sorted By Size: ");
+        for (File file : sortedFiles) {
+            System.out.println(file.getName() + ", size(kb) :" + file.length());
         }
     }
 }
@@ -1649,20 +1503,22 @@ public class IOTester {
 
 ## 输出
 
-它将打印以下结果。
+它将打印以下结果：
 
+```
 Sorted By Size:
 input.txt, size:124
 .project, size:382
 .classpath, size:441
+```
 
-# LastModifiedFileComparator
+# `LastModifiedFileComparator`
 
 比较两个文件/目录的最后修改日期。`LastModifiedFileComparator` 可以根据最后修改日期对文件/目录列表或数组进行排序。
 
 ## 类声明
 
-以下是 `org.apache.commons.io.comparator.LastModifiedFileComparator` 类的声明−
+以下是 `org.apache.commons.io.comparator.LastModifiedFileComparator` 类的声明：
 
 ```java
 public class LastModifiedFileComparator
@@ -1671,37 +1527,37 @@ extends Object implements Serializable
 
 ## `LastModifiedFileComparator` 类示例
 
-这里是我们需要解析的输入文件−
+这里是我们需要解析的输入文件：
 
 欢迎来到 TutorialsPoint。简单易学。
 
-IOTester.java
+`IOTester.java`
 
 ```java
-import java . io . File ;
-import java . io . FileFilter ;
-import java . io . IOException ;
-import java . util . Date ;
-import org . apache . commons . io . comparator . LastModifiedFileComparator ;
-import org . apache . commons . io . filefilter . FileFileFilter ;
+import java.io.File;
+import java.io.FileFilter;
+import java.io.IOException;
+import java.util.Date;
+import org.apache.commons.io.comparator.LastModifiedFileComparator;
+import org.apache.commons.io.filefilter.FileFileFilter;
 
 public class IOTester {
-    public static void main ( String [] args ) {
+    public static void main(String[] args) {
         try {
-            usingLastModifiedFileComparator ();
-        } catch ( IOException e ) {
-            System . out . println ( e . getMessage ());
+            usingLastModifiedFileComparator();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 
-    public static void usingLastModifiedFileComparator () throws IOException {
+    public static void usingLastModifiedFileComparator() throws IOException {
         //获取当前目录
-        File currentDirectory = new File ( "." );
-        LastModifiedFileComparator comparator = new LastModifiedFileComparator ();
-        File [] sortedFiles = comparator . sort ( currentDirectory . listFiles (( FileFilter ) FileFileFilter . FILE ));
-        System . out . println ( "Sorted By Last Modified date: " );
-        for ( File file : sortedFiles ) {
-            System . out . println ( file . getName () + ", Modified on: " + new Date ( file . lastModified ()));
+        File currentDirectory = new File(".");
+        LastModifiedFileComparator comparator = new LastModifiedFileComparator();
+        File[] sortedFiles = comparator.sort(currentDirectory.listFiles((FileFilter) FileFileFilter.FILE));
+        System.out.println("Sorted By Last Modified date: ");
+        for (File file : sortedFiles) {
+            System.out.println(file.getName() + ", Modified on: " + new Date(file.lastModified()));
         }
     }
 }
@@ -1709,20 +1565,22 @@ public class IOTester {
 
 ## 输出
 
-它将打印以下结果。
+它将打印以下结果：
 
+```
 Sorted By Last Modified date:
 .project, Modified on: Thu Oct 12 19:06:45 IST 2017
 .classpath, Modified on: Mon Nov 20 13:09:55 IST 2017
 input.txt, Modified on: Mon Nov 20 19:27:55 IST 2017
+```
 
-# TeeInputStream
+# `TeeInputStream`
 
-它是一个 `InputStream` 代理，可以透明地将从代理流中读取的所有字节的副本写入给定的 `OutputStream`。当调用此此代理的 `close()` 方法时，被代理的输入流会被关闭。它可以同时共同操作两个流。
+它是一个 `InputStream` 代理，可以透明地将从代理流中读取的所有字节的副本写入给定的 `OutputStream`。当调用此代理的 `close()` 方法时，被代理的输入流会被关闭。它可以同时共同操作两个流。
 
 ## 类声明
 
-以下是 `org.apache.commons.io.input.TeeInputStream` 类的声明−
+以下是 `org.apache.commons.io.input.TeeInputStream` 类的声明：
 
 ```java
 public class TeeInputStream
@@ -1733,45 +1591,46 @@ extends ProxyInputStream
 
 在此示例中，关闭一个 `TeeInputStream` 会同时关闭 `TeeInputStream` 和 `TeeOutputStream` 对象。
 
-IOTester.java
+`IOTester.java`
 
 ```java
-import java . io . ByteArrayInputStream ;
-import java . io . ByteArrayOutputStream ;
-import java . io . IOException ;
-import org . apache . commons . io . input . TeeInputStream ;
-import org . apache . commons . io . output . TeeOutputStream ;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import org.apache.commons.io.input.TeeInputStream;
+import org.apache.commons.io.output.TeeOutputStream;
 
 public class IOTester {
-    private static final String SAMPLE = "Welcome to TutorialsPoint. Simply Easy Learning." ;
-    public static void main ( String [] args ) {
+    private static final String SAMPLE = "Welcome to TutorialsPoint. Simply Easy Learning.";
+
+    public static void main(String[] args) {
         try {
-            usingTeeInputStream ();
-        } catch ( IOException e ) {
-            System . out . println ( e . getMessage ());
+            usingTeeInputStream();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 
-    public static void usingTeeInputStream () throws IOException {
-        TeeInputStream teeInputStream = null ;
-        TeeOutputStream teeOutputStream = null ;
+    public static void usingTeeInputStream() throws IOException {
+        TeeInputStream teeInputStream = null;
+        TeeOutputStream teeOutputStream = null;
         try {
-            ByteArrayInputStream inputStream = new ByteArrayInputStream ( SAMPLE . getBytes ( "US-ASCII" ));
-            ByteArrayOutputStream outputStream1 = new ByteArrayOutputStream ();
-            ByteArrayOutputStream outputStream2 = new ByteArrayOutputStream ();
-            teeOutputStream = new TeeOutputStream ( outputStream1 , outputStream2 );
-            teeInputStream = new TeeInputStream ( inputStream , teeOutputStream , true );
-            teeInputStream . read ( new byte [ SAMPLE . length ()]);
-            System . out . println ( "Output stream 1: " + outputStream1 . toString ());
-            System . out . println ( "Output stream 2: " + outputStream2 . toString ());
-        } catch ( IOException e ) {
-            System . out . println ( e . getMessage ());
+            ByteArrayInputStream inputStream = new ByteArrayInputStream(SAMPLE.getBytes("US-ASCII"));
+            ByteArrayOutputStream outputStream1 = new ByteArrayOutputStream();
+            ByteArrayOutputStream outputStream2 = new ByteArrayOutputStream();
+            teeOutputStream = new TeeOutputStream(outputStream1, outputStream2);
+            teeInputStream = new TeeInputStream(inputStream, teeOutputStream, true);
+            teeInputStream.read(new byte[SAMPLE.length()]);
+            System.out.println("Output stream 1: " + outputStream1.toString());
+            System.out.println("Output stream 2: " + outputStream2.toString());
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         } finally {
             //teeIn.close() closes teeIn and teeOut which in turn closes the out1 and out2.
             try {
-                teeInputStream . close ();
-            } catch ( IOException e ) {
-                System . out . println ( e . getMessage ());
+                teeInputStream.close();
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
             }
         }
     }
@@ -1780,18 +1639,20 @@ public class IOTester {
 
 ## 输出
 
-它将打印以下结果。
+它将打印以下结果：
 
+```
 Output stream 1: Welcome to TutorialsPoint. Simple Easy Learning.
 Output stream 2: Welcome to TutorialsPoint. Simple Easy Learning.
+```
 
-# TeeOutputStream
+# `TeeOutputStream`
 
 `TeeOutputStream` 分分 `OutputStream`。它以 unix `tee` 命令命名。它允许将流分支到两个流。
 
 ## 类声明
 
-以下是 `org.apache.commons.io.output.TeeOutputStream` 类的声明−
+以下是 `org.apache.commons.io.output.TeeOutputStream` 类的声明：
 
 ```java
 public class TeeOutputStream
@@ -1802,45 +1663,46 @@ extends ProxyOutputStream
 
 在此示例中，`TeeOutputStream` 接收两个输出流作为参数并将数据传递到两个输出流。
 
-IOTester.java
+`IOTester.java`
 
 ```java
-import java . io . ByteArrayInputStream ;
-import java . io . ByteArrayOutputStream ;
-import java . io . IOException ;
-import org . apache . commons . io . input . TeeInputStream ;
-import org . apache . commons . io . output . TeeOutputStream ;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import org.apache.commons.io.input.TeeInputStream;
+import org.apache.commons.io.output.TeeOutputStream;
 
 public class IOTester {
-    private static final String SAMPLE = "Welcome to TutorialsPoint. Simply Easy Learning." ;
-    public static void main ( String [] args ) {
+    private static final String SAMPLE = "Welcome to TutorialsPoint. Simply Easy Learning.";
+
+    public static void main(String[] args) {
         try {
-            usingTeeInputStream ();
-        } catch ( IOException e ) {
-            System . out . println ( e . getMessage ());
+            usingTeeInputStream();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 
-    public static void usingTeeInputStream () throws IOException {
-        TeeInputStream teeInputStream = null ;
-        TeeOutputStream teeOutputStream = null ;
+    public static void usingTeeInputStream() throws IOException {
+        TeeInputStream teeInputStream = null;
+        TeeOutputStream teeOutputStream = null;
         try {
-            ByteArrayInputStream inputStream = new ByteArrayInputStream ( SAMPLE . getBytes ( "US-ASCII" ));
-            ByteArrayOutputStream outputStream1 = new ByteArrayOutputStream ();
-            ByteArrayOutputStream outputStream2 = new ByteArrayOutputStream ();
-            teeOutputStream = new TeeOutputStream ( outputStream1 , outputStream2 );
-            teeInputStream = new TeeInputStream ( inputStream , teeOutputStream , true );
-            teeInputStream . read ( new byte [ SAMPLE . length ()]);
-            System . out . println ( "Output stream 1: " + outputStream1 . toString ());
-            System . out . println ( "Output stream 2: " + outputStream2 . toString ());
-        } catch ( IOException e ) {
-            System . out . println ( e . getMessage ());
+            ByteArrayInputStream inputStream = new ByteArrayInputStream(SAMPLE.getBytes("US-ASCII"));
+            ByteArrayOutputStream outputStream1 = new ByteArrayOutputStream();
+            ByteArrayOutputStream outputStream2 = new ByteArrayOutputStream();
+            teeOutputStream = new TeeOutputStream(outputStream1, outputStream2);
+            teeInputStream = new TeeInputStream(inputStream, teeOutputStream, true);
+            teeInputStream.read(new byte[SAMPLE.length()]);
+            System.out.println("Output stream 1: " + outputStream1.toString());
+            System.out.println("Output stream 2: " + outputStream2.toString());
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         } finally {
             //teeIn.close() closes teeIn and teeOut which in turn closes the out1 and out2.
             try {
-                teeInputStream . close ();
-            } catch ( IOException e ) {
-                System . out . println ( e . getMessage ());
+                teeInputStream.close();
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
             }
         }
     }

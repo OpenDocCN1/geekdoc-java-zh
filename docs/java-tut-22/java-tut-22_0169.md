@@ -1,3 +1,4 @@
+
 # 扫描和格式化
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/io/scanfor.html`](https://docs.oracle.com/javase/tutorial/essential/io/scanfor.html)

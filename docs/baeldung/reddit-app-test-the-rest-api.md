@@ -1,16 +1,17 @@
+
 # 测试 Reddit 应用程序的 API
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/reddit-app-test-the-rest-api>
 
-## 1。概述
+## 1. 概述
 
-我们已经为简单的 Reddit 应用构建了 REST API 一段时间了——是时候认真对待了，T2 开始测试它了。
+我们已经为简单的 Reddit 应用构建了 REST API 一段时间了——是时候认真对待了，开始测试它了。
 
 现在我们[终于将](/web/20220120083301/https://www.baeldung.com/reddit-app-replace-reddit-auth-with-form-based-login)切换到一个更简单的认证机制，这样做也更容易。我们将使用[强大的`rest-assured`库](https://web.archive.org/web/20220120083301/https://github.com/rest-assured/rest-assured)进行所有这些现场测试。
 
-## 2。初始设置
+## 2. 初始设置
 
-API 测试需要用户来运行；为了简化针对 API 的测试，我们将预先在应用程序引导上创建一个测试用户:
+API 测试需要用户来运行；为了简化针对 API 的测试，我们将预先在应用程序引导上创建一个测试用户：
 
 ```java
 @Component
@@ -46,11 +47,11 @@ public class Setup {
 
 注意`Setup`是一个普通的 bean，我们使用`@PostConstruct`注释来挂钩实际的设置逻辑。
 
-## 3。支持现场测试
+## 3. 支持现场测试
 
 在我们开始实际编写测试之前，**让我们首先设置一些基本的支持功能**，然后我们可以利用这些功能。
 
-我们需要诸如身份验证、URL 路径之类的东西，可能还需要一些 JSON 标记和解组功能:
+我们需要诸如身份验证、URL 路径之类的东西，可能还需要一些 JSON 标记和解组功能：
 
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -86,12 +87,13 @@ public class AbstractLiveTest {
 }
 ```
 
-我们只是定义了一些简单的助手方法和字段，以使实际测试更容易:
+我们只是定义了一些简单的助手方法和字段，以使实际测试更容易：
 
-*   `givenAuth()`:进行认证
-*   `withRequestBody()`:发送一个`Object`的 JSON 表示作为 HTTP 请求的主体
+*   `givenAuth()`：进行认证
 
-这里是我们的简单 bean—`CommonPaths`——为系统的 URL 提供了一个清晰的抽象:
+*   `withRequestBody()`：发送一个`Object`的 JSON 表示作为 HTTP 请求的主体
+
+这里是我们的简单 bean—`CommonPaths`—为系统的 URL 提供了一个清晰的抽象：
 
 ```java
 @Component
@@ -119,7 +121,7 @@ public class CommonPaths {
 }
 ```
 
-和本地版本的属性文件:`web-local.properties`:
+和本地版本的属性文件：`web-local.properties`：
 
 ```java
 http.protocol=http
@@ -128,7 +130,7 @@ http.host=localhost
 http.address=reddit-scheduler
 ```
 
-最后，非常简单的测试弹簧配置:
+最后，非常简单的测试弹簧配置：
 
 ```java
 @Configuration
@@ -141,9 +143,9 @@ public class TestConfig {
 }
 ```
 
-## 4。测试 API
+## 4. 测试 API
 
-我们要测试的第一个 API 是`/scheduledPosts` API:
+我们要测试的第一个 API 是`/scheduledPosts` API：
 
 ```java
 public class ScheduledPostLiveTest extends AbstractLiveTest {
@@ -164,7 +166,7 @@ public class ScheduledPostLiveTest extends AbstractLiveTest {
 }
 ```
 
-首先，让我们测试一下**安排一个新帖子**:
+首先，让我们测试一下**安排一个新帖子**：
 
 ```java
 @Test
@@ -185,7 +187,7 @@ public void whenScheduleANewPost_thenCreated()
 }
 ```
 
-接下来，让我们测试**检索用户的所有预定帖子**:
+接下来，让我们测试**检索用户的所有预定帖子**：
 
 ```java
 @Test
@@ -200,7 +202,7 @@ public void whenGettingUserScheduledPosts_thenCorrect()
 }
 ```
 
-接下来，让我们测试一下**编辑预定的帖子**:
+接下来，让我们测试一下**编辑预定的帖子**：
 
 ```java
 @Test
@@ -218,7 +220,7 @@ public void whenUpdatingScheduledPost_thenUpdated()
 }
 ```
 
-最后，让我们测试一下 API 中的删除操作:
+最后，让我们测试一下 API 中的删除操作：
 
 ```java
 @Test
@@ -231,9 +233,9 @@ public void whenDeletingScheduledPost_thenDeleted()
 }
 ```
 
-## 5。测试/ `sites` API
+## 5. 测试 `/sites` API
 
-接下来，让我们测试发布站点资源(由用户定义的站点)的 API:
+接下来，让我们测试发布站点资源（由用户定义的站点）的 API：
 
 ```java
 public class MySitesLiveTest extends AbstractLiveTest {
@@ -250,7 +252,7 @@ public class MySitesLiveTest extends AbstractLiveTest {
 }
 ```
 
-让我们测试**检索用户的所有站点**:
+让我们测试**检索用户的所有站点**：
 
 ```java
 @Test
@@ -264,7 +266,7 @@ public void whenGettingUserSites_thenCorrect()
 }
 ```
 
-并且还检索一个站点的文章:
+并且还检索一个站点的文章：
 
 ```java
 @Test
@@ -278,7 +280,7 @@ public void whenGettingSiteArticles_thenCorrect()
 }
 ```
 
-接下来，让我们测试一下添加新站点的**:**
+接下来，让我们测试一下添加新站点的**：
 
 ```java
 @Test
@@ -291,7 +293,9 @@ public void whenAddingNewSite_thenCorrect()
 }
 ```
 
-并且**删除**它:
+并且**删除**它：
+
+
 
 ```java
 @Test
@@ -303,11 +307,11 @@ public void whenDeletingSite_thenDeleted() throws ParseException, IOException {
 }
 ```
 
-## 6。测试`/user/preferences` API
+## 6. 测试`/user/preferences` API
 
 最后，让我们关注暴露用户偏好的 API。
 
-首先，让我们测试**获取用户偏好**:
+首先，让我们测试**获取用户偏好**：
 
 ```java
 @Test
@@ -319,14 +323,14 @@ public void whenGettingPrefernce_thenCorrect() {
 }
 ```
 
-和**编辑**它们:
+和**编辑**它们：
 
 ```java
 @Test
 public void whenUpdattingPrefernce_thenCorrect() 
   throws JsonProcessingException {
     Preference pref = givenAuth().get(urlPrefix + "/user/preference").as(Preference.class);
-    pref.setEmail("[[email protected]](/web/20220120083301/https://www.baeldung.com/cdn-cgi/l/email-protection)");
+    pref.setEmail("[[email protected]](/web/20220120083301/https://www.baeldung.com/cdn-cgi/l/email-protection)");
     Response response = withRequestBody(givenAuth(), pref).
       put(urlPrefix + "/user/preference/" + pref.getId());
 
@@ -336,7 +340,7 @@ public void whenUpdattingPrefernce_thenCorrect()
 }
 ```
 
-## 7。结论
+## 7. 结论
 
 在这篇简短的文章中，我们为 REST API 做了一些基本的测试。
 

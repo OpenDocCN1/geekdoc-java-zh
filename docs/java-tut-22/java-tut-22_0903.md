@@ -1,3 +1,5 @@
+
+
 # 调用方法
 
 > 原文：[`docs.oracle.com/javase/tutorial/reflect/member/methodInvocation.html`](https://docs.oracle.com/javase/tutorial/reflect/member/methodInvocation.html)
@@ -6,10 +8,9 @@
 
 ## 查找和调用具有特定声明的方法
 
-考虑一个测试套件，它使用反射来调用给定类中的私有测试方法。``Deet``示例搜索类中以字符串"`test`"开头，具有布尔返回类型和单个[`Locale`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html)参数的`public`方法。然后调用每个匹配的方法。
+考虑一个测试套件，它使用反射来调用给定类中的私有测试方法。`Deet`示例搜索类中以字符串"`test`"开头，具有布尔返回类型和单个[`Locale`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html)参数的`public`方法。然后调用每个匹配的方法。
 
 ```java
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Type;
@@ -74,14 +75,12 @@ public class Deet<T> {
 	}
     }
 }
-
 ```
 
 `Deet`调用[`getDeclaredMethods()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getDeclaredMethods--)，它将返回类中明确声明的所有方法。此外，使用[`Class.isAssignableFrom()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#isAssignableFrom-java.lang.Class-)来确定定位方法的参数是否与所需调用兼容。从技术上讲，代码可以测试以下语句是否为`true`，因为[`Locale`](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html)是`final`的：
 
 ```java
 Locale.class == pType[0].getClass()
-
 ```
 
 然而，[`Class.isAssignableFrom()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#isAssignableFrom-java.lang.Class-)更通用。
@@ -92,7 +91,6 @@ invoking testDeet()
 Locale = Japanese (Japan,JP), 
 ISO Language Code = jpn
 testDeet() returned true
-
 ```
 
 ```java
@@ -100,7 +98,6 @@ $ *java Deet Deet xx XX XX*
 invoking testDeet()
 invocation of testDeet failed: 
 Couldn't find 3-letter language code for xx
-
 ```
 
 首先，请注意只有`testDeet()`符合代码强制执行的声明限制。接下来，当`testDeet()`传递无效参数时，它会抛出一个未经检查的[`java.util.MissingResourceException`](https://docs.oracle.com/javase/8/docs/api/java/util/MissingResourceException.html)。在反射中，对于已检查和未检查的异常处理没有区别。它们都被包装在一个[`InvocationTargetException`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/InvocationTargetException.html)中。
@@ -109,10 +106,9 @@ Couldn't find 3-letter language code for xx
 
 [`Method.invoke()`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html#invoke-java.lang.Object-java.lang.Object...-)可用于向方法传递可变数量的参数。要理解的关键概念是，可变参数的方法被实现为如果可变参数被打包在一个数组中。
 
-``InvokeMain``示例演示了如何调用任何类中的`main()`入口点，并在运行时传递一组参数。
+`InvokeMain`示例演示了如何调用任何类中的`main()`入口点，并在运行时传递一组参数。
 
 ```java
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -139,7 +135,6 @@ public class InvokeMain {
 	}
     }
 }
-
 ```
 
 首先，为了找到`main()`方法，代码会搜索一个名为"main"的类，该类有一个参数，参数是一个[`String`](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)数组。由于`main()`是`static`的，`null`是传递给[`Method.invoke()`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html#invoke-java.lang.Object-java.lang.Object...-)的第一个参数。第二个参数是要传递的参数数组。
@@ -151,5 +146,5 @@ invoking testDeet()
 Locale = Japanese (Japan,JP), 
 ISO Language Code = jpn
 testDeet() returned true
-
 ```
+

@@ -1,3 +1,4 @@
+
 # Lesson: 编写 JavaBeans 组件
 
 > 原文：[`docs.oracle.com/javase/tutorial/javabeans/writing/index.html`](https://docs.oracle.com/javase/tutorial/javabeans/writing/index.html)

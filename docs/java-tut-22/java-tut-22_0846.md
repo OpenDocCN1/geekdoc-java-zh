@@ -1,3 +1,4 @@
+
 # 课程：文件交换
 
 > 原文：[`docs.oracle.com/javase/tutorial/security/toolfilex/index.html`](https://docs.oracle.com/javase/tutorial/security/toolfilex/index.html)
@@ -12,11 +13,11 @@
 
 有关数字签名、证书、密钥库和工具的更多信息，请参阅用于安全代码和文件交换的 API 和工具使用课程。
 
-* * *
+---
 
 **注意：**本课程假设您从同一目录中执行所有命令。
 
-* * *
+---
 
 以下是步骤：
 

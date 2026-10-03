@@ -1,3 +1,4 @@
+
 # 2023 年 DVA 001/02 考试的 5 门最佳 AWS 认证开发人员助理在线课程和练习测试
 
 > 原文：<https://medium.com/javarevisited/top-5-online-courses-to-become-aws-certified-developer-associate-in-2020-best-of-lot-9b22baf84ca8?source=collection_archive---------0----------------------->
@@ -6,7 +7,7 @@
 
 大家好，你可能听说过 AWS 认证，如果你，作为一名[程序员](https://javarevisited.blogspot.com/2017/12/10-things-java-programmers-should-learn.html#axzz5atl0BngO)、[软件开发人员](https://javarevisited.blogspot.com/2019/01/10-things-every-programmer-and-software-engineer-should-know.html)或 [DevOps 工程师](https://javarevisited.blogspot.com/2018/09/the-2018-devops-roadmap-your-guide-to-become-DevOps-Engineer.html)，想知道在 2023 年追求哪种认证，我会建议去亚马逊网络服务的 **AWS 开发人员助理认证**。
 
-AWS Certified Developer-Associate 考试面向拥有一年或一年以上开发和维护基于 AWS 的应用程序实践经验的软件开发人员和程序员。
+`AWS Certified Developer-Associate`考试面向拥有一年或一年以上开发和维护基于 AWS 的应用程序实践经验的软件开发人员和程序员。
 
 由于软件开发的未来在云中，软件开发人员获得云开发技能认证是有意义的，鉴于 AWS 是最受欢迎和最大的云平台，获得 AWS 开发人员助理认证是有意义的。
 
@@ -18,7 +19,7 @@ AWS Certified Developer-Associate 考试面向拥有一年或一年以上开发�
 
 在这篇文章中，我将分享最好的 **AWS 培训课程**来破解 AWS 开发人员助理考试和一些练习测试，以提高你的技能，在考试中取得高分。
 
-# 什么是 AWS 认证开发人员助理考试-DVA-C01？
+## 什么是 AWS 认证开发人员助理考试-DVA-C01？
 
 **AWS 认证开发人员助理认证**专注于执行初级开发任务的个人。你可以在这里找到考试蓝图。概括地说，认证分为四个不同的领域:
 
@@ -33,7 +34,7 @@ AWS Certified Developer-Associate 考试面向拥有一年或一年以上开发�
 
 [![](img/4d0217927b381c8e8dc2ce9916af834a.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faws-certified-developer-associate-dva-c01%2F)
 
-# 2023 年通过 AWS 认证开发人员考试的 5 门最佳在线课程
+## 2023 年通过 AWS 认证开发人员考试的 5 门最佳在线课程
 
 为了通过这次考试，你必须学习各种各样的基本 AWS 服务，如虚拟私有云、 [EC2 实例](https://javarevisited.blogspot.com/2020/08/top-5-courses-to-learn-amazon-aws-ec-2.html)、 [DynamoDB](https://www.java67.com/2020/08/top-5-courses-to-learn-aws-s3-and-dynamoDB-in-depth.html) 和 RDS 数据库。你还应该知道如何用 Route 53 设置域名，用 Kinesis 和 SQS 发送消息，以及自动扩展 EC2 应用程序。这些[在线 AWS 培训课程](https://javarevisited.blogspot.com/2020/05/top-5-amazon-web-services-aws-courses-for-beginners-and-experienced-programmers.html)将帮助你。我精心挑选了这些课程，让你有一个全方位的准备。
 
@@ -41,7 +42,7 @@ AWS Certified Developer-Associate 考试面向拥有一年或一年以上开发�
 
 无论如何，不浪费你更多的时间，这里是我列出的通过 *AWS 认证开发者考试*的一些最好的课程:
 
-## 1.【2023 年终极 AWS 认证开发人员助理—全新！
+### 1.【2023 年终极 AWS 认证开发人员助理—全新！
 
 为了成功通过 AWS 认证，你需要一门好的课程和一次好的实践测试，谢天谢地 Stpehance Maarek 在 Udemy 上提供了这两样东西。
 
@@ -59,7 +60,7 @@ AWS Certified Developer-Associate 考试面向拥有一年或一年以上开发�
 
 超过 **131，152 名学生**注册了本课程，近 24，500 名参与者对本课程的平均评分为 4.7，这是一个巨大的数字，充分说明了本课程的质量。我向所有准备参加 2023 年 AWS 开发者助理考试的人强烈推荐这门课程。
 
-## 2. [AWS 认证开发者助理考试培训 DVA-C01](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faws-certified-developer-associate-exam-training%2F)
+### 2. [AWS 认证开发者助理考试培训 DVA-C01](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faws-certified-developer-associate-exam-training%2F)
 
 如果您没有在 AWS 控制台工作过，通过 AWS 认证并不容易，特别是 AWS 认证开发人员，因为它需要大量的实践知识来回答基于场景的问题，但这正是本课程的帮助所在。这是一门完整的实践课程，旨在帮助您为 AWS 开发人员助理认证做好准备。毫无疑问，考试很难，所有的问题都是基于场景的。无论你是否熟悉云，这个课程都会给你一个很好的起点，但是对于认证，你需要超越。多多练习。
 
@@ -73,7 +74,7 @@ AWS Certified Developer-Associate 考试面向拥有一年或一年以上开发�
 
 如果您是 AWS 初学者或有一些 AWS 经验，但希望通过 AWS 开发人员助理认证，那么本 AWS 在线课程适合您
 
-## 3.[【实践考试】AWS 认证开发者助理 2023](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Faws-certified-developer-associate-practice-tests-dva-c01%2F)
+### 3.【实践考试】AWS 认证开发者助理 2023
 
 实践测试对于通过任何技术认证都至关重要，云认证也不例外。如果你想通过 AWS 认证开发人员助理考试(DVA-C01 )，那么你必须在正式考试前练习一些模拟测试。这对于考试前检查自己的速度和准确性很重要。
 
@@ -93,7 +94,7 @@ AWS Certified Developer-Associate 考试面向拥有一年或一年以上开发�
 
 转储是在真实考试中问的真实问题，由必须参加考试的考生提供。这些是众包的问题，让你对真正考试的难度水平和题型有一个大致的了解。
 
-## 4. [AWS 开发者:瑞恩·刘易斯入门](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Faws-developer-getting-started)
+### 4. [AWS 开发者:瑞恩·刘易斯入门](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Faws-developer-getting-started)
 
 对于准备参加 Pluralsight 上的 AWS 开发人员认证助理考试的人来说，这是另一门精彩的课程。它是 Pluralsight 上的 AWS 认证途径的几个课程的一部分，可以通过单一成员访问。
 
@@ -102,6 +103,8 @@ AWS Certified Developer-Associate 考试面向拥有一年或一年以上开发�
 学完本课程后，您将拥有使用 AWS 服务的真实经验，这些服务将在您开发自己的应用程序时为您提供帮助。
 
 如果您拥有 [Pluralsight 会员资格](https://javarevisited.blogspot.com/2017/12/top-10-pluralsight-courses-java-and-web-developers.html)，那么您应该通过本课程对准备参加 AWS 开发人员助理考试的人员有一个大致的了解。
+
+
 
 **以下是参加本课程的链接** — [AWS 开发者:瑞恩·刘易斯入门](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Faws-developer-getting-started)
 
@@ -113,9 +116,9 @@ AWS Certified Developer-Associate 考试面向拥有一年或一年以上开发�
 
 由瑞恩·刘易斯创建，在本课程中，您将学习 AWS 中的一些现代创新，如无服务器应用程序和应用程序监控。
 
-首先，您将了解如何使用 Lambda、API Gateway 和 Kinesis 等技术正确构建应用程序，以创建真正的无服务器应用程序。
+首先，您将了解如何使用 `Lambda`、`API Gateway` 和 `Kinesis` 等技术正确构建应用程序，以创建真正的无服务器应用程序。
 
-之后，你会发现 AWS X-Ray 中创造的一种新的监控技术，可以让你在 [AWS](/javarevisited/top-10-courses-to-learn-amazon-web-services-aws-cloud-in-2020-best-and-free-317f10d7c21d) 中监控所有类型的应用。最后，您将了解如何在 AWS 中使用 X 射线和 CloudWatch 警报来配置对应用程序的监控。
+之后，你会发现 `AWS X-Ray` 中创造的一种新的监控技术，可以让你在 [AWS](/javarevisited/top-10-courses-to-learn-amazon-web-services-aws-cloud-in-2020-best-and-free-317f10d7c21d) 中监控所有类型的应用。最后，您将了解如何在 AWS 中使用 X 射线和 `CloudWatch` 警报来配置对应用程序的监控。
 
 完成本课程后，您将掌握如何在 AWS 中创建无服务器应用程序的知识，并能够使用 X 射线监控任何类型的应用程序。
 
@@ -127,7 +130,7 @@ AWS Certified Developer-Associate 考试面向拥有一年或一年以上开发�
 
 它包含一些**最佳质量的 AWS 培训材料，**不仅仅是针对该考试，还包括其他 AWS 认证，如云从业者和解决方案架构师。如果你渴望今年获得这些认证，那么这个会员资格会非常有用。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn>
 
 以上是关于通过 AWS 认证开发人员考试的一些**最佳课程。正如我所说的，这是最具实践经验的 AWS 认证，你需要做大量的准备来破解它。**
 
@@ -154,6 +157,6 @@ AWS Certified Developer-Associate 考试面向拥有一年或一年以上开发�
 
 感谢您阅读本文。如果您发现这些课程对通过 AWS 认证开发人员考试很有用，请与您的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
-**P. S. —** 如果你是 AWS 新手，正在寻找免费的在线培训课程来学习亚马逊网络服务(AWS)的核心服务，如 IAM、EC2、S3、VPC、RDS、SNS etch，那么[**AWS Essentials**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flinux-academy-aws-essentials-2019%2F)—Linux academy 的一门*免费课程*是一个很好的开始。这是完全免费的，你需要做的就是创建一个免费的 Udemy 帐户来学习这门课程。
+**P. S. —** 如果你是 AWS 新手，正在寻找免费的在线培训课程来学习亚马逊网络服务(AWS)的核心服务，如 `IAM`、`EC2`、`S3`、`VPC`、`RDS`、`SNS` etch，那么[**AWS Essentials**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flinux-academy-aws-essentials-2019%2F)—Linux academy 的一门*免费课程*是一个很好的开始。这是完全免费的，你需要做的就是创建一个免费的 Udemy 帐户来学习这门课程。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flinux-academy-aws-essentials-2019%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flinux-academy-aws-essentials-2019%2F>

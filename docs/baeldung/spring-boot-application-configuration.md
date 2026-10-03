@@ -1,41 +1,43 @@
+
+
 # 配置 Spring Boot Web 应用程序
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-boot-application-configuration>
 
-## 1。概述
+## 1. 概述
 
 Spring Boot 可以做很多事情；在本教程中，我们将讨论一些更有趣的启动配置选项。
 
-## 延伸阅读:
+## 延伸阅读
 
-## [从春天迁徙到 Spring Boot](/web/20220812053707/https://www.baeldung.com/spring-boot-migration)
+### [从春天迁徙到 Spring Boot](/web/20220812053707/https://www.baeldung.com/spring-boot-migration)
 
 看看如何恰当地从春天迁徙到 Spring Boot。[阅读更多](/web/20220812053707/https://www.baeldung.com/spring-boot-migration) →
 
-## [用 Spring Boot](/web/20220812053707/https://www.baeldung.com/spring-boot-custom-starter)
+### [用 Spring Boot](/web/20220812053707/https://www.baeldung.com/spring-boot-custom-starter)
 
-创建自定义 Spring Boot 启动器的快速实用指南。[了解更多](/web/20220812053707/https://www.baeldung.com/spring-boot-custom-starter)→
+创建自定义 Spring Boot 启动器的快速实用指南。[了解更多](/web/20220812053707/https://www.baeldung.com/spring-boot-custom-starter) →
 
-## [Spring Boot 测试](/web/20220812053707/https://www.baeldung.com/spring-boot-testing)
+### [Spring Boot 测试](/web/20220812053707/https://www.baeldung.com/spring-boot-testing)
 
 了解 Spring Boot 如何支持测试，以高效地编写单元测试。[阅读更多](/web/20220812053707/https://www.baeldung.com/spring-boot-testing) →
 
-## 2。端口号
+## 2. 端口号
 
-在主独立应用中，主 HTTP 端口默认为 8080；**我们可以轻松地配置 Boot 来使用不同的端口**:
+在主独立应用中，主 HTTP 端口默认为 8080；我们可以轻松地配置 Boot 来使用不同的端口：
 
 ```java
 server.port=8083
 ```
 
-对于基于 YAML 的配置:
+对于基于 YAML 的配置：
 
 ```java
 server:
     port: 8083
 ```
 
-我们还可以通过编程定制服务器端口:
+我们还可以通过编程定制服务器端口：
 
 ```java
 @Component
@@ -49,15 +51,15 @@ public class CustomizationBean implements
 }
 ```
 
-## 3。上下文路径
+## 3. 上下文路径
 
-默认情况下，上下文路径是“/”。如果这不理想，您需要将其更改为/ `app_name`之类的内容，下面是通过属性进行更改的快速而简单的方法:
+默认情况下，上下文路径是“/”。如果这不理想，您需要将其更改为`/app_name`之类的内容，下面是通过属性进行更改的快速而简单的方法：
 
 ```java
 server.servlet.contextPath=/springbootapp
 ```
 
-对于基于 YAML 的配置:
+对于基于 YAML 的配置：
 
 ```java
 server:
@@ -65,7 +67,7 @@ server:
         contextPath:/springbootapp
 ```
 
-最后，更改也可以通过编程来完成:
+最后，更改也可以通过编程来完成：
 
 ```java
 @Component
@@ -79,11 +81,11 @@ public class CustomizationBean
 }
 ```
 
-## 4。白色标签错误页面
+## 4. 白色标签错误页面
 
-如果您没有在配置中指定任何自定义实现，Spring Boot 会自动注册一个``BasicErrorController`` bean。
+如果您没有在配置中指定任何自定义实现，Spring Boot 会自动注册一个`BasicErrorController` bean。
 
-然而，这个默认控制器当然可以配置为:
+然而，这个默认控制器当然可以配置为：
 
 ```java
 public class MyCustomErrorController implements ErrorController {
@@ -97,11 +99,11 @@ public class MyCustomErrorController implements ErrorController {
 }
 ```
 
-## 5。自定义错误消息
+## 5. 自定义错误消息
 
-默认情况下，Boot 提供了`/error` 映射，以合理的方式处理错误。
+默认情况下，Boot 提供了`/error`映射，以合理的方式处理错误。
 
-如果您想配置更具体的错误页面，可以使用统一的 Java DSL 来定制错误处理:
+如果您想配置更具体的错误页面，可以使用统一的 Java DSL 来定制错误处理：
 
 ```java
 @Component
@@ -118,7 +120,7 @@ public class CustomizationBean
 
 这里，我们专门处理了`Bad Request`来匹配`/400`路径，并处理了所有其他的来匹配公共路径。
 
-一个非常简单的`/errorHaven`实现:
+一个非常简单的`/errorHaven`实现：
 
 ```java
 @GetMapping("/errorHaven")
@@ -127,15 +129,15 @@ String errorHeaven() {
 }
 ```
 
-输出:
+输出：
 
 ```java
 You have reached the haven of errors!!!
 ```
 
-## 6。以编程方式关闭启动应用程序
+## 6. 以编程方式关闭启动应用程序
 
-你可以在`SpringApplication.` 的帮助下以编程的方式关闭一个引导应用程序。这有一个静态的`exit()` 方法，它有两个参数:`ApplicationContext` 和`ExitCodeGenerator`:
+你可以在`SpringApplication`的帮助下以编程的方式关闭一个引导应用程序。这有一个静态的`exit()`方法，它有两个参数：`ApplicationContext`和`ExitCodeGenerator`：
 
 ```java
 @Autowired
@@ -146,20 +148,20 @@ public void shutDown(ExecutorServiceExitCodeGenerator exitCodeGenerator) {
 
 就是通过这个实用方法，我们可以关闭 app。
 
-## 7。配置日志记录级别
+## 7. 配置日志记录级别
 
-您可以轻松地**调整引导应用程序**中的日志记录级别；从版本 1.2.0 开始，您可以在主属性文件中配置日志级别:
+您可以轻松地调整引导应用程序中的日志记录级别；从版本 1.2.0 开始，您可以在主属性文件中配置日志级别：
 
 ```java
 logging.level.org.springframework.web: DEBUG
 logging.level.org.hibernate: ERROR
 ```
 
-就像标准的 Spring 应用程序一样，您可以通过在类路径中添加定制的 XML 或属性文件并在 pom 中定义库来激活不同的日志系统，如`Logback`、`log4j`、`log4j2`等。
+就像标准的 Spring 应用程序一样，您可以通过在类路径中添加定制的 XML 或属性文件并在`pom`中定义库来激活不同的日志系统，如`Logback`、`log4j`、`log4j2`等。
 
-## 8。注册一个新的 Servlet
+## 8. 注册一个新的 Servlet
 
-如果您在嵌入式服务器的帮助下部署应用程序，您可以在引导应用程序**中注册新的 Servlets，方法是将它们作为 bean**从传统配置中公开:
+如果您在嵌入式服务器的帮助下部署应用程序，您可以在引导应用程序中注册新的 Servlets，方法是将它们作为 bean 从传统配置中公开：
 
 ```java
 @Bean
@@ -168,7 +170,7 @@ public HelloWorldServlet helloWorld() {
 }
 ```
 
-或者，您可以使用`ServletRegistrationBean**:**` 
+或者，您可以使用`ServletRegistrationBean`：
 
 ```java
 @Bean
@@ -182,13 +184,13 @@ public SpringHelloServletRegistrationBean servletRegistrationBean() {
 }
 ```
 
-## 9。在启动应用程序中配置 Jetty 或 under flow
+## 9. 在启动应用程序中配置 Jetty 或 Undertow
 
-Spring Boot 初学者通常使用 **Tomcat 作为默认的嵌入式服务器**。如果需要更改，您可以排除 Tomcat 依赖项，而包含 Jetty 或 Undertow:
+Spring Boot 初学者通常使用 Tomcat 作为默认的嵌入式服务器。如果需要更改，您可以排除 Tomcat 依赖项，而包含 Jetty 或 Undertow。
 
-**配置码头**
+### 配置 Jetty
 
-```java
+```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-web</artifactId>
@@ -207,8 +209,8 @@ Spring Boot 初学者通常使用 **Tomcat 作为默认的嵌入式服务器**�
 
 ```java
 @Bean
-public JettyEmbeddedServletContainerFactory  jettyEmbeddedServletContainerFactory() {
-    JettyEmbeddedServletContainerFactory jettyContainer = 
+public JettyEmbeddedServletContainerFactory jettyEmbeddedServletContainerFactory() {
+    JettyEmbeddedServletContainerFactory jettyContainer =
       new JettyEmbeddedServletContainerFactory();
 
     jettyContainer.setPort(9000);
@@ -217,9 +219,9 @@ public JettyEmbeddedServletContainerFactory  jettyEmbeddedServletContainerFactor
 }
 ```
 
-**配置逆流**
+### 配置 Undertow
 
-```java
+```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-web</artifactId>
@@ -239,7 +241,7 @@ public JettyEmbeddedServletContainerFactory  jettyEmbeddedServletContainerFactor
 ```java
 @Bean
 public UndertowEmbeddedServletContainerFactory embeddedServletContainerFactory() {
-    UndertowEmbeddedServletContainerFactory factory = 
+    UndertowEmbeddedServletContainerFactory factory =
       new UndertowEmbeddedServletContainerFactory();
 
     factory.addBuilderCustomizers(new UndertowBuilderCustomizer() {
@@ -253,10 +255,11 @@ public UndertowEmbeddedServletContainerFactory embeddedServletContainerFactory()
 }
 ```
 
-## 10。结论
+## 10. 结论
 
 在这篇简短的文章中，我们回顾了一些更加有趣和有用的 Spring Boot 配置选项。
 
 当然，在参考文档中有很多很多选项可以根据您的需要配置和调整引导应用程序——这些只是我发现的一些更有用的选项。
 
 本文中使用的代码可以在我们的 Github 知识库中找到。
+

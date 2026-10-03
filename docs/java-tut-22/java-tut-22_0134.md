@@ -1,3 +1,4 @@
+
 # 类型擦除和桥接方法的影响
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/generics/bridgeMethods.html`](https://docs.oracle.com/javase/tutorial/java/generics/bridgeMethods.html)
@@ -27,7 +28,6 @@ public class MyNode extends Node<Integer> {
         super.setData(data);
     }
 }
-
 ```
 
 考虑以下代码：
@@ -36,8 +36,7 @@ public class MyNode extends Node<Integer> {
 MyNode mn = new MyNode(5);
 Node n = mn;            // A raw type - compiler throws an unchecked warning
 n.setData("Hello");     // Causes a ClassCastException to be thrown.
-Integer x = mn.data;    
-
+Integer x = mn.data;
 ```
 
 经过类型擦除后，这段代码变成：
@@ -50,17 +49,16 @@ Node n = mn;            // A raw type - compiler throws an unchecked warning
                         // However, the compiler doesn't generate a cast because
                         // it isn't required.
 n.setData("Hello");     // Causes a ClassCastException to be thrown.
-Integer x = (Integer)mn.data; 
-
+Integer x = (Integer)mn.data;
 ```
 
-下一节将解释为什么在 `n.setData("Hello");` 语句处抛出 `ClassCastException`。
+下一节将解释为什么在`n.setData("Hello");`语句处抛出`ClassCastException`。
 
 ## 桥接方法
 
 当编译一个继承参数化类或实现参数化接口的类或接口时，编译器可能需要创建一个合成方法，称为桥接方法，作为类型擦除过程的一部分。通常情况下，你不需要担心桥接方法，但如果在堆栈跟踪中出现一个，你可能会感到困惑。
 
-经过类型擦除后，`Node` 和 `MyNode` 类变成：
+经过类型擦除后，`Node`和`MyNode`类变成：
 
 ```java
 public class Node {
@@ -84,14 +82,13 @@ public class MyNode extends Node {
         super.setData(data);
     }
 }
-
 ```
 
-经过类型擦除后，方法签名不匹配；`Node.setData(T)` 方法变成了 `Node.setData(Object)`。因此，`MyNode.setData(Integer)` 方法不会覆盖 `Node.setData(Object)` 方法。
+经过类型擦除后，方法签名不匹配；`Node.setData(T)`方法变成了`Node.setData(Object)`。因此，`MyNode.setData(Integer)`方法不会覆盖`Node.setData(Object)`方法。
 
 为了解决这个问题并在类型擦除后保留泛型类型的多态性，Java 编译器生成一个桥接方法来确保子类型化按预期工作。
 
-对于 `MyNode` 类，编译器为 `setData` 生成了以下桥接方法：
+对于`MyNode`类，编译器为`setData`生成了以下桥接方法：
 
 ```java
 class MyNode extends Node {
@@ -109,7 +106,6 @@ class MyNode extends Node {
 
     // ...
 }
-
 ```
 
-桥接方法 `MyNode.setData(object)` 委托给原始的 `MyNode.setData(Integer)` 方法。因此，`n.setData("Hello");` 语句调用了 `MyNode.setData(Object)` 方法，由于 `"Hello"` 无法转换为 `Integer`，导致抛出 `ClassCastException`。
+桥接方法`MyNode.setData(object)`委托给原始的`MyNode.setData(Integer)`方法。因此，`n.setData("Hello");`语句调用了`MyNode.setData(Object)`方法，由于`"Hello"`无法转换为`Integer`，导致抛出`ClassCastException`。

@@ -1,3 +1,4 @@
+
 # 本地类
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html`](https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html)
@@ -7,11 +8,8 @@
 本节涵盖以下主题：
 
 +   声明本地类
-
 +   访问封闭类的成员
-
     +   遮蔽和本地类
-
 +   本地类类似于内部类
 
 ## 声明本地类
@@ -21,7 +19,6 @@
 以下示例，`LocalClassExample`，验证两个电话号码。它在方法`validatePhoneNumber`中定义了本地类`PhoneNumber`：
 
 ```java
-
 public class LocalClassExample {
 
     static String regularExpression = "[⁰-9]";
@@ -83,7 +80,6 @@ public class LocalClassExample {
         validatePhoneNumber("123-456-7890", "456-7890");
     }
 }
-
 ```
 
 该示例通过首先从电话号码中删除除数字 0 到 9 之外的所有字符来验证电话号码。然后，它检查电话号码是否恰好包含十个数字（北美电话号码的长度）。该示例打印如下内容：

@@ -1,3 +1,4 @@
+
 # 格拉尔和 C2 谁跑得更快？
 
 > 原文：<https://medium.com/javarevisited/graal-vs-c2-who-runs-kotlin-faster-82f03f1b11dd?source=collection_archive---------1----------------------->
@@ -18,15 +19,15 @@
 
 ## 快速介绍
 
-因为 Java 1.3 HotSpot 包含了两个即时编译器:一个非常快速的叫做 **C1** ，另一个缓慢但是生产更优化的代码叫做 **C2** 。JVM 使用 C1 来快速启动，而 C2 在稍后用于提高性能。
+因为 Java 1.3 HotSpot 包含了两个即时编译器:一个非常快速的叫做 `C1` ，另一个缓慢但是生产更优化的代码叫做 `C2` 。JVM 使用 `C1` 来快速启动，而 `C2` 在稍后用于提高性能。
 
-Graal 是用 Java 编写的 JVM 字节码的新编译器。它使用 Java9 中引入的 JVMCICompiler 接口。它可以以 JIT 或提前模式运行，以生成本机应用程序。
+Graal 是用 Java 编写的 JVM 字节码的新编译器。它使用 Java9 中引入的 `JVMCICompiler` 接口。它可以以 JIT 或提前模式运行，以生成本机应用程序。
 
 [**GraalVM**](https://www.graalvm.org/) 是对使用 Graal 编译器和其他相关技术(如块菌、基质)的标准 JDK 的完全替代。
 
 那么我们怎样才能给 Graal 一个机会呢？从 Java 10 开始，你可以简单地使用两个 VM 选项`-XX:+UnlockExperimentalVMOptions -XX:+UseJVMCICompiler`在任何 JDK 上激活 Graal 编译器。不幸的是，JDK 中包含的 Graal 编译器并不总是最新的版本，所以更好的解决方案是切换到 GraalVM 作为 JDK。
 
-如果你已经安装了 SdkMa n，你只需要三个命令:
+如果你已经安装了 SdkMan，你只需要三个命令:
 
 ```
 sdk list java
@@ -58,37 +59,37 @@ Mandelbrot 集合可能是最著名的分形形状，即使你不知道它的名
 让我们开始看看 Mandelbrot 集合的代码。下面是表示复数的类型的定义:
 
 ```
-**data class** Complex(**val r**: Double, **val i**: Double){
-    **operator fun** times(other: Complex) =
+data class Complex(val r: Double, val i: Double){
+    operator fun times(other: Complex) =
         Complex(
-            r = **this**.**r** * other.**r** - **this**.**i** * other.**i**,
-            i = **this**.**i** * other.**r** + **this**.**r** * other.**i** )
-    **operator fun** plus(other: Complex) =
-        Complex(r = **this**.**r** + other.**r**, i = **this**.**i** + other.**i**)
-    **operator fun** minus(other: Complex) =
-        Complex(r = **this**.**r** - other.**r**, i = **this**.**i** - other.**i**)
-    **fun** squared() = **this** * **this
-    fun** squaredModule() = **r** * **r** + **i** * **i
-    fun** Double.toComplex() = Complex(r=**this**, i=0.0)
+            r = this.r * other.r - this.i * other.i,
+            i = this.i * other.r + this.r * other.i )
+    operator fun plus(other: Complex) =
+        Complex(r = this.r + other.r, i = this.i + other.i)
+    operator fun minus(other: Complex) =
+        Complex(r = this.r - other.r, i = this.i - other.i)
+    fun squared() = this * this
+    fun squaredModule() = r * r + i * i
+    fun Double.toComplex() = Complex(r=this, i=0.0)
 }
 ```
 
 然后对集合中的每个点进行实际计算:
 
 ```
-**fun** mandelSet(initZ: Complex, c:Complex, maxIter: Int): Int {
-    **var** z = initZ
-    (1..maxIter).*forEach***{** z = z.squared() + c
-        **if** (z.squaredModule() >= 4)
-            **return it
+fun mandelSet(initZ: Complex, c:Complex, maxIter: Int): Int {
+    var z = initZ
+    (1..maxIter).forEach{ z = z.squared() + c
+        if (z.squaredModule() >= 4)
+            return it
     }
-    return** maxIter
+    return maxIter
 }
 ```
 
 您可以在这里看到使用运算符重载和数据类来表示复数是如何真正简化代码并使其更容易理解的。
 
-一旦我们在 Complex 类中定义了对复数进行运算的规则，mandelSet 函数只需检查运算 z
+一旦我们在 `Complex` 类中定义了对复数进行运算的规则，`mandelSet` 函数只需检查运算 z
 
 在 AsciiArt 中呈现的输出中，您可以看到 Mandelbrot 集的典型心形:
 
@@ -162,44 +163,55 @@ typealias Memoizer = MutableMap<String, Int>fun priceAddingElement(memo: Memoize
 这是定义一个模数及其运算的类。请注意，在模代数中，除法[很成问题](https://www.doc.ic.ac.uk/~mrh/330tutor/ch03.html)，我使用了一种强力方法作为捷径:
 
 ```
-**data class** ModularNumber***(*val num**: Int, **val modulo**: Int***)***: Comparable<ModularNumber>  ***{* override fun** compareTo***(***other: ModularNumber***)***: Int = **num**.compareTo***(***other.**num*)* operator fun** plus***(***other: ModularNumber***)*** = ***(*num** + other.**num*)***.*toModularNumber*()
-    **operator fun** minus***(***other: ModularNumber***)*** = ***(*num** - other.**num*)***.*toModularNumber*()
-    **operator fun** times***(***other: ModularNumber***)*** = ***(*num** * other.**num*)***.*toModularNumber*()
-    **operator fun** div***(***other: ModularNumber***)*** = ***((***1..**modulo*)***.*first* **{ *(*it** * other.**num*)*** % **modulo** == ***(*this**.**num** % **modulo*)* }*)***.*toModularNumber*()
-    **operator fun** inc() = ***(*num** + 1***)***.*toModularNumber*()
+data class ModularNumber(val num: Int, val modulo: Int): Comparable<ModularNumber>  {
+    override fun compareTo(other: ModularNumber): Int = num.compareTo(other.num)
+    operator fun plus(other: ModularNumber) = (num + other.num).toModularNumber()
+    operator fun minus(other: ModularNumber) = (num - other.num).toModularNumber()
+    operator fun times(other: ModularNumber) = (num * other.num).toModularNumber()
+    operator fun div(other: ModularNumber) = ((1..modulo).first { (it * other.num) % modulo == (this.num % modulo) }).toModularNumber()
+    operator fun inc() = (num + 1).toModularNumber()
 
-    **fun** squared() = ***(*num*****num*)***.*toModularNumber*()
+    fun squared() = (num*num).toModularNumber()
 
-    **fun** Int.toModularNumber(): ModularNumber =
-        ModularNumber***(*this** % **modulo**, **modulo*)
+    fun Int.toModularNumber(): ModularNumber =
+        ModularNumber(this % modulo, modulo)
 
-}***
+}
 ```
 
 这么迷人的代数我们能做什么？我们可以画出[好看的图案](https://maxwelldemon.com/2011/11/20/22-1-patterns-in-modular-arithmetic/)！为了得到它们，我们只需要在模代数中比较两个数的平方。
 
-```
-**data class** PlaneGrid***(*val size**: Int, **val initPredicate**: ***(***Int***)*** -> Boolean***) {* private val grid** = BooleanArray***(*size*****size**, **initPredicate*)* operator fun** get***(***x: Int, y: Int***)***: Boolean = **grid**[coord***(***x,y***)***]
 
-    **private fun** coord***(***x: Int, y: Int***)*** = ***(***y-1***)*** * **size** + x -1
 
-    **fun** count(): Int = **grid**.*count* **{it}
-*}* val** *compareSquares*: ***(***ModularNumber, ModularNumber***)*** -> Boolean =
-    **{** x, y **->** x.squared() >= y.squared() **}
+`data class PlaneGrid(val size: Int, val initPredicate: (Int) -> Boolean) {`
+`private val grid = BooleanArray(size * size, initPredicate)`
+`operator fun get(x: Int, y: Int): Boolean = grid[coord(x, y)]`
 
-fun** compareSquares***(***size: Int, modulo: Int***)***: Int =
-    ModularField***(***modulo***)***.applyFunction***(****compareSquares****)(***size***)***.count()
+`private fun coord(x: Int, y: Int) = (y - 1) * size + x - 1`
 
-**fun** sumOfFunction***(***from: Int, to: Int, f: ***(***Int***)*** -> Int***)*** =
-    ***(***from..to***)*** .*map* **{** f***(*it*)* }** .*sum*()**data class** ModularField***(*val modulo**: Int***) {*** **fun** applyFunction***(***f: ***(***ModularNumber, ModularNumber***)*** -> Boolean***)***:    ***(***Int***)*** -> PlaneGrid =
-        **{** size **->** PlaneGrid***(***size***)* {** index **->
-                val** xMod = ***(***index % size***)***.*toModularNumber*()
-                **val** yMod = ***(***index / size***)***.*toModularNumber*()
-                f***(***xMod, yMod***)* }
-        }** **fun** Int.toModularNumber(): ModularNumber =
-        ModularNumber***(*this** % **modulo**, **modulo*)
-}***
-```
+`fun count(): Int = grid.count { it }`
+`}`
+
+`val compareSquares: (ModularNumber, ModularNumber) -> Boolean =`
+`{ x, y -> x.squared() >= y.squared() }`
+
+`fun compareSquares(size: Int, modulo: Int): Int =`
+`ModularField(modulo).applyFunction(compareSquares)(size).count()`
+
+`fun sumOfFunction(from: Int, to: Int, f: (Int) -> Int) =`
+`(from..to).map { f(it) }.sum()`
+
+`data class ModularField(val modulo: Int) {`
+`fun applyFunction(f: (ModularNumber, ModularNumber) -> Boolean): (Int) -> PlaneGrid =`
+`{ size -> PlaneGrid(size) { index ->`
+`val xMod = (index % size).toModularNumber()`
+`val yMod = (index / size).toModularNumber()`
+`f(xMod, yMod) }`
+`}`
+
+`fun Int.toModularNumber(): ModularNumber =`
+`ModularNumber(this % modulo, modulo)`
+`}`
 
 这些是由上述函数生成的模块化模式的一些示例:
 
@@ -235,7 +247,7 @@ Modulo 5              Modulo 15            Modulo 12
 
 现在谈谈测试方法:所有测试都是在我的笔记本电脑上进行的，i7 4.4Ghz，32Gb。我用不同的参数运行了几次测试，结果是一致的。图中的实际值是在没有其他应用程序运行的同一会话中获得的。
 
-我在每个项目中运行一个名为 PerformanceTest 的测试，该测试持续执行端到端基准测试。这样，编译器无法针对特定情况优化代码。然后我选择更快的结果，假设它是没有 GC 和 OS 暂停的结果。所有测试都是单线程运行的。
+我在每个项目中运行一个名为 `PerformanceTest` 的测试，该测试持续执行端到端基准测试。这样，编译器无法针对特定情况优化代码。然后我选择更快的结果，假设它是没有 GC 和 OS 暂停的结果。所有测试都是单线程运行的。
 
 以下是多次运行的平均结果，单位为微秒:
 
@@ -253,35 +265,40 @@ Modulo 5              Modulo 15            Modulo 12
 
 进入 Java 微基准线束。JMH 是一个库，它简化了正确实现 Java 微基准的任务。JMH 是由一些 JVM 开发者创建的，用于 JVM 内部性能测试。我们可以认为这是其质量的一个很好的标志。
 
-如何使用格雷尔(和科特林)设置 JMH？你只需要编辑你的 build.gradle 文件。首先，添加依赖项:
+如何使用格雷尔(和科特林)设置 JMH？你只需要编辑你的 `build.gradle` 文件。首先，添加依赖项:
 
 ```
-testImplementation(**"org.openjdk.jmh:jmh-core:1.23"**)
-testImplementation(**"org.openjdk.jmh:jmh-generator-annprocess:1.23"**)
+testImplementation("org.openjdk.jmh:jmh-core:1.23")
+testImplementation("org.openjdk.jmh:jmh-generator-annprocess:1.23")
 ```
 
 然后，添加格雷尔·JMH 插件:
 
 ```
-plugins **{** kotlin(**"jvm"**) version **"1.3.70"** id(**"me.champeau.gradle.jmh"**) version **"0.5.0"
-}**
+plugins {
+    kotlin("jvm") version "1.3.70"
+    id("me.champeau.gradle.jmh") version "0.5.0"
+}
 ```
 
 最后，添加一个包含要设置的属性的部分。你可以在这里找到完整的名单[。](https://github.com/melix/jmh-gradle-plugin)
 
 ```
-jmh **{** jmhVersion = **"1.23"**jvmArgs = listOf(
-        **"-Xms6g"**,
-        **"-Xmx6g"**,
-        **"-Dgraal.ShowConfiguration=info"**,
-        **"-XX:+AlwaysPreTouch"**,
-        **"-XX:+UnlockExperimentalVMOptions"**,
-        **"-XX:+UseJVMCICompiler"** )
+jmh {
+    jmhVersion = "1.23"
+    jvmArgs = listOf(
+        "-Xms6g",
+        "-Xmx6g",
+        "-Dgraal.ShowConfiguration=info",
+        "-XX:+AlwaysPreTouch",
+        "-XX:+UnlockExperimentalVMOptions",
+        "-XX:+UseJVMCICompiler"
+    )
     warmupForks = 0
     fork = 2
     warmupIterations = 5
     iterations = 5
-**}**
+}
 ```
 
 ## 如何为 JMH 创建一个测试？
@@ -290,13 +307,14 @@ jmh **{** jmhVersion = **"1.23"**jvmArgs = listOf(
 
 ```
 @Benchmark
-**fun** knapsack***(***blackhole: Blackhole***) {*** blackhole.consume***(***Knapsack.selectWatches***(*shop**, 199***))
-}***
+fun knapsack(blackhole: Blackhole) {
+    blackhole.consume(Knapsack.selectWatches(shop, 199))
+}
 ```
 
 基准注释有许多可能的可选参数，默认模式是计算一秒钟的操作数，但也有许多其他可能的方法来运行测试。
 
-在这个测试中，你可以看到我们使用了`blackhole`类来防止编译器认为基准测试是“死代码”,因为我们没有对计算结果做任何事情。
+在这个测试中，你可以看到我们使用了 `blackhole` 类来防止编译器认为基准测试是“死代码”,因为我们没有对计算结果做任何事情。
 
 让我们看看结果:
 

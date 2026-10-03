@@ -1,3 +1,4 @@
+
 # 问题和练习：入门指南
 
 > 原文：[`docs.oracle.com/javase/tutorial/getStarted/QandE/questions.html`](https://docs.oracle.com/javase/tutorial/getStarted/QandE/questions.html)
@@ -21,7 +22,6 @@ d. `// 注释`
 ```java
 Exception in thread "main" java.lang.NoClassDefFoundError:
 HelloWorldApp.java.
-
 ```
 
 **问题 4**：`main`方法的正确签名是什么？

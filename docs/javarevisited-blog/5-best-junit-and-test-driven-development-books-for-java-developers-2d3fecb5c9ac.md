@@ -1,3 +1,4 @@
+
 # 面向 Java 开发人员的 5 本最佳 JUnit 和测试驱动开发书籍
 
 > 原文：<https://medium.com/javarevisited/5-best-junit-and-test-driven-development-books-for-java-developers-2d3fecb5c9ac?source=collection_archive---------0----------------------->
@@ -8,27 +9,27 @@
 
 你好，Java 程序员，如果你想学习 JUnit 和 Java 测试驱动开发，或者想提高你的 TDD 技能，并寻找最好的资源，如书籍和在线课程，那么你来对地方了。
 
-早些时候，我已经分享了 Java 开发人员的最佳 JUnit 课程</javarevisited/5-courses-to-learn-junit-and-mockito-in-2019-best-of-lot-f217d8b93688>*，在这篇文章中，我将分享你可以阅读的学习 Java 测试驱动开发的最佳书籍，以及 JUnit 和 Mockito 等基本测试工具。*
+早些时候，我已经分享了 Java 开发人员的最佳 JUnit 课程</javarevisited/5-courses-to-learn-junit-and-mockito-in-2019-best-of-lot-f217d8b93688>，在这篇文章中，我将分享你可以阅读的学习 Java 测试驱动开发的最佳书籍，以及 JUnit 和 Mockito 等基本测试工具。
 
-*如果你做过一些专业的 Java 开发，你就会知道单元测试是一件必须学会适应的事情。在我看来，这是专业开发人员最应该学习的一项实践。这也是区别优秀程序员和专业程序员的一项技能。*
+如果你做过一些专业的 Java 开发，你就会知道单元测试是一件必须学会适应的事情。在我看来，这是专业开发人员最应该学习的一项实践。这也是区别优秀程序员和专业程序员的一项技能。
 
-> *这是你可以看到一个程序员有多自律的一种方式？*
+> 这是你可以看到一个程序员有多自律的一种方式？
 
-*也是写[干净代码](/javarevisited/7-best-courses-to-learn-refactoring-and-clean-coding-in-java-47bea3c67006)的最好方法；一个经得起时间考验的代码，一个适应未来变化的灵活代码，一个在变化中不害怕的代码。*
+也是写[干净代码](/javarevisited/7-best-courses-to-learn-refactoring-and-clean-coding-in-java-47bea3c67006)的最好方法；一个经得起时间考验的代码，一个适应未来变化的灵活代码，一个在变化中不害怕的代码。
 
-*尽管编程社区做出了一些努力来促进单元测试，许多著名的程序员也强调单元测试，但它仍然是缺乏实践的*之一*。
+尽管编程社区做出了一些努力来促进单元测试，许多著名的程序员也强调单元测试，但它仍然是缺乏实践的*之一*。
 
-为了鼓励开发者去做单元测试，我尽量让它自然而不是一件特别的事情。我发现并不是程序员不想测试，或者他们没有时间，*而是因为他们并不真正知道如何对一个非平凡的代码进行单元测试。**
+为了鼓励开发者去做单元测试，我尽量让它自然而不是一件特别的事情。我发现并不是程序员不想测试，或者他们没有时间，*而是因为他们并不真正知道如何对一个非平凡的代码进行单元测试。*
 
-*对于某些人来说，为回文或[质因数程序](http://javarevisited.blogspot.sg/2014/05/how-to-find-prime-factors-of-integer-number-java.html)编写单元测试是很容易的，但是当涉及到为你正在开发的功能编写单元测试时，这些功能包括数据库连接、线程、对其他模块的依赖性以及没有明确的入口点，*程序员失去了热情和热情。既然用户或管理者不关心单元测试，程序员就不会把自己逼到他们通常会做的水平来使功能代码工作。我们如何解决这个问题？你如何开发这种代码意识来[编写单元测试](http://javarevisited.blogspot.sg/2013/03/how-to-write-unit-test-in-java-eclipse-netbeans-example-run.html#axzz569M5kyoZ)？如何将一个大的特性分解成可以独立测试的小单元？**
+对于某些人来说，为回文或[质因数程序](http://javarevisited.blogspot.sg/2014/05/how-to-find-prime-factors-of-integer-number-java.html)编写单元测试是很容易的，但是当涉及到为你正在开发的功能编写单元测试时，这些功能包括数据库连接、线程、对其他模块的依赖性以及没有明确的入口点，*程序员失去了热情和热情。既然用户或管理者不关心单元测试，程序员就不会把自己逼到他们通常会做的水平来使功能代码工作。我们如何解决这个问题？你如何开发这种代码意识来[编写单元测试](http://javarevisited.blogspot.sg/2013/03/how-to-write-unit-test-in-java-eclipse-netbeans-example-run.html#axzz569M5kyoZ)？如何将一个大的特性分解成可以独立测试的小单元？*
 
-*听起来我是在谈论*测试驱动开发(TDD)* 吗？嗯，是的。即使你没有遵循真正意义上的 TDD，它也会帮助你学会很多对你的代码进行单元测试的技巧和技术。
+听起来我是在谈论*测试驱动开发(TDD)* 吗？嗯，是的。即使你没有遵循真正意义上的 TDD，它也会帮助你学会很多对你的代码进行单元测试的技巧和技术。
 
 另一方面，这是一个高级开发人员必须大放异彩的领域；他们的工作是在下一代 Java 开发人员中推广[最佳实践](http://javarevisited.blogspot.sg/2012/08/best-practices-to-write-junit-test.html)、[代码审查](http://javarevisited.blogspot.sg/2011/09/code-review-checklist-best-practice.html)和[单元测试](http://javarevisited.blogspot.sg/2013/03/how-to-write-unit-test-in-java-eclipse-netbeans-example-run.html)。
 
-这篇文章将分享你喜欢阅读的学习单元测试、TDD 和 JUnit 的 5 本最佳书籍，这将帮助你学习单元测试并掌握编写好测试的艺术。在 Java 世界中，单元测试和 JUnit 是同义的，所以本书的大部分内容将教你使用 JUnit 进行单元测试。这很好，因为对 JUnit 如何工作以及如何使用不同的 JUnit 注释的全面了解将鼓励您编写更多的测试。如果你还需要在线课程来配合这本书，我强烈推荐你查看 Udemy 上的 [**JUnit 和 Mockito 速成班**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjunitandmockitocrashcourse%2F) 。*
+这篇文章将分享你喜欢阅读的学习单元测试、TDD 和 JUnit 的 5 本最佳书籍，这将帮助你学习单元测试并掌握编写好测试的艺术。在 Java 世界中，单元测试和 JUnit 是同义的，所以本书的大部分内容将教你使用 JUnit 进行单元测试。这很好，因为对 JUnit 如何工作以及如何使用不同的 JUnit 注释的全面了解将鼓励您编写更多的测试。如果你还需要在线课程来配合这本书，我强烈推荐你查看 Udemy 上的 [**JUnit 和 Mockito 速成班**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjunitandmockitocrashcourse%2F)。
 
-*<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjunitandmockitocrashcourse%2F>  
+<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjunitandmockitocrashcourse%2F>
 
 我发现当我们把在线课程和书本结合起来时，我们学得更好。本课程提供了快速入门和帮助设置，而本书提供了深入的知识。
 
@@ -42,23 +43,23 @@
 
 这是我读的第一本关于单元测试和 JUnit 的书，我仍然喜欢在有空的时候读它。这是一本很短的书，但不管写的是什么，都绝对是金玉良言。杰夫·朗格、安迪·亨特和迪夫·托马斯都做了出色的工作，在[介绍 JUnit](http://javarevisited.blogspot.sg/2012/06/junit4-annotations-test-examples-and.html) 之前，他们首先介绍了单元测试的概念和过程。解释流过，你觉得通过跟随本书中给出的少量例子，你正在学习一些东西。是的，这本书的例子有点少，但好的方面是每个例子都解释得很好。
 
-我还记得我从这本书上学到的**正确缩写**，它帮助你思考边界条件测试。正确代表
+我还记得我从这本书上学到的**正确缩写**，它帮助你思考边界条件测试。正确代表：
 
-1.  *一致性* —值是否符合预期的格式？
-2.  *排序* —值是否按预期顺序排列？
-3.  *范围* —数值是否在预期范围内？
-4.  *引用* —代码是否引用了不受代码本身直接控制的任何外部事物？
-5.  *存在* —价值存在吗？(null、非 null、集合中存在或不存在)
-6.  基数(Cardinality)——有足够多的值吗？
-7.  *时间*(绝对和相对)——一切都是按顺序发生的吗？在正确的时间？及时？
+1. *一致性* —值是否符合预期的格式？
+2. *排序* —值是否按预期顺序排列？
+3. *范围* —数值是否在预期范围内？
+4. *引用* —代码是否引用了不受代码本身直接控制的任何外部事物？
+5. *存在* —价值存在吗？(null、非 null、集合中存在或不存在)
+6. 基数(Cardinality)——有足够多的值吗？
+7. *时间*(绝对和相对)——一切都是按顺序发生的吗？在正确的时间？及时？
 
-这个缩写将帮助你写一个完整的边界条件测试。这本书里我喜欢的另一个缩写叫做 A-TRIP，它展示了一个好的单元测试的特性。 **A-TRIP** 代表:
+这个缩写将帮助你写一个完整的边界条件测试。这本书里我喜欢的另一个缩写叫做 A-TRIP，它展示了一个好的单元测试的特性。**A-TRIP** 代表：
 
-1.  *自动*
-2.  *彻底*
-3.  *可重复*
-4.  *独立*
-5.  *专业*
+1. *自动*
+2. *彻底*
+3. *可重复*
+4. *独立*
+5. *专业*
 
 通过阅读这本书，你将学习[如何对你的 Java 应用](http://javarevisited.blogspot.sg/2013/03/how-to-write-unit-test-in-java-eclipse-netbeans-example-run.html)进行单元测试，如何编写一个好的测试，测试什么，边界条件，处理设计问题以使你的代码更易测试，以及测试陷阱，比如随机失败/通过测试，测试在一台机器上工作但在其他机器上不工作，测试运行时间太长等等。
 
@@ -68,7 +69,7 @@
 
 简而言之，这是喜欢对程序进行单元测试的 Java 开发人员的必读单元测试书。如果你喜欢在线课程，你也可以把这个和 Udemy 的 [**Java 单元测试初学者**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fjunit5-for-beginners%2F) 课程结合起来，两全其美。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fjunit5-for-beginners%2F>  
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fjunit5-for-beginners%2F>
 
 ## 2.测试驱动:面向 Java 开发人员的 TDD 和验收 TDD
 
@@ -88,7 +89,7 @@
 
 如果你更喜欢在线课程，也可以把这本书和[**Java 程序员实用测试驱动开发**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fpractical-test-driven-development-for-java-programmers%2F) 结合起来，两全其美。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fpractical-test-driven-development-for-java-programmers%2F>  
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fpractical-test-driven-development-for-java-programmers%2F>
 
 与我最喜欢的书 [Effective Java](/javarevisited/effective-java-by-joshua-bloch-a-must-read-book-for-java-developers-5292197a279e) 类似，这本书也有很好的简单解释，以及不平凡的例子，即使是有经验的 Java 程序员也会对此感兴趣。
 
@@ -106,9 +107,11 @@
 
 但是如果你想要一个配套课程，那么你也可以查看 Ranga Karnam 的《用 Junit & Mockito 学习 Java 单元测试的 30 个步骤 课程》。这是一个很好的在线学习 JUnit 和 Mockito 的实践课程。
 
-<https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmockito-tutorial-with-junit-examples%2F>  
+<https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmockito-tutorial-with-junit-examples%2F>
 
 ## 4.有效的 JUnit 测试:Java 开发人员指南
+
+
 
 这是 Lasse Koskela 的另一颗宝石。到现在为止，你们应该已经知道了他的杰作 *Test Driven* ，我说过这是一个想要学习[单元测试](https://hackernoon.com/5-courses-java-programmers-can-join-to-learn-junit-and-mockito-in-2019-h74t38r4)、 [JUnit](/javarevisited/top-10-courses-to-learn-eclipse-junit-and-mockito-for-java-developers-4de1e8d62b96) 和 TDD，但更重要的是，想要提高自己以创建灵活和健壮的软件的 Java 开发人员的必读之书。有效的单元测试是教你如何写好的测试，简明扼要，有表现力，有用，可维护。
 
@@ -153,16 +156,27 @@ Tomek 还包含了一章关于使用测试驱动开发(TDD)开发优秀代码的
 其他**编程** **你可能喜欢的书籍和文章**来探讨
 
 *   每个程序员都应该阅读的十大算法书籍
+
 *   【Java 和 Web 开发人员应该学习的 10 件事
+
 *   [学习 Python 编程语言的 10 个理由](https://javarevisited.blogspot.sg/2018/05/10-reasons-to-learn-python-programming.html)
+
 *   [初学 Python 的前 5 本书](https://javarevisited.blogspot.com/2019/07/top-5-books-to-learn-python-in-2019.html)
+
 *   每个 Java 开发人员都应该学习的 20 个库
+
 *   [初学者学习数据结构的前 5 门课程](https://javarevisited.blogspot.com/2018/11/top-5-data-structures-and-algorithm-online-courses.html)
+
 *   [Java 开发人员应该知道的 10 个测试工具](http://javarevisited.blogspot.sg/2018/01/10-unit-testing-and-integration-tools-for-java-programmers.html)
+
 *   [Java 开发者应该学习的 5 个框架](http://javarevisited.blogspot.sg/2018/04/top-5-java-frameworks-to-learn-in-2018_27.html)
+
 *   [Java 开发人员在日常工作中使用的 10 种工具](http://javarevisited.blogspot.sg/2017/03/10-tools-used-by-java-programming-Developers.html#axzz55lrMRnNC)
+
 *   [10 门深入学习数据结构和算法的免费课程](http://www.java67.com/2019/02/top-10-free-algorithms-and-data.html)
+
 *   [十大编程语言开始学习编码](http://www.java67.com/2017/12/10-programming-languages-to-learn-in.html)
+
 *   每个 Java 程序员都应该读的 10 本书
 
 **P. S. —** 如果你与培训课程的联系比书本更好，这里列出了一些可以从 Udemy 和 Pluralsight 学习的好课程: [**学习 JUnit 和 Java 测试驱动开发的 5 门课程**](https://javarevisited.blogspot.com/2019/04/top-5-junit-and-unit-testing-courses-java-programmers.html) ，看看吧。

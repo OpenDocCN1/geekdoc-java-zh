@@ -1,18 +1,19 @@
+
 # Javassist 简介
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/javassist>
 
-## 1。概述
+## 1. 概述
 
-在本文中，我们将关注`[Javasisst](https://web.archive.org/web/20220625080632/https://jboss-javassist.github.io/javassist/) (Java Programming Assistant)` 库。
+在本文中，我们将关注`Javasisst`（Java Programming Assistant）库（[官网存档](https://web.archive.org/web/20220625080632/https://jboss-javassist.github.io/javassist/)）。
 
 简单地说，这个库通过使用一个比 JDK 中的 API 更高级的 API，使得操纵 Java 字节码的过程变得更简单。
 
-## 2。Maven 依赖关系
+## 2. Maven 依赖关系
 
-要将 Javassist 库添加到我们的项目中，我们需要将`[javassist](https://web.archive.org/web/20220625080632/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22javassist%22%20AND%20a%3A%22javassist%22)`添加到 pom 中:
+要将 Javassist 库添加到我们的项目中，我们需要将`javassist`（[Maven 仓库](https://web.archive.org/web/20220625080632/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22javassist%22%20AND%20a%3A%22javassist%22)）添加到 pom 中：
 
-```java
+```xml
 <dependency>
     <groupId>org.javassist</groupId>
     <artifactId>javassist</artifactId>
@@ -24,11 +25,11 @@
 </properties>
 ```
 
-## 3。字节码是什么？
+## 3. 字节码是什么？
 
-在一个非常高的层次上，每一个用纯文本格式编写并编译成字节码的 Java 类——一个可以被 Java 虚拟机处理的指令集。JVM 将字节码指令翻译成机器级汇编指令。
+在一个非常高的层次上，每一个用纯文本格式编写并编译成字节码的 Java 类——即一个可以被 Java 虚拟机处理的指令集。JVM 将字节码指令翻译成机器级汇编指令。
 
-假设我们有一个`Point` 类:
+假设我们有一个`Point`类：
 
 ```java
 public class Point {
@@ -44,13 +45,13 @@ public class Point {
 }
 ```
 
-编译后，将创建包含字节码的`Point.class` 文件。我们可以通过执行`javap` 命令来查看该类的字节码:
+编译后，将创建包含字节码的`Point.class`文件。我们可以通过执行`javap`命令来查看该类的字节码：
 
-```java
+```bash
 javap -c Point.class
 ```
 
-这将打印以下输出:
+这将打印以下输出：
 
 ```java
 public class com.baeldung.javasisst.Point {
@@ -78,22 +79,22 @@ public class com.baeldung.javasisst.Point {
 }
 ```
 
-所有这些指令都是由 Java 语言指定的；[大量可用](https://web.archive.org/web/20220625080632/https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings)。
+所有这些指令都是由 Java 语言指定的；[大量可用指令列表](https://web.archive.org/web/20220625080632/https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings)。
 
-让我们分析一下`move()`方法的字节码指令:
+让我们分析一下`move()`方法的字节码指令：
 
-*   `aload_0` 指令从局部变量 0 加载一个引用到堆栈上
-*   `iload_1`正在从局部变量 1 中加载一个 int 值
-*   `putfield`正在设置我们对象的一个字段`x`。所有操作与`y`领域类似
-*   最后一条指令是`return`
+- `aload_0`指令从局部变量 0 加载一个引用到堆栈上
+- `iload_1`是从局部变量 1 中加载一个 int 值
+- `putfield`设置我们对象的一个字段`x`。所有操作与`y`字段类似
+- 最后一条指令是`return`
 
 每一行 Java 代码都用适当的指令编译成字节码。Javassist 库使得操作字节码变得相对容易。
 
-## 4。生成 Java 类
+## 4. 生成 Java 类
 
 Javassist 库可用于生成新的 Java 类文件。
 
-假设我们想要生成一个实现了一个`java.lang.Cloneable` 接口的`JavassistGeneratedClass` 类。我们希望该类有一个`int`类型`.` 的`id` 字段，`ClassFile` 用于创建一个新的类文件，`FieldInfo`用于向类`:`添加一个新字段
+假设我们想要生成一个实现了`java.lang.Cloneable`接口的`JavassistGeneratedClass`类。我们希望该类有一个`int`类型的`id`字段。`ClassFile`用于创建一个新的类文件，`FieldInfo`用于向类中添加新字段：
 
 ```java
 ClassFile cf = new ClassFile(
@@ -105,7 +106,7 @@ f.setAccessFlags(AccessFlag.PUBLIC);
 cf.addField(f); 
 ```
 
-在我们创建了一个`JavassistGeneratedClass.class` 之后，我们可以断言它实际上有一个`id` 字段:
+在我们创建了一个`JavassistGeneratedClass.class`之后，我们可以断言它实际上有一个`id`字段：
 
 ```java
 ClassPool classPool = ClassPool.getDefault();
@@ -114,11 +115,11 @@ Field[] fields = classPool.makeClass(cf).toClass().getFields();
 assertEquals(fields[0].getName(), "id");
 ```
 
-## 5。加载类的字节码指令
+## 5. 加载类的字节码指令
 
-如果我们想要加载一个已经存在的类方法的字节码指令，我们可以得到该类的一个特定方法的`CodeAttribute` 。然后我们可以得到一个`CodeIterator` 来迭代该方法的所有字节码指令。
+如果我们想要加载一个已存在类方法的字节码指令，我们可以获取该类的一个特定方法的`CodeAttribute`。然后我们可以得到一个`CodeIterator`来迭代该方法的所有字节码指令。
 
-让我们加载`Point`类的`move()` 方法的所有字节码指令:
+让我们加载`Point`类的`move()`方法的所有字节码指令：
 
 ```java
 ClassPool cp = ClassPool.getDefault();
@@ -146,11 +147,11 @@ assertEquals(operations,
   "return"));
 ```
 
-通过将字节码聚集到操作列表中，我们可以看到`move()` 方法的所有字节码指令，如上面的断言所示。
+通过将字节码聚集到操作列表中，我们可以看到`move()`方法的所有字节码指令，如上面的断言所示。
 
-## 6。向现有类字节码添加字段
+## 6. 向现有类字节码添加字段
 
-假设我们想在现有类的字节码中添加一个`int`类型的字段。我们可以使用`ClassPoll` 加载该类，并向其中添加一个字段:
+假设我们想在现有类的字节码中添加一个`int`类型的字段。我们可以使用`ClassPool`加载该类，并向其中添加一个字段：
 
 ```java
 ClassFile cf = ClassPool.getDefault()
@@ -161,7 +162,7 @@ f.setAccessFlags(AccessFlag.PUBLIC);
 cf.addField(f); 
 ```
 
-我们可以使用反射来验证`Point` 类中是否存在`id`字段:
+我们可以使用反射来验证`Point`类中是否存在`id`字段：
 
 ```java
 ClassPool classPool = ClassPool.getDefault();
@@ -173,11 +174,11 @@ List<String> fieldsList = Stream.of(fields)
 assertTrue(fieldsList.contains("id"));
 ```
 
-## 7。将构造函数添加到类字节码
+## 7. 将构造函数添加到类字节码
 
-我们可以通过使用一个`addInvokespecial()` 方法将一个构造函数添加到前面一个例子中提到的现有类中。
+我们可以通过使用`addInvokespecial()`方法将一个构造函数添加到前面一个例子中提到的现有类中。
 
-我们可以通过调用`java.lang.Object`类中的`<init>` 方法来添加无参数构造函数:
+我们可以通过调用`java.lang.Object`类中的`<init>`方法来添加无参数构造函数：
 
 ```java
 ClassFile cf = ClassPool.getDefault()
@@ -193,7 +194,7 @@ minfo.setCodeAttribute(code.toCodeAttribute());
 cf.addMethod(minfo);
 ```
 
-我们可以通过迭代字节码来检查新创建的构造函数是否存在:
+我们可以通过迭代字节码来检查新创建的构造函数是否存在：
 
 ```java
 CodeIterator ci = code.toCodeAttribute().iterator();
@@ -208,7 +209,7 @@ assertEquals(operations,
   Arrays.asList("aload_0", "invokespecial", "return"));
 ```
 
-## 8。结论
+## 8. 结论
 
 在本文中，我们介绍了 Javassist 库，目的是使字节码操作更容易。
 

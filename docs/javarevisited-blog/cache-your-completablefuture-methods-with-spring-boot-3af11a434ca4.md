@@ -1,4 +1,5 @@
-# 用 Spring Boot 缓存您的 CompletableFuture 方法
+
+# 用 Spring Boot 缓存您的 `CompletableFuture` 方法
 
 > 原文：<https://medium.com/javarevisited/cache-your-completablefuture-methods-with-spring-boot-3af11a434ca4?source=collection_archive---------1----------------------->
 

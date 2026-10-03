@@ -1,8 +1,9 @@
-# Java Volatile 关键字:采访参考
+
+# Java Volatile 关键字：采访参考
 
 > 原文：<https://medium.com/javarevisited/java-volatile-keyword-interview-reference-f51b3deb23a5?source=collection_archive---------0----------------------->
 
-*通过这篇文章，我们将探讨什么是* `*volatile*` *关键字以及关于 volatile 关键字的常见问题。*
+通过这篇文章，我们将探讨什么是`volatile`关键字以及关于`volatile`关键字的常见问题。
 
 ![](img/1427b74f91d01e1ed80da208de2f539e.png)
 

@@ -1,3 +1,4 @@
+
 # 我的 IT 书籍
 
 > 原文：<https://medium.com/javarevisited/my-it-books-5e150bbb79ad?source=collection_archive---------1----------------------->
@@ -101,6 +102,7 @@ Java 要死了！这句话我听过很多次了...有一次，我被邀请参加
 我不喜欢这本书。我在职业生涯早期确实读过它，因为我真的很喜欢设计模式，但我对它的写法和图表都有点失望。我得到它是因为我认为如果用 Java 写的话，我会更好地理解这些例子，但是我错了。
 
 有一本关于设计模式的更好的书叫做《g Of(四人帮)》，实际上我最终下载了 pdf 格式的书并阅读了它，而不是这本，即使 GOF 书上的例子是用 C++写的
+
 这是 GOF 书的链接:[https://www.amazon.com/gp/product/0201633612](https://www.amazon.com/gp/product/0201633612/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0201633612&linkCode=as2&tag=martinfowlerc-20)
 
 ![](img/0cb9445b7e73a3dd420a99efd1ec2503.png)
@@ -112,6 +114,8 @@ Java 要死了！这句话我听过很多次了...有一次，我被邀请参加
 有一种叫做[约束理论](https://www.leanproduction.com/theory-of-constraints/)的东西与精益敏捷团队非常相关，特别是如果他们对看板和连续交付感兴趣的话。我不会深入这个理论，但这本书通过一本有趣的小说谈到了它。我推荐任何对敏捷领导力领域感兴趣的人阅读。这本书里非常有价值的教训。
 
 [![](img/a9a3d820a2ee191a11ef577f4e80bd07.png)](https://medium.com/javarevisited/5-best-books-to-learn-sql-and-database-design-for-programmers-and-developers-1e7839df2f3e)
+
+
 
 哦，真酷，又一本在大清洗中幸存下来的大学书。这是一本有趣的书。Head-First 系列的大多数书读起来都很酷，而且非常实用。我也有一个关于 Java 的，但我把它作为礼物送给了一个正在起步的朋友。任何从 SQL 开始的人都可以从这本书中受益。
 

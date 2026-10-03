@@ -1,3 +1,4 @@
+
 # 你应该关注的 5 个 Java Youtube 频道！
 
 > 原文：<https://medium.com/javarevisited/5-java-youtube-channels-you-should-follow-68251eb0875a?source=collection_archive---------3----------------------->
@@ -12,7 +13,7 @@
 
 这些 youtube 频道很受欢迎，你可能已经知道了。如果你是这些 youtube 频道的新手，那就去看看，如果你喜欢这些内容，就订阅未来的视频。
 
-1.  **edureka！**
+## 1. edureka！
 
 他们是一个实时互动的电子学习平台，其使命是让每个人都能学习。他们提供讲师指导课程，以及全天候按需支持，以实现行业内最佳的课程完成率！他们的真实项目、24*7 支持、个人学习经理确保我们的学习目标得以实现！
 
@@ -20,7 +21,7 @@
 
 点击此链接并查看 edureka 的主页！——[https://bit.ly/edureka-YouTube](https://bit.ly/edureka-YouTube)
 
-2.**李东旻**
+## 2. 李东旻
 
 如果你查看这个频道，你将能够很好地理解 Java。
 
@@ -28,7 +29,7 @@
 
 点击此链接，查看 https://bit.ly/AlexLee-YouTube 李东旻的主页
 
-3.**然后是新波斯顿**
+## 3. 然后是新波斯顿
 
 在这个频道里，你可以观看大量与计算机相关的教程和其他一些很棒的视频！
 
@@ -36,13 +37,13 @@
 
 点击此链接，查看新波斯顿-[https://bit.ly/thenewboston-YouTube](https://bit.ly/thenewboston-YouTube)主页
 
-4.**用 Mosh 编程**
+## 4. 用 Mosh 编程
 
 他培训公司喜欢雇佣的专业软件工程师。他也在教授课程，并且是一个博客写手。他的方法确实令人印象深刻。
 
 点击此链接，查看 Mosh-[https://bit.ly/ProgrammingwithMosh-YouTube](https://bit.ly/ProgrammingwithMosh-YouTube)编程主页
 
-5.泰米尔黑客 2.0
+## 5. 泰米尔黑客 2.0
 
 作为一个泰米尔作家，我想推荐一个泰米尔 youtube 频道。当我们用母语学习一些东西时，一切都很容易。
 

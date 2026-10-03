@@ -1,8 +1,10 @@
+
+
 # 发布 Reddit API 的链接
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-security-oauth-post-to-reddit>
 
- ![](img/d963f5ec14d8688c1dc030e6537045f3.png)
+![](img/d963f5ec14d8688c1dc030e6537045f3.png)
 
 It’s just plain hard to get true, **real-time visibility into a running auth flow.**
 
@@ -16,11 +18,11 @@ Knowing these types of challenges, we built Lightrun - a real-time production de
 
 [>> Debugging Authentication and Authorization Using Lightrun](/web/20220521224433/https://www.baeldung.com/lightrun-n-security)
 
-## 1。概述
+## 1. 概述
 
 在[系列](/web/20220521224433/https://www.baeldung.com/case-study-a-reddit-app-with-spring)的第二篇文章中，我们将构建一些简单的功能，通过他们的 API 从我们的应用程序发布到 Reddit 上。
 
-## 2。必要的安全保障
+## 2. 必要的安全保障
 
 首先，让我们先解决安全方面的问题。
 
@@ -44,7 +46,7 @@ public OAuth2ProtectedResourceDetails reddit() {
 
 注意，我们还指定了`scope``identity`，因为我们还需要访问用户帐户信息。
 
-## 3。需要验证码吗？
+## 3. 需要验证码吗？
 
 Reddit **的新用户必须填写验证码**才能提交；这是在他们通过 Reddit 中的某个业力门槛之前。
 
@@ -72,13 +74,13 @@ private String getNewCaptcha() {
 }
 ```
 
-## 4。`Submit Post`的形式
+## 4. `Submit Post`的形式
 
 接下来，让我们创建向 Reddit 提交新帖子的主表单。提交链接需要以下详细信息:
 
-*   `**title**`–文章的标题
-*   `**url**`–文章的网址
-*   `**subreddit**`–提交链接的子 reddit
+*   `title`–文章的标题
+*   `url`–文章的网址
+*   `subreddit`–提交链接的子 reddit
 
 让我们看看如何显示这个简单的提交页面:
 
@@ -131,7 +133,7 @@ function submitPost(){
 </script>
 ```
 
-## 5。提交一个链接到 Reddit
+## 5. 提交一个链接到 Reddit
 
 现在，让我们看看最后一步——通过 Reddit API 提交实际链接。
 
@@ -236,10 +238,11 @@ public class PostDto {
 </html>
 ```
 
-## 6。结论
+## 6. 结论
 
 在这个快速教程中，我们实现了一些基本的`Submit to Reddit` 功能——简单但功能齐全。
 
 在本案例研究的下一部分，我们将在我们的应用中实现一个`Schedule Post for Later` 功能。
 
 本教程的**完整实现**可以在[的 github 项目](https://web.archive.org/web/20220521224433/https://github.com/Baeldung/reddit-app "The Full Spring / Reddit Example Project on Github")中找到——这是一个基于 Eclipse 的项目，所以它应该很容易导入和运行。
+

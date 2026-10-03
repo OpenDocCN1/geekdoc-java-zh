@@ -1,18 +1,19 @@
+
 # Reddit 应用程序的第四轮改进
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/reddit-web-app-improvements-4>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将继续改进我们正在构建的简单 Reddit 应用程序，它是[公共案例研究](/web/20220813071757/https://www.baeldung.com/case-study-a-reddit-app-with-spring)的一部分。
 
-## 2。为管理员提供更好的表格
+## 2. 为管理员提供更好的表格
 
 首先，我们将通过使用 jQuery DataTable 插件，使管理页面中的表与面向用户的应用程序中的表处于相同的级别。
 
-### 2.1。让用户分页–服务层
+### 2.1. 让用户分页——服务层
 
-让我们在服务层中添加启用分页的操作:
+让我们在服务层中添加启用分页的操作：
 
 ```java
 public List<User> getUsersList(int page, int size, String sortDir, String sort) {
@@ -24,11 +25,11 @@ public PagingInfo generatePagingInfo(int page, int size) {
 }
 ```
 
-### 2.2。用户 DTO
+### 2.2. 用户 DTO
 
-下一步——现在让我们确保一致地将 dto 干净地返回给客户端。
+下一步——现在让我们确保一致地将 DTO 干净地返回给客户端。
 
-我们将需要一个用户 DTO，因为到目前为止，API 将实际的`User`实体返回给客户端:
+我们将需要一个用户 DTO，因为到目前为止，API 将实际的 `User` 实体返回给客户端：
 
 ```java
 public class UserDto {
@@ -42,9 +43,9 @@ public class UserDto {
 }
 ```
 
-### 2.3。让用户分页——在控制器中
+### 2.3. 让用户分页——在控制器中
 
-现在，让我们也在控制器层实现这个简单的操作:
+现在，让我们也在控制器层实现这个简单的操作：
 
 ```java
 public List<UserDto> getUsersList(
@@ -61,7 +62,7 @@ public List<UserDto> getUsersList(
 }
 ```
 
-这是 DTO 转换逻辑:
+这是 DTO 转换逻辑：
 
 ```java
 private UserDto convertUserEntityToDto(User user) {
@@ -71,9 +72,9 @@ private UserDto convertUserEntityToDto(User user) {
 }
 ```
 
-### 2.4。前端
+### 2.4. 前端
 
-最后，在客户端，让我们使用这个新操作并重新实现我们的管理员用户页面:
+最后，在客户端，让我们使用这个新操作并重新实现我们的管理员用户页面：
 
 ```java
 <table><thead><tr>
@@ -117,17 +118,17 @@ $(function(){
 </script>
 ```
 
-## 3。禁用用户
+## 3. 禁用用户
 
-接下来，我们将构建一个简单的管理特性—**禁用用户**的能力。
+接下来，我们将构建一个简单的管理特性——**禁用用户**的能力。
 
-我们首先需要的是`User`实体中的`enabled`字段:
+我们首先需要的是 `User` 实体中的 `enabled` 字段：
 
 ```java
 private boolean enabled;
 ```
 
-然后，我们可以在我们的`UserPrincipal`实现中使用它来确定主体是否被启用:
+然后，我们可以在我们的 `UserPrincipal` 实现中使用它来确定主体是否被启用：
 
 ```java
 public boolean isEnabled() {
@@ -135,7 +136,7 @@ public boolean isEnabled() {
 }
 ```
 
-这里是处理禁用/启用用户的 API 操作:
+这里是处理禁用/启用用户的 API 操作：
 
 ```java
 @PreAuthorize("hasRole('USER_WRITE_PRIVILEGE')")
@@ -147,7 +148,7 @@ public void setUserEnabled(@PathVariable("id") Long id,
 }
 ```
 
-下面是简单的服务层实现:
+下面是简单的服务层实现：
 
 ```java
 public void setUserEnabled(Long userId, boolean enabled) {
@@ -157,9 +158,9 @@ public void setUserEnabled(Long userId, boolean enabled) {
 }
 ```
 
-## 4。处理会话超时
+## 4. 处理会话超时
 
-接下来，让我们配置应用程序**来处理会话超时**——我们将向我们的上下文[添加一个简单的`SessionListener`来控制会话超时](/web/20220813071757/https://www.baeldung.com/servlet-session-timeout):
+接下来，让我们配置应用程序**来处理会话超时**——我们将向我们的上下文[添加一个简单的 `SessionListener` 来控制会话超时](/web/20220813071757/https://www.baeldung.com/servlet-session-timeout)：
 
 ```java
 public class SessionListener implements HttpSessionListener {
@@ -171,7 +172,7 @@ public class SessionListener implements HttpSessionListener {
 }
 ```
 
-下面是 Spring 安全配置:
+下面是 Spring 安全配置：
 
 ```java
 protected void configure(HttpSecurity http) throws Exception {
@@ -183,22 +184,22 @@ protected void configure(HttpSecurity http) throws Exception {
 }
 ```
 
-注意:
+注意：
 
-*   我们将会话超时设置为 5 分钟。
-*   当会话到期时，用户将被重定向到登录页面。
+- 我们将会话超时设置为 5 分钟。
+- 当会话到期时，用户将被重定向到登录页面。
 
-## 5。增强注册
+## 5. 增强注册
 
 接下来，我们将通过添加一些以前缺少的功能来增强注册流程。
 
-我们在这里只说明要点；要深入注册，请查看 **[注册系列](/web/20220813071757/https://www.baeldung.com/spring-security-registration)** 。
+我们在这里只说明要点；要深入注册，请查看[注册系列](/web/20220813071757/https://www.baeldung.com/spring-security-registration)。
 
-### 5.1。注册确认电子邮件
+### 5.1. 注册确认电子邮件
 
 注册时缺少的一个功能是用户不会被提示确认他们的电子邮件。
 
-我们现在让用户在系统中激活之前先确认他们的电子邮件地址:
+我们现在让用户在系统中激活之前先确认他们的电子邮件地址：
 
 ```java
 public void register(HttpServletRequest request, 
@@ -212,7 +213,7 @@ public void register(HttpServletRequest request,
 }
 ```
 
-服务层也需要做一些工作，基本上是确保用户最初是禁用的:
+服务层也需要做一些工作，基本上是确保用户最初是禁用的：
 
 ```java
 @Override
@@ -224,7 +225,7 @@ public void registerNewUser(String username, String email, String password, Stri
 }
 ```
 
-现在确认一下:
+现在确认一下：
 
 ```java
 @RequestMapping(value = "/user/regitrationConfirm", method = RequestMethod.GET)
@@ -257,9 +258,9 @@ public String confirmRegistration(String token) {
 }
 ```
 
-### 5.2。触发密码重置
+### 5.2. 触发密码重置
 
-现在，让我们看看如何允许用户在忘记密码的情况下重置自己的密码:
+现在，让我们看看如何允许用户在忘记密码的情况下重置自己的密码：
 
 ```java
 @RequestMapping(value = "/users/passwordReset", method = RequestMethod.POST)
@@ -271,7 +272,7 @@ public void passwordReset(HttpServletRequest request, @RequestParam("email") Str
 }
 ```
 
-现在，服务层只需向用户发送一封电子邮件，其中包含用户可以重置密码的链接:
+现在，服务层只需向用户发送一封电子邮件，其中包含用户可以重置密码的链接：
 
 ```java
 public void resetPassword(String userEmail, String appUrl) {
@@ -289,9 +290,11 @@ public void resetPassword(String userEmail, String appUrl) {
 }
 ```
 
-### 5.3。重置密码
 
-一旦用户点击邮件中的链接，他们实际上可以**执行重置密码操作**:
+
+## 5.3 重置密码
+
+一旦用户点击邮件中的链接，他们实际上可以执行重置密码操作：
 
 ```java
 @RequestMapping(value = "/users/resetPassword", method = RequestMethod.GET)
@@ -308,7 +311,7 @@ public String resetPassword(
 }
 ```
 
-服务层:
+服务层：
 
 ```java
 public String checkPasswordResetToken(long userId, String token) {
@@ -330,7 +333,7 @@ public String checkPasswordResetToken(long userId, String token) {
 }
 ```
 
-最后，下面是更新密码的实现:
+最后，下面是更新密码的实现：
 
 ```java
 @RequestMapping(value = "/users/updatePassword", method = RequestMethod.POST)
@@ -340,9 +343,9 @@ public void changeUserPassword(@RequestParam("password") String password) {
 }
 ```
 
-### 5.4。更改密码
+## 5.4 更改密码
 
-接下来，我们将实现类似的功能—在内部更改您的密码:
+接下来，我们将实现类似的功能——在内部更改您的密码：
 
 ```java
 @RequestMapping(value = "/users/changePassword", method = RequestMethod.POST)
@@ -364,9 +367,9 @@ public void changeUserPassword(User user, String password) {
 }
 ```
 
-## 6。启动项目
+## 6 启动项目
 
-接下来，让我们将项目转换/升级到 Spring Boot；首先，我们将修改`pom.xml`:
+接下来，让我们将项目转换/升级到 Spring Boot；首先，我们将修改`pom.xml`：
 
 ```java
 ...
@@ -389,7 +392,7 @@ public void changeUserPassword(User user, String password) {
 ...
 ```
 
-并且还为**提供了一个简单的启动应用程序用于启动**:
+并且还提供了一个简单的启动应用程序用于启动：
 
 ```java
 @SpringBootApplication
@@ -411,11 +414,11 @@ public class Application {
 }
 ```
 
-注意**新的基础 URL** 现在将是`http://localhost:8080`而不是旧的`http://localhost:8080/reddit-scheduler`。
+注意新的基础 URL 现在将是`http://localhost:8080`而不是旧的`http://localhost:8080/reddit-scheduler`。
 
-## 7 .**。外部化属性**
+## 7 外部化属性
 
-现在我们已经启动了，我们可以使用`@ConfigurationProperties`来具体化我们的 Reddit 属性:
+现在我们已经启动了，我们可以使用`@ConfigurationProperties`来具体化我们的 Reddit 属性：
 
 ```java
 @ConfigurationProperties(prefix = "reddit")
@@ -436,7 +439,7 @@ public class RedditProperties {
 }
 ```
 
-我们现在可以以类型安全的方式干净地使用这些属性:
+我们现在可以以类型安全的方式干净地使用这些属性：
 
 ```java
 @Autowired
@@ -455,7 +458,7 @@ public OAuth2ProtectedResourceDetails reddit() {
 }
 ```
 
-## 8。结论
+## 8 结论
 
 这一轮的改进对于应用程序来说是一个很好的进步。
 

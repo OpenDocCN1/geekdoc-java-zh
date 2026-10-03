@@ -1,32 +1,33 @@
-# 春天+ JDBC 的例子
+
+# Spring + JDBC 的例子
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring/maven-spring-jdbc-example/>
 
 在本教程中，我们将通过添加 JDBC 支持来扩展上一个 [Maven + Spring hello world 示例](http://web.archive.org/web/20221225035543/http://www.mkyong.com/spring/quick-start-maven-spring-example/)，使用 Spring + JDBC 将记录插入到客户表中。
 
-## 1.客户表
+## 1. 客户表
 
 在这个例子中，我们使用 MySQL 数据库。
 
-```java
- CREATE TABLE `customer` (
+```sql
+CREATE TABLE `customer` (
   `CUST_ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `NAME` varchar(100) NOT NULL,
   `AGE` int(10) unsigned NOT NULL,
   PRIMARY KEY (`CUST_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8; 
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 ```
 
-## 2.项目依赖性
+## 2. 项目依赖性
 
-在 Maven `pom.xml`文件中添加 Spring 和 MySQL 依赖项。
+在 Maven `pom.xml` 文件中添加 Spring 和 MySQL 依赖项。
 
-*文件:pom.xml*
+*文件：`pom.xml`*
 
-```java
- <project  
+```xml
+<project
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
   http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.mkyong.common</groupId>
@@ -53,48 +54,48 @@
 	</dependency>
 
   </dependencies>
-</project> 
+</project>
 ```
 
-## 3.客户模型
+## 3. 客户模型
 
 添加客户模型以存储客户数据。
 
 ```java
- package com.mkyong.customer.model;
+package com.mkyong.customer.model;
 
 import java.sql.Timestamp;
 
-public class Customer 
+public class Customer
 {
 	int custId;
 	String name;
 	int age;
 	//getter and setter methods
 
-} 
+}
 ```
 
-## 4.数据访问对象(DAO)模式
+## 4. 数据访问对象（DAO）模式
 
-客户 Dao 接口。
+客户 DAO 接口。
 
 ```java
- package com.mkyong.customer.dao;
+package com.mkyong.customer.dao;
 
 import com.mkyong.customer.model.Customer;
 
-public interface CustomerDAO 
+public interface CustomerDAO
 {
 	public void insert(Customer customer);
 	public Customer findByCustomerId(int custId);
-} 
+}
 ```
 
-客户 Dao 实现，使用 JDBC 发出简单的 insert 和 select 语句。
+客户 DAO 实现，使用 JDBC 发出简单的 `insert` 和 `select` 语句。
 
 ```java
- package com.mkyong.customer.dao.impl;
+package com.mkyong.customer.dao.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -154,7 +155,7 @@ public class JdbcCustomerDAO implements CustomerDAO
 			if (rs.next()) {
 				customer = new Customer(
 					rs.getInt("CUST_ID"),
-					rs.getString("NAME"), 
+					rs.getString("NAME"),
 					rs.getInt("Age")
 				);
 			}
@@ -171,16 +172,17 @@ public class JdbcCustomerDAO implements CustomerDAO
 			}
 		}
 	}
-} 
+}
 ```
 
-## 5.弹簧豆配置
+## 5. Spring Bean 配置
 
-为 customerDAO 和 datasource 创建 Spring bean 配置文件。
-*文件:Spring-Customer.xml*
+为 `customerDAO` 和 `dataSource` 创建 Spring bean 配置文件。
 
-```java
- <beans 
+*文件：`Spring-Customer.xml`*
+
+```xml
+<beans
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
@@ -189,13 +191,13 @@ public class JdbcCustomerDAO implements CustomerDAO
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 
-</beans> 
+</beans>
 ```
 
-*文件:Spring-Datasource.xml*
+*文件：`Spring-Datasource.xml`*
 
-```java
- <beans 
+```xml
+<beans
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
@@ -209,13 +211,13 @@ public class JdbcCustomerDAO implements CustomerDAO
 		<property name="password" value="password" />
 	</bean>
 
-</beans> 
+</beans>
 ```
 
-*文件:Spring-Module.xml*
+*文件：`Spring-Module.xml`*
 
-```java
- <beans 
+```xml
+<beans
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
@@ -223,30 +225,30 @@ public class JdbcCustomerDAO implements CustomerDAO
 	<import resource="database/Spring-Datasource.xml" />
 	<import resource="customer/Spring-Customer.xml" />
 
-</beans> 
+</beans>
 ```
 
-## 6.检查项目结构
+## 6. 检查项目结构
 
 这个例子的完整目录结构。
 
 ![](img/979ad51612c219e4310eae11d3059f0d.png "maven-spring-jdbc")
 
-## 7.运行它
+## 7. 运行它
 
 ```java
- package com.mkyong.common;
+package com.mkyong.common;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.mkyong.customer.dao.CustomerDAO;
 import com.mkyong.customer.model.Customer;
 
-public class App 
+public class App
 {
     public static void main( String[] args )
     {
-    	ApplicationContext context = 
+    	ApplicationContext context =
     		new ClassPathXmlApplicationContext("Spring-Module.xml");
 
         CustomerDAO customerDAO = (CustomerDAO) context.getBean("customerDAO");
@@ -257,15 +259,15 @@ public class App
         System.out.println(customer1);
 
     }
-} 
+}
 ```
 
 输出
 
-```java
- Customer [age=28, custId=1, name=mkyong] 
+```
+Customer [age=28, custId=1, name=mkyong]
 ```
 
 ## 下载源代码
 
-Download it– [SpringJDBCExample.zip](http://web.archive.org/web/20221225035543/http://www.mkyong.com/wp-content/uploads/2010/03/SpringJDBCExample.zip) (10 KB)<input type="hidden" id="mkyong-current-postId" value="3763">
+下载它 – [SpringJDBCExample.zip](http://web.archive.org/web/20221225035543/http://www.mkyong.com/wp-content/uploads/2010/03/SpringJDBCExample.zip)（10 KB）

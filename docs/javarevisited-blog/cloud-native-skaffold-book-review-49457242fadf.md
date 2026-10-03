@@ -1,3 +1,4 @@
+
 # 使用 Skaffold 轻松开发云原生应用——书评
 
 > 原文：<https://medium.com/javarevisited/cloud-native-skaffold-book-review-49457242fadf?source=collection_archive---------3----------------------->
@@ -76,7 +77,7 @@ Skaffold 的核心思想和好处在书的早期就已经介绍过了，而且�
 
 虽然我喜欢 Packt 书籍，但我有两个不满。我希望他们在这些方面有所改进:
 
-*   我不喜欢书里的填充物。这本书可能会少 100 页，这是由于空白页、大页边空白、间距过大等原因造成的。想想树的包装(其他出版商也有！).
+*   我不喜欢书里的填充物。这本书可能会少 100 页，这是由于空白页、大页边空白、间距过大等原因造成的。想想树的包装(其他出版商也有！)。
 *   我希望其他出版商会拿起曼宁的源注释风格。这很难做到，因为[我发现](/sketch-app-sources/using-sketch-and-asciidoc-to-generate-a-professional-tech-book-ef5b5d8dd410)，但可读性是如此之好…
 
 请注意，这两个评论并不是 Packt 独有的，而是适用于大多数出版商。

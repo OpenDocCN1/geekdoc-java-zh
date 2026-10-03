@@ -1,8 +1,9 @@
+
 # 第 16 天-螺旋矩阵 II
 
 > 原文：<https://medium.com/javarevisited/draft-100-days-challenge-to-cracking-the-coding-interview-c4de1e81fe1a?source=collection_archive---------1----------------------->
 
-## **亚马逊 100 天**
+## 亚马逊 100 天
 
 [**亚马逊 100 天——**](https://leetcode.com/problems/spiral-matrix-ii/)**第 16 天——螺旋矩阵二**
 

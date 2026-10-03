@@ -1,16 +1,17 @@
+
 # Spring Boot 管理指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-boot-admin>
 
-## 1。概述
+## 1. 概述
 
-[Spring Boot 管理](https://web.archive.org/web/20220926192843/https://github.com/codecentric/spring-boot-admin)是一个网络应用，用于管理和监控 Spring Boot 应用。每个应用程序都被视为一个客户机，并注册到管理服务器。在幕后，魔术是由 Spring Boot 致动器端点。
+`Spring Boot 管理`是一个网络应用，用于管理和监控 Spring Boot 应用。每个应用程序都被视为一个客户机，并注册到管理服务器。在幕后，魔术是由 Spring Boot 致动器端点。
 
 在本文中，我们将描述配置 Spring Boot 管理服务器的步骤，以及应用程序如何成为客户机。
 
-## 2。管理服务器设置
+## 2. 管理服务器设置
 
-首先，我们需要创建一个简单的 Spring Boot web 应用程序，并添加以下 [Maven 依赖项](https://web.archive.org/web/20220926192843/https://search.maven.org/classic/#search%7Cga%7C1%7Cspring-boot-admin-starter-server):
+首先，我们需要创建一个简单的 Spring Boot web 应用程序，并添加以下 Maven 依赖项：
 
 ```java
 <dependency>
@@ -20,7 +21,7 @@
 </dependency>
 ```
 
-此后，`@EnableAdminServer` 将可用，因此我们将把它添加到主类中，如下例所示:
+此后，`@EnableAdminServer` 将可用，因此我们将把它添加到主类中，如下例所示：
 
 ```java
 @EnableAdminServer
@@ -35,9 +36,9 @@ public class SpringBootAdminServerApplication(exclude = AdminServerHazelcastAuto
 
 此时，我们已经准备好启动服务器并注册客户机应用程序。
 
-## 3。设置客户端
+## 3. 设置客户端
 
-现在，在我们设置好管理服务器之后，我们可以将我们的第一个 Spring Boot 应用程序注册为客户机。我们必须添加下面的 [Maven 依赖关系](https://web.archive.org/web/20220926192843/https://search.maven.org/classic/#search%7Cga%7C1%7Cspring-boot-admin-starter-client):
+现在，在我们设置好管理服务器之后，我们可以将我们的第一个 Spring Boot 应用程序注册为客户机。我们必须添加下面的 Maven 依赖关系：
 
 ```java
 <dependency>
@@ -47,7 +48,7 @@ public class SpringBootAdminServerApplication(exclude = AdminServerHazelcastAuto
 </dependency>
 ```
 
-接下来，我们需要配置客户机来了解管理服务器的基本 URL。为此，我们只需添加以下属性:
+接下来，我们需要配置客户机来了解管理服务器的基本 URL。为此，我们只需添加以下属性：
 
 ```java
 spring.boot.admin.client.url=http://localhost:8080
@@ -55,18 +56,18 @@ spring.boot.admin.client.url=http://localhost:8080
 
 **从《Spring Boot 2》开始，`health`和`info`以外的端点默认不公开。**
 
-让我们公开所有的端点:
+让我们公开所有的端点：
 
 ```java
 management.endpoints.web.exposure.include=*
 management.endpoint.health.show-details=always
 ```
 
-## 4。安全配置
+## 4. 安全配置
 
 Spring Boot 管理服务器可以访问应用程序的敏感端点，因此建议我们为管理和客户端应用程序添加一些安全配置。
 
-首先，我们将着重于配置管理服务器的安全性。我们必须添加以下 [Maven 依赖关系](https://web.archive.org/web/20220926192843/https://search.maven.org/classic/#search%7Cga%7C1%7Cg%3A%22org.springframework.boot%22%20AND%20a%3A%22spring-boot-starter-security%22):
+首先，我们将着重于配置管理服务器的安全性。我们必须添加以下 Maven 依赖关系：
 
 ```java
 <dependency>
@@ -83,7 +84,7 @@ Spring Boot 管理服务器可以访问应用程序的敏感端点，因此建�
 
 这将启用安全性并向管理应用程序添加一个登录界面。
 
-接下来，我们将添加一个安全配置类，如下所示:
+接下来，我们将添加一个安全配置类，如下所示：
 
 ```java
 @Configuration
@@ -136,7 +137,7 @@ public class WebSecurityConfig {
 
 有一个简单的安全配置，但是添加之后，我们会注意到客户机不能再注册到服务器。
 
-为了将客户机注册到新的安全服务器，我们必须在客户机的属性文件中添加更多的配置:
+为了将客户机注册到新的安全服务器，我们必须在客户机的属性文件中添加更多的配置：
 
 ```java
 spring.boot.admin.client.username=admin
@@ -145,7 +146,7 @@ spring.boot.admin.client.password=admin
 
 我们在这一点上，我们保护了我们的管理服务器。在生产系统中，我们试图监控的应用程序自然会受到保护。因此，我们也将为客户端添加安全性，并且我们将在管理服务器的 UI 界面中注意到客户端信息不再可用。
 
-我们必须添加一些元数据，我们将发送到管理服务器。服务器使用此信息连接到客户端的端点:
+我们必须添加一些元数据，我们将发送到管理服务器。服务器使用此信息连接到客户端的端点：
 
 ```java
 spring.security.user.name=client
@@ -156,9 +157,9 @@ spring.boot.admin.client.instance.metadata.user.password=${spring.security.user.
 
 当然，通过 HTTP 发送凭证是不安全的——所以通信需要经过 HTTPS。
 
-## 5。监控和管理功能
+## 5. 监控和管理功能
 
-Spring Boot 管理员可以配置为只显示我们认为有用的信息。我们只需改变默认配置并添加我们自己需要的指标:
+Spring Boot 管理员可以配置为只显示我们认为有用的信息。我们只需改变默认配置并添加我们自己需要的指标：
 
 ```java
 spring.boot.admin.routes.endpoints=env, metrics, trace, jolokia, info, configprops
@@ -166,7 +167,7 @@ spring.boot.admin.routes.endpoints=env, metrics, trace, jolokia, info, configpro
 
 随着我们的深入，我们会看到还有一些其他的功能可以探索。我们谈论的是`JMX bean management` 使用`Jolokia`以及 `Loglevel` 管理。
 
-Spring Boot 管理员还支持使用 Hazelcast 进行集群复制。我们只需添加下面的 [Maven 依赖关系](https://web.archive.org/web/20220926192843/https://search.maven.org/classic/#search%7Cga%7C1%7Cg%3A%22com.hazelcast%22%20AND%20a%3A%22hazelcast%22)，让自动配置完成剩下的工作:
+Spring Boot 管理员还支持使用 Hazelcast 进行集群复制。我们只需添加下面的 Maven 依赖关系，让自动配置完成剩下的工作：
 
 ```java
 <dependency>
@@ -176,7 +177,7 @@ Spring Boot 管理员还支持使用 Hazelcast 进行集群复制。我们只需
 </dependency>
 ```
 
-如果我们想要一个持久的 Hazelcast 实例，我们将使用一个自定义配置:
+如果我们想要一个持久的 Hazelcast 实例，我们将使用一个自定义配置：
 
 ```java
 @Configuration
@@ -215,9 +216,9 @@ public class HazelcastConfig {
 }
 ```
 
-## 6。通知
+## 6. 通知
 
-接下来，让我们讨论一下，如果我们注册的客户端出现问题，是否有可能从管理服务器收到通知。以下通告程序可用于配置:
+接下来，让我们讨论一下，如果我们注册的客户端出现问题，是否有可能从管理服务器收到通知。以下通告程序可用于配置：
 
 *   电子邮件
 *   PagerDuty
@@ -226,9 +227,9 @@ public class HazelcastConfig {
 *   松弛的
 *   我们聊聊吧
 
-### 6.1。电子邮件通知
+### 6.1. 电子邮件通知
 
-我们将首先关注为我们的管理服务器配置邮件通知。为此，我们必须添加如下所示的[邮件启动器依赖项](https://web.archive.org/web/20220926192843/https://search.maven.org/classic/#search%7Cga%7C1%7Cg%3A%22org.springframework.boot%22%20AND%20a%3A%22spring-boot-starter-mail%22):
+我们将首先关注为我们的管理服务器配置邮件通知。为此，我们必须添加如下所示的邮件启动器依赖项：
 
 ```java
 <dependency>
@@ -238,20 +239,22 @@ public class HazelcastConfig {
 </dependency>
 ```
 
-在这之后，我们必须添加一些邮件配置:
+在这之后，我们必须添加一些邮件配置：
 
 ```java
 spring.mail.host=smtp.example.com
 spring.mail.username=smtp_user
 spring.mail.password=smtp_password
-[[email protected]](/web/20220926192843/https://www.baeldung.com/cdn-cgi/l/email-protection)
+[[email protected]](/web/20220926192843/https://www.baeldung.com/cdn-cgi/l/email-protection)
 ```
 
 现在，每当我们的注册客户将他的状态从“在线”更改为“离线”或其他状态时，就会有一封电子邮件发送到上面配置的地址。对于其他通告程序，配置是相似的。
 
-### 6.2。Hipchat 通知
+### 6.2. Hipchat 通知
 
-正如我们将看到的，与 Hipchat 的集成非常简单；只有几个强制属性需要设置:
+正如我们将看到的，与 Hipchat 的集成非常简单；只有几个强制属性需要设置：
+
+
 
 ```java
 spring.boot.admin.notify.hipchat.auth-token=<generated_token>
@@ -261,11 +264,11 @@ spring.boot.admin.notify.hipchat.url=https://yourcompany.hipchat.com/v2/
 
 定义好这些之后，我们会在 Hipchat room 中注意到，每当客户端的状态改变时，我们都会收到通知。
 
-### 6.3。定制通知配置
+### 6.3 定制通知配置
 
 我们可以配置一个定制的通知系统，拥有一些强大的工具。我们可以使用一个`reminding notifier`来发送一个预定的通知，直到客户端的状态改变。
 
-或者，我们可能希望向一组经过筛选的客户端发送通知。为此，我们可以使用一个`filtering notifier:`
+或者，我们可能希望向一组经过筛选的客户端发送通知。为此，我们可以使用一个`filtering notifier`：
 
 ```java
 @Configuration
@@ -302,7 +305,7 @@ public class NotifierConfiguration {
 }
 ```
 
-## 7。结论
+## 7 结论
 
 这个介绍教程涵盖了简单的步骤，一个人必须做的，以监测和管理他的 Spring Boot 应用程序使用 Spring Boot 管理。
 

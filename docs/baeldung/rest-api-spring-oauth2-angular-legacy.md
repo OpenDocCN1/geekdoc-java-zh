@@ -1,29 +1,30 @@
-# Spring REST API + OAuth2 + Angular(使用 Spring Security OAuth 遗留堆栈)
+
+# Spring REST API + OAuth2 + Angular（使用 Spring Security OAuth 遗留堆栈）
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/rest-api-spring-oauth2-angular-legacy>
 
-## 1。概述
+## 1. 概述
 
 在本教程中，我们将使用 OAuth 保护 REST API，并从一个简单的 Angular 客户端使用它。
 
-我们将要构建的应用程序将由四个独立的模块组成:
+我们将要构建的应用程序将由四个独立的模块组成：
 
-*   授权服务器
-*   资源服务器
-*   UI Implicit–使用隐式流的前端应用程序
-*   UI 密码–使用密码流的前端应用程序
+- 授权服务器
+- 资源服务器
+- UI Implicit：使用隐式流的前端应用程序
+- UI 密码：使用密码流的前端应用程序
 
-**注**:本文使用的是 [Spring OAuth 遗留项目](https://web.archive.org/web/20220707143817/https://spring.io/projects/spring-security-oauth)。对于这篇文章使用新的 Spring Security 5 堆栈的版本，看看我们的文章[Spring REST API+oauth 2+Angular](/web/20220707143817/https://www.baeldung.com/rest-api-spring-oauth2-angular)。
+**注**：本文使用的是 [Spring OAuth 遗留项目](https://web.archive.org/web/20220707143817/https://spring.io/projects/spring-security-oauth)。对于这篇文章使用新的 Spring Security 5 堆栈的版本，请参阅我们的文章 [Spring REST API + OAuth2 + Angular](/web/20220707143817/https://www.baeldung.com/rest-api-spring-oauth2-angular)。
 
 好吧，让我们开始吧。
 
-## 2。授权服务器
+## 2. 授权服务器
 
 首先，让我们开始将授权服务器设置为一个简单的 Spring Boot 应用程序。
 
-### 2.1。Maven 配置
+### 2.1. Maven 配置
 
-我们将设置以下依赖关系集:
+我们将设置以下依赖关系集：
 
 ```java
 <dependency>
@@ -45,11 +46,11 @@
 </dependency>
 ```
 
-注意，我们使用 spring-jdbc 和 MySQL，因为我们将使用 jdbc 支持的令牌存储实现。
+注意，我们使用`spring-jdbc`和 MySQL，因为我们将使用 JDBC 支持的令牌存储实现。
 
-### 2.2。`@EnableAuthorizationServer`
+### 2.2. `@EnableAuthorizationServer`
 
-现在，让我们开始配置负责管理访问令牌的授权服务器:
+现在，让我们开始配置负责管理访问令牌的授权服务器：
 
 ```java
 @Configuration
@@ -103,16 +104,16 @@ public class AuthServerOAuth2Config
 }
 ```
 
-请注意:
+请注意：
 
-*   为了持久化令牌，我们使用了一个`JdbcTokenStore`
-*   我们为“`implicit`”授权类型注册了一个客户端
-*   我们注册了另一个客户，并授权了“`password`”、“`authorization_code`”和“`refresh_token`”授权类型
-*   为了使用"`password`"授权类型，我们需要连接并使用`AuthenticationManager` bean
+- 为了持久化令牌，我们使用了`JdbcTokenStore`。
+- 我们为`implicit`授权类型注册了一个客户端。
+- 我们注册了另一个客户端，并授权了`password`、`authorization_code`和`refresh_token`授权类型。
+- 为了使用`password`授权类型，我们需要连接并使用`AuthenticationManager` bean。
 
-### 2.3。数据源配置
+### 2.3. 数据源配置
 
-接下来，让我们配置我们的数据源供`JdbcTokenStore`使用:
+接下来，让我们配置供`JdbcTokenStore`使用的数据源：
 
 ```java
 @Value("classpath:schema.sql")
@@ -143,9 +144,9 @@ public DataSource dataSource() {
 }
 ```
 
-注意，由于我们使用了`JdbcTokenStore`，我们需要初始化数据库模式，所以我们使用了`DataSourceInitializer`和下面的 SQL 模式:
+注意，由于我们使用了`JdbcTokenStore`，我们需要初始化数据库模式，所以使用了`DataSourceInitializer`和下面的 SQL 模式：
 
-```java
+```sql
 drop table if exists oauth_client_details;
 create table oauth_client_details (
   client_id VARCHAR(255) PRIMARY KEY,
@@ -219,13 +220,13 @@ create table ClientDetails (
 );
 ```
 
-注意，我们不一定需要显式的`DatabasePopulator`bean—**我们可以简单地使用一个`schema.sql`——Spring Boot 默认使用的是**。
+注意，我们不一定需要显式的`DatabasePopulator` bean——我们可以简单地使用一个`schema.sql`，Spring Boot 默认使用该文件。
 
-### 2.4。安全配置
+### 2.4. 安全配置
 
 最后，让我们保护授权服务器。
 
-当客户端应用程序需要获取访问令牌时，它将在一个简单的表单登录驱动的身份验证过程之后完成:
+当客户端应用程序需要获取访问令牌时，它将在一个简单的表单登录驱动的身份验证过程之后完成：
 
 ```java
 @Configuration
@@ -256,19 +257,19 @@ public class ServerSecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
-这里需要注意的是**表单登录配置对于密码流**来说是不必要的——只是对于隐式流来说——所以你可以根据你使用的 OAuth2 流来跳过它。
+这里需要注意的是，**表单登录配置对于密码流来说是不必要的**——只是对于隐式流来说——所以你可以根据使用的 OAuth2 流来跳过它。
 
-## 3。资源服务器
+## 3. 资源服务器
 
 现在，我们来讨论资源服务器；这本质上是我们最终希望能够消费的 REST API。
 
-### 3.1。Maven 配置
+### 3.1. Maven 配置
 
 我们的资源服务器配置与之前的授权服务器应用程序配置相同。
 
-### 3.2。令牌存储配置
+### 3.2. 令牌存储配置
 
-接下来，我们将配置我们的`TokenStore`来访问授权服务器用来存储访问令牌的同一个数据库:
+接下来，我们将配置`TokenStore`来访问授权服务器用来存储访问令牌的同一个数据库：
 
 ```java
 @Autowired
@@ -290,13 +291,15 @@ public TokenStore tokenStore() {
 }
 ```
 
-注意，对于这个简单的实现，**我们共享 SQL 支持的令牌存储库**，即使授权和资源服务器是独立的应用程序。
+注意，对于这个简单的实现，**我们共享 SQL 支持的令牌存储库**，即使授权服务器和资源服务器是独立的应用程序。
 
 当然，原因是资源服务器需要能够**检查授权服务器发布的访问令牌**的有效性。
 
-### 3.3。远程令牌服务
+### 3.3. 远程令牌服务
 
-在我们的资源服务器中不使用`TokenStore`，我们可以使用`RemoteTokeServices`:
+在我们的资源服务器中不使用`TokenStore`，我们可以使用`RemoteTokenServices`：
+
+
 
 ```java
 @Primary
@@ -311,15 +314,15 @@ public RemoteTokenServices tokenService() {
 }
 ```
 
-请注意:
+请注意：
 
-*   这个`RemoteTokenService`将使用授权服务器上的`CheckTokenEndPoint`来验证 AccessToken 并从中获取`Authentication`对象。
-*   可在 AuthorizationServerBaseURL+"`/oauth/check_token`找到
-*   授权服务器可以使用任何令牌存储类型[ `JdbcTokenStore`、`JwtTokenStore`、…]–这不会影响`RemoteTokenService`或资源服务器。
+- 这个`RemoteTokenService`将使用授权服务器上的`CheckTokenEndPoint`来验证`AccessToken`并从中获取`Authentication`对象。
+- 可在`AuthorizationServerBaseURL + "/oauth/check_token"`找到。
+- 授权服务器可以使用任何令牌存储类型（`JdbcTokenStore`、`JwtTokenStore`、……）——这不会影响`RemoteTokenService`或资源服务器。
 
-### 3.4。样品控制器
+### 3.4 示例控制器
 
-接下来，让我们实现一个简单的控制器，公开一个`Foo`资源:
+接下来，让我们实现一个简单的控制器，公开一个`Foo`资源：
 
 ```java
 @Controller
@@ -335,9 +338,9 @@ public class FooController {
 }
 ```
 
-注意客户端如何需要`“read”`范围来访问这个资源。
+注意客户端如何需要`"read"`范围来访问这个资源。
 
-我们还需要启用全局方法安全性并配置`MethodSecurityExpressionHandler`:
+我们还需要启用全局方法安全性并配置`MethodSecurityExpressionHandler`：
 
 ```java
 @Configuration
@@ -353,7 +356,7 @@ public class OAuth2ResourceServerConfig
 }
 ```
 
-这是我们的基本资源:
+这是我们的基本资源：
 
 ```java
 public class Foo {
@@ -362,9 +365,9 @@ public class Foo {
 }
 ```
 
-### 3.5。网络配置
+### 3.5 Web 配置
 
-最后，让我们为 API 设置一个非常基本的 web 配置:
+最后，让我们为 API 设置一个非常基本的 Web 配置：
 
 ```java
 @Configuration
@@ -373,15 +376,15 @@ public class Foo {
 public class ResourceWebConfig implements WebMvcConfigurer {}
 ```
 
-## 4。前端–设置
+## 4. 前端设置
 
-我们现在来看一个简单的客户端前端角度实施方案。
+我们现在来看一个简单的客户端前端 Angular 实施方案。
 
 首先，我们将使用 [Angular CLI](https://web.archive.org/web/20220707143817/https://cli.angular.io/) 来生成和管理我们的前端模块。
 
-**首先，我们将安装[节点和 npm](https://web.archive.org/web/20220707143817/https://nodejs.org/en/download/)**——因为 Angular CLI 是一个 NPM 工具。
+首先，我们将安装[Node 和 npm](https://web.archive.org/web/20220707143817/https://nodejs.org/en/download/)——因为 Angular CLI 是一个 npm 工具。
 
-然后，我们需要使用 [`frontend-maven-plugin`](https://web.archive.org/web/20220707143817/https://github.com/eirslett/frontend-maven-plugin) 来使用 maven 构建我们的 Angular 项目:
+然后，我们需要使用[`frontend-maven-plugin`](https://web.archive.org/web/20220707143817/https://github.com/eirslett/frontend-maven-plugin)来使用 Maven 构建我们的 Angular 项目：
 
 ```java
 <build>
@@ -423,7 +426,7 @@ public class ResourceWebConfig implements WebMvcConfigurer {}
 </build>
 ```
 
-最后，**使用 Angular CLI 生成新模块:**
+最后，使用 Angular CLI 生成新模块：
 
 ```java
 ng new oauthApp
@@ -431,23 +434,23 @@ ng new oauthApp
 
 请注意，我们将有两个前端模块——一个用于密码流，另一个用于隐式流。
 
-在以下部分，我们将讨论每个模块的角度应用程序逻辑。
+在以下部分，我们将讨论每个模块的 Angular 应用程序逻辑。
 
-## 5。使用角度的密码流
+## 5. 使用 Angular 的密码流
 
-我们将在这里使用 OAuth2 密码流，这就是为什么**这只是一个概念验证，而不是一个生产就绪的应用**。您会注意到客户端凭证暴露在前端——这是我们将在以后的文章中解决的问题。
+我们将在这里使用 OAuth2 密码流，这就是为什么这只是一个概念验证，而不是一个生产就绪的应用。您会注意到客户端凭证暴露在前端——这是我们将在以后的文章中解决的问题。
 
-我们的用例很简单:一旦用户提供了他们的凭证，前端客户端就使用它们从授权服务器获取访问令牌。
+我们的用例很简单：一旦用户提供了他们的凭证，前端客户端就使用它们从授权服务器获取访问令牌。
 
-### 5.1。应用服务
+### 5.1 应用服务
 
-让我们从位于`app.service.ts`的`AppService`开始，它包含服务器交互的逻辑:
+让我们从位于`app.service.ts`的`AppService`开始，它包含服务器交互的逻辑：
 
-*   `obtainAccessToken()`:获取给定用户凭证的访问令牌
-*   使用 ng2-cookies 库将我们的访问令牌保存在 cookie 中
-*   `getResource()`:使用其 ID 从服务器获取 Foo 对象
-*   `checkCredentials()`:检查用户是否登录
-*   `logout()`:删除访问令牌 cookie 并注销用户
+- `obtainAccessToken()`：获取给定用户凭证的访问令牌。
+- 使用`ng2-cookies`库将我们的访问令牌保存在 cookie 中。
+- `getResource()`：使用其 ID 从服务器获取`Foo`对象。
+- `checkCredentials()`：检查用户是否登录。
+- `logout()`：删除访问令牌 cookie 并注销用户。
 
 ```java
 export class Foo {
@@ -510,18 +513,18 @@ export class AppService {
 }
 ```
 
-请注意:
+请注意：
 
-*   为了获得访问令牌，我们向“`/oauth/token`”端点发送一个`POST`
-*   我们使用客户端凭据和基本身份验证来访问这个端点
-*   然后，我们发送用户凭证以及客户机 id 和授权类型参数 URL 编码
-*   在我们获得访问令牌–**之后，我们将它存储在一个 cookie 中**
+- 为了获得访问令牌，我们向`/oauth/token`端点发送一个`POST`。
+- 我们使用客户端凭据和基本身份验证来访问这个端点。
+- 然后，我们发送用户凭证以及客户端 ID 和授权类型参数 URL 编码。
+- 在我们获得访问令牌之后，我们将它存储在一个 cookie 中。
 
-cookie 存储在这里尤其重要，因为我们只是将 cookie 用于存储目的，而不是直接驱动认证过程。这有助于防范跨站点请求伪造(CSRF)类型的攻击和漏洞。
+cookie 存储在这里尤其重要，因为我们只是将 cookie 用于存储目的，而不是直接驱动认证过程。这有助于防范跨站点请求伪造（CSRF）类型的攻击和漏洞。
 
-### 5.2。登录组件
+### 5.2 登录组件
 
-接下来，让我们看看负责登录表单的`LoginComponent`:
+接下来，让我们看看负责登录表单的`LoginComponent`：
 
 ```java
 @Component({
@@ -542,9 +545,9 @@ export class LoginComponent {
     }
 ```
 
-### 5.3。家用组件
+### 5.3 首页组件
 
-接下来，我们的`HomeComponent`负责显示和操作我们的主页:
+接下来，我们的`HomeComponent`负责显示和操作我们的主页：
 
 ```java
 @Component({
@@ -569,9 +572,9 @@ export class HomeComponent {
 }
 ```
 
-### 5.4。Foo 组件
+### 5.4 Foo 组件
 
-最后，我们的`FooComponent`显示我们的 Foo 细节:
+最后，我们的`FooComponent`显示我们的`Foo`细节：
 
 ```java
 @Component({
@@ -598,9 +601,11 @@ export class FooComponent {
 }
 ```
 
-### 5.5。应用组件
+### 5.5 应用组件
 
-我们简单的`AppComponent`充当根组件:
+我们简单的`AppComponent`充当根组件：
+
+
 
 ```java
 @Component({
@@ -757,19 +762,19 @@ export class AppModule { }
 
 ## 7。运行前端
 
-1.要运行我们的任何前端模块，我们需要首先构建应用程序:
+1. 要运行我们的任何前端模块，我们需要首先构建应用程序:
 
 ```java
 mvn clean install
 ```
 
-2.然后我们需要导航到我们的 Angular 应用程序目录:
+2. 然后我们需要导航到我们的 Angular 应用程序目录:
 
 ```java
 cd src/main/resources
 ```
 
-3.最后，我们将启动我们的应用:
+3. 最后，我们将启动我们的应用:
 
 ```java
 npm start

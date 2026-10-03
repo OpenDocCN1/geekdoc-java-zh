@@ -1,10 +1,11 @@
+
 # 如何读取 PEM 文件以获取公钥和私钥
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-read-pem-file-keys>
 
 ## 1.概观
 
-在公钥密码中，也称为[非对称密码](/web/20221117030337/https://www.baeldung.com/cs/symmetric-vs-asymmetric-cryptography)，加密机制依赖于两个相关的密钥 一个公钥和一个私钥。公钥用于加密消息，而只有私钥的所有者才能解密消息。
+在公钥密码中，也称为[非对称密码](/web/20221117030337/https://www.baeldung.com/cs/symmetric-vs-asymmetric-cryptography)，加密机制依赖于两个相关的密钥：一个公钥和一个私钥。公钥用于加密消息，而只有私钥的所有者才能解密消息。
 
 在本教程中，我们将学习如何从 PEM 文件中读取公钥和私钥。
 
@@ -16,19 +17,19 @@
 
 开始之前，我们先讨论一些关键概念。
 
-X.509 是定义公钥证书格式的标准。 所以这种格式描述了一个公钥，以及其他信息。
+`X.509`是定义公钥证书格式的标准。所以这种格式描述了一个公钥，以及其他信息。
 
 **DER** **是存储数据最流行的编码格式，如文件中的 X.509 证书和 PKCS8 私钥。**这是一种二进制编码，生成的内容无法用文本编辑器查看。
 
 **PKCS8** **是存储私钥信息的标准语法。**可以选择使用对称算法对私钥进行加密。
 
-这个标准不仅可以处理 RSA 私钥，还可以处理其他算法。pkcs 8 私钥通常通过 PEM 编码格式进行交换。
+这个标准不仅可以处理 RSA 私钥，还可以处理其他算法。`PKCS8`私钥通常通过 PEM 编码格式进行交换。
 
 **PEM** **是一种 DER 证书的 base-64 编码机制。** PEM 还可以对其他类型的数据进行编码，例如公钥/私钥和证书请求。
 
 PEM 文件还包含描述编码数据类型的页眉和页脚:
 
-```java
+```
 -----BEGIN PUBLIC KEY-----
 ...Base64 encoding of the DER encoded certificate...
 -----END PUBLIC KEY-----
@@ -48,7 +49,7 @@ String key = new String(Files.readAllBytes(file.toPath()), Charset.defaultCharse
 
 现在我们将构建一个实用方法，从 PEM 编码的字符串中获取公钥:
 
-```java
+```
 -----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsjtGIk8SxD+OEiBpP2/T
 JUAF0upwuKGMk6wH8Rwov88VvzJrVm2NCticTk5FUg+UG5r8JArrV4tJPRHQyvqK
@@ -81,9 +82,9 @@ public static RSAPublicKey readPublicKey(File file) throws Exception {
 
 如我们所见，首先我们需要移除页眉、页脚和新行。然后我们需要将 Base64 编码的字符串解码成相应的二进制格式。
 
-接下来，我们需要将结果加载到一个能够处理公钥材料的密钥规范类中。在本例中，我们将使用*x 509 encodedkeyspec*类。
+接下来，我们需要将结果加载到一个能够处理公钥材料的密钥规范类中。在本例中，我们将使用`X509EncodedKeySpec`类。
 
-最后，我们可以使用*key factory*类从规范中生成一个公钥对象。
+最后，我们可以使用`KeyFactory`类从规范中生成一个公钥对象。
 
 ### 3.3.从 PEM 字符串获取私钥
 
@@ -91,13 +92,13 @@ public static RSAPublicKey readPublicKey(File file) throws Exception {
 
 我们将使用 PKCS8 格式的 PEM 编码私钥。让我们看看页眉和页脚是什么样子的:
 
-```java
+```
 -----BEGIN PRIVATE KEY-----
 ...Base64 encoded key...
 -----END PRIVATE KEY-----
 ```
 
-正如我们之前了解到的，我们需要一个能够处理 PKCS8 密钥材料的类。*pkcs 8 encodedkeyspec*类填补了这个角色。
+正如我们之前了解到的，我们需要一个能够处理 PKCS8 密钥材料的类。`PKCS8EncodedKeySpec`类填补了这个角色。
 
 那么我们来看看算法:
 
@@ -118,9 +119,9 @@ public RSAPrivateKey readPrivateKey(File file) throws Exception {
 }
 ```
 
-## 4。使用 BouncyCastle 库
+## 4.使用 BouncyCastle 库
 
-### 4.1。读取公钥
+### 4.1.读取公钥
 
 我们将探索 BouncyCastle 库，看看如何用它来替代纯 Java 实现。
 
@@ -143,10 +144,10 @@ public RSAPublicKey readPublicKey(File file) throws Exception {
 
 使用 BouncyCastle 时，我们需要注意几个重要的类:
 
-*   *PemReader*–将一个`Reader`作为参数并解析其内容。**它删除不必要的头**并且**将底层 Base64 PEM 数据解码成二进制格式。**
-*   *PEM object*–**存储`PemReader`** 生成的结果
+* `PemReader`——将一个`Reader`作为参数并解析其内容。**它删除不必要的头**并且**将底层 Base64 PEM 数据解码成二进制格式。**
+* `PemObject`——**存储`PemReader`** 生成的结果。
 
-让我们看看另一种方法，将 Java 的类(`X509EncodedKeySpec, KeyFactory`)包装到 BouncyCastle 自己的类(`JcaPEMKeyConverter`)中:
+让我们看看另一种方法，将 Java 的类(`X509EncodedKeySpec`、`KeyFactory`)包装到 BouncyCastle 自己的类(`JcaPEMKeyConverter`)中:
 
 ```java
 public RSAPublicKey readPublicKeySecondApproach(File file) throws IOException {
@@ -201,9 +202,9 @@ public RSAPrivateKey readPrivateKeySecondApproach(File file) throws IOException 
 
 BouncyCastle 库有几个优点。
 
-一个好处是**我们不需要手动跳过或删除页眉和页脚。**另一个是**我们不负责 Base64 解码，**也不负责。因此，我们可以用 BouncyCastle 编写不太容易出错的代码。
+一个好处是**我们不需要手动跳过或删除页眉和页脚。**另一个是**我们不负责 Base64 解码**。因此，我们可以用 BouncyCastle 编写不太容易出错的代码。
 
-此外， **BouncyCastle 库也支持 PKCS1 格式**。尽管 PKCS1 也是一种用于存储加密密钥(只有 RSA 密钥)的流行格式，但 Java 本身并不支持它。
+此外，**BouncyCastle 库也支持 PKCS1 格式**。尽管 PKCS1 也是一种用于存储加密密钥(只有 RSA 密钥)的流行格式，但 Java 本身并不支持它。
 
 ## 5.结论
 
@@ -213,4 +214,4 @@ BouncyCastle 库有几个优点。
 
 最后，我们探索了 BouncyCastle 库，发现它是一个很好的选择，因为与纯 Java 实现相比，它提供了一些优势。
 
-GitHub 上有关于 Java 和 T2 的完整源代码。
+GitHub 上有关于 Java 和 `BouncyCastle` 的完整源代码。

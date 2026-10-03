@@ -1,3 +1,4 @@
+
 # 打印
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/overview/printing.html`](https://docs.oracle.com/javase/tutorial/2d/overview/printing.html)
@@ -10,8 +11,7 @@ Java 2D Printing API 基于*回调*模型，其中打印系统而不是应用程
 
 以下两个功能对支持打印很重要：
 
-+   **作业控制** – 启动和管理打印作业，包括显示标准打印和设置对话框
-
-+   **分页** – 在打印系统请求时呈现每一页
++ **作业控制** – 启动和管理打印作业，包括显示标准打印和设置对话框
++ **分页** – 在打印系统请求时呈现每一页
 
 当需要成像页面时，打印系统使用适当的`Graphics`上下文调用应用程序的`print`方法。要在打印时使用 Java 2D API 功能，您将`Graphics`对象转换为`Graphics2D`类，就像在渲染到屏幕时一样。

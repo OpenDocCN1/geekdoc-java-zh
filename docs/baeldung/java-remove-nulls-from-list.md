@@ -1,14 +1,15 @@
+
 # 用 Java 删除列表中的所有空值
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-remove-nulls-from-list>
 
-这个快速教程将展示如何使用普通 Java、Guava、Apache Commons 集合和更新的 Java 8 lambda 支持从一个`List` `,`中移除所有的`null`元素。
+这个快速教程将展示如何使用普通 Java、Guava、Apache Commons 集合和更新的 Java 8 lambda 支持从一个`List`中移除所有的`null`元素。
 
 这篇文章是 Baeldung 网站上的“**Java——回到基础的**”系列文章的一部分。
 
-## 1。使用普通 Java 从`List`中移除空值
+## 1. 使用普通 Java 从`List`中移除空值
 
-Java Collections 框架提供了一个简单的解决方案来删除`List`中的所有空元素，这是一个基本的`while` 循环:
+Java Collections 框架提供了一个简单的解决方案来删除`List`中的所有空元素，这是一个基本的`while`循环：
 
 ```java
 @Test
@@ -20,7 +21,7 @@ public void givenListContainsNulls_whenRemovingNullsWithPlainJava_thenCorrect() 
 }
 ```
 
-或者，我们也可以使用下面的简单方法:
+或者，我们也可以使用下面的简单方法：
 
 ```java
 @Test
@@ -34,9 +35,9 @@ public void givenListContainsNulls_whenRemovingNullsWithPlainJavaAlternative_the
 
 请注意，这两种解决方案都会修改源列表。
 
-## 2。使用谷歌番石榴移除空值
+## 2. 使用谷歌番石榴移除空值
 
-我们还可以使用 Guava 和一种更具功能性的方法，通过谓词来移除空值:
+我们还可以使用 Guava 和一种更具功能性的方法，通过谓词来移除空值：
 
 ```java
 @Test
@@ -48,7 +49,7 @@ public void givenListContainsNulls_whenRemovingNullsWithGuavaV1_thenCorrect() {
 }
 ```
 
-或者，**如果我们不想修改源列表**，Guava 将允许我们创建一个新的过滤列表:
+或者，**如果我们不想修改源列表**，Guava 将允许我们创建一个新的过滤列表：
 
 ```java
 @Test
@@ -61,9 +62,9 @@ public void givenListContainsNulls_whenRemovingNullsWithGuavaV2_thenCorrect() {
 }
 ```
 
-## 3。使用 Apache Commons 集合删除空值`List`
+## 3. 使用 Apache Commons 集合删除空值`List`
 
-现在让我们看一个使用 Apache Commons 集合库的简单解决方案，它使用了类似的函数风格:
+现在让我们看一个使用 Apache Commons 集合库的简单解决方案，它使用了类似的函数风格：
 
 ```java
 @Test
@@ -77,9 +78,9 @@ public void givenListContainsNulls_whenRemovingNullsWithCommonsCollections_thenC
 
 请注意，这个解决方案还将**修改原始列表**。
 
-## 4。使用 Lambdas (Java 8) 从一个`List`中删除空值
+## 4. 使用 Lambdas (Java 8) 从一个`List`中删除空值
 
-最后——让我们看看使用 Lambdas 过滤列表的 Java 8 解决方案**；过滤过程可以并行或串行完成:**
+最后——让我们看看使用 Lambdas 过滤列表的 Java 8 解决方案**；过滤过程可以并行或串行完成：
 
 ```java
 @Test
@@ -108,7 +109,7 @@ public void givenListContainsNulls_whenRemovingNullsWithRemoveIf_thenCorrect() {
 
 就是这样——一些快速且非常有用的解决方案，用于从列表中删除所有空元素。
 
-## 5.结论
+## 5. 结论
 
 在本文中，我们能够探索使用 Java、Guava 或 Lambdas 从`List`中删除空值的不同方法。
 

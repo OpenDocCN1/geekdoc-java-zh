@@ -1,8 +1,9 @@
+
 # Apache Velocity 简介
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/apache-velocity>
 
-## 1。概述
+## 1. 概述
 
 [Velocity](https://web.archive.org/web/20220909001729/https://velocity.apache.org/) 是一个基于 Java 的模板引擎。
 
@@ -12,7 +13,7 @@ Velocity 可用于生成 XML 文件、SQL、PostScript 和大多数其他基于�
 
 在本文中，我们将探讨如何使用它来创建动态网页。
 
-## 2。速度如何工作
+## 2. 速度如何工作
 
 **速度的核心类是`VelocityEngine`。**
 
@@ -40,7 +41,7 @@ StringWriter writer = new StringWriter();
 t.merge( context, writer );
 ```
 
-## 3。Maven 依赖关系
+## 3. Maven 依赖关系
 
 为了使用 Velocity，我们需要向我们的 Maven 项目添加以下依赖项:
 
@@ -49,40 +50,39 @@ t.merge( context, writer );
     <groupId>org.apache.velocity</groupId>
     <artifactId>velocity</artifactId>
     <version>1.7</version>
-    </dependency>
+</dependency>
 <dependency>
-     <groupId>org.apache.velocity</groupId>
-     <artifactId>velocity-tools</artifactId>
-     <version>2.0</version>
+    <groupId>org.apache.velocity</groupId>
+    <artifactId>velocity-tools</artifactId>
+    <version>2.0</version>
 </dependency>
 ```
 
 这两个依赖项的最新版本可以在这里找到: [velocity](https://web.archive.org/web/20220909001729/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22org.apache.velocity%22%20AND%20a%3A%22velocity%22) 和 [velocity-tools](https://web.archive.org/web/20220909001729/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22org.apache.velocity%22%20AND%20a%3A%22velocity-tools%22) 。
 
-## 4。速度模板语言
+## 4. 速度模板语言
 
 Velocity 模板语言(VTL)通过使用 VTL 引用，提供了将动态内容合并到网页中的最简单、最干净的方法。
 
-速度模板中的 VTL 参考以`$` 开始，用于获取与该参考相关的值。VTL 还提供了一组指令，可以用来操作 Java 代码的输出。这些指令以`#.` 开始
+速度模板中的 VTL 参考以`$`开始，用于获取与该参考相关的值。VTL 还提供了一组指令，可以用来操作 Java 代码的输出。这些指令以`#`开始。
 
-### 4.1。参考文献
+### 4.1. 参考文献
 
 速度、变量、属性和方法中有三种类型的引用:
 
-*   **变量**–使用`#set`指令或从 Java 对象的字段返回的值在页面内定义:
+*   **变量** – 使用`#set`指令或从 Java 对象的字段返回的值在页面内定义:
 
     ```java
     #set ($message="Hello World")
     ```
 
-*   **属性**–指对象内的字段；它们也可以引用属性
+*   **属性** – 指对象内的字段；它们也可以引用属性的`getter`方法:
 
     ```java
     $customer.name
     ```
 
-    的`getter`方法
-*   **方法**–指 Java 对象上的方法:
+*   **方法** – 指 Java 对象上的方法:
 
     ```java
     $customer.getName()
@@ -90,18 +90,18 @@ Velocity 模板语言(VTL)通过使用 VTL 引用，提供了将动态内容合�
 
 每个引用产生的最终值在呈现到最终输出时被转换为字符串。
 
-### 4.2。指令
+### 4.2. 指令
 
 VTL 提供了一组丰富的指令:
 
-*   **设置**–可用于设置参考值；该值可以赋给变量或属性引用:
+*   **设置** – 可用于设置参考值；该值可以赋给变量或属性引用:
 
     ```java
     #set ($message = "Hello World")
     #set ($customer.name = "Brian Mcdonald")
     ```
 
-*   **条件**–`#if, #elseif` 和 `#else` 指令提供了一种基于条件检查生成内容的方法:
+*   **条件** – `#if`, `#elseif` 和 `#else` 指令提供了一种基于条件检查生成内容的方法:
 
     ```java
     #if($employee.designation == "Manager")
@@ -113,7 +113,7 @@ VTL 提供了一组丰富的指令:
     #end
     ```
 
-*   **循环**–`#foreach` 指令允许循环对象集合:
+*   **循环** – `#foreach` 指令允许循环对象集合:
 
     ```java
     <ul>
@@ -123,19 +123,19 @@ VTL 提供了一组丰富的指令:
     </ul>
     ```
 
-*   **包含**–`#include` 元素提供将文件导入模板的能力:
+*   **包含** – `#include` 元素提供将文件导入模板的能力:
 
     ```java
     #include("one.gif","two.txt","three.html"...)
     ```
 
-*   **解析**–`#parse`语句允许模板设计者导入另一个包含 VTL 的本地文件；Velocity 将解析内容并呈现它:
+*   **解析** – `#parse` 语句允许模板设计者导入另一个包含 VTL 的本地文件；Velocity 将解析内容并呈现它:
 
     ```java
     #parse (Template)
     ```
 
-*   **评估**–`#evaluate`指令可用于动态评估 VTL；这允许模板在渲染时评估一个`String`，例如国际化模板:
+*   **评估** – `#evaluate` 指令可用于动态评估 VTL；这允许模板在渲染时评估一个`String`，例如国际化模板:
 
     ```java
     #set($firstName = "David")
@@ -146,9 +146,11 @@ VTL 提供了一组丰富的指令:
     #evaluate($dynamicsource)
     ```
 
-*   **break**–`#break` 指令停止对当前执行范围(即`#foreach`、`#parse`)的任何进一步渲染
-*   **停止**–`#stop`指令停止模板的任何进一步渲染和执行。
-*   **velocimacros** – `#macro` directive allows the template designer to define a repeated segment of VTL:
+*   **break** – `#break` 指令停止对当前执行范围(即`#foreach`、`#parse`)的任何进一步渲染。
+
+*   **停止** – `#stop` 指令停止模板的任何进一步渲染和执行。
+
+*   **velocimacros** – `#macro` 指令允许模板设计者定义 VTL 的重复片段:
 
     ```java
     #macro(tablerows)
@@ -159,7 +161,7 @@ VTL 提供了一组丰富的指令:
     #end
     ```
 
-    这个宏现在可以作为# `tablerows():`放在模板的任何地方
+    这个宏现在可以作为`#tablerows():`放在模板的任何地方:
 
     ```java
     #macro(tablerows $color $productList)
@@ -171,16 +173,16 @@ VTL 提供了一组丰富的指令:
     #end
     ```
 
-### 4.3。其他功能
+### 4.3. 其他功能
 
-*   **数学**–一些内置的数学函数，可以在模板中使用:
+*   **数学** – 一些内置的数学函数，可以在模板中使用:
 
     ```java
     #set($percent = $number / 100)
     #set($remainder = $dividend % $divisor)
     ```
 
-*   **测距算子**——可与`#set`和`#foreach:`
+*   **测距算子** – 可与`#set`和`#foreach`配合使用:
 
     ```java
     #set($array = [0..10])
@@ -190,9 +192,7 @@ VTL 提供了一组丰富的指令:
     #end
     ```
 
-    配合使用
-
-## 5。速度 Servlet
+## 5. 速度 Servlet
 
 Velocity 引擎的主要工作是基于模板生成内容。
 
@@ -200,7 +200,7 @@ Velocity 引擎的主要工作是基于模板生成内容。
 
 Velocity 提供了一个现成的实现`VelocityViewServlet`，它是 velocity-tools 子项目的一部分。
 
-为了利用`VelocityViewServlet,` 提供的内置功能，我们可以从`VelocityViewServlet` 扩展我们的 servlet 并覆盖`handleRequest()` 方法:
+为了利用`VelocityViewServlet`提供的内置功能，我们可以从`VelocityViewServlet`扩展我们的 servlet 并覆盖`handleRequest()` 方法:
 
 ```java
 public class ProductServlet extends VelocityViewServlet {
@@ -221,9 +221,9 @@ public class ProductServlet extends VelocityViewServlet {
 }
 ```
 
-## 6。配置
+## 6. 配置
 
-### 6.1。网络配置
+### 6.1. 网络配置
 
 现在让我们看看如何在`web.xml`中配置`VelocityViewServlet`。
 
@@ -232,7 +232,7 @@ public class ProductServlet extends VelocityViewServlet {
 ```java
 <web-app>
     <display-name>apache-velocity</display-name>
-      //...
+    //...
 
     <servlet>
         <servlet-name>velocity</servlet-name>
@@ -243,7 +243,7 @@ public class ProductServlet extends VelocityViewServlet {
             <param-value>/WEB-INF/velocity.properties</param-value>
         </init-param>
     </servlet>
-        //...
+    //...
 </web-app> 
 ```
 
@@ -256,7 +256,7 @@ public class ProductServlet extends VelocityViewServlet {
 </servlet-mapping>
 ```
 
-### 6.2。资源加载器
+### 6.2. 资源加载器
 
 Velocity 提供灵活的资源加载器系统。它允许一个或多个资源加载器同时运行:
 
@@ -267,7 +267,7 @@ Velocity 提供灵活的资源加载器系统。它允许一个或多个资源�
 *   `DataSourceResourceLoader`
 *   `WebappResourceLoader`
 
-这些资源加载器在`velocity.properties:`中配置
+这些资源加载器在`velocity.properties`中配置:
 
 ```java
 resource.loader=webapp
@@ -276,7 +276,7 @@ webapp.resource.loader.path =
 webapp.resource.loader.cache = true
 ```
 
-## 7。速度模板
+## 7. 速度模板
 
 Velocity 模板是编写所有视图生成逻辑的地方。这些页面使用 Velocity 模板语言(VTL)编写:
 
@@ -313,15 +313,15 @@ Velocity 模板是编写所有视图生成逻辑的地方。这些页面使用 V
 </html>
 ```
 
-## 8。管理页面布局
+## 8. 管理页面布局
 
 Velocity 为基于 Velocity 工具的应用程序提供了简单的布局控件和可定制的错误屏幕。
 
-`VelocityLayoutServlet` 封装了这个功能来呈现指定的布局。`VelocityLayoutServlet`是对`VelocityViewServlet.` 的扩展
+`VelocityLayoutServlet`封装了这个功能来呈现指定的布局。`VelocityLayoutServlet`是对`VelocityViewServlet`的扩展。
 
-### 8.1。网络配置
+### 8.1. 网络配置
 
-让我们看看如何配置`VelocityLayoutServlet.` ，servlet 被定义为拦截对 velocity 模板页面的请求，布局特定的属性在`velocity.properties`文件中定义:
+让我们看看如何配置`VelocityLayoutServlet`。servlet 被定义为拦截对 velocity 模板页面的请求，布局特定的属性在`velocity.properties`文件中定义:
 
 ```java
 <web-app>
@@ -344,16 +344,18 @@ Velocity 为基于 Velocity 工具的应用程序提供了简单的布局控件�
 </web-app>
 ```
 
-### 8.2。布局模板
+### 8.2. 布局模板
 
-布局模板定义了 velocity 页面的典型结构。默认情况下，`VelocityLayoutServlet`在布局文件夹下搜索`Default.vm` 。覆盖几个属性可以更改此位置:
+布局模板定义了 velocity 页面的典型结构。默认情况下，`VelocityLayoutServlet`在布局文件夹下搜索`Default.vm`。覆盖几个属性可以更改此位置:
 
 ```java
 tools.view.servlet.layout.directory = layout/
 tools.view.servlet.layout.default.template = Default.vm 
 ```
 
-布局文件由页眉模板、页脚模板和速度变量`$screen_content` 组成，该变量呈现所请求的速度页面的内容:
+布局文件由页眉模板、页脚模板和速度变量`$screen_content`组成，该变量呈现所请求的速度页面的内容。
+
+
 
 ```java
 <html>
@@ -377,7 +379,7 @@ tools.view.servlet.layout.default.template = Default.vm
 
 ### 8.3。请求屏幕中的布局规格
 
-特定屏幕的布局可以定义为页面开头的速度变量。这是通过在页面中添加这一行来实现的:
+特定屏幕的布局可以定义为页面开头的速度变量。这是通过在页面中添加这一行来实现的：
 
 ```java
 #set($layout = "MyOtherLayout.vm")
@@ -391,7 +393,7 @@ tools.view.servlet.layout.default.template = Default.vm
 
 可以使用 velocity 布局实现定制的错误屏幕。`VelocityLayoutServlet`提供两个变量`$error_cause`和`$stack_trace`来表示异常细节。
 
-可以在`velocity.properties` 文件中配置错误页面:
+可以在`velocity.properties`文件中配置错误页面：
 
 ```java
 tools.view.servlet.error.template = Error.vm
@@ -401,6 +403,6 @@ tools.view.servlet.error.template = Error.vm
 
 在本文中，我们已经了解了 Velocity 是如何成为渲染动态网页的有用工具。此外，我们已经看到了使用 velocity 提供的 servlets 的不同方式。
 
-在 Baeldung 我们也有一篇关于 Spring MVC [的速度配置的文章。](/web/20220909001729/https://www.baeldung.com/spring-mvc-with-velocity)
+在 Baeldung 我们也有一篇关于 Spring MVC [的速度配置的文章。](https://web.archive.org/web/20220909001729/https://www.baeldung.com/spring-mvc-with-velocity)
 
 本教程的完整代码可从 GitHub 上的[处获得。](https://web.archive.org/web/20220909001729/https://github.com/eugenp/tutorials/tree/master/apache-velocity)

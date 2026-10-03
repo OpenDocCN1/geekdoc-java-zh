@@ -1,17 +1,18 @@
+
 # Java——如何将字符串保存到文件中
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/java-how-to-save-a-string-to-a-file/>
 
 在 Java 中，有许多方法可以将字符串写入文件。
 
-## 1.Java 11–files . writestring
+## 1. Java 11 – `Files.writeString`
 
 最后，在`java.nio`中增加了一个新方法，可以轻松地将字符串保存到`File`中。
 
-StringToFileJava11.java
+`StringToFileJava11.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -44,22 +45,22 @@ public class StringToFileJava11 {
 
     }
 
-} 
+}
 ```
 
-c:\\projects\\app.log
+`c:\\projects\\app.log`
 
 ```java
- Hello World 
+Hello World 
 Java! 
 ```
 
-## 2.Java 7–文件.写入
+## 2. Java 7 – `Files.write`
 
-StringToFileJava7.java
+`StringToFileJava7.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -92,34 +93,34 @@ public class StringToFileJava7 {
 
     }
 
-} 
+}
 ```
 
 输出
 
-c:\\projects\\app.log
+`c:\\projects\\app.log`
 
 ```java
- Hello World 
+Hello World 
 Java! 
 ```
 
-## 3.Apache commons me(Apache 公用程式)
+## 3. Apache Commons IO（Apache 公用程式）
 
-pom.xml
+`pom.xml`
 
 ```java
- <dependency>
-		<groupId>commons-io</groupId>
-		<artifactId>commons-io</artifactId>
-		<version>2.6</version>
-	</dependency> 
+<dependency>
+	<groupId>commons-io</groupId>
+	<artifactId>commons-io</artifactId>
+	<version>2.6</version>
+</dependency>
 ```
 
-CommonsIOExample.java
+`CommonsIOExample.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.apache.commons.io.FileUtils;
 
@@ -144,17 +145,17 @@ public class CommonsIOExample {
         }
     }
 
-} 
+}
 ```
 
-## 4.缓冲写入器
+## 4. 缓冲写入器
 
-4.1 在过去:
+4.1 在过去：
 
-BufferedWriterExample.java
+`BufferedWriterExample.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -178,15 +179,15 @@ public class BufferedWriterExample {
 
     }
 
-} 
+}
 ```
 
 4.2 或者像这样，手动关闭所有资源🙂
 
-BufferedWriterExampleBeforeJava7.java
+`BufferedWriterExampleBeforeJava7.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -225,15 +226,15 @@ public class BufferedWriterExampleBeforeJava7 {
         }
     }
 
-} 
+}
 ```
 
 ## 参考
 
-*   [文件 Java 文档](http://web.archive.org/web/20220629160035/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/Files.html)
-*   [Java 教程——阅读、编写和创建文件](http://web.archive.org/web/20220629160035/https://docs.oracle.com/javase/tutorial/essential/io/file.html)
-*   [BufferedWriter JavaDocs](http://web.archive.org/web/20220629160035/https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWriter.html)
-*   [Java——如何将文本添加到文件中](http://web.archive.org/web/20220629160035/https://www.mkyong.com/java/java-how-to-append-text-to-a-file/)
-*   [Java–如何创建和写入文件](http://web.archive.org/web/20220629160035/https://www.mkyong.com/java/java-how-to-create-and-write-to-a-file/)
+* [文件 Java 文档](http://web.archive.org/web/20220629160035/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/Files.html)
+* [Java 教程——阅读、编写和创建文件](http://web.archive.org/web/20220629160035/https://docs.oracle.com/javase/tutorial/essential/io/file.html)
+* [BufferedWriter JavaDocs](http://web.archive.org/web/20220629160035/https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWriter.html)
+* [Java——如何将文本添加到文件中](http://web.archive.org/web/20220629160035/https://www.mkyong.com/java/java-how-to-append-text-to-a-file/)
+* [Java–如何创建和写入文件](http://web.archive.org/web/20220629160035/https://www.mkyong.com/java/java-how-to-create-and-write-to-a-file/)
 
 <input type="hidden" id="mkyong-current-postId" value="15090">

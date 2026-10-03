@@ -1,3 +1,4 @@
+
 # 优化设计
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/painting/refining.html`](https://docs.oracle.com/javase/tutorial/uiswing/painting/refining.html)
@@ -146,7 +147,6 @@ class RedSquare{
         g.drawRect(xPos,yPos,width,height);  
     }
 }
-
 ```
 
 在这个特定的实现中，我们完全从头开始创建了一个`RedSquare`类。另一种方法是通过使`RedSquare`成为`java.awt.Rectangle`的子类来重用其功能。无论`RedSquare`如何实现，重要的是我们给该类一个接受`Graphics`对象的方法，并且该方法从面板的`paintComponent`方法中调用。这种分离使您的代码保持清晰，因为它基本上告诉每个红色正方形自己绘制。

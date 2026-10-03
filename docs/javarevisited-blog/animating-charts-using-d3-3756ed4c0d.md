@@ -1,8 +1,9 @@
+
 # 使用 D3 制作图表动画
 
 > 原文：<https://medium.com/javarevisited/animating-charts-using-d3-3756ed4c0d?source=collection_archive---------1----------------------->
 
-如果有动画的话，SVG 实现是完美的。在本文中，我们将讨论如何使用 D3 在 SVG 图像上制作动画。SVG 具有制作动画/转换的内置功能。我们可以通过 d3 增加这种能力。
+如果有动画的话，SVG 实现是完美的。在本文中，我们将讨论如何使用 D3 在 SVG 图像上制作动画。SVG 具有制作动画/转换的内置功能。我们可以通过`d3`增加这种能力。
 
 ![](img/491d83dd9e0e97d46fbe1e45d152224a.png)
 

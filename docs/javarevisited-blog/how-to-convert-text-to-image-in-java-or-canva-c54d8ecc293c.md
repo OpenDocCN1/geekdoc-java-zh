@@ -1,4 +1,5 @@
-# 如何在 Java(或 Canva)中将文本转换成图像
+
+# 如何在 Java（或 Canva）中将文本转换成图像
 
 > 原文：<https://medium.com/javarevisited/how-to-convert-text-to-image-in-java-or-canva-c54d8ecc293c?source=collection_archive---------1----------------------->
 

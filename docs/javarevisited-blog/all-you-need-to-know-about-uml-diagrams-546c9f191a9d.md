@@ -1,23 +1,30 @@
+
 # 关于 UML 图，您所需要知道的
 
 > 原文：<https://medium.com/javarevisited/all-you-need-to-know-about-uml-diagrams-546c9f191a9d?source=collection_archive---------0----------------------->
 
-两种类型的数据建模技术是:
+两种类型的数据建模技术是：
 
-1.  **实体关系(E-R)模型**
-2.  **UML(统一建模语言)**
+1. **实体关系（E-R）模型**
+2. **UML（统一建模语言）**
 
 ![](img/387a181f14021a1afea5caee0884a1fe.png)
 
-【https://github.com/vicky-playground/resume 
+【https://github.com/vicky-playground/resume】
 
-这篇文章将只关注 UML。将涵盖关键领域:
+这篇文章将只关注 UML。将涵盖关键领域：
 
 ```
-1\. What is UML2\. What’s the Difference Between Structural Diagrams and Behavioral Diagrams3\. Class Diagram4\. Object Diagram5\. Component Diagram6\. Use Case Diagram7\. Activity Diagram
+1. What is UML
+2. What’s the Difference Between Structural Diagrams and Behavioral Diagrams
+3. Class Diagram
+4. Object Diagram
+5. Component Diagram
+6. Use Case Diagram
+7. Activity Diagram
 ```
 
-UML 是统一建模语言的缩写，它就像一个蓝图(或设计计划),使用一组图表来可视化软件建模。它不仅让你彻底评估整个概念，而且确保团队中的每个人都在同一页上。UML 图也是**业务流程建模**的流行技术之一。它是一个**面向对象的表示**图表，描述**角色和系统**之间的关系。UML 有不同的类型，例如用例图、序列图、通信图等等。
+UML 是统一建模语言的缩写，它就像一个蓝图（或设计计划），使用一组图表来可视化软件建模。它不仅让你彻底评估整个概念，而且确保团队中的每个人都在同一页上。UML 图也是**业务流程建模**的流行技术之一。它是一个**面向对象的表示**图表，描述**角色和系统**之间的关系。UML 有不同的类型，例如用例图、序列图、通信图等等。
 
 ![](img/aaa3b01d9662c57660a07aa00aff6b9f.png)
 
@@ -41,17 +48,17 @@ UML 图可以被组织成两个不同的组。
 
 类图示例 2
 
-从上面的图片可以看出，UML 类图的基本元素是:
+从上面的图片可以看出，UML 类图的基本元素是：
 
-1.  **类名(s** 应该总是用**粗体**格式 **)**
-2.  **属性**
-3.  **操作(方法)**
+1. **类名**（应该总是用**粗体**格式）
+2. **属性**
+3. **操作（方法）**
 
 ![](img/40179a11aaf96c7517ccc8270d6ec3b4.png)
 
-# 对象图—类图的一个实例
+# 对象图——类图的一个实例
 
-对象图可以被认为是类图的一个特例，类图是系统在某个时间点(T1)的详细状态的快照。它可能**在某个时间点包含结构内部对象**的数据值。因为它显示的是实例而不是类，所以它也被称为**实例图**。类图和对象图的区别在于用途，以及它们在特定时间显示的内容。
+对象图可以被认为是类图的一个特例，类图是系统在某个时间点（T1）的详细状态的快照。它可能**在某个时间点包含结构内部对象**的数据值。因为它显示的是实例而不是类，所以它也被称为**实例图**。类图和对象图的区别在于用途，以及它们在特定时间显示的内容。
 
 ![](img/e43100927ba1e4b7767c23bb8ec1dbd2.png)
 
@@ -61,7 +68,7 @@ UML 图可以被组织成两个不同的组。
 
 对象图示例 2
 
-# 组件图—模型实现细节
+# 组件图——模型实现细节
 
 组件图可视化了系统的**实现**视图。
 
@@ -69,19 +76,19 @@ UML 图可以被组织成两个不同的组。
 
 组件图示例
 
-有两种类型的组件接口:提供的接口和需要的接口。
+有两种类型的组件接口：提供的接口和需要的接口。
 
 ![](img/70b5188c375591941e218baadbad9700.png)
 
-## **提供接口**
+## 提供接口
 
 从其他方调用并提供服务的实体。
 
-## **所需接口**
+## 所需接口
 
 调用和使用其他服务的实体。
 
-## 港口
+## 端口
 
 它可以用作“接入点”，将提供的接口和需要的接口连接在一起。
 
@@ -91,10 +98,10 @@ UML 图可以被组织成两个不同的组。
 
 作为行为 UML 类型中最著名的图表类型，用例图从用户的角度描述了系统的行为。用例图由四个对象组成。
 
-1.  **参与者**:与系统用例交互的人或事物
-2.  **用例**:系统功能的特定部分
-3.  **系统**:定义系统中包含哪些功能
-4.  **包**:可选的表示一个用例的所有权
+1. **参与者**：与系统用例交互的人或事物
+2. **用例**：系统功能的特定部分
+3. **系统**：定义系统中包含哪些功能
+4. **包**：可选的表示一个用例的所有权
 
 ![](img/d017ab9223b7f33ad55e8b4a828ab1a9.png)
 
@@ -133,4 +140,4 @@ Since 👏 is free of charge, I’d like to **make 👏 as one of our communicat
 😉If you are **following me and looking forward to my visit** to your story too, please give me **10**👏 to let me know️ ❤ ️
 ```
 
-</javarevisited/5-best-uml-books-and-courses-for-java-programmers-13c551a9235d> 
+</javarevisited/5-best-uml-books-and-courses-for-java-programmers-13c551a9235d>

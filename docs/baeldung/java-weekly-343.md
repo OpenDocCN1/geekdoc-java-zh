@@ -1,8 +1,9 @@
+
 # Java 周刊，第 343 期
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-weekly-343>
 
-## 1。Spring 和 Java
+## 1. Spring 和 Java
 
 #### [**>**](https://web.archive.org/web/20221126213658/https://www.javaspecialists.eu/archive/Issue282.html)
 
@@ -38,7 +39,7 @@
 
 *   #### [**> >春初始值 0。9 .0 现已可用**](https://web.archive.org/web/20221126213658/https://spring.io/blog/2020/07/15/spring-initializr-0-9-0-available-now) 春天。io
 
-## 2。技术
+## 2. 技术
 
 #### [**> >在【bravenewgeek.com】**](https://web.archive.org/web/20221126213658/https://bravenewgeek.com/implementing-etl-on-gcp/)上实现 ETL
 
@@ -53,9 +54,10 @@
 *   #### [**> > Build and deploy secure serverless function**](https://web.archive.org/web/20221126213658/https://developer.okta.com/blog/2020/07/15/secure-serverless-functions-with-netlify)
 
     with Netlify [developer.okta.com]
+
 *   #### [**>常见超文本传送协议状态码**](https://web.archive.org/web/20221126213658/https://www.mscharhag.com/api-design/http-status-codes) 【mscharhag.com】
 
-## 3。沉思
+## 3. 沉思
 
 #### [**>>**](https://web.archive.org/web/20221126213658/https://bravenewgeek.com/implementing-etl-on-gcp/)[**OS 经典**](https://web.archive.org/web/20221126213658/https://www.allthingsdistributed.com/2020/07/the-os-classics.html)【allthingsdistributed.com】
 
@@ -67,7 +69,7 @@
 
 *   #### [**> > Machine learning for better developer experience**](https://web.archive.org/web/20221126213658/https://netflixtechblog.com/machine-learning-for-a-better-developer-experience-1e600c69f36c) [netflixtechblog.com]
 
-## 4。漫画
+## 4. 漫画
 
 本周我最喜欢的迪尔伯特。
 
@@ -77,7 +79,7 @@
 
 [**> >没有谈士气的**](https://web.archive.org/web/20221126213658/https://dilbert.com/strip/2020-07-22)【dilbert.com】
 
-## 5。本周精选
+## 5. 本周精选
 
 #### [> >你做出可怕决定的 3 个理由(以及如何停止)](https://web.archive.org/web/20221126213658/https://markmanson.net/decision-making)【markmanson.net】
 

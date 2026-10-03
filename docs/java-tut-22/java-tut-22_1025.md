@@ -1,8 +1,9 @@
+
 # 检索 Distinguished Name
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/newstuff/dn.html`](https://docs.oracle.com/javase/tutorial/jndi/newstuff/dn.html)
 
-在 JDK 5.0 之前的版本中，没有直接的方法从搜索结果中获取 Distinguished Name (DN)。`SearchResults.getName()` 方法始终返回相对于执行搜索的上下文的名称。为了获取搜索条目的绝对或完整名称，需要一定的记录来跟踪祖先上下文。在 JDK 5.0 中添加了以下两个新的 API，用于在对上下文执行搜索、列出或列出绑定操作时从 NameClassPair 中检索绝对名称：
+在 JDK 5.0 之前的版本中，没有直接的方法从搜索结果中获取 Distinguished Name (DN)。`SearchResults.getName()` 方法始终返回相对于执行搜索的上下文的名称。为了获取搜索条目的绝对或完整名称，需要一定的记录来跟踪祖先上下文。在 JDK 5.0 中添加了以下两个新的 API，用于在对上下文执行搜索、列出或列出绑定操作时从 `NameClassPair` 中检索绝对名称：
 
 +   [`NameClassPair.getNameInNameSpace(Name name)`](https://docs.oracle.com/javase/8/docs/api/javax/naming/NameClassPair.html#getNameInNamespace-Name-)
 

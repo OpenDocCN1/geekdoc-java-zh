@@ -1,8 +1,9 @@
+
 # Java 和 Zookeeper 入门
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-zookeeper>
 
-## 1。概述
+## 1. 概述
 
 Apache ZooKeeper **是一个分布式协调服务**，它简化了分布式应用程序的开发。它被 Apache Hadoop、HBase 和 [others](https://web.archive.org/web/20221109150443/https://cwiki.apache.org/confluence/display/ZOOKEEPER/PoweredBy) 等项目用于不同的用例，如领导者选举、配置管理、节点协调、服务器租赁管理等。
 
@@ -10,7 +11,7 @@ ZooKeeper 集群中的节点将它们的数据存储在一个共享的层次名�
 
 在本文中，我们将探索如何使用 Apache Zookeeper 的 Java API 来存储、更新和删除 Zookeeper 中存储的信息。
 
-## 2.**设置**
+## 2. 设置
 
 Apache ZooKeeper Java 库的最新版本可以在这里找到:
 
@@ -22,7 +23,7 @@ Apache ZooKeeper Java 库的最新版本可以在这里找到:
 </dependency>
 ```
 
-## 3。动物园管理员数据模型–ZNode
+## 3. 动物园管理员数据模型 – ZNode
 
 ZooKeeper 有一个分层的名称空间，很像一个分布式文件系统，它存储协调数据，如状态信息、协调信息、位置信息等。这些信息存储在不同的节点上。
 
@@ -30,19 +31,19 @@ ZooKeeper 有一个分层的名称空间，很像一个分布式文件系统，�
 
 每个 ZNode 为任何数据或 ACL 更改维护版本号和时间戳。此外，这允许 ZooKeeper 验证缓存并协调更新。
 
-## 4。安装
+## 4. 安装
 
-### 4.1。安装
+### 4.1. 安装
 
-最新的 ZooKeeper 版本可以从[这里](https://web.archive.org/web/20221109150443/https://www.apache.org/dyn/closer.cgi/zookeeper/)下载。在此之前，我们需要确保我们满足这里描述的[的系统需求](https://web.archive.org/web/20221109150443/https://zookeeper.apache.org/doc/r3.3.5/zookeeperAdmin.html#sc_systemReq)。
+最新的 ZooKeeper 版本可以从[这里](https://web.archive.org/web/20221109150443/https://www.apache.org/dyn/closer.cgi/zookeeper/)下载。在此之前，我们需要确保我们满足这里描述的[系统需求](https://web.archive.org/web/20221109150443/https://zookeeper.apache.org/doc/r3.3.5/zookeeperAdmin.html#sc_systemReq)。
 
-### 4.2。独立模式
+### 4.2. 独立模式
 
-对于本文，我们将以独立模式运行 ZooKeeper，因为它需要最少的配置。在此遵循文档[中描述的步骤。](https://web.archive.org/web/20221109150443/https://zookeeper.apache.org/doc/r3.3.5/zookeeperStarted.html#sc_InstallingSingleMode)
+对于本文，我们将以独立模式运行 ZooKeeper，因为它需要最少的配置。在此遵循文档[中描述的步骤](https://web.archive.org/web/20221109150443/https://zookeeper.apache.org/doc/r3.3.5/zookeeperStarted.html#sc_InstallingSingleMode)。
 
 注意:在独立模式下，没有复制，所以如果 ZooKeeper 进程失败，服务将关闭。
 
-## 5。ZooKeeper CLI 示例
+## 5. ZooKeeper CLI 示例
 
 我们现在将使用 ZooKeeper 命令行界面(CLI)与 ZooKeeper 进行交互:
 
@@ -57,16 +58,16 @@ bin/zkCli.sh -server 127.0.0.1:2181
 Created /FirstZnode
 ```
 
-我们刚刚在 ZooKeeper 分层名称空间的根位置创建了一个 ZNode `‘MyFirstZNode’`,并将`‘ZNodeVal’`写入其中。
+我们刚刚在 ZooKeeper 分层名称空间的根位置创建了一个 ZNode `MyFirstZNode`，并将`ZNodeVal`写入其中。
 
 因为我们没有传递任何标志，所以创建的 ZNode 将是持久的。
 
-现在让我们发出一个`‘get'`命令来获取数据以及与 ZNode 相关联的元数据:
+现在让我们发出一个`get`命令来获取数据以及与 ZNode 相关联的元数据:
 
 ```java
 [zk: localhost:2181(CONNECTED) 1] get /FirstZnode
 
-“Myfirstzookeeper-app”
+" Myfirstzookeeper-app"
 cZxid = 0x7f
 ctime = Sun Feb 18 16:15:47 IST 2018
 mZxid = 0x7f
@@ -88,24 +89,25 @@ numChildren = 0
 set /MyFirstZNode ZNodeValUpdated
 ```
 
-这将把`MyFirstZNode`处的数据从`ZNodeVal`更新到`ZNodeValUpdated.`
+这将把`MyFirstZNode`处的数据从`ZNodeVal`更新到`ZNodeValUpdated`。
 
-## 6。 ZooKeeper Java API 示例
+## 6. ZooKeeper Java API 示例
 
 现在让我们看看 Zookeeper Java API，创建一个节点，更新节点并检索一些数据。
 
-### 6.1。Java 包
+### 6.1. Java 包
 
 ZooKeeper Java 绑定主要由两个 Java 包组成:
 
 1.  `org.apache.zookeeper` **:** 定义了 ZooKeeper 客户端库的主类以及 ZooKeeper 事件类型和状态的许多静态定义
+
 2.  `org.apache.zookeeper.data`:它定义了与 ZNodes 相关的特征，比如访问控制列表(ACL)、id、stats 等等
 
 还有 ZooKeeper Java APIs 用于服务器实现，如`org.apache.zookeeper.server`、`org.apache.zookeeper.server.quorum`和`org.apache.zookeeper.server.upgrade`。
 
 然而，它们超出了本文的范围。
 
-### 6.2。连接到 ZooKeeper 实例
+### 6.2. 连接到 ZooKeeper 实例
 
 现在让我们创建`ZKConnection`类，它将用于连接和断开已经运行的 ZooKeeper:
 
@@ -145,7 +147,7 @@ public class ZKConnection {
 
 客户端应用程序可以调用 ZooKeeper APIs，只要它的会话 ID 保持有效。
 
-### 6.3。客户端操作
+### 6.3. 客户端操作
 
 我们现在将创建一个`ZKManager` 接口，它公开不同的操作，比如创建一个 ZNode 并保存一些数据，获取和更新 ZNode 数据:
 
@@ -215,7 +217,7 @@ public class ZKManagerImpl implements ZKManager {
 
 除此之外，为了更新数据，我们首先检查 ZNode 是否存在，并获取当前版本。然后，我们以 ZNode 的路径、数据和当前版本作为参数调用`setData`方法。只有当传递的版本与最新版本匹配时，ZooKeeper 才会更新数据。
 
-## 7。结论
+## 7. 结论
 
 在开发分布式应用程序时，Apache ZooKeeper 作为一个分布式协调服务发挥着关键作用。专门用于存储共享配置、选举主节点等用例。
 

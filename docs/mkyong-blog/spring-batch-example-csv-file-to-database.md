@@ -1,42 +1,43 @@
+
 # Spring 批处理示例–CSV 文件到 MySQL 数据库
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring-batch/spring-batch-example-csv-file-to-database/>
 
 在本教程中，我们将向您展示如何配置 Spring 批处理作业将数据从 CSV 文件读入数据库。
 
-使用的工具和库:
+使用的工具和库：
 
-1.  maven3
-2.  Eclipse 4.2
-3.  JDK 1.6
-4.  弹簧芯 3.2.2 .释放
-5.  春季批次 2.2.0 .发布
-6.  MySQL Java 驱动程序 5.1.25
+1. `maven3`
+2. `Eclipse 4.2`
+3. `JDK 1.6`
+4. `spring-core 3.2.2.RELEASE`
+5. `spring-batch 2.2.0.RELEASE`
+6. `MySQL Java 驱动程序 5.1.25`
 
-## 1.Java 项目
+## 1. Java 项目
 
 用 Maven 创建一个 Java 项目
 
 ```java
- $ mvn archetype:generate -DgroupId=com.mkyong -DartifactId=SpringBatchExample 
+$ mvn archetype:generate -DgroupId=com.mkyong -DartifactId=SpringBatchExample 
   -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false 
 ```
 
 转换成 Eclipse 项目，并将其导入 Eclipse IDE。
 
 ```java
- $ cd SpringBatchExample/
+$ cd SpringBatchExample/
 $ mvn eclipse:eclipse 
 ```
 
- ## 2.项目相关性
+## 2. 项目相关性
 
-在 *pom.xml* 中声明所有项目依赖关系。
+在`pom.xml`中声明所有项目依赖关系。
 
-pom.xml
+`pom.xml`
 
 ```java
- <project  
+<project  
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
 	http://maven.apache.org/maven-v4_0_0.xsd">
@@ -117,20 +118,20 @@ pom.xml
 </project> 
 ```
 
- ## 3.项目目录结构
+## 3. 项目目录结构
 
 审查最终的项目结构。
 
 ![spring-batch-csv-database-project-structure](img/701da17f6fbbb789f5f3bf0db2f636fc.png)
 
-## 4.CSV 文件
+## 4. CSV 文件
 
 这是资源文件夹中的 csv 文件。
 
-report.csv
+`report.csv`
 
 ```java
- Date,Impressions,Clicks,Earning
+Date,Impressions,Clicks,Earning
 6/1/13,"139,237",37,227.21
 6/2/13,"149,582",55,234.71
 6/3/13,"457,425",132,211.48
@@ -139,14 +140,14 @@ report.csv
 ...... 
 ```
 
-## 5.MySQL 数据库
+## 5. MySQL 数据库
 
 为 MySQL 数据库定义一个“数据源”bean。`jdbc:initialize-database`用于自动创建元数据表，Spring Batch 需要它来存储作业的细节。
 
-resources/spring/batch/config/database.xml
+`resources/spring/batch/config/database.xml`
 
 ```java
- <beans 
+<beans 
 	xmlns:jdbc="http://www.springframework.org/schema/jdbc" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
@@ -175,14 +176,14 @@ resources/spring/batch/config/database.xml
 </beans> 
 ```
 
-## 6.弹簧批芯设置
+## 6. 弹簧批芯设置
 
 定义`jobRepository`和`jobLauncher`。
 
-resources/spring/batch/config/context.xml
+`resources/spring/batch/config/context.xml`
 
 ```java
- <beans 
+<beans 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="
 	http://www.springframework.org/schema/beans 
@@ -212,16 +213,18 @@ resources/spring/batch/config/context.xml
 </beans> 
 ```
 
-## 7.春季批处理作业
+## 7. 春季批处理作业
 
 这是配置 Spring 批处理作业的主要 xml 文件。这个`job-report.xml`文件定义了一个任务来读取一个`report.csv`文件，将它与`report` plain pojo 进行匹配，并将数据写入 MySQL 数据库。
 
-看评论，应该不言自明。顺便说一下，记得手动创建“ **RAW_REPORT** 表。
+看评论，应该不言自明。顺便说一下，记得手动创建“`RAW_REPORT`”表。
 
-resources/spring/batch/jobs/job-report.xml
+`resources/spring/batch/jobs/job-report.xml`
+
+
 
 ```java
- <beans 
+<beans 
 	xmlns:batch="http://www.springframework.org/schema/batch" 
 	xmlns:task="http://www.springframework.org/schema/task"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -294,10 +297,10 @@ resources/spring/batch/jobs/job-report.xml
 </beans> 
 ```
 
-com/mkyong/model/Report.java
+`com/mkyong/model/Report.java`
 
 ```java
- package com.mkyong.model;
+package com.mkyong.model;
 
 public class Report {
 
@@ -312,16 +315,17 @@ public class Report {
 ```
 
 **Note**
+
 For detail explanation, please refer to this [Spring batch references](http://web.archive.org/web/20190214233038/http://static.springsource.org/spring-batch/reference/html/).
 
-## 8.运行它
+## 8. 运行它
 
-加载所有内容并运行它`jobLauncher`。这是启动和测试它的最简单的方法，但是，在现实生活中，您可能需要使用 Spring task、Quartz 等调度程序框架或“cron”command 等系统调度程序来启动它(我将在接下来的教程中向您展示)。
+加载所有内容并运行它`jobLauncher`。这是启动和测试它的最简单的方法，但是，在现实生活中，您可能需要使用 Spring task、Quartz 等调度程序框架或`cron`命令等系统调度程序来启动它（我将在接下来的教程中向您展示）。
 
-com/mkyong/App.java
+`com/mkyong/App.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecution;
@@ -360,7 +364,7 @@ public class App {
 } 
 ```
 
-输出。创建春季批量元数据表，`report.cvs`的内容被插入数据库表“ **RAW_REPORT** ”。
+输出。创建 Spring 批量元数据表，`report.cvs`的内容被插入数据库表`RAW_REPORT`。
 
 ![spring-batch-cvs-database-data](img/866ba84a6e44a12902b21d04aaddbd14.png)
 
@@ -372,16 +376,12 @@ Download it – [SpringBatch-CSV-Database-Example.zip](http://web.archive.org/we
 
 ## 参考
 
-1.  [Spring Batch–配置和运行作业](http://web.archive.org/web/20190214233038/http://static.springsource.org/spring-batch/reference/html/configureJob.html)
-2.  [Spring 批处理–元数据模式](http://web.archive.org/web/20190214233038/http://static.springsource.org/spring-batch/reference/html/metaDataSchema.html)
-3.  [JdbcBatchItemWriter JavaDoc](http://web.archive.org/web/20190214233038/http://static.springsource.org/spring-batch/apidocs/org/springframework/batch/item/database/JdbcBatchItemWriter.html)
-4.  [用 Maven 创建一个 Java 项目](http://web.archive.org/web/20190214233038/http://www.mkyong.com/maven/how-to-create-a-java-project-with-maven/)
+1. [Spring Batch–配置和运行作业](http://web.archive.org/web/20190214233038/http://static.springsource.org/spring-batch/reference/html/configureJob.html)
+
+2. [Spring 批处理–元数据模式](http://web.archive.org/web/20190214233038/http://static.springsource.org/spring-batch/reference/html/metaDataSchema.html)
+
+3. [JdbcBatchItemWriter JavaDoc](http://web.archive.org/web/20190214233038/http://static.springsource.org/spring-batch/apidocs/org/springframework/batch/item/database/JdbcBatchItemWriter.html)
+
+4. [用 Maven 创建一个 Java 项目](http://web.archive.org/web/20190214233038/http://www.mkyong.com/maven/how-to-create-a-java-project-with-maven/)
 
 [batch job](http://web.archive.org/web/20190214233038/http://www.mkyong.com/tag/batch-job/) [csv](http://web.archive.org/web/20190214233038/http://www.mkyong.com/tag/csv/) [spring batch](http://web.archive.org/web/20190214233038/http://www.mkyong.com/tag/spring-batch/)
-
-
-
-
-
-
-

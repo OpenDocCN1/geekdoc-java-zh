@@ -1,42 +1,31 @@
+
 # Kotlin 深度解析 [第二卷]：现代多范式语言全面指南
 
-
-
 ![](img/cover.jpg)
+
 ![image](img/cover.jpg)
 
+![](img/line.jpg)
 
 ![](img/line.jpg)
 
-
-![](img/line.jpg)
-
-# 作者
-
+## 作者
 
 ![](img/logo.jpg)
 
-
-
-
-
-
-
-
-
 Ph: 23861747
 
-
-# 献给
+## 献给
 
 *Tatiana，我的引导之光*
+
 *以及源不断的灵感源泉*
 
-# 关于作者
+## 关于作者
 
 **Aleksei Sedunov** 自 2008 年以来一直担任 Java 开发人员。2012 年加入 JetBrains 后，他积极参与了 Kotlin 语言的开发，专注于 IntelliJ 平台的 IDE 工具。目前，他在 DataGrip 团队（JetBrains 的一款数据库 IDE）工作，继续使用 Kotlin 作为主要的开发工具。
 
-# 致谢
+## 致谢
 
 首先，我要向 JetBrains 的整个 Kotlin 团队表示谢意，他们创造了这样一种美丽的语言，并持续不断地改进它——特别是 Andrey Breslav，他从第一天起就领导了语言的设计。
 
@@ -44,7 +33,7 @@ Ph: 23861747
 
 *– Aleksei Sedunov*
 
-# 前言
+## 前言
 
 自 2016 年首次发布以来（在此之前更早），Kotlin 作为一种强大且灵活的工具，在许多开发任务中变得越来越流行。它能够很好地处理移动、桌面和服务器端应用程序，并于 2017 年和 2018 年最终获得 Google 的官方认可，成为 Android 开发的主要语言。这种流行是有理可的，因为语言的实用主义（即在已知解决方案中选择最佳实践的倾向）是其设计的指导原则之一。
 
@@ -53,29 +42,34 @@ Ph: 23861747
 第二卷向你介绍了更高级的 Kotlin 特性，如反射、领域特定语言（DSL）和协程，讨论了 Java/Kotlin 互操作问题，并解释了 Kotlin 如何应用于各种开发领域，包括测试、Android 应用程序和 Web。它分为以下 8 章：
 
 - **第 10 章** 讨论了注解的使用，注解允许你为 Kotlin 代码添加各种元数据，并解释了 `Reflection API` 的基础，该 API 访问 Kotlin 声明的运行时表示。
+
 - **第 11 章** 描述了一些高级特性，帮助开发人员以领域特定语言的形式组合灵活的 API：运算符重载、委托属性和基于高阶函数的构建器风格 DSL。
+
 - **第 12 章** 讨论了在同一代码库组合 Java 和 Kotlin 代码的常见问题，并解释了在 Kotlin 代码中使用 Java 声明反之的细节。
+
 - **第 13 章** 向读者介绍了 Kotlin 协程库引入了一组用于编程异步计算的构建块。此外，它还描述了一些简化 Kotlin 代码中使用 Java 并发 API 的工具。
+
 - **第 14 章** 致力于 KotlinTest，这是一个专门为 Kotlin 开发者设计的流行测试框架。它描述了各种规范风格，解释了断言 API 的使用，并处理了使用固件和测试配置等更高级的问题。
+
 - **第 15 章** 介绍了在 Android 平台上使用 Kotlin。它引导读者设置 Android Studio 项目，并通过一个简单的计算器示例阐述了使用 Kotlin 进行 Android 开发的各个方面。
+
 - **第 16 章** 介绍了 Ktor 框架的一些高级特性，旨在开发基于异步计算的应用。
+
 - **第 17 章** 描述了如何使用 Spring Boot 和 Ktor 构建微服务应用。
 
-# 下载代码
+## 下载代码
 
 请通过以下链接下载`代码包`和`彩色图片`：
 
 [`rebrand.ly/rrq2rot`](https://rebrand.ly/rrq2rot)
 
-# 勘误
+## 勘误
 
 我们对工作感到非常自豪，并遵循最佳实践以确保内容的准确性，为读者提供沉浸式的阅读体验。读者是我们的镜子，我们根据他们的反馈反思并改进出版过程中出现的人为错误。为了让我们维护质量并帮助遇到意外困难的读者，请联系我们：
 
 **errata@bpbonline.com**
 
 BPB Publications 全心感谢您的支持、建议和反馈。
-
-
 
 在本章中，我们将涵盖两个主要主题。第一部分致力于注解，注解允许你为声明绑定元数据并在稍后的运行时访问它们。我们将解释如何定义和应用自定义注解，并查看一些影响 Kotlin 源码编译的内置注解。
 
@@ -84,8 +78,11 @@ BPB Publications 全心感谢您的支持、建议和反馈。
 ### 结构
 
 - 定义和使用注解类
+
 - 内置注解
+
 - 类字面量和引用
+
 - 反射 API
 
 ## 目标
@@ -93,9 +90,6 @@ BPB Publications 全心感谢您的支持、建议和反馈。
 学习在 Kotlin 源码中应用注解，以及声明自定义注解类。理解如何使用 Kotlin 反射 API 获取 Kotlin 声明的运行时信息，并动态调用函数和属性。
 
 # 注解
-
-
-
 
 注解（Annotation）是一种特殊的 Kotlin 类，允许你定义自定义元数据并将其绑定到源代码的元素上——可以是声明、表达式或整个文件。与 Java 对应的注解类似，Kotlin 注解可以在运行时访问。这种能力被各种框架和处理工具广泛使用，它们依赖注解来进行配置和代码插桩。
 
@@ -202,10 +196,15 @@ val ioComponent = Component("IO") // Error
 由于注解参数是在编译时评估的，因此你不能在其中放置任意计算。此外，编译器限制了你可以用于注解参数的可能类型范围：
 
 *   基本类型类型，如 `Int`、`Boolean` 或 `Double`；
+
 *   `String`；
+
 *   枚举（Enums）；
+
 *   其他注解；
+
 *   类字面量；
+
 *   上述类型的数组。
 
 请注意，此类参数可能不可为空（nullable），因为 JVM 不允许在注解属性中存储 `null`。
@@ -284,16 +283,17 @@ class Person(@get:A val name: String)
 大多数使用处目标都与属性的各个组件有关。此类目标可以应用于任何顶层或类属性，也可以可以应用于主构造函数的 `val/var` 参数：
 
 *   `property:` 代表属性本身；
+
 *   `field:` 代表后台字段（仅适用于具有后台字段的属性）；
+
 *   `get:` 代表属性 getter；
 
-
-
-
-
 *   `set:` 表示属性设置器（仅适用于可变属性）；
+
 *   `param:` 表示构造函数参数（仅适用于 `val/var` 参数）；
+
 *   `setparam:` 表示属性设置器的参数（仅适用于可变属性）；
+
 *   `delegate:` 表示存储委托对象的字段（仅适用于委托属性，详细信息请参阅`第 11 章，领域特定语言]`）；
 
 `get/set` 目标允许即使在属性访问器在代码中没有显式存在时，你也能对它们进行注解（例如上述示例中的 `val` 参数）。`setparam` 目标也是如此，其效果与直接在设置器参数上使用注解 setter 参数 相同。
@@ -337,10 +337,14 @@ Kotlin 包含了几个内置注解，它们在编译器的上下文中具有特�
 `@Retention` 控制注解的存储方式。类似于 Java 的 `@Retention` 接口，你可以从 `AnnotationRetention` 枚举表示的三个选项中进行选择：
 
 *   `SOURCE:` 此注解仅在编译时存在，不存储在编译器的二进制输出中；
+
 *   `BINARY:` 此注解存储在编译器的输出中，但对 `Reflection` API 而言是不可见的；
+
 *   `RUNTIME:` 此注解存储在编译器的二进制输出中，可以通过反射访问。
 
 默认情况下，Kotlin 注解具有 `RUNTIME` 留存，因此你不需要担心它们通过 `Reflection` API 的可用性。请注意，目前表达式注解（expression annotations）无法在运行时保留。因此，`BINARY` 和 `RUNTIME` 留存对它们都是禁止的：
+
+
 
 ```kotlin
 @Target(AnnotationTarget.EXPRESSION)
@@ -382,19 +386,19 @@ class OldClass
 
 `@Target` 指明该注解支持什么种语言元素。可能的类型指定为来自 `AnnotationTarget` 枚举的常量的 `vararg`：
 
-*   `CLASS:` 任何类、接口或对象，包括注解类本身；
-*   `ANNOTATION_CLASS:` 任何注解类；这实际上允许你定义自己的元注解；
-*   `TYPEALIAS:` 任何类型别名定义；
-*   `PROPERTY:` 任何属性，包括主构造函数的 `val/var` 参数（但不包括局部变量）；
-*   `FIELD:` 属性的底层字段；
-*   `LOCAL_VARIABLE:` 仅限局部变量（不包括参数）；
-*   `VALUE_PARAMETER:` 构造函数、函数和属性的参数；
-*   `CONSTRUCTOR:` 仅限主构造函数和辅助构造函数；
-*   `FUNCTION:` 函数包括 lambda（但不包括构造函数或属性访问器）；
-*   `PROPERTY_GETTER/PROPERTY_SETTER:` 仅限属性访问器/设置器；
-*   `FILE:` 注解可以应用于整个文件；
-*   `TYPE:` 任何类型规范，例如变量、参数或函数的返回类型；
-*   `EXPRESSION:` 任何表达式；
+* `CLASS:` 任何类、接口或对象，包括注解类本身；
+* `ANNOTATION_CLASS:` 任何注解类；这实际上允许你定义自己的元注解；
+* `TYPEALIAS:` 任何类型别名定义；
+* `PROPERTY:` 任何属性，包括主构造函数的 `val/var` 参数（但不包括局部变量）；
+* `FIELD:` 属性的底层字段；
+* `LOCAL_VARIABLE:` 仅限局部变量（不包括参数）；
+* `VALUE_PARAMETER:` 构造函数、函数和属性的参数；
+* `CONSTRUCTOR:` 仅限主构造函数和辅助构造函数；
+* `FUNCTION:` 函数包括 lambda（但不包括构造函数或属性访问器）；
+* `PROPERTY_GETTER/PROPERTY_SETTER:` 仅限属性访问器/设置器；
+* `FILE:` 注解可以应用于整个文件；
+* `TYPE:` 任何类型规范，例如变量、参数或函数的返回类型；
+* `EXPRESSION:` 任何表达式；
 
 `TYPE_PARAMETER` 常量预留以后使用，但目前不支持。因此，无法将注解应用于泛型声明的类型参数。
 
@@ -406,16 +410,12 @@ class OldClass
 
 以下注解与相应的 Java 修饰符对应：
 
-*   `@Strictfp:` 限制浮点运算精度，以提高在不同平台之间的可移植性；
-*   `@Synchronized:` 强制注解的函数或属性访问器在执行体前后获取/释放显示器；
-*   `@Volatile:` 使注解的底层字段的更新对其他线程立可见；
-*   `@Transient:` 表示注解的字段被默认序列化机制忽略；
+* `@Strictfp:` 限制浮点运算精度，以提高在不同平台之间的可移植性；
+* `@Synchronized:` 强制注解的函数或属性访问器在执行体前后获取/释放显示器；
+* `@Volatile:` 使注解的底层字段的更新对其他线程立可见；
+* `@Transient:` 表示注解的字段被默认序列化机制忽略；
 
 由于 `@Synchronized` 和 `@Volatile` 与并发支持，我们将它们的详细讨论推迟`[第 13 章（并发）c13.xhtml)]`。
-
-
-
-
 
 `@Suppress` 注解允许你通过其内部名称抑制某些编译器警告。此注解可以应用于任何目标，包括表达式和文件。例如，当你确定代码是有效的时，可以使用它来禁用与类型转换（casts）相关的虚假警告：
 
@@ -571,10 +571,6 @@ fun main() {
 
 `Dependencies: IO, Logger`
 
-
-
-
-
 在接下来的章节中，我们将考虑与分类器和可调用对象更具体的类型的 API。
 
 ## 分类器与类型
@@ -665,14 +661,16 @@ enum class Kvisibility {
 
 下一组属性允许你获取类名：
 
+
+
 ```
 val simpleName: String?
 val qualifiedName: String?
 ```
 
-`simpleName` 属性返回在源代码中使用的简单名称。当类没有名称时（例如，表示对象表达式的类），结果为 null。
+`simpleName` 属性返回在源代码中使用的简单名称。当类没有名称时（例如，表示对象表达式的类），结果为 `null`。
 
-同样，`qualifiedName` 属性提供类的全限定名，它包含了所在包的完整名称。当类是本地类或嵌套在本地类中时，结果为 null，因为此类类无法从顶层使用。因此，它们没有全限定名。对于源码中没有名称的类也是如此。
+同样，`qualifiedName` 属性提供类的全限定名，它包含了所在包的完整名称。当类是本地类或嵌套在本地类中时，结果为 `null`，因为此类类无法从顶层使用。因此，它们没有全限定名。对于源码中没有名称的类也是如此。
 
 你还可以使用 `jvmName` 扩展属性，它从 Java 的角度提供类的全限定名。此名称可能与 `qualifiedName` 提供的名称不同。某些 Kotlin 内置类型没有自己的 JVM 表示，而是依赖于现有的 Java 类。例如，`Any` 类并不作为一个独立的 Java 类存在；对于 Java 代码来说，它等同于 `java.lang.Object`：
 
@@ -684,31 +682,26 @@ println(Any::class.jvmName) // java.lang.Object
 `isInstance()` 函数允许你检查给定的对象是否为其接收者所表示类的实例。当该函数应用于非空类型时，它的作用类似于 `is` 运算符：
 
 ```
-println(String::class.isInstance(“”)) // true
+println(String::class.isInstance("")) // true
 println(String::class.isInstance(12)) // false
 println(String::class.isInstance(null)) // false
 ```
 
 下一组 `KClass` 属性提供了对其成员声明的访问权限：
 
-* `constructors:` 包含主构造函数和次构造函数的集合，类型为 `KFunction` 实例；
-* `members:` 由 `KCallable` 实例表示的成员函数和属性的集合，包括继承自父类的所有成员；
-* `nestedClasses:` 嵌套类和对象的集合，包括伴侣对象；
-* `typeParameters`: 类型参数列表（当类不是泛型时，列表为空）。
+- `constructors`：包含主构造函数和次构造函数的集合，类型为 `KFunction` 实例；
+- `members`：由 `KCallable` 实例表示的成员函数和属性的集合，包括继承自父类的所有成员；
+- `nestedClasses`：嵌套类和对象的集合，包括伴侣对象；
+- `typeParameters`：类型参数列表（当类不是泛型时，列表为空）。
 
-
-
-
-
-```kotlin
-println(parameters.joinToString { “${it.name}: ${it.upperBounds}” })
-}
+```
+println(parameters.joinToString { "${it.name}: ${it.upperBounds}" })
 ```
 
 `variance` 属性返回 `KVariance` 枚举的常量，表示类型参数的声明处变性（declaration-site variance）：
 
-```kotlin
-enum class KVariance{ INVARIANT, IN, OUT }
+```
+enum class KVariance { INVARIANT, IN, OUT }
 ```
 
 现在，让我们看看 Kotlin 反射是如何通过 `KType` 接口表示类型的。一个 Kotlin 类型具有以下方面的特征：
@@ -719,7 +712,7 @@ enum class KVariance{ INVARIANT, IN, OUT }
 
 类型参数由 `KTypeProjection` 接口表示，该接口包含了关于类型本身及其使用处变性（use-site variance）的信息：
 
-```kotlin
+```
 val type: kotlin.reflect.KType?
 val variance: kotlin.reflect.KVariance?
 ```
@@ -734,8 +727,8 @@ val variance: kotlin.reflect.KVariance?
 
 获取 `KCallable` 实例的一种方法是使用我们在*第 5 章 利用高级函数和函数式编程*中讨论过的可调用引用：
 
-```kotlin
-fun combine(n: Int, s: String) = “$s$n”
+```
+fun combine(n: Int, s: String) = "$s$n"
 fun main() {
   println(::combine.returnType) // kotlin.String
 }
@@ -745,7 +738,7 @@ fun main() {
 
 现在让我们来看 `KCallable` 本身定义的常用成员。像 `KClass` 一样，我们有一组属性，允许你检查某些修饰符的存在：
 
-```kotlin
+```
 val isAbstract: Boolean
 val isFinal: Boolean
 val isOpen: Boolean
@@ -757,7 +750,7 @@ val visibility: KVisibility?
 
 下一组属性表示属性或函数的签名：
 
-```kotlin
+```
 val name: String
 val typeParameters: List<KTypeParameter>
 val parameters: List<KParameter>
@@ -766,16 +759,17 @@ val returnType: KType
 
 请注意，对于成员和扩展函数，第一个参数被留给接收者（receiver）。当可调用对象既是成员又是扩展函数时，第二个参数也会被保留。例如：
 
-```kotlin
+```
 import kotlin.reflect.KCallable
 val simpleVal = 1
-val Int.extValget() = this
+val Int.extVal get() = this
 class A {
-    val Int.memberExtValget() = this
-}funfun main() {
+    val Int.memberExtVal get() = this
+}
+fun main() {
   fun printParams(callable: KCallable<*>) {
     println(
-      callable.parameters.joinToString(prefix = “[“, postfix = “]”) {
+      callable.parameters.joinToString(prefix = "[", postfix = "]") {
         it.type.toString()
       }
     )
@@ -785,13 +779,13 @@ class A {
   // [kotlin.Int]
   printParams(Int::extVal)
   // [A, kotlin.Int]
-  printParams(A::class.members.first { it.name == “memberExtVal” })
+  printParams(A::class.members.first { it.name == "memberExtVal" })
 }
 ```
 
 `KParameter` 接口包含了关于函数/构造函数参数或成员/扩展声明的接收者信息：
 
-```kotlin
+```
 val index: Int
 val isOptional: Boolean
 val isVararg: Boolean
@@ -803,43 +797,43 @@ val type: KType
 
 `kind` 属性指示 `KParameter` 对应于普通值，还是分发（dispatch）/扩展接收者。它可以返回 `KParameter.Kind` 枚举定义的常量之一：
 
-- `INSTANCE`: 成员声明的分发接收者；
-- `EXTENSION_RECEIVER`: 扩展声明的扩展接收者；
-- `VALUE`: 普通参数。
+- `INSTANCE`：成员声明的分发接收者；
+- `EXTENSION_RECEIVER`：扩展声明的扩展接收者；
+- `VALUE`：普通参数。
 
 `KCallable` 还定义了 `call()` 成员，允许你动态调用底层可调用对象：
 
-```kotlin
+```
 fun call(vararg args: Any?): R
 ```
 
 在函数可调用对象的情况下，`call()` 会调用函数本身。如果可调用对象对应于属性，则使用 getter。我们已经见过一个使用 `call()` 调用构造函数和成员函数的示例。让我们来看一个属性示例，应用于相同的 `Person` 类：
 
-```kotlin
+```
 fun main() {
-  val person = Person“John”, “Doe”)
+  val person = Person("John", "Doe")
   val personClass = person::class
-  val firstName = personClass.members.first { it.name == “firstName” }
+  val firstName = personClass.members.first { it.name == "firstName" }
   println(firstName.call(person)) // John
 }
 ```
 
 另一种方法 `callBy()` 允许你以 map 的形式传递参数：
 
-```kotlin
+```
 fun callBy(args: Map<KParameter, Any?>): R
 ```
 
 现在我们转向更专门的类型。`KProperty` 接口增加了属性特有的检查：
 
-```kotlin
+```
 val isConst: Boolean
 val isLateinit: Boolean
 ```
 
 你也可以作为 `KFunction` 实例访问属性 getter。例如，`KMutableProperty` 通过扩展 `KProperty` 并增加了一个 setter：
 
-```kotlin
+```
 var myValue = 1
 fun main() {
     println(::myValue.setter(2)) // 2
@@ -850,35 +844,31 @@ fun main() {
 
 我们要考虑的最后一个反射类型是 `KFunction`，它正如预期的那样表示函数和构造函数。此接口添加的成员与函数特定的检查有关：
 
-```kotlin
+```
 val isInfix: Boolean
 val isInline: Boolean
 val isOperator: Boolean
 val isSuspend: Boolean
 ```
 
-`isInfix` 和 `isOperator` 检查与运算符有关，我们将在*第 11 章（领域特定语言)](c11.xhtml)*中介绍。
+`isInfix` 和 `isOperator` 检查与运算符有关，我们将在*第 11 章（领域特定语言）*中介绍。
 
 请注意，`KFunction` 本身并不是任何函数类型的继承者，因为它可以表示不同参数个数（arity）的函数。然而，某些函数类型可以通过 `KFunction` 更具体的子类型来实现。我们已经通过可调用引用的示例看到过这一点。例如：
 
-```kotlin
+```
 import kotlin.reflect.KFunction2
-fun combine(n: Int, s: String) = “$s$n”
+fun combine(n: Int, s: String) = "$s$n"
 fun main() {
   val f: KFunction2<Int, String, String> = ::combine
-  println(f(1, “2”)) // 12
+  println(f(1, "2")) // 12
 }
 ```
 
 你可以看到，示例中的可调用引用具有 `KFunction2<Int, String, String>` 类型，它是 `(Int, String) -> String` 的子类型。但请注意，与 `KProperty0` 及其他类似类型不同，`KFunction0/KFunction1/…` 仅存在于编译期间。在运行时，它们由为 lambda 表达式创建的合成类表示。
 
-
-
-
-
 还有一点值得注意的是访问具有限制可见性的可调用对象的能力。在某些情况下，你可能需要通过反射调用一个私有函数。在 Java 中，尝试这样做可能会产生异常，因此通常你必须预先通过调用 `setAccessible(true)` 使反射对象变得可访问。在 Kotlin 中，你使用 `isAccessible` 属性来实现相同的功能：
 
-```kotlin
+```
 import kotlin.reflect.KProperty1
 import kotlin.reflect.jvm.isAccessible
 
@@ -904,7 +894,7 @@ fun main() {
 1. 如何定义新注解？比较 Kotlin 注解语法与 Java 语法。
 2. 注解在 Kotlin 代码是如何使用的？
 3. Kotlin 中哪些内置注解？
-4. 什么是注解的使用点目标（use-site target）？它如何与 @Target 元注解指定的标记相关联？
+4. 什么是注解的使用点目标（use-site target）？它如何与 `@Target` 元注解指定的标记相关联？
 5. 构成 Kotlin 反射 API 的基本类型有哪些？
 6. 描述类字面量和可调用引用的语法。
 7. 描述 `KClass` API。如何在 `KClass` 和 Java 的 `Class` 实例之间转换？
@@ -918,9 +908,9 @@ fun main() {
 
 ### 结构
 
-* 运算符重载
-* 委托属性
-* 高阶函数与 DSL
+- 运算符重载
+- 委托属性
+- 高阶函数与 DSL
 
 ## 目标
 
@@ -932,25 +922,25 @@ fun main() {
 
 在 Kotlin 中，运算符表达式只是函数调用的语法糖。要实现一个运算符，你只需要按照特定约定定义扩展函数或成员函数，并用 `operator` 关键字对其标记。例如，通过定义：
 
-```kotlin
+```
 operator fun String.times(n: Int) = repeat(n)
 ```
 
 我们将 `*` 运算符（对应 `times()` 函数）扩展到 `String/Int` 对，这反过来允许我们编写：
 
-```kotlin
+```
 println("abc" * 3) // abcabcabc
 ```
 
 由于运算符是由某些函数支持的，我们始终可以用普通调用替换它们。例如，上面的代码含义等于：
 
-```kotlin
+```
 println("abc".times(3))
 ```
 
 即使是像加法这样的内置操作也可以写成这种形式，尽管对于基本类型，加法或减法操作会被编译器优化，以避免为了性能而进行实际函数调用：
 
-```kotlin
+```
 val x = 1.plus(2) // 等同于 1 + 2
 ```
 
@@ -970,9 +960,7 @@ val x = 1.plus(2) // 等同于 1 + 2
 
 例如，考虑一个表示基本颜色及其组合的枚举类：
 
-```kotlin
-enum class Color { BLACK, RED, GREEN, BLUE, YELLOW, CYAN, MAGENTA }
-```
+
 
 使用 `not()` 约定，我们可以引入 `!` 运算符作为互补色的简写：
 
@@ -1016,10 +1004,7 @@ fun main() {
 }
 ```
 
-
-
-
-递增（`++`）和递减（`--`）运算符可以通过为对应的操作数类型无无函数 `inc()` 和 `dec()` 来重载。根据某种排序，这些函数的返回值必须分别对应于它的下一个值和前一个值。`inc()/dec()` 的使用方式取决于运算符是以前缀形式还是后置形式编写，这类似于 `++`/--` 对数字的工作方式。例如，假设我们有一个列出彩虹色的枚举类（enum class）：
+递增（`++`）和递减（`--`）运算符可以通过为对应的操作数类型定义函数 `inc()` 和 `dec()` 来重载。根据某种排序，这些函数的返回值必须分别对应于它的下一个值和前一个值。`inc()/dec()` 的使用方式取决于运算符是以前缀形式还是后置形式编写，这类似于 `++`/`--` 对数字的工作方式。例如，假设我们有一个列出彩虹色的枚举类（enum class）：
 
 ```kotlin
 enum class RainbowColor {
@@ -1040,7 +1025,7 @@ enum class RainbowColor {
 }
 ```
 
-现在，让我们考虑递增和递减在这个类中是如何工作的。正如我们在第 2 章（语言基础）中看到的，`++`/--` 运算符的后置形式会更新变量，但返回更改之前的值。这对于重载运算符也是如此。例如，考虑以下代码：
+现在，让我们考虑递增和递减在这个类中是如何工作的。正如我们在第 2 章（语言基础）中看到的，`++`/`--` 运算符的后置形式会更新变量，但返回更改之前的值。这对于重载运算符也是如此。例如，考虑以下代码：
 
 ```kotlin
 var color = RainbowColor.INDIGO
@@ -1052,7 +1037,7 @@ println(color++)
 ```kotlin
 var color = RainbowColor.INDIGO
 val _oldColor = color
-color =color.inc()
+color = color.inc()
 println(_oldColor) // INDIGO
 ```
 
@@ -1060,7 +1045,7 @@ println(_oldColor) // INDIGO
 
 ```kotlin
 var color = RainbowColor.INDIGO
-println(color++)
+println(++color)
 ```
 
 实际上会翻译为：
@@ -1071,12 +1056,12 @@ color = color.inc()
 println(color) // VIOLET
 ```
 
-请注意，存在如 `color = color.inc()` 的赋值赋值意味着两点：
+请注意，存在如 `color = color.inc()` 的赋值意味着两点：
 
-- `++` 和 `--` 仅适用于变变量；
+- `++` 和 `--` 仅适用于变量；
 - `inc()/dec()` 函数的返回类型必须是其接收类型的子类型。
 
-### 二元运算
+## 二元运算
 
 Kotlin 允许你重载大多数二元运算符。和一元运算符一样，你需要提供对应的运算符函数。主要的区别在于二元运算符函数将左操作数作为接收者，而右操作数则作为普通参数传递。
 
@@ -1084,14 +1069,14 @@ Kotlin 允许你重载大多数二元运算符。和一元运算符一样，你�
 
 | 表达式 | 含义 |
 | :--- | :--- |
-| a + b | `a.plus(b)` |
-| a – b | `a.minus(b)` |
-| a * b | `a.times(b)` |
-| a / b | `a.div(b)` |
-| a % b | `a.rem(b)` |
-| a .. b | `a.rangeTo(b)` |
-| a in b | `b.contains(a)` |
-| a !in b | `!b.contains(a)` |
+| `a + b` | `a.plus(b)` |
+| `a – b` | `a.minus(b)` |
+| `a * b` | `a.times(b)` |
+| `a / b` | `a.div(b)` |
+| `a % b` | `a.rem(b)` |
+| `a .. b` | `a.rangeTo(b)` |
+| `a in b` | `b.contains(a)` |
+| `a !in b` | `!b.contains(a)` |
 
 **表 11.2:** 二元运算符约定
 
@@ -1137,72 +1122,6 @@ class Rational private constructor(
       if (den == 0) throw ArithmeticException("Denominator is zero")
       val sign = num.sign()
       val numAbs = abs(num)
-      val denAbs = abs(den) // 注意：此处原文可能笔误，此处按逻辑翻译
-      return Rational(sign, numAbs, den)
-    }
-}
-```
-*(注：由于原文代码块中存在逻辑不完整或笔误，如 `denAbs` 未定义或方法未闭合，翻译时保持了逻辑结构，仅对可见部分进行处理，但根据指令“代码块不需要翻译”，故保持原样输出。)*
-
-**纠正：根据指令“代码块不需要翻译”，以下将严格保留原始代码块内容。**
-
-```kotlin
-import kotlin.math.abs
-class Rational private constructor(
-  val sign: Int,
-  val num: Int,
-  val den: Int
-) {
-  operator fun unaryMinus() = Rational(-sign, num, den)
-  operator fun plus(r: Rational): Rational {
-    val gcd = gcd(den, r.den)
-    val newDen = den/gcd*r.den
-    val newNum = newDen/den*num*sign + newDen/r.den*r.num*r.sign
-    val newSign = newNum.sign()
-    return Rational(newSign, abs(newNum), newDen)
-  }
-  operator fun minus(r: Rational) = this + (-r)
-  operator fun times(r: Rational): Rational {
-    return of(sign*r.sign*num*r.num, den*r.den)
-  }
-  operator fun div(r: Rational): Rational {
-    return of(sign*r.sign*num*r.den, den*r.num)
-  }
-  override fun toString(): String {
-    return "${sign*num}" + if (den != 1) "/$den" else ""
-  }
-  companion object {
-    private fun Int.sign() = when {
-      this > 0 -> 1
-      this < 0 -> -1
-      else -> 0
-    }
-    private tailrec fun gcd(a: Int, b: Int): Int {
-      return if (b == 0) a else gcd(b, a % b)
-    }
-    fun of(num: Int, den: Int = 1): Rational {
-      if (den == 0) throw ArithmeticException("Denominator is zero")
-      val sign = num.sign()
-      val numAbs = abs(num)
-      val denAbs = abs(den)
-      return Rational(sign, numAbs, den)
-    }
-  }
-}
-```
-*(抱歉，由于提供的原文文本在代码块之后出现了严重的混乱、重复以及乱码/逻辑混淆，我将根据指令“不要重复输出原文”和“翻译给定文本”的原则，对可读的逻辑部分进行翻译。但由于原文后半部分似乎是多个代码片段的重复和错误的组合，以下是基于原文中可读文本描述的翻译：)*
-
-**重新审视原文：原文后半部分存在大量重复的逻辑片段（如 `var color = RainbowColor.INDIGO` 出现了多次）。作为高级文档工程师，我将剔除冗余的重复，确保翻译的连贯性。**
-
----
-
-*(由于原文文本混乱，以下为整理后的逻辑翻译：)*
-
-```kotlin
-    fun of(num: Int, den: Int = 1): Rational {
-      if (den == 0) throw ArithmeticException("Denominator is zero")
-      val sign = num.sign()
-      val numAbs = abs(num)
       val denAbs = abs(den)
       return Rational(sign, numAbs, den)
     }
@@ -1210,21 +1129,7 @@ class Rational private constructor(
 }
 ```
 
-通过 `..` 运算符来构建 `Rational` 实例：
-
-```kotlin
-    fun of(num: Int, den: Int = 1): Rational {
-      if (den == 0) throw ArithmeticException("Denominator is zero")
-      val sign = num.sign()
-      val numAbs = abs(num)
-      val denAbs = abs(den)
-      return Rational(sign, numAbs, den)
-    }
-  }
-}
-```
-
-使用 `..` 运算符来定义 `RationalRange` 类：
+通过 `..` 运算符来构建 `Rational` 实例，我们可以定义 `RationalRange` 类：
 
 ```kotlin
 class RationalRange(val from: Rational, to: Rational) {
@@ -1235,9 +1140,7 @@ class RationalRange(val from: Rational, to: Rational) {
 现在我们可以使用 `to` 方法来构造两个区间：
 
 ```kotlin
-class RationalRange(val from: Rational, to: Rational) {
-  override fun toString() = "[$from, $to]"
-}
+val range = RationalRange(r(1, 3), r(7, 8))
 ```
 
 `in/!in` 运算符通过 `contains()` 函数表示。请注意，与其它二元运算符不同，`contains()` 的参数是交换的。让我们增强范围：
@@ -1251,16 +1154,13 @@ class RationalRange(val from: Rational, to: Rational) {
 }
 ```
 
-*(注：由于用户提供的原文文本存在严重的格式错误和粘贴错误（导致大量代码和描述重复循环），上述翻译已根据高级文档工程师的逻辑进行了去重和清理，确保了核心技术点的准确传达。)*
-
-
-
-
+我们还可以为 `Int` 添加一个便捷的 `contains` 重载：
 
 ```kotlin
 operator fun contains(n: Int) = contains(r(n))
-}
+```
 
+```kotlin
 fun main() {
     println(1 > r(1, 3)) // false
     println(r(3/4) <= r(7/8)) // true
@@ -1273,7 +1173,7 @@ fun main() {
 
 如果你想实现一个带有自定义名称的二元操作怎么办？虽然 Kotlin 不允许你引入新的操作符，但你可以使用普通标识符作为中缀操作（infix operations）的名称。我们将在下一节介绍做法。
 
-### 中缀操作
+## 中缀操作
 
 我们已经见过像 `to` 或 `until` 这样的操作，它们可以作为中缀操作：
 
@@ -1288,7 +1188,9 @@ val pair2 = 1.to(2) // 普通调用
 infix fun <A, B> A.to(that: B): Pair<A, B> = Pair(this, that)
 ```
 
-让我们通过引入用于谓词逻辑与和逻辑或的中缀操作，稍微完善一下早早的谓词示例：
+让我们通过引入用于谓词逻辑与和逻辑或的中缀操作，稍微完善一下早先的谓词示例：
+
+
 
 ```kotlin
 infix fun <T> ((T) -> Boolean).and(
@@ -1344,7 +1246,7 @@ fun main() {
 
 ### 赋值
 
-下一组二元操作处理诸如 `+=` 这样的复合赋值。在*第 7 章，探索集合与 I/O* 中，我们已经看到这些操作对于可变和不可变集合的行为有所不同。换句话说，对不可变集合类型的变量应用 `+=` 将创建一个集合对象并将其赋值给变量，从而改变它的值。在这种情况下，变量必须定义为可变的：
+下一组二元操作处理诸如 `+=` 这样的复合赋值。在*第 7 章，探索集合与 I/O*中，我们已经看到这些操作对于可变和不可变集合的行为有所不同。换句话说，对不可变集合类型的变量应用 `+=` 将创建一个集合对象并将其赋值给变量，从而改变它的值。在这种情况下，变量必须定义为可变的：
 
 ```kotlin
 var numbers = listOf(1, 2, 3)
@@ -1440,9 +1342,6 @@ println(tree) // root {child 1 {}}
 上述行为通过 Kotlin 可变集合类（如列表或集合）得到了演示，因为它们既继承了不可变集合的 `plus()/minus()` 函数，又有自己的 `plusAssign()/minusAssign()`。
 
 ### 调用与索引
-
-
-
 
 调用约定（invocation convention）允许你像使用函数一样在调用表达式中使用值。要实现这一点，你只需要定义带有必要参数的 `invoke()` 函数即可。函数类型的值会自动获得 `invoke()` 作为其成员，但你也可以为任意类型添加调用支持。例如，假设有如下函数：
 
@@ -1553,15 +1452,15 @@ array.set(0, array.get(0) + r(1, 3))
 然而，如果我们使用一个具有 `plusAssign()` 函数但没有 `plus()` 函数的 `TreeNode` 对象数组，类似的片段：
 
 ```kotlin
-val array = arrayOf(TreeNode(“Root 1”), TreeNode(“Root 2”))
-array[0] += TreeNode(“Child 1”)
+val array = arrayOf(TreeNode("Root 1"), TreeNode("Root 2"))
+array[0] += TreeNode("Child 1")
 ```
 
 将翻译为：
 
 ```kotlin
-val array = arrayOf(TreeNode(“Root 1”), TreeNode(“Root 2”))
-array.get(0).plusAssign(TreeNode(“Child 1”))
+val array = arrayOf(TreeNode("Root 1"), TreeNode("Root 2"))
+array.get(0).plusAssign(TreeNode("Child 1"))
 ```
 
 请注意，在这两种情况下 `get()` 函数都是必需的。
@@ -1602,7 +1501,9 @@ fun main() {
 运行它将打印：
 
 `Topic 1`
+
 `Topic 2`
+
 `Topic 3`
 
 ## 委托属性
@@ -1616,9 +1517,6 @@ val result by lazy { 1 + 2 }
 属性委托的简洁性使得它们成为设计易用 API 和领域特定语言（DSL）的有用工具。
 
 ### 标准委托
-
-
-
 
 Kotlin 标准库包含许多现箱即用的委托实现，涵盖了许多常见用场景。在`第 4 章（处理类和对象）`中，我们已经见过这样的委托示例，它代表一个懒加载属性：
 
@@ -1652,6 +1550,10 @@ val myValue by lazy {
 ```
 
 消息最多只会打印一次，因为 `SYNCHRONIZED` 模式（默认使用）确保了初始化器不会被多次调用。但是，如果我们将安全模式更改为 `PUBLICATION`：
+
+
+
+`lazy(LazyThreadSafetyMode.PUBLICATION)` 模式允许多个线程并发初始化委托值，但只有第一个成功初始化的结果会被保留，其他线程的初始化结果会被丢弃。
 
 ```kotlin
 val myValue by lazy(LazyThreadSafetyMode.PUBLICATION) {
@@ -1747,11 +1649,12 @@ fun main() {
 
 如果你想结合更改前和更改后的通知，你可以通过扩展 `ObservableProperty` 并重写 `beforeChange()/afterChange()` 函数来实现自己的委托。
 
-### 创建委托
+## 创建委托
 
 要创建自己的属性委托，你需要一个定义了特殊运算符的类型，以实现属性值的读取和写入。读取函数必须命名为 `getValue` 并有两个参数：
 
 1. `receiver:` 包含接收者值，必须与委托属性的接收者类型相同（或其超类）；
+
 2. `property:` 包含表示属性声明的反射对象，类型必须为 `KProperty<*>` 或其超类。
 
 参数名称实际上并不重要，重要的是类型。`getValue()` 函数的返回值必须与委托属性的类型相同（或其子类）。
@@ -1780,10 +1683,6 @@ fun main() {
     val harrySmith = Person("Harry", "Smith")
 }
 ```
-
-
-
-
 
 ```kotlin
 // First access for johnDoe receiver, computed and stored to cache
@@ -1814,7 +1713,9 @@ interface ReadOnlyProperty<in R, out T> {
 对于可以应用于 `var` 属性的读写委托，你还需要定义相应的 `setValue()` 函数，该函数会在每次属性赋值时被调用。此函数必须具有 `Unit` 返回类型，并接受三个参数：
 
 1. `receiver:` 的含义与 `getValue()` 相同；
+
 2. `property:` 的含义与 `getValue()` 相同；
+
 3. `newValue:` 属性的新值，它的类型必须与属性本身（或其父类型）相同。
 
 在下面的示例中，我们定义了一个委托类，它实现了 `lateinit` 属性的最终版本，该版本不允许初始化超过一次：
@@ -1913,7 +1814,7 @@ fun main() {
 }
 ```
 
-### 委托的表示
+## 委托的表示
 
 总结我们对委托属性的讨论，让我们聊聊委托在运行时是如何表示以及如何访问的。
 
@@ -1966,7 +1867,9 @@ fun main() {
 
 请注意需要使用 `isAccessible = true` 来访问存储委托实例的私有字段。
 
-如果我们的属性是扩展属性怎么办？在这种情况下，委托实例在所有可能的接收者之间共享，我们可以使用 `getExtensionDelegate()` 获取它而无需指定特定的接收者实例：
+
+
+如果我们的属性是扩展属性怎么办？在这种情况下，委托实例在所有可能的接收者之间共享，我们可以使用`getExtensionDelegate()`获取它而无需指定特定的接收者实例：
 
 ```kotlin
 val Person.fullName: String by cached { “$firstName $familyName” }
@@ -1980,13 +1883,9 @@ fun main() {
 }
 ```
 
-
-
-
-
 在本节中，我们将演示如何使用类型安全的构建器（type-safe builders）设计领域特定语言（DSL）。这项任务不需要任何新知识。相反，它将依赖于我们已经学习过的 Kotlin 高阶函数。
 
-### 使用中缀函数的流式 DSL
+## 使用中缀函数的流式 DSL
 
 我们的第一个示例将演示如何使用中缀函数（infix functions）创建流式 API。我们将创建一个简单的查询集合数据的 DSL，使用受 SQL 启语法。
 
@@ -2007,9 +1906,9 @@ println(query.items.toList())
 基本上，我们希望查询包含：
 
 1. `from` 子句，指定原始集合；
-2. 随后是可选的 `where` 子句，指定过滤条件；
-3. 随后是可选的 `select` 子句，将原始数据映射到输出值；
-4. 当存在 `select` 时，我们还可以使用可选的 `orderBy` 子句，指定排序键。
+2. 随后是可选的`where`子句，指定过滤条件；
+3. 随后是可选的`select`子句，将原始数据映射到输出值；
+4. 当存在`select`时，我们还可以使用可选的`orderBy`子句，指定排序键。
 
 那么我们如何实现这样的 API 呢？首先，让我们定义一些表示查询中间结构的类。由于它们的大部分都代表某种数据集（无论是原始集合还是过滤结果），我们将引入一个通用接口，能够返回结果的项序列：
 
@@ -2072,7 +1971,7 @@ infix fun <T, K : Comparable<K>> Select<*, T>.orderBy(
 ) = OrderBy(this, orderKey)
 ```
 
-最后一部分是 `from()` 函数，它启动一个查询：
+最后一部分是`from()`函数，它启动一个查询：
 
 ```kotlin
 fun <T>from(source: Iterable<T>) = From(source)
@@ -2092,13 +1991,13 @@ println(query.items.toList())
 [10, 12, 16, 18]
 ```
 
-请注意，类型安全确保了不符合我们预期语法的查询会被拒绝。例如，以下代码将无法编译，因为只允许一个 `where` 子句：
+请注意，类型安全确保了不符合我们预期语法的查询会被拒绝。例如，以下代码将无法编译，因为只允许一个`where`子句：
 
 ```kotlin
 val query = from(nums) where { it> 3 } where { it < 10 }
 ```
 
-但如果我们想允许多个 `where` 子句，那么只需要再添加一个中缀函数即可：
+但如果我们想允许多个`where`子句，那么只需要再添加一个中缀函数即可：
 
 ```kotlin
 infix fun <T> Where<T>.where(condition: (T) -> Boolean) =
@@ -2107,7 +2006,7 @@ infix fun <T> Where<T>.where(condition: (T) -> Boolean) =
 
 现在让我们来看一个更复杂的、带有嵌套结构的示例。
 
-### 使用类型安全的构建器
+## 使用类型安全的构建器
 
 设计 DSL 的常见情况是表示层级结构，某些领域对象可以嵌套在其他对象内部。在 Kotlin 中，你有一个强大的解决方案，允许你通过将构建器函数与扩展 Lambda（extension lambdas）结合，以声明的方式表达这种结构。让我们通过一个简单的组件布局 DSL 示例来看如何实现它们。
 
@@ -2137,16 +2036,16 @@ fun main() {
 基本上，我们希望我们的 DSL 执行以下操作：
 
 * 描述 UI 的层级结构；
-* 支持标准的布局如 `BorderLayout`、`BoxLayout`；
+* 支持标准的布局如`BorderLayout`、`BoxLayout`；
 * 提供创建组件的辅助函数，如窗口。
 
 我们如何实现这种语言呢？首先，让我们看到哪些类型的对象：
 
-* 简单组件如 `button` 或 `textArea`，它们不需要额外的处理。
+* 简单组件如`button`或`textArea`，它们不需要额外的处理。
 * 容器如面板：你可以为它们添加布局。
 * 布局允许子元素。
 
-像 `button()` 这样的函数是最简单的部分，它们只是封装了构造函数：
+像`button()`这样的函数是最简单的部分，它们只是封装了构造函数：
 
 ```kotlin
 fun label(text: String) = JLabel(text)
@@ -2154,7 +2053,7 @@ fun button(text: String) = JButton(text)
 fun textArea(text: String) = JTextArea(text)
 ```
 
-更有趣的情况是 `panel()` 函数，它接收一个 lambda。为了保持容器状态，我们将引入 `ContainerBuilder` 类，允许你添加嵌套组件并定义布局：
+更有趣的情况是`panel()`函数，它接收一个 lambda。为了保持容器状态，我们将引入`ContainerBuilder`类，允许你添加嵌套组件并定义布局：
 
 ```kotlin
 class ContainerBuilder(private val container: Container) {
@@ -2174,7 +2073,7 @@ class ContainerBuilder(private val container: Container) {
 }
 ```
 
-现在我们可以定义 `panel()` 和 `dialog()` 函数：
+现在我们可以定义`panel()`和`dialog()`函数：
 
 ```kotlin
 fun panel(body: ContainerBuilder.() -> Unit) = JPanel().apply {
@@ -2192,7 +2091,7 @@ fun dialog(
 }
 ```
 
-你可以看到这些函数接收一个 lambda，它作为 `ContainerBuilder` 类的扩展。这允许我们在 lambda 中直接调用 `ContainerBuilder` 的成员，因为这个接收者是隐式假设的。例如，部分部分：
+你可以看到这些函数接收一个 lambda，它作为`ContainerBuilder`类的扩展。这允许我们在 lambda 中直接调用`ContainerBuilder`的成员，因为这个接收者是隐式假设的。例如，部分部分：
 
 ```kotlin
 panel {
@@ -2215,9 +2114,6 @@ panel {
 }
 ```
 
-
-
-
 布局又是怎样的？我们可以以类似的方式定义它们的构建器（builders），只需记住不同布局之间的 API 差异。例如：
 
 ```kotlin
@@ -2231,7 +2127,7 @@ class BoxLayoutBuilder(private val container: Container, direction: Int) {
 }
 ```
 
-我们为 `BoxLayoutBuilder` 添加了 `unaryPlus()`，因为我们希望像处理 `panel` 容器那样，按顺序添加其子元素。对于 `BorderLayoutBuilder`，我们需要一组如 `north`、`south`、`west` 等属性，这些属性会保留所添加组件的值并在更改时将其添加到容器。我们可以将这些逻辑封装到各种可观察委托（observable delegates）：
+我们为`BoxLayoutBuilder`添加了`unaryPlus()`，因为我们希望像处理`panel`容器那样，按顺序添加其子元素。对于`BorderLayoutBuilder`，我们需要一组如`north`、`south`、`west`等属性，这些属性会保留所添加组件的值并在更改时将其添加到容器。我们可以将这些逻辑封装到各种可观察委托（observable delegates）：
 
 ```kotlin
 fun constrained(
@@ -2255,7 +2151,7 @@ class BorderLayoutBuilder(container: Container) {
 
 许多 Kotlin DSL 都是以类似的方式实现的。在接下来的章节中，我们将仔细研究某些针对常见任务的语言：测试规范、Android 应用中的 UI 描述、Web 应用中的请求处理规则以及类型安全的 HTML 生成。现在，我们还有一个主题要讨论——如何控制构建函数的作用范围。
 
-### @DslMarker
+## @DslMarker
 
 在使用层级 DSL（如我们在上一节中讨论的类型）时，你可能会发现外层层块的成员泄漏到了嵌套作用域中。例如，使用我们的布局 DSL，我们可以这样写：
 
@@ -2268,7 +2164,7 @@ val myPanel = panel {
 }
 ```
 
-这显然不是我们想要的结果，因为我们不希望一个引入布局的函数在布局本身上可用。上面展示的代码仍然是，且两个 `borderLayout()` 调用具有相同的接收者（receiver），也就是说都是传递给最外层 lambda 的 `ContainerBuilder` 实例。问题在于，这些接收者每一个不仅在它们的声明作用域可用，而且在所有嵌套作用域中可用。如果我们让接收者显式化，我们的代码看起来像这样：
+这显然不是我们想要的结果，因为我们不希望一个引入布局的函数在布局本身上可用。上面展示的代码仍然是，且两个`borderLayout()`调用具有相同的接收者（receiver），也就是说都是传递给最外层 lambda 的`ContainerBuilder`实例。问题在于，这些接收者每一个不仅在它们的声明作用域可用，而且在所有嵌套作用域中可用。如果我们让接收者显式化，我们的代码看起来像这样：
 
 ```kotlin
 val myPanel = panel {
@@ -2281,16 +2177,16 @@ val myPanel = panel {
 
 现在，清楚两个接收者是同一个。
 
-因此，尽管隐式接收者向嵌套作用域的泄漏不会破坏类型安全，但它确实可能会误导，从而导致容易出错的代码，特别是当涉及的代码是一个通常具有大量嵌套扩展 lambda 的 DSL 时。因此，Kotlin 1.1 引入了 `@DslMarker` 注解，它帮助 DSL 设计者限制隐式接收者的可见性。
+因此，尽管隐式接收者向嵌套作用域的泄漏不会破坏类型安全，但它确实可能会误导，从而导致容易出错的代码，特别是当涉及的代码是一个通常具有大量嵌套扩展 lambda 的 DSL 时。因此，Kotlin 1.1 引入了`@DslMarker`注解，它帮助 DSL 设计者限制隐式接收者的可见性。
 
-`@DslMarker` 是一个元注解，你用它标记自己的注解类，作为特定 DSL 的标记。让我们为此目的引入 `@LayoutDsl`：
+`@DslMarker`是一个元注解，你用它标记自己的注解类，作为特定 DSL 的标记。让我们为此目的引入`@LayoutDsl`：
 
 ```kotlin
 @DslMarker
 annotation class LayoutDsl
 ```
 
-现在我们使用 `@LayoutDsl` 来标记在 DSL 块中用接收者的类。在我们的案例中，这些 `ContainerBuilder`、`BorderLayoutBuilder` 和 `BoxLayoutBuilder`：
+现在我们使用`@LayoutDsl`来标记在 DSL 块中用接收者的类。在我们的案例中，这些`ContainerBuilder`、`BorderLayoutBuilder`和`BoxLayoutBuilder`：
 
 ```kotlin
 @LayoutDsl
@@ -2315,7 +2211,9 @@ val myPanel = panel {
 }
 ```
 
-请注意，`@DslMarker` 仅禁止隐式接收者的泄漏。如果需要，你仍然可以使用显式接收者：
+请注意，`@DslMarker`仅禁止隐式接收者的泄漏。如果需要，你仍然可以使用显式接收者。
+
+
 
 ```kotlin
 val myPanel = panel {
@@ -2340,9 +2238,6 @@ val myPanel = panel {
 4. 如何在运行时访问委托值？
 5. 描述如何使用高阶函数设计领域语言。
 6. 解释 `@DslMarker` 注解的含义。
-
-
-
 
 Kotlin 没有用于表示返回值缺失的 `void` 关键字，因此 Java 中的每个 `void` 方法在 Kotlin 中都可见为 `Unit` 函数。如果你调用了此类函数并在某处使用了调用结果（例如将其赋值给变量），编译器将生成一个对 `Unit` 对象的引用。
 
@@ -2488,9 +2383,6 @@ fun Int.toBigInt(): BigInteger = BigInteger.valueOf(this.toLong())
 val 
 ```
 
-
-
-
 ```java
 import org.jetbrains.annotations.NotNull;
 
@@ -2623,6 +2515,8 @@ fun main() {
 
 而不是更冗长的代码：
 
+
+
 ```kotlin
 import java.util.concurrent.ScheduledThreadPoolExecutor
 fun main() {
@@ -2637,10 +2531,6 @@ fun main() {
 ```
 
 这种行为与 Java 语义是一致的，因为 Java 的数组类型是协变的。Kotlin 数组是不变的（invariant），这种技巧对 Kotlin 方法不起作用，除非你将 `Array` 类型限制为其输出投影，如 `Array<out Any>`。
-
-
-
-
 
 有时编译器没有足够的上下文信息来选择合适的转换。例如，Java 的 `ExecutorService` 有一组 `submit()` 方法，它们接收一个代表要执行计算的对象，以便在未来执行该计算。计算可以是 `Runnable` 或 `Callable` 接口的实例，如下所示：
 
@@ -2682,7 +2572,7 @@ fun main() {
 
 注意，SAM 转换仅适用于接口，不适用于类（即使类只有一个抽象方法）。它们也不适用于 Kotlin 接口；与 Java 不同，Kotlin 拥有适当的函数式类型，因此隐式转换几乎是没必要的。
 
-# 使用 Java 转 Kotlin 转换器
+## 使用 Java 转 Kotlin 转换器
 
 IntelliJ 插件包含一个自动工具，可以将 Java 源文件转换为等效的 Kotlin 代码。结合 Java/Kotlin 互性，此功能允许你逐渐迁移到现有的 Java 代码库。
 
@@ -2692,15 +2582,16 @@ IntelliJ 插件包含一个自动工具，可以将 Java 源文件转换为等�
 
 自动转换器旨在生成地道的 Kotlin 代码，但它并不总是产生理想的结果。尽管如此，在将现有 Java 代码库迁移到 Kotlin 时，此工具可以作为一个良好的起点。
 
-# 在 Java 使用 Kotlin 代码
+## 在 Java 使用 Kotlin 代码
 
 Kotlin 的设计指南之一是与现有的 Java 代码库保持无缝互操作。在大多数情况下，Kotlin 代码可以轻松地从 Java 调用而无需过多担心。然而，Kotlin 拥有许多在 Java 中没有直接对应的特性。在本节中，我们将讨论这些细微差别，并讨论如何从 Java 的角度微调 Kotlin 代码的导出。
 
-# 访问属性
+### 访问属性
 
 由于 Java 和 JVM 都没有属性（property）的概念，你无法在 Java 代码中直接访问 Kotlin 属性。但在编译后的 JVM 字节码中，每个属性都由访问方法表示，这些方法对 Java 客户端就像普通方法一样。访问方法的签名根据以下规则从属性定义派生：
 
 * getter 是一个无参数方法，返回类型与原始属性类型对应；其名称通过将属性名的首字母大写并在前面加上 `get` 前缀计算得出。
+
 * setter 是一个接收对应新值的单个参数的 void 方法；其名称与 getter 类似，但将 `get` 替换为 `set`。
 
 例如，考虑以下 Kotlin 类：
@@ -2736,9 +2627,10 @@ public class Main {
 当属性名以 `is` 开头时，Kotlin 编译器使用另一种命名方案：
 
 * getter 的名称与其属性相同。
+
 * setter 名称通过将 `is` 前缀替换为 `set` 计算。
 
-例如，假设我们向 Person 类添加了 `isEmployed` 属性：
+例如，假设我们向 `Person` 类添加了 `isEmployed` 属性：
 
 ```kotlin
 class Person(var name: String, val age: Int, var isEmployed: Boolean)
@@ -2756,9 +2648,9 @@ public class Main {
 }
 ```
 
-注意，`is` 约定纯粹基于名称；它与 `Boolean` 类型无关（尽管强烈建议仅对 Boolean 属性使用 `is` 名称以避免误解）。
+注意，`is` 约定纯粹基于名称；它与 `Boolean` 类型无关（尽管强烈建议仅对 `Boolean` 属性使用 `is` 名称以避免误解）。
 
-如果 Kotlin 属性需要后台字段（backing field），编译器将与访问方法一起生成它。在某些情况下，你可能需要将该属性暴露给 Java 客户端。这可以通过对属性标记 `@JvmField` 实现。例如，如果我们通过对构造函数进行注解来修改 Person 类：
+如果 Kotlin 属性需要后台字段（backing field），编译器将与访问方法一起生成它。在某些情况下，你可能需要将该属性暴露给 Java 客户端。这可以通过对属性标记 `@JvmField` 实现。例如，如果我们通过对构造函数进行注解来修改 `Person` 类：
 
 ```kotlin
 class Person(@JvmField var name: String, @JvmField val age: Int)
@@ -2847,10 +2739,6 @@ public class Main {
 }
 ```
 
-
-
-
-
 在对象中，`lateinit` 会生成一个类似于 `@JvmField` 注解的静态字段。然而，它的访问器仍然是实例方法。例如，让我们定义这个单例：
 
 ```kotlin
@@ -2865,16 +2753,16 @@ object Application {
 public class Main {
     public static void main(String[] args) {
         // 访问器调用（非静态）
-        Application.INSTANCE.setName(“Application1”);
+        Application.INSTANCE.setName("Application1");
         // 直接访问属性（静态）
-        Application.stdin = “Application2”
+        Application.stdin = "Application2"
     }
 }
 ```
 
-注意，`@JvmField` 不能用于 `lateinit` 属性
+注意，`@JvmField` 不能用于 `lateinit` 属性。
 
-# 文件门面（File facades）与顶层声明
+### 文件门面（File facades）与顶层声明
 
 在 Kotlin 中，你通常可以利用顶层声明，它们直接放置在包中，而不是某个其他声明内部。对于通用的 Java 和 JVM 平台，这些方法必须属于特定的类。为了满足这一要求，Kotlin 编译器会将顶层函数和属性放入一个自动生成的类中，该类被称为文件门面（file facade）。默认情况下，门面的名称基于源文件名并带有额外的 `Kt` 后缀。例如，对于如下文件：
 
@@ -2940,7 +2828,9 @@ public class Main {
 }
 ```
 
-另一个实用的功能是将多个文件中的顶层声明合并到一个类中。要实现这一点，你需要对感兴趣的文件标记 `@JvmMultifileClass` 注解，并使用 `@JvmName` 明目标类名。在这种情况下，Kotlin 编译器将自动组合具有相同门面类名的文件。例如，假设我们示例所有的声明都写在不同的文件中：
+另一个实用的功能是将多个文件中的顶层声明合并到一个类中。要实现这一点，你需要对感兴趣的文件标记 `@JvmMultifileClass` 注解，并使用 `@JvmName` 明目标类名。在这种情况下，Kotlin 编译器将自动组合具有相同门面类名的文件。例如，假设我们示例所有的声明都写在不同的文件中。
+
+
 
 ```kotlin
 // Person.kt
@@ -3053,7 +2943,7 @@ get() = "$firstName $familyName"
 class Person(@set:JvmName("changeName") var name: String, val age: Int)
 ```
 
-从 Java 代码来看，Person 类现在拥有 `changeName()` 方法而不是 `setName()`：
+从 Java 代码来看，`Person` 类现在拥有 `changeName()` 方法而不是 `setName()`：
 
 ```java
 public class Main {
@@ -3074,8 +2964,6 @@ class Person(val firstName: String, val familyName: String) {
 }
 }
 ```
-
-
 
 ```
 println("$this is visiting $person")
@@ -3281,10 +3169,6 @@ public class Main {
 ### 问题
 
 1. 什么是合成属性（synthetic property）？在 Kotlin 中使用 Java 访问方法的规则是什么？
-
-
-
-
 2. 什么是平台类型？Kotlin 支持哪些类型的平台类型？
 3. Java 代码中的可空注解如何影响 Kotlin 类型？
 4. 描述 Kotlin 类型如何映射到 Java，反之亦然。
@@ -3305,17 +3189,19 @@ public class Main {
 
 在本章中，我们将关注编写并发代码的一个大主题。我们的主要目标是理解协程（coroutines）；这是 Kotlin 的显著特征之一，首次在 1.1 版本中引入，并在 Kotlin 1.3 中达到发布状态。
 
-我们将从讨论 Kotlin 协程的基础概念开始，例如挂起函数（suspending functions）和结构化并发（structured complexity），然后逐渐转向更高级的并发控制流问题、协程状态在整个生命周期内如何变化、取消和异常如何工作，以及并发任务如何分配给线程。
+
+
+我们将从讨论 Kotlin 协程的基础概念开始，例如挂起函数（suspending functions）和结构化并发（structured concurrency），然后逐渐转向更高级的并发控制流问题、协程状态在整个生命周期内如何变化、取消和异常如何工作，以及并发任务如何分配给线程。
 
 我们还将涵盖通道（channels）和 Actor（actors）等技术，这些技术允许你的代码实现并发任务之间的通信，并以线程的方式共享某些可变数据。
 
 最后，我们还会讨论一些简化在 Kotlin 代码中使用 Java 并发 API、创建线程以及使用同步和锁（locks）的工具。
 
-### 结构
+## 结构
 
-* 协程
-* 并发通信
-* 使用 Java 并发
+- 协程
+- 并发通信
+- 使用 Java 并发
 
 ## 目标
 
@@ -3331,7 +3217,7 @@ Kotlin 程序可以轻松使用 Java 并发原语来实现线程安全。然而�
 
 值得注意的是，大多数协程功能由一个单独库提供，该库必须在你的项目中显式配置。书中使用的版本由以下 Maven 坐标给出：`org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.2`。
 
-**IDE Tips：如果你在使用 IntelliJ IDEA 且不依赖于 Maven 或 Gradle 等特定的构建系统，可以按照以下步骤添加协程库：**
+**IDE Tips：** 如果你在使用 IntelliJ IDEA 且不依赖于 Maven 或 Gradle 等特定的构建系统，可以按照以下步骤添加协程库：
 
 1. 在 `Project View` 面板的根节点上按 F4，或者右键点击它并选择 `Open Module Settings`（打开模块设置）。
 2. 点击左侧的 `Libraries` 项，然后点击顶部工具栏上的 + 按钮，并选择 `From Maven…` 选项。
@@ -3368,7 +3254,7 @@ fun foo() {
 }
 ```
 
-**IDE Tips：使用 IntelliJ 插件时，你可以通过对应行左侧的特殊图标轻松区分挂起调用，如图 13.1 所示：**
+**IDE Tips：** 使用 IntelliJ 插件时，你可以通过对应行左侧的特殊图标轻松区分挂起调用，如图 13.1 所示：
 
 ![](img/Img_13_02.jpg)
 
@@ -3397,12 +3283,9 @@ Task finished
 
 ### 协程构建器
 
-
-
-
 `launch()` 函数启动一个协程并返回一个 `Job` 对象，你可以使用它来跟踪其状态并在需要时取消底层任务。该函数接收一个类型为 `CoroutineScope.() -> Unit` 的挂起 lambda 表达式，它构成了新协程的主体。让我们来看一个简单的示例：
 
-```
+```kotlin
 import kotlinx.coroutines.*
 import java.lang.System.*
 
@@ -3423,6 +3306,7 @@ fun main() {
 如果你运行上述代码，你将看到如下的内容：
 
 `Task 2 finished in 176 ms`
+
 `Task 1 finished in 176 ms`
 
 值得注意的是，两个任务相对于程序启动几乎在同一时间完成，这意味着它们实际上是并行执行的。程序不保证特定的顺序，因此取决于具体情况，两个任务中的任何一个都可能先完成。协程库还包含了在必要时强制执行顺序的手段。我们将在后续关于并发通信的章节中讨论这些内容。
@@ -3431,13 +3315,13 @@ fun main() {
 
 记住，在挂起函数内部也可以使用 `sleep()` 这种阻塞线程的函数，但强烈建议不要这样做，因为这种代码违背了协程的整个初意。出于此考虑，我们在并发任务使用了挂起的 `delay()`。
 
-**IDE 提示：IntelliJ 插件会警告你在协程代码中调用了如 `Thread.sleep()` 或 `Thread.join()` 等潜在的阻塞函数调用。**
+**IDE 提示：** IntelliJ 插件会警告你在协程代码中调用了如 `Thread.sleep()` 或 `Thread.join()` 等潜在的阻塞函数调用。
 
 请注意，协程比线程轻量得多。特别是，你可以轻松地负担起大量并发运行的协程，因为每个协程通常只需要保持一个相对紧凑的状态，在被挂起或恢复时不需要完整的上下文切换。
 
 `launch()` 构建器适用于并发任务不需要计算某些结果的情况。这就是为什么它接收一个 `Unit` 类型的 lambda。然而，如果我们需要结果，还有另一个名为 `async()` 的构建函数。该函数返回一个 `Deferred` 实例，它是 `Job` 的一个特殊子类型，通过 `await()` 方法访问计算结果。当调用时，`await()` 会挂起直到计算完成（从而产生结果）或被取消。在后者的情况下，`await()` 会抛出异常失败。你可以将它们视为 Java futures 的非阻塞对应物。例如：
 
-```
+```kotlin
 import kotlinx.coroutines.*
 suspend fun main() {
     val message = GlobalScope.async {
@@ -3456,11 +3340,13 @@ suspend fun main() {
 
 在这种情况下，我们还为 `main()` 函数标记了 `suspend`，以便直接调用两个延迟任务的 `await()` 方法。输出如其所料地如下：
 
+```
 abcabcabc
+```
 
 默认情况下，`launch()` 和 `async()` 构建器在共享的后台线程池中运行协程，而调用线程本身保持非阻塞状态。这就是我们必须在 `launch()` 示例中插入 `sleep()` 的原因，因为主线程除了等待任务完成外几乎没有工作要做。另一方面，`runBlocking()` 构建器创建一个协程，该协程默认在当前线程执行并阻塞直到其完成。当协程成功返回时，挂起 lambda 的返回值变为整个 `runBlocking()` 调用的值。当协程被取消时，`runBlocking()` 会抛出异常。相反，当被阻塞的线程被中断时，由 `runBlocking()` 启动的协程也会被取消。例如：
 
-```
+```kotlin
 import kotlinx.coroutines.*
 fun main() {
     GlobalScope.launch {
@@ -3477,9 +3363,10 @@ fun main() {
 运行此程序将产生类似的内容：
 
 `Primary task: main`
+
 `Background task: DefaultDispatcher-worker-2`
 
-你可以看到`runBlocking()` 内部的协程在主线程中执行，而由 `launch()` 创建的协程被分配到共享池中的后台线程。
+你可以看到 `runBlocking()` 内部的协程在主线程中执行，而由 `launch()` 创建的协程被分配到共享池中的后台线程。
 
 由于其阻塞性质，`runBlocking()` 不应在其他协程内部使用。它被设计为阻塞代码和非阻塞代码之间的某种桥梁，可以用于主函数或测试中的顶层构建器。
 
@@ -3489,7 +3376,7 @@ fun main() {
 
 这一特性被称为结构化并发（structured concurrency）。它可以与块和子程序进行比较。让我们来看一个示例：
 
-```
+```kotlin
 import kotlinx.coroutines.*
 fun main() {
     runBlocking {
@@ -3514,18 +3401,24 @@ fun main() {
 如果你运行此程序，你将看到如下结果：
 
 `Parent started`
+
 `Task A started`
+
 `Task B started`
+
 `Parent finished`
+
 `Task A finished`
+
 `Task B finished`
+
 `Shutting down...`
 
-你可以看到`runBlocking()` 调用中挂起 lambda 的父协程主体由于延迟较小在其子协程完成之前完成了。协程本身此时尚未完成，而处于挂起状态等待两个子协程的完成。之后，父协程也会完成，由于我们使用了 `runBlocking()` 构建器，在这里它也释放了主线程，使其打印最后的消息。
+你可以看到 `runBlocking()` 调用中挂起 lambda 的父协程主体由于延迟较小在其子协程完成之前完成了。协程本身此时尚未完成，而处于挂起状态等待两个子协程的完成。之后，父协程也会完成，由于我们使用了 `runBlocking()` 构建器，在这里它也释放了主线程，使其打印最后的消息。
 
 你也可以通过在 `coroutineScope()` 调用内部封装代码块来引入自定义作用域。与 `runBlocking()` 类似，该函数返回其 lambda 的值并在子协程完成之前不会完成。`coroutineScope()` 和 `runBlocking()` 的主要区别在于前者是一个挂起函数，不会阻塞当前线程：
 
-```
+```kotlin
 import kotlinx.coroutines.*
 fun main() {
     runBlocking {
@@ -3545,10 +3438,7 @@ fun main() {
 }
 ```
 
-注意`Custom scope` 结束消息是最后打印的，因为前面的 `coroutineScope()` 调用在子协程完成执行之前会一直挂起。
-
-
-
+注意 `Custom scope` 结束消息是最后打印的，因为前面的 `coroutineScope()` 调用在子协程完成执行之前会一直挂起。
 
 通常情况下，父子关系可以形成复杂的协程层级结构，为异常处理和取消请求定义了共享作用域。我们将在后续讨论协程作业（jobs）和取消时重新回顾这个主题。
 
@@ -3556,8 +3446,8 @@ fun main() {
 
 每个协程都有一个关联的上下文，该上下文由 `CoroutineContext` 接口表示，并通过闭包作用域的 `coroutineContext` 属性进行访问。上下文是一个不可变的键值对集合，包含了协程可用的各种数据。其中某些数据对协程调度机制具有特殊含义，并影响协程在运行时的执行方式。以下元素特别值得关注：
 
-* `Job`：代表由协程执行的可取消任务。
-* `Dispatcher`：控制协程如何与线程关联。
+- `Job`：代表由协程执行的可取消任务。
+- `Dispatcher`：控制协程如何与线程关联。
 
 通常情况下，上下文可以存储任何实现 `CoroutineContext.Element` 的数据。要访问特定元素，你可以使用 `get()` 方法或提供相应键的索引运算符：
 
@@ -3568,7 +3458,7 @@ GlobalScope.launch {
 }
 ```
 
-默认情况下，由 `launch()` 或 `async()` 等标准构造器创建的协程从当前作用域继承其上下文。必要时，可以使用相应构造函数的 `context` 参数提供不同的上下文。要创建一个新上下文，你可以使用 `plus()` 函数/**+` 运算符（它会将两个上下文的数据合并在一起）以及 `minusKey()` 函数（它会移除给定键的元素）：
+默认情况下，由 `launch()` 或 `async()` 等标准构造器创建的协程从当前作用域继承其上下文。必要时，可以使用相应构造函数的 `context` 参数提供不同的上下文。要创建一个新上下文，你可以使用 `plus()` 函数/`+` 运算符（它会将两个上下文的数据合并在一起）以及 `minusKey()` 函数（它会移除给定键的元素）：
 
 ```kotlin
 import kotlinx.coroutines.*
@@ -3589,9 +3479,11 @@ fun main() {
 
 你还可以使用 `withContext()` 函数在协程执行期间切换上下文，该函数接收一个新的上下文和一个挂起 lambda 表达式。这可能非常有用，例如，如果你想在不同的线程中运行某些代码块。我们将在协程调度器的章节中看到此类线程跳转的示例。
 
+
+
 ### 协程控制流
 
-### Job 生命周期
+#### Job 生命周期
 
 作业（Job）是一个代表并发任务生命周期的对象。通过作业，你可以跟踪任务状态并在需要时取消它们。作业的可能状态如图 13.3 所示。让我们仔细观察这些状态的含义，以及作业如何从一个状态转换到另一个状态。
 
@@ -3599,12 +3491,12 @@ fun main() {
 
 **图 13.3:** Job 状态
 
-活跃（active）状态意味着作业已经启动但尚未完成。该状态通常是默认；换句话说，作业在创建后会自动启动。某些协程构造器如 `launch()` 和 `async()` 允许你通过指定 `CoroutineStart` 参数来选择初始状态：
+活跃（active）状态意味着作业已经启动但尚未完成。该状态通常是默认；换句话说，作业在创建后会自动启动。某些协程构造器如`launch()`和`async()`允许你通过指定`CoroutineStart`参数来选择初始状态：
 
-* `CoroutineStart.DEFAULT` 是默认行为，作业立即启动。
-* `CoroutineStart.LAZY` 作业不会自动启动；在这种情况下，它被放入新状态并等待启动。
+* `CoroutineStart.DEFAULT`是默认行为，作业立即启动。
+* `CoroutineStart.LAZY`作业不会自动启动；在这种情况下，它被放入新状态并等待启动。
 
-新状态的作业可以通过调用其 `start()` 或 `join()` 方法来启动，之后它将转换到活跃状态。例如：
+新状态的作业可以通过调用其`start()`或`join()`方法来启动，之后它将转换到活跃状态。例如：
 
 ```kotlin
 import kotlinx.coroutines.*
@@ -3628,7 +3520,7 @@ Preparing to start…
 Job started
 ```
 
-在活跃状态下，作业可以被协程机制反复挂起和恢复。它还可以启动新的作业作为其子作业，从而在并发计算之间形成树状依赖结构。你可以使用 `children` 属性确定一个未完成的子作业列表。例如：
+在活跃状态下，作业可以被协程机制反复挂起和恢复。它还可以启动新的作业作为其子作业，从而在并发计算之间形成树状依赖结构。你可以使用`children`属性确定一个未完成的子作业列表。例如：
 
 ```kotlin
 import kotlinx.coroutines.*
@@ -3646,7 +3538,7 @@ fun main() {
 
 当协程完成执行挂起 lambda 块时，其作业的状态将更改为完成中（completing），这基本上意味着等待子作业完成。作业会保持此状态，直到所有子作业都完成，之后它将转换到完成（completed）状态。
 
-你可以使用 Job 的 `join()` 方法来挂起当前协程，直到目标作业完成。以下程序确保根协程的消息在两个子协程都完成执行后打印：
+你可以使用`Job`的`join()`方法来挂起当前协程，直到目标作业完成。以下程序确保根协程的消息在两个子协程都完成执行后打印：
 
 ```kotlin
 import kotlinx.coroutines.*
@@ -3671,9 +3563,9 @@ This is task B
 0 children running
 ```
 
-正如预期的，在评估 `job.children.count()` 时，没有活跃的子作业。
+正如预期的，在评估`job.children.count()`时，没有活跃的子作业。
 
-取消中（cancelling）和已取消（cancelled）状态反映了由于未处理的异常或显式调用 `cancel()` 方法而被取消作业的状态。当前的状态可以通过其属性进行追踪：`isActive`、`isCancelled` 和 `isCompleted`。它们的含义如下表所示。你也可以在 `Job` 接口的文档中找到它：
+取消中（cancelling）和已取消（cancelled）状态反映了由于未处理的异常或显式调用`cancel()`方法而被取消作业的状态。当前的状态可以通过其属性进行追踪：`isActive`、`isCancelled`和`isCompleted`。它们的含义如下表所示。你也可以在`Job`接口的文档中找到它：
 
 | Job state | isActive | isCompleted | isCancelled |
 | :--- | :--- | :--- | :--- |
@@ -3686,9 +3578,9 @@ This is task B
 
 **表 13.1:** 通过 Job 属性确定状态
 
-注意 `isCompleted` 对于已完成和已取消的作业都返回 true。你可以通过检查 `isCancelled` 属性来区分两者。相反，外部无法区分完成和完成中的状态。
+注意`isCompleted`对于已完成和已取消的作业都返回 true。你可以通过检查`isCancelled`属性来区分两者。相反，外部无法区分完成和完成中的状态。
 
-### 取消
+#### 取消
 
 作业可以取消，提供了不再需要的计算的标准机制。取消是协作的；换句话说，可取消的协程本身必须检查是否收到取消请求并做出相应响应。考虑以下程序：
 
@@ -3707,7 +3599,7 @@ suspend fun main() {
 }
 ```
 
-代码启动了一个不断打印整数的协程。让它运行大约 100 毫秒，然后尝试取消它。然而，如果你运行程序，你会发现 `squarePrinter` 仍在执行。原因是它没有配合取消。修复此问题的方法之一是在执行下项工作之前反复检查协程是否已被取消：
+代码启动了一个不断打印整数的协程。让它运行大约 100 毫秒，然后尝试取消它。然而，如果你运行程序，你会发现`squarePrinter`仍在执行。原因是它没有配合取消。修复此问题的方法之一是在执行下项工作之前反复检查协程是否已被取消：
 
 ```kotlin
 import kotlinx.coroutines.*
@@ -3724,14 +3616,11 @@ suspend fun main() {
 }
 ```
 
+`isActive`扩展属性检查当前协程是否处于活动状态。当它应用于`CoroutineScope`时（作为协程挂起 lambda 的接收者传递时），它只是简单地委托给当前协程的`isActive`属性。现在，当父协程调用`cancel()`方法时，`squarePrinter`的状态将变为`cancelling`（取消中），下次对`isActive`条件的检查将强制终止循环。当协程完成执行时，状态将变为`cancelled`（已取消）。如果你运行前面的代码，你会看到它在运行大约 100 毫秒后就会终止。
 
+另一种解决方案是将状态检查替换为对某些挂起函数的调用，这些函数可以通过抛出`CancellationException`来响应取消。该异常被协程库内部用作一种控制流令牌，信号作业取消正在进行中。对于协程库中定义的所有挂起函数（如`delay()`或`join()`）来说，这种都是都是的。另一个例子是`yield()`，它会挂起给定的协程并释放其线程给其他协程（类似于`Thread.yield()`可能通过给其他线程额外的运行机会来挂起当前线程）：
 
-
-`isActive` 扩展属性检查当前协程是否处于活动状态。当它应用于 `CoroutineScope` 时（作为协程挂起 lambda 的接收者传递时），它只是简单地委托给当前协程的 `isActive` 属性。现在，当父协程调用 `cancel()` 方法时，`squarePrinter` 的状态将变为 `cancelling`（取消中），下次对 `isActive` 条件的检查将强制终止循环。当协程完成执行时，状态将变为 `cancelled`（已取消）。如果你运行前面的代码，你会看到它在运行大约 100 毫秒后就会终止。
-
-另一种解决方案是将状态检查替换为对某些挂起函数的调用，这些函数可以通过抛出 `CancellationException` 来响应取消。该异常被协程库内部用作一种控制流令牌，信号作业取消正在进行中。对于协程库中定义的所有挂起函数（如 `delay()` 或 `join()`）来说，这种都是都是的。另一个例子是 `yield()`，它会挂起给定的协程并释放其线程给其他协程（类似于 `Thread.yield()` 可能通过给其他线程额外的运行机会来挂起当前线程）：
-
-```
+```kotlin
 import kotlinx.coroutines.*
 
 suspend fun main() {
@@ -3783,9 +3672,9 @@ Child 1 started
 Child 2 started
 ```
 
-### 超时
+#### 超时
 
-在某些情况下，我们无法无限地等待任务完成，需要设置某些超时。协程库有一个专门的 `withTimeout()` 函数正用于此目的。例如，下面的代码启动了一个协程，它在读取文件时挂起：
+在某些情况下，我们无法无限地等待任务完成，需要设置某些超时。协程库有一个专门的`withTimeout()`函数正用于此目的。例如，下面的代码启动了一个协程，它在读取文件时挂起：
 
 ```kotlin
 import kotlinx.coroutines.*
@@ -3804,15 +3693,15 @@ fun main() {
 }
 ```
 
-如果文件在 50 毫秒内被读取，`withTimeout()` 直接返回其块的结果。否则，它会抛出 `TimeoutCancellationException`（它是 `CancellationException` 的子类），并且读取协程会被取消。
+如果文件在 50 毫秒内被读取，`withTimeout()`直接返回其块的结果。否则，它会抛出`TimeoutCancellationException`（它是`CancellationException`的子类），并且读取协程会被取消。
 
-还有一个类似的函数 `withTimeoutOrNull()`，它在超时时不会抛出异常，而是简单地返回 `null`。
+还有一个类似的函数`withTimeoutOrNull()`，它在超时时不会抛出异常，而是简单地返回`null`。
 
-### 协程调度
+#### 协程调度
 
 虽然协程提供了一种独立于线程的方式来实现挂起计算，但它们在运行时仍需要与某些线程关联。协程库包含一个特殊的组件，其任务是控制用于执行特定协程的线程。该组件被称为协程调度器（coroutine dispatcher）。
 
-调度器是协程上下文的一部分，因此你可以在诸如 `launch()` 和 `runBlocking()` 等协程构建器函数中指定它。由于调度器本身也是一个单元素上下文，你可以简单地将它传递给协程构建器：
+调度器是协程上下文的一部分，因此你可以在诸如`launch()`和`runBlocking()`等协程构建器函数中指定它。由于调度器本身也是一个单元素上下文，你可以简单地将它传递给协程构建器：
 
 ```kotlin
 import kotlinx.coroutines.*
@@ -3827,7 +3716,7 @@ fun main() {
 }
 ```
 
-协程调度器与 Java 执行器（executors）有些相似，它们在并行任务集之间分配线程。事实上，你可以使用 `asCoroutineDispatcher()` 扩展函数将现有的 `Executor` 实现转换为相应的协程调度器。在下面的示例中，我们使用带有自定义线程工厂创建了一个基于池的执行服务，该工厂为执行线程分配了如 `WorkerThread1`、`WorkerThread2` 等之类的名称。然后，将其转换为调度器并使用它来并行启动多个协程。注意，我们显式设置了工作线程为守护线程（daemon），这样它们在所有协程完成后就不会阻止程序终止：
+协程调度器与 Java 执行器（executors）有些相似，它们在并行任务集之间分配线程。事实上，你可以使用`asCoroutineDispatcher()`扩展函数将现有的`Executor`实现转换为相应的协程调度器。在下面的示例中，我们使用带有自定义线程工厂创建了一个基于池的执行服务，该工厂为执行线程分配了如`WorkerThread1`、`WorkerThread2`等之类的名称。然后，将其转换为调度器并使用它来并行启动多个协程。注意，我们显式设置了工作线程为守护线程（daemon），这样它们在所有协程完成后就不会阻止程序终止：
 
 ```kotlin
 import kotlinx.coroutines.*
@@ -3852,9 +3741,10 @@ fun main() {
     }
 }
 ```
-*(注：原文示例代码中 `also { it.isDaemon = true }` 的位置稍显特殊，翻译时保持逻辑对应)*
 
-`delay` 强制执行器创建单独的线程，因此上述代码将输出：
+*(注：原文示例代码中`also { it.isDaemon = true }`的位置稍显特殊，翻译时保持逻辑对应)*
+
+`delay`强制执行器创建单独的线程，因此上述代码将输出：
 
 ```
 WorkerThread-1
@@ -3862,15 +3752,15 @@ WorkerThread-2
 WorkerThread-3
 ```
 
-具体的线程顺序可能会不同。注意在 `ExecutorService` 实例上调用 `asCoroutineDispatcher()`，返回的是一个实现了 `Closeable` 接口的 `ExecutorDispatcher`。你需要使用 `close()` 方法关闭执行服务并释放维护线程的系统资源。
+具体的线程顺序可能会不同。注意在`ExecutorService`实例上调用`asCoroutineDispatcher()`，返回的是一个实现了`Closeable`接口的`ExecutorDispatcher`。你需要使用`close()`方法关闭执行服务并释放维护线程的系统资源。
 
-协程库还提供了一些开箱即用的调度器实现。可以通过 `Dispatchers` 对象访问它们：
+协程库还提供了一些开箱即用的调度器实现。可以通过`Dispatchers`对象访问它们：
 
 - `Dispatchers.Default`: 一个共享线程池，其大小默认等于 CPU 核心数或 2（以较大者为准）。该实现通常适用于受 CPU 速度限制的 CPU 密集型计算。
 - `Dispatchers.IO`: 类似的基于线程池的实现，专为运行可能阻塞的 I/O 密集型任务优化（如读写文件）。该调度器通过根据需要添加或终止额外线程与默认实现共享线程池。
 - `Dispatchers.Main`: 一个专门在处理用户输入的 UI 事件线程运行的调度器。
 
-也可以使用 `newFixedThreadPoolContext()` 或 `newSingleThreadPoolContext()` 函数基于私有线程池甚至单线程创建调度器。例如，我们可以将基于 `Executor` 的示例重写为：
+也可以使用`newFixedThreadPoolContext()`或`newSingleThreadPoolContext()`函数基于私有线程池甚至单线程创建调度器。例如，我们可以将基于`Executor`的示例重写为：
 
 ```kotlin
 import kotlinx.coroutines.*
@@ -3890,10 +3780,9 @@ fun main() {
 }
 ```
 
-注意，我们使用了 `@Suppress` 注解，因为 `newFixedThreadPoolContext()` 和 `newSingleThreadPoolContext()` 目前被标记为过时 API，预计将由基于共享线程池的新函数取代。
 
 
-
+注意，我们使用了`@Suppress`注解，因为`newFixedThreadPoolContext()`和`newSingleThreadPoolContext()`目前被标记为过时 API，预计将由基于共享线程池的新函数取代。
 
 当没有显式指定调度器（如我们在前面的示例中所做的那样），它会自动继承自你启动协程的作用域。考虑以下示例：
 
@@ -3916,12 +3805,14 @@ fun main() {
 我们启动了一个在主线程运行的顶层协程，并启动了两个嵌套协程：其中一个协程的上下文（结果是协程调度器）从父协程继承，而另一个则显式指定了调度器。因此，前面的代码将打印以下内容：
 
 `Root: main`
+
 `Nested, explicit: DefaultDispatcher-worker-1`
+
 `Nested, inherited: main`
 
-在没有父协程的情况下，调度器被隐含认为 `Dispatchers.Default`，但受限于当前线程的 `runBlocking()` 构建器外。
+在没有父协程的情况下，调度器被隐含认为`Dispatchers.Default`，但受限于当前线程的`runBlocking()`构建器外。
 
-协程在其整个生命周期内不需要具有相同的调度器。由于调度器是协程上下文的一部分，可以使用 `withContext()` 函数进行覆盖：
+协程在其整个生命周期内不需要具有相同的调度器。由于调度器是协程上下文的一部分，可以使用`withContext()`函数进行覆盖：
 
 ```kotlin
 import kotlinx.coroutines.*
@@ -3942,14 +3833,15 @@ fun main() {
 
 当我们想要将特定代码片段的执行限制在单个线程时，这种技术就非常有用。
 
-### 异常处理
+## 异常处理
 
-在异常处理方面，各种协程构建器遵循两种基本策略之一。由 `launch()` 等构建器实现的第一种策略是将异常传播给父协程。在这种情况下，执行过程如下：
+在异常处理方面，各种协程构建器遵循两种基本策略之一。由`launch()`等构建器实现的第一种策略是将异常传播给父协程。在这种情况下，执行过程如下：
 
 - 父协程被以相同的异常作为原因进行取消。这导致它取消所有剩余的子协程。
+
 - 当子协程被取消时时，父协程会将异常传递给协程树的更上层。
 
-该过程一直持续，直到到达具有全局作用域的协程。之后，它将由 `CoroutineExceptionHandler` 处理。例如，考虑以下程序：
+该过程一直持续，直到到达具有全局作用域的协程。之后，它将由`CoroutineExceptionHandler`处理。例如，考虑以下程序：
 
 ```kotlin
 import kotlinx.coroutines.*
@@ -3969,16 +3861,17 @@ fun main() {
 }
 ```
 
-顶层协程启动了一对嵌套任务，其中第一个抛出了异常。这导致了根任务及其两个子任务的取消，由于没有提供自定义的处理器，程序将回退到由 `Thread.uncaughtExceptionHandler` 表示的默认行为。结果，它将打印以下内容，随后是异常的堆栈跟踪：
+顶层协程启动了一对嵌套任务，其中第一个抛出了异常。这导致了根任务及其两个子任务的取消，由于没有提供自定义的处理器，程序将回退到由`Thread.uncaughtExceptionHandler`表示的默认行为。结果，它将打印以下内容，随后是异常的堆栈跟踪：
 
 `Root`
+
 `Exception in thread "main" java.lang.Exception: Error in task A`
 
-`CoroutineExceptionHandler` 定义了一个单一方法，接收当前协程上下文和抛出的异常：
+`CoroutineExceptionHandler`定义了一个单一方法，接收当前协程上下文和抛出的异常：
 
 `fun handleException(context: CoroutineContext, exception: Throwable)`
 
-构建处理器最简单的方法是使用 `CoroutineExceptionHandler()` 函数，它接受一个两个参数的 lambda 表达式：
+构建处理器最简单的方法是使用`CoroutineExceptionHandler()`函数，它接受一个两个参数的 lambda 表达式：
 
 ```kotlin
 val handler = CoroutineExceptionHandler{ _, exception ->
@@ -4013,11 +3906,12 @@ suspend fun main() {
 现在程序打印出以下内容，从而覆盖了默认行为：
 
 `Root`
+
 `Caught java.lang.Exception: Error in task A`
 
-当上下文中没有定义处理器实例时，协程库将调用通过 JVM `ServiceLoader` 机制配置的所有全局处理器，以及当前线程的 `uncaughtExceptionHandler`。
+当上下文中没有定义处理器实例时，协程库将调用通过 JVM `ServiceLoader` 机制配置的所有全局处理器，以及当前线程的`uncaughtExceptionHandler`。
 
-注意，`CoroutineExceptionHandler` 只能为在全局作用域中启动的协程指定，并且仅用于其子级。这就是为什么我们必须将 `runBlocking()` 替换为 `GlobalScope.launch()` 并标记 `main()` 函数为 `suspend` 以使用挂起的 `join()` 调用。如果我们保留原始示例中的 `runBlocking()` 但为其提供处理器，程序仍然将使用默认的异常处理器，因为我们的协程不会在全局作用域中运行：
+注意，`CoroutineExceptionHandler`只能为在全局作用域中启动的协程指定，并且仅用于其子级。这就是为什么我们必须将`runBlocking()`替换为`GlobalScope.launch()`并标记`main()`函数为`suspend`以使用挂起的`join()`调用。如果我们保留原始示例中的`runBlocking()`但为其提供处理器，程序仍然将使用默认的异常处理器，因为我们的协程不会在全局作用域中运行：
 
 ```kotlin
 import kotlinx.coroutines.*
@@ -4030,7 +3924,7 @@ fun main() {
 }
 ```
 
-`async()` 构建器使用的另一种处理异常的方法是保留异常并在调用 `await()` 时以后重新抛出它。让我们修改示例：
+`async()`构建器使用的另一种处理异常的方法是保留异常并在调用`await()`时以后重新抛出它。让我们修改示例：
 
 ```kotlin
 import kotlinx.coroutines.*
@@ -4050,11 +3944,11 @@ fun main() {
 }
 ```
 
-顶层协程启动了一对嵌套任务，其中第一个抛出了异常。这导致了根任务及其两个子任务的取消，由于没有提供自定义的处理器，程序将回退到由 `Thread.uncaughtExceptionHandler` 表示的默认行为。结果，它将打印以下内容，随后是异常的堆栈跟踪：
+顶层协程启动了一对嵌套任务，其中第一个抛出了异常。这导致了根任务及其两个子任务的取消，由于没有提供自定义的处理器，程序将回退到由`Thread.uncaughtExceptionHandler`表示的默认行为。结果，它将打印以下内容，随后是异常的堆栈跟踪：
 
 `Exception in thread "main" java.lang.Exception: Error in task A`
 
-注意，类似 `async` 的构建器在访问数据时会重新抛出异常，它们并不依赖 `CoroutineExceptionHandler`。因此，即使你在协程上下文中预配置了它的实例，也没有起作用（正如我们在示例中看到的那样）。如果我们想在父协程层级处理嵌套协程抛出的异常，而不依赖于全局处理器，会怎样？让我们看看尝试使用 `try-catch` 块处理重新抛出的异常会发生什么：
+注意，类似`async`的构建器在访问数据时会重新抛出异常，它们并不依赖`CoroutineExceptionHandler`。因此，即使你在协程上下文中预配置了它的实例，也没有起作用（正如我们在示例中看到的那样）。如果我们想在父协程层级处理嵌套协程抛出的异常，而不依赖于全局处理器，会怎样？让我们看看尝试使用`try-catch`块处理重新抛出的异常会发生什么：
 
 ```kotlin
 import kotlinx.coroutines.*
@@ -4082,14 +3976,16 @@ fun main() {
 如果你运行这段代码，你会发现处理器确实被激活了，但程序仍然会异常崩溃：
 
 `Caught java.lang.Exception: Error in task A`
+
 `Root`
+
 `Exception in thread "main" java.lang.Exception: Error in task A`
 
 由于当子协程失败时，异常会自动重新抛出以取消父协程。为了覆盖这种行为，我们可以使用所谓的 supervisor job（supervisor 作业）。
 
 在 supervisor job 中，取消仅向向下传播。如果你取消一个 supervisor，它会自动取消所有子级，但如果是子协程被取消，supervisor 及其剩余的子级将保持活跃。
 
-要将父协程转换为 supervisor，我们使用 `coroutineScope()` 的 `supervisorScope()` 函数定义一个新作用域。让我们修改之前的示例：
+要将父协程转换为 supervisor，我们使用`coroutineScope()`的`supervisorScope()`函数定义一个新作用域。让我们修改之前的示例：
 
 ```kotlin
 import kotlinx.coroutines.*
@@ -4116,23 +4012,15 @@ fun main() {
 }
 ```
 
-
-
-
-```
-}
-}
-}
-```
-
 现在，异常在处理后不会被重新抛出，且任务 B 和根协程都已完成：
 
 `Task B completed`
 
 `Caught java.lang.Exception: Error in task A`
+
 `Root`
 
-注意，监控器（supervisor）行为也适用于正常取消：在其其中一个子作业上调用 `cancel()` 不会导致其兄弟作业或监控器本身被取消。
+注意，监控器（supervisor）行为也适用于正常取消：在其其中一个子作业上调用`cancel()`不会导致其兄弟作业或监控器本身被取消。
 
 ## 并发通信
 
@@ -4140,9 +4028,9 @@ fun main() {
 
 ### 通道 (Channels)
 
-通道提供了一种在协程之间共享任意数据流的便捷方式。由 `Channel` 接口表示的任何 `channel` 的基本操作分别是通过 `send()` 方法发送数据元素和通过 `receive()` 方法接收元素。当这些方法无法完成工作时（例如，当通道的内部缓冲区满且你尝试向其发送数据时），它们会挂起当前协程，并在以后可能时恢复。这就是通道与阻塞队列（blocking queues）的主要区别，后者在 Java 并发 API 中起着类似的作用，但通过阻塞调用线程来工作。
+通道提供了一种在协程之间共享任意数据流的便捷方式。由`Channel`接口表示的任何`channel`的基本操作分别是通过`send()`方法发送数据元素和通过`receive()`方法接收元素。当这些方法无法完成工作时（例如，当通道的内部缓冲区满且你尝试向其发送数据时），它们会挂起当前协程，并在以后可能时恢复。这就是通道与阻塞队列（blocking queues）的主要区别，后者在 Java 并发 API 中起着类似的作用，但通过阻塞调用线程来工作。
 
-通道可以通过泛型函数 `Channel()` 构建，该函数接收一个描述通道容量的整数值。其基本实现之一是具有有限大小内部缓冲区的通道。当缓冲区满时，`send()` 调用会被挂起，直到至少有一个元素被接收。同样，当缓冲区为空时，`receive()` 的调用会被挂起，直到至少有一个元素被发送。让我们来看一个示例：
+通道可以通过泛型函数`Channel()`构建，该函数接收一个描述通道容量的整数值。其基本实现之一是具有有限大小内部缓冲区的通道。当缓冲区满时，`send()`调用会被挂起，直到至少有一个元素被接收。同样，当缓冲区为空时，`receive()`的调用会被挂起，直到至少有一个元素被发送。让我们来看一个示例：
 
 ```kotlin
 import kotlinx.coroutines.channels.Channel
@@ -4189,14 +4077,19 @@ Receiving: 25
 
 尽管输出可能根据实际延迟和其他情况而变化，但通道确保了所有值按照它们发送的顺序被接收。
 
-`Channel()` 函数还可以接收一些特殊值，产生不同行为的通道。这些值由 `Channel` 接口伴生对象中的常量表示：
+`Channel()`函数还可以接收一些特殊值，产生不同行为的通道。这些值由`Channel`接口伴生对象中的常量表示：
 
-*   `Channel.UNLIMITED (= Int.MAX_VALUE)`：这是一个无限容量的通道，其内部缓冲区根据需要增长。此类通道在 `send()` 上永远不会挂起，但在缓冲区为空时会在 `receive()` 上挂起。
-*   `Channel.RENDEZVOUS (= 0)`：这是一个同步通道（rendezvous channel），没有内部缓冲区。任何对 `send()` 的调用都会挂起，直到其他协程调用 `receive()`。同样，`receive()` 调用会被挂起，直到有人调用 `send()`。当你遗省略容量参数时，默认创建这种通道。
-*   `Channel.CONFLATED (= -1)`：这是一个合并通道（conflated channel），它最多存储一个元素，该元素会被 `send()` 覆盖，因此任何未读取的发送值都会丢失。在这种情况下，`send()` 方法永远不会挂起。
-*   任何小于 `UNLIMITED` 的正整数都会产生具有有限大小缓冲区的通道。
+- `Channel.UNLIMITED (= Int.MAX_VALUE)`：这是一个无限容量的通道，其内部缓冲区根据需要增长。此类通道在`send()`上永远不会挂起，但在缓冲区为空时会在`receive()`上挂起。
+
+- `Channel.RENDEZVOUS (= 0)`：这是一个同步通道（rendezvous channel），没有内部缓冲区。任何对`send()`的调用都会挂起，直到其他协程调用`receive()`。同样，`receive()`调用会被挂起，直到有人调用`send()`。当你遗省略容量参数时，默认创建这种通道。
+
+- `Channel.CONFLATED (= -1)`：这是一个合并通道（conflated channel），它最多存储一个元素，该元素会被`send()`覆盖，因此任何未读取的发送值都会丢失。在这种情况下，`send()`方法永远不会挂起。
+
+- 任何小于`UNLIMITED`的正整数都会产生具有有限大小缓冲区的通道。
 
 同步通道确保生产者和消费者协程交替激活。例如，如果我们通过将通道容量设置为零来修改早前的示例，无论延迟如何，我们始终将获得稳定的操作顺序：
+
+
 
 ```
 Sending: 1
@@ -4257,10 +4150,10 @@ Receiving: 25
 
 尽管输出可能根据实际延迟和其他情况而变化，但通道确保了所有值按照它们发送的顺序被接收。`Channel()` 函数还可以接收一些特殊值，产生不同行为的通道。这些值由 `Channel` 接口伴生对象中的常量表示：
 
-*   `Channel.UNLIMITED (= Int.MAX_VALUE)`：这是一个无限容量的通道，其内部缓冲区根据需要增长。此类通道在 `send()` 上永远不会挂起，但在缓冲区为空时会在 `receiver()` 上挂起。
-*   `Channel.RENDEZVOUS (= 0)`：这是一个同步通道，没有内部缓冲区。任何对 `send()` 的调用都会挂起，直到其他协程调用 `receive()`。同样，`receive()` 调用会被挂起，直到有人调用 `send()`。当你遗省略容量参数时，默认创建这种通道。
-*   `Channel.CONFLATED (= -1)`：这是一个合并通道，它最多存储一个元素，该元素会被 `send()` 覆盖，因此任何未读取的发送值都会丢失。在这种情况下，`send()` 方法永远不会挂起。
-*   任何小于 `UNLIMITED` 的正整数都会产生具有有限大小缓冲区的通道。同步通道确保生产者和消费者协程交替激活。例如，如果我们通过将通道容量设置为零来修改早前的示例，无论延迟如何，我们始终将获得稳定的操作顺序：
+- `Channel.UNLIMITED (= Int.MAX_VALUE)`：这是一个无限容量的通道，其内部缓冲区根据需要增长。此类通道在 `send()` 上永远不会挂起，但在缓冲区为空时会在 `receiver()` 上挂起。
+- `Channel.RENDEZVOUS (= 0)`：这是一个同步通道，没有内部缓冲区。任何对 `send()` 的调用都会挂起，直到其他协程调用 `receive()`。同样，`receive()` 调用会被挂起，直到有人调用 `send()`。当你遗省略容量参数时，默认创建这种通道。
+- `Channel.CONFLATED (= -1)`：这是一个合并通道，它最多存储一个元素，该元素会被 `send()` 覆盖，因此任何未读取的发送值都会丢失。在这种情况下，`send()` 方法永远不会挂起。
+- 任何小于 `UNLIMITED` 的正整数都会产生具有有限大小缓冲区的通道。同步通道确保生产者和消费者协程交替激活。例如，如果我们通过将通道容量设置为零来修改早前的示例，无论延迟如何，我们始终将获得稳定的操作顺序：
 
 ```
 Sending: 1
@@ -4274,68 +4167,21 @@ Receiving: 16
 Sending: 25
 Receiving: 25
 ```
-
-如果你不需要流中的每个元素，并且当消费例程跟不上生产者时可以丢弃某些元素，则可以使用合并通道。让我们修改第一个示例，将消费者的延迟设置为生产者的两倍：
-
-```kotlin
-import kotlinx.coroutines.channels.Channel
-import kotlinx.coroutines.*
-
-fun main() {
-    runBlocking {
-        val streamSize = 5
-        val channel = Channel<Int>(3)
-        launch {
-            for (n in 1..streamSize) {
-                delay(100)
-                val square = n*n
-                println("Sending: $square")
-                channel.send(square)
-            }
-        }
-        launch {
-            for (i in 1..streamSize) {
-                delay(200)
-                val n = channel.receive()
-                println("Receiving: $n")
-            }
-        }
-    }
-}
-```
-
-第一个协程产生一个整数平方流并将其发送到可以容三个元素的通道，而第二个协程并发接收数字。我们插入了随机延迟，以触发当其中一个协程跟不上对方时由于通道缓冲区为空或满而导致的偶尔挂起。一个可能的结果如下：
-
-```
-Sending: 1
-Receiving: 1
-Sending: 4
-Receiving: 4
-Sending: 9
-Sending: 16
-Receiving: 9
-Sending: 25
-Receiving: 16
-Receiving: 25
-```
-
-（注：此处原文后续存在大量重复内容，已按工程师规范处理去重）
-
-
-
 
 由生产者协程生成的数据流被分发到三个消费者之间。可能的输出如下：
 
-`Sending: 1`
-`Sending: 4`
-`Sending: 9`
-`Receiving by consumer #1: 1`
-`Receiving by consumer #2: 4`
-`Receiving by consumer #3: 9`
-`Sending: 16`
-`Sending: 25`
-`Receiving by consumer #3: 16`
-`Receiving by consumer #1: 25`
+```
+Sending: 1
+Sending: 4
+Sending: 9
+Receiving by consumer #1: 1
+Receiving by consumer #2: 4
+Receiving by consumer #3: 9
+Sending: 16
+Sending: 25
+Receiving by consumer #3: 16
+Receiving by consumer #1: 25
+```
 
 同样，我们可以通过在同一个通道中收集多个生产者的输出并将其交给单个消费者协程来实现扇入（fan in）。在更一般的情况下，任意数量的生产者和消费者都可以通过多个通道进行通信。通常情况下，通道的行为对于多个协程来说是公平的，这意味着最先调用 `receive()` 的协程将获取下一个元素。
 
@@ -4343,7 +4189,7 @@ Receiving: 25
 
 有一个特殊的 `producer()` 协程构建器，允许你构建并发数据流，这与我们之前讨论集合 API 时介绍过的 `sequence()` 函数类似。该构建器引入了 `ProducerScope`，它提供了与通道相似的 `send()` 方法：
 
-```
+```kotlin
 import kotlinx.coroutines.channels.*
 import kotlinx.coroutines.*
 
@@ -4371,16 +4217,16 @@ fun main() {
 
 `coroutines` 库有一个特殊的汇合通道（rendezvous channel），被称为计时器（ticker）。该通道产生一个 `Unit` 值流，后续元素之间具有指定的延迟。要构造它，你可以使用 `ticker()` 函数，它允许指定以下参数：
 
-- `delayMillis:`: 计时器元素之间的毫秒延迟。
-- `initialDelayMillis:`: 产生第一个元素之前的延迟；默认情况下，它与 `delayMillis` 相同。
-- `context:`: 计时器运行的协程上下文（默认为空）。
-- `mode:`: `TickerMode` 枚举的值，决定了计时器的行为模式：
-    - `TickerMode.FIXED_PERIOD:`: 计时器将选择延迟，以尽可能保持元素生成之间的周期恒定。
-    - `TickerMode.FIXED_RATE:`: 计时器会在发送每个元素之前简单地进行指定的延迟，无论距离上次接收已经过去了多久。
+- `delayMillis`：计时器元素之间的毫秒延迟。
+- `initialDelayMillis`：产生第一个元素之前的延迟；默认情况下，它与 `delayMillis` 相同。
+- `context`：计时器运行的协程上下文（默认为空）。
+- `mode`：`TickerMode` 枚举的值，决定了计时器的行为模式：
+  - `TickerMode.FIXED_PERIOD`：计时器将选择延迟，以尽可能保持元素生成之间的周期恒定。
+  - `TickerMode.FIXED_RATE`：计时器会在发送每个元素之前简单地进行指定的延迟，无论距离上次接收已经过去了多久。
 
 为了查看不同计时模式之间的区别，让我们考虑以下代码：
 
-```
+```kotlin
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.*
 
@@ -4397,11 +4243,13 @@ fun main() = runBlocking {
 
 运行时，它会产生以下输出：
 
-`null`
-`kotlin.Unit`
-`kotlin.Unit`
-`kotlin.Unit`
-`null`
+```
+null
+kotlin.Unit
+kotlin.Unit
+kotlin.Unit
+null
+```
 
 让我们逐步查看它的执行过程：
 
@@ -4412,11 +4260,13 @@ fun main() = runBlocking {
 5. 消费者尝试在 60 ms 的超时内接收该值，并且肯定会成功，因为下一个信号应该在不到 50 ms 内发送。
 6. 如果我们将计时器模式设置为 `FIXED_RATE`，结果将发生：
 
-`null`
-`kotlin.Unit`
-`kotlin.Unit`
-`null`
-`kotlin.Unit`
+```
+null
+kotlin.Unit
+kotlin.Unit
+null
+kotlin.Unit
+```
 
 注意，与计时器相关的 API 目前是实验性的，可能会在未来的版本中被替换。
 
@@ -4443,9 +4293,6 @@ class Withdraw(
 使用密封类层次结构允许我们对实例使用穷尽的 `when` 表达式。
 
 注意 `GetBalance` 实例有一个 `CompletableDeferred` 类型的属性。我们的 Actor 将使用该属性将当前账户余额发送回使用 `GetBalance` 消息请求它的协程。同样，`Withdraw` 类拥有 `isPermitted` 属性，如果提取成功，该属性将接收 true，否则为 false。
-
-
-
 
 现在，我们可以实现负责维护账户余额的 actor。基本逻辑非常简单；我们持续轮询传入通道，并根据接收的消息执行可能的动作之一：
 
@@ -4479,6 +4326,10 @@ fun CoroutineScope.accountManager(
 注意 `CompletableDeferred` 上 `complete()` 方法的使用。这就是我们将请求结果发送回 actor 客户端的方式。
 
 现在，让我们添加一对不通过 actor 通信的协程：
+
+
+
+以下是对给定文本的排版处理结果：
 
 ```kotlin
 private suspend fun SendChannel<AccountMessage>.deposit(
@@ -4555,12 +4406,12 @@ Client #0: balance is 50
 
 要启动一个通用线程，你可以使用 `thread()` 函数，它允许你指定以 Kotlin lambda 形式表示的线程可运行代码，以及一组基本的线程属性：
 
-- `start:`: 线程在被创建后是否立即启动（默认为 true）。
-- `isDaemon:`: 线程是否以守护模式启动（默认为 false）。守护线程不会阻止 JVM 退出，因此在主线程终止时会自动关闭。
-- `contextClassLoader:`: 线程代码用于加载类和资源的自定义类加载器（默认为 null）。
-- `name:`: 自自定义的线程名称。默认为 null，意味着名称将自动选择（格式如 `Thread-1`、`Thread-2` 等）。
-- `priority:`: 线程优先级，范围从 `Thread.MIN_PRIORITY (= 1)` 到 `Thread.MAX_PRIORITY (= 10)`，影响该线程与其他线程相比获得的 CPU 时间。默认为 -1，意味着优先级将自动选择。
-- `block:`: 类型为 `() -> Unit` 的函数值，将在新线程中运行。
+- `start`: 线程在被创建后是否立即启动（默认为 `true`）。
+- `isDaemon`: 线程是否以守护模式启动（默认为 `false`）。守护线程不会阻止 JVM 退出，因此在主线程终止时会自动关闭。
+- `contextClassLoader`: 线程代码用于加载类和资源的自定义类加载器（默认为 `null`）。
+- `name`: 自定义的线程名称。默认为 `null`，意味着名称将自动选择（格式如 `Thread-1`、`Thread-2` 等）。
+- `priority`: 线程优先级，范围从 `Thread.MIN_PRIORITY`（= 1）到 `Thread.MAX_PRIORITY`（= 10），影响该线程与其他线程相比获得的 CPU 时间。默认为 -1，意味着优先级将自动选择。
+- `block`: 类型为 `() -> Unit` 的函数值，将在新线程中运行。
 
 例如，以下程序启动了一个每 150 毫秒打印一次消息的线程：
 
@@ -4587,15 +4438,15 @@ Worker: 4
 Shutting down…
 ```
 
-
-
 虽然各个加法操作的顺序可能不同从而产生不同的中间结果，但同步机制确保了总和始终等于 15。一个可能的输出如下：
 
-`1`
-`4`
-`8`
-`13`
-`15`
+```
+1
+4
+8
+13
+15
+```
 
 通常情况下，`synchronized()` 函数返回其 lambda 表达式的值。例如，我们可以使用它来获取调用时刻的其中一个中间计数器值：
 
@@ -4670,11 +4521,11 @@ class Counter {
 
 ## 习题
 
-1. 什么是挂起函数（suspending function）？它的行为与普通函数何不同？
+1. 什么是挂起函数（suspending function）？它的行为与普通函数有何不同？
 2. 如何使用 `launch()` 和 `async()` 构建器创建协程？它们之间有什么区别？
 3. 解释 `runBlocking()` 构建器的用途。
 4. 什么是结构化并发（structured concurrency）？
-5. 描述协程作业（job）的生命周期。作业取消在协程树中传播的？
+5. 描述协程作业（job）的生命周期。作业取消在协程树中是如何传播的？
 6. 什么是协程调度器（coroutine dispatcher）？描述协程库提供的常见调度器实现。
 7. 如何在协程内部更改调度器？
 8. 描述协程库使用的异常处理机制。`CoroutineExceptionHandler` 的作用是什么？
@@ -4710,7 +4561,7 @@ class Counter {
 
 ## KotlinTest 规范
 
-在本节中，我们将如何在 IntelliJ IDEA 项目中配置 KotlinTest 以及该测试框架提供的不同测试布局。
+在本节中，我们将介绍如何在 IntelliJ IDEA 项目中配置 KotlinTest 以及该测试框架提供的不同测试布局。
 
 ### 开始使用 KotlinTest
 
@@ -4721,9 +4572,6 @@ class Counter {
 ![](img/Img_14_01.jpg)
 
 **图 14.1:** 添加 KotlinTest 库
-
-
-
 
 之后，IDE 将建议你向项目的模块添加一个新库。下一步是设置依赖范围。切换到左侧的 `Modules` 视图，选择一个感兴趣的模块并打开 `Dependencies` 选项卡。你会看到新添加的库已添加到依赖项中，其范围被设置为 `Compile`。这意味着该库将在 IDE 编译和运行期间，被包含在生产源码和测试源码的类路径中。由于我们仅在测试时需要 `KotlinTest`，因此应将范围改为 `Test`（图 14.2）：
 
@@ -4737,7 +4585,7 @@ class Counter {
 
 ![](img/Img_14_03.jpg)
 
-**图 14.3：**为 IntelliJ IDEA 安装 KotlinTest 插件
+**图 14.3：** 为 IntelliJ IDEA 安装 KotlinTest 插件
 
 现在，我们可以像以前一样开始编写代码了。让我们在 `test` 目录中创建一个新文件并编写一个简单的测试规范：
 
@@ -4754,13 +4602,13 @@ class NumbersTest :StringSpec({
 
 ![](img/Img_14_04.jpg)
 
-**图 14.4：**在 IntelliJ 中运行 KotlinTest 规范
+**图 14.4：** 在 IntelliJ 中运行 KotlinTest 规范
 
 现在，我们准备好开始讨论 `KotlinTest` 特性了。我们的第一个主题将与你用于组织测试用例的各种规范样式有关。
 
-# 规范样式 (#toc.xhtml_s83a)
+# 规范样式
 
-`KotlinTest` 支持多种规范样式；每种样式都会影响你的测试代码的组织方式。你可以轻松在项目中混合不同的样式，甚至通过通过实现 `AbstractSpec` 类或其更具体的子类（如 `AbstractStringSpec`）来定义你自己的样式。在本节中，我们将查看一旦向项目添加 `KotlinTest` 即可开箱使用的样式。
+`KotlinTest` 支持多种规范样式；每种样式都会影响你的测试代码的组织方式。你可以轻松在项目中混合不同的样式，甚至通过实现 `AbstractSpec` 类或其更具体的子类（如 `AbstractStringSpec`）来定义你自己的样式。在本节中，我们将查看一旦向项目添加 `KotlinTest` 即可开箱使用的样式。
 
 要定义测试用例，你需要继承一个规范类。然后，你可以在类初始化器中添加测试，也可以在传递给父类构造函数的 lambda 中添加。定义测试本身的方法取决于样式，在大多数情况下涉及某些类 DSL 的 API。让我们考虑一个使用 `StringSpec` 类的简单示例：
 
@@ -4773,11 +4621,13 @@ class NumbersTest :StringSpec({
 })
 ```
 
-使用 `StringSpec`，单个测试是通过放置在带有测试描述的字符串之后的挂起 lambda 定义的。正如你可能猜的那样，这只是 `StringSpec` 定义的 `String.invoke()` 函数的运算符形式。在这个示例中，实际验证代码使用了 `shouldBe` 中缀函数，当其参数不相等时它会抛出异常。该函数是匹配器 DSL 的一部分，我们将在下一节中介绍。
 
-注意，`StringSpec` 强制执行平坦测试用例结构，特定类中的所有测试都定义在同一层。如果你尝试将一个测试块放在另一个内部，框架将在运行时抛出异常。
 
-复杂的布局由 `WordSpec` 类提供。在最简单的形式中，它允许你定义双层层次结构，其中定义的测试（与 `StringSpec` ）通过调用 `should()` 函数进行分组：
+使用`StringSpec`，单个测试是通过放置在带有测试描述的字符串之后的挂起 lambda 定义的。正如你可能猜到的那样，这只是`StringSpec`定义的`String.invoke()`函数的运算符形式。在这个示例中，实际验证代码使用了`shouldBe`中缀函数，当其参数不相等时它会抛出异常。该函数是匹配器 DSL 的一部分，我们将在下一节中介绍。
+
+注意，`StringSpec`强制执行平坦测试用例结构，特定类中的所有测试都定义在同一层。如果你尝试将一个测试块放在另一个内部，框架将在运行时抛出异常。
+
+复杂的布局由`WordSpec`类提供。在最简单的形式中，它允许你定义双层层次结构，其中定义的测试（与`StringSpec`）通过调用`should()`函数进行分组：
 
 ```kotlin
 import io.kotlintest.shouldBe
@@ -4789,9 +4639,6 @@ class NumbersTest2 :WordSpec({
 })
 ```
 
-
-
-
 ```
 "Addition" - {
   "1 + 2" - {
@@ -4801,7 +4648,7 @@ class NumbersTest2 :WordSpec({
 })
 ```
 
-KotlinTest 还支持受 Gherkin 语言启发的 BDD（行为驱动开发）规范风格。在 `FeatureSpec` 中，层级根通过 `feature` 块引入，这些块又包含实现特定测试的 `scenario` 块。`and()` 调用用于在特定的 `feature` 中分组场景（和其他分组）：
+KotlinTest 还支持受 Gherkin 语言启发的 BDD（行为驱动开发）规范风格。在`FeatureSpec`中，层级根通过`feature`块引入，这些块又包含实现特定测试的`scenario`块。`and()`调用用于在特定的`feature`中分组场景（和其他分组）：
 
 ```kotlin
 import io.kotlintest.shouldBe
@@ -4819,7 +4666,7 @@ class NumbersTest :FeatureSpec({
 })
 ```
 
-类似的风格通过 `BehaviorSpec` 实现，它引入了由函数 `given()/Given()`、`when()/When()` 和 `then()/Then()` 表示的三个基本级别。可以通过 `and()/And()` 调用引入额外的分组层级，它们可以组合多个 `when/then` 块：
+类似的风格通过`BehaviorSpec`实现，它引入了由函数`given()/Given()`、`when()/When()`和`then()/Then()`表示的三个基本级别。可以通过`and()/And()`调用引入额外的分组层级，它们可以组合多个`when/then`块：
 
 ```kotlin
 import io.kotlintest.shouldBe
@@ -4837,9 +4684,9 @@ class NumbersTest :BehaviorSpec({
 })
 ```
 
-注意使用这些块结构可以产生非常接近自然语言的测试描述（“当 x 为 `1` 且增加了 `1` 时，结果为 `2`”）。
+注意使用这些块结构可以产生非常接近自然语言的测试描述（“当 x 为`1`且增加了`1`时，结果为`2`”）。
 
-我们将考虑的最后一种规范风格是 `AnnotationSpec`。这种风格不使用类似 DSL 的测试规范，而是依赖于应用于测试类方法上的 `@Test` 注解，这类似于 JUnit 或 TestNG 等测试框架：
+我们将考虑的最后一种规范风格是`AnnotationSpec`。这种风格不使用类似 DSL 的测试规范，而是依赖于应用于测试类方法上的`@Test`注解，这类似于 JUnit 或 TestNG 等测试框架：
 
 ```kotlin
 import io.kotlintest.shouldBe
@@ -4851,26 +4698,28 @@ class NumbersTest :AnnotationSpec() {
 }
 ```
 
-你也可以通过为特定测试添加 `@Ignore` 注解来禁用它。
+你也可以通过为特定测试添加`@Ignore`注解来禁用它。
 
-### 断言 (Assertions)
+## 断言 (Assertions)
 
 ### 匹配器 (Matchers)
 
-在之前演示各种规范风格用法的代码示例中，我们使用了 `shouldBe` 函数，它会断言其参数的简单相等性。这只是 KotlinTest 库提供的许多匹配器中的一个。
+在之前演示各种规范风格用法的代码示例中，我们使用了`shouldBe`函数，它会断言其参数的简单相等性。这只是 KotlinTest 库提供的许多匹配器中的一个。
 
-匹配器被定义为扩展函数，既可以用普通调的形式调用，也可以作为中缀操作符。所有匹配器的名称都以 `shouldBe` 开头。这种约定有助于在测试代码产生如 `shouldBeGreaterThanOrEqual` 这样易读的名称。可以在 KotlinTest 文档中找到内置匹配器的完整列表；我们在这里不会关注特定的示例，因为大多数匹配器函数都有自解释的名称，并且可以以直观的方式使用。在本节中，我们将对更高级的问题感兴趣，例如使用自定义的匹配器扩展测试框架。
+匹配器被定义为扩展函数，既可以用普通调的形式调用，也可以作为中缀操作符。所有匹配器的名称都以`shouldBe`开头。这种约定有助于在测试代码产生如`shouldBeGreaterThanOrEqual`这样易读的名称。可以在 KotlinTest 文档中找到内置匹配器的完整列表；我们在这里不会关注特定的示例，因为大多数匹配器函数都有自解释的名称，并且可以以直观的方式使用。在本节中，我们将对更高级的问题感兴趣，例如使用自定义的匹配器扩展测试框架。
 
-要定义自定义匹配器，你需要实现 `Matcher` 接口并重写它的 `test()` 方法：
+要定义自定义匹配器，你需要实现`Matcher`接口并重写它的`test()`方法：
 
 ```kotlin
 abstract fun test(value: T): Result
 ```
 
-`Result` 对象描述了匹配的结果。它是一个数据类，包含以下属性：
+`Result`对象描述了匹配的结果。它是一个数据类，包含以下属性：
 
 - `passed:` 检查断言是否满足 (true) 或不满足 (false)。
+
 - `failureMessage:` 当断言失败时显示的消息，它会告诉我们需要发生什么才能通过断言。
+
 - `negatedFailureMessage:` 这在在你调用匹配器的取反版本且其失败时使用。
 
 例如，让我们创建一个检查给定数字是否为奇数的匹配器：
@@ -4890,7 +4739,7 @@ fun beOdd() = object : Matcher<Int> {
 }
 ```
 
-现在，我们可以通过将它传递给内置扩展函数 `should()/shouldNot()` 来使用该匹配器进行断言：
+现在，我们可以通过将它传递给内置扩展函数`should()/shouldNot()`来使用该匹配器进行断言：
 
 ```kotlin
 import io.kotlintest.*
@@ -4902,21 +4751,21 @@ class NumberTest :StringSpec({
 })
 ```
 
-注意，我们选择 `beOdd` 名称是为了让生成的断言具有可读性（should be odd/should not be odd）。
+注意，我们选择`beOdd`名称是为了让生成的断言具有可读性（should be odd/should not be odd）。
 
-任何 `Matcher` 接口的实现都自动支持和/或/取反操作，这些操作根据布尔逻辑逻辑组合匹配器。我们可以使用它们根据复杂的谓词构建断言，例如下面的示例将 `beOdd()` 与内置的 `positive()` 匹配器结合在一起：
+任何`Matcher`接口的实现都自动支持和/或/取反操作，这些操作根据布尔逻辑逻辑组合匹配器。我们可以使用它们根据复杂的谓词构建断言，例如下面的示例将`beOdd()`与内置的`positive()`匹配器结合在一起：
 
 ```kotlin
 "5 is positive odd" { 5 should (beOdd() and positive()) }
 ```
 
-匹配器支持的另一个操作是 `combine()`，它允许你通过提供转换函数将现有匹配器泛化到新类型。以下函数重用了 `beOdd()` 匹配器来断言给定集合的长度为奇数：
+匹配器支持的另一个操作是`combine()`，它允许你通过提供转换函数将现有匹配器泛化到新类型。以下函数重用了`beOdd()`匹配器来断言给定集合的长度为奇数：
 
 ```kotlin
 fun beOddLength() = beOdd().compose<Collection<*>> { it.size }
 ```
 
-注意，虽然所有的匹配器都可以通过 `should()/shouldNot()` 函数，但许多内置匹配器配有以 `should` 开头的专用函数。例如，以下断言是等价的：
+注意，虽然所有的匹配器都可以通过`should()/shouldNot()`函数，但许多内置匹配器配有以`should`开头的专用函数。例如，以下断言是等价的：
 
 ```kotlin
 5 should beLessThan(10)
@@ -4928,8 +4777,11 @@ fun beOddLength() = beOdd().compose<Collection<*>> { it.size }
 除了匹配器，KotlinTest 还支持相关的检查器概念。Inspector 是某些集合类的扩展函数，允许你验证给定断言是否适用于其中的某些元素：
 
 - `forAll()/forNone():` 检查是否所有/无元素满足断言。
-- `forExactly(n):` 检查是否恰好有 n 个元素满足断言；还有一个特殊的 `forOne()` 函数。
-- `forAtLeast(n)/forAtMost(n):` 检查至少/最多 n 个元素满足断言；当 `n = 1` 时可以使用 `forAtLeastOne()/forAtMostOne()` 或 `forAny()` 等同于 `forLeastOne()`。
+
+- `forExactly(n):` 检查是否恰好有 n 个元素满足断言；还有一个特殊的`forOne()`函数。
+
+- `forAtLeast(n)/forAtMost(n):` 检查至少/最多 n 个元素满足断言；当`n = 1`时可以使用`forAtLeastOne()/forAtMostOne()`或`forAny()`等同于`forLeastOne()`。
+
 - `forSome()` 检查是否有部分而非所有元素满足断言。
 
 让我们考虑使用这些检查器的示例：
@@ -4969,7 +4821,7 @@ class NumberTest :StringSpec({
 
 ### 异常处理 (Handling exceptions)
 
-KotlinTest 有一个特殊的 `shouldThrow()` 断言，用于检查某些代码是否由于特定异常失败。这是使用显式 `try/catch` 块捕捉异常的方便替代方案。如果成功，`shouldThrow()` 会返回捕获的异常，之后对其进行检查：
+KotlinTest 有一个特殊的`shouldThrow()`断言，用于检查某些代码是否由于特定异常失败。这是使用显式`try/catch`块捕捉异常的方便替代方案。如果成功，`shouldThrow()`会返回捕获的异常，之后对其进行检查：
 
 ```kotlin
 import io.kotlintest.matchers.string.shouldEndWith
@@ -4984,11 +4836,7 @@ class ParseTest :StringSpec({
 })
 ```
 
-
-
-
-
-KotlinTest 中一个非常有用的异常相关功能是能够临时抑制由失败的断言抛出的异常。这被称为“软断言”（soft assertion），如果你的测试包含多个断言且你想看到所有失败的项，它可能非常有用。通常情况下这种情况不会发生，因为测试在抛出第一个异常后就会终止。KotlinTest 允许你使用 `assertSoftly` 块来回避这种行为。`AssertionError` 异常会在块内部被捕获并累积，从而允许所有断言运行（除非它们因其他异常失败）。当块结束时，`assertSoftly` 将所有累积的异常（如果有）封装成单个 `AssertionError` 并抛回给调用者。让我们来看一个例子：
+KotlinTest 中一个非常有用的异常相关功能是能够临时抑制由失败的断言抛出的异常。这被称为“软断言”（soft assertion），如果你的测试包含多个断言且你想看到所有失败的项，它可能非常有用。通常情况下这种情况不会发生，因为测试在抛出第一个异常后就会终止。KotlinTest 允许你使用`assertSoftly`块来回避这种行为。`AssertionError`异常会在块内部被捕获并累积，从而允许所有断言运行（除非它们因其他异常失败）。当块结束时，`assertSoftly`将所有累积的异常（如果有）封装成单个`AssertionError`并抛回给调用者。让我们来看一个例子：
 
 ```kotlin
 import io.kotlintest.assertSoftly
@@ -5006,7 +4854,7 @@ class NumberTest :StringSpec({
 })
 ```
 
-如果没有 `assertSoftly()`，在第一个 `forAll()` 断言失败后，第二个甚至不会被检查。现在，两个断言都执行了，测试带有异常失败：
+如果没有`assertSoftly()`，在第一个`forAll()`断言失败后，第二个甚至不会被检查。现在，两个断言都执行了，测试带有异常失败：
 
 ```
 io.kotlintest.tables.MultiAssertionError:
@@ -5018,7 +4866,7 @@ The following 9 assertions failed
 
 ### 测试非确定性代码
 
-在处理非确定性代码（即代码有时在尝试多次后才会通过）时，你可以使用超时和多次调用的方便替代方案。`eventually()` 函数验证给定的断言在指定时间内至少被满足一次：
+在处理非确定性代码（即代码有时在尝试多次后才会通过）时，你可以使用超时和多次调用的方便替代方案。`eventually()`函数验证给定的断言在指定时间内至少被满足一次：
 
 ```kotlin
 import io.kotlintest.*
@@ -5034,7 +4882,7 @@ class StringSpecWithConfig :StringSpec({
 })
 ```
 
-`continually()` 函数同样验证嵌套的断言在调用时被满足，并在指定的间隔内保持不变：
+`continually()`函数同样验证嵌套的断言在调用时被满足，并在指定的间隔内保持不变：
 
 ```kotlin
 import io.kotlintest.*
@@ -5060,7 +4908,7 @@ KotlinTest 支持属性测试，其中你可以指定一些谓词并让 KotlinTe
 infix fun Int.min(n: Int) = if (this < n) this else n
 ```
 
-你想确保其结果始终小于或等于每个参数。为了做到这一点，我们将相应的断言封装在 `assertAll()` 调用内部：
+你想确保其结果始终小于或等于每个参数。为了做到这一点，我们将相应的断言封装在`assertAll()`调用内部：
 
 ```kotlin
 import io.kotlintest.matchers.beLessThanOrEqualTo
@@ -5079,11 +4927,13 @@ class NumbersTest: StringSpec({
 })
 ```
 
-当你运行这段代码时，KotlinTest 将生成一个 `Int` 对流并针对我们的断言测试所有它们。默认情况下，测试数据集包含 1000 个项目，但你可以作为 `assertAll()` 的参数显式指定其大小。
+当你运行这段代码时，KotlinTest 将生成一个`Int`对流并针对我们的断言测试所有它们。默认情况下，测试数据集包含 1000 个项目，但你可以作为`assertAll()`的参数显式指定其大小。
 
-还有一个 `assertNone()` 函数，它可以检查生成的项中没有一个满足指定的断言。
 
-作为替代方案，我们可以使用 `forAll()/forNone()` 函数，它接受一个布尔返回类型的 lambda，并验证所有/无生成的项是否具有相应的评估为真的的谓词：
+
+还有一个`assertNone()`函数，它可以检查生成的项中没有一个满足指定的断言。
+
+作为替代方案，我们可以使用`forAll()/forNone()`函数，它接受一个布尔返回类型的 lambda，并验证所有/无生成的项是否具有相应的评估为真的的谓词：
 
 ```kotlin
 import io.kotlintest.properties.forAll
@@ -5098,19 +4948,23 @@ class NumbersTest: StringSpec({
 })
 ```
 
-KotlinTest 为许多常见类型（如 `Int`、`Boolean` 和 `String`）提供了默认生成器。默认情况下，它使用 lambda 参数类型的运行时信息来自动选择生成器。但是，有时这可能是不想要的，如果涉及的类型根本不支持，甚至是不可能的。在这种情况下，我们需要显式指定 `Gen` 接口的实例作为生成器。它的伴生对象包含许多可以使用的有用方法，用于构建各种实现的生成器。特别是（其余部分可以忽略）：
+KotlinTest 为许多常见类型（如`Int`、`Boolean`和`String`）提供了默认生成器。默认情况下，它使用 lambda 参数类型的运行时信息来自动选择生成器。但是，有时这可能是不想要的，如果涉及的类型根本不支持，甚至是不可能的。在这种情况下，我们需要显式指定`Gen`接口的实例作为生成器。它的伴生对象包含许多可以使用的有用方法，用于构建各种实现的生成器。特别是（其余部分可以忽略）：
 
-- `choose(min, max)`：从 `min` 到 `max` 生成整数。
+- `choose(min, max)`：从`min`到`max`生成整数。
+
 - `positiveIntegers()/negativeIntegers()/nats()`：生成正/负整数/自然数。
+
 - `from(collection)`：从给定列表中获取随机元素。
+
 - `create()`：基于 lambda 构建生成器。
 
-另一种方法是直接继承 `Gen` 接口。在这种情况下，你需要实现两个方法：
+另一种方法是直接继承`Gen`接口。在这种情况下，你需要实现两个方法：
 
-- `constants()`：返回一个 `T` 类型值的集合，这些值始终包含在流中（例如，`Int.MIN_VALUE`、`0` 和 `Int.MAX_VALUE`）。
-- `random()`：返回类型为 `T` 的随机元素序列。
+- `constants()`：返回一个`T`类型值的集合，这些值始终包含在流中（例如，`Int.MIN_VALUE`、`0`和`Int.MAX_VALUE`）。
 
-例如，我们可以将 `Rational` 生成器重写为如下：
+- `random()`：返回类型为`T`的随机元素序列。
+
+例如，我们可以将`Rational`生成器重写为如下：
 
 ```kotlin
 object RationalGen : Gen<Rational> {
@@ -5127,7 +4981,7 @@ object RationalGen : Gen<Rational> {
 }
 ```
 
-也可以使用固定测试集，而不是使用框架提供的随机值或自定义生成器。为了这一点，你需要使用 `forall()` 函数，它接收 `row` 对象的 `vararg`：
+也可以使用固定测试集，而不是使用框架提供的随机值或自定义生成器。为了这一点，你需要使用`forall()`函数，它接收`row`对象的`vararg`：
 
 ```kotlin
 import io.kotlintest.data.forall
@@ -5147,7 +5001,7 @@ class NumbersTest: StringSpec({
 })
 ```
 
-注意命名上的差异：`forall` 与 `forAll`。
+注意命名上的差异：`forall`与`forAll`。
 
 在此基础上，你可以将多个行封装到单个对象中，该对象有一组特定的表头。这些表头随后用于在测试失败时提供上下文信息。例如：
 
@@ -5160,10 +5014,6 @@ class NumbersTest :StringSpec({
     "min" {
         forAll(
 ```
-
-
-
-
 
 ```kotlin
 table(
@@ -5181,20 +5031,23 @@ table(
 
 `Test failed for (name, Bob), (age, 16) with error 16 should be >= 18`
 
-此选项被 `forAll()` 和 `forNone()` 重载版本共同支持。但请注意，与基于生成器测试的 `forAll()`/`forNone()` 不同，这些函数接收一个返回类型为 `Unit` 的 lambda。这就是为什么我们使用了匹配器函数而不是简单地返回 `Boolean` 值。
+此选项被`forAll()`和`forNone()`重载版本共同支持。但请注意，与基于生成器测试的`forAll()`/`forNone()`不同，这些函数接收一个返回类型为`Unit`的 lambda。这就是为什么我们使用了匹配器函数而不是简单地返回`Boolean`值。
 
 ## 固件与配置 (Fixtures and configurations)
 
 ### 提供固件
 
-通常情况下，测试在实际调用之前需要某些代码来初始化必要的环境和资源（也称为测试固件），并在测试之后对其进行清理工作。在 KotlinTest 中，你可以使用 `TestListener` 接口将代码嵌入到测试用例生命周期的各个阶段。让我们来看看它拥有哪些方法：
+通常情况下，测试在实际调用之前需要某些代码来初始化必要的环境和资源（也称为测试固件），并在测试之后对其进行清理工作。在 KotlinTest 中，你可以使用`TestListener`接口将代码嵌入到测试用例生命周期的各个阶段。让我们来看看它拥有哪些方法：
 
 *   `beforeProject()`/`afterProject()`：在测试引擎启动/结束时调用。
+
 *   `beforeSpecClass()`：在与给定规格类（specification class）对应的任何测试开始之前调用一次（无论该规格类被实例化多少次）。`afterSpecClass()`：在所有此类测试完成后调用。
-*   `beforeSpec()`：在实例化规格类之后但在运行其测试之前调用；`afterSpec()` 在给定规格类实例的所有测试完成后完成后调用。
+
+*   `beforeSpec()`：在实例化规格类之后但在运行其测试之前调用；`afterSpec()`在给定规格类实例的所有测试完成后完成后调用。
+
 *   `beforeTest()`/`afterTest()`：在运行特定的测试块之前/之后调用。
 
-为了产生某种效果，必须通过重写特定规格类的 `listener()` 方法来注册一个监听器实例：
+为了产生某种效果，必须通过重写特定规格类的`listener()`方法来注册一个监听器实例：
 
 ```kotlin
 import io.kotlintest.*
@@ -5240,20 +5093,28 @@ class NumbersTest :FunSpec() {
 运行上述代码将产生以下输出：
 
 `Before spec class: Description(parents=[], name=NamesTest)`
+
 `Before spec: Description(parents=[], name=NamesTest)`
+
 `Before test: IncrementBefore test: 2+2`
+
 `After test: 2+2`
+
 `Before test: 2 * 2`
+
 `After test: 2 * 2`
+
 `After test: Increment`
+
 `After spec: Description(parents=[], name=NamesTest)`
+
 `After spec class: Description(parents=[], name=NamesTest)`
 
-请注意，在我们的示例中，`beforeSpec()`/`afterSpec()` 只被调用了一次，就像 `beforeSpecClass()`/`afterSpecClass()` 一样，因为只创建了一个 `NumbersTest` 实例。并非如此，因为你可以配置框架为每个测试创建一个新的规格类（请参见 Test 配置部分中的隔离模式讨论）。
+请注意，在我们的示例中，`beforeSpec()`/`afterSpec()`只被调用了一次，就像`beforeSpecClass()`/`afterSpecClass()`一样，因为只创建了一个`NumbersTest`实例。并非如此，因为你可以配置框架为每个测试创建一个新的规格类（请参见 Test 配置部分中的隔离模式讨论）。
 
-`beforeSpec()` 和 `beforeTest()` 之间（以及 `afterSpec()` 和 `afterTest()` 之间）的关键区别在于，`beforeSpec()` 仅在相关的测试处于启用状态时才被调用。在下一节中，我们将看到如何使用配置关闭单个测试。
+`beforeSpec()`和`beforeTest()`之间（以及`afterSpec()`和`afterTest()`之间）的关键区别在于，`beforeSpec()`仅在相关的测试处于启用状态时才被调用。在下一节中，我们将看到如何使用配置关闭单个测试。
 
-如果你想提供 `beforeProject()`/`afterProject()` 方法的实现，你需要使用 `ProjectConfig` 单例注册一个全局监听器。该单例必须继承自 `AbstractProjectConfig` 类并置于 `io.kotlintest.provided` 包中：
+如果你想提供`beforeProject()`/`afterProject()`方法的实现，你需要使用`ProjectConfig`单例注册一个全局监听器。该单例必须继承自`AbstractProjectConfig`类并置于`io.kotlintest.provided`包中：
 
 ```kotlin
 package io.kotlintest.provided
@@ -5272,7 +5133,7 @@ object ProjectConfig :AbstractProjectConfig() {
 }
 ```
 
-KotlinTest 的另一个实用用功能是能够自动关闭实现 `AutoCloseable` 的资源。为了让此起作用，你需要使用 `autoClose()` 调用：
+KotlinTest 的另一个实用用功能是能够自动关闭实现`AutoCloseable`的资源。为了让此起作用，你需要使用`autoClose()`调用：
 
 ```kotlin
 import io.kotlintest.shouldBe
@@ -5290,14 +5151,17 @@ class FileTest :FunSpec() {
 
 ### 测试配置
 
-KotlinTest 提供了一组选项来配置测试环境。让我们看看使用 `config()` 函数可以控制哪些参数：
+KotlinTest 提供了一组选项来配置测试环境。让我们看看使用`config()`函数可以控制哪些参数：
 
 *   `invocations`：执行测试的次数；只有当所有执行都成功时，测试才被视为通过。此选项对于可能偶尔失败的非确定性测试非常有用。
-*   `threads`：运行测试时使用的线程数。此参数仅在 `invocations` 大于 1 时才有意义，否则没有内容可以并行化。
-*   `enabled`：是否应该运行该测试；设置为 `false` 将禁用测试执行。
+
+*   `threads`：运行测试时使用的线程数。此参数仅在`invocations`大于 1 时才有意义，否则没有内容可以并行化。
+
+*   `enabled`：是否应该运行该测试；设置为`false`将禁用测试执行。
+
 *   `timeout`：一个代表测试运行最大持续时间的对象。如果测试执行时间超过此超时时间，它将被终止并视为失败。与调用次数一样，此选项对于非确定性测试很有用。
 
-注意，`threads` 选项仅影响测试用例内单个测试的并行化。如果你还想并行运行多个测试用例，你需要使用之前讨论过的 `AbstractProjectConfig`。只需重写它的 `parallelism()` 方法并返回所需的并发线程数：
+注意，`threads`选项仅影响测试用例内单个测试的并行化。如果你还想并行运行多个测试用例，你需要使用之前讨论过的`AbstractProjectConfig`。只需重写它的`parallelism()`方法并返回所需的并发线程数：
 
 ```kotlin
 package io.kotlin.provided
@@ -5308,7 +5172,7 @@ object ProjectConfig :AbstractProjectConfig() {
 }
 ```
 
-除了单独配置每个测试外，你还可以通过重写 `defaultTestCaseConfig` 属性为特定测试用例的所有测试指定通用配置：
+除了单独配置每个测试外，你还可以通过重写`defaultTestCaseConfig`属性为特定测试用例的所有测试指定通用配置：
 
 ```kotlin
 import io.kotlintest.TestCaseConfig
@@ -5326,10 +5190,6 @@ class StringSpecWithConfig :StringSpec({
 }
 ```
 
-
-
-
-
 ```kotlin
 override val defaultTestCaseConfig: TestCaseConfig
 
@@ -5340,13 +5200,15 @@ get() = TestCaseConfig(invocations = 10, threads = 2)
 
 除非你显式地指定了自己的配置，否则测试将继承默认配置选项。
 
-在结论部分，我们还想指出 KotlinTest 的另一个功能，即允许你选择测试用例实例在各个测试之间共享的方式。这被称为“隔离模式”（isolation mode）。默认情况下，测试用例只被实例化一次，并使用该实例运行其所有的测试。虽然从性能角度来看这是好的，但在某些场景下，这种策略并不是理想的；例如，如果测试用例具有被单个测试读取和修改的可变状态。在这些情况下，你可能希望在每次启动测试或测试组时都实例化测试用例。要实现这一点，你只需要重写测试用例类的 `isolationMode()` 方法即可。该方法返回一个 `IsolationMode` 枚举值，定义了三个选项：
+在结论部分，我们还想指出 KotlinTest 的另一个功能，即允许你选择测试用例实例在各个测试之间共享的方式。这被称为“隔离模式”（isolation mode）。默认情况下，测试用例只被实例化一次，并使用该实例运行其所有的测试。虽然从性能角度来看这是好的，但在某些场景下，这种策略并不是理想的；例如，如果测试用例具有被单个测试读取和修改的可变状态。在这些情况下，你可能希望在每次启动测试或测试组时都实例化测试用例。要实现这一点，你只需要重写测试用例类的`isolationMode()`方法即可。该方法返回一个`IsolationMode`枚举值，定义了三个选项：
 
 - `SingleInstance:` 创建测试用例的单实例；这是默认行为。
+
 - `InstancePerTest:` 每当执行一个上下文（context）或测试块（test block）时，都会创建一个新的测试用例实例。
+
 - `InstancePerLeaf:` 在执行单个测试块之前实例化测试。
 
-让我们来看一个例子。假设我们有如下的 `FunSpec` 风格的测试用例：
+让我们来看一个例子。假设我们有如下的`FunSpec`风格的测试用例：
 
 ```kotlin
 import io.kotlintest.shouldBe
@@ -5370,52 +5232,60 @@ class IncTest :FunSpec() {
 }
 ```
 
-如果你运行它，你会发现第二个测试失败了。这是因为变量 `x` 保留了在 prefix 块中被赋值的值。如果我们通过添加以下代码将隔离模式改为 `InstancePerTest`：
+如果你运行它，你会发现第二个测试失败了。这是因为变量`x`保留了在 prefix 块中被赋值的值。如果我们通过添加以下代码将隔离模式改为`InstancePerTest`：
 
 ```kotlin
 override fun isolationMode() = IsolationMode.InstancePerTest
 ```
 
-两个测试都将通过，因为每个测试都将获得自己的 `IncTest` 实例。打印到标准输出的消息将如下：
+两个测试都将通过，因为每个测试都将获得自己的`IncTest`实例。打印到标准输出的消息将如下：
+
+
+
+`Running context`
+`prefix`
+`Running context`
+`postfix`
+
+这种现象是因为 `IncTest` 被实例化了三次。第一次是为了执行上下文块本身，第二次是为了执行 `prefix` 测试（该测试也会再次运行一次上下文块），第三次是为了执行 `postfix` 测试（它同样需要先运行上下文块）。结果是，上下文块也被执行了三次。
+
+如果我们将隔离模式改为 `InstancePerLeaf`，上下文块将不会独立执行，而只作为运行单个测试的一部分执行。结果是 `IncTest` 只会被实例化两次（一次用于 `prefix`，一次用于 `postfix`），输出将如下所示：
 
 ```
-Running context
 Running context
 prefix
 Running context
 postfix
 ```
 
-这种现象是因为 `IncTest` 被实例化了三次。第一次是为了执行上下文块本身，第二次是为了执行 prefix 测试（该测试也会再次运行一次上下文块），第三次是为了执行 postfix 测试（它同样需要先运行上下文块）。结果是，上下文块也被执行了三次。
+到此为止，我们对 KotlinTest 框架的概述就结束了。关于我们提到的功能（以及我们未提到的功能）的更多详细信息，建议读者关注位于 [`github.com/kotlintest/kotlintest`](https://github.com/kotlintest/kotlintest) 的提供的文档。
 
-如果我们将隔离模式改为 `InstancePerLeaf`，上下文块将不会独立执行，而只作为运行单个测试的一部分执行。结果是 `IncTest` 只会被实例化两次（一次用于 prefix，一次用于 postfix），输出将如下所示：
-
-```
-Running context
-prefix
-Running context
-postfix
-```
-
-到此为止，我们对 KotlinTest 框架的概述就结束了。关于我们提到的功能（以及我们未提到的功能）的更多详细信息，建议读者关注位于 **[`github.com/kotlintest/kotlintest`](https://github.com/kotlintest/kotlintest)** 的提供的文档。
-
-### 结论
+## 结论
 
 在本章中，我们学习了在 KotlinTest 中编写测试规范的基础知识，KotlinTest 是一个专为 Kotlin 应用程序设计的流行的开源测试框架。我们讨论了如何使用开箱即用的规范风格组织测试代码，如何使用断言器（matchers）和检查器（inspectors）编写表达清晰且易于读的测试，如何描述测试数据集以及利用自动属性测试。我们还解释了 KotlinTest 的设置/清理（setup/tear down）设施以及基础测试配置。现在，你已经拥有了必要的知识来编写自己的测试规范，并学习 KotlinTest 以及其他测试框架的更高级特性。
 
 在下一章中，我们将讨论如何使用 Kotlin 构建 Android 平台的应用程序。我们将解释如何在 Android Studio 中配置项目，讨论基础 UI 和 Activity 周期，并向你介绍由 Android 扩展和 Anko 框架提供的各种有用功能。
 
-# 习
+## 习题
 
 1. 概述支持 Kotlin 的流行测试框架。
+
 2. 描述 KotlinTest 支持的规范风格。
+
 3. 什么是断言器（matcher）？你如何组合和转换断言器来编写复杂的断言？
+
 4. 解释如何实现自定义的 KotlinTest 断言器。
+
 5. 描述 `shouldThrow()` 函数。什么是软断言（soft assertion）？
+
 6. 描述 KotlinTest 中提供的集合检查器（collection inspectors）。
+
 7. 解释 `eventually()` 和 `continually()` 函数的含义。
+
 8. 如何使用监听器（listeners）实现测试资源的初始化和终结化？
+
 9. 如何为单个测试和规范指定配置？如何定义全局配置？
+
 10. 解释测试用例隔离模式之间的差异。
 
 # 第 15 章：Android 应用程序
@@ -5424,7 +5294,7 @@ postfix
 
 本章分为两个部分。在第一部分，我们将讨论 Android Studio 的基本功能、如何建立新项目、Gradle 如何被用于项目配置和构建、什么是 Android Activity，以及你如何使用 Android 设备运行应用程序。在第二部分，我们将专注于示例应用程序的开发，并讨论更高级的问题，如使用 Kotlin 扩展和 Anko 以及保持 Activity 状态。
 
-### 结构
+## 结构
 
 - 开始 Android
 - Activity
@@ -5439,10 +5309,7 @@ postfix
 
 ### 设置 Android Studio 项目
 
-我们将从在 Android Studio 中配置项目所需的步骤步骤开始，Android Studio 是 Google 开发的官方 Android IDE。它基于 JetBrains 平台，因此与我们之前章节提到的 IntelliJ IDEA 非常相似。与 IDEA 本身不同，它包含了一套专门针对 Android 应用程序开发的特性。和 IntelliJ IDEA 一样，Android Studio 对 Kotlin 语言提供了开箱支持。
-
-
-
+我们将从在 Android Studio 中配置项目所需的步骤开始，Android Studio 是 Google 开发的官方 Android IDE。它基于 JetBrains 平台，因此与我们之前章节提到的 IntelliJ IDEA 非常相似。与 IDEA 本身不同，它包含了一套专门针对 Android 应用程序开发的特性。和 IntelliJ IDEA 一样，Android Studio 对 Kotlin 语言提供了开箱支持。
 
 向导的第一步将要求你为项目的第一个活动选择模板（参见图 15.1）。活动基本上是用户可以使用你的应用程序执行的单项功能的表示，例如编辑笔记、显示当前时间，或者在我们第一个应用程序中，只需向用户展示欢迎消息。让我们现在选择 `Empty Activity`（空活动），让 Android Studio 为我们生成一个存根活动，并点击 `Next`（下一步）。
 
@@ -5450,7 +5317,7 @@ postfix
 
 **图 15.1:** 为新的 Android 项目选择活动
 
-项目向导下一步要求你输入基本项目信息，如名称、项目类的通用包名、根目录和默认语言（例如，参见图 15.2）。你还可以选择应用程序支持的最低 Android SDK 版本。版本越高，你可以调用的 API 就越强大，但同时，你的应用程序能够运行的设备比例就越小。你可以点击 `Help me choose`（帮助我选择）链接查看不同 API 版本的对比图。对于简单示例，我们可以保留默认建议的选项。
+项目向导下一步要求你输入基础项目信息，如名称、项目类的通用包名、根目录和默认语言（例如，参见图 15.2）。你还可以选择应用程序支持的最低 Android SDK 版本。版本越高，你可以调用的 API 就越强大，但同时，你的应用程序能够运行的设备比例就越小。你可以点击 `Help me choose`（帮助我选择）链接查看不同 API 版本的对比图。对于简单示例，我们可以保留默认建议的选项。
 
 ![](img/Img_15_02.jpg)
 
@@ -5470,10 +5337,10 @@ Android 视图中的独立节点 `Gradle Scripts` 包含描述项目配置的文
 
 Android Studio 依赖于 Gradle，这是一个流行的构建系统，它可以自动化处理管理项目依赖、编译、测试和打包等任务。项目配置在 `build.gradle` 文件中使用领域特定语言描述，并使用 Groovy 编写，其语法让人联想起 Java 和 Kotlin 代码（事实上，Groovy 是启迪了 Kotlin 设计的语言之一）。我们在这里不会深入探讨 Groovy 或 Gradle 的细节，而是重点介绍与在 Android 应用中使用 Kotlin 相关的一些重要点。Android Studio 向导使用的项目模板会自动生成以下文件：
 
-*   位于项目根目录下的项目级 `build.gradle`。该文件包含整个项目的通用配置。
-*   `settings.gradle`（同样位于项目根目录）指定项目项目包含哪些模块，并可能可选包含一些额外的配置命令。
-*   `local.properties` 和 `gradle.properties` 包含一组键值对，定义了 Gradle 脚本使用的属性，例如 Android SDK 目录路径或启动 Gradle 进程时传递的 JVM 参数。
-*   位于 app 模块根目录的模块级 `build.gradle`，包含模块特定的配置。
+- 位于项目根目录下的项目级 `build.gradle`。该文件包含整个项目的通用配置。
+- `settings.gradle`（同样位于项目根目录）指定项目包含哪些模块，并可能可选包含一些额外的配置命令。
+- `local.properties` 和 `gradle.properties` 包含一组键值对，定义了 Gradle 脚本使用的属性，例如 Android SDK 目录路径或启动 Gradle 进程时传递的 JVM 参数。
+- 位于 app 模块根目录的模块级 `build.gradle`，包含模块特定的配置。
 
 让我们来看根 `build.gradle` 文件：
 
@@ -5504,10 +5371,10 @@ task clean(type: Delete) {
 
 此脚本基本上执行以下操作：
 
-*   定义 `kotlin_version` 属性，该属性包含 `kotlin` 标准库的版本，并被其他脚本引用。
-*   告诉 Gradle 在构建项目时使用 `com.android.tools.build:gradle` 和 `org.jetbrains.kotlin:kotlin-gradle-plugin` 插件。第一个添加 Android 模块的支持，而第二个允许你使用 Kotlin 源码构建项目。
-*   配置默认仓库列表，用于下载依赖构件（如库的二进制文件和源码）。
-*   添加 `clean` 任务，用于在项目重新构建之前删除之前的编译结果。
+- 定义 `kotlin_version` 属性，该属性包含 `kotlin` 标准库的版本，并被其他脚本引用。
+- 告诉 Gradle 在构建项目时使用 `com.android.tools.build:gradle` 和 `org.jetbrains.kotlin:kotlin-gradle-plugin` 插件。第一个添加 Android 模块的支持，而第二个允许你使用 Kotlin 源码构建项目。
+- 配置默认仓库列表，用于下载依赖构件（如库的二进制文件和源码）。
+- 添加 `clean` 任务，用于在项目重新构建之前删除之前的编译结果。
 
 `settings.gradle` 文件非常简单，默认包含一个 `include` 命令，告诉 Gradle 哪些模块构成了项目：
 
@@ -5555,7 +5422,7 @@ dependencies {
 
 `android` 块包含各种 Android 配置参数，如应用 ID、版本号、最低支持 Android 版本等。
 
-最后`dependencies` 块列出了我们模块的所有外部依赖。每个依赖都有一个明确的配置，先指定配置后是依赖描述（通常以 Maven 坐标的形式，如 `androidx.core:core-ktx:1.0.2`）。配置决定了何时以及何处使用此依赖；例如，`implementation` 依赖被添加到编译类路径并打包到构建输出，但在依赖模块的编译期间不可用，而 `testImplementation` 依赖被添加到模块测试的编译类路径并在测试执行中使用。如前面的代码所示，Kotlin 标准库会自动添加到新模块依赖中。
+最后 `dependencies` 块列出了我们模块的所有外部依赖。每个依赖都有一个明确的配置，先指定配置后是依赖描述（通常以 Maven 坐标的形式，如 `androidx.core:core-ktx:1.0.2`）。配置决定了何时以及何处使用此依赖；例如，`implementation` 依赖被添加到编译类路径并打包到构建输出，但在依赖模块的编译期间不可用，而 `testImplementation` 依赖被添加到模块测试的编译类路径并在测试执行中使用。如前面的代码所示，Kotlin 标准库会自动添加到新模块依赖中。
 
 ### 活动
 
@@ -5574,9 +5441,6 @@ class MainActivity :AppCompatActivity() {
 }
 ```
 
-
-
-
 ```
 setContentView(R.layout.activity_main)
 }
@@ -5585,6 +5449,7 @@ setContentView(R.layout.activity_main)
 
 
 
+以下是一个计算器应用的 UI 布局代码，使用 XML 编写：
 
 ```xml
 <android:layout_height="wrap_content"/>
@@ -5656,7 +5521,7 @@ setContentView(R.layout.activity_main)
 </RelativeLayout>
 ```
 
-`图 15.9` 显示了计算器的 UI 预览：
+图 15.9 显示了计算器的 UI 预览：
 
 ![](img/Img_15_09.jpg)
 
@@ -5666,7 +5531,7 @@ setContentView(R.layout.activity_main)
 
 注意 `android:id` 属性。它们被分配给每个展示或接收用户数据的视图元素。此属性允许你在 Java 或 Kotlin 代码中引用相应的元素。我们将在下一节讨论 Activity 类时介绍如何实现。
 
-### 实现 Activity 类
+## 实现 Activity 类
 
 让我们来实现 Activity 类，为 UI 添加一些行为。我们不会深入计算器的业务逻辑细节（让读者自己去探索），而是强调一些 Android 特有的要点。
 
@@ -5774,10 +5639,6 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-
-
-
-
 ```kotlin
 if (waitingNextOperand) {
     lastOp = nextOp
@@ -5813,15 +5674,17 @@ waitingNextOperand = nextOp != null
 
 **图 15.10：** 运行中的计算器应用程序
 
-# Kotlin Android Extensions (#toc.xhtml_s105a)
+## Kotlin Android Extensions
 
 频繁使用 `findViewById()` 会让代码变得杂乱，特别是如果你像我们对 `txtResult` 那样在类属性中保留视图组件的引用时。在 Java 世界中，某些库如 `Butterknife` 或 Android Data Binding 可以通过将视图引用自动注入给定的类字段来解决这个问题，但这需要你手动对感兴趣的字段进行注解并指定相应的 ID。虽然这些库也可以在 Kotlin 中使用，但有一个更简洁的解决方案，它依赖于 Android Extensions 编译器插件。在前面的节中，我们提到过该插件在 Android Studio 生成的项目中会自动激活。现在，我们终于可以将其投入实际使用了。
+
+
 
 Kotlin Android Extensions 的核心特性是一组与视图组件对应的合成属性（synthetic properties）。也就是说，它们允许你使用标识符引用视图，就像它们是某些顶层属性的名字一样。你只需要添加如下形式的导入指令：
 
 `import kotlinx.android.synthetic.main.activity_main.*`
 
-其中 `activity_main` 是活动 XML 文件的文件名。此类合成包包含了一组 `Activity` 扩展属性，每个属性对应活动 XML 中的某个组件。例如，我们可以简化以下行：
+其中`activity_main`是活动 XML 文件的文件名。此类合成包包含了一组`Activity`扩展属性，每个属性对应活动 XML 中的某个组件。例如，我们可以简化以下行：
 
 ```kotlin
 findViewById<Button>(R.id.btn0).setOnClickListener { appendText("0") }
@@ -5833,7 +5696,7 @@ findViewById<Button>(R.id.btn0).setOnClickListener { appendText("0") }
 btn0.setOnClickListener { appendText("0") }
 ```
 
-结果，我们计算器活动的 `onCreate()` 方法转变为如下：
+结果，我们计算器活动的`onCreate()`方法转变为如下：
 
 ```kotlin
 override fun onCreate(savedInstanceState: Bundle?) {
@@ -5862,21 +5725,21 @@ override fun onCreate(savedInstanceState: Bundle?) {
 }
 ```
 
-显式的 `txtResult` 属性可以完全删除：
+显式的`txtResult`属性可以完全删除：
 
 ```kotlin
 private val txtResult by lazy { findViewById<TextView>(R.id.txtResult) }
 ```
 
-**IDE 提示：得益于 IntelliJ IDEA 和 Android Studio 提供的自动导入功能，你不需要手动添加此类导入。如果你尝试通过 ID 引用视图组件且尚未导入必要的合成属性，IDE 将建议为你完成该操作（例如图 15.11）：**
+IDE 提示：得益于 IntelliJ IDEA 和 Android Studio 提供的自动导入功能，你不需要手动添加此类导入。如果你尝试通过 ID 引用视图组件且尚未导入必要的合成属性，IDE 将建议为你完成该操作（例如图 15.11）：
 
 ![](img/Img_15_11.jpg)
 
 **图 15.11：** 合成属性的自动导入
 
-此外，Android Extensions 还提供了许多实用功能，例如通过合成属性调整可用视图的缓存策略，以及通过实现 `LayoutContainer` 接口使用类似的注入机制增强任何容器的能力。我们在这里不会详细讨论这些功能，但你可以在 [`kotlinlang.org`](http://kotlinlang.org) 上的 Android Extensions 教程中找到详细信息。**
+此外，Android Extensions 还提供了许多实用功能，例如通过合成属性调整可用视图的缓存策略，以及通过实现`LayoutContainer`接口使用类似的注入机制增强任何容器的能力。我们在这里不会详细讨论这些功能，但你可以在[`kotlinlang.org`](http://kotlinlang.org)上的 Android Extensions 教程中找到详细信息。
 
-# 保留活动状态 (#toc.xhtml_s106a)
+# 保留活动状态
 
 如果你对我们在之前的几个节中创建的计算器进行一些实验，你可能会发现它的行为中有一个明显的缺陷。让我们输入一些数字，然后模拟设备旋转。结果如图 15.12 所示：
 
@@ -5884,7 +5747,7 @@ private val txtResult by lazy { findViewById<TextView>(R.id.txtResult) }
 
 **图 15.12：** 设备旋转时活动重置
 
-你可以看到原始数字变为了零。事实上，我们的活动的状态被重置了。产生这种行为的原因是配置更改（如旋转屏幕）强制系统销毁并从头创建我们的活动。但如果需要在同一个活动的不同实例之间保留某些状态呢？Android 提供了名为 `bundle` 的解决方案。为了实现这一点，第一步是重写 `onSaveInstanceState()` 方法，并将相关值写入 `Bundle` 对象：
+你可以看到原始数字变为了零。事实上，我们的活动的状态被重置了。产生这种行为的原因是配置更改（如旋转屏幕）强制系统销毁并从头创建我们的活动。但如果需要在同一个活动的不同实例之间保留某些状态呢？Android 提供了名为`bundle`的解决方案。为了实现这一点，第一步是重写`onSaveInstanceState()`方法，并将相关值写入`Bundle`对象：
 
 ```kotlin
 override fun onSaveInstanceState(outState: Bundle) {
@@ -5896,7 +5759,7 @@ override fun onSaveInstanceState(outState: Bundle) {
 }
 ```
 
-现在，即使活动由于配置更改或释放设备资源而被临时销毁并在稍后的时间重建，系统也会保留 bundle 并将其传递给 `onCreate()` 方法进行初始化。第二步是在我们的 `onCreate()` 实现中添加从 bundle 读取数据的的代码：
+现在，即使活动由于配置更改或释放设备资源而被临时销毁并在稍后的时间重建，系统也会保留 bundle 并将其传递给`onCreate()`方法进行初始化。第二步是在我们的`onCreate()`实现中添加从 bundle 读取数据的的代码：
 
 ```kotlin
 override fun onCreate(savedInstanceState: Bundle?) {
@@ -5911,16 +5774,13 @@ override fun onCreate(savedInstanceState: Bundle?) {
 }
 ```
 
-传递给 `onCreate()` 的参数可能为 null。这发生在 bundle 缺失时，例如当首次启动活动时。
+传递给`onCreate()`的参数可能为 null。这发生在 bundle 缺失时，例如当首次启动活动时。
 
+注意，`bundle`中只能存储可序列化的值。如果你需要保留某些不可序列化的对象，你需要实现`Serializable`接口，或者避免直接将其写入`bundle`并采用替代方法，例如将其转换为某些可序列化的数据持有者或通过部分保留原始对象。
 
+另外一点值得注意的是，`bundles`适用于保存较量的瞬态数据，因为它们的序列化会占用主线程并消耗系统进程的内存。对于其他情况，建议使用本地存储，如用户偏好或 SQLite 数据库。
 
-
-注意，`bundle` 中只能存储可序列化的值。如果你需要保留某些不可序列化的对象，你需要实现 `Serializable` 接口，或者避免直接将其写入 `bundle` 并采用替代方法，例如将其转换为某些可序列化的数据持有者或通过部分保留原始对象。
-
-另外一点值得注意的是，`bundles` 适用于保存较量的瞬态数据，因为它们的序列化会占用主线程并消耗系统进程的内存。对于其他情况，建议使用本地存储，如用户偏好或 SQLite 数据库。
-
-`onCreate()` 和 `onSaveInstanceState()` 方法是所谓的生命周期回调的特殊情况，这些回调由 Android 系统在 activity 从生命视图转换到新状态时调用。例如，`Resumed` 状态与在前台运行的 activity 关联，`Paused` 对应移动到后台但对用户仍然可见的 activity，而 `Stopped` 状态意味着 activity 变得完全不可见。
+`onCreate()`和`onSaveInstanceState()`方法是所谓的生命周期回调的特殊情况，这些回调由 Android 系统在 activity 从生命视图转换到新状态时调用。例如，`Resumed`状态与在前台运行的 activity 关联，`Paused`对应移动到后台但对用户仍然可见的 activity，而`Stopped`状态意味着 activity 变得完全不可见。
 
 重写的生命周期回调版本必须调用继承的实现，因为它们包含了活动正常运行所需的通用代码。
 
@@ -5930,17 +5790,19 @@ IDE 提示：Android Studio 包含一项检查功能，如果你重写了生命�
 
 图 15.13：缺少 super 用的错误
 
-### Anko 布局
+## Anko 布局
 
 Anko 是一个 Kotlin 框架，提供了各种增强功能来简化 Android 应用开发。它的主要特性包括：
 
 *   一组用于对话框、意图（用于启动新 activity 的对象）、日志和应用程序资源的工具类——组合成 Anko Commons 库。
+
 *   一种用于描述 UI 布局的领域语言（Anko Layouts）。
+
 *   简化访问 SQLite 数据库的 API，SQLite 经常用于 Android 的本地存储（Anko SQLite）。
 
 在本节中，我们将简单介绍一下布局 DSL，你可以用它视图组件的描述来替代 XML 文件。
 
-在项目中使用 Anko 特性之前，我们必须在模块 Gradle 脚本中配置相应的依赖。让我们在 `dependencies` 块中添加以下行：
+在项目中使用 Anko 特性之前，我们必须在模块 Gradle 脚本中配置相应的依赖。让我们在`dependencies`块中添加以下行：
 
 ```
 implementation "org.jetbrains.anko:anko:0.10.8"
@@ -5952,9 +5814,9 @@ implementation "org.jetbrains.anko:anko:0.10.8"
 
 图 15.14：Android Studio 建议同步 Gradle
 
-点击 `Sync Now` 链接后，Android Studio 将将其内部项目模型与新的 Gradle 提供的配置进行同步，使 Anko 库适用于自动补全和代码导航等各种代码洞察功能。
+点击`Sync Now`链接后，Android Studio 将将其内部项目模型与新的 Gradle 提供的配置进行同步，使 Anko 库适用于自动补全和代码导航等各种代码洞察功能。
 
-现在，我们可以使用 Anko DSL 重新改写我们的计算器布局。额外的代码将替换 `onCreate()` 方法开头的 `setCurrentView()` 调用：
+现在，我们可以使用 Anko DSL 重新改写我们的计算器布局。额外的代码将替换`onCreate()`方法开头的`setCurrentView()`调用：
 
 ```
 …
@@ -6032,46 +5894,54 @@ override fun onCreate(savedInstanceState: Bundle?) {
 import org.jetbrains.anko.*
 ```
 
-不很难看出 UI 结构基本上与布局并行的。我们还将引入两个辅助函数 `charButton()` 和 `opButton()`，它们分别定义字符按钮和操作按钮。我们还可以布局提取到单独的文件并像外部脚本一样使用它。由于它仍然是 Kotlin 代码，可以安全地丢弃 `activity_main.xml`。
+不很难看出 UI 结构基本上与布局并行的。我们还将引入两个辅助函数`charButton()`和`opButton()`，它们分别定义字符按钮和操作按钮。我们还可以布局提取到单独的文件并像外部脚本一样使用它。由于它仍然是 Kotlin 代码，可以安全地丢弃`activity_main.xml`。
 
 关于框架特性的更多信息以及全面文档可以在 Anko 网站找到：https://github.com/Kotlin/anko
 
-### 总结
+## 总结
 
 在本章中，你学习了如何使用 Android Studio IDE 的基本功能，并使用 Kotlin 语言创建了第一个 Android 应用。我们向你介绍了 Android activity 的概念，体验了布局描述，并演示了 Android Extensions 和 Anko 如何帮助你编写与 UI 相关的 Kotlin 代码。
 
 在下一章中，我们将学习如何使用 Ktor 框架开发 Web 应用。我们将讨论基础 Ktor 特性、项目设置以及如何使用路由机制处理客户端请求。我们还将查看用于生成 HTML 内容的 DSL。
 
-### 问题
+## 问题
 
 1. 描述 Android Studio 中的项目设置。
+
 2. 描述使用 Gradle 进行 Android Studio 中的项目配置。你如何添加新依赖？
+
 3. 如何配置用于运行应用程序的虚拟设备？
+
 4. 什么是 activity？如何描述 Android 应用的 UI？
+
 5. 解释 Kotlin Android Extensions 引入的合成属性。
+
 6. 当 activity 被临时销毁时如何保存/恢复其状态？
+
 7. 什么是 Anko？描述该框架提供的 UI 布局 DSL。
 
+在本章中，我们将向你介绍这种 Kotlin 特有的框架之一，名为`Ktor`。这是一个 Kotlin 框架，旨在简化连接系统的开发，这些系统可能包括各种客户端和服务器应用程序，如浏览器、移动客户端、Web 应用程序和服务。作为协程（Coroutines）库的扩展，`Ktor`为异步通信提供了强大且易用的设施。这些内容显然并不是对`Ktor`功能的详尽阐述，因此在本书范围内，我们将讨论限制在与 Web 应用相关的一组功能上，特别是服务器端：分发客户端请求、获取请求数据以及组合各种类型的响应。鼓励读者在其官方网站[`ktor.io`](https://ktor.io)以及其他资源继续熟悉`Ktor`。
 
+## 结构
 
-在本章中，我们将向你介绍这种 Kotlin 特有的框架之一，名为 `Ktor`。这是一个 Kotlin 框架，旨在简化连接系统的开发，这些系统可能包括各种客户端和服务器应用程序，如浏览器、移动客户端、Web 应用程序和服务。作为协程（Coroutines）库的扩展，`Ktor` 为异步通信提供了强大且易用的设施。这些内容显然并不是对 `Ktor` 功能的详尽阐述，因此在本书范围内，我们将讨论限制在与 Web 应用相关的一组功能上，特别是服务器端：分发客户端请求、获取请求数据以及组合各种类型的响应。鼓励读者在其官方网站 [`ktor.io`](https://ktor.io) 以及其他资源继续熟悉 `Ktor`。
+*   设置 Ktor 项目
 
-### 结构
+*   服务端功能
 
-* 设置 Ktor 项目
-* 服务端功能
-* 客户端功能
+*   客户端功能
 
 ## 目标
 
-学习使用 `Ktor` 进行 Web 应用程序客户端和服务端开发的基础功能。
+学习使用`Ktor`进行 Web 应用程序客户端和服务端开发的基础功能。
 
-### 介绍 Ktor
+## 介绍 Ktor
+
+
 
 `Ktor` 是一个用于开发通过网络通信的客户端和服务器应用程序的框架。尽管它的主要应用之一是围绕 HTTP 协议进行数据交换的 Web 应用，但 `Ktor` 的最终目标是成为一个用于构建各种类型连接应用的通用多平台框架。它的设计者和主要开发者是 JetBrains，该公司也负责 Kotlin 语言本身的创建。与各种 J2EE 框架相比，`Ktor` 的关键特性如下：
 
-* 使用 Kotlin 驱动的领域特定语言（DSL），允许你通过与代码的其他部分轻松结合，对某些应用方面（如请求路由规则或 HTML 内容）使用简洁的声明式风格描述。
-* 开箱即用由 Kotlin 协程库提供的高效异步计算。
+- 使用 Kotlin 驱动的领域特定语言（DSL），允许你通过与代码的其他部分轻松结合，对某些应用方面（如请求路由规则或 HTML 内容）使用简洁的声明式风格描述。
+- 开箱即用由 Kotlin 协程库提供的高效异步计算。
 
 在本节中，我们将快速浏览 `Ktor` 并引导你完成在 IntelliJ IDEA 中设置项目所需的步骤。可以使用特殊的 IntelliJ 插件来简化过程，该插件为项目向导添加 `Ktor` 支持。要安装该插件，请按照以下步骤操作：
 
@@ -6085,7 +5955,7 @@ import org.jetbrains.anko.*
 
 **IDE 提示：与大多数用于 Web/J2EE 开发的 IntelliJ 插件不同，`Ktor` 不需要 Ultimate 版本，可以在 IDEA Community 版中使用。**
 
-现在，我们可以创建一个项目。选择 `File | New | Project…` 命令，并在 `New Project` 对话框中选择 `Ktor` 选项。除了基础的客户端服务器功能外，`Ktor` 提供了一系列可插的功能，这些功能依赖额外的构件和/或某些配置代码。向导的第一步（如图 16.2 所示）允许你为应用程序的客户端和服务端选择必要的功能。IDE 将自动添加所有必要的依赖项，并生成一个演示功能使用的示例代码：
+现在，我们可以创建一个项目。选择 `File | New | Project…` 命令，并在 `New Project` 对话框中选择 `Ktor` 选项。除了基础的客户端服务器功能外，`Ktor` 提供了一系列可插拔的功能，这些功能依赖额外的构件和/或某些配置代码。向导的第一步（如图 16.2 所示）允许你为应用程序的客户端和服务端选择必要的功能。IDE 将自动添加所有必要的依赖项，并生成一个演示功能使用的示例代码：
 
 ![](img/Img_16_02.jpg)
 
@@ -6119,7 +5989,7 @@ ktor {
 }
 ```
 
-关于 HOCON 和支持的配置选项的详细信息可以在 Ktor 网站上找到：[https://ktor.io/configuration.html]。
+关于 HOCON 和支持的配置选项的详细信息可以在 Ktor 网站上找到：[https://ktor.io/configuration.html](https://ktor.io/configuration.html)。
 
 Ktor 模块基本上是 `Application` 类的一个扩展函数，负责配置功能、处理客户端请求以及其他服务器任务。要加载的模块必须在服务器配置中通过它们的限定名称指定。我们的示例项目在 `Application.kt` 中实现了一个模块：
 
@@ -6173,10 +6043,7 @@ call.respondText(
 )
 ```
 
-
-
-
-```
+```kotlin
 contentType = ContentType.Text.Plain
 ```
 
@@ -6191,21 +6058,21 @@ contentType = ContentType.Text.Plain
 ```kotlin
 call.respondHtml {
   body {
-    h1 { +”HTML” }
+    h1 { +"HTML" }
     ul {
       for (n in 1..10) {
-        li { +”$n” }
+        li { +"$n" }
       }
     }
   }
 }
 ```
 
-会生成一个包含一级 级标题和数字项目列表的 HTML 页面。图 16.5 显示了将 DSL 代码渲染为 HTML 页面的结果：
+会生成一个包含一级标题和数字项目列表的 HTML 页面。图 16.5 显示了将 DSL 代码渲染为 HTML 页面的结果：
 
 ![](img/Img_16_05.jpg)
 
-**图 16.5：** 与 /html-dsl 路径相关的 HTML 响应
+**图 16.5：** 与 `/html-dsl` 路径相关的 HTML 响应
 
 在接下来的章节中，我们将详细查看 HTML DSL 和路由规则，以及 Ktor 的其他服务器功能。
 
@@ -6221,9 +6088,9 @@ class ApplicationTest {
   @Test
   fun testRoot() {
     withTestApplication({ module(testing = true) }) {
-      handleRequest(HttpMethod.Get, “/”).apply {
+      handleRequest(HttpMethod.Get, "/").apply {
         assertEquals(HttpStatusCode.OK, response.status())
-        assertEquals(“HELLO WORLD!", response.content)
+        assertEquals("HELLO WORLD!", response.content)
       }
     }
   }
@@ -6240,7 +6107,7 @@ class ApplicationTest {
 
 到此，我们对基础项目设置的介绍结束。在接下来的章节中，我们将关注 Ktor 框架客户端和服务端提供的特定功能。
 
-### 服务器功能
+## 服务器功能
 
 在本节中，我们将考虑有关 Web 服务器应用程序开发的几个主题。Ktor 的大部分功能组织成一组可插拔的功能，可以通过调用 `install()` 方法进行配置，该方法接收一个功能对象和一个可选的配置块。例如，要启用输出内容的压缩，你可以在模块函数中添加以下代码：
 
@@ -6258,7 +6125,7 @@ install(Compression) {
 
 本章中的示例使用了嵌入式 HTTP 服务器，允许它们作为独立程序运行。在许多情况下，你可能需要在某些 Web/应用程序容器（如 Apache Tomcat、Docker 或 Google App Engine）中部署 Ktor 应用程序。要安装你的应用程序，你需要汇总包含应用程序类及其所有依赖项的包，并准备特定容器的配置文件。关于容器特定细节的讨论超本书的范围，但你可以在 Ktor 官方网站 [`ktor.io/servers/deploy.html`](https://ktor.io/servers/deploy.html) 上详细说明。
 
-### 路由
+## 路由
 
 路由功能允许你根据模式匹配器的分级系统对 HTTP 请求进行结构化处理。路由配置通过功能安装块内部的特殊 DSL（领域特定语言）表示：
 
@@ -6266,7 +6133,7 @@ install(Compression) {
 fun Application.module() {
   install(Routing) {
     // 常例描述
-    get(“/”) { call.respondText(“This is root page”) }
+    get("/") { call.respondText("This is root page") }
   }
 }
 ```
@@ -6276,7 +6143,7 @@ fun Application.module() {
 ```kotlin
 fun Application.module() {
   routing {
-    get(“/”) { call.respondText(“This is root page”) }
+    get("/") { call.respondText("This is root page") }
   }
 }
 ```
@@ -6285,16 +6152,16 @@ fun Application.module() {
 
 ![](img/Img_16_07.jpg)
 
-**图 16.7：** get() 路由的结果
+**图 16.7：** `get()` 路由的结果
 
-Ktor 支持所有 动词的类似路由，包括 `post()`、`put()`、`delete()`、`patch()`、`head()` 和 `options()`。路由函数中提到的参数可能会匹配路径的特定段，并可以从应用程序检索。要引入参数，你只需将其名称括在括号中。例如，下面的路由将匹配以 `/hello/` 开头并包含两个段的 URL：
+Ktor 支持所有动词的类似路由，包括 `post()`、`put()`、`delete()`、`patch()`、`head()` 和 `options()`。路由函数中提到的参数可能会匹配路径的特定段，并可以从应用程序检索。要引入参数，你只需将其名称括在括号中。例如，下面的路由将匹配以 `/hello/` 开头并包含两个段的 URL：
 
 ```kotlin
 routing {
-  get("/hello/{userName}”) {
+  get("/hello/{userName}") {
     call.respondHtml {
       body {
-        h1 { +”Hello, ${call.parameters[userName]}” }
+        h1 { +"Hello, ${call.parameters[userName]}" }
       }
     }
   }
@@ -6311,10 +6178,10 @@ routing {
 
 ```kotlin
 routing {
-  get("/hello/*”) {
+  get("/hello/*") {
     call.respondHtml {
       body {
-        h1 { +”Hello, World” }
+        h1 { +"Hello, World" }
       }
     }
   }
@@ -6325,11 +6192,11 @@ routing {
 
 ```kotlin
 routing {
-  get("/hello/{userName?}”) {
-    val userName = call.parameters["userName"] ?: “Unknown”
+  get("/hello/{userName?}") {
+    val userName = call.parameters["userName"] ?: "Unknown"
     call.respondHtml {
       body {
-        h1 { +”Hello, $userName” }
+        h1 { +"Hello, $userName" }
       }
     }
   }
@@ -6344,37 +6211,36 @@ routing {
 
 ```kotlin
 routing {
-  get("/calc/{data…}”) {
-    val data = call.parameters.getAll(“data”) ?: emptyList()
+  get("/calc/{data…}") {
+    val data = call.parameters.getAll("data") ?: emptyList()
     call.respondHtml {
       body {
         h1 {
           if (data.size != 3) {
-            +”Invalid data”
+            +"Invalid data"
             return@h1
           }
           val (op, argStr1, argStr2) = data
           val arg1 = argStr1.toBigIntegerOrNull()
           val arg2 = argStr2.toBigIntegerOrNull()
           if (arg1 == null || arg2 == null) {
-            +”Integer numbers expected”
+            +"Integer numbers expected"
             return@h1
           }
           val result = when (op) {
-            “+” -> arg1 + arg2
-            “-” -> arg1 - arg2
-            “*” -> arg1 * arg2
-            “/” -> arg1 / arg2
+            "+" -> arg1 + arg2
+            "-" -> arg1 - arg2
+            "*" -> arg1 * arg2
+            "/" -> arg1 / arg2
             else -> null
           }
-          +(result?.toString() ?: “Invalid operation”)
+          +(result?.toString() ?: "Invalid operation")
         }
       }
     }
   }
 }
 ```
-
 
 
 
@@ -6384,22 +6250,22 @@ routing {
 
 **图 16.10:** 尾部配符匹配（Tailcard matching）
 
-注意的是，尾部配符也会匹配空路径尾，因此 `get("/calc/{data…}”)` 前面的处理器也会为 `/calc` 路径调用。特殊的 `{…}` 尾部配符接受所有剩余的路径尾，但不像 `*` 通配符那样捕获任何参数。例如，像 `get("/calc/{…}”)` 这样的处理器将匹配所有以 `/calc` 开头的路径，包括 `/calc` 本身。
+注意的是，尾部配符也会匹配空路径尾，因此 `get("/calc/{data…}")` 前面的处理器也会为 `/calc` 路径调用。特殊的 `{…}` 尾部配符接受所有剩余的路径尾，但不像 `*` 通配符那样捕获任何参数。例如，像 `get("/calc/{…}")` 这样的处理器将匹配所有以 `/calc` 开头的路径，包括 `/calc` 本身。
 
 除了匹配整个 URL 路径的 `get()` 等函数外，Ktor 还允许你定义路由树来匹配 URL 的后续部分和/或各种请求数据。考虑以下示例：
 
 ```kotlin
 routing {
   method(HttpMethod.Get) {
-    route(“user/{name}”) {
-      route(“sayHello”) {
+    route("user/{name}") {
+      route("sayHello") {
         handle {
-          call.respondText(“Hello, ${call.parameters[“name”]}”)
+          call.respondText("Hello, ${call.parameters["name"]}")
         }
       }
-      route(“sayBye”) {
+      route("sayBye") {
         handle {
-          call.respondText(“Bye, ${call.parameters[“name”]}”)
+          call.respondText("Bye, ${call.parameters["name"]}")
         }
       }
     }
@@ -6407,14 +6273,14 @@ routing {
 }
 ```
 
-当服务器接收到 HTTP 请求时，它从树根开始寻找匹配的路由规则。在我们案例中，根节点是 `method(HttpMethod.Get)`，它匹配任何带有 `GET` 动词请求。如果客户端请求满足此条件，服务器将向下检查 `route(“user/{name}”)` 规则，该规则接受给定路径前缀的 URL。如果路径匹配，服务器将进一步深入并检查 `route(“sayHello”)` 和 `route(“sayBye”)` 规则之一，它们检查 URL 路径的剩余部分。在最底层，我们有 `handle()` 块，只要相应分支上的所有规则都匹配，它就会生成响应。
+当服务器接收到 HTTP 请求时，它从树根开始寻找匹配的路由规则。在我们案例中，根节点是 `method(HttpMethod.Get)`，它匹配任何带有 `GET` 动词请求。如果客户端请求满足此条件，服务器将向下检查 `route("user/{name}")` 规则，该规则接受给定路径前缀的 URL。如果路径匹配，服务器将进一步深入并检查 `route("sayHello")` 和 `route("sayBye")` 规则之一，它们检查 URL 路径的剩余部分。在最底层，我们有 `handle()` 块，只要相应分支上的所有规则都匹配，它就会生成响应。
 
 可以在 `route()` 调用中指定 HTTP 动词，而无需显式使用 `method()` 函数。之前的 `get()` 函数基本上是带有处理器的顶层 `route()` 块的简写。例如，以下代码：
 
 ```kotlin
 routing {
-  get(“/hello/{userName}”) {
-    call.respondText(“Hello, ${call.parameters[“userName”]}”)
+  get("/hello/{userName}") {
+    call.respondText("Hello, ${call.parameters["userName"]}")
   }
 }
 ```
@@ -6423,9 +6289,9 @@ routing {
 
 ```kotlin
 routing {
-  route(“/hello/{userName}”, HttpMethod.Get) {
+  route("/hello/{userName}", HttpMethod.Get) {
     handle {
-      call.respondText(“Hello, ${call.parameters[“userName”]}”)
+      call.respondText("Hello, ${call.parameters["userName"]}")
     }
   }
 }
@@ -6433,27 +6299,27 @@ routing {
 
 `route()` 和 `method()` 并不是你可以使用的唯一匹配器。还有额外的构建器可用：
 
-*   `header(name, value):` 接受带有特定标头的请求
-*   `param(name, value):` 接受带有特定参数值的请求
-*   `param(name):` 接受具有特定名称参数的请求并捕获其值
-*   `optionalParam(name):` 接受给定名称可选参数
+*   `header(name, value)`：接受带有特定标头的请求
+*   `param(name, value)`：接受带有特定参数值的请求
+*   `param(name)`：接受具有特定名称参数的请求并捕获其值
+*   `optionalParam(name)`：接受给定名称可选参数
 
-在下面的示例中，我们根据 action 参数的值选择响应：
+在下面的示例中，我们根据 `action` 参数的值选择响应：
 
 ```kotlin
 routing {
-  route(“/user/{name}”, HttpMethod.Get) {
-    param(“action”, “sayHello”) {
+  route("/user/{name}", HttpMethod.Get) {
+    param("action", "sayHello") {
       handle {
         call.respondHtml {
-          body { h2 { +”Hello, ${call.parameters[“name”]}” } }
+          body { h2 { +"Hello, ${call.parameters["name"]}" } }
         }
       }
     }
-    param(“action”, “sayBye”) {
+    param("action", "sayBye") {
       handle {
         call.respondHtml {
-          body { h2 { +”Bye, ${call.parameters[“name”]}” } }
+          body { h2 { +"Bye, ${call.parameters["name"]}" } }
         }
       }
     }
@@ -6461,7 +6327,7 @@ routing {
 }
 ```
 
-例如，路径 `/user/John?action=sayHello` 将产生服务器响应 `Hello, John`，而 `/user/John?action=sayBye` 将给出 `Bye, John`。任何其他 action 将保持未匹配状态，从而产生 `not found` 响应。图 16.11 展示了结果：
+例如，路径 `/user/John?action=sayHello` 将产生服务器响应 `Hello, John`，而 `/user/John?action=sayBye` 将给出 `Bye, John`。任何其他 `action` 将保持未匹配状态，从而产生 `not found` 响应。图 16.11 展示了结果：
 
 ![](img/Img_16_11.jpg)
 
@@ -6471,50 +6337,16 @@ Ktor API 允许你创建自己的匹配器，从而扩展路由 DSL。要做到�
 
 ### 处理 HTTP 请求
 
-HTTP 服务器的主要工作为客户端请求提供适当的响应。为了简化这项任务，Ktor 为你提供了灵活且易用的 API，允许你轻松访问请求数据，例如 URL 路径组件、参数、标头（通用和自定义）以及请求体的各种内容类型，并生成响应数据。你只需要实现实际的处理逻辑。
-
-Ktor 为你提供了一个灵活且易用的 API，允许你轻松访问请求数据，例如 URL 路径组件、参数、标头（通用和自定义）以及请求体的各种内容类型，并生成响应数据。你只需要实现实际的处理逻辑。
-
-Ktor 为你提供了一个灵活且易用的 API，允许你轻松访问请求数据，例如 URL 路径组件、参数、标头（通用和自定义）以及请求体的各种内容类型，并生成响应数据。你只需要实现实际的处理逻辑。
-
-Ktor 为你提供了一个灵活且易用的 API，允许你轻松访问请求数据，例如 URL 路径组件、参数、标头（通用和自定义）以及请求体的各种内容类型，并生成响应数据。你只需要实现实际的处理逻辑。
-
-Ktor 为你提供了一个灵活且易用的 API，允许你轻松访问请求数据，例如 URL 路径组件、参数、标头（通用和自定义）以及请求体的各种内容类型，并生成响应数据。你只需要实现实际的处理逻辑。
-
-Ktor 为你提供了一个灵活且易用的 API，允许你轻松访问请求数据，例如 URL 路径组件、参数、标头（通用和自定义）以及请求体的各种内容类型，并生成响应数据。你只需要实现实际的处理逻辑。
-
-Ktor 为你提供了一个灵活且易用的 API，允许你轻松访问请求数据，例如 URL 路径组件、参数、标头（通用和自定义）以及请求体的各种内容类型，并生成响应数据。你只需要实现实际的处理逻辑。
-
-Ktor 为你提供了一个灵活且易用的 API，允许你轻松访问请求数据，例如 URL 路径组件、参数、标头（通用和自定义）以及请求体的各种内容类型，并生成响应数据。你只需要实现实际的处理逻辑。
-
-Ktor 为你提供了一个灵活且易用的 API，允许你轻松访问请求数据，例如 URL 路径组件、参数、标头（通用和自定义）以及请求体的各种内容类型，并生成响应数据。你只需要实现实际的处理逻辑。
-
-Ktor 为你提供了一个灵活且易用的 API，允许你轻松访问请求数据，例如 URL 路径组件、参数、标头（通用和自定义）以及请求体的各种内容类型，并生成响应数据。你只需要实现实际的处理逻辑。
-
-Ktor 为你提供了一个灵活且易用的 API，允许你轻松访问请求数据，例如 URL 路径组件、参数、标头（通用和自定义）以及请求体的各种内容类型，并生成响应数据。你只需要实现实际的处理逻辑。
-
-Ktor 为你提供了一个灵活且易用的 API，允许你轻松访问请求数据，例如 URL 路径组件、参数、标头（通用和自定义）以及请求体的各种内容类型，并生成响应数据。你只需要实现实际的处理逻辑。
-
-Ktor 为你提供了一个灵活且易用的 API，允许你轻松访问请求数据，例如 URL 路径组件、参数、标头（通用和自定义）以及请求体的各种内容类型，并生成响应数据。你只需要实现实际的处理逻辑。
-
-Ktor 为你提供了一个灵活且易用的 API，允许你轻松访问请求数据，例如 URL 路径组件、参数、标头（通用和自定义）以及请求体的各种内容类型，并生成响应数据。你只需要实现实际的处理逻辑。
-
-Ktor 为你提供了一个灵活且易用的 API，允许你轻松访问请求数据，例如 URL 路径组件、参数、标头（通用和自定义）以及请求体的各种内容类型，并生成响应数据。你只需要实现实际的处理逻辑。
-
-Ktor 为你提供了一个灵活且易用的 API，允许你轻松访问请求数据，例如 URL 路径组件、参数、标头（通用和自定义）以及请求体的各种内容类型，并生成响应数据。你只需要实现实际的处理逻辑。
-
 HTTP 服务器的主要工作是为客户端请求提供适当的响应。为了简化这项任务，Ktor 为你提供了一个灵活且易用的 API，允许你轻松访问请求数据，例如 URL 路径组件、参数、标头（通用和自定义）以及请求体的各种内容类型，并生成响应数据。你只需要实现实际的处理逻辑。
 
-HTTP 服务器的主要工作是为客户端请求提供适当的响应。为了简化这项任务，Ktor 为你提供了一个灵活且易用的 API，允许你轻松访问请求数据，例如 URL 路径组件、参数、标头（通用和自定义）以及请求体的各种内容类型。
-
-要访问请求参数，你可以使用 `request.queryParameters` 对象，它充当从参数名称到值的映射。假设我们想根据形如 `/sum?left=2&right=3` 的 URL 返回一对整数的和。在这种情况下，我们可以简单地对 `queryParameters` 对象使用索引运算符来获取 left 和 right 参数的值：
+要访问请求参数，你可以使用 `request.queryParameters` 对象，它充当从参数名称到值的映射。假设我们想根据形如 `/sum?left=2&right=3` 的 URL 返回一对整数的和。在这种情况下，我们可以简单地对 `queryParameters` 对象使用索引运算符来获取 `left` 和 `right` 参数的值：
 
 ```kotlin
 routing {
   // e.g. /sum?left=2&right=3 responds with 5
   get("/sum") {
-    val left = call.request.queryParameters[“left"]]?.toIntOrNull()
-    val right = call.request.queryParameters[“right"]]?.toIntOrNull()
+    val left = call.request.queryParameters["left"]?.toIntOrNull()
+    val right = call.request.queryParameters["right"]?.toIntOrNull()
     if (left != null && right != null) {
       call.respondText("${left + right}")
     } else {
@@ -6530,32 +6362,26 @@ routing {
 routing {
   // e.g. /sum?arg=1&arg=2&arg=3 responds with 6
   get("/sum") {
-```
-
-
-
-
-```kotlin
-val args = call.request.queryParameters.getAll(“arg”)
-
-if (args == null) {
-    call.respondText(“No data”)
-    return@get
-}
-var sum = 0
-for (arg in args) {
-    val num = arg.toIntOrNull()
-    if (num == null) {
-        call.respondText(“Invalid arguments”)
-        return@get
+    val args = call.request.queryParameters.getAll("arg")
+    if (args == null) {
+      call.respondText("No data")
+      return@get
     }
-    sum += num
-}
-call.respondText(“$sum”)
+    var sum = 0
+    for (arg in args) {
+      val num = arg.toIntOrNull()
+      if (num == null) {
+        call.respondText("Invalid arguments")
+        return@get
+      }
+      sum += num
+    }
+    call.respondText("$sum")
+  }
 }
 ```
 
-同样地，你可以使用 `request.headers.get()` 和 `reqiest.headers.getAll()` 来获取请求头数据的值。
+同样地，你可以使用 `request.headers.get()` 和 `request.headers.getAll()` 来获取请求头数据的值。
 
 ### HTML DSL
 
@@ -6575,33 +6401,33 @@ HTML DSL 库配合 Ktor HTML 构建器，允许你根据 HTML 内容生成响应
 
 ```kotlin
 body {
-    h1 { +”Generate random numbers” }
-    form(action = “/”, method = FormMethod.get) {
-        p { +”From: “ }
-        p {
-            numberInput(name = FROM_KEY) {
-                value = from?.toString() ?: “1”
-            }
-            appendError(FROM_KEY)
-        }
-        p { +”To: “ }
-        p {
-            numberInput(name = TO_KEY) {
-                value = to?.toString() ?: “100”
-            }
-            appendError(TO_KEY)
-        }
-        p { +”How many: “ }
-        p {
-            numberInput(name = COUNT_KEY) {
-                value = count?.toString() ?: “10”
-            }
-            appendError(COUNT_KEY)
-        }
-        p { hiddenInput(name = GENERATE_KEY) { value = “” } }
-        p { submitInput { value = “Generate” } }
+  h1 { +"Generate random numbers" }
+  form(action = "/", method = FormMethod.get) {
+    p { +"From: " }
+    p {
+      numberInput(name = FROM_KEY) {
+        value = from?.toString() ?: "1"
+      }
+      appendError(FROM_KEY)
     }
-    …
+    p { +"To: " }
+    p {
+      numberInput(name = TO_KEY) {
+        value = to?.toString() ?: "100"
+      }
+      appendError(TO_KEY)
+    }
+    p { +"How many: " }
+    p {
+      numberInput(name = COUNT_KEY) {
+        value = count?.toString() ?: "10"
+      }
+      appendError(COUNT_KEY)
+    }
+    p { hiddenInput(name = GENERATE_KEY) { value = "" } }
+    p { submitInput { value = "Generate" } }
+  }
+  ...
 }
 ```
 
@@ -6612,12 +6438,14 @@ HTML DSL 提供了一整套函数用于创建所有基本类型的输入组件�
 * `input()`：通用的文本字段
 * `passwordInput()`：用于输入密码的文本字段
 * `numberInput()`：带有上一个/后一个按钮的数值文本字段
-* `dateInput()/timeInput()/dateTimeInput()`：用于输入日期和时间的专用文本字段
+* `dateInput()`/`timeInput()`/`dateTimeInput()`：用于输入日期和时间的专用文本字段
 * `fileInput()`：带有浏览按钮的文本字段，用于上传本地文件等
 
 `submitInput()` 调用创建一个提交按钮，它将表单数据封装在 HTTP 请求中并发送到服务器。
 
 如果你查看在浏览器中渲染的页面源码，你将看到类似下面代码的标记：
+
+
 
 ```html
 <!DOCTYPE html>
@@ -6647,10 +6475,6 @@ HTML DSL 提供了一整套函数用于创建所有基本类型的输入组件�
 </html>
 ```
 
-
-
-
-
 ```kotlin
 body {
   h2 { +”You have viewed this page ${stat.viewCount} time(s)” }
@@ -6659,9 +6483,9 @@ body {
 }
 ```
 
-保持 session 实例不可变是合理的，因为服务器通常运行在多线程环境中，因此将 session 状态在可变对象中会导致易出错的代码。相反，你使用 `get()`/`set()` 函数整体读取并替换 session。`getOrSet()` 函数允许在 session 尚不存在时对其进行初始化。
+保持 `session` 实例不可变是合理的，因为服务器通常运行在多线程环境中，因此将 `session` 状态在可变对象中会导致易出错的代码。相反，你使用 `get()`/`set()` 函数整体读取并替换 `session`。`getOrSet()` 函数允许在 `session` 尚不存在时对其进行初始化。
 
-最后一步是为根路径和 `/clearStat` 路径定义路由规则。对于后者，我们简单地丢弃 session 数据并将用户重定向回根页面（此时将显示计数为零）：
+最后一步是为根路径和 `/clearStat` 路径定义路由规则。对于后者，我们简单地丢弃 `session` 数据并将用户重定向回根页面（此时将显示计数为零）：
 
 ```kotlin
 @Suppress(“unused”) // Referenced in application.conf
@@ -6686,11 +6510,11 @@ fun Application.module() {
 
 ![](img/Img_16_14.jpg)
 
-**图 16.14：** 使用 session 数据跟踪页面访问计数
+**图 16.14：** 使用 `session` 数据跟踪页面访问计数
 
-点击 `Clear statistics` 链接会强制服务器移除 session 数据并将计数重置为零。注意 `/clearStat` 处理器末尾的 `responseRedirect()` 调用；在清除 session 后需要它重新渲染页面。
+点击 `Clear statistics` 链接会强制服务器移除 `session` 数据并将计数重置为零。注意 `/clearStat` 处理器末尾的 `responseRedirect()` 调用；在清除 `session` 后需要它重新渲染页面。
 
-作为 cookies 的替代方案，你也可以将 session 存储在 HTTP 请求和响应的标 中：
+作为 cookies 的替代方案，你也可以将 `session` 存储在 HTTP 请求和响应的标头中：
 
 ```kotlin
 install(Sessions) {
@@ -6698,9 +6522,9 @@ install(Sessions) {
 }
 ```
 
-Ktor session 可能会存储在客户端或服务器端。默认情况下，所有 session 数据都会传输到客户端，由客户端保留并在下一次请求时将其发回。这可能会引发安全问题，因为内置序列化器会将 session 数据表示为纯文本。为了解决这个问题，Ktor 提供了一种 session 转换器机制，用于对传输的数据进行额外的编码/解码。
+Ktor `session` 可能会存储在客户端或服务器端。默认情况下，所有 `session` 数据都会传输到客户端，由客户端保留并在下一次请求时将其发回。这可能会引发安全问题，因为内置序列化器会将 `session` 数据表示为纯文本。为了解决这个问题，Ktor 提供了一种 `session` 转换器机制，用于对传输的数据进行额外的编码/解码。
 
-内置转换器之一 `SessionTransportTransformerMessageAuthentication` 会随 session 数据附带根据特定算法（默认为 SHA256）计算的哈希值。在最简单的情况下，你只需要提供一个密钥密钥：
+内置转换器之一 `SessionTransportTransformerMessageAuthentication` 会随 `session` 数据附带根据特定算法（默认为 SHA256）计算的哈希值。在最简单的情况下，你只需要提供一个密钥：
 
 ```kotlin
 install(Sessions) {
@@ -6711,9 +6535,9 @@ install(Sessions) {
 }
 ```
 
-原始 session 数据保持不变，因此第三方仍然可以在客户端侧查看它们。然而，在没有服务器许可的情况下，他们无法更改 session 数据，因为这将使摘要校验失效，而计算新的摘要依赖于对密钥密钥的掌握。
+原始 `session` 数据保持不变，因此第三方仍然可以在客户端侧查看它们。然而，在没有服务器许可的情况下，他们无法更改 `session` 数据，因为这将使摘要校验失效，而计算新的摘要依赖于对密钥的掌握。
 
-`SessionTransportTransformerEncrypt` 提供了更强的安全保障，它会加密 session 数据以防止第三方读取。要配置此转换器，你需要提供加密密钥和身份验证密钥（后者用于创建 session 数据的数字签名）：
+`SessionTransportTransformerEncrypt` 提供了更强的安全保障，它会加密 `session` 数据以防止第三方读取。要配置此转换器，你需要提供加密密钥和身份验证密钥（后者用于创建 `session` 数据的数字签名）：
 
 ```kotlin
 install(Sessions) {
@@ -6729,7 +6553,7 @@ install(Sessions) {
 
 通过实现 `SessionTransportTransformer` 接口，也可以添加你自己的转换器。
 
-默认情况下，`cookie()` 和 `header()` 块都配置客户端 session；在这种情况下，所有 session 数据都存储在客户端，并随着每次请求/响应在服务器之间传输。或者，你可以配置 session 存储器，告诉 Ktor 将 session 主体存储在服务器端并仅传输 session ID：
+默认情况下，`cookie()` 和 `header()` 块都配置客户端 `session`；在这种情况下，所有 `session` 数据都存储在客户端，并随着每次请求/响应在服务器之间传输。或者，你可以配置 `session` 存储器，告诉 Ktor 将 `session` 主体存储在服务器端并仅传输 `session` ID：
 
 ```kotlin
 install(Sessions) {
@@ -6737,17 +6561,17 @@ install(Sessions) {
 }
 ```
 
-`SessionStorageMemory` 是一个内置实现，它将 session 数据保留在服务器内存中。注意，内存消耗会随着活动客户端数量而增加，因此服务器端 session 值得尽可能紧凑。
+`SessionStorageMemory` 是一个内置实现，它将 `session` 数据保留在服务器内存中。注意，内存消耗会随着活动客户端数量而增加，因此服务器端 `session` 值得尽可能紧凑。
 
 以上就是对 Ktor 服务器应用程序可用基本功能的概述。在下一节中，我们将关注通信的另一侧，并查看使用 Ktor 编写 HTTP 客户端。
 
-# 客户端功能 (#toc.xhtml_s118a)
+## 客户端功能
 
 Ktor 不限于编写服务器应用程序，还可以用于极大地简化与各种服务通信的异步客户端的开发。在本节中，我们将专注于围绕 `HttpClient` 类的小部分功能，该类允许你使用 HTTP 协议与网络服务器进行通信。
 
-# 请求与响应 (#toc.xhtml_s119a)
+## 请求与响应
 
-任何 HTTP 客户端的基本功能都围绕为某些网络服务器构建请求并读取其随后的响应。Ktor 提供了一系列丰富的开箱用原语，用于处理在 HTTP 请求和响应中可能看到的文本和二进制内容。
+任何 HTTP 客户端的基本功能都围绕为某些网络服务器构建请求并读取其随后的响应。Ktor 提供了一系列丰富的开箱即用原语，用于处理在 HTTP 请求和响应中可能看到的文本和二进制内容。
 
 发布 HTTP 请求的最简单方法是使用 `get()` 并传递目标 URL。例如，要获取文本形式响应体，你可以使用 `get<String>()`：
 
@@ -6789,9 +6613,10 @@ val bytes = client.get<ByteArray>(url)
 或者获取异步 `ByteReadChannel`：
 
 ```kotlin
-val channel = client.get<ByteReadChannel>(```
+val channel = client.get<ByteReadChannel>(url)
+```
 
-HttpClient 的请求方法是挂起函数，因此必须在某些协程上下文中调用。这就是为什么我们在示例中使用了 `runBlocking()`。
+`HttpClient` 的请求方法是挂起函数，因此必须在某些协程上下文中调用。这就是为什么我们在示例中使用了 `runBlocking()`。
 
 注意 `HttpClient` 需要通过 `close()` 方法进行显式结束。当作用范围有限时，我们可以像处理其他 `Closeable` 类型实例一样，将其调用隐藏在 `use()` 块后面。
 
@@ -6815,10 +6640,6 @@ client.get<ByteArray>(url) {
 }
 ```
 
-
-
-
-
 `HttpClient` 提供了一种提供 `User-Agent` 头的简化方法，这允许服务器识别客户端软件（例如网络浏览器及其特定版本）。要实现这一点，你只需要安装 `UserAgent` 特性并使用 `agent` 属性指定标头值：
 
 ```kotlin
@@ -6829,7 +6650,7 @@ val client = HttpClient(Apache) {
 }
 ```
 
-你也可以使用一个预定义的 User-Agent 设置：
+你也可以使用一个预定义的 `User-Agent` 设置：
 
 - `BrowserUserAgent()`：包含 Chrome 或 Safari 等流行浏览器
 - `CurlUserAgent()`：对应于 Curl 代理
@@ -6872,13 +6693,13 @@ val result = client.submitForm<String>(
 - `true`：参数编码在请求 URL 中的 HTTP `GET` 请求
 - `false`：参数在请求体中的 HTTP `POST` 请求
 
-Ktor 客户端自带对 HTTP 重定向的支持。该特性默认默认安装的，因此每当服务器返回带有重定向状态的响应时，客户端会自动跟随新的位置。
+Ktor 客户端自带对 HTTP 重定向的支持。该特性默认安装，因此每当服务器返回带有重定向状态的响应时，客户端会自动跟随新的位置。
 
 ### Cookies
 
 HTTP cookies 提供了一种常用方法，通过在 HTTP 头部中传递小数据包，在客户端请求之间保留某些状态。客户端（如网络浏览器）最初从服务器获取 cookie 并将其存储在客户端，在随后的请求中添加。Cookies 对于维护服务器会话特别有用，我们已经在之前的章节中涵盖了这一功能。现在，我们将查看如何在客户端使用 cookies。
 
-如果 HTTP 服务器使用 cookies 在客户端调用之间保留某些数据，则客户端必须安排妥善存储此类数据，并在必要时通过 HTTP 请求提供它们。Ktor 通过提供即插用的 cookies 特性简化了这项任务。为了演示其用法，让我们为服务器部分讨论过的访问计数器应用程序编写一段简单的代码（见图 16.14）：
+如果 HTTP 服务器使用 cookies 在客户端调用之间保留某些数据，则客户端必须安排妥善存储此类数据，并在必要时通过 HTTP 请求提供它们。Ktor 通过提供即插即用的 cookies 特性简化了这项任务。为了演示其用法，让我们为服务器部分讨论过的访问计数器应用程序编写一段简单的代码（见图 16.14）：
 
 ```kotlin
 package com.example
@@ -6910,16 +6731,18 @@ fun main() {
 如你所示，我们的客户端获取根路径 (`/`) 响应，找到在 `<h2>` 标签内的头部，并将其打印到标准输出。注意 `install(HttpCookies)` 调用，它配置了 `HttpClient` 处理 cookies。由于请求/响应循环重复了五次（每次都有更新的 cookie），输出将如下所示：
 
 `You have viewed this page 0 time(s)`
+
 `You have viewed this page 1 time(s)`
+
 `You have viewed this page 2 time(s)`
+
 `You have viewed this page 3 time(s)`
+
+
+
 `You have viewed this page 4 time(s)`
 
 默认情况下，HTTP 客户端从空 cookies 开始，并使用服务器提供的数据随下一次请求一起发送。这对应于典型的浏览器行为。有时，你可能需要发送一个带有预配置 cookie 集合的请求，而不是从服务器获取它们——例如，为了使用它们。
-
-
-
-
 
 微服务架构提供了一种构建应用程序的方法，由多个相互连接的组件组成，旨在执行细粒度的特定领域任务。这种架构与传统的单体应用创建技术（即作为一个整体进行部署）形成对比。微服务通过允许你在物理上分离不同的功能部分，促进了模块化开发，并简化单个应用程序部分的开发、测试以及部署/更新。
 
@@ -6928,7 +6751,9 @@ fun main() {
 ### 结构
 
 * 微服务架构
+
 * 介绍 Spring Boot
+
 * 使用 Ktor 构建微服务
 
 ## 目标
@@ -6939,7 +6764,7 @@ fun main() {
 
 微服务架构的核心思想是将一个整体部署和交付的单体应用替换为一组轻量级、松耦合的服务；每个服务都有特定的任务，并使用定义良好的协议与其他服务通信。
 
-为了给出一个更具体的例子，假设我们想要构建一个类似在线商店的应用程序，为用户提供基本功能，如浏览商品目录和下单。通过遵循单体应用方法，我们可能会得到类似于图 17.1 所示的设计：*
+为了给出一个更具体的例子，假设我们想要构建一个类似在线商店的应用程序，为用户提供基本功能，如浏览商品目录和下单。通过遵循单体应用方法，我们可能会得到类似于图 17.1 所示的设计：
 
 ![](img/Img_17_01.jpg)
 
@@ -6951,7 +6776,7 @@ fun main() {
 
 **面向服务的架构 (SOA)** 通过将单体应用分解为一组自包含的服务来缓解这些问题，这些服务可以很大程度上独立独立地进行开发、更新和部署。微服务可以被视为 SOA 演进中的一步，重点是让服务尽可能小且越简单；尽管在实践中，这两个术语通常被用作同义词。
 
-如果我们尝试拆解原始的单体应用设计，我们可能会得到类似于图 17.2 的内容：*
+如果我们尝试拆解原始的单体应用设计，我们可能会得到类似于图 17.2 的内容：
 
 ![](img/Img_17_02.jpg)
 
@@ -6962,8 +6787,11 @@ fun main() {
 尽管微服务缺乏严格的定义，但它们所有的实际实现都基于一组共同的原则：
 
 * 每个微服务都专注于执行某些特定领域的任务，例如在我们的电子商务应用程序示例中管理商品目录或用户购物车。
+
 * 微服务使用某些定义良好的协议进行通信，这些协议有效地建立了它们的 API。一种常见的情况是使用 `HTTP` 结合 `XML` 和 `JSON` 格式来传输复杂数据，以及基于 `RPC（远程过程调用）` 的协议。
+
 * 微服务可以独立地进行版本控制、部署和更新。
+
 * 微服务与语言和框架无关，这意味着在通常情况下，你可以使用任何认为适合该目的的编程语言来实现它们，并使用你选择的任何开发框架。唯一重要的是你的服务在与其他服务交互时使用的通信协议。
 
 这应该让你对什么是微服务架构以及在什么情况下你可能想在应用程序中使用它有一个基本的了解。稍后，我们将展示在 Kotlin 语言背景下微服务编程可能是什么样的。这将为你研究更具体的技术栈和框架（如 `Spring`、`Netflix` 或 `Ktor`）提供基础。
@@ -6983,22 +6811,22 @@ fun main() {
 此页面允许我们选择一组基本选项，这些选项决定了 Initializr 生成的项目类型：
 
 * 构建系统类型（`Maven/Gradle`），用于从源码配置和构建项目；对于我们的示例，我们将使用 `Gradle`，因为它提供了一种更灵活、更简洁的方式调整项目配置。
+
 * 新项目的主要语言，初始化器将使用它生成示例源代码（在我们的案例中为 `Kotlin`）。这也会影响项目配置，例如，使用 `Kotlin` 在 `Maven/Gradle` 构建文件中需要一些额外的依赖项。
+
 * 使用的 `Spring Boot` 版本：我们将选择编写本书时 Spring 的最新发布版本，即 `2.1.8`。
+
 * 项目组和构件 ID，它们定义了用于制品发布的 Maven 坐标。
-
-
-
 
 此外，您可以使用 `Dependencies` 字段来指定要包含在项目中的常用包。由于我们的服务将使用 HTTP，因此我们需要 Web 支持。在字段中输入 `Web` 并在建议列表中选择 `Spring Web` 选项。
 
 选择所有必要选项后，点击 `Generate the project` 按钮并下载包含由初始化器创建的项目的 ZIP 文件。要在 IntelliJ IDEA 中打开该项目，你需要执行以下操作：
 
 1. 将压缩包解压到本地目录。
+
 2. 从 `File | New | Project` 调用 `Existing Source…` 菜单命令，并指定解压后的项目根路径以及构建系统类型（`Gradle`）。
+
 3. 等待 IDE 完成与 `Gradle` 构建模型的同步，之后你将看到一个与 图 17.4 类似的项目结构：
-
-
 
 ![](img/Img_17_04.jpg)
 
@@ -7080,16 +6908,23 @@ fun main(args: Array<String>) {
 该 URL 将生成 `X` 到 `Y` 之间的数字（包含边界值）。结果将以 JSON 对象给出，包含以下字段：
 
 *   非整数 `X`
+
 *   `Y<X`
+
 *   非正整数 `n`
 
 让我们给出一些预期的服务输出示例：
 
 | URL 示例 | 服务响应 |
+
 | :--- | :--- |
+
 | `/random/int/10/20/quantity/5` | `{"status":null, "values":[16,17,18,17,12]}` |
+
 | `/random/int/20/to/10/quantity/5` | `{"status":"Range may not be empty", "values":[]}` |
+
 | `/random/int/10/to/20/quantity/-1` | `{"status":"Quantity must be positive", "values":[]}` |
+
 | `/random/int/X/to/20/quantity/5` | `{"status":"Range start must be an integer", "values":[]}` |
 
 **表 17.1：** 数字生成器示例
@@ -7105,22 +6940,24 @@ fun main(args: Array<String>) {
 它将生成 N 个长度为 L 的字母数字字符串。密码生成器使用相同的输出格式；唯一的区别是 `values` 字段是字符串数组而不是数字。
 
 | URL 示例 | 服务响应 |
+
 | :--- | :--- |
+
 | `/password/length/8/quantity/5` | `{"status":null, "values":["B0zDWtvG","JrSkXl7X","oDwR7cp2","X8sRfzDW","nUcRXzn1"]}` |
+
 | `/password/length/bbb/quantity/5` | `{"status":"Length must be an integer", "values":[]}` |
+
 | `/password/length/-1/quantity/ccc` | `{"status":"Length must be positive", "values":[]}` |
+
 | `/password/length/8/quantity/-5` | `{"status":"Quantity must be positive", "values":[]}` |
 
 **表 17.2：** 密码生成器示例
-
-
-
 
 为了演示服务之间的通信，我们将创建一个依赖于数字生成器的密码生成器。当请求新密码（多个密码）时，它将首先调用数字生成器产生一组随机索引，然后将这些索引转换为字符并组合在一起生成字符串。
 
 现在我们已经清楚了服务 API 的样如何，可以开始实际的实现了。我们将从随机数生成器开始，因为它将被另一个服务使用。
 
-# 实现随机数生成器服务 (#toc.xhtml_s129a)
+# 实现随机数生成器服务
 
 让我们按照“设置项目”章节的步骤为我们的生成器服务设置一个新的 Spring Boot 项目。服务的入口点将基本保持不变。在我们的情况下，只需重命名应用程序类和包即可：
 
@@ -7140,6 +6977,8 @@ fun main(args: Array<String>) {
 
 在编写服务本身的实际业务逻辑之前，我们需要定义类来持有将以 JSON 格式传递的数据。由于我们的服务输入是通过 URL 路径传递的原始类型值，因此唯一的结构化数据是它的输出。这正是 Kotlin data class 的用场：
 
+
+
 ```kotlin
 package com.example.randomGen
 
@@ -7155,9 +6994,9 @@ fun <T>successResult(values: List<T>) =
     GeneratorResult<T>(null, values)
 ```
 
-这两个工具函数 `errorResult()` 和 `successResult()` 将有助于简化服务代码中 `GeneratorResult` 的构建。
+这两个工具函数`errorResult()`和`successResult()`将有助于简化服务代码中`GeneratorResult`的构建。
 
-服务的核心逻辑实现在所谓的控制器类中，它负责处理客户端请求。要将给定的类转换为 Spring 控制器，你只需要为它加上注解 `@RestController`。Spring 会在组件扫描期间自动加载该类并创建其实例。我们在这里不会详细讨论扫描过程，但你可以在 Spring 框架文档中找到它们（例如 `@ComponentScan` 注解）。
+服务的核心逻辑实现在所谓的控制器类中，它负责处理客户端请求。要将给定的类转换为 Spring 控制器，你只需要为它加上注解`@RestController`。Spring 会在组件扫描期间自动加载该类并创建其实例。我们在这里不会详细讨论扫描过程，但你可以在 Spring 框架文档中找到它们（例如`@ComponentScan`注解）。
 
 因此，我们的控制器类的存根如下：
 
@@ -7170,21 +7009,21 @@ import org.springframework.web.bind.annotation.*
 class RandomGeneratorController
 ```
 
-要定义请求处理器，我们为控制器的方法标记特殊注解，将它们与特定的请求属性关联起来。例如，`@RequestMapping` 注解允许你将方法绑定到具有特定 URL 的请求上：
+要定义请求处理器，我们为控制器的方法标记特殊注解，将它们与特定的请求属性关联起来。例如，`@RequestMapping`注解允许你将方法绑定到具有特定 URL 的请求上：
 
 ```kotlin
 @RequestMapping("/hello")
 fun hello() = "Hello, World"
 ```
 
-同样，在 Ktor 中，你可以使用通配符如 `*` 和参数名来定义路径模板。在下面的示例中，URL 路径的最后部分会自动绑定到标记了 `@PathVariable` 注解的方法参数：
+同样，在 Ktor 中，你可以使用通配符如`*`和参数名来定义路径模板。在下面的示例中，URL 路径的最后部分会自动绑定到标记了`@PathVariable`注解的方法参数：
 
 ```kotlin
 @RequestMapping("/hello/{user}")
 fun hello(@PathVariable user: String) = "Hello, $user"
 ```
 
-方法的参数名称可能与你在路径模板中使用的变量不同；在这种情况下，你需要将路径参数作为 `@PathVariable` 参数指定：
+方法的参数名称可能与你在路径模板中使用的变量不同；在这种情况下，你需要将路径参数作为`@PathVariable`参数指定：
 
 ```kotlin
 @RequestMapping("/sum/{op1}/{op2}")
@@ -7198,9 +7037,9 @@ fun hello(
 }
 ```
 
-除了 URL 路径外，`@RequestMapping` 注解还允许你根据各种请求数据关联处理器，例如 HTTP 方法（`GET`, `POST` 等）、头部内容和请求参数。同样，还有一些 `@PathVariable` 的替代方案可以将方法参数绑定到请求参数（`@RequestParam`）、请求头（`@RequestHeader`）、会话数据（`@SessionAttributes`）等。映射选项与 Ktor 的路由机制非常相似；但在 Ktor 中，它是指定为普通的 Kotlin 代码，而不是注解形式的元数据。我们在这里不会深入细节，感兴趣的读者可以在 Spring 站点 `docs.spring.io` 找到相关文档。
+除了 URL 路径外，`@RequestMapping`注解还允许你根据各种请求数据关联处理器，例如 HTTP 方法（`GET`, `POST`等）、头部内容和请求参数。同样，还有一些`@PathVariable`的替代方案可以将方法参数绑定到请求参数（`@RequestParam`）、请求头（`@RequestHeader`）、会话数据（`@SessionAttributes`）等。映射选项与 Ktor 的路由机制非常相似；但在 Ktor 中，它是指定为普通的 Kotlin 代码，而不是注解形式的元数据。我们在这里不会深入细节，感兴趣的读者可以在 Spring 站点`docs.spring.io`找到相关文档。
 
-当控制器的多个方法共享公共路径前缀时，将 `@RequestMapping` 添加到控制器类可能会方便。在这种情况下，方法级注解中提到的路径是相对于类路径定义的。例如，与其写：
+当控制器的多个方法共享公共路径前缀时，将`@RequestMapping`添加到控制器类可能会方便。在这种情况下，方法级注解中提到的路径是相对于类路径定义的。例如，与其写：
 
 ```kotlin
 @RestController
@@ -7212,7 +7051,7 @@ class SampleController {
 }
 ```
 
-我们可以将公共 `/say` 部分提取到 `SampleController` 的注解中：
+我们可以将公共`/say`部分提取到`SampleController`的注解中：
 
 ```kotlin
 @RestController
@@ -7225,7 +7064,7 @@ class RandomGeneratorController {
 }
 ```
 
-考虑到这些，让我们来实现根据服务处理 `/random/int` 路径的控制器方法：
+考虑到这些，让我们来实现根据服务处理`/random/int`路径的控制器方法：
 
 ```kotlin
 @RequestMapping("/int/{from}/{to}")
@@ -7244,7 +7083,7 @@ fun genIntegers(
 }
 ```
 
-对应 /random/float 路径的浮点数处理可以通过类似的方式进行。此服务的完整源码可以在 [`github.com/asedunov/kotlin-in-depth/ch17/number-gen-service`](https://github.com/asedunov/kotlin-in-depth/ch17/number-gen-service) 找到。并通过浏览器访问服务，我们将获得预期的响应。你可以在图 17.6 (#c17.xhtml_fig17_6) 中看到随机数列表的示例：
+对应`/random/float`路径的浮点数处理可以通过类似的方式进行。此服务的完整源码可以在[`github.com/asedunov/kotlin-in-depth/ch17/number-gen-service`](https://github.com/asedunov/kotlin-in-depth/ch17/number-gen-service)找到。并通过浏览器访问服务，我们将获得预期的响应。你可以在图 17.6 (#c17.xhtml_fig17_6) 中看到随机数列表的示例：
 
 (images/Img_17_06.jpg)
 
@@ -7260,17 +7099,14 @@ fun genIntegers(
 
 # 实现密码生成服务 (#toc.xhtml_s130a)
 
-现在，我们可以以第一个为起点轻松地实现第二个密码生成服务。让我们创建一个类似的 Spring Boot 项目，并将代码放在 `com.example.passwordGen` 包中。
+现在，我们可以以第一个为起点轻松地实现第二个密码生成服务。让我们创建一个类似的 Spring Boot 项目，并将代码放在`com.example.passwordGen`包中。
 
-与随机数生成器的关键区别是第二个服务将与第一个服务通信。Spring 提供了箱用的 `RestTemplate` 类，它简化了向其他 Web 应用发送请求并获取其响应的过程。例如，代码：
+与随机数生成器的关键区别是第二个服务将与第一个服务通信。Spring 提供了箱用的`RestTemplate`类，它简化了向其他 Web 应用发送请求并获取其响应的过程。例如，代码：
 
 ```kotlin
 val url = "http://localhost:8080/random/int/from/0/to/10/quantity/5"
 val restTemplate = RestTemplate()
 ```
-
-
-
 
 `val result = restTemplate.getForObject(url, GeneratorResult::class.java)` as `GeneratorResult<Int>` 将返回一个包含 0 到 10 之间五个随机整数列表的结果。
 
@@ -7312,15 +7148,15 @@ class PasswordGeneratorController {
 }
 ```
 
-请注意，密码生成器服务需要 `GeneratorResult` 类的定义，以表示其自身的响应以及数字生成器的响应。对于像这种这样的简单情况，我们只需要将此定义拷贝到我们的第二个项目中。在需要许多类来表示请求/响应数据的复杂场景中，可能值得使用一些代码共享；例如，我们可以设置一个多模块项目，其中包含两个服务，以及一个用于共享类的独立模块；或者将共享代码提取到单独的项目中，将其输出发布到某些构件仓库中，然后在两个服务中都作为依赖使用。
+请注意，密码生成器服务需要`GeneratorResult`类的定义，以表示其自身的响应以及数字生成器的响应。对于像这种这样的简单情况，我们只需要将此定义拷贝到我们的第二个项目中。在需要许多类来表示请求/响应数据的复杂场景中，可能值得使用一些代码共享；例如，我们可以设置一个多模块项目，其中包含两个服务，以及一个用于共享类的独立模块；或者将共享代码提取到单独的项目中，将其输出发布到某些构件仓库中，然后在两个服务中都作为依赖使用。
 
-由于我们的两个服务都是作为独立应用程序运行，它们必须监听不同的端口。因此，在运行密码生成器服务之前，请确保它的端口与第一个不冲突。在本示例中，我们将通过将 `application.properties` 修改为 `8081`：
+由于我们的两个服务都是作为独立应用程序运行，它们必须监听不同的端口。因此，在运行密码生成器服务之前，请确保它的端口与第一个不冲突。在本示例中，我们将通过将`application.properties`修改为`8081`：
 
 ```
 server.port=8081
 ```
 
-现在，我们可以启动第二个服务，并尝试查询格式为 `localhost:8081/password/length/12/quantity/10` 的 URL 来尝试使用其功能。处理此类 URL 时，我们的密码服务将向随机数生成器发送多次请求，并使用其响应来组合密码列表。图 17.8 显示了通过浏览器访问密码服务的示例结果：
+现在，我们可以启动第二个服务，并尝试查询格式为`localhost:8081/password/length/12/quantity/10`的 URL 来尝试使用其功能。处理此类 URL 时，我们的密码服务将向随机数生成器发送多次请求，并使用其响应来组合密码列表。图 17.8 显示了通过浏览器访问密码服务的示例结果：
 
 ![](img/Img_17_08.jpg)
 
@@ -7337,7 +7173,7 @@ val passwords = (1..quantity).map {
 }
 ```
 
-换句话说，每当你调用 `getForObject()` 方法时，服务线程就会被阻塞，在获取所有预期的响应之前无法进行任何有用工作。当并发请求数量增加时，这可能会阻碍服务的扩展性，因此通常情况下我们可能需要使用一些异步编程技术，例如 Kotlin Cor 程库或如 RxJava 或 Akka 等响应式框架。
+换句话说，每当你调用`getForObject()`方法时，服务线程就会被阻塞，在获取所有预期的响应之前无法进行任何有用工作。当并发请求数量增加时，这可能会阻碍服务的扩展性，因此通常情况下我们可能需要使用一些异步编程技术，例如 Kotlin Cor 程库或如 RxJava 或 Akka 等响应式框架。
 
 通过 Ktor，正如我们在接下来的章节中看到的，由于框架本身构建在协程库之上，并提供了通过挂起函数进行异步计算的开箱支持，这个问题在很大程度上得到了缓解。让我们看看使用 Ktor 功能实现时，我们的密码生成器服务会是什么样的。
 
@@ -7351,19 +7187,21 @@ val passwords = (1..quantity).map {
 
 # 使用 JSON 序列化功能](#toc.xhtml_s132a)
 
-在上一章中，我们看到了使用 Ktor 的 `respondText()` 发送纯文本的示例。虽然我们可以使用它来构建 JSON，但 Ktor 提供了一个更简单的解决方案，即 `ContentNegotiation` 特性，允许你为对象配置转换器。通常，要为特定的 MIME 类型使用它，你需要注册 `ContentConverter` 的相应实现以处理发送/接收操作。Ktor 为三种基础序列化机制提供了开箱支持：
+在上一章中，我们看到了使用 Ktor 的`respondText()`发送纯文本的示例。虽然我们可以使用它来构建 JSON，但 Ktor 提供了一个更简单的解决方案，即`ContentNegotiation`特性，允许你为对象配置转换器。通常，要为特定的 MIME 类型使用它，你需要注册`ContentConverter`的相应实现以处理发送/接收操作。Ktor 为三种基础序列化机制提供了开箱支持：
 
 *   Jackson (`https://github.com/FasterXML/jackson`)
+
 *   `google-gson` (`https://github.com/google/gson`)
+
 *   `kotlinx.serialization` (`https://github.com/Kotlin/kotlinx.serialization`)
 
-在示例中，我们将使用 Jackson 实现。由于相应的转换器属于 `io.ktor:ktor-jackson`，请确保在 `build.gradle` 文件中包含必要的依赖：
+在示例中，我们将使用 Jackson 实现。由于相应的转换器属于`io.ktor:ktor-jackson`，请确保在`build.gradle`文件中包含必要的依赖：
 
 ```
 compile "io.ktor:ktor-jackson:$ktor_version"
 ```
 
-之后，你可以使用 `ContentNegotiation` 安装块配置 JSON 序列化：
+之后，你可以使用`ContentNegotiation`安装块配置 JSON 序列化：
 
 ```kotlin
 fun Application.module() {
@@ -7375,7 +7213,7 @@ fun Application.module() {
 }
 ```
 
-之前的 `jackson()` 函数将 `JacksonConverter` 与 `application/json` 内容关联，并设置输出格式的默认行为。序列化涵盖请求和响应数据。例如，我们可以向响应发送一些对象，它们会被转换为 JSON 文本格式：
+之前的`jackson()`函数将`JacksonConverter`与`application/json`内容关联，并设置输出格式的默认行为。序列化涵盖请求和响应数据。例如，我们可以向响应发送一些对象，它们会被转换为 JSON 文本格式：
 
 ```kotlin
 call.respond(successResult(listOf("12345678")))
@@ -7383,20 +7221,22 @@ call.respond(successResult(listOf("12345678")))
 
 同样，我们可以反序列化客户端接收到的 JSON 对象，将其转换为普通的 Kotlin 对象：
 
+
+
 ```kotlin
 data class PasswordSpec(val length: Int, val quantity: Int)
 …
 val spec = call.receive<PasswordSpec>()
 ```
 
-但在我们的情况下，我们在发送相应请求后从另一个服务接收 JSON 数据，因此我们还必须为 `HttpClient` 实例配置序列化。Ktor 客户端应用程序也支持相同的三种序列化实现。我们只需要在服务的 `build.gradle` 中添加相应的依赖：
+但在我们的情况下，我们在发送相应请求后从另一个服务接收 JSON 数据，因此我们还必须为`HttpClient`实例配置序列化。Ktor 客户端应用程序也支持相同的三种序列化实现。我们只需要在服务的`build.gradle`中添加相应的依赖：
 
 ```
 compile "io.ktor:ktor-client-json:$ktor_version"
 compile "io.ktor:ktor-client-jackson:$ktor_version"
 ```
 
-为了在客户端启用序列化，我们随后安装 `JsonFeature`：
+为了在客户端启用序列化，我们随后安装`JsonFeature`：
 
 ```kotlin
 val client = HttpClient(Apache) {
@@ -7406,9 +7246,7 @@ val client = HttpClient(Apache) {
 }
 ```
 
-
-
-默认情况下，特定的序列化实现是根据包含的制品自动选择的。需要时，我们也可以通过将 `JsonSerializer` 实例赋值给 `serializer` 属性来显式指定它：
+默认情况下，特定的序列化实现是根据包含的制品自动选择的。需要时，我们也可以通过将`JsonSerializer`实例赋值给`serializer`属性来显式指定它：
 
 ```kotlin
 val client = HttpClient(Apache) {
@@ -7420,7 +7258,7 @@ val client = HttpClient(Apache) {
 }
 ```
 
-配置好 `JsonFeature` 后，我们可以使用 `get()` 函数从 HTTP 响应中自动读取对象：
+配置好`JsonFeature`后，我们可以使用`get()`函数从 HTTP 响应中自动读取对象：
 
 ```kotlin
 val url = "http://localhost:8080/random/int/from/0/to/10/quantity/5"
@@ -7429,11 +7267,11 @@ val result = client.get<GeneratorResult<Int>>(url)
 
 既然我们已经有了自动序列化功能，让我们看看如何将其与其他 Ktor 特性结合，来实现真正的微服务。
 
-### 实现密码生成器服务
+## 实现密码生成器服务
 
 为了演示 Ktor 和 Spring 方案之间的区别，我们将重新实现密码生成器服务。正如预期的，大部分代码将保持不变，因为两种实现都遵循相同的业务逻辑。
 
-要访问我们的第一个服务，我们将使用 `HttpClient` 而替 `RestTemplate`：
+要访问我们的第一个服务，我们将使用`HttpClient`而替`RestTemplate`：
 
 ```kotlin
 val prefix = "http://localhost:8080/random/int"
@@ -7444,9 +7282,9 @@ val passwords = (1..quantity).map {
 }
 ```
 
-注意，与我们基于 Spring 的示例不同，这段代码是异步的；`HttpClient.get()` 是在 Ktor 提供的协程上下文中调用的挂起函数。因此，服务线程不会被阻塞，我们的服务器可以在等待随机数生成器响应时处理进一步的请求。
+注意，与我们基于 Spring 的示例不同，这段代码是异步的；`HttpClient.get()`是在 Ktor 提供的协程上下文中调用的挂起函数。因此，服务线程不会被阻塞，我们的服务器可以在等待随机数生成器响应时处理进一步的请求。
 
-Ktor 路由 DSL 将取代基于 Spring 的 `@RestController` `@RequestMapping` 注解的请求分发：
+Ktor 路由 DSL 将取代基于 Spring 的`@RestController` `@RequestMapping`注解的请求分发：
 
 ```kotlin
 route("/password") {
@@ -7514,7 +7352,7 @@ fun Application.module() {
 }
 ```
 
-由于我们原始的 Spring Boot 实现正在监听端口 `8081`，我们需要在 Ktor 版本中同样进行必要的更改，调整其 `application.conf` 文件：
+由于我们原始的 Spring Boot 实现正在监听端口`8081`，我们需要在 Ktor 版本中同样进行必要的更改，调整其`application.conf`文件：
 
 ```kotlin
 ktor {
@@ -7528,17 +7366,22 @@ ktor {
 }
 ```
 
-现在，如果你启动数字生成器和密码生成器服务，并在浏览器中打开 `localhost:8081/password/length/12/quantity/10`，你会看到与图 17.8 显示非常相似的结果（尽管密码列表不同）。注意，尽管数字生成器是基于 Spring 的，但密码生成器现在使用 Ktor；无论它们的差异如何，两个服务都可以轻松地通信。
+现在，如果你启动数字生成器和密码生成器服务，并在浏览器中打开`localhost:8081/password/length/12/quantity/10`，你会看到与图 17.8 显示非常相似的结果（尽管密码列表不同）。注意，尽管数字生成器是基于 Spring 的，但密码生成器现在使用 Ktor；无论它们的差异如何，两个服务都可以轻松地通信。
 
-### 结论
+## 结论
 
-在本章中，我们初步了解了如何使用 Spring 或 Ktor 框架在 Kotlin 中实现基于微服务的应用程序。我们解释了微服务架构的核心思想，带你走了简单 Spring Boot 项目的设置步骤，并讨论了 Spring REST 控制器和模板在微服务实现中的用法。此外，我们还描述了如何在 Ktor 中配置和使用 JSON 序列化，这一特性对于提供格式化 API 的 Web 应用程序特别有用。从这些基础开始，你现在可以通过参考其他资源来完善知识。我们建议你从 spring.io 的指南 ([`spring.io/guides`](https://spring.io/guides)) 以及以及我们在上一节中提到的 Ktor 示例 ([`ktor.io/samples`](https://ktor.io/samples)) 开始。
+在本章中，我们初步了解了如何使用 Spring 或 Ktor 框架在 Kotlin 中实现基于微服务的应用程序。我们解释了微服务架构的核心思想，带你走了简单 Spring Boot 项目的设置步骤，并讨论了 Spring REST 控制器和模板在微服务实现中的用法。此外，我们还描述了如何在 Ktor 中配置和使用 JSON 序列化，这一特性对于提供格式化 API 的 Web 应用程序特别有用。从这些基础开始，你现在可以通过参考其他资源来完善知识。我们建议你从 spring.io 的指南（[`spring.io/guides`](https://spring.io/guides)）以及以及我们在上一节中提到的 Ktor 示例（[`ktor.io/samples`](https://ktor.io/samples)）开始。
 
-### 问题
+## 问题
 
 1. 解释微服务模型的基本原理。
+
 2. 描述设置 Spring Boot 项目的基本步骤。
+
 3. 什么是 Spring 控制器类？解释数据如何映射到控制器方法。
+
 4. 比较 Spring 请求映射和 Ktor 路由。
+
 5. 如何在 Ktor 中配置 JSON 序列化？
+
 6. 给出一个同时使用 Spring Boot 和 Ktor 实现微服务的示例。

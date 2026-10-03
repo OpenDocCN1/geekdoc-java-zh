@@ -1,3 +1,4 @@
+
 # 常见的 Java Web 启动问题
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/webstart/problems.html`](https://docs.oracle.com/javase/tutorial/deployment/webstart/problems.html)
@@ -23,7 +24,6 @@ MissingFieldException[ The following required field is missing from the launch
         at com.sun.javaws.Main.continueInSecureThread(Unknown Source)
         at com.sun.javaws.Main.run(Unknown Source)
         at java.lang.Thread.run(Unknown Source)
-
 ```
 
 通常，当您的 XML 格式不正确时会出现此错误。您可以盯着代码直到找到问题所在，但更容易的方法是在文件上运行 XML 语法检查器。（NetBeans IDE 和 jEdit 都提供 XML 语法检查器。）
@@ -32,7 +32,6 @@ MissingFieldException[ The following required field is missing from the launch
 
 ```java
 <description kind="short">Demonstrates choosing the drop location in the target <code>TransferHandler</code></description>
-
 ```
 
 错误是由非法嵌入的`code`标签引起的。

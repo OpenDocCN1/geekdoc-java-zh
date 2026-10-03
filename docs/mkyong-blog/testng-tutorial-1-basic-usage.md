@@ -1,3 +1,4 @@
+
 # TestNG–配置注释示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/unittest/testng-tutorial-1-basic-usage/>
@@ -7,7 +8,7 @@
 在 TestNG 中，我们可以使用以下注释来为您的测试类进行配置，比如设置/清理数据库、准备虚拟数据、部署/关闭服务器等。
 
 ```java
- @BeforeSuite - For suite test, run before all tests in this suite have run. 
+@BeforeSuite - For suite test, run before all tests in this suite have run. 
 @AfterSuite -  For suite test, run after all tests in this suite have run.
 
 @BeforeTest - For suite test, run before any test method belonging to the classes inside the <test> tag is run. 
@@ -27,14 +28,14 @@ P.S Suite 测试–一起运行多个测试类。
 
 回顾下面的例子，看看执行顺序——首先调用哪个方法，然后调用哪个方法。
 
-## 1.单一测试类别
+## 1. 单一测试类别
 
 运行单个测试用例，展示之前/之后`group`、`class`和`method`的使用。
 
-TestConfiguration.java
+`TestConfiguration.java`
 
 ```java
- package com.mkyong.testng.examples.configuration;
+package com.mkyong.testng.examples.configuration;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterGroups;
@@ -85,13 +86,13 @@ public class TestConfiguration {
 	public void runTest2() {
 		System.out.println("@Test - runTest2");
 	}
-} 
+}
 ```
 
 输出
 
 ```java
- @BeforeClass 
+@BeforeClass 
 
 @BeforeGroups 
 @BeforeMethod 
@@ -114,14 +115,14 @@ PASSED: runTest2
 =============================================== 
 ```
 
- ## 2.套件测试类
+## 2. 套件测试类
 
 再创建 2 个测试类来展示 before/after `suite`和`test`的用法。
 
-DBConfig.java
+`DBConfig.java`
 
 ```java
- package com.mkyong.testng.examples.configuration;
+package com.mkyong.testng.examples.configuration;
 
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
@@ -150,13 +151,13 @@ public class DBConfig {
 		System.out.println("@AfterTest");
 	}
 
-} 
+}
 ```
 
-TestDBConnection.java
+`TestDBConnection.java`
 
 ```java
- package com.mkyong.testng.examples.configuration;
+package com.mkyong.testng.examples.configuration;
 
 import org.testng.annotations.Test;
 
@@ -172,15 +173,15 @@ public class TestDBConnection {
 		System.out.println("@Test - runOtherTest2");
 	}
 
-} 
+}
 ```
 
 创建一个 XML 文件来一起运行多个测试用例。阅读 XML 注释，这是不言自明的。
 
-testng.xml
+`testng.xml`
 
 ```java
- <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <!-- @BeforeSuite -->
 <suite name="TestAll">
@@ -211,7 +212,7 @@ testng.xml
 输出
 
 ```java
- @BeforeSuite
+@BeforeSuite
 
 @BeforeTest		//Start {case1}
 @BeforeClass
@@ -243,16 +244,9 @@ Total tests run: 6, Failures: 0, Skips: 0
 
 完成了。
 
- ## 参考
+## 参考
 
-1.  [测试文档](http://web.archive.org/web/20190228162811/http://testng.org/doc/documentation-main.html)
-2.  [TestNG–运行多个测试类(套件测试)](http://web.archive.org/web/20190228162811/http://www.mkyong.com/unittest/testng-tutorial-5-suite-test/)
+1. [测试文档](http://web.archive.org/web/20190228162811/http://testng.org/doc/documentation-main.html)
+2. [TestNG–运行多个测试类(套件测试)](http://web.archive.org/web/20190228162811/http://www.mkyong.com/unittest/testng-tutorial-5-suite-test/)
 
 [suite test](http://web.archive.org/web/20190228162811/http://www.mkyong.com/tag/suite-test/) [testng](http://web.archive.org/web/20190228162811/http://www.mkyong.com/tag/testng/) [testng config](http://web.archive.org/web/20190228162811/http://www.mkyong.com/tag/testng-config/)
-
-
-
-
-
-
-

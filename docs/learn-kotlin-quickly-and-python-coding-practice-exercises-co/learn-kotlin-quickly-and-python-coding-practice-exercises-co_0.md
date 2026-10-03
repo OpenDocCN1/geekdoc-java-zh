@@ -1,201 +1,143 @@
- 
- ![](img/Image00018.jpg)
 
-快速学习 Kotlin
-
-以及
-
-Python 编程练习
-
-初学者编程
-
-包含动手项目
-
-作者
-
-J J TAM
-
-Kotlin 简介
-
-Kotlin：Hello World 程序
-
-在 Eclipse 中设置 Kotlin
-
-在 Kotlin 中定义变量
-
-Kotlin 中的数据类型
-
-Kotlin：可空类型
-
-Kotlin：数字
-
-Kotlin：字符
-
-Kotlin：将字符转换为 Int
-
-Kotlin：布尔值
-
-Kotlin：字符串
-
-Kotlin：字符串模板表达式
-
-Kotlin：数组
-
-Kotlin：定义空值数组
-
-Kotlin：使用工厂函数定义数组
-
-Kotlin：打印数组元素
-
-Kotlin：位运算符
-
-Kotlin：逻辑运算符
-
-Kotlin：控制流语句
-
-Kotlin：if 语句
-
-Kotlin：if-else 语句
-
-Kotlin：if-else if-else
-
-Kotlin：when 表达式
-
-Kotlin：将 when 用作 if-else if 阶梯
-
-Kotlin：将 When 用作表达式
-
-Kotlin：for 循环
-
-Kotlin：while、do-while 循环
-
-Kotlin：break 语句
-
-Kotlin：continue 语句
-
-Kotlin：类和对象
-
-Kotlin：声明属性
-
-Kotlin：为属性添加 getter 和 setter
-
-Kotlin：定义类的成员函数
-
-Kotlin：const：编译时常量
-
-Kotlin：const 与 val
-
-Kotlin：lateinit：延迟初始化属性
-
-Kotlin：构造函数
-
-Kotlin：次要构造函数
-
-Kotlin：向主构造函数传递默认值
-
-Kotlin：定义私有主构造函数
-
-Kotlin：如何创建对象
-
-PYTHON 编程练习
-
-PYTHON 字符串 – 练习
-
-Python：反转字符串
-
-在 Python 中移除换行符
-
-查找共同值
-
-Python 数据类型：列表 – 练习
-
-Python：求列表中所有项的和
-
-从列表中获取最大数
-
-从列表中移除重复项
-
-Python 数据类型：字典 – 练习
-
-向字典添加键
-
-使用 for 循环遍历字典
-
-合并两个 Python 字典
-
-将字典中的所有项相乘
-
-从字典中移除键
-
-从对象的字段获取字典
-
-合并两个字典，为共同键添加值
-
-查找最高的 3 个值
-
-学习
-
-快速学习 Kotlin
-
-# Kotlin 简介
+![](img/Image00018.jpg)
+
+# 快速学习 Kotlin 以及 Python 编程练习
+
+**初学者编程，包含动手项目**
+
+作者：J J TAM
+
+## Kotlin 简介
+
+- Kotlin：Hello World 程序
+- 在 Eclipse 中设置 Kotlin
+- 在 Kotlin 中定义变量
+- Kotlin 中的数据类型
+- Kotlin：可空类型
+- Kotlin：数字
+- Kotlin：字符
+- Kotlin：将字符转换为 Int
+- Kotlin：布尔值
+- Kotlin：字符串
+- Kotlin：字符串模板表达式
+- Kotlin：数组
+- Kotlin：定义空值数组
+- Kotlin：使用工厂函数定义数组
+- Kotlin：打印数组元素
+- Kotlin：位运算符
+- Kotlin：逻辑运算符
+- Kotlin：控制流语句
+- Kotlin：if 语句
+- Kotlin：if-else 语句
+- Kotlin：if-else if-else
+- Kotlin：when 表达式
+- Kotlin：将 when 用作 if-else if 阶梯
+- Kotlin：将 When 用作表达式
+- Kotlin：for 循环
+- Kotlin：while、do-while 循环
+- Kotlin：break 语句
+- Kotlin：continue 语句
+- Kotlin：类和对象
+- Kotlin：声明属性
+- Kotlin：为属性添加 getter 和 setter
+- Kotlin：定义类的成员函数
+- Kotlin：const：编译时常量
+- Kotlin：const 与 val
+- Kotlin：lateinit：延迟初始化属性
+- Kotlin：构造函数
+- Kotlin：次要构造函数
+- Kotlin：向主构造函数传递默认值
+- Kotlin：定义私有主构造函数
+- Kotlin：如何创建对象
+
+## Python 编程练习
+
+### Python 字符串 – 练习
+
+- Python：反转字符串
+- 在 Python 中移除换行符
+- 查找共同值
+
+### Python 数据类型：列表 – 练习
+
+- Python：求列表中所有项的和
+- 从列表中获取最大数
+- 从列表中移除重复项
+
+### Python 数据类型：字典 – 练习
+
+- 向字典添加键
+- 使用 for 循环遍历字典
+- 合并两个 Python 字典
+- 将字典中的所有项相乘
+- 从字典中移除键
+- 从对象的字段获取字典
+- 合并两个字典，为共同键添加值
+- 查找最高的 3 个值
+
+---
+
+# 快速学习 Kotlin
+
+## Kotlin 简介
 
 Kotlin 是一种在 JVM 上运行的高级编程语言。Kotlin 将源代码编译为 Java 字节码，并使用 JVM 运行应用程序。你可以交替使用 Java 和 Kotlin，这意味着你可以从 Java 调用 Kotlin 函数，反之亦然。
 
-## 先决条件
+### 先决条件
 
 需要具备 Java 基础知识。
 
-## Kotlin 是面向对象的吗？
+### Kotlin 是面向对象的吗？
 
 是的，Kotlin 是面向对象的语言，你可以创建类、对象，并应用多态、继承等面向对象编程概念。
 
-## = Kotlin 是函数式的吗？
+### Kotlin 是函数式的吗？
 
 是的，Kotlin 是一种函数式语言。在函数式编程语言中，函数是基本的构建块，你可以返回一个函数，将一个函数作为参数传递给另一个函数等。
 
-## Kotlin 是开源的吗？
+### Kotlin 是开源的吗？
 
-是的
+是的。
 
-## 我可以使用 Kotlin 开发什么类型的应用程序？
+### 我可以使用 Kotlin 开发什么类型的应用程序？
 
-* 构建移动应用程序
-* 开发服务器端应用程序
-* 你可以开发任何能用 Java 开发的应用程序
+- 构建移动应用程序
+- 开发服务器端应用程序
+- 你可以开发任何能用 Java 开发的应用程序
 
-## 我可以在 Web 浏览器中运行 Kotlin 代码吗？
+### 我可以在 Web 浏览器中运行 Kotlin 代码吗？
 
 Kotlin 可以编译为 JavaScript，因此你可以在浏览器中运行应用程序。
 
-## Kotlin 是静态类型的吗？
+### Kotlin 是静态类型的吗？
 
 是的，Kotlin 是静态类型语言。对于静态类型语言，变量的类型在编译时已知。你可以参考我的帖子"静态类型与动态类型语言"，了解静态类型和动态类型语言之间的区别。
 
-## Kotlin 可以推断类型吗？
+### Kotlin 可以推断类型吗？
 
 是的，与 Java 不同，你在定义变量时无需指定类型。Kotlin 根据上下文推断类型。
 
-示例
+示例：
 
-```
+```kotlin
 var name = "Krishna"
 ```
 
 由于 `"Krishna"` 被赋值给变量 `name`，Kotlin 推断类型为 `String`。
 
-```
+```kotlin
 var age = 28
 ```
 
 由于数字 `28` 被赋值给变量 `age`，Kotlin 推断类型为 `int`。
 
-# Kotlin：Hello World 程序
+## Kotlin：Hello World 程序
 
 `.kt` 是 Kotlin 文件的扩展名。创建一个文件 `HelloWorld.kt`，内容如下。
 
 `HelloWorld.kt`
 
-```
+```kotlin
 fun main (args:Array<String>){
     println( "Hello World" )
 }
@@ -213,7 +155,7 @@ fun main (args:Array<String>){
 
 上面的语句将消息 `Hello World` 打印到控制台。如你所见，与 Java 不同，Kotlin 语句不以 `;` 结尾。
 
-## 编译 HelloWorld.kt
+### 编译 HelloWorld.kt
 
 打开命令提示符，输入命令 `kotlinc HelloWorld.kt`。
 
@@ -237,7 +179,7 @@ Directory of C:\Users\Krishna\Documents\Study\Kotlin\Programs
 
 如你所见 `dir` 命令的输出，你可以观察到 Kotlin 生成了 `HelloWorldKt.class` 和一个 `META-INF` 目录。
 
-## 运行 HelloWorld.kt
+### 运行 HelloWorld.kt
 
 你可以使用 `kotlin HelloWorldKt` 命令运行 `HelloWorldkt` 文件。
 
@@ -247,7 +189,7 @@ C:\Users\krishna\Documents\Study\Kotlin\Programs>kotlin HelloWorldKt
 Hello World
 ```
 
-## 创建并运行 jar
+### 创建并运行 jar
 
 你还可以创建 jar 文件，并使用 Java 启动器运行 jar 文件。
 
@@ -267,17 +209,13 @@ Directory of C:\Users\Krishna\Documents\Study\Kotlin\Programs
 09/02/2017  11:24 AM    <DIR>          ..
 09/02/2017  11:24 AM           869,262 HelloWorld.jar
 09/02/2017  11:09 AM                57 HelloWorld.kt
-```
 
-
- 
- ```
                2 File(s)        869,319 bytes
 
                2 Dir(s)  63,401,816,064 bytes free
 ```
 
-jar 文件创建完成后，你可以像运行其他 jar 文件一样调用它。使用命令 `java -jar HelloWorld.jar`
+jar 文件创建完成后，你可以像运行其他 jar 文件一样调用它。使用命令 `java -jar HelloWorld.jar`。
 
 ```
 C:\Users\Krishna\Documents\Study\Kotlin\Programs>java -jar HelloWorld.jar
@@ -285,7 +223,7 @@ C:\Users\Krishna\Documents\Study\Kotlin\Programs>java -jar HelloWorld.jar
 Hello World
 ```
 
-# 在 Eclipse 中设置 Kotlin
+## 在 Eclipse 中设置 Kotlin
 
 打开 Eclipse。`Help` -> `Eclipse Marketplace`。
 
@@ -299,7 +237,7 @@ Hello World
 
 安装成功后，Eclipse 会要求重启。重启 Eclipse。
 
-## 创建新的 Kotlin 项目
+### 创建新的 Kotlin 项目
 
 打开 Eclipse。`File` -> `New` -> `Other`。
 
@@ -317,7 +255,7 @@ Kotlin 项目结构如下所示。
 
 ![`4.bp.blogspot.com/-2PXfV1Fz8TY/Wg2e4KvUcbI/AAAAAAAAJGY/j4wml-mNTT0t4V1ElYv8154z9y6QBxbvwCLcBGAs/s400/eclipse%2Bkotlin%2Bproject3.png`](img/Image00004.jpg)
 
-## 创建 HelloWorld.kt 文件
+### 创建 HelloWorld.kt 文件
 
 右键点击 `src` 文件夹 -> `New` -> `Other`。
 
@@ -335,7 +273,7 @@ Kotlin 项目结构如下所示。
 
 `HelloWorld.kt`
 
-```
+```kotlin
 fun main (args: Array<String>) {
 
 println( "Hello World" )
@@ -343,7 +281,7 @@ println( "Hello World" )
 }
 ```
 
-## 运行 HelloWorld.kt 文件
+### 运行 HelloWorld.kt 文件
 
 右键点击 `HelloWorld.kt` 文件的源代码 -> `Run As` -> `Kotlin Application`。
 
@@ -353,13 +291,13 @@ println( "Hello World" )
 
 ![`3.bp.blogspot.com/-RL0AgvzfVoo/Wg2f5lOTuYI/AAAAAAAAJG0/sM0FDoh1v3476Hh9krviz5MOf71LOZ3qQCLcBGAs/s400/eclipse%2Bkotlin%2Bproject8.png`](img/Image00009.jpg)
 
-# 在 Kotlin 中定义变量
+## 在 Kotlin 中定义变量
 
 变量是用于存储数据的命名内存位置。
 
 ### 语法
 
-```
+```kotlin
 var variableName : DataType = value
 
 val variableName : DataType = value
@@ -367,15 +305,15 @@ val variableName : DataType = value
 
 `var` 和 `val` 都是关键字。
 
-## 示例
+### 示例
 
-```
+```kotlin
 var a : Int  =10;
 ```
 
 `a` 的类型为 int，赋值为 10。
 
-```
+```kotlin
 val b : Double = 1.23
 ```
 
@@ -383,7 +321,7 @@ val b : Double = 1.23
 
 `HelloWorld.kt`
 
-```
+```kotlin
 fun main (args: Array<String>) {
 
   var a : Int  = 10 ;
@@ -406,7 +344,7 @@ a : 10
 b : 1.23
 ```
 
-# Kotlin 中的数据类型
+## Kotlin 中的数据类型
 
 Java 有像 `int`、`float`、`char` 等原始类型，那么 Kotlin 呢？
 
@@ -414,7 +352,7 @@ Java 有像 `int`、`float`、`char` 等原始类型，那么 Kotlin 呢？
 
 `HelloWorld.kt`
 
-```
+```kotlin
 fun main (args: Array<String>) {
 
   var doubleVar: Double = 1.23
@@ -460,13 +398,13 @@ shortVar : 123
 byteVar : 123
 ```
 
-# Kotlin：可空类型
+## Kotlin：可空类型
 
 默认情况下，Kotlin 的引用类型（`Int`、`Float`、`Double`、`String` 等）不接受 null 值。Kotlin 引入此特性是为了避免空指针异常。
 
 `Test.kt`
 
-```
+```kotlin
 fun main (args: Array<String>) {
 
   var name : String = "Krishna"
@@ -487,29 +425,26 @@ ERROR: Null can not be a value of a non-null type String (6, 9)
 通过使用可空类型，你可以定义一个接受 null 值的变量。在引用类型后追加 `?` 即可接受 null 值。
 
 | 类型 | 可空类型 |
+
+
+
 |------|---------------|
-| Int | Int? |
-| String | String? |
-| Double | Double? |
-| Person | Person? |
+| `Int` | `Int?` |
+| `String` | `String?` |
+| `Double` | `Double?` |
+| `Person` | `Person?` |
 
 ## 示例
 
 ```
-  var id: Int? = 1
-
-  var name: String? = "Krishna"
-
-  var salary: Double? = 123.456
-
-  var person: Person? = Person( "Krishna" )
+var id: Int? = 1
+var name: String? = "Krishna"
+var salary: Double? = 123.456
+var person: Person? = Person("Krishna")
 
 id = null
-
 name = null
-
 salary = null
-
 person = null
 ```
 
@@ -519,42 +454,30 @@ Kotlin 提供以下数据类型来支持数字。
 
 | 数据类型 | 位大小 |
 |-----------|--------------|
-| Double | 64 |
-| Float | 32 |
-| Long | 64 |
-| Int | 32 |
-| Short | 16 |
-| Byte | 8 |
+| `Double` | 64 |
+| `Float` | 32 |
+| `Long` | 64 |
+| `Int` | 32 |
+| `Short` | 16 |
+| `Byte` | 8 |
 
 `Numbers.kt`
 
 ```
-fun main (args: Array<String>) {
+fun main(args: Array<String>) {
+    var doubleVar: Double = 1.23
+    var floatVar: Float = 1.23f
+    var longVar: Long = 123
+    var intVar: Int = 123
+    var shortVar: Short = 123
+    var byteVar: Byte = 123
 
-  var doubleVar: Double = 1.23
-
-  var floatVar: Float = 1.23f
-
-  var longVar: Long = 123
-
-  var intVar: Int = 123
-
-  var shortVar: Short = 123
-
-  var byteVar: Byte = 123
-
-println( "doubleVar : ${doubleVar}" )
-
-println( "doubleVar : ${floatVar}" )
-
-println( "longVar : ${longVar}" )
-
-println( "intVar : ${intVar}" )
-
-println( "shortVar : ${shortVar}" )
-
-println( "byteVar : ${byteVar}" )
-
+    println("doubleVar : ${doubleVar}")
+    println("doubleVar : ${floatVar}")
+    println("longVar : ${longVar}")
+    println("intVar : ${intVar}")
+    println("shortVar : ${shortVar}")
+    println("byteVar : ${byteVar}")
 }
 ```
 
@@ -562,35 +485,26 @@ println( "byteVar : ${byteVar}" )
 
 ```
 doubleVar : 1.23
-
 doubleVar : 1.23
-
 longVar : 123
-
 intVar : 123
-
 shortVar : 123
-
 byteVar : 123
 ```
 
 ## 十六进制、八进制和二进制字面量表示法
 
-Kotlin 支持十六进制和二进制表示法，但不支持八进制表示法。十六进制数通过前缀 `0x` 表示，
+Kotlin 支持十六进制和二进制表示法，但不支持八进制表示法。十六进制数通过前缀 `0x` 表示。
 
 `Numbers.kt`
 
 ```
-fun main (args: Array<String>) {
+fun main(args: Array<String>) {
+    var hexaNum: Int = 0x123
+    var binaryNum: Int = 0b10101010
 
-  var hexaNum : Int = 0 x123
-
-  var binaryNum : Int = 0 b10101010
-
-println( "hexaNum : ${hexaNum}" )
-
-println( "binaryNum : ${binaryNum}" )
-
+    println("hexaNum : ${hexaNum}")
+    println("binaryNum : ${binaryNum}")
 }
 ```
 
@@ -598,7 +512,6 @@ println( "binaryNum : ${binaryNum}" )
 
 ```
 hexaNum : 291
-
 binaryNum : 170
 ```
 
@@ -607,32 +520,20 @@ binaryNum : 170
 `Numbers.kt`
 
 ```
-fun main (args: Array<String>) {
+fun main(args: Array<String>) {
+    var ten = 10
+    var hundred = 100
+    var thousand = 1000
+    var tenThousand = 10_000
+    var oneLaksh = 100_000
+    var tenLaksh = 1_000_000
 
-  var ten = 10
-
-  var hundred = 100
-
-  var thousand = 1000
-
-  var tenThousand = 10 _000
-
-  var oneLaksh = 100 _000
-
-  var tenLaksh = 1 _000_000
-
-println( "ten : ${ten}" )
-
-println( "hundred : ${hundred}" )
-
-println( "thousand : ${thousand}" )
-
-println( "tenThousand : ${tenThousand}" )
-
-println( "oneLaksh : ${oneLaksh}" )
-
-println( "tenLaksh : ${tenLaksh}" )
-
+    println("ten : ${ten}")
+    println("hundred : ${hundred}")
+    println("thousand : ${thousand}")
+    println("tenThousand : ${tenThousand}")
+    println("oneLaksh : ${oneLaksh}")
+    println("tenLaksh : ${tenLaksh}")
 }
 ```
 
@@ -640,15 +541,10 @@ println( "tenLaksh : ${tenLaksh}" )
 
 ```
 ten : 10
-
 hundred : 100
-
 thousand : 1000
-
 tenThousand : 10000
-
 oneLaksh : 100000
-
 tenLaksh : 1000000
 ```
 
@@ -659,25 +555,23 @@ tenLaksh : 1000000
 ## 示例
 
 ```
-var myChar : Char = 'a'
+var myChar: Char = 'a'
 ```
 
 `HelloWorld.kt`
 
 ```
-fun main (args: Array<String>) {
+fun main(args: Array<String>) {
+    var myChar: Char = 'a'
 
-  var myChar : Char = 'a'
-
-println( "Value of myChar is : ${myChar}" )
-
+    println("Value of myChar is : ${myChar}")
 }
 ```
 
 #### 输出
 
 ```
-Value of myChar is : a clo
+Value of myChar is : a
 ```
 
 Java 支持的所有转义序列 Kotlin 也都支持。
@@ -689,14 +583,11 @@ Java 支持的所有转义序列 Kotlin 也都支持。
 `IntConverter.kt`
 
 ```
-fun main (args: Array<String>) {
+fun main(args: Array<String>) {
+    var myChar: Char = 'a'
 
-  var myChar : Char = 'a'
-
-println( "Value of myChar is : ${myChar}" )
-
-println( "Value of myChar in int is : ${myChar.toInt()}" )
-
+    println("Value of myChar is : ${myChar}")
+    println("Value of myChar in int is : ${myChar.toInt()}")
 }
 ```
 
@@ -704,27 +595,22 @@ println( "Value of myChar in int is : ${myChar.toInt()}" )
 
 ```
 Value of myChar is : a
-
 Value of myChar in int is : 97
 ```
 
 # Kotlin：布尔值
 
-`Boolean` 类型用于表示 true、false 状态。
+`Boolean` 类型用于表示 `true`、`false` 状态。
 
 `Booleans.kt`
 
 ```
-fun main (args: Array<String>) {
+fun main(args: Array<String>) {
+    var trueState: Boolean = true
+    var falseState: Boolean = false
 
-  var trueState : Boolean  = true
-
-  var falseState : Boolean  = false
-
-println( "Value of trueState is : ${trueState}" )
-
-println( "Value of falseState is : ${falseState}" )
-
+    println("Value of trueState is : ${trueState}")
+    println("Value of falseState is : ${falseState}")
 }
 ```
 
@@ -732,23 +618,20 @@ println( "Value of falseState is : ${falseState}" )
 
 ```
 Value of trueState is : true
+Value of falseState is : false
 ```
-
-
- 
-`falseState` 的值为：`false`
 
 # Kotlin：字符串
 
 `String` 是字符的集合，用双引号括起来。Kotlin 中的字符串通过关键字 `String` 定义，且是**不可变的**。
 
-示例
+## 示例
 
 ```kotlin
 var message: String = "Good Morning"
 ```
 
-StringsDemo.kt
+`StringsDemo.kt`
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -757,7 +640,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-输出
+## 输出
 
 ```
 Good Morning
@@ -765,13 +648,13 @@ Good Morning
 
 Java 支持的所有转义序列（`\n`、`\t`、`\a` 等）在 Kotlin 中同样支持。
 
-示例
+## 示例
 
 ```kotlin
 var message: String = "Good Morning\nHow are you\nsee you soon"
 ```
 
-StringDemo.kt
+`StringDemo.kt`
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -780,7 +663,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-输出
+## 输出
 
 ```
 Good Morning
@@ -790,7 +673,7 @@ see you soon
 
 如果不想执行转义，则将字符串嵌入 `"""`（三引号）中。
 
-StringDemo.kt
+`StringDemo.kt`
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -800,7 +683,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-输出
+## 输出
 
 ```
 Good Morning\nHow are you\nsee you soon
@@ -811,21 +694,21 @@ Good Morning\nHow are you\nsee you soon
 
 通过使用模板表达式，你可以在字符串中计算表达式的值。模板表达式以 `$` 符号开头，后跟一个名称。
 
-示例
+## 示例
 
 ```kotlin
 var a = 10
 println("Value of a is : $a")
 ```
 
-任意表达式用花括号括起来
+任意表达式用花括号括起来。
 
 ```kotlin
 var str = "Hello World"
 println("$str length is ${str.length}")
 ```
 
-Expression.kt
+`Expression.kt`
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -836,7 +719,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-输出
+## 输出
 
 ```
 Value of a is : 10
@@ -849,13 +732,13 @@ Hello World length is 11
 
 通过使用库函数 `arrayOf`，你可以定义一个数组。
 
-示例
+## 示例
 
 ```kotlin
 val numbers: Array<Int> = arrayOf(10, 20, 30, 40, 50)
 ```
 
-ArrayDemo.kt
+`ArrayDemo.kt`
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -866,7 +749,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-输出
+## 输出
 
 ```
 10
@@ -891,7 +774,7 @@ Kotlin 提供了以下库函数来定义基本类型数组。
 
 Kotlin 提供了 `arrayOfNulls` 库函数来定义空值数组。
 
-ArrayOfNulls.kt
+`ArrayOfNulls.kt`
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -902,7 +785,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-输出
+## 输出
 
 ```
 null
@@ -920,9 +803,9 @@ Kotlin 提供了一个工厂函数，它接受大小和一个函数 `f` 作为�
 var squares = Array(5, { i -> i * i })
 ```
 
-上述语句定义了一个大小为 5 的数组 `squares`，并初始化为 `{1, 4, 9, 16, 25}`
+上述语句定义了一个大小为 5 的数组 `squares`，并初始化为 `{1, 4, 9, 16, 25}`。
 
-ArrayFactoryFunction.kt
+`ArrayFactoryFunction.kt`
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -939,7 +822,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-输出
+## 输出
 
 ```
 Elements in squares array :
@@ -963,7 +846,7 @@ Elements in cubes array :
 
 ## 使用 for 循环打印数组元素
 
-ArrayUtil.kt
+`ArrayUtil.kt`
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -974,7 +857,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-输出
+## 输出
 
 ```
 1
@@ -985,7 +868,7 @@ fun main(args: Array<String>) {
 
 ## 使用 `Arrays.toString` 方法打印数组元素
 
-ArrayUtil.kt
+`ArrayUtil.kt`
 
 ```kotlin
 import java.util.Arrays
@@ -996,7 +879,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-输出
+## 输出
 
 ```
 [1, 2, 3, 4]
@@ -1004,7 +887,7 @@ fun main(args: Array<String>) {
 
 ## 使用 `array.indices` 打印数组元素
 
-ArrayUtil.kt
+`ArrayUtil.kt`
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -1015,7 +898,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-输出
+## 输出
 
 ```
 2
@@ -1026,7 +909,7 @@ fun main(args: Array<String>) {
 
 ## 使用 `array.withIndex` 打印数组元素
 
-ArrayUtil.kt
+`ArrayUtil.kt`
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -1037,7 +920,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-输出
+## 输出
 
 ```
 index : 0, value : 2
@@ -1048,13 +931,13 @@ index : 3, value : 7
 
 ## 使用 while 循环打印数组元素
 
-ArrayUtil.kt
+`ArrayUtil.kt`
 
 ```kotlin
 fun main(args: Array<String>) {
     var arr: Array<Int> = arrayOf(2, 3, 5, 7)
-    var sizeOfTheArray = arr.size;
-    var index: Int = 0;
+    var sizeOfTheArray = arr.size
+    var index: Int = 0
     while (index < sizeOfTheArray) {
         println("index : $index, value : ${arr[index]}")
         index++
@@ -1062,7 +945,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-输出
+## 输出
 
 ```
 index : 0, value : 2
@@ -1087,7 +970,7 @@ index : 3, value : 7
 
 除 `inv()` 外，所有其他运算符都以中缀形式使用。
 
-示例：
+## 示例
 
 ```kotlin
 var1 shl var2
@@ -1106,16 +989,18 @@ variable shl n
 
 将变量左移 `n` 次。
 
-`Variable shl n` 等于 `variable = variable * 2 的 n 次幂`
+`variable shl n` 等于 `variable = variable * 2 的 n 次幂`。
 
 ```
-var var1 : Int = 2
+var var1: Int = 2
 var1 shl 1 = 2 * 2 的 1 次幂 = 4
 var1 shl 2 = 2 * 2 的 2 次幂 = 8
 var1 shl 9 = 2 * 2 的 9 次幂 = 1024
 ```
 
-LeftShift.kt
+`LeftShift.kt`
+
+
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -1157,7 +1042,7 @@ a shr 1 = 128 / (2 的 1 次幂) = 64
 a shr 2 = 128 / (2 的 2 次幂) = 32
 ```
 
-RightShift.kt
+`RightShift.kt`
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -1189,7 +1074,7 @@ res3 : 16
 Variable ushr n
 ```
 
-UnsignedRightShift.kt
+`UnsignedRightShift.kt`
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -1230,7 +1115,7 @@ res1 : 2147483584
 | 1 | 0 | 0 | 1 | 1 |
 | 1 | 1 | 1 | 1 | 0 |
 
-HelloWorld.kt
+`HelloWorld.kt`
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -1270,9 +1155,7 @@ a xor b is 1
 
 ## 5. `inv()`：按位取反
 
-
- 
- 按位取反运算符将值为 1 的位变为 0，将值为 0 的位变为 1。
+按位取反运算符将值为 1 的位变为 0，将值为 0 的位变为 1。
 
 ## 示例
 
@@ -1282,7 +1165,7 @@ a xor b is 1
 
 `a.inv()` 的二进制格式为 `1 1 1 1 1 0 0 0`
 
-### Inverse.kt
+### `Inverse.kt`
 
 ```
 fun main (args: Array<String>) {
@@ -1312,12 +1195,13 @@ Kotlin 支持逻辑运算符（也称为布尔运算符），用于组合多个�
 `operand1 || operand2`：如果任一操作数求值为 `true`，则返回 `true`，否则返回 `false`。
 
 | 操作数 1 | 操作数 2 | 求值结果 |
+|----------|----------|----------|
 | False | false | false |
 | False | true | true |
 | True | false | true |
 | True | true | true |
 
-### BooleanOr.kt
+### `BooleanOr.kt`
 
 ```
 fun main (args: Array<String>) {
@@ -1349,7 +1233,7 @@ true || true : true
 
 如果第一个表达式求值为 `true`，那么 Kotlin 将不会对整个表达式求值。因此逻辑 OR 被称为短路 OR（或）惰性析取运算符。
 
-### LazyDisjunciton.kt
+### `LazyDisjunciton.kt`
 
 ```
 fun main (args: Array<String>) {
@@ -1379,12 +1263,13 @@ a is incremented 11
 `operand1 && operand2`：如果两个操作数都求值为 `true`，则返回 `true`，否则返回 `false`。
 
 | 操作数 1 | 操作数 2 | 求值结果 |
+|----------|----------|----------|
 | False | false | false |
 | False | true | false |
 | True | false | false |
 | True | true | true |
 
-### BooleanAnd.kt
+### `BooleanAnd.kt`
 
 ```
 fun main (args: Array<String>) {
@@ -1416,7 +1301,7 @@ true && true: true
 
 如果表达式中的第一个语句求值为 `false`，那么 Kotlin 将不会对整个表达式求值。因此，逻辑 AND 被称为短路 AND。
 
-### LazyConjunction.kt
+### `LazyConjunction.kt`
 
 ```
 fun main (args: Array<String>) {
@@ -1448,10 +1333,11 @@ a is incremented 11
 如果操作数为 `true`，`!` 运算符将其求值为 `false`
 
 | 操作数 | 求值结果 |
+|--------|----------|
 | False | true |
 | True | false |
 
-### LogicalNot.kt
+### `LogicalNot.kt`
 
 ```
 fun main (args: Array<String>) {
@@ -1500,7 +1386,7 @@ Kotlin 支持两种类型的相等性。
 
 如果 `ref1.equals(ref2)` 返回 `true`，上述语句返回 `true`，否则返回 `false`。
 
-### Equality.kt
+### `Equality.kt`
 
 ```
 fun main (args: Array<String>) {
@@ -1552,7 +1438,7 @@ if(condition){
 }
 ```
 
-## IfStmt.kt
+## `IfStmt.kt`
 
 ```
 fun main (args: Array<String>) {
@@ -1585,7 +1471,7 @@ if(condition){
 }
 ```
 
-## IfElse.kt
+## `IfElse.kt`
 
 ```
 fun main (args: Array<String>) {
@@ -1610,7 +1496,9 @@ You passed in the exam
 
 `if` 语句后面可以跟一个可选的 `else if...else` 语句，这对于测试各种条件非常有用。
 
-## IfElseIf.kt
+## `IfElseIf.kt`
+
+
 
 ```
 fun main (args: Array<String>) {
@@ -1636,7 +1524,7 @@ You are passed and got first class
 
 # Kotlin：`when` 表达式
 
-`when` 相当于 Java 中的 switch 语句。
+`when` 相当于 Java 中的 `switch` 语句。
 
 ### 语法
 
@@ -1648,7 +1536,7 @@ when(expression){
 }
 ```
 
-`when` 按顺序将表达式与所有可能的 case 进行匹配求值。如果没有任何一个 case 满足，则执行 else 块。
+`when` 按顺序将表达式与所有可能的 case 进行匹配求值。如果没有任何一个 case 满足，则执行 `else` 块。
 
 ## WhenDemo.kt
 
@@ -1676,18 +1564,13 @@ Value 5 is checked
 
 ```
 fun main (args: Array<String>) {
-```
+  var a : Int = 5
 
-
- 
- ```
-var a : Int = 5
-
-when (a){
-  2 , 3 , 5 , 7 -> println( "Prime number" )
-  4 , 6 , 8 -> println( "Even number other than 2" )
-  else -> println( "No value is checked" )
-}
+  when (a){
+    2 , 3 , 5 , 7 -> println( "Prime number" )
+    4 , 6 , 8 -> println( "Even number other than 2" )
+    else -> println( "No value is checked" )
+  }
 }
 ```
 
@@ -1699,7 +1582,7 @@ Prime number
 
 你还可以使用任意表达式作为分支条件。例如，我使用 `2+3` 作为分支条件。
 
-`WhenDemo.kt`
+## WhenDemo.kt
 
 ```
 fun main (args: Array<String>) {
@@ -1720,7 +1603,7 @@ Checked value 5
 
 你还可以在分支条件中检查范围（或）不在范围内。
 
-`WhenDemo.kt`
+## WhenDemo.kt
 
 ```
 fun main (args: Array<String>) {
@@ -1743,7 +1626,7 @@ a is in between 1 to 5 (or) 11 to 15
 
 你还可以将 `when` 表达式用作 if-elseif 阶梯。如果不向 `when` 表达式指定任何参数，它可以作为 if-else if 阶梯使用。
 
-`ConditionDemo.kt`
+## ConditionDemo.kt
 
 ```
 fun main (args: Array<String>) {
@@ -1769,7 +1652,7 @@ You are passed and got first class
 
 你可以使用 `when` 表达式实现上述 if-else if-else 逻辑，如下所示。
 
-`WhenDemo.kt`
+## WhenDemo.kt
 
 ```
 fun main (args: Array<String>) {
@@ -1794,7 +1677,7 @@ You are passed and got first class
 
 你可以将 `when` 用作表达式。如果将 `when` 用作表达式，则匹配分支的值将成为 `when` 表达式的值。
 
-`WhenDemo.kt`
+## WhenDemo.kt
 
 ```
 fun main (args: Array<String>) {
@@ -1830,7 +1713,7 @@ for(ele in array){
 }
 ```
 
-`ArrayDemo.kt`
+## ArrayDemo.kt
 
 ```
 fun main (args: Array<String>) {
@@ -1852,7 +1735,7 @@ fun main (args: Array<String>) {
 
 ## 遍历范围
 
-`ArrayDemo.kt`
+## ArrayDemo.kt
 
 ```
 fun main (args: Array<String>) {
@@ -1879,7 +1762,7 @@ fun main (args: Array<String>) {
 
 ## 遍历字符串
 
-`ArrayDemo.kt`
+## ArrayDemo.kt
 
 ```
 fun main (args: Array<String>) {
@@ -1914,7 +1797,7 @@ while (expression) {
 
 **示例：** 使用 `while` 循环打印从 0 到 9 的数字。
 
-`WhileDemo.kt`
+## WhileDemo.kt
 
 ```
 fun main (args: Array<String>) {
@@ -1953,7 +1836,7 @@ do {
 } while (expression)
 ```
 
-`DoWhileDemo.kt`
+## DoWhileDemo.kt
 
 ```
 fun main (args: Array<String>) {
@@ -2001,7 +1884,7 @@ fun main (args: Array<String>) {
 break
 ```
 
-`BreakDemo.kt`
+## BreakDemo.kt
 
 ```
 fun main (args: Array<String>) {
@@ -2024,7 +1907,7 @@ fun main (args: Array<String>) {
 5
 ```
 
-`BreakDemoInnerLoop.kt`
+## BreakDemoInnerLoop.kt
 
 ```
 fun main (args: Array<String>) {
@@ -2074,7 +1957,7 @@ break@outerLoop
 break@processState
 ```
 
-`LabelledBreakDemo.kt`
+## LabelledBreakDemo.kt
 
 ```
 fun main (args: Array<String>) {
@@ -2117,7 +2000,7 @@ Breaking out of the outer loop
 continue;
 ```
 
-`ContinueDemo.kt`
+## ContinueDemo.kt
 
 ```
 fun main (args: Array<String>) {
@@ -2136,7 +2019,7 @@ fun main (args: Array<String>) {
 2 4 6 8 10
 ```
 
-`UnlabelledContinueInnerLoop.kt`
+## UnlabelledContinueInnerLoop.kt
 
 ```
 fun main (args: Array<String>) {
@@ -2189,7 +2072,7 @@ continue @outerLoop
 continue @processState
 ```
 
-`ContinueLabelledDemo.kt`
+## ContinueLabelledDemo.kt
 
 ```
 fun main (args: Array<String>) {
@@ -2241,6 +2124,7 @@ fun main (args: Array<String>) {
 现在通过比较这些属性，我们可以轻松区分两个人。
 
 | 属性 | 人 A | 人 B |
+| --- | --- | --- |
 | 身高 | 6ft | 5.5ft |
 | 体重 | 75Kg | 60Kg |
 | 肤色 | 白色 | 黑色 |
@@ -2248,15 +2132,14 @@ fun main (args: Array<String>) {
 
 如上图所示，两个人都有自己的属性，因此我们可以根据这些属性来区分他们。
 
-
- 
- ## 根据行为区分两个对象
+## 根据行为区分两个对象
 
 考虑同样的两个人 A 和 B。我们将尝试找出人物对象可能的行为。
 
 可能的行为有 `walk`、`run`、`swim`、`eat`、`sleep`、`see`、`hear` 等。现在通过比较这些行为，我们可以轻松地区分两个人。
 
 | 行为 | 人物 A | 人物 B |
+| --- | --- | --- |
 | 步行 | 10km/hr | 12km/hr |
 | 跑步 | 20km/hr | 18km/hr |
 | 睡眠 | 8 Hrs/day | 6Hrs/day |
@@ -2275,13 +2158,15 @@ fun main (args: Array<String>) {
 
 ### 什么是对象？
 
+
+
 对象是相关状态和行为的软件包。Kotlin 的主要优势在于你可以将 Kotlin 中的对象与现实世界中的对象进行比较。因此在 Kotlin 中处理对象非常容易。
 
-### 什么是类？
+## 什么是类？
 
 类是创建对象的蓝图或原型。
 
-你可以使用 `class` 关键字来定义类。
+你可以使用`class`关键字来定义类。
 
 **语法**
 
@@ -2301,19 +2186,19 @@ class Employee {
 }
 ```
 
-上面的代码片段定义了 `Employee` 类，它定义了两个属性（`firstName`、`lastName`）。
+上面的代码片段定义了`Employee`类，它定义了两个属性（`firstName`、`lastName`）。
 
-如何为 `Employee` 类定义对象？
+如何为`Employee`类定义对象？
 
 ```
 var emp1 = Employee()
 ```
 
-上面的语句用于为 `Employee` 类定义一个对象。
+上面的语句用于为`Employee`类定义一个对象。
 
-如何访问与对象 `emp1` 相关联的属性？
+如何访问与对象`emp1`相关联的属性？
 
-对象的成员（`firstName` 和 `lastName`）使用 `.` 符号来访问。
+对象的成员（`firstName`和`lastName`）使用`.`符号来访问。
 
 **语法**
 
@@ -2362,7 +2247,7 @@ Last name : Gurram
 
 ## 如何定义可变属性？
 
-可变属性使用 `var` 关键字定义。
+可变属性使用`var`关键字定义。
 
 **示例**
 
@@ -2372,7 +2257,7 @@ var name : String = "Krishna"
 
 ## 如何定义不可变属性？
 
-不可变属性使用 `val` 关键字定义。
+不可变属性使用`val`关键字定义。
 
 **示例**
 
@@ -2388,11 +2273,11 @@ class Employee{
 }
 ```
 
-如你所见，在 `Employee` 类中，我将 `name` 和 `age` 定义为可变属性，`orgID` 定义为不可变属性。
+如你所见，在`Employee`类中，我将`name`和`age`定义为可变属性，`orgID`定义为不可变属性。
 
 ## 如何访问类中的属性？
 
-通过定义对象，你可以访问类的属性。使用 `.` 符号来访问类的实例属性。
+通过定义对象，你可以访问类的属性。使用`.`符号来访问类的实例属性。
 
 **语法**
 
@@ -2447,7 +2332,7 @@ var <propertyName>[: <PropertyType>] [= <property_initializer>]
     [<setter>]
 ```
 
-`PropertyType`、`getter` 和 `setter` 在定义属性时都是可选的。
+`PropertyType`、`getter`和`setter`在定义属性时都是可选的。
 
 **HelloWorld.kt**
 
@@ -2482,7 +2367,7 @@ age : 28
 orgID : ORG1234
 ```
 
-如你所见，我使用了 `field` 标识符来引用幕后字段。按照惯例，setter 方法使用 `value` 作为参数名，但你可以使用任何名称。
+如你所见，我使用了`field`标识符来引用幕后字段。按照惯例，setter 方法使用`value`作为参数名，但你可以使用任何名称。
 
 ## 为什么需要 Getter 和 Setter 方法？
 
@@ -2497,7 +2382,7 @@ var age : Int = 28
     }
 ```
 
-例如，在上面的代码片段中，setter 方法在将年龄设置给属性之前进行验证。如果用户将年龄设置为 `<0` 或 `> 100`，年龄将被设置为 `3`。下面是完整的工作示例。
+例如，在上面的代码片段中，setter 方法在将年龄设置给属性之前进行验证。如果用户将年龄设置为`<0`或`> 100`，年龄将被设置为`3`。下面是完整的工作示例。
 
 **HelloWorld.kt**
 
@@ -2543,7 +2428,7 @@ age : 3
 orgID : ORG1234
 ```
 
-Kotlin 为可变属性（使用 `var` 关键字定义的属性）提供默认的 getter 和 setter 方法，而对于不可变属性（使用 `val` 关键字定义的属性）只提供 getter 方法。
+Kotlin 为可变属性（使用`var`关键字定义的属性）提供默认的 getter 和 setter 方法，而对于不可变属性（使用`val`关键字定义的属性）只提供 getter 方法。
 
 ```
 var name = "Krishna" // 类型为 String，具有默认的 getter 和 setter
@@ -2552,7 +2437,7 @@ val orfID = "orf1234" // 类型为 String，具有默认的 getter
 
 # Kotlin：定义类的成员函数
 
-Kotlin 中的函数使用 `fun` 关键字定义。
+Kotlin 中的函数使用`fun`关键字定义。
 
 **示例：**
 
@@ -2562,7 +2447,7 @@ fun square(x : Int) : Int{
 }
 ```
 
-上面的代码片段定义了一个名为 `square` 的函数，它接受一个 `Int` 类型的参数并返回整数。
+上面的代码片段定义了一个名为`square`的函数，它接受一个`Int`类型的参数并返回整数。
 
 **Employee.kt**
 
@@ -2648,9 +2533,7 @@ Employee.kt:3:2: error: property must be initialized or be abstract
 
 **Employee.kt**
 
-
- 
- ```
+```
 class Employee {
 
   private var firstName: String = ""
@@ -2686,7 +2569,7 @@ class Employee {
 
 ## 方式 2：将属性设为抽象
 
-`Employee.kt`
+**Employee.kt**
 
 ```
 abstract class Employee {
@@ -2700,7 +2583,7 @@ abstract class Employee {
 
 # Kotlin：`const`：编译时常量
 
-你可以使用 `const` 关键字定义编译时常量。
+你可以使用`const`关键字定义编译时常量。
 
 示例
 
@@ -2708,7 +2591,7 @@ abstract class Employee {
 const val VENDOR_NAME = "Self Learning Java blog"
 ```
 
-`HelloWorld.kt`
+**HelloWorld.kt**
 
 ```
 const val VENDOR_NAME = "Self Learning Java blog"
@@ -2735,14 +2618,16 @@ Value of PI : 3.14
 在定义编译时常量时，属性必须满足以下条件。
 
 * 顶层声明或对象的成员
-* 使用 `String` 类型或基本类型的值进行初始化
+
+* 使用`String`类型或基本类型的值进行初始化
+
 * 没有自定义 getter
 
 # Kotlin：`const` 与 `val` 的区别
 
-`const` 关键字用于定义编译时常量，即 `const` 变量的值在编译时已知。而 `val` 用于定义运行时常量。
+`const`关键字用于定义编译时常量，即`const`变量的值在编译时已知。而`val`用于定义运行时常量。
 
-例如，你不能像下面这样定义 `const`。
+例如，你不能像下面这样定义`const`。
 
 ```
 const val PICon = getPI()
@@ -2752,11 +2637,11 @@ const val PICon = getPI()
 
 `Const 'val' has type 'Unit'. Only primitives and String are allowed`
 
-这是因为 `getPI()` 在运行时求值并将值赋给 `PICon`，但 `const` 用于在编译时定义常量。
+这是因为`getPI()`在运行时求值并将值赋给`PICon`，但`const`用于在编译时定义常量。
 
 请看下面的可运行示例。
 
-`HelloWorld.kt`
+**HelloWorld.kt**
 
 ```
 const val VENDOR_NAME = "Self Learning Java blog"
@@ -2790,7 +2675,7 @@ Value of PI : 3.14
 
 默认情况下，Kotlin 不允许存在未初始化的属性。你必须在声明时（或）在构造函数中初始化它们。让我用一个例子来解释。
 
-`HelloWorld.kt`
+**HelloWorld.kt**
 
 ```
 class Employee {
@@ -2840,7 +2725,9 @@ class Employee {
 
 ## 在构造函数中定义变量
 
-```
+
+
+```kotlin
 class Employee {
 
   var id: String
@@ -2866,7 +2753,7 @@ constructor() {
 
 通过使用 `lateinit` 关键字，我们可以告知 Kotlin 该变量将在稍后某个时间点进行初始化。
 
-```
+```kotlin
 class Employee {
 
 lateinit var id: String
@@ -2878,13 +2765,13 @@ lateinit var city: String
 }
 ```
 
-## 我可以在初始化之前访问 lateinit 属性吗？
+## 我可以在初始化之前访问 `lateinit` 属性吗？
 
 不可以，如果你尝试在初始化之前访问 `lateinit` 属性，你会遇到 `UninitializedPropertyAccessException`。
 
 `HelloWorld.kt`
 
-```
+```kotlin
 class Employee {
 
 lateinit var id: String
@@ -2918,7 +2805,7 @@ Exception in thread "main" kotlin.UninitializedPropertyAccessException: lateinit
 
 `HelloWorld.kt`
 
-```
+```kotlin
 class Employee {
 
 lateinit var id: String
@@ -2956,7 +2843,7 @@ Kotlin 类有一个主构造函数和一个或多个次构造函数。构造函�
 
 示例
 
-```
+```kotlin
 class Employee constructor(fName: String, lName: String) {
 
          ....
@@ -2968,7 +2855,7 @@ class Employee constructor(fName: String, lName: String) {
 
 `Employee.kt`
 
-```
+```kotlin
 class Employee constructor (fName: String, lName: String) {
 
 init{
@@ -2982,7 +2869,7 @@ init{
 
 `Main.kt`
 
-```
+```kotlin
 fun main (args: Array<String>) {
 
   var emp1 = Employee( "Hareesh" , "Seeram" )
@@ -3002,7 +2889,7 @@ fName : Hareesh, lName : Seeram
 
 `Employee.kt`
 
-```
+```kotlin
 class Employee (fName: String, lName: String) {
 
 init{
@@ -3020,7 +2907,7 @@ init{
 
 `Main.kt`
 
-```
+```kotlin
 class Employee ( var firstName: String, var lastName: String) {
 
 }
@@ -3052,7 +2939,7 @@ Kotlin 类可以有多个次构造函数。
 
 ### 语法
 
-```
+```kotlin
 constructor(arguments){
 
 }
@@ -3060,7 +2947,7 @@ constructor(arguments){
 
 `ConstructorDemo.kt`
 
-```
+```kotlin
 class Employee {
 
   var firstName: String = ""
@@ -3114,7 +3001,7 @@ firstName : Praneeth, lastName : Praneeth
 
 主构造函数必须从次构造函数中显式调用。我的意思是，如果一个类有主构造函数，那么次构造函数必须通过 `this` 关键字直接或间接地委托给主构造函数。
 
-```
+```kotlin
 class Employee(var firstName: String) {
 
          ....
@@ -3127,7 +3014,7 @@ class Employee(var firstName: String) {
 
                  this.id = ""
 
-        冒号         }
+         }
 
 }
 ```
@@ -3136,7 +3023,7 @@ class Employee(var firstName: String) {
 
 `ConstructorDemo.kt`
 
-```
+```kotlin
 class Employee ( var firstName: String) {
 
   var lastName: String = ""
@@ -3162,11 +3049,7 @@ constructor(fName: String, lName: String, id: String) : this (fName) {
 }
 
 fun printEmployee (emp: Employee) {
-```
 
-
- 
- ```
 println( "id : ${emp.id}, firstName : ${emp.firstName}, lastName : ${emp.lastName}" )
 
 }
@@ -3186,9 +3069,11 @@ printEmployee(emp2)
 printEmployee(emp3)
 
 }
+```
 
-Output
+输出
 
+```
 id : , firstName : Krishna, lastName :
 
 id : , firstName : Hareesh, lastName : Seeram
@@ -3228,7 +3113,7 @@ var emp3 = Employee("Shwetha", "kam")
 
 `firstName` 被赋值为 `Shwetha`，`lastName` 被赋值为 `Kam`。
 
-ConstructorDemo.kt
+`ConstructorDemo.kt`
 
 ```kotlin
 class Employee ( var firstName: String = "Krishna" , var lastName: String = "Gurram" ) {
@@ -3258,7 +3143,7 @@ printEmployee(emp3)
 }
 ```
 
-Output
+输出
 
 ```
 firstName : Krishna, lastName : Gurram
@@ -3272,7 +3157,7 @@ firstName : Shwetha, lastName : kam
 
 通过在类头中指定 `private` 访问修饰符，你可以定义私有主构造函数。
 
-PrivateConDemo.kt
+`PrivateConDemo.kt`
 
 ```kotlin
 class Employee private constructor ( var firstName: String) {
@@ -3302,7 +3187,7 @@ printEmployee(emp1)
 }
 ```
 
-Output
+输出
 
 ```
 firstName : Shwetha, lastName : kam
@@ -3326,7 +3211,7 @@ var emp1 = Employee("Shwetha")
 var emp2 = Employee("Krishna", "G")
 ```
 
-ConstructorDemo.kt
+`ConstructorDemo.kt`
 
 ```kotlin
 class Employee {
@@ -3372,7 +3257,7 @@ printEmployee(emp2)
 }
 ```
 
-Output
+输出
 
 ```
 firstName : Shwetha, lastName : Shwetha
@@ -3459,6 +3344,16 @@ Python
 ## Python 数据类型：列表 – 练习
 
 ### Python：求列表中所有项的和
+
+#### Python 代码
+
+
+
+# Python 代码练习
+
+## 列表操作
+
+### 计算列表元素之和
 
 #### Python 代码
 

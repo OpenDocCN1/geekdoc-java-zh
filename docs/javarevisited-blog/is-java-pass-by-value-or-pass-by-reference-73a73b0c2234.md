@@ -1,3 +1,5 @@
+
+
 # Java 是“按值传递”还是“按引用传递”？
 
 > 原文：<https://medium.com/javarevisited/is-java-pass-by-value-or-pass-by-reference-73a73b0c2234?source=collection_archive---------6----------------------->
@@ -30,13 +32,13 @@
 
 # 汽车类——一个简单的 POJO 类。
 
-这个 Car 类是一个 POJO 类，只有一个字段`brandName`及其 getters 和 setters。
+这个 `Car` 类是一个 POJO 类，只有一个字段`brandName`及其 getters 和 setters。
 
 **汽车类别**
 
 # 主要作为驱动程序类。
 
-在主类中，我创建了一个 Car 对象，并将其赋给`myCar`一个引用变量。后来把它传给了法`changeCarReference`。
+在主类中，我创建了一个 `Car` 对象，并将其赋给`myCar`一个引用变量。后来把它传给了法`changeCarReference`。
 
 **按值传递或按引用传递**
 
@@ -84,6 +86,7 @@ car brand is : Tata
 **按值传递**
 
 因此，您可以看到传递给`changeCarReference`方法的`myCar`引用变量从未改变。但是这个`myCar`引用所指向的对象的值被另一个引用`carRef`改变了。
+
 因此我们得出结论，Java 总是“**按值传递**”，而不是“按引用传递”。
 
 > 因此，Java 是通过值传递的，而不是通过引用传递的。
@@ -126,3 +129,4 @@ After swap:
 *本文到此为止。希望你喜欢这篇文章。*
 
 # 类似内容可以关注[维克拉姆古普塔](https://medium.com/u/2c3b611409dc?source=post_page-----73a73b0c2234--------------------------------)。
+

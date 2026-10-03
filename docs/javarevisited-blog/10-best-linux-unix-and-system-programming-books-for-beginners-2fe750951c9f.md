@@ -1,3 +1,4 @@
+
 # 2023 年 10 本最佳 Linux、UNIX 和系统编程入门书籍
 
 > 原文：<https://medium.com/javarevisited/10-best-linux-unix-and-system-programming-books-for-beginners-2fe750951c9f?source=collection_archive---------0----------------------->
@@ -20,7 +21,7 @@
 
 顺便说一句，近年来，在线课程也帮助我学习了很多新技术，巩固了我在 Java、SQL 和算法等技能方面的基础。如果你也喜欢从在线课程中学习，那么 Udemy 上的 [**在 5 天内学习 Linux 并提升你的职业**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Flearn-linux-in-5-days%2F) 是一个很好的课程，可以和阅读以下书籍一起加入。事实上，你会学得更好更快。
 
-<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Flearn-linux-in-5-days%2F>  
+<https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Flearn-linux-in-5-days%2F>
 
 # 10 本适合初学者的最佳 Linux 和 UNIX 书籍
 
@@ -42,7 +43,7 @@
 
 ## [2。Linux 如何工作:每个超级用户都应该知道的事情](http://www.amazon.com/How-Linux-Works-Superuser-Should/dp/1593275676/?tag=javamysqlanta-20)
 
-作为一名程序员，我很好奇，我想知道事情是如何工作的，例如 HashMap 是如何工作的？这本书告诉你在你的 Linux 机器下会发生什么。
+作为一名程序员，我很好奇，我想知道事情是如何工作的，例如 `HashMap` 是如何工作的？这本书告诉你在你的 Linux 机器下会发生什么。
 
 大多数程序员花时间学习 Java、C++和其他编程语言，但是他们花在 Linux 这样更有价值的操作系统上的时间很少，他们获得的知识可能会为他们服务更多年。
 
@@ -124,13 +125,15 @@ Brian W. Kernighan 和 Rob Pike 所著的《Unix 编程环境》是[学习 UNIX]
 
 这本书于 1987 年首次出版，因此它已经有 29 年的历史了，但是像 UNIX 一样，它仍然是许多软件开发人员和工程师的重要信息来源。UNIX 是简单化设计的最好例子，它经受住了时间的考验，甚至在所有关键任务软件中被大量使用。
 
+
+
 这是一本学习 UNIX 架构和 UNIX 设计哲学的好书，如果你需要补充课程，我建议你看看 Pluralsight 上的 [**Linux 命令行界面(CLI)基础**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Flinux-cli-fundamentals) ，这是我最喜欢的在线学习平台之一，有关于所有最新技术的课程。
 
 [![](img/53b69892fd1c032209c4050411b8cdd5.png)](https://www.amazon.com/Design-UNIX-Operating-System/dp/0132017997?tag=javamysqlanta-20)
 
 以上是关于**十大 UNIX 和 Linux 编程书籍**的全部内容。这个列表完全是基于我的观点，但是他们肯定包含了一个极客喜欢读的高质量的书。要成为一名更好的程序员，我的清单上还可以加上一件事，那就是学习 UNIX。这是有史以来最好的软件之一，它在系统编程、网络、进程间通信和一般操作系统方面教会了你很多东西。
 
-其他**推荐给程序员的书籍和资源**
+## 其他推荐给程序员的书籍和资源
 
 *   [程序员学习 Linux 的五大免费课程](http://www.java67.com/2018/02/5-free-linux-unix-courses-for-programmers-learn-online.html#ixzz5MqSB0YLL)
 *   [程序员 10 本算法书](http://www.java67.com/2015/09/top-10-algorithm-books-every-programmer-read-learn.html)
@@ -148,4 +151,4 @@ Brian W. Kernighan 和 Rob Pike 所著的《Unix 编程环境》是[学习 UNIX]
 
 **P. S.** —如果你更喜欢在线课程而不是书本，那么你也可以在 Udemy 上查看 [**Linux 掌握:在 11.5 小时内掌握 Linux 命令行**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flinux-mastery%2F) 。这是最好的课程之一，结合阅读以下任何一本书。事实上，你会学得更好更快。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flinux-mastery%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flinux-mastery%2F>

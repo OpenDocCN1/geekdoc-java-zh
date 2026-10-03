@@ -1,64 +1,67 @@
-# spring MVC ParameterizableViewController 示例
+
+# Spring MVC `ParameterizableViewController` 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring-mvc/spring-mvc-parameterizableviewcontroller-example/>
 
-一般来说，要在 Spring MVC 应用中返回一个视图或页面，需要创建一个类，该类扩展了 **AbstractController** ，并返回一个 **ModelAndView()** 对象。
+一般来说，要在 Spring MVC 应用中返回一个视图或页面，需要创建一个类，该类扩展了`AbstractController`，并返回一个`ModelAndView()`对象。
 
 ```java
- public class WelcomeController extends AbstractController{
+public class WelcomeController extends AbstractController {
 
-	@Override
-	protected ModelAndView handleRequestInternal(HttpServletRequest request,
-		HttpServletResponse response) throws Exception {
+    @Override
+    protected ModelAndView handleRequestInternal(HttpServletRequest request,
+        HttpServletResponse response) throws Exception {
 
-		ModelAndView model = new ModelAndView("WelcomePage");
-		return model;
+        ModelAndView model = new ModelAndView("WelcomePage");
+        return model;
 
-	}
+    }
 
-} 
+}
 ```
 
-在 bean 配置文件中，声明了一个**ControllerClassNameHandlerMapping**来自动检测映射。
+在 bean 配置文件中，声明了一个`ControllerClassNameHandlerMapping`来自动检测映射。
 
 ```java
- <bean 
- class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
+<bean
+class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
 
-<bean class="com.mkyong.common.controller.WelcomeController" /> 
+<bean class="com.mkyong.common.controller.WelcomeController" />
 ```
 
-但是，您不认为对于一个简单的重定向任务来说，这种配置太多了吗？幸运的是，Spring 自带了**ParameterizableViewController**来简化上述过程。使用**ParameterizableViewController**，您不再需要在控制器类中硬编码视图名称，而是通过 ParameterizableViewController 的“ **viewName** 属性声明视图名称。
+但是，您不认为对于一个简单的重定向任务来说，这种配置太多了吗？幸运的是，Spring 自带了`ParameterizableViewController`来简化上述过程。使用`ParameterizableViewController`，您不再需要在控制器类中硬编码视图名称，而是通过`ParameterizableViewController`的`viewName`属性声明视图名称。
 
-**Note**
-The ParameterizableViewController is a subclass of AbstractController, and return a ModelAndView based on the “viewName” property, **it’s purely a redirect class**, nothing more, nothing less :)
+**注意**
+
+`ParameterizableViewController`是`AbstractController`的子类，并基于`viewName`属性返回一个`ModelAndView`，**它纯粹是一个重定向类**，不多不少 :)
 
 **ParameterizableViewController.java**
 
 ```java
- public class ParameterizableViewController extends AbstractController{
-//...
-protected ModelAndView handleRequestInternal(
-    HttpServletRequest request, HttpServletResponse response)
-	throws Exception {
+public class ParameterizableViewController extends AbstractController {
+    //...
+    protected ModelAndView handleRequestInternal(
+        HttpServletRequest request, HttpServletResponse response)
+        throws Exception {
 
-	return new ModelAndView(getViewName());
-} 
+        return new ModelAndView(getViewName());
+    }
+}
 ```
 
-## 辅导的
+## 教程内容
 
-在本教程中，它展示了使用**ParameterizableViewController**控制器在 Spring MVC 应用程序中进行页面重定向。
+在本教程中，它展示了使用`ParameterizableViewController`控制器在 Spring MVC 应用程序中进行页面重定向。
 
- ## 1.ParameterizableViewController
+## 1. `ParameterizableViewController`
 
-不需要控制器类，只需声明**ParameterizableViewController**bean，并通过“ **viewName** 属性指定视图名称。此外，您必须为它定义一个显式映射。
+不需要控制器类，只需声明`ParameterizableViewController` bean，并通过`viewName`属性指定视图名称。此外，您必须为它定义一个显式映射。
 
 ```java
- <beans 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+<beans
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
     <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
@@ -68,13 +71,13 @@ protected ModelAndView handleRequestInternal(
         </property>
     </bean>
 
-   <bean name="welcomeController" 
+    <bean name="welcomeController"
             class="org.springframework.web.servlet.mvc.ParameterizableViewController">
-	    <property name="viewName" value="WelcomePage" />
-   </bean>
+        <property name="viewName" value="WelcomePage" />
+    </bean>
 
-   <bean id="viewResolver"
-	    class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
+    <bean id="viewResolver"
+        class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
             <property name="prefix">
               <value>/WEB-INF/pages/</value>
             </property>
@@ -83,61 +86,55 @@ protected ModelAndView handleRequestInternal(
             </property>
     </bean>
 
-</beans> 
+</beans>
 ```
 
-**Define an explicit mapping is required.**
+**定义显式映射是必需的。**
 
 ```java
- <beans ...>
+<beans ...>
 //...
-<bean 
+<bean
 class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
 
-<bean name="welcomeController" 
+<bean name="welcomeController"
     class="org.springframework.web.servlet.mvc.ParameterizableViewController">
-	<property name="viewName" value="WelcomePage" />
+    <property name="viewName" value="WelcomePage" />
 </bean>
 //...
-</beans> 
+</beans>
 ```
 
-在上面代码片段中，您是否期望一个名为“welcome”的视图会返回一个“WelcomePage”？抱歉，不是，你得定义一个**显式映射**，因为**ControllerClassNameHandlerMapping**不会为任何内置的 Spring MVC 控制器生成映射。
+在上面代码片段中，您是否期望一个名为`welcome`的视图会返回一个`WelcomePage`？抱歉，不是，你得定义一个**显式映射**，因为`ControllerClassNameHandlerMapping`不会为任何内置的 Spring MVC 控制器生成映射。
 
- ## 2.视角
+## 2. 视图
 
 只是一个简单的 JSP 来显示标题行。
 
-**WelcomePage.jsp.jsp**
+**WelcomePage.jsp**
 
 ```java
- <html>
+<html>
 <body>
 <h2>ParameterizableViewController Example</h2>
 </body>
-</html> 
+</html>
 ```
 
-## 3.演示
+## 3. 演示
 
-通过“*http://localhost:8080/spring MVC/welcome . htm*”访问，“【welcome.htm】T3”会返回一个“**/we b-INF/pages/welcompage . JSP**”。
+通过`http://localhost:8080/spring MVC/welcome . htm`访问，`welcome.htm`会返回一个`/WEB-INF/pages/WelcomePage.jsp`。
 
 ![SpringMVC-ParameterizableViewController-Example-1](img/e7077a8b3e972924036d90ab09244078.png "SpringMVC-ParameterizableViewController-Example-1")
 
 ## 下载源代码
 
-Download it – [SpringMVC-ParameterizableViewController-Example.zip](http://web.archive.org/web/20190225101005/http://www.mkyong.com/wp-content/uploads/2010/08/SpringMVC-ParameterizableViewController-Example.zip) (7KB)
+下载它 – [SpringMVC-ParameterizableViewController-Example.zip](http://web.archive.org/web/20190225101005/http://www.mkyong.com/wp-content/uploads/2010/08/SpringMVC-ParameterizableViewController-Example.zip) (7KB)
 
 ## 参考
 
-1.  [ParameterizableViewController 文档](http://web.archive.org/web/20190225101005/http://static.springsource.org/spring/docs/2.5.6/api/org/springframework/web/servlet/mvc/ParameterizableViewController.html)
-2.  [Spring MVC SimpleUrlHandlerMapping 示例](http://web.archive.org/web/20190225101005/http://www.mkyong.com/spring-mvc/spring-mvc-simpleurlhandlermapping-example/)
+1. [ParameterizableViewController 文档](http://web.archive.org/web/20190225101005/http://static.springsource.org/spring/docs/2.5.6/api/org/springframework/web/servlet/mvc/ParameterizableViewController.html)
+
+2. [Spring MVC SimpleUrlHandlerMapping 示例](http://web.archive.org/web/20190225101005/http://www.mkyong.com/spring-mvc/spring-mvc-simpleurlhandlermapping-example/)
 
 [spring mvc](http://web.archive.org/web/20190225101005/http://www.mkyong.com/tag/spring-mvc/)
-
-
-
-
-
-
-

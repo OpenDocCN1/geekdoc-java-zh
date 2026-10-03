@@ -1,3 +1,4 @@
+
 # 设置可信参数和安全属性
 
 > 原文：[`docs.oracle.com/javase/tutorial/deployment/doingMoreWithRIA/settingArgsProperties.html`](https://docs.oracle.com/javase/tutorial/deployment/doingMoreWithRIA/settingArgsProperties.html)
@@ -7,9 +8,7 @@
 考虑属性和参数演示小程序。以下 Java 虚拟机参数和属性在小程序的 JNLP 文件`appletpropsargs.jnlp`中设置。
 
 +   `-Xmx` – 一个安全参数，设置为"256M"
-
 +   `sun.java2d.noddraw` – 一个预定义的安全属性，设置为"true"
-
 +   `jnlp.myProperty` – 一个用户定义的安全属性，设置为"a user-defined property"
 
 ```java
@@ -41,13 +40,11 @@
      </applet-desc>
      <update check="background"/>
 </jnlp>
-
 ```
 
 `PropertiesArgsDemoApplet`类使用`System.getProperty`方法检索在 JNLP 文件中设置的`java.version`属性和其他属性。`PropertiesArgsDemoApplet`类还显示这些属性。
 
 ```java
-
 import javax.swing.JApplet;
 import javax.swing.SwingUtilities;
 import javax.swing.JLabel;
@@ -76,24 +73,21 @@ public class PropertiesArgsDemoApplet extends JApplet {
         add(lbl);
     }
 }
-
 ```
 
 接下来显示属性和参数演示小程序。你也可以在`AppletPage.html`中看到小程序运行。
 
-//&lt;![CDATA[ var attributes = { code:'PropertiesArgsDemoApplet.class', archive:'examples/dist/applet_PropertiesAndVMArgs/applet_PropertiesAndVMArgs.jar', width:800, height:50} ; var parameters = { jnlp_href: 'examples/dist/applet_PropertiesAndVMArgs/appletpropsargs.jnlp' }; deployJava.runApplet(attributes, parameters, '1.6'); //]]&gt;
-
-* * *
+```javascript
+//<![CDATA[
+var attributes = { code:'PropertiesArgsDemoApplet.class', archive:'examples/dist/applet_PropertiesAndVMArgs/applet_PropertiesAndVMArgs.jar', width:800, height:50} ;
+var parameters = { jnlp_href: 'examples/dist/applet_PropertiesAndVMArgs/appletpropsargs.jnlp' };
+deployJava.runApplet(attributes, parameters, '1.6');
+//]]>
+```
 
 **注意：** 如果你看不到小程序运行，你需要安装至少[Java SE Development Kit (JDK) 6 update 10](http://www.oracle.com/technetwork/java/javase/downloads/index.html)版本。
 
-* * *
-
-* * *
-
 **注意：** 如果你看不到示例运行，请确保在浏览器中启用 JavaScript 解释器，以便部署工具包脚本能够正常运行。
-
-* * *
 
 下载源代码以进一步实验*属性和参数演示小程序*示例。
 

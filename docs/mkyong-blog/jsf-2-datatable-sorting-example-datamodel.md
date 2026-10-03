@@ -1,3 +1,4 @@
+
 # JSF 2 数据表排序示例–数据模型
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jsf2/jsf-2-datatable-sorting-example-datamodel/>
@@ -6,14 +7,14 @@
 
 ## 数据模型装饰器
 
-在这个例子中，展示了另一种对 dataTable 中的列表进行排序的方式，在“ *Core JavaServer Faces(第三版)*”中提到了这种方式，称为 DataModel Decorator。
+在这个例子中，展示了另一种对`dataTable`中的列表进行排序的方式，在“*Core JavaServer Faces(第三版)*”中提到了这种方式，称为`DataModel`装饰器。
 
- ## 1.数据模型
+## 1. 数据模型
 
-创建一个 decorator 类来扩展 javax.faces.model.DataModel 类，并添加一个额外的排序行为。嗯，解释起来有点复杂，详细请参考书中:)
+创建一个装饰器类来扩展`javax.faces.model.DataModel`类，并添加一个额外的排序行为。嗯，解释起来有点复杂，详细请参考书中:)
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -104,15 +105,15 @@ public class SortableDataModel<E> extends DataModel<E>{
 
 	}
 
-} 
+}
 ```
 
- ## 2.受管 Bean
+## 2. 受管 Bean
 
-一个托管 bean 为测试提供一个虚拟列表，并展示了使用**自定义数据模型对数据表列表**进行排序。
+一个托管 Bean 为测试提供一个虚拟列表，并展示了使用**自定义数据模型对数据表列表**进行排序。
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -211,15 +212,15 @@ public class OrderBean implements Serializable{
 		//getter and setter methods
 
 	}
-} 
+}
 ```
 
-## 2.数据表标签
+## 3. 数据表标签
 
-一个 JSF 页面，在“订单号”列标题放一个 commandLink 标签，如果点击，对数据表列表进行排序。
+一个 JSF 页面，在“订单号”列标题放一个`commandLink`标签，如果点击，对数据表列表进行排序。
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html    
@@ -269,10 +270,10 @@ public class OrderBean implements Serializable{
     	    </h:dataTable>
     	  </h:form>
     </h:body>
-</html> 
+</html>
 ```
 
-## 3.演示
+## 4. 演示
 
 从上到下，显示按升序和降序排序的数据表列表。
 
@@ -280,18 +281,11 @@ public class OrderBean implements Serializable{
 
 ## 下载源代码
 
-Download It - [JSF-2-DataTable-Sorting-DataModel-Example.zip](http://web.archive.org/web/20190214232804/http://www.mkyong.com/wp-content/uploads/2010/10/JSF-2-DataTable-Sorting-DataModel-Example.zip) (11KB)
+下载地址：[JSF-2-DataTable-Sorting-DataModel-Example.zip](http://web.archive.org/web/20190214232804/http://www.mkyong.com/wp-content/uploads/2010/10/JSF-2-DataTable-Sorting-DataModel-Example.zip) (11KB)
 
 ## 参考
 
-1.  [JSF 2 数据表排序示例](http://web.archive.org/web/20190214232804/http://www.mkyong.com/jsf2/jsf-2-datatable-sorting-example/)
-2.  [Java 对象排序示例](http://web.archive.org/web/20190214232804/http://www.mkyong.com/java/java-object-sorting-example-comparable-and-comparator/)
+1. [JSF 2 数据表排序示例](http://web.archive.org/web/20190214232804/http://www.mkyong.com/jsf2/jsf-2-datatable-sorting-example/)
+2. [Java 对象排序示例](http://web.archive.org/web/20190214232804/http://www.mkyong.com/java/java-object-sorting-example-comparable-and-comparator/)
 
 [datatable](http://web.archive.org/web/20190214232804/http://www.mkyong.com/tag/datatable/) [jsf2](http://web.archive.org/web/20190214232804/http://www.mkyong.com/tag/jsf2/) [sorting](http://web.archive.org/web/20190214232804/http://www.mkyong.com/tag/sorting/)
-
-
-
-
-
-
-

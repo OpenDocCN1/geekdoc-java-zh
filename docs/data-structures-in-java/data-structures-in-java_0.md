@@ -1,20 +1,11 @@
+
 # Java 数据结构入门指南
-
-
 
 ![](img/9781683929550.jpg)
 
-
-
-
-
-
 O. Campesato. *Data Structures in Java.*
+
 ISBN: 978-1-68392-955-0
-
-
-
-
 
 *我想将这本书献给我的父母——愿这能给他们的生活带来喜悦和幸福。*
 
@@ -51,10 +42,6 @@ ISBN: 978-1-68392-955-0
 ## 读本书之前需要具备什么知识？
 
 基础 Java 知识是最有帮助的，对递归和数据结构的某些接触显然也有帮助。对其他编程语言的了解由于对编程概念和结构的接触也会很有帮助。你的技术知识越少，理解所涵盖的各种主题所需的努力就越大。
-
-
-
-
 
 *如果你想确定自己是否能掌握书中的内容，可以快速浏览一些代码示例，以了解你对哪些内容熟悉，哪些内容对你来说是全新的.*
 
@@ -107,9 +94,13 @@ Mac 用户的第二种方法是在已经显示的命令行中简单通过点击 
 ### 下载版本（短版本）
 
 考虑到大量的 `Java` 版本，你如何决定哪个版本最适合你？答案取决于你的需求，涉及：
+
 * 你公司使用的 `Java` 版本
+
 * 最新的 `LTS` 版本
+
 * 你喜欢的 `Java` 版本
+
 * 你需要的 `Java` 特性
 
 一旦你确定了适合你的 `Java` 版本，导航到以下网站并下载发行版：
@@ -131,10 +122,6 @@ Mac 用户的第二种方法是在已经显示的命令行中简单通过点击 
 *[`www.oracle.com/java/technologies/java-se-support-roadmap.html`](https://www.oracle.com/java/technologies/java-se-support-roadmap.html)*
 
 #### Java 版本号
-
-
-
-
 
 在 Java 8 之前，版本编号序列采用 1.x 形式。因此，Java 7 也被称为 Java 1.7，而 Java 8 被称为 Java 8。然而，这种旧的命名规范从 Java 9 开始被弃用了。例如，如果你输入命令 `java -version` 并且机器上安装了 Java 13，你将看到类似下面的输出：
 
@@ -193,11 +180,17 @@ Java 支持在许多其他编译语言中常见的基本数据类型，以及对
 关于基本类型：Java 提供了 8 种作为语言关键字的原始数据类型：
 
 * `byte`: 8 位符号补码整数
+
 * `short`: 16 位符号补码整数
+
 * `int`: 32 位符号补码整数
+
 * `long`: 64 位符号补码整数
+
 * `float`: 单精度 32 位 IEEE 754 浮点数
+
 * `boolean`: true 或 false
+
 * `char`: 单个 16 位 Unicode 字符
 
 在大多数情况下，本书中涉及算术计算的代码示例使用整数和浮点数。
@@ -228,10 +221,15 @@ Java 支持单行注释和多行注释，此处均有展示：
 Java 支持常见的算术运算符，以及标准的优先级（幂运算高于乘法 * 和除法 /，这两者的优先级高于加法 + 和减法 -）。此外，Java 还支持：
 
 * 算术运算符：`+`, `-`, `*`, `/`, `%`, `++`, `--`
+
 * 赋值运算符：`=`, `+=`, `-=`, `*=`, `/=`, `%=`, `<<=`, `>>=`, `&=`, `^=`, `-=`
+
 * 位运算符：`&`, `|`, `^`, `~`
+
 * 布尔运算：`and`, `or`, `not`
+
 * 逻辑运算符：`&&`, `||`, `!`
+
 * 关系运算符：`==`, `!=`, `>`, `<=`
 
 Java 还支持三元运算符 `?` 和运算符 `instanceof`（用于检查变量是否是特定类的实例）。
@@ -267,10 +265,6 @@ Java 还支持三元运算符 `?` 和运算符 `instanceof`（用于检查变量
 ```
  Exception in thread "main" java.lang.NoSuchMethodError: main
 ```
-
-
-
-
 
 **注意** Java 源代码文件的名称必须与文件中的公共 Java 类名匹配。例如，`MyClass.java` 文件必须定义一个名为 `MyClass` 的 Java 类。
 
@@ -333,6 +327,8 @@ Listing 1.3 中的代码非常直观：`main()` 函数包含一个简单的打�
  Hello World
 ```
 
+
+
 附带文件包含了本章节的额外代码示例，说明了如何在 Java 中处理数字、随机数、三角函数和位运算符：
 
 *   `Numbers.java`
@@ -341,26 +337,26 @@ Listing 1.3 中的代码非常直观：`main()` 函数包含一个简单的打�
 *   `TrigFunctions.java`
 *   `Bitwise.java`
 
-让我们来看一些在 Java 中处理数字的（稍微）趣的示例。
+让我们来看一些在 Java 中处理数字的（稍微）有趣的示例。
 
-### JAVA STRING 类
+## Java String 类
 
 `char` 类型的 Java 变量是一个单个字符，你可以通过 `char` 关键字这样定义它：
 
 ```java
- char ch1 = 'Z';
+char ch1 = 'Z';
 ```
 
-`String` 类型的 Java 变量是一个由 `char` 值序列组成的对象。正如你稍将看到的，Java 支持 ASCII、UTF8 和 Unicode 字符。`java.lang.String` 类实现了 Java 接口（后文讨论）`Serializable`、`Comparable` 和 `CharSequence`。
+`String` 类型的 Java 变量是一个由 `char` 值序列组成的对象。正如你稍后将看到的，Java 支持 ASCII、UTF8 和 Unicode 字符。`java.lang.String` 类实现了 Java 接口（后文讨论）`Serializable`、`Comparable` 和 `CharSequence`。
 
-`Serializable` 接口不包含方法：它本质上是一个“标记”（接口）。`CharSequence` 接口用于字符序列。除了 Java String 类外，Java 的 `StringBuffer` 类和 `StringBuilder` 类也实现了 `CharSequence` 接口（更多细节见后文）。
+`Serializable` 接口不包含方法：它本质上是一个“标记”接口。`CharSequence` 接口用于字符序列。除了 Java `String` 类外，Java 的 `StringBuffer` 类和 `StringBuilder` 类也实现了 `CharSequence` 接口（更多细节见后文）。
 
-请记住以下一点：每个 Java String 都是不可变的，为了修改 Java 字符串（如追加或删除字符），Java 会在“底层”为我们创建一个新实例。因此，字符串相关的操作内存效率较低；然而，Java 提供了 `StringBuffer` 和 `StringBuilder` 类来处理可变的 Java 字符串（后文也会讨论）。
+请记住以下一点：每个 Java `String` 都是不可变的，为了修改 Java 字符串（如追加或删除字符），Java 会在“底层”为我们创建一个新实例。因此，字符串相关的操作内存效率较低；然而，Java 提供了 `StringBuffer` 和 `StringBuilder` 类来处理可变的 Java 字符串（后文也会讨论）。
 
-字符数组实际上与 Java String 相同，如下所示：
+字符数组实际上与 Java `String` 相同，如下所示：
 
 ```java
- char[] chars = {'h','e','l','l','o'};
+char[] chars = {'h','e','l','l','o'};
 String str1  = new String(chars);  
 String str2  = "hello"; 
 ```
@@ -368,21 +364,21 @@ String str2  = "hello";
 你可以使用 `charAt()` 方法访问字符串中的字符，如下所示：
 
 ```java
- char ch = str1.charAt(1);
+char ch = str1.charAt(1);
 ```
 
 前面的代码段将字母“e”赋值给字符变量 `ch`。你可以通过这段代码段给变量 `ch2` 赋值一个单引号：
 
 ```java
- char ch2 = '\'';
+char ch2 = '\'';
 ```
 
 Listing 1.4 显示了 `CharsStrings.java` 的内容，向你展示了如何在 Java 中定义字符、数组和字符串。
 
-***Listing 1.4: CharsStrings.java***
+**Listing 1.4: CharsStrings.java**
 
 ```java
- public class CharsStrings
+public class CharsStrings
 {
    public CharsStrings(){}
 
@@ -409,29 +405,23 @@ Listing 1.4 显示了 `CharsStrings.java` 的内容，向你展示了如何在 J
 }
 ```
 
-*(注：原文末尾存在大量重复的句子和段落，已根据文档工程师规范进行去重处理，确保输出内容的专业与简洁。)*
-
-
-
-
-
 `$` 符号表示前一个输出块行的结束。请注意最后一行显示为 `^I$`，这表示存在制表符，该字符的值是列表 1.5 中 `str6` 变量的值。
 
-## JAVA 的 new 运算符
+## Java 的 `new` 运算符
 
 上一节包含了几个在 Java 中直接赋值字符串的示例。另一种方法涉及使用 `new` 运算符，它在表面上看起来相同，但有一个重要的区别。当你用相同的字符串初始化两个变量时（如列表 1.6 所示），它们占据相同的内存位置。而当你使用 `new` 运算符时，这两个变量将占据不同的内存位置。
 
 列表 1.6 显示了 `ShowPeople.java` 的内容，该程序使用 `new` 运算符初始化两个字符串并打印它们的值。
 
-***列表 1.6: ShowPeople.java***
+**列表 1.6: ShowPeople.java**
 
-```
- public class ShowPeople
+```java
+public class ShowPeople
 {
    // 无法在 main() 中初始化
    String str5, str6;
 
-publicpublic ShowPeople(){}
+   public ShowPeople(){}
 
    public static void main (String args[])
    {
@@ -452,8 +442,8 @@ publicpublic ShowPeople(){}
       System.out.println(str4);
 
       // 你必须先将两者声明为 "String":
-    //str5 = new String("another string");
-    //str6 = new String("yet another string");
+      //str5 = new String("another string");
+      //str6 = new String("yet another string");
    }
 }
 ```
@@ -461,13 +451,13 @@ publicpublic ShowPeople(){}
 列表 1.6 包含一个 `main()` 例程，定义并初始化了字符串变量 `str1` 到 `str4`，然后打印它们的内容。列表 1.6 的输出如下：
 
 ```
- My name is John Smith
+My name is John Smith
 My name is John Smith
 My name is Jane Andrews
 My name is Jane Andrews
 ```
 
-列表 1.6 中的代码是直观的，但它包含了硬编码的值，因此没有可重用性。例如，你可能决定打印包含人名的数组中定义的所有名字。也许你想打印从这些数组中随机选择的名字。你甚至可能想从命令行获取一个人的姓和名，然后打印该名字。在本章的后后部分，你将学习如何使用各种循环结构处理字符串数组，之后你将学习如何定义“访问器”（accessors）和修改器（mutators）来“获取”和“设置”变量的值。
+列表 1.6 中的代码是直观的，但它包含了硬编码的值，因此没有可重用性。例如，你可能决定打印包含人名的数组中定义的所有名字。也许你想打印从这些数组中随机选择的名字。你甚至可能想从命令行获取一个人的姓和名，然后打印该名字。在本章的后面部分，你将学习如何使用各种循环结构处理字符串数组，之后你将学习如何定义“访问器”（accessors）和修改器（mutators）来“获取”和“设置”变量的值。
 
 下一节提供了关于 `String` 类中 `==` 和 `equals()` 方法之间差异的细节。
 
@@ -477,10 +467,10 @@ My name is Jane Andrews
 
 列表 1.7 显示了 `EqualStrings.java` 的内容，说明了如何比较两个字符串并判断它们具有相同的值或相同的引用（或两者都是）。
 
-***列表 1.7: EqualStrings.java***
+**列表 1.7: EqualStrings.java**
 
-```
- import java.io.IOException;
+```java
+import java.io.IOException;
 
 public class EqualStrings
 {
@@ -527,7 +517,7 @@ public class EqualStrings
 列表 1.7 定义了 Java 类 `EqualStrings` 和一个 `main()` 函数，该函数定义了字符串变量 `str1`、`str2`、`str3` 和 `str4`。运行列表 1.7 中的代码，你将看到以下输出：
 
 ```
- str1 and str2: equal values
+str1 and str2: equal values
 str1 and str2: equal references
 
 str3 and str4: equal values
@@ -538,12 +528,12 @@ str3 and str4: unequal references
 
 ### 比较字符串
 
-列表 1.8 显示了 `EqualStrings.java` 的内容，说明了如何比较两个字符串并判断它们是否具有相同的值或相同的引用（或两者都是）。
+列表 1.8 显示了 `CompareStrings.java` 的内容，说明了如何比较两个字符串并判断它们是否具有相同的值或相同的引用（或两者都是）。
 
-***列表 1.8: CompareStrings.java***
+**列表 1.8: CompareStrings.java**
 
-```
- public class CompareStrings
+```java
+public class CompareStrings
 {
    public CompareStrings(){}
 
@@ -589,12 +579,12 @@ line1 and line2: equal after toLowerCase()
 
 ## 在 Java 中搜索子字符串
 
-列表 1.9 显示了 `SearchString.java` 的内容，说明了如何使用 `indexOf()` 方法判断一个字符串是否为另一个字符串的子字符串。注意此代码示例涉及 `if` 语句，该语句将在章的最后一个代码示例中详细讨论。
+列表 1.9 显示了 `SearchString.java` 的内容，说明了如何使用 `indexOf()` 方法判断一个字符串是否为另一个字符串的子字符串。注意此代码示例涉及 `if` 语句，该语句将在本章的最后一个代码示例中详细讨论。
 
-***列表 1.9: SearchString.java***
+**列表 1.9: SearchString.java**
 
-```
- public class SearchString
+```java
+public class SearchString
 {
    public SearchString(){}
 
@@ -616,15 +606,11 @@ line1 and line2: equal after toLowerCase()
 }
 ```
 
-列表 1.9 包含一个 `main()` 方法，初始化了字符串变量 `str1` 和 `str2`，然后用字符串变量 `index` 初始化字符串 `str1` 在字符串 `str2` 中的索引位置。如果结果为负，则则 `str1` 不是 `str2` 的子字符串，并打印一条消息。如果 `str1` *是* `str2` 的子字符串，则显示相应的消息。运行列表 1.9 中的代码，你将看到以下输出：
+列表 1.9 包含一个 `main()` 方法，初始化了字符串变量 `str1` 和 `str2`，然后用字符串变量 `index` 初始化字符串 `str1` 在字符串 `str2` 中的索引位置。如果结果为负，则 `str1` 不是 `str2` 的子字符串，并打印一条消息。如果 `str1` *是* `str2` 的子字符串，则显示相应的消息。运行列表 1.9 中的代码，你将看到以下输出：
 
 ```
 zz is not a substring of Pizza
 ```
-
-
-
-
 
 Java `String` 类支持许多实用且命名直观的方法，用于字符串相关操作，包括：`compare()`、`compareTo()`、`concat()`、`equals()`、`intern()`、`length()`、`replace()`、`split()` 和 `substring()`。
 
@@ -635,12 +621,14 @@ Java `String` 类包含了一些非常实用的管理方法，这里列出了其
 * `indexOfStr(str)`：在另一个字符串中查找字符串的索引
 * `lastIndexOfStr(str)`：在另一个字符串中查找字符串最后一次出现的索引
 
-列出列表 1.9 显示了 `CapitalizeFirstAll.java` 的内容，该示例说明了如何使用 `substring()` 方法将字符串中每个单词的首字母大写化，如何将字符串转换为全小写，以及如何将字符串转换为全大写。注意，此示例使用了循环，但此代码样本中的执行过程应该是非常直观的。
+列表 1.10 显示了 `CapitalizeFirstAll.java` 的内容，该示例说明了如何使用 `substring()` 方法将字符串中每个单词的首字母大写化，如何将字符串转换为全小写，以及如何将字符串转换为全大写。注意，此示例使用了循环，但此代码样本中的执行过程应该是非常直观的。
 
-**列表 1.9: CapitalizeFirstAll.java**
+**列表 1.10: CapitalizeFirstAll.java**
+
+
 
 ```
- public class BooleanExamples
+public class BooleanExamples
 {
    public CapitalizeFirstAll(){}
 
@@ -673,42 +661,42 @@ Java `String` 类包含了一些非常实用的管理方法，这里列出了其
 接下来，循环遍历 `words` 数组中的每个单词，并将变量 `first` 设置为当前单词首字母的大写版本，并与当前单词的剩余字母拼接，如下所示：
 
 ```
- first = word.substring(0,1).toUpperCase()+word.substring(1);
+first = word.substring(0,1).toUpperCase()+word.substring(1);
 ```
 
 循环还将 `first` 和一个空格拼接到字符串 `line2` 中，该字符串将包含来自变量 `line` 的单词，且每个单词的首字母均大大写。
 
-`main` 函数的最后部分显示了修改后的句子内容，以及该句子的小写版本，最后是原始句子的大写版本。运行 列表 1.9 中的代码，你将看到以下输出：
+`main` 函数的最后部分显示了修改后的句子内容，以及该句子的小写版本，最后是原始句子的大写版本。运行列表 1.9 中的代码，你将看到以下输出：
 
 ```
- line1: this is a SIMPLE sentence.
+line1: this is a SIMPLE sentence.
 line2: This Is A SIMPLE Sentence. 
 Lower: this is a simple sentence.
 Upper: THIS IS A SIMPLE SENTENCE.
 ```
 
-### 在 Java 中解析字符串
+## 在 Java 中解析字符串
 
-Java 支持命令行参数，这允许你从命令行通过不同的命令行值启动程序。使用 `equals()` 方法比较 Java 字符串以判断值是否相同。虽然某些语言通过“==”比较字符串，但在 Java 中，“==”只比较两个字符串的引用（而不是值）。
+Java 支持命令行参数，这允许你从命令行通过不同的命令行值启动程序。使用 `equals()` 方法比较 Java 字符串以判断值是否相同。虽然某些语言通过 `==` 比较字符串，但在 Java 中，`==` 只比较两个字符串的引用（而不是值）。
 
 使用 `parseInt()` 方法（尝试）将字符串转换为整数：
 
 ```
- int num = Integer.parseInt("1234");
+int num = Integer.parseInt("1234");
 ```
 
 使用 `substring()`（此处此处 split）通过空白字符拆分字符串：
 
 ```
- String[] strArray = aString.split("\\s+");
+String[] strArray = aString.split("\\s+");
 ```
 
-正则表达式 `\s+` 匹配一个或多个各种空白字符，包括“ ”、`\t`、`\r` 和 `\n`。
+正则表达式 `\s+` 匹配一个或多个各种空白字符，包括 `" "`、`\t`、`\r` 和 `\n`。
 
 下面的代码段通过 `StringBuilder` 类反转 Java 字符串：
 
 ```
- String rev = new StringBuilder(original).reverse().toString();
+String rev = new StringBuilder(original).reverse().toString();
 ```
 
 配套目录包含 `OverrideToString.java`，并向你展示如何在 Java 中重写默认的 `toString()` 方法。
@@ -717,16 +705,16 @@ Java 支持命令行参数，这允许你从命令行通过不同的命令行值
 
 `https://docs.oracle.com/javase/7/docs/api/java/lang/String.html`
 
-### Java 中的条件逻辑
+## Java 中的条件逻辑
 
-条件逻辑允许你根据条件做出决策。最简单的类型涉及简单的“if”语句，但也可以使用 if-else 以及 if-else-if 语句。另一个 Java 构造结构是 `switch` 语句，它也涉及条件逻辑，某些任务使用 switch 语句比多个 if-else 语句处理起来更方便。
+条件逻辑允许你根据条件做出决策。最简单的类型涉及简单的 `if` 语句，但也可以使用 `if-else` 以及 `if-else-if` 语句。另一个 Java 构造结构是 `switch` 语句，它也涉及条件逻辑，某些任务使用 `switch` 语句比多个 `if-else` 语句处理起来更方便。
 
 列表 1.10 显示了 `Conditional1.java` 的内容，该代码将两个数字除以小整数，并使用整数值的余数打印各种消息。
 
 **列表 1.10: Conditional1.java**
 
 ```
- public class Conditional1
+public class Conditional1
 {
    int x = 12, y = 15;
 
@@ -765,32 +753,28 @@ Java 支持命令行参数，这允许你从命令行通过不同的命令行值
 }
 ```
 
-列表 1.10 定义了 Java 类 `Conditional1` 和一个 `IfLogic()` 方法，该方法对整数变量 `x` 和 `y` 进行取模运算。如果 `x % 2` 等于 0，则 x 是偶数；如果 `x % 4` 等于 0，则 x 是 4 的倍数；如果 `y % 3` 等于 0，则 y 是 3 的倍数。列表 1.10 包含了 if-else 块以及嵌套的条件逻辑块，你可以通过手动计算并将结果与生成的输出进行对比。
+列表 1.10 定义了 Java 类 `Conditional1` 和一个 `IfLogic()` 方法，该方法对整数变量 `x` 和 `y` 进行取模运算。如果 `x % 2` 等于 0，则 `x` 是偶数；如果 `x % 4` 等于 0，则 `x` 是 4 的倍数；如果 `y % 3` 等于 0，则 `y` 是 3 的倍数。列表 1.10 包含了 `if-else` 块以及嵌套的条件逻辑块，你可以通过手动计算并将结果与生成的输出进行对比。
 
-运行 列表 1.10 中的代码，你将看到以下输出：
+运行列表 1.10 中的代码，你将看到以下输出：
 
 ```
- x is even: 12
+x is even: 12
 x is divisible by 4: 12
 y is divisible by 3 and 5: 15
 ```
 
-你可以创建更复杂的布尔表达式，涉及“与”、“或”和“非”的多种组合（这涉及 `!=`）。使用 列表 1.1 中的代码作为基准，然后添加自己的变体。
+你可以创建更复杂的布尔表达式，涉及“与”、“或”和“非”的多种组合（这涉及 `!=`）。使用列表 1.1 中的代码作为基准，然后添加自己的变体。
 
 配套文件包含 `BooleanExamples.java`，向你展示了 Java 中各种类型的布尔表达式。
 
-### 判断闰年
+## 判断闰年
 
 列表 1.11 显示了 `LeapYear.java` 的内容，用于判断给定年份是否为闰年。以防你忘记，闰年必须是 4 的倍数。但是，如果给定年份是一个不是 400 倍数的世纪，那么该年份就不是闰年。因此，2000 年是闰年，而 1700、1800 和 1900 年不是。
 
-此代码样本是嵌套条件语句的一个很好的示例。尝试编写你自己的伪代码并与 列表 1.11 的内容进行对比。
-
-
-
-
+此代码样本是嵌套条件语句的一个很好的示例。尝试编写你自己的伪代码并与列表 1.11 的内容进行对比。
 
 ```java
- public class LeapYear
+public class LeapYear
 {
    public LeapYear() {}
 
@@ -835,10 +819,10 @@ y is divisible by 3 and 5: 15
 }
 ```
 
-Listing 1.11 定义了 `LeapYear` 类，该类包含 `checkYear` 方法，用于判断给定的年份是否为闰年。如果你查看 Listing 1.11 开头附近的注释块，你会发现 `checkYear` 方法实现了相同的条件逻辑。运行 Listing 1.11 中的代码，你将看到以下输出：
+列表 1.11 定义了 `LeapYear` 类，该类包含 `checkYear` 方法，用于判断给定的年份是否为闰年。如果你查看列表 1.11 开头附近的注释块，你会发现 `checkYear` 方法实现了相同的条件逻辑。运行列表 1.11 中的代码，你将看到以下输出：
 
 ```
- 1234 is not a leap year
+1234 is not a leap year
 1900 is a leap year
 2000 is not a leap year
 2020 is a leap year
@@ -846,14 +830,14 @@ Listing 1.11 定义了 `LeapYear` 类，该类包含 `checkYear` 方法，用于
 5588 is a leap year
 ```
 
-### 寻找数字的约数
+## 寻找数字的约数
 
-Listing 1.12 包含 `while` 循环、条件逻辑和 `%`（取模）运算符，用于寻找任何大于 1 的整数的质因数。
+列表 1.12 包含 `while` 循环、条件逻辑和 `%`（取模）运算符，用于寻找任何大于 1 的整数的质因数。
 
-***LISTING 1.12: Divisors1.java***
+**列表 1.12: Divisors1.java**
 
 ```java
- public class Divisors1
+public class Divisors1
 {
    public Divisors1() {}
 
@@ -885,29 +869,29 @@ Listing 1.12 包含 `while` 循环、条件逻辑和 `%`（取模）运算符，
 } 
 ```
 
-Listing 1.12 定义了 Java 类 `Divisors1`，该类包含 `divisors` 方法，用于确定正整数 `num` 的约数。`divisors` 方法包含一个 `while` 循环，当 `num` 大于 1 时循环迭代。
+列表 1.12 定义了 Java 类 `Divisors1`，该类包含 `divisors` 方法，用于确定正整数 `num` 的约数。`divisors` 方法包含一个 `while` 循环，当 `num` 大于 1 时循环迭代。
 
-在每次迭代中，如果 `num` 能被 `div` 整除，则显示 `div` 的值，然后通过将 `num` 除以 `div` 的值来减小它。如果 `num` 不能被 `div` 整除，则将 `div` 加 1。来自 Listing 1.8 的输出在此：
+在每次迭代中，如果 `num` 能被 `div` 整除，则显示 `div` 的值，然后通过将 `num` 除以 `div` 的值来减小它。如果 `num` 不能被 `div` 整除，则将 `div` 加 1。来自列表 1.8 的输出在此：
 
 ```
- Number: 12
+Number: 12
 divisor: 2
 divisor: 2
 divisor: 3
 ```
 
-### 检查回文
+## 检查回文
 
 以防你忘记，回文是一个数字或字符序列，从正反两个方向读取时时都是相同的（即从左到右和从右到左相同）。
 
 例如，字符串 `BoB` 是回文，但 `Bob` 不是回文。同样，数字 `12321` 是回文，但 `1232` 不是回文。
 
-Listing 1.13 显示了 `Palindromes1.java` 的内容，该程序检查给定的字符串或数字是否为回文。
+列表 1.13 显示了 `Palindromes1.java` 的内容，该程序检查给定的字符串或数字是否为回文。
 
-***LISTING 1.13: Palindromes1.java***
+**列表 1.13: Palindromes1.java**
 
 ```java
- public class Palindromes1
+public class Palindromes1
 {
   public Palindromes1() {}
 
@@ -954,10 +938,10 @@ Listing 1.13 显示了 `Palindromes1.java` 的内容，该程序检查给定的�
 }
 ```
 
-Listing 1.13 定义了 Java 类 `Palindromes1`，该类包含 `calculate` 方法，用于判断给定的字符串或数字是否为回文。`main` 方法通过 `names` 数组和 `numbers` 数组，实例化 `Palindromes1` 类，并对 `names` 数组中的每个字符串调用 `calculate()` 方法。同样，通过 `Integer.toString()` 将 `numbers` 数组中的数字调用 `calculate()` 方法。运行 Listing 1.13 中的代码，你将看到以下输出：
+列表 1.13 定义了 Java 类 `Palindromes1`，该类包含 `calculate` 方法，用于判断给定的字符串或数字是否为回文。`main` 方法通过 `names` 数组和 `numbers` 数组，实例化 `Palindromes1` 类，并对 `names` 数组中的每个字符串调用 `calculate()` 方法。同样，通过 `Integer.toString()` 将 `numbers` 数组中的数字调用 `calculate()` 方法。运行列表 1.13 中的代码，你将看到以下输出：
 
 ```
- Dave: not a palindrome
+Dave: not a palindrome
 BoB: is a palindrome
 rotor: is a palindrome
 1234: not a palindrome
@@ -966,16 +950,18 @@ rotor: is a palindrome
 101: is a palindrome
 ```
 
-本章后续章节展示了如何将 `while` 循环与条件逻辑（if-else）结合。
+本章后续章节展示了如何将 `while` 循环与条件逻辑（`if-else`）结合。
 
-### 处理字符串数组
+## 处理字符串数组
 
 本节展示了如何通过 `main()` 例程打印存储在数组中的名称。
 
-Listing 1.14 显示了 `PersonArray.java` 的内容，该类包含两个私有 `String` 变量用于记录一个人的名和姓。
+列表 1.14 显示了 `PersonArray.java` 的内容，该类包含两个私有 `String` 变量用于记录一个人的名和姓。
+
+
 
 ```java
- public class PersonArray
+public class PersonArray
 {
    private String[] firstNames = {"Jane","John","Bob"};
    private String[] lastNames = {"Smith","Jones","Stone"};
@@ -1000,52 +986,48 @@ Listing 1.14 显示了 `PersonArray.java` 的内容，该类包含两个私有 `
 
 Listing 1.14 定义了 Java 类 `PersonArray`，该类包含 `displayNames` 方法，其 `for` 循环遍历字符串数组 `firstNames` 和 `lastNames`。循环变量 `i` 用作这些数组的索引以打印一个人的名和姓，如下：
 
-```
- System.out.println("My name is "+
+```java
+System.out.println("My name is "+
                    firstNames[i]+"
                    lastNames[i]);
 ```
 
 运行 Listing 1.14 中的代码，你将看到以下输出：
 
-```
- My name is Jane Smith
- My name is John Jones
- My name is Bob Stone
+```text
+My name is Jane Smith
+My name is John Jones
+My name is Bob Stone
 ```
 
-### 使用 StringBuilder 类
+### 使用 `StringBuilder` 类
 
 回 Java `String` 类创建一个不可变的字符序列，对于许多大字符串可能会涉及大量的内存。另一方面，Java `StringBuilder` 类是 `String` 类的替代方案，支持可变的字符序列。
 
 `StringBuilder` 类有很多实用的方法，每个方法的返回类型都是 `StringBuilder`，如下：
 
-```
- • capacity() 
- • charAt()
- • delete()
- • codePointAt()
- • codePointBefore()
- • codePointCount()
- • deleteCharAt() 
- • ensureCapacity()
- • getChars()
- • length()
- • replace()
- • reverse() 
- • setCharAt() 
- • setLength() 
- • subSequence()
+```text
+• capacity()
+• charAt()
+• delete()
+• codePointAt()
+• codePointBefore()
+• codePointCount()
+• deleteCharAt()
+• ensureCapacity()
+• getChars()
+• length()
+• replace()
+• reverse()
+• setCharAt()
+• setLength()
+• subSequence()
 ```
 
 Listing 1.15 显示了 `PersonRandom.java` 的内容，它使用随机生成的索引进入名称数组，以打印一个人的名和姓。
 
-
-
-
-
-```
- public class PersonRandom
+```java
+public class PersonRandom
 {
    private String[] firstNames = {"Jane", "John", "Bob"};
    private String[] lastNames  = {"Smith", "Jones", "Stone"};
@@ -1077,16 +1059,16 @@ Listing 1.15 显示了 `PersonRandom.java` 的内容，它使用随机生成的�
 }
 ```
 
-列表 1.15 与 列表 1.14 中的代码非常相似：重要的区别在于名字是通过随机生成的数字来选择的，如下：
+列表 1.15 与列表 1.14 中的代码非常相似：重要的区别在于名字是通过随机生成的数字来选择的，如下：
 
-```
- index = (int)(maxRange*Math.random());
+```java
+index = (int)(maxRange*Math.random());
 ```
 
-运行 列表 1.15 中的代码，你将看到以下输出：
+运行列表 1.15 中的代码，你将看到以下输出：
 
-```
- My name is Jane Smith
+```text
+My name is Jane Smith
 My name is John Jones
 My name is Jane Smith
 My name is Jane Smith
@@ -1096,21 +1078,21 @@ My name is John Jones
 
 注意，尽管只有三个人，但有六行输出。这是可能的因为随机生成的数字始终在 0 到 2 之间，这意味着我们可以生成成百上千行输出。当然，会有会有很多重复的输出行，因为只有三个人不同的人。
 
-### JAVA 中的静态方法
+### Java 中的静态方法
 
 静态变量的声明方式与实例变量相同，但多加了 `static` 关键字。如果你将一个方法声明为 `static`，则该方法只能更新静态变量；然而，非静态方法中也可以更新静态变量。静态方法的一个关键点是，你可以在实例化对象之前引用静态方法；另一方面，非静态方法只能通过类的实例可用。请记住关于静态方法的以下几点：
 
-- 它们只能调用其他静态方法
-- 它们只能访问静态数据
-- 所有类实例中的都是同一个方法
-- 它们没有 `this` 引用
+- 它们只能调用其他静态方法。
+- 它们只能访问静态数据。
+- 所有类实例中的都是同一个方法。
+- 它们没有 `this` 引用。
 
 列表 1.16 显示了 `StaticMethod.java` 的内容，说明了如何在 Java 类中定义并调用一个静态方法。
 
-***列表 1.16: StaticMethod.java***
+列表 1.16：`StaticMethod.java`
 
-```
- public class StaticMethod
+```java
+public class StaticMethod
 {
    public void display1()
    {
@@ -1126,7 +1108,7 @@ My name is John Jones
    {
       System.out.println("Inside main()");
       // 无法调用非静态方法：
-    //StaticMethod.display1();
+      // StaticMethod.display1();
       // 这种是正确的：
       StaticMethod.display2();
 
@@ -1145,22 +1127,22 @@ My name is John Jones
 
 `static block`（也称为静态初始化块）是一组指令，当 Java 类加载到内存时执行一次。静态块用于在对象构造之前进行初始化，如下：
 
-```
- class MyClass 
-{   
-   static int x; 
-   int y; 
+```java
+class MyClass
+{
+   static int x;
+   int y;
 
    static {
-      x = 123; 
-      System.out.println("static block executed"); 
-   } 
+      x = 123;
+      System.out.println("static block executed");
+   }
 
    // 其他方法 ...
 }
 ```
 
-前一个代码块中**粗体显示**的代码在（任何）构造函数执行之前执行。
+前一个代码块中粗体显示的代码在（任何）构造函数执行之前执行。
 
 ### 总结
 
@@ -1168,9 +1150,7 @@ My name is John Jones
 
 你还了解了 Java 字符和字符串的概述，以及 `new` 操作符的意义。最后，你学习了如何判断两个字符串是否相等，以及 Java 中其他一些实用的字符串函数。
 
-# 第 2 章
-
-## 递归与组合数学
+# 第 2 章：递归与组合数学
 
 本章向你介绍了递归的概念，以及各种 Java 代码示例，然后介绍了组合数学中的概念，如对象的组合和排列。
 
@@ -1178,28 +1158,27 @@ My name is John Jones
 
 本章的第二部分讨论组合数学，如排列和组合。注意，组合数学的全面涵盖涵盖一门本科课程，而本章只包含基础概念。
 
- 如果你刚接触递归，部分部分内容可能会有些人生畏，但不要担心。通常，反复阅读材料和代码示例会带来更好的理解。
+如果你刚接触递归，部分内容可能会有些人生畏，但不要担心。通常，反复阅读材料和代码示例会带来更好的理解。
 
-或者，你也可以跳过本章的内容。第 3 章 包含一个使用递归的二分查找代码示例以及另一个使用迭代方法的代码示例，所以现在可以跳过递归示例。但是，如果你计划学习树，你只需要学习递归，这是 第 5 章 中所有树相关示例的基础。
+或者，你也可以跳过本章的内容。第 3 章包含一个使用递归的二分查找代码示例以及另一个使用迭代方法的代码示例，所以现在可以跳过递归示例。但是，如果你计划学习树，你只需要学习递归，这是第 5 章中所有树相关示例的基础。
 
 ### 什么是递归？
 
 递归算法可以为通过迭代算法实现的任务提供非常优雅的解决方案。对于某些任务（如计算阶乘），递归解决方案和迭代解决方案的代码复杂度相当。
 
-作为一个简单的例子，假设我们要相加从 1 到 n（包含 n）的整数，令 n = 10 以得到一个具体的例子。如果我们定义 S 为连续相加整数的部分和，那么我们如下：
+作为一个简单的例子，假设我们要相加从 1 到 n（包含 n）的整数，令 `n = 10` 以得到一个具体的例子。如果我们定义 `S` 为连续相加整数的部分和，那么我们如下：
 
-```
- S = 1
+```text
+S = 1
 S = S + 2
-S = S + 3
 . . .
 S = S + 10
 ```
 
-如果我们定义 S(n) 为前 n 个正整数的和，那么存在如下关系：
+如果我们定义 `S(n)` 为前 n 个正整数的和，那么存在如下关系：
 
-```
- S(1) = 1
+```text
+S(1) = 1
 S(n) = S(n-1) + n 对于 n > 1
 ```
 
@@ -1207,28 +1186,25 @@ S(n) = S(n-1) + n 对于 n > 1
 
 ### 等差数列
 
-
-
-
 本节将向你展示如何计算一组正整数的和，例如从 1 到 n（包含 n）的。第一个算法使用迭代方法，第二个算法使用递归。
 
 在深入研究代码示例之前，有一种简单的方法可以计算从 1 到 n（包含 n）整数的封闭和，我们将其记为 `S`。这里有两种计算 `S` 的方法，所示：
 
-```
- S = 1 + 2     + 3     + . . . + (n-1) + n
+```text
+S = 1 + 2     + 3     + . . . + (n-1) + n
 S = n + (n-1) + (n-2) + . . . + 2     + 1
 ```
 
 共有 `n` 列，每列之和都等于 `(n+1)`，因此等号右侧的总和为 `n*(n+1)`。由于等号左侧之和为 `2*S`，我们得到以下结果：
 
-```
- 2*S = n*(n+1)
+```text
+2*S = n*(n+1)
 ```
 
 将等式两边除以 2，得到前 `n` 个正整数等差数列的已知公式：
 
-```
- S = n*(n+1)/2
+```text
+S = n*(n+1)/2
 ```
 
 顺便提一下，上述公式是由一个厌倦了手动计算的小学生推导出来的：那个学生就是卡尔·F·高斯（当时他才三年级）。
@@ -1237,10 +1213,10 @@ S = n + (n-1) + (n-2) + . . . + 2     + 1
 
 Listing 2.1 显示了 `ArithSum.java` 的内容，展示了如何使用迭代方法计算从 1 到 n（包含 n）的和。
 
-***Listing 2.1: ArithSum.java***
+Listing 2.1：`ArithSum.java`
 
 ```java
- public class ArithSum
+public class ArithSum
 {
    public static int calcsum(int num)
    {
@@ -1270,8 +1246,8 @@ Listing 2.1 从一个静态方法 `calcsum()` 开始，该方法包含一个循�
 
 Listing 2.1 的下部分定义了 `main()` 方法，它将标量变量 `sum` 初始化为 0，将 `max` 初始化为 20，接着是一个从 2 到 `max+1` 的循环。在每次迭代中，使用循环变量的当前值调用 `calcsum()` 方法并打印返回值。运行 Listing 2.1 中的代码，你将看到以下输出：
 
-```
- sum from 1 to 2 = 3
+```text
+sum from 1 to 2 = 3
 sum from 1 to 3 = 6
 sum from 1 to 4 = 10
 sum from 1 to 5 = 15
@@ -1294,13 +1270,13 @@ sum from 1 to 20 = 210
 
 ### 计算等差数列（递归）
 
-Listing 2.2 显示了 `ArithSumRecursive.py` 的内容，展示了如何使用递归方法（注：此处此处原文描述为迭代但实际代码为递归）计算从 1 到 n（包含 n）的和。
+Listing 2.2 显示了 `ArithSumRecursive.py` 的内容，展示了如何使用递归方法（注：此处原文描述为迭代但实际代码为递归）计算从 1 到 n（包含 n）的和。
 
-***Listing 2.2: ArithSumRecursive.java***
+Listing 2.2：`ArithSumRecursive.java`
 
-```python
- public class ArithSumRecursive
-{ 
+```java
+public class ArithSumRecursive
+{
    public static int calcsum(int num)
    {
       if(num == 0)
@@ -1326,16 +1302,18 @@ Listing 2.2 显示了 `ArithSumRecursive.py` 的内容，展示了如何使用�
 }
 ```
 
-Listing 2.2 从一个静态方法 `calcsum()` 开始，如果 `num` 等于 0 则返回 `num`，否则递归地调用 `calcsum(num-1)` 并返回 `num` 加上其结果。Listing 2.2 的后续部分定义了 `main()` 方法，它将标量变量 `sum` 初始化为 0，`max` 初始化为 20，接着是一个从 2 到 `max+1` 的循环。在每次迭代中，使用循环变量的当前值调用 `calcsum()` 方法并打印返回值。（注：原文此处处误写为 Listing 2.1）。
+Listing 2.2 从一个静态方法 `calcsum()` 开始，如果 `num` 等于 0 则返回 `num`，否则递归地调用 `calcsum(num-1)` 并返回 `num` 加上其结果。Listing 2.2 的后续部分定义了 `main()` 方法，它将标量变量 `sum` 初始化为 0，`max` 初始化为 20，接着是一个从 2 到 `max+1` 的循环。在每次迭代中，使用循环变量的当前值调用 `calcsum()` 方法并打印返回值。（注：原文此处误写为 Listing 2.1）。
 
 ### 计算部分和
 
 Listing 2.3 显示了 `partial_sum.py` 的内容，展示了如何使用迭代方法计算 `m` 到 `n` 的数字的和，其中 `m` 和 `n` 是两个满足 `m <= n` 的正整数。
 
-***Listing 2.3: ArithPartialSum.java***
+Listing 2.3：`ArithPartialSum.java`
+
+
 
 ```java
- public class ArithPartialSum
+public class ArithPartialSum
 {
    public static int calcPartialSum(int m, int n)
    {
@@ -1367,8 +1345,8 @@ Listing 2.3 显示了 `partial_sum.py` 的内容，展示了如何使用迭代�
 
 Listing 2.3 从一个静态方法 `calcPartialSum()` 开始，它包含条件逻辑：如果 `n >= m` 则返回 0，否则返回 `else` 子句中的表达式。Listing 2.3 的后续部分定义了 `main()` 方法，它将标量变量 `sum` 初始化为 0，`max` 初始化为 8，接着是一个从 2 到 `max` 的外层循环。在每次迭代中，内层循环从 `i+1` 迭代到 `max`，其中 `i` 是外层循环的变量。内层循环调用参数为 `j` 和 `i` 的 `calcPartialSum()` 方法并打印返回值。运行 Listing 2.1 中的代码，你将看到以下输出：
 
-```
- Sum from 2 to 3 = 5
+```text
+Sum from 2 to 3 = 5
 Sum from 2 to 4 = 9
 Sum from 2 to 5 = 14
 Sum from 2 to 6 = 20
@@ -1397,27 +1375,27 @@ Sum from 7 to 8 = 15
 
 在深入研究代码示例之前，有一种简单的方法可以计算从 1 到 n（包含 n）等比数列的封闭和，其中 `r` 是等比数列相邻项之间的比例。让 `S` 表示和，其表达式如下：
 
-```
- S   = 1+ r + r² + r³ + . . . + r^(n-1) + r^n
+```text
+S   = 1+ r + r² + r³ + . . . + r^(n-1) + r^n
 r*S =    r + r² + r³ + . . . + r^(n-1) + r^n + r^(n+1)
 ```
 
 将上述第二行的每一项减去第一行对应的项，我们得到以下结果：
 
-```
- S - r*S = 1 - r^(n+1)
+```text
+S - r*S = 1 - r^(n+1)
 ```
 
 从上述等式左侧的两项中提取 `S`，我们得到以下结果：
 
-```
- S*(1 - r) = 1 - r^(n+1)
+```text
+S*(1 - r) = 1 - r^(n+1)
 ```
 
 将上述等式两边除以项 `(1-r)`，得到前 `n` 个正整数等比数列求和公式：
 
-```
- S = [1 - r^(n+1)]/(1-r)
+```text
+S = [1 - r^(n+1)]/(1-r)
 ```
 
 注意如果 `r = 1`，上述方程将返回无穷值。
@@ -1426,13 +1404,10 @@ r*S =    r + r² + r³ + . . . + r^(n-1) + r^n + r^(n+1)
 
 Listing 2.4 显示了 `GeometricSum.py` 的内容，展示了如何使用迭代方法计算从 1 到 n（包含 n）的和。
 
-***Listing 2.4: GeometricSum.java***
+*Listing 2.4: GeometricSum.java*
 
-
-
-
-```
- public class GeometricSum
+```java
+public class GeometricSum
 { 
    public static int geomsum(int num, int ratio)
    {
@@ -1467,8 +1442,8 @@ Listing 2.4 从一个静态方法 `geomsum()` 开始，该方法初始化了三�
 
 Listing 2.4 的下一部分定义了 `main()` 方法，该方法将标量变量 `ratio`、`max` 和 `prod` 分别初始化为 2、10 和 0。接下来，循环从 2 迭代到 `max+1`。在每次迭代中，调用 `geomsum()` 方法并传入循环变量 `j` 的当前值和 `ratio` 的值。此外，变量 `prod` 被初始化为 `geomsum()` 的返回值，并打印该值。运行 Listing 2.4 中的代码，你将看到以下输出：
 
-```
- geometric sum for ratio= 2 from 1 to 2 = 3
+```text
+geometric sum for ratio= 2 from 1 to 2 = 3
 geometric sum for ratio= 2 from 1 to 3 = 7
 geometric sum for ratio= 2 from 1 to 4 = 15
 geometric sum for ratio= 2 from 1 to 5 = 31
@@ -1483,10 +1458,10 @@ geometric sum for ratio= 2 from 1 to 10 = 1023
 
 Listing 2.5 显示了 `GeomSumRecursive.java` 的内容，说明了如何使用递归计算 1 到 `n`（包含）数字的等比级数和。注意，以下代码示例使用了尾递归。
 
-***LISTING 2.5: GeoSumRecursive.java***
+*Listing 2.5: GeoSumRecursive.java*
 
-```
- public class GeoSumRecursive
+```java
+public class GeoSumRecursive
 { 
    public static int geomsum(int num, int ratio, int term, int sum)
    {
@@ -1519,8 +1494,8 @@ Listing 2.5 从一个静态方法 `geomsum()` 开始，该方法包含条件逻�
 
 Listing 2.5 的下一部分定义了 `main()` 方法，该方法将标量变量 `max`、`ratio`、`sum`、`term` 和 `prod` 分别初始化为 10、2、1、1 和 0。接下来，循环从 2 迭代到 `max+1`，在每次迭代中，使用参数 `j`、`ratio`、`term` 和 `sum` 调用 `geomsum()` 方法。该调用的结果赋值给变量 `prod`，然后打印。运行 Listing 2.1 中的代码，你将看到以下输出：
 
-```
- Geometric sum for ratio = 2 from 1 to 2 = 3
+```text
+Geometric sum for ratio = 2 from 1 to 2 = 3
 Geometric sum for ratio = 2 from 1 to 3 = 7
 Geometric sum for ratio = 2 from 1 to 4 = 15
 Geometric sum for ratio = 2 from 1 to 5 = 31
@@ -1535,8 +1510,8 @@ Geometric sum for ratio = 2 from 1 to 10 = 1023
 
 本节包含了三个阶乘值的示例：第一个示例使用循环，另外两个示例使用递归。作为提醒，正整数 `n` 的 `factorial` 值是 1 到 `n`（包含）所有数字的积。因此我们有以下值：
 
-```
- Factorial(2) = 2*1
+```text
+Factorial(2) = 2*1
 Factorial(3) = 3*2*1 = 6
 Factorial(4) = 4*3*2*1 = 24
 Factorial(5) = 5*4*3*2*1 = 120
@@ -1546,7 +1521,7 @@ Factorial(7) = 7*6*5*4*3*2*1 = 5040
 
 查看之前的计算列表，你可以看到阶乘之间有趣的关系：
 
-```
+```text
 Factorial(3) = 3*Factorial(2)
 Factorial(4) = 4*Factorial(3)
 Factorial(5) = 5*Factorial(4)
@@ -1554,7 +1529,7 @@ Factorial(5) = 5*Factorial(4)
 
 根据前面的观察，可以推导出以下阶乘关系：
 
-```
+```text
 Factorial(1) = 1
 Factorial(n) = n*Factorial(n-1) 对于 n > 1
 ```
@@ -1565,10 +1540,10 @@ Factorial(n) = n*Factorial(n-1) 对于 n > 1
 
 Listing 2.6 显示了 `Factorial1.py` 的内容，说明了如何使用迭代方法计算阶乘。
 
-***LISTING 2.6: Factorial1.py***
+*Listing 2.6: Factorial1.py*
 
-```
- public class Factorial1
+```java
+public class Factorial1
 { 
    public static int factorial(int num)
    {
@@ -1598,8 +1573,8 @@ Listing 2.6 从一个静态方法 `factorial()` 开始，该方法包含一个�
 
 Listing 2.1 的下一部分定义了 `main()` 方法，将标量变量 `prod` 初始化为 0，`max` 初始化为 15，随后是一个从 1 迭代到 `max` 的循环。在每次迭代中，使用循环变量 `j` 的当前值调用 `factorial()` 方法，并将返回值赋值给变量 `prod` 然后打印。运行 Listing 2.6 中的代码，你将看到以下输出：
 
-```
- factorial 0 = 1
+```text
+factorial 0 = 1
 factorial 1 = 1
 factorial 2 = 1
 factorial 3 = 2
@@ -1625,10 +1600,10 @@ factorial 19 = 6402373705728000
 
 Listing 2.7 显示了 `Factorial2.py` 的内容，说明了如何使用递归计算阶乘值。
 
-***LISTING 2.7: Factorial2.py***
+*Listing 2.7: Factorial2.py*
 
-```
- public class Factorial2
+```java
+public class Factorial2
 {
    public static int factorial(int num)
    {
@@ -1655,10 +1630,6 @@ Listing 2.7 显示了 `Factorial2.py` 的内容，说明了如何使用递归计
 }
 ```
 
-
-
-
-
 Listing 2.7 从一个静态方法 `factorial()` 开始，该方法包含条件逻辑：如果 `num` 最多为 1，则返回 `1`，否则返回 `num` 与带有值 `num–1` 的 `factorial()` 调用结果的乘积。
 
 Listing 2.7 的后续部分定义了 `main()` 方法，它将标量变量 `prod` 和 `max` 分别初始化为 `0` 和 `15`。接下来，一个循环从 1 迭代到 `max`（包含 `max`），在每次迭代中，都使用循环变量 `j` 调用 `factorial()` 方法。该调用的结果被赋值给变量 `prod`，然后将其打印出来。运行 Listing 2.7 中的代码，你将看到与上一个示例相同的输出。
@@ -1669,8 +1640,10 @@ Listing 2.8 显示了 `Factorial3.py` 的内容，它说明了如何使用尾递
 
 **LISTING 2.8: Factorial3.py**
 
-```
- public class Factorial3
+
+
+```java
+public class Factorial3
 {
    public static int factorial(int num, int prod)
    {
@@ -1705,8 +1678,8 @@ Listing 2.8 的后续部分定义了 `main()` 方法，它将标量变量 `prod`
 
 斐波那契数列在现实中有对应，例如向日葵种子的模式以及树枝形成的位置。以下是斐波那契数列的定义：
 
-```
- Fib(0) = 0
+```text
+Fib(0) = 0
 Fib(1) = 1
 Fib(n) = Fib(n-1)+Fib(n-2) for n >= 2
 ```
@@ -1719,8 +1692,8 @@ Listing 2.9 显示了 `Fibonacci1.py` 的内容，它说明了如何使用递归
 
 **LISTING 2.9: Fibonacci1.py**
 
-```
- public class Fibonacci1
+```java
+public class Fibonacci1
 {
    // very inefficient:
    public static int fibonacci(int num)
@@ -1752,8 +1725,8 @@ Listing 2.9 从一个静态方法 `fibonacci()` 开始，该方法包含条件�
 
 Listing 2.9 的后续部分定义了 `main()` 方法，它将标量变量 `fib` 和 `max` 分别初始化为 `0` 和 `20`。接下来，一个循环从 1 迭代到 `max`（包含 `max`），在每次迭代中，都使用循环变量 `j` 调用 `fibonacci()` 方法。该调用的结果被赋值给变量 `fib`，然后将其打印出来。运行 Listing 2.8 中的代码，你将看到以下内容：
 
-```
- fibonacci 0 = 0
+```text
+fibonacci 0 = 0
 fibonacci 1 = 1
 fibonacci 2 = 1
 fibonacci 3 = 2
@@ -1781,8 +1754,8 @@ Listing 2.10 显示了 `Fibonacci2.py` 的内容，它说明了如何使用迭�
 
 **LISTING 2.10: Fibonacci2.py**
 
-```
- public class Fibonacci2
+```java
+public class Fibonacci2
 {
    public static void main(String[] args)
    {
@@ -1808,8 +1781,8 @@ Listing 2.12 显示了 Java 文件 `Reverse.java` 的内容，它说明了如何
 
 **LISTING 2.12: Reverse.java**
 
-```
- public class Reverse
+```java
+public class Reverse
 { 
    public static String reverser(String str)
    {
@@ -1839,12 +1812,8 @@ Listing 2.12 显示了 Java 文件 `Reverse.java` 的内容，它说明了如何
 }
 ```
 
-
-
-
-
-```
- all-but-first chars: ['a', 'n', 'c', 'y']
+```text
+all-but-first chars: ['a', 'n', 'c', 'y']
 all-but-first chars: ['n', 'c', 'y']
 all-but-first chars: ['c', 'y']
 all-but-first chars: ['y']
@@ -1871,8 +1840,8 @@ all-but-first chars: []
 
 这个问题可能会出现在计算机科学面试题中，这里是一些示例：
 
-```
- S1 = "()()()"
+```text
+S1 = "()()()"
 S2 = "(()()())"
 S3 = "()("
 S4 = "(())"
@@ -1881,14 +1850,14 @@ S5 = "()()("
 
 如你所见，`S1`、`S3` 和 `S4` 有平衡的括号，而 `S2` 和 `S5` 的括号是不平衡的。
 
-[`stackoverflow.com/questions/31849977/balanced-parenthesis-how-to-count-them`](https://stackoverflow.com/questions/31849977/balanced-parenthesis-how-to-count-them)
+[stackoverflow.com/questions/31849977/balanced-parenthesis-how-to-count-them](https://stackoverflow.com/questions/31849977/balanced-parenthesis-how-to-count-them)
 
 列表 2.13 显示了 `BalancedParentheses.java` 的内容，说明了如何判断一个字符串是否由平衡的括号组成。
 
-列表 2.13: BalancedParentheses.java
+列表 2.13: `BalancedParentheses.java`
 
-```
- // https://stackoverflow.com/questions/31849977/balanced-parenthesis-how-to-count-them
+```java
+// https://stackoverflow.com/questions/31849977/balanced-parenthesis-how-to-count-them
 public class BalancedParens
 {
    public BalancedParens(){}
@@ -1924,10 +1893,10 @@ public class BalancedParens
 
 列表 2.13 定义了 `main()` 方法，该方法将基于字符串的数组 `exprs` 初始化为三个包含括号和花括号组合的字符串值。接下来，外层循环遍历 `exprs` 数组的每个元素，然后内层循环通过变量 `ch` 遍历当前字符串的字符。循环包含条件逻辑：如果 `ch` 等于 `(` 则增加变量 `counter`，如果 `ch` 等于 `)` 则减减变量 `counter`。此外，如果 `counter` 为负数，则会提前退出循环。
 
-列表 2.13 的最后代码部分涉及条件逻辑：如果 `counter` 等于 0，则当前字符串是平衡的，否则当前字符串是不平衡的。运行 列表 2.8 中的代码，你将看到以下输出：
+列表 2.13 的最后代码部分涉及条件逻辑：如果 `counter` 等于 0，则当前字符串是平衡的，否则当前字符串是不平衡的。运行列表 2.8 中的代码，你将看到以下输出：
 
-```
- balanced string:(){}[]
+```text
+balanced string:(){}
 
 unbalanced string:((}
 
@@ -1938,54 +1907,10 @@ balanced string:(())
 
 列表 2.14 显示了 `CountDigits.java` 的内容，说明了如何计算正整数中的位数。
 
-列表 2.14: CountDigits.java
+列表 2.14: `CountDigits.java`
 
-```
- public class CountDigits
-{
-   public CountDigits(){}
-
-   public static int countDigits(int num, int result)
-   {
-      if(num == 0)
-      {
-        return result;
-      }
-      else
-      {
-        //print("new result:",result+1)
-        //print("new number:",int(num/10))
-        return countDigits((int)Math.floor(num/10), result+1);
-      }
-   }
-
-   public static void main(String[] args)
-   {
-      int[] numbers = new int[]{1234, 567, 89, 100, 0};
-
-      for(int num : numbers)
-      {
-         int result = countDigits(num, 0);
-         System.out.println("Number: " + num + " has " + result + " digits");
-      }
-   }
-```
-*(注：由于原文代码块中 `main` 方法不完整，此处根据上下文逻辑补全了可运行的结构以保持翻译语境一致)*
-
-列表 2.14 描述了 `main()` 方法，将基于字符串的数组 `exprs` 初始化为三个包含括号和花括号组合的字符串值（此处原文描述似乎与代码 `CountDigits` 不符，翻译时遵循原文描述）。接下来，外层循环遍历 `exprs` 数组的每个元素，然后内层循环通过变量 `ch` 遍历当前字符串的字符。循环包含条件逻辑：如果 `ch` 等于 `(` 则增加变量 `counter`，如果 `ch` 等于 `)` 则减减变量 `counter`。此外，如果 `counter` 为负数，则会提前退出循环。
-
-列表 2.13 的最后代码部分涉及条件逻辑：如果 `counter` 等于 0，则当前字符串是平衡的，否则当前字符串是不平衡的。运行 列表 2.8 中的代码，你将看到以下输出：
-
-*(注：原文文本中关于列表 2.13 和 2.14 的描述顺序与代码内容似乎存在交叉或错误，作为翻译员我忠实于原文的文本逻辑进行翻译)*
-
-### 任务：计算数字的个数
-
-列表 2.14 显示了 `CountDigits.java` 的内容，说明了如何计算正整数中的位数。
-
-列表 2.14: CountDigits.java
-
-```
- public class CountDigits
+```java
+public class CountDigits
 {
    public CountDigits(){}
 
@@ -2016,45 +1941,28 @@ balanced string:(())
 }
 ```
 
-列表 2.14 描述了 `main()` 方法，将基于字符串的数组 `exprs` 初始化为三个包含括号和花括号组合的字符串值（此处原文描述似乎与代码 `CountDigits` 不符，翻译时遵循原文描述进行翻译）。
+（注：由于原文代码块中 `main` 方法不完整，此处根据上下文逻辑补全了可运行的结构以保持翻译语境一致。）
 
-*(更正：重新检查提供的原文文本，发现描述部分存在重复和错位，我将严格按照提供的原文文本流进行逐行翻译)*。
+列表 2.14 描述了 `main()` 方法，将基于字符串的数组 `exprs` 初始化为三个包含括号和花括号组合的字符串值（此处原文描述似乎与代码 `CountDigits` 不符，翻译时遵循原文描述）。接下来，外层循环遍历 `exprs` 数组的每个元素，然后内层循环通过变量 `ch` 遍历当前字符串的字符。循环包含条件逻辑：如果 `ch` 等于 `(` 则增加变量 `counter`，如果 `ch` 等于 `)` 则减减变量 `counter`。此外，如果 `counter` 为负数，则会提前退出循环。
 
----
+列表 2.13 的最后代码部分涉及条件逻辑：如果 `counter` 等于 0，则当前字符串是平衡的，否则当前字符串是不平衡的。运行列表 2.8 中的代码，你将看到以下输出：
 
-**重新根据您提供的原始文本进行完整翻译：**
+（注：原文文本中关于列表 2.13 和 2.14 的描述顺序与代码内容似乎存在交叉或错误，作为翻译员我忠实于原文的文本逻辑进行翻译。）
 
-[content]
-```
- all-but-first chars: ['a', 'n', 'c', 'y']
-all-but-first chars: ['n', 'c', 'y']
-all-but-first chars: ['c', 'y']
-all-but-first chars: ['y']
-all-but-first chars: []
-=> Word:  Nancy  reverse:  ['y', 'c', 'n', 'a', 'N']
+### 任务：计算数字的个数
 
-all-but-first chars: ['a', 'v', 'e']
-all-but-first chars: ['v', 'e']
-all-but-first chars: ['e']
-all-but-first chars: []
-=> Word:  Dave  reverse:  ['e', 'v', 'a', 'D']
+列表 2.14 显示了 `CountDigits.java` 的内容，说明了如何计算正整数中的位数。
 
-all-but-first chars: ['o', 'm', 'i', 'n', 'i', 'c']
-all-but-first chars: ['m', 'i', 'n', 'i', 'c']
-all-but-first chars: ['i', 'n', 'i', 'c']
-all-but-first chars: ['n', 'i', 'c']
-all-but-first chars: ['i', 'c']
-all-but-first chars: ['c']
-all-but-first chars: []
-=> Word:  Dominic  reverse:  ['c', 'i', 'n', 'i', 'm', 'o', 'D']
-```
+列表 2.14: `CountDigits.java`
+
+
 
 ### 任务：检查括号是否平衡
 
 这个任务可能会出现在计算机科学面试题中，这里是一些示例：
 
 ```
- S1 = "()()()"
+S1 = "()()()"
 S2 = "(()()())"
 S3 = "()("
 S4 = "(())"
@@ -2067,10 +1975,10 @@ S5 = "()()("
 
 列表 2.13 显示了 `BalancedParentheses.java` 的内容，说明了如何判断一个字符串是否由平衡的括号组成。
 
-列表 2.13: BalancedParentheses.java
+**列表 2.13: `BalancedParentheses.java`**
 
 ```
- // https://stackoverflow.com/questions/31849977/balanced-parenthesis-how-to-count-them
+// https://stackoverflow.com/questions/31849977/balanced-parenthesis-how-to-count-them
 public class BalancedParens
 {
    public BalancedParens(){}
@@ -2102,14 +2010,14 @@ public class BalancedParens
 }
 ```
 
-核心思想涉及整数变量 `counter`：如果遇到左括号，增加 `counter`；如果当前字符是右括号，则减少 `counter`。
+核心思想涉及整数变量`counter`：如果遇到左括号，增加`counter`；如果当前字符是右括号，则减少`counter`。
 
-列表 2.13 定义了 `main()` 方法，将基于字符串的数组 `exprs` 初始化为三个包含括号和花括号组合的字符串值。接下来，外层循环遍历 `exprs` 数组的每个元素，然后内层循环通过变量 `ch` 遍历当前字符串的字符。循环包含条件逻辑：如果 `ch` 等于 `(` 则增加变量 `counter`，如果 `ch` 等于 `)` 则减减变量 `counter`。此外，如果 `counter` 为负数，则会提前退出循环。
+列表 2.13 定义了`main()`方法，将基于字符串的数组`exprs`初始化为三个包含括号和花括号组合的字符串值。接下来，外层循环遍历`exprs`数组的每个元素，然后内层循环通过变量`ch`遍历当前字符串的字符。循环包含条件逻辑：如果`ch`等于`(`则增加变量`counter`，如果`ch`等于`)`则减减变量`counter`。此外，如果`counter`为负数，则会提前退出循环。
 
-列表 2.13 的最后代码部分涉及条件逻辑：如果 `counter` 等于 0，则当前字符串是平衡的，否则当前字符串是不平衡的。运行 列表 2.8 中的代码，你将看到以下输出：
+列表 2.13 的最后代码部分涉及条件逻辑：如果`counter`等于 0，则当前字符串是平衡的，否则当前字符串是不平衡的。运行列表 2.8 中的代码，你将看到以下输出：
 
 ```
- balanced string:(){}[]
+balanced string:(){}[]
 
 unbalanced string:((}
 
@@ -2118,12 +2026,12 @@ balanced string:(())
 
 ### 任务：计算数字的个数
 
-列表 2.14 显示了 `CountDigits.java` 的内容，说明了如何计算正整数中的位数。
+列表 2.14 显示了`CountDigits.java`的内容，说明了如何计算正整数中的位数。
 
-列表 2.14: CountDigits.java
+**列表 2.14: `CountDigits.java`**
 
 ```
- public class CountDigits
+public class CountDigits
 {
    public CountDigits(){}
 
@@ -2153,17 +2061,15 @@ balanced string:(())
    }
 }
 ```
-*(注：由于原文代码块中 `main` 方法不完整，此处根据上下文逻辑补全了可运行的结构以保持翻译语境一致)*
 
-*(此处由于原文文本存在重复和错位，我已严格按照您提供的原始文本流进行逐行翻译)*
+*(注：由于原文代码块中`main`方法不完整，此处根据上下文逻辑补全了可运行的结构以保持翻译语境一致)*
 
+### 任务：查找质因数
 
-
-
-## 2.16: FindPrimeDivisors.java
+**列表 2.16: `FindPrimeDivisors.java`**
 
 ```java
- public class CheckPrime
+public class CheckPrime
 { 
    public CheckPrime(){}
 
@@ -2226,16 +2132,16 @@ balanced string:(())
 }
 ```
 
-列表 2.16 从一个静态方法 `isPrime()` 开始，该方法与列表 2.15 中的方法完全相同。
+列表 2.16 从一个静态方法`isPrime()`开始，该方法与列表 2.15 中的方法完全相同。
 
-列表 2.16 的下部分定义了 `findPrimeDivisors()` 方法，它将变量 `div` 和 `prime_divisors` 分别初始化为 `2` 和 `""`。代码的后续部分是一个 `while` 循环，只要 `div` 小于或等于 `num` 就会执行，后者是方法的参数。
+列表 2.16 的下部分定义了`findPrimeDivisors()`方法，它将变量`div`和`prime_divisors`分别初始化为`2`和`""`。代码的后续部分是一个`while`循环，只要`div`小于或等于`num`就会执行，后者是方法的参数。
 
-在每次迭代中，变量 `prime` 被初始化为使用变量 `div` 调用 `isPrime()` 方法的结果。如果 `prime` 等于 `1`，那么我们就检查 `div` 是否是 `num` 的因数。具体来说，如果 `num` 除以 `div` 的结果为 `0`，我们就找到了一个因数，将其添加到字符串变量 `prime_divisors` 中，然后将 `num` 设置为 `num` 除以 `div` 的整数部分。如果 `num` 除以 `div` 的结果不为 `0`，只需增加 `div` 的值。此外，如果 `prime` 不等于 `1`，我们再次增加 `div` 的值。循环执行完成后，返回变量 `prime_divisors`，它由整数 `num` 的质因数字符串组成。
+在每次迭代中，变量`prime`被初始化为使用变量`div`调用`isPrime()`方法的结果。如果`prime`等于`1`，那么我们就检查`div`是否是`num`的因数。具体来说，如果`num`除以`div`的结果为`0`，我们就找到了一个因数，将其添加到字符串变量`prime_divisors`中，然后将`num`设置为`num`除以`div`的整数部分。如果`num`除以`div`的结果不为`0`，只需增加`div`的值。此外，如果`prime`不等于`1`，我们再次增加`div`的值。循环执行完成后，返回变量`prime_divisors`，它由整数`num`的质因数字符串组成。
 
-列表 2.9 的后续部分定义了 `main()` 方法，它将变量 `result` 和 `upperBound` 分别初始化为 `0` 和 `20`。接下来，循环从 `2` 迭代到 `upperBound`，在每次迭代中，变量 `result` 被初始化为使用循环变量 `num` 调用方法 `isPrime()` 的结果。如果 `result` 的值等于 `1`，则显示 `num` 是质数的消息；否则，显示 `num` 不是质数的消息。运行列表 2.8 中的代码，你将看到以下输出：
+列表 2.9 的后续部分定义了`main()`方法，它将变量`result`和`upperBound`分别初始化为`0`和`20`。接下来，循环从`2`迭代到`upperBound`，在每次迭代中，变量`result`被初始化为使用循环变量`num`调用方法`isPrime()`的结果。如果`result`的值等于`1`，则显示`num`是质数的消息；否则，显示`num`不是质数的消息。运行列表 2.8 中的代码，你将看到以下输出：
 
 ```
- Prime divisors of  2 :  2
+Prime divisors of  2 :  2
 Prime divisors of  3 :  3
 Prime divisors of  4 :  2 2
 Prime divisors of  5 :  5
@@ -2259,12 +2165,14 @@ Prime divisors of 19 :
 
 哥德巴猜想指出，每一个大于 3 的偶数都可以两个两个奇质数之和。
 
-列表 2.17 显示了 `GoldbachConjecture.java` 的内容，它阐明了如何确定一组求和等于给定偶数的质数。
+列表 2.17 显示了`GoldbachConjecture.java`的内容，它阐明了如何确定一组求和等于给定偶数的质数。
 
-### 列表 2.17: GoldbachConjecture.java
+**列表 2.17: `GoldbachConjecture.java`**
+
+
 
 ```java
- public class GoldbachConjecture
+public class GoldbachConjecture
 {
    public GoldbachConjecture(){}
 
@@ -2417,10 +2325,6 @@ Prime divisors of 19 :
 
 列表 2.19 从一个 `gcd()` 方法开始，该方法接收两个整数值参数 `num1` 和 `num2`。第一个条件逻辑部分检查 `num1` 除以 `num2` 的余数是否为 `0`：如果是，则返回 `num2`。第二个条件逻辑部分检查 `num1` 是否小于 `num2`：如果是，则递归调用 `gcd()` 方法并传入参数 `num2` 和 `num1`，并返回结果。第三个条件逻辑部分返回递归调用 `gcd()` 方法的结果，传入参数为 `num1-num2` 和 `num2`。
 
-
-
-
-
 ```
 gcd of 10 and 24 = 2
 gcd of 24 and 10 = 2
@@ -2518,10 +2422,6 @@ Listing 2.20 的下部分定义了 `main()` 方法，该方法将变量 `lcm1` �
 
 让我们来看这个问题：从一个包含五本书的书架中选择三本书有多少种不同的方法？答案涉及组合。请记住，如果你选择了三个标记为 `A`、`B` 和 `C` 的书，那么这三本书的任何排列都被认为是相同的。从实例化变量 `lcm1` 变量为 `LCM` 类的实例开始。接下来，将变量 `result` 初始化为带有值 `24` 和 `10` 调用 `lcm()` 方法的结果，然后打印其值。
 
-
-
-
-
 本节任务的更完整描述如下：给定一组数字 `N` 和一个数字 `k`，找到 `N` 中包含至少一个大于 `k` 的数字的子集数量。这个 `计数` 任务是一个编码任务的示例，可以作为一个组合问题轻松解决：你可能会惊讶地发现，解决方案只需要一行（且是简单的）代码。让我们定义以下变量集合：
 
 ```
@@ -2545,6 +2445,10 @@ Q     = 包含至少一个大于 k 数字的 N 子集
 [Listing 2.22] 显示了 `subarrays_max_k.py` 的内容，它计算一组二项式系数之和。
 
 **列表 2.22: SubarraysMaxK.java**
+
+
+
+`public class SubarraysMaxK` 的代码实现如下：
 
 ```
  public class SubarraysMaxK
@@ -2615,7 +2519,7 @@ count:   0
 
 尽管 [Listing 2.22] 中的集合 `N` 包含一组从 1 到 `n` 的连续整数，但该代码对于未排序数组或不包含连续整数的数组同样有效。在后者的情况下，你需要一个代码块来统计小于给定值 `k` 的元素个数。
 
-### 总结
+## 总结
 
 本章介绍了递归，以及涉及递归的各种代码示例，例如计算阶值、斐波那契数、等差数列求和、几何数列求和、一对正整数的最大公约数 (GCD) 以及一对正整数的最小公倍数 (LCM)。
 
@@ -2647,13 +2551,14 @@ count:   0
 
 算法根据空间（基于输入大小）和完成执行所需的时间进行评估，时间用大 O 符号表示。有三种时间复杂度：最佳情况、平均情况和最坏情况。请记住，具有极佳最佳情况性能的算法可能有很糟糕的情况性能。
 
-回想 O(n) 意味着算法在线性时间内执行。例如，如果算法分别需要 `2*n`、`5*n` 或 `n/2` 次操作，那么它们的复杂度都是 `O(n)`。
+回想 `O(n)` 意味着算法在线性时间内执行。例如，如果算法分别需要 `2*n`、`5*n` 或 `n/2` 次操作，那么它们的复杂度都是 `O(n)`。
 
 此外，如果线性搜索的最佳、平均和最坏时间性能分别为 1、`n/2` 和 `n` 次操作，那么这些操作分别是 `O(1)`、`O(n)` 和 `O(n)`。通常情况下，如果某个任务有两个解决方案 `T1` 和 `T2`，`T2` 比 `T1` 更高效，那么 `T2` 需要更少的时间或更少的内存。例如，如果 `T1` 是计算阶（或斐波那契数）的迭代解决方案而 `T2` 涉及递归解决方案，那么在时间上 `T1` 比 `T2` 更高效，但 `T1` 需要额外的数组来存储中间值。
 
 时间空间权衡是指减少执行算法所需的时间或内存，这涉及到在以下方案之间选择：
 
 *   用更短的时间和更多的内存
+
 *   用更长的时间和更少的内存
 
 虽然同时减少时间和内存是理想的，但这也更具挑战性。另一个需要注意的点是对于任何正整数 `n > 1`，以下不等式成立（对数可以是大于等于 2 的任意底）：
@@ -2662,14 +2567,11 @@ count:   0
  O(log n) < O(n) < O(n*log n) < O(n²)
 ```
 
-此外，关于 n 的幂、2 的幂和阶值的以下不等式也成立：
+此外，关于 `n` 的幂、2 的幂和阶值的以下不等式也成立：
 
 ```
  O(n**2) < O(n**3) < O(2**n) < O(n!)
 ```
-
-
-
 
 如果你对上述任何不等式不确定，请在网上搜索提供必要详细说明的教程。
 
@@ -2850,10 +2752,6 @@ Listing 3.3 的最后部分是 `main()` 方法，它初始化了两个整数数�
 
 Listing 3.4 显示了 `RecursiveMultiply.java` 的内容，演示了如何通过递归计算两个正整数的乘积。
 
-
-
-
-
 ```
  class RecursiveMultiply
 {
@@ -2882,20 +2780,20 @@ Listing 3.4 显示了 `RecursiveMultiply.java` 的内容，演示了如何通过
 
 Listing 3.4 从函数 `add_repeat(num,times,sum)` 开始，该函数通过递归调用自身来执行重复加法。注意，此函数使用了尾递归：函数的每次调用都会将 `times` 替换为 `times-1`，并将将 `sum` 替换为 `num+sum`（后者是尾递归）。终止条件是 `times` 等于 0，此时函数返回 `sum` 的值。运行 Listing 3.4 中的代码，你将看到以下输出：
 
-```
- product of 5 and 9 = 45
-product of 13 and 10 = 130
-product of 25 and 25 = 625
-product of 17 and 10 = 170
-product of 100 and 100 = 10000
-```
+
+
+`product of 5 and 9 = 45`
+`product of 13 and 10 = 130`
+`product of 25 and 25 = 625`
+`product of 17 and 10 = 170`
+`product of 100 and 100 = 10000`
 
 Listing 3.5 显示了 `RecursiveDivide.java` 的内容，它说明了如何通过递归计算两个正整数的商。
 
-### 列表 3.5:RecursiveDivide.java
+### 列表 3.5：`RecursiveDivide.java`
 
 ```
- class RecursiveDivide
+class RecursiveDivide
 {
    public static int sub_repeat(int num1, int num2, int remainder)
    {
@@ -2924,7 +2822,7 @@ Listing 3.5 显示了 `RecursiveDivide.java` 的内容，它说明了如何通�
 Listing 3.5 包含的代码与 Listing 3.4 非常相似：区别是将加法替换为减法。运行 Listing 3.5 中的代码，你将看到以下输出：
 
 ```
- remainder of 9 / 5 = 4
+remainder of 9 / 5 = 4
 remainder of 13 / 10 = 3
 remainder of 25 / 25 = 0
 remainder of 17 / 10 = 7
@@ -2935,10 +2833,10 @@ remainder of 100 / 100 = 0
 
 Listing 3.6 显示了 `PairSumSorted.java` 的内容，说明了如何判断一个有序数组是否包含两个指定数字的和。
 
-### 列表 3.6:PairSumSorted.java
+### 列表 3.6：`PairSumSorted.java`
 
 ```
- //给定有序数组中的两个数字 num1 和 num2
+//给定有序数组中的两个数字 num1 和 num2
 //判断 num1+num2 是否在数组中
 
 public class PairSumSorted
@@ -2998,7 +2896,7 @@ Listing 3.6 从 `check_sum()` 方法开始，该方法判断 `num1` 和 `num2` �
 Listing 3.6 中的下一部分代码包含了条件逻辑，该逻辑检查 `arr1[ndx1]` 和 `arr1[ndx2]` 的和是否等于 `sum` 的值，然后打印适当的消息。运行 Listing 3.6 中的代码，你将看到以下输出：
 
 ```
- num1: 60 num2:90
+num1: 60 num2:90
 ndx1: 2  ndx2: 1
 => 找到和 150 ndx1=2 ndx2=1
 
@@ -3017,7 +2915,7 @@ ndx1: 0 ndx2: 1
 
 Listing 3.5（注：此处原文引用编号似乎有误，应指代 Listing 3.7）显示了 `WordFrequency.java` 的内容，说明了如何在一个句子数组中确定每个单词的出现频率。
 
-### 列表 3.7:WordFrequency.java
+### 列表 3.7：`WordFrequency.java`
 
 ```java
 import java.util.ArrayList;
@@ -3048,7 +2946,7 @@ public class WordFrequency
       ArrayList<String> tokens = new ArrayList<String>();
       Hashtable<String,Integer> ht = new Hashtable<String,Integer>();
 
-###(int idx=0; idx<sents.size(); idx++) 
+      for(int idx=0; idx<sents.size(); idx++) 
       {
          String word = sents.get(idx);
          tokens.add(word);
@@ -3075,14 +2973,10 @@ public class WordFrequency
 }
 ```
 
-
-
-
-
 Listing 3.7 的最后部分包含一个循环，用于会显示 `ht` 中的每个单词及其出现的频率。运行 Listing 3.7 中的代码，你将看到以下输出：
 
 ```
- Words and their frequency:
+Words and their frequency:
 key: dish occurrences: 1
 key: pepperoni occurrences: 1
 key: i occurrences: 1
@@ -3102,10 +2996,10 @@ key: mozzarrella occurrences: 1
 
 Listing 3.8 显示了 `UniqueChars.java` 的内容，说明了如何判断一个字符串是否包含唯一字母。
 
-LISTING 3.8：UniqueChars.java
+### 列表 3.8：`UniqueChars.java`
 
 ```
- //128 characters for ASCII and 256 characters for extended ASCII
+//128 characters for ASCII and 256 characters for extended ASCII
 public class UniqueChars
 {
    public static Boolean unique_chars(String str)
@@ -3154,7 +3048,7 @@ Listing 3.8 从函数 `unique_chars()` 开始，该函数将其参数 `str` 转�
 如果该位置在 `char_set` 中等于 1，则找到了重复字符；否则，将该位置初始化为值 1。请注意，如果字符串 `str` 包含重复字母，则返回值 `False`，而如果字符串 `str` 包含唯一字符，则返回值 `True`。运行 Listing 3.8 中的代码，你将看到以下输出：
 
 ```
- string: a string
+string: a string
 unique: True
 
 string: second string
@@ -3168,10 +3062,10 @@ unique: False
 
 Listing 3.9 显示了 `InsertChars.java` 的内容，说明了如何将一个字符串的每个字符插入另一个字符串的每一个位置。
 
-LISTING 3.9：InsertChars.java
+### 列表 3.9：`InsertChars.java`
 
 ```
- import java.io.*;
+import java.io.*;
 import java.util.*;
 
 public class InsertChars
@@ -3210,7 +3104,11 @@ public class InsertChars
 }
 ```
 
-Listing 3.9 从函数 `insertChar()` 开始，该函数有一个字符串 `str1` 和字符 `chr` 作为输入参数。接部分代码是一个循环，其循环变量为 `i`，它用于将字符串 `str1` 拆分为两个字符串：左子字符串和右子字符串。Listing 3.9 的后续部分包含一个循环，遍历 `str2` 的每个字符并每个。运行 Listing 3.9 中的代码，你将看到以下输出：
+
+
+### Listing 3.9
+
+从函数`insertChar()`开始，该函数有一个字符串`str1`和字符`chr`作为输入参数。接部分代码是一个循环，其循环变量为`i`，它用于将字符串`str1`拆分为两个字符串：左子字符串和右子字符串。Listing 3.9 的后续部分包含一个循环，遍历`str2`的每个字符并每个。运行 Listing 3.9 中的代码，你将看到以下输出：
 
 ```
  str1: abc
@@ -3220,11 +3118,11 @@ result:
 
 ### 任务：字符串排列
 
-有多种方法可以判断两个字符串是否为彼此的排列。一种方法涉及对字符串进行排序：如果生成的字符串相等，那么它们就是排列关系。第二种技术是判断它们的每个字符的出现次数是否相同。第三种方法是将每个字符的数值对应相加。Listing 3.10 显示了 `StringPermute.java` 的内容，说明了如何判断两个字符串是否为彼此的排列。
+有多种方法可以判断两个字符串是否为彼此的排列。一种方法涉及对字符串进行排序：如果生成的字符串相等，那么它们就是排列关系。第二种技术是判断它们的每个字符的出现次数是否相同。第三种方法是将每个字符的数值对应相加。Listing 3.10 显示了`StringPermute.java`的内容，说明了如何判断两个字符串是否为彼此的排列。
 
-LISTING 3.10：StringPermute.java
+**Listing 3.10：StringPermute.java**
 
-```
+```java
 import java.util.Arrays;
 
 public class StringPermute
@@ -3259,21 +3157,17 @@ public class StringPermute
 }
 ```
 
-Listing 3.10 从函数 `permute()` 开始，该函数接受两个字符串 `str1` 和 `str2` 作为参数。接下来，`temp1[]` 和 `temp2[]` 分别为 `str1` 和 `str2` 的字符数组。然后调用 `Arrays.sort(temp1)` 和 `Arrays.sort(temp2)`。最后，字符串 `str1d` 和 `str2d` 使用排序后 `temp1` 和 `temp2` 的结果初始化。此时，我们可以通过判断两个字符串是否相等来确定 `str1` 和 `str2` 是否为彼此的排列。
+Listing 3.10 从函数`permute()`开始，该函数接受两个字符串`str1`和`str2`作为参数。接下来，`temp1[]`和`temp2[]`分别为`str1`和`str2`的字符数组。然后调用`Arrays.sort(temp1)`和`Arrays.sort(temp2)`。最后，字符串`str1d`和`str2d`使用排序后`temp1`和`temp2`的结果初始化。此时，我们可以通过判断两个字符串是否相等来确定`str1`和`str2`是否为彼此的排列。
 
 ### 任务：检查回文
 
-判断字符串是否为回文的一种方法是将字符串与其反转后的字符串进行比较：如果这两个字符串相等，那么该字符串就是回文。此外，反转字符串有两种方法：一种方法涉及 Java 的 `reverse()` 函数，另一种方法是从右到左方向处理给定字符串的字符，并将每个字符追加到新字符串中。
-
-
-
-
+判断字符串是否为回文的一种方法是将字符串与其反转后的字符串进行比较：如果这两个字符串相等，那么该字符串就是回文。此外，反转字符串有两种方法：一种方法涉及 Java 的`reverse()`函数，另一种方法是从右到左方向处理给定字符串的字符，并将每个字符追加到新字符串中。
 
 另一种技术涉及从左到右的方式遍历字符，并将每个字符与其基于从右到左遍历字符串时得到的对应字符进行比较。
 
-Listing 3.11 显示了 `Palindrome1.java` 的内容，它说明了如何判断一个字符串或正整数是否为回文。
+Listing 3.11 显示了`Palindrome1.java`的内容，它说明了如何判断一个字符串或正整数是否为回文。
 
-***代码列表 3.11: Palindrome1.java***
+**Listing 3.11: Palindrome1.java**
 
 ```java
  public class Palindrome1
@@ -3320,9 +3214,9 @@ Listing 3.11 显示了 `Palindrome1.java` 的内容，它说明了如何判断�
 }
 ```
 
-Listing 3.11 从参数为字符串的 `str` 的函数 `palindrome1()` 开始。该函数包含一个循环，开始时比较字符串 `str` 的最左侧字符和最右侧字符。循环的下一次迭代移动到字符串左侧的第二个位置，并将该字符与字符串右侧数起第二个的字符进行比较。这种逐步比较一直持续，直到到达字符串的中间。在循环的每次迭代中，如果一对字符不同，则返回值 `False`。如果所有字符对都相等，则该字符串必须是回文，在这种情况下返回返回值 `True`。
+Listing 3.11 从参数为字符串的`str`的函数`palindrome1()`开始。该函数包含一个循环，开始时比较字符串`str`的最左侧字符和最右侧字符。循环的下一次迭代移动到字符串左侧的第二个位置，并将该字符与字符串右侧数起第二个的字符进行比较。这种逐步比较一直持续，直到到达字符串的中间。在循环的每次迭代中，如果一对字符不同，则返回值`False`。如果所有字符对都相等，则该字符串必须是回文，在这种情况下返回返回值`True`。
 
-Listing 3.11 的下部分包含一个字符串数组 `arr1` 和一个正整数数组 `arr2`。接下来，另一个循环遍历 `arr1` 中的元素，并调用 `palindrome1` 函数来判断 `arr1` 的当前元素是否为回文。同样，第二个循环遍历 `arr2` 中的元素，并调用 `palindrome1` 函数来判断 `arr2` 的当前元素是否为回文。运行 Listing 3.11 中的代码，你将看到以下输出：
+Listing 3.11 的下部分包含一个字符串数组`arr1`和一个正整数数组`arr2`。接下来，另一个循环遍历`arr1`中的元素，并调用`palindrome1`函数来判断`arr1`的当前元素是否为回文。同样，第二个循环遍历`arr2`中的元素，并调用`palindrome1`函数来判断`arr2`的当前元素是否为回文。运行 Listing 3.11 中的代码，你将看到以下输出：
 
 ```
  String: rotor palindrome: true
@@ -3336,9 +3230,9 @@ Number: 555 palindrome:  true
 
 ### 任务：检查最长回文
 
-本节通过检查给定字符串的子字符串，扩展了上一节的代码。Listing 3.12 显示了 `LongestPalindrome.java` 的内容，它说明了如何确定给定字符串中的最长回文。注意，单个字符始终是一个回文，这意味着每个字符串都包含一个回文子字符串（事实上，任何字符串中的任何单个字符都是回文）。
+本节通过检查给定字符串的子字符串，扩展了上一节的代码。Listing 3.12 显示了`LongestPalindrome.java`的内容，它说明了如何确定给定字符串中的最长回文。注意，单个字符始终是一个回文，这意味着每个字符串都包含一个回文子字符串（事实上，任何字符串中的任何单个字符都是回文）。
 
-***代码列表 3.12: LongestPalindrome.java***
+**Listing 3.12: LongestPalindrome.java**
 
 ```java
  public class LongestPalindrome1
@@ -3432,20 +3326,18 @@ maxpal: abccba
 本节包含 Java 代码示例，用于搜索字符串以确定：
 
 *   字符串中连续 1 序列的最大长度。
+
 *   在字符串中找到指定的字符序列。
+
 *   唯一字符序列的最大长度。
 
 在你完成本节后，可以探索可以使用本节代码示例解决的这些变体。
 
 #### 字符串中重复字符的最大长度
 
-Listing 3.13 显示了 `MaxCharSequence.java` 的内容，它说明了如何找到字符串中重复字符的最大长度。
+Listing 3.13 显示了`MaxCharSequence.java`的内容，它说明了如何找到字符串中重复字符的最大长度。
 
-
-
-
-
-```
+```java
  public class MaxCharSequence
 {
    public static void max_seq(String my_str,char ch)
@@ -3486,9 +3378,9 @@ Listing 3.13 显示了 `MaxCharSequence.java` 的内容，它说明了如何找�
 }
 ```
 
-代码列表 3.13 从 `max_seq()` 函数开始，其参数为字符串 `my_str` 和字符 `ch`。该函数包含一个循环，遍历 `my_str` 的每个字符并与 `ch` 进行比较。只要字符等于 `ch`，变量 `right` 和 `counter` 的值就会递增：`right` 代表最右侧的索引，`counter` 包含相同字符子串的长度。然而，如果 `my_str` 中的字符与 `ch` 不同，则 `counter` 重置为 0，并从该位置重新开始比较。当循环结束时，`counter` 变量等于连续相同字符子串的最大长度。
+Listing 3.13 从`max_seq()`函数开始，其参数为字符串`my_str`和字符`ch`。该函数包含一个循环，遍历`my_str`的每个字符并与`ch`进行比较。只要字符等于`ch`，变量`right`和`counter`的值就会递增：`right`代表最右侧的索引，`counter`包含相同字符子串的长度。然而，如果`my_str`中的字符与`ch`不同，则`counter`重置为 0，并从该位置重新开始比较。当循环结束时，`counter`变量等于连续相同字符子串的最大长度。
 
-代码列表 3.13 的后续部分初始化了 `str_list` 数组（包含一个字符串列表）以及包含字符列表的 `char_list` 数组。最后的循环遍历 `str_list` 中的元素，并使用 `char_list` 中对应的字符调用 `max_seq()`。运行代码列表 3.13 中的代码，你会看到以下输出：
+Listing 3.13 的后续部分初始化了`str_list`数组（包含一个字符串列表）以及包含字符列表的`char_list`数组。最后的循环遍历`str_list`中的元素，并使用`char_list`中对应的字符调用`max_seq()`。运行 Listing 3.13 中的代码，你会看到以下输出：
 
 ```
  my_str: abcdef
@@ -3501,16 +3393,26 @@ my_str: abcdeeefghij
 max sequence of e: 3
 ```
 
-## 在字符串中查找指定的字符序列
+### 在字符串中查找指定的字符序列
 
-代码列表 3.14 显示了 `MaxSubstrSequence.java` 内容，说明了如何找到匹配给定字符串的最右侧子串。
+Listing 3.14 显示了`MaxSubstrSequence.java`内容，说明了如何找到匹配给定字符串的最右侧子串。
 
-***代码列表 3.14: MaxSubstrSequence.java***
+**Listing 3.14: MaxSubstrSequence.java**
 
-```
- public class MaxSubstrSequence
+
+
+# 最长子串序列
+
+本节包含 Java 示例，用于搜索字符串以确定：最长的唯一字符序列、最长的重复子串。
+
+## 最长唯一字符序列
+
+代码列表 3.14 显示了 `MaxSubstrSequence.java` 的内容，说明了如何找到最长的唯一字符序列。
+
+```java
+public class MaxSubstrSequence
 {
-   public static void rightmost_substr(String my_str,String substr)
+   public static void rightmost_substr(String my_str, String substr)
    {
       int left = -1;
       int len_substr = substr.length();
@@ -3518,8 +3420,7 @@ max sequence of e: 3
 
       // 从右向左检查 substr
       for(int i=my_str.length()-len_substr; i>=0; i--) {
-        //String curr_str = my_str[i:i+len_substr];
-        String curr_str = my_str.substring(i,i+len_substr);
+        String curr_str = my_str.substring(i, i+len_substr);
 
         if(substr.equals(curr_str)) {
           left = i;
@@ -3538,7 +3439,7 @@ max sequence of e: 3
 
    public static void main(String[] args)
    {
-      String[] str_list    =
+      String[] str_list =
               new String[]{"abcdef","aaaxyz","abcdeeefghij"};
 
       String[] substr_list = new String[]{"bcd","aaa","cde"};
@@ -3546,37 +3447,31 @@ max sequence of e: 3
       for(int idx=0; idx<str_list.length; idx++) {
         String my_str = str_list[idx];
         String substr = substr_list[idx];
-        rightmost_substr(my_str,substr);
+        rightmost_substr(my_str, substr);
       }
    }
 }
 ```
 
-代码列表 3.14 从 `rightmost_substr` 函数开始，其参数为字符串 `my_str` 和子串 `substr`。该函数包含一个循环，对 `my_str` 和 `substr` 执行从右向左的比较，向左移动一位，直到循环到达字符串 `my_str` 的第一个索引。
+代码列表 3.14 从 `rightmost_substr()` 函数开始，其参数为字符串 `my_str` 和子串 `substr`。该函数包含一个循环，对 `my_str` 和 `substr` 执行从右向左的比较，向左移动一位，直到循环到达字符串 `my_str` 的第一个索引。
 
 循环执行完成后，变量 `left` 包含 `my_str` 与 `substr` 匹配的索引位置，其值将是非负的。如果没有匹配，则会打印相应的消息。运行代码列表 3.14 中的代码，你会看到以下输出：
 
 ```
- initial substr: bcd
+initial substr: bcd
 bcd is in index 0 of abcdef
- initial substr: aaa
+
+initial substr: aaa
 aaa is in index 1 of aaaxyz
- initial substr: cde
+
+initial substr: cde
 cde is in index 2 of abcdeeefghij
 ```
 
-### 任务：最长子串序列
-
-本节包含 Java 示例，用于搜索字符串以确定：最长的唯一字符序列、最长的重复子串
-
-## 最长唯一字符序列
-
 代码列表 3.15 显示了 `LongestUnique.java` 内容，说明了如何找到最长的唯一字符序列。
 
-***代码列表 3.15: LongestUnique.java***
-
-```
- import java.util.Hashtable;
+```java
+import java.util.Hashtable;
 
 public class LongestUnique
 {
@@ -3590,7 +3485,7 @@ public class LongestUnique
         String ch_str = "" + my_str.charAt(pos);
 
         Integer count = 0;
-        if (ht.containsKey(ch_str)) 
+        if (ht.containsKey(ch_str))
           count = ht.get(ch_str);
 
         if (count > 0) {
@@ -3601,18 +3496,16 @@ public class LongestUnique
           ht.put(ch_str, 1);
 
           String unique = my_str.substring(left,pos+1);
-          //System.out.println("unique string:"+unique);
 
           if(longest.length() < unique.length()) {
             longest = unique;
             right = pos;
           } else {
-            //System.out.println("new hashtable:");
             ht = new Hashtable<String,Integer>();
             left = pos+1;
             right = pos+1;
           }
-        } 
+        }
       }
 
       System.out.println("original string:"+my_str);
@@ -3621,7 +3514,6 @@ public class LongestUnique
 
    public static void main(String[] args)
    {
-      //String [] str_list = new String[]{"ACCC"};
       String [] str_list = new String[]{"abcdef","aaaxyz","abcdeeefghij"};
 
       for(int idx=0; idx<str_list.length; idx++) {
@@ -3632,35 +3524,124 @@ public class LongestUnique
 }
 ```
 
-代码列表 3.15 从 `rightmost_substr` 函数开始，其参数为字符串 `my_str`。该函数包含一个从右向左的循环并将当前索引处的字符存储在字典 `my_dict` 中。如果该字符已经遇到，那么它就是一个重复字符，此时会将当前子串的长度与到为止发现的最长子串的长度进行比较，此时变量 `longest` 将更新为新值。此外，左位置 `left` 和右位置 `right` 被重置为 pos+1，唯一子串的搜索重新开始。
+代码列表 3.15 从 `rightmost_substr()` 函数开始，其参数为字符串 `my_str`。该函数包含一个从右向左的循环并将当前索引处的字符存储在字典 `ht` 中。如果该字符已经遇到，那么它就是一个重复字符，此时会将当前子串的长度与到为止发现的最长子串的长度进行比较，此时变量 `longest` 将更新为新值。此外，左位置 `left` 和右位置 `right` 被重置为 `pos+1`，唯一子串的搜索重新开始。
 
 在完成本节后，你可以探索这些任务的变体。
 
-
-
-
-
-Listing 3.15 的后续部分将变量 `str_list` 初始化为字符串数组，紧接着是一个遍历 `str_list` 元素的循环。在每次迭代中，都会调用 `rightmost_substr()` 函数来寻找当前字符串中最长的唯一子串。在 Listing 3.15 中运行该代码，你将看到如下的输出：
+代码列表 3.15 的后续部分将变量 `str_list` 初始化为字符串数组，紧接着是一个遍历 `str_list` 元素的循环。在每次迭代中，都会调用 `rightmost_substr()` 函数来寻找当前字符串中最长的唯一子串。在代码列表 3.15 中运行该代码，你将看到如下的输出：
 
 ```
- checking: abcdef
+original string:abcdef
 longest unique: abcdef
 
-checking: aaaxyz
+original string:aaaxyz
 longest unique: axyz
 
-checking: abcdeeefghij
+original string:abcdeeefghij
 longest unique: efghij
 ```
 
-### 最长重复子串
+## 最长重复子串
 
-Listing 3.16 显示了 `MaxRepeatedSubstr.java` 的内容，阐明了如何在给定字符串中找到重复的最长子串。
-
-***列表 3.16: MaxRepeatedSubstr.java***
+代码列表 3.16 显示了 `MaxRepeatedSubstr.java` 的内容，阐明了如何在给定字符串中找到重复的最长子串。
 
 ```java
- public class MaxRepeatedSubstr
+public class MaxRepeatedSubstr
+{
+   public static String[] check_string(String my_str, String sub_str, int pos)
+   {
+     String match = "", part_str = "";
+     int left = 0, right = 0;
+
+     int str_len = my_str.length();
+     int sub_len = sub_str.length();
+
+     for(int i=0; i<str_len-sub_len-pos; i++) {
+       left  = pos+sub_len+i;
+       right = left+sub_len;
+
+       if(right > str_len) {
+         break;
+       }
+
+       part_str = my_str.substring(left,right);
+
+       if(part_str.equals(sub_str)) {
+         match = part_str;
+         break;
+       }
+     }
+
+     return new String[]{match,Integer.toString(left)};
+   }
+
+   public static void main(String[] args)
+   {
+      System.out.println("==> Repeating substrings have length >= 2");
+      String [] my_strings =
+       new String[]{"abc","abab","abccba","azaaza","abcdefgabccbaxyz"};
+
+      for(String my_str : my_strings) {
+        System.out.println("=> Checking current string:     "+my_str);
+        int half_len = (int)(my_str.length()/2);
+        int max_len = 0;
+        String max_str = "";
+
+        for(int i=0; i<half_len+1; i++) {
+          for(int j=2; j<half_len+1; j++) {
+            String sub_str = my_str.substring(i,i+j);
+            String[] result = check_string(my_str, sub_str,i);
+            String a_str = result[0];
+            int left     = Integer.parseInt(result[1]);
+
+            if(a_str != "") {
+             if(max_len < a_str.length()) {
+                max_len = a_str.length();
+                max_str = a_str;
+              }
+            }
+          }
+        }
+
+        if(max_str != "")
+          System.out.println("=> Maximum repeating substring: "+max_str+"\n");
+        else
+          System.out.println("No maximum repeating substring: "+my_str+"\n");
+      }
+   }
+}
+```
+
+代码列表 3.16 从 `check_string()` 函数开始，该函数检查字符串 `sub_str` 是否为 `my_str` 的子串，其长度分别赋值给整数变量 `sub_len` 和 `str_len`。代码列表 3.16 的后续部分包含一个循环，该循环遍历字符串 `sub_str` 中的字符，其索引位置最多为 `str_len-sub_len-pos`，以确保其不会超过 `sub_str` 的长度。注意，该循环使用“滑动窗口”来比较 `my_str` 中长度与 `sub_str` 长度相等的子串：如果它们相等，则 `my_str` 中存在重复字符串，并返回结果。
+
+代码列表 3.16 的后续部分定义了 `main()` 方法，该方法首先用一组字符串初始化数组 `my_strings`，每个字符串都将被检查以确定其是否包含长度至少为 2 的重复子串。`main()` 方法的后续部分是一个外层循环，它遍历 `my_strings` 数组的每个元素。
+
+在每次迭代中，一个嵌套循环处理当前元素，其中包含另一个嵌套循环，从索引位置 0 遍历到当前元素的中间点。接下来，提取当前元素的子串并通过 `check_string()` 方法进行处理，以确定是否存在匹配的子串。此外，将返回的值与最长重复子串的当前“候选”值进行比较，并相应地更新值。
+
+最后的条件代码块根据 `my_strings` 中的当前元素是否包含重复子串来显示消息。在代码列表 3.16 中运行代码，你将看到如下输出：
+
+```
+==> Repeating substrings have length >= 2
+=> Checking current string:     abc
+No maximum repeating substring: abc
+
+=> Checking current string:     abab
+=> Maximum repeating substring: ab
+
+=> Checking current string:     abccba
+=> Maximum repeating substring: cc
+
+=> Checking current string:     azaaza
+=> Maximum repeating substring: aza
+
+=> Checking current string:     abcdefgabccbaxyz
+=> Maximum repeating substring: abc
+```
+
+
+
+```java
+public class MaxRepeatedSubstr
 {
    public static String[] check_string(String my_str, String sub_str, int pos)
    {
@@ -3729,108 +3710,13 @@ Listing 3.16 显示了 `MaxRepeatedSubstr.java` 的内容，阐明了如何在�
 }
 ```
 
-Listing 3.16 从 `check_string()` 函数开始，该函数检查字符串 `sub_str` 是否为 `my_str` 的子串，其长度分别赋值给整数变量 `sub_len` 和 `str_len`。Listing 3.16 的后续部分包含一个循环，该循环遍历字符串 `substr` 中的字符，其索引位置最多为 `str_len-sub_len-pos`，以确保其不会超过 `substr` 的长度。注意，该循环使用“滑动窗口”来比较 `my_str` 中长度与 `sub_str` 长度相等的子串：如果它们相等，则 `my_str` 中存在重复字符串，并返回结果。
+Listing 3.16 从`check_string()`函数开始，该函数检查字符串`sub_str`是否为`my_str`的子串，其长度分别赋值给整数变量`sub_len`和`str_len`。Listing 3.16 的后续部分包含一个循环，该循环遍历字符串`substr`中的字符，其索引位置最多为`str_len-sub_len-pos`，以确保其不会超过`substr`的长度。注意，该循环使用“滑动窗口”来比较`my_str`中长度与`sub_str`长度相等的子串：如果它们相等，则`my_str`中存在重复字符串，并返回结果。
 
-Listing 3.16 的后续部分定义了 `main()` 方法，该方法首先用一组字符串初始化数组 `my_strings`，每个字符串都将被检查以确定其是否包含长度至少为 2 的重复子串。`main()` 方法的后续部分是一个外层循环，它遍历 `my_strings` 数组的每个元素。
+Listing 3.16 的后续部分定义了`main()`方法，该方法首先用一组字符串初始化数组`my_strings`，每个字符串都将被检查以确定其是否包含长度至少为 2 的重复子串。`main()`方法的后续部分是一个外层循环，它遍历`my_strings`数组的每个元素。
 
-在每次迭代中，一个嵌套循环处理当前元素，其中包含另一个嵌套循环，从索引位置 0 遍历到当前元素的中间点。接下来，提取当前元素的子串并通过 `check_string()` 方法进行处理，以确定是否存在匹配的子串。此外，将返回的值与最长重复子串的当前“候选”值进行比较，并相应地更新值。
+在每次迭代中，一个嵌套循环处理当前元素，其中包含另一个嵌套循环，从索引位置 0 遍历到当前元素的中间点。接下来，提取当前元素的子串并通过`check_string()`方法进行处理，以确定是否存在匹配的子串。此外，将返回的值与最长重复子串的当前“候选”值进行比较，并相应地更新值。
 
-最后的条件代码块根据 `my_strings` 中的当前元素是否包含重复子串来显示消息。在 Listing 3.15 中运行代码，你将看到如下输出：
-
-```
- checking: abcdef
-longest unique: abcdef
-
-checking: aaaxyz
-longest unique: axyz
-
-checking: abcdeeefghij
-longest unique: efghij
-```
-
-### 最长重复子串
-
-Listing 3.16 显示了 `MaxRepeatedSubstr.java` 的内容，阐明了如何在给定字符串中找到重复的最长子串。
-
-***列表 3.16: MaxRepeatedSubstr.java***
-
-```java
- public class MaxRepeatedSubstr
-{
-   public static String[] check_string(String my_str, String sub_str, int pos)
-   {
-     String match = "", part_str = "";
-     int left = 0, right = 0;
-
-     int str_len = my_str.length();
-     int sub_len = sub_str.length();
-     //System.out.println("my_str: "+my_str+" sub_str: "+sub_str);
-
-     for(int i=0; i<str_len-sub_len-pos; i++) {
-       left  = pos+sub_len+i;
-       right = left+sub_len;
-       //System.out.println("left: "+left+" right: "+right");
-
-       if(right > str_len) {
-         //System.out.println("right too large: "+right);
-         break;
-       }
-
-       part_str = my_str.substring(left,right);
-
-       if(part_str.equals(sub_str)) {
-         match = part_str;
-         break;
-       }
-     }
-
-     return new String[]{match,Integer.toString(left)};
-   }
-
-   public static void main(String[] args)
-   {
-      System.out.println("==> Repeating substrings have length >= 2");
-      String [] my_strings = 
-       new String[]{"abc","abab","abccba","azaaza","abcdefgabccbaxyz"};
-
-      for(String my_str : my_strings) {
-        System.out.println("=> Checking current string:     "+my_str);
-        int half_len = (int)(my_str.length()/2);
-        int max_len = 0;
-        String max_str = "";
-
-        for(int i=0; i<half_len+1; i++) {
-          for(int j=2; j<half_len+1; j++) {
-            String sub_str = my_str.substring(i,i+j);
-            String[] result = check_string(my_str, sub_str,i);
-            String a_str = result[0];
-            int left     = Integer.parseInt(result[1]);
-
-            if(a_str != "") {
-             if(max_len < a_str.length()) {
-                max_len = a_str.length();
-                max_str = a_str;
-              }
-            }
-          }
-        }
-
-        if(max_str != "")
-          System.out.println("=> Maximum repeating substring: "+max_str+"\n");
-        else
-          System.out.println("No maximum repeating substring: "+my_str+"\n");
-      }
-   }
-}
-```
-
-Listing 3.16 从 `check_string()` 函数开始，该函数检查字符串 `sub_str` 是否为 `my_str` 的子串，其长度分别赋值给整数变量 `sub_len` 和 `str_len`。Listing 3.16 的后续部分包含一个循环，该循环遍历字符串 `substr` 中的字符，其索引位置最多为 `str_len-sub_len-pos`，以确保其不会超过 `substr` 的长度。注意，该循环使用“滑动窗口”来比较 `my_str` 中长度与 `sub_str` 长度相等的子串：如果它们相等，则 `my_str` 中存在重复字符串，并返回结果。
-
-Listing 3.16 的后续部分定义了 `main()` 方法，该方法首先用一组字符串初始化数组 `my_strings`，每个字符串都将被检查以确定其是否包含长度至少为 2 的重复子串。`main()` 方法的后续部分是一个外层循环，它遍历 `my_strings` 数组的每个元素。
-
-在每次迭代中，一个嵌套循环处理当前元素，其中包含另一个嵌套循环，从索引位置 0 遍历到当前元素的中间点。接下来，提取当前元素的子串并通过 `check_string()` 方法进行处理，以确定是否存在匹配的子串。此外，将返回的值与最长重复子串的当前“候选”值进行比较，并相应地更新值。
-
-最后的条件代码块根据 `my_strings` 中的当前元素是否包含重复子串来显示消息。在 Listing 3.15 中运行代码，你将看到如下输出：
+最后的条件代码块根据`my_strings`中的当前元素是否包含重复子串来显示消息。在 Listing 3.15 中运行代码，你将看到如下输出：
 
 ```
  checking: abcdef
@@ -3845,18 +3731,18 @@ longest unique: efghij
 
 结束了关于字符串的部分。下一节引入一维数组。
 
-### 使用一维数组
+## 使用一维数组
 
-Java 中的一维数组是一种元素同质的结构（不允许混合类型）。给定两个数组 A 和 B，只要它们具有相同的数量，你就可以对它们进行加减法。你还可以计算向量的内积。
+Java 中的一维数组是一种元素同质的结构（不允许混合类型）。给定两个数组`A`和`B`，只要它们具有相同的数量，你就可以对它们进行加减法。你还可以计算向量的内积。
 
-#### 数组
+### 数组
 
-Listing 3.17 显示了 `RotateArray.java` 的内容，阐明了如何旋转数组中的元素。
+Listing 3.17 显示了`RotateArray.java`的内容，阐明了如何旋转数组中的元素。
 
-***列表 3.17: RotateArray.java***
+**列表 3.17: RotateArray.java**
 
 ```java
- import java.util.ArrayList;
+import java.util.ArrayList;
 
 public class RotateArray
 {
@@ -3890,12 +3776,13 @@ public class RotateArray
 }
 ```
 
-Listing 3.17 将变量 `list` 初始化为整数列表，并将变量 `shift_count` 初始化为值 2：后者是列表元素向左移动的次数。Listing 3.17 的后续部分是一个循环，它执行两个操作：
+Listing 3.17 将变量`list`初始化为整数列表，并将变量`shift_count`初始化为值 2：后者是列表元素向左移动的次数。Listing 3.17 的后续部分是一个循环，它执行两个操作：
 
-*   “弹出” `list` 的左侧元素
-*   将该元素附加 `list` 以成为新的右侧元素
+*   “弹出”`list`的左侧元素
 
-该循环执行 `shift_count` 次迭代后，list 中的元素已按照指定的次数进行了旋转。在 Listing 3.18 中运行代码，你将看到如下输出：
+*   将该元素附加`list`以成为新的右侧元素
+
+该循环执行`shift_count`次迭代后，list 中的元素已按照指定的次数进行了旋转。在 Listing 3.18 中运行代码，你将看到如下输出：
 
 ```
  arr1_len: 7
@@ -3905,14 +3792,10 @@ rotated:  17 23 30 47 50 5 10
 
 ### 任务：反转相邻数组元素
 
-Listing 3.18 显示了 `InvertItems.java` 的内容，阐明了如何对数组中的相邻元素进行两对反转。具体而言，交换索引 0 和索引 1，然后交换索引 2 和索引 3，依此类推，直到数组结束。
-
-
-
-
+Listing 3.18 显示了`InvertItems.java`的内容，阐明了如何对数组中的相邻元素进行两对反转。具体而言，交换索引 0 和索引 1，然后交换索引 2 和索引 3，依此类推，直到数组结束。
 
 ```java
- import java.util.Arrays;
+import java.util.Arrays;
 
 public class InvertItems
 {
@@ -3937,19 +3820,19 @@ public class InvertItems
 }
 ```
 
-Listing 3.18 从整数数组 `arr1` 以及作为 `arr1` 中点的变量 `mid_point` 开始。Listing 3.18 的下一部分包含一个从索引 `0` 迭代到索引 `mid_point+2` 的循环，其中循环变量 `ndx` 在每次迭代后增加 `2`（而不是 `1`）。如你所见，该代码通过一个名为 `temp` 的临时变量对 `arr1` 中索引位置 `ndx` 和 `ndx+1` 的内容执行了标准的“交换”。在 Listing 3.18 中运行代码，你将看到以下输出：
+Listing 3.18 从整数数组`arr1`以及作为`arr1`中点的变量`mid_point`开始。Listing 3.18 的下一部分包含一个从索引`0`迭代到索引`mid_point+2`的循环，其中循环变量`ndx`在每次迭代后增加`2`（而不是`1`）。如你所见，该代码通过一个名为`temp`的临时变量对`arr1`中索引位置`ndx`和`ndx+1`的内容执行了标准的“交换”。在 Listing 3.18 中运行代码，你将看到以下输出：
 
 ```
  original: [ 5 10 17 23 30 47 50]
 inverted: [10  5 23 17 47 30 50]
 ```
 
-Listing 3.20 显示了 Java 文件 `Swap.java` 的内容，它说明了如何在不使用中间临时变量的情况下反转数组中相邻的值。注意，Listing 3.18 不需要临时变量 `temp` 来切换相邻值，而 Listing 3.19 则依赖于一个临时中间变量。
+Listing 3.20 显示了 Java 文件`Swap.java`的内容，它说明了如何在不使用中间临时变量的情况下反转数组中相邻的值。注意，Listing 3.18 不需要临时变量`temp`来切换相邻值，而 Listing 3.19 则依赖于一个临时中间变量。
 
-***LISTING 3.19: Swap.java***
+**LISTING 3.19: Swap.java**
 
 ```java
- import java.util.Arrays;
+import java.util.Arrays;
 
 public class Swap
 {
@@ -3987,7 +3870,7 @@ public class Swap
 }
 ```
 
-Listing 3.19 从切换两个数字值的 `swap` 函数开始。如果这段代码对你不清楚，请尝试使用硬编码的 `num1` 和 `num2` 值手动执行这段代码。Listing 3.19 的下一部分初始化了整数数组 `arr1`，紧接着是一个遍历 `arr1` 值的值的循环，并在每次迭代期间调用 `swap` 函数。在 Listing 3.19 中运行代码，你将看到以下输出：
+Listing 3.19 从切换两个数字值的`swap`函数开始。如果这段代码对你不清楚，请尝试使用硬编码的`num1`和`num2`值手动执行这段代码。Listing 3.19 的下一部分初始化了整数数组`arr1`，紧接着是一个遍历`arr1`值的值的循环，并在每次迭代期间调用`swap`函数。在 Listing 3.19 中运行代码，你将看到以下输出：
 
 ```
  BEFORE arr1: [15  4 23 35 80 50]
@@ -3996,12 +3879,12 @@ AFTER  arr1: [ 4 15 35 23 50 80]
 
 ### 任务：非零元素左移
 
-Listing 3.20 显示了 `ShiftZeroesLeft.java` 的内容，说明了如何在保持相对位置的同时将非零值向左移动。
+Listing 3.20 显示了`ShiftZeroesLeft.java`的内容，说明了如何在保持相对位置的同时将非零值向左移动。
 
-***LISTING 3.20: ShiftZeroesLeft.java***
+**LISTING 3.20: ShiftZeroesLeft.java**
 
 ```java
- public class ShiftZeroesLeft
+public class ShiftZeroesLeft
 {
    public static void main(String[] args)
    {
@@ -4046,7 +3929,7 @@ Listing 3.20 显示了 `ShiftZeroesLeft.java` 的内容，说明了如何在保�
 }
 ```
 
-Listing 3.20 从一个 `main()` 函数开始，该函数初始化了整数数组 `arr1`，随后是一个显示 `arr1` 内容的循环。第二个循环遍历 `arr1` 以确定最左侧非零值的索引，并赋值给 `left`。第三个循环从 `left+1` 开始，对位置较小（即左侧）的非零值执行右移。接下来，`arr1[left]` 初始化为 `0`，完成非零值的右移。此过程持续到 `arr1` 的最右侧元素被处理完毕。在 Listing 3.20 中运行代码，你将看到以下输出：
+Listing 3.20 从一个`main()`函数开始，该函数初始化了整数数组`arr1`，随后是一个显示`arr1`内容的循环。第二个循环遍历`arr1`以确定最左侧非零值的索引，并赋值给`left`。第三个循环从`left+1`开始，对位置较小（即左侧）的非零值执行右移。接下来，`arr1[left]`初始化为`0`，完成非零值的右移。此过程持续到`arr1`的最右侧元素被处理完毕。在 Listing 3.20 中运行代码，你将看到以下输出：
 
 ```
  Initial:
@@ -4059,14 +3942,16 @@ switched:
 0 0 0 0 10 30 60 200 
 ```
 
+
+
 ### 任务：在 O(N) 时间内原地排序数组
 
-Listing 3.21 显示了 `SimpleSort.java` 的内容，说明了在不使用其他数据结构的情况下对包含数量 `0`、`1` 和 `2` 的数组进行简单排序的方法。
+`Listing 3.21` 显示了 `SimpleSort.java` 的内容，说明了在不使用其他数据结构的情况下对包含数量 `0`、`1` 和 `2` 的数组进行简单排序的方法。
 
-***LISTING 3.21: SimpleSort.java***
+**LISTING 3.21: SimpleSort.java**
 
 ```java
- public class SimpleSort
+public class SimpleSort
 {
    public static void main(String[] args)
    {
@@ -4095,12 +3980,12 @@ Listing 3.21 显示了 `SimpleSort.java` 的内容，说明了在不使用其他
 }
 ```
 
-Listing 3.21 包含一个 `main()` 方法，该方法初始化数组 `arr1` 具有相同数量的 `0`、`1` 和 `2`。因此，如果 `arr1` 的长度必须为 `3*n`（其中 `n` 是正整数），我们使用一个循环，将 `arr1` 的前三分之一设置为 `0`，中间三分之一设置为值 `1`，“最后三分之一”设置为值 `2`。
+`Listing 3.21` 包含一个 `main()` 方法，该方法初始化数组 `arr1` 具有相同数量的 `0`、`1` 和 `2`。因此，如果 `arr1` 的长度必须为 `3*n`（其中 `n` 是正整数），我们使用一个循环，将 `arr1` 的前三分之一设置为 `0`，中间三分之一设置为值 `1`，“最后三分之一”设置为值 `2`。
 
-我们可以执行前面的循环，因为任务描述中的关键词是“相等的”，因此不需要其他数据结构、临时变量或对数组 `arr1` 中的元素对之间进行任何比较。在 Listing 3.21 中运行代码，你将看到以下输出：
+我们可以执行前面的循环，因为任务描述中的关键词是“相等的”，因此不需要其他数据结构、临时变量或对数组 `arr1` 中的元素对之间进行任何比较。在 `Listing 3.21` 中运行代码，你将看到以下输出：
 
 ```
- Initial:
+Initial:
 0 1 2 2 1 0 0 1 2
 Sorted:
 0 0 0 1 1 1 2 2 2
@@ -4110,14 +3995,10 @@ Sorted:
 
 该任务的解决方案基于这样一个观察：具有两个输入的 `AND` 运算符会生成三个 `0` 和一个 `1`：我们只需要随机生成一个 `0` 和一个 `1`，并将这些随机值作为输入提供给 `AND` 运算符。
 
-Listing 3.22 显示了 `GenerateZeroOrOne.java` 的内容，说明了如何按预期频率生成 `0` 和 `1`。
-
-
-
-
+`Listing 3.22` 显示了 `GenerateZeroOrOne.java` 的内容，说明了如何按预期频率生成 `0` 和 `1`。
 
 ```java
- public class GenerateZeroOrOne
+public class GenerateZeroOrOne
 { 
    public static void main(String[] args)
    {
@@ -4139,22 +4020,22 @@ Listing 3.22 显示了 `GenerateZeroOrOne.java` 的内容，说明了如何按�
 }
 ```
 
-Listing 3.22 定义了一个 `main()` 方法，将整数型变量 `zeroes`、`ones` 和 `max` 分别初始化为值 0、0 和 100。后续部分代码包含一个从 0 迭代到 `max` 的循环。每次迭代将变量 `x` 和 `y` 初始化为 0 或 1 的随机整数值，然后用 `x` 和 `y` 的逻辑或（OR）结果初始化变量 `xy`。循环的后续部分根据 `xy` 是否等于 0 或 1，分别增加 `ones` 或 `zeroes`。Listing 3.22 中的最后一个代码块显示了 `max`、`ones` 和 `zeroes` 的值。运行 Listing 3.22 中的代码，你将看到以下输出：
+`Listing 3.22` 定义了一个 `main()` 方法，将整数型变量 `zeroes`、`ones` 和 `max` 分别初始化为值 `0`、`0` 和 `100`。后续部分代码包含一个从 `0` 迭代到 `max` 的循环。每次迭代将变量 `x` 和 `y` 初始化为 `0` 或 `1` 的随机整数值，然后用 `x` 和 `y` 的逻辑或（OR）结果初始化变量 `xy`。循环的后续部分根据 `xy` 是否等于 `0` 或 `1`，分别增加 `ones` 或 `zeroes`。`Listing 3.22` 中的最后一个代码块显示了 `max`、`ones` 和 `zeroes` 的值。运行 `Listing 3.22` 中的代码，你将看到以下输出：
 
 ```
- Percentages (100 iterations):
+Percentages (100 iterations):
 ones:  74
 zeoes: 26
 ```
 
 ### 任务：反转偶数位和奇数位的位
 
-此任务的解决方案包含两个部分：第一部分“提取”偶数位上的位并将结果右移一位，随后是第二部分，提取奇数位上的位并将结果左移一位。Listing 3.23 显示了 `SwitchBitPairs.java` 的内容，展示了如何解决此任务。
+此任务的解决方案包含两个部分：第一部分“提取”偶数位上的位并将结果右移一位，随后是第二部分，提取奇数位上的位并将结果左移一位。`Listing 3.23` 显示了 `SwitchBitPairs.java` 的内容，展示了如何解决此任务。
 
-LISTING 3.23: SwitchBitPairs.java
+**LISTING 3.23: SwitchBitPairs.java**
 
 ```java
- public class SwitchBitPairs
+public class SwitchBitPairs
 {
    public static void main(String[] args)
    {
@@ -4182,40 +4063,41 @@ LISTING 3.23: SwitchBitPairs.java
 }
 ```
 
-Listing 3.23 定义了一个 `main()` 方法，用一个包含四个整数的数组初始化整数型变量 `numbers`。后续代码包含一个遍历 `numbers` 数组元素的循环。每次迭代都将变量 `bnum` 初始化为 `num`（循环变量）的二进制表示。接下来，将整数型变量 `rnum` 初始化为两个数值的逻辑或结果，所示：
+`Listing 3.23` 定义了一个 `main()` 方法，用一个包含四个整数的数组初始化整数型变量 `numbers`。后续代码包含一个遍历 `numbers` 数组元素的循环。每次迭代都将变量 `bnum` 初始化为 `num`（循环变量）的二进制表示。接下来，将整数型变量 `rnum` 初始化为两个数值的逻辑或结果，所示：
 
-```
- int rnum = ((num & 0xaa) >> 1) | ((num & 0x55) << 1);
+```java
+int rnum = ((num & 0xaa) >> 1) | ((num & 0x55) << 1);
 ```
 
 前一个代码片段中的左项执行 `num` 与十六进制数 `0xaa` 的逻辑与（AND），然后执行右移。前一个代码片段中的右项执行 `num` 与十六进制数 `0x55` 的逻辑与，然后执行左移。
 
-Listing 3.23 中的下一个代码片段将变量 `sum` 初始化为 `rnum` 的基于字符串的二进制表示，随后是一段将 `rnum` 中的空白格替换为“0”的代码片段。Listing 3.24 的最后部分显示了循环中初始化所有变量的值。运行 Listing 3.23 中的代码，你将看到以下输出：
+`Listing 3.23` 中的下一个代码片段将变量 `sum` 初始化为 `rnum` 的基于字符串的二进制表示，随后是一段将 `rnum` 中的空白格替换为“0”的代码片段。`Listing 3.24` 的最后部分显示了循环中初始化所有变量的值。运行 `Listing 3.23` 中的代码，你将看到以下输出：
 
 ```
- num:  42 bnum:  101010
+num:  42 bnum:  101010
 rnum: 21 srnum: 10101 srnum2: 010101
 ----------------
 
- num:  37 bnum:  100101
+num:  37 bnum:  100101
 rnum: 43 srnum: 101011 srnum2: 101011
 ----------------
 
- num:  52 bnum:  110100
+num:  52 bnum:  110100
 rnum: 29 srnum: 11101 srnum2: 011101
 ----------------
 
- num:  63 bnum:  111111
+num:  63 bnum:  111111
 rnum: 45 srnum: 101101 srnum2: 101101
 ----------------
 ```
-*(注：原文提供的示例输出似乎不完整，此处根据代码逻辑补全了翻译中的输出部分以保持一致性)*
+
+*（注：原文提供的示例输出似乎不完整，此处根据代码逻辑补全了翻译中的输出部分以保持一致性）*
 
 ### 任务：检查二进制数中是否存在相邻位
 
-此任务的解决方案包含两个部分：第一部分“提取”偶数位上的位并将结果右移一位，随后是第二部分，提取奇数位上的位并将结果左移一位。Listing 3.24 显示了 `CheckBits.java` 的内容，展示了如何解决此任务。
+此任务的解决方案包含两个部分：第一部分“提取”偶数位上的位并将结果右移一位，随后是第二部分，提取奇数位上的位并将结果左移一位。`Listing 3.24` 显示了 `CheckBits.java` 的内容，展示了如何解决此任务。
 
-LISTING 3.24: CheckBits.java
+**LISTING 3.24: CheckBits.java**
 
 ```java
 public class CheckBits
@@ -4239,21 +4121,22 @@ public class CheckBits
 }
 ```
 
-Listing 3.24 定义了一个 `main()` 方法，用一个包含四个整数的数组初始化整数型变量 `arr`。后续代码包含一个遍历 `arr` 数组元素的循环。每次迭代都将变量 `bnum` 初始化为 `num`（循环变量）的二进制表示。接下来，整数型变量 `rnum` 被初始化为两个数值的逻辑或结果，所示：
+`Listing 3.24` 定义了一个 `main()` 方法，用一个包含四个整数的数组初始化整数型变量 `arr`。后续代码包含一个遍历 `arr` 数组元素的循环。每次迭代都将变量 `bnum` 初始化为 `num`（循环变量）的二进制表示。接下来，整数型变量 `rnum` 被初始化为两个数值的逻辑或结果，所示：
 
+```java
+int rnum = ((num & 0xaa) >> 1) | ((num & 0x55) << 1);
 ```
- int rnum = ((num & 0xaa) >> 1) | ((num & 0x55) << 1);
-```
-*(注：此处根据上下文逻辑修正了原文描述中可能误的变量名 `sum` 为 `arr` 的对应)*
+
+*（注：此处根据上下文逻辑修正了原文描述中可能误的变量名 `sum` 为 `arr` 的对应）*
 
 ### 任务：计数范围内的位数
 
-此任务的解决方案包含 Listing 3.25 中的 `BitCount.java` 文件内容，展示了如何解决此任务。
+此任务的解决方案包含 `Listing 3.25` 中的 `BitCount.java` 文件内容，展示了如何解决此任务。
 
-LISTING 3.25: BitCount.java
+**LISTING 3.25: BitCount.java**
 
 ```java
- public class BitCount
+public class BitCount
 { 
    public static void main(String[] args)
    {
@@ -4269,18 +4152,14 @@ LISTING 3.25: BitCount.java
 }
 ```
 
-
-
-
-
 ### 任务：找到数字中最右侧的置位
 
-该任务的解决方案涉及列表 3.26，该列表显示了 Java 脚本 `RightMostSetBit.java` 的内容，该脚本说明了如何解决此任务。
+该任务的解决方案涉及列表 `3.26`，该列表显示了 Java 脚本 `RightMostSetBit.java` 的内容，该脚本说明了如何解决此任务。
 
-列表 3.26：`RightMostSetBit.java`
+**列表 3.26：`RightMostSetBit.java`**
 
 ```java
- public class RightMostSetBit
+public class RightMostSetBit
 {
    public static void main(String[] args)
    {
@@ -4302,12 +4181,12 @@ LISTING 3.25: BitCount.java
 }
 ```
 
-列表 3.26 定义了一个 `main()` 方法，该方法使用包含四个整数的数组初始化整数值数组 `numbers`。下一部分代码包含一个循环，遍历数组 `numbers` 的元素。每次迭代根据基于位的操作初始化变量 `two1` 和 `two2`，这些操作分别涉及 `(num–1)` 的补码以及 `num` 与前面的数量的逻辑与运算（用于 two1 和 two2）。
+列表 `3.26` 定义了一个 `main()` 方法，该方法使用包含四个整数的数组初始化整数值数组 `numbers`。下一部分代码包含一个循环，遍历数组 `numbers` 的元素。每次迭代根据基于位的操作初始化变量 `two1` 和 `two2`，这些操作分别涉及 `(num–1)` 的补码以及 `num` 与前面的数量的逻辑与运算（用于 `two1` 和 `two2`）。
 
-列表 3.26 的内部嵌套部分初始化了字符串值变量 `padn`，将 `num` 中的空格字符替换为字符串“0”。最后一段代码片段打印 `num`、`two1` 和 `two2` 的值。运行列表 3.26 中的代码，你将看到以下输出：
+列表 `3.26` 的内部嵌套部分初始化了字符串值变量 `padn`，将 `num` 中的空格字符替换为字符串“0”。最后一段代码片段打印 `num`、`two1` 和 `two2` 的值。运行列表 `3.26` 中的代码，你将看到以下输出：
 
 ```
- num: 42 two1: -42 two2: 2 padn: 101010
+num: 42 two1: -42 two2: 2 padn: 101010
 num: 37 two1: -37 two2: 1 padn: 100101
 num: 52 two1: -52 two2: 4 padn: 110100
 num: 63 two1: -63 two2: 1 padn: 111111
@@ -4315,12 +4194,12 @@ num: 63 two1: -63 two2: 1 padn: 111111
 
 ### 任务：使所有字符相等所需的操作次数
 
-该任务的解决方案涉及列表 3.27，该列表显示了 Java 文件 `FlipBitCount.java` 的内容，该脚本说明了如何解决此任务。
+该任务的解决方案涉及列表 `3.27`，该列表显示了 Java 文件 `FlipBitCount.java` 的内容，该脚本说明了如何解决此任务。
 
-列表 3.27：`FlipBitCount.java`
+**列表 3.27：`FlipBitCount.java`**
 
 ```java
- public class FlipBitCount
+public class FlipBitCount
 {
    // 确定最小操作次数
    // 使字符串中的所有字符相等
@@ -4352,12 +4231,12 @@ num: 63 two1: -63 two2: 1 padn: 111111
 }
 ```
 
-列表 3.27 定义了静态方法 `minOperations()`，该方法通过一个遍历字符串 `the_string` 中字符并对相邻字符进行简单比较的循环，计算相邻（连续）字符的数量。
+列表 `3.27` 定义了静态方法 `minOperations()`，该方法通过一个遍历字符串 `the_string` 中字符并对相邻字符进行简单比较的循环，计算相邻（连续）字符的数量。
 
-列表 3.27 的下一部分初始化了字符串变量 `arr1`，然后定义了一个 `main()` 方法，该方法遍历数组 `numbers` 的元素（注：此处原文应为 arr1）。每次迭代都会显示当前字符串以及调用 `minOperations()` 方法处理当前字符串的结果。运行列表 3.27 中的代码，你将看到以下输出：
+列表 `3.27` 的下一部分初始化了字符串变量 `arr1`，然后定义了一个 `main()` 方法，该方法遍历数组 `numbers` 的元素（注：此处原文应为 `arr1`）。每次迭代都会显示当前字符串以及调用 `minOperations()` 方法处理当前字符串的结果。运行列表 `3.27` 中的代码，你将看到以下输出：
 
 ```
- String:  0101010101
+String:  0101010101
 Result:  9
 -----------------
 
@@ -4374,14 +4253,16 @@ Result:  0
 -----------------
 ```
 
-### 任务：不使用 XOR 运算符计算两个二进制数的异异或
+### 任务：不使用 XOR 运算符计算两个二进制数的异或
+
+
 
 该任务的解决方案涉及列表 3.28，该列表显示了 Java 文件 `XORWithoutXOR.java` 的内容，该脚本说明了如何解决此任务。
 
-列表 3.28：`XORWithoutXOR.java`
+**列表 3.28：`XORWithoutXOR.java`**
 
 ```java
- class XORWithoutXOR
+class XORWithoutXOR
 {
    public static int findBits(int x, int y)
    {
@@ -4405,24 +4286,21 @@ Result:  0
    }
 }
 ```
-*(注：由于原文列表 3.28 的代码描述存在乱码，此处根据任务描述重构了代码以保持逻辑通顺)*
 
-列表 3.28 定义了静态方法 `findBits(int x, int y)`，该方法通过位运算 `|`、`&` 和减法返回两个数的异异或结果。`main()` 方法初始化了两个数组 `arrx` 和 `arrry`，并遍历它们以显示进制值、二进制表示以及 `findBits(x, y)` 的结果。
+*（注：由于原文列表 3.28 的代码描述存在乱码，此处根据任务描述重构了代码以保持逻辑通顺）*
 
+列表 3.28 定义了静态方法 `findBits(int x, int y)`，该方法通过位运算 `|`、`&` 和减法返回两个数的异或结果。`main()` 方法初始化了两个数组 `arrx` 和 `arrry`，并遍历它们以显示进制值、二进制表示以及 `findBits(x, y)` 的结果。
 
+列表 3.29 从函数 `toBinaryString()` 的定义开始，该函数生成一个左侧填充 `0` 的 32 位二进制字符串。列表 3.29 的下部分定义了函数 `swapAdjacentBits()`，该函数通过对两个数值执行 `OR` 操作来交换相邻位。左侧数值计算整数 `n` 与值 `0xAAAAAAAA` 的 `AND` 结果，然后将结果右移一位。右侧数值计算整数 `n` 与值 `0x55555555` 的 `AND` 结果，然后将结果左移一位。`swapAdjacentBits()` 方法返回结果，如下所示：
 
-
-
-Listing 3.29 从函数 `toBinaryString()` 的定义开始，该函数生成一个左侧填充 `0` 的 32 位二进制字符串。Listing 3.29 的下部分定义了函数 `swapAdjacentBits()`，该函数通过对两个数值执行 `OR` 操作来交换相邻位。左侧数值计算整数 `n` 与值 `0xAAAAAAAA` 的 `AND`（与与）结果，然后将结果右移一位。右侧数值计算整数 `n` 与值 `0x55555555` 的 `AND` 结果，然后将结果左移一位。`swapAdjacentBits()` 方法返回结果，如下所示：
-
-```
- return (((n & 0xAAAAAAAA) >>1)|((n & 0x55555555) <<1));
+```java
+return (((n & 0xAAAAAAAA) >>1)|((n & 0x55555555) <<1));
 ```
 
-Listing 3.29 的后续部分定义了 `main()` 方法，该方法首先用一组数字初始化数组 `numbers`，随后通过循环遍历 `numbers` 中的值。在每次迭代中，程序都会显示当前数字的二进制值，然后显示“翻转”后数字的二进制值。运行 Listing 3.29 中的代码，你将看到以下输出：
+列表 3.29 的后续部分定义了 `main()` 方法，该方法首先用一组数字初始化数组 `numbers`，随后通过循环遍历 `numbers` 中的值。在每次迭代中，程序都会显示当前数字的二进制值，然后显示“翻转”后数字的二进制值。运行列表 3.29 中的代码，你将看到以下输出：
 
 ```
- 17 binary: 00000000000000000000000000010001
+17 binary: 00000000000000000000000000010001
 After Swapping:
 17 binary: 00000000000000000000000000100010
 
@@ -4437,11 +4315,11 @@ After Swapping:
 
 ## 二维数组的操作
 
-Java 中的*二维数组*是一种二维构造结构，其元素是同质的（即不允许允许混合数据类型）。给定两个数组 `A` 和 `B`，只要它们的行数和列数相同，你就可以对它们进行加法或减法运算。
+Java 中的二维数组是一种二维构造结构，其元素是同质的（即不允许混合数据类型）。给定两个数组 `A` 和 `B`，只要它们的行数和列数相同，你就可以对它们进行加法或减法运算。
 
 乘法的工作方式不同：如果你想用 `B` 乘以 `A` 的右侧（假设 `A` 是一个 `mxn` 矩阵），那么 `B` 必须是一个 `nxp` 矩阵。矩阵乘法的规则如下：`A` 的列数必须等于 `B` 的行数。
 
-此外，矩阵 `A` 的*转置*是另一个矩阵 `At`，其行和列是交换的。因此，如果 `A` 是一个 `mxn` 矩阵，那么 `At` 就是一个 `nxm` 矩阵。如果 `A = At`，则矩阵 `A` 是对称的。如果主对角线（左上角到右下角）上的值为 1，而其他值为 0，则矩阵 `A` 是单位矩阵 `I`。如果存在矩阵 `B` 使得 `A*B = B*A = I`，则矩阵 `A` 是可逆的。根据之前对两个矩阵乘积讨论，`A` 和 `B` 必须是具有相同行和列数的方矩阵。
+此外，矩阵 `A` 的转置是另一个矩阵 `At`，其行和列是交换的。因此，如果 `A` 是一个 `mxn` 矩阵，那么 `At` 就是一个 `nxm` 矩阵。如果 `A = At`，则矩阵 `A` 是对称的。如果主对角线（左上角到右下角）上的值为 1，而其他值为 0，则矩阵 `A` 是单位矩阵 `I`。如果存在矩阵 `B` 使得 `A*B = B*A = I`，则矩阵 `A` 是可逆的。根据之前对两个矩阵乘积的讨论，`A` 和 `B` 必须是具有相同行和列数的方矩阵。
 
 现在你已经了解了字符串的一些基础操作，接下来的小节将说明如何在 Java 中对矩阵执行各种任务。
 
@@ -4449,12 +4327,12 @@ Java 中的*二维数组*是一种二维构造结构，其元素是同质的（�
 
 提醒一下，矩阵 `A` 的转置是矩阵 `At`，其中 `A` 的行和列分别是矩阵 `At` 的列和行。
 
-Listing 3.30 显示了 `MatTranspose.java` 的内容，演示了如何找到一个 `mxn` 矩阵的转置。
+列表 3.30 显示了 `MatTranspose.java` 的内容，演示了如何找到一个 `mxn` 矩阵的转置。
 
-***列表 3.30: MatTranspose.java***
+**列表 3.30：`MatTranspose.java`**
 
-```
- public class MatTranspose
+```java
+public class MatTranspose
 {
    public static int[][] transpose(int[][]A, int rows, int cols)
    {
@@ -4493,26 +4371,22 @@ Listing 3.30 显示了 `MatTranspose.java` 的内容，演示了如何找到一�
 
 ### 总结
 
-本章从介绍一维向量开始，介绍了如何计算它们的长度以及向量内积。然后你学习了如何执行各种数字数字任务，例如乘法和除法。
+本章从介绍一维向量开始，介绍了如何计算它们的长度以及向量内积。然后你学习了如何执行各种数字任务，例如乘法和除法。
 
 此外，你学习了处理字符串，以及如何检查字符串的唯一字符、在字符串中插入字符以及查找字符串的排列。接下来，你学习了如何判断一个字符串是否为回文。
 
 此外，你学习了如何计算矩阵的转置，这等同于将图像位图旋转 90 度。
 
-
-
-
-
-在 RDBMS（关系型数据库管理系统）世界中，表通常有一个索引（有时是多个），以便更高效地执行表搜索。然而，索引涉及到一些额外的计算开销，它是一个存储在磁盘上的独立数据结构。相比之下，线性搜索仅涉及表中的数据。根据经验，当表行数超过 300 行时，基于索引的搜索效率更高（但结果可能有所异）。下一节将包含一个在数字数组上执行线性搜索的代码示例。
+在 RDBMS（关系型数据库管理系统）世界中，表通常有一个索引（有时是多个），以便更高效地执行表搜索。然而，索引涉及到一些额外的计算开销，它是一个存储在磁盘上的独立数据结构。相比之下，线性搜索仅涉及表中的数据。根据经验，当表行数超过 300 行时，基于索引的搜索效率更高（但结果可能有所差异）。下一节将包含一个在数字数组上执行线性搜索的代码示例。
 
 ### 线性搜索
 
 列表 4.1 显示了 `LinearSearch.java` 的内容，说明了如何对数字数组执行线性搜索。
 
-***列表 4.1：LinearSearch.java***
+**列表 4.1：`LinearSearch.java`**
 
-```
- public class LinearSearch
+```java
+public class LinearSearch
 { 
    public static void main(String[] args)
    {
@@ -4536,17 +4410,17 @@ Listing 3.30 显示了 `MatTranspose.java` 的内容，演示了如何找到一�
 
 列表 4.1 从变量 `found` 开始，其初始值为 `-1`，紧接着是搜索项 `123`，以及包含数字数组的数组 `arr1`。接下来，通过循环遍历整数数组 `arr1` 的元素，将每个元素与 `item` 的值进行比较。如果发生匹配，则将变量 `found` 设置为循环变量 `i` 的值，然后提前退出。
 
-列表 4.1 的最后部分检查变量 `found` 的值：如果它是非负的，则找到了搜索项（否则它不在数组中）。运行 列表 4.1 中的代码，你将看到以下输出：
+列表 4.1 的最后部分检查变量 `found` 的值：如果它是非负的，则找到了搜索项（否则它不在数组中）。运行列表 4.1 中的代码，你将看到以下输出：
 
 ```
- found 123 in position 3
+found 123 in position 3
 ```
 
 记住以下几点：尽管数组 `arr1` 包含一个排序的数字列表，但代码对于无序列表同样可以工作。
 
 ### 二分查找演练
 
-二分查找需要一个排序数组，并且可以通过迭代算法实现，也可以通过递归方案实现。其核心思想是将排序元素数组的中间元素与搜索元素进行比较。如果它们相等，则已找到该项；如果中间元素小于搜索元素，则对数组的右半部分重复上一步；如果中间元素大于搜索元素，则对数组的左半部分重复上一步。最终，该元素将被找到（如果它出现在数组中），或者当重复的数组拆分到子数组只有一个元素时时终止（即无法进行进一步拆分）。
+二分查找需要一个排序数组，并且可以通过迭代算法实现，也可以通过递归方案实现。其核心思想是将排序元素数组的中间元素与搜索元素进行比较。如果它们相等，则已找到该项；如果中间元素小于搜索元素，则对数组的右半部分重复上一步；如果中间元素大于搜索元素，则对数组的左半部分重复上一步。最终，该元素将被找到（如果它出现在数组中），或者当重复的数组拆分到子数组只有一个元素时终止（即无法进行进一步拆分）。
 
 让我们演练一次在排序的整数数组中搜索某项的二分查找。
 
@@ -4562,7 +4436,7 @@ Listing 3.30 显示了 `MatTranspose.java` 的内容，演示了如何找到一�
 
 *示例 #3*：`item` = 25，`arr1` = [10, 20, 25, 40, 100,150,400]，因此中点是 4。
 
-第一次迭代：由于 `arr1 [4] > 25`，我们搜索数组 [10, 20, 25]。
+第一次迭代：由于 `arr1[4] > 25`，我们搜索数组 [10, 20, 25]。
 
 第二次迭代：中点是 1，对应的值是 20。
 
@@ -4576,16 +4450,16 @@ Listing 3.30 显示了 `MatTranspose.java` 的内容，演示了如何找到一�
 
 第三次迭代：25 且数组为单个元素 [20]，因此没有匹配。
 
-正如本节第一段提到的，二分查找可以用交互式方案来实现，这是下一节的主题。
+正如本节第一段提到的，二分查找可以用迭代方案来实现，这是下一节的主题。
 
 ### 二分查找（迭代方案）
 
 列表 4.2 显示了 `BinarySearch.java` 的内容，阐述了如何对数字数组执行二分查找。
 
-***列表 4.2：BinarySearch.java***
+**列表 4.2：`BinarySearch.java`**
 
-```
- public class LinearSearch
+```java
+public class LinearSearch
 { 
    public static void main(String[] args)
    {
@@ -4609,95 +4483,26 @@ Listing 3.30 显示了 `MatTranspose.java` 的内容，演示了如何找到一�
 
 列表 4.2 从变量 `found` 开始，其初始值为 `-1`，紧接着是搜索项 `123`，以及包含数字数组的数组 `arr1`。接下来，通过循环遍历整数数组 `arr1` 的元素，将每个元素与 `item` 的值进行比较。如果发生匹配，则将变量 `found` 设置为循环变量 `i` 的值，然后提前退出。
 
-列表 4.1 的最后部分检查变量 `found` 的值：如果是非负的，则找到了搜索项（否则它不在数组中）。运行 列表 4.1 中的代码，你将看到以下输出：
+列表 4.2 的最后部分检查变量 `found` 的值：如果是非负的，则找到了搜索项（否则它不在数组中）。运行列表 4.2 中的代码，你将看到以下输出：
 
 ```
- found 123 in position 3
-```
-
-记住以下几点：尽管数组 `arr1` 包含一个排序的数字列表，但代码对于无序列表同样可以工作。
-
-### 二分查找演练
-
-二分查找需要一个排序数组，并且可以通过迭代算法实现，也可以通过递归方案实现。核心思想是将排序元素数组的中间元素与搜索元素进行比较。如果它们相等，则已找到该项；如果中间元素小于搜索元素，则对数组的右半部分重复上一步；如果中间元素大于搜索元素，则对数组的左半部分重复上一步。最终，该元素将被找到（如果它出现在数组中），或者当重复的数组拆分到子数组只有一个元素时终止（即无法进行进一步拆分）。
-
-让我们演练一次在排序的整数数组中搜索某项的二分查找。
-
-*示例 #1*：假设 `item` = 25，`arr1` = [10,20,25,40,100]，因此数组的中点是 3。由于 `arr1[3] == item`，算法成功终止。
-
-*示例 #2*：假设 `item` = 25，`arr1` = [1,5,10, 15, 20, 25, 40]，这意味着中点是 4。
-
-第一次迭代：由于 `arr1[4] < item`，我们搜索数组 [20, 25, 40]。
-
-第二次迭代：中点是 1，对应的值是 25。
-
-第三次迭代：25 且数组为单个元素 [25]，与项匹配。
-
-*示例 #3*：`item` = 25，`arr1` = [10, 20, 25, 40, 100,150,400]，因此中点是 4。
-
-第一次迭代：由于 `arr1 [4] > 25`，我们搜索数组 [10, 20, 25]。
-
-第二次迭代：中点是 1，对应的值是 20。
-
-第三次迭代：25 且数组为单个元素 [25]，与项匹配。
-
-*示例 #4*：`item` = 25，`arr1` = [1,5,10, 15, 20, 30, 40]，因此中点是 4。
-
-第一次迭代：由于 `arr1[4] < 25`，我们搜索数组 [20, 30, 40]。
-
-第二次迭代：中点是 1，对应的值是 30。
-
-第三次迭代：25 且数组为单个元素 [20]，因此没有匹配。
-
-正如本节第一段提到的，二分查找可以用交互式方案来实现，这是下一节的主题。
-
-### 二分查找（迭代方案）
-
-列表 4.2 显示了 `BinarySearch.java` 的内容，阐述了如何对数字数组执行二分查找。
-
-***列表 4.2：BinarySearch.java***
-
-```
- public class LinearSearch
-{ 
-   public static void main(String[] args)
-   {
-      int found = -1, item = 123;
-      int[] arr1 = new int[]{1,3,5,123,400};
-
-      for(int i=0; i<arr1.length; i++) {
-        if (item == arr1[i]) {
-           found = i;
-           break;
-        }
-      }
-
-      if (found >= 0)
-        System.out.println("found "+item+" in position "+found);
-      else
-        System.out.println(item+" not found");
-   }
-}
-```
-
-列表 4.2 从变量 `found` 开始，其初始值为 `-1`，紧接着是搜索项 `123`，以及包含数字数组的数组 `arr1`。接下来，通过循环遍历整数数组 `arr1` 的元素，将每个元素与 `item` 的值进行比较。如果发生匹配，则将变量 `found` 设置为循环变量 `i` 的值，然后提前退出。
-
-列表 4.1 的最后部分检查变量 `found` 的值：如果是非负的，则找到了搜索项（否则它不在数组中）。运行 列表 4.1 中的代码，你将看到以下输出：
-
-```
- found 123 in position 3
+found 123 in position 3
 ```
 
 记住以下几点：尽管数组 `arr1` 包含一个排序的数字列表，但代码对于无序列表同样可以工作。
 
-### 二分查找（递归方案）
 
-列表 4.3 显示了 `BinarySearch.java` 的内容，阐述了如何递归地执行二分查找。
 
-***列表 4.3：BinarySearch.java***
+记住以下几点：尽管数组`arr1`包含一个排序的数字列表，但代码对于无序列表同样可以工作。
 
-```
- public class BinarySearch
+## 二分查找（递归方案）
+
+列表 4.3 显示了`BinarySearch.java`的内容，阐述了如何递归地执行二分查找。
+
+**列表 4.3：`BinarySearch.java`**
+
+```java
+public class BinarySearch
 {
    public static Boolean binary_search(int[] data, int item, int left, int right) 
    {
@@ -4706,7 +4511,7 @@ Listing 3.30 显示了 `MatTranspose.java` 的内容，演示了如何找到一�
      } else {
        //错误（可能导致溢出）:
        //int mid = (left + right) / 2 
-       int mid = (int)(left + (right-left)/2;
+       int mid = (int)(left + (right-left)/2);
 
        if(item == data[mid]) {
          return true;
@@ -4744,28 +4549,22 @@ Listing 3.30 显示了 `MatTranspose.java` 的内容，演示了如何找到一�
 }
 ```
 
-列表 4.3 使用递归的 `binary_search` 方法，通过对数组的较小的子数组调用自身。`mid` 的计算执行为 `(int)(left + (right-left)/2)`，以防止在使用 `(left + right) / 2 时 时可能整数溢出。
+列表 4.3 使用递归的`binary_search`方法，通过对数组的较小的子数组调用自身。`mid`的计算执行为`(int)(left + (right-left)/2)`，以防止在使用`(left + right) / 2`时可能整数溢出。
 
+Listing 4.3 从函数`binary_search()`开始，其参数`data`、`item`、`left`和`right`分别包含当前数组、搜索项、`data`的左索引以及`data`的右索引。如果左索引`left`大于右索引`right`，则说明该搜索项在原数组中不存在。
 
+然而，如果左索引`left`小于右索引`right`，则代码将`data`的中间索引赋值给变量`mid`。接下来，代码执行以下三部分条件测试：
 
+- 如果`item == data[mid]`，则说明在数组中找到了搜索项。
+- 如果`item < data[mid]`，则调用`binary_search()`函数并传入`data`数组的左半部分。
+- 如果`item > data[mid]`，则调用`binary_search()`函数并传入`data`数组的右半部分。
 
+Listing 4.3 的下一部分初始化了带有数字的排序数组`arr1`，并使用搜索项列表初始化了数组`items`，同时初始化了一些标量变量，用于跟踪每次分割数组时我们要搜索的子数组的左右索引位置。
 
-Listing 4.3 从函数 `binary_search()` 开始，其参数 `data`、`item`、`left` 和 `right` 分别包含当前数组、搜索项、`data` 的左索引以及 `data` 的右索引。如果左索引 `left` 大于右索引 `right`，则说明该搜索项在原数组中不存在。
+Listing 4.3 的最后部分包含一个循环，该循环遍历`items`数组中的每个元素，并调用`binary_search()`函数来确定当前`item`是否在排序数组中。运行 Listing 4.3 中的代码，你将看到以下输出：
 
-然而，如果左索引 `left` *小于* 右索引 `right`，则代码将 `data` 的中间索引赋值给变量 `mid`。接下来，代码执行以下三部分条件测试：
-
-如果 `item == data[mid]`，则说明在数组中找到了搜索项。
-
-如果 `item < data[mid]`，则调用 `binary_search()` 函数并传入 `data` 数组的左半部分。
-
-如果 `item > data[mid]`，则调用 `binary_search()` 函数并传入 `data` 数组的右半部分。
-
-Listing 4.3 的下一部分初始化了带有数字的排序数组 `arr1`，并使用搜索项列表初始化了数组 `items`，同时初始化了一些标量变量，用于跟踪每次分割数组时我们要搜索的子数组的左右索引位置。
-
-Listing 4.3 的最后部分包含一个循环，该循环遍历 `items` 数组中的每个元素，并调用 `binary_search()` 函数来确定当前 `item` 是否在排序数组中。运行 Listing 4.3 中的代码，你将看到以下输出：
-
-```
- array: 1 3 5 123 400 
+```text
+array: 1 3 5 123 400 
 searching for item:  -100
 item:  -100 found: false
 searching for item:  123
@@ -4777,35 +4576,35 @@ item:  400 found: true
 123 not found
 ```
 
-### 常见的排序算法
+## 常见的排序算法
 
 排序算法在性能方面有最好情况、平均情况和最坏情况。有趣的是，有时高效算法（例如快速排序）在给定数组已经排序时反而可能表现最差。
 
 以下子节包含这些常见排序算法的代码示例：
 
-* 冒泡排序 (bubble sort)
-* 选择排序 (selection sort)
-* 插入排序 (insertion sort)
-* 合并排序 (merge sort)
-* 快速排序 (quick sort)
-* 桶排序 (bucketSort)
-* 壳排序 (Shell Sort)
-* 壳排序 108
-* 堆排序 108
-* 原地排序 (inplaceSort)
-* 计数排序 (countingSort)
-* 桶值排序 (radixSort)
+- 冒泡排序 (bubble sort)
+- 选择排序 (selection sort)
+- 插入排序 (insertion sort)
+- 合并排序 (merge sort)
+- 快速排序 (quick sort)
+- 桶排序 (bucketSort)
+- 壳排序 (Shell Sort)
+- 壳排序 108
+- 堆排序 108
+- 原地排序 (inplaceSort)
+- 计数排序 (countingSort)
+- 桶值排序 (radixSort)
 
 如果你想更深入地探索排序算法，可以在互联网上搜索其他的排序算法。
 
-### 冒泡排序
+## 冒泡排序
 
-`bubble sort` 涉及一个嵌套循环，其中数组的每个元素都会与给定元素右侧的元素进行比较。如果数组元素小于当前元素，则交换它们的值（即“交换”），这意味着数组的内容最终将从最小到最大进行排序。
+`bubble sort`涉及一个嵌套循环，其中数组的每个元素都会与给定元素右侧的元素进行比较。如果数组元素小于当前元素，则交换它们的值（即“交换”），这意味着数组的内容最终将从最小到最大进行排序。
 
 这是一个示例：
 
-```
- arr1 = np.array([40, 10, 30, 20]);
+```text
+arr1 = np.array([40, 10, 30, 20]);
 Item = 40;
 Step 1: 40 > 10 so switch these elements:
 arr1 = np.array([10, 40, 30, 20]);
@@ -4817,10 +4616,10 @@ Step 3: 40 > 20 so switch these elements:
 arr1 = np.array([10, 30, 20, 40]);
 ```
 
-如你所示，最小元素位于数组 `arr1` 的最左侧。现在重复此过程，将第二个位置（索引为 1）与右侧元素进行比较。
+如你所示，最小元素位于数组`arr1`的最左侧。现在重复此过程，将第二个位置（索引为 1）与右侧元素进行比较。
 
-```
- arr1 = np.array([10, 30, 20, 40]);
+```text
+arr1 = np.array([10, 30, 20, 40]);
 Item = 30;
 Step 4: 30 > 20 so switch these elements:
 arr1 = np.array([10, 20, 30, 40]);
@@ -4828,22 +4627,22 @@ Item = 30;
 Step 4: 30 < 40 so do nothing
 ```
 
-如你所示，最小两个元素占据了数组 `arr1` 的前两个位置。现在重复此过程，将第三位置（索引为 2）与右侧元素进行比较。
+如你所示，最小两个元素占据了数组`arr1`的前两个位置。现在重复此过程，将第三位置（索引为 2）与右侧元素进行比较。
 
-```
- arr1 = np.array([10, 20, 30, 40]);
+```text
+arr1 = np.array([10, 20, 30, 40]);
 Item = 30;
 Step 4: 30 < 40 so do nothing
 ```
 
-数组 `arr1` 现在已按升序排列（从左到右）。如果你想反转顺序使数组按降序排列（从左到右），只需在前面的步骤中将 `>` 运算符替换为 `<` 运算符即可。
+数组`arr1`现在已按升序排列（从左到右）。如果你想反转顺序使数组按降序排列（从左到右），只需在前面的步骤中将`>`运算符替换为`<`运算符即可。
 
-Listing 4.4 显示了 `BubbleSort.java` 的内容，说明了如何对数字数组进行冒泡排序。
+Listing 4.4 显示了`BubbleSort.java`的内容，说明了如何对数字数组进行冒泡排序。
 
-***列表 4.4: BubbleSort.java***
+**列表 4.4: `BubbleSort.java`**
 
-```
- public class BubbleSort
+```java
+public class BubbleSort
 {
    public static void main(String[] args)
    {
@@ -4861,16 +4660,12 @@ Listing 4.4 显示了 `BubbleSort.java` 的内容，说明了如何对数字数�
 }
 ```
 
-如你所示，最小元素位于数组 `arr1` 的最左侧。现在重复此过程，将第二个位置（索引为 1）与右侧元素进行比较。（注：此处原文此处存在一些碎片化/重复的逻辑，我保持了叙述的流畅性）。
+如你所示，最小元素位于数组`arr1`的最左侧。现在重复此过程，将第二个位置（索引为 1）与右侧元素进行比较。（注：此处原文此处存在一些碎片化/重复的逻辑，我保持了叙述的流畅性）。
 
-Listing 4.4 显示了 `BubbleSort.java` 的内容，说明了如何对数字数组进行冒泡排序。
+Listing 4.4 显示了`BubbleSort.java`的内容，说明了如何对数字数组进行冒泡排序。
 
-
-
-
-
-```
- => Initial words:
+```text
+=> Initial words:
 ['abc', 'evil', 'Z', 'cab', 'live', 'xyz', 'zyx', 'bac']
 
 abc  and  cab  are anagrams
@@ -4882,12 +4677,12 @@ xyz  and  zyx  are anagrams
 
 ## 选择排序
 
-Listing 4.6 显示了 `SelectionSort.java` 的内容，说明了如何对数字数组进行选择排序。
+Listing 4.6 显示了`SelectionSort.java`的内容，说明了如何对数字数组进行选择排序。
 
-***列表 4.6: SelectionSort.java***
+**列表 4.6: `SelectionSort.java`**
 
-```
- public class SelectionSort
+```java
+public class SelectionSort
 {
    public static void main(String[] args)
    {
@@ -4923,27 +4718,27 @@ Listing 4.6 显示了 `SelectionSort.java` 的内容，说明了如何对数字�
 }
 ```
 
-Listing 4.6 首先用一些整数初始化数组 `arr1`，然后通过循环遍历 `arr1` 的元素。在循环的每次迭代中，另一个内部循环会将当前数组元素与该元素右侧的每个元素进行比较。如果这些元素中任何一个小于当前数组元素，则前者的索引位置保留在变量 `min_idx` 中。在内部循环执行完毕，通过以下代码片段将当前元素与找到的较元素（如果有）进行“交换”：
+Listing 4.6 首先用一些整数初始化数组`arr1`，然后通过循环遍历`arr1`的元素。在循环的每次迭代中，另一个内部循环会将当前数组元素与该元素右侧的每个元素进行比较。如果这些元素中任何一个小于当前数组元素，则前者的索引位置保留在变量`min_idx`中。在内部循环执行完毕，通过以下代码片段将当前元素与找到的较元素（如果有）进行“交换”：
 
-```
- arr1[i], arr1[min_idx] = arr1[min_idx], arr1[i]
+```java
+arr1[i], arr1[min_idx] = arr1[min_idx], arr1[i]
 ```
 
-在前面的代码段中，`arr1[i]` 是“当前”元素，而 `arr1[min_idx]` 是位于索引 `i` 右侧小于 `arr1[i]` 的元素。如果这两个值相同，则代码段会将 `arr1[i]` 与其自身交换。现在运行 Listing 4.6 中的代码，你将看到以下输出：
+在前面的代码段中，`arr1[i]`是“当前”元素，而`arr1[min_idx]`是位于索引`i`右侧小于`arr1[i]`的元素。如果这两个值相同，则代码段会将`arr1[i]`与其自身交换。现在运行 Listing 4.6 中的代码，你将看到以下输出：
 
-```
- Initial: 64 25 12 22 11 
+```text
+Initial: 64 25 12 22 11 
 Sorted:  11 12 22 25 64 
 ```
 
 ## 插入排序
 
-Listing 4.7 显示了 `InsertionSort.java` 的内容，说明了如何对数字数组进行选择排序。
+Listing 4.7 显示了`InsertionSort.java`的内容，说明了如何对数字数组进行选择排序。
 
-***列表 4.7: InsertionSort.java***
+**列表 4.7: `InsertionSort.java`**
 
-```
- public class InsertionSort
+```java
+public class InsertionSort
 {
    public static void insertionSort(int[] arr1)
    {
@@ -4983,21 +4778,19 @@ Listing 4.7 显示了 `InsertionSort.java` 的内容，说明了如何对数字�
 }
 ```
 
-Listing 4.7 从 `insertionSort()` 函数开始，该函数包含一个遍历数组 `arr1` 元素的循环。在循环的每次迭代中，变量 `key` 被赋值为数组 `arr1`元素的值。（注：原文此处存在重复描述，翻译时已按逻辑整合）。
+Listing 4.7 从`insertionSort()`函数开始，该函数包含一个遍历数组`arr1`元素的循环。在循环的每次迭代中，变量`key`被赋值为数组`arr1`元素的值。（注：原文此处存在重复描述，翻译时已按逻辑整合）。
 
 现在运行 Listing 4.7 中的代码，你将看到以下输出：
 
-```
- Initial: 12 11 13 5 6 
+```text
+Initial: 12 11 13 5 6 
 Sorted:    5 6 11 12 13 
 ```
 
 
 
-
-
 ```java
- public class MergeSort1
+public class MergeSort1
 {
 
    public static void MergeSort1(){}
@@ -5078,7 +4871,7 @@ Listing 4.8 定义了静态方法 `MergeItems()` 和 `display_items()`，它们�
 Listing 4.8 的下半部分定义了 `main()` 方法，该方法用整数初始化排序数组 `items1` 和 `items2`，并为“目标”数组 `items3` 分配存储。接下来的三个（短）代码块显示 `items1` 和 `items2` 的内容，然后调用 `MergeItems()` 方法合并这两个数组，之后显示合并后的内容。运行 Listing 4.8 中的代码，你将看到以下内容：
 
 ```
- First sorted array:
+First sorted array:
 20 30 50 300
 
 Second sorted array:
@@ -5095,7 +4888,7 @@ Listing 4.9 显示了 `MergeSort2.java` 的内容，说明了如何在不使用�
 ### 列表 4.9：MergeSort2.java
 
 ```java
- public class MergeSort2
+public class MergeSort2
 {
    public static void display_items(int[] items)
    {
@@ -5162,9 +4955,6 @@ Listing 4.9 显示了 `MergeSort2.java` 的内容，说明了如何在不使用�
 }
 ```
 
-
-
-
 另一个关键点：一个子列表包含小于基准项（pivot）的值，而另一个子列表包含大于基准项的值。在理想情况下，两个子列表的长度大致相同。这导致子列表发生类似于二分的拆分，涉及到 `log N` 次快速排序算法的调用，其中 `N` 是列表中元素的总数。
 
 关于快速排序，有几点需要注意。首先，两个子列表长度大致相同的情况是效率最高的情况。然而，为了达到最优效果，这种情况需要对给定列表中的数据分布有先验了解。
@@ -5172,6 +4962,7 @@ Listing 4.9 显示了 `MergeSort2.java` 的内容，说明了如何在不使用�
 其次，如果列表包含的值接近随机分布，那么在这种情况下，第一个值或最后一个值是作为基准项的常见选择。第三，当列表中的值已经过过时，快速排序的性能最差。在这种情况下，请通过以下方式之一选择基准项：
 
 - 选择列表的中间的项。
+
 - 选择列表中第一个、中间和最后一个项的中位数。
 
 ### 快速排序代码示例
@@ -5181,7 +4972,7 @@ Listing 4.9 显示了 `MergeSort2.java` 的内容，说明了如何在不使用�
 ***列表 4.10: QuickSort.java***
 
 ```java
- public class QuickSort
+public class QuickSort
 {
    public static void sort(int[] values) {
      quicksort(values);
@@ -5255,8 +5046,11 @@ Listing 4.9 显示了 `MergeSort2.java` 的内容，说明了如何在不使用�
 `代码列表 4.10` 包含了以下静态方法的定义，随后是 `main()` 方法：
 
 - `sort()`
+
 - `quicksort()`
+
 - `partition()`
+
 - `swap()`
 
 `sort()` 方法调用重载方法 `quicksort()`，而如果参数 `arr`（一个数组）的长度不为零，则该方法反过来调用第二个 `quicksort()` 方法。
@@ -5279,13 +5073,10 @@ Listing 4.9 显示了 `MergeSort2.java` 的内容，说明了如何在不使用�
 
 排序的元素。
 
-
-
-
 Listing 4.11 的后续部分定义了 `main()` 方法，该方法用六个整数值初始化数组 `arr`，并将变量 `num` 初始化为 `arr` 的长度。`main()` 方法的剩余部分显示 `area` 的值，调用 `shellSort()` 方法，然后显示数组 `arr` 中排序后的值。运行 Listing 4.11 中的代码，你将看到以下输出：
 
 ```
- Original:
+Original:
 50 20 80 -100 500 200 orted:
 -100 20 50 80 200 500 
 ```
@@ -5296,9 +5087,11 @@ Listing 4.12 显示了 `PairSumTarget.java` 的内容，它说明了如何判断
 
 ### 列表 4.12: PairSumTarget.java
 
-```
- // 给定排序数组中的两个数字 num1 和 num2，
-// 判断 num1+num2 是否在数组中
+
+
+给定排序数组中的两个数字 `num1` 和 `num2`，判断 `num1 + num2` 是否在数组中。
+
+```java
 public class PairSumTarget
 {
    public static void check_sum(int[] arr1, int num1, int num2) 
@@ -5361,50 +5154,50 @@ Listing 4.12 定义了静态方法 `check_sum()`，该方法计算数组元素�
 Listing 4.12 的后续部分定义了 `main()` 方法，该方法用一组排序整数初始化数组 `arr1`，然后显示 `arr1` 的内容。`main()` 方法的剩余部分初始化变量 `num1` 和 `num2`，然后调用 `n` 方法。现在运行 Listing 4.12 中的代码，你将看到以下输出：
 
 ```
- Original:
+Original:
 50 20 80 -100 500 200 
 Sorted:
 -100 20 50 80 200 500 
 ```
 
-### 总结
+## 总结
 
 本章从搜索算法开始，例如线性搜索和二分查找（迭代式）。你还学习了冒泡排序、合并排序和快速排序。最后，你学习了直接插入排序及其变体。
 
 ## 第 5 章：链表 (1)
 
-本章向你介绍了链表，包括单向链表和双向链表。第 6 章 包含了与链表相关的常见任务。如果你已经熟悉链表，那么你可能已经准备好学习 第 6 章。
+本章向你介绍了链表，包括单向链表和双向链表。第 6 章包含了与链表相关的常见任务。如果你已经熟悉链表，那么你可能已经准备好学习第 6 章。
 
 ### 数据结构的类型
 
-本节向你介绍了线性数据结构概念，例如栈和队列（并简要描述了非线性数据结构，如树和图），这是第 5 章、第 6 章 和第 7 章 的重点。
+本节向你介绍了线性数据结构概念，例如栈和队列（并简要描述了非线性数据结构，如树和图），这是第 5 章、第 6 章和第 7 章的重点。
 
 #### 线性数据结构
 
-*线性*数据结构是元素顺序顺序内存位置或逻辑上连接的数据结构，例如栈和队列。正如你在第 7 章 中看到的，栈是后进先出 (LIFO) 数据结构，这意味着最后一个插入的元素是第一个删除的元素。此外，操作是在栈的一端进行的。栈在现实中的对应物是一个只有一个入口也是唯一出口的电梯。
+*线性*数据结构是元素顺序内存位置或逻辑上连接的数据结构，例如栈和队列。正如你在第 7 章中看到的，栈是后进先出 (LIFO) 数据结构，这意味着最后一个插入的元素是第一个删除的元素。此外，操作是在栈的一端进行的。栈在现实中的对应物是一个只有一个入口也是唯一出口的电梯。
 
-在第 7 章 中，你还将学习队列，它是先进先出 (FIFO) 数据结构，这意味着第一个插入的元素是第一个删除的元素。与栈相比，插入操作在队列的所谓“前端”执行，删除操作在队列的“尾部”执行。队列在现实中的对应物是排队买电影票的人群。
+在第 7 章中，你还将学习队列，它是先进先出 (FIFO) 数据结构，这意味着第一个插入的元素是第一个删除的元素。与栈相比，插入操作在队列的所谓“前端”执行，删除操作在队列的“尾部”执行。队列在现实中的对应物是排队买电影票的人群。
 
 #### 非线性数据结构
 
-*非线性*数据结构是元素非顺序的数据结构，例如树和图。树有一个称为根节点的节点，该节点没有父节点，而其他其他节点恰好有一个父节点。如果两个节点之间存在边，则这两个节点是相关的。
+*非线性*数据结构是元素非顺序的数据结构，例如树和图。树有一个称为根节点的节点，该节点没有父节点，而其他节点恰好有一个父节点。如果两个节点之间存在边，则这两个节点是相关的。
 
-
-
-
-图是树的推广，图中的节点可以有多个父节点。图没有根节点，而是有一个被称为“源”（source）的节点和一个被称为“汇”（sink）的节点，它们在某种类似于“开始”节点和“结束”节点。这种标记出现在表示传输网络的图中，网络中的边可以被分配权重。想象一下从仓库（“源”）运输食品或其他其他商品的大卡车，它们有多条路线可以到达目的地（“汇”）。
+图是树的推广，图中的节点可以有多个父节点。图没有根节点，而是有一个被称为“源”（source）的节点和一个被称为“汇”（sink）的节点，它们在某种类似于“开始”节点和“结束”节点。这种标记出现在表示传输网络的图中，网络中的边可以被分配权重。想象一下从仓库（“源”）运输食品或其他商品的大卡车，它们有多条路线可以到达目的地（“汇”）。
 
 ### 数据结构与操作
 
 在本书中，单链表的数据结构是一个自定义的 `Node` 结构，它包含以下内容：
 
 1. 一个键/值对
+
 2. 指向下一个节点的指针
 
 双向链表的数据结构是一个自定义的 `Node`，它包含以下内容：
 
 1. 一个键/值对
+
 2. 指向下一个节点的指针
+
 3. 指向上一个节点的指针
 
 栈和队列的数据结构都是 Java 的 `list`。
@@ -5412,7 +5205,9 @@ Sorted:
 树的数据结构是一个自定义节点，包含以下内容：
 
 1. 一个键/值对
+
 2. 指向左侧节点的指针
+
 3. 指向右节点的指针
 
 哈希表的数据结构是 Java 的 `dictionary`。上述结构是基于简单性的考虑；但请记住，其他结构也是可能的。例如，你可以使用数组来实现列表、栈、队列，甚至是树。
@@ -5422,10 +5217,15 @@ Sorted:
 正如你稍后在本章以及其他章节中看到的，对这些数据结构的操作通常涉及以下内容：
 
 1. 插入（insert）（包括追加 append）
+
 2. 删除（delete）
+
 3. 搜索（search）
+
 4. 更新（现有元素）
+
 5. 检查结构是否为空
+
 6. 检查结构是否满（队列和栈）
 
 ### 什么是单链表？
@@ -5451,15 +5251,18 @@ Sorted:
 3) 最后一个节点（没有后继元素）
 ```
 
-当然当然，当链表为空时，那么前述列表中的节点全为 `None`。
+当然，当链表为空时，那么前述列表中的节点全为 `None`。
 
 #### 链表的权衡
 
 每个数据结构都有权衡，也就是说既有优点也有缺点。特别地，链表具有以下优势：
 
 1. 易于向列表中追加元素
+
 2. 易于在列表中插入元素
+
 3. 易于从列表中删除元素
+
 4. 不需要预先知道列表的节点计数
 
 与数组不同，上述项目符号列表中的操作不需要“移动”数组的元素：只需要更新引用即可。
@@ -5467,11 +5270,12 @@ Sorted:
 然而，链表确实也有缺点：
 
 1. 搜索元素更困难（耗时更长）
+
 2. 需要更大的内存
 
 因此，当元素数量已知且没有插入或删除（仅有更新）时，数组效果更好；当数据元素数量未知时，链表效果更好。
 
-与数组不同，链表的元素可以存储在非连续的内存位置：`next` 字段的值提供了链表中下一个节点的位置（具有 `None` 作为下一个结的 `LAST` 节点除外）。
+与数组不同，链表的元素可以存储在非连续的内存位置：`next` 字段的值提供了链表中下一个节点的位置（具有 `None` 作为下一个节点的 `LAST` 节点除外）。
 
 ### 单链表：创建与追加操作
 
@@ -5484,7 +5288,7 @@ Listing 5.1 显示了 `SLNode.java` 的内容，它阐释了如何定义一个�
 ***Listing 5.1: SLNode.py***
 
 ```java
- public class SLNode
+public class SLNode
 { 
    static class Node {
      String data = "";
@@ -5518,7 +5322,7 @@ Listing 5.2 显示了 `AppendNode.java` 的内容，它阐释了创建链表并�
 ***Listing 5.2: AppendNode.java***
 
 ```java
- public class AppendNode
+public class AppendNode
 {
    static class Node {
      String data = "";
@@ -5584,9 +5388,8 @@ Listing 5.3 显示了 `FindSLNode2.java` 的内容，它阐释了如何在链表
 
 
 
-
 ```java
- public class FindSLNode2
+public class FindSLNode2
 {
    static class Node {
      String data = "";
@@ -5684,7 +5487,7 @@ Listing 5.3 显示了 `FindSLNode2.java` 的内容，它阐释了如何在链表
 `main()` 方法首先通过字符串列表初始化字符串数组 `items`，然后通过一个循环遍历 `items` 中的元素，并顺序调用 `append_node()` 方法将每个字符串添加到链表中。`main()` 方法的最后部分显示链表的内容，随后通过一个循环遍历 `items` 变量中的元素，并检查每个元素是否存在于链表中。从命令行运行列表 5.3 中的代码，你将看到以下输出：
 
 ```
- 项目列表:
+项目列表:
 Stan Steve Sally Alex 
 
 => Search for: Stan
@@ -5716,14 +5519,14 @@ Checking: Alex
 
 列表 5.3 对于少量节点运行良好。对于包含更多节点的链表，我们需要一种可扩展的方法来构建节点列表，这将在下一节中讨论。
 
-### 在链表中添加节点
+## 在链表中添加节点
 
 当你在创建一个链表时，必须始终检查根节点是否为空：如果为空，则创建一个根节点；否则，则将新节点追加到最后一个节点。让我们将前面的句子翻译成伪代码，描述如何向链表添加新元素：
 
 ```
- 假设 ROOT 为链表的根节点（初始为 NULL）
- 假设 LAST 为链表的最后一个节点（初始为 NULL）
- 假设 NEW 是一个新节点，并令 NEW->next = NULL
+假设 ROOT 为链表的根节点（初始为 NULL）
+假设 LAST 为链表的最后一个节点（初始为 NULL）
+假设 NEW 是一个新节点，并令 NEW->next = NULL
 
 // 决定将新节点插入的位置：
 if (ROOT == NULL)
@@ -5737,10 +5540,9 @@ else
 }
 ```
 
-链表的最后一个节点始终指向
-NULL。
+链表的最后一个节点始终指向`NULL`。
 
-#### 在链表中查找节点
+### 在链表中查找节点
 
 列表 5.4 展示了如何在链表中查找节点。***列表 5.4: FindSLNode.java*** 解释了如何在链表中查找节点。
 
@@ -5839,14 +5641,14 @@ public class FindSLNode2
 列表 5.4 非常简单：它用指定的值初始化变量 `msg` 和 `num`。从命令行运行列表 5.4 中的代码，你将看到以下输出：
 
 ```
- => Search for: Stan
+=> Search for: Stan
 Checking: Jane
 Checking: Dave
 Checking: Stan
 => Found Stan
 -------------------
 
- => Search for: Steve
+=> Search for: Steve
 Checking: Jane
 Checking: Dave
 Checking: Stan
@@ -5854,7 +5656,7 @@ Checking: Alex
 * Steve not found *
 -------------------
 
- => Search for: Sally
+=> Search for: Sally
 Checking: Jane
 Checking: Dave
 Checking: Stan
@@ -5871,20 +5673,16 @@ Checking: Alex
 -------------------
 ```
 
-### 单向链表：更新和删除操作
+## 单向链表：更新和删除操作
 
 在上一节中，你学习了如何创建链表、显示其内容以及搜索特定节点。在本节中，你将学习如何更新链表中的节点，以及如何删除链表中的节点。
-
-
-
-
 
 ### 在单向链表中更新节点
 
 以下伪代码解释了如何在链表中查找一个元素，并且如果该元素存在，则更新其内容：
 
 ```
- CURR = ROOT
+CURR = ROOT
 Found = False
 OLDDATA = "something old";
 NEWDATA = "something new";
@@ -5916,8 +5714,14 @@ Listing 5.5 显示了 `UpdateSLNode.java` 的内容，该代码说明了如何�
 
 ***列表 5.5：UpdateSLNode.java***
 
-```
- public class UpdateSLNode
+
+
+## 更新单向链表节点
+
+`Listing 5.5` 定义了如之前相同的 `Node` 类，随后是 Java 方法 `append_node()`，该方法包含了初始化单向链表以及向该链表添加节点的逻辑。
+
+```java
+public class UpdateSLNode
 {
    static class Node {
      String data = "";
@@ -6001,9 +5805,7 @@ Listing 5.5 显示了 `UpdateSLNode.java` 的内容，该代码说明了如何�
 }
 ```
 
-Listing 5.5 定义了如之前相同的 `Node` 类，随后是 Java 方法 `append_node()`，该方法包含了初始化单向链表以及向该链表添加节点的逻辑。
-
-从命令行运行 Listing 5.5 中的代码，你将看到以下内容：
+从命令行运行 `Listing 5.5` 中的代码，你将看到以下内容：
 
 ```
  => list items:
@@ -6059,9 +5861,9 @@ return ROOT
 
 ### 用于删除节点的 Java 代码
 
-Listing 5.6 显示了 `DeleteSLNode.java` 的内容，该代码说明了如何在链表中删除节点。此代码示例比之前的长，因为代码需要区分删除根节点和删除其他节点的情况。
+`Listing 5.6` 显示了 `DeleteSLNode.java` 的内容，该代码说明了如何在链表中删除节点。此代码示例比之前的长，因为代码需要区分删除根节点和删除其他节点的情况。
 
-***列表 5.6：DeleteSLNode.java***
+**列表 5.6：`DeleteSLNode.java`**
 
 ```java
 public class DeleteSLNode
@@ -6180,8 +5982,7 @@ public class DeleteSLNode
 }
 ```
 
-
-
+## 循环链表
 
 单向链表和循环链表之间唯一的结构差异是，后者的“最后一个”节点的“next”节点指向初始的（根）节点。循环链表的操作与单向链表的操作相同。但是，单向链表的算法需要修改以适应循环链表。
 
@@ -6241,9 +6042,9 @@ class Node {
 }
 ```
 
-Listing 5.7 定义了与之前相同的 `Node` 类，随后是 Java 方法 `append_node()`，该方法包含了初始化单向链表以及向链表中添加节点的逻辑。
+`Listing 5.7` 定义了与之前相同的 `Node` 类，随后是 Java 方法 `append_node()`，该方法包含了初始化单向链表以及向链表中添加节点的逻辑。
 
-从命令行运行 Listing 5.7，你将看到以下输出：
+从命令行运行 `Listing 5.7`，你将看到以下输出：
 
 ```
  => initialized Root: Stan
@@ -6260,10 +6061,8 @@ Stan Steve Sally Alex Nancy Sara
 
 
 
-
-
 ```java
- public class CircularUpdateSLNode
+public class CircularUpdateSLNode
 {
    static class Node {
      String data = "";
@@ -6419,23 +6218,21 @@ Stan Steve Sally Alex Nancy Sara
 
 代码列表 5.8 如之前一样定义了一个 `Node` 类，随后是 `append_node`、`update_item` 和 `display_list` 方法。
 
-### **操作双向链表 (DLL)**
+## 操作双向链表 (DLL)
 
 双向链表是元素的集合，每个节点包含：
 
 1. 存储在节点中的值，以及
-
 2. 下一个节点的位置（称为后继节点）
-
 3. 前一个节点的位置（称为前驱节点）
 
 双向链表上的操作与单向链表相同；然而，有两个指针（后继节点和前驱节点）需要更新，而不是一个。
 
-#### **用于双向链表的 Node 类**
+### 用于双向链表的 `Node` 类
 
 代码列表 5.9 展示了一个表示单个节点的简单 Java 类。
 
-***代码列表 5.9: Node.java***
+**代码列表 5.9: Node.java**
 
 ```java
 public class Node {
@@ -6460,13 +6257,9 @@ public class Node {
 
 代码列表 5.9 定义了 `Node` 类，然后创建了四个这样的节点。
 
-### **在双向链表中追加节点**
+### 在双向链表中追加节点
 
 当您创建一个链表时，必须始终检查根节点是否为空：如果是，则创建一个根节点；否则，将新节点追加到最后一个节点。让我们将前面的句子翻译成伪代码，描述如何向链表添加新元素。
-
-
-
-
 
 ```
  让 ROOT 为链表的根节点（初始为 NULL）
@@ -6499,7 +6292,7 @@ else
 
 Listing 5.10 显示了 `AppendDLNode.java` 的内容，该内容展示了创建链表并向该列表添加节点的更好方法。
 
-***Listing 5.10: AppendDLNode.java***
+**Listing 5.10: AppendDLNode.java**
 
 ```java
  public class AppendDLNode
@@ -6614,10 +6407,12 @@ Node: Alexander
 
 Listing 5.11 显示了 Java 文件 `NewRootSLNode.java` 的内容，该内容展示了如何遍历字符串数组并将每个字符串设置为新的根节点，从而有效地创建了一个反向顺序的链表。
 
-***Listing 5.11: NewRootSLNode.java***
+**Listing 5.11: NewRootSLNode.java**
+
+
 
 ```java
- public class NewRootSLNode
+public class NewRootSLNode
 {
    static class SLNode {
      String data = "";
@@ -6683,11 +6478,8 @@ Listing 5.11 显示了 Java 文件 `NewRootSLNode.java` 的内容，该内容展
 }
 ```
 
-
-
-
 ```java
- public class NewInterSLNode
+public class NewInterSLNode
 {
    static class Node {
      String data = "";
@@ -6806,12 +6598,8 @@ Listing 5.11 显示了 Java 文件 `NewRootSLNode.java` 的内容，该内容展
 }
 ```
 
-
-
-
-
 ```
- CURR = ROOT
+CURR = ROOT
 PREV = ROOT
 ANODE = <a-node-to-delete>
 Found = False
@@ -6845,14 +6633,16 @@ while (CURR != NULL)
 }
 ```
 
-#### 删除节点的 Java 代码
+## 删除节点的 Java 代码
 
-Listing 5.14 显示了 `DeleteDLNode.java` 的内容，它说明了如何更新双向链表中的节点。
+`Listing 5.14` 显示了 `DeleteDLNode.java` 的内容，它说明了如何更新双向链表中的节点。
 
-***列表 5.14: DeleteDLNode.java***
+**列表 5.14: DeleteDLNode.java**
+
+
 
 ```java
- public class DeleteDLNode
+public class DeleteDLNode
 {
    static class DLNode {
      String data = "";
@@ -6870,9 +6660,9 @@ Listing 5.14 显示了 `DeleteDLNode.java` 的内容，它说明了如何更新�
    {
       DLNode ROOT = null;
       DLNode LAST = null;
-      DLNode[] results = new DLNode[2]; 
+      DLNode[] results = new DLNode[2];
 
-      String[] items = 
+      String[] items =
            new String[]{"Jane","Dave","Stan","Alex","George","Sara"};
 
       for(String item : items) {
@@ -6884,12 +6674,12 @@ Listing 5.14 显示了 `DeleteDLNode.java` 的内容，它说明了如何更新�
       return ROOT;
    }
 
-   public static DLNode[] append_node(DLNode ROOT, DLNode LAST, String item) 
+   public static DLNode[] append_node(DLNode ROOT, DLNode LAST, String item)
    {
      if(ROOT == null) {
        ROOT = new DLNode(item);
-       ROOT.next = ROOT; 
-       ROOT.prev = ROOT; 
+       ROOT.next = ROOT;
+       ROOT.prev = ROOT;
        LAST = ROOT;
        //System.out.println("1DLNode:", ROOT.data);
      } else {
@@ -6906,10 +6696,10 @@ Listing 5.14 显示了 `DeleteDLNode.java` 的内容，它说明了如何更新�
          NEWNODE.next = null;
          LAST = NEWNODE;
          //System.out.println("3DLNode:", NEWNODE.data);
-       } 
-     } 
+       }
+     }
 
-     DLNode[] results = new DLNode[2]; 
+     DLNode[] results = new DLNode[2];
      results[0] = ROOT;
      results = LAST;
      return results;
@@ -6922,11 +6712,11 @@ Listing 5.14 显示了 `DeleteDLNode.java` 的内容，它说明了如何更新�
       while (CURR != null) {
         System.out.print(CURR.data+" ");
         CURR = CURR.next;
-      } 
+      }
       System.out.println("\n");
    }
 
-/* 
+/*
 该代码遵循以下情况来删除节点：
    NULL  （空列表）
    x     （一个节点）
@@ -6956,26 +6746,26 @@ Listing 5.14 显示了 `DeleteDLNode.java` 的内容，它说明了如何更新�
 
            if(CURR == ROOT) {
              // 列表是否只有一个节点？
-             if(ROOT.next == null) { 
+             if(ROOT.next == null) {
                ROOT = null;
              } else {
-               ROOT = ROOT.next; 
-               ROOT.prev = null; 
-             } 
+               ROOT = ROOT.next;
+               ROOT.prev = null;
+             }
              //System.out.println("new root: "+ROOT.data);
            } else {
-             DLNode NEXT = CURR.next; 
-             if(NEXT == null) { 
+             DLNode NEXT = CURR.next;
+             if(NEXT == null) {
                 //System.out.println("final node: "+CURR.data);
-                PREV.next = null; 
+                PREV.next = null;
              } else {
                 //System.out.println("middle node: "+CURR.data);
-                PREV.next = NEXT;  
-                NEXT.prev = PREV; 
-             } 
-           } 
+                PREV.next = NEXT;
+                NEXT.prev = PREV;
+             }
+           }
            break;
-        } 
+        }
         PREV = CURR;
         CURR = CURR.next;
       }
@@ -6986,7 +6776,7 @@ Listing 5.14 显示了 `DeleteDLNode.java` 的内容，它说明了如何更新�
       return ROOT;
    }
 
-   public static void main( String[] args)
+   public static void main(String[] args)
    {
       DLNode ROOT = null;
       ROOT = construct_list();
@@ -7004,10 +6794,10 @@ Listing 5.14 显示了 `DeleteDLNode.java` 的内容，它说明了如何更新�
 }
 ```
 
-Listing 5.14 定义了与之前的 Node 类，随后是 `append_node()` Java 方法，该方法包含了初始化双向链表以及向其添加节点的逻辑。从命令行运行 Listing 5.14 中的代码，你会看到以下输出：
+Listing 5.14 定义了与之前的 `Node` 类，随后是 `append_node()` Java 方法，该方法包含了初始化双向链表以及向其添加节点的逻辑。从命令行运行 Listing 5.14 中的代码，你会看到以下输出：
 
 ```
- Initial list:
+Initial list:
 Jane Dave Stan Alex George Sara
 
 Searching for Jane:
@@ -7018,12 +6808,12 @@ Dave Stan Alex George Sara
 Searching for Stan:
 Deleting node with Stan
 Updated list:
-Dave Alex George Sara 
+Dave Alex George Sara
 
 Searching for Isaac:
 Isaac not found in linked list
 Updated list:
-Dave Alex George Sara 
+Dave Alex George Sara
 
 Searching for Sara:
 Deleting node with Sara
@@ -7031,29 +6821,24 @@ Updated list:
 Dave Alex George
 ```
 
-### **总结**
+### 总结
 
 本章从链表的描述开始，并介绍了它们的优缺点。然后，你学习了如何在单向链表上执行若干操作，如添加、插入、删除和更新。
 
 接下来，你学习了双向链表，以及如何在双向链表上执行与单向链表上相同的的操作。你还看到了如何处理循环链表，其中最后一个元素指向第一个元素。
 
-# 第 6 章
-
-## 链表（2）
+# 第 6 章：链表（2）
 
 上一章介绍了单向链表、双向链表和循环链表，以及如何对这些数据结构进行基本操作。本章将展示如何完成超出基础操作的任务。
 
-本章的第一部分包含以不同方式相链表中数字的代码示例，随后是显示链表中前 k 个和后 k 个元素的代码示例。
+本章的第一部分包含以不同方式相链表中数字的代码示例，随后是显示链表中前 `k` 个和后 `k` 个元素的代码示例。
 
 本章第二部分的代码示例反转单向链表并去重。你还将看到如何合并两个列表以及如何合并两个有序列表。此外，你将学习如何找到链表的中间元素。
 
 本章的最后部分展示了如何反转列表以及如何检查链表是否包含回文。
 
-
-
-
 ```java
- public class SumSLNodes
+public class SumSLNodes
 {
    static class Node {
      int data;
@@ -7064,9 +6849,9 @@ Dave Alex George
      }
    }
 
-   public static Node[] append_node(Node ROOT, Node LAST, int item) 
+   public static Node[] append_node(Node ROOT, Node LAST, int item)
    {
-     Node[] results = new Node[2]; 
+     Node[] results = new Node[2];
 
      if(ROOT == null) {
        ROOT = new Node(item);
@@ -7082,20 +6867,20 @@ Dave Alex George
          LAST.next = NEWNODE;
          LAST = NEWNODE;
          //System.out.println("3Node: "+NEWNODE.data);
-       } 
-     } 
+       }
+     }
 
      //return ROOT, LAST
      results[0] = ROOT;
      results[1] = LAST;
      return results;
-   }   
+   }
 
    public static void main(String[] args)
    {
-      Node ROOT  = null;
-      Node LAST  = null;
-      Node[] results = new Node[2]; 
+      Node ROOT = null;
+      Node LAST = null;
+      Node[] results = new Node[2];
       int[] items = new int[]{1,2,3,4};
 
       //append items to list:
@@ -7127,7 +6912,7 @@ Listing 6.1 定义了与之前相同的 `Node` 类，随后是 Java 方法 `appe
 从命令行运行 `Listing 6.1` 中的代码，你将看到以下输出：
 
 ```
- list of numbers: [1 2 3 4]
+list of numbers: [1 2 3 4]
 => list items:
 Node: 1
 Node: 2
@@ -7136,14 +6921,16 @@ Node: 4
 Sum of nodes: 10
 ```
 
-### 任务：在链表中相加数字 (2)
+### 任务：在链表中相加数字（2）
 
 Listing 6.2 显示了 `SumSLNodes.java` 的内容，演示了如何向链表中相加数字。
 
-***列表 6.2: SumSLNodes2.java***
+***列表 6.2: `SumSLNodes2.java`***
 
-```
- public class SumSLNodes2
+
+
+```java
+public class SumSLNodes2
 {
    static class Node {
      int data;
@@ -7220,22 +7007,20 @@ Listing 6.2 显示了 `SumSLNodes.java` 的内容，演示了如何向链表中�
 }
 ```
 
-Listing 6.2 定义了与之前相同的 `Node` 类，随后是函数 `append_node()`，该函数包含了初始化单向链表以及向该链表添加节点的逻辑。
+`Listing 6.2`定义了与之前相同的`Node`类，随后是函数`append_node()`，该函数包含了初始化单向链表以及向该链表添加节点的逻辑。
 
-从命令行运行 `Listing 6.2` 中的代码，你将看到以下输出：
+从命令行运行`Listing 6.2`中的代码，你将看到以下输出：
 
 ```
- list of digits:   [1 2 3 4]
+list of digits:   [1 2 3 4]
 Original number:  4321
 ```
 
 ### 任务：在链表中相加数字 (3)
 
-Listing 6.3 显示了 Java 文件 `SumSLNodes3.java` 的内容，演示了如何向链表中相加数字。
+`Listing 6.3`显示了 Java 文件`SumSLNodes3.java`的内容，演示了如何向链表中相加数字。
 
-***列表 6.3: SumSLNodes3.java***
-
-
+**列表 6.3：`SumSLNodes3.java`**
 
 ```java
 public class FirstKNodes
@@ -7322,12 +7107,12 @@ public class FirstKNodes
 }
 ```
 
-Listing 6.4 像之前一样定义了一个 `Node` 类，随后是 `append_node()` 函数，该函数包含了初始化单向链表以及向该链表添加节点的逻辑。
+`Listing 6.4`像之前一样定义了一个`Node`类，随后是`append_node()`函数，该函数包含了初始化单向链表以及向该链表添加节点的逻辑。
 
-从命令行运行 Listing 6.4 中的代码，你将看到以下输出：
+从命令行运行`Listing 6.4`中的代码，你将看到以下输出：
 
 ```
- initial list:
+initial list:
 => Initial list:
 Stan
 Steve
@@ -7346,20 +7131,16 @@ Node 3 data: Sally
 
 ### 任务：显示最后 K 个节点
 
-Listing 6.5 显示了 `LastKNodes.java` 的内容，阐述了如何显示链表的最后 k 个节点。
+`Listing 6.5`显示了`LastKNodes.java`的内容，阐述了如何显示链表的最后 k 个节点。
 
-***列表 6.5: LastKNodes.java***
+**列表 6.5：`LastKNodes.java`**
 
+`Listing 6.6`像之前一样定义了一个`Node`类，其之后是 Java 方法`append_node()`，该方法包含了初始化单链表以及向该链表添加节点的逻辑。
 
-
-
-
-Listing 6.6 像之前一样定义了一个 `Node` 类，其之后是 Java 方法 `append_node()`，该方法包含了初始化单链表以及向该链表添加节点的逻辑。
-
-从命令行运行 Listing 6.6 中的代码，你将看到以下输出：
+从命令行运行`Listing 6.6`中的代码，你将看到以下输出：
 
 ```
- => Initial list:
+=> Initial list:
 Stan Steve Sally Alex George Fred Bob 
 
 Reversed list:
@@ -7368,12 +7149,12 @@ Bob Fred George Alex Sally Steve Stan
 
 ### 任务：移除重复项
 
-Listing 6.7 显示了 `RemoveDuplicates.java` 的内容，它说明了如何移除链表中的重复节点。
+`Listing 6.7`显示了`RemoveDuplicates.java`的内容，它说明了如何移除链表中的重复节点。
 
-***列表 6.7: RemoveDuplicates.java: 修复重复输出？***
+**列表 6.7：`RemoveDuplicates.java`：修复重复输出？**
 
-```
- public class RemoveDuplicates
+```java
+public class RemoveDuplicates
 {
    static class Node {
      String data = "";
@@ -7481,12 +7262,12 @@ Listing 6.7 显示了 `RemoveDuplicates.java` 的内容，它说明了如何移�
 }
 ```
 
-`RemoveDuplicates.java` 像之前一样定义了一个 `Node` 类，其之后是 Java 方法 `append_node()`，该方法包含了初始化单链表以及向该链表添加节点的逻辑。
+`RemoveDuplicates.java`像之前一样定义了一个`Node`类，其之后是 Java 方法`append_node()`，该方法包含了初始化单链表以及向该链表添加节点的逻辑。
 
-从命令行运行 Listing 6.6 中的代码，你将看到以下输出：
+从命令行运行`Listing 6.6`中的代码，你将看到以下输出：
 
 ```
- => Initial list:
+=> Initial list:
 Stan Steve Sally Alex George Fred Bob 
 
 Reversed list:
@@ -7495,11 +7276,10 @@ Bob Fred George Alex Sally Steve Stan
 
 
 
-
-`append_node()` 和 `display_items()` 方法也包含了你在本章之前的代码示例中过的相同代码。`main()` 方法由两个代码块组成。第一个代码块根据整数数组 `items1` 中的元素构建（并显示）第一个链表，第二个代码块根据整数数组 `items2` 中的元素构建（并显示）第二个链表。注意，这两个代码块都调用了 `append_node()` 方法来构建这两个链表。运行列表 6.8 中的代码，你将看到如下输出：
+`append_node()` 和 `display_items()` 方法也包含了你在本章之前的代码示例中见过的相同代码。`main()` 方法由两个代码块组成。第一个代码块根据整数数组 `items1` 中的元素构建（并显示）第一个链表，第二个代码块根据整数数组 `items2` 中的元素构建（并显示）第二个链表。注意，这两个代码块都调用了 `append_node()` 方法来构建这两个链表。运行列表 6.8 中的代码，你将看到如下输出：
 
 ```
- FIRST LIST:
+FIRST LIST:
 Node: 300
 Node: 50
 Node: 30
@@ -7522,10 +7302,10 @@ Node: 200
 
 列表 6.9 展示了 `MergeSLLists.java` 的内容，它说明了如何合并两个链表。
 
-***列表 6.9：MergeSLLists.java***
+列表 6.9：`MergeSLLists.java`
 
-```
- public class MergeSLLists
+```java
+public class MergeSLLists
 {
    static class Node {
      int data;
@@ -7664,10 +7444,6 @@ Node: 200
 }
 ```
 
-
-
-
-
 Listing 6.10 开始定义 `Node` 类，你已经在本章之前的示例中看到过该类的内容。其余代码由四个静态方法组成：`append_node()`、`split_list()`、`display_items()` 和 `main()`，分别用于添加节点、将列表拆分为两个列表、显示所有项以及该 Java 类的 `main()` 方法。
 
 `append_node()` 和 `display_items()` 方法也包含了你在本章之前的代码示例中见过的相同代码。`split_list()` 将一个给定的列表拆分为两个不同的列表。具体来说，第一个列表包含小于比较值的数字，第二个列表包含剩余的元素。由于初始列表是有序的，该方法的代码包含一个循环，该循环将每个列表元素与比较值进行比较。
@@ -7677,7 +7453,7 @@ Listing 6.10 开始定义 `Node` 类，你已经在本章之前的示例中看�
 Listing 6.11 展示了如何删除单链表中的节点。
 
 ```java
- import java.util.ArrayList;
+import java.util.ArrayList;
 
 public class SplitSLLists
 {
@@ -7808,14 +7584,10 @@ public class SplitSLLists
 }
 ```
 
-
-
-
-
 `main()` 方法首先通过 `items` 数组中的元素构建（并显示）初始链表。`main()` 方法的后续部分调用了 `display_items()` 方法、`delete_node()` 方法以及 `display_items()` 方法。运行示例列表 6.10 中的代码，你将看到以下输出：
 
 ```
- => list items:
+=> list items:
 Node: Stan
 Node: Steve
 Node: Sally
@@ -7834,21 +7606,21 @@ Node: Alex
 
 一种解决方案是统计列表中的元素数量，然后找到中间元素。然而，该任务具有以下限制条件：
 
-```
- 不允许计算元素数量
- 不能使用额外的数据结构
- 列表中的任何元素都不能修改或标记
- 偶数长度的列表有两个中间元素
-```
+
+
+不允许计算元素数量。
+不能使用额外的数据结构。
+列表中的任何元素都不能修改或标记。
+偶数长度的列表有两个中间元素。
 
 该任务属于一组使用相同技术的任务：使用一个变量顺序遍历列表，而第二个变量以两倍的速度遍历同一个列表。事实上，这种技术被用于判断链表是否包含环。
 
 列表 6.12 显示了 `MiddleSLNode.py` 的内容，展示了如何确定单链表中的中间元素。
 
-***列表 6.12: MiddleSLNode.java***
+**列表 6.12: `MiddleSLNode.java`**
 
-```
- public class MiddleSLNode
+```java
+public class MiddleSLNode
 {
    static class Node {
      String data = "";
@@ -7975,12 +7747,8 @@ Node: Alex
 }
 ```
 
-
-
-
-
 ```java
- public class ReverseSLList
+public class ReverseSLList
 {
    static class Node {
      String data = "";
@@ -8064,8 +7832,8 @@ Listing 6.13 首先定义了 `Node` 类，你已经在在本章之前的示例�
 
 `main()` 方法首先从 `items` 数组中的元素构建（并随后显示）初始链表。`main` 方法的接下来的部分调用了 `reverse_list()` 方法，然后显示反转后列表的内容。运行 Listing 6.12 中的代码，你将看到以下输出：
 
-```
- => Initial list:
+```text
+=> Initial list:
 Stan Steve Sally Alex George Fred Bob 
 
 Reversed list:
@@ -8076,10 +7844,10 @@ Bob Fred George Alex Sally Steve Stan
 
 Listing 6.14 显示了 `PalindromeSLList.java` 的内容，它说明了如何判断一个列表是否包含回文。
 
-***代码列表 6.14: PalindromeSLList.java***
+**代码列表 6.14: `PalindromeSLList.java`**
 
 ```java
- public class PalindromeSLList
+public class PalindromeSLList
 {
    static class Node {
      String data = "";
@@ -8164,22 +7932,16 @@ Listing 6.13 首先定义了 `Node` 类，你已经在在本章之前的示例�
 
 `main()` 方法首先从 `items` 数组中的元素构建（并随后显示）初始链表。`main` 方法的接下来的部分调用了 `reverse_list()` 方法，然后显示反转后列表的内容。运行 Listing 6.12 中的代码，你将看到以下输出：
 
-```
- => Initial list:
-Stan Steve Sally Alex George Fred Bob 
 
-Reversed list:
-Bob Fred George Alex Sally Steve Stan 
-```
 
 ### 任务：检查链表中的回文
 
-Listing 6.14 显示了 `PalindromeSLList.java` 的内容，它说明了如何判断一个列表是否包含回文。
+`Listing 6.14` 显示了 `PalindromeSLList.java` 的内容，它说明了如何判断一个列表是否包含回文。
 
-***代码列表 6.14: PalindromeSLList.java***
+**代码列表 6.14: PalindromeSLList.java**
 
 ```java
- public class PalindromeSLList
+public class PalindromeSLList
 {
    static class Node {
      String data = "";
@@ -8258,11 +8020,11 @@ public static Node[] append_node(Node ROOT, Node LAST, String item)
 }
 ```
 
-Listing 6.13 首先定义了 `Node` 类，你已经在在本章之前的示例中看到过它的内容。其余代码由静态方法 `append_node()`、`reverse_list()` 和 `main()` 组成，分别用于添加节点、反转列表以及作为该 Java 类的 `main()` 方法。
+`Listing 6.13` 首先定义了 `Node` 类，你已经在在本章之前的示例中看到过它的内容。其余代码由静态方法 `append_node()`、`reverse_list()` 和 `main()` 组成，分别用于添加节点、反转列表以及作为该 Java 类的 `main()` 方法。
 
 `append_node()` 方法包含了你在本章之前的代码示例中过的相同代码。`reverse_list()` 方法遍历给定的列表以反转其内容。
 
-`main()` 方法首先从 `items` 数组中的元素构建（并随后显示）初始链表。`main` 方法的接下来的部分调用了 `reverse_list()` 方法，然后显示反转后列表的内容。运行 Listing 6.12 中的代码，你将看到以下输出：
+`main()` 方法首先从 `items` 数组中的元素构建（并随后显示）初始链表。`main` 方法的接下来的部分调用了 `reverse_list()` 方法，然后显示反转后列表的内容。运行 `Listing 6.12` 中的代码，你将看到以下输出：
 
 ```
  => Initial list:
@@ -8274,7 +8036,7 @@ Bob Fred George Alex Sally Steve Stan
 
 ### 总结
 
-本章从显示链表的前 k 个节点以及链表的末尾节点开始。然后，你学习了如何反序显示列表的内容以及删除重复项。
+本章从显示链表的前 `k` 个节点以及链表的末尾节点开始。然后，你学习了如何反序显示列表的内容以及删除重复项。
 
 此外，你看到了如何连接和合并列表，以及如何分割单个列表。然后你学习了如何删除列表的中间元素以及如何判断列表是否包含循环。
 
@@ -8292,16 +8054,16 @@ Bob Fred George Alex Sally Steve Stan
 
 最后部分包含了三个有趣的任务，说明了栈数据结构的用处。第一个任务是判断字符串是否由平衡的圆括号、方括号和大花括号组成。第二个任务是解析一个可以执行加、减、乘、除以及这四种算术运算的任意组合的表达式。第三个任务是将中缀表达式转换为后缀表达式。
 
-
-
-
-
 队列的最大大小为 `MAX`，最小大小为 `0`。事实上，我们可以根据以下方法来定义队列：
 
 1. `isEmpty()` 如果队列为空则返回 True
+
 2. `isFull()` 如果队列已满则返回 True
+
 3. `queueSize()` 返回栈中的元素数量
+
 4. `add(item)` 如果队列未满，则将元素添加到队列的末尾
+
 5. `dequeue()` 如果队列不为空，则移除队列的头部元素
 
 为了确保不会发生溢出（空间太大）或下溢（空间太小），在从队列头部“弹出”（popping）元素之前，必须始终调用 `isEmpty()`；在将元素作为最后一个元素“推入”（追加）到队列之前，必须始终调用 `isFull()`。
@@ -8311,8 +8073,11 @@ Bob Fred George Alex Sally Steve Stan
 列表列出了可以创建的各种类型的队列，其中大多数是通用队列的扩展，后面是简要描述：
 
 * 队列 (queue)
+
 * 环形队列 (circular queue)
+
 * qequeue
+
 * 优先级队列 (priority queue)
 
 `queue` 是一个线性列表，支持从一端删除并在另一端插入。队列是 FIFO（先进先出）的，就像等待进入电影院或餐厅的人队一样：队中的第一个先进入，然后是第二个人，依此类推。`enqueue` 术语是指向队列中添加元素，而 `dequeue` 是指从队列中移除元素。
@@ -8322,6 +8087,7 @@ Bob Fred George Alex Sally Steve Stan
 `dequeue`（此处指 Deque）是一种线性列表，也是一种双端队列，可以在队列的*两端*执行插入和删除操作。此外，还有两种类型的 Deque：
 
 * 输入受限制意味着插入仅发生在一端
+
 * 输出受限制意味着删除仅发生在一端
 
 `priority queue` 是允许在队列的任何位置移除和插入元素的队列。例如，你的台式电脑和笔记本电脑操作系统的调度程序使用优先级队列来调度程序的执行。因此，高优先的任务会在低优先级的任务之前执行。
@@ -8332,12 +8098,12 @@ Bob Fred George Alex Sally Steve Stan
 
 ### 使用 AR 列表 LIST 创建队列
 
-Listing 7.1 显示了 `MyQueue.java` 的内容，它说明了如何使用 `ArrayList` 类对队列执行各种操作。
+`Listing 7.1` 显示了 `MyQueue.java` 的内容，它说明了如何使用 `ArrayList` 类对队列执行各种操作。
 
-***列表 7.1: MyQueue.java***
+**列表 7.1: MyQueue.java**
 
-```
- import java.util.ArrayList;
+```java
+import java.util.ArrayList;
 
 public class MyQueue
 {
@@ -8400,7 +8166,7 @@ public class MyQueue
 }
 ```
 
-Listing 7.1 开始将 `myqueue` 初始化为空列表。接下来的部分将 `myqueue` 初始化为空列表，将 `MAX` 初始化为 `4`，并将 `myqueue` 初始化为 `ArrayList`。如果 `myqueue.size()` 为 `0`，`isEmpty()` 函数返回 True。如果 `myqueue.size()` 为 `MAX`，`isFull()` 返回 True。`dequeue()` 函数检查 `myqueue.size()` 是否大于 `0`，然后获取索引为 `0` 的元素，将其移除并打印；否则，它打印一条消息。`push(item)` 函数在向 `myqueue` 添加 `item` 之前检查 `isFull()` 是否为 false，否则它会打印一条消息。`main` 方法将多个值推入 `myqueue`，然后将它们弹出直到队列为空。你将看到以下输出：
+`Listing 7.1` 开始将 `myqueue` 初始化为空列表。接下来的部分将 `myqueue` 初始化为空列表，将 `MAX` 初始化为 `4`，并将 `myqueue` 初始化为 `ArrayList`。如果 `myqueue.size()` 为 `0`，`isEmpty()` 函数返回 True。如果 `myqueue.size()` 为 `MAX`，`isFull()` 返回 True。`dequeue()` 函数检查 `myqueue.size()` 是否大于 `0`，然后获取索引为 `0` 的元素，将其移除并打印；否则，它打印一条消息。`push(item)` 函数在向 `myqueue` 添加 `item` 之前检查 `isFull()` 是否为 false，否则它会打印一条消息。`main` 方法将多个值推入 `myqueue`，然后将它们弹出直到队列为空。你将看到以下输出：
 
 ```
  => pushing values onto myqueue:
@@ -8422,86 +8188,32 @@ removed item : 50
 myqueue: []
 ```
 
+`Listing 7.2` 的下一部分定义了几个函数：`isEmpty` 函数，如果 `myqueue` 的长度为 0 则返回 `True`（否则返回 `False`），随其后的是 `isFull` 函数，如果 `myqueue` 的长度为 `MAX` 则返回 `True`（否则返回 `False`）。
 
+`Listing 7.2` 的下一部分定义了 `dequeue90` 函数，该函数在 `myqueue` 不为空的情况下，通过调用 `pop()` 方法来移除 `myqueue` 的头部元素。接着，`push()` 函数在 `myqueue` 未满的情况下，通过调用 `append()` 方法向 `myqueue` 的末尾添加一个新元素。
 
-
-
-Listing 7.2 的下一部分定义了几个函数：`isEmpty` 函数，如果 `myqueue` 的长度为 0 则返回 `True`（否则返回 `False`），随其后的是 `isFull` 函数，如果 `myqueue` 的长度为 `MAX` 则返回 `True`（否则返回 `False`）。
-
-Listing 7.2 的下一部分定义了 `dequeue90` 函数，该函数在 `myqueue` 不为空的情况下，通过调用 `pop()` 方法来移除 `myqueue` 的头部元素。接着，`push()` 函数在 `myqueue` 未满的情况下，通过调用 `append()` 方法向 `myqueue` 的末尾添加一个新元素。
-
-Listing 7.2 的最后部分调用 `push()` 函数将各种数字添加到 `myqueue` 中，随后多次调用 `dequeue()` 方法从队列头部移除元素。运行 Listing 7.2 中的代码，你将在 Listing 7.1 中看到相同的输出。
+`Listing 7.2` 的最后部分调用 `push()` 函数将各种数字添加到 `myqueue` 中，随后多次调用 `dequeue()` 方法从队列头部移除元素。运行 `Listing 7.2` 中的代码，你将在 `Listing 7.1` 中看到相同的输出。
 
 ### 使用数组列表创建队列
 
-Listing 7.3 显示了 `QueueArray.java` 的内容，说明了如何使用 Java `List` 类来使用数组定义队列。
+`Listing 7.3` 显示了 `QueueArray.java` 的内容，说明了如何使用 Java `List` 类来使用数组定义队列。
 
-LISTING 7.3: QueueArray.java
+**LISTING 7.3: QueueArray.java**
 
-```
- import java.util.ArrayList;
 
-public class QueueArray
-{
-   static int MAX = 4;
-   static ArrayList myqueue = new ArrayList();
 
-   public static Boolean isEmpty() {
-     return myqueue.size() == 0;
-   }
+`Listing 7.3` 于初始化变量 `MAX`（队列的最大容量）、`myqueue`（一个基于数组的队列），以及整数 `lpos` 和 `rpos`，它们分别是队列第一个元素和最后一个元素的索引位置。
 
-   public static Boolean isFull() {
-     return myqueue.size() == MAX;
-   }
-
-   public static void dequeue() {
-      if(myqueue.size() > 0) {
-        int front = (int)myqueue.get(0);
-        myqueue.remove(0);
-        System.out.println("removed item : "+front);
-      } else {
-        System.out.println("* myqueue is empty *");
-      }
-   }
-
-   public static void push(int item) {
-      if(isFull() == false) {
-        myqueue.add(item);
-      } else {
-        System.out.println("* myqueue is full *");
-      }
-   }
-
-   public static void main(String[] args)
-   {
-      int[] arr1 = new int[]{10,20,200,50,-123};
-      System.out.println("=> pushing values onto myqueue:");
-      for(int num : arr1) {
-        push(num);
-        System.out.println("myqueue: "+myqueue);
-      }
-
-      System.out.println("=> dequeue values from myqueue: ");
-      while(myqueue.size() > 0) {
-        dequeue();
-        System.out.println("myqueue: "+myqueue);
-      }
-   }
-}
-```
-
-Listing 7.3 于初始化变量 `MAX`（队列的最大 own）、`myqueue`（一个基于数组的队列），以及整数 `lpos` 和 `rpos`，它们分别是队列第一个元素和最后一个元素的索引位置。
-
-Listing 7.3 的下一部分定义了你在之前的代码示例中见过的熟悉的函数 `isEmpty()` 和 `isFull()`。然而，`dequeue()` 函数经过了修改，以处理从 `myqueue` 中弹出（pop）元素的情况：每当发生这种情况时，变量 `lpos` 就会加 1。请注意，此代码块仅在 `lpos` 小于 `rpos` 时执行：否则队列为空。
+`Listing 7.3` 的下一部分定义了你在之前的代码示例中见过的熟悉的函数 `isEmpty()` 和 `isFull()`。然而，`dequeue()` 函数经过了修改，以处理从 `myqueue` 中弹出（pop）元素的情况：每当发生这种情况时，变量 `lpos` 就会加 1。请注意，此代码块仅在 `lpos` 小于 `rpos` 时执行：否则队列为空。
 
 当 `lpos` 大于 0 且 `rpos` 等于 `MAX` 时，会调用 `shift_left` 函数：这种情况发生在队列头部有“空位”且最右侧元素被占用时。该函数将所有元素向队列头部移动，从而释放空间以便更多元素可以添加到 `myqueue`。请记住，当 `lpos` 等于 0 且 `rpos` 等于 `MAX` 时，数组中的每个元素都被占用，此时我们能执行的操作只是从队列头部移除一个元素。
 
-Listing 7.3 的最后部分用一组整数初始化 NumPy 数组 `arr1`，随后通过循环遍历 `arr1` 的元素并调用 `push()` 函数将这些元素添加到 `myqueue`。当该循环执行完毕后，另一个循环调用 `dequeue()` 函数从队列头部移除元素。
+`Listing 7.3` 的最后部分用一组整数初始化 NumPy 数组 `arr1`，随后通过循环遍历 `arr1` 的元素并调用 `push()` 函数将这些元素添加到 `myqueue`。当该循环执行完毕后，另一个循环调用 `dequeue()` 函数从队列头部移除元素。
 
-修改 `MAX` 的值，使其小于、等于或大于数组 `arr1` 中的元素数量。这样做将会在代码中展示不同的执行路径。请注意，Listing 7.3 中包含了许多 `print()` 语句，这些语句会生成详细的输出，从而让你看到代码执行的顺序（你稍后可以“注释掉掉语句）。运行 Listing 7.3 中的代码，你将看到以下输出：
+修改 `MAX` 的值，使其小于、等于或大于数组 `arr1` 中的元素数量。这样做将会在代码中展示不同的执行路径。请注意，`Listing 7.3` 中包含了许多 `print()` 语句，这些语句会生成详细的输出，从而让你看到代码执行的顺序（你稍后可以“注释掉”语句）。运行 `Listing 7.3` 中的代码，你将看到以下输出：
 
 ```
- myqueue: [None, None, None, None, None, None]
+myqueue: [None, None, None, None, None, None]
 
 manually inserted two values:
 myqueue: [None, None, 22]
@@ -8515,10 +8227,6 @@ myqueue: [22]
 myqueue: []
 ```
 
-
-
-
-
 - `isEmpty()` 如果栈为空，则返回 True
 - `isFull()` 如果栈满，则返回 True
 - `stackSize()` 返回栈中元素的数量
@@ -8529,12 +8237,12 @@ myqueue: []
 
 ### 栈的操作
 
-代码代码列表 7.4 显示了 `MyStack.java` 的内容，说明了如何使用 Java 的 `ArrayList` 类来定义栈并对栈执行各种操作。
+代码列表 7.4 显示了 `MyStack.java` 的内容，说明了如何使用 Java 的 `ArrayList` 类来定义栈并对栈执行各种操作。
 
-列表 7.4：MyStack.java
+列表 7.4：`MyStack.java`
 
-```
- import java.util.ArrayList;
+```java
+import java.util.ArrayList;
 
 public class MyStack
 {
@@ -8590,7 +8298,7 @@ public class MyStack
 }
 ```
 
-代码列表 7.4 与 代码列表 7.1 非常相似，不同在于我们处理的是栈而不是队列。特别是，代码列表 7.4 首先将 `mystack` 初始化为 `MAX` 变量，该变量是栈可以包含的最大元素数量。代码列表 7.4 的下一部分定义了几个函数：`isEmpty()` 如果 `mystack` 的长度为 0 则返回 True，随后是 `isFull()`，如果 `mystack` 的长度为 `MAX` 则返回 True。代码列表 7.4 的下一部分定义了 `pop()` 方法以便从 `mystack` 的顶部移除一个元素。代码列表 7.4 的最后一部分调用了 `push()` 向 `mystack` 的顶部添加新元素，你将看到以下输出：
+代码列表 7.4 与代码列表 7.1 非常相似，不同在于我们处理的是栈而不是队列。特别是，代码列表 7.4 首先将 `mystack` 初始化为 `MAX` 变量，该变量是栈可以包含的最大元素数量。代码列表 7.4 的下一部分定义了几个函数：`isEmpty()` 如果 `mystack` 的长度为 0 则返回 True，随后是 `isFull()`，如果 `mystack` 的长度为 `MAX` 则返回 True。代码列表 7.4 的下一部分定义了 `pop()` 方法以便从 `mystack` 的顶部移除一个元素。代码列表 7.4 的最后一部分调用了 `push()` 向 `mystack` 的顶部添加新元素，你将看到以下输出：
 
 ```
 MAX: 4
@@ -8617,10 +8325,10 @@ removed item: 200
 
 代码列表 7.5 显示了 `MyStack2.java` 的内容，说明了如何定义栈并反向打印其内容。此代码示例使用了“常规”的栈数据结构。
 
-列表 7.5：MyStack2.java
+列表 7.5：`MyStack2.java`
 
-```
- import java.util.ArrayList;
+```java
+import java.util.ArrayList;
 
 public class MyStack
 {
@@ -8668,7 +8376,7 @@ public class MyStack
 }
 ```
 
-代码列表 7.5 非常直易懂，因为它是 代码列表 7.2 的直接对应：后者涉及队列，而前者涉及栈。运行 代码列表 7.5 中的代码，你将看到以下输出：
+代码列表 7.5 非常直易懂，因为它是代码列表 7.2 的直接对应：后者涉及队列，而前者涉及栈。运行代码列表 7.5 中的代码，你将看到以下输出：
 
 ```
 MAX: 4
@@ -8688,10 +8396,6 @@ mystack: [0, 1, 2]
 ### 任务：反转并打印栈值
 
 代码列表 7.6 显示了 `ReverseStack.java` 的内容，说明了如何定义栈并反向打印其内容。此代码示例使用了“常规”的栈数据结构。
-
-
-
-
 
 ```java
 import java.util.ArrayList;
@@ -8753,6 +8457,8 @@ public class ReverseStack
 }
 ```
 
+
+
 Listing 7.6 包含了 Listing 7.5 中的代码，并包含一个调用 `push()` 函数的循环，将 NumPy 数组 `arr1`（包含整数）的元素插入变量 `mystack` 中。
 
 在前面的循环执行完毕后，另一个循环通过调用 `pop()` 方法遍历 `mystack` 的元素，并反过来将每个元素添加到数组 `reversed` 中。结果是`reversed` 数组中的元素是 `mystack` 中元素的反转顺序。运行 Listing 7.6 中的代码，你将看到以下输出：
@@ -8782,11 +8488,11 @@ removed item: 200
 reversed: [10, 20, -123, 200]
 ```
 
-### **任务: 显示栈的最小值和最大值 (1)**
+### 任务：显示栈的最小值和最大值 (1)
 
 Listing 7.7 展示了 `StackMinMax.java` 的内容，该代码说明了如何定义栈以及对栈执行各种操作。此代码示例使用了“常规”的栈数据结构。
 
-***列表 7.7: StackMinMax.java***
+**列表 7.7: StackMinMax.java**
 
 ```java
 import java.util.ArrayList;
@@ -8856,9 +8562,6 @@ full  list: false
 Minimum value: -1000
 Maximum value: 8000
 ```
-
-
-
 
 ```java
  import java.util.ArrayList;
@@ -8939,7 +8642,7 @@ palindrome: false
 
 列表 7.10 显示了文件 `StackBalancedParens.java` 的内容，该文件演示了如何使用栈结构来判断一个字符串是否包含平衡括号。
 
-***列表 7.10: StackBalancedParens.java***
+**列表 7.10: StackBalancedParens.java**
 
 ```java
  import java.util.ArrayList;
@@ -9038,20 +8741,20 @@ public class StackBalancedParentheses
 }
 ```
 
-
-
 例如，假设字符串 `my_expr` 初始化为“()”。第一个字符是“(”，它是一个左括号：上述步骤 #1 告诉我们将 `(` 推入到我们（起初是为空的）名为 `mystack` 的栈中。`my_expr` 中的下一个字符是“)”，它是一个右括号：步骤 #2 告诉我们将“)”与栈顶的元素进行比较，该栈顶元素是“(`。由于“(”和“)”组成了一对平衡的括号，我们从栈中弹出元素 `(`。我们已经到达了 `my_expr` 的末尾，由于栈是空的，我们得出结论：“()”是一个平衡表达式（我们已经知道这一点）。
 
 现在假设字符串 `my_expr` 初始化为“((”。第一个字符是“(”，它是一个左括号，上述步骤 #1 告诉我们将 `(` 推入到我们（起初是为空的）名为 `mystack` 的栈中。`my_expr` 中的下一个字符是“(”，它也是一个左括号：上述步骤 #1 告诉我们再次向栈中推入另一个 `(`。我们已经到达了 `my_expr` 的末尾，由于栈不是空的，我们确定 `my_expr` 是不平衡的。
 
-第三个例子，假设字符串 `my_expr` 初始化为“(()”。第一个字符是“(”，它是一个左括号：上述步骤 #1 告诉我们将 `(` 推入到我们（起初是为空的）名为 `mystack` 的栈中。`my_expr` 中的下一个字符是“(”，它是一个左括号：上述步骤 #1 告诉我们再次向栈中推入另一个 `(`。`my_expr` 中的下一个字符是“)”，步骤 #2 告诉我们将“)”与栈顶的元素进行比较，该栈顶元素是“(”。由于“(”和“)”组成了一对平衡的括号，我们弹出栈顶元素。此时，我们已经到达了 `my_expr` 的末尾，由于栈不是空的，我们知道 `my_expr`是不平衡的。
+
+
+第三个例子，假设字符串`my_expr`初始化为“(()”。第一个字符是“(”，它是一个左括号：上述步骤 #1 告诉我们将`(`推入到我们（起初是为空的）名为`mystack`的栈中。`my_expr`中的下一个字符是“(”，它是一个左括号：上述步骤 #1 告诉我们再次向栈中推入另一个`(`。`my_expr`中的下一个字符是“)”，步骤 #2 告诉我们将“)”与栈顶的元素进行比较，该栈顶元素是“(”。由于“(”和“)”组成了一对平衡的括号，我们弹出栈顶元素。此时，我们已经到达了`my_expr`的末尾，由于栈不是空的，我们知道`my_expr`是不平衡的。
 
 尝试使用包含括号序列的额外字符串跟踪代码执行。在完成之后，列表 7.13 中的代码细节将变得更加容易理解。
 
-列表 7.13 中的下一个代码块将变量 `my_expr` 初始化为字符串数组，每个字符串都由各种括号（圆括号、方括号和花括号）组成。下一部分是一个循环，遍历 `my_expr` 的元素，并依次调用函数 `check_balanced` 来确定哪些元素（如果有的话）由平衡括号。运行列表 7.13 中的代码，你将看到以下输出：
+列表 7.13 中的下一个代码块将变量`my_expr`初始化为字符串数组，每个字符串都由各种括号（圆括号、方括号和花括号）组成。下一部分是一个循环，遍历`my_expr`的元素，并依次调用函数`check_balanced`来确定哪些元素（如果有的话）由平衡括号。运行列表 7.13 中的代码，你将看到以下输出：
 
 ```
- checking string: [()]{}{[()()]()}
+checking string: [()]{}{[()()]()}
 => balanced:     [()]{}{[()()]()}
 
 checking string: [()]{}{[()()]()]
@@ -9065,22 +8768,21 @@ checking string: (())(()()()()()]
 
 考虑增强列表 7.13，使得对于包含不平衡括号的字符串可以显示无效字符。
 
-### 任务：算术表达式的分词
+## 任务：算术表达式的分词
 
 本节中的代码示例是下一节任务的序曲，该任务涉及解析算术表达式：事实上，列表 7.11 中的代码被包含在列表 7.11 的代码中。包含独立代码示例的目的是让你能够对可能不是算术表达式的表达式进行分词。
 
-你需要下载 zip 文件 `apache-commons-lang.jar.zip`，解压 zip 文件的内容，并如下更新环境变量 `CLASSPATH`：
+你需要下载 zip 文件`apache-commons-lang.jar.zip`，解压 zip 文件的内容，并如下更新环境变量`CLASSPATH`：
 
-* [`www.java2s.com/Code/Jar/a/Downloadapachecommonslangjar.htm`](http://www.java2s.com/Code/Jar/a/Downloadapachecommonslangjar.htm)
+- [`www.java2s.com/Code/Jar/a/Downloadapachecommonslangjar.htm`](http://www.java2s.com/Code/Jar/a/Downloadapachecommonslangjar.htm)
+- `export CLASSPATH=$CLASSPATH:apache-commons-lang.jar`
 
-* `export CLASSPATH=$CLASSPATH:apache-commons-lang.jar`
+列表 7.11 显示了`TokenizeExpr.java`的内容，说明了如何对算术表达式分词并移除空格和制表符。
 
-列表 7.11 显示了 `TokenizeExpr.java` 的内容，说明了如何对算术表达式分词并移除空格和制表符。
-
-***列表 7.11: TokenizeExpr.java***
+**列表 7.11: TokenizeExpr.java**
 
 ```
- import org.apache.commons.lang.text.StrTokenizer;
+import org.apache.commons.lang.text.StrTokenizer;
 
 public class TokenizeExpr
 {
@@ -9106,10 +8808,10 @@ public class TokenizeExpr
 }
 ```
 
-列表 7.11 包含一个 `main()` 方法，该方法将变量 `exprs` 初始化为字符串数组，每个字符串都是一个算术表达式。接下来，循环遍历 `exprs` 的元素。在每次迭代中，变量 `tokenizer` 被实例化为 `StrTokenizer` 类，通过 `tokenizer` 的 `hasNext()` 方法来遍历 `exprs` 变量中当前字符串的标记。在每次迭代中，当前标记被附加到字符串 `parse` 之前，然后显示其内容。运行列表 7.11 中的代码，你将看到以下输出，它移除了 `exprs` 变量中每个字符串的额外空格：
+列表 7.11 包含一个`main()`方法，该方法将变量`exprs`初始化为字符串数组，每个字符串都是一个算术表达式。接下来，循环遍历`exprs`的元素。在每次迭代中，变量`tokenizer`被实例化为`StrTokenizer`类，通过`tokenizer`的`hasNext()`方法来遍历`exprs`变量中当前字符串的标记。在每次迭代中，当前标记被附加到字符串`parse`之前，然后显示其内容。运行列表 7.11 中的代码，你将看到以下输出，它移除了`exprs`变量中每个字符串的额外空格：
 
 ```
- String:           2789  *  3+7-8-  9
+String:           2789  *  3+7-8-  9
 Parsed:  2789 * 3+7-8- 9
 
 String: 4 /2  +  1
@@ -9119,19 +8821,16 @@ String: 2  -  3  +  4
 Parsed:  2 - 3 + 4
 ```
 
-### 任务：算术表达式中的标记分类
+## 任务：算术表达式中的标记分类
 
 评估算术表达式是一个有趣的任务，因为解决此问题有多种方法。首先，一些人认为解决此任务的“真正”方法涉及杠杆和解析器。然而，这个任务的目的是让你熟悉字符串解析，之后你将更好地处理非算术表达式。
 
-列表 7.12 显示了文件 `parse_expr.py` 的内容，说明了如何使用栈来解析和评估算术表达式。
+列表 7.12 显示了文件`parse_expr.py`的内容，说明了如何使用栈来解析和评估算术表达式。
 
-***列表 7.12: ClassifyTokens.java***
-
-
-
+**列表 7.12: ClassifyTokens.java**
 
 ```java
- import java.util.ArrayList;
+import java.util.ArrayList;
 import org.apache.commons.lang.text.StrTokenizer;
 
 public class ClassifyTokens
@@ -9230,14 +8929,14 @@ public class ClassifyTokens
 }
 ```
 
-`Listing 7.12` 开始通过将变量 `tokens_types` 定义为 Java `ArrayList` 类的实例，接着是包含 7.12 的变量 `math_symbols`。该代码段还定义了 `tokenize()`、`substr_in_array_string()` 和 `parseString()` 方法，它们分别用于对字符串进行分标记、检查字符串是否包含子字符串以及解析字符串。
+`Listing 7.12`开始通过将变量`tokens_types`定义为 Java `ArrayList`类的实例，接着是包含 7.12 的变量`math_symbols`。该代码段还定义了`tokenize()`、`substr_in_array_string()`和`parseString()`方法，它们分别用于对字符串进行分标记、检查字符串是否包含子字符串以及解析字符串。
 
-`parseString()` 的代码与前一节中 `TokenizeExpr` 类中的方法相同。`substr_in_array_string()` 方法检查给定字符串是否为字符串数组中的元素。`parseString()` 方法也与前一节中 `TokenizeExpr` 类中的方法相同。
+`parseString()`的代码与前一节中`TokenizeExpr`类中的方法相同。`substr_in_array_string()`方法检查给定字符串是否为字符串数组中的元素。`parseString()`方法也与前一节中`TokenizeExpr`类中的方法相同。
 
-`main()` 方法将变量 `exprs` 初始化为字符串数组，每个元素都是一个算术表达式。接下来，通过循环遍历 `exprs` 的元素。在每次迭代中，调用 `tokenize()` 方法并传入 `exprs` 数组中的当前元素。运行 `Listing 7.12` 中的代码，你将看到以下输出：
+`main()`方法将变量`exprs`初始化为字符串数组，每个元素都是一个算术表达式。接下来，通过循环遍历`exprs`的元素。在每次迭代中，调用`tokenize()`方法并传入`exprs`数组中的当前元素。运行`Listing 7.12`中的代码，你将看到以下输出：
 
 ```
- STRING: 2789*3+7-8-9
+STRING: 2789*3+7-8-9
 extract number:
 tokenStr: 2 idx: 0
 tokenStr: 7 idx: 1
@@ -9270,119 +8969,119 @@ TOKENSTR: + idx: 6
 => found operator: +
 （注：此处根据原文逻辑保持输出格式，实际运行中可能重复，此处保持一致性）
 
-### **中缀、前缀和后缀表示**
+## 中缀、前缀和后缀表示
 
 有三种常用且表示算术表达式的方法：中缀表示、前缀表示和后缀表示。
 
-*中缀表示*将运算符放在操作数*之间*，这是我们编写算术表达式的典型方式（例如：3+4）。
+*中缀表示*将运算符放在操作数*之间*，这是我们编写算术表达式的典型方式（例如：`3+4`）。
 
-*前缀表示*（也称为波兰表示）将运算符放在操作数*之前*。例如，中缀表达式 3+4 对应的前缀表达式为 + 3 4。
+*前缀表示*（也称为波兰表示）将运算符放在操作数*之前*。例如，中缀表达式`3+4`对应的前缀表达式为`+ 3 4`。
 
 *后缀表示*（也称为逆波兰表示）将运算符放在其操作数*之后*。以下是示例：
 
-4*5 变为 4 5 *
+- `4*5`变为`4 5 *`
+- `a*b + c*d`变为`a b * c d * +`
+- `a * b – (c + d)`变为`a b c d + –`
+- `3+4*5`变为`3 4 5 * +`
 
-a*b + c*d 变为 a b * c d * +
+你可以使用栈来执行后缀操作，这些操作涉及将数值（或变量）值推入栈，当在后缀表达式中遇到二元运算符时，将该运算符应用于栈顶两个元素，并将它们替换为结果。作为一个示例，让我们查看计算表达式`3+4*5`的栈内容，其后缀表达式为`3 4 5 * +`。
 
-a * b – (c + d) 变为 a b c d + –
+步骤 1：推入`3`
 
-3+4*5 变为 3 4 5 * +
-
-你可以使用栈来执行后缀操作，这些操作涉及将数值（或变量）值推入栈，当在后缀表达式中遇到二元运算符时，将该运算符应用于栈顶两个元素，并将它们替换为结果。作为一个示例，让我们查看计算表达式 3+4*5 的栈内容，其后缀表达式为 3 4 5 * +
-
-步骤 1：推入 3
-
+```
 3
+```
 
-步骤 2：推入 4
+步骤 2：推入`4`
 
+```
 4
-
 3
+```
 
-步骤 3：推入 5
+步骤 3：推入`5`
 
+```
 5
-
 4
-
 3
+```
 
-步骤 4：对栈顶两个元素应用 *
+步骤 4：对栈顶两个元素应用`*`
 
+```
 20
-
 3
+```
 
-步骤 5：对栈顶两个元素应用 +
+步骤 5：对栈顶两个元素应用`+`
 
+```
 23
+```
 
 当我们到达后缀表达式的末尾时，看到栈中只有一个元素，即为评估后缀表达式的结果。
 
 下表包含了使用中缀、前缀和后缀表示法的更多示例。
 
-
-
-
-
 ```
- Infix     Prefix     Postfix
+Infix     Prefix     Postfix
 x+y       +xy        xy+ 
 x-y       -xy        xy- 
 x/y       /xy        xy/ 
 x*y       *xy        xy* 
 x^y       ^yx        yx^ 
-
 (x+y)*z   *(x+y)z    (x+y)z*
 (x+y)*z   *(+xy)z    (xy+)z*
 ```
 
-让我们来看下面稍微复杂的中缀表达式（注意加粗显示的 `/` 符号）：
+让我们来看下面稍微复杂的中缀表达式（注意加粗显示的`/`符号）：
 
 ```
- [[x+(y/z)-d]²]/(x+y)
+[[x+(y/z)-d]²]/(x+y)
 ```
 
-我们将执行一系列迭代步骤，通过对顶层运算符应用中缀符号定义，将该中缀表达式转换为前缀表达式。在本中，顶层运算符是加粗显示的 `/` 符号。我们需要将这个 `/` 符号放在最左侧的位置，如下（注意加粗显示的 `^` 符号）：
+我们将执行一系列迭代步骤，通过对顶层运算符应用中缀符号定义，将该中缀表达式转换为前缀表达式。在本中，顶层运算符是加粗显示的`/`符号。我们需要将这个`/`符号放在最左侧的位置，如下（注意加粗显示的`^`符号）：
 
 ```
- /[[x+y/z-d]²](x+y)
+/[[x+y/z-d]²](x+y)
 ```
 
-现在，我们需要将这个 `^` 符号放在第二个左方括号的左侧，如下（注意加粗显示的 `/` 符号）：
+现在，我们需要将这个`^`符号放在第二个左方括号的左侧，如下（注意加粗显示的`/`符号）：
 
 ```
- /[^[x+(y/z)-d]2](+xy)
+/[^[x+(y/z)-d]2](+xy)
 ```
 
-现在，我们需要将这个 `/` 符号放在变量 `y` 的左侧，如下（注意加粗显示的 `+` 符号）：
+现在，我们需要将这个`/`符号放在变量`y`的左侧，如下（注意加粗显示的`+`符号）：
 
 ```
- /[^[x+(/yz)-d]2](+xy)
+/[^[x+(/yz)-d]2](+xy)
 ```
 
-现在，我们需要将这个 `+` 符号放在变量 `x` 的左侧，如下（注意加粗显示的 `/` 符号）：
+现在，我们需要将这个`+`符号放在变量`x`的左侧，如下（注意加粗显示的`/`符号）：
 
 ```
- /[^[+x(/yz)-d]2](+xy)
+/[^[+x(/yz)-d]2](+xy)
 ```
 
-现在，我们需要将这个 `/` 符号放在变量 `x` 的左侧，如下，此时它已经是一个中表达式了：
+现在，我们需要将这个`/`符号放在变量`x`的左侧，如下，此时它已经是一个中表达式了：
 
 ```
- /[^[-(+(/yz))d]2](+xy)
+/[^[-(+(/yz))d]2](+xy)
 ```
+
+
 
 请通过非在线搜索更多关于前缀和后缀表达式的示例，以及使用 Java 数据结构实现这些表达式的代码样本。
 
 ### 总结
 
-本章从队列的介绍开始，并提供了队列在现实世界的示例。接下来，你学习了与队列相关的几个函数，例如 `isEmpty()`、`isFull()`、`push()` 和 `dequeue()`。
+本章从队列的介绍开始，并提供了队列在现实世界的示例。接下来，你学习了与队列相关的几个函数，例如`isEmpty()`、`isFull()`、`push()`和`dequeue()`。
 
 随后，你学习了栈，它是一种后进先出（LIFO）数据结构，以及一些 Java 代码样本，向你展示如何在栈上执行各种操作。示例包括反转栈的内容，以及判断栈的内容是否构成回文。
 
-在本章的最后一部分中，你学习了如何判断一个字符串是否由平衡的圆括号、方括号和大大括号组成；如何解析算术表达式；以及如何将中缀符号转换为后缀符号。
+在本章的最后一部分中，你学习了如何判断一个字符串是否由平衡的圆括号、方括号和大括号组成；如何解析算术表达式；以及如何将中缀符号转换为后缀符号。
 
 # 索引
 
@@ -9406,9 +9105,9 @@ x^y       ^yx        yx^
 
 ### C
 
-charAt() 方法，8
+`charAt()`方法，8
 
-CharSequence 接口，7
+`CharSequence`接口，7
 
 循环链表，142–147
 
@@ -9424,7 +9123,7 @@ CharSequence 接口，7
 
 条件逻辑，16–18
 
-countDigits() 方法，43–44
+`countDigits()`方法，43–44
 
 ### D
 
@@ -9442,17 +9141,17 @@ countDigits() 方法，43–44
 
 双向链表 (DLL)
 
-append_node() 方法，149–156
+`append_node()`方法，149–156
 
 删除（delete），159–163
 
-node 类，148–149
+`node`类，148–149
 
 遍历与更新，156–159
 
 ### E
 
-equals() 方法，16
+`equals()`方法，16
 
 ### F
 
@@ -9460,11 +9159,11 @@ equals() 方法，16
 
 斐波那契数，38–40
 
-findPrimeisors() 方法，45–47
+`findPrimeisors()`方法，45–47
 
 ### G
 
-gcd() 方法，49–50
+`gcd()`方法，49–50
 
 几何级数，32–35
 
@@ -9478,9 +9177,9 @@ gcd() 方法，49–50
 
 集成开发环境 (IDE)，3–4
 
-is_anagram() 方法，108–109
+`is_anagram()`方法，108–109
 
-isPrime() 方法，44–45
+`isPrime()`方法，44–45
 
 ### J
 
@@ -9490,7 +9189,7 @@ Java
 
 注释，5
 
-CompareStrings.java，13–14
+`CompareStrings.java`，13–14
 
 条件逻辑，16–18
 
@@ -9498,19 +9197,19 @@ CompareStrings.java，13–14
 
 因数，19–20
 
-equals() 方法，12–13
+`equals()`方法，12–13
 
 特征，1
 
-HelloWorld.java，6–7
+`HelloWorld.java`，6–7
 
 IDEs，3–4
 
-LeapYear.java，18–19
+`LeapYear.java`，18–19
 
-MyClass.java，5–6
+`MyClass.java`，5–6
 
-new 运算符，10–11
+`new`运算符，10–11
 
 运算符，5
 
@@ -9518,29 +9217,29 @@ new 运算符，10–11
 
 原始数据类型，4
 
-SearchString.java，14
+`SearchString.java`，14
 
 静态方法，24–25
 
-StringBuilder 类，22–24
+`StringBuilder`类，22–24
 
 ### String 类
 
-charAt() 方法，8
+`charAt()`方法，8
 
-CharSequence 接口，7
+`CharSequence`接口，7
 
-CharsStrings.java，8–9
+`CharsStrings.java`，8–9
 
-equals() 方法，16
+`equals()`方法，16
 
 带有元字符，9–10
 
-Serializable 接口，7
+`Serializable`接口，7
 
-split() 方法，15
+`split()`方法，15
 
-substring() 方法，15
+`substring()`方法，15
 
 版本选择
 
@@ -9560,7 +9259,7 @@ JRE vs. JDK，3
 
 ### L
 
-lcm() 方法，50–51
+`lcm()`方法，50–51
 
 线性数据结构，126
 
@@ -9574,11 +9273,11 @@ lcm() 方法，50–51
 
 连接，180–182
 
-delete() 方法，189–191
+`delete()`方法，189–191
 
 双（见双向链表）
 
-find_middle() 方法，191–194
+`find_middle()`方法，191–194
 
 前 k 个节点，170–172
 
@@ -9588,13 +9287,13 @@ find_middle() 方法，191–194
 
 删除重复，176–179
 
-reverse_list() 方法，195–196
+`reverse_list()`方法，195–196
 
-ReverseSLList.java，175–176
+`ReverseSLList.java`，175–176
 
 单（见单向链表）
 
-split_list() 方法，186–189
+`split_list()`方法，186–189
 
 ### M
 
@@ -9602,7 +9301,7 @@ split_list() 方法，186–189
 
 ### N
 
-new 运算符，10–11
+`new`运算符，10–11
 
 非线性数据结构，126
 
@@ -9610,27 +9309,27 @@ new 运算符，10–11
 
 一维数组，82–83
 
-BitCount.java，91–92
+`BitCount.java`，91–92
 
-check() 方法，90–91
+`check()`方法，90–91
 
-FlipBitCount.java，93–94
+`FlipBitCount.java`，93–94
 
 生成 0 和 1，88
 
 相邻元素的反转，84–85
 
-RightMostSetBit.java，92–93
+`RightMostSetBit.java`，92–93
 
 左移非零值，85–87
 
-SimpleSort.java，87–88
+`SimpleSort.java`，87–88
 
-swapAdjacentBits() 函数，96–97
+`swapAdjacentBits()`函数，96–97
 
-SwitchBitPairs.java，89–90
+`SwitchBitPairs.java`，89–90
 
-XORWithoutXOR.java，94–95
+`XORWithoutXOR.java`，94–95
 
 ### P
 
@@ -9644,50 +9343,51 @@ XORWithoutXOR.java，94–95
 
 队列
 
-ArrayList 类，200–206
+`ArrayList`类，200–206
 
 定义，199
 
 类型，200
 
-
-
-
-
 # 快速排序，118–120
 
 ## R
-- 递归,28
+
+- 递归, 28
 - 等差数列, 28–32
 - 平衡括号, 41–43
-- `countDigits()` 方法, 43–44
+- `countDigits()`方法, 43–44
 - 阶乘值, 35–38
 - 斐波那契数列, 38–40
-- `findPrimeDivisors()` 方法, 45–47
-- `gcd()` 方法, 49–50
+- `findPrimeDivisors()`方法, 45–47
+- `gcd()`方法, 49–50
 - 等比数列, 32–35
 - 哥德巴猜想, 47–49
-- `isPrime()` 方法, 44–45
-- `lcm()` 方法, 50–51
+- `isPrime()`方法, 44–45
+- `lcm()`方法, 50–51
 - 反转字符串, 40–41
 
 ## S
+
 ### 搜索算法
+
 - 二分查找, 103–106
 - 线性查找, 101–103
 - 选择排序, 110–111
-- `Serializable` 接口, 7
+- `Serializable`接口, 7
 - 柯式排序, 121–122
 
 ### 单链表
+
 - 优缺点, 128
 - 创建和追加操作, 128–136
 - 权衡, 127
 - 更新和删除操作, 136–142
-- `split()` 方法, 15
+- `split()`方法, 15
 
 ### 栈
-- `ArrayList` 类, 207–211
+
+- `ArrayList`类, 207–211
 - 平衡括号, 217–221
 - 最小值和最大值, 213–214
 - 操作, 207
@@ -9697,47 +9397,49 @@ ArrayList 类，200–206
 - 表达式分词, 221–226
 - 使用场景, 207
 - 二进制子串, 60–61
-- `commonBits()` 函数, 61–63
+- `commonBits()`函数, 61–63
 - 统计词频, [66–67]](#ch03.xhtml_page_66)
-- `insertChar()` 方法, 69–70
+- `insertChar()`方法, 69–70
 - 最长回文, 73–75
 - 最长子串序列, 78–82
-- `MaxPowerk()` 函数, 58–60
+- `MaxPowerk()`函数, 58–60
 - 通过递归乘除, 63–64
 - 一维数组, 82–83
 - `BitCount.java`, 91–92
-- `check()` 方法, 90–91
+- `check()`方法, 90–91
 - `Flip.java`, 93–94
 - 生成 0 和 1, 88–89
 - 相邻元素的逆序对, 84–85
 - `RightMostSetBit.java`, 92–93
 - 移位非零值, 85–87
 - `SimpleSort.java`, 87–88
-- `swapAdjacentBits()` 函数, 96–97
+- `swapAdjacentBits()`函数, 96–97
 - `SwitchBit.java`, 89–90
 - `XORWithoutXOR.java`, 94–95
-- `palindrome1()` 函数, 71–73
-- `permute()` 函数, 70–71
+- `palindrome1()`函数, 71–73
+- `permute()`函数, 70–71
 - 字符串序列, 75–78
 - 质数和合数的和, 64–66
 - 时间空间复杂度, 57–58
-- `transpose()` 函数, 97–98
+- `transpose()`函数, 97–98
 - 二维数组, 97
-- `unique_chars()` 函数, 68–69
-- `substring()` 方法, 15
+- `unique_chars()`函数, 68–69
+- `substring()`方法, 15
 
 ## T
+
 - 二维数组, 97
 
 ## W
+
 ### 常见的排序算法
+
 - 泡排序, 107–108
 - 比较, 112
 - 插入排序, 111–112
-- `is_anagram()` 方法, 108–109
+- `is_anagram()`方法, 108–109
 - 归排序, 112–118
 - `PairSumTarget.java`, 122–124
 - 快速排序, 118–120
 - 选择排序, 110–111
 - 柯式排序, 121–122
-

@@ -1,18 +1,19 @@
+
 # 用 Spring 数据连接表 JPA 规范
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-jpa-joining-tables>
 
-## 1.概观
+## 1. 概观
 
 在这个简短的教程中，我们将讨论 [Spring Data JPA](/web/20220707143816/https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa) 规范的一个更高级的特性，它允许我们在创建查询时连接表。
 
 让我们先简要回顾一下 JPA 规范的用法。
 
-## 2.JPA 规范
+## 2. JPA 规范
 
-**Spring Data JPA 引入了`Specification `接口，允许我们用可重用的组件创建动态查询。**
+**Spring Data JPA 引入了`Specification`接口，允许我们用可重用的组件创建动态查询。**
 
-对于本文中的代码示例，我们将使用`Author`和`Book`类:
+对于本文中的代码示例，我们将使用`Author`和`Book`类：
 
 ```java
 @Entity
@@ -33,7 +34,7 @@ public class Author {
 }
 ```
 
-为了给`Author` 实体创建一个动态查询，我们可以使用`Specification`接口的实现:
+为了给`Author`实体创建一个动态查询，我们可以使用`Specification`接口的实现：
 
 ```java
 public class AuthorSpecifications {
@@ -50,7 +51,7 @@ public class AuthorSpecifications {
 }
 ```
 
-最后，我们需要用`AuthorRepository`来扩展`JpaSpecificationExecutor`:
+最后，我们需要用`AuthorRepository`来扩展`JpaSpecificationExecutor`：
 
 ```java
 @Repository
@@ -58,7 +59,7 @@ public interface AuthorsRepository extends JpaRepository<Author, Long>, JpaSpeci
 }
 ```
 
-因此，我们现在可以将这两个规范链接在一起，并用它们创建查询:
+因此，我们现在可以将这两个规范链接在一起，并用它们创建查询：
 
 ```java
 @Test
@@ -73,9 +74,9 @@ public void whenFindByLastNameAndFirstNameLike_thenOneAuthorIsReturned() {
 }
 ```
 
-## 3.使用 JPA 规范连接表
+## 3. 使用 JPA 规范连接表
 
-我们可以从我们的数据模型中观察到，`Author`实体与`Book`实体共享一对多关系:
+我们可以从我们的数据模型中观察到，`Author`实体与`Book`实体共享一对多关系：
 
 ```java
 @Entity
@@ -91,7 +92,7 @@ public class Book {
 }
 ```
 
-[标准查询 API](/web/20220707143816/https://www.baeldung.com/spring-data-criteria-queries) 允许我们在创建`Specification` `.` 时连接两个表。因此，我们将能够在查询中包含来自`Book`实体的字段:
+[标准查询 API](/web/20220707143816/https://www.baeldung.com/spring-data-criteria-queries) 允许我们在创建`Specification`时连接两个表。因此，我们将能够在查询中包含来自`Book`实体的字段：
 
 ```java
 public static Specification<Author> hasBookWithTitle(String bookTitle) {
@@ -102,7 +103,7 @@ public static Specification<Author> hasBookWithTitle(String bookTitle) {
 }
 ```
 
-现在，让我们将这个新规范与以前创建的规范结合起来:
+现在，让我们将这个新规范与以前创建的规范结合起来：
 
 ```java
 @Test
@@ -117,9 +118,9 @@ public void whenSearchingByBookTitleAndAuthorName_thenOneAuthorIsReturned() {
 }
 ```
 
-最后，让我们看一下生成的 SQL，看看`JOIN`子句:
+最后，让我们看一下生成的 SQL，看看`JOIN`子句：
 
-```java
+```sql
 select 
   author0_.id as id1_1_, 
   author0_.first_name as first_na2_1_, 
@@ -133,7 +134,7 @@ where
   and book2_.title = ?
 ```
 
-## 4.结论
+## 4. 结论
 
 在本文中，我们已经了解了如何使用 JPA 规范来查询基于相关实体之一的表。
 

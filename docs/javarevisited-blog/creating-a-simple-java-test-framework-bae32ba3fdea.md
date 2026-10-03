@@ -1,3 +1,4 @@
+
 # 创建一个简单的 Java 测试框架
 
 > 原文：<https://medium.com/javarevisited/creating-a-simple-java-test-framework-bae32ba3fdea?source=collection_archive---------3----------------------->

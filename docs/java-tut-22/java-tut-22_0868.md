@@ -1,3 +1,4 @@
+
 # 弱点和替代方案
 
 > 原文：[`docs.oracle.com/javase/tutorial/security/apisign/enhancements.html`](https://docs.oracle.com/javase/tutorial/security/apisign/enhancements.html)
@@ -22,15 +23,13 @@ PKCS8EncodedKeySpec privKeySpec = new PKCS8EncodedKeySpec(encKey);
 
 KeyFactory keyFactory = KeyFactory.getInstance("DSA");
 PrivateKey privKey = keyFactory.generatePrivate(privKeySpec);
-
 ```
 
 `GenSig`不再需要将公钥字节保存在文件中，因为它们已经在一个文件中。
 
-在这种情况下，发送方发送接收方
+在这种情况下，发送方发送接收方：
 
 +   包含编码的公钥字节的已存在文件（除非接收方已经拥有此文件）和
-
 +   由`GenSig`导出的数据文件和签名文件。
 
 `VerSig`程序保持不变，因为它已经期望文件中存在编码的公钥字节。
@@ -59,14 +58,10 @@ PrivateKey privKey = keyFactory.generatePrivate(privKeySpec);
 
 或者，您可以使用 API 修改您的程序以使用来自密钥库的已存在私钥和相应的公钥（在证书中）。首先，修改`GenSig`程序以从密钥库中提取私钥而不是生成新密钥。首先，让我们假设以下内容：
 
-+   密钥库名称在`String``ksName`中
-
++   密钥库名称在`String` `ksName`中
 +   密钥库类型为"JKS"，这是来自 Oracle 的专有类型。
-
 +   密钥库密码在字符数组`spass`中
-
-+   包含私钥和公钥证书的密钥库条目的别名在`String``alias`中
-
++   包含私钥和公钥证书的密钥库条目的别名在`String` `alias`中
 +   私钥密码在字符数组`kpass`中
 
 然后，您可以通过以下方式从密钥库中提取私钥。
@@ -78,7 +73,6 @@ BufferedInputStream ksbufin = new BufferedInputStream(ksfis);
 
 ks.load(ksbufin, spass);
 PrivateKey priv = (PrivateKey) ks.getKey(alias, kpass);
-
 ```
 
 您可以从密钥库中提取公钥证书，并将其编码字节保存到名为`suecert`的文件中，通过以下方式。
@@ -92,7 +86,6 @@ byte[] encodedCert = cert.getEncoded();
 FileOutputStream certfos = new FileOutputStream("suecert");
 certfos.write(encodedCert);
 certfos.close();
-
 ```
 
 然后，您将数据文件、签名和证书发送给接收者。接收者通过首先使用`keytool -printcert`命令获取证书的指纹来验证证书的真实性。
@@ -107,12 +100,11 @@ Sun Oct 11 22:31:03 PDT 1998
 Certificate fingerprints:
 MD5:  1E:B8:04:59:86:7A:78:6B:40:AC:64:89:2C:0F:DD:13
 SHA1: 1C:79:BD:26:A1:34:C0:0A:30:63:11:6A:F2:B9:67:DF:E5:8D:7B:5E
-
 ```
 
 然后接收者验证指纹，可能通过给发送者打电话并将其与发送者的证书进行比较，或者通过在公共存储库中查找它们来进行验证。
 
-接收者的验证程序（修改后的`VerSig`）然后可以通过以下方式导入证书并从中提取公钥，假设证书文件名（例如，`suecert`）在`String``certName`中。
+接收者的验证程序（修改后的`VerSig`）然后可以通过以下方式导入证书并从中提取公钥，假设证书文件名（例如，`suecert`）在`String` `certName`中。
 
 ```java
 FileInputStream certfis = new FileInputStream(certName);
@@ -120,7 +112,6 @@ java.security.cert.CertificateFactory cf =
     java.security.cert.CertificateFactory.getInstance("X.509");
 java.security.cert.Certificate cert =  cf.generateCertificate(certfis);
 PublicKey pub = cert.getPublicKey();
-
 ```
 
 ## 确保数据机密性

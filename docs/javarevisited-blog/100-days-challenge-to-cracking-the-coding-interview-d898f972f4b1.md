@@ -1,8 +1,9 @@
+
 # 第 24 天-英国夏令时的最小距离
 
 > 原文：<https://medium.com/javarevisited/100-days-challenge-to-cracking-the-coding-interview-d898f972f4b1?source=collection_archive---------0----------------------->
 
-## **亚马逊 100 天**
+## 亚马逊 100 天
 
 [**亚马逊 100 天—第 24 天—英国夏令时**](https://leetcode.com/problems/minimum-distance-between-bst-nodes/) 最短距离
 

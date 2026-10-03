@@ -1,3 +1,4 @@
+
 # 连接池
 
 > 译文：[`docs.oracle.com/javase/tutorial/jndi/ldap/pool.html`](https://docs.oracle.com/javase/tutorial/jndi/ldap/pool.html)
@@ -12,7 +13,7 @@ LDAP 服务提供程序支持的另一种连接共享类型称为*连接池*。�
 
 ## 如何使用连接池
 
-通过向传递给初始上下文构造函数的环境属性添加属性`"com.sun.jndi.ldap.connect.pool"`来请求连接池。这里是`一个示例`。
+通过向传递给初始上下文构造函数的环境属性添加属性`"com.sun.jndi.ldap.connect.pool"`来请求连接池。这里是一个示例。
 
 ```java
 // Set up environment for creating initial context
@@ -38,14 +39,12 @@ DirContext ctx2 = new InitialDirContext(env);
 
 // Close the context when we're done
 ctx2.close();   // Return connection to pool
-
 ```
 
 此示例连续创建两个初始上下文。第二个初始上下文将重用第一个使用的连接。要运行此程序并观察如何检索连接并将其返回到池中，请使用以下命令行。
 
 ```java
 #java -Dcom.sun.jndi.ldap.connect.pool.debug=fine UsePool
-
 ```
 
 这应该产生以下输出。
@@ -58,7 +57,6 @@ Release com.sun.jndi.ldap.LdapClient@5d173
 Use com.sun.jndi.ldap.LdapClient@5d173
 {ou=ou: People, objectclass=objectClass: top, organizationalunit}
 Release com.sun.jndi.ldap.LdapClient@5d173
-
 ```
 
 通过包含或省略`"com.sun.jndi.ldap.connect.pool"`属性，您可以决定何时何地使用连接池，从而在*每个上下文*的基础上控制连接池。在前面的示例中，如果在创建第二个初始上下文之前从环境属性中删除此属性，则第二个初始上下文将不使用池化连接。

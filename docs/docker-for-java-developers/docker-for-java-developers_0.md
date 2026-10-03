@@ -1,65 +1,60 @@
+
 # Java 开发者的 Docker 指南
 
+## 目录
 
-
-
-
-
-- 8. 后一步展望
-- 在 Docker 上开发
-- 1. 介绍
-- 2. 来自 IDE 的 Docker
-- 2.1. Eclipse
-- 2.2. IntelliJ IDEA
-- 2.3. Oracle NetBeans
-- 3. 边缘：Docker 中的 IDE
-- 4. 调试如何？
-- 5. 管理与监控
-- 5.1. Portainer
-- 5.2. Advisor
-- 5.3. top
-- 5.4. 以及更多
-- 6. Docker Engine
-- 7. 结论
-- 8. 后一步展望
-- 在 Docker 上测试
-- 1. 介绍
-- 2. 在开始之前
-- 3. 在内存中存储数据
-- 4. 场景
-- 5. Testcontainers
-- 6. Arquillian
-- 7. 使用 Over
-- 8. Docker Compose
-- 9. 结论
-- 10. 后一步展望
-- 在 Docker 上部署
-- 1. 介绍
-- 2. 作为部署单元的容器
-- 3. 使用 Kubernetes 进行编排
-- 4. 使用 Apache Mesos 进行编排
-- 5. 使用 Docker Swarm 进行编排
-- 6. 云端容器
-- 6.1. Amazon Elastic Service
-- 6.2. Google Kubernetes Engine
-- 6.3. Azure Container Service
-- 7. 结论
-- 8. 后一步展望
-- Docker 上的持续集成
-- 1. 介绍
-- 2. 为什么用 Jenkins?
-- 3. 代码流水线
-- 4. Jenkins 与 Docker
-- 5. Jenkins 中的 Docker
-- 6. 结论
+- [在 Docker 上开发](#在-docker-上开发)
+  - 1. 介绍
+  - 2. 来自 IDE 的 Docker
+    - 2.1. Eclipse
+    - 2.2. IntelliJ IDEA
+    - 2.3. Oracle NetBeans
+  - 3. 边缘：Docker 中的 IDE
+  - 4. 调试如何？
+  - 5. 管理与监控
+    - 5.1. Portainer
+    - 5.2. Advisor
+    - 5.3. top
+    - 5.4. 以及更多
+  - 6. Docker Engine
+  - 7. 结论
+  - 8. 后一步展望
+- [在 Docker 上测试](#在-docker-上测试)
+  - 1. 介绍
+  - 2. 在开始之前
+  - 3. 在内存中存储数据
+  - 4. 场景
+  - 5. Testcontainers
+  - 6. Arquillian
+  - 7. 使用 Over
+  - 8. Docker Compose
+  - 9. 结论
+  - 10. 后一步展望
+- [在 Docker 上部署](#在-docker-上部署)
+  - 1. 介绍
+  - 2. 作为部署单元的容器
+  - 3. 使用 Kubernetes 进行编排
+  - 4. 使用 Apache Mesos 进行编排
+  - 5. 使用 Docker Swarm 进行编排
+  - 6. 云端容器
+    - 6.1. Amazon Elastic Service
+    - 6.2. Google Kubernetes Engine
+    - 6.3. Azure Container Service
+  - 7. 结论
+  - 8. 后一步展望
+- [Docker 上的持续集成](#docker-上的持续集成)
+  - 1. 介绍
+  - 2. 为什么用 Jenkins?
+  - 3. 代码流水线
+  - 4. Jenkins 与 Docker
+  - 5. Jenkins 中的 Docker
+  - 6. 结论
 
 # 面向 Java 开发者的 Docker
 
-# 介绍
-
 ## 1. 介绍
 
-如果你没有听过 `Docker`，那么你可能过去几年是在太阳系中某个其他行星上度过的。`Docker` 席卷了我们的行业，并在短时间内改变了许多成熟的软件开发和运维实践与模式。如今，几乎每个组织都在使用 `Docker`（或其等物），勇敢的人甚至在生产环境中使用，而且其采用率正以惊人的速度增长。
+如果你没有听过 `Docker`，那么你可能过去几年是在太阳系中某个其他行星上度过的。`Docker` 席卷了我们的行业，并在短时间内改变了许多成熟的软件开发和运维实践与模式。如今，几乎每个组织都在使用 `Docker`（或其等价物），勇敢的人甚至在生产环境中使用，而且其采用率正以惊人的速度增长。
 
 在教程中，我们将讨论 `Docker` 如何帮助我们这些 `Java` 开发者完成日常任务。本教程由几个部分组成，我们将涉及 `Docker` 的不同方面以及它在 `Java` 应用开发中的适用性。
 
@@ -76,81 +71,75 @@
 - 测试
 - 部署
 
+这个让 [Docker](https://www.docker.com/) 及其伙伴成为可能的故事可以追溯到 2006 年，当时 [Google](https://en.wikipedia.org/wiki/Google) 的几个优秀工程师开始以“进程容器”（process containers）之名开发这项功能。后来它被重命名为“控制组”（或我们今天所知的 [cgroups](https://en.wikipedia.org/wiki/Cgroups)），并从 `2.6.24` 版本开始合并到 Linux 内核（该版本于 2008 年 1 月发布）。
 
+本质上，[cgroups](https://en.wikipedia.org/wiki/Cgroups) 是一种 [Linux 内核](https://en.wikipedia.org/wiki/Linux_kernel) 功能，它能够限制、统计、优先排序和隔离 [进程](https://en.wikipedia.org/wiki/Process_%28computing%29) 的 [资源使用](https://en.wikipedia.org/wiki/Resource_%28computer_science%29)（`CPU`、`memory`、`disk I/O`、`network` 等）。最重要的是，为了支持这一切，[Linux 内核](https://en.wikipedia.org/wiki/Linux_kernel) 无需启动任何 [虚拟机](https://en.wikipedia.org/wiki/Virtual_machine) 或 [虚拟化监控程序](https://en.wikipedia.org/wiki/Hypervisor)。与 [命名空间](https://en.wikipedia.org/wiki/Linux_namespaces)（Linux 内核另一项非常强大的功能）一起，[cgroups](https://en.wikipedia.org/wiki/Cgroups) 是 [容器](https://en.wikipedia.org/wiki/Operating-system-level) —— 即操作系统级虚拟化的基础构建块。
 
+基于容器的虚拟化极其轻量（与传统的 [虚拟机](https://en.wikipedia.org/wiki/Virtual_machine) 相比），产生的开销极小甚至没有，共享同一个操作系统，并且不需要特殊硬件即可高效运行。换句话说，容器变成了一种封装应用程序的新模型，使其能够在共享的操作系统上隔离运行，而不受限制；如今使用容器已成为主流。平心地说，并不是所有的 Linux/Unix 发行版都使用相同的机制进行操作系统级虚拟化。举几个例子，[FreeBSD](https://www.freebsd.org/) 使用 [jails](https://en.wikipedia.org/wiki/FreeBSD_jail) 用于此类目的，而 [Solaris](https://en.wikipedia.org/wiki/Solaris_(operating_system)) 则有 [zones](https://en.wikipedia.org/wiki/Solaris_Containers) 的概念。
 
+那么，如何使用容器？你可能听过 `LXC` 或 `LXD` 的缩写，它们本质上是大多数 Linux/Unix 发行版容器管理的入口。问题在于，这些工具有些过于底层，且不容易上手。但幸运的是，我们有 [Docker](https://en.wikipedia.org/wiki/Docker_%28software) 和 [rkt](https://coreos.com/rkt)，这些以应用程序为中心的容器引擎从诞生之初就成为全球应用开发者的事实标准选择。
 
-这个让 [Docker](https://www.docker.com/) 及其伙伴成为可能的故事可以追溯到 2006 年，当时 [Google](https://en.wikipedia.org/wiki/Google) 的几个优秀工程师开始以“进程容器”（process containers）之名开发这项功能。后来它被重命名为“控制组”（或我们今天所知的 [cgroups](https://en.wikipedia.org/wiki/Cgroups）），并从 `2.6.24` 版本开始合并到 Linux 内内核（该版本于 2008 年 1 月发布）。
-
-本质上，[cgroups](https://en.wikipedia.org/wiki/Cgroups) 是一种 [Linux 内核](https://en.wikipedia.org/wiki/Linux_kernel) 功能，它能够限制、统计、优先排序和隔离 [进程](https://en.wikipedia.org/wiki/Process_%28computing%29) 的[资源使用](https://en.wikipedia.org/wiki/Resource_%28computer_science%29)（`CPU`、`memory`、`disk I/O`、`network` 等）。最重要的是，为了支持这一切，[Linux 内核](https://en.wikipedia.org/wiki/Linux_kernel) 无需启动任何[虚拟机](https://en.wikipedia.org/wiki/Virtual_machine)或[虚拟视化监控程序](https://en.wikipedia.org/wiki/Hypervisor)。与[命名空间](https://en.wikipedia.org/wiki/Linux_namespaces)（Linux 内核另一项非常强大的功能），[cgroups](https://en.wikipedia.org/wiki/Cgroups) 是[容器](https://en.wikipedia.org/wiki/Operating-system_level)——即操作系统级虚拟化的基础构建块。
-
-基于容器的虚拟化极其轻量（与传统的[虚拟机](https://en.wikipedia.org/wiki/Virtual_machine)相比），产生的开销极小甚至没有，共享同一个操作系统，并且不需要特殊硬件即可高效运行。换句话说，容器变成了一种封装应用程序的新模型，使其能够在共享的操作系统上隔离运行，而不受限制；如今使用容器已成为主流。平心地说，并不是所有的 Linux/Unix 发行版都使用相同的机制进行操作系统级虚拟化。举几个例子，[FreeBSD](https://www.freebsd.org/) 使用 [jails](https://en.wikipedia.org/wiki/FreeBSD_jail) 用于此类目的，而 [Solaris](https://en.wikipedia.org/wiki/Solaris_(operating_system)) 则有[zones](https://en.wikipedia.org/wiki/Solaris_Containers)的概念。
-
-那么，如何使用容器？你可能听过 [LXC](https://linuxcontainers.org/lxc/introduction/) 或 [LXD](https://linuxcontainers.org/lxd/introduction/) 的缩写，它们本质上是大多数 Linux/Unix 发行版容器管理的入口。问题在于，这些工具有些过于底层，且不容易上手。但幸运的是，我们有 [Docker](https://en.wikipedia.org/wiki/Docker_%28software) 和 [rkt](https://coreos.com/rkt)，这些以应用程序为中心的容器引擎从诞生之初就成为全球应用开发者的事实标准选择。
-
-## Docker：面向大众的容器
+## 2. Docker：面向大众的容器
 
 那么 [Docker](https://en.wikipedia.org/wiki/Docker_%28software) 本质上是什么？它最初是一个强大且易于使用的容器引擎，但现在称其为一个完善的容器管理平台也是公平的。它用 [Go](https://golang.org/) 编写，并利用 Linux 内核功能（主要是 [namespaces](https://en.wikipedia.org/wiki/Linux_namespaces) 和 [cgroups](https://en.wikipedia.org/wiki/Cgroups)）来完成工作。社区版是免费的，而企业版则需要订阅。
 
-### 架构
+### 2.1. 架构
 
 从架构角度来看，[Docker](https://en.wikipedia.org/wiki/Docker_%28software) 由三个主要部分组成。在 [Docker](https://en.wikipedia.org/wiki/Docker_%28software) 的核心运行着一个守护进程 `dockerd`。反过来，`dockerd` 依赖于另一个守护进程 `containerd`（https://containerd.io/），作为与 Linux [namespaces](https://en.wikipedia.org/wiki/Linux_namespaces) 和 [cgroups](https://en.wikipedia.org/wiki/Cgroups) 交互的抽象层。最后一块拼图是一组命令行工具（例如 `docker` 和 `docker-compose`），它们被称为 Docker CLI，这些工具暴露了 Engine API（https://docs.docker.com/engine/api/）。
 
-### 镜像
+### 2.2. 镜像
 
-在 [Docker](https://en.wikipedia.org/wiki/Docker_%28software) 中，你所做的一切都是管理特定的对象。镜像和容器无疑最重要的，但还有其他如 `volumes`、`networks` 和 `plugins` 等对象，仅举此）。我们将在教程的不同章节中看到它们的所有操作，从镜像和容器开始。
+在 [Docker](https://en.wikipedia.org/wiki/Docker_%28software) 中，你所做的一切都是管理特定的对象。镜像和容器无疑是最重要的，但还有其他如 `volumes`、`networks` 和 `plugins` 等对象，仅举此例。我们将在教程的不同章节中看到它们的所有操作，从镜像和容器开始。
 
-镜像可以被视为创建容器的指令集。在 [Docker](https://en.wikipedia.org/wiki/Docker_%28software) 中，一个镜像可以从另一个镜像继承（或基于），每个每个镜像由多个层组成，这些层在本质上是不可变的。在底层，这些层由专门的文件系统支持（默认是 [UnionFS](https://en.wikipedia.org/wiki/UnionFS)，但也可以插件其他的），使得它们非常轻量且快速。
+镜像可以被视为创建容器的指令集。在 [Docker](https://en.wikipedia.org/wiki/Docker_%28software) 中，一个镜像可以从另一个镜像继承（或基于），每个镜像由多个层组成，这些层在本质上是不可变的。在底层，这些层由专门的文件系统支持（默认是 [UnionFS](https://en.wikipedia.org/wiki/UnionFS)，但也可以插件其他的），使得它们非常轻量且快速。
 
-那么……你如何为自己的需求创建此类镜像呢？其实非常简单，要在 [Docker](https://en.wikipedia.org/wiki/Docker_%28software) 中构建你自己的镜像，你需要创建一个 `Dockerfile`（https://docs.docker.com/engine/reference/builder/），它只是一个定义了组镜像并在稍后运行所需的步骤（或指令）的文本文件。在此过程中，你可能会自己创建完全自定义的镜像（https://docs.docker.com/engine/userguide/eng-image/baseimages/），或者在大多数情况下，引用他人创建的镜像，这些镜像发布在注册表中（#Introduction.xhtml__Registries）。
+那么……你如何为自己的需求创建此类镜像呢？其实非常简单，要在 [Docker](https://en.wikipedia.org/wiki/Docker_%28software) 中构建你自己的镜像，你需要创建一个 `Dockerfile`（https://docs.docker.com/engine/reference/builder/），它只是一个定义了基础镜像并在稍后运行所需的步骤（或指令）的文本文件。在此过程中，你可能会自己创建完全自定义的镜像（https://docs.docker.com/engine/userguide/eng-image/baseimages/），或者在大多数情况下，引用他人创建的镜像，这些镜像发布在注册表中（#Introduction.xhtml__Registries）。
 
 选择 [Docker](https://en.wikipedia.org/wiki/Docker_%28software) 的有力理由之一是它可以原生运行在大多数 Linux 发行版上，但不仅限于此。[macOS](https://www.docker.com/docker-mac) 和 [Windows](https://www.docker.com/docker-windows) 操作系统也得到了良好支持，只需注意（https://docs.docker.com/toolbox/overview/）。
 
 为了理解 [Docker](https://en.wikipedia.org/wiki/Docker_%28software) 是如何工作的，我们必须揭示它的内部模型。任何时候，如果你觉得关于该主题没有足够的细节，请不要犹豫查阅官方文档（https://docs.docker.com/）。
 
+`Dockerfile`（https://docs.docker.com/engine/reference/builder/）中的每条指令都会创建一个新层，因此每个镜像最后都有一列表不可变的层，这些层堆叠在一起，代表了文件系统的差异。
 
+在接下来的章节中，我们将编写许多不同的 `Dockerfile`（https://docs.docker.com/engine/reference/builder/），并严格遵循 [最佳实践和建议](https://docs.docker.com/userguide/eng-image/dockerfile_best-practices/)。
 
+### 2.3. 容器
 
+当你准备好镜像后，就是时候让它们运行起来了。这就是容器登场的地方：它们是镜像的可运行实例。只要目标主机（安装了 [Docker](https://en.wikipedia.org/wiki/Docker_%28software%29)）有足够的资源，你就可以运行任意数量的容器。这一切都是可行的，因为容器之间有着良好的隔离，至少在默认情况下如此（不过，你有很多选项可以控制这一点）。
 
-[Dockerfile](https://docs.docker.com/engine/reference/builder/) 中的每条指令都会创建一个新层，因此每个镜像最后都有一列表不可变的层，这些层堆叠在一起，代表了文件系统的差异。
-
-在接下来的章节中，我们将编写许多不同的 [Dockerfile](https://docs.docker.com/engine/reference/builder/)，并严格遵循[最佳实践和建议](https://docs.docker.com/userguide/eng-image/dockerfile_best-practices/)。
-
-### 3.3. 容器
-
-当你准备好镜像后，就是时候让它们运行起来了。这就是容器登场的地方：它们是镜像的可运行实例。只要目标主机（安装了 [Docker](https://en.wikipedia.org/wiki/Docker_%28software%29)）有足够的资源，你就可以运行任意数量的容器。这一切都是可行的，因为容器之间有着良好的隔离，至少在默认情况下如此（不过，你有有很多选项可以控制这一点）。
-
-当 [Docker](https://en.wikipedia.org/wiki/Docker_%28software%29) 创建一个 `container` 实例时，它会在底层镜像层栈之上`添加一个新的可写层`，通常称为 `container layer`。对运行中容器进行的所有更改（例如创建、删除或修改文件）都会写入这个薄层中。
+当 [Docker](https://en.wikipedia.org/wiki/Docker_%28software%29) 创建一个 `container` 实例时，它会在底层镜像层栈之上添加一个新的可写层，通常称为 `container layer`。对运行中容器进行的所有更改（例如创建、删除或修改文件）都会写入这个薄层中。
 
 将容器认为是转瞬即逝的重要的：当容器被终止（停止并删除）时，其状态的任何更改都会消失（除非它们存储在持久化存储中）。
 
-到目前，[Docker](https://en.wikipedia.org/wiki/Docker_%28software%29) 内部使用它自己的镜像格式，并严重依赖 [libcontainer](https://github.com/opencontainers/runc/tree/master/libcontainer) 和 [runc](https://github.com/opencontainers/runc) 来启动和运行容器。
+到目前为止，[Docker](https://en.wikipedia.org/wiki/Docker_%28software%29) 内部使用它自己的镜像格式，并严重依赖 [libcontainer](https://github.com/opencontainers/runc/tree/master/libcontainer) 和 [runc](https://github.com/opencontainers/runc) 来启动和运行容器。
 
-### 3.4. 注册表
+### 2.4. 注册表
 
 [Docker](https://en.wikipedia.org/wiki/Docker_%28software%29) 架构中注册表的目的是存储镜像，以便它们可以共享并作为基础镜像。[Docker Hub](https://hub.docker.com/) 和 [Docker Cloud](https://cloud.docker.com/) 是任何人都可以使用的知名公共注册表。为了保持简单，[Docker](https://en.wikipedia.org/wiki/Docker_%28software%29) 配置为默认在 [Docker Hub](https://hub.docker.com/) 上查找镜像。
 
-你可能还会考虑托管自己的私有 [Docker](https://en.wikipedia.org/wiki/Docker_%28software%29) 注册表（或多个注册表）。这样做有很多很好的理由，特别是在企业世界。其中最关键的理由之一是安全性，因为公共镜像没有经过全面的安全审核，并且可能存在已知的[安全漏洞或暴露](http://dl.acm.org/citation.cfm?id=3029832)。然而，情况正在好转，因为越来越多的公司维护所谓的[官方仓库](https://docs.docker.com/docker-hub/official_repos/)，这些仓库是经过筛选并符合更高标准的。
+你可能还会考虑托管自己的私有 [Docker](https://en.wikipedia.org/wiki/Docker_%28software%29) 注册表（或多个注册表）。这样做有很多很好的理由，特别是在企业世界。其中最关键的理由之一是安全性，因为公共镜像没有经过全面的安全审核，并且可能存在已知的 [安全漏洞或暴露](http://dl.acm.org/citation.cfm?id=3029832)。然而，情况正在好转，因为越来越多的公司维护所谓的 [官方仓库](https://docs.docker.com/docker-hub/official_repos/)，这些仓库是经过筛选并符合更高标准的。
 
 为了让事情更有趣，最近有一位新玩家加入了注册表游戏。[Docker](https://en.wikipedia.org/wiki/Docker_%28software%29) 的旗舰产品 [Docker Store](https://docs.docker.com/docker-store/) 已经宣布将开放可用。
 
-### 3.5. 镜像是新的 RPM
+### 2.5. 镜像是新的 RPM
 
-随着 [Docker](https://en.wikipedia.org/wiki/Docker_%28software%29)和其他容器引擎变得越来越流行和普及，我们以前打包和分发应用程序的方式也发生了剧烈变化。从字面上说，镜像变成了一个“新的 RPM”，这意味着你可以将其分发到任何支持你所选容器引擎的平台（稍后详细介绍），并直接将其作为容器运行。这确实容易、简单且强大。
+随着 [Docker](https://en.wikipedia.org/wiki/Docker_%28software%29) 和其他容器引擎变得越来越流行和普及，我们以前打包和分发应用程序的方式也发生了剧烈变化。从字面上说，镜像变成了一个“新的 RPM”，这意味着你可以将其分发到任何支持你所选容器引擎的平台（稍后详细介绍），并直接将其作为容器运行。这确实容易、简单且强大。
 
-## 4. Moby: Docker 的未来
+## 3. Moby: Docker 的未来
 
-[Docker](https://en.wikipedia.org/wiki/Docker_%28software%29) 最近见到了许多变化。在将 [Docker](https://en.wikipedia.org/wiki/Docker_%28software%29) 拆分为模块化组件并整合所有开源协作的倡议推动下，Moby Project](https://mobyproject.org/) 应生了。
+[Docker](https://en.wikipedia.org/wiki/Docker_%28software%29) 最近见到了许多变化。在将 [Docker](https://en.wikipedia.org/wiki/Docker_%28software%29) 拆分为模块化组件并整合所有开源协作的倡议推动下，[Moby Project](https://mobyproject.org/) 应运而生。
 
 > Moby 项目是一个全新的开源项目，旨在推进软件容器化运动，并帮助生态系统让容器成为主流。它提供了一个组件库、一个将它们组装成自定义容器系统的框架，以及一个供所有容器爱好者实验和交流想法的地方。 – [`blog.docker.com/2017/04/introducing-the-moby-project/`](https://blog.docker.com/2017/04/introducing-the-moby-project/)
 
 随着 [Docker](https://en.wikipedia.org/wiki/Docker_%28software%29) 继续被拆分为更多组件，[Moby Project](https://mobyproject.org/) 将成为这些组件的家园，因此让我们关注它并期待令人兴奋的公告。
 
-## 5. 迈向互操作性
+## 4. 迈向互操作性
 
-目前有多种以应用程序为中心的容器引擎，即 [Docker](https://en.wikipedia.org/wiki/Docker_%28software%29) 和 [rkt](https://coreos.com/rkt)（很可能会出现），明显的问题将是：如何选择一个？
+目前有多种以应用程序为中心的容器引擎，即 [Docker](https://en.wikipedia.org/wiki/Docker_%28software%29) 和 [rkt](https://coreos.com/rkt)（很可能还会出现更多），明显的问题将是：如何选择一个？
 
 事实上，目前如果你选择了一个容器引擎，你可能必须坚持它，因为切换到另一个可能是困难的。但有一个希望，感谢于 [Open Container Initiative](https://www.opencontainers.org/)（或简称 `OCI`），如果有足够的玩家支持，容器引擎的互操作性将显著提高。
+
+
 
 我们之前提到过，目前 [Docker](https://en.wikipedia.org/wiki/Docker_%28software%29) 使用自己的镜像格式。幸运的是，该领域开放的重要里程碑最近通过发布 [OCI 运行时和镜像规范](https://blog.docker.com/2017/07/oci-of-runtime-and-image-specifications/) 实现了。
 
@@ -165,10 +154,6 @@
 虽然答案仅提到了 Docker，但它同样适用于其他容器虚拟化引擎。
 
 为了证明这一点，[Oracle](https://www.oracle.com/index.html) 已将官方 [Oracle Java 8 SE (Server JRE)](https://store.docker.com/images/oracle-serverjre-8) 镜像发布到 [Docker Store](https://store.docker.com/)，这是寻找以 Docker 镜像分发的受信任商业和免费软件的地方之一。
-
-
-
-
 
 在本教程的介绍章节中，我们简要回顾了 Linux/Unix 操作系统中虚拟化机制的演进。我们从高层学习了什么是镜像、容器，它们与传统的[虚拟机](https://en.wikipedia.org/wiki/Virtual_machine)相比的优势，以及我们如何开始使用它们。
 
@@ -194,9 +179,11 @@
 
 从底层开始，通过学习如何构建镜像来熟悉 [docker](https://docs.docker.com/engine/reference/commandline/cli/) 是符合逻辑。在教程的第一节中，我们简要地介绍了这个过程，但是时候使用 [build](https://docs.docker.com/engine/reference/commandline/image_build/) 命令亲自实践一次了。
 
-| `1` | `docker image build [OPTIONS] PATH | URL | -` |
+```
+docker image build [OPTIONS] PATH | URL | -
+```
 
-正如我们记得的，[docker](https://docs.docker.com/engine/reference/commandline/cli/) 从 [Dockerfile](https://docs.docker.com/engine/reference/builder/) 中构建镜像，按照指定的顺序执行每条指令。PATH 或 URL 选项是寻找 [Dockerfile](https://docs.docker.com/engine/reference/builder/) 的路径提示。
+正如我们记得的，[docker](https://docs.docker.com/engine/reference/commandline/cli/) 从 [Dockerfile](https://docs.docker.com/engine/reference/builder/) 中构建镜像，按照指定的顺序执行每条指令。`PATH` 或 `URL` 选项是寻找 [Dockerfile](https://docs.docker.com/engine/reference/builder/) 的路径提示。
 
 构建小巧且高效的镜像并快速完成，是成功使用 [Docker](https://www.docker.com/) 的关键目标之一。镜像缓存、标签、标记、减少最终大小以及许多其他主题在[编写 Dockerfile 的最佳实践](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/) 中都有很好的总结，强烈建议阅读此。
 
@@ -204,45 +191,53 @@
 
 目前，客观来说，[Alpine Linux](https://alpinelinux.org/) 是容器化应用事实上的基础 Linux 发行版。如果你恰好在 [OpenJDK](https://en.wikipedia.org/wiki/OpenJDK) 上运行应用程序，你就太幸运了，因为该项目的[官方 DockerHub 仓库](https://hub.docker.com/_/openjdk/)提供了许多基于 [Alpine Linux](https://alpinelinux.org/) 的镜像。快速来看，这里有一个简单的 [Dockerfile](https://docs.docker.com/engine/reference/builder/) 示例：
 
-| `1` | `FROM openjdk:8u131-jdk-alpine` |
-
-| `2` | `CMD ["java", "-version"]` |
+```
+FROM openjdk:8u131-jdk-alpine
+CMD ["java", "-version"]
+```
 
 假设你的 shell 指向存放该 [Dockerfile](https://docs.docker.com/engine/reference/builder/) 的相同文件夹，你可以使用此命令构建（并加标签）镜像：
 
-| `1` | `docker image build . --tag base:openjdk-131-jdk` |
+```
+docker image build . --tag base:openjdk-131-jdk
+```
 
 如果你赌注 [Oracle JVM](https://www.oracle.com/java/technologies/index.html) 发行版，遗憾的是 [Alpine Linux](https://alpinelinux.org/) 并不是官方支持的（尽管你可能会看到尝试结合两者）。请使用 [Ubuntu](https://hub.docker.com/_/ubuntu/) 或 [Debian](https://hub.docker.com/_/debian/) 发行版。
 
 关于基于哪个 JVM 版本构建，请确保至少使用 `Java 8 update131` 或更高版本，原因我们将在后续章节中讨论（但如果你好奇，这里有一个[幕后预览](https://blogs.oracle.com/java-platform-group/java-se-support-docker-cpu-and-memory））。
 
-build](https://docs.docker.com/engine/reference/commandline/build/)，还有几个非常实用的命令值得提到。[ls](https://docs.docker.com/engine/reference/commandline/image_ls/) 命令显示所有镜像：
+[build](https://docs.docker.com/engine/reference/commandline/build/)，还有几个非常实用的命令值得提到。[ls](https://docs.docker.com/engine/reference/commandline/image_ls/) 命令显示所有镜像：
 
-| `1` | `docker image ls [OPTIONS] [REPOSITORY[:TAG]]` |
+```
+docker image ls [OPTIONS] [REPOSITORY[:TAG]]
+```
 
 [history](https://docs.docker.com/engine/reference/commandline/image_history/) 命令显示镜像的历史：
 
-| `1` | `docker image history [OPTIONS] IMAGE` |
+```
+docker image history [OPTIONS] IMAGE
+```
 
 而 [rm](https://docs.docker.com/engine/reference/commandline/image_rm/) 命令删除一个或多个镜像：
 
-| `1` | `docker image rm [OPTIONS] IMAGE [IMAGE...]` |
+```
+docker image rm [OPTIONS] IMAGE [IMAGE...]
+```
 
 为了与仓库交互，有 [pull](https://docs.docker.com/engine/reference/commandline/image_pull/) 和 [push](https://docs.docker.com/engine/reference/commandline/image_push/) 命令。前者从仓库获取镜像，后者将镜像上传到仓库。
 
-| `1` | `docker image pull [OPTIONS] NAME[:TAG|@DIGEST]` |
-
-| `2` | `docker image push [OPTIONS] NAME[:TAG]` |
+```
+docker image pull [OPTIONS] NAME[:TAG|@DIGEST]
+docker image push [OPTIONS] NAME[:TAG]
+```
 
 最后，异常好用的 [prune](https://docs.docker.com/engine/reference/commandline/image_prune/) 命令删除所有未使用的镜像（你最好一直配合 `-a` 选项使用）：
 
-| `1` | `docker image prune [OPTIONS]` |
+```
+docker image prune [OPTIONS]
+```
 
-
-
-
-
-[Docker](https://www.docker.com/) 在最近的发布中引入的一个极其实用的特性是支持[多阶段构建](https://docs.docker.com/engine/userguide/eng-image/multistage-build/)，它允许在 [[`Dockerfile](https://docs.docker.com/engine/reference/builder/)` 中包含多个 `FROM` 语句。我们在这里简单提一下这一点，它将在教程的后续章节中出现。
+[Docker](https://www.docker.com/) 在最近的发布中引入的一个极其实用的特性是支持[多阶段构建](https://docs.docker.com/engine/userguide/eng-image/multistage-build/)，它允许在 [`Dockerfile`](https://docs.docker.com/engine/reference/builder/) 中包含多个 `FROM` 语句。我们在这里简单提一下这一点，它将在教程的后续章节中出现。
 
 ## 3. 容器 (Containers)
 
@@ -289,7 +284,7 @@ docker container ls [OPTIONS]
 docker container inspect [OPTIONS] CONTAINER [CONTAINER...]
 ```
 
-[`stats`](https://docs.docker.com/engine/reference/commandline/container_stats/) 命令用于暴露容器的运行时统计数据[`top`](https://docs.docker.com/engine/reference/commandline/container_top/) 命令显示运行的容器进程，而 [`logs`](https://docs.docker.com/engine/reference/commandline/container_logs/) 命令则获取容器的日志。
+[`stats`](https://docs.docker.com/engine/reference/commandline/container_stats/) 命令用于暴露容器的运行时统计数据，[`top`](https://docs.docker.com/engine/reference/commandline/container_top/) 命令显示运行的容器进程，而 [`logs`](https://docs.docker.com/engine/reference/commandline/container_logs/) 命令则获取容器的日志。
 
 ```
 docker container stats [OPTIONS] [CONTAINER...]
@@ -309,6 +304,8 @@ docker container diff CONTAINER
 docker container commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
 ```
 
+
+
 一旦不再需要该容器，可以使用 [`rm`](https://docs.docker.com/engine/reference/commandline/container_rm/) 命令将其终止。请小心，因为存储在容器内部的所有数据都将丢失（除非由 [volumes](https://docs.docker.com/engine/admin/volumes/volumes/) 支撑）。
 
 ```
@@ -323,7 +320,7 @@ docker container prune
 
 ## 4. 端口 (Ports)
 
-每个容器都可以暴露用于监听的端口，既可以通过 [`Dockerfile`](https://docs.docker.com/engine/reference/builder/) 指令，也可以通过 [`run`](https://docs.docker.com/engine/reference/commandline/container_run/) 命令的选项来实现 port`](https://docs.docker.com/engine/reference/commandline/container_port/) 命令列出容器所有的端口映射（或特定的映射）。
+每个容器都可以暴露用于监听的端口，既可以通过 [`Dockerfile`](https://docs.docker.com/engine/reference/builder/) 指令，也可以通过 [`run`](https://docs.docker.com/engine/reference/commandline/container_run/) 命令的选项来实现。`port` 命令列出容器所有的端口映射（或特定的映射）。
 
 ```
 docker port CONTAINER_PORT
@@ -333,7 +330,7 @@ docker port CONTAINER_PORT
 
 正如我们记得，容器是瞬时的，一旦容器终止，它持有的所有数据将丢失。在许多情况下这可能不是问题，但如果你在容器中运行数据存储，你可能希望保留你的数据。
 
-为了填补这一空白，Docker](https://www.docker.com/) 引入了 [volumes](https://docs.docker.com/engine/admin/volumes/) 作为容器持久化数据的首选机制，显然 [`docker`](https://docs.docker.com/engine/reference/commandline/cli/) 有一组专门的命令用于此（[`create`](https://docs.docker.com/engine/reference/commandline/volume_create/), [`inspect`](https://docs.docker.com/engine/reference/commandline/volume_inspect/), [`ls`](https://docs.docker.com/engine/reference/commandline/volume_ls/), [`prune`](https://docs.docker.com/engine/reference/commandline/volume_prune/) 以及 [`rm`](https://docs.docker.com/engine/reference/commandline/volume_rm/)）。
+为了填补这一空白，[Docker](https://www.docker.com/) 引入了 [volumes](https://docs.docker.com/engine/admin/volumes/) 作为容器持久化数据的首选机制，显然 [`docker`](https://docs.docker.com/engine/reference/commandline/cli/) 有一组专门的命令用于此（[`create`](https://docs.docker.com/engine/reference/commandline/volume_create/)、[`inspect`](https://docs.docker.com/engine/reference/commandline/volume_inspect/)、[`ls`](https://docs.docker.com/engine/reference/commandline/volume_ls/)、[`prune`](https://docs.docker.com/engine/reference/commandline/volume_prune/) 以及 [`rm`](https://docs.docker.com/engine/reference/commandline/volume_rm/)）。
 
 ```
 docker volume create [OPTIONS] [VOLUME]
@@ -345,7 +342,7 @@ docker volume rm [OPTIONS] VOLUME [VOLUME...]
 
 ## 6. 网络 (Networks)
 
-[Docker](https://www.docker.com/) 为容器提供了很好的网络支持，箱提供了许多网络驱动程序。当然，标准的 [`create`](https://docs.docker.com/engine/reference/commandline/volume_create/), [`inspect`](https://docs.docker.com/engine/reference/commandline/volume_inspect/), [`ls`](https://docs.docker.com/engine/reference/commandline/volume_ls/), [`prune`](https://docs.docker.com/engine/reference/commandline/volume_prune/) 和 [`rm`](https://docs.docker.com/engine/reference/commandline/volume_rm/) 命令可用用于管理网络。
+[Docker](https://www.docker.com/) 为容器提供了很好的网络支持，提供了许多网络驱动程序。当然，标准的 [`create`](https://docs.docker.com/engine/reference/commandline/network_create/)、[`inspect`](https://docs.docker.com/engine/reference/commandline/network_inspect/)、[`ls`](https://docs.docker.com/engine/reference/commandline/network_ls/)、[`prune`](https://docs.docker.com/engine/reference/commandline/network_prune/) 和 [`rm`](https://docs.docker.com/engine/reference/commandline/network_rm/) 命令可用于管理网络。
 
 ```
 docker network create [OPTIONS] NETWORK
@@ -355,20 +352,20 @@ docker network prune
 docker network rm NETWORK [NETWORK...]
 ```
 
-[Docker](https://www.docker.com/) 网络的独特之处在于 [`dockerd](https://docs.docker.com/engine/reference/commandline/dockerd/) 守护进程包含一个嵌入的 DNS 服务器，为连接到同一用户定义网络的容器之间提供名称解析（因此容器可以通过名称进行引用，而不仅仅是 IP 地址）。
-
-
-
-
+[Docker](https://www.docker.com/) 网络的独特之处在于 [`dockerd`](https://docs.docker.com/engine/reference/commandline/dockerd/) 守护进程包含一个嵌入的 DNS 服务器，为连接到同一用户定义网络的容器之间提供名称解析（因此容器可以通过名称进行引用，而不仅仅是 IP 地址）。
 
 任何正在运行的容器都可以通过 [connect](https://docs.docker.com/engine/reference/commandline/network_connect/) 和 [disconnect](https://docs.docker.com/engine/reference/commandline/network_disconnect/) 命令分别连接到网络或断开网络。
 
-| `1` | `docker network connect [OPTIONS] NETWORK CONTAINER` |
-| `2` | `docker network disconnect [OPTIONS] NETWORK CONTAINER` |
+```
+docker network connect [OPTIONS] NETWORK CONTAINER
+docker network disconnect [OPTIONS] NETWORK CONTAINER
+```
 
 此外，可以通过向 [run](https://docs.docker.com/engine/reference/commandline/container_run/) 命令传递选项，将容器连接到特定的网络。可以通过 [prune](https://docs.docker.com/engine/reference/commandline/network_prune/) 命令删除所有未使用的网络。
 
-| `1` | `docker network prune [OPTIONS]` |
+```
+docker network prune [OPTIONS]
+```
 
 ## 7. 链接 (Linking)
 
@@ -384,84 +381,88 @@ docker network rm NETWORK [NETWORK...]
 
 有趣的是，默认情况下，容器没有资源限制，可能会消耗其宿主机操作系统的所有资源。这本是一个致命的问题，但幸运的是 [Docker](https://docs.docker.com/) 提供了 [一种控制](https://docs.docker.com/engine/admin/resource_constraints/) 方法，通过向 [run](https://docs.docker.com/engine/reference/commandline/container_run/) 命令传递多个选项，来限制特定容器可以使用多少内存、CPU 或块 I/O。或者，对于正在运行的容器，[update](https://docs.docker.com/engine/reference/commandline/container_update/) 命令允许动态调整容器配置（主配置、资源限制）。
 
-查看源码打印?
+```
+docker container update [OPTIONS] CONTAINER [CONTAINER...]
+```
 
-| `1` | `docker container update [OPTIONS] CONTAINER [CONTAINER...]` |
-
-对于容器内部运行的 JVM，CPU 和内存限制的主题变得稍微复杂了一些。从 `Java SE 8u131`（以及无疑在 `JDK 9`）及更高版本开始，[JVM 已经能够感知 Docker](https://blogs.oracle.com/java-platform-group/java-se-support-for-docker-cpu-and-memory-limits)，只需进行少微调优，就能按照规则良好地运行。
+对于容器内部运行的 JVM，CPU 和内存限制的主题变得稍微复杂了一些。从 `Java SE 8u131`（以及无疑在 `JDK 9`）及更高版本开始，[JVM 已经能够感知 Docker](https://blogs.oracle.com/java-platform-group/java-se-support-for-docker-cpu-and-memory-limits)，只需进行少许调优，就能按照规则良好地运行。
 
 ## 10. 清理 (Clean up)
 
 正如我们目前所见，你可以使用 [Docker](https://www.docker.com/) 管理许多抽象内容。然而，随着时间的推移，[Docker](https://www.docker.com/) 会产生大量垃圾（如未使用的层、镜像、容器、卷等……），占用宝贵的磁盘空间。这已是一个已知问题多年，但不久前，我们有了一个专门的 [prune](https://docs.docker.com/engine/reference/commandline/system_prune/) 命令来清理所有未使用的数据：
 
-| `1` | `docker system prune [OPTIONS]` |
+```
+docker system prune [OPTIONS]
+```
 
-请注意，默认情况下，除非指定 `–volumes` 选项，否则该命令不会清理卷。
+请注意，默认情况下，除非指定 `--volumes` 选项，否则该命令不会清理卷。
 
 ## 11. 一体化：部署栈 (The Deployment Stack)
 
-正如我们到为止看到的，仅使用 [docker](https://docs.docker.com/engine/reference/commandline/cli/) 命令行工具即可完成任何任务。但管理相互连接的多个容器的生命周期将迅速变成负担，并迫使你考虑自动化该过程，无论是使用一系列 Shell 脚本还是类似的工具。
+正如我们到目前为止看到的，仅使用 [docker](https://docs.docker.com/engine/reference/commandline/cli/) 命令行工具即可完成任何任务。但管理相互连接的多个容器的生命周期将迅速变成负担，并迫使你考虑自动化该过程，无论是使用一系列 Shell 脚本还是类似的工具。
 
 社区早就意识到了这个问题，并提出了一个天才的解决方案，现在被称为 [Docker Compose](https://docs.docker.com/compose/overview/)。简而言之，[Docker Compose](https://docs.docker.com/compose/overview/) 提供了一种声明式的方法，用于定义并随后运行多个 [Docker](https://docs.docker.com/) 容器，极大地简化了复杂的容器化部署。
 
 它是如何工作的？只有几个简单的步骤，我们熟悉的：
 
 * 通过 [Dockerfile](https://docs.docker.com/engine/reference/builder/) 为你的应用程序准备镜像
+
 * 使用 [`docker-compose.yml`](https://docs.docker.com/compose/compose-file/compose-file-v2/) 规范定义你的容器栈
+
 * 使用 [`docker-compose`](https://docs.docker.com/compose/overview/) 命令行工具实现规范
 
-让我们快速看一下一个栈，它包含了之前创建的 JDK 镜像 `base:openjdk-131-jdk` 和 [MySQL](https://hub.docker.com/_/mysql/) 数据库镜像 `mysql:8.0.2`，全部放入 `docker-compose.yml`](https://docs.docker.com/compose/compose-file/compose-file-v2/) 文件中
+让我们快速看一下一个栈，它包含了之前创建的 JDK 镜像 `base:openjdk-131-jdk` 和 [MySQL](https://hub.docker.com/_/mysql/) 数据库镜像 `mysql:8.0.2`，全部放入 [`docker-compose.yml`](https://docs.docker.com/compose/compose-file/compose-file-v2/) 文件中：
 
-| `01` | `version: '2.1'` |
-| `02` | |
-| `03` | `services:` |
-| `04` | `mysql:` |
-| `05` | `image: mysql:8.0.2` |
-| `06` | `environment:` |
-| `07` | `- MYSQL_ROOT_PASSWORD=p$ssw0rd` |
-| `08` | `- MYSQL_DATABASE=my_app_db` |
-| `09` | `expose:` |
-| `10` | `- 3306` |
-| `11` | `networks:` |
-| `12` | `- my-app-network` |
-| `13` | |
-| `14` | `java-app:` |
-| `15` | `image: base:openjdk-131-jdk` |
-| `16` | `mem_limit: 256M` |
-| `17` | `environment:` |
-| `18` | `- DB=mysql:3306` |
-| `19` | `ports:` |
-| `20` | `- 8080` |
-| `21` | `depends_on:` |
-| `22` | `- mysql` |
-| `23` | `networks:` |
-| `24` | `- my-app-network` |
-| `25` | |
-| `26` | `networks:` |
-| `27` | `my-app-network:` |
-| `28` | `driver: bridge` |
+```
+version: '2.1'
+
+services:
+  mysql:
+    image: mysql:8.0.2
+    environment:
+      - MYSQL_ROOT_PASSWORD=p$ssw0rd
+      - MYSQL_DATABASE=my_app_db
+    expose:
+      - 3306
+    networks:
+      - my-app-network
+
+  java-app:
+    image: base:openjdk-131-jdk
+    mem_limit: 256M
+    environment:
+      - DB=mysql:3306
+    ports:
+      - 8080
+    depends_on:
+      - mysql
+    networks:
+      - my-app-network
+
+networks:
+  my-app-network:
+    driver: bridge
+```
 
 非常整洁且直观，不是吗？[`docker-compose.yml`](https://docs.docker.com/compose/compose-file/compose-file-v2/) 规范的版本格式需要专门讨论。最新且推荐的规范格式是 `3.x`，但我们在上面示例使用的 `2.x` [同样支持并独立演进](https://docs.docker.com/compose/compose-file/compose-versioning/)。为什么这样？
 
-
-
-
-
-`3.x` 设计用于在 [Docker Compose](https://docs.docker.com/compose/overview/) 和 [Docker Swarm](https://docs.docker.com/engine/swarm/swarm-tutorial/)（我们稍后将在教程中简要介绍的集群解决方案）之间实现兼容，但遗憾的是，它也移除了几个非常有实用的选项（同时也增加了几个）。通常情况下，只要可能，我们将坚持使用 `3.x`，不时回退到 `2.x` 来展示一些非常酷的特性。
+`3.x` 设计用于在 [Docker Compose](https://docs.docker.com/compose/overview/) 和 [Docker Swarm](https://docs.docker.com/engine/swarm/swarm-tutorial/)（我们稍后将在教程中简要介绍的集群解决方案）之间实现兼容，但遗憾的是，它也移除了几个非常实用的选项（同时也增加了几个）。通常情况下，只要可能，我们将坚持使用 `3.x`，不时回退到 `2.x` 来展示一些非常酷的特性。
 
 ## 12. 结论
 
-在这一节中，我们浏览了 [Docker](https://www.docker.com/) 优秀的命令行工具、[docker](https://docs.docker.com/engine/reference/commandline/cli/) 和 [docker-compose](https://docs.docker.com/compose/reference/overview/)，并重点介绍了最实用用和最重要的命令。我们还没有看到它们大部分的实际运行示例，但在教程接下来的章节中，每一个命令都将有机会登场。
+在这一节中，我们浏览了 [Docker](https://www.docker.com/) 优秀的命令行工具、[docker](https://docs.docker.com/engine/reference/commandline/cli/) 和 [docker-compose](https://docs.docker.com/compose/reference/overview/)，并重点介绍了最实用和最重要的命令。我们还没有看到它们大部分的实际运行示例，但在教程接下来的章节中，每一个命令都将有机会登场。
 
-## 12. 接下来是什么
+## 13. 接下来是什么
 
 尽管这些工具很有可能是你处理 [Docker](https://www.docker.com/) 的主要（如果不是唯一的）方式，但在教程的下一节中，我们将通过利用 [Docker Engine REST(ful) APIs](https://docs.docker.com/engine/api/) 来学习另一种方案。
 
-# Java Java 开发者的 Docker
+# Java 开发者的 Docker
 
 # 基于 HTTP/REST 的 Docker
 
 ## 1. 引言
+
+
 
 从教程的前几个部分我们已经知道 [Docker](https://www.docker.com/) 不仅拥有出色的命令行工具，还暴露了功能丰富的 [Docker Engine API](https://docs.docker.com/engine/api/)。目前，官方支持的客户端提供了 Go 和 Python 语言。对于 Java 开发者来说，这显然不是什么鼓舞人心，但隧道尽头有光。
 
@@ -473,24 +474,25 @@ docker network rm NETWORK [NETWORK...]
 
 在开始之前，我们必须理解 [Docker Engine API](https://docs.docker.com/engine/api/) 如何进行[版本控制](https://docs.docker.com/engine/api/v1.30/#section/Versioning)，以及如何匹配 [Docker](https://www.docker.com/) 发布与其支持的 API 版本。我们需要的是 [docker](https://docs.docker.com/engine/reference/commandline/cli/) 命令行工具的 `version` 命令。
 
-| `01` | `$ docker version` |
-| `02` | |
-| `03` | `Client:` |
-| `04` | `Version: 17.06.1-ce` |
-| `05` | `API version: 1.30` |
-| `06` | `Go version: go1.8.3` |
-| `07` | `Git commit: 874a737` |
-| `08` | `Built: Thu Aug 17 22:48:20 2017` |
-| `09` | `OS/Arch: linux/amd64` |
-| `10` | |
-| `11` | `Server:` |
-| `12` | `Version: 17.06.1-ce` |
-| `13` | `API version: 1.30 (minimum version 1.12)` |
-| `14` | `Go version: go1.8.3` |
-| `15` | `Git commit: 874a737` |
-| `16` | `Built: Thu Aug 17 22:54:55 2017` |
-| `17` | `OS/Arch: linux/amd64` |
-| `18` | `Experimental: false` |
+```
+$ docker version
+Client:
+Version: 17.06.1-ce
+API version: 1.30
+Go version: go1.8.3
+Git commit: 874a737
+Built: Thu Aug 17 22:48:20 2017
+OS/Arch: linux/amd64
+
+Server:
+Version: 17.06.1-ce
+API version: 1.30 (minimum version 1.12)
+Go version: go1.8.3
+Git commit: 874a737
+Built: Thu Aug 17 22:54:55 2017
+OS/Arch: linux/amd64
+Experimental: false
+```
 
 输出非常直观。我们可以发现 [Docker](https://www.docker.com/) 是 `17.06.1-ce`，其 `API version` 是 `1.30`。从这里，让我们为 [Docker](https://docs.docker.com/engine/api/) v130 签签。
 
@@ -513,7 +515,7 @@ docker network rm NETWORK [NETWORK...]
 ```java
 ```
 
-```，这里我们假设 [Docker](https://www.docker.com/) 配置已就绪，但你可以对其完全控制，包括连接 URI、注册表认证、连接池等。重要的是，当你完成客户端的操作后，请关闭它，例如：
+这里我们假设 [Docker](https://www.docker.com/) 配置已就绪，但你可以对其完全控制，包括连接 URI、注册表认证、连接池等。重要的是，当你完成客户端的操作后，请关闭它，例如：
 
 ```java
 client.close();
@@ -527,6 +529,7 @@ client.close();
 
 ```dockerfile
 FROM openjdk:8u131-jdk-alpine
+
 CMD ["java", "-version"]
 ```
 
@@ -534,13 +537,10 @@ CMD ["java", "-version"]
 
 ```java
 final URL dockerfile = getClass().getResource("/");
+
 final String imageId = client.build(Paths.get(dockerfile.toURI()),
     BuildParam.name("base:openjdk-131"));
 ```
-
-
-
-
 
 很简单，但我们该如何检查镜像是否存在呢？我们首先会想到老伙伴 [docker](https://docs.docker.com/engine/reference/commandline/cli/) 命令行工具，但为什么不直接使用 [Spotify Docker Client](https://github.com/spotify/docker-client) 来完成它呢？
 
@@ -702,9 +702,11 @@ final ContainerInfo info = client.inspectContainer(container.id());
 final ImmutableMap<String, List> mappings = info.networkSettings().ports();
 ```
 
+
+
 ## 7. 卷
 
-在[教程的上一节](https://www.javacodeeks.com/2017/09/docker-java-developers-docker-command-line.html) 中，我们学习了[卷](https://docs.docker.com/engine/admin/volumes/) 作为容器使用数据的首选机制。[Spotify Docker Client](https://github.com/spotify/docker-client) 通过一系列方法完整封装了 [Volumes API](https://docs.docker.com/engine/api/v1.30/#tag/Volume)。让我们从创建一个卷开始：
+在[教程的上一节](https://www.javacodeeks.com/2017/09/docker-java-developers-docker-command-line.html)中，我们学习了[卷](https://docs.docker.com/engine/admin/volumes/)作为容器使用数据的首选机制。[Spotify Docker Client](https://github.com/spotify/docker-client)通过一系列方法完整封装了[Volumes API](https://docs.docker.com/engine/api/v1.30/#tag/Volume)。让我们从创建一个卷开始：
 
 ```java
 final Volume volume = client.createVolume();
@@ -722,17 +724,15 @@ final Volume info = client.inspectVolume(volume.name());
 final VolumeList volumes = client.listVolumes();
 ```
 
-一旦卷不再需要，可以将其删除。
+一旦卷不再需要，可以将其删除：
 
 ```java
 client.removeVolume(volume.name());
 ```
 
+## 8. 网络
 
-
-
-
-[Docker](https://www.docker.com/) 中[用户定义网络](https://docs.docker.com/engine/userguide/networking/work-with-networks/#connect-containers) 的重要性怎么都不强调，它们在容器相互通信中起着至关重要的作用。难怪，[Networks API](https://docs.docker.com/engine/api/v1.30/#tag/Network) 得到了 [Spotify Docker Client](https://github.com/spotify/docker-client) 几乎完整的支持。
+[Docker](https://www.docker.com/)中[用户定义网络](https://docs.docker.com/engine/userguide/networking/work-with-networks/#connect-containers)的重要性怎么强调都不为过，它们在容器相互通信中起着至关重要的作用。难怪[Networks API](https://docs.docker.com/engine/api/v1.30/#tag/Network)得到了[Spotify Docker Client](https://github.com/spotify/docker-client)几乎完整的支持。
 
 创建一个新网络只需一步操作：
 
@@ -758,13 +758,13 @@ final Network info = client.inspectNetwork(network.id());
 final List networks = client.listNetworks();
 ```
 
-一旦不再需要该网络，可以轻松将其删除。
+一旦不再需要该网络，可以轻松将其删除：
 
 ```java
 client.removeNetwork(network.id());
 ```
 
-[Spotify Docker Client](https://github.com/spotify/docker-client) 为任何运行中的（或刚创建的）容器提供了连接网络或断开网络的方法，例如：
+[Spotify Docker Client](https://github.com/spotify/docker-client)为任何运行中的（或刚创建的）容器提供了连接网络或断开网络的方法，例如：
 
 ```java
 final ContainerCreation container = client.createContainer(ContainerConfig
@@ -792,7 +792,7 @@ client.disconnectFromNetwork(container.id(), network.id());
 
 ## 9. 资源限制
 
-[Spotify Docker Client](https://github.com/spotify/docker-client) 还支持动态调整容器配置（主要配置、资源限制如内存、CPU 或块 I/O），例如：
+[Spotify Docker Client](https://github.com/spotify/docker-client)还支持动态调整容器配置（主要配置、资源限制如内存、CPU 或块 I/O），例如：
 
 ```java
 final ContainerUpdate update = client.updateContainer(container.id(),
@@ -805,12 +805,12 @@ final ContainerUpdate update = client.updateContainer(container.id(),
 
 ## 10. 入门指南
 
-为了结束本节，最好有一个真实的示例，让我们让我们目前为止见过的所有 API 能够无缝地工作。由于我们一直一直在玩 [MySQL](https://hub.docker.com/_/mysql/)，它是 Java（以及其他）应用程序关系型数据存储的热门选择，端到端的演示将基于它。那么，我们的目标是什么？
+为了结束本节，最好有一个真实的示例，让我们目前为止见过的所有 API 能够无缝地工作。由于我们一直在玩 [MySQL](https://hub.docker.com/_/mysql/)，它是 Java（以及其他）应用程序关系型数据存储的热门选择，端到端的演示将基于它。那么，我们的目标是什么？
 
-1. 使用 `mysql:8.0.2` 镜像创建一个容器实例
-2. 暴露 TCP 端口 `3306` 并将其绑定到随机主机端口（这样我们可以运行任意数量的容器而不会产生端口冲突）
+1. 使用`mysql:8.0.2`镜像创建一个容器实例
+2. 暴露 TCP 端口`3306`并将其绑定到随机主机端口（这样我们可以运行任意数量的容器而不会产生端口冲突）
 3. 确保容器已启动且 [MySQL](https://hub.docker.com/_/mysql/) 服务进程已准备好处理我们的查询
-4. 使用 [MySQL JDBC 驱动](https://dev.mysql.com/doc/connector-j/8.0/en/) 连接到 [MySQL] 实例并列出所有目录（数据库）
+4. 使用 [MySQL JDBC 驱动](https://dev.mysql.com/doc/connector-j/8.0/en/)连接到 [MySQL](https://hub.docker.com/_/mysql/) 实例并列出所有目录（数据库）
 
 听起来工作很大，但是……由于我们已经学习了 [Spotify Docker Client](https://github.com/spotify/docker-client)，所以让我们一步一步来，让奇迹发生。
 
@@ -855,13 +855,11 @@ final ContainerCreation container = client.createContainer(ContainerConfig
 );
 ```
 
-
-
-
-我们已经有了端口，让我们将其直接传递给 [JDBC](http://www.oracle.com/technetwork/java/overview-141217.html) 连接字符串，我们就快完成了！我们只需要放上拼图的最后一块——要连接的主机名称。或者应该是 `localhost` 吗？答案是：这取决于具体情况。在大多数支持原生 [Docker](https://www.docker.com/) 的操作系统上，`localhost` 是一个非常稳妥的选择。不过，最好通过调用 `client.getHost()` 来询问 [Spotify Docker Client](https://github.com/spotify/docker-client) 哪个才是合适的使用的名称，因为它可能并不总是返回 `localhost`（例如在 [boot2docker](https://github.com/boot2docker/boot2docker) 的情况下）。
+我们已经有了端口，让我们将其直接传递给 [JDBC](http://www.oracle.com/technetwork/java/overview-141217.html) 连接字符串，我们就快完成了！我们只需要放上拼图的最后一块——要连接的主机名称。或者应该是`localhost`吗？答案是：这取决于具体情况。在大多数支持原生 [Docker](https://www.docker.com/) 的操作系统上，`localhost`是一个非常稳妥的选择。不过，最好通过调用`client.getHost()`来询问 [Spotify Docker Client](https://github.com/spotify/docker-client) 哪个才是合适的使用的名称，因为它可能并不总是返回`localhost`（例如在 [boot2docker](https://github.com/boot2docker/boot2docker) 的情况下）。
 
 ```java
 final String url = String.format("jdbc:mysql://%s:%d/my_app_db?user=root&password=%s$ssw0rd&verifyServerCertificate=false", client.getHost(), port);
+
 try (Connection connection = DriverManager.getConnection(url)) {
     try (ResultSet results = connection.getMetaData().getCatalogs()) {
         while (results.next()) {
@@ -873,7 +871,7 @@ try (Connection connection = DriverManager.getConnection(url)) {
 }
 ```
 
-太棒了，如果一切运行完美（正如预期的那样），你会在控制台输出看到类似的内容（请注意我们的数据库 `my_app_db` 也在这里）：
+太棒了，如果一切运行完美（正如预期的那样），你会在控制台输出看到类似的内容（请注意我们的数据库`my_app_db`也在这里）：
 
 | 1 | `...` |
 | 2 | 10:25:19.439 [main] INFO Found catalog 'information_schema' |
@@ -893,15 +891,15 @@ client.close();
 
 我们完成了！你能仅直接使用 [Docker Engine API](https://docs.docker.com/engine/api/) 完成所有这一切吗？绝对可以，但为此你需要编写的辅助 Java 代码量会让你大大惊讶。
 
-## 11 结论
+## 11. 结论
 
 坦率地说，[Docker Engine API](https://docs.docker.com/engine/api/) 仅仅是一组 [REST(ful) 服务](https://en.wikipedia.org/wiki/Representational_state_transfer)，尽管功能非常丰富。无疑，任何人都可以通过通用的 HTTP 客户端从任何 Java 应用程序访问它们。那么问题在哪里呢？
 
 我个人认为，我会强调显式契约、可维护性和类型安全。与其处理 URI、查询参数或路径参数，以及请求和响应负载的原始 [JSON](http://www.json.org/)，你拥有一个稳定的基于 Java 的 API，它具有严格的能力集和预期。
 
-正如我们稍后看到的，[Spotify Docker Client](https://github.com/spotify/docker-client) 为自动化和高级测试技术提供了坚实的基础，特别是在 Java 开发背景下。感谢 [Spotify](https://spotify.github.io/) 为社区做出的贡献！
+正如我们稍后看到的，[Spotify Docker Client](https://github.com/spotify/docker-client)为自动化和高级测试技术提供了坚实的基础，特别是在 Java 开发背景下。感谢 [Spotify](https://spotify.github.io/) 为社区做出的贡献！
 
-## 12 下一步计划
+## 12. 下一步计划
 
 在下一节中，我们将讨论将构建流水线迁移到 [Docker](https://www.docker.com/) 的方法，从而消除在每个主机或每个环境中复制和维护工具的需求。
 
@@ -909,19 +907,19 @@ client.close();
 
 # 在 Docker 上构建
 
-## 1 引言
+## 1. 引言
 
 在教程的前几部分中，我们学习了 [Docker](https://www.docker.com/) 的基础以及与之交互的多种方式。现在是时候将我们所学的知识应用于真实世界的 Java 项目了，我们将从 [Docker](https://www.docker.com/) 如何影响成熟的构建流程和实践这一话题开始讨论。
 
-客观地说，本节的目标有两个：首先，我们将看看现有的构建工具（即 `Maven` 和 `Gradle`）是如何帮助将 Java 应用程序打包为容器的。其次，我们将进一步推进这一想法，学习如何使用 `Docker` 来生成最终镜像。
+客观地说，本节的目标有两个：首先，我们将看看现有的构建工具（即`Maven`和`Gradle`）是如何帮助将 Java 应用程序打包为容器的。其次，我们将进一步推进这一想法，学习如何使用`Docker`来生成最终镜像。
 
-## 2 放大镜
+## 2. 放大镜
 
 为了进行实验，我们将设计两个简单但有意义的 Java 应用程序，它们实现并暴露了用于任务管理的 [RESTful APIs](https://en.wikipedia.org/Representational_state_transfer)。
 
-第一个应用程序基于 `Spring Boot` 开发，并使用 `Gradle` 作为构建工具。在版本方面，我们将使用 `Spring Boot` 最新的 `2.0.M6`。
+第一个应用程序基于`Spring Boot`开发，并使用`Gradle`作为构建工具。在版本方面，我们将使用`Spring Boot`最新的`2.0.M6`。
 
-第二个应用程序在功能上与第一个等效，但将基于另一个流行的框架 [Dropwizard](http://dropwizard.io/) 开发，这次使用 `Maven` 进行依赖管理。在版本方面，我们将引入 `Dropwizard` 最新的 `1.2.0` 版本。
+第二个应用程序在功能上与第一个等效，但将基于另一个流行的框架 [Dropwizard](http://dropwizard.io/) 开发，这次使用`Maven`进行依赖管理。在版本方面，我们将引入`Dropwizard`最新的`1.2.0`版本。
 
 正如我们提到的，两个应用程序都实现并暴露了 [CRUD](https://en.wikipedia.org/Create,_read,_update_and_delete) 操作：
 
@@ -930,7 +928,7 @@ client.close();
 | 3 | `DELETE /{id}` |
 | 4 | `GET /{id}` |
 
-任务本身被建模为持久化实体](https://en.wikipedia.org/Java_Persistence_API)，它将由 [Hibernate ORM](http://hibernate.org/) 管理并存储在 [MySQL](https://dev.mysql.com/doc/connector-j/8.0/en/) 关系数据库中。
+任务本身被建模为[持久化实体](https://en.wikipedia.org/Java_Persistence_API)，它将由 [Hibernate ORM](http://hibernate.org/) 管理并存储在 [MySQL](https://dev.mysql.com/doc/connector-j/8.0/en/) 关系数据库中。
 
 ```java
 @Entity
@@ -950,45 +948,47 @@ public class Task {
     // 省略 getters 和 setters
     ...
 }
-```此时，两个应用程序之间的相似性结束了，每个应用程序将遵循它们自己的惯用开发方式。
-
-## 3 Gradle 与 Docker
+```
 
 
 
 
-基础工作已经就绪，让我们开始探索将 [Docker](https://www.docker.com/) 集成到典型的 [Gradle](https://gradle.org/) 构建中需要满足什么条件。对于本小节，你需要在开发机器上安装 [Gradle](https://gradle.org/) `4.3` 版本。如果你还没有安装，请遵循[安装说明](https://gradle.org/install/) 并选择你偏好的任何建议方法。
+此时，两个应用程序之间的相似性结束了，每个应用程序将遵循它们自己的惯用开发方式。
+
+## 3. Gradle 与 Docker
+
+基础工作已经就绪，让我们开始探索将 [Docker](https://www.docker.com/) 集成到典型的 [Gradle](https://gradle.org/) 构建中需要满足什么条件。对于本小节，你需要在开发机器上安装 [Gradle](https://gradle.org/) `4.3` 版本。如果你还没有安装，请遵循[安装说明](https://gradle.org/install/)并选择你偏好的任何建议方法。
 
 为了使用 [Gradle](https://gradle.org/) 将一个典型的 [Spring Boot](https://projects.spring.io/spring-boot/) 应用打包为 [Docker](https://www.docker.com/) 镜像，我们只需要在 `build.gradle` 文件中包含两个额外的插件：
 
-* [Spring Boot Gradle](https://spring.io/blog/2017/04/05/spring-boot-s-new-gradle-plugin) 插件
-* [Palantir Docker Gradle](https://github.com/palantir/gradle-docker) 插件（也有许多[可选替代方案](https://plugins.gradle.org/search?term=docker)）
+- [Spring Boot Gradle](https://spring.io/blog/2017/04/05/spring-boot-s-new-gradle-plugin) 插件
+- [Palantir Docker Gradle](https://github.com/palantir/gradle-docker) 插件（也有许多[可选替代方案](https://plugins.gradle.org/search?term=docker)）
 
-构建流水线基本上依赖于 [Spring Boot Gradle](https://spring.io/blog/2017/04/05/spring-boot-s-new-gradle-plugin) 插件来产生 [uber-jar](https://stackoverflow.com/questions/11947037/what-is-an-uber-jar)该术语通常用于描述生成单个可运行应用程序 JAR 存档的技术），随后将由 [Palantir Docker Gradle](https://github.com/palantir/gradle-docker) 用于组装 [Docker](https://www.docker.com/) 镜像。以下是构建定义 `build.gradle` 文件的内容。
+构建流水线基本上依赖于 [Spring Boot Gradle](https://spring.io/blog/2017/04/05/spring-boot-s-new-gradle-plugin) 插件来产生 [uber-jar](https://stackoverflow.com/questions/11947037/what-is-an-uber-jar)，该术语通常用于描述生成单个可运行应用程序 JAR 存档的技术。随后，[Palantir Docker Gradle](https://github.com/palantir/gradle-docker) 将使用它来组装 [Docker](https://www.docker.com/) 镜像。以下是构建定义 `build.gradle` 文件的内容。
 
 ```gradle
 01 | buildscript {
 02 | repositories {
 03 | maven { url 'https://repo.spring.io/libs-milestone' }
 04 | }
-05 | 
+05 |
 06 | dependencies {
 07 | classpath "org.springframework.boot:spring-boot-gradle-plugin:2.0.0.M6"
 08 | }
 09 | }
-10 | 
+10 |
 11 | plugins {
 12 | id 'com.palantir.docker' version '0.13.0'
 13 | }
-14 | 
+14 |
 15 | apply plugin: "org.springframework.boot"
 16 | apply plugin: 'java'
 17 | apply plugin: 'eclipse'
 18 | apply plugin: 'application'
-19 | 
+19 |
 20 | sourceCompatibility = 1.8
 21 | targetCompatibility = 1.8
-22 | 
+22 |
 23 | dependencies {
 24 | compile("org.flywaydb:flyway-core:4.2.0")
 25 | compile("org.springframework.boot:spring-boot-starter-webflux:2.0.0.M6")
@@ -996,29 +996,29 @@ public class Task {
 27 | compile("org.springframework.boot:spring-boot-starter-actuator:2.0.0.M6")
 28 | compile("mysql:mysql-connector-java:8.0.7-dmr")
 29 | }
-30 | 
+30 |
 31 | repositories {
 32 | maven {
 33 | mavenCentral()
 34 | url 'https://repo.spring.io/libs-milestone'
 35 | }
 36 | }
-37 | 
+37 |
 38 | springBoot {
 39 | mainClassName = "com.javacodegeeks.spring.AppStarter"
 40 | }
-41 | 
+41 |
 42 | jar {
 43 | mainClassName = "com.javacodegeeks.spring.AppStarter"
 44 | baseName = 'spring-boot-webapp '
 45 | version = project.version
 46 | }
-47 | 
+47 |
 48 | bootJar {
 49 | baseName = 'spring-boot-webapp '
 50 | version = project.version
 51 | }
-52 | 
+52 |
 53 | docker {
 54 | name "jcg/spring-boot-webapp:$project.version"
 55 | tags 'latest'
@@ -1029,7 +1029,7 @@ public class Task {
 60 | }
 ```
 
-这实际上非常简单，所有的核心内容基本上都在 `build.gradle` 文件的 `docker` 部分。你可能还会注意到我们正在使用自己的 [Dockerfile](https://docs.docker.com/engine/reference/builder/)，`src/main/docker/Dockerfile` 来提供指令。
+这实际上非常简单，所有的核心内容基本上都在 `build.gradle` 文件的 `docker` 部分。你可能还会注意到我们正在使用自己的 [Dockerfile](https://docs.docker.com/engine/reference/builder/)，`src/main/docker/Dockerfile`，来提供指令。
 
 ```dockerfile
 01 FROM openjdk:8-alpine
@@ -1041,7 +1041,7 @@ public class Task {
 07 ENTRYPOINT exec $JAVA_OPTS -Ddb.host=$DB_HOST -Ddb.port=$DB_PORT -jar spring-webapp.jar
 ```
 
-确实，简单到如此了。请注意使用 `ENV` (https://docs.docker.com/engine/reference/builder/#env) 来传递 `ARG` (https://github.com/palantir/gradle-docker/issues/149) 在 `build.gradle` 文件中。太棒了，接下来是什么？嗯，我们只需要触发 [Gradle](https://gradle.org/) 构建，例如：
+确实，简单到如此了。请注意使用 `ENV`（https://docs.docker.com/engine/reference/builder/#env）来传递 `ARG`（https://github.com/palantir/gradle-docker/issues/149）在 `build.gradle` 文件中。太棒了，接下来是什么？嗯，我们只需要触发 [Gradle](https://gradle.org/) 构建，例如：
 
 ```bash
 > gradle docker
@@ -1053,8 +1053,11 @@ public class Task {
 
 ```bash
 > docker image ls
+
 REPOSITORY              TAG             IMAGE ID       CREATED          SIZE
+
 jcg/spring-boot-webapp  0.1-SNAPSHOT   65057cae9ba   21 seconds ago   133MB
+
 <none>                  latest          ...             ...
 ```
 
@@ -1069,19 +1072,15 @@ jcg/spring-boot-webapp  0.1-SNAPSHOT   65057cae9ba   21 seconds ago   133MB
 mysql:8.0.2
 ```
 
-现在我们准备好以 [Docker](https://www.docker.com/) 容器运行我们的应用程序了。我们有多种方法可以引用 [MySQL](https://dev.mysql.com/doc/connector-j/8.0/en/) 容器，其中[自定义网络](https://docs.docker.com/engine/userguide/networking/work-with-networks/#connect-containers) 是首选方案。对于像我们这样的简单情况，我们可以通过将运行中的 MySQL 容器的 IP 地址分配给环境变量 `DB_HOST` 来引用它，例如：
+现在我们准备好以 [Docker](https://www.docker.com/) 容器运行我们的应用程序了。我们有多种方法可以引用 [MySQL](https://dev.mysql.com/doc/connector-j/8.0/en/) 容器，其中[自定义网络](https://docs.docker.com/engine/userguide/networking/work-with-networks/#connect-containers)是首选方案。对于像我们这样的简单情况，我们可以通过将运行中的 MySQL 容器的 IP 地址分配给环境变量 `DB_HOST` 来引用它，例如：
 
 ```bash
 > docker run -d --rm \
 --name spring-boot-webapp \
 -p 19900:19900 \
+-e DB_HOST=`docker inspect --format '{{ .NetworkSettings.IPAddress }}'` mysql \
+jcg/spring-boot-webapp:0.0.1-SNAPSHOT
 ```
-
-
-
-
-| `4` | ``-e DB_HOST=`docker inspect --```format` `'{{ .NetworkSettings.IPAddress }}'` ``mysql` \`` |
-| `5` | `jcg/spring-boot-webapp:0.0.1-SNAPSHOT` |
 
 通过将容器的端口 `19900` 映射到宿主机，我们可以使用 `localhost` 作为主机名，通过 [curl](https://curl.haxx.se/) 访问其 [REST(ful) APIs](https://en.wikipedia.org/wiki/Representational_state_transfer) 来与应用程序进行交互。让我们现在就开始操作吧。
 
@@ -1124,11 +1123,11 @@ $ curl http://localhost:19900/tasks/1
 
 事实证明使用 [Gradle](https://gradle.org/) 构建 [Docker](https://www.docker.com/) 镜像一点也不痛苦。尽管如此，在目标系统上安装 [Gradle](https://gradle.org/) 以及 JDK/JRE 仍然需要完成一些准备工作。对于开发环境来说，这可能不是一个问题，因为你很可能已经安装了所有这些（以及更多）。
 
-但在云部署或 CI/CD 流水线的情况下，这可能会成为一个问题，在工作和/或维护方面产生额外成本。我们是否能找到某种方式摆脱这种开销并完全依赖 [Docker](https://www.docker.com/) 呢？是的，实际上我们可以，通过采用[多阶段构建 (multi-stage builds)](https://docs.docker.com/engine/userguide/eng-image/multistage-build/)，这是 [Docker](https://www.docker.com/) 功能集最近新增的功能之一。
+但在云部署或 CI/CD 流水线的情况下，这可能会成为一个问题，在工作和/或维护方面产生额外成本。我们是否能找到某种方式摆脱这种开销并完全依赖 [Docker](https://www.docker.com/) 呢？是的，实际上我们可以，通过采用[多阶段构建（multi-stage builds）](https://docs.docker.com/engine/userguide/eng-image/multistage-build/)，这是 [Docker](https://www.docker.com/) 功能集最近新增的功能之一。
 
-如果你好奇它如何帮助我们，这里是其核心思路。基本上，我们将按照常规程序从 [Dockerfile](https://docs.docker.com/engine/reference/builder/) 构建镜像。但 [Dockerfile](https://docs.docker.com/engine/reference/builder/) 实际上将包含两个镜像定义。第一个（基于 [官方 Gradle 镜像](https://hub.docker.com/_/gradle/ ) 之一）指示 [Docker](https://www.docker.com/) 运行我们 [Spring Boot](https://projects.spring.io/spring-boot/) 应用的 [Gradle](https://gradle.org/) 构建。第二个将选取第一个镜像产生的二进制文件，并创建一个封装了我们 [Spring Boot](https://projects.spring.io/spring-boot/) 应用的最终 [Docker](https://www.docker.com/) 镜像（就像我们之前做过的那样）。
+如果你好奇它如何帮助我们，这里是其核心思路。基本上，我们将按照常规程序从 [Dockerfile](https://docs.docker.com/engine/reference/builder/) 构建镜像。但 [Dockerfile](https://docs.docker.com/engine/reference/builder/) 实际上将包含两个镜像定义。第一个（基于[官方 Gradle 镜像](https://hub.docker.com/_/gradle/)之一）指示 [Docker](https://www.docker.com/) 运行我们 [Spring Boot](https://projects.spring.io/spring-boot/) 应用的 [Gradle](https://gradle.org/) 构建。第二个将选取第一个镜像产生的二进制文件，并创建一个封装了我们 [Spring Boot](https://projects.spring.io/spring-boot/) 应用的最终 [Docker](https://www.docker.com/) 镜像（就像我们之前做过的那样）。
 
-看一遍可能比尝试解释它更好。下面的 `Dockerfile.build` 文件通过使用 [多阶段构建](https://docs.docker.com/engine/userguide/eng-image/multistage-build/) 指令说明了这一想法。
+看一遍可能比尝试解释它更好。下面的 `Dockerfile.build` 文件通过使用[多阶段构建](https://docs.docker.com/engine/userguide/eng-image/multistage-build/)指令说明了这一想法。
 
 ```dockerfile
 FROM gradle:4.3.0-jdk-alpine
@@ -1155,21 +1154,24 @@ docker image build --build-arg BUILD_VERSION=0.1-SNAPSHOT -f Dockerfile.build -t
 
 ```bash
 $ docker image ls
-REPOSITORY            TAG             IMAGE ID       CREATED           SIZE
-jcg/spring-boot-webapp  0.1-SNAPSHOT   02ab72da64   10 seconds ago   133MB
-jcg/spring-boot-webapp  latest         02ab72da64   10 seconds ago   133MB
+REPOSITORY              TAG             IMAGE ID       CREATED           SIZE
+jcg/spring-boot-webapp  0.1-SNAPSHOT    02ab72da64   10 seconds ago   133MB
+jcg/spring-boot-webapp  latest          02ab72da64   10 seconds ago   133MB
 ```
 
-[多阶段构建](https://docs.docker.com/engine/userguide/eng-image/multistage-build/) 有巨大的潜力，即使对于我们这样简单的应用也值得关注。
+
+
+
+[多阶段构建](https://docs.docker.com/engine/userguide/eng-image/multistage-build/)有巨大的潜力，即使对于我们这样简单的应用也值得关注。
 
 ## 5. Maven 和 Docker
 
-让我们稍微切换一下，看看 [Apache Maven] 如何管理 [Dropwizard](http://www.dropwizard.io/) 应用的构建。对于小节，你需要在开发机器上安装 [Apache Maven](https://maven.apache.org/) `3.2.5`（如果你已经有了 [Apache Maven](https://maven.apache.org/) `3.2.1` 或更高版本，可以直接使用）。
+让我们稍微切换一下，看看 [Apache Maven](https://maven.apache.org/) 如何管理 [Dropwizard](http://www.dropwizard.io/) 应用的构建。对于小节，你需要在开发机器上安装 [Apache Maven](https://maven.apache.org/) `3.2.5`（如果你已经有了 [Apache Maven](https://maven.apache.org/) `3.2.1` 或更高版本，可以直接使用）。
 
 我们需要遵循的步骤与 [Gradle](https://gradle.org/) 构建的大部分相同，变化仅在于使用了以下插件：
 
-*   [Maven Shade](https://maven.apache.org/plugins/maven-shade-plugin/) 插件
-*   [Spotify Docker Maven](https://github.com/spotify/docker-maven-plugin) 插件
+* [Maven Shade](https://maven.apache.org/plugins/maven-shade-plugin/) 插件
+* [Spotify Docker Maven](https://github.com/spotify/docker-maven-plugin) 插件
 
 [Maven Shade](https://maven.apache.org/plugins/maven-shade-plugin/) 插件产生一个 [uber-jar](https://stackoverflow.com/questions/1194703/what-is-an-uber-jar)，之后将由 [Spotify Docker Maven](https://github.com/spotify/docker-maven-plugin) 插件用于构建 [Docker](https://www.docker.com/) 镜像。复杂的，让我们来看 `pom.xml` 文件。
 
@@ -1283,10 +1285,6 @@ jcg/spring-boot-webapp  latest         02ab72da64   10 seconds ago   133MB
 </project>
 ```
 
-
-
-
-
 | `6` | `jcg/dropwizard-webapp:0.0.1-SNAPSHOT` |
 
 我们还将容器的端口 `19900` 和 `19901` 映射到宿主机，这样我们就可以在 [curl](https://curl.haxx.se/) 中将 `localhost` 作为主机名了。
@@ -1389,9 +1387,11 @@ jcg/dropwizard-webapp latest 5b00fcc9a1d 2 seconds ago 128MB
 
 正如我们所看到的，[Docker](https://www.docker.com/) 的命令行工具非常强大且用法直观。然而，我们大多数开发者大部分时间都花在喜欢的 [IDE](https://en.wikipedia.org/Integrated_developmentenvironment) 中。在寻找应用程序的逻辑 bug 时，在几十个窗口和终端之间切换是非常不利的。
 
+
+
 幸运的是，三个主流的 Java 开发 [IDE](https://en.wikipedia.org/Integrated_developmentenvironment)——即 [Eclipse](http://www.eclipse.org/)、[Intelli IDEA](https://www.jetbrains.com/idea/) 和 [NetBeans](https://netbeans.org/)——都通过方便的 UI 视图或小组件提供了与 [Docker](https://www.docker.com/) 工具的集成。让我们快速回顾一下这些 [IDE](https://en.wikipedia.org/Integrated_developmentenvironment)，并仔细观察它们提供了哪些功能。
 
-### 2.1. Eclipse
+## 2.1. Eclipse
 
 [Eclipse Oxygen](https://projects.eclipse.org/releases/oxygen) 是目前最新版本的 [Eclipse](http://www.eclipse.org/) [IDE](https://en.wikipedia.org/Integrated_developmentenvironment)，它通过 [Linux Tools](https://www.eclipse.org/linuxtools/downloads.php) 子项目提供了全面的 [Docker](https://www.docker.com/) 工具支持（作为插件可用）。安装后，它会在 `Docker` 类别下贡献四个额外的视图。
 
@@ -1406,10 +1406,6 @@ Eclipse 中的 Docker 视图
 Docker Explorer 视图
 
 如果你只对 [Docker](https://www.docker.com/) 容器感兴趣，有一个专门的 `Docker Containers` 视图，它使用了紧凑的表格化表示法。
-
-
-
-
 
 ![Docker Containers View](img/docker-containers-jcg-1024x193.png)
 
@@ -1431,11 +1427,11 @@ Docker Explorer 视图
 
 ![Eclipse Launchers](img/eclipse-launcher-jcg-161x300.png)
 
-# Eclipse 启动器
+#### Eclipse 启动器
 
 如果你想了解更多关于上述的所有视图和启动器，以及一般关于 [Eclipse](http://www.eclipse.org/) 中可用的 [Docker](https://www.docker.com/) 工具，[官方项目 Wiki](https://wiki.eclipse.org/Linux_Tools_Project/Docker_Tooling/User_Guide) 是一个极佳的起点。
 
-### 2.2. IntelliJ IDEA
+## 2.2. IntelliJ IDEA
 
 [JetBrains IntelliJ IDEA](https://www.jetbrains.com/idea/)（最新版本 `2017.2.6` 可）以[官方插件](https://www.jetbrains.com/help/idea/docker.html) 的形式提供了 [Docker](https://www.docker.com/) 工具支持。它不仅适用于旗舰版（`Ultimate Edition`），也适用于社区版（`Community Edition`），我们将在本节中使用社区版。
 
@@ -1447,7 +1443,7 @@ Docker Explorer 视图
 
 平心地说，拥有一个结构良好的单一视图，并且大部分所需组件都在附近（在不同的标签页中），这是非常方便的。
 
-### 2.3. Oracle NetBeans
+## 2.3. Oracle NetBeans
 
 [NetBeans](https://netbeans.org/) 自最新的 `8.2` 版本以来，已将 [Docker](https://www.docker.com/) 工具作为 `Base IDE` 插件的一部分包含在（你可能一开始就激活了它）。激活插件后，`Services` 视图中会出现新增的 `Docker` 树节点。
 
@@ -1465,7 +1461,7 @@ Docker Explorer 视图
 
 ![Eclipse Che](img/eclipse-che-jcg.png)
 
-# Eclipse Che
+### Eclipse Che
 
 这是一个非常有创新且年轻的项目，具有彻底革新我们所知的 [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) 概念的巨大潜力。看到未来如何发展将非常有趣，但这项技术已经到位并可供评估。
 
@@ -1495,7 +1491,7 @@ docker run -d -p 9000:9000 portainer/portainer
 
 ![Portainer Dashboard](img/portainer-jcg-1024x413.png)
 
-### Portainer Dashboard 板
+#### Portainer Dashboard 板
 
 完成设置步骤（如有必要），将被导航到特定 [Docker](https://www.docker.com/) 环境的全方位视图，从简单的仪表板页面开始。你将识别左侧列出的 [Docker](https://www.docker.com/) 对象（如卷、网络、容器、镜像、……），从而可以选择其中任何一个以重定向到专用视图。
 
@@ -1503,32 +1499,30 @@ docker run -d -p 9000:9000 portainer/portainer
 
 ### 5.2. cAdvisor
 
-
-
-
 在我们开发应用程序时，通常需要更深入地了解容器的运行状况，无论是在讨论 CPU、内存还是网络利用率。幸运的是，这里有很多选择，其中我们将讨论的一个非常有用的工具是 [cAdvisor](https://github.com/google/cadvisor)（或全称 container advisor），它能分析运行中容器的资源使用情况和性能特征。
 
 > “[cAdvisor](https://github.com/google/cadvisor) 让容器用户了解其运行容器的资源使用情况和性能特征。它是一个运行守护进程，负责收集、聚合、处理和导出运行容器的信息。具体来说，对于每个容器，它保留了资源隔离参数、历史资源使用情况、完整历史资源使用的直方图以及网络统计数据。这些数据按容器和整个机器进行导出。” – [`github.com/google/cadvisor`](https://github.com/google/cadvisor)
 
 有趣的是，[cAdvisor](https://github.com/google/cadvisor) 不限于 [Docker](https://www.docker.com/)，它应该原生支持几乎任何其他容器类型。遗憾的是，对于 Windows 用户来说，[cAdvisor](https://github.com/google/cadvisor) 在该平台上的[支持有限](https://github.com/google/cadvisor/issues/1394)。尝试 [cAdvisor](https://github.com/google/cadvisor) 的最佳方法确实是将其作为 [Docker](https://www.docker.com/) 容器运行。
 
-| `01` | `sudo` `docker run \` |
-| :--- | :--- |
-| `02` | `--volume=/:/rootfs:ro \` |
-| `03` | `--volume=/var/run:/var/run:rw \` |
-| `04` | `--volume=/sys:/sys:ro \` |
-| `05` | `--volume=/var/lib/docker/:/var/lib/docker:ro \` |
-| `06` | `--volume=/dev/disk/:/dev/disk:ro \` |
-| `07` | `--publish=8080:8080 \` |
-| `08` | `--detach=``true` `\` |
-| `09` | `--name=cadvisor \` |
-| `10` | `google/cadvisor:latest` |
+```
+sudo docker run \
+--volume=/:/rootfs:ro \
+--volume=/var/run:/var/run:rw \
+--volume=/sys:/sys:ro \
+--volume=/var/lib/docker/:/var/lib/docker:ro \
+--volume=/dev/disk/:/dev/disk:ro \
+--publish=8080:8080 \
+--detach=true \
+--name=cadvisor \
+google/cadvisor:latest
+```
 
 一旦容器启动运行，你就可以 [`localhost:8080`](http://localhost:8080) 访问 [cAdvisor](https://github.com/google/cadvisor) 的 Web UI（或者如果你使用的是非原生 [Docker](https://www.docker.com/) 安装，则为 `http://<docker-machine>:8080`）。
 
 ![cAdvisor](img/cadvisor-jcg.png)
 
-### cAdvisor
+#### cAdvisor
 
 Web UI 非常简单，但信息极其丰富。它收集了关于每个运行中的 [Docker](https://www.docker.com/) 容器资源和进程的大量细节，以及关于 [Docker](https://www.docker.com/) 主机本身的信息（CPU、内存、网络、存储……等）。无论如何，它是学习容器在运行时如何消耗和管理资源的非常有价值的工具。
 
@@ -1538,7 +1532,7 @@ Web UI 非常简单，但信息极其丰富。它收集了关于每个运行中�
 
 ![ctop](img/ctop-jcg-1024x214.png)
 
-### ctop
+#### ctop
 
 [ctop](https://ctop.sh) 不仅有一个摘要视图，还支持选择并关注任何单个容器的选项。
 
@@ -1552,13 +1546,16 @@ Web UI 非常简单，但信息极其丰富。它收集了关于每个运行中�
 
 该功能仍被视为实验性功能，因此默认情况下不可用，并且需要一些配置微调。[官方文档](https://docs.docker.com/engine/admin/prometheus/) 彻底描述了针对你运行 [Docker](https://www.docker.com/) 的操作系统需要执行的所有步骤。但本质上，第一步是修改 `daemon.json` 并在其中添加以下属性。
 
-| `1` | `{` |
-| :--- | :--- |
-| `2` | `"metrics-addr"` : `"localhost:9323",` |
-| `3` | `"experimental"` : `true` |
-| `4` | `}` |
+```
+{
+  "metrics-addr" : "localhost:9323",
+  "experimental" : true
+}
+```
 
 为了使此更改生效，应该重启 [Docker](https://www.docker.com/) 守护进程。紧接着，指标应该可以在 [`localhost:9323/metrics`](http://localhost:9323/metrics) 可用。
+
+
 
 ```json
 {
@@ -1566,9 +1563,6 @@ Web UI 非常简单，但信息极其丰富。它收集了关于每个运行中�
   "experimental": true
 }
 ```
-
-
-
 
 在本教程的章节中，我们将学习一些框架，它们通过利用 [Docker](https://www.docker.com/) 及其工具，极大简化了基于 JVM 的应用的集成、组件和端到端测试。
 
@@ -1578,54 +1572,63 @@ Web UI 非常简单，但信息极其丰富。它收集了关于每个运行中�
 
 为了理解这个问题，让我们关注 JVM 如何处理 Java 应用中两个最重要的资源：内存（堆）和 CPU。为了便于说明，我们将在一个专用的虚拟机上安装 [Docker](https://www.docker.com/)，该虚拟机分配了 `2 个 CPU 核心` 和 `4GB 内存`。在记住此配置的情况下，让我们从 JVM 的视角来看这个问题：
 
-| `1` | `$ docker run --``rm` `openjdk:8-jdk-alpine java -XshowSettings:vm -XX:+UseParallelGC -XX:+PrintFlagsFinal –version` |
+```
+$ docker run --rm openjdk:8-jdk-alpine java -XshowSettings:vm -XX:+UseParallelGC -XX:+PrintFlagsFinal –version
+```
 
 控制台上将打印大量信息，但对我们来说最感兴趣的部分是 `ParallelGCThreads` 和 `VM settings`。
 
-| `01` | `...` |
-| `02` | `uintx ParallelGCThreads = 2` |
-| `03` | `...` |
-| `04` |   |
-| `05` | `VM settings:` |
-| `06` | `Max. Heap Size (Estimated): 992.00M` |
-| `07` | `Ergonomics Machine Class: server` |
-| `08` | `Using VM: OpenJDK 64-Bit Server VM` |
-| `09` |   |
-| `10` | `openjdk version` `"1.8.0_131"` |
-| `11` | `OpenJDK Runtime Environment (IcedTea 3.4.0) (Alpine 8.131.11-r2)` |
-| `12` | `OpenJDK 64-Bit Server VM (build 25.131-b11, mixed mode)` |
+```
+...
+uintx ParallelGCThreads = 2
+...
+VM settings:
+Max. Heap Size (Estimated): 992.00M
+Ergonomics Machine Class: server
+Using VM: OpenJDK 64-Bit Server VM
+
+openjdk version "1.8.0_131"
+OpenJDK Runtime Environment (IcedTea 3.4.0) (Alpine 8.131.11-r2)
+OpenJDK 64-Bit Server VM (build 25.131-b11, mixed mode)
+```
 
 在核心数少于（或等于）8 核的机器上，`ParallelGCThreads` [等于核心数](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/parallel.html)，而堆的默认最大限制约为[可用物理内存的 25%](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gc-ergonomics.html)。很酷，目前 JVM 报告的数字合理的。
 
 让我们进一步尝试，使用 [Docker](https://www.docker.com/) 的资源管理能力将容器的 CPU 和内存使用分别限制为 `1 个核心` 和 `256Mb`。
 
-| `1` | `$ docker run --``rm` `--cpuset-cpus=0 --memory=256m openjdk:8-jdk-alpine java -XshowSettings:vm -XX:+UseParallelGC -XX:+PrintFlagsFinal -version` |
+```
+$ docker run --rm --cpuset-cpus=0 --memory=256m openjdk:8-jdk-alpine java -XshowSettings:vm -XX:+UseParallelGC -XX:+PrintFlagsFinal -version
+```
 
 这次的情况有点不同：
 
-| `1` | `...` |
-| `2` | `uintx ParallelGCThreads = 1` |
-| `3` | `...` |
-| `4` |   |
-| `5` | `VM settings:` |
-| `6` | `Max. Heap Size (Estimated): 992.00M` |
-| `7` | `Ergonomics Machine Class: client` |
-| `8` | `Using VM: OpenJDK 64-Bit Server VM` |
+```
+...
+uintx ParallelGCThreads = 1
+...
+VM settings:
+Max. Heap Size (Estimated): 992.00M
+Ergonomics Machine Class: client
+Using VM: OpenJDK 64-Bit Server VM
+```
 
 JVM 能够相应调整 `ParallelGCThreads`，但内存限制似乎被完全忽略了。没错，为了让 JVM 感知容器环境，我们需要开启实验性 JVM 选项：`-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap`。
 
-| `1` | `$ docker run --``rm` `--cpuset-cpus=0 --memory=256m openjdk:8-jdk-alpine java -XshowSettings:vm -XX:+UseParallelGC -XX:+PrintFlagsFinal  -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap –version` |
+```
+$ docker run --rm --cpuset-cpus=0 --memory=256m openjdk:8-jdk-alpine java -XshowSettings:vm -XX:+UseParallelGC -XX:+PrintFlagsFinal  -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap –version
+```
 
 现在的结果好多了：
 
-| `1` | `...` |
-| `2` | `uintx ParallelGCThreads = 1` |
-| `3` | `...` |
-| `4` |   |
-| `5` | `VM settings:` |
-| `6` | `Max. Heap Size (Estimated): 112.00M` |
-| `7` | `Ergonomics Machine Class: client` |
-| `8` | `Using VM: OpenJDK 64-Bit Server VM` |
+```
+...
+uintx ParallelGCThreads = 1
+...
+VM settings:
+Max. Heap Size (Estimated): 112.00M
+Ergonomics Machine Class: client
+Using VM: OpenJDK 64-Bit Server VM
+```
 
 好奇的读者可能会奇怪，为什么最大堆大小远高于分配给容器的可用物理内存的 `25%`。答案是 [Docker](https://www.docker.com/) 也为交换空间（swap）分配了内存（如果没有指定，真实值为 `256Mb + 256Mb = 512Mb`）。
 
@@ -1652,10 +1655,6 @@ mysql:8.0.2
 测试执行的速度提升可能是巨大的，但你永远不应该在生产环境中（极可能在任何其他环境中）中使用此功能，因为容器停止时，[tmpfs](https://docs.docker.com/engine/admin/volumes/tmpfs/) 挂载就会消失。即使容器被提交（commit），[tmpfs](https://docs.docker.com/engine/admin/volumes/tmpfs/) 挂载也不会被保存。
 
 ## 4. 场景
-
-
-
-
 
 掌握了这些技巧和技巧后，我们可以讨论一下即将实现的测试场景。从本质上，为我们在教程之前的部分开发的一个应用程序运行端到端测试是非常棒的。该测试场景的最终目标是验证用于任务管理的 [REST(ful) APIs](https://en.wikipedia.org/wiki/Representational_state_transfer) 是否可用并返回预期的结果。
 
@@ -1733,6 +1732,8 @@ public class SpringBootAppIntegrationTest {
 
 让我们看看上一节中看到的相同测试在翻译为 [Arquillian Cube](http://arquillian.org/arquillian-cube/) 后会是什么样，它是一个 [Arquillian](http://arquillian.org/) 扩展，可用于管理 [Docker](https://www.docker.com/) 容器。
 
+
+
 ```java
 public class SpringBootAppIntegrationTest {
     @ClassRule
@@ -1772,12 +1773,9 @@ public class SpringBootAppIntegrationTest {
 }
 ```
 
-
-
-
 它与 [TestContainers](https://www.testcontainers.org/) 有一些不同之处，但总的来说，这个测试用例看起来已经很熟悉了。[Arquillian Cube](http://arquillian.org/arquillian-cube/) 目前似乎还不支持（至少在运行 [Container Objects DSL](http://arquillian.org/arquillian-cube/#_container_objects_dsl) 时）的一个关键特性是网络别名（network aliasing），因此为了连接我们的 [Spring Boot](https://projects.spring.io/spring-boot/) 应用和 [MySQL](https://www.mysql.com/) 后端，我们不得不退回到[传统的容器链接](https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/)。
 
-值得一提的是[Arquillian Cube](http://arquillian.org/arquillian-cube/) 有许多其他方法可以从测试场景中管理 [Docker](https://www.docker.com/) 容器，包括对 [Docker Compose](https://www.testcontainers.org/usage/docker_compose.html) 规范的支持。顺便提一下，[Arquillian](http://arquillian.org/) 周围的开发速度令人惊叹，它完全有机会成为现代 Java 应用的一站式测试平台。
+值得一提的是 [Arquillian Cube](http://arquillian.org/arquillian-cube/) 有许多其他方法可以从测试场景中管理 [Docker](https://www.docker.com/) 容器，包括对 [Docker Compose](https://www.testcontainers.org/usage/docker_compose.html) 规范的支持。顺便提一下，[Arquillian](http://arquillian.org/) 周围的开发速度令人惊叹，它完全有机会成为现代 Java 应用的一站式测试平台。
 
 ## 7. Overcast
 
@@ -1914,10 +1912,6 @@ public class SpringBootAppIntegrationTest {
 }
 ```
 
-
-
-
-
 ```java
 | 23 | .get("/tasks") |
 | 24 | .then() |
@@ -1939,7 +1933,7 @@ public class SpringBootAppIntegrationTest {
 
 在教程的下一部分中，我们将讨论一些典型的部署编排，在这些场景中 [Docker](https://www.docker.com/) 容器（以及通用容器）是一等公民。
 
-Java 开发者的 Docker
+# Java 开发者的 Docker
 
 # 在 Docker 上部署
 
@@ -1963,82 +1957,80 @@ Java 开发者的 Docker
 
 [Kubernetes](https://kubernetes.io/) 能为你做很多事情，但在教程的这部分，我们将看到如何仅使用 [Kubernetes](https://kubernetes.io/) 特性的最小子集，轻松地部署我们的容器化 [Spring Boot](https://projects.spring.io/spring-boot/) 应用栈，包括 [MySQL](https://dev.mysql.com/doc/connector-j/8.0/en/)。
 
+
+
 在本地机器上搭建一个完整的 [Kubernetes](https://kubernetes.io/) 集群听起来可能不太实际，但幸运的是，[Kubernetes](https://kubernetes.io/)可以通过 [minikube](https://kubernetes.io/docs/getting-started-guides/minikube/#quickstart) 以开发模式部署。这个强大的工具会在虚拟机内部启动单节点 [Kubernetes](https://kubernetes.io/) 集群，这样你就可以使用笔记本电脑或桌面电脑进行日常开发。
 
 假设你已经在选择的操作系统上[安装了 minikube](https://kubernetes.io/docs/getting-started-guides/minikube/#installation)，让我们进入下一步，并在上面部署几个 [Docker](https://www.docker.com/) 容器。
 
 ```bash
-| 1 | $ minikube start
+$ minikube start
 ```
 
 当 [minikube](https://kubernetes.io/docs/getting-started-guides/minikube/#quickstart) 启动时，我们可以立即启动 [MySQL](https://dev.mysql.com/doc/connector-j/8.0/en/) 部署，坚持我们在整个教程中使用的版本 `8.0.2`。
 
 ```bash
-| 1 | $ kubectl run mysql --image=mysql:8.0.2 --env='MYSQL_ROOT_PASSWORD=p$ssw0rd' --env='MYSQL_DATABASE=my_app_db' --env='MYSQL_ROOT_HOST=%%' --port=3306
+$ kubectl run mysql --image=mysql:8.0.2 --env='MYSQL_ROOT_PASSWORD=p$ssw0rd' --env='MYSQL_DATABASE=my_app_db' --env='MYSQL_ROOT_HOST=%%' --port=3306
 ```
 
 这需要一些时间，最后你应该能看到 [MySQL](https://dev.mysql.com/doc/connector-j/8.0/en/) 容器（或者准确地说，是 [Kubernetes](https://kubernetes.io/) pod）正在运行：
 
 ```bash
-| 1 | $ kubectl get pod
-| 2 | NAME READY STATUS RESTARTS AGE
-| 3 | mysql-5d4dbcd58-6ck 1/1 Running 0 22m
+$ kubectl get pod
+NAME READY STATUS RESTARTS AGE
+mysql-5d4dbcd58-6ck 1/1 Running 0 22m
 ```
 
 太棒了，现在我们需要使用已部署的 [Kubernetes](https://kubernetes.io/) 集群的 [Docker](https://www.docker.com/) 设置，重新构建我们之前之前开发的 [Spring Boot](https://projects.spring.io/spring-boot/) 应用的 Docker 镜像（或者，我们也可以使用私有仓库）。
 
 ```bash
-| 1 | $ eval $(minikube env) |
-| 2 | $ docker build \
-| 3 | --build-arg BUILD_VERSION=0.1-SNAPSHOT |
-| 4 | -f Dockerfile.build |
-| 5 | -t jcg/spring-boot:latest |
-| 6 | -t jcg/spring-boot:0.1-SNAPSHOT
+$ eval $(minikube env)
+$ docker build \
+  --build-arg BUILD_VERSION=0.1-SNAPSHOT \
+  -f Dockerfile.build \
+  -t jcg/spring-boot:latest \
+  -t jcg/spring-boot:0.1-SNAPSHOT
 ```
 
 完成这一步后，我们就有了可用于 [Kubernetes](https://kubernetes.io/) 部署的 [Docker](https://www.docker.com/) 镜像，并可以将其作为另一个 pod 运行。
 
 ```bash
-| 1 | $ kubectl run spring-boot-webapp --image=jcg/spring-boot:latest --env='DB_HOST=mysql.default.svc.local' --port=19900 --image-pull-policy=Never
+$ kubectl run spring-boot-webapp --image=jcg/spring-boot:latest --env='DB_HOST=mysql.default.svc.local' --port=19900 --image-pull-policy=Never
 ```
 
 让我们检查是否有两个 pod 正在运行：
 
 ```bash
-| 1 | $ kubectl get pod
-| 2 | NAME READY STATUS RESTARTS AGE
-| 3 | mysql-5d4dbcd58-ck 1/1 Running 0 33m
-| 4 | spring-boot-webapp-5ff845bf5-gfqv 1/1 Running 0 31m
+$ kubectl get pod
+NAME READY STATUS RESTARTS AGE
+mysql-5d4dbcd58-ck 1/1 Running 0 33m
+spring-boot-webapp-5ff845bf5-gfqv 1/1 Running 0 31m
 ```
 
 最后但同样重要，我们必须将我们的 [Spring Boot](https://projects.spring.io/spring-boot/) 应用部署暴露为 [Kubernetes](https://kubernetes.io/) 服务以便可以访问：
 
 ```bash
-| 1 | $ kubectl expose deployment spring-boot-webapp --type=NodePort
+$ kubectl expose deployment spring-boot-webapp --type=NodePort
 ```
 
 并快速检查它是否列在其他服务之中：
 
 ```bash
-| 1 | $ kubectl. get service
-| 2 | NAME TYPE CLUSTER-IP EXTERNAL-IP PORT(S) AGE
-| 3 | kubernetes ClusterIP 10.96.0.1 443/TCP 4d
-| 4 | spring-boot-webapp NodePort 10.109.108.87 19900:30253/TCP 40s
+$ kubectl. get service
+NAME TYPE CLUSTER-IP EXTERNAL-IP PORT(S) AGE
+kubernetes ClusterIP 10.96.0.1 443/TCP 4d
+spring-boot-webapp NodePort 10.109.108.87 19900:30253/TCP 40s
 ```
 
 基本上就是这样，通过几个简单的步骤，我们让 [Docker](https://www.docker.com/) 容器启动并运行，且全部由 [Kubernetes](https://kubernetes.io/) 管理。让我们确保应用程序实际上通过了所有的健康检查：
 
 ```bash
-| 01 | $ curl $(minikube service spring-boot-webapp --url)/application/health
-| 02 | {
-| 03 | "status": "UP",
-| 04 | "details": {
-| 05 | "diskSpace": {
+$ curl $(minikube service spring-boot-webapp --url)/application/health
+{
+"status": "UP",
+"details": {
+"diskSpace": {
 ```
-
-
-
-
 
 ```json
 {
@@ -2066,7 +2058,7 @@ Java 开发者的 Docker
 
 [Apache Mesos](http://mesos.apache.org/) 可疑是目前使用的最古老的资源和集群管理框架之一。它有效地将资源（CPU、内存、存储）从物理或虚拟硬件中抽象出来，允许构建和运行容错且弹性的分布式系统。它的优势之一是极高的可扩展性和对容器化应用部署的支持，然而它也以相当复杂且难以操作而闻名。
 
-从架构上来说，Apache Mesos](http://mesos.apache.org/) 由一个管理 `agents`（运行在每个集群节点上）的 `master` 以及 `frameworks`（在这些 agents 上运行 `tasks`）组成。master 通过向框架 `resource offers`（资源提议）实现了跨框架的资源（CPU、RAM、……）的细粒度共享。我们仅关注必要的组件，让我们来看看如何使用 [docker-compose](https://docs.docker.com/compose/compose-file/compose-file/) 规范定义 [Apache Mesos](http://mesos.apache.org/) 集群。
+从架构上来说，[Apache Mesos](http://mesos.apache.org/) 由一个管理 `agents`（运行在每个集群节点上）的 `master` 以及 `frameworks`（在这些 `agents` 上运行 `tasks`）组成。`master` 通过向框架提供 `resource offers`（资源提议）实现了跨框架的资源（CPU、RAM、……）的细粒度共享。我们仅关注必要的组件，让我们来看看如何使用 [docker-compose](https://docs.docker.com/compose/compose-file/compose-file/) 规范定义 [Apache Mesos](http://mesos.apache.org/) 集群。
 
 ```yaml
 version: "3"
@@ -2206,10 +2198,9 @@ services:
 curl -X POST http://localhost:8080/v2/apps -d @mysql.json -H "Content-type: application/json"
 ```
 
-
-
-
 看起来不错，让我们对 [Spring Boot](https://projects.spring.io/spring-boot/) 应用也进行同样的操作，从 [Marathon](http://mesosphere.github.io/marathon/) 部署描述符开始，并将其持久化到 `spring-webapp.json` 文件。
+
+
 
 ```json
 {
@@ -2222,13 +2213,17 @@ curl -X POST http://localhost:8080/v2/apps -d @mysql.json -H "Content-type: appl
       "portMappings": [
         {
           "containerPort": 19900,
-        "servicePort": 19900,
-        "hostPort": 19900
+          "servicePort": 19900,
+          "hostPort": 19900
         }
       ],
       "parameters": [
-        { "key": "hostname", "value": "spring-webapp" }
-    ]
+        {
+          "key": "hostname",
+          "value": "spring-webapp"
+        }
+      ]
+    }
   },
   "env": {
     "DB_HOST": "172.17.0.2"
@@ -2239,7 +2234,9 @@ curl -X POST http://localhost:8080/v2/apps -d @mysql.json -H "Content-type: appl
   "healthChecks": [
     {
       "protocol": "COMMAND",
-      "command": { "value": "nc -z localhost 19900" },
+      "command": {
+        "value": "nc -z localhost 19900"
+      },
       "gracePeriodSeconds": 25,
       "intervalSeconds": 10,
       "timeoutSeconds": 5,
@@ -2255,20 +2252,22 @@ curl -X POST http://localhost:8080/v2/apps -d @mysql.json -H "Content-type: appl
 $ curl -X POST http://localhost:8080/v2/apps -d @spring-webapp.json -H "Content-type: application/json"
 {
   "id": "/jcg/spring-webapp",
-  "container":{
+  "container": {
     …
   },
   …
 }
 ```
 
-我们实际上已经完成了！一旦部署完成，我们应该能够看到处于运行状态的应用程序应用堆栈，例如，可以使用 [Marathon](http://mesosphere.github.io/marathon/) 的 [web UI](https://mesosphere.github.io/marathon/docs/marathon-ui.html)，可以通过 [http://localjost:8080/ui/] 访问。
+我们实际上已经完成了！一旦部署完成，我们应该能够看到处于运行状态的应用程序堆栈。例如，可以使用 [Marathon](http://mesosphere.github.io/marathon/) 的 [web UI](https://mesosphere.github.io/marathon/docs/marathon-ui.html)，该界面可以通过 [http://localjost:8080/ui/] 访问。
 
 ![](img/marathon-jcg.png)
 
 ## Marathon 应用
 
-好奇的读者可能会想，我们是如何将这两个 [Marathon](http://mesosphere.github.io/marathon/) 应用——[Spring Boot](https://projects.spring.io/spring-boot/) 和 [MySQL](https://dev.mysql.com/doc/connector-j/8.0/en/) 连接在一起的。对于这个特定案例，我们使用了由 [Mesos-DNS](https://mesosphere.github.io/mesos-dns/) 实现的 [Apache Mesos](http://mesos.apache.org/) 的[服务发现和负载均衡](https://mesosphere.github.io/marathon/docs/service-discovery-load-balancing.html) 能力。为了演示它们的作用，以下是如何通过名称 `mysql-jcg.marathon.mesos` 查询 [MySQL](https://dev.mysql.com/doc/connector-j/8.0/en/) 实例的 IP 地址：
+好奇的读者可能会想，我们是如何将这两个 [Marathon](http://mesosphere.github.io/marathon/) 应用——[Spring Boot](https://projects.spring.io/spring-boot/) 和 [MySQL](https://dev.mysql.com/doc/connector-j/8.0/en/)——连接在一起的。对于这个特定案例，我们使用了由 [Mesos-DNS](https://mesosphere.github.io/mesos-dns/) 实现的 [Apache Mesos](http://mesos.apache.org/) 的[服务发现和负载均衡](https://mesosphere.github.io/marathon/docs/service-discovery-load-balancing.html)能力。
+
+为了演示它们的作用，以下是如何通过名称 `mysql-jcg.marathon.mesos` 查询 [MySQL](https://dev.mysql.com/doc/connector-j/8.0/en/) 实例的 IP 地址：
 
 ```bash
 $ curl http://localhost:8123/v1/hosts/mysql-jcg.marathon.mesos
@@ -2337,6 +2336,7 @@ services:
       retries: 3
     networks:
       - my-app-network
+
   java-app:
     image: jcg/spring-boot-webapp:latest
     environment:
@@ -2358,45 +2358,48 @@ networks:
     driver: overlay
 ```
 
+坦率地说，我们不需要做太多的更改。特别是为了支持[集群模式](https://docs.docker.com/engine/swarm/)，有一系列特定的命令被引入了 [docker](https://docs.docker.com/engine/reference/commandline/cli/) 工具中：`docker stack`。我们已经在[本教程的第二部分](https://www.javacodegeeks.com/2017/09/docker-java-developers-docker-command-line.html)中没有讨论过它们，但现在是时候介绍一下了。
 
+通过 [deploy](https://docs.docker.com/engine/reference/commandline/stack_deploy/) 命令和现有的 [docker-compose](https://docs.docker.com/compose/compose-file/compose-file/) 规范，我们可以将应用栈部署到集群中。
 
-坦率地说，我们不需要做太多的更改。特别是为了支持[集群模式](https://docs.docker.com/engine/swarm/)，有一系列特定的命令被引入了 [docker](https://docs.docker.com/engine/reference/commandline/cli/) 工具中：`docker stack`。我们已经在[本教程的第二部分](https://www.javacodegeeks.com/2017/09/docker-java-developers-docker-command-line.html) 中没有讨论过它们，但现在是时候介绍一下了。
-
-通过 [deploy](https://docs.docker.com/engine/reference/commandline/stack_deploy/) 命令和现有的 [docker-compose](https://docs.docker.com/compose/compose-file/compose-file/) 规范，我们可以将应用栈部署到集群集群中。
-
-| `1` | `$ docker stack deploy --compose-``file` `docker-compose.yml springboot-webapp` |
+```bash
+$ docker stack deploy --compose-file docker-compose.yml springboot-webapp
+```
 
 要查看部署状态以及所有已部署的服务，我们可以像下面的示例所示使用 [services](https://docs.docker.com/engine/reference/commandline/stack_services/) 命令（输出已略有简化）：
 
-| `1` | `$ docker stack services  springboot-webapp` |
-| `2` | `NAME                IMAGE              REPLICAS PORTS` |
-| `3` | `springboot-webapp_java-app  jcg/spring-boot-webapp:latest 1/1      *:19900->19900/tcp` |
-| `4` | `springboot-webapp_mysql     mysql:8.0.2                          ��������������������� 1/1  ` |
+```bash
+$ docker stack services springboot-webapp
+NAME                    IMAGE                              REPLICAS  PORTS
+springboot-webapp_java-app  jcg/spring-boot-webapp:latest  1/1       *:19900->19900/tcp
+springboot-webapp_mysql     mysql:8.0.2                    1/1
+```
 
 太棒了，看起来我们的 [Spring Boot](https://projects.spring.io/spring-boot/)应用程序已经运行，让我们通过向其健康检查端发送 HTTP 请求来确认一下：
 
-| `01` | `$ curl http://localhost:19900/application/health` |
-| `02` |   |
-| `03` | `{` |
-| `04` | `"details"`: { |
-| `05` | `"db"`: { |
-| `06` | `"details"`: { |
-| `07` | `"database"`: `"MySQL",` |
-| `08` | `"hello"`: 1 |
-| `09` | `},` |
-| `10` | `"status"`: `"UP"` |
-| `11` | `},` |
-| `12` | `"diskSpace"`: { |
-| `13` | `"details"`: { |
-| `14` | `"free"`: 3606978560, |
-| `15` | `"threshold"`: 10485760, |
-| `16` | `"total"`: 19195224064 |
-| `17` | `},` |
-| `18` | `"status"`: `"UP"` |
-| `19` | `}` |
-| `20` | `},` |
-| `21` | `"status"`: `"UP"` |
-| `22` | `}` |
+```bash
+$ curl http://localhost:19900/application/health
+{
+  "details": {
+    "db": {
+      "details": {
+        "database": "MySQL",
+        "hello": 1
+      },
+      "status": "UP"
+    },
+    "diskSpace": {
+      "details": {
+        "free": 3606978560,
+        "threshold": 10485760,
+        "total": 19195224064
+      },
+      "status": "UP"
+    }
+  },
+  "status": "UP"
+}
+```
 
 这完全符合我们的预想。总之，在[集群模式](https://docs.docker.com/engine/swarm/)下使用[Docker Engine](https://docs.docker.com/engine/)是一个有趣的考虑选项，但值得注意的是，它不像 [Kubernetes](https://kubernetes.io/)或 [Apache Mesos](http://mesos.apache.org/)那么流行。
 
@@ -2408,44 +2411,44 @@ networks:
 
 [Amazon Elastic Container Service](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)（或简称为 [Amazon ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)）是一种托管服务，可以轻松地运行、停止和管理容器。它还通过配置、升级和扩展资源，消除了持续运营的负担。
 
-* 身份与访问管理
-* 自动伸缩
-* 负载均衡
-* 容器注册表
-* CloudFormation
+- 身份与访问管理
+- 自动伸缩
+- 负载均衡
+- 容器注册表
+- CloudFormation
 
 ### 6.2. Google Kubernetes Engine
 
-[Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine)以前称为 Google Container Engine）是一个用于部署应用的托管环境。Google 已经在容器中运行负载很长时间，并将他们所学的精华整合到：
+[Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine)（以前称为 Google Container Engine）是一个用于部署应用的托管环境。Google 已经在容器中运行负载很长时间，并将他们所学的精华整合到：
 
-* 身份与访问管理
-* 混合网络
-* 安全与合规性
-* 集成日志与监控
-* 自动伸缩
-* 自动升级
-* 自动修复
-* 资源限制
-* 有状态化应用支持
-* 镜像支持
-* 全托管
-* 为容器构建
-* 私有注册表
-* 快速一致的构建
-* 开源移植性
+- 身份与访问管理
+- 混合网络
+- 安全与合规性
+- 集成日志与监控
+- 自动伸缩
+- 自动升级
+- 自动修复
+- 资源限制
+- 有状态化应用支持
+- 镜像支持
+- 全托管
+- 为容器构建
+- 私有注册表
+- 快速一致的构建
+- 开源移植性
 
 ### 6.3. Azure Container Service
 
-[Azure Container Service](https://azure.microsoft.com/en-ca/services/container-service/) (AKS) 管理托管的 [Kubernetes](https://kubernetes.io/) 环境，使得无需容器知识即可快速部署和管理应用程序。它提供了：
+[Azure Container Service](https://azure.microsoft.com/en-ca/services/container-service/)（AKS）管理托管的 [Kubernetes](https://kubernetes.io/) 环境，使得无需容器知识即可快速部署和管理应用程序。它提供了：
 
-* 自动升级和补丁
-* 轻松扩展集群
-* 自愈托管控制平面（主节点）
-* 仅为运行的节点付费
+- 自动升级和补丁
+- 轻松扩展集群
+- 自愈托管控制平面（主节点）
+- 仅为运行的节点付费
 
 ## 7. 结论
 
-在教程的这一部分，我们查看了一些主要的集群管理和编排解决方案，它们为容器化应用提供了全面的支持。总来说，[Kubernetes](https://kubernetes.io/) 处于领先地位，但每个选项都有其优缺点。
+在教程的这一部分，我们查看了一些主要的集群管理和编排解决方案，它们为容器化应用提供了全面的支持。总的来说，[Kubernetes](https://kubernetes.io/)处于领先地位，但每个选项都有其优缺点。
 
 ## 8. 下一步计划
 
@@ -2457,18 +2460,18 @@ networks:
 
 在整个教程中，我们看到了 [Docker](https://www.docker.com/) 如何渗透到典型的 [Java](https://www.java.com/en/) 应用生命周期的每个方面：构建、开发、测试和部署。在这一部分，我们将专注于日益重要的主题之一：持续集成。
 
-
-
 对于许多人来说，与 [Jenkins](https://jenkins.io/) 的关系往往处于“爱”或“恨”的范畴内。抛开历史不谈，第二代 [Jenkins](https://jenkins.io/) 平台（即 `2.x` 版本分支）像旋风一样席卷了生态系统，并真正成为了游戏规则的改变者。
+
+
 
 为了说明这一点，这里是 [Jenkins](https://jenkins.io/) 的关键特性，它们使其区别于许多其他竞争方案：
 
-*   内置对流水线的支持（也称为“流水线代码”）
-*   改进的 UI 和易用性
-*   非常易于安装和配置
-*   卓越的扩展性和丰富的插件生态系统
-*   分布式部署
-*   自动化
+- 内置对流水线的支持（也称为“流水线代码”）
+- 改进的 UI 和易用性
+- 非常易于安装和配置
+- 卓越的扩展性和丰富的插件生态系统
+- 分布式部署
+- 自动化
 
 为了演示这些大部分特性的运行效果，我们将把目前学到的关于 [Docker](https://www.docker.com/) 的知识投入实践，并构建自己的 [Jenkins](https://jenkins.io/) 镜像。不仅如此，我们还将其与 [Git](https://git-scm.com/) 集成（使用极其流行的 [Github](https://github.com/) 托管），配置工具，为我们[之前开发过的](https://www.javacodegeeks.com/2017/11/docker-java-developers-build-docker.html) [Spring Boot](https://projects.spring.io/spring-boot/) 应用创建多分支流水线。最后，同样重要的是，我们将以完全自动化的方式完成这一切。如果听起来很令人，让我们开始吧。
 
@@ -2533,11 +2536,10 @@ networks:
 | 50 | `}`
 ```
 
-
-
 接下来是重要的但并不明显的步骤。我们需要用户名和密码才能下载官方的 [Oracle JDK](http://www.oracle.com/technetwork/java/javase/overview/index.html) 分发版（正如大家记得的，在执行之前必须接受许可协议）。
 
 | `1` | `ENV ORACLE_JDK_USER` `"<username>"` |
+|---|---|
 | `2` | `ENV ORACLE_JDK_PASSWORD` `"<password>"` |
 
 如果我们在这个阶段仅构建镜像并运行该镜像的容器，我们将得到一个功能齐全的 [Jenkins](https://jenkins.io/) 实例，但没有配置任何工具、安全设置或作业。由于我们的目标是全自动化，我们将使用 [Jenkins](https://jenkins.io/) 脚本化能力（基于 [Groovy](http://groovy-lang.org/)）来来实现这一目标。
@@ -2628,7 +2630,7 @@ project.getSourcesList().add(new BranchSource(gitSCMSource))
 
 作为最后一步，我们将所有脚本复制到镜像中，让 [Jenkins](https://jenkins.io/) 有机会在初始化阶段执行它们。
 
-```
+```dockerfile
 COPY scripts/init.groovy /usr/share/jenkins/ref/init.groovy.d/init.groovy
 COPY scripts/credentials.groovy /usr/share/jenkins/ref/init.groovy.d/credentials.groovy
 COPY scripts/pipeline.groovy /usr/share/jenkins/ref/init.groovy.d/pipeline.groovy
@@ -2651,78 +2653,77 @@ docker run --rm -p 8083:8083 -p 50001:50001 -v /var/run/docker.sock:/var/run/doc
 
 容器启动后，我们可以导航到 [`localhost:8083`](https://localhost:8083) 并使用用户名 `admin` 和密码 `ef8a7543087c4b999cbecdd57696f557` 登录，扫描流水线，等待构建并检查我们的 `spring-boot-webapp-pipeline` 作业状态。
 
+此外，验证我们的流水线是否配置了正确的仓库以及是否指向了正确的凭据也是很坏的。
 
+![Git 分支源](img/branch-source-jcg.png)
 
-
-此外，验证我们的流水线是否配置了正确的仓库以及是否指向了正确的凭据也是很有坏的。
-
-![](img/branch-source-jcg.png)
-
-# Git 分支源
+## Git 分支源
 
 确认一切都已就绪的最佳方法是检查流水线及其所有阶段是否已成功执行。
 
-![](img/build-jcg.png)
+![构建阶段](img/build-jcg.png)
 
-# 构建阶段
+## 构建阶段
 
 如果你正在寻找更现代、更精美的 Web UI，[Jenkins](https://jenkins.io/) 通过 [Blue Ocean](https://jenkins.io/doc/book/blueocean/) 提供了这种用户体验，该插件专为 [Jenkins Pipeline](https://jenkins.io/doc/book/pipeline/) 从零开始设计。
 
-![](img/blueocean-jcg.png)
+![Blue Ocean](img/blueocean-jcg.png)
 
-# Blue Ocean
+## Blue Ocean
 
 我们本可以在此宣布大告成功，但公平起见，安装工具等需求使得自动化过程变得复杂。我们有办法让它更简单吗？是的，当然可以，而这里的关键角色是 [Docker](https://www.docker.com/)。
 
 ## 5. Jenkins 中的 Docker
 
+
+
 正如我们已经提到的，[Jenkins](https://jenkins.io/) 拥有出色的 [Docker](https://www.docker.com/) 支持，这是通过大量的插件完成的，其中 [Docker plugin](https://plugins.jenkins.io/docker-plugin) 和 [Docker Pipeline plugin](https://plugins.jenkins.io/docker-workflow) 是关键插件。这在实践中的意义是，你的流水线（或其他类型的作业）可以启动容器并在其中运行构建（以及任何其他任务或阶段）。
 
 说明这种差异的最好方法是将上一节中的 [Jenkinsfile](https://jenkins.io/doc/book/pipeline/jenkinsfile/) 修改为使用 [Docker](https://www.docker.com/) 代理（agent），而不是预定义的工具。
 
-``` | |
-01 | pipeline {
-02 | agent {
-03 | docker {
-04 | image 'gradle:4.3.0-jdk8-alpine'
-05 | }
-06 | }
-07 | 
-08 | options {
-09 | disableConcurrentBuilds()
-10 | buildDiscarder(logRotator(numToKeepStr:'5'))
-11 | }
-12 | 
-13 | triggers {
-14 | pollSCM('H/15 * * * *')
-15 | }
-16 | 
-17 | stages {
-18 | stage('Cleanup before build') {
-19 | steps {
-20 | cleanWs()
-21 | }
-22 | }
-23 | 
-24 | stage('Checkout from Github') {
-25 | steps {
-26 | checkout scm
-27 | }
-28 | }
-29 | 
-30 | stage('Build') {
-31 | steps {
-32 | sh 'gradle build'
-33 | }
-34 | }
-35 | }
-36 | 
-37 | post {
-38 | always {
-39 | archiveArtifacts artifacts:'build/libs/*.jar', fingerprint:true
-40 | }
-41 | }
-42 | }
+```
+pipeline {
+    agent {
+        docker {
+            image 'gradle:4.3.0-jdk8-alpine'
+        }
+    }
+
+    options {
+        disableConcurrentBuilds()
+        buildDiscarder(logRotator(numToKeepStr: '5'))
+    }
+
+    triggers {
+        pollSCM('H/15 * * * *')
+    }
+
+    stages {
+        stage('Cleanup before build') {
+            steps {
+                cleanWs()
+            }
+        }
+
+        stage('Checkout from Github') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'gradle build'
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'build/libs/*.jar', fingerprint: true
+        }
+    }
+}
 ```
 
 这个流水线看起来更紧凑了。我们去掉了很多定义（在实践中也可以去掉一些初始化脚本）。当我们这个新的 [Jenkinsfile](https://jenkins.io/doc/book/pipeline/jenkinsfile/) 提交到现有的仓库（覆盖当前的）时，我们应该会观察到一组稍微不同的阶段，但构建仍然是绿色的。
@@ -2743,7 +2744,6 @@ docker run --rm -p 8083:8083 -p 50001:50001 -v /var/run/docker.sock:/var/run/doc
 
 下载完整的脚本和项目源码：
 
-* 带有 Jenkinsfile 的 Spring Boot Web 应用
-* 带有 Docker 代理的 Jenkinsfile
-* Jenkins Docker 镜像和脚本
-
+- 带有 Jenkinsfile 的 Spring Boot Web 应用
+- 带有 Docker 代理的 Jenkinsfile
+- Jenkins Docker 镜像和脚本

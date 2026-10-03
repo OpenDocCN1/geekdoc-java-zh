@@ -1,16 +1,8 @@
+
 # Mockito 详解：使用 Mock、Stub 和 Spy 进行 Java 单元测试
 
-
-
-
-
-
-
-
-![](img/8c17bd3ac8631e54c044c56d594fa853_0_0.png)
-
-
 Venkat Subramaniam 序言
+
 Margaret Eldridge 编辑
 
 # 对《深度解析 Mockito》的早期赞誉
@@ -18,32 +10,17 @@ Margaret Eldridge 编辑
 在很多情况下你可以避免使用 Mock，但在需要时，理解你使用的 Mock 框架至关重要。《深度解析 Mockito》是一份极具价值的资源，可以让你快速充分利用 Mockito 的功能，从简单的 Mock 到复杂的交互，再到解决静态方法和 final 类等难以处理的访问性问题。
 
 - Daniel Hinojosa
-顾问、程序员、演讲者及培训师
+  顾问、程序员、演讲者及培训师
 
 自 Mockito 于 2007 年诞生以来，该库新增了如此多的功能，以至于只有少数开发者能对其全貌了解。本书简洁而详尽地总结了这些功能。如果你正在使用 Mockito，无论新手还是老手，这本书都适合你！
 
 - Rafael Winterhalter
-软件顾问
+  软件顾问
 
 Ken 非常棒地准确展示了 Mockito 到底是什么、如何使用它以及何时不该使用它。对于任何想要学习如何编写良好测试的人来说，这绝对是必读之作。
 
 - Marcin Grzejszczak
-书籍及视频课程作者及国际演讲
-
-![](img/8c17bd3ac8631e54c044c56d594fa853_3_0.png)
-
-
-
-
-
-
-
-
-
-![](img/8c17bd3ac8631e54c044c56d594fa853_5_0.png)
-
-
-
+  书籍及视频课程作者及国际演讲
 
 制作本书的团队包括：
 
@@ -53,18 +30,7 @@ Ken 非常棒地准确展示了 Mockito 到底是什么、如何使用它以及�
 - 开发编辑：Margaret Eldridge
 - 创始人：Andy Hunt 和 Dave Thomas
 
-
-
-
-
-
 > *献给 Ginger 和 Xander，他们对我世界上最重要的人。*
-
-
-
-[/content]
-
-[content]
 
 # 《深度解析 Mockito》序言
 
@@ -72,15 +38,11 @@ Ken 非常棒地准确展示了 Mockito 到底是什么、如何使用它以及�
 
 一旦我们将依赖精简到最低，我们最终必须与它们周旋以编写有效的测试。这就是本书的用武之地。
 
-要为带有依赖的代码编写测试，你需要一个强大的库来轻松创建测试双（（Stub、Mock 和 Spy），这样你就可以专注于设计而不是与依赖作斗。对于 Java 和大多数 JVM 语言，Mockito 多多年来已成为明显的获胜者。其次，除了需要良好的测试方法外，你还需要学会如何完美使用这个库。
+要为带有依赖的代码编写测试，你需要一个强大的库来轻松创建测试双（`Stub`、`Mock` 和 `Spy`），这样你就可以专注于设计而不是与依赖作斗。对于 Java 和大多数 JVM 语言，Mockito 多年来已成为明显的获胜者。其次，除了需要良好的测试方法外，你还需要学会如何完美使用这个库。
 
 就像你会想要一个经过测试和验证、存在已久的库一样，你也会希望向一位拥有丰富教学经验的人学习，特别是针对你感兴趣的主题。你不仅找到了一本对你学习有益的书籍，还找到了一位在该领域最出色的导师之一。坐好，放松，喝上你喜欢的饮料，让 Ken 带领你进入处理依赖测试的旅程。
 
 Venkat Subramanian 博士，屡获奖作者，Agile Developer, Inc. 创始人。
-
-
-
-
 
 # 致谢
 
@@ -104,11 +66,11 @@ ken.kousen@kousenit.com
 
 这本书是关于 Mockito 测试框架的，但它并不是一份详尽的参考书。现在没有书会尝试做到这一点。对于任何库，在线文档总是优于纸质书，因为它可以跟软件的新版本同步，并调整以显示新功能和错误修复。书籍的价值在于它们是在线文档的前端，帮助你理解自己正在进入什么领域，以及到达那里后期待什么。书籍是经过策选的内容。它们试图向你展示什么是重要的以及为什么。
 
-对于 Mockito 来说，这样本书尤为重要，因为在线文档存在明显的空白。文档是由开发者编写的，他们理解像 Mockito 生成模拟（mocks）、存桩（stubs）和间谍（spies）的工具并帮助你使用它们。这很好，因为文档专注于如何让框架按照你的意愿运行。缺点是，你需要预先理解 Mockito 解决的问题，除非你已经有了类似工具的经验，否则这些概念可能并不显而易见。
+对于 Mockito 来说，这样本书尤为重要，因为在线文档存在明显的空白。文档是由开发者编写的，他们理解像 Mockito 生成模拟（`mocks`）、存桩（`stubs`）和间谍（`spies`）的工具并帮助你使用它们。这很好，因为文档专注于如何让框架按照你的意愿运行。缺点是，你需要预先理解 Mockito 解决的问题，除非你已经有了类似工具的经验，否则这些概念可能并不显而易见。
 
 这本书旨在填补这一空白。它更多是关于 Mockito 背后的概念，而不是展示如何使用的具体细节。当然，为了提供具有代表性的示例，书中包含了这些细节，但目标是理解，而不是语法的具体细节。在线文档对于语法（API 中的类和方法）很有用，在较小程度上，对于语义（如何使用工具实现你的目标）也很有用，但它们没有解释为什么 Mockito 起初是有用的，或者它如何能让你的工作变得更容易。
 
-这正是《Pragmatic Answers》（实战解答）系列的核心所在。该系列回答了那些简单的博客文章无法涵盖、但可能不足以写成300页书籍的话题。该系列书籍短小精悍。目标是让你上手该工具，以便在必要时可以在周末内快速掌握。最终结果是让你开始并帮助你理解框架的目标、策略和基本战术。然后你可以在在线资源中找到任何特定细节，并知道如何应用它们。
+这正是 `Pragmatic Answers`（实战解答）系列的核心所在。该系列回答了那些简单的博客文章无法涵盖、但可能不足以写成 300 页书籍的话题。该系列书籍短小精悍。目标是让你上手该工具，以便在必要时可以在周末内快速掌握。最终结果是让你开始并帮助你理解框架的目标、策略和基本战术。然后你可以在在线资源中找到任何特定细节，并知道如何应用它们。
 
 希望你会发现这本书是你书架上有益的补充，它将确保帮助你在 Java 系统中编写更高效的测试，确保你的代码运行如你所愿。
 
@@ -120,15 +82,13 @@ ken.kousen@kousenit.com
 
 换句话说，书中所有的代码都是为 Mockito 4 编写的，但应该可以在任何 Mockito 2.* 或以上版本运行。尽管当前的 LTS（长期支持）版本是 17，但 Java 版本将是 11，因为社区还没有许多用户迁移到该版本。书中的所有代码适用于从 1.8 到 19 的所有 Java 版本。
 
-测试全部基于 JUnit 测试框架¹。第71页的附录1“运行 Mockito 测试”讨论了如何使用 Gradle 或 Maven 构建工具配置包含包含 JUnit 4 和 JUnit 5 的 Mockito 项目，以及如何运行相关测试。
+测试全部基于 JUnit 测试框架¹。附录 1“运行 Mockito 测试”讨论了如何使用 `Gradle` 或 `Maven` 构建工具配置包含 JUnit 4 和 JUnit 5 的 Mockito 项目，以及如何运行相关测试。
 
 现在，是时候开始研究 Mockito 设计解决的问题类型了。
 
 > ¹ https://junit.org/
 
-# 第1章
-
-# 构建测试基础
+# 第 1 章 构建测试基础
 
 为什么我们需要像 Mockito 这样的工具，它又是让我们的开发工作变得更轻松的？
 
@@ -140,17 +100,16 @@ Mockito 是一个帮助隔离软件组件的工具。你使用 Mockito 替换测
 
 使用 Mockito 的挑战在于，它建立在测试原则的基础上，你需要了解这些原则才能正确使用该工具。在本章中，我们将使用一个有趣的示例来说明这些基础，以便我们专注于如何让 Mockito 执行你想要的操作。
 
-
-正确地处理，并展示开发中单元测试、集成测试和功能测试的位置。在此过程中，我们将突出每当你想在项目中使用 Mockito 时需要采取的一系列步骤，同时对你不需要测试的方法进行存桩（stubbing）。
+正确地处理，并展示开发中单元测试、集成测试和功能测试的位置。在此过程中，我们将突出每当你想在项目中使用 Mockito 时需要采取的一系列步骤，同时对你不需要测试的方法进行存桩（`stubbing`）。
 
 ## 向 Mockito 问好
 
-自从 Kernighan 和 Richie 首次出版《C 语言程序设计》（1978）以来，每一个编程语言和框架在法律上都要求必须包含一个“Hello, World!”的示例。在本节中，我们将查看 Mockito 的版本，解释 Mockito 的作用以及它是什么，并介绍一个较大系统的一部分，稍将在书后部分使用它提供更多细节。
+自从 Kernighan 和 Richie 首次出版《C 语言程序设计》（1978）以来，每一个编程语言和框架在法律上都要求必须包含一个“Hello, World!”的示例。在本节中，我们将查看 Mockito 的版本，解释 Mockito 的作用以及它是什么，并介绍一个较大系统的一部分，稍后将在书后部分使用它提供更多细节。
 
 对于 Java 来说，Hello, World! 程序无疑是：
 
-```
-HelloWorld
+```java
+// HelloWorld.java
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
@@ -160,10 +119,10 @@ public class HelloWorld {
 
 `HelloWorld` 类包含一个 `main` 方法，但 `main` 返回 `void`，而 `void` 方法很难测试。Mockito 是一个测试库，所以让我们修改一下，创建一个类，通过从 `greet` 方法返回的简单字符串来欢迎用户：
 
-```
-HelloMockito.java
+```java
+// HelloMockito.java
 public class HelloMockito {
-    private String greeting = "Hello, %s, from Mockito!"
+    private String greeting = "Hello, %s, from Mockito!";
     public String greet(String name) {
         return String.format(greeting, name);
     }
@@ -172,25 +131,25 @@ public class HelloMockito {
 
 为 `greet` 方法创建一个 JUnit 5 测试是轻而易举：
 
-```
-HelloMockitoTest.java
+```java
+// HelloMockitoTest.java
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class HelloMockitoTest {
     private HelloMockito helloMockito = new HelloMockito();
     @Test
     void greetPerson() {
         String greeting = helloMockito.greet("World");
-        assertEquals("Hello, World, from Mockito", greeting);
+        assertEquals("Hello, World, from Mockito!", greeting);
     }
 }
 ```
 
-- 1. https://en.wikipedia.org/wiki/The_C__Language
+由于 `HelloMockito` 类没有任何依赖项，完全不需要 Mockito。让我们看看 Mockito 在什么地方有用，添加几个依赖项，查找一个可以通过名称获取的人员，并将生成的消息翻译成不同的语言：
 
-由于 `HelloMock` 类没有任何依赖项，完全不需要 Mockito。让我们看看 Mockito 在什么地方有用，添加几个依赖项，查找一个可以通过名称获取的人员，并将生成的消息翻译成不同的语言：
-
-```
-HelloMockRevised.java
+```java
+// HelloMockRevised.java
 public class HelloMock {
     private String greeting = "Hello, %s, from Mockito";
     // Dependencies
@@ -208,20 +167,19 @@ public class HelloMock {
         Optional<Person> person = personRepository.findById(id);
         String name = person.map(Person::getFirstName).orElse("World");
         return translationService.translate(
-            String.format(greeting, name, sourceLang, targetLang));
+            String.format(greeting, name), sourceLang, targetLang);
     }
 }
 ```
 
-现在我们开始进展了。现在的 `greet` 方法意图是接收一个整数来获取 `Person` 对象（一个封装了姓名、姓氏和出生日的简单旧 Java 对象——或 POJO）。我们从代表某种持久化存储的仓库中检索 `Person`。此外，一旦我们形成了要返回的欢迎欢迎语，就让该字符串通过翻译服务，并且首先将那两个依赖项作为 Java 接口处理。
+现在我们开始进展了。现在的 `greet` 方法意图是接收一个整数来获取 `Person` 对象（一个封装了姓名、姓氏和出生日的简单旧 Java 对象——或 `POJO`）。我们从代表某种持久化存储的仓库中检索 `Person`。此外，一旦我们形成了要返回的欢迎语，就让该字符串通过翻译服务，并且首先将那两个依赖项作为 Java 接口处理。
 
-以下是 `Repository`，它拥有的方法比 `HelloMock` 中需要的 `findById` 方法得多：
+以下是 `PersonRepository`，它拥有的方法比 `HelloMock` 中需要的 `findById` 方法得多：
 
-```
-PersonRepository.java
+```java
+// PersonRepository.java
 public interface PersonRepository {
     Person save(Person person);
-
     Optional<Person> findById(int id);
     List<Person> findAll();
     long count();
@@ -229,14 +187,14 @@ public interface PersonRepository {
 }
 ```
 
-（如果你熟悉 Spring Data 框架，这些方法看起来很眼熟。我们将在接下来的几个示例中使用此接口结合 `PersonService`。我们还将在《与 Spring 框架工作》一书中第 67 页查看如何与 Spring 使用 Mockito。）
+（如果你熟悉 Spring Data 框架，这些方法看起来很眼熟。我们将在接下来的几个示例中使用此接口结合 `PersonService`。我们还将在“与 Spring 框架工作”一节查看如何与 Spring 使用 Mockito。）
 
 我们的 `HelloMockito` 实现所需的方法是 `findById`，它接收一个整数，如果该 id 对应数据库中存在的行，则返回一个封装了 `Person` 的 `Optional`，否则返回一个空的 `Optional`。否则，`greet` 方法会在人员存在时提取其名字，如果不存在则默认为 `World` 单词。
 
 接下来是 `TranslationService`，它也是一个接口，因为有很多公开可用的服务可以选择，包括我们自己的：
 
-```
-TranslationService.java
+```java
+// TranslationService.java
 public interface TranslationService {
     default String translate(String text,
                                String sourceLang,
@@ -252,9 +210,11 @@ public interface TranslationService {
 
 ## 向项目添加 Mockito
 
-首先，为了在项目环境 Mockito，我们将更新构建文件以包含 Mockito。以下示例使用 Gradle 作为构建工具，但 Maven 版本使用与 JUnit 5 和 Mockito 依赖相同的坐标。
+首先，为了在项目环境中使用 Mockito，我们将更新构建文件以包含 Mockito。以下示例使用 `Gradle` 作为构建工具，但 `Maven` 版本使用与 JUnit 5 和 Mockito 依赖相同的坐标。
 
-假设项目按照标准的 Gradle 或 Maven 结构组织，因此应用程序位于 `src/main/java`，而测试源位于 `src/test/java`。此外，假设项目有一个名为 `build.gradle` 的 Gradle 构建文件。
+假设项目按照标准的 `Gradle` 或 `Maven` 结构组织，因此应用程序位于 `src/main/java`，而测试源位于 `src/test/java`。此外，假设项目有一个名为 `build.gradle` 的 `Gradle` 构建文件。
+
+
 
 ```gradle
 build.gradle
@@ -320,7 +280,7 @@ TOML 文件包含每个依赖项的版本号，并在 `build.gradle` 中创建 `
 
 如果项目使用 Maven 而不是 Gradle，仍然需要这两个依赖项，只需在 `pom.xml` 中使用 Maven XML 语法而不包含 TOML 文件。
 
-最后，我们需要 `useJUnitPlatform` 方法告诉 Gradle 我们正在使用 JUnit 5 进行测试；否则，在 gradle 构建期间将无法检测到测试。现在我们准备好为“Hello, World!”进行完整的测试。
+最后，我们需要 `useJUnitPlatform()` 方法告诉 Gradle 我们正在使用 JUnit 5 进行测试；否则，在 gradle 构建期间将无法检测到测试。现在我们准备好为“Hello, World!”进行完整的测试。
 
 ## 包含所有内容的 Mockito 测试类
 
@@ -344,9 +304,6 @@ class HelloMockitoTest {
   private TranslationService translationService;
 }
 ```
-
-
-
 
 ```java
 @InjectMocks
@@ -372,22 +329,22 @@ return result;
 }
 ```
 
-我们可以通过模拟（mocking）这两个依赖项，将它们注入到测试类中，然后调用测试方法来测试 `methodToBeTested`。
+我们可以通过模拟这两个依赖项，将它们注入到测试类中，然后调用测试方法来测试 `methodToBeTested()`。
 
 ## Mockito 测试流程
 
 从形式上说，我们使用的过程包含：
 
--1. 创建存根（stubs）来代表依赖项。
+1. 创建存根（stubs）来代表依赖项。
 2. 对存根设置期望以执行你想要的操作。
 3. 将存根注入到你计划测试的类中。
 4. 通过依次调用被测试类中的方法来测试这些方法，确保它们按预期工作。
 5. 检查方法是否按预期工作。
 6. 验证依赖项上的方法是否以正确的次数、正确的顺序被调用。
 
-你每当你想要使用 Mockito（诚实地说，任何类似的工具）来替换被测试类中的依赖项时，都可以使用这些步骤，从而编写真正的单元测试。
+你每当想要使用 Mockito（诚实地说，任何类似的工具）来替换被测试类中的依赖项时，都可以使用这些步骤，从而编写真正的单元测试。
 
-本书的其余部分将关于如何使用 Mockito 实现这些步骤。首先，让我们考虑一个使用 RESTful Web 服务下载并并将 JSON 数据转换为 Java 对象，然后对这些进行后处理以回答有趣问题的程序。这个问题涉及太空中的宇航员。我选择这个项目是因为：(1) 它规模较小，且 (2) 根据定义，太空中的宇航员是很酷的。
+本书的其余部分将关于如何使用 Mockito 实现这些步骤。首先，让我们考虑一个使用 RESTful Web 服务下载并将 JSON 数据转换为 Java 对象，然后对这些进行后处理以回答有趣问题的程序。这个问题涉及太空中的宇航员。我选择这个项目是因为：(1) 它规模较小，且 (2) 根据定义，太空中的宇航员是很酷的。
 
 ## 按飞船统计宇航员
 
@@ -395,36 +352,31 @@ return result;
 
 最终产品将包含三个组件：
 
--1. 一个名为 `AstroGateway` 的类，它访问 RESTful Web 服务以检索 JSON 形式的宇航员数据，然后将 JSON 结构转换为 Java POJO（普通 Java 对象）。
--2. 一个名为 `AstroService` 的类，它处理 Java POJOs 并返回一个字符串到整数的 Map，其中 map 的键是航天器名称，值是每艘飞船上宇航员的数量。
--3. 一个驱动过程的应用程序类，在我们的案例中，它将是一系列测试用例，调用正确的方法并打印和验证结果。
+1. 一个名为 `AstroGateway` 的类，它访问 RESTful Web 服务以检索 JSON 形式的宇航员数据，然后将 JSON 结构转换为 Java POJO（普通 Java 对象）。
+2. 一个名为 `AstroService` 的类，它处理 Java POJOs 并返回一个字符串到整数的 Map，其中 map 的键是航天器名称，值是每艘飞船上宇航员的数量。
+3. 一个驱动过程的应用程序类，在我们的案例中，它将是一系列测试用例，调用正确的方法并打印和验证结果。
 
 ## 关于 Java 版本的说明
 
 Mockito 只需要 Java 8。目前的 Java 长期支持（LTS）版本是 17，但截至 2022 年，社区在 Java 8 和之前的 LTS 版本 Java 11 之间存在分歧。
 
-这个“astro”系统的实现使用了 Java 11 版本中添加的 HTTP 客户端，而 11 是我们整个本书将使用的默认 Java 版本。代码中没有使用 records、密封类（sealed classes）、模式匹配（pattern matching）、switch 表达式或任何其他自 11 之后添加的其它性性。
+这个“astro”系统的实现使用了 Java 11 版本中添加的 HTTP 客户端，而 11 是我们整个本书将使用的默认 Java 版本。代码中没有使用 records、密封类（sealed classes）、模式匹配（pattern matching）、switch 表达式或任何其他自 11 之后添加的特性。
 
 ![](img/8c17bd3ac8631e54c044c56d594fa853_23_0.png)
 
-对于那些仍在使用 Java 8 的人，首先，我表示哀意；其次，我包含了一个使用 Retrofit 库的网关替代实现。希望这样，每个人都能感到被包含在。
+对于那些仍在使用 Java 8 的人，首先，我表示哀意；其次，我包含了一个使用 Retrofit 库的网关替代实现。希望这样，每个人都能感到被包含在内。
 
 我们正在测试一个现有的代码实现，我们将随着进展进行讨论。如果你对细节感兴趣并想现在查看它们，请查看书的 GitHub 仓库。相关代码在 `com.kousen-it.astro` 包中。
 
 提醒一下，要向项目添加 Mockito，所有需要的依赖项都是 `mockito-core`，以及当像这里一样使用 Mockito JUnit 5 扩展时，则需要 `mockito-junit-jupiter`。
 
 [content-continued]
+
 项目配置好测试后，让我们将类添加到任务中。
 
 ## 创建基础类
 
-宇航员数据来自 Open Notify 提供的名为“People in Space”的免费 RESTful Web 服务。它支持所有 HTTP GET 请求，但它是免费的，不需要注册或任何密钥。它返回一个 JSON 响应，显示任何时刻太空中所有的宇航员。如果你发送一个
-
--3. https://github.com/kousen/mockitobook
--4. https://open-notify.org
--5. http://open-notify.org/Open-Notify-API/People-In-Space/
-
-向 `http://api.open-notify.org/astros.json` 发送 HTTP GET 请求，你将得到类似下面的响应：
+宇航员数据来自 Open Notify 提供的名为“People in Space”的免费 RESTful Web 服务。它支持所有 HTTP GET 请求，但它是免费的，不需要注册或任何密钥。它返回一个 JSON 响应，显示任何时刻太空中所有的宇航员。如果你发送一个 HTTP GET 请求向 `http://api.open-notify.org/astros.json`，你将得到类似下面的响应：
 
 ```json
 astro_data.json
@@ -451,8 +403,8 @@ astro_data.json
 
 正如示例所示，响应包含了太空宇航员总数以及包含每个宇航员名称和飞船的 `people` 集合。Java POJO 用于存储这些信息。只需要两个 Java 类：
 
-- Assignment，代表宇航员名称和飞船组合，
-- AstroResponse，显示总人数和 `people` 数组或列表。
+- `Assignment`，代表宇航员名称和飞船组合，
+- `AstroResponse`，显示总人数和 `people` 数组或列表。
 
 Java 类将具有属性的 getter 和 setter 方法。这里是 `Assignment` 类：
 
@@ -477,7 +429,7 @@ public class AstroResponse {
 }
 ```
 
-为了访问 RESTful Web 服务，我们将使用 Gateway 模式。Gateway 是一个封装了外部资源的类。在特定情况下，我们需要一个连接到远程服务、下载数据并将 JSON 转换为记录的网关，名为 `AstroGateway`。因此，添加包含单个方法 `getResponse` 的 Gateway 接口：
+为了访问 RESTful Web 服务，我们将使用 Gateway 模式。Gateway 是一个封装了外部资源的类。在特定情况下，我们需要一个连接到远程服务、下载数据并将 JSON 转换为记录的网关，名为 `AstroGateway`。因此，添加包含单个方法 `getResponse()` 的 Gateway 接口：
 
 ```java
 Gateway.java
@@ -486,28 +438,25 @@ public interface Gateway<T> {
 }
 ```
 
-`getResponse` 方法返回其泛型的实例。
+`getResponse()` 方法返回其泛型的实例。
+
 实现 `Gateway` 接口的具体类将是 `AstroGateway`。如果你使用 Java 11+，将使用 HttpClient API 实现它；如果你仍在使用 Java 8，则使用 Retrofit 2 库。
 
 | 抽象层 |
 | :--- |
-| 引入一个只有一个单一实现（AstroGateway）的接口（Gateway）可能会觉得是不必要的干扰。在特定情况下，将有两个实现：一个使用 Java 11 中添加的 HttpClient API，另一个是在 Java 11 不可用用时使用的外部 Retrofit 库。这里只包含 HttpClient 版本，但它们都包含书的 GitHub 仓库中。 |
+| 引入一个只有一个单一实现（`AstroGateway`）的接口（`Gateway`）可能会觉得是不必要的干扰。在特定情况下，将有两个实现：一个使用 Java 11 中添加的 HttpClient API，另一个是在 Java 11 不可用时使用的外部 Retrofit 库。这里只包含 HttpClient 版本，但它们都包含在书的 GitHub 仓库中。 |
 
-我们将在第 12 页的“添加单元和集成（端到端）测试”中获取测试。在这里我们定义基础类，让我们也定义 `AstroService` 类，它的工作是将网关返回的记录转换为 Java Map。该类只需要一个名为 `getAstroData` 的方法，签名如下：
+我们将在“添加单元和集成（端到端）测试”中获取测试。在这里我们定义基础类，让我们也定义 `AstroService` 类，它的工作是将网关返回的记录转换为 Java Map。该类只需要一个名为 `getAstroData()` 的方法，签名如下：
 
 ```java
 public Map<String, Long> getAstroData()
 ```
 
-
-
-
-
 # 第 1 章 构建测试基础 • 12
 
 包含一个 `AstroResponse`，否则包含一个包含任何抛出异常的 `Failure` 实例。假设执行成功，服务将提取我们所需的数据并转换为映射（map），其中键是航天器名称，值是每艘航天器上的宇航员人数。
 
-最后，我们的应用程序实例化 `AstroService`，调用其 `getAstroData` 方法并处理结果。结果（基于之前显示的 JSON 数据）如下：
+最后，我们的应用程序实例化 `AstroService`，调用其 `getAstroData()` 方法并处理结果。结果（基于之前显示的 JSON 数据）如下：
 
 - 天宫号上有 3 名航天员
 - 国际空间站（ISS）上有 7 名航天员
@@ -518,9 +467,9 @@ public Map<String, Long> getAstroData()
 
 对于我们而言，集成测试是指测试一个包含与其交互的组件（依赖项）的系统；而单元测试是指在孤立状态下测试一个类，不产生任何交互或依赖关系。
 
-集成测试更容易理解，因为你是按照系统在实践中的实际状态来对待它的，而没有关于其实现细节的额外信息。在这种情况下，系统由 `AstroService` 上的 `getAstroData` 方法驱动，该方法使用了一个 `AstroGateway`。它的集成测试看起来如下：
+集成测试更容易理解，因为你是按照系统在实践中的实际状态来对待它的，而没有关于其实现细节的额外信息。在这种情况下，系统由 `AstroService` 上的 `getAstroData()` 方法驱动，该方法使用了一个 `AstroGateway`。它的集成测试看起来如下：
 
-```
+```java
 AstroServiceTest.java
 @Test
 void getAstroData_usingRealGateway_withHttpClient() {
@@ -532,18 +481,18 @@ void getAstroData_usingRealGateway_withHttpClient() {
     astroData.forEach((craft, number) -> {
         System.out.println(number + " astronauts aboard " + craft);
         assertAll(
-            -> assertThat(number).isPositive(),
-            -> assertThat(craft).isNotBlank()
+            () -> assertThat(number).isPositive(),
+            () -> assertThat(craft).isNotBlank()
         );
     });
 }
 ```
 
-我们通过构造函数参数将 `AstroGateway` 添加到 `AstroService` 中。如果我们想用伪实例（fake instance）替换实际的 `AstroGateway`，可以使用该构造函数将其注入到服务中。关键点是，网关是服务的依赖项。
+我们通过构造函数参数将 `AstroGateway` 添加到 `AstroService` 中。如果我们想用伪实例替换实际的 `AstroGateway`，可以使用该构造函数将其注入到服务中。关键点是，网关是服务的依赖项。
 
 要使用 Mockito，你首先需要确定要测试的类的依赖项。对于 `AstroService`，唯一的依赖项就是网关。
 
-测试使用该服务调用 `getAstroData` 方法并检查返回的映射。测试使用了 Java 8 添加到 `Map` 接口的 `forEach(Consumer)` 方法，它会自动分离键和值，因此打印和检查结果非常简单。然后，测试使用 AssertJ 库的断言（assertions）确认返回的值。该结果检查了 `AstroService` 和 `AstroGateway` 类的组合，如果我们想相信系统运行正常，这是必要的。
+测试使用该服务调用 `getAstroData()` 方法并检查返回的映射。测试使用了 Java 8 添加到 `Map` 接口的 `forEach(Consumer)` 方法，它会自动分离键和值，因此打印和检查结果非常简单。然后，测试使用 AssertJ 库的断言确认返回的值。该结果检查了 `AstroService` 和 `AstroGateway` 类的组合，如果我们想相信系统运行正常，这是必要的。
 
 ## 单元测试与集成测试
 
@@ -555,26 +504,32 @@ void getAstroData_usingRealGateway_withHttpClient() {
 
 在我们的集成测试中，采取了实用的方法。测试的目的是隔离问题。如果我们有一个失败的集成测试，我们将使用单元测试将故障定位在网关或服务上。
 
+- 3. https://github.com/kousen/mockitobook
+- 4. https://open-notify.org
+- 5. http://open-notify.org/Open-Notify-API/People-In-Space/
 - 8. https://assertj.github.io/doc/
 - 9. https://martinfowler.com/articles/2021-test-shapes.html
 
-第 1 章 构建测试基础
+# 第 1 章 构建测试基础
 
 ### 失败的集成测试引向单元测试
+
+
+
 关键问题始终是：“你如何知道你是正确的？如果测试失败了，你知道有问题，但追踪这些问题有多容易？”成功的集成测试是必要的——否则，你不知道系统是否工作正常。
 
 失败的集成测试会引导你走向单元测试，因为如果单元测试失败，你会很快知道以及为什么。
 
 假设我们的集成测试失败了，现在我们想为 `AstroService` 构建一个测试。
 
-### 网关的存桩（Stub）
+## 网关的存桩
 
-对 `AstroService` 的真正单元测试需要一个网关的替代品——某些伪对象（fake object），在我们想要服务调用 `getResponse` 方法时，它会准确地返回。我们不希望网关的任何问题影响我们对服务的测试成功或失败。这个网关的替代品被称为伪对象。从 Mockito 的角度来看，伪对象要么是一个 mock，要么是一个 stub（桩），取决于如何使用它。
+对 `AstroService` 的真正单元测试需要一个网关的替代品——某些伪对象，在我们想要服务调用 `getResponse` 方法时，它会准确地返回。我们不希望网关的任何问题影响我们对服务的测试成功或失败。这个网关的替代品被称为伪对象。从 Mockito 的角度来看，伪对象要么是一个 mock，要么是一个 stub，取决于如何使用它。
 
 在区分这种区别之前，我们始终可以为依赖项提供自己的伪对象。在这种情况下，这里有一个硬编码响应的 `FakeGateway` 调用：
 
-```
-FakeGateway.java
+```java
+// FakeGateway.java
 public class FakeGateway implements Gateway<AstroResponse> {
     @Override
     public AstroResponse getResponse() {
@@ -593,8 +548,8 @@ public class FakeGateway implements Gateway<AstroResponse> {
 
 这是一个使用 mock 的服务的单元测试：
 
-```
-AstroServiceTest.java
+```java
+// AstroServiceTest.java
 @Test
 void testAstroDataUsingMockGateway() {
     // 使用 mock 创建服务
@@ -604,17 +559,15 @@ void testAstroDataUsingMockGateway() {
     Map<String, Long> astroData = service.getAstroData();
 
     // 检查测试方法的的结果
-astroData.forEach((craft, number) -> {
-      System.out.println(number + " astronauts aboard " + craft);
-      assertAll(
-        () -> assertThat(number).isPositive(),
-        () -> assertThat(craft).isNotBlank()
-      );
+    astroData.forEach((craft, number) -> {
+        System.out.println(number + " astronauts aboard " + craft);
+        assertAll(
+            () -> assertThat(number).isPositive(),
+            () -> assertThat(craft).isNotBlank()
+        );
     });
 }
 ```
-
-# 添加单元测试和集成（端到端）测试 • 15
 
 根据 mock 网关返回的响应，服务现在打印出：
 
@@ -626,54 +579,42 @@ astroData.forEach((craft, number) -> {
 
 虽然在这种情况下编写自己的 mock 网关相当简单，但有几点值得注意：
 
-- 1. Mockito 的工作之一是自动化创建像 `FakeGateway` 这样的伪对象。Mockito 将我们生成一个实现 `Gateway` 接口的类。我们可以告诉它调用 `getResponse` 方法时返回什么，剩下的会自动完成。
-- 2. 我们的 `FakeGateway` 是 mock 还是 stub，取决于它是如何被使用的。
+1. Mockito 的工作之一是自动化创建像 `FakeGateway` 这样的伪对象。Mockito 将我们生成一个实现 `Gateway` 接口的类。我们可以告诉它调用 `getResponse` 方法时返回什么，剩下的会自动完成。
+2. 我们的 `FakeGateway` 是 mock 还是 stub，取决于它是如何被使用的。
 
-### Mockito 术语（Mock 不是 Stub）
+### Mockito 术语
 
 所以一个对象根据用法既可以是 mock 也可以是 stub？是的，由于这种说法可能会引起混惑，让我们定义这些术语。
 
 2007 年 1 月，Martin Fowler 写了一篇名为“Mocks Aren't Stubs”¹的博客文章，影响巨大。由于这篇文章塑造了我对 mock 和 stub 的思考，我将以下定义建立在他的思想之上。
 
-stub
+#### stub
+
 stub 是一个代表依赖项的对象，它能为已知输入返回已知输出。
 
-mock
-mock 是一个执行 stub 所操作的对象，它还跟踪了执行的交互。通过跟踪交互，mock 验证
+#### mock
 
-¹⁰ https://martinfowler.com/articles/mocksArentStubs.html
+mock 是一个执行 stub 所操作的对象，它还跟踪了执行的交互。通过跟踪交互，mock 验证被桩的方法以正确的次数、正确的参数和正确的顺序被被测试类调用。
 
+#### spy
 
+Spy 是一个封装了实际依赖对象的对象，允许你通过被测试类跟踪对该对象的调用。Spy 与 mock 类似，它会记录哪些方法被调用了，但 spy 会在实际的底层对象上调用这些方法，而不是在 stub 上调用。
 
-
-
-# 第1章 构建测试基础 • 16
-
-被桩的方法（stubbed methods）以正确的次数、正确的参数和正确的顺序被被测试类调用。
-
-为了完整起见，让我们添加 spy（间谍对象）的定义。
-
-### spy
-
-Spy 是一个封装了实际依赖对象的对象，允许你通过被测试类跟踪对该对象的调用。Spy 与 mock（模拟对象）类似，它会记录哪些方法被调用了，但 spy 会在实际的底层对象上调用这些方法，而不是在 stub 上调用。
-
-简而言之，这就是我们在整本书中中使用 mock、stub 和 spy 术语的方式。
+简而言之，这就是我们在整本书中使用 mock、stub 和 spy 术语的方式。
 
 ## 为什么不自己写 Stubs？
 
-在像我们的示例这样的简单情况下，你可以很容易地自己创建所需的 stub，将一个实例注入到被测试类中，并继续下去。GateGateway 就是一个 stub。stub 在给定已知输入的情况下提供已知输出。如果你还想验证服务恰好在网关上调用了一次 `getResponse`，那么你的同一个对象就会被视为一个 mock。在每种情况下，类都是相同的。唯一的区别在于你在测试中它的它的方式。
+在像我们的示例这样的简单情况下，你可以很容易地自己创建所需的 stub，将一个实例注入到被测试类中，并继续下去。`GateGateway` 就是一个 stub。stub 在给定已知输入的情况下提供已知输出。如果你还想验证服务恰好在网关上调用了一次 `getResponse`，那么你的同一个对象就会被视为一个 mock。在每种情况下，类都是相同的。唯一的区别在于你在测试中使用它的方式。
 
 自己写 stub 会引起很多问题：
 
 - 如果你尝试打桩的接口包含很多方法，而你计划只调用其中一两个，你仍然必须实现所有方法，而不仅仅是你关心的那些。
 - 如果你要写这个 stub，你就得要维护它，所以如果所需的方法发生变化，你就必须更新 stub 类。
 - 如果你计划的类没有实现方便的接口，你将不得不创建一个子类。这可能行得通，但如果该类被标记为 `final` 且完全无法扩展怎么办？
-- 如果你需要打桩的方法是静态的（static）的怎么办？你无法重写静态方法。
+- 如果你需要打桩的方法是静态的怎么办？你无法重写静态方法。
 - 你如何跟踪被桩的方法是否以正确的次数、正确的顺序、正确的参数被正确调用？
 
 这些问题正是 Mockito 派上用场的地方。Mockito 为你生成 mocks 和 stubs。Mockito 可以生成实现接口的类。它可以重写类（甚至在有一点帮助的情况下，重写 `final` 类）。你甚至有能力对桩静态方法。Mockito 会实现接口中的所有方法，使其返回默认值，然后你就可以对它们进行重写。
-
-*报告勘误 • 16*
 
 现在我们已经看到了集成测试和一个使用我们自己的被桩对象的测试，我们准备好使用 Mockito 来自动化这个过程了。在处理完 Mockito API 的基础之后，我们将回到 Astro 项目，查看如何为服务编写真正的单元测试。
 
@@ -683,48 +624,34 @@ Spy 是一个封装了实际依赖对象的对象，允许你通过被测试类�
 
 现在我们准备好进入在测试中使用 Mockito 的过程。在下一章中，我们将创建 mocks，将它们注入到被测试类中，并让它们按照我们想要的方式做出响应。
 
-# 第 2 章
-
-# 使用 Mockito API
+# 第 2 章 使用 Mockito API
 
 我一直是一个很擅长考试的人——这是我所说的“学校游戏”的一部分，这与接受教育非常不同。在“学校游戏”中，你的首要任务是弄清楚老师想听什么，以及他们想怎么听。这种知识在你不想复习太多的情况下想通过考试时会大派用场。就像那个老师一样，Mockito 也期望某些事情，而现在它们还是个谜。
 
-游戏从 Mockito API 开始。你需要知道它是做什么的以及它期望如何被调用。我们将从创建 mocks 开始。你需要知道它做什么以及它期望如何被调用。我们将从创建 mocks 开始。
-
-... (由于原文存在大量重复和逻辑错误，此处遵循翻译要求保持结构一致) ...
-
-就像那个老师一样，Mockito 期望某些事情，而现在它们还是个谜。
-
-游戏从 Mockito API 开始。你需要知道它做什么以及它期望如何被调用。我们将从创建 mocks 开始。
-
-... 一旦你完成了这一章，你就能在不需要学习的情况下很好地使用它。就像那个老师一样，Mockito 期望某些事情，而现在它们还是个谜。
+游戏从 Mockito API 开始。你需要知道它是做什么的以及它期望如何被调用。我们将从创建 mocks 开始。
 
 ## 选择要测试的类
 
-为了测试类，我们需要使用一个 stub，如下如下：
+为了测试类，我们需要使用一个 stub，如下所示：
 
 ```java
 public interface PersonRepository {
     Person save(Person person);
-
     Optional<Person> findById(int id);
-
     List<Person> findAll();
-
     long count();
-
     void delete(Person person);
 }
 ```
 
-为了测试这个类，我们需要一个 PersonService 的实例，为了实例化它，我们需要一个 PersonRepository。现在让我们看看如何创建代表 PersonRepository 的 stub，首先手动，然后使用 Mockito。
+为了测试这个类，我们需要一个 `PersonService` 的实例，为了实例化它，我们需要一个 `PersonRepository`。现在让我们看看如何创建代表 `PersonRepository` 的 stub，首先手动，然后使用 Mockito。
 
 ## 创建 Mocks 和 Stubs
 
 在使用 Mockito 之前，请注意我们可以编写自己的 stub 实现，例如 `InMemoryRepository`。这是该类的简写版本（完整版本可以在 GitHub 仓库中找到）：
 
 ```java
-InMemoryRepository.java
+// InMemoryRepository.java
 public class InMemoryRepository implements PersonRepository {
   private final List<Person> people =
     Collections.synchronizedList(new ArrayList<>());
@@ -753,66 +680,59 @@ public class InMemoryRepository implements PersonRepository {
 - 我们需要维护这个类，如果我们的存储库方法发生变化，stub 也必须进行更新。
 - 如果我们想测试失败模式、验证或异常情况，我们需要额外的类或某些允许我们选择这些替代方案的逻辑。
 
+现在让我们改用 Mockito API。第一步是创建一个 mock 存储库。Mockito 提供了两种实现方式：使用 Mockito 类上的静态 mock 方法，或者使用静态注解。我们将依次介绍。
 
+首先，我们将使用 `Mockito.mock(Class)` 方法来创建一个存根。
 
-
-
-# 第 2 章. 使用 Mockito API
-
-现在让我们改用 Mockito API。第一步是创建一个 mock 存储库（repository）。Mockito 提供了两种实现方式：使用 Mockito 类上的静态 mock 方法，或者使用静态注解。我们将轮一介绍。
-
-首先，我们将使用 `Mockito.mock(Class)` 方法来创建一个存根（stub）。
-
-## 使用 mock 方法
+### 使用 mock 方法
 
 Mockito 类中的 `mock` 方法具有以下方法签名：
 
-```
+```java
 public static <T> T mock(Class<T> classMock)
 ```
 
 你告诉 Mockito 要 mock 哪个类或接口，Mockito 会返回对应的 mock 对象。以下是在我们的测试中实现该操作的代码行：
 
-```
+```java
 PersonRepository mockRepo = mock(PersonRepository.class);
 ```
 
 这就足够了。Mockito 将生成一个实现该接口的类，其中所有方法都将返回它们的默认值。如果你需要更多，下面的测试演示了这些实现：
 
-```
-UserServiceTest
+```java
+// UserServiceTest
 @Test
 void defaultImplementations() {
     PersonRepository mockRepo = mock(PersonRepository.class);
     assertAll(
-        ()-> assertNull(mockRepo.save(any(Person.class))),
-        ()-> assertTrue(mockRepo.findById(anyInt()).isEmpty()),
-        ()-> assertTrue(mockRepo.findAll().isEmpty()),
-        ()-> assertEquals(0, mockRepo.count())
+        () -> assertNull(mockRepo.save(any(Person.class))),
+        () -> assertTrue(mockRepo.findById(anyInt()).isEmpty()),
+        () -> assertTrue(mockRepo.findAll().isEmpty()),
+        () -> assertEquals(0, mockRepo.count())
     );
 }
 ```
 
-> 智能空值
+> **智能空值**
+>
 > 对于 mock 引用类型，Mockito 的表现比返回 null 更好。例如，如果方法的返回类型是列表，Mockito 将返回一个空列表。大多数情况下，你不需要担心这个，但知道 Mockito 正在尝试提供帮助是件好事。
 
-![](img/8c17bd3ac8631e54c044c56d594fa853_35_0.png)
-
-静态方法 `any(Class)` 和 `anyInt` 源自 `ArgumentMatchers` 类，我们将在第 33 页的“使用内置和自定义匹配器”章节中详细介绍。在这里，它们仅代表使用一个 `Person` 类的实例或任何整数来调用方法。
+静态方法 `any(Class)` 和 `anyInt` 源自 `ArgumentMatchers` 类，我们将在“使用内置和自定义匹配器”章节中详细介绍。在这里，它们仅代表使用一个 `Person` 类的实例或任何整数来调用方法。
 
 mock 为 `save` 方法返回 `null`，两个查找方法返回 `null`，`count` 返回 0。由于 `delete` 方法已经返回 `void`，所以 mock 不发生变化，因此不需要测试。
 
 回到我们的 mock，为了让对 service 中 `getLastName` 方法的测试通过，我们需要更改 `PersonRepository` 中 `findAll` 方法的默认行为。实现此目标的一种方法是使用静态 `when` 方法链式调用 `thenReturn` 方法。我们需要告诉 mock，当 service 调用 `findAll` 方法时，它应该返回我们准备好的人员列表：
 
-```
+```java
 when(mockRepo.findAll()).thenReturn(people);
 ```
 
-我们不需要对接口中的任何其他方法设置期望（expectation）。这是使用 Mockito 的巨大优势之一。
+我们不需要对接口中的任何其他方法设置期望。这是使用 Mockito 的巨大优势之一。
 
 现在我们可以运行测试了，它应该会通过。测试的最后行是一个验证步骤：
 
-```
+```java
 verify(mockRepo.findAll());
 ```
 
@@ -820,19 +740,19 @@ verify(mockRepo.findAll());
 
 希望你会发现这个过程很直观。它包含了两个可能会变得繁琐的步骤，因为它们出现在我们编写的每个测试中：
 
-- 1. 我们每次都需要创建 mock，并且
-- 2. 我们每次都需要将 mock 注入到被测试类中。
+1. 我们每次都需要创建 mock，并且
+2. 我们每次都需要将 mock 注入到被测试类中。
 
 虽然像显示所示手动这样做是可以的，但 Mockito 提供了一个使用注解的更简单的替代方案。
 
-## 使用注解创建 Mock
+### 使用注解创建 Mock
 
 Mockito 为 mock 提供了两个注解：`@Mock` 和 `@InjectMocks`。你向类中任何想要让 Mockito mock 的依赖项添加 `@Mock` 注解，并在被测试的类上添加 `@InjectMocks`；测试类本身不需要任何更改。带有 `@Mock` 的一个或多个属性与测试类上的单个 `@InjectMocks` 结合，会告诉 Mockito 创建必要的 mock，并尽力将它们注入到测试类中。
 
 示例展示了如何在 `PersonServiceTest` 的属性上使用 `@Mock` 和 `@InjectMocks` 注解：
 
-```
-PersonServiceTest.java
+```java
+// PersonServiceTest.java
 @ExtendWith(MockitoExtension.class)
 public class PersonServiceTest {
   @Mock
@@ -840,40 +760,44 @@ public class PersonServiceTest {
 
   @InjectMocks
   private PersonService service;
+}
 ```
 
 我们只有一个依赖项，所以只需要在属性上使用单个 `@Mock` 注解。该属性将被实例化，对其设置期望，然后它将被注入到标记了 `@InjectMocks` 的测试类中。
 
-每当你使用注解时，都需要告诉 Mockito 处理它们。JUnit 5 使用了 `Mockito JUnit 5 Extension`，它是测试类上 `@ExtendWith` 注解的参数。该扩展会初始化 mock，顺带提一句，它“处理严格存根（strict stubbing）”。这意味着在测试中，你只能 mock 你的实际调用的方法。
+每当你使用注解时，都需要告诉 Mockito 处理它们。JUnit 5 使用了 `Mockito JUnit 5 Extension`，它是测试类上 `@ExtendWith` 注解的参数。该扩展会初始化 mock，顺带提一句，它“处理严格存根”。这意味着在测试中，你只能 mock 你的实际调用的方法。
 
-你不再需要在测试内部实例化 `PersonService` 了。Mockito 会为你完成所有工作。你仍然需要对 mock 列表设置期望，并可以在最后根据需要验证方法，但 mock 的创建及其向测试类的中的注入已是自动化的。
+你不再需要在测试内部实例化 `PersonService` 了。Mockito 会为你完成所有工作。你仍然需要对 mock 列表设置期望，并可以在最后根据需要验证方法，但 mock 的创建及其向测试类中的注入已是自动化的。
 
-```
-PersonServiceTest.java
+
+
+# PersonServiceTest.java
+
+```java
 @Test
 public void getLastNames_usingAnnotations() {
   when(repository.findAll()).thenReturn(people);
   assertThat(service.getLastNames())
-    .contains("Barg","Goldberg", "Hopper", "Liskov", "Lovelace");
+    .contains("Barg", "Goldberg", "Hopper", "Liskov", "Lovelace");
   verify(repository).findAll();
 }
 ```
 
-此测试使用了 repository 和 service 属性，而不是这些类型的局部变量。
+此测试使用了 `repository` 和 `service` 属性，而不是这些类型的局部变量。
 
 自动实例化类并将它们接线在一起的过程非常强大，但也有一些限制，我们将在下文中讨论。
 
 ## 将 Mock 注入到被测试类中
 
-注解方法的好处之一是，Mockito 尝试为你将 mock 注入到测试类中。它具体是如何做到的？查看 `@InjectMocks` 注解的 JavaDoc 细节，¹，其中提到 Mockito 尝试执行以下步骤：
+注解方法的好处之一是，Mockito 尝试为你将 mock 注入到测试类中。它具体是如何做到的？查看 `@InjectMocks` 注解的 JavaDoc 细节[^1]，其中提到 Mockito 尝试执行以下步骤：
 
-- 1. 如果测试类的构造函数接收正确类型的参数，则调用最大的构造函数。
-- 2. 调用正确类型的 setter 方法（如果对于给定类型有多个方法，则调用名称正确的方法）。
-- 3. 直接设置字段。
+1. 如果测试类的构造函数接收正确类型的参数，则调用最大的构造函数。
+2. 调用正确类型的 setter 方法（如果对于给定类型有多个方法，则调用名称正确的方法）。
+3. 直接设置字段。
 
-¹ https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/InjectMocks.html
+[^1]: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/InjectMocks.html
 
-足以说明 Mockito 会尽力将 mock 插件到被测试类中，正如文档所说，“Mockito 不是一个依赖注入框架；不要期望这种简写可以注入复杂的对象图，无论是 mock/spies 还是真实对象”
+足以说明 Mockito 会尽力将 mock 插入到被测试类中，正如文档所说，“Mockito 不是一个依赖注入框架；不要期望这种简写可以注入复杂的对象图，无论是 mock/spies 还是真实对象”。
 
 尽管有此声称，Mockito 仍会尝试为你完成这些工作，这是支持使用注解方法的有力论点。
 
@@ -883,44 +807,38 @@ public void getLastNames_usingAnnotations() {
 
 ## 设置期望
 
-基于 Mockito 的示例 mock 了 `PersonService` 的依赖 `PersonRepository` 使用 `when` 和 `thenReturn` 方法为 `findAll` 方法设置期望。以下是 `when` 的签名：
+基于 Mockito 的示例 mock 了 `PersonService` 的依赖 `PersonRepository`，使用 `when` 和 `thenReturn` 方法为 `findAll` 方法设置期望。以下是 `when` 的签名：
 
-```
+```java
 public static <T> OngoingStubbing<T> when(T methodCall)
 ```
 
 参数是你想要在存根上调用的方法声明。返回类型连接到各种方法，如 `thenReturn`、`thenThrow`、`thenAnswer`，这些通常是链式的。`thenReturn` 方法有两个重载：
 
-```
+```java
 OngoingStubbing<T> thenReturn(T value)
 OngoingStubbing<T> thenReturn(T value, T... values)
 ```
 
 例如，`PersonService` 的另一个方法 `findByIds` 接收一个变长参数 ids 列表并返回 `List<Person>`：
 
-```
-PersonService.java
-public List<Person> findByIds(int... ids) {
-  return Arrays.stream(ids)
-```
-
-² https://spring.io
-
-
-
+# PersonService.java
 
 ```java
-.map(repository::findById)
-.filter(Optional::isPresent)
-.map(Optional::get)
-.collect(Collectors.toList());
+public List<Person> findByIds(int... ids) {
+  return Arrays.stream(ids)
+    .map(repository::findById)
+    .filter(Optional::isPresent)
+    .map(Optional::get)
+    .collect(Collectors.toList());
 }
 ```
 
 为了测试该方法，你需要告诉依赖项 `repository` 在 `findById(int)` 被调用时执行什么。你可以以链式的方式提供这些指令，使用接受单个参数的 `thenReturn` 版本，如下：
 
+# PersonServiceTest.java
+
 ```java
-PersonServiceTest.java
 @Test
 void findByIdExplicit() {
     when(repository.findById(0))
@@ -936,15 +854,14 @@ void findByIdExplicit() {
     when(repository.findById(5))
         .thenReturn(Optional.empty());
 }
-```
 
-`List<Person> personList = service.findById(0, 1, 2, 3, 4, 5);`
-`assertThat(personList).containsExactly(people);`
+List<Person> personList = service.findById(0, 1, 2, 3, 4, 5);
+assertThat(personList).containsExactly(people);
+```
 
 这种写法相当冗长。我们可以这样简化测试：
 
 ```java
-PersonServiceTest.java
 @Test
 void findByIdWithMultipleArgs() {
     when(repository.findById(anyInt()))
@@ -968,7 +885,10 @@ void findByIdWithMultipleArgs() {
 
 例如，以下代码假设多次调用了 `PersonRepository`：
 
-第一次调用 `findById` 返回包含第一个人的 `Optional`，第二次调用抛出 `IllegalArgumentException`（假设异常被捕获且代码继续），第三次调用返回第二个人，第四次及后续所有调用返回空的 `Optional`。
+- 第一次调用 `findById` 返回包含第一个人的 `Optional`。
+- 第二次调用抛出 `IllegalArgumentException`（假设异常被捕获且代码继续）。
+- 第三次调用返回第二个人。
+- 第四次及后续所有调用返回空的 `Optional`。
 
 之后，你可以利用 Mockito 的另一个功能：验证 mock 方法被调用的次数和顺序是否正确。
 
@@ -980,7 +900,7 @@ Mockito 中的静态方法被重载，以接受一个可选的第二个参数。
 public static <T> T verify(T mock, org.mockito.verification.VerificationMode mode)
 ```
 
-第一个参数是 mock 对象。第二个参数是一个通常不需要实现的接口，因为它由许多工厂方法生成。这些是列在 Mockito 类中的静态方法：
+第一个参数是 mock 对象。第二个参数是一个通常不需要实现的接口，因为它由许多工厂方法生成。这些是列在 `Mockito` 类中的静态方法：
 
 - `times(int)`
 - `never(int)`
@@ -1003,7 +923,7 @@ public static <T> T verify(T mock, org.mockito.verification.VerificationMode mod
 
 `when/thenReturn/thenThrow/thenAnswer` 模式运行良好，但你不能用于返回 `void` 的方法（即无返回值）；这些需要特殊处理。幸运的是，虽然推荐的语法看起来不同，但用法同样简单。
 
-## Mock 返回 void的方法
+## Mock 返回 void 的方法
 
 你需要了解 Mockito 语法的一个特殊之处。当你尝试对返回 `void` 的方法设置预期时，不能使用 `when/then` 语法。
 
@@ -1020,9 +940,6 @@ when(repository.delete(null)).thenThrow(RuntimeException.class);
 ```java
 doThrow(RuntimeException.class).when(repository).delete(null);
 ```
-
-
-
 
 # 在 Astro 项目中使用 Mocks 和 Stubs *31
 
@@ -1050,8 +967,9 @@ verify(gateway).getResponse();
 
 测试失败的情况类似，并使用 `thenThrow` 方法：
 
+# AstroServiceTest.java
+
 ```java
-AstroServiceTest.java
 // 网络失败
 @Test
 void testAstroData_usingFailedGateway() {
@@ -1071,7 +989,7 @@ void testAstroData_usingFailedGateway() {
 
 恭喜。你已成功使用 Mockito mock 了 Gateway，这标志着这一轮 Mockito API 游戏的结束。
 
-报告错误 • 讨论
+报告错误 · 讨论
 
 ### 总结
 
@@ -1083,7 +1001,7 @@ void testAstroData_usingFailedGateway() {
 
 ## 使用内置和自定义匹配器
 
-我记得很久以前，报纸（孩子们，问问你们父母吧）里面有漫画。有一天，我读到一张《片野家族》的漫画，查理·布朗正试图教他的妹妹萨莉 数数。他给她看一张港口的照片并问她：“你看到了多少艘船？”
+我记得很久以前，报纸（孩子们，问问你们父母吧）里面有漫画。有一天，我读到一张《花生漫画》的漫画，查理·布朗正试图教他的妹妹萨莉 数数。他给她看一张港口的照片并问她：“你看到了多少艘船？”
 
 她回答：“所有的。”
 
@@ -1095,18 +1013,16 @@ void testAstroData_usingFailedGateway() {
 
 第 19 页第 2 章“使用 Mockito API”中的 `ProjectService` 类包含一个名为 `findById(int)` 的方法……该方法反过来调用了 `PersonRepository` 上的 `findById(int)` 方法，我们需要为了测试而隔离我们的 `PersonService`。数据库中不存在针对请求 ID 的服务方法测试测试：
 
-```java
-PersonServiceTest.java
-@Test
-public void findByIdThatDoesNotExist() {
-```
+# PersonServiceTest.java
 
 ```java
-when(repository.findById(anyInt())
+@Test
+public void findByIdThatDoesNotExist() {
+  when(repository.findById(anyInt()))
     .thenReturn(Optional.empty());
-List<Person> personList = service.findByIds(999);
-assertTrue(personList.isEmpty());
-verify(repository).findById(anyInt());
+  List<Person> personList = service.findByIds(999);
+  assertTrue(personList.isEmpty());
+  verify(repository).findById(anyInt());
 }
 ```
 
@@ -1116,9 +1032,11 @@ verify(repository).findById(anyInt());
 
 > `ArgumentMatchers` 类包含了大量实用的静态方法，返回参数匹配器。每个返回的值都实现了 `ArgumentMatcher` 接口。通常情况下，你会发现在实现你自己的自定义匹配器之前，使用静态方法更简单。
 
-然而，如果你查看测试，你会发现只有针对 Mockito 类本身的一个静态导入语句。事实证明 `Mockito` 类继承了 `ArgumentMatchers`（复数）类，因此 `Mockito` 的静态导入涵盖了两者。这是一种不寻继承用法，但它让编写测试变得更简单。
+然而，如果你查看测试，你会发现只有针对 `Mockito` 类本身的一个静态导入语句。事实证明 `Mockito` 类继承了 `ArgumentMatchers`（复数）类，因此 `Mockito` 的静态导入涵盖了两者。这是一种不寻常的继承用法，但它让编写测试变得更简单。
 
 这里是 JavaDocs 中 `ArgumentMatchers` 方法的片段：
+
+
 
 ![](img/8c17bd3ac8631e54c044c56d594fa853_47_0.png)
 
@@ -1126,10 +1044,14 @@ verify(repository).findById(anyInt());
 
 `ArgumentMatchers` 类中的大多数静态方法都是直观的，尽管有四十多个，但它们属于几类：
 
-- * 匹配原始类型实例的方法：`anyByte`, `anyShort`, `anyInt`, `anyLong`, `anyFloat`, `anyDouble`, `anyChar` 和 `anyBoolean`。这些方法的工作方式完全如你预期那样。
-- * 匹配集合的方法，如 `anyCollection`, `anyList`, `anySet` 和 `anyMap`。这些方法匹配指定类型的非空集合。
-- * 适用于字符串的方法，如 `anyString`, `startsWith`, `endsWith` 以及 `matches` 的两个重载，一个接受字符串形式的正则表达式，另一个接受 `Pattern`。
+- 匹配原始类型实例的方法：`anyByte`、`anyShort`、`anyInt`、`anyLong`、`anyFloat`、`anyDouble`、`anyChar` 和 `anyBoolean`。这些方法的工作方式完全如你预期那样。
+
+- 匹配集合的方法，如 `anyCollection`、`anyList`、`anySet` 和 `anyMap`。这些方法匹配指定类型的非空集合。
+
+- 适用于字符串的方法，如 `anyString`、`startsWith`、`endsWith` 以及 `matches` 的两个重载，一个接受字符串形式的正则表达式，另一个接受 `Pattern`。
+
 - 用于空值的通用匹配器，即 `isNull` 和 `isNotNull`（以及它的伙伴 `notNull`，它只是一个别名），以及 `nullable(Class)`，它匹配 null 或给定的类型。
+
 - 对于类型，匹配器 `isClass(Class)` 匹配任何可以赋值给该类实例的参数。这导致了 `any()` 匹配该类的任何实例。
 
 `ArgumentMatchers` 类包含一组 `eq` 匹配器，这些方法可能令人困惑。在下一节中，我们将查看这些方法以及它们在验证 mocks 时容易掉入的陷阱。
@@ -1150,7 +1072,7 @@ verify(mock).someMethod(anyInt(), anyString(), eq("third argument"));
 
 现在一切正常。缺少参数匹配器编译器不会识别错误。代码在运行实际测试时才会失败。这是一个很容易修复的问题。
 
-除了基础的 `ArgumentMatchers`，Mockito 还包含了另一个类名为 `AdditionalMatchers`，它包含了如 `and`, `not` 等组合值的方法，以及比较关系 `lt`, `le`, `geq` 以及各种形式的数组相等性检查。详情见 `AdditionalMatchers` 的 JavaDocs。
+除了基础的 `ArgumentMatchers`，Mockito 还包含了另一个类名为 `AdditionalMatchers`，它包含了如 `and`、`not` 等组合值的方法，以及比较关系 `lt`、`le`、`geq` 以及各种形式的数组相等性检查。详情见 `AdditionalMatchers` 的 JavaDocs。
 
 现在来看 `ArgumentMatchers` 中的最后一类方法——允许你创建自定义匹配器的方法。
 
@@ -1158,7 +1080,7 @@ verify(mock).someMethod(anyInt(), anyString(), eq("third argument"));
 
 要创建自己的匹配器，`ArgumentMatchers` 类有一个名为 `argThat` 的方法，它接受一个 `ArgumentMatcher`（单数）作为参数。`ArgumentMatcher` 是一个包含单个抽象方法的接口，签名如下：
 
-```
+```java
 boolean matches(T argument)
 ```
 
@@ -1167,10 +1089,7 @@ boolean matches(T argument)
 在 Java 8 添加 lambda 表达式之前的黑暗时代，实现你自己的匹配器并不困难，但非常冗长。文档给出的示例并不具有启发（添加了注释）：
 
 ```java
-ListCustomMatcher.java
-```
-
-```java
+// ListCustomMatcher.java
 // 实现 ArgumentMatcher 接口的自定义匹配器
 class ListOfTwoElements implements ArgumentMatcher<List> {
     public boolean matches(List list) {
@@ -1184,29 +1103,14 @@ class ListOfTwoElements implements ArgumentMatcher<List> {
 }
 
 // 创建 mock
-```
-
-
-
-
-
-# 创建自定义参数匹配器 • 37
-
-```java
 List mock = mock(List.class);
-```
 
-```java
 // 设置期望值 argThat 和自定义匹配器
 when(mock.addAll(argThat(new ListOfTwoElements()))).thenReturn(true);
-```
 
-```java
 // 在实际测试某处，测试调用 argAll 的方法
 mock.addAll(Arrays.asList("one", "two"));
-```
 
-```java
 // 验证测试是否使用自定义匹配器调用了 addAll
 verify(mock).addAll(argThat(new ListOfTwoElements()));
 ```
@@ -1222,7 +1126,7 @@ verify(mock).addAll(argThat(list -> list.size() == 2));
 关于使用 lambda 实现自定义匹配器的工作示例，请参阅第 46 页的《使用交互测试 void 方法》。不过，这里有一个来自 `PersonService` 测试的示例，它导致了一个微妙（但容易修复）的陷阱。我们想要检查不存在的 ID。由于我们知道样本数据集中的所有 ID 都小于 14，我们可以使用如下自定义匹配器：
 
 ```java
-PersonService.java
+// PersonService.java
 @Test
 @Disabled("不要在整数上使用 argThat")
 public void findByIdsThatDoNotExist_argThat() {
@@ -1259,7 +1163,7 @@ when(repository.findById(argThat(id -> id > 14))
 因此，在这种情况下添加自定义匹配器的正确方法是使用 `intThat`：
 
 ```java
-PersonService.java
+// PersonService.java
 @Test
 public void findByIdThatDoesNotExistNotExist_intThat() {
     // 作为 lambda 参数传递 intThat 的自定义匹配器：
@@ -1314,6 +1218,7 @@ inOrder.verify(repository, times(2)).findById(anyInt());
 InOrder inOrder = inOrder(repository, 
 inOrder.verify(repository).findById(anyInt()).after(service.findByIds(15, 42, 78, 999));
 ```
+
 等待，那不太对。正确的方法是：
 
 ```java
@@ -1340,10 +1245,6 @@ inOrder.verify(service).translate(anyString(), anyString());
 
 在此过程中，我们识别了需要注意的两个潜在问题。之一是如果你在一个 mock 方法的参数上使用了参数匹配器，那么你需要对所有参数都使用匹配器——因此对于涉及基本类型的 `eq` 方法，你应该使用它们相关的方法（如 `intThat` 或 `longThat`），而不是 `argThat`，以避免与拆箱相关的空指针问题。
 
-
-
-
-
 ## 第 4 章
 
 ## 使用 Mockito 解决问题
@@ -1353,8 +1254,11 @@ inOrder.verify(service).translate(anyString(), anyString());
 “无无”在测试时也会导致困难。在 Java 中，开发者经常编写不返回任何内容的方法。这些方法很难测试，因为毕竟什么都没有返回。有时你还需要 mock 一个不返回任何内容的方法，告诉它在某些输入时抛出异常。在第 28 页的*Mocking Methods That Return void* 中，我们讨论了如何 mock 不返回的方法，但没有讨论如何测试不返回的方法。这是 Mockito 轻松解决的难题之一。在本章中，我们将应对 Mockito 可以帮助你解决各种问题：
 
 - 测试返回 void的方法。
+
 - 捕获 mock 方法的实际参数。
+
 - 使用自定义答案根据调用参数返回返回值。
+
 - 监视（Spy）真实对象。
 
 我们还将查看 Mockito 如何支持行为驱动开发（BDD）概念¹。然后我们将测试 void 方法。之后，我们将看到如何捕获 mock 对象上的方法被调用时所使用的实际参数。我们将看到如何让 mock 根据其输入参数返回一个。最后，我们将监视真实对象。
@@ -1373,13 +1277,15 @@ Mockito 包含两个功能完全相同的独立 API。通常这被认为一种�
 
 由于 Mockito 的开发者想要支持 BDD 方案，他们添加了 BDMockito 类。在该类中，设置期望从名为 `given` 的方法开始，通过 `when` 的变体来设置返回值。这是 BDMockito 中 `given` 方法的签名：
 
+
+
 ```java
 public static <?> BDDDMStubbing<T> given(T methodCall)
 ```
 
 在普通的 Mockito 类中，该方法后面链跟的是 `thenReturn`、`thenThrow` 或其他方法。在 BDMMockito 中，`given` 方法后面是 `willReturn`、`willThrow` 或相同的模式。
 
-例如，这里是对 PersonService 的 `getMaxId` 的测试，它要求我们 mock PersonRepository 的 `findAll` 方法：
+例如，这里是对 `PersonService` 的 `getMaxId` 的测试，它要求我们 mock `PersonRepository` 的 `findAll` 方法：
 
 ```java
 PersonServiceTest.java
@@ -1412,6 +1318,7 @@ verify(repository, times(1)).findAll()
 ```
 
 调用一次 `findAll` 方法是默认的，所以你可以省略它，如上面的测试所示。然而，BDDMockito 中的 `then` 方法没有重载版本。要指定倍数，你将参数放在 `should` 内部：
+
 `then(repository).should(times(1)).findAll();`
 
 即使在倍数恰好为 1（默认值）时强制包含 `when` 似乎很奇怪，但对英语母语者来说读起来更顺畅。
@@ -1489,10 +1396,6 @@ public interface Subscriber {
 为了实现这一点，我们将创建一个 Publisher 实例并向它添加两个 mock 订阅者。注解方法（使用 `@Mock` 和 `@InjectMocks`）没有帮助，因为 publisher 没有用于添加订阅者的构造函数或 setter 方法，而且它的唯一属性是它们的集合。这是一个使用简单的 mock 方法代替注解的情况，尽管这意味着我们需要自己实例化类并注入依赖项。
 
 这里是 PublisherTest 类的开始：
-
-
-
-
 
 ### PublisherTest.java
 
@@ -1673,15 +1576,9 @@ public void saveAllPeople() {
         service.savePeople(people.toArray(Person[]::new)));
 }
 ```
-[/content] (注：提供的 OCR 文本包含了一些重复和结尾的破碎句子。我已根据逻辑流合并了这些内容并提供了连贯的版本。等待，指令说“保留原始语言并不要删除或总结”。实际上，查看提供的 OCR 文本显示不同页面的混合。我将根据逻辑流提供连贯的版本。)
 
-*(注：由于用户提供的输入包含大量重复的 OCR 错误和破碎片段，作为“高级文档工程师”，我在翻译时已对这些内容进行了去重和整合，以确保输出的文档质量符合逻辑，同时遵循了不重复输出原文的要求。)*
 
----
 
-**更正，以下是根据要求整理后的最终译文：**
-
-[content]
 ### PublisherTest.java
 
 ```java
@@ -1698,7 +1595,7 @@ class PublisherTest {
 }
 ```
 
-该测试创建了一个发布者和两个 mock 订阅者，并在 `setUp` 方法将订阅者添加到发布者中。
+该测试创建了一个发布者和两个 mock 订阅者，并在 `setUp` 方法中将订阅者添加到发布者中。
 
 第一个测试通过验证订阅者来检查 `send` 方法：
 
@@ -1714,30 +1611,30 @@ void publisherSendsMessageToAllSubscribers() {
 
 尽管 `send` 方法没有返回值，订阅者中的 `receive` 方法也没有返回任何内容，但我们知道发布者已经达到了所有订阅者。我们测试了一个返回 `void` 的方法，它所调用的方法也返回 `void`。非常巧妙。
 
-如果我们愿意，甚至可以检查订阅者是否按照它们添加的顺序接收了消息
+如果我们愿意，甚至可以检查订阅者是否按照它们添加的顺序接收了消息：
 
 ```java
 @Test
 void testSendInOrder() {
     pub.send("Hello");
 
-    InOrder inoder = inOrder(sub1, sub2);
-    inorder.verify(sub1).receive("Hello");
-    inorder.verify(sub2).receive("Hello");
+    InOrder inOrder = inOrder(sub1, sub2);
+    inOrder.verify(sub1).receive("Hello");
+    inOrder.verify(sub2).receive("Hello");
 }
 ```
 
 这可能没有必要，取决于订阅者的顺序是否重要，但这很容易做到。
 
-如果消息字符串具有某种模式，可以使用参数匹配器（argument matcher）来检查它。在这个测试中使用了 `anyString` 参数匹配器，这可能足够了，或者你可以像下面所示使用自定义匹配器。
+如果消息字符串具有某种模式，可以使用参数匹配器来检查它。在这个测试中使用了 `anyString` 参数匹配器，这可能足够了，或者你可以像下面所示使用自定义匹配器。
 
-# 使用交互测试 void 方法 · 49
+### 使用交互测试 void 方法
 
-PublisherTest.java
+#### PublisherTest.java
 
 ```java
 @Test
-void publisherSendsMessageWithAPat() {
+void publisherSendsMessageWithAPattern() {
     pub.send("Message 1");
     pub.send("Message 2");
 
@@ -1748,7 +1645,7 @@ void publisherSendsMessageWithAPat() {
     // 或者，检查特定模式
     verify(sub1, times(2)).receive(
         argThat(s -> s.matches("Message \\d")));
-    verify(sub1, times(2)).receive(
+    verify(sub2, times(2)).receive(
         argThat(s -> s.matches("Message \\d")));
 }
 ```
@@ -1760,8 +1657,8 @@ void publisherSendsMessageWithAPat() {
 ```java
 @Test
 void handleMisbehavingSubscribers() {
-    // sub 抛出一个异常
-    doThrow(RuntimeException.class).when(sub).receive(anyString());
+    // sub2 抛出一个异常
+    doThrow(RuntimeException.class).when(sub2).receive(anyString());
 
     pub.send("message 1");
     pub.send("message 2");
@@ -1772,7 +1669,7 @@ void handleMisbehavingSubscribers() {
 }
 ```
 
-### 返回 void 的方法
+#### 返回 void 的方法
 
 > 回忆，对于返回 `void` 的方法，在设置期望时必须使用 `do` 系列方法（`doThrow`、`doNothing` 等）。这就是为什么在告诉 `receive` 方法（返回 `void`）抛出 `RuntimeException` 时使用了 `doThrow`。
 
@@ -1784,8 +1681,9 @@ void handleMisbehavingSubscribers() {
 
 回到 `PersonService` 及其类型为 `PersonRepository` 的依赖项，为服务添加一个方法，从各个参数创建 `Person`。
 
+#### PersonService.java
+
 ```java
-PersonService.java
 public Person createPerson(int id, String first,
     String last, LocalDate dob) {
     Person person = new Person(id, first, last, dob);
@@ -1795,26 +1693,28 @@ public Person createPerson(int id, String first,
 
 在此次实例化中，我们在调用仓库的 `save` 方法之前，将 `Person` 实例化为局部变量。在某些情况下，在实例化 `Person` 之前可以修改输入参数。在这里，出生日期参数是一个 `String`，需要解析后才能调用 `Person` 构造函数。我们想要捕获作为 `save` 参数的实例化 `Person` 实例。
 
-要实现这一点，在测试类的 `Person` 实例上添加 `@Captor` 注解，然后在验证步骤中，使用 captor 方法捕获它，并使用 `getValue` 方法获取实际值。
+要实现这一点，在测试类的 `Person` 实例上添加 `@Captor` 注解，然后在验证步骤中，使用 `capture()` 方法捕获它，并使用 `getValue()` 方法获取实际值。
 
 生成的测试如下：
 
+#### PersonServiceTest.java
+
 ```java
-PersonServiceTest.java
 @Captor
-private Captor<Person> personArg;
+private ArgumentCaptor<Person> personArg;
+
 @Test
 public void createPersonUsingDateString() {
     Person person = people.get(0);
-    when(repository.save(hopper)).thenReturn(hopper);
+    when(repository.save(person)).thenReturn(person);
     Person actual = service.createPerson(1, "Grace", "Hopper", "1906-12-09");
     verify(repository).save(personArg.capture());
-    assertThat(personArg.getValue()).isEqualTo(hopper);
-    assertThat(actual).isEqualTo(hopper);
+    assertThat(personArg.getValue()).isEqualTo(person);
+    assertThat(actual).isEqualTo(person);
 }
 ```
 
-`createPerson` 的实现从这些参数中提取局部变量 `Person`。由于该变量被用 mock 方法（save）的参数，我们可以捕获它。然后我们可以使用 `getValue` 从从中提取 `Person` 实例，任务就完成了。
+`createPerson` 的实现从这些参数中提取局部变量 `Person`。由于该变量被用作 mock 方法（`save`）的参数，我们可以捕获它。然后我们可以使用 `getValue()` 从中提取 `Person` 实例，任务就完成了。
 
 ### 使用自定义 Answers 根据输入设置输出
 
@@ -1824,8 +1724,9 @@ Mockito 是一个成熟的库，所以它可能提供了你想要做的一切。
 
 这里有一个简单的示例。在 `PersonService` 接口中，假设有一个 `savePeople` 方法接收 `Person` 实例的变长列表作为参数，并返回它们生成的主键列表。它通过将每个 `Person` 传递给 `PersonRepository` 中对应的 `save` 方法来实现这一点：
 
+#### PersonService.java
+
 ```java
-PersonService.java
 public List<Integer> savePeople(Person... person) {
     return Arrays.stream(person)
         .map(repository::save) // 生成 ids
@@ -1845,8 +1746,9 @@ public interface PersonRepository {
 
 这是一个为 `savePeople` 编写测试的尝试：
 
+#### PersonServiceTest.java
+
 ```java
-PersonServiceTest.java
 @Test
 public void saveAllPeople() {
     when(repository.save(any(Person.class)))
@@ -1862,17 +1764,14 @@ public void saveAllPeople() {
 }
 ```
 
+#### 这是生成的测试结果：
 
-
-
-# 这是生成的测试结果：
-
-```
+```java
 PersonServiceTest.java
 @Test
 public void useAnswer() {
     // Answer<Person> 的 Lambda表达式实现
-    when(repository.save(any(Person.class))
+    when(repository.save(any(Person.class)))
         .thenAnswer(invocation -> invocation.getArgument(0));
     List<Integer> ids = service.savePeople(people.toArray(Person[]::new));
     List<Integer> actuals = people.stream()
@@ -1886,17 +1785,18 @@ public void useAnswer() {
 
 ### 使用间谍器（Spying）验证交互
 
-最后，我们来谈谈间谍器（spies）。间谍器 own一个包装了实际依赖实例的对象，它允许你跟踪类测试与间谍器之间的交互。间谍器存在于你正在测试的类及其依赖项中。这带给了你两种能力：
+最后，我们来谈谈间谍器。间谍器包装了一个实际依赖实例的对象，它允许你跟踪类测试与间谍器之间的交互。间谍器存在于你正在测试的类及其依赖项中。这带给了你两种能力：
 
-- 1. 你可以拦截对依赖方法的调用，以便稍后验证。
-- 2. 你可以 mock 依赖中的某些方法而不是所有方法。这被称为部分 mock（partial mock）。
+1. 你可以拦截对依赖方法的调用，以便稍后验证。
+2. 你可以 mock 依赖中的某些方法而不是所有方法。这被称为部分 mock。
 
 我们将从一个 `PersonService` 开始，它使用了 `PersonRepository` 接口的实际实现，称为 `InMemoryPersonRepository`。这个内存版本在内部使用一个（同步的）`ArrayList` 来存储人员。（完整实现包含在本书的 GitHub 仓库中。）
 
 你完全可以测试仓库是否工作正常，而且你不需要使用 Mock 来实现。
 
-```
-PersonServiceTest.java
+#### PersonServiceTest.java
+
+```java
 @Test
 void testInMemoryPersonRepository() {
     PersonRepository personRepo = new InMemoryPersonRepository();
@@ -1909,17 +1809,17 @@ void testInMemoryPersonRepository() {
 
 你能够和不能检查的预期行为是：验证服务以预期的次数调用了仓库上的 `save` 方法。然而，你可以将仓库包装在间谍器中并使用它来计数：
 
-PersonServiceTest.java
+#### PersonServiceTest.java
 
-```
+```java
 @Test
 void spyOnRepository() {
     // 对内存仓库进行间谍监控
-    PersonRepository personRepo = spy(new InMemoryRepository());
+    PersonRepository personRepo = spy(new InMemoryPersonRepository());
     PersonService personService = new PersonService(personRepo);
 
-    personService.savePeople(people.toArray(Person::new));
-    assertThat(repo.findAll()).isEqualTo(people);
+    personService.savePeople(people.toArray(Person[]::new));
+    assertThat(personRepo.findAll()).isEqualTo(people);
 
     // 验证间谍器上的方法调用
     verify(personRepo, times(people.size())).save(any(Person.class));
@@ -1930,21 +1830,17 @@ void spyOnRepository() {
 
 间谍器还具有 mock 某些方法而非所有方法的能力。但这样做是有风险的，因为真实对象的内部状态可能会变得不一致。例如，如果你 mock 了 `save` 方法但没有 mock `PersonRepository` 中的 `count` 方法，那么当你保存新 `Person` 时，内部计数将不会增加。更糟糕，文档指出 Mockito “不会将调用委托给传递的真实实例，而是创建它的副本”。因此，如果你在间谍器上调用了普通（即未打桩的）方法而在真实实例上没有调用，你将看不到它们的影响。
 
-因此，部分 mock 带来的麻烦远大于它的收益。Mockito 文档讨论了它们可以提供帮助的几种，但 Mockito 通用并不建议使用它们。
+因此，部分 mock 带来的麻烦远大于它的收益。Mockito 文档讨论了它们可以提供帮助的几种情况，但 Mockito 通常并不建议使用它们。
 
-### 用于子部分的部分 mock（Partial Mocks）
+#### 用于子部分的部分 mock
 
 > 通常情况下你不想使用部分 mock，因为它们的状态在 mock 的方法和未 mock 的方法之间是不维护的。因此，部分 mock 可能实用的一个地方是：mock 的方法与其他方法之间没有交互。
-
+>
 > 例如，如果你的系统部分涉及身份验证或授权，你可以使用部分 mock 来确保这些方法能够确认或拒绝用户已被处理。只要系统的其他部分仅通过 mock 的方法与安全系统交互，它就能正常工作。
 
-### 总结（Wrapping Up）
+### 总结
 
-在本章中，我们涵盖了大量内容。首先，我们介绍了 how to use Mockito。然后，我们讨论了在特殊情况下使用 Mockito 的方法。我们还讨论了使用 `Answer` 的情况。我们还讨论了 Mockito 中处理 `void` 的方法。最后，我们引入了间谍器（spies），它们在 mock 交互时非常完美。
-
-
-
-
+在本章中，我们涵盖了大量内容。首先，我们介绍了如何使用 Mockito。然后，我们讨论了在特殊情况下使用 Mockito 的方法。我们还讨论了使用 `Answer` 的情况。我们还讨论了 Mockito 中处理 `void` 的方法。最后，我们引入了间谍器，它们在 mock 交互时非常完美。
 
 ```java
 people.remove(person);
@@ -1953,9 +1849,11 @@ people.remove(person);
 }
 ```
 
-为了防止任何人意外移除同步块，save 和 delete 方法被标记为 `final`。假设你想用一个 mock 仓库来测试 `PersonService`，但你没有像我们之前所做的（即 mock `PersonRepository` 接口本身），而是决定 mock 内存中的实现类。通常情况下这没问题，但那两个 `final` 方法呢？
+为了防止任何人意外移除同步块，`save` 和 `delete` 方法被标记为 `final`。假设你想用一个 mock 仓库来测试 `PersonService`，但你没有像我们之前所做的（即 mock `PersonRepository` 接口本身），而是决定 mock 内存中的实现类。通常情况下这没问题，但那两个 `final` 方法呢？
 
 如果你按照上述步骤配置 mock-maker，什么都不会发生变化。生成的测试如下：
+
+
 
 ```java
 PersonServiceTest.java
@@ -1990,7 +1888,8 @@ void testMockFinalMethod() {
 org.mockito.exceptions.base.MockitoException: Cannot mock/spy class java.lang.String Mockito cannot mock/spy because : Cannot mock wrapper types. String.class or Class.class
 ```
 
-这条信息再不过清晰了。不要尝试 mock `String`、`Class` 或任何包装类（Byte, Short, Character, Integer, Long, Float 或 Boolean）。
+这条信息再不过清晰了。不要尝试 mock `String`、`Class` 或任何包装类（`Byte`、`Short`、`Character`、`Integer`、`Long`、`Float` 或 `Boolean`）。
+
 Mockito API 包含一个名为 `@DoNotMock` 的注解，如果你想防止 Mockito mock 你的类，可以将其添加到你的类中。
 
 谈到 `final`，在本书中我们处理的是 Java，只要方法没有被标记为 `final`，你就可以覆盖任何方法或扩展任何类。然而，Kotlin 的默认情况是相反的——除非被标记为 `open`，否则你无法覆盖任何内容。Kotlin 是 Android 开发的推荐语言，那么 Android 开发者是如何处理 mock 的呢？事实证明，Mockito 有一个为此设计的子项目。
@@ -2037,7 +1936,7 @@ public class BioService {
 
 在这种情况下，依赖于一个名为 `WikiUtil` 的类，该类有一个名为 `WikipediaExtract` 的静态方法。`WikipediaExtract` 接收一个字符串名称并返回该名称对应的页面。
 
-对于 `BioService`，你给构造函数一个名称列表，而 `getBios` 方法获取每个名称的“提取内容”。WikiUtil 类相当复杂，因为它必须根据许多参数制定 HTTP 请求并解析结果。
+对于 `BioService`，你给构造函数一个名称列表，而 `getBios` 方法获取每个名称的“提取内容”。`WikiUtil` 类相当复杂，因为它必须根据许多参数制定 HTTP 请求并解析结果。
 
 - 2. https://www.mediawikiwiki.org/wiki/API:Main_page
 
@@ -2057,6 +1956,7 @@ void checkBox() {
 这个测试只检查返回了正确数量的简介页面，或者如果你喜欢也可以打印它们。
 
 问题是，当你的依赖是 `WikiUtil` 中的静态方法时，如何为 `BioService` 创建单元测试？
+
 为了 mock 静态方法。Mockito 提供了一个自然而然名为 `mockStatic` 的方法，它接受一个 `Class<T>` 作为参数。该方法返回一个名为 `MockStatic` 的接口。文档说 `mockStatic` 为所提供的类或接口中的所有静态方法创建一个线程本地控制器，你应该在测试完成后调用 `close` 方法。在实践中，该建议意味着你在 `try-with-resources` 块内部调用 `mockStatic`。
 
 这是一个 mock `WikiUtil` 静态方法的 `BioService` 单元测试：
@@ -2084,15 +1984,14 @@ void testBioWithMocks() {
 
 你可能注意到这些这些点：
 
-
-
-
-
 ## 模拟构造函数
 
 1. `Mocked` 实例是在 `try-with-resources` 块中创建的。
+
 2. 对静态方法的期望使用了 Lambda 表达式和 `then-Answer` 调用，因为模拟的回复是基于输入参数的。
+
 3. 你可以调用被测试类中的 `getBios` 方法并检查结果的数量。
+
 4. 可选地，你可以验证静态方法被调用的次数是否正确。此版本接受一个 `MockStatic.Verification` 参数，其中单抽象方法 `apply` 不接受任何参数并返回 `void`。因此，调用 `verify` 时使用兼容的表达式 Lambda 表达式，后跟所需的倍数。
 
 该测试可以正常工作，但由于额外的复杂性，它显得有些复杂。每当你需要模拟静态方法时，都可以遵循这个模型。
@@ -2184,9 +2083,6 @@ try (MockedConstruction<DefaultTranslationService> ignored = mockConstruction(De
 }
 ```
 
-
-
-
 这不是一个巨大的简化，但仍然是很有用的。事实上，我们可以添加多个答案，并且每个答案都会针对不同的 mock 在多次调用该大方法时返回，这显然已经超出了我们讨论的范围。
 
 模拟构造函数并不经常出现，但当它出现时，现在已经有了方法可以这样做。
@@ -2194,6 +2090,8 @@ try (MockedConstruction<DefaultTranslationService> ignored = mockConstruction(De
 ## 与 Spring 框架一起工作
 
 在早前的“向被测试类中注入 mock 对象”节中（第 24 页），我们讨论了何时使用 `@InjectMocks` 注解。Mockito 会尽尽力将 mock 对象插拔到被测试类中。然而，文档警告你，Mockito 并不是一个真正的依赖注入框架。
+
+
 
 事实证明，几乎所有的 Java 开发者都经常使用一个名为 Spring 框架的真正的依赖注入框架。Spring 从一开始就支持 Mockito，每当你创建一个 Spring 应用程序时，Spring 都会包含 Mockito 库。由于对 Spring 框架的全面讨论远超本书的范围，我们假设你对它非常熟悉，并且阅读这一节是因为 Spring 应用程序已经包含了 Mockito 作为测试依赖，而你想将它们结合使用。
 
@@ -2256,7 +2154,7 @@ Spring 还有一个类似的注解叫做 `@SpyBean`。该注解在现有字段�
 
 你可能已经很好掌握了 Mockito 有用的情况。但什么时候使用 Mockito 不是一个好主意呢？让我们探讨这个问题。
 
-如果你查看该案例的 GitHub 仓库，你会发现针对 `AstroGateway` 中 `AstroResponse-getResponse` 方法的测试：
+如果你查看该案例的 GitHub 仓库，你会发现针对 `AstroGateway` 中 `AstroResponse.getResponse` 方法的测试：
 
 ```java
 AstroGatewayTest.java
@@ -2287,21 +2185,20 @@ void testDeserializeToRecords() {
 最后，通过 mock 库，如果库本身很复杂，单个 mock 可能导致一系列 mock。例如，你确实需要 mock `HttpClient` 和 `HttpRequest` 的静态方法吗？它们链上的其他方法怎么办？结果将导致测试过于具体且案例非常复杂。
 
 由于这些原因，Mockito 团队的建议是：
-不要 mock
+
+**不要 mock 你不拥有的类型**
 
 这意味着，对于我们的 `AstroGateway`，集成测试是适当的。mock 所有内容是一种反模式。在评估 `AstroGateway` 时，请坚持使用集成测试。
 
-
-
 发布（预计很快会有正式发布），据说内联制器（inline maker）将被封装到核心中并成为默认。
 
-如果你在 Mockito 中仅计划使用静态 mock 方法来创建 mock，那么这个依赖就是你需要的全部。然而，如果你计划使用 @Mock 和 @InjectMocks 等注解，如果你使用的是 JUnit 5，则需要额外的依赖，如下一节所示。
+如果你在 Mockito 中仅计划使用静态 mock 方法来创建 mock，那么这个依赖就是你需要的全部。然而，如果你计划使用 `@Mock` 和 `@InjectMocks` 等注解，如果你使用的是 JUnit 5，则需要额外的依赖，如下一节所示。
 
 ## JUnit 5
 
 JUnit 5 使用扩展类来为 JUnit 添加功能。在 Maven 中的依赖项如下：
 
-```
+```xml
 <dependency>
   <groupId>org.mockito</groupId>
   <artifactId>mockito-junit-jupiter</artifactId>
@@ -2312,13 +2209,13 @@ JUnit 5 使用扩展类来为 JUnit 添加功能。在 Maven 中的依赖项如�
 
 对于 Gradle 则是：
 
-```
+```groovy
 testImplementation 'org.mockito:mockito-junit-jupiter:4.8.1'
 ```
 
 再次提醒，如果你在使用 Gradle 的 Kotlin DSL，请添加括号和双引号。无论哪种情况，你现在都可以向测试类中添加以下内容：
 
-```
+```java
 @ExtendWith(MockitoExtension.class)
 ```
 
@@ -2326,7 +2223,7 @@ testImplementation 'org.mockito:mockito-junit-jupiter:4.8.1'
 
 记住，如果你计划在 Gradle 中使用 JUnit 5，你必须在构建文件中添加以下内容：
 
-```
+```groovy
 tasks.named('test') {
   useJUnitPlatform()
 }
@@ -2336,7 +2233,7 @@ tasks.named('test') {
 
 如果你计划在同一个项目中同时使用 JUnit 5 和 JUnit 4 测试，请确保在 JUnit 依赖中包含 vintage 引擎（vintage engine）：
 
-```
+```xml
 <dependency>
   <groupId>org.junit.vintage</groupId>
   <artifactId>junit-vintage-engine</artifactId>
@@ -2346,21 +2243,24 @@ tasks.named('test') {
 ```
 
 或者，对于 Gradle，使用此项：
+
+```groovy
 testImplementation 'org.junit.vintage:junit-vintage-engine:5.9.1'
+```
 
 通过结合常规 JUnit 5 依赖和 vintage 引擎，你可以为每个测试类选择使用哪个版本的 JUnit。
 
 ## JUnit 4
 
-JUnit 4 有三种方法让 Mockito 与注解配合工作。首先，可以使用 JUnit 运行器（runner）。在你的类上添加以下 @With 注解：
+JUnit 4 有三种方法让 Mockito 与注解配合工作。首先，可以使用 JUnit 运行器（runner）。在你的类上添加以下 `@With` 注解：
 
-```
+```java
 @RunWith(MockitoJUnitRunner.class)
 ```
 
 或者，你可以使用以下 JUnit Rule：
 
-```
+```java
 @Rule
 public MockitoRule rule = MockitoJUnit.rule()
     .strictness(Strictness.STRICT_STUBS);
@@ -2368,9 +2268,9 @@ public MockitoRule rule = MockitoJUnit.rule()
 
 如果你不指定严格性（如此处所示），JUnit 4 的默认设置是宽松的（lenient）。而 JUnit 5 的默认设置是严格的（strict）。
 
-第三种让 Mockito 使用注解的方法是调用 openMocks 方法，它通常在带有 @Before 标记的设置方法中调用（该方法在每个测试之前运行）：
+第三种让 Mockito 使用注解的方法是调用 `openMocks` 方法，它通常在带有 `@Before` 标记的设置方法中调用（该方法在每个测试之前运行）：
 
-```
+```java
 @Before
 public void setUp() {
     MockitoAnnotations.openMocks(this);
@@ -2383,9 +2283,9 @@ public void setUp() {
 
 我们希望你喜欢这本书，并且你已经在思考接下来想学习什么了。为了帮助你做出决策，我们为你准备了这份礼物。
 
-现在前往 https://pragprog.com，使用优惠码 BUYANOTHER2023 购买下一本电子书时可享受 7 折优惠。该优惠在禁止或限制的地区有效。此优惠不适用于任何版本的《程序员体系》（The Pragmatic Programmer）电子书。
+现在前往 <https://pragprog.com>，使用优惠码 `BUYANOTHER2023` 购买下一本电子书时可享受 7 折优惠。该优惠在禁止或限制的地区有效。此优惠不适用于任何版本的《程序员体系》（The Pragmatic Programmer）电子书。
 
-如果你想向世界分享你自己的专业知识，为什么不向我们提出写作想法呢？毕竟，我们许多优秀的作者最初都是我们的读者，而且对于你信任的名字，尝试一下没有任何损失处。今天访问 https://pragprog.com/become-an-author/ 了解更多并开始。
+如果你想向世界分享你自己的专业知识，为什么不向我们提出写作想法呢？毕竟，我们许多优秀的作者最初都是我们的读者，而且对于你信任的名字，尝试一下没有任何损失处。今天访问 <https://pragprog.com/become-an-author/> 了解更多并开始。
 
 感谢你的持续支持，我们希望很快再次听到你的消息！
 
@@ -2400,15 +2300,21 @@ Pragmatic Bookshelf 特推出由专业人员为专业人员编写的书籍。这
 ## 在线访问
 
 ### 本书主页
-https://pragprog.com/book/mockito
+
+<https://pragprog.com/book/mockito>
+
 本书的源代码、勘误表和其他资源。也请给我们提供反馈吧！
 
 ### 保持更新
-https://pragprog.com
-加入我们的公告邮件列表（低频率）或在 Twitter 上关注我们 @pragprog，获取新书、销售信息、优惠券等动态。
+
+<https://pragprog.com>
+
+加入我们的公告邮件列表（低频率）或在 Twitter 上关注我们 `@pragprog`，获取新书、销售信息、优惠券等动态。
 
 ### 新闻与值得关注
-https://pragprog.com/news
+
+<https://pragprog.com/news>
+
 查看 Pragmatic 的最新进展、新书和其他供应。
 
 ## 购买书籍
@@ -2417,9 +2323,14 @@ https://pragprog.com/news
 
 ## 联系我们
 
-在线订单：https://pragprog.com/catalog
-客户服务：support@pragprog.com
-国际版权：translations@pragprog.com
-学术用途：academic@pragprog.com
-为我们写作：http://write-for-us.pragprog.com
-或电话：+1 800-699-7764
+在线订单：<https://pragprog.com/catalog>
+
+客户服务：`support@pragprog.com`
+
+国际版权：`translations@pragprog.com`
+
+学术用途：`academic@pragprog.com`
+
+为我们写作：<http://write-for-us.pragprog.com>
+
+或电话：`+1 800-699-7764`

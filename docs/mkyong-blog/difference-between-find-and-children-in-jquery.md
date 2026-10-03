@@ -1,20 +1,22 @@
-# jQuery 中 find()和 children()的区别
+
+
+# jQuery 中 `find()` 和 `children()` 的区别
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jquery/difference-between-find-and-children-in-jquery/>
 
-**[find()](http://web.archive.org/web/20221023054404/http://www.mkyong.com/jquery/jquery-find-example/)** 和 **[children()](http://web.archive.org/web/20221023054404/http://www.mkyong.com/jquery/jquery-children-example/)** 两种方法都用来过滤匹配元素的子元素，只不过前者是向下遍历任意一级，后者是向下遍历单级。
+**[`find()`](http://web.archive.org/web/20221023054404/http://www.mkyong.com/jquery/jquery-find-example/)** 和 **[`children()`](http://web.archive.org/web/20221023054404/http://www.mkyong.com/jquery/jquery-children-example/)** 两种方法都用来过滤匹配元素的子元素，只不过前者是向下遍历任意一级，后者是向下遍历单级。
 
-太简单了
+太简单了。
 
-1.  **find()**–搜索匹配元素的子元素、孙元素、曾孙元素…任何下一层。
-2.  **children()**–仅搜索匹配元素的子元素(向下一级)。
+1. `find()`–搜索匹配元素的子元素、孙元素、曾孙元素……任何下一层。
+2. `children()`–仅搜索匹配元素的子元素（向下一级）。
 
-参见下面的例子来理解 find()和 children() 之间的**区别。**
+参见下面的例子来理解 `find()` 和 `children()` 之间的**区别**。
 
-## jQuery find() vs children()示例
+## jQuery `find()` vs `children()` 示例
 
 ```java
- <html>
+<html>
 <head>
 
 <script type="text/javascript" src="jquery-1.3.2.min.js"></script>
@@ -84,9 +86,10 @@
 <input type='button' value='.B1 find(child)' id='testFind'>
 
 </body>
-</html> 
+</html>
 ```
 
-[http://web.archive.org/web/20221023054404if_/https://www.mkyong.com/wp-content/uploads/jQuery/jQuery-find-children-example.html](http://web.archive.org/web/20221023054404if_/https://www.mkyong.com/wp-content/uploads/jQuery/jQuery-find-children-example.html)
+<http://web.archive.org/web/20221023054404if_/https://www.mkyong.com/wp-content/uploads/jQuery/jQuery-find-children-example.html>
 
 [Try Demo](http://web.archive.org/web/20221023054404/http://www.mkyong.com/wp-content/uploads/jQuery/jQuery-find-children-example.html)<input type="hidden" id="mkyong-current-postId" value="5087">
+

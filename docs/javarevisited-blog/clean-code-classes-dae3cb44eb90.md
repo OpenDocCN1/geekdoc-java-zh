@@ -1,3 +1,4 @@
+
 # 干净的代码-类
 
 > 原文：<https://medium.com/javarevisited/clean-code-classes-dae3cb44eb90?source=collection_archive---------2----------------------->
@@ -10,7 +11,7 @@
 
 对我们来说，测试规则。如果同一个包中的一个测试需要调用一个函数或者访问一个变量，我们会把它设为[保护](https://javarevisited.blogspot.com/2012/10/difference-between-private-protected-public-package-access-java.html#axzz6j8KhisSX)或者[包作用域](http://www.java67.com/2012/12/what-is-public-private-protected-package-default-private-access-modifier-java.html)。然而，我们将首先寻找一种保持隐私的方法。放松封装永远是最后的手段。
 
-## **班级要小！**
+## 班级要小！
 
 在设计类时，较小是首要原则。和函数一样，我们最直接的问题总是“有多小？”
 

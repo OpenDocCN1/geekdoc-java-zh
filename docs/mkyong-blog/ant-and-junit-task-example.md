@@ -1,3 +1,4 @@
+
 # Ant 和 jUnit 任务示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/ant/ant-and-junit-task-example/>
@@ -6,12 +7,12 @@
 
 ![junit tutorials](img/27a436d334a177edc78426ae02f6b11e.png)
 
-## 1.运行单元测试
+## 1. 运行单元测试
 
-build.xml
+`build.xml`
 
 ```java
- <target name="junit" depends="compile">
+<target name="junit" depends="compile">
 
     <junit printsummary="yes" haltonfailure="no">
 
@@ -31,12 +32,12 @@ build.xml
 </target> 
 ```
 
- ## 2.运行一批单元测试
+## 2. 运行一批单元测试
 
-build.xml
+`build.xml`
 
 ```java
- <target name="junit" depends="compile">
+<target name="junit" depends="compile">
 
   <junit printsummary="yes" haltonfailure="no">
 
@@ -60,16 +61,16 @@ build.xml
 </target> 
 ```
 
- ## 3.例子
+## 3. 例子
 
 一个 web 应用程序示例，向您展示如何运行 junit 测试。
 
-3.1 返回消息
+### 3.1 返回消息
 
-MessageGenerator.java
+`MessageGenerator.java`
 
 ```java
- package com.mkyong.message;
+package com.mkyong.message;
 
 import org.springframework.stereotype.Component;
 
@@ -83,12 +84,12 @@ public class MessageGenerator {
 } 
 ```
 
-3.2 测试上述类的两个 junit 测试用例。
+### 3.2 测试上述类的两个 junit 测试用例
 
-TestMessage.java
+`TestMessage.java`
 
 ```java
- package com.mkyong.test;
+package com.mkyong.test;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
@@ -105,10 +106,10 @@ public class TestMessage {
 } 
 ```
 
-TestMessage2.java
+`TestMessage2.java`
 
 ```java
- package com.mkyong.test;
+package com.mkyong.test;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
@@ -125,12 +126,12 @@ public class TestMessage2 {
 } 
 ```
 
-3.3 使用 ivy 获取项目依赖项，并声明项目范围。
+### 3.3 使用 ivy 获取项目依赖项，并声明项目范围
 
-ivy.xml
+`ivy.xml`
 
 ```java
- <ivy-module version="2.0">
+<ivy-module version="2.0">
 	<info organisation="org.apache" module="WebProject" />
 
 	<configurations>
@@ -145,12 +146,12 @@ ivy.xml
 </ivy-module> 
 ```
 
-3.4 运行单元测试
+### 3.4 运行单元测试
 
-build.xml
+`build.xml`
 
 ```java
- <project xmlns:ivy="antlib:org.apache.ivy.ant" 
+<project xmlns:ivy="antlib:org.apache.ivy.ant" 
 	name="HelloProject" default="main" basedir=".">
 	<description>
 		Running junit Test 
@@ -220,8 +221,11 @@ build.xml
 	<target name="main" depends="junit" />
 
 </project>
-Run it
-<pre><code class="language-bash">
+```
+
+运行它
+
+```bash
 $ ant junit 
 ```
 
@@ -233,13 +237,6 @@ Download It - [AntSpringMVC-Junit-Example](http://web.archive.org/web/2019031009
 
 ## 参考
 
-1.  [Ant - junit 任务](http://web.archive.org/web/20190310093416/http://ant.apache.org/manual/Tasks/junit.html)
+1. [Ant - junit 任务](http://web.archive.org/web/20190310093416/http://ant.apache.org/manual/Tasks/junit.html)
 
 [ant](http://web.archive.org/web/20190310093416/http://www.mkyong.com/tag/ant/) [junit](http://web.archive.org/web/20190310093416/http://www.mkyong.com/tag/junit/) [unit test](http://web.archive.org/web/20190310093416/http://www.mkyong.com/tag/unit-test/)
-
-
-
-
-
-
-

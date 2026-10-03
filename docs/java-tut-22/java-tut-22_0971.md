@@ -1,3 +1,4 @@
+
 # 教训：命名和目录概念
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/concepts/index.html`](https://docs.oracle.com/javase/tutorial/jndi/concepts/index.html)
@@ -14,14 +15,12 @@
 
 ```java
 www.example.com ==> 192.0.2.5
-
 ```
 
 文件系统将文件名映射到程序可以使用的文件引用，以访问文件的内容。
 
 ```java
 c:\bin\autoexec.bat ==> File Reference
-
 ```
 
 这两个示例也说明了命名服务存在的广泛规模范围——从在互联网上命名对象到在本地文件系统上命名文件。

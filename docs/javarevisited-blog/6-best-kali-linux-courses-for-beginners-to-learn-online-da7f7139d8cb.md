@@ -1,3 +1,4 @@
+
 # 2023 年初学的 7 门 Kali Linux 在线课程
 
 > 原文：<https://medium.com/javarevisited/6-best-kali-linux-courses-for-beginners-to-learn-online-da7f7139d8cb?source=collection_archive---------0----------------------->
@@ -16,9 +17,9 @@
 
 这些 Kali Linux 课程是从像 [Udemy](/javarevisited/my-favorite-udemy-online-courses-for-programmers-and-software-engineers-f9d941dd0035) 、 [Coursera](/javarevisited/18-coursera-courses-you-can-join-in-2020-to-learn-from-the-worlds-top-tech-companies-google-74af46967d1e) 和 [Pluralsight](/javarevisited/10-best-react-courses-from-pluralsight-for-beginners-and-experienced-developers-80b7c640cca3) 这样的网站创建的，它们是那里最好的。它们是由专家创建的，受到成千上万想学习 Kali Linux 的人的信任。都是 4 星评级。
 
-他们不仅教你基础知识和基本的 Kali Linux 概念，还教你必要的工具。最好的和最常用的工具之一叫做 **Metasploit** ，它用于利用许多不同的操作系统，如 windows，针对其大多数漏洞，并发现 web 应用程序中的安全弱点。
+他们不仅教你基础知识和基本的 Kali Linux 概念，还教你必要的工具。最好的和最常用的工具之一叫做 `Metasploit` ，它用于利用许多不同的操作系统，如 windows，针对其大多数漏洞，并发现 web 应用程序中的安全弱点。
 
-此外，你可以使用 aircrack-ng 找到网络密码和 sqlmap 来入侵网站的数据库。
+此外，你可以使用 `aircrack-ng` 找到网络密码和 `sqlmap` 来入侵网站的数据库。
 
 该列表不仅包括付费课程，还包括免费教程和从 FreeCodecamp 和 Youtube 等热门网站学习 Kali Linux 的课程，你也可以加入他们，开始你的 Kali Linux 之旅，并在 2023 年成为一名更好的网络安全专业和道德黑客。
 
@@ -38,7 +39,7 @@
 
 稍后，您将探索它的设计桌面，使用终端及其基本命令，并探索文件系统。
 
-接下来，你将了解如何使用网络，管理用户，用 nano 软件编辑文件。然后你将使用它的黑客工具，执行端口扫描和密码攻击。你将学习如何破解密码和窃取信用卡。
+接下来，你将了解如何使用网络，管理用户，用 `nano` 软件编辑文件。然后你将使用它的黑客工具，执行端口扫描和密码攻击。你将学习如何破解密码和窃取信用卡。
 
 **这里是加入本课程的链接**—[—*Kali Linux 初学者教程*](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fkali-linux-tutorial-for-beginners%2F)
 
@@ -50,7 +51,7 @@
 
 这个课程旨在像训练一个道德黑客一样训练你，这样你就可以在 2023 年申请道德黑客和渗透测试员的工作。
 
-完成本课程后，您将学习基本的道德黑客技能，如 Kali Linux，以及工具，如 NMAP。您将逐步学习使用 Kali Linux 和虚拟机设置您的实验室。
+完成本课程后，您将学习基本的道德黑客技能，如 Kali Linux，以及工具，如 `NMAP`。您将逐步学习使用 Kali Linux 和虚拟机设置您的实验室。
 
 您还将学习黑帽黑客使用的真正技术，然后学习如何防御他们。
 
@@ -60,7 +61,7 @@
 
 [![](img/ef4c201a6e6a3ff614301b3f86850279.png)](https://academy.zerotomastery.io/a/aff_wffw8vsz/external?affcode=441520_zytgk2dn)
 
-顺便说一句，你需要一个 [**ZTM 会员**](https://academy.zerotomastery.io/a/aff_c0gnlvf7/external?affcode=441520_zytgk2dn) 才能观看这个课程，这个课程每月花费大约 39 美元，但也提供了许多像这样超级吸引人和有用的课程。您还可以使用优惠券代码 **FRIENDS10** 获得本课程或您选择的任何订阅的 10%折扣。
+顺便说一句，你需要一个 [**ZTM 会员**](https://academy.zerotomastery.io/a/aff_c0gnlvf7/external?affcode=441520_zytgk2dn) 才能观看这个课程，这个课程每月花费大约 39 美元，但也提供了许多像这样超级吸引人和有用的课程。您还可以使用优惠券代码 `FRIENDS10` 获得本课程或您选择的任何订阅的 10%折扣。
 
 <https://academy.zerotomastery.io/a/aff_c0gnlvf7/external?affcode=441520_zytgk2dn>  
 
@@ -68,7 +69,7 @@
 
 这是一门高级课程，包含 6 个小时的视频内容，讲述如何使用 Kali Linux 来利用许多系统，以及 it 专业人员如何使用它来发现漏洞。你会看到每个有道德的黑客进入系统应该遵循的不同阶段。
 
-你从下载并安装 Kali Linux 开始，使用 Tor 匿名，然后使用信息收集工具收集尽可能多的目标信息，比如联系信息。
+你从下载并安装 Kali Linux 开始，使用 `Tor` 匿名，然后使用信息收集工具收集尽可能多的目标信息，比如联系信息。
 
 然后使用不同的网站黑客工具对网站进行入侵，窃取数据库。您还将学习网络黑客和执行嗅探从网络中窃取任何数据和执行社会工程，等等。
 
@@ -84,9 +85,9 @@
 
 这是一个微型课程，包含超过 3 个小时的视频内容，面向希望进入网络安全世界的初学者，学习使用不同的工具来利用 web 应用程序中的各种漏洞，控制系统和网络，扫描它们，以及在一个课程中学习更多内容。
 
-您将开始入侵系统，方法是使用 NMAP 扫描网络，找到开放的端口来利用它们，使用 CUPP 生成密码列表，并使用美杜莎进行暴力攻击。
+您将开始入侵系统，方法是使用 `NMAP` 扫描网络，找到开放的端口来利用它们，使用 `CUPP` 生成密码列表，并使用美杜莎进行暴力攻击。
 
-稍后，您将使用 Metasploit 攻击不同的目标，并使用 HASHCAT & JOHN THE RIPPER 等工具破解加密的密码。稍后，您将使用 SQLmap 攻击网站，并学习网络钓鱼。
+稍后，您将使用 `Metasploit` 攻击不同的目标，并使用 `HASHCAT` 和 `JOHN THE RIPPER` 等工具破解加密的密码。稍后，您将使用 `SQLmap` 攻击网站，并学习网络钓鱼。
 
 **这里是加入本课程的链接** — [Kali Linux —初学者黑客](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fkali-linux-hacking-for-beginners%2F)
 
@@ -96,9 +97,9 @@
 
 本课程比以前的课程更全面，您将执行攻击不同目标的真实场景。您将使用 Python 语言和 JavaScript 创建您的有效负载(病毒)来探索特定的漏洞。
 
-您将学习如何破解网络使用许多不同的工具，并执行各种行动，如 MITM 和窃取网络的数据。
+您将学习如何破解网络使用许多不同的工具，并执行各种行动，如 `MITM` 和窃取网络的数据。
 
-然后你会学习 python 语言，用 python 做一个 mac 地址转换器，用 Tor 保持匿名。稍后，您将使用 [Python](https://javarevisited.blogspot.com/2021/05/python-interview-questions-answers-for-beginners.html) 创建恶意软件，学习 [JavaScript 语言](https://javarevisited.blogspot.com/2018/06/top-10-courses-to-learn-javascript-in.html)利用浏览器，并学习 web 应用渗透工具。
+然后你会学习 python 语言，用 python 做一个 mac 地址转换器，用 `Tor` 保持匿名。稍后，您将使用 [Python](https://javarevisited.blogspot.com/2021/05/python-interview-questions-answers-for-beginners.html) 创建恶意软件，学习 [JavaScript 语言](https://javarevisited.blogspot.com/2018/06/top-10-courses-to-learn-javascript-in.html)利用浏览器，并学习 web 应用渗透工具。
 
 **这里是加入本课程的链接** — [用 Python、JavaScript 和 Kali Linux 进行道德黑客](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fethical-hacking-with-python-javascript-and-kali-linux%2F)
 
@@ -113,19 +114,24 @@
 以下是您将在本课程中学到的内容
 
 1.  如何安装 Kali Linux
+
 2.  如何使用终端/命令行，
+
 3.  bash 脚本
+
 4.  道德黑客的工具和特性，等等。
 
 该课程重点关注 Kali Linux，但大部分内容也适用于其他版本的 Linux，这意味着不仅是网络安全专业人员、Pen 测试人员或道德黑客，程序员和 DevOps 工程师也可以参加该课程来学习关键的 Linux 概念。
 
 你可以在 YouTube、免费代码营 YouTube 频道或这里免费观看本课程
 
-## 7.[完整的道德黑客课程](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpenetration-testing%2F)【Udemy 课程】
+
+
+## 7. [完整的道德黑客课程](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fpenetration-testing%2F)【Udemy 课程】
 
 另一个使用 Kali Linux 从零开始学习道德黑客的伟大课程，有超过 24 小时的视频内容，这是一个完整的道德黑客课程，只需要互联网连接和学习渗透测试技能的愿望。
 
-你将从建立你的黑客环境开始，学习终端的一些基本命令行，然后你将学习如何通过隐藏你的 IP 和改变你的 mac 地址来匿名上网冲浪。
+你将从建立你的黑客环境开始，学习终端的一些基本命令行，然后你将学习如何通过隐藏你的 IP 和改变你的 MAC 地址来匿名上网冲浪。
 
 您将发现人们如何进入您的网络，并克隆您的接入点和 DNS 黑客。接下来，您将了解如何使用 SQL 注入和暴力破解密码来入侵网站。
 
@@ -159,6 +165,4 @@
 
 感谢您阅读本文。如果你喜欢这些*最好的 Kali Linux 在线课程和教程供初学者在 2023 年学习，那么*请与你的朋友和同事分享。如果您有任何问题或反馈，请留言。
 
-**p . s .**——如果你渴望学习道德黑客并成为一名安全工程师，但负担不起这些课程或寻找免费的道德黑客和 Pen 测试课程，那么你也可以查看这个 [**Start Kali Linux，道德黑客和渗透测试！【免费】**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fethical-hacker%2F)Udemy 上的课程。它是完全免费的，已经有超过 27 万名学生加入了这门课程。
-
-</javarevisited/10-free-courses-to-learn-ethical-hacking-and-penetration-testing-for-beginners-84e40104aa6c> 
+**p.s.**——如果你渴望学习道德黑客并成为一名安全工程师，但负担不起这些课程或寻找免费的道德黑客和渗透测试课程，那么你也可以查看这个 [**Start Kali Linux，道德黑客和渗透测试！【免费】**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fethical-hacker%2F)Udemy 上的课程。它是完全免费的，已经有超过 27 万名学生加入了这门课程。

@@ -1,16 +1,14 @@
+
 # 其他有用的方法
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/io/misc.html`](https://docs.oracle.com/javase/tutorial/essential/io/misc.html)
 
 本课程中未涵盖的一些有用方法在此处介绍。本节涵盖以下内容：
 
-+   确定 MIME 类型
-
-+   默认文件系统
-
-+   路径字符串分隔符
-
-+   文件系统的文件存储器
++ 确定 MIME 类型
++ 默认文件系统
++ 路径字符串分隔符
++ 文件系统的文件存储器
 
 ## 确定 MIME 类型
 
@@ -28,7 +26,6 @@ try {
 } catch (IOException x) {
     System.err.println(x);
 }
-
 ```
 
 注意，如果无法确定内容类型，`probeContentType`会返回 null。
@@ -37,7 +34,7 @@ try {
 
 如果默认的方法不符合您的需求，您可以提供自定义的[`FileTypeDetector`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/spi/FileTypeDetector.html)。
 
-``电子邮件``示例使用`probeContentType`方法。
+`电子邮件`示例使用`probeContentType`方法。
 
 ## 默认文件系统
 
@@ -46,7 +43,6 @@ try {
 ```java
 PathMatcher matcher =
     FileSystems.getDefault().getPathMatcher("glob:*.*");
-
 ```
 
 ## 路径字符串分隔符
@@ -56,7 +52,6 @@ POSIX 文件系统的路径分隔符是正斜杠`/`，Microsoft Windows 的路�
 ```java
 String separator = File.separator;
 String separator = FileSystems.getDefault().getSeparator();
-
 ```
 
 [`getSeparator`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileSystem.html#getSeparator--)方法也用于检索任何可用文件系统的路径分隔符。
@@ -71,7 +66,6 @@ String separator = FileSystems.getDefault().getSeparator();
 for (FileStore store: FileSystems.getDefault().getFileStores()) {
    ...
 }
-
 ```
 
 如果要检索特定文件所在的文件存储器，请使用`Files`类中的`getFileStore`方法，如下所示：
@@ -79,7 +73,6 @@ for (FileStore store: FileSystems.getDefault().getFileStores()) {
 ```java
 Path file = ...;
 FileStore store= Files.getFileStore(file);
-
 ```
 
 `DiskUsage`示例使用`getFileStores`方法。

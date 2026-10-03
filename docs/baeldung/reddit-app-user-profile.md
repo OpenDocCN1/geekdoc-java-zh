@@ -1,18 +1,19 @@
+
 # Reddit 应用程序中的用户资料
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/reddit-app-user-profile>
 
-## 1。概述
+## 1. 概述
 
-在这篇文章中，我们将为我们的 Reddit 应用程序[的用户建立**档案，允许他们配置用户特定的偏好。**](/web/20221208143841/https://www.baeldung.com/case-study-a-reddit-app-with-spring)
+在这篇文章中，我们将为我们的 Reddit 应用程序的用户建立档案，允许他们配置用户特定的偏好。
 
-目标很简单——不用让用户每次安排新帖子时都填写相同的数据，**他们可以设置一次——在他们的个人资料**的首选项中。当然，用户可以随时为每个帖子调整这些设置，但他们不必这样做。
+目标很简单——不用让用户每次安排新帖子时都填写相同的数据，**他们可以设置一次——在他们的个人资料的首选项中**。当然，用户可以随时为每个帖子调整这些设置，但他们不必这样做。
 
-## 2。`Preference`实体
+## 2. `Preference`实体
 
-总的来说，现在可以在应用程序中配置的大多数东西都将成为可以在用户配置文件中全局配置的**。**
+总的来说，现在可以在应用程序中配置的大多数东西都将成为可以在用户配置文件中全局配置的。
 
-首先，让我们从一个`Preference`实体开始:
+首先，让我们从一个`Preference`实体开始：
 
 ```java
 @Entity
@@ -37,11 +38,11 @@ public class Preference {
 }
 ```
 
-那么，我们现在可以配置什么呢？简而言之，应用程序中的几乎所有设置都默认使用—**。**
+那么，我们现在可以配置什么呢？简而言之，应用程序中的几乎所有设置都默认使用。
 
 我们还存储了用户的电子邮件，让他们能够收到关于他们的帖子发生了什么的通知。
 
-现在，让我们**将偏好链接到用户**:
+现在，让我们将偏好链接到用户：
 
 ```java
 @Entity
@@ -54,11 +55,11 @@ public class User {
 }
 ```
 
-如您所见，我们在`User`和`Preference.` 之间有一个简单的一对一关系
+如您所见，我们在`User`和`Preference`之间有一个简单的一对一关系。
 
-## 3。简单个人资料页面
+## 3. 简单个人资料页面
 
-首先，让我们创建一个简单的个人资料页面:
+首先，让我们创建一个简单的个人资料页面：
 
 ```java
 <form >
@@ -92,15 +93,15 @@ function editPref(){
 
 这里没有什么新奇的东西，只有一些普通的 HTML 和 JavaScript。
 
-让我们也添加一个快速链接到新的配置文件:
+让我们也添加一个快速链接到新的配置文件：
 
 ```java
 <h1>Welcome, <a href="profile" sec:authentication="principal.username">username</a></h1>
 ```
 
-## 4。API
+## 4. API
 
-这里是控制器，用于创建和编辑用户的偏好:
+这里是控制器，用于创建和编辑用户的偏好：
 
 ```java
 @Controller
@@ -125,7 +126,7 @@ public class UserPreferenceController {
 }
 ```
 
-最后，我们需要确保在创建用户时，其首选项也是未初始化的:
+最后，我们需要确保在创建用户时，其首选项也是未初始化的：
 
 ```java
 public void loadAuthentication(String name, OAuth2AccessToken token) {
@@ -138,11 +139,11 @@ public void loadAuthentication(String name, OAuth2AccessToken token) {
 }
 ```
 
-## 5。加载/使用首选项
+## 5. 加载/使用首选项
 
 现在，让我们看看如何使用这些首选项，并在需要时填充它们。
 
-我们将从主`Post Schedule`页面开始，在这里我们将加载用户的偏好:
+我们将从主`Post Schedule`页面开始，在这里我们将加载用户的偏好：
 
 ```java
 $(function() {
@@ -154,7 +155,7 @@ $(function() {
 });
 ```
 
-## 6。测试和结论
+## 6. 测试和结论
 
 我们差不多完成了——我们只需要为我们刚刚介绍的新概要文件实体实现一些基本的集成测试。
 

@@ -1,3 +1,4 @@
+
 # 课程：使用其他 Swing 功能
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/misc/index.html`](https://docs.oracle.com/javase/tutorial/uiswing/misc/index.html)
@@ -16,7 +17,7 @@
 
 ## 如何使用 JLayer 装饰组件
 
-`JLayer`是 Swing 组件的灵活而强大的*装饰器*。它使您能够在组件上绘制并响应组件事件，而无需直接修改底层组件。
+`JLayer`是 Swing 组件的灵活而强大的装饰器。它使您能够在组件上绘制并响应组件事件，而无需直接修改底层组件。
 
 ## 如何使用操作
 

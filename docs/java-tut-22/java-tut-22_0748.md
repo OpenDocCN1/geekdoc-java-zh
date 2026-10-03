@@ -1,3 +1,4 @@
+
 # 教训：通知
 
 > 原文：[`docs.oracle.com/javase/tutorial/jmx/notifs/index.html`](https://docs.oracle.com/javase/tutorial/jmx/notifs/index.html)
@@ -69,7 +70,6 @@ public class Hello
     private static final int DEFAULT_CACHE_SIZE = 200;
     private long sequenceNumber = 1;
 }
-
 ```
 
 此`Hello` MBean 实现扩展了`NotificationBroadcasterSupport`类。`NotificationBroadcasterSupport`实现了`NotificationEmitter`接口。
@@ -108,21 +108,18 @@ public class Hello
 
     ```java
     unzip jmx_examples.zip
-
     ```
 
 1.  从`work_dir`目录中编译示例 Java 类。
 
     ```java
     javac com/example/*.java
-
     ```
 
 1.  启动`Main`应用程序。
 
     ```java
     java com.example.Main
-
     ```
 
     生成一个确认，表示`Main`正在等待某些事件发生。
@@ -131,7 +128,6 @@ public class Hello
 
     ```java
     jconsole
-
     ```
 
     显示新连接对话框，呈现可以连接的正在运行的 JMX 代理列表。

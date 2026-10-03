@@ -1,18 +1,19 @@
-# OkHttp 指南
+
+## OkHttp 指南
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/guide-to-okhttp>
 
-## 1。简介
+### 1. 简介
 
-在本教程中，我们将探索发送不同类型的 HTTP 请求，以及接收和解释 HTTP 响应的基础知识。然后我们将学习如何用 OkHttp 配置客户端[。](https://web.archive.org/web/20220925052718/https://square.github.io/okhttp/)
+在本教程中，我们将探索发送不同类型的 HTTP 请求，以及接收和解释 HTTP 响应的基础知识。然后我们将学习如何用 OkHttp 配置客户端。
 
 最后，我们将讨论用定制头、超时、响应缓存等配置客户机的更高级的用例。
 
-## 2。OkHttp 概述
+### 2. OkHttp 概述
 
 OkHttp 是一个适用于 Android 和 Java 应用程序的高效 HTTP & HTTP/2 客户端。
 
-它附带了一些高级功能，比如连接池(如果 HTTP/2 不可用)、透明 GZIP 压缩和响应缓存，以完全避免网络重复请求。
+它附带了一些高级功能，比如连接池（如果 HTTP/2 不可用）、透明 GZIP 压缩和响应缓存，以完全避免网络重复请求。
 
 它还能够从常见的连接问题中恢复；在连接失败时，如果一个服务有多个 IP 地址，它可以重试对备用地址的请求。
 
@@ -22,7 +23,7 @@ OkHttp 支持 Android 2.3 及以上版本。对于 Java，最低要求是 1.7。
 
 现在我们已经给出了一个简要的概述，让我们来看一些使用示例。
 
-## 3。Maven 依赖关系
+### 3. Maven 依赖关系
 
 首先，我们将把这个库作为一个依赖项添加到`pom.xml`中:
 
@@ -36,9 +37,9 @@ OkHttp 支持 Android 2.3 及以上版本。对于 Java，最低要求是 1.7。
 
 要查看这个库的最新依赖项，请查看 [Maven Central](https://web.archive.org/web/20220925052718/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22com.squareup.okhttp3%22%20AND%20a%3A%22okhttp%22) 上的页面。
 
-## 4。用 OkHttp 同步 GET
+### 4. 用 OkHttp 同步 GET
 
-为了发送同步 GET 请求，我们需要基于一个`URL`构建一个`Request`对象，并制作一个`Call`。在它执行之后，我们将得到一个`Response` 的实例:
+为了发送同步 GET 请求，我们需要基于一个`URL`构建一个`Request`对象，并制作一个`Call`。在它执行之后，我们将得到一个`Response`的实例:
 
 ```java
 @Test
@@ -54,7 +55,7 @@ public void whenGetRequest_thenCorrect() throws IOException {
 }
 ```
 
-## 5。与 OkHttp 的异步 GET
+### 5. 与 OkHttp 的异步 GET
 
 为了进行异步 GET，我们需要让一个`Call`入队。一个`Callback`允许我们读取可读的响应。这发生在响应头准备好之后。
 
@@ -81,7 +82,7 @@ public void whenAsynchronousGetRequest_thenCorrect() {
 }
 ```
 
-## 6。用查询参数获取
+### 6. 用查询参数获取
 
 最后，为了向 GET 请求添加查询参数，我们可以利用`HttpUrl.Builder`。
 
@@ -108,7 +109,7 @@ public void whenGetRequestWithQueryParameter_thenCorrect()
 }
 ```
 
-## 7。发布请求
+### 7. 发布请求
 
 现在让我们看一个简单的 POST 请求，我们构建一个`RequestBody`来发送参数`“username”`和`“password”`:
 
@@ -135,9 +136,9 @@ public void whenSendPostRequest_thenCorrect()
 
 我们的文章“用 OkHttp 发布请求的快速指南”有更多用 OkHttp 发布请求的例子。
 
-## 8。文件上传
+### 8. 文件上传
 
-### 8.1。上传文件
+#### 8.1. 上传文件
 
 在这个例子中，我们将演示如何上传一个`File`。我们将使用`MultipartBody.Builder`上传“`test.ext”` 文件:
 
@@ -163,7 +164,7 @@ public void whenUploadFile_thenCorrect() throws IOException {
 }
 ```
 
-### 8.2。获取文件上传进度
+#### 8.2. 获取文件上传进度
 
 然后我们将学习如何获得一个`File`上传的进度。我们将扩展`RequestBody` 来获得上传过程的可见性。
 
@@ -252,14 +253,14 @@ protected class CountingSink extends ForwardingSink {
 
 请注意:
 
-*   当将`ForwardingSink` 扩展到`“CountingSink,”`时，我们覆盖了 `write()`方法来计算写入(传输)的字节数
-*   当将`RequestBody` 扩展到`ProgressRequestWrapper,`时，我们重写了`writeTo()`方法来使用我们的`“ForwardingSink”`
+*   当将`ForwardingSink`扩展到`CountingSink`时，我们覆盖了`write()`方法来计算写入（传输）的字节数
+*   当将`RequestBody`扩展到`ProgressRequestWrapper`时，我们重写了`writeTo()`方法来使用我们的`ForwardingSink`
 
-## 9。设置自定义标题
+### 9. 设置自定义标题
 
-### 9.1。在请求上设置标题
+#### 9.1. 在请求上设置标题
 
-要在`Request,`上设置任何自定义标题，我们可以使用一个简单的`addHeader`调用:
+要在`Request`上设置任何自定义标题，我们可以使用一个简单的`addHeader`调用:
 
 ```java
 @Test
@@ -275,7 +276,7 @@ public void whenSetHeader_thenCorrect() throws IOException {
 }
 ```
 
-### 9.2。设置默认标题
+#### 9.2. 设置默认标题
 
 在这个例子中，我们将看到如何在客户机上配置一个默认的头，而不是在每个请求上设置它。
 
@@ -301,7 +302,7 @@ public void whenSetDefaultHeader_thenCorrect()
 }
 ```
 
-这里的`DefaultContentTypeInterceptor,`是`Interceptor`的扩展版本:
+这里的`DefaultContentTypeInterceptor`是`Interceptor`的扩展版本:
 
 ```java
 public class DefaultContentTypeInterceptor implements Interceptor {
@@ -322,15 +323,17 @@ public class DefaultContentTypeInterceptor implements Interceptor {
 
 请注意，拦截器将头添加到原始请求中。
 
-## 10。 **不跟随重定向**
+### 10. 不跟随重定向
 
 在这个例子中，我们将看到如何配置`OkHttpClient`来停止跟随重定向。
 
-默认情况下，如果一个 GET 请求用一个`HTTP 301 Moved Permanently,`来回答，那么重定向就会自动执行。在某些用例中，这完全没问题，但在其他用例中，这并不理想。
+默认情况下，如果一个 GET 请求用一个`HTTP 301 Moved Permanently`来回答，那么重定向就会自动执行。在某些用例中，这完全没问题，但在其他用例中，这并不理想。
 
 为了实现这种行为，当我们构建客户端时，我们需要将`followRedirects`设置为`false`。
 
 请注意，响应将返回一个`HTTP 301`状态代码:
+
+
 
 ```java
 @Test
@@ -352,13 +355,13 @@ public void whenSetFollowRedirects_thenNotRedirected()
 } 
 ```
 
-如果我们用一个`true`参数打开重定向(或者完全删除它)，客户端将遵循重定向，测试将失败，因为返回代码将是 HTTP 200。
+如果我们用一个`true`参数打开重定向（或者完全删除它），客户端将遵循重定向，测试将失败，因为返回代码将是 HTTP 200。
 
-## 11。超时
+# 11. 超时
 
-当对方不可达时，我们可以使用超时来使呼叫失败。网络故障可能是由客户端连接问题、服务器可用性问题或两者之间的任何问题引起的。OkHttp 支持连接、读取和写入超时。
+当对方不可达时，我们可以使用超时来使呼叫失败。网络故障可能是由客户端连接问题、服务器可用性问题或两者之间的任何问题引起的。`OkHttp`支持连接、读取和写入超时。
 
-在这个例子中，我们用 1 秒的`readTimeout`构建了我们的客户端，而 URL 服务有 2 秒的延迟:
+在这个例子中，我们用 1 秒的`readTimeout`构建了我们的客户端，而 URL 服务有 2 秒的延迟：
 
 ```java
 @Test
@@ -381,11 +384,11 @@ public void whenSetRequestTimeout_thenFail()
 
 请注意，测试将会失败，因为客户端超时低于资源响应时间。
 
-## 12。取消通话
+# 12. 取消通话
 
 我们可以使用`Call.cancel()`立即停止正在进行的通话。如果一个线程正在写一个请求或者读一个响应，一个`IOException`将被抛出。
 
-当不再需要通话时，我们使用这种方法来保存网络，例如当用户离开某个应用程序时:
+当不再需要通话时，我们使用这种方法来保存网络，例如当用户离开某个应用程序时：
 
 ```java
 @Test(expected = IOException.class)
@@ -419,16 +422,16 @@ public void whenCancelRequest_thenCorrect()
 
     Response response = call.execute();
 
-    logger.debug(Call was expected to fail, but completed: " 
+    logger.debug("Call was expected to fail, but completed: " 
       + (System.nanoTime() - startNanos) / 1e9f, response);
 }
 ```
 
-## 13。响应缓存
+# 13. 响应缓存
 
 为了创建一个`Cache`，我们需要一个可以读写的缓存目录，以及对缓存大小的限制。
 
-客户端将使用它来缓存响应:
+客户端将使用它来缓存响应：
 
 ```java
 @Test
@@ -459,14 +462,14 @@ public void  whenSetResponseCache_thenCorrect()
 
 缓存文件夹也将充满缓存文件。
 
-第二次调用执行将产生相反的效果，因为响应已经被缓存了。这意味着对`networkResponse`的调用将返回`null,`，而对`cacheResponse`的调用将从缓存中返回响应。
+第二次调用执行将产生相反的效果，因为响应已经被缓存了。这意味着对`networkResponse`的调用将返回`null`，而对`cacheResponse`的调用将从缓存中返回响应。
 
 为了防止响应使用缓存，我们可以使用`CacheControl.FORCE_NETWORK`。为了防止它使用网络，我们可以使用`CacheControl.FORCE_CACHE`。
 
-需要注意的是，如果我们使用`FORCE_CACHE,`并且响应需要网络，`OkHttp`将返回一个 504 不可满足请求响应。
+需要注意的是，如果我们使用`FORCE_CACHE`并且响应需要网络，`OkHttp`将返回一个 504 不可满足请求响应。
 
-## 14。结论
+# 14. 结论
 
-在本文中，我们探索了几个如何使用 OkHttp 作为 HTTP & HTTP/2 客户机的例子。
+在本文中，我们探索了几个如何使用 `OkHttp` 作为 HTTP & HTTP/2 客户机的例子。
 
 与往常一样，示例代码可以在 [GitHub 项目](https://web.archive.org/web/20220925052718/https://github.com/eugenp/tutorials/tree/master/libraries-http)中找到。

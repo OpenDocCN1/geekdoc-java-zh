@@ -1,73 +1,42 @@
+
 # Javascript 或 Java Web 应用开发第 2 卷：关联与类层结构
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ![](img/26c953d1023457333859f69258a99556_1_0.png)
 
-
-
-
-
-
 ![](img/26c953d1023457333859f69258a99556_1_1.png)
-
-
-
 
 ![](img/26c953d1023457333859f69258a99556_1_2.png)
 
-
-
-
-
 ![](img/26c953d1023457333859f69258a99556_1_3.png)
-
-
-
-
 
 ![](img/26c953d1023457333859f69258a99556_1_4.png)
 
-
-
-
-
 ![](img/26c953d1023457333859f69258a99556_1_5.png)
-
-
-
 
 OLDENBOURG
 
 ## 作者
 
 Gerd Wagner 教授、博士
+
 BTU Cottbus-Senftenberg 大学
+
 互联网技术系
+
 Konrad Wachsmann-Allee 5
+
 03046 Cottbus
+
 wagner@b-tu.de
 
 Mircea Diaconescu
+
 dimircea@gmail.com
 
-
-
-
-
 2021年 Gerd Wagner
+
 封面设计：Gruter
+
 排版：Integra Software Services
 
 ## 前言
@@ -80,59 +49,9 @@ dimircea@gmail.com
 
 前言 — VII
 
-
-
-
-
-
-
-
-
 12.5 种类与角色 — LXX七
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 https://doi.org/10.1015/9783110500325-204
-
 
 表 1.1 功能类型 — 8
 
@@ -150,7 +69,6 @@ https://doi.org/10.1015/9783110500325-204
 功能性关联对应于数学中所谓的函数（function），而多对多关联对应于数学中所谓的关系（relation）。
 
 在 OO 建模和编程中，单向关联对应于引用属性（reference property），而双向关联对应于一对互反的引用属性。
-
 
 为对象类型（或类）定义的属性，如果其值是指向另一个类型或同类型类型对象的引用，则被称为引用属性。例如，下方图 1.1 所示的委员会（Committee）有一个引用属性 `chair`，其值是指向俱乐部成员（ClubMember）对象的引用。
 
@@ -179,13 +97,10 @@ https://doi.org/10.1015/9783110500325-204
 | 功能性关联 (functional association) | | | function |
 
 我们首先讨论引用属性，它们在“无关联”的类模型中隐式地表示二元关联。
+
 ## 1.1 引用和引用属性
 
 引用可以是人类可读的，也可以是内部对象引用。人类可读的引用指向人类交流中使用的标识符，例如天体的唯一名称、书籍的 ISBN 以及公司员工的编号。内部对象引用指向 OOP 对象的计算机内存地址，从而为访问主内存中的对象提供了高效机制。
-
-
-
-
 
 ## 1.1 引用与引用属性
 
@@ -220,8 +135,8 @@ https://doi.org/10.1015/9783110500325-204
 
 1. 对象创建依赖：带有另一个对象引用的对象只能在被引用对象创建后才能创建。
 2. 对象销毁依赖：被另一个对象引用的对象只能在以下情况后被销毁：
-1. 引用对象首先被销毁（级联删除 CASCADE 策略），或者
-2. 引用对象中的引用被删除（删除引用 DROP-REFERENCE 策略）或被另一个引用替换。
+   1. 引用对象首先被销毁（级联删除 CASCADE 策略），或者
+   2. 引用对象中的引用被删除（删除引用 DROP-REFERENCE 策略）或被另一个引用替换。
 
 对于应用程序模型类中的每个引用属性，我们必须选择这两种属性删除策略中的哪一个适用。
 
@@ -229,20 +144,13 @@ https://doi.org/10.1015/9783110500325-204
 
 通常，对象创建依赖在用户界面中管理，通过不允许用户输入 ID 引用属性的值来实现。
 
-
 源类和目标类之间的单向关联可以表示为源类的引用属性。这在下图 1.3 中通过两个单向关联所示：多对一和多对多关联。
 
 ![](img/26c953d1023457333859f69258a99556_23_0.png)
 
 注意，在某种程度上，我们消除了显式关联，并将其替换为相应的引用属性，从而得到可以用经典的面向对象语言直接编码的类模型。面向对象语言确实
 
-
-
-
-
-
 语言不支持将关联作为一等公民。它们没有用于定义关联的语言元素。因此，一个 OOP 类设计模型（我们称之为 OO 类模型）不应包含任何显式关联。
-
 
 当我们以 UML 类图的形式创建信息模型时，我们通常会得到一个包含一个或多个其末端没有明确所有权的关联的模型，例如图 1.4 所示。当关联的末端都没有所有权点时（如本例所示），这意味着模型没有指定如何通过引用属性（reference properties）来表示（或实现）该关联。这种关联没有方向性。根据 UML 2.5 规范，此类关联的末端由关联自身“所有”，而不是由参与其中的任何类所所有。
 
@@ -263,7 +171,6 @@ https://doi.org/10.1015/9783110500325-204
 ## 1 引用属性与单向关联
 
 - 2. 在 chairedCommittee 关联末端放置所有权点，形成下文图 1.8 所示的完成模型。
-
 - 3. 通过在两个关联末端都放置所有权点使关联变为双向，如图 1.5 所示，这意味着该关联通过一对互逆的引用属性 `Committee::chair` 和 `ClubMember::chairedCommittee` 以冗余方式实现，正如第 7 章讨论的那样。
 
 | Committee | chair | ClubMember |
@@ -276,7 +183,6 @@ https://doi.org/10.1015/9783110500325-204
 
 对于非一对一的功能性关联，最简单的设计是根据其功能定义关联的方向，将关联所有权点放置在多重性为 `0..1` 或 `1` 的关联末端。。对于非方向性的一对一或多对多关联，我们可以随心所欲地选择方向，即我们可以将所有权点放置在任何一个关联末端。
 
-
 下图 1.6 所示的模型（关于出版社和书）作为我们单向功能性关联的示例。注意，它包含了单向的多对一关联 `Book-has-Publisher`。
 
 | Publisher | Book |
@@ -284,6 +190,7 @@ https://doi.org/10.1015/9783110500325-204
 | name : String | isbn : String (id) |
 | address : String | title : String |
 | 0.1 | * * |
+
 **图 1.6:** 具有单向关联（多值引用属性）的出版社。
 
 我们可能还需要处理表示单向关联的引用属性。例如，单向
@@ -313,11 +220,9 @@ https://doi.org/10.1015/9783110500325-204
 
 这种替换过程在图 1.8 的一对一单向关联案例中说明，其中引用属性 `chairedCommittee` 的唯一约束通过 `{key}` 修饰符表示。
 
-
 | chairedCommittee | ClubMember |
 |---|---|---|
 | name : String | 0.1 | 1 |
-
 | Committee | ClubMember |
 |---|---|
 | name : String | chairedCommittee[0..1] : Committee {key} |
@@ -339,6 +244,7 @@ y : Integer |
 y : Integer |
 
 
+
 在我们示例模型——“出版社-书-作者”信息模型中，我们必须将两个单向关联替换为合适的引用属性。在第一步中，我们将图 1.6 模型中的多对一关联 `Book-has-Publisher` 替换为 `Book` 类中的功能性引用属性 `publisher`，形成图 1.10 所示的 OO 类模型：
 
 | Book | Publisher |
@@ -350,12 +256,7 @@ y : Integer |
 
 图 1.10: 出版社和书的 OO 类模型。
 
-
-
-
-
-
-请注意，由于“书籍拥有出版社”（Book-has-Publisher）关联的目标关联多重性为 0..1，因此我们必须通过将其多重性定义为 0..1，将新属性 `publisher` 声明为可选。
+请注意，由于“书籍拥有出版社”（`Book-has-Publisher`）关联的目标关联多重性为 0..1，因此我们必须通过将其多重性定义为 0..1，将新属性 `publisher` 声明为可选。
 
 可以通过下表所示的 `Book` 和 `Publisher` 两个类的示例数据填充来说明此面向对象类模型及其引用属性 `publisher` 的含义：
 
@@ -373,7 +274,7 @@ y : Integer |
 
 注意 `Book` 表中“Publisher”列的值是唯一的名称，它们引用了 `Publisher` 表中的某行。由于相应的引用属性 `publisher` 是可选的，某些行的“Publisher”列可能没有值。
 
-在第二步中，我们将图 1.7 模型中的多对多“书籍拥有作者”（Book-has-Author）关联替换为 `Book` 类中的多值引用属性 `authors`，从而得到了图 1.1 所示的面向对象类。
+在第二步中，我们将图 1.7 模型中的多对多“书籍拥有作者”（`Book-has-Author`）关联替换为 `Book` 类中的多值引用属性 `authors`，从而得到了图 1.1 所示的面向对象类。
 
 | 书籍 | 出版社 |
 |---|---|
@@ -383,13 +284,12 @@ y : Integer |
 | publisher[0..1] : Publisher | |
 | authors[*] : Author | |
 
-| 作者 | |
-|---|---|
+| 作者 |
+|---|
 | personid : integer (id) |
 | name : String |
 
 **图 1.11：** `Book`、`Publisher` 和 `Author` 类的面向对象类模型。
-
 
 此面向对象类模型及其引用属性 `Book::publisher` 和 `Book::authors` 的含义可以通过三个模型类的示例数据填充来说明：
 
@@ -402,7 +302,7 @@ y : Integer |
 |---|---|---|---|---|
 | 0553345482 | The Mind's I | 1982 | 1, 2 | Bantam Books |
 | 1463974762 | The Critique of Pure Reason | 2011 | 3 | |
-| 1928565379 | The Critique of Practical Reason | 2009 | 3 | | |
+| 1928565379 | The Critique of Practical Reason | 2009 | 3 | |
 | 0465030793 | I Am A Strange Loop | 2000 | 2 | Basic Books |
 
 | 作者 ID | 名称 |
@@ -415,7 +315,6 @@ y : Integer |
 
 特定平台实现模型仍然可以用 UML 类图的形式表示，但它仅包含可以在所选平台中直接编码的建模元素。因此，对于任何考虑的平台，都需要两个准则：1) 如何制作特定平台的实现模型，2) 如何对该模型进行编码。
 
-
 用于用户界面（UI）中数据输入和输出的小部件（widgets）通常对应于模型中定义的属性。我们必须区分对应各种类型的输入字段与对应枚举属性或引用属性的选择部件（如选择列表）。在 UI 中使用选择控件而非输入字段来表示引用属性，可以防止输入无效的 ID，从而维护引用完整性。
 
 通常情况下，单值引用属性无论属性填充了多少个对象，都可以渲染为 UI 中的单选列表。如果引用属性的范围足够小（例如小于 7 个），则可以使用单选按钮组。
@@ -423,14 +322,13 @@ y : Integer |
 多值引用属性可以渲染为 UI 中的多选列表。然而，当有许多选项（例如超过 20 个）时，相应的 HTML 多选控件实际上是不可用的，因为选择方式太分散。在只有少数选项（例如不超过 7 个）的特殊情况下，对于 UI 中所有关联对象的列表，我们需要开发一种特殊的 UI 小部件，允许从引用属性范围中添加（删除）对象。
 
 这种多选控件由以下部分组成：
+
 - 1. 关联对象的 HTML 列表，每个项目包含一个删除按钮；
 - 2. 一个选择控件，允许多值引用属性范围内添加新的关联对象。
-
 
 默认情况下，非功能关联将目标类的实例关联到源类的任何实例，这意味着对应多值引用属性是集合（sets）。还存在某些情况，非功能关联是有序的，因此对应引用属性的值的形式为有序集合。
 
 在以下示例中，`publishedBooks` 关联无序，而 `authors` 关联是有序的，因为作者的顺序是有意义的。注意在 UML 类图中，有序关联用 `{ordered}` 注解标记。
-
 
 | 出版社 | 已出版书籍 | 作者 (有序) | 作者 |
 |---|---|---|---|
@@ -443,18 +341,16 @@ y : Integer |
 
 多值引用属性的两个重要集合类型是集合（sets），对于包（多集合）和序列（有序多集合），多值引用属性的集合类型是包或序列，这可以在类图中使用 `{nonunique}`（或 `{ordered, nonunique}`）注解表示。注意，使用列表（如 JS 数组或 `List` 接口）作为有序和无序多值属性的范围是非常常见的。
 
-
 如果你想查找以下测验的答案，可以查看我们的讨论论坛。如果你在论坛中没有找到答案，可以发帖提问。
 
-
 说一个关联是“一对一”意味着什么？
+
 意味着它是（选择一个）：
 
 - 双向的
 - 同时具有功能性和完全性
 - 是功能性的
 - 同时具有功能性和反向性
-
 
 对于域为 C 范围为 D 的引用属性 `p`，在何时必须检查引用完整性（选择一个或多个）：
 
@@ -464,7 +360,6 @@ y : Integer |
 - □ 一个 D 类型对象被销毁。
 - □ 创建了一个新的 D 类型对象。
 
-
 单向二元关联是功能性的，当且仅当（选择一个）：
 
 - O 源类的每个对象最多关联一个目标类对象。
@@ -472,17 +367,10 @@ y : Integer |
 - O 源类的每个对象至少关联一个目标类对象。
 - O 源类的每个对象恰好关联一个目标类对象。
 
-
 假设我们有一个具有标准标识符属性 `id` 的对象 B，以及一个具有引用 `B::id` 的引用属性 `b_id` 的对象 A。此外，有一个 `b.id = 11` 的 B 类型对象 b 以及一个 `a.b_id = 11` 的 A 类型对象 a。以下描述是正确的？选择一个或多个：
 
-- □ 当对象 a 中的 引用被取消赋值（在 JS 中将 `a.b_id` 设置为 `undefined`，在 Java 中设为 `null`）且没有其他对象引用 b 时，对象 b 可以被销毁。
+- □ 当对象 a 中的引用被取消赋值（在 JS 中将 `a.b_id` 设置为 `undefined`，在 Java 中设为 `null`）且没有其他对象引用 b 时，对象 b 可以被销毁。
 - □ 只有在 b 被销毁之前，对象 a 才能被销毁。
-
-
-
-
-
-
 - 当对象 a 中的 ID 引用被重置为类型 B 的另一个对象时，b 可以被销毁，例如通过设置 `a.b_id = 7` 且没有其他对象引用 b。
 - 当 a 已经被销毁时，b 也可以被销毁。
 
@@ -494,7 +382,6 @@ y : Integer |
 - 如果 `p` 范围的基数（cardinality）不大于 7，可以使用复框组进行渲染。
 - 如果 `p` 范围的基数不大于 7，可以使用单选按钮组进行渲染。
 - 它始终可以通过单选择控件进行渲染。
-
 
 可以使用哪种“x-to-y”形式（其中 x,y 表示“一个”或“多个”）来表达一种关联既不是功能性的也不是反向功能的？
 
@@ -511,7 +398,6 @@ y : Integer |
 在推导出 JS 类模型并用 JavaScript 编码之前，我们首先介绍 JavaScript 语言的几个新元素，我们将在本书讨论的 JavaScript 代码中使用这些元素。
 
 ### 2.1 新的 JavaScript 元素
-
 
 ### 2.1.1 使用 let 和 const 的块作用域变量声明
 
@@ -531,7 +417,6 @@ odds = evens.map(v => v+1); // [1,3,5,7,9]
 // 代替 evens.map(function (v) { return v+1; });
 ```
 
-
 ```
 this.nums = [1,3,5,8,10,12,15,17];
 this.fives = [];
@@ -539,7 +424,6 @@ this.nums.forEach(v => { if (v % 5 === 0) this.fives.push(v); });
 // 代替 this.nums.forEach(
   function (v) { if (v % 5 === 0) this.fives.push(v); }););
 ```
-
 
 迭代对象包括字符串、数组、类数组（例如内置的 `arguments` 或 `HTMLCollection` 和 `NodeList` 的实例）以及 `TypedArray`、`Map` 和 `Set` 数据类型的实例，以及用户定义的可迭代对象。例如：
 
@@ -552,7 +436,6 @@ for (let dEl of divElems) {
 ```
 
 当不需要计数器变量时，*for-of* 循环通常比 *for* 循环方便。与 *forEach* 循环相比，*for-of* 循环允许遍历 `HTMLCollection` 并且可以使用 `break` 退出。
-
 
 模板字符串使用反引号（如 `` `...` ``）而不是双引号或单引号封闭，并允许对固定文本部分与变量/表达式组合形成的（可能是多行的）字符串值提供简洁语法。例如：
 
@@ -571,7 +454,6 @@ const user = {name: "Alice", age: 30};
 const {name, ...rest} = user;
 ```
 
-
 使用解构，参数字段被赋值给普通变量，从而简化了函数：
 
 ```javascript
@@ -580,13 +462,7 @@ function displayName({first, last}) {
 }
 ```
 
-
-
-
-
-
 注意，发布者（publisher）名称被用作 ID 引用，因为它是 `Publisher` 类的标准 ID。
-
 
 构建 JS 类模型的起点是一个面向对象（OO）的类模型，如图 1.10 所示。
 
@@ -594,14 +470,14 @@ function displayName({first, last}) {
 
 - 1. 为所有（非派生的）单值属性添加 `<get/set>` 刻型（stereotype），意味着它们具有隐式的 getter 和 setter。回想一下在 setter 中，会调用相应的检查操作（check operation），且只有当检查没有检测到任何约束违背时，才会设置属性。
 - 2. 为每个（非派生的）属性创建一个检查操作，以便在实现属性约束时有一个集中的位置置点。对于一个标准的 ID 属性（例如 `Book::isbn`），需要两个或三个检查操作：
-    - 1. 一个基础检查操作，如 `checkIsbn`，用于检查所有的语法约束，但不包括强制性值和唯一性约束。
-    - 2. 一个标准的 ID 检查操作，如 `checkIsbnAsId`，用于检查标准 ID 属性隐含的强制性值和唯一性约束。
-    - 3. 如果其他类有一个引用正在考虑的类的引用属性，添加一个 ID 引用检查操作，用于检查施加在 ID 引用（或外键）属性上的引用完整性约束。例如，由于 `Book::publisher` 属性引用 `Publisher` 对象，我们需要在 `Publisher` 类中添加 `checkNameAsIdRef` 操作。
+  - 1. 一个基础检查操作，如 `checkIsbn`，用于检查所有的语法约束，但不包括强制性值和唯一性约束。
+  - 2. 一个标准的 ID 检查操作，如 `checkIsbnAsId`，用于检查标准 ID 属性隐含的强制性值和唯一性约束。
+  - 3. 如果其他类有一个引用正在考虑的类的引用属性，添加一个 ID 引用检查操作，用于检查施加在 ID 引用（或外键）属性上的引用完整性约束。例如，由于 `Book::publisher` 属性引用 `Publisher` 对象，我们需要在 `Publisher` 类中添加 `checkNameAsIdRef` 操作。
 
-    对于引用属性（如 `Book::publisher`），检查操作 `Book.checkPublisherAsIdRef`，并可能通过调用 `Publisher.checkNameAsIdRef` 引用完整性约束，如果该属性是强制性的，可能还需要强制性约束。
+  对于引用属性（如 `Book::publisher`），检查操作 `Book.checkPublisherAsIdRef`，并可能通过调用 `Publisher.checkNameAsIdRef` 引用完整性约束，如果该属性是强制性的，可能还需要强制性约束。
+
 - 3. 在 `toString()` 中添加一个对象序列化函数，用于在错误消息和日志中显示对象的状态。
 - 4. 在 `toRecord()` 中添加一个对象到存储的转换函数，为将模型对象存储为实体表中的行做准备，该行可以通过 `JSON.stringify` 序列化为 JSON 字符串，从而存储为应用 `localStorage` 数据存储中的值。
-
 
 这导致了以下针对 `Book` 的 JS 类模型，其中类级（`static`）方法用下划线表示：
 
@@ -615,10 +491,10 @@ function displayName({first, last}) {
 | | checkIsbnAsId(isbn: string): ConstraintViolation |
 | | checkIsbnAsIdRef(isbn: string): ConstraintViolation |
 | | checkTitle(in: string): ConstraintViolation |
-| | checkYear(year: number(int)): ConstraintViolation |
-| | checkPublisher(p: Publisher): ConstraintViolation |
-| | toString(): String |
-| | toRecord(): Object |
+
+
+
+## 2.5.2 将 JS 类模型编码为 JS 类
 
 我们必须对 `Publisher` 类执行类似的转换。这为我们提供了从上述 OO 类模型派出的完整 JS 类模型，如图 2.1 所示。
 
@@ -626,43 +502,37 @@ function displayName({first, last}) {
 | --- |
 | «get/set» name: string (id) |
 | «get/set» address: string |
-| checkName(in n: string): ConstraintViolation |
-| checkNameAsId(in n: string): ConstraintViolation |
-| checkNameAsIdRef(in n: string): ConstraintViolation |
-| checkAddress(in a: string): ConstraintViolation |
-| toString(): String |
-| toRecord(): Object |
-
-
-
+| `checkName(in n: string): ConstraintViolation` |
+| `checkNameAsId(in n: string): ConstraintViolation` |
+| `checkNameAsIdRef(in n: string): ConstraintViolation` |
+| `checkAddress(in a: string): ConstraintViolation` |
+| `toString(): String` |
+| `toRecord(): Object` |
 
 与第 卷中讨论的验证和枚举应用相比，我们必须处理许多技术问题：
 
-- 1. 在模型代码中，我们现在必须处理需要以下要求的引用属性：
-    1. 维护引用完整性；
-    2. 在第 1.2 节讨论的两种删除策略中选择并实现一种，用于在属性自身类的 `destroy` 方法中管理相应的销毁依赖；
-    3. 在序列化函数 `toString()` 和转换函数 `toRecord()` 以及构造函数中，进行内部对象引用与外部 ID 引用之间的转换。
-- 2. 在用户界面（“视图”）中，我们现在必须处理：
-    1. 在检索/列出（Retrieve/List）用例中显示有关关联对象的信息；
-    2. 在创建（Create）和更新（Update）用例中，允许从关联目标类的所有实例列表中选择对象，并将其添加到关联对象列表或从从列表中移除对象。
-
+1. 在模型代码中，我们现在必须处理需要以下要求的引用属性：
+   1. 维护引用完整性；
+   2. 在第 1.2 节讨论的两种删除策略中选择并实现一种，用于在属性自身类的 `destroy` 方法中管理相应的销毁依赖；
+   3. 在序列化函数 `toString()` 和转换函数 `toRecord()` 以及构造函数中，进行内部对象引用与外部 ID 引用之间的转换。
+2. 在用户界面（“视图”）中，我们现在必须处理：
+   1. 在检索/列出（Retrieve/List）用例中显示有关关联对象的信息；
+   2. 在创建（Create）和更新（Update）用例中，允许从关联目标类的所有实例列表中选择对象，并将其添加到关联对象列表或从从列表中移除对象。
 
 可以直接为 JS 类编码以获取我们应用的 JS 类。
 
-
 将 JS 类模型中的每个类编码为具有隐式 getter 和 setter 的 ES2015 类（class）：
 
-- 1. 以类级（`static`）方法的形式编写属性检查。确保 JS 类模型中指定的属性的所有约束在属性检查中都被正确地编码。
-- 2. 对于每个单值属性，编写指定的 getter 和 setter，在每个 setter 中，会调用相应的检查，且只有当检查没有检测到任何约束违背时才会设置属性。
-- 3. 编写序列化函数 `toString()` 和转换函数 `toRecord()`。
-- 4. 在 `destroy` 方法中处理依赖。
+1. 以类级（`static`）方法的形式编写属性检查。确保 JS 类模型中指定的属性的所有约束在属性检查中都被正确地编码。
+2. 对于每个单值属性，编写指定的 getter 和 setter，在每个 setter 中，会调用相应的检查，且只有当检查没有检测到任何约束违背时才会设置属性。
+3. 编写序列化函数 `toString()` 和转换函数 `toRecord()`。
+4. 在 `destroy` 方法中处理依赖。
 
 这些步骤将在后续章节中详细讨论。
 
-
 JS 类模型中的每个类 C 编码为具有记录参数（record）的 ES2015 类，这指定了属性。这些属性的范围应在注释中说明。在构造函数体中，我们将记录参数的字段赋值给属性。这些属性赋值会调用 setter 方法。
 
-例如，JS 类模型中的 Publisher 类如下所示编码：
+例如，JS 类模型中的 `Publisher` 类如下所示编码：
 
 ```javascript
 class Publisher {
@@ -674,13 +544,13 @@ class Publisher {
 
 由于 setter 可能会抛出约束违背异常，构造函数以及任何 setter 都应该放在 try-catch 块中，其中 catch 子句负责记录合适的错误消息。
 
-对于每个模型类 C，我们定义一个类级属性 C，表示由应用管理的 C 实例（形式为记录的映射）。该属性初始化为 {}。例如，在 Publisher 模型类的情况下，我们定义：
+对于每个模型类 C，我们定义一个类级属性 C，表示由应用管理的 C 实例（形式为记录的映射）。该属性初始化为 `{}`。例如，在 `Publisher` 模型类的情况下，我们定义：
 
 ```javascript
 Publisher.instances = {};
 ```
 
-JS 类模型中的 Book 类以类似的方式编码：
+JS 类模型中的 `Book` 类以类似的方式编码：
 
 ```javascript
 class Book {
@@ -692,7 +562,6 @@ class Book {
     this.authors = authors || authorRefs;
 ```
 
-
 ```javascript
 if (publisher || publisher_id) {
   this.publisher = publisher || publisher_id;
@@ -700,7 +569,7 @@ if (publisher || publisher_id) {
 ...
 ```
 
-注意，Book 构造函数可以使用对象引用 authors 或使用 ID 引用 authorRefs 和 publisher_id 来调用。这种方法使得 Book 构造函数更加灵活、更加健壮。
+注意，`Book` 构造函数可以使用对象引用 `authors` 或使用 ID 引用 `authorRefs` 和 `publisher_id` 来调用。这种方法使得 `Book` 构造函数更加灵活、更加健壮。
 
 ### 2.5.3 编写属性检查
 
@@ -726,11 +595,6 @@ class Publisher {
   static checkNameAsId(n) { .. }
 }
 ```
-
-
-
-
-
 
 注意，由于 `name` 属性是 `Publisher` 的标准 ID 属性，我们只在 `checkName` 中检查语法约束，并在 `checkNameAsId` 中检查必填值和唯一性约束，后者会调用 `checkName`：
 
@@ -786,7 +650,6 @@ class Book {
 }
 ```
 
-
 在 setter 方法中，会调用相应的检查函数，只有当检查未检测到约束违反时，才会设置属性。对于引用属性，我们避免使用对象引用或 ID 引用调用 setter。由此产生的歧义通过测试在调用 setter 时提供的参数是否为对象来解决。例如，出版社的 setter 是如下方式编写的：
 
 ```js
@@ -812,8 +675,8 @@ class Book {
 
 对于任何引用属性，我们必须在第 1.2 节讨论的两种可能的删除策略中选择并实现一种，用于属性范围类的 `destroy` 方法中管理相应的对象销毁依赖。在我们的案例中，当删除出版社记录时，必须在两者之间选择：
 
-- 1. 删除所有由删除出版社出版的书记录（生存依赖）；
-- 2. 从所有由删除出版社出版的书中删除指向该删除出版社的引用（生存独立）。
+1. 删除所有由删除出版社出版的书记录（生存依赖）；
+2. 从所有由删除出版社出版的书中删除指向该删除出版社的引用（生存独立）。
 
 假设书籍在生存上不依赖于其出版社，我们选择第二种方案。在下面的 `Publisher.destroy` 方法代码中，对于所有相关的书籍对象，`book.publisher` 属性都被清空了：
 
@@ -898,8 +761,10 @@ pl.c.books.manage = {
 
 在示例中，我们只有一个引用属性 `Book::publisher`，它是功能且可选的。要在查询列表用例中显示可选的出版社，HTML 表格中的相应单元格将被填充：
 
+
+
 ```js
-pl.v.books.retrieveAndAll={
+pl.v.books.retrieveAndAll = {
   setupUserInterface: function () {
     const tableBodyEl = document.querySelector("#sectionBook-R tbody");
     tableBodyEl.innerHTML = ""; // 清空旧内容
@@ -921,26 +786,22 @@ pl.v.books.retrieveAndAll={
 
 对于多值引用属性，表格单元格必须填充所有引用的关联对象的列表。
 
-### 2.6.3 在创建和更新用例中选择关联对象
+## 2.6.3 在创建和更新用例中选择关联对象
 
 为了在创建和更新用例中从当前编辑的对象中选择关联对象，HTML 选择列表（即 `select` 元素）将通过实用方法 `fillSelectWithOptions` 根据关联对象类型的实例填充选项。该 HTML 元素定义在 `books.html` 视图文件中：
 
 ```html
 <section id="Book-C" class="UI-Page">
-<<h1>Public Library: Create a new book record/</h1>
-<form>
-  ...
-  <div class="select-one">
-    <label>Publisher: <select name="selectPublisher"></select></label>
-  </div>
-  ...
-</form>
+  <h1>Public Library: Create a new book record</h1>
+  <form>
+    ...
+    <div class="select-one">
+      <label>Publisher: <select name="selectPublisher"></select></label>
+    </div>
+    ...
+  </form>
 </section>
 ```
-
-
-
-
 
 ## 2.6 编写视图和控制器 — 35
 
@@ -948,54 +809,54 @@ pl.v.books.retrieveAndAll={
 
 ```javascript
 pl.v.books.create = {
-setupInterface: function () {
+  setupInterface: function () {
     const formEl = document.querySelector("section#Book-C > form"),
-    selectPublisher = formEl.selectPublisher,
-    saveButton = formEl.commit;
+      selectPublisher = formEl.selectPublisher,
+      saveButton = formEl.commit;
     // 为响应式验证添加事件监听
     formEl.isbn.addEventListener("input", function () {
-        formEl.isbn.setCustomValidity(
-            Book.checkIsbnAsId(formEl.isbn.value);
+      formEl.isbn.setCustomValidity(
+        Book.checkIsbnAsId(formEl.isbn.value);
     });
     // 设置一个单选列表来选择出版社
     util.fillSelectWithOptions(selectPublisher,
-        Publisher.instances, "name");
+      Publisher.instances, "name");
     // 为提交按钮点击定义事件处理器
     saveButton.addEventListener("click",
-        this.handleSaveButtonClickEvent);
+      this.handleSaveButtonClickEvent);
     // 定义中消提交事件的事件处理器
     formEl.addEventListener("submit", function (e) {
-        e.preventDefault();
-        formEl.reset();
+      e.preventDefault();
+      formEl.reset();
     });
     // 用创建表单替换管理表单
     document.getElementById("Book-M").style.display = "none";
     document.getElementById("Book-C").style.display = "block";
     formEl.reset();
-},
-handleSaveButtonClickEvent: function () {
-// ...
-};
+  },
+  handleSaveButtonClickEvent: function () {
+    // ...
+  };
 ```
 
-当用户点击（或触摸）保存按钮时，所有的表单控件值（包括选择控件的值）都会复制到 slots 列表中。在对所有表单字段进行有效检查后，该列表用于调用 add 方法的参数，如下程序所示：
+当用户点击（或触摸）保存按钮时，所有的表单控件值（包括选择控件的值）都会复制到 slots 列表中。在对所有表单字段进行有效检查后，该列表用于调用 `add` 方法的参数，如下程序所示：
 
 ```javascript
 handleSaveButtonClickEvent = function () {
-    const formEl = document.querySelector("section#Book-C > form");
-    const slots = {
-        isbn:formEl.isbn.value,
-        title:formEl.title.value,
-        year:formEl.year.value,
-        publisher_id:formEl.selectPublisher.value
-    }
-    // 验证所有表单控件并显示错误消息
-    formEl.isbn.customValidity(
-    Book.checkIsbnAsId(slots.isbn).message);/* ... (title 和 year 同理) */
-    // 仅当所有字段有效时才保存输入数据
-    if (formEl.checkValidity()) {
-      Book.add (slots);
-    }
+  const formEl = document.querySelector("section#Book-C > form");
+  const slots = {
+    isbn: formEl.isbn.value,
+    title: formEl.title.value,
+    year: formEl.year.value,
+    publisher_id: formEl.selectPublisher.value
+  }
+  // 验证所有表单控件并显示错误消息
+  formEl.isbn.customValidity(
+    Book.checkIsbnAsId(slots.isbn).message); /* ... (title 和 year 同理) */
+  // 仅当所有字段有效时才保存输入数据
+  if (formEl.checkValidity()) {
+    Book.add(slots);
+  }
 };
 ```
 
@@ -1007,7 +868,7 @@ handleSaveButtonClickEvent = function () {
 
 ### 2.7.1 问题 1：JS 类模型
 
-从给 OO 类模型派生的 Committee 类，正确的 JS 类模型是哪个？
+从给 OO 类模型派生的 `Committee` 类，正确的 JS 类模型是哪个？
 
 选择一个：
 
@@ -1019,7 +880,7 @@ handleSaveButtonClickEvent = function () {
 - 1. O
 
 | Committee |
-|---|---|
+|---|
 | <get/set> name : string (id) |
 | <get/set> chair : ClubMember |
 | checkName(n : string) : ConstraintViolation |
@@ -1030,7 +891,7 @@ handleSaveButtonClickEvent = function () {
 - 2. O
 
 | Committee |
-|---|---|
+|---|
 | <get/set> name : string (id) |
 | <get/set> chair : ClubMember |
 | checkName(in n : string) : ConstraintViolation |
@@ -1043,7 +904,7 @@ handleSaveButtonClickEvent = function () {
 - 3. O
 
 | Committee |
-|---|---|
+|---|
 | <get/set> name : string (id) |
 | <get/set> chair : ClubMember |
 | checkName(in n : string) : ConstraintViolation |
@@ -1068,17 +929,17 @@ handleSaveButtonClickEvent = function () {
 
 ```javascript
 class Book {
-  constructor({{isbn, title, year, authors, authorIdRefs,
-      publisher, publisher_id}}) {
+  constructor({isbn, title, year, authors, authorIdRefs,
+      publisher, publisher_id}) {
     this.isbn = isbn;
     this.title = title;
     this.year = year;
     // 分配对象引用或 ID 引用
     this.authors = authors;
     if (authorIdRefs) {
-        this.authorIdRefs = authorIdRefs;
+      this.authorIdRefs = authorIdRefs;
     } else {
-        this.authorIdRefs = [];
+      this.authorIdRefs = [];
     }
     this.publisher = publisher;
     this.publisher_id = publisher_id;
@@ -1086,7 +947,7 @@ class Book {
 }
 ```
 
-注意，构造函数的参数预期包含内部对象引用的集合或 ID 引用。`authors` 表达式如果是 slot 则为 map，否则为数组。我们通过以下片段在 setter 中处理歧歧：
+注意，构造函数的参数预期包含内部对象引用的集合或 ID 引用。`authors` 表达式如果是 slot 则为 map，否则为数组。我们通过以下片段在 setter 中处理歧义：
 
 ```javascript
 set authors(a) {
@@ -1095,12 +956,13 @@ set authors(a) {
   } else {
     this._authors = {};
     for (let id in a) {
-        this._authors[id] = a[id];
+      this._authors[id] = a[id];
     }
   }
+}
 ```
 
-3.2 制作类模型
+## 3.2 制作类模型
 
 在 JS 中，集合值属性有两种实现方式：
 
@@ -1141,24 +1003,15 @@ set authors(a) {
 
 - 1. 在模型代码中，我们需要处理需要实现的多值引用属性
 
-
-
-
-
 ## 3.4 模型编码
 
 - 1. 一个添加方法和一个删除方法，例如 `addAuthor` 和 `removeAuthor`，以及一个通过 `add` 方法分配一组对象引用的设置（setter）方法，可能将 ID 引用转换为对象引用；这三个方法都可能需要检查基数约束（如果存在的话）；
-
-
-
 - 2. 一个类层级的检查操作，例如 `checkAuthor`，它必须调用属性范围类中对应的 `checkAsIdRef` 方法，以检查属性的隐式引用完整性约束；
-
 - 3. 在对象到存储的转换函数 `toRecord` 中，将对象引用集合转换为 ID 引用集合。
 
 ## 2. 我们现在在用户界面（“视图”）代码中需要处理以下事项：
 
 - 1. 在“检索/列出所有”（Retrieve/list all）用例的表格视图的属性列中，显示一组关联对象的信息；最简单的方法是显示用逗号分隔的 ID 引用列表，可能与相应的名称结合；或者，可以在属性的数据单元格中渲染 HTML 列表；
-
 - 2. 在“创建”（Create）和“更新”（Update）用例中，允许从属性范围类的所有实例列表中选择一组关联对象。
 
 最后一个问题，即允许从某个类的所有实例列表中选择一组关联对象，无法通过 HTML 多选表单控件解决，因为其可用性较差。每当可选选项超过阈值时（由在不滚动屏幕的情况下屏幕上可见的选项数量定义），多选元素的可用性就会变差，必须使用替代的多选框组件。
@@ -1172,19 +1025,14 @@ set authors(a) {
 将 JS 类模型中的每个类编码为具有隐式获取器（getters）和设置器（setters）的 ES2015 类：
 
 - 1. 以类层级（`static`）方法的形式编写属性检查。确保 JS 类模型中指定的属性的所有约束在属性检查中都被正确编码。
-
 - 2. 对于每个单值属性，编写指定的 getter 和 setter，使得在每个 setter 中都会调用相应的属性检查，并且只有在检查没有检测到任何约束违反时，才设置/取消该属性。
 
 ## 3. 使用纯 JS 实现单向非功能关联
 
 - 3. 对于每个多值属性，编写其添加和删除操作，以及指定的 get/set 操作：
-
-- 1. 将添加/删除操作编码为（实例级）方法，这些方法会调用相应的属性检查。
-
-- 2. 编写 setter，使其对要分配的集合中的每个项调用 add 操作。
-
+  - 1. 将添加/删除操作编码为（实例级）方法，这些方法会调用相应的属性检查。
+  - 2. 编写 setter，使其对要分配的集合中的每个项调用 `add` 操作。
 - 4. 编写序列化函数 `toString()` 和对象到存储的函数 `toRecord()` 的代码。
-
 - 5. 在 `destroy` 方法中处理删除依赖关系。
 
 这些步骤将在接下来的章节中进行详细讨论。
@@ -1209,6 +1057,8 @@ addAuthor (a) {
 ```
 
 在 `removeAuthor` 方法中，首先检查作者引用，如果没有检测到约束违反，则删除映射 `this._authors` 中的相应条目：
+
+
 
 ```javascript
 removeAuthor (a) {
@@ -1330,10 +1180,6 @@ pl.v.books.retrieveAndListAll = {
   }
 };
 ```
-
-
-
-
 
 # 46 3 使用原生 JS 实现单向非功能关联
 
@@ -1463,6 +1309,8 @@ handleSaveButtonClickEvent: function () {
 
 “更新”界面通过借助工具方法 `fillSelectWithOptions` 填充作者和出版者的选择列表来设置（在 `setupInterface` 过程中）。只有在选择书籍后，才会填充出版者的选择列表和作者的多选择组件。
 
+
+
 ```js
 pl.v.books.update = {
   setupInterface: function () {
@@ -1512,9 +1360,7 @@ pl.v.books.update = {
 };
 ```
 
-当用户在更新某些值后最终点击保存按钮时，所有的表单控件值（包括分配出版者的单选控件的值）都会被复制到槽记录变量 `slots` 的相应插槽位中，并在所有值通过有效性检查后作为调用 `update` 方法的参数。在调用它之前，根据在关联作者选择组件中记录的更新，借助 `classList` 值创建一个要添加的作者 ID 引用列表，以及另一个要移除的作者 ID 引用列表（`authorIdRefsToAdd` 和 `authorIdRefsToRemove` 槽），如下程序列表所示：
-
-
+当用户在更新某些值后最终点击保存按钮时，所有的表单控件值（包括分配出版者的单选控件的值）都会被复制到槽记录变量`slots`的相应插槽位中，并在所有值通过有效性检查后作为调用`update`方法的参数。在调用它之前，根据在关联作者选择组件中记录的更新，借助`classList`值创建一个要添加的作者 ID 引用列表，以及另一个要移除的作者 ID 引用列表（`authorIdRefsToAdd`和`authorIdRefsToRemove`槽），如下程序列表所示：
 
 ```javascript
 handleSaveButtonClickEvent: function () {
@@ -1561,7 +1407,7 @@ handleSaveButtonClickEvent: function () {
 
 ## 3.7 注意事项
 
-我们仍然在模型层中针对每个类和每个属性包含了重复性的代码结构（称为样板代码），用于约束验证（检查和设置器），并针对每个类包含了数据存储管理方法（添加、更新和删除）。虽然为了学习应用开发而编写几次代码是很有帮助的，但在实际项目中，你不希望反复编写这些代码。为了避免重复的样板代码，需要这些方法的通用形式，以便它们可以在应用的所有模型类中被复用。例如，cLjs 库就提供了这种方法。
+我们仍然在模型层中针对每个类和每个属性包含了重复性的代码结构（称为样板代码），用于约束验证（检查和设置器），并针对每个类包含了数据存储管理方法（添加、更新和删除）。虽然为了学习应用开发而编写几次代码是很有帮助的，但在实际项目中，你不希望反复编写这些代码。为了避免重复的样板代码，需要这些方法的通用形式，以便它们可以在应用的所有模型类中被复用。例如，`cLjs`库就提供了这种方法。
 
 ## 4 使用 Java EE 实现单向功能关联
 
@@ -1570,12 +1416,14 @@ handleSaveButtonClickEvent: function () {
 在本章中，我们将展示：
 
 - 如何从具有代表单向功能关联的单值引用属性的面向对象（OO）类模型中，推导出以 Java 实体类模型形式的数据模型；
+
 - 如何以实体类（实现模型类）的形式编写 Java 实体类模型；
+
 - 如何基于实体类编写查看器和控制器代码。
 
 ## 4.1 在 Java 中实现单值引用属性
 
-单值引用属性（例如对象类型 `Book` 的发布者）允许存储对另一种类型对象（如 `Publisher`）的内部引用。在创建新对象时，构造函数需要一个参数，以允许为引用属性分配合适的值。在强类型编程语言（如 Java）中，如果预期该值是内部对象引用还是 ID 引用，我们可能需要做出决定。使用 JPA 对象关系映射技术，我们可以处理对象引用，并将到相应 ID 引用的映射留给 JPA。`Book` 类扩展如下：
+单值引用属性（例如对象类型`Book`的发布者）允许存储对另一种类型对象（如`Publisher`）的内部引用。在创建新对象时，构造函数需要一个参数，以允许为引用属性分配合适的值。在强类型编程语言（如 Java）中，如果预期该值是内部对象引用还是 ID 引用，我们可能需要做出决定。使用 JPA 对象关系映射技术，我们可以处理对象引用，并将到相应 ID 引用的映射留给 JPA。`Book`类扩展如下：
 
 ```java
 @Entity @Table(name="books")
@@ -1599,36 +1447,61 @@ public void setPublisher( Publisher publisher) { . . . }
 ```
 
 制作 Java 实体类的起点是类似于图 1.10 所示的 OO 类模型。
-如之前解释过的，我们通过以下方式从相应的 OO 设计类中获取 Java 实体类 `Publisher`：(1) 将所有属性设为私有；(2) 使用 Java 数据类型类（String、Integer 等）；(3) 为属性添加 `«get/set» 刻型（指定公共的 getter 和 setter）；(4) 添加 `toString` 函数；(5) 添加（类级别的）数据存储方法以进行检索、更新和删除：
+
+如之前解释过的，我们通过以下方式从相应的 OO 设计类中获取 Java 实体类`Publisher`：(1) 将所有属性设为私有；(2) 使用 Java 数据类型类（`String`、`Integer`等）；(3) 为属性添加`«get/set»`刻型（指定公共的 getter 和 setter）；(4) 添加`toString`函数；(5) 添加（类级别的）数据存储方法以进行检索、更新和删除：
 
 | Java Entity |
+
 | :--- |
+
 | Publisher |
+
 | <get/set>-name : String |
+
 | <get/set>-address : String |
+
 | +checkNameAid(in : String, em : EntityManager) : ConstraintViolation |
+
 | +toString() : String |
+
 | +retrieveAll(in : EntityManager) : List<Publisher> |
+
 | +retrieve(in : EntityManager, name : String) : Publisher |
+
 | +create(in : EntityManager, name : String, address : String) |
+
 | +update(in : EntityManager, name : String, address : String) |
+
 | +delete(in : EntityManager, name : String) |
 
 在 Java 实体类模型中，对于 OO 类模型中的任何关联端，我们都显示表示关联的引用属性并对其进行注解。
 
 | Java Entity |
+
 | :--- |
+
 | Book |
+
 | <get/set>-isbn : String |
+
 | <get/set>-address : String |
+
 | <get/set>-year : Integer |
+
 | <get/set>-publisher : Publisher |
+
 | +checkNameAid(in : String, em : EntityManager) : ConstraintViolation |
+
 | +toString() : String |
+
 | +retrieveAll(in : EntityManager) : List<Publisher> |
+
 | +retrieve(in : EntityManager, name : String) : Publisher |
+
 | +create(in : EntityManager, name : String, address : String) |
+
 | +update(in : EntityManager, name : String, address : String) |
+
 | +delete(in : EntityManager, name : String) |
 
 ## 4.4 编写模型代码
@@ -1638,6 +1511,7 @@ public void setPublisher( Publisher publisher) { . . . }
 与之前讨论的单类相比，我们必须处理许多技术问题：
 
 1. 在模型代码中，我们必须借助合适的注解来考虑定义引用约束；
+
 2. 在用户界面（视图）代码中，我们现在必须处理在创建和更新情况下显示关联对象的信息。
 
 ### 4.4.1 总结
@@ -1645,18 +1519,22 @@ public void setPublisher( Publisher publisher) { . . . }
 Java 实体类模型可以直接为后端编写代码：
 
 - 根据 Java 实体类模型将每个类编写为相应的实体类。
-- 使用 JPA 注解 `@Id` 编写 id 属性。
+
+- 使用 JPA 注解`@Id`编写 id 属性。
+
 - 使用 Java Bean 验证注解编写模型中指定的完整性约束。
+
 - 编写 getter 和 setter。
+
 - 将创建、更新和删除存储操作编写为类级方法。
 
 这些步骤将在后续章节中详细讨论。
 
 ## 4.4.2 编写模型中的每个类
 
-实体类模型中的每个类 `C` 都被编写为带有名称 `C` 的注解 Bean 类，其具有一个默认构造函数（无参数）和一个带有实体创建参数的构造函数。
+实体类模型中的每个类`C`都被编写为带有名称`C`的注解 Bean 类，其具有一个默认构造函数（无参数）和一个带有实体创建参数的构造函数。
 
-例如，实体类模型中的 `Book` 类按如下方式编写：
+例如，实体类模型中的`Book`类按如下方式编写：
 
 ```java
 @Entity(name="books")
@@ -1684,21 +1562,17 @@ public class Book {
 }
 ```
 
-`publisher` 上的 `@ManyToOne` 注解用于指定 `Book` 与 `Publisher` 关联的功能类型，因为它体现了“一本书有一个发布者，而一个发布者有许多书”。此注解允许通过参数指定获取类型，该参数可以取以下可能值之一：
+`publisher`上的`@ManyToOne`注解用于指定`Book`与`Publisher`关联的功能类型，因为它体现了“一本书有一个发布者，而一个发布者有许多书”。此注解允许通过参数指定获取类型，该参数可以取以下可能值之一：
 
-- FetchType.EAGER，意味着检索实体时包含对该属性引用的关联实体的检索。在我们示例中，这意味着当检索一个 `Book` 实体时，其 `publisher` 属性引用的 `Publisher` 实体也会被检索。这种行为非常
-
-
-
-
+- `FetchType.EAGER`，意味着检索实体时包含对该属性引用的关联实体的检索。在我们示例中，这意味着当检索一个`Book`实体时，其`publisher`属性引用的`Publisher`实体也会被检索。这种行为非常
 
 ## 4.4 编写模型代码
 
 这非常有用，每当要检索的数据可以在主内存中处理时，就应该使用它。
 
-- FetchType.LAZY，意味着引用的实体不会被自动检索。在我们的示例中，这意味着引用的 Publisher 实体不会与引用它的 Book 实体一起被检索，导致 publisher 属性的值被设置为 null。通过这种获取行为，引用的实体必须在事务上下文中通过调用引用属性的 getter 方法来单独检索（在我们的示例中是通过调用 getPublisher）。
+- `FetchType.LAZY`，意味着引用的实体不会被自动检索。在我们的示例中，这意味着引用的`Publisher`实体不会与引用它的`Book`实体一起被检索，导致`publisher`属性的值被设置为`null`。通过这种获取行为，引用的实体必须在事务上下文中通过调用引用属性的 getter 方法来单独检索（在我们的示例中是通过调用`getPublisher`）。
 
-对于标记了 @OneToOne 或 @ManyToOne 注解的单值引用属性（表示功能性关联），其默认值为 FetchType.EAGER，因此引用的实体会与引用实体一起获取；而在非功能性关联（使用 @OneMany 或 @ManyToOne，此处此处应为 @OneToMany）的情况下，默认值为 FetchType.LAZY，因此引用的实体不会与引用实体一起获取，但如果需要，则必须单独检索。
+对于标记了`@OneToOne`或`@ManyToOne`注解的单值引用属性（表示功能性关联），其默认值为`FetchType.EAGER`，因此引用的实体会与引用实体一起获取；而在非功能性关联（使用`@OneMany`或`@ManyToOne`，此处此处应为`@OneToMany`）的情况下，默认值为`FetchType.LAZY`，因此引用的实体不会与引用实体一起获取，但如果需要，则必须单独检索。
 
 作为 JPA 注解的结果，将生成用于创建表的以下 SQL 表创建语句：
 
@@ -1714,9 +1588,13 @@ FOREIGN KEY (`PUBLISHER_NAME`) REFERENCES `publishers` (`NAME`)
 
 ## 4.4.3 编写约束
 
-确保实体类模型中指定的所有属性约束都使用适当的 Bean Validation 注解正确编码。例如，对于属性名，我们必须使用 JPA 注解 @Id 来指定该属性对应实体映射的数据库表的主键列，并使用 Bean Validation 注解 @NotNull 来定义强制性值约束，该约束在实体保存到数据库之前会进行检查。
 
-对于地址 属性，我们必须以两种形式定义强制性值约束：使用 JPA 注解 @Column(nullable=false) 对应表列，以及使用 Bean Validation 注解 @NotNull 对应属性。
+
+# 实体模型属性约束与 Bean Validation
+
+确保实体类模型中指定的所有属性约束都使用适当的 Bean Validation 注解正确编码。例如，对于属性名，我们必须使用 JPA 注解 `@Id` 来指定该属性对应实体映射的数据库表的主键列，并使用 Bean Validation 注解 `@NotNull` 来定义强制性值约束，该约束在实体保存到数据库之前会进行检查。
+
+对于地址属性，我们必须以两种形式定义强制性值约束：使用 JPA 注解 `@Column(nullable=false)` 对应表列，以及使用 Bean Validation 注解 `@NotNull` 对应属性。
 
 ```java
 @Id @NotNull(message="A name is required!")
@@ -1742,7 +1620,7 @@ private String address;
 - 删除所有属于被删除发布者的书籍；
 - 从所有由被删除发布者出版的书中删除指向该发布者的引用。
 
-我们选择了第二种策略，该策略仅适用于可选引用属性（如 book.publisher）的情况。这在下面 Publisher.delete 方法的代码中显示，所有涉及 publisher 属性的 book 实体都被清除了。
+我们选择了第二种策略，该策略仅适用于可选引用属性（如 `book.publisher`）的情况。这在下面 `Publisher.delete` 方法的代码中显示，所有涉及 `publisher` 属性的 `book` 实体都被清除了。
 
 ```java
 public static void delete(EntityManager em, UserTransaction ut, String name) throws Exception {
@@ -1753,8 +1631,6 @@ public static void delete(EntityManager em, UserTransaction ut, String name) thr
     "SELECT b FROM Book b WHERE b.publisher.name = :name");
     query.setParameter("name", name);
 ```
-
-## 4.5 视图与控制器层
 
 ```java
 List<Book> books = query.getResultList();
@@ -1767,7 +1643,7 @@ ut.commit();
 }
 ```
 
-该方法遍历所有引用销毁发布者的 Book 实体，将其 publisher 属性设置为 null。
+该方法遍历所有引用销毁发布者的 `Book` 实体，将其 `publisher` 属性设置为 `null`。
 
 ## 4.4.6 序列化与反序列化
 
@@ -1775,7 +1651,7 @@ ut.commit();
 
 ## 4.5 视图与控制器层
 
-用户界面（UI）包含一个用于导航到数据管理页面的起始页，以及每个对象类型和数据管理用例的 UI 页面。所有 UI 页面都以 JSF 视图文件的形式定义 WebContent/views/ 文件夹的子目录下。我们在 WebContent/views/app 子目录下创建了主页 index.xhtml，内容如下：
+用户界面（UI）包含一个用于导航到数据管理页面的起始页，以及每个对象类型和数据管理用例的 UI 页面。所有 UI 页面都以 JSF 视图文件的形式定义 `WebContent/views/` 文件夹的子目录下。我们在 `WebContent/views/app` 子目录下创建了主页 `index.xhtml`，内容如下：
 
 ```xml
 <!DOCTYPE html>
@@ -1793,7 +1669,7 @@ ut.commit();
 </ui:composition>
 ```
 
-它创建了菜单按钮，为每个功能提供相应的视图。此外，我们需要创建一个 AppController 类，负责测试数据的创建和删除。控制器用于如下所示组合 Publisher.delete 和 Book.delete 方法的代码：
+它创建了菜单按钮，为每个功能提供相应的视图。此外，我们需要创建一个 `AppController` 类，负责测试数据的创建和删除。控制器用于如下所示组合 `Publisher.delete` 和 `Book.delete` 方法的代码：
 
 ```java
 @ManagedBean(name="appCtrl") @SessionScoped
@@ -1825,7 +1701,7 @@ public class AppController {
 }
 ```
 
-Book 和 Publisher 数据的删除必须按特定顺序进行，以避免引用完整性冲突（必须先删除书籍）。
+`Book` 和 `Publisher` 数据的删除必须按特定顺序进行，以避免引用完整性冲突（必须先删除书籍）。
 
 ## 4.5.1 初始化应用程序
 
@@ -1833,7 +1709,7 @@ Book 和 Publisher 数据的删除必须按特定顺序进行，以避免引用�
 
 ## 4.5.2 在*检索/列出*中显示关联对象信息
 
-在示例中，我们只有一个引用属性 Book::publisher，它是功能性的。为了在*检索/列出*使用时显示可选发布者的信息，HTML 表中相应的列将填充发布者的名称（如果有的话）：
+在示例中，我们只有一个引用属性 `Book::publisher`，它是功能性的。为了在*检索/列出*使用时显示可选发布者的信息，HTML 表中相应的列将填充发布者的名称（如果有的话）：
 
 ```xml
 <ui:composition template="/WEB-INF/templates/page.xhtml">
@@ -1849,23 +1725,19 @@ Book 和 Publisher 数据的删除必须按特定顺序进行，以避免引用�
 </ui:composition>
 ```
 
-注意 #{b.publisher.name} JSF 表达式中的级联调用，它访问了书籍实例 b 的发布者属性。
+注意 `#{b.publisher.name}` JSF 表达式中的级联调用，它访问了书籍实例 `b` 的发布者属性。
 
 ## 4.5.3 在*创建和更新*中允许选择关联对象
 
-在本节中，我们将讨论如何创建和更新具有引用属性的对象，例如具有引用属性 publisher 的 Book 对象。
+在本节中，我们将讨论如何创建和更新具有引用属性的对象，例如具有引用属性 `publisher` 的 `Book` 对象。
 
 ## 4.5.1 创建对象到字符串的转换器
 
-HTML 需要字符串或数字值来填充表单。在案例中，Book 类的 publisher 属性是一个对象引用。JSF 允许将对象转换为
-
-
-
-
+HTML 需要字符串或数字值来填充表单。在案例中，`Book` 类的 `publisher` 属性是一个对象引用。JSF 允许将对象转换为
 
 # 62 4 使用 Java EE 实现单向功能性关联
 
-通过转换器实现字符串与反之间的转换，转换器是标记了 @FacesConverter 注解并实现了 `javax.faces.convert.Converter` 接口的类：
+通过转换器实现字符串与反之间的转换，转换器是标记了 `@FacesConverter` 注解并实现了 `javax.faces.convert.Converter` 接口的类：
 
 ```java
 @FacesConverter(value="pl.m.converter.PublisherConverter")
@@ -1994,7 +1866,9 @@ public String create(String isbn, String title, Integer year, Publisher publishe
 }
 ```
 
-它仅仅在 `books` 表中创建了一个新行。更新用例的代码非常相似，区别在于添加了选择元素（即 `h:selectOneMenu`）来选择书籍：
+
+
+它仅仅在`books`表中创建了一个新行。更新用例的代码非常相似，区别在于添加了选择元素（即`h:selectOneMenu`）来选择书籍：
 
 ```xml
 <ui:composition template="/WEB-INF/templates/page.xhtml">
@@ -2022,7 +1896,7 @@ action="#{bookCtrl.update(book.isbn, book.title, book.year, book.publisher.name)
 
 ## 5 使用 Java EE 实现单向功能性关联
 
-单向功能性关联是一一对多或多对多的关联。在两种情况下，这种关联都通过多值引用属性来表示。
+单向功能性关联是一对多或多对多的关联。在两种情况下，这种关联都通过多值引用属性来表示。
 
 在本章中，我们将展示：
 
@@ -2032,7 +1906,7 @@ action="#{bookCtrl.update(book.isbn, book.title, book.year, book.publisher.name)
 
 ## 5 在 Java 中实现多值引用属性
 
-多值引用属性如 `Book::authors` 允许存储某些类型的内部引用集合，例如对 `Author` 对象的引用。创建 `Book` 类型的对象时，构造函数需要一个参数来为该属性提供适当的值。通常，值可以是内部对象引用或 ID 引用。使用 JPA 时我们使用对象引用：
+多值引用属性如`Book::authors`允许存储某些类型的内部引用集合，例如对`Author`对象的引用。创建`Book`类型的对象时，构造函数需要一个参数来为该属性提供适当的值。通常，值可以是内部对象引用或 ID 引用。使用 JPA 时我们使用对象引用：
 
 ```java
 @Entity @Table (name="books")
@@ -2051,63 +1925,86 @@ public class Book {
 }
 ```
 
-
-
-
 ## 5.2 创建 Java 实体类模型
 
 我们创建 Java 实体类模型的起点是以下面向对象（OO）类模型：
 
 | Book | Publisher |
+
 | --- | --- |
+
 | isbn[1] : String (id) | name : String (id) |
+
 | title[1] : String | address : String |
+
 | year[1] : Integer | |
+
 | publisher[0..1] : Publisher | |
+
 | authors[*] : Author | |
+
 | | Author | |
+
 | | personid : integer (id) |
+
 | | name : String |
 
-该模型除了表示单向对一关联 `Book-has-Publisher` 的单值引用属性 `Book::-publisher` 外，还包含了表示单向对多关联 `Book-has-Author` 的多值引用属性 `Book::authors`。
+该模型除了表示单向对一关联`Book-has-Publisher`的单值引用属性`Book::-publisher`外，还包含了表示单向对多关联`Book-has-Author`的多值引用属性`Book::authors`。
 
-回想，我们通过以下步骤从 OO 类模型中的相应类获取 Java 实体类（如 `Author`）：(1) 将所有属性设为私有；(2) 使用 Java 数据类型类；(3) 添加公共的 getter 和 setter；(4) 添加 `toString` 函数；(5) 添加数据存储方法 `create`、`retrieve`、`update` 和 `delete`：
+回想，我们通过以下步骤从 OO 类模型中的相应类获取 Java 实体类（如`Author`）：(1) 将所有属性设为私有；(2) 使用 Java 数据类型类；(3) 添加公共的 getter 和 setter；(4) 添加`toString`函数；(5) 添加数据存储方法`create`、`retrieve`、`update`和`delete`：
 
 | «Java Entity» |
+
 | :--- |
+
 | Author |
+
 | get/set() -personid : Integer (id) |
+
 | get/set() -name : String |
+
 | +checkPersonidAid(in pid : Integer, in em : EntityManager) : ConstraintViolation |
+
 | toString() : String |
+
 | +(...) |
 
 在 Java 实体类模型中，OO 类模型中指定的任何引用属性都用其所表示的关联的功能类型进行注解。
 
 ## 5.4 编写模型代码 — 69
 
-在示例中，我们为实体类 `Book` 中的属性 `authors` 标注了 `manyToMany`（多对多）：
+在示例中，我们为实体类`Book`中的属性`authors`标注了`manyToMany`（多对多）：
 
 | «Java Entity» |
+
 | :--- |
+
 | «get/set>-isbn[1] : String (id) |
+
 | «get/set>-title[1] : String |
+
 | «get/set>-year[1] : Integer |
+
 | «get/set>-publisher[0..1] : Publisher (manyToMany) |
+
 | «get/set>-authors[*] : Author (manyToMany) |
+
 | +checknAid(in : String, in em : EntityManager) : ConstraintViolation |
+
 | +addAuthor(in : Author) |
+
 | +removeAuthor(in : Author) |
+
 | +toString() : string |
 
 ## 5.3 新问题
 
 与上一节讨论的处理单向功能关联相比，我们必须处理以下新技术问题：
 
-- 1. 在**模型类**中，我们必须处理**多值引用属性**，这些属性必须用 `@OneToMany` 或 `@ManyToMany` 进行注解。
-2. 在**用户界面**代码中，我们需要处理：
-   1. 在 *retrieve/list*（检索/列表）对象用例中，在渲染多值引用属性的视图表列中显示关联对象集合的信息；
-   2. 在 *create* 和 *update* 对象用例中，允许从目标类的所有现有实例列表中选择关联对象集合。
+- 1. 在**模型类**中，我们必须处理**多值引用属性**，这些属性必须用`@OneToMany`或`@ManyToMany`进行注解。
+- 2. 在**用户界面**代码中，我们需要处理：
+   - 1. 在 *retrieve/list*（检索/列表）对象用例中，在渲染多值引用属性的视图表列中显示关联对象集合的信息；
+   - 2. 在 *create* 和 *update* 对象用例中，允许从目标类的所有现有实例列表中选择关联对象集合。
 
 最后一个问题（即从某个类的所有现有实例列表中选择关联对象集合）通常由于可用性问题，无法通过 HTML `select multiple` 元素来解决。当可选选项集超过某个阈值（由屏幕无需滚动即可可见的选项数量定义）时，HTML `select multiple` 元素不再可用，必须使用替代的*多选*小部件。
 
@@ -2118,17 +2015,17 @@ public class Book {
 ### 5.4.1 总结
 
 1. 将 Java 实体类模型的每个类编码为相应的实体类。
-2. 为 `[id]` 属性修符编写 JPA 属性注解 `@Id`。
-3. 为任何表示引用属性功能类型的修符（如 `[ManyToOne]`）编写相应的 JPA 注解（如 `@ManyToMany`）。
+2. 为`[id]`属性修符编写 JPA 属性注解`@Id`。
+3. 为任何表示引用属性功能类型的修符（如`[ManyToOne]`）编写相应的 JPA 注解（如`@ManyToMany`）。
 4. 使用 Java Bean Validation 注解（或自定义校验注解）编写模型指定的完整性约束。
 5. 为多值属性编写 getter、setter 以及 add 和 remove 方法。
-6. 将 `create`、`retrieve`、`update` 和 `delete` 存储管理操作编码为类级方法。
+6. 将`create`、`retrieve`、`update`和`delete`存储管理操作编码为类级方法。
 
 这些步骤将在后续章节中详细讨论。
 
 ## 5.4.2 Java 实体类模型的每个类
 
-对于多值引用属性 `Book::authors`，我们使用参数化的 `Set` 类型：
+对于多值引用属性`Book::authors`，我们使用参数化的`Set`类型：
 
 ```java
 @Entity @Table( name="books")
@@ -2148,11 +2045,11 @@ public class Book {
 }
 ```
 
-JPA 注解 `@ManyToMany` 允许指定 `Book` 和 `Author` 之间的多多关系。使用了 `FetchType.EAGER` 参数，因此当创建 `Book` 实例时，作者列表将用相应的 `Author` 实例填充。
+JPA 注解`@ManyToMany`允许指定`Book`和`Author`之间的多多关系。使用了`FetchType.EAGER`参数，因此当创建`Book`实例时，作者列表将用相应的`Author`实例填充。
 
 ## 5.4 编写模型代码 — 71
 
-由于该注解，会创建一个 `Book` 和 `Author` 之间的关系表，生成的 SQL 如下所示：
+由于该注解，会创建一个`Book`和`Author`之间的关系表，生成的 SQL 如下所示：
 
 ```sql
 CREATE TABLE IF NOT EXISTS books_author (
@@ -2162,7 +2059,7 @@ CREATE TABLE IF NOT EXISTS books_author (
 );
 ```
 
-`Book` 和 `Author` 之间的关系表已创建，生成的 SQL 如下所示：
+`Book`和`Author`之间的关系表已创建，生成的 SQL 如下所示：
 
 ```sql
 CREATE TABLE IF NOT EXISTS books_author (
@@ -2174,14 +2071,11 @@ CREATE TABLE IF NOT EXISTS books_author (
 
 （注：OCR 文本存在碎片化。我已根据逻辑流提供了清理后的合并版本。）
 
-
-
-
 ## 5.5 编写用户界面代码
 
 ### 5.5.1 在“检索/列出所有”中显示关联对象的信息
 
-在 `retrieve/list all` 书用例中，为了显示书籍作者的信息，HTML 表格中对应的单元格必须填充所有作者名称的列表。对于此列表，我们在 `Book` 类中实现了一个方法，返回序列化的作者名称列表（格式为 `authorName_1`、`authorName_2`, ..., `authorName_n`）：
+在`retrieve/list all`书用例中，为了显示书籍作者的信息，HTML 表格中对应的单元格必须填充所有作者名称的列表。对于此列表，我们在`Book`类中实现了一个方法，返回序列化的作者名称列表（格式为`authorName_1`、`authorName_2`, ..., `authorName_n`）：
 
 ```java
 public String getAuthorNames() {
@@ -2201,7 +2095,7 @@ public String getAuthorNames() {
 }
 ```
 
-在 `WebContent/views/books/` 文件夹下的 `retrieveAndAll.xhtml` 文件中，该方法在“作者”（Authors）列的 JSF 表达式中调用：
+在`WebContent/views/books/`文件夹下的`retrieveAndAll.xhtml`文件中，该方法在“作者”（Authors）列的 JSF 表达式中调用：
 
 ```xml
 <ui:composition template="WEB-INF/templates/page.xhtml">
@@ -2224,11 +2118,11 @@ public String getAuthorNames() {
 <ui:composition>
 ```
 
-回想使用 `b.authorNames` 会调用 `b` 对象上名为 `getAuthorNames` 的方法。
+回想使用`b.authorNames`会调用`b`对象上名为`getAuthorNames`的方法。
 
 ### 5.5.2 在创建时允许选择关联对象
 
-为了在创建书籍用例中允许选择多个作者关联书籍，需要使用一个多选列表（带有 `multiple="multiple"` 的 select 元素），如下面的 facet 所示，用填充关联对象类型的实例。以下代码是 `WebContent/views/` 文件夹下 `create.xhtml` 视图文件的一部分：
+为了在创建书籍用例中允许选择多个作者关联书籍，需要使用一个多选列表（带有`multiple="multiple"`的 select 元素），如下面的 facet 所示，用填充关联对象类型的实例。以下代码是`WebContent/views/`文件夹下`create.xhtml`视图文件的一部分：
 
 ```xml
 <ui:template template="WEB-INF/templates/page.xhtml">
@@ -2249,7 +2143,7 @@ public String getAuthorNames() {
 </ui:composition>
 ```
 
-记住我们必须为 `Author` 模型类添加 `equals` 方法。在我们的情况下，如果两个作者的 `personId` 属性值相等，则认为这两个作者是“同一个”的：
+记住我们必须为`Author`模型类添加`equals`方法。在我们的情况下，如果两个作者的`personId`属性值相等，则认为这两个作者是“同一个”的：
 
 ```java
 @Override
@@ -2261,7 +2155,9 @@ public boolean equals(Object obj) {
 }
 ```
 
-与 `Publisher` 的情况类似，使用 JSF 转换器类是为了在选择列表填充时将对象序列化为显示字符串，并在调用 `BookController` 的 `create` 方法时（用户点击了“创建”按钮）将它们转换回对象。`BookController.create` 方法扩展了一个新参数：作者列表：
+与`Publisher`的情况类似，使用 JSF 转换器类是为了在选择列表填充时将对象序列化为显示字符串，并在调用`BookController`的`create`方法时（用户点击了“创建”按钮）将它们转换回对象。`BookController.create`方法扩展了一个新参数：作者列表：
+
+
 
 ```java
 public String create(String isbn, String title, Integer year,
@@ -2299,7 +2195,7 @@ ant deploy -Dapp=Unidirectional
 
 最后，启动你的 Tomcat 服务器（Windows 使用 `bin/shutdown.bat`，Linux 使用 `bin/shutdown.sh`）。请耐心等待，这可能需要一些时间。当你通过浏览器打开以下地址时，它就准备就绪了：
 
-http://localhost:8080/Unidirectional/views/index.xhtml
+`http://localhost:8080/Unidirectional/views/index.xhtml`
 
 ## 5.7 集合作为值
 
@@ -2307,7 +2203,7 @@ http://localhost:8080/Unidirectional/views/index.xhtml
 
 | Book | authored | Author |
 |---|---|---|
-| <std> isbn : String | | <std> personid : Integer |
+| `<std>` isbn : String | | `<std>` personid : Integer |
 | title : String | | name : String |
 | year : Integer | * | |
 
@@ -2331,10 +2227,6 @@ http://localhost:8080/Unidirectional/views/index.xhtml
 - 2. 多对多关联，分配零个或多个个人作为电影的**演员**。
 
 ![](img/26c953d1023457333859f69258a99556_94_0.png)
-
-
-
-
 
 ## 80 6 单向关联练习项目
 
@@ -2363,7 +2255,7 @@ http://localhost:8080/Unidirectional/views/index.xhtml
 
 该项目基于下方所示的信息设计模型。之前作业中的相关应用程序将通过扩展，增加管理国际组织（及其成员）以及城市数据（作为首都和总部位置）的功能。这通过添加相应的模型类 `InternationalOrganization` 和 `City` 以及以下单向关联来实现：
 
-- 1. `InternationalOrganization` 与 `Country` 之间的多对多关联，将零或多个国家分配为国际 way的成员；以及
+- 1. `InternationalOrganization` 与 `Country` 之间的多对多关联，将零或多个国家分配为国际组织的成员；以及
 - 2. `Country` 与 `City` 之间的一一关联，将恰好一个城市分配为国家的首都；
 - 3. `Country` 与 `City` 之间的一对多关联，将城市分配给某个国家。
 
@@ -2384,7 +2276,7 @@ http://localhost:8080/Unidirectional/views/index.xhtml
 | 俄罗斯 | 莫斯科 | 莫斯科、新西伯利亚 |
 
 | 名称 |
-|---|---|
+|---|
 | 柏林 |
 | 法兰克福 |
 | 汉堡 |
@@ -2392,7 +2284,7 @@ http://localhost:8080/Unidirectional/views/index.xhtml
 （待续）
 
 | 城市名称 |
-|--- |
+|---|
 | 里昂 |
 | 马赛赛 |
 | 莫斯科 |
@@ -2404,6 +2296,7 @@ http://localhost:8080/Unidirectional/views/index.xhtml
 # 7 双向关联
 
 在面向建模和编程中，双向关联是指表示为一对互逆引用属性的关联，它允许在两个方向上进行“导航”（对象访问）。
+
 下方图 7.1 显示的模型（关于出版商、书籍及其作者）作为我们的运行示例。注意，它包含了两个双向关联，如关联两端的所有权点所示。
 
 | 出版商 | 出版书籍 | 书籍 | 编写书籍 | 作者 |
@@ -2441,9 +2334,12 @@ c.chair.chairedCommittee = c (7.1)
 m.chairedCommittee.chair = m (7.2)
 ```
 
-注意，当属性 $p_2$ 是属性 $p_1$ 的逆向属性时（此处原文逻辑略有跳跃，根据上下文理解为 $p_1$ 是 $p_2$ 的逆向），反过来，$p_1$ 是 $p_2$ 的逆向。因此，我们声明 `ClubMember::chairedCommittee` 是 `Committee::chair` 的逆向。为了在图中表示这种逆向对应关系，我们在 `ClubMember::chairedCommittee` 属性的声明中在大括号中添加了一个逆向属性约束 `inverse of chair`，并在 `Committee::chair` 属性中添加了类似的约束... 即：
-`chairedCommittee[0..1] : Committee (inverse of chair)` 
+注意，当属性 `p2` 是属性 `p1` 的逆向属性时（此处原文逻辑略有跳跃，根据上下文理解为 `p1` 是 `p2` 的逆向），反过来，`p1` 是 `p2` 的逆向。因此，我们声明 `ClubMember::chairedCommittee` 是 `Committee::chair` 的逆向。为了在图中表示这种逆向对应关系，我们在 `ClubMember::chairedCommittee` 属性的声明中在大括号中添加了一个逆向属性约束 `inverse of chair`，并在 `Committee::chair` 属性中添加了类似的约束... 即：
+
+`chairedCommittee[0..1] : Committee (inverse of chair)`
+
 `chair : ClubMember (inverse of chairedCommittee)`
+
 （注：此处由于原文段落存在重复和逻辑混乱，翻译已根据语意进行了对齐）。
 
 （后续部分原文存在大量严重的逻辑重复，似乎是文稿生成错误，以下翻译涵盖了其核心逻辑，即关于双向导航的维护性）
@@ -2456,10 +2352,6 @@ m.chairedCommittee.chair = m (7.2)
 | chair : ClubMember | coChairedCommittee[0..1] : Committee |
 
 `ClubMember` 中的 `chairedCommittee` 现在是派生的（如其斜杠所示），根据 `Committee::chair` 的反向规则定义。
-
-
-
-
 
 ## 7.1 双向关联
 
@@ -2516,13 +2408,15 @@ m.chairedCommittee.chair = m (7.2)
 
 ![](img/26c953d1023457333859f69258a99556_103_1.png)
 
+
+
+### 图 7.3：将双向多对多关联转换为互反多值属性的主从对
+
 | Book | Author |
 | --- | --- |
-| isbn : String | name : String |
-| title : String | |
-| authors : Author | /authoredBooks : Book (inverse of author) |
-
-**图 7.3：** 将双向多对多关联转换为互反多值属性的主从对。
+| `isbn : String` | `name : String` |
+| `title : String` | |
+| `authors : Author` | `/authoredBooks : Book`（`author` 的逆） |
 
 ### 7.2.4 得到的 OO 类模型
 
@@ -2530,15 +2424,15 @@ m.chairedCommittee.chair = m (7.2)
 
 | Book | Publisher |
 | --- | --- |
-| isbn[1]: String {id} | name[1]: String {id} |
-| title[1]: String | address[1]: String |
-| year[1]: Integer | /publishedBooks[*]: Book (inverse of publisher) |
-| publisher[0..1]: Publisher | Author |
-| authors[*]: Author | name[1]: String /authoredBooks[*]: Book |
+| `isbn[1] : String {id}` | `name[1] : String {id}` |
+| `title[1] : String` | `address[1] : String` |
+| `year[1] : Integer` | `/publishedBooks[*] : Book`（`publisher` 的逆） |
+| `publisher[0..1] : Publisher` | Author |
+| `authors[*] : Author` | `name[1] : String` `/authoredBooks[*] : Book` |
 
 图 7.4：具有两互反属性对的 OO 类模型。
 
-由于书本质上依赖于出版商，反之则不然，因此在出版商和作者对象中维护主引用作为派生（或“从”）数据是自然的。因此，我们将 `publishedBooks` 和 `authoredBooks` 定义为派生反向属性，这在 OO 类模型中通过斜杠前缀指示。
+由于书本质上依赖于出版商，反之则不然，因此在出版商和作者对象中维护主引用作为派生（或“从”）数据是自然的。因此，我们将`publishedBooks`和`authoredBooks`定义为派生反向属性，这在 OO 类模型中通过斜杠前缀指示。
 
 该 OO 模型含义可以通过涉及的三个模型类的示例数据填充来说明：
 
@@ -2554,55 +2448,51 @@ m.chairedCommittee.chair = m (7.2)
 | 1928563799 | The Critique of Practical Reason | 2009 | 3 | |
 | 0465030793 | I Am A Strange Loop | 2000 | 2 | Basic Books |
 
-
-
-
-
 | 作者 ID | 姓名 | 著过的书籍 |
-|---|---|---|
+| --- | --- | --- |
 | 1 | Daniel Dennett | 0553345842 |
 | 2 | Douglas Hofstadter | 0553345842, 0465030793 |
 | 3 | Immanuel Kant | 1463794762, 1928565379 |
 
-注意书籍（Book）记录是如何引用出版者（Publisher）和作者（Author）记录的，反之亦然，出版者和作者记录也引用了书籍记录。
+注意书籍（`Book`）记录是如何引用出版者（`Publisher`）和作者（`Author`）记录的，反之亦然，出版者和作者记录也引用了书籍记录。
 
 # 8 使用原生 JS 实现双向关联
 
 在本章中，我们将展示：
 
-- 1. 如何从具有派生反向引用属性的面向对象（OO）类模型推导出 JS 类模型，
-- 2. 如何以 JavaScript 类的形式编写 JS 类模型，
-- 3. 如何基于模型代码编写视图（view）和控制器（controller）代码。
+1. 如何从具有派生反向引用属性的面向对象（OO）类模型推导出 JS 类模型，
+2. 如何以 JavaScript 类的形式编写 JS 类模型，
+3. 如何基于模型代码编写视图（view）和控制器（controller）代码。
 
 ## 8.1 创建 JavaScript 类模型
 
 构建我们 JS 类模型的起点是一个具有派生反向引用属性的 OO 类模型，如上面讨论的，为了方便起见，我们再次展示：
 
-| 书籍 (Book) | 出版者 (Publisher) |
+| 书籍 (`Book`) | 出版者 (`Publisher`) |
 | --- | --- |
-| isbn[1] : String (id) | personId[1] : Integer (id) |
-| title[1] : String | name[1] : String |
-| year[1] : Integer | /publishedBooks[*]: Book (出版者的反向) |
-| publisher[0..1] : Publisher | |
-| authors[*]: Author | (作者的反向) |
+| `isbn[1] : String`（id） | `personId[1] : Integer`（id） |
+| `title[1] : String` | `name[1] : String` |
+| `year[1] : Integer` | `/publishedBooks[*] : Book`（`publisher` 的逆） |
+| `publisher[0..1] : Publisher` | |
+| `authors[*] : Author` | （`author` 的逆） |
 
-注意，该模型包含两个派生反向引用属性：Publisher::publishedBooks 和 Author::authoredBooks。它们中的每一个都链接到一个主属性，并从该属性派生。因此，每一个都代表了一对对应于双向关联的互为反向引用属性。
+注意，该模型包含两个派生反向引用属性：`Publisher::publishedBooks` 和 `Author::authoredBooks`。它们中的每一个都链接到一个主属性，并从该属性派生。因此，每一个都代表了一对对应于双向关联的互为反向引用属性。
 
 与使用单向关联构建 JS 类模型相比，唯一的问题是：
 
-- 1. 为所有派生反向引用属性添加 «get> 刻型，意味着它们具有隐式的 getter（获取），而没有 setter（设置）。每当其主引用属性更新时，它们都会被隐式设置。
+1. 为所有派生反向引用属性添加 `«get»` 刻型，意味着它们具有隐式的 getter（获取），而没有 setter（设置）。每当其主引用属性更新时，它们都会被隐式设置。
 
-这涉及到两个派生反向引用属性 Publisher::publishedBooks 和 Author::authoredBooks。因此，我们得到了以下 JavaScript 类模型：
+这涉及到两个派生反向引用属性 `Publisher::publishedBooks` 和 `Author::authoredBooks`。因此，我们得到了以下 JavaScript 类模型：
 
-# Book
+### Book
 
-| <get/set/isbn>1 : string (id) | <get/set/title>1 : string | <get/set/year>1 : number(int) | <get/set/publisher>[0..1] : Publisher | <get/set/author>[1] : Author | checkIsbn(isbn : String) : ConstraintViolation | checkIsbnAid(isbn : String) : ConstraintViolation | checkTitle(in : String) : ConstraintViolation | checkPublisher(in : Publisher) : ConstraintViolation | checkAuthor(in : Author) : ConstraintViolation | addAuthor(in : Author) | removeAuthor(in : Author) | toString() : string | toRecord() : Object |
+| `<get/set/isbn>1 : string`（id） | `<get/set/title>1 : string` | `<get/set/year>1 : number(int)` | `<get/set/publisher>[0..1] : Publisher` | `<get/set/author>[1] : Author` | `checkIsbn(isbn : String) : ConstraintViolation` | `checkIsbnAid(isbn : String) : ConstraintViolation` | `checkTitle(in : String) : ConstraintViolation` | `checkPublisher(in : Publisher) : ConstraintViolation` | `checkAuthor(in : Author) : ConstraintViolation` | `addAuthor(in : Author)` | `removeAuthor(in : Author)` | `toString() : string` | `toRecord() : Object` |
 
-# Publisher
+### Publisher
 
-| <get/set/set adress>1 : string (id) | <get/set/publishedBooks>[*] : Book (出版者的反向) | checkName(in : String) : ConstraintViolation | checkNameAs(in : String) : ConstraintViolation | checkRefIn(in : String) : ConstraintViolation | checkAddress(in : String) : ConstraintViolation | toString() : string | toRecord() : Object |
+| `<get/set/set adress>1 : string`（id） | `<get/set/publishedBooks>[*] : Book`（`publisher` 的逆） | `checkName(in : String) : ConstraintViolation` | `checkNameAs(in : String) : ConstraintViolation` | `checkRefIn(in : String) : ConstraintViolation` | `checkAddress(in : String) : ConstraintViolation` | `toString() : string` | `toRecord() : Object` |
 
-# Author
+### Author
 
 ## 8.2 编写模型代码
 
@@ -2612,12 +2502,12 @@ m.chairedCommittee.chair = m (7.2)
 
 与单向关联应用相比，我们必须处理许多新的技术问题：
 
-- 我们定义了派生反向引用属性（如 Publisher::publishedBooks），但不包含检查操作，也不包含设置操作。
-- 我们还需要通过维护派生的（集合）反向引用属性（以收集派生反向引用属性的值）来维护这些派生反向引用属性。这特别要求：每当单值引用属性的值通过 setter 初始化或更新时（例如将指向 Publisher 实例 `p` 的引用赋值给 Book 实例 `b`），都必须从派生反向引用属性的对应值中添加或删除反向引用（例如将 `b` 添加到 `p.publishedBooks`）；当主引用属性的值更新且派生反向引用属性为多值时，必须删除对象指向单值主引用属性旧值的反向引用；
-- 5. 每当可选的单值主引用属性的值被取消时（例如通过为 Book 实例 `b` 的 `b.publisher` 赋值 `null`），如果派生反向引用属性是多值的，则必须从派生反向引用属性的对应值中移除反向引用（例如从 `p.publishedBooks` 中移除 `b`），否则必须取消或更新派生反向引用属性的对应值；
-- 3. 每当通过 add 方法向多值主引用属性中添加引用时（例如向 Book 实例 `b` 的 `b.` 添加一个 Author），必须向派生反向引用属性的对应值中分配或添加反向引用（例如将 `b` 添加到 `a.authoredBooks`）；
-- 4. 每当通过 remove 方法从多值主引用属性中移除引用时（例如从 Book 实例 `b` 的 `b.` 移除一个 Author），必须从派生反向引用属性的对应值中移除反向引用（例如从 `a.authoredBooks` 中移除 `b`）；如果派生反向引用属性是多值的，否则必须取消或更新派生反向引用属性的对应值；
-- 5. 每当具有单引用或多引用作为主引用属性值的对象被销毁时（例如通过为 Book 实例 `b` 的 `b.publisher` 赋值 `null`），从派生反向引用属性的对应值中移除反向引用（例如从 `p.publishedBooks` 中移除 `b`），如果派生反向引用属性是多值的，否则必须取消或更新派生反向引用属性；
+- 我们定义了派生反向引用属性（如 `Publisher::publishedBooks`），但不包含检查操作，也不包含设置操作。
+- 我们还需要通过维护派生的（集合）反向引用属性（以收集派生反向引用属性的值）来维护这些派生反向引用属性。这特别要求：每当单值引用属性的值通过 setter 初始化或更新时（例如将指向 `Publisher` 实例 `p` 的引用赋值给 `Book` 实例 `b`），都必须从派生反向引用属性的对应值中添加或删除反向引用（例如将 `b` 添加到 `p.publishedBooks`）；当主引用属性的值更新且派生反向引用属性为多值时，必须删除对象指向单值主引用属性旧值的反向引用；
+- 每当可选的单值主引用属性的值被取消时（例如通过为 `Book` 实例 `b` 的 `b.publisher` 赋值 `null`），如果派生反向引用属性是多值的，则必须从派生反向引用属性的对应值中移除反向引用（例如从 `p.publishedBooks` 中移除 `b`），否则必须取消或更新派生反向引用属性的对应值；
+- 每当通过 `add` 方法向多值主引用属性中添加引用时（例如向 `Book` 实例 `b` 的 `b.` 添加一个 `Author`），必须向派生反向引用属性的对应值中分配或添加反向引用（例如将 `b` 添加到 `a.authoredBooks`）；
+- 每当通过 `remove` 方法从多值主引用属性中移除引用时（例如从 `Book` 实例 `b` 的 `b.` 移除一个 `Author`），必须从派生反向引用属性的对应值中移除反向引用（例如从 `a.authoredBooks` 中移除 `b`）；如果派生反向引用属性是多值的，否则必须取消或更新派生反向引用属性的对应值；
+- 每当具有单引用或多引用作为主引用属性值的对象被销毁时（例如通过为 `Book` 实例 `b` 的 `b.publisher` 赋值 `null`），从派生反向引用属性的对应值中移除反向引用（例如从 `p.publishedBooks` 中移除 `b`），如果派生反向引用属性是多值的，否则必须取消或更新派生反向引用属性。
 
 注意当具有单引用或多引用作为主引用属性值的对象被创建时，其 setter 将处理反向引用。
 
@@ -2625,45 +2515,39 @@ m.chairedCommittee.chair = m (7.2)
 
 为了获取模型层代码，直接将每个 JS 类编码为 ES15 类（或者，作为 ES5 构造函数）：
 
-- 1. 在类级方法中编写属性检查。
-- 2. 对于每个单值属性，编写指定的 getter 和 setter：
-    - 1. 在每个 setter 中调用属性检查，只有在未检测到约束违反时才设置/取消属性。
-    - 2. 如果该属性是派生属性的反向（表示双向关联），确保 setter 同时分配/取消（或添加/移除）反向引用到/从集合值中。
-- 3. 对于每个多值属性，编写其 add 和 remove 操作以及指定的 get/set 操作：
-    - 1. 编写调用相应属性检查的实例方法。
-    - 2. 编写 setter，使其对要赋值的集合项调用 add 操作。
-    - 3. 如果该属性是派生属性的反向（表示双向关联），确保 add/remove 方法同时也分配/取消（或添加/移除）反向引用到/从集合值中。
-- 4. 编写序列化函数 `toString()` 和对象转字符串转换函数 `toRecord()`。在出版者或作者对象的 `toRecord()` 转换中，不包含派生属性 published 和 authored books（因为它们是从书籍的 publisher 和 authors 属性得到的）。
-- 5. 在 destroy 方法中处理删除依赖。确保当具有单引用或多引用作为主引用属性值的对象被销毁时，首先取消（或移除）派生引用。这些步骤将在接下来的章节中详细讨论。
+1. 在类级方法中编写属性检查。
+2. 对于每个单值属性，编写指定的 getter 和 setter：
+   - 在每个 setter 中调用属性检查，只有在未检测到约束违反时才设置/取消属性。
+   - 如果该属性是派生属性的反向（表示双向关联），确保 setter 同时分配/取消（或添加/移除）反向引用到/从集合值中。
+3. 对于每个多值属性，编写其 `add` 和 `remove` 操作以及指定的 get/set 操作：
+   - 编写调用相应属性检查的实例方法。
+   - 编写 setter，使其对要赋值的集合项调用 `add` 操作。
+   - 如果该属性是派生属性的反向（表示双向关联），确保 `add`/`remove` 方法同时也分配/取消（或添加/移除）反向引用到/从集合值中。
+4. 编写序列化函数 `toString()` 和对象转字符串转换函数 `toRecord()`。在出版者或作者对象的 `toRecord()` 转换中，不包含派生属性 `published` 和 `authored books`（因为它们是从书籍的 `publisher` 和 `authors` 属性得到的）。
+5. 在 `destroy` 方法中处理删除依赖。确保当具有单引用或多引用作为主引用属性值的对象被销毁时，首先取消（或移除）派生引用。这些步骤将在接下来的章节中详细讨论。
 
 ### 8.2.3 JS 类模型的类代码
 
-例如，JS 类模型中的 Publisher 类按以下方式编码：
+例如，JS 类模型中的 `Publisher` 类按以下方式编码：
 
 ```javascript
 class Publisher {
   constructor({name, address}) {
     this.name = name;
     this.address = address;
-    // 派生反向引用属性（Book::publisher 反反）
+    // 派生反向引用属性（Book::publisher 的逆）
     this._publishedBooks = {}; // 初始化一个 map
   }
   getName() { . . }
   static checkName(n) { . . }
   static checkNameAsId(n) { . . }
-```
-
-
-
-
-
-```javascript
-static checkNameAsIdRef(n) { . . }
-set name(n) { . . }
-get address() { . . }
-static checkAddress(a) { . . }
-set address(a) { .ntostring() { . . }
-toRecord() { . . }
+  static checkNameAsIdRef(n) { . . }
+  set name(n) { . . }
+  get address() { . . }
+  static checkAddress(a) { . . }
+  set address(a) { . . }
+  toString() { . . }
+  toRecord() { . . }
 }
 ```
 
@@ -2677,7 +2561,7 @@ toRecord() { . . }
 set publisher(p) {
   if (!p) { // 发布者引用被删除
     // 删除 Publisher::publishedBooks 中的反向引用
-    delete this._publisher,publishedBooks[this._isbn];
+    delete this._publisher.publishedBooks[this._isbn];
     // 取消发布者属性
     delete this._publisher;
   } else {
@@ -2687,22 +2571,20 @@ set publisher(p) {
     if (constraintViolation instanceof NoConstraintViolation) {
       // 删除 Publisher::publishedBooks 中的反向引用
       delete this._publisher.publishedBooks[this._isbn];
+      // 创建新的反向引用
+      this._publisher = Publisher.instances[publisher_id];
+      // 将新的反向引用添加到 Publisher::publishedBooks
+      this._publisher.publishedBooks[this._isbn] = this;
+    } else {
+      throw constraintViolation;
     }
-    // 创建新的反向引用
-    this._publisher = Publisher.instances[publisher_id];
-    // 将新的反向引用添加到 Publisher::publishedBooks
-    this._publisher.publishedBooks[this._isbn] = this;
-  } else {
-    throw constraintViolation;
   }
 }
 ```
 
-## 8 使用纯原生 JS 实现双向关联
+### 8.2.5 编写 Add 和 Remove 操作代码
 
-## 8.2.5 编写 Add 和 Remove 操作代码
-
-对于任何与派生引用属性耦合的多值引用属性，add 和 remove 方法也必须对/从（反向属性的值集）赋值/添加/重新移动引用。
+对于任何与派生引用属性耦合的多值引用属性，`add` 和 `remove` 方法也必须对/从（反向属性的值集）赋值/添加/移除引用。
 
 例如，对于多值引用属性 `Book::authors` 耦合到派生反向属性 `Author::authoredBooks` 以实现 `Book` 和 `Author` 之间的双向作者关联，`Book::addAuthor` 方法的编码如下：
 
@@ -2740,9 +2622,11 @@ removeAuthor(a) {
 }
 ```
 
-## 8.2.6 抑制派生属性值的存储
+### 8.2.6 抑制派生属性值的存储
 
-在发布者对象或作者对象到存储的转换 `toRecord()` 中，派生属性 `publishedBooks` 和 `authoredBooks` 不被包含在内，因为它们的信息是冗余的（衍生自书籍的发布者和作者属性）。在 `Author:::toRecord` 函数中的编码如下：
+在发布者对象或作者对象到存储的转换 `toRecord()` 中，派生属性 `publishedBooks` 和 `authoredBooks` 不被包含在内，因为它们的信息是冗余的（衍生自书籍的发布者和作者属性）。在 `Author::toRecord` 函数中的编码如下：
+
+
 
 ```javascript
 toRecord() {
@@ -2838,14 +2722,11 @@ publishers.retrieveAndAll = {
 注意，该模型包含两个反向引用属性：`Publisher::publishedBooks` 和 `Author::authoredBooks`。它们每一个都通过 `inverse-of` 约束与其主属性关联。因此，它们中的每一个都代表了对应双向关联的一对互反反向引用。
 
 - 我们展示如何从类模型导出 Java 实体类模型：
+
 1. 将每个类转换为 `<Java Entity>`，并将所有属性私有化。
-2. 将类模型中平台无关的数据类型名称替换为相应的 Java 数据类型（Integer, Float 等）。
+2. 将类模型中平台无关的数据类型名称替换为相应的 Java 数据类型（`Integer`, `Float` 等）。
 3. 为所有非派生属性添加 `<get/set>` 型，以指示它们需要 getter 和 setter。
 4. 为所有派生属性添加 `<get>` 型，以指示它们需要 getter。
-
-
-
-
 
 ## 9.1 创建 Java 实体类模型
 
@@ -2856,11 +2737,9 @@ publishers.retrieveAndAll = {
 - 为引用属性 `Book::authors` 添加 `manyToMany`
 - 为派生引用属性 `Author::authoredBooks` 添加 `manyToMany`
 
-- 6. 对于任何被指定为另一个引用属性反向的派生属性，将其（inverse of...)）属性替换为相应的 `[mappedBy="..."]` 属性修饰符。
-
-- 7. 创建所需的属性约束检查操作。
-
-- 8. 为每个多值属性创建一个添加（add）和删除（remove）操作。
+6. 对于任何被指定为另一个引用属性反向的派生属性，将其（inverse of...)）属性替换为相应的 `[mappedBy="..."]` 属性修饰符。
+7. 创建所需的属性约束检查操作。
+8. 为每个多值属性创建一个添加（add）和删除（remove）操作。
 
 这生成了以下 Java 实体类：
 
@@ -2911,17 +2790,17 @@ publishers.retrieveAndAll = {
 
 与之前讨论的单向关联应用相比，我们必须处理许多新的技术问题：
 
-- 1. 在模型代码中，你现在需要通过维护构成派生反向引用属性值的派生（集合）反向引用，来维护派生反向引用属性。具体而言：
-  - 每当通过 setter 初始化或更新单值主引用属性的值时（例如将 `Publisher` 实例 `p` 的引用赋值给 `Book` 实例 `b.publisher`），必须向派生反向引用属性的相应值分配或添加反向引用（例如将 `b` 添加到 `p.publishedBooks`）；当主引用属性的值更新且派生反向引用属性为多值时，必须删除指向单值主引用属性旧值的过时反向引用；
-  - 每当可选的单值主引用属性的值取消设置时（例如通过为 `Book` 实例的 `b.publisher` 赋值 `null`），必须从派生反向引用属性的相应值中移除反向引用（例如从 `p.publishedBooks` 中移除 `b`）；如果派生反向引用属性是多值，否则必须设置或更新派生反向引用属性的相应值；
-  - 每当通过 add 方法向多值主引用属性的值添加引用时（例如为 `Book` 实例的 `b.authors` 添加 `Author` 引用），必须向派生引用属性的相应值分配或添加反向引用（例如将 `b` 添加到 `a.authoredBooks`）；
-  - 每当通过 remove 方法从多值主引用属性的值移除引用时（例如从 `Book` 实例 `b` 的 `b.authors` 中移除 `Author` 实例的引用），必须从派生反向引用属性的相应值中移除反向引用（例如从 `a.authoredBooks` 中移除 `b`），如果派生反向引用属性是多值，
-    否则必须设置或更新派生反向引用属性的相应值；
-  - 每当具有单引用或多个主引用属性值引用的对象被销毁时（例如一个具有单引用 `b.publisher` 指向 `Publisher` 实例 `p` 的 `Book` 实例被销毁），必须首先移除派生反向引用（例如从 `publishedBooks` 中移除 `p`）。注意，当创建一个带有单引用或多引用值的值的对象时（例如一个带有单引用 `b.publisher` 的新 `Book`），其 setter 或 add 方法将被调用并处理这些情况。
+1. 在模型代码中，你现在需要通过维护构成派生反向引用属性值的派生（集合）反向引用，来维护派生反向引用属性。具体而言：
+
+- 每当通过 setter 初始化或更新单值主引用属性的值时（例如将 `Publisher` 实例 `p` 的引用赋值给 `Book` 实例 `b.publisher`），必须向派生反向引用属性的相应值分配或添加反向引用（例如将 `b` 添加到 `p.publishedBooks`）；当主引用属性的值更新且派生反向引用属性为多值时，必须删除指向单值主引用属性旧值的过时反向引用；
+- 每当可选的单值主引用属性的值取消设置时（例如通过为 `Book` 实例的 `b.publisher` 赋值 `null`），必须从派生反向引用属性的相应值中移除反向引用（例如从 `p.publishedBooks` 中移除 `b`）；如果派生反向引用属性是多值，否则必须设置或更新派生反向引用属性的相应值；
+- 每当通过 add 方法向多值主引用属性的值添加引用时（例如为 `Book` 实例的 `b.authors` 添加 `Author` 引用），必须向派生引用属性的相应值分配或添加反向引用（例如将 `b` 添加到 `a.authoredBooks`）；
+- 每当通过 remove 方法从多值主引用属性的值移除引用时（例如从 `Book` 实例 `b` 的 `b.authors` 中移除 `Author` 实例的引用），必须从派生反向引用属性的相应值中移除反向引用（例如从 `a.authoredBooks` 中移除 `b`），如果派生反向引用属性是多值，否则必须设置或更新派生反向引用属性的相应值；
+- 每当具有单引用或多个主引用属性值引用的对象被销毁时（例如一个具有单引用 `b.publisher` 指向 `Publisher` 实例 `p` 的 `Book` 实例被销毁），必须首先移除派生反向引用（例如从 `publishedBooks` 中移除 `p`）。注意，当创建一个带有单引用或多引用值的值的对象时（例如一个带有单引用 `b.publisher` 的新 `Book`），其 setter 或 add 方法将被调用并处理这些情况。
 
 在 UI 代码中，我们现在可以利用这些反向引用，例如。
 
-## 9.2.2 总结
+### 9.2.2 总结
 
 1. 代码双向关联。
 2. 在模型类中编写反向引用属性。
@@ -2931,11 +2810,11 @@ publishers.retrieveAndAll = {
 6. 代码创建、更新和删除操作。
 7. 在后续章节中编写反向引用。
 
-## 9.2.3 代码每个实体类
+### 9.2.3 代码每个实体类
 
 在 `Publisher` 类中，我们添加 `publishedBooks` 属性并使用对应 `Book` 类的 `@OneToMany` 注解：
 
-```
+```java
 public class Publisher {
   ..
   @OneToMany(fetch=FetchType.EAGER, mappedBy="publisher")
@@ -2945,7 +2824,8 @@ public class Publisher {
 
 `@OneToMany` 注解的 `mappedBy` 参数指定 `Book` 类中的属性：
 
-```public class Book {
+```java
+public class Book {
   ..
   @ManyToOne(fetch=FetchType.EAGER)
   @JoinColumn(name="PUBLISHER_ID")
@@ -2955,7 +2835,7 @@ public class Publisher {
 
 在 `Author` 类中，我们带有 `@ManyToMany` 注解添加 `authoredBooks` 属性，对应 `Book` 类：
 
-```
+```java
 public class Author {
   ..
   @ManyToMany(fetch=FetchType.EAGER, mappedBy="authors")
@@ -2965,7 +2845,8 @@ public class Author {
 
 `authoredBooks` 属性的 `@ManyToMany` 注解的 `mappedBy` 属性指定 `Book` 类中反向属性的名字：
 
-```public class Book {
+```java
+public class Book {
   ..
   @ManyToMany(fetch=FetchType.EAGER)
   @JoinTable(
@@ -2979,11 +2860,11 @@ public class Author {
 
 我们还使用 `@JoinTable` 注解来指定多对关系的表名以及该表的列名，例如表名为 `books_authors`，列名为 `BOOK_ISBN` 和 `AUTHOR_PERSONID`。
 
-## 9.2.4 代码 setter 操作
+### 9.2.4 代码 setter 操作
 
 任何与派生反向属性关联的引用属性 setter（实现双向关联），现在还需要向反向属性的值（集合）分配/添加/移除反向引用。此类 setter 的示例是下面的 `setPublisher` 方法：
 
-```
+```java
 public class Book {
   ..
   public void setPublisher(Publisher publisher) {
@@ -3000,13 +2881,9 @@ public class Book {
 }
 ```
 
-## 9.2.5 代码 add 和 remove 操作
+### 9.2.5 代码 add 和 remove 操作
 
 对于任何与派生反向属性关联的多值引用属性，其 add 和 remove 方法都必须向反向属性的值（集合）分配/添加/移除相应的引用。
-
-
-
-
 
 ## 106 9 使用 Java EE 实现双向关联
 
@@ -3030,6 +2907,8 @@ public class Book {
 ```
 
 对于删除操作 `removeAuthor`，我们得到以下代码：
+
+
 
 ```java
 public class Book {
@@ -3062,7 +2941,7 @@ public class Author {
 
 ### 9.2.6 处理删除依赖
 
-当一个 `Book` 实例 `b`（具有单一引用 `b.publisher` 指向 `Publisher` 实例 `p` 以及多个引用 `b.authors` 指向 `Author` 实例）被销时，必须首先移除派生的反向引用（例如，通过从 `p.publishedBooks` 中移除 `b`）。这是通过在 `Book.delete` 方法中调用单一值和多值属性的方法并传入 `null` 参数来实现，例如 `b.setPublisher(null)` 和 `b.setAuthors(null)`：
+当一个 `Book` 实例 `b`（具有单一引用 `b.publisher` 指向 `Publisher` 实例 `p` 以及多个引用 `b.authors` 指向 `Author` 实例）被销毁时，必须首先移除派生的反向引用（例如，通过从 `p.publishedBooks` 中移除 `b`）。这是通过在 `Book.delete` 方法中调用单一值和多值属性的方法并传入 `null` 参数来实现，例如 `b.setPublisher(null)` 和 `b.setAuthors(null)`：
 
 ```java
 public class Book {
@@ -3215,10 +3094,6 @@ UIComponent component, Object value) {
 </ui:composition>
 ```
 
-
-
-
-
 ```java
 }
   return result;
@@ -3239,7 +3114,7 @@ UIComponent component, Object value) {
 
 由于序列化文本包含 HTML 元素（即用于产生 HTML 换行的 `<br />`），我们需要指定 `escape="false"` 属性，否则 `<` 和 `>` 将被替换为相应的实体 `&lt; &gt;`。
 
-JSF 器的的主要优势在于我们没有将模型代码与特定的视图混合，我们的类保持整洁且分层。如果我们想将 JSF 替换为另一种 UI 技术，我们的模型类保持不变，只需要为新技术处理相应的转换器即可。
+JSF 转换器的主要优势在于我们没有将模型代码与特定的视图混合，我们的类保持整洁且分层。如果我们想将 JSF 替换为另一种 UI 技术，我们的模型类保持不变，只需要为新技术处理相应的转换器即可。
 
 ## 9.4 运行应用并获取代码
 
@@ -3268,8 +3143,11 @@ http://localhost:8080/BidirectionalAssociationApp/WebContent/views/app/index.xht
 聚合是部分-整体关联的一种特殊形式，其中整体的部分可以与其他整体共享。例如，我们可以对 `DegreeProgram`（学位计划）类和 `Course`（课程）类之间的聚合进行建模，如图所示，因为课程是学位计划的一部分，且一门课程可以在两个或多个学位计划之间共享（例如，工程学学位可以与计算机科学学位共享一门 C 语言课程）。
 
 | DegreeProgram | Course |
+
 | :--- | :--- |
+
 | name : String | id : String |
+
 | * | name : String |
 
 然而，具有共享部分的聚合概念实际上并没有太大意义，因此对如何编写关联代码没有产生任何影响，许多开发者倾向于不在他们的类图中使用空心菱形，但 UML 规定：“共享聚合的精确语义取决于应用领域和建模者”。
@@ -3294,8 +3172,9 @@ http://localhost:8080/BidirectionalAssociationApp/WebContent/views/app/index.xht
 
 Martin Fowler 解释说，刻画组合关系的主要问题是“一个对象只能是一个组合关系的一部分”。G. Bellelekens 在博客文章《UML Composition with Aggregation as Association》中也解释了这一点。除了定义组合的这种特征（拥有独有的或非共享的部分）外，组合还可能伴随着组合对象与其组件之间的生命周期依赖。事实上，此类依赖有两种类型：
 
-- 1. 每当一个组件必须附加到另一个组合对象上（或者说，当它具有强制性组合时，如组合线组合侧的“恰有一个”多重性所表示），那么当它当前的组合对象被销毁时，它必须被重新使用（内部或重新附加到另一个组合对象）或被销毁。Person（人）和 Heart（心脏）之间的组合就是示例，如下所示。当主人去世时，心脏要么被销毁，要么移植到另一个人。
-- 2. 每当一个组件不能从其组合对象中脱离（或者说，当它是不可分割的），那么且只有在这种情况下，当其组合对象被销毁时，组件才被销毁。不可分割部分的组合示例是 Person（人）和 Brain（大脑）之间的组合。
+- 1. 每当一个组件必须附加到另一个组合对象上（或者说，当它具有强制性组合时，如组合线组合侧的“恰有一个”多重性所表示），那么当它当前的组合对象被销毁时，它必须被重新使用（内部或重新附加到另一个组合对象）或被销毁。`Person`（人）和 `Heart`（心脏）之间的组合就是示例，如下所示。当主人去世时，心脏要么被销毁，要么移植到另一个人。
+
+- 2. 每当一个组件不能从其组合对象中脱离（或者说，当它是不可分割的），那么且只有在这种情况下，当其组合对象被销毁时，组件才被销毁。不可分割部分的组合示例是 `Person`（人）和 `Brain`（大脑）之间的组合。
 
 ![](img/26c953d102345733859f69258a956_130_0.png)
 
@@ -3303,60 +3182,60 @@ Martin Fowler 解释说，刻画组合关系的主要问题是“一个对象只
 
 当这种生命周期依赖适用时，它代表生存依赖（Existential Dependency）的一种特殊形式，这包含了第 1.2 节讨论的级联删除策略。
 
+
+
 在汽车-引擎组合的示例中（如图所示），显然引擎在汽车被销毁之前可以从汽车上脱离，在这种情况下，引擎不会被销毁并可以重新使用。这由组合线组合侧的零或一多重性所暗示。
 
-| Car | Engine |
+| `Car` | `Engine` |
 |---|---|
-| licenseNo : String | id : String |
-| color : String 0..1 | 0..1 | cylinderCapacity : Decimal |
+| `licenseNo : String` | `id : String` |
+| `color : String` | `0..1` | `cylinderCapacity : Decimal` |
 
-组合在组合侧的多重性是 1 或 0..1，取决于组件是否具有强制性的组合对象。当然，组件不可分割的事实意味着它具有强制性的组合对象，因此组合的多重性必须是 1。
+组合在组合侧的多重性是 `1` 或 `0..1`，取决于组件是否具有强制性的组合对象。当然，组件不可分割的事实意味着它具有强制性的组合对象，因此组合的多重性必须是 `1`。
 
-#### 10.1.3 示例
+## 10.1.3 示例
 
-作为部分-整体关联的一个示例，我们考虑了教材与其章节之间的关联。通常情况下，教材的一个章节在不修改的情况下无法在另一书中重用（例如，因为它可能引用了书的其他部分）
-
-
-（教科书）。此外，允许不属于教科书的章节是不符合逻辑的。因此，我们将这种关联建模为一种不可拆分的组合，如下图所示。
+作为部分-整体关联的一个示例，我们考虑了教材与其章节之间的关联。通常情况下，教材的一个章节在不修改的情况下无法在另一书中重用（例如，因为它可能引用了书的其他部分）（教科书）。此外，允许不属于教科书的章节是不符合逻辑的。因此，我们将这种关联建模为一种不可拆分的组合，如下图所示。
 
 ```
 «invariant
 （教科书的 ISBN
 与章节的 sequenceNo 的组合是唯一的。）
 ```
-```
+
+
 
 | 教科书 | 不可分 | 章节 |
 | :--- | :--- | :--- |
-| isbn: String (id) | | sequenceNo: Integer |
-| title: String | | title: String |
-| year: Integer | * | |
+| `isbn: String (id)` | | `sequenceNo: Integer` |
+| `title: String` | | `title: String` |
+| `year: Integer` | * | |
 
-代表不可拆分组件类型的对象类（如章节）不需要具有标准的标识符属性，因为没有必要让不可拆分组件独立于其复合对象而被引用。为了引用不可拆分组件对象，使用一个复合键，该复合键由复合类型的主键和组件类型的合适的（相对唯一的）属性组成。例如，一个教科书章节是通过教科书的 ISBN 和章节的序列号的组合来引用的。
+代表不可拆分组件类型的对象类（如章节）不需要具有标准的标识符属性，因为没有必要让不可拆分组件独立于其复合对象而被引用。为了引用不可拆分组件对象，使用一个复合键，该复合键由复合类型的主键和组件类型的合适的（相对唯一的）属性组成。例如，一个教科书章节是通过教科书的 `ISBN` 和章节的序列号的组合来引用的。
 
-由于对象作为 Textbook 对象的不可拆分组件，当其 Textbook 不存在时无法继续存在，因此在*删除教科书*操作的实现中，我们需要使用 CASCADE 删除策略，要求在删除教科书时删除所有相关的章节。
+由于对象作为 `Textbook` 对象的不可拆分组件，当其 `Textbook` 不存在时无法继续存在，因此在*删除教科书*操作的实现中，我们需要使用 `CASCADE` 删除策略，要求在删除教科书时删除所有相关的章节。
 
-不可拆分组件类型不需要自己的 CRUD 数据管理接口。相反，所有的 CRUD 操作都在其复合类型的数据管理接口中提供。例如，创建、检索、更新和删除教科书章节是在这些管理教科书数据的接口内完成的。
+不可拆分组件类型不需要自己的 `CRUD` 数据管理接口。相反，所有的 `CRUD` 操作都在其复合类型的数据管理接口中提供。例如，创建、检索、更新和删除教科书章节是在这些管理教科书数据的接口内完成的。
 
 ## 10.2 关联类
 
 关联类是表示关联的类。
 记住，在 OO 类模型中，简单关联通过将其转换为涉及的对象类的引用属性而被消除了，如第 1.7 节所示。但每当关联具有属性时，它就无法被消除，必须在 OO 类模型中转换为一个类。
-例如，考虑对象类型 *Book* 和 *Person* 之间的关联 *Reservation*，该关联允许表达诸如“ISBN 为 3627921105 的书被 ID 为 4701199 的人于 2020-08-22 预订”的事实。由于它有一个日期属性，该关联在信息设计模型中被建模为关联类，如下类图所示：
+例如，考虑对象类型 *Book* 和 *Person* 之间的关联 *Reservation*，该关联允许表达诸如“`ISBN` 为 3627921105 的书被 ID 为 4701199 的人于 2020-08-22 预订”的事实。由于它有一个日期属性，该关联在信息设计模型中被建模为关联类，如下类图所示：
 
-|  Reservation | | | Person |
+| Reservation | | | Person |
 | :--- | :--- | :--- | :--- |
-| date : Date | * | * | id : Integer (id) |
-| Book | | reserved_by | name |
-| | |
+| `date : Date` | * | * | `id : Integer (id)` |
+| Book | | `reserved_by` | `name` |
+| | | | |
 
 在 OO 类模型中（这是编写应用模型类的基础），关联类被转换为普通类，并带有引用涉及的对象类的引用属性。例如，关联类 *Reservation* 被转换为以下 OO 类模型：
 
 | Reservation |
 | :--- |
-| book : Book |
-| reserved_by : Person |
-| date : Date |
+| `book : Book` |
+| `reserved_by : Person` |
+| `date : Date` |
 
 # 11 双向关联实践项目
 
@@ -3364,14 +3243,14 @@ Martin Fowler 解释说，刻画组合关系的主要问题是“一个对象只
 
 - 1. 根据给定的信息设计模型派生出一个 OO 类模型。
   提示：将 JavaScript 类模型替换为相应的引用属性。
-- 2. 根据 OO 类模型派出一个 JavaScript 类模型或 Java 实体类模型。提示：添加检查和 setter 方法。
+- 2. 根据 OO 类模型派出一个 JavaScript 类模型或 Java 实体类模型。提示：添加检查和 `setter` 方法。
 - 3. 按照提供的指南编写你的 JavaScript 类模型或 Java 实体类模型。
 
 确保你的页面符合 HTML5 的 XML 语法，并且你的 JavaScript 代码符合你的编码指南并经过 JSHint (http://www.jshint.com) 检查。
 
 ## 11.1 为电影分配导演/演员，以及为导演/演员分配电影
 
-此项目基于信息设计模型。在之前的作业的基础上，将通过添加派生的反向引用属性来实现双向关联。这是通过在模型类 Person 中添加多值引用属性 `directedMovies` 和 `playedMovies` 实现的，其范围为 `Movie`。
+此项目基于信息设计模型。在之前的作业的基础上，将通过添加派生的反向引用属性来实现双向关联。这是通过在模型类 `Person` 中添加多值引用属性 `directedMovies` 和 `playedMovies` 实现的，其范围为 `Movie`。
 
 ![](img/26c953d1023457333859f69258a99556_133_0.png)
 
@@ -3402,8 +3281,8 @@ Martin Fowler 解释说，刻画组合关系的主要问题是“一个对象只
 
 此项目基于所示的信息设计模型。之前作业中的相应应用将通过添加管理国际组织（以国家为成员）以及城市（作为首都和总部所在地）数据的能力进行扩展。这是通过添加相应的模型类 `InternationalOrganization` 和 `City` 以及以下单向关联实现的：
 
-- 1. InternationalOrganization 与 Country 之间的多对多关联，将多个国家分配为国际组织的成员，反之则将多个国际组织分配给国家；
-- 2. Country 与 City 之间的一多关联，将多个城市分配给国家，反之则将一个城市分配给国家。
+- 1. `InternationalOrganization` 与 `Country` 之间的多对多关联，将多个国家分配为国际组织的成员，反之则将多个国际组织分配给国家；
+- 2. `Country` 与 `City` 之间的一多关联，将多个城市分配给国家，反之则将一个城市分配给国家。
 
 ![](img/26c953d1023457333859f69258a99556_134_0.png)
 
@@ -3437,14 +3316,11 @@ Martin Fowler 解释说，刻画组合关系的主要问题是“一个对象只
 
 ## 12.1 通过特化引入子类型
 
-当一个新对象类型代表另一个对象的特殊情况时，就可以通过特化引入。我们在示例模型中说明了这一点，我们将教科书和传记捕作为书籍的特殊情况。这意味着教科书和传记也具有 ISBN、标题和年份，但它们还有进一步的特征，例如教科书和传记的学科属性（subjectArea）。因此，在图 12.1 中，我们通过特化对象类型 Book 引入了 Textbook 和 Biography 类型，即作为其子类型。
+当一个新对象类型代表另一个对象的特殊情况时，就可以通过特化引入。我们在示例模型中说明了这一点，我们将教科书和传记捕作为书籍的特殊情况。这意味着教科书和传记也具有 `ISBN`、标题和年份，但它们还有进一步的特征，例如教科书和传记的学科属性（`subjectArea`）。因此，在图 12.1 中，我们通过特化对象类型 `Book` 引入了 `Textbook` 和 `Biography` 类型，即作为其子类型。
 
 ![](img/26c953d1023457333859f69258a99556_138_0.png)
 
-图 12.1：对象类型 Book 的两个子类型：Textbook 和 Biography。
-
-
-
+图 12.1：对象类型 `Book` 的两个子类型：`Textbook` 和 `Biography`。
 
 # 12 子类型与继承
 
@@ -3458,46 +3334,46 @@ Martin Fowler 解释说，刻画组合关系的主要问题是“一个对象只
 
 | Employee | | | |
 | :--- | :--- | :--- | :--- |
-| employeeNo : Integer (id) | | Book | Author |
-| name : String | | isbn : String (id) | authorId[1] : Integer (id) |
-| dateOfBirth : Date | | title : String | name[1] : String |
-| salary : Decimal | | year : Integer | dateOfBirth[0..1] : Date |
-| * | | * | biography[1] : Text |
+| `employeeNo : Integer (id)` | | Book | Author |
+| `name : String` | | `isbn : String (id)` | `authorId[1] : Integer (id)` |
+| `dateOfBirth : Date` | | `title : String` | `name[1] : String` |
+| `salary : Decimal` | | `year : Integer` | `dateOfBirth[0..1] : Date` |
+| * | | * | `biography[1] : Text` |
 | Publisher | published Books | authored Books | |
-| name : String (id) | | | |
-| address : String | 0.1 * | * |
+| `name : String (id)` | | | |
+| `address : String` | 0.1 * | * | |
 
-**图 12.2：** 对象类型 Employee 和 Author 共享若干属性。
+**图 12.2：** 对象类型 `Employee` 和 `Author` 共享若干属性。
 
-在添加对象类型 Employee 后，注意到 Employee 和 Author 共享许多属性，这是因为员工和作者都是人，而成为员工和作者都是人所扮演的角色。因此，我们可以通过添加一个共同的超类型 Person（人）来泛化这两个对象类型，如图 12.3 的所示所示。
+在添加对象类型 `Employee` 后，注意到 `Employee` 和 `Author` 共享许多属性，这是因为员工和作者都是人，而成为员工和作者都是人所扮演的角色。因此，我们可以通过添加一个共同的超类型 `Person`（人）来泛化这两个对象类型，如图 12.3 的所示所示。
 
-在泛化两个或多个对象类型时，我们将它们共享的特征移动到新添加的超类型中，并在那里进行集中管理。在 Employee 和 Author 的情况下，这组共享特征包括属性 `name`（姓名）、`dateOfBirth`（出生日期）和 `dateOfDeath`（死亡日期）。通常，共享特征可能包括属性、关联和约束。
+在泛化两个或多个对象类型时，我们将它们共享的特征移动到新添加的超类型中，并在那里进行集中管理。在 `Employee` 和 `Author` 的情况下，这组共享特征包括属性 `name`（姓名）、`dateOfBirth`（出生日期）和 `dateOfDeath`（死亡日期）。通常，共享特征可能包括属性、关联和约束。
 
-注意，由于在信息设计模型中，每个顶层类都需要一个标准的标识符，在新的类 Person 中，我们声明了标准标识符属性 `personId`，它被所有子类继承。因此，我们
+注意，由于在信息设计模型中，每个顶层类都需要一个标准的标识符，在新的类 `Person` 中，我们声明了标准标识符属性 `personId`，它被所有子类继承。因此，我们
 
 ## 12.3 意图与扩展 — 125
 
 | Employee | Person |
 | :--- | :--- |
-| employeeNo: Integer (key) | personid[1]: integer (id) |
-| salary : Decimal | name[1]: String |
-| | dateOfBirth[1]: Date |
-| | dateOfDeath[0..1]: Date |
+| `employeeNo: Integer (key)` | `personid[1]: integer (id)` |
+| `salary : Decimal` | `name[1]: String` |
+| | `dateOfBirth[1]: Date` |
+| | `dateOfDeath[0..1]: Date` |
 
 * 0._1
 
 | Publisher | Book | Author |
 | :--- | :--- | :--- |
-| name : String (id) | isbn: String (id) | biography : Text |
-| address : String | title : String | | |
-| | year : Integer | | |
+| `name : String (id)` | `isbn: String (id)` | `biography : Text` |
+| `address : String` | `title : String` | | |
+| | `year : Integer` | | |
 | 0._1 | * | * |
 
-**图 12.3：** 对象类型 Employee 和 Author 通过共同的超类型被泛化。
+**图 12.3：** 对象类型 `Employee` 和 `Author` 通过共同的超类型被泛化。
 
-我们必须在泛化之前重新考虑在子类中被声明为标准标识符的属性。在 Employee 的情况下，我们曾宣布属性 `employeeNo` 为标准标识符。由于员工编号是一个重要的业务信息项，即使它不再需要作为标准标识符，我们也必须保留这个属性。因为它是一个备用标识符（"key"），我们使用约束关键字 `key` 为其定义唯一性约束。
+我们必须在泛化之前重新考虑在子类中被声明为标准标识符的属性。在 `Employee` 的情况下，我们曾宣布属性 `employeeNo` 为标准标识符。由于员工编号是一个重要的业务信息项，即使它不再需要作为标准标识符，我们也必须保留这个属性。因为它是一个备用标识符（"key"），我们使用约束关键字 `key` 为其定义唯一性约束。
 
-在 Author 的情况下，我们曾宣布属性 `authorId` 为标准标识符。假设该属性代表一个纯技术性的而非业务性的项，我们将其舍弃，因为它不再需要作为作者的标识符。结果，我们得到了一个模型，允许通过员工编号或其 `personId` 值来识别员工，并通过其 `personId` 来识别作者。
+在 `Author` 的情况下，我们曾宣布属性 `authorId` 为标准标识符。假设该属性代表一个纯技术性的而非业务性的项，我们将其舍弃，因为它不再需要作为作者的标识符。结果，我们得到了一个模型，允许通过员工编号或其 `personId` 值来识别员工，并通过其 `personId` 来识别作者。
 
 我们考虑对原始示例模型的以下扩展，如图 12.4 所示：
 
@@ -3514,15 +3390,15 @@ Martin Fowler 解释说，刻画组合关系的主要问题是“一个对象只
 
 | Employee | Person |
 | :--- | :--- |
-| employeeNo: Integer (key) salary : Decimal | personid[1]: Integer (id) name[1]: String dateOfBirth[1]: Date dateOfDeath[0..1]: Date |
+| `employeeNo: Integer (key)` `salary : Decimal` | `personid[1]: Integer (id)` `name[1]: String` `dateOfBirth[1]: Date` `dateOfDeath[0..1]: Date` |
 | * | | |
 | 0.1 | | |
 | Publisher | Book authored Books |
-| name: String (id) address : String | isbn: String (id) title: String year : Integer |
+| `name: String (id)` `address : String` | `isbn: String (id)` `title: String` `year : Integer` |
 | 0.1 | * | * |
 | managed Publisher 0.1 | (disjoint) | |
 | | TextBook | | |
-| | subjectArea : String about : String |
+| | `subjectArea : String` `about : String` |
 | Manager | | |
 
 图 12.4：具有两个类层次的信息模型。
@@ -3532,7 +3408,7 @@ Martin Fowler 解释说，刻画组合关系的主要问题是“一个对象只
 由于意图/扩展的对偶性，我们可以通过两种不同的方式特化给定的类型：
 
 - **通过添加特征来扩展类型的意图**，如添加特征。
-- **通过添加约束来限制类型的扩展**（如为 TextBook 添加 subjectArea）。
+- **通过添加约束来限制类型的扩展**（如为 `TextBook` 添加 `subjectArea`）。
 
 典型的编程语言（如 Java）仅支持第一种可能性（通过扩展意图来特化），而 SQL 也支持第二种可能性（通过限制扩展来特化）。
 
@@ -3558,28 +3434,25 @@ Martin Fowler 解释说，刻画组合关系的主要问题是“一个对象只
 
 为了更好地理解自然语言语句中关于本质性（sortal）与非本质性、刚性与非刚性的分类，我们可以像 Giancarlo Guizzardi 在他的对象类型理论中那样区分本质性和非本质性。
 
-如果一个对象类型对其实例具有统一的身份标识，那么它就是本质性的。这种条件定义了两个实例之间不具有的属性（或属性集）。Person 是本质性对象的示例，因为它的所有实例（人）都可以通过出生属性（何时、对谁出生）来识别。Book 是非本质性对象的示例，因为它包含了以不同方式识别的实例（例如，教材和自出版小说）。
+如果一个对象类型对其实例具有统一的身份标识，那么它就是本质性的。这种条件定义了两个实例之间不具有的属性（或属性集）。`Person` 是本质性对象的示例，因为它的所有实例（人）都可以通过出生属性（何时、对谁出生）来识别。`Book` 是非本质性对象的示例，因为它包含了以不同方式识别的实例（例如，教材和自出版小说）。
 
-如果一个对象类型的实例不会停止作为该类型而存在，那么它就是刚性的。Person 是刚性对象的示例，而 Employee 不是刚性的。如果一个分划的所有子类都是刚性的，则该分划被称为刚性的。
+如果一个对象类型的实例不会停止作为该类型而存在，那么它就是刚性的。`Person` 是刚性对象的示例，而 `Employee` 不是刚性的。如果一个分划的所有子类都是刚性的，则该分划被称为刚性的。
 
-类是刚性的本质对象类型。TextBook 和 Person 是类的示例。
+类是刚性的本质对象类型。`TextBook` 和 `Person` 是类的示例。
 
-角色是一个本质性对象类型，它用于分类与对象类型 O 的实例参与（特定类型 A）关系的类 K 的实例。注意 R 是 K 的非刚性子类型，因为其实例在停止参与与类型 O 的类型 A 关系时不会停止存在。
+角色是一个本质性对象类型，它用于分类与对象类型 `O` 的实例参与（特定类型 `A`）关系的类 `K` 的实例。注意 `R` 是 `K` 的非刚性子类型，因为其实例在停止参与与类型 `O` 的类型 `A` 关系时不会停止存在。
 
-例如，Employee 是角色的示例，因为它是一个本质性对象类型，用于分类与 Enterprise 实例参与雇佣关系的 Person 实例。
-
-
-
+例如，`Employee` 是角色的示例，因为它是一个本质性对象类型，用于分类与 `Enterprise` 实例参与雇佣关系的 `Person` 实例。
 
 根类，使得这些子类可以从模型中移除，从而简化模型。
 
 这种“类层次结构合并”（Class Hierarchy Merge）设计模式有两种形式。在最简单的形式中，原始类层次的分段是互不交的，这允许使用单值类别属性来表示根类每个实例的特定类别，该类别由其实例化的唯一子类对应。当原始类层次的分段不是互不交时，或者我们需要使用多值类别属性来表示对象实例化的类型集合时。我们只讨论针对互不交分段的简单类层次结构合并重构情况，我们采取以下重构步骤：
 
 - 1. 添加一个枚举数据类型，其中包含每个分段子类对应的枚举字面量。在我们的示例中，我们添加了枚举数据类型 `BookCategoryEL`。
-- 2. 在根类中添加一个类别属性，并将该枚举作为其范围。如果分段是完整的，则该类别属性是强制的 [1]；如果不完整，则是可选的 [..]。在我们的示例中，我们向类中添加了一个范围为 `BookCategoryEL` 的类别属性。该类别属性是可选的，因为将 Book 分为 Textbook（教科书）和 Biography（传记）是不完全的。
+- 2. 在根类中添加一个类别属性，并将该枚举作为其范围。如果分段是完整的，则该类别属性是强制的 [1]；如果不完整，则是可选的 [..]。在我们的示例中，我们向类中添加了一个范围为 `BookCategoryEL` 的类别属性。该类别属性是可选的，因为将 `Book` 分为 `Textbook`（教科书）和 `Biography`（传记）是不完全的。
 - 3. 每只要分段是固定的，我们将类别属性指定为冻结（frozen），这意味着它只能在创建新对象时通过设置值来赋值，而不能更改。
-- 4. 将分段子类的属性移动到根类中，并将它们设为可选。我们将这些通常列在类别属性下方的属性称为分段属性。在我们的示例中，我们将属性 `subjectArea` 从 Textbook 移动到 Book，将 `about` 从 Biography 移动到 Book，使 `subjectArea` 变为可选（即 [..]）。
-- 5. 在扩展后的根矩形中添加一个约束（在不变性框中），强制要求当且仅当根类实例化相应的类别时，可选的子类属性才有值。在我们的示例中，这意味着一个 Book 实例属于“Textbook”类别，当且仅当其属性 `subjectArea` 有值时；且当且仅当其属性 `about` 有值时，它才属于“Biography”类别。
+- 4. 将分段子类的属性移动到根类中，并将它们设为可选。我们将这些通常列在类别属性下方的属性称为分段属性。在我们的示例中，我们将属性 `subjectArea` 从 `Textbook` 移动到 `Book`，将 `about` 从 `Biography` 移动到 `Book`，使 `subjectArea` 变为可选（即 [..]）。
+- 5. 在扩展后的根矩形中添加一个约束（在不变性框中），强制要求当且仅当根类实例化相应的类别时，可选的子类属性才有值。在我们的示例中，这意味着一个 `Book` 实例属于“Textbook”类别，当且仅当其属性 `subjectArea` 有值时；且当且仅当其属性 `about` 有值时，它才属于“Biography”类别。
 - 6. 从模型中移除分段子类。
 
 在我们的示例案例中，这种设计重构的结果如图 12.7 所示。注意，约束（或“不变性”）表示一个逻辑句子，其中逻辑运算符关键字“IFF”代表逻辑运算符“当且仅当”，而属性条件 `prop=undefined` 测试属性 `prop` 是否没有值。
@@ -3588,14 +3461,19 @@ Martin Fowler 解释说，刻画组合关系的主要问题是“一个对象只
 
 | Book | «enumeration» |
 |---|---|
-| isbn[1] : String (id) | BookTypeEL |
-| title[1] : String | TextBook |
-| year[1] : Integer | Biography |
-| category[0..] : BookTypeEL (frozen) | |
-| subjectArea[0..] : String | |
+| `isbn[1] : String (id)` | `BookTypeEL` |
+| `title[1] : String` | `TextBook` |
+| `year[1] : Integer` | `Biography` |
+| `category[0..] : BookTypeEL (frozen)` | |
+| `subjectArea[0..] : String` | |
 
 ```
-invariant
+
+
+
+`invariant`
+
+```
 ((category="Textbook" IFF NOT subjectArea=undefined) AND
 (category="Biography") IFF NOT about=undefined))
 ```
@@ -3610,18 +3488,18 @@ invariant
 
 多重分类意味着一个对象拥有多个类型。这主要发生在一个对象同时扮演多个角色时，因此直接实例化了定义这些规则的多个类。
 
-多重继承通常也与角色类（role classes）有关。例如，学生助教同时扮演学生和学术职员的角色，因此相应的 OOP 类 `StudentAssistant` 继承了 `Student` 和 `AcademicStaffMember` 两个类。同样，我们上面的示例模型 `AmphibianVehicle`（两栖车辆）继承了两个角色类 `LandVehicle`（陆地车辆）和 `WaterVehicle`（水上车辆）。
+多重继承通常也与角色类（role classes）有关。例如，学生助教同时扮演学生和学术职员的角色，因此相应的 OOP 类`StudentAssistant`继承了`Student`和`AcademicStaffMember`两个类。同样，我们上面的示例模型`AmphibianVehicle`（两栖车辆）继承了两个角色类`LandVehicle`（陆地车辆）和`WaterVehicle`（水上车辆）。
 
 ### 12.7.1 OOP 中的子类型化与继承
 
-OOP 对子类型化的最低支持水平（例如由 Java 和 C# 提供）允许在单继承层次结构中定义属性和方法的继承，可以通过 `instance-of` 谓词进行检查，以测试一个类是否是对象的直接或间接类型。此外，希望通过以下方式检查继承层次结构：
+OOP 对子类型化的最低支持水平（例如由 Java 和 C# 提供）允许在单继承层次结构中定义属性和方法的继承，可以通过`instance-of`谓词进行检查，以测试一个类是否是对象的直接或间接类型。此外，希望通过以下方式检查继承层次结构：
 
 - 预定义的实例级属性，用于获取对象的直接类型（如果允许多重分类，则获取其多个直接类型）；
 - 预定义的类型级属性，用于获取类型的直接父类型（如果允许多重继承，则获取其多个父类型）。
 
-JavaScript 是 OOP 语言的一个特例，它最初没有定义类的显式语言元素，只有定义构造函数的元素。由于其动态编程特性，JavaScript 允许使用各种代码模式来实现类、子类型化和继承。在现代 JavaScript 中（从 ES2015 开始），定义类和子类是非常直观的。首先，我们定义一个基类 `Person`，有两个属性 `firstName` 和 `lastName`：
+JavaScript 是 OOP 语言的一个特例，它最初没有定义类的显式语言元素，只有定义构造函数的元素。由于其动态编程特性，JavaScript 允许使用各种代码模式来实现类、子类型化和继承。在现代 JavaScript 中（从 ES2015 开始），定义类和子类是非常直观的。首先，我们定义一个基类`Person`，有两个属性`firstName`和`lastName`：
 
-```
+```javascript
 class Person {
   constructor (first, last) {
     // 分配基类属性
@@ -3631,7 +3509,7 @@ class Person {
 }
 ```
 
-然后，我们定义一个子类 `Student`，带有一个额外的属性 `studentNo`：
+然后，我们定义一个子类`Student`，带有一个额外的属性`studentNo`：
 
 ```javascript
 class Student extends Person {
@@ -3644,55 +3522,48 @@ class Student extends Person {
 }
 ```
 
-注意如何通过 `super(first, last)` 来分配父类属性。
+注意如何通过`super(first, last)`来分配父类属性。
 
 ### 12.7.2 XML Schema 中的子类型化与继承
 
 在 XML Schema 中，子类型可以通过“扩展”（extending）或“限制”（restricting）复杂类型来定义。扩展复杂类型意味着通过添加元素或属性来扩展其意图，而限制复杂类型意味着通过添加约束来限制其扩展。
 
-我们可以通过以下方式定义复杂类型 `Person` 和其子类型 `Student`：
+我们可以通过以下方式定义复杂类型`Person`和其子类型`Student`：
 
-```
+```xml
 <xs:complexType name="Person">
-<xs:attribute name="firstName" type="xs:string" />
-<xs:attribute name="lastName" type="xs:string" />
-<xs:attribute name="gender" type="GenderValue" />
+  <xs:attribute name="firstName" type="xs:string" />
+  <xs:attribute name="lastName" type="xs:string" />
+  <xs:attribute name="gender" type="GenderValue" />
 </xs:complexType>
+
 <xs:complexType name="Student">
-<xs:extension base="Person">
-<xs:attribute name="studentNo" type="xs:string" />
-</xs:extension>
+  <xs:extension base="Person">
+    <xs:attribute name="studentNo" type="xs:string" />
+  </xs:extension>
 </xs:complexType>
 ```
 
-我们可以通过以下方式限制 `Person` 来定义子类型 `FemalePerson`：
+我们可以通过以下方式限制`Person`来定义子类型`FemalePerson`：
 
-```
+```xml
 <xs:complexType name="FemalePerson">
-<xs:restriction base="Person">
-<xs:attribute name="firstName" type="xs:string" />
-<xs:attribute name="lastName" type="xs:string" />
-<xs:attribute name="gender" type="GenderValue"
-use="fixed" value="f" />
-</xs:restriction>
+  <xs:restriction base="Person">
+    <xs:attribute name="firstName" type="xs:string" />
+    <xs:attribute name="lastName" type="xs:string" />
+    <xs:attribute name="gender" type="GenderValue"
+                  use="fixed" value="f" />
+  </xs:restriction>
 </xs:complexType>
 ```
 
-注意通过将 `gender` 属性固定为“f”，我们定义了一个仅由 `Person` 的女性实例满足的约束。
+注意通过将`gender`属性固定为“f”，我们定义了一个仅由`Person`的女性实例满足的约束。
 
 ### 12.7.3 OWL 中的子类型化与继承
 
-在网络本体语言 OWL 中，属性定义与类定义是分离的，且属性默认不是单值的，而是多值的。因此，标准属性需要声明为*函数性*（functional）。因此，我们
+在网络本体语言 OWL 中，属性定义与类定义是分离的，且属性默认不是单值的，而是多值的。因此，标准属性需要声明为*函数性*（functional）。因此，我们获取以下代码以表示`Person`是一个具有`name`属性的类：
 
-
-
-
-
-## 12.7 计算语言中的子类型化与继承 133
-
-获取以下代码以表示 Person 是一个具有 name 属性的类：
-
-```
+```xml
 <owl:Class rdf:ID="Person"/>
 <owl:DatatypeProperty rdf:ID="name">
   <rdfs:domain rdf:resource="#Person"/>
@@ -3703,10 +3574,11 @@ use="fixed" value="f" />
 
 OWL 允许如下方式声明一个类是另一个类的子类：
 
-```
+```xml
 <owl:Class rdf:ID="Student">
   <rdfs:subClassOf rdf:resource="#Person"/>
 </owl:Class>
+
 <owl:DatatypeProperty rdf:ID="studentNo">
   <rdfs:domain rdf:resource="#Student"/>
   <rdfs:range rdf:resource="xsd:string"/>
@@ -3724,23 +3596,23 @@ OWL 允许如下方式声明一个类是另一个类的子类：
 
 用数据库表表示类层次结构本质上有三种替代方法：
 
-- 1. **单表继承 (STI)** 是最简单的方法，其中整个类层次结构由单个表表示，该表包含根类及其所有子类的所有属性的列，并以根类的名称命命名。
-- 2. **类表继承 (TCI)** 是一种方法，层次结构中的每个类都由一个对应的表表示，该表还包含继承属性的列，重复了表示其父类的表中的列。
-- 3. **连接表继承 (JTI)** 是一种更符合逻辑的方法，每个子类都由一个对应的表（子表）表示，该表通过其主键引用父类的主键与表示其父类的表（父表）连接，使得父类的（继承的）属性不表示为子表的列。
+1. **单表继承 (STI)** 是最简单的方法，其中整个类层次结构由单个表表示，该表包含根类及其所有子类的所有属性的列，并以根类的名称命名。
+2. **类表继承 (TCI)** 是一种方法，层次结构中的每个类都由一个对应的表表示，该表还包含继承属性的列，重复了表示其父类的表中的列。
+3. **连接表继承 (JTI)** 是一种更符合逻辑的方法，每个子类都由一个对应的表（子表）表示，该表通过其主键引用父类的主键与表示其父类的表（父表）连接，使得父类的（继承的）属性不表示为子表的列。
 
 注意，STI 方法与上面 12.6 节讨论的**类层次结构合并（Class Hierarchy Merge）**设计模式密切相关。当此设计模式已经应用于设计模型中，或者设计模型已经根据此设计模式进行了重构时，数据模型中的类层次结构（其子类）在设计中已被消除，因此在应用程序的模型层中也以类定义的形式编码，因此不再需要将类层次结构映射到单表。否则，设计模型包含一个类层次结构，该结构在应用程序的模型层中通过相应的类层次结构实现，并将通过 STI 方法映射到数据库表。
 
-我们通过两个简单的示例来说说明这些方法的使用。第一个例子是 Book 类层次结构，如上面的图 12.1 所示。第二个例子是 Person 角色 Employee、Manager 和 Author 的类层次结构，如下面的图 12.8 中的类图所示。
+我们通过两个简单的示例来说明这些方法的使用。第一个例子是`Book`类层次结构，如上面的图 12.1 所示。第二个例子是`Person`角色`Employee`、`Manager`和`Author`的类层次结构，如下面的图 12.8 中的类图所示。
 
-### 12.7.4.1 单表继承
+#### 12.7.4.1 单表继承
 
-考虑上面图 12.1 所示的单级类层次结构，它是类 Book 的不完全不相交分段，作为 MVC 应用的模型类设计。在这种情况下，每当我们拥有一个只有一层（或少数几层）子类型化的模型层次结构，且每个子类型都有几个额外属性时，使用 STI 是优的；或者我们建模一个包含所有属性的单表，其中表示分段子类额外属性（“分段属性”）的列是可选的，如下面的图 12.9 中的 SQL 表模型所示。
+考虑上面图 12.1 所示的单级类层次结构，它是类`Book`的不完全不相交分段，作为 MVC 应用的模型类设计。在这种情况下，每当我们拥有一个只有一层（或少数几层）子类型化的模型层次结构，且每个子类型都有几个额外属性时，使用 STI 是优的；或者我们建模一个包含所有属性的单表，其中表示分段子类额外属性（“分段属性”）的列是可选的，如下面的图 12.9 中的 SQL 表模型所示。
 
 ![](img/26c953d1023457333859f69258a99556_150_0.png)
 
-**图 12.8:** 一个带有 Person 角色层次结构的信息设计模型。
+**图 12.8:** 一个带有`Person`角色层次结构的信息设计模型。
 
-```
+```sql
 SQL table
 isbn[1] : VARCHAR (pkey)
 title[1] : VARCHAR
@@ -3748,57 +3620,60 @@ year[1] : INTEGER
 category[0..1] : "TextBook","Biography" (frozen)
 subject_area[0..1] : VARCHAR
 about[0..1] : VARCHAR
+```
+
+
+
+# 12.6.2 单表继承 (Single Table Inheritance)
+
+## 12.6.2.1 单表继承 (Single Table Inheritance) 的 SQL 模型
 
 ```
 invariant
 {(category="TextBook" IFF subject_area IS NOT NULL)
 (category="Biography" IFF about IS NOT NULL)}
+```
 
+**图 12.9:** 表示 `Book` 层次结构的单表 SQL 模型。
 
-**图 12.9:** 表示 Book 层次结构的单表 SQL 模型。
+一种常见的方法是添加一个特殊的判别列来表示对象所对应的子类类别。该列通常是字符串值的，但受限于子类的名称之一。DBMS 支持枚举，它也可以是枚举值的。我们使用名称作为判别列，在我们的 `Book` 示例中，由于教科书-传记的分段是硬性的，它具有固定值约束。
 
-一种常见的方法是添加一个特殊的判别列来表示对象所对应的子类类别。该列通常是字符串值的，但受限于子类的名称之一。DBMS 支持枚举，它也可以是枚举值的。我们使用名称作为判别列，在我们的 Book 示例中，由于教科书-传记的分段是硬性的，它具有固定值约束。
-
-根据书籍的类别，我们必须强制当且仅当它是 "TextBook" 时，其属性 subjectArea 有值，且当且仅当它是 "Biography" 时，其属性 about 有值。这个隐含约束在上面的类图中附加到 Book 类上表示，其中逻辑运算符 IFF 表示“当且仅当”。它需要在数据库中实现，例如使用 SQL 表 CHECK 子句或 SQL 触发器。
+根据书籍的类别，我们必须强制当且仅当它是 `"TextBook"` 时，其属性 `subjectArea` 有值，且当且仅当它是 `"Biography"` 时，其属性 `about` 有值。这个隐含约束在上面的类图中附加到 `Book` 类上表示，其中逻辑运算符 `IFF` 表示“当且仅当”。它需要在数据库中实现，例如使用 SQL 表 `CHECK` 子句或 SQL 触发器。
 
 当给定的分割是不相交时，使用单值枚举类别来表示实例所属的子类信息。否则，如果是非相交的，则使用多值枚举类别来表示实例所属的子类信息。这种属性可以通过为相应的枚举代码或标签定义一个字符串值列在 SQL 中实现。
 
-考虑图 12.8 中的类层次结构。在 Employee、Manager 和 Author 子类中定义了三个额外属性后，该类层次结构可以使用 STI 方法映射，如表 12.10 中的 SQL 表所示。
+考虑图 12.8 中的类层次结构。在 `Employee`、`Manager` 和 `Author` 子类中定义了三个额外属性后，该类层次结构可以使用 STI 方法映射，如表 12.10 中的 SQL 表所示。
 
 | | |
 |---|---|
-| person_id[1] | INTEGER (pkey) |
-| name[1] | VARCHAR |
-| categories[*] | VARCHAR ("Employee", "Manager", "Author") |
-| emp_no[0..1] | INTEGER (unique) |
-| biography[0..1] | VARCHAR |
-| department[0..1] | VARCHAR |
+| `person_id[1]` | INTEGER (pkey) |
+| `name[1]` | VARCHAR |
+| `categories[*]` | VARCHAR (`"Employee"`, `"Manager"`, `"Author"`) |
+| `emp_no[0..1]` | INTEGER (unique) |
+| `biography[0..1]` | VARCHAR |
+| `department[0..1]` | VARCHAR |
 
-**图 12.10:** 表示 Person 层次结构的 STI 表。
+**图 12.10:** 表示 `Person` 层次结构的 STI 表。
 
-注意，现在判别列 categories 是多值的，Person 的分割不是相交的，而是重叠的，这意味着 Person 对象可能属于多个类别。同样注意，由于角色分割（如 Employee、Manager、Author）不是硬性的，判别列 categories 没有固定值约束。
-
-
-
-
+注意，现在判别列 `categories` 是多值的，`Person` 的分割不是相交的，而是重叠的，这意味着 `Person` 对象可能属于多个类别。同样注意，由于角色分割（如 `Employee`、`Manager`、`Author`）不是硬性的，判别列 `categories` 没有固定值约束。
 
 ## 12.7 计算语言中的子类型化与继承
 
 该模型的一个可接受种群示例如下：
 
-| person_id | name | categories | biography | emp_no | department |
+| `person_id` | `name` | `categories` | `biography` | `emp_no` | `department` |
 | --- | --- | --- | --- | --- | --- |
 | 1001 | Harry Wagner | 作者，员工 | 1956年出生于马萨诸塞州波士顿，. . . | 21035 | |
 | 1002 | Peter Boss | 经理 | | 23107 | Sales |
 | 1003 | Tom Daniels | | | | |
 | 1077 | Immanuel Kant | 作者 | 曼努埃尔·康德（1724–1804）是一位德国哲学家。. . . | | |
 
-注意，Person 包含了四种不同类型的人：
+注意，`Person` 包含了四种不同类型的人：
 
-- 1. 一个人，Harry Wagner，既是作者（有传记）又是员工（有员工编号）。
-- 2. 一个人，Peter Boss，他是一个经理（员工的一种特殊类型），负责销售部。
-- 3. 一个人，Tom Daniels，他既不是作者也不是员工。
-- 4. 一个人，曼努埃尔·康德，他是一个作者（有传记）。
+1. 一个人，Harry Wagner，既是作者（有传记）又是员工（有员工编号）。
+2. 一个人，Peter Boss，他是一个经理（员工的一种特殊类型），负责销售部。
+3. 一个人，Tom Daniels，他既不是作者也不是员工。
+4. 一个人，曼努埃尔·康德，他是一个作者（有传记）。
 
 **STI 方法的优点：** 它能够忠实地表示原始类层次结构中表达的子类型关系；特别是，任何代表子类实例（员工、经理或作者）的行也代表一个父类实例（人）。
 
@@ -3806,54 +3681,54 @@ invariant
 
 ### 12.7.4.2 每类继承表 (Table Per Class Inheritance)
 
-在更真实的模型中，图 12.8 中 Person 的子类将拥有更多属性，因此 STI 方法将不再可行。TCI 方法将得到下图 12.11 所示的 SQL 表模型。TCI 模型将类层次结构中的每个具体类表示为一个表，使得每个子类都由一个包含继承属性列的表来表示，从而重复了表示父类的表的列。
+在更真实的模型中，图 12.8 中 `Person` 的子类将拥有更多属性，因此 STI 方法将不再可行。TCI 方法将得到下图 12.11 所示的 SQL 表模型。TCI 模型将类层次结构中的每个具体类表示为一个表，使得每个子类都由一个包含继承属性列的表来表示，从而重复了表示父类的表的列。
 
 | «SQL table» | «SQL table» |
 | :--- | :--- |
-| people | employees |
-| person_id : INTEGER (pkey) | person_id : INTEGER (pkey) |
-| name : VARCHAR | name : VARCHAR |
-| | emp_no : INTEGER (unique) |
+| `people` | `employees` |
+| `person_id` : INTEGER (pkey) | `person_id` : INTEGER (pkey) |
+| `name` : VARCHAR | `name` : VARCHAR |
+| | `emp_no` : INTEGER (unique) |
 | «SQL table» | «SQL table» |
-| authors | managers |
-| person_id : INTEGER (pkey) | person_id : INTEGER (pkey) |
-| name : VARCHAR | name : VARCHAR |
-| biography : VARCHAR | emp_no : INTEGER (unique) |
-| | department : VARCHAR |
+| `authors` | `managers` |
+| `person_id` : INTEGER (pkey) | `person_id` : INTEGER (pkey) |
+| `name` : VARCHAR | `name` : VARCHAR |
+| `biography` : VARCHAR | `emp_no` : INTEGER (unique) |
+| | `department` : VARCHAR |
 
-图 12.11：表示 Person 角色层次结构的 TCI 表模型。
+**图 12.11：** 表示 `Person` 角色层次结构的 TCI 表模型。
 
 通过执行以下步骤可以从信息设计模型导出 TCI 表：
 
-- 1. 将所有类中的标准 ID 属性修符 [id] 替换为 {pkey}以指示标准 ID 属性为主键。
-- 2. 将单数（大写）类名（Person, Author, 等）替换为复数小写表名（people, authors, 等），并将驼峰命名属性（*personId* 和 *empNo*）替换为小写下划线分隔列名（*personid* 和 *empno*）。
-- 3. 为所有类矩形添加 <table> 刻型。
-- 4. 将平台无关的数据类型名称替换为 SQL 数据类型名称。
-- 5. 移除所有泛化/继承箭头，并将父表的所有列（如来自 *people* 的 *person_id* 和 *name*）添加到其子表（authors 和 employees）中。
+1. 将所有类中的标准 ID 属性修符 `[id]` 替换为 `{pkey}`以指示标准 ID 属性为主键。
+2. 将单数（大写）类名（`Person`, `Author`, 等）替换为复数小写表名（`people`, `authors`, 等），并将驼峰命名属性（`personId` 和 `empNo`）替换为小写下划线分隔列名（`personid` 和 `empno`）。
+3. 为所有类矩形添加 `<table>` 刻型。
+4. 将平台无关的数据类型名称替换为 SQL 数据类型名称。
+5. 移除所有泛化/继承箭头，并将父表的所有列（如来自 `people` 的 `person_id` 和 `name`）添加到其子表（`authors` 和 `employees`）中。
 
 每个表将只填充与所表示类的直接实例对应的行。该模型的一个可接受种群示例如下：
 
-| people | |
+| `people` | |
 | :--- | :--- |
-| personId | name |
+| `personId` | `name` |
 | 1003 | Tom Daniels |
 
-| authors | | | |
-| person_id | name | biography |
+| `authors` | | | |
+| `person_id` | `name` | `biography` |
 | 1001 | Harry Wagner | 1956年出生于马萨诸塞州波士顿，. . . |
 | 1077 | Immanuel Kant | 曼努埃尔·康德（1724–1804）是一位德国哲学家。. . . |
 
-| person_id | name | emp_no |
+| `person_id` | `name` | `emp_no` |
 |---|---|--|
 | 101 | Harry Wagner | 21035 |
 
-employees
+`employees`
 
-| person_id | name | emp_no | department |
+| `person_id` | `name` | `emp_no` | `department` |
 |---|---|---|--|
 | 1002 | Peter Boss | 23107 | Sales |
 
-managers
+`managers`
 
 **TCI 方法的优点：** (1) 给定类层次结构在各个元素（类）方面的结构被显式地表示。(2) 当给定类层次结构的划分互不相交时，TCI 会导致内存高效的冗冗存储。
 
@@ -3861,30 +3736,30 @@ managers
 
 ### 12.7.4.3 链接继承 (Joined Inheritance)
 
-为了避免重叠情况下的数据冗余，我们采用图 12.12 所示的 JTI 方法，通过将子表（*subtables*）通过父类（*super*）的主键连接到父类（*superclasses*），并使用带有 «fk» 刻型标记的外键列来实现。img/26953d102345733859f6258a9956_15_png
+为了避免重叠情况下的数据冗余，我们采用图 12.12 所示的 JTI 方法，通过将子表（`subtables`）通过父类（`super`）的主键连接到父类（`superclasses`），并使用带有 «fk» 刻型标记的外键列来实现。
 
-12.12：表示 Person 角色的 JTI 模型。
+**图 12.12：** 表示 `Person` 角色的 JTI 模型。
 
 该模型的一个可接受种群是：
 
-| person_id | name |
+| `person_id` | `name` |
 | --- | --- |
 | 1001 | Harry Wagner |
 | 1002 | Peter Boss |
 | 1003 | Tom Daniels |
 | 1077 | Immanuel Kant |
 
-| person_id | biography |
+| `person_id` | `biography` |
 | --- | --- |
 | 1001 | 1956年出生于马萨诸塞州波士顿，. . . |
 | 1077 | 曼努埃尔·康德（1724–1804）是一位德国哲学家。. . . |
 
-| person_id | emp_no |
+| `person_id` | `emp_no` |
 | --- | --- |
 | 1001 | 21035 |
 | 1002 | 23107 |
 
-| person_id | department |
+| `person_id` | `department` |
 | --- | --- |
 | 1002 | Sales |
 
@@ -3900,63 +3775,57 @@ managers
 
 考虑以下类模型：
 
-| Abc | Bcd |
+| `Abc` | `Bcd` |
 |---|---|
-| a1 : (id) | b1 : id |
-| a2 : Integer | |
-| a3 : Integer | |
+| `a1` : (id) | `b1` : id |
+| `a2` : Integer | |
+| `a3` : Integer | |
 
-| Cde | invariant |
+| `Cde` | invariant |
 |---|---|
-| c : key | (a3 > a2) |
+| `c` : key | (`a3` > `a2`) |
 
 以下哪些说法是正确的？选择一个或多个：
 
-- 所有 Cde 实例都有属性 a1。
-- Cde 的标识符是 a1。
-- 所有 Cde 实例引用 Bcd 对象。
-- Abc 的实例具有 c 值。
-- 对于任何 Abc 实例，a3 的值必须大于 a2。
-- 对于任何 Cde 实例，a3 的值必须大于 a2。
-- Cde 的标识符是 c。
+- 所有 `Cde` 实例都有属性 `a1`。
+- `Cde` 的标识符是 `a1`。
+- 所有 `Cde` 实例引用 `Bcd` 对象。
+- `Abc` 的实例具有 `c` 值。
+- 对于任何 `Abc` 实例，`a3` 的值必须大于 `a2`。
+- 对于任何 `Cde` 实例，`a3` 的值必须大于 `a2`。
+- `Cde` 的标识符是 `c`。
 
 ### 12.8.2 问题2：类层次合并
 
 考虑以下类模型：
 
-img/26953d102345733859f6258a99556_157_png
+在这种简单的类层次结构情况下，我们可以使用类层次合并模式，将整个类层次结构合并到一个类中。以下哪个模型描述了 `Abc` 类层次结构类层次合并模式的正确实现？选择一个：
 
-在这种简单的类层次结构情况下，我们可以使用类层次合并模式，将整个类层次结构合并到一个类中。以下哪个模型描述了 Abc 类层次结构类层次合并模式的正确实现？选择一个：
+1.
+| `Abc` | <<enumeration> |
+| `a1[1]` : Integer (id) | `AbctypeEL` |
+| `category[1]` : `AbctypeEL` | `Bcd` |
+| `a2[1]` : String | `Cde` |
+| `a3[0..]` : String |
 
-- 1.
-| Abc | <<enumeration> |
-| a1[1] : Integer (id) | AbctypeEL |
-| category[1] : AbctypeEL | Bcd |
-| a2[1] : String | Cde |
-| a3[0..] : String |
+2.
+| `Abc` | <<enumeration> |
+| `a1[1]` : Integer (id) | `AbctypeEL` |
+| `category[0..1]` : `AbctypeEL` | `Bcd` |
+| `a2[1]` : String | `Cde` |
+| `a3[0..1]` : String |
 
-- 2.
-| Abc | <<enumeration> |
-| a1[1] : Integer (id) | AbctypeEL |
-| category[0..1] : AbctypeEL | Bcd |
-| a2[1] : String | Cde |
-| a3[0..1] : String |
+3.
+| `Abc` | <<enumeration> |
+| `a1[1]` : Integer (id) | `AbctypeEL` |
+| `category[0..1]` : String | `Bcd` |
+| `a3[0..1]` : String | `Cde` |
 
-- 3.
-| Abc | <<enumeration> |
-| a1[1] : Integer (id) | AbctypeEL |
-| category[0..1] : String | Bcd |
-| a3[0..1] : String | Cde |
-
-- 4.
-| Abc |
-| a1[1] : Integer (id) |
-| a2[1] : String |
-| a3[0..1] : String |
-
-
-
-
+4.
+| `Abc` |
+| `a1[1]` : Integer (id) |
+| `a2[1]` : String |
+| `a3[0..1]` : String |
 
 ## 13 使用原生 JS 进行子类化
 
@@ -3966,13 +3835,13 @@ img/26953d102345733859f6258a99556_157_png
 
 在第二个案例研究中，我们考虑了图 12.8 所示的由 `Employee`（员工）、`Manager`（经理）和 `Author`（作者）角色组成的多级类层次结构。将 `Person` 划分为 `Employee` 和 `Author` 没有任何约束，这意味着它是完全的、重叠的（非不交）且非刚性的。
 
-对于简单的“经理是员工”（Manager-is-Employee）子层次结构，我们使用层次结构结构合并设计模式；对于将“员工和作者都是人员”（Employee-and-Author-is-a-Person）类层次结构映射到一组通过外键依赖关联的三个数据库表，我们使用“连接继承”（Joined Inheritance）方法。
+对于简单的“经理是员工”（`Manager`-is-`Employee`）子层次结构，我们使用层次结构结构合并设计模式；对于将“员工和作者都是人员”（`Employee`-and-`Author`-is-a-`Person`）类层次结构映射到一组通过外键依赖关联的三个数据库表，我们使用“连接继承”（Joined Inheritance）方法。
 
 在两个案例研究中，我们都展示了：
 
-- 1. 如何推导出 JS 类模型以及相应的实体表模型，
-- 2. 如何以 JS 模型类的形式编写 JS 类模型，
-- 3. 如何基于模型代码编写视图（view）和控制器代码。
+1. 如何推导出 JS 类模型以及相应的实体表模型，
+2. 如何以 JS 模型类的形式编写 JS 类模型，
+3. 如何基于模型代码编写视图（view）和控制器代码。
 
 ## 13.1 基于构造函数的类的子类化
 
@@ -3982,36 +3851,44 @@ img/26953d102345733859f6258a99556_157_png
 
 我们通过以下示例总结了使用 ES2015 代码模式，在基于构造函数的单继承类层次结构中定义父类和子类：
 
-| Person |
+| `Person` |
 | --- |
-| firstName : String |
-| lastName : String |
+| `firstName` : String |
+| `lastName` : String |
 
-| Student |
+| `Student` |
 | --- |
-| studNo : Integer |
+| `studNo` : Integer |
 
 首先，我们定义一个基类 `Person`，带有两个属性 `firstName` 和 `lastName`，通过 getters 和 setters 定义：
 
 ```javascript
 class Person {
+
   constructor ({first, last}) {
+
     // 通过调用 setters 分配属性
     this.firstName = first;
     this.lastName = last;
+
   }
 
   getFirstName () {return this._firstName};
   setFirstName (f) {
+
     . . . 检查约束
     this._firstName = f;
+
   }
 
   getLastName () {return this._lastName};
   setLastName (l) {
+
     . . . 检查约束
     this._lastName = 1;
+
   }
+
 }
 ```
 
@@ -4019,20 +3896,29 @@ class Person {
 
 ```javascript
 class Student extends Person {
+
   constructor ({first, last, studNo}) {
+
     // 调用父类的构造函数
     super({first, last});
+
     // 分配额外的属性
     this.studNo = studNo;
+
   }
 
   get studNo () {return this._studNo;}
   set studNo (sn) {
+
     // 检查约束
     .. this._studNo = sn;
+
   }
+
 }
 ```
+
+
 
 ## 13.2 案例研究 1：消除类层次结构
 
@@ -4055,8 +3941,8 @@ class Student extends Person {
 我们分 3 步构建 JS 类模型：
 
 - 将平台无关的数据类型（用属性和参数的范围）替换为 JS 数据类型。这包括枚举值属性的情况，例如 `category`，它们被转换为数值型属性，并限制在底层枚举类型的枚举整数值范围内。
-- 2. 为所有属性装饰 `«get/set»` 刻板类型（stereotype），以指示它们具有隐式的 getters 和 setters。
-- 3. 添加属性检查函数，如第一卷第 8 章所述。`checkCategory` 函数以及对分段属性的检查需要根据其隐含的语义进行特殊考虑。特别是，分段检查函数必须确保只有当 `category` 属性具有代表对应分段的值时，才能给该属性赋值。我们将在稍后讨论如何编写 JS 类模型时，更详细地解释这种验证语义。
+- 为所有属性装饰 `«get/set»` 刻板类型（stereotype），以指示它们具有隐式的 getters 和 setters。
+- 添加属性检查函数，如第一卷第 8 章所述。`checkCategory` 函数以及对分段属性的检查需要根据其隐含的语义进行特殊考虑。特别是，分段检查函数必须确保只有当 `category` 属性具有代表对应分段的值时，才能给该属性赋值。我们将在稍后讨论如何编写 JS 类模型时，更详细地解释这种验证语义。
 
 这产生了 JS 类模型：
 
@@ -4075,16 +3961,16 @@ class Student extends Person {
 
 与第一卷第 11 章讨论的枚举相比，我们需要处理若干问题：
 
-- 1. 在模型代码中，我们需要处理：
-    1. 在 `errorTypes.js` 中添加 `FrozenValueConstraint`。
-    2. 编写作为 `category` 属性范围的枚举类型 `BookTypeEL`。
-    3. 为 `category` 属性编写 `checkCategory` 函数。在我们的示例中，由于划分不完全，该属性是可选的。如果应用类层次结构合并模式的划分是完全的，则该属性是强制的。
-    4. 编写所有分段属性的检查函数，使其接收 `category` 作为第二个参数以便测试相关分段。
-    5. 通过增加类别区分 switch 语句来完善 `toString()` 函数，仅序列化适用于给定类别的分段属性。
-    6. 在 `Book.update` 中实现 `category` 属性的冻结值约束，仅在尚未定义时允许更新书籍类别。这意味着一旦定义，就无法再更新。
-- 2. 在 UI 代码中，我们需要处理：
-    1. 在 `books.html` 的“出所有书籍”用例表格中添加“特殊类型”（或“类别”）列。没有特殊类别的书籍单元格将为空，而所有其他书籍将在该格中显示类别。这需要在 `books.js` 文件的 `v.books.retrieveAndListAll.setupInterface` 中相应的 switch语句。
-    2. 在 `books.html` 的“创建书籍”和“更新书籍”用例表单中，添加“特殊类型”选择控件（通常是选择列表）以及所有分段属性的响应表单字段。只有当选择了相应的书籍类别时，才会显示分段属性表单字段。这种根据特定条件渲染特定表单字段的方法被称为动态表单。
+1. 在模型代码中，我们需要处理：
+   1. 在 `errorTypes.js` 中添加 `FrozenValueConstraint`。
+   2. 编写作为 `category` 属性范围的枚举类型 `BookTypeEL`。
+   3. 为 `category` 属性编写 `checkCategory` 函数。在我们的示例中，由于划分不完全，该属性是可选的。如果应用类层次结构合并模式的划分是完全的，则该属性是强制的。
+   4. 编写所有分段属性的检查函数，使其接收 `category` 作为第二个参数以便测试相关分段。
+   5. 通过增加类别区分 switch 语句来完善 `toString()` 函数，仅序列化适用于给定类别的分段属性。
+   6. 在 `Book.update` 中实现 `category` 属性的冻结值约束，仅在尚未定义时允许更新书籍类别。这意味着一旦定义，就无法再更新。
+2. 在 UI 代码中，我们需要处理：
+   1. 在 `books.html` 的“出所有书籍”用例表格中添加“特殊类型”（或“类别”）列。没有特殊类别的书籍单元格将为空，而所有其他书籍将在该格中显示类别。这需要在 `books.js` 文件的 `v.books.retrieveAndListAll.setupInterface` 中相应的 switch 语句。
+   2. 在 `books.html` 的“创建书籍”和“更新书籍”用例表单中，添加“特殊类型”选择控件（通常是选择列表）以及所有分段属性的响应表单字段。只有当选择了相应的书籍类别时，才会显示分段属性表单字段。这种根据特定条件渲染特定表单字段的方法被称为动态表单。
 
 ### 13.2.3 编写类模型的类
 
@@ -4092,54 +3978,78 @@ class Student extends Person {
 
 #### 13.2.3.1 总结
 
-- 1. 如第一卷第 11 章所解释，借助元类 `Enumeration` 编写枚举类型 `BookTypeEL` 作为 `category` 属性的范围。
-- 2. 以 JS 类定义编写模型类 `Book`，包含 get 和 set 方法以及静态检查函数。
+1. 如第一卷第 11 章所解释，借助元类 `Enumeration` 编写枚举类型 `BookTypeEL` 作为 `category` 属性的范围。
+2. 以 JS 类定义编写模型类 `Book`，包含 get 和 set 方法以及静态检查函数。
 
 这些步骤将在接下来的章节中详细讨论。
 
-
-
-
-
 148 13 使用原生 JS 实现子类型
 
-### 13.2.3.2 编码枚举类型 BookCategoryEL
+#### 13.2.3.2 编码枚举类型 BookCategoryEL
 
 枚举类型 `BookCategoryEL` 在 `Book.js` 模型类文件的开头，通过我们的库元类 `Enumeration` 按照以下方式进行编码：
 
+```javascript
 BookCategoryEL = new Enumeration([ "Textbook", "Biography"]);
+```
 
-### 13.2.3.3 编码模型 Book
+#### 13.2.3.3 编码模型 Book
 
 我们以 ES2015 类定义的形式编写了模型类 `Book`，其中 `category` 属性以及段属性 `subjectArea` 和 `about` 是可选的，并为所有属性提供了 getter、setter 和静态检查函数：
 
 ```javascript
 class Book {
+
   constructor({isbn, title, year, category, subjectArea, about}) {
+
     this.isbn = isbn;
+
     this.title = title;
+
     this.year = year;
+
     // 可选属性
+
     if (category) this.category = category;
+
     if (subjectArea) this.subjectArea = subjectArea;
+
     if (about) this.about = about;
+
   }
+
   get isbn() { . . }
+
   static checkIsbn(isbn) { . . }
+
   static checkIsbnAsId(isbn) { . . }
+
   set isbn(isbn) { . . }
+
   get title() { . . }
+
   static setTitle(t) { . . }
+
   set title(t) { . . }
+
   get year() { . . }
+
   static checkYear(y) { . . }
+
   set year(y) { . . }
+
   get category() { . . }
+
   static checkCategory(c) { . . }
+
   set category(c) { . . }
+
   get subjectArea() { . . }
+
   static checkSubjectArea(sA, cat) { . . }
+
   set subjectArea(s) { . . }
+
 }
 ```
 
@@ -4147,8 +4057,11 @@ class Book {
 
 ```javascript
 get about() { . . . }
+
 static checkAbout(a, cat) { . . . }
+
 set about(a) { . . . }
+
 }
 ```
 
@@ -4157,29 +4070,53 @@ set about(a) { . . . }
 
 ```javascript
 static checkCategory(c) {
+
   if (c === undefined || c === "") {
+
     return new NoConstraintViolation(); // category 是可选的
+
   } else if (!util.isIntegerOrIntegerString(c) || parseInt(c) < 1 ||
+
     parseInt(c) > BookCategory.MAX) {
+
     return new NoConstraintViolation(
+
       "Invalid value for category: " + c);
+
   } else {
+
     return new NoConstraintViolation();
+
   }
+
 }
+
 set category(c) {
+
   var validationResult = null;
+
   if (this.category) { // 已设置/赋值
+
     validationResult = new FrozenConstraintViolation(
+
       "The category cannot be changed!");
+
   } else {
+
     validationResult = Book.checkCategory(c);
+
   }
+
   if (validationResult instanceof NoConstraintViolation) {
+
     this._category = parseInt(c);
+
   } else {
+
     throw validationResult;
+
   }
+
 }
 ```
 
@@ -4191,34 +4128,58 @@ set category(c) {
 
 ```javascript
 static checkSubjectArea(sa, c) {
+
 if (c === BookCategoryEL.TEXTBOOK && !sa) {
+
   return new MandatoryConstraintViolation(
+
     "A subject area must be provided for a textbook!");
+
 } else if (c === BookCategoryEL.TEXTBOOK && sa) {
+
   return new ConstraintViolation("A subject area must not be provided if the book is not a textbook!");
+
 } else if (sa && typeof(sa) !== "String" || sa.trim() === "") {
+
   return new RangeConstraintViolation(
+
     "The subject area must be a non-empty string!");
+
  else {
+
   return new ConstraintViolation();
+
 }
+
 ```
 
 在 `toString` 函数中，我们使用 `switch` 语句序列化 `category` 属性和段属性：
 
 ```javascript
 toString() {
+
   var bookStr = "Book(ISBN:" + this.isbn + ", title:" +
+
     this.title + ", year:" + this.year;
+
   switch (this.category) {
+
     case BookCategoryEL.TEXTBOOK:
+
       bookStr += " , subject area:" + this.subjectArea;
+
       break;
+
     case BookCategoryEL.BIOGRAPHY:
+
       bookStr += " , about:" + this.about;
+
       break;
+
   }
+
   return bookStr + ")";
+
 }
 ```
 
@@ -4230,97 +4191,144 @@ toString() {
 
 ```javascript
 Book.update = function ({isbn, title, year, category, subjectArea, about}) {
+
   const book = Book.instances[isbn];
+
   objectBeforeUpdate = util.clone(book);
+
   var noConstraintViolated=true, updatedProperties=[];
+
   try {
+
     if (category && book.category !== category) {
+
       book.category = category;
+
       updatedProperties.push("category");
+
     } else if (category === "" && "category" in book) {
+
       throw new FrozenConstraintViolation("The category cannot be unset!");
+
     }
+
     if (subjectArea && book.subjectArea !== subjectArea) {
+
       book.subjectArea = subjectArea;
+
       updatedProperties.push("subjectArea");
+
     }
+
     if (about && book.about !== about) {
+
       book.about = about;
+
       updatedProperties.push("about");
+
     }
+
   } catch (e) {
+
     // ...
+
   }
+
 };
 ```
 
-13.2.4 编写 View 和 Controller
+#### 13.2.4 编写 View 和 Controller
 
 应用程序的用户界面 (UI) 包含一个允许导航到数据管理页面（在示例中为 `books.html`）。此类数据管理页面包含：管理书籍、列出所有、创建书籍、更新书籍和删除书籍，且每次只显示其中一个（通过设置 `display:none`）。
 
-13.2.4.1 总结
+##### 13.2.4.1 总结
 
 我们需要通过以下方式处理“列出所有”用例以及“创建书籍”和“更新书籍”用例中的 `category` 属性和段属性 `subjectArea`：
 
-- 1. 在 `books.html` 的“列出所有”用例显示表中添加段信息列（标题为“Category”）。
-- 2. 在 `books.html` 的“创建书籍”和“更新书籍”用例表单中添加“Category”选择字段以及所有段属性的输入字段。段属性字段仅在选择了相应的类别。
+1. 在 `books.html` 的“列出所有”用例显示表中添加段信息列（标题为“Category”）。
+2. 在 `books.html` 的“创建书籍”和“更新书籍”用例表单中添加“Category”选择字段以及所有段属性的输入字段。段属性字段仅在选择了相应的类别。
 
-13.2.4.2 在检索/列出所有中添加段列
+##### 13.2.4.2 在检索/列出所有中添加段列
 
 我们在 `books.html` 的“列出所有书籍”用例显示表中添加一个“Special”类别：
 
 ```html
 <table id="books">
+
   <head>
+
     <tr>
+
       <th>ISBN</th>
+
       <th>Title</th>
+
       <th>Year</th>
+
       <th>Category</th>
+
     </tr>
+
   </head>
+
   <tbody></tbody>
+
 </table>
 ```
 
-没有特殊类别的书籍在该列中将有一个空单元格；对于其他书籍，它们的类别将在该列显示并带有特定类别信息。这需要在 `view/books.js`文件的 `pl.v.books.retrieveAndAll.setupInterface` 中对应相应的 `switch` 语句：
+没有特殊类别的书籍在该列中将有一个空单元格；对于其他书籍，它们的类别将在该列显示并带有特定类别信息。这需要在 `view/books.js` 文件的 `pl.v.books.retrieveAndAll.setupInterface` 中对应相应的 `switch` 语句：
 
 ```javascript
 if (book.category) {
+
   switch (book.category) {
+
     case BookCategoryEL.TEXTBOOK:
+
       row.insertCell(-1).textContent = book.subjectArea + " textbook";
+
       break;
+
     case BookCategoryEL.BIOGRAPHY:
+
       row.insertCell(-1).textContent = "Biography about " + book.about;
+
       break;
+
   }
+
 }
 ```
 
-13.2.4.3 在创建和更新中添加类别选择字段
+##### 13.2.4.3 在创建和更新中添加类别选择字段
 
 在这两种情况下，我们需要通过选择字段允许选择特殊的书籍类别（'textbook' 或 'biography'），如下 HTML 片段所示：
 
 ```html
 <div class="field">
+
   <label>Category: <select name="category"></select></label>
+
 </div>
+
 <div class="field Textbook"> <!-- 条件字段 -->
-  <label>Subject area: <input type="text" name="subjectArea" /></label>
-</div>
-<div class="field Biography"> <!-- 条件字段 -->
-  <label>About: <input type="text" name="about" /></label>
-</div>
 ```
+
+
+
+<label>Subject area: <input type="text" name="subjectArea" /></label>
+
+</div>
+
+<div class="field Biography"> <!-- 条件字段 -->
+
+  <label>About: <input type="text" name="about" /></label>
+
+</div>
 
 注意，我们将 "Textbook" 和 "Biography" 作为段字段容器元素的 `class` 属性值。这支持根据 `category` 属性的值对 "Textbook" 和 "Biography" 字段进行渲染和取消渲染。
 
 在 `handleCategorySelectEventHandler` 中，只有在选择了相应的类别时，才会通过 `pl.v.app.displaySegmentFields` 显示段属性字段。
-
-
-
-
 
 ## 13.3 案例研究 2：实现类层次结构
 
@@ -4422,8 +4430,8 @@ if (book.category) {
 与图 13.1 所示的第一个案例研究模型相比，在模型代码中我们需要处理一些新问题：
 
 1. 使用 13.1 节讨论的 `extends` 关键字定义 Employee 与 Person、以及 Author 与 Person 之间的子类关系。
-2. 从持久化存储（Person.retrieve()）加载根类 (Person.instances) 实例时，我们加载 (1) 代表根类的表 (people) 的记录以创建直接实例，(2) 同时加载代表所有子类的表 (authors 和 employees) 的记录以创建它们的直接实例，并将它们的对象引用添加到根类集合 (Person.instances)。这样，根类集合不包含直接实例，而是包含所有实例。
-3. 当 Employee 和 Author 的实例作为 JS 实体表 employees 和 authors 的记录保存到持久化存储时（Employee.saveAll 和 Author.saveAll，在 pl.v.employees.manage 和 pl.v.authors.manage 中调用），我们将 Person 的直接实例作为 people 表的记录进行保存。
+2. 从持久化存储（`Person.retrieve()`）加载根类 (`Person.instances`) 实例时，我们加载 (1) 代表根类的表 (people) 的记录以创建直接实例，(2) 同时加载代表所有子类的表 (authors 和 employees) 的记录以创建它们的直接实例，并将它们的对象引用添加到根类集合 (`Person.instances`)。这样，根类集合不包含直接实例，而是包含所有实例。
+3. 当 Employee 和 Author 的实例作为 JS 实体表 employees 和 authors 的记录保存到持久化存储时（`Employee.saveAll` 和 `Author.saveAll`，在 `pl.v.employees.manage` 和 `pl.v.authors.manage` 中调用），我们将 Person 的直接实例作为 people 表的记录进行保存。
 
 ### 13.3.4 JS 类模型的模型类代码
 
@@ -4431,7 +4439,7 @@ if (book.category) {
 
 #### 13.3.4.1 定义子类关系
 
-我们使用 `extends` 定义 Employee 与 Person、以及 Author 与 Person 之间的子类关系。例如，在 m/Employee.js 中我们定义：
+我们使用 `extends` 定义 Employee 与 Person、以及 Author 与 Person 之间的子类关系。例如，在 `m/Employee.js` 中我们定义：
 
 ```javascript
 EmployeeCategoryEL = new Enumeration(["Manager"]);
@@ -4439,81 +4447,117 @@ EmployeeCategoryEL = new Enumeration(["Manager"]);
 
 ```javascript
 class Employee extends Person {
+
   constructor ({personId, name, empNo, category, department}) {
+
     super({personId, name});
+
     this.empNo = empNo;
+
     if (category) this.category = category;
+
     if (department) this.department = department;
+
   }
+
 }
 ```
 
-
-
-
-
-# 13.3.4.2 加载根类 Person 的实例
+#### 13.3.4.2 加载根类 Person 的实例
 
 当我们从按照 TCI 方法组织的持久化数据存储中检索类层次结构的根类（在我们的示例中为 Person）的实例时，我们不仅需要从代表根类的表（people）中检索其直接实例，还需要从代表其所有子类的表（employees 和 authors）中检索间接实例，如下代码所示：
 
-```
+```javascript
 Person.retrieve = function () {
+
   var people={}, employees={}, authors={};
+
   if (!localStorage["authors"]) localStorage["authors"] = "{}";
+
   if (!localStorage["employees"]) localStorage["employees"] = "{}";
+
   if (!localStorage["people"]) localStorage["people"] = "{}";
+
   try {
+
     people = JSON.parse(localStorage["people"]);
+
     employees = JSON.parse(localStorage["employees"]);
+
     authors = JSON.parse(localStorage["authors"]);
+
   } catch (e) {
+
     console.log(`Error when retrieving from Local Storage\n` + e);
+
   }
+
   for (let key of Object.keys(authors)) {
+
     try { // convert record to (typed) object
+
       Author.instances[key] = new Author(authors[key]);
+
       // create superclass extension
+
       Person.instances[key] = Author.instances[key];
+
     } catch (e) {
+
       console.log(`${e.constructor.name} while deserializing` + `author ${key}: ${e.message}`);
+
     }
+
   }
+
 }
 ```
 
-authors 表中的每条记录都会被检索并转换为 Author 对象，其引用被复制到 Person.instances 中。employees 表的记录也以这种方式处理，而 people 表的记录则被简单检索并转换为 Person 对象：
+authors 表中的每条记录都会被检索并转换为 Author 对象，其引用被复制到 `Person.instances` 中。employees 表的记录也以这种方式处理，而 people 表的记录则被简单检索并转换为 Person 对象：
 
-```
+```javascript
 Person.retrieveAll = function () {
+
 ...
+
 for (let key of Object.keys(employees)) {
+
 }
 ```
 
-# 13.3 案例研究 2：实现类层次结构
-
-```
+```javascript
 for (let key of Object.keys(people)) {
+
   try { // convert record to (typed) object
+
     Person.instances[key] = new Person(people[key]);
+
   } catch (e) {
+
     console.log(`${e.constructor.name} while deserializing ${key}: ${e.message}`);
+
   }
+
 }
 ```
 
-# 13.3.4.3 在保存子表时保存主表
+#### 13.3.4.3 在保存子表时保存主表
 
-由于应用数据在运行期间一直保存在主内存中（只要浏览器中的应用网页保持开启），因此在应用退出时（例如关闭浏览器标签页），必须将数据保存到持久化存储中。当我们在 pl.v.employees.manage.exit 和 pl.v.authors.manage.exit 将实例（作为 JS 实体表 employees 和 authors 的记录）保存到持久化存储时，我们同时也保存 Person 的直接实例（作为 people 表的记录）。这是必要的，因为 Employee 或 Author 实例的更改可能意味着 Person.instances 的变化。
+由于应用数据在运行期间一直保存在主内存中（只要浏览器中的应用网页保持开启），因此在应用退出时（例如关闭浏览器标签页），必须将数据保存到持久化存储中。当我们在 `pl.v.employees.manage.exit` 和 `pl.v.authors.manage.exit` 将实例（作为 JS 实体表 employees 和 authors 的记录）保存到持久化存储时，我们同时也保存 Person 的直接实例（作为 people 表的记录）。这是必要的，因为 Employee 或 Author 实例的更改可能意味着 `Person.instances` 的变化。
 
-例如，对于 Employee 数据管理，我们在 v/employees.js 中定义：
+例如，对于 Employee 数据管理，我们在 `v/employees.js` 中定义：
 
-```
+```javascript
 pl.v.employees.manage = {
+
   exit: function () {
+
     Employee.saveAll();
+
     Person.saveAll();
+
   },
+
 ..
 ```
 
@@ -4543,89 +4587,89 @@ Java 通过其 `extends` 关键字提供了子类型化的内置支持，但不�
 
 首先，我们定义父类 Person。然后，我们定义子类 Student 并通过 `extends` 关键字定义其与 Person 的子类型关系：
 
-```
+```java
 public class Person {
+
     private String firstName;
+
     private String lastName;
+
     ..
+
 }
+
 public class Student extends Person {
+
     private int studentNo;
 ```
 
 # 14.2 案例研究 1：使用单继承实现类层次结构 — 161
 
-```
+```java
 public Student( String first, String last, int studNo) {
+
   super(firstName, lastName);
+
   this.setStudNo( studNo);
+
 }
 ```
 
-注意，在 Student 类中，我们定义了一个包含创建 Student 实例所需的所有参数的构造函数。在这个子类构造函数中，我们使用 `super` 来调用父类 Person 的构造函数。
+
+
+注意，在`Student`类中，我们定义了一个包含创建`Student`实例所需的所有参数的构造函数。在这个子类构造函数中，我们使用`super`来调用父类`Person`的构造函数。
 
 # 14.2 案例研究 1：使用单表继承实现类层次结构
 
-在本示例中，我们实现了图 12.1 所示的 Book 层次结构。Java 实体模型是从此设计模型推出的。
+在本示例中，我们实现了图 12.1 所示的`Book`层次结构。Java 实体模型是从此设计模型推出的。
 
-# 14.2.1 构建 Java 实体类模型
+## 14.2.1 构建 Java 实体类模型
 
-回想一下，我们从 OO 类模型获取 Java 实体类模型：(1) 将所有属性设为私有，(2) 使用 Java 数据类型类，(3) 添加公共的 getter 和 setter，(4) 添加 `toString` 函数，(5) 添加（静态）数据存储方法 `create、retrieve、update 和 delete`，得到图 14.1 所示的模型。
+回想一下，我们从 OO 类模型获取 Java 实体类模型：(1) 将所有属性设为私有，(2) 使用 Java 数据类型类，(3) 添加公共的 getter 和 setter，(4) 添加`toString`函数，(5) 添加（静态）数据存储方法`create、retrieve、update`和`delete`，得到图 14.1 所示的模型。
 
-# 14.2.2 新问题
+## 14.2.2 新问题
 
 我们必须处理一些新问题：
 
-- 1. 在模型代码中，我们需要：
-  - 编写枚举类型 (BookCategoryEL)，该类型用于 UI 代码中创建选择列表小部件，允许选择书籍类别。
-  - 使用适当的 JPA 注解编写 Book 类层次结构中的每个类，以便将其持久化到相应的数据库表（如 books）中。
-- 2. 在 UI 代码中，我们需要：
-  - 在 `retrieveAndList.xhtml` 文件夹下的 `retrieveAndList.xhtml` 中“检索/列出所有书籍”用例的显示表中添加“特殊类型”列。
-
-# 14.2 案例研究 1：使用单继承实现类层次结构 — 161
-
-# 14.2 案例研究 1：使用单表继承实现类层次结构
-
-# 14.2.1 构建 Java 实体类模型
-
-# 14.2.2 新问题
+1. 在模型代码中，我们需要：
+   - 编写枚举类型（`BookCategoryEL`），该类型用于 UI 代码中创建选择列表小部件，允许选择书籍类别。
+   - 使用适当的 JPA 注解编写`Book`类层次结构中的每个类，以便将其持久化到相应的数据库表（如`books`）中。
+2. 在 UI 代码中，我们需要：
+   - 在`retrieveAndList.xhtml`文件夹下的`retrieveAndList.xhtml`中“检索/列出所有书籍”用例的显示表中添加“特殊类型”列。
 
 # 14 使用 Java EE 进行子类型化
 
-# 14.1 Java 中的子类型化
-
-
-
-
-
-## 164 14 Java EE 中的子类型
+## 14.1 Java 中的子类型化
 
 ```java
 @Min(value=1459, message="The year must not be before 1459!")
 private Integer year;
+
 // constructors, set, get and other methods
 ```
 
-当使用 JPA 单表继承（Single Table Inheritance）技术处理类层次时，必须为父类设置 `@Inheritance` 注解（例如示例中的 Book），并将其 `strategy` 参数设置为 `InheritanceType.SINGLE_TABLE`。`@DiscriminatorColumn` 注解指定了存储区分不同子类类型（在我们的示例中为 Textbook 和 Biography）值的表列名。
+当使用 JPA 单表继承（Single Table Inheritance）技术处理类层次时，必须为父类设置`@Inheritance`注解（例如示例中的`Book`），并将其`strategy`参数设置为`InheritanceType.SINGLE_TABLE`。`@DiscriminatorColumn`注解指定了存储区分不同子类类型（在我们的示例中为`Textbook`和`Biography`）值的表列名。
 
-遗憾的是，我们无法使用 `BookCategoryEL` 枚举来定义判别器列的类型，因为像 `BookCategoryEL.TEXTBOOK.name()` 这样的 Java 表达式不是常量，因此会导致 Java 编译器抛出异常。相反，我们使用 `DiscriminatorType.STRING`。`@DiscriminatorValue` 注解指定了存储在代表类实例行的判别器列中的唯一值。
+遗憾的是，我们无法使用`BookCategoryEL`枚举来定义判别器列的类型，因为像`BookCategoryEL.TEXTBOOK.name()`这样的 Java 表达式不是常量，因此会导致 Java 编译器抛出异常。相反，我们使用`DiscriminatorType.STRING`。`@DiscriminatorValue`注解指定了存储在代表类实例行的判别器列中的唯一值。
 
-此外，我们定义了子类型 `Textbook` 和 `Biography`：
+此外，我们定义了子类型`Textbook`和`Biography`：
 
 ```java
 @Entity(name="textbooks")
 @DiscriminatorValue(value="TEXTBOOK")
-@ManagedBean(name="textbook")@ViewScoped
+@ManagedBean(name="textbook")
+@ViewScoped
 public class Textbook extends Book {
-    @Column( nullable=false) @NotNull(
-        message="A subject area value is required"
-    )
+
+    @Column(nullable=false)
+    @NotNull(message="A subject area value is required")
     private String subjectArea;
+
     // constructors, set, get and other methods
 }
 ```
 
-`Textbook` 和 `Biography` 是 `Book` 的子类，因此我们通过 `extends Book` 来定义它们。对于每个子类，我们都添加一个 `@DiscriminatorValue` 注解，其值来自 `BookCategoryEL` 枚举。
+`Textbook`和`Biography`是`Book`的子类，因此我们通过`extends Book`来定义它们。对于每个子类，我们都添加一个`@DiscriminatorValue`注解，其值来自`BookCategoryEL`枚举。
 
 ## 14.2.4 STI 数据库架构
 
@@ -4635,9 +4679,7 @@ public class Textbook extends Book {
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 ```
 
-## 14.2 案例研究 1：使用单表继承实现类层次
-
-使用一个数据库表来表示类层次。该表包含了对应于层次中所有类属性的列，加上判别器列。在我们的示例中，`books` 表包含以下列：isbn、title、year、subjectArea、about 和 category。用于为我们的应用程序生成 `books` 表的简化 SQL-DDL 代码所示：
+使用一个数据库表来表示类层次。该表包含了对应于层次中所有类属性的列，加上判别器列。在我们的示例中，`books`表包含以下列：`isbn`、`title`、`year`、`subjectArea`、`about`和`category`。用于为我们的应用程序生成`books`表的简化 SQL-DDL 代码所示：
 
 ```sql
 CREATE TABLE IF NOT EXISTS `books` (
@@ -4652,18 +4694,18 @@ CREATE TABLE IF NOT EXISTS `books` (
 
 ## 14.2.5 编写视图和控制器代码
 
-用户界面（UI）包含一个允许导航到数据管理页面（在我们的示例中，位于 WebContent/views/books/ 文件夹下的 `index.xhtml`）。此类数据管理页面包含四个部分：检索/列表书籍、创建书籍、更新书籍和删除书籍。
+用户界面（UI）包含一个允许导航到数据管理页面（在我们的示例中，位于`WebContent/views/books/`文件夹下的`index.xhtml`）。此类数据管理页面包含四个部分：检索/列表书籍、创建书籍、更新书籍和删除书籍。
 
 ### 14.2.5.1 总结
 
-在“列出所有书籍”以及“创建书籍”和“更新书籍”用例中，我们必须处理类别判别器以及 `subjectArea` 和分段属性：
+在“列出所有书籍”以及“创建书籍”和“更新书籍”用例中，我们必须处理类别判别器以及`subjectArea`和分段属性：
 
-- 1. 在 WebContent/views/books/ 文件夹下的 `retrieveGetAll.xhtml` 中，“检索/列表所有”用例的显示表中添加一个分段信息列（`Special type`）。
-- 2. 在 WebContent/views/books/ 文件夹下的 `create.xhtml` 和 `update.xhtml` 中，“创建书籍”和“更新书籍”用例的表单添加一个“Special type”选择控件，以及对应所有分段属性的表单字段字段字段在选择了相应的书籍类别时才会显示，并且仅进行验证。
+1. 在`WebContent/views/books/`文件夹下的`retrieveGetAll.xhtml`中，“检索/列表所有”用例的显示表中添加一个分段信息列（`Special type`）。
+2. 在`WebContent/views/books/`文件夹下的`create.xhtml`和`update.xhtml`中，“创建书籍”和“更新书籍”用例的表单添加一个“Special type”选择控件，以及对应所有分段属性的表单字段，这些字段仅在选择了相应的书籍类别时才会显示，并且仅进行验证。
 
 ### 14.2.5.2 在检索/列表所有添加分段信息列
 
-我们在 `books.html` 的“列出所有书籍”用例的显示表中添加了“Special type”列。
+我们在`books.html`的“列出所有书籍”用例的显示表中添加了“Special type”列。
 
 ```xml
 <h:dataTable value="#{bookController.books}" var="b">
@@ -4675,11 +4717,11 @@ CREATE TABLE IF NOT EXISTS `books` (
 </h:dataTable>
 ```
 
-使用条件表达式来检查 Java Bean 名称是否为 `Book`，如果是则不显示，如果是其他内容（例如 `Textbook` 或 `Biography`）则显示。此表达式还展示了如何调用各种 Java Bean 方法，而不只是自定义方法。
+使用条件表达式来检查 Java Bean 名称是否为`Book`，如果是则不显示，如果是其他内容（例如`Textbook`或`Biography`）则显示。此表达式还展示了如何调用各种 Java Bean 方法，而不只是自定义方法。
 
 ### 14.2.5.3 在创建和更新中添加“Special Type”选择控件
 
-在这两种情况下，我们都需要通过 `panel grid` 元素中的选择控件来允许选择特殊类别的书籍（'textbook' 或 'biography'）：
+在这两种情况下，我们都需要通过`panel grid`元素中的选择控件来允许选择特殊类别的书籍（'textbook' 或 'biography'）：
 
 ```xml
 <h:panelGrid id="bookPanel" columns="3">
@@ -4695,14 +4737,14 @@ CREATE TABLE IF NOT EXISTS `books` (
 
 在选择控件中，引用了三个备用面板：
 
-- 1. "standardBookPanel"
+1. `standardBookPanel`
 ```xml
 <h:panelGroup id="standardBookPanel" rendered="#{viewScope.bookType == null}">
   <h:commandButton value="Create" action="#{bookController.create(book.isbn)}" />
 </h:panelGroup>
 ```
 
-- 2. "textBookPanel"
+2. `textBookPanel`
 ```xml
 <h:panelGroup id="textBookPanel" rendered="#{viewScope.bookType == 'textbook'}" columns="3">
   <h:outputText value="Subject: " />
@@ -4712,7 +4754,7 @@ CREATE TABLE IF NOT EXISTS `books` (
 </h:panelGroup>
 ```
 
-- 3. "biographyBookPanel"
+3. `biographyBookPanel`
 ```xml
 <h:panelGroup id="biographyBookPanel" rendered="#{viewScope.bookType == 'biography'}" columns="3">
   <h:outputText value="About: " />
@@ -4722,103 +4764,117 @@ CREATE TABLE IF NOT EXISTS `books` (
 </h:panelGroup>
 ```
 
+# 14.3 案例研究 2：使用连接表继承实现类层次结构
 
+我们案例研究的起点是图 12.8 所示的设计模型。在接下来的章节中，我们将展示如何使用**类层次结构合并**设计模式消除`Manager`类，以及如何借助 JPA 框架实现`Person`层次结构并使用连接多表继承（Joined Multiple Table Inheritance）存储策略。
 
+## 14.3.1 构建 Java 实体类模型
 
-
-## 14.3 案例研究 2：使用连接表继承实现类层次结构
-
-我们案例研究的起点是图 12.8 所示的设计模型。在接下来的章节中，我们将展示如何使用**类层次结构合并**设计模式消除 `Manager` 类，以及如何借助 JPA 框架实现 `Person` 层次结构并使用连接多表继承（Joined Multiple Table Inheritance）存储策略。
-
-### 14.3.1 构建 Java 实体类模型
-
-我们借助 Java 实体模型来设计示例应用的模型类，该模型通过从设计模型推导出，本质上是保留了泛化结构，仅为每个类添加了 getter 和 setter。然而，在我们的示例应用中，将类层次结构合并设计模式应用于 `Employee` 的划分是自然的，从而通过消除 `Manager` 子类来简化数据模型。这导致了下方图 14.2 所示的模型。注意我们做出了两个技术决策：
+我们借助 Java 实体模型来设计示例应用的模型类，该模型通过从设计模型推导出，本质上是保留了泛化结构，仅为每个类添加了 getter 和 setter。然而，在我们的示例应用中，将类层次结构合并设计模式应用于`Employee`的划分是自然的，从而通过消除`Manager`子类来简化数据模型。这导致了下方图 14.2 所示的模型。注意我们做出了两个技术决策：
 
 | Java 实体 |
 | :--- |
 | Person |
-| <get/set> personid : Integer (id) |
-| <get/set> name : String |
-| checkPersonIdAsId(in id : String, in type) : ConstraintViolation |
+| `<get/set> personid : Integer (id)` |
+| `<get/set> name : String` |
+| `checkPersonIdAsId(in id : String, in type) : ConstraintViolation` |
 
 | 枚举 |
 | :--- |
-| EmployeeTypeEL |
-| MANAGER |
+| `EmployeeTypeEL` |
+| `MANAGER` |
 
 | Java 实体 |
 | :--- |
 | Employee |
-| <get/set> empNo[1] : Integer (unique) |
-| <get/set> type(0.[1] : EmployeeTypeEL |
-| <get/set> department(0.[1] : String |
-| checkUniqueEmpNo(in n : Integer) : ConstraintViolation toString() : String create(in pld : Integer, in n : String, in bio : String) retrieveAll() : Employee[*] |
+| `<get/set> empNo[1] : Integer (unique)` |
+| `<get/set> type(0.[1] : EmployeeTypeEL` |
+| `<get/set> department(0.[1] : String` |
+| `checkUniqueEmpNo(in n : Integer) : ConstraintViolation` |
+| `toString() : String` |
+| `create(in pld : Integer, in n : String, in bio : String)` |
+| `retrieveAll() : Employee[*]` |
 
 {disjoint, complete} |
 
 | Java 实体 |
 | :--- |
 | Author |
-| <get/set> biography : String |
-| toString() : String create(in pld : Integer, in name : String, in bio : String) retrieveAll() : Author[*] |
+| `<get/set> biography : String` |
+| `toString() : String` |
+| `create(in pld : Integer, in name : String, in bio : String)` |
+| `retrieveAll() : Author[*]` |
 
 ![](img/26c953d1023457333859f69258a99556_184_0.png)
 
-- 1. 我们声明将 `Person` 划分为 `Employee` 和 `Author` 是互斥的（disjoint）且完全的（complete），即任何人员要么是员工或是作者。由于 Java 不支持多重分类，我们无法在 Java 中实现重叠划分（这在建模角色时是需要的）。
-- 2. 我们将 `Person` 变成一个抽象类（通过类矩形中的斜体名称指示），这意味着它不能直接实例化，只能通过其子类 `Employee` 和 `Author` 间接实例化。这一技术设计与任何 `Person` 都是 `Employee` 或 `Author`（或两者都是）事实兼容，因此不需要任何对象直接实例化。
+1. 我们声明将`Person`划分为`Employee`和`Author`是互斥的（disjoint）且完全的（complete），即任何人员要么是员工或是作者。由于 Java 不支持多重分类，我们无法在 Java 中实现重叠划分（这在建模角色时是需要的）。
+2. 我们将`Person`变成一个抽象类（通过类矩形中的斜体名称指示），这意味着它不能直接实例化，只能通过其子类`Employee`和`Author`间接实例化。这一技术设计与任何`Person`都是`Employee`或`Author`（或两者都是）事实兼容，因此不需要任何对象直接实例化。
 
-### 14.3.2 新问题
+## 14.3.2 新问题
 
-与上方图 14.1 所示的案例研究模型相比，我们必须使用 JPA 注解定义 `Employee` 与 `Person` 之间以及 `Author` 与 `Person` 之间的类别关系。
+与上方图 14.1 所示的案例研究模型相比，我们必须使用 JPA 注解定义`Employee`与`Person`之间以及`Author`与`Person`之间的类别关系。
 在 UI 中，我们需要处理：
 
-- 1. 为相应的 `Author` 和 `Person` 模型类添加视图（位于 `WebContent/views/authors` 和 `WebContent/views/employees` 文件夹下）和控制器类（`AuthController` 和 `EmployeeController`）。
+1. 为相应的`Author`和`Person`模型类添加视图（位于`WebContent/views/authors`和`WebContent/views/employees`文件夹下）和控制器类（`AuthController`和`EmployeeController`）。
+2. 处理`Manager`情况，通过在`WebContent/views/books/create.xhtml`和`WebContent/views/books/update.xhtml`的“创建书籍”和“更新书籍”用例表单添加“特殊类型”选择控件。分段属性字段（例如我们示例中的`department`）仅在选择了相应的员工类型时才显示并进行验证。
 
-- 2. 处理 `Manager` 情况，通过在 `WebContent/views/books/create.xhtml` 和 `WebContent/views/books/update.xhtml` 的“创建书籍”和“更新书籍”用例表单添加“特殊类型”选择控件。分段属性字段（例如我们示例中的 `department`）仅在选择了相应的员工类型时才显示并进行验证。
+## 14.3.3 编写 Java 实体类的模型类
 
-### 14.3.3 编写 Java 实体类的模型类
-
-上方图 14.2 所示的实体类模型是通过使用 JavaBeans `Person`、`Employee` 和 `Author` 以及枚举 `EmployeeCategoryEL` 编写的。
+上方图 14.2 所示的实体类模型是通过使用 JavaBeans `Person`、`Employee`和`Author`以及枚举`EmployeeCategoryEL`编写的。
 
 ### 14.3.3.1 定义类别关系
 
-我们使用 JPA 注解定义 `Employee` 与 `Person` 之间以及 `Author` 与 `Person` 之间的类别关系。首先，我们创建如下所示的 `Person` 类：
+我们使用 JPA 注解定义`Employee`与`Person`之间以及`Author`与`Person`之间的类别关系。首先，我们创建如下所示的`Person`类：
 
 ```java
-@Entity @Table(name="persons")
+@Entity
+@Table(name="persons")
 @Inheritance(strategy=InheritanceType.JOINED)
 ```
-
-## 14.3 案例研究 2：使用连接继承实现类层次结构 — 171
 
 ```java
 @DiscriminatorColumn(name="category",
 discriminatorType=DiscriminatorType.STRING, length=16)
 public abstract class Person {
-    @Id @NotNull(message="A person ID is required!")
+
+    @Id
+    @NotNull(message="A person ID is required!")
     Integer personId;
-    @NotNull(message="A name is required!") @Column(nullable=false)
+
+    @NotNull(message="A name is required!")
+    @Column(nullable=false)
     private String name;
 }
 ```
 
-与用例 1 中所示的 `Book` 层次结构相比，`@Inheritance` 注解定义 `strategy=InheritanceType.JOINED`。这意味着对于继承体系中的每个类，都使用一个数据库表。`@DiscriminatorColumn(name="category")` 指定了顶层层次类（即 `Person`）对应表（即 `persons`）中的列，该列存储用于识别每个条目（表行）类型的判别器值。
+与用例 1 中所示的`Book`层次结构相比，`@Inheritance`注解定义`strategy=InheritanceType.JOINED`。这意味着对于继承体系中的每个类，都使用一个数据库表。`@DiscriminatorColumn(name="category")`指定了顶层层次类（即`Person`）对应表（即`persons`）中的列，该列存储用于识别每个条目（表行）类型的判别器值。
 
-注意 Java 类 `Person` 被声明为抽象类，这意味着它不能被初始化，相反，我们可以初始化派自它的子类（即 `Employee` 和 `Author`）。这意味着我们没有声明 `@DiscriminatorValue`，因为数据库表中没有存储 `Person` 的实例。
+注意 Java 类`Person`被声明为抽象类，这意味着它不能被初始化，相反，我们可以初始化派自它的子类（即`Employee`和`Author`）。这意味着我们没有声明`@DiscriminatorValue`，因为数据库表中没有存储`Person`的实例。
 
-此外，我们按如下定义 `Author` 类：
+此外，我们按如下定义`Author`类：
+
+```java
+
+
+
+# 14.3.3 实体类定义
+
+`@Entity @Table(name="authors")`、`@DiscriminatorValue(value="AUTHOR")`、`@ManagedBean(name="author") @ViewScoped` 注解定义了 `Author` 类：
 
 ```java
 @Entity @Table(name="authors")
 @DiscriminatorValue(value="AUTHOR")
 @ManagedBean(name="author") @ViewScoped
 public class Author extends Person {
+
     @NotNull(message="A biography is required!")
     private String biography;
+
 }
 ```
 
-`Author` 类继承自 `Person`，因此对应 `personId` 和 `name` 属性的 get 和 set 方法可用。`@discriminatorValue(value="AUTHOR")` 指定了类别表中的列为每个来自持久化 `Author` 实例的条目存储值 `AUTHOR`。
+`Author` 类继承自 `Person`，因此对应 `personId` 和 `name` 属性的 get 和 set 方法可用。`@DiscriminatorValue(value="AUTHOR")` 指定了类别表中的列为每个来自持久化 `Author` 实例的条目存储值 `AUTHOR`。
+
 最后，我们定义 `Employee` 类：
 
 ```java
@@ -4826,23 +4882,24 @@ public class Author extends Person {
 @DiscriminatorValue(value="EMPLOYEE")
 @ManagedBean(name="employee") @ViewScoped
 public class Employee extends Person {
-    @Column( nullable=false)
-```
 
-```java
-    @NotNull message="An employee ID is required!"
+    @Column(nullable=false)
+    @NotNull(message="An employee ID is required!")
     private Integer empNo;
+
     @Column(nullable=false, length=32)
     @Enumerated(EnumType.STRING)
     private EmployeeCategoryEL type;
+
     @Column(nullable=true, length=64)
     private String StringDescriptor;
+
 }
 ```
 
 注意用于标识 `Manager` 类型的 `type`。其值由 `EmployeeCategoryEL` 定义。
 
-### 14.3.3.2 连接表的数据库架构
+## 14.3.3.2 连接表的数据库架构
 
 由于继承层次结构中的每个类使用了 `@Inheritance(strategy=InheritanceType.JOINED)`，会创建一个数据库表。创建 `persons`、`authors` 和 `employees` 表对应的 SQL-DDL 脚本所示：
 
@@ -4852,27 +4909,31 @@ CREATE TABLE IF NOT EXISTS 'persons' (
   category varchar(16) DEFAULT NULL,
   NAME varchar(255) NOT NULL
 );
+
 CREATE TABLE IF NOT EXISTS 'authors' (
   PERSONID int(11) NOT NULL,
   BIOGRAPHY varchar(255) DEFAULT NULL
 );
+
 ADD CONSTRAINT FK_authors_PERSONID FOREIGN KEY (PERSONID)
 REFERENCES 'persons' (PERSONID);
+
 CREATE TABLE IF NOT EXISTS 'employees' (
   PERSONID int(11) NOT NULL,
   DEPARTMENT varchar(64) DEFAULT NULL,
   EMPNO int(11) NOT NULL,
   TYPE varchar(32) DEFAULT NULL
 );
+
 ADD CONSTRAINT FK_employees_PERSONID FOREIGN KEY (PERSONID)
 REFERENCES 'persons' (PERSONID);
 ```
 
 可以看到，每个表都包含 Java Bean 类定义的直接属性。此外，`authors` 表和 `employees` 表通过引用 `persons` 表的 `PERSONID` 列关联。
 
-### 14.3.4 编写视图和控制器代码
+## 14.3.4 编写视图和控制器代码
 
-在用户界面中，对于每个 Java Bean 类，我们有一个控制器类，它包含 `create`、`update` 和 `delete` 方法。`PersonController` 类被声明为抽象，并包含了所有子类通用的 `checkPersonIdAsId` 方法。`AuthorController` 和 `EmployeeController` 继承
+在用户界面中，对于每个 Java Bean 类，我们有一个控制器类，它包含 `create`、`update` 和 `delete` 方法。`PersonController` 类被声明为抽象，并包含了所有子类通用的 `checkPersonIdAsId` 方法。`AuthorController` 和 `EmployeeController` 继承自 `PersonController`。
 
 对于非抽象实体类，我们定义了对应 CRUD 操作的视图。例如，在 `Author` 的情况下，我们在 `WebContent/views/authors/` 文件夹中有 `RetrieveAll.xhtml`、`create.xhtml`、`update.xhtml` 和 `delete.xhtml` 文件。对于 `Employee`，`Retrieve/List Employees` 用例用于显示“特殊类型”列：
 
@@ -4887,13 +4948,11 @@ REFERENCES 'persons' (PERSONID);
 
 运行你的应用程序之前，你可能需要停止你的 Tomcat/TomEE 服务器（Windows 使用 `bin/shutdown.bat`，Linux 使用 `bin/shutdown.sh`）。接下来，下载并解压包含应用程序所有源代码的 ZIP 包，以及你需要修改的 ANT 脚本文件（修改 `server.folder` 属性值）。现在，在控制台或终端中执行以下命令：
 
-
-
 ```
 ant deploy -Dappname=SubtypingApp
 ```
 
-最后，启动你的 Tomcat Web 服务器（Windows 操作系统使用 `bin/startup.bat`，Linux 使用 `bin/startup.sh`）。请耐心等待，取决于计算机的速度，这可能需要一些时间。当控制台显示以下消息时，即表示就绪：INFO: Initializing Mojarra [此处显示某些库的版本和路径] for context '/subtypingapp'。最后，打开浏览器并输入：
+最后，启动你的 Tomcat Web 服务器（Windows 操作系统使用 `bin/startup.bat`，Linux 使用 `bin/startup.sh`）。请耐心等待，取决于计算机的速度，这可能需要一些时间。当控制台显示以下消息时，即表示就绪：`INFO: Initializing Mojarra [此处显示某些库的版本和路径] for context '/subtypingapp'`。最后，打开浏览器并输入：
 
 ```
 http://localhost:8080/SubtypingApp/WebContent/views/app/index.xhtml
@@ -4907,8 +4966,7 @@ http://localhost:8080/SubtypingApp/WebContent/views/app/index.xhtml
 
 ![](img/26c953d1023457333859f69258a99556_190_0.png)
 
-按照我们的指南编写应用程序代码。
-确保你的页面符合 HTML5 的 XML 语法，并且你的 JavaScript 符合我们的编码规范（并经过 JSHint 检查）。
+按照我们的指南编写应用程序代码。确保你的页面符合 HTML5 的 XML 语法，并且你的 JavaScript 符合我们的编码规范（并经过 JSHint 检查）。
 
 ## 术语表
 
@@ -4918,7 +4976,7 @@ http://localhost:8080/SubtypingApp/WebContent/views/app/index.xhtml
 
 CRUD 是 *Create, Read/Retrieve, Update, Delete*（创建、读取、更新、删除）的缩写，表示任何软件应用程序执行的四种基本数据管理操作。
 
-层样式表
+### 层样式表
 
 CSS 用于定义网页的样式，告诉浏览器如何渲染其 HTML（或 XML）内容：使用内容元素的布局、字体和文本样式、颜色、背景以及动画。通常，这些设置是在单独的 CSS 文件中完成的，通过 HTML 头部中的特殊链接元素与 HTML 文件关联。
 
@@ -4928,15 +4986,17 @@ CSS 用于定义网页的样式，告诉浏览器如何渲染其 HTML（或 XML�
 
 DOM 是用于检索和修改 HTML 或 XML 文档节点及元素的抽象 API。所有编程语言都有实现 DOM 的 DOM 绑定。
 
-域名系统
+### 域名系统
+
 DNS 将用户易读的域名翻译为 IP 地址，以便在互联网上定位主机计算机。
 
 ### E
 
 ### ECMAScript
 
-可扩展标记语言
 由行业组织“国际电子设备标准组织”（Ecma International）定义的 JavaScript 标准。
+
+### 可扩展标记语言
 
 XML 允许以机器可读的方式标记各种类型文档、数据文件和消息的结构。如果标签名是自解释的，XML 也可以是人类可读的。XML 基于 Unicode。SVG 和 MathML 也基于 XML，并且有一个基于 XML 的 HTML 版本。
 
@@ -4948,7 +5008,8 @@ XML 提供了一种语法，以带有元素和属性的 XML 文档形式表示�
 
 HTML 允许标记（或描述）人类可读的网页文档或 Web 用户界面结构。基于 XML 的 HTML 版本被称为“XHTML5”，与传统的 HTML 相比提供了更简洁的语法。
 
-超文本传输协议
+### 超文本传输协议
+
 HTTP 是一种基于互联网技术 TCP/IP 和 DNS 的无状态请求/响应协议，使用人类可读的文本消息在客户端和 Web 服务器之间通信。HTTP 的主要目的是允许从浏览器获取由 URL 标识的网页文档，通过浏览器执行的表单调用后端 Web 应用程序的操作。最近，HTTP 越来越多地用于提供 Web API 和 Web 服务。
 
 ### I
@@ -4961,13 +5022,13 @@ IANA 代表互联网分配数字机构，它是 ICANN 的附属机构，负责�
 
 ICANN 代表互联网分配名称与数字机构，是一个维护域名系统的国际非营利组织。
 
+### IndexedDB
+
 由浏览器管理的索引数据存储的 JavaScript API。索引允许高性能搜索。像许多 SQL 数据库管理系统（DBMS）一样，IndexedDB 支持数据库事务。
 
-IndexedDB
+### I18N
 
 一组帮助产品适应任何目标语言和文化的最佳实践。它处理多种字符集、计量单位、键盘布局、时间和日期格式以及文本方向。
-
-I18N
 
 ### J
 
@@ -4978,70 +5039,78 @@ JSON 代表 JavaScript 对象表示法，它是一种遵循 JavaScript 对象字
 ### M
 
 ### MathML
+
 一种用于表示数学表达式的开放标准，可用于数据交换或在网页内渲染。
 
-MIME
-MIME 类型（也称为“媒体类型”或“内容类型”）是随文件一起发送的关键字字符串，用于指示其内容类型。例如，音频文件可能被标记为 audio/ogg，或者图像文件标记为 image/png。
+### MIME
 
-模型-视图-控制器
+MIME 类型（也称为“媒体类型”或“内容类型”）是随文件一起发送的关键字字符串，用于指示其内容类型。例如，音频文件可能被标记为 `audio/ogg`，或者图像文件标记为 `image/png`。
+
+### 模型-视图-控制器
+
 MVC 是一种通用的架构比喻，强调关注点分离原则（主要在模型和视图之间），并将模型视为应用程序最基础的部分。在 MVC 框架中，“M”、“V”和“C”的定义方式各不相同。通常，“模型”指的是应用程序的数据源，“视图”指的是用于用户界面的应用程序代码（基于 CSS 样式的 HTML 表单和 DOM 事件），而“控制器”通常指的是负责在视图和模型之间调调的（胶水）代码。
 
 ### O
 
 ### 对象约束语言
+
 OCL 是一种用于完整性约束的正式逻辑语言，主要用于 UML 类模型中。它还允许定义派生表达式来定义派生属性。
 
-面向对象编程
+### 面向对象编程
+
 OOP 是一种基于对象概念的范式。
 
-### 术语表
-
 ### Web 本体语言
+
 OWL 是一种用于知识表示的正式逻辑语言。
 
 ### P
 
 ### 便携式网络图形
+
 PNG 是一种支持无损压缩的开放（非专利）图形格式。
 
 ### R
 
 ### 资源描述框架
+
 RDF 是用于表示机器读信息的 W3C 语言。
 
 ### S
 
 ### 标准标记语言
+
 SGML 是标记语言的 ISO 规范。
 
-可缩矢量图形
+### 可缩矢量图形
+
 SVG 是一种基于 XML 的 2D 图像格式。
 
 ### U
 
+### Unicode
+
 Unicode 是一种与平台的字符集，包含了世界上大多数脚本语言的几乎所有字符。每个字符都被分配一个 0 到 1,114,111 之间的唯一整数代码。
+
+### WebM
 
 WebM 是一种开放（免版税）的网页视频格式，受 Google Chrome 和 Firefox 支持，但不支持 Microsoft Internet Explorer 和 Apple Safari。
 
-
-
-
-
-# 世界维网
+## 世界维网
 
 WWW（或简单称为“Web”）是一个基于 HTTP、HTML 和 XML 的巨型客户端-服务器网络，其中 Web 浏览器（以及其他“用户代理”）作为 HTTP 客户端，访问作为 HTTP 服务器的 Web 服务器程序。
 
-# 世界维网联盟
+## 世界维网联盟
 
 W3C 是一个负责开发和维护 Web 标准的国际组织。
 
-# X
+## X
 
-# XML HTTP 请求
+## XML HTTP 请求
 
 XML HTTP 请求 (XHR) API 允许 JavaScript 程序与后端程序交换 HTTP 消息。它可以用于在不提交 HTML 表单的情况下，从后端程序检索信息或提交信息。基于 XHR 的方法在过去被归类在“AJAX”这一缩写下。
 
-# 索引
+## 索引
 
 抽象类 170
 聚合 113
@@ -5207,11 +5276,9 @@ SQL 表模型 14
 UML 类图 4
 单向关联应用 92
 单向功能性关联 19, 53
-单向非功能性
-关联 38, 67
+单向非功能性关联 38, 67
 单向二元关联 3
 统一建模语言 (UML) 4
 唯一性 24
 更新开销 84
 用户界面 69
-

@@ -1,3 +1,4 @@
+
 # 文本
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/overview/text.html`](https://docs.oracle.com/javase/tutorial/2d/overview/text.html)

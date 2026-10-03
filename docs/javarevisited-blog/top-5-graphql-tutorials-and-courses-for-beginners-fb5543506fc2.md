@@ -1,3 +1,4 @@
+
 # 2023 年要学习的 7 门最佳 GraphQL 在线课程
 
 > 原文：<https://medium.com/javarevisited/top-5-graphql-tutorials-and-courses-for-beginners-fb5543506fc2?source=collection_archive---------0----------------------->
@@ -26,7 +27,7 @@ image_credit- [**构建 GraphQL API 完整指南**](https://click.linksynergy.co
 
 它提供了一个 API 包装器，使得从前端使用单个端点来获得他们需要的所有东西变得更加容易。
 
-例如，Github 的 REST API 用于用户数据，[https://api.github.com/users/](https://api.github.com/users/)返回包含 31 个字段的用户详细信息，如果您只对 id、位置和 url 感兴趣，那么您将获取大量不必要的数据，这些数据可能会影响应用程序的性能和可伸缩性。
+例如，Github 的 REST API 用于用户数据，`https://api.github.com/users/`返回包含 31 个字段的用户详细信息，如果您只对 `id`、`location` 和 `url` 感兴趣，那么您将获取大量不必要的数据，这些数据可能会影响应用程序的性能和可伸缩性。
 
 > GraphQL 通过包装这个 API 并根据您的需求提供一个更简单的接口来解决这个问题。
 
@@ -48,9 +49,9 @@ image_credit- [**构建 GraphQL API 完整指南**](https://click.linksynergy.co
 
 ## 1.[现代 graph QL boot camp(Advanced node . js)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgraphql-bootcamp%2F)
 
-这是 Udemy 的另一个很棒的 GraphQL 课程，它将教你如何使用 Node.js 构建 GraphQL 应用程序。包括 Prisma、认证、**、Apollo 客户端**等等。
+这是 Udemy 的另一个很棒的 GraphQL 课程，它将教你如何使用 `Node.js` 构建 GraphQL 应用程序。包括 `Prisma`、认证、**Apollo 客户端**等等。
 
-如果你上过 Udemy，你可能知道安德鲁·米德，他是最受欢迎的教练之一。参加了他的 Node.js 课程后，我成为了他的超级粉丝，就像约翰·汤姆森、萨梅尔·布纳和斯蒂芬·格里德一样，他也是我最喜欢的导师之一。
+如果你上过 Udemy，你可能知道安德鲁·米德，他是最受欢迎的教练之一。参加了他的 `Node.js` 课程后，我成为了他的超级粉丝，就像约翰·汤姆森、萨梅尔·布纳和斯蒂芬·格里德一样，他也是我最喜欢的导师之一。
 
 这也是这门课程的精华，我强烈推荐给每一个想学习 GraphQL 的 Web 开发人员。Andrew 专注于基于项目的学习，这是学习新技术或框架的最佳方式，本课程也不例外。
 
@@ -96,7 +97,7 @@ image_credit- [**构建 GraphQL API 完整指南**](https://click.linksynergy.co
 
 ## 4.GraphQL 速成班(10 张图！)
 
-这是学习 GraphQL 最好的教程之一。它最初是由@ hex RCS[*https://twitter.com/hexrcs/status/1190332090149150720*](https://twitter.com/hexrcs/status/1190332090149150720)在 Twitter 上发布的
+这是学习 GraphQL 最好的教程之一。它最初是由 @hexRCS [*https://twitter.com/hexrcs/status/1190332090149150720*](https://twitter.com/hexrcs/status/1190332090149150720) 在 Twitter 上发布的
 
 ## 5.GraphQL 初学者指南
 
@@ -108,11 +109,11 @@ image_credit- [**构建 GraphQL API 完整指南**](https://click.linksynergy.co
 
 改变一下，这是 Pluralsight 的 GraphQL 课程。因为我也是 Pluralsight 会员，所以我经常去那里寻找最新技术的课程和教程。幸运的是，我发现这个课程非常棒。
 
-在本课程中，导师 Sameer Buna 将通过真实的例子教你如何构建和使用 GraphQL APIs。您不仅学习了如何使用 graph QL API，还学习了如何构建自己的 graph QL API。
+在本课程中，导师 Sameer Buna 将通过真实的例子教你如何构建和使用 GraphQL APIs。您不仅学习了如何使用 GraphQL API，还学习了如何构建自己的 GraphQL API。
 
 您还将了解如何创建一个 GraphQL 模式，如何通过一个接口使用它，包括一个基于 HTTP 的接口，以及 GraphQL 语言的不同特性，以及如何在 GraphQL 服务器中构建它们。
 
-简而言之，这是一门从零开始学习 GraphQL 的[好课程](http://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fgraphql-scalable-apis)，尤其是如果你是 Pluralsight 会员的话。如果没有，我建议你买一个，因为 Pluaralsight 是一个学习新事物的好地方。
+简而言之，这是一门从零开始学习 GraphQL 的[好课程](http://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fgraphql-scalable-apis)，尤其是如果你是 Pluralsight 会员的话。如果没有，我建议你买一个，因为 Pluralsight 是一个学习新事物的好地方。
 
 这里是加入本课程的链接— [用 GraphQL 构建可伸缩的 APIs】](http://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fgraphql-scalable-apis)
 
@@ -124,37 +125,39 @@ image_credit- [**构建 GraphQL API 完整指南**](https://click.linksynergy.co
 
 这是我在 Udemy 上购买的第四个 GraphQL 课程，是的，我经常在 Udemy 上疯狂购物，尤其是在他们疯狂销售的时候，课程售价仅为 10 美元或更低。
 
-无论如何，谈到这个课程，它也是一个基于项目的课程，您将通过使用 [Node.js](http://javarevisited.blogspot.sg/2018/01/top-5-nodejs-and-express-js-online-courses-for-web-developers.html) 、Express、Apollo Server、 [React](http://www.java67.com/2018/02/5-free-react-courses-for-web-developers.html) 、Apollo Client 创建一个全栈 JavaScript 应用程序来学习 GraphQL。
 
-这意味着您不仅将学习如何使用 HTTP 使用 GraphQL API，还将学习如何使用 Appolo 客户端。本课程还会教你一些关于 GraphQL 服务器和 GraphQL 模式的基本知识
 
-谈到社交，这门课程在 1392 名注册学生给出的 256 个评分中平均得到 4.6 分，这还不错。简而言之，如果你喜欢通过例子学习，这是学习 GraphQL 的好课程。
+无论如何，谈到这个课程，它也是一个基于项目的课程，您将通过使用 [Node.js](http://javarevisited.blogspot.sg/2018/01/top-5-nodejs-and-express-js-online-courses-for-web-developers.html) 、`Express`、`Apollo Server`、 [React](http://www.java67.com/2018/02/5-free-react-courses-for-web-developers.html) 、`Apollo Client` 创建一个全栈 JavaScript 应用程序来学习 `GraphQL`。
+
+这意味着您不仅将学习如何使用 `HTTP` 使用 `GraphQL API`，还将学习如何使用 `Appolo` 客户端。本课程还会教你一些关于 `GraphQL` 服务器和 `GraphQL` 模式的基本知识。
+
+谈到社交，这门课程在 1392 名注册学生给出的 256 个评分中平均得到 4.6 分，这还不错。简而言之，如果你喜欢通过例子学习，这是学习 `GraphQL` 的好课程。
 
 **以下是加入本课程的链接** — [GraphQL by Example](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgraphql-by-example%2F)
 
 [![](img/b0385d45a0f3b67aefc4232634bd8c8b.png)](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgraphql-by-example%2F)
 
-以上就是 2023 年学习 GraphQL 的一些**最佳课程。正如我所说，GraphQL 看起来很有前途，可以作为 REST 的替代品，许多公司，如 [Coursera](/javarevisited/18-coursera-courses-you-can-join-in-2020-to-learn-from-the-worlds-top-tech-companies-google-74af46967d1e?source=collection_home---4------0-----------------------) 实际上正在使用它。**
+以上就是 2023 年学习 `GraphQL` 的一些**最佳课程**。正如我所说，`GraphQL` 看起来很有前途，可以作为 `REST` 的替代品，许多公司，如 [Coursera](/javarevisited/18-coursera-courses-you-can-join-in-2020-to-learn-from-the-worlds-top-tech-companies-google-74af46967d1e?source=collection_home---4------0-----------------------) 实际上正在使用它。
 
-因为我刚刚开始学习 GraphQL，还有很长的路要走，但无论我到目前为止学到了什么，都表明 GraphQL 将长期存在，每个 Web 开发人员都应该探索它。
+因为我刚刚开始学习 `GraphQL`，还有很长的路要走，但无论我到目前为止学到了什么，都表明 `GraphQL` 将长期存在，每个 Web 开发人员都应该探索它。
 
-顺便说一下，GraphQL 也有局限性，比如 GPL 查询总是返回 HTTP 状态码 200 OK，即使查询不成功，这个问题也会使错误处理变得困难。另一个问题是缓存，GraphQL 缺乏内置的缓存支持，所以你必须提供自己的缓存支持。
+顺便说一下，`GraphQL` 也有局限性，比如 `GPL` 查询总是返回 `HTTP` 状态码 `200 OK`，即使查询不成功，这个问题也会使错误处理变得困难。另一个问题是缓存，`GraphQL` 缺乏内置的缓存支持，所以你必须提供自己的缓存支持。
 
 您可能喜欢的其他**编程和开发文章**
 
-*   [网络开发者路线图](https://hackernoon.com/the-2019-web-developer-roadmap-ab89ac3c380e)
-*   [面向 Java 和 DevOps 专业人员的 10 门免费 Docker 课程](https://javarevisited.blogspot.sg/2018/02/10-free-docker-container-courses-for-Java-Developers.html)
-*   [学习 Jenkins 自动化和开发运维的 5 大课程](https://javarevisited.blogspot.com/2018/09/top-5-jenkins-courses-for-java-and-DevOps-Programmers.html)
-*   [如何在 2023 年成为现代 React 开发者](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
-*   [2023 年 Java 开发人员应该学会的 10 件事](http://javarevisited.blogspot.sg/2017/12/10-things-java-programmers-should-learn.html#axzz53ENLS1RB)
-*   [2023 年 Java 开发人员应该学习的 10 种工具](http://www.java67.com/2018/04/10-tools-java-developers-should-learn.html)
-*   [5 免费弹簧框架和 Spring Boot 课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
-*   [学习休息的前 5 本书和课程](http://www.java67.com/2018/02/3-books-and-courses-to-learn-restful-web-services-with-spring.html)
-*   [学习 Web 开发的前 5 门课程](https://javarevisited.blogspot.com/2018/02/top-5-online-courses-to-learn-web-development.html)
-*   [50+数据结构与算法面试题](https://hackernoon.com/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0)
+* [网络开发者路线图](https://hackernoon.com/the-2019-web-developer-roadmap-ab89ac3c380e)
+* [面向 Java 和 DevOps 专业人员的 10 门免费 Docker 课程](https://javarevisited.blogspot.sg/2018/02/10-free-docker-container-courses-for-Java-Developers.html)
+* [学习 Jenkins 自动化和开发运维的 5 大课程](https://javarevisited.blogspot.com/2018/09/top-5-jenkins-courses-for-java-and-DevOps-Programmers.html)
+* [如何在 2023 年成为现代 React 开发者](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
+* [2023 年 Java 开发人员应该学会的 10 件事](http://javarevisited.blogspot.sg/2017/12/10-things-java-programmers-should-learn.html#axzz53ENLS1RB)
+* [2023 年 Java 开发人员应该学习的 10 种工具](http://www.java67.com/2018/04/10-tools-java-developers-should-learn.html)
+* [5 免费弹簧框架和 Spring Boot 课程](http://www.java67.com/2017/11/top-5-free-core-spring-mvc-courses-learn-online.html)
+* [学习休息的前 5 本书和课程](http://www.java67.com/2018/02/3-books-and-courses-to-learn-restful-web-services-with-spring.html)
+* [学习 Web 开发的前 5 门课程](https://javarevisited.blogspot.com/2018/02/top-5-online-courses-to-learn-web-development.html)
+* [50+数据结构与算法面试题](https://hackernoon.com/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0)
 
-感谢您阅读本文。如果你喜欢这些*最佳 GraphQL 课程*，那么请与你的朋友和同事分享。如果你有任何对任何学习 GraphQL 的人有用的问题、书籍或课程，请留言。
+感谢您阅读本文。如果你喜欢这些*最佳 GraphQL 课程*，那么请与你的朋友和同事分享。如果你有任何对任何学习 `GraphQL` 的人有用的问题、书籍或课程，请留言。
 
-**p . s .**——如果你对学习 GraphQL 感兴趣，但正在寻找一个免费教程来开始学习 graph QL——一本关于 Udemy 的入门书是最好的开始。它是完全免费的，从初学者的角度提供了 GraphQL 的一个很好的概述。
+**p . s .**——如果你对学习 `GraphQL` 感兴趣，但正在寻找一个免费教程来开始学习 `GraphQL`——一本关于 `Udemy` 的入门书是最好的开始。它是完全免费的，从初学者的角度提供了 `GraphQL` 的一个很好的概述。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgraphql-a-primer%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fgraphql-a-primer%2F>

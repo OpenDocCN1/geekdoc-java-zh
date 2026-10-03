@@ -1,3 +1,4 @@
+
 # Java 中的行为参数化
 
 > 原文：<https://medium.com/javarevisited/behavior-parameterization-in-java-741591461622?source=collection_archive---------2----------------------->

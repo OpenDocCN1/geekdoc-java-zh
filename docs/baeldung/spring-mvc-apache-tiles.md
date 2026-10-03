@@ -1,24 +1,26 @@
+
+
 # Apache Tiles 与 Spring MVC 的集成
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-mvc-apache-tiles>
 
-## 1。概述
+## 1. 概述
 
 Apache [Tiles](https://web.archive.org/web/20220525130657/https://tiles.apache.org/) 是一个完全基于复合设计模式的免费开源模板框架。
 
 复合设计模式是一种结构模式，它将对象组合成树形结构来表示整体-部分层次结构，这种模式统一处理单个对象和对象的组合。换句话说，在 Tiles 中，页面是由称为 Tiles 的子视图组合而成的。
 
-该框架相对于其他框架的优势包括:
+该框架相对于其他框架的优势包括：
 
-*   可重用性
-*   易于配置
-*   低性能开销
+- 可重用性
+- 易于配置
+- 低性能开销
 
 在本文中，我们将重点关注将 Apache Tiles 与 Spring MVC 集成在一起。
 
-## 2。依赖配置
+## 2. 依赖配置
 
-这里的第一步是在`pom.xml`中添加必要的[依赖关系](https://web.archive.org/web/20220525130657/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22org.apache.tiles%22%20AND%20a%3A%22tiles-jsp%22):
+这里的第一步是在`pom.xml`中添加必要的[依赖关系](https://web.archive.org/web/20220525130657/https://search.maven.org/classic/#search%7Cgav%7C1%7Cg%3A%22org.apache.tiles%22%20AND%20a%3A%22tiles-jsp%22)：
 
 ```java
 <dependency>
@@ -28,9 +30,9 @@ Apache [Tiles](https://web.archive.org/web/20220525130657/https://tiles.apache.o
 </dependency>
 ```
 
-## 3。平铺布局文件
+## 3. 平铺布局文件
 
-现在我们需要定义模板定义，特别是对于每个页面，我们将覆盖该特定页面的模板定义:
+现在我们需要定义模板定义，特别是对于每个页面，我们将覆盖该特定页面的模板定义：
 
 ```java
 <tiles-definitions>
@@ -53,15 +55,15 @@ Apache [Tiles](https://web.archive.org/web/20220525130657/https://tiles.apache.o
 </tiles-definitions>
 ```
 
-## 4。`ApplicationConfiguration`和其他班级
+## 4. `ApplicationConfiguration`和其他班级
 
-作为配置的一部分，我们将创建三个名为`ApplicationInitializer`、`ApplicationController`和`ApplicationConfiguration`的特定 java 类:
+作为配置的一部分，我们将创建三个名为`ApplicationInitializer`、`ApplicationController`和`ApplicationConfiguration`的特定 java 类：
 
-*   `ApplicationInitializer`初始化并检查`ApplicationConfiguration`类中指定的必要配置
-*   该类包含将 Spring MVC 与 Apache Tiles 框架集成的配置
-*   `ApplicationController`类与`tiles.xml`文件同步工作，并根据传入的请求重定向到必要的页面
+- `ApplicationInitializer`初始化并检查`ApplicationConfiguration`类中指定的必要配置。
+- 该类包含将 Spring MVC 与 Apache Tiles 框架集成的配置。
+- `ApplicationController`类与`tiles.xml`文件同步工作，并根据传入的请求重定向到必要的页面。
 
-让我们看看每个类的运行情况:
+让我们看看每个类的运行情况：
 
 ```java
 @Controller
@@ -107,12 +109,12 @@ public class WebInitializer implements WebApplicationInitializer {
 }
 ```
 
-在 Spring MVC 应用程序中，有两个重要的类在配置 tiles 时扮演着关键角色。他们是`TilesConfigurer`和`TilesViewResolver`:
+在 Spring MVC 应用程序中，有两个重要的类在配置 tiles 时扮演着关键角色。他们是`TilesConfigurer`和`TilesViewResolver`：
 
-*   `TilesConfigurer`通过提供 tiles 配置文件的路径，帮助链接 Tiles 框架和 Spring 框架
-*   `TilesViewResolver`是 Spring API 提供的适配器类之一，用于解析 tiles 视图
+- `TilesConfigurer`通过提供 tiles 配置文件的路径，帮助链接 Tiles 框架和 Spring 框架。
+- `TilesViewResolver`是 Spring API 提供的适配器类之一，用于解析 tiles 视图。
 
-最后，在`ApplicationConfiguration`类中，我们使用`TilesConfigurer`和`TilesViewResolver`类来实现集成:
+最后，在`ApplicationConfiguration`类中，我们使用`TilesConfigurer`和`TilesViewResolver`类来实现集成：
 
 ```java
 @Configuration
@@ -143,13 +145,13 @@ public class TilesApplicationConfiguration implements WebMvcConfigurer {
 }
 ```
 
-## 5。瓷砖模板文件
+## 5. 瓷砖模板文件
 
 到目前为止，我们已经完成了 Apache Tiles 框架的配置，以及整个应用程序中使用的模板和特定 Tiles 的定义。
 
-在这一步，我们需要创建已经在 `tiles.xml`中定义的特定模板文件。
+在这一步，我们需要创建已经在`tiles.xml`中定义的特定模板文件。
 
-请查找可用作构建特定页面基础的布局片段:
+请查找可用作构建特定页面基础的布局片段：
 
 ```java
 <html>
@@ -174,8 +176,9 @@ public class TilesApplicationConfiguration implements WebMvcConfigurer {
 </html>
 ```
 
-## 6。结论
+## 6. 结论
 
 这就结束了 Spring MVC 与 Apache Tiles 的集成。
 
 你可以在 github 项目后面的[中找到完整的实现。](https://web.archive.org/web/20220525130657/https://github.com/eugenp/tutorials/tree/master/spring-web-modules/spring-mvc-views)
+

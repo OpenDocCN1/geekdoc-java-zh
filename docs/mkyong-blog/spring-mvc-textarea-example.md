@@ -1,29 +1,30 @@
+
 # Spring MVC textarea 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring-mvc/spring-mvc-textarea-example/>
 
-在 Spring MVC 中，使用 **< form:textarea / >** 渲染一个 HTML textarea 字段。举个例子，
+在 Spring MVC 中，使用`<form:textarea />`渲染一个 HTML textarea 字段。举个例子：
 
-```java
- <form:textarea path="address" rows="5" cols="30" /> 
+```
+<form:textarea path="address" rows="5" cols="30" />
 ```
 
-它将呈现以下 HTML 代码
+它将呈现以下 HTML 代码：
 
-```java
- <textarea id="address" name="address" rows="5" cols="30"></textarea> 
+```
+<textarea id="address" name="address" rows="5" cols="30"></textarea>
 ```
 
-在本教程中，我们将向您展示如何使用 Spring 的表单标签“ **textarea** ”来**呈现一个 HTML textarea** 来存储“**地址**”。此外，添加一个验证器来确保提交表单时 texarea 不为空。
+在本教程中，我们将向您展示如何使用 Spring 的表单标签“textarea”来**呈现一个 HTML textarea** 来存储“地址”。此外，添加一个验证器来确保提交表单时 textarea 不为空。
 
-## 1.控制器
+## 1. 控制器
 
-一个 **SimpleFormController** 来处理表单值。
+一个`SimpleFormController`来处理表单值。
 
-*文件:TextAreaController.java*
+*文件：`TextAreaController.java`*
 
-```java
- package com.mkyong.customer.controller;
+```
+package com.mkyong.customer.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -50,33 +51,33 @@ public class TextAreaController extends SimpleFormController{
 
 	}
 
-} 
+}
 ```
 
- ## 2.模型
+## 2. 模型
 
 存储 textarea 值的客户对象。
 
-*文件:Customer.java*
+*文件：`Customer.java`*
 
-```java
- package com.mkyong.customer.model;
+```
+package com.mkyong.customer.model;
 
 public class Customer{
 
 	String address;
 	//getter and setter methods for address
-} 
+}
 ```
 
- ## 3.表单验证器
+## 3. 表单验证器
 
-创建一个表单验证器类，并使用 **ValidationUtils** 类来确保“地址”不为空，否则，从相应的资源包(属性文件)中获取“ **required.address** 消息。
+创建一个表单验证器类，并使用`ValidationUtils`类来确保“地址”不为空，否则，从相应的资源包（属性文件）中获取“required.address”消息。
 
-*文件:CustomerValidator.java*
+*文件：`CustomerValidator.java`*
 
-```java
- package com.mkyong.customer.validator;
+```
+package com.mkyong.customer.validator;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -99,23 +100,23 @@ public class CustomerValidator implements Validator{
 		     "required.address", "Field name is required.");
 
 	}
-} 
+}
 ```
 
-*文件:message.properties*
+*文件：`message.properties`*
 
-```java
- required.address = Address is required! 
+```
+required.address = Address is required!
 ```
 
-## 4.视角
+## 4. 视图
 
-一个 JSP 页面使用 Spring 的表单标签" **textarea** "来呈现一个 HTML textarea，并放置一些 CSS 样式来突出显示错误消息。
+一个 JSP 页面使用 Spring 的表单标签“textarea”来呈现一个 HTML textarea，并放置一些 CSS 样式来突出显示错误消息。
 
-*文件:CustomerForm.jsp*
+*文件：`CustomerForm.jsp`*
 
-```java
- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+```
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
 <style>
@@ -151,30 +152,30 @@ public class CustomerValidator implements Validator{
 	</form:form>
 
 </body>
-</html> 
+</html>
 ```
 
 如果表单已提交，则呈现成功的页面并显示提交的 textarea 值。
 
-*文件:CustomerSuccess.jsp*
+*文件：`CustomerSuccess.jsp`*
 
-```java
- <html>
+```
+<html>
 <body>
 	<h2>Spring's form textarea example</h2>
 
 	Address : ${customer.address}
 
 </body>
-</html> 
+</html>
 ```
 
-## 5.弹簧豆配置
+## 5. Spring Bean 配置
 
 全部链接起来~
 
-```java
- <beans 
+```
+<beans 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
@@ -208,12 +209,12 @@ public class CustomerValidator implements Validator{
 		</property>
 	</bean>
 
-</beans> 
+</beans>
 ```
 
-## 6.演示
+## 6. 演示
 
-访问页面-**http://localhost:8080/SpringMVCForm/textarea . htm**
+访问页面 - `http://localhost:8080/SpringMVCForm/textarea.htm`
 
 ![SpringMVC-TextArea-Example-1](img/56afac4d14d2ac781bd8279389241fb9.png "SpringMVC-TextArea-Example-1")
 
@@ -227,11 +228,6 @@ public class CustomerValidator implements Validator{
 
 ## 下载源代码
 
-Download it – [SpringMVCForm-TextArea-Example.zip](http://web.archive.org/web/20190220141812/http://www.mkyong.com/wp-content/uploads/2010/08/SpringMVCForm-TextArea-Example.zip) (9KB)[spring mvc](http://web.archive.org/web/20190220141812/http://www.mkyong.com/tag/spring-mvc/) [textarea](http://web.archive.org/web/20190220141812/http://www.mkyong.com/tag/textarea/)
+Download it – [SpringMVCForm-TextArea-Example.zip](http://web.archive.org/web/20190220141812/http://www.mkyong.com/wp-content/uploads/2010/08/SpringMVCForm-TextArea-Example.zip) (9KB)
 
-
-
-
-
-
-
+[spring mvc](http://web.archive.org/web/20190220141812/http://www.mkyong.com/tag/spring-mvc/) [textarea](http://web.archive.org/web/20190220141812/http://www.mkyong.com/tag/textarea/)

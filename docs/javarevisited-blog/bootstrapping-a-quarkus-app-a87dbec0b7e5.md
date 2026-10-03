@@ -1,3 +1,4 @@
+
 # 启动 Quarkus 应用程序
 
 > 原文：<https://medium.com/javarevisited/bootstrapping-a-quarkus-app-a87dbec0b7e5?source=collection_archive---------1----------------------->
@@ -26,9 +27,11 @@ Java 生态系统始终是技术如何以新的方式和框架重塑自身的一
 
 这是什么意思？
 
-*   **容器优先**:最小占用空间的 Java 应用程序，最适合在容器中运行。
-*   **原生云**:在 Kubernetes 这样的环境中采用 12 要素架构。
-*   **微服务第一**:为 Java 应用带来闪电般的启动时间和代码周转。
+* **容器优先**:最小占用空间的 Java 应用程序，最适合在容器中运行。
+
+* **原生云**:在 Kubernetes 这样的环境中采用 12 要素架构。
+
+* **微服务第一**:为 Java 应用带来闪电般的启动时间和代码周转。
 
 我想现在我们对为什么要用夸库进行实验有了一个大概的了解。在这篇博客中，我们将创建一个简单的 quarkus 应用程序，并使用 [maven 工具](/javarevisited/6-best-maven-courses-for-beginners-in-2020-23ea3cba89)运行它。
 
@@ -36,9 +39,11 @@ Java 生态系统始终是技术如何以新的方式和框架重塑自身的一
 
 构建 Quarkus Java 应用程序的要求:
 
-*   JDK 8 或 11+安装有适当配置的`JAVA_HOME`
-*   Apache Maven 3.6.2 以上
-*   GraalVM(如果需要本地应用)
+* JDK 8 或 11+安装有适当配置的`JAVA_HOME`
+
+* Apache Maven 3.6.2 以上
+
+* GraalVM(如果需要本地应用)
 
 Quarkus 应用程序可以使用 [Maven](/javarevisited/top-10-free-courses-to-learn-maven-jenkins-and-docker-for-java-developers-51fa7a1e66f6) 或 [Gradle](/javarevisited/5-best-gradle-courses-and-books-to-learn-in-2021-93f49ce8ff8e) 插件快速启动。该插件将生成一个最小的项目结构，配置文件中包含一个样本 REST 端点和 Quarkus 的 Maven 依赖项。
 
@@ -159,8 +164,9 @@ mvn package
 
 这将在*目标*目录中生成 2 个 jar 文件:
 
-*   */quar kus-app/quar kus-run . jar*—一个可执行的 jar，其依赖项被复制到 *target/lib。*
-*   */sample-quar kus-app-1.0-snapshot . jar*—包含类和资源文件。
+* `/quar kus-app/quar kus-run . jar`—一个可执行的 jar，其依赖项被复制到 *target/lib。*
+
+* `/sample-quar kus-app-1.0-snapshot . jar`—包含类和资源文件。
 
 运行打包的应用程序:
 
@@ -184,9 +190,11 @@ GraalVM 版本可在 https://github.com/graalvm/graalvm-ce-builds/releases[获�
 
 下载 **GraalVM** 并解压到你喜欢的文件夹中。在 GraalVM 包中，您会发现:
 
-*   一个 JVM
-*   JavaScript 引擎& node.js 运行时
-*   LLVM 引擎
+* 一个 JVM
+
+* JavaScript 引擎& node.js 运行时
+
+* LLVM 引擎
 
 现在导出 **GRAALVM_HOME** ，其中包含 GRAALVM 的安装路径:
 
@@ -250,7 +258,9 @@ mvn package -Pnative -Dquarkus.native.container-build=true
 
 现在，如果你看到当我们创建项目时，它为我们创建了一个 docker 文件 *Dockerfile.native，*这是运行应用程序的最低要求。如果你想改变基本操作系统，你可以根据需要修改 [docker 文件](/javarevisited/top-5-free-courses-to-learn-docker-for-beginners-best-of-lot-b2b1ad2b98ad?source=collection_home---4------2-----------------------)。
 
-> 提供的`Dockerfiles`使用 [UBI](https://access.redhat.com/containers/?tab=overview#/registry.access.redhat.com/ubi8/ubi) (通用基础映像)作为父映像。这个基本图像已经被裁剪为在容器中完美地工作。`Dockerfiles`使用基础图像的 [*最小*版本](https://access.redhat.com/containers/#/registry.access.redhat.com/ubi8/ubi-minimal)来缩小生成图像的尺寸。欲了解更多详情，请点击这里。
+
+
+> 提供的`Dockerfiles`使用 [UBI](https://access.redhat.com/containers/?tab=overview#/registry.access.redhat.com/ubi8/ubi)（通用基础映像）作为父映像。这个基本图像已经被裁剪为在容器中完美地工作。`Dockerfiles`使用基础图像的 [*最小*版本](https://access.redhat.com/containers/#/registry.access.redhat.com/ubi8/ubi-minimal)来缩小生成图像的尺寸。欲了解更多详情，请点击这里。
 
 ```
 FROM registry.access.redhat.com/ubi8/ubi-minimal:8.3
@@ -266,13 +276,13 @@ USER 1001
 CMD ["./application", "-Dquarkus.http.host=0.0.0.0"]
 ```
 
-现在运行下面的 cmd 来构建 docker 映像:
+现在运行下面的`cmd`来构建 docker 映像：
 
 ```
 docker build -f src/main/docker/Dockerfile.native -t quarkus/sample-quarkus-app .
 ```
 
-这会产生图像。运行 *docker 图像*进行确认。现在使用下面的代码运行容器:
+这会产生图像。运行`docker 图像`进行确认。现在使用下面的代码运行容器：
 
 ```
 docker run -i --rm -p 8080:8080 quarkus/sample-quarkus-app
@@ -284,7 +294,7 @@ docker run -i --rm -p 8080:8080 quarkus/sample-quarkus-app
 
 容器在**0.041 秒**的极低时间启动。
 
-现在我们知道这是夸库的优势之一。现在我们的图像可以被运送到任何地方 [Openshift](/javarevisited/6-best-openshift-courses-for-beginners-and-experienced-developers-d124edd2baff) ， [Kubernetes](/javarevisited/10-best-kubernetes-courses-for-developers-and-devops-engineers-94c35cd3a2fd) 等等。
+现在我们知道这是夸库的优势之一。现在我们的图像可以被运送到任何地方 [Openshift](/javarevisited/6-best-openshift-courses-for-beginners-and-experienced-developers-d124edd2baff)， [Kubernetes](/javarevisited/10-best-kubernetes-courses-for-developers-and-devops-engineers-94c35cd3a2fd) 等等。
 
 最后，我们可以测试我们的 REST 端点来验证我们的应用程序。点击[http://localhost:8080/hello world/hello/jasmine](http://localhost:8080/helloworld/hello/praveen)
 
@@ -298,7 +308,7 @@ Good day jasmine
 
 我已经在这里分享了上面我们尝试过的[示例应用程序的代码。快乐学习！！](https://github.com/PraveenGNair/sample-quarkus-app)
 
-参考资料:
+参考资料：
 
 [https://quarkus.io/guides/](https://quarkus.io/guides/)
 

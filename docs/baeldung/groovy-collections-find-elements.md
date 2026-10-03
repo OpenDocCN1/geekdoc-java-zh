@@ -1,23 +1,24 @@
+
 # 在 Groovy 中查找集合中的元素
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/groovy-collections-find-elements>
 
-## 1。简介
+## 1. 简介
 
 Groovy 提供了大量增强 Java 核心能力的方法。
 
 在本教程中，我们将展示当**检查一个元素并在[几种类型的集合](/web/20220707143817/https://www.baeldung.com/groovy-lists)中找到它时，Groovy 是如何做到这一点的。**
 
-## 2。测试元素是否存在
+## 2. 测试元素是否存在
 
 首先，我们将只关注测试给定的集合是否包含元素。
 
-### 2.1。列表
+### 2.1. 列表
 
-Java 本身提供了几种用`java.util.List` 对列表中的项目进行**检查的方法:**
+Java 本身提供了几种用`java.util.List`对列表中的项目进行**检查的方法:**
 
-*   `contains`法
-*   `indexOf `法
+*   `contains()`方法
+*   `indexOf()`方法
 
 由于 Groovy 是一种 Java 兼容的语言，我们可以安全地使用它们。
 
@@ -50,9 +51,9 @@ void whenListContainsElement_thenCheckWithMembershipOperatorReturnsTrue() {
 }
 ```
 
-### 2.2。设置
+### 2.2. 设置
 
-和前面的例子一样，我们可以使用`java.util.Set#contains` 方法和`in`操作符:
+和前面的例子一样，我们可以使用`java.util.Set#contains()`方法和`in`操作符:
 
 ```java
 @Test
@@ -64,7 +65,7 @@ void whenSetContainsElement_thenCheckReturnsTrue() {
 }
 ```
 
-### 2.3。地图
+### 2.3. 地图
 
 在`Map`的情况下，我们可以直接检查键或值:
 
@@ -91,7 +92,7 @@ void whenMapContainsKeyElement_thenCheckByMembershipReturnsTrue() {
 }
 ```
 
-当和地图一起使用时，我们应该小心使用成员运算符，因为这个运算符和布尔值一起使用有点混乱。底层机制从映射中检索相应的值，并由**将其转换为布尔值:**，而不是测试键是否存在
+当和地图一起使用时，我们应该小心使用成员运算符，因为这个运算符和布尔值一起使用有点混乱。底层机制从映射中检索相应的值，并由**将其转换为布尔值，而不是测试键是否存在:**
 
 ```java
 @Test
@@ -107,7 +108,7 @@ void whenMapContainsFalseBooleanValues_thenCheckReturnsFalse() {
 
 正如我们在上面的例子中可能看到的，出于同样的原因，使用`null`值也**有点危险。Groovy 将`false`和`null`都转换为布尔值`false`。**
 
-## 3。所有匹配和任何匹配
+## 3. 所有匹配和任何匹配
 
 在大多数情况下，我们处理由更复杂的对象组成的集合。在这一节中，我们将展示如何检查给定集合是否包含至少一个匹配元素，或者是否所有元素都匹配给定谓词。
 
@@ -123,7 +124,7 @@ class Person {
 }
 ```
 
-### 3.1。列表/设置
+### 3.1. 列表/设置
 
 这次，我们将使用一个简单的`Person`对象列表:
 
@@ -145,7 +146,7 @@ void givenListOfPerson_whenUsingStreamMatching_thenShouldEvaluateList() {
 }
 ```
 
-我们还可以使用 Groovy 方法`DefaultGroovyMethods#any `和`DefaultGroovyMethods#every `直接在集合上执行检查:
+我们还可以使用 Groovy 方法`DefaultGroovyMethods#any()`和`DefaultGroovyMethods#every()`直接在集合上执行检查:
 
 ```java
 @Test
@@ -155,9 +156,9 @@ void givenListOfPerson_whenUsingCollectionMatching_thenShouldEvaluateList() {
 }
 ```
 
-### 3.2。地图
+### 3.2. 地图
 
-让我们从定义一个由`Person#firstname`映射的`Person `对象的`Map`开始:
+让我们从定义一个由`Person#firstname`映射的`Person`对象的`Map`开始:
 
 ```java
 private final personMap = [
@@ -192,11 +193,11 @@ void givenMapOfPerson_whenUsingCollectionMatching_thenShouldEvaluateMap() {
 }
 ```
 
-正如我们所见，Groovy 不仅在操作地图时充分取代了`Stream` API，还允许我们直接在`Map`对象上执行检查，而不是使用`java.util.Map#entrySet`方法。
+正如我们所见，Groovy 不仅在操作地图时充分取代了`Stream` API，还允许我们直接在`Map`对象上执行检查，而不是使用`java.util.Map#entrySet()`方法。
 
-## 4。在集合中查找一个或多个元素
+## 4. 在集合中查找一个或多个元素
 
-### 4.1。列表/设置
+### 4.1. 列表/设置
 
 我们还可以使用谓词提取元素。让我们从熟悉的`Stream` API 方法开始:
 
@@ -226,9 +227,9 @@ void givenListOfPerson_whenUsingCollectionFind_thenShouldReturnMatchingElements(
 
 通过使用 Groovy 的 API，**我们可以跳过创建一个`Stream`并过滤它**。
 
-### 4.2。 **地图**
+### 4.2. 地图
 
-在`Map, `的情况下，有几个选项可供选择。**我们可以在关键字、值或完整条目中找到元素。**由于前两个基本上是一个`List`或一个`Set`，在本节中我们将只展示一个查找条目的例子。
+在`Map`的情况下，有几个选项可供选择。**我们可以在关键字、值或完整条目中找到元素。**由于前两个基本上是一个`List`或一个`Set`，在本节中我们将只展示一个查找条目的例子。
 
 让我们重新使用之前的`personMap`:
 
@@ -256,9 +257,9 @@ void givenMapOfPerson_whenUsingCollectionFind_thenShouldReturnElements() {
 }
 ```
 
-在这种情况下，好处更加显著。我们跳过`java.util.Map#entrySet `方法，使用一个带有`Map`提供的函数的闭包。
+在这种情况下，好处更加显著。我们跳过`java.util.Map#entrySet()`方法，使用一个带有`Map`提供的函数的闭包。
 
-## 5。结论
+## 5. 结论
 
 在本文中，我们展示了 **Groovy 如何简化元素检查以及在几种类型的集合中查找元素。**
 

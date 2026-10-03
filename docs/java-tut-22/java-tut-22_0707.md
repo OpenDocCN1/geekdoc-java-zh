@@ -1,3 +1,4 @@
+
 # 长期持久性
 
 > 原文：[`docs.oracle.com/javase/tutorial/javabeans/advanced/longpersistence.html`](https://docs.oracle.com/javase/tutorial/javabeans/advanced/longpersistence.html)
@@ -8,7 +9,7 @@
 
 ## 编码器和解码器
 
-[`XMLEncoder`](https://docs.oracle.com/javase/8/docs/api/java/beans/XMLEncoder.html)类用于编写`Serializable`对象的文本表示的输出文件。以下代码片段是将 Java bean 及其属性以 XML 格式写入的示例：
+`XMLEncoder`类用于编写`Serializable`对象的文本表示的输出文件。以下代码片段是将 Java bean 及其属性以 XML 格式写入的示例：
 
 ```java
 XMLEncoder encoder = new XMLEncoder(
@@ -17,10 +18,9 @@ XMLEncoder encoder = new XMLEncoder(
 
 encoder.writeObject(object);
 encoder.close(); 
-
 ```
 
-[`XMLDecoder`](https://docs.oracle.com/javase/8/docs/api/java/beans/XMLDecoder.html)类读取使用 XMLEncoder 创建的 XML 文档：
+`XMLDecoder`类读取使用`XMLEncoder`创建的 XML 文档：
 
 ```java
 XMLDecoder decoder = new XMLDecoder(
@@ -29,7 +29,6 @@ XMLDecoder decoder = new XMLDecoder(
 
 Object object = decoder.readObject();
 decoder.close();
-
 ```
 
 ## XML 中有什么？
@@ -38,15 +37,14 @@ XML bean 存档具有自己特定的语法，其中包括以下标签来表示�
 
 +   用于描述 XML 版本和编码类型的 XML 前言
 
-+   一个`**<java>**`标签，用于包含 bean 的所有对象元素
++   一个`<java>`标签，用于包含 bean 的所有对象元素
 
-+   一个`**<object>**`标签，用于表示从其序列化形式重建对象所需的一组方法调用
++   一个`<object>`标签，用于表示从其序列化形式重建对象所需的一组方法调用
 
     ```java
     <object class="javax.swing.JButton" method="new">
         <string>Ok</string>
     </object>
-
     ```
 
     或语句
@@ -55,47 +53,43 @@ XML bean 存档具有自己特定的语法，其中包括以下标签来表示�
     <object class="javax.swing.JButton">
         <void method="setText">
             <string>Cancel</string>
-                </void>
-        </object>
-
+        </void>
+    </object>
     ```
 
 +   用于定义适当的基本类型的标签：
 
-    +   `**<boolean>**`
+    +   `<boolean>`
 
-    +   `**<byte>**`
+    +   `<byte>`
 
-    +   `**<char>**`
+    +   `<char>`
 
-    +   `**<short>**`
+    +   `<short>`
 
-    +   `**<int>**`
+    +   `<int>`
 
-    +   `**<long>**`
+    +   `<long>`
 
-    +   `**<float>**`
+    +   `<float>`
 
-    +   `**<double>**`
+    +   `<double>`
 
     ```java
     <int>5555</int>
-
     ```
 
-+   一个**<`class`>**标签，用于表示 Class 的一个实例。
++   一个`<class>`标签，用于表示`Class`的一个实例。
 
     ```java
     <class>java.swing.JFrame</class>
-
     ```
 
-+   一个**<`array`>**标签用于定义数组
++   一个`<array>`标签用于定义数组
 
     ```java
     <array class="java.lang.String" length="5">
     </array>
-
     ```
 
 以下代码表示将为`SimpleBean`组件生成的 XML 存档：
@@ -117,5 +111,4 @@ XML bean 存档具有自己特定的语法，其中包括以下标签来表示�
     </void>
   </object>
 </java>
-
 ```

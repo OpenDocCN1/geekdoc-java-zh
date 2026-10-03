@@ -1,16 +1,16 @@
+
 # 字符和字符串总结
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/data/stringsummary.html`](https://docs.oracle.com/javase/tutorial/java/data/stringsummary.html)
 
-大多数情况下，如果您使用单个字符值，您将使用基本的`char`类型。然而，有时您需要将 char 用作对象例如，作为期望对象的方法参数。Java 编程语言为此提供了一个*包装*类，将`char`包装在`Character`对象中。`Character`类型的对象包含一个类型为`char`的单个字段。这个[`Character`](https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html)类还提供了许多有用的类（即静态）方法来操作字符。
+大多数情况下，如果您使用单个字符值，您将使用基本的`char`类型。然而，有时您需要将`char`用作对象——例如，作为期望对象的方法参数。Java 编程语言为此提供了一个*包装*类，将`char`包装在`Character`对象中。`Character`类型的对象包含一个类型为`char`的单个字段。这个[`Character`](https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html)类还提供了许多有用的类（即静态）方法来操作字符。
 
 字符串是字符序列，在 Java 编程中被广泛使用。在 Java 编程语言中，字符串是对象。[`String`](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)类有 60 多个方法和 13 个构造函数。
 
-最常见的是，您可以使用类似于以下语句创建一个字符串
+最常见的是，您可以使用类似于以下语句创建一个字符串：
 
-```java
+```
 String s = "Hello world!";
-
 ```
 
 而不是使用其中一个`String`构造函数。

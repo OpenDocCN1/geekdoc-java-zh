@@ -1,3 +1,4 @@
+
 # 内在锁和同步
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/concurrency/locksync.html`](https://docs.oracle.com/javase/tutorial/essential/concurrency/locksync.html)
@@ -26,12 +27,11 @@ public void addName(String name) {
     }
     nameList.add(name);
 }
-
 ```
 
 在这个例子中，`addName`方法需要同步对`lastName`和`nameCount`的更改，但也需要避免同步调用其他对象的方法。（从同步代码调用其他对象的方法可能会导致在 Liveness 部分描述的问题。）如果没有同步语句，就必须有一个单独的、非同步的方法，唯一目的是调用`nameList.add`。
 
-同步语句也有助于通过细粒度同步提高并发性。例如，假设类`MsLunch`有两个实例字段，`c1`和`c2`，它们永远不会同时使用。所有这些字段的更新必须同步，但没有理由阻止对 c1 的更新与对 c2 的更新交错这样做会通过创建两个仅用于提供锁的对象来减少并发性。
+同步语句也有助于通过细粒度同步提高并发性。例如，假设类`MsLunch`有两个实例字段，`c1`和`c2`，它们永远不会同时使用。所有这些字段的更新必须同步，但没有理由阻止对`c1`的更新与对`c2`的更新交错——这样做会通过创建两个仅用于提供锁的对象来减少并发性。
 
 ```java
 public class MsLunch {
@@ -52,7 +52,6 @@ public class MsLunch {
         }
     }
 }
-
 ```
 
 使用这种习语要非常小心。你必须绝对确定交错访问受影响字段是安全的。

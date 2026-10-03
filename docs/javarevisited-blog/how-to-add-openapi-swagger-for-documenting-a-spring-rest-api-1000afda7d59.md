@@ -1,3 +1,4 @@
+
 # 如何添加 OpenApi (Swagger)来记录 Spring REST API
 
 > 原文：<https://medium.com/javarevisited/how-to-add-openapi-swagger-for-documenting-a-spring-rest-api-1000afda7d59?source=collection_archive---------3----------------------->

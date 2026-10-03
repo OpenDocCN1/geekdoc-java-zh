@@ -1,3 +1,4 @@
+
 # 2023 年学习物联网的 5 门最佳 Arduino、IoT 和 Raspberry PI 课程
 
 > 原文：<https://medium.com/javarevisited/my-favorite-courses-to-learn-internet-of-things-iot-in-2020-best-of-lot-8517aa9fc838?source=collection_archive---------2----------------------->
@@ -14,11 +15,11 @@ image_credit — Edureka 物联网培训认证
 
 对物联网工程师的需求增长过快，美国的平均年薪超过了**10 万美元，有些公司的平均年薪是这个数字的两倍多。
 
-我们将看到在线课程和物联网培训课程，这些课程将让您深入了解更多关于物联网的知识，以及如何利用多种编程语言(如 [Python](https://www.java67.com/2020/05/top-5-courses-to-learn-python-in-depth.html) 、 [C/C++](/javarevisited/top-10-courses-to-learn-c-for-beginners-best-and-free-4afc262a544e) )编写代码并为自己构建一个物联网，方法是使用 [Arduino](https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/?tag=javamysqlanta-20) 和 [raspberry pi](https://www.amazon.com/Raspberry-Model-2019-Quad-Bluetooth/dp/B07TC2BK1X/?tag=javamysqlanta-20) 设备来制作自己的项目。**
+我们将看到在线课程和物联网培训课程，这些课程将让您深入了解更多关于物联网的知识，以及如何利用多种编程语言(如 [Python](https://www.java67.com/2020/05/top-5-courses-to-learn-python-in-depth.html) 、 [C/C++](/javarevisited/top-10-courses-to-learn-c-for-beginners-best-and-free-4afc262a544e) )编写代码并为自己构建一个物联网，方法是使用 [Arduino](https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/?tag=javamysqlanta-20) 和 [raspberry pi](https://www.amazon.com/Raspberry-Model-2019-Quad-Bluetooth/dp/B07TC2BK1X/?tag=javamysqlanta-20) 设备来制作自己的项目。
 
 顺便说一下，如果你赶时间，那么你可以从 Coursera 上的 [**物联网(IOT)编程入门**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fiot) 开始，这是 2023 年学习物联网最结构化的方式。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fiot>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fiot>
 
 # 2023 年学习物联网(IoT)的 5 门最佳在线课程
 
@@ -31,7 +32,9 @@ image_credit — Edureka 物联网培训认证
 你将在本课程中学到:
 
 *   了解如何编写 Arduino 程序。
+
 *   了解一些物联网硬件及其作用。
+
 *   建立一些有趣的项目。
 
 您将了解物联网设备使用的不同硬件，例如传感器、继电器、 [Arduino](https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/?tag=javamysqlanta-20) 等等。在整个课程中，您将构建许多项目，如智能灯(家庭自动化)、带电子邮件通知的运动探测器和恐慌报警器。
@@ -47,7 +50,9 @@ image_credit — Edureka 物联网培训认证
 在本课程中，您将学到:
 
 *   如何使用 [Python 编程](https://javarevisited.blogspot.com/2020/05/top-10-udemy-courses-to-learn-python-programming.html)与树莓派？
+
 *   如何使用 Arduino Uno？
+
 *   使用 Raspberry Pi 和 Arduino Uno 创建许多项目。
 
 您将使用 Arduino Uno 创建一个气象站，该项目使用 [Raspberry Pi](https://www.youtube.com/watch?v=QVkSSeoW8QI) 和 [Python 编程语言](/javarevisited/my-favorite-books-to-learn-python-in-depth-77465633b46e)测量水位并通过电子邮件通知您，这是一个可以通过手机在全球任何地方控制的智能灯泡，等等。
@@ -63,7 +68,9 @@ image_credit — Edureka 物联网培训认证
 在本课程中，您将学到:
 
 *   物联网设备的定义。
+
 *   嵌入式设备的定义。
+
 *   物联网设备的安全问题。
 
 顺便说一句，你需要一个 [Pluralsight 会员](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing)才能进入这个不免费的课程。它的费用大约是每月 29 美元或每年 299 美元，虽然这种会员资格完全值得你的时间和金钱，因为它提供了 7000 多门关于最新技术的在线课程，你也可以使用他们的 [**10 天免费试用**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Flearn) 来免费访问这门课程。
@@ -77,7 +84,9 @@ Coursera 的这个专业可能是互联网上最全面的程序，从头开始�
 你将在本课程中学到:
 
 *   用 Python 和 c 编程。
+
 *   如何使用 [Arduino Uno](https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/?tag=javamysqlanta-20) 和[树莓 Pi](https://www.amazon.com/Raspberry-Model-2019-Quad-Bluetooth/dp/B07TC2BK1X/?tag=javamysqlanta-20) 。
+
 *   创建许多项目。
 
 它由六个部分组成，首先从简单的概述向您介绍什么是物联网，然后您将学习 C 编程语言以及如何使用 Arduino Uno 实现它等技术内容，之后您将开始学习 python 并使用它在 raspberry pi 中编写程序，并通过一个顶点项目完成专业化。
@@ -88,7 +97,7 @@ Coursera 的这个专业可能是互联网上最全面的程序，从头开始�
 
 顺便说一下，如果你打算参加多个 Coursera 课程或专业，那么考虑参加 [**Coursera Plus 订阅**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus) n，它可以让你无限制地访问他们最受欢迎的课程、专业、专业证书和指导项目。它每年花费大约 399 美元，但它完全值得你的钱，因为你可以获得无限的证书。
 
-<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>  
+<https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fcourseraplus>
 
 ## 5.[物联网:从硬件到实践](https://www.awin1.com/cread.php?awinmid=6798&awinaffid=631878&clickref=&p=%5B%5Bhttps%3A%2F%2Fwww.edx.org%2Fcourse%2Fitmox-iot-from-hardware-to-practice)【edX 课程】
 
@@ -99,7 +108,9 @@ Coursera 的这个专业可能是互联网上最全面的程序，从头开始�
 在本课程中，您将学到:
 
 *   物联网使用不同的操作系统。
+
 *   物联网中的先进技术。
+
 *   如何编程树莓 Pi 和 Arduino？
 
 **以下是加入本课程的链接—** [物联网:从硬件到实践](https://www.awin1.com/cread.php?awinmid=6798&awinaffid=631878&clickref=&p=%5B%5Bhttps%3A%2F%2Fwww.edx.org%2Fcourse%2Fitmox-iot-from-hardware-to-practice)
@@ -111,11 +122,19 @@ Coursera 的这个专业可能是互联网上最全面的程序，从头开始�
 其他**科技文章**你可能喜欢:
 
 *   [2023 年学习区块链的 6 门免费课程](https://www.java67.com/2018/02/5-free-blockchain-technology-courses.html)
+
 *   [开始你科技职业生涯的 10 个最佳 Coursera 认证](/javarevisited/top-10-coursera-certificates-to-start-your-career-in-cloud-data-science-ai-mainframe-and-it-558690c83587)
+
 *   你可以在线获得的前 5 个计算机科学学位
+
 *   [十大数据科学和机器学习认证](https://javarevisited.blogspot.com/2018/10/data-science-and-machine-learning-courses-using-python-and-R-programming.html)
+
 *   [从零开始学习云计算的 5 门最佳课程](https://javarevisited.blogspot.com/2019/07/top-5-online-courses-to-learn-cloud-computing-aws.html)
+
 *   [您可以在线加入的 5 个数据科学学位项目](/@javinpaul/5-data-science-and-machine-learning-degree-programs-you-can-join-online-on-coursera-dba26823f5db)
+
+
+
 *   [2023 年学习 Python 编码的前 8 名](https://dev.to/javinpaul/top-5-places-to-learn-python-programming-for-free-m4c)
 *   成为网页设计师和开发者的 7 门免费课程
 *   [成为 Python 开发者可以做的 8 个项目](/javarevisited/8-projects-you-can-buil-to-learn-python-in-2020-251dd5350d56)
@@ -127,4 +146,4 @@ Coursera 的这个专业可能是互联网上最全面的程序，从头开始�
 
 **P. S. —** 如果你对学习物联网或物联网感兴趣，但正在寻找免费的在线培训课程来启动你的旅程，那么你也可以在 Udemy 上查看这个— [**物联网和云简介**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fa4iot-intro-iot-cloud%2F) 课程。这是完全免费的，你只需要一个 Udemy 帐户就可以注册这门课程。
 
-<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fa4iot-intro-iot-cloud%2F> 
+<https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fa4iot-intro-iot-cloud%2F>

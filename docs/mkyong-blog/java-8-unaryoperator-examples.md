@@ -1,3 +1,4 @@
+
 # Java 8 一元运算符示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java8/java-8-unaryoperator-examples/>
@@ -6,35 +7,35 @@
 
 `UnaryOperator`接受一个参数，并返回相同类型参数的结果。
 
-UnaryOperator.java
+`UnaryOperator.java`
 
 ```java
- @FunctionalInterface
+@FunctionalInterface
 public interface UnaryOperator<T> extends Function<T, T> {
-} 
+}
 ```
 
 `Function`接受任意类型的一个参数并返回任意类型的结果。
 
-Function.java
+`Function.java`
 
 ```java
- @FunctionalInterface
+@FunctionalInterface
 public interface Function<T, R> {
     R apply(T t);
-} 
+}
 ```
 
 **进一步阅读** [Java 8 函数示例](/web/20221127133729/https://mkyong.com/java8/java-8-function-examples/)
 
-## 1.一元运算符
+## 1. 一元运算符
 
 1.1 在本例中，接受并返回相同类型的`Function<Integer, Integer>`可以替换为`UnaryOperator<Integer>`。
 
-Java8UnaryOperator1.java
+`Java8UnaryOperator1.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.function.Function;
 import java.util.function.UnaryOperator;
@@ -57,22 +58,22 @@ public class Java8UnaryOperator1 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- 4
-4 
+4
+4
 ```
 
-## 2.`UnaryOperator<T>`作为参数
+## 2. `UnaryOperator<T>`作为参数
 
-Java8UnaryOperator2.java
+`Java8UnaryOperator2.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -99,21 +100,21 @@ public class Java8UnaryOperator2 {
         return result;
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- [2, 4, 6, 8, 10, 12, 14, 16, 18, 20] 
+[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 ```
 
-## 3.链式单运算器
+## 3. 链式单运算器
 
-Java8UnaryOperator3.java
+`Java8UnaryOperator3.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -143,13 +144,13 @@ public class Java8UnaryOperator3 {
         return result;
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- [3, 5, 7, 9, 11, 13, 15, 17, 19, 21] 
+[3, 5, 7, 9, 11, 13, 15, 17, 19, 21]
 ```
 
 ## 参考
@@ -158,5 +159,3 @@ public class Java8UnaryOperator3 {
 *   [函数 JavaDoc](http://web.archive.org/web/20221127133729/https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html)
 *   [Java 8 函数示例](http://web.archive.org/web/20221127133729/https://mkyong.com/java8/java-8-function-examples/)
 *   [Java 8 教程](/web/20221127133729/https://mkyong.com/tutorials/java-8-tutorials/)
-
-<input type="hidden" id="mkyong-current-postId" value="15512">

@@ -1,3 +1,4 @@
+
 # StAX API
 
 > 原文：[`docs.oracle.com/javase/tutorial/jaxp/stax/api.html`](https://docs.oracle.com/javase/tutorial/jaxp/stax/api.html)
@@ -22,7 +23,6 @@ public interface XMLStreamReader {
     public String getNamespaceURI();
     // ... other methods not shown
 }
-
 ```
 
 您可以在`XMLStreamReader`上调用诸如`getText`和`getName`之类的方法，以获取当前光标位置的数据。`XMLStreamWriter`提供了与`StartElement`和`EndElement`事件类型对应的方法；例如：
@@ -34,7 +34,6 @@ public interface XMLStreamWriter {
     public void writeCharacters(String text) throws XMLStreamException;
     // ... other methods not shown
 }
-
 ```
 
 光标 API 与 SAX 在许多方面相似。例如，可以直接访问字符串和字符信息的方法可用，并且可以使用整数索引访问属性和命名空间信息。与 SAX 一样，光标 API 方法将 XML 信息作为字符串返回，这减少了对象分配的需求。
@@ -52,7 +51,6 @@ public interface XMLEventReader extends Iterator {
     public XMLEvent peek() throws XMLStreamException;
     // ...
 }
-
 ```
 
 类似地，在迭代器 API 的输出端，你有：
@@ -65,7 +63,6 @@ public interface XMLEventWriter {
     public void add(Attribute attribute) throws XMLStreamException;
     // ...
 }
-
 ```
 
 ### 迭代器事件类型
@@ -101,7 +98,6 @@ public interface XMLEventWriter {
         <Cost currency="INR">11.50</Cost>
     </Book>
 </BookCatalogue>
-
 ```
 
 此文档将被解析为十八个主要和次要事件，如下表所示。请注意，通常从主要事件而不是直接访问，可以访问用大括号（`{}`）显示的次要事件。
@@ -132,15 +128,10 @@ public interface XMLEventWriter {
 在这个例子中有几个重要的事项需要注意：
 
 +   事件按照文档中遇到相应的 XML 元素的顺序创建，包括元素的嵌套、打开和关闭元素、属性顺序、文档开始和文档结束等。
-
 +   与正确的 XML 语法一样，所有容器元素都有相应的开始和结束事件；例如，每个 `StartElement` 都有一个对应的 `EndElement`，即使是空元素也是如此。
-
 +   `Attribute` 事件被视为次要事件，并且可以从其对应的 `StartElement` 事件中访问。
-
 +   与 `Attribute` 事件类似，`Namespace` 事件被视为次要事件，但在事件流中出现两次，并且可以从它们对应的 `StartElement` 和 `EndElement` 中分别访问两次。
-
 +   所有元素都指定了 `Character` 事件，即使这些元素没有字符数据。同样，`Character` 事件可以跨事件分割。
-
 +   StAX 解析器维护一个命名空间堆栈，其中保存了当前元素及其祖先元素定义的所有 XML 命名空间信息。通过 `javax.xml.namespace.NamespaceContext` 接口暴露的命名空间堆栈可以通过命名空间前缀或 URI 访问。
 
 ## 在游标和迭代器 API 之间进行选择
@@ -152,9 +143,7 @@ public interface XMLEventWriter {
 StAX 规范的作者针对三种类型的开发者：
 
 +   **图书馆和基础设施开发者**：创建应用服务器、JAXM、JAXB、JAX-RPC 等实现；需要高效、低级别的 API，并且具有最小的可扩展性要求。
-
 +   **Java ME 开发者**：需要小型、简单的拉取解析库，并且具有最小的可扩展性需求。
-
 +   **Java 平台企业版（Java EE）和 Java 平台标准版（Java SE）开发人员**：需要干净、高效的拉取解析库，同时需要灵活性来读取和写入 XML 流，创建新的事件类型，并扩展 XML 文档元素和属性。
 
 鉴于这些广泛的开发类别，StAX 的作者认为定义两个小型、高效的 API 比过载一个更大、必然更复杂的 API 更有用。
@@ -164,21 +153,14 @@ StAX 规范的作者针对三种类型的开发者：
 在选择游标和迭代器 API 之间之前，你应该注意一些你可以使用迭代器 API 而不能使用游标 API 的事项：
 
 +   从`XMLEvent`子类创建的对象是不可变的，可以在数组、列表和映射中使用，并且可以在解析器继续处理后传递到你的应用程序中。
-
 +   你可以创建`XMLEvent`的子类型，这些子类型可以是全新的信息项，也可以是现有项目的扩展，但具有额外的方法。
-
 +   你可以以比游标 API 更简单的方式向 XML 事件流中添加和删除事件。
 
 同样，在做出选择时，请记住一些一般性建议：
 
 +   如果你正在为特别受内存限制的环境编程，比如 Java ME，你可以使用游标 API 创建更小、更高效的代码。
-
 +   如果性能是你的最高优先级——例如，在创建低级库或基础设施时——游标 API 更有效率。
-
 +   如果你想创建 XML 处理管道，请使用迭代器 API。
-
 +   如果你想修改事件流，请使用迭代器 API。
-
 +   如果你希望你的应用程序能够处理事件流的可插拔处理，请使用迭代器 API。
-
 +   一般来说，如果你没有明确偏好，建议使用迭代器 API，因为它更灵活、可扩展，从而“未雨绸缪”你的应用程序。

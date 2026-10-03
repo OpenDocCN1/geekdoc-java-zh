@@ -1,12 +1,13 @@
+
 # 弹簧座+弹簧安全示例
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-rest-spring-security-example/>
 
 ![logo](img/e5a5f014c9beee9b3290c675ff2163fe.png)
 
-在本文中，我们将增强前面的 [Spring REST 验证示例](/web/20221117050521/https://mkyong.com/spring-boot/spring-rest-validation-example/)，通过添加 Spring Security 为请求的 URL(REST API 端点)执行认证和授权
+在本文中，我们将增强前面的 [Spring REST 验证示例](/web/20221117050521/https://mkyong.com/spring-boot/spring-rest-validation-example/)，通过添加 Spring Security 为请求的 URL(REST API 端点)执行认证和授权。
 
-使用的技术:
+使用的技术：
 
 *   Spring Boot 2.1.2 .版本
 *   弹簧 5.1.4 释放
@@ -18,18 +19,18 @@
 *   maven3
 *   Java 8
 
-## 1.项目目录
+## 1. 项目目录
 
 ![project directory](img/6aa3d8b2457605ed5f013d56585308ec.png)
 
-## 2.专家
+## 2. 专家
 
 包括弹簧安全的`spring-boot-starter-security`和弹簧安全集成测试的`spring-security-test`。
 
-pom.xml
+`pom.xml`
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
@@ -131,13 +132,15 @@ pom.xml
         </plugins>
 
     </build>
-</project> 
+</project>
 ```
 
-项目依赖关系:
+项目依赖关系：
+
+
 
 ```java
- > mvn dependency:tree
+> mvn dependency:tree
 
 [INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ spring-rest-security ---
 [INFO] org.springframework.boot:spring-rest-security:jar:1.0
@@ -226,17 +229,19 @@ pom.xml
 [INFO] |  \- commons-codec:commons-codec:jar:1.11:test
 [INFO] \- org.springframework.boot:spring-boot-devtools:jar:2.1.2.RELEASE:compile (optional)
 [INFO]    +- org.springframework.boot:spring-boot:jar:2.1.2.RELEASE:compile
-[INFO]    \- org.springframework.boot:spring-boot-autoconfigure:jar:2.1.2.RELEASE:compile 
+[INFO]    \- org.springframework.boot:spring-boot-autoconfigure:jar:2.1.2.RELEASE:compile
 ```
 
-## 3.弹簧控制器
+## 3. 弹簧控制器
 
 再次回顾一下 Book 控制器，稍后我们将集成 Spring Security 来保护 REST 端点。
 
-BookController.java
+`BookController.java`
+
+
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.mkyong.error.BookNotFoundException;
 import com.mkyong.error.BookUnSupportedFieldPatchException;
@@ -266,7 +271,7 @@ public class BookController {
 
     // Save
     @PostMapping("/books")
-	@ResponseStatus(HttpStatus.CREATED)
+    @ResponseStatus(HttpStatus.CREATED)
     Book newBook(@Valid @RequestBody Book newBook) {
         return repository.save(newBook);
     }
@@ -324,19 +329,19 @@ public class BookController {
         repository.deleteById(id);
     }
 
-} 
+}
 ```
 
 *P.S 此处未列出其他组件或库，请参考前面的[弹簧座验证示例](/web/20221117050521/https://mkyong.com/spring-boot/spring-rest-validation-example/)*
 
-## 4.春天安全
+## 4. 春天安全
 
 4.1 创建一个新的`@Configuration`类并扩展`WebSecurityConfigurerAdapter`。在下面的例子中，我们将使用 [HTTP 基本认证](http://web.archive.org/web/20221117050521/https://en.wikipedia.org/wiki/Basic_access_authentication)来保护其余的端点。阅读注释，了解自我解释。
 
-SpringSecurityConfig.java
+`SpringSecurityConfig.java`
 
 ```java
- package com.mkyong.config;
+package com.mkyong.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -388,24 +393,24 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         return manager;
     }*/
 
-} 
+}
 ```
 
 4.2 完成后，上述 Spring REST API 端点受到 Spring Security 的保护🙂
 
-阅读更多信息:
+阅读更多信息：
 
 *   [Spring Boot 安全特征](http://web.archive.org/web/20221117050521/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-security)
 *   [春季安全参考](http://web.archive.org/web/20221117050521/https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/)
 
-## 5.Spring Boot
+## 5. Spring Boot
 
 正常的 Spring Boot 应用程序启动其余的端点，并插入 3 本书到 H2 数据库进行演示。
 
-StartBookApplication
+`StartBookApplication`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -430,134 +435,154 @@ public class StartBookApplication {
             repository.save(new Book("Refactoring: Improving the Design of Existing Code", "Martin Fowler", new BigDecimal("47.99")));
         };
     }
-} 
+}
 ```
 
-## 6.演示
+## 6. 演示
 
 6.1 启动 Spring Boot 应用程序。
 
-```java
- mvn spring-boot:run 
+```bash
+mvn spring-boot:run
 ```
 
 6.2 一个正常的`GET`和`POST`会返回一个`401`，所有端点都被保护，需要认证。
 
-```java
- > curl localhost:8080/books
-
-{	
-	"timestamp":"2019-02-25T04:05:14.709+0000",
-	"status":401,
-	"error":"Unauthorized",
-	"message":"Unauthorized",
-	"path":"/books"
-}
-
-> curl -X POST localhost:8080/books -H "Content-type:application/json" 
-	-d {\"name\":\"ABC\",\"author\":\"mkyong\",\"price\":\"8.88\"}
+```bash
+> curl localhost:8080/books
 
 {
-	"timestamp":"2019-02-25T04:11:17.150+0000",
-	"status":401,
-	"error":"Unauthorized",
-	"message":"Unauthorized",
-	"path":"/books"
-} 
+    "timestamp":"2019-02-25T04:05:14.709+0000",
+    "status":401,
+    "error":"Unauthorized",
+    "message":"Unauthorized",
+    "path":"/books"
+}
+
+> curl -X POST localhost:8080/books -H "Content-type:application/json"
+    -d {\"name\":\"ABC\",\"author\":\"mkyong\",\"price\":\"8.88\"}
+
+{
+    "timestamp":"2019-02-25T04:11:17.150+0000",
+    "status":401,
+    "error":"Unauthorized",
+    "message":"Unauthorized",
+    "path":"/books"
+}
 ```
 
 6.3 发送一个`GET`请求和`user`登录。
 
-```java
- > curl localhost:8080/books -u user:password
+```bash
+> curl localhost:8080/books -u user:password
 [
-	{"id":1,"name":"A Guide to the Bodhisattva Way of Life","author":"Santideva","price":15.41},
-	{"id":2,"name":"The Life-Changing Magic of Tidying Up","author":"Marie Kondo","price":9.69},
-	{"id":3,"name":"Refactoring: Improving the Design of Existing Code","author":"Martin Fowler","price":47.99}
+    {"id":1,"name":"A Guide to the Bodhisattva Way of Life","author":"Santideva","price":15.41},
+    {"id":2,"name":"The Life-Changing Magic of Tidying Up","author":"Marie Kondo","price":9.69},
+    {"id":3,"name":"Refactoring: Improving the Design of Existing Code","author":"Martin Fowler","price":47.99}
 ]
 
 > curl localhost:8080/books/1 -u admin:password
 
 {
-	"id":1,
-	"name":"A Guide to the Bodhisattva Way of Life",
-	"author":"Santideva",
-	"price":15.41
-} 
+    "id":1,
+    "name":"A Guide to the Bodhisattva Way of Life",
+    "author":"Santideva",
+    "price":15.41
+}
 ```
 
 6.4 尝试用“用户”登录发送一个`POST`请求，它将返回`403, Forbidden`错误。这是因为`user`无权发送`POST`请求。
 
-```java
- > curl -X POST localhost:8080/books -H "Content-type:application/json" 
-	-d {\"name\":\"ABC\",\"author\":\"mkyong\",\"price\":\"8.88\"} -u user:password
 
+
+## 6.4 使用 `curl` 发送 `POST` 请求
+
+首先，尝试使用 `user` 账号发送 `POST` 请求：
+
+```bash
+curl -X POST localhost:8080/books -H "Content-type:application/json" 
+	-d {\"name\":\"ABC\",\"author\":\"mkyong\",\"price\":\"8.88\"} -u user:password
+```
+
+响应结果：
+
+```json
 {
 	"timestamp":"2019-02-25T04:16:58.702+0000",
 	"status":403,
 	"error":"Forbidden",
 	"message":"Forbidden",
 	"path":"/books"
-} 
+}
 ```
 
-再次检查 Spring 安全配置。要发送`POST,PUT,PATCH or DELETE`请求，我们需要`admin`
+再次检查 Spring 安全配置。要发送 `POST`、`PUT`、`PATCH` 或 `DELETE` 请求，我们需要 `admin` 角色。
 
-SpringSecurityConfig.java
+`SpringSecurityConfig.java` 配置如下：
 
 ```java
- @Override
-    protected void configure(HttpSecurity http) throws Exception {
+@Override
+protected void configure(HttpSecurity http) throws Exception {
 
-        http
-                //HTTP Basic authentication
-                .httpBasic()
-                .and()
-                .authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/books/**").hasRole("USER")
-                .antMatchers(HttpMethod.POST, "/books").hasRole("ADMIN")
-                .antMatchers(HttpMethod.PUT, "/books/**").hasRole("ADMIN")
-                .antMatchers(HttpMethod.PATCH, "/books/**").hasRole("ADMIN")
-                .antMatchers(HttpMethod.DELETE, "/books/**").hasRole("ADMIN")
-                .and()
-                .csrf().disable()
-                .formLogin().disable();
-    }
-
-} 
+    http
+            //HTTP Basic authentication
+            .httpBasic()
+            .and()
+            .authorizeRequests()
+            .antMatchers(HttpMethod.GET, "/books/**").hasRole("USER")
+            .antMatchers(HttpMethod.POST, "/books").hasRole("ADMIN")
+            .antMatchers(HttpMethod.PUT, "/books/**").hasRole("ADMIN")
+            .antMatchers(HttpMethod.PATCH, "/books/**").hasRole("ADMIN")
+            .antMatchers(HttpMethod.DELETE, "/books/**").hasRole("ADMIN")
+            .and()
+            .csrf().disable()
+            .formLogin().disable();
+}
 ```
 
-6.5 尝试使用`admin`登录发送`POST`请求
+## 6.5 使用 `admin` 登录发送 `POST` 请求
 
-```java
- > curl -X POST localhost:8080/books -H "Content-type:application/json" 
+```bash
+curl -X POST localhost:8080/books -H "Content-type:application/json" 
 	-d {\"name\":\"ABC\",\"author\":\"mkyong\",\"price\":\"8.88\"} -u admin:password
+```
 
+响应结果：
+
+```json
 {
 	"id":4,
 	"name":"ABC",
 	"author":"mkyong",
 	"price":8.88
 }
+```
 
-> curl localhost:8080/books -u user:password
+使用 `user` 账号查看所有书籍：
 
+```bash
+curl localhost:8080/books -u user:password
+```
+
+响应结果：
+
+```json
 [
 	{"id":1,"name":"A Guide to the Bodhisattva Way of Life","author":"Santideva","price":15.41},
 	{"id":2,"name":"The Life-Changing Magic of Tidying Up","author":"Marie Kondo","price":9.69},
 	{"id":3,"name":"Refactoring: Improving the Design of Existing Code","author":"Martin Fowler","price":47.99},
 	{"id":4,"name":"ABC","author":"mkyong","price":8.88}
-] 
+]
 ```
 
-## 7.春季安全集成测试
+## 7. 春季安全集成测试
 
-7.1 用`@WithMockUser`和`MockMvc`进行测试
+### 7.1 用 `@WithMockUser` 和 `MockMvc` 进行测试
 
-BookControllerTest.java
+`BookControllerTest.java` 测试代码如下：
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -620,15 +645,15 @@ public class BookControllerTest {
                 .andExpect(status().isUnauthorized());
     }
 
-} 
+}
 ```
 
-7.2 用`TestRestTemplate`进行测试
+### 7.2 用 `TestRestTemplate` 进行测试
 
-BookControllerRestTemplateTest.java
+`BookControllerRestTemplateTest.java` 测试代码如下：
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -717,28 +742,33 @@ public class BookControllerRestTemplateTest {
         }
     }
 
-} 
+}
 ```
 
-*附注:`@WithMockUser`不支持`TestRestTemplate`，我们需要使用` . withBasicAuth`* 验证用户
+附注：`@WithMockUser` 不支持 `TestRestTemplate`，我们需要使用 `.withBasicAuth()` 验证用户。
 
 ## 下载源代码
 
-$ git clone [https://github.com/mkyong/spring-boot.git](http://web.archive.org/web/20221117050521/https://github.com/mkyong/spring-boot.git)
-$ cd spring-rest-security
-$ mvn spring-boot:run
+```bash
+git clone https://github.com/mkyong/spring-boot.git
+cd spring-rest-security
+mvn spring-boot:run
+```
 
 ## 参考
 
-*   [春季安全参考](http://web.archive.org/web/20221117050521/https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/)
-*   [Spring Boot 安全特征](http://web.archive.org/web/20221117050521/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-security)
-*   [Hello Spring Security with Boot](http://web.archive.org/web/20221117050521/https://docs.spring.io/spring-security/site/docs/current/guides/html5/helloworld-boot.html)
-*   [Spring 数据安全示例](http://web.archive.org/web/20221117050521/https://github.com/spring-projects/spring-data-examples/tree/master/rest/security)
-*   [Spring Boot +朱尼特 5 +莫奇托](http://web.archive.org/web/20221117050521/https://www.mkyong.com/spring-boot/spring-boot-junit-5-mockito/)
-*   [春歇你好天下例](http://web.archive.org/web/20221117050521/https://www.mkyong.com/spring-boot/spring-rest-hello-world-example/)
-*   [cURL–发布请求示例](http://web.archive.org/web/20221117050521/https://www.mkyong.com/spring/curl-post-request-examples/)
-*   [维基百科–休息](http://web.archive.org/web/20221117050521/https://en.wikipedia.org/wiki/Representational_state_transfer)
-*   [HTTP 基本认证](http://web.archive.org/web/20221117050521/https://en.wikipedia.org/wiki/Basic_access_authentication)
-*   [StudentEndpointTest 示例](http://web.archive.org/web/20221117050521/https://github.com/devdojobr/springboot-essentials/blob/master/src/test/java/br/com/devdojo/StudentEndpointTest.java)
+- [春季安全参考](http://web.archive.org/web/20221117050521/https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/)
+- [Spring Boot 安全特征](http://web.archive.org/web/20221117050521/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-security)
 
-<input type="hidden" id="mkyong-current-postId" value="14931">
+
+
+* [Hello Spring Security with Boot](http://web.archive.org/web/20221117050521/https://docs.spring.io/spring-security/site/docs/current/guides/html5/helloworld-boot.html)
+* [Spring 数据安全示例](http://web.archive.org/web/20221117050521/https://github.com/spring-projects/spring-data-examples/tree/master/rest/security)
+* [Spring Boot +朱尼特 5 +莫奇托](http://web.archive.org/web/20221117050521/https://www.mkyong.com/spring-boot/spring-boot-junit-5-mockito/)
+* [春歇你好天下例](http://web.archive.org/web/20221117050521/https://www.mkyong.com/spring-boot/spring-rest-hello-world-example/)
+* [cURL–发布请求示例](http://web.archive.org/web/20221117050521/https://www.mkyong.com/spring/curl-post-request-examples/)
+* [维基百科–休息](http://web.archive.org/web/20221117050521/https://en.wikipedia.org/wiki/Representational_state_transfer)
+* [HTTP 基本认证](http://web.archive.org/web/20221117050521/https://en.wikipedia.org/wiki/Basic_access_authentication)
+* [StudentEndpointTest 示例](http://web.archive.org/web/20221117050521/https://github.com/devdojobr/springboot-essentials/blob/master/src/test/java/br/com/devdojo/StudentEndpointTest.java)
+
+`<input type="hidden" id="mkyong-current-postId" value="14931">`

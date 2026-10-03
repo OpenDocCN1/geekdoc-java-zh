@@ -1,58 +1,61 @@
-# spring Batch multi source item reader 示例
+
+# Spring Batch MultiResourceItemReader 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/spring-batch/spring-batch-multiresourceitemreader-example/>
 
-在本教程中，我们将向您展示如何从多个资源(多个 csv 文件)读取项目，并将项目写入单个 csv 文件。
+在本教程中，我们将向您展示如何从多个资源（多个 CSV 文件）读取项目，并将项目写入单个 CSV 文件。
 
-使用的工具和库
+使用的工具和库：
 
-1.  maven3
-2.  Eclipse 4.2
-3.  JDK 1.6
-4.  弹簧芯 3.2.2 .释放
-5.  春季批次 2.2.0 .发布
+1. Maven 3
+2. Eclipse 4.2
+3. JDK 1.6
+4. Spring Core 3.2.2.RELEASE
+5. Spring Batch 2.2.0.RELEASE
 
-本例–3 个 CSV 文件(阅读器)–合并成一个 CSV 文件(写入器)。
+本例——3 个 CSV 文件（读取器）——合并成一个 CSV 文件（写入器）。
 
-## 1.项目目录结构
+## 1. 项目目录结构
 
-回顾最终的项目结构，一个标准的 Maven 项目。
+回顾最终的项目结构，这是一个标准的 Maven 项目。
 
-![spring-batch-MultiResourceItemReader-example](img/199a47ae07997e625d08bbcf3a4deef7.png) ## 2.多个 CSV 文件
+![spring-batch-MultiResourceItemReader-example](img/199a47ae07997e625d08bbcf3a4deef7.png)
 
-有 3 个 csv 文件，稍后我们将使用`MultiResourceItemReader`来逐个读取。
+## 2. 多个 CSV 文件
 
-csv/inputs/domain-1-3-2013.csv
+有 3 个 CSV 文件，稍后我们将使用`MultiResourceItemReader`来逐个读取。
 
-```java
- 1,facebook.com
+`csv/inputs/domain-1-3-2013.csv`：
+
+```
+1,facebook.com
 2,yahoo.com
-3,google.com 
+3,google.com
 ```
 
-csv/inputs/domain-2-3-2013.csv
+`csv/inputs/domain-2-3-2013.csv`：
 
-```java
- 200,mkyong.com
+```
+200,mkyong.com
 300,stackoverflow.com
-400,oracle.com 
+400,oracle.com
 ```
 
-csv/inputs/domain-3-3-2013.csv
+`csv/inputs/domain-3-3-2013.csv`：
 
-```java
- 999,eclipse.org
-888,baidu.com 
+```
+999,eclipse.org
+888,baidu.com
 ```
 
- ## 3.春季批处理作业
+## 3. Spring Batch 作业
 
-读取与这个模式`csv/inputs/domain-*.csv`匹配的资源，并将其写入单个 cvs 文件`domain.all.csv`的任务。
+读取与模式`csv/inputs/domain-*.csv`匹配的资源，并将其写入单个 CSV 文件`domain.all.csv`的任务。
 
-resources/spring/batch/jobs/job-read-files.xml
+`resources/spring/batch/jobs/job-read-files.xml`：
 
-```java
- <?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <beans 
         xmlns:batch="http://www.springframework.org/schema/batch" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -119,13 +122,13 @@ resources/spring/batch/jobs/job-read-files.xml
 	</property>
   </bean>
 
-</beans> 
+</beans>
 ```
 
-resources/spring/batch/config/context.xml
+`resources/spring/batch/config/context.xml`：
 
-```java
- <beans 
+```xml
+<beans 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="
 	http://www.springframework.org/schema/beans 
@@ -145,17 +148,17 @@ resources/spring/batch/config/context.xml
 	<property name="jobRepository" ref="jobRepository" />
     </bean>
 
-</beans> 
+</beans>
 ```
 
-## 4.运行它
+## 4. 运行它
 
 创建一个 Java 类并运行批处理作业。
 
-App.java
+`App.java`：
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecution;
@@ -193,39 +196,32 @@ public class App {
 
   }
 
-} 
+}
 ```
 
-输出。三个 csv 文件内容被读取并组合成一个 csv 文件。
+输出：三个 CSV 文件内容被读取并组合成一个 CSV 文件。
 
-csv/outputs/domain.all.csv
+`csv/outputs/domain.all.csv`：
 
-```java
- 1,facebook.com
+```
+1,facebook.com
 2,yahoo.com
 3,google.coms
 200,mkyong.com
 300,stackoverflow.com
 400,oracle.com
 999,eclipse.org
-888,baidu.com 
+888,baidu.com
 ```
 
 ## 下载源代码
 
-Download it – [SpringBatch-MultiResourceItemReader-Example.zip](http://web.archive.org/web/20190214233556/http://www.mkyong.com/wp-content/uploads/2013/07/SpringBatch-MultiResourceItemReader-Example.zip) (12 kb)
+下载：[SpringBatch-MultiResourceItemReader-Example.zip](http://web.archive.org/web/20190214233556/http://www.mkyong.com/wp-content/uploads/2013/07/SpringBatch-MultiResourceItemReader-Example.zip)（12 KB）
 
 ## 参考
 
-1.  [MultiResourceItemReader JavaDoc](http://web.archive.org/web/20190214233556/http://static.springsource.org/spring-batch/apidocs/org/springframework/batch/item/file/MultiResourceItemReader.html)
-2.  [flat file item writer JavaDoc](http://web.archive.org/web/20190214233556/http://static.springsource.org/spring-batch/apidocs/org/springframework/batch/item/file/FlatFileItemWriter.html)
-3.  [春季批量单据-多档案输入](http://web.archive.org/web/20190214233556/http://static.springsource.org/spring-batch/reference/html/readersAndWriters.html#multiFileInput)
+1. [MultiResourceItemReader JavaDoc](http://web.archive.org/web/20190214233556/http://static.springsource.org/spring-batch/apidocs/org/springframework/batch/item/file/MultiResourceItemReader.html)
+2. [FlatFileItemWriter JavaDoc](http://web.archive.org/web/20190214233556/http://static.springsource.org/spring-batch/apidocs/org/springframework/batch/item/file/FlatFileItemWriter.html)
+3. [Spring Batch 文档——多文件输入](http://web.archive.org/web/20190214233556/http://static.springsource.org/spring-batch/reference/html/readersAndWriters.html#multiFileInput)
 
-[spring batch](http://web.archive.org/web/20190214233556/http://www.mkyong.com/tag/spring-batch/)
-
-
-
-
-
-
-
+[Spring Batch](http://web.archive.org/web/20190214233556/http://www.mkyong.com/tag/spring-batch/)

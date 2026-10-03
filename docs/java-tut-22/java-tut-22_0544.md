@@ -1,3 +1,4 @@
+
 # 便利实现
 
 > 原文：[`docs.oracle.com/javase/tutorial/collections/implementations/convenience.html`](https://docs.oracle.com/javase/tutorial/collections/implementations/convenience.html)
@@ -12,7 +13,6 @@
 
 ```java
 List<String> list = Arrays.asList(new String[size]);
-
 ```
 
 注意，不会保留对支持数组的引用。
@@ -23,14 +23,12 @@ List<String> list = Arrays.asList(new String[size]);
 
 ```java
 List<Type> list = new ArrayList<Type>(Collections.nCopies(1000, (Type)null));
-
 ```
 
 当然，每个元素的初始值不一定是`null`。第二个主要用途是扩展现有的`List`。例如，假设你想要向`List<String>`的末尾添加 69 个字符串`"fruit bat"`的副本。不清楚为什么你想要做这样的事情，但让我们假设你确实想要。下面是如何做到的。
 
 ```java
 lovablePets.addAll(Collections.nCopies(69, "fruit bat"));
-
 ```
 
 通过使用同时接受索引和`Collection`的`addAll`形式，你可以将新元素添加到`List`的中间而不是末尾。
@@ -41,23 +39,20 @@ lovablePets.addAll(Collections.nCopies(69, "fruit bat"));
 
 ```java
 c.removeAll(Collections.singleton(e));
-
 ```
 
-一个相关的惯用法是从`Map`中删除映射到指定值的所有元素。例如，假设你有一个将人员映射到他们的工作领域的`Map`  `job`  并且假设你想要消除所有律师。下面的一行代码就能完成任务。
+一个相关的惯用法是从`Map`中删除映射到指定值的所有元素。例如，假设你有一个将人员映射到他们的工作领域的`Map` — `job` — 并且假设你想要消除所有律师。下面的一行代码就能完成任务。
 
 ```java
 job.values().removeAll(Collections.singleton(LAWYER));
-
 ```
 
 这种实现的另一个用途是为一个写成接受值集合的方法提供单个输入值。
 
 ## 空 Set、List 和 Map 常量
 
-[`Collections`](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html) 类提供了返回空`Set`、`List`和`Map`的方法  [`emptySet`](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#emptySet--)、[`emptyList`](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#emptyList--)和[`emptyMap`](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#emptyMap--)。这些常量的主要用途是作为不提供任何值时作为值的集合的输入方法的输入，就像这个例子中一样。
+[`Collections`](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html) 类提供了返回空`Set`、`List`和`Map`的方法 — [`emptySet`](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#emptySet--)、[`emptyList`](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#emptyList--)和[`emptyMap`](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#emptyMap--)。这些常量的主要用途是作为不提供任何值时作为值的集合的输入方法的输入，就像这个例子中一样。
 
 ```java
 tourist.declarePurchases(Collections.emptySet());
-
 ```

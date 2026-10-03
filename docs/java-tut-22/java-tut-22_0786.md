@@ -1,3 +1,4 @@
+
 # 课程：JAXP 1.5 和新属性
 
 > 原文：[`docs.oracle.com/javase/tutorial/jaxp/properties/index.html`](https://docs.oracle.com/javase/tutorial/jaxp/properties/index.html)

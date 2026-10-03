@@ -1,3 +1,4 @@
+
 # 在 Java 中使用 Lambdas
 
 > 原文：<https://medium.com/javarevisited/working-with-lambdas-in-java-a27ebce7bc39?source=collection_archive---------1----------------------->
@@ -8,9 +9,9 @@ Lambda 是 Java 1.8 版本中出现的一种替代方案，它为开发带来了
 
 很高兴在实践中看到这一点。
 
-官方文档在这里[https://docs . Oracle . com/javase/tutorial/Java/javaOO/lambda expressions . html](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)
+官方文档在这里 <https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html>
 
-参见以下代码:
+参见以下代码：
 
 ```
 public static void main (String [] args) {
@@ -23,7 +24,7 @@ public static void main (String [] args) {
 }
 ```
 
-我将使用一个[匿名类](https://javarevisited.blogspot.com/2015/01/how-to-use-lambda-expression-in-place-anonymous-class-java8.html)打印这个列表的每个元素:
+我将使用一个[匿名类](https://javarevisited.blogspot.com/2015/01/how-to-use-lambda-expression-in-place-anonymous-class-java8.html)打印这个列表的每个元素：
 
 ```
 list.forEach(new Consumer<String>() {
@@ -35,7 +36,7 @@ list.forEach(new Consumer<String>() {
 
 匿名类是一个作为参数传递的[接口](https://javarevisited.blogspot.com/2012/04/10-points-on-interface-in-java-with.html)的实现。虽然有效，但还有改进的可能。
 
-我将使用[λ](https://www.java67.com/2017/06/10-points-about-lambda-expressions-in-java-8.html)来简化它:
+我将使用[λ](https://www.java67.com/2017/06/10-points-about-lambda-expressions-in-java-8.html)来简化它：
 
 ```
 list.forEach(item -> {
@@ -43,19 +44,19 @@ list.forEach(item -> {
 });
 ```
 
-因为消费者接口只有一个方法，所以编译器推断要使用的方法的类型和签名。在上面的例子中，甚至可以去掉{}和；这也是可行的:
+因为`Consumer`接口只有一个方法，所以编译器推断要使用的方法的类型和签名。在上面的例子中，甚至可以去掉`{}`和`;`，这也是可行的：
 
 ```
 list.forEach(item -> System.out.println(item));
 ```
 
-有一件事很有帮助:阅读λ。上面的代码说明了每个项目都将被打印。
+有一件事很有帮助：阅读λ。上面的代码说明了每个项目都将被打印。
 
 很酷吧？
 
 [![](img/eae5265b63822a647439aa0049bb40f8.png)](https://javarevisited.blogspot.com/2018/07/java-8-tutorials-resources-and-examples-lambda-expression-stream-api-functional-interfaces.html)
 
-现在我要对列表[进行排序](https://www.java67.com/2021/09/java-comparator-multiple-fields-example.html):
+现在我要对列表[进行排序](https://www.java67.com/2021/09/java-comparator-multiple-fields-example.html)：
 
 ```
 List<Integer> list = new ArrayList<>();
@@ -72,11 +73,11 @@ list.forEach(item -> {
 });
 ```
 
-结果是这样的:
+结果是这样的：
 
 [![](img/63ff55ba5124c100c8be551703be1150.png)](https://javarevisited.blogspot.com/2012/01/how-to-sort-arraylist-in-java-example.html)
 
-在这个 [lambda](/javarevisited/8-best-lambdas-stream-and-functional-programming-courses-for-java-developers-3d1836a97a1d) 中，可以看出对于两个条目，整数比较器将进行比较，并将最小的一个返回给列表的 sort()方法。
+在这个 [lambda](/javarevisited/8-best-lambdas-stream-and-functional-programming-courses-for-java-developers-3d1836a97a1d) 中，可以看出对于两个条目，`Integer`比较器将进行比较，并将最小的一个返回给列表的`sort()`方法。
 
 好的，我使用了[字符串](https://www.java67.com/2018/06/top-35-java-string-interview-questions.html)和[整数](https://javarevisited.blogspot.com/2013/06/how-to-add-two-integer-numbers-without-plus-arithmetic-operator-java-example.html)，有人会说它非常简单，一点也不接近我们在软件开发中使用的复杂对象的实际情况。所以我要创建一个有一些属性的对象，按每个属性排序。
 
@@ -117,7 +118,7 @@ public class Item {
 }
 ```
 
-和排序:
+和排序：
 
 ```
 public static void main (String [] args) {
@@ -154,17 +155,17 @@ public static void main (String [] args) {
 }
 ```
 
-结果是:
+结果是：
 
 [![](img/a2cac4dac72febbcdeb37178492f38ad.png)](https://www.java67.com/2019/06/top-5-sorting-examples-of-comparator-and-comparable-in-java.html)
 
-也可以使用静态方法[来比较比较器](https://javarevisited.blogspot.com/2021/09/comparator-comparing-thenComparing-example-java-.html)，参见这个例子:
+也可以使用静态方法[来比较比较器](https://javarevisited.blogspot.com/2021/09/comparator-comparing-thenComparing-example-java-.html)，参见这个例子：
 
 ```
 System.out.println("sort by name");
 items.sort(Comparator.comparing(i -> i.getName()));
 ```
 
-我认为和兰姆达斯一起工作是一个很好的开始，我们的想法是多练习它以保持活力。
+我认为和 Lambdas 一起工作是一个很好的开始，我们的想法是多练习它以保持活力。
 
 再见。

@@ -1,18 +1,19 @@
+
 # 带 RxJava 的 Ratpack
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/ratpack-rxjava>
 
-## 1.介绍
+## 1. 介绍
 
 RxJava 是目前最流行的反应式编程库之一。
 
-和 [`Ratpack`](/web/20221129014402/https://www.baeldung.com/ratpack) 是一个 Java 库的集合，用于创建基于 Netty 的精简而强大的 web 应用程序。
+和 `[Ratpack](/web/20221129014402/https://www.baeldung.com/ratpack)` 是一个 Java 库的集合，用于创建基于 Netty 的精简而强大的 web 应用程序。
 
 在本教程中，我们将讨论在 Ratpack 应用程序中加入 RxJava 来创建一个好的反应式 web 应用程序。
 
-## 2.Maven 依赖性
+## 2. Maven 依赖性
 
-现在，我们首先需要`[ratpack-core](https://web.archive.org/web/20221129014402/https://search.maven.org/search?q=g:io.ratpack%20AND%20a:ratpack-core) `和`[ratpack-rx](https://web.archive.org/web/20221129014402/https://search.maven.org/search?q=g:io.ratpack%20AND%20a:ratpack-rx) `依赖关系:
+现在，我们首先需要`[ratpack-core](https://web.archive.org/web/20221129014402/https://search.maven.org/search?q=g:io.ratpack%20AND%20a:ratpack-core)`和`[ratpack-rx](https://web.archive.org/web/20221129014402/https://search.maven.org/search?q=g:io.ratpack%20AND%20a:ratpack-rx)`依赖关系：
 
 ```java
 <dependency>
@@ -24,34 +25,34 @@ RxJava 是目前最流行的反应式编程库之一。
     <groupId>io.ratpack</groupId>
     <artifactId>ratpack-rx</artifactId>
     <version>1.6.0</version>
-</dependency> 
+</dependency>
 ```
 
-顺便注意，`ratpack-rx`为我们导入了`rxjava` 依赖项。
+顺便注意，`ratpack-rx`为我们导入了`rxjava`依赖项。
 
-## 3.初始设置
+## 3. 初始设置
 
 RxJava 使用其插件系统支持第三方库的集成。**所以，我们可以在 RxJava 的执行模型中融入不同的执行策略。**
 
-Ratpack 通过`RxRatpack`插入这个执行模型，我们在启动时初始化它:
+Ratpack 通过`RxRatpack`插入这个执行模型，我们在启动时初始化它：
 
 ```java
-RxRatpack.initialise(); 
+RxRatpack.initialise();
 ```
 
 现在，需要注意的是，每次 JVM 运行只需要调用**该方法一次。**
 
 结果是**我们将能够将 RxJava 的`Observable`映射到 RxRatpack 的`Promise`类型**，反之亦然。
 
-## 4.`Observable` s 到`Promise` s
+## 4. `Observable`到`Promise`
 
-我们可以将 RxJava 中的`Observable`转换成 Ratpack `Promise.`
+我们可以将 RxJava 中的`Observable`转换成 Ratpack `Promise`。
 
-**然而，有一点不匹配。**看，`Promise `发出单个值，但是`Observable `可以发出它们的流。
+**然而，有一点不匹配。**看，`Promise`发出单个值，但是`Observable`可以发出它们的流。
 
-RxRatpack 通过提供两种不同的方法来处理这个问题:`promiseSingle()`和`promise().`
+RxRatpack 通过提供两种不同的方法来处理这个问题：`promiseSingle()`和`promise()`。
 
-因此，假设我们有一个名为`MovieService` 的服务，它在`getMovie(). `上发出一个承诺，我们将使用`promiseSingle()`，因为我们知道它只会发出一次:
+因此，假设我们有一个名为`MovieService`的服务，它在`getMovie()`上发出一个承诺，我们将使用`promiseSingle()`，因为我们知道它只会发出一次：
 
 ```java
 Handler movieHandler = (ctx) -> {
@@ -62,7 +63,7 @@ Handler movieHandler = (ctx) -> {
 };
 ```
 
-另一方面，如果`getMovies()`可以返回电影结果流，我们将使用`promise()`:
+另一方面，如果`getMovies()`可以返回电影结果流，我们将使用`promise()`：
 
 ```java
 Handler moviesHandler = (ctx) -> {
@@ -73,7 +74,7 @@ Handler moviesHandler = (ctx) -> {
 };
 ```
 
-然后，我们可以像平常一样将这些处理程序添加到 Ratpack 服务器中:
+然后，我们可以像平常一样将这些处理程序添加到 Ratpack 服务器中：
 
 ```java
 RatpackServer.start(def -> def.registryOf(rSpec -> rSpec.add(MovieService.class, new MovieServiceImpl()))
@@ -82,13 +83,13 @@ RatpackServer.start(def -> def.registryOf(rSpec -> rSpec.add(MovieService.class,
     .get("movies", moviesHandler)));
 ```
 
-## 5.`Promise` s 到`Observable` s
+## 5. `Promise`到`Observable`
 
-相反，我们可以将 Ratpack 中的`Promise`类型映射回 RxJava `Observable`。****
+相反，我们可以将 Ratpack 中的`Promise`类型映射回 RxJava `Observable`。
 
-**RxRatpack 又有两个方法:`observe()`和`observeEach().`**
+**RxRatpack 又有两个方法：`observe()`和`observeEach()`。**
 
-在这种情况下，我们将想象我们有一个返回`Promise` s 而不是`Observable` s 的电影服务。
+在这种情况下，我们将想象我们有一个返回`Promise`而不是`Observable`的电影服务。
 
 没有
 
@@ -101,7 +102,7 @@ Handler moviePromiseHandler = ctx -> {
 };
 ```
 
-当我们得到一个列表时，比如用`getMovies()`，我们会用`observeEach()`:
+当我们得到一个列表时，比如用`getMovies()`，我们会用`observeEach()`：
 
 ```java
 Handler moviesPromiseHandler = ctx -> {
@@ -113,7 +114,7 @@ Handler moviesPromiseHandler = ctx -> {
 };
 ```
 
-然后，我们可以像预期的那样添加处理程序:
+然后，我们可以像预期的那样添加处理程序：
 
 ```java
 RatpackServer.start(def -> def.registryOf(regSpec -> regSpec
@@ -123,7 +124,7 @@ RatpackServer.start(def -> def.registryOf(regSpec -> regSpec
       .get("movies", moviesPromiseHandler)));
 ```
 
-## 6.并行处理
+## 6. 并行处理
 
 **RxRatpack 借助`fork()`和`forkEach()`方法支持并行性。**
 
@@ -135,7 +136,7 @@ RatpackServer.start(def -> def.registryOf(regSpec -> regSpec
 
 让我们想象一下，我们想利用我们的电影名称，这是一个昂贵的操作。
 
-简单地说，我们可以使用`forkEach()`将每个线程的执行卸载到一个线程池中:
+简单地说，我们可以使用`forkEach()`将每个线程的执行卸载到一个线程池中：
 
 ```java
 Observable<Movie> movieObs = movieSvc.getMovies();
@@ -144,7 +145,7 @@ Observable<String> upperCasedNames = movieObs.compose(RxRatpack::forkEach)
   .serialize();
 ```
 
-## 7.隐式错误处理
+## 7. 隐式错误处理
 
 最后，隐式错误处理是 RxJava 集成的关键特性之一。
 
@@ -154,7 +155,7 @@ Observable<String> upperCasedNames = movieObs.compose(RxRatpack::forkEach)
 
 例如，我们希望在 HTTP 响应中输出每个错误。
 
-注意，我们通过`Observable`抛出的异常被我们的`ServerErrorHandler`捕获并处理:
+注意，我们通过`Observable`抛出的异常被我们的`ServerErrorHandler`捕获并处理：
 
 ```java
 RatpackServer.start(def -> def.registryOf(regSpec -> regSpec
@@ -167,12 +168,12 @@ RatpackServer.start(def -> def.registryOf(regSpec -> regSpec
     })));
 ```
 
-**注意，任何订阅者级别的错误处理都是优先的。**如果我们的`Observable` 想要做自己的错误处理，它可以，但是因为它不这样做，异常渗透到 Ratpack。
+**注意，任何订阅者级别的错误处理都是优先的。**如果我们的`Observable`想要做自己的错误处理，它可以，但是因为它不这样做，异常渗透到 Ratpack。
 
-## 8.结论
+## 8. 结论
 
 在本文中，我们讨论了如何用 Ratpack 配置 RxJava。
 
-我们研究了 RxJava 中的`Observables`到 Ratpack 中的`Promise`类型的转换，反之亦然。我们还研究了集成支持的并行性和隐式错误处理特性。
+我们研究了 RxJava 中的`Observable`到 Ratpack 中的`Promise`类型的转换，反之亦然。我们还研究了集成支持的并行性和隐式错误处理特性。
 
 本文使用的所有代码示例都可以在 Github 上找到[。](https://web.archive.org/web/20221129014402/https://github.com/eugenp/tutorials/tree/master/web-modules/ratpack)

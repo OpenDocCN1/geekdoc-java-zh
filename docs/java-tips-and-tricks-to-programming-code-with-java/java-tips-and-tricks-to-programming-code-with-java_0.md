@@ -1,13 +1,8 @@
+
 # Java：Java 编程技巧与窍门
 
-
-
-
-
-
-
-
 ## 介绍
+
 恭喜你下载了`Java：编程技巧与窍门`，感谢你的支持。
 
 后续章节将讨论你如何使用 Java，以及你将能够使用哪些技巧和窍门来进一步丰富你已掌握的 Java 知识。
@@ -17,9 +12,10 @@
 市场上有很多关于这个主题的书，再次感谢你选择这一本！我们已尽力确保它包含尽可能多的有用信息，请尽享！
 
 # 第 1 章：独立实现中的 Hibernate
+
 在开始开发项目之前，你需要拥有一种能够与你输入程序的数据良好配合的策略。
 
-无论你正在从事什么项目，这都是必须发生的，这样你才知道该向哪里走，而不是尝试随心所欲，并可能搞乱你正在做的事情。不仅如此，你将能够使用一个可靠的框架，并在在使用过程中改进你的项目。
+无论你正在从事什么项目，这都是必须发生的，这样你才知道该向哪里走，而不是尝试随心所欲，并可能搞乱你正在做的事情。不仅如此，你将能够使用一个可靠的框架，并在使用过程中改进你的项目。
 
 然而，如果你使用一个没有结构且无法控制的框架，你将不得不不断修复你的项目，并花费资金尝试进行维护，以防止它更改你的代码并搞乱你的整个项目。
 
@@ -28,6 +24,7 @@
 `hibernate validator` 是一个开源项目，在演示关键功能或组合有效规则方面将提供帮助。
 
 ## Hibernate Validator
+
 `hibernate` 的验证器将是一个坚实构建的基础，但它也允许你为 `Java EE` 和 `SE` 编写灵活且轻量级代码。该验证器可以帮助在处理 Java 时使用的不同框架，你也可以使用独立运行的框架。
 
 `Java SE` 独立运行程序将成为服务器端更复杂的异构应用中非常重要的部分。
@@ -39,6 +36,7 @@
 第一个示例将向你展示 `ant` 构建脚本如何在 `manifest` 部分包含具有独立实现的依赖项。该部分对于你编写的代码之外的元数据是必要的。由于 `ant` 构建，你将通过 manifest 文件的 `class-path` 表头获得验证器所有的依赖 `JAR` 包。
 
 ### 示例：ant 构建的 manifest 部分
+
 ```xml
 <manifest>
 <Attribute name="Manifest-Version" value="1.0"/>
@@ -47,6 +45,7 @@
 <Attribute name="Implementation-Version" value="5.0.3"/>
 </manifest>
 ```
+
 ```xml
 <META-INF>
 <manifest>
@@ -59,11 +58,13 @@
 ```
 
 ### 注解声明与约束定义
+
 使用五版本的 `hibernate validator`，你将拥有一个针对 `JSR` 验证版本 `1.1` 的开放实现。用于声明的注解和约束的定义将为验证框架提供亮点。
 
 当你查看通过声明语法创建的验证规则时，将提高代码的可读性。
 
 #### 示例：声明式注解
+
 ```java
 public class Place {
     @NotNull
@@ -83,11 +84,7 @@ public class Place {
 }
 ```
 
-约束将适用于 `@valid` 注解下的的对象。
-
-
-
-
+约束将适用于 `@valid` 注解下的对象。
 
 # 在互联网上使用 Java 客户端的 SharePoint 服务
 
@@ -124,6 +121,7 @@ SharePoint 将运行在 `HTTPS` 上，由于你使用的两个不同的 URL，�
 在这种情况下，你会得到一个类似于这样的错误。
 
 代码：
+
 ```
 [ERROR] bright. Protected.validator.validatorException: XPIK follow building untrue. Bright.procted.offered.certified.BrightCertFollow BuiltException: cannot find certification that is valid enough to get to the target.
 ```
@@ -133,25 +131,33 @@ SharePoint 将运行在 `HTTPS` 上，由于你使用的两个不同的 URL，�
 ### 示例：复制服务代码
 
 代码：
+
 ```
 C : \ parma > “% JAVA_NATIONAL% \ nib \ swimport “ -e . -a come.microsoft. schemas. Sharpoint. Clean – hold -addmore -Anothing Copy. Swld
 ```
+
 解析 `DLSW`
+
 ```
 [ALERT] CLEAN opening “copyclean91” : please us a different holding than this Section 34 of file : / C: / parma/ Copy/ swdl
 ```
+
 代码正在创建中。
 
 ### 示例二：列表服务代码
 
 代码：
+
 ```
 C : \ parma > “% JAVA_NATIONAL% \ nib \ swimport “ -e . -a come.microsoft. schemas. Sharpoint. Clean – hold -addmore -Anothing list. Swld
 ```
+
 解析 `DLSW`
+
 ```
 [ALERT] CLEAN opening “listclean91” : please us a different holding than this Section 34 of file : / C: / parma/ list/ swdl
 ```
+
 代码正在创建中。
 
 代码创建后，可以将其添加到你创建的解决方案并使用。编译选项可以更改为不同的命令。然而，这样做会导致类文件在你使用的源码内部以不同的方式创建，同时允许 `Eclipse` 在我们已经写出源码的情况下对其进行编译。
@@ -163,6 +169,7 @@ C : \ parma > “% JAVA_NATIONAL% \ nib \ swimport “ -e . -a come.microsoft. s
 如果你使用的网站拥有 `cacerts` 文件并已更新到相应位置，只要该站点的证书也是最新的，你就可以使用它。
 
 代码：
+
 ```
 Ajavae.web.ssl.truststore – 你将用它更新你正在使用的文件。
 ```
@@ -189,9 +196,6 @@ Ajavae.web.ssl.truststore – 你将用它更新你正在使用的文件。
 
 最好的方法是通过 `Java` 中的线程设置一个并行 Web 服务，以获取支持任务的所有服务，从而从头到尾映射请求。
 
-
-
-
 Apache Camel 将生成基于 Java 的 DSL 代码，以便能够按照预期的方式对集成层进行路由和配置。继续我们的航空公司示例，你将通过门户网站看到客户将发送一个请求，其中包含起始位置和他们偏于使用的航空公司。从那里开始，你在网站上编写的代码将返回他们正在寻找的航空公司和目的地信息，以便他们比较价格和航空公司。
 
 如果他们已经决定了想使用哪家航空公司，他们将使用预订服务来接受根据他们输入的偏好所收到的报价。需要为处理器（processors）编写 Java 代码，以确保客户所经过的路由不会受到网站的影响。
@@ -205,11 +209,17 @@ Camel 将消息从 A 点传输到 B 点所需的运行环境是 `Camel Context`�
 ## Camel SOA 的组件
 
 - **CXF Endpoint**: Apache CXF 将用于 Web 服务及其实现。在配置正在使用的 Web 服务时，将使用 `CXF` 组件，并帮助确定它们将采取哪条路由。
+
 - **Camel Bean**: 使用 `JavaBeans` 的组件。在设置需要遵循某些步骤的自定义进程时，将使用该 bean。
+
 - **Camel Direct**: 两个路由将通过同步调用连接。
+
 - **Camel XSLT**: `XSLT` 表将通过 Spring 资源加载技术加载。该组件用于处理来自 Web 服务器的请求和响应转换。
+
 - **Camel Multicast EIP**: `EIP` 模式将把消息发送到需要处理的不同位置。从这里你可以使用多播（multic）发送请求。
+
 - **Camel Aggregator EIP**: 该模式将两个具有相似消息的不同结果合并为一条发送给用户的消息。聚合器（aggregator）将合并响应，以防客户端过载。
+
 - **Camel WireTap EIP**: 通过电签检测（wiretap），你可以在消息通过系统到达用户时对其检查。`EIP` 将在合适的点记录消息。
 
 ## Web 接口
@@ -264,6 +274,8 @@ Camel cxf 端点将是你代码中的默认端点，以便你可以获取原始�
 
 #### 示例
 
+
+
 ```xml
 // end point for the reservation made on airline D
 <cxf:endpoint number=endpointairlineD URL="http://localhost:9898/reservation made" servicegenre="mor.Small.Rira.Recall.airlineDquote" Wsdladdress="wdsl/reservation for airline d wsdl">
@@ -281,6 +293,7 @@ Camel cxf 端点将是你代码中的默认端点，以便你可以获取原始�
 ```
 
 剩余步骤的说明如下：
+
 - **第三步**：通过多播（multicast）创建合适的路由。
 - **第四步**：在消息通过系统到达用户时查看。
 - **第五步**：使用 XSLT 处理你的消息。
@@ -299,15 +312,13 @@ Camel cxf 端点将是你代码中的默认端点，以便你可以获取原始�
 ## Log4j 的维度
 
 当你使用日志时，你只是在使用 Java 中使用的 `println()` 函数的高级版本，但 `Log4j` 将拥有改变 Java 平台响应机制的包。不仅如此，它还允许执行不同的操作，例如：
+
 - 创建新的布局（layouts），使日志事件由字符串定义。
 - 写入器（appenders）将以不同的方式记录。这不仅限于控制台，还包括网络位置、操作系统日志等。
 - 根据需要记录的信息量进行集中控制。
 - 现在有了针对调试和错误的层级结构。
 
 Log4j 包含了你在使用 Java 时可以探索的其他功能。
-
-
-
 
 Appender（输出器）具有级别，你将在程序的独立维度上看到它的三个方面：
 
@@ -317,7 +328,7 @@ Appender（输出器）具有级别，你将在程序的独立维度上看到它
 
 你必须整体考虑这些方面，而不是单独看待，它们必须处于一个三维空间中。每个方面的点将将该空间的一部分，并按照预期的方式配置系统。
 
-#### 示例：
+### 示例：
 
 ```
 // logging started!
@@ -389,7 +400,7 @@ Logger.Alert (“ You shall not pass!”) ;
 
 `patternlayout` 将拥有一个模板，为用户提供灵活性，以配置每次记录事件时创建的字符串。模板将定义字符串以及其中包含的所有变量。
 
-#### 示例：
+### 示例：
 
 ```
 Pattern for the string =
@@ -403,7 +414,7 @@ Appender. Layout setup (display) ;
 
 输出器将使用带有模式的布局来定义语句。
 
-#### 示例：
+### 示例：
 
 ```
 National holdSql (string d) {
@@ -424,7 +435,7 @@ else {
 
 但这并不总是一件好事，因为 `JDBC` 将编译所有之前准备的语句，这最终将导致难以修复的性能问题。不过，这种做法的方法是通过重写来控制你的布局的行为。
 
-#### 示例：
+### 示例：
 
 ```
 National open display set (layout display) {
@@ -438,9 +449,6 @@ Set a new argument that is not valid (“ layout is not going to work”) ;
 ```
 
 遗憾的是，你也会在这个示例中发现问题。存在运行时异常会导致使用该方法的应用程序没有准备好捕获错误。从本质上，你将使用布局方法，但它没有与之匹配的运行时异常，保证将会被削弱。
-
-
-
 
 如果你查看已设置的前置条件，那么布局（layout）将需要更强的先决条件，以便方法可以覆盖它。如果不这样做，你将违背本为该原则设计的面向对象核心。
 
@@ -586,8 +594,6 @@ else {
 }
 ```
 
-
-
 第一行仍然将以 `if` 开头，后面跟着条件。大括号将把代码的不同部分分开。
 
 第二种选择将跟在 `else` 之后，并有它自己的大括号。
@@ -655,7 +661,9 @@ system.out.println ( “ 18 or younger”) ;
 
 为了检查你的 `client` 是否超过了十六 岁，必须在你已经创建的 `if` 语句内部放置另一个 `if` 语句。
 
-第一个 `if` 语句将捕获 `client` 小于 19 岁的情况，第二个语句将缩小范围，使其大于 16 岁。当你想要打印不同的消息时，可以使用 `if else` 语句。
+
+
+第一个`if`语句将捕获`client`小于 19 岁的情况，第二个语句将缩小范围，使其大于 16 岁。当你想要打印不同的消息时，可以使用`if else`语句。
 
 #### 示例：
 
@@ -670,7 +678,7 @@ if( client < 20) {
 }
 ```
 
-代码中放置的大括号必须完全准确，否则程序将无法运行。嵌套 `if` 语句学习起来比较复杂，但可以拆解学习。
+代码中放置的大括号必须完全准确，否则程序将无法运行。嵌套`if`语句学习起来比较复杂，但可以拆解学习。
 
 ### 布尔值
 
@@ -680,7 +688,7 @@ if( client < 20) {
 Boolean client = true ;
 ```
 
-你不需要输入 `int`、`string` 或 `double`，你需要使用小写的 `b` 输入 `Boolean`。变量名将在赋值为 true 或 false 值之后出现。
+你不需要输入`int`、`string`或`double`，你需要使用小写的`b`输入`Boolean`。变量名将在赋值为 true 或 false 值之后出现。
 
 赋值使用一个等号`=`。然而，如果你要评估该变量并且它有一个值，那么你就需要使用两个等号。
 
@@ -696,11 +704,11 @@ else {
 }
 ```
 
-`if` 语句将检查 `client` 输入的变量是否为 true。`else` 将检查它是否为 false。
+`if`语句将检查`client`输入的变量是否为 true。`else`将检查它是否为 false。
 
-你不需要说 `else if ( client == false)`。当某事结果不是 true 时，它显然是 false。由于涉及布尔值只有两种选择，所以你会使用 `else`。
+你不需要说`else if ( client == false)`。当某事结果不是 true 时，它显然是 false。由于涉及布尔值只有两种选择，所以你会使用`else`。
 
-另一个用于条件的运算符是 `NOT` 运算符，它用于布尔值。
+另一个用于条件的运算符是`NOT`运算符，它用于布尔值。
 
 #### 示例：
 
@@ -714,11 +722,11 @@ else {
 }
 ```
 
-这与任何其他用于布尔值的代码相同，但 `if ( !client) {}` 语句不同。
+这与任何其他用于布尔值的代码相同，但`if ( !client) {}`语句不同。
 
-`NOT` 运算符位于 `client` 变量之前。该运算符使用单个感叹号，但它将位于待测试变量之前。代码将对其进行否定测试，这意味着它不是它原本的样子。
+`NOT`运算符位于`client`变量之前。该运算符使用单个感叹号，但它将位于待测试变量之前。代码将对其进行否定测试，这意味着它不是它原本的样子。
 
-由于 `client` 变量被设置为 true，`!client` 最终将测试 false 值。如果条件被设置为 false，那么 `NOT` 运算符将测试 true 值。
+由于`client`变量被设置为 true，`!client`最终将测试 false 值。如果条件被设置为 false，那么`NOT`运算符将测试 true 值。
 
 ### 总结
 

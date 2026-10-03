@@ -1,3 +1,4 @@
+
 # 已安装的扩展
 
 > 原文：[`docs.oracle.com/javase/tutorial/ext/basics/install.html`](https://docs.oracle.com/javase/tutorial/ext/basics/install.html)
@@ -34,7 +35,6 @@ public final class RectangleArea {
         return r.width * r.height;
     }
 }
-
 ```
 
 此类有一个名为`area`的方法，该方法接受一个`java.awt.Rectangle`的实例并返回矩形的面积。
@@ -54,7 +54,6 @@ public class AreaApp {
                            + RectangleArea.area(r));
     }
 }
-
 ```
 
 此应用程序实例化一个 10 `x` 5 的矩形，然后使用`RectangleArea.area`方法打印出矩形的面积。
@@ -66,15 +65,13 @@ public class AreaApp {
 当然，`RectangleArea`类不是 Java 平台的一部分，因此您需要将`area.jar`文件放在类路径上才能运行`AreaApp`而不会出现运行时异常。例如，如果`area.jar`在目录`/home/user`中，您可以使用以下命令：
 
 ```java
-java -classpath .:/home/user/area.jar AreaApp 
-
+java -classpath .:/home/user/area.jar AreaApp
 ```
 
 此命令中指定的类路径包含当前目录，其中包含`AreaApp.class`，以及包含`RectangleArea`包的 JAR 文件的路径。通过运行此命令，您将获得所需的输出：
 
 ```java
 The rectangle's area is 50
-
 ```
 
 ## 使用扩展机制运行 AreaApp
@@ -86,8 +83,7 @@ The rectangle's area is 50
 将`area.jar`安装为扩展后，您可以运行`AreaApp`而无需指定类路径：
 
 ```java
-java AreaApp 
-
+java AreaApp
 ```
 
 因为您正在使用`area.jar`作为已安装的扩展，运行时环境将能够找到并加载`RectangleArea`类，即使您没有在类路径上指定它。同样，任何用户在您的系统上运行的小程序或应用程序都可以找到并使用`RectangleArea`类。

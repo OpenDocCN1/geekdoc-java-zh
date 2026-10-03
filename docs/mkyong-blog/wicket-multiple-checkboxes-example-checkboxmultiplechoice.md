@@ -1,3 +1,4 @@
+
 # Wicket 多复选框示例–checkbox multiple choice
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/wicket/wicket-multiple-checkboxes-example-checkboxmultiplechoice/>
@@ -5,7 +6,7 @@
 Wicket 示例创建多个选择复选框的**，并自动选中复选框。**
 
 ```java
- //Java 
+//Java 
 import org.apache.wicket.markup.html.form.CheckBoxMultipleChoice;
 ...
 //checkboxes value to display
@@ -23,14 +24,14 @@ final CheckBoxMultipleChoice<String> listLanguages =
 <span wicket:id="languages"></span> 
 ```
 
-## 1.Wicket 多复选框示例
+## 1. Wicket 多复选框示例
 
-示例通过“ **CheckBoxMultipleChoice** 显示多个复选框，并自动选中。代码应该是不言自明的。
+示例通过`CheckBoxMultipleChoice`显示多个复选框，并自动选中。代码应该是不言自明的。
 
-*文件:CheckBoxMultipleChoicePage.java*
+*文件：`CheckBoxMultipleChoicePage.java`*
 
 ```java
- package com.mkyong.user;
+package com.mkyong.user;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -88,14 +89,14 @@ public class CheckBoxMultipleChoicePage extends WebPage {
 } 
 ```
 
- ## 2.Wicket HTML 页面
+## 2. Wicket HTML 页面
 
 呈现多个复选框的页面。
 
-*文件:CheckBoxMultipleChoicePage.html*
+*文件：`CheckBoxMultipleChoicePage.html`*
 
-```java
- <html>
+```html
+<html>
 <head>
 <style>
 .feedbackPanelINFO {
@@ -125,7 +126,7 @@ public class CheckBoxMultipleChoicePage extends WebPage {
 </html> 
 ```
 
- ## 3.演示
+## 3. 演示
 
 开始并访问—*http://localhost:8080/wicket examples/*
 
@@ -135,17 +136,12 @@ public class CheckBoxMultipleChoicePage extends WebPage {
 
 选择一些复选框并点击显示按钮。
 
-![wicket multiple checkboxs](img/1cbca17460321d92d18c13f290a536e7.png "wicket-CheckBoxMultipleChoice-example2")Download it – [Wicket-CheckBoxMultipleChoice-Examples.zip](http://web.archive.org/web/20190202071932/http://www.mkyong.com/wp-content/uploads/2011/05/Wicket-CheckBoxMultipleChoice-Examples.zip) (8KB)
+![wicket multiple checkboxs](img/1cbca17460321d92d18c13f290a536e7.png "wicket-CheckBoxMultipleChoice-example2")
+
+Download it – [Wicket-CheckBoxMultipleChoice-Examples.zip](http://web.archive.org/web/20190202071932/http://www.mkyong.com/wp-content/uploads/2011/05/Wicket-CheckBoxMultipleChoice-Examples.zip) (8KB)
 
 ## 参考
 
-1.  [Wicket checkbox multiple choice Javadoc](http://web.archive.org/web/20190202071932/http://wicket.apache.org/apidocs/1.4/org/apache/wicket/markup/html/form/CheckBoxMultipleChoice.html)
+1. [Wicket checkbox multiple choice Javadoc](http://web.archive.org/web/20190202071932/http://wicket.apache.org/apidocs/1.4/org/apache/wicket/markup/html/form/CheckBoxMultipleChoice.html)
 
 [checkbox](http://web.archive.org/web/20190202071932/http://www.mkyong.com/tag/checkbox/) [wicket](http://web.archive.org/web/20190202071932/http://www.mkyong.com/tag/wicket/)
-
-
-
-
-
-
-

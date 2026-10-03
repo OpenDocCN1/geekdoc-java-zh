@@ -1,3 +1,4 @@
+
 # 播放音频
 
 > 原文：[`docs.oracle.com/javase/tutorial/sound/playing.html`](https://docs.oracle.com/javase/tutorial/sound/playing.html)
@@ -25,7 +26,6 @@
 ```java
 void open(AudioInputStream stream)
 void open(AudioFormat format, byte[] data, int offset, int bufferSize)
-
 ```
 
 尽管上述第二个`open`方法中有`bufferSize`参数，但`Clip`（不像`SourceDataLine`）不包括用于向缓冲区写入新数据的方法。这里的`bufferSize`参数只指定要加载到剪辑中的字节数组的大小。它不是一个可以随后加载更多数据的缓冲区，就像您可以使用`SourceDataLine`的缓冲区一样。
@@ -42,7 +42,6 @@ void open(AudioFormat format, byte[] data, int offset, int bufferSize)
 
 ```java
 void open(AudioFormat format)
-
 ```
 
 请注意，当您打开`SourceDataLine`时，尚未将任何声音数据与该线路关联，与打开`Clip`不同。相反，您只需指定要播放的音频数据的格式。系统会选择默认的缓冲区长度。
@@ -51,7 +50,6 @@ void open(AudioFormat format)
 
 ```java
 void open(AudioFormat format, int bufferSize)
-
 ```
 
 为了与类似方法保持一致，`bufferSize`参数以字节表示，但必须对应于整数帧数。
@@ -64,7 +62,6 @@ start 方法允许线路在其缓冲区中有任何数据时开始播放声音�
 
 ```java
 int write(byte[] b, int offset, int length)
-
 ```
 
 数组中的偏移量以字节表示，数组的长度也是以字节表示。
@@ -92,7 +89,6 @@ while (total < totalToRead && !stopped)}
     line.write(myData, 0, numBytesRead);
 
 }
-
 ```
 
 如果你不希望`write`方法阻塞，你可以首先在循环内调用`available`方法来查找可以无阻塞写入的字节数，然后在从流中读取之前将`numBytesToRead`变量限制为这个数字。然而，在给定的示例中，阻塞并不重要，因为 write 方法是在一个循环内调用的，直到最后一个缓冲区在最后一个循环迭代中被写入。无论你是否使用阻塞技术，你可能会希望在应用程序的其余部分之外的一个单独线程中调用这个播放循环，这样当播放长声音时，你的程序不会出现冻结的情况。在循环的每次迭代中，你可以测试用户是否请求停止播放。这样的请求需要将上面代码中使用的`stopped`布尔值设置为`true`。
@@ -106,7 +102,6 @@ line.drain();
 line.stop();
 line.close();
 line = null;
-
 ```
 
 你可以有意提前停止播放，当然。例如，应用程序可能会为用户提供一个停止按钮。调用`DataLine`的`stop`方法可以立即停止播放，即使在缓冲区的中间。这会使缓冲区中的任何未播放数据保留下来，因此如果随后调用`start`，播放将从停止的地方恢复。如果这不是你想要发生的事情，你可以通过调用`flush`来丢弃缓冲区中剩余的数据。
@@ -121,7 +116,6 @@ line = null;
 
 ```java
 public void addLineListener(LineListener listener)
-
 ```
 
 每当线路打开、关闭、启动或停止时，它会向所有侦听器发送一个`update`消息。您的对象可以查询接收到的`LineEvent`。首先，您可能会调用`LineEvent.getLine`来确保停止的线路是您关心的线路。在我们讨论的情况下，您想知道声音是否已完成，因此您可以查看`LineEvent`是否为`STOP`类型。如果是，您可以检查声音的当前位置，该位置也存储在`LineEvent`对象中，并将其与声音的长度（如果已知）进行比较，以查看是否已达到结束并且没有被其他方式停止（例如用户点击停止按钮，尽管您可能能够在代码的其他地方确定该原因）。
@@ -136,7 +130,6 @@ public void addLineListener(LineListener listener)
 
 ```java
 boolean isSynchronizationSupported(Line[] lines, boolean  maintainSync)
-
 ```
 
 第一个参数指定了一组特定的数据线，第二个参数表示必须保持同步的精度。如果第二个参数是`true`，则查询是在询问混音器是否能够始终在*所有时间*内保持对指定线路的样本精确控制；否则，精确同步仅在启动和停止操作期间需要，而不是在整个播放过程中。

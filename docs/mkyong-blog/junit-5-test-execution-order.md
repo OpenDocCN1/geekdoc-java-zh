@@ -1,26 +1,27 @@
+
 # JUnit 5 测试执行顺序
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/junit5/junit-5-test-execution-order/>
 
 ![junit 5 test order](img/0209a65817d6c0c86a1d373cf3b6704b.png)
 
-本文向您展示了如何通过下面的`MethodOrderer`类来控制 JUnit 5 测试的执行顺序:
+本文向您展示了如何通过下面的`MethodOrderer`类来控制 JUnit 5 测试的执行顺序：
 
-*   含字母和数字的
-*   订单注释
-*   随意
-*   定制订单
+- 含字母和数字的
+- 订单注释
+- 随意
+- 定制订单
 
 *用 JUnit 5.5.2 测试的 PS*
 
-## 1.含字母和数字的
+## 1. 含字母和数字的
 
 1.1 它按字母数字顺序对测试方法进行分类。
 
-MethodAlphanumericTest.java
+`MethodAlphanumericTest.java`
 
 ```java
- package com.mkyong.order;
+package com.mkyong.order;
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
@@ -56,27 +57,27 @@ public class MethodAlphanumericTest {
         assertEquals(2, 1 + 1);
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- testA()
+testA()
 testB()
 testE()
 testY()
-testZ() 
+testZ()
 ```
 
-## 2.订单注释
+## 2. 订单注释
 
 2.1 根据`@Order`值对测试方法进行分类。
 
-MethodOrderTest.java
+`MethodOrderTest.java`
 
 ```java
- package com.mkyong.order;
+package com.mkyong.order;
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -116,31 +117,31 @@ public class MethodOrderTest {
         assertEquals(2, 1 + 1);
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- test2()
+test2()
 test3()
 test1()
 test0()
-test4() 
+test4()
 ```
 
-## 3.随意
+## 3. 随意
 
-3.1 它对测试方法进行伪随机排序，并支持自定义种子的配置:
+3.1 它对测试方法进行伪随机排序，并支持自定义种子的配置：
 
 ```java
- junit.jupiter.execution.order.random.seed 
+junit.jupiter.execution.order.random.seed
 ```
 
-MethodRandomTest.java
+`MethodRandomTest.java`
 
 ```java
- package com.mkyong.order;
+package com.mkyong.order;
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
@@ -176,13 +177,13 @@ public class MethodRandomTest {
         assertEquals(2, 1 + 1);
     }
 
-} 
+}
 ```
 
 输出，随机。
 
 ```java
- # Run 1
+# Run 1
 testA()
 testZ()
 testE()
@@ -201,58 +202,58 @@ testA()
 testB()
 testY()
 testE()
-testZ() 
+testZ()
 ```
 
-3.2 配置一个定制种子`junit.jupiter.execution.order.random.seed`来创建一个可重复的测试构建
+3.2 配置一个定制种子`junit.jupiter.execution.order.random.seed`来创建一个可重复的测试构建。
 
 在属性文件中。
 
-junit-platform.properties
+`junit-platform.properties`
 
 ```java
- junit.jupiter.execution.order.random.seed=99 
+junit.jupiter.execution.order.random.seed=99
 ```
 
-在 Maven 中，配置参数
+在 Maven 中，配置参数。
 
-pom.xml
+`pom.xml`
 
 ```java
- <plugin>
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-surefire-plugin</artifactId>
-		<version>3.0.0-M3</version>
-		<configuration>
-			<properties>
-				<configurationParameters>
-					junit.jupiter.execution.order.random.seed=99
-				</configurationParameters>
-			</properties>
-		</configuration>
-	</plugin> 
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.0.0-M3</version>
+    <configuration>
+        <properties>
+            <configurationParameters>
+                junit.jupiter.execution.order.random.seed=99
+            </configurationParameters>
+        </properties>
+    </configuration>
+</plugin>
 ```
 
-在 Gradle 中，配置参数
+在 Gradle 中，配置参数。
 
-build.gradle
+`build.gradle`
 
 ```java
- test {
+test {
 
-	useJUnitPlatform()
+    useJUnitPlatform()
 
-	systemProperties = [
-			'junit.jupiter.execution.order.random.seed': 99
-	]
+    systemProperties = [
+            'junit.jupiter.execution.order.random.seed': 99
+    ]
 
-} 
+}
 ```
 
 使用自定义种子再次运行它。
 
 ```java
- # Run 1 - seed 99
+# Run 1 - seed 99
 testA()
 testZ()
 testE()
@@ -271,19 +272,19 @@ testA()
 testZ()
 testE()
 testY()
-testB() 
+testB()
 ```
 
-## 4.定制订单
+## 4. 定制订单
 
 4.1 执行`MethodOrderer`创建自定义测试订单。
 
 4.2 以下示例是按参数计数排序的。
 
-ParameterCountOrder.java
+`ParameterCountOrder.java`
 
 ```java
- package com.mkyong.order;
+package com.mkyong.order;
 
 import org.junit.jupiter.api.MethodDescriptor;
 import org.junit.jupiter.api.MethodOrderer;
@@ -303,15 +304,15 @@ public class ParameterCountOrder implements MethodOrderer {
 
     }
 
-} 
+}
 ```
 
-4.3 用`@ParameterizedTest`测试上述定制订单
+4.3 用`@ParameterizedTest`测试上述定制订单。
 
-MethodParameterCountTest.java
+`MethodParameterCountTest.java`
 
 ```java
- package com.mkyong.order;
+package com.mkyong.order;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.TestMethodOrder;
@@ -353,7 +354,7 @@ public class MethodParameterCountTest {
         assertTrue(true);
     }
 
-} 
+}
 ```
 
 输出
@@ -363,9 +364,9 @@ public class MethodParameterCountTest {
 4.4 拆卸`comparator.reversed()`
 
 ```java
- public class ParameterCountOrder implements MethodOrderer {
+public class ParameterCountOrder implements MethodOrderer {
 
-   //...
+    //...
 
     @Override
     public void orderMethods(MethodOrdererContext context) {
@@ -374,7 +375,7 @@ public class MethodParameterCountTest {
         context.getMethodDescriptors().sort(comparator);
     }
 
-} 
+}
 ```
 
 输出
@@ -383,13 +384,15 @@ public class MethodParameterCountTest {
 
 ## 下载源代码
 
-$ git clone [https://github.com/mkyong/junit-examples](http://web.archive.org/web/20221225035521/https://github.com/mkyong/junit-examples)
+```bash
+$ git clone https://github.com/mkyong/junit-examples
 $ cd junit5-examples
 $ check src/test/java/com/mkyong/order/*.java
+```
 
 ## 参考
 
-*   [JUnit 5 测试执行顺序](http://web.archive.org/web/20221225035521/https://junit.org/junit5/docs/current/user-guide/#writing-tests-test-execution-order)
-*   方法订购者。随机
+- [JUnit 5 测试执行顺序](http://web.archive.org/web/20221225035521/https://junit.org/junit5/docs/current/user-guide/#writing-tests-test-execution-order)
+- 方法订购者。随机
 
 <input type="hidden" id="mkyong-current-postId" value="15245">

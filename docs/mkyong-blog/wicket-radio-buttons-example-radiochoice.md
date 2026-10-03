@@ -1,3 +1,4 @@
+
 # Wicket 单选按钮示例–单选按钮
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/wicket/wicket-radio-buttons-example-radiochoice/>
@@ -5,7 +6,7 @@
 Wicket 示例创建一组单选按钮，并默认选中单个单选按钮。
 
 ```java
- //Java 
+//Java 
 import org.apache.wicket.markup.html.form.RadioChoice;
 ...
 //choices in radio button
@@ -22,12 +23,12 @@ RadioChoice<String> hostingType = new RadioChoice<String>(
 <span wicket:id="hosting"></span> 
 ```
 
-## 1.Wicket 单选按钮示例
+## 1. Wicket 单选按钮示例
 
-示例通过“**单选按钮**显示一组单选按钮，默认选中单个单选按钮。
+示例通过“单选按钮”显示一组单选按钮，默认选中单个单选按钮。
 
 ```java
- package com.mkyong.user;
+package com.mkyong.user;
 
 import java.util.Arrays;
 import java.util.List;
@@ -70,12 +71,12 @@ public class RadioChoicePage extends WebPage {
 } 
 ```
 
- ## 2.Wicket HTML 页面
+## 2. Wicket HTML 页面
 
-页来呈现一组单选按钮。
+页面来呈现一组单选按钮。
 
-```java
- <html>
+```html
+<html>
 <head>
 <style>
 .feedbackPanelINFO {
@@ -100,9 +101,9 @@ public class RadioChoicePage extends WebPage {
 </html> 
 ```
 
- ## 3.演示
+## 3. 演示
 
-开始并访问—*http://localhost:8080/wicket examples/*
+开始并访问—`http://localhost:8080/wicket examples/`
 
 自动选择“VPS”。
 
@@ -110,17 +111,12 @@ public class RadioChoicePage extends WebPage {
 
 现在，选择“专用服务器”选项并单击显示按钮。
 
-![radio button in wicket](img/0fdbb571149852697c06f2900e8ea108.png "wicket-radiochoice-example2")Download it – [Wicket-RadioChoice-Examples.zip](http://web.archive.org/web/20190304031831/http://www.mkyong.com/wp-content/uploads/2011/05/Wicket-RadioChoice-Examples.zip) (7KB)
+![radio button in wicket](img/0fdbb571149852697c06f2900e8ea108.png "wicket-radiochoice-example2")
+
+Download it – [Wicket-RadioChoice-Examples.zip](http://web.archive.org/web/20190304031831/http://www.mkyong.com/wp-content/uploads/2011/05/Wicket-RadioChoice-Examples.zip) (7KB)
 
 ## 参考
 
-1.  [Wicket RadioChoice Javadoc](http://web.archive.org/web/20190304031831/http://wicket.apache.org/apidocs/1.4/org/apache/wicket/markup/html/form/RadioChoice.html)
+1. [Wicket RadioChoice Javadoc](http://web.archive.org/web/20190304031831/http://wicket.apache.org/apidocs/1.4/org/apache/wicket/markup/html/form/RadioChoice.html)
 
 [radio button](http://web.archive.org/web/20190304031831/http://www.mkyong.com/tag/radio-button/) [wicket](http://web.archive.org/web/20190304031831/http://www.mkyong.com/tag/wicket/)
-
-
-
-
-
-
-

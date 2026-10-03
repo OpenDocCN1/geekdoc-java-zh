@@ -1,10 +1,11 @@
+
 # 2023 年免费学习 Python 编程的 10 大网站
 
 > 原文：<https://medium.com/javarevisited/10-free-python-tutorials-and-courses-from-google-microsoft-and-coursera-for-beginners-96b9ad20b4e6?source=collection_archive---------0----------------------->
 
 [![](img/dcb89b559f59efcf3984b0359fae7cbb.png)](http://bit.ly/complete-python3-bootcamp)
 
-大家好，如果你想在 2023 年学习 Python，并寻找一些免费网站和免费 Python 教程，那么你来对地方了。前面我已经分享过学习 Python 可以做的 [**最好的 Python 编程课程**](/better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec) 和 [**Python 项目**](/javarevisited/8-projects-you-can-buil-to-learn-python-in-2020-251dd5350d56) 。
+大家好，如果你想在 2023 年学习 Python，并寻找一些免费网站和免费 Python 教程，那么你来对地方了。前面我已经分享过学习 Python 可以做的[**最好的 Python 编程课程**](/better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec) 和[**Python 项目**](/javarevisited/8-projects-you-can-buil-to-learn-python-in-2020-251dd5350d56) 。
 
 今天，我将分享一些流行的网站来免费学习 Python 编码，以及来自 Google、Microsoft、Udemy、Coursera、Educative、FreeCodeCamp、CodeCademy、Javarevisited 等网站的免费 Python 编码教程。
 
@@ -32,7 +33,7 @@ Python 已经激励了许多人学习编码，并且还在继续激励着他们�
 
 在这里，你可以找到一些免费学习 Python 的好地方，我和一些 Python 专家一起精心挑选了这些资源。
 
-我有目的地选择尽可能少的资源，但仍然有一些选择。以防万一，如果你有任何其他[有用的免费教授 Python 开发的 Python 网站](https://dev.to/javinpaul/top-5-places-to-learn-python-programming-for-free-m4c),请随意建议。
+我有目的地选择尽可能少的资源，但仍然有一些选择。以防万一，如果你有任何其他[有用的免费教授 Python 开发的 Python 网站](https://dev.to/javinpaul/top-5-places-to-learn-python-programming-for-free-m4c)，请随意建议。
 
 ## 1.谷歌
 
@@ -52,11 +53,11 @@ Udemy 是最受欢迎的在线课程平台之一，它可能拥有地球上最�
 
 与 [**CodeCademy**](https://bit.ly/codecademypro) 不同的是，你不需要任何订阅，只需要创建一个免费账号，然后就可以报名参加免费的 Python 课程。大多数讲师在首次推出课程时都保持免费，这样他们就可以获得一些关注、评论和社会证明。
 
-但是，也有完全免费的高质量 Python 课程，如针对初学者的<http://bit.ly/2D5vvnV>**和[**Python**](http://bit.ly/2CTK36X)。你可以加入他们学习 Python 3。下面是一些我最喜欢的深入学习 Python 的免费课。**
+但是，也有完全免费的高质量 Python 课程，如针对初学者的<http://bit.ly/2D5vvnV>**和[**Python**](http://bit.ly/2CTK36X)。你可以加入他们学习 Python 3。下面是一些我最喜欢的深入学习 Python 的免费课。
 
-****这里是报名链接—**[Python 编程入门](http://bit.ly/2D5vvnV)**
+**这里是报名链接—**[Python 编程入门](http://bit.ly/2D5vvnV)
 
-**<http://bit.ly/2D5vvnV>  
+<http://bit.ly/2D5vvnV>  
 
 Udemy 的优点是你可以向专家学习，但它不像 Codecademy 那样具有互动性。不过，如果你喜欢从视频中学习，没有比 Udemy 更好的地方了。
 
@@ -109,8 +110,11 @@ Udemy 的优点是你可以向专家学习，但它不像 Codecademy 那样具�
 该课程也是 Coursera 上的[**Python for Everybody Specialization**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fpython)的一部分，其中包含 4 个深入学习 Python 的课程:
 
 1.  [Python 数据结构](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fpython-data%3Fspecialization%3Dpython)
+
 2.  [使用 Python 访问 Web 数据](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fpython-network-data%3Fspecialization%3Dpython)
+
 3.  [通过 Python 使用数据库](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fpython-databases%3Fspecialization%3Dpython)
+
 4.  [顶点项目:用 Python 检索、处理和可视化数据](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fpython-data-visualization)
 
 所有课程都是**免费审核**，这意味着你可以免费加入并学习。但是，你不能参加作业和测验，也不会得到任何认证，直到你支付。
@@ -129,6 +133,8 @@ Udemy 的优点是你可以向专家学习，但它不像 Codecademy 那样具�
 
 如果谷歌有 Python 类，那微软怎么会被甩在后面？它在 Edx 上也有一个[免费 Python 课程，这是另一个流行的免费教育在线门户。](https://www.awin1.com/cread.php?awinmid=6798&awinaffid=631878&clickref=&p=%5B%5Bhttps%3A%2F%2Fwww.edx.org%2Fcourse%2Fintroduction-to-python-absolute-beginner-4%5D%5D)
 
+
+
 这门课程名为*Python 入门:绝对初学者*，是学习 Python 的免费课程，由资深内容开发者埃里克·卡普林教授。
 
 本课程将在 Jupyter Notebooks 教你 Python，这是一个基于浏览器的在线编码编辑器，用于 [Python](https://hackernoon.com/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec) ，这意味着你不需要安装 Python。这是一个为期 5 周的课程，每周学习 3 到 4 个小时。
@@ -146,28 +152,51 @@ Udemy 的优点是你可以向专家学习，但它不像 Codecademy 那样具�
 本课程将向您全面介绍 python 中的所有核心概念。跟随视频，你很快就会成为一名 python 程序员！你可以在 Youtube 上免费观看，这是目录
 
 ⭐️内容⭐
+
 ⌨️ (0:00)简介
+
 ⌨️ (1:45)安装 Python & PyCharm
+
 ⌨️ (6:40)设置& Hello World
+
 ⌨️ (10:23)绘制形状
+
 ⌨️ (15:06)变量&数据类型
+
 ⌨️ (27:03)处理字符串
+
 ⌮38:18)处理数字
+
 ⌮ 元组
+
 ⌨️ (1:24:15)函数
+
 ⌨️ (1:34:11)返回语句
+
 ⌨️ (1:40:06) If 语句
+
 ⌨️ (1:54:07) If 语句&比较
+
 ⌨️ (2:00:37)构建一个更好的计算器
+
 ⌨️ (2:07:17)字典
+
 ⌨️ (2:14:13) While 循环
+
 ⌨️(2:37) 除外
+
 ⌨️ (3:12:41)读文件
+
 ⌨️ (3:21:26)写文件
+
 ⌨️ (3:28:13)模块& Pip
+
 ⌨️ (3:43:56)类&对象
+
 ⌨️ (3:57:37)构建选择题
+
 ⌨️ (4:08:28)对象函数
+
 ⌨️ (4:12:37)继承【T31
 
 下面是你可以观看的 Youtube 视频，在 4 个小时内学会 Python:
@@ -189,7 +218,9 @@ Udemy 的优点是你可以向专家学习，但它不像 Codecademy 那样具�
 本课程可适用于多个专业或专业证书项目。完成本课程将计入您在以下任何计划中的学习:
 
 *   [IBM 数据科学专业证书](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fprofessional-certificates%2Fibm-data-science)
+
 *   [IBM 应用人工智能专业证书](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fprofessional-certificates%2Fapplied-artifical-intelligence-ibm-watson-ai)
+
 *   [应用数据科学专业](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Fspecializations%2Fapplied-data-science)
 
 **这里是报名链接—** [**数据科学的 Python 和 AI**](https://coursera.pxf.io/c/3294490/1164545/14726?u=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fpython-for-applied-data-science-ai)
@@ -233,16 +264,27 @@ Udemy 的优点是你可以向专家学习，但它不像 Codecademy 那样具�
 您可能喜欢的其他 **Python 文章和资源**
 
 *   [2023 年学习 Python 的 10 个理由](https://javarevisited.blogspot.com/2018/05/10-reasons-to-learn-python-programming.html)
+
 *   [初学者学习 Python 的 5 大课程](https://javarevisited.blogspot.com/2018/03/top-5-courses-to-learn-python-in-2018.html)
+
 *   [Python 开发者的五大 Web 开发框架](https://javarevisited.blogspot.com/2019/04/top-5-python-web-development-frameworks.html)
+
 *   [Python 与 JavaScript——从哪个开始比较好？](https://javarevisited.blogspot.com/2019/05/python-vs-javascript-which-programming-language-beginners-should-learn.html)
+
 *   [深入学习 Python 的 10 门免费在线课程](https://javarevisited.blogspot.com/2018/12/10-free-python-courses-for-programmers.html)
+
 *   [面向数据科学和机器学习的 8 大 Python 库](https://javarevisited.blogspot.com/2018/10/top-8-python-libraries-for-data-science-machine-learning.html)
+
 *   [Python vs Java——初学者应该学习哪种编程语言？](https://javarevisited.blogspot.com/2018/06/java-vs-python-which-programming-language-to-learn-first.html)
+
 *   [5 Python 中的数据科学与机器学习课程](https://javarevisited.blogspot.com/2018/03/top-5-data-science-and-machine-learning-online-courses-to-learn-online.html)
+
 *   [2023 年网络开发者路线图](https://hackernoon.com/the-2019-web-developer-roadmap-ab89ac3c380e)
+
 *   [面向程序员的 10 本免费 Python 编程书籍](http://www.java67.com/2017/05/top-7-free-python-programming-books-pdf-online-download.html)
+
 *   [数据科学五大 Python 书籍](https://javarevisited.blogspot.com/2019/08/top-5-python-books-for-data-science-and-machine-learning.html)
+
 *   [2023 年加入 10 门 Python Web 开发课程](/javarevisited/top-10-courses-to-learn-python-for-web-development-in-2020-best-of-lot-efe11fb6d212)
 
 感谢您阅读本文。如果你喜欢这些网站，请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。

@@ -1,85 +1,88 @@
-# Jackson 2–将 Java 对象转换成 JSON 从 JSON 转换过来
+
+# Jackson 2 – 将 Java 对象转换成 JSON 或从 JSON 转换过来
 
 > 原文：<http://web.archive.org/web/20230101150211/https://www.mkyong.com/java/jackson-2-convert-java-object-to-from-json/>
 
 在本教程中，我们将向您展示如何使用 [Jackson 2.x](http://web.archive.org/web/20221117184233/https://github.com/FasterXML/jackson-databind/) 在 Java 对象和 JSON 之间进行转换。
 
-## 1.基础
+## 1. 基础
 
-1.1 将一个`Staff`对象转换成 from JSON。
+1.1 将一个`Staff`对象转换成 JSON。
 
-`writeValue(...)`–Java 对象到 JSON
-
-```java
- ObjectMapper mapper = new ObjectMapper();
-
-	// Java object to JSON file
-	mapper.writeValue(new File("c:\\test\\staff.json"), new Staff());
-
-	// Java object to JSON string
-	String jsonString = mapper.writeValueAsString(object); 
-```
-
-`readValue(...)`–JSON 到 Java 对象
+`writeValue(...)` – Java 对象到 JSON
 
 ```java
- ObjectMapper mapper = new ObjectMapper();
+ObjectMapper mapper = new ObjectMapper();
 
-	//JSON file to Java object
-	Staff obj = mapper.readValue(new File("c:\\test\\staff.json"), Staff.class);
+// Java object to JSON file
+mapper.writeValue(new File("c:\\test\\staff.json"), new Staff());
 
-	//JSON URL to Java object
-	Staff obj = mapper.readValue(new URL("http://some-domains/api/name.json"), Staff.class);
-
-	//JSON string to Java Object
-	Staff obj = mapper.readValue("{'name' : 'mkyong'}", Staff.class); 
+// Java object to JSON string
+String jsonString = mapper.writeValueAsString(object);
 ```
 
-*用杰克逊 2.9.8 测试的 PS*
+`readValue(...)` – JSON 到 Java 对象
+
+```java
+ObjectMapper mapper = new ObjectMapper();
+
+// JSON file to Java object
+Staff obj = mapper.readValue(new File("c:\\test\\staff.json"), Staff.class);
+
+// JSON URL to Java object
+Staff obj = mapper.readValue(new URL("http://some-domains/api/name.json"), Staff.class);
+
+// JSON string to Java Object
+Staff obj = mapper.readValue("{'name' : 'mkyong'}", Staff.class);
+```
+
+*用 Jackson 2.9.8 测试的 PS*
 
 **Note**
-Read this [How to parse JSON with Jackson](http://web.archive.org/web/20221117184233/https://www.mkyong.com/java/jackson-how-to-parse-json/), containing Jackson examples like Object to/from JSON, `@JsonView`, `@JsonProperty`, `@JsonInclude`, `@JsonIgnore`, and some FAQs.
 
-## 1.下载杰克逊
+阅读这篇 [How to parse JSON with Jackson](http://web.archive.org/web/20221117184233/https://www.mkyong.com/java/jackson-how-to-parse-json/)，其中包含 Jackson 示例，如 Object 与 JSON 互转、`@JsonView`、`@JsonProperty`、`@JsonInclude`、`@JsonIgnore` 以及一些常见问题解答。
 
-1.1 声明`jackson-databind`，将拉入`jackson-annotations`和`jackson-core`
+## 2. 下载 Jackson
+
+2.1 声明`jackson-databind`，它将拉入`jackson-annotations`和`jackson-core`。
 
 pom.xml
 
-```java
- <dependency>
-		<groupId>com.fasterxml.jackson.core</groupId>
-		<artifactId>jackson-databind</artifactId>
-		<version>2.9.8</version>
-	</dependency> 
+```xml
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.9.8</version>
+</dependency>
 ```
 
-1.2 回顾杰克逊依赖关系:
+2.2 查看 Jackson 依赖关系：
 
 Terminal
 
-```java
- $ mvn dependency:tree
+```bash
+$ mvn dependency:tree
 
 \- com.fasterxml.jackson.core:jackson-databind:jar:2.9.8:compile
 [INFO]    +- com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0:compile
-[INFO]    \- com.fasterxml.jackson.core:jackson-core:jar:2.9.8:compile 
+[INFO]    \- com.fasterxml.jackson.core:jackson-core:jar:2.9.8:compile
 ```
 
-**Difference between Jackson 1 and Jackson 2**
-Most of the APIs still maintains the same method name and signature, just the packaging is different.
+**Jackson 1 和 Jackson 2 的区别**
 
-*   杰克逊 1 . x–org . code Haus . Jackson . map
-*   Jackson 2 . x–com . faster XML . Jackson . databind
+大多数 API 的方法名和签名保持不变，只是包名不同。
 
-## 2.波乔
+*   Jackson 1.x – `org.codehaus.jackson.map`
+*   Jackson 2.x – `com.fasterxml.jackson.databind`
+
+## 3. POJO
 
 用于测试的简单 Java 对象。
 
 Staff.java
 
 ```java
- public class Staff {
+public class Staff {
 
     private String name;
     private int age;
@@ -87,16 +90,16 @@ Staff.java
     private List<String> skills;            //  List
     private Map<String, BigDecimal> salary; //  Map
 
-	// getters , setters, some boring stuff
-} 
+    // getters, setters, some boring stuff
+}
 ```
 
-## 3.JSON 的 Java 对象
+## 4. Java 对象转 JSON
 
 JacksonExample1.java
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -155,21 +158,21 @@ public class JacksonExample1 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 c:\\test\\staff.json
 
-```java
- {"name":"mkyong","age":38,"position":["Founder","CTO","Writer"],"skills":["java","python","node","kotlin"],"salary":{"2018":14000,"2012":12000,"2010":10000}} 
+```json
+{"name":"mkyong","age":38,"position":["Founder","CTO","Writer"],"skills":["java","python","node","kotlin"],"salary":{"2018":14000,"2012":12000,"2010":10000}}
 ```
 
 Terminal
 
-```java
- {"name":"mkyong","age":38,"position":["Founder","CTO","Writer"],"skills":["java","python","node","kotlin"],"salary":{"2018":14000,"2012":12000,"2010":10000}}
+```json
+{"name":"mkyong","age":38,"position":["Founder","CTO","Writer"],"skills":["java","python","node","kotlin"],"salary":{"2018":14000,"2012":12000,"2010":10000}}
 
 {
   "name" : "mkyong",
@@ -181,15 +184,15 @@ Terminal
     "2012" : 12000,
     "2010" : 10000
   }
-} 
+}
 ```
 
-## 4.JSON 到 Java 对象
+## 5. JSON 转 Java 对象
 
 JacksonExample2.java
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -225,13 +228,13 @@ public class JacksonExample2 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- Staff{name='mkyong', age=37, position=null, skills=[java, python], salary=null}
+Staff{name='mkyong', age=37, position=null, skills=[java, python], salary=null}
 
 {
   "name" : "mkyong",
@@ -239,16 +242,15 @@ public class JacksonExample2 {
   "position" : null,
   "skills" : [ "java", "python" ],
   "salary" : null
-} 
+}
 ```
 
 **Note**
-More Jackson examples read this – [How to parse JSON with Jackson](http://web.archive.org/web/20221117184233/https://www.mkyong.com/java/jackson-how-to-parse-json/)
+
+更多 Jackson 示例请阅读 – [How to parse JSON with Jackson](http://web.archive.org/web/20221117184233/https://www.mkyong.com/java/jackson-how-to-parse-json/)
 
 ## 参考
 
-*   [杰克逊数据绑定官网](http://web.archive.org/web/20221117184233/https://github.com/FasterXML/jackson-databind/)
-*   [Jackson–如何解析 JSON](http://web.archive.org/web/20221117184233/https://www.mkyong.com/java/jackson-how-to-parse-json/)
-*   [Gson–如何解析 JSON](http://web.archive.org/web/20221117184233/https://www.mkyong.com/java/how-to-parse-json-with-gson/)
-
-<input type="hidden" id="mkyong-current-postId" value="13883">
+*   [Jackson 数据绑定官网](http://web.archive.org/web/20221117184233/https://github.com/FasterXML/jackson-databind/)
+*   [Jackson – 如何解析 JSON](http://web.archive.org/web/20221117184233/https://www.mkyong.com/java/jackson-how-to-parse-json/)
+*   [Gson – 如何解析 JSON](http://web.archive.org/web/20221117184233/https://www.mkyong.com/java/how-to-parse-json-with-gson/)

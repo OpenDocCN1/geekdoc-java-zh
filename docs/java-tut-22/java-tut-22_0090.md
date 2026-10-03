@@ -1,3 +1,4 @@
+
 # 覆盖和隐藏方法
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/IandI/override.html`](https://docs.oracle.com/javase/tutorial/java/IandI/override.html)
@@ -17,7 +18,6 @@
 隐藏静态方法和覆盖实例方法之间的区别具有重要的影响：
 
 +   调用的覆盖实例方法的版本是在子类中的版本。
-
 +   调用的隐藏静态方法的版本取决于它是从超类还是从子类调用的。
 
 考虑一个包含两个类的示例。第一个是`Animal`，包含一个实例方法和一个静态方法：
@@ -31,7 +31,6 @@ public class Animal {
         System.out.println("The instance method in Animal");
     }
 }
-
 ```
 
 第二个类，`Cat`，是`Animal`的一个子类：
@@ -52,7 +51,6 @@ public class Cat extends Animal {
         myAnimal.testInstanceMethod();
     }
 }
-
 ```
 
 `Cat`类覆盖了`Animal`中的实例方法，并隐藏了`Animal`中的静态方法。这个类中的`main`方法创建了一个`Cat`的实例，并在类上调用`testClassMethod()`，在实例上调用`testInstanceMethod()`。
@@ -62,7 +60,6 @@ public class Cat extends Animal {
 ```java
 The static method in Animal
 The instance method in Cat
-
 ```
 
 如约定，调用的隐藏静态方法的版本是在超类中的版本，调用的覆盖实例方法的版本是在子类中的版本。
@@ -187,7 +184,6 @@ public class FlyingCar implements OperateCar, FlyCar {
 public interface Mammal {
     String identifyMyself();
 }
-
 ```
 
 ```java
@@ -196,7 +192,6 @@ public class Horse {
         return "I am a horse.";
     }
 }
-
 ```
 
 ```java
@@ -206,7 +201,6 @@ public class Mustang extends Horse implements Mammal {
         System.out.println(myApp.identifyMyself());
     }
 }
-
 ```
 
 方法`Mustang.identifyMyself`返回字符串`I am a horse.` 类`Mustang`继承自类`Horse`的方法`identifyMyself`，该方法覆盖了接口`Mammal`中同名的抽象方法。
@@ -225,13 +219,9 @@ public class Mustang extends Horse implements Mammal {
 
 定义一个与超类方法具有相同签名的方法
 
-|   | 超类实例方法 | 超类静态方法 |
+| | 超类实例方法 | 超类静态方法 |
 | --- | --- | --- |
 | 子类实例方法 | 覆盖 | 生成编译时错误 |
 | 子类静态方法 | 生成编译时错误 | 隐藏 |
 
-* * *
-
 **注意**：在子类中，您可以重载从超类继承的方法。这样重载的方法既不隐藏也不覆盖超类实例方法——它们是子类独有的新方法。
-
-* * *

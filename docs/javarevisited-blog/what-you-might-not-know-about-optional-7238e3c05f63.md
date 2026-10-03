@@ -1,3 +1,4 @@
+
 # 你可能不知道的可选
 
 > 原文：<https://medium.com/javarevisited/what-you-might-not-know-about-optional-7238e3c05f63?source=collection_archive---------2----------------------->
@@ -11,7 +12,7 @@
 ```
 · [What’s the correct usage of ofNullable?](#8607)
 · [Don’t return null, use Optional](#60f9)
-· [Why is Optional#of necessary?](#4748)
+· [Why is Optional#of necessary?](#474e)
 · [Why Optional#of throws NullPointerException?](#127e)
 · [You shouldn’t use Optional for method arguments](#607e)
 ```

@@ -1,3 +1,4 @@
+
 # 命令式编程和声明式编程的区别
 
 > 原文：<https://medium.com/javarevisited/differences-between-imperative-programming-and-declarative-programming-fff6c63d8c1c?source=collection_archive---------1----------------------->
@@ -6,7 +7,7 @@
 
 詹姆斯·哈里逊在 [Unsplash](https://unsplash.com/@jstrippa) 上拍摄的照片
 
-## 编程范例简介。
+## 编程范例简介
 
 众所周知，开发人员使用各种不同的编程语言，他们在编程时都遵循一个重要的原则，那就是他们遵循的方法或策略。
 
@@ -26,7 +27,7 @@
 
 ## 声明式编程
 
-在这种范式中，程序员解释期望输出背后的逻辑(计算逻辑),而不是关注如何实际完成它。
+在这种范式中，程序员解释期望输出背后的逻辑（计算逻辑），而不是关注如何实际完成它。
 
 这主要集中在需要做什么上，而不是应该如何做，这将详细说明代码是如何工作的。在这种情况下，编译器可以做出决定。
 

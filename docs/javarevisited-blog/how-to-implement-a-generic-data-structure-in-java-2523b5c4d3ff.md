@@ -1,3 +1,4 @@
+
 # 如何在 Java 中实现通用堆栈数据结构
 
 > 原文：<https://medium.com/javarevisited/how-to-implement-a-generic-data-structure-in-java-2523b5c4d3ff?source=collection_archive---------1----------------------->
@@ -18,15 +19,15 @@ Java 是一种静态类型语言，它要求用户在声明变量之前定义数
 
 [https://raw . githubusercontent . com/menhaj 007/generic stack/main/zip code . Java](https://raw.githubusercontent.com/menhaj007/genericStack/main/ZipCode.java)
 
-要实例化一个[通用 Java 类](https://javarevisited.blogspot.com/2012/08/how-to-write-parametrized-class-method-Generic-example.html#axzz6tWnd7QYO)，在类名旁边添加< T >或< E >或任何其他首选单词或字母。比如公共类汽车< T >，公共类队列< E >或者公共类树<节点>。
+要实例化一个[通用 Java 类](https://javarevisited.blogspot.com/2012/08/how-to-write-parametrized-class-method-Generic-example.html#axzz6tWnd7QYO)，在类名旁边添加`<T>`或`<E>`或任何其他首选单词或字母。比如`public class Car<T>`，`public class Queue<E>`或者`public class Tree<Node>`。
 
 让我们比较一下上面的两个示例/(链接)类:
 
-在上面的例子中有两个关键的区别。第一个区别是泛型类需要用诸如<integer>、<double>、<string>之类的对象包装器来实例化。另一个区别是，在 main 方法中可以用不同的数据类型创建同一个类的多个实例。</string></double></integer>
+在上面的例子中有两个关键的区别。第一个区别是泛型类需要用诸如`<Integer>`、`<Double>`、`<String>`之类的对象包装器来实例化。另一个区别是，在`main`方法中可以用不同的数据类型创建同一个类的多个实例。
 
-另一方面，在类 Car1 中，变量类型必须在创建它的实例之前定义。如果 serialCode 和 weight 的数据类型需要改变，就需要一个新的类。因此，有效使用泛型类可以节省时间和空间。
+另一方面，在类`Car1`中，变量类型必须在创建它的实例之前定义。如果`serialCode`和`weight`的数据类型需要改变，就需要一个新的类。因此，有效使用泛型类可以节省时间和空间。
 
-注意:用户可以用多个键和值对定义一个泛型类，比如 [HashMap](https://www.java67.com/2013/02/10-examples-of-hashmap-in-java-programming-tutorial.html) 。比如，公共类 Zipcode < code，城市名>。
+注意:用户可以用多个键和值对定义一个泛型类，比如 [HashMap](https://www.java67.com/2013/02/10-examples-of-hashmap-in-java-programming-tutorial.html) 。比如，`public class Zipcode<code, cityName>`。
 
 ```
 public class ZipCode<code, city> {
@@ -55,16 +56,18 @@ public class ZipCode<code, city> {
 
 [https://raw . githubusercontent . com/menhaj 007/generic stack/main/zip code . Java](https://raw.githubusercontent.com/menhaj007/genericStack/main/ZipCode.java)
 
-为了允许一个比整数容量更长的数，只需要用<long string="">替换<integer string="">即可。</integer></long>
+为了允许一个比整数容量更长的数，只需要用`<Long, String>`替换`<Integer, String>`即可。
 
 让我们在实现之前回顾一下[堆栈数据结构](https://www.java67.com/2013/08/ata-structures-in-java-programming-array-linked-list-map-set-stack-queue.html)。堆栈是一种后进先出(LIFO)的数据结构(维基百科)。这意味着当程序员决定设计一个堆栈数据结构时，他/她至少要实现以下方法或算法:
 
-pop()、push()、top()、isFull()、isEmpty()和 size()。栈中常用的数据结构之一是一个[数组对象](/javarevisited/20-array-coding-problems-and-questions-from-programming-interviews-869b475b9121?source=---------33------------------)。在 Java 中，数组的大小和数据类型必须在实例化时定义。否则，它将抛出错误。我们来比较一下 JavaScript 的数组和 Java 的数组。
+`pop()`、`push()`、`top()`、`isFull()`、`isEmpty()`和`size()`。栈中常用的数据结构之一是一个[数组对象](/javarevisited/20-array-coding-problems-and-questions-from-programming-interviews-869b475b9121?source=---------33------------------)。在 Java 中，数组的大小和数据类型必须在实例化时定义。否则，它将抛出错误。我们来比较一下 JavaScript 的数组和 Java 的数组。
 
 `JavaScript: let myArray = []`
 
 `Java: int[] myArray = new int[10],`
+
 或
+
 `data-type[] variable = new data-type[size]`
 
 通过查看 Java 的数组实现，很明显，如果程序员需要创建一个[字符串数组](https://javarevisited.blogspot.com/2013/11/java-array-101-for-programmers-and.html)，那么他/她必须重做整个工作，除非使用通用对象。通常，在声明变量之前，数据类型必须是静态类型的。
@@ -85,4 +88,4 @@ pop()、push()、top()、isFull()、isEmpty()和 size()。栈中常用的数据�
 
 [https://raw . githubusercontent . com/menhaj 007/generic stack/main/main . Java](https://raw.githubusercontent.com/menhaj007/genericStack/main/Main.java)
 
-<https://en.wikipedia.org/wiki/Stack_%28abstract_data_type%29>      <https://www.geeksforgeeks.org/stack-data-structure-introduction-program/>  <https://algs4.cs.princeton.edu/13stacks/>  </javarevisited/7-best-courses-to-learn-data-structure-and-algorithms-d5379ae2588> 
+<https://en.wikipedia.org/wiki/Stack_%28abstract_data_type%29>      <https://www.geeksforgeeks.org/stack-data-structure-introduction-program/>  <https://algs4.cs.princeton.edu/13stacks/>  </javarevisited/7-best-courses-to-learn-data-structure-and-algorithms-d5379ae2588>

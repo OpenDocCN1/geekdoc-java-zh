@@ -1,13 +1,14 @@
+
 # Java–将数组转换为数组列表
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java/java-convert-array-to-arraylist/>
 
-在 Java 中，我们可以使用`new ArrayList<>(Arrays.asList(array))`将一个`Array`转换成一个`ArrayList`
+在 Java 中，我们可以使用`new ArrayList<>(Arrays.asList(array))`将一个`Array`转换成一个`ArrayList`。
 
-ArrayExample1.java
+`ArrayExample1.java`：
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,36 +27,36 @@ public class ArrayExample1 {
         list.forEach(x -> System.out.println(x));
 
     }
-} 
+}
 ```
 
-输出
+输出：
 
 ```java
- A
+A
 B
 C
-D 
+D
 ```
 
 `Arrays.asList`返回一个固定的或不可修改的列表，如果我们修改列表，`UnsupportedOperationException`将被抛出。
 
 ```java
- List<String> list = Arrays.asList(str); 				 // unmodifiable list
+List<String> list = Arrays.asList(str); // unmodifiable list
 
-	list.add("D"); 		// java.lang.UnsupportedOperationException
+list.add("D"); // java.lang.UnsupportedOperationException
 
-	List<String> list2 = new ArrayList<>(Arrays.asList(str)); // modifiable list
+List<String> list2 = new ArrayList<>(Arrays.asList(str)); // modifiable list
 
-	list2.add("D"); 	// ok 
+list2.add("D"); // ok
 ```
 
-## 1.Java 8 流
+## 1. Java 8 流
 
-ArrayExample2.java
+`ArrayExample2.java`：
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,30 +78,30 @@ public class ArrayExample2 {
         list2.forEach(x -> System.out.println(x));
 
     }
-} 
+}
 ```
 
-输出
+输出：
 
 ```java
- A
+A
 B
 C
 D
 A
 B
 C
-D 
+D
 ```
 
-## 2.Java 9–list . of()
+## 2. Java 9–`List.of()`
 
 *P.S `List.of`返回固定或不可修改列表*
 
-ArrayExample3.java
+`ArrayExample3.java`：
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -119,21 +120,21 @@ public class ArrayExample3 {
         list.forEach(x -> System.out.println(x));
 
     }
-} 
+}
 ```
 
-输出
+输出：
 
 ```java
- A
+A
 B
 C
-D 
+D
 ```
 
 ## 参考
 
-*   [Java List Java . lang . unsupportedoperationexception](/web/20221205211249/https://mkyong.com/java/java-list-java-lang-unsupportedoperationexception/)
-*   [Java 9 列表](http://web.archive.org/web/20221205211249/https://docs.oracle.com/javase/9/docs/api/java/util/List.html#of--)
+* [Java List Java . lang . unsupportedoperationexception](/web/20221205211249/https://mkyong.com/java/java-list-java-lang-unsupportedoperationexception/)
+* [Java 9 列表](http://web.archive.org/web/20221205211249/https://docs.oracle.com/javase/9/docs/api/java/util/List.html#of--)
 
 <input type="hidden" id="mkyong-current-postId" value="15069">

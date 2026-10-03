@@ -1,3 +1,4 @@
+
 # 搜索现在可用的 Java 访谈书籍
 
 > 原文：<https://medium.com/javarevisited/grokking-the-java-interview-book-available-now-ba6482ff25c1?source=collection_archive---------1----------------------->
@@ -24,23 +25,15 @@
 
 [**探寻 Java 面试**](https://www.amazon.com/dp/B08P55JZBX/?tag=javamysqlanta-20) 书籍包含了重要主题的常见 Java 问题，如:
 
-1。面向对象编程
-
-2。Java 基础
-
-3。Java 合集
-
-4。Java 多线程
-
-5。碎片帐集
-
-6.JDBC
-
-7。仿制药
-
-8。设计模式
-
-9.电话面试问题
+1. 面向对象编程
+2. Java 基础
+3. Java 合集
+4. Java 多线程
+5. 碎片帐集
+6. JDBC
+7. 仿制药
+8. 设计模式
+9. 电话面试问题
 
 如果您正在准备[核心 Java 面试](https://javarevisited.blogspot.com/2015/10/133-java-interview-questions-answers-from-last-5-years.html)，那么我强烈建议您在电话面试或面对面面试之前仔细阅读这些 Java 面试问题，您不仅会获得回答任何 Java 问题的信心和知识，还会学会如何让 Java 面试对您有利。
 
@@ -56,7 +49,7 @@
 
 这里是在**亚马逊**——[**搜索 Java 访谈**](https://www.amazon.com/dp/B08P55JZBX/?tag=javamysqlanta-20) 上购买这本书的链接
 
-<https://www.amazon.com/dp/B08P55JZBX/?tag=javamysqlanta-20>  
+<https://www.amazon.com/dp/B08P55JZBX/?tag=javamysqlanta-20>
 
 如果你在阅读这本书时遇到任何问题，你也可以给我发邮件或者在 Twitter 上给我发消息。
 
@@ -88,4 +81,4 @@
 
 **p . s .**——如果你正在寻找在黑色星期五促销中可以买到的最好的 Udemy 课程，那么你也可以看看我列出的在黑色星期五促销中可以买到的 [**10 个最好的 Udemy 课程**](https://javarevisited.blogspot.com/2020/11/top-10-udemy-courses-you-can-buy-in.html#axzz6enw6Ycw1) 。包含了最好的 Udemy 课程，学习 Docker、微服务、Spring Boot、MERN 栈、SQL、Python、网页设计，以及其他软件开发所需的必备技能。
 
-</javarevisited/15-best-udemy-courses-programmers-can-buy-on-black-friday-and-cyber-monday-2020-a803874f41d9> 
+</javarevisited/15-best-udemy-courses-programmers-can-buy-on-black-friday-and-cyber-monday-2020-a803874f41d9>

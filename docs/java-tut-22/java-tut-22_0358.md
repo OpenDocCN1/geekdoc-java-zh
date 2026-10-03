@@ -1,4 +1,5 @@
-# 调整 CelsiusConverter GUI
+
+# 调整 `CelsiusConverter` GUI
 
 > 原文：[`docs.oracle.com/javase/tutorial/uiswing/learn/adjustinggui.html`](https://docs.oracle.com/javase/tutorial/uiswing/learn/adjustinggui.html)
 
@@ -6,7 +7,7 @@
 
 ## 步骤 1：设置组件文本
 
-首先，双击`JTextField`和`JButton`以更改 IDE 插入的默认文本。当你从`JTextField`中擦除文本时，它会如下所示地缩小。将`JButton`的文本从“JButton1”更改为“Convert”。还将顶部`JLabel`的文本更改为“Celsius”，底部更改为“Fahrenheit”。
+首先，双击`JTextField`和`JButton`以更改 IDE 插入的默认文本。当你从`JTextField`中擦除文本时，它会如下所示地缩小。将`JButton`的文本从“`JButton1`”更改为“Convert”。还将顶部`JLabel`的文本更改为“Celsius”，底部更改为“Fahrenheit”。
 
 ![设置组件文本](img/70e84e4650d35a5f0a8be64b4692df40.png)
 
@@ -18,7 +19,7 @@
 
 ![设置 JTextField 和 JButton 大小](img/bebeb2074ff96bb430aa7920d2e93fc0.png)
 
-设置 JTextField 和 JButton 大小
+设置 `JTextField` 和 `JButton` 大小
 
 ## 步骤 3：移除额外空间
 
@@ -32,8 +33,6 @@
 
 ![简单 GUI 示例中 NetBeans 源选项卡的内容](img/nb-swing-19.png)
 
-*此图已经缩小以适应页面。
-
-点击图像以查看其自然大小。*
+*此图已经缩小以适应页面。点击图像以查看其自然大小。*
 
 要查看完整的代码，请根据需要在 IDE 中上下滚动。你可以通过点击源编辑器左侧的 + 或 - 符号来展开或折叠某些代码块（如方法体）。

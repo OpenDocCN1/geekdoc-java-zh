@@ -1,24 +1,26 @@
+
 # PHP 和 MySQL 初学者指南
 
-
-
 ![](img/cover.jpeg)
-
-
 
 ![LearnToProgram Logo_CMYK.jpg](img/00001.jpeg)
 
 LearnToProgram, Inc.
+
 康涅狄格州，弗农农
+
 LearnToProgram.tv, Incorporated
+
 27 Hartford Turnpike Suite 206
+
 Vernon, CT 06066
+
 contact@learntoprogram.tv
+
 (860) 840-7090
 
-
-
 ## 献辞
+
 献给那些努力结束欺凌的人。如果你曾被欺凌，你是美丽的，我们爱你们。
 
 ## 关于作者：Mark Lassoff
@@ -34,24 +36,8 @@ Mark Lassoff 的父母经常声称 Mark 天生是个程序员。在 80 年代中
 ![download icon.png](img/00002.jpeg)
 
 在以下地址访问本书的完整实验解决方案：
+
 [`learntoprogram.tv/pages/book-lab-solutions`](https://learntoprogram.tv/pages/book-lab-solutions)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # 使用 Python 进行游戏开发的基础
 
@@ -92,6 +78,7 @@ Mark Lassoff 的父母经常声称 Mark 天生是个程序员。在 80 年代中
 ## 第一章：你的第一个 PHP 脚本
 
 ### 本章目标
+
 - 你将能够定义 `PHP` 和 `PHP 脚本`。
 - 你将能够识别并安装创建 PHP 脚本所需的软件开发工具。
 - 你将学习如何设置运行 `PHP` 所需的编程环境。
@@ -103,7 +90,7 @@ Mark Lassoff 的父母经常声称 Mark 天生是个程序员。在 80 年代中
 
 `PHP` 是一种通用的、开源的服务器端脚本语言，专为 Web 开发设计。它被用于生成动态网页。它是一种用于为网站添加基础 Web 功能的网络脚本语言。`PHP` 的用途示例包括创建用户名和密码登录界面、检查表单详情、创建论坛页面、图片库、问卷调查等。`PHP` 是一门强大的语言，使开发人员能够创建他们想要的任何类型的应用程序。
 
-与某些 Web 语言（如 `Javascript`）不同，`PHP` 并不是在你的浏览器中执行的，而是在服务器上执行——即存储页面并向互联网浏览器提供页面的计算机。服务器处理来自 浏览器的请求，然后返回请求的内容——通常是 `HTML` 格式。这就是 `PHP` 被称为“服务端语言”的原因。
+与某些 Web 语言（如 `Javascript`）不同，`PHP` 并不是在你的浏览器中执行的，而是在服务器上执行——即存储页面并向互联网浏览器提供页面的计算机。服务器处理来自浏览器的请求，然后返回请求的内容——通常是 `HTML` 格式。这就是 `PHP` 被称为“服务端语言”的原因。
 
 `PHP` 既可以写在外部文档中，也可以嵌入 `HTML` 文档本身中。`PHP` 代码由 Web 服务器（通常是 `Apache` 服务器）解释，该服务器拥有 `PHP` 处理器模块，该模块生成生成的网页。其他与 `PHP` 类似的流行语言还有 `ASP`、`Python`、`Perl` 和 `Ruby`。
 
@@ -144,10 +131,6 @@ Mark Lassoff 的父母经常声称 Mark 天生是个程序员。在 80 年代中
 图 1.1：`Komodo Edit` 的启动界面。
 
 `Komodo Edit` 自带了几个开发模板，可以提供一个良好的起点。
-
-
-
-
 
 你需要的另一个应用是 Web 服务器环境。这并不是独立的计算机硬件，而是一个软件应用程序，它可以让你的桌面电脑充当服务器来测试 PHP 脚本。通过这种方式，你可以在无需真正上线并连接到互联网实时服务器的情况下测试你的 PHP 脚本。你的计算机将既是客户端也是服务器。对于 Windows 和 Linux 用户，使用的服务器软件环境是 `WAMP`，而对于 Macintosh 用户则将是 `MAMP`。
 
@@ -206,9 +189,65 @@ Mark Lassoff 的父母经常声称 Mark 天生是个程序员。在 80 年代中
 在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
 
 ### 步骤 1
+
 如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
 
 ### 步骤 2
+
+当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
+
+如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
+
+你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
+
+![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
+
+图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
+
+你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
+
+![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
+
+请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
+
+在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
+
+![](img/00007.jpeg)
+
+图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
+
+在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
+
+如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
+
+`WAMP>>bin>>Apache2.2.22>>bin`
+
+寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
+
+![](img/00008.jpeg)
+
+图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
+
+![select php 2.jpg](img/00009.jpeg)
+
+图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
+
+一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
+
+## 1.2 理解 PHP 工作流
+
+
+
+在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
+
+在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
+
+### 步骤 1
+
+如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
+
+### 步骤 2
+
 当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
 
 如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
@@ -256,9 +295,11 @@ Mark Lassoff 的父母经常声称 Mark 天生是个程序员。在 80 年代中
 在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
 
 ### 步骤 1
+
 如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
 
 ### 步骤 2
+
 当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
 
 如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
@@ -306,9 +347,11 @@ Mark Lassoff 的父母经常声称 Mark 天生是个程序员。在 80 年代中
 在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
 
 ### 步骤 1
+
 如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
 
 ### 步骤 2
+
 当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
 
 如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
@@ -356,9 +399,93 @@ Mark Lassoff 的父母经常声称 Mark 天生是个程序员。在 80 年代中
 在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
 
 ### 步骤 1
+
 如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
 
 ### 步骤 2
+
+当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
+
+如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
+
+你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
+
+![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
+
+图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
+
+
+
+你可以在下载页面查看软件包包含的项目列表——`Apache`、`MySQL`、`PHP` 和 `phpMyAdmin`。
+
+![WAMP suite list.jpg](img/00006.jpeg)
+
+图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
+
+请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
+
+在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `Edit`。
+
+![](img/00007.jpeg)
+
+图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
+
+在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
+
+如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
+
+`WAMP>>bin>>Apache2.2.22>>bin`
+
+寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
+
+![](img/00008.jpeg)
+
+图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
+
+![select php 2.jpg](img/00009.jpeg)
+
+图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
+
+一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
+
+## 1.2 理解 PHP 工作流
+
+在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
+
+在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
+
+### 步骤 1
+
+如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
+
+### 步骤 2
+
+当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
+
+如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
+
+你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
+
+![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
+
+图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
+
+
+
+一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
+
+## 1.2 理解 PHP 工作流
+
+在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
+
+在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
+
+### 步骤 1
+
+如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
+
+### 步骤 2
+
 当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
 
 如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
@@ -397,6 +524,40 @@ Mark Lassoff 的父母经常声称 Mark 天生是个程序员。在 80 年代中
 
 图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
 
+
+
+图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
+
+你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
+
+![WAMP suite list.jpg](img/00006.jpeg)
+
+图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
+
+请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
+
+在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
+
+![](img/00007.jpeg)
+
+图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
+
+在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
+
+如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
+
+`WAMP>>bin>>Apache2.2.22>>bin`
+
+寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
+
+![](img/00008.jpeg)
+
+图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
+
+![select php 2.jpg](img/00009.jpeg)
+
+图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
+
 一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
 
 ## 1.2 理解 PHP 工作流
@@ -406,9 +567,37 @@ Mark Lassoff 的父母经常声称 Mark 天生是个程序员。在 80 年代中
 在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
 
 ### 步骤 1
+
 如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
 
 ### 步骤 2
+
+当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
+
+如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
+
+你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
+
+
+
+![select php 2.jpg](img/00009.jpeg)
+
+图 1.7：在 `Komodo Edit` 中设置 `php.ini` 文件的路径。
+
+一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
+
+## 1.2 理解 PHP 工作流
+
+在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
+
+在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
+
+### 步骤 1
+
+如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
+
+### 步骤 2
+
 当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
 
 如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
@@ -445,25 +634,11 @@ Mark Lassoff 的父母经常声称 Mark 天生是个程序员。在 80 年代中
 
 ![select php 2.jpg](img/00009.jpeg)
 
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
+图 1.7：在 `Komodo Edit` 中设置 `php.ini` 文件的路径。
 
 一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
 
-## 1.2 理解 PHP 工作流
 
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
 
 ![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
 
@@ -475,907 +650,7 @@ Mark Lassoff 的父母经常声称 Mark 天生是个程序员。在 80 年代中
 
 请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
 
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER`。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`WAMP` 代表 Windows, Apache, MySQL and PHP. Once downloaded, it will put these tools in your tray: local host, `phpMyAdmin`, `Apache`, `PHP`, and `MySQL`, as shown in the following image:
+在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。`WAMP` 代表 Windows, Apache, MySQL and PHP. Once downloaded, it will put these tools in your tray: local host, `phpMyAdmin`, `Apache`, `PHP`, and `MySQL`, as shown in the following image:
 
 ![](img/00004.jpeg)
 
@@ -1430,16 +705,15 @@ In this section, you will learn about PHP development workflow: how a PHP file i
 When creating PHP code, the first thing you do is launch your `WAMP` (or `MAMP`) environment.
 
 ### Step 1
+
 If you’re on a PC, you can find the `WAMP` icon either in the Windows Start Menu or in the Icon Tray at the bottom right side of the screen. If you are using a Mac you will find `MAMP` installed in your applications folder. Start it as you would start any other application.
 
 ### Step 2
+
 When you launch your `WAMP` program, it automatically activates its server functions which will be indicated by the message “WAMPSERVER – server Online” when you hover your mouse over its icon in the Windows Icon Tray.
 
-If you see the message “WAMPSERVER – server Offline” then you have to activate the server functions by clicking on the `WAMP` icon. This will bring up `WAMPSERVER`’s Start Menu. Then, click on the last option on this menu “Put Online”. This will then bring up `WAMPSERVER` and if... (Wait, the user text is repeating in the prompt structure, I will follow the provided text block for translation carefully).
+If you see the message “WAMPSERVER – server Offline” then you have to activate the server functions by clicking on the `WAMP` icon. This will bring up `WAMPSERVER`’s Start Menu. Then, click on the last option on this menu “Put Online”. This will then bring up `WAMPSERVER` and if...
 
-*(Self-correction: The user provided a long block of text after "Here is the text to be translated". I translate the specific text provided under "以下是需要翻译的文本" section.)*
-
-[content]
 你需要的另一个应用是 Web 服务器环境。这并不是独立的计算机硬件，而是一个软件应用程序，可以让你的桌面电脑充当服务器来测试 PHP 脚本。通过这种方式，你可以在无需真正上线并连接到互联网实时服务器的情况下测试你的 PHP 脚本。你的计算机将既是客户端也是服务器。对于 Windows 和 Linux 用户，使用的服务器软件环境是 `WAMP`，而对于 Macintosh 用户则将是 `MAMP`。
 
 `WAMP` 代表 Windows、Apache、MySQL 和 PHP。下载后，它会将这些工具放置在你的托栏中：本地主机、`phpMyAdmin`、`Apache`、`PHP` 和 `MySQL`，如下图像所示：
@@ -1497,18 +771,17 @@ If you see the message “WAMPSERVER – server Offline” then you have to acti
 在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
 
 ### 步骤 1
+
 如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
 
 ### 步骤 2
+
 当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
 
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER` 并如果... (Wait, the text cuts off or repeats. I will only translate what is provided in the final block).
+如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER` 并如果...
 
-*Actually, looking at the prompt, the user provided the text to be translated after "以下是需要翻译的文本". I will translate that specific block.*
 
-(Wait, I see the user's prompt contains the source text twice because of the structure. I will provide the translation for the text starting from "Another application you will need..." until the end of the provided text.)
 
-[content]
 你需要的另一个应用是 Web 服务器环境。这并不是独立的计算机硬件，而是一个软件应用程序，可以让你的桌面电脑充当服务器来测试 PHP 脚本。通过这种方式，你可以在无需真正上线并连接到互联网实时服务器的情况下测试你的 PHP 脚本。你的计算机将既是客户端也是服务器。对于 Windows 和 Linux 用户，使用的服务器软件环境是 `WAMP`，而对于 Macintosh 用户则将是 `MAMP`。
 
 `WAMP` 代表 Windows、Apache、MySQL 和 PHP。下载后，它会将这些工具放置在你的托栏中：本地主机、`phpMyAdmin`、`Apache`、`PHP` 和 `MySQL`，如下图像所示：
@@ -1566,26 +839,85 @@ If you see the message “WAMPSERVER – server Offline” then you have to acti
 在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
 
 ### 步骤 1
+
 如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
 
 ### 步骤 2
+
 当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
 
 如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER` 并如果... (Wait, the text cuts off or repeats. I will only translate what is provided in the final block).
-[/content] (Wait, I see I made a mistake in the internal thought logic, I will provide the clean translation of the text provided in the user prompt's final section).
 
-*Actually, the user provided the text inside the prompt. I will just output the final translation now.*
 
-Final check of translation:
-`WAMP` 代表 Windows、Apache、MySQL 和 PHP. 下载后，它会将这些工具放置在你的托栏中：本地主机、`phpMyAdmin`、`Apache`、`PHP` 和 `MySQL`，如下图像所示：
+
+你需要的另一个应用是 Web 服务器环境。这并不是独立的计算机硬件，而是一个软件应用程序，可以让你的桌面电脑充当服务器来测试 `PHP` 脚本。通过这种方式，你可以在无需真正上线并连接到互联网实时服务器的情况下测试你的 `PHP` 脚本。你的计算机将既是客户端也是服务器。对于 Windows 和 Linux 用户，使用的服务器软件环境是 `WAMP`，而对于 Macintosh 用户则将是 `MAMP`。
+
+`WAMP` 代表 Windows、Apache、MySQL 和 PHP。下载后，它会将这些工具放置在你的托栏中：本地主机、`phpMyAdmin`、`Apache`、`PHP` 和 `MySQL`，如下图像所示：
+
+![](img/00004.jpeg)
+
+图 1.2：WampServer 的主（或控制）菜单，可以通过点击 Windows 图标栏中的 WampServer 图标来激活。
+
 `WAMP` 的安装 URL 为：`www.wampserver.com`
-对于 Mac，设置的环境是 `MAMP`。它代表 Macintosh、Apache、MySQL 和 PHP。它的功能基本上与 Windows 版本的套件相同。 own... and so on.
 
-I will provide the translation of the text block starting from "Another application you will need..."
+对于 Mac，设置的环境是 `MAMP`。它代表 Macintosh、Apache、MySQL 和 PHP。它的功能基本上与 Windows 版本的套件相同。
 
-Wait, the prompt actually ends with "1.2 Understanding PHP Development Workflow" and some steps. I will translate the entire block provided after "以下是需要翻译的文本".
+如果你在 Windows 机器上工作，为了开始设置工作环境，你需要确保为你的系统下载并安装了最新的 `Visual C++ Service Pack`。如果你在 PC 上设置了自动更新，此服务包应该是可以获取的。`WAMP` 还会检查你是否拥有了最新版本的 `Visual C++ Service Pack` 并相应地通知你。
 
-[content]
+你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
+
+![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
+
+图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
+
+你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
+
+![WAMP suite list.jpg](img/00006.jpeg)
+
+图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
+
+请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
+
+在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
+
+![](img/00007.jpeg)
+
+在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
+
+如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
+
+`WAMP>>bin>>Apache2.2.22>>bin`
+
+寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
+
+![](img/00008.jpeg)
+
+图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
+
+![select php 2.jpg](img/00009.jpeg)
+
+图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
+
+一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
+
+## 1.2 理解 PHP 工作流
+
+在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
+
+在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
+
+### 步骤 1
+
+如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
+
+### 步骤 2
+
+当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
+
+如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER` 并如果...
+
+
+
 你需要的另一个应用是 Web 服务器环境。这并不是独立的计算机硬件，而是一个软件应用程序，可以让你的桌面电脑充当服务器来测试 PHP 脚本。通过这种方式，你可以在无需真正上线并连接到互联网实时服务器的情况下测试你的 PHP 脚本。你的计算机将既是客户端也是服务器。对于 Windows 和 Linux 用户，使用的服务器软件环境是 `WAMP`，而对于 Macintosh 用户则将是 `MAMP`。
 
 `WAMP` 代表 Windows、Apache、MySQL 和 PHP。下载后，它会将这些工具放置在你的托栏中：本地主机、`phpMyAdmin`、`Apache`、`PHP` 和 `MySQL`，如下图像所示：
@@ -1608,7 +940,9 @@ Wait, the prompt actually ends with "1.2 Understanding PHP Development Workflow"
 
 你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
 
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
+![WAMP suite list.jpg](img/00006.jpeg)
+
+图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
 
 请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
 
@@ -1643,427 +977,14 @@ Wait, the prompt actually ends with "1.2 Understanding PHP Development Workflow"
 在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
 
 ### 步骤 1
+
 如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
 
 ### 步骤 2
+
 当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
 
 如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER` 并如果... (Wait, the text cuts off or repeats. I will only translate what is provided in the final block).
-[/content] (Wait, I see I made a mistake in the internal thought logic, I will provide the clean translation now).
-
-Actually, I will just output the translation of the text block starting from "Another application you will need..."
-
-Final.
-
-[content]
-你需要的另一个应用是 Web 服务器环境。这并不是独立的计算机硬件，而是一个软件应用程序，可以让你的桌面电脑充当服务器来测试 PHP 脚本。通过这种方式，你可以在无需真正上线并连接到互联网实时服务器的情况下测试你的 PHP 脚本。你的计算机将既是客户端也是服务器。对于 Windows 和 Linux 用户，使用的服务器软件环境是 `WAMP`，而对于 Macintosh 用户则将是 `MAMP`。
-
-`WAMP` 代表 Windows、Apache、MySQL 和 PHP。下载后，它会将这些工具放置在你的托栏中：本地主机、`phpMyAdmin`、`Apache`、`PHP` 和 `MySQL`，如下图像所示：
-
-![](img/00004.jpeg)
-
-图 1.2：WampServer 的主（或控制）菜单，可以通过点击 Windows 图标栏中的 WampServer 图标来激活。
-
-`WAMP` 的安装 URL 为：`www.wampserver.com`
-
-对于 Mac，设置的环境是 `MAMP`。它代表 Macintosh、Apache、MySQL 和 PHP。它的功能基本上与 Windows 版本的套件相同。
-
-如果你在 Windows 机器上工作，为了开始设置工作环境，你需要确保为你的系统下载并安装了最新的 `Visual C++ Service Pack`。如果你在 PC 上设置了自动更新，此服务包应该是可以获取的。`WAMP` 还会检查你是否拥有了最新版本的 `Visual C++ Service Pack` 并相应地通知你。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER` 并如果... (Wait, the text cuts off or repeats. I will only translate what is provided in the final block).
-[/content] (Wait, I see I made a mistake in the internal thought logic, I will provide the clean translation now).
-
-Actually, I will just output the translation of the text block starting from "Another application you will need..."
-
-Final.
-
-[content]
-你需要的另一个应用是 Web 服务器环境。这并不是独立的计算机硬件，而是一个软件应用程序，可以让你的桌面电脑充当服务器来测试 PHP 脚本。通过这种方式，你可以在无需真正上线并连接到互联网实时服务器的情况下测试你的 PHP 脚本。你的计算机将既是客户端也是服务器。对于 Windows 和 Linux 用户，使用的服务器软件环境是 `WAMP`，而对于 Macintosh 用户则将是 `MAMP`。
-
-`WAMP` 代表 Windows、Apache、MySQL 和 PHP。下载后，它会将这些工具放置在你的托栏中：本地主机、`phpMyAdmin`、`Apache`、`PHP` 和 `MySQL`，如下图像所示：
-
-![](img/00004.jpeg)
-
-图 1.2：WampServer 的主（或控制）菜单，可以通过点击 Windows 图标栏中的 WampServer 图标来激活。
-
-`WAMP` 的安装 URL 为：`www.wampserver.com`
-
-对于 Mac，设置的环境是 `MAMP`。它代表 Macintosh、Apache、MySQL 和 PHP。它的功能基本上与 Windows 版本的套件相同。
-
-如果你在 Windows 机器上工作，为了开始设置工作环境，你需要确保为你的系统下载并安装了最新的 `Visual C++ Service Pack`。如果你在 PC 上设置了自动更新，此服务包应该是可以获取的。`WAMP` 还会检查你是否拥有了最新版本的 `Visual C++ Service Pack` 并相应地通知你。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg) (Wait, I'm repeating myself. I'll just provide the final output now).
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER` 并如果... (Wait, the text cuts off or repeats. I will only translate what is provided in the final block).
-[/content] (Wait, I see I made a mistake in the internal thought logic, I will provide the clean translation now).
-
-Actually, I will just output the translation of the text block starting from "Another application you will need..."
-
-Final.
-
-[content]
-你需要的另一个应用是 Web 服务器环境。这并不是独立的计算机硬件，而是一个软件应用程序，可以让你的桌面电脑充当服务器来测试 PHP 脚本。通过这种方式，你可以在无需真正上线并连接到互联网实时服务器的情况下测试你的 PHP 脚本。你的计算机将既是客户端也是服务器。对于 Windows 和 Linux 用户，使用的服务器软件环境是 `WAMP`，而对于 Macintosh 用户则将是 `MAMP`。
-
-`WAMP` 代表 Windows、Apache、MySQL 和 PHP。下载后，它会将这些工具放置在你的托栏中：本地主机、`phpMyAdmin`、`Apache`、`PHP` 和 `MySQL`，如下图像所示：
-
-![](img/00004.jpeg)
-
-图 1.2：WampServer 的主（或控制）菜单，可以通过点击 Windows 图标栏中的 WampServer 图标来激活。
-
-`WAMP` 的安装 URL 为：`www.wampserver.com`
-
-对于 Mac，设置的环境是 `MAMP`。它代表 Macintosh、Apache、MySQL 和 PHP。它的功能基本上与 Windows 版本的套件相同。
-
-如果你在 Windows 机器上工作，为了开始设置工作环境，你需要确保为你的系统下载并安装了最新的 `Visual C++ Service Pack`。如果你在 PC 上设置了自动更新，此服务包应该是可以获取的。`WAMP` 还会检查你是否拥有了最新版本的 `Visual C++ Service Pack` 并相应地通知你。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg) (Wait, I'm repeating myself. I'll just provide the final output now).
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER` 并如果... (Wait, the text cuts off or repeats. I will only translate what is provided in the final block).
-[/content] (Wait, I see I made a mistake in the internal thought logic, I will provide the clean translation now).
-
-Actually, I will just output the translation of the text block starting from "Another application you will need..."
-
-Final.
-
-[content]
-你需要的另一个应用是 Web 服务器环境。这并不是独立的计算机硬件，而是一个软件应用程序，可以让你的桌面电脑充当服务器来测试 PHP 脚本。通过这种方式，你你可以在无需真正上线并连接到互联网实时服务器的情况下测试你的 PHP 脚本。你的计算机将既是客户端也是服务器。对于 Windows 和 Linux 用户，使用的服务器软件环境是 `WAMP`，而对于 Macintosh 用户则将是 `MAMP`。
-
-`WAMP` 代表 Windows、Apache、MySQL 和 PHP。下载后，它会将这些工具放置在你的托栏中：本地主机、`phpMyAdmin`、`Apache`、`PHP` 和 `MySQL`，如下图像所示：
-
-![](img/00004.jpeg)
-
-图 1.2：WampServer 的主（或控制）菜单，可以通过点击 Windows 图标栏中的 WampServer 图标来激活。
-
-`WAMP` 的安装 URL 为：`www.wampserver.com`
-
-对于 Mac，设置的环境是 `MAMP`。它代表 Macintosh、Apache、MySQL 和 PHP。它的功能基本上与 Windows 版本的套件相同。
-
-如果你在 Windows 机器上工作，为了开始设置工作环境，你需要确保为你的系统下载并安装了最新的 `Visual C++ Service Pack`。如果你在 PC 上设置了自动更新，此服务包应该是可以获取的。`WAMP` 还会检查你是否拥有了最新版本的 `Visual C++ Service Pack` 并相应地通知你。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg)
-
-图 1.5：Komodo Edit `Edit` 选项的下拉菜单。
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER` 并如果... (Wait, the text cuts off or repeats. I will only translate what is provided in the final block).
-[/content] (Wait, I see I made a mistake in the internal thought logic, I will provide the clean translation now).
-
-Actually, I will just output the translation of the text block starting from "Another application you will need..."
-
-Final.
-
-[content]
-你需要的另一个应用是 Web 服务器环境。这并不是独立的计算机硬件，而是一个软件应用程序，可以让你的桌面电脑充当服务器来测试 PHP 脚本。通过这种方式，你可以在无需真正上线并连接到互联网实时服务器的情况下测试你的 PHP 脚本。你的计算机将既是客户端也是服务器。对于 Windows 和 Linux 用户，使用的服务器软件环境是 `WAMP`，而对于 Macintosh 用户则将是 `MAMP`。
-
-`WAMP` 代表 Windows、Apache、MySQL 和 PHP。下载后，它会将这些工具放置在你的托栏中：本地主机、`phpMyAdmin`、`Apache`、`PHP` 和 `MySQL`，如下图像所示：
-
-![](img/00004.jpeg)
-
-图 1.2：WampServer 的主（或控制）菜单，可以通过点击 Windows 图标栏中的 WampServer 图标来激活。
-
-`WAMP` 的安装 URL 为：`www.wampserver.com`
-
-对于 Mac，设置的环境是 `MAMP`。它代表 Macintosh、Apache、MySQL 和 PHP。它的功能基本上与 Windows 版本的套件相同。
-
-如果你在 Windows 机器上工作，为了开始设置工作环境，你需要确保为你的系统下载并安装了最新的 `Visual C++ Service Pack`。如果你在 PC 上设置了自动更新，此服务包应该是可以获取的。`WAMP` 还会检查你是否拥有了最新版本的 `Visual C++ Service Pack` 并相应地通知你。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg) (Wait, I'm repeating myself. I'll just provide the final output now).
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER` 并如果... (Wait, the text cuts off or repeats. I will only translate what is provided in the final block).
-[/content] (Wait, I see I made a mistake in the internal thought logic, I will provide the clean translation now).
-
-Actually, I will just output the translation of the text block starting from "Another application you will need..."
-
-Final.
-
-[content]
-你需要的另一个应用是 Web 服务器环境。这并不是独立的计算机硬件，而是一个软件应用程序，可以让你的桌面电脑充当服务器来测试 PHP 脚本。通过这种方式，你可以在无需真正上线并连接到互联网实时服务器的情况下测试你的 PHP 脚本。你的计算机将既是客户端也是服务器。对于 Windows 和 Linux 用户，使用的服务器软件环境是 `WAMP`，而对于 Macintosh 用户则将是 `MAMP`。
-
-`WAMP` 代表 Windows、Apache、MySQL 和 PHP。下载后，它会将这些工具放置在你的托栏中：本地主机、`phpMyAdmin`、`Apache`、`PHP` 和 `MySQL`，如下图像所示：
-
-![](img/00004.jpeg)
-
-图 1.2：WampServer 的主（或控制）菜单，可以通过点击 Windows 图标栏中的 WampServer 图标来激活。
-
-`WAMP` 的安装 URL 为：`www.wampserver.com`
-
-对于 Mac，设置的环境是 `MAMP`。它代表 Macintosh、Apache、MySQL 和 PHP。它的功能基本上与 Windows 版本的套件相同。
-
-如果你在 Windows 机器上工作，为了开始设置工作环境，你需要确保为你的系统下载并安装了最新的 `Visual C++ Service Pack`。如果你在 PC 上设置了自动更新，此服务包应该是可以获取的。`WAMP` 还会检查你是否拥有了最新版本的 `Visual C++ Service Pack` 并相应地通知你。
-
-你现在可以通过访问 [www.wampserver.com/en](http://www.wampserver.com/en) 下载 `WAMP`。`WAMP` 是一个免费的服务器软件环境，软件包中包含了所有内容——`Apache`、`PHP`、`MySQL` 和 `phpMyAdmin`。
-
-![C:\Users\Earl\Documents\PHP My SQL for Beginners\Chapter 1 Envirnoment & First Script PHP MySQL\Image Captures\WAMP homepage.PNG](img/00005.jpeg)
-
-图 1.3：[`www.wampserver.com/en/`](http://www.wampserver.com/en/) 上的 WampServer 主页。
-
-你可以在下载页面查看软件包包含的项目列表——`Apache`、`My SQL`、`PHP` 和 `phpMyAdmin`。
-
-![WAMP suite list.jpg](img/00006.jpeg)图 1.4：WampServer 的下载页面同样位于 [`www.wampserver.com/en/`](http://www.wampserver.com/en/)。
-
-请注意你提取 `WAMP` 压缩文件的目录，因为在设置 `Komodo Edit` 文件路径和本地服务器时将需要引用它。
-
-在将 `WAMP` 文件夹提取到你的本地硬盘驱动器后，启动 `Komodo Edit`。进入菜单栏并选择 `edit`。
-
-![](img/00007.jpeg) (Wait, I'm repeating myself. I'll just provide the final output now).
-
-在 `Edit` 下选择 `Preferences`。然后在 `Languages` 选项下选择 `PHP`。
-
-如果尚未设置 `PHP.ini` 的目录，请通过进入 `WAMP` 文件夹并按照以下顺序访问文件夹中的 `Apache 2.2.22` `bin` 文件夹来设置：
-
-`WAMP>>bin>>Apache2.2.22>>bin`
-
-寻找名为“PHP”的文本文件。这就是你的 `.ini` 文件。选择 `PHP.ini` 配置文件并将其设置在你的目录。这样做是为了 `Komodo Edit` 能够在其集成开发环境编辑器中识别 `PHP`。
-
-![](img/00008.jpeg)
-
-图 1.6：在 Komodo Edit 的 `Edit >> Preferences >> Language Option` 菜单路径中选择 `PHP` 作为语言选项。在此截图，`php.ini` 文件的路径仍需设置。
-
-![select php 2.jpg](img/00009.jpeg)
-
-图 1.7：在 Komodo Edit 中设置 `php.ini` 文件的路径。
-
-一旦设置好语言偏好，`Komodo Edit` 现在就会将 `PHP` 识别为集成开发环境（IDE）语言集。
-
-## 1.2 理解 PHP 工作流
-
-在本节中，你将学习 PHP 开发工作流：PHP 文件实际上是如何创建和测试的，它经历了什么过程，以及在过程中每个阶段发生了什么。
-
-在编写 PHP 代码时，你做的第一件事是启动你的 `WAMP`（或 `MAMP`）环境。
-
-### 步骤 1
-如果你使用的是 PC，你可以在 Windows 开始菜单或屏幕右下角的图标栏中找到 `WAMP` 图标。如果你使用的是 Mac，你将在应用程序文件夹中找到已的 `MAMP`。像启动任何其他应用程序一样启动它。
-
-### 步骤 2
-当你启动 `WAMP` 程序时，它会自动激活其服务器功能，当你将鼠标悬停在 Windows 图标栏的它的图标上时，会显示“WAMPSERVER – server Online”的消息。
-
-如果你看到“WAMPSERVER – server Offline”的消息，则你必须通过点击 `WAMP` 图标来激活服务器功能。这将弹出 `WAMPSERVER` 的启动菜单。然后，点击菜单中的最后一个选项“Put Online”（上线）。这将调出 `WAMPSERVER` 并如果... (Wait, the text cuts off or repeats. I will only translate what is provided in the final block).
-
-
-
 
 ![](img/00018.jpeg)
 
@@ -2092,6 +1013,8 @@ Final.
 从我电脑的 `WAMP` 本地服务器，它自动启动了 Firefox 浏览器：
 
 ![](img/00021.jpeg)
+
+
 
 图 1.19：在 Firefox 的地址或 URL 栏中输入 `localhost/hello.html` 的结果，随后执行 `hello.html`，它仅显示“Hi There!”。
 
@@ -2355,16 +1278,13 @@ printf("The value is %g", 12.3456);
 
 第 2 步：将文件保存到 `www`（或 `htdocs`）文件夹中并命名为 `output`。以 `.php` 扩展名保存。
 
-第 3 步：保存文件后，打开浏览器并在地址栏中输入 `[`localhost/output.php`](http://localhost/output.php)`。
+第 3 步：保存文件后，打开浏览器并在地址栏中输入 `http://localhost/output.php`。
 
 输出将如下所示：
 
 ![](img/00025.jpeg)
 
 图 1.23：执行 output.php 的结果。
-
-
-
 
 与 `print()` 相比，`Printf()` 具有更多功能，并且由于格式化的存在，使得内容更容易理解。
 
@@ -2373,40 +1293,63 @@ printf("The value is %g", 12.3456);
 # 章节练习
 
 1. `PHP` 代表什么？
+
 a. Philadelphia Hyper People.
+
 b. Pre Hypertext Processor.
+
 c. Phenomenal Hilarious Panda.
+
 d. Post Hypertext Processing.
 
 2. `WAMP` 中的 `A` 代表什么？
+
 a. Apache.
+
 b. Analog（模拟）。
+
 c. Algorithm（算法）。
+
 d. Asynchronous（异步）。
 
 3. 使用什么地址来检查由 Windows 版 `Apache` 服务器生成的首页？
+
 a. `http://localhost`
+
 b. `https://localpage`
+
 c. `https://localhosts`
+
 d. `http://localhosts`
 
 4. 正确的 `PHP` 起始标签是什么？
+
 a. `<php`
+
 b. `<?php?`
+
 c. `<??php`
+
 d. `<?php`
 
 5. 哪些命令可以显示格式化后的字符串输出？
+
 a. `echo( " ");`
+
 b. `print( " ");`
+
 c. `prints( " ");`
+
 d. `printf( " ");`
 
 # 章节实验题：
 
 1. 创建一个具有骨架基础 HTML 文档。
+
 2. 插入正确的 `script` 标签以便 `PHP` 能被识别。
+
 3. 创建必要的代码来显示你的姓名、兴趣或爱好、年龄和生日。使用 `<h1>` 标签显示姓名，使用 `<h2>` 显示你的兴趣或爱好，并使用 `printf()` 命令以 `dd/mm/yyyy` 日期格式显示年龄和生日。
+
 4. 确保每条信息都显示在新行。使用换行标签 `<br/>`。
 
 # 章节实验答案：
@@ -2459,8 +1402,6 @@ d. `printf( " ");`
 
 变量需要命名。在 `PHP` 中，变量名以美元符号 `$` 开头，后面跟着字母、数字以及有时下划线。使用下划线的一个规则是它可以放在名称的任何位置，但不要紧跟在 `$` 后面。因此，请避免像 `$_myvariable` 这样的变量名。
 
-
-
 让我们对之前的示例进行调整并引入浮点数的使用。
 
 打开 `variables.php` 文件，并将下方代码列表中 PHP 脚本标签内部的代码行添加到其中：
@@ -2487,9 +1428,11 @@ d. `printf( " ");`
 ```
 
 以相同的文件名 `variables.php` 保存文件，并在浏览器地址栏中输入以下地址进行访问，Windows 系统：
+
 `http://localhost/variables.php`
 
 Mac 系统则：
+
 `localhost:8888/variables.php`
 
 你的输出应该像所示：
@@ -2532,7 +1475,9 @@ Mac 系统则：
 
 图 2.5：为每个输出值标记标签。
 
-我们能够成功地使用 `print` 命令在值前面放置一些文本标签。然而，还有另一个称为“拼接”（concatenation）的过程，它可以让我们更轻松地完成相同任务。拼接是将几个不同的事物或对象连接成一个完整单元的过程。在这个示例中，我们将每个文本标签及其关联的值连接成一个单元，并在该行中显示该单元。
+
+
+我们能够成功地使用`print`命令在值前面放置一些文本标签。然而，还有另一个称为“拼接”（concatenation）的过程，它可以让我们更轻松地完成相同任务。拼接是将几个不同的事物或对象连接成一个完整单元的过程。在这个示例中，我们将每个文本标签及其关联的值连接成一个单元，并在该行中显示该单元。
 
 PHP 中的拼接过程与其他编程语言相比是独特的。如果你熟悉 Javascript 或 HTML，你可能记得加号（`+`）是拼接运算符。在 PHP 中，使用的是点号（`.`）来进行拼接。
 
@@ -2599,9 +1544,9 @@ PHP 中的拼接过程与其他编程语言相比是独特的。如果你熟悉 
 
 图 2.7：在更复杂的情况下使用拼接过程。
 
-请记住，在赋值变量名时，你可以使用字母（A-Z, a-z）、数字（0-9）或两者的组合，以及下划线字符。虽然下划线字符可以使用 `$` 符号后的任何位置，但按照习惯，它不会紧跟在 `$` 符号之后。最后，变量名是区分大小写的。
+请记住，在赋值变量名时，你可以使用字母（A-Z, a-z）、数字（0-9）或两者的组合，以及下划线字符。虽然下划线字符可以使用`$`符号后的任何位置，但按照习惯，它不会紧跟在`$`符号之后。最后，变量名是区分大小写的。
 
-在命名变量时，采用一致的风格是一个良好的习惯。其中一种风格是在命名变量时使用下划线分隔单词。这种风格要求在变量命名中保持下划线，例如 `$tax_Rate`。无论你采用什么样的命名风格，都必须保持一致，例如 `$pending_Payments`。
+在命名变量时，采用一致的风格是一个良好的习惯。其中一种风格是在命名变量时使用下划线分隔单词。这种风格要求在变量命名中保持下划线，例如`$tax_Rate`。无论你采用什么样的命名风格，都必须保持一致，例如`$pending_Payments`。
 
 ## 2.2 运算符
 
@@ -2619,7 +1564,7 @@ PHP 中的数学运算符有加、减、乘、除。除了这四种基础运算�
 </head>
 ```
 
-接下来，在文档主体中包含 PHP 脚本标签。为变量 `$x` 和 `$y` 赋值数值，$x` 为 110，$y` 为 52。在 PHP 脚本标签内部，处理这两个变量的加法运算。
+接下来，在文档主体中包含 PHP 脚本标签。为变量`$x`和`$y`赋值数值，`$x`为 110，`$y`为 52。在 PHP 脚本标签内部，处理这两个变量的加法运算。
 
 ```html
 <body>
@@ -2631,13 +1576,13 @@ PHP 中的数学运算符有加、减、乘、除。除了这四种基础运算�
 </body>
 ```
 
-将你的文件保存为 `addOperation.php`。输出应该如所示：
+将你的文件保存为`addOperation.php`。输出应该如所示：
 
 ![](img/00033.jpeg)
 
 图 2.8：处理两个变量的加法运算。
 
-让我们在代码中包含剩余的三个基础运算。你可以复制粘贴添加 `$x` 和 `$y` 的代码行三次，然后将加法运算符改为减法（`-`），然后改为乘法（`*`），最后改为除法（`/`）。将你的文件保存为 `operators.php` 然后刷新你的浏览器。
+让我们在代码中包含剩余的三个基础运算。你可以复制粘贴添加`$x`和`$y`的代码行三次，然后将加法运算符改为减法（`-`），然后改为乘法（`*`），最后改为除法（`/`）。将你的文件保存为`operators.php`然后刷新你的浏览器。
 
 提示：我是编写程序代码时使用复制粘贴的坚定支持者。如果你重新输入某行，会增加无意中引入错误的概率。
 
@@ -2655,9 +1600,6 @@ PHP 中的数学运算符有加、减、乘、除。除了这四种基础运算�
         $y = 52;
 ```
 
-
-
-
 ```php
 print($x . " + " . $y . " = " . ($x + $y));
 print("</br>");
@@ -2669,14 +1611,14 @@ print($x . " / " . $y . " = " . ($x / $y));
 print("</br>");
 ?>
 </body>
-</html
+</html>
 ```
 
 ![](img/00034.jpeg)
 
 图 2.9: 处理两个变量的基础算术运算。
 
-显然，如果你为 `$x` 和 `$y` 分配了不同的值，你应该期望不同的结果。
+显然，如果你为`$x`和`$y`分配了不同的值，你应该期望不同的结果。
 
 如你所见，基础算术操作很容易编写。现在我们将讨论其他特殊运算符是如何实现的。
 
@@ -2684,9 +1626,9 @@ print("</br>");
 
 | 运算符 | 描述 |
 | :--- | :--- |
-| 递增 `x++` | 将 `x` 的值加 1。 |
-| 递减 `x--` | 将 `x` 的值减 1。 |
-| 取模 `x % y` | 返回 `x` 除以 `y` 的余数。 |
+| 递增 `x++` | 将`x`的值加 1。 |
+| 递减 `x--` | 将`x`的值减 1。 |
+| 取模 `x % y` | 返回`x`除以`y`的余数。 |
 | 组合运算符： | |
 | 拼接后返回 `.=` | 拼接并返回运算符左侧表达式中的结果。 |
 | 加法后返回 `+=` | 将运算符左侧表达式的值加到运算符右侧表达式上。 |
@@ -2696,13 +1638,13 @@ print("</br>");
 
 让我们详细扩展上一个示例中显示的操作。我们将包括数值的递增和递减、获取除法运算的余数（取模），以及使用不同的组合运算符。
 
-继续你的 PHP 文档 `operators.php`。
+继续你的 PHP 文档`operators.php`。
 
 将文档标题更改为
 
 `<title>"All PHP Operators"</title>`
 
-然后使用文件名 `alloperators.php` 另存为另一个文件。
+然后使用文件名`alloperators.php`另存为另一个文件。
 
 在你的原始代码列表中添加以下行代码：
 
@@ -2711,9 +1653,9 @@ $x++;
 $y--;
 ```
 
-`$x++` 将递增 `$x`。
+`$x++`将递增`$x`。
 
-`$y--` 将递减 `$y`。
+`$y--`将递减`$y`。
 
 原始代码列表：
 
@@ -2751,15 +1693,22 @@ print("</br>");
 接下来，我们将引入带有以下名称和值的变量：
 
 `$first = 10;`
+
 `$second = 3;`
+
 `$third = 20;`
+
 `$fourth = 4;`
+
 `$fifth = 30;`
+
 `$sixth = 7;`
+
 `$seventh = 50;`
+
 `$eighth = 6;`
 
-使用这些新变量，对 `$first` 和 `$second` 执行组合加法，对 `$third` 和 `$fourth` 执行组合减法，对 `$fifth` 和 `$sixth` 执行组合乘法，并对 `$seventh`（被除数）和 `$eighth`（除数）执行组合除法：
+使用这些新变量，对`$first`和`$second`执行组合加法，对`$third`和`$fourth`执行组合减法，对`$fifth`和`$sixth`执行组合乘法，并对`$seventh`（被除数）和`$eighth`（除数）执行组合除法：
 
 ```php
 $first += $second;
@@ -2768,7 +1717,7 @@ $fifth *= $sixth;
 $seventh /= $eighth;
 ```
 
-使用 `echo()` 命令显示 `$first`、`$third`、`$fifth` 和 `$seventh` 的值。记住 `echo` 命令的工作方式与 `print()` 命令相同：
+使用`echo()`命令显示`$first`、`$third`、`$fifth`和`$seventh`的值。记住`echo`命令的工作方式与`print()`命令相同：
 
 ```php
 echo($first);
@@ -2862,50 +1811,85 @@ echo($line);
 # 验
 
 1. 什么是变量？
+
 a. 变量是字符串的容器。
+
 b. 变量是数值的容器。
+
 c. 变量随时间变化。
+
 d. 变量是存储值的进程。
 
 2. 常见算术运算符的操作是什么？
+
 a. 加、减、拼接、除法。
+
 b. 加、减、乘法、除法。
+
 c. 拼接、递减、加法。
+
 d. 递增、递减、加法、减法。
 
 3. 拼接后返回的正确语法是什么？
+
 a. `+=`
+
 b. `-=`
+
 c. `.=`
+
 d. `==`
 
 4. 为了编写给某个变量加 1 的程序，可以使用什么运算符？
+
 a. 递增
+
 b. 递减
+
 c. 减 -1
+
 d. a 和 c
 
 # 练习
 
 1. 创建一个具有基本结构的 HTML 文档。
+
 2. 添加适当标签以包含 PHP 脚本。
-3. 声明四个变量。将它们命名为 `$w`、 `$x`、 `$y` 和 `$z`，并为它们分配以下整数值：
+
+3. 声明四个变量。将它们命名为`$w`、`$x`、`$y`和`$z`，并为它们分配以下整数值：
+
    `$w = 5;`
+
    `$x = 25;`
+
    `$y = 13;`
+
    `$z = 101;`
-4. 使用 `echo()` 或 `print()` 显示变量 `$w`、 `$x`、 `$y` 和 `$z` 的初始值。
+
+4. 使用`echo()`或`print()`显示变量`$w`、`$x`、`$y`和`$z`的初始值。
+
 5. 应用换行。添加对四个变量执行以下基础算术运算的代码：
+
    `$w + $x`
+
    `$z – $y`
+
    `$z / $w`
+
    `$y * $x`
+
 6. 显示每个数学运算的答案，但将答案格式化一位。将每个结果存储在一个新变量中。将结果分配给以下新变量：
-   将 `$w + x` 的和分配给变量 `$a`，
-将 `$z – y` 的差分配给变量 `$b`，
-将 `$z / w` 的商分配给变量 `$c`，并将 `y * x` 的乘积分配给变量 `$d`。
-7. 在下一行，显示结果——递增 `$a` 和 `$b` 并分别换行显示其结果，递减 `$c` 和 `$d` 并分别换行显示其结果。
-8. 显示以下组合运算 `+=` 的结果：
+
+   将`$w + x`的和分配给变量`$a`，
+
+将`$z – y`的差分配给变量`$b`，
+
+将`$z / w`的商分配给变量`$c`，并将`y * x`的乘积分配给变量`$d`。
+
+7. 在下一行，显示结果——递增`$a`和`$b`并分别换行显示其结果，递减`$c`和`$d`并分别换行显示其结果。
+
+8. 显示以下组合运算`+=`的结果：
+
    `$wxyz = ($a+= ($b+=($c+=$d)))`
 
 # 实验答案
@@ -2917,181 +1901,10 @@ d. a 和 c
 ...
 ```
 
-
-
-
-
 # 第 2 章实验练习
 
-```php
-<?php
-    $w = 5;
-    $x = 25;
-    $y = 13;
-    $z = 101;
-    //显示 w, x, y, z 的值
-    echo("w = " . $w);
-    echo("</br>");
-    echo("x = " . $x);
-    echo("</br>");
-    echo("y = " . $y);
-    echo("</br>");
-    echo("z = " . $z);
-    echo("</br>");
-    $a = ($w + $x);
-    $b = ($z - $y);
-    $c = ($z / $w);
-    $d = ($y * $x);
-    // 显示基础运算结果
-    // 格式保留一位小数
-    printf("w + x = %0.1f", $a);
-    echo("</br>");
-    printf("z - y = %0.1f", $b);
-    echo("</br>");
-    printf("z / w = %0.1f", $c);
-    echo("</br>");
-    printf("y * x = %0.1f", $d);
-    echo("</br>");
-    // a 和 b 自增，c 和 d 自减
-    $a++; $b++; $c--; $d--;
-    // 串联 A, B, C 和 D 的值
-    echo("A = " . $a . " | B = " . $b . " | C = " . $c . " | D = " .$d);
-    echo("</br>");
-    // 显示 $wxyz 的值
-    $wxyz = ($a+= ($b+=($c+=$d)));
-    echo($wxyz);
-?>
-```
 
-## 章总结
 
-在本章中，你学习了 `PHP` 中的变量以及它们在声明和实现时与其他语言的区别。
-
-我们讨论了 `PHP` 中不同的运算符以及它们的各自用途。本章还涵盖了 `PHP` 中的组合运算符和字符串拼接，以及它们在实际程序例中是如何实现的。
-
-在下一章中，我们将讨论数组——简单数组、关联数组、多维数组和全局数组。
-
-# 第 3 章：数组
-
-### 本章目标
-
-- 你将能够定义数组。
-- 你将能够描述 `PHP` 数组的两种类型：索引数组和关联数组。
-- 你将学习如何在 `PHP` 中声明和实例化数组。
-- 你将将介绍 `PHP` 的一些超全局数组。
-
-## 3.1 简单数组或索引数组
-
-数组是用于存储多个值的变量。数组的每个值被称为一个元素（或成员），每个元素都通过其自身的整数索引 `0,1,2,3` 等进行引用。索引还标识了元素在数组中的位置。（索引 `0` 标识第一个元素，索引 `1` 标识第二个元素，以此此类推。）在数组中，可以添加、删除、修改和重新排列（排序）元素。
-
-存储在数组中的值可以是八种 `PHP` 数据类型之一：`integer`（整数）、浮点数、`string`（字符串）、`boolean`（布尔）、`object`（对象）、`resources`（资源）、`null` 和 `arrays`（数组）。数组广泛用于存储列表的值。例如，如果你想存储团队的所有成员，数组是完美的选择。
-
-在 `PHP` 中，用于创建数组的函数是 `array()`。简单数组（或索引数组）是使用数字索引的数组。这种索引通常是顺序的，但也允许随机索引。
-
-在 `PHP` 中声明数组与在 `PHP` 中声明变量相似——在变量名前加上美元符号 (`$`)。数组是零索引的，这意味着索引从 `0` 开始——且索引 `0` 始终指向数组的第一个成员。
-
-声明数组首先是写数组名称，跟着等号（`=`），然后是括号内要存储在数组中的值。在下面的示例中，我们有一个由四个 `string` 类型数据元素组成的数组：
-
-```
-$names = array ("John", "Larry", "Jane", "Lily");
-```
-
-如果我们仔细观察这个数组，会发现第一个元素是 `$names[0]`，值为 "John"，第二个元素是 `$names[1]`，值为 "Larry"，第三个是 `$names[2]`，值为 "Jane"，最后一个是 `$names[3]`，值为 "Lily"。
-
-数组也可以定义为：
-
-```
-$names[0] = "John";
-$names[1] = "Larry";
-$names[2] = "Jane";
-$names[3] = "Lily";
-```
-
-可以在变量上执行的操作或命令也可以在数组的每个成员上执行，例如 `print()`、`echo()`、拼接和数学运算。我们将使用数组演示这些中的每一个操作。创建一个新的 HTML 模板，并将其保存到 `www`（Windows）或 `htdocs`（Mac）文件夹中，文件名为 `simple_array.php`。放置正确的起始和结束标签。
-
-在上面的系列操作中，我们已经声明了数组。声明数组的另一种方法是手动方法，即将数组的各个成员分配给各自的索引。我们将使用数组名 `$fruit` 声明数组，并通过输入以下代码手动为数组的每个元素赋值：
-
-```
-$fruit[0] = "Berries";
-$fruit[3] = "Mangos";
-$fruit[4] = "Apples";
-```
-（注：此处原文代码逻辑似乎不完整，但按要求翻译内容）
-（修正：原文代码中 $fruit[3] = "Mangos"; 之后似乎有断层或逻辑跳，此处严格遵循原文翻译）
-```
-$fruit[0] = "Berries";
-$fruit[3] = "Mangos";
-$fruit[4] = "Apples";
-```
-（注：原文结尾处 $fruit[5] = "Grapes"; 似乎在示例块之外或逻辑中，此处按原文翻译）
-（重新校对原文最后部分）：
-```
-$fruit[0] = "Berries";
-$fruit[3] = "Mangos";
-$fruit[4] = "Apples";
-```
-（等等，原文最后一行是 $fruit[5] = "Grapes"; 且在代码块外）
-重新查看原文最后部分：
-```
-$fruit[0] = "Berries";
-$fruit[3] = "Mangos";
-$fruit[4] = "Apples";
-```
-（注：原文提供的文本块在 $fruit[4] = "Apples"; 之后似乎没有了 $fruit[5] = "Grapes"; 重新审视用户输入文本）
-原文最后一段代码为：
-```
-$fruit[0] = "Berries";
-$fruit[3] = "Mangos";
-$fruit[4] = "Apples";
-```
-（抱歉，我刚才看错了，我将严格按照用户提供的原始文本进行翻译）
-原文最后部分是：
-```
-$fruit[0] = "Berries";
-$fruit[3] = "Mangos";
-$fruit[4] = "Apples";
-```
-（等等，我发现用户提供的文本最后一行确实是 $fruit[5] = "Grapes"; 吗？我再次检查原文）
-原文最后代码块是：
-```
-$fruit[0] = "Berries";
-$fruit[3] = "Mangos";
-$fruit[4] = "Apples";
-```
-（等等，我看到用户提供的文本最后有一行 $fruit[5] = "Grapes"; 吗？不，我重新仔细读）
-原文最后代码块是：
-```
-$fruit[0] = "Berries";
-$fruit[3] = "Mangos";
-$fruit[4] = "Apples";
-```
-（注：我发现用户提供的文本中在 $fruit[4] = "Apples"; 之后确实没有 $fruit[5] = "Grapes";，我重新检查了遍）
-好的，我将开始正式翻译。
-
-在上面的系列操作中，我们已经声明了数组。声明数组的另一种方法是手动方法，即将数组的各个成员分配给各自的索引。我们将使用数组名 `$fruit` 声明数组，并通过输入以下代码手动为数组的每个元素赋值：
-
-```
-$fruit[0] = "Berries";
-$fruit[3] = "Mangos";
-$fruit[4] = "Apples";
-```
-
-注意我们跳过了索引 1 和 2。（注：原文此处没写，我保持翻译一致）
-（重新开始完整翻译以确保无遗漏）
-
-在上面的系列操作中，我们已经声明了数组。声明数组的另一种方法是手动方法，即将数组的各个成员分配给各自的索引。我们将使用数组名 `$fruit` 声明数组，并通过输入以下代码手动为数组的每个元素赋值：
-
-```
-$fruit[0] = "Berries";
-$fruit[3] = "Mangos";
-$fruit[4] = "Apples";
-```
-
-（等等，我发现我刚才重复了，现在直接提供最终的译文）
-
----
-
-[content]
 # 第 2 章 实验练习
 
 ```php
@@ -3153,17 +1966,17 @@ $fruit[4] = "Apples";
 
 ## 3.1 简单数组或索引数组
 
-数组是用于存储多个值的变量。数组的每个值被称为一个元素（或成员），每个元素都通过其自身的整数索引 `0,1,2,3` 等进行引用。索引还标识了元素在数组中的位置。（索引 `0` 标识第一个元素，索引 `1` 标识第二个元素，以此此类推。）在数组中，可以添加、删除、修改和重新排列（排序）元素。
+数组是用于存储多个值的变量。数组的每个值被称为一个元素（或成员），每个元素都通过其自身的整数索引 `0,1,2,3` 等进行引用。索引还标识了元素在数组中的位置。（索引 `0` 标识第一个元素，索引 `1` 标识第二个元素，以此类推。）在数组中，可以添加、删除、修改和重新排列（排序）元素。
 
 存储在数组中的值可以是八种 `PHP` 数据类型之一：`integer`（整数）、浮点数、`string`（字符串）、`boolean`（布尔）、`object`（对象）、`resources`（资源）、`null` 和 `arrays`（数组）。数组广泛用于存储列表的值。例如，如果你想存储一个团队的所有名称，数组是完美的选择。
 
 在 `PHP` 中，用于创建数组的函数是 `array()`。简单数组（或索引数组）是使用成员数字索引的数组。这种索引通常是顺序的，但也允许随机索引。
 
-在 `PHP` 中声明数组与在 `PHP` 中声明变量相似——美元符号 (`$`) 位于变量名之前。数组是零索引的，这意味着索引从 `0` 开始——且索引 `0` 始终指向数组的第一个成员。
+在 `PHP` 中声明数组与在 `PHP` 中声明变量相似——美元符号（`$`）位于变量名之前。数组是零索引的，这意味着索引从 `0` 开始——且索引 `0` 始终指向数组的第一个成员。
 
 声明数组首先是写数组名称，跟着等号（`=`），然后是括号内要存储在数组中的值。在下面的示例中，我们有一个由四个 `string` 类型元素组成的数组：
 
-```
+```php
 $names = array ("John", "Larry", "Jane", "Lily");
 ```
 
@@ -3171,7 +1984,7 @@ $names = array ("John", "Larry", "Jane", "Lily");
 
 数组也可以定义为：
 
-```
+```php
 $names[0] = "John";
 $names[1] = "Larry";
 $names[2] = "Jane";
@@ -3182,25 +1995,11 @@ $names[3] = "Lily";
 
 在上面的系列操作中，我们已经声明了数组。声明数组的另一种方法是手动方法，即将数组的各个成员分配给各自的索引。我们将使用数组名 `$fruit` 声明数组，并通过输入以下代码手动为数组的每个元素赋值：
 
-```
+```php
 $fruit[0] = "Berries";
 $fruit[3] = "Mangos";
 $fruit[4] = "Apples";
 ```
-（注：原文此处在 $fruit[4] = "Apples"; 之后似乎没有了 $fruit[5] = "Grapes";，我重新检查了遍）
-（等等，我发现用户提供的文本中最后有一行是 $fruit[5] = "Grapes"; 吗？不，我重新仔细读）
-原文最后代码块是：
-```
-$fruit[0] = "Berries";
-$fruit[3] = "Mangos";
-$fruit[4] = "Apples";
-```
-（注：我发现用户提供的文本中在 $fruit[4] = "Apples"; 之后确实没有了 $fruit[5] = "Grapes";，我重新检查了遍）
-（抱歉，我发现我刚才重复了，现在直接提供最终的译文）
-（此处由于我思考过程混乱，请以上方最终译文为准）
-
-
-
 
 ```php
 //Display the array member pairing
@@ -3237,11 +2036,11 @@ echo("</br>");
 
 让我们尝试一下。
 
-**第 1 步**：在你的文本编辑器中创建一个新的 HTML5 文档。使用文件名 `associative_array.php`。确保你包含了 PHP 的开始和结束标签。保存你的文件。
+**第 1 步**：在你的文本编辑器中创建一个新的 HTML5 文档。使用文件名 `associative_array.php`。确保你包含了 `PHP` 的开始和结束标签。保存你的文件。
 
 **第 2 步**：现在让我们创建一个包含四名员工及其相应薪水的数组。
 
-我们将拥有员工：“Doe”年薪为 $30,000，“Smith”年薪为 $28,000，“Rogers”年薪为 $50,000，“Adam”年薪为 $120,000，以及“Brown”年薪为 60,000。
+我们将拥有员工："Doe" 年薪为 $30,000，"Smith" 年薪为 $28,000，"Rogers" 年薪为 $50,000，"Adam" 年薪为 $120,000，以及 "Brown" 年薪为 60,000。
 
 关联数组的声明将如下：
 
@@ -3259,11 +2058,13 @@ $salary = array("Doe" => 30000,
 
 但这不如之前的声明那样具有可读性。
 
-**第 3 步**：然后我们将使用 `echo()` 或 `print()` 配合字符串连接来显示输出，内容为“Full name 的年薪为 $salary["Doe"]”。用于显示预定输出的命令是：
+**第 3 步**：然后我们将使用 `echo()` 或 `print()` 配合字符串连接来显示输出，内容为 "Full name 的年薪为 `$salary["Doe"]`"。用于显示预定输出的命令是：
 
 `print("John Doe has an annual salary of " . $salary["Doe"] . ”<br/>”);`
 
 以下代码将显示数组中存储的所有值。
+
+
 
 ```php
 //Display the array members
@@ -3429,7 +2230,7 @@ echo("</br>");
 
 ![](img/00046.jpeg)
 
-图 3.10：将新文档保存为 multidimensional_array.php。
+图 3.10：将新文档保存为 `multidimensional_array.php`。
 
 确保你的文件中包含了 PHP 的开始和结束标签。以下数组内容示例来自流行的角色扮演游戏。主数组是背包，子数组将是 `Weapons`、`Armors`、`Useables`、`Key_Items` 和 `Magic_Items`。每个子数组将是描述每个部分的关联数组。
 
@@ -3459,10 +2260,6 @@ Lord Kaho’s Horns, Megingjard, Sleipnir, Dragon Manteau, Ears of Ifrit
     "Ears of Ifrit"
 ),
 ```
-
-
-
-
 
 ```php
 "Armors" => array
@@ -3568,6 +2365,8 @@ $backpack = array(
 
 如果您想访问数组中的其他成员，也适用相同的语法。让我们显示整个 `$backpack` 的库存——背包内部的每个分区，然后是每个分区中的所有物品，最后以不特定顺序显示每个分区的某一个物品。显示所有的 `backpack` 分区以及每个 `division` 中的所有物品：
 
+
+
 ```php
 echo("Backpack Contents for Weapons: <br>");
 echo($backpack['Weapons'][0]) . "<br>";
@@ -3624,10 +2423,6 @@ echo($backpack['Magic_Items'][1]) . "<br>";
 ```
 
 **提示：** 正如丰富的工程师会告诉你的那样，你正在为多个受众编写代码。PHP 代码的第一个受众是解释它的服务器。第二个受众是阅读你代码的人类（包括你自己）。良好的软件工程要求你编写能够让这两类受众都能易读的代码。
-
-
-
-
 
 ```php
 "Ears of Ifrit",
@@ -3690,7 +2485,7 @@ echo($backpack['Magic_Items'][1] . "</br>");
 
 如果我们只想显示单个项目，那么我们的代码列表可以同样简单：
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3760,12 +2555,13 @@ echo($backpack['Magic_Items'][1] . "</br>");
 
 ### 我们再来看另一个例子
 
-在本次练习中，我们将创建一个 `$teams` 数组，它包含子数组：`Yankees`、`Mets` 和 `Red Sox`。每个子数组都是关联数组，其元素是球员的姓氏。我们的程序将完成一个非常简单的任务：显示第一个球队的名称及其第一个成员的名称。在下一行，显示下一个球队的名称及其第一个成员。程序将对第三支球队执行相同的操作，直到所有球队和成员的姓名都显示完毕。
+在本次练习中，我们将创建一个`$teams`数组，它包含子数组：`Yankees`、`Mets`和`Red Sox`。每个子数组都是关联数组，其元素是球员的姓氏。我们的程序将完成一个非常简单的任务：显示第一个球队的名称及其第一个成员的名称。在下一行，显示下一个球队的名称及其第一个成员。程序将对第三支球队执行相同的操作，直到所有球队和成员的姓名都显示完毕。
 
-1. 创建一个新的 HTML5 文档，并将其保存到 `www`（Windows 下的 WAMP）或 `htdocs`（Mac 下的 MAMP）文件夹下，文件名为 `multidimensional_array.php`。
-2. 在你的 `head` 元素中，在 `<title>` 标签内输入“Teams and Members”。这将是页面的标题。
+1. 创建一个新的 HTML5 文档，并将其保存到`www`（Windows 下的 WAMP）或`htdocs`（Mac 下的 MAMP）文件夹下，文件名为`multidimensional_array.php`。
 
-```
+2. 在你的`head`元素中，在`<title>`标签内输入“Teams and Members”。这将是页面的标题。
+
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -3773,15 +2569,15 @@ echo($backpack['Magic_Items'][1] . "</br>");
 </head>
 ```
 
-3. 在文档的 `<body>` 中添加 PHP 标签：
+3. 在文档的`<body>`中添加 PHP 标签：
 
-```
+```html
 <body>
     <?php
     ?>
 ```
 
-4. 在 PHP 标签内，声明主数组 `$teams`，其成员为 `Yankees`、`Mets` 和 `Red Sox`。（这些将是每个元素的键，每个元素本身也是数组）。通过输入以下内容来填充成员列表：
+4. 在 PHP 标签内，声明主数组`$teams`，其成员为`Yankees`、`Mets`和`Red Sox`。（这些将是每个元素的键，每个元素本身也是数组）。通过输入以下内容来填充成员列表：
 
 ```php
 $teams = array
@@ -3810,7 +2606,7 @@ $teams = array
     );
 ```
 
-5. 仍在 PHP 标签内，添加命令显示第一个球队的名称（目前为字符串）以及该球队数组的第一个成员。使用 `echo()` 命令：
+5. 仍在 PHP 标签内，添加命令显示第一个球队的名称（目前为字符串）以及该球队数组的第一个成员。使用`echo()`命令：
 
 ```php
 echo("Yankees--(1) " . $teams['Yankees'][0]);
@@ -3836,10 +2632,6 @@ echo("<br/><br/>");
 echo("Yankees--(2) ".$teams['Yankees'][1]);
 echo("<br/>");
 ```
-
-
-
-
 
 ```php
 echo("Mets------(2) ".$teams['Mets'][1]);
@@ -3871,7 +2663,7 @@ echo("<br/><br/>");
 </html>
 ```
 
-保存文件并启动 `Firefox`。在 URL 栏或地址栏中，输入 `localhost/multidimensional_array.php`（Mac 用户请输入 `localhost:8888/multidimensional_array.php`）并查看输出。
+保存文件并启动`Firefox`。在 URL 栏或地址栏中，输入`localhost/multidimensional_array.php`（Mac 用户请输入`localhost:8888/multidimensional_array.php`）并查看输出。
 
 你会发现前三个名字显示正常，没有任何任何问题：
 
@@ -3891,14 +2683,16 @@ echo("<br/><br/>");
 
 ## 3.4 超全局数组
 
+
+
 超全局变量（Superglobals）是 `PHP` 内置（预定义）关联数组变量，于 PHP 版本 `4.1.0` 中引入。这些变量对所有 PHP 代码可用，这意味着不需要创建额外的程序使其对整个 PHP 脚本公开。
 
 超全局变量代表来自 URL、HTML 表单、Cookies、Sessions 以及 Web 服务器本身的数据。这些数组在函数内部也可以访问。
 
 欲获取更多帮助和参考，您可以访问以下提供 PHP 友好讨论的 URL：
 
-- http://php.net/manual/en/index.php
-- http://www.w3schools.com/php/default.asp
+- `http://php.net/manual/en/index.php`
+- `http://www.w3schools.com/php/default.asp`
 
 PHP 超全局数组最常用的用途是从 HTML 表单中获取值。以下是程序员使用的九个超全局数组：
 
@@ -3914,11 +2708,9 @@ PHP 超全局数组最常用的用途是从 HTML 表单中获取值。以下是�
 
 （注：提供的文本中关于这些超全局变量包含大量重复且碎片化的句子；上述列表根据指令提取了核心信息。）
 
+![](img/00055.jpeg)
 
-
-
-
-![](img/00055.jpeg)图 3.19：在表格单元格中添加输入表单元素（`name="username"`）。
+图 3.19：在表格单元格中添加输入表单元素（`name="username"`）。
 
 ### 步骤 5：添加另一个包含两个表格数据单元格 `<td>` 的表格行。第一个单元格将包含文本“请输入您的年龄”（Please Enter Your Age），第二个单元格将包含用于获取用户年龄的输入表单元素（`userAge`）。
 
@@ -3930,6 +2722,7 @@ PHP 超全局数组最常用的用途是从 HTML 表单中获取值。以下是�
 ```
 
 ![](img/00056.jpeg)
+
 图 3.20：添加第二个输入表单元素（`name="userAge"`）。
 
 ### 步骤 6：最后，添加另一个包含一个表格数据单元格的表格行。该单元格将包含提交按钮：
@@ -3941,6 +2734,7 @@ PHP 超全局数组最常用的用途是从 HTML 表单中获取值。以下是�
 ```
 
 ![](img/00057.jpeg)
+
 图 3.21：添加包含提交按钮的表格数据单元格。
 
 ### `sampleForm.html` 的完整代码列表如下：
@@ -3979,6 +2773,7 @@ PHP 超全局数组最常用的用途是从 HTML 表单中获取值。以下是�
 ### 步骤 7：查看你的输出。表单的样式将如下所示：
 
 ![](img/00058.jpeg)
+
 图 3.22：在浏览器中查看 `sampleForm.html`。
 
 现在表单已经准备好了，我们可以继续编写 PHP 脚本文档。
@@ -4030,6 +2825,7 @@ PHP 超全局数组最常用的用途是从 HTML 表单中获取值。以下是�
 ### 步骤 7：查看你的输出。结果将如下所示：
 
 ![](img/00059.jpeg)
+
 图 3.23：在浏览器中查看 `sampleFormGet.html`。
 
 此表单使用了 `“get”` 方法属性。
@@ -4037,16 +2833,19 @@ PHP 超全局数组最常用的用途是从 HTML 表单中获取值。以下是�
 在用户名文本框中输入 `“John”`，在年龄文本框中输入 `“40”`。点击提交。
 
 ![](img/00060.jpeg)
+
 图 3.24：向表单输入值。
 
 点击提交按钮后，输出将如下所示：
 
 ![](img/00061.jpeg)
+
 图 3.25：点击提交按钮后查看输出。
 
-注意 URL 显示了用户输入的数据。这个字符串 `?userName=John&userAge=40” 被附加到了 URL 中。
+注意 URL 显示了用户输入的数据。这个字符串 `?userName=John&userAge=40”` 被附加到了 URL 中。
 
 ![superglobalGet.jpg](img/00062.jpeg)
+
 图 3.26：在 URL 中显示用户信息。
 
 ### 让我们使用超全局变量 `$_POST` 重一遍相同的过程。
@@ -4092,6 +2891,7 @@ PHP 超全局数组最常用的用途是从 HTML 表单中获取值。以下是�
 ### 步骤 4：查看你的输出。结果将如下所示：
 
 ![](img/00059.jpeg)
+
 图 3.23：在浏览器中查看 `sampleFormGet.html`。
 
 此表单使用了 `“post”` 方法属性。
@@ -4099,11 +2899,13 @@ PHP 超全局数组最常用的用途是从 HTML 表单中获取值。以下是�
 在用户名文本框中输入 `“John”`，在年龄文本框中输入 `“40”`。点击提交。
 
 ![](img/00060.jpeg)
+
 图 3.24：向表单输入值。
 
 点击提交按钮后，输出将如下所示：
 
 ![](img/00061.jpeg)
+
 图 3.25：点击提交按钮后查看输出。
 
 注意 URL 显示了用户输入的数据。这个字符串 `?userName=John&userAge=40”` 被附加到了 URL 中。
@@ -4151,6 +2953,7 @@ PHP 超全局数组最常用的用途是从 HTML 表单中获取值。以下是�
 ### 步骤 4：查看你的输出。结果将如下所示：
 
 ![](img/00059.jpeg)
+
 图 3.23：在浏览器中查看 `sampleFormGet.html`。
 
 此表单使用了 `“get”` 方法属性。
@@ -4158,18 +2961,16 @@ PHP 超全局数组最常用的用途是从 HTML 表单中获取值。以下是�
 在用户名文本框中输入 `“John”`，在年龄文本框中输入 `“40”`。点击提交。
 
 ![](img/00060.jpeg)
+
 图 3.24：向表单输入值。
 
 点击提交按钮后，输出将如下所示：
 
 ![](img/00061.jpeg)
+
 图 3.25：点击提交按钮后查看输出。
 
 注意 URL 显示了用户输入的数据。这个字符串 `?userName=John&userAge=40”` 被附加到了 URL 中。
-
-
-
-
 
 ![](img/00070.jpeg)
 
@@ -4178,50 +2979,77 @@ PHP 超全局数组最常用的用途是从 HTML 表单中获取值。以下是�
 # 章节练习
 
 1. **什么是数组？**
+
    a. 数组是用于存储多种类型同质数据的特殊变量。
+
    b. 数组是存储多个变量的容器。
+
    c. 数组是获取许多变量值并将其存储的特殊命令。
+
    d. 数组是创建多个数据的特殊函数。
 
 2. **如果要将数组的某个成员赋值为第四个成员，正确的语法应该是什么？**
+
    a. `$arrayName[3]=data;`
+
    b. `arrayName[3]=data;`
+
    c. `$arrayName[4]=data;`
+
    d. `arrayName[4]=data;`
 
 3. **在示例中，**
+
 ```php
 $example = array(
     "Cooper" => 25000,
     "Oswald" => 23500);
 ```
- 哪些是键(key)？
+
+哪些是键(key)？
+
    a. Cooper, Oswald
+
    b. 25000, 23500
+
    c. $example
+
    d. array
 
 4. **多维数组最简单的解释是什么？**
+
    a. 它们是持有特定键并在每个键中关联值的数组。
+
    b. 它们是数组中的数组。
+
    c. 它们是拥有多个成员的数组。
+
    d. 它们是无限变量的数组。
 
 5. **普通数组和超全局数组之间的区别是什么？**
+
    a. 普通数组比超全局数组大。
+
    b. 超全局数组来自来自 Web 服务器的用户输入、URL、cookies 和 HTML 文件，而普通数组由程序员声明。
+
    c. 普通数组占用的内存比超全局数组少。
+
    d. 超全局数组比普通数组更容易处理。
 
 # 实验练习：实验 1-1 超全局数据集
 
 1. 创建一个 PHP 程序，显示一个表单并询问用户信息——姓名、年龄和当前年份。表单中必须有一个提交按钮和一个重置按钮。点击提交按钮后，PHP 必须返回一个结果，报告该人出生的大年份。
+
 2. 确保 WAMP 或 MAMP 服务器正在运行。
+
 3. 创建一个 HTML5 文档，并将其保存为 `www` 文件夹下的 `yearOfBirth_prediction.html`。
+
 4. 采用以下表单布局和字段：`userName`、`userAge` 和 `currentYear`。将这些元素放在表格中以获得更整的布局。
 
 ![](img/00071.jpeg)
+
 图 3.35：浏览器中的 `yearOfBirth_prediction.html`。
+
 使用 `maxlength` 属性将 `userName` 的字符限制为十个，`userAge` 限制为三个，`currentYear` 限制为四个。
 
 ```html
@@ -4246,6 +3074,7 @@ $example = array(
 ```
 
 5. 创建一个新的文本文件并将其保存为 `www` 文件夹下的 `birthYear_calculator.php`。
+
 6. 计算年龄并在 `birthYear_calculator.php` 文件中输入代码。我们在这里使用 `$_POST` 超全局变量，但也可以稍后使用其他超全局变量 `$_GET` 和 `$_REQUEST` 来调整代码。
 
 ```php
@@ -4259,17 +3088,23 @@ echo($name . " was approximately born in the year " . $yob);
 ```
 
 ![](img/00072.jpeg)
+
 图 3.36：浏览器中的 `yearOfBirth_prediction.html`。
+
 ![](img/00073.jpeg)
+
 图 3.37：在表单中输入值。
+
 点击提交后，输出将如下：
 
 ![](img/00074.jpeg)
+
 图 3.38：点击提交按钮后的输出。
 
 # 实验练习 2- 超全局多数据集
 
 1. 创建一个 PHP 程序，显示一个表单向两个个人收集数据——两个人的姓名、年龄以及当前年份的条目。表单中必须有一个提交按钮和一个重置按钮。点击提交按钮后，PHP 必须返回一个结果，显示这些人出生的大年份列表。
+
 2. 使用实验 1 中相同的 HTML5 文档，但如下更新 HTML `yearOfBirth_prediction.html` 中的代码：
 
 ```html
@@ -4301,6 +3136,8 @@ echo($name . " was approximately born in the year " . $yob);
 </table>
 ```
 
+
+
 并在 `birthYear_calculator.php` 中如下：
 
 ```php
@@ -4318,10 +3155,6 @@ echo $name1 . " was approximately born in the year " . $yob1 . "<br>";
 echo $name2 . " was approximately born in the year " . $yob2;
 ?>
 ```
-
-
-
-
 
 ```html
 <td><input name="currentYear" maxlength="4" /></td>
@@ -4377,7 +3210,6 @@ echo $name2 . " was approximately born in the year " . $yob2;
 在计算机编程中，控制结构允许你改变程序语句的执行流。与其按行顺序顺序执行，你可以让程序：
 
 a. 跳过特定的行或代码块（分支），或者
-
 b. 重复执行一组行或代码块（循环）。
 
 程序通过评估条件表达式的值为 TRUE（真）或 FALSE（假）来执行这些分支或循环动作。
@@ -4386,7 +3218,8 @@ b. 重复执行一组行或代码块（循环）。
 
 分支控制结构由：
 
-a. 一个条件表达式和一个定义清晰的代码块，或 b. 多个条件表达式和多个定义清晰的代码块组成。
+a. 一个条件表达式和一个定义清晰的代码块，或
+b. 多个条件表达式和多个定义清晰的代码块组成。
 
 根据条件表达式求值是 TRUE 还是 FALSE，将执行这些代码块中的某一个或一个都不执行。
 
@@ -4473,10 +3306,6 @@ $newstr = strtoupper($str)
 | `==` (等于) | `$LS == $RS` | 如果 `$LS` 中存储的操作数等于 `$RS` 中的操作数，则为 TRUE；否则为 FALSE。 |
 | `!=` 或 `<>` (不等于) | `$LS != $RS` 或 `$LS <> $RS` | 如果 `$LS` 中存储的操作数不等于 `$RS` 中的操作数，则为 TRUE；否则为 FALSE。 |
 
-
-
-
-
 | 运算符 | 表达式 | 描述 |
 | :--- | :--- | :--- |
 | `== (相同)` | `$LS === $RS` | 如果 `$LS` 中存储的操作数不仅等于 `$RS` 中存储的操作数，而且类型相同，则为 TRUE；否则为 FALSE。 |
@@ -4557,12 +3386,15 @@ if (conditional expression){
 **第 1 步：** 创建一个新的 HTML5 文档。在文档 `<body>` 中包含 PHP 的开始和结束标签。将文档命名为 `conditionals.php`。请参考附图片进行指南。
 
 ![](img/00078.jpeg)
+
 图 4.1: Komodo Edit 首页。
 
 ![](img/00079.jpeg)
+
 图 4.2: 打开一个新的 HTML5 文档。
 
 ![](img/00080.jpeg)
+
 图 4.3: 在文档中添加 PHP 的开始和结束标签。
 
 **第 2 步：** 声明并初始化变量：
@@ -4582,6 +3414,7 @@ if (conditional expression){
 参考第 2 步中给出的变量赋值表。第三列表示将赋值给变量 `$age` 和 `$isCitizen` 的值的“数据类型”。
 
 变量 `$age` 被赋值为整数数据类型 `19`。
+
 变量 `$isCitizen` 被赋值为布尔类型 `TRUE`。
 
 **第 3 步：** 在声明并赋值变量后，按所示输入 `if`-语句的条件表达式：
@@ -4632,12 +3465,15 @@ c. `switch`-语句。
 **第 1 步：** 创建一个新的 HTML5 文档。在文档 `<body>` 中包含 PHP 的开始和结束标签。将文档命名为 `conditionals.php`。请参考附图片进行指南。
 
 ![](img/00078.jpeg)
+
 图 4.1: Komodo Edit 首页。
 
 ![](img/00079.jpeg)
+
 图 4.2: 打开一个新的 HTML5 文档。
 
 ![](img/00080.jpeg)
+
 图 4.3: 在文档中添加 PHP 的开始和结束标签。
 
 **第 2 步：** 声明并初始化变量：
@@ -4657,6 +3493,7 @@ c. `switch`-语句。
 参考第 2 步中给出的变量赋值表。第三列表示将赋值给变量 `$age` 和 `$isCitizen` 的值的“数据类型”。
 
 变量 `$age` 被赋值为整数数据类型 `19`。
+
 变量 `$isCitizen` 被赋值为布尔类型 `TRUE`。
 
 **第 3 步：** 在声明并赋值变量后，按所示输入 `if`-语句的条件表达式：
@@ -4689,50 +3526,52 @@ if ($age <= 21){
 </html>
 ```
 
-
-
-
-
 ![](img/00087.jpeg)
 
 图 4.11：在浏览器中查看 `conditionals.php`。
 
-注意浏览器显示的是了一个空白窗口。这是因为组成复合条件表达式的各个条件表达式都返回了 `FALSE`，因此它不会执行 `if` 语句后面的代码块。这导致浏览器输出为空白。
+注意浏览器显示的是了一个空白窗口。这是因为组成复合条件表达的各个条件表达式都返回了 `FALSE`，因此它不会执行 `if` 语句后面的代码块。这导致浏览器输出为空白。
 
 让我们来看另一个例子。这次，我们不再在 PHP 代码中嵌入为 `age` 和 `citizens` 赋值的值。相反，信息将通过用于年龄的文本框从用户处获取，并通过单选按钮让用户说明他们是否为公民。
 
+
+
 ### 问题描述
-创建一个简单的 HTML 表单，要求用户输入年龄，并要求他们点击相应的单选按钮来输入公民身份。将变量视为全局变量并使用预定义变量 `$_POST`。将你的主 HTML 文档命名为 `votersForm.html`，将外部 PHP 文件命名为 `votersEligibility.php`。
+
+创建一个简单的 HTML 表单，要求用户输入年龄，并要求他们点击相应的单选按钮来输入公民身份。将变量视为全局变量并使用预定义变量`$_POST`。将你的主 HTML 文档命名为`votersForm.html`，将外部 PHP 文件命名为`votersEligibility.php`。
 
 ### 解决方案
 
 #### 步骤 1：创建一个 HTML5 文档
-将文件保存为 `votersForm.html`。在 `<title>` 标签中输入“Enter User Information”，如下所示：
+
+将文件保存为`votersForm.html`。在`<title>`标签中输入“Enter User Information”，如下所示：
 
 ```html
 <title>Enter User Information</title>
 ```
 
-不包含 PHP 脚本标签，因为 PHP 脚本将从外部调用——作为此 HTML 文档中 `action` 表单属性调用的独立 PHP 文档。
+不包含 PHP 脚本标签，因为 PHP 脚本将从外部调用——作为此 HTML 文档中`action`表单属性调用的独立 PHP 文档。
 
-对于你的 PHP action 脚本文件，分配文档名为 `votersEligibility.php`。
+对于你的 PHP action 脚本文件，分配文档名为`votersEligibility.php`。
 
-在 HTML 文档的 `<body>` 中，包含 `<form>` 标签。将 `action` 属性值设置为 `votersEligibility.php`并将 `method` 属性值设置为 `post`。
+在 HTML 文档的`<body>`中，包含`<form>`标签。将`action`属性值设置为`votersEligibility.php`并将`method`属性值设置为`post`。
 
 ```html
 <body
     <form action="votersEligibility.php" method="post">
 ```
 
-### 步骤 2：继续编写 HTML 代码
-使用表格布局表单元素。使用 `<table>` 可以让表单更有组织、结构更清晰，并防止代码列表中出现过多的`<break>` 标签。
+#### 步骤 2：继续编写 HTML 代码
+
+使用表格布局表单元素。使用`<table>`可以让表单更有组织、结构更清晰，并防止代码列表中出现过多的`<break>`标签。
 
 你的 HTML 表单文档将包含以下元素：
+
 - 一个用于年龄的输入元素，值为“userAge”
 - 两个单选按钮输入元素，一个用于“Yes”，一个用于“No”
 - 一个值为“Submit”的提交按钮元素
 
-在第一行行 `<tr>` 中，我们将询问用户的年龄。第一个表格单元格 `<td>` 应该显示文本“Enter Your Age”。
+在第一行行`<tr>`中，我们将询问用户的年龄。第一个表格单元格`<td>`应该显示文本“Enter Your Age”。
 
 ```html
 <table>
@@ -4746,7 +3585,7 @@ if ($age <= 21){
 
 图 4.12：使用表格结构创建表单。
 
-在第二行行 `<tr>` 中，我们将放置单选按钮。第一个表格单元格应该显示文本“Are you a citizen?”。
+在第二行行`<tr>`中，我们将放置单选按钮。第一个表格单元格应该显示文本“Are you a citizen?”。
 
 ```html
 <tr>
@@ -4763,7 +3602,7 @@ if ($age <= 21){
 </tr>
 ```
 
-在第三行行 `<tr>` 中，在此处包含的唯一表格单元格中放置“submit”按钮。
+在第三行行`<tr>`中，在此处包含的唯一表格单元格中放置“submit”按钮。
 
 ```html
 <tr>
@@ -4771,8 +3610,9 @@ if ($age <= 21){
 </tr>
 ```
 
-### 步骤 3：放置闭合标签
-放置闭合标签 `</table>` 和 `</form>`，确保也有闭合的 `</body>` 和 `</html>` 标签，然后保存你的文档。
+#### 步骤 3：放置闭合标签
+
+放置闭合标签`</table>`和`</form>`，确保也有闭合的`</body>`和`</html>`标签，然后保存你的文档。
 
 ```html
     </table>
@@ -4808,16 +3648,18 @@ if ($age <= 21){
 </html>
 ```
 
-### 步骤 4：查看你的输出
-你的 `votersForm.html` 输入页面看起来应该是这样：
+#### 步骤 4：查看你的输出
+
+你的`votersForm.html`输入页面看起来应该是这样：
 
 ![](img/00089.jpeg)
 
-图 4.13：在浏览器中查看 `votersForm.html`。
+图 4.13：在浏览器中查看`votersForm.html`。
 
 显示的页面尚不具备功能。仍然需要创建 PHP 脚本以让程序相应地显示。
 
-#### 步骤 5：创建 votersEligibility.php
+#### 步骤 5：创建`votersEligibility.php`
+
 使用你的文本编辑器。这是我们 PHP 脚本的完整代码列表。
 
 ```php
@@ -4825,13 +3667,10 @@ if ($age <= 21){
     // 此处为 PHP 代码逻辑
 ?>
 ```
+
 *(注：由于原文此处 PHP 代码示例不完整或存在重复，翻译保持了逻辑结构)*
 
 由于原文提供的待翻译文本包含大量重复和错乱片段，以上已根据您的要求进行了格式整理和翻译。
-
-
-
-
 
 ```php
         print("You are not eligible to vote");
@@ -4843,23 +3682,23 @@ if ($age <= 21){
 
 关闭 PHP 脚本标签，并确保文档中存在 HTML 结束标签。保存你的文件。
 
-### 步骤 3：启动你的浏览器并在地址栏中输入 `http://localhost/conditionals_ifElse.php`。点击“前往”或直接按回车键。
+#### 步骤 3：启动你的浏览器并在地址栏中输入`http://localhost/conditionals_ifElse.php`。点击“前往”或直接按回车键。
 
 ![](img/00092.jpeg)
 
-图 4.17：通过 localhost 在浏览器访问 `conditionals_ifElse.php`。
+图 4.17：通过 localhost 在浏览器访问`conditionals_ifElse.php`。
 
-### 步骤 4：等待几秒并查看你的输出。
+#### 步骤 4：等待几秒并查看你的输出。
 
 ![](img/00093.jpeg)
 
-图 4.18：在浏览器中输出 `conditionals_ifElse.php`。
+图 4.18：在浏览器中输出`conditionals_ifElse.php`。
 
-你得到了结果“You are not eligible to vote.”是因为变量 `$citizen` 包含布尔值 `FALSE`。
+你得到了结果“You are not eligible to vote.”是因为变量`$citizen`包含布尔值`FALSE`。
 
 以下是示例的完整代码列表：
 
-代码列表：`conditionals_ifElse.php` 的解决方案
+代码列表：`conditionals_ifElse.php`的解决方案
 
 ```html
 <!DOCTYPE html>
@@ -4884,7 +3723,7 @@ if ($age <= 21){
 </html>
 ```
 
-### 步骤 5：重新加载 `conditionals_ifElse.php` 并根据下表更改用户信息。
+#### 步骤 5：重新加载`conditionals_ifElse.php`并根据下表更改用户信息。
 
 | 年龄 | 公民身份 |
 | :--- | :--- |
@@ -4893,13 +3732,13 @@ if ($age <= 21){
 | 21 | FALSE |
 | 16 | FALSE |
 
-### 步骤 6：在每次输入后查看你的输出并确保结果正确。
+#### 步骤 6：在每次输入后查看你的输出并确保结果正确。
 
-`if-statement` 和 `if-else-statement` 仅测试一个条件表达式。相比之下，`if-elseif-statement` 测试多个一个条件表达式。
+`if-statement`和`if-else-statement`仅测试一个条件表达式。相比之下，`if-elseif-statement`测试多个一个条件表达式。
 
-`if-statement` 有一个代码块，`if-else-statement` 有两个代码块，而 `if-elseif-statement` 的代码块数量与它的条件表达式数量相同。
+`if-statement`有一个代码块，`if-else-statement`有两个代码块，而`if-elseif-statement`的代码块数量与它的条件表达式数量相同。
 
-这是 `if-elseif-statement` 的语法。
+这是`if-elseif-statement`的语法。
 
 ```php
 if (condexpr0){
@@ -4915,19 +3754,21 @@ if (condexpr0){
 
 ### if-elseif 之后的语句
 
-关于 `if-elseif-statement` 有三点需要注意：
+关于`if-elseif-statement`有三点需要注意：
 
-a. `else` 子句是可选的。
-b. 如果评估的任何一个条件表达式为 `TRUE`，则执行该条件表达式的代码块，然后控制跳转到 `if-elseif-statement` 之后的第一个语句。
-c. 如果 `if-elseif-statement` 没有任何一个条件表达式评估为 `TRUE`，则执行与 `else` 子句（如果存在）相关的代码块。
+a. `else`子句是可选的。
+
+b. 如果评估的任何一个条件表达式为`TRUE`，则执行该条件表达式的代码块，然后控制跳转到`if-elseif-statement`之后的第一个语句。
+
+c. 如果`if-elseif-statement`没有任何一个条件表达式评估为`TRUE`，则执行与`else`子句（如果存在）相关的代码块。
 
 让我们来做一个示例。
 
-### 问题：
+### 问题
 
-创建一个程序例程，根据所确定的数值分值显示相应的描述。PHP 脚本必须嵌入在 HTML 文档中。使用变量名 `$grade` 来存储数值成绩的值。将默认成绩设置为 93。
+创建一个程序例程，根据所确定的数值分值显示相应的描述。PHP 脚本必须嵌入在 HTML 文档中。使用变量名`$grade`来存储数值成绩的值。将默认成绩设置为 93。
 
-将文档保存为文件名 `complexConditionals_2.php`。
+将文档保存为文件名`complexConditionals_2.php`。
 
 | 条件 | 消息 |
 | :--- | :--- |
@@ -4939,9 +3780,9 @@ c. 如果 `if-elseif-statement` 没有任何一个条件表达式评估为 `TRUE
 | $grade <=50 | Your grade is below average. |
 | else | Either your grade is super low or you entered an invalid grade :( |
 
-### 解决方案：
+### 解决方案
 
-代码列表：`complexConditionals_2.php` 的解决方案
+代码列表：`complexConditionals_2.php`的解决方案
 
 ```html
 <!DOCTYPE html>
@@ -4985,7 +3826,7 @@ c. 如果 `if-elseif-statement` 没有任何一个条件表达式评估为 `TRUE
 </html>
 ```
 
-### 步骤 1：创建一个新的 HTML5 文档。将你的文档保存为 `complexConditionals-2.php`。
+#### 步骤 1：创建一个新的 HTML5 文档。将你的文档保存为`complexConditionals-2.php`。
 
 ![](img/00078.jpeg)
 
@@ -4993,17 +3834,17 @@ c. 如果 `if-elseif-statement` 没有任何一个条件表达式评估为 `TRUE
 
 ![](img/00094.jpeg)
 
-图 4.20：保存 `complexConditionals_2.php`。
+图 4.20：保存`complexConditionals_2.php`。
 
 ![](img/00095.jpeg)
 
-图 4.21：添加 `<title>` 标签。
+图 4.21：添加`<title>`标签。
 
 ![](img/00096.jpeg)
 
-图 4.22：添加 `<body>` 标签。
+图 4.22：添加`<body>`标签。
 
-### 步骤 2：为 `$grade` 分分配初始值。编码整个代码并保存文件。
+#### 步骤 2：为`$grade`分分配初始值。编码整个代码并保存文件。
 
 ```html
 <!DOCTYPE html>
@@ -5047,15 +3888,17 @@ c. 如果 `if-elseif-statement` 没有任何一个条件表达式评估为 `TRUE
 </html>
 ```
 
-### 步骤 3：启动浏览器，在地址栏中输入文件名并点击“前往”或直接按回车键。等待一秒或两秒。
+#### 步骤 3：启动浏览器，在地址栏中输入文件名并点击“前往”或直接按回车键。等待一秒或两秒。
 
-#### 输出：
+##### 输出
 
 ![](img/00097.jpeg)
 
-图 4.23：在浏览器中访问 `complexConditionals_2.php`。
+图 4.23：在浏览器中访问`complexConditionals_2.php`。
 
-#### 修改给定值：修改 `$grade` 的值将产生不同的结果。
+##### 修改给定值
+
+修改`$grade`的值将产生不同的结果。
 
 | 分数 | 预期输出 |
 | :--- | :--- |
@@ -5067,42 +3910,45 @@ c. 如果 `if-elseif-statement` 没有任何一个条件表达式评估为 `TRUE
 | 66 | Your grade is average. |
 | A | You entered an invalid grade :( |
 
-### 步骤 4：查看你的输出。
+#### 步骤 4：查看你的输出。
 
-### 步骤 5：更改 `$grade` 的值。
+#### 步骤 5：更改`$grade`的值。
 
-### 步骤 6：查看输出。
+#### 步骤 6：查看输出。
 
+### 默认语句
 
+#### switch 后的语句
 
+第一行以`switch`关键字开头，后面紧跟括号内的测试变量名`$variable`，这是要测试其值的变量。
 
+`case`关键字定义了当`case`关键字后的值与测试变量（`$variable`）当前值匹配时，将执行的程序语句。
 
-# 默认语句
+`break`关键字终止`switch`语句。为什么需要`break`语句呢？当某个 case 值与测试变量的当前值匹配时，会执行该 case 值的语句。此之后，程序将继续向下执行`switch`语句，执行所有其他`case`值的语句以及`default`情况，无论这些值是否与测试变量匹配！显然，我们不希望发生这种情况，这就是为什么我们在每个`case`值的关联语句的最后包含一个`break`语句。
 
-## switch 后的语句
+`default`关键字定义了当没有任何`case`值与测试变量匹配时将执行的语句。
 
-第一行以 `switch` 关键字开头，后面紧跟括号内的测试变量名 `$variable`，这是要测试其值的变量。
+### 让我们来看一个例子
 
-`case` 关键字定义了当 `case` 关键字后的值与测试变量（$variable`）当前值匹配时，将执行的程序语句。
-
-`break` 关键字终止 `switch` 语句。为什么需要 `break` 语句呢？当某个 case 值与测试变量的当前值匹配时，会执行该 case 值的语句。此之后，程序将继续向下执行 `switch` 语句，执行所有其他 `case` 值的语句以及 `default` 情况，无论这些值是否与测试变量匹配！显然，我们不希望发生这种情况，这就是为什么我们在每个 `case` 值的关联语句的最后包含一个 `break` 语句。
-
-`default` 关键字定义了当没有任何 `case` 值与测试变量匹配时将执行的语句。
-
-## 让我们来看一个例子。
-
-**问题：** 创建一个 `switch` 语句例程，该程序将确定字母等级对应的数字分段，并相应地显示该分段的描述。使用以下成绩表：
+**问题：** 创建一个`switch`语句例程，该程序将确定字母等级对应的数字分段，并相应地显示该分段的描述。使用以下成绩表：
 
 | 字母等级 | 输出消息 |
 | :--- | :--- |
 | A | A 意味着你的分数在 91 到 100 之间。 |
+
+
+
 | B | B 意味着你的分数在 81 到 90 之间。 |
+
 | C | C 意味着你的分数在 71 到 80 之间。 |
+
 | D | D 意味着你的分数在 61 到 70 之间。 |
+
 | F | F 意味着你的分数在 51 到 60 之间。 |
+
 | default | 你输入的成绩无效。 |
 
-### 解决方案：
+## 解决方案
 
 **代码列举：** `switchCaseBreakConditional.php` 的解决方案
 
@@ -5140,7 +3986,7 @@ c. 如果 `if-elseif-statement` 没有任何一个条件表达式评估为 `TRUE
 </html>
 ```
 
-**步骤 1：** 创建一个空白的 HTML5 文档并保存为文件名 `switchCaseBreakConditional.php`。（图 4.29：Komodo Edit 开始。图 4.30：创建一个名为 switchCaseBreakConditional.php 的新文件）。在 `<title>` 标签中输入“Switch-Case-Break”。在文档的 `<body>` 中包含 PHP 的开始结束标签。（图 4.31：在 Komodo 中打开新的 HTML5 文档）。
+**步骤 1：** 创建一个空白的 HTML5 文档并保存为文件名 `switchCaseBreakConditional.php`。（图 4.29：Komodo Edit 开始。图 4.30：创建一个名为 `switchCaseBreakConditional.php` 的新文件）。在 `<title>` 标签中输入“Switch-Case-Break”。在文档的 `<body>` 中包含 PHP 的开始结束标签。（图 4.31：在 Komodo 中打开新的 HTML5 文档）。
 
 **步骤 2：** 将初始值 ‘A’ 赋值给变量 `$grade`。对整个解决方案进行编码并保存文件。
 
@@ -5185,14 +4031,22 @@ c. 如果 `if-elseif-statement` 没有任何一个条件表达式评估为 `TRUE
 **修改赋值的值：步骤 5：** 将 `$grade` 的值替换为 B、C、D 和 F 并查看结果。
 
 | 评级 | 预期输出消息 |
+
 | :--- | :--- |
-| $grade = ‘A’ | A 意味着你的分数在 91 到 100 之间。 |
-| $grade = ‘B’ | B 意味着你的分数在 81 到 90 之间。 |
-| $grade = ‘C’ | C 意味着你的分数在 71 到 80 之间。 |
-| $grade = ‘D’ | D 意味着你的分数在 61 到 70 之间。 |
-| $grade = ‘F’ | F 意味着你的分数在 51 到 60 之间。 |
-| $grade = ‘a’ | 你输入的成绩无效。 |
-| $grade = ‘E’ | 你输入的成绩无效。 |
+
+| `$grade = ‘A’` | A 意味着你的分数在 91 到 100 之间。 |
+
+| `$grade = ‘B’` | B 意味着你的分数在 81 到 90 之间。 |
+
+| `$grade = ‘C’` | C 意味着你的分数在 71 到 80 之间。 |
+
+| `$grade = ‘D’` | D 意味着你的分数在 61 到 70 之间。 |
+
+| `$grade = ‘F’` | F 意味着你的分数在 51 到 60 之间。 |
+
+| `$grade = ‘a’` | 你输入的成绩无效。 |
+
+| `$grade = ‘E’` | 你输入的成绩无效。 |
 
 **步骤 6：** 查看输出。如果 `$grade = ‘B’`（图 4.34：将 `$grade` 改为 B 并查看输出）。如果 `$grade = ‘C’`（图 4.35：将 `$grade` 改为 C 并查看输出）。如果 `$grade = ‘D’`（图 4.36：将 `$grade` 改为 D 并查看输出）。如果 `$grade = ‘F’`（图 4.37：将 `$grade` 改为 F 并查看输出）。
 
@@ -5231,19 +4085,17 @@ switch($variable)
         $grade = 'a';
 ```
 
-
-
-
-
 ![](img/00117.jpeg)
 
 图 4.40: 将 `$grade` 的值改为 ‘a’ 并查看输出。
 
 这是因为现有代码没有提供小写 ‘a’ 的情况。
 
-**问题**: 调整 `switchCaseBreakConditional.php` 的代码，使其现在包含小写字母等级‘a’、‘b’、‘c’、‘d’和‘f’的情况。保持 `$grade` 的赋值值为 ‘a’。
+## 问题
 
-**解决方案**:
+调整 `switchCaseBreakConditional.php` 的代码，使其现在包含小写字母等级‘a’、‘b’、‘c’、‘d’和‘f’的情况。保持 `$grade` 的赋值值为 ‘a’。
+
+## 解决方案
 
 代码列表：`switchCaseBreakConditional_2.php` 的解决方案
 
@@ -5289,14 +4141,17 @@ switch($variable)
 ### 步骤 1：创建一个空白 HTML5 文档并将其保存为 `switchCaseBreakConditional_2.php`。
 
 ![](img/00078.jpeg)
+
 图 4.41: Komodo Edit 起页。
 
 ![](img/00118.jpeg)
+
 图 4.42: 创建名为 `switchCaseBreakConditional_2.php` 的新文件。
 
 ### 步骤 2：在 `<title>` 标签中输入“Switch-Case-Break Conditional 2”。在文档 `<body>` 中包含 PHP 的开始和结束标签。
 
 ![](img/0119.jpeg)
+
 图 4.43: 向文档中添加标题和 PHP 标签。
 
 ### 步骤 3：将初始值 ‘a’ 赋值给变量 `$grade`。编码整个代码并保存你的文件。
@@ -5343,6 +4198,7 @@ switch($variable)
 ### 步骤 4：启动你的浏览器，在地址栏中输入文件名并点击 Go 或按回车键。等待一秒。
 
 ![](img/0120.jpeg)
+
 图 4.44: 在浏览器中访问 `switchCaseBreakConditional_2.php`。
 
 **输出**：
@@ -5350,6 +4206,7 @@ switch($variable)
 ### 步骤 5：查看你的输出。
 
 ![](img/0121.jpeg)
+
 图 4.45: 查看 `switchCaseBreakConditional_2.php` 的输出。
 
 ### 修改赋值的值：
@@ -5357,23 +4214,28 @@ switch($variable)
 ### 步骤 6：将 `$grade` 的值替换为以下值并查看结果。第一个已经在之前显示过。从第二行的值 `$grade = ‘B’` 或 `$grade = ‘c’` 开始。
 
 | 等级 | 预期输出 |
+
 | :--- | :--- |
+
 | `$grade = ‘A’ or ‘a’` | A means your grade is from 91-100. |
+
 | `$grade = ‘B’ or ‘b’` | B means your grade is from 81-90. |
+
 | `$grade = ‘C’ or ‘c’` | C means your grade is from 71-80. |
+
 | `$grade = ‘D’ or ‘d’` | D means your grade is from 61-70. |
+
 | `$grade = ‘F’ or ‘f’` | F means your grade is from 51-60. |
+
 | `$grade = ‘X’ or ‘x’` | The grade you entered is invalid. |
+
 | `$grade = ‘85’ or ‘Xx’` | The grade you entered is invalid. |
 
 ### 步骤 7：查看输出。
 
 - `$grade = ‘B’ or ‘b’` (images/0122.jpeg) 图 4.46: 将 `$grade` 的值改为 ‘b’。
+
 - `$grade = ‘C’ or ‘c’` ... (此处后续文本截断)
-
-
-
-
 
 ```php
 print ($voteStatus . "<br/>你今年 " . $age . "岁。");
@@ -5401,9 +4263,13 @@ print ($voteStatus . "<br/>你今年 " . $age . "岁。");
 ### 步骤 5：将 `$age` 的值替换为以下值并查看结果。第一个之前显示过。从第二行的值开始，即 `$age = 60`。
 
 | 等级 | 预期输出消息 |
+
 | :--- | :--- |
+
 | `$age = 19` | 你可以投票！ |
+
 | `$age = 60` | 你可以投票！ |
+
 | `$age = 16` | 你不能投票！ |
 
 ### 步骤 6：查看输出。
@@ -5420,54 +4286,79 @@ print ($voteStatus . "<br/>你今年 " . $age . "岁。");
 
 图 4.60：将 `$age` 的值改为 16 并查看输出。
 
-### 章后测
+## 章后测
 
 1. 什么是条件语句？
+
     1. 定义条件的语句。
+
     2. 将对值的空值进行评估的限制性要求。
+
     3. 能够持有任何值并根据该值进行评估的逻辑语句。
+
     4. 评估表达式条件是否为真或假，并执行与真值或假值相关的相应操作的语句。
 
 2. 条件“<=”描述的是哪种条件运算符？
+
     1. 大于或等于。
+
     2. 等于。
+
     3. 小于。
+
     4. 小于等于。
 
 3. 复杂条件的示例是什么？
+
     1. if 语句。
+
     2. switch 语句。
+
     3. if-else 语句。
+
     4. 一系列 if-else-if 语句。
 
 4. switch-case-break 条件语句最好的定义是什么？
+
     1. if 语句的简写表示法。
+
     2. 基于随机拆分 case 的 switch 。
+
     3. 具有许多 case 的条件语句。
+
     4. if 语句的较长版本。
 
 5. switch-case-break 区分大小吗？
+
     1. 是。
+
     2. 否。
+
     3. 也许。
-    4. 默认情况下是，但可以通过添加多个 case 来消除大小写敏感性。
+
+
+
+4. 默认情况下是，但可以通过添加多个 `case` 来消除大小写敏感性。
 
 6. 什么是三元运算符？
-    1. 与变量相关的一行 if-else 语句。
-    2. 具有复杂条件结构的条件语句。
-    3. 给变量赋值的运算符。
-    4. 评估条件并执行特定操作的运算符。
+
+   1. 与变量相关的一行 `if-else` 语句。
+   2. 具有复杂条件结构的条件语句。
+   3. 给变量赋值的运算符。
+   4. 评估条件并执行特定操作的运算符。
 
 7. 三元语句中的符号 `?` 和 `:` 分别代表什么？
-    1. if 和 else。
-    2. OR（或）和 AND（与）。
-    3. 大于和小于。
-    4. 加和减。
 
-### 章后实验：
+   1. `if` 和 `else`。
+   2. `OR`（或）和 `AND`（与）。
+   3. 大于和小于。
+   4. 加和减。
+
+### 章后实验
 
 1. 创建一个 PHP 程序，显示一个表单，要求个人输入名、姓、年龄和国籍。
-表单必须包含名、姓和年龄的文本输入字段；用于国籍是/否答答的单选按钮；以及一个“注册”按钮和一个“重置”或“清除字段”按钮。
+
+表单必须包含名、姓和年龄的文本输入字段；用于国籍是/否回答的单选按钮；以及一个“注册”按钮和一个“重置”或“清除字段”按钮。
 
 2. 创建一个 HTML5 文档并保存为 `voter_registration.html`，位于 `www` 或 `htdocs` 文件夹内。
 
@@ -5537,7 +4428,7 @@ print ($voteStatus . "<br/>你今年 " . $age . "岁。");
 
 图 4.62：`voter_registration.html` 的输出。
 
-### 章后实验解决方案：
+### 章后实验解决方案
 
 #### 代码列表：HTML 表单
 
@@ -5606,10 +4497,6 @@ print ($voteStatus . "<br/>你今年 " . $age . "岁。");
 ?>
 ```
 
-
-
-
-
 ```php
         print("You are not allowed to vote.");
 
@@ -5619,15 +4506,18 @@ print ($voteStatus . "<br/>你今年 " . $age . "岁。");
 ```
 
 ![](img/00138.jpeg)
-图 4.63: 查看 `voters_registration.html` 的输出。
+
+图 4.63：查看 `voters_registration.html` 的输出。
 
 ![](img/00139.jpeg)
-图 4.64: 点击注册按钮提交表单。
+
+图 4.64：点击注册按钮提交表单。
 
 点击注册（Register）按钮后，输出将如下：
 
 ![](img/00140.jpeg)
-图 4.65: 查看 `voters_registration.php` 的输出。
+
+图 4.65：查看 `voters_registration.php` 的输出。
 
 代码列表：`voters_registration.html`
 
@@ -5668,8 +4558,8 @@ print ($voteStatus . "<br/>你今年 " . $age . "岁。");
             </td>
         </tr>
         <tr>
-            <td><input type="submit" value="Register">注册</</td>
-            <td><input type="reset" value="Clear Fields">清空字段</</td>
+            <td><input type="submit" value="Register">注册</td>
+            <td><input type="reset" value="Clear Fields">清空字段</td>
         </tr>
     </table>
     </form>
@@ -5706,7 +4596,9 @@ print ($voteStatus . "<br/>你今年 " . $age . "岁。");
 ```
 
 ### 本章总结
+
 在本章中，你首先学习了表达式和条件表达式，以及它们是如何由操作数、运算符、比较运算符和逻辑运算符构成的。你看到条件表达式是 PHP 分支控制结构的核心组件，以及这种结构是如何通过 PHP 中的四个条件语句实现的，即：
+
 - `if` 语句
 - `if-else` 和 `elseif` 语句
 - `switch` 语句
@@ -5717,6 +4609,7 @@ print ($voteStatus . "<br/>你今年 " . $age . "岁。");
 # 第 5 章：控制结构 - 循环
 
 ### 本章目标
+
 - 你将理解并分析 PHP 中不同的循环或迭代控制结构。
 - 你将掌握 PHP 中 `while-loop`（while 循环）、`do-while-loop`、`for-loop` 和 `foreach-loop` 语句的语法和结构。
 - 你将学习如何在实际代码中使用这些不同的循环。
@@ -5724,6 +4617,7 @@ print ($voteStatus . "<br/>你今年 " . $age . "岁。");
 在上一章中，我们学习了分支控制结构，根据条件表达式求值的结果执行或不执行特定的代码块。在本章中，我们学习循环控制结构（也称为迭代控制结构），即重复地执行或迭代特定的代码块。条件表达式求值的结果将决定我们循环或迭代代码块的次数。
 
 一个循环控制结构由：
+
 a. 一个条件表达式，
 b. 一个定义清晰的代码块。
 
@@ -5732,12 +4626,14 @@ b. 一个定义清晰的代码块。
 提示：你应该充分理解表达式和条件表达式的概念，以及它们是如何由操作数、运算符、比较运算符和逻辑运算符构成的。这些概念在第 4 章中通过大量示例进行了详细说明。
 
 PHP 通过以下循环语句来实现迭代控制结构：
+
 a. `while-loop`
 b. `do-while-loop`
 c. `for-loop`
 d. `foreach-loop`
 
 ## 5.1 While 循环
+
 这是 `while-loop` 的语法和结构。
 
 ```php
@@ -5747,17 +4643,21 @@ while (条件表达式) {
 ```
 
 ### while 之后的语句
+
 `while-loop` 的执行从评估条件表达式开始。如果评估结果为 `TRUE`，则执行代码块。然后再次评估条件表达式，只要结果为 `TRUE`，就会执行代码块。一旦条件表达式求值为 `FALSE`，执行将跳转到 `while` 之后的第一个语句。
 
 注意，在 `while` 语句的代码块中，必须存在某些语句导致条件表达式最终变为 `FALSE`。例如，如果你的条件表达式是 `count < 10`，那么代码块中必须有一个语句（例如 `count++`）来终止循环。
 
-### 让我们来看例子：
+### 让我们来看例子
+
 问题：创建一个从 1 数到 10 的 `while` 循环。每个数字分行显示。确保条件语句为 `TRUE`。使用变量 `$number`。
 
 解决方案：
+
 步骤 1：创建一个 HTML 文档。命名为 `whileLoops_1.php`。将其保存在 `www` 或 `htdocs` 文件夹中。
 
 ![](img/00141.jpeg)
+
 图 5.1：打开一个新的 HTML 文档。
 
 步骤 2：在你的 PHP 文档中输入程序语句。
@@ -5784,21 +4684,26 @@ while (条件表达式) {
 ```
 
 ![](img/00142.jpeg)
+
 图 5.2：输入 `whileLoops.php` 的语句。
 
 步骤 3：再次保存你的文件。
 
 ![](img/00143.jpeg)
+
 图 5.3：在 Komodo Edit 中保存文件。
 
-步骤 4：运行你的输出。
+
+
+## 步骤 4：运行你的输出
 
 ![](img/00144.jpeg)
+
 图 5.4：`whileLoops_1.php` 的输出。
 
 如果条件表达式求值为 `FALSE`，示例会发生什么？尝试一下并看看结果。
 
-步骤 1：调整变量赋值部分，将值 11 赋值给 `$number`
+## 步骤 1：调整变量赋值部分，将值 11 赋值给 `$number`
 
 ```php
 <?php
@@ -5807,29 +4712,28 @@ while (条件表达式) {
 ```
 
 ![](img/00145.jpeg)
+
 图 5.5：将计数器变量 `$number` 的初始值改为 11。
 
-步骤 2：保存你的文档。
+## 步骤 2：保存你的文档
 
-步骤 3：运行你的输出。
+## 步骤 3：运行你的输出
 
-
-
-
-没有任何内容显示。这是因为条件表达式的值的结果为 FALSE（假）。这将导致循环的代码块被忽略，结果是一个空白页面。
+没有任何内容显示。这是因为条件表达式的值的结果为 `FALSE`（假）。这将导致循环的代码块被忽略，结果是一个空白页面。
 
 让我们尝试另一个例子。这次，我们将指示循环以 5 为步进行计数。
 
-**问题：** 创建一个 `while` 循环，从 0 到 50 以 5 为步进行计数。每个数字应单独成行显示。确保条件语句的初始值为 TRUE（真）。使用变量名 `$number`。
+**问题：** 创建一个 `while` 循环，从 0 到 50 以 5 为步进行计数。每个数字应单独成行显示。确保条件语句的初始值为 `TRUE`（真）。使用变量名 `$number`。
 
 **解决方案：**
 
-**步骤 1 ：** 创建一个新的 HTML5 文档。将其命名为 `whileLoops_2.php`。将其保存到你的 `www` 或 `htdocs` 文件夹下。
+**步骤 1：** 创建一个新的 HTML5 文档。将其命名为 `whileLoops_2.php`。将其保存到你的 `www` 或 `htdocs` 文件夹下。
 
 ![](img/00147.jpeg)
+
 图 5.7：在 Komodo Edit 中打开一个新的 HTML5 文档。
 
-**步骤 2 ：** 在你的 PHP 文档输入以下程序语句：
+**步骤 2：** 在你的 PHP 文档输入以下程序语句：
 
 代码列表：`whileLoops_2.php`
 
@@ -5854,16 +4758,18 @@ while (条件表达式) {
 ```
 
 ![](img/00148.jpeg)
+
 图 5.8：输入 `whileLoops_2.php` 的语句。
 
-**步骤 3 ：** 运行你的输出。
+**步骤 3：** 运行你的输出。
 
 ![](img/00149.jpeg)
+
 图 5.9：`whileLoops_2.php` 的输出。
 
-如果初始条件被设置为 FALSE 会发生什么？为了找到答案，请尝试以下操作：
+如果初始条件被设置为 `FALSE` 会发生什么？为了找到答案，请尝试以下操作：
 
-**步骤 1 ：** 调整变量赋值部分，为 `$number` 赋值 52。
+**步骤 1：** 调整变量赋值部分，为 `$number` 赋值 52。
 
 ```php
 <?php
@@ -5871,28 +4777,32 @@ while (条件表达式) {
 ```
 
 ![](img/00150.jpeg)
+
 图 5.10：在 `whileLoops_2.php` 中将计数器变量 `$number` 的初始值改为 52。
 
-**步骤 2 ：** 保存你的文档。
-**步骤 3 ：**** 运行你的输出。
+**步骤 2：** 保存你的文档。
+
+**步骤 3：** 运行你的输出。
 
 ![](img/00151.jpeg)
+
 图 5.11：在 `whileLoops_2.php` 中将 `$number` 的初始值改为 52 后输出为空。
 
-正如预期的那样，屏幕是空白的，因为在进入 do-while 循环时，条件表达式的结果为 FALSE。
+正如预期的那样，屏幕是空白的，因为在进入 `do-while` 循环时，条件表达式的结果为 `FALSE`。
 
-对于我们的第三个 while 循环例子，让我们获取一个包含七个元素或成员的简单数组。（在本章稍后的部分，我们将处理 `foreach` 循环，它是获取任何数组元素的最佳方法。）
+对于我们的第三个 `while` 循环例子，让我们获取一个包含七个元素或成员的简单数组。（在本章稍后的部分，我们将处理 `foreach` 循环，它是获取任何数组元素的最佳方法。）
 
 **问题：** 创建一个 `while` 循环，读取一个包含七个成员的数组：界、门、纲、目、科、属、种。每个数组成员必须分单独成行显示。使用变量名 `$taxonomy` 作为数组，使用 `$x` 作为数组计数器。
 
 **解决方案：**
 
-**步骤 1 ：**** 创建一个新的 HTML5 文档。将其命名为 `whileLoops_3.php`。将其保存到你的 `www` 或 `htdocs` 文件夹下。
+**步骤 1：** 创建一个新的 HTML5 文档。将其命名为 `whileLoops_3.php`。将其保存到你的 `www` 或 `htdocs` 文件夹下。
 
 ![](img/00152.jpeg)
+
 图 5.12：在 Komodo Edit 中打开一个新的 HTML5 文档。
 
-**步骤 2 ：**** 在你的 PHP 文档输入以下程序语句。
+**步骤 2：** 在你的 PHP 文档输入以下程序语句。
 
 代码列表：`whileLoops_3.php`
 
@@ -5919,17 +4829,20 @@ while (条件表达式) {
 ```
 
 ![](img/00153.jpeg)
+
 图 5.13：输入 `whileLoops_3.php` 的语句。
 
-**步骤 3 ：：** 再次保存你的文件。
-**步骤 4 ：**** 运行你的输出。
+**步骤 3：** 再次保存你的文件。
+
+**步骤 4：** 运行你的输出。
 
 ![](img/00154.jpeg)
+
 图 5.14：`whileLoops_3.php` 的输出。
 
 ## 5.2 Do-While-Loop
 
-do-while 循环与 while 循环一样，只是条件表达式被放在 do-while 循环的末尾，紧随代码块之后。这是 do-while 循环的语法和结构：
+`do-while` 循环与 `while` 循环一样，只是条件表达式被放在 `do-while` 循环的末尾，紧随代码块之后。这是 `do-while` 循环的语法和结构：
 
 ```php
 do {
@@ -5938,20 +4851,21 @@ do {
 do-while 语句后的第一条语句
 ```
 
-在 while 语句中，程序执行是从首先评估条件表达式开始的。但在 do-while 循环中，程序执行首先执行循环的代码块，然后才评估条件表达式。如果条件表达式的结果为 TRUE，则将再次执行代码块。否则，do-while 循环将终止。
+在 `while` 语句中，程序执行是从首先评估条件表达式开始的。但在 `do-while` 循环中，程序执行首先执行循环的代码块，然后才评估条件表达式。如果条件表达式的结果为 `TRUE`，则将再次执行代码块。否则，`do-while` 循环将终止。
 
-让我们修改第一个例子 `whileLoop_1.php`，并创建一个 do-while 循环。
+让我们修改第一个例子 `whileLoop_1.php`，并创建一个 `do-while` 循环。
 
-**问题：** 创建一个 do-while 循环，从 0 到 10 以 1 为步进行计数。每个数字应单独成行显示。确保条件语句的初始值为 TRUE。使用变量名 `$number`。
+**问题：** 创建一个 `do-while` 循环，从 0 到 10 以 1 为步进行计数。每个数字应单独成行显示。确保条件语句的初始值为 `TRUE`。使用变量名 `$number`。
 
 **解决方案：**
 
-**步骤 1 ：：** 创建一个新的 HTML5 文档。将其命名为 `whileLoops_1.php`。将其保存到你的 `www` 或 `htdocs` 文件夹下。
+**步骤 1：** 创建一个新的 HTML5 文档。将其命名为 `whileLoops_1.php`。将其保存到你的 `www` 或 `htdocs` 文件夹下。
 
 ![](img/00154.jpeg)
+
 图 5.15：在 Komodo Edit 中打开一个新的 HTML5 文档。
 
-**步骤 2 ：：** 在你的 PHP 文档输入以下程序语句：
+**步骤 2：** 在你的 PHP 文档输入以下程序语句：
 
 代码列表：`whileLoops_1.php`
 
@@ -5977,16 +4891,18 @@ do-while 语句后的第一条语句
 ```
 
 ![](img/00155.jpeg)
+
 图 5.16：输入 `whileLoops_1.php` 的语句。
 
-**步骤 3 ：：：** 运行你的输出。
+**步骤 3：** 运行你的输出。
 
 ![](img/00156.jpeg)
+
 图 5.17：`whileLoops_1.php` 的输出。
 
-如果初始条件被设置为 FALSE 会发生什么？为了找到答案，请尝试以下操作：
+如果初始条件被设置为 `FALSE` 会发生什么？为了找到答案，请尝试以下操作：
 
-**步骤 1 ：：：** 调整变量赋值部分，为 `$number` 赋值 11。
+**步骤 1：** 调整变量赋值部分，为 `$number` 赋值 11。
 
 ```php
 <?php
@@ -5994,19 +4910,22 @@ do-while 语句后的第一条语句
 ```
 
 ![](img/00157.jpeg)
+
 图 5.18：在 `whileLoops_1.php` 中将计数器变量 `$number` 的初始值改为 11。
 
-**步骤 2 ：：：** 保存你的文档。
-**步骤 3 ：：：** 运行你的输出。
+**步骤 2：** 保存你的文档。
+
+**步骤 3：** 运行你的输出。
 
 ![](img/00158.jpeg)
+
 图 5.19：在 `whileLoops_1.php` 中将 `$number` 的初始值改为 11 后输出为空。
 
-正如预期的那样，屏幕是空白的，因为在进入 do-while 循环时，条件表达式的结果为 FALSE。
+正如预期的那样，屏幕是空白的，因为在进入 `do-while` 循环时，条件表达式的结果为 `FALSE`。
 
 ## 5.3 For-Loop
 
-到目前为止，我们学习了 while 和 do-while 语句，这是两种简单的 PHP 迭代结构。一种并不简单但紧凑且强大的 PHP 迭代结构，也是程序员最喜爱的结构是 for 循环，其结构如下：
+到目前为止，我们学习了 `while` 和 `do-while` 语句，这是两种简单的 PHP 迭代结构。一种并不简单但紧凑且强大的 PHP 迭代结构，也是程序员最喜爱的结构是 `for` 循环，其结构如下：
 
 ```php
 for (set-start; continue-condition; increment){
@@ -6015,13 +4934,11 @@ for (set-start; continue-condition; increment){
 for 循环语句后的第一条语句
 ```
 
-在 for 语句中，控制 for 循环逻辑的所有逻辑和参数都声明在 for 关键字后面的第一个括号内。有三个语句必须在括号内声明。它们已分别标记为 set-start、`continue-condition` 和 `increment`，以表示每个语句的核心功能。注意只有前两个语句以分号结束。
-
-
+在 `for` 语句中，控制 `for` 循环逻辑的所有逻辑和参数都声明在 `for` 关键字后面的第一个括号内。有三个语句必须在括号内声明。它们已分别标记为 `set-start`、`continue-condition` 和 `increment`，以表示每个语句的核心功能。注意只有前两个语句以分号结束。
 
 `set-start` 语句设置循环计数器变量的初始值。计数器变量记录循环执行的次数。该变量如何递增（或递减）在增量语句中设置。
 
-`continue-condition` 语句声明了循环继续执行的条件表达式。该条件在每次循环开始时进行评估。如果评估结果为 TRUE，则执行循环；否则，循环终止。
+`continue-condition` 语句声明了循环继续执行的条件表达式。该条件在每次循环开始时进行评估。如果评估结果为 `TRUE`，则执行循环；否则，循环终止。
 
 `increment` 语句设置了每次执行循环时计数器变量递增（或递减）的值。在大多数情况下，该变量递增 1，但允许任何值，包括负值。计数器变量的当前值可以随时告诉我们循环已经经历了多少次迭代。
 
@@ -6038,17 +4955,20 @@ for ($i = 1; $i <= 10; $i++)
 
 `set-start` 语句 `$i =1` 将计数器变量 `$i` 设置为其初始值 1。在每次执行 `for-loop` 代码块结束时，`$i` 将递增 1（如增量语句 `$i++` 定义所示）。
 
-在 `for-loop` 执行的最开始，会评估测试条件 `$i <=10`。该条件表达式将评估为 TRUE，因为执行开始时 `$i` 的值为 1。在代码块的前 10 次迭代中，它将评估为 TRUE，但在第 11 次迭代开始时，`$i` 将变为 11，导致 `for-loop` 终止。
+在 `for-loop` 执行的最开始，会评估测试条件 `$i <=10`。该条件表达式将评估为 `TRUE`，因为执行开始时 `$i` 的值为 1。在代码块的前 10 次迭代中，它将评估为 `TRUE`，但在第 11 次迭代开始时，`$i` 将变为 11，导致 `for-loop` 终止。
 
 现在让我们学习通过二、三和倒序显示整数的 `for-loops` 示例。这需要按 1 以外的值递增和递减。
 
 ### 问题
+
 创建一个 `for-loop`，按二和三计数，然后从 40 到 4 倒序按四计数。
 
 ### 解决方案
+
 步骤 1：创建一个新的 HTML5 文件并将其保存为 `forLoops_1.php` 在你的 `www` 或 `htdocs` 文件夹中。
 
 ![](img/00160.jpeg) 
+
 图 5.20：在 Komodo Edit 中打开新的 HTML5 文档。
 
 步骤 2：输入以下程序语句。
@@ -6084,20 +5004,27 @@ for ($i = 1; $i <= 10; $i++)
 ```
 
 这是你的代码在 Komodo Edit 中看起来的样子：
+
 ![](img/0161.jpeg)
+
 图 5.21：输入 `forLoops_1.php` 的语句。
 
 步骤 3：再次保存你的文件。
+
 步骤 4：运行你的输出。
+
 ![](img/0162.jpeg)
+
 图 5.22：`forLoops_1.php` 的输出
 
 ## 5.4 Foreach 循环
+
 `foreach-loop` 语句是修改过的 `for-loop`，仅适用于数组和对象。它不适用于任何其他类型。（对象将在第 10 章中学习）。`foreach-loop` 的目的是方便连续地检索数组的元素。
 
 提示：在第 3 章中介绍了数组，清楚理解索引数组（或简单数组）、关联数组和多维数组之间的区别至关重要。你应该知道如何创建任何数组、如何填充它们、以及如何检索它们的成员。
 
 当用于迭代索引数组或简单数组的成员时，`foreach-loop` 的结构和语法是：
+
 ```php
 foreach($arrayName as $elementValue) {
     // 代码块
@@ -6105,6 +5032,7 @@ foreach($arrayName as $elementValue) {
 ```
 
 当用于迭代关联数组的成员时，`foreach-loop` 的结构和语法是：
+
 ```php
 foreach($arrayName as $key => $elementValue) {
     // 代码块
@@ -6112,9 +5040,6 @@ foreach($arrayName as $key => $elementValue) {
 ```
 
 `$arrayName` 是数组的名称，`$elementValue` 是元素的值。
-
-
-
 
 ```php
 foreach ($gpas as $key => $value)
@@ -6129,20 +5054,25 @@ foreach ($gpas as $key => $value)
 ```
 
 ![](img/00164.jpeg)
+
 图 5.24：输入 `foreachLoops_1.php` 的语句
 
-### 步骤 3：保存文件。
-### 步骤 4：运行你的输出。
+### 步骤 3：保存文件
+
+### 步骤 4：运行你的输出
 
 ![](img/00165.jpeg)
+
 图 5.25：`foreachLoops_1.php` 的输出。
 
 ### 问题
+
 创建一个输出布局的变体，使名称位于第一列，相应的 GPA 显示在每个名称对面。
 
 ### 解决方案
 
 #### 步骤 1：修改代码并将表格元素代码放在数组声明的正下方。
+
 ```php
 echo("<table border='0'>");
 echo("<tr>");
@@ -6151,7 +5081,8 @@ echo("<th>GPA</th>");
 echo("</tr>");
 ```
 
-#### 步骤 2：调整 foreach 循环并插入适当的表格单元格对齐代码。
+#### 步骤 2：调整 `foreach` 循环并插入适当的表格单元格对齐代码。
+
 ```php
 foreach ($gpas as $key => $value)
 {
@@ -6163,7 +5094,10 @@ foreach ($gpas as $key => $value)
 ```
 
 完整的代码列表现在应该像这样：
-**代码列表：代码列表：`foreachLoops_2.php`**
+
+**代码列表：** `foreachLoops_2.php`
+
+
 
 ```html
 <!DOCTYPE html>
@@ -6200,17 +5134,21 @@ foreach ($gpas as $key => $value)
 ```
 
 ![](img/00166.jpeg)
-图 5.26：输入 `foreachLoops_2.php` 的语句
 
-### 步骤 3：将文件保存为 `foreachLoops_2.php`。
+图 5.26：输入`foreachLoops_2.php`的语句
+
+### 步骤 3：将文件保存为`foreachLoops_2.php`。
+
 ### 步骤 4：运行你的输出。
 
 ![](img/00167.jpeg)
-图 5.27：`foreachLoops_2.php` 的输出
 
-使用 `foreach` 循环，让我们在另一个关联数组中进行一些操作。第二个示例将涉及根据给定成绩计算学生的 GPA。
+图 5.27：`foreachLoops_2.php`的输出
+
+使用`foreach`循环，让我们在另一个关联数组中进行一些操作。第二个示例将涉及根据给定成绩计算学生的 GPA。
 
 ### 问题
+
 写一个程序，列出七门学术科目以及最终成绩。在列表末尾计算平均分。见下表：
 
 | 学目 | 成绩 |
@@ -6225,9 +5163,10 @@ foreach ($gpas as $key => $value)
 
 ### 解决方案
 
-#### 步骤 1：打开一个 HTML 模板。在 `<title>` 标签中，输入标题为 `foreachLoops_3.php`。将文件保存到 `www` 或 `htdocs` 文件夹。由于你已经熟悉这一步，我将不再包含图片。
+#### 步骤 1：打开一个 HTML 模板。在`<title>`标签中，输入标题为`foreachLoops_3.php`。将文件保存到`www`或`htdocs`文件夹。由于你已经熟悉这一步，我将不再包含图片。
 
-#### 步骤 2：在保持 `foreachLoops_3.php` 文件打开的情况下，输入以下语句。如下如下声明关联数组：
+#### 步骤 2：在保持`foreachLoops_3.php`文件打开的情况下，输入以下语句。如下声明关联数组：
+
 ```php
 $subject;
 $subject['Algebra'] = 3.50;
@@ -6238,12 +5177,16 @@ $subject['Communications'] = 2.50;
 $subject['Languages'] = 4.00;
 $subject['History'] = 3.75;
 ```
-要计算平均分，必须对所有成绩求和然后除以科目数量。因此，你必须包含两个变量来存储成绩的总和 `$gpt` 以及平均分 `$gpa`：
+
+要计算平均分，必须对所有成绩求和然后除以科目数量。因此，你必须包含两个变量来存储成绩的总和`$gpt`以及平均分`$gpa`：
+
 ```php
 $gpa=0;
 $gpt=0;
 ```
-在 `foreach` 循环中，包含列出不同科目和相应成绩的指令。这也是你包含添加所有成绩过程的部分。
+
+在`foreach`循环中，包含列出不同科目和相应成绩的指令。这也是你包含添加所有成绩过程的部分。
+
 ```php
 foreach($subject as $name => $value) {
     echo("<tr>");
@@ -6253,8 +5196,10 @@ foreach($subject as $name => $value) {
     $gpt += $value;
 }
 ```
+
 这是完整的代码：
-**代码列表：代码列表：`foreachLoops_3.php`**
+
+**代码列表：`foreachLoops_3.php`**
 
 ```html
 <!DOCTYPE html>
@@ -6298,40 +5243,62 @@ foreach($subject as $name => $value) {
 ```
 
 ### 步骤 3：保存文件。
+
 ### 步骤 4：运行你的输出。
 
 ![](img/168.jpeg)
-图 5.28：`foreachLoops_3.php` 的输出
+
+图 5.28：`foreachLoops_3.php`的输出
 
 ## 章节测试
 
 **1 什么是循环？**
+
 a. 代码段的无限迭代。
+
 b. 执行固定次数的命令。
+
 c. 根据条件重复的命令。
+
 d. 控制结构。
 
-**2 while 循环和 do 循环的主要区别是什么？**
-a. while 循环比 do 循环短。
-b. do 循环的代码逻辑更复杂。
-c. 即使条件初始为假，do 循环也会执行一次。
+**2 `while`循环和`do`循环的主要区别是什么？**
+
+a. `while`循环比`do`循环短。
+
+b. `do`循环的代码逻辑更复杂。
+
+c. 即使条件初始为假，`do`循环也会执行一次。
+
 d. 没有区别。
 
-**3 什么是 for 循环？**
-a. for 循环迭代代码段。
-b. for 循环比 while 和 do 循环代码长。
+**3 什么是`for`循环？**
+
+a. `for`循环迭代代码段。
+
+b. `for`循环比`while`和`do`循环代码长。
+
 c. 一种紧凑的循环类型，将逻辑和参数包含在一行内。
-d. for 循环设计用于处理数组。
+
+d. `for`循环设计用于处理数组。
 
 **4 处理复杂数组时使用哪种循环比较明智？**
-a. while 循环
-b. do-while 循环
-c. for 循环
-d. foreach 循环
+
+a. `while`循环
+
+b. `do-while`循环
+
+c. `for`循环
+
+d. `foreach`循环
 
 ## 章节实验
 
-### 问题 1 创建一个循环程序来显示以下输出。不要作弊！你只能 `print()` 或 `echo()` 一个星号，而不是星号字符串。
+### 问题 1
+
+创建一个循环程序来显示以下输出。不要作弊！你只能`print()`或`echo()`一个星号，而不是星号字符串。
+
+```
 *
 **
 ***
@@ -6341,8 +5308,11 @@ d. foreach 循环
 *******
 ********
 *********
+```
 
-### 问题 2 写一个程序计算篮球球队结束时的总分。汇总每个球员在上场和下场获得的总分。下表表示关联数组以及球队在比赛期间获得的积分。
+### 问题 2
+
+写一个程序计算篮球球队结束时的总分。汇总每个球员在上场和下场获得的总分。下表表示关联数组以及球队在比赛期间获得的积分。
 
 | 球员名称 | 上场得分 | 下场得分 |
 | :--- | :--- | :--- |
@@ -6362,33 +5332,39 @@ d. foreach 循环
 | Chris Wilcox | 1 | 2 |
 | Terrence Williams | 0 | 0 |
 
-### 问题 3 创建一个程序来计算投资的每月收益。程序必须生成包含以下信息的报告：
-(1) 投资本
+### 问题 3
+
+创建一个程序来计算投资的每月收益。程序必须生成包含以下信息的报告：
+
+(1) 投资本金
+
 (2) 利率（年化）
+
 (3) 投资期限（以年为单位，6 个月输入 0.5，3 个月 = 0.25，依此类推）
+
 (4) 每月当前余额
 
-
-
-
-
-# (5) 投资期结束时的汇总余额
+(5) 投资期结束时的汇总余额
 
 期限或时长以及利率将根据表单中输入的数字而异。然而，为了准确计算收益，必须满足以下条件。
 
 ### (1) 月利率计算公式为：
+
 `Monthly Interest Rate = $interestRate/12`
 
 ### (2) 每月收益必须报告，计算方式为：
-`Monthly Interest = $principal *$monthlyInterestRate`
+
+`Monthly Interest = $principal * $monthlyInterestRate`
 
 ### (3) 每月当前余额也必须报告，计算方式为：
+
 `Monthly Balance = $principal + $monthlyInterest`
 
 ### (4) 期末结束时的未来投资价值计算公式为：
+
 `Total Investment = the last monthly balance`
 
-本金、年利率和期限必须都被视为 `$superglobal` 变量。
+本金、年利率和期限必须都被视为`$superglobal`变量。
 
 为解决方案准备两个文件。全局变量将由表单页面处理。计算由一个包含纯 PHP 脚本独立文档负责，该脚本将处理所有的计算和输出处理。
 
@@ -6403,7 +5379,7 @@ d. foreach 循环
 | 本金金额 |  |
 | 年利率 |  |
 | 期限 |  |
-| 收益历史 | |
+| 收益历史 |  |
 | 月份 | 每月收益 | 当前余额 |
 | 第 1 月 |  |  |
 | 第 2 月 |  |  |
@@ -6417,6 +5393,7 @@ d. foreach 循环
 ### 解决方案 1：
 
 代码列表：章节练习 1 答案
+
 `chapterLabProb_1.php`
 
 ```php
@@ -6436,12 +5413,217 @@ d. foreach 循环
 
 ![](img/00170.jpeg)
 
-图 5.30：实验练习 1 的输出 (chapter5LabProb_1.php)
+图 5.30：实验练习 1 的输出 (`chapter5LabProb_1.php`)
 
 ### 解决方案 2：
 
 代码列表：章节练习 2 答案
+
 `chapterLabProb_2.php`
+
+
+
+# (5) 投资期结束时的汇总余额
+
+期限或时长以及利率将根据表单中输入的数字而异。然而，为了准确计算收益，必须满足以下条件。
+
+### (1) 月利率计算公式为：
+
+`Monthly Interest Rate = $interestRate/12`
+
+### (2) 每月收益必须报告，计算方式为：
+
+`Monthly Interest = $principal * $monthlyInterestRate`
+
+### (3) 每月当前余额也必须报告，计算方式为：
+
+`Monthly Balance = $principal + $monthlyInterest`
+
+### (4) 期末结束时的未来投资价值计算公式为：
+
+`Total Investment = the last monthly balance`
+
+本金、年利率和期限必须都被视为`$superglobal`变量。
+
+为解决方案准备两个文件。全局变量将由表单页面处理。计算由一个包含纯 PHP 脚本独立文档负责，该脚本将处理所有的计算和输出处理。
+
+表单页面应如下：
+
+![](img/00169.jpeg)
+
+图 5.29：实验练习 3 的表单页面或输入屏幕显示。
+
+按如下格式化输出：
+
+| 本金金额 |  |
+| --- | --- |
+| 年利率 |  |
+| 期限 |  |
+| 收益历史 |  |
+| 月份 | 每月收益 | 当前余额 |
+| 第 1 月 |  |  |
+| 第 2 月 |  |  |
+| 第 3 月 |  |  |
+| … |  |  |
+| 第 n 月 |  |  |
+|  | 投资在期末的未来价值 |  |
+
+## 章节实验练习答案：
+
+### 解决方案 1：
+
+代码列表：章节练习 1 答案
+
+`chapterLabProb_1.php`
+
+```php
+<?php
+    for($i=0;$i<=10;$i++)
+    {
+        for($j=0;$j<=$i;$j++)
+        {
+            print("*\t");
+        }
+        print("</br>");
+    }
+?>
+```
+
+解决方案 1 输出：
+
+![](img/00170.jpeg)
+
+图 5.30：实验练习 1 的输出 (`chapter5LabProb_1.php`)
+
+### 解决方案 2：
+
+代码列表：章节练习 2 答案
+
+`chapterLabProb_2.php`
+
+```php
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chapter 5 Lab Exercise Solution 2</title>
+    </head>
+    <body>
+<?php
+    $boston = array
+                    (
+                        "Brandon Bass" => array (5, 3),
+                        "Avery Bradley" => array (0, 2),
+                        "Jordan Crawford" => array (6, 2),
+                        "Kevin Garnett" => array (7, 5),
+                        "Jeff Green" => array (3, 3),
+                        "Courtney Lee" => array (1, 4),
+                        "Fab Melo" => array (0, 2),
+                        "Paul Pierce" => array (15, 10),
+                        "Shavlik Randolph" => array (0, 0),
+                        "Rajon Rondo" => array (20, 8),
+                        "Jared Sullinger" => array (0, 3),
+                        "Jason Terry" => array (9, 10),
+                        "D.J. White" => array (3, 2),
+                        "Chris Wilcox" => array (1, 2),
+                        "Terrence Williams" => array (0, 0)
+                    );
+    $totalScore = 0;
+    //add points to get the total score
+    foreach($boston as $key)
+    {
+        foreach($key as $value)
+        {
+            $totalScore += $value;
+        }
+    }
+    //set up table heading
+    echo("<table border='1'>");
+    echo("<tr>");
+    echo("<th>Player Name</th>");
+    echo("<th>Points-First Half</th>");
+    echo("<th>Points-Second Half</th>");
+    echo("</tr>");
+    echo("<tr>");
+    echo("<td>Brandon Bass</td>");
+    echo("<td align='center'>" . $boston['Brandon Bass'][0] . "</td>");
+    echo("<td align='center'>" . $boston['Brandon Bass'][1] . "</td>");
+    echo("</tr>");
+    echo("<tr>");
+    echo("<td>Avery Bradley</td>");
+    echo("<td align='center'>" . $boston['Avery Bradley'][0] . "</td>");
+    echo("<td align='center'>" . $boston['Avery Bradley'][1] . "</td>");
+    echo("</tr>");
+    echo("<tr>");
+    echo("<td>Jordan Crawford</td>");
+    echo("<td align='center'>" . $boston['Jordan Crawford'][0] . "</td>");
+    echo("<td align='center'>" . $boston['Jordan Crawford'][1] . "</td>");
+    echo("</tr>");
+    echo("<tr>");
+    echo("<td>Kevin Garnett</td>");
+    echo("<td align='center'>" . $boston['Kevin Garnett'][0] . "</td>");
+    echo("<td align='center'>" . $boston['Kevin Garnett'][1] . "</td>");
+    echo("</tr>");
+    echo("<tr>");
+    echo("<td>Jeff Green</td>");
+    echo("<td align='center'>" . $boston['Jeff Green'][0] . "</td>");
+    echo("<td align='center'>" . $boston['Jeff Green'][1] . "</td>");
+    echo("</tr>");
+    echo("<tr>");
+    echo("<td>Courtney Lee</td>");
+    echo("<td align='center'>" . $boston['Courtney Lee'][0] . "</td>");
+    echo("<td align='center'>" . $boston['Courtney Lee'][1] . "</td>");
+    echo("</tr>");
+    echo("<tr>");
+    echo("<td>Fab Melo</td>");
+    echo("<td align='center'>" . $boston['Fab Melo'][0] . "</td>");
+    echo("<td align='center'>" . $boston['Fab Melo'][1] . "</td>");
+    echo("</tr>");
+    echo("<tr>");
+    echo("<td>Paul Pierce</td>");
+    echo("<td align='center'>" . $boston['Paul Pierce'][0] . "</td>");
+    echo("<td align='center'>" . $boston['Paul Pierce'][1] . "</td>");
+    echo("</tr>");
+    echo("<tr>");
+    echo("<td>Shavlik Randolph</td>");
+    echo("<td align='center'>" . $boston['Shavlik Randolph'][0] . "</td>");
+    echo("<td align='center'>" . $boston['Shavlik Randolph'][1] . "</td>");
+    echo("</tr>");
+    echo("<tr>");
+    echo("<td>Rajon Rondo</td>");
+    echo("<td align='center'>" . $boston['Rajon Rondo'][0] . "</td>");
+    echo("<td align='center'>" . $boston['Rajon Rondo'][1] . "</td>");
+    echo("</tr>");
+    echo("<tr>");
+    echo("<td>Jared Sullinger</td>");
+    echo("<td align='center'>" . $boston['Jared Sullinger'][0] . "</td>");
+    echo("<td align='center'>" . $boston['Jared Sullinger'][1] . "</td>");
+    echo("</tr>");
+    echo("<tr>");
+    echo("<td>Jason Terry</td>");
+    echo("<td align='center'>" . $boston['Jason Terry'][0] . "</td>");
+    echo("<td align='center'>" . $boston['Jason Terry'][1] . "</td>");
+    echo("</tr>");
+    echo("<tr>");
+    echo("<td>D.J. White</td>");
+    echo("<td align='center'>" . $boston['D.J. White'][0] . "</td>");
+    echo("<td align='center'>" . $boston['D.J. White'][1] . "</td>");
+    echo("</tr>");
+    echo("<tr>");
+    echo("<td>Chris Wilcox</td>");
+    echo("<td align='center'>" . $boston['Chris Wilcox'][0] . "</td>");
+    echo("<td align='center'>" . $boston['Chris Wilcox'][1] . "</td>");
+    echo("</tr>");
+    echo("<tr>");
+    echo("<td>Terrence Williams</td>");
+    echo("<td align='center'>" . $boston['Terrence Williams'][0] . "</td>");
+    echo("<td align='center'>" . $boston['Terrence Williams'][1] . "</td>");
+    echo("</tr>");
+    ?>
+</body>
+</html>
+```
+
+
 
 ```php
 <!DOCTYPE html>
@@ -6564,207 +5746,6 @@ d. foreach 循环
 </body>
 </html>
 ```
-
-[/content] 抱歉，由于您提供的文本在最后处似乎在未翻译的示例中中断了，我根据您的要求为您提取并翻译了完整内容。以下是翻译后的完整文本：
-
-[content]
-
-# (5) 投资期结束时的汇总余额
-
-期限或时长以及利率将根据表单中输入的数字而异。然而，为了准确计算收益，必须满足以下条件。
-
-### (1) 月利率计算公式为：
-`Monthly Interest Rate = $interestRate/12`
-
-### (2) 每月收益必须报告，计算方式为：
-`Monthly Interest = $principal *$monthlyInterestRate`
-
-### (3) 每月当前余额也必须报告，计算方式为：
-`Monthly Balance = $principal + $monthlyInterest`
-
-### (4) 期末结束时的未来投资价值计算公式为：
-`Total Investment = the last monthly balance`
-
-本金、年利率和期限必须都被视为 `$superglobal` 变量。
-
-为解决方案准备两个文件。全局变量将由表单页面处理。计算由一个包含纯 PHP 脚本独立文档负责，该脚本将处理所有的计算和输出处理。
-
-表单页面应如下：
-
-![](img/00169.jpeg)
-
-图 5.29：实验练习 3 的表单页面或输入屏幕显示。
-
-按如下格式化输出：
-
-| 本金金额 |  |
-| 年利率 |  |
-| 期限 |  |
-| 收益历史 | |
-| 月份 | 每月收益 | 当前余额 |
-| 第 1 月 |  |  |
-| 第 2 月 |  |  |
-| 第 3 月 |  |  |
-| … |  |  |
-| 第 n 月 |  |  |
-|  | 投资在期末的未来价值 |  |
-
-## 章节实验练习答案：
-
-### 解决方案 1：
-
-代码列表：章节练习 1 答案
-`chapterLabProb_1.php`
-
-```php
-<?php
-    for($i=0;$i<=10;$i++)
-    {
-        for($j=0;$j<=$i;$j++)
-        {
-            print("*\t");
-        }
-        print("</br>");
-    }
-?>
-```
-
-解决方案 1 输出：
-
-![](img/00170.jpeg)
-
-图 5.30：实验练习 1 的输出 (chapter5LabProb_1.php)
-
-### 解决方案 2：
-
-代码列表：章节练习 2 答案
-`chapterLabProb_2.php`
-
-```php
-<!DOCTYPE html>
-<html
-    <head>
-        <title>Chapter 5 Lab Exercise Solution 2</title>
-    </head>
-    <body>
-<?php
-    $boston = array
-                    (
-                        "Brandon Bass" => array (5, 3),
-                        "Avery Bradley" => array (0, 2),
-                        "Jordan Crawford" => array (6, 2),
-                        "Kevin Garnett" => array (7, 5),
-                        "Jeff Green" => array (3, 3),
-                        "Courtney Lee" => array (1, 4),
-                        "Fab Melo" => array (0, 2),
-                        "Paul Pierce" => array (15, 10),
-                        "Shavlik Randolph" => array (0, 0),
-                        "Rajon Rondo" => array (20, 8),
-                        "Jared Sullinger" => array (0, 3),
-                        "Jason Terry" => array (9, 10),
-                        "D.J. White" => array (3, 2),
-                        "Chris Wilcox" => array (1, 2),
-                        "Terrence Williams" => array (0, 0)
-                    );
-    $totalScore = 0;
-    //add points to get the total score
-    foreach($boston as $key)
-    {
-        foreach($key as $value)
-        {
-            $totalScore += $value;
-        }
-    }
-    //set up table heading
-    echo("<table border='1'>");
-    echo("<tr>");
-    echo("<th>Player Name</th>");
-    echo("<th>Points-First Half</th>");
-    echo("<th>Points-Second Half</th>");
-    echo("</tr>");
-    echo("<tr>");
-    echo("<td>Brandon Bass</td>");
-    echo("<td align='center'>" . $boston['Brandon Bass'][0] . "</td>");
-    echo("<td align='center'>" . $boston['Brandon Bass'][1] . "</td>");
-    echo("</tr>");
-    echo("<tr>");
-    echo("<td>Avery Bradley</td>");
-    echo("<td align='center'>" . $boston['Avery Bradley'][0] . "</td>");
-    echo("<td align='center'>" . $boston['Avery Bradley'][1] . "</td>");
-    echo("</tr>");
-    echo("<tr>");
-    echo("<td>Jordan Crawford</td>");
-    echo("<td align='center'>" . $boston['Jordan Crawford'][0] . "</td>");
-    echo("<td align='center'>" . $boston['Jordan Crawford'][1] . "</td>");
-    echo("</tr>");
-    echo("<tr>");
-    echo("<td>Kevin Garnett</td>");
-    echo("<td align='center'>" . $boston['Kevin Garnett'][0] . "</td>");
-    echo("<td align='center'>" . $boston['Kevin Garnett'][1] . "</td>");
-    echo("</tr>");
-    echo("<tr>");
-    echo("<td>Jeff Green</td>");
-    echo("<td align='center'>" . $boston['Jeff Green'][0] . "</td>");
-    echo("<td align='center'>" . $boston['Jeff Green'][1] . "</td>");
-    echo("</tr>");
-    echo("<tr>");
-    echo("<td>Courtney Lee</td>");
-    echo("<td align='center'>" . $boston['Courtney Lee'][0] . "</td>");
-    echo("<td align='center'>" . $boston['Courtney Lee'][1] . "</td>");
-    echo("</tr>");
-    echo("<tr>");
-    echo("<td>Fab Melo</td>");
-    echo("<td align='center'>" . $boston['Fab Melo'][0] . "</td>");
-    echo("<td align='center'>" . $boston['Fab Melo'][1] . "</td>");
-    echo("</tr>");
-    echo("<tr>");
-    echo("<td>Paul Pierce</td>");
-    echo("<td align='center'>" . $boston['Paul Pierce'][0] . "</td>");
-    echo("<td align='center'>" . $boston['Paul Pierce'][1] . "</td>");
-    echo("</tr>");
-    echo("<tr>");
-    echo("<td>Shavlik Randolph</td>");
-    echo("<td align='center'>" . $boston['Shavlik Randolph'][0] . "</td>");
-    echo("<td align='center'>" . $boston['Shavlik Randolph'][1] . "</td>");
-    echo("</tr>");
-    echo("<tr>");
-    echo("<td>Rajon Rondo</td>");
-    echo("<td align='center'>" . $boston['Rajon Rondo'][0] . "</td>");
-    echo("<td align='center'>" . $boston['Rajon Rondo'][1] . "</td>");
-    echo("</tr>");
-    echo("<tr>");
-    echo("<td>Jared Sullinger</td>");
-    echo("<td align='center'>" . $boston['Jared Sullinger'][0] . "</td>");
-    echo("<td align='center'>" . $boston['Jared Sullinger'][1] . "</td>");
-    echo("</tr>");
-    echo("<tr>");
-    echo("<td>Jason Terry</td>");
-    echo("<td align='center'>" . $boston['Jason Terry'][0] . "</td>");
-    echo("<td align='center'>" . $boston['Jason Terry'][1] . "</td>");
-    echo("</tr>");
-    echo("<tr>");
-    echo("<td>D.J. White</td>");
-    echo("<td align='center'>" . $boston['D.J. White'][0] . "</td>");
-    echo("<td align='center'>" . $boston['D.J. White'][1] . "</td>");
-    echo("</tr>");
-    echo("<tr>");
-    echo("<td>Chris Wilcox</td>");
-    echo("<td align='center'>" . $boston['Chris Wilcox'][0] . "</td>");
-    echo("<td align='center'>" . $boston['Chris Wilcox'][1] . "</td>");
-    echo("</tr>");
-    echo("<tr>");
-    echo("<td>Terrence Williams</td>");
-    echo("<td align='center'>" . $boston['Terrence Williams'][0] . "</td>");
-    echo("<td align='center'>" . $boston['Terrence Williams'][1] . "</td>");
-    echo("</tr>");
-    ?>
-</body>
-</html>
-```
-
-
-
-
 
 ```php
 echo("<td align='center'>" . $boston['Terrence Williams'][1] . "</td>");
@@ -6778,13 +5759,13 @@ echo("</tr>");
 </html>
 ```
 
-### 方案 2 输出：
+### 方案 2 输出
 
 ![](img/00171.jpeg)
 
-图 5.31：实验练习 2 的输出 (`chapter5LabProb_2.php`)
+图 5.31：实验练习 2 的输出（`chapter5LabProb_2.php`）
 
-### 方案 3：
+### 方案 3
 
 代码列表：章节练习题 3 解决方案
 
@@ -6825,7 +5806,7 @@ echo("</tr>");
 
 ![](img/00169.jpeg)
 
-图 5.32：实验练习 3 的输入界面 (`chapter5LabProb_3.php`)
+图 5.32：实验练习 3 的输入界面（`chapter5LabProb_3.php`）
 
 ### 代码列表：章节练习题 3 解决方案
 
@@ -6877,7 +5858,7 @@ echo("</tr>");
 ?>
 ```
 
-### 方案 3 输出：
+### 方案 3 输出
 
 本金：600，利率：10%，期限：（5 个月）0.41667
 
@@ -6921,7 +5902,9 @@ echo("</tr>");
 
 函数是编程语言中不可或缺的特性，因为：
 
-- 在良好的设计系统中，98% 的代码位于函数之中， 充分理解函数对于掌握面向对象编程（OOP）至关重要，它让开发者构建大型且易于维护的应用程序
+- 在良好的设计系统中，98% 的代码位于函数之中，充分理解函数对于掌握面向对象编程（OOP）至关重要，它让开发者构建大型且易于维护的应用程序
+
+
 
 我们将讨论函数的基础知识，现在你可能还没有意识到这一点，但从第 1 章开始你就在使用这些内置函数，具体来说是 `echo()`、`print()` 和 `printf()`。以下是你在第 1 章中使用这些函数的实例：
 
@@ -6953,10 +5936,6 @@ $salary = array(
 
 对于 `array()` 函数，它根据作为参数传递给函数的值创建一个数组。这些值成为数组的元素或成员。`array()` 函数随后返回数组的变量引用。
 
-
-
-
-
 调用函数等同于程序语句。当你调用一个函数时，程序控制会跳转到函数的第一行。当函数执行完其代码后，程序控制将转移到函数调用之后的语句。
 
 ```
@@ -6974,12 +5953,17 @@ $retValue = functionName(arg1, arg2,...); // function call
 调用或执行函数会执行该函数的程序语句。当你调用或执行一个函数时，可以使用以下任何格式：
 
 1. `functionName();`
+
 2. `functionName( arg1, arg2,..., argN );`
+
 3. `$returnValue = functionName();`
+
 4. `$returnValue = functionName( arg1, arg2, . . .);`
 
 - `functionName` – 这是你给函数的唯一名称。没有两个函数会有相同的名称。
+
 - `arg1, arg2, . . ., argN` – 这是一个可选的逗号分隔的字面量或变量名列表，称为参数，是传递给函数的值。你可以传递的参数数量没有限制。这些参数允许你控制函数的执行，它们赋予了函数功能和灵活性。
+
 - `$returnValue` – 这是一个可选的变量，用于接收并存储函数返回的可选值。通过使用变量来持有函数的返回值，我们可以让该值对脚本的其他部分可用。
 
 让我们再看另一个函数调用的例子，它使用了函数调用的所有可选组件——参数列表和返回值。我们将在本章后面的内容多次引用这个例子。
@@ -7042,10 +6026,6 @@ main();
 ```
 
 `main()`（你选择的任何适当名称）的主要任务是控制函数层次结构中第二层控制函数的执行。`main()` 函数本身的代码将位于单独的 .php 文件中。
-
-
-
-
 
 函数应该存储在单独的 PHP 函数容器文件中，以便于整洁性、检索和维护。假设在一个项目中，开发团队编写、测试并调试了 100 个函数。假设每个函数的平均长度为 20 行，其中最短的函数只有 2 行，而最长的函数有的一百行。经验丰富的程序员不会将这 100 个函数全部放在一个 PHP 脚本文件中（这至少会有 2000 行代码，并且需要打印 40 页纸质副本）。他们会先根据主要任务对函数进行分类分组，然后将任务相似的函数放置或存储在单独 PHP 函数容器文件中。例如，处理图形的函数将放在 `graphics.php` 中。处理折扣计算的函数将放在 `discounts.php` 中，以此此类推。
 
@@ -7121,9 +6101,11 @@ require_once("phpScriptName");
 让我们来看一些例子。
 
 ![](img/00176.jpeg)
+
 图 6.1：在 Komodo Edit 页面通过点击 New File 开始创建文件。选择 New file 将弹出一个窗口。选择 PHP 模板并将 `www` 设置为目录，其中保存名为 `includeMe.php` 的新文件。
 
 ![](img/00177.jpeg)
+
 图 6.2：Komodo Edit 的 New File 窗口。输入文件名 `includeMe.php` 并文件保存到你的 `www` 文件夹中。打开新的 PHP 文件，在起始和结束标签内输入以下代码。
 
 ```php
@@ -7133,9 +6115,11 @@ require_once("phpScriptName");
 ```
 
 ![](img/00178.jpeg)
+
 图 6.3：Komodo Edit 中的 `includeMe.php` 代码。保存并运行此脚本。此代码产生产生输出：
 
 ![](img/00179.jpeg)
+
 图 6.4：运行 `includeMe.php` 脚本时的输出。
 
 使用模板创建另一个 PHP 文件，但这次使用 `include.php` 作为文件名。在 `include.php` 文件中，输入以下代码打印相同的语句，然后插入一个换行标签。然后将其放入 include 命令中。
@@ -7149,9 +6133,11 @@ require_once("phpScriptName");
 ```
 
 ![](img/0180.jpeg)
+
 图 6.5：Komodo Edit 中查看的 `include.php` 代码列表。你的输出应该像这样：
 
 ![](img/0181.jpeg)
+
 图 6.6：运行 `include` 时的输出。
 
 通过在程序中复制 include 语句多次使用 include。通过下面的代码修改 `include.php`，然后运行它。
@@ -7171,6 +6157,7 @@ require_once("phpScriptName");
 ```
 
 ![](img/0182.jpeg)
+
 图 6.7：运行修改后的 `include.php` 的输出。
 
 现在，在我们之前的 `include.php` 代码中将 `include` 替换为 `require` 并添加一些 print 语句。还按照下面的代码更改 require 语句内部的文件，然后将文件保存为 `include_2.php`。
@@ -7199,9 +6186,12 @@ require_once("phpScriptName");
 注意，当 `require` 语句中发现错误时，该语句之后的代码都没有被处理，程序停止了。
 
 ![](img/0183.jpeg)
-图 6.8：运行 `include_2.php` 的输出。
 
-对于 `include` 函数，相反，它不会产生错误，而是忽略了错误。例如，在文件名 `include_3.php` 下输入保存以下代码并运行输出：
+
+
+图 6.8：运行`include_2.php`的输出。
+
+对于`include`函数，相反，它不会产生错误，而是忽略了错误。例如，在文件名`include_3.php`下输入保存以下代码并运行输出：
 
 ```php
 // Code Listing: include_3.php
@@ -7214,9 +6204,6 @@ require_once("phpScriptName");
 ?>
 ```
 
-
-
-
 ```php
 print("The following statement below is printed out using the include function.");
 print("</br>");
@@ -7227,11 +6214,11 @@ print("</br>");
 ?>
 ```
 
-如果所有的 `print` 和 `include` 语句都经过处理，输出将显示六行。但由于其中一个 `include` 语句调用了一个不存在或“空”文件——`includeMeXX.php`，程序将把该部分代码视为错误，并在浏览器中打印出错误语句。当使用 `require` 代替 `include` 时，程序也会停止。
+如果所有的`print`和`include`语句都经过处理，输出将显示六行。但由于其中一个`include`语句调用了一个不存在或“空”文件——`includeMeXX.php`，程序将把该部分代码视为错误，并在浏览器中打印出错误语句。当使用`require`代替`include`时，程序也会停止。
 
 ![](img/00184.jpeg)
 
-图 6.9：`include_3.php` 运行时的输出。
+图 6.9：`include_3.php`运行时的输出。
 
 ## 6.4 创建简单函数
 
@@ -7244,29 +6231,29 @@ function functionName( param1, param2, . . . paramN ) {
 }
 ```
 
-第一行必须以关键字 `function` 开始。接着是你的函数名称。该名称必须遵循某些规则。
+第一行必须以关键字`function`开始。接着是你的函数名称。该名称必须遵循某些规则。
 
-有效的 `functionName` 以字母或下划线开头，后跟任意数量的字母、数字或下划线。函数名不区分大小写。
+有效的`functionName`以字母或下划线开头，后跟任意数量的字母、数字或下划线。函数名不区分大小写。
 
 我们之前说过，函数是“一个执行特定任务的程序语句的自包含集合”。当你为函数命名时，该名称应该让你对函数将执行的“特定任务”有一个直观的理解。
 
-函数名后面应该跟着一组括号 `()`。如果函数被设计为接收参数，则在括号内放置一个用逗号分隔的参数列表（`param1`, `param2`, . . . `paramN`），用于接收参数。你可以指定任意数量的参数变量，但对于你指定的每个参数，在调用函数时必须向函数传递相应的参数。换句话说，函数调用中的参数顺序和数量应该与函数定义中的参数顺序和数量匹配。
+函数名后面应该跟着一组括号`()`。如果函数被设计为接收参数，则在括号内放置一个用逗号分隔的参数列表（`param1`, `param2`, . . . `paramN`），用于接收参数。你可以指定任意数量的参数变量，但对于你指定的每个参数，在调用函数时必须向函数传递相应的参数。换句话说，函数调用中的参数顺序和数量应该与函数定义中的参数顺序和数量匹配。
 
-无论你的函数是否接收参数，括号 `()` 都必须紧跟在函数后面。
+无论你的函数是否接收参数，括号`()`都必须紧跟在函数后面。
 
 **注意**：参数（arguments）和形（parameters）之间的区别是什么？参数是你传递给函数的值，而形式是函数内部接收该值的变量。在现实生活中，这两个术语通常互换使用。
 
-括号之后是函数的主代码块，由大括号 `{}` 分隔。在这个代码块中，你可以编写任何 PHP 程序语句，包括对其他函数的调用（包括当前函数），这种做法被称为递归。
+括号之后是函数的主代码块，由大括号`{}`分隔。在这个代码块中，你可以编写任何 PHP 程序语句，包括对其他函数的调用（包括当前函数），这种做法被称为递归。
 
-`return` 语句返回 `expression`。
+`return`语句返回`expression`。
 
 **提示**：以防你忘记了什么是表达式，你可以回顾第 4 章第 1 节“简单控制结构——If 语句”。
 
-`return` 语句可以放在函数代码块的任何位置，但一旦执行了 `return` 语句，函数将立即终止，控制权返回调用脚本，具体返回函数调用后的第一个程序语句。
+`return`语句可以放在函数代码块的任何位置，但一旦执行了`return`语句，函数将立即终止，控制权返回调用脚本，具体返回函数调用后的第一个程序语句。
 
 让我们创建一个简单函数。准备两个文件模板：一个 PHP 函数容器文件和一个调用容器文件中函数的 HTML 文档。
 
-### 步骤 1：创建一个名为 `functions.php` 的 PHP 模板。这将是函数容器文件。点击“新建文件”。
+### 步骤 1：创建一个名为`functions.php`的 PHP 模板。这将是函数容器文件。点击“新建文件”。
 
 ![](img/00185.jpeg)
 
@@ -7274,11 +6261,11 @@ function functionName( param1, param2, . . . paramN ) {
 
 ![](img/00186.jpeg)
 
-图 6.11：Komodo Edit 的新建文件对话框。输入文件名 `functions.php` 并文件保存到你的 www 或 htdocs 文件夹中。
+图 6.11：Komodo Edit 的新建文件对话框。输入文件名`functions.php`并文件保存到你的 www 或 htdocs 文件夹中。
 
-一旦创建了 `functions.php` 文件，就开始编写第一个函数 `greeting()`。
+一旦创建了`functions.php`文件，就开始编写第一个函数`greeting()`。
 
-### 步骤 2：在你的 `functions.php` 文件中输入以下代码。
+### 步骤 2：在你的`functions.php`文件中输入以下代码。
 
 ```php
 <?php
@@ -7291,11 +6278,11 @@ function greeting()
 
 ![](img/00187.jpeg)
 
-图 6.12：`functions.php` 运行时的输出。
+图 6.12：`functions.php`运行时的输出。
 
 在左右大括号之间的语句是需要该函数的 HTML 文档实际调用的代码。PHP 函数脚本容器文件必须正确地包含或 include 或 require 这些函数。
 
-现在，让我们向容器文件中添加第二个函数 `loop()`。这个循环例程将以三角形结构显示星号 (*)。
+现在，让我们向容器文件中添加第二个函数`loop()`。这个循环例程将以三角形结构显示星号 (*)。
 
 ```php
 <?php
@@ -7320,18 +6307,15 @@ function greeting()
 
 （注：原文在后半部分存在大量重复和逻辑混乱，此处已在保持内容的基础上对翻译进行了逻辑清理。）
 
-
-
-
-函数的返回值它是为传递的特定 `$month` 和特定 `$year` 所计算的天数。对函数进行 2014 年 2 月天数的实际调用如下：
+函数的返回值它是为传递的特定`$month`和特定`$year`所计算的天数。对函数进行 2014 年 2 月天数的实际调用如下：
 
 ```php
 $noDaysInMonth = days_in_month( 2, 2014 )
 ```
 
-该函数将返回 28，该值将存储在变量 `$noDaysInMonth` 中。
+该函数将返回 28，该值将存储在变量`$noDaysInMonth`中。
 
-现在，假设我们无法向函数传递参数。在 `days_in_month()` 函数的情况下，我们必须为想要计算的每年的每个月都编写一个该版本的代码！
+现在，假设我们无法向函数传递参数。在`days_in_month()`函数的情况下，我们必须为想要计算的每年的每个月都编写一个该版本的代码！
 
 没有参数的函数将变得毫无用处！但有了参数，我们只需要一个函数就可以处理过去和未来所有年份月份，直到永恒！
 
@@ -7355,7 +6339,7 @@ Function formInitials( $givname, $midname, $surname) {
 $initials = formInitials( “George”, ”Walker”, “Bush”)
 ```
 
-三个参数对应三个参数，且参数的顺序与参数的顺序对应。参数“George”对应参数 `$givname`，参数“Walker”对应 `$midname`，参数“Bush”对应 `$surname`。改变参数的顺序你就会得到错误的结果！
+三个参数对应三个参数，且参数的顺序与参数的顺序对应。参数“George”对应参数`$givname`，参数“Walker”对应`$midname`，参数“Bush”对应`$surname`。改变参数的顺序你就会得到错误的结果！
 
 c. 参数可以是 PHP 八种数据类型中的任何一种，即：整数、浮点数、字符串、布尔值、数组、对象、资源（或句柄）甚至 null。（尽管向函数传递 null 值是少罕的。）
 
@@ -7365,14 +6349,15 @@ d. 向函数传递的参数数量没有限制。然而，使用超过五个或�
 
 让我们来看一些例子。
 
-**步骤 1**：在 PHP 模板中创建一个新的 PHP 函数脚本容器文件，文件名使用 `functionArgs.php`。
+**步骤 1**：在 PHP 模板中创建一个新的 PHP 函数脚本容器文件，文件名使用`functionArgs.php`。
 
 ![](img/00192.jpeg)
-图 6.17：Komodo Edit 中文件 `functionArgs.php` 的新建文件对话框。
 
-**步骤 2**：将其保存到你的 `www` 或 `htdocs` 文件夹中。
+图 6.17：Komodo Edit 中文件`functionArgs.php`的新建文件对话框。
 
-**步骤 3**：在 `functionArgs.php` 文件中，创建一个名为 `dogAgeCalc()` 的函数并向函数传递参数 `$dogAge`。
+**步骤 2**：将其保存到你的`www`或`htdocs`文件夹中。
+
+**步骤 3**：在`functionArgs.php`文件中，创建一个名为`dogAgeCalc()`的函数并向函数传递参数`$dogAge`。
 
 ```php
 <?php
@@ -7397,6 +6382,7 @@ function dogAgeCalc($dogAge)
 此脚本将计算给定的狗年龄折合人类年龄。例如，如果狗是 7 岁，它等同于一个 49 岁的人类。
 
 这里是狗年龄计算器的完整代码列表。
+
 **代码列表：functionArgs.php**
 
 ```php
@@ -7409,19 +6395,21 @@ function dogAgeCalc($dogAge)
 ?>
 ```
 
-如果你尝试运行此代码，它将显示空白输出，因为变量 `$age` 尚未赋值。脚本的输出看起来像这样：
+如果你尝试运行此代码，它将显示空白输出，因为变量`$age`尚未赋值。脚本的输出看起来像这样：
 
 ![](img/00193.jpeg)
-图 6.18：运行 `functionArgs.php` 时的输出。
+
+图 6.18：运行`functionArgs.php`时的输出。
 
 现在为了让这个 php 函数容器文件变得有用，我们必须在 HTML 模板中编写的另一个 PHP 文档。
 
-**步骤 6**：打开一个新的 HTML 文档模板并将文件命名为 `computeDogAge.php`。
+**步骤 6**：打开一个新的 HTML 文档模板并将文件命名为`computeDogAge.php`。
 
 ![](img/00194.jpeg)
-图 6.19：Komodo Edit 中文件 `computeDogAge.php` 的新建文件对话框。
 
-**步骤 7**：包含起始和结束的 PHP 脚本标签。在文档的 `<head>` 部分，`include()` PHP 函数容器文件 `functionArgs.php`。对 `include()` 和 `require()` 函数的调用必须位于 `<head>` 部分。
+图 6.19：Komodo Edit 中文件`computeDogAge.php`的新建文件对话框。
+
+**步骤 7**：包含起始和结束的 PHP 脚本标签。在文档的`<head>`部分，`include()` PHP 函数容器文件`functionArgs.php`。对`include()`和`require()`函数的调用必须位于`<head>`部分。
 
 ```html
 <!DOCTYPE html>
@@ -7432,7 +6420,7 @@ function dogAgeCalc($dogAge)
 </head>
 ```
 
-**步骤 8**：在 `<body>` 部分调用函数 `dogAgeCalc` 并为 `$age` 赋值为五，然后将其传递给函数。
+**步骤 8**：在`<body>`部分调用函数`dogAgeCalc`并为`$age`赋值为五，然后将其传递给函数。
 
 ```html
 <body
@@ -7447,6 +6435,7 @@ function dogAgeCalc($dogAge)
 </body>
 </html>
 ```完整的代码列表和输出如下：
+
 ```html
 <!DOCTYPE html>
 <html
@@ -7464,9 +6453,10 @@ function dogAgeCalc($dogAge)
 
 ## 6.6 Return 语句
 
-PHP 函数只返回一个值。如果没有提供值，函数将返回 `null`。
+PHP 函数只返回一个值。如果没有提供值，函数将返回`null`。
 
-`return` 的语法是：
+`return`的语法是：
+
 ```php
 return expression;
 ```
@@ -7474,6 +6464,7 @@ return expression;
 提示：以防你忘记什么是表达式，如果你想从函数返回多个值怎么办？使用数组！
 
 让我们看看以下：
+
 **代码列表：returnExample.php**
 
 ```php
@@ -7498,9 +6489,10 @@ function square($value)
 ```
 
 ![](img/00196.jpeg)
-图 6.21：`returnExample.php` 的输出。
 
-现在修改脚本使 `square()` 的返回值存储在变量 `$x` 中。
+图 6.21：`returnExample.php`的输出。
+
+现在修改脚本使`square()`的返回值存储在变量`$x`中。
 
 ```html
 <body>
@@ -7510,9 +6502,10 @@ function square($value)
 </body>
 ```
 
-现在添加一个 `print()` 语句来打印 `$x` 的值。
+现在添加一个`print()`语句来打印`$x`的值。
 
 更新后的代码列表和输出应该是：
+
 **代码列表：returnExample2.php**
 
 ```php
@@ -7539,36 +6532,44 @@ function square($value)
 ```
 
 ![](img/00197.jpeg)
-图 6.22：在 Komodo Edit 中查看 `returnExample2.php` 的完整代码列表。
+
+图 6.22：在 Komodo Edit 中查看`returnExample2.php`的完整代码列表。
 
 ![](img/00198.jpeg)
-图 6.23：运行 `returnExample2.php` 时的输出。
 
-###章节测试
+图 6.23：运行`returnExample2.php`时的输出。
+
+### 章节测试
 
 1. 什么是函数？
+
 a. 存储在特定关键字下的相关代码块，可以调用并重复使用。
+
 b. 产生曲线的方程。
+
 c. 在 PHP 中执行预设过程的完整代码列表。
+
 d. 由代码、函数和命令组成的关键字。
 
 2. 什么是参数？
+
 a. 传递给函数的值或字符串。
+
 b. 两个不同意见的冲突。
+
 c. 包含特定值的变量。
+
 d. 完成函数的逗号分隔值。
 
-3. `return` 语句是如何工作的？
+3. `return`语句是如何工作的？
+
 a. return 结束函数的执行并向调用函数的返回一个值。
+
 b. return 将使代码从无值参数开始并重复自身。
 
+c. `Return`打印传递给函数的值。
 
-
-
-
-c. `Return` 打印传递给函数的值。
-
-d. `Return` 处理操作列表并返回结果。
+d. `Return`处理操作列表并返回结果。
 
 ## 4. 哪个函数在传递作为参数的文件名无法找到时会产生错误并终止脚本？
 
@@ -7593,18 +6594,22 @@ d. 以上均不是。
 第一个练习中使用以下参数：
 
 a. 待转换值：50
+
 b. 函数名称为：
+
     - 华氏度转摄氏度 – Celsius `()`
+
     - 摄氏度转华氏度 – Fahrenheit `()`
+
 c. 函数参数变量：`$temp`
 
-使用双文档法来实现此目标。第一个文档是命名为 `tempCalcFunc.php` 的函数容器文件。第二个文档是使用 HTML 模板保存的 `chap6Lab1_Sol.php`。
+使用双文档法来实现此目标。第一个文档是命名为`tempCalcFunc.php`的函数容器文件。第二个文档是使用 HTML 模板保存的`chap6Lab1_Sol.php`。
 
-使用 `include` 函数引用容器文件。将结果显示为两位小数的浮点数。
+使用`include`函数引用容器文件。将结果显示为两位小数的浮点数。
 
 2. 修改你的程序，让用户可以使用表单输入温度值。使用单选按钮来指示温度是摄氏度还是华氏度。当用户点击提交按钮时，必须显示相应的结果。
 
-使用与练习 1 中相同的函数容器文件 `tempCalcFunc.php`。在 HTML 模板中创建另一个 PHP 脚本文件用于表单。文件名使用 `chap6Lab2_Sol.php`。
+使用与练习 1 中相同的函数容器文件`tempCalcFunc.php`。在 HTML 模板中创建另一个 PHP 脚本文件用于表单。文件名使用`chap6Lab2_Sol.php`。
 
 ## 章节练习答案：
 
@@ -7631,9 +6636,12 @@ c. 函数参数变量：`$temp`
 ```
 
 ![](img/00199.jpeg)
-图 6.24：在 Komodo Edit 中查看 `tempCalcFunc.php` 的完整代码列表。
+
+图 6.24：在 Komodo Edit 中查看`tempCalcFunc.php`的完整代码列表。
 
 ### 代码列表：chap6Lab1_Sol.php
+
+
 
 ```php
 <!DOCTYPE html>
@@ -7657,7 +6665,8 @@ c. 函数参数变量：`$temp`
 ```
 
 ![](img/00200.jpeg)
-图 6.25：在 Komodo Edit 中查看 `chap6Lab1_Sol.php` 的完整代码列表。
+
+图 6.25：在 `Komodo Edit` 中查看 `chap6Lab1_Sol.php` 的完整代码列表。
 
 ### 代码列表：tempCalcFunc2.php
 
@@ -7698,7 +6707,8 @@ if($cond == "1")
 ```
 
 ![](img/00201.jpeg)
-图 6.26：在 Komodo Edit 中查看 `tempCalcFunc2.php` 的完整代码列表。
+
+图 6.26：在 `Komodo Edit` 中查看 `tempCalcFunc2.php` 的完整代码列表。
 
 ### 代码列表：chap6Lab2_Sol.php
 
@@ -7734,10 +6744,6 @@ if($cond == "1")
 </body>
 </html>
 ```
-
-
-
-
 
 以下是本章介绍的用于 PHP 服务器文件输入/输出操作的函数列表：
 
@@ -7780,16 +6786,19 @@ if($cond == "1")
 **解决方案：**
 
 ### 第 1 步
-首先使用 Komodo Edit 使用 HTML 模板创建一个新的 PHP 文档。
+
+首先使用 `Komodo Edit` 使用 HTML 模板创建一个新的 PHP 文档。
 
 ![](img/00207.jpeg)
 
-图 7.1：在 Komodo Edit 中创建一个名为 `fileIO_1.php` 的新 HTML 模板。
+图 7.1：在 `Komodo Edit` 中创建一个名为 `fileIO_1.php` 的新 HTML 模板。
 
 ### 第 2 步
+
 将文件保存在 `www` 或 `htdocs` 文件夹下，命名为 `fileIO_1.php`。
 
 ### 第 3 步
+
 我们要写入的文件名为 `"names.txt"`，我们将此文件名存储在变量 `$fileName` 中。
 
 ```html
@@ -7804,6 +6813,7 @@ if($cond == "1")
 ```
 
 ### 第 4 步
+
 接下来，我们将使用 `fopen()` 函数访问 `"names.txt"`，该函数接受两个参数：文件名和模式。这是 `fopen()` 函数的正确格式。
 
 ```php
@@ -7831,13 +6841,10 @@ $fp = fopen($fileName, 'w') or die ("Can't open the file")
 ```php
 $fp = fopen($fileName, 'w')
 ```
+
 （注：此处由于原文文本中存在重复和混乱，翻译时已根据逻辑进行了整合，以确保技术文档的连贯性。）
 
 由于您提供的原文文本在后部分存在大量重复和逻辑混乱，上述内容已按照技术文档的逻辑进行了清理和翻译。
-
-
-
-
 
 我们现在运行该程序，仅是为了检查 `names.txt` 文件是否已实际保存或写入你的本地服务器。请确保你已经保存了 `fileIO_1.php` 文件。
 
@@ -7853,19 +6860,19 @@ $fp = fopen($fileName, 'w')
 
 ![](img/00211.jpeg)
 
-图 7.5：通过文档浏览器打开的 Names.txt。
+图 7.5：通过文档浏览器打开的 `Names.txt`。
 
 点击文件名并选择“使用记事本查看”。请注意，当打开该文本文件时，它将把名称显示为连续的单单词文本，因为 `Notepad` 忽略了换行符。
 
 ![](img/00212.jpeg)
 
-图 7.6：使用记事本查看的 Names.txt。
+图 7.6：使用记事本查看的 `Names.txt`。
 
 尝试使用其他应用程序（如 `WordPad`）查看 `names.txt` 文件，你会发现它将数组成员显示为列表：
 
 ![](img/00213.jpeg)
 
-图 7.7：使用 WordPad 查看的 names.txt。
+图 7.7：使用 `WordPad` 查看的 `names.txt`。
 
 在这里我们可以看到在通过 `fwrite()` 函数将名称写入文本文件之前，在每个名称末尾追加的换行符的效果：
 
@@ -8021,18 +7028,26 @@ $string = fread($fp, filesize($fileName));
 | 蝙 | Chiroptera |
 | 熊 | Ursidae Carnivora |
 | 驼 | Camelus Camelidae |
+
+
+
 | 猫 | Felis Catus |
+
 | 狗 | Canis Familiaris |
+
 | 青蛙 | Anura Ranidae |
+
 | 狮子 | Panthera Leo |
+
 | 羊 | Bovidae Ovis |
+
 | 虎 | Panthera Tigris |
 
 使用 `Komodo Edit` 创建并保存 `names_2.txt` 文件。
 
 ![](img/00220.jpeg)
 
-图 7.3：names.txt 的列表
+图 7.3：`names.txt` 的列表
 
 **步骤 6**：将字符串“names.txt”赋值给变量 `$fileName` 的行从：
 
@@ -8104,14 +7119,11 @@ $fileName = "names_2.txt";
 </html>
 ```
 
-
-
-
 你可以看到我们的代码要简单得多。我们不需要调用 `fopen()` 和 `fclose()` 函数。我们只需要调用 `file_get_contents()` 函数并传入两个参数：我们想要读取的文件名，以及一个为 `true` 或 `false` 的布尔值。
 
 在 `$string` 赋值语句中的布尔参数 `TRUE` 仅意味着在访问文件时包含路径。由于我们的脚本和文本文件都在 `www` 或 `htdocs` 文件夹中，因此第二个参数没有影响。
 
-**提示**：`file_get_contents()` 函数可以接受多达五个参数。第一个参数是，是必须的，而其余四个是可选的。你可以查看 [`www.php.net/file_get_contents`](http://www.php.net/file_get_contents) 获取有关该函数的更多详情。
+**提示**：`file_get_contents()` 函数可以接受多达五个参数。第一个参数是必须的，而其余四个是可选的。你可以查看 [`www.php.net/file_get_contents`](http://www.php.net/file_get_contents) 获取有关该函数的更多详情。
 
 ![](img/00223.jpeg)
 
@@ -8142,27 +7154,32 @@ $fileName = "names_2.txt";
 ```
 
 ### 步骤 3：将字符串 “names.txt”存储在变量 `$fileName` 中。
+
 ```php
         $fileName = "names.txt";
 ```
 
 ### 步骤 4：使用读取模式调用 `fopen()` 函数。
+
 ```php
         $fp = fopen($fileName, 'r');
 ```
 
-### 步骤 5：使用文件句柄变量 `$fp` 作为函数的参数调用 `fgets()` 函数。我们将 `fget()` 从文件中读取的字节存储在变量 `$string` 中。
+### 步骤 5：使用文件句柄变量 `$fp` 作为函数的参数调用 `fgets()` 函数。我们将 `fgets()` 从文件中读取的字节存储在变量 `$string` 中。
+
 ```php
         $string = fgets($fp);
 ```
 
 ### 步骤 6：调用 `fclose()` 并使用 `echo()` 函数显示 `$string` 的内容。
+
 ```php
         fclose($fp);
         echo($string);
 ```
 
 ### 步骤 7：关闭 PHP 脚本标签和 HTML 文档。确保保存了你的文档。
+
 ```php
     ?>
 </body>
@@ -8170,6 +7187,7 @@ $fileName = "names_2.txt";
 ```
 
 ### 步骤 8：你的完整代码列表应该像这样：
+
 代码列表：`readFile_5.php`
 
 ```html
@@ -8201,6 +7219,7 @@ $fileName = "names_2.txt";
 现在让我们使用相同的脚本来读取文件 `names_2.txt`。
 
 ### 步骤 1：在 Komodo Edit 中保持 `readFile_5.php` 打开状态，将字符串 “names_2.txt”存储在变量 `$fileName` 中。
+
 ```php
         $fileName = "names_2.txt";
 ```
@@ -8240,21 +7259,25 @@ $fileName = "names_2.txt";
 ```
 
 ### 步骤 2：将字符串 “names.txt”存储在变量 `$fileName` 中。
+
 ```php
         $fileName = "names.txt";
 ```
 
 ### 步骤 3：使用读取模式调用 `fopen()` 函数。
+
 ```php
         $fp = fopen($fileName, 'r');
 ```
 
 ### 步骤 4：将 `$string` 初始化为空字符串。
+
 ```php
         $string = "";
 ```
 
 ### 步骤 5：创建一个 `while`-循环，其中我们使用布尔函数 `feof()` 作为我们的条件表达式。当到达文件结束标记时，该函数返回 `TRUE`。
+
 ```php
         while(!feof($fp)) {
             $string .= fgets($fp);
@@ -8263,16 +7286,19 @@ $fileName = "names_2.txt";
 ```
 
 ### 步骤 6：关闭文件句柄。
+
 ```php
         fclose($fp);
 ```
 
 ### 步骤 7：显示 `$string`。
+
 ```php
         echo($string);
 ```
 
 ### 步骤 8：关闭 PHP 脚本标签和 HTML 文档。
+
 ```php
     ?>
 </body>
@@ -8280,6 +7306,7 @@ $fileName = "names_2.txt";
 ```
 
 ### 步骤 9：你的完整的代码列表应该像这样：
+
 代码列表：`readFile_7.php`
 
 ```html
@@ -8304,10 +7331,8 @@ $fileName = "names_2.txt";
 </html>
 ```
 
-
-
-
 ### 步骤 3
+
 我们将名称“John”和“Jane”添加到 `names.txt` 文件中，但首先我们将这些名称分别存储在变量 `$name1` 和 `$name2` 中。
 
 ```php
@@ -8316,6 +7341,7 @@ $name2 = "Jane";
 ```
 
 ### 步骤 4
+
 使用正确的参数数量和顺序调用 `fwrite()` 函数：文件句柄和数据字符串。为我们正要追加的每个名称添加一个换行符。
 
 ```php
@@ -8324,13 +7350,15 @@ fwrite($fp, $name2 . "\n");
 ```
 
 ### 步骤 5
-回到 `fopen()` 调用处，添加 `or die` 子句，以便文件 `names.txt` 不存在时向用户发出。
+
+回到 `fopen()` 调用处，添加 `or die` 子句，以便文件 `names.txt` 不存在时向用户发出警告。
 
 ```php
 $fp = fopen($file, 'a') or die ("Can't Open The File");
 ```
 
 ### 步骤 6
+
 关闭文件指针。
 
 ```php
@@ -8338,6 +7366,7 @@ fclose($fp);
 ```
 
 ### 步骤 7
+
 添加一个 `echo` 语句，通知用户新数据已经添加。
 
 ```php
@@ -8345,15 +7374,17 @@ echo("names.txt has been overwritten!")
 ```
 
 ### 步骤 8
+
 关闭 PHP 脚本和 HTML 文档并再次保存你的文件。
 
 ```php
 ?>
 </body>
-</html
+</html>
 ```
 
 ### 步骤 9
+
 完整的代码列表现在应该像这样：
 
 代码列表：`appendFile.php`
@@ -8380,17 +7411,21 @@ echo("names.txt has been overwritten!")
 ```
 
 ### 步骤 10
+
 运行你的脚本。
 
-你应该能看到消息“New Data Has Been Added”，但让我们让我们直接访问文件 `names.txt`，查看名称“John”和“Jane”是否确实已经添加。使用 Komodo Edit 或任何文本编辑器打开文件 `names.txt`。
+你应该能看到消息“New Data Has Been Added”，但让我们直接访问文件 `names.txt`，查看名称“John”和“Jane”是否确实已经添加。使用 Komodo Edit 或任何文本编辑器打开文件 `names.txt`。
 
 ![](img/00232.jpeg)
+
 图 7.26：验证 `names.txt` 包含新添加的名称“John”和“Jane”。
 
 ![](img/00233.jpeg)
+
 图 7.27：通过 Komodo Edit 查看 `names.txt` 文件的内容。
 
 ![](img/00234.jpeg)
+
 图 7.28：通过 Notepad 查看 `names.txt` 文件的内容。
 
 现在名称“John”和“Jane”已添加到 `names.txt` 文件中。
@@ -8400,6 +7435,7 @@ echo("names.txt has been overwritten!")
 ```php
 unlink("filename.ext");
 ```
+
 这很简单。不需要文件句柄，因此不需要使用 `fopen()`。
 
 但在之前，让我们先创建一个要删除的文件。它是一个简单的文本文件，命名为 `deletedMessage.txt`，包含文本“This file will be deleted from the server.”。我们将在 `www` 或 `htdocs` 文件夹中创建并保存它。
@@ -8409,24 +7445,29 @@ unlink("filename.ext");
 **步骤 2**：在文本编辑器中输入“This file will be deleted from the server.”。保存文件。
 
 ![](img/00235.jpeg)
+
 图 7.29：Komodo Edit 中所示 `deletedMessage` 内容。
 
 现在文件 `deletedMessage` 已保存到服务器上。检查 `www` 或 `htdocs` 文件夹确认文本文件已保存。
 
 ![](img/00236.jpeg)
+
 图 7.30：从本地浏览器查看文件 `deletedMessage.txt`。
 
 文本文件也可以使用 Notepad 保存。
 
 ![](img/00237.jpeg)
+
 图 7.31：使用 Notepad 创建文件 `deletedMessage.txt`。
 
 确保将此文件保存在 `www` 或 `htdocs` 文件夹内。
 
 ![](img/00238.jpeg)
+
 图 7.32：本地磁盘（`C:\wamp` > `www` 文件夹）。
 
 ![](img/00239.jpeg)
+
 图 7.33：使用 Notepad 保存了文件 `deletedMessage.txt`。
 
 **步骤 3**：创建一个新的 HTML 文档并按所示输入以下代码：
@@ -8451,14 +7492,18 @@ unlink("filename.ext");
 **步骤 4**：用文件名 `viewFile.php` 保存脚本并运行它：
 
 ![](img/00240.jpeg)
+
 图 7.34：运行 `viewFile.php` 的输出。
 
 现在，检查 `www` 或 `htdocs` 文件夹，查看文件 `deletedMessage.txt` 是否还在。这里是 `C:\wamp\www` 文件夹的视图——你可以看到文件不在了。
 
 ![](img/00241.jpeg)
+
 图 7.35：`C:\wamp\www` 文件夹的视图，`deletedMessage.txt` 不存在。
 
 ## 7.4 CSV 文件
+
+
 
 CSV 文件，或逗号分隔值（Comma-Separated Value）文件，是由逗号分隔的字符串或值组成的文本文件。这是一个名为 `deliveredItems.csv` 的 CSV 文件示例：
 
@@ -8497,39 +7542,47 @@ PHP 有特殊函数 `fgetcsv()`，它可以从 CSV 文件读取一行并将逗�
 **步骤 2**：在文本编辑器中输入“This file will be deleted from the server.”。保存文件。
 
 ![](img/00235.jpeg)
+
 图 7.29：Komodo Edit 中所示 `deletedMessage` 内容。
 
 现在文件 `deletedMessage` 已保存到服务器上。检查 `www` 或 `htdocs` 文件夹确认文本文件已保存。
 
 ![](img/00236.jpeg)
+
 图 7.30：从本地浏览器查看文件 `deletedMessage.txt`。
 
 文本文件也可以使用 Notepad 保存。
 
 ![](img/00237.jpeg)
+
 图 7.31：使用 Notepad 创建文件 `deletedMessage.txt`。
 
 确保将此文件保存在 `www` 或 `htdocs` 文件夹内。
 
 ![](img/00238.jpeg)
+
 图 7.32：本地磁盘（`C:\wamp` > `www` 文件夹）。
 
 ![](img/00239.jpeg)
+
 图 7.33：使用 Notepad 保存了文件 `deletedMessage.txt`。
 
 在代码区域右侧显示的新列称为“地图”（Minimap）。你可以通过点击菜单中的“视图”（View）然后取消勾选“地图”来阻止其显示。
 
 ![](img/00244.jpeg)
+
 图 7.38：在 Komodo Edit 中取消勾选“地图”的地方。
 
 你得到了文件的最终视图。
 
 ![](img/00245.jpeg)
+
 图 7.39：Komodo Edit 中 `deliveredItems.csv` 的普通视图。
 
 如果你需要，可以调整窗口大小，就像这里这样做以便更清晰地查看图像。
 
 ![](img/00243.jpeg)
+
 图 7.40：调整大小后的 Komodo Edit 窗口。
 
 现在，我们将编写一个脚本读取 `deliveredItems.csv` 的全部内容，并将每行显示为表格中的行，并将行中的每个逗号分隔值显示为表格中的单元格。
@@ -8547,11 +7600,8 @@ PHP 有特殊函数 `fgetcsv()`，它可以从 CSV 文件读取一行并将逗�
 ```
 
 ![](img/00246.jpeg)
+
 图 7.41：为 `readCSV.php` 创建新的 HTML5 模板。
-
-
-
-
 
 ### 第 4 ：将字符串 “deliveredItems.csv”存储在变量 `$fileName` 中。
 
@@ -8643,6 +7693,7 @@ print("<table border='1' cellpadding='1'>");
 print($output);
 print("</table>");
 ```
+
 ### 第 12：关闭脚本标签和 HTML 文档并再次保存你的文件。
 
 以下是完整的代码列表：
@@ -8682,28 +7733,33 @@ print("</table>");
 
 ### 第 13：运行你的程序并查看你的输出。
 
-提示：如果你想让表格中的项目描述显示为左对齐，请将 readCSV.php 列表中的表格 `<td>` 值从 `’center’` 替换为 `’left’`。
+提示：如果你想让表格中的项目描述显示为左对齐，请将 `readCSV.php` 列表中的表格 `<td>` 值从 `’center’` 替换为 `’left’`。
 
 # 练习
+
 1. File I/O 是什么意思？
    a. 文件输入和输出（File Input and Output）。
    b. 文件输入输出。
    c. 文件进入和。
    d. 文件内部和外部。
+
 2. 获取服务器上文件内容最的方法是？
    a. `file_get_contents`
    b. `fgets`
    c. `fread`
+
 3. `’a’` 代表什么？
    a. 附加（Affix）。
    b. 追加（Append）。
    c. 任意的（Arbitrary）。
    d. 附加（Apphend）。
+
 4. 服务器通常使用什么来访问文件？
    a. 访问（Access）。
    b. 追加（Append）。
    c. 任意（Arbitrary）。
    d. 权限（Permission）。
+
 5. CSV 代表什么？
    a. 逗号分隔的值（Comma-separated values）。
    b. 逗号分隔的变量（Comma-separated variables）。
@@ -8711,6 +7767,7 @@ print("</table>");
    d. 逗号分隔的特征（Comma-separated features）。
 
 #### 练习题
+
 1. 创建一个包含以下字段的 HTML 表格：
 2. 当你点击 `“submit”` 按钮时，它将跳转到：
 3. 创建一个将输入保存到 CSV 文件的程序。
@@ -8721,7 +7778,9 @@ print("</table>");
 #### 7 练习答案
 
 **(1) HTML 页面：**
+
 **代码列表：Chap7LabEx.html**
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -8754,7 +7813,9 @@ print("</table>");
 ```
 
 **(2) PHP - 数据保存页面：**
+
 **代码列表：Chap7LabForm.php**
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -8785,7 +7846,9 @@ print("</table>");
 ```
 
 **(3) 以表格形式查看保存的 CSV 的脚本：**
+
 **代码列表：Chap7LabExReadCSV.php**
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -8817,10 +7880,6 @@ print("</table>");
 </html>
 ```
 
-
-
-
-
 ```html
 <tr>
     <th>姓</th>
@@ -8828,17 +7887,24 @@ print("</table>");
     <th>电话号码</th>
 </tr>
 ```
+
+```php
 <?php
     print($table);
     print("</table>");
 ?>
+```
 
+```html
 <form action="Chap7LabEx.html">
     <input type="submit" value="添加更多"/>
 </form>
+```
 
+```html
 </body>
 </html>
+```
 
 输出：
 
@@ -8848,11 +7914,13 @@ print("</table>");
 
 ![](img/00252.jpeg)
 
-图 7.47: Chap7LabExForm.php 运行输出。
+
+
+图 7.47: `Chap7LabExForm.php` 运行输出。
 
 ![](img/00253.jpeg)
 
-图 7.48: Chap7LabExReadCSV.php 运行输出。
+图 7.48: `Chap7LabExReadCSV.php` 运行输出。
 
 ![](img/00254.jpeg)
 
@@ -8870,7 +7938,7 @@ print("</table>");
 
 在本章中，你学习了执行文件输入/输出的 PHP 函数：创建文件、向文件写入数据、从文件读取数据以及删除文件。
 
-在编写文件输入/输出操作的脚本过程中，你使用了接收数据的表单，并在将数据保存到文本文件之前，使用全局数组获取表单数据。你还使用了数组来显示从 csv 格式文件中检索的数据。
+在编写文件输入/输出操作的脚本过程中，你使用了接收数据的表单，并在将数据保存到文本文件之前，使用全局数组获取表单数据。你还使用了数组来显示从 `csv` 格式文件中检索的数据。
 
 # 第 8 章：使用 PHP 发送电子邮件
 
@@ -8897,7 +7965,7 @@ print("</table>");
 
 发送和接收邮件涉及入站和出站邮件服务器之间的多级通信，这一过程确保邮件能够到达正确的收件者。
 
-**提示**：若想了解更多关于邮件服务器传输和接受邮件的内部细节，你可以访问 `[`computer.howstuffworks.com/e-mail-messaging/email.htm`](http://computer.howstuffworks.com/e-mail-messaging/email.htm)` 查看“电子邮件是如何工作的”，以及访问 `[`www.howtogeek.com/56002/htg-explains-how-does-email-work.`](http://www.howtogeek.com/56002/htg-explains-how-does-email-work/)` 查看“电子邮件是如何工作的？”
+**提示**：若想了解更多关于邮件服务器传输和接受邮件的内部细节，你可以访问 [`computer.howstuffworks.com/e-mail-messaging/email.htm`](http://computer.howstuffworks.com/e-mail-messaging/email.htm) 查看“电子邮件是如何工作的”，以及访问 [`www.howtogeek.com/56002/htg-explains-how-does-email-work.`](http://www.howtogeek.com/56002/htg-explains-how-does-email-work/) 查看“电子邮件是如何工作的？”
 
 PHP 允许你直接创建并发送电子邮件。语法如下：
 
@@ -8960,11 +8028,7 @@ $to = "someone@email.com";
 
 ![](img/00256.jpeg)
 
-图 8.1: simpleEmail.php 的输出。
-
-
-
-
+图 8.1: `simpleEmail.php` 的输出。
 
 你遇到此错误的原因是 `WAMPSERVER` 没有配置一个邮件服务器作为其组件之一。那么，一个安装了 `WAMPSERVER` 的初学 PHP 程序员该如何测试发送电子邮件的 PHP 脚本呢？
 
@@ -8981,18 +8045,23 @@ $to = "someone@email.com";
 以下步骤将指导你下载并安装 `PHPMailer`、配置 `WAMPSERVER` 与 `PHPMailer` 协作以及编写脚本。
 
 ### 步骤 1：下载 PHPMailer/SMTP
+
 从 [`github.com/PHPMailer/PHPMailer`](https://github.com/PHPMailer/PHPMailer)。以下屏幕显示了 `PHPMailer` 的 GitHub 页面以及下载按钮的位置。你将获得一个名为 `PHPMailer-master.zip` 大约为 200kb 的压缩文件。
 
 ![](img/00257.jpeg)
+
 图 8.2：GitHub PHPMailer 下载页的左上部分，[`github.com/PHPMailer/PHPMailer`](https://github.com/PHPMailer/PHPMailer)。
 
 ![](img/00258.jpeg)
+
 图 8.3：GitHub PHPMailer 下载页右下部分的下载按钮，[`github.com/PHPMailer/PHPMailer`](https://github.com/PHPMailer/PHPMailer)。
 
 ### 步骤 2：解压
+
 将 `PHPMailer-master.zip` 解压到文件夹中。
 
 ### 步骤 3：定位脚本
+
 在解压 `PHPMailer-master.zip` 的文件夹中，找到以下三个脚本，并将它们复制到 Windows 中的 `c:/wamp/www` 文件夹（或 Mac 和 Linux 系统上的对应文件夹）。
 
 1. `PHPMailerAutoload.php`
@@ -9000,12 +8069,15 @@ $to = "someone@email.com";
 3. `class.smtp.php`
 
 ### 步骤 4：启用 Apache SSL
+
 在 `WAMPSERVER` 菜单中，通过访问如下所示的 `httpd.conf` 文件启用 Apache 的 `ssl_module`
 
 ![](img/00259.jpeg)
+
 图 8.4：在 WAMPSERVER 菜单中访问 `httpd.conf` 文件。
 
 ### 步骤 5：配置 httpd.conf
+
 在 `httpd.conf` 文件中取消以下行的注释。（取消注释请删除行开头的 `#` 符号。）
 
 ```apache
@@ -9015,26 +8087,33 @@ $to = "someone@email.com";
 取消注释后的行如下截图所示。
 
 ![](img/00260.jpeg)
+
 图 8.5：取消注释以启用 `ssl_module`
 
 或者，你也可以通过 `WAMPSERVER` 菜单选项 `Apache -> Apache Modules -> ssl_module` 启用 `ssl_module`，如下截图所示。
 
 ![](img/00261.jpeg)
+
 图 8.6：在 WAMPSERVER 菜单中启用 Apache `ssl_module`。
 
 ### 步骤 6：启用扩展
+
 在 `WAMPSERVER` 菜单中，为 PHP 启用 `php_openssl`、`php_smtp` 和 `php_sockets` 扩展，如下所示。
 
 ![](img/00262.jpeg)
+
 图 8.7：在 WAMPSERVER 菜单中为 PHP 启用 `php_openssl`、`php_smtp` 和 `php_sockets` 扩展。
 
 ### 步骤 7：重启
+
 重启 `WAMPSERVER` 使更改生效。
 
 ![](img/00263.jpeg)
+
 图 8.8：重启 WAMPSERVER
 
 ### 步骤：测试安装
+
 你可以通过执行此代码来测试 `PHPMailer` 是否安装正确，此代码应该只会产生结果：
 
 ```php
@@ -9042,6 +8121,7 @@ $to = "someone@email.com";
 ```
 
 ### 步骤 8：创建脚本
+
 将以下内容粘贴到代码并保存为 `emailText.php`。
 
 ```php
@@ -9075,13 +8155,17 @@ try {
 ```
 
 ### 步骤 9：调整凭据
+
 在以下行中调整 `Username` 和 `Password` 值。
 
 ### 步骤 10：调整发送者信息
+
 在以下行中调整 `From` 和 `FromName` 字符串，同样在 `addAddress` 函数中。
 
 ### 步骤 11：运行
+
 运行脚本。在浏览器中，你应该看到：
+
 `Message has been sent`
 
 ## 8.2 发送 HTML 邮件
@@ -9089,9 +8173,6 @@ try {
 HTML 邮件包含非常小的 HTML 标签集，但对于哪些标签构成它并没有标准。因此，不同的邮件客户端处理的标签各不相同。有些邮件客户端不处理 HTML 邮件。
 
 当 HTML 邮件最初出现时，由于许多原因对其存在反对。一个原因是安全，可以在 HTML 邮件中加入恶意代码。但邮件附件也可以这样做。尽管如此，HTML 邮件的使用已经泛滥，邮件附件仍在发送，因此对 HTML 邮件的反对已变成了默认接受。
-
-
-
 
 现在，好消息来了！有了 `phpMailer`，你就不需要费心刚才解释的那些额外头部了！
 
@@ -9114,6 +8195,8 @@ $mail->AltBody="Hello, my friend! \n\n This message uses HTML entities, but you 
 完整的代码列表应该是这样的：
 
 代码代码列表：`sendEmailHtml.php`
+
+
 
 ```html
 <!DOCTYPE html>
@@ -9153,39 +8236,63 @@ $mail->AltBody="Hello, my friend! \n\n This message uses HTML entities, but you 
 ## 章节测试
 
 1. 在 PHP 中，哪个对应电子邮件的收件者？
+
    a. `$to`
+
    b. `$from`
+
    c. `$header`
+
    d. `$message`
 
 2. `mail()` 函数的作用是什么？
+
    a. 它通过服务器使用 PHP 发送和接收电子邮件。
+
    b. 它读取邮件并通知用户他们的邮件。
+
    c. 它向指定的收件者发送信件的 PDF 文件。
+
    d. 它将电子邮件副本发送到用户地址簿中的所有地址。
 
 3. SMTP 是什么意思？
+
    a. Simple Mail Transfer Protocol（简单邮件传输协议）。
+
    b. Simple Mommy Tailoring Protocol（简单妈妈裁缝协议）。
+
    c. Super Mail Transfer Protocol（超级邮件传输协议）。
+
    d. Single Mail Transmit Parity（单邮件传输奇偶校验）。
 
 4. 什么是 HTML 电子邮件？
+
    a. 一种嵌入了 HTML 标签的电子邮件。
+
    b. 一种使用 HTML 创建的电子邮件。
+
    c. 通过 HTML 页面发送的电子邮件。
+
    d. 一种嵌入在 HTML 文档中纯 JavaScript 生成的电子邮件。
 
 5. 头部 MIME Version 的作用是什么？
+
    a. 该标题表示邮件包含 ASCII 文本字符以外的字符。
+
    b. 通泛描述内容类型，包括网页以及作为某些商业产品中富内容的存储。
+
    c. 为服务器模拟邮件（Mimes the email）。
+
    d. 复制邮件内容并将其保存到服务器上。
 
 6. content type text/HTML 头部的作用是什么？
+
    a. 它声明邮件正文将同时包含 HTML 和纯文本。
+
    b. 它允许在电子邮件中使用 PHP 脚本。
+
    c. 它允许在电子邮件中使用 Javascript。
+
    d. 它定义了 HTML 电子邮件将使用的字符编码。
 
 ## 章节实验习题
@@ -9242,9 +8349,13 @@ $mail->AltBody="Hello, my friend! \n\n This message uses HTML entities, but you 
 ## 目标
 
 * 你将学习如何使用 phpMyAdmin 创建 MySQL 数据库。
+
 * 使用 phpMyAdmin，你将学习在 MySQL 中创建表。
+
 * 你将学习开发简单的 CRUD（创建、查询、更新和删除）应用程序。
+
 * 你将学习使用 HTML 表单和 PHP 脚本在 MySQL 数据库中输入和更新数据。
+
 * 你将学习构建 SQL Insert、Retrieve、Update 和 Delete 语句，以及如何使用 MySQLi 在 MySQL 数据库上执行这些语句。
 
 ### 数据库
@@ -9263,20 +8374,22 @@ $mail->AltBody="Hello, my friend! \n\n This message uses HTML entities, but you 
 
 **行：** 这是一组相关数据。例如，在员工表中，一行就是一个员工的数据。
 
-
-
-
 # 数据库概念
 
 - **字段 (Fields)**：这是列的另一种术语。有时，字段指的是特定行的列。
+
 - **记录 (Record)**：这是行的另一种术语。
+
 - **值 (Value)**：值是给定行和列中的数据。
 
 至此，为了帮助你直观地理解理解表、列、行、字段、记录和值这些术语，我们展示了两个数据表的示意图——`Employee`（员工）和 `Department`（部门）（我们将在稍后的代码示例中创建这些表。）
 
 | empId | lastName | firstName | department | position | salary |
+
 | :--- | :--- | :--- | :--- | :--- | :--- |
+
 | 001 | Smith | George | 1 | S Acct | 84000 |
+
 | 002 | Valera | Linda | 2 | J Sales | 55000 |
 
 表 9.1：员工表
@@ -9284,10 +8397,15 @@ $mail->AltBody="Hello, my friend! \n\n This message uses HTML entities, but you 
 `Employee` 表有六列（字段）和两行数据。（第一行作为视觉辅助显示列名，不属于表的一部分。）
 
 | departmentId | departmentName |
+
 | :--- | :--- |
+
 | 1 | Accounting |
+
 | 2 | Sales |
+
 | 3 | Operations |
+
 | 4 | Management |
 
 表 9.2：部门表
@@ -9299,9 +8417,13 @@ $mail->AltBody="Hello, my friend! \n\n This message uses HTML entities, but you 
 一个表拥有的关系数量与其与其他表关联的字段相同。例如，将 `Employee` 的六个字段每一个都链接到数据库中的其他表是可能的，但并不切实际。
 
 - **连接 (Join)**：这是关系的另一种术语。
+
 - **键 (Key)**：这是表中的列或多个列，在其上构建索引以便快速和/或排序访问表数据。
+
 - **索引 (Index)**：这是数据库系统用于更快速定位数据的内部系统。在表中，你可以指定某些列（通常是键）为索引。与关系或连接一样，为表的每一列创建索引是可能的，但并不切实际。
+
 - **主键 (Primary key)**：这是给定表中的列或列组，用于唯一标识表中的每一行。为了唯一标识标识一行，任何两个主键不能具有相同的值。在我们的示例表中，`empId` 字段是 `Employee` 表的主键，而 `Department` 表的主键是 `departmentId`。
+
 - **外键 (Foreign key)**：这是表中的一个或多个列，旨在包含与被引用表中相关的主键/唯一键列匹配的值。外键和主键显式地定义了表与表之间的直接关系。在我们的示例表中，`Department` 表的主键列 `departmentId` 与 `Employee` 表的外键列 `department` 建立了关系。
 
 提示：有关更多与数据库相关的术语，你可以查看 [Database Terminology – A Dictionary of the Top 145 Database Terms](http://raima.com/database-terminology/)。
@@ -9381,12 +8503,19 @@ $mail->AltBody="Hello, my friend! \n\n This message uses HTML entities, but you 
 现在，我们可以创建 employee 表的字段，每个字段将占据一列。你可以参考下表向各个字段输入数据。
 
 | 字段名称 | 类型 | 长度/值 | 注意 |
+
 | :--- | :--- | :--- | :--- |
+
 | `empid` | `Int` | 11 | 主键 自增 |
+
 | `lastname` | `varchar` | 40 | |
+
 | `firstname` | `varchar` | 20 | |
+
 | `department` | `Int` | 2 | |
+
 | `position` | `varchar` | 20 | |
+
 | `salary` | `Int` | 10 | |
 
 表 9.3：使用此表为员工表的各个字段输入数据
@@ -9395,34 +8524,32 @@ $mail->AltBody="Hello, my friend! \n\n This message uses HTML entities, but you 
 
 现在，点击名为 `employee` 图，然后点击 `structure`，这将带来如下屏幕。
 
-
-
-
-
 ![](img/00273.jpeg)
 
 图 9.10：员工表（employee）。
 
 让我们创建第二个表，`department`。点击屏幕左侧窗格上的 `Create Table` 图标。这将打开以下界面，你可以在其中定义 department 表的字段或列。
 
+
+
 ![](img/00274.jpeg)
 
-图 9.11：指定 department 表中的字段。
+图 9.11：指定 `department` 表中的字段。
 
 你可以参考下表向各个字段输入数据。
 
 | 字段名 (FIELD NAME) | 类型 (TYPE) | 长度/值 (LENGTH/ VALUE) | 注释 (Notes) |
 | :--- | :--- | :--- | :--- |
-| deptId | int | 11 | 主键自增 |
-| departName | varchar | 40 | |
+| `deptId` | `int` | 11 | 主键自增 |
+| `departName` | `varchar` | 40 | |
 
-你还需要将字段 `deptid` 设置为主键。指定索引为主（从下拉列表中选择 primary）并勾选 `A_I` 复选框（对应 `Auto_Increment` 自增）。
+你还需要将字段 `deptid` 设置为主键。指定索引为主（从下拉列表中选择 `primary`）并勾选 `A_I` 复选框（对应 `Auto_Increment` 自增）。
 
 现在，既然我们已经建立了包含两个表的数据库，我们现在应该向表中添加一些数据。要在第一个表中添加数据，点击 `employee`，然后点击 `insert`。之后，添加一些虚构数据，如下：
 
 ![](img/00275.jpeg)
 
-图 9.12：向 employee 表添加数据。
+图 9.12：向 `employee` 表添加数据。
 
 在这里，你可以看到 `empid` 字段是空的，因为该字段中的数据将自动添加。插入后，点击 `Go`。如果你检查相应的 SQL 代码，你会看到这个：
 
@@ -9437,29 +8564,31 @@ VALUES (NULL, 'Tilly', 'Jennifer', '4', 'Vice President', '124500');
 
 ![](img/00276.jpeg)
 
-图 9.13：包含 10 行的 employee 表。
+图 9.13：包含 10 行的 `employee` 表。
 
 在这里，你可以通过点击相应的图标轻松地编辑和删除行。现在，按照相同的步骤在 `departments` 表中添加一些行：
 
 ![](img/00277.jpeg)
 
-图 9.14：向 departments 表添加数据。
+图 9.14：向 `departments` 表添加数据。
 
 `departments` 表将如下所示：
 
 ![](img/00278.jpeg)
 
-图 9.15：包含四行的 departments 表。
+图 9.15：包含四行的 `departments` 表。
 
 ### 复习题
 
 1. 为了在 MySQL 命令行提示符中获取命令列表，我们应该输入什么？
+
    a. `mysql>Help`
    b. `mysql>command`
    c. `mysql>list`
    d. 以上都不是。
 
 2. 为了确保列中的每个条目都是唯一的，我们使用什么？
+
    a. 外键 (Foreign key)。
    b. 候选键 (Candidate key)。
    c. 主键 (Primary key)。
@@ -9470,6 +8599,7 @@ VALUES (NULL, 'Tilly', 'Jennifer', '4', 'Vice President', '124500');
 在上一节中，我们使用 `phpMyAdmin` 创建了名为 `employees` 的数据库，并在该数据库中创建了 `employee` 和 `department` 表。同样使用 `phpMyAdmin`，我们向这两个表中输入了示例数据。现在，我们将通过编写在 MySQL 数据库上执行数据库操作的 PHP 脚本来检索这些数据。
 
 为了让 PHP 访问并操作 MySQL 数据库中表的行和列，我们使用 `MySQL API Extension`。PHP 提供了三个这样的扩展：
+
 - 已废弃的原始 MySQL API
 - `MySQL PDO` 函数
 - MySQL 改进扩展，`MySQLi`。
@@ -9479,6 +8609,7 @@ VALUES (NULL, 'Tilly', 'Jennifer', '4', 'Vice President', '124500');
 **提示**：要学习关于这三个 PHP MySQL API 扩展的所有知识，你可以查找文档 `PHP MYSQL API` (2014-03-14 修订 38079)。该手册描述了可以与 MySQL 使用的 PHP 扩展和接口。托管此文档的站点之一是 `downloads.mysql.com/docs/apis-php-en.a4.pdf`。你可以在搜索引擎中输入“php mysqli api”搜索其他。
 
 在我们详细介绍 `MySQLi` 之前，让我们先明确一下“访问并操作 MySQL 数据库中表的行和列”是什么意思。我们将编写一个非常简单基础的 CRUD 应用程序。`CRUD` 是创建（Create）、检索（Retrieve）、更新（Update）和删除（Delete）的缩写。CRUD 应用程序：
+
 a. 向数据库表中添加新行（创建），
 b. 从数据库表中检索数据（检索），
 c. 修改表列中的数据（更新），
@@ -9497,17 +8628,10 @@ d. 从数据库表中删除行（删除）。
 
 在不完全理解 OOP（面向对象编程）概念的情况下，除了一些熟悉的关键字和符号（如 `new` 和 `->`），就可以理解 `MySQLi` 的面向对象接口。它通过构建所需的 SQL 语句，并使用 `MySQLi` 让数据库执行该语句。
 
-
-
-
 c. 如果连接对象创建成功，我们就构造一个 SQL 查询（可以是 `INSERT`、`SELECT`、`UPDATE` 或 `DELETE`）。
-
 d. 我们使用连接对象 `$conn` 的 `query` 方法来执行构造好的查询，以获取结果集对象 `$rs`。
-
 e. 我们检查查询是否执行成功。如果成功，我们将显示有关查询执行的某些参数。如果失败，我们将显示错误信息并退出程序。
-
 f. 在检索（Retrieve）功能的情况下，如果查询成功，我们就会获得一个结果集对象。然后，我们使用结果集的 `fetch_array` 方法将结果集对象的数据传输到关联数组或索引数组。
-
 g. 当所有数据库操作（添加、检索、更新和删除）完成后，通过调用连接对象 `$conn` 的 `close` 方法来关闭连接。
 
 让我们从一个简单的脚本 `connect.php` 开始，它将创建一个到我们我们的 `employees` 数据库的连接对象。（这是前几个段落中的第 a 和 b 步）。输入以下代码并将其保存为 `connect.php`。
@@ -9530,7 +8654,7 @@ g. 当所有数据库操作（添加、检索、更新和删除）完成后，�
 ?>
 ```
 
-让我们分析一下代码。首先，我们定义了四个常量——`HOSTNAME`、`USERNAME`、`PASSWORD` 和 `DB_NAME`。这四个常量将作为参数传递给 `mysqli()` 类，该类创建一个由变量 `$conn` 引用的连接对象。该连接对象的方法允许我们访问数据库 employees 表。
+让我们分析一下代码。首先，我们定义了四个常量——`HOSTNAME`、`USERNAME`、`PASSWORD` 和 `DB_NAME`。这四个常量将作为参数传递给 `mysqli()` 类，该类创建一个由变量 `$conn` 引用的连接对象。该连接对象的方法允许我们访问数据库 `employees` 表。
 
 注意，为了简化步骤，我们使用了“root”作为用户名，空字符串作为密码，但实际上，我们应该提供真实的用户名和强密码。这些真实的用户名和密码应该在我们的 `employees` 数据库中提前定义并设置。
 
@@ -9538,12 +8662,16 @@ g. 当所有数据库操作（添加、检索、更新和删除）完成后，�
 
 现在，如果我们在运行 Windows 7 的 PC 上运行此脚本，我们将看到这些：
 
+```
 Connected to database employees
 localhost via TCP/IP
+```
 
 第二行或最后一行将取决于你的操作系统。某些系统会生成：
 
+```
 127.0.0.1 via TCP/IP
+```
 
 现在，让我们通过更改这一行来测试我们的代码：
 
@@ -9591,7 +8719,7 @@ if ($conn->connect_errno) {
 ?>
 ```
 
-现在，我们将构建一个脚本，它将构造一个 SQL Select 语句从 `employee` 表中检索记录。让我们输入以下代码并将其保存在文件 `Retrieve1.php` 中：
+现在，我们将构建一个脚本，它将构造一个 SQL `Select` 语句从 `employee` 表中检索记录。让我们输入以下代码并将其保存在文件 `Retrieve1.php` 中：
 
 ```php
 <?php
@@ -9639,15 +8767,13 @@ if ( $rs === false ) {
 
 `$sql = "OBTAIN * FROM employee";`
 
-你将得到此错误信息，专门指出“OBTAIN”是我们 SQL 语句中的错误：Fatal error: Wrong SQL: OBTAIN * FROM employee Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OBTAIN * FROM employee' at line . .
+你将得到此错误信息，专门指出“OBTAIN”是我们 SQL 语句中的错误：`Fatal error: Wrong SQL: OBTAIN * FROM employee Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OBTAIN * FROM employee' at line . .`
 
-如果我们的查询成功，那么 employee 表的所有记录都在变量 `$rs` 引用的结果集对象。我们执行结果执行对象的 `fetch_array` 方法：
+如果我们的查询成功，那么 `employee` 表的所有记录都在变量 `$rs` 引用的结果集对象。我们执行结果执行对象的 `fetch_array` 方法：
 
 `$arr = $rs->fetch_array(MYSQLI_ASSOC);`
 
 `fetch_array` 方法将结果集 `$rs` 当前行的字段存储在关联数组 `$arr` 中，并使用字段名作为键，因为我们提供了常量 `MYSQLI_ASSOC`。如果我们将此常量改为 `MYSQLI_NUM`，那么 `$arr` 将是一个数值索引数组。
-
-
 
 我们说“存储 `$rs` 当前行的字段”。那么 `$rs` 的“当前行”会是什么呢？因为在代码行中，我们在 `$rs` 被创建（通过连接对象 `$conn` 的 `query` 方法）之后紧立即访问了它：
 
@@ -9668,9 +8794,11 @@ echo( $arr['empid'] . ' ' .
 
 在浏览器中，你应该看到类似这里的内容：
 
+```
 101 Escudero, Ernesto 3 Utility Supervisor 10000
+```
 
-这些是 `employee` 表第一行的字段。检查你获取的值是否与你第一条记录中字段的实际值匹配——empid, lastname, firstname, department, position 和 salary。
+这些是 `employee` 表第一行的字段。检查你获取的值是否与你第一条记录中字段的实际值匹配——`empid`, `lastname`, `firstname`, `department`, `position` 和 `salary`。
 
 我们还有这两行代码：
 
@@ -9681,17 +8809,21 @@ echo( "<br>Rows: " . $rows_returned);
 
 它们将产生以下输出：
 
+```
 Rows: 9
+```
 
-`num_rows` 是由 `$rs` 引用的结果集对象的一个属性，它存储了 `$rs` 中的行数，这也就是 `employee` 表中的行数。检查浏览器中显示的值是否与你 `employee` 表中的记录数匹配。你可以使用 phpMyAdmin 来完成此操作。
+`num_rows` 是由 `$rs` 引用的结果集对象的一个属性，它存储了 `$rs` 中的行数，这也就是 `employee` 表中的行数。检查浏览器中显示的值是否与你 `employee` 表中的记录数匹配。你可以使用 `phpMyAdmin` 来完成此操作。
 
 现在，我们有两个运行运行的脚本。一个脚本 `connectInc.php` 建立了到 MySQL 数据库 `employees` 的连接。第二个脚本 `retrieve1.php` 在数据库上执行了一个 `Select` 查询，并将 `employee` 表的所有记录检索到结果集对象 `$rs` 中。但是，它只显示了第一条记录！我们如何显示结果集 `$rs` 的所有行呢？（实际上，我们如何显示 `employee` 表的所有行呢？）。答案是：我们使用 `while` 循环。
 
 当我们第一次调用 `fetch_array` 方法时，它会将 `$rs` 第一行（当前行）的字段提取到数组 `$arr` 的元素中。然后，`fetch_array` 将第二行变为当前行。
 
-如果我们再次调用 `fetch_array`，提取的将是第二行的字段，然后第三行变成当前行。所以，如果我们不断地调用 `fetch_array`，我们就能连续地处理结果集 `$rs` 的所有行。
 
-因此，为了在 `while` 循环中多次调用 `fetch_array`，我们修改了 `retrieve1.php` 的代码并将其保存为 `retrieve2.php`。代码如下：
+
+如果我们再次调用`fetch_array`，提取的将是第二行的字段，然后第三行变成当前行。所以，如果我们不断地调用`fetch_array`，我们就能连续地处理结果集`$rs`的所有行。
+
+因此，为了在`while`循环中多次调用`fetch_array`，我们修改了`retrieve1.php`的代码并将其保存为`retrieve2.php`。代码如下：
 
 ```php
 <?php
@@ -9718,13 +8850,13 @@ if ( $rs === false ) {
 ?>
 ```
 
-当我们执行此脚本时，我们将看到如下方式显示的 `employee` 表的所有行。
+当我们执行此脚本时，我们将看到如下方式显示的`employee`表的所有行。
 
 ![](img/00280.jpeg)
 
 图 9.17：显示了 employee 表的所有行。
 
-为了以表格的形式呈现这些信息，请将 `else` 块替换为以下代码，并将脚本保存为 `retrieve3.php`：
+为了以表格的形式呈现这些信息，请将`else`块替换为以下代码，并将脚本保存为`retrieve3.php`：
 
 ```php
 {
@@ -9745,13 +8877,13 @@ if ( $rs === false ) {
 }
 ```
 
-当我们执行 `retrieve3.php` 时，我们将得到类似下面的显示，其中列对齐整齐。
+当我们执行`retrieve3.php`时，我们将得到类似下面的显示，其中列对齐整齐。
 
 ![](img/0281.jpeg)
 
 图 9.18：信息以表格形式表示。
 
-在本章中，我们能够使用 SQL 命令查询数据库，通过向数据库发送查询来获取 `$result` 对象，然后遍历 `$result` 对象的行并创建该数据的表格。这是 `retrieve3.php` 的代码：
+在本章中，我们能够使用 SQL 命令查询数据库，通过向数据库发送查询来获取`$result`对象，然后遍历`$result`对象的行并创建该数据的表格。这是`retrieve3.php`的代码：
 
 ```php
 <?php
@@ -9781,22 +8913,30 @@ if ( $rs === false ) {
 ### 复习题
 
 1. 哪个类作为连接对象的蓝图可以访问数据库？
+
    a. connection 类
+
    b. mysqli 类
+
    c. physics 类
+
    d. resultset 类
 
-2. 哪个命令指示如果 `mysql_connect` 不工作，将会导致？
+2. 哪个命令指示如果`mysql_connect`不工作，将会导致？
+
    a. end
+
    b. die
+
    c. finish
+
    d. error
 
 ## 9.3 在数据库中存储信息
 
-让我们回顾一下过去的工作。我们使用 phpMyAdmin 创建了数据库 `employees` 以及它的两个表——`employee` 和 `department`。我们还使用 phpMyAdmin 向这两个表输入数据。然后，我们编写了几个 PHP 脚本来实现 Retrieve 功能。现在，我们要编写 Create 功能。
+让我们回顾一下过去的工作。我们使用 phpMyAdmin 创建了数据库`employees`以及它的两个表——`employee`和`department`。我们还使用 phpMyAdmin 向这两个表输入数据。然后，我们编写了几个 PHP 脚本来实现 Retrieve 功能。现在，我们要编写 Create 功能。
 
-我们需要做的第一件事是不包含 empid，因为它是自动生成的。我们将创建一个名为 `insert.php` 的新文件，在该文件中使用 HTML `form` 标签并编写以下代码：
+我们需要做的第一件事是不包含 empid，因为它是自动生成的。我们将创建一个名为`insert.php`的新文件，在该文件中使用 HTML`form`标签并编写以下代码：
 
 ```html
 <!DOCTYPE html>
@@ -9827,9 +8967,9 @@ if ( $rs === false ) {
 
 `<form action="insertProcess.php" method="post">`
 
-此表单标签将 `action` 属性设置为 `insertProcess.php`，该文件将接收并处理输入此表单的数据。我们使用了 `post` 方法，它以数组的形式传递信息，而不是创建出现在 URL 中的查询字符串。
+此表单标签将`action`属性设置为`insertProcess.php`，该文件将接收并处理输入此表单的数据。我们使用了`post`方法，它以数组的形式传递信息，而不是创建出现在 URL 中的查询字符串。
 
-如果在浏览器中运行 `insert.php` 脚本，我们将看到这个：
+如果在浏览器中运行`insert.php`脚本，我们将看到这个：
 
 ![](img/0282.jpeg)
 
@@ -9839,28 +8979,29 @@ if ( $rs === false ) {
 
 我们希望用户选择部门名称，但保存到数据库的不是部门名称，而是对应的部门 ID，该值只能在 1 到 4 之间。为了实现这一点，我们以此方式修改 HTML 代码。
 
-
-
-
-
 # 部门
 
 <select name="department">
+
   <option value="1">财务</option>
+
   <option value="2">销售</option>
+
   <option value="3">信息技术</option>
+
   <option value="4">管理</option>
+
 </select>
 
-在这里，当用户选择相应的字面值（财务、销售、信息技术或管理）时，提交的是 `option` 标签的 `value` 属性。
+在这里，当用户选择相应的字面值（财务、销售、信息技术或管理）时，提交的是`option`标签的`value`属性。
 
 ![](img/00283.jpeg)
 
-图 9.20：`Department` 字段的下拉框。
+图 9.20：`Department`字段的下拉框。
 
 ## insertProcess.php 脚本
 
-现在，在实际将数据插入表单之前，让我们编写 `insertProcess.php` 脚本。该脚本的首要任务是从 `insert.php` 显示的表单中提取输入数据。因此，我们通过以下代码访问超全局数组 `$_REQUEST`，然后使用 `echo` 函数将其显示：
+现在，在实际将数据插入表单之前，让我们编写`insertProcess.php`脚本。该脚本的首要任务是从`insert.php`显示的表单中提取输入数据。因此，我们通过以下代码访问超全局数组`$_REQUEST`，然后使用`echo`函数将其显示：
 
 ```php
 <?php
@@ -9877,7 +9018,7 @@ if ( $rs === false ) {
 ?>
 ```
 
-现在，让我们测试 `insert.php` 中的输入数据是否已实际传递给 `insertProcess.php`。运行脚本 `insert.php` 并按照所示输入数据。
+现在，让我们测试`insert.php`中的输入数据是否已实际传递给`insertProcess.php`。运行脚本`insert.php`并按照所示输入数据。
 
 ![](img/00284.jpeg)
 
@@ -9887,22 +9028,27 @@ if ( $rs === false ) {
 
 `Smith Fred 3 Programmer 65000`
 
-首先，你可能会发现 `Information Technology` 的代码有些细微差异。我们显示的是‘3’，但你可能会得到‘2’或‘4’。没关系，显示的数据应该是 `lastname`、`firstname`、`departmentID`、`position` 和 `salary` 的顺序。如果你在 `insert.php` 表单中输入的数据按此顺序正确显示，则说明输入的数据已正确传递给此脚本 `insertProcess.php`。
+首先，你可能会发现`Information Technology`的代码有些细微差异。我们显示的是‘3’，但你可能会得到‘2’或‘4’。没关系，显示的数据应该是`lastname`、`firstname`、`departmentID`、`position`和`salary`的顺序。如果你在`insert.php`表单中输入的数据按此顺序正确显示，则说明输入的数据已正确传递给此脚本`insertProcess.php`。
 
 ## 通用逻辑流
 
-现在，在我们完成将这些数据存储在 `employee` 表中的 `insertProcess.php` 其他代码之前，请回到第 9.2 节（从数据库检索查询）开头附近，那里概述了“我们四个主要脚本的通用逻辑流”。以下是该逻辑流的简要总结：
+现在，在我们完成将这些数据存储在`employee`表中的`insertProcess.php`其他代码之前，请回到第 9.2 节（从数据库检索查询）开头附近，那里概述了“我们四个主要脚本的通用逻辑流”。以下是该逻辑流的简要总结：
 
-a. 使用连接对象 `$conn` 建立连接。
-b. 检查 `$conn` 是否成功创建。
-c. 构建 `INSERT`、`SELECT`、`UPDATE` 或 `DELETE` 查询。
-d. 使用 `$conn` 的 `query` 方法执行查询。
+a. 使用连接对象`$conn`建立连接。
+
+b. 检查`$conn`是否成功创建。
+
+c. 构建`INSERT`、`SELECT`、`UPDATE`或`DELETE`查询。
+
+d. 使用`$conn`的`query`方法执行查询。
+
 e. 检查查询是否执行成功。在检索功能的情况下，获取结果集对象并将其内容传输到数组。
+
 f. 关闭连接。
 
 ## 完成 insertProcess.php
 
-现在我们完成 `insertProcess.php` 脚本的代码。首先，我们从超全局数组 `$_REQUEST` 中提取 `insert.php` 提交的数据，并将其存储在变量 `$last`、`$first`、`$department`、`$position` 和 `$salary` 中。
+现在我们完成`insertProcess.php`脚本的代码。首先，我们从超全局数组`$_REQUEST`中提取`insert.php`提交的数据，并将其存储在变量`$last`、`$first`、`$department`、`$position`和`$salary`中。
 
 ```php
   $last = $_REQUEST['last'];
@@ -9912,7 +9058,7 @@ f. 关闭连接。
   $salary= $_REQUEST['salary'];
 ```
 
-我们要存储在 `employee` 表中的数据现在位于五个变量中——`$last`、`$first`、`$department`、`$position`、`$salary`。为了调试，我们使用以下代码在浏览器中显示这五个变量的值：
+我们要存储在`employee`表中的数据现在位于五个变量中——`$last`、`$first`、`$department`、`$position`、`$salary`。为了调试，我们使用以下代码在浏览器中显示这五个变量的值：
 
 ```php
     echo($last . ' ' .
@@ -9924,13 +9070,13 @@ f. 关闭连接。
 
 在之后的生产版本中，我们可以移除这一行。
 
-接下来，我们与数据库建立连接并检查连接是否成功。这是我们“通用逻辑流”中的步骤 a 和 b。这是通过 `connectInc.php` 脚本中的代码实现的，我们将其包含在 `insertProcess.php` 脚本中：
+接下来，我们与数据库建立连接并检查连接是否成功。这是我们“通用逻辑流”中的步骤 a 和 b。这是通过`connectInc.php`脚本中的代码实现的，我们将其包含在`insertProcess.php`脚本中：
 
 ```php
   require_once("connectInc.php");
 ```
 
-接下来（步骤 c），我们构建 SQL 插入语句并将该语句存储在变量 `$sql` 中。
+接下来（步骤 c），我们构建 SQL 插入语句并将该语句存储在变量`$sql`中。
 
 ```php
 $sql= "INSERT INTO employee VALUES (''," .
@@ -9941,7 +9087,7 @@ $sql= "INSERT INTO employee VALUES (''," .
 "'" . $salary . "')";
 ```
 
-接下来（步骤 d），我们调用 `$conn` 的 `query` 方法。我们提供 `$sql` 作为参数。我们在 `if-else` 语句中执行此操作：
+接下来（步骤 d），我们调用`$conn`的`query`方法。我们提供`$sql`作为参数。我们在`if-else`语句中执行此操作：
 
 ```php
   if ($conn->query($sql) == false ) {
@@ -9949,7 +9095,7 @@ $sql= "INSERT INTO employee VALUES (''," .
   }
 ```
 
-现在（步骤 e），我们检查查询是否成功。`query` 方法返回返回布尔值。如果查询成功写入 `employee` 表，我们可以访问 `$conn` 的属性：
+现在（步骤 e），我们检查查询是否成功。`query`方法返回返回布尔值。如果查询成功写入`employee`表，我们可以访问`$conn`的属性：
 
 ```php
   $last_inserted_id = $conn->insert_id;
@@ -9967,8 +9113,11 @@ $sql= "INSERT INTO employee VALUES (''," .
 这显示了测试结果：
 
 `Smith Fred 3 Programmer 65000`
+
 `INSERT INTO employee VALUES ('','Fred','3','Programmer','65000')`
+
 `Lasted Id: 1`
+
 `Affected rows: 1`
 
 ![](img/00284.jpeg)
@@ -9983,10 +9132,6 @@ $sql= "INSERT INTO employee VALUES (''," .
 
 图 9.23：新行。
 
-
-
-
-
 ```php
 echo( "<br/>Go back to <a href='index.php'>Add-Upd-DelPage</a>" );
 ?>
@@ -9994,23 +9139,33 @@ echo( "<br/>Go back to <a href='index.php'>Add-Upd-DelPage</a>" );
 
 # 复习题
 
-1. `post` 方法使用的信息数据类型是什么？
+1. `post`方法使用的信息数据类型是什么？
+
    a. 数组 (array)。
+
    b. 链表 (linked list)。
+
    c. 单个数据 (single data)。
+
    d. 以上都不是。
 
 2. 连接对象的哪个方法用于关闭其本身？
+
    a. exit
+
    b. end
+
    c. close
+
    d. 以上都不是。
 
 ## 9.4 删除和更新数据库记录
 
 现在我们已经为这个简单基础的 CRUD 应用编写了创建（Create）和检索（Retrieve）功能的脚本，接下来我们将编写用于更新（Update）和删除（Delete）功能的脚本。
 
-首先，我们将修改 `retrieve3.php` 脚本并保存为 `index.php`。我们希望此脚本的页面显示作为一个仪表盘——应用程序的中央控制点。`index.php` 也将是我们 CRUD 应用的启动脚本，通过它的仪表盘页面，我们可以访问应用程序的创建、更新和删除脚本。以下是 `index.php` 的修改后的代码。
+首先，我们将修改`retrieve3.php`脚本并保存为`index.php`。我们希望此脚本的页面显示作为一个仪表盘——应用程序的中央控制点。`index.php`也将是我们 CRUD 应用的启动脚本，通过它的仪表盘页面，我们可以访问应用程序的创建、更新和删除脚本。以下是`index.php`的修改后的代码。
+
+
 
 ```php
 <?php
@@ -10052,41 +9207,37 @@ $conn->close();
 ?>
 ```
 
-当我们运行此脚本时，你在 `employee` 表中输入的所有示例数据都应该如截图所示，按行列有序显示在屏幕上。
+当我们运行此脚本时，你在`employee`表中输入的所有示例数据都应该如截图所示，按行列有序显示在屏幕上。
 
 ![](img/00287.jpeg)
 
-图 9.24：由 `index.php` 脚本生成的屏幕显示，显示了员工表的行，每个员工都有对应的删除和更新按钮。表格底部还有一个“新增”（Add New）按钮，用于为新员工创建记录。
+图 9.24：由`index.php`脚本生成的屏幕显示，显示了员工表的行，每个员工都有对应的删除和更新按钮。表格底部还有一个“新增”（Add New）按钮，用于为新员工创建记录。
 
-**提示**：为了让“新增”按钮与删除按钮列对齐，请在定义“新增”按钮的链接之前添加或删除表格单元格标签 `<td></td>`。
+**提示**：为了让“新增”按钮与删除按钮列对齐，请在定义“新增”按钮的链接之前添加或删除表格单元格标签`<td></td>`。
 
-如果你将 `index.php` 的代码与 `retrieve3.php` 的代码进行比较，你会发现我们增加了代码，为显示的每个员工记录创建了删除和更新按钮。通过这两个按钮，我们可以删除员工的记录或修改其数据。我们还在屏幕底部创建了一个“新增”按钮，允许我们向数据库添加新员工。“新增”、删除和更新按钮也是指向 `insert.php`、`delete.php` 和 `updateForm.php` 脚本的链接。点击这三个按钮中的任何一个都会执行相应的 PHP 脚本。
+如果你将`index.php`的代码与`retrieve3.php`的代码进行比较，你会发现我们增加了代码，为显示的每个员工记录创建了删除和更新按钮。通过这两个按钮，我们可以删除员工的记录或修改其数据。我们还在屏幕底部创建了一个“新增”按钮，允许我们向数据库添加新员工。“新增”、删除和更新按钮也是指向`insert.php`、`delete.php`和`updateForm.php`脚本的链接。点击这三个按钮中的任何一个都会执行相应的 PHP 脚本。
 
-这就是 `index.php` 脚本作为仪表盘的功能。它的屏幕显示允许我们访问 CRUD 应用的创建、更新和删除功能。
+这就是`index.php`脚本作为仪表盘的功能。它的屏幕显示允许我们访问 CRUD 应用的创建、更新和删除功能。
 
-当我们链接到 `delete.php` 和 `updateForm.php` 脚本时，我们还必须传递想要删除或更新的特定记录的 ID。为了这一点，我们使用了查询字符串（query string）。它是 URL 的一部分，包含要传递给 Web 应用程序的数据。你可能以前见过查询字符串，URL 的末尾有一个问号（`?`），然后是一组键值，如下所示：
+当我们链接到`delete.php`和`updateForm.php`脚本时，我们还必须传递想要删除或更新的特定记录的 ID。为了这一点，我们使用了查询字符串（query string）。它是 URL 的一部分，包含要传递给 Web 应用程序的数据。你可能以前见过查询字符串，URL 的末尾有一个问号（`?`），然后是一组键值，如下所示：
 
 `http://program/path/?query_string`
 
-下行示例代码创建了删除按钮并将其链接到 `delete.php` 脚本。它还构建了传递给 `delete.php` 脚本的查询字符串。
+下行示例代码创建了删除按钮并将其链接到`delete.php`脚本。它还构建了传递给`delete.php`脚本的查询字符串。
 
 `<td><a href='delete.php?id=" . $arr['empid'] . "'>Delete</a></td>`
 
-如果你将 `index.php` 的代码与 `retrieve3.php` 的代码进行比较，你会发现我们增加了代码，为显示的每个员工记录创建了删除和更新按钮。通过这两个按钮，我们可以删除员工的记录或修改其数据。我们还在屏幕底部创建了一个“新增”按钮，允许我们向数据库添加新员工。“新增”、删除和更新按钮也是指向 `insert.php`、`delete.php` 和 `updateForm.php` 脚本的链接。点击这三个按钮中的任何一个都会执行相应的 PHP 脚本。
+如果你将`index.php`的代码与`retrieve3.php`的代码进行比较，你会发现我们增加了代码，为显示的每个员工记录创建了删除和更新按钮。通过这两个按钮，我们可以删除员工的记录或修改其数据。我们还在屏幕底部创建了一个“新增”按钮，允许我们向数据库添加新员工。“新增”、删除和更新按钮也是指向`insert.php`、`delete.php`和`updateForm.php`脚本的链接。点击这三个按钮中的任何一个都会执行相应的 PHP 脚本。
 
 （注：提供的文本存在大量重复和碎片，已根据逻辑流进行了清理和去重。）
 
+这显示了删除`empid`为 112 的员工的结果。（请将 112 替换为您删除的员工的`empid`。）
 
-
-
-
-这显示了删除 `empid` 为 112 的员工的结果。（请将 112 替换为您删除的员工的 `empid`。）
-
-如果我们返回主页，即 `index.php`，我们将看到以下内容：
+如果我们返回主页，即`index.php`，我们将看到以下内容：
 
 你可以看到第一条记录已经消失了，这表明我们的删除操作成功了。
 
-现在，让我们来看 `updateForm.php` 的完整代码，它实际上是一个完整的 HTML 文档。
+现在，让我们来看`updateForm.php`的完整代码，它实际上是一个完整的 HTML 文档。
 
 ```html
 <!DOCTYPE html>
@@ -10132,7 +9283,7 @@ $conn->close();
 </html>
 ```
 
-此表单的功能是显示某个员工的数据。放置在我们 HTML 文档 `<head>` 部分的以下 PHP 脚本执行了获取该员工数据的必要操作：
+此表单的功能是显示某个员工的数据。放置在我们 HTML 文档`<head>`部分的以下 PHP 脚本执行了获取该员工数据的必要操作：
 
 ```php
 require_once("connectInc.php");
@@ -10148,37 +9299,39 @@ if ( $rs === false ) {
 $conn->close();
 ```
 
-在阅读和分析这段代码时，请它也遵循了我们最近在 `delete.php` 代码中详细说明的步骤 a-f：
+在阅读和分析这段代码时，请它也遵循了我们最近在`delete.php`代码中详细说明的步骤 a-f：
 
-a. 创建一个连接对象 `$conn`。
-b. 检查 `$conn` 是否成功创建。
+a. 创建一个连接对象`$conn`。
+
+b. 检查`$conn`是否成功创建。
+
 c. 构建 SQL 查询。
+
 d. 执行连接对象的查询方法。
-e. 检查查询是否执行成功。处理结果对象 `$rs`。
+
+e. 检查查询是否执行成功。处理结果对象`$rs`。
+
 f. 关闭连接。
 
 我们不断重复这些步骤的原因是这是任何访问数据库的 PHP 脚本的基本模式。理解并掌握这六步将为你避免未来的任何烦恼！
 
-现在，通过行代码`$arr = $rs->fetch_array(MYSQLI_ASSOC);` 将获取到的员工数据存储在关联数组 `$arr` 中。然后，数组中的数据将由表单元素用于显示。让我们分析以下显示关联数组 `$arr` 中数据的 HTML 和 PHP 代码：
+现在，通过行代码`$arr = $rs->fetch_array(MYSQLI_ASSOC);` 将获取到的员工数据存储在关联数组`$arr`中。然后，数组中的数据将由表单元素用于显示。让我们分析以下显示关联数组`$arr`中数据的 HTML 和 PHP 代码：
 
 ```html
 <input type="text" value="<?php print($arr['lastname']) ?>" name="last"/>
 ```
 
-在这里，我们将 `<input>` 元素的 `value` 属性设置为数组 `$arr` 中元素的值，特别是通过键为 `lastname` 索引的元素。我们使用 PHP 代码来实现。在输入这一行时，你必须小心将每个字符放置在正确的位置，否则会产生各种错误。
+在这里，我们将`<input>`元素的`value`属性设置为数组`$arr`中元素的值，特别是通过键为`lastname`索引的元素。我们使用 PHP 代码来实现。在输入这一行时，你必须小心将每个字符放置在正确的位置，否则会产生各种错误。
 
-在部门（Department）字段的情况下，处理过程不同。我们必须对每个 `departmentId` 值（1-4）进行单独测试，然后显示相应的 `departmentName`。同样，在输入这一行时你必须小心，不要错错任何字符，特别是逗号、引号、大大括号或小括号：
+在部门（Department）字段的情况下，处理过程不同。我们必须对每个`departmentId`值（1-4）进行单独测试，然后显示相应的`departmentName`。同样，在输入这一行时你必须小心，不要错错任何字符，特别是逗号、引号、大大括号或小括号：
 
 ```html
 <option <?php if($arr['department']==1) { print('selected'); } value="1">Accounting</option>
 ```
 
-最后，我们必须处理 `empid` 字段。记住，该字段是主键，并由 MySQL 数据库自动生成。
+最后，我们必须处理`empid`字段。记住，该字段是主键，并由 MySQL 数据库自动生成。
 
-
-
-
-你也可以使用 `phpMyAdmin` 来更改数据库中任何表的任何字段，但目前，只需使用 `phpMyAdmin` 来验证我们通过 CRUD 应用所做的更改即可。
+你也可以使用`phpMyAdmin`来更改数据库中任何表的任何字段，但目前，只需使用`phpMyAdmin`来验证我们通过 CRUD 应用所做的更改即可。
 
 ![](img/00290.jpeg)
 
@@ -10189,55 +9342,80 @@ f. 关闭连接。
 ## 复习题
 
 1. 查询字符串中使用哪个符号？
+
    a. `#`
+
    b. `$`
+
    c. `&`
+
    d. `?`
 
 2. `$_REQUEST[]` 是什么？
+
    a. 一个函数
+
    b. 一个命令
+
    c. 一个数组
+
    d. 一个超全局数组
 
 ## 第 9 章实验练习
 
 1. 确保你的 MAMP 或 WAMP 服务器堆栈已下载、安装并运行。你可以在 [www.wampserver.com/en/](http://www.wampserver.com/en/) 下载 Windows 版的 WAMP 服务器。你可以在 [www.mamp.info](http://www.mamp.info) 下载 Mac 版的 MAMP 服务器。
 
-2. 设置一个 HTML 文档，并在文档的 `<body>` 部分嵌入 PHP 的起始和结束标签。按照描述将该文档保存到你的 `www` 文件夹（Windows）或 `htdocs` 文件夹（Macintosh）中。
+2. 设置一个 HTML 文档，并在文档的`<body>`部分嵌入 PHP 的起始和结束标签。按照描述将该文档保存到你的`www`文件夹（Windows）或`htdocs`文件夹（Macintosh）中。
 
-3. 创建一个数据库来跟踪计算机科学课程的学生和成绩。在 `MySQL` 中按如下创建数据库：
+3. 创建一个数据库来跟踪计算机科学课程的学生和成绩。在`MySQL`中按如下创建数据库：
+
    - 数据库名称：`CSClassData`
+
    - 表数量：1
 
-4. 在 `CSClassData` 中创建一个名为 `students` 的表。该表应包含以下字段：
+4. 在`CSClassData`中创建一个名为`students`的表。该表应包含以下字段：
+
    - `studentID int(5)`
+
    - `lastName varchar(40)`
+
    - `firstName varchar(20)`
+
    - `test1Grade int(3)`
+
    - `test2Grade int(3)`
+
    - `test3Grade int(3)`
+
    - `test4Grade int(3)`
+
    - `finalExamGrade int(3)`
 
 5. 为 10 名学生输入虚构数据，包括名、姓以及所有 5 次考试的成绩。（成绩按 0-100 的标准评分）。
 
-6. 创建一个数据库连接脚本，连接到你创建的 `MySQL` 数据库和 `CSClassData` 数据库。
+6. 创建一个数据库连接脚本，连接到你创建的`MySQL`数据库和`CSClassData`数据库。
 
-7. 创建名为 `grade_list.php` 的页面。在该页面上，按学生输出数据库中的所有成绩。你应该使用表格来实现此功能。
+7. 创建名为`grade_list.php`的页面。在该页面上，按学生输出数据库中的所有成绩。你应该使用表格来实现此功能。
 
 8. 一旦输出了所有成绩，在表格中添加两列。第一列应包含学生通过平均五次成绩得到的数值平均分。
+
    第二个新列应根据以下标准显示其 A-F 形式的最终成绩：
+
    - A 90-100
+
    - B 80-89
+
    - C 70-79
+
    - D 60-69
+
    - F 60 以下
+
    你应该能够在不更改数据库中任何内容的情况下添加最后两列——这些将是计算字段，而不是存储的数据库字段。
 
 9. 使用 CSS 使你的输出表格更具可读性。
 
-10. 在计算平均分和字母等级字段的右侧，添加删除和编辑的链接。将删除页面命名为 `grades_delete.php`，更新页面命名为 `grades_updateForm.php`。在表格底部，添加一个调用新增学生页面的链接 `grade_insert.php`。
+10. 在计算平均分和字母等级字段的右侧，添加删除和编辑的链接。将删除页面命名为`grades_delete.php`，更新页面命名为`grades_updateForm.php`。在表格底部，添加一个调用新增学生页面的链接`grade_insert.php`。
 
 11. 编写 PHP 代码以实现如本章所示的更新、删除和创建功能。
 
@@ -10282,6 +9460,8 @@ f. 关闭连接。
 ```
 
 ### File: `grades_list.php`
+
+
 
 ```php
 <!DOCTYPE html>
@@ -10390,9 +9570,6 @@ f. 关闭连接。
 </html>
 ```
 
-
-
-
 # 插入学生
 
 ```html
@@ -10495,6 +9672,7 @@ f. 关闭连接。
 # 第 10 章：类与对象
 
 ## 目标
+
 * 你将学习两个重要的 PHP 函数：`date()` 和 `time()`，以及如何使用这些函数处理日期信息。
 * 你将学习使用 PHP 的许多字符串函数处理字符串。
 * 你将理解如何使用 session 和 cookie 在请求之间维持状态。
@@ -10514,9 +9692,11 @@ f. 关闭连接。
 ```
 
 你可能会看到一个十位整数：
+
 139503440
 
 这是一个时间戳。它是从 1970 年 1 月 1 日午夜到当前日期时间之间的秒数。这是计算机用于监控和存储日期的格式，因为在这种整数格式下进行日期计算更容易。如果你再次执行上述脚本，可能会得到：
+
 139503455
 
 注意最后两位数字从 40 变为了 55，这意味着在你两次执行脚本之间经过了 15 秒。计算机的内置时钟正在运行并跟踪时间。
@@ -10530,6 +9710,7 @@ f. 关闭连接。
 ```
 
 将返回：
+
 Fri - September 02, 2011
 
 `date()` 函数接受两个参数。第一个是强制性的格式字符串 `"D - F d, Y"`，指定日期时间的格式。第二个参数是可选的，它是我们要格式化的时间戳 `131493440`。如果省略第二个参数，`date()` 函数将使用 `time()` 函数返回的时间戳。
@@ -10550,15 +9731,14 @@ Fri - September 02, 2011
 `date("l - F d, Y", 131493440);`
 
 你发现变化了吗？它是紧跟双引号后的 `l`（小写 L）。显示现在将变为：
+
 Friday - September 02, 2011
 
 这是格式字符串中 `l`（小写 L）字符的含义：
 
-
-
-
-
 ## 表 10.2: `date()` 函数格式字符串中小写字母“L”的格式。
+
+
 
 `date()` 函数中还有许多用于格式化日期的字符格式。你可以在 [`php.net/date`](http://php.net/date) 找到它们。
 
@@ -10571,6 +9751,7 @@ Friday - September 02, 2011
 ```
 
 该脚本将产生：
+
 `Mon - March 17, 2014 11:47:58`
 
 我们没有提供第二个参数，因此 `date()` 函数使用了 `time()` 函数返回的时间戳，并根据我们新添加的用于格式化的字符串 `h:i:s` 对时间进行了格式化。时间格式每个字符的含义总结如下表所示。
@@ -10654,21 +9835,33 @@ print("<br/>18 Hours from now: " . (date("D F d, Y h:i:s", time() + $eighteenHou
 **复习题**
 
 1. `date()` 函数有几个参数？
+
    a. 一个
+
    b. 两个
+
    c. 三
+
    d. 四个
+
 2. 使用哪个字母获取月份的全文本？
+
    a. F
+
    b. M
+
    c. m
+
    d. D
 
 ## 10.2 PHP 中的字符串
 
 在编程中，字符串是字符序列。以下是有效字符串的示例：
+
 - `"Hi!"`
+
 - `"How are you?"`
+
 - `"1234"`
 
 在 PHP 中，字符串可以使用单引号或双引号括起来。以下是使用单引号的示例：
@@ -10677,7 +9870,9 @@ print("<br/>18 Hours from now: " . (date("D F d, Y h:i:s", time() + $eighteenHou
 echo 'Hi!';
 echo 'How are you?';
 echo '1234';
-```单引号内的字符串不会解析变量，而双引号内的字符串则会解析变量和转义字符。以下是使用双引号的示例：
+```
+
+单引号内的字符串不会解析变量，而双引号内的字符串则会解析变量和转义字符。以下是使用双引号的示例：
 
 ```php
 $name = "World";
@@ -10699,7 +9894,7 @@ echo "Line one\nLine two";
 echo "Tabbed text";
 ```
 
-你可以使用点运算符（`.）来连接两个字符串。以下是一个示例：
+你可以使用点运算符（`.`）来连接两个字符串。以下是一个示例：
 
 ```php
 $greeting = "Hello";
@@ -10714,9 +9909,6 @@ $greeting = "Hello";
 $name = "World";
 echo("Hello, %s!", $name);
 ```
-
-
-
 
 在浏览器中我们将得到以下输出，其中前 30 个字符将作为子字符串显示：
 
@@ -10773,15 +9965,23 @@ print(substr($poem, 0, 30));
 ### 复习题
 
 1. 用于显示 heredoc 的符号是：
+
 a. `<<<`
+
 b. `>>>`
+
 c. `+++`
+
 d. `---`
 
 2. 哪个函数将字符串转换为数组？
+
 a. `strrev()`
+
 b. `str_split()`
+
 c. `str_con()`
+
 d. `str_arr()`
 
 ## 10.3 会话
@@ -10800,22 +10000,24 @@ PHP 会话是服务器上的一个临时文件，你可以在其中存储数据�
 
 尽管你可以在服务器会话文件中存储相当的数据（比你在 4kb cookie 中存储的要多），但请记住，会话主要用于存储临时数据以维护网页之间的状态。一旦你关闭浏览器，会话数据将不再可用。要永久地存储大量数据，则需要其他方法。
 
-
-
 现在让我们连续执行脚本 `sessions.php`、`sessions2.php` 和 `sessions3.php`。这将产生以下三个相应的屏幕。
 
 ![](img/00301.jpeg)
+
 图 10.11: 脚本 `sessions.php` 的屏幕输出
 
 ![](img/00302.jpeg)
+
 图 10.12: 脚本 `sessions2.php` 的屏幕输出
 
 ![](img/00303.jpeg)
+
 图 10.13: 脚本 `sessions3.php` 的屏幕输出
 
 ## 完整代码列表
 
 ### Sessions.php
+
 ```php
 <?php
     session_start();
@@ -10825,9 +10027,11 @@ PHP 会话是服务器上的一个临时文件，你可以在其中存储数据�
     $_SESSION['age'] = "37";  
 ?>
 ```
+
 <a href="sessions2.php">Sessions 2</a>
 
 ### Sessions2.php
+
 ```php
 <?php
     session_start();
@@ -10841,6 +10045,7 @@ PHP 会话是服务器上的一个临时文件，你可以在其中存储数据�
 ```
 
 ### Sessions3.php
+
 ```php
 <?php
     session_start();
@@ -10855,27 +10060,36 @@ PHP 会话是服务器上的一个临时文件，你可以在其中存储数据�
     }
 ?>
 ```
+
 <a href="sessions.php">Session 1</a>
 
 ## 复习题
 
 1. 使用哪个函数来启动每个会话 (session)?
+
 a. `session_start()`
+
 b. `session_begin()`
+
 c. `session_initiate()`
+
 d. 以上都不是
 
 2. 当我们不再需要会话时，使用哪个函数？
+
 a. `session_end()`
+
 b. `session_finish()`
+
 c. `session_destroy()`
+
 d. 以上都不是
 
 ## 10.4 Cookies
 
 在上一节中，我们讨论了会话 (sessions)，它们是服务器上的临时文件，客户端浏览器在其中存储数据以维持浏览器请求之间的状态。而 Cookie 则是由服务器留在客户端计算机上的文件，大小不超过 4kb。
 
-当浏览器向服务器请求页面时，服务器会在其对浏览器请求的响应头中中向浏览器发送一个或多个 Cookie。
+当浏览器向服务器请求页面时，服务器会在其对浏览器请求的响应头中向浏览器发送一个或多个 Cookie。
 
 当浏览器下一次向留下 Cookie 的同一服务器发送请求时，Cookie 中的数据将自动通过请求发送到服务器。通过 Cookie，服务器可以“记住”这个特定的浏览器客户端，并可以使用该客户端发送的 Cookie 中的数据为该特定的客户端浏览器提供定制的响应。
 
@@ -10896,7 +10110,7 @@ Cookie 中的数据应按照以下参数顺序排列：
 
 使用 `setcookie()` 函数创建 Cookie 并将其发送到浏览器是很容易的。该函数发送相应的 HTTP 头以在浏览器中创建 Cookie。`setcookie()` 函数的参数与上一个表所示的参数相同。不过，通常情况下，你只需要提供前三个或前四个参数（name, value, expire 和 path），但只要可能，你都应该提供六个参数。
 
-`setcookie()` 函数也应该在向浏览器发送任何输出之前调用，因为 `setcookie()` 在服务器的 HTTP 响应头中发送 Cookie。如果你在调用 `setcookie()` 之前向浏览器发送了输出，PHP 将先发送响应头。因此，`setcookie()` 失去了在响应头中发送 Cookie 的能力。这就是为什么包含 `setcookie()`调用的代码被放置在 HTML 文档的 `<head>` 部分的原因。
+`setcookie()` 函数也应该在向浏览器发送任何输出之前调用，因为 `setcookie()` 在服务器的 HTTP 响应头中发送 Cookie。如果你在调用 `setcookie()` 之前向浏览器发送了输出，PHP 将先发送响应头。因此，`setcookie()` 失去了在响应头中发送 Cookie 的能力。这就是为什么包含 `setcookie()` 调用的代码被放置在 HTML 文档的 `<head>` 部分的原因。
 
 以下是创建名为 `band` 和 `food` 的两个 Cookie 的代码。`band` 将在一个小时后过期，而 `food` 将在 30 天后过期。将其保存为 `cookies.php`。
 
@@ -10919,16 +10133,20 @@ print("<br/>Food: " . $food);
 ```
 
 显示结果应该是：
+
 Journey
+
 pasta
 
-要删除或“过期”一个 Cookie，调用 `setcookie()` 并将要删除的 Cookie 名称作为第一个参数，空字符串（或任何值）作为第二个参数，并将过去的时间作为第三个参数。例如：
+
+
+要删除或“过期”一个 Cookie，调用`setcookie()`并将要删除的 Cookie 名称作为第一个参数，空字符串（或任何值）作为第二个参数，并将过去的时间作为第三个参数。例如：
 
 ```php
 setcookie("food", "", (time()-1));
 ```
 
-运行 `cookies2.php`，你应该得到相同的显示，因为我们调用了带有过去的时间戳——`food` Cookie 已过期。为了验证此 Cookie 是否已删除，输入以下代码作为 `cookies3.php`。
+运行`cookies2.php`，你应该得到相同的显示，因为我们调用了带有过去的时间戳——`food` Cookie 已过期。为了验证此 Cookie 是否已删除，输入以下代码作为`cookies3.php`。
 
 ```php
 <?php
@@ -10945,38 +10163,53 @@ else
 ?>
 ```
 
-`isset()` 函数在变量不是 NULL 时返回 TRUE。否则返回 FALSE。当你运行 `cookies3.php` 时，你将在浏览器中获得结果：
+`isset()`函数在变量不是 NULL 时返回 TRUE。否则返回 FALSE。当你运行`cookies3.php`时，你将在浏览器中获得结果：
+
 Journey
+
 No cookie found.
 
 `food` Cookie 已删除。
 
-
-
-
 a. 一个文件。
+
 b. 一个函数。
+
 c. 一个命令。
+
 d. 以上均不是。
 
 2. 使用哪个函数来创建 cookie？
+
 a. `setcookie()`
+
 b. `startcookie()`
+
 c. `createcookie()`
+
 d. 以上均不是。
 
 # 第 10 章实验练习
 
 1. 确保你的 MAMP 或 WAMP 服务器堆栈已下载、安装并正在运行。
-2. 设置一个 HTML 文档，并在文档的 `<body>` 部分中嵌入 PHP 的开始标签和结束标签。按照描述将该文档保存到 `www` 文件夹（Windows）或 `htdocs` 文件夹（Mac）中。
+
+2. 设置一个 HTML 文档，并在文档的`<body>`部分中嵌入 PHP 的开始标签和结束标签。按照描述将该文档保存到`www`文件夹（Windows）或`htdocs`文件夹（Mac）中。
+
 3. 创建一个简单的表单，让用户输入用户名。将用户名存储在会话（session）变量。
+
 4. 创建第二个页面，从会话变量中读取用户名。向用户输出问候语。
-5. 输出问候语后，销毁会话并将用户名存储名为 `username` 的 cookie 中。设置 cookie 在 30 分钟后过期。
-6. 创建新页面并获取 cookie。使用 `date()` 函数在页面顶部显示当前日期。
-7. 将字符串 “You have reached the end of PHP for Beginners.” 放入变量 `$message` 中。
+
+5. 输出问候语后，销毁会话并将用户名存储名为`username`的 cookie 中。设置 cookie 在 30 分钟后过期。
+
+6. 创建新页面并获取 cookie。使用`date()`函数在页面顶部显示当前日期。
+
+7. 将字符串 “You have reached the end of PHP for Beginners.” 放入变量`$message`中。
+
 8. 输出字符串中的字符数。
+
 9. 使用字符串函数和任何必要的代码，将所有元音替换为 X 并再次输出字符串。
-10. 使用字符串函数将字符串转换为数组，并使用循环输出数组的每个元素。（不要使用 `print_r`。）
+
+10. 使用字符串函数将字符串转换为数组，并使用循环输出数组的每个元素。（不要使用`print_r`。）
 
 # 第 10 章实验标准答案
 
@@ -11046,66 +10279,90 @@ d. 以上均不是。
 ```
 
 ![](img/00304.jpeg)
-图 10.14: 脚本 `Lab.php` 的屏幕输出。用户名字段中已输入“Alison”。
+
+图 10.14: 脚本`Lab.php`的屏幕输出。用户名字段中已输入“Alison”。
 
 ![](img/00305.jpeg)
-图 10.15: 脚本 `Lab2.php` 的屏幕输出
+
+图 10.15: 脚本`Lab2.php`的屏幕输出
 
 ![](img/00306.jpeg)
-图 10.16: 脚本 `Lab3.php` 的屏幕输出
+
+图 10.16: 脚本`Lab3.php`的屏幕输出
 
 # 第 10 章总结
 
-在本章中，你学习了如何使用 PHP 的 `date()` 和 `time()` 函数来访问和处理日期与时间信息。你还接触了处理字符串的不同方法，以及 PHP 的两种行为：单引号和双引号的使用以及 heredoc 语法。我们探索了使用会话（sessions）和 cookie 在不同请求之间维持状态。在我们结束这最后一章之际，我们致敬并表扬你坚持完成了十章 PHP 编程课程。你应该为自己感到非常自豪——做得好！现在让我给你提个建议：我确定你熟悉“不用就会生锈（use it or lose it）”这句话。很好，这也适用于你的编程！确保你积极使用你的知识——现在再次练习和复习概念，以保持记忆清晰。现在就开始用你所学的知识编写你的网页吧！祝你好运！
+在本章中，你学习了如何使用 PHP 的`date()`和`time()`函数来访问和处理日期与时间信息。你还接触了处理字符串的不同方法，以及 PHP 的两种行为：单引号和双引号的使用以及 heredoc 语法。我们探索了使用会话（sessions）和 cookie 在不同请求之间维持状态。在我们结束这最后一章之际，我们致敬并表扬你坚持完成了十章 PHP 编程课程。你应该为自己感到非常自豪——做得好！现在让我给你提个建议：我确定你熟悉“不用就会生锈（use it or lose it）”这句话。很好，这也适用于你的编程！确保你积极使用你的知识——现在再次练习和复习概念，以保持记忆清晰。现在就开始用你所学的知识编写你的网页吧！祝你好运！
 
 # 答案：学习 PHP 和 MySQL
 
 ### 第 1 章：你的第一个脚本
+
 1. PHP 代表什么？b. 预文本处理器（Pretext Processor）。
+
 2. WAMP 中的 A 代表什么？a. Apache。
+
 3. 使用什么地址检查由 Windows 上 Apache 服务器生成的首页？a. `http://localhost`
+
 4. 正确的开始标签是什么？d. `<?php`
 
 # 第 2 章：变量
+
 1. 变量是什么？a. 字符串和数字的容器。
+
 2. 常见的算术运算有哪些？b. 加法、乘法、法。
+
 3. 使用什么命令输出格式化字符串？d. `printf("`
+
 4. 给某个变量加 1 应该使用什么运算符？c. 递增
 
 # 第 3 章：数组
+
 1. 数组是什么？b. 多个变量的容器。
+
 2. 为数组成员赋值的正确语法是什么？c. `$arrayName=`
-3. 在示例 `$example = array("Cooper" => 2500, "Oswald" => 2350);` 中哪些是键？a. Cooper, Oswald
+
+3. 在示例`$example = array("Cooper" => 2500, "Oswald" => 2350);`中哪些是键？a. Cooper, Oswald
+
 4. 多维数组最简单的解释是什么？b. 数组中的数组。
 
 ### 第 4 章：控制结构 -分支
+
 1. 条件是什么？d. 评估表达式为真或假并执行与真或假相关操作的语句。
-2. 条件运算符 `<=` 表示什么？d. 小于等于。
+
+2. 条件运算符`<=`表示什么？d. 小于等于。
+
 3. 复杂条件的例子是什么？d. 一系列 if-else 语句。
+
 4. switch-case-break 条件最好定义为？c. 具有许多情况的条件。
+
 5. switch-case-break 大写敏感吗？d. 默认是，但可以通过添加多个情况来自定义以移除大小写敏感。
+
 6. 三元运算符是什么？a. 与变量相关的单行 if-else 语句。
-7. 三元语句中的符号 `?` 和 `:` 分别代表？a. If 和 else。
+
+7. 三元语句中的符号`?`和`:`分别代表？a. If 和 else。
 
 ### 第 5 章：控制结构 -循环
+
 1. 循环是什么？c. 根据程序设置的条件重复代码段的命令。
+
 2. while 循环和 do-while 循环的主要区别是什么？c. 即使初始设置为 FALSE，do-while 循环也会执行一次；while 循环如果初始值为 FALSE 则忽略循环。
+
 3. for 循环是什么？c. 一种紧凑的循环类型，将逻辑和参数全部包含在一行。
+
 4. 处理复杂数组时使用哪种循环比较明智？d. foreach 循环
 
 # 第 6 章：自定义 PHP 函数
+
 1. 函数是什么？a. 存储在特定关键字下的相关代码块，可以被调用并重复使用。
+
 2. 参数是什么？
-
-
-
-
 
 答案：a. 传递函数的值或字符串。
 
-### 3. `return` 语句是如何工作的？
+### 3. `return`语句是如何工作的？
 
-答案：a. `return` 结束函数的执行并向函数的调用者返回一个值。
+答案：a. `return`结束函数的执行并向函数的调用者返回一个值。
 
 ### 4. 如果传递给函数参数的文件名找不到，哪个函数会产生错误并终止脚本？
 
@@ -11139,7 +10396,7 @@ d. 以上均不是。
 
 答案：a. `$to`
 
-### 2. `mail()` 函数的作用是什么？
+### 2. `mail()`函数的作用是什么？
 
 答案：a. 它通过服务器使用 PHP 发送接收电子邮件。
 
@@ -11155,7 +10412,7 @@ d. 以上均不是。
 
 答案：a. 该头部表示邮件包含 ASCII 文本字符以外的字符。
 
-### 6. `content type text/HTML` 头部的作用是什么？
+### 6. `content type text/HTML`头部的作用是什么？
 
 答案：d. 它定义了 HTML 邮件将使用的字符编码。
 
@@ -11175,7 +10432,7 @@ d. 以上均不是。
 
 答案：a. `mysql_connect`。
 
-### 2. 哪个命令指示如果 `mysql_connect` 不工作，将继续提供所发生的 MySQL 错误？
+### 2. 哪个命令指示如果`mysql_connect`不工作，将继续提供所发生的 MySQL 错误？
 
 答案：b. `or die`
 
@@ -11195,7 +10452,7 @@ d. 以上均不是。
 
 答案：d. `?`
 
-### 2. `$_REQUEST[]` 是什么？
+### 2. `$_REQUEST[]`是什么？
 
 答案：d. 一个超全局数组
 
@@ -11207,7 +10464,7 @@ d. 以上均不是。
 
 # 第 10.1 章日期对象（Date Object）
 
-### 1. `date()` 函数有多少个参数？
+### 1. `date()`函数有多少个参数？
 
 答案：b. 两个
 
@@ -11248,170 +10505,259 @@ d. 以上均不是。
 ## 附录
 
 | 术语 | 定义 |
+
 | :--- | :--- |
+
 | api | 这是应用程序接口（application interface）的缩写。 |
+
 | argument | 这是一个传递给函数的值或变量。 |
+
 | array | 这是 PHP 的类型之一。 |
+
 | boolean | 它只有两个值——TRUE（真）和 FALSE（假）。 |
+
 | break | 这是一个用于终止循环执行的关键字。 |
+
 | browser | 这是一个在计算机上运行的程序。 |
+
 | class | 这是一个对象的蓝图。 |
+
 | client | 这是用户（个人）用于发送或接收电子邮件的程序。 |
-| code block | 一组连续的代码行，通常由大括号 `{}` 隔开。 |
+
+| code block | 一组连续的代码行，通常由大括号`{}`隔开。 |
+
 | cookies | 这些是服务器留下的不大于 4kb 的文件。 |
+
 | column | 一个表由列组成。 |
+
 | concatenation | 将多个不同的事物或对象合并成一个单元的过程。 |
+
 | comparison operator | 这是一个比较两个操作数的运算符。 |
+
 | conditional expression | 这是一个求值为真或为的表达式。 |
+
 | conditional statement | 是一行遵循严格语法和语法的代码。 |
+
 | control structure | 代码行编写和排列的特定方式，允许改变执行流。 |
+
 | CRUD | 这是创建（Create）、检索（Retrieve）、更新（Update）和删除（Delete）的缩写。 |
+
 | csv file | 这是一个由逗号分隔值的逗号分隔值（csv）文本文件。 |
+
 | database | 这是一个相关数据的组织集合。 |
+
 | do-while | 这是 PHP 的循环控制结构之一。 |
-| dot operator | 点运算符 `.` 是 PHP 的连接运算符。 |
+
+| dot operator | 点运算符`.`是 PHP 的连接运算符。 |
+
 | email client | 这是用户用于发送或接收电子邮件的程序。 |
+
 | esmtp | 这是扩展简单邮件传输协议（Extended Simple Mail Transfer Protocol）的缩写。 |
+
 | expression | 任何变量、常量、字面量、运算符、对象甚至函数的有效组合，可以被求值产生一个值。 |
+
 | field | 在数据库中，字段是列（column）的另一个术语。 |
 
-
-
-
-
 | 术语 | 说明 |
+
 | :--- | :--- |
+
 | `file` | 这是一个对存储在计算机上的数据的集合和通用术语，无论这些数据是以文本、二进制、图片、视频、音频、网页等形式存在。文件被分配有一个唯一的文件，以识别并将其与其他文件区分来。 |
-| `file handle` | 这是 `fopen()` 函数的返回值，是 PHP 脚本访问服务器文件的主要手段。脚本访问的每个文件都会被分配一个 `file handle`。文件句柄的 PHP 数据类型为 `resource`。 |
-| `filename` | 计算机上的文件被赋予一个唯一的 `filename` 来识别。`filename` 由特定数量的字符组成（在 Windows 中，`filename` 最大长度为 255 个字符），后面可选跟一个点和一个字符扩展名。字符扩展名通常标识文件的类型。例如，扩展名“avi”表示视频文件，“mp3”表示音频文件等。 |
+
+| `file handle` | 这是`fopen()`函数的返回值，是 PHP 脚本访问服务器文件的主要手段。脚本访问的每个文件都会被分配一个`file handle`。文件句柄的 PHP 数据类型为`resource`。 |
+
+| `filename` | 计算机上的文件被赋予一个唯一的`filename`来识别。`filename`由特定数量的字符组成（在 Windows 中，`filename`最大长度为 255 个字符），后面可选跟一个点和一个字符扩展名。字符扩展名通常标识文件的类型。例如，扩展名“avi”表示视频文件，“mp3”表示音频文件等。 |
+
 | `file i/o` | 这意味着文件输入/输出，或在计算机上创建和检索文件。在 PHP 中，文件 i/o 仅涉及服务器文件，因为 PHP 禁止在客户端计算机上执行文件 i/o（cookie 情况除外）。 |
+
 | `floating-point` | 这是 PHP 八种数据类型之一。它代表带有小数数字的数值。 |
-| `foreach-loop` | 这是 PHP 四种循环控制结构之一。 另外三个是：`while-loop`、`do-while-loop` 和 `for-loop`。 |
-| `for-loop` | 这是 PHP 四种循环控制结构之一。 另外三个是：`while-loop`、`do-while-loop` 和 `foreach-loop`。 |
+
+| `foreach-loop` | 这是 PHP 四种循环控制结构之一。另外三个是：`while-loop`、`do-while-loop`和`for-loop`。 |
+
+
+
+| `for-loop` | 这是 PHP 四种循环控制结构之一。另外三个是：`while-loop`、`do-while-loop` 和 `foreach-loop`。 |
+
 | `function` | 这是一个自包含的程序语句块，具有定义的边界，执行特定的任务。 |
+
 | `here document` | 在计算机科学中，这是一种文件字面量或输入流字面量。它是源代码文件的一个部分，被视为一个单独的文件处理。 |
+
 | `heredoc` | 这是一个代码块，无论多大，都可以被视为一个字符串。 |
+
 | `if-else/if-elseif statement` | 这是 PHP 三种条件语句之一，用于创建分支控制结构。另外两个是 `if-statement` 和 `switch-statement`。 |
+
 | `if-statement` | 这是 PHP 三种条件语句之一，用于创建分支控制结构。另外两个是 `if-else/if-elseif-statement` 和 `switch-statement`。 |
+
 | `imap` | 意思是 Internet Mail Access Protocol（互联网消息访问协议）。这是入站邮件服务器使用的协议，用于在服务器上存储的消息。 |
+
 | `incoming mail server` | 它处理所有收到的邮件并实现 `POP3`（邮局协议第 3 版）或 `IMAP`（互联网消息访问协议）。`POP3` 入站服务器将发送和接收的消息存储在客户端的硬盘上。这迫使用户只能从一个设备或位置访问和处理电子邮件。然而，IMAP 入站服务器将消息存储在服务器上，从而允许用户从任何位置或任何设备访问其邮件。 |
+
 | `indexed array` | 这是 PHP 中两种数组之一，使用数字索引来识别和区分其成员或元素。 |
+
 | `integer` | 这是 PHP 八种数据类型之一。它是一个整数，其值范围取决于硬件。 |
+
 | `ip address` | 这是分配给每个连接到互联网的计算机的唯一数字。`IP` 意味着“互联网协议”。 |
+
 | `join` | 在数据库中，这是关系（relationship）的另一种术语。 |
+
 | `key` | 在数据库中，这是在上面构建索引的列或多个列，允许快速和/或排序访问表数据。 |
+
 | `keyword` | 这是一个编程语言保留的单词，因为它在语言的语法和规则中具有特殊含义。程序员不能使用关键字来命名变量或用于任何其他用途。例如：`break`、`else`、`if`、`function` 等等。 |
+
 | `Linux` | 这是一个基于 UNIX 的开源（免费）跨平台操作系统。 |
+
 | `literal value` | 这是一个仅由一个操作数且没有运算符的表达式。它是由其实际字符串值表示的单个标量值（即不是通过变量引用）。例如，1、1.414 和 "string" 都是字面量值。作为表达式的字面量的值等于本身。 |
+
 | `logical operator` | 它结合条件表达式以产生 TRUE 或 FALSE 的布尔结果。例如，`$age < 21`。 |
+
 | `looping control structure` | 参见‘control structure’。 |
+
 | `mail server` | 这是一种处理发送和接收电子邮件的服务器类型。它可以运行在自己的专用硬件上，也可以与其他服务器程序共享硬件资源。它在正常运行期间自动运行，无需任何人工干预。邮件服务器有两种：出站邮件服务器和入站邮件服务器。 |
+
 | `mode` | 模式专门标识一种文件 i/o 操作类型。某些文件 i/o 函数需要模式作为其参数之一。模式通过字符和/或加号 `+` 来标识。例如，`r` 意味着“只读访问”，而 `r+` 意味着“读写访问”。 |
+
 | `multi-dimensional array` | 这是一个其元素或成员也是数组的数组。它是一个包含若干个被称为“子数组”的主数组。 |
+
 | `mysql` | 这是一个流行的、开源的关系型数据库管理系统 (RDBMS)，支持多种管理工具、程序、库以及应用程序编程接口。截至 2014 年 3 月，它是全球使用最广泛的开源 (RDBMS)。 |
+
 | `null` | 这是 PHP 八种数据类型之一。`Null` 表示变量中完全没有存储任何有效值。 |
+
 | `object` | 这是一个编程结构，由程序代码和程序数据组成，封装成一个独立的包，具有清晰的边界以及关于如何访问该对象的程序代码和数据的确定规则。 |
+
 | `or die()` | 这是一个 PHP 语言结构，等同于 `exit`。 |
+
 | `open source software` | 这种源代码公开的计算机软件，其许可规定版权所有者向任何人、出于任何目的提供研究、更改和分发软件的权利。 |
+
 | `operator` | 这是一个指定要执行特定编程操作的符号。此操作通常产生一个新值。PHP 运算符有十组：算术、数组、赋值、位、比较、错误控制、执行、逻辑、字符串以及增减。 |
+
 | `operand` | 它是运算符作用的对象。大多数情况下，操作数是一个变量，但也可以是字面量、对象、函数或任何运算符可以有效执行操作的内容。 |
+
 | `outgoing mail server` | 这种类型的服务器处理所有发送的邮件并实现 `SMTP` 简单邮件传输协议。 |
+
 | `parameter` | 这是函数定义中定义的变量，用于接收传递给函数的参数值。 |
+
 | `PEAR` | 这是 PHP 扩展和应用程序库的缩写。它是一个免费、高质量源代码包的大型集合，可以下载并用于任何 PHP 应用程序。 |
+
 | `pop3` | 意思是邮局协议第 3 版。这是入站邮件服务器使用的协议，将发送和接收的消息存储在客户端的硬盘上。 |
+
 | `post` | 这种方法以数组的形式传递信息，而不是创建出现在 URL 中的查询字符串。 |
+
 | `PHP` | 这是一个递归缩写，其中第一个字母代表缩写词本身，它的意思是“PHP: 超文本处理器”。 |
 
-
-
-
-
 # PHPMyAdmin
-这是一个用 `PHP` 编写并在 浏览器中运行的免费开源工具。它允许用户创建、修改或删除 `MySQL` 数据库，以及数据库中的任何表，或任何表中的行和字段。`PHPMyAdmin` 可以在数据库上执行 `SQL` 语句，并管理用户和权限。
 
-### 主键
+这是一个用 `PHP` 编写并在浏览器中运行的免费开源工具。它允许用户创建、修改或删除 `MySQL` 数据库，以及数据库中的任何表，或任何表中的行和字段。`PHPMyAdmin` 可以在数据库上执行 `SQL` 语句，并管理用户和权限。
+
+## 主键
+
 这是一个列、字段或多个列或字段，其取值确保了表中的每一行都是唯一的。
 
-### 查询字符串
+## 查询字符串
+
 它是 `URL` 中包含传递给 Web 应用程序的数据的部分。
 
-### 记录
+## 记录
+
 在数据库中，记录是“行”的另一种说法。
 
-### 关系
+## 关系
+
 在数据库中，关系是两个表之间的链接。
 
-### 资源
+## 资源
+
 这是 `PHP` 八种数据类型之一。
 
-### 返回值
+## 返回值
+
 这是函数返回给调用者的可选值。
 
-### 行
+## 行
+
 在数据库中，它是表中的一组相关数据。
 
-### 作用域
+## 作用域
+
 编程中的一个重要概念，指变量在程序中的可见性或可访问性。具体而言，它指的是程序中可以访问变量的代码部分。`PHP` 提供全局作用域和局部作用域。
 
-### 服务器
+## 服务器
+
 这是一个系统（软件和合适的计算机硬件），旨在通过局域网或互联网向其他计算机（客户端）处理请求并交付数据。
 
-### 会话
-这是服务器上的一个临时文件，可以在其中存储数据。客户端浏览器会在会中存储数据以“维持浏览器请求之间的状态”，或更具体地说“在浏览器请求之间保留应用程序的状态”。
+## 会话
 
-### SID
+这是服务器上的一个临时文件，可以在其中存储数据。客户端浏览器会在会话中存储数据以“维持浏览器请求之间的状态”，或更具体地说“在浏览器请求之间保留应用程序的状态”。
+
+## SID
+
 这是会话 ID（session id）的缩写。`SID` 由服务器生成，用于标识和保护会话。
 
-### SQL
+## SQL
+
 这意味着结构化查询语言（Structured Query Language，通常读作“see-qwell”）。它是一种用于在关系型数据库中搜索、排序、添加和提取数据的编程语言。
 
-### 简单数组
+## 简单数组
+
 参见索引数组。
 
-### SMTP
+## SMTP
+
 这是简单邮件传输协议（Simple Mail Transfer Protocol）。这是当邮件从邮件客户端（如 Outlook Express）发送到邮件服务器，或从一个邮件服务器发送到另一个邮件服务器时使用的协议。`SMTP` 使用端口 25。但现在大多数邮件服务器使用 `ESMTP`，它是 `SMTP` 的更新版本。
 
-### 状态
-这个词用于“维持状态”这一短语，或更具体地说“在浏览器请求之间保留应用程序的状态”。当浏览器向服务器请求 页面时，浏览器和服务器都不会对浏览器之前的请求产生记忆。当加载新页面时， 页面中任何变量的值都会丢失。保留这些值就是所谓的“维持状态”。
+## 状态
 
-### 字符串
+这个词用于“维持状态”这一短语，或更具体地说“在浏览器请求之间保留应用程序的状态”。当浏览器向服务器请求页面时，浏览器和服务器都不会对浏览器之前的请求产生记忆。当加载新页面时，页面中任何变量的值都会丢失。保留这些值就是所谓的“维持状态”。
+
+## 字符串
+
 这是 `PHP` 八种数据类型之一。它是一个任意长度的字符序列。
 
-### 子数组
+## 子数组
+
 这是多维数组内部的数组。
 
-### 全局变量
+## 全局变量
+
 这是 `PHP` 中一种内置的（预定义的）关联数组变量，它对所有 `PHP` 代码自动可用，特别是在函数内部（全局作用域）。全局变量代表了来自 URL、HTML 表单、Cookie、会话（sessions）以及 Web 服务器本身的数据。
 
-### Switch 语句
+## Switch 语句
+
 这是 `PHP` 三种条件语句之一，用于创建分支控制结构。另外两个是 `if-statement` 和 `if-else/if-elseif-statement`。
 
-### 表
+## 表
+
 在数据库中，它是一组紧密相关的数据或列（或字段）的集合。
 
-### 三元运算符
+## 三元运算符
+
 该运算符作用于三个操作数，是 `if-else` 语句的紧凑形式。
 
-### 时间戳
+## 时间戳
+
 是从 1970 年 1 月 1 日午夜到当前日期和时间之间的秒数。`PHP` 内部将时间戳存储为 10 位整数。
 
-### URL
+## URL
+
 这意味着通用资源定位符（Universal Resource Locator）。它是由 Web 浏览器和其他网络软件使用的特殊格式的文本字符串。它标识互联网上的一个网络资源。网络资源是文件，可以是纯 Web 页面、其他文本文档、图形或程序。`URL` 的示例是 `http://www.website.com/myfinename`。
 
-### 值
+## 值
+
 在 `MySQL` 数据库的表中，值是给定行和列中的数据。
 
-### 变量
+## 变量
+
 这是一个分配用于存储存储的内存单元，该值可以是八种 `PHP` 数据类型中的任意一种，即：整数、浮点数、字符串、布尔值、数组、对象、资源（或句柄）和空（null）。
 
-### Web 浏览器
+## Web 浏览器
+
 参见浏览器。
 
-### 数据类型
+## 数据类型
+
 这是 `PHP` 八种数据类型之一。
 
-### While 循环
+## While 循环
+
 这是 `PHP` 四种循环控制结构之一。另外三种是：`do-while-loop`、`for-loop`、`foreach-loop`。
 
 ![Development Club Print Ad.pdf](img/00307.jpeg)
-

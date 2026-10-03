@@ -1,3 +1,4 @@
+
 # 我写博客 10 年后的第一本书——探索 Java 访谈
 
 > 原文：<https://medium.com/javarevisited/my-first-book-after-10-years-of-blogging-grokking-java-interviews-fba4239d42cb?source=collection_archive---------2----------------------->

@@ -1,12 +1,13 @@
-# 招摇中的@ApiOperation vs @ApiResponse
+
+# 招摇中的`@ApiOperation` vs `@ApiResponse`
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/swagger-apioperation-vs-apiresponse>
 
-## 1.概观
+## 1. 概观
 
 在本教程中，我们将讨论 Swagger 的`@ApiOperation`和`@ApiResponse`注释之间的主要区别。
 
-## 2.带有 Swagger 的描述性文档
+## 2. 带有 Swagger 的描述性文档
 
 当我们创建 REST API 时，创建其适当的规范也很重要。此外，这样的规范应该是可读的、可理解的，并提供所有必要的信息。
 
@@ -36,9 +37,9 @@ class CustomerController {
 }
 ```
 
-## 3.`@ApiOperation`
+## 3. `@ApiOperation`
 
-**`@ApiOperation`注释用于描述单个操作。**操作是路径和 HTTP 方法的唯一组合。
+**`@ApiOperation`注释用于描述单个操作。** 操作是路径和 HTTP 方法的唯一组合。
 
 另外，使用`@ApiOperation`，我们可以描述一个成功的 REST API 调用的结果。换句话说，我们可以使用这个注释来指定一般的返回类型。
 
@@ -56,7 +57,7 @@ public ResponseEntity<CustomerResponse> getCustomer(@PathVariable("id") Long id)
 
 接下来，我们将浏览一下`@ApiOperation`中一些最常用的属性。
 
-### 3.1.`value`属性
+### 3.1. `value`属性
 
 必需的`value`属性包含操作的摘要字段。简单地说，它提供了操作的简短描述。然而，我们应该保持这个参数少于 120 个字符。
 
@@ -66,7 +67,7 @@ public ResponseEntity<CustomerResponse> getCustomer(@PathVariable("id") Long id)
 @ApiOperation(value = "Gets customer by ID")
 ```
 
-### 3.2.`notes`属性
+### 3.2. `notes`属性
 
 使用`notes`，我们可以提供关于操作的更多细节。例如，我们可以放置描述端点限制的文本:
 
@@ -74,7 +75,7 @@ public ResponseEntity<CustomerResponse> getCustomer(@PathVariable("id") Long id)
 @ApiOperation(value = "Gets customer by ID", notes = "Customer must exist")
 ```
 
-### 3.3.`response`属性
+### 3.3. `response`属性
 
 `response`属性包含操作的响应类型。此外，设置此属性将重写任何自动派生的数据类型。在`@ApiOperation`注释中定义的响应属性应该包含通用响应类型。
 
@@ -103,11 +104,11 @@ public ResponseEntity<CustomerResponse> getCustomer(@PathVariable("id") Long id)
 }
 ```
 
-### 3.4.`code`属性
+### 3.4. `code`属性
 
-code 属性表示响应代码的 HTTP 状态。 [HTTP 状态码](https://web.archive.org/web/20221010200543/https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)有几种定义。应该用其中一个。如果我们不提供，默认值将是 200。
+`code`属性表示响应代码的 HTTP 状态。 [HTTP 状态码](https://web.archive.org/web/20221010200543/https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)有几种定义。应该用其中一个。如果我们不提供，默认值将是 200。
 
-## 4.`@ApiResponse`
+## 4. `@ApiResponse`
 
 使用 HTTP 状态代码返回错误是一种常见的做法。我们可以使用`@ApiResponse`注释来描述操作的具体可能响应。
 
@@ -115,7 +116,7 @@ code 属性表示响应代码的 HTTP 状态。 [HTTP 状态码](https://web.arc
 
 此外，注释可以应用于方法级和类级。此外，只有在方法级还没有定义具有相同代码的`@ApiResponse`注释时，才会解析放在类级的注释。换句话说，方法注释优先于类注释。
 
-**我们应该使用 [`@ApiResponses`](/web/20221010200543/https://www.baeldung.com/java-swagger-set-list-response) 注释中的`@ApiResponse`注释，不管我们有一个还是多个响应。**如果我们直接使用这个注释，它不会被 Swagger 解析。
+**我们应该使用 [`@ApiResponses`](/web/20221010200543/https://www.baeldung.com/java-swagger-set-list-response) 注释中的`@ApiResponse`注释，不管我们有一个还是多个响应。** 如果我们直接使用这个注释，它不会被 Swagger 解析。
 
 让我们在方法上定义`@ApiResponses`和`@ApiResponse`注释:
 
@@ -148,19 +149,19 @@ public ResponseEntity<CustomerResponse> getCustomer(@PathVariable("id") Long id)
 
 现在，让我们浏览一下在`@ApiResponse`中使用的一些属性。
 
-### 4.1.`code`和`message`属性
+### 4.1. `code`和`message`属性
 
 `code`和`message`属性都是`@ApiResponse`注释中的必需参数。
 
-与`@ApiOperation`注释中的 code 属性一样，它应该包含响应的 HTTP 状态代码。值得一提的是，我们不能用相同的代码属性定义多个`@ApiResponse`。
+与`@ApiOperation`注释中的 `code` 属性一样，它应该包含响应的 HTTP 状态代码。值得一提的是，我们不能用相同的 `code` 属性定义多个`@ApiResponse`。
 
-消息属性通常包含伴随响应的可读消息:
+`message`属性通常包含伴随响应的可读消息:
 
 ```java
 @ApiResponse(code = 400, message = "Invalid ID supplied")
 ```
 
-### 4.2.`response`属性
+### 4.2. `response`属性
 
 有时，一个端点使用不同的响应类型。例如，我们可以有一种类型的成功响应和另一种类型的错误响应。我们可以通过将响应类与响应代码相关联，使用可选的`response`属性来描述它们。
 
@@ -189,18 +190,19 @@ public ResponseEntity<CustomerResponse> getCustomer(@PathVariable("id") Long id)
 }
 ```
 
-## 5.`@ApiOperation`和`@ApiResponse`的区别
+## 5. `@ApiOperation`和`@ApiResponse`的区别
 
 总而言之，下表显示了`@ApiOperation`和`@ApiResponse`注释之间的主要区别:
 
-| @ApiOperation | @ApiResponse |
+| `@ApiOperation` | `@ApiResponse` |
+| --- | --- |
 | 用于描述操作 | 用于描述操作的可能响应 |
 | 用于成功响应 | 用于成功和错误响应 |
 | 只能在方法级别定义 | 可以在方法或类级别定义 |
 | 可以直接使用 | 只能在`@ApiResponses`注释中使用 |
-| 默认代码属性值为 200 | 没有默认的代码属性值 |
+| 默认 `code` 属性值为 200 | 没有默认的 `code` 属性值 |
 
-## 6.结论
+## 6. 结论
 
 在本文中，我们学习了`@ApiOperation`和`@ApiResponse`注释之间的区别。
 

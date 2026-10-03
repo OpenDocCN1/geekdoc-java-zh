@@ -1,3 +1,4 @@
+
 # Spring Boot——如何通过 SMTP 发送电子邮件
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-boot-how-to-send-email-via-smtp/>
@@ -6,7 +7,7 @@
 
 在本教程中，我们将向您展示如何在 Spring Boot 通过 SMTP 发送电子邮件。
 
-使用的技术:
+使用的技术：
 
 *   Spring Boot 2.1.2 .版本
 *   弹簧 5.1.4 释放
@@ -14,18 +15,18 @@
 *   maven3
 *   Java 8
 
-## 1.项目目录
+## 1. 项目目录
 
 ![project directory](img/cc9ef44bb29a3f12e23f2d3bbdffd827.png)
 
-## 2.专家
+## 2. 专家
 
 `spring-boot-starter-mail`声明，为了发送电子邮件，它将提取 JavaMail 依赖项。
 
-pom.xml
+`pom.xml`
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
@@ -79,13 +80,13 @@ pom.xml
 
         </plugins>
     </build>
-</project> 
+</project>
 ```
 
 显示项目依赖关系。
 
 ```java
- $ mvn dependency:tree
+$ mvn dependency:tree
 
 [INFO] org.springframework.boot:spring-boot-send-email:jar:1.0
 [INFO] +- org.springframework.boot:spring-boot-starter:jar:2.1.2.RELEASE:compile
@@ -110,17 +111,17 @@ pom.xml
 [INFO]    +- org.springframework:spring-context-support:jar:5.1.4.RELEASE:compile
 [INFO]    |  \- org.springframework:spring-beans:jar:5.1.4.RELEASE:compile
 [INFO]    \- com.sun.mail:javax.mail:jar:1.6.2:compile
-[INFO]       \- javax.activation:activation:jar:1.1:compile 
+[INFO]       \- javax.activation:activation:jar:1.1:compile
 ```
 
-## 3.Gmail SMTP
+## 3. Gmail SMTP
 
-本例使用 Gmail SMTP 服务器，通过 TLS(端口 587)和 SSL(端口 465)进行测试。阅读此 [Gmail SMTP](http://web.archive.org/web/20230101145141/https://support.google.com/mail/answer/7126229)
+本例使用 Gmail SMTP 服务器，通过 TLS（端口 587）和 SSL（端口 465）进行测试。阅读此 [Gmail SMTP](http://web.archive.org/web/20230101145141/https://support.google.com/mail/answer/7126229)
 
-application.properties
+`application.properties`
 
 ```java
- spring.mail.host=smtp.gmail.com
+spring.mail.host=smtp.gmail.com
 spring.mail.port=587
 spring.mail.username=username
 spring.mail.password=password
@@ -136,20 +137,21 @@ spring.mail.properties.mail.smtp.starttls.enable=true
 
 # SSL, post 465
 #spring.mail.properties.mail.smtp.socketFactory.port = 465
-#spring.mail.properties.mail.smtp.socketFactory.class = javax.net.ssl.SSLSocketFactory 
+#spring.mail.properties.mail.smtp.socketFactory.class = javax.net.ssl.SSLSocketFactory
 ```
 
-**Note**
-For Gmail SMTP, if your account is enabled the 2-Step verification, please create an “App Password”. Read more on this [JavaMail – Sending email via Gmail SMTP example](http://web.archive.org/web/20230101145141/https://www.mkyong.com/java/javamail-api-sending-email-via-gmail-smtp-example/)
+**注意**
 
-## 4.发送电子邮件
+对于 Gmail SMTP，如果您的账户启用了两步验证，请创建一个“应用密码”。阅读更多关于此 [JavaMail – 通过 Gmail SMTP 示例发送电子邮件](http://web.archive.org/web/20230101145141/https://www.mkyong.com/java/javamail-api-sending-email-via-gmail-smtp-example/)
 
-Spring 在[JavaMail](http://web.archive.org/web/20230101145141/https://javaee.github.io/javamail/)API 之上提供了一个`JavaMailSender`接口。
+## 4. 发送电子邮件
 
-4.1 发送普通文本邮件。
+Spring 在 [JavaMail](http://web.archive.org/web/20230101145141/https://javaee.github.io/javamail/) API 之上提供了一个 `JavaMailSender` 接口。
+
+### 4.1 发送普通文本邮件
 
 ```java
- import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 
 	@Autowired
@@ -165,13 +167,13 @@ import org.springframework.mail.javamail.JavaMailSender;
 
         javaMailSender.send(msg);
 
-    } 
+    }
 ```
 
-4.2 发送一封 HTML 邮件和一个文件附件。
+### 4.2 发送一封 HTML 邮件和一个文件附件
 
 ```java
- import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 
@@ -202,17 +204,19 @@ import javax.mail.internet.MimeMessage;
 
         javaMailSender.send(msg);
 
-    } 
+    }
 ```
 
-## 5.演示
+## 5. 演示
 
-5.1 启动 Spring Boot，它会发出一封邮件。
+### 5.1 启动 Spring Boot，它会发出一封邮件
 
-Application.java
+`Application.java`
+
+
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -290,7 +294,7 @@ public class Application implements CommandLineRunner {
         javaMailSender.send(msg);
 
     }
-} 
+}
 ```
 
 Terminal
@@ -305,23 +309,25 @@ Terminal
  :: Spring Boot ::        (v2.1.2.RELEASE)
 
 Sending Email...
-Done 
+Done
 ```
 
 ## 下载源代码
 
-$ git clone [https://github.com/mkyong/spring-boot.git](http://web.archive.org/web/20230101145141/https://github.com/mkyong/spring-boot.git)
+```bash
+$ git clone https://github.com/mkyong/spring-boot.git
 $ cd email
+```
 
-//更新 application.properties 中的 SMTP 信息
+更新`application.properties`中的 SMTP 信息。
 
-$ mvn 弹簧启动:运行
+```bash
+$ mvn spring-boot:run
+```
 
 ## 参考
 
-*   [春季邮件](http://web.archive.org/web/20230101145141/https://docs.spring.io/spring/docs/5.1.6.RELEASE/spring-framework-reference/integration.html#mail)
-*   [Spring Boot 发送邮件](http://web.archive.org/web/20230101145141/https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-email.html)
-*   [Java 邮件](http://web.archive.org/web/20230101145141/https://javaee.github.io/javamail/)
-*   [JavaMail–通过 Gmail SMTP 发送电子邮件示例](http://web.archive.org/web/20230101145141/https://www.mkyong.com/java/javamail-api-sending-email-via-gmail-smtp-example/)
-
-<input type="hidden" id="mkyong-current-postId" value="15037">
+* [春季邮件](http://web.archive.org/web/20230101145141/https://docs.spring.io/spring/docs/5.1.6.RELEASE/spring-framework-reference/integration.html#mail)
+* [Spring Boot 发送邮件](http://web.archive.org/web/20230101145141/https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-email.html)
+* [Java 邮件](http://web.archive.org/web/20230101145141/https://javaee.github.io/javamail/)
+* [JavaMail–通过 Gmail SMTP 发送电子邮件示例](http://web.archive.org/web/20230101145141/https://www.mkyong.com/java/javamail-api-sending-email-via-gmail-smtp-example/)

@@ -1,32 +1,33 @@
+
 # Java 中列表和集合之间的转换
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/convert-list-to-set-and-set-to-list>
 
-## 1。概述
+## 1. 概述
 
-在这个快速教程中，我们将看看**从普通 Java 开始，使用 Guava 和 [Apache Commons Collections](https://web.archive.org/web/20221211183031/https://commons.apache.org/proper/commons-collections/ "The Apache Common Collections lib") 库，最后使用 Java 10 在`List`和`Set,`** 之间的转换。
+在这个快速教程中，我们将看看**从普通 Java 开始，使用 `Guava` 和 [`Apache Commons Collections`](https://web.archive.org/web/20221211183031/https://commons.apache.org/proper/commons-collections/ "The Apache Common Collections lib") 库，最后使用 Java 10 在 `List` 和 `Set`** 之间的转换。
 
-本文是 Baeldung 网站上的[“Java—回到基础”系列文章](/web/20221211183031/https://www.baeldung.com/java-tutorial "The Java Guide on IO and Collections")的一部分。
+本文是 Baeldung 网站上的 [`Java—回到基础`](/web/20221211183031/https://www.baeldung.com/java-tutorial "The Java Guide on IO and Collections") 系列文章的一部分。
 
-## 延伸阅读:
+## 延伸阅读
 
-## [如何用 Java 找到列表中的元素](/web/20221211183031/https://www.baeldung.com/find-list-element-java)
+### 如何用 Java 找到列表中的元素
 
-Have a look at some quick ways to find an element in a list in Java[Read more](/web/20221211183031/https://www.baeldung.com/find-list-element-java) →
+查看一些在 Java 中快速查找列表元素的快捷方法。[阅读更多](/web/20221211183031/https://www.baeldung.com/find-list-element-java) →
 
-## [在 Java 中混洗收藏](/web/20221211183031/https://www.baeldung.com/java-shuffle-collection)
+### 在 Java 中混洗收藏
 
-Learn how to shuffle various collections in Java.[Read more](/web/20221211183031/https://www.baeldung.com/java-shuffle-collection) →
+了解如何在 Java 中混洗各种集合。[阅读更多](/web/20221211183031/https://www.baeldung.com/java-shuffle-collection) →
 
-## [在 Java 中检查两个列表是否相等](/web/20221211183031/https://www.baeldung.com/java-test-a-list-for-ordinality-and-equality)
+### 在 Java 中检查两个列表是否相等
 
-A short article focused on the common problem of testing if two List instances contain the same elements in exactly the same order.[Read more](/web/20221211183031/https://www.baeldung.com/java-test-a-list-for-ordinality-and-equality) →
+一篇关于测试两个 `List` 实例是否包含完全相同顺序的相同元素的常见问题的短文。[阅读更多](/web/20221211183031/https://www.baeldung.com/java-test-a-list-for-ordinality-and-equality) →
 
-## 2。将`List`转换为`Set`
+## 2. 将 `List` 转换为 `Set`
 
-### 2.1。用普通 Java
+### 2.1 用普通 Java
 
-让我们从使用 Java 将 **a `List`转换成`Set`开始:**
+让我们从使用 Java 将 **`List` 转换成 `Set`** 开始：
 
 ```java
 public void givenUsingCoreJava_whenListConvertedToSet_thenCorrect() {
@@ -37,9 +38,9 @@ public void givenUsingCoreJava_whenListConvertedToSet_thenCorrect() {
 
 正如我们所看到的，转换过程是类型安全和简单的，因为每个集合的构造函数都接受另一个集合作为源。
 
-### 2.2。有番石榴
+### 2.2 用 Guava
 
-让我们用番石榴做同样的转换:
+让我们用 `Guava` 做同样的转换：
 
 ```java
 public void givenUsingGuava_whenListConvertedToSet_thenCorrect() {
@@ -48,9 +49,9 @@ public void givenUsingGuava_whenListConvertedToSet_thenCorrect() {
 }
 ```
 
-### 2.3。使用 Apache Commons 集合
+### 2.3 使用 Apache Commons 集合
 
-接下来让我们使用 Commons Collections API 在一个`List`和一个`Set`之间进行转换:
+接下来让我们使用 `Commons Collections` API 在一个 `List` 和一个 `Set` 之间进行转换：
 
 ```java
 public void givenUsingCommonsCollections_whenListConvertedToSet_thenCorrect() {
@@ -60,9 +61,9 @@ public void givenUsingCommonsCollections_whenListConvertedToSet_thenCorrect() {
 }
 ```
 
-### 2.4.使用 Java 10
+### 2.4 使用 Java 10
 
-一个额外的选择是使用 Java 10 中引入的 [`Set.copyOf`](https://web.archive.org/web/20221211183031/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Set.html#copyOf(java.util.Collection)) 静态工厂方法:
+一个额外的选择是使用 Java 10 中引入的 [`Set.copyOf`](https://web.archive.org/web/20221211183031/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Set.html#copyOf(java.util.Collection)) 静态工厂方法：
 
 ```java
 public void givenUsingJava10_whenListConvertedToSet_thenCorrect() {
@@ -71,13 +72,13 @@ public void givenUsingJava10_whenListConvertedToSet_thenCorrect() {
 }
 ```
 
-注意，这样创建的`Set`是[不可修改的](https://web.archive.org/web/20221211183031/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Set.html#unmodifiable)。
+注意，这样创建的 `Set` 是[不可修改的](https://web.archive.org/web/20221211183031/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Set.html#unmodifiable)。
 
-## 3。将`Set`转换为`List`
+## 3. 将 `Set` 转换为 `List`
 
-### 3.1。用普通 Java
+### 3.1 用普通 Java
 
-现在让我们做反向转换，使用 Java 将**从`Set`转换为`List,` :**
+现在让我们做反向转换，使用 Java 将 **`Set` 转换为 `List`**：
 
 ```java
 public void givenUsingCoreJava_whenSetConvertedToList_thenCorrect() {
@@ -86,9 +87,9 @@ public void givenUsingCoreJava_whenSetConvertedToList_thenCorrect() {
 }
 ```
 
-### 3.2。有番石榴
+### 3.2 用 Guava
 
-我们可以用番石榴溶液做同样的事情:
+我们可以用 `Guava` 的解决方案做同样的事情：
 
 ```java
 public void givenUsingGuava_whenSetConvertedToList_thenCorrect() {
@@ -97,11 +98,11 @@ public void givenUsingGuava_whenSetConvertedToList_thenCorrect() {
 } 
 ```
 
-这与 java 方法非常相似，只是重复的代码少一些。
+这与 Java 方法非常相似，只是重复的代码少一些。
 
-### 3.3。使用 Apache Commons 集合
+### 3.3 使用 Apache Commons 集合
 
-现在让我们看看在`Set` 和`List`之间转换的 Commons Collections 解决方案:
+现在让我们看看在 `Set` 和 `List` 之间转换的 `Commons Collections` 解决方案：
 
 ```java
 public void givenUsingCommonsCollections_whenSetConvertedToList_thenCorrect() {
@@ -111,9 +112,9 @@ public void givenUsingCommonsCollections_whenSetConvertedToList_thenCorrect() {
 }
 ```
 
-### 3.4.使用 Java 10
+### 3.4 使用 Java 10
 
-最后，我们可以使用 Java 10 中引入的 [`List.copyOf`](https://web.archive.org/web/20221211183031/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#copyOf(java.util.Collection)) :
+最后，我们可以使用 Java 10 中引入的 [`List.copyOf`](https://web.archive.org/web/20221211183031/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#copyOf(java.util.Collection))：
 
 ```java
 public void givenUsingJava10_whenSetConvertedToList_thenCorrect() {
@@ -122,8 +123,8 @@ public void givenUsingJava10_whenSetConvertedToList_thenCorrect() {
 }
 ```
 
-我们需要记住，结果`List`是[不可修改的](https://web.archive.org/web/20221211183031/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#unmodifiable)。
+我们需要记住，结果 `List` 是[不可修改的](https://web.archive.org/web/20221211183031/https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#unmodifiable)。
 
-## 4。结论
+## 4. 结论
 
-所有这些例子和代码片段的实现可以在 GitHub 上找到。 这是一个基于 Maven 的项目，所以应该很容易导入和运行。
+所有这些例子和代码片段的实现可以在 GitHub 上找到。 这是一个基于 `Maven` 的项目，所以应该很容易导入和运行。

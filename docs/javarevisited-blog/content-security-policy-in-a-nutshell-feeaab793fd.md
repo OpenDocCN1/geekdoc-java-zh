@@ -1,3 +1,4 @@
+
 # 简而言之，内容安全政策
 
 > 原文：<https://medium.com/javarevisited/content-security-policy-in-a-nutshell-feeaab793fd?source=collection_archive---------2----------------------->
@@ -14,7 +15,8 @@
 
 CSP 可以通过两种方法实现
 
-1.  使用 HTTP 响应头(`**Content-Security-Policy**`)
+1.  使用 HTTP 响应头(`Content-Security-Policy`)
+
 2.  在 html 文件中使用 meta 元素( )
 
 当使用上述方法之一将 CSP 规则添加到特定网页时，web 浏览器会检查这些策略并据此采取行动。
@@ -55,7 +57,7 @@ Content-Security-Policy: script-src 'unsafe-inline'This method allows all the in
 
 [样本 HTML 代码](https://gist.github.com/tnishada/a4fa36d381be945054ec8cee8b999c7d)
 
-在此 [HTML](/javarevisited/top-10-free-courses-to-learn-html-5-css-3-and-web-development-872d62d97a97) 代码中，CSP 被设置为**default-src‘self’，**因此浏览器不会加载任何外部资源或执行任何内联脚本。
+在此 [HTML](/javarevisited/top-10-free-courses-to-learn-html-5-css-3-and-web-development-872d62d97a97) 代码中，CSP 被设置为`default-src 'self'`，因此浏览器不会加载任何外部资源或执行任何内联脚本。
 
 在浏览器中打开上面的 HTML 代码。然后，您将在浏览器控制台中看到两条错误消息，说明它无法加载外部 jquery 文件，也无法执行内联脚本。
 

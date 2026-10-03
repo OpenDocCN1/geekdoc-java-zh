@@ -1,12 +1,12 @@
+
 # 启动 Policy Tool
 
 > 原文：[`docs.oracle.com/javase/tutorial/security/tour1/wstep1.html`](https://docs.oracle.com/javase/tutorial/security/tour1/wstep1.html)
 
 要启动 Policy Tool，只需在命令行中输入以下内容：
 
-```java
+```
 policytool
-
 ```
 
 这将打开 Policy Tool 窗口。

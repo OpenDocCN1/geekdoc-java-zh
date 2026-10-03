@@ -1,21 +1,22 @@
-# Jackson–使用地图和空值
+
+# Jackson：使用 Map 和空值
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/jackson-map-null-values-or-null-key>
 
-## 1。概述
+## 1. 概述
 
-在这篇简短的文章中，我们将看看使用 **Jackson 的一个更高级的用例——使用包含空值或空键**的`Maps`。
+在这篇简短的文章中，我们将看看使用 Jackson 的一个更高级的用例——使用包含空值或空键的 `Maps`。
 
-## 2。忽略地图中的空值
+## 2. 忽略 Map 中的空值
 
-Jackson 有一个简单但有用的方法来全局控制当映射被序列化时空值会发生什么:
+Jackson 有一个简单但有用的方法来全局控制当映射被序列化时空值会发生什么：
 
 ```java
 ObjectMapper mapper = new ObjectMapper();
 mapper.setSerializationInclusion(Include.NON_NULL);
 ```
 
-现在，通过此映射器序列化的映射对象中的任何空值都将被忽略:
+现在，通过此映射器序列化的映射对象中的任何空值都将被忽略：
 
 ```java
 @Test
@@ -37,9 +38,9 @@ public void givenIgnoringNullValuesInMap_whenWritingMapObjectWithNullValue_thenI
 }
 ```
 
-## 3。用空键序列化映射
+## 3. 用空键序列化 Map
 
-默认情况下， **Jackson 不允许序列化带有空键**的地图。如果您尝试写出这样的地图，您将会得到以下异常:
+默认情况下，Jackson 不允许序列化带有空键的 Map。如果您尝试写出这样的 Map，您将会得到以下异常：
 
 ```java
 c.f.j.c.JsonGenerationException: 
@@ -47,7 +48,7 @@ c.f.j.c.JsonGenerationException:
     at c.f.j.d.s.i.FailingSerializer.serialize(FailingSerializer.java:36)
 ```
 
-然而，这个库足够灵活，您可以定义一个定制的空键序列化器并覆盖默认行为:
+然而，这个库足够灵活，您可以定义一个定制的空键序列化器并覆盖默认行为：
 
 ```java
 class MyDtoNullKeySerializer extends StdSerializer<Object> {
@@ -67,7 +68,7 @@ class MyDtoNullKeySerializer extends StdSerializer<Object> {
 }
 ```
 
-现在，带有空键的映射就可以正常工作了——空键将被写成一个空字符串:
+现在，带有空键的 Map 就可以正常工作了——空键将被写成一个空字符串：
 
 ```java
 @Test
@@ -89,14 +90,14 @@ throws JsonProcessingException {
 }
 ```
 
-## 4。忽略空字段
+## 4. 忽略空字段
 
-除了地图之外，Jackson 还提供了很多配置和灵活性来忽略/处理一般的`null`字段。你可以看看这个教程，看看它到底是如何工作的。
+除了 Map 之外，Jackson 还提供了很多配置和灵活性来忽略/处理一般的 `null` 字段。你可以看看这个教程，看看它到底是如何工作的。
 
-## 5。结论
+## 5. 结论
 
 序列化 Map 对象非常常见，我们需要一个能够很好地处理序列化过程细微差别的库。Jackson 提供了一些方便的定制选项来帮助您很好地形成这个序列化过程的输出。
 
-它还为[提供了许多更一般意义上的使用集合](/web/20220127172631/https://www.baeldung.com/jackson-collection-array)的可靠方法。
+它还为提供了许多更一般意义上的使用集合的可靠方法。
 
-所有这些示例和代码片段**的实现可以在 GitHub** 上的[中找到——这是一个基于 Maven 的项目，所以它应该很容易导入和运行。](https://web.archive.org/web/20220127172631/https://github.com/eugenp/tutorials/tree/master/jackson-modules/jackson-conversions#readme "Github Project covering all Jackson examples")
+所有这些示例和代码片段的实现可以在 GitHub 上找到——这是一个基于 Maven 的项目，所以它应该很容易导入和运行。

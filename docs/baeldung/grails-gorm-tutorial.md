@@ -1,14 +1,15 @@
+
 # Grails 3 和 GORM 简介
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/grails-gorm-tutorial>
 
-## 1。概述
+## 1. 概述
 
 这是对 Grails 3 和 GORM 的快速介绍。
 
 当然，我们将使用 Groovy，并且——不言而喻——框架也将 Hibernate 用于 ORM，Spring 框架用于依赖注入，SiteMash 用于布局和主题，等等。
 
-## 2。数据源配置
+## 2. 数据源配置
 
 我们可以在不指定任何显式数据源配置的情况下开始——默认情况下，Grails 将 HSQLDB 数据库用于开发和测试环境。
 
@@ -25,7 +26,7 @@ environments:
 
 同样，我们可以在这里创建多个环境，如果需要，可以在`development`旁边创建。
 
-## 3。域名
+## 3. 域名
 
 Grails 能够根据数据库配置中的`dbCreate`属性为我们的域类创建数据库结构。
 
@@ -45,7 +46,7 @@ Class User {
 }
 ```
 
-注意我们是如何在模型中指定我们的**验证约束的，这使得事情变得漂亮、干净，并且没有注释。**
+注意我们是如何在模型中指定我们的**验证约束**的，这使得事情变得漂亮、干净，并且没有注释。
 
 当实体被持久化时，Grails 将自动检查这些约束，如果这些约束中的任何一个被破坏，框架将抛出适当的验证异常。
 
@@ -55,7 +56,7 @@ Class User {
 static mapping = { sort "userName" }
 ```
 
-现在，如果我们调用`User.list()` ，我们将得到按照`username` 排序的结果**。**
+现在，如果我们调用`User.list()`，我们将得到按照`username`排序的结果**。**
 
 我们当然可以通过将 sort 传递给 list API 来获得相同的结果:
 
@@ -63,12 +64,14 @@ static mapping = { sort "userName" }
 User.list(sort: "userName")
 ```
 
-## 4。积垢操作
+## 4. 积垢操作
 
 当我们看 API 操作时，**脚手架**在开始时扮演了一个非常有趣的角色；它允许您为域类生成基本的 CRUD API，包括:
 
 *   必要的观点
+
 *   标准 CRUD 操作的控制器动作
+
 *   两种类型:动态和静态
 
 下面是动态脚手架的工作原理:
@@ -83,9 +86,11 @@ class UserController {
 
 静态脚手架示例:
 
-*   要创建带有脚手架的视图，请使用:"`grails generate-views User`"
-*   要使用脚手架创建控制器和视图，请使用:"`grails generate-controller User`"
-*   要在一个命令中创建所有内容，请使用:"`grails generate-all User`"
+*   要创建带有脚手架的视图，请使用:`grails generate-views User`
+
+*   要使用脚手架创建控制器和视图，请使用:`grails generate-controller User`
+
+*   要在一个命令中创建所有内容，请使用:`grails generate-all User`
 
 这些命令将为特定的域对象自动生成必要的管道。
 
@@ -94,12 +99,11 @@ class UserController {
 为了**创建新的“用户”记录**:
 
 ```java
-def user = new User(username: "test", password: "test123", email: "[[email protected]](/web/20220122061328/https://www.baeldung.com/cdn-cgi/l/email-protection)", age: 14)
+def user = new User(username: "test", password: "test123", email: "[[email protected]](/web/20220122061328/https://www.baeldung.com/cdn-cgi/l/email-protection)", age: 14)
 user.save()
 ```
 
 **取单条记录**:
-
 
 ```java
 def user = User.get(1) 
@@ -111,7 +115,7 @@ def user = User.get(1)
 def user = User.read(1)
 ```
 
-更新现有记录 :
+更新现有记录:
 
 ```java
 def user = User.get(1)
@@ -127,9 +131,9 @@ def user = User.get(1)
 user.delete()
 ```
 
-## 5。GORM 查询
+## 5. GORM 查询
 
-### 5.1。`find`
+### 5.1. `find`
 
 让我们从`find` API 开始:
 
@@ -149,7 +153,7 @@ def user = User.find("from User as u where u.username?", ['test'])
 def user = User.find("from User as u where u.username=?", [username: 'test'])
 ```
 
-### 5.2。`findBy`
+### 5.2. `findBy`
 
 Grails 提供了一个动态查找工具，它使用域属性在运行时执行查询并返回第一个匹配的记录:
 
@@ -162,7 +166,7 @@ user = User.findByUsernameAndAgeNotEquals("test", "100")
 
 你可以在这里找到更多表情[。](https://web.archive.org/web/20220122061328/https://grails.github.io/grails-doc/3.0.x/guide/GORM.html#finders)
 
-### 5.3。标准
+### 5.3. 标准
 
 我们还可以使用一些灵活的标准来检索数据:
 
@@ -179,9 +183,9 @@ def results = user.list {
 }
 ```
 
-这里有一个简单的注意事项——当使用标准查询时，使用“{ }”而不是“()”。
+这里有一个简单的注意事项——当使用标准查询时，使用`{ }`而不是`( )`。
 
-### 5.4。执行查询/更新
+### 5.4. 执行查询/更新
 
 GORM 还支持 HQL 查询语法——对于读操作:
 
@@ -196,6 +200,6 @@ def user = User.executeQuery(
 def user = User.executeUpdate("delete User u where u.username =?", ['test'])
 ```
 
-## 6。结论
+## 6. 结论
 
 这是对 Grails 和 GORM 的一个非常快速的介绍——用作框架入门指南。

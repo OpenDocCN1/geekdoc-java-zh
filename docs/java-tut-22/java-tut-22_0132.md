@@ -1,3 +1,4 @@
+
 # 泛型类型的擦除
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/generics/genTypes.html`](https://docs.oracle.com/javase/tutorial/java/generics/genTypes.html)
@@ -20,7 +21,6 @@ public class Node<T> {
     public T getData() { return data; }
     // ...
 }
-
 ```
 
 因为类型参数`T`是无界的，Java 编译器将其替换为`Object`：
@@ -39,7 +39,6 @@ public class Node {
     public Object getData() { return data; }
     // ...
 }
-
 ```
 
 在下面的示例中，泛型`Node`类使用了有界类型参数：
@@ -58,7 +57,6 @@ public class Node<T extends Comparable<T>> {
     public T getData() { return data; }
     // ...
 }
-
 ```
 
 Java 编译器将有界类型参数`T`替换为第一个边界类`Comparable`：
@@ -77,5 +75,4 @@ public class Node {
     public Comparable getData() { return data; }
     // ...
 }
-
 ```

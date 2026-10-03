@@ -1,3 +1,4 @@
+
 # Python 与 Java 的对比——2020 年谁是佼佼者？
 
 > 原文：<https://medium.com/javarevisited/python-vs-java-comparison-who-is-the-better-of-the-best-in-2020-19d55624b850?source=collection_archive---------1----------------------->
@@ -18,72 +19,72 @@
 
 困扰用户的问题是——“**优中选优？**”
 
-# 计算机编程语言
+## 计算机编程语言
 
 > “编写 Python 代码的乐趣应该在于看到短小、简洁、易读的类，这些类用少量清晰的代码表达了大量的动作，而不是大量让读者厌烦得要死的琐碎代码。”—吉多·范·罗苏姆
 
-*   一种解释型高级通用编程语言
-*   一种清晰、有效和强大的高级语言，具有自动内存管理功能
-*   由吉多·范·罗苏姆于 1991 年创建，作为 ABC 语言的继承者
-*   由 Python 软件基金会(PSF)开发，这是一个非盈利组织，拥有 Python 背后的权利
-*   最新版本是 2019 年 10 月 19 日的 2.7.17
+- 一种解释型高级通用编程语言
+- 一种清晰、有效和强大的高级语言，具有自动内存管理功能
+- 由吉多·范·罗苏姆于 1991 年创建，作为 ABC 语言的继承者
+- 由 Python 软件基金会(PSF)开发，这是一个非盈利组织，拥有 Python 背后的权利
+- 最新版本是 2019 年 10 月 19 日的 2.7.17
 
 这里有一些 2020 年学习 Python 的有用资源
 
-</better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec>  
+</better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec>
 
-# Java 语言(一种计算机语言，尤用于创建网站)
+## Java 语言(一种计算机语言，尤用于创建网站)
 
 > “Java:写一次就跑！”-布鲁斯
 
-*   一种基于类和面向对象的通用编程语言
-*   动态链接，允许下载和运行新代码，但不能动态键入
-*   承诺'**写一次，随处跑** ' ( **WORA** )的概念
-*   由詹姆斯·高斯林设计，由太阳微系统公司于 1995 年开发
-*   自 2009 年起归甲骨文公司所有
-*   最新版本是 2019 年 9 月 17 日发布的 Java SE 13
+- 一种基于类和面向对象的通用编程语言
+- 动态链接，允许下载和运行新代码，但不能动态键入
+- 承诺'**写一次，随处跑** ' ( **WORA** )的概念
+- 由詹姆斯·高斯林设计，由太阳微系统公司于 1995 年开发
+- 自 2009 年起归甲骨文公司所有
+- 最新版本是 2019 年 9 月 17 日发布的 Java SE 13
 
 而且，如果你想学 Java，这里有一些 2020 年学 Java 的免费资源
 
-</javarevisited/10-free-courses-to-learn-java-in-2019-22d1f33a3915>  
+</javarevisited/10-free-courses-to-learn-java-in-2019-22d1f33a3915>
 
-# Python 与 Java:相似之处
+## Python 与 Java:相似之处
 
 这两种编程语言有许多共同之处，但它们也显示出明显的差异。
 
 以下是它们的一些共同特征:
 
-*   它们有强大的跨平台支持
-*   他们有广泛的标准库
-*   他们都把几乎所有的东西作为对象来处理
-*   两者都编译成字节码并在虚拟机中运行
-*   两者都是阿尔戈尔家族的成员
+- 它们有强大的跨平台支持
+- 他们有广泛的标准库
+- 他们都把几乎所有的东西作为对象来处理
+- 两者都编译成字节码并在虚拟机中运行
+- 两者都是阿尔戈尔家族的成员
 
-# Python 与 Java:基于几个重要参数的详细比较
+## Python 与 Java:基于几个重要参数的详细比较
 
 [![](img/85bcb8d83a87b3675cb611338d5e8e1a.png)](https://javarevisited.blogspot.com/2018/06/java-vs-python-which-programming-language-to-learn-first.html)
 
-## 什么时候选择 Python？
+### 什么时候选择 Python？
 
 **开发时选择 Python**
 
-*   比赛
-*   ML 应用程序
-*   Web 应用和框架
-*   原型
-*   平面设计应用
-*   操作系统（Operating System）
-*   计算应用
+- 比赛
+- ML 应用程序
+- Web 应用和框架
+- 原型
+- 平面设计应用
+- 操作系统（Operating System）
+- 计算应用
 
-## 什么时候选择 Java？
+### 什么时候选择 Java？
 
-**开发的时候选择 Java】**
+**开发的时候选择 Java**
 
-*   桌面应用
-*   嵌入式应用
-*   数据处理应用程序
-*   移动和网络应用
-*   企业级解决方案
+- 桌面应用
+- 嵌入式应用
+- 数据处理应用程序
+- 移动和网络应用
+- 企业级解决方案
 
 ## 随着比较在 2020 年变得有趣
 
@@ -97,10 +98,12 @@
 
 **学习 Java 和 Python 的资源**
 
-*   [2020 年学习 Python 3 的 5 大课程](https://javarevisited.blogspot.com/2018/03/top-5-courses-to-learn-python-in-2018.html)
-*   [2020 年学习 Java 的十大课程](/javarevisited/top-5-java-online-courses-for-beginners-best-of-lot-1e1e240a758)
-*   [2020 年 Java 开发人员路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
-*   【Java 程序员在 2020 年应该学习的 10 件事
-*   [2020 年 10 门免费 Python 课程](https://javarevisited.blogspot.com/2018/12/10-free-python-courses-for-programmers.html)
+- [2020 年学习 Python 3 的 5 大课程](https://javarevisited.blogspot.com/2018/03/top-5-courses-to-learn-python-in-2018.html)
+- [2020 年学习 Java 的十大课程](/javarevisited/top-5-java-online-courses-for-beginners-best-of-lot-1e1e240a758)
+- [2020 年 Java 开发人员路线图](https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html)
+- 【Java 程序员在 2020 年应该学习的 10 件事
+- [2020 年 10 门免费 Python 课程](https://javarevisited.blogspot.com/2018/12/10-free-python-courses-for-programmers.html)
 
-<https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html#123>  </better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec> 
+<https://javarevisited.blogspot.com/2019/10/the-java-developer-roadmap.html#123>
+
+</better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec>

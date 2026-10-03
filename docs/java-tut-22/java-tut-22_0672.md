@@ -1,3 +1,4 @@
+
 # 绘制区域剪切
 
 > 原文：[`docs.oracle.com/javase/tutorial/2d/advanced/clipping.html`](https://docs.oracle.com/javase/tutorial/2d/advanced/clipping.html)
@@ -10,11 +11,7 @@
 
 <applet code="ClipImage" alt="applet animates clipping path" archive="examples/lib/ClipImageApplet.jar" width="300" height="300"><param name="permissions" value="sandbox"></applet>
 
-* * *
-
 **注意：** 如果看不到小程序运行，请至少安装[Java SE Development Kit (JDK) 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html)版本。
-
-* * *
 
 `ClipImage.java`包含此小程序的完整代码。小程序需要`clouds.jpg`图像文件。
 
@@ -28,7 +25,6 @@ ellipse.setFrame(x, y, ew, eh);
 g2.setClip(ellipse);
 rect.setRect(x+5, y+5, ew-10, eh-10);
 g2.clip(rect);
-
 ```
 
 ## 示例：Starry
@@ -49,8 +45,7 @@ transform = g2.getTransform();
 transform.translate(w/2-(r.width/2), h/2+(r.height/2));
 g2.transform(transform);
 g2.setColor(Color.blue);
-g2.draw(outline);   
-
+g2.draw(outline);
 ```
 
 接下来，使用从`getOutline`创建的`Shape`对象在图形上下文中设置一个剪切区域。将梵高的著名绘画作品`The Starry Night`的`starry.gif`图像绘制到从`Rectangle`对象的左下角开始的剪切区域中。
@@ -58,15 +53,10 @@ g2.draw(outline);
 ```java
 g2.setClip(outline);
 g2.drawImage(img, r.x, r.y, r.width, r.height, this);
-
 ```
 
 <applet code="Starry" alt="applet showing Starry Night painting in clipping area" archive="examples/lib/StarryApplet.jar" width="600" height="150"><param name="permissions" value="sandbox"></applet>
 
-* * *
-
 **注意：** 如果你看不到小程序在运行，你需要安装至少 [Java SE Development Kit (JDK) 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html) 版本。
-
-* * *
 
 `Starry.java` 包含了这个程序的完整代码。这个小程序需要 `Starry.gif` 图像文件。

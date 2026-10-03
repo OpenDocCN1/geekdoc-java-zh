@@ -1,23 +1,24 @@
+
 # Struts 2 文件上传示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts2/struts-2-file-upload-example/>
 
 Download It – [Struts2-File-Upload-Example.zip](http://web.archive.org/web/20190210101631/http://www.mkyong.com/wp-content/uploads/2010/06/Struts2-File-Upload-Example.zip)
 
-在 Struts 2 中， **< s:file >** 标签用于创建一个 HTML 文件上传组件，允许用户从本地磁盘选择文件并上传到服务器。在本教程中，您将创建一个带有文件上传组件的 JSP 页面，设置上传文件的最大大小和允许的内容类型，并显示上传文件的详细信息。
+在 Struts 2 中，`<s:file>` 标签用于创建一个 HTML 文件上传组件，允许用户从本地磁盘选择文件并上传到服务器。在本教程中，您将创建一个带有文件上传组件的 JSP 页面，设置上传文件的最大大小和允许的内容类型，并显示上传文件的详细信息。
 
-## 1.动作类
+## 1. 动作类
 
-Action 类用于文件上传，声明一个“file”变量来存储用户上传的文件，两个 String 变量来存储文件名和内容类型。“ **fileUpload 拦截器**”将通过 set“X”content type()和 set“X”FileName()自动注入上传的文件细节，确保方法名拼写正确。
+Action 类用于文件上传，声明一个 `file` 变量来存储用户上传的文件，两个 `String` 变量来存储文件名和内容类型。`fileUpload` 拦截器将通过 `setXContentType()` 和 `setXFileName()` 自动注入上传的文件细节，确保方法名拼写正确。
 
 *P.S X 是存储上传文件的变量。*
 
-The file upload function is depends on the “**fileUpload Interceptor**“, make sure it is included in the Action’s stack. The lucky is, the default stack is already includes the “**fileUpload Interceptor**“.
+文件上传功能依赖于 `fileUpload` 拦截器，请确保它包含在 Action 的栈中。幸运的是，默认栈已经包含了 `fileUpload` 拦截器。
 
 **FileUploadAction.java**
 
 ```java
- package com.mkyong.common.action;
+package com.mkyong.common.action;
 
 import java.io.File;
 
@@ -63,17 +64,17 @@ public class FileUploadAction extends ActionSupport{
 		return NONE;
 	}
 
-} 
+}
 ```
 
- ## 2.结果页面
+## 2. 结果页面
 
-使用 **< s:file >** 标签渲染一个文件上传组件，**将表单 enctype 类型设置为“multipart/form-data”**。
+使用 `<s:file>` 标签渲染一个文件上传组件，**将表单 `enctype` 类型设置为 `multipart/form-data`**。
 
 **fileupload.jsp**
 
 ```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
 <s:head />
@@ -92,13 +93,13 @@ method="POST" enctype="multipart/form-data">
 </s:form>
 
 </body>
-</html> 
+</html>
 ```
 
 **result.jsp**
 
 ```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 
 <body>
@@ -121,15 +122,15 @@ method="POST" enctype="multipart/form-data">
 </h2> 
 
 </body>
-</html> 
+</html>
 ```
 
-## 3.struts.xml
+## 3. struts.xml
 
 全部链接起来~
 
 ```java
- <?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
@@ -168,22 +169,24 @@ method="POST" enctype="multipart/form-data">
 
 	</action>
    </package>	
-</struts> 
+</struts>
 ```
 
 **文件大小限制**
-在本例中，您通过“ **fileUpload interceptor** 设置上传文件大小限制，该值以字节为单位计数。在这种情况下，上传文件的最大大小为 10kb。
 
-The default maximum file size of the upload file is 2MB
+在本例中，您通过 `fileUpload` 拦截器设置上传文件大小限制，该值以字节为单位计数。在这种情况下，上传文件的最大大小为 10kb。
+
+上传文件的默认最大大小为 2MB。
 
 **文件类型**
-您也可以通过**文件上传拦截器**设置允许的文件类型。在这种情况下，上传文件只接受" **text/plain** 内容类型。
 
-In Struts 2, there are may ways to lead same Rome, make sure you check this [Struts 2 file upload documentation](http://web.archive.org/web/20190210101631/http://struts.apache.org/2.0.14/docs/file-upload.html).
+您也可以通过 `fileUpload` 拦截器设置允许的文件类型。在这种情况下，上传文件只接受 `text/plain` 内容类型。
 
-## 4.演示
+在 Struts 2 中，有很多方法可以达到相同的目的，请务必查看 [Struts 2 文件上传文档](http://web.archive.org/web/20190210101631/http://struts.apache.org/2.0.14/docs/file-upload.html)。
 
-*http://localhost:8080/struts 2 example/file upload action . action*
+## 4. 演示
+
+`http://localhost:8080/struts2example/fileUploadAction.action`
 
 ![Struts 2 file upload example](img/75a522ae59541445ee2371ba63d474ce.png "struts2-file-upload-example-1")
 
@@ -191,25 +194,18 @@ In Struts 2, there are may ways to lead same Rome, make sure you check this [Str
 
 ![Struts 2 file upload error page](img/ed4c41718c11f59df37214ea23959d26.png "struts2-file-upload-example-2")
 
-上传一个名为“XWORK-LICENSE.txt”的文本文件，文件大小:5kb。
+上传一个名为 `XWORK-LICENSE.txt` 的文本文件，文件大小：5kb。
 
 ![Struts 2 file upload example](img/f557f4d6753c5ce4af8ede642065b441.png "struts2-file-upload-example-3")
 
-上传的文件将被视为临时文件，具有长的随机文件名，upload _ _ 376584 a7 _ 12981122379 _ _ 8000 _ 0000010 . tmp。请确保将此临时文件复制到其他地方。阅读 [FileUtils 文档](http://web.archive.org/web/20190210101631/http://commons.apache.org/io/api-1.4/org/apache/commons/io/FileUtils.html)轻松复制文件。
+上传的文件将被视为临时文件，具有长的随机文件名，如 `upload__376584a7_12981122379__8000_0000010.tmp`。请确保将此临时文件复制到其他地方。阅读 [FileUtils 文档](http://web.archive.org/web/20190210101631/http://commons.apache.org/io/api-1.4/org/apache/commons/io/FileUtils.html)轻松复制文件。
 
 ## 参考
 
-1.  [Struts 2 文件文档](http://web.archive.org/web/20190210101631/http://struts.apache.org/2.x/docs/file.html)
-2.  [http://struts.apache.org/2.0.14/docs/file-upload.html](http://web.archive.org/web/20190210101631/http://struts.apache.org/2.0.14/docs/file-upload.html)
-3.  [http://struts . Apache . org/2 . 0 . 14/docs/how-do-we-upload-files . html](http://web.archive.org/web/20190210101631/http://struts.apache.org/2.0.14/docs/how-do-we-upload-files.html)
-4.  [http://commons . Apache . org/io/API-1.4/org/Apache/commons/io/fileutils . html](http://web.archive.org/web/20190210101631/http://commons.apache.org/io/api-1.4/org/apache/commons/io/FileUtils.html)
-5.  [http://www.mkyong.com/struts/struts-file-upload-example/](http://web.archive.org/web/20190210101631/http://www.mkyong.com/struts/struts-file-upload-example/)
+1. [Struts 2 文件文档](http://web.archive.org/web/20190210101631/http://struts.apache.org/2.x/docs/file.html)
+2. [http://struts.apache.org/2.0.14/docs/file-upload.html](http://web.archive.org/web/20190210101631/http://struts.apache.org/2.0.14/docs/file-upload.html)
+3. [http://struts.apache.org/2.0.14/docs/how-do-we-upload-files.html](http://web.archive.org/web/20190210101631/http://struts.apache.org/2.0.14/docs/how-do-we-upload-files.html)
+4. [http://commons.apache.org/io/api-1.4/org/apache/commons/io/FileUtils.html](http://web.archive.org/web/20190210101631/http://commons.apache.org/io/api-1.4/org/apache/commons/io/FileUtils.html)
+5. [http://www.mkyong.com/struts/struts-file-upload-example/](http://web.archive.org/web/20190210101631/http://www.mkyong.com/struts/struts-file-upload-example/)
 
 [file upload](http://web.archive.org/web/20190210101631/http://www.mkyong.com/tag/file-upload/) [struts2](http://web.archive.org/web/20190210101631/http://www.mkyong.com/tag/struts2/)![](img/74eef25a50791f8350d03d474a022f7f.png) (function (i,d,s,o,m,r,c,l,w,q,y,h,g) { var e=d.getElementById(r);if(e===null){ var t = d.createElement(o); t.src = g; t.id = r; t.setAttribute(m, s);t.async = 1;var n=d.getElementsByTagName(o)[0];n.parentNode.insertBefore(t, n); var dt=new Date().getTime(); try{i[l][w+y](h,i[l][q+y](h)+'&amp;'+dt);}catch(er){i[h]=dt;} } else if(typeof i[c]!=='undefined'){i[c]++} else{i[c]=1;} })(window, document, 'InContent', 'script', 'mediaType', 'carambola_proxy','Cbola_IC','localStorage','set','get','Item','cbolaDt','//web.archive.org/web/20190210101631/http://route.carambo.la/inimage/getlayer?pid=myky82&amp;did=112239&amp;wid=0')<input type="hidden" id="mkyong-postId" value="5997">
-
-
-
-
-
-
-

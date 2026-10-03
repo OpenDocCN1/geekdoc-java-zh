@@ -1,3 +1,4 @@
+
 # 实战 Groovy: 关于 MOP 和迷你语言
 
 *Groovy 让元对象协议从实验室走进应用程序*
@@ -27,7 +28,7 @@
 ##### 清单 1\. MOP 得到调用的句柄
 
 ```java
- class MOPHandler {     
+class MOPHandler {     
 
   def invokeMethod(String method, Object params) {     
     println "MOPHandler was asked to invoke ${method}"
@@ -43,7 +44,7 @@
  def hndler = new MOPHandler()
  hndler.helloWorld()
  hndler.createUser("Joe", 18, new Date())
- hndler.name 
+ hndler.name
 ```
 
 继续，运行清单 1 中的代码，就会看到如清单 2 所示的输出。
@@ -51,14 +52,14 @@
 ##### 清单 2\. 您不相信我，是不是？
 
 ```java
- aglover@glove-ubutu:~/projects/groovy-mop$ groovy
+aglover@glove-ubutu:~/projects/groovy-mop$ groovy
   ./src/groovy/com/vanward/groovy/MOPHandler1.groovy
  MOPHandler was asked to invoke helloWorld
  MOPHandler was asked to invoke createUser
         with parameter Joe
         with parameter 18
         with parameter Sun Sep 04 10:32:22 EDT 2005
- MOPHandler was asked for property name 
+ MOPHandler was asked for property name
 ```
 
 是不是很不错？ MOP 就像一个安全网，捕捉传递错误的消息，但是这不是它最妙的功能。用它创建可以以 *一般的方式*智能地对传递进来的任何消息作出响应的智能对象，才是它的最大亮点。
@@ -113,7 +114,7 @@ DbUnit 是一项 JUnit 扩展，它在每一次运行测试之前，使数据库
 ##### 清单 3\. 字典应用程序的开始测试类
 
 ```java
- package test.com.vanward.groovy
+package test.com.vanward.groovy
  import com.vanward.groovy.SimpleDictionary
  import groovy.util.GroovyTestCase
  import java.io.File
@@ -153,41 +154,41 @@ DbUnit 是一项 JUnit 扩展，它在每一次运行测试之前，使数据库
                     "words", "words")             
        return new DatabaseConnection(jdbcConnection)
     }  
- } 
+ }
 ```
 
-在清单 3 中，我创建了类 shell，它作为在编写字典应用程序时的测试类。调用测试时，JUnit 会调用 `setUp()`，它又会调用 DbUnit 的 API。DbUnit 会将在文件 test/conf/words-seed.xml 中找到的数据插入到数据库中。文件 test/conf/words-seed.xml 的内容可见清单 4。
+在清单 3 中，我创建了类 shell，它作为在编写字典应用程序时的测试类。调用测试时，JUnit 会调用 `setUp()`，它又会调用 DbUnit 的 API。DbUnit 会将在文件 `test/conf/words-seed.xml` 中找到的数据插入到数据库中。文件 `test/conf/words-seed.xml` 的内容可见清单 4。
 
 ##### 清单 4\. 示例种子文件
 
 ```java
- <?xml version='1.0' encoding='UTF-8'?>
- <dataset>
- <word WORD_ID="1" SPELLING="pugnacious" PART_OF_SPEECH="Adjective"/>   
- <definition DEFINITION_ID="10"
-             DEFINITION="Combative in nature; belligerent."
-             WORD_ID="1" />
- <synonym SYNONYM_ID="20" WORD_ID="1" SPELLING="belligerent"/>
- <synonym SYNONYM_ID="21" WORD_ID="1" SPELLING="aggressive"/>  
- <word WORD_ID="2" SPELLING="glib" PART_OF_SPEECH="Adjective"/>
- <definition DEFINITION_ID="11"
-                DEFINITION="Performed with a natural, offhand ease"
-             WORD_ID="2" />             
- <definition DEFINITION_ID="12"
-            DEFINITION="Marked by ease and fluency of speech or
-            writing that often suggests or stems from insincerity,
-            superficiality, or deceitfulness"
-         WORD_ID="2" />              
- <synonym SYNONYM_ID="30" WORD_ID="2" SPELLING="artful"/>
- <synonym SYNONYM_ID="31" WORD_ID="2" SPELLING="suave"/>  
- <synonym SYNONYM_ID="32" WORD_ID="2" SPELLING="insincere"/>  
- <synonym SYNONYM_ID="33" WORD_ID="2" SPELLING="urbane"/>  
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+<word WORD_ID="1" SPELLING="pugnacious" PART_OF_SPEECH="Adjective"/>   
+<definition DEFINITION_ID="10"
+            DEFINITION="Combative in nature; belligerent."
+            WORD_ID="1" />
+<synonym SYNONYM_ID="20" WORD_ID="1" SPELLING="belligerent"/>
+<synonym SYNONYM_ID="21" WORD_ID="1" SPELLING="aggressive"/>  
+<word WORD_ID="2" SPELLING="glib" PART_OF_SPEECH="Adjective"/>
+<definition DEFINITION_ID="11"
+               DEFINITION="Performed with a natural, offhand ease"
+            WORD_ID="2" />             
+<definition DEFINITION_ID="12"
+           DEFINITION="Marked by ease and fluency of speech or
+           writing that often suggests or stems from insincerity,
+           superficiality, or deceitfulness"
+        WORD_ID="2" />              
+<synonym SYNONYM_ID="30" WORD_ID="2" SPELLING="artful"/>
+<synonym SYNONYM_ID="31" WORD_ID="2" SPELLING="suave"/>  
+<synonym SYNONYM_ID="32" WORD_ID="2" SPELLING="insincere"/>  
+<synonym SYNONYM_ID="33" WORD_ID="2" SPELLING="urbane"/>  
 
- <word WORD_ID="3" SPELLING="rowel" PART_OF_SPEECH="Verb"/>  
- <definition DEFINITION_ID="50"
-             DEFINITION="to vec, trouble"
-             WORD_ID="13" />
- </dataset> 
+<word WORD_ID="3" SPELLING="rowel" PART_OF_SPEECH="Verb"/>  
+<definition DEFINITION_ID="50"
+            DEFINITION="to vec, trouble"
+            WORD_ID="13" />
+</dataset>
 ```
 
 种子文件的 XML 元素（如清单 4 所示）匹配表名。元素的属性匹配对应的表列。
@@ -211,7 +212,7 @@ DbUnit 是一项 JUnit 扩展，它在每一次运行测试之前，使数据库
 ##### 清单 5\. 确定词性
 
 ```java
- private determinePartOfSpeech(question){
+private determinePartOfSpeech(question){
   def matcher = question =~ 'is(.*)(An|A)(Verb|Adjective|Adverb|Noun)'
   matcher.matches()
   def word = matcher.group(1)
@@ -219,7 +220,7 @@ DbUnit 是一项 JUnit 扩展，它在每一次运行测试之前，使数据库
   def row = sql.firstRow("select part_of_speech from word
        where spelling=?", [word])     
   return row[0] == partOfSpeech
- } 
+}
 ```
 
 清单 5 看起来很简单，但是我为它编写了几个测试用例，看看会是什么情况。
@@ -227,26 +228,28 @@ DbUnit 是一项 JUnit 扩展，它在每一次运行测试之前，使数据库
 ##### 清单 6\. 测试单词词性的确定
 
 ```java
- void testPartOfSpeechFalse() {
+void testPartOfSpeechFalse() {
   def val = dictionary.isPugnaciousAVerb()
   assertFalse("pugnacious is not a verb", val)
- }     
- void testPartOfSpeechTrue() {
+}     
+void testPartOfSpeechTrue() {
   def val = dictionary.isPugnaciousAnAdjective()
   assertTrue("pugnacious is an Adjective", val)
- } 
+}
 ```
 
-再看看清单 4 中的 XML。因为我用 DbUnit 让数据库在每次测试之前处于一种已知状态，因此可以假定单词 *pugnacious*是有效的，且其词性设置为 *Adjective*。在清单 6 中，我在 `DictionaryTest`中加入了两个简单的测试（请参阅 清单 3），以确保逻辑正确地工作。
 
-### 2\. 同义词
 
-查询同义词的语义模式如下：`synonymsOfBloviate`，其中所要查的单词（*Bloviate*）跟在 `synonymsOf`后面。正则表达式更简单：`(synonymsOf)(.*)`。找到所需要的单词后，逻辑就进行一个数据库查询，该查询会连接 `word`和 `synonym`表。返回的同义词加入到一个 `List`中并返回，如清单 7 所示。
+再看看清单 4 中的 XML。因为我用 DbUnit 让数据库在每次测试之前处于一种已知状态，因此可以假定单词 `pugnacious` 是有效的，且其词性设置为 `Adjective`。在清单 6 中，我在 `DictionaryTest` 中加入了两个简单的测试（请参阅清单 3），以确保逻辑正确地工作。
 
-##### 清单 7\. getSynonyms 实现
+### 2. 同义词
+
+查询同义词的语义模式如下：`synonymsOfBloviate`，其中所要查的单词（`Bloviate`）跟在 `synonymsOf` 后面。正则表达式更简单：`(synonymsOf)(.*)`。找到所需要的单词后，逻辑就进行一个数据库查询，该查询会连接 `word` 和 `synonym` 表。返回的同义词加入到一个 `List` 中并返回，如清单 7 所示。
+
+##### 清单 7. getSynonyms 实现
 
 ```java
- private getSynonyms(question){
+private getSynonyms(question){
   def matcher = question =~ '(synonymsOf)(.*)'
   matcher.matches()
   def word = matcher.group(2).toLowerCase()
@@ -257,70 +260,70 @@ DbUnit 是一项 JUnit 扩展，它在每一次运行测试之前，使数据库
           syns << arow.spelling
        }        
   return syns         
- } 
+}
 ```
 
-清单 8 中的测试验证了，定义了同义词的单词可以正确地返回同义词，而没有同义词的单词（*Rowel*）返回一个空 `List`。
+清单 8 中的测试验证了，定义了同义词的单词可以正确地返回同义词，而没有同义词的单词（`Rowel`）返回一个空 `List`。
 
-##### 清单 8\. 不要忘记测试这个方法！
+##### 清单 8. 不要忘记测试这个方法！
 
 ```java
- void testSynonymsForWord() {
+void testSynonymsForWord() {
   def val = dictionary.synonymsOfPugnacious()
   def expect = ["belligerent","aggressive"]
   assertEquals("should be: " + expect, expect, val)
- }
- void testNoSynonymsForWord() {
+}
+void testNoSynonymsForWord() {
   def val = dictionary.synonymsOfRowel()
   def expect = []
   assertEquals("should be: " + expect, expect, val)
- } 
+}
 ```
 
-### 3\. 删除单词
+### 3. 删除单词
 
-清单 9 中的删除逻辑是灵活的，因为我允许使用 `remove`或者 `delete`后面加单词的命令。例如，`removeGlib`和 `deleteGlib`都是有效的命令。因此正则表达式变成：`(remove|delete)(.*)`，而逻辑是一个 SQL `delete`。
+清单 9 中的删除逻辑是灵活的，因为我允许使用 `remove` 或者 `delete` 后面加单词的命令。例如，`removeGlib` 和 `deleteGlib` 都是有效的命令。因此正则表达式变成：`(remove|delete)(.*)`，而逻辑是一个 SQL `delete`。
 
-##### 清单 9\. 删除单词
+##### 清单 9. 删除单词
 
 ```java
- private removeWord(word){
+private removeWord(word){
   def matcher = word =~ '(remove|delete)(.*)'
   matcher.matches()
   def wordToRemove = matcher.group(2).toLowerCase()     
   sql.execute("delete from word where spelling=?" , [wordToRemove])     
- } 
+}
 ```
 
-当然，这种灵活意味着我必须为删除单词编写 *至少*两个测试用例，如清单 10 所示。要验证单词真的被删除了，我要获取它们的定义（更多信息请参阅 5\. 获取单词的定义）并确定没有返回任何东西。
+当然，这种灵活意味着我必须为删除单词编写*至少*两个测试用例，如清单 10 所示。要验证单词真的被删除了，我要获取它们的定义（更多信息请参阅 5. 获取单词的定义）并确定没有返回任何东西。
 
-##### 清单 10\. 测试这两种情况
+##### 清单 10. 测试这两种情况
 
 ```java
- void testDeleteWord() {
+void testDeleteWord() {
   dictionary.deleteGlib()
   def val =  dictionary.glib()
   def expect = []
   assertEquals("should be: " + expect, expect, val)
- }
- void testRemoveWord() {
+}
+void testRemoveWord() {
   dictionary.removePugnacious()
   def val =  dictionary.pugnacious()
   def expect = []
   assertEquals("should be: " + expect, expect, val)
- } 
+}
 ```
 
-### 4\. 创建单词
+### 4. 创建单词
 
-创建一个新单词的语义是一个不匹配任何查询模式并且包含一个参数清单的消息。例如，一个像 `echelon("Noun", ["a level within an organization"])`这样的消息就符合这种模式。单词是 *echelon*，第一个参数是词性，然后是包含定义的 `List`，还有可选的第三个参数，它可以是同义词的 `List`。
+创建一个新单词的语义是一个不匹配任何查询模式并且包含一个参数清单的消息。例如，一个像 `echelon("Noun", ["a level within an organization"])` 这样的消息就符合这种模式。单词是 `echelon`，第一个参数是词性，然后是包含定义的 `List`，还有可选的第三个参数，它可以是同义词的 `List`。
 
-如清单 11 所示，在数据库中创建一个新单词就是在正确的表（`word`和 `definition`）中插入这个单词及其定义，而且，如果有同义词 `List`的话，那么要把它们都要加入。
+如清单 11 所示，在数据库中创建一个新单词就是在正确的表（`word` 和 `definition`）中插入这个单词及其定义，而且，如果有同义词 `List` 的话，那么要把它们都要加入。
 
-##### 清单 11\. 创建一个单词
+##### 清单 11. 创建一个单词
 
 ```java
- private createWord(word, defsAndSyms){
+private createWord(word, defsAndSyms){
   def wordId = id++
   def definitionId = wordId + 10
   sql.execute("insert into word
@@ -331,7 +334,7 @@ DbUnit 是一项 JUnit 扩展，它在每一次运行测试之前，使数据库
          (definition_id, definition, word_id) " +
       "values (?, ?, ?)" , [definitionId, definition, wordId])
     }
-  //has a list of synonyms has been passed in
+  //has a list of synonyms been passed in
   if(defsAndSyms.length > 2){
     def synonyms = defsAndSyms[2]
     synonyms.each{ syn ->
@@ -340,40 +343,40 @@ DbUnit 是一项 JUnit 扩展，它在每一次运行测试之前，使数据库
         [id++, wordId, syn])
       }
     }
- } 
+}
 ```
 
 在清单 11 中，主键逻辑过于简单了，不过我可以用几个测试证明我的信心。
 
-##### 清单 12\. 创建单词逻辑的测试用例
+##### 清单 12. 创建单词逻辑的测试用例
 
 ```java
- void testCreateWord() {     
+void testCreateWord() {     
   dictionary.bloviate("Verb",
        ["To discourse at length in a pompous or boastful manner"],
     ["orate", "gabble", "lecture"])
   def val = dictionary.bloviate()
   def expect = "To discourse at length in a pompous or boastful manner"
   assertEquals("should be: " + expect, expect, val[0])
- }
- void testCreateWordNoSynonyms() {     
+}
+void testCreateWordNoSynonyms() {     
   dictionary.echelon("Noun", ["a level within an organization"])
   def val = dictionary.echelon()
   def expect = "a level within an organization"
   assertEquals("should be: " + expect, expect, val[0])
- } 
+}
 ```
 
-与通常一样，我在清单 12 中编写了几个测试用例以验证它按预想的那样工作。创建单词后，我查询这个单词的 `dictionary`实例以确认它被加入了数据库。
+与通常一样，我在清单 12 中编写了几个测试用例以验证它按预想的那样工作。创建单词后，我查询这个单词的 `dictionary` 实例以确认它被加入了数据库。
 
-### 5\. 获取单词的定义
+### 5. 获取单词的定义
 
-任何传递给字典应用程序的、不匹配前面任何查询类型（词性和同义词）、并且不包含任何参数的消息都被认为是定义查询。例如，一个像 `.glib`或者 `.glib()`的消息会返回 *glib*的定义。
+任何传递给字典应用程序的、不匹配前面任何查询类型（词性和同义词）、并且不包含任何参数的消息都被认为是定义查询。例如，一个像 `.glib` 或者 `.glib()` 的消息会返回 `glib` 的定义。
 
-##### 清单 13\. 查单词的定义并不困难！
+##### 清单 13. 查单词的定义并不困难！
 
 ```java
- private getDefinitions(word){     
+private getDefinitions(word){     
   def definitions = []                      
   sql.eachRow("select definition.definition from definition, word " +
     "where definition.word_Id = word.word_id and " +
@@ -381,24 +384,24 @@ DbUnit 是一项 JUnit 扩展，它在每一次运行测试之前，使数据库
       definitions << arow.definition
     }        
   return definitions     
- } 
+}
 ```
 
-因为我同时允许让方法调用和属性调用作为定义查询，因此在清单 14 中必须编写至少两个测试。就像在清单 6 中一样，可以假定 *pugnacious*已经在数据库中了。DbUnit 是不是很方便？
+因为我同时允许让方法调用和属性调用作为定义查询，因此在清单 14 中必须编写至少两个测试。就像在清单 6 中一样，可以假定 `pugnacious` 已经在数据库中了。DbUnit 是不是很方便？
 
-##### 清单 14\. 测试两种情况 —— 方法调用和属性
+##### 清单 14. 测试两种情况 —— 方法调用和属性
 
 ```java
- void testFindWord() {
+void testFindWord() {
   def val = dictionary.pugnacious()
   def expect = "Combative in nature; belligerent."
   assertEquals("should be: " + expect, expect, val[0])
- }
- void testFindWordAsProperty() {
+}
+void testFindWordAsProperty() {
   def val = dictionary.pugnacious
   def expect = "Combative in nature; belligerent."
   assertEquals("should be: " + expect, expect, val[0])
- } 
+}
 ```
 
 这就是字典应用程序的语义。现在让我们更深入地分析应用程序背后的逻辑。
@@ -407,14 +410,14 @@ DbUnit 是一项 JUnit 扩展，它在每一次运行测试之前，使数据库
 
 ## MOP 逻辑
 
-字典应用程序的关键是 `invokeMethod`和 `getProperty`的实现。 我要在这些方法中做出智能的决定，即在向应用程序传递消息之后，应该如何继续。决定是通过一组条件语句而确定的，它们进行 `String`操作以确定消息的类型。
+字典应用程序的关键是 `invokeMethod` 和 `getProperty` 的实现。我要在这些方法中做出智能的决定，即在向应用程序传递消息之后，应该如何继续。决定是通过一组条件语句而确定的，它们进行 `String` 操作以确定消息的类型。
 
-清单 15 中 *惟一*麻烦的条件就是第一条，它要验证消息是一个定义查询而不是其他可能的组合，如 `is...`、`remove...`、`delete...`或者 `synonymOf...`。
+清单 15 中*惟一*麻烦的条件就是第一条，它要验证消息是一个定义查询而不是其他可能的组合，如 `is...`、`remove...`、`delete...` 或者 `synonymOf...`。
 
-##### 清单 15\. MOP 的核心逻辑
+##### 清单 15. MOP 的核心逻辑
 
 ```java
- def invokeMethod(String methodName, Object params) {     
+def invokeMethod(String methodName, Object params) {     
   if(isGetDefinitions(methodName, params)){
     return getDefinitions(methodName)
   }else if (params.length > 0){      
@@ -427,9 +430,9 @@ DbUnit 是一项 JUnit 扩展，它在每一次运行测试之前，使数据库
   }else if (methodName[0..9] == 'synonymsOf'){
     return getSynonyms(methodName)
   }
- }
+}
 
- private isGetDefinitions(methodName, params){
+private isGetDefinitions(methodName, params){
   return !(params.length > 0) &&
     ( (methodName.length() <= 5
     && methodName[0..1] != 'is' ) ||
@@ -438,72 +441,74 @@ DbUnit 是一项 JUnit 扩展，它在每一次运行测试之前，使数据库
     (methodName.length() >= 10
     && methodName[0..9] != 'synonymsOf'
     && isRemoveDeleteIs(methodName)))     
- }
+}
 
- private isRemoveDeleteIs(methodName){
+private isRemoveDeleteIs(methodName){
      return (methodName[0..5] != 'remove'
       && methodName[0..5] != 'delete'
       && methodName[0..1] != 'is')
-  } 
+}
 ```
 
-`isGetDefinitions`方法做了很多工作，其中一些工作依赖于 `isRemoveDeleteIs`。当它确定一个消息不符合定义查询时，逻辑就变得简单多了。
+`isGetDefinitions` 方法做了很多工作，其中一些工作依赖于 `isRemoveDeleteIs`。当它确定一个消息不符合定义查询时，逻辑就变得简单多了。
 
-清单 16 中的 `getProperty`方法很简单，因为我规定用户只能按属性查询定义，因此，调用 `getProperty`时，我调用 `getDefinitions`方法。
+清单 16 中的 `getProperty` 方法很简单，因为我规定用户只能按属性查询定义，因此，调用 `getProperty` 时，我调用 `getDefinitions` 方法。
 
-##### 清单 16\. 太好了，属性很简单！
+##### 清单 16. 太好了，属性很简单！
 
 ```java
- def getProperty(String property){
+def getProperty(String property){
   return getDefinitions(property)
- } 
+}
 ```
 
 就是这样了！真的。清单 5 到 16 中的逻辑创建了一个应用程序，它给予用户相当的灵活性，同时又不会太复杂。当然，如前所述，应用程序中的主键逻辑并不是很保险。在这方面有多种改进方法，从数据库序列到像 Hibernate 这样的框架都可以，Hibernate 框架用于相当得体地处理 ID。
 
 眼见为实，清单 17 展示了字典应用程序的语言的实际能力。（如果在使用 SAT 之前有这样的东西该多好！）
 
-##### 清单 17\. 字典展示
+##### 清单 17. 字典展示
 
 ```java
- import com.vanward.groovy.SimpleDictionary
- def dict = new SimpleDictionary()  
- dict.vanward("Adjective", ["Being on, or towards the front"],
-     ["Advanced"])
- dict.pulchritude("Noun", ["Great physical beauty and appeal"])
- dict.vanward             //prints "Being on, or towards the front"
- dict.pulchritude()       //prints "Great physical beauty and appeal"
- dict.synonymsOfVanward() //prints "Advanced"
- dict.isVanwardANoun()    //prints "false"
- dict.removeVanward()
- dict.deletePulchritude() 
+import com.vanward.groovy.SimpleDictionary
+def dict = new SimpleDictionary()  
+dict.vanward("Adjective", ["Being on, or towards the front"],
+    ["Advanced"])
+dict.pulchritude("Noun", ["Great physical beauty and appeal"])
+dict.vanward             //prints "Being on, or towards the front"
+dict.pulchritude()       //prints "Great physical beauty and appeal"
+dict.synonymsOfVanward() //prints "Advanced"
+dict.isVanwardANoun()    //prints "false"
+dict.removeVanward()
+dict.deletePulchritude()
 ```
 
 * * *
 
 ## MOP 的好处
 
-现在，您可能会问 *有什么好处？*我本可以轻易地公开这些 `private`方法，重新安排几项内容，就可以给出一个正常工作的应用程序（即，可以公开 `getDefinition`方法、`createWord`方法等），而无需使用 MOC。
+现在，您可能会问*有什么好处？*我本可以轻易地公开这些 `private` 方法，重新安排几项内容，就可以给出一个正常工作的应用程序（即，可以公开 `getDefinition` 方法、`createWord` 方法等），而无需使用 MOC。
 
-让我们分析这种提议 —— 假定我要不使用 Goovy 的 MOC 实现来创建完全相同的字典应用程序。我需要重新定义 `createWord()`方法的参数清单，使它变成类似 `def createWord(word, partOfSpeech, defs, syns=[]){}`的样子。
+让我们分析这种提议 —— 假定我要不使用 Goovy 的 MOC 实现来创建完全相同的字典应用程序。我需要重新定义 `createWord()` 方法的参数清单，使它变成类似 `def createWord(word, partOfSpeech, defs, syns=[]){}` 的样子。
 
-可以看出，第一步是去掉 `private`修饰符，用 `def`替换它，这与将方法声明为 `public`是一样的。然后，要定义参数，并让最后一个参数为可选的（`syns=[]`）。
+可以看出，第一步是去掉 `private` 修饰符，用 `def` 替换它，这与将方法声明为 `public` 是一样的。然后，要定义参数，并让最后一个参数为可选的（`syns=[]`）。
 
-还要定义一个 `delete`方法，它至少要调用 `remove`方法以同时支持 remove 和 delete。词性查询也应该修改。可以加入另一个参数，这样它看起来像 `determinePartOfSpeech(word, partOfSpeech)`这样。
+还要定义一个 `delete` 方法，它至少要调用 `remove` 方法以同时支持 remove 和 delete。词性查询也应该修改。可以加入另一个参数，这样它看起来像 `determinePartOfSpeech(word, partOfSpeech)` 这样。
 
-实际上，经过以上步骤，字典应用程序的概念复杂性就从 MOP 实现转移到了静态 API 上了。这就带来了这个问题 —— *这样做*的好处是什么？当然您可以看出由于实现 MOP，我为应用程序的使用者提供了无可比拟的灵活性。得到的 API 是一组静态定义的方法，灵活完全比不上 *语言*本身！
+实际上，经过以上步骤，字典应用程序的概念复杂性就从 MOP 实现转移到了静态 API 上了。这就带来了这个问题 —— *这样做*的好处是什么？当然您可以看出由于实现 MOP，我为应用程序的使用者提供了无可比拟的灵活性。得到的 API 是一组静态定义的方法，灵活完全比不上*语言*本身！
 
 * * *
 
 ## 结束语
 
-如果现在头有些发晕了，那么想一下这个：如果可以构建这样一个字典应用程序，使用户可以随意创建查询会怎么样呢？例如，`findAllWordsLikeGlib`或者 `findAllWordsWithSynonymGlib`等等，这些语义对于 MOP 来说这只是文字解析罢了，而对用户来说，则是强大的查询功能！
+如果现在头有些发晕了，那么想一下这个：如果可以构建这样一个字典应用程序，使用户可以随意创建查询会怎么样呢？例如，`findAllWordsLikeGlib` 或者 `findAllWordsWithSynonymGlib` 等等，这些语义对于 MOP 来说这只是文字解析罢了，而对用户来说，则是强大的查询功能！
 
-现在再进一步：如果可以创建另一种迷你语言，它对一项业务更有用一些，比如针对股市交易的迷你语言，那会怎么样呢？如果更进一步，将这个应用程序构建为有友好的控制台呢？不用编写脚本，用户使用的是 Groovy 的 shell。（记住我是怎么说 Bash 的？）
 
-如果您认为这种“炼金术”工具只是痴迷于 Emacs 扩展的古怪的 LISP 家伙们用的，那就错了！只要看看马路对面那些喧嚷的 Ruby on Rails 老手们就会知道这种平台是多么的令人激动。深入了解您就会看到当 MOP 发挥作用时，只要 *遵守命名规范*，不用深入 SQL 就可创建很好的查询。谁在那儿乐呢？
 
-* * *
+现在再进一步：如果可以创建另一种迷你语言，它对一项业务更有用一些，比如针对股市交易的迷你语言，那会怎么样呢？如果更进一步，将这个应用程序构建为有友好的控制台呢？不用编写脚本，用户使用的是`Groovy`的`shell`。（记住我是怎么说`Bash`的？）
+
+如果您认为这种“炼金术”工具只是痴迷于`Emacs`扩展的古怪的`LISP`家伙们用的，那就错了！只要看看马路对面那些喧嚷的`Ruby on Rails`老手们就会知道这种平台是多么的令人激动。深入了解您就会看到当`MOP`发挥作用时，只要遵守命名规范，不用深入`SQL`就可创建很好的查询。谁在那儿乐呢？
+
+---
 
 ## 下载
 

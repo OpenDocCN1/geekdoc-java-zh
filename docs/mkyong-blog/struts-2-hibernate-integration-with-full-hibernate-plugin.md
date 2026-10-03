@@ -1,3 +1,4 @@
+
 # Struts 2 + Hibernate 与“完全 Hibernate 插件”的集成
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/struts2/struts-2-hibernate-integration-with-full-hibernate-plugin/>
@@ -8,29 +9,32 @@
 
 查看集成步骤摘要:
 
-1.  将“ **Full Hibernate 插件**jar”放在项目类路径中。
-2.  使用批注" **@SessionTarget** "注入 Hibernate 会话；而“ **@TransactionTarget** ”则注入 Hibernate 事务。
-3.  在 **struts.xml** 中，使包扩展“ **hibernate-default** ”，而不是默认栈。
+1. 将“ **Full Hibernate 插件**jar”放在项目类路径中。
+2. 使用批注" **@SessionTarget** "注入 Hibernate 会话；而“ **@TransactionTarget** ”则注入 Hibernate 事务。
+3. 在 **struts.xml** 中，使包扩展“ **hibernate-default** ”，而不是默认栈。
 
 查看关系:
 
 ```java
- Struts 2 <-- (Full Hibernate Plugin) ---> Hibernate <-----> Database 
+Struts 2 <-- (Full Hibernate Plugin) ---> Hibernate <-----> Database 
 ```
 
 **Note**
+
 This tutorial is an update version from the previous [Struts 2 + Hibernate integration](http://web.archive.org/web/20190220143412/http://www.mkyong.com/struts2/struts-2-hibernate-integration-example/) example (servlet context listener), So the JSP and Hibernate configuration are almost same, just the integration part is a bit different, try to compare both to spot the different.
 
-## 1.项目结构
+## 1. 项目结构
 
 查看完整的项目文件夹结构。
 
-![Struts 2 Hibernate plugin folder structure](img/625b620df120444802941fb531856a27.png "Struts2-Full-Hibernate-Plugin-Folder") ## 2.MySQL 表脚本
+![Struts 2 Hibernate plugin folder structure](img/625b620df120444802941fb531856a27.png "Struts2-Full-Hibernate-Plugin-Folder")
+
+## 2. MySQL 表脚本
 
 客户的表脚本。
 
 ```java
- DROP TABLE IF EXISTS `mkyong`.`customer`;
+DROP TABLE IF EXISTS `mkyong`.`customer`;
 CREATE TABLE  `mkyong`.`customer` (
   `CUSTOMER_ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `NAME` varchar(45) NOT NULL,
@@ -40,130 +44,130 @@ CREATE TABLE  `mkyong`.`customer` (
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8; 
 ```
 
- ## 3.获取“完整的 Hibernate 插件”和依赖项
+## 3. 获取“完整的 Hibernate 插件”和依赖项
 
 获取所有 Struts2、Hibernate、 **Full Hibernate 插件**和 MySQL 依赖库。由于“**全 Hibernate 插件**”不支持 Maven，您需要从官网下载并手动包含到您的 Maven 本地库。
 
-1.  下载“[全休眠插件](http://web.archive.org/web/20190220143412/http://code.google.com/p/full-hibernate-plugin-for-struts2/)”。
-2.  将下载的 jar 放到 c: drive 中，并使用 Maven 的命令将其包含到 Maven 本地存储库中。
+1. 下载“[全休眠插件](http://web.archive.org/web/20190220143412/http://code.google.com/p/full-hibernate-plugin-for-struts2/)”。
+2. 将下载的 jar 放到 c: drive 中，并使用 Maven 的命令将其包含到 Maven 本地存储库中。
 
-    ```java
-     mvn install:install-file -Dfile=c:\struts2-fullhibernatecore-plugin-2.2-GA.jar 
-    -DgroupId=com.google.code -DartifactId=struts2-fullhibernatecore-plugin 
-    -Dversion=2.2 -Dpackaging=jar 
-    ```
+```java
+mvn install:install-file -Dfile=c:\struts2-fullhibernatecore-plugin-2.2-GA.jar 
+-DgroupId=com.google.code -DartifactId=struts2-fullhibernatecore-plugin 
+-Dversion=2.2 -Dpackaging=jar 
+```
 
-3.  用跟随 Maven 坐标链接它。
+3. 用跟随 Maven 坐标链接它。
 
-    ```java
-     <dependency>
-    		<groupId>com.google.code</groupId>
-    		<artifactId>struts2-fullhibernatecore-plugin</artifactId>
-    		<version>2.2</version>
-    	</dependency> 
-    ```
+```java
+<dependency>
+	<groupId>com.google.code</groupId>
+	<artifactId>struts2-fullhibernatecore-plugin</artifactId>
+	<version>2.2</version>
+</dependency> 
+```
 
 以下是本教程中的所有依赖库:
 
-文件:pom.xml
+文件:`pom.xml`
 
 ```java
- //...
-	<!-- Struts 2 -->
-	<dependency>
-	        <groupId>org.apache.struts</groupId>
-		<artifactId>struts2-core</artifactId>
-		<version>2.1.8</version>
-        </dependency>
+//...
+<!-- Struts 2 -->
+<dependency>
+        <groupId>org.apache.struts</groupId>
+	<artifactId>struts2-core</artifactId>
+	<version>2.1.8</version>
+</dependency>
 
-	<!-- MySQL database driver -->
-	<dependency>
-		<groupId>mysql</groupId>
-		<artifactId>mysql-connector-java</artifactId>
-		<version>5.1.9</version>
-	</dependency>
+<!-- MySQL database driver -->
+<dependency>
+	<groupId>mysql</groupId>
+	<artifactId>mysql-connector-java</artifactId>
+	<version>5.1.9</version>
+</dependency>
 
-	<!-- Struts 2 Hibernate Plugins -->
-	<dependency>
-		<groupId>com.google.code</groupId>
-		<artifactId>struts2-fullhibernatecore-plugin</artifactId>
-		<version>2.2</version>
-	</dependency>
+<!-- Struts 2 Hibernate Plugins -->
+<dependency>
+	<groupId>com.google.code</groupId>
+	<artifactId>struts2-fullhibernatecore-plugin</artifactId>
+	<version>2.2</version>
+</dependency>
 
-	<!-- Log4j logging (Struts 2 Hibernate Plugins dependency) -->
-	<dependency>
-                <groupId>log4j</groupId>
-	        <artifactId>log4j</artifactId>
-	        <version>1.2.9</version>
-        </dependency>
+<!-- Log4j logging (Struts 2 Hibernate Plugins dependency) -->
+<dependency>
+        <groupId>log4j</groupId>
+	<artifactId>log4j</artifactId>
+	<version>1.2.9</version>
+</dependency>
 
-	<!-- Hibernate validator (Struts 2 Hibernate Plugins dependency) -->
-	<dependency>
-               <groupId>org.hibernate</groupId>
-	       <artifactId>hibernate-validator</artifactId>
-	       <version>3.1.0.GA</version>
-        </dependency>
+<!-- Hibernate validator (Struts 2 Hibernate Plugins dependency) -->
+<dependency>
+       <groupId>org.hibernate</groupId>
+       <artifactId>hibernate-validator</artifactId>
+       <version>3.1.0.GA</version>
+</dependency>
 
-	<!-- slf4j logging (Struts 2 Hibernate Plugins dependency) -->
-	<dependency>
-               <groupId>org.slf4j</groupId>
-	       <artifactId>slf4j-api</artifactId>
-	       <version>1.6.1</version>
-        </dependency>
+<!-- slf4j logging (Struts 2 Hibernate Plugins dependency) -->
+<dependency>
+       <groupId>org.slf4j</groupId>
+       <artifactId>slf4j-api</artifactId>
+       <version>1.6.1</version>
+</dependency>
 
-	<!-- Hibernate core -->
-	<dependency>
-		<groupId>org.hibernate</groupId>
-		<artifactId>hibernate</artifactId>
-		<version>3.2.7.ga</version>
-	</dependency>
+<!-- Hibernate core -->
+<dependency>
+	<groupId>org.hibernate</groupId>
+	<artifactId>hibernate</artifactId>
+	<version>3.2.7.ga</version>
+</dependency>
 
-	<!-- Hibernate core library dependency start -->
-	<dependency>
-		<groupId>dom4j</groupId>
-		<artifactId>dom4j</artifactId>
-		<version>1.6.1</version>
-	</dependency>
+<!-- Hibernate core library dependency start -->
+<dependency>
+	<groupId>dom4j</groupId>
+	<artifactId>dom4j</artifactId>
+	<version>1.6.1</version>
+</dependency>
 
-	<dependency>
-		<groupId>commons-logging</groupId>
-		<artifactId>commons-logging</artifactId>
-		<version>1.1.1</version>
-	</dependency>
+<dependency>
+	<groupId>commons-logging</groupId>
+	<artifactId>commons-logging</artifactId>
+	<version>1.1.1</version>
+</dependency>
 
-	<dependency>
-		<groupId>commons-collections</groupId>
-		<artifactId>commons-collections</artifactId>
-		<version>3.2.1</version>
-	</dependency>
+<dependency>
+	<groupId>commons-collections</groupId>
+	<artifactId>commons-collections</artifactId>
+	<version>3.2.1</version>
+</dependency>
 
-	<dependency>
-		<groupId>cglib</groupId>
-		<artifactId>cglib</artifactId>
-		<version>2.2</version>
-	</dependency>
-	<!-- Hibernate core library dependency end -->
+<dependency>
+	<groupId>cglib</groupId>
+	<artifactId>cglib</artifactId>
+	<version>2.2</version>
+</dependency>
+<!-- Hibernate core library dependency end -->
 
-	<!-- Hibernate query library dependency start -->
-	<dependency>
-		<groupId>antlr</groupId>
-		<artifactId>antlr</artifactId>
-		<version>2.7.7</version>
-	</dependency>
-	<!-- Hibernate query library dependency end -->
+<!-- Hibernate query library dependency start -->
+<dependency>
+	<groupId>antlr</groupId>
+	<artifactId>antlr</artifactId>
+	<version>2.7.7</version>
+</dependency>
+<!-- Hibernate query library dependency end -->
 //... 
 ```
 
 The “**Full Hibernate Plugin**” is required the **Hibernate validator** and **SLF4j** dependency, which is not really make sense, as most of the Java developers still do not use it.
 
-## 4.冬眠的东西
+## 4. 冬眠的东西
 
 所有的 Hibernate 模型和配置。
 
 **Customer.java**–为客户表创建一个类。
 
 ```java
- package com.mkyong.customer.model;
+package com.mkyong.customer.model;
 
 import java.util.Date;
 
@@ -178,10 +182,10 @@ public class Customer implements java.io.Serializable {
 } 
 ```
 
-**customer . hbm . XML**–客户的 Hibernate 映射文件。
+**customer.hbm.xml**–客户的 Hibernate 映射文件。
 
 ```java
- <?xml version="1.0"?>
+<?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 20 Julai 2010 11:40:18 AM by Hibernate Tools 3.2.5.Beta -->
@@ -205,10 +209,10 @@ public class Customer implements java.io.Serializable {
 </hibernate-mapping> 
 ```
 
-文件:hibernate.cfg.xml，hibernate 数据库配置文件。
+文件:`hibernate.cfg.xml`，hibernate 数据库配置文件。
 
 ```java
- <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC
 "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
@@ -227,14 +231,14 @@ public class Customer implements java.io.Serializable {
 </hibernate-configuration> 
 ```
 
-## 5.数据访问对象(Data Access Object)
+## 5. 数据访问对象(Data Access Object)
 
 实现 DAO 设计模式来执行数据库操作。在 **CustomerDAOImpl** 类中，将 Hibernate 会话和事务都声明为类成员。在 Struts 2 项目初始化过程中，**全 Hibernate 插件**会分别使用 **@SessionTarget** 和 **@TransactionTarget** 注释将相应的 Hibernate 会话和事务注入到类成员中。
 
 **CustomerDAO.java**
 
 ```java
- package com.mkyong.customer.dao;
+package com.mkyong.customer.dao;
 
 import java.util.List;
 
@@ -251,8 +255,12 @@ public interface CustomerDAO{
 
 **CustomerDAOImpl.java**
 
+
+
+## 5. DAO 实现类
+
 ```java
- package com.mkyong.customer.dao.impl;
+package com.mkyong.customer.dao.impl;
 
 import java.util.List;
 
@@ -286,17 +294,17 @@ public class CustomerDAOImpl implements CustomerDAO{
 
 	}
 
-} 
+}
 ```
 
-## 6.行动
+## 6. 行动
 
 在 Action 类中，调用 DAO 类来执行数据库操作。
 
 **CustomerAction.java**
 
 ```java
- package com.mkyong.customer.action;
+package com.mkyong.customer.action;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -355,17 +363,16 @@ public class CustomerAction extends ActionSupport
 
 	}
 
-} 
+}
 ```
 
-## 7.JSP 页面
+## 7. JSP 页面
 
 添加和列出客户的 JSP 页面。
 
 **customer.jsp**
 
-```java
- <%@ taglib prefix="s" uri="/struts-tags" %>
+```jsp
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
@@ -405,15 +412,15 @@ public class CustomerAction extends ActionSupport
 <br/>
 
 </body>
-</html> 
+</html>
 ```
 
-## 8.struts.xml
+## 8. struts.xml
 
-Link it all ~ make 包扩展了“ **hibernate-default** ”而不是“ **struts-default** ”。
+Link it all ~ make 包扩展了 `hibernate-default` 而不是 `struts-default`。
 
-```java
- <?xml version="1.0" encoding="UTF-8" ?>
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
@@ -434,12 +441,12 @@ Link it all ~ make 包扩展了“ **hibernate-default** ”而不是“ **strut
     </action>
 
 </package>	
-</struts> 
+</struts>
 ```
 
-## 9.演示
+## 9. 演示
 
-访问它:http://localhost:8080/struts 2 example/listcustomeraction . action
+访问它：`http://localhost:8080/struts2example/listCustomerAction.action`
 
 ![Struts 2 full hibernate plugin example](img/16a116c6c5eb1caed4f00a01a9d08f66.png "Struts2-Full-Hibernate-Plugin-Example1")![Struts 2 full hibernate plugin example](img/c9049251b196cfd457d474a1204ee994.png "Struts2-Full-Hibernate-Plugin-Example2")
 
@@ -449,15 +456,8 @@ Download it – [Struts2-Hibernate-FullHibernatePluginExample.zip](http://web.ar
 
 ## 参考
 
-1.  [Struts 2 全休眠插件文档](http://web.archive.org/web/20190220143412/http://code.google.com/p/full-hibernate-plugin-for-struts2/)
-2.  [Struts 2 + Hibernate 集成示例(servlet 上下文监听器)](http://web.archive.org/web/20190220143412/http://www.mkyong.com/struts2/struts-2-hibernate-integration-example/)
-3.  [将库安装到 Maven 本地存储库中](http://web.archive.org/web/20190220143412/http://www.mkyong.com/maven/how-to-include-library-manully-into-maven-local-repository/)
+1. [Struts 2 全休眠插件文档](http://web.archive.org/web/20190220143412/http://code.google.com/p/full-hibernate-plugin-for-struts2/)
+2. [Struts 2 + Hibernate 集成示例(servlet 上下文监听器)](http://web.archive.org/web/20190220143412/http://www.mkyong.com/struts2/struts-2-hibernate-integration-example/)
+3. [将库安装到 Maven 本地存储库中](http://web.archive.org/web/20190220143412/http://www.mkyong.com/maven/how-to-include-library-manully-into-maven-local-repository/)
 
 [hibernate](http://web.archive.org/web/20190220143412/http://www.mkyong.com/tag/hibernate/) [integration](http://web.archive.org/web/20190220143412/http://www.mkyong.com/tag/integration/) [struts2](http://web.archive.org/web/20190220143412/http://www.mkyong.com/tag/struts2/)
-
-
-
-
-
-
-

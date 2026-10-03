@@ -1,3 +1,4 @@
+
 # 成为更好的 Java 代码阅读者的 3 个技巧
 
 > 原文：<https://medium.com/javarevisited/3-tips-to-become-a-better-java-code-reader-550144c8e517?source=collection_archive---------2----------------------->

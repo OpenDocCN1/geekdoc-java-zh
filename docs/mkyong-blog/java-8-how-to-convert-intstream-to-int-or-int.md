@@ -1,15 +1,16 @@
-# Java 8–如何将 IntStream 转换为 int 或 int[]
+
+# Java 8 – 如何将 `IntStream` 转换为 `int` 或 `int[]`
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/java8/java-8-how-to-convert-intstream-to-int-or-int/>
 
 从一个`IntStream`中获取一个原语`int`的几个 Java 8 例子。
 
-## 1.IntStream -> int
+## 1. `IntStream` -> `int`
 
-Java8Example1.java
+`Java8Example1.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.Arrays;
 import java.util.OptionalInt;
@@ -37,20 +38,20 @@ public class Java8Example1 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- 1
-1 
+1
+1
 ```
 
-Java8Example2.java
+`Java8Example2.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.Arrays;
 import java.util.OptionalInt;
@@ -75,21 +76,21 @@ public class Java8Example2 {
 
     }
 
-} 
+}
 ```
 
 输出
 
 ```java
- 2 or 4 
+2 or 4
 ```
 
-## 2.IntStream -> int[]或 Integer[]
+## 2. `IntStream` -> `int[]` 或 `Integer[]`
 
-Java8Example3.java
+`Java8Example3.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;
@@ -112,12 +113,12 @@ public class Java8Example3 {
 
     }
 
-} 
+}
 ```
 
 ## 参考
 
-*   [Java 8–如何将 IntStream 转换为整数数组](/web/20221127051005/https://mkyong.com/java8/java-8-how-to-convert-intstream-to-integer/)
-*   [IntStream toArray()](http://web.archive.org/web/20221127051005/https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html#toArray--)
+* [Java 8 – 如何将 `IntStream` 转换为整数数组](/web/20221127051005/https://mkyong.com/java8/java-8-how-to-convert-intstream-to-integer/)
+* [`IntStream.toArray()`](http://web.archive.org/web/20221127051005/https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html#toArray--)
 
 <input type="hidden" id="mkyong-current-postId" value="15505">

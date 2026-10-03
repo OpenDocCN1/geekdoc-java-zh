@@ -1,24 +1,18 @@
+
 # 设置表
 
 > 原文：[`docs.oracle.com/javase/tutorial/jdbc/basics/tables.html`](https://docs.oracle.com/javase/tutorial/jdbc/basics/tables.html)
 
 本页描述了 JDBC 教程中使用的所有表以及如何创建它们：
 
-+   咖啡表
-
-+   供应商表
-
-+   咖啡库存表
-
-+   商品库存表
-
-+   咖啡店表
-
-+   数据存储库表
-
-+   创建表
-
-+   填充表
++ 咖啡表
++ 供应商表
++ 咖啡库存表
++ 商品库存表
++ 咖啡店表
++ 数据存储库表
++ 创建表
++ 填充表
 
 ## 咖啡表
 
@@ -34,15 +28,11 @@
 
 以下描述了`COFFEES`表中的每列：
 
-+   `COF_NAME`: 存储咖啡名称。具有 SQL 类型为 `VARCHAR`，最大长度为 32 个字符。由于每种咖啡的名称都不同，因此名称唯一标识特定的咖啡，并作为主键。
-
-+   `SUP_ID`: 存储标识咖啡供应商的数字。具有 SQL 类型为 `INTEGER`。它被定义为引用`SUPPLIERS`表中`SUP_ID`列的外键。因此，DBMS 将强制执行此列中的每个值与`SUPPLIERS`表中相应列中的值之一匹配。
-
-+   `PRICE`: 存储每磅咖啡的成本。具有 SQL 类型为 `FLOAT`，因为它需要存储带有小数点的值。（请注意，货币值通常存储在 SQL 类型 `DECIMAL` 或 `NUMERIC` 中，但由于不同的 DBMS 之间存在差异，并且为了避免与 JDBC 的早期版本不兼容，本教程使用更标准的类型 `FLOAT`。）
-
-+   `SALES`: 存储本周销售的咖啡磅数。具有 SQL 类型为 `INTEGER`。
-
-+   `TOTAL`: 存储迄今为止销售的咖啡磅数。具有 SQL 类型为 `INTEGER`。
++ `COF_NAME`: 存储咖啡名称。具有 SQL 类型为 `VARCHAR`，最大长度为 32 个字符。由于每种咖啡的名称都不同，因此名称唯一标识特定的咖啡，并作为主键。
++ `SUP_ID`: 存储标识咖啡供应商的数字。具有 SQL 类型为 `INTEGER`。它被定义为引用`SUPPLIERS`表中`SUP_ID`列的外键。因此，DBMS 将强制执行此列中的每个值与`SUPPLIERS`表中相应列中的值之一匹配。
++ `PRICE`: 存储每磅咖啡的成本。具有 SQL 类型为 `FLOAT`，因为它需要存储带有小数点的值。（请注意，货币值通常存储在 SQL 类型 `DECIMAL` 或 `NUMERIC` 中，但由于不同的 DBMS 之间存在差异，并且为了避免与 JDBC 的早期版本不兼容，本教程使用更标准的类型 `FLOAT`。）
++ `SALES`: 存储本周销售的咖啡磅数。具有 SQL 类型为 `INTEGER`。
++ `TOTAL`: 存储迄今为止销售的咖啡磅数。具有 SQL 类型为 `INTEGER`。
 
 ## 供应商表
 
@@ -56,11 +46,9 @@
 
 以下描述了`SUPPLIERS`表中的每列：
 
-+   `SUP_ID`: 存储标识咖啡供应商的数字。具有 SQL 类型为 `INTEGER`。这是此表中的主键。
-
-+   `SUP_NAME`: 存储咖啡供应商的名称。
-
-+   `STREET`、`CITY`、`STATE` 和 `ZIP`：这些列存储咖啡供应商的地址。
++ `SUP_ID`: 存储标识咖啡供应商的数字。具有 SQL 类型为 `INTEGER`。这是此表中的主键。
++ `SUP_NAME`: 存储咖啡供应商的名称。
++ `STREET`、`CITY`、`STATE` 和 `ZIP`：这些列存储咖啡供应商的地址。
 
 ## 咖啡库存表
 
@@ -77,15 +65,11 @@
 
 以下描述了`COF_INVENTORY`表中每一列的含义：
 
-+   `WAREHOUSE_ID`: 存储标识仓库的数字。
-
-+   `COF_NAME`: 存储特定类型咖啡的名称。
-
-+   `SUP_ID`: 存储标识供应商的数字。
-
-+   `QUAN`: 存储表示商品数量的数字。
-
-+   `DATE`: 存储时间戳数值，表示行最后更新时间。
++ `WAREHOUSE_ID`: 存储标识仓库的数字。
++ `COF_NAME`: 存储特定类型咖啡的名称。
++ `SUP_ID`: 存储标识供应商的数字。
++ `QUAN`: 存储表示商品数量的数字。
++ `DATE`: 存储时间戳数值，表示行最后更新时间。
 
 ## `MERCH_INVENTORY`表
 
@@ -108,15 +92,11 @@
 
 以下描述了`MERCH_INVENTORY`表中每一列的含义：
 
-+   `ITEM_ID`: 存储标识物品的数字。
-
-+   `ITEM_NAME`: 存储物品的名称。
-
-+   `SUP_ID`: 存储标识供应商的数字。
-
-+   `QUAN`: 存储表示该物品可用数量的数字。
-
-+   `DATE`: 存储时间戳数值，表示行最后更新时间。
++ `ITEM_ID`: 存储标识物品的数字。
++ `ITEM_NAME`: 存储物品的名称。
++ `SUP_ID`: 存储标识供应商的数字。
++ `QUAN`: 存储表示该物品可用数量的数字。
++ `DATE`: 存储时间戳数值，表示行最后更新时间。
 
 ## `COFFEE_HOUSES`表
 
@@ -141,23 +121,18 @@
 
 以下描述了`COFFEE_HOUSES`表中每一列的含义：
 
-+   `STORE_ID`: 存储标识咖啡店的数字。它表示咖啡店所在州，以 10 开头的值表示加利福尼亚州，以 32 开头的值表示俄勒冈州，以 33 开头的值表示华盛顿州。
-
-+   `CITY`: 存储咖啡馆所在城市的名称。
-
-+   `COFFEE`: 存储表示售出咖啡量的数字。
-
-+   `MERCH`: 存储表示售出商品量的数字。
-
-+   `TOTAL`: 存储表示售出咖啡和商品总量的数字。
++ `STORE_ID`: 存储标识咖啡店的数字。它表示咖啡店所在州，以 10 开头的值表示加利福尼亚州，以 32 开头的值表示俄勒冈州，以 33 开头的值表示华盛顿州。
++ `CITY`: 存储咖啡馆所在城市的名称。
++ `COFFEE`: 存储表示售出咖啡量的数字。
++ `MERCH`: 存储表示售出商品量的数字。
++ `TOTAL`: 存储表示售出咖啡和商品总量的数字。
 
 ## DATA_REPOSITORY 表
 
-表 DATA_REPOSITORY 存储引用文档和其他与 The Coffee Break 有关的数据的 URL。脚本 `populate_tables.sql` 不向此表添加任何数据。以下描述了此表中每列的内容：
+表 `DATA_REPOSITORY` 存储引用文档和其他与 The Coffee Break 有关的数据的 URL。脚本 `populate_tables.sql` 不向此表添加任何数据。以下描述了此表中每列的内容：
 
-+   `DOCUMENT_NAME`: 存储标识 URL 的字符串。
-
-+   `URL`: 存储一个 URL。
++ `DOCUMENT_NAME`: 存储标识 URL 的字符串。
++ `URL`: 存储一个 URL。
 
 ## 创建表
 
@@ -169,7 +144,6 @@
 
 ```java
 ant setup
-
 ```
 
 此命令运行多个 Ant 目标，包括以下内容，`build-tables`（来自 `build.xml` 文件）：
@@ -189,7 +163,6 @@ ant setup
   "./sql/${DB.VENDOR}/create-tables.sql"/>
   </sql>
 </target>
-
 ```
 
 示例为以下 `sql` Ant 任务参数指定值：
@@ -209,7 +182,6 @@ ant setup
 
 ```java
 <import file="${ANTPROPERTIES}"/>
-
 ```
 
 `transaction` 元素指定一个包含要执行的 SQL 语句的文件。文件 `create-tables.sql` 包含创建本页描述的所有表的 SQL 语句。例如，此文件的以下摘录创建表 `SUPPLIERS` 和 `COFFEES`：
@@ -233,7 +205,6 @@ create table COFFEES
     PRIMARY KEY (COF_NAME),
     FOREIGN KEY (SUP_ID)
         REFERENCES SUPPLIERS (SUP_ID));
-
 ```
 
 **注意**：文件 `build.xml` 包含另一个名为 `drop-tables` 的目标，用于删除教程中使用的表。`setup` 目标在运行 `build-tables` 目标之前运行 `drop-tables`。
@@ -256,7 +227,6 @@ create table COFFEES
       JDBCTutorialUtilities.printSQLException(e);
     }
   }
-
 ```
 
 以下方法，`CoffeesTable.createTable`，创建 `COFFEES` 表：
@@ -275,7 +245,6 @@ create table COFFEES
       JDBCTutorialUtilities.printSQLException(e);
     }
   }
-
 ```
 
 在这两种方法中，`con`是一个`Connection`对象，`dbName`是你正在创建表的数据库的名称。
@@ -291,6 +260,8 @@ create table COFFEES
 同样，你可以使用 Apache Ant 或 JDBC API 向表中插入数据。
 
 ### 使用 Apache Ant 填充表
+
+
 
 除了创建本教程使用的表之外，命令`ant setup`还会填充这些表。这个命令运行 Ant 目标`populate-tables`，该目标运行 SQL 脚本`populate-tables.sql`。
 
@@ -316,7 +287,6 @@ insert into COFFEES values(
     'Colombian_Decaf', 00101, 8.99, 0, 0);
 insert into COFFEES values(
     'French_Roast_Decaf', 00049, 9.99, 0, 0);
-
 ```
 
 ### 使用 JDBC API 填充表
@@ -339,7 +309,6 @@ insert into COFFEES values(
       JDBCTutorialUtilities.printSQLException(e);
     }
   }
-
 ```
 
 下面的方法，`CoffeesTable.populateTable`，将数据插入表中：
@@ -361,5 +330,4 @@ insert into COFFEES values(
       JDBCTutorialUtilities.printSQLException(e);
     }
   }
-
 ```

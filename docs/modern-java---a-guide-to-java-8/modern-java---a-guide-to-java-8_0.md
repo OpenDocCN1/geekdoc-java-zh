@@ -1,24 +1,15 @@
-# 现代 Java - Java 8 指南指南
 
-
+# 现代 Java - Java 8 指南
 
 ![](img/cover.jpg)
 
-
-
-# 介绍
-
-
-
-# 现代 Java - Java 8 指南
+## 介绍
 
 > [“Java 还没有死——人们开始意识到这一点了。”](https://twitter.com/mreinhold/status/429603588525281280)
 
 欢迎阅读我对 [Java 8](https://jdk8.java.net/) 的介绍。这本教程将引导你逐步学习所有新的语言特性。在简短简单代码示例的支持下，你将学习如何使用默认接口方法、lambda 表达式、方法引用和可重复注解。在文章最后，你将熟悉最新的 [API](http://download.java.net/jdk8/docs/api/) 变化，如流、函数式接口、map 扩展以及新的日期 API。**没有大段文字，只有许多带注释的代码段。尽情享受吧！**
 
 这篇文章最初发布在[我的博客](http://winterbe.com/posts/2014/03/16/java-tutorial/)上。你应该[在 Twitter 上关注我](https://twitter.com/winterbe)。
-
-
 
 ## 接口的默认方法
 
@@ -34,7 +25,7 @@ interface Formula {
 }
 ```
 
-除了抽象方法 `calculate` 之外，接口 `Formula` 还定义了默认方法 `sqrt`。具体类只需要实现抽象方法 `calculate`。默认方法 `sqrt` 可以可以直接使用。
+除了抽象方法 `calculate` 之外，接口 `Formula` 还定义了默认方法 `sqrt`。具体类只需要实现抽象方法 `calculate`。默认方法 `sqrt` 可以直接使用。
 
 ```java
 Formula formula = new Formula() {
@@ -139,13 +130,9 @@ String converted = converter.convert("Java");
 System.out.println(converted);    // "J"
 ```
 
-让我们看看 `::` 关键字如何作用构造函数。首先，我们定义一个具有不同构造函数的示例 Bean：
+让我们看看 `::` 关键字如何作用于构造函数。首先，我们定义一个具有不同构造函数的示例 Bean：
 
-
-
-
-
-```
+```java
 class Person {
     String firstName;
     String lastName;
@@ -161,7 +148,7 @@ class Person {
 
 接下来，我们定义一个人员工厂接口，用于创建新的人员：
 
-```
+```java
 interface PersonFactory<P extends Person> {
     P create(String firstName, String lastName);
 }
@@ -169,22 +156,22 @@ interface PersonFactory<P extends Person> {
 
 我们没有手动实现工厂，而是通过构造器引用将一切组合在一起：
 
-```
+```java
 PersonFactory<Person> personFactory = Person::new;
 Person person = personFactory.create("Peter", "Parker");
 ```
 
 我们通过 `Person::new` 创建了对 `Person` 构造函数的引用。Java 编译器会通过匹配 `PersonFactory.create` 的签名自动选择正确的构造函数。
 
-# Lambda 作用域
+## Lambda 作用域
 
 从 lambda 表达式访问外部作用域变量与匿名对象非常相似。你可以访问局部外部作用域的 final 变量，以及实例字段和静态变量。
 
 ### 访问局部变量
 
-我们可以从 lambda 表达式的外部作用域中读取 final final 局部变量：
+我们可以从 lambda 表达式的外部作用域中读取 final 局部变量：
 
-```
+```java
 final int num = 1;
 Converter<Integer, String> stringConverter =
         (from) -> String.valueOf(from + num);
@@ -194,7 +181,7 @@ stringConverter.convert(2);     // 3
 
 但与匿名对象不同，变量 `num` 不需要声明为 final。以下代码也是有效的：
 
-```
+```java
 int num = 1;
 Converter<Integer, String> stringConverter =
         (from) -> String.valueOf(from + num);
@@ -204,7 +191,7 @@ stringConverter.convert(2);     // 3
 
 然而，为了使代码通过，`num` 必须是隐式的 final。以下代码**无法**编译：
 
-```
+```java
 int num = 1;
 Converter<Integer, String> stringConverter =
         (from) -> String.valueOf(from + num);
@@ -217,7 +204,7 @@ num = 3;
 
 与局部变量不同，在 lambda 表达式内部对实例字段和静态变量具有读写权限。这种行为在匿名对象中是为人知的。
 
-```
+```java
 class Lambda4 {
     static int outerStaticNum;
     int outerNum;
@@ -242,11 +229,11 @@ class Lambda4 {
 
 默认方法**无法**从 lambda 表达式内部访问。以下代码无法编译：
 
-```
+```java
 Formula formula = (a) -> sqrt(a * 100);
 ```
 
-# 内置函数式接口
+## 内置函数式接口
 
 JDK 1.8 API 包含了许多函数式接口。其中一些在旧版本的 Java 中已为人知，例如 `Comparator` 或 `Runnable`。这些现有接口被扩展以通过 `@FunctionalInterface` 注解启用 Lambda 支持。
 
@@ -256,7 +243,7 @@ JDK 1.8 API 包含了许多函数式接口。其中一些在旧版本的 Java �
 
 谓词是接受一个参数的布尔值函数。接口包含各种默认方法，用于将谓词组合成复杂的逻辑项（与、或、取反）。
 
-```
+```java
 Predicate<String> predicate = (s) -> s.length() > 0;
 
 predicate.test("foo");              // true
@@ -271,20 +258,20 @@ Predicate<String> isNotEmpty = isEmpty.negate();
 
 ### 函数 (Functions)
 
-函数接受一个参数并产生结果。默认方法可以可以将多个函数链在一起（compose, andThen）。
+函数接受一个参数并产生结果。默认方法可以将多个函数链在一起（compose, andThen）。
 
-```
+```java
 Function<String, Integer> toInteger = Integer::valueOf;
 Function<String, String> backToString = toInteger.andThen(String::valueOf);
 
 backToString.apply(123);     // "123"
 ```
 
-### 生产者者 (Suppliers)
+### 生产者 (Suppliers)
 
 生产者产生给定类型的结果。与函数不同，生产者不接受参数。
 
-```
+```java
 Supplier<Person> personSupplier = Person::new;
 personSupplier.get();   // new
 ```
@@ -293,7 +280,7 @@ personSupplier.get();   // new
 
 消费者代表在单个输入上执行的操作。
 
-```
+```java
 Consumer<String> greeter = (p) -> System.out.println("Hello, " + p);
 greeter.accept("Luke"); // Hello, Luke Skywalker
 ```
@@ -302,7 +289,7 @@ greeter.accept("Luke"); // Hello, Luke Skywalker
 
 比较器在旧版本中为人知。Java 8 在该接口中添加了各种方法。
 
-```
+```java
 Comparator<String> comparator = (p1, p2) -> p1.compareTo(p2);
 
 String p1 = "John Doe";
@@ -312,11 +299,11 @@ comparator.compare(p1, p2);             // >0
 comparator.reversed().compare(p1, p2);  // <0
 ```
 
-# 可选容器 (Optionals)
+## 可选容器 (Optionals)
 
-Optional 是一个可能为 null 的值的简单容器。它是下一节的一个重要概念，让我们看看 Optional 是如何工作的。它不是返回 `null`，而是返回 `Optional`。
+`Optional` 是一个可能为 null 的值的简单容器。它是下一节的一个重要概念，让我们看看 `Optional` 是如何工作的。它不是返回 `null`，而是返回 `Optional`。
 
-```
+```java
 Optional<String> optional = Optional.of("bam");
 
 optional.isPresent();           // true
@@ -326,7 +313,7 @@ optional.orElse("fallback");    // "bam"
 optional.ifPresent((s) -> System.out.println(s.charAt(0))); // "b"
 ```
 
-# 流 (Streams)
+## 流 (Streams)
 
 `java.util.Stream` 代表对可以执行一个或多个操作的元素序列。流操作分为中间操作和终结操作。终端操作返回特定类型的结果，中间操作返回流，以便链方法调用。流创建于源，例如 `java.util.Collection`（不支持 map）。流操作可以顺序或并行执行。
 
@@ -334,7 +321,7 @@ optional.ifPresent((s) -> System.out.println(s.charAt(0))); // "b"
 
 让我们先看看顺序流是如何工作的。首先我们以字符串列表的形式创建一个示例源：
 
-```
+```java
 List<String> stringCollection = new ArrayList<>();
 stringCollection.add("ddd2");
 stringCollection.add("aaa2");
@@ -350,7 +337,9 @@ Java 8 中的集合经过了扩展，因此你可以通过调用 `Collection.str
 
 ### 过滤 (Filter)
 
-Filter 接受一个谓词来过滤流中的所有元素。该操作是中间操作，允许我们在结果上调用另一个流操作（forEach）。forEach 接受一个消费者，并在过滤后的流的每个元素上执行。forEach 是一个终结操作。它是 `void`，所以我们不能调用另一个流操作。
+`Filter` 接受一个谓词来过滤流中的所有元素。该操作是中间操作，允许我们在结果上调用另一个流操作（`forEach`）。`forEach` 接受一个消费者，并在过滤后的流的每个元素上执行。`forEach` 是一个终结操作。它是 `void`，所以我们不能调用另一个流操作。
+
+
 
 ```
 stringCollection
@@ -360,10 +349,6 @@ stringCollection
 
 // "aaa2", "aaa1"
 ```
-
-
-
-
 
 `Sorted` 是一个*中间*操作，它返回一个流的排序视图。除非你传递了自定义的 `Comparator`，否则元素将按照自然顺序排序。
 
@@ -456,11 +441,11 @@ reduced.ifPresent(System.out::println);
 
 ### Parallel Streams
 
-如上所述，流可以是是顺序的，也可以是并行的。顺序流上的操作在单个线程上执行，而并行流上的操作在多个线程上并发执行。
+如上所述，流可以是顺序的，也可以是并行的。顺序流上的操作在单个线程上执行，而并行流上的操作在多个线程上并发执行。
 
 接下来的示例展示了使用并行流提高性能是多么简单。
 
-首先，我们创建一个包含大量唯一元素的列表列表：
+首先，我们创建一个包含大量唯一元素的列表：
 
 ```
 int max = 1000000;
@@ -531,7 +516,7 @@ Java 8 在 `java.time` 包下包含了一个全新的日期和时间 API。下�
 
 ### Clock
 
-`Clock` 提供了对当前日期和时间的访问。时钟感知时区，并可以替代 `System.currentTimeMillis()` 来获取毫秒级的当前时间。时间线上的这种瞬间也由 `Instant` 类表示。Instant 可以用于创建旧的 `java.util.Date` 对象。
+`Clock` 提供了对当前日期和时间的访问。时钟感知时区，并可以替代 `System.currentTimeMillis()` 来获取毫秒级的当前时间。时间线上的这种瞬间也由 `Instant` 类表示。`Instant` 可以用于创建旧的 `java.util.Date` 对象。
 
 ```
 Clock clock = Clock.systemDefaultZone();
@@ -576,10 +561,6 @@ System.out.println(minutesBetween);     // -239
 ```
 
 `LocalTime` 提供了各种工厂方法来简化新实例的创建，包括对时间字符串的解析。
-
-
-
-
 
 ```
 LocalTime late = LocalTime.of(23, 59, 59);
@@ -711,7 +692,9 @@ Hint[] hints2 = Person.class.getAnnotationsByType(Hint.class);
 System.out.println(hints2.length);          // 2
 ```
 
-尽管我们从未在 `Person` 类上声明过 `@Hints` 注解，但仍然可以通过 `getAnnotation(Hints.class)` 进行读取。然而，更方便的方法是 `getAnnotationsByType`，它允许直接访问所有被标记的 `@Hint` 注解。
+
+
+尽管我们从未在`Person`类上声明过`@Hints`注解，但仍然可以通过`getAnnotation(Hints.class)`进行读取。然而，更方便的方法是`getAnnotationsByType`，它允许直接访问所有被标记的`@Hint`注解。
 
 此外，Java 8 中注解的使用扩展到了两个新目标：
 
@@ -722,7 +705,7 @@ System.out.println(hints2.length);          // 2
 
 ## 接下来该去哪里？
 
-我的 Java 8 编程指南到此结束。如果你想更多关于 JDK 8 API 的所有新类和特性，请查看我的 [JDK8 API 探索器](http://winterbe.com/projects/java8-explorer/)。它可以帮助你发现 JDK 8 的所有新类和隐藏珍宝，例如 `Arrays.parallelSort`、`StampedLock` 和 `CompletableFuture` —— 这仅仅是其中之一。
+我的 Java 8 编程指南到此结束。如果你想更多关于 JDK 8 API 的所有新类和特性，请查看我的 [JDK8 API 探索器](http://winterbe.com/projects/java8-explorer/)。它可以帮助你发现 JDK 8 的所有新类和隐藏珍宝，例如`Arrays.parallelSort`、`StampedLock`和`CompletableFuture`——这仅仅是其中之一。
 
 我还在[博客](http://winterbe.com)上发布了一系列后续文章，你可能也会感兴趣：
 
@@ -733,8 +716,6 @@ System.out.println(hints2.length);          // 2
 * [Java 8 并发教程：原子变量与并发 Map](http://winterbe.com/posts/2015/05/22/java8-concurrency-tutorial-atomic-concurrent-map/)
 * [Java 8 API 示例：字符串、数字与数学](http://winterbe.com/posts/2015/03/25/java8-examples-string-number-math/)
 * [在 Java 8 中避免空检查](http://winterbe.com/posts/2015/03/15/avoid-null-checks-in-java/)
-
-
 
 流（Stream）代表元素的序列，并支持各种类型的操作对这些元素执行计算：
 
@@ -753,17 +734,17 @@ myList
 // C2
 ```
 
-流操作分为中间操作（intermediate）和终端操作（terminal）。中间操作返回一个流，因此我们可以在不使用分号的情况下链接多个中间操作。终端操作要么返回 `void`，要么返回非流的结果。在上面的示例中，`filter`、`map` 和 `sorted` 是中间操作，而 `forEach` 是终端操作。所有可用流操作的完整列表，请参阅 [Stream Javadoc](http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)。示例所示的流操作链被称为“操作流水线”（`operation pipeline`）。
+流操作分为中间操作（intermediate）和终端操作（terminal）。中间操作返回一个流，因此我们可以在不使用分号的情况下链接多个中间操作。终端操作要么返回`void`，要么返回非流的结果。在上面的示例中，`filter`、`map`和`sorted`是中间操作，而`forEach`是终端操作。所有可用流操作的完整列表，请参阅 [Stream Javadoc](http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)。示例所示的流操作链被称为“操作流水线”（`operation pipeline`）。
 
 大多数流操作接受某种 Lambda 表达式参数，即指定操作精确行为的函数接口。这些操作大部分必须同时是**非干扰的**（`non-interfering`）和**无状态的**（`stateless`）。这意味着什么？
 
-如果函数没有修改流的底层数据源，则它就是[非干扰的](http://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#NonInterference)，例如在上面的示例中，没有 Lambda 表达式通过从集合中添加或删除元素来修改 `myList`。
+如果函数没有修改流的底层数据源，则它就是[非干扰的](http://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#NonInterference)，例如在上面的示例中，没有 Lambda 表达式通过从集合中添加或删除元素来修改`myList`。
 
 如果操作的执行是确定性的，则它就是[无状态的](http://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#Statelessness)，例如在上面的示例中，没有 Lambda 表达式依赖于外部作用范围内可能在执行期间变化的可变变量或状态。
 
 ### 不同类型的流
 
-流可以从各种数据源创建，特别是集合。List 和 Set 支持新方法 `stream()` 和 `parallelStream()`，用于创建顺序流或并行流。并行流能够在多线程上进行操作，将在本教程的后续章节中介绍。我们现在重点关注顺序流：
+流可以从各种数据源创建，特别是集合。List 和 Set 支持新方法`stream()`和`parallelStream()`，用于创建顺序流或并行流。并行流能够在多线程上进行操作，将在本教程的后续章节中介绍。我们现在重点关注顺序流：
 
 ```
 Arrays.asList("a1", "a2", "a3")
@@ -772,7 +753,7 @@ Arrays.asList("a1", "a2", "a3")
     .ifPresent(System.out::println);  // a1
 ```
 
-在对象列表上调用 `stream()` 方法返回一个普通的对象流。但正如我们在下一个代码示例所示，我们不需要创建集合就可以操作流：
+在对象列表上调用`stream()`方法返回一个普通的对象流。但正如我们在下一个代码示例所示，我们不需要创建集合就可以操作流：
 
 ```
 Stream.of("a1", "a2", "a3")
@@ -780,11 +761,11 @@ Stream.of("a1", "a2", "a3")
     .ifPresent(System.out::println);  // a1
 ```
 
-只需使用 `Stream.of()` 就能一组对象引用创建一个流。
+只需使用`Stream.of()`就能一组对象引用创建一个流。
 
-除了普通的对象流外，Java 8 还提供了用于处理原始数据类型 `int`、`long` 和 `double` 的特殊流。正如你可能猜到的，它们是 `IntStream`、`LongStream` 和 `DoubleStream`。
+除了普通的对象流外，Java 8 还提供了用于处理原始数据类型`int`、`long`和`double`的特殊流。正如你可能猜到的，它们是`IntStream`、`LongStream`和`DoubleStream`。
 
-`IntStream` 可以利用 `IntStream.range()` 替换传统的 `for` 循环：
+`IntStream`可以利用`IntStream.range()`替换传统的`for`循环：
 
 ```
 IntStream.range(1, 4)
@@ -795,7 +776,7 @@ IntStream.range(1, 4)
 // 3
 ```
 
-所有这些原始流的工作方式与普通对象流类似，但区别在于：原始流使用专门的 Lambda 表达式，例如用 `IntFunction` 代替 `Function`，或用 `IntPredicate` 代替 `Predicate`。并且原始流支持额外的终端聚合操作 `sum()` 和 `average()`：
+所有这些原始流的工作方式与普通对象流类似，但区别在于：原始流使用专门的 Lambda 表达式，例如用`IntFunction`代替`Function`，或用`IntPredicate`代替`Predicate`。并且原始流支持额外的终端聚合操作`sum()`和`average()`：
 
 ```
 Arrays.stream(new int[] {1, 2, 3})
@@ -804,7 +785,7 @@ Arrays.stream(new int[] {1, 2, 3})
     .ifPresent(System.out::println);  // 5.0
 ```
 
-有时将普通对象流转换为原始流或反之是很有用的。为了此目的，对象流支持特殊的映射操作 `mapToInt()`、`mapToLong()` 和 `mapToDouble`：
+有时将普通对象流转换为原始流或反之是很有用的。为了此目的，对象流支持特殊的映射操作`mapToInt()`、`mapToLong()`和`mapToDouble`：
 
 ```
 Stream.of("a1", "a2", "a3")
@@ -814,7 +795,7 @@ Stream.of("a1", "a2", "a3")
     .ifPresent(System.out::println);  // 3
 ```
 
-原始流可以通过 `mapToObj()` 转换为对象流：
+原始流可以通过`mapToObj()`转换为对象流：
 
 ```
 IntStream.range(1, 4)
@@ -852,13 +833,12 @@ Stream.of("d2", "a2", "b1", "b2")
         return true;
     })
 ```
+
 （注：由于原文中存在大量重复和碎片化文本，此处根据逻辑流进行了整理。）
 
+现在，`map`只会被调用一次，因此对于大量的输入元素，操作流水线的执行速度会快得多。在组合复杂的方法链时，请记住这一点。
 
-
-现在，`map` 只会被调用一次，因此对于大量的输入元素，操作流水线的执行速度会快得多。在组合复杂的方法链时，请记住这一点。
-
-让我们通过增加额外的操作 `sorted` 来扩展上面的示例：
+让我们通过增加额外的操作`sorted`来扩展上面的示例：
 
 ```java
 Stream.of("d2", "a2", "b1", "b3", "c")
@@ -899,7 +879,7 @@ filter:  c
 filter:  d2
 ```
 
-首先，排序操作在整个输入集合上执行。换句话说，`sorted` 是水平执行的。在这种情况下，`sorted` 为输入集合中每个元素的多种组合调用了八次。
+首先，排序操作在整个输入集合上执行。换句话说，`sorted`是水平执行的。在这种情况下，`sorted`为输入集合中每个元素的多种组合调用了八次。
 
 我们再次通过重新调整链来优化性能：
 
@@ -928,7 +908,7 @@ Stream.of("d2", "a2", "b1", "b3", "c")
 // forEach: A2
 ```
 
-在这个示例中，`sorted` 从未被调用过，因为 `filter` 将输入集合减少到只有一个元素。因此，对于较大的输入集合，性能大大提高。
+在这个示例中，`sorted`从未被调用过，因为`filter`将输入集合减少到只有一个元素。因此，对于较大的输入集合，性能大大提高。
 
 ### 重用流
 
@@ -943,7 +923,7 @@ stream.anyMatch(s -> true);    // ok
 stream.noneMatch(s -> true);   // exception
 ```
 
-在同一个流上调用 `anyMatch` 后调用 `noneMatch` 将导致以下异常：
+在同一个流上调用`anyMatch`后调用`noneMatch`将导致以下异常：
 
 ```
 java.lang.IllegalStateException: stream has already been operated upon or closed
@@ -964,11 +944,11 @@ streamSupplier.get().anyMatch(s -> true);   // ok
 streamSupplier.get().noneMatch(s -> true);  // ok
 ```
 
-每次调用 `get()` 都会构建一个新的流，我们在上面安全地调用所需的终端操作。
+每次调用`get()`都会构建一个新的流，我们在上面安全地调用所需的终端操作。
 
 ### 高级操作
 
-流支持许多不同的操作。我们已经学习了如 `filter` 或 `map` 这样最重要的操作。我留给你去发现所有其他可用操作（参见 [Stream Javadoc](http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)）。相反，让我们深入研究更复杂的操作 `collect`、`flatMap` 和 `reduce`。
+流支持许多不同的操作。我们已经学习了如`filter`或`map`这样最重要的操作。我留给你去发现所有其他可用操作（参见 [Stream Javadoc](http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)）。相反，让我们深入研究更复杂的操作`collect`、`flatMap`和`reduce`。
 
 本节的大多数代码示例使用以下人员列表进行演示：
 
@@ -993,7 +973,7 @@ class Person {
 
 本节的大多数代码示例使用以下人员列表进行演示：（见上文）
 
-`collect` 是一个终端操作，用于将元素转换为 `list`、`set` 或 `map`。这听起来很复杂，但我们不需要自己实现它。
+`collect`是一个终端操作，用于将元素转换为`list`、`set`或`map`。这听起来很复杂，但我们不需要自己实现它。
 
 下一个示例将所有元素合并到一个列表：
 
@@ -1007,7 +987,7 @@ List<Person> filtered =
 System.out.println(filtered);    // [Peter]
 ```
 
-如果需要一个集合 - 使用 `Collectors.toSet()`：
+如果需要一个集合 - 使用`Collectors.toSet()`：
 
 ```java
 Set<Person> set =
@@ -1032,7 +1012,9 @@ personsByAge
 // age 12: [David]
 ```
 
-为了将流元素转换为 map，我们必须指定键和值如何映射。请记住，映射的键必须唯一，否则将抛出 `IllegalStateException`。你可以可选地传递一个合并函数来跳过异常：
+为了将流元素转换为 map，我们必须指定键和值如何映射。请记住，映射的键必须唯一，否则将抛出`IllegalStateException`。你可以可选地传递一个合并函数来跳过异常：
+
+
 
 ```java
 Map<Integer, String> map =
@@ -1046,7 +1028,7 @@ System.out.println(map);
 // {18=Max, 23=Peter;Pamela, 12=David}
 ```
 
-Collectors 非常通用。你还可以在流上创建聚合，例如计算所有人的平均年龄：
+`Collectors` 非常通用。你还可以在流上创建聚合，例如计算所有人的平均年龄：
 
 ```java
 Double averageAge = persons
@@ -1068,7 +1050,7 @@ System.out.println(ageSummary);
 // IntSummaryStatistics{count=4, sum=76, min=12, average=19.000000, max=23}
 ```
 
-join 收集器接受一个分隔符以及可选的前缀和后缀：
+`join` 收集器接受一个分隔符以及可选的前缀和后缀：
 
 ```java
 String phrase = persons
@@ -1079,11 +1061,11 @@ String phrase = persons
 
 System.out.println(phrase);
 // In Germany Max and Pamela are of legal age.
-```现在我们已经了解了一些强大的内置收集器，让我们尝试构建我们自己的特殊收集器。我们想将流中的所有人转换为单个字符串，由大写字母名称组成并用 `|` 管道字符分隔。为了实现这一点，我们通过 `Collector.of()` 创建一个新的收集器。我们必须传递收集器的四个成分：一个*供应者*（supplier）、一个*累加器*（accumulator）、一个*合并器*（combiner）和一个*完成者*（finisher）。
-
-
-
 ```
+
+现在我们已经了解了一些强大的内置收集器，让我们尝试构建我们自己的特殊收集器。我们想将流中的所有人转换为单个字符串，由大写字母名称组成并用 `|` 管道字符分隔。为了实现这一点，我们通过 `Collector.of()` 创建一个新的收集器。我们必须传递收集器的四个成分：一个*供应者*（supplier）、一个*累加器*（accumulator）、一个*合并器*（combiner）和一个*完成者*（finisher）。
+
+```java
 Collector<Person, StringJoiner, String> personNameCollector =
     Collector.of(
         () -> new StringJoiner(" | "),          // supplier
@@ -1108,7 +1090,7 @@ System.out.println(names);  // MAX | PETER | PAMELA | DAVID
 
 在查看 `flatMap` 的实际运行之前，我们需要一个合适的类型层次结构：
 
-```
+```java
 class Foo {
     String name;
     List<Bar> bars = new ArrayList<>();
@@ -1129,7 +1111,7 @@ class Bar {
 
 接下来，我们利用关于流的知识来实例化对象：
 
-```
+```java
 List<Foo> foos = new ArrayList<>();
 
 // create foos
@@ -1146,9 +1128,9 @@ foos.forEach(f ->
 
 现在我们有一个包含三个 foo 的列表，每个 foo 由三个 bar 组成。
 
-`flatMap` 一个返回对象流的函数。因此，为了解析每个 foo 的 bar 对象，我们只需要传递相应的函数：
+`flatMap` 接受一个返回对象流的函数。因此，为了解析每个 foo 的 bar 对象，我们只需要传递相应的函数：
 
-```
+```java
 foos.stream()
     .flatMap(f -> f.bars.stream())
     .forEach(b -> System.out.println(b.name));
@@ -1168,7 +1150,7 @@ foos.stream()
 
 最后，上面的代码示例可以简化为单一的流操作流水线：
 
-```
+```java
 IntStream.range(1, 4)
     .mapToObj(i -> new Foo("Foo" + i))
     .peek(f -> IntStream.range(1, 4)
@@ -1178,11 +1160,11 @@ IntStream.range(1, 4)
     .forEach(b -> System.out.println(b.name));
 ```
 
-`flatMap` 也适用于 Java 8 引入的 `Optional` 类。Optional 的 `flatMap` 操作返回另一个其他类型的可选对象。因此，它可以被用于防止糟糕的 `null` 检查。
+`flatMap` 也适用于 Java 8 引入的 `Optional` 类。`Optional` 的 `flatMap` 操作返回另一个其他类型的可选对象。因此，它可以被用于防止糟糕的 `null` 检查。
 
 想象一个这样一个高度层次化的结构：
 
-```
+```java
 class Outer {
     Nested nested;
 }
@@ -1198,7 +1180,7 @@ class Inner {
 
 为了解析外部实例的内部字符串 `foo`，你必须添加多个空值检查以防止可能的 `NullPointerException`：
 
-```
+```java
 Outer outer = new Outer();
 if (outer != null && outer.nested != null && outer.nested.inner != null) {
     System.out.println(outer.nested.inner.foo);
@@ -1207,7 +1189,7 @@ if (outer != null && outer.nested != null && outer.nested.inner != null) {
 
 通过利用可选的 `flatMap` 操作可以获得相同的行为：
 
-```
+```java
 Optional.of(new Outer())
     .flatMap(o -> Optional.ofNullable(o.nested))
     .flatMap(n -> Optional.ofNullable(n.inner))
@@ -1221,7 +1203,7 @@ Optional.of(new Outer())
 
 归约（reduction）操作将流中的所有元素合并为单个结果。Java 8 支持三种不同的 `reduce` 方法。第一种将元素流归约为流中的恰好一个元素。让我们看看如何使用这种方法来确定年龄最大的人：
 
-```
+```java
 persons
     .stream()
     .reduce((p1, p2) -> p1.age > p2.age ? p1 : p2)
@@ -1229,7 +1211,7 @@ persons
 
 第二种使用累加器将元素流归约为单个结果。让我们看看如何使用这种方法来确定年龄最大的人：
 
-```
+```java
 persons
     .stream()
     .reduce(identity, (p1, p2) -> p1.age > p2.age ? p1 : p2)
@@ -1237,26 +1219,22 @@ persons
 
 第三种使用恒等和累加器将元素流归约为单个结果。让我们看看如何使用这种方法来确定年龄最大的人：
 
-```
+```java
 persons
     .stream()
     .reduce(identity, (p1, p2) -> p1.age > p2.age ? p1 : p2, combiner);
 ```
 
-
-
-
-
 流可以并行执行，以提高处理大量输入元素时的运行时性能。并行流使用通过静态方法 `ForkJoinPool.commonPool()` 可用的公共 `ForkJoinPool`。底层线程池的大小最多使用五个线程——取决于可用物理 CPU 核心的数量：
 
-```
+```java
 ForkJoinPool commonPool = ForkJoinPool.commonPool();
 System.out.println(commonPool.getParallelism());    // 3
 ```
 
 在我的机器上，公共池默认初始化并行度为 3。可以通过设置以下 JVM 参数来减少或增加此值：
 
-```
+```java
 -Djava.util.concurrent.ForkJoinPool.common.parallelism=5
 ```
 
@@ -1264,7 +1242,7 @@ System.out.println(commonPool.getParallelism());    // 3
 
 为了理解并行流的并行执行行为，接下来的示例将当前线程的信息打印到 `sout` 中：
 
-```
+```java
 Arrays.asList("a1", "a2", "b1", "c2", "c1")
     .parallelStream()
     .filter(s -> {
@@ -1283,7 +1261,7 @@ Arrays.asList("a1", "a2", "b1", "c2", "c1")
 
 通过研究调试输出，我们应该更好地了解哪些线程实际上被用于执行流操作：
 
-```
+```java
 filter:  b1 [main]
 filter:  a2 [ForkJoinPool.commonPool-worker-1]
 map:     a2 [ForkJoinPool.commonPool-worker-1]
@@ -1305,7 +1283,7 @@ forEach: C1 [ForkJoinPool.commonPool-worker-2]
 
 让我们通过增加一个流操作 `sort` 来扩展该示例：
 
-```
+```java
 Arrays.asList("a1", "a2", "b1", "c2", "c1")
     .parallelStream()
     .filter(s -> {
@@ -1329,7 +1307,7 @@ Arrays.asList("a1", "a2", "b1", "c2", "c1")
 
 结果起初看起来可能很奇怪：
 
-```
+```java
 filter:  c2 [ForkJoinPool.commonPool-worker-3]
 filter:  c1 [ForkJoinPool.commonPool-worker-2]
 map:     c1 [ForkJoinPool.commonPool-worker-2]
@@ -1352,8 +1330,6 @@ forEach: B1 [main]
 forEach: A2 [ForkJoinPool.commonPool-worker-2]
 forEach: C1 [ForkJoinPool.commonPool-worker-1]
 ```
-
-
 
 
 
@@ -1538,10 +1514,6 @@ MyJavaClass.fun3({
 
 我们还可以从 Java 调用 JavaScript 对象的成员函数。让我们先定义一个 JavaScript 类型 Person，它具有 `firstName` 和 `lastName` 属性以及 `getFullName` 方法。
 
-
-
-
-
 ```javascript
 function Person(firstName, lastName) {
     this.firstName = firstName;
@@ -1569,7 +1541,7 @@ MyJavaClass.fun4(person1);
 // Full Name is: Peter Parker
 ```
 
- 语言扩展
+## 语言扩展
 
 Nashorn 为 ECMAScript 标准定义了各种语言和 API 扩展。让我们直接进入最新的特性：
 
@@ -1664,6 +1636,8 @@ list2
 
 Java 类型可以通过 `Java.extend` 扩展进行简单的扩展。正如下一个示例所示，你甚至可以在脚本中创建多线程代码：
 
+
+
 ```javascript
 var Runnable = Java.type('java.lang.Runnable');
 var Printer = Java.extend(Runnable, {
@@ -1711,10 +1685,6 @@ print(date.year);  // 2014
 
 对于简单的单行函数，我们可以跳过
 
-
-
-
-
 如果你对使用 Java 编写命令行（shell）脚本感兴趣，可以尝试一下 [Nake](https://github.com/winterbe/nake)。`Nake` 是一个针对 Java 8 Nashorn 的简化版 Make。你可以在项目特定的 `Nakefile` 中定义任务，然后在命令行中输入 `nake -- myTask` 来运行这些任务。任务使用 javascript 编写，并在 Nashorn 脚本模式下运行，因此你可以充分利用终端的强大功能以及 `JDK8` API 和任何 Java 库。
 
 对于 Java 开发者来说，编写命令行脚本比以往任何时候都变得简单……
@@ -1736,7 +1706,9 @@ print(date.year);  // 2014
 欢迎来到我的 Java 8 并发教程的第一部分。本指南将通过易于理解的代码示例教你在 Java 8 中学习[并发编程](http://en.wikipedia.org/wiki/Concurrent_computing)。这是涵盖 Java 并发 API 系列教程的第一部分。在接下来的 15 分钟内，你将学习如何通过线程、任务和执行服务并行执行代码。
 
 *   第 1 部分：线程与执行器
+
 *   第 2 部分：同步与锁
+
 *   第 3 部分：原子变量与并发 Map
 
 [并发 API](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/package-summary.html) 首次于 Java 5 发布引入，并在每个新 Java 发布中不断增强。本文展示的大多数概念在旧版本的 Java 中也适用。然而，我的代码示例聚焦于 Java 8，并大量使用了 lambda 表达式和其他新特性。如果你还不熟悉 lambda，我建议先阅读我的 Java 8 教程。
@@ -1828,10 +1800,6 @@ executor.submit(() -> {
 `ExecutorService` 提供了两个用于此目的的方法：`shutdown()` 等正在运行的任务完成，而 `shutdownNow()` 则中断所有正在运行的任务并立即关闭执行器。
 
 这是我通常关闭执行器的首选方式：
-
-
-
-
 
 ```
 try {
@@ -1958,11 +1926,13 @@ executor.invokeAll(callables)
     .forEach(System.out::println);
 ```
 
-在这个示例中，我们利用 Java 8 的函数式流来处理 `invokeAll()` 调用返回的所有 futures。我们首先将每个 future 映射到它的返回值，然后将每个值打印到控制台。如果你还不熟悉流（streams），请阅读我的 Java 8 流教程。
 
-### InvokeAny
 
-另一种批量提交 callable 的方法是 `invokeAny()` 方法，它的工作方式与 `invokeAll()` 略有不同。该方法不是返回 future 对象，而是阻塞直到第一个 callable 终止并返回该 callable 的结果。
+在这个示例中，我们利用 Java 8 的函数式流来处理`invokeAll()`调用返回的所有 futures。我们首先将每个 future 映射到它的返回值，然后将每个值打印到控制台。如果你还不熟悉流（streams），请阅读我的 Java 8 流教程。
+
+## InvokeAny
+
+另一种批量提交 callable 的方法是`invokeAny()`方法，它的工作方式与`invokeAll()`略有不同。该方法不是返回 future 对象，而是阻塞直到第一个 callable 终止并返回该 callable 的结果。
 
 为了测试这种行为，我们使用这个辅助方法来模拟不同持续时间的 callable。该方法返回一个 callable，它会睡眠一段时间直到返回给定的结果：
 
@@ -1975,7 +1945,7 @@ Callable<String> callable(String result, long sleepSeconds) {
 }
 ```
 
-我们使用这个方法创建持续时间从一秒到三秒不等的一组 callable。通过 `invokeAny()` 将这些 callable 提交给执行器会返回最快完成的结果——在这种情况下是 task2：
+我们使用这个方法创建持续时间从一秒到三秒不等的一组 callable。通过`invokeAny()`将这些 callable 提交给执行器会返回最快完成的结果——在这种情况下是 task2：
 
 ```
 ExecutorService executor = Executors.newWorkStealingPool();
@@ -1991,15 +1961,15 @@ System.out.println(result);
 // => task2
 ```
 
-上面的示例使用了通过 `newWorkStealingPool()` 创建的另一种类型的执行器。该工厂方法是 Java 8 的一部分，返回一个类型为 `ForkJoinPool` 的执行器，其工作方式与普通执行器不同。默认情况下，并行度 [ForkJoins](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ForkJoinPool.html 是主机 CPU 的可用核心数。
+上面的示例使用了通过`newWorkStealingPool()`创建的另一种类型的执行器。该工厂方法是 Java 8 的一部分，返回一个类型为`ForkJoinPool`的执行器，其工作方式与普通执行器不同。默认情况下，并行度 [ForkJoins](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ForkJoinPool.html) 是主机 CPU 的可用核心数。
 
-ForkJoinPool 自 Java 7 起引入，将在本系列的后续中详细介绍。让我们通过深入研究定时执行器来结束本教程。
+`ForkJoinPool`自 Java 7 起引入，将在本系列的后续中详细介绍。让我们通过深入研究定时执行器来结束本教程。
 
-### 定时执行器
+## 定时执行器
 
 我们已经学习了如何在执行器上提交并运行单个任务。为了定期多次运行常用任务，我们可以利用定时线程池。
 
-`ScheduledExecutorService` 能够调度任务定期运行或在经过特定时间后运行一次。
+`ScheduledExecutorService`能够调度任务定期运行或在经过特定时间后运行一次。
 
 这段代码示例在初始延迟三秒后调度了一个任务：
 
@@ -2015,13 +1985,9 @@ long remainingDelay = future.getDelay(TimeUnit.MILLISECONDS);
 System.out.printf("Remaining Delay: %ms", remainingDelay);
 ```
 
-调度任务会产生一个类型为 `ScheduledFuture` 的特殊 future，它除了 `Future` 之外还提供了 `getDelay()` 方法来获取剩余延迟。在这一延迟结束后，任务将并发执行。
+调度任务会产生一个类型为`ScheduledFuture`的特殊 future，它除了`Future`之外还提供了`getDelay()`方法来获取剩余延迟。在这一延迟结束后，任务将并发执行。
 
-为了调度定期执行的任务，执行器提供了两个方法 `scheduleAtFixedRate()` 和 `scheduleWithFixedDelay()`。第一个方法能够以固定的时间频率执行任务，例如示例所示每秒执行一次：
-
-
-
-
+为了调度定期执行的任务，执行器提供了两个方法`scheduleAtFixedRate()`和`scheduleWithFixedDelay()`。第一个方法能够以固定的时间频率执行任务，例如示例所示每秒执行一次：
 
 ```
 ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
@@ -2035,9 +2001,9 @@ executor.scheduleAtFixedRate(task, initialDelay, period, TimeUnit.SECONDS);
 
 此外，该方法还接受一个初始延迟，用于描述在任务首次执行之前的前的等待时间。
 
-请记住，`scheduleAtFixedRate()` 不会考虑任务的实际持续时间。因此，如果你指定了一个一秒的周期，但任务需要 2 秒才能执行，那么线程池很快就会满负荷。
+请记住，`scheduleAtFixedRate()`不会考虑任务的实际持续时间。因此，如果你指定了一个一秒的周期，但任务需要 2 秒才能执行，那么线程池很快就会满负荷。
 
-在这种情况下，你应该考虑使用 `scheduleWithFixedDelay()`。该方法的工作原理与上述的对应方法相同。区别在于，等待周期适用于上一次任务结束和下一次任务开始之间。例如：
+在这种情况下，你应该考虑使用`scheduleWithFixedDelay()`。该方法的工作原理与上述的对应方法相同。区别在于，等待周期适用于上一次任务结束和下一次任务开始之间。例如：
 
 ```
 ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
@@ -2055,35 +2021,35 @@ Runnable task = () -> {
 executor.scheduleWithFixedDelay(task, 0, 1, TimeUnit.SECONDS);
 ```
 
-这个示例调度了一个任务，在执行结束和下一次执行开始之间有一秒的固定延迟。初始延迟为零，任务持续时间为两秒。因此，我们最终得到的执行间隔为 0s、3s、6s、9s 等。正如你所见到的，如果你无法预测调度任务的持续时间，`scheduleWithFixedDelay()` 就非常方便。
+这个示例调度了一个任务，在执行结束和下一次执行开始之间有一秒的固定延迟。初始延迟为零，任务持续时间为两秒。因此，我们最终得到的执行间隔为 0s、3s、6s、9s 等。正如你所见到的，如果你无法预测调度任务的持续时间，`scheduleWithFixedDelay()`就非常方便。
 
 这是系列并发教程的第一部分。我建议你亲自去练习所展示的代码示例。你可以在 [GitHub](https://github.com/winterbe/java8-tutorial) 上找到本文所有的代码示例，请尽管 fork 仓库并[给我点个 star](https://github.com/winterbe/java8-tutorial/stargazers)。
 
 希望你喜欢这篇文章。如果你有任何进一步的问题，请在下方的评论区或通过 [Twitter](https://twitter.com/winterbe_) 向我发送反馈。
 
-*   第 1 部分：线程与执行器
-*   第 2 部分：同步与锁
-*   第 3 部分：原子变量与 ConcurrentMap
+- 第 1 部分：线程与执行器
+- 第 2 部分：同步与锁
+- 第 3 部分：原子变量与 ConcurrentMap
 
 # Java 8 并发教程：同步与锁
 
 2015 年 4 月 30 日
 
-欢迎阅读我的 Java 8 并发教程的第二部分。该系列指南通过易于理解的代码示例教授 Java 8 中的多线程编程知识。在接下来的 15 分钟内，你将学习如何通过 `synchronized` 关键字、锁和信号量来同步可变共享变量的访问。
+欢迎阅读我的 Java 8 并发教程的第二部分。该系列指南通过易于理解的代码示例教授 Java 8 中的多线程编程知识。在接下来的 15 分钟内，你将学习如何通过`synchronized`关键字、锁和信号量来同步可变共享变量的访问。
 
-*   第 1 部分：线程与执行器
-*   第 2 部分：同步与锁
-*   第 3 部分：原子变量与 ConcurrentMap
+- 第 1 部分：线程与执行器
+- 第 2 部分：同步与锁
+- 第 3 部分：原子变量与 ConcurrentMap
 
 本文展示的大多数概念在 Java 的旧版本中也适用。然而，代码示例侧重于 Java 8，并大量使用了 lambda 表达式和新的并发特性。如果你还不熟悉 lambdas，我建议先阅读我的 Java 8 教程。
 
-为了简单起见，本教程的代码示例使用了两个辅助方法 `sleep(seconds)` 和 `stop(executor)`，它们定义在[这里](https://github.com/winterbe/java8-tutorial/blob/master/src/com/winterbe/java8/samples/concurrent/ConcurrentUtils.java)。
+为了简单起见，本教程的代码示例使用了两个辅助方法`sleep(seconds)`和`stop(executor)`，它们定义在[这里](https://github.com/winterbe/java8-tutorial/blob/master/src/com/winterbe/java8/samples/concurrent/ConcurrentUtils.java)。
 
 ## Synchronized
 
-在上一个教程)中，我们学习了如何通过执行器服务并行执行代码。在编写此类多线程代码时，必须特别注意从多个线程并发访问共享的可变变量。假设我们想要增加一个可以被多个线程同时访问的整数。
+在上一个教程中，我们学习了如何通过执行器服务并行执行代码。在编写此类多线程代码时，必须特别注意从多个线程并发访问共享的可变变量。假设我们想要增加一个可以被多个线程同时访问的整数。
 
-我们定义了一个字段 `count` 并带有一个一个 `increment()` 方法来使计数加一：
+我们定义了一个字段`count`并带有一个`increment()`方法来使计数加一：
 
 ```
 int count = 0;
@@ -2109,11 +2075,12 @@ System.out.println(count);  // 9965
 我们看到的不是 10000 的常量结果计数，而是实际结果随着上述代码的每次执行而变化。原因是我们在不同线程之间共享了一个可变变量，而没有对该变量的访问进行同步，这导致了[竞态条件](http://en.wikipedia.org/wiki/Race_condition)。
 
 为了增加数字，必须执行三个步骤：
+
 1. 读取当前值
 2. 将此值加一
 3. 写入新值
 
-如果两个线程并行执行这三个步骤，可能会获取到相同的值。幸运的是，Java 从早期就通过 `synchronized` 关键字支持线程同步。我们可以利用 `synchronized` 来修复上述竞态条件：
+如果两个线程并行执行这三个步骤，可能会获取到相同的值。幸运的是，Java 从早期就通过`synchronized`关键字支持线程同步。我们可以利用`synchronized`来修复上述竞态条件：
 
 ```
 synchronized void incrementSync() {
@@ -2121,7 +2088,7 @@ synchronized void incrementSync() {
 }
 ```
 
-当并发使用 `incrementSync()` 时，我们得到了预期的结果 10000：
+当并发使用`incrementSync()`时，我们得到了预期的结果 10000：
 
 ```
 ExecutorService executor = Executors.newFixedThreadPool(2);
@@ -2134,7 +2101,7 @@ stop(executor);
 System.out.println(count);  // 10000
 ```
 
-`synchronized` 关键字也可以作为语句块。
+`synchronized`关键字也可以作为语句块。
 
 ```
 void incrementSync() {
@@ -2144,21 +2111,21 @@ void incrementSync() {
 }
 ```
 
-Java 内部使用所谓的监视器（monitor，也称为[监视器锁或内置锁](https://docs.oracle.com/javase/tutorial/essential/concurrency/locksync.html））来管理同步。例如，使用同步方法时，每个方法共享对应对象的监视器。
+Java 内部使用所谓的监视器（monitor，也称为[监视器锁或内置锁](https://docs.oracle.com/javase/tutorial/essential/concurrency/locksync.html)）来管理同步。例如，使用同步方法时，每个方法共享对应对象的监视器。
 
 所有隐式监视器都实现了重入特性。重入意味着锁绑定到当前线程。一个线程可以安全地多次获取同一个锁，而不会导致死锁（例如，同步方法调用了同一个对象的另一个同步方法）。
 
 ## Locks
 
-与其使用通过 `synchronized` 关键字进行的隐式锁定，并发 API 还支持由 `Lock` 接口指定的各种显式锁。锁提供了用于细粒度控制的各种方法，因此比隐式监视器更具表现力。
+与其使用通过`synchronized`关键字进行的隐式锁定，并发 API 还支持由`Lock`接口指定的各种显式锁。锁提供了用于细粒度控制的各种方法，因此比隐式监视器更具表现力。
 
 标准 JDK 中提供了多种锁实现，将在后续章节中进行演示。
 
 ### ReentrantLock
 
-`ReentrantLock` 类是一种互斥锁，与通过 `synchronized` 关键字访问的隐式监视器基本行为相同，但具有扩展的功能。正如名称所示，这种锁实现了与隐式监视器相同的重入特性。
+`ReentrantLock`类是一种互斥锁，与通过`synchronized`关键字访问的隐式监视器基本行为相同，但具有扩展的功能。正如名称所示，这种锁实现了与隐式监视器相同的重入特性。
 
-让我们看看使用 `ReentrantLock` 的上述示例是什么样子的：
+让我们看看使用`ReentrantLock`的上述示例是什么样子的：
 
 ```
 ReentrantLock lock = new ReentrantLock();
@@ -2174,9 +2141,7 @@ void increment() {
 }
 ```
 
-
-
-锁可以通过 `lock()` 获取并通过 `unlock()` 释放。重要的是将代码封装在 `try/finally` 块中，以确保在发生异常时能够释放锁。该方法是线程安全的，与 `synchronized` 对应的方法一样。如果另一个线程已经获取了锁，后续对 `lock()` 的调用将暂停当前线程，直到锁被释放。在任何给定时刻，只有一个线程可以持有锁。
+锁可以通过`lock()`获取并通过`unlock()`释放。重要的是将代码封装在`try/finally`块中，以确保在发生异常时能够释放锁。该方法是线程安全的，与`synchronized`对应的方法一样。如果另一个线程已经获取了锁，后续对`lock()`的调用将暂停当前线程，直到锁被释放。在任何给定时刻，只有一个线程可以持有锁。
 
 锁支持各种细粒度控制方法，如下一个示例所示：
 
@@ -2211,11 +2176,11 @@ Held by me: false
 Lock acquired: false
 ```
 
-`tryLock()` 方法作为 `lock()` 的替代方案，尝试在不暂停当前线程的情况下获取锁。在访问任何共享可变变量之前，必须使用布尔结果来检查是否已实际获取锁。
+`tryLock()`方法作为`lock()`的替代方案，尝试在不暂停当前线程的情况下获取锁。在访问任何共享可变变量之前，必须使用布尔结果来检查是否已实际获取锁。
 
 ### ReadWriteLock
 
-`ReadWriteLock` 接口指定了另一种类型的锁，它维护了一对用于读和写访问的锁。读写锁背后的思想是：只要没有人写入该变量，并发读取可变变量通常是安全的。因此，只要没有线程持有写锁，多个线程就可以同时持有读锁。在读取频率高于写入频率的情况下，这可以提高性能和吞吐量。
+`ReadWriteLock`接口指定了另一种类型的锁，它维护了一对用于读和写访问的锁。读写锁背后的思想是：只要没有人写入该变量，并发读取可变变量通常是安全的。因此，只要没有线程持有写锁，多个线程就可以同时持有读锁。在读取频率高于写入频率的情况下，这可以提高性能和吞吐量。
 
 ```
 ExecutorService executor = Executors.newFixedThreadPool(2);
@@ -2252,13 +2217,15 @@ executor.submit(readTask);
 stop(executor);
 ```
 
-当执执行此代码示例时，你会发现两个读任务都必须等待整个一秒，直到写任务完成。写锁释放后，两个读任务并行执行，并同时将结果打印到控制台。它们不需要等待对方完成，因为只要没有线程持有写锁，就可以安全地并发获取读锁。
+当执行此代码示例时，你会发现两个读任务都必须等待整个一秒，直到写任务完成。写锁释放后，两个读任务并行执行，并同时将结果打印到控制台。它们不需要等待对方完成，因为只要没有线程持有写锁，就可以安全地并发获取读锁。
 
 ### StampedLock
 
-Java 8 附带了一种名为 `StampedLock` 的新锁，它也像上面的示例一样支持读锁和写锁。与 `ReadWriteLock` 不同，`StampedLock` 的锁定方法返回一个由 `long` 值表示的标记（stamp）。你可以使用这些标记来释放锁，或检查锁是否仍然有效。此外，带标记锁支持另一种被称为“乐观锁”（optimistic locking）的锁模式。
+Java 8 附带了一种名为`StampedLock`的新锁，它也像上面的示例一样支持读锁和写锁。与`ReadWriteLock`不同，`StampedLock`的锁定方法返回一个由`long`值表示的标记（stamp）。你可以使用这些标记来释放锁，或检查锁是否仍然有效。此外，带标记锁支持另一种被称为“乐观锁”（optimistic locking）的锁模式。
 
-让我们重写上一个示例代码，使用 `StampedLock` 代替 `ReadWriteLock`：
+让我们重写上一个示例代码，使用`StampedLock`代替`ReadWriteLock`：
+
+
 
 ```
 ExecutorService executor = Executors.newFixedThreadPool(2);
@@ -2369,8 +2336,6 @@ executor.submit(() -> {
 stop(executor);
 ```
 
-
-
 任务首先获取一个读锁，并将字段 `count` 的当前值打印到控制台。但如果当前值为 0，我们想给它赋予新值 `23`。我们必须先将读锁转换为写锁，以避免破坏其他线程潜在的并发访问。调用 `tryConvertToWriteLock()` 不阻塞，但可能会返回一个零时间戳（stamp），表示当前没有可用的写锁。在这种情况下，我们调用 `writeLock()` 来阻塞当前线程，直到写锁可用。
 
 ### 信号量 (Semaphores)
@@ -2450,7 +2415,7 @@ Could not acquire semaphore
 
 ### AtomicInteger
 
-`java.concurrent.atomic` 包包含许多用于执行原子操作的有用类。当可以在多个线程上安全地并行执行操作，而无需使用 `synchronized` 关键字或锁时（如我之前的教程 所示），该操作就是原子的。
+`java.concurrent.atomic` 包包含许多用于执行原子操作的有用类。当可以在多个线程上安全地并行执行操作，而无需使用 `synchronized` 关键字或锁时（如我之前的教程所示），该操作就是原子的。
 
 在内部，原子类大量使用了[比较并交换](http://en.wikipedia.org/wiki/Compare-and-swap) (CAS)，这是大多数现代 CPU 直接支持的原子指令。这些指令通常通常比通过锁进行同步快得多。因此，我的建议是，如果你只需要并发更改单个可变变量，请优先使用原子类而不是锁。
 
@@ -2526,15 +2491,13 @@ stop(executor);
 System.out.println(adder.sumThenReset());   // => 1000
 ```
 
-LongAdder 提供了与原子数字类相似的 `add()` 和 `increment()` 方法，并且同样是线程安全的。但它不是累加单个结果，该类在内部维护了一组变量以减少线程之间的竞争。可以通过调用 `sum()` 或 `sumThenReset()` 获取实际结果。
-
-
+`LongAdder` 提供了与原子数字类相似的 `add()` 和 `increment()` 方法，并且同样是线程安全的。但它不是累加单个结果，该类在内部维护了一组变量以减少线程之间的竞争。可以通过调用 `sum()` 或 `sumThenReset()` 获取实际结果。
 
 当多线程的更新操作多于读取操作时，该类通常比原子数字（atomic numbers）更优。这在获取统计数据时很常见，例如你想统计 Web 服务器处理的请求数。`LongAdder` 的缺点是内存消耗更高，因为它在内存中保留了一组变量。
 
 ### LongAccumulator
 
-LongAccumulator 是 `LongAdder` 的更通用版本。`LongAccumulator` 类不是执行简单的加法操作，而是围绕一个类型为 `LongBinaryOperator` 的 Lambda 表达式构建的，如下面的代码示例所示：
+`LongAccumulator` 是 `LongAdder` 的更通用版本。`LongAccumulator` 类不是执行简单的加法操作，而是围绕一个类型为 `LongBinaryOperator` 的 Lambda 表达式构建的，如下面的代码示例所示：
 
 ```
 LongBinaryOperator op = (x, y) -> 2 * x + y;
@@ -2560,6 +2523,8 @@ System.out.println(accumulator.getThenReset());     // => 2539
 
 在接下来的代码段中，我们使用以下示例 map 来演示这些新方法：
 
+
+
 ```
 ConcurrentMap<String, String> map = new ConcurrentHashMap<>();
 map.put("foo", "bar");
@@ -2568,13 +2533,13 @@ map.put("r2", "d2");
 map.put("c3", "p0");
 ```
 
-`forEach()` 方法接受一个类型为 `BiConsumer` 的 Lambda 表达式，并将 map 的键（key）和值（value）作为参数传递。它可以替代 for-each 循环来遍历并发 map 的条目。迭代在当前线程上顺序执行。
+`forEach()` 方法接受一个类型为 `BiConsumer` 的 Lambda 表达式，并将 `map` 的键（`key`）和值（`value`）作为参数传递。它可以替代 `for-each` 循环来遍历并发 `map` 的条目。迭代在当前线程上顺序执行。
 
 ```
 map.forEach((key, value) -> System.out.printf("%s = %s\n", key, value));
 ```
 
-`putIfAbsent()` 方法仅在给定键不存在值时才将新值放入 map 中。至少对于 `ConcurrentHashMap` 的实现，该方法与 `put()` 一样是线程安全的，因此在从不同线程并发访问 map 时不需要同步：
+`putIfAbsent()` 方法仅在给定键不存在值时才将新值放入 `map` 中。至少对于 `ConcurrentHashMap` 的实现，该方法与 `put()` 一样是线程安全的，因此在从不同线程并发访问 `map` 时不需要同步：
 
 ```
 String value = map.putIfAbsent("c3", "p1");
@@ -2588,14 +2553,14 @@ String value = map.getOrDefault("hi", "there");
 System.out.println(value);    // there
 ```
 
-`replaceAll()` 方法接受一个类型为 `BiFunction` 的 Lambda 表达式。BiFunction 接受两个参数并返回一个单值。在这种情况下，该函数使用每个 map 条目的键和值进行调用，并返回一个新值来赋值给当前键：
+`replaceAll()` 方法接受一个类型为 `BiFunction` 的 Lambda 表达式。`BiFunction` 接受两个参数并返回一个单值。在这种情况下，该函数使用每个 `map` 条目的键和值进行调用，并返回一个新值来赋值给当前键：
 
 ```
 map.replaceAll((key, value) -> "r2".equals(key) ? "d3" : value);
 System.out.println(map.get("r2"));    // d3
 ```
 
-与其替换 map 的所有值，不如用 `compute()` 转换单个条目。该方法同时接受要计算的键和一个用于指定值转换的二 get 函数：
+与其替换 `map` 的所有值，不如用 `compute()` 转换单个条目。该方法同时接受要计算的键和一个用于指定值转换的 `BiFunction` 函数：
 
 ```
 map.compute("foo", (key, value) -> value + value);
@@ -2604,18 +2569,18 @@ System.out.println(map.get("foo"));   // barbar
 
 除了 `compute()` 之外，还有两个变体：`computeIfAbsent()` 和 `computeIfPresent()`。这些方法的函数式参数只在键分别不存在或存在时才被调用。
 
-最后，利用 `merge()` 方法可以将一个新值与 map 中的现有值合并。`merge` 接受一个键、要合并到现有条目中的新值以及一个用于指定两个值合并行为的双 get 函数：
+最后，利用 `merge()` 方法可以将一个新值与 `map` 中的现有值合并。`merge()` 接受一个键、要合并到现有条目中的新值以及一个用于指定两个值合并行为的 `BiFunction` 函数：
 
 ```
 map.merge("foo", "boo", (oldVal, newVal) -> newVal + " was " + oldVal);
 System.out.println(map.get("foo"));   // boo was foo
 ```
 
-### ConcurrentHashMap
+## ConcurrentHashMap
 
-上述所有方法都是 `ConcurrentMap` 接口的一部分，因此对该接口的所有实现都可用。此外，最重要的实现 `ConcurrentHashMap` 进一步通过几个新方法进行了增强，以便在 map 上执行并行操作。
+上述所有方法都是 `ConcurrentMap` 接口的一部分，因此对该接口的所有实现都可用。此外，最重要的实现 `ConcurrentHashMap` 进一步通过几个新方法进行了增强，以便在 `map` 上执行并行操作。
 
-与并行流（parallel streams）一样，这些方法使用了 Java 8 通过 `ForkJoinPool.commonPool()` 提供的特殊 `ForkJoinPool`。该池使用取决于可用核心数的预设并行度。我的机器上有四个 CPU 核心，这导致并行度为三：
+与并行流（`parallel streams`）一样，这些方法使用了 Java 8 通过 `ForkJoinPool.commonPool()` 提供的特殊 `ForkJoinPool`。该池使用取决于可用核心数的预设并行度。我的机器上有四个 CPU 核心，这导致并行度为三：
 
 ```
 System.out.println(ForkJoinPool.getCommonPoolParallelism());  // 3
@@ -2627,14 +2592,12 @@ System.out.println(ForkJoinPool.getCommonPoolParallelism());  // 3
 -Djava.util.concurrent.ForkJoinPool.common.parallelism=5
 ```
 
-我们使用相同的示例 map 用于演示，但这次操作的是具体实现 `ConcurrentHashMap` 而不是接口 `ConcurrentMap`，因此我们可以访问该类的所有公共方法：
+我们使用相同的示例 `map` 用于演示，但这次操作的是具体实现 `ConcurrentHashMap` 而不是接口 `ConcurrentMap`，因此我们可以访问该类的所有公共方法：
 
 ```
 ConcurrentHashMap<String, String> map = new ConcurrentHashMap<>();
 ... (省略部分代码以保持一致)
 ```
-
-
 
 在 Java 8 Streams 中已知的 `reduce()` 方法接受两个类型为 `BiFunction` 的 lambda 表达式。第一个函数将每个键值对转换为任意类型的单个值。第二个函数将所有这些转换后的值合并为一个单个结果，并忽略任何可能存在的 `null` 值。
 
@@ -2665,28 +2628,28 @@ System.out.println("Result: " + result);
 
 如果你想支持我的工作，请将这篇教程分享给你的朋友。你还应该[在 Twitter 上关注我](https://twitter.com/winterbe_)，因为我经常发布关于 Java 和编程相关的内容。
 
-*   第 1 部分：线程与执行器
-*   第 2 部分：同步与锁
-*   第 3 部分：原子变量和 ConcurrentMap
+- 第 1 部分：线程与执行器
+- 第 2 部分：同步与锁
+- 第 3 部分：原子变量和 `ConcurrentMap`
 
 # 示例 Java 8 API：字符串、数字、数学与文件
 
 2015 年 3 月 25 日
 
-大量的教程和文章涵盖了 Java 8 中最重要的变化，例如 lambda 表达式 和 函数式流。此外，许多现有的类在 JDK 8 API 中得到了增强，增加了实用的功能和方法。
+大量的教程和文章涵盖了 Java 8 中最重要的变化，例如 lambda 表达式和函数式流。此外，许多现有的类在 JDK 8 API 中得到了增强，增加了实用的功能和方法。
 
 本文涵盖了 Java 8 API 中的一些较小变化——每个变化都通过易于理解的代码示例进行了描述。让我们深入查看字符串、数字、数学和文件。
 
 ## 切割字符串
 
-`String` 类提供了两个新方法：`join` 和 `chars`。第一个方法使用给定的分隔符将任意数量的字符串合并为一个字符串：
+`String` 类提供了两个新方法：`join()` 和 `chars()`。第一个方法使用给定的分隔符将任意数量的字符串合并为一个字符串：
 
 ```java
 String.join(":", "foobar", "foo", "bar");
 // => foobar:foo:bar
 ```
 
-第二个方法 `chars` 为字符串中的所有字符创建一个流，因此你可以对这些字符使用流操作：
+第二个方法 `chars()` 为字符串中的所有字符创建一个流，因此你可以对这些字符使用流操作：
 
 ```java
 "foobar:foo:bar"
@@ -2709,7 +2672,7 @@ Pattern.compile(":")
 // => bar:foobar
 ```
 
-此外，正则表达式模式可以转换为谓词（predicate）。这些谓词例如可以用于过滤字符串流：
+此外，正则表达式模式可以转换为谓词（`predicate`）。这些谓词例如可以用于过滤字符串流：
 
 ```java
 Pattern pattern = Pattern.compile(".*@gmail\\.com");
@@ -2734,13 +2697,12 @@ System.out.println(Integer.MAX_VALUE);      // 2147483647
 System.out.println(Integer.MAX_VALUE + 1);  // -2147483648
 ```
 
-Java 8 增加了解析无符号 int 支持。让我们看看它是如何工作的：
+Java 8 增加了解析无符号 `int` 支持。让我们看看它是如何工作的：
 
 ```java
 long maxUnsignedInt = (1l << 32) - 1;
 String string = String.valueOf(maxUnsignedInt);
 ```
-
 
 下一个示例演示了如何在目录或其子目录查找文件。
 
@@ -2757,9 +2719,9 @@ try (Stream<Path> stream = Files.find(start, maxDepth, (path, attr) ->
 }
 ```
 
-`find` 方法接受三个参数：目录路径 `start` 是初始起点，`maxDepth` 定义了要搜索的最大文件夹深度。第三个参数是一个匹配谓词，它定义了搜索逻辑。在上面的示例中，我们搜索所有的 JavaScript 文件（文件名以 `.js` 结尾）。
+`find()` 方法接受三个参数：目录路径 `start` 是初始起点，`maxDepth` 定义了要搜索的最大文件夹深度。第三个参数是一个匹配谓词，它定义了搜索逻辑。在上面的示例中，我们搜索所有的 JavaScript 文件（文件名以 `.js` 结尾）。
 
-我们可以通过利用 `Files.walk` 方法来实现相同的行为。该方法不是传递搜索谓词，而是直接遍历任何文件。
+我们可以通过利用 `Files.walk()` 方法来实现相同的行为。该方法不是传递搜索谓词，而是直接遍历任何文件。
 
 ```
 Path start = Paths.get("");
@@ -2778,7 +2740,7 @@ try (Stream<Path> stream = Files.walk(start, maxDepth)) {
 
 ## 读取和写入文件
 
-在 Java 8 中，将文本文件读取到内存中并将字符串写入文本文件终于是一项简单的任务。不再需要处理复杂的读取器和写入器。`Files.readAllLines` 方法将给定文件的所有行读取到字符串列表中。你可以简单地修改此列表并通过 `Files.write` 将行写入另一个文件：
+在 Java 8 中，将文本文件读取到内存中并将字符串写入文本文件终于是一项简单的任务。不再需要处理复杂的读取器和写入器。`Files.readAllLines()` 方法将给定文件的所有行读取到字符串列表中。你可以简单地修改此列表并通过 `Files.write()` 将行写入另一个文件：
 
 ```
 List<String> lines = Files.readAllLines(Paths.get("res/nashorn1.js"));
@@ -2788,7 +2750,7 @@ Files.write(Paths.get("res/nashorn1-modified.js"), lines);
 
 请记住，这些方法并不是内存高效的，因为整个文件会被读取到内存中。文件越大，占用的堆内存就越多。
 
-作为一种内存高效的替代方案，你可以使用 `Files.lines` 方法。该方法不是一次性将所有行读入内存，而是通过函数式流逐行读取并流式处理每一行。
+作为一种内存高效的替代方案，你可以使用 `Files.lines()` 方法。该方法不是一次性将所有行读入内存，而是通过函数式流逐行读取并流式处理每一行。
 
 ```
 try (Stream<String> stream = Files.lines(Paths.get("res/nashorn1.js"))) {
@@ -2817,7 +2779,7 @@ try (BufferedWriter writer = Files.newBufferedWriter(path)) {
 }
 ```
 
-缓冲读取器也可以访问函数式流。`lines` 方法会根据缓冲读取器指示的所有行构造一个函数式流：
+缓冲读取器也可以访问函数式流。`lines()` 方法会根据缓冲读取器指示的所有行构造一个函数式流：
 
 ```
 Path path = Paths.get("res/nashorn1.js");
@@ -2830,7 +2792,7 @@ try (BufferedReader reader = Files.newBufferedReader(path)) {
 }
 ```
 
-如你所见，Java 8 提供了三种简单的方法来读取文本，使得文本处理变得非常方便。遗憾的是，你必须使用 `try/with` 显式关闭函数式流，这使得代码仍然显得很杂乱。我本希望函数式流在调用 `count` 或 `collect` 等终端操作时会自动关闭，因为你无法调用两次终端操作。
+如你所见，Java 8 提供了三种简单的方法来读取文本，使得文本处理变得非常方便。遗憾的是，你必须使用 `try/with` 显式关闭函数式流，这使得代码仍然显得很杂乱。我本希望函数式流在调用 `count()` 或 `collect()` 等终端操作时会自动关闭，因为你无法调用两次终端操作。
 
 # 在 Java 8 中避免空值检查
 
@@ -2842,15 +2804,17 @@ try (BufferedReader reader = Files.newBufferedReader(path)) {
 
 > 我称之为我的十亿美元的错误。它是 1965 年发明的空引用。当时，我正在为一种面向对象的语言 (ALGOL) 设计第一个全面的引用类型系统。我的目标是确保所有引用的使用都是绝对安全的，并由编译器执行检查。但我无法抵制放入空引用的诱惑，仅仅是因为它很容易实现。这导致了无数的错误、漏洞和系统崩溃，在过去的四十年里，这可能造成了十亿美元的痛苦和损失。
 
-总之，我们必须处理它。那么我们能做什么来完全防止 Null 呢？显而易见的答案是随处添加空值检查。由于空检查相当繁琐且痛苦，许多语言添加了特殊的语法通过`空合并运算符`来处理空值检查——在 `Groovy` 或 `Kotlin` 等语言中也称为`埃尔维运算符`。
+总之，我们必须处理它。那么我们能做什么来完全防止 `Null` 呢？显而易见的答案是随处添加空值检查。由于空检查相当繁琐且痛苦，许多语言添加了特殊的语法通过`空合并运算符`来处理空值检查——在 `Groovy` 或 `Kotlin` 等语言中也称为`埃尔维运算符`。
 
-遗憾的是， Java 没有提供这种语法糖。但幸运的是，Java 8 版本中情况变得好起来。这篇文章描述了如何利用 Java 8 的新特性（如 Lambda 表达式）来避免编写空检查的技术。
+遗憾的是，Java 没有提供这种语法糖。但幸运的是，Java 8 版本中情况变得好起来。这篇文章描述了如何利用 Java 8 的新特性（如 Lambda 表达式）来避免编写空检查的技术。
 
-### 提高 Java 8 中的空安全性
+## 提高 Java 8 中的空安全性
 
 我已经在另一篇文章中展示了我们如何利用 Java 8 的 `Optional` 类型来防止空检查。这里是原始文章中的示例代码。
 
 假设我们有如下分级类结构：
+
+
 
 ```
 class Outer {
@@ -2902,10 +2866,6 @@ resolve(() -> obj.getNested().getInner().getFoo());
 
 调用 `obj.getNested().getInner().getFoo()` 可能会抛出 `NullPointerException`。在这种情况下，异常会被捕获，方法返回 `Optional.empty()`。
 
-
-
-
-
 ```java
 public static <T> Optional<T> resolve(Supplier<T> resolver) {
     try {
@@ -2934,7 +2894,7 @@ Java 8 几乎自 2014 年 3 月发布后已经一年了。在 [Pondus](http://ww
 
 除了 lambda 之外，最常用的功能是新的 Stream API。在我见过的几乎任何代码库中，集合操作无处不在。而 Streams 是提高这些集合处理代码可读性的极佳方法。
 
-但关于 streams 有一点非常困扰我：Streams 只直接提供如 `reduce` 和 `findFirst` 这样的少数终端操作，而其他操作只能通过 `collect` 访问。有一个工具类 Collectors，提供了一系列方便的收集器，如 `toList`、`toSet`、`joining` 和 `groupingBy`。
+但关于 streams 有一点非常困扰我：Streams 只直接提供如 `reduce` 和 `findFirst` 这样的少数终端操作，而其他操作只能通过 `collect` 访问。有一个工具类 `Collectors`，提供了一系列方便的收集器，如 `toList`、`toSet`、`joining` 和 `groupingBy`。
 
 例如，这段代码过滤了一个字符串集合并创建一个新列表：
 
@@ -2978,7 +2938,7 @@ Live Templates 如何帮助解决上述问题？实际上，我们可以简单�
 
 ![Live Template Settings](img/livetemplate-settings.png)
 
-接下来，我们可以通过右侧的 `+` 图标创建一个名为 `Stream` 的新组。我们将所有与流 相关的 Live Templates 添加到该组。我经常使用默认收集器 `toList`、`toSet`、`groupingBy` 和 `join`，所以我为这些方法中的每一个创建了一个 Live Template。
+接下来，我们可以通过右侧的 `+` 图标创建一个名为 `Stream` 的新组。我们将所有与流相关的 Live Templates 添加到该组。我经常使用默认收集器 `toList`、`toSet`、`groupingBy` 和 `join`，所以我为这些方法中的每一个创建了一个 Live Template。
 
 这部分**非常重要**：在添加新的 Live Template 后，你必须在对话框底部指定适用上下文。你需要选择 `Java` → `Other`。之后你就可以定义缩写、描述和实际的模板代码。
 
@@ -3027,10 +2987,6 @@ Live Templates 在 IntelliJ 中是多功能且强大的工具。它可以极大�
 使用 Nashorn 在服务器端复用 Backbone 模型非常简单，如下例所示。在开始之前，请确保你已经熟悉如何为 Nashorn 引擎编写 JavaScript，可以阅读我的 [Nashorn 教程]。
 
 ### Java 模型
-
-
-
-
 
 首先，我们在 Java 代码中定义了一个领域类 `Product`。该类可能用于 CRUD 数据库操作（从数据源保存和从中加载数据）。请记住，这个类是一个没有包含任何业务逻辑的简单 Java Bean，因为我们希望前端能够直接在 UI 上执行业务逻辑。
 
@@ -3122,5 +3078,6 @@ System.out.println(result.get("name") + ": " + result.get("valueOfGoods"));
 
 在 Nashorn 引擎上重用现有的 JavaScript 库非常简单。Backbone 非常适合构建复杂的 HTML5 前端。在我看来，Nashorn 和 JVM 现在是 Node.js 的极佳替代方案，因为你可以在 Nashorn 代码库中使用整个 Java 生态系统，例如整个 JDK API 以及所有可用的库和工具。请记住，在使用 Nashorn 时并不局限于 Java 语言——可以考虑 Scala、Groovy、Clojure 甚至通过 `jjs` 使用纯 JavaScript。
 
-本文的可运行源代码[托管在 GitHub 上](https://github.com/winterbe/java8-tutorial)（参见[此文件](https://github.com/winterbe/java8-tutorial/blob/master/res/nashorn6.js)）。欢迎[fork 仓库仓库](https://github.com/winterbe/java8-tutorial/fork) 或通过 [Twitter](https://twitter.com/winterbe_) 向我提供反馈。
 
+
+本文的可运行源代码[托管在 GitHub 上](https://github.com/winterbe/java8-tutorial)（参见[此文件](https://github.com/winterbe/java8-tutorial/blob/master/res/nashorn6.js)）。欢迎[fork 仓库仓库](https://github.com/winterbe/java8-tutorial/fork) 或通过 [Twitter](https://twitter.com/winterbe_) 向我提供反馈。

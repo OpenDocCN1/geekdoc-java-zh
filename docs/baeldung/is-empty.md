@@ -1,8 +1,10 @@
+
 # Java String.isEmpty()
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/string/is-empty>
 
-[This article is part of a series:](javascript:void(0);)[• Java String.String()](/web/20220829143229/https://www.baeldung.com/string/constructor)
+[This article is part of a series:](javascript:void(0);)
+[• Java String.String()](/web/20220829143229/https://www.baeldung.com/string/constructor)
 [• Java String.codePointCount()](/web/20220829143229/https://www.baeldung.com/string/code-point-count)
 [• Java String.codePointAt()](/web/20220829143229/https://www.baeldung.com/string/code-point-at)
 [• Java String.concat()](/web/20220829143229/https://www.baeldung.com/string/concat)
@@ -13,7 +15,8 @@
 [• Java String.getBytes()](/web/20220829143229/https://www.baeldung.com/string/get-bytes)
 [• Java String.indexOf()](/web/20220829143229/https://www.baeldung.com/string/index-of)
 [• Java String.intern()](/web/20220829143229/https://www.baeldung.com/string/intern)
-• Java String.isEmpty() (current article)[• Java String.lastIndexOf()](/web/20220829143229/https://www.baeldung.com/string/last-index-of)
+• Java String.isEmpty() (current article)
+[• Java String.lastIndexOf()](/web/20220829143229/https://www.baeldung.com/string/last-index-of)
 [• Java String.regionMatches()](/web/20220829143229/https://www.baeldung.com/string/region-matches)
 [• Java String.replace()](/web/20220829143229/https://www.baeldung.com/string/replace)
 [• Java String.replaceAll()](/web/20220829143229/https://www.baeldung.com/string/replace-all)
@@ -28,13 +31,13 @@
 
 方法`isEmpty()`是检查`String`的大小是否等于零的方便方法。
 
-### 可用签名
+## 可用签名
 
 ```java
 public boolean isEmpty()
 ```
 
-### 例子
+## 例子
 
 ```java
 @Test
@@ -45,4 +48,4 @@ public void whenCallIsEmpty_thenCorrect() {
 }
 ```
 
-Next **»**[Java String.lastIndexOf()](/web/20220829143229/https://www.baeldung.com/string/last-index-of)**«** Previous[Java String.intern()](/web/20220829143229/https://www.baeldung.com/string/intern)
+Next **»** [Java String.lastIndexOf()](/web/20220829143229/https://www.baeldung.com/string/last-index-of) **«** Previous [Java String.intern()](/web/20220829143229/https://www.baeldung.com/string/intern)

@@ -1,21 +1,25 @@
-# spring Cloud AWS–消息支持
+
+# Spring Cloud AWS–消息支持
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/spring-cloud-aws-messaging>
 
 在最后一篇文章中，我们将继续讨论 AWS 消息支持。
 
-Content Series:[This article is part of a series:](javascript:void(0);)[• Spring Cloud AWS – S3](/web/20221208143841/https://www.baeldung.com/spring-cloud-aws-s3)
+内容系列：[本文是系列文章的一部分：](javascript:void(0);)[• Spring Cloud AWS – S3](/web/20221208143841/https://www.baeldung.com/spring-cloud-aws-s3)
+
 [• Spring Cloud AWS – EC2](/web/20221208143841/https://www.baeldung.com/spring-cloud-aws-ec2)
+
 [• Spring Cloud AWS – RDS](/web/20221208143841/https://www.baeldung.com/spring-cloud-aws-rds)
-• Spring Cloud AWS – Messaging Support (current article)
 
-## 1。AWS 消息支持
+• Spring Cloud AWS – Messaging Support（当前文章）
 
-### 1.1。SQS(简单队列服务)
+## 1. AWS 消息支持
+
+### 1.1. SQS（简单队列服务）
 
 我们可以使用`QueueMessagingTemplate`向 SQS 队列发送消息。
 
-要创建这个 bean，我们可以使用一个`AmazonSQSAsync`客户端，在使用 Spring Boot 启动器时，默认情况下这个客户端在应用程序上下文中可用:
+要创建这个 bean，我们可以使用一个`AmazonSQSAsync`客户端，在使用 Spring Boot 启动器时，默认情况下这个客户端在应用程序上下文中可用：
 
 ```java
 @Bean
@@ -25,7 +29,7 @@ public QueueMessagingTemplate queueMessagingTemplate(
 }
 ```
 
-然后，我们可以使用`convertAndSend()`方法发送消息:
+然后，我们可以使用`convertAndSend()`方法发送消息：
 
 ```java
 @Autowired
@@ -38,7 +42,7 @@ public void send(String topicName, Object message) {
 
 由于亚马逊 SQS 只接受`String`有效载荷，Java 对象被自动序列化为 JSON。
 
-我们还可以使用 `@SqsListener`来配置监听器:
+我们还可以使用`@SqsListener`来配置监听器：
 
 ```java
 @SqsListener("spring-cloud-test-queue")
@@ -50,13 +54,13 @@ public void receiveMessage(String message,
 
 该方法将接收来自`spring-cloud-test-queue`的消息，然后处理它们。我们还可以在方法参数上使用`@Header`注释来检索消息头。
 
-如果第一个参数是一个定制的 Java 对象而不是`String,`, Spring 将使用 JSON 转换把消息转换成那个类型。
+如果第一个参数是一个定制的 Java 对象而不是`String`，Spring 将使用 JSON 转换把消息转换成那个类型。
 
-### 1.2。SNS(简单通知服务)
+### 1.2. SNS（简单通知服务）
 
 类似于 SQS，我们可以使用`NotificationMessagingTemplate`来发布一个主题的消息。
 
-要创建它，我们需要一个`AmazonSNS`客户端:
+要创建它，我们需要一个`AmazonSNS`客户端：
 
 ```java
 @Bean
@@ -66,7 +70,7 @@ public NotificationMessagingTemplate notificationMessagingTemplate(
 }
 ```
 
-然后，我们可以向主题发送通知:
+然后，我们可以向主题发送通知：
 
 ```java
 @Autowired
@@ -78,9 +82,9 @@ public void send(String Object message, String subject) {
 }
 ```
 
-在 AWS 支持的多个 SNS 端点(SQS、HTTP(S)、电子邮件和 SMS)中，**该项目仅支持 HTTP(S)** 。
+在 AWS 支持的多个 SNS 端点（SQS、HTTP(S)、电子邮件和 SMS）中，**该项目仅支持 HTTP(S)**。
 
-我们可以在 MVC 控制器中配置端点:
+我们可以在 MVC 控制器中配置端点：
 
 ```java
 @Controller
@@ -107,9 +111,9 @@ public class SNSEndpointController {
 }
 ```
 
-**我们需要在控制器级别将主题名称添加到`@RequestMapping`注释中。**该控制器启用 HTTP(s)端点–`/topic-subscriber`, SNS 主题使用该端点来创建订阅。
+**我们需要在控制器级别将主题名称添加到`@RequestMapping`注释中。**该控制器启用 HTTP(s)端点–`/topic-subscriber`，SNS 主题使用该端点来创建订阅。
 
-例如，我们可以通过调用 URL 来订阅某个主题:
+例如，我们可以通过调用 URL 来订阅某个主题：
 
 ```java
 https://host:port/topic-subscriber/
@@ -127,10 +131,10 @@ https://host:port/topic-subscriber/
 
 请注意，`@RequestMapping`中的值与它订阅的主题名称无关。
 
-## 2。结论
+## 2. 结论
 
 在这最后一篇文章中，我们探讨了 Spring Cloud 对 AWS 消息传递的支持——这是关于 Spring Cloud 和 AWS 的快速系列的结论。
 
 像往常一样，这些例子可以在 GitHub 的[上找到。](https://web.archive.org/web/20221208143841/https://github.com/eugenp/tutorials/tree/master/spring-cloud-modules/spring-cloud-aws)
 
-**«** Previous[Spring Cloud AWS – RDS](/web/20221208143841/https://www.baeldung.com/spring-cloud-aws-rds)
+**«** 上一篇[Spring Cloud AWS – RDS](/web/20221208143841/https://www.baeldung.com/spring-cloud-aws-rds)

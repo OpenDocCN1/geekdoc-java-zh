@@ -1,26 +1,29 @@
+
 # Java：快速学习 Java 编程入门指南（编程、数据库、Java 学者指南、编程书籍、Java 编程）（HTML、Javascript、编程、开发者、编码、CSS、PHP 书籍2）
 
-
-
-
-
-
 # 介绍
+
 最重要的点是：使用常识。当无法找到规则或指南时。当规则明显不适用时。当其他手段都失败时：请利用常识，检查 Java 和编码的基本原理。这条规则优于所有其他规则。常识是一项要求。
 
 1. 为人编程，而不是为机器编程。使用命名规范。为你的代码编写文档。分段。如果没人看不懂，那么它就没用。
+
 2. 先设计，后代码。在开始编码之前，花时间考虑代码将如何编写，你一定会花费更少编写时间。通过提前考虑未来的变化，你可以减少这些变化对代码的影响。
+
 3. 分小步进行开发。测试和修复 10 行代码比 1000 行要容易得多、快得多；你可以在编写一个单一 100 行代码块的一半时间内，以每 10 行为增量完成编程、测试并修复 100 行代码，从而完成相同的工作。
+
 4. 保持你的代码简单。以后需要重做的代码是不值得自豪的，所以遵循 KISS 原则：保持简单，愚蠢点（Keep It Simple, Stupid）。
+
 5. 学习常见的模式、反模式和惯用法。有大量的分析可以指导你提高开发生产力、设计和流程模式与反模式，以及编程惯用法。
 
 # 第 1 章 – 通用编程指南
+
 我们将从讨论良好编程风格的通用原则以及定义 Java 健壮设计的原则开始本教程。这些原则中的大部分在 Java 编程入门中已经提到过，但本章将引入许多实用建议，以提高你作为开发者的技能。
 
 ## 变量作用域
+
 在 Java 语言中，每个局部变量一旦声明就有一个确定的作用域。该变量从声明处到它所声明的方法或代码块的结束都是可见的。因此，有一条必要的规则：尽可能在变量使用的地方声明局部变量。以下是一些示例：
 
-```
+```java
 for(final locale : Locale.getLocales()) {
     // 此处进行某些实现
 }
@@ -30,19 +33,21 @@ try(InputStream in = new FileInputStream("file.txt")) {
 }
 ```
 
-在每个代码段中，局部变量的作用域仅限于其声明所在的块。当块结束时，局部变量不再可见并超出作用域。这种看起来看起来简洁明了，但随着 Lambda 的引入和 Java 8 的发布，许多使用局部变量的知名惯用法正变得过时。以下是利用 Lambda 对上述示例中的 `forEach` 循环进行的重写：
+在每个代码段中，局部变量的作用域仅限于其声明所在的块。当块结束时，局部变量不再可见并超出作用域。这种看起来简洁明了，但随着 Lambda 的引入和 Java 8 的发布，许多使用局部变量的知名惯用法正变得过时。以下是利用 Lambda 对上述示例中的 `forEach` 循环进行的重写：
 
-```
+```java
 Arrays.stream(Locale.getLocales()).forEach((locale) -> {
     // 此处进行某些实现
 });
 ```
-注意，局部变量变成了此函数的参数，然后作为 `forEach` 方法的参数传递传递。
+
+注意，局部变量变成了此函数的参数，然后作为 `forEach` 方法的参数传递。
 
 ## 类字段和局部变量
+
 Java 中的每个方法都属于某个特定的类（在某些情况下属于某些接口，例如 Java 8 中方法被声明为 `default`）。在方法实现中使用的局部变量与类成员之间存在发生冲突的概率。Java 编译器会选择正确的变量，但它可能不是开发者想要使用的那一个。许多现代 IDE 在此类冲突发生时会进行大量工作提醒开发者（红色脚本、高亮），然而，在开发过程中主动处理更好。以下是一个示例：
 
-```
+```java
 class LocalVariableAndClassMember {
     private long value;
 
@@ -54,9 +59,10 @@ class LocalVariableAndClassMember {
     }
 }
 ```
+
 这个示例看起来非常简单，但有一个陷阱。名为 `calculateValue` 方法引入了一个名为 `value` 的局部变量，通过这样做隐藏了同名的类成员。代码本应该累加类成员和局部变量，但在应用中它执行了不同的操作。正确的版本应该是那样的（使用 `this` 关键字）：
 
-```
+```java
 class LocalVariableAndClassMember {
     private long value;
 
@@ -68,9 +74,11 @@ class LocalVariableAndClassMember {
     }
 }
 ```
+
 这个简单的实现强调了一个重要问题，在某些情况下，调试该问题可能花费几个小时。
 
 ## 方法参数和局部变量
+
 许多初学者经常掉入的另一种场景是将方法参数当作局部变量。Java 允许对非 `final` 方法参数重新赋值另一个值（但对原始值没有影响）。例如：
 
 ```java
@@ -82,9 +90,6 @@ public String sanitize(String str) {
     return str;
 }
 ```
-
-
-
 
 这并不是最整洁的代码，但它突出了一个问题：方法参数 `str` 被重新赋值了一个不同的值（并被用作局部变量）。在这些情况下（无一例外地），应该避免这种编码模式，可以通过将方法参数声明为 `final` 来避免。
 
@@ -225,16 +230,18 @@ Java 标准库提供了两个有用的类，旨在方便字符串操作：`Strin
 5 | String.format( "%d%%", 22 ) -> 22%
 ```
 
-
-
-
 在 Java 中，没有理由严格遵守任何特定的命名规范，但有一套易于遵循的规则，使得 Java 代码在标准库或任何其他开源 Java 项目中看起来风格统一。
 
 - 局部变量和方法参数名称使用驼峰命名法：`str`, `newLength`, `minimumCapacity`
-- static final 字段或枚举常量使用大写，并用下划线 `_` 分隔：`LOG`, `MIN_RADIX`, `INSTANCE`
-- 类、`enum`、`interface` 或注解名称使用大大写：`StringBuilder`, `Runnable`, `@Override`
+
+- `static final` 字段或枚举常量使用大写，并用下划线 `_` 分隔：`LOG`, `MIN_RADIX`, `INSTANCE`
+
+- 类、`enum`、`interface` 或注解名称使用大写：`StringBuilder`, `Runnable`, `@Override`
+
 - 泛型类型参数名称通常用一个大写字母表示：`T`, `U`, `E`
+
 - 方法或字段名称（`static final` 除外）使用驼峰命名法：`isEmpty`, `format`, `addAll`
+
 - 包名使用小写：`org.junit`, `com.fasterxml.jackson`, `javax.json`
 
 通过这些简单的规范，代码看起来非常简洁，并且与其他库或框架并无二致。
@@ -259,6 +266,8 @@ Java 平台正在不断增长和演进；保持对其演变的认知至关重要
 
 优秀的测试是短而简单的，一次只测试一点。让我们通过编写一组测试来验证“字符串”章节中的 `String.format` 函数返回预期的结果：
 
+
+
 ```java
 package com.javacodegeeks.advanced.generic;
 
@@ -281,7 +290,7 @@ public class StringFormatTestCase {
 }
 ```
 
-这些测试具有可读性且执行是是例化的。一个 Java 项目包含成百上千个测试例，以便对回归问题或开发中的功能提供快速反馈。
+这些测试具有可读性且执行是例化的。一个 Java 项目包含成百上千个测试例，以便对回归问题或开发中的功能提供快速反馈。
 
 # 第 2 章 - 如何以及何时使用异常
 
@@ -297,7 +306,7 @@ Java 中的异常表示程序流中的异常或特殊情况，这些情况可能
 
 Java 中的异常管理是独特的。异常分为两类：检查异常（checked exceptions）和未检出异常（unchecked exceptions）。
 
-未检出异常表示与程序逻辑和假设假设相关的错误（无效参数、空指针等）。未检出异常不需要调用者定义。其其声明如下：
+未检出异常表示与程序逻辑和假设相关的错误（无效参数、空指针等）。未检出异常不需要调用者定义。其声明如下：
 
 ```java
 public class NullPointerException extends RuntimeException {
@@ -343,10 +352,6 @@ try {
 }
 ```
 
-
-
-
-
 ```java
 } catch( final IOException ex ) {
     throw new RuntimeException( "I/O operation failed", ex );
@@ -361,7 +366,7 @@ Java 中另一类继承自 `Error` 类的额外异常是 `OutOfMemoryError` 或 
 
 栈回溯通常是由抛出异常引起的。程序执行流的变异通常以这种方式发生。例如，直接与未关闭的本地资源、网络套接字文件句柄相关的资源泄漏，就是这些抛出异常的结果。
 
-在 Java（ 7 版本之前）中，一个良好的典型 I/O 操作使用强制的 `finally` 块来执行清理工作：
+在 Java（7 版本之前）中，一个良好的典型 I/O 操作使用强制的 `finally` 块来执行清理工作：
 
 ```java
 public void readFile( final File file ) {
@@ -437,13 +442,13 @@ public void readFile() {
 
 ## 标准异常
 
-Java 标准库提供了关于异常类的丰富信息。这些类专门设计用于涵盖处理过程中发生的大多数通用错误。下表了经常使用的异常类，在定义自己的异常之前，务必考虑这些。
+Java 标准库提供了关于异常类的丰富信息。这些类专门设计用于涵盖处理过程中发生的大多数通用错误。下表列出了经常使用的异常类，在定义自己的异常之前，务必考虑这些。
 
 | 异常类 | 目的 |
 | :--- | :--- |
 | `NullPointerException` | 尝试在需要对象的地方使用 null。 |
 | `IllegalArgumentException` | 方法传递了非法或不适当的参数。 |
-| `IllegalStateException` | 在非法或不恰的时间调用了方法。 |
+| `IllegalStateException` | 在非法或不恰当的时间调用了方法。 |
 | `IndexOutOfBoundsException` | 索引（针对向量、字符串或数组）超出范围。 |
 | `UnsupportedOperationException` | 请求的操作不支持。 |
 | `ArrayIndexOutOfBoundsException` | 使用非法索引访问数组。 |
@@ -495,17 +500,13 @@ public void signin( final String username, final String password ) {
 
 下一个主题将讨论如何让异常也成为文档的一部分。
 
-
-
-
-
 作为实现的一部分，可能抛出受检异常（checked exception）的方法应将其作为方法签名的一部分。这通过 `throws` 声明来实现。`@throws` 标签用于在 Java 文档工具中描述这些异常。
 
 以下是一个示例：
 
 ```java
 /**
- * 从文件系统系统读取文件。
+ * 从文件系统读取文件。
  * @throws IOException 如果发生 I/O 错误。
  */
 public void readFile() throws IOException {
@@ -519,7 +520,7 @@ public void readFile() throws IOException {
 
 ```java
 /**
- * 某些某些概念的字符串表示。
+ * 某些概念的字符串表示。
  * @param str 要解析的字符串
  * @throws IllegalArgumentException 如果指定的字符串无法被正确解析
  * @throws NullPointerException 如果指定的字符串为 null
@@ -533,7 +534,7 @@ public void parse( final String str ) {
 
 ## 异常与日志
 
-日志 ([http://en.wikipedia.org/wiki/Logfile]) 是任何复杂 Java 应用程序、库或框架不可或缺的一部分。它是应用程序事件的日志，而异常是流程中的关键部分。必须正确记录异常并在以后进行分析，以便发现应用程序的问题并进行故障排除。
+日志（[http://en.wikipedia.org/wiki/Logfile](http://en.wikipedia.org/wiki/Logfile)）是任何复杂 Java 应用程序、库或框架不可或缺的一部分。它是应用程序事件的日志，而异常是流程中的关键部分。必须正确记录异常并在以后进行分析，以便发现应用程序的问题并进行故障排除。
 
 ## 结论
 
@@ -541,12 +542,14 @@ public void parse( final String str ) {
 
 这些建议将帮助你更有效地理解书中描述的 Java 编码标准和指南。这些工具也可以用于大多数语言的编码或编程。像 Python、C++、CSS 和 JavaScript 等语言都使用通用格式、继承规则、异常和标准，以确保信息易于理解、编辑和添加，从而开发程序和应用程序的改进和新版本。
 
-1. **理解标准**。花时间通过每种标准和指南来提高生产力。不要仅仅因为被要求就将每个局部变量单独写在一行。这样做是因为你理解这能提高代码的可的可读性。
+1. **理解标准**。花时间通过每种标准和指南来提高生产力。不要仅仅因为被要求就将每个局部变量单独写在一行。这样做是因为你理解这能提高代码的可读性。
+
 2. **相信它们**。遵循标准应该是始终如一的，因为这是编码的最佳方式。
+
 3. **在编码时遵循它们，而不是作为事后补救**。整洁的代码更容易维护，无论是在开发还是维护期间都是如此。遵循标准将在开发期间提高生产力，并使代码更易维护。如果从一开始就产生整洁的代码，你可以在创建过程中从中受益。
+
 4. **将它们成为你质量保证流程的一部分**。确保源代码遵循工作交付方所采用的标准。标准应作为培训和指导开发人员变得更高效的依据。
 
 Java 是一门动态且实用的编码语言，希望这本书能帮助你进一步理解 Java 编码的一些高级方面。
 
 感谢阅读。希望你喜欢。我请求你留下诚实的反馈。
-

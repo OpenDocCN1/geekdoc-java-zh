@@ -1,56 +1,60 @@
-# Java 单元测试：JUnit & Mockito：高效 Java 测试与模拟的实用分步示例
 
 
+# Java 单元测试：JUnit 和 Mockito
+
+## 高效 Java 测试与模拟的实用分步示例
 
 ![](img/image_rsrc3J3.jpg)
 
 ## 结
 
-## 欢迎学习与你将学到的
+## 欢迎学习，你将学到什么
+
 单元测试在软件开发过程中似乎是一项枯燥的任务，但实际上，这是一项具有指数级回报的投资。编写良好的单元测试将成为你项目的安全网。随着代码库的扩展和演变，测试可以确保没有任何意外损坏，从而节省无数的调试时间并保障你的 Java 应用程序的质量。
 
 ## 为什么选择这本书？
+
 其他书籍侧重于测试基础或理论概念，而本书从零开始通过实际示例构建。你将在实践中学习，将理论转化为工作代码。当你隔离组件并创建专注的测试场景时，`Mockito` 的 Mock 能力将感觉像你的超能力一样。
 
-让我们探索通过本书你将取得的成就：
+让我们探索通过本书你将取得的成就。
 
 ### 你将开发的技能栈
-*   **编写简洁且高效的 JUnit 测试**：精通基础——断言、设置、清理以及如何组织测试以实现最大的可读性。
-*   **使用 Mockito 进行插桩和 Mock**：控制外部依赖并模拟复杂的交互，以隔离你想要测试的特定行为。
-*   **处理边界情况和异常**：学习如何编写能够优雅处理意外情况的测试，并验证你的错误处理逻辑。
-*   **高级插桩和验证技术**：使用参数匹配器、捕获参数，并为细微、复杂的 Mock 行为创建自定义响应。
-*   **Spring 集成**：发现如何将 `Mockito` 平滑地集成到基于 `Spring` 的项目中以进行稳健的单元测试。
-*   **针对特殊场景的 PowerMock**：学习测试“不可测试”的代码，包括使用 `PowerMock` Mock 静态方法、私有方法和构造函数。
-*   **真实世界测试策略**：获得关于在整个软件开发生命周期中使用单元测试的实用知识，提高代码可靠性和维护性。
+
+- **编写简洁且高效的 JUnit 测试**：精通基础——断言、设置、清理以及如何组织测试以实现最大的可读性。
+- **使用 Mockito 进行插桩和 Mock**：控制外部依赖并模拟复杂的交互，以隔离你想要测试的特定行为。
+- **处理边界情况和异常**：学习如何编写能够优雅处理意外情况的测试，并验证你的错误处理逻辑。
+- **高级插桩和验证技术**：使用参数匹配器、捕获参数，并为细微、复杂的 Mock 行为创建自定义响应。
+- **Spring 集成**：发现如何将 `Mockito` 平滑地集成到基于 `Spring` 的项目中以进行稳健的单元测试。
+- **针对特殊场景的 PowerMock**：学习测试“不可测试”的代码，包括使用 `PowerMock` Mock 静态方法、私有方法和构造函数。
+- **真实世界测试策略**：获得关于在整个软件开发生命周期中使用单元测试的实用知识，提高代码可靠性和维护性。
 
 ## 本书的结构
+
 章节遵循渐进式的学习路径：
 
-*   **第一部分：理解单元测试的本质**：基础至关重要！你将学习核心原理、JUnit 的结构以及如何建立健壮的测试套件。
-*   **第二部分：为 Mockito 准备并理解其角色**：你将为 Mockito 准备项目并理解 Mock 能力的概念。
-*   **第三部分：揭示 Mockito 的核心**：深入创建 Mock、微调插桩并有效地验证调用。
-*   **第四部分：精通 Mockito 的高级技术**：探索 Hamcrest 匹配器、Mockito 注解以及用于复杂场景的高级 技巧。
-*   **第五部分：使用 PowerMock 和 Mockito 释放高级测试技术**：深入研究静态方法、构造函数和私有方法，将复杂场景拆分为可测试的单元。
-*   **第六部分：使用 JUnit 和 Mockito 进行集成测试**：发现如何编写应用程序多个组件之间交互的集成测试。
-*   **第七部分：高级测试场景和策略**：学习测试最佳实践、边界测试、异步场景、测试数据管理、集成到你的 CI/CD 工作流等。
+- **第一部分：理解单元测试的本质**：基础至关重要！你将学习核心原理、JUnit 的结构以及如何建立健壮的测试套件。
+- **第二部分：为 Mockito 准备并理解其角色**：你将为 Mockito 准备项目并理解 Mock 能力的概念。
+- **第三部分：揭示 Mockito 的核心**：深入创建 Mock、微调插桩并有效地验证调用。
+- **第四部分：精通 Mockito 的高级技术**：探索 Hamcrest 匹配器、Mockito 注解以及用于复杂场景的高级技巧。
+- **第五部分：使用 PowerMock 和 Mockito 释放高级测试技术**：深入研究静态方法、构造函数和私有方法，将复杂场景拆分为可测试的单元。
+- **第六部分：使用 JUnit 和 Mockito 进行集成测试**：发现如何编写应用程序多个组件之间交互的集成测试。
+- **第七部分：高级测试场景和策略**：学习测试最佳实践、边界测试、异步场景、测试数据管理、集成到你的 CI/CD 工作流等。
 
 ## 我们将共同构建
+
 我们不只是讨论概念，还将一起编写代码。随着课程，你将为一个示例 Java 应用程序创建一个不断增长的测试套件。每一步都会强化你的理解并提供具体的示例。
 
 ## 开始吧！
+
 测试是一项随着持续练习而提高的技能。这本书是你的路线图，提供了你所需的工具。准备好成为单元测试大师，保护你的 Java 项目并构建更好的软件了吗？让我们进入单元测试的精彩世界吧！
 
-
-
-
-
-● `JUnit 5 用户指南`: [https://junit.org/junit5/docs/current/user-guide/]
-● `Mockito 项目主页`: [https://site.mockito.org/]
-● `Spring Framework 框架`: [https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html]
+- [`JUnit 5 用户指南`](https://junit.org/junit5/docs/current/user-guide/)
+- [`Mockito 项目主页`](https://site.mockito.org/)
+- [`Spring Framework 框架`](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html)
 
 注意：这些是补充你知识的重要资源。
 
-## 第 1 部分：理解单元测试的本质
+# 第 1 部分：理解单元测试的本质
 
 ## 单元测试在 Java 开发中的意义
 
@@ -83,11 +87,11 @@
 
 为了让你的单元测试真正有效，它们应该遵循几个关键原则：
 
-- **快速 (FAST)**：单元测试运行速度应该极快，提供近乎时的反馈。成千上万个缓慢测试会让开发者失去积极性并阻塞你的开发工作流。
-- **隔离 (Isolated)**：每个测试都应该只关注被测试的单元，外部依赖应得到适当的控制或模拟（mocked）。
-- **可重复 (Repeatable)**：无论环境或时间如何，单元测试都应该给出一致的结果，对它们所测试的代码产生信心。
-- **自检 (Self-Checking)**：测试应该能够自己判断通过或失败。只需要极少的人工解读。
-- **及时 (Timely)**：理想情况下，单元测试应与其旨在测试的代码一同编写，帮助驱动设计过程本身。
+- **快速（FAST）**：单元测试运行速度应该极快，提供近乎实时的反馈。成千上万个缓慢测试会让开发者失去积极性并阻塞你的开发工作流。
+- **隔离（Isolated）**：每个测试都应该只关注被测试的单元，外部依赖应得到适当的控制或模拟（mocked）。
+- **可重复（Repeatable）**：无论环境或时间如何，单元测试都应该给出一致的结果，对它们所测试的代码产生信心。
+- **自检（Self-Checking）**：测试应该能够自己判断通过或失败。只需要极少的人工解读。
+- **及时（Timely）**：理想情况下，单元测试应与其旨在测试的代码一同编写，帮助驱动设计过程本身。
 
 ### 单元测试思维
 
@@ -99,21 +103,23 @@
 
 ### 额外资源
 
-- `JUnit 5 用户指南`: [https://junit.org/junit5/docs/current/user-guide/]
-- `测试驱动开发 (TDD) 概述`: [https://en.wikipedia.org/wiki/Test-driven_development]
-- `单元测试的益处`: [https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics?view=vs-2022]
+- [`JUnit 5 用户指南`](https://junit.org/junit5/docs/current/user-guide/)
+- [`测试驱动开发（TDD）概述`](https://en.wikipedia.org/wiki/Test-driven_development)
+- [`单元测试的益处`](https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics?view=vs-2022)
 
-## 使用 JUnit 建立你的基础：第一部分
+# 使用 JUnit 建立你的基础：第一部分
 
 `JUnit` 几十年来一直是 Java 测试的骨干，提供了一个编写单元测试的结构化框架。在本章中，我们将开始构建单元测试专业知识。让我们涵盖基础内容：设置项目、编写基础测试以及理解核心概念。
 
-### 配置环境
+## 配置环境
 
 1. **选择你的工具**：
    - IDE：大多数现代 IDE（如 `IntelliJ`、`Eclipse`、`NetBeans`）都内置了 `JUnit` 支持。
    - 构建工具：广泛使用 `Maven` 或 `Gradle`。
+
 2. **添加依赖**：
    - Maven：在你的 `pom.xml` 中包含此：
+
 ```xml
 <dependency>
   <groupId>org.junit.jupiter</groupId>
@@ -122,12 +128,14 @@
   <scope>test</scope>
 </dependency>
 ```
+
    - Gradle：在你的 `build.gradle` 中添加此：
+
 ```gradle
 testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
 ```
 
-### 创建你的第一个测试
+## 创建你的第一个测试
 
 让我们写一个简单的测试来感受 `JUnit` 的结构。考虑这个类：
 
@@ -154,36 +162,36 @@ public class CalculatorTest {
 }
 ```
 
-#### 解析：
-- **导入 (Imports)**：你需要 `org.junit.jupiter.api.Test` 来使用测试注解，使用 `org.junit.jupiter.api.Assertions` 来断言结果。
-- **测试类**：为你的测试类以 "Test" 结尾命名（例如 `CalculatorTest`），以便于识别。
-- **@Test 注解**：标记一个方法为由 `JUnit` 执行的测试。
-- **断言 (Assertions)**：`assertEquals` 是最基础的断言方法，验证预期结果与被测试代码的实际输出匹配。
+### 解析
 
-### 运行测试
+- **导入（Imports）**：你需要 `org.junit.jupiter.api.Test` 来使用测试注解，使用 `org.junit.jupiter.api.Assertions` 来断言结果。
+- **测试类**：为你的测试类以 `Test` 结尾命名（例如 `CalculatorTest`），以便于识别。
+- **@Test 注解**：标记一个方法为由 `JUnit` 执行的测试。
+- **断言（Assertions）**：`assertEquals` 是最基础的断言方法，验证预期结果与被测试代码的实际输出匹配。
+
+## 运行测试
 
 你的 IDE 通常具有运行 JUnit 测试的功能。寻找：
+
 - **运行/调试按钮**：通常位于测试方法或类附近。
-- **测试运行视图 (Test Runner View)**：显示测试结果的专用界面。
+- **测试运行视图（Test Runner View）**：显示测试结果的专用界面。
 
-### 理解 JUnit 术语
+## 理解 JUnit 术语
 
-- **测试用例 (Test Case)**：单个测试方法（示例中的 `testAdd`）。
-- **测试套件 (Test Suite)**：测试用例的集合，通常在一个类中。
-- **测试固件 (Test Fixture)**：一组测试所需的设置和清理工作（我们稍后会通过 `@Before`、`@After` 等介绍）。
+- **测试用例（Test Case）**：单个测试方法（示例中的 `testAdd`）。
+- **测试套件（Test Suite）**：测试用例的集合，通常在一个类中。
+- **测试固件（Test Fixture）**：一组测试所需的设置和清理工作（我们稍后会通过 `@Before`、`@After` 等介绍）。
 
+## 断言
 
-
-
-
-## 断言：验证预期行为与实际行为的语句。JUnit 提供了丰富的断言方法集。
+验证预期行为与实际行为的语句。JUnit 提供了丰富的断言方法集。
 
 ## 核心 JUnit 注解
 
-到为止，你已经看到了 `@Test`。让我们再介绍几个：
+到目前为止，你已经看到了 `@Test`。让我们再介绍几个：
 
-- `@Disabled`: 临时跳过测试用例的执行。开发期间非常有用。
-- `@DisplayName`: 为你的测试提供清晰、可读的名称，显示在测试报告中。
+- `@Disabled`：临时跳过测试用例的执行。开发期间非常有用。
+- `@DisplayName`：为你的测试提供清晰、可读的名称，显示在测试报告中。
 
 ### 使用 @DisplayName 的示例
 
@@ -201,11 +209,11 @@ public void testAdd() {
 
 ### 额外资源
 
-- JUnit 5 用户指南：[`junit.org/junit5/docs/current/user-guide/`](https://junit.org/junit5/docs/current/user-guide/)
-- Maven 入门：[`maven.apache.org/guides/getting-started/`](https://maven.apache.org/guides/getting-started/)
-- Gradle 入门：[`docs.gradle.org/current/userguide/getting_started.html`](https://docs.gradle.org/current/userguide/getting_started.html)
+- [`JUnit 5 用户指南`](https://junit.org/junit5/docs/current/user-guide/)
+- [`Maven 入门`](https://maven.apache.org/guides/getting-started/)
+- [`Gradle 入门`](https://docs.gradle.org/current/userguide/getting_started.html)
 
-## 配置 JUnit 以成功：第 2 部分
+# 配置 JUnit 以成功：第 2 部分
 
 在上一章中，我们开始为你的 JUnit 测试之旅奠定基础。现在，让我们精调 JUnit 设置，以简化测试工作流并解锁高级功能。
 
@@ -213,16 +221,16 @@ public void testAdd() {
 
 JUnit 在运行测试方面提供了灵活性。以下是调整执行行为的方法：
 
-- **测试运行器 (Test Runners)**：JUnit 使用运行器执行并报告结果。默认运行器适用于大多数场景。然而，JUnit 支持用于特殊用例的自定义运行器：
-    - `Parameterized`: 用于运行参数化测试（本书后将介绍）
-    - `Suite`: 用于创建测试类集合
+- **测试运行器（Test Runners）**：JUnit 使用运行器执行并报告结果。默认运行器适用于大多数场景。然而，JUnit 支持用于特殊用例的自定义运行器：
+  - `Parameterized`：用于运行参数化测试（本书后将介绍）。
+  - `Suite`：用于创建测试类集合。
 - **测试排序**：默认情况下，测试执行的顺序是不可预测的。对于特定场景，你可以使用以下方式强制排序：
-    - `@Order` 注解：为每个测试方法分配一个整数来控制序列。
-    - `@FixMethodOrder` 注解：强制测试按照其方法名称（字母顺序）确定的特定顺序运行。请谨慎使用这些，因为顺序依赖通常意味着测试隔离性较差。
+  - `@Order` 注解：为每个测试方法分配一个整数来控制序列。
+  - `@FixMethodOrder` 注解：强制测试按照其方法名称（字母顺序）确定的特定顺序运行。请谨慎使用这些，因为顺序依赖通常意味着测试隔离性较差。
 
 ## 假设：条件下的测试
 
-假设（Assumptions）允许你在某些先决条件不时不跳过测试。这对于根据你的环境或特定状态过滤测试非常有用。
+假设（Assumptions）允许你在某些先决条件不满足时跳过测试。这对于根据你的环境或特定状态过滤测试非常有用。
 
 - `assumeTrue()` 和 `assumeFalse()`：如果提供的条件不满足，则使测试失败。
 
@@ -240,7 +248,7 @@ void testOnLinuxEnvironment() {
 
 偶尔测试可能会陷入无限循环或挂起。JUnit 的超时功能可以防止这种情况的发生：
 
-- `@Timeout`: 为测试指定最大执行时间。如果超过该时间，测试将失败。
+- `@Timeout`：为测试指定最大执行时间。如果超过该时间，测试将失败。
 
 ```java
 @Test
@@ -255,8 +263,8 @@ void testWithTimeout() {
 让我们探索一些少为人知但强大的 JUnit 能力：
 
 - **使用 @Tag 分组测试**：为你的测试分配自定义标签以进行选择性执行。例如，将慢测试标记为 `@Tag("integration")` 并在单独的构建配置中运行它们。
-- **条件测试执行**：你可以使用 `@EnabledIf` 和 `@DisabledIf` 配合自定义系统（例如检查环境变量）根据条件启用/禁用测试。
-- `@Nested`：创建嵌套测试类来结构化复杂的测试用例，或在单个类中对相关测试分组。这提高了了测试的可读性。
+- **条件测试执行**：你可以使用 `@EnabledIf` 和 `@DisabledIf` 配合自定义系统（例如检查环境变量）根据条件启用或禁用测试。
+- `@Nested`：创建嵌套测试类来结构化复杂的测试用例，或在单个类中对相关测试分组。这提高了测试的可读性。
 
 ### 示例：条件执行与分组
 
@@ -273,27 +281,30 @@ private static boolean isDevelopmentEnvironment() {
 }
 ```
 
-## 与构建工具集成 (Maven 和 Gradle)
+## 与构建工具集成（Maven 和 Gradle）
 
 构建工具无缝地将 JUnit 集成到你的项目生命周期中，允许你轻松运行测试。以下是典型的命令：
 
-### Maven:
+### Maven
 
-- `mvn test`: 执行所有测试
-- `mvn test -Dtest=CalculatorTest`: 只执行 `CalculatorTest`
-- `mvn test -Dtest=CalculatorTest#testAdd`: 执行 `CalculatorTest` 中的 `testAdd` 方法
+- `mvn test`：执行所有测试。
+- `mvn test -Dtest=CalculatorTest`：只执行 `CalculatorTest`。
+- `mvn test -Dtest=CalculatorTest#testAdd`：执行 `CalculatorTest` 中的 `testAdd` 方法。
 
-### Gradle:
+### Gradle
 
-- `gradle test`: 执行所有测试
-- `gradle test --tests CalculatorTest`: 只执行 `CalculatorTest`
-- `gradle test --tests CalculatorTest.testAdd`: 执行 `CalculatorTest` 中的 `testAdd` 方法
+- `gradle test`：执行所有测试。
+- `gradle test --tests CalculatorTest`：只执行 `CalculatorTest`。
+- `gradle test --tests CalculatorTest.testAdd`：执行 `CalculatorTest` 中的 `testAdd` 方法。
 
 ## 高级配置
 
 构建工具提供了高级选项来自定义测试报告、过滤等。请探索各自的文档以获取这些选项。
 
 ### 额外资源
+
+
+
 
 - JUnit 5 用户指南（条件执行、假设等）：[`junit.org/junit5/docs/current/user-guide/`](https://junit.org/junit5/docs/current/user-guide/)
 - Maven Surefire 插件（测试配置）：[`maven.apache.org/surefire/maven-surefire-plugin/`](https://maven.apache.org/surefire/maven-surefire-plugin/)
@@ -303,7 +314,7 @@ private static boolean isDevelopmentEnvironment() {
 
 ## 实现成功：绿色条条与断言相等性：第 1 部分
 
-将那些测试结果变成绿色是一次令人满意的体验！在本章中，我们将开始深入探索 JUnit 的断言方法。这些是验证你代码行为正确性的骨干，而掌握它们是编写有效的单元测试是基础。
+将那些测试结果变成绿色是一次令人满意的体验！在本章中，我们将开始深入探索 JUnit 的断言方法。这些是验证你代码行为正确性的骨干，而掌握它们是编写有效的单元测试的基础。
 
 ## 断言的重要性
 
@@ -313,7 +324,7 @@ private static boolean isDevelopmentEnvironment() {
 
 让我们先概述 `org.junit.jupiter.api.Assertions` 提供的核心断言方法：
 
-- `assertEquals(expected, actual)`：最基础的断言。验证两个对象是否相等。对于基本类型，这意味着直接值相等（例如 `5 == 5`）。对于对象，它通常使用对象的 `.equals()` 方法。
+- `assertEquals(expected, actual)`：最基础的断言。验证两个对象是否相等。对于基本类型，这意味着直接值相等（例如 `5 == 5`）。对于对象，它通常使用对象的 `equals()` 方法。
 - `assertNotEquals(unexpected, actual)`：`assertEquals` 的相反，确保两个对象不相等。
 - `assertTrue(condition)`：断言布尔条件为 `true`。
 - `assertFalse(condition)`：断言布尔条件为 `false`。
@@ -355,9 +366,6 @@ public class CalculatorTest {
 
 ## 深度相等：基本类型 vs. 对象
 
-
-
-
 区分基本类型和对象之间相等性断言的工作机制至关重要：
 
 - 基本类型：直接对值进行比较。`assertEquals(7, 7)` 通过。
@@ -379,8 +387,8 @@ assertEquals(person1, person2);
 
 ### 额外资源
 
-- JUnit 5 断言 API: [`junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html`](https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html)
-- Java 对象与相等性: [`www.geeksforgeeks.org/equals-hashcode-methods-java/`](https://www.geeksforgeeks.org/equals-hashcode-methods-java/)
+- JUnit 5 断言 API：[`junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html`](https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html)
+- Java 对象与相等性：[`www.geeksforgeeks.org/equals-hashcode-methods-java/`](https://www.geeksforgeeks.org/equals-hashcode-methods-java/)
 
 ## 掌握绿色通过条：相等性断言技术：第 2 部分
 
@@ -416,7 +424,7 @@ void testIterableEquality() {
 
 直接使用 `assertEquals` 比较浮点数（例如 `double`、`float`）可能是危险的，因为它们的表示存在固有的舍入误差。JUnit 提供了一个解决方案：
 
-- `assertEquals(double expected, double actual, double delta)`：断言两个 double 值在指定的容差（`delta`）范围内。
+- `assertEquals(double expected, double actual, double delta)`：断言两个 `double` 值在指定的容差（`delta`）范围内。
 
 #### 示例：浮点数比较
 
@@ -445,9 +453,9 @@ void testInvalidLogin() {
 
 ### 断言的最佳实践
 
-- **每个测试一个断言（理想情况下）**：避免编写包含多个断言的过于复杂的测试。力求每个测试用例对应一个主要的断言。这有助于失败隔离，并使结果更具信息量。
-- **描述性消息**：使用自定义消息使失败的测试更易理解。
-- **测试辅助方法**：如果你有复杂的断言逻辑，将其封装到可重用的辅助方法中，或创建自定义断言类以保持测试用例整洁。
+- 每个测试一个断言（理想情况下）：避免编写包含多个断言的过于复杂的测试。力求每个测试用例对应一个主要的断言。这有助于失败隔离，并使结果更具信息量。
+- 描述性消息：使用自定义消息使失败的测试更易理解。
+- 测试辅助方法：如果你有复杂的断言逻辑，将其封装到可重用的辅助方法中，或创建自定义断言类以保持测试用例整洁。
 
 ### 使用断言进行 TDD
 
@@ -455,24 +463,26 @@ void testInvalidLogin() {
 
 #### 示例：阶乘方法的 TDD 方法
 
-1. **编写测试**：
-```java
-@Test
-void testFactorial() {
-    // 此处省略代码...
-}
-```
+1. 编写测试：
 
-2. **编写最简单的实现（即使它失败）**：
-```java
-public class FactorialCalculator {
-    public int calculate(int n) {
-        return 1; // 初始测试失败
-    }
-}
-```
+   ```java
+   @Test
+   void testFactorial() {
+       // 此处省略代码...
+   }
+   ```
 
-3. **迭代并让测试通过！**
+2. 编写最简单的实现（即使它失败）：
+
+   ```java
+   public class FactorialCalculator {
+       public int calculate(int n) {
+           return 1; // 初始测试失败
+       }
+   }
+   ```
+
+3. 迭代并让测试通过！
 
 ## 下节预：结构合理的测试
 
@@ -481,7 +491,7 @@ public class FactorialCalculator {
 ### 额外资源
 
 - JUnit 5 断言 API（参见重载方法）：[`junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html`](https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html)
-- 测试驱动开发 (TDD)：[`en.wikipedia.org/wiki/Test-driven_development`](https://en.wikipedia.org/wiki/Test-driven_development)
+- 测试驱动开发（TDD）：[`en.wikipedia.org/wiki/Test-driven_development`](https://en.wikipedia.org/wiki/Test-driven_development)
 
 ## 打造健壮的测试：完善你的测试套件：第 1 部分
 
@@ -491,30 +501,27 @@ public class FactorialCalculator {
 
 在构建测试结构时，请记住以下指导原则：
 
-- **隔离性**：良好的单元测试仅关注被测单元，减少与其他组件的依赖。这使得失败更容易定位，且不易引发连锁反应。
-- **可维护性**：测试也是代码！结构良好的测试在代码更改时更容易更新，从而节省宝贵时间。
-- **可读性**：测试是活文档。清晰的测试名称和结构有助于理解代码应该如何工作。
-- **可重复性**：如果依赖项没有发生变化，测试应该产生相同的的结果。波动会破坏对测试的信任。
+- 隔离性：良好的单元测试仅关注被测单元，减少与其他组件的依赖。这使得失败更容易定位，且不易引发连锁反应。
+- 可维护性：测试也是代码！结构良好的测试在代码更改时更容易更新，从而节省宝贵时间。
+- 可读性：测试是活文档。清晰的测试名称和结构有助于理解代码应该如何工作。
+- 可重复性：如果依赖项没有发生变化，测试应该产生相同的结果。波动会破坏对测试的信任。
 
 ## 脆弱测试的常见原因
 
 让我们剖析一些导致测试不稳定的常见问题：
 
-- **过于具体的断言**：当断言与代码的内部实现耦合时，任何实现的重构都可能导致测试失败。
-- **隐藏的外部依赖**：依赖当前日期、系统属性、文件系统状态或网络调用的测试会引入不确定性，破坏可重复性。
-- **测试用例重叠**：具有显著重叠的测试会导致连锁失败。一个 bug 可能会导致多个测试失败，掩盖真正的问题源头。
-
-
-
-
-- **方法命名**：采用如 `shouldCalculatePriceCorrectlyWhenProductIsOnSale()` 的命名规范。
-- **安排-执行-断言 (AAA)**：一种促进测试阶段清晰分离的模式——设置环境、执行被测代码、然后进行断言。
+- 过于具体的断言：当断言与代码的内部实现耦合时，任何实现的重构都可能导致测试失败。
+- 隐藏的外部依赖：依赖当前日期、系统属性、文件系统状态或网络调用的测试会引入不确定性，破坏可重复性。
+- 测试用例重叠：具有显著重叠的测试会导致连锁失败。一个 bug 可能会导致多个测试失败，掩盖真正的问题源头。
+- 方法命名：采用如 `shouldCalculatePriceCorrectlyWhenProductIsOnSale()` 的命名规范。
+- 安排-执行-断言（AAA）：一种促进测试阶段清晰分离的模式——设置环境、执行被测代码、然后进行断言。
 
 ## 示例：重构测试用
 
 让我们想象一个依赖于当前日期的 `OrderService` 测试用：
 
 ### 脆弱版本
+
 ```java
 @Test
 void testOrderIsDiscountedOnBlackFriday() {
@@ -526,7 +533,9 @@ void testOrderIsDiscountedOnBlackFriday() {
 ```
 
 ### 重构以增强健壮性
+
 ### 更具韧性的版本
+
 ```java
 @Test
 void testOrderIsDiscountedOnBlackFriday() {
@@ -544,9 +553,10 @@ void testOrderIsDiscountedOnBlackFriday() {
 在下一部分，我们将涵盖识别问题测试（“测试气味”）的技术、如何让测试自给足以增加隔离性，并深入探讨更多的重构模式。
 
 ### 额外资源
-- **测试气味**：[https://martinfowler.com/bliki/TestSmell.html]
-- **Java 时间时钟**：[https://docs.oracle.com/javase/8/docs/api/java/time/Clock.html]
-- **重构技术**：[https://refactoring.guru/refactoring/techniques]
+
+- 测试气味：[`martinfowler.com/bliki/TestSmell.html`](https://martinfowler.com/bliki/TestSmell.html)
+- Java 时间时钟：[`docs.oracle.com/javase/8/docs/api/java/time/Clock.html`](https://docs.oracle.com/javase/8/docs/api/java/time/Clock.html)
+- 重构技术：[`refactoring.guru/refactoring/techniques`](https://refactoring.guru/refactoring/techniques)
 
 # 增强测试健壮性：高级重构技术：部分部分
 
@@ -554,21 +564,22 @@ void testOrderIsDiscountedOnBlackFriday() {
 
 在我们深入探讨重构之前，让我们学会识别常见的“测试气味”——这些是暗示你的测试代码中可能存在问题的明显迹象。
 
-- **脆弱的测试**：因与其无关的代码更改而频繁失败。
-- **缓慢的测试**：执行时间过长的测试会降低人们频繁测试的意愿。
-- **过度模拟 (Mocking)**：复杂的 Mock 设置可能使测试难以理解和维护。这是你的单元可能没有良好隔离的信号。
-- **冗余**：多个测试断言同一件事价值很小。
-- **晦涩的测试逻辑**：难以追踪的复杂测试代码表明需要进行重构。
-- **条件测试逻辑**：根据环境或数据选择性运行的测试表明存在隐藏的依赖关系或可重复性问题。
+- 脆弱的测试：因与其无关的代码更改而频繁失败。
+- 缓慢的测试：执行时间过长的测试会降低人们频繁测试的意愿。
+- 过度模拟（Mocking）：复杂的 Mock 设置可能使测试难以理解和维护。这是你的单元可能没有良好隔离的信号。
+- 冗余：多个测试断言同一件事价值很小。
+- 晦涩的测试逻辑：难以追踪的复杂测试代码表明需要进行重构。
+- 条件测试逻辑：根据环境或数据选择性运行的测试表明存在隐藏的依赖关系或可重复性问题。
 
 ## 高级重构技术
 
 让我们关注一些更复杂的重构技术，为你的测试套件装上铠：
 
-1. **引入测试替身 (Test Doubles)**：用简化的替代品（`Mocks, Stubs, Fakes`）替换复杂的依赖。我们将在探索 `Mockito` 时详细介绍这一点，但该概念是隔离性的关键。
-2. **测试数据的构建器模式 (Builder Pattern)**：不再使用分散的测试数据，`Builder Pattern` 集中了测试对象的构建方式，使测试设置更加一致。
+1. 引入测试替身（Test Doubles）：用简化的替代品（`Mocks, Stubs, Fakes`）替换复杂的依赖。我们将在探索 `Mockito` 时详细介绍这一点，但该概念是隔离性的关键。
+2. 测试数据的构建器模式（Builder Pattern）：不再使用分散的测试数据，`Builder Pattern` 集中了测试对象的构建方式，使测试设置更加一致。
 
 ### 示例：测试数据构建器
+
 ```java
 public class OrderBuilder {
   private String orderId = "123";
@@ -589,6 +600,9 @@ public class OrderBuilder {
 ```
 
 ### 在测试中使用
+
+
+
 ```java
 @Test
 void testCalculateTotal() {
@@ -600,19 +614,24 @@ void testCalculateTotal() {
 }
 ```
 
-3. **对象母亲模式 (Object Mother Pattern)**：与 `Builder Pattern` 类似，但侧重于创建可重用的、“原型”测试对象，以减少多个测试之间的冗余。
-4. **提取设置逻辑**：将重复的测试设置代码移动到辅助方法或可重用的设置/清理函数（`@Before`, `@BeforeEach` 等）中，以提高 DRY（不要重复自己）性。
+3. **对象母亲模式 (Object Mother Pattern)**：与`Builder Pattern`类似，但侧重于创建可重用的、“原型”测试对象，以减少多个测试之间的冗余。
+
+4. **提取设置逻辑**：将重复的测试设置代码移动到辅助方法或可重用的设置/清理函数（`@Before`, `@BeforeEach`等）中，以提高 DRY（不要重复自己）性。
 
 ## 解决特定的测试气味
 
 - **脆弱的测试**：大量使用测试替身来隔离被测单元，并将断言关注在单元的行为上，而不是协作者的内部细节。
+
 - **缓慢的测试**：识别瓶颈，并可能引入优化或 Mock 来加速。考虑将缓慢测试作为 nightly 构建的一部分选择性运行，而不是每次开发更改都运行。
+
 - **过度模拟**：重新评估你的设计的信号。如果你的类需要许多 Mock 才能进行测试，也许它的职责可以进一步拆分。
 
 ## 重构之外：良好实践
 
 - **有意义的命名**：为你的生产代码和测试都给出反映其目的的清晰名称。
+
 - **封装**：保持测试类镜像你的产品代码结构，以便于导航。
+
 - **为可测试性而设计**：编写测试会影响你的设计。难以测试的代码通常表明生产代码结构存在问题。
 
 ## 持续改进
@@ -621,23 +640,28 @@ void testCalculateTotal() {
 
 ## 下一个：assertTrue 和 assertFalse 的布尔逻辑
 
-在下一章节，我们将转换方向，讨论如何使用 JUnit 的 `assertTrue` 和 `assertFalse` 方法在测试中验证条件。
+在下一章节，我们将转换方向，讨论如何使用 JUnit 的`assertTrue`和`assertFalse`方法在测试中验证条件。
 
 ### 额外资源
+
 - **测试气味**：[https://martinfowler.com/bliki/TestSmell.html]
+
 - **重构模式**：[https://refactoring.guru/refactoring/techniques]
+
 - **为可测试性设计**：[https://martinfowler.com/articles/practical-test-pyramid.html]
 
 ## 验证条件：利用 assertTrue 和 assertFalse
 
-除了等性检查外，测试通常还需要验证逻辑条件。引入 JUnit 的 `assertTrue` 和 `assertFalse` —— 这是在代码中断言布尔事实的基础工具。
+除了等性检查外，测试通常还需要验证逻辑条件。引入 JUnit 的`assertTrue`和`assertFalse` —— 这是在代码中断言布尔事实的基础工具。
 
 ### 基础
 
-- `assertTrue(boolean condition)`：断言提供的 `condition` 求值为 `true`。如果条件为真，则测试通过，否则测试失败。
-- `assertFalse(boolean condition)`：断言提供的 `condition` 求值为 `false`。如果条件为假，则测试通过，否则测试失败。
+- `assertTrue(boolean condition)`：断言提供的`condition`求值为`true`。如果条件为真，则测试通过，否则测试失败。
+
+- `assertFalse(boolean condition)`：断言提供的`condition`求值为`false`。如果条件为假，则测试通过，否则测试失败。
 
 ### 示例：检查登录状态
+
 ```java
 @Test
 void testLoginSuccess() {
@@ -664,16 +688,13 @@ void testDiscountEligibility() {
 
 ## 用场景
 
-以下是 `assertTrue` 和 `assertFalse` 发光的一些常见场景：
+以下是`assertTrue`和`assertFalse`发光的一些常见场景：
 
 - **条件逻辑**：验证代码中的 ‘if’ 语句和其他决策结构会导致正确的输出。
-- **状态验证**：在调用特定方法后检查对象的状态（例如，集合的 `isEmpty()`、属性标志位等）。
 
+- **状态验证**：在调用特定方法后检查对象的状态（例如，集合的`isEmpty()`、属性标志位等）。
 
-
-
-
-- 组合断言：你可以将断言链在一起以进行更复杂的检查。
+- **组合断言**：你可以将断言链在一起以进行更复杂的检查。
 
 ### 示例：订单状态
 
@@ -702,12 +723,13 @@ void testAccountActivation() {
 
 ### 关键考虑
 
--   **可读性**：有时你的布尔表达式可能会变得复杂。将它们拆分为命名良好的变量，以增强代码的可读性。
--   **测试驱动开发 (TDD)**：在编写生产代码之前编写断言，以此驱动你的设计决策。
+- **可读性**：有时你的布尔表达式可能会变得复杂。将它们拆分为命名良好的变量，以增强代码的可读性。
+
+- **测试驱动开发 (TDD)**：在编写生产代码之前编写断言，以此驱动你的设计决策。
 
 ### 陷阱：过度使用否定操作
 
-虽然在技术上可行，但请避免在条件中使用连续的 `!`（否定）操作符链。这会让测试更难解析。相反，请选择更清晰的表达式或重构你的代码以直接产生条件。
+虽然在技术上可行，但请避免在条件中使用连续的`!`（否定）操作符链。这会让测试更难解析。相反，请选择更清晰的表达式或重构你的代码以直接产生条件。
 
 ### 示例：为了清晰性进行重构
 
@@ -723,16 +745,17 @@ assertTrue(accountService.isUserAccountActive(userId));
 
 记住 JUnit 提供的其他有用断言：
 
--   `assertNull(object)`：验证给定的对象为 `null`。
--   `assertNotNull(object)`：验证给定的对象不为 `null`。
+- `assertNull(object)`：验证给定的对象为`null`。
+
+- `assertNotNull(object)`：验证给定的对象不为`null`。
 
 ## 第二部分：增强技术与集成
 
-在下一部分中，我们将深入研究使用 `assertTrue` 和 `assertFalse` 测试集合、错误场景，以及它们如何与 Hamcrest 匹配器等高级测试概念集成。
+在下一部分中，我们将深入研究使用`assertTrue`和`assertFalse`测试集合、错误场景，以及它们如何与 Hamcrest 匹配器等高级测试概念集成。
 
 ### 额外资源
 
--   JUnit 5 断言 API：[`junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html`](https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html)
+- JUnit 5 断言 API：[`junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html`](https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html)
 
 ## 精确断言条件：高级技术 – 第二部分
 
@@ -740,13 +763,15 @@ assertTrue(accountService.isUserAccountActive(userId));
 
 通常，你需要确保集合（Lists、Sets、Maps）包含特定的元素或具有某些属性：
 
--   **检查内容**：
+- **检查内容**：
+
 ```java
 List<Integer> numbers = Arrays.asList(2, 4, 6);
 assertTrue(numbers.contains(4));
 ```
 
--   **是否为空或非空**：
+- **是否为空或非空**：
+
 ```java
 Set<String> errors = validator.validate(data);
 assertTrue(errors.isEmpty(), "Validation should have passed without errors");
@@ -754,7 +779,7 @@ assertTrue(errors.isEmpty(), "Validation should have passed without errors");
 
 ### 处理异常
 
-JUnit 的 `assertThrows` 在错误场景下非常有用。记住，我们在之前的章节中简要地提到过这一点。现在，让我们深入探究：
+JUnit 的`assertThrows`在错误场景下非常有用。记住，我们在之前的章节中简要地提到过这一点。现在，让我们深入探究：
 
 ```java
 @Test
@@ -765,7 +790,8 @@ void testInvalidDiscountCode() {
 }
 ```
 
--   **验证异常消息**：
+- **验证异常消息**：
+
 ```java
 Exception exception = assertThrows(IllegalArgumentException.class, () -> {
     calculator.divide(10, 0);
@@ -793,8 +819,9 @@ void testProductNames() {
 
 **说明：**
 
--   `assertThat`：Hamcrest 断言的入口点。
--   `hasItems`, `hasSize`：Hamcrest 提供的大量匹配器示例。
+- `assertThat`：Hamcrest 断言的入口点。
+
+- `hasItems`, `hasSize`：Hamcrest 提供的大量匹配器示例。
 
 ### `assertTrue` 以实现流式处理
 
@@ -812,7 +839,7 @@ void testOrderStateTransitions() {
 
 ### 测试超时
 
-记得 `assertTimeout` 和 `assertTimeoutPreemptively` 方法吗？这些对于确保你的测试不会因为 Bug 或潜在的无限循环而无限运行至关重要。
+记得`assertTimeout`和`assertTimeoutPreemptively`方法吗？这些对于确保你的测试不会因为 Bug 或潜在的无限循环而无限运行至关重要。
 
 **示例**
 
@@ -827,45 +854,50 @@ void testNetworkTimeout() {
 
 ### 最佳实践
 
--   **命名**：为测试和变量使用性名称。
--   **清晰性**：优先使用清晰的表达式而非复杂的逻辑。
--   **清理**：使用 `@AfterEach` 确保资源被正确释放。
+- **命名**：为测试和变量使用性名称。
 
+- **清晰性**：优先使用清晰的表达式而非复杂的逻辑。
 
-
-
+- **清理**：使用`@AfterEach`确保资源被正确释放。
 
 ## 静态方法与实例方法
 
-- 注解了 `@BeforeClass` 和 `@AfterClass` 的方法必须是 `static` 的。然而，`@BeforeEach` 和 `@AfterEach` 方法通常不应该是 `static` 的，这样它们就可以访问测试类的实例字段。
+- 注解了`@BeforeClass`和`@AfterClass`的方法必须是`static`的。然而，`@BeforeEach`和`@AfterEach`方法通常不应该是`static`的，这样它们就可以访问测试类的实例字段。
+
 - **可维护性**：这些注解显著提高了测试代码的可读性和组织性。
 
 ## 设置/清理（Setup/Teardown）的常见场景
 
 - **数据库交互**：创建测试记录、回滚事务。
-- **Mock ****：配置测试体（我们将在后的 Mockito 章节中讨论这一点）。
+
+- **Mock**：配置测试体（我们将在后的 Mockito 章节中讨论这一点）。
+
 - **外部系统**：启动测试服务器、清除缓存等。
+
 - **数据生成**：创建测试对象。
 
 ## 关于继承的说明
 
-Setup/teardown 方法在测试类的层次结构中被继承。父类方法会在子类方法之前执行（针对 `@BeforeClass` 和 `@BeforeEach`），在子类方法之后执行（针对 `@AfterEach` 和 `@AfterClass`）。
+Setup/teardown 方法在测试类的层次结构中被继承。父类方法会在子类方法之前执行（针对`@BeforeClass`和`@BeforeEach`），在子类方法之后执行（针对`@AfterEach`和`@AfterClass`）。
 
 ## 第 2 部分：针对性能和复杂场景进行优化
 
 在下部分，我们将深入探讨高级的设置和清理策略、性能考虑因素，以及这些注解如何与其他 JUnit 功能良好地协作。
 
 ### 额外资源
+
 - JUnit 5 用户指南 - 测试生命周期：[`junit.org/junit5/docs/current/user-guide/`](https://junit.org/junit5/docs/current/user-guide/)
 
 ## 优化测试初始化与清理：高级策略 – 第 2 部分
 
 ## 性能考虑
 
-虽然 `@Before` 和 `@After`（及其变体）非常棒，但请记住这些性能优化，特别是对于大型测试套件：
+虽然`@Before`和`@After`（及其变体）非常棒，但请记住这些性能优化，特别是对于大型测试套件：
 
-- **懒是一种美德**：如果可能，仅在测试实际需要时才创建昂贵对象或设置资源。除非绝对必要，否则避免在 `@BeforeEach` 中进行复杂的初始化。
+- **懒是一种美德**：如果可能，仅在测试实际需要时才创建昂贵对象或设置资源。除非绝对必要，否则避免在`@BeforeEach`中进行复杂的初始化。
+
 - **选择性设置**：是否可以将共享相同设置逻辑的测试分组以避免重复工作？考虑嵌套类或巧妙的重用模式。
+
 - **测试对象池**：对于某些对象，对象的创建可能是瓶颈。维护一个重用对象池有时可以加速。
 
 ## 复杂层次结构
@@ -873,6 +905,7 @@ Setup/teardown 方法在测试类的层次结构中被继承。父类方法会�
 当你的设置和清理涉及多个依赖项或复杂的序列时，请考虑：
 
 - **构建模式 (Builder Pattern)**：我们在重构章节中提到过这一点。构建模式促进了受控的、逐步的对象构建，使设置逻辑集中化。
+
 - **自定义设置/清理工具**：将复杂的设置步骤封装到辅助函数或专用的工具类中，使你的测试方法更加简洁。
 
 ## 设置与清理之外
@@ -880,10 +913,15 @@ Setup/teardown 方法在测试类的层次结构中被继承。父类方法会�
 让我们看看与这些注解互补的技术：
 
 1. **测试数据管理**：
+
     - **内存数据库 (H2, HSQLDB)**：不要为每个测试都访问真实数据库，使用嵌入式数据库来实现极速测试。
+
     - **数据固件 (Data Fixtures)**：测试前加载的预定义数据集（XML, JSON, CSV）。
+
 2. **加速外部交互**：
+
     - **Mock**：Mockito 是你这里的终极工具。我们将专门用一个章节来掌握它。模拟缓慢的外部依赖以保持单元测试的快速。
+
     - **通用测试体 (Test Doubles)**：存根 (Stubs)、假象 (Fakes) 等作为更轻量级的替代品。
 
 ### 示例：测试数据固件
@@ -897,13 +935,15 @@ void loadTestData() {
 
 ## 与其他 JUnit 功能的相互作用
 
-- `@TestInstance(Lifecycle.PER_CLASS)`：这更改了 JUnit 实例化测试类的方式（`PER_METHOD` 是默认值）。使用 `PER_CLASS` 意味着所有的测试方法都共享该类的一个实例。使用 `@BeforeAll` 进行设置是可以行的，但要小心，因为如果你不管理状态，这可能会在测试之间引入意外的依赖。
+- `@TestInstance(Lifecycle.PER_CLASS)`：这更改了 JUnit 实例化测试类的方式（`PER_METHOD`是默认值）。使用`PER_CLASS`意味着所有的测试方法都共享该类的一个实例。使用`@BeforeAll`进行设置是可以行的，但要小心，因为如果你不管理状态，这可能会在测试之间引入意外的依赖。
+
 - **假设 (assumeTrue, assumeFalse)**：仅在某些设置成功时有条件地运行整个测试。谨慎使用以避免掩盖隐藏错误。
 
 ### 注意事项
 
 - **过度使用**：过度的设置可能意味着你的生产代码存在设计问题。你的类是否太复杂了？
-- **状态泄漏**：确保 `@AfterEach` 真正清理了更改，避免测试之间的副作用。彻底的清理是必须的！
+
+- **状态泄漏**：确保`@AfterEach`真正清理了更改，避免测试之间的副作用。彻底的清理是必须的！
 
 ### 示例：谨慎的状态重置
 
@@ -916,23 +956,28 @@ void resetCalculator() {
 }
 ```
 
-- **平衡粒度**：避免在单个 `@BeforeEach` 中初始化所有内容。在细粒度设置和测试效率之间取得平衡是关键。
+- **平衡粒度**：避免在单个`@BeforeEach`中初始化所有内容。在细粒度设置和测试效率之间取得平衡是关键。
 
 ## 下一步：使用 @BeforeClass 和 @AfterClass 进行静态设置/清理
 
 接下来，我们将讨论这些“类级”设置和清理注解的策略性使用，以及它们何时最适合你的测试工具箱。
 
 ### 额外资源
+
 - 测试数据管理策略：[`searchsoftwarequality.techtarget.com/definition/test-data-management`](https://searchsoftwarequality.techtarget.com/definition/test-data-management)
+
 - JUnit 5 @TestInstance：[`junit.org/junit5/docs/current/user-guide/`](https://junit.org/junit5/docs/current/user-guide/)
 
 ## 协调测试生命周期：@BeforeClass 和 @AfterClass
 
-有时，设置和清理任务对于整个测试类来说是全局的。引入 `@BeforeClass` 和 `@AfterClass` —— 你用于类级编排的工具。
+
+
+有时，设置和清理任务对于整个测试类来说是全局的。引入`@BeforeClass`和`@AfterClass`——你用于类级编排的工具。
 
 ## 何时使用它们
 
 常见用例包括：
+
 - **昂贵的初始化**：设置如数据库连接、嵌入式服务器或所有测试共享的重量级测试固件。
 - **静态资源**：修改测试与之交互的静态字段或系统属性。
 - **一次性清理**：释放在类内获取的资源。
@@ -940,9 +985,9 @@ void resetCalculator() {
 ## 核心笔记
 
 - **执行顺序**：
-    1. `@BeforeClass`：在任何测试之前执行一次。
-    2. `@BeforeEach` -> 测试方法 -> `@AfterEach`（每个测试重复）。
-    3. `@AfterClass`：在所有测试之后执行一次。
+  1. `@BeforeClass`：在任何测试之前执行一次。
+  2. `@BeforeEach` -> 测试方法 -> `@AfterEach`（每个测试重复）。
+  3. `@AfterClass`：在所有测试之后执行一次。
 - **范围**：类级。
 - **方法必须是静态的**：只有静态方法可以使用这些注解。实例方法不行。
 
@@ -974,12 +1019,12 @@ public class InvoiceRepositoryTest {
 ## 解释
 
 - 设置和清理例程对整个测试类执行一次，使昂贵的数据库操作集中化。
-- `@TestInstance(Lifecycle.PER_CLASS)` 在此处用于说明，但要谨慎使用，因为它通过共享状态破坏了测试的标准隔离性。
+- `@TestInstance(Lifecycle.PER_CLASS)`在此处用于说明，但要谨慎使用，因为它通过共享状态破坏了测试的标准隔离性。
 
 ## 关键考虑因素
 
-- **测试隔离**：通常情况下，优先选择每个测试设置（@BeforeEach）和清理（@AfterEach）以获得最大的隔离性。谨慎地使用类级设置。
-- **状态管理**：如果你的代码与静态字段或系统属性交互，在 `@AfterClass` 中进行彻底清理至关重要，以避免状态意外泄漏。
+- **测试隔离**：通常情况下，优先选择每个测试设置（`@BeforeEach`）和清理（`@AfterEach`）以获得最大的隔离性。谨慎地使用类级设置。
+- **状态管理**：如果你的代码与静态字段或系统属性交互，在`@AfterClass`中进行彻底清理至关重要，以避免状态意外泄漏。
 - **性能**：如果你正在执行真正共享的昂贵初始化，这些注解可以提高测试套件的性能。
 
 ## 何时不使用它们
@@ -989,33 +1034,28 @@ public class InvoiceRepositoryTest {
 
 ## 替代方案与补充
 
-- **测试套件 (Test Suites)**：如果你需要一组共享非常特定且昂贵的设置的测试类，请考虑 JUnit 的 `@Suite` 注解。
-
-
-
-
-
-- 外部工具：对于复杂的配置，可以探索如 `Testcontainers` 等工具，用于管理测试环境中外部依赖（如数据库或 Web 服务）的生命周期。
+- **测试套件（Test Suites）**：如果你需要一组共享非常特定且昂贵的设置的测试类，请考虑 JUnit 的`@Suite`注解。
+- **外部工具**：对于复杂的配置，可以探索如`Testcontainers`等工具，用于管理测试环境中外部依赖（如数据库或 Web 服务）的生命周期。
 
 让我们进入数组比较技巧！
 
 ### 额外资源
 
-- `JUnit` `@Suite`: [`junit.org/junit5/docs/current/user-guide/`](https://junit.org/junit5/docs/current/user-guide/)
-- `Testcontainers` [`www.testcontainers.org/`](https://www.testcontainers.org/)
+- `JUnit``@Suite`：[`junit.org/junit5/docs/current/user-guide/`](https://junit.org/junit5/docs/current/user-guide/)
+- `Testcontainers`：[`www.testcontainers.org/`](https://www.testcontainers.org/)
 
 ## 掌握数组：数组比较的有效技术 – 第一部分
 
-数组是 Java 开发的基础，确保其内容符合预期是一项常规测试任务。然而，仅仅使用 `assertEquals(array1, array2)` 是不够的！
+数组是 Java 开发的基础，确保其内容符合预期是一项常规测试任务。然而，仅仅使用`assertEquals(array1, array2)`是不够的！
 
 ## 数组的挑战
 
-- **引用相等性**：在 Java 中，数组是对象。使用默认的 `equals()` 方法或 `==` 操作符比较的是它们是否指向同一个内存位置，而不是逐个比较元素的内容。
+- **引用相等性**：在 Java 中，数组是对象。使用默认的`equals()`方法或`==`操作符比较的是它们是否指向同一个内存位置，而不是逐个比较元素的内容。
 - **顺序很重要**：为了让测试通过，数组必须以相同的顺序具有相同的元素。
 
 让我们在 JUnit 测试中探索可靠的数组比较技术。
 
-### 1. JUnit 的 `assertArrayEquals()`
+### 1. JUnit 的`assertArrayEquals()`
 
 你的第一个武器是 JUnit 专用的断言方法：
 
@@ -1032,7 +1072,7 @@ void testArrayEquality() {
 
 - **功能**：处理逐个元素的比较，同时考虑了值和顺序。适用于基本数据类型的数组。
 
-### 2. `Arrays.equals()`（来自 `java.util.Arrays`）
+### 2. `Arrays.equals()`（来自`java.util.Arrays`）
 
 适用于比较对象数组：
 
@@ -1047,7 +1087,7 @@ void testObjectArrayEquality() {
 }
 ```
 
-- **重要性性**：对象数组内的元素必须实现自己的 `equals()` 方法才能进行内容比较。
+- **重要性性**：对象数组内的元素必须实现自己的`equals()`方法才能进行内容比较。
 
 ### 3. Hamcrest Matchers
 
@@ -1067,13 +1107,13 @@ void testWithHamcrestMatchers() {
 
 ## 需要考虑的权衡
 
-- **可读性**：`assertArrayEquals` 是基础情况的最直接的方法。Hamcrest 在更微妙的场景下表现优异。
-- **类型**：`assertArrayEquals` 专门用于基本类型数组。对于对象数组，需要 `Arrays.equals` 或 Hamcrest。
+- **可读性**：`assertArrayEquals`是基础情况的最直接的方法。Hamcrest 在更微妙的场景下表现优异。
+- **类型**：`assertArrayEquals`专门用于基本类型数组。对于对象数组，需要`Arrays.equals`或 Hamcrest。
 
 ## 进阶考虑
 
-- **深度比较**：对于包含其他数组或自定义对象的数组，你需要 `Arrays.deepEquals()` 或自定义解决方案来比较嵌套元素。
-- **容差**：在比较浮点数数组（`double[]`、`float[]`）时，考虑使用带有 delta 偏移量进行近似的 `assertArrayEquals` 重载方法。
+- **深度比较**：对于包含其他数组或自定义对象的数组，你需要`Arrays.deepEquals()`或自定义解决方案来比较嵌套元素。
+- **容差**：在比较浮点数数组（`double[]`、`float[]`）时，考虑使用带有 delta 偏移量进行近似的`assertArrayEquals`重载方法。
 
 ### 示例：排序算法测试
 
@@ -1091,10 +1131,10 @@ void testSorting() {
 
 在第二部分中，我们将深入学习使用部分匹配比较数组、忽略特定元素、使用自定义比较器以及多维数组的策略。
 
-### 额外资源：
+### 额外资源
 
-- `JUnit` `assertArrayEquals`: [`junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html`](https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html)
-- `Java` `Arrays` 类：[`docs.oracle.com/javase/8/docs/api/java/util/Arrays.html`](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)
+- `JUnit``assertArrayEquals`：[`junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html`](https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html)
+- `Java``Arrays`类：[`docs.oracle.com/javase/8/docs/api/java/util/Arrays.html`](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html)
 
 ## 数组重温：全面比较的高级策略 – 第二部分
 
@@ -1174,9 +1214,9 @@ void test2DArray() {
 
 ## 选择正确的工具
 
-- **直接性**：`assertArrayEquals` 是简单情况的最直接方法。
+- **直接性**：`assertArrayEquals`是简单情况的最直接方法。
 - **灵活性**：当需要部分匹配或顺序灵活时，Hamcrest 表现优异。
-- **复杂性**：对于嵌套结构或独特的比较逻辑，考虑 `Arrays.deepEquals`。
+- **复杂性**：对于嵌套结构或独特的比较逻辑，考虑`Arrays.deepEquals`。
 
 ### 关键考虑
 
@@ -1184,10 +1224,6 @@ void test2DArray() {
 - **可读性**：虽然强大，但过的自定义会损害测试的清晰度。
 
 让我们进入 JUnit 中的异常处理部分！
-
-
-
-
 
 ```java
 void testInsufficientStock() {
@@ -1198,7 +1234,7 @@ void testInsufficientStock() {
 }
 ```
 
-### 3. 传统方式：@Test(expected=...)
+### 3. 传统方式：`@Test(expected=...)`
 
 适用于旧版本的 JUnit 或简单用例：
 
@@ -1209,7 +1245,7 @@ public void testInvalidEmailFormat() {
 }
 ```
 
-* **局限性**：精细度较低；无法检查异常的内容。
+- **局限性**：精细度较低；无法检查异常的内容。
 
 ### 4. try-catch 模式
 
@@ -1230,9 +1266,9 @@ void testFileLoadError() {
 
 ### 选择你的策略
 
-* `assertThrows`：大多数场景下的现代、首选方法。对异常本身提供断言能力。
-* `@Test(expected=...)`：如果你没有使用最新的 JUnit，这种方法对于基本的“是否抛出异常”的测试足够了。
-* `try-catch`：当你需要处理异常或 `assertThrows` 不符合你的测试结构时，提供了细粒度的控制。
+- `assertThrows`：大多数场景下的现代、首选方法。对异常本身提供断言能力。
+- `@Test(expected=...)`：如果你没有使用最新的 JUnit，这种方法对于基本的“是否抛出异常”的测试足够了。
+- `try-catch`：当你需要处理异常或`assertThrows`不符合你的测试结构时，提供了细粒度的控制。
 
 ### 示例：健壮计算
 
@@ -1250,14 +1286,14 @@ void testNegativeSquareRoot() {
 
 ### 进阶内容
 
-* **自定义异常类型**：确保对自定义的异常类通过了正确触发的测试。
-* **测试异常传播**：验证异常如何通过你的方法调用层层冒泡。
-* **框架集成 (Spring)**：许多测试框架都提供了异常处理工具。探索它们与 JUnit 的集成。
+- **自定义异常类型**：确保对自定义的异常类通过了正确触发的测试。
+- **测试异常传播**：验证异常如何通过你的方法调用层层冒泡。
+- **框架集成（Spring）**：许多测试框架都提供了异常处理工具。探索它们与 JUnit 的集成。
 
 ### 最佳实践
 
-* **聚焦的异常测试**：为不同的预期异常和场景编写分离测试。
-* **整洁的测试失败**：确保测试失败清晰地指向异常问题，而不是关于异常的断言失败。
+- **聚焦的异常测试**：为不同的预期异常和场景编写分离测试。
+- **整洁的测试失败**：确保测试失败清晰地指向异常问题，而不是关于异常的断言失败。
 
 **下一步**：性能测试考虑因素，参数化测试
 
@@ -1271,13 +1307,13 @@ void testNegativeSquareRoot() {
 
 ### 为什么性能在单元测试中很重要
 
-* **快速反馈**：缓慢的测试会让人抑制频繁测试，而对于测试驱动开发（TDD）和敏捷工作流至关重要。
-* **定位问题**：测试套件中的性能分析有助于尽早隔离生产代码中的瓶颈。
-* **扩展性**：大型且缓慢的测试套件会阻碍项目的增长和可维护性。
+- **快速反馈**：缓慢的测试会让人抑制频繁测试，而对于测试驱动开发（TDD）和敏捷工作流至关重要。
+- **定位问题**：测试套件中的性能分析有助于尽早隔离生产代码中的瓶颈。
+- **扩展性**：大型且缓慢的测试套件会阻碍项目的增长和可维护性。
 
 ### 常见的性能元凶
 
-1. **昂贵的设置**：在每个测试之前重复执行 `@Before` 方法、数据库调用或网络操作。
+1. **昂贵的设置**：在每个测试之前重复执行`@Before`方法、数据库调用或网络操作。
 2. **未优化的测试代码**：被测试代码中效率低下的算法或数据结构，就像普通的 Java 代码一样。
 3. **外部依赖**：测试依赖的外部系统、文件或 Web 服务的缓慢交互。
 
@@ -1285,10 +1321,12 @@ void testNegativeSquareRoot() {
 
 虽然存在基础的计时机制，但专用的分析工具是你的最佳选择：
 
-* **内置分析器**：你的 IDE（IntelliJ, Eclipse）可能提供了适用于测试执行的分析功能。
-* **JMH (Java Microbenchmark Harness)**：一个为微基准测试设计的框架，包括类似单元测试的场景。设置较复杂，但提供了更细粒度的控制。
+- **内置分析器**：你的 IDE（IntelliJ、Eclipse）可能提供了适用于测试执行的分析功能。
+- **JMH（Java Microbenchmark Harness）**：一个为微基准测试设计的框架，包括类似单元测试的场景。设置较复杂，但提供了更细粒度的控制。
 
 ### 示例：初级计时
+
+
 
 ```java
 @Test
@@ -1301,18 +1339,18 @@ void testDatabaseQueryPerformance() {
 }
 ```
 
-### 优化策略
+## 优化策略
 
-* **Mock（模拟）**：使用 mock 和 stub 将你的测试与缓慢的外部依赖解耦（稍后我们将关注 Mockito）。
-* **缓存**：如果测试场景内的结果是可预测的，避免冗余的计算或数据获取。
-* **面向测试的设计**：有时，为了可测试性重构生产代码也有助于性能。
-* **选择性执行**：标记性能测试。
+- **Mock（模拟）**：使用 `mock` 和 `stub` 将你的测试与缓慢的外部依赖解耦（稍后我们将关注 `Mockito`）。
+- **缓存**：如果测试场景内的结果是可预测的，避免冗余的计算或数据获取。
+- **面向测试的设计**：有时，为了可测试性重构生产代码也有助于性能。
+- **选择性执行**：标记性能测试。
 
-### JUnit 专用工具
+## JUnit 专用工具
 
-* `@Timeout`：强制执行最大持续时间。
+- `@Timeout`：强制执行最大持续时间。
 
-示例：使用 @Timeout
+示例：使用 `@Timeout`
 
 ```java
 @Test
@@ -1322,23 +1360,23 @@ void testStringConcatenation() {
 }
 ```
 
-### 关键考虑量
+## 关键考虑量
 
-* **基线**：建立性能预期。
-* **焦点**：检测回归。
-* **真实的负载**：模拟实际使用情况。
+- **基线**：建立性能预期。
+- **焦点**：检测回归。
+- **真实的负载**：模拟实际使用情况。
 
-### 最佳实践
+## 最佳实践
 
-* **集成测试**：隔离的单元测试。
-* **持续监控**：将性能跟踪纳入构建中。
+- **集成测试**：隔离的单元测试。
+- **持续监控**：将性能跟踪纳入构建中。
 
 **下一步**：参数化测试
 
-### 额外资源
+## 额外资源
 
-* **JUnit 异常测试**：[`junit.org/junit5/docs/current/user-guide/`](https://junit.org/junit5/docs/current/user-guide/)
-* **JMH (Java Microbenchmark Harness)**：[`openjdk.java.net/projects/code-tools/jmh/`](https://openjdk.java.net/projects/code-tools/jmh/)
+- **JUnit 异常测试**：[`junit.org/junit5/docs/current/user-guide/`](https://junit.org/junit5/docs/current/user-guide/)
+- **JMH (Java Microbenchmark Harness)**：[`openjdk.java.net/projects/code-tools/jmh/`](https://openjdk.java.net/projects/code-tools/jmh/)
 
 ---
 
@@ -1346,21 +1384,21 @@ void testStringConcatenation() {
 
 通常一个测试需要针对多组输入输出执行。手动为每个变化编写相似的测试既枯燥又容易出错。引入参数化测试！
 
-### 参数化的威力
+## 参数化的威力
 
-* **数据驱动测试**：使用紧凑的测试覆盖大量场景。
-* **减少冗余**：维护单一测试模板，减少代码重复。
-* **提高可读性**：专注于核心逻辑，输入/输出清晰分离。
-* **边界情况探索**：系统地测试边界条件和各种用例。
+- **数据驱动测试**：使用紧凑的测试覆盖大量场景。
+- **减少冗余**：维护单一测试模板，减少代码重复。
+- **提高可读性**：专注于核心逻辑，输入/输出清晰分离。
+- **边界情况探索**：系统地测试边界条件和各种用例。
 
-### 核心概念
+## 核心概念
 
-1. **参数源**：指示测试如何获取输入值。JUnit 提供了多种内置选项。
+1. **参数源**：指示测试如何获取输入值。`JUnit` 提供了多种内置选项。
 2. **参数化测试方法**：测试类中标记了 `@ParameterizedTest` 注解的方法。该方法接收参数源填充的参数。
 
-### 从 JUnit 的内置源开始
+## 从 JUnit 的内置源开始
 
-* `@ValueSource`：对于简单数据类型（字符串、数字、枚举）最简单。
+- `@ValueSource`：对于简单数据类型（字符串、数字、枚举）最简单。
 
 ```java
 @ParameterizedTest
@@ -1370,7 +1408,7 @@ void testIsEven(int number) {
 }
 ```
 
-* `@CsvSource`：处理逗号分隔的值，适用于稍微复杂的数据。
+- `@CsvSource`：处理逗号分隔的值，适用于稍微复杂的数据。
 
 ```java
 @ParameterizedTest
@@ -1380,7 +1418,7 @@ void testFruitCost(String fruit, int price) {
 }
 ```
 
-* `@EnumSource`：对枚举值进行迭代。
+- `@EnumSource`：对枚举值进行迭代。
 
 ```java
 enum Currency { USD, EUR, GBP }
@@ -1392,7 +1430,7 @@ void testCurrencySymbol(Currency currency) {
 }
 ```
 
-### 示例：数学工具
+## 示例：数学工具
 
 ```java
 @ParameterizedTest
@@ -1402,15 +1440,11 @@ void testAbsoluteValue(double input) {
 }
 ```
 
-
-
-
-
 ```java
 assertEquals(Math.abs(input), MathUtils.absolute(input));
 ```
 
-### 注意事项
+## 注意事项
 
 - **命名**：`JUnit` 生成的测试名称会包含你的参数值。请在测试方法中使用具有意义的参数参数名称。
 - **测试结构**：保持参数化测试方法的逻辑集中在所测试内容的核心上。
@@ -1420,15 +1454,15 @@ assertEquals(Math.abs(input), MathUtils.absolute(input));
 
 在第二部分中，我们将学习如何为更复杂的数据对象构建自定义源，探索如何调整测试执行和命名规范，并查看参数化测试如何与其他 `JUnit` 特性协同工作。
 
-### 额外资源
+## 额外资源
 
 - JUnit 5 参数化测试：[`junit.org/junit5/docs/current/user-guide/`](https://junit.org/junit5/docs/current/user-guide/)
 
-## 参数化精准：微调你的测试 – 第 2 部分
+# 参数化精准：微调你的测试 – 第 2 部分
 
 在第 1 部分中，我们开启了参数化测试之旅。现在，让我们解锁更多自定义功能和高级技术。
 
-### 1. 自定义参数源 (`@MethodSource`)
+## 1. 自定义参数源 (`@MethodSource`)
 
 当内置源无法满足需求时，构建你自己的源来向测试提供复杂数据：
 
@@ -1451,7 +1485,7 @@ static Stream<Arguments> provideStringsAndLengths() {
 - **灵活性**：从文件、数据库或计算中生成测试数据。
 - **Arguments 对象**：`Arguments` 类将多个值封装成单个“测试用例”单元。
 
-### 2. 使用 `@DisplayName` 命名测试名称
+## 2. 使用 `@DisplayName` 命名测试名称
 
 参数化测试自动生成的名称可能难以解析。`@DisplayName` 注解来得救了！
 
@@ -1466,7 +1500,7 @@ void testUserRegistration(String userId, String fullName) {
 
 - **可读性胜出**：描述性的测试名称在测试报告和调试失败原因时非常有帮助。
 
-### 3. 使用 `@TestTemplate` 调整执行
+## 3. 使用 `@TestTemplate` 调整执行
 
 有时，你希望对参数化测试的调用方式有更多控制。引入 `@TestTemplate` 注解：
 
@@ -1482,7 +1516,7 @@ void testMultiplicationTable(int multiplier, int input, int expected) {
 
 - **特殊场景**：自定义调用器可以改变执行顺序、过滤参数组合等。（注意：这是一项高级技术，通常需要更深层次的 `JUnit` 扩展知识）
 
-### 4. 与假设断结合
+## 4. 与假设断结合
 
 将参数化与我们之前章节中的 `assumeTrue` 或 `assumeFalse` 结合，实现条件测试执行：
 
@@ -1495,7 +1529,7 @@ void testIsPalindrome(String word) {
 }
 ```
 
-### 示例：复杂计算
+## 示例：复杂计算
 
 ```java
 @ParameterizedTest
@@ -1512,7 +1546,7 @@ private static Stream<Arguments> complexCalculationInputs() {
 }
 ```
 
-### 最佳实践
+## 最佳实践
 
 - **平衡**：参数化非常强大，但不要过度使用。有时，多个传统的测试会更清晰。
 - **提供方法命名**：诸如 `provide...` 或 `testCases...` 的约定有助于可读性。
@@ -1522,13 +1556,13 @@ private static Stream<Arguments> complexCalculationInputs() {
 
 在第 3 部分中，我们将发现如何使用 `@ArgumentsSource` 注解使用更高级的参数源，并创建更加定制的参数化测试！
 
-### 额外资源
+## 额外资源
 
 - 使用 `@MethodSource` 的自定义参数源：[`junit.org/junit5/docs/current/user-guide/`](https://junit.org/junit5/docs/current/user-guide/)
 
-## 定制参数化：自定义套件 – 第 3 部分
+# 定制参数化：自定义套件 – 第 3 部分
 
-### 1. `ArgumentsSource`
+## 1. `ArgumentsSource`
 
 当需要从外部源获取数据时，`@MethodSource` 有时并不够用。
 
@@ -1551,7 +1585,7 @@ static class CustomProvider implements ArgumentsProvider {
 }
 ```
 
-### 2. 可组合源
+## 2. 可组合源
 
 组合 `@CsvSource`、`@MethodSource` 等多个源。
 
@@ -1566,7 +1600,7 @@ static Stream<Arguments> provideObjects() {
 }
 ```
 
-### 3. 外部文件 (CSV, JSON)
+## 3. 外部文件 (CSV, JSON)
 
 适用于大量数据。`Jackson` 或 `OpenCSV` 等库可以简化解析：
 
@@ -1576,14 +1610,14 @@ static Stream<Arguments> provideObjects() {
 void testPrice(String productId, double cost, double taxRate, double expectedPrice)
 ```
 
-### 4. 过滤
+## 4. 过滤
 
 限制执行测试用例。选项包括：
 
-- @TestTemplate 我们在第二部分提到过。
+- `@TestTemplate` 我们在第二部分提到过。
 - 第三方扩展：探索参数化测试的过滤机制。
 
-### 示例：登录测试
+## 示例：登录测试
 
 ```java
 @ParameterizedTest
@@ -1602,17 +1636,13 @@ static class UserArgumentProvider implements ArgumentsProvider {
 }
 ```
 
-
-
-
-
 # 简化测试管理：组织 JUnit 测试套件以提高效率
 
 随着项目的增长，测试的数量也会成倍增加。有效地管理这些测试对于维持可性和高效的开发工作流至关重要。这就是 `JUnit Test Suites`（JUnit 测试套件）。
 
-### 1. 测试套件的概念
+## 1. 测试套件的概念
 
-- **分组**：测试套件将多个相关的 JUnit 测试类封装成一个逻辑单元。
+- **分组**：测试套件将多个相关的 `JUnit` 测试类封装成一个逻辑单元。
 - **执行控制**：通过单个命令运行整个套件，实现选择性或针对性的测试执行。
 - **分级组织**：对于复杂项目，你甚至可以将套件嵌套在套件中。
 
@@ -1620,7 +1650,7 @@ static class UserArgumentProvider implements ArgumentsProvider {
 
 让我们来看两种主要方式：
 
-### A. @RunWith(Suite.class)
+### A. `@RunWith(Suite.class)`
 
 ```java
 import org.junit.runner.RunWith;
@@ -1635,10 +1665,10 @@ public class FeatureTestSuite {} // 一个作为套件运行器的空类
 ```
 
 - **要点**：
-    - 在 `@SuiteClasses` 中列出你的测试类。
-    - 套件运行器类本身通常保持为空。
+  - 在 `@SuiteClasses` 中列出你的测试类。
+  - 套件运行器类本身通常保持为空。
 
-### B. @SelectPackages
+### B. `@SelectPackages`
 
 ```java
 @RunWith(Suite.class)
@@ -1649,7 +1679,7 @@ public class FeatureTestSuite {} // 一个作为套件运行器的空类
 public class ApplicationTestSuite {}
 ```
 
-- **自动发现**：JUnit 将扫描指定的包并包含其中所有的测试类。
+- **自动发现**：`JUnit` 将扫描指定的包并包含其中所有的测试类。
 - **灵活性**：非常适合将应用程序中特定模块或包内的所有测试分组。
 
 ### 示例：电子商务套件
@@ -1664,18 +1694,20 @@ public class ApplicationTestSuite {}
 public class ECommerceTestSuite {}
 ```
 
-### 3. 套件运行器 (Suite Runners)
+## 3. 套件运行器 (Suite Runners)
 
 - **JUnit 4**：需要 `@RunWith(Suite.class)` 注解。
-- **JUnit 5**：虽然上述方法有效，但 JUnit 5 引擎会在执行期间自动发现套件。
+- **JUnit 5**：虽然上述方法有效，但 `JUnit 5` 引擎会在执行期间自动发现套件。
 
-### 4. 测试套件的优势
+## 4. 测试套件的优势
 
 - **针对性执行**：通过一次运行执行某个功能、某个模块甚至运行缓慢的所有测试。
 - **组织性**：对测试进行分类，以便更好地报告和理解你的测试覆盖率。
 - **CI 集成**：通过按需运行特定套件，简化构建流水线和持续集成。
 
-### 5. 注意事项与最佳实践
+## 5. 注意事项与最佳实践
+
+
 
 - **粒度**：在细粒度和大型套件之间取得平衡，以保持灵活性。
 - **命名**：清晰地命名套件以反映其范围和目的。
@@ -1687,7 +1719,8 @@ public class ECommerceTestSuite {}
 Mockito 将为你开启专注于单元测试的大门，这些测试不受缓慢或不可靠的依赖。
 
 额外资源：
-- JUnit Suites: [`junit.org/junit5/docs/current/user-guide/`](https://junit.org/junit5/docs/current/user-guide/)
+
+- JUnit Suites：[`junit.org/junit5/docs/current/user-guide/`](https://junit.org/junit5/docs/current/user-guide/)
 
 ---
 
@@ -1706,10 +1739,10 @@ Mockito 将为你开启专注于单元测试的大门，这些测试不受缓慢
 ## 1. Maven 基础
 
 - **安装**：
-    - 从 [`maven.apache.org/`](https://maven.apache.org/) 下载 Maven。
-    - 按照你操作系统的安装说明进行。
-    - **验证**：在终端/命令提示符中运行 `mvn -version`。
-- **POM (pom.xml)**：Maven 的核心是项目对象模型文件。它是一个定义项目、依赖和构建配置的 XML 文件。
+  - 从 [`maven.apache.org/`](https://maven.apache.org/) 下载 Maven。
+  - 按照你操作系统的安装说明进行。
+  - **验证**：在终端/命令提示符中运行 `mvn -version`。
+- **POM (`pom.xml`)**：Maven 的核心是项目对象模型文件。它是一个定义项目、依赖和构建配置的 XML 文件。
 
 ## 2. 创建骨架项目
 
@@ -1717,11 +1750,16 @@ Mockito 将为你开启专注于单元测试的大门，这些测试不受缓慢
 
 1. 打开你的终端/命令提示符。
 2. **Archetype 命令**：
-   `mvn archetype:generate -DgroupId=com.yourcompany -DartifactId=my-mockito-project -DarchetypeArtifactId=maven-archetype-quickstart`
-    - `groupId`：分组相关项目的方法（通常是公司域名）。
-    - `artifactId`：你的项目名称。
 
-这会创建一个名为 `my-mockito-project` 的目录包含：
+   ```bash
+   mvn archetype:generate -DgroupId=com.yourcompany -DartifactId=my-mockito-project -DarchetypeArtifactId=maven-archetype-quickstart
+   ```
+
+   - `groupId`：分组相关项目的方法（通常是公司域名）。
+   - `artifactId`：你的项目名称。
+
+这会创建一个名为 `my-mockito-project` 的目录，包含：
+
 - `pom.xml`：让我们探索它！
 - `src`：包含源代码和测试文件夹。
 
@@ -1759,18 +1797,20 @@ Mockito 将为你开启专注于单元测试的大门，这些测试不受缓慢
 
 - `scope: test`：指定该依赖仅在测试时有效。
 
-**Maven 实际操作**
+### Maven 实际操作
+
 1. **下载依赖**：运行 `mvn package`（或类似命令）。
 2. **编写测试**：在 `src/test/java` 中创建。
 3. **编译并测试**：运行 `mvn test`。
 
 ---
 
-# 第二部分： 引入 Mockito
+# 第二部分：引入 Mockito
 
 在第 2 部分，我们将 `Mockito` 引入你的项目，使其与缓慢或不可靠的依赖分离。
 
 额外资源：
+
 - Maven 网站：[`maven.apache.org/`](https://maven.apache.org/)
 - Maven Archetypes：[`maven.apache.org/archetypes/`](https://maven.apache.org/archetypes/)
 
@@ -1848,10 +1888,6 @@ class InventoryCheckTest {
 }
 ```
 
-
-
-
-
 ## 核心要点
 
 - `Mockito.mock()`：创建一个 mock 对象。
@@ -1860,7 +1896,7 @@ class InventoryCheckTest {
 ### 5. 基础之外
 
 - **插件**：探索如 `maven-surefire-plugin` 等插件以控制测试执行。
-- **配置文件 (Profiles)**：使用 `<profiles>` 定义不同的 Maven 配置（例如针对不同的测试环境）。
+- **配置文件 (`Profiles`)**：使用 `<profiles>` 定义不同的 Maven 配置（例如针对不同的测试环境）。
 
 ## 让我们实践起来！
 
@@ -1869,7 +1905,7 @@ class InventoryCheckTest {
 ### 额外资源
 
 - **Maven 仓库**（获取最新库版本）：[`mvnrepository.com/`](https://mvnrepository.com/)
-- **Mockito 官网**:[`site.mockito.org/`](https://site.mockito.org/)
+- **Mockito 官网**：[`site.mockito.org/`](https://site.mockito.org/)
 
 准备好开始定义你想要测试的代码了吗？
 
@@ -1880,9 +1916,9 @@ class InventoryCheckTest {
 ### 1. 什么是被测系统 (SUT)？
 
 - SUT 是你正在隔离并测试的特定代码片段。这可能是：
-    - 单个类
-    - 一组相关的类
-    - 类中的某个方法
+  - 单个类
+  - 一组相关的类
+  - 类中的某个方法
 
 ### 2. 单元测试的精神
 
@@ -1909,15 +1945,15 @@ class InventoryCheckTest {
 
 - **内聚性**：理想的 SUT 具有定义良好的职责和内部逻辑。
 - **最小化依赖**：复杂的依赖网络使得难以在真正的隔离状态下测试单元。
-- **可测试性**：有时可能对对代码进行微重构，使其更便于单元测试。
+- **可测试性**：有时可能对代码进行微重构，使其更便于单元测试。
 
 #### 示例：重审订单处理
 
 想象我们的 `OrderProcessingService` 直接执行以下操作：
 
-1. 计算税费
-2. 联系数据库进行库存检查
-3. 通过电子邮件发送订单确认
+1. 计算税费。
+2. 联系数据库进行库存检查。
+3. 通过电子邮件发送订单确认。
 
 这对于单元测试来说是不理想的。我们可能会通过重构来引入协作者（`TaxCalculator`、`InventoryService`、`EmailService`），使 `OrderProcessingService` 更容易进行隔离测试。
 
@@ -1940,33 +1976,38 @@ class InventoryCheckTest {
 如何实例化你的 SUT 对有效测试至关重要：
 
 - **直接实例化**：如果你的 SUT 没有外部依赖（或只有简单的依赖），你可以直接使用 `new` 关键字：
-```
-OrderProcessingService sut = new OrderProcessingService();
-```
+
+  ```java
+  OrderProcessingService sut = new OrderProcessingService();
+  ```
+
 - **依赖注入 (DI)**：提高可测试性。主要有两种方式：
-    - **构造函数注入**：将依赖项传入 SUT 的构造函数。这使得 SUT 的需求变得显式。
-```
-InventoryService inventoryService = ... // 之后可以是 Mockito mock
-OrderProcessingService sut = new OrderProcessingService(inventoryService);
-```
-    - **Setter 注入**：使用 setter 方法在 SUT 构建后提供依赖项。
-```
-OrderProcessingService sut = new OrderProcessingService();
-sut.setInventoryService(inventoryService);
-```
+  - **构造函数注入**：将依赖项传入 SUT 的构造函数。这使得 SUT 的需求变得显式。
+
+    ```java
+    InventoryService inventoryService = ... // 之后可以是 Mockito mock
+    OrderProcessingService sut = new OrderProcessingService(inventoryService);
+    ```
+
+  - **Setter 注入**：使用 setter 方法在 SUT 构建后提供依赖项。
+
+    ```java
+    OrderProcessingService sut = new OrderProcessingService();
+    sut.setInventoryService(inventoryService);
+    ```
 
 ### 2. 引入 Mockito – Mock 协作者
 
 当你的 SUT 依赖于其他类时，Mockito 是你的超能力：
 
-```
+```java
 InventoryService inventoryServiceMock = Mockito.mock(InventoryService.class);
 OrderProcessingService sut = new OrderProcessingService(inventoryServiceMock);
 ```
 
 - **收益**：
-    - 将 SUT 的逻辑与其协作者的行为隔离。
-    - 允许你根据不同的测试场景控制协作者“返回”什么。
+  - 将 SUT 的逻辑与其协作者的行为隔离。
+  - 允许你根据不同的测试场景控制协作者“返回”什么。
 
 ### 3. 特殊情况
 
@@ -2022,13 +2063,15 @@ OrderProcessingService sut = new OrderProcessingService(inventoryServiceMock, ta
 
 - **协作者**：stubbing 的本质是为 mock 依赖项定义预定义的响应或行为。
 - **为什么要 Stub？**
-    - 隔离 SUT 的内部逻辑。
-    - 在不依赖真实的、可能复杂或缓慢的协作者的情况下测试不同场景。
-    - 驱动 SUT 进入特定的边缘情况以进行稳健测试。
+  - 隔离 SUT 的内部逻辑。
+  - 在不依赖真实的、可能复杂或缓慢的协作者的情况下测试不同场景。
+  - 驱动 SUT 进入特定的边缘情况以进行稳健测试。
 
-### 2. Mockito 的 “当……那么……”
+### 2. Mockito 的“当……那么……”
 
 Mockito 的 Stubbing 语法遵循良好的可读性模式：
+
+
 
 `Mockito.when(mockedObject.someMethod(arguments)).thenReturn(result);`
 
@@ -2039,10 +2082,6 @@ Mockito 的 Stubbing 语法遵循良好的可读性模式：
 
 想象我们的 `OrderProcessingService` 依赖于 `InventoryService`：
 
-
-
-
-
 ```java
 InventoryService inventoryServiceMock = Mockito.mock(InventoryService.class);
 
@@ -2052,7 +2091,7 @@ when(inventoryServiceMock.isProductInStock("12345")).thenReturn(true);
 // will ALWAYS return 'true'.
 ```
 
-### 3. 桩方法的变体
+## 3. 桩方法的变体
 
 让我们扩展我们的桩工具箱：
 
@@ -2063,6 +2102,7 @@ when(inventoryServiceMock.isProductInStock("12345")).thenReturn(true);
 ```java
 Mockito.doNothing().when(emailServiceMock).sendConfirmationEmail(...);
 ```
+
 （我们将在“验证”章节中详细介绍这一点）。
 
 ### 示例：税务计算
@@ -2073,25 +2113,25 @@ TaxCalculator taxCalculatorMock = Mockito.mock(TaxCalculator.class);
 when(taxCalculatorMock.calculateTax(any(Order.class))).thenReturn(10.0);
 ```
 
-### 4. 最佳实践
+## 4. 最佳实践
 
 - **保持桩方法聚焦**：每个桩方法都旨在为测试设置一个特定的场景。
 - **从简单开始**：从简单的返回值开始，根据需要逐渐增加复杂性。
 - **有意义的命名**：你的测试名称和桩值应该引导他人（以及你未来的自己！）理解测试的意图。
 
-### 5. 关于参数匹配器的说明
+## 5. 关于参数匹配器的说明
 
 在上一个示例中，我们使用了 `any(Order.class)`。Mockito 提供了强大的参数匹配器（Argument Matchers）来实现灵活的桩——我们将专门用一个章节来介绍它们！
 
 ### 额外资源
 
-- **Mockito 文档（Stubbing）**：[`javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#stubbing`](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#stubbing)
+- **Mockito 文档（Stubbing）**：[`javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#stubbing`](https://javadoc.io/doc/org.mockito/mockito/mockito-core/latest/org/mockito/Mockito.html#stubbing)
 
-## 精通桩技术 – 第 2 部分
+# 精通桩技术 – 第 2 部分
 
 让我们在桩的基础上探索更细微的场景。
 
-### 1. 针对多个结果的桩
+## 1. 针对多个结果的桩
 
 有时，单个桩方法是不够的。你可能需要 mock 对象按顺序返回不同的内容：
 
@@ -2103,12 +2143,12 @@ when(inventoryServiceMock.isProductInStock("12345"))
 
 - **用例**：模拟库存耗尽、外部服务的间性错误等。
 
-### 2. 连续调用的桩（进阶）
+## 2. 连续调用的桩（进阶）
 
 为了对连续调用进行细粒度控制，Mockito 提供了额外的技术：
 
 - `thenAnswer(...)`：使用 Java Lambda 表达式定义自定义行为。这允许根据调用次数、参数等进行动态响应。
-- `thenThrow(...)` 后紧跟 `thenReturn(...)`：模拟一个错误发生后的成功恢复。
+- `thenThrow(...)`` 后紧跟 `thenReturn(...)`：模拟一个错误发生后的成功恢复。
 
 ### 示例：复杂计算
 
@@ -2123,7 +2163,7 @@ when(complexServiceMock.performCalculation(anyInt()))
     });
 ```
 
-### 3. 桩化交互
+## 3. 桩化交互
 
 假设我们的 `OrderProcessingService` 在处理成功后发送电子邮件收据。以下是桩化并稍后验证这种交互的方法（我们很快会深入介绍验证）：
 
@@ -2141,7 +2181,7 @@ Mockito.verify(emailServiceMock).sendOrderConfirmation(any(Order.class));
 - `doNothing()`：用于不返回值的 void 方法。
 - `verify(...)`：Mockito 检查对 mock 对象的预期调用是否真实发生的方法。
 
-### 4. 使用 `thenCallRealMethod()` 的部分桩
+## 4. 使用 `thenCallRealMethod()` 的部分桩
 
 有时，你想要方法的大部分行为，但需要调整其中一个方面：
 
@@ -2155,7 +2195,7 @@ when(productServiceMock.calculateFinalPrice(any())).thenCallRealMethod();
 - `Mockito.spy(...)`：创建一个部分 mock（partial mock）。默认情况下，调用将指向真实实现。
 - `thenCallRealMethod()`：选择性地覆盖行为。
 
-### 5. 注意事项与警告
+## 5. 注意事项与警告
 
 - **过度桩化（Over-Stubbing）**：测试可能会镜像实现，导致变得脆弱。请保持平衡！
 - **测试意图**：桩应该清楚地服务于测试目的，而不仅仅复制 SUT 的编码方式。
@@ -2163,14 +2203,11 @@ when(productServiceMock.calculateFinalPrice(any())).thenCallRealMethod();
 
 ### 额外资源
 
-- **Mockito thenAnswer**：[`javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#thenAnswer(org.mockito.stubbing.Answer)`](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#thenAnswer(org.mockito.stubbing.Answer))
+- **Mockito thenAnswer**：[`javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#thenAnswer(org.mockito.stubbing.Answer)`](https://javadoc.io/doc/org.mockito/mockito/mockito-core/latest/org/mockito/Mockito.html#thenAnswer(org.mockito.stubbing.Answer))
 
----
-*(注：输入文本的后续部分似乎是上述内容的重复草稿/大纲，已按要求进行清理和格式化)*
+# 开启 Mockito 之旅：第一步
 
-## 开启 Mockito 之旅：第一步
-
-### 1. 基础场景
+## 1. 基础场景
 
 让我们想象一个简单的 `ShoppingCart`。我们想要测试它的 `addItem()` 方法。
 
@@ -2183,7 +2220,7 @@ when(inventoryServiceMock.isProductInStock("12345")).thenReturn(true);
 // 将始终返回 'true'.
 ```
 
-### 2. 桩方法的变体
+## 2. 桩方法的变体
 
 让我们扩展我们的桩工具箱：
 
@@ -2194,6 +2231,7 @@ when(inventoryServiceMock.isProductInStock("12345")).thenReturn(true);
 ```java
 Mockito.doNothing().when(emailServiceMock).sendConfirmationEmail(...);
 ```
+
 （我们将在“验证”章节中详细介绍这一点）。
 
 ### 示例：税务计算
@@ -2204,41 +2242,38 @@ TaxCalculator taxCalculatorMock = Mockito.mock(TaxCalculator.class);
 when(taxCalculatorMock.calculateTax(any(Order.class))).thenReturn(10.0);
 ```
 
-### 3. 最佳实践
+## 3. 最佳实践
 
 - **保持桩方法聚焦**：每个桩方法都旨在为测试设置一个特定的场景。
 - **从简单开始**：从简单的返回值开始，根据需要逐渐增加复杂性。
 - **有意义的命名**：你的测试名称和桩值应该引导他人（以及你未来的自己！）理解测试的意图。
 
-### 4. 关于参数匹配器的说明
+## 4. 关于参数匹配器的说明
 
 在上一个示例中，我们使用了 `any(Order.class)`。Mockito 提供了强大的参数匹配器（Argument Matchers）来实现灵活的桩——我们将专门用一个章节来介绍它们！
 
-
-
-
 ```java
- // ... (mock setup as before) ...
+// ... (mock setup as before) ...
 
- shoppingCart.addItem("123", 2);
+shoppingCart.addItem("123", 2);
 
- // Assertions - let's get detailed!
+// Assertions - let's get detailed!
 
- // (We should check if the repository's method was called with the right arguments...)
+// (We should check if the repository's method was called with the right arguments...)
 
 verify(productRepositoryMock).findById("123");
 
- // ... and ideally, assert something about what gets added to the cart.
+// ... and ideally, assert something about what gets added to the cart.
 
- // (We'll need Mockito to help here!)
+// (We'll need Mockito to help here!)
 }
 ```
 
-## 2. 引入参数捕获 (Argument Capturing)
+# 2. 引入参数捕获（Argument Capturing）
 
 我们如何实际检查（假设）已添加到 `ShoppingCart` 内部（假设）购物车中的内容呢？
 
-- `ArgumentCaptor`: 一个 Mockito 类，用于捕获传递给 mock 的参数。
+- `ArgumentCaptor`：一个 Mockito 类，用于捕获传递给 mock 的参数。
 
 ```java
 import static org.mockito.ArgumentMatchers.anyInt; // 我们很快会学习到这个
@@ -2261,12 +2296,12 @@ void addItem_withValidProduct() {
 }
 ```
 
-## 3. 匹配器 (Matchers): 灵活的 Stubbing 与断言
+# 3. 匹配器（Matchers）：灵活的 Stubbing 与断言
 
 注意上面 `anyInt()` 的使用。匹配器允许我们在需要时保持具体，或保持灵活性：
 
-- `anyInt()``, `anyString()`，等：匹配该类型的任意值。
-- `eq(...)`: 匹配精确值（类似于 JUnit 自带的 `assertEquals`）。
+- `anyInt()`, `anyString()` 等：匹配该类型的任意值。
+- `eq(...)`：匹配精确值（类似于 JUnit 自带的 `assertEquals`）。
 - 更多：你可以根据正则表达式、自定义规则等进行匹配！
 
 ### 示例：税费计算（匹配器）
@@ -2275,34 +2310,34 @@ void addItem_withValidProduct() {
 when(taxServiceMock.calculateTax(any(Order.class))).thenReturn(8.0);
 ```
 
-### 4. 最佳实践
+## 4. 最佳实践
 
 - 针对性捕获：仅捕获你断言时真正需要的参数。
 - 匹配器技巧：使用匹配器在测试的严谨性与避免脆弱性之间取得平衡。
-- 不要忘记 ‘verify’：捕获通常与 `verify` 配合使用，以确保方法确实被调用了。
+- 不要忘记 `verify`：捕获通常与 `verify` 配合使用，以确保方法确实被调用了。
 
-### 5. 演进我们的测试
+## 5. 演进我们的测试
 
 我们的 `ShoppingCartTest` 正在成型！我们现在正在检查代码的行为以及涉及 mock 协作所产生的结果。
 
 ### 额外资源
 
-- Mockito ArgumentCaptor: [`www.baeldung.com/mockito-argumentcaptor`](https://www.baeldung.com/mockito-argumentcaptor)
-- Mockito Argument Matchers: [`javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/ArgumentMatchers.html`](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/ArgumentMatchers.html)
+- Mockito ArgumentCaptor：[`www.baeldung.com/mockito-argumentcaptor`](https://www.baeldung.com/mockito-argumentcaptor)
+- Mockito Argument Matchers：[`javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/ArgumentMatchers.html`](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/ArgumentMatchers.html)
 
-## 进阶 Mockito – 第 3 部分
+# 进阶 Mockito – 第 3 部分
 
 让你的 Mockito 技能提升一个层次。在本章中，我们将涵盖一些中级和高级技术，使你的测试更健壮、更易维护。
 
-### 1. 精通验证 (Mastering Verification)
+## 1. 精通验证（Mastering Verification）
 
 在之前的章节中，我们使用 `verify()` 来确保 mock 被调用。让我们深入浅一下：
 
-- 验证次数 (Verification Times):
-  - `times(n)`：方法应该被调用 ‘n’ 次。
+- **验证次数（Verification Times）**：
+  - `times(n)`：方法应该被调用 `n` 次。
   - `atLeastOnce()`, `atMost(n)`：设置灵活的边界。
   - `never()`：确保方法没有被调用。
-- 顺序顺序 (Call Order)：对于调用顺序重要的场景，使用 `InOrder`：
+- **顺序顺序（Call Order）**：对于调用顺序重要的场景，使用 `InOrder`：
 
 ```java
 InOrder inOrder = inOrder(mock1, mock2);
@@ -2319,7 +2354,7 @@ verify(loginService, times(3)).processLogin(anyString(), anyString());
 verify(notificationService).sendAccountLockedEmail(anyString());
 ```
 
-### 2. 重置 Mock 对象 (Resetting Mocks)
+## 2. 重置 Mock 对象（Resetting Mocks）
 
 有时，你需要在测试内部有一个全新的开始：
 
@@ -2327,11 +2362,10 @@ verify(notificationService).sendAccountLockedEmail(anyString());
 Mockito.reset(mock1, mock2, ...); // 重置 stubbing 和调用计数
 ```
 
-- 使用场景：
-  - 当单个测试方法在不同条件下多次执行 SUT（被测试对象）时使用。
-- 注意事项：谨慎使用。如果你过度依赖重置，可能会掩盖某些问题。
+- **使用场景**：当单个测试方法在不同条件下多次执行 SUT（被测试对象）时使用。
+- **注意事项**：谨慎使用。如果你过度依赖重置，可能会掩盖某些问题。
 
-### 3. 使用 Answer 自定义 Stubbing
+## 3. 使用 Answer 自定义 Stubbing
 
 `when(...).thenAnswer(...)` 为复杂的 stubbing 提供了极大的控制力：
 
@@ -2343,47 +2377,54 @@ when(inventoryServiceMock.isProductInStock(anyString()))
     });
 ```
 
+# Mockito 的监视能力
 
+[`www.baeldung.com/mockito-spy`](https://www.baeldung.com/mockito-spy)
 
+# 第 3 节：揭示 Mockito 的核心要素
 
-## Mockito 的监视能力 [`www.baeldung.com/mockito-spy`](https://www.baeldung.com/mockito-spy)
-
-## 第 3 节：揭示 Mockito 的核心要素
-
-## 高级 Stub 技术：探索参数匹配器及其他 – 部分 1
+# 高级 Stub 技术：探索参数匹配器及其他 – 部分 1
 
 让我们开启探索 Mockito 参数匹配器（argument matchers）强大之处之旅，这将将你的 Stub 精准度提升到一个全新的水平！
 
-### 1. 超越简单相等
+## 1. 超越简单相等
+
 虽然 Mockito 的 `when(...).thenReturn(...)` 非常用，但如果你需要灵活地定义 mock 对什么内容做出响应，怎么办？引入参数匹配器（Argument Matchers）吧！
 
 ### 基础示例
+
+
+
 ```java
 when(inventoryServiceMock.getProductPrice(anyString())).thenReturn(9.99);
 // 任何字符串参数都会触发此存桩
 ```
 
-### 2. 匹配器：核心工具箱
+## 2. 匹配器：核心工具箱
+
 Mockito 提供了内置的匹配器（为了简洁起见，请从 `org.mockito.ArgumentMatchers.*` 使用 `static import`）：
 
-*   `any(...)`: 匹配该类型的任何内容（`anyInt()`, `anyList()`, 等）。
-*   `eq(...)`: 精确值匹配（类似于 JUnit 自身的断言）。
-*   `isNull()`, `notNull()`: 检查空和非空引用。
-*   正则表达式: 匹配符合模式的字符串（`matches()` 匹配器）。
+- `any(...)`：匹配该类型的任何内容（`anyInt()`、`anyList()` 等）。
+- `eq(...)`：精确值匹配（类似于 JUnit 自身的断言）。
+- `isNull()`、`notNull()`：检查空和非空引用。
+- 正则表达式：匹配符合模式的字符串（`matches()` 匹配器）。
 
 ### 示例：过滤产品
+
 ```java
 when(inventoryServiceMock.filterProducts(anyString(), eq("Electronics"), anyDouble()))
     .thenReturn(filteredProductList);
 ```
 
-### 3. `any(...)` 的威力
-*   **占位符**: 当参数的值不是测试的核心时使用。
-*   **灵活性**: 防止测试因无关值的变动而崩溃。
-*   **配合参数捕获（Argument Capture）**: 正如我们之前看到的，使用 `any()` 来捕获值以供后续断言使用。
+## 3. `any(...)` 的威力
 
-### 4. 自定义参数匹配器
-当内置匹配器不够用时，可以构建自己的：
+- **占位符**：当参数的值不是测试的核心时使用。
+- **灵活性**：防止测试因无关值的变动而崩溃。
+- **配合参数捕获（Argument Capture）**：正如我们之前看到的，使用 `any()` 来捕获值以供后续断言使用。
+
+## 4. 自定义参数匹配器
+
+当内置匹配器不够用时，可以构建自己的匹配器：
 
 ```java
 class IsValidProduct implements ArgumentMatcher<Product> {
@@ -2394,31 +2435,35 @@ class IsValidProduct implements ArgumentMatcher<Product> {
 }
 ```
 
-### 使用方法：
+### 使用方法
+
 ```java
 when(inventoryServiceMock.updateStock(argThat(new IsValidProduct()))).then(...)
 ```
 
-### 5. 注意事项
-*   **特定 vs. 宽松**: 平衡精确度，以防止测试中出现假阳性，以及由于过于具体而导致的脆弱性。
-*   配合匹配器的 `verify(...)`: 确保 mock 是用正确的参数被调用的。
-*   **可读性与精确性**: 良好的匹配器可以提高测试意图的清晰度。
+## 5. 注意事项
+
+- **特定 vs. 宽松**：平衡精确度，以防止测试中出现假阳性，以及由于过于具体而导致的脆弱性。
+- 配合匹配器的 `verify(...)`：确保 mock 是用正确的参数被调用的。
+- **可读性与精确性**：良好的匹配器可以提高测试意图的清晰度。
 
 ---
 
-## 部分 2：复杂匹配器及其他
+# 部分 2：复杂匹配器及其他
 
 接下来，我们将组合匹配器，构建更复杂的自定义匹配器，并探索与参数匹配协同工作的 Mockito 特性！
 
-### 额外资源
-*   Mockito 参数匹配器文档：[`javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/ArgumentMatchers.html`](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/ArgumentMatchers.html)
-*   自定义参数匹配器 [`www.baeldung.com/mockito-argument-matchers`](https://www.baeldung.com/mockito-argument-matchers)
+## 额外资源
 
-## 高级 Stub 策略：破解参数匹配器及更多 – 部分 2
+- Mockito 参数匹配器文档：[`javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/ArgumentMatchers.html`](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/ArgumentMatchers.html)
+- 自定义参数匹配器：[`www.baeldung.com/mockito-argument-matchers`](https://www.baeldung.com/mockito-argument-matchers)
+
+# 高级 Stub 策略：破解参数匹配器及更多——部分 2
 
 让我们继续深入探讨 Mockito 的高级 Stub 能力。这次，我们将以有趣的方式组合匹配器，并超越基础范围！
 
-### 1. 混合与配对（匹配器）
+## 1. 混合与配对（匹配器）
+
 你不局限于每个 Stub 只能使用一个匹配器！组合它们来微调你的标准：
 
 ```java
@@ -2430,14 +2475,16 @@ when(inventoryServiceMock.calculateDiscount(
 .thenReturn(0.20); // 20% 折
 ```
 
-### 2. 逻辑运算符
+## 2. 逻辑运算符
+
 Mockito 提供了常用逻辑操作的匹配器：
 
-*   `not(matcher)`: 对匹配器取反
-*   `or(matcher1, matcher2)`: 如果任一匹配器匹配则为真
-*   `and(matcher1, matcher2)`: 如果两个匹配器都匹配则为真
+- `not(matcher)`：对匹配器取反。
+- `or(matcher1, matcher2)`：如果任一匹配器匹配则为真。
+- `and(matcher1, matcher2)`：如果两个匹配器都匹配则为真。
 
-#### 示例：处理无效登录
+### 示例：处理无效登录
+
 ```java
 when(userServiceMock.authenticate(
     not(eq("admin")), // 排除管理员用户
@@ -2445,37 +2492,42 @@ when(userServiceMock.authenticate(
 )).thenThrow(new InvalidCredentialsException());
 ```
 
-### 3. 集合的匹配器
+## 3. 集合的匹配器
+
 需要检查列表或 map 的内容吗？Mockito 已经准备好了：
 
-*   `contains(...)`: 用于检查集合是否包含某项内容。
-*   `hasSize(...)`: 根据集合的大小进行匹配。
-*   `hasEntry(...)`, `hasKey(...)`, `hasValue(...)`:  map 的匹配器。
+- `contains(...)`：用于检查集合是否包含某项内容。
+- `hasSize(...)`：根据集合的大小进行匹配。
+- `hasEntry(...)`、`hasKey(...)`、`hasValue(...)`：map 的匹配器。
 
-#### 场景：大额附加费
+### 场景：大额附加费
+
 ```java
 when(orderServiceMock.applySurcharge(argThat(hasSize(20))));
 ```
 
-### 4. 超越 `when()` -> `thenReturn()`
+## 4. 超越 `when()` -> `thenReturn()`
+
 虽然 `thenReturn()` 很常见，但 Mockito 的武器库还包括：
 
-*   `thenThrow()`: 我们已经见过它处理错误。
-*   `thenAnswer()`: 我们已经见过它用于动态响应。
-*   `thenCallMethod()`: 用于 spy（监视）。
-*   `doNothing()`, `doReturn()`, `doThrow()`: 用于 void 方法。
+- `thenThrow()`：我们已经见过它处理错误。
+- `thenAnswer()`：我们已经见过它用于动态响应。
+- `thenCallMethod()`：用于 spy（监视）。
+- `doNothing()`、`doReturn()`、`doThrow()`：用于 void 方法。
 
-### 5. 注意事项
-*   **不必要的复杂性**: `Answer` 中内容过多会模糊测试意图。
-*   **测试 vs. 实现**: 过度具体会导致测试与内部细节耦合。
+## 5. 注意事项
+
+- **不必要的复杂性**：`Answer` 中内容过多会模糊测试意图。
+- **测试 vs. 实现**：过度具体会导致测试与内部细节耦合。
 
 接下来：`any()` 和 `argThat()`
 
-## 深入研究 Stub 变体：高级技术 – 部分 3
+# 深入研究 Stub 变体：高级技术——部分 3
 
 让我们探索更多细微的场景，Mockito 的能力将大放异彩！
 
-### 1. 带副作用的 Stub
+## 1. 带副作用的 Stub
+
 有时，你不只是想返回一个值，而是对 mock 产生副作用：
 
 ```java
@@ -2485,12 +2537,13 @@ when(inventoryServiceMock.restock(any(Product.class), anyInt()))
         product.setQuantity(product.getQuantity() + invocation.getArgument(1));
         return null;
     });
+```
 
+- **复杂的副作用**：如果可能，请重构。
+- **共享状态**：如果不小心，副作用会在测试间泄露。
 
-*   **复杂的副作用**: 如果可能，请重构。
-*   **共享状态**: 如果不小心，副作用会在测试间泄露。
+## 2. 调用链的 Stubbing
 
-### 2. 调用链的 Stubbing
 如果你的 mock 需要顺序返回不同的结果怎么办？
 
 ```java
@@ -2499,51 +2552,56 @@ when(paymentServiceMock.isPaymentAuthorized(any()))
     .thenReturn(false); // 第二次开始...
 ```
 
-### 3. BDD 风格的 Mockito (BDDMockito)
+## 3. BDD 风格的 Mockito（BDDMockito）
+
 Mockito 有一个扩展用于“Given-When-Then”风格，提高了可读性：
 
 ```java
 given(productRepositoryMock.findById("123")).willReturn(optionalOf(product));
+
 // 代替：when(productRepository.findById("123")).thenReturn(...)
 ```
 
-*   **优点**: 可以让测试读起来像规范
-*   **缺点**: 增加了另一个依赖（BDDMockito）。
+- **优点**：可以让测试读起来像规范。
+- **缺点**：增加了另一个依赖（BDDMockito）。
 
-### 4. 需要特殊关注的 void 方法
+## 4. 需要特殊关注的 void 方法
 
 一个 void 方法会间接改变某些你需要断言的内容：
 
 ```java
 // 假设这更新了某些内部状态...
+
 orderService.processReturn(order);
 
 // 使用 ArgumentCaptor（参数捕获）：
+
 ArgumentCaptor<Order> captor = ArgumentCaptor.forClass(Order.class);
+
 verify(orderService).processReturn(captor.capture());
 
 Order returnedOrder = captor.getValue();
+
 assertTrue(returnedOrder.isRefunded());
 ```
 
-### 5. 不仅仅是单元测试
+## 5. 不仅仅是单元测试
+
 虽然 Mockito 的核心是单元测试，但 Stub 概念对于这些至关重要：
 
-*   **集成测试**: 模拟外部依赖。
-*   **Spring**: 在 Spring 上下文中 mock bean 以进行专注的测试。
+- **集成测试**：模拟外部依赖。
+- **Spring**：在 Spring 上下文中 mock bean 以进行专注的测试。
 
 接下来：应对复杂场景
 
+## 额外资源
 
-
-
-
-* Mockito BDD 扩展: [`javadoc.io/doc/org.mockito/mockito-bom/latest/org/mockito/bdd/package-summary.html`](https://javadoc.io/doc/org.mockito/mockito-bom/latest/org/mockito/bdd/package-summary.html)
-* 空方法存存桩: [`javadoc.io/static/org.mockito/mockito-core/3.12.4/org/mockito/Mockito.html#stubbing_consecutive_calls`](https://javadoc.io/static/org.mockito/mockito-core/3.12.4/org/mockito/Mockito.html#stubbing_consecutive_calls)
+- Mockito BDD 扩展：[`javadoc.io/doc/org.mockito/mockito-bom/latest/org/mockito/bdd/package-summary.html`](https://javadoc.io/doc/org.mockito/mockito-bom/latest/org/mockito/bdd/package-summary.html)
+- 空方法存桩：[`javadoc.io/static/org.mockito/mockito-core/3.12.4/org/mockito/Mockito.html#stubbing_consecutive_calls`](https://javadoc.io/static/org.mockito/mockito-core/3.12.4/org/mockito/Mockito.html#stubbing_consecutive_calls)
 
 你准备好应对普通的存桩（stubbing）不够用的情况了吗？让我们探索 Mockito 更复杂的部分吧！
 
-# 应对复杂的 Stub 场景 – 第 4 部分
+# 应对复杂的 Stub 场景——第 4 部分
 
 在本章中，我们将处理一些可能会让你怀疑人生的场景，但别担心，我们会变得更强大！
 
@@ -2555,22 +2613,29 @@ assertTrue(returnedOrder.isRefunded());
 // 我们有一个具有自引用方法的服务：
 
 class InventoryService {
+
     ...
+
     public int calculateAvailableStock(Product product) {
+
         int inStock = getStockCount(product);  // 调用了自身的方法（同一个 mock）
+
         // ...更多逻辑...
+
     }
+
     ...
+
 }
 ```
 
-* **解决方案 1**: `thenCallRealMethod()`。如果合适，让初始存桩触发递归部分的真实行为。
-* **解决方案 2**: 重构。如果可能的话，将递归逻辑拆分到可测试的辅助方法中，使你的代码整体更加整洁。
+- **解决方案 1**：`thenCallRealMethod()`。如果合适，让初始存桩触发递归部分的真实行为。
+- **解决方案 2**：重构。如果可能的话，将递归逻辑拆分到可测试的辅助方法中，使你的代码整体更加整洁。
 
 ## 2. Mock 无法 Mock 的对象？
 
-* **Final 类/方法**：我们见过 PowerMock 是一个解决方案，但请注意权衡（复杂性、配置）。请认真考虑先重构 SUT（被测单元）。
-* **第三方类**：如果你无法控制代码，编写一个你所控制的薄封装类（wrapper class）可能是你的最佳选择。这允许你引入一个接口以提高可测试性。
+- **Final 类/方法**：我们见过 PowerMock 是一个解决方案，但请注意权衡（复杂性、配置）。请认真考虑先重构 SUT（被测单元）。
+- **第三方类**：如果你无法控制代码，编写一个你所控制的薄封装类（wrapper class）可能是你的最佳选择。这允许你引入一个接口以提高可测试性。
 
 ## 3. 过度热心的 Mock 案例
 
@@ -2581,11 +2646,11 @@ when(shippingServiceMock.calculateRates(any())).thenReturn(ratesList);
 
 // 如果 mock 上的 getSupportedCountries() 从没有被存桩过会怎样？
 
-if(shippingServiceMock.getSupportedCountries().contains("CA"))  { ...  }
+if (shippingServiceMock.getSupportedCountries().contains("CA"))  { ...  }
 ```
 
-* **解决方案 1**: `Mockito.RETURNS_DEEP_STUBS` – Mock 的行为会更严格。
-* **解决方案 2**: `verifyNoMoreInteractions(...)` – 确保 mock 仅按你预期的方式被使用。
+- **解决方案 1**：`Mockito.RETURNS_DEEP_STUBS`——Mock 的行为会更严格。
+- **解决方案 2**：`verifyNoMoreInteractions(...)`——确保 mock 仅按你预期的方式被使用。
 
 ## 4. 测试交互，而不仅仅是结果
 
@@ -2599,9 +2664,9 @@ verify(productRepositoryMock, times(1)).save(any(Product.class));
 
 ## 5. 复杂存桩的最佳实践
 
-* **隔离 SUT**：存桩越复杂，SUT 的设计出现问题的概率越大。力求易于测试的单元。
-* **测试意图**：问问自己，“我在这里到底在测试什么？”这将引导你的存桩策略。
-* **注释作为最后手段**：如果你发现自己需要复杂的注释来解释你的存桩，那这是一个红灯！
+- **隔离 SUT**：存桩越复杂，SUT 的设计出现问题的概率越大。力求易于测试的单元。
+- **测试意图**：问问自己，“我在这里到底在测试什么？”这将引导你的存桩策略。
+- **注释作为最后手段**：如果你发现自己需要复杂的注释来解释你的存桩，那这是一个红灯！
 
 ### 驯服存桩的复杂性
 
@@ -2613,74 +2678,76 @@ verify(productRepositoryMock, times(1)).save(any(Product.class));
 
 ### 额外资源
 
-* 设计与 Mock 的权衡：[`martinfowler.com/articles/mocksArentStubs.html`](https://martinfowler.com/articles/mocksArentStubs.html)
+- 设计与 Mock 的权衡：[`martinfowler.com/articles/mocksArentStubs.html`](https://martinfowler.com/articles/mocksArentStubs.html)
 
 准备好与那些顽固的 Mock 场景搏斗了吗？💪
 
-## 拥抱 BDD 风格：实现 Given-When-Then 方法 – 第 1 部分
+# 拥抱 BDD 风格：实现 Given-When-Then 方法——第 1 部分
 
 让我们探索 Mockito 如何赋予你以行为驱动开发（BDD）风格编写测试的能力，提升可读性和表达力，并使其与我们自然思考需求的方式保持一致！
 
 ## 2. 什么是 BDD（在测试世界中）？
 
-* **关注行为**：较少关注代码如何工作，更多关注从用户角度看它实现了什么。
-* **协作**：通过使用共享语言弥合技术和非技术利益相关者之间的鸿沟。
-* **活规范**：测试成为特征的清晰描述，而不仅仅是断言的堆砌。
+- **关注行为**：较少关注代码如何工作，更多关注从用户角度看它实现了什么。
+- **协作**：通过使用共享语言弥合技术和非技术利益相关者之间的鸿沟。
+- **活规范**：测试成为特征的清晰描述，而不仅仅是断言的堆砌。
 
-### 2. “Given-When-Then”结构
+## 2. “Given-When-Then”结构
 
 BDD 测试的核心在于这种模式：
 
-* **Given（假设）**：场景的初始上下文或设置。（将其视为你的前提条件）。
-* **When（当）**：正在测试的动作或触发因素。
-* **Then（那么）**：预期的结果或观测结果。
+- **Given（假设）**：场景的初始上下文或设置。（将其视为你的前提条件）。
+- **When（当）**：正在测试的动作或触发因素。
+- **Then（那么）**：预期的结果或观测结果。
 
 ### 示例：电子商务订单处理
 
-* *Given* 客户购物车中有物品
-* *When* 当他们下单时
-* *Then* 订单状态为“已确认”
-* *And* 发送了订单确认邮件
+- *Given* 客户购物车中有物品
+- *When* 当他们下单时
+- *Then* 订单状态为“已确认”
+- *And* 发送了订单确认邮件
 
 ## 3. Mockito + BDD
 
 虽然 Mockito 支持基本的 BDD，但让我们使用 `BDDMockito` 来更多功能：
 
-* `given(...).thenReturn(...)` 读起来像一个自然的句子
-* `given(...).thenThrow()`, `willAnswer()`，等。用于其他存桩
+- `given(...).thenReturn(...)` 读起来像一个自然的句子。
+- `given(...).thenThrow()`、`willAnswer()` 等，用于其他存桩。
 
 ### 代码示例
 
 ```java
 // 旧样式
+
 when(serviceMock.isStock("123")).thenReturn(true);
 
 // BDD 样式
+
 given(serviceMock.isStock("123")).willReturn(true);
 ```
 
 ## 4. BDD 的优势
 
-* **可读性**：非程序员也能理解其意图。
-* **规范驱动**：测试关注行为。
-* **Mockito 的谐**：Mockito 对交互的关注完美融合。
+- **可读性**：非程序员也能理解其意图。
+- **规范驱动**：测试关注行为。
+- **Mockito 的谐**：Mockito 对交互的关注完美融合。
 
 ### 5. 注意事项
 
-* **冗长**：BDD 测试可能会更长，所以要平衡。
-* **理想选择**：对于复杂逻辑最有益。
-* **它是一种工具**：有时 JUnit 风格的断言足够了。
+- **冗长**：BDD 测试可能会更长，所以要平衡。
+- **理想选择**：对于复杂逻辑最有益。
+- **它是一种工具**：有时 JUnit 风格的断言足够了。
 
 ### 第 2 部分：将 BDD 化
 
 接下来，我们将深入一个更完整的示例，学习如何管理设置。
 
-* GitHub  BDMockito：[`github.com/mockito/bddmockito`](https://github.com/mockito/bddmockito)
-* BDD 简介（通用）：[`cucumber.io/docs/`](https://cucumber.io/docs/)
+- GitHub `BDMockito`：[`github.com/mockito/bddmockito`](https://github.com/mockito/bddmockito)
+- BDD 简介（通用）：[`cucumber.io/docs/`](https://cucumber.io/docs/)
 
 你准备好将你的测试转换为清晰的规范了吗？
 
-## 增强 BDD 风格 – 第 2 部分
+# 增强 BDD 风格——第 2 部分
 
 在本章中，我们将超越简单的示例，查看如何为复杂场景构建 BDD 风格的测试。
 
@@ -2690,36 +2757,42 @@ given(serviceMock.isStock("123")).willReturn(true);
 
 ```java
 class ShippingCalculatorTest {
+
     private ShippingCalculator shippingCalculator;
+
     private LocationService locationServiceMock;
-    private Product productServiceMock;
+```
 
-    @BeforeEach
-    void setup() {
-        locationServiceMock = Mockito.mock(LocationService.class);
-        productServiceMock = Mockito.mock(ProductService.class);
-        shippingCalculator = new ShippingCalculator(locationServiceMock, productServiceMock);
-    }
 
-    @Test
-    void shouldCalculateStandardShippingForDomesticOrders() {
-        // Given
-        Order order = anOrder().withTotal(50.0).build();
-        given(locationServiceMock.isDomestic(order.getAddress())).willReturn(true);
 
-        // When
-        double shippingCost = shippingCalculator.calculateShipping(order);
+```java
+private Product productServiceMock;
 
-        // Then
-        assertEquals(10.0, shippingCost);
-    }
+@BeforeEach
+void setup() {
+    locationServiceMock = Mockito.mock(LocationService.class);
+    productServiceMock = Mockito.mock(ProductService.class);
+    shippingCalculator = new ShippingCalculator(locationServiceMock, productServiceMock);
+}
+
+@Test
+void shouldCalculateStandardShippingForDomesticOrders() {
+    // Given
+    Order order = anOrder().withTotal(50.0).build();
+    given(locationServiceMock.isDomestic(order.getAddress())).willReturn(true);
+
+    // When
+    double shippingCost = shippingCalculator.calculateShipping(order);
+
+    // Then
+    assertEquals(10.0, shippingCost);
 }
 ```
 
-### 改进：
+### 改进
 
-* **流式构建器 (anOrder())**：使设置变得易读，考虑为此使用一个库。
-* **测试命名**：描述性的名称传达了场景。
+- **流式构建器 (`anOrder()`)**：使设置变得易读，考虑为此使用一个库。
+- **测试命名**：描述性的名称传达了场景。
 
 ## 2. 组合复杂的设置
 
@@ -2729,19 +2802,13 @@ class ShippingCalculatorTest {
 @Test
 void shouldApplyFreeShippingForOrdersOverThreshold() {
     // Given
-```
+    Order order = anOrder()
+        .withItems(someProduct(10.0), someProduct(45.0))
+        .build();
 
+    given(productServiceMock.isEligibleForFreeShippingPromotion(order)).willReturn(true);
 
-
-
-
-```java
-Order order = anOrder().withItems(someProduct(10.0), someProduct(45.0)).build();
-
-given(productServiceMock.isEligibleForFreeShippingPromotion(order)).willReturn(true);
-
-// ... rest of the test ...
-
+    // ... rest of the test ...
 }
 ```
 
@@ -2750,8 +2817,8 @@ given(productServiceMock.isEligibleForFreeShippingPromotion(order)).willReturn(t
 
 ## 3. “Then”（验证）阶段：表达性断言
 
-- **BDDMockito** `then(mock)...should()`：用于以 BDD 风格验证 mock 的交互。
-- **自定义匹配器 (Custom Matchers)**：与 `Mockito` 结合使用领域特定的断言（`“shouldHaveDiscountApplied”`）。
+- **BDDMockito**：`then(mock)...should()` 用于以 BDD 风格验证 mock 的交互。
+- **自定义匹配器（Custom Matchers）**：与 `Mockito` 结合使用领域特定的断言（`shouldHaveDiscountApplied`）。
 - **Hamcrest**：我们稍后会深入介绍；它提供了强大的匹配器！
 
 ## 4. 应该避免的 BDD 反模式
@@ -2762,12 +2829,10 @@ given(productServiceMock.isEligibleForFreeShippingPromotion(order)).willReturn(t
 
 ## 5. 组织 BDD 测试
 
-- **嵌套类 (Nested Classes)**：可以将与特定功能/组件相关的场景分组。
-- **特性文件 (Cucumber)**：如果你想使用完整的 BDD 工具，可以考虑 `Cucumber`，它与 `JUnit` 集成。
+- **嵌套类（Nested Classes）**：可以将与特定功能或组件相关的场景分组。
+- **特性文件（Cucumber）**：如果你想使用完整的 BDD 工具，可以考虑 `Cucumber`，它与 `JUnit` 集成。
 
 # 下一步：让 BDD 测试脱颖出
-
-
 
 在第 3 部分中，我们将进一步完善可读性，探索 BDD 测试如何随时间演变，并讨论 BDD 在何时可能并不完美。
 
@@ -2782,26 +2847,26 @@ given(productServiceMock.isEligibleForFreeShippingPromotion(order)).willReturn(t
 
 在本章中，我们将关注维护性、BDD 测试套集的演变，并讨论 BDD 何时可能不是最佳选择。
 
-## 1. 活规范 (Living Specification)
+## 1. 活规范（Living Specification）
 
 BDD 测试在理想状态下是易于理解的系统行为文档。为了保持这一点：
 
-- **追求通用语言 (Ubiquitous Language)**：与领域专家协作，确保你的测试场景与业务用户描述系统的方式一致。
+- **追求通用语言（Ubiquitous Language）**：与领域专家协作，确保你的测试场景与业务用户描述系统的方式一致。
 - **无畏地重构**：随着代码的演进，重构你的 BDD 测试（包括设置和断言）以保持清晰度。
 
 ### 示例：重命名改变一切
 
 假设 `isDomestic(address)` 被重命名为 `isShippingWithinCountry(...)`。相应地重构你的测试！BDD 层有助于驱动有意义的代码更改。
 
-## 2. 作为协作工具 BDD
+## 2. 作为协作工具的 BDD
 
 - **早期反馈**：在完全实现之前与利益相关者分享 BDD 测试场景，及早暴露误解。
-- **驱动设计**：利用编写 BDD 测试的过程来塑造 `SUT`（被测试对象）的 API/接口，关注它从外部是如何工作的。
+- **驱动设计**：利用编写 BDD 测试的过程来塑造 `SUT`（被测试对象）的 API 或接口，关注它从外部是如何工作的。
 - **结对编程**：开发者和 QA 可以结对编写 BDD 场景——极佳的知识共享！
 
 ## 3. BDD 可能失效之处
 
-保持务实而非教条主义主义至关重要。BDD 可能不适用于：
+保持务实而非教条主义至关重要。BDD 可能不适用于：
 
 - **低级算法**：专注于复杂计算的测试通常使用经典断言时读性更好。
 - **大量使用 TDD**：TDD 极其迭代的风格可能与 BDD 的预先场景定义发生冲突。
@@ -2810,7 +2875,7 @@ BDD 测试在理想状态下是易于理解的系统行为文档。为了保持�
 ## 4. 工具及其他
 
 - **Cucumber**：如果你想使用完整的 Gherkin（文本格式的“Given-When-Then”），`Cucumber` 与 `JUnit` 集成。
-- **行为驱动框架**：存在 `JBehave` (Java)、`SpecFlow` (.NET) 等其他框架，提供了丰富的生态系统。
+- **行为驱动框架**：存在 `JBehave`（Java）、`SpecFlow`（.NET）等其他框架，提供了丰富的生态系统。
 - **不要忘记“普通”的 Mockito**：即使在 BDD 测试中，`Mockito` 的打桩（stubbing）和验证也是你工作的核心。
 
 ### 5. 演进你的测试风格
@@ -2859,7 +2924,7 @@ void orderPlacementTriggersUpdate() {
 ### 3. 验证模式
 
 - `verify(mock, times(n))`：交互是否发生了指定的次数？
-- `atLeastOnce()`, `atLeast(n)`, `atMost(n)`, `never()`：调用次数的灵活性。
+- `atLeastOnce()`、`atLeast(n)`、`atMost(n)`、`never()`：调用次数的灵活性。
 
 ## 4. 使用参数匹配器验证
 
@@ -2879,11 +2944,13 @@ verify(notificationMock).send(
 
 - **过度规范**：你是否正在验证与实现结合得紧密的低级细节？
 - **测试意图**：你通过验证在检查什么？
-- **顺序（通常无关）**：默认情况下，Mockito 不关心 `updateStock()` 是否在 `sendNotification()` 之前调用，除非你的逻辑如此。
+- **顺序（通常无关）**：默认情况下，`Mockito` 不关心 `updateStock()` 是否在 `sendNotification()` 之前调用，除非你的逻辑如此。
 
 ### 6. 谨慎使用 `verifyNoInteractions()`
 
-`verifyNoInteractions(inventoryServiceMock);`
+```java
+verifyNoInteractions(inventoryServiceMock);
+```
 
 - **用途**：确保 mock 没有以意外的方式使用。
 - **风险**：可能会使测试脆弱，意味着只有显式打桩和验证的方法可以被碰。
@@ -2892,35 +2959,29 @@ verify(notificationMock).send(
 
 假设 `OrderService` 调用了 `InventoryService` 的多个方法。验证测试确保当你重构 `OrderService` 内部时，不会意外破坏预期的交互。
 
-
-
-
-
-- 用用场景：协议、步骤 A 必须在步骤 B 之前的流程。
+- **用用场景**：协议、步骤 A 必须在步骤 B 之前的流程。
 
 ## 2. 超越简单的验证：提高可读性
 
-虽然 Mockito 非常强大，但原始的 `verify()` 调用可能会变得臃肿。让我们改进一下：
+虽然 `Mockito` 非常强大，但原始的 `verify()` 调用可能会变得臃肿。让我们改进一下：
 
-- 静态导入：`import static org.mockito.Mockito.*;` 可以让你的测试代码更简洁。
-- 自定义匹配器（Matchers）：与 `verify` 结合进行领域特定的检查（例如 `verify(mailer).sendWelcomeMessage(wasAddedToPremium(user));`）。
-- BDDMockito：`then(mock).should(...)` 更加流畅的断言，特别是在 BDD 风格的测试中。
+- **静态导入**：`import static org.mockito.Mockito.*;` 可以让你的测试代码更简洁。
+- **自定义匹配器（Matchers）**：与 `verify` 结合进行领域特定的检查，例如 `verify(mailer).sendWelcomeMessage(wasAddedToPremium(user));`。
+- **BDDMockito**：`then(mock).should(...)` 更加流畅的断言，特别是在 BDD 风格的测试中。
 
 ### 3. 验证的“另一面”：`verifyNoInteractions()`
 
-有时候，确保事情没有发生同样重要：
-
-```
+```java
 verifyNoInteractions(paymentServiceMock);  // 如果订单不完整，不应收费
 ```
 
-- 注意：过度使用会导致测试变得脆弱。良好地隔离你的 SUT（被测试单元）；否则只要任何东西触碰 mock，测试就会失败。
+- **注意**：过度使用会导致测试变得脆弱。良好地隔离你的 SUT（被测试单元）；否则只要任何东西触碰 mock，测试就会失败。
 
 ## 4. 验证与 BDD
 
 回想我们的 Given-When-Then 风格。验证通常位于“Then”部分：
 
-```
+```java
 // Given
 given(inventoryServiceMock.hasItemsInStock(order)).willReturn(true);
 
@@ -2934,14 +2995,14 @@ then(notificationServiceMock).should().send("Order Placed", ...);
 
 ### 5. 常见陷阱
 
-- 验证实现而非行为：你的验证关注的是低级细节还是可观察的结果？
-- 将测试双子作为间谍（Spies）：如果你觉得需要大量验证 mock，这可能意味着你的 SUT 承担了太多职责。
-- 忘记 `verify()`：常见的错误！存桩（Stubs）即使没有验证也能工作，但你的测试无法捕捉意料之外的副作用。
+- **验证实现而非行为**：你的验证关注的是低级细节还是可观察的结果？
+- **将测试双子作为间谍（Spies）**：如果你觉得需要大量验证 mock，这可能意味着你的 SUT 承担了太多职责。
+- **忘记 `verify()`**：常见的错误！存桩（Stubs）即使没有验证也能工作，但你的测试无法捕捉意料之外的副作用。
 
 ## 6. 验证可能过度设计的情况
 
-- 细粒度步骤的 TDD：在红-绿-重构循环期间，随着你完善实现，验证可能是暂时的。
-- 纯函数：如果你的 SUT 方法没有副作用，对其返回值的传统断言通常足够了。
+- **细粒度步骤的 TDD**：在红-绿-重构循环期间，随着你完善实现，验证可能是暂时的。
+- **纯函数**：如果你的 SUT 方法没有副作用，对其返回值的传统断言通常足够了。
 
 ### 平衡验证与可读性
 
@@ -2953,27 +3014,27 @@ then(notificationServiceMock).should().send("Order Placed", ...);
 
 ### 额外资源
 
-- Mockito 的 `InOrder` 验证 [`javadoc.io/static/org.mockito/mockito-core/3.12.4/org/mockito/InOrder.html`](https://javadoc.io/static/org.mockito/mockito-core/3.12.4/org/mockito/InOrder.html)
+- Mockito 的 `InOrder` 验证：[`javadoc.io/static/org.mockito/mockito-core/3.12.4/org/mockito/InOrder.html`](https://javadoc.io/static/org.mockito/mockito-core/3.12.4/org/mockito/InOrder.html)
 - 关于验证过度使用的讨论：[`martinfowler.com/articles/mocksArentStubs.html`](https://martinfowler.com/articles/mocksArentStubs.html)
 
 你准备好掌握确保 mock 按照预期运行的艺术了吗？
 
 ## 掌握 Mockito 中的参数捕获 – 第一部分
 
-让我们探索 Mockito 的参数捕获如何允许我们检查传入 mock 的值，开启测试可能性的全新维度。
+让我们探索 `Mockito` 的参数捕获如何允许我们检查传入 mock 的值，开启测试可能性的全新维度。
 
 ## 2. 超越验证：检查参数
 
 想象一下这些场景：
 
-- 计算值：你不只是验证计算服务是否被调用，还需要根据输入对结果进行断言。
-- 消息格式化：确保通知服务使用正确的数据构建消息。
+- **计算值**：你不只是验证计算服务是否被调用，还需要根据输入对结果进行断言。
+- **消息格式化**：确保通知服务使用正确的数据构建消息。
 
 ### 3. 引入 `ArgumentCaptor`
 
-Mockito 的解决方案是 `ArgumentCaptor` 类：
+`Mockito` 的解决方案是 `ArgumentCaptor` 类：
 
-```
+```java
 @Captor
 private ArgumentCaptor<Order> orderCaptor;
 
@@ -2982,7 +3043,9 @@ void orderProcessingUpdatesInventory() {
     // ... setup ...
     orderService.processOrder(order);
     verify(inventoryServiceMock).reduceStock(orderCaptor.capture());
+
     Order capturedOrder = orderCaptor.getValue();
+
     // ... 对 capturedOrder 进行断言
 }
 ```
@@ -2995,35 +3058,41 @@ void orderProcessingUpdatesInventory() {
 
 ### 4. 捕获器的灵活性
 
-- 泛型类型：`ArgumentCaptor<Order>` 确保它只捕获 `Order` 对象。
-- `getAllValues()`：如果需要，捕获多次调用。
-- 带有匹配器的捕获器：你甚至可以在 `verify` 调用中使用 `argThat(...)` 进行更复杂的匹配。
+- **泛型类型**：`ArgumentCaptor<Order>` 确保它只捕获 `Order` 对象。
+- **`getAllValues()`**：如果需要，捕获多次调用。
+- **带有匹配器的捕获器**：你甚至可以在 `verify` 调用中使用 `argThat(...)` 进行更复杂的匹配。
 
 ### 5. 用例
 
-- 复杂的断言：当对输入和输出的断言非常复杂时。
-- 修改与重用：捕获一个值，修改它并可能将其传递给另一个 mock。
-- 当状态难以访问时：mock 的内部状态不可访问，但它在某些输入上的行为揭示了发生了什么。
+- **复杂的断言**：当对输入和输出的断言非常复杂时。
+- **修改与重用**：捕获一个值，修改它并可能将其传递给另一个 mock。
+- **当状态难以访问时**：mock 的内部状态不可访问，但它在某些输入上的行为揭示了发生了什么。
 
 ### 6. 警告
 
-- 潜在的过度使用：会导致测试与实现紧耦合，且不关注最终结果。
-- 平衡：谨慎使用，在合适的情况下与仅验证的测试交替使用。
+- **潜在的过度使用**：会导致测试与实现紧耦合，且不关注最终结果。
+- **平衡**：谨慎使用，在合适的情况下与仅验证的测试交替使用。
 
 ### 示例：邮件格式化
 
-```
+```java
 @Captor
 ArgumentCaptor<String> emailCaptor;
 
 // ...
-verify(emailService).send(anyString(), eq("Order Placed"), emailCaptor.capture());
+
+verify(emailService).send(
+    anyString(),
+    eq("Order Placed"),
+    emailCaptor.capture()
+);
 
 String capturedBody = emailCaptor.getValue();
+
 assertTrue(capturedBody.contains(order.getId()));
 ```
 
-第二部分：高级技巧
+## 第二部分：高级技巧
 
 ## 利用参数捕获的力量 – 第二部分
 
@@ -3033,7 +3102,7 @@ assertTrue(capturedBody.contains(order.getId()));
 
 如果一个方法有多个你想检查的参数怎么办？
 
-```
+```java
 @Captor
 ArgumentCaptor<String> addressCaptor;
 
@@ -3041,24 +3110,28 @@ ArgumentCaptor<String> addressCaptor;
 ArgumentCaptor<Double> amountCaptor;
 
 // ... 在测试中 ...
-verify(paymentServiceMock).processRefund(addressCaptor.capture(), amountCaptor.capture());
+
+verify(paymentServiceMock).processRefund(
+    addressCaptor.capture(),
+    amountCaptor.capture()
+);
 ```
+
 - 创建多个捕获器，每个参数对应一个。
 
 ### 2. 带有匹配器的捕获器
 
 将匹配器（Matchers）的力量与捕获结合起来，以实现细粒度的控制：
 
-```
+
+
 @Captor
-ArgumentCaptor<Payment> paymentCaptor;
 
-verify(paymentServiceMock).processRefund(
-    argThat(payment -> payment.getAmount() > 100.0 && payment.getStatus().equals("PENDING"))
-);
+`ArgumentCaptor<Payment> paymentCaptor;`
 
-Payment capturedPayment = paymentCaptor.getValue();
-```
+`verify(paymentServiceMock).processRefund(argThat(payment -> payment.getAmount() > 100.0 && payment.getStatus().equals("PENDING")));`
+
+`Payment capturedPayment = paymentCaptor.getValue();`
 
 ## 3. 参数捕获大放异彩时刻
 
@@ -3075,9 +3148,11 @@ Payment capturedPayment = paymentCaptor.getValue();
 ```java
 class OrderService {
     // ...
+
     public void applyDiscount(Order order, Discount discount) {
         // 根据折扣修改订单以便逻辑
     }
+
     // ...
 }
 ```
@@ -3098,9 +3173,6 @@ class OrderService {
 
 - 清晰意图：为什么要捕获？测试名称和注释应该解释这一点。
 - 专注断言：不要试图断言捕获值的所有属性；保持测试重点突出。
-
-
-
 
 接下来 - Mockito 和 Hamcrest 匹配器：我们已经领略了 Hamcrest 匹配器的一丝魅力。Mockito 与它们配合得非常完美！让我们深入研究这对组合如何提升你编写表达力且健壮的断言的能力。
 
@@ -3133,6 +3205,7 @@ import static org.hamcrest.Matchers.*;  // 包含了常用的匹配器
 @Test
 public void testEmailFormatting() {
     String email = "user@domain.com";
+
     MatcherAssert.assertThat(email, containsString("@"));
     MatcherAssert.assertThat(email, startsWith("user"));
 }
@@ -3209,6 +3282,7 @@ MatcherAssert.assertThat("totalPrice", is(42.5), reason("计算错误"));
 
 ```java
 List<String> orderItems = Arrays.asList("Laptop", "Monitor");
+
 MatcherAssert.assertThat(order.getItems(), containsInAnyOrder(
     hasItems("Laptop", "Monitor")
 ));
@@ -3221,7 +3295,9 @@ MatcherAssert.assertThat(order.getItems(), containsInAnyOrder(
 ```java
 public class IsDivisibleBy extends BaseMatcher<Integer> {
     private final int divisor;
+
     // ... 构造函数 ...
+
     @Override
     public boolean matches(Object actual) {
         return (Integer) actual % divisor == 0;
@@ -3255,6 +3331,7 @@ MatcherAssert.assertThat(total, is(new DivisibleBy(3)));
 @Test
 public void troubleshootingExample() {
     List<Integer> myList = Arrays.asList(4, 5, 6);
+
     MatcherAssert.assertThat(myList, listItem3);
 }
 
@@ -3270,6 +3347,7 @@ FeatureMatcher<List<Integer>, Integer> listItem3 = new FeatureMatcher<>(equalTo(
 ```
 
 输出：
+
 ```
 java.lang.AssertionError:
 Expected: a list containing <3>
@@ -3323,9 +3401,6 @@ public void describeMismatch(Object item, Description description) {
 }
 ```
 
-
-
-
 ```java
 description.appendText("was ").appendValue(item).appendText(" (not divisible by " + divisor + ")");
 }
@@ -3359,6 +3434,7 @@ public class OrderServiceTest {
         inventoryServiceMock = Mockito.mock(InventoryService.class);
         orderService = new OrderService(inventoryServiceMock);
     }
+
     // ... 你的测试 ...
 }
 ```
@@ -3373,6 +3449,7 @@ public class OrderServiceTest {
 public class OrderServiceTest {
     @Mock
     private InventoryService inventoryServiceMock;
+
     // ...
 }
 ```
@@ -3389,6 +3466,7 @@ public class OrderServiceTest {
 public class OrderServiceTest {
     @Mock private InventoryService inventoryServiceMock;
     @InjectMocks private OrderService orderService;
+
     // ... 你的测试 ...
 }
 ```
@@ -3406,41 +3484,46 @@ public class OrderServiceTest {
 public void placingOrderUpdatesInventory() {
     // 像往常一样 stub
     when(inventoryServiceMock.reduceStock(any(Order.class))).thenReturn(true);
+
     orderService.placeOrder(anOrder());
+
     verify(inventoryServiceMock).reduceStock(any(Order.class));
 }
 ```
 
+
+
 清晰得多，不是吗？
 
-## 4. @RunWith(MockitoJUnitRunner.class)
+## 4. `@RunWith(MockitoJUnitRunner.class)`
 
 这个注解是一个“幕后”英雄：
 
-● 将其置于测试类的上方。
-● 开启魔法：它告诉 `JUnit` 激活 `Mockito` 的注解处理。
-● 替代方案：如果你更喜欢，可以在设置方法（`@Before`）中使用 `MockitoAnnotations.openMocks(this)`。
+- 将其置于测试类的上方。
+- 开启魔法：它告诉`JUnit`激活`Mockito`的注解处理。
+- 替代方案：如果你更喜欢，可以在设置方法（`@Before`）中使用`MockitoAnnotations.openMocks(this)`。
 
 ## 第二部分：Captor、高级用法与自定义
 
-接下来，我们将深入研究强大的 `@Captor` 注解，探索你可能需要调整 `Mockito` 注解默认行为的场景，以及有效的技巧。
+接下来，我们将深入研究强大的`@Captor`注解，探索你可能需要调整`Mockito`注解默认行为的场景，以及有效的技巧。
 
 ### 额外资源
 
-● Mockito 注解文档：[`javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/MockitoAnnotations.html`](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/MockitoAnnotations.html)
+- Mockito 注解文档：[`javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/MockitoAnnotations.html`](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/MockitoAnnotations.html)
 
 准备好增强你的测试设置了吗？让我们继续！
 
 ## 揭秘 Mockito 注解：最大化测试效率 – 第二部分
 
-在本章中，我们将涵盖强大的 `@Captor`、你可能需要更多控制的场景，以及这些注解如何有助于整体测试效率。
+在本章中，我们将涵盖强大的`@Captor`、你可能需要更多控制的场景，以及这些注解如何有助于整体测试效率。
 
-### 1. @Captor：简化的参数捕获
+### 1. `@Captor`：简化的参数捕获
 
-回想我们之前章节中的朋友 `ArgumentCaptor`。`@Captor` 简化了它的使用：
+回想我们之前章节中的朋友`ArgumentCaptor`。`@Captor`简化了它的使用：
 
 ```java
 @Mock private InventoryService inventoryServiceMock;
+
 @Captor private ArgumentCaptor<Order> orderCaptor;
 
 @Test
@@ -3455,27 +3538,27 @@ public void orderBehaviorCaptured() {
 
 ### 2. 何时超越基础范围
 
-虽然 `Mockito` 的默认设置是合理的，但有时你可能想要调整它们。以下是几个场景：
+虽然`Mockito`的默认设置是合理的，但有时你可能想要调整它们。以下是几个场景：
 
-● 全局配置：使用 `MockitoSettings` 修改跨测试套件中所有测试的行为，例如严格性（strictness）。
+- 全局配置：使用`MockitoSettings`修改跨测试套件中所有测试的行为，例如严格性（strictness）。
 
 ### 3. 效率增益
 
 那么，我们为什么关心所有注解？
 
-● 减少样板代码：`MockitoSettings().strictness(STRICT_STUBS)` 是你的朋友。
-● 专注测试：更清晰的逻辑。
-● 可维护性：随着代码演进变得更好。
+- 减少样板代码：`MockitoSettings().strictness(STRICT_STUBS)`是你的朋友。
+- 专注测试：更清晰的逻辑。
+- 可维护性：随着代码演进变得更好。
 
 ### 4. 最佳实践
 
-● 不要过度使用：如果简单的 stubbing `when(method()).thenReturn(...)` 就足够了，请坚持使用。
-● 可可见性：如果你需要更多控制。
-● 测试注解：留意 SUT。
+- 不要过度使用：如果简单的 stubbing `when(method()).thenReturn(...)`就足够了，请坚持使用。
+- 可可见性：如果你需要更多控制。
+- 测试注解：留意 SUT。
 
 ### 示例：复杂的设置
 
-假设你的 `OrderService` 有多个协作对象且没有用于注入的构造函数。
+假设你的`OrderService`有多个协作对象且没有用于注入的构造函数。
 
 ### 权衡
 
@@ -3483,11 +3566,11 @@ public void orderBehaviorCaptured() {
 
 ### 额外资源
 
-● Mockito 的严格性设置：[`javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/MockitoAnnotations.html#strictness_config-org.mockito.Strictness`](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/MockitoAnnotations.html#strictness_config-org.mockito.Strictness)
+- Mockito 的严格性设置：[`javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/MockitoAnnotations.html#strictness_config-org.mockito.Strictness`](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/MockitoAnnotations.html#strictness_config-org.mockito.Strictness)
 
 # 第三部分：Mockito JUnit Rule、自定义与实际
 
-我们将通过查看 `@RunWith` 的替代方案来结束注解之旅，探索更多自定义选项，并查看注解如何让 Spring 的集成测试变得更加顺畅。
+我们将通过查看`@RunWith`的替代方案来结束注解之旅，探索更多自定义选项，并查看注解如何让 Spring 的集成测试变得更加顺畅。
 
 # 高级 Mockito 注解揭秘：优化测试设置 – 第三部分
 
@@ -3495,37 +3578,35 @@ public void orderBehaviorCaptured() {
 
 ## 1. Mockito JUnit Rule：一种替代方法
 
-除了 `@RunWith(MockitoJUnitRunner.class)`，`Mockito` 还提供了一个 JUnit Rule：
+除了`@RunWith(MockitoJUnitRunner.class)`，`Mockito`还提供了一个 JUnit Rule：
 
 ```java
 @Rule
 public MockitoRule rule = MockitoJUnit.rule();
 ```
 
-● 作为字段放置：将其声明为带有 `@Rule` 注解的 `public` 字段。
-● 为什么要使用？
-○ 灵活性：如果你在测试类中需要其他 `JUnit` rules。
-○ 旧版 JUnit：需要时与旧版 JUnit 兼容。
-
-
+- 作为字段放置：将其声明为带有`@Rule`注解的`public`字段。
+- 为什么要使用？
+  - 灵活性：如果你在测试类中需要其他`JUnit` rules。
+  - 旧版 JUnit：需要时与旧版 JUnit 兼容。
 
 ```java
 MockitoSettings.strictness(Strictness.STRICT_STUBS);
 ```
 
-### @Mock 注解调整：`@Mock` 注解具有可选字段：
+### `@Mock`注解调整：`@Mock`注解具有可选字段：
 
-* `name`: 为 mock 对象提供显式名称，有助于调试。
-* `answer`: 定义默认的回答行为（很少需要）。
-* `extraInterfaces`: 让你的 mock 对象实现额外的接口。
+- `name`: 为 mock 对象提供显式名称，有助于调试。
+- `answer`: 定义默认的回答行为（很少需要）。
+- `extraInterfaces`: 让你的 mock 对象实现额外的接口。
 
 ### 3. 注解与 Spring：强大的组合
 
 在 Spring 应用中，Mockito 的注解可以完美集成，从而简化集成测试的设置：
 
-* `@SpringBootTest`: 用于启动你的 Spring 上下文的注解。
-* `@MockBean`: 用 Mockito mock 对象替换上下文中的 Spring 豆（beans）。
-* `@Autowired`: 将你的 mock 对象（以及其他 豆）直接注入到你的测试中。
+- `@SpringBootTest`: 用于启动你的 Spring 上下文的注解。
+- `@MockBean`: 用 Mockito mock 对象替换上下文中的 Spring 豆（beans）。
+- `@Autowired`: 将你的 mock 对象（以及其他豆）直接注入到你的测试中。
 
 #### 示例：Spring 集成测试
 
@@ -3546,30 +3627,30 @@ class OrderServiceIntegrationTest {
 
 让我们强化一些关键点：
 
-* **清晰优于简洁（有时如此）**：如果少量的手动设置（例如，通过 `@Before` 方法）能让你的测试意图清晰得多，请尽管这样做。
-* **Mockito 是工具，而不是宗教**：它的存在是为了帮助你以适合你项目的方式编写良好的测试。
-* **Spring 集成**：注解在这种语境下大放异彩，使得测试设置变得异常流畅。
+- **清晰优于简洁（有时如此）**：如果少量的手动设置（例如，通过`@Before`方法）能让你的测试意图清晰得多，请尽管这样做。
+- **Mockito 是工具，而不是宗教**：它的存在是为了帮助你以适合你项目的方式编写良好的测试。
+- **Spring 集成**：注解在这种语境下大放异彩，使得测试设置变得异常流畅。
 
 ### 注意事项
 
-* **在 Spring 中过度 mock**：避免 mock Spring 可以为你提供的豆，因为这可能会掩盖集成问题。
-* **无处不加注解**：注解很棒，但从根本上了解 Mockito 的工作原理仍然关关。不要过度依赖它们。
+- **在 Spring 中过度 mock**：避免 mock Spring 可以为你提供的豆，因为这可能会掩盖集成问题。
+- **无处不加注解**：注解很棒，但从根本上了解 Mockito 的工作原理仍然关关。不要过度依赖它们。
 
 到此，我们已经结束了这场专属 Mockito 注解奥德赛之旅！
 
 ### 额外资源
 
-* **Mockito 和 Spring 指南**：[`www.baeldung.com/mockito-spring`](https://www.baeldung.com/mockito-spring)
-* **Mockito FAQ（包含注解注意事项章节）**：[`javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html`](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html)
+- **Mockito 和 Spring 指南**：[`www.baeldung.com/mockito-spring`](https://www.baeldung.com/mockito-spring)
+- **Mockito FAQ（包含注解注意事项章节）**：[`javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html`](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html)
 
 # 利用 Mockito JUnit Rule：简化测试执行
 
-让我们探索 Mockito JUnit Rule 的细微差别，了解它何时是 `@RunWith` 的价值替代方案，并看看它如何提高测试执行的灵活性。
+让我们探索 Mockito JUnit Rule 的细微差别，了解它何时是`@RunWith`的价值替代方案，并看看它如何提高测试执行的灵活性。
 
 ### 1. 回顾：Rule 与 Runner（运行器）
 
-* `@RunWith(MockitoJUnitRunner.class)`：将 Mockito 的行为应用于你测试类中的所有测试。
-* `@Rule public MockitoRule rule = MockitoJUnit.rule();`：在单个测试方法级别提供 Mockito 功能。
+- `@RunWith(MockitoJUnitRunner.class)`：将 Mockito 的行为应用于你测试类中的所有测试。
+- `@Rule public MockitoRule rule = MockitoJUnit.rule();`：在单个测试方法级别提供 Mockito 功能。
 
 **主要区别**：runner 是类级别的；而 rules 的细粒度更细。
 
@@ -3577,10 +3658,10 @@ class OrderServiceIntegrationTest {
 
 以下是 rule 发挥作用的某些场景：
 
-* **混合 JUnit Rules**：你的测试需要组合自定义规则或其他测试框架提供的规则。
-* **旧版 JUnit**：与早于 4.7 版本的 JUnit 版本（该版本引入了 `@RunWith`）保持兼容。
-* **细粒度控制**：你刻意只想将 Mockito 的行为应用于特定的测试方法，而不是整个类。
-* **隔离**：如果你担心 Mockito 的初始化与其他测试工具的行为之间可能存在冲突。
+- **混合 JUnit Rules**：你的测试需要组合自定义规则或其他测试框架提供的规则。
+- **旧版 JUnit**：与早于 4.7 版本的 JUnit 版本（该版本引入了`@RunWith`）保持兼容。
+- **细粒度控制**：你刻意只想将 Mockito 的行为应用于特定的测试方法，而不是整个类。
+- **隔离**：如果你担心 Mockito 的初始化与其他测试工具的行为之间可能存在冲突。
 
 ### 3. 示例：组合规则
 
@@ -3591,10 +3672,13 @@ class OrderServiceIntegrationTest {
 public class OrderServiceTest {
     @Rule
     public MockitoRule mockitoRule = MockitoJUnit.rule();
+
     @Rule
     public TemporaryFolder tempFolder = new TemporaryFolder(); // 创建临时文件的 JUnit 规则
+
     @Autowired OrderService orderService;
     @MockBean InventoryService inventoryServiceMock;
+
     // ... 同时使用 Mockito 和 tempFolder 能力的测试 ...
 }
 ```
@@ -3603,15 +3687,15 @@ public class OrderServiceTest {
 
 在大多数情况下，你编写单个测试的方式几乎没有变化：
 
-* `@Mock`：工作相同。
-* `@Captor`, `verify()`, `when()`：用法相同。
+- `@Mock`：工作相同。
+- `@Captor`, `verify()`, `when()`：用法相同。
 
-**主要区别**：使用 `@RunWith` 时，任何未通过注解创建的 mock 都需要 `MockitoAnnotations.openMocks(this)`。使用 rule 时，在测试方法中无需这种手动初始化。
+**主要区别**：使用`@RunWith`时，任何未通过注解创建的 mock 都需要`MockitoAnnotations.openMocks(this)`。使用 rule 时，在测试方法中无需这种手动初始化。
 
 ### 5. 注意事项
 
-* **稍显繁琐**：每个使用 rule 的测试都需要声明字段。
-* **最佳适用**：rule 并不是 runner 的替代品。runner 可能是你的默认选择；只有当它的优势符合你特定的测试需求时再使用 rule。
+- **稍显繁琐**：每个使用 rule 的测试都需要声明字段。
+- **最佳适用**：rule 并不是 runner 的替代品。runner 可能是你的默认选择；只有当它的优势符合你特定的测试需求时再使用 rule。
 
 ### 权衡
 
@@ -3619,7 +3703,7 @@ public class OrderServiceTest {
 
 ### 额外资源
 
-* **JUnit Rule 的 Mockito Javadoc**：[`javadoc.io/static/org.mockito/`](https://javadoc.io/static/org.mockito/)
+- **JUnit Rule 的 Mockito Javadoc**：[`javadoc.io/static/org.mockito/`](https://javadoc.io/static/org.mockito/)
 
 ## 下一站：Mockito & Spring
 
@@ -3627,19 +3711,19 @@ public class OrderServiceTest {
 
 ### 1. 为什么 Mockito & Spring 是绝佳组合
 
-* **依赖注入**：Spring 鼓励组件具有 `@Autowired` 的设计。
-* **隔离**：Mockito 替换豆，避免了潜在的冲突。
-* **简化测试设置**：Mockito 的注解显著减少了你编写的代码量。
-* **Spring 集成**：注解增强了你的体验。
+- **依赖注入**：Spring 鼓励组件具有`@Autowired`的设计。
+- **隔离**：Mockito 替换豆，避免了潜在的冲突。
+- **简化测试设置**：Mockito 的注解显著减少了你编写的代码量。
+- **Spring 集成**：注解增强了你的体验。
 
 ### 2. 关键要素
 
 让我们介绍 Spring 的核心组件：
 
-* `@SpringBootTest`：该注解是基础。它启动你的 Spring 环境。
-* `@RunWith(SpringRunner.class)`（或 JUnit 5 等效物）：一个 JUnit runner。
-* `@MockBean`：主角！它告诉 Spring 替换上下文中的豆。
-* `@Autowired`：用于注入豆（包括真实的和 mock）。
+- `@SpringBootTest`：该注解是基础。它启动你的 Spring 环境。
+- `@RunWith(SpringRunner.class)`（或 JUnit 5 等效物）：一个 JUnit runner。
+- `@MockBean`：主角！它告诉 Spring 替换上下文中的豆。
+- `@Autowired`：用于注入豆（包括真实的和 mock）。
 
 ### 3. 基础场景
 
@@ -3649,6 +3733,7 @@ public class OrderServiceTest {
 @Service
 public class OrderService {
     @Autowired InventoryService inventoryService;
+
     public void processOrder(Order order) {
         if (inventoryService.isInStock(order.getProductId())) {
             // 复杂的订单处理
@@ -3681,29 +3766,26 @@ public class OrderServiceTest {
 
 注意：
 
-* Spring 上下文被加载了（@SpringBootTest`）。
-* 我们的 `InventoryService` 被替换为了 mock（@MockBean`）。
-* 我们控制了 mock 的行为并将所有内容注入 `OrderService`（@Autowired`）。
+- Spring 上下文被加载了（`@SpringBootTest`）。
+- 我们的`InventoryService`被替换为了 mock（`@MockBean`）。
+- 我们控制了 mock 的行为并将所有内容注入`OrderService`（`@Autowired`）。
 
 ### 4. 真实性与控制
 
 Spring 集成测试的一个关键方面是取得平衡：
 
-* **过度 mock**：你可能会没有测试到集成点本身。
-* **mock 过少**：你的测试可能会变得缓慢、不稳定或依赖外部资源。
+- **过度 mock**：你可能会没有测试到集成点本身。
+- **mock 过少**：你的测试可能会变得缓慢、不稳定或依赖外部资源。
 
 找到平衡点对于有效的测试至关重要！
 
-第二部分：深入探索
-
-
-
+## 第二部分：深入探索
 
 接下来，我们将探索数据访问层的测试、验证与 mock 的交互，以及更高级的 Spring 测试场景。
 
 ### 额外资源
 
-- Spring Spring 框架测试指南：[`docs.spring.io/spring-framework/docs/current/reference/html/testing.html`](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html)
+- Spring 框架测试指南：[`docs.spring.io/spring-framework/docs/current/reference/html/testing.html`](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html)
 - Mockito + Spring 示例：[`www.baeldung.com/mockito-spring`](https://www.baeldung.com/mockito-spring)
 
 准备好将你的 Spring 测试提升到新水平了吗？
@@ -3716,12 +3798,12 @@ Spring 集成测试的一个关键方面是取得平衡：
 
 Spring Data 为数据库交互提供了强大的抽象层。让我们看看 Mockito 是如何接入的：
 
-- `@DataJpaTest`：`@SpringBootTest` 的聚焦变体，主要用于测试数据访问逻辑。
-- `@AutoConfigureTestDatabase`：如果你想在测试中使用内存数据库（如 `H2`）以避免连接真实数据库，请使用它。
+- `@DataJpaTest`：`@SpringBootTest`的聚焦变体，主要用于测试数据访问逻辑。
+- `@AutoConfigureTestDatabase`：如果你想在测试中使用内存数据库（如`H2`）以避免连接真实数据库，请使用它。
 
 #### 示例 Repository 测试
 
-```
+```java
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class ProductRepositoryTest {
@@ -3737,20 +3819,24 @@ public class ProductRepositoryTest {
 }
 ```
 
-#### 观察：
+
+
+### 1. Spring 测试中的 Mock 配置
 
 - 我们的 repository 被注入了（`@Autowired`）。
 - 如果需要，我们仍然会选择性地 mock repository 的协作类。
 
 ### 2. 验证与 Spring Bean 的交互
 
-记得 Mockito 的 `verify()`是一个强大的工具。在 Spring 测试中，我们通常想验证 Spring 管理组件是如何使用我们的 mock 的：
+记得 Mockito 的 `verify()` 是一个强大的工具。在 Spring 测试中，我们通常想验证 Spring 管理组件是如何使用我们的 mock 的：
 
 ```java
 @Test
 public void orderProcessing_InventoryUpdated() {
     // ... 按照之前的方式进行设置 ..
+
     orderService.processOrder(someOrder);
+
     verify(inventoryServiceMock, times(1)).reduceStock(any());
 }
 ```
@@ -3763,7 +3849,7 @@ public void orderProcessing_InventoryUpdated() {
 
 ### 4. 最佳实践
 
-- **测试切片 (Test Slices)**：专注于 Spring 的特定层（`@DataJpaTest`、`@WebMvcTest` 等），以获得更快的执行和针对性的结果。
+- **测试切片（Test Slices）**：专注于 Spring 的特定层（`@DataJpaTest`、`@WebMvcTest` 等），以获得更快的执行和针对性的结果。
 - **不要过度 Mock Spring**：在涉及连接时，让 Spring 各行其事。审慎地 mock 以隔离你正在测试的单元。
 - **拥抱构造器注入**：这使得你的组件从本质上是可测试的，简化了 Mockito 的使用和 Spring 配置。
 
@@ -3774,18 +3860,20 @@ public void orderProcessing_InventoryUpdated() {
 ### 额外资源
 
 - 测试 Spring Boot（官方指南）：[`docs.spring.io/spring-boot/docs/current/reference/html/boot-testing.html`](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-testing.html)
-- @SpyBean 文档：[`docs.spring.io/spring-framework/docs/current/javadoc-api/spring/boot/test/mock/MockitoPostProcessor.html#spybean-java.lang.Object-`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/spring/boot/test/mock/MockitoPostProcessor.html#spybean-java.lang.Object-)
+- `@SpyBean` 文档：[`docs.spring.io/spring-framework/docs/current/javadoc-api/spring/boot/test/mock/MockitoPostProcessor.html#spybean-java.lang.Object-`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/spring/boot/test/mock/MockitoPostProcessor.html#spybean-java.lang.Object-)
 
 后续预告：Mockito Spies！
+
 准备好通过 Mockito 的 Spy 进入部分 mock 的有趣世界了吗？让我们看看它们如何赋予我们的测试更灵活的活性。
 
 ## 理解 Mockito Spy：第 1 部分
 
 让我们准备好深入 Spies 的世界！Spies 为我们提供了一种细致的方法，将真实对象的行为与选择性的 mock 混合在一起，开启了新的可能性。
 
-### 1. 当 Stub (打桩) 不够时
+### 1. 当 Stub（打桩）不够时
 
 记住，传统的 Mockito mocks 是“空白板”。除非我们对其进行打桩，否则它们没有自己的行为。但如果：
+
 - 你希望类的大部分方法都能正常运行？
 - 你需要观察真实对象上的某些方法是如何被调用的？
 
@@ -3794,23 +3882,26 @@ Spy 出场！
 ### 2. Spy 演示
 
 - **创建**：`spy()` 创建了一个包装了你的类真实实例的 spy。
+
 ```java
 List<String> myList = new ArrayList<>();
 List<String> spyList = Mockito.spy(myList);
 ```
+
 - **行为**：
-    - **默认真实**：如果你调用一个方法而没有对其进行打桩，spy 将委托给真实的底层对象。
-    - **选择性 mock**：你仍然可以使用 `when(...).thenReturn(...)` 来根据需要覆盖行为。
+  - **默认真实**：如果你调用一个方法而没有对其进行打桩，spy 将委托给真实的底层对象。
+  - **选择性 mock**：你仍然可以使用 `when(...).thenReturn(...)` 来根据需要覆盖行为。
 
 ### 3. 示例：带有协作类的支付服务
 
-
-
-```javaclass PaymentService {
+```java
+class PaymentService {
     private Logger logger;
+
     public PaymentService(Logger logger) {
         this.logger = logger;
     }
+
     public void processPayment() {
         // ... 复杂的支付逻辑 ...
         logger.info("Payment processed");
@@ -3819,6 +3910,7 @@ List<String> spyList = Mockito.spy(myList);
 ```
 
 **测试场景：**
+
 - 验证支付逻辑。
 - 确保日志已记录。
 
@@ -3829,7 +3921,9 @@ List<String> spyList = Mockito.spy(myList);
 public void processPayment_Logs() {
     PaymentService paymentService = new PaymentService(new Logger());
     PaymentService paymentSpy = Mockito.spy(paymentService);
+
     paymentSpy.processPayment();
+
     verify(paymentSpy).info("Payment processed"); // 如果 info 方法被调用
 }
 ```
@@ -3840,9 +3934,10 @@ public void processPayment_Logs() {
 - **验证力量**：Spies 的强大之处在于结合 `verify()` 来确保某些方法按预期调用。
 
 第 2 部分：更多的 Spy 细节、最佳实践
+
 接下来，我们将探讨何时选择 spy 还是 mock、如何对 Spring bean 进行 spy，以及需要考虑的权衡。
 
- 额外资源
+### 额外资源
 
 - Mockito 的 Spy 文档：[`javadoc.io/static/mockito-core/3.12.4/org/mockito.Spy.html`](https://javadoc.io/static/mockito-core/3.12.4/org/mockito.Spy.html)
 
@@ -3855,6 +3950,7 @@ public void processPayment_Logs() {
 ### 1. 对 Spring Bean 进行 Spy
 
 Mockito 的 `@SpyBean` 专为将 spy 集成到你的测试中设计：
+
 - **在测试类中**：使用 `@SpyBean` 声明字段。
 - **Spring 注入**：在测试期间，Spring 会注入一个包装真实 bean 的 spy。
 
@@ -3865,6 +3961,7 @@ Mockito 的 `@SpyBean` 专为将 spy 集成到你的测试中设计：
 public class OrderServiceTest {
     @SpyBean
     private InventoryService inventoryService;
+
     @Autowired
     private OrderService orderService;
 
@@ -3880,23 +3977,17 @@ public class OrderServiceTest {
 
 - **审慎使用**：当你需要一个主要是真实的对象配合选择性 mock 时，spy 是最有价值的。
 - **验证重点**：spy 的优势在于结合 `verify()` 使用，以确保真实对象上的某些方法按预期被调用。
-- **谨慎使用 doReturn()**：虽然你可以对 spy 使用 `doReturn(...).when(...)`，但要注意过度的打桩可能会掩盖你想要在测试中发现的问题。
+- **谨慎使用 `doReturn()`**：虽然你可以对 spy 使用 `doReturn(...).when(...)`，但要注意过度的打桩可能会掩盖你想要在测试中发现的问题。
 
 ### 3. Spies vs. Mocks：做出选择
 
 让我们明确何时选择哪一个：
 
-| 场景 | 何时使用 Spy…… 何时使用 Mock…… |
+| 场景 | 何时使用 Spy | 何时使用 Mock |
 | :--- | :--- | :--- |
-
-
-
-
-
 | 你需要大多数真实行为，但希望选择性地覆盖或验证 | 你想隔离某些方法，或者你想要完全控制以检查与真实对象的交互。 | 你完全不在乎真实的实现。 |
-| :--- | :--- | :--- |
 | 对紧耦合的遗留代码进行测试 | 你可以对协作方进行监控（spy），以测试单个单元（尽管重构通常是长期的目标）。 | 你想完全隔离被测试的单元。 |
-| 你想存桩（stub）复杂的依赖 | 你想关注组件大部分逻辑的真实行为。 | 依赖项缓慢的、外部的，或其设置非常复杂。 |
+| 你想存桩（stub）复杂的依赖 | 你想关注组件大部分逻辑的真实行为。 | 依赖项缓慢、外部，或其设置非常复杂。 |
 
 ### 4. 注意事项
 
@@ -3911,9 +4002,9 @@ public class OrderServiceTest {
 
 ## 第 5 部分：使用 PowerMock 和 Mockito 释放高级测试技术
 
-# 初始设置：将 PowerMock 集成到你的被测试系统 – 部分 1
+### 初始设置：将 PowerMock 集成到你的被测试系统——部分 1
 
-让我们开启 PowerMock 之之旅。警告：我们正在进入一个标准 Java 限制开始弯的领域，请明智地使用这些力量！
+让我们开启 PowerMock 之旅。警告：我们正在进入一个标准 Java 限制开始弯曲的领域，请明智地使用这些力量！
 
 ### 1. 为什么选择 PowerMock？当常规手段不足时
 
@@ -3928,13 +4019,14 @@ public class OrderServiceTest {
 - **构造函数**：你需要控制被测试系统内部对象的创建过程。
 - **私有方法**：你的测试需要进入类的私有内部实现。
 
-### 2.向项目添加 PowerMock
+### 2. 向项目添加 PowerMock
 
-#### 依赖项 (Maven)
+#### 依赖项（Maven）
 
 将这些内容添加到你的 `pom.xml` 中：
 
 - **PowerMock JUnit Runner**：
+
 ```xml
 <dependency>
   <groupId>org.powermock</groupId>
@@ -3945,6 +4037,7 @@ public class OrderServiceTest {
 ```
 
 - **PowerMock Mockito API**：
+
 ```xml
 <dependency>
   <groupId>org.powermock</groupId>
@@ -3987,9 +4080,10 @@ public class StringUtils {
 
 ```java
 @Test
-public void testWithStaticMock() {        
+public void testWithStaticMock() {
     PowerMockito.mockStatic(StringUtils.class);
     PowerMockito.when(StringUtils.isEmpty(anyString())).thenReturn(true);
+
     // 使用 StringUtils 的代码现在将获得我们的模拟行为
 }
 ```
@@ -4001,17 +4095,17 @@ public void testWithStaticMock() {
 
 ## 第 2 部分：Mock 构造函数、私有方法以及警告
 
-接下来，我们将深入研究构造函数操作的细节、驯服那些私有方法，以及在使用这些强大工具时保持测试健壮的必性最佳实践。
+接下来，我们将深入研究构造函数操作的细节、驯服那些私有方法，以及在使用这些强大工具时保持测试健壮的必要最佳实践。
 
-**额外资源：**
+### 额外资源
 
 - **PowerMock 文档**：[`github.com/powermock/powermock`](https://github.com/powermock/powermock)
 
 警告：做好测试平衡发生偏移的准备。如果你发现自己需要大量使用 PowerMock，请额外仔细地考虑你的设计选择！
 
-## 配置 PowerMock 以实现无缝集成 – 部分 2
+## 配置 PowerMock 以实现无缝集成——部分 2
 
-让我们继续配置 PowerMock 的之旅，以获得流畅的体验。
+让我们继续配置 PowerMock 的旅程，以获得流畅的体验。
 
 ### 1. 使用 PowerMock Mock 构造函数
 
@@ -4020,13 +4114,14 @@ public void testWithStaticMock() {
 ```java
 public class OrderService {
     private final InventoryService inventoryService;
+
     public OrderService(InventoryService inventoryService) {
         this.inventoryService = inventoryService;
     }
 }
 ```
 
-PowerMock 来救救了：
+PowerMock 来救场了：
 
 ```java
 @RunWith(PowerMockRunner.class)
@@ -4035,7 +4130,10 @@ public class OrderServiceTest {
     @Test
     public void testConstructor() {
         InventoryService inventoryMock = Mockito.mock(InventoryService.class);
-        PowerMockito.whenNew(InventoryService.class).withAnyArguments().thenReturn(inventoryMock);
+        PowerMockito.whenNew(InventoryService.class)
+            .withAnyArguments()
+            .thenReturn(inventoryMock);
+
         OrderService orderService = new OrderService(); // 现在使用了 mock 对象！
     }
 }
@@ -4043,7 +4141,7 @@ public class OrderServiceTest {
 
 **解释：**
 
-- `@PrepareForTest(OrderService.class)`：信号我们想要影响 `OrderService`。
+- `@PrepareForTest(OrderService.class)`：表明我们想要影响 `OrderService`。
 - `PowerMockito.whenNew(InventoryService.class).withAnyArguments().thenReturn(inventoryMock)`：拦截了构造函数。
 
 ### 2. 私有方法：暴露隐藏的内容
@@ -4056,6 +4154,7 @@ public class UserManager {
         String encrypted = encryptPassword(newPassword);
         // ... 逻辑
     }
+
     private String encryptPassword(String rawPassword) {
         return rawPassword;
     }
@@ -4071,20 +4170,25 @@ public class UserManagerTest {
     @Test
     public void changePassword_EncryptsCorrectly() throws Exception {
         UserManager userManager = PowerMockito.spy(new UserManager());
-        String rawPassword = "test";
-        PowerMockito.doReturn("ENCRYPTED").when(userManager, "encryptPassword", rawPassword);
-        
-        userManager.changePassword("john", rawPassword);
-        // 现在你可以验证剩余逻辑是否使用了加密后的值
-    }
-}
 ```
 
 
 
+```java
+String rawPassword = "test";
 
+PowerMockito.doReturn("ENCRYPTED").when(userManager, "encryptPassword", rawPassword);
 
-请记住，Mockito 在设计上无法直接操作静态方法。这是很有道理的，因为过度使用静态方法通常预示着设计的可测试性较低。然而，现实情况往往是骨感的：
+userManager.changePassword("john", rawPassword);
+
+// 现在你可以验证剩余逻辑是否使用了加密后的值
+
+}
+
+}
+```
+
+请记住，`Mockito` 在设计上无法直接操作静态方法。这是很有道理的，因为过度使用静态方法通常预示着设计的可测试性较低。然而，现实情况往往是骨感的：
 
 - **遗留代码**：你正在处理一个高度依赖散落在各处的静态方法的代码库。
 - **工具类**：你需要控制充斥静态辅助方法的类（如 `FileUtils`、`StringUtils` 等）中的行为。
@@ -4092,10 +4196,10 @@ public class UserManagerTest {
 
 ## 2. 引入 PowerMock：打破规则
 
-PowerMock 与 Mockito 结合，让你能够：
+`PowerMock` 与 `Mockito` 结合，让你能够：
 
 - **Mock 静态方法**：为了打桩目的，可以将静态方法像实例方法一样对待（`PowerMockito.mockStatic()`）。
-- **验证调用**：在静态方法上使用 Mockito 的 `verify()` 来检查它们是否按预期被调用。
+- **验证调用**：在静态方法上使用 `Mockito` 的 `verify()` 来检查它们是否按预期被调用。
 
 ## 3. 示例：驯服一个棘手的工具类
 
@@ -4103,10 +4207,12 @@ PowerMock 与 Mockito 结合，让你能够：
 
 ```java
 public class FileUtils {
+
     public static boolean deleteFile(String path) {
         File file = new File(path);
         return file.delete();
     }
+
 }
 ```
 
@@ -4118,19 +4224,25 @@ public class FileUtils {
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(FileUtils.class)
 public class OrderServiceTest {
+
     @Test
     public void processOrder_FileDeletionControlled() {
         PowerMockito.mockStatic(FileUtils.class);
+
         PowerMockito.doReturn(true).when(FileUtils.class); // 注意：这里没有参数匹配器
+
         FileUtils.deleteFile(anyString());
+
         // 现在，调用 FileUtils.deleteFile() 的代码将不会实际删除
+
     }
+
 }
 ```
 
 ### 4. 关键点
 
-- **`@PrepareForTest`**：不要忘记这个！告诉 PowerMock 哪些类包含你目标的静态方法。
+- **`@PrepareForTest`**：不要忘记这个！告诉 `PowerMock` 哪些类包含你目标的静态方法。
 - **`PowerMockito.mockStatic()`**：标记该类以便进行静态方法 Mock。
 - **`when()` 语法**：看起来很熟悉，但由于没有对象实例，你直接在 `when()` 之后引用类。
 
@@ -4151,23 +4263,28 @@ Mock 静态方法虽然强大，但可能导致：
 
 - **PowerMock 静态 Mock 使用**：[`github.com/powermock/powermock`](https://github.com/powermock/powermock)
 
-**记住**：能力越大，责任越大。在深度依赖 PowerMock 之前，请务必考虑设计的替代方案！
+**记住**：能力越大，责任越大。在深度依赖 `PowerMock` 之前，请务必考虑设计的替代方案！
 
 # 掌握静态方法 Mock 技术 – 第 2 部分
 
-让我们深入研究如何使用 PowerMock 弯曲静态方法以满足测试意愿。
+让我们深入研究如何使用 `PowerMock` 弯曲静态方法以满足测试意愿。
 
 ## 1. 验证静态方法调用
 
-就像 Mockito 的 `verify()` 对实例方法非常强大一样，我们也可以检查静态交互：
+就像 `Mockito` 的 `verify()` 对实例方法非常强大一样，我们也可以检查静态交互：
 
 ```java
 @Test
 public void fileDeletion_callsSystemLog() {
+
     // ... 按照之前的方式设置...
+
     processOrder(); // 调用内部使用 FileUtils.deleteFile() 的方法
+
     PowerMockito.verifyStatic(SystemLogger.class);
+
     SystemLogger.logMessage("File deleted");
+
 }
 ```
 
@@ -4180,12 +4297,18 @@ public void fileDeletion_callsSystemLog() {
 ```java
 @PrepareForTest(FileUtils.class)
 public class FileServiceTest {
+
     @Test
     public void something() {
+
         PowerMockito.spy(FileUtils.class); // 将其转换为部分 Mock
+
         PowerMockito.when(FileUtils.calculateFileSize(anyString())).thenReturn(1024L);
+
         // FileUtils.deleteFile() 仍然具有其真实的行为！
+
     }
+
 }
 ```
 
@@ -4194,18 +4317,18 @@ public class FileServiceTest {
 ## 3. 最佳实践与注意事项
 
 - **测试交互而非内部实现**：重点关注验证你的被测系统是否以预期的方式与静态方法交互。
-- **参数**：根据需要使用 Mockito 的 `any()`、`eq()`。
+- **参数**：根据需要使用 `Mockito` 的 `any()`、`eq()`。
 - **返回值**：使用 `doReturn(...).when(...)` 进行打桩。
 
 ## 4. 常见陷阱
 
 - **过度 Mock**：如果你发现自己在 Mock 极数量的方法，请重新审视你的设计。
-- **忘记 `@PrepareForTest`**：没有它，PowerMock 将无法施展魔法。
+- **忘记 `@PrepareForTest`**：没有它，`PowerMock` 将无法施展魔法。
 - **复杂性**：静态 Mock 通常会让测试变得更加脆弱。
 
 ### 示例：驯服一个棘手的工具类
 
-假设你有一个 `Time` 类。PowerMock 允许你控制 `getCurrentTime()` 以实现确定性。
+假设你有一个 `Time` 类。`PowerMock` 允许你控制 `getCurrentTime()` 以实现确定性。
 
 - **可测试性**：考虑是否可以注入一个非全局的来源代替。
 
@@ -4217,7 +4340,7 @@ public class FileServiceTest {
 
 ## 1. Mock 系统类
 
-考虑 `System.currentTimeMillis()`、`Math.random()` 等。PowerMock 允许你篡改标准库。
+考虑 `System.currentTimeMillis()`、`Math.random()` 等。`PowerMock` 允许你篡改标准库。
 
 **示例：稳定随机性**
 
@@ -4225,17 +4348,25 @@ public class FileServiceTest {
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(Math.class)
 public class LotteryTest {
+
     @Test
     public void luckyDraw_alwaysWins() {
+
         PowerMockito.mockStatic(Math.class);
+
         PowerMockito.when(Math.random()).thenReturn(0.9999);
+
         LotteryService lotteryService = new LotteryService();
+
         Assert.assertTrue(lotteryService.draw());
+
     }
+
 }
 ```
 
-**重要**：
+**重要：**
+
 - Mock 核心系统类可能会对其他测试产生意外的连锁反应。请极其谨慎地使用。
 - 考虑是否有其他注入的方式。
 
@@ -4246,34 +4377,42 @@ public class LotteryTest {
 ```java
 @PrepareForTest(LogManager.class)
 public class MyClassTest {
+
     @Test
     public void testSomething() {
+
         PowerMockito.suppress(PowerMockito.method(LogManager.class, "getLogger"));
+
         // 现在，调用 LogManager.getLogger() 将实际上无所作为
+
     }
+
 }
 ```
 
 ## 3. Mock Final 类中的 Final 方法
 
-PowerMock 真正弯曲了 Java 的常规规则：
+`PowerMock` 真正弯曲了 Java 的常规规则：
 
-- **警告**：并非所有 PowerMock 之上的 Mock 框架都支持此，而且可能取决于 JVM 版本。
+- **警告**：并非所有 `PowerMock` 之上的 Mock 框架都支持此，而且可能取决于 JVM 版本。
 
 ```java
 @PrepareForTest(MyFinalClass.class)
 public class ... {
+
     @Test
     public void testMockingFinalMethod() {
+
         PowerMockito.mockStatic(MyFinalClass.class);
+
         PowerMockito.when(MyFinalClass.someFinalStaticMethod()).thenReturn("hello");
+
         // ...
+
     }
+
 }
 ```
-
-
-
 
 模拟系统类、抑制方法以及模拟最终类（final things）会使你的测试与具体的实现细节深度耦合。这些领域的任何细微变化都可能导致你的测试失败。只有在绝对必要的情况下，才采用这种级别的控制。
 
@@ -4283,11 +4422,11 @@ public class ... {
 - **文档**：在你的 `PowerMock` 测试中留下清晰的注释，解释为什么要使用这些非常规的技术。
 - **频繁重构**：持续评估你的设计是否可以进化，以减少对 `PowerMock` 的依赖。结构良好的代码库可能从根本上消除使用它的理由！
 
-### 额外资源：
+### 额外资源
 
 - **抑制方法**：[`github.com/powermock/powermock`](https://github.com/powermock/powermock)
 
-## 核心总结：
+## 核心总结
 
 - `PowerMock` 就像一种强效药：要小剂量使用进行针对性治疗，而不是作为日常维他。过度依赖会损害代码的长期健康。
 - 始终考虑依赖注入或重构等替代方案，以减少对这种粗暴模拟的需求。
@@ -4312,6 +4451,7 @@ public class ... {
 
 ```java
 class OrderService {
+
     private String generateTrackingId() {
         // ... 复杂的生成逻辑 ...
     }
@@ -4320,16 +4460,22 @@ class OrderService {
         String trackingId = generateTrackingId();
         // ...
     }
+
 }
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(OrderService.class)
 public class OrderServiceTest {
+
     @Test
     public void generateTrackingId_HasValidFormat() throws Exception {
+
         OrderService orderService = new OrderService(); // 真实对象
+
         PowerMockito.when(orderService, "generateTrackingId").thenReturn("TEST1234");
+
     }
+
 }
 ```
 
@@ -4349,7 +4495,7 @@ public class OrderServiceTest {
 - **概念性测试**：不要针对私有方法的逐步执行行为，而要关注它在公共方法语境下的输出或副作用。
 - **注释作为生命支持**：如果你**必须**这样做，请在测试的注释中提供详尽的理由说明。
 
-### 额外资源：
+### 额外资源
 
 - **私有方法模拟**：[`github.com/powermock/powermock`](https://github.com/powermock/powermock)
 
@@ -4369,42 +4515,59 @@ public class OrderServiceTest {
 
 ```java
 class OrderService {
+
     private String generateShipmentLabel() { /* ... */ }
 
     public void shipOrder() {
         String label = generateShipmentLabel();
         // ...
     }
+
 }
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(OrderService.class)
 public class OrderServiceTest {
+
     @Test
     public void generateTrackingId_HasValidFormat() throws Exception {
+
         OrderService orderService = PowerMockito.spy(new OrderService());
+
         PowerMockito.doReturn("Label").when(orderService).generateShipmentLabel();
+
         orderService.shipOrder();
+
     }
+
 }
 ```
 
 ### 2. PowerMock Whitebox
 
-PowerMock 提供了一个名为 `Whitebox` 的工具类用于更深层次的操作：
+`PowerMock` 提供了一个名为 `Whitebox` 的工具类用于更深层次的操作：
 
 ```java
 class MyClass {
+
     private int calculateInternally() { /* ... */ }
+
 }
 
 @Test
 public void testSomething() throws Exception {
+
     MyClass myClass = new MyClass();
+
     int result = Whitebox.invokeMethod(myClass, "calculateInternally");
+
     assertEquals(42, result);
+
 }
 ```
+
+
+
 
 ### 3. 何时用什么？
 
@@ -4423,18 +4586,13 @@ public void testSomething() throws Exception {
 
 - **内部过度复杂**：你的类可能试图做太多事情。
 - **可测试性是事后考虑的**：考虑在不严重破坏封装的情况下暴露内部逻辑结果的方法。
+- **尴尬的依赖**：被测试的类可能在构造函数中实例化了某些在测试中难以管理的对象（例如数据库连接、网络资源等）。
+- **强制构造路径**：你希望测试代码如何处理初始化过程中对象创建失败的情况。
+- **遗留代码纠缠**：一个类可能通过其构造函数与其他麻烦的类紧耦合在一起。
 
 ### 额外资源
 
 - **PowerMock 的 Whitebox**：[`www.baeldung.com/powermock`](https://www.baeldung.com/powermock)
-
-
-
-
-
-- **尴尬的依赖**：被测试的类可能在构造函数中实例化了某些在测试中难以管理的对象（例如数据库连接、网络资源等）。
-- **强制构造路径**：你希望测试代码如何处理初始化过程中对象创建失败的情况。
-- **遗留代码纠缠**：一个类可能通过其构造函数与其他麻烦的类紧耦合在一起。
 
 ## 2. PowerMock：构造函数操纵器
 
@@ -4442,6 +4600,7 @@ public void testSomething() throws Exception {
 
 ```java
 class ReportGenerator {
+
     private final DataFetcher dataFetcher;
 
     public ReportGenerator(DataFetcher dataFetcher) {
@@ -4456,12 +4615,18 @@ class ReportGenerator {
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(ReportGenerator.class)
 public class ReportGeneratorTest {
+
     @Test
     public void generateReport_usesDataFetcher() throws Exception {
         DataFetcher dataFetcherMock = Mockito.mock(DataFetcher.class);
-        PowerMockito.whenNew(DataFetcher.class).withNoArguments().thenReturn(dataFetcherMock);
+
+        PowerMockito.whenNew(DataFetcher.class)
+                .withNoArguments()
+                .thenReturn(dataFetcherMock);
+
         ReportGenerator reportGenerator = new ReportGenerator();
         reportGenerator.generateReport();
+
         // Now verify interactions with the mocked dataFetcher
     }
 }
@@ -4473,8 +4638,6 @@ public class ReportGeneratorTest {
 - `PowerMockito.whenNew(...)`：拦截构造函数的执行。
 - **控制流**：现在构造函数将接收到我们的 mock 对象，而不是创建一个真实的（且可能产生问题的）`DataFetcher`。
 
----
-
 ## 3. 最佳实践与注意事项
 
 - **以隔离为目标**：如果构造函数操纵在你的测试中变得司常化，这是一个巨大的危险信号，说明你的设计正在阻碍可测试性。如果可能，请进行重构！
@@ -4485,7 +4648,9 @@ public class ReportGeneratorTest {
 如果你想完全阻止构造函数运行其原始代码该怎么办？
 
 ```java
-PowerMockito.suppress(PowerMockito.constructor(MyClassWithSideEffects.class));
+PowerMockito.suppress(
+    PowerMockito.constructor(MyClassWithSideEffects.class)
+);
 ```
 
 - **使用场景**：有时你只需要对象存在，但对于特定测试，并不关心它的实际初始化逻辑。
@@ -4497,8 +4662,6 @@ PowerMockito.suppress(PowerMockito.constructor(MyClassWithSideEffects.class));
 ### 始终问自己：
 
 - **需求优于好奇**：你诉诸构造函数 Mock 是是因为重设计是更好的长期解决方案吗？
-
----
 
 # 高级构造函数 Mock 策略 – 第二部分
 
@@ -4512,29 +4675,34 @@ PowerMockito.suppress(PowerMockito.constructor(MyClassWithSideEffects.class));
 
 ```java
 class PaymentProcessor {
+
     private final GatewayAPI gatewayAPI;
 
     public PaymentProcessor(String apiKey, boolean testMode) {
         gatewayAPI = new GatewayAPI(apiKey, testMode);
     }
+
     // ...
 }
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(PaymentProcessor.class)
 public class PaymentProcessorTest {
+
     @Test
     public void testMode_usesSandboxGateway() throws Exception {
         PowerMockito.whenNew(GatewayAPI.class)
-                    .withArguments(anyString(), eq(true))
-                    .thenReturn(mock(GatewayAPI.class));
+                .withArguments(anyString(), eq(true))
+                .thenReturn(mock(GatewayAPI.class));
+
         new PaymentProcessor("API_KEY", true);  // Test mode!
+
         // ...
     }
 }
 ```
 
-- **参数匹配**：我们使用 Mockito 的匹配器（`anyString()``, `eq(true)`）来确保 mock 构造函数只在所需的场景下使用。
+- **参数匹配**：我们使用 Mockito 的匹配器（`anyString()`、`eq(true)`）来确保 Mock 构造函数只在所需的场景下使用。
 
 ## 2. 间接对象创建
 
@@ -4571,8 +4739,6 @@ public void processPayment(String id) {
 
 **重要**：PowerMock 是一种强效药物，而不是每日服服的复合维生素。请谨慎使用，并始终优先提高代码的可测试性。
 
----
-
 ## 构建健壮的单元测试 – 核心指南与原则：第一部分
 
 让我们将注意力从高级 Mock 的机制转向编写真正单元测试的总体原则。即使使用像 PowerMock 这样的工具，这些指南也能确保你的测试是一项宝贵的资产，而不是负担。
@@ -4603,10 +4769,6 @@ public void processPayment(String id) {
 
 在你的测试中主动寻找这些：
 
-
-
-
-
 - **测试中的逻辑**：测试中复杂的断言或条件逻辑表明，被测试的代码可能承担了过职责。
 - **不符合实际的输入**：如果你的测试数据不符合真实世界的使用情况，它们还能发现实际问题吗？
 - **忽略边缘情况**：错误往往隐藏在输入值的边界和极端情况下。
@@ -4619,7 +4781,7 @@ public void processPayment(String id) {
 
 ### 额外资源
 
-- **FIRST** 原则详述：[`martinfowler.com/bliki/FirstPrinciple.html`](https://martinfowler.com/bliki/FirstPrinciple.html)
+- **FIRST 原则详述**：[`martinfowler.com/bliki/FirstPrinciple.html`](https://martinfowler.com/bliki/FirstPrinciple.html)
 - **常见测试异味**：[`testsmells.org/`](http://testsmells.org/)
 
 ## 核心要点
@@ -4717,12 +4879,9 @@ public void processPayment(String id) {
 - **持续学习**：新的框架和高级测试模式将不断出现。拥抱不断改进测试技能的心态。
 - **平衡与上下文**：明智地选择合适的工具和技术。没有哪种技术是万灵药；努力为你的项目特定需求找到单元、集成和其他形式测试的适当平衡。
 
-
-
-
-
 # 你的影响力
 
 经过良好测试的代码更具维护性、可靠性，而且工作起来非常愉快（对你和你的同事而言都是如此！）。为你所创造的质量感到自豪。分享你的知识，成为团队中测试的倡导者。
 
 感谢你与我共同探索 Java 单元测试、模拟（mocking）及其他领域。愿你的代码健壮，测试全绿，你的开发者之旅充满构建你所信赖软件的成就感！
+

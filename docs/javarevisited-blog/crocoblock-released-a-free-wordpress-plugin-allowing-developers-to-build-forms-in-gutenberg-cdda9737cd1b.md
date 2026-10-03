@@ -1,3 +1,4 @@
+
 # Crocoblock 发布了一个免费的 WordPress 插件，允许开发者在 Gutenberg 构建表单
 
 > 原文：<https://medium.com/javarevisited/crocoblock-released-a-free-wordpress-plugin-allowing-developers-to-build-forms-in-gutenberg-cdda9737cd1b?source=collection_archive---------1----------------------->
@@ -6,7 +7,7 @@
 
 ![](img/5d20aa9761a37ed16dec137d199f4b4c.png)
 
-安德鲁·舍甫琴科， [**Crocoblock**](https://crocoblock.com/?ref=2817) 的首席技术官，分享了这个插件诞生的故事:
+安德鲁·舍甫琴科， [**Crocoblock**](https://crocoblock.com/?ref=2817) 的首席技术官，分享了这个插件诞生的故事：
 
 > *“我们[团队]希望摆脱拖放式表单构建器的标准用户界面，使用新的块编辑器的功能。展望未来，对于任何使用块编辑器的用户来说，使用我们的表单生成器都一样容易——这一切都是因为熟悉的界面。”*
 
@@ -18,7 +19,7 @@
 
 ![](img/9ff2ac62760fcb53cabd558f3428535e.png)
 
-然而，Andrew Shevchenko 坚持认为 JetFormBuilder 的优点比人们一开始看到的要多:
+然而，Andrew Shevchenko 坚持认为 JetFormBuilder 的优点比人们一开始看到的要多：
 
 > "*与其他表单构建器相比，最大的优势是可以在表单中使用一些标准的 WP 编辑器块，这允许网站开发人员创建更复杂和不寻常的表单布局。*
 

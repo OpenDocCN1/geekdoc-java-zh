@@ -1,3 +1,4 @@
+
 # 实战 Groovy: SwingBuilder 和 Twitter API，第 2 部分
 
 *使用 HTTP 基本身份验证和 ConfigSlurper*
@@ -32,7 +33,7 @@ def authString = "username:password".getBytes().encodeBase64().toString()
 
 创建身份验证字符串仅仅是整个问题中的一小部分。为了能够读取朋友的 tweet，您需要向 [`twitter.com/statuses/friends_timeline.atom`](http://twitter.com/statuses/friends_timeline.atom) 发出一个 REST 式请求，并在 HTTP GET 请求的 `Authorization` 头部中传入 Base6 编码的字符串（参见 参考资料）。
 
-创建一个名称为 friends.groovy 文件。添加如清单 1 所示的代码：
+创建一个名称为 `friends.groovy` 文件。添加如清单 1 所示的代码：
 
 1.  以 Atom 文档的形式请求朋友时间轴。
 2.  使用 `XmlSlurper` 解析它。
@@ -122,7 +123,7 @@ $ curl -u scottdavis99:password
 
 在 Java 应用程序中存储外部信息的一种最常用的方法是使用属性文件。属性文件是存储在纯文本中的简单键值对。属性文件是平面文件 — 它们并未提供任何形式的键嵌套和分组 — 但是您可以通过创建具有相同前缀的带点名称来对您的键实现虚假嵌套。
 
-创建一个名称为 config.properties 的文件，并添加如清单 4 所示的内容：
+创建一个名称为 `config.properties` 的文件，并添加如清单 4 所示的内容：
 
 ##### 清单 4\. 一个简单的 Java 属性文件
 
@@ -131,7 +132,7 @@ login.username=fred
 login.password=wordpass 
 ```
 
-读取属性文件的一种方法是使用 `java.util.Properties` 类。创建一个名称为 PropertiesTest.groovy 的文件并编写如清单 5 所示的单元测试：
+读取属性文件的一种方法是使用 `java.util.Properties` 类。创建一个名称为 `PropertiesTest.groovy` 的文件并编写如清单 5 所示的单元测试：
 
 ##### 清单 5\. 读取 Java 属性文件的简单单元测试
 
@@ -154,7 +155,7 @@ class PropertiesTest extends GroovyTestCase{
 
 您已经了解了使用 `XmlSlurper` 来剖析 XML 是多么地简单。Groovy 提供了一个类似的类 — `groovy.util.ConfigSlurper` — 用于读入属性文件。 `ConfigSlurper` 使读取 Java 属性文件变得非常简单。
 
-向 PropertiesTest.groovy 添加一个新测试，如清单 6 所示：
+向 `PropertiesTest.groovy` 添加一个新测试，如清单 6 所示：
 
 ##### 清单 6\. 通过 `ConfigSlurper` 读取 Java 属性文件
 
@@ -178,7 +179,7 @@ void testReadingPropertiesWithConfigSlurper(){
 
 几乎可以说 Groovy 配置文件是用于存储配置设置的域相关语言 (DSL)。您可以将相似的设置分组到一个块中，并且可以将一些块嵌入到任意深度。这种嵌套方式既可以减少重复键入，又可以确保相关设计的清晰性。
 
-创建一个名称为 config.groovy 的文件并添加如清单 7 所示的代码 ：
+创建一个名称为 `config.groovy` 的文件并添加如清单 7 所示的代码 ：
 
 ##### 清单 7\. Groovy 配置文件
 
@@ -189,7 +190,7 @@ login{
 } 
 ```
 
-向 PropertiesTest.groovy 再添加一个测试，用于读入 Groovy 配置文件，如清单 8 所示：
+向 `PropertiesTest.groovy` 再添加一个测试，用于读入 Groovy 配置文件，如清单 8 所示：
 
 ##### 清单 8\. 使用 `ConfigSlurper` 读取 Groovy 配置文件
 
@@ -229,9 +230,11 @@ void testMockConfig(){
 
 ## 通过 `ConfigSlurper` 来使用环境
 
-如果在 Groovy 配置文件中创建了一个特别命名的块 —`environments`，那么可以选择性地覆盖配置设置。如果您是一名 Grails 用户，则应该清楚它在 grails-app/conf/DataSource.groovy 中的工作原理，如清单 10 所示：
+如果在 Groovy 配置文件中创建了一个特别命名的块 —`environments`，那么可以选择性地覆盖配置设置。如果您是一名 Grails 用户，则应该清楚它在 `grails-app/conf/DataSource.groovy` 中的工作原理，如清单 10 所示：
 
 ##### 清单 10\. 使用 `ConfigSlurper` 管理数据库连接的 Grails
+
+
 
 ```java
 dataSource {
@@ -261,12 +264,12 @@ environments {
          url = "jdbc:hsqldb:file:prodDb;shutdown=true"
       }
    }
-} 
+}
 ```
 
 在清单 10 中，`ConfigSlurper` 传回的最后一个 `dataSource` 配置对象是顶部 `dataSource` 块中的全局值与 `development`、`test` 或 `production` 块中的环境相关设置的组合。您在 `environments` 块中设置的值将覆盖全局值。
 
-最外层的块必须被命名为 `environments`，但您可以将内层块命名为任何名称。在 config.groovy 中添加如清单 11 所示的代码，然后在 PropertiesTest.groovy 中测试它：
+最外层的块必须被命名为 `environments`，但您可以将内层块命名为任何名称。在`config.groovy`中添加如清单 11 所示的代码，然后在`PropertiesTest.groovy`中测试它：
 
 ##### 清单 11\. 在 Groovy 配置文件中使用环境
 
@@ -291,22 +294,20 @@ void testWithEnvironment(){
   def config = new ConfigSlurper("qa").parse(new File("config.groovy").text)
   assertEquals "testuser", config.login.username
   assertEquals "testpass", config.login.password
-} 
+}
 ```
 
-现在，您已经具备了一定的 `ConfigSlurper` 经验。接下来，结合它与之前运行的朋友时间轴示例，将它们添加到 Gwitter Swing 应用程序中。首先，您需要切换为分页界面，以便于显示新的信息。
-
-* * *
+现在，您已经具备了一定的`ConfigSlurper`经验。接下来，结合它与之前运行的朋友时间轴示例，将它们添加到 Gwitter Swing 应用程序中。首先，您需要切换为分页界面，以便于显示新的信息。
 
 ## 向 Gwitter 添加一个 `TabbedPane`
 
-在 [第 1 部分](http://www.ibm.com/developerworks/cn/java/j-groovy09299/) 结束时，您创建了一个单窗格的应用程序，如图 1 所示：
+在[第 1 部分](http://www.ibm.com/developerworks/cn/java/j-groovy09299/)结束时，您创建了一个单窗格的应用程序，如图 1 所示：
 
 ##### 图 1\. 单窗格 Gwitter 应用程序
 
 ![](img/singlePanel.jpg)
 
-要显示朋友时间轴，您需要切换为分页视图。应该还记得 Groovy 的 `SwingBuilder` 可以脱离典型的 Java 语法 `JTabbedPane tabpane = new JTabbedPane();`，而只需向 `SwingBuilder.frame` 添加一个嵌套的 `tabbedPane` 闭包。（类似于 Groovy 配置文件和 `ConfigBuilder`，不是吗？）向 Gwitter 添加一个新的 `tabbedPane`，如清单 12 所示：
+要显示朋友时间轴，您需要切换为分页视图。应该还记得 Groovy 的`SwingBuilder`可以脱离典型的 Java 语法`JTabbedPane tabpane = new JTabbedPane();`，而只需向`SwingBuilder.frame`添加一个嵌套的`tabbedPane`闭包。（类似于 Groovy 配置文件和`ConfigBuilder`，不是吗？）向 Gwitter 添加一个新的`tabbedPane`，如清单 12 所示：
 
 ##### 清单 12\. 向 Gwitter 添加一个 `tabbedPane`
 
@@ -324,16 +325,16 @@ swingBuilder.frame(title:"Gwitter",
       resultsPanel()
     }
   }
-} 
+}
 ```
 
-可以预见，`title` 属性将显示在选项卡中。在命令行中键入 `groovy Gwitter`，应该能够看到如图 2 所示的选项卡：
+可以预见，`title`属性将显示在选项卡中。在命令行中键入`groovy Gwitter`，应该能够看到如图 2 所示的选项卡：
 
 ##### 图 2\. 带有新分页界面的 Gwitter
 
 ![](img/emptyTabs.jpg)
 
-再次强调，`SwingBuilder` 仅仅在传统 Java Swing 上添加了一层语法。所有原 Java 技巧仍然适用于 Groovy。举例来说，无需使用在一行中实例化 `JTabbedPane` 并在第二行中调用 `setTabPlacement()` 这样的 setter 方法，您可以在一行中完成这两个任务，如清单 13 所示：
+再次强调，`SwingBuilder`仅仅在传统 Java Swing 上添加了一层语法。所有原 Java 技巧仍然适用于 Groovy。举例来说，无需使用在一行中实例化`JTabbedPane`并在第二行中调用`setTabPlacement()`这样的 setter 方法，您可以在一行中完成这两个任务，如清单 13 所示：
 
 ##### 清单 13\. 在分页面板的其余部分放置些选项卡
 
@@ -351,7 +352,7 @@ swingBuilder.frame(title:"Gwitter",
       resultsPanel()
     }
   }
-} 
+}
 ```
 
 如您所料，这将在面板左侧对齐选项卡，如图 3 所示：
@@ -360,15 +361,13 @@ swingBuilder.frame(title:"Gwitter",
 
 ![](img/sideTabs.jpg)
 
-运行应用程序并确认其他 `tabPlacement` 可正常工作之后，删除将选项卡返回到面板顶部的默认位置的设置。
-
-* * *
+运行应用程序并确认其他`tabPlacement`可正常工作之后，删除将选项卡返回到面板顶部的默认位置的设置。
 
 ## 填充 Friends 选项卡
 
-现在，您将使用 Twitter API 中的实时数据来填充空的 Friends 选项卡
+现在，您将使用 Twitter API 中的实时数据来填充空的 Friends 选项卡。
 
-首先，在与 Gwitter.groovy 相同的目录中创建一个 gwitterConfig.groovy 文件。添加如清单 14 所示的代码（记住要将凭证更改为您的 Twitter 用户名和密码）：
+首先，在与`Gwitter.groovy`相同的目录中创建一个`gwitterConfig.groovy`文件。添加如清单 14 所示的代码（记住要将凭证更改为您的 Twitter 用户名和密码）：
 
 ##### 清单 14\. gwitterConfig.groovy 文件
 
@@ -376,10 +375,10 @@ swingBuilder.frame(title:"Gwitter",
 login{
   username = "username"
   password = "password"
-} 
+}
 ```
 
-接下来，在相同目录中创建一个 FriendsTimeline.groovy 文件。添加如清单 15 所示的代码：
+接下来，在相同目录中创建一个`FriendsTimeline.groovy`文件。添加如清单 15 所示的代码：
 
 ##### 清单 15\. FriendsTimeline.groovy 文件
 
@@ -418,12 +417,12 @@ class FriendsTimeline{
 
     return results as Object[]
   }
-} 
+}
 ```
 
-清单 15 几乎与 Search.groovy 中的代码相同（参见 [第 1 部分](http://www.ibm.com/developerworks/cn/java/j-groovy09299/)）。区别在于，FriendsTimeline.groovy 中使用 `ConfigSlurper` 并使用 HTTP Basic 身份验证来读取 gwitterConfig.groovy 中的值。在 Search.groovy 中，您发起了一个简单的无需身份验证的 HTTP GET 请求。
+清单 15 几乎与`Search.groovy`中的代码相同（参见[第 1 部分](http://www.ibm.com/developerworks/cn/java/j-groovy09299/)）。区别在于，`FriendsTimeline.groovy`中使用`ConfigSlurper`并使用 HTTP Basic 身份验证来读取`gwitterConfig.groovy`中的值。在`Search.groovy`中，您发起了一个简单的无需身份验证的 HTTP GET 请求。
 
-您将 `FriendsTimeline` 类整合到了主 `Gwitter` 类中，这与 [第 1 部分中](http://www.ibm.com/developerworks/cn/java/j-groovy09299/) 整合 `Search` 类的方法如出一辙。首先，为 `friendsList` 添加一个字段，如清单 16 所示：
+您将`FriendsTimeline`类整合到了主`Gwitter`类中，这与[第 1 部分中](http://www.ibm.com/developerworks/cn/java/j-groovy09299/)整合`Search`类的方法如出一辙。首先，为`friendsList`添加一个字段，如清单 16 所示：
 
 ##### 清单 16\. 向 Gwitter 添加一个 `friendsList` 字段
 
@@ -434,10 +433,10 @@ class Gwitter{
   def friendsList
 
   // snip...
-} 
+}
 ```
 
-接下来，为 Refresh 按钮以及 `FriendsTimeline.refresh()` 方法调用的结果添加一个面板，如清单 17 所示：
+接下来，为 Refresh 按钮以及`FriendsTimeline.refresh()`方法调用的结果添加一个面板，如清单 17 所示：
 
 ##### 清单 17\. 向 Gwitter 添加两个新面板
 
@@ -469,10 +468,10 @@ class Gwitter{
     }
 
   }
-} 
+}
 ```
 
-最后，在 Friends 选项卡中呈现 `friendsRefreshPanel` 和 `friendsPanel`，如清单 18 所示：
+最后，在 Friends 选项卡中呈现`friendsRefreshPanel`和`friendsPanel`，如清单 18 所示：
 
 ##### 清单 18\. 在 Friends 选项卡中呈现两个面板
 
@@ -493,24 +492,20 @@ swingBuilder.frame(title:"Gwitter",
       resultsPanel()
     }
   }
-} 
+}
 ```
 
-在命令行中键入 `groovy Gwitter`，并单击 Refresh 按钮。结果应该如图 4 所示：
+在命令行中键入`groovy Gwitter`，并单击 Refresh 按钮。结果应该如图 4 所示：
 
 ##### 图 4\. 显示朋友时间轴的 Gwitter
 
 ![](img/friendsTab.jpg)
 
-* * *
-
 ## 结束语
 
-在本文中，您学习如何使用 Basic 身份验证发起 HTTP GET 请求。您还了解了如何创建大多数 Groovy 配置文件和 `groovy.util.ConfigSlurper`。最后，您向 Gwitter 添加了一个分页界面，用于显示 REST 式 Twitter API 调用的结果， 以便于返回朋友时间轴。
+在本文中，您学习如何使用 Basic 身份验证发起 HTTP GET 请求。您还了解了如何创建大多数 Groovy 配置文件和`groovy.util.ConfigSlurper`。最后，您向 Gwitter 添加了一个分页界面，用于显示 REST 式 Twitter API 调用的结果，以便于返回朋友时间轴。
 
-下一期，您将发起 HTTP POST 请求来添加自己的 tweet。在此过程中，您还将了解 `JTextArea` 字段以及如何使用 `DocumentSizeFilter` 来限制输入的具体字符数量（比如说 140）。最后，我希望您可以掌握 Groovy 的大量实际应用。
-
-* * *
+下一期，您将发起 HTTP POST 请求来添加自己的 tweet。在此过程中，您还将了解`JTextArea`字段以及如何使用`DocumentSizeFilter`来限制输入的具体字符数量（比如说 140）。最后，我希望您可以掌握 Groovy 的大量实际应用。
 
 ## 下载
 

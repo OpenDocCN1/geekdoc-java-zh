@@ -1,3 +1,4 @@
+
 # 什么是网络接口？
 
 > 原文：[`docs.oracle.com/javase/tutorial/networking/nifs/definition.html`](https://docs.oracle.com/javase/tutorial/networking/nifs/definition.html)
@@ -13,7 +14,6 @@
 ```java
 Socket soc = new java.net.Socket();
 soc.connect(new InetSocketAddress(address, port));
-
 ```
 
 发送数据时，系统会确定使用哪个接口。但是，如果您有偏好或需要指定要使用的 NIC，您可以查询系统以找到适当的接口并在您想要使用的接口上找到一个地址。当您创建套接字并将其绑定到该地址时，系统将使用相关联的接口。例如：
@@ -25,7 +25,6 @@ Enumeration<InetAddress> nifAddresses = nif.getInetAddresses();
 Socket soc = new java.net.Socket();
 soc.bind(new InetSocketAddress(nifAddresses.nextElement(), 0));
 soc.connect(new InetSocketAddress(address, port));
-
 ```
 
 您还可以使用`NetworkInterface`来识别要加入多播组的本地接口。例如：
@@ -34,7 +33,6 @@ soc.connect(new InetSocketAddress(address, port));
 NetworkInterface nif = NetworkInterface.getByName("bge0");
 MulticastSocket ms = new MulticastSocket();
 ms.joinGroup(new InetSocketAddress(hostname, port), nif);
-
 ```
 
 `NetworkInterface`可以与 Java API 一起以许多其他方式使用，超出了此处描述的两种用途。

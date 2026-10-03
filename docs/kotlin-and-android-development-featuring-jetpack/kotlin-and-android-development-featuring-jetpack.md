@@ -1,14 +1,15 @@
 
+# Kotlin 与 Android 开发
 
-### Kotlin 与 Android 开发
-
-## *Jetpack 特别篇*
+## Jetpack 特别篇
 
 构建更优质、更安全的 Android 应用
 
 Michael Fazio
 
 *由 Michael Swaine 编辑*
+
+---
 
 # Kotlin 与 Android 开发 Jetpack 特别篇
 
@@ -41,16 +42,15 @@ Pragmatic Bookshelf 是一家敏捷出版公司。我们在此是因为我们希
 如果您直接从 [pragprog.com](pragprog.com) 购买，您将获得所有可用格式的电子书，价格统一。您可以通过 Dropbox 在所有设备（包括 iPhone/iPad、Android、笔记本电脑等）之间同步您的电子书。在版本有效期内，您将获得免费更新。当然，您也可以随时返回并重新下载您的书籍。从 Amazon Kindle 商店购买的电子书受 Amazon 政策的约束。Amazon 文件格式的限制可能导致电子书在不同设备上显示不同。有关更多信息，请参阅我们的常见问题解答 [pragprog.com/#about-ebooks](pragprog.com/#about-ebooks)。要了解有关本书的更多信息并访问免费资源，请访问本书主页 [https://pragprog.com/book/mfjetpack](https://pragprog.com/book/mfjetpack)。
 
 感谢您持续的支持，
+
 Andy Hunt
+
 The Pragmatic Programmers
 
-本书制作团队包括：Dave Rankin（CEO）、
-Janet Furlow（COO）、Tammy Coron（执行编辑）、
-Michael Swaine（开发编辑）、Sakhi MacMillan（文字编辑）、
-Potomac Indexing, LLC（索引）、Gilson Graphics（排版）、
-Andy Hunt 和 Dave Thomas（创始人）
+本书制作团队包括：Dave Rankin（CEO）、Janet Furlow（COO）、Tammy Coron（执行编辑）、Michael Swaine（开发编辑）、Sakhi MacMillan（文字编辑）、Potomac Indexing, LLC（索引）、Gilson Graphics（排版）、Andy Hunt 和 Dave Thomas（创始人）
 
 如需客户支持，请联系 [support@pragprog.com](mailto:support@pragprog.com)。
+
 如需国际版权事宜，请联系 [rights@pragprog.com](mailto:rights@pragprog.com)。
 
 # 目录
@@ -186,49 +186,51 @@ Andy Hunt 和 Dave Thomas（创始人）
 
 # 第三部分 测试你的应用
 
-## 14. 使用JUnit进行单元测试
+## 14. 使用 JUnit 进行单元测试
 
 - 添加单元测试
-- 测试ViewModel类
+- 测试 ViewModel 类
 - 测试数据访问对象（DAO）
 - 总结与后续步骤
 
-## 15. 使用Espresso测试应用UI
+## 15. 使用 Espresso 测试应用 UI
 
-- 添加UI测试
-- 添加更多UI测试
+- 添加 UI 测试
+- 添加更多 UI 测试
 - 总结与后续步骤
 
 # 第四部分 附录
 
-## A1. 安装Android Studio
+## A1. 安装 Android Studio
 
-- 下载Android Studio
-- 安装Android Studio
-- 设置Android虚拟设备（AVD）
+- 下载 Android Studio
+- 安装 Android Studio
+- 设置 Android 虚拟设备（AVD）
 
 ## A2. 应用故障排除
 
 - 调试你的应用
-- 使用Toast类显示消息
-- 将日志消息输出到Logcat
+- 使用 Toast 类显示消息
+- 将日志消息输出到 Logcat
 - 总结
 
-## A3. Gradle依赖项
+## A3. Gradle 依赖项
 
-- Classpath依赖项
-- Implementation依赖项
-- KAPT依赖项
+- Classpath 依赖项
+- Implementation 依赖项
+- KAPT 依赖项
 - 测试依赖项
 
-## 《Kotlin与Android开发实战：Jetpack篇》早期赞誉
+---
+
+# 《Kotlin与Android开发实战：Jetpack篇》早期赞誉
 
 同时学习一门新语言和一个新平台可能看起来令人生畏，但本书让这个过程既有趣又易于理解。示例应用使得视图绑定和单元测试等复杂主题变得贴近实际且易于理解。
 
 > → 马库斯·诺伊霍夫
 > Pluralsight Android/Kotlin课程作者
 
-迈克尔出色地解释了Kotlin，从基础到最高级的主题。这两个示例应用对初学者和高级开发者都极具帮助。我来自不同的移动开发背景，通过本书中关于如何使用Android Studio的基础知识和示例的逐步指导，让我能够轻松专注于学习Kotlin这一重要主题。
+迈克尔出色地解释了Kotlin，从基础到最高级的主题。这两个示例应用对初学者和高级开发者都极具帮助。我来自不同的移动开发背景，通过本书中关于如何使用 Android Studio 的基础知识和示例的逐步指导，让我能够轻松专注于学习Kotlin这一重要主题。
 
 > → 巴勃罗·西勒
 > Trek Bicycle移动开发负责人
@@ -253,7 +255,7 @@ Andy Hunt 和 Dave Thomas（创始人）
 > → 布兰登·马丁内斯
 > 高级服务工程师，微软
 
-## 致谢
+# 致谢
 
 首先，非常感谢整个Pragmatic Bookshelf团队，特别是三位特别的人。我要向我的编辑迈克尔·斯温表达深深的感谢，感谢他与我一同踏上这段旅程，在整个过程中每一步都支持我，有时只是给我一句“你做得很好，别担心”，这正是我真正需要的。如果没有布莱恩·麦克唐纳在THAT Conference上找到我说“嘿，你想写一本关于Kotlin的书吗？”，然后与我一起完成整个出书前的流程，这本书永远不会成为可能。最后是布莱恩·霍根，他向我保证PragProg很棒（事实证明确实如此），并且我真的能完成这本书（事实证明我可以）。
 
@@ -261,7 +263,7 @@ Andy Hunt 和 Dave Thomas（创始人）
 
 我很幸运能得到周围所有人的支持。这包括整个Skyline团队，他们对我这个疯狂的副项目一直很棒。克雷格和乔，感谢你们在过去几年里容忍我不断的“天哪，KOTLIN”评论。罗兰多，当我得知这本书要出版时，你和任何人一样兴奋。还有我所有的朋友和家人，他们有意或无意地成为了Android棒球联盟的一部分。
 
-由于我绝对不是艺术家，我需要在书中的图标和标志方面得到一些帮助。其中许多直接来自Google的Material Design库，可以在Android Studio中找到，但我也从一些网站上获取了一些。完整列表可以在源代码的images/image-rights.txt中找到，但这里是简要总结：大多数团队标志和图标来自http://www.flaticon.com，由Freepik、Good Ware、Smashicons、smalllikeart和Vitaly Gorbachev制作。Skyline标志来自Skyline Technologies，这是我写这本书时的公司，而密尔沃基人民旗帜[1]被用作Milwaukee Sunrise的标志。ABL应用中的记分牌图标以及Penny Drop中的骰子和硬币图标均来自http://www.materialdesignicons.com。
+由于我绝对不是艺术家，我需要在书中的图标和标志方面得到一些帮助。其中许多直接来自Google的Material Design库，可以在 Android Studio 中找到，但我也从一些网站上获取了一些。完整列表可以在源代码的`images/image-rights.txt`中找到，但这里是简要总结：大多数团队标志和图标来自 http://www.flaticon.com，由Freepik、Good Ware、Smashicons、smalllikeart和Vitaly Gorbachev制作。Skyline标志来自Skyline Technologies，这是我写这本书时的公司，而密尔沃基人民旗帜[1]被用作Milwaukee Sunrise的标志。ABL应用中的记分牌图标以及Penny Drop中的骰子和硬币图标均来自 http://www.materialdesignicons.com。
 
 最后，致我的家人，我如此爱你们所有人：
 
@@ -275,17 +277,17 @@ Andy Hunt 和 Dave Thomas（创始人）
 
 [1] https://milwaukeeflag.com/
 
-## 前言
+# 前言
 
 有了Kotlin和Jetpack，Android开发现在比以往任何时候都更加流畅和愉快。在本书中，我们将通过编写两个完整的Android应用，直接深入Android开发。
 
-通过第一个应用Penny Drop，你将创建一个完整的游戏，包含随机掷骰子、可自定义规则和AI对手。你将使用数据绑定构建轻量级的Fragment视图，使用ViewModel类快速安全地更新数据，并在单一位置处理所有应用导航。你将被引导使用Kotlin以及Android特定的Kotlin扩展，高效地编写空安全代码，而无需像Jetpack + Kotlin之前的常规应用那样编写所有样板代码。你将看到如何使用Room库将完整对象持久化和检索数据，然后使用ViewModels和RecyclerView中的列表记录显示这些数据。
+通过第一个应用Penny Drop，你将创建一个完整的游戏，包含随机掷骰子、可自定义规则和AI对手。你将使用数据绑定构建轻量级的Fragment视图，使用 ViewModel 类快速安全地更新数据，并在单一位置处理所有应用导航。你将被引导使用Kotlin以及Android特定的Kotlin扩展，高效地编写空安全代码，而无需像Jetpack + Kotlin之前的常规应用那样编写所有样板代码。你将看到如何使用Room库将完整对象持久化和检索数据，然后使用 ViewModels 和 RecyclerView 中的列表记录显示这些数据。
 
 接下来，你将创建Android棒球联盟的官方应用。这是一个虚构的联盟，但一个真实的应用，在这里你将运用在Penny Drop中学到的知识并在此基础上构建。你将通过导航抽屉在应用中导航，包括通过Android App Links导航到特定位置。你将使用Kotlin协程处理异步和Web服务调用，使用Paging库流畅地显示数据，并从你的应用向用户的手机发送通知。
 
 准备好了吗？让我们构建一些Android应用吧！
 
-## 引言
+# 引言
 
 欢迎来到现代Android开发！我知道我已经多次提到“现代”这个词，但这是准确的。Kotlin使得整个Android开发体验比过去好得多，再加上Jetpack框架和概念？整个情况变得越来越好。
 
@@ -301,47 +303,49 @@ Andy Hunt 和 Dave Thomas（创始人）
 
 我热爱Kotlin，我热爱Android，我热爱有机会与你们分享这两者。我希望你们在读完这本书后也能有同样的感受，并且能感受到我全程的兴奋。
 
-## 这本书适合谁
+# 这本书适合谁
 
 这本书既适合新开发者，也适合任何有Android和/或Kotlin经验的人。我试图为新开发者解释正在发生的事情，同时也提醒Android专家可能需要复习的内容。我的意图是，所有技能水平的人都能从我们构建的应用中以某种方式受益。
 
 我们在审查过程中测试了这一点，不同技能水平的开发者都通读了这本书，他们都说学到了新东西。即使是通读这本书的最资深的专业Android开发者也给我发了多条消息，告诉我他学到的所有新东西，所以我很乐观，无论你在Android或Kotlin方面处于什么水平，你都能从这本书中学到很多东西。
 
-## 如果你是Android和/或Kotlin新手
+# 如果你是Android和/或Kotlin新手
 
 一开始可能看起来令人不知所措，但随着书的进展，事情会变得越来越清晰。我建议查看下一节中提到的源代码，看看事物是如何组合在一起的。对于Android应用，一个高层次的概述是，你的UI（用户看到的内容）主要在XML中处理，而逻辑则用Kotlin代码处理。
 
-说到Kotlin，你会在书中发现很多对Java的提及。现在，我们*不会*在书中编写任何Java代码，但我们会与之交互，因为大多数Android库都是用Java编写的。因此，我们的Kotlin设置包括关联一个Java版本，我们甚至使用一个名为`java`的目录来存放我们的Kotlin代码。这一切都是因为Java和Kotlin都编译成相同的字节码，所以我们可以互换使用它们。只是尽量不要被提到Java吓到，因为这并不意味着你需要开始编写Java代码或任何东西。
+
+
+说到 Kotlin，你会在书中发现很多对 Java 的提及。现在，我们*不会*在书中编写任何 Java 代码，但我们会与之交互，因为大多数 Android 库都是用 Java 编写的。因此，我们的 Kotlin 设置包括关联一个 Java 版本，我们甚至使用一个名为 `java` 的目录来存放我们的 Kotlin 代码。这一切都是因为 Java 和 Kotlin 都编译成相同的字节码，所以我们可以互换使用它们。只是尽量不要被提到 Java 吓到，因为这并不意味着你需要开始编写 Java 代码或任何东西。
 
 ## 如何阅读这本书
 
-正如我上面提到的，这本书分为两个应用：Penny Drop和Android Baseball League。Penny Drop旨在介绍Android、Jetpack和Kotlin。如果你对其中任何一个都不熟悉，构建Penny Drop应用绝对值得你花时间（而且它很有趣）。但即使对于那些熟悉Android的人，我敢打赌你在通读第一个应用时也会学到一些东西。
+正如我上面提到的，这本书分为两个应用：Penny Drop 和 Android Baseball League。Penny Drop 旨在介绍 Android、Jetpack 和 Kotlin。如果你对其中任何一个都不熟悉，构建 Penny Drop 应用绝对值得你花时间（而且它很有趣）。但即使对于那些熟悉 Android 的人，我敢打赌你在通读第一个应用时也会学到一些东西。
 
-ABL应用是更高级的内容。许多章节实际上是Penny Drop章节的第二部分。例如，第5章，[使用Room持久化游戏数据](https://media.pragprog.com/titles/mfjetpack/code/mfjetpack-code.zip)，是介绍使用Room，Android的ORM（对象关系映射）库，它使数据库交互更容易。然后，第10章，[使用协程和Room加载和保存数据](https://media.pragprog.com/titles/mfjetpack/code/mfjetpack-code.zip)，在这些数据库概念的基础上添加了API调用和更多的协程。因此，虽然先构建Penny Drop不是必须的，但它确实使事情更清晰。我在ABL应用中讲解得更快，并且有更多现有的代码供你集成，而不是自己构建所有东西。
+ABL 应用是更高级的内容。许多章节实际上是 Penny Drop 章节的第二部分。例如，第 5 章，[使用 Room 持久化游戏数据](https://media.pragprog.com/titles/mfjetpack/code/mfjetpack-code.zip)，是介绍使用 Room，Android 的 ORM（对象关系映射）库，它使数据库交互更容易。然后，第 10 章，[使用协程和 Room 加载和保存数据](https://media.pragprog.com/titles/mfjetpack/code/mfjetpack-code.zip)，在这些数据库概念的基础上添加了 API 调用和更多的协程。因此，虽然先构建 Penny Drop 不是必须的，但它确实使事情更清晰。我在 ABL 应用中讲解得更快，并且有更多现有的代码供你集成，而不是自己构建所有东西。
 
-说到这个，这本书的所有源代码都可以在[https://media.pragprog.com/titles/mfjetpack/code/mfjetpack-code.zip](https://media.pragprog.com/titles/mfjetpack/code/mfjetpack-code.zip)找到。我包含了书中每一章的最终结果，这样你总是有一个参考，并且在需要时有一个下一章的起点。此外，对于ABL应用，有代码可以从ZIP文件复制到你的项目中。这里的目的是获得一个功能更完整的应用，而无需你编写每一行代码，而是让你专注于章节的主要概念。
+说到这个，这本书的所有源代码都可以在 [https://media.pragprog.com/titles/mfjetpack/code/mfjetpack-code.zip](https://media.pragprog.com/titles/mfjetpack/code/mfjetpack-code.zip) 找到。我包含了书中每一章的最终结果，这样你总是有一个参考，并且在需要时有一个下一章的起点。此外，对于 ABL 应用，有代码可以从 ZIP 文件复制到你的项目中。这里的目的是获得一个功能更完整的应用，而无需你编写每一行代码，而是让你专注于章节的主要概念。
 
-本书的最后两个主要章节专注于测试，特别是单元测试和Android UI测试。两者都以Penny Drop应用为基础。如果你不想构建Penny Drop，而只是想尝试测试部分，你总是可以从ZIP中获取代码作为你的基线，在设置一切时使用。
+本书的最后两个主要章节专注于测试，特别是单元测试和 Android UI 测试。两者都以 Penny Drop 应用为基础。如果你不想构建 Penny Drop，而只是想尝试测试部分，你总是可以从 ZIP 中获取代码作为你的基线，在设置一切时使用。
 
-你还会在书末找到三个附录：一个包含安装Android Studio的说明，一个包含开发故障排除提示，一个包含书中使用的所有依赖项。最后一个附录的关键特点是，所有依赖项版本号都可以在那里找到。我选择这种方式而不是在每一章中提及它们，以避免不一致，而且这样我们有一个单一的地方来检查任何依赖项。
+你还会在书末找到三个附录：一个包含安装 Android Studio 的说明，一个包含开发故障排除提示，一个包含书中使用的所有依赖项。最后一个附录的关键特点是，所有依赖项版本号都可以在那里找到。我选择这种方式而不是在每一章中提及它们，以避免不一致，而且这样我们有一个单一的地方来检查任何依赖项。
 
-最后，提醒一下，虽然这本书（主要）是在Windows上编写的，截图都是Windows版本的Android Studio，但如果你使用Mac，事情也会以同样的方式工作。这意味着你可以自由地在你最舒适的操作系统上进行开发。
+最后，提醒一下，虽然这本书（主要）是在 Windows 上编写的，截图都是 Windows 版本的 Android Studio，但如果你使用 Mac，事情也会以同样的方式工作。这意味着你可以自由地在你最舒适的操作系统上进行开发。
 
 ## 本书的开发技巧
 
-Android开发虽然很棒，但可能有点棘手。即使设置东西也可能很痛苦，但我希望附录1，[安装Android Studio](Install Android Studio)，能让这个过程更顺畅。模拟器现在运行得非常好，所以你不需要物理设备，但在实际手机上看到应用运行也不错。
+Android 开发虽然很棒，但可能有点棘手。即使设置东西也可能很痛苦，但我希望附录 1，[安装 Android Studio](Install Android Studio)，能让这个过程更顺畅。模拟器现在运行得非常好，所以你不需要物理设备，但在实际手机上看到应用运行也不错。
 
-另外，如果你使用模拟器，要知道它可能会失去连接，使得大多数ABL章节无法进行。这尤其可能发生在模拟器运行时你的电脑进入睡眠状态时。不要害怕重启模拟器或ADB服务器（甚至在需要时重启你的电脑）。
+另外，如果你使用模拟器，要知道它可能会失去连接，使得大多数 ABL 章节无法进行。这尤其可能发生在模拟器运行时你的电脑进入睡眠状态时。不要害怕重启模拟器或 ADB 服务器（甚至在需要时重启你的电脑）。
 
-同样，当有疑问时，卸载应用。这在处理Room和数据库时特别有价值。任何数据库结构更改通常需要迁移（对数据库的适当更改/升级），但由于我们仍在开发中，你可以通过重新安装应用来跳过它。
+同样，当有疑问时，卸载应用。这在处理 Room 和数据库时特别有价值。任何数据库结构更改通常需要迁移（对数据库的适当更改/升级），但由于我们仍在开发中，你可以通过重新安装应用来跳过它。
 
 ## 在线资源
 
-你关于这本书一切内容的首要访问点应该是[https://pragprog.com/titles/mfjetpack/kotlin-and-android-development-featuring-jetpack/](https://pragprog.com/titles/mfjetpack/kotlin-and-android-development-featuring-jetpack/)。这里我们有指向前面提到的源代码ZIP以及用于错误/拼写错误/建议的Devtalk论坛的链接。[2]
+你关于这本书一切内容的首要访问点应该是 [https://pragprog.com/titles/mfjetpack/kotlin-and-android-development-featuring-jetpack/](https://pragprog.com/titles/mfjetpack/kotlin-and-android-development-featuring-jetpack/)。这里我们有指向前面提到的源代码 ZIP 以及用于错误/拼写错误/建议的 Devtalk 论坛的链接。[2]
 
-对于Google资源，Jetpack主页是一个很好的资源，因为它涵盖了本书中提到的各种内容以及Jetpack中的最新功能/库。[3] 此外，Android Codelabs[4]涵盖了比我们在这本书中能做的更多的内容。去那里获取一些额外的Android示例和教程。
+对于 Google 资源，Jetpack 主页是一个很好的资源，因为它涵盖了书中提到的各种内容以及 Jetpack 中的最新功能/库。[3] 此外，Android Codelabs[4] 涵盖了比我们在这本书中能做的更多的内容。去那里获取一些额外的 Android 示例和教程。
 
-对于Kotlin帮助，官方[https://kotlinlang.org/](https://kotlinlang.org/)网站有有用的语言文档，以及[https://play.kotlinlang.org/](https://play.kotlinlang.org/)，一个用于测试Kotlin代码的沙盒。
+对于 Kotlin 帮助，官方 [https://kotlinlang.org/](https://kotlinlang.org/) 网站有有用的语言文档，以及 [https://play.kotlinlang.org/](https://play.kotlinlang.org/)，一个用于测试 Kotlin 代码的沙盒。
 
 ## 准备好了吗？
 
@@ -350,10 +354,13 @@ Android开发虽然很棒，但可能有点棘手。即使设置东西也可能�
 ### 脚注
 
 - [2] https://devtalk.com/books/kotlin-and-android-development-featuring-jetpack
+
 - [3] https://link.mfazio.dev/jetpack
+
 - [4] https://codelabs.developers.google.com/?cat=android
 
 # 第一部分
+
 Penny Drop 游戏
 
 我们以一个名为 Penny Drop 的游戏开始：掷骰子，放置硬币，重复——这是一个简单的游戏，也是我们入门应用的绝佳主题。你将学习如何从零开始创建一个应用，包括其中涉及的所有部分。
@@ -361,6 +368,7 @@ Penny Drop 游戏
 你之前已经开发过 Android 应用？这里仍然有很多适合你的内容——Jetpack 库、随处可见的 Kotlin 代码，而且至少你能得到一个可玩的游戏。
 
 # 第一章
+
 ## 初始化 Penny Drop 应用
 
 我们到了！是时候构建我们的第一个应用了，一个名为 Penny Drop 的游戏。如果你是 Android 开发新手，别担心，本章涵盖了如何在 Android Studio 中使用 Kotlin 编程语言和 Android Jetpack 库开始构建 Android 应用。我们将逐步介绍如何从零开始生成一个应用（并概述为我们生成了什么），然后创建几个基本为空的视图，并设置应用以在它们之间导航。
@@ -374,9 +382,13 @@ Penny Drop 游戏
 本书的第一部分全部围绕 Penny Drop 游戏展开，因此让我们确保每个人都熟悉规则。Penny Drop 是一款适合两名或更多玩家的桌面游戏，玩家轮流掷一个 *D6*（普通六面骰子称为 *D6*）。规则如下：
 
 - 玩家掷出一个数字，然后将一枚便士（一种小硬币）放入他们刚刚掷出的槽位编号中。
+
 - 如果槽位是 6，便士会从板上掉落并退出游戏。
+
 - 如果槽位已被占用，玩家将拿走板上所有的便士，然后轮到下一位玩家。
+
 - 玩家必须至少掷一次，但之后可以将回合让给下一个人。
+
 - 第一个摆脱所有便士的玩家获胜。
 
 如你所见，这个游戏没有太多内容：掷骰子，放置便士或拿走便士，重复直到有人出局。这使我们能够专注于 Android 组件，而不是大量的游戏逻辑（尽管我们将在第四章[使用条件游戏逻辑更新 LiveData](https://example.com)中考虑一些）。根据这些规则，我们应用的游戏屏幕最终将如下所示：
@@ -390,11 +402,15 @@ Hazel 还剩 2 枚硬币
 掷骰子或跳过
 
 Hazel 掷出了 2。
+
 Hazel 掷出了 4。
 
 当前排名：
+
 Hazel - 2 枚便士
+
 Emily - 10 枚便士
+
 Michael - 11 枚便士
 
 玩家 游戏
@@ -412,8 +428,11 @@ Michael - 11 枚便士
 在下一个屏幕上，我们将为应用设置一些值：
 
 - *名称*：我们将在各处看到的应用程序名称。对于此应用，我们可以使用 *Penny Drop*。
+
 - *包名*：此值在 Android 应用中具有双重用途。首先，它是唯一标识你的应用在用户设备上以及在 Google Play 商店中的应用程序 ID。其次，它是我们应用中的 Kotlin 包名。这是我们所有代码的主要分组，意味着我们应用的代码文件将包含一个带有此包名的 `package` 声明。然后我们可以为更具体的部分添加到包名中。例如，我的应用包名是 `dev.mfazio.pennydrop`，因此我将把我的 Fragment 类放在 `dev.mfazio.pennydrop.fragments` 中。你可以决定如何组织你的文件；由于包在系统上组织成文件夹，你可以将其视为将代码放入这些不同的文件夹中。请记住，包名应全部为小写。
+
 - *保存位置*：你希望在机器上保存代码的任何位置。
+
 - *语言*：Kotlin（否则你读错了书！）。
 
 ![](img/c024742480e86eb8867e0760ebe353d7_28_0.png)
@@ -488,19 +507,21 @@ dependencies {
 
 ## MainActivity
 
-这是我们应用的主要入口点，也是我们当前看到的主要屏幕。Activity 类是 Android 应用程序中的核心组件。每个 Activity 还有一个关联的布局文件，通常与 Activity 名称相比是反向的。例如，MainActivity 变成 activity_main.xml。我们稍后会讨论这些布局文件。
+这是我们应用的主要入口点，也是我们当前看到的主要屏幕。Activity 类是 Android 应用程序中的核心组件。每个 Activity 还有一个关联的布局文件，通常与 Activity 名称相比是反向的。例如，`MainActivity` 变成 `activity_main.xml`。我们稍后会讨论这些布局文件。
 
 ## drawable 文件
 
 Android 中的 drawable 是您在应用中使用的图片。我们稍后会添加更多，但现在有两个包含有关启动器图片信息的矢量文件（您在设备的应用抽屉中看到的图片）。Android 中的矢量图像类似于 SVG（可缩放矢量图形），其中图像通过列出路径坐标绘制，而不是静态图像。这允许图像缩放到不同的大小而不会出现任何问题。我们稍后会更新图像，但现在可以保持原样。
 
-现在，如果我们有标准的静态图像（JPG、PNG 等），它们通常会放在 drawable 文件夹内的子文件夹中。对于 drawable 文件，我们通常会有多个相同文件的不同分辨率版本，由大小值标记：mdpi、hdpi、xhdpi、xxhdpi 和 xxxhdpi。
+现在，如果我们有标准的静态图像（JPG、PNG 等），它们通常会放在 drawable 文件夹内的子文件夹中。对于 drawable 文件，我们通常会有多个相同文件的不同分辨率版本，由大小值标记：`mdpi`、`hdpi`、`xhdpi`、`xxhdpi` 和 `xxxhdpi`。
 
 这些图像对应于不同的每英寸点数（DPI）值，这是表示设备分辨率和显示尺寸之间比率的方法。如果 DPI 值更高，这意味着设备上的像素更小。这可能是由于更高的分辨率屏幕或更小的设备，因为我们在每英寸屏幕空间中有更多的像素。如果两个设备具有相同的分辨率但屏幕尺寸不同，较小的设备将具有更高的 DPI。同样，如果两个设备尺寸相同但分辨率不同，更高分辨率的设备将具有更高的 DPI 值。
 
 与其担心所有这些不同的分辨率，我们将在两个应用中使用的大多数图像将是矢量图像，因为它们可以使用单个 XML 文件缩放到任何大小。但如果您确实需要图像，它们应该具有所有这些不同的分辨率。通过将 AAB（Android App Bundle）上传到 Play Store，当用户下载应用时，额外的图像分辨率将被移除。
 
 ## Layout 文件
+
+
 
 布局文件是处理应用程序 UI 的 XML 文件。布局文件中的所有内容都将存在于包含 `View` 和 `ViewGroup` 对象的层次结构中。在我们的例子中，`activity_main.xml` 布局文件包含一个 `ViewGroup`（`ConstraintLayout`）和一个 `View` 组件（`TextView`）。我们很快会添加更多内容，并且在本书的后续部分会添加更多内容。
 
@@ -532,19 +553,19 @@ Android Studio 为我们添加了一堆文件来帮助我们开始应用开发�
 
 - 我们用于视图的 Fragment 类。
 - 一个菜单，用于告诉底部导航栏显示哪些选项。
-- 一个导航图，用于告诉 MainActivity 显示哪个视图。
+- 一个导航图，用于告诉 `MainActivity` 显示哪个视图。
 - 底部导航的图像。
-- 对 MainActivity 的更新，以将所有内容整合在一起。
+- 对 `MainActivity` 的更新，以将所有内容整合在一起。
 
 ## Fragment 类
 
-虽然 MainActivity 将是我们的应用的入口点，但我们实际上只会为我们的应用使用单个 Activity。对于任何习惯于大型、繁重的 Activity 类处理所有事情的有经验的 Android 开发者来说，这可能看起来很奇怪。
+虽然 `MainActivity` 将是我们的应用的入口点，但我们实际上只会为我们的应用使用单个 Activity。对于任何习惯于大型、繁重的 Activity 类处理所有事情的有经验的 Android 开发者来说，这可能看起来很奇怪。
 
 然而，拥有一个 Activity 并在其中交换 Fragment 视图更有效率，现在是 Google 推荐的方法。此外，正如我们将在下一章中看到的，这使得在视图之间共享数据更加顺畅。
 
-现在，我们将创建两个 Fragment 类：PickPlayersFragment 和 GameFragment。这些 Fragment 类最终将用于设置游戏的玩家，然后玩游戏。现在，我们将创建两个 Fragment 类，但直到第 2 章 [使用 Fragments 构建视图](Build Views with Fragments) 才会添加适当的内容。
+现在，我们将创建两个 Fragment 类：`PickPlayersFragment` 和 `GameFragment`。这些 Fragment 类最终将用于设置游戏的玩家，然后玩游戏。现在，我们将创建两个 Fragment 类，但直到第 2 章 [使用 Fragments 构建视图](Build Views with Fragments) 才会添加适当的内容。
 
-在创建 Fragment 类之前，添加一个新的 fragments 包以更好地组织内容会很有帮助。在项目视图中右键单击您的主包（例如，我的是 dev.mfazio.pennydrop），然后选择 New > Package。它需要完整的包名，因此只需在主包末尾加上“fragments”。在我的例子中，这是 dev.mfazio.pennydrop.fragments。
+在创建 Fragment 类之前，添加一个新的 `fragments` 包以更好地组织内容会很有帮助。在项目视图中右键单击您的主包（例如，我的是 `dev.mfazio.pennydrop`），然后选择 New > Package。它需要完整的包名，因此只需在主包末尾加上“fragments”。在我的例子中，这是 `dev.mfazio.pennydrop.fragments`。
 
 ![](img/c024742480e86eb8867e0760ebe353d7_37_0.png)
 
@@ -552,11 +573,11 @@ Android Studio 为我们添加了一堆文件来帮助我们开始应用开发�
 
 ### PickPlayersFragment
 
-对于这两个 Fragment 类，我们将让 Android Studio 为我们完成工作，然后我们可以稍后进行清理。在项目视图中右键单击您的 fragments 包名（在我的例子中，在 app/java/dev.mfazio.pennydrop.fragments 下），然后选择 New > Fragment > Fragment (Blank)。输入 Fragment 名称 PickPlayersFragment，并将 Fragment 布局名称保留为 fragment_pick_players。确保源语言是 Kotlin，然后单击 Finish。
+对于这两个 Fragment 类，我们将让 Android Studio 为我们完成工作，然后我们可以稍后进行清理。在项目视图中右键单击您的 `fragments` 包名（在我的例子中，在 `app/java/dev.mfazio.pennydrop.fragments` 下），然后选择 New > Fragment > Fragment (Blank)。输入 Fragment 名称 `PickPlayersFragment`，并将 Fragment 布局名称保留为 `fragment_pick_players`。确保源语言是 Kotlin，然后单击 Finish。
 
 ![](img/c024742480e86eb8867e0760ebe353d7_37_1.png)
 
-Android Studio 完成后，您将拥有新的 PickPlayersFragment 类以及 fragment_pick_players.xml布局文件。打开 `fragment_pick_players.xml`，这样我们就能让这里的 `<TextView>` 显示“选择玩家片段”。
+Android Studio 完成后，您将拥有新的 `PickPlayersFragment` 类以及 `fragment_pick_players.xml` 布局文件。打开 `fragment_pick_players.xml`，这样我们就能让这里的 `<TextView>` 显示“选择玩家片段”。
 
 虽然你可以使用设计视图进行布局编辑，但在处理布局文件时，我将始终参考代码视图。此视图显示每个布局背后的 XML，并让我们对布局中使用的值进行更精确的控制。一旦你更熟悉布局文件的内容，可以随意使用设计标签页。要切换视图，请点击编辑器右上角的“代码”按钮：
 
@@ -598,7 +619,7 @@ Android Studio 完成后，您将拥有新的 PickPlayersFragment 类以及 frag
 
 ![](img/c024742480e86eb8867e0760ebe353d7_40_0.png)
 
-文件创建后，打开它，切换到代码标签页（同样位于编辑器窗口右上角），并添加两个 `<item>` 标签：一个用于 PickPlayersFragment，一个用于 GameFragment。每个 `<item>` 都将有一个 ID 和标题：
+文件创建后，打开它，切换到代码标签页（同样位于编辑器窗口右上角），并添加两个 `<item>` 标签：一个用于 `PickPlayersFragment`，一个用于 `GameFragment`。每个 `<item>` 都将有一个 ID 和标题：
 
 ```xml
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
@@ -611,7 +632,7 @@ Android Studio 完成后，您将拥有新的 PickPlayersFragment 类以及 frag
 </menu>
 ```
 
-这些可以工作，但我们可以做两处改进：将 `android:title` 值设为字符串资源，并为每个选项添加一些图像。Android Studio 应该已经高亮显示了两个 `android:title` 值，提示你“硬编码字符串‘Players’，应使用 @string 资源。”我们已经在值文件中讨论过为什么需要这样做，Android Studio 会为我们进行更改：将光标放在其中一个高亮字符串上，然后按 Alt + Enter 以获取提取资源对话框。默认值可能没问题，因此点击确定按钮继续。一旦两个 `android:title` 值都指向字符串资源，请转到你的 `strings.xml` 文件查看所做的更改：
+这些可以工作，但我们可以做两处改进：将 `android:title` 值设为字符串资源，并为每个选项添加一些图像。Android Studio 应该已经高亮显示了两个 `android:title` 值，提示你“硬编码字符串‘Players’，应使用 @string 资源。”我们已经在值文件中讨论过为什么需要这样做，Android Studio 会为我们进行更改：将光标放在其中一个高亮字符串上，然后按 `Alt + Enter` 以获取提取资源对话框。默认值可能没问题，因此点击确定按钮继续。一旦两个 `android:title` 值都指向字符串资源，请转到你的 `strings.xml` 文件查看所做的更改：
 
 ```xml
 <resources>
@@ -632,7 +653,7 @@ Android Studio 完成后，您将拥有新的 PickPlayersFragment 类以及 frag
 
 ![](img/c024742480e86eb8867e0760ebe353d7_42_0.png)
 
-我建议为 [PickPlayersFragment](PickPlayersFragment) 选择“人脸”，但你可以选择任何你想要的图标（反正我也阻止不了你）。选择图标后，点击确定返回配置矢量素材屏幕。在那里，点击下一步，然后完成。你会在 `res/drawable` 下看到一个名为 `ic_baseline_face_24.xml` 的新文件（这名字真顺口，不是吗？）。如果你打开该文件，你会看到它是另一个 `vector` 素材，就像我们之前看到的生成启动器图像一样。这意味着图标可以按我们希望的方式缩放，我们只需要一个版本即可适用于所有设备。另外，我稍后会解释 24dp 部分，所以现在不用担心。
+我建议为 `PickPlayersFragment` 选择“人脸”，但你可以选择任何你想要的图标（反正我也阻止不了你）。选择图标后，点击确定返回配置矢量素材屏幕。在那里，点击下一步，然后完成。你会在 `res/drawable` 下看到一个名为 `ic_baseline_face_24.xml` 的新文件（这名字真顺口，不是吗？）。如果你打开该文件，你会看到它是另一个 `vector` 素材，就像我们之前看到的生成启动器图像一样。这意味着图标可以按我们希望的方式缩放，我们只需要一个版本即可适用于所有设备。另外，我稍后会解释 24dp 部分，所以现在不用担心。
 
 Android Studio 中已经有很多图标，但不知为何没有骰子图像（而我们确实需要用于掷骰子游戏）。这意味着我们需要去其他地方寻找图像。我们可以在许多地方在线找到图像，但我将使用 [https://materialdesignicons.com/](https://materialdesignicons.com/) 上的一个。我们可以在 [https://materialdesignicons.com/icon/dice-6](https://materialdesignicons.com/icon/dice-6) 获取一个很棒的 *D6* 图标。该网站支持下载矢量可绘制对象，因此将其引入应用会很快。保存 XML 文件并按你希望的方式重命名——我将使用 `mdi_dice_6_black_24dp.xml`，因为 mdi 前缀有助于提醒我它来自 Material Design Icons 网站。最后，将文件移动到你的 `drawable` 目录（你可以在 Android Studio 中将文件拖放到目录上）。
 
@@ -687,9 +708,11 @@ dependencies {
 }
 ```
 
-现在我们已经添加了正确的依赖项（请确保运行 Gradle 同步；应该会弹出一个带有“立即同步”选项的横幅），我们可以继续添加导航图。导航图将告诉导航组件从哪里开始以及用户在应用中可以到达的所有位置。我们可以为应用配置多个*目的地*以及起始目的地。目的地是用户在应用中可以前往的位置；在我们的例子中，就是我们之前创建的 `Fragment` 类。我们将在第7章[使用设置和主题自定义应用](Customize an App with Settings and Themes)中更详细地了解导航，然后在第9章[通过导航抽屉导航](Navigate via Navigation Drawer)中通过 Android Baseball League 应用了解更高级的导航。目前，我们只需要创建 <navigation> 文件，添加我们的两个片段，然后就可以回到 MainActivity 将这一切整合起来。
 
-通过右键单击 res 并再次选择 New > Android Resource File 来添加 nav_graph.xml。这次，将文件命名为 nav_graph，并选择 Navigation 作为资源类型。点击确定，然后再次切换到 Text 选项卡，查看一个相当空的 <navigation> XML 标签。实际上，它可能带有红色下划线，表示错误。我们很快就会修复它（它因为未被使用而“生气”），所以现在不用担心。我们想向此文件添加一些内容：两个 <fragment> 标签和一个 app:startDestination 属性。每个 <fragment> 将有一个 ID、name 和 label，而 app:startDestination 将指向 GameFragment。
+
+现在我们已经添加了正确的依赖项（请确保运行 Gradle 同步；应该会弹出一个带有“立即同步”选项的横幅），我们可以继续添加导航图。导航图将告诉导航组件从哪里开始以及用户在应用中可以到达的所有位置。我们可以为应用配置多个*目的地*以及起始目的地。目的地是用户在应用中可以前往的位置；在我们的例子中，就是我们之前创建的 `Fragment` 类。我们将在第7章[使用设置和主题自定义应用](Customize an App with Settings and Themes)中更详细地了解导航，然后在第9章[通过导航抽屉导航](Navigate via Navigation Drawer)中通过 Android Baseball League 应用了解更高级的导航。目前，我们只需要创建 `<navigation>` 文件，添加我们的两个片段，然后就可以回到 `MainActivity` 将这一切整合起来。
+
+通过右键单击 `res` 并再次选择 New > Android Resource File 来添加 `nav_graph.xml`。这次，将文件命名为 `nav_graph`，并选择 Navigation 作为资源类型。点击确定，然后再次切换到 Text 选项卡，查看一个相当空的 `<navigation>` XML 标签。实际上，它可能带有红色下划线，表示错误。我们很快就会修复它（它因为未被使用而“生气”），所以现在不用担心。我们想向此文件添加一些内容：两个 `<fragment>` 标签和一个 `app:startDestination` 属性。每个 `<fragment>` 将有一个 ID、name 和 label，而 `app:startDestination` 将指向 `GameFragment`。
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -710,21 +733,21 @@ dependencies {
 </navigation>
 ```
 
-这里需要注意的主要事项：片段名称与完全限定类名（包括包名）匹配，android:label 与片段的布局文件名匹配，这里的 ID 与 navigation.xml 中的 ID 匹配。最后一点可能不如前两点明显，但它非常有用。通过在 navigation.xml 和 nav_graph.xml 中使用相同的 ID，导航组件将能够自动为你切换显示的内容，无需任何额外配置。一旦我们完成 MainActivity，我们就会更好地理解这意味着什么。
+这里需要注意的主要事项：片段名称与完全限定类名（包括包名）匹配，`android:label` 与片段的布局文件名匹配，这里的 ID 与 `navigation.xml` 中的 ID 匹配。最后一点可能不如前两点明显，但它非常有用。通过在 `navigation.xml` 和 `nav_graph.xml` 中使用相同的 ID，导航组件将能够自动为你切换显示的内容，无需任何额外配置。一旦我们完成 `MainActivity`，我们就会更好地理解这意味着什么。
 
 另外，需要提醒的是，`@+id/` 语法是我们向应用*添加*一个新 ID。在首次向布局中添加项目时，我们需要这样做。然后，一旦我们去使用该 ID，我们就可以使用 `@id/` 语法，就像我们在 `app:startDestination=@id/gameFragment` 中看到的那样。
 
 完成这些后，我们可以转到 `activity_main.xml` 并添加我们需要的所有内容。
 
-### 更新 activity_main.xml
+## 更新 activity_main.xml
 
-到目前为止，我们已经创建了许多支持项目，但如果我们现在运行应用，我们仍然只有“Hello World!”文本。这是因为我们实际上还没有向 MainActivity 的布局文件添加任何内容。`layout_main.xml` 将只有两个视图：一个用于我们之前创建的不同视图的容器 `<fragment>`，以及我们之前设置的底部导航。所以让我们从底部导航开始，因为 `<fragment>` 的对齐取决于它，但首先，我想介绍将包围这两个视图的 `<ConstraintLayout>`。
+到目前为止，我们已经创建了许多支持项目，但如果我们现在运行应用，我们仍然只有“Hello World!”文本。这是因为我们实际上还没有向 `MainActivity` 的布局文件添加任何内容。`layout_main.xml` 将只有两个视图：一个用于我们之前创建的不同视图的容器 `<fragment>`，以及我们之前设置的底部导航。所以让我们从底部导航开始，因为 `<fragment>` 的对齐取决于它，但首先，我想介绍将包围这两个视图的 `<ConstraintLayout>`。
 
 ### 什么是 ConstraintLayout？
 
-我在[布局文件](Layout Files)中提到过，布局由 ViewGroup 和 View 类组成，而 ConstraintLayout 是我们将在本书中使用的主要 ViewGroup。它是现有 RelativeLayout 的改进版本，其中所有视图都基于彼此或其父级进行对齐。这避免了在布局 XML 中出现层层嵌套的视图，这在许多 Android 应用中很常见。此外，虽然我们将通过 XML 文本视图编辑布局，但使用 ConstraintLayout 构建 UI 在 Android Studio 的布局编辑器中效果很好。
+我在[布局文件](Layout Files)中提到过，布局由 ViewGroup 和 View 类组成，而 `ConstraintLayout` 是我们将在本书中使用的主要 ViewGroup。它是现有 `RelativeLayout` 的改进版本，其中所有视图都基于彼此或其父级进行对齐。这避免了在布局 XML 中出现层层嵌套的视图，这在许多 Android 应用中很常见。此外，虽然我们将通过 XML 文本视图编辑布局，但使用 `ConstraintLayout` 构建 UI 在 Android Studio 的布局编辑器中效果很好。
 
-ConstraintLayout 的关键在于，ConstraintLayout 内的每个视图都必须至少有一个垂直和一个水平约束，相对于布局中的其他内容。这允许操作系统处理每个设备上的位置，这意味着你的 UI 将在多种屏幕尺寸和分辨率上以相同的方式显示，而无需担心像素计数。
+`ConstraintLayout` 的关键在于，`ConstraintLayout` 内的每个视图都必须至少有一个垂直和一个水平约束，相对于布局中的其他内容。这允许操作系统处理每个设备上的位置，这意味着你的 UI 将在多种屏幕尺寸和分辨率上以相同的方式显示，而无需担心像素计数。
 
 请注意，在 `<ConstraintLayout>` 中添加约束需要 `app` 命名空间。你可以输入 `appNs` 让 Android Studio 为你自动完成，或者手动添加命名空间：
 
@@ -741,7 +764,7 @@ ConstraintLayout 的关键在于，ConstraintLayout 内的每个视图都必须�
 
 这里的约束很简单：左、右和底部都将与父级 `<ConstraintLayout>` 对齐。这意味着底部导航与布局的底部和侧边边缘对齐。最后一部分是 `android:layout_height“wrap_content”`，它会根据内容自动调整视图的大小。这三个约束和 `wrap_content` 值一起将底部导航放在你期望的位置，即视图的底部。
 
-视图上还需要另一个属性，`android:layout_width`。通常，这个值会是 `wrap_content` 或 `match_parent`（使视图与其父级一样宽），但由于我们有约束告诉视图将其两端与父级匹配，我们可以直接设置 `android:layout_width“0dp”`。这将调整视图大小的责任交给了 <ConstraintLayout>。
+视图上还需要另一个属性，`android:layout_width`。通常，这个值会是 `wrap_content` 或 `match_parent`（使视图与其父级一样宽），但由于我们有约束告诉视图将其两端与父级匹配，我们可以直接设置 `android:layout_width“0dp”`。这将调整视图大小的责任交给了 `<ConstraintLayout>`。
 
 请注意，我们实际上可以使用 `match_parent` 作为宽度值，并排除左/右约束，但我想在一个简单的例子中突出显示添加约束。
 
@@ -756,6 +779,7 @@ ConstraintLayout 的关键在于，ConstraintLayout 内的每个视图都必须�
 在 Android 应用中，我们不会使用 `px` 作为尺寸单位，因为屏幕尺寸和分辨率可能各不相同。相反，我们使用 `dp` 和 `sp`。
 
 - `dp`：密度无关像素——用于布局（代替 `px`）。
+
 - `sp`：缩放无关像素——类似于 `dp`，但也会考虑用户的字体缩放设置。用于文本尺寸。
 
 更多信息：[https://link.mfazio.dev/dimension](https://link.mfazio.dev/dimension)。
@@ -830,6 +854,8 @@ ConstraintLayout 的关键在于，ConstraintLayout 内的每个视图都必须�
 
 这是我们为 `MainActivity` 布局准备的内容：一个单独的 `<ConstraintLayout>`，其中包含一个用于显示不同 Fragment 视图的容器以及底部导航栏。
 
+
+
 ```xml
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -862,11 +888,11 @@ ConstraintLayout 的关键在于，ConstraintLayout 内的每个视图都必须�
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-现在布局都已完成，还有一件事要做：让我们在 `MainActivity` 中连接所有内容并运行应用。
+现在布局都已完成，还有一件事要做：让我们在`MainActivity`中连接所有内容并运行应用。
 
-### 完成 MainActivity
+## 完成 MainActivity
 
-目前，我们的 `MainActivity` 只有 `onCreate` 方法，它调用 `AppCompatActivity` 的 `onCreate` 方法，并通过 `setContentView` 方法将 `activity_main.xml` 与 `MainActivity` 关联起来。我们已经创建了主要的 `<FragmentContainerView>` 和底部导航栏，这意味着我们需要将这两者都连接到 `MainActivity`。我本可以开始一些全新的部分来解释所有涉及的内容，但这是不必要的。我们只需要从这个 Activity 获取 `NavController` 并用它来初始化底部导航栏。这样做只需要三行代码：
+目前，我们的`MainActivity`只有`onCreate`方法，它调用`AppCompatActivity`的`onCreate`方法，并通过`setContentView`方法将`activity_main.xml`与`MainActivity`关联起来。我们已经创建了主要的`<FragmentContainerView>`和底部导航栏，这意味着我们需要将这两者都连接到`MainActivity`。我本可以开始一些全新的部分来解释所有涉及的内容，但这是不必要的。我们只需要从这个 Activity 获取`NavController`并用它来初始化底部导航栏。这样做只需要三行代码：
 
 ```kotlin
 val navHostFragment = supportFragmentManager
@@ -878,26 +904,32 @@ findViewById<BottomNavigationView>(R.id.bottom_nav)
     .setupWithNavController(this.navController)
 ```
 
-前两行获取 `<FragmentContainerView>` 并初始化一个 `NavController`，该控制器将使用容器视图来显示其他视图，而第三行则告诉底部导航栏使用该 `NavController`。除了添加 `this.navController` 的声明外，我们的 `MainActivity` 就完成了。以下是完整的类：
+前两行获取`<FragmentContainerView>`并初始化一个`NavController`，该控制器将使用容器视图来显示其他视图，而第三行则告诉底部导航栏使用该`NavController`。除了添加`this.navController`的声明外，我们的`MainActivity`就完成了。以下是完整的类：
 
 ```kotlin
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
-```
 
-override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_main)
+    override fun onCreate(savedInstanceState: Bundle?) {
 
-    val navHostFragment = supportFragmentManager
-        .findFragmentById(R.id.containerFragment) as NavHostFragment
+        super.onCreate(savedInstanceState)
 
-    this.navController = navHostFragment.navController
+        setContentView(R.layout.activity_main)
 
-    findViewById<BottomNavigationView>(R.id.bottom_nav)
-        .setupWithNavController(this.navController)
+        val navHostFragment = supportFragmentManager
+
+            .findFragmentById(R.id.containerFragment) as NavHostFragment
+
+        this.navController = navHostFragment.navController
+
+        findViewById<BottomNavigationView>(R.id.bottom_nav)
+
+            .setupWithNavController(this.navController)
+
+    }
 }
+```
 
 在我们完成所有工作后，现在运行我们的应用，会看到类似图片[所示](https://example.com/shown)的效果。
 
@@ -909,29 +941,29 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 作为回顾（或者对于那些刚刚跳过了大约二十五页内容的读者），以下是我们刚刚完成的工作：
 
--   创建了一个名为 *Penny Drop* 的新应用。
--   创建了两个 `Fragment` 类：`PickPlayersFragment` 和 `GameFragment`。
--   创建了一个名为 `navigation.xml` 的 `<menu>`，其中包含我们的两个 `Fragment` 作为项目。
--   添加了两张图片作为矢量资源。
--   创建了一个名为 `nav_graph.xml` 的导航图，并将两个 `Fragment` 类都包含为目的地。
--   在 `activity_main.xml` 中添加了一个容器 `<FragmentContainerView>` 和 `BottomNavigationView`。
--   在 `MainActivity` 中连接了所有内容。
+- 创建了一个名为 *Penny Drop* 的新应用。
+- 创建了两个`Fragment`类：`PickPlayersFragment`和`GameFragment`。
+- 创建了一个名为`navigation.xml`的`<menu>`，其中包含我们的两个`Fragment`作为项目。
+- 添加了两张图片作为矢量资源。
+- 创建了一个名为`nav_graph.xml`的导航图，并将两个`Fragment`类都包含为目的地。
+- 在`activity_main.xml`中添加了一个容器`<FragmentContainerView>`和`BottomNavigationView`。
+- 在`MainActivity`中连接了所有内容。
 
-我们应用的基础已经完成。我们可以使用底部导航在应用中移动，添加更多选项只需要一个 `Fragment` 加上几个XML项目。在我们开始添加主题之前，`MainActivity` 已经完成了。我们还有几个 `Fragment` 等待完成，这就是我们的下一站。我们知道可以访问这两个 `Fragment` 类，现在我们要让它们发挥作用。
+我们应用的基础已经完成。我们可以使用底部导航在应用中移动，添加更多选项只需要一个`Fragment`加上几个XML项目。在我们开始添加主题之前，`MainActivity`已经完成了。我们还有几个`Fragment`等待完成，这就是我们的下一站。我们知道可以访问这两个`Fragment`类，现在我们要让它们发挥作用。
 
 # 第2章
 
 ## 使用Fragment构建视图
 
-在上一章中，我们得到了一个具有基础导航设置的可工作应用。此外，我们还创建了两个视图的骨架：`PickPlayersFragment` 和 `GameFragment`。在本章中，我们将构建这两个 `Fragment` 类，首先从 `PickPlayersFragment` 开始，以教授相关概念。一旦那个 `Fragment` 准备就绪，我们将以类似但更快的过程处理 `GameFragment`。在本章结束时，`PickPlayersFragment` 和 `GameFragment` 将看起来像这样：
+在上一章中，我们得到了一个具有基础导航设置的可工作应用。此外，我们还创建了两个视图的骨架：`PickPlayersFragment`和`GameFragment`。在本章中，我们将构建这两个`Fragment`类，首先从`PickPlayersFragment`开始，以教授相关概念。一旦那个`Fragment`准备就绪，我们将以类似但更快的过程处理`GameFragment`。在本章结束时，`PickPlayersFragment`和`GameFragment`将看起来像这样：
 
 ![](img/c024742480e86eb8867e0760ebe353d7_56_0.png)
 
-我们将从 `fragment_pick_players.xml` 中的 `<ConstraintLayout>` 开始，它将是我们视图的核心，然后添加最终将启动我们游戏的 *浮动操作按钮 (FAB)*。
+我们将从`fragment_pick_players.xml`中的`<ConstraintLayout>`开始，它将是我们视图的核心，然后添加最终将启动我们游戏的 *浮动操作按钮 (FAB)*。
 
 ### 构建一个Fragment（选择玩家）
 
-在整本书中，我们将使用 `<ConstraintLayout>` 视图组作为大多数屏幕的主要容器。我们可以通过几种方式处理事情，但 `<ConstraintLayout>` 是一个很好的方式，可以在每个屏幕上将元素放置到你想要的位置，同时仍然允许多种设备类型所需的灵活性。在 `fragment_pick_players.xml` 中，我们可以用这个新的 `<ConstraintLayout>` 替换整个现有的 `<FrameLayout>` 标签。XML 将如下所示：
+在整本书中，我们将使用`<ConstraintLayout>`视图组作为大多数屏幕的主要容器。我们可以通过几种方式处理事情，但`<ConstraintLayout>`是一个很好的方式，可以在每个屏幕上将元素放置到你想要的位置，同时仍然允许多种设备类型所需的灵活性。在`fragment_pick_players.xml`中，我们可以用这个新的`<ConstraintLayout>`替换整个现有的`<FrameLayout>`标签。XML将如下所示：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -949,15 +981,15 @@ override fun onCreate(savedInstanceState: Bundle?) {
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-如果Android Studio提示 `xmlns:app` 属性未被使用，这没关系。在我们开始向此 `<ConstraintLayout>` 内的视图添加约束之前，它不会被使用。
+如果Android Studio提示`xmlns:app`属性未被使用，这没关系。在我们开始向此`<ConstraintLayout>`内的视图添加约束之前，它不会被使用。
 
-一旦你添加了空的 `<ConstraintLayout>`，我们就可以继续处理FAB了。
+一旦你添加了空的`<ConstraintLayout>`，我们就可以继续处理FAB了。
 
 ### 更改导航图的起始目的地
 
 ![](img/c024742480e86eb8867e0760ebe353d7_58_0.png)
 
-我们将在本章的第一部分在 `PickPlayersFragment` 中工作，并且你可能会多次启动和重启你的应用。为了避免每次启动应用时都必须从 `GameFragment` 点击切换，请进入 `nav_graph.xml` 并将 `app:startDestination` 更改为 `@id/pickPlayersFragment`。我们稍后可以切换回来，但这会节省你一些开发上的挫败感。
+我们将在本章的第一部分在`PickPlayersFragment`中工作，并且你可能会多次启动和重启你的应用。为了避免每次启动应用时都必须从`GameFragment`点击切换，请进入`nav_graph.xml`并将`app:startDestination`更改为`@id/pickPlayersFragment`。我们稍后可以切换回来，但这会节省你一些开发上的挫败感。
 
 ### 添加FAB
 
@@ -980,19 +1012,19 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 ![](img/c024742480e86eb8867e0760ebe353d7_59_0.png)
 
-Android Studio在整个应用程序中提供代码补全，包括XML文件。这意味着你可以输入XML标签或属性名称的一部分，它会告诉你有哪些可用选项。在查找较长的属性名称时，这非常方便，例如FAB中的图像 `android:src` 值。
+Android Studio在整个应用程序中提供代码补全，包括XML文件。这意味着你可以输入XML标签或属性名称的一部分，它会告诉你有哪些可用选项。在查找较长的属性名称时，这非常方便，例如FAB中的图像`android:src`值。
 
-根据我们上一章所做的工作，大部分内容看起来应该很熟悉：FAB应该只占用所需大小，并将被锁定在父视图的右下角。我们添加了 `16dp` 的边距，将FAB稍微推离侧边和底部。我们还为FAB提供了文本描述以实现无障碍访问（确保定义字符串资源）。
+根据我们上一章所做的工作，大部分内容看起来应该很熟悉：FAB应该只占用所需大小，并将被锁定在父视图的右下角。我们添加了`16dp`的边距，将FAB稍微推离侧边和底部。我们还为FAB提供了文本描述以实现无障碍访问（确保定义字符串资源）。
 
-最后，我们有了我之前提到的 `drawable` 属性。我们实际上还没有创建 `@drawable/ic_baseline_play_arrow_24` 图像，所以请按照上一章底部导航图像的相同方式创建它：右键单击 `app/res/drawable` 并选择 `New > Vector Asset`。在那里，搜索播放箭头剪贴画，保持默认值，单击“下一步”，然后“完成”。
+最后，我们有了我之前提到的`drawable`属性。我们实际上还没有创建`@drawable/ic_baseline_play_arrow_24`图像，所以请按照上一章底部导航图像的相同方式创建它：右键单击`app/res/drawable`并选择`New > Vector Asset`。在那里，搜索播放箭头剪贴画，保持默认值，单击“下一步”，然后“完成”。
 
 ![](img/c024742480e86eb8867e0760ebe353d7_60_0.png)
 
-`app:tint` 属性为输入的 `drawable` 赋予一种颜色，通常与正常颜色不同。我们希望播放按钮是白色的，即使图像本身是黑色的（文件名中甚至说明了这一点），我们也可以简单地将图像 *着色* 为其他颜色。
+`app:tint`属性为输入的`drawable`赋予一种颜色，通常与正常颜色不同。我们希望播放按钮是白色的，即使图像本身是黑色的（文件名中甚至说明了这一点），我们也可以简单地将图像 *着色* 为其他颜色。
 
-请注意，tint属性使用的是 `app` 命名空间，*而不是* `android` 命名空间。这是由于Design Support Library处理FAB的方式，如果我们使用 `android:tint`，可能无法获得预期的颜色变化。
+请注意，tint属性使用的是`app`命名空间，*而不是*`android`命名空间。这是由于Design Support Library处理FAB的方式，如果我们使用`android:tint`，可能无法获得预期的颜色变化。
 
-另外，注意FAB上的白色颜色前缀是“`android:`”？这是因为我们引用的是Android Framework内置的颜色。我们也可以使用自定义颜色值，这些值保存在 `res/values/colors.xml` 资源文件中。例如，`res/values/colors.xml` 可能如下所示：
+另外，注意FAB上的白色颜色前缀是“`android:`”？这是因为我们引用的是Android Framework内置的颜色。我们也可以使用自定义颜色值，这些值保存在`res/values/colors.xml`资源文件中。例如，`res/values/colors.xml`可能如下所示：
 
 ```xml
 <resources>
@@ -1017,7 +1049,9 @@ Android Studio在整个应用程序中提供代码补全，包括XML文件。这
 
 请注意，在此玩家列表项布局中，我们使用的是`<SwitchCompat>`而不是`<Switch>`。这是因为`<SwitchCompat>`在不同Android版本之间看起来是一致的，而`<Switch>`在旧设备上可能看起来不同。这是一个很好的保障措施，可以确保你的用户获得你预期的视觉体验。
 
-通过右键单击`layout`文件夹并选择`New > Layout resource file`，在`res/layout`下创建一个名为`player_list_item.xml`的新文件。将名称设置为`player_list_item`，根元素设置为`androidx.constraintlayout.widget.ConstraintLayout`（你也可以输入*Constraint*让它为你搜索）。此对话框中的其他所有内容都可以保持原样。
+
+
+通过右键单击`layout`文件夹并选择`New > Layout resource file`，在`res/layout`下创建一个名为`player_list_item.xml`的新文件。将名称设置为`player_list_item`，根元素设置为`androidx.constraintlayout.widget.ConstraintLayout`（你也可以输入`Constraint`让它为你搜索）。此对话框中的其他所有内容都可以保持原样。
 
 ![](img/c024742480e86eb8867e0760ebe353d7_63_0.png)
 
@@ -1074,7 +1108,7 @@ Android Studio为我们提供了一个空的`<ConstraintLayout>`来使用，因�
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-你需要像我们在[构建应用导航](Build the App’s Navigation)中所做的那样定义`@string/player_name`字符串资源。将光标放在（可能是红色的）`@string/player_name`属性值上，按`Alt` - `Enter`，然后选择“Create string value resource ‘player_name’”。将资源值设置为Player Name，然后单击确定。完成后，我们就可以开始包含玩家行了。
+你需要像我们在[构建应用导航](Build the App’s Navigation)中所做的那样定义`@string/player_name`字符串资源。将光标放在（可能是红色的）`@string/player_name`属性值上，按`Alt`-`Enter`，然后选择“Create string value resource ‘player_name’”。将资源值设置为Player Name，然后单击确定。完成后，我们就可以开始包含玩家行了。
 
 ### 在片段中包含玩家行
 
@@ -1128,11 +1162,11 @@ Android Studio为我们提供了一个空的`<ConstraintLayout>`来使用，因�
 
 ### 为应用添加数据绑定
 
-在这里，我们将为应用启用数据绑定，并为每个玩家项目添加一些配置。在我看来，数据绑定是 Jetpack 中最好、最实用的部分之一。它允许我们将显式的属性绑定从 `Activity` 和 `Fragment` 类中移出，放入布局 XML 中。然后，我们可以使用这些绑定来设置值、隐藏/显示视图，甚至创建像 `PickPlayersFragment` 中的玩家表单这样的表单。我们将能够将 `fragment_pick_players.xml` 中的变量发送到 `player_list_item.xml` 的每个实例中，并使用这些变量来有条件地显示列表项的部分内容。但首先，我们需要为项目启用此功能。
+在这里，我们将为应用启用数据绑定，并为每个玩家项目添加一些配置。在我看来，数据绑定是 Jetpack 中最好、最实用的部分之一。它允许我们将显式的属性绑定从`Activity`和`Fragment`类中移出，放入布局 XML 中。然后，我们可以使用这些绑定来设置值、隐藏/显示视图，甚至创建像`PickPlayersFragment`中的玩家表单这样的表单。我们将能够将`fragment_pick_players.xml`中的变量发送到`player_list_item.xml`的每个实例中，并使用这些变量来有条件地显示列表项的部分内容。但首先，我们需要为项目启用此功能。
 
 ### 启用数据绑定
 
-这将在应用的 `build.gradle` 文件中分两步完成：添加 Kotlin kapt 插件和添加 `dataBinding` 标志。kapt 是 Kotlin 特定的注解处理插件，它允许我们在应用中使用（除其他功能外）数据绑定。
+这将在应用的`build.gradle`文件中分两步完成：添加 Kotlin kapt 插件和添加`dataBinding`标志。kapt 是 Kotlin 特定的注解处理插件，它允许我们在应用中使用（除其他功能外）数据绑定。
 
 ```
 apply plugin: 'com.android.application'
@@ -1152,14 +1186,13 @@ android {
 // Dependencies live down here
 ```
 
-完成这两项更改并执行 Gradle 同步后，我们可以继续处理 `layout_pick_players.xml`，在那里我们将用一个通用的 `<layout>` 标签包裹我们的 `<ConstraintLayout>`。
+完成这两项更改并执行 Gradle 同步后，我们可以继续处理`layout_pick_players.xml`，在那里我们将用一个通用的`<layout>`标签包裹我们的`<ConstraintLayout>`。
 
 ### 在 fragment_pick_players.xml 中添加通用 layout 标签
 
-要在视图组件中使用数据绑定，我们需要将整个视图包装在一个通用的 `<layout>` 标签中。此标签不会改变视图的外观，但它会导致生成一个类以允许进行绑定。我们将 `xmlns:*` 声明移动到该通用 `<layout>` 标签中，并像往常一样填写我们的主视图：
+要在视图组件中使用数据绑定，我们需要将整个视图包装在一个通用的`<layout>`标签中。此标签不会改变视图的外观，但它会导致生成一个类以允许进行绑定。我们将`xmlns:*`声明移动到该通用`<layout>`标签中，并像往常一样填写我们的主视图：
 
-```
-xml
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -1176,13 +1209,13 @@ xml
 </layout>
 ```
 
-如果我们在进行此更改后运行应用，它看起来将与之前完全相同。但现在我们可以更新 `PickPlayersFragment` 以使用为我们生成的 `FragmentPickPlayersBinding` 类，开始向视图添加绑定语句，并在布局中引用一个或多个 `<variable>` 标签。我们将首先对 `PickPlayersFragment` 进行更改，在 `player_list_item.xml` 中添加一些 `<variable>` 标签，最后回到 `layout_pick_players.xml` 来传入值。
+如果我们在进行此更改后运行应用，它看起来将与之前完全相同。但现在我们可以更新`PickPlayersFragment`以使用为我们生成的`FragmentPickPlayersBinding`类，开始向视图添加绑定语句，并在布局中引用一个或多个`<variable>`标签。我们将首先对`PickPlayersFragment`进行更改，在`player_list_item.xml`中添加一些`<variable>`标签，最后回到`layout_pick_players.xml`来传入值。
 
 ### 更新 PickPlayersFragment
 
-目前，`PickPlayersFragment` 内部的 `onCreateView` 应该看起来像这样：
+目前，`PickPlayersFragment`内部的`onCreateView`应该看起来像这样：
 
-```
+```kotlin
 override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?
@@ -1200,9 +1233,9 @@ override fun onCreateView(
 
 ### 在 PickPlayersFragment 中使用数据绑定
 
-我们已经在 `fragment_pick_players.xml` 中添加通用 `<layout>` 时为 `PickPlayersFragment` 启用了数据绑定，所以现在我们只需在代码中使用它。我们将使用生成的 `FragmentPickPlayersBinding` 类来填充我们的视图，并附带额外的绑定组件。
+我们已经在`fragment_pick_players.xml`中添加通用`<layout>`时为`PickPlayersFragment`启用了数据绑定，所以现在我们只需在代码中使用它。我们将使用生成的`FragmentPickPlayersBinding`类来填充我们的视图，并附带额外的绑定组件。
 
-```
+```kotlin
 override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?
@@ -1214,13 +1247,13 @@ override fun onCreateView(
 }
 ```
 
-一旦我们的视图通过 `FragmentPickPlayersBinding` 类填充，我们就可以直接通过 ID 访问组件，而无需调用 `findViewById`。正如你很快会看到的，这比处理事情的“旧”方式要好得多。
+一旦我们的视图通过`FragmentPickPlayersBinding`类填充，我们就可以直接通过 ID 访问组件，而无需调用`findViewById`。正如你很快会看到的，这比处理事情的“旧”方式要好得多。
 
-一旦我们开始处理 `ViewModel` 类，我们将对 `binding` 对象做更多的事情。此外，即使我们可以将其转换为单表达式方法，我们仍将坚持使用 `onCreateView` 的两行版本。这是因为我们很快将在其中绑定组件。
+一旦我们开始处理`ViewModel`类，我们将对`binding`对象做更多的事情。此外，即使我们可以将其转换为单表达式方法，我们仍将坚持使用`onCreateView`的两行版本。这是因为我们很快将在其中绑定组件。
 
-现在，如果我们没有使用数据绑定库，`onCreateView` 的内部将更像下面的代码块。我们将在这里花时间通过 ID 查找不同的视图，然后像这样设置它们的属性：
+现在，如果我们没有使用数据绑定库，`onCreateView`的内部将更像下面的代码块。我们将在这里花时间通过 ID 查找不同的视图，然后像这样设置它们的属性：
 
-```
+```kotlin
 val view = inflater.inflate(
     R.layout.fragment_pick_players,
     container,
@@ -1236,6 +1269,8 @@ return view
 ```
 
 ### 等等，那段代码块是什么意思？
+
+
 
 尽管我们没有使用那段代码块，但它可能需要一些解释，因为它对于刚接触 Kotlin 的人来说可能看起来很疯狂。这里的高层思想是，我们获取想要的行，然后从中获取内部的 `<CheckBox>`。一旦我们有了 `<CheckBox>`，我们就可以设置几个属性。这实际上与我们稍后在 XML 视图中要做的事情相同。
 
@@ -1395,15 +1430,15 @@ android:visibility="@{switchHidden ? View.INVISIBLE : View.VISIBLE}"
 
 ### 构建另一个片段（游戏）
 
-我们在上一章创建了 GameFragment，但它看起来仍然相当简陋，尤其是与 PickPlayersFragment 相比。等到本章结束时，我们将拥有一个如图所示的界面。
+我们在上一章创建了 `GameFragment`，但它看起来仍然相当简陋，尤其是与 `PickPlayersFragment` 相比。等到本章结束时，我们将拥有一个如图所示的界面。
 
 ![](img/c024742480e86eb8867e0760ebe353d7_81_0.png)
 
-本章剩余部分将专注于 GameFragment，因此我建议你前往 `navigation/nav_graph.xml` 并将 `app:startDestination` 设置为 `@id/gameFragment`。然后，我们将从为 GameFragment 启用数据绑定开始。
+本章剩余部分将专注于 `GameFragment`，因此我建议你前往 `navigation/nav_graph.xml` 并将 `app:startDestination` 设置为 `@id/gameFragment`。然后，我们将从为 `GameFragment` 启用数据绑定开始。
 
 ### 为 GameFragment 启用数据绑定
 
-由于我们现在只是在 GameFragment 中开启数据绑定，因此在 `fragment_game.xml` 中需要做的只是添加通用的 `<layout>` 标签和一个空的 `<ConstraintLayout>`。虽然 `<ConstraintLayout>` 对于数据绑定并非关键，但我们很快就会用到它，所以不妨现在就添加。我们最基础的视图 XML 将如下所示：
+由于我们现在只是在 `GameFragment` 中开启数据绑定，因此在 `fragment_game.xml` 中需要做的只是添加通用的 `<layout>` 标签和一个空的 `<ConstraintLayout>`。虽然 `<ConstraintLayout>` 对于数据绑定并非关键，但我们很快就会用到它，所以不妨现在就添加。我们最基础的视图 XML 将如下所示：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -1421,11 +1456,13 @@ android:visibility="@{switchHidden ? View.INVISIBLE : View.VISIBLE}"
 </layout>
 ```
 
-这并不令人兴奋，视图甚至不再显示 Fragment 的名称，但这没关系，这只是暂时的。此外，通过设置好这部分，我们就可以完成 GameFragment 类的大部分工作。
+这并不令人兴奋，视图甚至不再显示 Fragment 的名称，但这没关系，这只是暂时的。此外，通过设置好这部分，我们就可以完成 `GameFragment` 类的大部分工作。
 
-这里值得注意的是 `android:animateLayoutChanges` 和 `tools:context` 属性。添加 `android:animateLayoutChanges` 属性可以在视图内容变化时提供动画效果。具体来说，当硬币被添加到或从某个槽位移除时，会添加一个小动画。至于 `tools:context`，`tools` 命名空间中的任何内容都不会影响应用运行时的行为。相反，它告诉 Android Studio 一些信息。在这种情况下，我们让 Android Studio 知道主要的 `<ConstraintLayout>` 与 GameFragment 相关联。添加此属性作用不大，但它确实有助于主题设置以及在通过 XML 添加 `onClick` 函数时确定放置位置。`tools:context` 是完全可选的，因此是否添加取决于你。
+这里值得注意的是 `android:animateLayoutChanges` 和 `tools:context` 属性。添加 `android:animateLayoutChanges` 属性可以在视图内容变化时提供动画效果。具体来说，当硬币被添加到或从某个槽位移除时，会添加一个小动画。至于 `tools:context`，`tools` 命名空间中的任何内容都不会影响应用运行时的行为。相反，它告诉 Android Studio 一些信息。在这种情况下，我们让 Android Studio 知道主要的 `<ConstraintLayout>` 与 `GameFragment` 相关联。添加此属性作用不大，但它确实有助于主题设置以及在通过 XML 添加 `onClick` 函数时确定放置位置。`tools:context` 是完全可选的，因此是否添加取决于你。
 
-下一步是在 GameFragment 类中加载此视图。正如我们在 PickPlayersFragment 中看到的，我们将切换 `onCreateView` 以使用 `FragmentGameBinding`。我们稍后可以添加一些绑定，但现在，让我们先启用它：
+下一步是在 `GameFragment` 类中加载此视图。正如我们在 `PickPlayersFragment` 中看到的，我们将切换 `onCreateView` 以使用 `FragmentGameBinding`。我们稍后可以添加一些绑定，但现在，让我们先启用它：
+
+
 
 ```kotlin
 class GameFragment : Fragment() {
@@ -1441,19 +1478,19 @@ class GameFragment : Fragment() {
 }
 ```
 
-目前这就是我们需要在这里做的全部，所以我们可以回到 `fragment_game.xml` 开始构建我们的视图。
+目前这就是我们需要在这里做的全部，所以我们可以回到`fragment_game.xml`开始构建我们的视图。
 
-### 开始构建 GameFragment UI
+## 开始构建 GameFragment UI
 
 我们将分块构建 UI，首先是玩家信息，然后是按钮，接着是游戏信息，最后是槽位（因为它们是此屏幕最复杂的部分）。
 
-#### 添加玩家信息
+### 添加玩家信息
 
-首先，我们可以添加三个 `<TextView>` 标签：当前玩家的名称、他们剩余的硬币数量以及一个“剩余硬币”标签。目前，我们将在前两个字段中添加一些占位符文本，以便应用有内容可显示。我们还将添加 `tools:text` 属性，以便在 Android Studio 的预览窗口中显示一些文本。与 `tools:context` 类似，这不会改变实际的应用程序，只是在我们于 IDE 中创建它时起作用。以下是设置了 `tools` 属性的预览窗口示例：
+首先，我们可以添加三个`<TextView>`标签：当前玩家的名称、他们剩余的硬币数量以及一个“剩余硬币”标签。目前，我们将在前两个字段中添加一些占位符文本，以便应用有内容可显示。我们还将添加`tools:text`属性，以便在 Android Studio 的预览窗口中显示一些文本。与`tools:context`类似，这不会改变实际的应用程序，只是在我们于 IDE 中创建它时起作用。以下是设置了`tools`属性的预览窗口示例：
 
 ![](img/c024742480e86eb8867e0760ebe353d7_84_0.png)
 
-为了清晰起见，以下是该截图中的三个 `<TextView>` 标签：
+为了清晰起见，以下是该截图中的三个`<TextView>`标签：
 
 ```xml
 <TextView
@@ -1496,21 +1533,21 @@ class GameFragment : Fragment() {
     />
 ```
 
-唯一有趣的新内容是 `android:gravity="center"` 属性，它将“剩余硬币”文本在 `<TextView>` 中居中显示。
+唯一有趣的新内容是`android:gravity="center"`属性，它将“剩余硬币”文本在`<TextView>`中居中显示。
 
 如果我们现在能运行应用，它看起来会类似于我们之前看到的预览。以下是应用顶部的外观：
 
 ![](img/c024742480e86eb8867e0760ebe353d7_85_0.png)
 
-然而，我们无法按原样运行应用，因为 `coinSlot6` 目前不存在。如果你确实想看到应用运行（这并非坏事），可以像这样更改属性：`app:layout_constraintTop_toTopOf="parent"`。只需确保在槽位存在后将属性改回即可。无论如何，下一步是将“掷骰子”和“跳过”按钮添加到屏幕。
+然而，我们无法按原样运行应用，因为`coinSlot6`目前不存在。如果你确实想看到应用运行（这并非坏事），可以像这样更改属性：`app:layout_constraintTop_toTopOf="parent"`。只需确保在槽位存在后将属性改回即可。无论如何，下一步是将“掷骰子”和“跳过”按钮添加到屏幕。
 
-#### 添加“掷骰子”和“跳过”按钮
+### 添加“掷骰子”和“跳过”按钮
 
-这两个按钮最终将成为玩游戏的主要组件，但现在我们只关心将它们显示在屏幕上。两个按钮上都有一个 `drawable` 图像，但目前我们的项目中只有一个这样的图像。像之前一样，右键单击你的 `res/drawable` 目录并选择 `New > Vector Asset`。在这里，我们将选择箭头向前的剪贴画并将其添加到我们的项目中。
+这两个按钮最终将成为玩游戏的主要组件，但现在我们只关心将它们显示在屏幕上。两个按钮上都有一个`drawable`图像，但目前我们的项目中只有一个这样的图像。像之前一样，右键单击你的`res/drawable`目录并选择`New > Vector Asset`。在这里，我们将选择箭头向前的剪贴画并将其添加到我们的项目中。
 
 ![](img/c024742480e86eb8867e0760ebe353d7_86_0.png)
 
-在我们编写代码本身之前，我们应该在 `res/values/strings.xml` 中添加一些字符串资源值。正如我们在上一章看到的，这是我们希望保存所有文本值的地方。我们添加三个新值，分别代表按钮文本和按钮之间的“或”。
+在我们编写代码本身之前，我们应该在`res/values/strings.xml`中添加一些字符串资源值。正如我们在上一章看到的，这是我们希望保存所有文本值的地方。我们添加三个新值，分别代表按钮文本和按钮之间的“或”。
 
 ```xml
 <resources>
@@ -1561,15 +1598,15 @@ class GameFragment : Fragment() {
 </LinearLayout>
 ```
 
-这里的新内容是 `<LinearLayout>` 标签上的 `android:orientation` 属性（它告诉你布局的方向是水平还是垂直）、`android:drawableEnd` 属性（在按钮右侧添加图像）以及 `android:layout_weight` 属性。`android:layout_weight` 为每个组件提供一个相对大小比例，并相应地分配项目。
+这里的新内容是`<LinearLayout>`标签上的`android:orientation`属性（它告诉你布局的方向是水平还是垂直）、`android:drawableEnd`属性（在按钮右侧添加图像）以及`android:layout_weight`属性。`android:layout_weight`为每个组件提供一个相对大小比例，并相应地分配项目。
 
-在我们的例子中，这意味着 `<LinearLayout>` 中有七个“部分”，每个按钮获得其中三个“部分”。实际上，这意味着两个按钮大小相同，中间的“或”获得按钮剩余的空间。
+在我们的例子中，这意味着`<LinearLayout>`中有七个“部分”，每个按钮获得其中三个“部分”。实际上，这意味着两个按钮大小相同，中间的“或”获得按钮剩余的空间。
 
-添加此内容后，`GameFragment` 现在看起来像这样：
+添加此内容后，`GameFragment`现在看起来像这样：
 
 ![](img/c024742480e86eb8867e0760ebe353d7_87_0.png)
 
-### 添加游戏信息框
+## 添加游戏信息框
 
 我们希望在游戏屏幕上放置两个信息框：一个用于显示当前回合信息，另一个用于显示当前排名。
 
@@ -1604,9 +1641,9 @@ class GameFragment : Fragment() {
     tools:text="Current Scores:\t\nHazel: 4 coins\n\tMichael: 7 coins" />
 ```
 
-这里有两个有趣的部分：一个是 `textCurrentTurnInfo` `<TextView>`，它没有显式的宽度和高度；另一个是 `android:scrollbars` 属性。`textCurrentTurnInfo` 缺乏显式的宽高是另一个让 `<ConstraintLayout>` 处理组件尺寸的例子——在这种情况下，回合信息框将填充父容器，并占据按钮和排名框之间的所有空间。
+这里有两个有趣的部分：一个是`textCurrentTurnInfo` `<TextView>`，它没有显式的宽度和高度；另一个是`android:scrollbars`属性。`textCurrentTurnInfo`缺乏显式的宽高是另一个让`<ConstraintLayout>`处理组件尺寸的例子——在这种情况下，回合信息框将填充父容器，并占据按钮和排名框之间的所有空间。
 
-`android:scrollbars` 属性，不出所料，为我们的文本框添加了垂直滚动条。由于信息框可能比可用空间更大，我们希望允许用户滚动查看所有文本。然而，XML 属性仅在框能够滚动时才显示滚动条。要启用此功能，我们需要在 `<TextView>` 上设置 `movementMethod` 属性。这可以在 `GameFragment` 中作为 `binding` 初始化的一部分来完成。在那里，我们添加一个 `apply` 块，然后将 `textCurrentTurnInfo.movementMethod` 赋值为一个新的 `ScrollingMovementMethod` 实例。是的，由于数据绑定库，我们可以通过 ID 引用组件，这非常方便。代码如下所示：
+`android:scrollbars`属性，不出所料，为我们的文本框添加了垂直滚动条。由于信息框可能比可用空间更大，我们希望允许用户滚动查看所有文本。然而，XML 属性仅在框能够滚动时才显示滚动条。要启用此功能，我们需要在`<TextView>`上设置`movementMethod`属性。这可以在`GameFragment`中作为`binding`初始化的一部分来完成。在那里，我们添加一个`apply`块，然后将`textCurrentTurnInfo.movementMethod`赋值为一个新的`ScrollingMovementMethod`实例。是的，由于数据绑定库，我们可以通过 ID 引用组件，这非常方便。代码如下所示：
 
 ```kotlin
 FragmentGameBinding.inflate(inflater, container, false).apply {
@@ -1618,23 +1655,25 @@ FragmentGameBinding.inflate(inflater, container, false).apply {
 
 ![](img/c024742480e86eb8867e0760ebe353d7_89_0.png)
 
-同样，填充的 `android:text` 值稍后会移除，但在我们运行应用时，屏幕上有一些内容会很方便。`tools:text` 值将保留并显示在预览窗口中。现在我们可以继续处理这个页面最有趣的部分，至少从 UI 的角度来看是这样。
+同样，填充的`android:text`值稍后会移除，但在我们运行应用时，屏幕上有一些内容会很方便。`tools:text`值将保留并显示在预览窗口中。现在我们可以继续处理这个页面最有趣的部分，至少从 UI 的角度来看是这样。
 
-### 包含六个硬币槽位
+## 包含六个硬币槽位
 
-我们游戏的便士槽位将显示哪些槽位已填充，哪些是空闲的，加上第六个始终开放的槽位。正如你可能猜到的，我们可以使用 `<include>` 标签来处理所有六个槽位。添加一些条件逻辑，就像我们在本章前面处理玩家列表项时所做的那样，我们可以节省大量代码。
+我们游戏的便士槽位将显示哪些槽位已填充，哪些是空闲的，加上第六个始终开放的槽位。正如你可能猜到的，我们可以使用`<include>`标签来处理所有六个槽位。添加一些条件逻辑，就像我们在本章前面处理玩家列表项时所做的那样，我们可以节省大量代码。
 
-这里的计划是为槽位创建布局资源文件 `layout_coin_slot.xml`，然后在 `fragment_game.xml` 中使用一些参数将其 `<include>` 六次。一旦我们完成这些创建，我们将查看整个 `fragment_game.xml` 的当前状态，以及屏幕的外观。
+这里的计划是为槽位创建布局资源文件`layout_coin_slot.xml`，然后在`fragment_game.xml`中使用一些参数将其`<include>`六次。一旦我们完成这些创建，我们将查看整个`fragment_game.xml`的当前状态，以及屏幕的外观。
 
 ### 创建硬币槽位布局 XML
 
-`layout_coin_slot.xml` 将位于 `res/layout` 下；右键单击，选择 New > Layout Resource File，并为其指定一个 `ConstraintLayout` 根元素。此布局文件将包含一个硬币 `<ImageView>`、一个用于槽位编号的 `<TextView>`，以及一个通用的 `<View>`，用于给槽位添加一些形状。
+`layout_coin_slot.xml`将位于`res/layout`下；右键单击，选择`New > Layout Resource File`，并为其指定一个`ConstraintLayout`根元素。此布局文件将包含一个硬币`<ImageView>`、一个用于槽位编号的`<TextView>`，以及一个通用的`<View>`，用于给槽位添加一些形状。
 
 ### 获取硬币 Drawable
 
-Android Studio 没有包含一个适合我们使用的硬币 drawable，因此我们将回到 [https://materialdesignicons.com/](https://materialdesignicons.com/) 获取一个，特别是 [https://materialdesignicons.com/icon/currency-usd-circle-outline](https://materialdesignicons.com/icon/currency-usd-circle-outline)。我选择这个图标是因为我喜欢它在游戏中的外观，但如果你愿意，也可以选择不同的图标。将图标保存到 `res/drawable/mdi_coin_black_24dp.xml`，以遵循与上一章 *D6* 图标相同的命名约定（如果你选择了不同的图像，请更新名称）。图像准备好后，我们就可以开始构建 XML 了。
+Android Studio 没有包含一个适合我们使用的硬币 drawable，因此我们将回到 [https://materialdesignicons.com/](https://materialdesignicons.com/) 获取一个，特别是 [https://materialdesignicons.com/icon/currency-usd-circle-outline](https://materialdesignicons.com/icon/currency-usd-circle-outline)。我选择这个图标是因为我喜欢它在游戏中的外观，但如果你愿意，也可以选择不同的图标。将图标保存到`res/drawable/mdi_coin_black_24dp.xml`，以遵循与上一章 *D6* 图标相同的命名约定（如果你选择了不同的图像，请更新名称）。图像准备好后，我们就可以开始构建 XML 了。
 
-你现在应该知道流程了：通用的 `<layout>` 标签包含一个 `<ConstraintLayout>`，然后是我们的视图组件。此外，我们将包含一个 `<variable>`，`slotNum`，用于 `<TextView>`。布局文件将如下所示：
+你现在应该知道流程了：通用的`<layout>`标签包含一个`<ConstraintLayout>`，然后是我们的视图组件。此外，我们将包含一个`<variable>`，`slotNum`，用于`<TextView>`。布局文件将如下所示：
+
+
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -1691,7 +1730,9 @@ Android Studio 没有包含一个适合我们使用的硬币 drawable，因此�
 同样，我希望到现在为止大部分内容看起来都很熟悉。需要指出的部分是：
 
 - 所有 `<ImageView>` 标签都应包含 `android:contentDescription` 属性以支持无障碍访问，特别是屏幕阅读器。确保你在 `strings.xml` 中创建了 `@string/coin_icon` 条目。
+
 - 我们再次使用 `tools:text` 在 Android Studio 中填充一个值。
+
 - 如果你在上一章错过了，我们使用 `dp` 来设置视图尺寸，使用 `sp` 来设置文本尺寸。这两个值都会根据用户的设备进行缩放，这对我们处理不同的设备尺寸/分辨率等非常有帮助。
 
 ### 等等，最后一个文本值是怎么回事？
@@ -1872,19 +1913,21 @@ dependencies {
 
 ![](img/c024742480e86eb8867e0760ebe353d7_99_0.png)
 
-同步完成后，我们就可以继续添加 `NewPlayer` 和 `PickPlayersViewModel` 类了。我们将从 `NewPlayer` 开始，因为稍后会在 `PickPlayersViewModel` 中使用它。
 
-### 添加 NewPlayer 数据类
 
-`NewPlayer` 数据类将保存关于我们想要添加到游戏中的每个玩家的信息。该类将与视图中每个玩家条目的内容相对应。这意味着我们将有一个名字、一些关于用户的属性（人类还是 AI，是否可以移除/切换），以及一些针对 AI 玩家的处理。我们稍后会回到 AI 部分，所以现在可以跳过 AI 处理。
+同步完成后，我们就可以继续添加`NewPlayer`和`PickPlayersViewModel`类了。我们将从`NewPlayer`开始，因为稍后会在`PickPlayersViewModel`中使用它。
 
-请注意，我多次提到我们正在创建一个 `data class`。在 Kotlin 中，`data class` 是一种特殊类型的类，旨在保存数据，并且编译器会为其添加一些额外的功能。这包括 `equals/hashcode` 函数、人类可读的 `toString` 函数和一个 `copy` 函数。虽然我们这里没有使用后者，但当你想要一个带有最小更改的新对象版本时，它非常有用。对于 `data class` 类型，我们的构造函数中必须至少有一个参数，并且所有参数都必须标记为 `val` 或 `var`。
+## 添加 NewPlayer 数据类
 
-为了确保我们理解清楚，`val` 使参数/对象成为一个值，这意味着它是*不可变的*，赋值不能更改。相反，带有 `var` 的对象是一个变量，意味着我们可以重新赋值。
+`NewPlayer`数据类将保存关于我们想要添加到游戏中的每个玩家的信息。该类将与视图中每个玩家条目的内容相对应。这意味着我们将有一个名字、一些关于用户的属性（人类还是 AI，是否可以移除/切换），以及一些针对 AI 玩家的处理。我们稍后会回到 AI 部分，所以现在可以跳过 AI 处理。
 
-对于 `NewPlayer`，我们希望玩家的名字是一个 `var`，这样用户就可以从前端更改该名字。所有其他参数都可以标记为 `val`。在处理玩家的 `CheckBox` 和 `SwitchCompat` 时，这可能看起来有点奇怪，但我们将对这两个字段采取略有不同的处理方式。我们将改用 `ObservableBoolean` 类来处理任何更改，因为普通变量无法与双向绑定正常工作，我们稍后会介绍这一点。
+请注意，我多次提到我们正在创建一个`data class`。在 Kotlin 中，`data class`是一种特殊类型的类，旨在保存数据，并且编译器会为其添加一些额外的功能。这包括`equals/hashcode`函数、人类可读的`toString`函数和一个`copy`函数。虽然我们这里没有使用后者，但当你想要一个带有最小更改的新对象版本时，它非常有用。对于`data class`类型，我们的构造函数中必须至少有一个参数，并且所有参数都必须标记为`val`或`var`。
 
-让我们创建我们的类——右键点击主包（在我的例子中是 `dev.mfazio.pennydrop`），然后选择 `New > Kotlin File/Class`。在那里，我们可以将名称设置为 `types.NewPlayer`，并将类型设置为 *Class*。通过在文件名中加入 `types` 部分，Android Studio 会将 `NewPlayer` 放入 `types` 包中。如果它没有自动放入 `types` 包，你可能创建的是 Kotlin File 而不是 Class。再次说明，包是我们组织代码、使内容更易于理解的方式。一旦我们创建了这个类和 `PickPlayersViewModel`，我们就可以对现有的类进行一些整理。但现在，让我们先填充我们的数据类。完整的 `NewPlayer.kt` 文件将如下所示：
+为了确保我们理解清楚，`val`使参数/对象成为一个值，这意味着它是*不可变的*，赋值不能更改。相反，带有`var`的对象是一个变量，意味着我们可以重新赋值。
+
+对于`NewPlayer`，我们希望玩家的名字是一个`var`，这样用户就可以从前端更改该名字。所有其他参数都可以标记为`val`。在处理玩家的`CheckBox`和`SwitchCompat`时，这可能看起来有点奇怪，但我们将对这两个字段采取略有不同的处理方式。我们将改用`ObservableBoolean`类来处理任何更改，因为普通变量无法与双向绑定正常工作，我们稍后会介绍这一点。
+
+让我们创建我们的类——右键点击主包（在我的例子中是`dev.mfazio.pennydrop`），然后选择`New > Kotlin File/Class`。在那里，我们可以将名称设置为`types.NewPlayer`，并将类型设置为*Class*。通过在文件名中加入`types`部分，Android Studio 会将`NewPlayer`放入`types`包中。如果它没有自动放入`types`包，你可能创建的是 Kotlin File 而不是 Class。再次说明，包是我们组织代码、使内容更易于理解的方式。一旦我们创建了这个类和`PickPlayersViewModel`，我们就可以对现有的类进行一些整理。但现在，让我们先填充我们的数据类。完整的`NewPlayer.kt`文件将如下所示：
 
 ```
 package dev.mfazio.pennydrop.types
@@ -1900,19 +1943,19 @@ data class NewPlayer(
 )
 ```
 
-在继续之前，我想指出几点。注意，我们可以为每个参数设置默认值；这意味着我们可以创建一个 `NewPlayer` 实例，而无需担心设置每个值（因为大多数新玩家的设置方式都是相同的）。
+在继续之前，我想指出几点。注意，我们可以为每个参数设置默认值；这意味着我们可以创建一个`NewPlayer`实例，而无需担心设置每个值（因为大多数新玩家的设置方式都是相同的）。
 
-另外，对于习惯使用 Java 的人来说，这种语法可能看起来有些奇怪。通常，类需要在构造函数和函数周围使用花括号 `{ ... }`，但在 Kotlin 中则不需要。如果类中没有任何函数，我们只需声明类名加上所需的参数即可。这是 Kotlin 的一个常见趋势：你只编写理解代码所需的代码，不多不少。这使我们能够跳过在其他语言中常见的许多样板代码。
+另外，对于习惯使用 Java 的人来说，这种语法可能看起来有些奇怪。通常，类需要在构造函数和函数周围使用花括号`{ ... }`，但在 Kotlin 中则不需要。如果类中没有任何函数，我们只需声明类名加上所需的参数即可。这是 Kotlin 的一个常见趋势：你只编写理解代码所需的代码，不多不少。这使我们能够跳过在其他语言中常见的许多样板代码。
 
-最后，在 Kotlin 构造函数中，只要参数在顺序上靠前并且会先被初始化，我们就可以在构造函数中使用其他参数。在我们的例子中，如果用户不能从游戏中移除，我们将 `isIncluded` 默认设置为 `true`，否则默认设置为 `false`。
+最后，在 Kotlin 构造函数中，只要参数在顺序上靠前并且会先被初始化，我们就可以在构造函数中使用其他参数。在我们的例子中，如果用户不能从游戏中移除，我们将`isIncluded`默认设置为`true`，否则默认设置为`false`。
 
-创建了 `NewPlayer` 后，我们可以继续处理 `PickPlayersViewModel` 及其 `NewPlayer` 对象列表。
+创建了`NewPlayer`后，我们可以继续处理`PickPlayersViewModel`及其`NewPlayer`对象列表。
 
-### 添加 PickPlayersViewModel
+## 添加 PickPlayersViewModel
 
-我们现在不会在 `PickPlayersViewModel` 中做太多事情，因为我们只需要一个 `NewPlayer` 的 `List`，并将其包装在 `LiveData` 实例中（在我们的例子中是 `MutableLiveData`）。让我们创建这个类，然后添加 `NewPlayer` 对象。我们将在初始化过程中添加一些有趣的内容。
+我们现在不会在`PickPlayersViewModel`中做太多事情，因为我们只需要一个`NewPlayer`的`List`，并将其包装在`LiveData`实例中（在我们的例子中是`MutableLiveData`）。让我们创建这个类，然后添加`NewPlayer`对象。我们将在初始化过程中添加一些有趣的内容。
 
-就像我们处理 `NewPlayer` 一样，我们可以通过右键点击主包并选择 `New > Kotlin File/Class` 来将 `PickPlayersViewModel` 添加到我们的项目中。在那里，我们可以将名称设置为 `viewmodels.PickPlayersViewModel`，类型设置为 `Class`。这将把类放入新的 `viewmodels` 包中。在代码中，我们将使我们的类继承自 `ViewModel`。类声明将如下所示：
+就像我们处理`NewPlayer`一样，我们可以通过右键点击主包并选择`New > Kotlin File/Class`来将`PickPlayersViewModel`添加到我们的项目中。在那里，我们可以将名称设置为`viewmodels.PickPlayersViewModel`，类型设置为`Class`。这将把类放入新的`viewmodels`包中。在代码中，我们将使我们的类继承自`ViewModel`。类声明将如下所示：
 
 ```
 class PickPlayersViewModel : ViewModel() {
@@ -1920,21 +1963,21 @@ class PickPlayersViewModel : ViewModel() {
 }
 ```
 
-这个代码块是 Kotlin 中继承的一个例子：`PickPlayersViewModel` 现在是 `ViewModel` 的子类。由于 `ViewModel` 类有一个构造函数，我们需要告诉编译器在创建子类时如何初始化父类，我们通过 *constructor invocation* 语法来实现。这就是为什么 `ViewModel` 类像函数一样被引用。该语法告诉编译器，当我们创建 `PickPlayersViewModel` 的实例时，我们正在调用 `ViewModel` 的默认构造函数。好处是，如果你忘记了这部分，Android Studio 会提醒你修复它。
+这个代码块是 Kotlin 中继承的一个例子：`PickPlayersViewModel`现在是`ViewModel`的子类。由于`ViewModel`类有一个构造函数，我们需要告诉编译器在创建子类时如何初始化父类，我们通过*constructor invocation*语法来实现。这就是为什么`ViewModel`类像函数一样被引用。该语法告诉编译器，当我们创建`PickPlayersViewModel`的实例时，我们正在调用`ViewModel`的默认构造函数。好处是，如果你忘记了这部分，Android Studio 会提醒你修复它。
 
-### 将 NewPlayer 实例添加到 PickPlayersViewModel
+## 将 NewPlayer 实例添加到 PickPlayersViewModel
 
-我们将在 `PickPlayersViewModel` 中声明 `NewPlayer` 实例的列表，然后将可能的玩家添加到该列表中。我们可以提前这样做，因为我们知道有六个玩家位置，并且他们是否在游戏中由 `isIncluded` 属性控制。
+我们将在`PickPlayersViewModel`中声明`NewPlayer`实例的列表，然后将可能的玩家添加到该列表中。我们可以提前这样做，因为我们知道有六个玩家位置，并且他们是否在游戏中由`isIncluded`属性控制。
 
-让我们先看看 `LiveData` 声明，然后处理玩家本身。
+让我们先看看`LiveData`声明，然后处理玩家本身。
 
 ```
 val players = MutableLiveData<List<NewPlayer>>()
 ```
 
-这将 `players` 创建为一个 `MutableLiveData` 类型的公共值，它本身包含一个 `NewPlayer` 的列表。注意，我们不必显式设置 `players` 的类型，因为我们可以从赋值中看到类型。这是一个有用的约定，可以避免在我们的应用程序中添加额外的冗余代码。
+这将`players`创建为一个`MutableLiveData`类型的公共值，它本身包含一个`NewPlayer`的列表。注意，我们不必显式设置`players`的类型，因为我们可以从赋值中看到类型。这是一个有用的约定，可以避免在我们的应用程序中添加额外的冗余代码。
 
-现在我们可以继续创建玩家（或者玩家位置，随你怎么想）。为此，我们将使用 Kotlin 的 `apply` 作用域函数（我们第一次在 Wait, What Was That Code Block? 中使用了作用域函数）。`apply` 接收调用它的对象，并运行一个代码块，其中原始对象被隐式声明为 `this`。你可以为对象赋值，然后 `apply` 返回原始对象并应用所做的修改。
+现在我们可以继续创建玩家（或者玩家位置，随你怎么想）。为此，我们将使用 Kotlin 的`apply`作用域函数（我们第一次在 Wait, What Was That Code Block? 中使用了作用域函数）。`apply`接收调用它的对象，并运行一个代码块，其中原始对象被隐式声明为`this`。你可以为对象赋值，然后`apply`返回原始对象并应用所做的修改。
 
 在我们的例子中，我们将这样做：
 
@@ -1944,13 +1987,13 @@ val players = MutableLiveData<List<NewPlayer>>().apply {
 }
 ```
 
-#### 集合辅助函数
+### 集合辅助函数
 
-Kotlin 在 `Collection` 类上有许多内置的辅助函数。`listOf`、`setOf` 和 `mapOf` 都是快速创建集合的有用函数。你可以在括号内输入一些值，也可以留空以创建一个空集合。
+Kotlin 在`Collection`类上有许多内置的辅助函数。`listOf`、`setOf`和`mapOf`都是快速创建集合的有用函数。你可以在括号内输入一些值，也可以留空以创建一个空集合。
 
-`apply` 函数是一种方便的方式，可以一次性创建对象并分配一些变量。我们稍后将在 `NewPlayer` 实例中再次使用 `apply`，但首先，让我们看一个巧妙的 Kotlin 技巧。
+`apply`函数是一种方便的方式，可以一次性创建对象并分配一些变量。我们稍后将在`NewPlayer`实例中再次使用`apply`，但首先，让我们看一个巧妙的 Kotlin 技巧。
 
-我们将创建六个 `NewPlayer` 实例，其中前两个玩家不能从游戏中移除，因为我们至少需要两个玩家才能进行游戏。此外，第一个玩家不能切换为 AI 玩家，因为必须有人在玩游戏。创建一定数量项目的快速方法如下：我们创建一个 `IntRange`，然后将每个项目映射到我们类的一个新实例。我们不需要在 `map` 中使用当前索引；我们只是想要一个与 `IntRange` 长度相等的项目列表。创建六个 `NewPlayer` 实例的代码如下所示：
+我们将创建六个`NewPlayer`实例，其中前两个玩家不能从游戏中移除，因为我们至少需要两个玩家才能进行游戏。此外，第一个玩家不能切换为 AI 玩家，因为必须有人在玩游戏。创建一定数量项目的快速方法如下：我们创建一个`IntRange`，然后将每个项目映射到我们类的一个新实例。我们不需要在`map`中使用当前索引；我们只是想要一个与`IntRange`长度相等的项目列表。创建六个`NewPlayer`实例的代码如下所示：
 
 ```
 kotlin
@@ -1959,7 +2002,7 @@ kotlin
 }
 ```
 
-这将给我们想要的 `NewPlayer` 实例的 `List`，所以现在我们只需要添加条件逻辑。`canBeRemoved` 对于除前两个玩家之外的所有玩家都是 `true`，而 `canBeToggled` 对于除第一个玩家之外的所有玩家都是 `true`。我们可以添加几个大于语句来设置这两个字段：
+这将给我们想要的`NewPlayer`实例的`List`，所以现在我们只需要添加条件逻辑。`canBeRemoved`对于除前两个玩家之外的所有玩家都是`true`，而`canBeToggled`对于除第一个玩家之外的所有玩家都是`true`。我们可以添加几个大于语句来设置这两个字段：
 
 ```
 kotlin
@@ -1971,9 +2014,9 @@ kotlin
 }
 ```
 
-注意，我们只需要设置我们想要的参数，其他所有参数都使用其默认值。此外，由于我们参数的顺序，`isIncluded` 的值基于 `canBeRemoved`。
+注意，我们只需要设置我们想要的参数，其他所有参数都使用其默认值。此外，由于我们参数的顺序，`isIncluded`的值基于`canBeRemoved`。
 
-正如软件开发中一贯的情况，我们可以通过多种方式处理这个逻辑。我喜欢简洁的 `(1..6)` 语法来创建项目列表，希望这是一个清晰的例子，展示了如何在代码中使用 `apply`。让我们最后看一下完整的 `PickPlayersViewModel`：
+正如软件开发中一贯的情况，我们可以通过多种方式处理这个逻辑。我喜欢简洁的`(1..6)`语法来创建项目列表，希望这是一个清晰的例子，展示了如何在代码中使用`apply`。让我们最后看一下完整的`PickPlayersViewModel`：
 
 ```
 kotlin
@@ -1993,48 +2036,50 @@ class PickPlayersViewModel : ViewModel() {
 }
 ```
 
-随着 `NewPlayer` 和 `PickPlayersViewModel` 的完成，我们可以回到 `PickPlayersFragment` 和我们的布局文件，开始使用新的 `ViewModel` 进行数据绑定。
+随着`NewPlayer`和`PickPlayersViewModel`的完成，我们可以回到`PickPlayersFragment`和我们的布局文件，开始使用新的`ViewModel`进行数据绑定。
 
-### 将 ViewModel 绑定到 Fragment（选择玩家）
+## 将 ViewModel 绑定到 Fragment（选择玩家）
 
-现在是我们真正深入数据绑定库的时候了。到目前为止，我们已经完成了一系列设置（抱歉，还有一点更多）以及一些使用 `isVisible` 和 `isChecked` 的静态绑定，但使用动态变量才是数据绑定真正大放异彩的地方。能够在代码中设置复杂对象，然后以最少的工作将其绑定到 UI，这就是我如此强烈推荐数据绑定的原因。完成下一节将为我们后续章节中显示来自数据库或 Web 服务的数据做好准备。但首先，我们需要完成更多事情才能使这一切正常工作。
+现在是我们真正深入数据绑定库的时候了。到目前为止，我们已经完成了一系列设置（抱歉，还有一点更多）以及一些使用`isVisible`和`isChecked`的静态绑定，但使用动态变量才是数据绑定真正大放异彩的地方。能够在代码中设置复杂对象，然后以最少的工作将其绑定到 UI，这就是我如此强烈推荐数据绑定的原因。完成下一节将为我们后续章节中显示来自数据库或 Web 服务的数据做好准备。但首先，我们需要完成更多事情才能使这一切正常工作。
 
-### 更新 PickPlayersFragment 以使用 PickPlayersViewModel
+## 更新 PickPlayersFragment 以使用 PickPlayersViewModel
 
-要使用我们刚刚创建的 `PickPlayersViewModel`，我们需要做几件事：
+要使用我们刚刚创建的`PickPlayersViewModel`，我们需要做几件事：
 
-- 1. 在 `fragment_pick_players` 中添加一个名为 `viewModel` 的 `<variable>`，类型为 `PickPlayersViewModel`。
-- 2. 通过 `by activityViewModels()` 语法声明一个 `PickPlayersViewModel` 类型的值。
-- 3. 将该实例绑定到 `FragmentPickPlayersBinding` 上的 `viewModel` 变量。
+- 1. 在`fragment_pick_players`中添加一个名为`viewModel`的`<variable>`，类型为`PickPlayersViewModel`。
 
-一旦这些步骤完成，我们就可以在布局文件中开始使用 `viewModel` 来引用我们在上一节创建的 `NewPlayer` 实例。现在，前往 `fragment_pick_players`！
+- 2. 通过`by activityViewModels()`语法声明一个`PickPlayersViewModel`类型的值。
 
-### 在布局文件中添加 viewModel 变量
+- 3. 将该实例绑定到`FragmentPickPlayersBinding`上的`viewModel`变量。
 
-在 `fragment_pick_players` 内部，我们将添加一个新的 `<data>`，其中包含一个 `vm` `<variable>`。这就像我们在
+一旦这些步骤完成，我们就可以在布局文件中开始使用`viewModel`来引用我们在上一节创建的`NewPlayer`实例。现在，前往`fragment_pick_players`！
 
-### 获取 PickPlayersViewModel 实例
+## 在布局文件中添加 viewModel 变量
 
-正如我们之前讨论的，`ViewModel` 类对于处理数据并以生命周期感知的方式将数据发送到 UI 组件非常有用。`ViewModel` 类的另一个优势是，我们还可以通过将 `ViewModel` 与父 `Activity` 关联，将其用于在 `Fragment` 类的生命周期之外存储数据。这两个概念是相关的：`ViewModel` 类不会在 UI 组件不活跃时向其发送数据，但这也意味着存储在 `ViewModel` 中的数据在使用该 `ViewModel` 的 UI 组件被销毁时不一定消失。每次创建 `PickPlayersFragment` 时，我们不必重新加载玩家列表，它只需使用我们已经在 `PickPlayersViewModel`（与 `MainActivity` 绑定）中设置好的数据即可。
+在`fragment_pick_players`内部，我们将添加一个新的`<data>`，其中包含一个`vm` `<variable>`。这就像我们在
 
-请注意，这与持久化不同，这意味着如果应用被*关闭*，数据将被销毁。但如果我们切换到游戏视图，例如，Android 操作系统可能会销毁 `PickPlayersFragment`，因为它当前不活跃。如果发生这种情况，我们通常会丢失数据，但如果数据存储在绑定到 `MainActivity` 的 `ViewModel` 中则不会。
+## 获取 PickPlayersViewModel 实例
 
-曾经，接下来的部分是三页的解释，说明如何从我们的 `Activity` 获取 `PickPlayersViewModel` 实例，以及一些来自 Kotlin 的支持概念。现在，我们只剩下这个代码块来声明和检索对象：
+正如我们之前讨论的，`ViewModel`类对于处理数据并以生命周期感知的方式将数据发送到 UI 组件非常有用。`ViewModel`类的另一个优势是，我们还可以通过将`ViewModel`与父`Activity`关联，将其用于在`Fragment`类的生命周期之外存储数据。这两个概念是相关的：`ViewModel`类不会在 UI 组件不活跃时向其发送数据，但这也意味着存储在`ViewModel`中的数据在使用该`ViewModel`的 UI 组件被销毁时不一定消失。每次创建`PickPlayersFragment`时，我们不必重新加载玩家列表，它只需使用我们已经在`PickPlayersViewModel`（与`MainActivity`绑定）中设置好的数据即可。
+
+请注意，这与持久化不同，这意味着如果应用被*关闭*，数据将被销毁。但如果我们切换到游戏视图，例如，Android 操作系统可能会销毁`PickPlayersFragment`，因为它当前不活跃。如果发生这种情况，我们通常会丢失数据，但如果数据存储在绑定到`MainActivity`的`ViewModel`中则不会。
+
+曾经，接下来的部分是三页的解释，说明如何从我们的`Activity`获取`PickPlayersViewModel`实例，以及一些来自 Kotlin 的支持概念。现在，我们只剩下这个代码块来声明和检索对象：
 
 ```kotlin
 private val pickPlayersViewModel
     by activityViewModels<PickPlayersViewModel>()
 ```
 
-这仅在我们使用 JDK 1.8 及以上版本（我们在第 1 章中设置）时有效。通常，我们还需要添加 `fragment-ktx` 库，但由于我们已经包含了 `navigation-fragment-ktx` 库，前者作为后者的传递依赖被添加了。简单来说，`navigation-fragment-ktx` 使用了 `fragment-ktx`，所以我们自动获得了 `fragment-ktx` 库的所有内容。
+这仅在我们使用 JDK 1.8 及以上版本（我们在第 1 章中设置）时有效。通常，我们还需要添加`fragment-ktx`库，但由于我们已经包含了`navigation-fragment-ktx`库，前者作为后者的传递依赖被添加了。简单来说，`navigation-fragment-ktx`使用了`fragment-ktx`，所以我们自动获得了`fragment-ktx`库的所有内容。
 
-除了更省力之外，任何绑定到给定 `Activity` 的 `Fragment` 都将获得相同的 `ViewModel` 实例，而无需我们做任何额外工作，这有助于在 `Fragment` 类之间共享数据。
+除了更省力之外，任何绑定到给定`Activity`的`Fragment`都将获得相同的`ViewModel`实例，而无需我们做任何额外工作，这有助于在`Fragment`类之间共享数据。
 
-现在我们已经将 `PickPlayersViewModel` 实例与 `MainActivity` 关联起来，我们可以继续将数据绑定到 UI。
+现在我们已经将`PickPlayersViewModel`实例与`MainActivity`关联起来，我们可以继续将数据绑定到 UI。
 
-### 绑定 PickPlayersViewModel
+## 绑定 PickPlayersViewModel
 
-目前，我们只是通过 `FragmentPickPlayersBinding` 类来填充布局，因为这启用了布局文件中的数据绑定。但我们也可以使用这个绑定类来分配变量，特别是我们刚刚检索到的 `pickPlayersViewModel` 变量。为此，我们将使用之前见过的 `apply` 作用域函数：
+目前，我们只是通过`FragmentPickPlayersBinding`类来填充布局，因为这启用了布局文件中的数据绑定。但我们也可以使用这个绑定类来分配变量，特别是我们刚刚检索到的`pickPlayersViewModel`变量。为此，我们将使用之前见过的`apply`作用域函数：
 
 ```kotlin
 private val pickPlayersViewModel
@@ -2054,17 +2099,19 @@ override fun onCreateView(
 }
 ```
 
-我们在这里做的是将 `pickPlayersViewModel` 分配给 `fragment_pick_players` 中的 `vm` `<variable>`。这意味着 `PickPlayersViewModel` 实例可以在我们的布局中使用，包括从 `ViewModel` 中获取单个玩家并将其分配给玩家项。
+我们在这里做的是将`pickPlayersViewModel`分配给`fragment_pick_players`中的`vm` `<variable>`。这意味着`PickPlayersViewModel`实例可以在我们的布局中使用，包括从`ViewModel`中获取单个玩家并将其分配给玩家项。
 
 > **ViewModel 类中不要引用 View/Lifecycle/Activity**
 >
 > ViewModel 绝不能引用视图、生命周期或任何可能持有 Activity 上下文引用的类。这样做会破坏 ViewModel 类与其他生命周期所有者之间的生命周期分离。如果出于某种原因确实需要 Application 上下文，可以使用 AndroidViewModel。
 
-### 将 NewPlayer 绑定到玩家槽位
+## 将 NewPlayer 绑定到玩家槽位
+
+
 
 `fragment_pick_players` 中的每个 `<include>` 标签都引用了我们游戏的一个可能玩家，我们可以将其连接到 `PickPlayersViewModel` 中的每个 `NewPlayer` 实例。玩家列表项随后将使用 `NewPlayer` 中的 `canBeRemoved` 和 `canBeToggled` 来处理每个项目的正确显示。更棒的是，我们可以设置每个项目的三个部分（`name`、`isIncluded` 和 `isHuman`）以链接回 `PickPlayersViewModel` 中的 `NewPlayer` 实例。这将为我们提供每个玩家的正确设置，无需任何额外工作。
 
-### 添加 app:player 属性
+## 添加 `app:player` 属性
 
 需要的第一步是将 `player_list_item.xml` 中现有的 `<variable>` 标签替换为名为 `player` 的新 `<variable>`。我们将把 `PickPlayersViewModel` 中的每个 `NewPlayer` 实例绑定到列表项，然后可以在 `player_list_item.xml` 中访问它们。
 
@@ -2089,7 +2136,7 @@ override fun onCreateView(
 
 `app:player` 属性通常不存在于 `<include>` 或任何类型的 `Layout` 上，但在 `<include>` 内部声明 `<variable>` 会为我们创建该属性。这是添加自定义属性的方法之一，另一种是*绑定适配器*，我们将在[创建绑定适配器](Create Binding Adapters)中看到。现在我们已经将玩家分配给每个玩家项，我们可以绑定来自 `NewPlayer` 的值。
 
-### 在 player_list_item.xml 中使用 NewPlayer
+## 在 `player_list_item.xml` 中使用 `NewPlayer`
 
 我们已经准备好在玩家列表项中使用 `NewPlayer` 所需的一切，因此现在我们可以更新引用旧变量的 `android:visibility` 属性。我们只需要更改三元表达式条件部分中引用的变量。
 
@@ -2103,23 +2150,23 @@ android:visibility="@{player.canBeRemoved ? View.VISIBLE : View.INVISIBLE}"
 
 现在我们的可见性配置正确，我们可以开始扩展此表单的功能。第一个项目是 `name` 字段。
 
-### 使用双向绑定绑定玩家姓名
+## 使用双向绑定绑定玩家姓名
 
-到目前为止，我们在本章中已经看到了几个数据绑定的示例，但它们都以相同的方式工作：我们在更高级别的布局中设置一个值，或者在我们的代码中设置一个值，使用ViewModel，然后将值作为属性发送到视图。如果我们想用名字做类似的事情，可以为每个玩家生成一个名字，显示在每个项目中。但如果我们更改前端的这些名字，后端的值永远不会相应改变。实际上，这没有用，因为我们会丢失用户所做的任何更改。相反，我们需要在布局中利用*双向绑定*。这意味着我们仍然从ViewModel发送值，但UI端的更改将被发送回ViewModel进行保存。例如，如果我们默认将第一个玩家的名字设为Player 1，但用户将其更改为Rolando，通过双向绑定，我们将在PickPlayersViewModel内的NewPlayer实例中存储值Rolando。
+到目前为止，我们在本章中已经看到了几个数据绑定的示例，但它们都以相同的方式工作：我们在更高级别的布局中设置一个值，或者在我们的代码中设置一个值，使用 `ViewModel`，然后将值作为属性发送到视图。如果我们想用名字做类似的事情，可以为每个玩家生成一个名字，显示在每个项目中。但如果我们更改前端的这些名字，后端的值永远不会相应改变。实际上，这没有用，因为我们会丢失用户所做的任何更改。相反，我们需要在布局中利用*双向绑定*。这意味着我们仍然从 `ViewModel` 发送值，但 UI 端的更改将被发送回 `ViewModel` 进行保存。例如，如果我们默认将第一个玩家的名字设为 `Player 1`，但用户将其更改为 `Rolando`，通过双向绑定，我们将在 `PickPlayersViewModel` 内的 `NewPlayer` 实例中存储值 `Rolando`。
 
-如果我们打算对玩家名字`<EditText>`使用单向绑定，我们会这样写：
+如果我们打算对玩家名字 `<EditText>` 使用单向绑定，我们会这样写：
 
 ```
 android:text="@{player.playerName}"
 ```
 
-但如果我们想将其更改为双向绑定表达式，我们会在同一表达式中添加一个`=`符号：
+但如果我们想将其更改为双向绑定表达式，我们会在同一表达式中添加一个 `=` 符号：
 
 ```
 android:text="@={player.playerName}"
 ```
 
-现在，我们在前端设置的名字值将被发送到PickPlayersViewModel，以便在开始游戏时使用。同样，我们需要对每个玩家项目上的CheckBox和SwitchCompat进行一些更新。在这两种情况下，我们已经在更新可见性，但现在我们需要使用`android:checked`属性将控件的状态发送回ViewModel。
+现在，我们在前端设置的名字值将被发送到 `PickPlayersViewModel`，以便在开始游戏时使用。同样，我们需要对每个玩家项目上的 `CheckBox` 和 `SwitchCompat` 进行一些更新。在这两种情况下，我们已经在更新可见性，但现在我们需要使用 `android:checked` 属性将控件的状态发送回 `ViewModel`。
 
 ```
 <CheckBox
@@ -2143,15 +2190,15 @@ android:text="@={player.playerName}"
     app:layout_constraintTop_toTopOf="@id/edit_text_player_name" />
 ```
 
-两个控件都在`android:checked`上使用双向绑定语法来发送它们的当前状态。然后我们可以在开始游戏时使用这些值。现在，这就是我们需要将UI更改发送回`PickPlayersViewModel`的所有内容。如果你想验证后端的数据，我在附录2[故障排除你的应用](Troubleshooting Your App)中有一些想法。但这不是构建此屏幕所必需的，因此我们可以继续处理AI旋转器。
+两个控件都在 `android:checked` 上使用双向绑定语法来发送它们的当前状态。然后我们可以在开始游戏时使用这些值。现在，这就是我们需要将 UI 更改发送回 `PickPlayersViewModel` 的所有内容。如果你想验证后端的数据，我在附录 2 [故障排除你的应用](Troubleshooting Your App) 中有一些想法。但这不是构建此屏幕所必需的，因此我们可以继续处理 AI 旋转器。
 
-### 将AI旋转器添加到玩家列表项
+## 将 AI 旋转器添加到玩家列表项
 
-鉴于我们正在制作游戏，有一种方法让人们与计算机控制的玩家对战会很有帮助。为此，我们将创建一些AI玩家，然后让用户选择他们面对的AI玩家。在本部分中，我们只关心为AI玩家命名，实际逻辑留待第4章[使用条件游戏逻辑更新LiveData](Update LiveData with Conditional Game Logic)。我们将创建一个AI类，其中包含多个可能的AI玩家，然后更新玩家项目以包含这些AI玩家。用户是看到玩家的名字文本字段还是AI旋转器，将取决于该玩家项目上SwitchCompat的状态。在开始UI之前，让我们创建AI类。
+鉴于我们正在制作游戏，有一种方法让人们与计算机控制的玩家对战会很有帮助。为此，我们将创建一些 AI 玩家，然后让用户选择他们面对的 AI 玩家。在本部分中，我们只关心为 AI 玩家命名，实际逻辑留待第 4 章 [使用条件游戏逻辑更新 LiveData](Update LiveData with Conditional Game Logic)。我们将创建一个 `AI` 类，其中包含多个可能的 AI 玩家，然后更新玩家项目以包含这些 AI 玩家。用户是看到玩家的名字文本字段还是 AI 旋转器，将取决于该玩家项目上 `SwitchCompat` 的状态。在开始 UI 之前，让我们创建 `AI` 类。
 
-### 创建AI类
+### 创建 `AI` 类
 
-我们的AI将是另一个数据类，这次位于game包中。目前，它只包含一个属性`name`，一个返回该名字的`toString`方法，以及一个包含`AI`列表`basicAI`的伴生对象。在这里，我们将声明八个AI玩家用于旋转器。代码如下：
+我们的 AI 将是另一个数据类，这次位于 `game` 包中。目前，它只包含一个属性 `name`，一个返回该名字的 `toString` 方法，以及一个包含 `AI` 列表 `basicAI` 的伴生对象。在这里，我们将声明八个 AI 玩家用于旋转器。代码如下：
 
 ```
 package dev.mfazio.pennydrop.game
@@ -2176,9 +2223,9 @@ data class AI(val name: String) {
 }
 ```
 
-这个类内容不多，但有些东西对你来说可能是新的。伴生对象语法表示与给定类关联的对象。每个类只有一个此对象的实例（意味着它是单例），其中的函数/值/变量可以以类似于我们引用静态类型的方式访问。在这种情况下，我们可以通过引用`AI.basicAI`在其他地方获取`basicAI`。
+这个类内容不多，但有些东西对你来说可能是新的。伴生对象语法表示与给定类关联的对象。每个类只有一个此对象的实例（意味着它是单例），其中的函数/值/变量可以以类似于我们引用静态类型的方式访问。在这种情况下，我们可以通过引用 `AI.basicAI` 在其他地方获取 `basicAI`。
 
-由于新的`toString`函数只是返回`AI`实例上的`name`值，我们可以使用表达式语法直接将`name`赋值给`toString`。这等同于：
+由于新的 `toString` 函数只是返回 `AI` 实例上的 `name` 值，我们可以使用表达式语法直接将 `name` 赋值给 `toString`。这等同于：
 
 ```
 override fun toString(): String {
@@ -2186,17 +2233,17 @@ override fun toString(): String {
 }
 ```
 
-最后可能看起来奇怪的部分是`basicAI`上的`@JvmStatic`注解。添加此注解告诉编译器为`basicAI`创建一个额外的静态get方法。这将允许我们在玩家列表项中以静态方式引用`basicAI`，我们稍后会看到。由于这是AI类目前所需的全部内容，我们将在`player_list_item.xml`中添加旋转器列表。
+最后可能看起来奇怪的部分是 `basicAI` 上的 `@JvmStatic` 注解。添加此注解告诉编译器为 `basicAI` 创建一个额外的静态 get 方法。这将允许我们在玩家列表项中以静态方式引用 `basicAI`，我们稍后会看到。由于这是 `AI` 类目前所需的全部内容，我们将在 `player_list_item.xml` 中添加旋转器列表。
 
-### 在player_list_item.xml中添加AI旋转器
+### 在 `player_list_item.xml` 中添加 AI 旋转器
 
-我一直在提到`<Spinner>`标签，这在HTML中有时被称为“下拉列表”或“选择”。`<Spinner>`包含一定数量的项目，并允许用户选择其中一个项目。我们的AI `<Spinner>`将位于与名字`<EditText>`相同的位置，我们将使用与玩家项目关联的`<SwitchCompat>`来切换显示哪一个。因此，`<Spinner>`的约束将在所有四个边上与`<EditText>`匹配。我们还需要在`<EditText>`和`<Spinner>`上添加另一个`android:visibility`属性，基于玩家的`isHuman`值。
+我一直在提到 `<Spinner>` 标签，这在 HTML 中有时被称为“下拉列表”或“选择”。`<Spinner>` 包含一定数量的项目，并允许用户选择其中一个项目。我们的 AI `<Spinner>` 将位于与名字 `<EditText>` 相同的位置，我们将使用与玩家项目关联的 `<SwitchCompat>` 来切换显示哪一个。因此，`<Spinner>` 的约束将在所有四个边上与 `<EditText>` 匹配。我们还需要在 `<EditText>` 和 `<Spinner>` 上添加另一个 `android:visibility` 属性，基于玩家的 `isHuman` 值。
 
-最后，一旦我们完成了条件逻辑，我们就可以处理AI项目本身了。通常，我们需要创建某种`SpinnerAdapter`来包含我们的项目，但得益于数据绑定库，我们将采取不同的方法。`android:entries`属性将允许我们将一个对象绑定为`<Spinner>`中的项目列表。
+最后，一旦我们完成了条件逻辑，我们就可以处理 AI 项目本身了。通常，我们需要创建某种 `SpinnerAdapter` 来包含我们的项目，但得益于数据绑定库，我们将采取不同的方法。`android:entries` 属性将允许我们将一个对象绑定为 `<Spinner>` 中的项目列表。
 
-在我们的例子中，我们可以使用`AI.basicAI`或`AI.getBasicAI()`作为`android:entries`属性。有两个选项的原因是，前者是Kotlin属性，而后者是为Java使用而生成的getter方法。现在，我们通常希望全部采用Kotlin方法，但如果你使用`AI.basicAI`，Android Studio会报错（即使它有效）。相反，你可以在绑定中使用Java getter语法来避免错误。
+在我们的例子中，我们可以使用 `AI.basicAI` 或 `AI.getBasicAI()` 作为 `android:entries` 属性。有两个选项的原因是，前者是 Kotlin 属性，而后者是为 Java 使用而生成的 getter 方法。现在，我们通常希望全部采用 Kotlin 方法，但如果你使用 `AI.basicAI`，Android Studio 会报错（即使它有效）。相反，你可以在绑定中使用 Java getter 语法来避免错误。
 
-无论你采用哪种AI对象列表方法，我们都需要更新`NewPlayer`以包含一个新的`Int`变量——`selectedAIPosition`。
+无论你采用哪种 AI 对象列表方法，我们都需要更新 `NewPlayer` 以包含一个新的 `Int` 变量——`selectedAIPosition`。
 
 ```
 data class NewPlayer(
@@ -2210,7 +2257,7 @@ data class NewPlayer(
 )
 ```
 
-这将跟踪所选AI的索引（从`AI.basicAI`或`AI.getBasicAI`检索）。在我们的XML中，我们将使用`android:selectedItemPosition`属性与`selectedAIPosition`。所有这些部分在布局文件中将如下所示：
+这将跟踪所选 AI 的索引（从 `AI.basicAI` 或 `AI.getBasicAI` 检索）。在我们的 XML 中，我们将使用 `android:selectedItemPosition` 属性与 `selectedAIPosition`。所有这些部分在布局文件中将如下所示：
 
 ```
 <Spinner
@@ -2226,7 +2273,7 @@ data class NewPlayer(
     app:layout_constraintTop_toTopOf="@id/edit_text_player_name" />
 ```
 
-我们已经确定可以使用`AI.basicAI`或`AI.getBasicAI`来获取AI选项列表，但我们还没有确定*为什么*它们可用。这是因为我们在AI类中添加了`@JvmStatic`注解。没有它，数据绑定库将无法弄清楚如何发送数据。要使用`AI.basicAI`或`AI.getBasicAI`，我们还需要在`<data>`块内导入`AI`类型：
+我们已经确定可以使用 `AI.basicAI` 或 `AI.getBasicAI` 来获取 AI 选项列表，但我们还没有确定*为什么*它们可用。这是因为我们在 `AI` 类中添加了 `@JvmStatic` 注解。没有它，数据绑定库将无法弄清楚如何发送数据。要使用 `AI.basicAI` 或 `AI.getBasicAI`，我们还需要在 `<data>` 块内导入 `AI` 类型：
 
 ```
 <data>
@@ -2238,7 +2285,7 @@ data class NewPlayer(
 </data>
 ```
 
-另外值得注意的是，`android:selectedItemPosition`是与我们`NewPlayer`上新属性`selectedAIPosition`的双向绑定表达式。否则，此项目与我们之前创建的`<EditText>`类似。说到那个`<EditText>`，别忘了在那里包含`android:visibility`属性：
+另外值得注意的是，`android:selectedItemPosition` 是与我们 `NewPlayer` 上新属性 `selectedAIPosition` 的双向绑定表达式。否则，此项目与我们之前创建的 `<EditText>` 类似。说到那个 `<EditText>`，别忘了在那里包含 `android:visibility` 属性：
 
 ```
 <EditText
@@ -2248,15 +2295,16 @@ data class NewPlayer(
     android:layout_margin="5dp"
     android:hint="@string/player_name"
     android:inputType="textPersonName"
+    android:text="@={player.playerName}"
+    android:visibility="@{player.isHuman ? View.VISIBLE : View.INVISIBLE}"
+    app:layout_constraintEnd_toStartOf="@id/switch_player_type"
+    app:layout_constraintStart_toEndOf="@id/checkbox_player_active"
+    app:layout_constraintTop_toTopOf="parent" />
 ```
 
-android:text="@={player.playerName}"
-android:visibility="@{player.isHuman ? View.VISIBLE : View.INVISIBLE}"
-app:layout_constraintEnd_toStartOf="@id/switch_player_type"
-app:layout_constraintStart_toEndOf="@id/checkbox_player_active"
-app:layout_constraintTop_toTopOf="parent" />
+既然我们现在从前端获取了一个 AI（或者至少是它的索引），我们可以通过一个名为 `selectedAI` 的新函数来获取当前选中的 AI 对象。如果 `isHuman` 为 `true` 或者给定索引处的 AI 找不到，该函数将返回 `null`。
 
-既然我们现在从前端获取了一个AI（或者至少是它的索引），我们可以通过一个名为 `selectedAI` 的新函数来获取当前选中的AI对象。如果 `isHuman` 为 `true` 或者给定索引处的AI找不到，该函数将返回 `null`。
+
 
 ```
 data class NewPlayer(
@@ -2278,31 +2326,31 @@ data class NewPlayer(
 
 现在表单已经按照游戏所需的方式工作了，但我们可以让它更美观、更用户友好一些。让我们继续添加一些漂亮的UI功能：禁用被排除的玩家以及为 `<SwitchCompat>` 添加图标。这两项更改将使应用感觉更精致。
 
-### 自定义玩家列表项
+## 自定义玩家列表项
 
 同样，选择玩家屏幕目前功能齐全，但一旦有真实用户使用应用，肯定会有一些困惑。没有任何提示告诉用户勾选或取消勾选玩家复选框会发生什么，或者末尾的开关意味着什么。禁用未勾选的项目可以给用户一个提示，让他们知道勾选框时正在做什么，因为他们以前见过这样的表单。
 
 对于 `<SwitchCompat>` 标签，我们可以将开/关状态从通用外观的开关更改为人类和AI图标。这样，人们就能快速了解每个控件的状态，而无需在屏幕上放置大量文本。首先是 `<CheckBox>` 和 `android:enabled` 属性。
 
-### 允许项目启用和禁用
+## 允许项目启用和禁用
 
 我们希望禁用任何未包含在游戏中的玩家，这由每行中的复选框决定。这有两个目的：告诉用户该复选框的作用，并避免设置未使用的玩家。要禁用玩家列表项中的视图，我们将使用 `android:enabled` 属性，该属性将引用 `player.isIncluded`。`<EditText>`、`<Spinner>` 和 `<SwitchCompat>` 标签都将包含 `android:enabled="@{player.isIncluded}"`。这样做将根据 `<CheckBox>` 的状态禁用这些视图，在我们为几个玩家输入信息后，效果如下所示：
 
 ![](img/c024742480e86eb8867e0760ebe353d7_121_0.png)
 
-禁用这些视图使用户更清楚地知道玩家未包含在游戏中。然而，切换到AI的玩家与被禁用的玩家之间的区别有点难以分辨。此外，我仍然认为人们一眼看不出后一个 `<SwitchCompat>` 标签的状态。我们需要在该开关上添加一些图标，摆脱灰色选项（这将意味着 *禁用* 而不是 *AI*）。
+禁用这些视图使用户更清楚地知道玩家未包含在游戏中。然而，切换到AI的玩家与被禁用的玩家之间的区别有点难以分辨。此外，我仍然认为人们一眼看不出后一个 `<SwitchCompat>` 标签的状态。我们需要在该开关上添加一些图标，摆脱灰色选项（这将意味着*禁用*而不是*AI*）。
 
-### 为玩家类型开关添加一些颜色
+## 为玩家类型开关添加一些颜色
 
-选择玩家屏幕的最后一项改进是玩家类型 `<SwitchCompat>`。让它在人脸和机器人之间切换，比在粉色和灰色之间切换的开关能告诉用户更多信息。我们将添加一个新图标（机器人）、一个新的 `drawable` 背景，以及一个动态 `color` 文件，该文件根据 `<SwitchCompat>` 的状态更改其颜色。
+选择玩家屏幕的最后一项改进是玩家类型 `<SwitchCompat>`。让它在人脸和机器人之间切换，比在粉色和灰色之间切换的开关能告诉用户更多信息。我们将添加一个新图标（机器人）、一个新的`drawable`背景，以及一个动态`color`文件，该文件根据 `<SwitchCompat>` 的状态更改其颜色。
 
-### 添加Android图标
+## 添加Android图标
 
-添加我们的机器人图标与上一章中其他内置图标的方式相同：右键单击 `res/drawable` 并选择 New Vector Asset。在那里，选择 android 剪贴画，然后在 Asset Studio 屏幕上单击 Next 和 Finish。这将创建一个新的机器人头图标（属于未命名的Android吉祥物，非正式名称为Bugdroid），用于 `<SwitchCompat>`。一旦它准备就绪，我们就可以使用这个新图标和现有的 Face 图标创建我们的 `drawable` 背景。
+添加我们的机器人图标与上一章中其他内置图标的方式相同：右键单击`res/drawable`并选择 New Vector Asset。在那里，选择 android 剪贴画，然后在 Asset Studio 屏幕上单击 Next 和 Finish。这将创建一个新的机器人头图标（属于未命名的Android吉祥物，非正式名称为Bugdroid），用于 `<SwitchCompat>`。一旦它准备就绪，我们就可以使用这个新图标和现有的 Face 图标创建我们的`drawable`背景。
 
-### 添加drawable背景
+## 添加drawable背景
 
-在这里，我们将向 `res/drawable` 文件夹添加一个新的资源XML文件，名为 `ai_toggle_bg`。创建后，它将包含一个空的 `<selector>` 标签。在这里，我们可以添加两个 `<item>` 标签：一个用于 Face 图标，一个用于 Android 图标。两个 `<item>` 标签都将有两个属性：`android:drawable` 和 `android:state_checked`。`android:drawable` 属性将指向每个项目的图标。对于 `android:state_checked`，face 项目的属性将为 "true"，而 android 项目将为 "false"。这些属性告诉应用在 `<SwitchCompat>` 处于每种状态时使用哪个图标。
+在这里，我们将向`res/drawable`文件夹添加一个新的资源XML文件，名为`ai_toggle_bg`。创建后，它将包含一个空的 `<selector>` 标签。在这里，我们可以添加两个 `<item>` 标签：一个用于 Face 图标，一个用于 Android 图标。两个 `<item>` 标签都将有两个属性：`android:drawable` 和 `android:state_checked`。`android:drawable` 属性将指向每个项目的图标。对于 `android:state_checked`，face 项目的属性将为 "true"，而 android 项目将为 "false"。这些属性告诉应用在 `<SwitchCompat>` 处于每种状态时使用哪个图标。
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -2343,17 +2391,17 @@ data class NewPlayer(
 
 现在，有了图标确实使事情更清楚了，但图标的黑白特性在这里还有些不足。为每个图标添加一些颜色将使 `<SwitchCompat>` 在屏幕上真正突出，并使用户更清楚地看到变化。
 
-### 为开关添加颜色
+## 为开关添加颜色
 
-为 `<SwitchCompat>` 添加颜色与添加图标的过程类似：我们需要一个新的资源XML文件（这次在 `res/color` 下），我们为不同的 `<SwitchCompat>` 状态添加条目，然后将其作为属性添加到 `<SwitchCompat>` 上。
+为 `<SwitchCompat>` 添加颜色与添加图标的过程类似：我们需要一个新的资源XML文件（这次在`res/color`下），我们为不同的 `<SwitchCompat>` 状态添加条目，然后将其作为属性添加到 `<SwitchCompat>` 上。
 
-如果 `res/color` 不存在，请通过右键单击 `res` 文件夹并选择 New > Android Resource Directory 来创建一个新的类型为 Color 的资源目录。
+如果`res/color`不存在，请通过右键单击`res`文件夹并选择 New > Android Resource Directory 来创建一个新的类型为 Color 的资源目录。
 
 添加新的资源文件将如下所示：
 
 ![](img/c024742480e86eb8867e0760ebe353d7_124_1.png)
 
-你的新资源XML文件 `ai_toggle_color` 被称为 *颜色状态列表资源*。颜色状态列表资源文件有一个单独的 `<selector>` 标签，其中包含一个或多个 `<item>` 标签。在我们的例子中，我们有三个 `<item>` 标签。
+你的新资源XML文件`ai_toggle_color`被称为*颜色状态列表资源*。颜色状态列表资源文件有一个单独的 `<selector>` 标签，其中包含一个或多个 `<item>` 标签。在我们的例子中，我们有三个 `<item>` 标签。
 
 所有三个条目都将基于 `<SwitchCompat>` 的状态：当 `<SwitchCompat>` 未启用时为深灰色（因为接下来的两种颜色将覆盖默认颜色），以及两个用于 `android:state_checked` 选项的项目，类似于之前：
 
@@ -2385,11 +2433,11 @@ data class NewPlayer(
     android:thumb="@drawable/ai_toggle_bg"
 ```
 
-### 创建另一个 ViewModel（游戏）
+## 创建另一个 ViewModel（游戏）
 
-这个类在高层结构上看起来与 `PickPlayersViewModel` 相似，但这里会有更多内容，因为它将处理游戏视图与我们将在第 4 章 [使用条件游戏逻辑更新 LiveData](https://example.com) 中构建的 `GameHandler` 之间的连接。
+这个类在高层结构上看起来与`PickPlayersViewModel`相似，但这里会有更多内容，因为它将处理游戏视图与我们将在第 4 章 [使用条件游戏逻辑更新 LiveData](https://example.com) 中构建的`GameHandler`之间的连接。
 
-我们将从一个空的 `GameViewModel` 类开始，稍后再添加各个部分。它看起来像这样：
+我们将从一个空的`GameViewModel`类开始，稍后再添加各个部分。它看起来像这样：
 
 ```
 package dev.mfazio.pennydrop.viewmodels
@@ -2401,23 +2449,23 @@ class GameViewModel: ViewModel() {
 }
 ```
 
-一旦 `GameViewModel` 可用，我们就可以添加一个 `List<Player>` 来保存我们在“选择玩家”视图中添加的所有玩家。不过，在此之前我们需要做一些准备工作。
+一旦`GameViewModel`可用，我们就可以添加一个`List<Player>`来保存我们在“选择玩家”视图中添加的所有玩家。不过，在此之前我们需要做一些准备工作。
 
-### 将玩家添加到游戏中
+## 将玩家添加到游戏中
 
-要将玩家加入游戏，我们需要做几件事：我们需要一个 `Player` 类，需要我之前提到的 `List<Player>`，最后，我们需要一种方法将玩家从“选择玩家”视图传递到 `GameViewModel`。现在让我们逐步了解这些步骤。
+要将玩家加入游戏，我们需要做几件事：我们需要一个`Player`类，需要我之前提到的`List<Player>`，最后，我们需要一种方法将玩家从“选择玩家”视图传递到`GameViewModel`。现在让我们逐步了解这些步骤。
 
-### 创建 Player 类
+## 创建 Player 类
 
-创建一个完全独立的 `Player` 类可能看起来有些多余，因为 `NewPlayer` 已经存在了。为什么我不一开始就创建 `Player` 类呢？
+创建一个完全独立的`Player`类可能看起来有些多余，因为`NewPlayer`已经存在了。为什么我不一开始就创建`Player`类呢？
 
-这两个类存在的原因是它们服务于不同的目的。`NewPlayer` 类旨在确定游戏中有哪些人以及他们是谁（人类还是 AI，他们的名字或哪个 AI），而 `Player` 将用于跟踪玩家在游戏中的状态（当前是否在掷硬币、剩余的便士数等）。虽然我们可以创建一个包含所有这些字段的大型 Player 类，但使用两个独立的类能更好地实现关注点分离。
+这两个类存在的原因是它们服务于不同的目的。`NewPlayer`类旨在确定游戏中有哪些人以及他们是谁（人类还是 AI，他们的名字或哪个 AI），而`Player`将用于跟踪玩家在游戏中的状态（当前是否在掷硬币、剩余的便士数等）。虽然我们可以创建一个包含所有这些字段的大型 Player 类，但使用两个独立的类能更好地实现关注点分离。
 
 话虽如此，Player 类将包含五个属性：玩家的名字、是否是人类、选择的 AI、当前是否在掷硬币，以及当前拥有的便士数量。
 
-所有属性都将有一个默认值，但只有 `selectedAI` 可以为 null。此外，我们将 `pennies` 和 `isRolling` 放在构造函数之外，因为在初始化时它们不太可能被设置为默认值以外的值。
+所有属性都将有一个默认值，但只有`selectedAI`可以为 null。此外，我们将`pennies`和`isRolling`放在构造函数之外，因为在初始化时它们不太可能被设置为默认值以外的值。
 
-最后，我们想向 Player 类添加一个名为 `addPennies` 的函数。虽然现在看起来可能有些多余，但稍后我们会遇到这样的情况：我们获得一个 `Player?` 实例，而尝试向可空类型的属性添加值会很麻烦。
+最后，我们想向 Player 类添加一个名为`addPennies`的函数。虽然现在看起来可能有些多余，但稍后我们会遇到这样的情况：我们获得一个`Player?`实例，而尝试向可空类型的属性添加值会很麻烦。
 
 完整的 Player 类代码如下所示：
 
@@ -2445,9 +2493,9 @@ data class Player(
 }
 ```
 
-注意我们如何在 `companion object` 中使用 `defaultPennyCount` 值，就像在 Java 中使用静态只读或常量值一样。
+注意我们如何在`companion object`中使用`defaultPennyCount`值，就像在 Java 中使用静态只读或常量值一样。
 
-要获得我们的 `List<Player>`，我们需要一种将 `NewPlayer` 转换为 `Player` 的方法。最好的地方是在 `NewPlayer` 类内部添加一个新函数。这个函数将获取玩家的名字（或 AI 的名字，如果适用），然后从 `NewPlayer` 映射更多值：
+要获得我们的`List<Player>`，我们需要一种将`NewPlayer`转换为`Player`的方法。最好的地方是在`NewPlayer`类内部添加一个新函数。这个函数将获取玩家的名字（或 AI 的名字，如果适用），然后从`NewPlayer`映射更多值：
 
 ```
 fun toPlayer() = Player(
@@ -2461,13 +2509,13 @@ fun toPlayer() = Player(
 )
 ```
 
-有了 `Player` 类准备就绪，我们可以继续处理 `GameViewModel` 及其 `List<Player>`。我们将同时添加属性并从“选择玩家”视图获取数据。
+有了`Player`类准备就绪，我们可以继续处理`GameViewModel`及其`List<Player>`。我们将同时添加属性并从“选择玩家”视图获取数据。
 
-### 将玩家添加到 GameViewModel
+## 将玩家添加到 GameViewModel
 
-添加 `players` 变量是快速的部分，尽管它确实使用了一个新函数 `emptyList`。这个函数（不出所料）为我们提供了一个空的 `List` 实例，其类型是我们期望的。我们本可以在这里使用 `listOf`，但 `emptyList` *稍微*更高效，并且更清楚地表明我们想要一个空列表，而不是忘记填充 `listOf` 调用。此外，让你知道它的存在是件好事。
+添加`players`变量是快速的部分，尽管它确实使用了一个新函数`emptyList`。这个函数（不出所料）为我们提供了一个空的`List`实例，其类型是我们期望的。我们本可以在这里使用`listOf`，但`emptyList`*稍微*更高效，并且更清楚地表明我们想要一个空列表，而不是忘记填充`listOf`调用。此外，让你知道它的存在是件好事。
 
-另外，为了提前规划，我们可以在 `GameViewModel` 内部创建一个名为 `startGame` 的新函数，它接收 `List<Player>` 并设置游戏。
+另外，为了提前规划，我们可以在`GameViewModel`内部创建一个名为`startGame`的新函数，它接收`List<Player>`并设置游戏。
 
 ```
 import androidx.lifecycle.MutableLiveData
@@ -2484,13 +2532,15 @@ class GameViewModel : ViewModel() {
 }
 ```
 
-添加了这些之后，我们可以进入 `PickPlayersFragment` 来获取传递过来的数据。幸运的是，使用 `ViewModel` 类使这个过程简单得多。在 `PickPlayersFragment` 内部，我们可以引入一个 `GameViewModel` 实例（就像我们对 `PickPlayersViewModel` 所做的那样），并在有人点击“播放”按钮时传输玩家。我们通过使用我们创建的 `toPlayer` 函数将每个 `NewPlayer` 映射到 `Player` 来实现这一点。
 
-请注意，由于 `players` 实际上是 `LiveData`，我们需要使用 `pickPlayersViewModel.players.value` 来获取 `List<NewPlayer>`。此外，所有 `value` 调用都返回其包含内容的可空实例，因此我们需要有一个后备方案以防它为 null，这将是一个空的 `listOf`。在我们的情况下，它永远不会是 `null`，但我们仍然需要处理这种情况。
 
-一旦我们有了 `List<NewPlayer>`，我们想要 `filter` 每个 `NewPlayer` 实例以确保 `isIncluded` 为 `true`，然后通过 `toPlayer` 函数将每个 `NewPlayer` 转换为 `Player` 实例。该转换在 `map` 块内完成，该块在对每个元素执行某种转换后从另一个 `List` 创建一个新的 `List`。请注意，在此过程中原始列表永远不会被修改，而是为您提供一个包含所有新项目的新 `List`。
+添加了这些之后，我们可以进入`PickPlayersFragment`来获取传递过来的数据。幸运的是，使用`ViewModel`类使这个过程简单得多。在`PickPlayersFragment`内部，我们可以引入一个`GameViewModel`实例（就像我们对`PickPlayersViewModel`所做的那样），并在有人点击“播放”按钮时传输玩家。我们通过使用我们创建的`toPlayer`函数将每个`NewPlayer`映射到`Player`来实现这一点。
 
-“播放”按钮功能的最后一部分是切换到 `GameFragment`。幸运的是，这只需要一行代码来获取当前的 `NavController`，然后通过 ID 导航到 `GameFragment`。
+请注意，由于`players`实际上是`LiveData`，我们需要使用`pickPlayersViewModel.players.value`来获取`List<NewPlayer>`。此外，所有`value`调用都返回其包含内容的可空实例，因此我们需要有一个后备方案以防它为`null`，这将是一个空的`listOf`。在我们的情况下，它永远不会是`null`，但我们仍然需要处理这种情况。
+
+一旦我们有了`List<NewPlayer>`，我们想要`filter`每个`NewPlayer`实例以确保`isIncluded`为`true`，然后通过`toPlayer`函数将每个`NewPlayer`转换为`Player`实例。该转换在`map`块内完成，该块在对每个元素执行某种转换后从另一个`List`创建一个新的`List`。请注意，在此过程中原始列表永远不会被修改，而是为您提供一个包含所有新项目的新`List`。
+
+“播放”按钮功能的最后一部分是切换到`GameFragment`。幸运的是，这只需要一行代码来获取当前的`NavController`，然后通过 ID 导航到`GameFragment`。
 
 ```
 class PickPlayersFragment : Fragment() {
@@ -2526,20 +2576,25 @@ class PickPlayersFragment : Fragment() {
 }
 ```
 
-通过这些更改，我们现在从显示当前玩家的信息转变为将他们发送到 `GameViewModel`。如果你想确认这一点，可以在 `GameViewModel` 的 `startGame` 函数内部设置一个断点，或者在那里添加一个 `Toast.makeText` 调用（两种方法都在附录 2 [应用故障排除](Troubleshooting_Your_App) 中介绍）。现在我们已经
+通过这些更改，我们现在从显示当前玩家的信息转变为将他们发送到`GameViewModel`。如果你想确认这一点，可以在`GameViewModel`的`startGame`函数内部设置一个断点，或者在那里添加一个`Toast.makeText`调用（两种方法都在附录 2 [应用故障排除](Troubleshooting_Your_App)中介绍）。现在我们已经
 
-### 将 `LiveData` 添加到 `GameViewModel`
+## 将`LiveData`添加到`GameViewModel`
 
-我们需要在这里添加一堆 `LiveData` 值，然后将它们绑定到 `layout_game.xml` 中的组件。这些值如下：
+我们需要在这里添加一堆`LiveData`值，然后将它们绑定到`layout_game.xml`中的组件。这些值如下：
 
-- `slots`：六个 `Slot` 对象及其当前状态。
+- `slots`：六个`Slot`对象及其当前状态。
+
 - `currentPlayer`：当前正在掷骰子的玩家。
+
 - `canRoll`：当前玩家是否可以掷骰子。
+
 - `canPass`：当前玩家是否可以跳过（记住，玩家必须至少掷一次）。
+
 - `currentTurnText`：屏幕底部的信息文本。
+
 - `currentStandingsText`：当前游戏中的分数文本。
 
-我们稍后会查看包含所有这些 `LiveData` 对象的 `GameViewModel`，但首先需要创建 `Slot` 类。
+我们稍后会查看包含所有这些`LiveData`对象的`GameViewModel`，但首先需要创建`Slot`类。
 
 ```kotlin
 package dev.mfazio.pennydrop.types
@@ -2552,7 +2607,7 @@ data class Slot(
 )
 ```
 
-呼，现在我们完成了所有这些工作，可以将所有八个 `LiveData` 值添加到 `GameViewModel` 中。大多数 `LiveData` 只是持有布尔标志（及其初始值），而 `slots` 变量是特别有趣的部分。在这里，我们将执行与[在 PickPlayersViewModel 中添加 NewPlayer 实例](Add NewPlayer Instances to PickPlayersViewModel)中类似的操作，使用 `(1..6).map { }` 代码块。这将创建六个 `Slot` 实例，包含给定的槽位编号和 `canBeFilled` 标志，除了最后一个槽位外，所有槽位都为 true。最后，我们将当前玩家设置为游戏中的第一个玩家，标记他们为正在掷骰子，并将 `canRoll` 设置为 true。
+呼，现在我们完成了所有这些工作，可以将所有八个`LiveData`值添加到`GameViewModel`中。大多数`LiveData`只是持有布尔标志（及其初始值），而`slots`变量是特别有趣的部分。在这里，我们将执行与[在 PickPlayersViewModel 中添加 NewPlayer 实例](Add NewPlayer Instances to PickPlayersViewModel)中类似的操作，使用`(1..6).map { }`代码块。这将创建六个`Slot`实例，包含给定的槽位编号和`canBeFilled`标志，除了最后一个槽位外，所有槽位都为`true`。最后，我们将当前玩家设置为游戏中的第一个玩家，标记他们为正在掷骰子，并将`canRoll`设置为`true`。
 
 ```kotlin
 class GameViewModel : ViewModel() {
@@ -2582,11 +2637,11 @@ class GameViewModel : ViewModel() {
 }
 ```
 
-设置好所有这些 `LiveData` 值后，我们可以继续将所有内容绑定在一起。
+设置好所有这些`LiveData`值后，我们可以继续将所有内容绑定在一起。
 
-### 将 ViewModel 绑定到 Fragment（游戏）
+## 将 ViewModel 绑定到 Fragment（游戏）
 
-我们在上一章的[构建另一个 Fragment（游戏）](Build Another Fragment (Game))中完成了大部分 UI 工作，所以现在需要担心的事情较少。首先需要为 `GameViewModel` 添加一个名为 `vm` 的 `<variable>`。
+我们在上一章的[构建另一个 Fragment（游戏）](Build Another Fragment (Game))中完成了大部分 UI 工作，所以现在需要担心的事情较少。首先需要为`GameViewModel`添加一个名为`vm`的`<variable>`。
 
 ```xml
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -2609,9 +2664,9 @@ class GameViewModel : ViewModel() {
 </layout>
 ```
 
-现在布局中存在 `vm` `<variable>`，我们可以返回并在 `GameFragment` 内完成绑定。这看起来类似于我们在[绑定 PickPlayersViewModel](Bind PickPlayersViewModel) 中所做的操作。我们需要获取 `GameViewModel` 的实例，然后 `apply` `GameViewModel` 绑定。
+现在布局中存在`vm` `<variable>`，我们可以返回并在`GameFragment`内完成绑定。这看起来类似于我们在[绑定 PickPlayersViewModel](Bind PickPlayersViewModel)中所做的操作。我们需要获取`GameViewModel`的实例，然后`apply` `GameViewModel`绑定。
 
-同时，我们还将设置一个 `lifecycleOwner`，这确保我们的 `LiveData` 能够正确更新。我们可以传入来自 `Fragment` 类的 `viewLifecycleOwner` 值。这告诉 `GameViewModel` 内部的 `LiveData` 遵循与传入的生命周期所有者相同的生命周期（创建/销毁等）。在我们的例子中，那就是 `GameFragment`。最后，`textCurrentTurnInfo.movementMethod` 赋值也仍然在这里。
+同时，我们还将设置一个`lifecycleOwner`，这确保我们的`LiveData`能够正确更新。我们可以传入来自`Fragment`类的`viewLifecycleOwner`值。这告诉`GameViewModel`内部的`LiveData`遵循与传入的生命周期所有者相同的生命周期（创建/销毁等）。在我们的例子中，那就是`GameFragment`。最后，`textCurrentTurnInfo.movementMethod`赋值也仍然在这里。
 
 ```kotlin
 class GameFragment : Fragment() {
@@ -2636,37 +2691,37 @@ class GameFragment : Fragment() {
 }
 ```
 
-现在 `GameViewModel` 已绑定到 `GameFragment`，我们可以在布局内完成所有绑定。我们将在最后更新槽位，因为这需要在多个文件中进行更新。让我们先在这里完成所有操作，然后再移动到其他地方。
+现在`GameViewModel`已绑定到`GameFragment`，我们可以在布局内完成所有绑定。我们将在最后更新槽位，因为这需要在多个文件中进行更新。让我们先在这里完成所有操作，然后再移动到其他地方。
 
-### 更新 fragment_game.xml 绑定
+## 更新 fragment_game.xml 绑定
 
-我们将从上到下处理布局（跳过 `Slot` 视图），将每个视图更新为使用 `GameViewModel`。第一站是 `textCurrentPlayerName <TextView>`。在这里，我们将通过引用 `vm.currentPlayer.playerName` 使用来自 `ViewModel` 的当前玩家名称。以防我们没有 `currentPlayer` 的值（比如游戏开始之前），我们还将添加一个名为 `na`（值为 N/A）的备用字符串资源值。绑定语法（记住，这不是 Kotlin 代码，而是语法语言）将如下所示：
+我们将从上到下处理布局（跳过`Slot`视图），将每个视图更新为使用`GameViewModel`。第一站是`textCurrentPlayerName <TextView>`。在这里，我们将通过引用`vm.currentPlayer.playerName`使用来自`ViewModel`的当前玩家名称。以防我们没有`currentPlayer`的值（比如游戏开始之前），我们还将添加一个名为`na`（值为 N/A）的备用字符串资源值。绑定语法（记住，这不是 Kotlin 代码，而是语法语言）将如下所示：
 
 ```xml
 android:text='@{vm.currentPlayer.playerName ?? @string/na}'
 ```
 
-有趣的是，如果 `vm.currentPlayer` 为 `null`，这个表达式仍然没问题。我们不需要包含任何额外的检查；它只会回退到 `@string/na` 字符串资源值。
+有趣的是，如果`vm.currentPlayer`为`null`，这个表达式仍然没问题。我们不需要包含任何额外的检查；它只会回退到`@string/na`字符串资源值。
 
-`textCurrentTurnInfo <TextView>` 的文本将类似，不过请确保将其转换为 `String`，因为 `Int` 会尝试引用字符串资源而不是实际的 `Int` 值。
+`textCurrentTurnInfo <TextView>`的文本将类似，不过请确保将其转换为`String`，因为`Int`会尝试引用字符串资源而不是实际的`Int`值。
 
 ```xml
 android:text='@{vm.currentPlayer.pennies + ""}'
 ```
 
-`textCoinsLeft` 不需要绑定；只需确保为剩余硬币文本创建一个字符串资源，然后使用它而不是硬编码的 `String`。
+`textCoinsLeft`不需要绑定；只需确保为剩余硬币文本创建一个字符串资源，然后使用它而不是硬编码的`String`。
 
 ```xml
 android:text='@string/coins_left'
 ```
 
-跳到布局文件的末尾，`textCurrentTurnInfo` 框将具有此绑定：
+跳到布局文件的末尾，`textCurrentTurnInfo`框将具有此绑定：
 
 ```xml
 android:text="@{vm.currentTurnText}"
 ```
 
-而 `textCurrentStandingsInfo` 将具有此绑定：
+而`textCurrentStandingsInfo`将具有此绑定：
 
 ```xml
 android:text="@{vm.currentStandingsText}"
@@ -2678,13 +2733,13 @@ android:text="@{vm.currentStandingsText}"
 
 我们想要处理的最后一部分是掷骰子和跳过按钮。我单独指出这些，因为我们对每个按钮都需要进行一些更改。
 
-### 更新按钮绑定
+## 更新按钮绑定
 
 每个按钮需要类似的更改：我们希望将文本和图像颜色更改为白色，设置按钮是否启用，并设置条件背景颜色逻辑。我们还需要为每个按钮添加点击处理程序。
 
-将内容设置为白色将非常简单，因为我们只需要为每个按钮添加两个属性：`android:textColor` 和 `android:drawableTint`。两者都将具有值 `@android:color/white`。`android:enabled` 属性将使用来自 `vm.canRoll` 或 `vm.canPass` 的值，具体取决于我们正在处理的按钮。
+将内容设置为白色将非常简单，因为我们只需要为每个按钮添加两个属性：`android:textColor`和`android:drawableTint`。两者都将具有值`@android:color/white`。`android:enabled`属性将使用来自`vm.canRoll`或`vm.canPass`的值，具体取决于我们正在处理的按钮。
 
-背景逻辑将类似，因为我们将也使用那些 `Slot` 属性。然而，这里我们将使用三元语句来决定按钮是灰色还是来自 `res/values/colors.xml` 的特定应用颜色。以下代码块用于掷骰子按钮，但两个按钮基本上相同。唯一真正的区别是使用哪个 `Slot` 属性，以及跳过按钮使用 `colorAccent`（而不是 `colorPrimary`）作为背景。
+背景逻辑将类似，因为我们将也使用那些`Slot`属性。然而，这里我们将使用三元语句来决定按钮是灰色还是来自`res/values/colors.xml`的特定应用颜色。以下代码块用于掷骰子按钮，但两个按钮基本上相同。唯一真正的区别是使用哪个`Slot`属性，以及跳过按钮使用`colorAccent`（而不是`colorPrimary`）作为背景。
 
 ```xml
 <Button
@@ -2702,17 +2757,19 @@ android:text="@{vm.currentStandingsText}"
     android:textColor="@android:color/white" />
 ```
 
-你需要将 `@color/plainGray` 条目添加到 `res/values/colors.xml`。我使用的是 `#CCC`，但你可以自由使用任何你认为好看的颜色。
+你需要将`@color/plainGray`条目添加到`res/values/colors.xml`。我使用的是`#CCC`，但你可以自由使用任何你认为好看的颜色。
 
 ![](img/c024742480e86eb8867e0760ebe353d7_138_0.png)
 
-按钮的最后一部分是将 `roll` 和 `pass` 函数添加到 `GameViewModel`。你可能在掷骰子 `<Button>` 的代码块中看到了 `android:onClick="@{() -> vm.roll()}"` 属性。这是一个监听器绑定，意味着在事件发生时运行的表达式。
 
-在监听器绑定内部，我们可以添加任何我们喜欢的内容，包括对绑定中其他 `<variable>` 引用的引用。但这目前不是必需的，所以我们只保留一个最小的表达式。
 
-由于 `roll` 和 `pass` 函数尚不存在，Android Studio 可能现在正在显示错误，所以让我们快速创建它们。
+按钮的最后一部分是将`roll`和`pass`函数添加到`GameViewModel`。你可能在掷骰子`<Button>`的代码块中看到了`android:onClick="@{() -> vm.roll()}"`属性。这是一个监听器绑定，意味着在事件发生时运行的表达式。
 
-两个函数内部初始为空，因为我们将在[更多 GameViewModel 函数：roll() 和 pass()](https://example.com)中添加功能：
+在监听器绑定内部，我们可以添加任何我们喜欢的内容，包括对绑定中其他`<variable>`引用的引用。但这目前不是必需的，所以我们只保留一个最小的表达式。
+
+由于`roll`和`pass`函数尚不存在，Android Studio可能现在正在显示错误，所以让我们快速创建它们。
+
+两个函数内部初始为空，因为我们将在[更多GameViewModel函数：roll()和pass()](https://example.com)中添加功能：
 
 ```
 fun roll() {
@@ -2724,11 +2781,11 @@ fun pass() {
 }
 ```
 
-下一步是让所有便士槽位更新为使用来自 `GameViewModel` 的数据。我们甚至可以在其中设置一些测试值，以确认所有绑定完成后一切正常。
+下一步是让所有便士槽位更新为使用来自`GameViewModel`的数据。我们甚至可以在其中设置一些测试值，以确认所有绑定完成后一切正常。
 
-### 更新槽位绑定
+## 更新槽位绑定
 
-我们每个槽位的 `<include>` 标签将从类似 `app:slotNum“@{1}”` 的形式更改为 `app:slot“@{vm.slots[0]}”`。完整的 `<include>` 标签现在将如下所示：
+我们每个槽位的`<include>`标签将从类似`app:slotNum“@{1}”`的形式更改为`app:slot“@{vm.slots[0]}”`。完整的`<include>`标签现在将如下所示：
 
 ```
 <include
@@ -2740,7 +2797,7 @@ fun pass() {
     app:slot=“@{vm.slots[0]}” />
 ```
 
-然后，在 `layout_coin_slot.xml` 中，我们可以将 `slotNum` `<variable>` 替换为 `slot`。这个 `<variable>` 将引用我们的 `Slot` 类。
+然后，在`layout_coin_slot.xml`中，我们可以将`slotNum` `<variable>`替换为`slot`。这个`<variable>`将引用我们的`Slot`类。
 
 ```
 <data>
@@ -2750,7 +2807,7 @@ fun pass() {
 </data>
 ```
 
-有了新的 `<variable>`，我们可以开始更新 `layout_coin_slot.xml` 中的每个项目。我们将采用倒序，因为 `slotNumberCoinSlot <TextView>` 是最快的更改。这里，我们只需要将 `android:text` 更新为使用 `slot.number` 而不是 `slotNum`，并设置文本颜色。我们希望如果某个槽位是玩家上次掷出的，那么该槽位的所有部分都使用我们应用的主色调（来自 `res/values/colors.xml`）。否则，所有内容都应为黑色。
+有了新的`<variable>`，我们可以开始更新`layout_coin_slot.xml`中的每个项目。我们将采用倒序，因为`slotNumberCoinSlot` `<TextView>`是最快的更改。这里，我们只需要将`android:text`更新为使用`slot.number`而不是`slotNum`，并设置文本颜色。我们希望如果某个槽位是玩家上次掷出的，那么该槽位的所有部分都使用我们应用的主色调（来自`res/values/colors.xml`）。否则，所有内容都应为黑色。
 
 ```
 android:text='@{slot.number + ""}'
@@ -2758,24 +2815,24 @@ android:textColor=
 "@{slot.lastRolled ? @color/colorPrimary : @android:color/black}"
 ```
 
-接下来是 `bottomViewCoinSlot <View>` 及其 `android:background` 属性。我们实际上做的与槽位文本相同：
+接下来是`bottomViewCoinSlot` `<View>`及其`android:background`属性。我们实际上做的与槽位文本相同：
 
 ```
 android:background=
 "@{slot.lastRolled ? @color/colorPrimary : @android:color/black}"
 ```
 
-现在我们可以回到 `coinImageCoinSlot <ImageView>`。这基本上已经设置好了，但我们目前还没有动态显示和隐藏硬币的方法。在我们的 `Slot` 类中，有 `canBeFilled` 和 `isFilled` 变量可以控制这一点，所以现在我们需要在布局中使用它们。
+现在我们可以回到`coinImageCoinSlot` `<ImageView>`。这基本上已经设置好了，但我们目前还没有动态显示和隐藏硬币的方法。在我们的`Slot`类中，有`canBeFilled`和`isFilled`变量可以控制这一点，所以现在我们需要在布局中使用它们。
 
-我们可以像处理颜色一样为 `android:visibility` 属性添加一个三元语句，但现在是引入*绑定适配器*的好时机。
+我们可以像处理颜色一样为`android:visibility`属性添加一个三元语句，但现在是引入*绑定适配器*的好时机。
 
-### 创建绑定适配器
+## 创建绑定适配器
 
-绑定允许你有效地在布局视图上创建新属性。创建一个名为 `binding` 的新包，然后在其中创建一个名为 `BindingAdapters` 的新文件。这不应该是一个类，因为我们只打算在这里放置独立的*包级函数*。这些函数不与特定类关联，而是作为包的一部分存在。我们可以通过导入 `dev.mfazio.pennydrop.binding`（或你相应的包名）将它们引入其他类。
+绑定允许你有效地在布局视图上创建新属性。创建一个名为`binding`的新包，然后在其中创建一个名为`BindingAdapters`的新文件。这不应该是一个类，因为我们只打算在这里放置独立的*包级函数*。这些函数不与特定类关联，而是作为包的一部分存在。我们可以通过导入`dev.mfazio.pennydrop.binding`（或你相应的包名）将它们引入其他类。
 
-回到绑定适配器：这些函数将接收一个 View 对象和一个属性，然后对这些值进行处理。可以在绑定适配器中避免自定义逻辑，但我们的每个函数都将包含自定义逻辑，因为我们有需要考虑的条件。
+回到绑定适配器：这些函数将接收一个View对象和一个属性，然后对这些值进行处理。可以在绑定适配器中避免自定义逻辑，但我们的每个函数都将包含自定义逻辑，因为我们有需要考虑的条件。
 
-对于这个代码块，我们将创建一个新的绑定适配器函数 `bindIsHidden`，它将在所有视图上创建一个新的 `app:isHidden` 属性。注意，新属性的名称来自与函数关联的 `@BindingAdapter` 注解。逻辑类似于我们之前在三元语句中所做的：
+对于这个代码块，我们将创建一个新的绑定适配器函数`bindIsHidden`，它将在所有视图上创建一个新的`app:isHidden`属性。注意，新属性的名称来自与函数关联的`@BindingAdapter`注解。逻辑类似于我们之前在三元语句中所做的：
 
 ```
 import android.view.View
@@ -2787,7 +2844,7 @@ fun bindIsHidden(view: View, isInvisible: Boolean) {
 }
 ```
 
-现在我们可以回到 `coinImageCoinSlot <ImageView>` 添加这个新属性。我们还将使用 `android:tint` 属性设置硬币的颜色。
+现在我们可以回到`coinImageCoinSlot` `<ImageView>`添加这个新属性。我们还将使用`android:tint`属性设置硬币的颜色。
 
 ```
 android:tint="@{slot.lastRolled ? @color/colorPrimary : @android:color/black}"
@@ -2795,9 +2852,9 @@ android:tint="@{slot.lastRolled ? @color/colorPrimary : @android:color/black}"
 app:isHidden="@{!slot.canBeFilled || !slot.isFilled}"
 ```
 
-随着 `layout_coin_slot.xml` 布局的所有绑定完成，现在是运行应用并检查一切的好时机。但由于我们还没有对 `Slot` 类做任何事情，页面看起来不会太有趣。所以我们将设置测试数据。
+随着`layout_coin_slot.xml`布局的所有绑定完成，现在是运行应用并检查一切的好时机。但由于我们还没有对`Slot`类做任何事情，页面看起来不会太有趣。所以我们将设置测试数据。
 
-在 `Slot` 内部，进行两项更新：`isFilled` 现在对于偶数应默认为 `true`，而 `lastRolled` 对于槽位 2 和 5 将为 `true`。
+在`Slot`内部，进行两项更新：`isFilled`现在对于偶数应默认为`true`，而`lastRolled`对于槽位2和5将为`true`。
 
 ```
 data class Slot(
@@ -2812,7 +2869,7 @@ data class Slot(
 
 ![](img/c024742480e86eb8867e0760ebe353d7_142_0.png)
 
-在继续之前，回到 Slot 类并删除我们放入的测试值。在下一章中，我们将让游戏逻辑运行起来，所以不需要它们了。最好在忘记之前恢复原状！
+在继续之前，回到`Slot`类并删除我们放入的测试值。在下一章中，我们将让游戏逻辑运行起来，所以不需要它们了。最好在忘记之前恢复原状！
 
 ```
 data class Slot(
@@ -2825,29 +2882,29 @@ data class Slot(
 
 ## 总结与下一步
 
-信不信由你，Penny Drop 的核心 UI 实际上已经完成了。我们可以输入游戏的玩家，将他们送入游戏，并显示所有需要的信息。但我们还没有内置任何游戏逻辑。这就是我们下一章要做的，构建 Penny Drop 的所有内部机制。这将包含大量 Kotlin 代码和少量数学——让我们开始吧！
+信不信由你，Penny Drop的核心UI实际上已经完成了。我们可以输入游戏的玩家，将他们送入游戏，并显示所有需要的信息。但我们还没有内置任何游戏逻辑。这就是我们下一章要做的，构建Penny Drop的所有内部机制。这将包含大量Kotlin代码和少量数学——让我们开始吧！
 
-# 第 4 章
+# 第4章
 
-## 使用条件游戏逻辑更新 LiveData
+## 使用条件游戏逻辑更新LiveData
 
 让我们回顾一下我们到目前为止所做的工作：
 
-- 创建了我们的 Penny Drop Android 应用并配置了导航组件。
-- 构建了 `PickPlayersFragment` 和 `GameFragment`，以及相关的 `ViewModel` 类和布局文件。
+- 创建了我们的Penny Drop Android应用并配置了导航组件。
+- 构建了`PickPlayersFragment`和`GameFragment`，以及相关的`ViewModel`类和布局文件。
 - 在两个屏幕中设置了数据绑定。
 
-我们现在已经有了一个应用，它*看起来*像一个游戏，但我们需要将游戏逻辑落实到位。为此，我们将构建一个单独的 `GameHandler` 类来处理游戏操作，而让 `GameViewModel` 负责游戏状态和 UI 交互。
+我们现在已经有了一个应用，它*看起来*像一个游戏，但我们需要将游戏逻辑落实到位。为此，我们将构建一个单独的`GameHandler`类来处理游戏操作，而让`GameViewModel`负责游戏状态和UI交互。
 
-通过这样做，`GameViewModel` 处理 UI 和游戏在给定时刻的所有状态。另一方面，`GameHandler` 类将由无状态函数组成，负责掷骰和传递，然后将结果返回给 `GameViewModel`。这使我们能够将大部分游戏逻辑隔离，同时避免将任何 Android 特定组件放入 `GameHandler`。
+通过这样做，`GameViewModel`处理UI和游戏在给定时刻的所有状态。另一方面，`GameHandler`类将由无状态函数组成，负责掷骰和传递，然后将结果返回给`GameViewModel`。这使我们能够将大部分游戏逻辑隔离，同时避免将任何Android特定组件放入`GameHandler`。
 
-完成本章后，我们将拥有一个完整、可运行的游戏。使用我们之前设置的 UI 组件，我们将能够处理真实的用户交互以及 Penny Drop 的所有规则。
+完成本章后，我们将拥有一个完整、可运行的游戏。使用我们之前设置的UI组件，我们将能够处理真实的用户交互以及Penny Drop的所有规则。
 
-### 创建 GameHandler
+### 创建GameHandler
 
-正如我之前提到的，`GameHandler` 将是我们所有游戏逻辑的所在。通过这种方式，我们大大简化了 `GameViewModel` 中需要完成的工作，并避免在该类中造成过多膨胀。鉴于 `GameHandler` 没有自己的状态，我们可以将其定义为 Kotlin *对象声明*而不是类。类似于我们在[创建 AI 类](Create the AI Class)中看到的伴生对象，对象声明是单例实例。它们看起来与类非常相似，但使用 `object` 关键字，正如你将看到的。
+正如我之前提到的，`GameHandler`将是我们所有游戏逻辑的所在。通过这种方式，我们大大简化了`GameViewModel`中需要完成的工作，并避免在该类中造成过多膨胀。鉴于`GameHandler`没有自己的状态，我们可以将其定义为Kotlin *对象声明*而不是类。类似于我们在[创建AI类](Create the AI Class)中看到的伴生对象，对象声明是单例实例。它们看起来与类非常相似，但使用`object`关键字，正如你将看到的。
 
-在我们的例子中，`GameHandler` 将是一个对象声明，只包含函数（因为它不持有任何状态），我们可以用它来运行我们的游戏。创建那个 `object`（在 `game` 包下），并包含一些空函数：
+在我们的例子中，`GameHandler`将是一个对象声明，只包含函数（因为它不持有任何状态），我们可以用它来运行我们的游戏。创建那个`object`（在`game`包下），并包含一些空函数：
 
 ```
 package dev.mfazio.pennydrop.game
@@ -2874,15 +2931,15 @@ object GameHandler {
 }
 ```
 
-你可以在本节中看到我们将要实现的方法，这些方法随后将（主要）由 GameViewModel 调用。我说“主要”是因为 GameHandler 也可以随时调用自己的方法，我们将在本章末尾看到这一点。
+你可以在本节中看到我们将要实现的方法，这些方法随后将（主要）由`GameViewModel`调用。我说“主要”是因为`GameHandler`也可以随时调用自己的方法，我们将在本章末尾看到这一点。
 
-此外，大多数函数返回一个 `TurnResult?` 对象，其中包含游戏状态/信息。我们使用这个类将该信息发送回 GameViewModel。
+此外，大多数函数返回一个`TurnResult?`对象，其中包含游戏状态/信息。我们使用这个类将该信息发送回`GameViewModel`。
 
-让我们创建一个名为 `TurnResult` 的新数据类。这个类将包含 GameViewModel 需要知道的所有信息，不多也不少。我们可以先让 `TurnResult` 就位，然后再考虑实现 GameHandler 中的函数。
+让我们创建一个名为`TurnResult`的新数据类。这个类将包含`GameViewModel`需要知道的所有信息，不多也不少。我们可以先让`TurnResult`就位，然后再考虑实现`GameHandler`中的函数。
 
-### 创建 TurnResult 数据类
+### 创建TurnResult数据类
 
-`TurnResult` 类包含 GameViewModel 在一轮之后（或游戏开始时）需要知道的所有信息。我们将在本章后面了解 GameViewModel 如何使用这些值，但让我们先看看 `TurnResult` 的代码：
+`TurnResult`类包含`GameViewModel`在一轮之后（或游戏开始时）需要知道的所有信息。我们将在本章后面了解`GameViewModel`如何使用这些值，但让我们先看看`TurnResult`的代码：
 
 ```
 package dev.mfazio.pennydrop.game
@@ -2905,14 +2962,15 @@ data class TurnResult(
 enum class TurnEnd { Pass, Bust, Win }
 ```
 
-这里没有太多需要考虑的，但让我们更深入地讨论一下 `data class` 和 `enum class`。我们已经在“添加 NewPlayer 数据类”中使用了 `data class` 指定符，但我想特别指出每个 `data class` 都包含的两个自动生成的函数。
+这里没有太多需要考虑的，但让我们更深入地讨论一下`data class`和`enum class`。我们已经在“添加NewPlayer数据类”中使用了`data class`指定符，但我想特别指出每个`data class`都包含的两个自动生成的函数。
 
 - `copy`，它使用一个给定的对象作为基础，然后更改你传入函数的任何值：
-- `componentN` 函数，它允许解构声明（其中属性可以拆分为多个变量）。例如，我们可以获取 `filledSlot` 对象并将其拆分为两个独立的值。顺序基于 `Slot` 类中属性的声明顺序。
+
+- `componentN`函数，它允许解构声明（其中属性可以拆分为多个变量）。例如，我们可以获取`filledSlot`对象并将其拆分为两个独立的值。顺序基于`Slot`类中属性的声明顺序。
 
 ```
-// filledSlot 将具有与 rolledSlot 相同的值，
-// 但 isFilled 和 lastRolled 将为 true
+// filledSlot将具有与rolledSlot相同的值，
+// 但isFilled和lastRolled将为true
 val filledSlot = rolledSlot.copy(isFilled = true, lastRolled = true)
 ```
 
@@ -2920,9 +2978,9 @@ val filledSlot = rolledSlot.copy(isFilled = true, lastRolled = true)
 val (slotNum, slotCanBeFilled) = filledSlot
 ```
 
-在继续之前，让我们更深入地探讨一下最后这部分。正如我提到的，解构对象意味着我们将一个对象拆分为一定数量的变量。我们已经看到了一个例子，但我最喜欢的解构声明用例是在处理循环和 Map 时。
+在继续之前，让我们更深入地探讨一下最后这部分。正如我提到的，解构对象意味着我们将一个对象拆分为一定数量的变量。我们已经看到了一个例子，但我最喜欢的解构声明用例是在处理循环和Map时。
 
-如果我们有一个 `Map<String, Int>`，其中 `String` 是玩家的名字，`Int` 是他们的分数，传统上我们必须这样做来打印分数：
+如果我们有一个`Map<String, Int>`，其中`String`是玩家的名字，`Int`是他们的分数，传统上我们必须这样做来打印分数：
 
 ```
 playerScores.forEach {entry ->
@@ -2930,7 +2988,7 @@ playerScores.forEach {entry ->
 }
 ```
 
-相反，我们可以将 `entry` 拆分为两个变量 `name` 和 `score`，使相同的代码块看起来更好：
+相反，我们可以将`entry`拆分为两个变量`name`和`score`，使相同的代码块看起来更好：
 
 ```
 playerScores.forEach {(name, score) ->
@@ -2938,290 +2996,47 @@ playerScores.forEach {(name, score) ->
 }
 ```
 
-我们得到了更简洁、更易读的代码，并且开销最小。我们可以解构任何实现了 `componentN` 函数的对象，包括（但不限于）`data class`、`List` 和 `Map` 对象。在介绍了 `data class` 之后，让我们快速了解一下 `TurnEnd` 枚举类的情况。
+我们得到了更简洁、更易读的代码，并且开销最小。我们可以解构任何实现了`componentN`函数的对象，包括（但不限于）`data class`、`List`和`Map`对象。在介绍了`data class`之后，让我们快速了解一下`TurnEnd`枚举类的情况。
 
-### 创建 TurnEnd 枚举类
+### 创建TurnEnd枚举类
 
-`enum class` 包含一个或多个常量值。在我们的例子中，`TurnEnd` 包含一轮结束的三种方式：用户跳过、用户爆掉（并拿走桌面上的便士），以及用户获胜。我们使用 `TurnEnd` 而不是 `Int` 或 `String` 值的原因是 `enum class` 对象是类型化的。这意味着，`turnEnd` 不再是一个不明确的 `Int` 值（如 `1`）或一个容易出错的 `String`（如 “pass”），而是使用 `TurnEnd.Pass`。它使你的代码更具可读性，且不易出错。`TurnEnd` 枚举类将如下所示：
+`enum class`包含一个或多个常量值。在我们的例子中，`TurnEnd`包含一轮结束的三种方式：用户跳过、用户爆掉（并拿走桌面上的便士），以及用户获胜。我们使用`TurnEnd`而不是`Int`或`String`值的原因是`enum class`对象是类型化的。这意味着，`turnEnd`不再是一个不明确的`Int`值（如`1`）或一个容易出错的`String`（如“pass”），而是使用`TurnEnd.Pass`。它使你的代码更具可读性，且不易出错。`TurnEnd`枚举类将如下所示：
 
 ```
 enum class TurnEnd { Pass, Bust, Win }
 ```
 
-有了 `TurnResult` 准备就绪，我们可以回到实现 `GameHandler` 类。
+有了`TurnResult`准备就绪，我们可以回到实现`GameHandler`类。
 
 ### 处理用户掷骰
 
-快速提醒：在 Penny Drop 中，掷骰包括当前玩家拿起一个 *D6*（一个六面骰子），并将一个便士放入他们掷出的槽位。如果该槽位已被占用，他们就爆掉并拿走桌面上*所有*的硬币，然后轮到下一个玩家。如果他们掷出六点，他们将便士放入开放的六号槽位，该槽位保存在储液罐中。在游戏的物理版本中，储液罐位于主板下方，但在这里我们只是移除便士，并可选择跟踪储液罐中的便士数量。
+快速提醒：在Penny Drop中，掷骰包括当前玩家拿起一个*D6*（一个六面骰子），并将一个便士放入他们掷出的槽位。如果该槽位已被占用，他们就爆掉并拿走桌面上*所有*的硬币，然后轮到下一个玩家。如果他们掷出六点，他们将便士放入开放的六号槽位，该槽位保存在储液罐中。在游戏的物理版本中，储液罐位于主板下方，但在这里我们只是移除便士，并可选择跟踪储液罐中的便士数量。
 
-我们的 `roll` 函数将做类似的事情：我们将掷 *D6*，获取相应的 `Slot`，然后根据发生的情况返回一个 `TurnResult`。我们在 `rollDie` 上使用 `let` 函数，不是作为 `null` 检查（如我们之前所做的那样），而是作为一种让 `lastRoll` 在我们接下来的几行代码中可用的方式。使用标准赋值（如 `val lastRoll = rollDie()`）做同样的事情是完全有效的，但我喜欢 `let { ... }` 语法。再次强调，这是你和你的团队的个人偏好。
+我们的`roll`函数将做类似的事情：我们将掷*D6*，获取相应的`Slot`，然后根据发生的情况返回一个`TurnResult`。我们在`rollDie`上使用`let`函数，不是作为`null`检查（如我们之前所做的那样），而是作为一种让`lastRoll`在我们接下来的几行代码中可用的方式。使用标准赋值（如`val lastRoll = rollDie()`）做同样的事情是完全有效的，但我喜欢`let { ... }`语法。再次强调，这是你和你的团队的个人偏好。
 
-我们通过获取选定的 `Slot` 并使用它来生成 `TurnResult` 来结束本节。如果这里的 `slot` 是 `null`，我们使用 *空合并* 或 *Elvis 运算符* (`?:`) 回退到默认的 `TurnResult` 对象。
+我们通过获取选定的`Slot`并使用它来生成`TurnResult`来结束本节。如果这里的`slot`是`null`，我们使用*空合并*或*Elvis运算符* (`?:`)回退到默认的`TurnResult`对象。
 
-Elvis 运算符（以传奇音乐家及其传奇发型命名）添加在表达式之后，如果该表达式为 `null`，则执行 Elvis 运算符右侧的表达式。
+Elvis运算符（以传奇音乐家及其传奇发型命名）添加在表达式之后，如果该表达式为`null`，则执行Elvis运算符右侧的表达式。
 
-完整的代码（不包括 `TurnResult` 生成）如下所示：
+完整的代码（不包括`TurnResult`生成）如下所示：
 
-```
-kotlin
-fun roll(players: List<Player>,
-         currentPlayer: Player,
-         slots: List<Slot>): TurnResult =
-    rollDie().let { lastRoll ->
-        slots.getOrNull(lastRoll - 1)?.let { slot ->
-            // TurnResult 在这里创建
-        } ?: TurnResult(isGameOver = true)
-    }
-```
 
-作为参考，我们的 `rollDie` 函数接受一个边数，并给我们一个从 1 到我们输入的边数（加一，我稍后会解释）的随机数。如果我们没有为 `sides` 输入值，该函数使用默认值 6。
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`。
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
 
 ```
-kotlin
-private fun rollDie(sides: Int = 6) = Random.nextInt(1, sides + 1)
+if (condVar > someVal) {console.log("xxx")}
 ```
 
-我想特别指出 `nextInt` 函数声明中的一点：
 
-```
-Random.nextInt(from: Int, until: Int) { ... }
-```
 
-这个函数将给我们一个从 `from` 值开始，到（但不包括）`until` 值的随机数。上限不包含在内，这就是为什么 `rollDie` 的第二个值是 `sides + 1` 而不仅仅是 `sides`。我提到这一点不仅是因为它有助于理解 `Random.nextInt`（以及 `Random` 类上的其他函数），还因为当你处理范围时，`until` 是一个关键字（与参数中 `until` 是变量相对）。
-
-我们在 `GameViewModel` 中生成 `Slot` 对象时使用了 `IntRange`，这是我们第一次在“将 NewPlayer 实例添加到 PickPlayersViewModel”中看到的技术。
-
-```
-val slots =
-    MutableLiveData(
-        (1..6).map { slotNum -> Slot(slotNum, slotNum != 6) }
-    )
-```
-
-我们本可以从 `0` 开始计数到 `6`，但实际上不包括 `6`：
-
-```
-val slots =
-    MutableLiveData(
-        (0 until 6).map { ind -> Slot(ind + 1, ind != 5) }
-    )
-```
-
-由于两个示例都有效，我*强烈*建议在这里采用第一种方法。在其他情况下，使用 `until` 绝对有用，这就是我提到它的原因。
-
-在继续之前，我还想介绍之前 `slots` 的逻辑。作为参考，特别是这个代码块：
-
-```
-slots.getOrNull(lastRoll - 1)?.let { slot ->
-    // TurnResult 在这里创建
-} ?: TurnResult(isGameOver = true)
-```
-
-我们使用 `getOrNull` 函数获取掷出的槽位，该函数返回给定索引处的槽位或 `null`。然后我们使用 Elvis 运算符，仅在确实存在一个槽位时才继续。鉴于我们控制着 `rollDie` 的工作方式以及 `List<Slot>` 中的内容，我们可能只需使用 `get` 或索引（例如 `slots[lastRoll - 1]`）就足够安全。我们掌控着一切——这意味着该调用不可能失败，对吧？
-
-太多开发者说过类似的话，结果却是他们的应用崩溃了。为确保这种情况不会发生在我们身上，让我们采用安全的方法，添加空安全的 `?.let` 块。现在我们可以继续处理其中的逻辑了。
-
-正如我在本节开头提到的，掷骰子主要有两种结果：玩家掷出一个空槽位的数字（包括 6），或者掷出一个已被填充的槽位。如果掷出空槽位，玩家就在该槽位放入一枚便士（除非掷出六点，那会进入储备池），然后我们检查他们是否赢得了游戏。虽然在这里使用 Kotlin 强大的 `when` 块很诱人，但我们只有两组二选一的情况，所以标准的 `if...else` 就足够了。别担心，我们将在本章后面讨论游戏文本时再探讨 `when` 语句。
-
-与我们之前的 `roll` 代码配套的内部块结构如下：
-
-```
-if (slot.isFilled) {
-    // Player busts, play continues to next player
-} else {
-    if (!currentPlayer.penniesLeft(true)) {
-        // Player wins
-    } else {
-        // Game continues
-    }
-}
-```
-
-虽然我们这里还有代码块需要完成，但我们应该先为 `Player` 类添加 `penniesLeft` 方法。
-
-### 为 Player 类添加辅助方法
-
-`penniesLeft` 函数很简单，它检查用户的便士数量是否大于零。但注意我们调用中的 `true` 标志了吗？那是一个名为 `subtractPenny` 的标志，它告诉我们的方法在检查用户是否还有剩余便士时，从用户的便士数量中减去一个。这样做是因为我们正在检查用户的未来状态，即考虑当前掷骰结果后他们将拥有的便士数量。`Player` 类现在将如下所示：
-
-```
-data class Player(
-    var playerName: String = "",
-    var isHuman: Boolean = true,
-    var selectedAI: AI? = null
-) {
-    var pennies: Int = defaultPennyCount
-
-    fun addPennies(count: Int = 1) {
-        pennies += count
-    }
-
-    var isRolling: Boolean = false
-
-    fun penniesLeft(subtractPenny: Boolean = false) =
-        (pennies - (if(subtractPenny) 1 else 0)) > 0
-
-    companion object {
-        const val defaultPennyCount = 10
-    }
-}
-```
-
-让我们回到 `GameHandler` 类。我们稍后会详细介绍 `roll` 的实现细节，但首先，我想强调一下该方法中嵌套 `let` 块输出的内容。
-
-### 返回一个 if...else？
-
-是的，`roll` 的内部块是一个没有 `return` 语句的 `if...else` 块。然而，我们创建的 `TurnResult` 对象却成功返回了。这怎么可能？这是因为 Kotlin 的两个语言特性。lambda 函数内部，比如 `let` 内部，会返回块中的最后一个值。这包括值/变量和任何表达式。请注意，普通函数不能这样做，只有表达式块可以。
-
-说到这个，`if..else` 块可以被返回的原因是它们在 Kotlin 中实际上是*表达式*。这意味着它们自身会返回一个值，而不仅仅是像其他语言那样产生副作用。我们不再需要在 `if...else` 外部声明一个空变量，然后在内部赋值，而是可以直接从 `if...else` 块中赋值给不可变值。这也是三元运算符（`[条件] ? [为真时] : [为假时]`）在 Kotlin 中不存在的部分原因；`if...else` 块可以处理相同的语法，而无需两种约定。使用它们还可以避免嵌套的三元语句，这些语句可能极其难以理解。
-
-如果你看看我们添加的 `penniesLeft` 函数，它以类似的方式使用了 `if...else`。我们不必添加一个额外的值，比如 `extraPennies` 或者我们想用来移除额外便士的任何名称，我们可以直接内联 `if...else` 语句。你可能现在明白要点了，所以让我们继续讨论 `if...else` 块内的代码。
-
-让我们从掷出的 `Slot` 已经被填充的块开始，因为这里只发生一件事：创建一个 `TurnResult` 对象。为了获取给玩家的硬币数量，我们可以查看有多少槽位已经被填充，并将其赋值给 `coinChangeCount`。我们还通过 `nextPlayer` 函数（我们稍后会看到）获取列表中的下一个玩家，并为新的一轮做好准备。代码如下：
-
-```
-if (slot.isFilled) {
-    TurnResult(
-        lastRoll,
-        coinChangeCount = slots.count { it.isFilled },
-        clearSlots = true,
-        turnEnd = TurnEnd.Bust,
-        previousPlayer = currentPlayer,
-        currentPlayer = nextPlayer(players, currentPlayer),
-        playerChanged = true,
-        canRoll = true,
-        canPass = false
-    )
-}
-```
-
-虽然我们不需要在这里明确列出参数，但这使得这个调用清晰得多。否则，我们会看到一大堆布尔值，试图记住哪个是哪个。这也是个人偏好的情况，但我认为标签使代码更具可读性。
-
-### 获取下一个玩家
-
-我们在 `TurnResult` 类中看到了 `nextPlayer` 函数调用，所以现在让我们深入探讨一下。
-
-我们在这个方法中做三件事：
-
-- 获取当前玩家在玩家列表中的索引。
-- 计算下一个玩家的索引（可能会循环）。
-- 返回下一个玩家。
-
-```
-private fun nextPlayer(
-    players: List<Player>,
-    currentPlayer: Player): Player? {
-    val currentIndex = players.indexOf(currentPlayer)
-    val nextIndex = (currentIndex + 1) % players.size
-
-    return players[nextIndex]
-}
-```
-
-`indexOf` 将给我们当前玩家的位置（从零到游戏中的玩家数量减一），然后我们可以用它来找到轮到顺序中的下一个玩家。在大多数情况下，我们取当前索引，加一（移动到下一个玩家），就准备好了。但是，如果我们到达玩家列表的末尾，我们希望回到列表的开头。这就是为什么我包含了表达式的后半部分：`% players.size`。
-
-% 运算符是*取模*或*余数*运算符，它将左侧值除以右侧值，但返回剩余量（余数）而不是实际结果。这意味着我们的索引永远不会高于游戏中的玩家数量，如果索引高于限制，它将循环回到零。
-
-例如，如果我们游戏中有五名玩家，玩家四正在玩，他们的回合结束，接下来轮到玩家五。因此，`currentIndex` 是 3（因为索引从 0 开始），`players.size` 是 5，`nextIndex` 是 4：
-
-```
-val nextIndex = (3 + 1) % 5 // 4 % 5 == 4
-```
-
-% 运算符在这里作用不大，但如果玩家五的回合结束，我们需要回到玩家一，情况可能更复杂。`currentIndex` 是 4，加一会使索引超出 `players` 的范围（因为索引从 0 到 4）。添加 % 使 `nextIndex` 为 0，因为五除以五没有余数。
-
-```
-val nextIndex = (4 + 1) % 5 // 5 % 5 == 0
-```
-
-最后需要注意的一点是，% 运算符等同于 `.rem` 函数，这意味着以下代码与我们之前所做的等效：
-
-```
-val nextIndex = (currentIndex + 1).rem(players.size)
-```
-
-你可以互换使用函数或运算符，甚至可以通过重载其关联函数来重载运算符。这超出了本书的范围，但更多信息可以在 [https://link.mfazio.dev/operator-overloading](https://link.mfazio.dev/operator-overloading) 找到。
-
-现在，如果玩家掷出的槽位编号已经有便士，我们已经准备好了，所以我们可以继续处理空槽位。
-
-### 处理空槽位
-
-如果当前玩家掷出了一个开放槽位的数字（包括6），逻辑会稍有不同。我们使用之前见过的 `penniesLeft` 函数来判断当前玩家是否获胜，但除此之外，这两个 `TurnResult` 实例的逻辑都很直接。
-
-```kotlin
-} else {
-    if (!currentPlayer.penniesLeft(true)) {
-        TurnResult(
-            lastRoll,
-            currentPlayer = currentPlayer,
-            coinChangeCount = -1,
-            isGameOver = true,
-            turnEnd = TurnEnd.Win,
-            canRoll = false,
-            canPass = false
-        )
-    } else {
-        TurnResult(
-            lastRoll,
-            currentPlayer = currentPlayer,
-            canRoll = true,
-            canPass = true,
-            coinChangeCount = -1
-        )
-    }
-}
-```
-
-有了这些改动，玩家在回合中掷骰子的逻辑就处理好了。现在，我们可以继续处理玩家跳过回合的情况。
-
-### 处理玩家跳过回合
-
-我们已经处理了玩家在 Penny Drop 中掷骰子的所有可能性。现在，我们可以处理当前玩家在回合中至少掷过一次骰子，然后决定“算了，我没事”，并将回合传递给下一个玩家的情况。
-
-由于我们不需要处理掷骰结果，当玩家跳过回合时，发生的事情会少一些。以下是完整的函数：
-
-```kotlin
-fun pass(players: List<Player>, currentPlayer: Player) =
-    TurnResult(
-        previousPlayer = currentPlayer,
-        currentPlayer = nextPlayer(players, currentPlayer),
-        playerChanged = true,
-        turnEnd = TurnEnd.Pass,
-        canRoll = true,
-        canPass = false
-    )
-```
-
-看起来和 `roll` 函数很像，对吧？我们仍然返回一个 `TurnResult`，同时将下一个玩家标记为可以掷骰但不能跳过（因为这是他们回合的第一次掷骰），并且我们获取游戏中的下一个玩家。我们还包含了 `previousPlayer`，以便 UI 可以正确更新文本视图，显示类似“Michael 跳过了回合。他目前有 7 便士。”的消息。
-
-至此，`GameHandler` 基本准备就绪，我们可以开始更新 UI 了。
-
-### 开始游戏
-
-在 Penny Drop 中，主要跟踪两个部分：玩家和槽位。我们在上一章已经将这两者添加到了 `GameViewModel` 中，所以我们需要做的就是在开始游戏时初始化它们。由于我们已经有了游戏的玩家，我们可以获取列表中的第一个玩家，并将其设置为 `currentPlayer`。我们还将初始化另外两个变量：`canRoll`（`true`）和 `canPass`（`false`）。最后，我们将清空 `Slots`，将 `currentTextValue` 设置为“游戏开始！”，并生成游戏的排名。
-
-```kotlin
-fun startGame(playersForNewGame: List<Player>) {
-    this.players = playersForNewGame
-    this.currentPlayer.value = this.players.firstOrNull().apply {
-        this?.isRolling = true
-    }
-
-    canRoll.value = true
-    canPass.value = false
-
-    slots.value?.clear()
-    slots.notifyChange()
-
-    currentTurnText.value = "The game has begun!\n"
-    currentStandingsText.value = generateCurrentStandings(this.players)
-}
-```
-
-我们稍后会介绍 `generateCurrentStandings` 函数，但我想先谈谈 `slots` 部分，因为这里可能有些混淆。我们将快速查看这两行代码以及每部分的含义。
-
-由于 `slots` 是一个 `MutableLiveData` 对象，我们需要调用 `.value` 来获取实际的 `List<Slot>`。此外，从 `LiveData` 对象中取出的每个值都是可空的，这就是为什么下一个 `clear` 调用使用了我们在 [等等，那个代码块是什么？](Wait, What Was That Code Block?) 中首次看到的空安全语法。
-
-至于 `clear` 函数，它实际上是一个添加到 `Slot.kt` 中 `List` 类型的*扩展函数*。这是 `Slot` 类所在的同一个文件，但扩展函数定义在 `Slot` 类本身*之外*。由于它是 `Slot` 的扩展，而不是 `Slot` 类本身的一部分，我们可以将代码放在任何有意义的地方。我选择放在 `Slot` 类中，因为它是该类的扩展，并且会使代码更容易找到。代码如下：
+`Slot.kt` 文件位于 `dev.mfazio.pennydrop.types` 包中，定义了 `Slot` 数据类，包含 `number`、`canBeFilled`、`isFilled` 和 `lastRolled` 属性。同时定义了一个 `List<Slot>` 的扩展函数 `clear()`，用于重置所有槽位的状态。
 
 ```kotlin
 // Slot.kt
@@ -3372,6 +3187,7 @@ currentTurnText.value = generateTurnText(result)
 因此，我们有两个主要的新增内容：
 
 - 一个 `clearText` 变量，它告诉我们是否应该清除 `<TextView>`。
+
 - 一个新的 `generateTurnText` 方法。
 
 第一步应该在……现在完成（说真的，继续在 `currentStandingsText` 声明下快速添加该变量）。然而，第二步变得有点复杂。我们将根据给定回合发生的情况显示不同的消息。
@@ -3467,7 +3283,7 @@ result.isGameOver ->
 
 我们将为应用添加运行游戏中一个（或多个）玩家的能力，并为用户提供将Penny Drop设为单人（人类）游戏的选项。当AI进行游戏时，我们将禁用“掷骰”和“跳过”按钮，并让应用自动开始掷骰/跳过。一个便捷的触发方式是在`updateFromGameHandler`函数中，当其他所有内容更新完毕后。在该函数末尾附近添加对`playAITurn`的调用：
 
-```
+```kotlin
 if (!result.isGameOver && result.currentPlayer?.isHuman == false) {
     canRoll.value = false
     canPass.value = false
@@ -3477,12 +3293,15 @@ if (!result.isGameOver && result.currentPlayer?.isHuman == false) {
 
 我们只会在确定玩家*不是*人类时，才让应用运行该玩家。我们使用了与之前`LiveData`相同的方法，即与`false`进行比较，因为`result.currentPlayer?.isHuman`是一个`Boolean?`（可空布尔值），而不是`Boolean`。
 
+
+
 `GameViewModel`中的`playAITurn`函数是我们Kotlin*协程*的第一个例子。然而，我不希望在这里过多讨论它们，因为一节内容无法涵盖太多。如果你想了解更多，我们将在第5章[使用Room持久化游戏数据](https://example.com)中再次使用它们，尤其是在第10章[使用协程和Room加载与保存数据](https://example.com)中。就本例而言，只需知道由于我们包含了`lifecycle-livedata-ktx`库，所以存在一个现有的`viewModelScope`。我们在这里启动协程，这使我们能够进行异步调用，而不会为用户冻结UI。在这种情况下，我们在AI移动之间延迟一秒，使其感觉更像真人在玩游戏。
 
 同样，我们稍后会更深入地介绍协程，但这是一个引入它们的绝佳机会。
+
 我们启动协程，等待一秒（1000毫秒），然后调用`GameHandler.playAITurn`（我们稍后将创建）。这里的方法类似于`roll`和`pass`，但略有不同。我们调用`GameHandler.playAITurn`，然后使用空安全的`let`调用来处理返回`null`而不是`TurnResult`实例的情况。如果我们尝试为缺少有效`selectedAI`属性的玩家进行AI回合，就可能发生这种情况。
 
-```
+```kotlin
 private fun playAITurn() {
     viewModelScope.launch {
         delay(1000)
@@ -3505,11 +3324,12 @@ private fun playAITurn() {
 ```
 
 一旦回合完成并且UI更新，本节开头的检查将再次运行，以查看我们是否再次执行`playAITurn`。大部分AI逻辑位于`GameHandler`中，所以让我们转到那里来实现这个功能。
+
 在`GameHandler`内部，我们需要添加`playAITurn`函数。在其中，我们需要*安全地*获取当前玩家的`selectedAI`属性，这意味着我们必须添加某种`null`检查。
 
 一旦我们有了一个有效的AI实例，我们就根据当前已填充的槽位来判断该AI是掷骰还是跳过。
 
-```
+```kotlin
 fun playAITurn(
     players: List<Player>,
     currentPlayer: Player,
@@ -3527,7 +3347,7 @@ fun playAITurn(
 
 作为参考，`ai.rollAgain(slots)`是每个AI实例上的一个函数。我们更新AI以包含以下格式的`rollAgain`属性：
 
-```
+```kotlin
 data class AI(
     val name: String,
     val rollAgain: (slots: List<Slot>) -> Boolean
@@ -3538,7 +3358,7 @@ data class AI(
 
 例如，AI玩家Fearful Fred只有在填充的槽位少于或等于两个时才会再次掷骰（除非是他回合的第一次掷骰，他别无选择）。我们可以这样生成这个AI玩家（其他AI实现可以在PragProg网站的代码中找到[5]）：
 
-```
+```kotlin
 AI("Fearful Fred") { slots -> slots.fullSlots() <= 2 }
 ```
 
@@ -3546,7 +3366,7 @@ AI("Fearful Fred") { slots -> slots.fullSlots() <= 2 }
 
 现在，当我们的`playAITurn`函数将当前游戏的槽位发送给Fearful Fred的`rollAgain`方法时，它将运行输入的表达式来查看他们是否想要掷骰。我们可以让掷骰/不掷骰的逻辑变得非常复杂，但这对我们的目的来说已经足够了。我们调用`.fullSlots`扩展函数，并查看该值是否小于或等于2。`fullSlots`函数位于`Slot.kt`中，但在`Slot`类*之外*，如下所示：
 
-```
+```kotlin
 fun List<Slot>.fullSlots(): Int =
     this.count { it.canBeFilled && it.isFilled }
 ```
@@ -3583,7 +3403,7 @@ fun List<Slot>.fullSlots(): Int =
 
 这个过程现在应该看起来很熟悉了。我们在项目级 `build.gradle` 文件的 `ext` 块下添加一个新值：
 
-```
+```groovy
 ext {
     kotlin_version = '1.4.30'
     gradle_version = '4.1.2'
@@ -3599,7 +3419,7 @@ ext {
 
 然后我们在应用的 `build.gradle` 文件的 `dependencies` 内添加库构件。我们需要添加三个不同的依赖项来实现我们的目标：一个用于 Room 运行时，一个用于 Room 的 Kotlin 扩展和协程支持，一个用于注解处理：
 
-```
+```groovy
 dependencies {
     // 其他依赖项仍然在这里。
 
@@ -3618,7 +3438,7 @@ dependencies {
 
 在 `data` 包内创建一个名为 `PennyDropDatabase` 的新类；请记住，在 Android Studio 中创建类时可以包含包名。创建后，立即将类标记为 `abstract` 并使其成为 `RoomDatabase` 的子类。最后一步是添加 `@Database` 注解，它告诉 Room 这个类是一个 `RoomDatabase`，并将保存数据库配置。空类如下所示：
 
-```
+```kotlin
 package dev.mfazio.pennydrop.data
 
 import androidx.room.RoomDatabase
@@ -3636,7 +3456,7 @@ abstract class PennyDropDatabase: RoomDatabase() {
 
 `PennyDropDatabase` 类最终看起来会有点奇怪。我们只有一个名为 `pennyDropDao` 的抽象函数，它返回一个尚未创建的 `PennyDropDao` 类的实例，以及一个 `companion object`。`companion object` 将包含一个名为 `Instance` 的 `PennyDropDatabase?` 变量和一个名为 `getDatabase` 的函数。`getDatabase` 函数将接受两个参数——当前的 Android Context 对象和一个 CoroutineScope，用于在初始化时向数据库插入数据。预实现的类如下所示：
 
-```
+```kotlin
 @Database(
     entities = [],
     version = 1,
@@ -3669,7 +3489,7 @@ abstract class PennyDropDatabase : RoomDatabase() {
 
 现在，这里的关键是我们发送的是来自 `PennyDropDatabase` 的 Java 类，而不是 Kotlin 类。这是因为 `Room.databaseBuilder` 函数是用 Java 编写的，因此期望一个 Java 类。要获取我们类的 Java 版本，我们可以使用 `PennyDropDatabase::class.java`。Java 和 Kotlin 之间的互操作性有时会使事情变得棘手，但值得庆幸的是，像这样的情况很容易处理。初始的 `getDatabase` 函数如下所示：
 
-```
+```kotlin
 fun getDatabase(
     context: Context,
     scope: CoroutineScope
@@ -3695,7 +3515,9 @@ fun getDatabase(
 
 正如我之前提到的，我们不会直接调用 `PennyDropDatabase` 来获取数据，而是通过 **DAO**（或 *数据访问对象*）来传递所有内容。我们通过 `@Dao` 注解将接口或抽象类标记为 **DAO**。`PennyDropDao` 的大部分工作将由 Room 库处理，只让我们在需要时担心自定义操作。DAO 中的大多数函数将是抽象的，并带有特定的注解来赋予函数目的。如果我们需要对函数的功能进行更多控制，我们仍然可以编写完整的 SQL 查询。在我们的例子中，我们只需要一个 `@Query` 函数，其他函数要么使用 `@Insert` 要么使用 `@Update` 注解。带有几个函数的 `PennyDropDao` 抽象类如下所示：
 
-```
+
+
+```kotlin
 @Dao
 abstract class PennyDropDao {
     @Query("SELECT * FROM players WHERE playerName = :playerName")
@@ -3717,21 +3539,21 @@ abstract class PennyDropDao {
 
 如你所见，像插入和更新记录这样的标准操作可以通过包含的注解完成，如本块所示，而查询或任何类型的自定义操作则写在`@Query`注解中。这包括对数据库执行`SELECT`和`UPDATE`语句。
 
-特别要注意查询中使用的`playerName`*命名绑定参数*。Room允许我们在`@Query`函数中发送参数，这些参数随后将用于发送给数据库的语句中。
+特别要注意查询中使用的`playerName`命名绑定参数。Room允许我们在`@Query`函数中发送参数，这些参数随后将用于发送给数据库的语句中。
 
 这里同样值得注意的是`suspend`修饰符。这意味着该函数可以在任何时刻启动/停止，并且要求该函数必须在另一个`suspend`函数中或从协程中调用。我们将在[从ViewModel访问数据库](Access the Database from a ViewModel)中更详细地了解其工作原理。
 
 现在`PennyDropDao`已经存在，我们的`PennyDropDatabase`应该会高兴多了，但`PennyDropDao`现在却因为`Game`不存在而生气。此外，如果你尝试移除与`Game`相关的调用并运行应用，Room会不喜欢尝试插入`Player`对象，因为`Player`还不是一个实体。是时候向应用添加一些`Entity`类了。
 
-### 添加实体类
+## 添加实体类
 
-实体类就是我们Room数据库中的表。通过添加@Entity注解和一些配置，我们可以将一个普通的data类转换为Room实体。如果你好奇的话，我们会将所有新类放在data包中。
+实体类就是我们Room数据库中的表。通过添加`@Entity`注解和一些配置，我们可以将一个普通的data类转换为Room实体。如果你好奇的话，我们会将所有新类放在data包中。
 
-我们将从PennyDropDao类中使用的Game开始。这个类将保存关于一局Penny Drop游戏的所有必要信息，但不包含任何玩家信息。如果我们思考现实中的游戏，这代表了放置便士的容器。
+我们将从`PennyDropDao`类中使用的`Game`开始。这个类将保存关于一局Penny Drop游戏的所有必要信息，但不包含任何玩家信息。如果我们思考现实中的游戏，这代表了放置便士的容器。
 
-Game类将包含一堆信息：游戏开始/结束时间、游戏状态、已填充的槽位、上一次掷骰值、当前回合文本，以及玩家是否可以掷骰和跳过。它还将有一个gameId值，这将是数据库中的主键。最后，我们需要用@Entity注解来标注这个类，该注解包括关联的数据库表名。
+`Game`类将包含一堆信息：游戏开始/结束时间、游戏状态、已填充的槽位、上一次掷骰值、当前回合文本，以及玩家是否可以掷骰和跳过。它还将有一个`gameId`值，这将是数据库中的主键。最后，我们需要用`@Entity`注解来标注这个类，该注解包括关联的数据库表名。
 
-```
+```kotlin
 @Entity(tableName = "games")
 data class Game(
     @PrimaryKey(autoGenerate = true) var gameId: Long = 0,
@@ -3746,13 +3568,13 @@ data class Game(
 )
 ```
 
-这个类中很少有Room特定的内容，除了@Entity和@PrimaryKey注解。通过向`@PrimaryKey`注解添加autoGenerate属性，我们让Room为我们计算下一个`gameId`值，而不是必须手动计算。
+这个类中很少有Room特定的内容，除了`@Entity`和`@PrimaryKey`注解。通过向`@PrimaryKey`注解添加`autoGenerate`属性，我们让Room为我们计算下一个`gameId`值，而不是必须手动计算。
 
-我确实想提一下，我在这里选择`OffsetDateTime`类型作为日期，这样我们就能完整地了解游戏进行的时间，包括时区。现在，这在我们的情况下*确实*不那么重要，但确保你拥有所有需要的日期时间信息是一个好习惯。
+我确实想提一下，我在这里选择`OffsetDateTime`类型作为日期，这样我们就能完整地了解游戏进行的时间，包括时区。现在，这在我们的情况下确实不那么重要，但确保你拥有所有需要的日期时间信息是一个好习惯。
 
 我们确实需要在`data`包中快速创建`GameState`枚举类：
 
-```
+```kotlin
 package dev.mfazio.pennydrop.data
 
 enum class GameState {
@@ -3765,13 +3587,13 @@ enum class GameState {
 
 除此之外，这个类就完成了，所以我们可以继续将`Player`类转换为`@Entity`。
 
-### 将Player类设为实体
+## 将Player类设为实体
 
 我们在[创建Player类](Create the Player Class)中创建了`Player` data类，所以现在我们只需要更改一些内容，使其准备好成为数据库表。我们可以放心地将其留在`types`包中。
 
 就像我们处理`Game`类一样，我们需要用`@Entity`注解标注这个类，并添加一个`@PrimaryKey`变量。我们还将使`isHuman`和`selectedAI`属性不可变，并告诉Room在处理数据库表时忽略`pennies`和`isRolling`。以下是这些更改的最终结果：
 
-```
+```kotlin
 @Entity(tableName = "players")
 data class Player(
     @PrimaryKey(autoGenerate = true) var playerId: Long = 0,
@@ -3801,23 +3623,23 @@ data class Player(
 }
 ```
 
-在两个状态字段上放置@Ignore可能看起来很奇怪。这个更改的原因是，我们将玩家在游戏中的当前状态的所有权从Player转移到一个尚未创建的新类GameStatus。其背后的逻辑是，它允许Player类代表一个人（或AI）本身，而不是游戏中的玩家以及他们在该游戏中的表现。根据我们设置数据库的方式，一个Player可以参与多个游戏，我们分别跟踪他们在每个游戏中的表现。
+在两个状态字段上放置`@Ignore`可能看起来很奇怪。这个更改的原因是，我们将玩家在游戏中的当前状态的所有权从`Player`转移到一个尚未创建的新类`GameStatus`。其背后的逻辑是，它允许`Player`类代表一个人（或AI）本身，而不是游戏中的玩家以及他们在该游戏中的表现。根据我们设置数据库的方式，一个`Player`可以参与多个游戏，我们分别跟踪他们在每个游戏中的表现。
 
-考虑到所有这些，我们仍然将pennies和isRolling作为Player上的辅助变量。正如你稍后将看到的，当我们从数据库中获取玩家的状态时，我们可以将他们当前的便士数量和掷骰状态分配给Player对象。这使我们能够在数据库中更好地分离数据，同时在代码中保持逻辑清晰。我所说的“逻辑”是指我们仍然从玩家那里获取便士数量和掷骰状态，而不是前端也必须担心状态。
+考虑到所有这些，我们仍然将`pennies`和`isRolling`作为`Player`上的辅助变量。正如你稍后将看到的，当我们从数据库中获取玩家的状态时，我们可以将他们当前的便士数量和掷骰状态分配给`Player`对象。这使我们能够在数据库中更好地分离数据，同时在代码中保持逻辑清晰。我所说的“逻辑”是指我们仍然从玩家那里获取便士数量和掷骰状态，而不是前端也必须担心状态。
 
-顺便说一下，我们*确实*会在稍后移除`addPennies`函数，但我想等到我们更改`updateFromGameHandler`的工作方式之后再做。否则，你的应用将无法构建，这很烦人。
+顺便说一下，我们确实会在稍后移除`addPennies`函数，但我想等到我们更改`updateFromGameHandler`的工作方式之后再做。否则，你的应用将无法构建，这很烦人。
 
 与此同时，让我们添加`GameStatus`类。
 
-### 创建GameStatus实体
+## 创建GameStatus实体
 
 如前所述，`GameStatus`是一个数据库表和`Entity`，负责保存用户在给定游戏中的当前（或最终）状态。根据`gameId`和`playerId`，我们将知道他们在游戏中是几号玩家（以保持回合顺序）、他们是否在掷骰，以及他们有多少便士。
 
 这将类似于前两个`Entity`类，但我们将添加外键的概念，以确保`GameStatus`与给定的`Game`和`Player`之间的连接。
 
-每个外键将有一个父列和子列，分别代表另一个表中的列名和`game_statuses`表中的列名。我们可以通过`foreignKeys`属性在@Entity注解中添加`ForeignKey`对象列表。
+每个外键将有一个父列和子列，分别代表另一个表中的列名和`game_statuses`表中的列名。我们可以通过`foreignKeys`属性在`@Entity`注解中添加`ForeignKey`对象列表。
 
-```
+```kotlin
 @Entity(
     tableName = "game_statuses",
     primaryKeys = ["gameId", "playerId"],
@@ -3851,15 +3673,15 @@ data class GameStatus(
 
 由于`GameStatus`已经建立了游戏和玩家之间的连接，我们可以直接使用它作为我们的`Junction`类，而不是创建一个新的。整个`GameWithPlayers`类看起来像这样：
 
-```
+```kotlin
 data class GameWithPlayers(
     @Embedded val game: Game,
     @Relation(
 ```
 
-### 将实体添加到 PennyDropDatabase
+## 将实体添加到 PennyDropDatabase
 
-当向 `@Database` 注解添加 `Entity` 类时，我们实际上是在为每个 `Entity` 类添加 `KClass` 值。请注意，`KClass` 对象是 Kotlin 类，不同于我们在其他地方使用的 Java `Class` 对象。
+当向`@Database`注解添加`Entity`类时，我们实际上是在为每个`Entity`类添加`KClass`值。请注意，`KClass`对象是Kotlin类，不同于我们在其他地方使用的Java`Class`对象。
 
 ```kotlin
 @Database(
@@ -3869,13 +3691,13 @@ data class GameWithPlayers(
 )
 ```
 
-此外，既然我们正在处理 `PennyDropDatabase`，并且 `Player` 实体类已经准备就绪，我们可以继续向数据库中添加一些玩家。虽然我们还不知道谁会参与游戏，但我们知道可用的 AI 玩家。我们将在初始化时将它们转换为 `Player` 对象并保存到数据库中。
+此外，既然我们正在处理`PennyDropDatabase`，并且`Player`实体类已经准备就绪，我们可以继续向数据库中添加一些玩家。虽然我们还不知道谁会参与游戏，但我们知道可用的AI玩家。我们将在初始化时将它们转换为`Player`对象并保存到数据库中。
 
-### 在数据库创建期间添加数据
+## 在数据库创建期间添加数据
 
-我们在 `PennyDropDatabase` 中使用的 `RoomDatabase.Builder` 类允许你添加一个或多个 `Callback` 实例。`Callback` 类包含三个函数：`onCreate`、`onOpen` 和 `onDestructiveMigration`。这些函数都接收一个 `SupportSQLiteDatabase` 对象，允许你在不同时间与数据库进行交互。
+我们在`PennyDropDatabase`中使用的`RoomDatabase.Builder`类允许你添加一个或多个`Callback`实例。`Callback`类包含三个函数：`onCreate`、`onOpen`和`onDestructiveMigration`。这些函数都接收一个`SupportSQLiteDatabase`对象，允许你在不同时间与数据库进行交互。
 
-在我们的场景中，我们希望在初始创建数据库时添加 AI 玩家，因此我们将重写 `Callback` 对象上的 `onCreate` 方法，然后将其添加到 `Room.databaseBuilder` 调用中。在该方法内部，我们将调用 `PennyDropDao` 的 `insertPlayers` 函数，该函数将通过 `AI.basicAI` 值引入 AI 玩家。但首先，我们需要将每个 `AI` 对象转换为 `Player`。执行此操作的函数位于 `AI` 类中，如下所示：
+在我们的场景中，我们希望在初始创建数据库时添加AI玩家，因此我们将重写`Callback`对象上的`onCreate`方法，然后将其添加到`Room.databaseBuilder`调用中。在该方法内部，我们将调用`PennyDropDao`的`insertPlayers`函数，该函数将通过`AI.basicAI`值引入AI玩家。但首先，我们需要将每个`AI`对象转换为`Player`。执行此操作的函数位于`AI`类中，如下所示：
 
 ```kotlin
 fun toPlayer() = Player(
@@ -3885,9 +3707,9 @@ fun toPlayer() = Player(
 )
 ```
 
-在进入 `onCreate` 函数之前的最后一点说明是，所有对数据库的修改操作都必须在非 UI 线程上进行。幸运的是，这仅仅意味着我们需要在协程块内进行调用。
+在进入`onCreate`函数之前的最后一点说明是，所有对数据库的修改操作都必须在非UI线程上进行。幸运的是，这仅仅意味着我们需要在协程块内进行调用。
 
-`getDatabase` 函数中 `instance` 的赋值现在将如下所示：
+`getDatabase`函数中`instance`的赋值现在将如下所示：
 
 ```kotlin
 val instance = Room.databaseBuilder(
@@ -3906,19 +3728,19 @@ val instance = Room.databaseBuilder(
 }).build()
 ```
 
-现在，当应用首次启动时，我们将在数据库的 `players` 表中拥有所有 AI 玩家。或者，如果数据库知道如何处理 `AI` 对象，它就会这样做。如果你现在尝试运行应用，构建将失败并出现如下错误：
+现在，当应用首次启动时，我们将在数据库的`players`表中拥有所有AI玩家。或者，如果数据库知道如何处理`AI`对象，它就会这样做。如果你现在尝试运行应用，构建将失败并出现如下错误：
 
 > Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
 
-虽然没有明确指出，但数据库不知道如何将 `AI` 转换为适当的 SQLite 数据类型。实际上，Room 无法处理保存*任何*完整对象。相反，我们需要给数据库提供一种在对象之间进行转换的方法，在本例中是 `AI` 对象。
+虽然没有明确指出，但数据库不知道如何将`AI`转换为适当的SQLite数据类型。实际上，Room无法处理保存任何完整对象。相反，我们需要给数据库提供一种在对象之间进行转换的方法，在本例中是`AI`对象。
 
-所有这些转换都发生在 `data` 包下的 `Converters.kt` 文件中。在这里，我们可以构建许多带有 `@TypeConverter` 注解的函数，然后告诉 `PennyDropDatabase` 使用它们。在构建 `AI` 转换器的同时，我们也应该为 `Game` 类上的 `OffsetDateTime`、`GameState` 和 `List<Int>` 属性构建转换器。
+所有这些转换都发生在`data`包下的`Converters.kt`文件中。在这里，我们可以构建许多带有`@TypeConverter`注解的函数，然后告诉`PennyDropDatabase`使用它们。在构建`AI`转换器的同时，我们也应该为`Game`类上的`OffsetDateTime`、`GameState`和`List<Int>`属性构建转换器。
 
-### 将转换器添加到数据库
+## 将转换器添加到数据库
 
-在 `data` 包内，添加一个名为 `Converters` 的新 `class`。此类将包含八个函数，对应四组转换：`OffsetDateTime` 与 `String` 互转、`GameState` 与 `Int` 互转、`List<Int>` 与 `String` 互转，以及 `AI` 转为 `Int`。
+在`data`包内，添加一个名为`Converters`的新`class`。此类将包含八个函数，对应四组转换：`OffsetDateTime`与`String`互转、`GameState`与`Int`互转、`List<Int>`与`String`互转，以及`AI`转为`Int`。
 
-`OffsetDateTime` 转换器函数与 `Game` 类中的 `startTime` 和 `endTime` 属性一起使用，使用 `DateTimeFormatter` 对象将 `OffsetDateTime` 对象与格式化字符串相互转换。你可以在此处使用任何合理的日期/时间格式；我使用 `DateTimeFormatter.ISO_OFFSET_DATE_TIME`，因为它包含我们需要的所有信息，并且是标准化格式。作为参考，此格式的日期/时间文本将类似于 `2014-01-24T15:45:05.023Z`。
+`OffsetDateTime`转换器函数与`Game`类中的`startTime`和`endTime`属性一起使用，使用`DateTimeFormatter`对象将`OffsetDateTime`对象与格式化字符串相互转换。你可以在此处使用任何合理的日期/时间格式；我使用`DateTimeFormatter.ISO_OFFSET_DATE_TIME`，因为它包含我们需要的所有信息，并且是标准化格式。作为参考，此格式的日期/时间文本将类似于`2014-01-24T15:45:05.023Z`。
 
 ```kotlin
 private val formatter = DateTimeFormatter.ISO_OFFSET_DATE_TIME
@@ -3932,7 +3754,9 @@ fun toOffsetDateTime(value: String?) = value?.let {
 fun fromOffsetDateTime(date: OffsetDateTime?) = date?.format(formatter)
 ```
 
-请注意，两个函数都处理输入值为 `null` 的情况。我们将在所有转换器函数中执行相同操作，以避免因传入数据为 null（例如，具有 `null` `endDate` 属性的进行中的游戏）而导致的任何转换问题。
+
+
+请注意，两个函数都处理输入值为 `null` 的情况。我们将在所有转换器函数中执行相同操作，以避免因传入数据为 `null`（例如，具有 `null` `endDate` 属性的进行中的游戏）而导致的任何转换问题。
 
 接下来是 `GameState` 到 `Int` 的转换。为此，我们将使用所有 `enum` 类中包含的 `ordinal` 属性。此属性是给定 `enum` 值的 `Int` 值，我们可以将其保存到数据库中。
 
@@ -4041,13 +3865,13 @@ abstract class PennyDropDatabase : RoomDatabase()
 
 现在应用已准备就绪，我们可以启动它，数据库将使用 `AI` 玩家进行初始化。当然，我们尚未使用数据库中的值，但基础已经奠定。下一步是创建一个 *repository* 类，然后开始从 `GameViewModel` 调用这些函数。
 
-### 创建 Repository 类
+## 创建 Repository 类
 
 首先，repository 并非特定于 Room 的类，而是推荐的 Jetpack 约定。使用 repository 的优势在于，无论数据来源如何，ViewModel 类都有一个统一的位置进行所有数据访问。这意味着，如果我们同时有 Web 服务调用和数据库调用，前端组件将前往同一位置处理两者，而无需关心具体是哪种调用。拥有 repository 将数据获取方式与数据使用方式分离。
 
-在我们的案例中，拥有 repository 确实有些过度设计，因为我们只有一个数据源，而且如你所见，repository 中的函数将只是对 PennyDropDao 函数的透传。尽管如此，一旦你转向更复杂的应用程序（如 Android Baseball League 应用），拥有 repository 是一个良好的实践。
+在我们的案例中，拥有 repository 确实有些过度设计，因为我们只有一个数据源，而且如你所见，repository 中的函数将只是对 `PennyDropDao` 函数的透传。尽管如此，一旦你转向更复杂的应用程序（如 Android Baseball League 应用），拥有 repository 是一个良好的实践。
 
-首先，在 data 包中创建 PennyDropRepository 类，并将 PennyDropDao 的实例作为私有值传入。
+首先，在 `data` 包中创建 `PennyDropRepository` 类，并将 `PennyDropDao` 的实例作为私有值传入。
 
 ```kotlin
 class PennyDropRepository(private val pennyDropDao: PennyDropDao) {
@@ -4055,9 +3879,9 @@ class PennyDropRepository(private val pennyDropDao: PennyDropDao) {
 }
 ```
 
-PennyDropRepository 类将包含四个初始函数：getCurrentGameWithPlayers、getCurrentGameStatuses、startGame 和 updateGame。这突显了 repository 的另一个优势：我们可以限制向应用其余部分显示的函数，同时允许 DAO 拥有额外的内部功能。虽然在大多数情况下我们可以将这些函数设为 protected，但这会限制我们在其他与数据库相关的活动中使用它们，例如在 RoomDatabase 初始化期间。
+`PennyDropRepository` 类将包含四个初始函数：`getCurrentGameWithPlayers`、`getCurrentGameStatuses`、`startGame` 和 `updateGame`。这突显了 repository 的另一个优势：我们可以限制向应用其余部分显示的函数，同时允许 DAO 拥有额外的内部功能。虽然在大多数情况下我们可以将这些函数设为 `protected`，但这会限制我们在其他与数据库相关的活动中使用它们，例如在 `RoomDatabase` 初始化期间。
 
-如前所述，这些函数中的每一个都将调用 PennyDropDao 中的相应函数。此外，后两个函数将被标记为 `suspend` 关键字，因为它们正在修改数据库。整个 PennyDropRepository 如下所示：
+如前所述，这些函数中的每一个都将调用 `PennyDropDao` 中的相应函数。此外，后两个函数将被标记为 `suspend` 关键字，因为它们正在修改数据库。整个 `PennyDropRepository` 如下所示：
 
 ```kotlin
 class PennyDropRepository(private val pennyDropDao: PennyDropDao) {
@@ -4078,11 +3902,11 @@ class PennyDropRepository(private val pennyDropDao: PennyDropDao) {
 }
 ```
 
-PennyDropRepository 现在已完成，但不幸的是，目前 DAO 中没有任何函数存在。让我们回到 PennyDropDao 并添加它们。
+`PennyDropRepository` 现在已完成，但不幸的是，目前 DAO 中没有任何函数存在。让我们回到 `PennyDropDao` 并添加它们。
 
-### 添加 PennyDropDao 函数
+## 添加 PennyDropDao 函数
 
-我们需要添加四个函数，并将按顺序进行。首先是 getCurrentGameWithPlayers。此函数类似于我们之前看到的（特别是 getPlayer 函数），但它还包括 `@Transaction` 注解。此注解告诉 Room，你调用的函数引用多个表，数据应在单个原子操作中检索。在我们的案例中，我们从 games 和 players 表中获取数据。
+我们需要添加四个函数，并将按顺序进行。首先是 `getCurrentGameWithPlayers`。此函数类似于我们之前看到的（特别是 `getPlayer` 函数），但它还包括 `@Transaction` 注解。此注解告诉 Room，你调用的函数引用多个表，数据应在单个原子操作中检索。在我们的案例中，我们从 `games` 和 `players` 表中获取数据。
 
 ```kotlin
 @Transaction
@@ -4091,9 +3915,9 @@ abstract fun getCurrentGameWithPlayers():
     LiveData<GameWithPlayers>
 ```
 
-虽然查询仅提及 games 表，但由于 `@Relation` 注解和 GameStatus 类上的 `@Junction`，我们从两个表中拉取数据。这告诉 Room 获取与 Game 关联的 Player 记录，而无需编写该部分的 SQL 查询。
+虽然查询仅提及 `games` 表，但由于 `@Relation` 注解和 `GameStatus` 类上的 `@Junction`，我们从两个表中拉取数据。这告诉 Room 获取与 `Game` 关联的 `Player` 记录，而无需编写该部分的 SQL 查询。
 
-下一个函数是 getCurrentGameStatuses。不幸的是，Room 没有简单的方法在单个查询中获取游戏、玩家以及每个玩家的状态，并将结果映射到对象。因此，我们需要单独拉取 GameStatus 对象。此 `@Query` 将通过对 games 表执行子查询来获取最新的 GameStatus 实例。我们获取最近的开放游戏，然后按 gamePlayerNumber 属性对状态进行排序（以确保玩家处于正确的游戏顺序）。请注意，这也将是一个 `@Transaction`，因为我们引用了多个表。
+下一个函数是 `getCurrentGameStatuses`。不幸的是，Room 没有简单的方法在单个查询中获取游戏、玩家以及每个玩家的状态，并将结果映射到对象。因此，我们需要单独拉取 `GameStatus` 对象。此 `@Query` 将通过对 `games` 表执行子查询来获取最新的 `GameStatus` 实例。我们获取最近的开放游戏，然后按 `gamePlayerNumber` 属性对状态进行排序（以确保玩家处于正确的游戏顺序）。请注意，这也将是一个 `@Transaction`，因为我们引用了多个表。
 
 ```kotlin
 @Transaction
@@ -4111,11 +3935,11 @@ abstract fun getCurrentGameWithPlayers():
 abstract fun getCurrentGameStatuses(): LiveData<List<GameStatus>>
 ```
 
-如你所见，`@Query` 注解为我们从数据库检索数据提供了极大的灵活性。但有时 `@Query` 仍然不够，我们需要在单个 `@Transaction` 中调用多个函数。对于这种情况，我们可以创建一个 open 函数并自己实现该函数，而不是让 Room 为我们完成。能够在 DAO 中拥有完全实现的函数是 PennyDropDao 是抽象类而非接口（如 Room 文档中常见）的原因。
+如你所见，`@Query` 注解为我们从数据库检索数据提供了极大的灵活性。但有时 `@Query` 仍然不够，我们需要在单个 `@Transaction` 中调用多个函数。对于这种情况，我们可以创建一个 `open` 函数并自己实现该函数，而不是让 Room 为我们完成。能够在 DAO 中拥有完全实现的函数是 `PennyDropDao` 是抽象类而非接口（如 Room 文档中常见）的原因。
 
 在 `startGame` 的案例中，我们将引入一个 `List<Player>`，关闭任何现有游戏，创建一个新的 `Game`，从数据库获取或插入传入的 `Player` 对象，然后为每个玩家添加新的 `GameStatus` 条目，最后返回新创建的游戏的 ID。为此，我们将在 `PennyDropDao` 内部调用其他函数来为我们完成工作。我们在首次构建 `PennyDropDao` 时已经创建了 `insertGame` 和 `insertPlayer`，因此我们只需要两个额外的新函数。
 
-第一个函数名为 `closeOpenGames`，它遍历数据库并将当前时间设置为任何仍开放游戏的 `endTime`，并将状态设置为 Cancelled。我们之前在 [创建 DAO 类](Create a DAO Class) 中见过命名绑定参数，但这里它们更有趣。
+第一个函数名为 `closeOpenGames`，它遍历数据库并将当前时间设置为任何仍开放游戏的 `endTime`，并将状态设置为 `Cancelled`。我们之前在 [创建 DAO 类](Create a DAO Class) 中见过命名绑定参数，但这里它们更有趣。
 
 默认情况下，我们无法传入复杂类型，但由于我们之前为这两种类型创建了类型转换器，因此这可以正常工作。
 
@@ -4174,14 +3998,17 @@ open suspend fun startGame(players: List<Player>): Long {
                 index == 0
             )
         )
-    )
+    }
 }
 ```
 
 return gameId
+
 }
 
 这里我想特别说明一下我们是如何获取 `playerIds` 值的。我们检查数据库中是否存在该玩家，如果存在则使用该记录获取 `playerId`；如果未找到该玩家，则创建该玩家并返回其玩家ID。由于 `insertPlayer` 返回的是 `Long` 类型，我们可以立即获得数据库ID，无需进行二次查询。此外，Elvis运算符使我们能够将所有操作保持在一个表达式中，而无需编写额外的条件逻辑。
+
+
 
 `PennyDropDao` 中还有一个函数需要介绍，即 `updateGameAndStatuses` 函数。正如你所料，该函数的作用是：在单个 `@Transaction` 中更新传入的 `Game` 和 `GameStatus` 对象的数据库版本。`updateGame` 已经存在，但我们需要快速创建 `updateGameStatuses`：
 
@@ -4425,6 +4252,8 @@ private fun updateCurrentGame(
 }
 ```
 
+
+
 `updateStatuses` 函数接收状态并将每个 `GameStatus` 映射到正确的 `Player`。这就是为什么我们将 `pennies` 和 `isRolling` 变量保留在 `Player` 类上，但将它们排除在数据库之外的原因。我们可以在数据库中保持数据分离，但在代码中将它们组合起来，这样在视图布局文件中引用值的方式保持不变。此外，在代码中将状态值放在 `Player` 类上更有意义。
 
 我们获取每个 `Player`，找到他们的 `GameStatus`，然后分配状态变量。这里我们还有一些 `null` 检查：如果 `gameStatuses` 值为 `null`，则 `GameWithPlayers` 保持不变。同样，如果我们找不到合适的 `GameStatus`，则返回一个未更改的 `Player` 对象。
@@ -4450,7 +4279,7 @@ fun updateStatuses(gameStatuses: List<GameStatus>?) =
 
 这里特别值得注意的是包裹代码块的 `this.copy` 调用。这样做是因为我们想创建一个带有更新的 `List<Player>` 的 `GameWithPlayers` 新实例，而不是更改现有对象（反正我们也不能更改，因为它是 `val`）。最终，此函数返回一个 `GameWithPlayers`，可能带有更改，在我们对 UI 进行一些更改后，UI 将相应更新。在进入 UI 之前，我们将在 `GameViewModel` 内的 `init` 块中设置其余的 `LiveData` 对象。
 
-### 获取当前玩家和槽位
+## 获取当前玩家和槽位
 
 我们已经设置了 `currentGame`，这意味着要获取当前玩家，我们只需要找到当前正在掷骰子的玩家。虽然我们可以将这部分添加到 `updateCurrentGame` 中，但我将调用分开有两个原因。第一，我不喜欢在像这样的函数中产生副作用（因为重点是 `currentGame` 值），第二，这是 `Transformations` 类的一个很好的展示。
 
@@ -4480,7 +4309,7 @@ this.currentStandingsText =
 
 我们将对 `Slots` 值执行相同的操作，但这里我们将使用 `Slot` 类中的一个新函数 `mapFromGame` 来处理转换逻辑。首先，`Transformations.map` 函数如下所示：
 
-```
+```kotlin
 this.slots =
     Transformations.map(this.currentGame) { gameWithPlayers ->
         Slot.mapFromGame(gameWithPlayers?.game)
@@ -4489,7 +4318,7 @@ this.slots =
 
 然后，在 `Slot` 的 `companion object` 内部，`mapFromGame` 函数如下所示：
 
-```
+```kotlin
 fun mapFromGame(game: Game?) =
     (1..6).map { slotNum ->
         Slot(
@@ -4505,11 +4334,11 @@ fun mapFromGame(game: Game?) =
 
 我们现在已连接了 `currentGame`，并将其用作其他字段的来源，但我们尚未处理按钮逻辑。接下来是 `canPass` 和 `canRoll` 值，它们同时使用 `currentGame` 和 `currentPlayer` `LiveData` 值。
 
-### 处理 canRoll 和 canPass
+## 处理 canRoll 和 canPass
 
 这里，为了确定应显示哪些按钮，我们需要同时使用 `currentGame` 和 `currentPlayer` 值。提醒一下，我们只在用户掷骰一次后才启用 Pass 按钮，并且对于任何 AI 玩家，我们都会禁用这两个按钮。我们可以使用另一个 `MediatorLiveData` 对象，并将 `currentGame` 和 `currentPlayer` 都添加为源，因为我们同时使用这两个值。但是，为每个值设置一个单独的 `Transformation.map` 调用，并以 `currentPlayer` 作为源更有意义，因为 `currentPlayer` 来自 `currentGame`。这将导致每当 `currentPlayer` 或 `currentGame` 更新时，该函数都会运行。请注意，这并不意味着我们得到了一个新玩家，只是 `currentPlayer` 值由于 `currentGame` LiveData 的更改而更新。因此，`canRoll` 和 `canPass` 的赋值如下所示：
 
-```
+```kotlin
 this.canRoll = Transformations.map(this.currentPlayer) { player ->
     player?.isHuman == true && currentGame.value?.game?.canRoll == true
 }
@@ -4521,11 +4350,11 @@ this.canPass = Transformations.map(this.currentPlayer) { player ->
 
 至此，我们所有的 `LiveData` 值都已初始化，`init` 块终于完成。接下来是修改我们的 `roll` 和 `pass` 函数以适应新值。值得庆幸的是，这两个函数都不需要进行重大更改。
 
-### 更新 roll() 和 pass() 函数
+## 更新 roll() 和 pass() 函数
 
 我们当前版本的 `roll` 和 `pass` 是相似的；我们获取当前玩家，检查移动（掷骰或通过）是否有效，调用相应的 `GameHandler` 函数，并将结果发送到 `updateFromGameHandler`。`roll` 在开头还有一个额外的部分来获取槽位的当前状态。请注意，我们之前已经在这些函数中完成了大部分工作，因此我们不需要从头开始重新获取所有这些值，只需添加一堆 `null` 检查即可。两个函数现在都将遵循相同的格式：为我们需要的所有数据创建一些新变量，确保每个变量都不是 `null`，验证您要执行的操作（`canRoll` 或 `canPass`），然后调用 `GameHandler` 部分。`roll` 函数如下所示：
 
-```
+```kotlin
 fun roll() {
     val game = this.currentGame.value?.game
     val players = this.currentGame.value?.players
@@ -4544,23 +4373,23 @@ fun roll() {
 
 老实说，我不喜欢这个方法中长长的空值检查链。我考虑过添加一个名为 `allNotNull` 的扩展函数，并将其放在 `List` 类上：
 
-```
+```kotlin
 fun <T> List<T?>.allNotNull() = this.all { it != null }
 ```
 
 添加扩展函数将允许我们以这种方式检查所有变量：
 
-```
+```kotlin
 listOf(game, players, currentPlayer, slots).allNotNull()
 ```
 
-然而，这样做有一个问题。将 `null` 检查移到扩展方法会破坏 Kotlin 的 *智能转换* 能力。在第一段代码中，显式检查变量（如 `game`）是否为 `null` 会导致编译器自动将该变量转换为其非空对应项。例如，在 `if` 块内部，`game` 现在是一个 `Game` 对象，而不是 `Game?` 对象。此外，在 `if` 条件表达式的其余部分中，`game` 被视为非 `null`，这意味着 `game.canRoll` 返回 `Boolean` 而不是 `Boolean?` 对象。如果我们使用类似 `allNotNull` 的方法，我们将失去这种智能转换能力，必须有效地再次检查 `null` 或使用 `!!` 运算符来断言所有变量都不是 `null`。
+然而，这样做有一个问题。将 `null` 检查移到扩展方法会破坏 Kotlin 的*智能转换*能力。在第一段代码中，显式检查变量（如 `game`）是否为 `null` 会导致编译器自动将该变量转换为其非空对应项。例如，在 `if` 块内部，`game` 现在是一个 `Game` 对象，而不是 `Game?` 对象。此外，在 `if` 条件表达式的其余部分中，`game` 被视为非 `null`，这意味着 `game.canRoll` 返回 `Boolean` 而不是 `Boolean?` 对象。如果我们使用类似 `allNotNull` 的方法，我们将失去这种智能转换能力，必须有效地再次检查 `null` 或使用 `!!` 运算符来断言所有变量都不是 `null`。
 
 `!!` 运算符是“非空断言运算符”，在 Kotlin 官方文档中被描述为“为 NPE 爱好者准备的”。这里的 NPE 指的是 `NullPointerException`，因为我们实际上忽略了 Kotlin 尝试安全检查变量是否为 `null` 的努力，并移除了该语言的最佳特性之一。希望我们能清楚，除非*绝对必要*，否则我们不应该使用此运算符。稍微缩减条件表达式？这对我来说似乎不是绝对必要的，因此我选择使用 `null` 检查链。
 
 `pass` 函数看起来相同；唯一的区别是我们不需要当前的 `slots`。
 
-```
+```kotlin
 fun pass() {
     val game = this.currentGame.value?.game
     val players = this.currentGame.value?.players
@@ -4578,15 +4407,15 @@ fun pass() {
 
 两个函数都已完成，可以供 UI 使用，无需在 `fragment_game.xml` 中进行任何更改。接下来是我们在两个函数中调用的 `updateFromGameHandler` 函数的修改。`updateFromGameHandler` 的结果与之前基本相同，但我们需要进行一些更改以适应数据库。
 
-### 修改 updateFromGameHandler 函数
+## 修改 updateFromGameHandler 函数
 
-此函数的先前版本有四个部分：更新玩家、更新槽位、修改游戏相关变量（currentTurnText、canRoll 和 canPass），然后在适用时启动 AI 回合。现在，我们有三个部分：更新 Game、更新所有适用的 GameStatus 对象，以及启动 AI 回合。我们的最终结果大体相同，但我们再次从不同的角度来处理它。
+此函数的先前版本有四个部分：更新玩家、更新槽位、修改游戏相关变量（`currentTurnText`、`canRoll` 和 `canPass`），然后在适用时启动 AI 回合。现在，我们有三个部分：更新 `Game`、更新所有适用的 `GameStatus` 对象，以及启动 AI 回合。我们的最终结果大体相同，但我们再次从不同的角度来处理它。
 
-第一步是获取一个游戏值，这是一个基于 currentGame 的复制值。我们通过 let 块检查空值，然后在其中使用 currentGameWithPlayers 值以及 copy 函数。在 copy 函数内部，我们使用传入 updateFromGameHandler 的 TurnResult 对象更新 currentGameWithPlayers 的大部分内容。
+第一步是获取一个游戏值，这是一个基于 `currentGame` 的复制值。我们通过 `let` 块检查空值，然后在其中使用 `currentGameWithPlayers` 值以及 `copy` 函数。在 `copy` 函数内部，我们使用传入 `updateFromGameHandler` 的 `TurnResult` 对象更新 `currentGameWithPlayers` 的大部分内容。
 
-虽然这个过程看起来与我们之前所做的足够相似，但这个赋值的有趣之处在于，如果 currentGame.value 因任何原因为空。如果是这种情况，我们使用 Elvis 运算符并在该运算符的右侧添加一个 return 语句。这是 Kotlin 中一种完全有效的方法，可以节省我们获取不会使用状态的时间，并在调用数据库时避免额外的空值检查。游戏赋值块如下所示：
+虽然这个过程看起来与我们之前所做的足够相似，但这个赋值的有趣之处在于，如果 `currentGame.value` 因任何原因为空。如果是这种情况，我们使用 Elvis 运算符并在该运算符的右侧添加一个 `return` 语句。这是 Kotlin 中一种完全有效的方法，可以节省我们获取不会使用状态的时间，并在调用数据库时避免额外的空值检查。游戏赋值块如下所示：
 
-```
+```kotlin
 val game = currentGame.value?.let { currentGameWithPlayers ->
     currentGameWithPlayers.game.copy(
         gameState =
@@ -4599,9 +4428,11 @@ val game = currentGame.value?.let { currentGameWithPlayers ->
         canRoll = result.canRoll,
 ```
 
-### 更新 GenerateTurnText()
+## 更新 GenerateTurnText()
 
 值得庆幸的是，这个方法的大部分内容将保持不变。`currentText` 值的赋值现在将是一条单独的语句，因为我们不再在此处为 `currentTurnText` LiveData 赋值。此外，由于生成游戏结束文本现在变得更加复杂，我们最好创建一个名为 `generateGameOverText` 的单独函数。这使我们得到以下函数代码，不包括其他回合场景。我将这些场景排除在外，因为那里没有新内容。如果你想查看完整代码，请查看 PragProg 网站上的源代码。函数的其余部分如下：
+
+
 
 ```
 private fun generateTurnText(result: TurnResult): String {
@@ -4619,9 +4450,9 @@ private fun generateTurnText(result: TurnResult): String {
 }
 ```
 
-新的 `generateGameOverText` 函数最终将打印出与之前相同风格的 `String`，但要达到这个目标需要做更多工作。问题在于，我们是在数据库更新之前生成回合文本，因此对于获胜者来说，我们的最终文本会略有偏差。因此，我们需要确保所有内容都准确反映游戏结束状态，然后才能生成文本。
+新的`generateGameOverText`函数最终将打印出与之前相同风格的`String`，但要达到这个目标需要做更多工作。问题在于，我们是在数据库更新之前生成回合文本，因此对于获胜者来说，我们的最终文本会略有偏差。因此，我们需要确保所有内容都准确反映游戏结束状态，然后才能生成文本。
 
-我们获取 `List<GameStatus>`，然后用这些状态更新 `currentGame` 中的 `List<Player>`。之后，我们获取获胜玩家（并将其 `pennies` 设置为 0，因为我们知道他们出局了），然后获取 "Game Over!" 原始字符串。如果我们没有 `players` 或 `winningPlayer`，我们只返回 "N/A"。以下是整个函数：
+我们获取`List<GameStatus>`，然后用这些状态更新`currentGame`中的`List<Player>`。之后，我们获取获胜玩家（并将其`pennies`设置为0，因为我们知道他们出局了），然后获取"Game Over!"原始字符串。如果我们没有`players`或`winningPlayer`，我们只返回"N/A"。以下是整个函数：
 
 ```
 private fun generateGameOverText(): String {
@@ -4650,19 +4481,19 @@ Game Over!
 }
 ```
 
-这是我们在 `GameViewModel` 中需要更新的最后一部分，因此我们可以自由地转移到其他地方。最后一部分是在 `fragment_game.xml` 中进行所有更新。而“所有”，我指的是唯一需要的更改。
+这是我们在`GameViewModel`中需要更新的最后一部分，因此我们可以自由地转移到其他地方。最后一部分是在`fragment_game.xml`中进行所有更新。而"所有"，我指的是唯一需要的更改。
 
-### 更新 UI 数据绑定
+## 更新 UI 数据绑定
 
-通过从 GameViewModel 和 fragment_game.xml 中的 LiveData 开始，将状态从 GameViewModel 中持有切换到 PennyDropDatabase，只需要最少的重新工作。事实上，如果我们从一开始就使用 GameViewModel 中的 Game 对象，而不是分离出 currentTurnText，那么这里就不需要任何更改。这就是你想要设计的 View/ViewModel 关系：View 不应该关心*如何*获取数据，只关心它拥有所需的数据。
+通过从`GameViewModel`和`fragment_game.xml`中的`LiveData`开始，将状态从`GameViewModel`中持有切换到`PennyDropDatabase`，只需要最少的重新工作。事实上，如果我们从一开始就使用`GameViewModel`中的`Game`对象，而不是分离出`currentTurnText`，那么这里就不需要任何更改。这就是你想要设计的View/ViewModel关系：View不应该关心*如何*获取数据，只关心它拥有所需的数据。
 
-在这种情况下，我特意等待 Game，因为它在上一章中没有增加任何价值。然而，将数据保存在数据库中，单个 Game 对象更有意义。它允许我们拥有先前玩过的游戏的历史记录，加上持有当前游戏的状态。一点重新工作是避免过度复杂化我们架构的可接受的权衡。
+在这种情况下，我特意等待`Game`，因为它在上一章中没有增加任何价值。然而，将数据保存在数据库中，单个`Game`对象更有意义。它允许我们拥有先前玩过的游戏的历史记录，加上持有当前游戏的状态。一点重新工作是避免过度复杂化我们架构的可接受的权衡。
 
-正如我在上一段中暗示的，我们只需要更新 fragment_game.xml 获取游戏文本的方式，即从 currentGame LiveData 值获取。布局底部的 @+id/textCurrentTurnInfo <TextView> 现在具有 android:text 属性，其值为 "@{vm.currentGame.game.currentTurnText}"。
+正如我在上一段中暗示的，我们只需要更新`fragment_game.xml`获取游戏文本的方式，即从`currentGame` `LiveData`值获取。布局底部的`@+id/textCurrentTurnInfo` `<TextView>`现在具有`android:text`属性，其值为`"@{vm.currentGame.game.currentTurnText}"`。
 
 ---
 
-我们已经在这个函数中使用了几乎所有内容，除了 `updateFilledSlots` 函数，它取代了 `updateSlots`。这个新函数映射到一个单独的 `when` 块，该块检查我们是否需要清除槽位或某个槽位是否新被填充。如果我们需要清除槽位，`currentGame` 上的 `filledSlots` 值将变为空的 `List<Int>`。如果我们刚刚掷出的不是六，我们将掷出的槽位添加到 `filledSlots` 列表中，意思是，我们实际上说 `filledSlots + result.lastRoll`，这会为我们创建一个新的 `List<Int>` 以从该函数传出。如果这两个条件都不是 `true`，我们按原样返回 `filledSlots`。整个函数如下所示：
+我们已经在这个函数中使用了几乎所有内容，除了`updateFilledSlots`函数，它取代了`updateSlots`。这个新函数映射到一个单独的`when`块，该块检查我们是否需要清除槽位或某个槽位是否新被填充。如果我们需要清除槽位，`currentGame`上的`filledSlots`值将变为空的`List<Int>`。如果我们刚刚掷出的不是六，我们将掷出的槽位添加到`filledSlots`列表中，意思是，我们实际上说`filledSlots + result.lastRoll`，这会为我们创建一个新的`List<Int>`以从该函数传出。如果这两个条件都不是`true`，我们按原样返回`filledSlots`。整个函数如下所示：
 
 ```
 private fun updateFilledSlots(
@@ -4676,9 +4507,9 @@ private fun updateFilledSlots(
 }
 ```
 
-设置好 `game` 值后，我们可以继续处理 `statuses`。这将采用类似的方法，但由于我们处理的是 `List<GameStatus>`，我们使用 `map` 而不是 `let` 进行 `null` 检查。`map` 块内部将是一个单独的 `when` 语句，该语句比较当前 `GameStatus` 和 `TurnResult` 对象上的 `Player` 对象的玩家 ID。
+设置好`game`值后，我们可以继续处理`statuses`。这将采用类似的方法，但由于我们处理的是`List<GameStatus>`，我们使用`map`而不是`let`进行`null`检查。`map`块内部将是一个单独的`when`语句，该语句比较当前`GameStatus`和`TurnResult`对象上的`Player`对象的玩家ID。
 
-如果 `GameStatus` 与上一个玩家匹配，我们将他们标记为不再掷骰，并将便士添加到他们的总数中。如果我们有当前玩家的 `GameStatus`，我们说他们现在正在掷骰（即使他们已经被标记为正在掷骰），如果玩家上次没有改变，则从玩家那里移除任何便士。如果我们不是在查看这两个玩家中任何一个的 `GameStatus`，那么我们只是返回现有的 `GameStatus` 不变。最后，如果 `currentGameStatuses` 为 `null`，我们返回一个空的 `List`。
+如果`GameStatus`与上一个玩家匹配，我们将他们标记为不再掷骰，并将便士添加到他们的总数中。如果我们有当前玩家的`GameStatus`，我们说他们现在正在掷骰（即使他们已经被标记为正在掷骰），如果玩家上次没有改变，则从玩家那里移除任何便士。如果我们不是在查看这两个玩家中任何一个的`GameStatus`，那么我们只是返回现有的`GameStatus`不变。最后，如果`currentGameStatuses`为`null`，我们返回一个空的`List`。
 
 ```
 val statuses = currentGameStatuses.value?.map { status ->
@@ -4703,7 +4534,7 @@ val statuses = currentGameStatuses.value?.map { status ->
 } ?: emptyList()
 ```
 
-现在我们有了 `game` 和 `statuses` 对象的更新版本，我们可以将它们发送到 `PennyDropRepository`。由于我们正在修改数据库并调用 `suspend` 函数，我们必须将调用包装在 `viewModelScope.launch` 块中。
+现在我们有了`game`和`statuses`对象的更新版本，我们可以将它们发送到`PennyDropRepository`。由于我们正在修改数据库并调用`suspend`函数，我们必须将调用包装在`viewModelScope.launch`块中。
 
 ```
 viewModelScope.launch {
@@ -4711,7 +4542,7 @@ viewModelScope.launch {
 }
 ```
 
-我们在上一章的 `playAITurn` 函数中看到了相同的 `launch` 块。在那里，我们包含它是因为 `delay` 函数，而不是任何数据库事务，但它的使用方式相同。这意味着，我们不必在两个不同的 `launch` 块中运行两个单独的协程，而是可以在同一个块中调用它们两个。因此，我们可以将 `launch` 块从 `playAITurn` 中移出，并将对 `repository.updateGameAndStatuses` 的调用添加到其中：
+我们在上一章的`playAITurn`函数中看到了相同的`launch`块。在那里，我们包含它是因为`delay`函数，而不是任何数据库事务，但它的使用方式相同。这意味着，我们不必在两个不同的`launch`块中运行两个单独的协程，而是可以在同一个块中调用它们两个。因此，我们可以将`launch`块从`playAITurn`中移出，并将对`repository.updateGameAndStatuses`的调用添加到其中：
 
 ```
 viewModelScope.launch {
@@ -4722,9 +4553,9 @@ viewModelScope.launch {
 }
 ```
 
-采用这种方法，我们确实必须将 `playAITurn` 更改为 `suspend` 函数，此外还需要进行处理来自数据库状态所需的更改。
+采用这种方法，我们确实必须将`playAITurn`更改为`suspend`函数，此外还需要进行处理来自数据库状态所需的更改。
 
-首先，我们将更改 `playAITurn` 并用 `suspend` 关键字标记此函数。函数的其余部分类似于我们在 `roll` 和 `pass` 中所做的，包含一堆 `null` 检查和对 `GameHandler` 的调用。与这两个函数相比，最大的区别是 `GameHandler.playAITurn` 可以返回 `null`，因此我们需要在我们的函数中考虑到这一点。代码如下所示：
+首先，我们将更改`playAITurn`并用`suspend`关键字标记此函数。函数的其余部分类似于我们在`roll`和`pass`中所做的，包含一堆`null`检查和对`GameHandler`的调用。与这两个函数相比，最大的区别是`GameHandler.playAITurn`可以返回`null`，因此我们需要在我们的函数中考虑到这一点。代码如下所示：
 
 ```
 private suspend fun playAITurn() {
@@ -4746,7 +4577,7 @@ private suspend fun playAITurn() {
 }
 ```
 
-有了 `playAITurn` 函数，现在是时候回去从 Player 类中删除 `addPennies` 函数，以免我们忘记。然后我们可以完成 `GameViewModel` 的最后一部分：`generateTurnText` 函数。
+有了`playAITurn`函数，现在是时候回去从`Player`类中删除`addPennies`函数，以免我们忘记。然后我们可以完成`GameViewModel`的最后一部分：`generateTurnText`函数。
 
 ## 总结与后续步骤
 
@@ -4756,31 +4587,31 @@ private suspend fun playAITurn() {
 
 好吧，这可能没有想象中那么令人兴奋。由于应用的功能与之前相比没有太大变化，我们在游玩时不会看到太多差异。我们更改了后端的处理方式，但用户界面基本保持不变。不过，我们现在可以关闭应用，然后从上次离开的地方继续，而且我们还有所有玩过的游戏的存储记录。
 
-下一章将利用这些先前游戏的记录，向用户展示一些玩家排名。我们将显示每位玩家的胜场数和游戏场次，并按历史胜场数最多的玩家排序。这将全部在一个与新片段关联的新标签页中完成，利用 Android 的 RecyclerView 组件。这个视图组件可以高效地显示项目列表，并能处理大量条目，在我们的案例中，这些条目是从数据库中检索的。我们甚至可以根据显示的玩家，使用条件逻辑来自由设置每个列表项的样式。
+下一章将利用这些先前游戏的记录，向用户展示一些玩家排名。我们将显示每位玩家的胜场数和游戏场次，并按历史胜场数最多的玩家排序。这将全部在一个与新片段关联的新标签页中完成，利用Android的`RecyclerView`组件。这个视图组件可以高效地显示项目列表，并能处理大量条目，在我们的案例中，这些条目是从数据库中检索的。我们甚至可以根据显示的玩家，使用条件逻辑来自由设置每个列表项的样式。
 
-# 第 6 章
+# 第6章
 
 ## 使用 RecyclerView 构建列表
 
-我们的 Penny Drop 应用终于进入了最后冲刺阶段。从游戏意义上说，应用已经完成，因为你可以与真人或 AI 玩家对战，并且可以稍后返回继续游戏。但我们仍然可以添加一些有价值的功能。
+我们的Penny Drop应用终于进入了最后冲刺阶段。从游戏意义上说，应用已经完成，因为你可以与真人或AI玩家对战，并且可以稍后返回继续游戏。但我们仍然可以添加一些有价值的功能。
 
-首先，我们将在应用中添加排名功能。我们将添加一个新的 `RankingsFragment`，其中包含一个 `RecyclerView` 列表。`RecyclerView` 是 Android 中高效显示项目列表的一种方式，因为视图在幕后进行了许多优化。用户暂时看不到的项目会提前绑定，以确保滚动流畅，同时新的列表项会自动且主动地创建。我们甚至能够通知 `RecyclerView` 如何判断列表项是否已更改，从而避免在仅更新单个项目时刷新整个列表。
+首先，我们将在应用中添加排名功能。我们将添加一个新的`RankingsFragment`，其中包含一个`RecyclerView`列表。`RecyclerView`是Android中高效显示项目列表的一种方式，因为视图在幕后进行了许多优化。用户暂时看不到的项目会提前绑定，以确保滚动流畅，同时新的列表项会自动且主动地创建。我们甚至能够通知`RecyclerView`如何判断列表项是否已更改，从而避免在仅更新单个项目时刷新整个列表。
 
-除了 `RecyclerView`，还将添加一些其他支持类来填充列表。其中一些我们之前已经见过：一个新的 `ViewModel` 类、Room 的 `@Relation` 注解，以及一个用于保存每个项目数据的额外 `data class`。此外，我们正在创建一个 *适配器* 类，它通过一个称为 `ViewHolder` 的组件处理 `RecyclerView` 的数据以及每个列表项的绑定。作为参考，ViewHolder 类负责处理如何在 RecyclerView 列表中的项目和行之间绑定数据。
+除了`RecyclerView`，还将添加一些其他支持类来填充列表。其中一些我们之前已经见过：一个新的`ViewModel`类、Room的`@Relation`注解，以及一个用于保存每个项目数据的额外`data class`。此外，我们正在创建一个*适配器*类，它通过一个称为`ViewHolder`的组件处理`RecyclerView`的数据以及每个列表项的绑定。作为参考，`ViewHolder`类负责处理如何在`RecyclerView`列表中的项目和行之间绑定数据。
 
 在本章结束时，我们将拥有一个看起来类似于所示图像的排名标签页。
 
 ![](img/c024742480e86eb8867e0760ebe353d7_229_0.png)
 
-现在是玩一些额外 Penny Drop 游戏的好时机。玩的游戏越多，我们的排名列表就越有趣。与新玩家一起玩一些游戏，和/或加入一些 AI 玩家。做任何你想做的事情，为我们提供一些额外的数据。完成后，我们将继续将 RecyclerView 添加到我们的应用中。
+现在是玩一些额外Penny Drop游戏的好时机。玩的游戏越多，我们的排名列表就越有趣。与新玩家一起玩一些游戏，和/或加入一些AI玩家。做任何你想做的事情，为我们提供一些额外的数据。完成后，我们将继续将`RecyclerView`添加到我们的应用中。
 
 ### 添加 RecyclerView
 
-我们的第一站是新的 `RankingsFragment` 类及其内部的 `RecyclerView` 组件。我们 *可以* 像以前一样添加新的 `Fragment` 类，右键单击 `fragments` 包并选择 `New > Fragment > Fragment (Blank)`。请注意，该菜单中的一个选项是 `Fragment (List)`；这将为我们完成许多所需的工作。
+我们的第一站是新的`RankingsFragment`类及其内部的`RecyclerView`组件。我们*可以*像以前一样添加新的`Fragment`类，右键单击`fragments`包并选择`New > Fragment > Fragment (Blank)`。请注意，该菜单中的一个选项是`Fragment (List)`；这将为我们完成许多所需的工作。
 
-但我说“可以”生成 `Fragment` 类是有原因的。我希望第一次手动创建每个部分，以便清楚了解设置 `RecyclerView` 所需的所有内容。此外，Android Studio 会添加一堆我们不需要的代码，所以让我们省去删除所有那些不需要的东西的麻烦。继续在 `fragments` 包中添加一个名为 `RankingsFragment` 的新类，并在 `res > layout` 中添加一个名为 `fragment_rankings.xml` 的文件。如果我们生成了一个新的 `Fragment` 类，这两个主要部分就会被添加。
+但我说"可以"生成`Fragment`类是有原因的。我希望第一次手动创建每个部分，以便清楚了解设置`RecyclerView`所需的所有内容。此外，Android Studio会添加一堆我们不需要的代码，所以让我们省去删除所有那些不需要的东西的麻烦。继续在`fragments`包中添加一个名为`RankingsFragment`的新类，并在`res > layout`中添加一个名为`fragment_rankings.xml`的文件。如果我们生成了一个新的`Fragment`类，这两个主要部分就会被添加。
 
-`RankingsFragment` 类现在不需要太多内容。该类应继承自 `Fragment`，我们需要在 `onCreateView` 中加载视图布局。
+`RankingsFragment`类现在不需要太多内容。该类应继承自`Fragment`，我们需要在`onCreateView`中加载视图布局。
 
 ```kotlin
 class RankingsFragment : Fragment() {
@@ -4798,7 +4629,7 @@ class RankingsFragment : Fragment() {
 }
 ```
 
-在将 `RecyclerView` 添加到布局文件之前，我们需要在 `build.gradle` 文件中包含库和依赖变量。
+在将`RecyclerView`添加到布局文件之前，我们需要在`build.gradle`文件中包含库和依赖变量。
 
 ```gradle
 ext {
@@ -4816,6 +4647,8 @@ dependencies {
     其他依赖项
 }
 ```
+
+
 
 `fragment_rankings.xml` 文件与 `RankingsFragment` 相比同样简洁，因为它只包含 `RecyclerView`。这里唯一值得注意的属性是 `app:layoutManager`，它告诉 `RecyclerView` 如何显示内容。由于我们将有一个基本列表，我们可以使用 `RecyclerView` 库中现有的 `LinearLayoutManager`。整个 `fragment_rankings.xml` 文件如下所示：
 
@@ -4878,11 +4711,11 @@ dependencies {
 </navigation>
 ```
 
-### 构建列表项布局
+## 构建列表项布局
 
 本节的最终目标是让 `PlayerSummaryAdapter` 准备就绪，但首先应完成我之前提到的类和布局文件。那个名为 `PlayerSummary` 的类是一个基本的 `data class`，用于保存每个用户的胜场和游戏场次总数。我们将使用此类来确定每个列表项中显示的内容。该类的代码如下所示：
 
-```
+```kotlin
 package dev.mfazio.pennydrop.types
 
 data class PlayerSummary(
@@ -4898,7 +4731,7 @@ data class PlayerSummary(
 
 这个布局文件看起来会与之前的布局文件相似，特别是我们在[添加玩家行而无需重复自己（太多）](Add Player Rows Without Repeating Yourself (Too Much))中看到的 `player_list_item.xml` 布局文件。我们有一个通用的 `<layout>` 标签包裹整个视图，一个包含 `<variable>`（`playerSummary` 变量）的 `<data>` 标签，然后是包含所有视图的主 `<ConstraintLayout>`。是的，这个通用的 `<layout>` 标签意味着我们可以为排名列表的每一行使用数据绑定，这简化了我们需要的代码。`<ConstraintLayout>` 之外的所有内容如下所示：
 
-```
+```xml
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
@@ -4927,7 +4760,7 @@ data class PlayerSummary(
 
 `bindPlayerSummaryAvatarSrc` 在 `imageView` 上调用 `setImageResource` 函数，并从 `R.drawable` 分配一个值，如下所示：
 
-```
+```kotlin
 @BindingAdapter("playerSummaryAvatarSrc")
 fun bindPlayerSummaryAvatarSrc(imageView: ImageView, isHuman: Boolean) {
     imageView.setImageResource(
@@ -4942,8 +4775,7 @@ fun bindPlayerSummaryAvatarSrc(imageView: ImageView, isHuman: Boolean) {
 
 这不是最令人兴奋的函数，但它确实使我们免于在布局文件中编写冗长的条件语句。如果你更愿意那样做，请继续。在功能上，它们是相同的——我只是更喜欢使用 Kotlin 代码，而不是在布局文件中编写冗长的三元语句。如果你确实想走那条路，它看起来会是这样（并且在 XML 中正确格式化后，将无法放在这一页上）：
 
-```
-xml
+```xml
 @{playerSummary.isHuman ?
     @drawable/ic_baseline_face_24 :
     @drawable/ic_baseline_android_24}
@@ -4957,7 +4789,7 @@ xml
 
 获取 `Color` 对象比我们之前做的仅仅检索 `Int` 需要更多的工作，因此我们将使用 `ImageView` 上的 `Context` 对象来进行转换。使用类似的 `isHuman` 条件块，我们可以获取所需颜色的资源值，然后调用 `imageView.context.getColor` 来处理从颜色资源 ID 到颜色 ID 值的转换。整个 `@BindingAdapter` 函数如下所示：
 
-```
+```kotlin
 @BindingAdapter("playerSummaryAvatarTint")
 fun bindPlayerSummaryAvatarTint(imageView: ImageView, isHuman: Boolean) {
     imageView.imageTintList = convertColorToColorStateList(
@@ -4974,7 +4806,7 @@ fun bindPlayerSummaryAvatarTint(imageView: ImageView, isHuman: Boolean) {
 
 两个函数都准备好后，我们就可以在 `<ImageView>` XML 中使用它们了。这看起来像我们已经创建的许多视图，但有一些额外的属性专门用于处理图像。`android:adjustViewBounds="true"` 允许操作系统调整图标大小以适应允许的区域。没有这个，我们最终会在每行的左侧得到一个相当小的人脸或安卓图像。`android:scaleType="fitCenter"` 也用于调整和放大每行的图标。这告诉操作系统实际执行我们通过 `android:adjustViewBounds` 允许的调整。整个 `<ImageView>` 及其所有属性如下所示：
 
-```
+```xml
 <ImageView
     android:id="@+id/playerTypeImage"
     android:layout_width="wrap_content"
@@ -5007,6 +4839,8 @@ fun bindPlayerSummaryAvatarTint(imageView: ImageView, isHuman: Boolean) {
 
 在我们的案例中，我们将使用两个数量：`one`（值为“win”）和 `other`（“wins”）。整个 `res/values/plurals.xml` 文件如下所示：
 
+
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
@@ -5017,11 +4851,11 @@ fun bindPlayerSummaryAvatarTint(imageView: ImageView, isHuman: Boolean) {
 </resources>
 ```
 
-然后，我们可以通过数据绑定在 XML 中使用这些值。我们引用复数形式的方式与引用字符串资源相同，但还需要传入用于确定数量的数字。这导致了类似 `android:text="@{@plurals/wins(playerSummary.wins)}"` 的语句。
+然后，我们可以通过数据绑定在 XML 中使用这些值。我们引用复数形式的方式与引用字符串资源相同，但还需要传入用于确定数量的数字。这导致了类似`android:text="@{@plurals/wins(playerSummary.wins)}"`的语句。
 
-关于 Win/Wins 文本，最后一个有用的属性：我们希望该文本全部大写，这可以通过 `android:textAllCaps` 属性实现。这有助于避免为具有正常大小写或全大写的给定单词创建单独的字符串资源值。
+关于 Win/Wins 文本，最后一个有用的属性：我们希望该文本全部大写，这可以通过`android:textAllCaps`属性实现。这有助于避免为具有正常大小写或全大写的给定单词创建单独的字符串资源值。
 
-以下是 `<ConstraintLayout>` 的其余部分，即前面提到的四个 `<TextView>` 组件：
+以下是`<ConstraintLayout>`的其余部分，即前面提到的四个`<TextView>`组件：
 
 ```xml
 <TextView
@@ -5078,15 +4912,15 @@ fun bindPlayerSummaryAvatarTint(imageView: ImageView, isHuman: Boolean) {
     tools:text="wins"/>
 ```
 
-现在列表项布局已完成，我们可以开始构建 `PlayerSummaryAdapter` 类了。
+现在列表项布局已完成，我们可以开始构建`PlayerSummaryAdapter`类了。
 
-### 创建自定义 ListAdapter
+## 创建自定义 ListAdapter
 
-`PlayerSummaryAdapter` 类负责管理列表中的所有 `PlayerSummary` 项并处理它们的显示方式。我们使用一个自定义的 `RecyclerView.ViewHolder` 内部类（意味着它位于 `PlayerSummaryAdapter` 内部）将 `PlayerSummary` 项绑定到布局，然后 `RecyclerView` 库会处理其余部分。我们在 `PlayerSummaryAdapter` 中需要做的就是告诉 `RecyclerView` 在创建和绑定新的 `ViewHolder` 时该做什么，以及如何区分列表中的 `PlayerSummary` 项。
+`PlayerSummaryAdapter`类负责管理列表中的所有`PlayerSummary`项并处理它们的显示方式。我们使用一个自定义的`RecyclerView.ViewHolder`内部类（意味着它位于`PlayerSummaryAdapter`内部）将`PlayerSummary`项绑定到布局，然后`RecyclerView`库会处理其余部分。我们在`PlayerSummaryAdapter`中需要做的就是告诉`RecyclerView`在创建和绑定新的`ViewHolder`时该做什么，以及如何区分列表中的`PlayerSummary`项。
 
-在 `adapters` 包中创建 `PlayerSummaryAdapter` 后，首先是 `PlayerSummaryViewHolder` 内部类。`PlayerSummaryAdapter` 类既包含又依赖于这个类，因此我们将先创建它，然后将 `PlayerSummaryAdapter` 包装在其周围。`PlayerSummaryViewHolder` 类继承自 `RecyclerView.ViewHolder`，并有一个函数 `bind`，该函数接受一个 `PlayerSummary` 对象。
+在`adapters`包中创建`PlayerSummaryAdapter`后，首先是`PlayerSummaryViewHolder`内部类。`PlayerSummaryAdapter`类既包含又依赖于这个类，因此我们将先创建它，然后将`PlayerSummaryAdapter`包装在其周围。`PlayerSummaryViewHolder`类继承自`RecyclerView.ViewHolder`，并有一个函数`bind`，该函数接受一个`PlayerSummary`对象。
 
-`bind` 函数除了将 `binding.playerSummary` 赋值给 `item` 值外，没有做太多其他事情。`binding` 值是 `PlayerSummaryListItemBinding` 的一个实例，它是在我们向 `player_summary_list_item.xml` 文件添加通用 `<layout>` 标签时由数据绑定库生成的。然后，`item` 值就是传入该方法的 `PlayerSummary` 对象。赋值完成后，`bind` 随后通过 `executePendingBindings` 函数确保绑定被执行，以便数据正确显示。
+`bind`函数除了将`binding.playerSummary`赋值给`item`值外，没有做太多其他事情。`binding`值是`PlayerSummaryListItemBinding`的一个实例，它是在我们向`player_summary_list_item.xml`文件添加通用`<layout>`标签时由数据绑定库生成的。然后，`item`值就是传入该方法的`PlayerSummary`对象。赋值完成后，`bind`随后通过`executePendingBindings`函数确保绑定被执行，以便数据正确显示。
 
 ```kotlin
 inner class PlayerSummaryViewHolder(
@@ -5103,7 +4937,7 @@ inner class PlayerSummaryViewHolder(
 }
 ```
 
-围绕这个 `inner class` 的 `PlayerSummaryAdapter` 类继承自 `ListAdapter`，它接受两个类型参数和一个 `DiffUtil.ItemCallback` 实例。类型参数是列表中项的类型（`PlayerSummary`）和这些项的 `ViewHolder` 类型（`PlayerSummaryAdapter.PlayerSummaryViewHolder`）。回调部分是文件末尾的一个新的 `private class`，名为（不太有创意）`PlayerSummaryDiffCallback`。该类如下所示：
+围绕这个`inner class`的`PlayerSummaryAdapter`类继承自`ListAdapter`，它接受两个类型参数和一个`DiffUtil.ItemCallback`实例。类型参数是列表中项的类型（`PlayerSummary`）和这些项的`ViewHolder`类型（`PlayerSummaryAdapter.PlayerSummaryViewHolder`）。回调部分是文件末尾的一个新的`private class`，名为（不太有创意）`PlayerSummaryDiffCallback`。该类如下所示：
 
 ```kotlin
 private class PlayerSummaryDiffCallback :
@@ -5121,7 +4955,7 @@ private class PlayerSummaryDiffCallback :
 }
 ```
 
-有了 `PlayerSummaryDiffCallback` 和 `PlayerSummaryViewHolder`，我们就可以创建 `PlayerSummaryAdapter` 了。这个继承自 `ListAdapter` 的类还将包含几个我们稍后将创建的重写函数。类声明加上之前的其他类和函数一起如下所示：
+有了`PlayerSummaryDiffCallback`和`PlayerSummaryViewHolder`，我们就可以创建`PlayerSummaryAdapter`了。这个继承自`ListAdapter`的类还将包含几个我们稍后将创建的重写函数。类声明加上之前的其他类和函数一起如下所示：
 
 ```kotlin
 class PlayerSummaryAdapter :
@@ -5163,9 +4997,9 @@ class PlayerSummaryAdapter :
 }
 ```
 
-按照目前的写法，`PlayerSummaryAdapter` 应该会有一个错误，因为我们尚未实现 `ListAdapter` 的两个 `abstract` 函数：`onCreateViewHolder` 和 `onBindViewHolder`。这两个函数实际上都只是一步，所以我们可以很快完成它们。
+按照目前的写法，`PlayerSummaryAdapter`应该会有一个错误，因为我们尚未实现`ListAdapter`的两个`abstract`函数：`onCreateViewHolder`和`onBindViewHolder`。这两个函数实际上都只是一步，所以我们可以很快完成它们。
 
-`onCreateViewHolder` 需要知道如何构建 `PlayerSummaryViewHolder` 的实例。这意味着我们使用 `DataBindingUtil` 类来膨胀布局（就像我们在本书中已经做过几次的那样），将其发送到一个新的 `PlayerSummaryViewHolder` 实例中，并从该函数返回。
+`onCreateViewHolder`需要知道如何构建`PlayerSummaryViewHolder`的实例。这意味着我们使用`DataBindingUtil`类来膨胀布局（就像我们在本书中已经做过几次的那样），将其发送到一个新的`PlayerSummaryViewHolder`实例中，并从该函数返回。
 
 ```kotlin
 override fun onCreateViewHolder(
@@ -5182,7 +5016,7 @@ override fun onCreateViewHolder(
     )
 ```
 
-`onBindViewHolder` 更加直接，因为它使用来自 `onCreateViewHolder` 的 `PlayerSummaryViewHolder` 实例，然后将 `PlayerSummary` 项发送到 `bind` 函数中。我们使用 `ListAdapter` 类的 `getItem` 函数根据我们在列表中的位置获取正确的 `PlayerSummary`。这是继承 `ListAdapter` 类的一个主要优势——它几乎为我们处理了所有关于项和检索正确项的工作。
+`onBindViewHolder`更加直接，因为它使用来自`onCreateViewHolder`的`PlayerSummaryViewHolder`实例，然后将`PlayerSummary`项发送到`bind`函数中。我们使用`ListAdapter`类的`getItem`函数根据我们在列表中的位置获取正确的`PlayerSummary`。这是继承`ListAdapter`类的一个主要优势——它几乎为我们处理了所有关于项和检索正确项的工作。
 
 ```kotlin
 override fun onBindViewHolder(
@@ -5193,11 +5027,11 @@ override fun onBindViewHolder(
 }
 ```
 
-`PlayerSummaryAdapter` 现在可以使用了，因此我们可以转到 `RankingsFragment` 类来连接所有内容。
+`PlayerSummaryAdapter`现在可以使用了，因此我们可以转到`RankingsFragment`类来连接所有内容。
 
-### 将适配器连接到 RecyclerView
+## 将适配器连接到 RecyclerView
 
-在这里，我们将扩展之前在 RankingsFragment 中设置的内容。在 `onCreateView` 函数内部，我们实例化一个 `PlayerSummaryAdapter` 对象，然后将其分配给 RecyclerView。获取该 RecyclerView 对象比我们之前获取视图组件时更容易，因为我们之前膨胀的整个视图就是一个 `<RecyclerView>`。因此，我们可以将视图值转换为 RecyclerView 实例，然后分配 `adapter` 属性。我们还将向 RecyclerView 添加一个 `ItemDecoration`，它会在每行之间添加浅灰色的分隔线。
+在这里，我们将扩展之前在`RankingsFragment`中设置的内容。在`onCreateView`函数内部，我们实例化一个`PlayerSummaryAdapter`对象，然后将其分配给`RecyclerView`。获取该`RecyclerView`对象比我们之前获取视图组件时更容易，因为我们之前膨胀的整个视图就是一个`<RecyclerView>`。因此，我们可以将视图值转换为`RecyclerView`实例，然后分配`adapter`属性。我们还将向`RecyclerView`添加一个`ItemDecoration`，它会在每行之间添加浅灰色的分隔线。
 
 ```kotlin
 override fun onCreateView(
@@ -5226,23 +5060,25 @@ override fun onCreateView(
 }
 ```
 
-这是 Kotlin 中智能转换的又一个绝佳示例，我们最初在更新 `roll()` 和 `pass()` 函数时见过。由于我们检查了 `view` 是 `RecyclerView` 的实例，因此在整个代码块中，`view` 都被视为 `RecyclerView` 实例，而无需创建新值。
+这是 Kotlin 中智能转换的又一个绝佳示例，我们最初在更新`roll()`和`pass()`函数时见过。由于我们检查了`view`是`RecyclerView`的实例，因此在整个代码块中，`view`都被视为`RecyclerView`实例，而无需创建新值。
 
-此外，我们通常会像这样为 `RecyclerView` 上的 `layoutManager` 属性赋值：
+此外，我们通常会像这样为`RecyclerView`上的`layoutManager`属性赋值：
 
 ```kotlin
 layoutManager = LinearLayoutManager(context)
 ```
 
-然而，这并非必需，因为我们已经在 `fragment_rankings.xml` 中的 `<RecyclerView>` 标签内处理了 `LayoutManager` 的设置。
+然而，这并非必需，因为我们已经在`fragment_rankings.xml`中的`<RecyclerView>`标签内处理了`LayoutManager`的设置。
 
-`RecyclerView` 现在已完成，并分配了一个 `adapter` 来处理其所有数据。我们需要在这里介绍的最后一部分是如何将数据从数据库获取到 `PlayerSummaryAdapter` 中。为此，我们将创建 `RankingsViewModel` 并*观察*其中的 `LiveData` 值。
+`RecyclerView`现在已完成，并分配了一个`adapter`来处理其所有数据。我们需要在这里介绍的最后一部分是如何将数据从数据库获取到`PlayerSummaryAdapter`中。为此，我们将创建`RankingsViewModel`并*观察*其中的`LiveData`值。
 
-### 从数据库加载数据到 RecyclerView
+## 从数据库加载数据到 RecyclerView
+
+
 
 `RankingsViewModel` 类类似于 `GameViewModel`，我们获取 `PennyDropRepository` 的实例，然后获取 `LiveData`。我们使用 `Transformations` 类将 `Player` 和 `GameStatus` 对象转换为 `PlayerSummary` 对象。然后，一旦完成，我们就在 `RankingsFragment` 内部观察 `RankingsViewModel` 中的 `playerSummaries` `LiveData` 值，并用新数据更新 `PlayerSummaryAdapter`。让我们逐步创建每个部分。
 
-### 创建 RankingsViewModel
+## 创建 `RankingsViewModel`
 
 正如我提到的，这在获取 `PennyDropRepository` 实例的方式上与 `GameViewModel` 相似。整个 `RankingsViewModel` 类将如下所示，不包括 `Transformations.map` 逻辑（我们很快会介绍）。
 
@@ -5284,7 +5120,7 @@ data class GameStatusWithPlayer(
 )
 ```
 
-Repository 函数再次只是传递给 DAO 函数，这是一个查询，我们获取所有属于已完成游戏的 `GameStatus` 对象。我们通过对 `games` 表使用子查询来实现这一点：
+`Repository` 函数再次只是传递给 DAO 函数，这是一个查询，我们获取所有属于已完成游戏的 `GameStatus` 对象。我们通过对 `games` 表使用子查询来实现这一点：
 
 ```kotlin
 @Transaction
@@ -5306,9 +5142,9 @@ abstract fun getCompletedGameStatusesWithPlayers(
 >
 > 由于 SQLite 的限制，任何 IN 列表中的项目数量必须少于 1000 个。如果你有更多，应用程序将会崩溃。在许多情况下，这不是问题，但它确实可能出现，因此在编写查询时请注意。
 
-在 PennyDropRepository 和 PennyDropDao 中添加了函数后，我们可以返回来添加 Transformations.map 逻辑。
+在 `PennyDropRepository` 和 `PennyDropDao` 中添加了函数后，我们可以返回来添加 `Transformations.map` 逻辑。
 
-在这个代码块中，我们获取一个 `List<GameStatusWithPlayer>`（statusesWithPlayers 值）并将其转换为 `List<PlayerSummary>`。我们通过将 `GameStatusWithPlayer` 按关联的玩家分组，然后将每个 `Player/List<GameStatus>` 对映射到新的 `PlayerSummary` 对象来实现这一点。`gamesPlayed` 属性是与玩家关联的 `GameStatus` 对象的数量，而 `wins` 属性获取玩家的 pennies 值为 0 的游戏数量。
+在这个代码块中，我们获取一个 `List<GameStatusWithPlayer>`（`statusesWithPlayers` 值）并将其转换为 `List<PlayerSummary>`。我们通过将 `GameStatusWithPlayer` 按关联的玩家分组，然后将每个 `Player/List<GameStatus>` 对映射到新的 `PlayerSummary` 对象来实现这一点。`gamesPlayed` 属性是与玩家关联的 `GameStatus` 对象的数量，而 `wins` 属性获取玩家的 pennies 值为 0 的游戏数量。
 
 ```kotlin
 statusesWithPlayers
@@ -5328,7 +5164,7 @@ statusesWithPlayers
 
 但是，如果不仅按胜场数排序，还按游戏场次排序，排名列表看起来会更好。我们可以看到谁赢得最多，但在平局的情况下，我们按谁玩得最多来排序玩家。不幸的是，`sortedByDescending` 不适用于多个条件，至少没有大量额外代码是不行的。
 
-相反，我们可以使用 `sortedWith` 函数并传入一个 `Comparator` 对象来处理属性。`compareBy` 函数位于 `kotlin.comparisons` 包中，可以引入多个选择器用于比较。这些选择器看起来类似于 `sortedByDescending` 的函数体，并且有一个额外的好处，即可以在值前面加上减号以按降序排序。statusesWithPlayers 映射的最终版本如下所示：
+相反，我们可以使用 `sortedWith` 函数并传入一个 `Comparator` 对象来处理属性。`compareBy` 函数位于 `kotlin.comparisons` 包中，可以引入多个选择器用于比较。这些选择器看起来类似于 `sortedByDescending` 的函数体，并且有一个额外的好处，即可以在值前面加上减号以按降序排序。`statusesWithPlayers` 映射的最终版本如下所示：
 
 ```kotlin
 statusesWithPlayers
@@ -5345,17 +5181,17 @@ statusesWithPlayers
     .sortedWith(compareBy({ -it.wins }, { -it.gamesPlayed }))
 ```
 
-RankingsViewModel 现在已准备好使用，因此让我们前往 RankingsFragment 进行设置。
+`RankingsViewModel` 现在已准备好使用，因此让我们前往 `RankingsFragment` 进行设置。
 
-### 在 RankingsFragment 中观察数据
+## 在 `RankingsFragment` 中观察数据
 
-我们可以像在其他两个 Fragment 类中一样，使用 `activityViewModels` 函数将 RankingsViewModel 添加到此类：
+我们可以像在其他两个 `Fragment` 类中一样，使用 `activityViewModels` 函数将 `RankingsViewModel` 添加到此类：
 
 ```kotlin
 private val viewModel by activityViewModels<RankingsViewModel>()
 ```
 
-然后，在 `onCreateView` 中设置 RecyclerView 之后，我们将观察 `playerSummaries` LiveData 值的变化。当某些内容发生变化时，我们将调用 `playerSummaryAdapter.submitList` 来更新适配器的数据，这将更新 RecyclerView。执行此操作的代码如下所示：
+然后，在 `onCreateView` 中设置 `RecyclerView` 之后，我们将观察 `playerSummaries` `LiveData` 值的变化。当某些内容发生变化时，我们将调用 `playerSummaryAdapter.submitList` 来更新适配器的数据，这将更新 `RecyclerView`。执行此操作的代码如下所示：
 
 ```kotlin
 viewModel.playerSummaries.observe(viewLifecycleOwner) { summaries ->
@@ -5363,9 +5199,9 @@ viewModel.playerSummaries.observe(viewLifecycleOwner) { summaries ->
 }
 ```
 
-我们传入 `viewLifecycleOwner` 值以让 Observer 知道何时应停止观察数据。这意味着当 RankingsViewModel 被销毁时，我们也应停止观察 `playerSummaries` 值。完成后，数据库中的任何更新现在将自动推送到排名 RecyclerView。
+我们传入 `viewLifecycleOwner` 值以让 `Observer` 知道何时应停止观察数据。这意味着当 `RankingsViewModel` 被销毁时，我们也应停止观察 `playerSummaries` 值。完成后，数据库中的任何更新现在将自动推送到排名 `RecyclerView`。
 
-### 测试数据更新
+## 测试数据更新
 
 现在是有趣的部分：运行应用程序并查看排名。如果你之前玩了足够多的游戏以获取一些数据，你应该会看到如下所示的排名屏幕：
 
@@ -5385,17 +5221,17 @@ viewModel.playerSummaries.observe(viewLifecycleOwner) { summaries ->
 
 你可能会问，这些更改是什么？我们将创建一个包含五个选项的 `SettingsFragment`，然后在整个应用中处理所有这些选项。这些设置包括游戏玩法和外观两方面的更改。我们还会添加一些关于应用的致谢信息，毕竟我们需要感谢 [https://materialdesignicons.com](https://materialdesignicons.com) 提供的出色工作。设置页面中的五个项目（如你将在接下来的截图中看到的）如下：
 
--   起始便士数：设置每个玩家在游戏开始时的便士数量。范围从 1 到 20。
--   快速 AI：将 AI 的延迟速度从一秒更改为十分之一秒（1000 -> 100 毫秒）。
--   应用主题：让用户从预设主题中选择。我们将在本章后面介绍如何操作。
--   主题模式：用户可以选择始终让应用使用浅色主题、深色主题，或使用系统当前的主题。
--   关于便士掉落：将用户带到一个新的 `AboutFragment`，提供有关应用及其使用图标的更多信息。
+- 起始便士数：设置每个玩家在游戏开始时的便士数量。范围从 1 到 20。
+- 快速 AI：将 AI 的延迟速度从一秒更改为十分之一秒（1000 -> 100 毫秒）。
+- 应用主题：让用户从预设主题中选择。我们将在本章后面介绍如何操作。
+- 主题模式：用户可以选择始终让应用使用浅色主题、深色主题，或使用系统当前的主题。
+- 关于便士掉落：将用户带到一个新的 `AboutFragment`，提供有关应用及其使用图标的更多信息。
 
 我们将在本章中依次介绍每个设置项，了解如何使用保存的值，并涵盖处理设置更改所需的所有其他更改。完成后，设置页面将如下所示：
 
 让我们首先将 `SettingsFragment` 类添加到应用中。
 
-### 添加新的 SettingsFragment
+### 添加新的 `SettingsFragment`
 
 首先，我想为本章中使用的术语道歉并加以澄清。我们创建的类名为 `SettingsFragment`，它继承自 AndroidX Preference 库的 `PreferenceFragmentCompat` 类。`SettingsFragment` 处理多个 `Preference` 对象和 `<Preference>` 标签。
 
@@ -5425,7 +5261,7 @@ dependencies {
 
 有了这些部分，你的类应该如下所示：
 
-```
+```kotlin
 package dev.mfazio.pennydrop.fragments
 
 class SettingsFragment : PreferenceFragmentCompat() {
@@ -5445,7 +5281,9 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
 与布局文件不同，首选项资源文件是 `res/xml` 文件夹中的一个通用 XML 文件。你可以随意命名这个文件；我将其命名为 `preferences.xml`。这个文件看起来会很像普通的布局文件，但没有我们之前使用过的任何高度/权重/约束，因为库会为我们处理所有这些。
 
-请在 `res/xml` 中添加 `preferences.xml`（或你喜欢的任何名称）（你可能需要添加 `xml` 目录），然后打开文件。从高层次来看，这个文件将在顶层有一个 `<PreferenceScreen>` 标签，带有我们通常的 `xmlns:android` 和 `xmlns:app` 命名空间属性。然后，在我们的例子中，我们有多个 `PreferenceCategory` 标签，每个标签都有一个 `android:title` 属性和一个或多个 `<Preference>` 标签。`preferences.xml` 文件，包括带有 `<PreferenceCategory>` 标签的 `<PreferenceScreen>` 标签，将如下所示：
+
+
+请在`res/xml`中添加`preferences.xml`（或你喜欢的任何名称）（你可能需要添加`xml`目录），然后打开文件。从高层次来看，这个文件将在顶层有一个`<PreferenceScreen>`标签，带有我们通常的`xmlns:android`和`xmlns:app`命名空间属性。然后，在我们的例子中，我们有多个`PreferenceCategory`标签，每个标签都有一个`android:title`属性和一个或多个`<Preference>`标签。`preferences.xml`文件，包括带有`<PreferenceCategory>`标签的`<PreferenceScreen>`标签，将如下所示：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -5462,7 +5300,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
 ### 将设置页面添加到导航
 
-我想先澄清一点——当我说我们要将页面添加到应用的导航中时，我指的是导航图，而不是底部导航组件。这意味着我们需要在 `nav_graph.xml` 中添加一个新的 `<fragment>` 条目：
+我想先澄清一点——当我说我们要将页面添加到应用的导航中时，我指的是导航图，而不是底部导航组件。这意味着我们需要在`nav_graph.xml`中添加一个新的`<fragment>`条目：
 
 ```xml
 <fragment
@@ -5471,7 +5309,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
     android:label="@string/settings" />
 ```
 
-设置页面不是通过底部导航访问，而是通过应用导航栏中的齿轮图标访问。为此，我们需要在 `res/menu` 资源目录中添加一个新图标和一个名为 `options.xml` 的新文件。齿轮矢量图资源名为 Settings；将其添加到项目中，然后在新的 `options.xml` 文件中的新 `<item>` 里引用它：
+设置页面不是通过底部导航访问，而是通过应用导航栏中的齿轮图标访问。为此，我们需要在`res/menu`资源目录中添加一个新图标和一个名为`options.xml`的新文件。齿轮矢量图资源名为Settings；将其添加到项目中，然后在新的`options.xml`文件中的新`<item>`里引用它：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -5484,11 +5322,11 @@ class SettingsFragment : PreferenceFragmentCompat() {
 </menu>
 ```
 
-请注意，`app:showAsAction="ifRoom"` 属性意味着只要应用栏中有空间，我们就会显示设置图标；如果没有空间，它会进入右上角的溢出菜单（三个点）。对我们来说，设置图标应该始终显示，但当你向应用栏添加多个图标时，这个设置就变得更加重要了。
+请注意，`app:showAsAction="ifRoom"`属性意味着只要应用栏中有空间，我们就会显示设置图标；如果没有空间，它会进入右上角的溢出菜单（三个点）。对我们来说，设置图标应该始终显示，但当你向应用栏添加多个图标时，这个设置就变得更加重要了。
 
-新文件准备好后（别忘了你的字符串资源），我们需要告诉 `MainActivity` 使用这个文件。
+新文件准备好后（别忘了你的字符串资源），我们需要告诉`MainActivity`使用这个文件。
 
-我们通过重写 `onCreateOptionsMenu` 函数并加载 `options.xml` 文件来实现这一点。
+我们通过重写`onCreateOptionsMenu`函数并加载`options.xml`文件来实现这一点。
 
 ```kotlin
 override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -5500,7 +5338,7 @@ override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 }
 ```
 
-`MainActivity` 中的最后一部分是告诉应用当有人点击设置齿轮时该做什么。由于我们只有一个项目可供选择，这简化了我们的逻辑。我们需要检查 `navController` 是否已准备好导航到不同的视图，如果是，则使用 `MenuItem` 类上的 `onNavDestinationSelected` 函数。如果该函数调用不成功（返回 `false`），我们则回退到父类函数。
+`MainActivity`中的最后一部分是告诉应用当有人点击设置齿轮时该做什么。由于我们只有一个项目可供选择，这简化了我们的逻辑。我们需要检查`navController`是否已准备好导航到不同的视图，如果是，则使用`MenuItem`类上的`onNavDestinationSelected`函数。如果该函数调用不成功（返回`false`），我们则回退到父类函数。
 
 ```kotlin
 override fun onOptionsItemSelected(item: MenuItem): Boolean =
@@ -5510,19 +5348,19 @@ override fun onOptionsItemSelected(item: MenuItem): Boolean =
     } else false
 ```
 
-请注意，我们通过检查 `navController` 的*属性引用*上的 `isInitialized` 属性（而不是属性本身）来检查 `navController` 是否已就绪。这在语法上是一个小差异，但在功能上却有很大不同。
+请注意，我们通过检查`navController`的*属性引用*上的`isInitialized`属性（而不是属性本身）来检查`navController`是否已就绪。这在语法上是一个小差异，但在功能上却有很大不同。
 
 现在我们的应用将显示设置图标，如果我们点击该链接，就会进入带有空类别的设置屏幕：
 
 ![](img/c024742480e86eb8867e0760ebe353d7_262_0.png)
 
-我们可以进入设置页面了，现在是时候添加一些实际的偏好设置了。首先是游戏设置部分，这是了解 `Preference` 值如何工作的一个很好的入门。
+我们可以进入设置页面了，现在是时候添加一些实际的偏好设置了。首先是游戏设置部分，这是了解`Preference`值如何工作的一个很好的入门。
 
 ### 添加游戏设置偏好
 
-这两个偏好是处理应用中 `Preference` 的标准示例。我们在 `SettingsFragment` 中更改值，并在应用的其他地方使用它。库负责保存值并为我们提供检索机制，这意味着我们几乎不需要手动操作。
+这两个偏好是处理应用中`Preference`的标准示例。我们在`SettingsFragment`中更改值，并在应用的其他地方使用它。库负责保存值并为我们提供检索机制，这意味着我们几乎不需要手动操作。
 
-起始便士数设置是一个 `<SeekBarPreference>`，这意味着用户会得到一个代表数字的滑块来选择一个值。我们所有的偏好都有 `key`、`summary` 和 `title` 属性，大多数还有 `defaultValue` 属性。对于滑动条，我们还可以设置最小值和最大值，以及 `app:showSeekBarValue` 属性，以便他们选择的数字显示在条的末尾。`<SeekBarPreference>` 的 XML 如下所示：
+起始便士数设置是一个`<SeekBarPreference>`，这意味着用户会得到一个代表数字的滑块来选择一个值。我们所有的偏好都有`key`、`summary`和`title`属性，大多数还有`defaultValue`属性。对于滑动条，我们还可以设置最小值和最大值，以及`app:showSeekBarValue`属性，以便他们选择的数字显示在条的末尾。`<SeekBarPreference>`的XML如下所示：
 
 ```xml
 <SeekBarPreference
@@ -5535,9 +5373,9 @@ override fun onOptionsItemSelected(item: MenuItem): Boolean =
     app:showSeekBarValue="true" />
 ```
 
-除了创建几个字符串资源外，这已经可以使用了。我确实想指出，最小值属性是在 `app` 命名空间中，而不是 `android`。老实说，我不知道为什么这些属性要采用这种方式，但只要你知道在哪里设置它，这没什么大不了的。
+除了创建几个字符串资源外，这已经可以使用了。我确实想指出，最小值属性是在`app`命名空间中，而不是`android`。老实说，我不知道为什么这些属性要采用这种方式，但只要你知道在哪里设置它，这没什么大不了的。
 
-快速 AI 设置是两个偏好中较简单的一个，只有基本的 `key`、`summary` 和 `title` 属性。我们在 `<SwitchPreferenceCompat>` 标签上设置这三个属性。同样，我们在这里使用 Compat 版本，因为这确保了在旧设备上能正确显示。由于我们当前应用的最低 API 级别是 26，这几乎可以保证不会产生任何影响，但如果你以后为旧设备编写应用，使用 `<SwitchPreferenceCompat>` 将确保开关在不同操作系统版本之间显示一致。以下是此偏好的代码：
+快速AI设置是两个偏好中较简单的一个，只有基本的`key`、`summary`和`title`属性。我们在`<SwitchPreferenceCompat>`标签上设置这三个属性。同样，我们在这里使用Compat版本，因为这确保了在旧设备上能正确显示。由于我们当前应用的最低API级别是26，这几乎可以保证不会产生任何影响，但如果你以后为旧设备编写应用，使用`<SwitchPreferenceCompat>`将确保开关在不同操作系统版本之间显示一致。以下是此偏好的代码：
 
 ```xml
 <SwitchPreferenceCompat
@@ -5550,20 +5388,20 @@ override fun onOptionsItemSelected(item: MenuItem): Boolean =
 
 ![](img/c024742480e86eb8867e0760ebe353d7_264_0.png)
 
-这些偏好值现在可以随意更改，但它们显然还没有任何作用。接下来，我们需要从 `PreferenceManager` 类中获取偏好并在我们的应用中使用它们。
+这些偏好值现在可以随意更改，但它们显然还没有任何作用。接下来，我们需要从`PreferenceManager`类中获取偏好并在我们的应用中使用它们。
 
 ### 使用已保存的偏好
 
-除了 `PreferenceFragmentCompat` 类为我们处理的所有 UI 工作外，值的更改也会自动保存和更新。要检索这些值，我们需要从 `PreferenceManager` 类获取一个 `SharedPreferences` 实例。在 `GameViewModel` 内部，我们将这样做，将结果分配给一个新的 `prefs` 值：
+除了`PreferenceFragmentCompat`类为我们处理的所有UI工作外，值的更改也会自动保存和更新。要检索这些值，我们需要从`PreferenceManager`类获取一个`SharedPreferences`实例。在`GameViewModel`内部，我们将这样做，将结果分配给一个新的`prefs`值：
 
 ```kotlin
 private val prefs =
     PreferenceManager.getDefaultSharedPreferences(application)
 ```
 
-### 使用快速 AI 偏好
+### 使用快速AI偏好
 
-我们现在可以根据需要使用 `prefs` 来获取偏好值。这与我们在 `SettingsFragment` 中设置内容的顺序不符，但让我们从快速 AI 设置开始，因为它只需要一行更改。在 `playAITurn` 函数中，我们目前有一个 1000 毫秒的 `delay` 函数调用，以模拟正常玩家花时间考虑他们的选择。现在，我们要将其更改为 100 毫秒，但前提是快速 AI 开关被切换为 true。我们可以通过调用我们创建的 `prefs` 值上的 `getBoolean` 函数并传入 `<SwitchPreferenceCompat>` 元素的 `key` 值来检查该值。这意味着 `playAITurn` 函数看起来像这样：
+我们现在可以根据需要使用`prefs`来获取偏好值。这与我们在`SettingsFragment`中设置内容的顺序不符，但让我们从快速AI设置开始，因为它只需要一行更改。在`playAITurn`函数中，我们目前有一个1000毫秒的`delay`函数调用，以模拟正常玩家花时间考虑他们的选择。现在，我们要将其更改为100毫秒，但前提是快速AI开关被切换为true。我们可以通过调用我们创建的`prefs`值上的`getBoolean`函数并传入`<SwitchPreferenceCompat>`元素的`key`值来检查该值。这意味着`playAITurn`函数看起来像这样：
 
 ```kotlin
 private suspend fun playAITurn() {
@@ -5573,11 +5411,11 @@ private suspend fun playAITurn() {
 }
 ```
 
-`getBoolean` 的第二个参数是当 `fastAI` 设置没有值时的默认值。一旦用户进入设置页面并打开该设置，我们将看到 AI 移动得快得多。你现在可以自己测试一下，以确保你做对了一切。我想展示一个截图，但加速 AI 的回合不太适合在书中展示。
+`getBoolean`的第二个参数是当`fastAI`设置没有值时的默认值。一旦用户进入设置页面并打开该设置，我们将看到AI移动得快得多。你现在可以自己测试一下，以确保你做对了一切。我想展示一个截图，但加速AI的回合不太适合在书中展示。
 
 ### 使用起始便士数偏好
 
-本节中的另一个设置 `pennyCount` 也在 `GameViewModel` 中设置。在 `startGame` 函数中，我们现在要将 `pennyCount` 值（默认值为 `Player.defaultPennyCount`）发送到 `PennyDropRepository.startGame` 函数：
+本节中的另一个设置`pennyCount`也在`GameViewModel`中设置。在`startGame`函数中，我们现在要将`pennyCount`值（默认值为`Player.defaultPennyCount`）发送到`PennyDropRepository.startGame`函数：
 
 ```kotlin
 suspend fun startGame(playersForNewGame: List<Player>) {
@@ -5588,14 +5426,14 @@ suspend fun startGame(playersForNewGame: List<Player>) {
 }
 ```
 
-正如你的 IDE 可能现在告诉你的那样，这还需要一些下游更改。`PennyDropRepository.startGame` 现在看起来像这样：
+正如你的IDE可能现在告诉你的那样，这还需要一些下游更改。`PennyDropRepository.startGame`现在看起来像这样：
 
 ```kotlin
 suspend fun startGame(players: List<Player>, pennyCount: Int? = null) =
     pennyDropDao.startGame(players, pennyCount)
 ```
 
-在 `PennyDropDao` 中，`startGame` 函数现在将 `pennyCount` 作为参数，然后我们插入 `GameStatus` 对象的地方更新为如下所示：
+在`PennyDropDao`中，`startGame`函数现在将`pennyCount`作为参数，然后我们插入`GameStatus`对象的地方更新为如下所示：
 
 ```kotlin
 this.insertGameStatuses(
@@ -5611,7 +5449,7 @@ this.insertGameStatuses(
 )
 ```
 
-这里可能的问题是“为什么不直接在 `PennyDropDao` 内部获取 `pennyCount` 值，而是通过所有层传递它？”
+这里可能的问题是“为什么不直接在`PennyDropDao`内部获取`pennyCount`值，而是通过所有层传递它？”
 
 原因是`PreferenceManager.getDefaultSharedPreferences`函数需要一个`Context`对象的引用。文档中提到“[该`getDefaultSharedPreferences`函数]可在应用程序的任何位置使用”，[61]但这仅在你能在该位置获取到`Context`对象时才成立。尽管我们使用`Context`对象创建了`PennyDropDatabase`并从中获取了`PennyDropDao`，但在此类中我们已无法访问该对象。
 
@@ -5663,7 +5501,9 @@ dependencies {
 <color name="kotlinPurple">#806fe3</color>
 ```
 
-请随意以相同方式添加任何你喜欢的主题。如果你想快速测试带有新主题的应用，请打开你的AndroidManifest.xml并将<application>标签内的android:theme值更改为类似这样的内容：
+请随意以相同方式添加任何你喜欢的主题。如果你想快速测试带有新主题的应用，请打开你的AndroidManifest.xml并将`<application>`标签内的`android:theme`值更改为类似这样的内容：
+
+
 
 ```
 <application
@@ -5677,13 +5517,13 @@ dependencies {
 </application>
 ```
 
-将新主题添加到styles.xml（以及根据需要添加到colors.xml）后，我们可以继续为用户提供一种根据需要快速切换主题的方法。
+将新主题添加到`styles.xml`（以及根据需要添加到`colors.xml`）后，我们可以继续为用户提供一种根据需要快速切换主题的方法。
 
-### 更改主题
+## 更改主题
 
 回到`preferences.xml`内部，让我们在主题设置类别中添加一个新的`<DropDownPreference>`。除了我们之前设置的常规属性外，我们这里还使用了三个额外的属性。
 
-#### 添加额外的首选项属性
+### 添加额外的首选项属性
 
 `app:useSimpleSummaryProvider`在每次更改首选项值时处理更新摘要文本，我们可以在当前以及后续处理夜间模式支持时使用它。另外两个属性是`android:entries`和`android:entryValues`，它们为我们提供了一种填充下拉列表的方式。这两个值都位于`res/values/arrays.xml`中（你可能需要创建它）。在我们添加这些值之前，这里是完整的`<DropDownPreference>`：
 
@@ -5699,9 +5539,9 @@ dependencies {
 
 现在，让我们去添加那些条目字符串。
 
-#### 添加条目和条目值
+### 添加条目和条目值
 
-`arrays.xml`资源文件包含一些`<array>`标签，每个标签内有一个或多个项目。在我们的例子中，我们创建了多个名为themes和theme_values的`<string-array>`集合。这些标签将包含多个子`<item>`标签，其中包含我们所有的标签或值。如果你想知道每个数组代表什么，我们使用*themes*作为下拉列表的标签，而*theme_values*是我们从SharedPreferences对象获取的实际值。我的arrays.xml文件目前看起来像这样（你的可能因主题而异）：
+`arrays.xml`资源文件包含一些`<array>`标签，每个标签内有一个或多个项目。在我们的例子中，我们创建了多个名为`themes`和`theme_values`的`<string-array>`集合。这些标签将包含多个子`<item>`标签，其中包含我们所有的标签或值。如果你想知道每个数组代表什么，我们使用`themes`作为下拉列表的标签，而`theme_values`是我们从`SharedPreferences`对象获取的实际值。我的`arrays.xml`文件目前看起来像这样（你的可能因主题而异）：
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -5725,11 +5565,11 @@ dependencies {
 </resources>
 ```
 
-有了这些设置，并且我们的<DropDownPreference>标签引用了arrays.xml中的两个数组，我们就可以开始使用这些值了。
+有了这些设置，并且我们的`<DropDownPreference>`标签引用了`arrays.xml`中的两个数组，我们就可以开始使用这些值了。
 
-#### 使用所选主题
+### 使用所选主题
 
-除了像我们之前那样在AndroidManifest.xml中设置主题外，我们还可以在MainActivity的onCreate函数中通过其ID设置主题。为此，我们需要像之前那样从SharedPreferences类中获取主题ID，将其从文本值转换为资源ID，然后调用setTheme。再次记住，你的主题值和ID可能因你使用的主题而异：
+除了像我们之前那样在`AndroidManifest.xml`中设置主题外，我们还可以在`MainActivity`的`onCreate`函数中通过其ID设置主题。为此，我们需要像之前那样从`SharedPreferences`类中获取主题ID，将其从文本值转换为资源ID，然后调用`setTheme`。再次记住，你的主题值和ID可能因你使用的主题而异：
 
 ```
 val prefs =
@@ -5751,7 +5591,7 @@ setTheme(themeId)
 
 这段代码已设置好并完成了我们需要的功能，但它仅在`MainActivity`创建时执行，目前是在应用启动时。为了使其更具动态性，无需用户完全重启应用即可更改主题，我们需要在`SettingsFragment`内部添加一些逻辑。
 
-#### 处理首选项更改
+### 处理首选项更改
 
 在`onCreatePreferences`函数内部，我们可以检索我们设置的任何首选项，并通过`OnPreferenceChangeListener`对象监视值的变化。这是Kotlin的另一个美妙之处，因为我们不必创建一个完整的`OnPreferenceChangeListener`类，甚至不必担心显式覆盖`onPreferenceChange`函数，而是可以只添加一个`Preference.OnPreferenceChangeListener`引用，其中包含一个代码块作为该类唯一函数的主体。这类似于我们在*将玩家添加到GameViewModel*中实现`OnClickListener`的方式。
 
@@ -5761,7 +5601,7 @@ setTheme(themeId)
 val themePreference = findPreference<DropDownPreference?>("theme")
 ```
 
-一旦我们有了该实例，我们就可以（安全地）在`themePreference`值上分配`onPreferenceChangeListener`。我说“安全地”因为 `themePreference` 可能为空，所以我们只想在 `themePreference` 不为 `null` 时才进行赋值。附加到 `OnPreferenceChangeListener` 的代码块只做一件事：重新创建当前的 `Activity`，然后返回 `true`：
+一旦我们有了该实例，我们就可以（安全地）在`themePreference`值上分配`onPreferenceChangeListener`。我说“安全地”因为`themePreference`可能为空，所以我们只想在`themePreference`不为`null`时才进行赋值。附加到`OnPreferenceChangeListener`的代码块只做一件事：重新创建当前的`Activity`，然后返回`true`：
 
 ```
 themePreference?.onPreferenceChangeListener =
@@ -5773,25 +5613,25 @@ Preference.OnPreferenceChangeListener { _, _ ->
 }
 ```
 
-请注意，我省略了此函数的两个参数，因为我们没有使用它们。这两个参数通常是已更改的 `Preference` 和一个表示新值的 `Any` 对象。我们这里不需要它们，但稍后在切换主题模式时会用到它们。
+请注意，我省略了此函数的两个参数，因为我们没有使用它们。这两个参数通常是已更改的`Preference`和一个表示新值的`Any`对象。我们这里不需要它们，但稍后在切换主题模式时会用到它们。
 
-如果你还不知道，因为我们之前没有提到过，Kotlin 中的 `Any` 类等同于 Java 中的 `Object` 类。它是基础类型，可以与任何（因此得名）类型的任何对象一起使用。
+如果你还不知道，因为我们之前没有提到过，Kotlin中的`Any`类等同于Java中的`Object`类。它是基础类型，可以与任何（因此得名）类型的任何对象一起使用。
 
-现在运行你的应用，尝试在几个主题之间切换。添加重新创建 `Activity` 的调用，使我们不必每次想要新主题时都完全关闭并重新打开应用。接下来是在浅色和深色模式之间切换，这是一个类似（且稍微简单一点）的过程。
+现在运行你的应用，尝试在几个主题之间切换。添加重新创建`Activity`的调用，使我们不必每次想要新主题时都完全关闭并重新打开应用。接下来是在浅色和深色模式之间切换，这是一个类似（且稍微简单一点）的过程。
 
-### 添加夜间模式支持
+## 添加夜间模式支持
 
-应用和网站的最新趋势之一是引入深色主题。从 Android 10 开始，深色主题支持终于被内置到操作系统中，为你的整个手机提供了更暗的外观和感觉。
+应用和网站的最新趋势之一是引入深色主题。从Android 10开始，深色主题支持终于被内置到操作系统中，为你的整个手机提供了更暗的外观和感觉。
 
-在我们的代码中，我们可以强制应用使用某种模式（尽管我们让用户选择他们喜欢的模式），或者我们可以使用系统当前的设置。通过结合使用 `Theme.MaterialComponents.DayNight` 父样式和来自 `AppCompatDelegate` 的模式值，我们可以自动更改整个应用的模式。
+在我们的代码中，我们可以强制应用使用某种模式（尽管我们让用户选择他们喜欢的模式），或者我们可以使用系统当前的设置。通过结合使用`Theme.MaterialComponents.DayNight`父样式和来自`AppCompatDelegate`的模式值，我们可以自动更改整个应用的模式。
 
-使这一切工作的关键是 `AppCompatDelegate.setDefaultNightMode` 函数。此函数引入一个模式 ID 值，并立即将应用切换到使用所选模式。在我们的例子中，我们关心三个值：`MODE_NIGHT_NO`、`MODE_NIGHT_YES` 和 `MODE_NIGHT_FOLLOW_SYSTEM`。你可以将它们分别理解为浅色、深色和系统。我们需要做的是将这三个选择添加到 `SettingsFragment` 中，然后像处理主题那样做出响应，即根据设置的值更改模式。
+使这一切工作的关键是`AppCompatDelegate.setDefaultNightMode`函数。此函数引入一个模式ID值，并立即将应用切换到使用所选模式。在我们的例子中，我们关心三个值：`MODE_NIGHT_NO`、`MODE_NIGHT_YES`和`MODE_NIGHT_FOLLOW_SYSTEM`。你可以将它们分别理解为浅色、深色和系统。我们需要做的是将这三个选择添加到`SettingsFragment`中，然后像处理主题那样做出响应，即根据设置的值更改模式。
 
-这比之前的方法更复杂，但考虑到我们之前所做的，它应该是合理的。首先，添加一个新的 `<ListPreference>` 标签，其中包含更多的数组值。
+这比之前的方法更复杂，但考虑到我们之前所做的，它应该是合理的。首先，添加一个新的`<ListPreference>`标签，其中包含更多的数组值。
 
 ### 添加带有条目的首选项
 
-对于两个主题设置首选项，我们本可以使用 `<DropDownPreference>` 或 `<ListPreference>`，因为两者具有相似的用途。我决定各用一个作为示例，但你可以随意选择你喜欢的首选项。此外，由于两个首选项具有相似的用途，它们的属性将是相同的，尽管值不同：
+对于两个主题设置首选项，我们本可以使用`<DropDownPreference>`或`<ListPreference>`，因为两者具有相似的用途。我决定各用一个作为示例，但你可以随意选择你喜欢的首选项。此外，由于两个首选项具有相似的用途，它们的属性将是相同的，尽管值不同：
 
 ```
 <ListPreference
@@ -5803,7 +5643,7 @@ Preference.OnPreferenceChangeListener { _, _ ->
     app:useSimpleSummaryProvider="true" />
 ```
 
-我们还需要在 `arrays.xml` 中添加另外两个 `<string-array>` 集合：
+我们还需要在`arrays.xml`中添加另外两个`<string-array>`集合：
 
 ```
 <string-array name="theme_modes">
@@ -5820,17 +5660,17 @@ Preference.OnPreferenceChangeListener { _, _ ->
 
 虽然我这里没有这样做，但你也可以为所有这些项目使用字符串资源值。这是更好的方法，但为了本章的清晰起见，我将这些值保留为字符串本身。如果你的应用有任何语言翻译，你肯定需要使用字符串资源值。
 
-添加了 `<ListPreference>` 和数组值后，我们可以向 `SettingsFragment` 添加另一个 `OnPreferenceChangeListener`。
+添加了`<ListPreference>`和数组值后，我们可以向`SettingsFragment`添加另一个`OnPreferenceChangeListener`。
 
 ### 响应首选项更改
 
-事情开始的方式与我们之前所做的相同。我们获取 `ListPreference` 的实例：
+事情开始的方式与我们之前所做的相同。我们获取`ListPreference`的实例：
 
 ```
 val themeModePreference = findPreference<ListPreference?>("themeMode")
 ```
 
-然后我们添加一个 `OnPreferenceChangeListener` 来处理首选项更改时的情况：
+然后我们添加一个`OnPreferenceChangeListener`来处理首选项更改时的情况：
 
 ```
 themeModePreference?.onPreferenceChangeListener =
@@ -5839,7 +5679,7 @@ themeModePreference?.onPreferenceChangeListener =
     }
 ```
 
-在此代码块内，我们需要获取 `newValue` 并确定用户想要哪种模式。我们可以再次使用 `when { ... }` 块来做出此确定，然后调用 `AppCompatDelegate.setDefaultNightMode` 来分配它。这样做实际上会立即更改应用的主题，而无需重新创建 `Activity`。我们还想在这里设置一个默认值，因为这比 `android:defaultValue-1` 更有意义：
+在此代码块内，我们需要获取`newValue`并确定用户想要哪种模式。我们可以再次使用`when { ... }`块来做出此确定，然后调用`AppCompatDelegate.setDefaultNightMode`来分配它。这样做实际上会立即更改应用的主题，而无需重新创建`Activity`。我们还想在这里设置一个默认值，因为这比`android:defaultValue-1`更有意义：
 
 ```
 themeModePreference?.setDefaultValue(
@@ -5859,7 +5699,7 @@ themeModePreference?.onPreferenceChangeListener =
     }
 ```
 
-目前，模式仅在我们在设置页面中更改时设置。我们还需要在 `MainActivity` 中添加一些代码，以便在启动时使用保存的值。
+目前，模式仅在我们在设置页面中更改时设置。我们还需要在`MainActivity`中添加一些代码，以便在启动时使用保存的值。
 
 ### 在应用启动时设置主题模式
 
@@ -5876,13 +5716,13 @@ val nightMode = when (prefs.getString("themeMode", "")) {
 AppCompatDelegate.setDefaultNightMode(nightMode)
 ```
 
-最好在 `setContentView` 调用之前添加此代码，就像我们对 `setTheme` 调用所做的那样，但模式更改是按需进行的，所以这不是一个大问题。
+最好在`setContentView`调用之前添加此代码，就像我们对`setTheme`调用所做的那样，但模式更改是按需进行的，所以这不是一个大问题。
 
 现在，如果你运行了应用，你可能已经注意到在深色模式下插槽或游戏按钮几乎看不见。这是因为我们在所有场景中都设置了为浅色主题应用设计的颜色。虽然当我们只有浅色主题时效果很好，但我们可以为整个应用中的各种颜色使用更灵活的东西。
 
 ### 在应用中处理主题模式颜色
 
-回到我们在 [更新插槽绑定](Update Slot Bindings) 中添加插槽时，我们使用了三元语句来选择每个元素的颜色：
+回到我们在[更新插槽绑定](Update Slot Bindings)中添加插槽时，我们使用了三元语句来选择每个元素的颜色：
 
 ```
 xml
@@ -5890,9 +5730,9 @@ android:tint=
     "@{slot.lastRolled ? @color/colorPrimary : @android:color/black}"
 ```
 
-相反，我们想将其更改为使用颜色状态列表资源文件。我们之前在 [为开关添加颜色](Add Color to the Switch) 中做过这个。
+相反，我们想将其更改为使用颜色状态列表资源文件。我们之前在[为开关添加颜色](Add Color to the Switch)中做过这个。
 
-在我们的例子中，我们希望在插槽上次滚动时使用应用的主色。不幸的是，我们不能直接访问 `lastRolled` 属性，但我们可以使用 `lastRolled` 来设置视图的 `isActivated` 标志。在我们讨论如何设置该标志之前，颜色状态列表将如下所示：
+在我们的例子中，我们希望在插槽上次滚动时使用应用的主色。不幸的是，我们不能直接访问`lastRolled`属性，但我们可以使用`lastRolled`来设置视图的`isActivated`标志。在我们讨论如何设置该标志之前，颜色状态列表将如下所示：
 
 ```
 xml
@@ -5904,7 +5744,7 @@ xml
 </selector>
 ```
 
-现在，回到 `isActivated`。我们需要像在 [创建绑定适配器](https://example.com) 中那样，向我们的 `BindingAdapters.kt` 文件添加另一个函数。幸运的是，这是一个足够简单的函数，只设置一个属性：
+现在，回到`isActivated`。我们需要像在[创建绑定适配器](https://example.com)中那样，向我们的`BindingAdapters.kt`文件添加另一个函数。幸运的是，这是一个足够简单的函数，只设置一个属性：
 
 ```
 @BindingAdapter("slotLastRolled")
@@ -5913,7 +5753,7 @@ fun bindSlotLastRolled(view: View, lastRolled: Boolean) {
 }
 ```
 
-添加后，我们现在可以将 `app:slotLastRolled="@{slot.lastRolled}"` 添加到 `layout_coin_slot.xml` 中的所有三个视图标签，然后更改每个颜色。我们开始时是这样的：
+添加后，我们现在可以将`app:slotLastRolled="@{slot.lastRolled}"`添加到`layout_coin_slot.xml`中的所有三个视图标签，然后更改每个颜色。我们开始时是这样的：
 
 ```
 android:tint=
@@ -5926,7 +5766,9 @@ android:tint=
 android:tint="@color/coin_slot_color"
 ```
 
-同样，我们希望将 Roll 和 Pass 按钮转换为使用颜色状态列表。此外，我们可以将按钮的其他颜色（文本和可绘制对象）更改为使用属性值，而不是硬编码的 `@color` 资源值。这将允许应用根据所选主题自动更改这些颜色。
+
+
+同样，我们希望将 `Roll` 和 `Pass` 按钮转换为使用颜色状态列表。此外，我们可以将按钮的其他颜色（文本和可绘制对象）更改为使用属性值，而不是硬编码的 `@color` 资源值。这将允许应用根据所选主题自动更改这些颜色。
 
 在 `res/color` 目录内创建两个新的颜色状态列表资源：`roll_button_color.xml` 和 `pass_button_color.xml`。每个文件在 `android:state_activated="true"` 时有一种颜色，否则使用 `?android:attr/textColorPrimary` 属性。
 
@@ -5941,7 +5783,7 @@ android:tint="@color/coin_slot_color"
     <item
 ```
 
-### 添加“关于应用”部分
+## 添加“关于应用”部分
 
 此处的目的是向用户提供一些关于应用的信息：谁开发了它、为何开发它，以及对我们使用的、Google Material Design 库之外的图标（例如来自 [https://materialdesignicons.com/](https://materialdesignicons.com/) 的图标）的一些致谢。为此，我们将创建一个包含这些信息的 `AboutFragment`。我的版本看起来像[所示](#)的图片。
 
@@ -5953,7 +5795,7 @@ android:tint="@color/coin_slot_color"
 
 你之前已经创建过 Fragment，所以现在就去创建一个吧；我们很快就会添加到 `onCreateView` 函数中。
 
-### 处理到 AboutFragment 的导航
+## 处理到 AboutFragment 的导航
 
 将此 Fragment 添加到导航图与其他所有 Fragment 相同——在 `nav_graph.xml` 中添加一个新条目：
 
@@ -5974,10 +5816,8 @@ android:tint="@color/coin_slot_color"
 ```
 
 > **开始处理 AboutFragment**
-
-💡
-
-本节我们将主要在 `AboutFragment` 中工作，因此暂时将 `app:startDestination` 的值切换为 `@id/aboutFragment` 会为你省去一些麻烦。只需确保完成后将其切换回来。
+>
+> 💡 本节我们将主要在 `AboutFragment` 中工作，因此暂时将 `app:startDestination` 的值切换为 `@id/aboutFragment` 会为你省去一些麻烦。只需确保完成后将其切换回来。
 
 接下来，我们希望每当用户点击我们设置页面中的“关于 Penny Drop”偏好项时，就导航到这里。首先，我们在之前创建的“关于应用”类别中添加一个通用的 `<Preference>`（加上一些字符串资源值）：
 
@@ -6052,9 +5892,9 @@ override fun onSupportNavigateUp(): Boolean =
 </selector>
 ```
 
-我添加了带有 Roll 按钮的 `android:state_pressed` `<item>`，以便在用户点击该按钮时提供一些额外的反馈。这是一个可选的部分，但它展示了我们如何在单个颜色状态列表中组合不同的状态属性。
+我添加了带有 `Roll` 按钮的 `android:state_pressed` `<item>`，以便在用户点击该按钮时提供一些额外的反馈。这是一个可选的部分，但它展示了我们如何在单个颜色状态列表中组合不同的状态属性。
 
-然后我们可以回到 `fragment_game.xml` 来使用新的颜色状态列表文件。既然我们在那里，让我们也更新 `android:drawableTint` 和 `android:textColor` 属性。带有更新属性的完整 Roll `<Button>` 标签将如下所示：
+然后我们可以回到 `fragment_game.xml` 来使用新的颜色状态列表文件。既然我们在那里，让我们也更新 `android:drawableTint` 和 `android:textColor` 属性。带有更新属性的完整 `Roll` `<Button>` 标签将如下所示：
 
 ```xml
 <Button
@@ -6071,7 +5911,7 @@ override fun onSupportNavigateUp(): Boolean =
     android:textColor="?android:attr/textColorPrimaryInverse" />
 ```
 
-在我们完成之前，我们需要对“选择玩家”视图上的 FAB 进行一些快速更改。图像色调现在应该使用主文本颜色的反色，就像我们对 Roll 和 Pass 按钮所做的那样。我们还希望手动设置背景色调颜色以使用我们主题中的强调色，而不是默认的 `colorAccent` 值。
+在我们完成之前，我们需要对“选择玩家”视图上的 FAB 进行一些快速更改。图像色调现在应该使用主文本颜色的反色，就像我们对 `Roll` 和 `Pass` 按钮所做的那样。我们还希望手动设置背景色调颜色以使用我们主题中的强调色，而不是默认的 `colorAccent` 值。
 
 完整的 FAB XML（带有 `app:tint` 属性更新）如下所示：
 
@@ -6091,9 +5931,9 @@ override fun onSupportNavigateUp(): Boolean =
 
 随着主题和主题模式偏好项的就位，包括它们所有的逻辑和后续的布局更新，我们可以继续处理最后一个偏好项。这个偏好项将引导用户到一个新的视图，告诉用户一些关于构建此应用所投入的内容。
 
-既然我们已经能够进入 AboutFragment，接下来就需要正确地显示内容。同样，大部分内容与我们之前所做的相同，但添加可点击链接需要一些额外的工作。
+既然我们已经能够进入 `AboutFragment`，接下来就需要正确地显示内容。同样，大部分内容与我们之前所做的相同，但添加可点击链接需要一些额外的工作。
 
-### 在 TextView 中添加可点击链接
+## 在 TextView 中添加可点击链接
 
 正如我在本章开头提到的，我们有几种方法可以向 `<TextView>` 添加链接。最简单的方法是将字符串资源编写为 HTML 并在其中添加格式。使用这种方法，链接和文本装饰（粗体、斜体等）会变得快得多。如果我们创建一个这样的字符串资源（在你的代码中，这可以是一行很长的文本）：
 
@@ -6156,13 +5996,15 @@ view.findViewById<TextView>(R.id.about_icon_credits)?.apply {
 
 Penny Drop 应用现在功能完整了。七章，一大堆页面，我们现在有了一个运行良好、精美的应用，准备好让全世界的用户喜爱。嗯，虽然这可能有点*夸张*，但它仍然是一个很酷的应用，而且现在你知道如何利用 Kotlin 和 Jetpack 来构建 Android 应用了！
 
+
+
 接下来将是 Android Baseball League 应用，但在我们结束 Penny Drop 之前，我会指出一些我们可以做的事情，让这个应用变得更好。
 
-### 新游戏对话框
+## 新游戏对话框
 
 给用户提供一种快速开始新游戏的方式真的会很方便。在游戏结束或用户首次启动应用时添加一个快速开始新游戏的对话框，将大大提高应用的可用性。虽然我不想深入探讨如何做到这一点的每一个细节，但让我们看看快速版本。
 
-在 `GameFragment` 中为 `currentGame` 添加一个监听器，然后当当前游戏结束时，向用户显示一个 `AlertDialog`，如下所示：
+在`GameFragment`中为`currentGame`添加一个监听器，然后当当前游戏结束时，向用户显示一个`AlertDialog`，如下所示：
 
 ```kotlin
 val dialog = AlertDialog.Builder(activity)
@@ -6183,9 +6025,9 @@ val dialog = AlertDialog.Builder(activity)
 dialog.show()
 ```
 
-创建新游戏的对话框会类似，只是没有“Same Players”选项。另外，确保你在最后调用了 `show` 函数，否则什么都不会发生！
+创建新游戏的对话框会类似，只是没有“Same Players”选项。另外，确保你在最后调用了`show`函数，否则什么都不会发生！
 
-### 保存选择玩家的值
+## 保存选择玩家的值
 
 同样，我们可以通过保存游戏中上一个玩家的名字来节省用户的时间，即使在应用关闭后也是如此。至少，保存主要玩家的名字从游戏到游戏会很有帮助。
 
@@ -6193,19 +6035,19 @@ dialog.show()
 
 ![](img/c024742480e86eb8867e0760ebe353d7_290_0.png)
 
-### 处理游戏中的重复 AI
+## 处理游戏中的重复 AI
 
 我们游戏中的一个未解决的 bug 是，虽然我们不能将同一个 AI 玩家多次添加到单个游戏中，但我们没有限制用户这样做。事实上，如果他们尝试这样做，他们的游戏将会崩溃。
 
-你可以在这里做几件事：更改 AI 玩家的保存方式以允许它们在单个游戏中多次包含，更新 `GameStatus` 以将 `gamePlayerNumber` 作为主键，或者添加过滤，以便只有未选择的 AI 在 AI 下拉菜单中可用。
+你可以在这里做几件事：更改 AI 玩家的保存方式以允许它们在单个游戏中多次包含，更新`GameStatus`以将`gamePlayerNumber`作为主键，或者添加过滤，以便只有未选择的 AI 在 AI 下拉菜单中可用。
 
 所有这些解决方案都需要一些额外的工作，但我们可以使用比现在更好的东西。我决定不直接在书中涵盖这一点，因为这会比我希望的更偏离主题。
 
-### 将设置重置为默认值
+## 将设置重置为默认值
 
 另一个有用的 UX 功能是允许用户快速将设置恢复为其默认值。如果他们想回到应用启动时的起始便士数和主题，我们可以替换 Settings 屏幕 App 栏中的 Settings 链接，或者添加另一个 Preference 来重置所有内容。
 
-你已经看到了如何添加新的菜单链接和新的 Preference，以及处理点击事件，所以唯一新的部分就是设置值。你可以通过为每个 Preference 调用 `findPreference` 然后为 `value` 分配一个新值，或者使用 `SharedPreferences` 类上的 `Editor` 对象来实现：
+你已经看到了如何添加新的菜单链接和新的 Preference，以及处理点击事件，所以唯一新的部分就是设置值。你可以通过为每个 Preference 调用`findPreference`然后为`value`分配一个新值，或者使用`SharedPreferences`类上的`Editor`对象来实现：
 
 ```kotlin
 // 你可以直接在 Preference 本身上设置值。
@@ -6221,9 +6063,9 @@ prefs.edit()?.also {
 }
 ```
 
-### 启用“Hazel”模式
+## 启用“Hazel”模式
 
-我必须包含这个，因为每当我们玩现实版的 Penny Drop 时，我的女儿 Hazel 似乎总是掷出很多六点。我不知道为什么会这样，但到目前为止这是一个相当一致的模式。对于这个应用，它可以检查玩家的名字是否是 Hazel，如果是，则向 `rollDie` 发送一个新的 `isHazel` 参数。如果是这种情况，我们掷一个 D8（八面骰），如果值大于或等于 6，则称之为六点：
+我必须包含这个，因为每当我们玩现实版的 Penny Drop 时，我的女儿 Hazel 似乎总是掷出很多六点。我不知道为什么会这样，但到目前为止这是一个相当一致的模式。对于这个应用，它可以检查玩家的名字是否是 Hazel，如果是，则向`rollDie`发送一个新的`isHazel`参数。如果是这种情况，我们掷一个 D8（八面骰），如果值大于或等于 6，则称之为六点：
 
 ```kotlin
 private fun rollDie(sides: Int = 6, isHazel: Boolean = false) =
@@ -6234,11 +6076,11 @@ private fun rollDie(sides: Int = 6, isHazel: Boolean = false) =
 
 是的，这很傻，但代码很有趣，而且她确实掷出了*很多*六点。
 
-### 添加应用图标
+## 添加应用图标
 
 做了这么多工作，我们从未为应用设置一个合适的图标！这是故意的，因为它与你在每章中学到的内容无关。如果你想看看如何做到这一点，我们会在 ABL 应用中立即添加一个。请查看[添加应用图标](Add an App Icon)。
 
-### 添加单元测试和/或 UI 测试
+## 添加单元测试和/或 UI 测试
 
 这将是一个*极好*的想法！非常棒，以至于这正是我们在第 14 章[使用 JUnit 对应用进行单元测试](Unit Test Your App with JUnit)和第 15 章[使用 Espresso 测试应用的 UI](Test Your App’s UI with Espresso)中所做的。
 
@@ -6251,13 +6093,15 @@ private fun rollDie(sides: Int = 6, isHazel: Boolean = false) =
 [7] https://developer.android.com/guide/topics/ui/settings/components-and-attributes
 
 # 第二部分
-Android 棒球联盟
+
+## Android 棒球联盟
 
 现在，让我们进入 Android 棒球联盟的世界，这是一个专为本书创建的联盟。说真的，所有的球员、球队、比赛数据以及联盟的其他一切都是为此而创建的。现在轮到你来构建官方的 Android 棒球联盟应用了（当然，对于一个虚构的联盟来说，"官方"程度也就那样了）。
 
 接下来的挑战会更大，但你能应付。你将运用在 Penny Drop 中学到的知识，并在此基础上应用，同时还会使用更多的 Jetpack 库和 Kotlin 协程（这次会更深入一些）。
 
 # 第 8 章
+
 ## 初始化 Android 棒球联盟应用
 
 欢迎来到 Android 棒球联盟！Android 棒球联盟（简称 **ABL**）成立于 2018 年，是我们接下来六章的焦点。我们的任务是为联盟构建官方应用，让每个人都能了解他们最喜欢的球队和球员的所有信息。
@@ -6280,13 +6124,13 @@ ABL 应用是联盟球队和球员的展示平台。用户可以查找当前的�
 
 ### 创建应用
 
-打开 Android Studio 后，创建一个带有空活动的新项目（我们将再次手动添加内容），并将其命名为 Android Baseball League。你可以使用自己的包名（我喜欢用 dev.mfazio.abl），并且 SDK 至少为 API 级别 26。这将确保我们可以使用一些较新的 Android 功能。
+打开 Android Studio 后，创建一个带有空活动的新项目（我们将再次手动添加内容），并将其命名为 Android Baseball League。你可以使用自己的包名（我喜欢用`dev.mfazio.abl`），并且 SDK 至少为 API 级别 26。这将确保我们可以使用一些较新的 Android 功能。
 
-新项目索引完成且 Gradle 同步完成后，我们有一个漂亮的空 MainActivity 可以使用。在进入任何特定视图之前，我们有一些额外的依赖项需要使用。
+新项目索引完成且 Gradle 同步完成后，我们有一个漂亮的空`MainActivity`可以使用。在进入任何特定视图之前，我们有一些额外的依赖项需要使用。
 
 ### 添加依赖项
 
-在本章中，我们将通过 RecyclerView 库添加一个新的网格，并在每个网格项中使用 <ConstraintLayout>。这些依赖项是一个很好的起点，但随着我们构建 ABL 应用，我们将添加更多依赖项。dependencies 块应如下所示：
+在本章中，我们将通过 RecyclerView 库添加一个新的网格，并在每个网格项中使用`<ConstraintLayout>`。这些依赖项是一个很好的起点，但随着我们构建 ABL 应用，我们将添加更多依赖项。`dependencies`块应如下所示：
 
 ```
 dependencies {
@@ -6303,7 +6147,7 @@ dependencies {
 }
 ```
 
-这里有三点需要注意：首先，我们需要添加 kotlin-kapt 插件以支持数据绑定。将其添加到应用 build.gradle 文件顶部的 plugins 块中。该块现在如下所示：
+这里有三点需要注意：首先，我们需要添加`kotlin-kapt`插件以支持数据绑定。将其添加到应用`build.gradle`文件顶部的`plugins`块中。该块现在如下所示：
 
 ```
 plugins {
@@ -6313,11 +6157,11 @@ plugins {
 }
 ```
 
-其次，如果默认情况下不是这样设置的，我们希望使用 kotlin-stdlib-jdk8 版本的 Kotlin 标准库。确保你的应用也使用这个版本。
+其次，如果默认情况下不是这样设置的，我们希望使用`kotlin-stdlib-jdk8`版本的 Kotlin 标准库。确保你的应用也使用这个版本。
 
-第三点是这里添加的所有依赖项都有版本变量（位于项目的 build.gradle 文件中）。我们遵循与 Penny Drop 相同的模式，同样，所有依赖项及其版本都可以在附录 3，Gradle 依赖项中找到。
+第三点是这里添加的所有依赖项都有版本变量（位于项目的`build.gradle`文件中）。我们遵循与 Penny Drop 相同的模式，同样，所有依赖项及其版本都可以在附录 3，Gradle 依赖项中找到。
 
-最后，在离开应用的 build.gradle 文件之前，将 buildFeatures 块添加到 android 块的顶部：
+最后，在离开应用的`build.gradle`文件之前，将`buildFeatures`块添加到`android`块的顶部：
 
 ```
 android {
@@ -6332,31 +6176,31 @@ android {
 
 ### 添加图像资源
 
-ABL 应用中的图像比 Penny Drop 多得多，因此为了让你的生活更轻松，我在 PragProg.com 的代码中包含了一些图像。这包括球队标志、辅助图像和 ABL 标志本身。你需要的所有图像都在 `images/abl` 目录下。
+ABL 应用中的图像比 Penny Drop 多得多，因此为了让你的生活更轻松，我在 PragProg.com 的代码中包含了一些图像。这包括球队标志、辅助图像和 ABL 标志本身。你需要的所有图像都在`images/abl`目录下。
 
-说真的，只需将 `images/abl/team-logos` 文件夹中的所有 Drawable XML 文件复制/粘贴到 `drawables` 目录中。
+说真的，只需将`images/abl/team-logos`文件夹中的所有 Drawable XML 文件复制/粘贴到`drawables`目录中。
 
-此外，获取同一文件夹中所有尺寸的 `mke_flag.png`。我取了一个现有的 PNG 并将其分成六种不同的分辨率（ldpi 到 xxxhdpi），应用将根据给定设备使用其中一种。我们稍后还有其他图像需要复制，但现在只获取标志就足够了。
+此外，获取同一文件夹中所有尺寸的`mke_flag.png`。我取了一个现有的 PNG 并将其分成六种不同的分辨率（ldpi 到 xxxhdpi），应用将根据给定设备使用其中一种。我们稍后还有其他图像需要复制，但现在只获取标志就足够了。
 
-请注意，drawable-[dpi] 文件夹应放入 `src/main/res` 目录中，与 `drawables` 目录*并列*，而不是放入 `drawables` 目录中（像其他球队标志那样）。
+请注意，`drawable-[dpi]`文件夹应放入`src/main/res`目录中，与`drawables`目录*并列*，而不是放入`drawables`目录中（像其他球队标志那样）。
 
-最后，在我们获取其他图像的同一目录中，你需要 `abl-logo-shifted.svg`，因为我们将把它转换为我们的应用图标。
+最后，在我们获取其他图像的同一目录中，你需要`abl-logo-shifted.svg`，因为我们将把它转换为我们的应用图标。
 
 ### 添加应用图标
 
-`abl-logo-shifted.svg` 是我们将用来创建新图像资源的文件，在这种情况下，它是我们应用的启动器图标。
+`abl-logo-shifted.svg`是我们将用来创建新图像资源的文件，在这种情况下，它是我们应用的启动器图标。
 
-我还在那里包含了普通的 `abl-logo.svg`，但我推荐使用“shifted”版本，因为它转换为应用图标时看起来更好。你总是可以尝试两个版本，看看你更喜欢哪一个。
+我还在那里包含了普通的`abl-logo.svg`，但我推荐使用“shifted”版本，因为它转换为应用图标时看起来更好。你总是可以尝试两个版本，看看你更喜欢哪一个。
 
-一旦你将图标放在本地机器上（尚未添加到项目），右键单击 `res` 文件夹并选择 New > Image Asset。这将显示 Asset Studio，如第一张[图片](#)所示。
+一旦你将图标放在本地机器上（尚未添加到项目），右键单击`res`文件夹并选择 New > Image Asset。这将显示 Asset Studio，如第一张[图片](#)所示。
 
-在这里，确保 Source Asset 下的 Asset Type 设置为 Image，并选择 `abl-logo.shifted.svg` 文件。如果你愿意，可以重命名标志，或者直接覆盖现有的 `ic_launcher`。*不要*裁剪标志（因为这会移除我提到的偏移），但将图像大小调整到大约 65%，如第二张[图片](#)所示。
+在这里，确保 Source Asset 下的 Asset Type 设置为 Image，并选择`abl-logo.shifted.svg`文件。如果你愿意，可以重命名标志，或者直接覆盖现有的`ic_launcher`。*不要*裁剪标志（因为这会移除我提到的偏移），但将图像大小调整到大约 65%，如第二张[图片](#)所示。
 
 在 Background Layer 部分，你可能希望将 Asset Type 更改为 Color 而不是 Image，以避免默认的蓝图风格背景：
 
-背景准备好后，点击 Next 按钮，然后点击 Finish。如果你更改了启动器图标的名称，请进入 `AndroidManifest.xml` 并将 `android:icon` 和 `android:roundIcon` 的值替换为新名称。如果你没有更改名称并且图像名为“ic_launcher”，那么你就完成了（因为 `@mipmap/ic_launcher` 是默认值）。
+背景准备好后，点击 Next 按钮，然后点击 Finish。如果你更改了启动器图标的名称，请进入`AndroidManifest.xml`并将`android:icon`和`android:roundIcon`的值替换为新名称。如果你没有更改名称并且图像名为“ic_launcher”，那么你就完成了（因为`@mipmap/ic_launcher`是默认值）。
 
-此外，如果你希望应用名称显示为不同于你开始时输入的项目名称，你可以将 `AndroidManifest.xml` 中的 `android:label` 更改为其他内容。我将其更改为 ABL，因为 Android Baseball League 对于应用抽屉来说太长了。
+此外，如果你希望应用名称显示为不同于你开始时输入的项目名称，你可以将`AndroidManifest.xml`中的`android:label`更改为其他内容。我将其更改为 ABL，因为 Android Baseball League 对于应用抽屉来说太长了。
 
 仅为确认，你的`<application>`标签应类似于这样：
 
@@ -6383,13 +6227,15 @@ ABL 应用中的图像比 Penny Drop 多得多，因此为了让你的生活更�
 
 添加图标后，我们就可以开始构建应用了。首先是进行一些初始的[MainActivity](MainActivity)设置。
 
-## 配置Activity
+## 配置 Activity
 
-与Penny Drop项目一样，MainActivity是处理Fragment类的主要枢纽，但除此之外没有太多其他功能。尤其是在我们刚开始的时候，因为我们只关注一些基本的导航。
+与 Penny Drop 项目一样，`MainActivity`是处理 Fragment 类的主要枢纽，但除此之外没有太多其他功能。尤其是在我们刚开始的时候，因为我们只关注一些基本的导航。
 
-对于导航，我们需要一个`<FragmentContainerView>`和一个导航图。鉴于本章我们只关注单个Fragment，我们甚至不需要更新MainActivity中的代码。相反，我们将把它留到下一章，第9章，通过导航抽屉进行导航。
+对于导航，我们需要一个`<FragmentContainerView>`和一个导航图。鉴于本章我们只关注单个 Fragment，我们甚至不需要更新`MainActivity`中的代码。相反，我们将把它留到下一章，第 9 章，通过导航抽屉进行导航。
 
-### 添加FragmentContainerView
+### 添加 FragmentContainerView
+
+
 
 `<FragmentContainerView>`与Penny Drop项目中的基本相同。目前，我们将让`<FragmentContainerView>`占据整个屏幕，这意味着我们的`activity_main.xml`布局文件如下所示：
 
@@ -6436,7 +6282,7 @@ ABL 应用中的图像比 Penny Drop 多得多，因此为了让你的生活更�
 
 一旦你添加了`teams`字符串资源，这就完成了。嗯，除了`TeamsFragment`还不存在。让我们来创建它。
 
-### 添加第一个Fragment
+## 添加第一个Fragment
 
 `TeamsFragment`将包含一个漂亮的2x7网格，展示Android棒球联盟中的所有球队。它看起来会像这样：
 
@@ -6446,7 +6292,7 @@ ABL 应用中的图像比 Penny Drop 多得多，因此为了让你的生活更�
 
 在创建`TeamsFragment`之前，我们将创建一些辅助类，这些类将在这个屏幕上以不同方式使用。
 
-### 添加与球队相关的类
+## 添加与球队相关的类
 
 我们的球队网格需要三个额外的类：
 
@@ -6549,13 +6395,13 @@ companion object {
 
 现在三个辅助类型都准备好了，我们可以继续创建`TeamsFragment`及其相关部分。
 
-### 添加TeamsFragment
+## 添加TeamsFragment
 
 在`teams`包中，以你喜欢的方式创建`TeamsFragment`及其关联的布局文件。我将我的布局文件命名为`fragment_teams_grid.xml`，因为它能更好地描述该视图，但这完全是可选的。
 
 我们将最后处理`TeamsFragment`本身的代码，因为我们需要先设置其他部分。所以首先是Fragment的布局文件。
 
-关联的布局文件（无论你如何命名）将只包含一个 `<RecyclerView>` 标签，仅此而已。我们采用与 Penny Drop 项目相同的大致方法，特别是在 [添加 RecyclerView](Add the RecyclerView) 部分。
+关联的布局文件（无论你如何命名）将只包含一个`<RecyclerView>`标签，仅此而已。我们采用与Penny Drop项目相同的大致方法，特别是在[添加RecyclerView](Add the RecyclerView)部分。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -6571,13 +6417,15 @@ companion object {
     tools:listitem="@layout/teams_grid_item" />
 ```
 
-同样，我们稍后会回到 TeamsFragment 的实际代码，因为我们需要先完成所有准备工作。接下来是网格中每个项目的布局。
+同样，我们稍后会回到`TeamsFragment`的实际代码，因为我们需要先完成所有准备工作。接下来是网格中每个项目的布局。
 
-### 添加网格项布局 XML
+## 添加网格项布局 XML
 
-teams_grid_item.xml 布局文件将包含三个部分——球队的标志、地点和昵称，全部垂直排列。我们很快还会将一个 UITeam 对象绑定到每个项目，因此它将作为 `<variable>` 包含在布局中。
+`teams_grid_item.xml`布局文件将包含三个部分——球队的标志、地点和昵称，全部垂直排列。我们很快还会将一个`UITeam`对象绑定到每个项目，因此它将作为`<variable>`包含在布局中。
 
-你之前几乎已经完成过所有这些操作，所以我们可以直接看代码。我只想提一下，我在这里使用 Waukesha Riffs 作为“工具”团队，这样布局编辑器就有内容可以显示了。以下是 teams_grid_item.xml：
+你之前几乎已经完成过所有这些操作，所以我们可以直接看代码。我只想提一下，我在这里使用Waukesha Riffs作为“工具”团队，这样布局编辑器就有内容可以显示了。以下是`teams_grid_item.xml`：
+
+
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -6633,13 +6481,13 @@ teams_grid_item.xml 布局文件将包含三个部分——球队的标志、地
 </layout>
 ```
 
-需要额外处理的部分是 `android:src="@{team.logoId}"` 属性。是的，我知道我们之前在 `<ImageView>` 上设置过图像源，但我们现在这样做是行不通的。
+需要额外处理的部分是`android:src="@{team.logoId}"`属性。是的，我知道我们之前在`<ImageView>`上设置过图像源，但我们现在这样做是行不通的。
 
-我应该说，没有绑定适配器的话，它是行不通的。`android:src` 属性期望的是一个 `@drawable` 引用，而不是像我们这里使用的绑定 ID。幸运的是，我们可以保持代码不变，通过一个新的 `@BindingAdapter` 函数让 ImageView 正确显示。
+我应该说，没有绑定适配器的话，它是行不通的。`android:src`属性期望的是一个`@drawable`引用，而不是像我们这里使用的绑定 ID。幸运的是，我们可以保持代码不变，通过一个新的`@BindingAdapter`函数让`ImageView`正确显示。
 
-在 util 包（或类似包）中创建一个名为 BindingAdapters 的类。在这里，我们需要添加一个名为 `setImageViewResource` 的 `@BindingAdapter` 函数。
+在`util`包（或类似包）中创建一个名为`BindingAdapters`的类。在这里，我们需要添加一个名为`setImageViewResource`的`@BindingAdapter`函数。
 
-这个函数接收 ImageView 和一个资源 ID 作为参数，在我们的例子中是球队标志的 ID。然后我们将使用该标志的 ID 在 ImageView 上设置图像资源：
+这个函数接收`ImageView`和一个资源 ID 作为参数，在我们的例子中是球队标志的 ID。然后我们将使用该标志的 ID 在`ImageView`上设置图像资源：
 
 ```kotlin
 @BindingAdapter("android:src")
@@ -6648,17 +6496,17 @@ fun setImageViewResource(imageView: ImageView, resourceId: Int) {
 }
 ```
 
-通过将值参数设置为 `@BindingAdapter` 注解的 `"android:src"`，我们实际上重载了该属性以处理额外的值。这意味着 `@drawable` 引用仍然按预期工作，但现在数据绑定值也可以工作了。我们保持了布局文件的整洁和可读性，同时不受操作系统限制。
+通过将值参数设置为`@BindingAdapter`注解的`"android:src"`，我们实际上重载了该属性以处理额外的值。这意味着`@drawable`引用仍然按预期工作，但现在数据绑定值也可以工作了。我们保持了布局文件的整洁和可读性，同时不受操作系统限制。
 
-添加了这个之后，我们可以继续处理 Adapter 类。
+添加了这个之后，我们可以继续处理`Adapter`类。
 
 ### 添加 RecyclerView Adapter
 
-创建了 `<RecyclerView>` 和项目布局文件后，我们可以创建 Adapter 类了。这与你之前在 *创建自定义 ListAdapter* 中所做的非常相似。
+创建了`<RecyclerView>`和项目布局文件后，我们可以创建`Adapter`类了。这与你之前在*创建自定义ListAdapter*中所做的非常相似。
 
-在 teams 包中创建一个名为 TeamsGridAdapter 的类。这个类继承自 RecyclerView.Adapter，并有一个内部类作为 RecyclerView.ViewHolder 的子类。
+在`teams`包中创建一个名为`TeamsGridAdapter`的类。这个类继承自`RecyclerView.Adapter`，并有一个内部类作为`RecyclerView.ViewHolder`的子类。
 
-这是一个比 Penny Drop 中更简单的适配器，所以我不会在这里解释任何内容。整个 TeamsGridAdapter 如下所示：
+这是一个比 Penny Drop 中更简单的适配器，所以我不会在这里解释任何内容。整个`TeamsGridAdapter`如下所示：
 
 ```kotlin
 class TeamsGridAdapter(
@@ -6701,13 +6549,13 @@ class TeamsGridAdapter(
 }
 ```
 
-现在 TeamsGridAdapter 类已经完成，我们可以回到 TeamsFragment 将其连接到网格。
+现在`TeamsGridAdapter`类已经完成，我们可以回到`TeamsFragment`将其连接到网格。
 
 ### 配置球队网格
 
-在 `TeamsFragment` 中，我们需要做三件事：加载视图、设置 `layoutManager` 属性，然后连接 `adapter`。这与我们在 Penny Drop 的排名屏幕上所做的基本相同，但由于这个屏幕是网格而不是列表，我们需要一个不同的 `layoutManager`。
+在`TeamsFragment`中，我们需要做三件事：加载视图、设置`layoutManager`属性，然后连接`adapter`。这与我们在 Penny Drop 的排名屏幕上所做的基本相同，但由于这个屏幕是网格而不是列表，我们需要一个不同的`layoutManager`。
 
-我们需要创建一个设置为两个“跨度”（在我们的例子中是列）并垂直对齐的 `GridLayoutManager`。然后我们使用传入 `UITeam.allTeams` 的 `TeamsGridAdapter` 实例。这样，整个 `TeamsFragment` 如下所示：
+我们需要创建一个设置为两个“跨度”（在我们的例子中是列）并垂直对齐的`GridLayoutManager`。然后我们使用传入`UITeam.allTeams`的`TeamsGridAdapter`实例。这样，整个`TeamsFragment`如下所示：
 
 ```kotlin
 class TeamsFragment : Fragment() {
@@ -6754,23 +6602,23 @@ class TeamsFragment : Fragment() {
 
 ## 通过导航抽屉进行导航
 
-我们的ABL应用已经启动并运行；现在我们需要为用户提供一种导航方式。毕竟，他们需要一种方式来查看他们心爱的Spring Green Thespians在积分榜上的位置，或者Justin Witz是否仍然在联盟抢断榜上领先。
+我们的 ABL 应用已经启动并运行；现在我们需要为用户提供一种导航方式。毕竟，他们需要一种方式来查看他们心爱的 Spring Green Thespians 在积分榜上的位置，或者 Justin Witz 是否仍然在联盟抢断榜上领先。
 
-在Penny Drop中，我们只有几个屏幕，而在ABL应用中，我们有五个不同的区域，外加设置和关于应用两个屏幕。由于目的地数量的增加，底部导航结构对我们来说不再适用。我们将为应用添加一个*导航抽屉*，这是一个从屏幕侧面滑出的面板，为用户提供多个去处，如图所示。
+在 Penny Drop 中，我们只有几个屏幕，而在 ABL 应用中，我们有五个不同的区域，外加设置和关于应用两个屏幕。由于目的地数量的增加，底部导航结构对我们来说不再适用。我们将为应用添加一个*导航抽屉*，这是一个从屏幕侧面滑出的面板，为用户提供多个去处，如图所示。
 
 ![](img/c024742480e86eb8867e0760ebe353d7_317_0.png)
 
 你应该看到导航抽屉在很多方面与底部导航相似，但我们将在此用户体验基础上增加更多功能。除了抽屉中的标准导航外，我们还将提供一种直接从一个页面跳转到抽屉中未包含的独立页面的方式。我们还可以向该独立页面传递类型安全的参数。我们甚至可以从应用外部直接跳转到该页面（或任何其他页面）。
 
-我们将重点关注各个ABL球队、它们在联盟积分榜中的位置，以及所有能让我们到达这些位置的高级导航功能。让我们从向应用添加导航抽屉开始。
+我们将重点关注各个 ABL 球队、它们在联盟积分榜中的位置，以及所有能让我们到达这些位置的高级导航功能。让我们从向应用添加导航抽屉开始。
 
 ### 添加导航抽屉
 
-我们可能不需要为导航抽屉添加任何额外的依赖项，因为我们在上一章已经添加了[androidx.navigation](https://developer.android.com/jetpack/androidx/releases/navigation)库，并且应用现在默认包含Material Design Components库。不过，如果缺少任何一个，请现在添加。然后我们可以跳转到[activity_main.xml](https://developer.android.com/reference/android/app/Activity#setContentView(int))来添加导航抽屉。
+我们可能不需要为导航抽屉添加任何额外的依赖项，因为我们在上一章已经添加了 [androidx.navigation](https://developer.android.com/jetpack/androidx/releases/navigation) 库，并且应用现在默认包含 Material Design Components 库。不过，如果缺少任何一个，请现在添加。然后我们可以跳转到 `activity_main.xml` 来添加导航抽屉。
 
 ### 更新 activity_main.xml
 
-从UI的角度来看，我们正在将导航抽屉添加到现有的[MainActivity](https://developer.android.com/reference/android/app/Activity)布局中，并且我们还将对布局进行相当大的更改。屏幕的父视图现在将是一个`<DrawerLayout>`，其中包含一个`<Toolbar>`和一个`<FragmentContainerView>`：
+从 UI 的角度来看，我们正在将导航抽屉添加到现有的 `MainActivity` 布局中，并且我们还将对布局进行相当大的更改。屏幕的父视图现在将是一个`<DrawerLayout>`，其中包含一个`<Toolbar>`和一个`<FragmentContainerView>`：
 
 ```xml
 <androidx.drawerlayout.widget.DrawerLayout
@@ -6815,6 +6663,8 @@ class TeamsFragment : Fragment() {
 
 最后，`<NavigationView>`位于`<DrawerLayout>`内部，但*不*在`<LinearLayout>`内部，它会滑出覆盖在屏幕上：
 
+
+
 ```xml
 <com.google.android.material.navigation.NavigationView
     android:id="@+id/nav_view"
@@ -6832,7 +6682,7 @@ class TeamsFragment : Fragment() {
 
 `<Toolbar>`上的`android:theme`属性可能也是新的。你可能注意到列出的`themes.xml`文件中我们之前见过的类似主题，这正是我们接下来要去的地方。
 
-由于我们是手动添加`<Toolbar>`，我们需要确保应用的主题不会尝试为我们添加一个，方法是将应用主题的父级更改为NoActionBar变体：
+由于我们是手动添加`<Toolbar>`，我们需要确保应用的主题不会尝试为我们添加一个，方法是将应用主题的父级更改为`NoActionBar`变体：
 
 ```xml
 <style name="Theme.AndroidBaseballLeague"
@@ -6905,11 +6755,11 @@ class TeamsFragment : Fragment() {
 
 ### 添加视图绑定
 
-现在，虽然这与导航没有直接关系，但我想在这里引入视图绑定功能。由于我们正从 activity_main.xml 中获取每个组件，视图绑定将使我们的工作更加轻松。
+现在，虽然这与导航没有直接关系，但我想在这里引入视图绑定功能。由于我们正从`activity_main.xml`中获取每个组件，视图绑定将使我们的工作更加轻松。
 
-在很多方面，视图绑定看起来与我们使用数据绑定时所做的类似，例如，当我们将一个 ViewModel 类与布局关联时。我们不再需要调用 findViewById 来获取布局元素，而是可以直接将该元素作为生成的绑定类上的属性来引用。
+在很多方面，视图绑定看起来与我们使用数据绑定时所做的类似，例如，当我们将一个`ViewModel`类与布局关联时。我们不再需要调用`findViewById`来获取布局元素，而是可以直接将该元素作为生成的绑定类上的属性来引用。
 
-如果你不清楚我这里的意思，别担心。一旦我们开始在 MainActivity 中配置一切，它应该会变得更清楚。但在我们做任何事情之前，我们需要在应用的 build.gradle 文件中开启视图绑定。我们已经在 buildFeatures 块中有了 dataBinding 标志，但现在我们需要添加 viewBinding：
+如果你不清楚我这里的意思，别担心。一旦我们开始在`MainActivity`中配置一切，它应该会变得更清楚。但在我们做任何事情之前，我们需要在应用的`build.gradle`文件中开启视图绑定。我们已经在`buildFeatures`块中有了`dataBinding`标志，但现在我们需要添加`viewBinding`：
 
 ```
 buildFeatures {
@@ -6918,13 +6768,13 @@ buildFeatures {
 }
 ```
 
-这实际上就是我们启用应用中视图绑定所需做的全部工作（当然，在 Gradle 同步之后）——无需包含通用的 `<layout>` 标签或任何额外的依赖项。我建议在任何你只想跳过 Activity 或 Fragment 类中的 findViewById 调用，并且不需要在布局文件中使用绑定表达式的情况下使用视图绑定。请记住，视图绑定比数据绑定更快，准备工作也更少，因此请根据每个用例决定需要哪种方法。
+这实际上就是我们启用应用中视图绑定所需做的全部工作（当然，在Gradle同步之后）——无需包含通用的`<layout>`标签或任何额外的依赖项。我建议在任何你只想跳过`Activity`或`Fragment`类中的`findViewById`调用，并且不需要在布局文件中使用绑定表达式的情况下使用视图绑定。请记住，视图绑定比数据绑定更快，准备工作也更少，因此请根据每个用例决定需要哪种方法。
 
 ### 更新 MainActivity
 
-我们已经看到了在构建 Penny Drop 时如何在 MainActivity 类中连接 `<FragmentContainerView>`，但这次我们还需要添加 `<Toolbar>` 并进行一些配置以设置导航抽屉。
+我们已经看到了在构建Penny Drop时如何在`MainActivity`类中连接`<FragmentContainerView>`，但这次我们还需要添加`<Toolbar>`并进行一些配置以设置导航抽屉。
 
-由于我们已经启用了视图绑定，我们可以立即开始使用它。onCreate 函数的开头现在看起来像这样：
+由于我们已经启用了视图绑定，我们可以立即开始使用它。`onCreate`函数的开头现在看起来像这样：
 
 ```
 super.onCreate(savedInstanceState)
@@ -6932,7 +6782,7 @@ val binding = ActivityMainBinding.inflate(layoutInflater)
 setContentView(binding.root)
 ```
 
-看起来很熟悉，对吧？虽然代码比以前多了一点，但将我们的 `<Toolbar>` 与 Activity 一起使用只需一行清晰的代码：
+看起来很熟悉，对吧？虽然代码比以前多了一点，但将我们的`<Toolbar>`与`Activity`一起使用只需一行清晰的代码：
 
 ```
 setSupportActionBar(binding.toolbar)
@@ -6945,7 +6795,7 @@ val toolbar = findViewById<Toolbar>(R.id.toolbar)
 setSupportActionBar(toolbar)
 ```
 
-虽然这算不上节省大量代码，但第一行代码肯定更易于处理，也更清晰易读。我们很快会看到更多例子，但首先我们需要获取 navController。别忘了在类的顶部将 navController 声明为 lateinit var。
+虽然这算不上节省大量代码，但第一行代码肯定更易于处理，也更清晰易读。我们很快会看到更多例子，但首先我们需要获取`navController`。别忘了在类的顶部将`navController`声明为`lateinit var`。
 
 ```
 val navHostFragment = supportFragmentManager
@@ -6953,9 +6803,9 @@ val navHostFragment = supportFragmentManager
 this.navController = navHostFragment.navController
 ```
 
-不幸的是，视图绑定在这里帮不上忙，因为我们需要与 supportFragmentManager 交互，但其余的配置得到了很好的简化。
+不幸的是，视图绑定在这里帮不上忙，因为我们需要与`supportFragmentManager`交互，但其余的配置得到了很好的简化。
 
-特别是，我们需要用 navController 值设置两个组件。导航抽屉（通过 binding.navView）和 `<Toolbar>`（通过 appBarConfiguration 值）都需要与 NavController 关联：
+特别是，我们需要用`navController`值设置两个组件。导航抽屉（通过`binding.navView`）和`<Toolbar>`（通过`appBarConfiguration`值）都需要与`NavController`关联：
 
 ```
 binding.navView.setupWithNavController(this.navController)
@@ -6965,11 +6815,11 @@ this.appBarConfiguration =
 setupActionBarWithNavController(this.navController, appBarConfiguration)
 ```
 
-同样，确保 appBarConfiguration lateinit var 在 navController 之后声明。
+同样，确保`appBarConfiguration` `lateinit var`在`navController`之后声明。
 
-我们在 MainActivity 中需要做的最后一件事是重写 onSupportNavigateUp 函数。这个函数使我们的导航抽屉按钮能够工作。
+我们在`MainActivity`中需要做的最后一件事是重写`onSupportNavigateUp`函数。这个函数使我们的导航抽屉按钮能够工作。
 
-我们确保 `navController` 已初始化，如果是，则在 `navController` 上调用 `navigateUp` 函数。如果其中任何一个返回 `false`，我们则回退到默认的 `onSupportNavigateUp` 函数：
+我们确保`navController`已初始化，如果是，则在`navController`上调用`navigateUp`函数。如果其中任何一个返回`false`，我们则回退到默认的`onSupportNavigateUp`函数：
 
 ```
 override fun onSupportNavigateUp(): Boolean =
@@ -6982,25 +6832,25 @@ override fun onSupportNavigateUp(): Boolean =
 
 ![](img/c024742480e86eb8867e0760ebe353d7_325_0.png)
 
-看起来相当不错，对吧？请注意，高亮显示是自动为我们处理的，就像底部导航一样，因为我们的 fragment ID 匹配。唯一的问题是导航抽屉目前还做不了太多事情，因为应用中只有一个视图。让我们通过添加 Standings 页面来改变这一点。
+看起来相当不错，对吧？请注意，高亮显示是自动为我们处理的，就像底部导航一样，因为我们的fragment ID匹配。唯一的问题是导航抽屉目前还做不了太多事情，因为应用中只有一个视图。让我们通过添加Standings页面来改变这一点。
 
-### 添加片段（Standings 和 Single Team）
+### 添加片段（Standings和Single Team）
 
-我们希望有两个新的片段来支持本章中使用导航所做的工作：[StandingsFragment](StandingsFragment) 和 [SingleTeamFragment](SingleTeamFragment)。我们将在导航抽屉中链接到 [StandingsFragment](StandingsFragment)，并将 [SingleTeamFragment](SingleTeamFragment) 作为一个单独的（非导航抽屉）目的地，我们可以从 [StandingsFragment](StandingsFragment) 和 [TeamsFragment](TeamsFragment) 访问它。
+我们希望有两个新的片段来支持本章中使用导航所做的工作：[StandingsFragment](StandingsFragment)和[SingleTeamFragment](SingleTeamFragment)。我们将在导航抽屉中链接到[StandingsFragment](StandingsFragment)，并将[SingleTeamFragment](SingleTeamFragment)作为一个单独的（非导航抽屉）目的地，我们可以从[StandingsFragment](StandingsFragment)和[TeamsFragment](TeamsFragment)访问它。
 
-所有你想复制的代码都可以在 [chapter-9/code-to-copy](chapter-9/code-to-copy) 目录中找到。
+所有你想复制的代码都可以在[chapter-9/code-to-copy](chapter-9/code-to-copy)目录中找到。
 
 ### 添加 StandingsFragment
 
-Standings 页面将是另一个 [RecyclerView](RecyclerView) 列表，但有一个转折：我们将在列表中添加一些标题来分隔行。具体来说，我们添加标题来分隔 ABL 的东部和西部赛区。最终的 Standings 页面将如下所示：
+Standings页面将是另一个[RecyclerView](RecyclerView)列表，但有一个转折：我们将在列表中添加一些标题来分隔行。具体来说，我们添加标题来分隔ABL的东部和西部赛区。最终的Standings页面将如下所示：
 
 ![](img/c024742480e86eb8867e0760ebe353d7_327_0.png)
 
-现在，虽然我很想向你展示这一切是如何工作的，但我们还有导航要做。鉴于此，只需将 `standings` 包中的所有内容复制到你的项目中。这包括以下类：`StandingsAdapter`、`StandingsFragment`、`StandingsListItem`、`StandingsViewModel`、`TeamStanding` 和 `UITeamStanding`。此外，你需要从 `res/layout` 目录中获取 `fragment_standings.xml`、`standings_header.xml` 和 `standings_team_item.xml` 文件。
+现在，虽然我很想向你展示这一切是如何工作的，但我们还有导航要做。鉴于此，只需将`standings`包中的所有内容复制到你的项目中。这包括以下类：`StandingsAdapter`、`StandingsFragment`、`StandingsListItem`、`StandingsViewModel`、`TeamStanding`和`UITeamStanding`。此外，你需要从`res/layout`目录中获取`fragment_standings.xml`、`standings_header.xml`和`standings_team_item.xml`文件。
 
-请随意在空闲时浏览这些文件/类，因为它们绝对有用，并且是我们第 6 章 *使用 RecyclerView 构建列表* 工作的绝佳扩展。
+请随意在空闲时浏览这些文件/类，因为它们绝对有用，并且是我们第6章*使用RecyclerView构建列表*工作的绝佳扩展。
 
-一点信息：我在 `TeamStanding` 类中包含了一些模拟的球队排名数据，这样你在 Standings 页面上就有东西可以显示了。这将在第 10 章 *使用协程和 Room 加载和保存数据* 中移除，届时我们将调用 API 来获取数据。
+一点信息：我在`TeamStanding`类中包含了一些模拟的球队排名数据，这样你在Standings页面上就有东西可以显示了。这将在第10章*使用协程和Room加载和保存数据*中移除，届时我们将调用API来获取数据。
 
 还有两个必需的更改——我们需要一些额外的字符串资源值：
 
@@ -7013,7 +6863,7 @@ Standings 页面将是另一个 [RecyclerView](RecyclerView) 列表，但有一�
 <string name="streak_abbr">STRK</string>
 ```
 
-此外，`UITeam` 类中缺少 `fromTeamId` 函数。添加它并确保包含 `@JvmStatic` 注解，因为我们稍后将在数据绑定表达式中使用此函数：
+此外，`UITeam`类中缺少`fromTeamId`函数。添加它并确保包含`@JvmStatic`注解，因为我们稍后将在数据绑定表达式中使用此函数：
 
 ```
 @JvmStatic
@@ -7021,7 +6871,7 @@ fun fromTeamId(teamId: String?) =
     allTeams.firstOrNull { uiTeam -> uiTeam.teamId == teamId }
 ```
 
-复制这些文件并添加函数后，将 `StandingsFragment` 的 `<fragment>` 标签添加到 `nav_graph.xml`。这样我们就可以从导航抽屉访问 `StandingsFragment`（是的，我现在将 `StandingsFragment` 设为起始位置）：
+复制这些文件并添加函数后，将`StandingsFragment`的`<fragment>`标签添加到`nav_graph.xml`。这样我们就可以从导航抽屉访问`StandingsFragment`（是的，我现在将`StandingsFragment`设为起始位置）：
 
 ```
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
@@ -7040,9 +6890,11 @@ fun fromTeamId(teamId: String?) =
 </navigation>
 ```
 
-一旦你设置好这些，运行应用以确保你的 standings 页面看起来像我们在本节开头看到的那样。如果没问题，我们将继续处理 `SingleTeamFragment`。
+一旦你设置好这些，运行应用以确保你的standings页面看起来像我们在本节开头看到的那样。如果没问题，我们将继续处理`SingleTeamFragment`。
 
-### 添加 SingleTeamFragment
+
+
+## 添加 SingleTeamFragment
 
 我们将在这里做类似的事情，即从代码中复制文件过来。这次是 `teams` 包内的 `SingleTeamFragment` 和 `SingleTeamViewModel`，以及 `res/layout` 中的 `fragment_single_team.xml` 布局文件。
 
@@ -7066,7 +6918,7 @@ fun setBackgroundTint(view: View, colorId: Int) {
 
 好了——我为你省去了打开那个文件的麻烦，但现在是时候继续导航了！
 
-### 使用 Safe Args 传递数据
+## 使用 Safe Args 传递数据
 
 你可能已经注意到 `SingleTeamFragment` 类现在不太高兴，因为它不知道 `SingleTeamFragmentArgs` 或 `navArgs` 函数。另外，请注意有问题的行看起来与我们获取 `ViewModel` 类的方式非常相似。
 
@@ -7076,7 +6928,7 @@ fun setBackgroundTint(view: View, colorId: Int) {
 
 在我们尝试在任何地方使用 `NavArgs` 之前，我们需要添加一个 `classpath` 依赖项和一个 `plugin` 引用。
 
-### 添加 Safe Args 插件
+## 添加 Safe Args 插件
 
 这是少数几个我们需要将依赖项添加到*项目* `build.gradle` 文件而不是应用级文件的情况之一，因为我们引入了一个新的插件。除了 Kotlin 和 Gradle `classpath` 依赖项外，我们还需要包含 Safe Args 插件：
 
@@ -7101,7 +6953,7 @@ plugins {
 
 添加这些后，同步 Gradle，然后进入 `navigation/nav_graph.xml` 添加一些 Actions。
 
-### 添加导航 Actions
+## 添加导航 Actions
 
 *导航 Actions* 是从一个目的地到另一个目的地的方式。在我们的例子中，我们将添加一种从 `TeamsFragment` 和 `StandingsFragment` 移动到 `SingleTeamFragment` 的方式。
 
@@ -7206,7 +7058,7 @@ Navigation 库有*全局 actions*的概念，可以从任何地方访问。这�
 
 导航图完成后，我们就可以回到 Kotlin 代码中开始移动了。确保 `SingleTeamFragment` 编译没有任何错误，并注意我们如何在绑定逻辑中使用 `args.teamId`。这就是我们在目的地中使用 Safe Args 所需的全部内容。
 
-### 通过 Actions 导航
+## 通过 Actions 导航
 
 我们希望为 `SingleTeamFragment` 添加导航逻辑，使其能够导航到 Teams 网格和 Standings 屏幕，两者都以类似的方式处理。我们将从 `StandingsAdapter` 开始，因为代码已经存在，但被注释掉了。
 
@@ -7251,7 +7103,7 @@ fun bind(item: UITeam) {
 
 每当我们想从应用内的另一个地方导航到某个特定页面时，都可以遵循这个相同的模式。但是，如果我们想从应用*外部*到达某个特定页面呢？这就是*深层链接*发挥作用的地方。
 
-### 通过深层链接直接导航
+## 通过深层链接直接导航
 
 深层链接是一种直接到达我们应用中任何目的地的方式，即使是那些不在导航抽屉中的目的地。Navigation 库支持两种类型的深层链接：显式和隐式。
 
@@ -7261,9 +7113,11 @@ fun bind(item: UITeam) {
 
 导航组件通过允许我们在 `nav_graph.xml` 中添加 `<deepLink>` 标签，然后在我们的 `AndroidManifest.xml` 文件中引用该导航图来帮助我们。
 
-### 添加隐式深层链接
+## 添加隐式深层链接
 
 在 `nav_graph.xml` 内部，在 Single Team `<fragment>` 标签内添加一个新的 `<deepLink>` 标签：
+
+
 
 ```xml
 <fragment
@@ -7282,7 +7136,7 @@ fun bind(item: UITeam) {
 </fragment>
 ```
 
-然后在 `AndroidManifest.xml` 中，我们可以在主 `<activity>` 标签内添加一个 `<nav-graph>` 标签：
+然后在`AndroidManifest.xml`中，我们可以在主`<activity>`标签内添加一个`<nav-graph>`标签：
 
 ```xml
 <activity android:name=".MainActivity">
@@ -7314,17 +7168,17 @@ Chrome
 
 现在，在我们的例子中，这意味着如果我们按下返回按钮，我们会回到起始目的地。如果我们有一个更复杂的导航图，我们会以与最初导航到那里时相同的返回栈进入该流程。所有这些也都为我们自动处理了。
 
-你可以做类似的事情来测试任何团队链接。另外，也请随意为其他两个页面添加额外的 `<deepLink>` 标签。
+你可以做类似的事情来测试任何团队链接。另外，也请随意为其他两个页面添加额外的`<deepLink>`标签。
 
 当人们想要分享应用中的特定位置或需要快速跳回某个目的地时，拥有深层链接非常方便。然而，到达那里的过程可能有点烦人，特别是那个“打开方式”对话框。我们可以通过将这个深层链接转换为 Android App Link 来移除这一步。
 
-### 将深层链接转换为 Android App Link
+## 将深层链接转换为 Android App Link
 
 从高层次来看，Android App Links 将你的网站和网络链接与你的应用关联起来。这是通过在应用中添加深层链接（为链接提供去处）并验证这些链接来完成的。后一部分是通过在你的网站上添加一个验证文件来处理的，该文件告诉设备该网站和你的应用是关联的。
 
-那个验证文件被称为 *Digital Asset Links 文件*，它列出了你的应用信息，用于验证过程。该文件包含一个关系类型和一个目标，后者包含一个命名空间（“android_app”）、包名（“dev.mfazio.abl”）和 SHA256 证书指纹。
+那个验证文件被称为 *Digital Asset Links 文件*，它列出了你的应用信息，用于验证过程。该文件包含一个关系类型和一个目标，后者包含一个命名空间（`android_app`）、包名（`dev.mfazio.abl`）和 SHA256 证书指纹。
 
-最后一部分可以使用 Java keytool 自动获取（将 app-release-key 替换为你的密钥库文件名）：
+最后一部分可以使用 Java `keytool` 自动获取（将 `app-release-key` 替换为你的密钥库文件名）：
 
 ```
 keytool -list -v -keystore app-release-key.keystore
@@ -7359,7 +7213,7 @@ keytool -list -v -keystore app-release-key.keystore
 
 我们现在可以在应用中自由导航了！导航抽屉将为我们提供一种流畅的方式来访问我们将在接下来的几章中构建的所有应用部分。
 
-此外，我们有快速路径可以直接通过操作到达应用中的某个目的地。使用操作与 Safe Args 使导航体验非常棒，因为我们处理的是实际对象，而不仅仅是需要某种转换且容易出错的 `String` 值。
+此外，我们有快速路径可以直接通过操作到达应用中的某个目的地。使用操作与 Safe Args 使导航体验非常棒，因为我们处理的是实际对象，而不仅仅是需要某种转换且容易出错的`String`值。
 
 最后，通过深层链接和 Android App Links，我们可以让用户直接访问应用中原本无法立即访问的部分。我们肯定会在后面的章节中扩展这些内容。
 
@@ -7385,10 +7239,10 @@ keytool -list -v -keystore app-release-key.keystore
 
 在开始之前，添加Room依赖项：
 
-- implementation "androidx.room:room-ktx:$room_version"
-- implementation "androidx.room:room-runtime:$room_version"
-- implementation "com.google.android.material:material:$material_version"
-- kapt "androidx.room:room-compiler:$room_version"
+- `implementation "androidx.room:room-ktx:$room_version"`
+- `implementation "androidx.room:room-runtime:$room_version"`
+- `implementation "com.google.android.material:material:$material_version"`
+- `kapt "androidx.room:room-compiler:$room_version"`
 
 然后，在一个新的`data`包内，创建一个继承自`RoomDatabase`的`abstract BaseballDatabase`类。它一开始会相当空，但我们会逐步添加内容。目前，它看起来像这样：
 
@@ -7419,11 +7273,11 @@ abstract class BaseballDatabase : RoomDatabase() {
 }
 ```
 
-数据库已就位，现在我们需要一些类来操作它。我们将把TeamStanding类转换为@Entity，同时创建DAO和Repository类。让我们从TeamStanding开始，因为我们将在其他类中使用它。
+数据库已就位，现在我们需要一些类来操作它。我们将把`TeamStanding`类转换为`@Entity`，同时创建DAO和Repository类。让我们从`TeamStanding`开始，因为我们将在其他类中使用它。
 
 ### 将TeamStanding转换为Entity
 
-值得庆幸的是，这不需要太多工作。我们需要将类标记为@Entity，添加@PrimaryKey和一些@TypeConverter函数。
+值得庆幸的是，这不需要太多工作。我们需要将类标记为`@Entity`，添加`@PrimaryKey`和一些`@TypeConverter`函数。
 
 首先，类的更改如下所示：
 
@@ -7450,7 +7304,7 @@ data class TeamStanding(
 }
 ```
 
-Room不知道如何处理Division或WinLoss，因此我们需要一个包含@TypeConverter函数的Converters类，正如我之前提到的。该类位于data包中，如下所示：
+Room不知道如何处理`Division`或`WinLoss`，因此我们需要一个包含`@TypeConverter`函数的`Converters`类，正如我之前提到的。该类位于`data`包中，如下所示：
 
 ```
 class Converters {
@@ -7480,9 +7334,9 @@ class Converters {
 }
 ```
 
-我们有每种类型的双向转换方法，并且在转换失败时都会回退到它们的Unknown值。
+我们有每种类型的双向转换方法，并且在转换失败时都会回退到它们的`Unknown`值。
 
-Converters类现在完成了，TeamStanding类现在是一个@Entity，我们可以将它们都添加到数据库中：
+`Converters`类现在完成了，`TeamStanding`类现在是一个`@Entity`，我们可以将它们都添加到数据库中：
 
 ```
 @Database(
@@ -7518,7 +7372,7 @@ abstract class BaseballDatabase : RoomDatabase() {
 
 提醒一下，DAO是一个接口或抽象类，它将从我们的Room数据库中拉取数据，而Repository是一个标准类，我们通过它将数据提供给应用程序的其余部分。DAO只关心Room，而Repository可以引用多个数据源。一旦我们调用API，这一点将变得更加重要。
 
-首先，我们需要创建BaseballDao类，其中包含一些与TeamStanding对象相关的函数。我们希望能够插入新的TeamStanding记录、更新这些记录以及从数据库中检索它们。BaseballDao类目前看起来像这样：
+首先，我们需要创建`BaseballDao`类，其中包含一些与`TeamStanding`对象相关的函数。我们希望能够插入新的`TeamStanding`记录、更新这些记录以及从数据库中检索它们。`BaseballDao`类目前看起来像这样：
 
 ```
 @Dao
@@ -7541,15 +7395,17 @@ abstract class BaseballDao {
 
 老实说，我不喜欢这种方法，但当你想到`LiveData`并非设计用于后台时，这是有道理的。此外，如果你尝试只获取`LiveData`版本并从中获取值，你会得到`null`。
 
+
+
 关于那个额外函数的最后一点：它被标记了`suspend`修饰符，以便我们在非UI线程上获取数据。这样UI就不会为用户锁定，但我们可以按预期处理数据。如果我们不包含这个修饰符，我们会得到一个关于在UI线程上运行查询的错误。你*可以*启用UI线程查询，但请不要这样做。这是一个有原因的保护措施。
 
 DAO设置好后，我们可以在新的`BaseballRepository`类中使用它。
 
-### 添加BaseballRepository类
+## 添加`BaseballRepository`类
 
 现在，我们只需要初始化`BaseballRepository`类并添加一个获取排名数据的函数。记住，我们将`BaseballDao`类作为构造函数参数传入，以便在类内部使用。以下是`BaseballRepository`类当前的样子：
 
-```
+```kotlin
 class BaseballRepository(private val baseballDao: BaseballDao) {
 
     fun getStandings(): LiveData<List<TeamStanding>> =
@@ -7571,11 +7427,11 @@ class BaseballRepository(private val baseballDao: BaseballDao) {
 
 DAO和Repository准备就绪后，我们可以开始向数据库添加数据。目前，再次拥有一些排名数据会很方便，因此我们将插入上一章引用的模拟数据。
 
-### 将BaseballDao和模拟数据添加到BaseballDatabase
+## 将`BaseballDao`和模拟数据添加到`BaseballDatabase`
 
 `BaseballDao`作为`abstract fun`添加到`BaseballDatabase`中，我们无需额外操作。至于模拟数据，我们将采用与过去相同的方法，使用`RoomDatabase.Callback`来添加内容。我们可以在数据库创建时插入模拟排名数据，然后它就可以供我们显示了。这两项添加如下所示：
 
-```
+```kotlin
 @Database(
     entities = [TeamStanding::class],
     exportSchema = false,
@@ -7619,30 +7475,43 @@ abstract class BaseballDatabase : RoomDatabase() {
 }
 ```
 
+```kotlin
 override fun onCreate(db: SupportSQLiteDatabase) {
+
     super.onCreate(db)
+
     scope.launch {
+
         Instance
+
             ?.baseballDao()
+
             ?.insertStandings(TeamStanding.mockTeamStandings)
+
     }
+
 }
+
 }).build()
 
 Instance = instance
 
 instance
+
 }
+
 }
+
 }
+```
 
 完成这些更改后，我们可以继续更新排名页面，以使用来自数据库的数据。
 
-### 从数据库加载排名数据
+## 从数据库加载排名数据
 
-目前，我们正在将模拟的排名数据转换为 LiveData 以供页面使用。相反，我们需要一个 BaseballRepository 实例，然后我们可以调用 getStandings 从数据库中获取 TeamStanding 对象。请确保将基类更改为 AndroidViewModel，因为我们需要一个上下文来检索数据库。
+目前，我们正在将模拟的排名数据转换为`LiveData`以供页面使用。相反，我们需要一个`BaseballRepository`实例，然后我们可以调用`getStandings`从数据库中获取`TeamStanding`对象。请确保将基类更改为`AndroidViewModel`，因为我们需要一个上下文来检索数据库。
 
-我们确实希望继续将 TeamStanding 对象映射为 UITeamStanding 对象，但现在我们将在 `Transformations.map` 代码块中完成此操作。以下是 StandingsViewModel 现在的样子：
+我们确实希望继续将`TeamStanding`对象映射为`UITeamStanding`对象，但现在我们将在`Transformations.map`代码块中完成此操作。以下是`StandingsViewModel`现在的样子：
 
 ```kotlin
 class StandingsViewModel(application: Application) :
@@ -7675,7 +7544,7 @@ class StandingsViewModel(application: Application) :
 
 现在继续运行应用程序，它应该看起来与之前相同。你可以通过在 Android Studio 的 Database Inspector 中更改值来验证它正在使用数据库中的数据。既然模拟数据已经在其中，并且我们的排名页面正在使用我们的数据库，我们可以继续从外部 API 拉取数据。为此，我们将使用一个名为 Retrofit 的库。
 
-### 使用 Retrofit
+## 使用 Retrofit
 
 虽然到目前为止我们一直在开发离线应用程序，但在现实世界中这种情况非常罕见。别误会，我们到目前为止所做的一切都是有价值的（无论是在这里还是在 Penny Drop 项目中），但调用 API 是构建应用程序的关键部分。
 
@@ -7683,13 +7552,13 @@ class StandingsViewModel(application: Application) :
 
 我将在这里介绍设置 Retrofit 服务的基础知识。如果你更感兴趣的是使用服务而不是构建它，请跳到下一节：[添加 ABL API 客户端](Add the ABL API Client)。我们将为我们的应用程序使用 ABL API 客户端，而不是我在这里向你展示的内容，因此你实际上不会使用我们编写的代码。但由于 Retrofit 被广泛使用，我认为值得介绍。
 
-### 构建 Retrofit 服务
+## 构建 Retrofit 服务
 
 Retrofit 实现的核心部分是 Service 接口。在这里，你通过列出 HTTP 方法（GET、POST 等）、API 路径、任何查询参数和返回类型来定义每个 API。同样，Retrofit 的妙处在于你始终使用对象，而无需每次都手动转换事物。
 
-例如，我们稍后将使用的 `getStandings` 函数是按以下方式设置的。它是一个 GET 请求，带有一个查询参数（`currentDate`）和一个 `TeamStandingApiModel` 的返回类型。`currentDate` 参数允许我们请求一年中任何日期的排名。`currentDate` 参数是可选的，因此应将其标记为可空的 `LocalDate?` 对象。
+例如，我们稍后将使用的`getStandings`函数是按以下方式设置的。它是一个 GET 请求，带有一个查询参数（`currentDate`）和一个`TeamStandingApiModel`的返回类型。`currentDate`参数允许我们请求一年中任何日期的排名。`currentDate`参数是可选的，因此应将其标记为可空的`LocalDate?`对象。
 
-此外，得益于 Kotlin，我们可以用 `suspend` 修饰符标记我们的 Retrofit 函数，并在代码中的协程内调用它们。带有 `getStandings` 函数的 `AndroidBaseballLeagueService` 如下所示：
+此外，得益于 Kotlin，我们可以用`suspend`修饰符标记我们的 Retrofit 函数，并在代码中的协程内调用它们。带有`getStandings`函数的`AndroidBaseballLeagueService`如下所示：
 
 ```kotlin
 interface AndroidBaseballLeagueService {
@@ -7700,7 +7569,7 @@ interface AndroidBaseballLeagueService {
 }
 ```
 
-`AndroidBaseballLeagueService` 中的所有端点函数都将遵循类似的设置。我们还可以使用其他功能，例如添加路径变量，你可以在 `getSinglePlayer` 函数中看到：
+`AndroidBaseballLeagueService`中的所有端点函数都将遵循类似的设置。我们还可以使用其他功能，例如添加路径变量，你可以在`getSinglePlayer`函数中看到：
 
 ```kotlin
 @GET("players/{playerId}")
@@ -7710,11 +7579,11 @@ suspend fun getSinglePlayer(
 ): BoxScoreItemsApiModel
 ```
 
-一旦将所需的所有端点添加到服务中，我们就可以设置 Retrofit 构建器。在我们的案例中，这是一个两步过程。我们需要一个 JSON 转换器，然后是 `Retrofit` 对象构建器。
+一旦将所需的所有端点添加到服务中，我们就可以设置 Retrofit 构建器。在我们的案例中，这是一个两步过程。我们需要一个 JSON 转换器，然后是`Retrofit`对象构建器。
 
 对于 JSON 转换器，我选择了 Moshi[1]，这是来自 Square 朋友的另一个很棒的库。对于任何使用过 GSON 的人来说，Moshi 实际上是 GSON v3.0，因为它是由三位主要 GSON 维护者中的两位发起的。如果你不了解 GSON，不用担心，因为它已被弃用。
 
-通过将 Moshi 作为 `Converter.Factory` 添加到我们的 Retrofit 服务中，数据可以从 JSON 文本自动转换为对象。我们甚至可以为某些数据类型（如日期）向 Moshi 转换器添加适配器：
+通过将 Moshi 作为`Converter.Factory`添加到我们的 Retrofit 服务中，数据可以从 JSON 文本自动转换为对象。我们甚至可以为某些数据类型（如日期）向 Moshi 转换器添加适配器：
 
 ```kotlin
 class MoshiLocalDateAdapter {
@@ -7739,7 +7608,7 @@ val moshi = Moshi.Builder()
 
 这样，我们就能够构建 Retrofit 对象。现在，这不是我们将在 Android 应用程序中使用的服务，而是用于从我们定义的接口创建服务的 Retrofit 类。
 
-正如我提到的，Moshi 可以作为 Converter.Factory 添加到 Retrofit 对象中，我们可以像这样添加其他 Converter.Factory 类：
+正如我提到的，Moshi 可以作为`Converter.Factory`添加到 Retrofit 对象中，我们可以像这样添加其他`Converter.Factory`类：
 
 ```kotlin
 class DateTimeQueryConverterFactory : Converter.Factory() {
@@ -7759,9 +7628,9 @@ class DateTimeQueryConverterFactory : Converter.Factory() {
 }
 ```
 
-一切设置就绪后，Retrofit 构建器为我们提供了 Retrofit 对象，我们可以调用 create 函数来获取具体的服务。
+一切设置就绪后，Retrofit 构建器为我们提供了 Retrofit 对象，我们可以调用`create`函数来获取具体的服务。
 
-使用我们即将添加的 ABL API 客户端，我们通过我添加到客户端的 `getDefaultABLService` 函数获取服务。这为我们提供了一种快速获取 `AndroidBaseballLeagueService` 实例的方法，而无需担心在应用程序中进行任何设置：
+使用我们即将添加的 ABL API 客户端，我们通过我添加到客户端的`getDefaultABLService`函数获取服务。这为我们提供了一种快速获取`AndroidBaseballLeagueService`实例的方法，而无需担心在应用程序中进行任何设置：
 
 ```kotlin
 fun getDefaultABLService(
@@ -7786,11 +7655,13 @@ fun getDefaultABLService(
 
 现在是我们添加 ABL API 客户端并开始在应用程序中使用它的时候了。
 
-### 添加 ABL API 客户端
+## 添加 ABL API 客户端
 
 通过使用 ABL API 客户端，你将在设置服务和创建所有包含响应数据的必需 API 模型方面节省大量时间。在应用程序中，我们唯一需要做的就是调用服务并将 API 模型转换为我们的内部模型。
 
-要使用该客户端，我们需要在项目的 `build.gradle` 文件中，同时在 `buildscript` 和 `allprojects repositories` 代码块内添加一个新的仓库：
+要使用该客户端，我们需要在项目的`build.gradle`文件中，同时在`buildscript`和`allprojects repositories`代码块内添加一个新的仓库：
+
+
 
 ```
 buildscript {
@@ -7833,7 +7704,7 @@ Web 服务调用可能是转向 Kotlin + Jetpack（加上我们刚刚介绍的 R
 
 ### 通过 ABL API 客户端加载排名数据
 
-在 AndroidManifest.xml 中，我们需要授予应用访问互联网和检查设备当前网络状态的权限。我们通过在 `<manifest>` 容器标签顶部附近添加一个 `<uses-permission>` 标签来实现这一点：
+在 `AndroidManifest.xml` 中，我们需要授予应用访问互联网和检查设备当前网络状态的权限。我们通过在 `<manifest>` 容器标签顶部附近添加一个 `<uses-permission>` 标签来实现这一点：
 
 ```
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -7847,7 +7718,7 @@ Web 服务调用可能是转向 Kotlin + Jetpack（加上我们刚刚介绍的 R
 </manifest>
 ```
 
-接下来是 BaseballRepository。目前这里内容不多，但我们至少有一个从数据库获取排名 LiveData 的函数。现在是时候添加一个使用 ABL API 客户端的 `updateStandings` 函数了。
+接下来是 `BaseballRepository`。目前这里内容不多，但我们至少有一个从数据库获取排名 LiveData 的函数。现在是时候添加一个使用 ABL API 客户端的 `updateStandings` 函数了。
 
 首要任务是将 ABL API 客户端添加到我们的 Repository 中。这是通过在我们的伴生对象中添加一个 `AndroidBaseballLeagueService` 实例来完成的，我们通过 `getDefaultABLService` 函数获取它：
 
@@ -8056,11 +7927,13 @@ private suspend fun <T> safeApiRequest(
 
 > 捕获异常时要小心
 
-添加对顶层 Exception 的捕获可能很危险，至少在它可能隐藏代码错误的意义上是这样。
+添加对顶层 `Exception` 的捕获可能很危险，至少在它可能隐藏代码错误的意义上是这样。
 
-确保在捕获异常时对其做一些有用的事情，并首先捕获更具体的 Exception 类型（如 IOException），以便你可以为应用采取适当的措施。
+确保在捕获异常时对其做一些有用的事情，并首先捕获更具体的 `Exception` 类型（如 `IOException`），以便你可以为应用采取适当的措施。
 
 添加了 `safeApiRequest` 函数后，我们可以在 `updateStandings` 中使用它：
+
+
 
 ```kotlin
 suspend fun updateStandings(): ResultStatus {
@@ -8084,17 +7957,17 @@ suspend fun updateStandings(): ResultStatus {
 }
 ```
 
-是的，这给我们的 API 调用增加了一些复杂性，但现在我们能够应对用户手机因任何原因离线的情况，我们知道这种情况会发生。有了这个准备，我们就可以开始使用这些 ResultStatus 值了。
+是的，这给我们的 API 调用增加了一些复杂性，但现在我们能够应对用户手机因任何原因离线的情况，我们知道这种情况会发生。有了这个准备，我们就可以开始使用这些 `ResultStatus` 值了。
 
 ### 在 UI 上处理请求异常
 
-在 StandingsViewModel 类内部，我们需要做两处更改。我们需要一个新的 MutableLiveData 值，名为 errorMessage，并且我们需要更新 refreshStandings 以处理返回的 ResultStatus。errorMessage 值放在 StandingsViewModel 类的顶部附近：
+在 `StandingsViewModel` 类内部，我们需要做两处更改。我们需要一个新的 `MutableLiveData` 值，名为 `errorMessage`，并且我们需要更新 `refreshStandings` 以处理返回的 `ResultStatus`。`errorMessage` 值放在 `StandingsViewModel` 类的顶部附近：
 
 ```kotlin
 val errorMessage = MutableLiveData("")
 ```
 
-refreshStandings 函数的更新也不太复杂，但这里的主要部分是将 ResultStatus 值转换为错误消息。我决定在 UIExtensions.kt 文件中作为 ResultStatus 的扩展函数来完成此操作：
+`refreshStandings` 函数的更新也不太复杂，但这里的主要部分是将 `ResultStatus` 值转换为错误消息。我决定在 `UIExtensions.kt` 文件中作为 `ResultStatus` 的扩展函数来完成此操作：
 
 ```kotlin
 fun ResultStatus.getErrorMessage(application: Application) = when (this)
@@ -8109,7 +7982,7 @@ fun ResultStatus.getErrorMessage(application: Application) = when (this)
 }
 ```
 
-这段代码需要一些新的字符串资源值，但除此之外，它已经可以使用了。然后，在 StandingsViewModel 内部，我们需要调用那个新的 getErrorMessage 函数：
+这段代码需要一些新的字符串资源值，但除此之外，它已经可以使用了。然后，在 `StandingsViewModel` 内部，我们需要调用那个新的 `getErrorMessage` 函数：
 
 ```kotlin
 fun refreshStandings() {
@@ -8143,58 +8016,66 @@ standingsViewModel.errorMessage
 你需要的所有代码都在 `chapter-10/code-to-copy` 目录中，需要添加到你的应用中的内容相当多，所以请仔细关注以下列表：
 
 - `scoreboard` 包中的所有内容。
+
 - 所有以 *scoreboard* 为前缀的布局 XML 文件和 `fragment_scoreboard.xml`。
+
 - `scoreboard-images` 文件夹（或 `res/drawable` 下）中的五个 `drawable` XML 文件。
+
 - 五个以 *scoreboard_* 为前缀的字符串资源值。
+
 - `util` 包中的 `Extensions.kt` 和 `UIExtensions.kt` 文件。
+
 - `nav_graph.xml` 中 `ScoreboardFragment` 类的条目。
+
 - `BaseballDatabase` 中的 `ScheduledGame` `@Entity`。
+
 - `data.Converters` 中的额外 `@TypeConverter` 函数。
+
 - `UITeam` 中的 `fromTeamIds` 函数。
 
-这里涉及很多环节，因此你可能需要构建应用。不幸的是，目前还无法成功构建，因为我们的Repository和DAO类中缺少`getGamesForDate`函数。
+这里涉及很多环节，因此你可能需要构建应用。不幸的是，目前还无法成功构建，因为我们的 `Repository` 和 `DAO` 类中缺少 `getGamesForDate` 函数。
 
 ### 添加获取记分牌数据的函数
 
-这里比较简单的函数在`BaseballDao`中，因为它几乎和我们之前写过的`@Query`函数一模一样：
+这里比较简单的函数在 `BaseballDao` 中，因为它几乎和我们之前写过的 `@Query` 函数一模一样：
 
-```
+```kotlin
 @Query("SELECT * FROM games WHERE gameId LIKE :dateString")
 abstract fun getGamesForDate(
     dateString: String
 ): LiveData<List<ScheduledGame>>
 ```
 
-唯一的真正区别是SQL查询中的`LIKE`部分。为了按日期筛选，我们检查`ScheduledGame`的`gameId`值的开头是否与我们想要的日期匹配。虽然我可以添加另一个仅包含日期的字段用于匹配，但我想给你一个Room查询中使用`LIKE`表达式的例子。
+唯一的真正区别是 SQL 查询中的 `LIKE` 部分。为了按日期筛选，我们检查 `ScheduledGame` 的 `gameId` 值的开头是否与我们想要的日期匹配。虽然我可以添加另一个仅包含日期的字段用于匹配，但我想给你一个 Room 查询中使用 `LIKE` 表达式的例子。
 
-由于查询中使用了`LIKE`，我们可以在传入DAO函数的`dateString`值中添加一个通配符参数（%）。这使得我们的Repository函数看起来像这样：
+由于查询中使用了 `LIKE`，我们可以在传入 DAO 函数的 `dateString` 值中添加一个通配符参数（`%`）。这使得我们的 `Repository` 函数看起来像这样：
 
-```
+```kotlin
 fun getGamesForDate(date: LocalDate): LiveData<List<
     ScheduledGame>> =
     baseballDao.getGamesForDate("${date.toGameDateString()}%")
 ```
 
-看到`%`是如何放在日期字符串末尾的吗？这意味着我们的查询应该接受该位置的任何值。实际上，这意味着“20201115”这样的日期字符串将匹配“2020111509-LD-WAU”和“2020111517-MKE-SHW”等值。
+看到 `%` 是如何放在日期字符串末尾的吗？这意味着我们的查询应该接受该位置的任何值。实际上，这意味着 `"20201115"` 这样的日期字符串将匹配 `"2020111509-LD-WAU"` 和 `"2020111517-MKE-SHW"` 等值。
 
-既然我们可以从数据库中获取一些数据，我们就可以构建应用以确保一切正常，然后继续实际加载一些数据（因为空白的记分牌页面不太有趣）。请确保在导航图中包含`ScoreboardFragment`，否则我们甚至无法进入空白的记分牌页面。
+既然我们可以从数据库中获取一些数据，我们就可以构建应用以确保一切正常，然后继续实际加载一些数据（因为空白的记分牌页面不太有趣）。请确保在导航图中包含 `ScoreboardFragment`，否则我们甚至无法进入空白的记分牌页面。
 
-### 从API加载记分牌数据
+### 从 API 加载记分牌数据
 
-遗憾的是，Room并未内置upsert功能（如果存在则更新，否则插入），因此我们需要自己实现。在`BaseballDao`内部，我们需要一个名为`insertOrUpdateGames`的新函数，该函数遍历我们发送的每个`ScheduledGame`对象，并在数据库中插入或更新每一个。
+遗憾的是，Room 并未内置 upsert 功能（如果存在则更新，否则插入），因此我们需要自己实现。在 `BaseballDao` 内部，我们需要一个名为 `insertOrUpdateGames` 的新函数，该函数遍历我们发送的每个 `ScheduledGame` 对象，并在数据库中插入或更新每一个。
 
-要更新一场比赛，我们希望通过游戏ID从数据库中获取它，因为我们在API结果中有该值（而不是数据库ID）。该函数如下所示：
+要更新一场比赛，我们希望通过游戏 ID 从数据库中获取它，因为我们在 API 结果中有该值（而不是数据库 ID）。该函数如下所示：
 
-```
+```kotlin
 @Query("SELECT * FROM games WHERE gameId = :gameId")
 abstract fun getGameByGameId(gameId: String): ScheduledGame?
 ```
 
-我们从此函数返回一个可空的`ScheduledGame?`对象，因为我们可能找到也可能找不到我们正在寻找的比赛。这在我们的`insertOrUpdateGames`中非常有用，因为我们可以使用空值作为决定是更新还是插入`ScheduledGame`的因素。
+我们从此函数返回一个可空的 `ScheduledGame?` 对象，因为我们可能找到也可能找不到我们正在寻找的比赛。这在我们的 `insertOrUpdateGames` 中非常有用，因为我们可以使用空值作为决定是更新还是插入 `ScheduledGame` 的因素。
 
-如果我们找到现有的比赛，我们调用`updateGame`并传入当前考虑的比赛的副本，但将`id`变量设置为数据库中的ID。如果比赛在数据库中不存在，我们就可以将其作为新记录插入。`insertOrUpdateGames`的逻辑，以及相关的`@Insert`和`@Update`函数，如下所示：
+如果我们找到现有的比赛，我们调用 `updateGame` 并传入当前考虑的比赛的副本，但将 `id` 变量设置为数据库中的 ID。如果比赛在数据库中不存在，我们就可以将其作为新记录插入。`insertOrUpdateGames` 的逻辑，以及相关的 `@Insert` 和 `@Update` 函数，如下所示：
 
-```
+```kotlin
 @Insert
 abstract suspend fun insertGame(game: ScheduledGame)
 
@@ -8212,9 +8093,9 @@ open suspend fun insertOrUpdateGames(games: List<ScheduledGame>)
 }
 ```
 
-DAO函数完成后，我们可以将`updateGamesToDate`添加到`BaseballRepository`：
+DAO 函数完成后，我们可以将 `updateGamesToDate` 添加到 `BaseballRepository`：
 
-```
+```kotlin
 suspend fun updateGamesToDate(date: LocalDate): ResultStatus {
     val gamesResult = safeApiRequest {
         apiService.getGames(requestedDate = date)
@@ -8231,18 +8112,23 @@ suspend fun updateGamesToDate(date: LocalDate): ResultStatus {
 }
 ```
 
-`convertToScheduledGames`函数可能在你的`APIConverters.kt`文件中缺失或被注释掉了，因此请从代码中复制/取消注释该函数以及所有以`ScheduledGame`开头的类的扩展函数：
+`convertToScheduledGames` 函数可能在你的 `APIConverters.kt` 文件中缺失或被注释掉了，因此请从代码中复制/取消注释该函数以及所有以 `ScheduledGame` 开头的类的扩展函数：
 
 - `List<ScheduledGameApiModel>.convertToScheduledGames`
+
 - `ScheduledGameStatusApiModel.toScheduledGameStatus`
+
 - `ScheduledGameApiModel.getScoreboardPlayerInfo`
+
 - `ScheduledGamePitcherApiModel.convertPitcherToScoreboardPlayerInfo`
+
 - `ScheduledGamePitcherApiModel.convertCloserToScoreboardPlayerInfo`
+
 - `ScheduledGameBatterApiModel.convertCurrentBatterToScoreboardPlayerInfo`
 
-记分牌屏幕几乎准备就绪——接下来是`ScoreboardViewModel`中的`refreshScores`函数。代码应该已经在那里了，但被注释掉了。将其重新添加进去，并注意它基本上与我们在`StandingsViewModel`中所做的相同：
+记分牌屏幕几乎准备就绪——接下来是 `ScoreboardViewModel` 中的 `refreshScores` 函数。代码应该已经在那里了，但被注释掉了。将其重新添加进去，并注意它基本上与我们在 `StandingsViewModel` 中所做的相同：
 
-```
+```kotlin
 private fun refreshScores(date: LocalDate) {
     //TODO: Add this in once the Repository has updateGamesForDate(...)
     viewModelScope.launch {
@@ -8260,27 +8146,30 @@ private fun refreshScores(date: LocalDate) {
 
 ![](img/c024742480e86eb8867e0760ebe353d7_372_0.png)
 
-如果一切看起来不错，那么你这里就全部准备好了，我们很快就可以收尾了。但在你离开之前，看看`goToDate`，了解我们如何处理日期变化。一切都以`selectedDate`为关键；当该值改变时，由于`Transformations.switchMap`调用被分配给`games`值，我们就会加载新的比赛。
+如果一切看起来不错，那么你这里就全部准备好了，我们很快就可以收尾了。但在你离开之前，看看 `goToDate`，了解我们如何处理日期变化。一切都以 `selectedDate` 为关键；当该值改变时，由于 `Transformations.switchMap` 调用被分配给 `games` 值，我们就会加载新的比赛。
 
-通过将所有内容链接到`selectedDate`，我们有了一个统一的方法来加载和刷新数据。如果将来我们想允许用户直接跳转到任何日期，我们在这里几乎不需要做额外的工作。
+通过将所有内容链接到 `selectedDate`，我们有了一个统一的方法来加载和刷新数据。如果将来我们想允许用户直接跳转到任何日期，我们在这里几乎不需要做额外的工作。
 
 ## 总结与下一步
 
-我们已经走出了应用程序，正在引入信息。如今我们开发的几乎每个应用程序都会有某种API或Web服务组件，因此你会知道在大多数现代Android开发中都会做这样的事情。
+我们已经走出了应用程序，正在引入信息。如今我们开发的几乎每个应用程序都会有某种 API 或 Web 服务组件，因此你会知道在大多数现代 Android 开发中都会做这样的事情。
 
-拥有一个支持API的Room数据库使我们的应用程序更具弹性，因为即使用户没有任何连接，我们也可以将数据带回给他们。通过在调用服务时稍加注意，我们可以为用户提供可靠的离线体验。
+拥有一个支持 API 的 Room 数据库使我们的应用程序更具弹性，因为即使用户没有任何连接，我们也可以将数据带回给他们。通过在调用服务时稍加注意，我们可以为用户提供可靠的离线体验。
 
-使用协程使这两个部分都成为可能，因为它允许我们轻松地调用API和数据库，而不会中断用户或UI。协程无需添加大量额外代码来支持异步逻辑，而是使事情变得更加顺畅。
+使用协程使这两个部分都成为可能，因为它允许我们轻松地调用 API 和数据库，而不会中断用户或 UI。协程无需添加大量额外代码来支持异步逻辑，而是使事情变得更加顺畅。
 
-接下来在某种程度上是这个相同想法的第二部分——我们将从API中拉取球员数据，但采用略有不同的方法。现在，我们不再只是获取联盟或给定日期的所有内容，而是将数据列表拆分为页面。这样，我们只获取当前在列表中显示的球员，而不是每次请求都获取联盟中的所有人。
+接下来在某种程度上是这个相同想法的第二部分——我们将从 API 中拉取球员数据，但采用略有不同的方法。现在，我们不再只是获取联盟或给定日期的所有内容，而是将数据列表拆分为页面。这样，我们只获取当前在列表中显示的球员，而不是每次请求都获取联盟中的所有人。
 
-为此，我们将使用Jetpack的Paging库，它将在此过程中帮助我们。Paging帮助我们减少数据使用量，并在显示数据列表时使我们的应用程序更具弹性。
+为此，我们将使用 Jetpack 的 Paging 库，它将在此过程中帮助我们。Paging 帮助我们减少数据使用量，并在显示数据列表时使我们的应用程序更具弹性。
 
 ### 脚注
 
 - [2] https://square.github.io/retrofit/
+
 - [10] https://squareup.com/
+
 - [11] https://link.mfazio.dev/moshi
+
 - [12] https://github.com/MFazio23/ABL-API-Client
 
 # 第11章
@@ -8289,19 +8178,21 @@ private fun refreshScores(date: LocalDate) {
 
 欢迎来到测试版章节！这意味着当你阅读时，这一章最有可能已经多次更改。
 
-原因是我们将使用Jetpack Paging库的第3版。在我撰写本文时，此版本处于测试阶段，这意味着该库*尚未*完全定型，并且*可能*会发生变化。
+原因是我们将使用 Jetpack Paging 库的第 3 版。在我撰写本文时，此版本处于测试阶段，这意味着该库*尚未*完全定型，并且*可能*会发生变化。
 
 那么，我究竟为什么要选择让我们使用这个库呢？因为这是未来正确的版本，也是你想要使用的版本。我宁愿让你学习新方法并稍微调整一下你所知道的内容，而不是让你完全升级你的屏幕。只需知道，与本书其他部分相比，这里的事情更有可能中断并需要更改。
 
-现在，警告已经发出，让我们来了解分页的优点！Paging库帮助你更轻松地显示长数据列表，同时限制进行的网络调用次数。当我们只是寻找Nick Adam（按字母顺序排列在列表顶部附近）时，我们可以避免一次加载所有420名ABL球员。我们还将能够根据球员姓名搜索列表，同时仍然对结果进行分页，如[图像](image)所示。
+现在，警告已经发出，让我们来了解分页的优点！Paging 库帮助你更轻松地显示长数据列表，同时限制进行的网络调用次数。当我们只是寻找 Nick Adam（按字母顺序排列在列表顶部附近）时，我们可以避免一次加载所有 420 名 ABL 球员。我们还将能够根据球员姓名搜索列表，同时仍然对结果进行分页，如[图像](image)所示。
 
 分页功能与 Room 配合得非常出色，库会根据需要自动从本地数据库中拉取球员数据来填充页面，同时允许我们的 API 调用在后台进行。此外，这样即使用户处于离线状态，我们仍然可以显示已加载的所有球员信息。
 
 在进入上图所示的球员界面之前，我们希望先添加两个与球员列表紧密相关的新界面：联盟排行榜和单个球员详情页。这两个页面与分页功能没有直接关联，但与球员界面结合得很好，因此我们在此一并介绍。此外，这些页面的构建过程也有一些有趣之处。
 
+
+
 ### 添加两个新 Fragment（排行榜和单个球员）
 
-我们需要复制大量代码来设置这些界面。两个视图所需的所有代码都可以在 Code 文件夹下的 chapter-11/code-to-copy 中找到。你需要获取 leaders 和 players 包内的所有内容（PlayerListItem 和 PlayersAdapter 除外），并且 Player 和 PlayerStats 都需要成为 BaseballDatabase 中 entities 列表的一部分：
+我们需要复制大量代码来设置这些界面。两个视图所需的所有代码都可以在 `Code` 文件夹下的 `chapter-11/code-to-copy` 中找到。你需要获取 `leaders` 和 `players` 包内的所有内容（`PlayerListItem` 和 `PlayersAdapter` 除外），并且 `Player` 和 `PlayerStats` 都需要成为 `BaseballDatabase` 中 `entities` 列表的一部分：
 
 ```
 entities = [
@@ -8312,15 +8203,15 @@ entities = [
 ]
 ```
 
-BaseballRepository 和 BaseballDao 类也可以直接复制过来，因为它们包含了这两个页面的新功能以及我们到目前为止添加的所有其他内容。data/Converters.kt 和 util/APIConverters.kt 文件也是如此。
+`BaseballRepository` 和 `BaseballDao` 类也可以直接复制过来，因为它们包含了这两个页面的新功能以及我们到目前为止添加的所有其他内容。`data/Converters.kt` 和 `util/APIConverters.kt` 文件也是如此。
 
-然后获取所有布局文件：fragment_leaders.xml、fragment_leaders_list.xml、fragment_single_player.xml、leader_list_item.xml、single_player_stat_with_label.xml 和 single_player_stats.xml。暂时不要获取与球员相关的布局文件，因为我们稍后会编写那部分代码。
+然后获取所有布局文件：`fragment_leaders.xml`、`fragment_leaders_list.xml`、`fragment_single_player.xml`、`leader_list_item.xml`、`single_player_stat_with_label.xml` 和 `single_player_stats.xml`。暂时不要获取与球员相关的布局文件，因为我们稍后会编写那部分代码。
 
-最后，获取 drawable/basic_circle.xml 和 navigation/nav_graph.xml 资源文件，以及 strings.xml，除非你*真的*想自己编写一些字符串资源值。
+最后，获取 `drawable/basic_circle.xml` 和 `navigation/nav_graph.xml` 资源文件，以及 `strings.xml`，除非你*真的*想自己编写一些字符串资源值。
 
-在继续之前，请确保更新所有 BaseballRepository 类的初始化，因为现在它需要 BaseballDatabase 作为参数而不是 BaseballDao。我们将在本章后面解释原因，但现在先进行更改，以便你可以构建项目。
+在继续之前，请确保更新所有 `BaseballRepository` 类的初始化，因为现在它需要 `BaseballDatabase` 作为参数而不是 `BaseballDao`。我们将在本章后面解释原因，但现在先进行更改，以便你可以构建项目。
 
-最后，添加 View Pager 依赖项（以及版本变量）：
+最后，添加 `View Pager` 依赖项（以及版本变量）：
 
 ```
 implementation "androidx.viewpager2:viewpager2:$view_pager_version"
@@ -8332,17 +8223,17 @@ implementation "androidx.viewpager2:viewpager2:$view_pager_version"
 
 ### 在排行榜界面计算联盟排行榜
 
-如前所述，排行榜界面包含击球和投球排行榜，分别列在不同的标签页中。这是通过组合使用 <TabLayout> 标签和 <ViewPager2> 标签来实现的。它们协同工作，根据所选标签页显示顶部标签和相应的视图。TabLayoutMediator 实例负责在 LeadersFragment 中切换内容，由于两个标签页的显示方式相同，我们可以使用 fragment_leaders_list.xml 中包含的单个布局。
+如前所述，排行榜界面包含击球和投球排行榜，分别列在不同的标签页中。这是通过组合使用 `<TabLayout>` 标签和 `<ViewPager2>` 标签来实现的。它们协同工作，根据所选标签页显示顶部标签和相应的视图。`TabLayoutMediator` 实例负责在 `LeadersFragment` 中切换内容，由于两个标签页的显示方式相同，我们可以使用 `fragment_leaders_list.xml` 中包含的单个布局。
 
-排行榜界面上的标签滑动视图还有更多功能，因此我建议你自己查看代码。使用 ViewPager2 库可以大大简化多标签信息的显示，我们只需处理一些配置和数据加载。
+排行榜界面上的标签滑动视图还有更多功能，因此我建议你自己查看代码。使用 `ViewPager2` 库可以大大简化多标签信息的显示，我们只需处理一些配置和数据加载。
 
-现在，数据加载（以及转换过程）并不简单，但希望至少是合乎逻辑的。从高层次来看，我们从数据库加载 PlayerWithStats 对象，然后获取每个统计类别的顶级球员。很简单，对吧？
+现在，数据加载（以及转换过程）并不简单，但希望至少是合乎逻辑的。从高层次来看，我们从数据库加载 `PlayerWithStats` 对象，然后获取每个统计类别的顶级球员。很简单，对吧？
 
-嗯，没有你想象的那么简单。问题之一是，在给定时间，我们不一定拥有联盟中的所有球员，而且我们不想下载所有人来计算排行榜，因为这会违背分页的目的。相反，我们可以使用 getBattingLeaders 和 getPitchingLeaders API 函数仅获取在至少一个类别中领先的 ABL 球员。我们将他们（连同他们的统计数据）放入数据库，然后可以提取他们来计算每个类别的排行榜。
+嗯，没有你想象的那么简单。问题之一是，在给定时间，我们不一定拥有联盟中的所有球员，而且我们不想下载所有人来计算排行榜，因为这会违背分页的目的。相反，我们可以使用 `getBattingLeaders` 和 `getPitchingLeaders` API 函数仅获取在至少一个类别中领先的 ABL 球员。我们将他们（连同他们的统计数据）放入数据库，然后可以提取他们来计算每个类别的排行榜。
 
 这个计算可能是一堆复制粘贴的代码行，获取所有球员，按我们想要的任何类别排序，然后从列表中获取顶级球员，我们就能获得屏幕上排行榜列表项所需的数据。这种方法当然是有效的，但我们拥有 Kotlin 的强大功能，为什么不利用呢？
 
-每个排行榜类别（击球和投球）基本上都在做同样的事情，因此这两个函数都是类似的单表达式，执行我刚才描述的操作。这里的技巧是，我们可以将所有统计类别放入一个大列表中，并对每个类别映射球员。填充 battingLeaders 的函数如下所示：
+每个排行榜类别（击球和投球）基本上都在做同样的事情，因此这两个函数都是类似的单表达式，执行我刚才描述的操作。这里的技巧是，我们可以将所有统计类别放入一个大列表中，并对每个类别映射球员。填充 `battingLeaders` 的函数如下所示：
 
 ```
 battingLeaders =
@@ -8381,7 +8272,7 @@ PlayerStatHandler(
 )
 ```
 
-这是一个 `String` 值和两个*lambda 函数*，两者都在我们的映射函数中使用。在这种情况下，我们显示标签 "AVG"，按打击率对球员进行排序（前面的负号使其降序），然后正确格式化打击率（例如，30% 的击球手显示为 .300）。
+这是一个 `String` 值和两个*lambda 函数*，两者都在我们的映射函数中使用。在这种情况下，我们显示标签 `"AVG"`，按打击率对球员进行排序（前面的负号使其降序），然后正确格式化打击率（例如，30% 的击球手显示为 `.300`）。
 
 我想包含这一节，因为它不仅展示了从数据库获取数据的更高级映射方式，还展示了我们如何使用高阶函数在变量中传递逻辑。
 
@@ -8389,17 +8280,17 @@ PlayerStatHandler(
 
 这确实是两个界面中较不令人兴奋的一个，因为我们之前已经介绍了这个页面中的概念。我们从 `SinglePlayerFragmentArgs` 类获取 `playerId` 值，从数据库加载 `PlayerWithStats` 对象，*然后*将该对象中的统计数据转换为前端使用的 `PlayerStatWithLabel` 对象。
 
-这是对我们到目前为止所做工作的很好回顾：带有 `Transformations` 调用的 `LiveData`、Repository/DAO/DB 调用序列、数据绑定，甚至是很好的 `Toast` 错误消息。但现在是时候进入新内容了。
+这是对我们到目前为止所做工作的很好回顾：带有 `Transformations` 调用的 `LiveData`、`Repository`/`DAO`/`DB` 调用序列、数据绑定，甚至是很好的 `Toast` 错误消息。但现在是时候进入新内容了。
 
 ### 添加一个新 Fragment（球员）
 
-如前所述，分页功能将在显示 ABL 球员时为用户节省大量带宽。此外，从数据库自动加载数据只需要我们进行一次 DAO 调用。在开始之前，添加单个 Paging 依赖项以及相关的版本变量：
+如前所述，分页功能将在显示 ABL 球员时为用户节省大量带宽。此外，从数据库自动加载数据只需要我们进行一次 `DAO` 调用。在开始之前，添加单个 `Paging` 依赖项以及相关的版本变量：
 
 ```
 implementation "androidx.paging:paging-runtime-ktx:$paging_version"
 ```
 
-现在，我们已经有了 Room 依赖项，但请确保你使用的是至少 2.3 版本（即使是 alpha 版本）。这是让 Room 与 Paging 良好配合所必需的。
+现在，我们已经有了 `Room` 依赖项，但请确保你使用的是至少 2.3 版本（即使是 alpha 版本）。这是让 `Room` 与 `Paging` 良好配合所必需的。
 
 这个界面的基础部分也与其他列表页面类似，特别是 `PlayersAdapter` 类。我们最终会从 `Code` 目录复制它过来，但请注意，这里唯一的真正区别是我们使用了 `PagingDataAdapter` 基类而不是 `ListAdapter`。
 
@@ -8478,11 +8369,11 @@ class PlayersFragment : Fragment() {
 
 ### 在应用中处理分页数据
 
-现在我们进入本章的核心以及所有酷炫的新功能。这部分内容也可能需要根据未来分页库的变化进行调整，因此如果遇到任何不符合预期的情况，请注意。让我们从更熟悉的内容开始，添加我们的 BaseballDao 函数。
+现在我们进入本章的核心以及所有酷炫的新功能。这部分内容也可能需要根据未来分页库的变化进行调整，因此如果遇到任何不符合预期的情况，请注意。让我们从更熟悉的内容开始，添加我们的 `BaseballDao` 函数。
 
 ### 在数据库中管理 PlayerListItem 对象
 
-我们需要三个与 PlayerListItem 对象相关的新函数：`getPlayerListItems`、`insertPlayerListItems` 和 `deleteAllPlayerListItems`。这些新函数中唯一的新内容是我们的 `@Query` 函数返回了一个 `PagingSource` 对象：
+我们需要三个与 `PlayerListItem` 对象相关的新函数：`getPlayerListItems`、`insertPlayerListItems` 和 `deleteAllPlayerListItems`。这些新函数中唯一的新内容是我们的 `@Query` 函数返回了一个 `PagingSource` 对象：
 
 ```kotlin
 @Query(
@@ -8526,9 +8417,11 @@ data class PlayerKeys(
 )
 ```
 
-坚持分离的主题，我们将为所有 `PlayerKeys` 交互创建一个新的 `PlayerKeysDao` 接口。如果我们愿意，实际上可以将 `BaseballDao` 重构为单独的类（Players、Stats、Games/Standings 等），但这取决于个人和/或团队的偏好。
+坚持分离的主题，我们将为所有 `PlayerKeys` 交互创建一个新的 `PlayerKeysDao` 接口。如果我们愿意，实际上可以将 `BaseballDao` 重构为单独的类（`Players`、`Stats`、`Games`/`Standings` 等），但这取决于个人和/或团队的偏好。
 
 我们将在这里有三个与 `PlayerListItem` 类似的函数：`getPlayerKeysByPlayerId`、`insertKeys` 和 `deleteAllPlayerKeys`。新的 `PlayerKeysDao` 如下所示：
+
+
 
 ```kotlin
 @Dao
@@ -8546,7 +8439,7 @@ interface PlayerKeysDao {
 }
 ```
 
-请确保将 `playerKeysDao` 函数和 `PlayerKeys`（以及 `PlayerListItem`，如果你还没有添加的话）类引用添加到 `BaseballDatabase` 中：
+请确保将`playerKeysDao`函数和`PlayerKeys`（以及`PlayerListItem`，如果你还没有添加的话）类引用添加到`BaseballDatabase`中：
 
 ```kotlin
 @Database(
@@ -8572,15 +8465,15 @@ abstract class BaseballDatabase : RoomDatabase() {
 }
 ```
 
-至此，我们已准备好在 `RemoteMediator` 类中使用 `PlayerKeys` 类。这正是我们将处理从 API 和数据库加载数据，并将这些数据添加到球员列表的地方。
+至此，我们已准备好在`RemoteMediator`类中使用`PlayerKeys`类。这正是我们将处理从 API 和数据库加载数据，并将这些数据添加到球员列表的地方。
 
 ### 使用 PlayerListRemoteMediator 处理本地和远程数据
 
-`PlayerListRemoteMediator` 类是我们分页功能的核心，因为它负责确定列表中接下来需要显示哪些数据。此外，它还从 ABL API 加载数据并将其存储在数据库中，我们稍后会从中提取。你可以将名称中的“Mediator”部分理解为它处理新（API）数据和现有（DB）数据之间的协调。
+`PlayerListRemoteMediator`类是我们分页功能的核心，因为它负责确定列表中接下来需要显示哪些数据。此外，它还从 ABL API 加载数据并将其存储在数据库中，我们稍后会从中提取。你可以将名称中的“Mediator”部分理解为它处理新（API）数据和现有（DB）数据之间的协调。
 
-我们 `RemoteMediator` 类中的主要函数是 `load` 函数，它接收 `LoadType`（Prepend、Append 或 Refresh）和一个 `PagingState`。该 `PagingState` 保存了先前加载的页面、我们在列表中的位置以及用于列表的 `PagingConfig`（我们稍后设置时会初始化）。
+我们`RemoteMediator`类中的主要函数是`load`函数，它接收`LoadType`（Prepend、Append 或 Refresh）和一个`PagingState`。该`PagingState`保存了先前加载的页面、我们在列表中的位置以及用于列表的`PagingConfig`（我们稍后设置时会初始化）。
 
-我们版本的 `RemoteMediator` 类接收 `AndroidBaseballLeagueService` 和 `BaseballDatabase` 实例来处理所有数据需求。我们还包括 `teamId` 和 `nameQuery` 参数，可用于过滤数据。`PlayerListRemoteMediator` 类的大致结构如下：
+我们版本的`RemoteMediator`类接收`AndroidBaseballLeagueService`和`BaseballDatabase`实例来处理所有数据需求。我们还包括`teamId`和`nameQuery`参数，可用于过滤数据。`PlayerListRemoteMediator`类的大致结构如下：
 
 ```kotlin
 @ExperimentalPagingApi
@@ -8602,7 +8495,7 @@ class PlayerListRemoteMediator(
 
 ### 计算当前页
 
-获取当前页的逻辑取决于我们需要处理哪种 `LoadType`。确定 `LoadType` 的工作由分页库完成，我们只需获取一个键值或告诉分页库我们已完成数据加载。处理所有三种情况的代码块如下所示：
+获取当前页的逻辑取决于我们需要处理哪种`LoadType`。确定`LoadType`的工作由分页库完成，我们只需获取一个键值或告诉分页库我们已完成数据加载。处理所有三种情况的代码块如下所示：
 
 ```kotlin
 val page = when (loadType) {
@@ -8631,7 +8524,7 @@ val page = when (loadType) {
 
 如果这段代码让你感到困惑，可以这样理解：PREPEND 想要确定从列表顶部开始添加哪一页，因此需要最顶部已加载页面的键。APPEND 则相反，它查找最后加载的项目，然后返回其后应加载的页面。REFRESH 则是确定我们当前的位置，以便知道从哪一页开始加载全新的数据。
 
-这三个 `loadKeys` 函数都在处理查找与相关项目（顶部、底部或当前）关联的 `PlayerKeys` 的逻辑。由于它们执行的操作相似，每种情况下的逻辑也类似：
+这三个`loadKeys`函数都在处理查找与相关项目（顶部、底部或当前）关联的`PlayerKeys`的逻辑。由于它们执行的操作相似，每种情况下的逻辑也类似：
 
 ```kotlin
 private suspend fun loadKeysForFirstPlayer(
@@ -8667,7 +8560,7 @@ private suspend fun loadKeysForClosestPlayer(
 }
 ```
 
-关于键值，还缺少一个 `startingPageIndex` 变量，在我们的例子中它等于零，因为这是我们 API 返回的第一页。
+关于键值，还缺少一个`startingPageIndex`变量，在我们的例子中它等于零，因为这是我们 API 返回的第一页。
 
 ```kotlin
 companion object {
@@ -8677,7 +8570,7 @@ companion object {
 
 ### 加载并保存 API 数据
 
-接下来是 `load` 函数的数据处理部分，它总是以 API 调用开始，以某种数据库交互结束。我们在 `page` 逻辑之后立即调用该函数：
+接下来是`load`函数的数据处理部分，它总是以 API 调用开始，以某种数据库交互结束。我们在`page`逻辑之后立即调用该函数：
 
 ```kotlin
 override suspend fun load(
@@ -8693,7 +8586,7 @@ override suspend fun load(
 }
 ```
 
-`loadAndSaveApiData` 是一个返回 `try/catch` 块的表达式，这在 Kotlin 中是有效的。我们这样做是为了捕获逻辑中可能抛出的任何 `Exception`，因为我们绝不希望它导致应用崩溃。相反，我们返回一个包含该异常的 `MediatorResult.Error` 实例。虽然我们在应用中没有对其进行任何处理，但你可以利用这个 `Exception` 向用户提供更多关于错误的信息，或者记录诊断信息以供故障排除。
+`loadAndSaveApiData`是一个返回`try/catch`块的表达式，这在 Kotlin 中是有效的。我们这样做是为了捕获逻辑中可能抛出的任何`Exception`，因为我们绝不希望它导致应用崩溃。相反，我们返回一个包含该异常的`MediatorResult.Error`实例。虽然我们在应用中没有对其进行任何处理，但你可以利用这个`Exception`向用户提供更多关于错误的信息，或者记录诊断信息以供故障排除。
 
 ```kotlin
 private suspend fun loadAndSaveApiData(
@@ -8708,7 +8601,7 @@ private suspend fun loadAndSaveApiData(
     }
 ```
 
-在这里调用 API 比在 `BaseballRepository` 中更简单，因为我们不需要处理请求的任何错误（因为外层的 `try/catch` 块已经处理了）。这让我们可以专注于获取数据，将结果转换为 `List<Player>`，并检查是否已到达分页末尾（意味着我们已从 API 获取到列表的末尾）。然后我们可以在处理数据库时使用这些结果。API 逻辑如下所示：
+在这里调用 API 比在`BaseballRepository`中更简单，因为我们不需要处理请求的任何错误（因为外层的`try/catch`块已经处理了）。这让我们可以专注于获取数据，将结果转换为`List<Player>`，并检查是否已到达分页末尾（意味着我们已从 API 获取到列表的末尾）。然后我们可以在处理数据库时使用这些结果。API 逻辑如下所示：
 
 ```kotlin
 private suspend fun loadAndSaveApiData(
@@ -8735,9 +8628,9 @@ private suspend fun loadAndSaveApiData(
     }
 ```
 
-一旦我们从 API 结果中转换出 `<Player>` 列表，就可以将其存入数据库。在这里，我们为 `PlayerListItem` 确定正确的键，然后将 `PlayerKeys`、`PlayerListItem` 和 `Player` 实例插入数据库。最后一个表在这里没有被使用，但我们已经有了数据，为什么不保存呢？
+一旦我们从 API 结果中转换出`<Player>`列表，就可以将其存入数据库。在这里，我们为`PlayerListItem`确定正确的键，然后将`PlayerKeys`、`PlayerListItem`和`Player`实例插入数据库。最后一个表在这里没有被使用，但我们已经有了数据，为什么不保存呢？
 
-类似于我们使用 `@Transaction` 注解标记引用多个表的函数，我们希望确保这里的所有操作要么全部完成，要么全部不执行。这一个代码块正是我们将 `BaseballRepository` 改为引用 `BaseballDatabase` 而不是 `BaseballDao` 的全部原因。虽然有些麻烦，但使用 `withTransaction` 在这里确实非常方便，可以确保我们不会留下不一致的数据：
+类似于我们使用`@Transaction`注解标记引用多个表的函数，我们希望确保这里的所有操作要么全部完成，要么全部不执行。这一个代码块正是我们将`BaseballRepository`改为引用`BaseballDatabase`而不是`BaseballDao`的全部原因。虽然有些麻烦，但使用`withTransaction`在这里确实非常方便，可以确保我们不会留下不一致的数据：
 
 ```kotlin
 baseballDatabase.withTransaction {
@@ -8745,7 +8638,7 @@ baseballDatabase.withTransaction {
 }
 ```
 
-接下来的三个代码片段都放在这个 `withTransaction` 块内。第一个检查是看我们是否在刷新列表，如果是，我们希望清空 `player_list_items` 和 `player_keys` 两个表：
+接下来的三个代码片段都放在这个`withTransaction`块内。第一个检查是看我们是否在刷新列表，如果是，我们希望清空`player_list_items`和`player_keys`两个表：
 
 ```kotlin
 if (isRefresh) {
@@ -8754,7 +8647,7 @@ if (isRefresh) {
 }
 ```
 
-然后我们需要确定页面的上一页和下一页键，并将所有传入的玩家映射为 `PlayerKeys` 实例：
+然后我们需要确定页面的上一页和下一页键，并将所有传入的玩家映射为`PlayerKeys`实例：
 
 ```kotlin
 val previousKey = if (page == startingPageIndex) null else page - 1
@@ -8764,7 +8657,7 @@ val keys = players.map { player ->
 }
 ```
 
-最后，我们将这些新的 `PlayerKeys` 与 `PlayerListItem` 和 `Player` 实例一起放入数据库。逻辑如下：
+最后，我们将这些新的`PlayerKeys`与`PlayerListItem`和`Player`实例一起放入数据库。逻辑如下：
 
 ```kotlin
 baseballDatabase.playerKeysDao().insertKeys(keys)
@@ -8781,28 +8674,30 @@ baseballDatabase.baseballDao().insertPlayerListItems(
 )
 ```
 
-一旦事务块完成，我们需要返回一个 `Success` 消息，告知是否已到达页面末尾。请记住，我们在这里不使用 `return` 关键字，因为我们处于一个表达式块中：
+一旦事务块完成，我们需要返回一个`Success`消息，告知是否已到达页面末尾。请记住，我们在这里不使用`return`关键字，因为我们处于一个表达式块中：
 
 ```kotlin
 MediatorResult.Success(endOfPaginationReached =
 endOfPaginationReached)
 ```
 
-至此，`PlayerListRemoteMediator` 已经可以使用了！接下来，我们将前往 `BaseballRepository` 进行配置。
+至此，`PlayerListRemoteMediator`已经可以使用了！接下来，我们将前往`BaseballRepository`进行配置。
 
 ### 使用 Flow 加载分页数据
 
-`BaseballRepository` 中讨论的函数是 `getPlayerListItems`，它返回一个包含 `PagingData` 的 Kotlin `Flow` 对象。在我们了解这个类如何获取 `PagingData` 之前，让我们先聊聊 `Flow`。
+`BaseballRepository`中讨论的函数是`getPlayerListItems`，它返回一个包含`PagingData`的 Kotlin`Flow`对象。在我们了解这个类如何获取`PagingData`之前，让我们先聊聊`Flow`。
 
-Kotlin `Flow` 是一个异步计算的数据流，其值可以彼此独立地返回。这与必须作为单个项目或集合一起返回的 `LiveData` 形成对比。
+Kotlin`Flow`是一个异步计算的数据流，其值可以彼此独立地返回。这与必须作为单个项目或集合一起返回的`LiveData`形成对比。
 
-在实践中，我们可以以类似于 `LiveData` 的方式使用 `Flow` 对象，但 `Flow` 实例也特别适合与分页库配合使用（因为我们可以持续发送新的数据页）。`Flow` 还有一些我们这里不会用到的额外强大功能，比如能够像处理“普通”列表/序列数据一样对数据进行 `map` 和 `filter`。
+在实践中，我们可以以类似于`LiveData`的方式使用`Flow`对象，但`Flow`实例也特别适合与分页库配合使用（因为我们可以持续发送新的数据页）。`Flow`还有一些我们这里不会用到的额外强大功能，比如能够像处理“普通”列表/序列数据一样对数据进行`map`和`filter`。
 
-一旦我们进入 `PlayerListViewModel`，我们将更深入地了解使用 `Flow` 与 `LiveData` 的区别，但首先我们需要在一个新的 `Pager` 实例中使用 `PlayerListRemoteMediator`。
+一旦我们进入`PlayerListViewModel`，我们将更深入地了解使用`Flow`与`LiveData`的区别，但首先我们需要在一个新的`Pager`实例中使用`PlayerListRemoteMediator`。
 
-我们在这里向 `Pager` 实例传递三个参数：一个包含 `pageSize` 的 `PagingConfig` 实例、一个指向 `PlayerListRemoteMediator` 的引用，以及一个 `pagingSourceFactory`。
 
-最后一部分是一个返回 `PagingSource` 实例的函数。这与我们从 `BaseballDao.getPlayerListItems` 返回的类相同，因此我们可以创建一个 lambda 函数来返回对该函数调用的结果。`Pager` 类如下所示：
+
+我们在这里向`Pager`实例传递三个参数：一个包含`pageSize`的`PagingConfig`实例、一个指向`PlayerListRemoteMediator`的引用，以及一个`pagingSourceFactory`。
+
+最后一部分是一个返回`PagingSource`实例的函数。这与我们从`BaseballDao.getPlayerListItems`返回的类相同，因此我们可以创建一个 lambda 函数来返回对该函数调用的结果。`Pager`类如下所示：
 
 ```
 Pager(
@@ -8822,13 +8717,13 @@ Pager(
 )
 ```
 
-我们仍然需要 `dbNameQuery`，它允许我们在查询中使用 `LIKE` 表达式：
+我们仍然需要`dbNameQuery`，它允许我们在查询中使用`LIKE`表达式：
 
 ```
 val dbNameQuery = if (nameQuery != null) "%$nameQuery%" else null
 ```
 
-然后，这里的最后一部分是关于我们要创建的 `Pager` 对象。我们将从 `Pager` 对象返回一个 `Flow` 对象，这可以通过引用 `Pager` 对象上的 `flow` 属性来实现。整个函数（顶部带有 `@ExperimentalPagingApi` 注解）如下所示：
+然后，这里的最后一部分是关于我们要创建的`Pager`对象。我们将从`Pager`对象返回一个`Flow`对象，这可以通过引用`Pager`对象上的`flow`属性来实现。整个函数（顶部带有`@ExperimentalPagingApi`注解）如下所示：
 
 ```
 @ExperimentalPagingApi
@@ -8854,7 +8749,7 @@ fun getPlayerListItems(
 }
 ```
 
-别忘了在 `companion object` 中添加 `defaultPageSize` 变量并将其设置为你想要的任何值：
+别忘了在`companion object`中添加`defaultPageSize`变量并将其设置为你想要的任何值：
 
 ```
 companion object {
@@ -8875,9 +8770,9 @@ companion object {
 
 这个值应该是一个能让 API 调用足够快地完成，使用户看不到任何卡顿，同时又能避免发起过多 API 调用的值。这是一个平衡，取决于每个项目带来多少数据，你需要调整这个数字以找到最适合你的值。
 
-完成后，现在是时候创建 `PlayerListViewModel` 了，它将引用这个 `getPlayerListItems` 函数。
+完成后，现在是时候创建`PlayerListViewModel`了，它将引用这个`getPlayerListItems`函数。
 
-### 通过 PlayerListViewModel 引入数据
+## 通过 PlayerListViewModel 引入数据
 
 在基本层面上，这与之前的 ViewModel 类相同。以下是该类的大部分内容：
 
@@ -8905,13 +8800,13 @@ class PlayerListViewModel(application: Application) :
 }
 ```
 
-`getPlayerListItems` 函数的主要目的是调用 `BaseballRepository` 中的 `getPlayerListItems` 函数，并将其发送给 `PlayersFragment`。由于我们返回的是一个 `Flow` 对象，我们可以缓存它以供后续使用：
+`getPlayerListItems`函数的主要目的是调用`BaseballRepository`中的`getPlayerListItems`函数，并将其发送给`PlayersFragment`。由于我们返回的是一个`Flow`对象，我们可以缓存它以供后续使用：
 
 ```
 repo.getPlayerListItems(teamId, nameQuery).cachedIn(viewModelScope)
 ```
 
-除了这一点缓存之外，我们还想将此函数的结果保存在视图模型中。这样，如果使用相同的过滤参数（团队和名称查询）请求相同的数据，我们返回相同的结果。因此，我们保存最后的查询值以及从仓库返回的数据，以防万一。整个 `PlayerListViewModel` 如下所示：
+除了这一点缓存之外，我们还想将此函数的结果保存在视图模型中。这样，如果使用相同的过滤参数（团队和名称查询）请求相同的数据，我们返回相同的结果。因此，我们保存最后的查询值以及从仓库返回的数据，以防万一。整个`PlayerListViewModel`如下所示：
 
 ```
 @ExperimentalPagingApi
@@ -8962,11 +8857,11 @@ class PlayerListViewModel(application: Application) :
 }
 ```
 
-`PlayerListViewModel` 全部设置好后，我们还剩下 `PlayersFragment` 及其 `RecyclerView`。
+`PlayerListViewModel`全部设置好后，我们还剩下`PlayersFragment`及其`RecyclerView`。
 
-### 在 RecyclerView 列表中显示分页数据
+## 在 RecyclerView 列表中显示分页数据
 
-我们在 `PlayersFragment` 中有三个任务要完成：绑定 `playersList` `RecyclerView`、实现一个 `searchPlayers` 函数，以及绑定 `playerSearchBoxText` 文本框。我们从 `RecyclerView` 开始，因为我们以前做过，如果你从 `Code` 目录复制了 `PlayersFragment`，可以跳过这部分：
+我们在`PlayersFragment`中有三个任务要完成：绑定`playersList` `RecyclerView`、实现一个`searchPlayers`函数，以及绑定`playerSearchBoxText`文本框。我们从`RecyclerView`开始，因为我们以前做过，如果你从`Code`目录复制了`PlayersFragment`，可以跳过这部分：
 
 ```
 override fun onCreateView(
@@ -8993,13 +8888,13 @@ override fun onCreateView(
 }
 ```
 
-球员搜索功能与我们过去使用 `LiveData` 的方式不同，但这没什么你处理不了的。
+球员搜索功能与我们过去使用`LiveData`的方式不同，但这没什么你处理不了的。
 
-### 搜索球员
+## 搜索球员
 
-在之前的 `RecyclerView` 列表中，我们会对一个 `LiveData` 调用 `observe`，每当获得新数据时，它就会更新列表。
+在之前的`RecyclerView`列表中，我们会对一个`LiveData`调用`observe`，每当获得新数据时，它就会更新列表。
 
-对于 `PlayersFragment` 类，我们将做同样的事情，但方法略有不同。我们现在不是链接到 `LiveData` 并让其加上 Room 处理一切，而是将使用 `getPlayerListItems` 中的 `collectLatest` 函数来获取数据。调用 `collectLatest` 会给我们 `Flow` 对象内部的数据，这样我们就可以将其发送给 `playersAdapter` 和 `RecyclerView`：
+对于`PlayersFragment`类，我们将做同样的事情，但方法略有不同。我们现在不是链接到`LiveData`并让其加上 Room 处理一切，而是将使用`getPlayerListItems`中的`collectLatest`函数来获取数据。调用`collectLatest`会给我们`Flow`对象内部的数据，这样我们就可以将其发送给`playersAdapter`和`RecyclerView`：
 
 ```
 playersListViewModel
@@ -9011,22 +8906,22 @@ playersListViewModel
     }
 ```
 
-由于我们在这里调用的是一个 `suspend fun`（`collectLatest`），这所有内容都需要在一个协程作用域中。这个调用在协程中，一如既往地有助于将调用移到后台线程，这样我们就不会阻塞 UI。但这里还有一个额外的好处，我们可以保存该作用域中的 `Job`，然后在发送另一个请求时取消它。这样我们就可以避免同时进行多个调用。
+由于我们在这里调用的是一个`suspend fun`（`collectLatest`），这所有内容都需要在一个协程作用域中。这个调用在协程中，一如既往地有助于将调用移到后台线程，这样我们就不会阻塞 UI。但这里还有一个额外的好处，我们可以保存该作用域中的`Job`，然后在发送另一个请求时取消它。这样我们就可以避免同时进行多个调用。
 
-声明 `playersListViewModel` 和 `currentJob` 变量：
+声明`playersListViewModel`和`currentJob`变量：
 
 ```
 private var currentJob: Job? = null
 ```
 
-并为该类添加 `@ExperimentalPagingApi` 注解：
+并为该类添加`@ExperimentalPagingApi`注解：
 
 ```
 @ExperimentalPagingApi
 class PlayersFragment : Fragment()
 ```
 
-然后我们可以构建 `searchPlayers` 函数的其余部分：
+然后我们可以构建`searchPlayers`函数的其余部分：
 
 ```
 private fun searchPlayers(nameQuery: String? = null) {
@@ -9036,18 +8931,19 @@ private fun searchPlayers(nameQuery: String? = null) {
         playersListViewModel
             .getPlayerListItems(playerListArgs.teamId, nameQuery)
             .collectLatest { playerListItems ->
+                if(::playersAdapter.isInitialized) {
+                    playersAdapter.submitData(playerListItems)
+                }
+            }
+    }
+}
 ```
 
-if(::playersAdapter.isInitialized) {
-    playersAdapter.submitData(playerListItems)
-}
-}
-
-我们只需要在查询条件发生变化（或 `teamId` 变量改变）时调用 `searchPlayers`。如果数据库中的 `PlayerListItem` 记录被更新，或者我们需要新数据，所有这些都会自动显示，就像我们使用 `LiveData` 时一样。我们在 `onCreateView` 函数的末尾调用 `searchPlayers`，这在用户想要按球员姓名查询之前就足够了。
+我们只需要在查询条件发生变化（或`teamId`变量改变）时调用`searchPlayers`。如果数据库中的`PlayerListItem`记录被更新，或者我们需要新数据，所有这些都会自动显示，就像我们使用`LiveData`时一样。我们在`onCreateView`函数的末尾调用`searchPlayers`，这在用户想要按球员姓名查询之前就足够了。
 
 说到用户搜索，我们最后的工作是与列表顶部的“搜索球员”框进行交互。在这里，我们将监听“执行”操作或“清除”操作。“执行”操作包括用户点击键盘上的勾选按钮，或按下物理键盘上的回车键，或设备虚拟键盘上的等效按键。“清除”操作则在用户点击文本框右侧的 X 图标时触发。
 
-“执行”监听器被添加到我们 `binding` 对象的 `playerSearchBoxText` 项上。在这两种情况下，如果我们收到预期的操作，就使用文本框中的 `text` 值调用 `searchPlayers`，并返回 `true` 告诉 `TextInputEditText` 上的监听器我们已处理该事件；否则返回 `false` 表示我们忽略该操作。整个绑定块如下所示：
+“执行”监听器被添加到我们`binding`对象的`playerSearchBoxText`项上。在这两种情况下，如果我们收到预期的操作，就使用文本框中的`text`值调用`searchPlayers`，并返回`true`告诉`TextInputEditText`上的监听器我们已处理该事件；否则返回`false`表示我们忽略该操作。整个绑定块如下所示：
 
 ```
 with(binding.playerSearchBoxText) {
@@ -9074,7 +8970,7 @@ setOnKeyListener { _, keyCode, event ->
 }
 ```
 
-“清除”操作的工作方式类似，使用 `binding.playerSearchBox` 上的 `setEndIconOnClickListener` 函数。现在，`<TextInputLayout>` 有一个 `app:endIconMode` 属性，设置为 `clear_text`，本可以为我们处理这个。但这种自动方式的唯一问题是，我们无法轻松添加额外操作，特别是在清除数据时进行搜索的能力，因此我们必须手动处理：
+“清除”操作的工作方式类似，使用`binding.playerSearchBox`上的`setEndIconOnClickListener`函数。现在，`<TextInputLayout>`有一个`app:endIconMode`属性，设置为`clear_text`，本可以为我们处理这个。但这种自动方式的唯一问题是，我们无法轻松添加额外操作，特别是在清除数据时进行搜索的能力，因此我们必须手动处理：
 
 ```
 binding.playerSearchBox.setEndIconOnClickListener {
@@ -9085,13 +8981,15 @@ binding.playerSearchBox.setEndIconOnClickListener {
 }
 ```
 
-至此，我们能够在屏幕上搜索球员，同时保持正确的分页，我们的球员屏幕就完成了。请确保你在 `onCreateView` 的末尾调用了 `searchPlayers`，否则看起来就像我们什么都没做，那就太遗憾了。
+至此，我们能够在屏幕上搜索球员，同时保持正确的分页，我们的球员屏幕就完成了。请确保你在`onCreateView`的末尾调用了`searchPlayers`，否则看起来就像我们什么都没做，那就太遗憾了。
 
-### 按球队筛选球员
+## 按球队筛选球员
 
-在结束本章之前，最后一个更新。在 `fragment_single_team.xml` 中，一个名为 `viewRosterButtonClickListener` 的 `<variable>` 被附加到“查看阵容”按钮上，但之前无处可去。现在它有了去处。
 
-在 `SingleTeamFragment` 中，我们希望将一个新的 `View.OnClickListener` 绑定到该 `viewRosterButtonClickListener` 变量，并在点击时导航到球员屏幕。在 `onCreateView` 函数和大型 `apply` 块中，我们有以下代码：
+
+在结束本章之前，最后一个更新。在`fragment_single_team.xml`中，一个名为`viewRosterButtonClickListener`的`<variable>`被附加到“查看阵容”按钮上，但之前无处可去。现在它有了去处。
+
+在`SingleTeamFragment`中，我们希望将一个新的`View.OnClickListener`绑定到该`viewRosterButtonClickListener`变量，并在点击时导航到球员屏幕。在`onCreateView`函数和大型`apply`块中，我们有以下代码：
 
 ```
 viewRosterButtonClickListener = View.OnClickListener { view ->
@@ -9123,11 +9021,11 @@ ABL 应用已接近完成。所有主要屏幕都已准备就绪，我们正在�
 
 回到第 7 章 [使用设置和主题自定义应用](Customize an App with Settings and Themes)，我们使用设置页面为用户提供更多关于如何玩他们的“便士掉落”游戏的选项。此外，他们可以根据自己的意愿更改应用的外观和感觉。我们当然可以在这里这样做，老实说在大多数情况下*会*这样做，但我们现在将跳过很多主题设置，以突出一些新概念。
 
-在本章中，我们将回到 `PreferenceFragmentCompat` 类，允许用户自定义他们的应用。但这次，我们将探讨一些不同的东西。
+在本章中，我们将回到`PreferenceFragmentCompat`类，允许用户自定义他们的应用。但这次，我们将探讨一些不同的东西。
 
 用户将能够设置他们最喜欢的球队，根据该球队进行一些样式设置（但没有主题，正如你将看到的），甚至设置应用的启动点。我们将完全不编写任何 XML 来完成所有这些，至少对于设置屏幕是这样。此外，一旦这一切准备就绪，我们将把用户的设置备份到服务器。
 
-在深入设置屏幕之前，让我们先设置一些与主题相关的内容。我们想使用 Android 绿色作为我们的主色（因为 ABL 使用的是相同的颜色），并另外包含一些从 ABL 标志中提取的额外颜色。将以下颜色添加到你的 res/values/colors.xml 文件中：
+在深入设置屏幕之前，让我们先设置一些与主题相关的内容。我们想使用 Android 绿色作为我们的主色（因为 ABL 使用的是相同的颜色），并另外包含一些从 ABL 标志中提取的额外颜色。将以下颜色添加到你的`res/values/colors.xml`文件中：
 
 ```
 <color name="androidGreen">#00DE7A</color>
@@ -9157,7 +9055,7 @@ ABL 应用已接近完成。所有主要屏幕都已准备就绪，我们正在�
 </item>
 ```
 
-如果你需要确认你的更改，两个文件都在 code-to-copy 目录中。我们的应用现在看起来更符合品牌了，所以我们可以继续在设置页面中添加一些新内容。
+如果你需要确认你的更改，两个文件都在`code-to-copy`目录中。我们的应用现在看起来更符合品牌了，所以我们可以继续在设置页面中添加一些新内容。
 
 ### 通过代码构建设置屏幕
 
@@ -9167,11 +9065,11 @@ ABL 应用已接近完成。所有主要屏幕都已准备就绪，我们正在�
 implementation "androidx.preference:preference-ktx:$preference_version"
 ```
 
-添加版本变量并同步后，我们希望在一个新的 `settings` 包中创建一个名为 `SettingsFragment` 的新类。
+添加版本变量并同步后，我们希望在一个新的`settings`包中创建一个名为`SettingsFragment`的新类。
 
 #### 创建 SettingsFragment 类
 
-像之前一样，这将是 `PreferenceFragmentCompat` 类的子类，并包含一个 `onCreatePreferences` 函数：
+像之前一样，这将是`PreferenceFragmentCompat`类的子类，并包含一个`onCreatePreferences`函数：
 
 ```
 class SettingsFragment : PreferenceFragmentCompat() {
@@ -9185,11 +9083,11 @@ class SettingsFragment : PreferenceFragmentCompat() {
 }
 ```
 
-这次的不同之处在于，我们不是添加 `xml/preferences.xml` 文件，而是将在 `onCreatePreferences` 内部完成所有操作。这意味着我们在这里创建 `Preference` 类型，而不是像我们在 Penny Drop 中那样调用 `findPreference`。首先，我们需要一个 `PreferenceScreen` 对象，我们可以向其中添加所有设置。
+这次的不同之处在于，我们不是添加`xml/preferences.xml`文件，而是将在`onCreatePreferences`内部完成所有操作。这意味着我们在这里创建`Preference`类型，而不是像我们在 Penny Drop 中那样调用`findPreference`。首先，我们需要一个`PreferenceScreen`对象，我们可以向其中添加所有设置。
 
-我们使用 `createPreferenceScreen` 函数来获取该 `PreferenceScreen` 对象，它接受 `preferenceManager.context`。`preferenceManager` 值来自 `PreferenceFragmentCompat` 类，是 `getPreferenceManager` 函数的 Kotlin 简写。
+我们使用`createPreferenceScreen`函数来获取该`PreferenceScreen`对象，它接受`preferenceManager.context`。`preferenceManager`值来自`PreferenceFragmentCompat`类，是`getPreferenceManager`函数的 Kotlin 简写。
 
-在 Java 端。一旦我们获得了 PreferenceScreen 对象，就可以将其赋值回 PreferenceFragmentCompat 中的 preferenceScreen 变量：
+在 Java 端。一旦我们获得了`PreferenceScreen`对象，就可以将其赋值回`PreferenceFragmentCompat`中的`preferenceScreen`变量：
 
 ```kotlin
 override fun onCreatePreferences(
@@ -9205,7 +9103,7 @@ override fun onCreatePreferences(
 }
 ```
 
-我创建 ctx 值的原因是，我们将在向屏幕添加每个 Preference 时使用它，因此使用更短的名称可以使代码更易于阅读。在向此屏幕添加任何 Preference 对象之前，让我们先通过在 nav_graph.xml 中添加一个新的 `<fragment>` 标签来允许我们导航到这里：
+我创建`ctx`值的原因是，我们将在向屏幕添加每个`Preference`时使用它，因此使用更短的名称可以使代码更易于阅读。在向此屏幕添加任何`Preference`对象之前，让我们先通过在`nav_graph.xml`中添加一个新的`<fragment>`标签来允许我们导航到这里：
 
 ```xml
 <fragment
@@ -9220,7 +9118,7 @@ override fun onCreatePreferences(
 
 既然我们在这里进行一些自定义，我们将从允许用户在应用中设置他们最喜欢的 ABL 球队开始。我们可以将此用于应用中的各种自定义，尽管在本章中我们只关心一点颜色变化（我们稍后会处理）。
 
-“最爱球队”设置将是一个 DropDownPreference（与 Penny Drop 中的应用主题设置相同），包含 ABL 中的所有球队。我们还想包含一个“无”选项，以防他们只是热爱联赛，不想专注于单个球队。此偏好设置遵循我们将用于其余偏好设置的相同模式，即我们使用 `const string` 值作为偏好设置键，所有这些键都放在 `companion object` 中：
+“最爱球队”设置将是一个`DropDownPreference`（与 Penny Drop 中的应用主题设置相同），包含 ABL 中的所有球队。我们还想包含一个“无”选项，以防他们只是热爱联赛，不想专注于单个球队。此偏好设置遵循我们将用于其余偏好设置的相同模式，即我们使用`const string`值作为偏好设置键，所有这些键都放在`companion object`中：
 
 ```kotlin
 companion object {
@@ -9228,7 +9126,7 @@ companion object {
 }
 ```
 
-然后我们在初始化 `favoriteTeamPreference` 时使用该键（这也需要在类顶部声明一个 `lateinit var`）：
+然后我们在初始化`favoriteTeamPreference`时使用该键（这也需要在类顶部声明一个`lateinit var`）：
 
 ```kotlin
 class SettingsFragment : PreferenceFragmentCompat() {
@@ -9264,9 +9162,9 @@ class SettingsFragment : PreferenceFragmentCompat() {
 }
 ```
 
-`entries` 和 `entryValues` 的设置方式可能看起来有点令人困惑。在基本层面上，我们使用了过去创建的所有 `UITeam` 对象，加上我之前提到的默认值“无”。我们可以使用 + 号将 `List` 对象连接在一起，创建一个包含两个列表元素的新 `List`。这就是为什么我们使用 `listOf` 来包含单个值“无”或空字符串。
+`entries`和`entryValues`的设置方式可能看起来有点令人困惑。在基本层面上，我们使用了过去创建的所有`UITeam`对象，加上我之前提到的默认值“无”。我们可以使用`+`号将`List`对象连接在一起，创建一个包含两个列表元素的新`List`。这就是为什么我们使用`listOf`来包含单个值“无”或空字符串。
 
-像之前一样，我们使用 `SimpleSummaryProvider` 在主设置页面上显示当前选中的条目（`entries` 中的值）。设置看起来像以下两种之一：
+像之前一样，我们使用`SimpleSummaryProvider`在主设置页面上显示当前选中的条目（`entries`中的值）。设置看起来像以下两种之一：
 
 ![](img/c024742480e86eb8867e0760ebe353d7_411_0.png)
 
@@ -9274,7 +9172,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
 ### 为“最爱球队”偏好设置添加标志
 
-我们再次使用了在 Penny Drop 中看到的功能，这次是 `onPreferenceChangeListener` 函数。这里的想法是检查偏好设置上是否设置了球队 ID，然后我们获取该球队的标志并将其作为 `icon` 属性添加到偏好设置中。最后，为了通知 Preference 库我们应该更改存储的偏好设置值，我们从函数中返回 `true`。整个代码块如下所示：
+我们再次使用了在 Penny Drop 中看到的功能，这次是`onPreferenceChangeListener`函数。这里的想法是检查偏好设置上是否设置了球队 ID，然后我们获取该球队的标志并将其作为`icon`属性添加到偏好设置中。最后，为了通知 Preference 库我们应该更改存储的偏好设置值，我们从函数中返回`true`。整个代码块如下所示：
 
 ```kotlin
 favoriteTeamPreference.onPreferenceChangeListener =
@@ -9289,7 +9187,7 @@ favoriteTeamPreference.onPreferenceChangeListener =
     }
 ```
 
-这里没什么太疯狂的，但我们确实需要为那个 `getIconForTeam` 函数提供一个实现。这是 `SettingsFragment` 中的一个私有方法，它获取给定 `teamId` 的 `UITeam` 对象，然后使用 `logoId` 属性获取一个 `Drawable`：
+这里没什么太疯狂的，但我们确实需要为那个`getIconForTeam`函数提供一个实现。这是`SettingsFragment`中的一个私有方法，它获取给定`teamId`的`UITeam`对象，然后使用`logoId`属性获取一个`Drawable`：
 
 ```kotlin
 private fun getIconForTeam(teamId: String) =
@@ -9298,9 +9196,9 @@ private fun getIconForTeam(teamId: String) =
     }
 ```
 
-这就是我们如何在代码中轻松获取 `Drawable` 资源的方法。请注意，`requireContext` 函数是一个快捷方式，用于确保 `context` 变量不为 null 或抛出 `Exception`。
+这就是我们如何在代码中轻松获取`Drawable`资源的方法。请注意，`requireContext`函数是一个快捷方式，用于确保`context`变量不为 null 或抛出`Exception`。
 
-现在，这种方法对于用户选择他们最喜欢的球队的任何情况都完美适用，但如果我们回到屏幕，最爱球队的图标将会缺失，因为我们没有使用之前设置的值来显示它。我们可以通过重写 `onBindPreferences` 函数来处理这个问题：
+现在，这种方法对于用户选择他们最喜欢的球队的任何情况都完美适用，但如果我们回到屏幕，最爱球队的图标将会缺失，因为我们没有使用之前设置的值来显示它。我们可以通过重写`onBindPreferences`函数来处理这个问题：
 
 ```kotlin
 override fun onBindPreferences() {
@@ -9321,11 +9219,13 @@ override fun onBindPreferences() {
 
 Palette 库允许我们获取一张图像并从中提取颜色，以便在我们的应用中使用。你是否曾在 Android 设备上运行音乐应用，并注意到窗口颜色的变化？那就是 Palette 在起作用。
 
-Palette 分析你的图像，并为你提供一个 [Palette](https://developer.android.com/reference/androidx/palette/graphics/Palette) 对象，其中包含主要的、鲜艳的和柔和的颜色。只有一种主要颜色，但后两种类型有普通、浅色和深色变体，包含在 [Palette](https://developer.android.com/reference/androidx/palette/graphics/Palette) 中。我编写了一个示例应用，它从图像中创建一个 [Palette](https://developer.android.com/reference/androidx/palette/graphics/Palette) 并将其显示在图像下方。当我将本书的封面用于该应用时，我得到了看起来像[此图](https://github.com/nickatwood/ColorPalette)所示的效果。
+
+
+`Palette` 分析你的图像，并为你提供一个 [`Palette`](https://developer.android.com/reference/androidx/palette/graphics/Palette) 对象，其中包含主要的、鲜艳的和柔和的颜色。只有一种主要颜色，但后两种类型有普通、浅色和深色变体，包含在 [`Palette`](https://developer.android.com/reference/androidx/palette/graphics/Palette) 中。我编写了一个示例应用，它从图像中创建一个 [`Palette`](https://developer.android.com/reference/androidx/palette/graphics/Palette) 并将其显示在图像下方。当我将本书的封面用于该应用时，我得到了看起来像[此图](https://github.com/nickatwood/ColorPalette)所示的效果。
 
 ![](img/c024742480e86eb8867e0760ebe353d7_414_0.png)
 
-### Kotlin 与 Android 开发
+## Kotlin 与 Android 开发
 
 以 Jetpack 为特色
 
@@ -9334,6 +9234,7 @@ Palette 分析你的图像，并为你提供一个 [Palette](https://developer.a
 ![](img/c024742480e86eb8867e0760ebe353d7_414_1.png)
 
 Michael Fazio
+
 由 Michael Swaine 编辑
 
 | 主要色 |
@@ -9345,13 +9246,13 @@ Michael Fazio
 | 柔和色 |
 | 深柔和色 |
 
-很酷，对吧？嗯，除非你是在黑白页面上查看此页面，那么你就只能相信我了。较深的灰色被识别为主要颜色（类似的灰色是深柔和色），而鲜艳的颜色都是封面上蓝色的变体。请注意，虽然封面主要是白色，但幸运的是它没有包含在封面的 Palette 中。
+很酷，对吧？嗯，除非你是在黑白页面上查看此页面，那么你就只能相信我了。较深的灰色被识别为主要颜色（类似的灰色是深柔和色），而鲜艳的颜色都是封面上蓝色的变体。请注意，虽然封面主要是白色，但幸运的是它没有包含在封面的 `Palette` 中。
 
-回到我们当前的应用，我认为使用 Palette 可以做的一个有趣示例是更改导航栏的颜色，导航栏通常是包含你的返回/主页/最近应用按钮的栏，或者可能只是手势栏（如果你使用手势导航）。这将使 Skyline 球迷的记分牌页面看起来像下图所示（再次，
+回到我们当前的应用，我认为使用 `Palette` 可以做的一个有趣示例是更改导航栏的颜色，导航栏通常是包含你的返回/主页/最近应用按钮的栏，或者可能只是手势栏（如果你使用手势导航）。这将使 Skyline 球迷的记分牌页面看起来像下图所示（再次，
 
-### 为喜爱的球队生成调色板
+## 为喜爱的球队生成调色板
 
-从基础层面看，Palette 的代码大致如下——我们将一个 Bitmap 传入 `Palette` 类的 `from` 函数以获取 `Palette.Builder` 类型，然后从中生成一个 `Palette` 对象。在我们的场景中，需要加载球队的徽标（通过 `ContextCompat.getDrawable`，如前所述），将其转换为 Bitmap，然后将其传入 `Palette.from` 调用。整个流程（加上通过 `teamId` 查找 `UITeam`）如下所示：
+从基础层面看，`Palette` 的代码大致如下——我们将一个 `Bitmap` 传入 `Palette` 类的 `from` 函数以获取 `Palette.Builder` 类型，然后从中生成一个 `Palette` 对象。在我们的场景中，需要加载球队的徽标（通过 `ContextCompat.getDrawable`，如前所述），将其转换为 `Bitmap`，然后将其传入 `Palette.from` 调用。整个流程（加上通过 `teamId` 查找 `UITeam`）如下所示：
 
 ```kotlin
 fun getTeamPalette(context: Context, teamId: String?) =
@@ -9366,7 +9267,7 @@ fun getTeamPalette(context: Context, teamId: String?) =
 
 现在我们可以为 `UITeam` 获取 `Palette`，接下来可以回到 `SettingsFragment` 使用该函数来设置导航栏颜色。
 
-### 选择喜爱球队时修改导航栏颜色
+## 选择喜爱球队时修改导航栏颜色
 
 首先创建一个新的 `setNavBarColorForTeam` 函数，该函数将接收 `teamId`，找出主色调，并将导航栏设置为该颜色。
 
@@ -9420,7 +9321,7 @@ favoriteTeamPreference.onPreferenceChangeListener =
 
 这对于初始设置喜爱球队时非常有用，但我们也需要处理用户稍后打开应用且已有喜爱球队的情况。在这种情况下，我们需要转到 `MainActivity` 进行修改。
 
-### 应用启动时修改导航栏颜色
+## 应用启动时修改导航栏颜色
 
 在 `onCreate` 内部，我们需要执行与用户首次设置喜爱球队时相同的操作，但这里有两点不同：我们可以使用 `this` 作为 `Context` 对象，并且通过 `SharedPreferences` 对象获取 `teamId` 值。
 
@@ -9446,11 +9347,11 @@ UITeam.getTeamPalette(
 }
 ```
 
-现在，当用户启动应用并已选择喜爱球队，或选择喜爱球队时，导航栏将变为球队徽标上的主色调。再次说明，使用主题来更改颜色会更好，但这是了解 Palette 在应用中如何工作的好方法。
+现在，当用户启动应用并已选择喜爱球队，或选择喜爱球队时，导航栏将变为球队徽标上的主色调。再次说明，使用主题来更改颜色会更好，但这是了解 `Palette` 在应用中如何工作的好方法。
 
 考虑到颜色变化，我们可以为用户添加另一个实用功能。让我们在这里添加一个新设置，允许他们决定是否要更改颜色。
 
-### 切换喜爱球队导航栏着色
+## 切换喜爱球队导航栏着色
 
 回到 `SettingsFragment`，我们需要一个新的 `SwitchPreferenceCompat`，名为 `favoriteTeamColorPreference`，我们将用它来判断在设置喜爱球队时是否应切换导航栏颜色。在 `SettingsFragment` 顶部添加 `lateinit var` 声明：
 
@@ -9523,19 +9424,19 @@ if (
         ?.rgb
 ```
 
-### 添加并分组额外的偏好设置
+## 添加并分组额外的偏好设置
 
 我们将在此处添加两个新的标准偏好设置项，以及两个偏好设置链接。这四个都是偏好设置对象，但前两个会如你所料地由偏好设置库保存，而后两个则会将用户引导至新的屏幕。一旦我们完成所有添加，设置屏幕将如下所示：
 
 ![](img/c024742480e86eb8867e0760ebe353d7_422_0.png)
 
-### 添加用户名偏好设置
+## 添加用户名偏好设置
 
 用户名偏好设置是我们将在 API 端将用户与其设置关联起来的方式。对于生产应用来说，这并不是一个特别好的方法，但它至少能在备份设置时为你提供一种识别用户的方式。我们将在下一节[使用 WorkManager 可靠地完成后台工作](https://example.com)中更详细地介绍这个备份过程。
 
 事实证明，这个 `EditTextPreference` 只需要一些配置就能工作，包括顶部的 `lateinit var` 声明和 `companion object` 中的 `usernamePreferenceKey` `const val`。创建并添加此 `Preference` 的代码如下：
 
-```
+```kotlin
 this.usernamePreference = EditTextPreference(ctx).apply {
     key = usernamePreferenceKey
     title = getString(R.string.user_name)
@@ -9547,11 +9448,11 @@ screen.addPreference(usernamePreference)
 
 `OnPreferenceChangeListener` 属性将在下一节中添加，所以现在我们可以忽略它。接下来是 `startingScreenPreference`，它保存用户希望在应用中启动的屏幕 ID。再次强调，我们专注于允许应用按照用户希望的方式工作，而可配置的启动位置是实现这一目标的好方法。
 
-### 允许用户选择其起始位置
+## 允许用户选择其起始位置
 
 这个 `DropDownPreference` 的工作方式类似于“收藏球队”偏好设置，我们有一组值用作 `entries` 和 `entryValues`。我们将用于这些属性的 `Map` 位于 `settings` 包内的一个新文件 `StartingLocationHelper.kt` 中：
 
-```
+```kotlin
 val startingScreens = mapOf(
     "Leaders" to R.id.leadersFragment,
     "Players" to R.id.playersFragment,
@@ -9563,7 +9464,7 @@ val startingScreens = mapOf(
 
 实际的偏好设置代码最终如下所示，不包括必需的 `lateinit var` 和 `const val` 声明：
 
-```
+```kotlin
 this.startingScreenPreference = DropDownPreference(ctx).apply {
     key = startingScreenPreferenceKey
     title = getString(R.string.starting_location)
@@ -9575,7 +9476,9 @@ this.startingScreenPreference = DropDownPreference(ctx).apply {
 screen.addPreference(startingScreenPreference)
 ```
 
-我们还不需要 `OnPreferenceChangeListener`，因为当此设置被设置时我们不会采取任何操作，只在应用启动时才会。我们*确实*需要的其他代码同样在两个地方。首先，`StartingLocationHelper.kt` 文件需要一个名为 `getSelectedStartingScreen` 的新函数。此函数要么从 `SharedPreferences` 参数获取启动屏幕设置，要么默认为记分板页面：
+
+
+我们还不需要`OnPreferenceChangeListener`，因为当此设置被设置时我们不会采取任何操作，只在应用启动时才会。我们*确实*需要的其他代码同样在两个地方。首先，`StartingLocationHelper.kt`文件需要一个名为`getSelectedStartingScreen`的新函数。此函数要么从`SharedPreferences`参数获取启动屏幕设置，要么默认为记分板页面：
 
 ```
 fun getSelectedStartingScreen(prefs: SharedPreferences) =
@@ -9585,7 +9488,7 @@ prefs.getString(
 ).let { startId -> startingScreens[startId] ?: R.id.scoreboardFragment }
 ```
 
-接下来，我们进入 `MainActivity`，在那里我们将使用设置值更新导航图。我们要做的是获取当前导航图，并根据从 `getSelectedStartingScreen` 返回的值设置一个新的 `startDestination`
+接下来，我们进入`MainActivity`，在那里我们将使用设置值更新导航图。我们要做的是获取当前导航图，并根据从`getSelectedStartingScreen`返回的值设置一个新的`startDestination`：
 
 ```
 val navGraph = navController.navInflater.inflate(R.navigation.nav_graph)
@@ -9593,17 +9496,17 @@ navGraph.startDestination = getSelectedStartingScreen(prefs)
 navController.graph = navGraph
 ```
 
-下一步是添加两个链接 `Preference`，“关于应用”和“致谢”，它们都将位于“关于”类别中。
+下一步是添加两个链接`Preference`，“关于应用”和“致谢”，它们都将位于“关于”类别中。
 
 ### 对偏好设置进行分类并导航到其他 Fragment
 
-由于我们已经处理过在 `Fragment` 上使用 Penny Drop 显示 HTML，你可以直接从 `Code/code-to-copy` 文件夹中复制两个视图所需的文件。具体来说，你需要 `settings` 包中的所有内容，以及 `fragment_about_the_app.xml`、`fragment_image_credits.xml` 和 `image_credit_item.xml` 文件。还包括一些新的字符串资源值。
+由于我们已经处理过在`Fragment`上使用 Penny Drop 显示 HTML，你可以直接从`Code/code-to-copy`文件夹中复制两个视图所需的文件。具体来说，你需要`settings`包中的所有内容，以及`fragment_about_the_app.xml`、`fragment_image_credits.xml`和`image_credit_item.xml`文件。还包括一些新的字符串资源值。
 
 一如既往，你可以随意查看复制过来的代码，它非常酷。两个屏幕将如下所示：
 
 ![](img/c024742480e86eb8867e0760ebe353d7_425_0.png)
 
-现在我们有了这两个屏幕，就可以将链接添加到设置页面了。该页面上我们需要的第一件事是 `aboutCategory`，我们将在其中添加 `Preference` 链接。该类别如下所示：
+现在我们有了这两个屏幕，就可以将链接添加到设置页面了。该页面上我们需要的第一件事是`aboutCategory`，我们将在其中添加`Preference`链接。该类别如下所示：
 
 ```
 val aboutCategory = PreferenceCategory(ctx).apply {
@@ -9613,9 +9516,9 @@ val aboutCategory = PreferenceCategory(ctx).apply {
 screen.addPreference(aboutCategory)
 ```
 
-请注意，我们现在是将 `PreferenceCategory` 添加到 `screen`，*然后*再添加我创建的其他 `Preference` 对象。如果它没有先添加到 `screen`，你会得到一个异常，而没人希望发生这种情况。
+请注意，我们现在是将`PreferenceCategory`添加到`screen`，*然后*再添加我创建的其他`Preference`对象。如果它没有先添加到`screen`，你会得到一个异常，而没人希望发生这种情况。
 
-两个链接偏好设置项的设置方式相同，设置了一些属性，并使用 `onPreferenceClickListener` 处理导航。请注意，在导航流程中，我们使用 `this@SettingsFragment` 来引用 SettingsFragment 类，而不是偏好设置本身。两个偏好设置项的代码如下：
+两个链接偏好设置项的设置方式相同，设置了一些属性，并使用`onPreferenceClickListener`处理导航。请注意，在导航流程中，我们使用`this@SettingsFragment`来引用`SettingsFragment`类，而不是偏好设置本身。两个偏好设置项的代码如下：
 
 ```
 val aboutTheAppPreference = Preference(ctx).apply {
@@ -9645,7 +9548,7 @@ val creditsPreference = Preference(ctx).apply {
 aboutCategory.addPreference(creditsPreference)
 ```
 
-我们在这里需要做的最后一件事是确保两个屏幕都在导航图中。在 `<action>` 标签之后添加两个新的 `<fragment>` 标签：
+我们在这里需要做的最后一件事是确保两个屏幕都在导航图中。在`<action>`标签之后添加两个新的`<fragment>`标签：
 
 ```
 <fragment
@@ -9660,33 +9563,33 @@ aboutCategory.addPreference(creditsPreference)
     tools:layout="@layout/fragment_image_credits" />
 ```
 
-至此，这个应用的设置页面就完成了，或者至少是我们在本章中要做的部分。我们在这里还有一件事想做，那就是将用户的设置备份到我们的服务器。我们将使用那个用户名偏好设置作为一种简单的方式将设置与特定用户关联起来，但这里的重要部分是我们将利用 WorkManager 来进行该 API 调用。
+至此，这个应用的设置页面就完成了，或者至少是我们在本章中要做的部分。我们在这里还有一件事想做，那就是将用户的设置备份到我们的服务器。我们将使用那个用户名偏好设置作为一种简单的方式将设置与特定用户关联起来，但这里的重要部分是我们将利用`WorkManager`来进行该 API 调用。
 
 ### 使用 WorkManager 可靠地完成后台工作
 
-WorkManager 库/API 是一种调度应在后台运行并完成任务的绝佳方式，即使应用关闭或设备重启，任务也能完成。WorkManager 将以操作系统能够处理的方式处理分配给它的任务，这意味着旧版本的 Android 操作系统仍然可以使用现有功能来使用该库。这使我们能够在应用中实现更高程度的向后兼容性，而无需担心实现细节。
+`WorkManager`库/API 是一种调度应在后台运行并完成任务的绝佳方式，即使应用关闭或设备重启，任务也能完成。`WorkManager`将以操作系统能够处理的方式处理分配给它的任务，这意味着旧版本的 Android 操作系统仍然可以使用现有功能来使用该库。这使我们能够在应用中实现更高程度的向后兼容性，而无需担心实现细节。
 
-我将向你展示如何实现一个 Worker，WorkManager 将使用它来备份设置。完成后，我将重点介绍 WorkManager 可为其他用例提供的其他一些功能。添加 WorkManager 依赖项：
+我将向你展示如何实现一个`Worker`，`WorkManager`将使用它来备份设置。完成后，我将重点介绍`WorkManager`可为其他用例提供的其他一些功能。添加`WorkManager`依赖项：
 
 ```
 implementation "androidx.work:work-runtime-ktx:$work_version"
 ```
 
-首先，使用 WorkManager 创建一个新的 `SaveSettingsWorker` 类来处理备份过程。
+首先，使用`WorkManager`创建一个新的`SaveSettingsWorker`类来处理备份过程。
 
 ### 使用 CoroutineWorker 处理异步工作
 
-`SaveSettingsWorker` 将接收用户名和当前设置，然后我们将使用这些信息调用 ABL API 客户端上的 `saveAppSettings` 函数。
+`SaveSettingsWorker`将接收用户名和当前设置，然后我们将使用这些信息调用 ABL API 客户端上的`saveAppSettings`函数。
 
-通常，使用 WorkManager 时，我们会使用 `Worker` 类作为基类。但得益于一些 Kotlin 扩展，我们有了 `CoroutineWorker` 类及其挂起版本的 `doWork`。这样我们就可以在该协程作用域内进行 API 调用，而不必到处传递作用域或上下文。
+通常，使用`WorkManager`时，我们会使用`Worker`类作为基类。但得益于一些 Kotlin 扩展，我们有了`CoroutineWorker`类及其挂起版本的`doWork`。这样我们就可以在该协程作用域内进行 API 调用，而不必到处传递作用域或上下文。
 
-要获取输入参数，我们需要引用 `CoroutineWorker` 上的 `inputData`，即 `Data` 对象。`Data` 类保存不同类型的输入数据，然后我们可以在代码中提取它们。例如，要获取 `userName` 值，我们可以这样调用：
+要获取输入参数，我们需要引用`CoroutineWorker`上的`inputData`，即`Data`对象。`Data`类保存不同类型的输入数据，然后我们可以在代码中提取它们。例如，要获取`userName`值，我们可以这样调用：
 
 ```
 val userName = inputData.getString(userNameKey)
 ```
 
-`SaveSettingsWorker` 和 `doWork` 函数的最后一部分是 `Result` 返回类型。它告知 `WorkManager` 工作是否已成功完成。虽然我们目前还没有使用它（因为我们不担心在同步失败时采取任何操作），但它可以根据需要使用。整个 `SaveSettingsWorker` 如下所示：
+`SaveSettingsWorker`和`doWork`函数的最后一部分是`Result`返回类型。它告知`WorkManager`工作是否已成功完成。虽然我们目前还没有使用它（因为我们不担心在同步失败时采取任何操作），但它可以根据需要使用。整个`SaveSettingsWorker`如下所示：
 
 ```
 class SaveSettingsWorker(appContext: Context, params: WorkerParameters)
@@ -9725,11 +9628,13 @@ class SaveSettingsWorker(appContext: Context, params: WorkerParameters)
 
 这里有几个值得注意的地方：
 
-- 整个函数是一个包含 `try` 块的表达式，我们在其中捕获所有 `Exception` 类型，这意味着这段代码永远不会导致应用崩溃。
-- `TAG` 值是一种区分日志消息的方式。使用 `const val` 并以类名命名是 Android 的常规做法。
-- 我们*可以*重用 `SettingsFragment` 中的 `const val` 键，但让键由 `SaveSettingsWorker` 拥有似乎是更好的方法。这样 `SaveSettingsWorker` 就拥有了其 `doWork` 函数输入输出值的键，将它们保持在使用它们的同一位置。
+- 整个函数是一个包含`try`块的表达式，我们在其中捕获所有`Exception`类型，这意味着这段代码永远不会导致应用崩溃。
 
-现在 `SaveSettingsWorker` 已准备好使用，我们可以回到 `SettingsFragment` 并使用它。我们需要一个新函数，毫不意外地命名为 `saveSettings`，它接收所有设置，并在每个 `Preference` 上回退到当前值：
+- `TAG`值是一种区分日志消息的方式。使用`const val`并以类名命名是 Android 的常规做法。
+
+- 我们*可以*重用`SettingsFragment`中的`const val`键，但让键由`SaveSettingsWorker`拥有似乎是更好的方法。这样`SaveSettingsWorker`就拥有了其`doWork`函数输入输出值的键，将它们保持在使用它们的同一位置。
+
+现在`SaveSettingsWorker`已准备好使用，我们可以回到`SettingsFragment`并使用它。我们需要一个新函数，毫不意外地命名为`saveSettings`，它接收所有设置，并在每个`Preference`上回退到当前值：
 
 ```
 private fun saveSettings(
@@ -9744,7 +9649,7 @@ private fun saveSettings(
 ) { }
 ```
 
-在函数内部，我们将确保 `userName` *不*为空，然后构建并 `enqueue` 我们的工作请求。为此，我们获取 `WorkManager` 的实例，并使用 `OneTimeWorkRequestBuilder` 类来构建我们的工作请求。工作请求所需的任何参数都通过构建器上的 `setInputData` 函数添加。以下是 `saveSettings` 函数的内部实现：
+在函数内部，我们将确保`userName`*不*为空，然后构建并`enqueue`我们的工作请求。为此，我们获取`WorkManager`的实例，并使用`OneTimeWorkRequestBuilder`类来构建我们的工作请求。工作请求所需的任何参数都通过构建器上的`setInputData`函数添加。以下是`saveSettings`函数的内部实现：
 
 ```
 if(userName != null) {
@@ -9762,15 +9667,15 @@ if(userName != null) {
 }
 ```
 
-使用 `WorkManager`，我们可以像前面那样进行一次性请求，也可以设置定期运行的工作。请注意，`PeriodicWorkRequest` 工作只能以至少每十五分钟的间隔执行，因此它不适用于每十秒、二十秒或三十秒运行一次的任务。如果你需要更频繁运行的东西，比如记分板更新器，你应该选择不同的方式（例如，重复的协程调用）。
+使用`WorkManager`，我们可以像前面那样进行一次性请求，也可以设置定期运行的工作。请注意，`PeriodicWorkRequest`工作只能以至少每十五分钟的间隔执行，因此它不适用于每十秒、二十秒或三十秒运行一次的任务。如果你需要更频繁运行的东西，比如记分板更新器，你应该选择不同的方式（例如，重复的协程调用）。
 
-`saveSettings` 准备就绪后，我们需要添加对该函数的调用。我们要做的是在每次 `Preference` 更改时调用 `saveSettings`，不包括 `usernamePreference`（我们稍后会处理）和两个“链接”偏好项。
+`saveSettings`准备就绪后，我们需要添加对该函数的调用。我们要做的是在每次`Preference`更改时调用`saveSettings`，不包括`usernamePreference`（我们稍后会处理）和两个“链接”偏好项。
 
-对于其他三个 `Preference` 项，我们需要在现有的 `OnPreferenceChangeListener` 中添加对 `saveSettings` 的调用，或者创建一个新的 `OnPreferenceChangeListener`（对于 `startingScreenPreference`）。
+对于其他三个`Preference`项，我们需要在现有的`OnPreferenceChangeListener`中添加对`saveSettings`的调用，或者创建一个新的`OnPreferenceChangeListener`（对于`startingScreenPreference`）。
 
-在每次 `saveSettings` 调用中，我们将为更改的值传入 `newValue`。我们必须这样做，因为 `Preference` 的值仅在 `OnPreferenceChangeListener` 完成*之后*才会更改。
+在每次`saveSettings`调用中，我们将为更改的值传入`newValue`。我们必须这样做，因为`Preference`的值仅在`OnPreferenceChangeListener`完成*之后*才会更改。
 
-例如，`startingScreenPreference` 将包含以下代码块：
+例如，`startingScreenPreference`将包含以下代码块：
 
 ```
 onPreferenceChangeListener =
@@ -9783,7 +9688,9 @@ onPreferenceChangeListener =
     }
 ```
 
-我们可以通过名称引用我们关心的参数，就像这里使用 `startingScreen` 一样，其余的将使用当前值作为回退（因为它们没有更改）。请继续对其他两个 `Preference` 项进行必要的更改，它们将与此类似：
+我们可以通过名称引用我们关心的参数，就像这里使用`startingScreen`一样，其余的将使用当前值作为回退（因为它们没有更改）。请继续对其他两个`Preference`项进行必要的更改，它们将与此类似。
+
+
 
 ```
 favoriteTeamPreference.onPreferenceChangeListener =
@@ -9850,12 +9757,7 @@ private fun loadSettings(userName: String? = null) {
 }
 ```
 
-saveSettings(userName)
-}
-}
-}
-}
-```
+`saveSettings(userName)`
 
 除非你之前在 `TAG` 中添加了日志记录，否则你需要在 `companion object` 中添加它，就像我们在 `SaveSettingsWorker` 中所做的那样：
 
@@ -9867,16 +9769,25 @@ const val TAG = "SettingsFragment"
 
 ```
 this.usernamePreference = EditTextPreference(ctx).apply {
+
     key = usernamePreferenceKey
+
     title = getString(R.string.user_name)
+
     summaryProvider =
+
         EditTextPreference.SimpleSummaryProvider.getInstance()
+
     onPreferenceChangeListener =
+
         Preference.OnPreferenceChangeListener { _, newValue ->
+
             loadSettings(newValue?.toString())
 
             true
+
         }
+
 }
 ```
 
@@ -9884,9 +9795,9 @@ this.usernamePreference = EditTextPreference(ctx).apply {
 
 ## 总结与后续步骤
 
-我们现在有了一个漂亮的设置页面，完全通过代码实现，它可以动态地为我们的应用设置样式，并可靠地将用户设置保存到服务器。Palette 是一种很好的方式，可以对我们可能事先不知道的应用中的图像做出反应，并为用户提供更具个性化的应用外观。WorkManager 是在我们的应用中执行某种操作的完美方式，即使应用被关闭甚至设备重启，我们也希望完成这些操作。
+我们现在有了一个漂亮的设置页面，完全通过代码实现，它可以动态地为我们的应用设置样式，并可靠地将用户设置保存到服务器。`Palette` 是一种很好的方式，可以对我们可能事先不知道的应用中的图像做出反应，并为用户提供更具个性化的应用外观。`WorkManager` 是在我们的应用中执行某种操作的完美方式，即使应用被关闭甚至设备重启，我们也希望完成这些操作。
 
-接下来是我们这本书的最后一章“常规”章节（因为接下来的两章专注于测试），我们将致力于从应用中引入和发送数据。这包括通知（特别是推送通知）、分享关于某些球员和球队的链接和信息的能力，以及我们如何通过 Download Manager 库检索大量数据。
+接下来是我们这本书的最后一章“常规”章节（因为接下来的两章专注于测试），我们将致力于从应用中引入和发送数据。这包括通知（特别是推送通知）、分享关于某些球员和球队的链接和信息的能力，以及我们如何通过 `Download Manager` 库检索大量数据。
 
 # 第 13 章
 
@@ -9914,7 +9825,7 @@ this.usernamePreference = EditTextPreference(ctx).apply {
 | 致谢 | 图片致谢 |
 | 通知 | 显示推送和本地通知的链接 |
 
-我已经在 chapter-13/code-to-copy 文件夹中为你准备了该屏幕所需的大部分代码——notifications 文件夹/包中的所有内容，以及新版本的 SettingsFragment 和 res 文件夹中的所有资源文件。后者对现有资源文件进行了一些更新，因此你可以直接复制，或者与你已有的内容进行比较并手动进行任何更改。
+我已经在 `chapter-13/code-to-copy` 文件夹中为你准备了该屏幕所需的大部分代码——`notifications` 文件夹/包中的所有内容，以及新版本的 `SettingsFragment` 和 `res` 文件夹中的所有资源文件。后者对现有资源文件进行了一些更新，因此你可以直接复制，或者与你已有的内容进行比较并手动进行任何更改。
 
 一旦这些都迁移完毕，请继续运行应用以确保一切设置正确。我们的通知页面目前将是空的，这完全没问题。这是我们的下一步。
 
@@ -9922,19 +9833,27 @@ this.usernamePreference = EditTextPreference(ctx).apply {
 
 我们要包含的第一个通知是显示关于特定球员的更新，同时允许用户点击通知进入该球员的页面。
 
-在 NotificationsFragment 内部，有一个当前为空的 listOf<NotificationItem>，我们将用所有通知配置填充它，然后在通知页面上显示。我认为这是一种简单的方式，可以让你在应用内随时启动通知，而不会在其他地方过于侵入性。
+在 `NotificationsFragment` 内部，有一个当前为空的 `listOf<NotificationItem>`，我们将用所有通知配置填充它，然后在通知页面上显示。我认为这是一种简单的方式，可以让你在应用内随时启动通知，而不会在其他地方过于侵入性。
 
-列表中的第一个 NotificationItem 如下所示：
+列表中的第一个 `NotificationItem` 如下所示：
 
 ```
 NotificationItem(
+
     1,
+
     "Local - Player",
+
     "Displays a local notification for Rolando Lopez, " +
+
     "which when clicked, takes a user to his player page.",
+
     NotificationType.Local
+
 ) { ctx, _ ->
+
     // This is the next part.
+
 }
 ```
 
@@ -9946,45 +9865,61 @@ NotificationItem(
 
 这里的 `PendingIntent` 是我在[通过深层链接直接导航](https://example.com)中提到的*显式深层链接*的一个例子。我告诉过你之前没有合适的地方包含显式深层链接，但现在我们有了一个完美的地方，因为通知会将用户带到不同的位置。
 
-我们使用 `NavDeepLinkBuilder` 类来帮助创建我们需要的 `PendingIntent` 对象，它在构建之前需要几个属性。由于我们将深层链接作为导航流程的一部分，我们不仅需要发送目的地，还需要发送我们使用的导航图。我们还可以包含一些参数，以便我们的现有 NavArgs 按预期填充。NavDeepLinkBuilder 逻辑如下所示：
+我们使用 `NavDeepLinkBuilder` 类来帮助创建我们需要的 `PendingIntent` 对象，它在构建之前需要几个属性。由于我们将深层链接作为导航流程的一部分，我们不仅需要发送目的地，还需要发送我们使用的导航图。我们还可以包含一些参数，以便我们的现有 `NavArgs` 按预期填充。`NavDeepLinkBuilder` 逻辑如下所示：
 
 ```
 val pendingIntent = NavDeepLinkBuilder(ctx)
+
     .setGraph(R.navigation.nav_graph)
+
     .setDestination(R.id.singlePlayerFragment)
+
     .setArguments(Bundle().apply {
+
         putString("playerId", "lopezrol")
+
         putString("playerName", "Rolando Lopez")
+
     }).createPendingIntent()
 ```
 
-这里的一个“陷阱”是，要设置参数，我们需要创建一个新的 Bundle 对象，然后向其中添加 String 值。除此之外，NavDeepLinkBuilder 省去了我们手动设置 Intent 的麻烦。有了 PendingIntent 准备就绪，我们可以构建 Notification 本身。
+这里的一个“陷阱”是，要设置参数，我们需要创建一个新的 `Bundle` 对象，然后向其中添加 `String` 值。除此之外，`NavDeepLinkBuilder` 省去了我们手动设置 `Intent` 的麻烦。有了 `PendingIntent` 准备就绪，我们可以构建 `Notification` 本身。
 
-我们可以在 Notification 对象上设置相当多的属性，因此要知道我们所做的肯定不是一个详尽的列表。话虽如此，你可能会在应用中看到的每个本地通知中使用这些属性中的大多数。列表如下：
+我们可以在 `Notification` 对象上设置相当多的属性，因此要知道我们所做的肯定不是一个详尽的列表。话虽如此，你可能会在应用中看到的每个本地通知中使用这些属性中的大多数。列表如下：
 
 - 内容标题：通知上显示的主要标题。来自字符串资源。
 - 内容文本：文本正文。来自字符串资源。
 - 小图标：通知和状态栏上显示的图标。
-- 内容意图：我们刚刚创建的 PendingIntent。
+- 内容意图：我们刚刚创建的 `PendingIntent`。
 - 自动取消：一个标志，表示点击后是否自动关闭通知。
 
-这里对我们来说没有什么新鲜的，因为我们习惯了 drawable 和字符串资源值，并且我们已经看到了如何创建 PendingIntent。特别值得注意的一点是我们如何设置 NotificationCompat.Builder。第二个参数是传入的是一个 `channelId`，指的是一个通知渠道。我们稍后可以详细讨论它的含义，但首先，这里是完整的代码，不仅用于构建通知，还用于显示通知：
+这里对我们来说没有什么新鲜的，因为我们习惯了 drawable 和字符串资源值，并且我们已经看到了如何创建 `PendingIntent`。特别值得注意的一点是我们如何设置 `NotificationCompat.Builder`。第二个参数是传入的是一个 `channelId`，指的是一个通知渠道。我们稍后可以详细讨论它的含义，但首先，这里是完整的代码，不仅用于构建通知，还用于显示通知：
 
 ```kotlin
 val channel = ABLNotificationChannel.Players
 
 val notification =
+
     NotificationCompat.Builder(ctx, channel.channelId)
+
         .setContentTitle(ctx.getString(R.string.lopez_notification_title))
+
         .setContentText(ctx.getString(R.string.lopez_notification_text))
+
         .setSmallIcon(R.drawable.ic_baseline_directions_run_24)
+
         .setContentIntent(pendingIntent)
+
         .setAutoCancel(true)
+
         .build()
 
 NotificationManagerCompat.from(ctx).notify(
+
     1, //此ID可用于更新/移除现有通知
+
     notification
+
 )
 ```
 
@@ -10000,22 +9935,37 @@ NotificationManagerCompat.from(ctx).notify(
 
 ```kotlin
 private fun createNotificationChannels() {
+
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+
         val channels = ABLNotificationChannel.values().map { channel ->
+
             NotificationChannel(
+
                 channel.channelId,
+
                 channel.channelName,
+
                 channel.importance
+
             ).apply {
+
                 description = channel.channelDescription
+
             }
+
         }
 
         (getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager)
+
             .createNotificationChannels(channels)
+
     }
+
 }
 ```
+
+
 
 我将所有逻辑包装在版本检查中，因为在 API 级别 26（Android 8.0 Oreo）以下，通知渠道不可用；所以我们希望避免在那些较旧的设备上使用它们。现在，由于我们这个应用的最低 SDK 版本已经是 API 级别 26，这在技术上是不必要的——但让你知道这一点仍然很好，所以它还是保留了下来。
 
@@ -10037,7 +9987,7 @@ private fun createNotificationChannels() {
 
 我们现在在应用中的通知功能已经进展顺利，所以让我们再添加几个。
 
-### 添加其他本地通知
+## 添加其他本地通知
 
 我们添加的另外两个通知重点展示了如何使用较长的通知描述和通知上的附加操作。通知 2 会将用户带到 Pewaukee Princesses 的球队页面，但这次我们将在通知展开时设置一个额外的较长描述。初始设置在结构上是相同的，但使用了一些不同的值：
 
@@ -10062,7 +10012,6 @@ NotificationItem(
 
 ```kotlin
 val longText = ctx.getString(R.string.pke_notification_long_text)
-
 val channel = ABLNotificationChannel.Teams
 val notification =
     NotificationCompat.Builder(ctx, channel.channelId)
@@ -10119,21 +10068,21 @@ val notification =
         .build()
 ```
 
-如果我们在操作上指定的图标没有显示，不要惊慌。自 Android 7.0 起它就没有显示，但该图标仍然包含在`addAction`函数中，以防你正在构建一个需要在旧设备上运行的应用程序。另外请注意，如果你点击了该操作，`setAutoCancel`标志将不会被使用，通知将保留在用户的状态栏中。
+如果我们在操作上指定的图标没有显示，不要惊慌。自 Android 7.0 起它就没有显示，但该图标仍然包含在 `addAction` 函数中，以防你正在构建一个需要在旧设备上运行的应用程序。另外请注意，如果你点击了该操作，`setAutoCancel` 标志将不会被使用，通知将保留在用户的状态栏中。
 
 现在你已经了解了几个在应用内触发本地通知的示例。接下来的步骤是转向*推送通知*，即从远程位置发送到设备的消息。我们将利用在这里所学的内容来处理这些基于云的消息。
 
-### 使用推送通知发送云端警报
+## 使用推送通知发送云端警报
 
-我想从一开始就明确本节的范围：我们关注的是推送通知的*客户端*部分，即消费消息的应用程序。服务器端部分不在本书的讨论范围内，因此我在ABL API中添加了一些逻辑，以便我们在构建处理程序时使用。我本想在这里同时介绍推送通知的两端，但本书已经写了325页以上，所以我将那部分内容作为免费博客提供给大家。[13]
+我想从一开始就明确本节的范围：我们关注的是推送通知的*客户端*部分，即消费消息的应用程序。服务器端部分不在本书的讨论范围内，因此我在 ABL API 中添加了一些逻辑，以便我们在构建处理程序时使用。我本想在这里同时介绍推送通知的两端，但本书已经写了 325 页以上，所以我将那部分内容作为免费博客提供给大家。[13]
 
-对于我们的推送通知，我们使用的是Google的Firebase平台，特别是Firebase Cloud Messaging库，在开始之前我们需要进行一些设置。
+对于我们的推送通知，我们使用的是 Google 的 Firebase 平台，特别是 Firebase Cloud Messaging 库，在开始之前我们需要进行一些设置。
 
-### 配置Firebase Cloud Messaging
+### 配置 Firebase Cloud Messaging
 
-由于我已经使用`dev.mfazio.abl`包名在Firebase中注册了ABL应用，你可以直接使用我提供的同一个`google-services.json`文件。该文件位于`chapter-13/code-to-copy`文件夹中，应将其复制到应用的顶级目录中，与应用的`build.gradle`文件并列。
+由于我已经使用 `dev.mfazio.abl` 包名在 Firebase 中注册了 ABL 应用，你可以直接使用我提供的同一个 `google-services.json` 文件。该文件位于 `chapter-13/code-to-copy` 文件夹中，应将其复制到应用的顶级目录中，与应用的 `build.gradle` 文件并列。
 
-说到`build.gradle`，我们还需要对这两个文件进行一些更改。从项目的文件开始，我们需要新的`gms_version`和`firebase_version`版本变量，以及一个`classpath`依赖项：
+说到 `build.gradle`，我们还需要对这两个文件进行一些更改。从项目的文件开始，我们需要新的 `gms_version` 和 `firebase_version` 版本变量，以及一个 `classpath` 依赖项：
 
 ```
 dependencies {
@@ -10141,13 +10090,12 @@ dependencies {
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
     classpath "com.google.gms:google-services:$gms_version"
-
     // NOTE: Do not place your application dependencies here; they belong
     // in the individual module build.gradle files
 }
 ```
 
-然后在应用的`build.gradle`中，我们需要一个新的插件：
+然后在应用的 `build.gradle` 中，我们需要一个新的插件：
 
 ```
 plugins {
@@ -10159,21 +10107,19 @@ plugins {
 }
 ```
 
-我们还需要一个新的依赖项。虽然在这种情况下并非完全必要，但我将使用Firebase物料清单*平台*依赖项，以使每个Firebase依赖项使用相同的版本。再次说明，这在目前并不是特别有用，因为我们这里只有一个依赖项；但在实际应用中你可能需要更多，所以我想让你知道这个功能的存在：
+我们还需要一个新的依赖项。虽然在这种情况下并非完全必要，但我将使用 Firebase 物料清单*平台*依赖项，以使每个 Firebase 依赖项使用相同的版本。再次说明，这在目前并不是特别有用，因为我们这里只有一个依赖项；但在实际应用中你可能需要更多，所以我想让你知道这个功能的存在：
 
 ```
 implementation platform(
     "com.google.firebase:firebase-bom:$firebase_version"
 )
-
 //All our other dependencies are still here
-
 implementation "com.google.firebase:firebase-messaging-ktx"
 ```
 
-现在依赖项已经就位，最后的步骤是更新`AndroidManifest.xml`并添加一个`ABLFirebaseMessagingService`类，以便应用知道如何处理传入的消息。在`AndroidManifest.xml`中，我们还将设置一些通知默认值。
+现在依赖项已经就位，最后的步骤是更新 `AndroidManifest.xml` 并添加一个 `ABLFirebaseMessagingService` 类，以便应用知道如何处理传入的消息。在 `AndroidManifest.xml` 中，我们还将设置一些通知默认值。
 
-在`<activity>`标签之后的`<application>`标签内，我们需要添加一个新的`<service>`标签，并设置`com.google.firebase.MESSAGING_EVENT`意图过滤器。在这里，我们将列出下一节中创建的`FirebaseMessagingService`子类：
+在 `<activity>` 标签之后的 `<application>` 标签内，我们需要添加一个新的 `<service>` 标签，并设置 `com.google.firebase.MESSAGING_EVENT` 意图过滤器。在这里，我们将列出下一节中创建的 `FirebaseMessagingService` 子类：
 
 ```
 <service
@@ -10185,7 +10131,7 @@ implementation "com.google.firebase:firebase-messaging-ktx"
 </service>
 ```
 
-此外，我们可以通过在新的`<service>`标签下方添加一些`<meta-data>`标签来为传入的推送通知设置一些默认值：
+此外，我们可以通过在新的 `<service>` 标签下方添加一些 `<meta-data>` 标签来为传入的推送通知设置一些默认值：
 
 ```
 <meta-data
@@ -10202,13 +10148,13 @@ implementation "com.google.firebase:firebase-messaging-ktx"
     android:value="@string/default_notification_channel_id" />
 ```
 
-前面的设置将默认使用ABL标志作为图标，使用我们为ABL标志使用的Android绿色，以及默认通知渠道（我们已将其设置为字符串资源）。如果需要，我们始终可以从服务器端覆盖这些设置。
+前面的设置将默认使用 ABL 标志作为图标，使用我们为 ABL 标志使用的 Android 绿色，以及默认通知渠道（我们已将其设置为字符串资源）。如果需要，我们始终可以从服务器端覆盖这些设置。
 
-现在配置已经完成，我们可以开始构建`ABLFirebaseMessagingService`，这是处理传入推送通知的主要位置。无论何时收到前台通知（意味着我们的应用当前正在被查看/使用）或数据通知（我们稍后会介绍），都将使用此类。
+现在配置已经完成，我们可以开始构建 `ABLFirebaseMessagingService`，这是处理传入推送通知的主要位置。无论何时收到前台通知（意味着我们的应用当前正在被查看/使用）或数据通知（我们稍后会介绍），都将使用此类。
 
-### 使用FirebaseMessagingService处理推送通知
+### 使用 FirebaseMessagingService 处理推送通知
 
-首先，将`ABLFirebaseMessagingService`添加到notifications包中：
+首先，将 `ABLFirebaseMessagingService` 添加到 notifications 包中：
 
 ```kotlin
 class ABLFirebaseMessagingService : FirebaseMessagingService() {
@@ -10218,11 +10164,11 @@ class ABLFirebaseMessagingService : FirebaseMessagingService() {
 }
 ```
 
-`FirebaseMessagingService`还有其他函数，但我们只关心`onMessageReceived`函数。它接收一个包含所有推送通知信息的`RemoteMessage`，以便我们做出响应。在我们的案例中，该响应是像我们在`NotificationsFragment`内部那样自己显示一个通知。
+`FirebaseMessagingService` 还有其他函数，但我们只关心 `onMessageReceived` 函数。它接收一个包含所有推送通知信息的 `RemoteMessage`，以便我们做出响应。在我们的案例中，该响应是像我们在 `NotificationsFragment` 内部那样自己显示一个通知。
 
-我们将设置`ABLFirebaseMessagingService`来处理玩家和团队的推送通知。由于两种类型的推送通知处理方式基本相同，我们希望准备一个`NotificationConfig`对象，然后将其发送到通用的通知块中。这意味着当`onMessageReceived`被调用时，我们将`RemoteMessage`发送到一个创建`NotificationConfig`实例的函数中，然后使用该实例来填充`NotificationCompat`生成所需的各个部分。
+我们将设置 `ABLFirebaseMessagingService` 来处理玩家和团队的推送通知。由于两种类型的推送通知处理方式基本相同，我们希望准备一个 `NotificationConfig` 对象，然后将其发送到通用的通知块中。这意味着当 `onMessageReceived` 被调用时，我们将 `RemoteMessage` 发送到一个创建 `NotificationConfig` 实例的函数中，然后使用该实例来填充 `NotificationCompat` 生成所需的各个部分。
 
-一旦我们把所有部分都放在一起，这一点应该会更清楚。第一个函数将是`createNotificationConfig`，它接收一个`Context`对象和当前的`RemoteMessage`。然后我们检查消息上的`destination`属性，并使用它来确定我们将发送哪种类型的通知（如果无法确定正确的类型，则返回null）。
+一旦我们把所有部分都放在一起，这一点应该会更清楚。第一个函数将是 `createNotificationConfig`，它接收一个 `Context` 对象和当前的 `RemoteMessage`。然后我们检查消息上的 `destination` 属性，并使用它来确定我们将发送哪种类型的通知（如果无法确定正确的类型，则返回 null）。
 
 这里的逻辑如下：
 
@@ -10240,27 +10186,9 @@ private fun createNotificationConfig(
                 textInput = message.data["playerName"] ?: "N/A",
                 smallIconId = R.drawable.ic_baseline_directions_run_24,
                 destinationId = R.id.singlePlayerFragment,
-                arguments = mapOf(
-                    "playerId" to (message.data["playerId"] ?: ""),
-                    "playerName" to (message.data["playerName"] ?: "")
-                )
-            )
-        ctx.getString(R.string.notification_destination_team) ->
-            NotificationConfig(
-                id = 11,
-                channel = ABLNotificationChannel.Teams,
-                titleInput = message.data["teamName"] ?: "N/A",
-                textInput = message.data["teamName"] ?: "N/A",
-                smallIconId = R.drawable.ic_baseline_outlined_flag_24,
-                destinationId = R.id.singleTeamFragment,
-                arguments = mapOf(
-                    "teamId" to (message.data["teamId"] ?: ""),
-                    "teamName" to (message.data["teamName"] ?: "")
-                )
-            )
-        else -> null
-    }
 ```
+
+
 
 使用`when`块，我们设置通知的ID、渠道、标题、正文文本、图标、目标位置和参数。另外，为了清晰起见，我在这里使用了命名参数，因为一眼很难看出每个部分的含义。它们不是必需的，但在这种情况下可能会有所帮助。
 
@@ -10272,58 +10200,57 @@ private fun createNotificationConfig(
 override fun onMessageReceived(message: RemoteMessage) {
     baseContext?.let { ctx ->
         createNotificationConfig(ctx, message)?.let { config ->
-```
+            val pendingIntent = NavDeepLinkBuilder(ctx)
+                .setGraph(R.navigation.nav_graph)
+                .setDestination(config.destinationId)
+                .setArguments(Bundle().apply {
+                    config.arguments.forEach {
+                        (key, value) -> putString(key, value)
+                    }
+                }).createPendingIntent()
 
-val pendingIntent = NavDeepLinkBuilder(ctx)
-    .setGraph(R.navigation.nav_graph)
-    .setDestination(config.destinationId)
-    .setArguments(Bundle().apply {
-        config.arguments.forEach {
-            (key, value) -> putString(key, value)
+            val notification =
+                NotificationCompat.Builder(ctx, config.channel.channelId)
+                    .setContentTitle(ctx.getString(
+                        R.string.generic_push_title,
+                        config.titleInput
+                    ))
+                    .setContentText(ctx.getString(
+                        R.string.generic_push_description,
+                        config.textInput
+                    ))
+                    .setStyle(NotificationCompat.BigTextStyle().bigText(
+                        ctx.getString(
+                            R.string.generic_push_description,
+                            config.textInput
+                        )
+                    ))
+                    .setSmallIcon(config.smallIconId)
+                    .setContentIntent(pendingIntent)
+                    .setAutoCancel(true)
+                    .build()
+
+            NotificationManagerCompat.from(ctx).notify(config.id, notification)
         }
-    }).createPendingIntent()
-
-val notification =
-    NotificationCompat.Builder(ctx, config.channel.channelId)
-        .setContentTitle(ctx.getString(
-            R.string.generic_push_title,
-            config.titleInput
-        ))
-        .setContentText(ctx.getString(
-            R.string.generic_push_description,
-            config.textInput
-        ))
-        .setStyle(NotificationCompat.BigTextStyle().bigText(
-            ctx.getString(
-                R.string.generic_push_description,
-                config.textInput
-            )
-        ))
-        .setSmallIcon(config.smallIconId)
-        .setContentIntent(pendingIntent)
-        .setAutoCancel(true)
-        .build()
-
-NotificationManagerCompat.from(ctx).notify(config.id, notification)
+    }
 }
-}
-}
-
-这看起来可能有很多逻辑，但现在你应该或多或少已经熟悉了。与之前通知的最大区别在于，我们使用了 `NotificationConfig` 对象来填充这里的所有部分。此外，`ctx.getString` 调用也更复杂，因为我们向字符串资源值传入了一个参数。这是一个方便的技巧，当你在代码中使用字符串资源时随时可以使用。
-
-至此，这个类就完成了。正如我提到的，`FirebaseMessagingService` 还提供了许多其他函数，但我们的用例不需要它们。我确实想提一下 `onNewToken` 函数，它在每次分配新的通知令牌时被调用。如果我们想将给定用户的通知令牌与其用户账户一起保存，这会很方便。我们这里没有这样做，但我们*确实*会以另一种方式获取该令牌，然后在我们想向自己发送推送通知时将其添加到我们的服务器请求中。
-
-### 向你的设备发送推送通知
-
-我们将回到 `NotificationsFragment` 类，处理三个额外的项目。每个项目都将获取我之前提到的通知令牌之一，然后向我们的服务器发送一个通知请求。反过来，服务器会告诉 Firebase 向你的设备发送通知。该通知令牌用于标识设备，因此这样你在测试期间只需担心向自己发送消息。
-
-为了获取要发送给服务器的令牌，我们将使用 `FirebaseMessaging` 类及其 `token` 属性。该属性有一个名为 `addOnCompleteListener` 的函数，它在令牌请求完成后（无论成功与否）被调用。在其中，我们确保调用成功，然后向服务器发送请求。如果调用不成功，我们就直接退出。
-
-由于我们对所有三个通知执行相同的操作，我们希望有一个单独的函数来处理这个逻辑。`getTokenAndSendRequest` 将获取一个令牌，如果成功，则调用我们传入 `getTokenAndSendRequest` 的 `request` 挂起函数。我们还需要一个 `CoroutineScope`，因为我们正在进行 API 调用。通过将 `request` 设为参数，我们可以在使用相同的 `getTokenAndSendRequest` 函数时，在代码块中包含自定义逻辑。
-
-如果我们查看代码，事情可能会更清楚。添加一个用于日志记录的 TAG，然后我们就可以完成 `getTokenAndSendRequest`。以下是该函数的完整内容：
-
 ```
+
+这看起来可能有很多逻辑，但现在你应该或多或少已经熟悉了。与之前通知的最大区别在于，我们使用了`NotificationConfig`对象来填充这里的所有部分。此外，`ctx.getString`调用也更复杂，因为我们向字符串资源值传入了一个参数。这是一个方便的技巧，当你在代码中使用字符串资源时随时可以使用。
+
+至此，这个类就完成了。正如我提到的，`FirebaseMessagingService`还提供了许多其他函数，但我们的用例不需要它们。我确实想提一下`onNewToken`函数，它在每次分配新的通知令牌时被调用。如果我们想将给定用户的通知令牌与其用户账户一起保存，这会很方便。我们这里没有这样做，但我们*确实*会以另一种方式获取该令牌，然后在我们想向自己发送推送通知时将其添加到我们的服务器请求中。
+
+## 向你的设备发送推送通知
+
+我们将回到`NotificationsFragment`类，处理三个额外的项目。每个项目都将获取我之前提到的通知令牌之一，然后向我们的服务器发送一个通知请求。反过来，服务器会告诉Firebase向你的设备发送通知。该通知令牌用于标识设备，因此这样你在测试期间只需担心向自己发送消息。
+
+为了获取要发送给服务器的令牌，我们将使用`FirebaseMessaging`类及其`token`属性。该属性有一个名为`addOnCompleteListener`的函数，它在令牌请求完成后（无论成功与否）被调用。在其中，我们确保调用成功，然后向服务器发送请求。如果调用不成功，我们就直接退出。
+
+由于我们对所有三个通知执行相同的操作，我们希望有一个单独的函数来处理这个逻辑。`getTokenAndSendRequest`将获取一个令牌，如果成功，则调用我们传入`getTokenAndSendRequest`的`request`挂起函数。我们还需要一个`CoroutineScope`，因为我们正在进行API调用。通过将`request`设为参数，我们可以在使用相同的`getTokenAndSendRequest`函数时，在代码块中包含自定义逻辑。
+
+如果我们查看代码，事情可能会更清楚。添加一个用于日志记录的`TAG`，然后我们就可以完成`getTokenAndSendRequest`。以下是该函数的完整内容：
+
+```kotlin
 private fun getTokenAndSendRequest(
     coroutineScope: CoroutineScope,
     request: suspend (token: String) -> Unit
@@ -10347,9 +10274,9 @@ private fun getTokenAndSendRequest(
 }
 ```
 
-然后，`request` 属性在每个 `NotificationItem` 内部定义为函数调用后的一个代码块：
+然后，`request`属性在每个`NotificationItem`内部定义为函数调用后的一个代码块：
 
-```
+```kotlin
 NotificationItem(
     4,
     "Push - Player",
@@ -10369,13 +10296,13 @@ NotificationItem(
 }
 ```
 
-另外两个推送通知看起来与此大同小异。我们配置 `NotificationItem`，然后添加一个包含 `getTokenAndSendRequest` 加上我们的 API 调用的主体。然而，我在这两个通知中添加了一个延迟。这将给你时间最小化应用，如果你想测试不同的推送通知场景。
+另外两个推送通知看起来与此大同小异。我们配置`NotificationItem`，然后添加一个包含`getTokenAndSendRequest`加上我们的API调用的主体。然而，我在这两个通知中添加了一个延迟。这将给你时间最小化应用，如果你想测试不同的推送通知场景。
 
-最小化应用很重要，因为 Android 处理推送通知的方式。如果应用在前台，我们使用 `ABLFirebaseMessagingService` 来处理消息。但如果应用在后台，那么我们会看到由操作系统处理的通知。如果我们想跳过这种可能性，而是始终让 `ABLFirebaseMessagingService` 处理，我们可以从服务器发送一个“数据”类型的通知。这告诉设备不要自动显示通知，而是始终由应用处理。在服务器端如何处理推送通知，由你决定。
+最小化应用很重要，因为Android处理推送通知的方式。如果应用在前台，我们使用`ABLFirebaseMessagingService`来处理消息。但如果应用在后台，那么我们会看到由操作系统处理的通知。如果我们想跳过这种可能性，而是始终让`ABLFirebaseMessagingService`处理，我们可以从服务器发送一个“数据”类型的通知。这告诉设备不要自动显示通知，而是始终由应用处理。在服务器端如何处理推送通知，由你决定。
 
-回到我们的 `NotificationItem` 对象列表，我们可以包含这两个延迟通知。请注意，后者也是一个数据通知：
+回到我们的`NotificationItem`对象列表，我们可以包含这两个延迟通知。请注意，后者也是一个数据通知：
 
-```
+```kotlin
 NotificationItem(
     5,
     "Push - Team (Delayed)",
@@ -10397,7 +10324,7 @@ NotificationItem(
 }
 ```
 
-```
+```kotlin
 NotificationItem(
     6,
     "Push - Player (Delayed, Data)",
@@ -10423,21 +10350,21 @@ NotificationItem(
 
 ![](img/c024742480e86eb8867e0760ebe353d7_457_0.png)
 
-左侧是我们从 [ABLFirebaseMessagingService](https://example.com) 内部进行的处理，右侧使用的是服务器代码中设置的配置。操作系统自动处理后台应用的通知显示当然很方便，但能够选择自己处理也很有价值。
+左侧是我们从`ABLFirebaseMessagingService`内部进行的处理，右侧使用的是服务器代码中设置的配置。操作系统自动处理后台应用的通知显示当然很方便，但能够选择自己处理也很有价值。
 
-至此，我们已经完成了本地通知和推送通知的设置。你可以做的远不止我们在这里所做的，但这是一个很好的起点，可以将通知添加到你自己的应用中。只是别惹恼你的用户！在我们结束本章之前，请回忆一下，本章是关于向应用内*和*外发送数据的。我们已经充分涵盖了“内”的部分，但“外”的部分呢？为此，我们将探讨 Android 中的分享功能，以及如何快速地将（深度）链接发送给我们的朋友。
+至此，我们已经完成了本地通知和推送通知的设置。你可以做的远不止我们在这里所做的，但这是一个很好的起点，可以将通知添加到你自己的应用中。只是别惹恼你的用户！在我们结束本章之前，请回忆一下，本章是关于向应用内*和*外发送数据的。我们已经充分涵盖了“内”的部分，但“外”的部分呢？为此，我们将探讨Android中的分享功能，以及如何快速地将（深度）链接发送给我们的朋友。
 
-### 通过 Android 分享面板分享链接
+## 通过Android分享面板分享链接
 
 你可能见过这种情况：一个应用有一个两行三点的分享图标，点击它会显示类似[此图](https://example.com/shown)所示的内容。
 
 ![](img/c024742480e86eb8867e0760ebe353d7_459_0.png)
 
-我们将为球队和球员页面都添加分享功能，这需要在每个页面的 [ViewModel](https://example.com/viewmodel) 中添加一个分享按钮和一些逻辑。你应该在开始时已将其复制到你的项目中，但如果没有，请添加一个新的分享矢量资源：
+我们将为球队和球员页面都添加分享功能，这需要在每个页面的[ViewModel](https://example.com/viewmodel)中添加一个分享按钮和一些逻辑。你应该在开始时已将其复制到你的项目中，但如果没有，请添加一个新的分享矢量资源：
 
 ![](img/c024742480e86eb8867e0760ebe353d7_459_1.png)
 
-然后我们需要为球员和球队都添加分享按钮。我们将从 `fragment_single_player.xml` 开始，因为它比另一个更简单：
+然后我们需要为球员和球队都添加分享按钮。我们将从`fragment_single_player.xml`开始，因为它比另一个更简单：
 
 ```xml
 <Button
@@ -10455,7 +10382,7 @@ NotificationItem(
     app:layout_constraintTop_toBottomOf="@id/singlePlayerStats" />
 ```
 
-`vm.sharePlayer` 函数还不存在，这没关系，我们稍后会实现。首先，我们希望为单个球队也更新 XML。这包括添加新按钮并重新排列“查看阵容”按钮：
+`vm.sharePlayer`函数还不存在，这没关系，我们稍后会实现。首先，我们希望为单个球队也更新XML。这包括添加新按钮并重新排列“查看阵容”按钮：
 
 ```xml
 <Button
@@ -10466,11 +10393,17 @@ NotificationItem(
     android:backgroundTint="@{vm.team.primaryColorId}"
     android:onClick="@{viewRosterButtonClickListener}"
     android:text="@string/view_roster"
-    app:icon="@drawable/ic_baseline_directions_run_24"
-    app:layout_constraintEnd_toStartOf="@id/teamShareTeam"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/teamDivisionStandings" />
 ```
+
+
+
+`app:icon="@drawable/ic_baseline_directions_run_24"`
+
+`app:layout_constraintEnd_toStartOf="@id/teamShareTeam"`
+
+`app:layout_constraintStart_toStartOf="parent"`
+
+`app:layout_constraintTop_toBottomOf="@id/teamDivisionStandings" />`
 
 ```xml
 <Button
@@ -10486,9 +10419,9 @@ NotificationItem(
     app:layout_constraintEnd_toEndOf="parent"/>
 ```
 
-顺便说一下，我知道我们在这里对 `android:onClick` 属性采用了两种不同的方法，这是有意为之。目的是向你展示在代码中添加点击处理程序时可以采用的两种方法。说到点击处理程序，我们需要在 `ViewModel` 类中实现它们。我们可以从 `SinglePlayerViewModel` 开始。
+顺便说一下，我知道我们在这里对`android:onClick`属性采用了两种不同的方法，这是有意为之。目的是向你展示在代码中添加点击处理程序时可以采用的两种方法。说到点击处理程序，我们需要在`ViewModel`类中实现它们。我们可以从`SinglePlayerViewModel`开始。
 
-在这里，`sharePlayer` 函数将获取当前的 `playerWithStats` 值，并（如果它不为 `null`），使用它来构建一个 `Intent`。这个 `Intent` 对象将设置一个将文本发送到另一个应用的操作。我们可以使用我们在[通过深层链接直接导航](https://link.mfazio.dev/)中创建的深层链接 URL，因为它们会将用户直接带到给定页面。然后我们使用 `Intent.createChooser` 函数和 `startActivity` 来显示分享面板。以下是整个函数：
+在这里，`sharePlayer`函数将获取当前的`playerWithStats`值，并（如果它不为`null`），使用它来构建一个`Intent`。这个`Intent`对象将设置一个将文本发送到另一个应用的操作。我们可以使用我们在[通过深层链接直接导航](https://link.mfazio.dev/)中创建的深层链接 URL，因为它们会将用户直接带到给定页面。然后我们使用`Intent.createChooser`函数和`startActivity`来显示分享面板。以下是整个函数：
 
 ```kotlin
 fun sharePlayer(view: View) {
@@ -10503,18 +10436,16 @@ fun sharePlayer(view: View) {
             )
             type = "text/plain"
         }
-
         val shareIntent =
             Intent.createChooser(sendIntent, "Share ${player.fullName}")
-
         view.context.startActivity(shareIntent)
     }
 }
 ```
 
-注意我们如何对球员姓名进行编码以从链接中移除空格。如果我们不这样做，接收消息的人可能会遇到链接失效的问题。此外，我们可以使用传入视图的 `Context` 来启动分享 `Activity`，而不必打开从 `AndroidViewModel` 传来的 `application` 值。
+注意我们如何对球员姓名进行编码以从链接中移除空格。如果我们不这样做，接收消息的人可能会遇到链接失效的问题。此外，我们可以使用传入视图的`Context`来启动分享`Activity`，而不必打开从`AndroidViewModel`传来的`application`值。
 
-正如你可能猜到的，`SingleTeamViewModel` 中的 `shareTeam` 函数看起来非常相似：
+正如你可能猜到的，`SingleTeamViewModel`中的`shareTeam`函数看起来非常相似：
 
 ```kotlin
 fun shareTeam(view: View) {
@@ -10529,10 +10460,8 @@ fun shareTeam(view: View) {
             )
             type = "text/plain"
         }
-
         val shareIntent =
             Intent.createChooser(sendIntent, "Share ${team.teamName}")
-
         view.context.startActivity(shareIntent)
     }
 }
@@ -10568,35 +10497,35 @@ Android 棒球联盟应用已完成！我们从零开始构建了这个应用，
 
 但是，如果你想了解更多信息，或者不熟悉如何测试软件应用程序，官方 Android 文档提供了大量信息和一些代码实验室。如果你想了解我在这里提供的信息之外的更多内容，我强烈建议你查看这些内容。[15]
 
-现在，我假设你是在完成一个（很可能是 Penny Drop）或两个应用之后来到这里的。如果由于某种原因你还没有完成，那也没关系，但你会希望使用我们随书提供的代码来进行测试。本章的前半部分使用的是第 4 章添加 GameHandler 之后、但添加任何 Room 之前的代码。
+现在，我假设你是在完成一个（很可能是 Penny Drop）或两个应用之后来到这里的。如果由于某种原因你还没有完成，那也没关系，但你会希望使用我们随书提供的代码来进行测试。本章的前半部分使用的是第 4 章添加 `GameHandler` 之后、但添加任何 Room 之前的代码。
 
-第5章中的功能。这使得ViewModel测试更加容易。一旦我们进入本章的后半部分，我们将切换到第7章之后的最终代码。我会在切换代码库时通知你。
+第5章中的功能。这使得`ViewModel`测试更加容易。一旦我们进入本章的后半部分，我们将切换到第7章之后的最终代码。我会在切换代码库时通知你。
 
-在本章中，我们将介绍如何建立基本的单元测试，然后深入探讨如何测试带有LiveData对象的ViewModel类。最后，我们将了解如何使用本地Room数据库测试我们的PennyDropDao类。
+在本章中，我们将介绍如何建立基本的单元测试，然后深入探讨如何测试带有`LiveData`对象的`ViewModel`类。最后，我们将了解如何使用本地 Room 数据库测试我们的`PennyDropDao`类。
 
 ### 添加单元测试
 
-我们从基础测试级别开始，即JUnit *单元测试*。如果你不熟悉，单元测试是验证我们代码中单个部分是否正常工作的方法。这是一个通用的软件开发概念，而非Android概念，适用于各种应用程序。
+我们从基础测试级别开始，即 JUnit *单元测试*。如果你不熟悉，单元测试是验证我们代码中单个部分是否正常工作的方法。这是一个通用的软件开发概念，而非 Android 概念，适用于各种应用程序。
 
-JUnit是大多数Android单元测试使用的测试框架，其依赖项已包含在你的应用程序中。它在构建应用时使用得如此频繁，以至于默认的Android模板就包含了它。JUnit提供了许多注解和函数，用于测试时帮助编写测试并使其更具可读性。
+JUnit 是大多数 Android 单元测试使用的测试框架，其依赖项已包含在你的应用程序中。它在构建应用时使用得如此频繁，以至于默认的 Android 模板就包含了它。JUnit 提供了许多注解和函数，用于测试时帮助编写测试并使其更具可读性。
 
-特别是，我们将在测试中使用`@Test`、`@Before`和`@BeforeClass`注解。`@Test`注解将一个函数标记为单元测试，让Android Studio知道这是一个需要运行的单个测试。通过这样做，IDE可以从UI运行每个测试，并为你提供成功和/或失败的测试列表。
+特别是，我们将在测试中使用`@Test`、`@Before`和`@BeforeClass`注解。`@Test`注解将一个函数标记为单元测试，让 Android Studio 知道这是一个需要运行的单个测试。通过这样做，IDE 可以从 UI 运行每个测试，并为你提供成功和/或失败的测试列表。
 
 `@Before`和`@BeforeClass`注解（以及它们的对应项`@After`和`@AfterClass`）有助于设置你的测试。这些注解允许代码在每个测试之前和之后运行，或者在所有测试之前和之后运行，以防我们需要为每个场景进行相同的设置。当我们开始测试`GameViewModel`时，我们将看到这些是如何工作的。
 
-虽然默认的项目模板确实给了我们JUnit依赖项和一个基本的`ExampleUnitTest`类，但我们还需要添加一些其他的库。
+虽然默认的项目模板确实给了我们 JUnit 依赖项和一个基本的`ExampleUnitTest`类，但我们还需要添加一些其他的库。
 
-- `androidx.test:core-ktx`：核心AndroidX测试库，具有许多功能，特别是我们将在本章后面看到的`getApplicationContext`函数。
-- `androidx.test.ext:junit-ktx`：包含用于JUnit测试的Kotlin特定扩展函数/类型，例如[AndroidJUnit4](https://developer.android.com/reference/androidx/test/ext/junit4/AndroidJUnit4)类（我们稍后会使用）。
-- `androidx.arch.core:core-testing`：用于使用架构组件进行测试的测试辅助工具，在我们的例子中是[GameViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)。
+- `androidx.test:core-ktx`：核心 AndroidX 测试库，具有许多功能，特别是我们将在本章后面看到的`getApplicationContext`函数。
+- `androidx.test.ext:junit-ktx`：包含用于 JUnit 测试的 Kotlin 特定扩展函数/类型，例如 [AndroidJUnit4](https://developer.android.com/reference/androidx/test/ext/junit4/AndroidJUnit4) 类（我们稍后会使用）。
+- `androidx.arch.core:core-testing`：用于使用架构组件进行测试的测试辅助工具，在我们的例子中是 [GameViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)。
 
 在项目的`build.gradle`文件中添加这些库的最新版本及其相关的版本变量，就像我们在本书中多次做过的那样。同步项目后，打开项目中的测试目录。
 
-它将与应用程序具有相同的包名，但Android Studio会像这样在括号中显示*test*一词：
+它将与应用程序具有相同的包名，但 Android Studio 会像这样在括号中显示 *test* 一词：
 
 ![](img/c024742480e86eb8867e0760ebe353d7_469_0.png)
 
-在这里，Android Studio很贴心地创建了[ExampleUnitTest](https://developer.android.com/training/testing/unit-testing)类，其中包含一个单元测试。如果你熟悉JUnit，请直接删除该类。如果JUnit和/或单元测试对你来说是新的，请查看[addition_isCorrect](https://developer.android.com/training/testing/unit-testing)测试函数，*然后*删除该类。相反，我们将构建[GameHandlerTests](https://developer.android.com/training/testing/unit-testing)，它将专注于[GameHandler.pass](https://developer.android.com/training/testing/unit-testing)函数。
+在这里，Android Studio 很贴心地创建了 [ExampleUnitTest](https://developer.android.com/training/testing/unit-testing) 类，其中包含一个单元测试。如果你熟悉 JUnit，请直接删除该类。如果 JUnit 和/或单元测试对你来说是新的，请查看 [addition_isCorrect](https://developer.android.com/training/testing/unit-testing) 测试函数，*然后*删除该类。相反，我们将构建 [GameHandlerTests](https://developer.android.com/training/testing/unit-testing)，它将专注于 [GameHandler.pass](https://developer.android.com/training/testing/unit-testing) 函数。
 
 ### 添加第一个单元测试
 
@@ -10609,7 +10538,7 @@ fun `Test nextPlayer() via pass() function`() {
 }
 ```
 
-我猜你这里的反应要么是惊讶，要么是困惑。对于测试类（*仅*测试类）在Kotlin中，我们可以创建包含空格和符号的函数名。你*技术上*可以包含表情符号，但请不要这样做。此外，Android Studio会为此对你大喊大叫。
+我猜你这里的反应要么是惊讶，要么是困惑。对于测试类（*仅*测试类）在 Kotlin 中，我们可以创建包含空格和符号的函数名。你*技术上*可以包含表情符号，但请不要这样做。此外，Android Studio 会为此对你大喊大叫。
 
 ```kotlin
 @Test
@@ -10617,25 +10546,25 @@ fun `Test nextPlayer() via pass() function`() {
 fun `Test nextPlayer() via pass() function 🤦`() {
 ```
 
-能够将人类可读的句子作为函数名，而不是驼峰式的`testNextPlayerViaPassFunction`，在浏览类时很有帮助，但当我们使用Android Studio中的测试摘要视图时，它真正大放异彩。当我们运行测试时（通常在IDE底部的Run选项卡中），此窗口会弹出，并列出你刚刚运行的所有测试。它显示测试类、每个测试的名称以及每个测试的状态。
+能够将人类可读的句子作为函数名，而不是驼峰式的`testNextPlayerViaPassFunction`，在浏览类时很有帮助，但当我们使用 Android Studio 中的测试摘要视图时，它真正大放异彩。当我们运行测试时（通常在 IDE 底部的 Run 选项卡中），此窗口会弹出，并列出你刚刚运行的所有测试。它显示测试类、每个测试的名称以及每个测试的状态。
 
 ![](img/c024742480e86eb8867e0760ebe353d7_470_0.png)
 
 从这里，我们可以看到哪些测试通过了，哪些测试失败了。此外，如果我们有一个特别耗时的测试套件，我们可以使用第二个按钮（带有红色圆圈+白色感叹号的播放按钮）仅重新运行失败的测试。虽然对于只有几个测试的情况，它对我们帮助不大，但当你有多个类，每个类都有多个测试时，它非常方便。
 
-### Kotlin中的反引号
+### Kotlin 中的反引号
 
 ![](img/c024742480e86eb8867e0760ebe353d7_471_0.png)
 
 虽然我已经非常清楚反引号应该只用于测试类中的函数名，但我们也可能遇到需要在普通类中使用它们的情况。
 
-存在这样的可能性：一个Java方法与Kotlin中的关键字同名（例如，`in`、`is`、`object`等），通常无法从Kotlin端调用。但我们可以在Kotlin代码中使用反引号来转义方法名：
+存在这样的可能性：一个 Java 方法与 Kotlin 中的关键字同名（例如，`in`、`is`、`object`等），通常无法从 Kotlin 端调用。但我们可以在 Kotlin 代码中使用反引号来转义方法名：
 
 ```kotlin
 item.`is`(ready)
 ```
 
-这不太可能发生，但为了确保Java和Kotlin代码之间的完全兼容性，这是可能的，所以请意识到这个功能的存在。
+这不太可能发生，但为了确保 Java 和 Kotlin 代码之间的完全兼容性，这是可能的，所以请意识到这个功能的存在。
 
 正如你从我们的函数名中读到的，我们将确保`nextPlayer`函数正常工作，但通过`pass`函数来实现。我们不直接测试`pass`函数的原因是它在`GameHandler`内部是`private`的。
 
@@ -10662,12 +10591,11 @@ val testPlayers = listOf(
     Player("Hazel", true),
     Player("Riverboat Ron", false, selectedAI = AI.basicAI[5])
 )
-
 val currentPlayer = testPlayers.first { it.playerName == "Emily" }
 val nextPlayer = testPlayers.first { it.playerName == "Hazel" }
 ```
 
-有了这些，我们然后调用`GameHandler.pass`并检查结果。对于这个场景，一个很好的Kotlin语法是`also`块。它将运行该函数，然后在块内给我们`result`进行测试。
+有了这些，我们然后调用`GameHandler.pass`并检查结果。对于这个场景，一个很好的 Kotlin 语法是`also`块。它将运行该函数，然后在块内给我们`result`进行测试。
 
 ```kotlin
 GameHandler.pass(testPlayers, currentPlayer).also { result ->
@@ -10675,9 +10603,11 @@ GameHandler.pass(testPlayers, currentPlayer).also { result ->
 }
 ```
 
-我们将使用JUnit的`Assert`类来检查结果。该类包含许多函数，用于确保值符合我们的预期，如果不符则提醒JUnit框架。在我们的例子中，我们将从两个函数开始：`assertTrue`和`assertEquals`。前者确认作为参数传入的值为`true`，而后者检查第二个参数（来自`GameHandler.pass`的`TurnResult`）是否等于第一个（预期）参数。
 
-我们将在测试中包含四个断言：玩家已更改，回合以Pass操作结束，我们传入的`currentPlayer`现在是上一个玩家，我们设置的`nextPlayer`现在正在掷骰子。包含这四个测试看起来像这样：
+
+我们将使用 JUnit 的 `Assert` 类来检查结果。该类包含许多函数，用于确保值符合我们的预期，如果不符则提醒 JUnit 框架。在我们的例子中，我们将从两个函数开始：`assertTrue` 和 `assertEquals`。前者确认作为参数传入的值为 `true`，而后者检查第二个参数（来自 `GameHandler.pass` 的 `TurnResult`）是否等于第一个（预期）参数。
+
+我们将在测试中包含四个断言：玩家已更改，回合以 Pass 操作结束，我们传入的 `currentPlayer` 现在是上一个玩家，我们设置的 `nextPlayer` 现在正在掷骰子。包含这四个测试看起来像这样：
 
 ```kotlin
 GameHandler.pass(testPlayers, currentPlayer).also { result ->
@@ -10688,8 +10618,9 @@ GameHandler.pass(testPlayers, currentPlayer).also { result ->
 }
 ```
 
-有了函数的这三个部分，我们就可以运行测试了。你应该在函数名左侧有绿色箭头，或者你可以右键单击一个函数来运行它。一旦它开始，Run窗口将弹出我之前提到的摘要窗格。如果你的测试成功（这里应该成功），那么你就完成了这个测试！如果没有，Run窗口内的主窗格应该会告诉你为什么出错，哪些断言失败了，以及关于你可以做什么的提示，正如你在示例[中看到的](https://example.com/shown)。
+有了函数的这三个部分，我们就可以运行测试了。你应该在函数名左侧有绿色箭头，或者你可以右键单击一个函数来运行它。一旦它开始，Run 窗口将弹出我之前提到的摘要窗格。如果你的测试成功（这里应该成功），那么你就完成了这个测试！如果没有，Run 窗口内的主窗格应该会告诉你为什么出错，哪些断言失败了，以及关于你可以做什么的提示，正如你在示例[中看到的](https://example.com/shown)。
 
+```
 java.lang.AssertionError:
 期望值：Player(playerName=Hazel, isHuman=true, selectedAI=null)
 实际值：Player(playerName=Michael, isHuman=true, selectedAI=null)
@@ -10700,6 +10631,7 @@ java.lang.AssertionError:
     at dev.mfazio.pennydrop.GameHandlerTests.checkNextPlayer(GameHandlerTests.kt:47)
     at dev.mfazio.pennydrop.GameHandlerTests.Test last nextPlayer() via pass()
 function(GameHandlerTests.kt:39) <31 个内部调用>
+```
 
 ### 添加另一个测试
 
@@ -10834,7 +10766,6 @@ private lateinit var testPlayers: List<Player>
 @Before
 fun initializeViewModel() {
     this.gameViewModel = GameViewModel()
-
     this.testPlayers = listOf(
         Player("Michael", true),
         Player("Emily", true),
@@ -10855,33 +10786,30 @@ fun initializeViewModel() {
 ```kotlin
 fun `Test StartGame on GameViewModel`() {
     this.gameViewModel.slots.value?.let { slots ->
-```
+        assertEquals(6, slots.size)
+        assertEquals(5, slots.count { it.canBeFilled })
+        assertEquals(0, slots.count { it.isFilled })
+    } ?: fail("GameViewModel 上的 slots 为空。")
 
-assertEquals(6, slots.size)
-assertEquals(5, slots.count { it.canBeFilled })
-assertEquals(0, slots.count { it.isFilled })
-} ?: fail("GameViewModel 上的 slots 为空。")
-
-// 稍后将包含测试的其余部分。
+    // 稍后将包含测试的其余部分。
 }
+```
 
 我们能够将 `fail` 调用直接链接到 `null` 检查，这一事实使得整个部分可以封装在一个表达式中，避免了创建一堆额外的值和 `if` 条件。
 
 接下来是我之前提到的其余断言。特别注意接下来代码块中的 `canRoll` 和 `canPass` 断言，因为它们使用了与我们过去相同的 `null` 安全方法。我们不必检查 `gameViewModel.canRoll.value` 是 `true` 还是 `false`，也不必处理 `null` 场景，而是可以使用 `== false` 来确保这些字段不是以 `true` 或 `null` 开始的。
 
-```
+```kotlin
 assertNull(this.gameViewModel.currentPlayer.value)
-
 assertTrue(this.gameViewModel.canRoll.value == false)
 assertTrue(this.gameViewModel.canPass.value == false)
-
 assertEquals("", this.gameViewModel.currentTurnText.value)
 assertEquals("", this.gameViewModel.currentStandingsText.value)
 ```
 
 初始化断言就绪后，是时候调用 `startGame` 了。我们传入测试前设置的 `testPlayers` 变量，然后继续进行其他断言。我们在这里执行相同的一组断言，但使用的是我们现在期望的值：
 
-```
+```kotlin
 this.gameViewModel.startGame(this.testPlayers)
 
 this.gameViewModel.slots.value?.let { slots ->
@@ -10891,6 +10819,9 @@ this.gameViewModel.slots.value?.let { slots ->
 } ?: fail("GameViewModel 上的 slots 为空。")
 ```
 
+
+
+```
 assertEquals(
     "Michael",
     this.gameViewModel.currentPlayer.value?.playerName
@@ -10908,9 +10839,9 @@ assertNotEquals("", this.gameViewModel.currentStandingsText.value)
 
 一旦你在测试函数中将这三个代码块组合在一起，就运行它。它应该会成功，但如果失败，请使用“运行”窗口中的输出面板获取一些关于问题所在的提示。一个测试现在完成了，我们可以继续进行下一个。
 
-### 添加第二个 ViewModel 测试
+## 添加第二个 ViewModel 测试
 
-下一个测试名为 *Test Roll on GameViewModel*，它将启动一个新游戏，执行一次掷骰，并检查结果。对于这个测试，我们不是直接访问 `LiveData` 对象上的 `value` 属性，而是要添加多个 `Observer` 对象来监听更新。这是进行 `LiveData` 测试的更好方法，因为这正是你在应用中使用 `LiveData` 对象的方式。
+下一个测试名为 `Test Roll on GameViewModel`，它将启动一个新游戏，执行一次掷骰，并检查结果。对于这个测试，我们不是直接访问 `LiveData` 对象上的 `value` 属性，而是要添加多个 `Observer` 对象来监听更新。这是进行 `LiveData` 测试的更好方法，因为这正是你在应用中使用 `LiveData` 对象的方式。
 
 使用 `Observer` 对象的唯一问题是，我们应该在完成后移除它们。如果只有一个测试使用它们，这不是什么大问题，但如果我们的测试套件中有上百个测试使用 `Observer` 对象，我们就会看到性能影响。移除对象本身不是什么大问题，但必须对每个我们检查的属性手动执行此操作很烦人。
 
@@ -10950,7 +10881,7 @@ fun <T> LiveData<T>.getOrAwaitValue(
 
 无需深入探讨，`CountDownLatch` 会阻止此函数的处理，直到计时器耗尽（我们设置为两秒）或观察者返回一个值。
 
-添加此函数后，我们可以在测试函数中使用它。这里的断言将与之前的 GameViewModel 测试类似，因为我们检查的是相同的 LiveData 对象，但现在是在一次掷骰发生之后。
+添加此函数后，我们可以在测试函数中使用它。这里的断言将与之前的 GameViewModel 测试类似，因为我们检查的是相同的 `LiveData` 对象，但现在是在一次掷骰发生之后。
 
 首先检查的可能是最关键的，即 slots。在检查 slots 是否存在之后，我们获取最后掷出的 slot 以确保它存在，然后根据掷出的 slot 检查已填充 slot 的数量。如果我们掷出六点，则不应有任何 slot 被填充。否则，应该有一个被填充。这是函数的第一部分，包括启动游戏和掷骰的调用：
 
@@ -10977,7 +10908,7 @@ fun `Test Roll on GameViewModel`() {
 }
 ```
 
-在 getOrAwaitValue 的帮助下，我们的断言与这个类中的第一个测试并没有太大不同。然而，这是对我们如何使用所有这些 LiveData 对象的更准确测试。
+在 `getOrAwaitValue` 的帮助下，我们的断言与这个类中的第一个测试并没有太大不同。然而，这是对我们如何使用所有这些 `LiveData` 对象的更准确测试。
 
 其余的测试以类似的方式继续。我们确保 `currentPlayer` 保持相同的值（因为我们知道在一次掷骰后它不会改变），`canRoll` 和 `canPass` 都应为 `true`，并且我们对屏幕底部的游戏信息文本内容进行一些检查。
 
@@ -11031,7 +10962,7 @@ this.gameViewModel.currentStandingsText
 
 这就是我们在这个测试类中需要做的全部工作！我们正在验证来自 `LiveData` 的所有值是否正确，同时正确使用 `Observer` 对象。这对 Penny Drop 项目绝对有帮助，但正如我们在第5章及后续章节中编写的代码那样，所有的 `LiveData` 都来自 `PennyDropDatabase`。为了测试这个流程，特别是 `PennyDropDao`（因为我们的逻辑就在这里），我们需要做更多的工作。
 
-### 测试数据访问对象（DAO）
+## 测试数据访问对象（DAO）
 
 测试 DAO 除了我们在前两个类中所做的工作外，还需要一些额外的工作，因为现在我们正在处理 Room。此外，这是我们第一次进行*仪器化测试*，即在 Android 设备（真实设备或模拟器）上运行的测试。虽然使用 Room 数据库并不需要你在设备上运行测试，但这样做可以确保你使用的是来自 Android 设备的相同版本的 SQLite。如果你在本地机器上运行这些测试，你可能会看到在实际应用中不会发生的错误。
 
@@ -11039,7 +10970,7 @@ this.gameViewModel.currentStandingsText
 
 我们将在这里编写两个测试，一个专注于 `PennyDropDao.insertPlayer`，另一个专注于 `PennyDropDao.startGame`。前者将向你展示运行测试所需的各个部分，而后者则展示如何利用我们在上一节中编写的 `getOrAwaitValue` 函数。我们在这里需要做的第一件事是为测试做好准备。
 
-### 为测试做准备
+## 为测试做准备
 
 前两个部分是使用第4章《使用条件游戏逻辑更新 LiveData》中的代码构建的，以避免处理数据库调用。现在，由于我们将测试相同的数据库调用，我们将使用第7章《使用设置和主题自定义应用》完成后编写的代码。请继续使用你在第7章之后的代码或来自 PragProg 网站的代码存档。
 
@@ -11102,7 +11033,7 @@ class PennyDropDaoTests {
 }
 ```
 
-### 创建一个 Android 单元测试
+## 创建一个 Android 单元测试
 
 现在一切准备就绪，我们可以创建测试了。首先是 `testInsertingNewPlayer`，它将插入一个新玩家，从数据库中检索该玩家，并检查确保一切匹配。
 
@@ -11112,7 +11043,9 @@ class PennyDropDaoTests {
 
 在 `runBlocking` 块内，我们遵循与其他测试类似的过程。这里唯一额外的部分是我们将验证玩家最初不在数据库中。一旦我们插入玩家，然后我们从数据库中获取玩家并检查一些属性。测试代码如下所示：
 
-```
+
+
+```kotlin
 @Test
 fun testInsertingNewPlayer() = runBlocking {
     val player = Player(5, "Hazel")
@@ -11135,11 +11068,11 @@ fun testInsertingNewPlayer() = runBlocking {
 
 `AndroidJUnit4` 测试运行器特别巧妙的地方在于，我们可以以相同的方式在本地和设备上运行此测试，测试运行器会为我们处理。再次强调，我们更喜欢在这里进行 Android 测试，以确保我们使用的是正确版本的 SQLite，但在本地与在设备上运行相同的测试所需的工作量很小。
 
-### 创建第二个 Android 单元测试
+## 创建第二个 Android 单元测试
 
-我们的另一个测试 `testStartGame` 将类似于我们在上一节中对 GameViewModel 进行的 Test StartGame 测试。我们设置一些测试数据，启动游戏，然后检查值。由于游戏、玩家和游戏状态之间的划分，我们在这里确实有额外的断言集，但概念是相同的。设置和调用如下所示：
+我们的另一个测试 `testStartGame` 将类似于我们在上一节中对 `GameViewModel` 进行的 `Test StartGame` 测试。我们设置一些测试数据，启动游戏，然后检查值。由于游戏、玩家和游戏状态之间的划分，我们在这里确实有额外的断言集，但概念是相同的。设置和调用如下所示：
 
-```
+```kotlin
 @Test
 fun testStartGame() = runBlocking {
     val players = listOf(
@@ -11150,16 +11083,19 @@ fun testStartGame() = runBlocking {
     )
 ```
 
+```kotlin
 val pennyCount = 15
 
 val gameId = dao.startGame(players, pennyCount)
 
 //断言即将到来
+
 }
+```
 
 我们这里主要检查的是游戏和关联的玩家。我们使用之前的 `getOrAwaitValue` 扩展函数来获取当前的 `GameWithPlayers` 类。一旦我们有了这个对象，就可以使用 `with` 块来重复引用 `Game` 对象。然后我们获取 `List<Player>` 并验证原始列表中的玩家是否都包含在返回的列表中。请注意，我们没有检查 `gamePlayers` 列表中是否有多余的玩家，因为那应该是一个额外的测试。整个部分（包裹在 `let` 块中）如下所示：
 
-```
+```kotlin
 dao.getCurrentGameWithPlayers().getOrAwaitValue()?.let {
     gameWithPlayers ->
     with(gameWithPlayers.game) {
@@ -11182,7 +11118,7 @@ dao.getCurrentGameWithPlayers().getOrAwaitValue()?.let {
 
 虽然我们已经验证了从 `getCurrentGameWithPlayers` 返回的玩家，但如果我们愿意，可以在上述代码块之后对 `getPlayer` 进行额外检查：
 
-```
+```kotlin
 players.map { it.playerName }.forEach { playerName ->
     assertNotNull(dao.getPlayer(playerName))
 }
@@ -11190,7 +11126,7 @@ players.map { it.playerName }.forEach { playerName ->
 
 在验证了 `Game` 和 `List<Player>` 对象之后，我们只剩下 `GameStatus` 对象了。这里，我们使用类似的方法，对 `LiveData` 使用 `getOrAwaitValue`，并在 `let` 块内进行一系列断言。由于我们处理的是一个 `List`，我们将多次使用 `all` 来断言 `gameStatuses` 列表中的每个值：
 
-```
+```kotlin
 val playerIds = players.map { it.playerId }
 dao.getCurrentGameStatuses().getOrAwaitValue()?.let { gameStatuses ->
     assertTrue(gameStatuses.all { it.gameId == gameId })
@@ -11206,7 +11142,7 @@ dao.getCurrentGameStatuses().getOrAwaitValue()?.let { gameStatuses ->
 
 一旦一切就绪，就可以运行你的测试了。如果全部通过，太棒了！你完成了，可以跳转到“总结与下一步”部分。但如果不是，这里有一些建议给你。
 
-### Android 单元测试故障排除
+## Android 单元测试故障排除
 
 我在这里坦白说——插桩测试可能比标准单元测试更麻烦。由于在设备上测试带来的额外复杂性层，测试可能会在你试图断言的内容之外出错。
 
@@ -11214,7 +11150,7 @@ dao.getCurrentGameStatuses().getOrAwaitValue()?.let { gameStatuses ->
 
 其次，我在获取这里的测试时遇到了一个问题，它告诉我发现了一些重复的文件：“More than one file was found with OS independent path ‘META-INF/AL2.0’.” 如果你遇到这个问题，可以在应用的 `build.gradle` 文件中使用 `packagingOptions` 块将这些文件从项目中排除：
 
-```
+```gradle
 packagingOptions {
     exclude 'META-INF/AL2.0'
     exclude 'META-INF/LGPL2.1'
@@ -11233,9 +11169,9 @@ packagingOptions {
 
 然而，每种测试类型的数量和“适当”的测试覆盖范围因应用而异，因此请确保了解你的应用需要什么以及测试将在哪里最有价值。
 
-在我们进入下一章的 UI 测试之前，我想再提一件事。如果你将来编写 AndroidViewModel 测试但希望保持它们为本地测试（使其执行更快），有一个名为 Robolectric 的库可用。
+在我们进入下一章的 UI 测试之前，我想再提一件事。如果你将来编写 `AndroidViewModel` 测试但希望保持它们为本地测试（使其执行更快），有一个名为 Robolectric 的库可用。
 
-Robolectric 是一个为本地测试创建模拟 Android 环境的框架。它比需要某种实际设备快得多，并且允许你在没有设备的情况下运行 AndroidViewModel 测试（或任何需要 Android 应用上下文的测试）。你可以在设备上和本地运行相同的测试，而无需更改任何内容。有关 Robolectric 的更多信息，请访问他们的网站 http://robolectric.org/。
+Robolectric 是一个为本地测试创建模拟 Android 环境的框架。它比需要某种实际设备快得多，并且允许你在没有设备的情况下运行 `AndroidViewModel` 测试（或任何需要 Android 应用上下文的测试）。你可以在设备上和本地运行相同的测试，而无需更改任何内容。有关 Robolectric 的更多信息，请访问他们的网站 http://robolectric.org/。
 
 接下来是另一个测试章节，重点介绍使用 Espresso 进行 UI 测试。Espresso 测试库使 UI 测试和视图交互变得如此流畅和可读，并且底层的优化使测试尽可能快。前往下一章，看看我们如何使用 Espresso 自动验证我们的应用视图。
 
@@ -11251,13 +11187,13 @@ Robolectric 是一个为本地测试创建模拟 Android 环境的框架。它�
 
 我们上一章从第 4 章之后的代码开始，然后转向了“最终”的 Penny Drop 代码库，也就是我们在第 7 章之后的内容。在这里，我们也将使用第 7 章之后的代码，而不包含上一章的任何测试代码。这样我们就可以专注于每章和每种测试类型所使用的内容。
 
-本章的高级计划是设置我们的依赖项，快速概述 Espresso，然后编写两个测试类：PickPlayersFragmentTests 和 GameFragmentTests。
+本章的高级计划是设置我们的依赖项，快速概述 Espresso，然后编写两个测试类：`PickPlayersFragmentTests` 和 `GameFragmentTests`。
 
 ### 添加 UI 测试
 
 虽然本章确实专注于 UI 和用户与应用的交互，但谢天谢地，情况看起来与上一章非常相似。这包括测试格式（设置、运行、断言）和依赖项。`androidTestImplementation` 依赖项如下所示：
 
-```
+```gradle
 androidTestImplementation "junit:junit:$junit_version"
 androidTestImplementation "androidx.test:core-ktx:$test_core_version"
 androidTestImplementation "androidx.test.ext:junit-ktx:$test_ext_version"
@@ -11271,7 +11207,7 @@ androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$corout
 
 ### 添加 PickPlayersFragmentTests
 
-在 androidTest 文件夹内创建 `PickPlayersFragmentTests` 类（与 `PennyDropDaoTests` 相同的位置），并使用 `@RunWith(AndroidJUnit4::class)` 注解该类。然后我们将像之前一样添加一个 JUnit 规则，但这次是 `ActivityScenarioRule`。这个规则告诉测试在每个测试之前创建并启动一个 Activity，在我们的例子中是 `MainActivity`。初始类设置如下：
+在 `androidTest` 文件夹内创建 `PickPlayersFragmentTests` 类（与 `PennyDropDaoTests` 相同的位置），并使用 `@RunWith(AndroidJUnit4::class)` 注解该类。然后我们将像之前一样添加一个 JUnit 规则，但这次是 `ActivityScenarioRule`。这个规则告诉测试在每个测试之前创建并启动一个 Activity，在我们的例子中是 `MainActivity`。初始类设置如下：
 
 ### 测试向游戏中添加玩家
 
@@ -11281,7 +11217,7 @@ androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$corout
 
 在这种情况下，我们需要 `<include>` 标签的 ID 和 `R.id.edit_text_player_name` 资源值。更具体地说，我们使用 `withParent` 匹配器围绕后者 ID 来查找该元素，因为 `R.id.edit_text_player_name` 是 `<include>` 视图内部的子视图。这给我们留下了一个如下所示的匹配器：
 
-```
+```kotlin
 onView(
     allOf(
         withId(R.id.edit_text_player_name),
@@ -11298,7 +11234,7 @@ onView(
 
 测试将输入两个玩家的名称，然后关闭键盘并点击“开始游戏”按钮。这里的 `closeSoftKeyboard` 部分至关重要，因为否则测试运行器将无法看到“开始游戏”按钮来点击它，测试将会失败。我们测试的前三分之二（设置 + 操作）如下所示：
 
-```
+```kotlin
 @Test
 fun testAddingNamedPlayers() {
     typeInPlayerName(R.id.mainPlayer, "Michael")
@@ -11319,7 +11255,7 @@ fun testAddingNamedPlayers() {
 
 对于所有三个断言，我们都使用 `withText` ViewMatcher 来验证显示的文本是否准确。当前玩家名称断言尤其熟悉：
 
-```
+```kotlin
 onView(
     withId(R.id.textCurrentPlayerName)
 ).check(
@@ -11330,6 +11266,8 @@ onView(
 ```
 
 希望这样拆分后，这个断言的各个部分会更清晰。我们对当前积分榜做同样的事情，但由于我们对同一个视图执行两个检查，我们可以使用 `allOf` 对象匹配器一次检查两个项目。每个断言都将使用 `containsString` 来确保玩家和硬币值至少在积分榜文本中的某处：
+
+
 
 ```
 onView(withId(R.id.textCurrentStandingsInfo)).check(
@@ -11344,7 +11282,7 @@ onView(withId(R.id.textCurrentStandingsInfo)).check(
 
 现在完整的测试已经就位，继续运行它以确保它能正常工作。它*应该*能，但如果不行，请检查测试输出控制台，看看它给出了什么提示，说明为什么现在无法正常工作。一旦它准备好了，就该进行第三个测试了，添加第三个玩家。
 
-### 测试添加第三个玩家
+## 测试添加第三个玩家
 
 这个测试在我们之前的测试基础上增加了一个步骤，因为我们需要启用第三个玩家参与游戏。在之前的测试中，两个玩家是默认包含的（因为要让“便士掉落”游戏有趣，你必须有两个人），但现在我们想让第三个玩家加入。
 
@@ -11372,7 +11310,7 @@ fun testAddingThreeNamedPlayers() {
     clickPlayerCheckbox(R.id.player3)
 ```
 
-#### Espresso 速查表
+### Espresso 速查表
 
 Android 开发者团队为 Espresso 函数和你将使用的常见测试部分创建了一个很棒的速查表。我*强烈*建议你在编写 Espresso 测试时将其放在手边。我在编写本章中你将看到的测试时就是这样做的。
 
@@ -11382,14 +11320,19 @@ Android 开发者团队为 Espresso 函数和你将使用的常见测试部分�
 
 ---
 
+```
 @RunWith(AndroidJUnit4::class)
+
 class PickPlayersFragmentTests {
 
     @get:Rule
+
     var activityScenarioRule = activityScenarioRule<MainActivity>()
 
     // We've got more coming up soon.
+
 }
+```
 
 添加这个 `Rule` 实际上给了我们一个 `@Before` 函数，而无需编写任何额外代码。不过，在每次测试运行之前，我们确实需要做更多事情，因为应用程序启动时是在游戏界面。`goToPickPlayersFragment` 完成了我们需要的工作，将我们带到 `PickPlayersFragment`。我们可以使用 `activityScenarioRule` 获取当前活动，然后引用该活动进行导航：
 
@@ -11415,13 +11358,13 @@ fun testFindFab() {
 
 `onView` 函数根据传入给它的条件查找视图，在我们的例子中是 FAB 的 ID。一旦我们有了视图，我们就 `check` 该视图是否 `matches` 显示的条件。这是 Espresso 的一般流程；我们通过一个或多个 ViewMatcher 对象获取一个视图，然后可选地执行某种 ViewAction，最后确认一个或多个 ViewAssertion 对象。
 
-### 测试添加AI玩家
+## 测试添加AI玩家
 
-我们将再次添加第三个玩家，但这次在该位置放置的是我们的AI玩家之一。这意味着我们无需输入第三个玩家的名称，而是需要点击玩家/AI <SwitchCompat>，打开AI名称 <Spinner>，然后点击其中一个选项。
+我们将再次添加第三个玩家，但这次在该位置放置的是我们的AI玩家之一。这意味着我们无需输入第三个玩家的名称，而是需要点击玩家/AI `<SwitchCompat>`，打开AI名称 `<Spinner>`，然后点击其中一个选项。
 
-前两个步骤的执行方式与点击FAB类似，但在 <Spinner> 中查找数据需要使用 onData 函数。这里我们不再查看布局中的视图，而是查看某种列表中的数据。这通常与 <RecyclerView> 列表一起使用，但也可以用于我们的 <Spinner>。
+前两个步骤的执行方式与点击FAB类似，但在 `<Spinner>` 中查找数据需要使用 `onData` 函数。这里我们不再查看布局中的视图，而是查看某种列表中的数据。这通常与 `<RecyclerView>` 列表一起使用，但也可以用于我们的 `<Spinner>`。
 
-我们调用 onData 并查找AI类型，然后选择位置3（或我们想要的任何AI）并点击它。进入下一个屏幕后，我们像之前一样进行检查，第三次检查是针对所选AI的，在本例中是Fearful Fred。以下是该测试的完整版本：
+我们调用 `onData` 并查找AI类型，然后选择位置3（或我们想要的任何AI）并点击它。进入下一个屏幕后，我们像之前一样进行检查，第三次检查是针对所选AI的，在本例中是Fearful Fred。以下是该测试的完整版本：
 
 ```kotlin
 @Test
@@ -11468,11 +11411,11 @@ fun testAddingThirdAIPlayer() {
 }
 ```
 
-现在我们已经完成了对 PickPlayersFragment 的测试！当然，我们还可以在这里添加更多有价值的测试，但至少我们知道可以将人类玩家和AI玩家添加到游戏中，并且一切似乎都正确初始化了。我说“似乎”是因为我们不确定数据库中到底发生了什么，可能会有一些问题，但这就是为什么我们在上一章编写了数据库和ViewModel测试。
+现在我们已经完成了对 `PickPlayersFragment` 的测试！当然，我们还可以在这里添加更多有价值的测试，但至少我们知道可以将人类玩家和AI玩家添加到游戏中，并且一切似乎都正确初始化了。我说“似乎”是因为我们不确定数据库中到底发生了什么，可能会有一些问题，但这就是为什么我们在上一章编写了数据库和ViewModel测试。
 
-接下来是 GameFragmentTests 类，我们将确保游戏槽位按预期开始，并且在掷骰子后所有内容都正确更新。
+接下来是 `GameFragmentTests` 类，我们将确保游戏槽位按预期开始，并且在掷骰子后所有内容都正确更新。
 
-### 添加更多UI测试
+## 添加更多UI测试
 
 像创建 `PickPlayersFragmentTests` 一样创建 `GameFragmentTests` 类，将其添加到项目的 androidTest 文件夹中。然后，再次添加 `activityScenarioRule` 并用 `@RunWith(AndroidJUnit4::class)` 注解该类。此外，添加第二个注解 `@ExperimentalCoroutinesApi`。这个注解允许我们无警告地使用 `runBlockingTest` `TestCoroutineScope`。这是一个方便的作用域（仅用于测试），因为它允许我们在跳过代码中任何延迟的同时调用 `suspend` 函数。我们在这里将其用于 `@Before` 函数 `startNewGameBeforeEachTest`，因为正常运行此函数会导致启动游戏和检查值时出现时序问题。
 
@@ -11515,7 +11458,7 @@ fun startGame(scenario: ActivityScenario<MainActivity>) =
 
 设置完成后，我们可以继续第一个测试——确保所有槽位都存在但为空。
 
-### 检查初始槽位
+## 检查初始槽位
 
 由于我们以类似的方式检查所有六个槽位，我们可以将每个槽位添加到一个 [Map](Map) 中，然后遍历它们。拥有这个映射将允许我们对每个槽位运行多个 `check` 调用：
 
@@ -11556,7 +11499,7 @@ fun checkStartingSlots() {
 
 希望你开始看到 Espresso 测试的模式了。大多数测试将遵循相同的格式并使用相同的函数，下一个测试也不例外。然而，有时内置函数不足以满足我们的需求，这意味着我们需要考虑创建自定义匹配器。
 
-### 使用自定义匹配器检查掷骰子结果
+## 使用自定义匹配器检查掷骰子结果
 
 我们已经做了很多工作来测试游戏启动后的初始状态，但现在我们要检查玩家进行第一次回合时会发生什么。虽然由于掷骰子的随机性这里存在一些挑战，但检查第一次掷骰子简化了事情，因为我们不需要担心玩家爆掉（因为这是新游戏的第一次掷骰子）或者除了掷骰子玩家之外的任何人拥有少于默认数量的便士。
 
@@ -11570,20 +11513,26 @@ fun checkStartingSlots() {
 
 因此，我们可以检查 `isActivated` 属性，这是我们用来将槽位标记为最后掷出的槽位的属性。`isLastRolled` 函数如下所示：
 
+```kotlin
 private fun isLastRolled() = object : TypeSafeMatcher<View>() {
+
     override fun describeTo(description: Description?) {
-        description?.appendText("The View is activated.")
-    }
+```
 
-    override fun matchesSafely(view: View?): Boolean =
-        view?.isActivated == true
-}
 
-我想提一下，如果你打算在其他任何上下文中检查该属性，将 `isLastRolled` 函数重命名为 `isActivated` 是合理的。我在这里选择一个更具体的视图名称，是因为它更能说明我们为什么要在测试范围内测试该属性。
 
-我们已经多次看到，`matchesSafely` 检查末尾的 `== true` 意味着 `false` 和 `null` 都会导致检查失败，这正是我们这里想要的。有了自定义匹配器函数，我们现在可以根据需要在代码中使用它。但首先，我们需要完成测试的操作步骤和一些断言。
+`description?.appendText("The View is activated.")`
 
-由于我们的 `@Before` 函数负责获取一个新游戏，我们只需要点击 Roll 按钮，让测试进入我们想要的状态。然后我们检查当前玩家没有改变，并且他们现在还剩九个便士（因为我们知道情况会是这样，因为游戏第一次掷骰子时不可能爆掉）。
+```
+override fun matchesSafely(view: View?): Boolean =
+    view?.isActivated == true
+```
+
+我想提一下，如果你打算在其他任何上下文中检查该属性，将`isLastRolled`函数重命名为`isActivated`是合理的。我在这里选择一个更具体的视图名称，是因为它更能说明我们为什么要在测试范围内测试该属性。
+
+我们已经多次看到，`matchesSafely`检查末尾的`== true`意味着`false`和`null`都会导致检查失败，这正是我们这里想要的。有了自定义匹配器函数，我们现在可以根据需要在代码中使用它。但首先，我们需要完成测试的操作步骤和一些断言。
+
+由于我们的`@Before`函数负责获取一个新游戏，我们只需要点击 Roll 按钮，让测试进入我们想要的状态。然后我们检查当前玩家没有改变，并且他们现在还剩九个便士（因为我们知道情况会是这样，因为游戏第一次掷骰子时不可能爆掉）。
 
 我们测试的第一部分如下所示：
 
@@ -11602,7 +11551,7 @@ fun checkSingleRollResult() = runBlockingTest {
 
 有了这些部分，我们进入了这个测试的复杂部分。乍一看，检查最后掷出的槽位似乎不会太棘手，但同样，我们正在处理两种不同的场景：槽位 1—5 和槽位 6。不过，我们不会再觉得最后掷出的槽位是个问题了，因为我们的自定义匹配器已经很好地处理了它（你马上就会看到如何处理）。
 
-我们的断言旨在通过在 `allOf` 调用中使用三步匹配器来找到槽位的通用 `<View>` 标签部分：确保 ID 是 `R.id.bottomViewCoinSlot`，它具有 `isActivated` 属性值为 `true`，并且要么显示一个便士，要么是硬币槽位 6。最后一部分是这个查找中最难的部分，但如果我们分解得足够细，它就变得更容易管理了。不过，在我们深入之前，让我们先看看不包括最后一部分的视图查找：
+我们的断言旨在通过在`allOf`调用中使用三步匹配器来找到槽位的通用`<View>`标签部分：确保 ID 是`R.id.bottomViewCoinSlot`，它具有`isActivated`属性值为`true`，并且要么显示一个便士，要么是硬币槽位 6。最后一部分是这个查找中最难的部分，但如果我们分解得足够细，它就变得更容易管理了。不过，在我们深入之前，让我们先看看不包括最后一部分的视图查找：
 
 ```
 onView(
@@ -11614,11 +11563,11 @@ onView(
 )
 ```
 
-通过添加自定义匹配器，我们现在可以像使用内置的 `Matcher` 函数一样使用 `isLastRolled`。它只需要很少的代码，就能让我们得到一个清晰、可读的测试。
+通过添加自定义匹配器，我们现在可以像使用内置的`Matcher`函数一样使用`isLastRolled`。它只需要很少的代码，就能让我们得到一个清晰、可读的测试。
 
 顺便说一下，如果我们保持这个测试不变，它*是*有效的。我们正在检查屏幕上是否有一个最后掷出的槽位，并且只有一个，因为如果有多个槽位匹配该条件，Espresso 会抛出异常，测试就会失败。但通过添加硬币/数字部分，我们帮助使这个测试更加彻底。
 
-在最后一部分，我们使用 `anyOf Matcher` 来确保我们至少有以下场景之一：槽位 `<View>` 有一个兄弟元素，其中硬币图像 `isDisplayed`，或者有一个兄弟元素，其中槽位编号文本是“6”。我们可以使用 `hasSibling` Matcher 和一个普通的 `allOf` 对象 Matcher 来获取我们想要的元素：
+在最后一部分，我们使用`anyOf Matcher`来确保我们至少有以下场景之一：槽位`<View>`有一个兄弟元素，其中硬币图像`isDisplayed`，或者有一个兄弟元素，其中槽位编号文本是“6”。我们可以使用`hasSibling` Matcher 和一个普通的`allOf`对象 Matcher 来获取我们想要的元素：
 
 ```
 anyOf(
@@ -11626,14 +11575,14 @@ anyOf(
     allOf(withId(R.id.coinImageCoinSlot), isDisplayed())
   ),
   hasSibling(
-    allOf(withId(R.id.slotNumberCoinSlot), withText(“6”))
+    allOf(withId(R.id.slotNumberCoinSlot), withText("6"))
   )
 )
 ```
 
 请注意，该测试只会验证我们找到了一个带有硬币和/或数字 6 的槽位，但没有内置机制来确保它只是两者之一。这要么需要额外的测试（我建议这样做），要么需要在这个测试中添加额外的逻辑来确保只有一个条件为真。
 
-一旦所有部分组合在一起，我们有一个最后的 `check` 调用，确保 `onView` 视图匹配器找到了*某些东西*。我们可以使用 `check` 的函数块变体来访问 `View` 和 `NoMatchingViewException`，并使用两者来验证视图是否存在：
+一旦所有部分组合在一起，我们有一个最后的`check`调用，确保`onView`视图匹配器找到了*某些东西*。我们可以使用`check`的函数块变体来访问`View`和`NoMatchingViewException`，并使用两者来验证视图是否存在：
 
 ```
 onView(
@@ -11645,7 +11594,7 @@ onView(
         allOf(withId(R.id.coinImageCoinSlot), isDisplayed())
       ),
       hasSibling(
-        allOf(withId(R.id.slotNumberCoinSlot), withText(“6”))
+        allOf(withId(R.id.slotNumberCoinSlot), withText("6"))
       )
     )
   )
@@ -11670,6 +11619,7 @@ Android 中的测试还有更多可用的内容，我们这里没有篇幅介绍
 [16] https://link.mfazio.dev/testing
 
 # 第 4 部分
+
 ## 附录
 
 这里有一些有用的信息，它们不适合放在 Penny Drop 或 Android Baseball League 应用的故事中，但仍然值得你花时间阅读。
@@ -11763,8 +11713,11 @@ Android Studio 的条款和条件可能会弹出。请像对待你每天遇到�
 现在我们看到一个可以与 Android Studio 一起安装的组件列表：
 
 - Android SDK：用于构建应用程序的核心 Android 开发工具包。这是 Android 开发所必需的。
+
 - Android SDK Platform：包含新功能的 Android 操作系统版本。本书针对 API 级别 30 编写。
+
 - Performance (Intel HAXM)：一个额外的驱动程序，可以显著加快我们将要创建的 Android 虚拟设备的速度。这是可选的，但强烈推荐。
+
 - Android Virtual Device：用于测试的模拟设备。
 
 ![](img/c024742480e86eb8867e0760ebe353d7_527_0.png)
@@ -11823,7 +11776,7 @@ Android Studio 的条款和条件可能会弹出。请像对待你每天遇到�
 
 否则，您可以返回 Android Studio 并在那里选择您的设备。在 IDE 的上部，您可以选择运行应用时要使用的设备。下拉菜单位于运行应用的“播放”按钮旁边。
 
-![](img/c024742480e86eb8867e0760ebe353d7_533_0.png)
+
 
 一切就绪！如果您需要任何额外设备，可以随时返回 AVD 管理器。现在，是时候开始构建一个应用了。请转到第 1 章，[初始化 Penny Drop 应用](Initialize the Penny Drop App)，构建您的第一个应用 Penny Drop。
 
@@ -11839,13 +11792,13 @@ Android Studio 的条款和条件可能会弹出。请像对待你每天遇到�
 
 我们将介绍三种从代码中获取信息的方法：调试、Logcat 和 Toast 消息。对于每种方法，我将解释正确的使用方法，以及如何使用它来排除问题或查看应用程序中的当前状态。
 
-如果您是从[通过双向绑定绑定玩家名称](Binding a Player’s Name with Two-Way Binding)来到这里的，我们基本上是从上次中断的地方继续。如果不是，请假设我们正在 Penny Drop 应用中，只是在引入双向绑定之后。我们得到了一个想要查看的NewPlayer对象列表，我将向你展示如何用所有三种方法来实现这一点。然后你可以在本书的其他地方或开发应用程序时使用类似的方法。
+如果您是从[通过双向绑定绑定玩家名称](Binding a Player’s Name with Two-Way Binding)来到这里的，我们基本上是从上次中断的地方继续。如果不是，请假设我们正在 Penny Drop 应用中，只是在引入双向绑定之后。我们得到了一个想要查看的`NewPlayer`对象列表，我将向你展示如何用所有三种方法来实现这一点。然后你可以在本书的其他地方或开发应用程序时使用类似的方法。
 
 这是此时应用程序的样子：
 
 ![](img/c024742480e86eb8867e0760ebe353d7_535_0.png)
 
-OnClickListener的绑定代码，位于PickPlayersFragment的绑定中，将如下所示：
+`OnClickListener`的绑定代码，位于`PickPlayersFragment`的绑定中，将如下所示：
 
 ```kotlin
 this.buttonPlayGame.setOnClickListener {
@@ -11853,17 +11806,17 @@ this.buttonPlayGame.setOnClickListener {
 }
 ```
 
-我们将在所有三个示例中使用这个代码块，所以你可以打开第3章末尾的Penny Drop代码。你可以在PragProg.com的本书页面上找到所有这些代码。
+我们将在所有三个示例中使用这个代码块，所以你可以打开第3章末尾的 Penny Drop 代码。你可以在 PragProg.com 的本书页面上找到所有这些代码。
 
 ### 调试你的应用程序
 
-调试器是你在构建应用程序时最有价值的工具之一。调试器允许你在任何点停止应用程序，并查看实时对象的当前状态。这对你们中的一些人来说可能是第二天性，但以防你以前没有使用过调试器，让我们谈谈如何在Android Studio中使用它。
+调试器是你在构建应用程序时最有价值的工具之一。调试器允许你在任何点停止应用程序，并查看实时对象的当前状态。这对你们中的一些人来说可能是第二天性，但以防你以前没有使用过调试器，让我们谈谈如何在 Android Studio 中使用它。
 
-调试器允许我们在整个应用程序中设置*断点*，这会暂停代码执行，并使我们能够查看该时间点可用的对象。我们可以检查我们创建的对象以及Android操作系统内部的对象。从那里，我们可以继续应用程序的执行，或者逐行执行应用程序。我们首先在代码中的某个地方添加一个断点，然后我们启动应用程序或将调试器附加到已经运行的应用程序实例。从那里，我们可以根据需要深入挖掘。
+调试器允许我们在整个应用程序中设置*断点*，这会暂停代码执行，并使我们能够查看该时间点可用的对象。我们可以检查我们创建的对象以及 Android 操作系统内部的对象。从那里，我们可以继续应用程序的执行，或者逐行执行应用程序。我们首先在代码中的某个地方添加一个断点，然后我们启动应用程序或将调试器附加到已经运行的应用程序实例。从那里，我们可以根据需要深入挖掘。
 
 ### 添加断点
 
-可以通过在Android Studio的编辑器中点击左侧边栏来添加断点。这是行号和你编写代码的边缘之间的部分。当你点击这里时，会添加一个红点。
+可以通过在 Android Studio 的编辑器中点击左侧边栏来添加断点。这是行号和你编写代码的边缘之间的部分。当你点击这里时，会添加一个红点。
 
 ![](img/c024742480e86eb8867e0760ebe353d7_536_0.png)
 
@@ -11873,55 +11826,55 @@ this.buttonPlayGame.setOnClickListener {
 
 ### 附加调试器
 
-将调试器附加到应用程序的最简单方法是以调试模式启动它。这可以通过点击Android Studio上部的虫子图标来完成，就在你一直用来启动应用程序的播放按钮旁边。
+将调试器附加到应用程序的最简单方法是以调试模式启动它。这可以通过点击 Android Studio 上部的虫子图标来完成，就在你一直用来启动应用程序的播放按钮旁边。
 
 ![](img/c024742480e86eb8867e0760ebe353d7_537_0.png)
 
-以这种方式启动应用程序会告诉你的应用程序和Android Studio寻找断点，并在命中时停止代码执行。如果你的应用程序已经在运行，而你只是想要调试功能，你可以改为使用“将调试器附加到Android进程”按钮。这看起来类似于调试按钮，但它有一个指向图标右侧的箭头。无论哪种方式，一旦应用程序在附加了调试器并至少有一个断点的情况下运行，你就可以检查你的对象了。
+以这种方式启动应用程序会告诉你的应用程序和 Android Studio 寻找断点，并在命中时停止代码执行。如果你的应用程序已经在运行，而你只是想要调试功能，你可以改为使用“将调试器附加到 Android 进程”按钮。这看起来类似于调试按钮，但它有一个指向图标右侧的箭头。无论哪种方式，一旦应用程序在附加了调试器并至少有一个断点的情况下运行，你就可以检查你的对象了。
 
 ### 使用调试器
 
-我们需要做的就是运行带有断点的代码行来停止应用程序。在这种情况下，如果`OnClickListener`是空的，添加一行代码从`PickPlayersViewModel`获取游戏中的玩家：`val players = pickPlayersViewModel.players.value`。如果你使用的是本章末尾的示例，你可以保持代码不变。无论哪种方式，将断点放在该`OnClickListener`的第一行代码上，在“选择玩家”屏幕上添加一些玩家，然后点击播放浮动操作按钮。断点应该在Android Studio中被命中，你的应用程序应该停止执行。Android Studio中的编辑器看起来应该像图中所示的那样。
+我们需要做的就是运行带有断点的代码行来停止应用程序。在这种情况下，如果`OnClickListener`是空的，添加一行代码从`PickPlayersViewModel`获取游戏中的玩家：`val players = pickPlayersViewModel.players.value`。如果你使用的是本章末尾的示例，你可以保持代码不变。无论哪种方式，将断点放在该`OnClickListener`的第一行代码上，在“选择玩家”屏幕上添加一些玩家，然后点击播放浮动操作按钮。断点应该在 Android Studio 中被命中，你的应用程序应该停止执行。Android Studio 中的编辑器看起来应该像图中所示的那样。
 
 ![](img/c024742480e86eb8867e0760ebe353d7_538_0.png)
 
-如果你的代码有点不同，那也没关系；我们更关心的是断点是否被命中。当断点被命中时，Android Studio会在屏幕底部显示调试窗口。在这里，我们有几个部分：应用程序的帧/线程、当前作用域中的变量，以及一个关于调试器开销的窗口。
+如果你的代码有点不同，那也没关系；我们更关心的是断点是否被命中。当断点被命中时，Android Studio 会在屏幕底部显示调试窗口。在这里，我们有几个部分：应用程序的帧/线程、当前作用域中的变量，以及一个关于调试器开销的窗口。
 
 虽然第一个和最后一个窗口有它们的用途，但我们主要关注的是变量部分。因此，我将使用调试窗口右上角的图标隐藏其他窗口。
 
-变量窗口包含当前作用域中的一些重要变量（在我们的例子中，在OnClickListener内部），并允许我们根据需要添加其他变量。点击变量列表旁边的+按钮，然后输入PickPlayersViewModel。这样做会将我们的pickPlayersViewModel值添加为监视项。
+变量窗口包含当前作用域中的一些重要变量（在我们的例子中，在`OnClickListener`内部），并允许我们根据需要添加其他变量。点击变量列表旁边的`+`按钮，然后输入`PickPlayersViewModel`。这样做会将我们的`pickPlayersViewModel`值添加为监视项。
 
 然后我们可以展开这个（或任何其他）项以查看对象上的任何值/变量：
 
 ![](img/c024742480e86eb8867e0760ebe353d7_539_0.png)
 
-从那里，我们可以继续深入挖掘值/变量，只要它们存在。例如，我们可以打开PickPlayersViewModel上的players MutableLiveData值，并检查其中的NewPlayer实例。当显示一个对象时，它使用其toString函数来显示信息。你在这里看到的每个NewPlayer对象的信息都很易读，这是由于我们将在本章后面进行的更改，特别是在“创建更好的toString(...)函数”部分。
+从那里，我们可以继续深入挖掘值/变量，只要它们存在。例如，我们可以打开`PickPlayersViewModel`上的`players` `MutableLiveData`值，并检查其中的`NewPlayer`实例。当显示一个对象时，它使用其`toString`函数来显示信息。你在这里看到的每个`NewPlayer`对象的信息都很易读，这是由于我们将在本章后面进行的更改，特别是在“创建更好的`toString(...)`函数”部分。
 
-展开的NewPlayer对象看起来像这样：
+展开的`NewPlayer`对象看起来像这样：
 
 ![](img/c024742480e86eb8867e0760ebe353d7_539_1.png)
 
-你可以用调试器做更多的事情，但希望这部分内容给了你足够的信息来入门。如果你想了解更多关于Android Studio中调试的信息，请查看官方的Android开发者文档：https://developer.android.com/studio/debug。
+你可以用调试器做更多的事情，但希望这部分内容给了你足够的信息来入门。如果你想了解更多关于 Android Studio 中调试的信息，请查看官方的 Android 开发者文档：https://developer.android.com/studio/debug。
 
-### 使用Toast类显示消息
+### 使用 Toast 类显示消息
 
-再次，我觉得有必要澄清一下，Toast消息旨在向用户提供小型、简短的警报，告知他们刚刚发生了某些事情。这可能是某种处理，或者他们已从账户中登出。话虽如此，它们在故障排除时也很方便，类似于Web开发中的window.alert。
+再次，我觉得有必要澄清一下，Toast 消息旨在向用户提供小型、简短的警报，告知他们刚刚发生了某些事情。这可能是某种处理，或者他们已从账户中登出。话虽如此，它们在故障排除时也很方便，类似于 Web 开发中的`window.alert`。
 
-在本节中，我们将介绍Toast消息的工作原理以及一些与字符串相关的概念：数据类上的新toString和集合上的joinToString函数。我们将首先使用该函数获取玩家信息，然后看看Toast消息是如何工作的。
+在本节中，我们将介绍 Toast 消息的工作原理以及一些与字符串相关的概念：数据类上的新`toString`和集合上的`joinToString`函数。我们将首先使用该函数获取玩家信息，然后看看 Toast 消息是如何工作的。
 
-### 使用joinToString()获取NewPlayer信息
+### 使用`joinToString()`获取`NewPlayer`信息
 
-为了获取玩家信息，我们将利用Kotlin的两个强大特性：空安全（空安全调用+空合并运算符）和前面提到的joinToString函数。Kotlin最棒的事情之一是它要求你（在编译时）处理代码中*所有*的空值场景。
+为了获取玩家信息，我们将利用 Kotlin 的两个强大特性：空安全（空安全调用+空合并运算符）和前面提到的`joinToString`函数。Kotlin 最棒的事情之一是它要求你（在编译时）处理代码中*所有*的空值场景。
 
-这有助于避免大多数可能抛出NullPointerException的情况，从而避免应用程序崩溃并让用户感到沮丧。在这个函数中，我们将从PickPlayersViewModel获取List<NewPlayer>（通过使用LiveData对象上的可空值属性），然后*安全地*调用joinToString（我们稍后会介绍）。这是通过在调用前添加问号来完成的，如下所示：
+这有助于避免大多数可能抛出`NullPointerException`的情况，从而避免应用程序崩溃并让用户感到沮丧。在这个函数中，我们将从`PickPlayersViewModel`获取`List<NewPlayer>`（通过使用`LiveData`对象上的可空值属性），然后*安全地*调用`joinToString`（我们稍后会介绍）。这是通过在调用前添加问号来完成的，如下所示：
 
 ```kotlin
 pickPlayersViewModel.players.value?.joinToString("\n")
 ```
 
-由于value是可空的，我们需要使用?.（空安全调用）语法来调用joinToString。然而，使用此语法会导致整个行返回`String?`（可空`String`）而不是`String`。如果我们想让这个表达式成为`String`，我们可以使用*空合并运算符*来处理`players.value`为null的情况。
+由于`value`是可空的，我们需要使用`?.`（空安全调用）语法来调用`joinToString`。然而，使用此语法会导致整个行返回`String?`（可空`String`）而不是`String`。如果我们想让这个表达式成为`String`，我们可以使用*空合并运算符*来处理`players.value`为`null`的情况。
 
-如果你还没有见过，空合并运算符，或*Elvis运算符*，允许你在表达式为`null`时有一个回退值。意思是，如果表达式的左侧解析为`null`，那么Elvis运算符右侧的任何内容将被调用。在我们的例子中，我们将有这个表达式：
+如果你还没有见过，空合并运算符，或*Elvis 运算符*，允许你在表达式为`null`时有一个回退值。意思是，如果表达式的左侧解析为`null`，那么 Elvis 运算符右侧的任何内容将被调用。在我们的例子中，我们将有这个表达式：
 
 ```kotlin
 val players =
@@ -11929,17 +11882,17 @@ val players =
     ?: "Unable to get players"
 ```
 
-这里的Elvis运算符意味着我们将使用`joinToString`返回的`String`值，除非`pickPlayersViewModel.players.value`为null，否则我们将返回“Unable to get players”。现在，如果`joinToString`可能返回`null`值（它不能），它也会回退到“Unable to get players”值。
+这里的 Elvis 运算符意味着我们将使用`joinToString`返回的`String`值，除非`pickPlayersViewModel.players.value`为`null`，否则我们将返回“Unable to get players”。现在，如果`joinToString`可能返回`null`值（它不能），它也会回退到“Unable to get players”值。
 
 说到`joinToString`函数，这个函数将获取集合中的每个项目，使用输入的分隔符字符（如果未输入则使用空格）将它们连接起来，并返回一个表示该集合的单个`String`。如果你愿意，可以添加前缀和后缀值，这会在字符串的开头或结尾添加字符。最后，你可以包含一个转换块，在将每个项目包含到`String`之前更改列表中的每个项目。每个项目已经被转换为`String`，这意味着我们不必在此转换块内手动执行此操作，但当我们需要时，它仍然是一个选项。
 
 目前，我们将简单地用换行符连接每个`NewPlayer`实例。这样，我们就得到了文本，所以让我们使用`Toast`来显示它。
 
-### 使用Toast.makeText(...)显示警报
+### 使用`Toast.makeText(...)`显示警报
 
 在 Android 应用中，我们有时希望以弹出式小窗口的形式向用户提示某些信息，但又不想打断他们正在进行的操作。Toast 消息非常适合这种场景：一条（通常）较小的消息会以灰色背景显示在应用底部，向用户传达某种信息。除了显示的消息内容外，我们还可以控制消息显示的时间长短。
 
-最后，一旦创建了 Toast 消息，我们必须确保调用 `show` 方法，否则什么都不会发生。通常，我们会使用 Toast 来提醒用户应用中的某些事项，例如他们刚刚被登出账户或网络服务调用失败。在我们的例子中，它将打印出我们刚刚生成的用户列表。假设我们运行如下代码：
+最后，一旦创建了 Toast 消息，我们必须确保调用`show`方法，否则什么都不会发生。通常，我们会使用 Toast 来提醒用户应用中的某些事项，例如他们刚刚被登出账户或网络服务调用失败。在我们的例子中，它将打印出我们刚刚生成的用户列表。假设我们运行如下代码：
 
 ```kotlin
 val players =
@@ -11953,13 +11906,13 @@ Toast.makeText(activity, players, Toast.LENGTH_LONG).show()
 
 ![](img/c024742480e86eb8867e0760ebe353d7_543_0.png)
 
-不幸的是，这并不像我们希望的那样有用。阅读每个 `NewPlayer` 实例已经很困难了，而且 `IsIncluded` 和 `IsHuman` 都是 `ObservableBoolean` 类型，因此它们不会自动生成易于阅读的 `toString` 值。
+不幸的是，这并不像我们希望的那样有用。阅读每个`NewPlayer`实例已经很困难了，而且`IsIncluded`和`IsHuman`都是`ObservableBoolean`类型，因此它们不会自动生成易于阅读的`toString`值。
 
-### 创建更好的 toString(...) 函数
+### 创建更好的`toString(...)`函数
 
-由于 `NewPlayer` 是一个 `data class`，我们得到了更美观的文本，所有属性都包含在 `NewPlayer(...)` 中，而不是像 `ObservableBoolean` 属性那样显示为类似 `dev.mfazio.pennydrop.types.NewPlayer@d1688b3` 的内容。为了使其看起来更好，我们将重写 `NewPlayer` 上的 `toString` 方法。输出将类似于 `data class` 默认生成的内容，但会从两个 `ObservableBoolean` 属性中提取值。我们可以创建一个包含五个字段的长 `String`，但这似乎是展示 `joinToString` 更复杂示例的绝佳时机。
+由于`NewPlayer`是一个`data class`，我们得到了更美观的文本，所有属性都包含在`NewPlayer(...)`中，而不是像`ObservableBoolean`属性那样显示为类似`dev.mfazio.pennydrop.types.NewPlayer@d1688b3`的内容。为了使其看起来更好，我们将重写`NewPlayer`上的`toString`方法。输出将类似于`data class`默认生成的内容，但会从两个`ObservableBoolean`属性中提取值。我们可以创建一个包含五个字段的长`String`，但这似乎是展示`joinToString`更复杂示例的绝佳时机。
 
-在这种情况下，我们将创建一个包含 `Pair` 条目的列表。这种语法与创建 `Map` 几乎完全相同，但我们使用列表纯粹是因为 `Map` 没有 `joinToString` 函数。我们的列表将由属性名映射到属性值组成，然后我们可以在 `joinToString` 函数的 `transform` 块中将它们连接起来。此外，为了使其类似于 `data class` 的默认 `toString`，我们将添加前缀和后缀值，以添加标题/标签 "NewPlayer" 并将结果包裹在括号中。
+在这种情况下，我们将创建一个包含`Pair`条目的列表。这种语法与创建`Map`几乎完全相同，但我们使用列表纯粹是因为`Map`没有`joinToString`函数。我们的列表将由属性名映射到属性值组成，然后我们可以在`joinToString`函数的`transform`块中将它们连接起来。此外，为了使其类似于`data class`的默认`toString`，我们将添加前缀和后缀值，以添加标题/标签 "NewPlayer" 并将结果包裹在括号中。
 
 ```kotlin
 override fun toString(): String {
@@ -11975,9 +11928,9 @@ override fun toString(): String {
 }
 ```
 
-请注意，`isIncluded` 和 `isHuman` 都需要调用 `get`，因为我们关心的是 `ObservableBoolean` 类中包装的布尔值。语法 `{ (property, value) -> ... }` 称为解构声明，它是一种将 `Pair` 拆分为两个不同值的方式。我们无需调用 `entry.first` 和 `entry.second` 来获取对的每一半，而是有两个现成的变量可供使用。
+请注意，`isIncluded`和`isHuman`都需要调用`get`，因为我们关心的是`ObservableBoolean`类中包装的布尔值。语法`{ (property, value) -> ... }`称为解构声明，它是一种将`Pair`拆分为两个不同值的方式。我们无需调用`entry.first`和`entry.second`来获取对的每一半，而是有两个现成的变量可供使用。
 
-我们对新的 `toString` 可以做的最后一个更改是：由于函数中所做的只是返回其中的单个表达式，我们可以将函数更改为使用表达式语法，从而无需显式列出返回类型甚至 `return` 关键字：
+我们对新的`toString`可以做的最后一个更改是：由于函数中所做的只是返回其中的单个表达式，我们可以将函数更改为使用表达式语法，从而无需显式列出返回类型甚至`return`关键字：
 
 ```kotlin
 override fun toString() = listOf(
@@ -11997,7 +11950,7 @@ override fun toString() = listOf(
 
 ![](img/c024742480e86eb8867e0760ebe353d7_545_0.png)
 
-好多了！虽然仍然不是最容易阅读的，但这次你肯定能更好地识别出值。这并不是生产应用中你会使用的用例，但为了测试目的，它工作得很好。更重要的是，你现在知道如何使用 `Toast` 类向用户传达少量有用信息了。
+好多了！虽然仍然不是最容易阅读的，但这次你肯定能更好地识别出值。这并不是生产应用中你会使用的用例，但为了测试目的，它工作得很好。更重要的是，你现在知道如何使用`Toast`类向用户传达少量有用信息了。
 
 ### 将日志消息记录到 Logcat
 
@@ -12007,11 +11960,13 @@ Logcat 是 Android SDK 附带的一个命令行工具，它接收来自设备和
 
 ![](img/c024742480e86eb8867e0760ebe353d7_546_0.png)
 
-在这里，我们可以获取有关设备各种信息，无论它是真实设备还是模拟器。我们还可以过滤特定应用、仅显示特定日志级别（与消息的重要性相关）的消息，以及在日志消息中搜索某些短语或正则表达式模式。在这里，我们将在点击 Play 按钮时打印到 Logcat，然后搜索我们给定的 `TAG`。
+在这里，我们可以获取有关设备各种信息，无论它是真实设备还是模拟器。我们还可以过滤特定应用、仅显示特定日志级别（与消息的重要性相关）的消息，以及在日志消息中搜索某些短语或正则表达式模式。在这里，我们将在点击 Play 按钮时打印到 Logcat，然后搜索我们给定的`TAG`。
 
-`TAG` 变量是 Android 应用中的一个常见约定，用于为日志消息指定类别。这可以是任何你想要的字符串值，但通常我们使用类的名称。在 Java 中，你会创建一个名为 `TAG` 的 `static final String` 并在日志调用中使用它。然而，由于 Kotlin 没有 `static` 类型的概念，我们将改为将 `TAG` 放在 `companion object` 中。
+`TAG`变量是 Android 应用中的一个常见约定，用于为日志消息指定类别。这可以是任何你想要的字符串值，但通常我们使用类的名称。在 Java 中，你会创建一个名为`TAG`的`static final String`并在日志调用中使用它。然而，由于 Kotlin 没有`static`类型的概念，我们将改为将`TAG`放在`companion object`中。
 
-如果你不熟悉它们，`companion object` 是一个与类关联的 `object`。每个类只有一个此 `object` 的实例（意味着它是一个*单例*），其中的函数/值/变量可以以类似于我们引用 `static` 类型的方式访问。在 `companion object` 内部，我们将使用 `PickPlayerFragment` 的 Java 类对象并引用 `simpleName` 变量，而不是手动写出类名。
+
+
+如果你不熟悉它们，`companion object` 是一个与类关联的`object`。每个类只有一个此`object`的实例（意味着它是一个*单例*），其中的函数/值/变量可以以类似于我们引用`static`类型的方式访问。在`companion object`内部，我们将使用`PickPlayerFragment`的 Java 类对象并引用`simpleName`变量，而不是手动写出类名。
 
 ```kotlin
 class PickPlayersFragment : Fragment() {
@@ -12024,7 +11979,7 @@ class PickPlayersFragment : Fragment() {
 }
 ```
 
-一旦声明了 `TAG` 变量，我们就可以调用我们选择的 `Log` 方法。`Log` 上的许多方法对应于消息的日志级别；有关这些日志级别的更多信息，请查看 [https://link.mfazio.dev/log](https://link.mfazio.dev/log) 的文档。对于我们的测试，我们将使用 `Log.i` 方法，它记录一条具有 *Info* 严重性的消息。Info 日志通常用于查看应用中发生的情况，是一个中等级别的日志。完整的日志代码将如下所示：
+一旦声明了`TAG`变量，我们就可以调用我们选择的`Log`方法。`Log`上的许多方法对应于消息的日志级别；有关这些日志级别的更多信息，请查看 [https://link.mfazio.dev/log](https://link.mfazio.dev/log) 的文档。对于我们的测试，我们将使用`Log.i`方法，它记录一条具有 *Info* 严重性的消息。Info 日志通常用于查看应用中发生的情况，是一个中等级别的日志。完整的日志代码将如下所示：
 
 ```kotlin
 this.buttonPlayGame.setOnClickListener {
@@ -12037,23 +11992,20 @@ this.buttonPlayGame.setOnClickListener {
 }
 ```
 
-### Logcat 日志级别
+## Logcat 日志级别
 
 ![](img/c024742480e86eb8867e0760ebe353d7_548_0.png)
 
 Logcat 中的日志级别表示消息的优先级。这些优先级有助于告诉你消息的重要性，并允许在 Android Studio 中进行过滤。从高到低优先级，它们是：
 
 - **F**：致命（Fatal）— 与应用崩溃相关的消息。
-
-### Logcat 日志级别
-
 - **E**：错误——来自代码中异常的消息，但不会导致应用崩溃。
 - **W**：警告——应用中出现了问题，但程序仍可继续执行。
 - **I**：信息——来自应用的有用信息，不一定表示出了问题。
 - **D**：调试——用于查看应用进程的详细/频繁消息。
 - **V**：详细——过于详细的消息；应用上线后可能不需要。
 
-使用我们之前创建的 TAG，我们的 FAB 现在将向 Logcat 写入一条记录。现在唯一的问题是，许多值都以信息级别添加到 Logcat 中，因此我们的消息可能很难找到。但如果我们前往 Logcat 搜索栏并搜索 `PickPlayersFragment`，我们的消息就会立即弹出。
+使用我们之前创建的`TAG`，我们的 FAB 现在将向 Logcat 写入一条记录。现在唯一的问题是，许多值都以信息级别添加到 Logcat 中，因此我们的消息可能很难找到。但如果我们前往 Logcat 搜索栏并搜索`PickPlayersFragment`，我们的消息就会立即弹出。
 
 ![](img/c024742480e86eb8867e0760ebe353d7_550_0.png)
 
@@ -12087,7 +12039,7 @@ Toast 消息？它们是为了快速通知用户某些事情，但在开发过�
 
 ### Classpath 依赖项
 
-这些依赖项包含在项目的 `build.gradle` 文件中，并与应用 `build.gradle` 文件中的插件一起使用。
+这些依赖项包含在项目的`build.gradle`文件中，并与应用`build.gradle`文件中的插件一起使用。
 
 #### Gradle 构建插件
 
@@ -12141,7 +12093,7 @@ classpath "com.google.gms:google-services:$gms_version"
 
 添加 ABL API Client，可用于更轻松地进行 API 调用并处理这些调用的数据。
 
-这需要在项目的 `build.gradle` 文件中包含 JitPack.io 仓库。
+这需要在项目的`build.gradle`文件中包含 JitPack.io 仓库。
 
 ```
 implementation "dev.mfazio:abl-api-client:$abl_client_version"
@@ -12174,7 +12126,7 @@ implementation "androidx.core:core-ktx:$core_version"
 
 #### Constraint Layout
 
-在我们的应用中提供 `<ConstraintLayout>` 标签。
+在我们的应用中提供`<ConstraintLayout>`标签。
 
 ```
 implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
@@ -12306,7 +12258,7 @@ implementation "androidx.preference:preference-ktx:$preference_version"
 
 #### RecyclerView
 
-向应用添加 `<RecyclerView>` 标签/类。
+向应用添加`<RecyclerView>`标签/类。
 
 ```
 implementation "androidx.recyclerview:recyclerview:$recycler_view_version"
@@ -12361,7 +12313,7 @@ implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swipe_refresh_ve
 
 #### ViewPager2
 
-在应用中提供 `<ViewPager2>` 标签，允许在多个视图之间滑动切换。
+在应用中提供`<ViewPager2>`标签，允许在多个视图之间滑动切换。
 
 ```
 implementation "androidx.viewpager2:viewpager2:1.0.0"
@@ -12427,12 +12379,9 @@ testImplementation "androidx.test:runner:$test_core_version"
 
 添加可与 LiveData 一起使用的 JUnit 测试规则。
 
-```
-testImplementation "androidx.arch.core:core-testing:$arch_core_version"
-```
 
-- 书籍版本：2.1.0
-- 应用：Penny Drop
+
+以下是为 Android 应用添加测试依赖的配置说明，包括书籍版本号和应用名称。
 
 #### Espresso Core Library
 
@@ -12474,8 +12423,7 @@ androidTestImplementation "androidx.test.ext:junit-ktx:$test_ext_version"
 提供用于有效测试协程的测试工具。
 
 ```
-androidTestImplementation
-"org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
+androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
 ```
 
 - 书籍版本：1.4.2
@@ -12483,13 +12431,14 @@ androidTestImplementation
 
 谢谢！
 
-你喜欢这本书吗？请告诉我们。请花点时间通过 support@pragprog.com 给我们发送反馈邮件。分享你的故事，你就有机会赢得免费电子书。请使用邮件主题“Book Feedback”。
+你喜欢这本书吗？请告诉我们。请花点时间通过 `support@pragprog.com` 给我们发送反馈邮件。分享你的故事，你就有机会赢得免费电子书。请使用邮件主题“Book Feedback”。
 
-准备好阅读你的下一本精彩的 Pragmatic Bookshelf 书籍了吗？请访问 [https://pragprog.com](https://pragprog.com) 并使用优惠码 BUYANOTHER2021 在购买下一本电子书时享受 30% 的折扣。
+准备好阅读你的下一本精彩的 Pragmatic Bookshelf 书籍了吗？请访问 [https://pragprog.com](https://pragprog.com) 并使用优惠码 `BUYANOTHER2021` 在购买下一本电子书时享受 30% 的折扣。
 
 在禁止、限制或不受欢迎的地方无效。请勿在水边使用电子书。如果出现皮疹，请咨询医生。不适用于 *The Pragmatic Programmer* 电子书，因为它比 Pragmatic Bookshelf 本身还要古老。副作用可能包括知识和技能的提升、市场竞争力的增强以及深深的满足感。请定期增加剂量。
 
 感谢你一如既往的支持，
+
 Andy Hunt, Publisher
 
 ## 你可能感兴趣...

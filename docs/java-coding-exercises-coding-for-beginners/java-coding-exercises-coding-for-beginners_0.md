@@ -1,19 +1,14 @@
+
 # JAVA 编码练习：初学者编码指南
-
-
 
 ![](img/image_rsrcVC.jpg)
 
-
-
-
-
-
-
 ## 打印 hello
+
 分行打印 hello 和你的名字。
 
 JAVACODE
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -28,7 +23,9 @@ public class Main {
     }
 }
 ```
+
 OUTPUT
+
 ```
 Input your first name: JJ
 Input your last name: TAM
@@ -37,9 +34,11 @@ JJ TAM
 ```
 
 ## 打印数字之和
+
 两个数字之和。
 
 JAVACODE
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -55,7 +54,9 @@ public class Main {
     }
 }
 ```
+
 OUTPUT
+
 ```
 Input the first number: 545
 Input the second number: 455
@@ -63,9 +64,11 @@ Sum: 1000
 ```
 
 ## 除法两个数字
+
 并在屏幕上打印。
 
 JAVA CODE
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -81,7 +84,9 @@ public class Main {
     }
 }
 ```
+
 OUTPUT
+
 ```
 Input the first number: 100
 Input the second number: 25
@@ -89,9 +94,11 @@ The division of a and b is:4
 ```
 
 ## 打印结果
+
 指定操作的结果。
 
 JAVA CODE
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -105,7 +112,9 @@ public class Main {
 ```
 
 ## 打印乘法表
+
 JAVA CODE
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -119,7 +128,9 @@ public class Main {
     }
 }
 ```
+
 OUTPUT
+
 ```
 Input the Number:
 15
@@ -136,9 +147,11 @@ Input the Number:
 ```
 
 ## 求面积
+
 圆的面积和周长。
 
 JAVA CODE
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -151,7 +164,9 @@ public class Main {
     }
 }
 ```
+
 OUTPUT
+
 ```
 Input the radius of the circle:
 10
@@ -160,7 +175,9 @@ Area is = 314.159265359
 ```
 
 ## 交换两个变量
+
 JAVA CODE
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -177,7 +194,9 @@ public class Main {
     }
 }
 ```
+
 OUTPUT
+
 ```
 Input the first number: 25
 Input the second number: 50
@@ -185,7 +204,9 @@ Swapped values are:50 and 25
 ```
 
 ## 打印一个脸
+
 JAVA CODE
+
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -201,7 +222,9 @@ public class Main {
     }
 }
 ```
+
 OUTPUT
+
 ```
 *****
 | o o |
@@ -211,7 +234,9 @@ OUTPUT
 ```
 
 ## 华氏度转摄氏度
+
 JAVA CODE
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -224,14 +249,18 @@ public class Main {
     }
 }
 ```
+
 OUTPUT
+
 ```
 Input a degree in Fahrenheit: 96
 96.0 degree is equal to 35.5555555556
 ```
 
 ## 英寸转米
+
 JAVA CODE
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -244,14 +273,18 @@ public class Main {
     }
 }
 ```
+
 OUTPUT
+
 ```
 Input a value for inch: 5
 5.0 inch is 0.127
 ```
 
 ## 相加所有数字
+
 JAVA CODE
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -271,14 +304,18 @@ public class Main {
     }
 }
 ```
+
 OUTPUT
+
 ```
 Input an integer between 0 and 1000: 750
 The sum of all digits in 750 is 12
 ```
 
 ## 从分钟打印年数和天数
+
 JAVA CODE
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -293,14 +330,18 @@ public class Main {
     }
 }
 ```
+
 OUTPUT
+
 ```
 Input the number of minutes: 123456
 123456 minutes is approximately 0 years and 85 days
 ```
 
 ## 计算 (BMI) 体指数
+
 JAVA CODE
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -315,7 +356,9 @@ public class Main {
     }
 }
 ```
+
 OUTPUT
+
 ```
 Input weight in pounds: 450
 Input height in inches: 72
@@ -323,7 +366,11 @@ Body Mass Index is 61.0303457881
 ```
 
 ## 计算米/秒、每小时和英里/小时
+
 JAVA CODE
+
+
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -350,7 +397,9 @@ public class Main {
     }
 }
 ```
-OUTPUT
+
+**OUTPUT**
+
 ```
 Input distance in meters: 3000
 Input hour: 5
@@ -362,7 +411,9 @@ Your speed in miles/h is 0.336472
 ```
 
 ## 使用减法运算符除两个指定的整数
-JAVA CODE
+
+**JAVA CODE**
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -389,7 +440,9 @@ public class Main {
     }
 }
 ```
-OUTPUT
+
+**OUTPUT**
+
 ```
 Input the dividend: 900
 Input the divider: 30
@@ -397,7 +450,9 @@ Result: 30.0
 ```
 
 ## 不使用乘法运算符乘以两个指定的整数
-JAVA CODE
+
+**JAVA CODE**
+
 ```java
 import java.util.*;
 public class Main {
@@ -424,7 +479,9 @@ public class Main {
     }
 }
 ```
-OUTPUT
+
+**OUTPUT**
+
 ```
 Input the first number: 25
 Input the second number: 30
@@ -432,7 +489,9 @@ Result: 75
 ```
 
 ## 打印和、差、平均值、距离和最小值
-JAVA CODE
+
+**JAVA CODE**
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -452,7 +511,9 @@ public class Main {
     }
 }
 ```
-OUTPUT
+
+**OUTPUT**
+
 ```
 Input 1st integer: 50
 Input 2nd integer: 30
@@ -466,6 +527,7 @@ Min integer: 30
 ```
 
 ## 找出三个数中的最大值 使用条件语句
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -489,7 +551,9 @@ public class Main {
     }
 }
 ```
-OUTPUT
+
+**OUTPUT**
+
 ```
 Input the 1st number: 25
 Input the 2nd number: 58
@@ -498,6 +562,7 @@ The greatest: 98
 ```
 
 ## 显示给定整数的乘法表
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -513,7 +578,9 @@ System.out.println(n+" X "+j+" = " +n*j);
     }
 }
 ```
-OUTPUT
+
+**OUTPUT**
+
 ```
 Input the number(Table to be calculated): 
 Input number of terms : 7
@@ -528,6 +595,7 @@ Input number of terms : 7
 ```
 
 ## 显示数字直角三角形图案
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -543,7 +611,9 @@ public class Main {
     }
 }
 ```
-OUTPUT
+
+**OUTPUT**
+
 ```
 Input number of rows : 9
 1
@@ -558,6 +628,7 @@ Input number of rows : 9
 ```
 
 ## 打印金字塔图案
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -578,7 +649,9 @@ public class Main {
     }
 }
 ```
-OUTPUT
+
+**OUTPUT**
+
 ```
 Input number of rows : 7
        1 
@@ -591,6 +664,7 @@ Input number of rows : 7
 ```
 
 ## 显示数字菱形结构
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -622,7 +696,9 @@ public class Main {
     }
 }
 ```
-OUTPUT
+
+**OUTPUT**
+
 ```
 Input the number: 7
       1
@@ -640,4 +716,3 @@ Input the number: 7
      22
       1
 ```
-

@@ -1,3 +1,4 @@
+
 # 2023 年学习 Ionic 应用开发的 5 门最佳在线课程
 
 > 原文：<https://medium.com/javarevisited/5-best-online-courses-to-learn-ionic-for-app-development-8f6a2e552b2c?source=collection_archive---------1----------------------->
@@ -6,7 +7,7 @@
 
 [![](img/0c5b28712c9c97644f8e2ba3f76b7e1a.png)](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fionic-2-the-practical-guide-to-building-ios-android-apps%2F)
 
-大家好，如果你想在 2023 年学习 Ionic for app developent，并寻找最好的在线课程，那么你来对地方了。之前，我已经分享了 [**最佳颤振课程**](/javarevisited/my-favorite-flutter-and-dart-programming-courses-for-beginners-9e8355710d78) 以及 [**最佳反应本土课程**](/javarevisited/my-favorite-free-react-native-courses-for-beginners-in-2020-4629f5274eb6) 在这篇文章中，我将分享最佳在线课程以深入学习 Ionic。
+大家好，如果你想在 2023 年学习 Ionic for app developent，并寻找最好的在线课程，那么你来对地方了。之前，我已经分享了[最佳颤振课程](/javarevisited/my-favorite-flutter-and-dart-programming-courses-for-beginners-9e8355710d78)以及[最佳反应本土课程](/javarevisited/my-favorite-free-react-native-courses-for-beginners-in-2020-4629f5274eb6)。在这篇文章中，我将分享最佳在线课程以深入学习 Ionic。
 
 但是，在我们看到这些资源之前，首先要了解什么是离子以及它如何帮助你？
 
@@ -40,10 +41,11 @@ Ionic 提供的官方文档也非常好，结构良好。Ionic 应用程序可�
 
 本课程要求学生熟悉 Angular 的基础知识，尽管会提供复习课程。学生还应该具备 HTML、CSS 和 JavaScript 的基础知识。
 
-**课程时长:20 小时
-评分:4.7 星(满分 5 分)**
+**课程时长：20 小时**
 
-学生将了解 Ionic 的基础知识及其丰富的组件库，以及如何获取和存储用户输入。学生将了解 Ionic 2 的高级功能，并使用它来优化他们的应用程序。在本课程中，学生将构建 4 个完整的应用程序。本课程有一个关于离子 3 和离子原生 3 的特殊部分
+**评分：4.7 星（满分 5 分）**
+
+学生将了解 Ionic 的基础知识及其丰富的组件库，以及如何获取和存储用户输入。学生将了解 Ionic 2 的高级功能，并使用它来优化他们的应用程序。在本课程中，学生将构建 4 个完整的应用程序。本课程有一个关于离子 3 和离子原生 3 的特殊部分。
 
 **这是加入本课程的链接**—[Ionic——构建 iOS、Android 和 Web 应用](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fionic-2-the-practical-guide-to-building-ios-android-apps%2F)
 
@@ -54,10 +56,12 @@ Ionic 提供的官方文档也非常好，结构良好。Ionic 应用程序可�
 这是网上最好的课程之一，可以帮助你全面理解 Ionic 框架。培训由爱奥尼亚的专家指导，即使是完全的初学者也可以通过本课程开始学习爱奥尼亚。
 
 学生将学习如何使用 Ionic 开发高性能应用。这些应用将兼容所有流行的移动和桌面操作系统。
+
 这门课的培训师是萨尼·优素福，他是一名软件工程师、演说家、培训师、出版作家。他将向学习者介绍 Ionic 4.0 的高级功能。
 
-**课程时长:5 小时
-评分:4.5 星(满分 5 分)**
+**课程时长：5 小时**
+
+**评分：4.5 星（满分 5 分）**
 
 学生将获得许多作业和项目来帮助他们的学习。完成本课程后，学生可以获得可共享的证书。课程内容在注册后的前 30 天是免费的。
 
@@ -65,34 +69,35 @@ Ionic 提供的官方文档也非常好，结构良好。Ionic 应用程序可�
 
 [![](img/0481070729a8c3bd67a9880942dfaf5c.png)](https://linkedin-learning.pxf.io/c/1193463/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fionic-4-0-essential-training)
 
-顺便说一句，你需要 LinkedIn Learning 会员才能观看这门课程，每月费用约为 49.99 美元，但你也可以通过参加他们的 [**1 个月免费试用**](http://linkedin-learning.pxf.io/c/1193463/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fsubscription%2Fproducts) 来免费观看这门课程，这是探索他们 17000 多门最新技术在线课程的好方法。
-
-  
+顺便说一句，你需要 LinkedIn Learning 会员才能观看这门课程，每月费用约为 49.99 美元，但你也可以通过参加他们的[1 个月免费试用](http://linkedin-learning.pxf.io/c/1193463/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fsubscription%2Fproducts)来免费观看这门课程，这是探索他们 17000 多门最新技术在线课程的好方法。
 
 ## 3.[集成了 Ionic Native 和 Cordova 的 Master Ionic 3](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmaster-ionic-3-with-ionic-native-and-cordova-integrations%2F)
 
 本课程将帮助学生通过推送通知、摄像头访问、指纹等功能革新他们的应用。学生将能够将几种本机设备特性集成到他们的离子应用中。该课程分为 35 节课，可以在很短的时间内完成。
 
-该课程由保罗·哈利迪(Paul Halliday)主讲，他是一名科技企业家，擅长跨平台移动开发。他还拥有桑德兰大学的计算机科学荣誉理学士学位。本课程只需要对离子框架有一个基本的了解。学生可以将本机设备 API 集成到他们的 Ionic 应用中。
+该课程由保罗·哈利迪（Paul Halliday）主讲，他是一名科技企业家，擅长跨平台移动开发。他还拥有桑德兰大学的计算机科学荣誉理学士学位。本课程只需要对离子框架有一个基本的了解。学生可以将本机设备 API 集成到他们的 Ionic 应用中。
 
 本课程使用最新的 ES6/7 语法设计。
 
-课程时长:3.5 小时
-评分:2.8 星(满分 5 分)
+**课程时长：3.5 小时**
+
+**评分：2.8 星（满分 5 分）**
 
 **以下是加入本课程的链接** — [掌握 Ionic 3 与 Ionic Native](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmaster-ionic-3-with-ionic-native-and-cordova-integrations%2F)
 
 [![](img/c113f022e2cb6c4a5c2354ebe4dded7f.png)](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fmaster-ionic-3-with-ionic-native-and-cordova-integrations%2F)
 
-## 4.面向 WooCommerce 的 Ionic 3 应用:构建一个电子商务移动应用
+## 4.面向 WooCommerce 的 Ionic 3 应用：构建一个电子商务移动应用
 
 本课程将使学生能够使用 Ionic Framework 3 构建一个电子商务应用程序，并使用 HTML、SCSS 和 TypeScript 构建 WooCommerce。将向学生介绍 Ionic 框架的本地组件和功能。
 
 这门课程的创建者是 Samarth Agarwal，他是一名软件开发人员、企业家，也是 Udemy 上最受欢迎的导师之一。
+
 课程结束时，学生将能够构建和部署跨平台混合应用，并在 Play Store 中发布他们的应用。
 
-**课程时长:7 小时
-评分:4.8 星(满分 5 分)**
+**课程时长：7 小时**
+
+**评分：4.8 星（满分 5 分）**
 
 学生还将学习如何将 PayPal 支付网关以及推送通知集成到他们的 Ionic/Cordova 应用程序中。
 
@@ -100,7 +105,7 @@ Ionic 提供的官方文档也非常好，结构良好。Ionic 应用程序可�
 
 学生将学习如何将 PayPal 支付网关集成到他们的 Ionic 应用程序中。
 
-以下是加入本课程的链接— [面向 WooCommerce 的 Ionic 3 应用:](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fionic-3-apps-for-woocommerce-build-an-ecommerce-mobile-app%2F)
+**以下是加入本课程的链接**— [面向 WooCommerce 的 Ionic 3 应用：](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fionic-3-apps-for-woocommerce-build-an-ecommerce-mobile-app%2F)
 
 [![](img/95034b33deb656a4b6a5b910f50fc11a.png)](https://click.linksynergy.com/deeplink?id=CuIbQrBnhiw&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Fionic-3-apps-for-woocommerce-build-an-ecommerce-mobile-app%2F)
 
@@ -112,16 +117,17 @@ Ionic 提供的官方文档也非常好，结构良好。Ionic 应用程序可�
 
 这是一门以代码为中心的课程，将帮助学生尽快上手并运行。这门课的讲师也是该领域的顶尖专家。
 
-**课程时长:3-4 小时
-评分:4.5 星(满分 5 分)**
+**课程时长：3-4 小时**
 
-这是加入这个课程的链接。[使用 Ionic 框架和 AngularJS 构建移动应用](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fbuilding-mobile-apps-ionic-framework-angularjs)
+**评分：4.5 星（满分 5 分）**
+
+**这是加入这个课程的链接。** [使用 Ionic 框架和 AngularJS 构建移动应用](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fbuilding-mobile-apps-ionic-framework-angularjs)
 
 [![](img/0cda944d8e592a687831bfa4a153fae8.png)](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Fbuilding-mobile-apps-ionic-framework-angularjs)
 
-不过，你需要一个 [Pluralsight 会员](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Fskills)才能加入这个课程，费用大约是每月 29 美元或每年 299 美元(14%的折扣)。我向所有程序员强烈推荐这个订阅，因为它提供了超过 7000 个在线课程的即时访问，以学习任何技术技能。或者，你也可以使用他们的 [**10 天免费通行证**](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial) 免费观看这个课程。
+不过，你需要一个 [Pluralsight 会员](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Fskills)才能加入这个课程，费用大约是每月 29 美元或每年 299 美元（14% 的折扣）。我向所有程序员强烈推荐这个订阅，因为它提供了超过 7000 个在线课程的即时访问，以学习任何技术技能。或者，你也可以使用他们的[10 天免费通行证](https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial)免费观看这个课程。
 
-<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial>  
+<https://pluralsight.pxf.io/c/1193463/424552/7490?u=https%3A%2F%2Fwww.pluralsight.com%2Fpricing%2Ffree-trial>
 
 ## 结论
 
@@ -140,19 +146,24 @@ Ionic 中有很多有用的插件，比如 Cordova，它就内置在 Ionic 中�
 *   [学习 iOS 应用开发的五大课程](https://javarevisited.blogspot.com/2019/01/top-5-ios-developer-course-to-learn-ios.html)
 *   [10 门针对初学者的免费 React 本地课程](/javarevisited/my-favorite-free-react-native-courses-for-beginners-in-2020-4629f5274eb6)
 *   [2023 年学习微服务开发的 5 门课程](https://javarevisited.blogspot.sg/2018/02/top-5-spring-microservices-courses-with-spring-boot-and-spring-cloud.html)
-*   [程序员 10 门 DevOps 课程](https://javarevisited.blogspot.com/2018/09/10-devops-courses-for-experienced-java-developers.html)
-*   [2023 年从零开始学习 Java 的 5 门课程](http://www.java67.com/2018/02/5-online-courses-to-learn-java-9-better.html)
-*   [2023 年 5 门免费课程学习 Angular](http://www.java67.com/2018/01/top-5-free-angular-js-online-courses-for-web-developers.html)
-*   [2023 年 5 门机器学习和数据科学课程](http://javarevisited.blogspot.sg/2018/03/top-5-data-science-and-machine-learning-online-courses-to-learn-online.html)
-*   [学习大数据、Hadoop 和 Spark 的 5 门免费课程](http://www.java67.com/2018/05/top-5-free-big-data-courses-to-learn-Hadoop-Apache-Spark.html)
-*   [2023 年网络开发者路线图](https://hackernoon.com/the-2019-web-developer-roadmap-ab89ac3c380e)
-*   [深入了解区块链的五大免费课程](http://www.java67.com/2018/02/5-free-blockchain-technology-courses.html)
-*   [7 门深入学习 Nodejs 的免费课程](/javarevisited/7-free-courses-to-learn-node-js-in-2020-2f1dd6722b49)
-*   [面向开发者的 10 门免费 Docker 课程](https://hackernoon.com/10-free-courses-to-learn-docker-for-programmers-and-devops-engineers-7ff2781fd6e0)
-*   [2023 年手机开发者可以学习的 10 项技能](https://javarevisited.blogspot.com/2020/01/10-things-mobile-app-developers-can-learn.html)
+
+
+
+## 程序员 10 门 DevOps 课程
+
+- [程序员 10 门 DevOps 课程](https://javarevisited.blogspot.com/2018/09/10-devops-courses-for-experienced-java-developers.html)
+- [2023 年从零开始学习 Java 的 5 门课程](http://www.java67.com/2018/02/5-online-courses-to-learn-java-9-better.html)
+- [2023 年 5 门免费课程学习 Angular](http://www.java67.com/2018/01/top-5-free-angular-js-online-courses-for-web-developers.html)
+- [2023 年 5 门机器学习和数据科学课程](http://javarevisited.blogspot.sg/2018/03/top-5-data-science-and-machine-learning-online-courses-to-learn-online.html)
+- [学习大数据、Hadoop 和 Spark 的 5 门免费课程](http://www.java67.com/2018/05/top-5-free-big-data-courses-to-learn-Hadoop-Apache-Spark.html)
+- [2023 年网络开发者路线图](https://hackernoon.com/the-2019-web-developer-roadmap-ab89ac3c380e)
+- [深入了解区块链的五大免费课程](http://www.java67.com/2018/02/5-free-blockchain-technology-courses.html)
+- [7 门深入学习 Nodejs 的免费课程](/javarevisited/7-free-courses-to-learn-node-js-in-2020-2f1dd6722b49)
+- [面向开发者的 10 门免费 Docker 课程](https://hackernoon.com/10-free-courses-to-learn-docker-for-programmers-and-devops-engineers-7ff2781fd6e0)
+- [2023 年手机开发者可以学习的 10 项技能](https://javarevisited.blogspot.com/2020/01/10-things-mobile-app-developers-can-learn.html)
 
 感谢您阅读本文。如果你喜欢这五大离子课程，请与你的朋友和家人分享。如果您有任何疑问或反馈，也可以在评论区留言。
 
-如果你想学习 Flutter，另一个流行的构建移动应用的框架，并寻找一个全面的在线培训课程，那么我也推荐你去看看 Udemy 上最好的讲师之一，AcadMind 的 Maximilian Scwarzmuller 的[**Flutter&Dart-完整指南【2022 版】**](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-flutter-dart-to-build-ios-android-apps%2F) 课程。
+如果你想学习 `Flutter`，另一个流行的构建移动应用的框架，并寻找一个全面的在线培训课程，那么我也推荐你去看看 `Udemy` 上最好的讲师之一，`AcadMind` 的 `Maximilian Scwarzmuller` 的 [Flutter&Dart-完整指南【2022 版】](https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2Flearn-flutter-dart-to-build-ios-android-apps%2F) 课程。
 
-<https://javarevisited.blogspot.com/2020/01/top-5-courses-to-learn-dart-programming.html> 
+<https://javarevisited.blogspot.com/2020/01/top-5-courses-to-learn-dart-programming.html>

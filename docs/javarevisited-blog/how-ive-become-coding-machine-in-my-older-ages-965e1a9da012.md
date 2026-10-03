@@ -1,3 +1,4 @@
+
 # 在我的“老年时代”，我是如何成为一台编码机器的
 
 > 原文：<https://medium.com/javarevisited/how-ive-become-coding-machine-in-my-older-ages-965e1a9da012?source=collection_archive---------0----------------------->
@@ -34,7 +35,7 @@
 
 > 对成功的关注是关键！如果你想做大事，你必须集中精力
 
-# **时间管理**
+# 时间管理
 
 我需要削减许多不必要的东西。比如我开始少出门了。我不像以前那样看足球和篮球比赛。
 
@@ -42,16 +43,17 @@
 
 不是太多，也不是每个周末，但我做了不一致的事情。
 
-# **学习**
+# 学习
 
-算法:我在算法领域解决了很多不同的问题。这是一个被许多程序员低估的领域。他们说这不重要。
+算法：我在算法领域解决了很多不同的问题。这是一个被许多程序员低估的领域。他们说这不重要。
+
 然而，如果你申请高科技顶级公司，这是最重要的方面之一。
 
-他们想看你如何做你需要做的事情:编码。他们想知道你是如何思考的，你解决抽象算法问题的能力如何。在这个过程中，你还需要学习一些[基本数据结构](/hackernoon/10-data-structure-algorithms-and-programming-courses-to-crack-any-coding-interview-e1c50b30b927?source=user_profile---------8-----------------------)，如[列表](/javarevisited/top-20-linked-list-coding-problems-from-technical-interviews-90b64d2df093)、[队列](https://javarevisited.blogspot.com/2017/04/difference-between-priorityqueue-and-treeset-in-java.html)、[堆栈](https://www.java67.com/2013/08/ata-structures-in-java-programming-array-linked-list-map-set-stack-queue.html)、[二叉树](/javarevisited/20-binary-tree-algorithms-problems-from-coding-interviews-c5e5a384df30)、图形……
+他们想看你如何做你需要做的事情：编码。他们想知道你是如何思考的，你解决抽象算法问题的能力如何。在这个过程中，你还需要学习一些[基本数据结构](/hackernoon/10-data-structure-algorithms-and-programming-courses-to-crack-any-coding-interview-e1c50b30b927?source=user_profile---------8-----------------------)，如[列表](/javarevisited/top-20-linked-list-coding-problems-from-technical-interviews-90b64d2df093)、[队列](https://javarevisited.blogspot.com/2017/04/difference-between-priorityqueue-and-treeset-in-java.html)、[堆栈](https://www.java67.com/2013/08/ata-structures-in-java-programming-array-linked-list-map-set-stack-queue.html)、[二叉树](/javarevisited/20-binary-tree-algorithms-problems-from-coding-interviews-c5e5a384df30)、图形……
 
 此外，练习算法将提高您的逻辑思维，并帮助您找出现实生活中编程问题的边缘情况。你的大脑保持年轻和敏锐。这就像是你大脑的健身房。
 
-学习资源:Codility 课程,“破解编码面试”这本书，Youtube 资料，HackerRank 课程和问题，Leetcode 问题。你可以看这样的视频:
+学习资源：Codility 课程，“破解编码面试”这本书，Youtube 资料，HackerRank 课程和问题，Leetcode 问题。你可以看这样的视频：
 
 二叉树解释
 
@@ -62,9 +64,10 @@ Youtube 上也有很多资料。还有很多博客(比如媒体上的)。关于�
 如果对我来说很新鲜，我会用 1.25 的速度。如果它是已知的，但我不是这方面的专家，我用 1.50 的速度。
 
 如果我是这方面的专家，我会用 1.75 甚至 2.00 的速度。但在这些情况下，我也会打开 CC 选项(隐藏字幕——视频的书面版本)。
+
 在选择我所学的课程时，我主要选择畅销书或平均评分最高的课程。但不喜欢太长的课程。
 
-**面向对象设计&系统设计:**对于这些，我主要使用了 Youtube 的资料和 Google 搜索的文字资料。以下是优秀 Youtube 资料的链接:
+面向对象设计 & 系统设计：对于这些，我主要使用了 Youtube 的资料和 Google 搜索的文字资料。以下是优秀 Youtube 资料的链接：
 
 # 体育运动
 
@@ -90,7 +93,7 @@ Youtube 上也有很多资料。还有很多博客(比如媒体上的)。关于�
 
 经过所有这些步骤，我的技能在短时间内有了巨大的提高。我的表现开始越来越好。六个月后，我换了一份薪水更高的工作。但我一直在用同样的力量努力。我几乎每天都在成长，并在项目中担任关键角色。我觉得我已经为未来几年的大事做好了准备。
 
-# **结论**
+# 结论
 
 编程是一件很难做的事情。如果你想成功，你必须有纪律性、良好的组织性和勤奋。你必须热爱它，对它充满激情。否则，你将无法享受你的工作，也无法达成大的目标。我给了你一堆提升自己的技巧和资源。现在轮到你在编程生涯中实现这一点了。
 

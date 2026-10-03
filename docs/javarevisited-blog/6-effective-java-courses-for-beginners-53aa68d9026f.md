@@ -1,3 +1,4 @@
+
 # 6 门有效的 Java 初学者课程
 
 > 原文：<https://medium.com/javarevisited/6-effective-java-courses-for-beginners-53aa68d9026f?source=collection_archive---------2----------------------->
@@ -23,10 +24,15 @@ CodeGym 是一个精心构建的非常方便的 Java 学习平台，基于“边
 **主要好处:**
 
 *   该资源基于超过 1200 个编码任务。它们都是实用的，并包括真实世界的例子
+
 *   该课程包含解释性讲座，涵盖从初级到高级的所有主题。你可以很容易地从零开始，逐渐成为一名有经验的程序员
+
 *   一个很大的优势是用户友好的移动应用程序。你可以在任何地方学习，随时随地，在公园里，在家里，在你选择的任何地方
+
 *   虚拟导师将帮助你完成学习过程。
+
 *   为了某种讨论或精神支持，CodeGym 有一个活跃的 Java 学习者社区
+
 *   结构良好的课程将引导你一步一步地完成学习过程。你不必在每次前进的时候都去想下一步该做什么
 
 **支持的平台** : [桌面](https://codegym.cc/)，[安卓](https://play.google.com/store/apps/details?id=com.hitechrush.codegym&hl=en)。
@@ -36,9 +42,13 @@ CodeGym 是一个精心构建的非常方便的 Java 学习平台，基于“边
 **主要功能:**
 
 *   对超过 1200 个编码任务的访问
+
 *   关于核心 Java 主题和更高级别的讲座
+
 *   即时代码验证功能，解决代码任务的技巧
+
 *   本课程以线性游戏化故事的形式组织
+
 *   小型讲座允许你计划你的学习时间
 
 ## 2. [Java 深入:成为一名完整的 Java 工程师！](https://www.udemy.com/course/java-in-depth-become-a-complete-java-engineer/)
@@ -50,9 +60,13 @@ CodeGym 是一个精心构建的非常方便的 Java 学习平台，基于“边
 **主要好处:**
 
 *   该课程不仅介绍了 Java 语言的核心和高级特性，还讲授了 Java 虚拟机(JVM)的内部原理
+
 *   作为一个更复杂的挑战，学习者可以在教师的帮助下，通过开发基于 Java EE 的 web 应用程序来获得真实世界的经验
+
 *   学习如何在实际任务中使用 JSP、Servlets 和 MySQL 等技术的可能性
+
 *   本课程包括 Java 相关技术的概述，例如 web 应用程序
+
 *   提供电视或移动接入
 
 **支持的平台** : [桌面](https://www.udemy.com/course/java-in-depth-become-a-complete-java-engineer/)，[安卓](https://play.google.com/store/apps/details?id=com.udemy.android&hl=en)， [iOS](https://apps.apple.com/us/app/udemy-online-video-courses/id562413829) 。
@@ -62,7 +76,9 @@ CodeGym 是一个精心构建的非常方便的 Java 学习平台，基于“边
 **主要特点:**
 
 *   学习路径将引导您浏览超过 66 小时的视频、22 篇文章、291 个可下载资源和 15 个编码练习
+
 *   基于项目的学习从一开始就提供实践经验
+
 *   成功的学生将获得结业证书。此外，您还可以成为甲骨文认证助理
 
 ## 3.[Java Fundamentals by plural sight](https://www.pluralsight.com/paths/java)
@@ -76,7 +92,9 @@ CodeGym 是一个精心构建的非常方便的 Java 学习平台，基于“边
 **主要好处:**
 
 *   该课程对[固体](/javarevisited/10-oop-design-principles-you-can-learn-in-2020-f7370cccdd31)的概念进行了扎实的介绍。SOLID 是五个主要面向对象设计原则的首字母缩写，这些原则使您的代码有意义
+
 *   实际任务是通过做一些与现实相关的事情来学习技术的好方法
+
 *   课时少，很容易在很短的时间内完成课程
 
 **支持的平台** : [桌面](https://www.pluralsight.com/courses/java-fundamentals-language)，[安卓](https://play.google.com/store/apps/details?id=com.pluralsight&hl=en)， [iOS](https://apps.apple.com/gb/app/pluralsight-learn-tech-skills/id431748264)
@@ -86,8 +104,11 @@ CodeGym 是一个精心构建的非常方便的 Java 学习平台，基于“边
 **主要功能:**
 
 *   本课程简短明了，每一个学习班次不需要太多时间
+
 *   它包含互动视频和测验，这本身就很有趣
+
 *   有许多真实世界的例子可以帮助你弄清楚它到底是如何工作的
+
 *   它不仅包括语法，还包括设计模式
 
 ## 4.[杜克大学 Java 认证(Coursera)](https://www.coursera.org/specializations/java-programming)
@@ -99,7 +120,9 @@ CodeGym 是一个精心构建的非常方便的 Java 学习平台，基于“边
 **主要好处:**
 
 *   本课程以项目为基础。在学习过程中，你会做一个推荐引擎，一个互动网页，以及其他类型的工作。课程结束时，你将有一个作品集可以展示
+
 *   学习过程意味着接受分级作业和同龄人的反馈
+
 *   你可以选择在 LinkedIn 上分享你的结业证书
 
 **支持的平台** : [桌面](https://www.coursera.org/specializations/java-programming)，[安卓](https://play.google.com/store/apps/details?id=org.coursera.android&hl=en_US)， [iOS](https://apps.apple.com/us/app/coursera-learn-new-skills/id736535961)
@@ -109,8 +132,11 @@ CodeGym 是一个精心构建的非常方便的 Java 学习平台，基于“边
 **主要功能:**
 
 *   该课程教授任何软件工程师都需要的基本技能
+
 *   你将学习如何设计算法，测试和调试你的程序
+
 *   认证分为五个子课程，涵盖语言的各个方面
+
 *   本课程包括几个应用你知识的实际项目
 
 ## 5. [Java 编程完全初学者 250 步](https://www.udemy.com/course/java-programming-tutorial-for-beginners/)
@@ -122,7 +148,9 @@ CodeGym 是一个精心构建的非常方便的 Java 学习平台，基于“边
 **主要好处:**
 
 *   一个非常清晰的解释，涵盖了函数式和面向目标的编程，以及相当现代的教学方法
+
 *   本课程由 302 节课组成，总时长约为 26 小时
+
 *   开始学习不需要任何编程经验
 
 **支持的平台** : [桌面](https://www.udemy.com/course/java-programming-tutorial-for-beginners/)，[安卓](https://play.google.com/store/apps/details?id=com.udemy.android&hl=en)， [iOS](https://apps.apple.com/us/app/udemy-online-video-courses/id562413829)
@@ -132,7 +160,9 @@ CodeGym 是一个精心构建的非常方便的 Java 学习平台，基于“边
 **主要功能:**
 
 *   该课程包含 200 多个真实世界的代码示例
+
 *   学生学习函数式编程和面向对象编程的基础。包括高级主题
+
 *   成功的学员将获得结业证书
 
 ## 6.[完整的 Java Masterclass](https://www.udemy.com/course/java-the-complete-java-developer-course/)
@@ -144,7 +174,9 @@ CodeGym 是一个精心构建的非常方便的 Java 学习平台，基于“边
 **主要好处:**
 
 *   教师认真对待学生的反馈，并在此基础上做出改进。此外，在开始新的讲座之前，他会回顾前一讲的知识
+
 *   这门课程非常全面，许多学生在完成后能够找到他们的第一份工作
+
 *   除了技术方面，你还将了解工程师用来提高生产力的方法
 
 **支持的平台** : [桌面](https://www.udemy.com/course/java-the-complete-java-developer-course/)，[安卓](https://play.google.com/store/apps/details?id=com.udemy.android&hl=en)， [iOS](https://apps.apple.com/us/app/udemy-online-video-courses/id562413829)
@@ -154,9 +186,13 @@ CodeGym 是一个精心构建的非常方便的 Java 学习平台，基于“边
 **主要功能:**
 
 *   400 场讲座，大约 80 小时的内容
+
 *   36 个编码练习
+
 *   每个话题后的挑战
+
 *   竣工证明
+
 *   通过手机和电视访问
 
 # 包裹

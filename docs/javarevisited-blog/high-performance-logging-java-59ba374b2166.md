@@ -1,3 +1,4 @@
+
 # 高性能日志记录— Java
 
 > 原文：<https://medium.com/javarevisited/high-performance-logging-java-59ba374b2166?source=collection_archive---------0----------------------->
@@ -8,31 +9,31 @@
 
 ## SLF4J(Java 的简单日志门面)
 
-SLF4J 为 Log4j、Log4j2、Logback 等日志框架提供了日志 API。这有助于减少各种日志框架和应用程序之间的紧密耦合。这也将提高代码的可维护性。最好的方法是[在代码](https://javarevisited.blogspot.com/2013/08/why-use-sl4j-over-log4j-for-logging-in.html#axzz6JyHI5fGb)中使用 SLF4J，并在运行时使用日志框架。
+`SLF4J`为`Log4j`、`Log4j2`、`Logback`等日志框架提供了日志 API。这有助于减少各种日志框架和应用程序之间的紧密耦合。这也将提高代码的可维护性。最好的方法是[在代码](https://javarevisited.blogspot.com/2013/08/why-use-sl4j-over-log4j-for-logging-in.html#axzz6JyHI5fGb)中使用`SLF4J`，并在运行时使用日志框架。
 
-软件行业中最流行的日志框架是 Log4j 和 Log4j2。
+软件行业中最流行的日志框架是`Log4j`和`Log4j2`。
 
 ## 为什么 Log4j2 比 Log4j 好？
 
-*   主要是 Log4j2 支持异步记录器。
-*   对 Log4j2 配置文件进行配置修改时，无需重启服务器。
+*   主要是`Log4j2`支持异步记录器。
+*   对`Log4j2`配置文件进行配置修改时，无需重启服务器。
 *   无垃圾运行时。
 *   开发人员可以定义自定义日志级别。
 *   并发性提高，没有任何死锁。
-*   从 java 8 开始，lambda 函数支持日志记录。
+*   从`java 8`开始，`lambda`函数支持日志记录。
 
 ## 带有 Log4j2 的历史记录记录器
 
-Chronicle logger 是一个为 Java 语言开发的速度极快的记录器，使用 Chronicle Queue 作为持久性引擎。它支持 Log4j2 日志框架的使用。使用这个历史日志记录器的实现，我们可以最小化应用程序的日志开销，并提高应用程序的性能。在这种方法中，日志记录部分从操作系统层开始在 [JVM 应用程序](/javarevisited/7-best-courses-to-learn-jvm-garbage-collection-and-performance-tuning-for-experienced-java-331705180686?source=---------8------------------)中负责。
+Chronicle logger 是一个为 Java 语言开发的速度极快的记录器，使用 Chronicle Queue 作为持久性引擎。它支持`Log4j2`日志框架的使用。使用这个历史日志记录器的实现，我们可以最小化应用程序的日志开销，并提高应用程序的性能。在这种方法中，日志记录部分从操作系统层开始在 [JVM 应用程序](/javarevisited/7-best-courses-to-learn-jvm-garbage-collection-and-performance-tuning-for-experienced-java-331705180686?source=---------8------------------)中负责。
 
 *使用这种依赖关系—*
 
 ```
-<**dependency**>
-    <**groupId**>net.openhft</**groupId**>
-    <**artifactId**>chronicle-logger-log4j-2</**artifactId**>
-    <**version**>4.21ea40</**version**>
-</**dependency**>
+<dependency>
+    <groupId>net.openhft</groupId>
+    <artifactId>chronicle-logger-log4j-2</artifactId>
+    <version>4.21ea40</version>
+</dependency>
 ```
 
 *日志记录配置文件示例—*
@@ -46,7 +47,7 @@ Chronicle logger 是一个为 Java 语言开发的速度极快的记录器，使
             <chronicleCfg>
                 <blockSize>128</blockSize>
                 <bufferCapacity>256</bufferCapacity>
-     <rollCycle>HOURLY</rollCycle>
+                <rollCycle>HOURLY</rollCycle>
             </chronicleCfg>
         </Chronicle>
     </appenders>

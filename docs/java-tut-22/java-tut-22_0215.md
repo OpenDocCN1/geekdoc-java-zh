@@ -1,11 +1,11 @@
+
 # 一个同步类的示例
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/concurrency/syncrgb.html`](https://docs.oracle.com/javase/tutorial/essential/concurrency/syncrgb.html)
 
-这个类，``SynchronizedRGB``，定义了代表颜色的对象。每个对象将颜色表示为三个代表主要颜色值的整数和一个给出颜色名称的字符串。
+这个类`SynchronizedRGB`定义了代表颜色的对象。每个对象将颜色表示为三个代表主要颜色值的整数和一个给出颜色名称的字符串。
 
 ```java
-
 public class SynchronizedRGB {
 
     // Values must be between 0 and 255.
@@ -63,7 +63,6 @@ public class SynchronizedRGB {
         name = "Inverse of " + name;
     }
 }
-
 ```
 
 必须小心使用`SynchronizedRGB`，以避免出现不一致的状态。例如，假设一个线程执行以下代码：
@@ -74,7 +73,6 @@ SynchronizedRGB color =
 ...
 int myColorInt = color.getRGB();      //Statement 1
 String myColorName = color.getName(); //Statement 2
-
 ```
 
 如果另一个线程在语句 1 之后但在语句 2 之前调用`color.set`，`myColorInt`的值将不匹配`myColorName`的值。为了避免这种结果，这两个语句必须绑定在一起：
@@ -83,8 +81,7 @@ String myColorName = color.getName(); //Statement 2
 synchronized (color) {
     int myColorInt = color.getRGB();
     String myColorName = color.getName();
-} 
-
+}
 ```
 
-这种不一致性只对可变对象有效  对于不可变版本的`SynchronizedRGB`不会有问题。
+这种不一致性只对可变对象有效 — 对于不可变版本的`SynchronizedRGB`不会有问题。

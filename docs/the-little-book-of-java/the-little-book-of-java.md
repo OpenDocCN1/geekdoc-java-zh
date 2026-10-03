@@ -1,15 +1,5 @@
+
 # Java 入门指南
-
-
-
-
-
-
-
-
-
-
-
 
 ## 下载源代码
 
@@ -17,161 +7,101 @@
 
 扫描此二维码：![](img/8c3ac4690d3d5f27ec850365ee22ff_0.png)
 
-
 - 关于作者................20
 - 关于技术编辑................21
-
-
-
-
-
-
-
-
-
-
-
-
-
-FINALLY.................................................................................................................. 169
-
-序列化....................................................................................................... 178
-
+- FINALLY.................................................................................................................. 169
+- 序列化....................................................................................................... 178
 
 # 来自作者的话............................................................... 189
-留下评价....................................................................... 190
-更多编程书籍.................................................. 191
 
-## # 第一章 – 入门
+- 留下评价....................................................................... 190
+- 更多编程书籍.................................................. 191
+
+## 第一章 – 入门
 
 在用 Java 编程之前，你需要了解 Java 是什么，以及编写 Java 程序需要哪些工具。
 
-如果你已经安装了 Java 编辑器和编译器，并且知道如何运行和构建 Java 程序，那么你已经准备就绪。我在编写本书的代码时，使用的是 NetBeans IDE（集成开发环境）。即使你通常使用其他编辑器，我也建议使用 NetBeans，以便以最简单的方式加载和运行我的程序。
+如果你已经安装了 Java 编辑器和编译器，并且知道如何运行和构建 Java 程序，那么你已经准备就绪。我在编写本书的代码时，使用的是 `NetBeans IDE`（集成开发环境）。即使你通常使用其他编辑器，我也建议使用 `NetBeans`，以便以最简单的方式加载和运行我的程序。
 
 ![](img/8c3ac46909d3d5f277ec850365ee2ff_8_0.png)
 
-## 什么是 Java？
+### 什么是 Java？
 
-Java 是一种跨平台的面向对象的语言。你以 .java 结尾的文件编写高级人类可读的 Java 程序代码。Java 编译器会将这些文本转换为压缩的非人类可读字节码，字节码可以通过称为 Java 虚拟机（JVM）的程序运行。任何能够运行 Java 虚拟机的操作系统（现在的大多数）都能运行你的 Java 字节码。这就是为什么 Java 程序在不同平台和操作系统之间具有高度的可移植性。
-
-
-
-
-## 第一章 — 入门
+Java 是一种跨平台的面向对象的语言。你以 `.java` 结尾的文件编写高级人类可读的 Java 程序代码。Java 编译器会将这些文本转换为压缩的非人类可读字节码，字节码可以通过称为 `Java 虚拟机（JVM）` 的程序运行。任何能够运行 `Java 虚拟机` 的操作系统（现在的大多数）都能运行你的 Java 字节码。这就是为什么 Java 程序在不同平台和操作系统之间具有高度的可移植性。
 
 ### 你将学习什么？
 
 本书假设你之前没有任何通用的编程或特定的 Java 语言的知识。它将教你如何在 PC、Mac 或（原则上）任何其他能够运行 Java 的系统上编写、编译和运行 Java 程序。它将教你编程基础知识，包括面向对象编程。它将解释如何创建对象、处理数据以及处理磁盘上的文件。如果你已经有某些编程经验，可以随时跳过本书的早期章节。请务必从出版者网站提供的源代码存档中下载提供的现用代码示例。
 
-## 如何阅读本书
+### 如何阅读本书
 
 是选择按章节从头到尾阅读此书，还是直接“跳跃”到你感兴趣的特定章节，完全取决于你的决定。如果你是编程新手，我建议你严格按照顺序阅读所有内容。如果你是一位经验程序员——但是 Java 新手——你可能想阅读关于 IDE 和编译的介绍信息，然后浏览你不熟悉的话题。
 
 请记住，书中描述的所有项目都提供了源代码。你可能希望先运行代码，然后再阅读书中的解释。我建议你尝试修改和扩展我的示例代码，以帮助你理解 Java 语言的工作原理。
 
-## 下载源代码
+### 下载源代码
 
 书中显示的所有源代码均可下载。只需订阅我们的邮件列表，我们就会为你发送下载链接：
 
 www.bitwisebooks.com/subscribe
 
-## 安装 Java
+### 安装 Java
 
-如果你还没有安装 Java，应该从此处处下载：
+如果你还没有安装 Java，应该从此处下载：
 
 https://www.java.com/
 
-开发 Java 需要两个组件：Java 运行时环境（JRE）和 Java 开发工具包（包含编译器和库）即 JDK。你必须安装 JDK。通常 JRE 也会一并安装。
+开发 Java 需要两个组件：`Java 运行时环境（JRE）` 和 `Java 开发工具包（包含编译器和库）即 JDK`。你必须安装 `JDK`。通常 `JRE` 也会一并安装。
 
-## 安装帮助
+### 安装帮助
 
 Java 网站提供了在不同操作系统上安装和使用 Java 的帮助链接：https://www.java.com/。阅读这些帮助信息对于避免或修复任何潜在问题非常重要。
 
-## 使用哪种 IDE？
+### 使用哪种 IDE？
 
-你可以将源代码加载到任何支持 Java 语法的编程编辑器中。项目是使用 NetBeans IDE 开发的。如果你不确定使用哪种 IDE，我建议使用 NetBeans。
+你可以将源代码加载到任何支持 Java 语法的编程编辑器中。项目是使用 `NetBeans IDE` 开发的。如果你不确定使用哪种 IDE，我建议使用 `NetBeans`。
 
-要安装 NetBeans，请从下处下载其中一个现用的安装程序：
+要安装 `NetBeans`，请从下处下载其中一个现用的安装程序：
 
 https://netbeans.apache.org/
 
-## 使用 NetBeans
+### 使用 NetBeans
 
-当你没有使用 NetBeans 来编写和运行我的 Java 程序时，我会偶尔展示你使用 NetBeans 创建文件和“项目”需要遵循的所有步骤。某些项目是使用 NetBeans 可视界面设计工具创建。如果你将这些项目加载到 NetBeans，你将能够查看并编辑视觉界面。如果你将这些项目加载到其他 IDE，可能无法做到这一点。由于这些原因，我强烈建议使用 NetBeans 来加载、编辑和运行随书的示例代码。
-
-## 第 1 章 – 入门
+当你没有使用 `NetBeans` 来编写和运行我的 Java 程序时，我会偶尔展示你使用 `NetBeans` 创建文件和“项目”需要遵循的所有步骤。某些项目是使用 `NetBeans` 可视界面设计工具创建。如果你将这些项目加载到 `NetBeans`，你将能够查看并编辑视觉界面。如果你将这些项目加载到其他 IDE，可能无法做到这一点。由于这些原因，我强烈建议使用 `NetBeans` 来加载、编辑和运行随书的示例代码。
 
 ### 在 NetBeans 中加载和运行程序
 
-如果你使用 NetBeans，只需选择“文件 (File) -> 打开项目 (Open Project)”即可从源代码存档中加载项目。
+如果你使用 `NetBeans`，只需选择“文件 -> 打开项目”即可从源代码存档中加载项目。
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_11_0.png)
 
-现在找到包含 NetBeans 项目文件的目录（在项目浏览对话框中将用一个小咖啡杯图标指示），然后选择项目并点击“打开项目 (Open Project)”按钮：
+现在找到包含 `NetBeans` 项目文件的目录（在项目浏览对话框中将用一个小咖啡杯图标指示），然后选择项目并点击“打开项目”按钮：
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_11_1.png)
 
-如果你在 NetBeans 中已经打开了一个项目，新项目将加载在“项目 (Projects)”窗口下方。要编译并运行项目，首先确保在“项目”窗口中选中了项目，然后从“运行 (Run)”菜单中选择“运行 (Run)”或点击 NetBeans 工具栏上的绿色箭头按钮。
+如果你在 `NetBeans` 中已经打开了一个项目，新项目将加载在“项目”窗口下方。要编译并运行项目，首先确保在“项目”窗口中选中了项目，然后从“运行”菜单中选择“运行”或点击 `NetBeans` 工具栏上的绿色箭头按钮。
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_11_2.png)
 
-## 在其他 IDE 中加载和运行程序
+### 在其他 IDE 中加载和运行程序
 
-如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。在你决定使用其他 IDE 时，我不提供 NetBeans 之外的任何支持。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。### 在其他 IDE 中加载和运行程序
+如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。在你决定使用其他 IDE 时，我不提供 `NetBeans` 之外的任何支持。
 
-如果你决定使用其他 IDE，你必须确保可以编译和运行。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。### 在其他 IDE 中加载和运行程序
+如果你决定使用其他 IDE，你必须确保可以编译和运行。
 
-如果你决定使用其他 IDE，你必须确保可以编译和运行。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。### 在其他 IDE 中加载和运行程序
+### 从命令行编译和运行
 
-如果你决定使用其他 IDE，你必须确保可以编译和运行。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。### 在其他 IDE 中加载和运行程序
+如果我在包含 `HelloWorld.java` 文件的目录下打开命令提示符（如果你在 `C:\` 驱动器上解压缩代码存档，此目录名称将类似于：`C:\LittleBookOfJavaCode\Step02\HelloWorld\src\helloworld`），我可以使用此命令编译它：
 
-如果你决定使用其他 IDE，你必须确保可以编译和运行。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。### 在其他 IDE 中加载和运行程序
-
-如果你决定使用其他 IDE，你必须确保可以编译和运行。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。### 在其他 IDE 中加载和运行程序
-
-如果你决定使用其他 IDE，你必须确保可以编译和运行。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。### 在其他 IDE 中加载和运行程序
-
-如果你决定使用其他 IDE，你必须确保可以编译和运行。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。### 在其他 IDE 中加载和运行程序
-
-如果你决定使用其他 IDE，你必须确保可以编译和运行。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。### 在其他 IDE 中加载和运行程序
-
-如果你决定使用其他 IDE，你必须确保可以编译和运行。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。### 在其他 IDE 中加载和运行程序
-
-如果你决定使用其他 IDE，你必须确保可以编译和运行。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。
-
-### 另一个编辑器或，，检查
-
-
-
-
-
-开发者开发者开发者开发者或，，。
-
- IDE IDE 的开发者开发者以
-
-编译。。。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以可以如何创建项目。如果你使用另一个编辑器或 IDE，你需要检查该 IDE 的开发者文档以学习如何创建项目。
-
-  2？
-
-第 2详细。。
-
-如果你编译一个主类声明在命名包包内的程序（img/8c3ac46909d3d5f277ec850365ee22ff_11.png）
-
-如果我在包含 HelloWorld.java 文件的目录下打开命令提示符（如果你在 C:\ 驱动器上解压缩代码存档，此目录名称将类似于：C:\LittleBookOfJavaCode\Step02\HelloWorld\src\helloworld），我可以使用此命令编译它：
-
-### 什么是包（Package）？
-
-包提供了分组代码单元的方法。在第 2 章中将详细解释。
-
-
-
-
-
+```bash
 javac HelloWorld.java
+```
 
-这将编译我的代码并创建一个 `HelloWorld.class` 文件，该文件可以由 Java 虚拟机运行。现在我尝试使用以下命令运行该文件：
+这将编译我的代码并创建一个 `HelloWorld.class` 文件，该文件可以由 `Java 虚拟机` 运行。现在我尝试使用以下命令运行该文件：
 
+```bash
 java HelloWorld
+```
 
 但它无法运行！我会看到这条错误信息：
 
@@ -181,7 +111,9 @@ Error: Could not find or load main class HelloWorld
 
 这是因为 `HelloWorld` 类被定义在 `helloworld` 包中。为了运行这个程序，我需要进入 `helloworld` 文件夹的上一级目录——即 `C:\LittleBookOfJavaCode\Step02\HelloWorld\srv\`，然后输入包含包名 `helloworld` 的命令：
 
+```bash
 java helloworld.HelloWorld
+```
 
 现在程序应该可以正常运行并显示此输出：
 
@@ -189,15 +121,21 @@ java helloworld.HelloWorld
 Hello world
 ```
 
-如果你觉得这很困惑，请记住，如果你在 NetBeans 这样的 IDE 中编译和运行程序，所有包和文件夹的细节都将自动处理。只有当你从命令行提示符编译和运行程序时，你才需要手动输入这些细节。
+如果你觉得这很困惑，请记住，如果你在 `NetBeans` 这样的 IDE 中编译和运行程序，所有包和文件夹的细节都将自动处理。只有当你从命令行提示符编译和运行程序时，你才需要手动输入这些细节。
 
-## Java 是区分大小写的
+#### 什么是包（Package）？
+
+包提供了分组代码单元的方法。在第 2 章中将详细解释。
+
+### Java 是区分大小写的
 
 如果你的主类名为 `AdventureGame`，且包含大写的 'A' 和大写的 'G'，那么在尝试运行程序时，你必须确保使用相同的大小字母组合。
 
 假设我在输入如下命令时忘记将 'G' 大写了：
 
+```bash
 java Adventuregame
+```
 
 Java 将显示类似类似的错误信息：
 
@@ -207,7 +145,7 @@ Error: Could not find or load main class Adventuregame
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_16_0.png)
 
-## 命名规范
+### 命名规范
 
 当你为变量、类和其他编程元素命名时，采用一致的“命名规范”通常会显得更整洁、清晰。例如，你可能决定将私有变量命名为 `description`，全部使用小写，如下所示：
 
@@ -224,7 +162,7 @@ public int moveToPlayer(Direction dir)
 
 我不会在书中强制要求一套严格的命名规范。在现实世界的编程中，命名（以及代码格式）规范通常由特定项目的团队负责人定义。如果你是独立编程，你有更多的自由来决定命名规范。在本书中，当我遇到重要的规范时会提到它们，即那些被广泛采用或在语法上要求的规范——例如，类名和常量的大写。
 
-## 理解文本
+### 理解文本
 
 在《Java 小书》中，任何 Java 源码的写法都如下：
 
@@ -240,8 +178,6 @@ public void setThings(ThingList things) {
 | :--- |
 | public void setName(String aName) { name = aName; } |
 
-## 第一章 — 入门
-
 这表明 `Thing.java` 的代码可以在源代码存档中的 `AdventureGame` 项目或文件夹中找到。为了跟随教程，你可以从命名的项目加载代码文件到你偏好的 Java 编辑器或 IDE 中。程序运行时你预期在屏幕上看到的任何输出显示如下：
 
 ```
@@ -252,27 +188,23 @@ The result of that calculation is 24!
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_18_0.png)
 
-## 这是一个注释
+> **这是一个注释**
+>
+> 这是一个解释性注释。如果你喜欢可以跳过它——但如果你这样做，你可能会错过一些有趣的内容……！
 
-这是一个解释性注释。如果你喜欢可以跳过它——但如果你这样做，你可能会错过一些有趣的内容……！
+### 关于作者
 
-19
+`Dermot Hogan` 是《Java 小书》的作者。他在 Java 领域拥有超过 30 年的经验。他曾在多家技术公司担任首席开发。他拥有剑桥大学物理学硕士学位。目前的研究领域是机器人控制。更多信息请访问网站：http://bitwisecourses.com
 
-第一章 — 入门
 
-关于作者
-
-Dermot Hogan 是《Java 小书》的作者。他在 Java 领域拥有超过 30 年的经验。他曾在多家技术公司担任首席开发。他拥有剑桥大学物理学硕士学位。目前的研究领域是机器人控制。更多信息请访问网站：http://bitwisecourses.com
-
-![](img/8c3ac46909d3d5f277ec850365ee22ff_18_0.png)
 
 # 第二章 — Java 初步
 
 在本章中我们将发现 Java 的基本功能并编写简单的 Java 程序。按照传统，人们学习新语言时编写的程序是简单的显示“Hello world”。
 
-Hello World
+## Hello World
 
-如果你使用的是 NetBeans，选择 File | New Project。在 New Project 对话框中，确保左侧选中了 Java with Ant 类型。点击 Next。给项目命名为 HelloWorld，并勾选 Create Main Class 。
+如果你使用的是 NetBeans，选择 `File | New Project`。在 New Project 对话框中，确保左侧选中了 Java with Ant 类型。点击 Next。给项目命名为 HelloWorld，并勾选 Create Main Class。
 
 NetBeans 会创建一个名为 `HelloWorld.java` 的源文件。在大括号函数前添加以下代码：
 
@@ -304,7 +236,7 @@ Hello world */
 
 ```java
 // 这是一个整行注释
-if (args.length ==){){ 这是一个部分行注释
+if (args.length == 0) { // 这是一个部分行注释
 ```
 
 像 NetBeans 这样的 IDE 在创建代码文件时可能会插入注释。你可以编辑或删除这些注释，而不会影响代码的行为。
@@ -313,35 +245,29 @@ if (args.length ==){){ 这是一个部分行注释
 
 ### 如何在 NetBeans 中加载示例项目
 
-如果你使用的是 NetBeans，可以从源代码存档中逐一个加载项目，也可以创建一个“项目组”以便同时加载所有项目。
-
-
-
-
-
-# 第 2 章 — Java 入门
+如果你使用的是 NetBeans，可以从源代码存档中逐个加载项目，也可以创建一个“项目组”以便同时加载所有项目。
 
 ## 如何加载单个项目
 
-要加载单个项目，选择文件（File） | 打开打开项目（Open Project），然后浏览到包含项目的目录（例如 C:\LittleBookOfJava\Step02），点击“+”图标展开目录并选择一个命名的项目（例如 HelloWorld）。
+要加载单个项目，选择 `File | Open Project`，然后浏览到包含项目的目录（例如 `C:\LittleBookOfJava\Step02`），点击“+”图标展开目录并选择一个命名的项目（例如 HelloWorld）。
 
 ## 如何创建项目组
 
-要创建一个存储在目录下的多个项目组，请选择文件（File） | 项目组（Project Groups），然后点击新建组（New Group）。在对话框中，选择“项目文件夹”（Folder Of Projects），然后点击浏览（Browse）按钮。找到包含你想要添加到默认目录名中的项目文件夹，如果你已将示例源码解压到其中，这将是一个 \LittleBookOfJavaCode 文件夹。选择此文件夹并点击打开（Open）。
+要创建一个存储在目录下的多个项目组，请选择 `File | Project Groups`，然后点击 `New Group`。在对话框中，选择“Folder Of Projects”，然后点击 `Browse` 按钮。找到包含你想要添加到默认目录名中的项目文件夹，如果你已将示例源码解压到其中，这将是一个 `\LittleBookOfJavaCode` 文件夹。选择此文件夹并点击 `Open`。
 
-如有必要，编辑“创建新组（Create New Group）”对话框中的名称字段，然后点击创建组（Create Group）按钮。你现在应该能在 Netbeans 项目面板中看到你所选文件夹下的所有项目。
+如有必要，编辑“Create New Group”对话框中的名称字段，然后点击 `Create Group` 按钮。你现在应该能在 NetBeans 项目面板中看到你所选文件夹下的所有项目。
 
-如果你关闭了项目组（文件（File） | 关闭所有项目（Close All Projects）），可以通过选择文件（File） | 项目组（Project Groups），在对话框中高亮组名并点击选择组（Select Group）来重新打开。
+如果你关闭了项目组（`File | Close All Projects`），可以通过选择 `File | Project Groups`，在对话框中高亮组名并点击 `Select Group` 来重新打开。
 
 ## 如何在项目组中激活项目
 
-当你想要编译并运行组中的特定项目时，在项目面板中高亮项目名称，然后点击运行项目按钮（绿色箭头）并选择运行（Run） | 运行项目（Run Project）菜单项。
+当你想要编译并运行组中的特定项目时，在项目面板中高亮项目名称，然后点击运行项目按钮（绿色箭头）并选择 `Run | Run Project` 菜单项。
 
 ## 从命令行运行程序
 
-如果你想在 \classes 目录下从命令行窗口或终端（Terminal）运行 Java 程序。你需要打开包含 \helloworld 子目录的目录（你可以在我的代码中看到 helloworld 是 Java“包”的名称）——我稍后会详细介绍包的内容。
+如果你想在 `\classes` 目录下从命令行窗口或终端运行 Java 程序。你需要打开包含 `\helloworld` 子目录的目录（你可以在我的代码中看到 helloworld 是 Java“包”的名称）——我稍后会详细介绍包的内容。
 
-要运行 Java 虚拟机（运行你 Java 程序的工具），你需要输入 `java`，后跟包名和类文件名（不带扩展名）。在这里，我的类文件是 `HelloWorld.class`（这是已放入 \helloworld 子目录的编译文件），因此我必须输入此命令：
+要运行 Java 虚拟机（运行你 Java 程序的工具），你需要输入 `java`，后跟包名和类文件名（不带扩展名）。在这里，我的类文件是 `HelloWorld.class`（这是已放入 `\helloworld` 子目录的编译文件），因此我必须输入此命令：
 
 ```
 java helloworld/HelloWorld
@@ -361,11 +287,9 @@ Hello world
 Error: Could not find or load main class
 ```
 
-出现此问题的原因有很多。例如，如果 HelloWorld.class 文件不存在，可能会出现此消息（可能你还没有编译项目）；或者你输入了错误的名称，或者使用了错误的大小写组合（Java 是“区分大小写”的，所以如果你的类名为 HelloWorld，其中 H 和 W 是大写，但你输入的是 hello/HelloWorld（w 是小写），则将找不到该类）。或者可能你所在的目录不正确。确保你处于 .classes 目录。或者也可能是你没有在指定的包中编译主类。你可以通过在 NetBeans 中高亮 HelloWorld 项目并选择文件（File） | 项目属性（Project Properties）来检查此项。在对话框中选择运行（Run）节点。检查主类（Main Class）是否显示为 `hello.HelloWorld`，其中 hello 是包名，HelloWorld 是类名。
+出现此问题的原因有很多。例如，如果 `HelloWorld.class` 文件不存在，可能会出现此消息（可能你还没有编译项目）；或者你输入了错误的名称，或者使用了错误的大小写组合（Java 是“区分大小写”的，所以如果你的类名为 HelloWorld，其中 H 和 W 是大写，但你输入的是 `hello/HelloWorld`（w 是小写），则将找不到该类）。或者可能你所在的目录不正确。确保你处于 `.classes` 目录。或者也可能是你没有在指定的包中编译主类。你可以通过在 NetBeans 中高亮 HelloWorld 项目并选择 `File | Project Properties` 来检查此项。在对话框中选择 `Run` 节点。检查 `Main Class` 是否显示为 `hello.HelloWorld`，其中 hello 是包名，HelloWorld 是类名。
 
 即使从命令行运行遇到问题，也不要担心。如果你使用的是 NetBeans IDE（正如我推荐的那样），你将可以使用 IDE 内部的菜单和按钮编译并运行程序，而不是通过命令行。
-
-![](img/8c3ac46909d3d5f277ec850365ee22ff_23_0.png)
 
 ## 使用命令行
 
@@ -379,11 +303,7 @@ http://docs.oracle.com/javase/tutorial/information/run-examples.html
 
 ## Java 代码简介
 
-加载代码存档中提供的 HelloWorld 项目。查看 HelloWorld.java 文件中的代码（在 NetBeans 中，它显示在项目窗口的源包 `Source Package\helloworld` 分支）。现在我们来尝试识别这段代码的核心部分。程序开始于：
-
-```
-HelloWorld (HelloWorld.java)
-```
+加载代码存档中提供的 HelloWorld 项目。查看 `HelloWorld.java` 文件中的代码（在 NetBeans 中，它显示在项目窗口的源包 `Source Package\helloworld` 分支）。现在我们来尝试识别这段代码的核心部分。程序开始于：
 
 ```java
 HelloWorld (HelloWorld.java)
@@ -403,7 +323,7 @@ package helloworld;
 
 ## 关键字
 
-Java 定义了许多在语言中具有特殊含义的“保留”字或关键字。例如，当我们开始测试值时，将将使用 `if` 和 `else` 关键字。在 HelloWorld 程序中发现了以下关键字：
+Java 定义了许多在语言中具有特殊含义的“保留”字或关键字。例如，当我们开始测试值时，将使用 `if` 和 `else` 关键字。在 HelloWorld 程序中发现了以下关键字：
 
 ```
 package public class static void
@@ -411,15 +331,15 @@ package public class static void
 
 目前你不需要担心这些都意味着什么。最重要的 Java 关键字将在本书随后的部分进行解释。
 
-## 包（Packages）
+## 包
 
-Java “包（package）”定义了一个命名的区域（技术上称为“命名空间”），在该区域内相关的 Java 代码可以组合在一起。Java 代码标准库（“应用程序编程接口”）或 API 包含许多编号的包。例如，`java` 包含了许多包。`java.io` 包处理输入输出（IO）操作，而 `java.math` 包包含算术运算。包有助于组织代码，事实上，包就是命名文件夹。在 `HelloWorld.java` 声明之后，我们来到：
+Java “包”定义了一个命名的区域（技术上称为“命名空间”），在该区域内相关的 Java 代码可以组合在一起。Java 代码标准库（“应用程序编程接口”）或 API 包含许多编号的包。例如，`java` 包含了许多包。`java.io` 包处理输入输出（IO）操作，而 `java.math` 包包含算术运算。包有助于组织代码，事实上，包就是命名文件夹。在 `HelloWorld.java` 声明之后，我们来到：
 
 ```
 public class HelloWorld {
 ```
 
-## 类（Classes）
+## 类
 
 如果你以前编写过面向对象的语言，可能对类的概念很熟悉。如果这是你第一次接触它，只需知道类定义了一个代码“块”。在这个程序中，类位于大括号内。这个类非常简单：
 
@@ -432,25 +352,21 @@ public class HelloWorld {
 }
 ```
 
-在 Java 中，main 被特殊对待。Java 程序中的 `main()` 函数在程序启动时首先运行。顺便说，虽然这个非常简单的程序只有一个类，但现实程序通常包含多个类。在 NetBeans 中，我可以在项目属性对话框的运行页中指定主类。
+在 Java 中，`main` 被特殊对待。Java 程序中的 `main()` 函数在程序启动时首先运行。顺便说，虽然这个非常简单的程序只有一个类，但现实程序通常包含多个类。在 NetBeans 中，我可以在项目属性对话框的运行页中指定主类。
 
-## 方法（Methods）
+## 方法
 
-在面向对象的术语中，命名的代码块——即函数或子程序被称为“方法（method）”。在 Java 中，方法名后面必须跟一对括号，如下：
+在面向对象的术语中，命名的代码块——即函数或子程序被称为“方法”。在 Java 中，方法名后面必须跟一对括号，如下：
 
 ```
 public void myfunction()
 ```
 
-如果你想能够向方法（或函数）传递某些数据，可以在括号之间添加一个或多个“参数（arguments）”。`main()` 函数定义了一个名为 `args` 的 String 参数列表或“数组”：
+如果你想能够向方法（或函数）传递某些数据，可以在括号之间添加一个或多个“参数”。`main()` 函数定义了一个名为 `args` 的 String 参数列表或“数组”：
 
-```main(String[] args)```
-
-
-
-
-
-## 第 2 章 — Java 入门
+```java
+main(String[] args)
+```
 
 然后，我必须将字符串 "Hello world" 放在括号中并传递给 `print()`。最终结果是，当我运行这个程序时，屏幕会显示 "Hello world"。这就是我在 NetBeans 中运行程序时看到的内容：
 
@@ -466,47 +382,49 @@ public void myfunction()
 
 要做到这一点，你向程序传递一个或多个字符串参数。你可以在 HelloArgs.java 示例项目中看到如何进行操作：
 
-| HelloArgs (HelloArgs.java) |
-|---|
-| public class HelloArgs {
-  public static void main(String[] args) {
-    System.out.println("Hello.");
-    if (args.length == 0) {
-      System.out.println("You didn't enter any commandline arguments.");
-    }else for (String arg : args) {
-      System.out.println(arg);
+```java
+public class HelloArgs {
+    public static void main(String[] args) {
+        System.out.println("Hello.");
+        if (args.length == 0) {
+            System.out.println("You didn't enter any commandline arguments.");
+        } else {
+            for (String arg : args) {
+                System.out.println(arg);
+            }
+        }
     }
-  }
-}|
+}
+```
 
 如果你从命令行（即从命令提示符或终端）运行此程序，你只需要通过输入用空格分隔的文本片段来向它传递参数，如下所示：
 
 ```
-java helloargs.HelloArgs one two
+java helloargs.HelloArgs one two three
 ```
 
 然后程序将显示此内容：
 
+```
 Hello.
 one
 two
 three
+```
 
 ## 记住在包内运行
 
 正如第 1 章解释，当你想要运行一个主类声明在某个包内部的程序时，你需要在包目录上一层的目录的命令提示符中（例如，这里的包目录是 `\helloargs`），并且你必须将包名（这里是 helloargs）作为类名（HelloArgs）包含进去，如下所示：
 
 ```
-java helloArgs
+java helloargs.HelloArgs
 ```
 
-如果你在如 NetBeans 等 IDE 中编译并运行程序，这将自动完成。要做到这一点，请让 NetBeans 向程序传递参数。在“项目”窗口中右键点击项目名称 (HelloArgs)，点击“属性”菜单项，然后在对话框左侧选择“运行”。在“参数”字段中输入任何要传递给程序的参数。在这里我输入了三个参数：one three
-
-![](img/8c3ac46909d3d5f277ec850365ee22ff_28_0.png)
+如果你在如 NetBeans 等 IDE 中编译并运行程序，这将自动完成。要做到这一点，请让 NetBeans 向程序传递参数。在“项目”窗口中右键点击项目名称 (HelloArgs)，点击“属性”菜单项，然后在对话框左侧选择“运行”。在“参数”字段中输入任何要传递给程序的参数。在这里我输入了三个参数：one two three
 
 ## 什么是命令行参数？
 
-当你在运行 Java 程序时在程序名称之后输入一个或多个文本项，这些文本项将作为“参数”传递给程序。在这个示例中，我调用了 Java 虚拟机 (java) 并要求它运行 helloargs 包中名为 Hello_Args 的程序。然后我传递了三个参数：one two three：
+当你在运行 Java 程序时在程序名称之后输入一个或多个文本项，这些文本项将作为“参数”传递给程序。在这个示例中，我调用了 Java 虚拟机 (`java`) 并要求它运行 helloargs 包中名为 HelloArgs 的程序。然后我传递了三个参数：one two three：
 
 ```
 java helloargs.HelloArgs one two three
@@ -514,71 +432,70 @@ java helloargs.HelloArgs one two three
 
 参数以“数组”（即顺序列表）的形式传递——字符串："one", "two" 和 "three"。这个数组会自动赋值给 `main()` 方法中的 `args` 参数：
 
-| HelloArgs(HelloArgs.java) |
-| public static void main(String[] args) |
+```java
+public static void main(String[] args)
+```
 
 我的代码测试了 `args` 的长度。如果长度为 0（即没有参数），则显示消息 "You didn't enter any commandline arguments."：
 
-```
-if (args.length == 0){
-  System.out.println("You didn't enter any commandline arguments.");
+```java
+if (args.length == 0) {
+    System.out.println("You didn't enter any commandline arguments.");
 }
 ```
 
 然而，如果有一些参数，这段代码就会运行：
 
-```
+```java
 for (String arg : args) {
-  System.out.println(arg);
+    System.out.println(arg);
 }
 ```
 
+
+
 这里的 `for` 关键字开始运行循环（反复运行大括号之间的代码），它一次处理 `args` 列表中的每个项，并在单独的行打印每个字符串——这就是之前所示的输出。
 
-## 编译 Java 程序 – 从源码到字节码
+# 编译 Java 程序 – 从源码到字节码
 
 某些编程语言——如 C 和 Pascal 被编译成“机器代码”。Java 被编译成字节码，可以在任何安装了 Java 虚拟机 (JVM) 的设备上运行。这意味着如果你在 Windows 上编译程序，只要 Linux 或 MacOS 安装了 JVM，它就可以运行。
 
-## 编译 Java 程序 – 从源码
+# 编译过程
 
 某些编程语言——如 C 和 Pascal 被编译成“机器代码”。Java 被编译成字节码，可以在任何安装了 Java 虚拟机 (JVM) 的设备上运行。这意味着如果你在 Windows 上编译程序，只要 Linux 或 MacOS 安装了 JVM，它就可以运行。
 
-## 编译过程
+# Java 虚拟机
 
 某些编程语言——如 C 和 Pascal 被编译成“机器代码”。Java 被编译成字节码，可以在任何安装了 Java 虚拟机 (JVM) 的设备上运行。这意味着如果你在 Windows 上编译程序，只要 Linux 或 MacOS 安装了 JVM，它就可以运行。
 
-## Java 虚拟机
+# Java 环境
 
 某些编程语言——如 C 和 Pascal 被编译成“机器代码”。Java 被编译成字节码，可以在任何安装了 Java 虚拟机 (JVM) 的设备上运行。这意味着如果你在 Windows 上编译程序，只要 Linux 或 MacOS 安装了 JVM，它就可以运行。
 
-## Java 环境
+# Java 编译器
 
 某些编程语言——如 C 和 Pascal 被编译成“机器代码”。Java 被编译成字节码，可以在任何安装了 Java 虚拟机 (JVM) 的设备上运行。这意味着如果你在 Windows 上编译程序，只要 Linux 或 MacOS 安装了 JVM，它就可以运行。
 
-## Java 编译器
+# Java 选项
 
 某些编程语言——如 C 和 Pascal 被编译成“机器代码”。Java 被编译成字节码，可以在任何安装了 Java 虚拟机 (JVM) 的设备上运行。这意味着如果你在 Windows 上编译程序，只要 Linux 或 MacOS 安装了 JVM，它就可以运行。
 
-## Java 选项
+# Java 运行时
 
 某些编程语言——如 C 和 Pascal 被编译成“机器代码”。Java 被编译成字节码，可以在任何安装了 Java 虚拟机 (JVM) 的设备上运行。这意味着如果你在 Windows 上编译程序，只要 Linux 或 MacOS 安装了 JVM，它就可以运行。
 
-## Java 运行时
+# Java 应用
 
 某些编程语言——如 C 和 Pascal 被编译成“机器代码”。Java 被编译成字节码，可以在任何安装了 Java 虚拟机 (JVM) 的设备上运行。这意味着如果你在 Windows 上编译程序，只要 Linux 或 MacOS 安装了 JVM，它就可以运行。
 
-## Java 应用
+# 如何使用 NetBeans 创建视觉化界面
 
-某些编程语言——如 C 和 Pascal 被编译成“机器代码”。Java 被编译成字节码，可以在任何安装了 Java 虚拟机 (JVM) 的设备上运行。这意味着如果你在 Windows 上编译程序，只要 Linux 或 MacOS 安装了 JVM，它就可以运行。
+在这里，我想引导你逐步在 NetBeans 中创建一个 "Hello world" 程序的视觉版本。该程序将弹出一个窗口并在点击按钮时在文本框中显示 "Hello world"。尽管这是一个简单的程序，但无论你创建什么种类的可视化 Java 程序，核心任务都是相似的。
 
-## 如何使用 NetBeans 创建视觉化界面
+- 在 NetBeans 中选择 `File | New Project | Java`（或 `Java With Ant`）| `Java Application`。
 
-在这里，我想引导你逐步在 NetBeans 中创建一个 "Hello world" 程序的视觉版本。该程序将弹出一个窗口并在点击按钮时在文本框中显示 "Hello world"。尽管这是一个简单的程序，但无论你创建什么种可视化 Java 程序，核心任务都是相似的。
-
-- 在 NetBeans 中选择 File |New Project |Java (或 Java With Ant) | Java Application。
-
-| 类别: | 项目: |
-| --- | --- |
+| 类别 | 项目 |
+| :--- | :--- |
 | Java with Maven | Java Application |
 | Java with Gradle | Java Class Library |
 | Java with Ant | Java Project with Existing Sources |
@@ -586,39 +503,37 @@ for (String arg : args) {
 | PHP | Java Free-Form Project |
 | Samples | |
 
-在某些版本的 NetBeans 中，需要在左侧选择 Java。在其他版本中，你需要选择 Java With Ant。
+在某些版本的 NetBeans 中，需要在左侧选择 `Java`。在其他版本中，你需要选择 `Java With Ant`。
 
-- 点击 Next（可选浏览项目位置）并为项目命名。
-- 取消勾选 Create Main Class（确保该项未勾选）。点击 Finish。
+- 点击 `Next`（可选浏览项目位置）并为项目命名。
+- 取消勾选 `Create Main Class`（确保该项未勾选）。点击 `Finish`。
 - 在项目面板中右键点击项目的主节点。
-- 从弹出菜单中选择 New |JFrame Form。点击 Finish。
-- 从调色板 (Palette) 拖两个两个组件：按钮文本框。
+- 从弹出菜单中选择 `New | JFrame Form`。点击 `Finish`。
+- 从调色板 (`Palette`) 拖两个组件：按钮、文本框。
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_31_0.png)
-
-
-
-
 
 # 第 2 章 — Java 入门
 
 - 使用鼠标移动并调整表单组件的大小。
-- 选择文本框（Text Field）。在项目面板（Projects panel）中找到 text 属性。删除文本。
+- 选择文本框（Text Field）。在项目面板（Projects panel）中找到 `text` 属性。删除文本。
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_33_0.png)
 
-- 选择按钮（Button）。在项目面板中，找到 text 属性。将文本更改为 Click Me!
-- 右点击按钮，选择更改变量名（Change Variable Name）。输入一个描述性名称，例如 myButton。
+- 选择按钮（Button）。在项目面板中，找到 `text` 属性。将文本更改为 `Click Me!`。
+- 右点击按钮，选择更改变量名（Change Variable Name）。输入一个描述性名称，例如 `myButton`。
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_33_1.png)
 
-- 右点击文本框，选择更改变量名。输入一个描述性名称，例如 outputField。
+- 右点击文本框，选择更改变量名。输入一个描述性名称，例如 `outputField`。
 - 使用鼠标拖动文本框的右边缘，将其宽度调整为与按钮相同。
 - 双击按钮。这将在代码编辑器中创建该方法。
 
 ```
 private void myButtonActionPerformed(java.awt.event.ActionEvent evt) {
+
     // TODO add your handling code here:
+
 }
 ```
 
@@ -626,13 +541,15 @@ private void myButtonActionPerformed(java.awt.event.ActionEvent evt) {
 
 ```
 private void myButtonActionPerformed(java.awt.event.ActionEvent evt) {
+
     outputField.setText("Hello world");
+
 }
 ```
 
-- 选择 文件（File） | 保存所有（Save All）。
-- 选择 运行（Run） | 运行主项目（Run Main Project）。
-- 弹窗提示你选择主类。接受默认的 NewJFrame 对象并点击确定（OK）。
+- 选择 `文件（File） | 保存所有（Save All）`。
+- 选择 `运行（Run） | 运行主项目（Run Main Project）`。
+- 弹窗提示你选择主类。接受默认的 `NewJFrame` 对象并点击确定（`OK`）。
 - 大功完成！
 
 你现在应该能看到一个与所示类似的弹出用户界面。点击按钮在文本框中显示“Hello World”：
@@ -649,7 +566,9 @@ private void myButtonActionPerformed(java.awt.event.ActionEvent evt) {
 
 ```
 System.out.println("Hello world");
+
 System.out.println("Hello world");
+
 System.out.println("Hello world");
 ```
 
@@ -657,7 +576,9 @@ System.out.println("Hello world");
 
 ```
 Hello world
+
 Hello world
+
 Hello world
 ```
 
@@ -666,7 +587,9 @@ Hello world
 
 ```
 System.out.print("Hello world");
+
 System.out.print("Hello world");
+
 System.out.print("Hello world");
 ```
 
@@ -676,13 +599,15 @@ System.out.print("Hello world");
 Hello worldHello worldHello world
 ```
 
-你可以嵌入换行符("\n")。
+你可以嵌入换行符(`\n`)。
 
 ## PrintText.java
 
 ```
 System.out.print("\tHello ");
+
 System.out.print("world\n");
+
 System.out.println("Hello\tworld");
 ```
 
@@ -690,6 +615,7 @@ System.out.println("Hello\tworld");
 
 ```
 Hello
+
 world
 ```
 
@@ -717,12 +643,12 @@ There are 20 bottles standing on the wall.
 
 | getText | setText |
 | :--- | :--- |
-| someText = textField.getText(); | upperCaseField.setText(someText.toUpperCase()); |
-| myButton.setText("Thank you!"); | |
+| `someText = textField.getText();` | `upperCaseField.setText(someText.toUpperCase());` |
+| `myButton.setText("Thank you!");` | |
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_36_0.png)
 
-要获取或设置 JFrame 的标题，使用 `getTitle()` 和 `setTitle()`。在我的示例程序中，我使用 `this` 关键字调用这些方法，该对象是 JFrame。这段代码在现有标题后添加了“!” 字符：
+要获取或设置 `JFrame` 的标题，使用 `getTitle()` 和 `setTitle()`。在我的示例程序中，我使用 `this` 关键字调用这些方法，该对象是 `JFrame`。这段代码在现有标题后添加了“!” 字符：
 
 ```
 this.setTitle(this.getTitle() + "!");
@@ -751,7 +677,8 @@ myDouble = 100.75;
 ```
 double myDouble = 100.75;
 ```
-img/8c3ac46909d3d5f277ec850365ee22ff_38_0.png
+
+![](img/8c3ac46909d3d5f277ec850365ee22ff_38_0.png)
 
 ## 无类型变量 (Variables without Types)
 
@@ -765,7 +692,9 @@ img/8c3ac46909d3d5f277ec850365ee22ff_38_0.png
 
 ```
 subtotal = 10.0;
+
 subtotal = 20.2;
+
 subtotal = 15.6;
 ```
 
@@ -791,11 +720,9 @@ final double TAXRATE = 0.2;
 
 ## 带有用户界面的税务计算器 (A Tax Calculator with a User Interface)
 
-（此处原文重复）
-
 如第 2 章所述，NetBeans 提供了工具，只需通过将按钮、字段和标签等控件拖放到“表单”上来创建视觉应用程序。
 
-运行时，视觉应用程序会在自己的窗口中弹出。在我的税务计算器中，用户可以在 subtotal 文本框中输入数值，然后点击 Calculate 按钮计算税额和总金额。这些计算出的值显示在另外两个文本框中：
+运行时，视觉应用程序会在自己的窗口中弹出。在我的税务计算器中，用户可以在 `subtotal` 文本框中输入数值，然后点击 `Calculate` 按钮计算税额和总金额。这些计算出的值显示在另外两个文本框中：
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_40_0.png)
 
@@ -803,60 +730,35 @@ final double TAXRATE = 0.2;
 
 ```
 ### TaxCalc
+
 private void calcBtnActionPerformed(java.awt.event.ActionEvent evt) {
+
     final double TAXRATE = 0.2;
+
     double subtotal;
+
     double tax;
+
     double grandtotal;
 
     subtotal = Double.parseDouble(subtotalTF.getText());
+
     tax = subtotal * TAXRATE;
+
     grandtotal = subtotal + tax;
 
     taxTF.setText(Double.toString(tax));
+
     grandtotalTF.setText(Double.toString(grandtotal));
-}
-```
-[/content]
 
-*(注：由于提供的原始文本在最后部分出现了明显的格式错误和代码块与描述的重复/混乱，我根据“不要重复输出原文”的原则，在翻译时对最后混乱的部分进行了逻辑对齐，确保输出是通顺且符合工程师标准的翻译。)*
-
-**Wait, looking closer at the source text provided in the prompt, it seems to have garbled/duplicated text at the end. I will provide the clean translation of the logical content provided.**
-
-[content]
-# 第 2 章 — Java 入门
-
-- 使用鼠标移动并调整表单组件的大小。
-- 选择文本框（Text Field）。在项目面板（Projects panel）中找到 text 属性。删除文本。
-
-![](img/8c3ac46909d3d5f277ec850365ee22ff_33_0.png)
-
-- 选择按钮（Button）。在项目面板中，找到 text 属性。将文本更改为 Click Me!
-- 右点击按钮，选择更改变量名（Change Variable Name）。输入一个描述性名称，例如 myButton
-
-![](img/8c3ac46909d3d5f277ec850365ee22ff_33_1.png)
-
-- 右点击文本框，选择更改变量名。输入一个描述性名称，例如 outputField
-- 使用鼠标拖动文本框的右边缘，将其宽度调整为与按钮相同。
-- 双击按钮。这将在代码编辑器中创建该方法。
-
-```
-private void myButtonActionPerformed(java.awt.event.ActionEvent evt) {
-    // TODO add your handling code here:
 }
 ```
 
-- 将此方法编辑为如下：
 
-```
-private void myButtonActionPerformed(java.awt.event.ActionEvent evt) {
-    outputField.setText("Hello world");
-}
-```
 
-- 选择 文件（File） | 保存所有（Save All）。
-- 选择 运行（Run） | 运行主项目（Run Main Project）。
-- 弹窗提示你选择主类。接受默认的 NewJFrame 对象并点击确定（OK）。
+- 选择 `文件（File）` | `保存所有（Save All）`。
+- 选择 `运行（Run）` | `运行主项目（Run Main Project）`。
+- 弹窗提示你选择主类。接受默认的 `NewJFrame` 对象并点击确定（OK）。
 - 大功完成！
 
 你现在应该能看到一个与所示类似的弹出用户界面。点击按钮在文本框中显示“Hello World”：
@@ -885,8 +787,7 @@ Hello world
 Hello world
 ```
 
-`print()` 函数与 `println()` 类似，但它不会添加换行符。
-如果你写了以下代码：
+`print()` 函数与 `println()` 类似，但它不会添加换行符。如果你写了以下代码：
 
 ```
 System.out.print("Hello world");
@@ -900,7 +801,7 @@ System.out.print("Hello world");
 Hello worldHello worldHello world
 ```
 
-你可以嵌入换行符("\n")。
+你可以嵌入换行符(`\n`)。
 
 ## PrintText.java
 
@@ -941,12 +842,12 @@ There are 20 bottles standing on the wall.
 
 | getText | setText |
 | :--- | :--- |
-| someText = textField.getText(); | upperCaseField.setText(someText.toUpperCase()); |
-| myButton.setText("Thank you!"); | |
+| `someText = textField.getText();` | `upperCaseField.setText(someText.toUpperCase());` |
+| `myButton.setText("Thank you!");` | |
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_36_0.png)
 
-要获取或设置 JFrame 的标题（即应用程序的主窗口），使用 `getTitle()` 和 `setTitle()`。在我的示例程序中，我使用 `this` 关键字调用这些方法，该对象是 JFrame。这段代码在现有标题后添加了“!” 字符：
+要获取或设置 `JFrame` 的标题（即应用程序的主窗口），使用 `getTitle()` 和 `setTitle()`。在我的示例程序中，我使用 `this` 关键字调用这些方法，该对象是 `JFrame`。这段代码在现有标题后添加了“!” 字符：
 
 ```
 this.setTitle(this.getTitle() + "!");
@@ -975,7 +876,8 @@ myDouble = 100.75;
 ```
 double myDouble = 100.75;
 ```
-img/8c3ac46909d3d5f277ec850365ee22ff_38_0.png
+
+![](img/8c3ac46909d3d5f277ec850365ee22ff_38_0.png)
 
 ## 无类型变量 (Variables without Types)
 
@@ -1023,24 +925,21 @@ final double TAXRATE = 0.2;
 
 这是点击按钮时运行的计算方法：
 
-```
 ### TaxCalc
+
+```java
 private void calcBtnActionPerformed(java.awt.event.ActionEvent evt) {
     final double TAXRATE = 0.2;
     double subtotal;
     double tax;
     double grandtotal;
-
     subtotal = Double.parseDouble(subtotalTF.getText());
     tax = subtotal * TAXRATE;
     grandtotal = subtotal + tax;
-
     taxTF.setText(Double.toString(tax));
     grandtotalTF.setText(Double.toString(grandtotal));
 }
 ```
-
-
 
 ## 关于常量的更多
 
@@ -1058,7 +957,6 @@ public static final double PI = 3.14159265358973;
 
 ```java
 public class TaxCalcCmd {
-
     public static void main(String[] args) {
         final double TAXRATE = 0.2; // 20% 税率
         String input;
@@ -1066,7 +964,6 @@ public class TaxCalcCmd {
         double tax;
         double grandtotal;
         Scanner sc;
-
         sc = new Scanner(System.in); // 输入流
         System.out.println("Enter a number: ");
         System.out.print(": ");
@@ -1075,7 +972,6 @@ public class TaxCalcCmd {
         tax = subtotal * TAXRATE;
         grandtotal = subtotal + tax;
         System.out.printf("Subtotal: %.2f%nTax: %.2f%nGrand Total: %.2f%n", subtotal, tax, grandtotal);
-
     }
 }
 ```
@@ -1103,8 +999,7 @@ subtotal = Double.parseDouble(input);
 在计算出税额和总额后，在之前的程序中，我使用 `System.out` 的 `printf()` 方法显示格式化输出（这在第 2 章解释过）：
 
 ```java
-System.out.printf("Subtotal = %.2f\nTax = %.2f\nGrand Total = %.2f\n",
-subtotal, tax, grandtotal);
+System.out.printf("Subtotal = %.2f\nTax = %.2f\nGrand Total = %.2f\n", subtotal, tax, grandtotal);
 ```
 
 当此程序运行时，你必须在命令行提示符处输入一个数字。你将看到：
@@ -1166,13 +1061,11 @@ subtotal = Double.parseDouble(input);
 grandtotal.setText(Double.toString(grandtotal));
 ```
 
+
+
 ## Double?
 
 `Double` 是一个类。一个类可以封装数据和函数（方法）。这里 `Double` 类提供了 `parse()` 和 `toString()` 方法。注意，`Double` 类的字母 D 是大写的。带有小写 d 的 `double` 是一个原始数据类型（primitive type）。也就是说，它是一个真正的浮点数。原始数据类型只是一段数据，它没有方法。在 Java 中，我们可以使用 `Double` 和 `Integer` 等类来对 `double` 等原始数据类型进行操作。为了理解为什么需要这些转换，必须清楚数值值和字符串之间的区别。浮点数（如 10.5）可以在计算中使用，但作为字符串的 "10.5" 则不行。这是因为 `double` 值 10.5 被计算机视为数字，而字符串 "10.5" 被视为四个字符 '1'、'0'、'.' 和 '5'。对你来说它看起来像是一个数字，但对计算机来说它是四个在一起的字符。
-
-
-
-
 
 # 第3章 — Java 编程元素
 
@@ -1182,23 +1075,35 @@ grandtotal.setText(Double.toString(grandtotal));
 
 ## DataTypes
 
-```
+```java
 // convert double to string
+
 double myDouble;
+
 myDouble = 100.75;
+
 myTextArea.setText(Double.toString(myDouble));
 
 // convert int to string
+
 int myInt;
+
 int otherInt = 10;
+
 myInt = 20;
+
 myTextArea.setText(Integer.toString(myInt + otherInt));
 
 String d;
+
 String i;
+
 double total;
+
 d = "15.6";
+
 i = "100";
+
 total = Double.parseDouble(d) + Integer.parseInt(i);
 ```
 
@@ -1208,72 +1113,73 @@ total = Double.parseDouble(d) + Integer.parseInt(i);
 
 早些时候提到，小写 d 的 `double` 是基本数据类型，而首字母大写 D 的 `Double` 是类。让我解释一下为什么这种区别很重要。Java 是一种高级面向对象的语言。它使用的数据类型和编程技术对程序员很有用，但对计算机硬件来说没有意义。作为一个高级数据类型的极端例子，请看一眼我在 *DataTypes* 项目视觉设计中添加的按钮：
 
-```
+```java
 // Variables declaration - do not modify
+
 private javax.swing.JButton doubleBtn;
+
 private javax.swing.JButton intBtn;
+
 private
+
 private
+
     Total = 115.6
+
 // End o
 ```
 
-这就是你运行 *DataTypes* 项目时会看到的内容。每个“视觉组件”都是由高级数据类型创建的——一个如 *JButton* 这样的“类”。当你使用 NetBeans 可视化设计工具创建用户界面时，处理按钮点击所需的类和代码是由 NetBeans 自动生成的。事实上，经验丰富的 Java 程序员可以通过直接在编辑器中输入代码来创建用户界面，而不是使用可视化设计工具（尽管那很费力，我不建议你这样做！）。
+这就是你运行 *DataTypes* 项目时会看到的内容。每个“视觉组件”都是由高级数据类型创建的——一个如 `JButton` 这样的“类”。当你使用 NetBeans 可视化设计工具创建用户界面时，处理按钮点击所需的类和代码是由 NetBeans 自动生成的。事实上，经验丰富的 Java 程序员可以通过直接在编辑器中输入代码来创建用户界面，而不是使用可视化设计工具（尽管那很费力，我不建议你这样做！）。
 
-`JButton` 定义了按钮的外的外和行为。其他高级数据类型包括 *String* 和 *Integer*。一个 *String* 对象就像 *JButton* 对象一样，封装了一些数据和一些行为。对象的行为以方法的形式存在，例如 *JButton* 的 *setText()* 方法用于更改按钮标签，或者 *String* 的 *toLowerCase()* 方法用于返回全小写的字符字符串：
+`JButton` 定义了按钮的外观和行为。其他高级数据类型包括 `String` 和 `Integer`。一个 `String` 对象就像 `JButton` 对象一样，封装了一些数据和一些行为。对象的行为以方法的形式存在，例如 `JButton` 的 `setText()` 方法用于更改按钮标签，或者 `String` 的 `toLowerCase()` 方法用于返回全小写的字符字符串：
 
 | 对象与方法 |
 | :--- |
-| StringString; |
-| jButton.setText("Clicked!"); |
-| myString = "Hello World"; |
-| textArea.setText(myString.toLowerCase()); |
+| `String` `String`; |
+| `jButton.setText("Clicked!");` |
+| `myString = "Hello World";` |
+| `textArea.setText(myString.toLowerCase());` |
 
-复杂数据类型（带有内置方法的对象）——如 *JButton* 和 *String*——在 Java 代码中被创建，它们对于对于只识别非常简单数据类型的计算机硬件来说是没有意义的。
+复杂数据类型（带有内置方法的对象）——如 `JButton` 和 `String`——在 Java 代码中被创建，它们对于只识别非常简单数据类型的计算机硬件来说是没有意义的。
 
-简单数据类型被称为“基本类型”（primitives）。Java 中共有 8 种基本数据类型供你选择。其中 4 种整数（byte, short, int, long），2 种浮点数（float 和 double），1 种字母数字字符（char），1 种真假值（boolean）。
+简单数据类型被称为“基本类型”（primitives）。Java 中共有 8 种基本数据类型供你选择。其中 4 种整数（`byte`, `short`, `int`, `long`），2 种浮点数（`float` 和 `double`），1 种字母数字字符（`char`），1 种真假值（`boolean`）。
 
 各种数值数据类型具有不同的取值范围。如下所示。在创建特定类型的变量时，你必须确保该值落在支持范围内：
 
 | 类型 | 大小 | 范围 |
 | :--- | :--- | :--- |
 | 整数 | | |
-| byte | 8 bits | -128 to 127 |
-| short | 16 bits | -32,768 to 32,767 |
-| int | 32 bits | -2,147,483,648 to 2,147,483,647 |
-| long | 64 bits | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
+| `byte` | 8 bits | -128 to 127 |
+| `short` | 16 bits | -32,768 to 32,767 |
+| `int` | 32 bits | -2,147,483,648 to 2,147,483,647 |
+| `long` | 64 bits | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
 | 浮点数 | | |
-| float | 32 bits | 3.40282347 × 10⁻³⁸ to 1.40239846 × 10⁻⁴⁴ |
-| double | 64 bits | 1.7976931348623157 × 10³⁰⁸ to 4.940656485412645 × 10⁻³²⁴ |
+| `float` | 32 bits | 3.40282347 × 10⁻³⁸ to 1.40239846 × 10⁻⁴⁴ |
+| `double` | 64 bits | 1.7976931348623157 × 10³⁰⁸ to 4.940656485412645 × 10⁻³²⁴ |
 | 字符 | | |
-| char | 16 bits | |
+| `char` | 16 bits | |
 | 布尔 | | |
-| boolean | 1 bit | true or false |
+| `boolean` | 1 bit | true or false |
 
 由于基本类型没有方法，你有责任确保数据能够成功转换。例如，如果你尝试将诸如 "Hello World" 的字符串转换为 `double`，操作将失败，除非你采取了特定的措施来恢复错误（我们将在第 9 章中介绍这些方法），否则你的程序可能会崩溃！
-
-（注：原文中存在大量重复段落，此处已根据要求进行去重处理翻译）
-
-
-
-
 
 # 第 3 章 – Java 编程元素
 
 在将数值字面量赋值给其他数值数据类型的变量时，Java 编译器可能会报错。例如，如果你尝试向一个 `long` 变量赋值一个大于 `int` 最大值的数值整数（int），编译器（或你的 IDE，如 NetBeans）会报错提示该数值过大。请看这个示例：
 
-```
+```java
 long l = 1;
+
 l = 922337203685477580L;
 ```
 
-尽管 `long`（如变量 `l`）能够容数值 `922337203685477580`，但这种赋值是错误的，因为整数字面量被视为一个 `int` —— 而 `int` 的最大值为 `2147483647`。在 NetBeans 中我看到了此错误信息：
+尽管 `long`（如变量 `l`）能够容纳数值 `922337203685477580`，但这种赋值是错误的，因为整数字面量被视为一个 `int` —— 而 `int` 的最大值为 `2147483647`。在 NetBeans 中我看到了此错误信息：
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_51_0.png)
 
-为了修复这个问题，我需要告诉编译器这个数值字面量是一个 `long` 值。我通过在数字后面加上一个 `l` 来这样做：
+为了修复这个问题，我需要告诉编译器这个数值字面量是一个 `long` 值。我通过在数字后面加上一个 `L` 来这样做：
 
-```
+```java
 l = 922337203685477580L;
 ```
 
@@ -1281,18 +1187,19 @@ l = 922337203685477580L;
 
 ```java
 float f;
+
 f = 3.4028235E38F;
 ```
 
 如果你不确定数值类型的最小和最大范围，每个类型包装类提供的 `MIN_VALUE` 和 `MAX_VALUE` 常量会返回相应的值：
 
-| Byte.MIN_VALUE | Byte.MAX_VALUE |
+| `Byte.MIN_VALUE` | `Byte.MAX_VALUE` |
 | :--- | :--- |
-| Short.MIN_VALUE | Short.MAX_VALUE |
-| Integer.MIN_VALUE | Integer.MAX_VALUE |
-| Long.MIN_VALUE | Long.MAX_VALUE |
-| Float.MIN_VALUE | Float.MAX_VALUE |
-| Double.MIN_VALUE | Double.MAX_VALUE |
+| `Short.MIN_VALUE` | `Short.MAX_VALUE` |
+| `Integer.MIN_VALUE` | `Integer.MAX_VALUE` |
+| `Long.MIN_VALUE` | `Long.MAX_VALUE` |
+| `Float.MIN_VALUE` | `Float.MAX_VALUE` |
+| `Double.MIN_VALUE` | `Double.MAX_VALUE` |
 
 `Primitives` 示例程序包含此示例，可以在 `typesActionPerformed()` 方法中找到。
 
@@ -1302,7 +1209,7 @@ f = 3.4028235E38F;
 
 | DataTypes |
 | :--- |
-| myTextArea.setText(Integer.toString(myInt + myOtherInt)); |
+| `myTextArea.setText(Integer.toString(myInt + myOtherInt));` |
 
 然而，如果你一直关注我的代码，可能会注意到我并没有遵循这条规则。在 `DataTypes` 项目中，例如我直接显示 `double` 变量 `total` 的值，而没有显式地将其转换为字符串：
 
@@ -1320,16 +1227,21 @@ myTextArea.setText(total);
 
 ```
 incompatible types: double cannot be converted to String
+
 ----
+
 (Alt-Enter shows hints)
+
 myTextArea.setText(total);
+
 }
 ```
 
 那么，为什么我的原始版本没有问题地运行，而这个新版本却不行？事实证明，当你拼接字符串时（这里通过将 `double` 变量的值附加到字符串 `"Total = "` 之后），Java 会自动为每个尚不是字符串的项调用 `toString()` 方法。这意味着下面所示的两个代码行是等价的：
 
-```
+```java
 myTextArea.setText("Total = " + total);
+
 myTextArea.setText("Total = " + Double.toString(total));
 ```
 
@@ -1339,11 +1251,12 @@ myTextArea.setText("Total = " + Double.toString(total));
 
 | Primitives | Object |
 | :--- | :--- |
-| int unboxed; | Integer boxedInt; |
-| double unboxed; | Double boxedDouble; |
+| `int unboxed;` | `Integer boxedInt;` |
+| `double unboxed;` | `Double boxedDouble;` |
 
 ```java
 boxedInt = 500; // 装箱
+
 unboxed = boxedInt; // 拆箱
 ```
 
@@ -1353,20 +1266,23 @@ unboxed = boxedInt; // 拆箱
 
 ## 字符串
 
-我们在程序中频繁使用字符串。在结束本章之前，我将用简单的语言解释什么是字符串。在 Java 中，字符串代表一系列字符。例如，字符串 `"Hello"` 代表字符 'H''e''l''l''o'。字符串是以双引号分隔的字符序列输入的（这被称为字符串字面量），它的数据类型是 `String`。字符串实际上是一个包含数据（某些字符）和各种方法的对象。String 方法包括查找字符、获取子字符串、返回字符串的大写或小写，以及返回字符串的长度。字符串中的第一个字符索引为 0。字符串中的最后一个字符索引为字符串长度减 1。假设字符串包含文本 `"Hello world"`，表达式 `s.length()` 将返回值 11。
+我们在程序中频繁使用字符串。在结束本章之前，我将用简单的语言解释什么是字符串。在 Java 中，字符串代表一系列字符。例如，字符串 `"Hello"` 代表字符 'H''e''l''l''o'。字符串是以双引号分隔的字符序列输入的（这被称为字符串字面量），它的数据类型是 `String`。字符串实际上是一个包含数据（某些字符）和各种方法的对象。`String` 方法包括查找字符、获取子字符串、返回字符串的大写或小写，以及返回字符串的长度。字符串中的第一个字符索引为 0。字符串中的最后一个字符索引为字符串长度减 1。假设字符串包含文本 `"Hello world"`，表达式 `s.length()` 将返回值 11。
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_55.png)
 
 ## 字符串字面量如何拥有方法？
 
-之前我解释过，像 `500` 这样的整数字面量只是没有方法的数据，所以我不能写 `500.toString()`。为了这样做，我一个 `Integer` 对象。那么为什么字符串字面量可以访问方法？例如，我可以写 `"hello".toUpperCase()`，它将返回字符串 `"HELLO"`。这是因为当你将字符串字面量赋值给变量时，Java 会创建一个 `String` 对象。事实上，尽管像 `"Hello"` 这样的字符串值是字面量，但它们不是基本类型。基本类型是一个非常简单的字符数据。字符串是一整系列字符，因此可以被视为一种复杂的数据类型。
+之前我解释过，像 `500` 这样的整数字面量只是没有方法的数据，所以我不能写 `500.toString()`。为了这样做，我需要一个 `Integer` 对象。那么为什么字符串字面量可以访问方法？例如，我可以写 `"hello".toUpperCase()`，它将返回字符串 `"HELLO"`。这是因为当你将字符串字面量赋值给变量时，Java 会创建一个 `String` 对象。事实上，尽管像 `"Hello"` 这样的字符串值是字面量，但它们不是基本类型。基本类型是一个非常简单的字符数据。字符串是一整系列字符，因此可以被视为一种复杂的数据类型。
 
 这是我的代码创建此字符串并将其赋值给变量 `sLen` 的方式：
 
 ```java
 String s;
+
 int sLen;
+
 s = "Hello world";
+
 sLen = s.length();
 ```
 
@@ -1374,10 +1290,15 @@ sLen = s.length();
 
 ```java
 char c;
+
 char c2;
+
 s = "Hello world";
+
 sLen = s.length();
+
 c = s.charAt(0); // c 现在是 'H'
+
 c2 = s.charAt(sLen-1); // c2 现在是 'd'
 ```
 
@@ -1385,6 +1306,7 @@ c2 = s.charAt(sLen-1); // c2 现在是 'd'
 
 ```java
 String lowercaseS = s.toLowerCase();
+
 String uppercaseS = s.toUpperCase();
 ```
 
@@ -1392,7 +1314,7 @@ String uppercaseS = s.toUpperCase();
 
 Java 字符串是不可变的，这意味着它们不能被修改。例如，当我对字符串 `s` 调用 `toUpperCase()` 方法时，该字符串对象并没有被设置为大写。`toUpperCase()` 方法返回的字符串 `"HELLO WORLD"` 是一个新的字符串对象。将其赋值给变量 `uppercase`。原始字符串 `s` 保持不变：它仍然包含 `"Hello world"`。
 
- 转义字符
+### 转义字符
 
 注意，当我们在 `Strings` 示例程序中显示输出时，我在双引号字符前面使用斜杠字符 `\` 来显示双引号。
 
@@ -1400,11 +1322,9 @@ Java 字符串是不可变的，这意味着它们不能被修改。例如，当
 "\nIn lowercase, the string is \"" + lowercaseS + "\""
 ```
 
+
+
 如果我不这样做，Java 会认为双引号字符是字符串字面量的结束。斜杠 `\` 告诉 Java 紧随其后的字符（如 `"` 或 `n`）应该被特殊对待：`\n` 被视为换行符，`"` 是双引号字符。
-
-
-
-
 
 # 第 3 章 — Java 编程元素
 
@@ -1412,16 +1332,16 @@ Java 字符串是不可变的，这意味着它们不能被修改。例如，当
 
 | 转义字符 | 说明 |
 |---|---|
-| \t | 在文本此处插入一个制表符。 |
-| \b | 在文本此处插入一个退格符。 |
-| \n | 在文本此处插入一个换行符。 |
-| \r | 在文本此处插入一个回车符。 |
-| \f | 在文本此处插入一个分页符。 |
-| \' | 在文本此处插入一个单引号。 |
-| \" | 在文本此处插入一个双引号。 |
-| \\ | 在文本此处插入一个反斜杠。 |
+| `\t` | 在文本此处插入一个制表符。 |
+| `\b` | 在文本此处插入一个退格符。 |
+| `\n` | 在文本此处插入一个换行符。 |
+| `\r` | 在文本此处插入一个回车符。 |
+| `\f` | 在文本此处插入一个分页符。 |
+| `\'` | 在文本此处插入一个单引号。 |
+| `\"` | 在文本此处插入一个双引号。 |
+| `\\` | 在文本此处插入一个反斜杠。 |
 
-# 第 4 章 — 面对象
+# 第 4 章 — 面向对象
 
 Java 是一种面向对象的语言。在本章中，我将解释什么是对象、对象是如何与类相关的，以及为什么面向对象是很有用的。
 
@@ -1429,26 +1349,22 @@ Java 是一种面向对象的语言。在本章中，我将解释什么是对象
 
 ## 基本数据类型是不同的
 
-正如已经所看到的，基本类型是“Java 中一切都是对象”这一规则的例外。基本类型是简单的数据单元；它们不是 Java 对象。然而，基本类型可以被“封装”在 Java 对象内部，正如第 3 章所解释的，一个 int 基本类型可以被封装在一个 Integer 对象内部。
+正如已经所看到的，基本类型是“Java 中一切都是对象”这一规则的例外。基本类型是简单的数据单元；它们不是 Java 对象。然而，基本类型可以被“封装”在 Java 对象内部，正如第 3 章所解释的，一个 `int` 基本类型可以被封装在一个 `Integer` 对象内部。
 
 ## 类和对象
 
 你使用的每个对象都是从一个“类”创建的。你可以将类比为蓝图，它定义了对象的数据和行为（方法）。
 
-让我们来看一个非常简单的定义示例。你使用 `class` 关键字定义类。在这里，我决定将类命名为 `Thing`。注意类名的首字母是大写的。这是 Java 以及许多其他编程语言的惯例。该类包含两个字符串变量：name 和 description。我通过在声明前加上 `private` 关键字将这些变量设为私有：
+让我们来看一个非常简单的定义示例。你使用 `class` 关键字定义类。在这里，我决定将类命名为 `Thing`。注意类名的首字母是大写的。这是 Java 以及许多其他编程语言的惯例。该类包含两个字符串变量：`name` 和 `description`。我通过在声明前加上 `private` 关键字将这些变量设为私有：
 
-```
+```java
 private String name;
 private String description;
 ```
 
-# 第 4 章 — 面对象
-
 当类内部的变量是私有的时，类外部代码无法访问它们。为了访问我的私有变量，我编写了这些“get”和“set”访问器方法：
 
-## 对象 (Thing.java)
-
-```
+```java
 public String getName() {
     return name;
 }
@@ -1478,15 +1394,12 @@ public void setDescription(String aDescription) {
 
 将变量设为私有通常是良好的做法。通过使用方法访问数据，你可以控制允许访问数据的程度，并且你还可以在方法中编写代码来测试数据是否有效。如果你创建了公共变量，其他程序员将直接访问它们。如果你想在日后防止直接访问，将会变得困难。但如果你创建了公共方法和私有变量，你就可以根据需要更改方法的代码来限制访问、显示错误信息或进行其他更改。
 
-# 第 4 章 — 面对象
+## 完成后的 `Thing` 类
 
-这是完成后的 `Thing` 类：
-
-```
+```java
 package myclasses;
 
 public class Thing {
-
     private String name;
     private String description;
 
@@ -1516,11 +1429,9 @@ public class Thing {
 
 ## 类是对象的蓝图
 
-我的 `Thing` 类什么都不做。它仅仅是 de一个 `Thing` 对象的“蓝图”。在使用实际的 `Thing` 对象之前，你必须从 `Thing` 类创建它，就像在驾驶汽车之前必须先从 `Car` 蓝图创建一辆真实的汽车一样！
+我的 `Thing` 类什么都不做。它仅仅是一个 `Thing` 对象的“蓝图”。在使用实际的 `Thing` 对象之前，你必须从 `Thing` 类创建它，就像在驾驶汽车之前必须先从 `Car` 蓝图创建一辆真实的汽车一样！
 
 `Car` 蓝图和 `Thing` 类是定义什么是 `Car` 或 `Thing` 的计划或设计。从一个 `Car` 蓝图，制造商可以构建许多汽车“对象”。从一个 `Thing` 类，程序员可以构建许多 `Thing` 对象。根据上面显示的类，我看到每个对象将有一个字符串类型的名称和描述，以及 get/set 方法。
-
-# 第 4 章 — 面对象
 
 ## 构造函数
 
@@ -1534,14 +1445,15 @@ public Thing(String aName, String aDescription) {
 }
 ```
 
-在示例程序 (NewJFrame.java) 中，我声明了两个 `Thing` 类型变量：
+在示例程序 (`NewJFrame.java`) 中，我声明了两个 `Thing` 类型变量：
 
 | 对象 (NewJFrame.java) |
-| Thing mySword; Thing myRing |
+|---|
+| `Thing mySword; Thing myRing` |
 
-在使用这些对象之前，我需要创建它们。我通过使用 `new` 关键字后跟构造函数名称以及括号（如果构造函数不需要参数）来实现。事实上，`Thing` 构造函数需要两个字符串 aName 和 aDescription，因此我在括号之间放置了两个逗号分隔的字符串：
+在使用这些对象之前，我需要创建它们。我通过使用 `new` 关键字后跟构造函数名称以及括号（如果构造函数不需要参数）来实现。事实上，`Thing` 构造函数需要两个字符串 `aName` 和 `aDescription`，因此我在括号之间放置了两个逗号分隔的字符串：
 
-```
+```java
 mySword = new Thing("Dwarf Sword", "a sword of great power");
 myRing = new Thing("Elvish Ring", "a golden ring of magic power");
 ```
@@ -1554,7 +1466,7 @@ myRing = new Thing("Elvish Ring", "a golden ring of magic power");
 
 被继承特征的类可以认为是祖先，继承祖先类特征的类可以认为是它的后代。后代类也称为子类。祖先类通常被称为父类。
 
-假设我想创建一个 `NoisyThing` 类，它是 `Thing` 的一种“类型”——因此它继承了 `Thing`类的特征，即名称和描述，但它又增加了两个新特征：噪音和音量。你可以这样理解：
+假设我想创建一个 `NoisyThing` 类，它是 `Thing` 的一种“类型”——因此它继承了 `Thing` 类的特征，即名称和描述，但它又增加了两个新特征：噪音和音量。
 
 要创建一个子类，你需要在新类名和其父类名之间放置 `extends` 关键字。我是这样声明的：
 
@@ -1562,15 +1474,11 @@ myRing = new Thing("Elvish Ring", "a golden ring of magic power");
 class NoisyThing extends Thing
 ```
 
-子类继承其祖先类的特征（方法和变量），因此你不需要重新编写它们。在这个示例中，`Thing` 类有两个变量 name 和 description，以及四个访问这些变量的访问方法 `getName()`、`setName()`、`getDescription()` 和 `setDescription()`。
+子类继承其祖先类的特征（方法和变量），因此你不需要重新编写它们。在这个示例中，`Thing` 类有两个变量 `name` 和 `description`，以及四个访问这些变量的访问方法 `getName()`、`setName()`、`getDescription()` 和 `setDescription()`。
 
+## `NoisyThing` 类
 
-
-
-
-## 第 4 章 — 对象面向
-
-NoisyThing 类是 Thing 类的子类，因此它自动继承了名称和描述变量以及它们的访问器方法。此外，NoisyThing 类新增了以下两个变量：
+`NoisyThing` 类是 `Thing` 类的子类，因此它自动继承了名称和描述变量以及它们的访问器方法。此外，`NoisyThing` 类新增了以下两个变量：
 
 ```java
 private String noise;
@@ -1581,79 +1489,80 @@ private int volume;
 
 ```java
 public String getNoise() {
-  return noise;
+    return noise;
 }
+
 public void setNoise(String noise) {
-  noise = noise;
+    this.noise = noise;
 }
+
 public int getVolume() {
-  return volume;
+    return volume;
 }
+
 public void setVolume(int volume) {
-  volume = volume;
+    this.volume = volume;
 }
 ```
 
-当创建一个新的 NoisyThing 对象时，需要为所有四个变量赋值（包括它定义的变量 noise 和 volume，以及由其祖类定义的变量 name 和 description）。
+当创建一个新的 `NoisyThing` 对象时，需要为所有四个变量赋值（包括它定义的变量 `noise` 和 `volume`，以及由其祖类定义的变量 `name` 和 `description`）。
 
-它的构造方法方法在括号中有四个参数，这样在创建新的 NoisyThing 对象时，就可以将初始化四个变量所需的数据项（或称为“参数”）传递给构造方法：
+它的构造方法在括号中有四个参数，这样在创建新的 `NoisyThing` 对象时，就可以将初始化四个变量所需的数据项（或称为“参数”）传递给构造方法：
 
 ```java
 NoisyThing(String aName, String aDescription, String aNoise, int aVolume)
 ```
 
-NoisyThing 构造方法首先将相关数据项传递给其父类构造方法，以便父类可以初始化它的数据——即由 Thing 类定义的名称和描述变量：
+`NoisyThing` 构造方法首先将相关数据项传递给其父类构造方法，以便父类可以初始化它的数据——即由 `Thing` 类定义的名称和描述变量：
 
 ```java
 super(aName, aDescription);
 ```
 
-`super` 方法用于调用父类的构造方法，并将括号中父类构造方法所需的参数传递。完成此操作后，我继续初始化 NoisyThing 类中定义的变量：
+`super` 方法用于调用父类的构造方法，并将括号中父类构造方法所需的参数传递。完成此操作后，我继续初始化 `NoisyThing` 类中定义的变量：
 
 ```java
 noise = aNoise;
 volume = aVolume;
 ```
 
-## 参数（Parameters）与参数（Arguments）
+## 参数与实参
 
-参数（Parameters）是在方法最顶部括号之间声明的命名变量，如下：
+**参数**是在方法最顶部括号之间声明的命名变量，如下：
 
 ```java
 private String doSomething(String aString, int aNumber)
 ```
 
-参数（Arguments）是在调用方法时传递给方法的值（数据项），如下：
+**实参**是在调用方法时传递给方法的值（数据项），如下：
 
 ```java
-doSomething("Hello", 100 );
+doSomething("Hello", 100);
 ```
 
-虽然计算机科学家可能喜欢在“参数”（parameter）和“参数”（argument）这两个术语之间做出明确区分，但程序员经常混用这两个词。因此，在非正式的情况下，方法的“参数列表”可能被称为它的“参数列表”。
+虽然计算机科学家可能喜欢在“参数”（parameter）和“实参”（argument）这两个术语之间做出明确区分，但程序员经常混用这两个词。因此，在非正式的情况下，方法的“参数列表”可能被称为它的“实参列表”。
 
-当你调用一个方法时，传递的参数的数量必须与方法中声明的参数数量相同。列表中的每个参数的数据类型必须与匹配的参数相同。
+当你调用一个方法时，传递的实参的数量必须与方法中声明的参数数量相同。列表中的每个实参的数据类型必须与匹配的参数相同。
 
-当我创建一个 NoisyThing 对象时，我必须确保向其构造方法传递四个正确数据类型的参数，这样除了新定义的 NoisyThing 变量外，还可以初始化父类 Thing 的变量：
+当我创建一个 `NoisyThing` 对象时，我必须确保向其构造方法传递四个正确数据类型的实参，这样除了新定义的 `NoisyThing` 变量外，还可以初始化父类 `Thing` 的变量：
 
 ```java
 NoisyThing myCat;
 NoisyThing myDog;
-```
 
-```java
 myCat = new NoisyThing("Flossie", "a small tabby cat", "Miaaaow", 3);
 myDog = new NoisyThing("Fido", "a big smelly dog", "Woof!", 10);
 ```
 
-## 函数（Functions）或方法（Methods）
+## 函数或方法
 
-正如我在第 2 章中提到的，“方法”是面向对象语言中非面向对象（或“过程”）编程语言中通常被称为“函数”的术，尽管某些语言也使用“过程”（procedure）和“子程序”（subroutine）等术语。
+正如我在第 2 章中提到的，“方法”是面向对象语言中非面向对象（或“过程”）编程语言中通常被称为“函数”的术语，尽管某些语言也使用“过程”（procedure）和“子程序”（subroutine）等术语。
 
 函数提供了将代码划分成块的方法。在过程语言中，函数是“悬浮”的，我的意思是它们几乎可以写在代码的任何地方。在面向对象的语言中，函数被绑定到对象中。它们必须写在类定义内部，并被称为“方法”。
 
 方法使用如 `private` 或 `public` 等关键字进行声明（这控制函数对程序中其余代码的可见性），随后是函数返回任何值的数据类型，如果没有返回任何内容则使用 `void`。然后是函数的名称，由程序员选择。接着是一对括号。
 
-## private 和 public 关键字
+### `private` 和 `public` 关键字
 
 `private` 和 `public` 关键字是“访问修饰符”。`public` 变量或方法可以在代码的任何地方访问。`private` 变量或方法仅在特定区域或“作用域”内可见。例如，对象内部的私有变量无法从该对象类外部编写的代码中直接访问。然而，公共方法可以从该对象的外部访问。访问修饰符将在第 8 章中详细解释。
 
@@ -1664,11 +1573,11 @@ myDog = new NoisyThing("Fido", "a big smelly dog", "Woof!", 10);
 ```java
 // Methods (NewJFrame.java)
 private void doSomething() {
-    outputTA.append("Hello".toUpperCase()) + "\n";
+    outputTA.append("Hello".toUpperCase() + "\n");
 }
 ```
 
-这是一个接受单个 String 参数且不返回任何内容的函数：
+这是一个接受单个 `String` 参数且不返回任何内容的函数：
 
 ```java
 private void doSomething(String aString) {
@@ -1676,7 +1585,7 @@ private void doSomething(String aString) {
 }
 ```
 
-这是一个接受两个 String 参数并返回 String 的函数：
+这是一个接受两个 `String` 参数并返回 `String` 的函数：
 
 ```java
 private String doSomething(String aString, String anotherString) {
@@ -1684,26 +1593,26 @@ private String doSomething(String aString, String anotherString) {
 }
 ```
 
-## 消息（Messages）与方法（Methods）
+## 消息与方法
 
-面向对象的纯主义者可能会将函数调用描述为发送给对象的。。考虑这个：
+面向对象的纯主义者可能会将函数调用描述为发送给对象的消息。考虑这个：
 
 ```java
 "Hello".toUpperCase();
 ```
 
-在这里，消息是 `toUpperCase()`。原则上，对象可能会拒绝该消息。在 Smalltalk 等面向对象语言中，消息传递是基础性的。在 Java 等更面向对象的语言中，程序员需要讨论函数调用或方法调用，而不是消息传递。要执行代码，你必须通过名称调用它。在 Java 中，调用无参数的方法必须在方法名后跟一对空括号：
+在这里，消息是 `toUpperCase()`。原则上，对象可能会拒绝该消息。在 Smalltalk 等面向对象语言中，消息传递是基础性的。在 Java 等语言中，程序员需要讨论函数调用或方法调用，而不是消息传递。要执行代码，你必须通过名称调用它。在 Java 中，调用无参数的方法必须在方法名后跟一对空括号：
 
 ```java
 doSomething();
 ```
 
-## 返回值（Return Values）
+## 返回值
 
 如果方法返回一个值，该值可以（在调用代码中）赋值给匹配数据类型的变量。在这里，`doSomething()` 方法返回一个字符串并赋值给变量 `astr`。
 
 | 方法 (NewJFrame.java) |
-| --- |
+|---|
 | `String astr;` |
 | `astr = doSomething("Hello", "dear programmer.");` |
 
@@ -1715,35 +1624,32 @@ astr = doSomething("Hello", "dear programmer.");
 outputTA.append(astr);
 ```
 
-由于我再也不需要使用返回的字符串值，所以我不需要将其存储在变量中。我可以直接将方法调返回值传递给 `append()` 方法。我可以通过将我的三行代码重写为单行（省略 `astr` 变量）来实现：
+由于我再也不需要使用返回的字符串值，所以我不需要将其存储在变量中。我可以直接将方法调用的返回值传递给 `append()` 方法。我可以通过将我的三行代码重写为单行（省略 `astr` 变量）来实现：
 
 ```java
 outputTA.append(doSomething("Hello", "dear programmer."));
 ```
 
-## 重载方法（Overloaded Methods）
+## 重载方法
 
-只要每个方法的参数列表不同，你就可以 Java 中为多个不同的方法使用相同的名称。参数列表定义了`方法签名`，你创建具有相同名称但签名不同的方法，这被称为方法重载。方法重载将在第 9 章详细解释。
+只要每个方法的参数列表不同，你就可以在 Java 中为多个不同的方法使用相同的名称。参数列表定义了`方法签名`，你创建具有相同名称但签名不同的方法，这被称为方法重载。方法重载将在第 9 章详细解释。
 
-常用重载方法的示例是 String 类的 `indexOf()` 方法。当你对 String 对象调用此方法并向它传递单个 String 参数时，`indexOf(String str)` 返回字符串中指定子字符串首次出现的索引。String 类提供了四个重载的 `indexOf()` 方法。这些重载方法可以通过参数的数量或其数据类型区分开来。这四个
+常用重载方法的示例是 `String` 类的 `indexOf()` 方法。当你对 `String` 对象调用此方法并向它传递单个 `String` 参数时，`indexOf(String str)` 返回字符串中指定子字符串首次出现的索引。`String` 类提供了四个重载的 `indexOf()` 方法。这些重载方法可以通过参数的数量或其数据类型区分开来。
 
-
-
-
-
-# 第 4 章 — 对象面向
+# 第 4 章 — 面向对象（续）
 
 重载的 `indexOf()` 方法，每个方法都返回一个整数值，表示字符串中的索引（记住第一个字符的索引为 0）：
 
 ```java
 indexOf(int ch)
 ```
-
 返回指定字符在此字符串中第一次出现的索引。
 
 ```java
 indexOf(int ch, int from)
 ```
+
+
 
 从指定的索引处开始搜索，返回指定字符在此字符串中第一次出现的索引。
 
@@ -1765,10 +1671,10 @@ indexOf(String str, int fromIndex)
 | :--- |
 | `public static void main(String[] args) {` |
 | `String s = "The quick brown fox jumps over the lazy dog";` |
-| `System.out.printf("s.indexOf(\"quick\") = %d\n", s.indexOf(\"quick"));` |
-| `System.out.printf("s.indexOf(\"e\") = %d\n", s.indexOf(\"e"));` |
-| `System.out.printf("s.indexOf(\"the\", 3) = %d\n", s.indexOf(\"the\", 3));` |
-| `System.out.printf("s.indexOf(\"u\", 3) = %d\n", s.indexOf(\"u\", 3));` |
+| `System.out.printf("s.indexOf(\"quick\") = %d\n", s.indexOf("quick"));` |
+| `System.out.printf("s.indexOf(\"e\") = %d\n", s.indexOf("e"));` |
+| `System.out.printf("s.indexOf(\"the\", 3) = %d\n", s.indexOf("the", 3));` |
+| `System.out.printf("s.indexOf(\"u\", 3) = %d\n", s.indexOf("u", 3));` |
 | `}` |
 
 这是输出结果：
@@ -1793,13 +1699,12 @@ exit = goldRoom.getN();
 
 上所示的代码片段假设你已经定义了一个 `Room` 类（正如示例项目 `AdventureGame1` 所示，我稍后会解释）。
 
-有时，在不需要创建对象的情况下调用方法是有用的，例如为了将字符串 "200" 转换为其整数表示 200。你可以这样做，比方通过先创建一个新的 `Integer` 对象，然后将字符串作为参数调用 `valueOf()` 方法，如下：
+有时，在不需要创建对象的情况下调用方法是有用的，例如为了将字符串 `"200"` 转换为其整数表示 `200`。你可以这样做，比方通过先创建一个新的 `Integer` 对象，然后将字符串作为参数调用 `valueOf()` 方法，如下：
 
 ```java
 Integer intOB;
 int anInt;
 String s = "200";
-
 intOB = new Integer(0);
 anInt = intOB.valueOf(s);
 ```
@@ -1810,13 +1715,12 @@ anInt = intOB.valueOf(s);
 Integer.valueOf(s);
 ```
 
-你会在 `ClassMethods` 项目中找到这个示例。我有一个字符串变量 `s`，值为 "200"（在实际程序中，这可能是用户通过文本框输入的，也可能是从磁盘上的文件中读取的）。当我在计算中使用该值时，我调用 `Integer.valueOf(s)` 来返回一个整数值：
+你会在 `ClassMethods` 项目中找到这个示例。我有一个字符串变量 `s`，值为 `"200"`（在实际程序中，这可能是用户通过文本框输入的，也可能是从磁盘上的文件中读取的）。当我在计算中使用该值时，我调用 `Integer.valueOf(s)` 来返回一个整数值：
 
 ```java
 int x;
 int total;
 String s;
-
 s = "200";
 x = 5;
 total = x * Integer.valueOf(s);
@@ -1846,16 +1750,12 @@ public static class ClassMethods {
 }
 ```
 
-
-
-
-
 # 第 4 章 — 面向对象
 
 显示的内容如下：
 
 | | |
-| :--- |
+| :--- | :--- |
 | 有 0 个对象 |
 | 有 1 个对象 |
 | 有 2 个对象 |
@@ -1865,17 +1765,17 @@ public static class ClassMethods {
 | 这是总共 3 个对象中的第 2 个对象 |
 | 这是总共 3 个对象中的第 3 个对象 |
 
-概要，实例变量为每个对象存储不同的值。类变量或静态变量存储单个值，由该类创建的所有对象都可以访问该值。实例方法通过对象调用，而类方法通过类调用。顺便提一下，也可以从对象调用静态方法，但这可能会引起混义，因此通常最好避免这样做。
+概要，实例变量为每个对象存储不同的值。类变量或静态变量存储单个值，由该类创建的所有对象都可以访问该值。实例方法通过对象调用，而类方法通过类调用。顺便提一下，也可以从对象调用静态方法，但这可能会引起混淆，因此通常最好避免这样做。
 
 ## 静态常量 (static)
 
 回想第 3 章，常量值通常使用 `final` 关键字声明。这防止了赋值给标识符的值被更改。事实上，你经常会看到 Java 常量也是使用 `static` 关键字定义的。`static` 关键字确保我们只创建一个常量的副本并存储在类本身，而不是为每个对象创建新副本。例如，常量值 PI 的声明方式如下：
 
-```
+```java
 public static final double PI = 3.14159265385979323846;
 ```
 
-正如你在运行 PIT 项目时所看到的，Java 节点会将此值截断为 3.141592653859793。如果你想查看 Java 中的常量，可能可以使用你 IDE 的导航工具。例如，在 NetBeans 中，你可以右键点击导入的常量名，并在弹出菜单中选择*导航 | 转到声明 (Navigate | Go to Declaration)*：
+正如你在运行 `PIT` 项目时所看到的，Java 节点会将此值截断为 `3.141592653859793`。如果你想查看 Java 中的常量，可能可以使用你 IDE 的导航工具。例如，在 NetBeans 中，你可以右键点击导入的常量名，并在弹出菜单中选择“导航 | 转到声明 (Navigate | Go to Declaration)”：
 
 | package pitest; | | |
 | :--- | :--- | :--- |
@@ -1887,11 +1787,11 @@ public static final double PI = 3.14159265385979323846;
 
 在本章中，我们学习了类被用创建对象的蓝图，以及后代类如何继承祖先类的特征。在某些类型的应用程序中，拥有多个“级”的继承可能是很有用的，例如类 D 继承自类 C；类 C 继承自类 B；类 B 继承自类 A。
 
-拥有多个“行”的继承关系也可能有用，即类 B 和类 X 都继承自类 A，而类 Y 继承自类 B。通过情况下，我们可以创建复杂的类网络或“族树”。
+拥有多个“行”的继承关系也可能有用，即类 B 和类 X 都继承自类 A，而类 Y 继承自类 B。通过这种情况下，我们可以创建复杂的类网络或“族树”。
 
-当我解释我的 Java 游戏项目时，我会展示一个复杂网络的真实示例，该项目将在后面的章节中开发，并在附录中进行总结。下面的图显示了 Adventure1 项目中“游戏对象”的网络。Thing 类有一个名称和描述。Actor 类和 Room 类都继承自 Thing 类，因此 Actor 和 Room 对象也将具有名称和描述。
+当我解释我的 Java 游戏项目时，我会展示一个复杂网络的真实示例，该项目将在后面的章节中开发，并在附录中进行总结。下面的图显示了 `Adventure1` 项目中“游戏对象”的网络。`Thing` 类有一个名称和描述。`Actor` 类和 `Room` 类都继承自 `Thing` 类，因此 `Actor` 和 `Room` 对象也将具有名称和描述。
 
-Actor 类定义了一个交互式角色（或游戏玩家）并添加了位置。Room 类定义了游戏地图中的房间，并添加了四个出口：n, w 和 e。
+`Actor` 类定义了一个交互式角色（或游戏玩家）并添加了位置。`Room` 类定义了游戏地图中的房间，并添加了四个出口：n, w 和 e。
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_74_0.png)
 
@@ -1907,15 +1807,15 @@ Actor 类定义了一个交互式角色（或游戏玩家）并添加了位置�
 
 在你的程序中，你经常需要测试两个变量的值是否相同或不同。Java 提供了“运算符”来帮助你进行这些测试。在本章中，我们将发现如何使用 Java 运算符来编写条件测试、修改变量值以及进行算术计算。
 
-我们已经见过一些运算符——例如，在第 1 章的 Hello/Args 程序中，我们使用等等运算符 (==) 来测试命令行输入的参数数量 (args.length) 是否等于 0：
+我们已经见过一些运算符——例如，在第 1 章的 `Hello/Args` 程序中，我们使用等等运算符 (`==`) 来测试命令行输入的参数数量 (`args.length`) 是否等于 0：
 
-```
+```java
 if (args.length == 0)
 ```
 
-我们在第 3 章的 TaxCalc 程序中使用了乘法 (*) 和加法 (+) 运算符，以及赋值运算符 (=)。你可能记得，在那个程序中，我们将 `subtotal` 变量乘以 `TAXRATE` 常量，并将计算结果赋值给 `tax` 变量。将 `subtotal` 和 `tax` 变量的值相加并将结果赋值给 `grandtotal` 变量：
+我们在第 3 章的 `TaxCalc` 程序中使用了乘法 (`*`) 和加法 (`+`) 运算符，以及赋值运算符 (`=`)。你可能记得，在那个程序中，我们将 `subtotal` 变量乘以 `TAXRATE` 常量，并将计算结果赋值给 `tax` 变量。将 `subtotal` 和 `tax` 变量的值相加并将结果赋值给 `grandtotal` 变量：
 
-```
+```java
 tax = subtotal * TAXRATE;
 grandtotal = subtotal + tax;
 ```
@@ -1930,13 +1830,13 @@ grandtotal = subtotal + tax;
 
 最重要的运算符之一是赋值运算符，它将右侧的值分配给变量。注意，赋值的数据类型必须与变量的类型兼容：
 
-```
+```java
 int IntVar = 10;
 ```
 
 ## 相等 (Equality)
 
-虽然一个等号 = 用于赋值，但两个等号 == 用于测试条件。你将在 `EqualsOps` 示例中找到一个更完整的示例，它测试了用户输入的值：
+虽然一个等号 `=` 用于赋值，但两个等号 `==` 用于测试条件。你将在 `EqualsOps` 示例中找到一个更完整的示例，它测试了用户输入的值：
 
 ```java
 if (IntVar == 1) {
@@ -1945,6 +1845,7 @@ if (IntVar == 1) {
     textField2.setText("No!");
 }
 ```
+
 但这段代码有一个问题。在用户向 `textField1` 输入值之前，该字段是空的。如果我尝试使用 `Integer()` 将其内容转换为整数，将导致错误。我将在第 9 章讨论异常处理时，解释一些从错误中恢复的方法。在这里，只需通过测试字段是否包含空字符串来避免错误，从而显示错误信息，而不是尝试将字符串转换为整数。这是我的第一次尝试：
 
 ```java
@@ -1995,13 +1896,9 @@ textField2.setText("You must enter a number into textField..");
 if (myIntVar == 1)
 ```
 
-
-
-
-
 # 第 5 章 – 测试与运算符
 
-然而，当我将字符串 "1" 与另一个字符串 "1" 进行比较时，测试结果却为 false。换句话说，Java 认为两个值相同的整数是相同的，但两个值相同的字符串是不同的。
+然而，当我将字符串 `"1"` 与另一个字符串 `"1"` 进行比较时，测试结果却为 false。换句话说，Java 认为两个值相同的整数是相同的，但两个值相同的字符串是不同的。
 
 ## String.equals()
 
@@ -2009,7 +1906,7 @@ if (myIntVar == 1)
 
 | EqualsOps |
 | :--- |
-| if ("".equals(textField1.getText())) { textField2.setText("你必须在 textField1 中输入一个数字.");}|
+| `if ("".equals(textField1.getText())) { textField2.setText("你必须在 textField1 中输入一个数字."); }` |
 
 ## 字符串相等性
 
@@ -2019,7 +1916,7 @@ if (myIntVar == 1)
 
 ## 字符串是对象吗？
 
-并不是所有的编程语言都这样处理字符串。即使是许多方面与 Java 非常相似的 C# 语言，也允许你使用普通的 == 等于运算符测试两个字符串。在 C# 中，当两个不同的字符串包含相同的字符时，使用 == 运算符的测试会返回 true。而在 Java 中，它返回 false。你必须记住，Java 处理字符串就像处理其他对象一样。两个猫对象 catA 和 catB 都有相同的名称 "Tiddles"，但它们仍然是两个不同的对象。Java 处理字符串比较的方式是一样的！
+并不是所有的编程语言都这样处理字符串。即使是许多方面与 Java 非常相似的 C# 语言，也允许你使用普通的 `==` 等于运算符测试两个字符串。在 C# 中，当两个不同的字符串包含相同的字符时，使用 `==` 运算符的测试会返回 true。而在 Java 中，它返回 false。你必须记住，Java 处理字符串就像处理其他对象一样。两个猫对象 `catA` 和 `catB` 都有相同的名称 `"Tiddles"`，但它们仍然是两个不同的对象。Java 处理字符串比较的方式是一样的！
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_79_1.png)
 
@@ -2030,29 +1927,31 @@ String s1 = new String("Hello");
 String s2 = new String("Hello");
 ```
 
-现在你使用此测试比较 s1 和 s2：
+现在你使用此测试比较 `s1` 和 `s2`：
 
 ```java
 (s1 == s2) // 这评估结果为 false
 ```
 
-测试结果为 false 是因为尽管这两个字符串包含相同的字符，但 s1 是一个与 s2不同的字符串对象（我是显式地使用 new 创建的每一个）。对于任何在运行时创建的字符串对象（例如，通过将文本框中的文本赋值给字符串变量），也是如此。
+测试结果为 false 是因为尽管这两个字符串包含相同的字符，但 `s1` 是一个与 `s2` 不同的字符串对象（我是显式地使用 `new` 创建的每一个）。对于任何在运行时创建的字符串对象（例如，通过将文本框中的文本赋值给字符串变量），也是如此。
 
-然而，当将两个相同的字符串赋值给变量时（而不创建新对象），它们将引用（或“指向”）同一个字符串。这是因为在编译应用程序之前在代码中创建的字符串字面量被保存到字符串“表中”，任何分配该字符串的变量都会引用这个存储的值。因此，赋值相同字符串的变量在使用 == 运算符测试相等性时将返回 true：
+然而，当将两个相同的字符串赋值给变量时（而不创建新对象），它们将引用（或“指向”）同一个字符串。这是因为在编译应用程序之前在代码中创建的字符串字面量被保存到字符串“表中”，任何分配该字符串的变量都会引用这个存储的值。因此，赋值相同字符串的变量在使用 `==` 运算符测试相等性时将返回 true：
 
 | StringCompare |
 | :--- |
-| String s1 = "Hello"; String s2 = "Hello"; |
+| `String s1 = "Hello"; String s2 = "Hello";` |
 
 ```java
 (s1 == s2) // 这评估结果为 true
 ```
 
+
+
 这就是 Java 字符串拥有 `equals()` 方法的原因。该方法比较两个字符串中的字符，如果这些字符相同则返回 true。
 
 ## 测试字符串的“最佳”方法是什么？
 
-查看 StringCompare 项目中的代码可以帮助你理解 Java 中是如何比较字符串的。如果你觉得这很困惑，只需记住在大多数情况下，使用 == 运算符比较字符串并不是一个好主意。相反，你应该使用 `equals()` 方法。== 运算符会根据字符串如何以及何时赋值给变量而返回不同的结果，而 `equals()` 方法在所有情况下都是一致的。
+查看 `StringCompare` 项目中的代码可以帮助你理解 Java 中是如何比较字符串的。如果你觉得这很困惑，只需记住在大多数情况下，使用 `==` 运算符比较字符串并不是一个好主意。相反，你应该使用 `equals()` 方法。`==` 运算符会根据字符串如何以及何时赋值给变量而返回不同的结果，而 `equals()` 方法在所有情况下都是一致的。
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_80_0.png)
 
@@ -2060,13 +1959,13 @@ String s2 = new String("Hello");
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_81_0.png)
 
-在这里运行了 StringCompare 项目，在文本框中输入了两个相同的字符串，并点击“Test1”按钮，使用 == 运算符和 `equals()` 方法比较字符串。
+在这里运行了 `StringCompare` 项目，在文本框中输入了两个相同的字符串，并点击“Test1”按钮，使用 `==` 运算符和 `equals()` 方法比较字符串。
 
-== 运算符返回 false，表示它们是两个不同的对象。equals() 方法返回 true，表示两个字符串包含完全相同的字符。
+`==` 运算符返回 false，表示它们是两个不同的对象。`equals()` 方法返回 true，表示两个字符串包含完全相同的字符。
 
 ## 测试与比较
 
-Java 可以使用 if 语句进行执行测试。测试本身必须包含在括号（圆括号）中，并且能够评估为 true 或 false。如果为 true，则执行测试后的语句。单表达式语句以分号结束，如下所示：
+Java 可以使用 `if` 语句进行执行测试。测试本身必须包含在括号（圆括号）中，并且能够评估为 true 或 false。如果为 true，则执行测试后的语句。单表达式语句以分号结束，如下所示：
 
 ```java
 if (inputStr.equals(""))
@@ -2074,8 +1973,6 @@ if (inputStr.equals(""))
 ```
 
 如果你想在测试后执行多行代码，所有这些代码行必须在大括号内，形成一个代码“块”。
-
-# 第 5 章 — 测试与运算符
 
 一些程序员（包括在内！）为了清晰和一致性，倾向于用大括号将单行和多行语句括起来。因此，上面的示例可以重写为：
 
@@ -2087,7 +1984,7 @@ if (inputStr.equals("")) {
 
 ## if...else
 
-可选地块后面可以跟一个 else 块。如果测试评估为 false，则执行 else 块。你可以链多个 else 语句。这里有一个例子：
+可选地块后面可以跟一个 `else` 块。如果测试评估为 false，则执行 `else` 块。你可以链多个 `else` 语句。这里有一个例子：
 
 | Tests |
 | :--- |
@@ -2095,53 +1992,23 @@ if (inputStr.equals("")) {
 | else if (inputStr.equals("hello")) { output.setText("你好！"); } |
 | else { output.setText("我不明白你在说什么!"); } |
 
+购买了价值超过 100 美元的商品，并且他们购买了今日特惠。在代码中，这些条件可以使用逻辑运算符 `&&` 进行求值，如下所示：
 
-
-
-
-# 第 5 章 – 测试与运算符
-
-购买了价值超过 100 美元的商品，并且他们购买了今日特惠。在代码中，这些条件可以使用逻辑运算符 (&&) 进行求值，如下所示：
-
-```
+```java
 if ((valueOfPurchases > 100) && (boughtDealOfTheDay))
 ```
 
-但如果你想大慨一些，你可能想在客户购买了价值超过 100 美元的商品或者该客户购买了今日特惠时提供折扣。在代码中，这些条件可以使用逻辑或 (||) 运算符进行求值，如下：
+但如果你想大慨一些，你可能想在客户购买了价值超过 100 美元的商品或者该客户购买了今日特惠时提供折扣。在代码中，这些条件可以使用逻辑或 `||` 运算符进行求值，如下：
 
-```
+```java
 if ((valueOfPurchases > 100) || (boughtDealOfTheDay))
 ```
 
-你会在 LogicalOperators 程序中找到这些这些运算符的示例：
+你会在 `LogicalOperators` 程序中找到这些这些运算符的示例：
 
 | LogicalOperators |
 | :--- |
-| int age;
-int number_of_children;
-double salary;
-
-age = 25;
-number_of_children = 1;
-salary = 20000.00;
-
-if ((age <= 30) && (salary >= 30000.00)) {
-    System.out.print("You are a rich young person\n");
-} else {
-    System.out.print("You are not a rich young person\n");
-}
-
-if ((age <= 30) || (salary >= 30000.00)) {
-    System.out.print("You are either rich or young or both or not\n");
-} else {
-    System.out.print("You are neither rich nor young\n");
-}
-
-if ((age <= 30) && (salary >= 30000.00) && (number_of_children != 0)) {
-    System.out.print("You are a rich young parent\n");
-} else {
-    System.out.print("You are not a rich young parent\n");
-} | |
+| int age; int number_of_children; double salary; age = 25; number_of_children = 1; salary = 20000.00; if ((age <= 30) && (salary >= 30000.00)) { System.out.print("You are a rich young person\n"); } else { System.out.print("You are not a rich young person\n"); } if ((age <= 30) || (salary >= 30000.00)) { System.out.print("You are either rich or young or both or not\n"); } else { System.out.print("You are neither rich nor young\n"); } if ((age <= 30) && (salary >= 30000.00) && (number_of_children != 0)) { System.out.print("You are a rich young parent\n"); } else { System.out.print("You are not a rich young parent\n"); } |
 
 该程序产生以下输出：
 
@@ -2153,18 +2020,16 @@ You are not a rich young parent
 
 ## 布尔值
 
-逻辑运算符测试布尔值。一个布尔值可以为真（true），也可以为假（false）。Java 提供了一种 boolean 数据类型，它可以存储 true 值或 false 值：
+逻辑运算符测试布尔值。一个布尔值可以为真（true），也可以为假（false）。Java 提供了一种 `boolean` 数据类型，它可以存储 true 值或 false 值：
 
-```
-Booleans
+```java
 boolean happy;
 boolean rich;
-
 happy = true;
 rich = false;
 ```
 
-通过将带有多个 && || 运算符的测试组合，可以创建相当复杂的条件。你可能需要将多部分测试封装在括号之间，以确保所有组件测试都一起求值并返回一个真或假值。例如，通过在这里对前两个条件加上括号，我可以确保 ((income > 100000) || (wonTheLottery)) 被作为一个单个测试进行评估。
+通过将带有多个 `&&` `||` 运算符的测试组合，可以创建相当复杂的条件。你可能需要将多部分测试封装在括号之间，以确保所有组件测试都一起求值并返回一个真或假值。例如，通过在这里对前两个条件加上括号，我可以确保 `((income > 100000) || (wonTheLottery))` 被作为一个单个测试进行评估。
 
 ```
 ((income > 100000) || (wonTheLottery)) && happy
@@ -2175,8 +2040,6 @@ rich = false;
 ```
 if (((income > 100000 ) || (wonTheLottery)) && happy) || (rich && happy)
 ```
-
-# 第 5 章 – 测试与运算符
 
 ## 复合赋值运算符
 
@@ -2189,13 +2052,12 @@ Java 中的一些赋值运算符在将结果赋值给变量之前会执行计算
 | *= | a *= b | a = a * b |
 | /= | a /= b | a = a / b |
 
-你可以在 CompoundOperators 项目中找到这些运算符的示例：
+你可以在 `CompoundOperators` 项目中找到这些运算符的示例：
 
-```
+```java
 public static void main(String[] args) {
     int a;
     int b;
-
     a = 10;
     b = 2;
     a = a + b;
@@ -2215,7 +2077,7 @@ public static void main(String[] args) {
 }
 ```
 
-这里的代码使用了标准的算术和赋值运算符，如：a = a + b；以及等效的复合运算符，如：a += b；
+这里的代码使用了标准的算术和赋值运算符，如：`a = a + b`；以及等效的复合运算符，如：`a += b`。
 
 它显示了此输出：
 
@@ -2229,11 +2091,11 @@ public static void main(String[] args) {
 10
 ```
 
-在你自己的代码中倾向于使用哪种语法取决于你。如果你熟悉其他 C 类语言，你可能已经有了偏好。许多 C 和 C++ 程序员更倾向于像 a += b 这样更简洁的形式。
+在你自己的代码中倾向于使用哪种语法取决于你。如果你熟悉其他 C 类语言，你可能已经有了偏好。许多 C 和 C++ 程序员更倾向于像 `a += b` 这样更简洁的形式。
 
 ## 自增 ++ 和自减 -- 运算符
 
-当你想要让变量的值增加或减少 1（即给变量值加 1 或减去 1）时，可以使用 ++ 和 -- 运算符。这是一个自增自减的示例：
+当你想要让变量的值增加或减少 1（即给变量值加 1 或减去 1）时，可以使用 `++` 和 `--` 运算符。这是一个自增自减的示例：
 
 ```java
 int a = 5;
@@ -2245,13 +2107,13 @@ System.out.println(a);
 
 ## 一元运算符
 
-++ 和 -- 被称为元运算符，因为它们只需要一个操作数，而像 + 这样的二元运算符需要两个
+`++` 和 `--` 被称为一元运算符，因为它们只需要一个操作数，而像 `+` 这样的二元运算符需要两个。
 
 ## 前缀和后缀运算符
 
-你可以将 ++ 和 -- 放在变量之前或之后，如下：
+你可以将 `++` 和 `--` 放在变量之前或之后，如下：
 
-```
+```java
 int a = 5;
 ++a; // 前缀
 a++; // 后缀
@@ -2264,10 +2126,6 @@ int a = 5;
 System.out.println(++a); // 打印 6
 System.out.println(a++); // 打印 6，然后 a 变为 7
 ```
-
-
-
-
 
 # 索引错误
 
@@ -2304,7 +2162,7 @@ stringarray[3] = "as";
 stringarray[4] = "a";
 ```
 
-# 第 6 章 —数组与集合
+# 第 6 章 — 数组与集合
 
 有一种更简单的方法可以在单次操作中创建数组并用数据项填充。以下是用单行代码创建一个包含 6 个元素的字符串数组的方法：
 
@@ -2390,7 +2248,7 @@ for (int i = 1; i <= 10; i++) {
 }
 ```
 
-记住`<` 运算符表示“小于”，而 `<=` 运算符表示“小于等于”。这是循环产生的输出：
+记住 `<` 运算符表示“小于”，而 `<=` 运算符表示“小于等于”。这是循环产生的输出：
 
 | 1 |
 | 2 |
@@ -2424,38 +2282,36 @@ for (int i = 0; i < s.length(); i++) {
 
 # ArrayList
 
-Java 的 `ArrayList` 是一个非常有用的通用类，允许你创建可调整大小的列表`ArrayList` 可以包含混合数据类型的元素，也可以进行类型化以确保只能添加特定类型的元素。这里是一个未类型化的 `ArrayList`：
+Java 的 `ArrayList` 是一个非常有用的通用类，允许你创建可调整大小的列表。`ArrayList` 可以包含混合数据类型的元素，也可以进行类型化以确保只能添加特定类型的元素。这里是一个未类型化的 `ArrayList`：
 
 | ArrayLists |
 | --- |
 | ArrayList aList; |
 
-
-
-
-
 ## 第 6 章 数组与集合
 
-在使用 ArrayList 之前，必须像创建其他 Java 对象一样创建它，这需要使用 `new` 关键字后跟类的构造方法名：
+在使用 `ArrayList` 之前，必须像创建其他 Java 对象一样创建它，这需要使用 `new` 关键字后跟类的构造方法名：
 
-```
+```java
 aList = new ArrayList();
 ```
 
-现在，你可以使用 ArrayList 对象提供的方法，例如使用 `add()` 添加元素，以及使用 `get()` 获取特定索引处的元素：
+现在，你可以使用 `ArrayList` 对象提供的方法，例如使用 `add()` 添加元素，以及使用 `get()` 获取特定索引处的元素：
 
-```
+```java
 aList.add("hello");
 aList.add(20);
 System.out.println(aList.get(0));
 System.out.println(aList.get(1));
 ```
 
-## 垃圾回收
+
+
+# 垃圾回收
 
 C 和 Pascal 程序员可能会对看到我一直在使用 `new` 创建对象，却从不费力去释放它们（以释放内存）而感到惊讶。我之所以这样做，是因为我不需要这样做。在 Java 中，当对象不再被需要时（即它们不再被程序中的任何部分引用），Java 就会将它们处理掉。这被称为“垃圾回收”。曾几何时，具有垃圾回收机制的语言非常稀少。而如今，从 C# 到 Ruby 的许多语言都提供垃圾回收。
 
-## 类型化的 ArrayList
+# 类型化的 ArrayList
 
 虽然在无类型的 `ArrayList` 对象中存储混合类型的元素（例如同时存储整数和字符串）是允许的，但你也可以确保只允许特定类型的元素。为了实现这一点，你需要在声明变量并在 `ArrayList` 类名后的一对角括号中放置类型名称，例如 `Integer` 或 `String`，如下所示：
 
@@ -2493,7 +2349,7 @@ stringList.remove(0);
 stringList.add(20); // 不允许。stringList 类型为字符串。
 ```
 
-## 泛型
+# 泛型
 
 像我的 stringList 对象那样的类型化 ArrayList 是 Java“泛型”的一个示例。泛型列表提供了操作不同类型元素列表所需的行为。
 
@@ -2508,7 +2364,7 @@ System.out.println(intList.get(0));
 System.out.println(intList.get(1));
 ```
 
-## 泛型与对象协同工作！
+# 泛型与对象协同工作！
 
 务必指定 `Integer` 等类，而不是 `int` 等基本数据类型。泛型列表操作的是对象，而不是基本类型。
 
@@ -2527,7 +2383,7 @@ System.out.println("Now stringList size = " + stringList.size());
 
 一如既往，我建议你运行我的示例代码（ArrayList 项目）以理解其工作原理。我将在第 9 章更详细探讨泛型列表。
 
-## Map（映射）与字典（Dictionaries）
+# Map（映射）与字典（Dictionaries）
 
 有时，通过列表数值位置以外的其他内容对对象集合进行索引可能是很有用的。例如，在字典中，可以通过搜索单词本身而非页码来查找单词的定义。在编程术语中，字典中的条目被称为“键值对”，其中键（key）是单词本身，值（value）是相关的定义。
 
@@ -2535,20 +2391,9 @@ System.out.println("Now stringList size = " + stringList.size());
 
 在某些编程语言中，这种集合可能被称为“关联数组”（associative array）、“哈希”（hash）或“字典”（dictionary）。事实上，Java 也有一个 Dictionary 类，提供了与 Map 类似的功能，但该类现在被认为已过时，建议程序员使用实现 Map 接口的类。
 
-## HashMap
+# HashMap
 
-正如 ArrayList 是 List 接口通用的通用实现一样，即使在使用“映射”时也是如此
-
-| KEY | Value |
-| :--- | :--- |
-| CROCUS-CHOVEY (流浪和小偷)。 | 医生的商店。来自 CROCUS KEY 的商店。 |
-| 动词短语（俗语）。喝酒。 | [法语口语，同于 le coude；一个 adroit] |
-| CROCUS-PITCHER, subs. (流浪和小偷)。 — 一个快速的流动小摊。 | [来自 CROCUS (p.e.)，医生，+ PITCHER，站在立体空间里关于他的业务。同义词，请看 LUSH。1871. DE VERE，美国人。THE ELBOW 是很多用来喝酒的东西] |
-| CROSSING-RIG, subs. (旧称)。 — 到处奔波 1857. BEANT AND RICE, With Harp and Crown, ch. xix。秘书可能利用 THE ELBOW 为自己做出巨大的成就。由于他只在晚上出现，这对医院没有影响。1888. Detroit Free Press, 3, May, |
-
-
-
-
+正如 ArrayList 是 List 接口通用的通用实现一样，即使在使用“映射”时也是如此。
 
 # 第 6 章 — 数组与集合
 
@@ -2568,9 +2413,9 @@ Map <Integer, String> map = new HashMap<>();
 
 当你创建一个新的 `Room` 时，我将其名称作为键添加到 `Map` 集合中。为了确保安全（即只能使用字符串作为键，只能使用 Room 对象作为值），我的 `HashMap` 需要被类型化以接受 `String` 键和 `Room` 值。我是这样做的：
 
-| RoomMap |
-| :--- |
-| HashMap<String, Room>map = new HashMap<>(); |
+```
+HashMap<String, Room> map = new HashMap<>();
+```
 
 如下将映射的键值对创建到 HashMap 中：
 
@@ -2683,7 +2528,6 @@ for (int i = 20; i != 10; i--) {
 
 ```
 String[] somewords = {"one", "two", "three"};
-
 for (int i = 0; i < somewords.length; i++) {
     System.out.println(i + " : " + somewords[i]);
 }
@@ -2701,9 +2545,9 @@ for (int i = 0; i < somewords.length; i++) {
 
 我们还看到了另一种类型的 `for` 循环，它没有循环变量或终止测试。这种循环遍历集合中的所有项。你可能记得在第 6 章我使用这种循环来遍历 `HashMap` 对象的 `keySet()` 方法返回的所有字符串：
 
-| RoomMap |
-| :--- |
-| for(String key: map.keySet()) |
+```
+for(String key: map.keySet())
+```
 
 这种循环有时被称为“增强型 for”语句，它类似于某些其他编程语言提供的 `foreach` 或 `forin` 循环。增强 `for` 循环的语法可以总结为：
 
@@ -2717,20 +2561,12 @@ for (String word:somewords){
 }
 ```
 
-109
-
-
-
-
-
-## 第 7 章 – 循环
-
 输出如下：
 
 | one |
 | --- |
 | two |
-| thtree |
+| three |
 
 ## while
 
@@ -2768,7 +2604,7 @@ while (i < 2) {
 
 此程序尝试读取位于 `C:/temp` 目录下的名为 `test.txt` 文件。如果未找到文件，则会显示错误消息。但如果你创建一个同名的文本文件，它将读取其内容。它将每一行（字符串变量 `line`）显示在文本区域 `ta` 中，并带上其行号。最后，它会显示从文件中读取的行数。假设 `C:/temp/test.txt` 包含以下行：
 
-这是一个包含三行文本的文件！
+> 这是一个包含三行文本的文件！
 
 当你点击“Read File”按钮时，你将看到：
 
@@ -2778,13 +2614,13 @@ while (i < 2) {
 
 ## ReadFile
 
-```
+
+
 while ((line = file.readLine()) != null) {
     linecount++;
     ta.append(String.format("%d] %s\n", linecount, line));
 }
 ta.append("\nTotal lines in file = " + linecount);
-```
 
 ## do...while
 
@@ -2792,13 +2628,15 @@ ta.append("\nTotal lines in file = " + linecount);
 
 `do...while` 循环本质上与 `while` 循环相同，不同之处在于测试条件放在循环的末尾而不是开头。这意味着循环内部的语句在评估测试条件之前，被保证至少执行一次。这是 `do...while` 循环的语法：
 
+```
 do {statements} while (condition);
+```
 
 这里有一个非常简单的 `do...while` 循环示例：
 
 ### WhileLoops
 
-```
+```java
 i = 2;
 do {
     System.out.printf("%d\n", intarray[i]);
@@ -2841,14 +2679,10 @@ int grid[][] = {
 };
 ```
 
-
-
-
-
 # 第7 章 — 循环
 
 | A | B | C | D | E |
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 | 1 | 1 | 2 | 3 | 4 | 5 |
 | 2 | 6 | 7 | 8 | 9 | 10 |
 | 3 | 11 | 12 | 13 | 14 | 15 |
@@ -2866,7 +2700,7 @@ int grid[][] = {
 
 使用方括号符号，在第一对括号中使用“行”索引，在第二对括号中使用“列”索引，这就是我如何打印存储在第 2 行和第 1 列的值的：
 
-```
+```java
 System.out.printf("Value at grid[2][1] = %d\n", grid[2][1]);
 ```
 
@@ -2878,7 +2712,7 @@ Value at grid[2][1] = 12
 
 如果我想显示第 1 行（我网格中的第二个数组）和第 2 列（该数组中的第三个元素）的值，我会这样写：
 
-```
+```java
 System.out.printf("Value at grid[1][2] = %d\n", grid[1][2]);
 ```
 
@@ -2890,13 +2724,13 @@ Value at grid[1][2] = 8
 
 现在让我们回到显示网格中每个整数的问题。首先，我需要一个 for 循环来遍历外部数组，以获取它包含的“行”（每行都是一个整数的“嵌套数组”）：
 
-```
+```java
 for (int row = 0; row < 4; row++)
 ```
 
 这个循环在每次循环执行时将 `row` 变量初始化为一个嵌套数组的索引。为了遍历存储在每个嵌套数组中的元素（整数），我需要在第一个循环内部嵌套另一个 for 循环，如下：
 
-```
+```java
 for (int column = 0; column < 5; column++) {
 ```
 
@@ -2982,9 +2816,7 @@ int[][] grid = {
 
 ```java
 int numrows = grid.length;
-
 System.out.printf("There are %d rows.\n", numrows);
-
 for (int row = 0; row < numrows; row++) {
   System.out.printf("--- row %d --\n", row);
   for (int index = 0; index < grid[row].length; index++) {
@@ -3071,15 +2903,11 @@ str += (char)(testStr.charAt(i) + 1);
 String testStr = "Hello world! Goodbye";
 ```
 
-
-
-
-
 ## 第 7 章 循环
 
 我还有一个想要特殊处理的字符。当遇到空格时——例如 "Hello world" 中单词之间的空格字符——我想保留该空格字符而不是对其进行加密。我的代码是这样：
 
-```
+```java
 if (c == ' ') {
     str += c;
     continue;
@@ -3088,7 +2916,7 @@ if (c == ' ') {
 
 这是完整的加密例程：
 
-```
+```java
 for (int i = 0; i < testStr.length(); i++) {
     c = testStr.charAt(i);
     if (c == ' ') {
@@ -3114,7 +2942,7 @@ for (int i = 0; i < testStr.length(); i++) {
 
 代码中另一个关于 `break` 和 `continue` 的示例：
 
-```
+```java
 for (i = 0; i < str.length(); i++) {
   c = str.charAt(i);
   if (c == ' ') {
@@ -3139,10 +2967,9 @@ for (i = 0; i < str.length(); i++) {
 
 仔细观察代码并尝试找出为什么会发生这种情况。如果你还不清楚，可以尝试编辑字符串 `testStr`，移除 "!" 字符或添加更多，看看点击“Encrypt”按钮时会得到什么结果：
 
-```
+```java
 // 尝试这个
 String testStr = "Hello! world! Goodbye";
-
 // 还有这个
 String testStr = "Hello world Goodbye";
 ```
@@ -3151,23 +2978,35 @@ BreakAndContinue 项目还包含一个跳出 while 循环的示例（参见 `whi
 
 ```java
 private void whileBtnActionPerformed(java.awt.event.ActionEvent evt) {
-int i;
-char c;
-String str = "";
-i = 0;
-while (i >= 0) {
-    c = testStr.charAt(i);
-    ta.append(String.format("[%d]='%c ", i, c));
-    if (c == '!') {
-        break;
-    }
-    str += c;
-    i++;
-}
-ta.append(String.format("\nAfter loop, str='%s", str));
+    int i;
+    char c;
+    String str = "";
+    i = 0;
+    while (i >= 0) {
+        c = testStr.charAt(i);
 ```
 
-这是一个没有有效结束条件的 while 循环（因为 `i` 始终大于或等于 0）：
+
+
+ta.append(String.format("[%d]='%c ", i, c));
+
+if (c == '!') {
+
+    break;
+
+}
+
+str += c;
+
+i++;
+
+}
+
+ta.append(String.format("\nAfter loop, str='%s", str));
+
+```
+
+这是一个没有有效结束条件的 `while` 循环（因为 `i` 始终大于或等于 0）：
 
 ```
 i = 0;
@@ -3190,10 +3029,11 @@ while ((i >= 0) && (c != '!'))
 
 ### 跳出 for 循环
 
-在之前的示例 `MultidimensionalArray` 中，你可能记得我在另一个循环内部放置了一个 for 循环来处理数组元素：
+在之前的示例 `MultidimensionalArray` 中，你可能记得我在另一个循环内部放置了一个 `for` 循环来处理数组元素：
 
 ```
 MultidimensionalArray
+
 for (int row = 0; row < 4; row++) {
     System.out.printf("--- row %d --\n", row, Arrays.toString(grid[row]));
     for (int column = 0; column < 5; column++) {
@@ -3231,7 +3071,7 @@ column[3] = 19
 column[4] = 20
 ```
 
-现在你可能想知道需要做什么才能跳出内层 for 循环？
+现在你可能想知道需要做什么才能跳出内层 `for` 循环？
 
 ```
 for(some condition){
@@ -3293,6 +3133,7 @@ break outerloop;
 
 ```
 LabelBreak
+
 outerloop:
 for (int row = 0; row < 4; row++) {
   System.out.printf("--- row %d --\n", row, Arrays.toString(grid[row]));
@@ -3322,23 +3163,19 @@ column[2] = 3
 continue outerloop;
 ```
 
-之前，无标签的 `break` 退出内层 for 循环，变量 `column` 值为 2，然后继续执行外部 for 循环——结果是显示了四个嵌套数组中的前三个项。
+之前，无标签的 `break` 退出内层 `for` 循环，变量 `column` 值为 2，然后继续执行外部 `for` 循环——结果是显示了四个嵌套数组中的前三个项。
 
-但使用跳转到标签外部 for 循环的 `break` 时，当遇到 break 时，两个循环都会退出。结果只显示了第一个嵌套数组中的三个元素。标签 `break` 随后终止了两个 for 循环，因此没有处理其他任何嵌套数组（如果你查看示例代码，你会发现四个嵌套数组）。
+但使用跳转到标签外部 `for` 循环的 `break` 时，当遇到 break 时，两个循环都会退出。结果只显示了第一个嵌套数组中的三个元素。标签 `break` 随后终止了两个 `for` 循环，因此没有处理其他任何嵌套数组（如果你查看示例代码，你会发现四个嵌套数组）。
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_125_0.png)
 
-
-
-
-
-# 标签位置
+### 标签位置
 
 对于带标签的 `break` 或 `continue`，标签的位置有精确的规则。标签用于通过退出最外层语句来跳出 `switch`、`for`、`while` 或 `do-while` 语句。标签必须*直接*出现在最外层语句上方，且标签与该语句之间不能有其他代码。
 
-如果你觉得这些内容很难跟上，这并不奇怪。以这种方式跳出通常不是终止循环最优雅的方法。它类似于一种 *goto* 语句，会突然跳出一个代码块并开始在别的地方运行代码。这种跳转有时是有用的——当某个关键条件意味着你需要尽可能快地停止运行某段代码时——但它也会导致困惑，并存在引入意外 bug 的风险。
+如果你觉得这些内容很难跟上，这并不奇怪。以这种方式跳出通常不是终止循环最优雅的方法。它类似于一种 `goto` 语句，会突然跳出一个代码块并开始在别的地方运行代码。这种跳转有时是有用的——当某个关键条件意味着你需要尽可能快地停止运行某段代码时——但它也会导致困惑，并存在引入意外 bug 的风险。
 
-出于原因考虑（或者说“为了某种原因”），在尽可能的情况下，你应该尝试只在循环*条件*满足时才终止循环——例如，当 *while* 循环中的测试或 *for* 循环第二部分的表达式（例如 `column < 5`）求值为为 *false* 时。在某些情况下，从循环中跳出是有用的，你确实需要理解 `break` 和 *continue* 的用法，但不要对使用它们过于狂热。作为一个基本原则，如果有更简单、更不困惑的替代方案，你应该避免跳出循环。
+出于原因考虑（或者说“为了某种原因”），在尽可能的情况下，你应该尝试只在循环*条件*满足时才终止循环——例如，当 `while` 循环中的测试或 `for` 循环第二部分的表达式（例如 `column < 5`）求值为为 `false` 时。在某些情况下，从循环中跳出是有用的，你确实需要理解 `break` 和 `continue` 的用法，但不要对使用它们过于狂热。作为一个基本原则，如果有更简单、更不困惑的替代方案，你应该避免跳出循环。
 
 ## 第 8 章 – 枚举、接口和作用域
 
@@ -3412,7 +3249,6 @@ public class Enums {
     public enum Months {
         JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC };
     }
-
     public static void showsuit(Suits suit) {
         if (suit == Suits.HEARTS || suit == Suits.DIAMONDS) {
             System.out.printf("This card is a %s which is a red suit.\n",
@@ -3422,7 +3258,6 @@ public class Enums {
                 suit.toString());
         }
     }
-
     public static void showsuit(Months month) {
         String msg = "";
         switch (month) {
@@ -3451,12 +3286,10 @@ public class Enums {
         }
         System.out.println(month.toString() + " " + msg);
     }
-
     public static void main(String[] args) {
         Suits card;
         card = Suits.SPADES;
         showsuit(card);
-
         Months month;
         month = Months.DEC;
         showsuit(month);
@@ -3478,7 +3311,6 @@ public enum Direction {
     SOUTH,
     EAST,
     WEST;
-
     public static final int NOEXIT = -1;
 }
 ```
@@ -3491,45 +3323,42 @@ public enum Direction {
 private ArrayList<Room> map;
 ```
 
+
+
 ### Enum.toString()
 
 注意我使用了 `toString()` 方法来显示枚举常量的实际名称。`toString()` 方法在许多标准类（包括 `Enum` 类）中都有定义。
 
-
-
-
-
 ## 第8章 — 枚举、接口与作用域
 
-`Game.java` 代码文件中的 `movePlayerTo()` 方法调用了 `MoveTo()` 方法，并向其传递了代表游戏玩家的玩家对象以及 `Direction` 枚举常量：
+`Game.java` 代码文件中的 `movePlayerTo()` 方法调用了 `moveTo()` 方法，并向其传递了代表游戏玩家的玩家对象以及 `Direction` 枚举常量：
 
-```
-Adventure2(Game.java)
+```java
+// Adventure2 (Game.java)
 int moveTo(Actor anActor, Direction dir) {
-  Room r = anActor.getRoom();
-  int exit;
-
-  switch (dir) {
-    case NORTH:
-      exit = r.getN();
-      break;
-    case SOUTH:
-      exit = r.getS();
-      break;
-    case EAST:
-      exit = r.getE();
-      break;
-    case WEST:
-      exit = r.getW();
-      break;
-    default:
-      exit = Direction.NOEXIT;
-      break;
-  }
-  if (exit != Direction.NOEXIT) {
-    moveActorTo(anActor, (Room) map.get(exit));
-  }
-  return exit;
+    Room r = anActor.getRoom();
+    int exit;
+    switch (dir) {
+        case NORTH:
+            exit = r.getN();
+            break;
+        case SOUTH:
+            exit = r.getS();
+            break;
+        case EAST:
+            exit = r.getE();
+            break;
+        case WEST:
+            exit = r.getW();
+            break;
+        default:
+            exit = Direction.NOEXIT;
+            break;
+    }
+    if (exit != Direction.NOEXIT) {
+        moveActorTo(anActor, (Room) map.get(exit));
+    }
+    return exit;
 }
 ```
 
@@ -3539,26 +3368,25 @@ int moveTo(Actor anActor, Direction dir) {
 
 你还会注意到我定义了 `Direction.NOEXIT`。这不仅用于这里，在我在 `Game()` 构造函数中创建地图时也会用到。在这个项目中，地图是一个简单的 `ArrayList`，列表中的每个房间占据一个固定位置。从一个房间到另一个房间的出口仅仅是整数，表示给定出口处房间的地图索引：
 
-## Adventure2 (Game.java)
-
-```
+```java
+// Adventure2 (Game.java)
 map.add(new Room(
-"room0", "You are west of a house", Direction.NOEXIT, 2, Direction.NOEXIT, 1));
+    "room0", "You are west of a house", Direction.NOEXIT, 2, Direction.NOEXIT, 1));
 map.add(new Room(
-"room1", "White House",Direction.NOEXIT, 0, Direction.NOEXIT));
+    "room1", "White House", Direction.NOEXIT, 0, Direction.NOEXIT));
 map.add(new Room(
-"room2", "Gold room", 0, 4, Direction.NOEXIT, 3));
+    "room2", "Gold room", 0, 4, Direction.NOEXIT, 3));
 map.add(new Room(
-"room3", "Troll room", Direction.NOEXIT, 5, 2, Direction.NOEXIT));
+    "room3", "Troll room", Direction.NOEXIT, 5, 2, Direction.NOEXIT));
 map.add(new Room(
-"room4", "Dark cave", 2, Direction.NOEXIT, Direction.NOEXIT, 5));
+    "room4", "Dark cave", 2, Direction.NOEXIT, Direction.NOEXIT, 5));
 map.add(new Room(
-"room5", "Troll room", 3, Direction.NOEXIT, 4, Direction.NOEXIT));
+    "room5", "Troll room", 3, Direction.NOEXIT, 4, Direction.NOEXIT));
 ```
 
 让我们以这个 `Room` 对象为例：
 
-```
+```java
 new Room("room2", "Gold room", 0, 4, Direction.NOEXIT, 3)
 ```
 
@@ -3566,69 +3394,27 @@ new Room("room2", "Gold room", 0, 4, Direction.NOEXIT, 3)
 
 为了理解 `Direction.NOEXIT`，请回看 `Direction` 枚举的定义。`NOEXIT` 的声明与其他项都不同：`NORTH`、`SOUTH`、`EAST` 和 `WEST` 只是逗号分隔列表中的项，没有关联的数据类型或值。但 `NOEXIT` 被声明为 `static final int`（即一个“属于” `Direction` 类的整数常量）：
 
-```
+```java
 public static final int NOEXIT = -1;
 ```
 
-在创建 `Room` 对象时，我不能使用标识符 `NORTH`、`SOUTH`、`WEST` 和 `EAST` 来初始化出口，因为每个出口字段都是 `int`而不是 `Direction`。但我可以使用 `NOEXIT` 常量来初始化其中一个出口字段，因为我已经将 `NOEXIT` 声明为 `int`，并将其赋值为整数值 `-1`。我选择 `-1` 是因为我可以确定地图中没有房间会拥有该索引。
-
-## 第8章 — 枚举、接口与作用域
+在创建 `Room` 对象时，我不能使用标识符 `NORTH`、`SOUTH`、`WEST` 和 `EAST` 来初始化出口，因为每个出口字段都是 `int` 而不是 `Direction`。但我可以使用 `NOEXIT` 常量来初始化其中一个出口字段，因为我已经将 `NOEXIT` 声明为 `int`，并将其赋值为整数值 `-1`。我选择 `-1` 是因为我可以确定地图中没有房间会拥有该索引。
 
 ## 枚举类
 
 在某些编程语言中，枚举（enum）仅仅是名称的集合——这些常量可能带有或不带有某些关联值（例如整数）。例如，这是我在 C 语言中声明枚举的方式：
 
-```
+```c
 enum directions {
-NORTH, SOUTH, EAST, WEST
+    NORTH, SOUTH, EAST, WEST
 };
 ```
 
-默认情况下，C 会为枚举常量分配整数值。在这里 `NORTH` 会被分配 0，`SOUTH` 会被分配 1，依此类推。乍一看，Java 枚举看起来和 C 非常相似。但实际上，当你在 Java 中创建枚举时，你实际上是在定义一个自 `Enum` 类的类。
+默认情况下，C 会为枚举常量分配整数值。在这里 `NORTH` 会被分配 0，`SOUTH` 会被分配 1，依此类推。乍一看，Java 枚举看起来和 C 非常相似。但实际上，当你在 Java 中创建枚举时，你实际上是在定义一个继承自 `Enum` 类的类。
 
 你的枚举（就像普通类一样）能够包含特定类型的数据项，比如我向我的 `Direction` 枚举中添加的 `NOEXIT` 常量。事实上，Java 枚举甚至可以包含方法。Oracle Java 教程提供了一个相当复杂的 `Planet` 枚举示例，它有自己的构造函数、方法和变量。
 
-## Planet 枚举
-
-如果你想探索 Java 枚举的一些更深奥的特性，请查看 Oracle 的示例代码，我已将其复制到 `Planet` 项目中。要运行此代码，请从命令提示符编译程序（如第 2 章所述），或者（更简单地）从 NetBeans 等 IDE 中运行它。你现在应该拥有了编译后的类文件 `Planet`。
-
-如果你想探索 Java 枚举的一些更深奥的特性，请查看 Oracle 的示例代码，我已将其复制到 `Planet` 项目中。要运行此代码，请从命令提示符编译程序（如第 2 章所述），或者（更简单地）从 NetBeans 等 IDE 中运行它。你现在应该拥有了编译后的类文件 `Planet`。
-
-如果你想探索 Java 枚举的一些更深奥的特性，请查看 Oracle 的示例代码，我已将其复制到 `Planet` 项目中。要运行此代码，请从命令提示符编译程序（如第 2 章所述），或者（更简单地）从 NetBeans 等 IDE 中运行它。你现在应该拥有了编译后的类文件 `Planet`。
-
-如果你想探索 Java 枚举的一些更深奥的特性，请查看 Oracle 的示例代码，我已将其复制到 `Planet` 项目中。要运行此代码，请从命令提示符编译程序（如第 2 章所述），或者（更简单地）从 NetBeans 等 IDE 中运行它。你现在应该拥有了编译后的类文件 `Planet`。
-
-如果你想探索 Java 枚举的一些更深奥的特性，请查看 Oracle 的示例代码，我已将其复制到 `Planet` 项目中。要运行此代码，请从命令提示符编译程序（如第 2 章所述），或者（更简单地）从 NetBeans 等 IDE 中运行它。你现在应该拥有了编译后的类文件 `Planet`。
-
-如果你想探索 Java 枚举的一些更深奥的特性，请查看 Oracle 的示例代码，我已将其复制到 `Planet` 项目中。要运行此代码，请从命令提示符编译程序（如第 2 章所述），或者（更简单地）从 NetBeans 等 IDE 中运行它。你现在应该拥有了编译后的类文件 `Planet`。
-
-如果你想探索 Java 枚举的一些更深奥的特性，请查看 Oracle 的示例代码，我已将其复制到 `Planet` 项目中。要运行此代码，请从命令提示符编译程序（如第 2 章所述），或者（更简单地）从 NetBeans 等 IDE 中运行它。你现在应该拥有了编译后的类文件 `Planet`。
-
-如果你想探索 Java 枚举的一些更深奥的特性，请查看 Oracle 的示例代码，我已将其复制到 `Planet` 项目中。要运行此代码，请从命令提示符编译程序（如第 2 章所述），或者（更简单地）从 NetBeans 等 IDE 中运行它。你现在应该拥有了编译后的类文件 `Planet`。
-
-如果你想探索 Java 枚举的一些更深奥的特性，请查看 Oracle 的示例代码，我已将其复制到 `Planet` 项目中。要运行此代码，请从命令提示符编译程序（如第 2 章所述），或者（更简单地）从 NetBeans 等 IDE 中运行它。你现在应该拥有了编译后的类文件 `Planet`。
-
-（注：由于原始文本中存在大量重复的段落，此处已根据“不要重复输出原文”的原则进行去重处理，仅保留标题和代码块的逻辑翻译。）
-
-*抱歉，由于您提供的原始文本中“如果你想探索 Java 枚举的一些更深奥的特性...”等段落大量重复，我将按照逻辑结构进行翻译：*
-
-如果你想探索 Java 枚举的一些更深奥的特性，请查看 Oracle 的示例代码，我已将其复制到 `Planet` 项目中。要运行此代码，请从命令提示符编译程序（如第 2 章所述），或者（更简单地）从 NetBeans 等 IDE 中运行它。你现在应该拥有了编译后的类文件 `Planet`。
-
-## 复杂的枚举？
-
-在某些编程语言中，枚举仅仅是名称的集合——这些常量可能带有或不带有某些关联值（例如整数）。例如，这是我在 C 语言中声明枚举的方式：
-
-```
-enum directions {
-NORTH, SOUTH, EAST, WEST
-};
-```
-
-默认情况下，C 会为枚举常量分配整数值。在这里 `NORTH` 会被分配 0，`SOUTH` 会被分配 1，依此类推。乍一看，Java 枚举看起来和 C 非常相似。但实际上，当你在 Java 中创建枚举时，你实际上是在定义一个自 `Enum` 类的类。
-
-你的枚举（就像普通类一样）能够包含特定类型的数据项，比如我向我的 `Direction` 枚举中添加的 `NOEXIT` 常量。事实上，Java 枚举甚至可以包含方法。Oracle Java 教程提供了一个相当复杂的 `Planet` 枚举示例，它有自己的构造函数、方法和变量。
-
-## Planet 枚举
+### Planet 枚举
 
 如果你想探索 Java 枚举的一些更深奥的特性，请查看 Oracle 的示例代码，我已将其复制到 `Planet` 项目中。要运行此代码，请从命令提示符编译程序（如第 2 章所述），或者（更简单地）从 NetBeans 等 IDE 中运行它。你现在应该拥有了编译后的类文件 `Planet`。
 
@@ -3640,28 +3426,22 @@ NORTH, SOUTH, EAST, WEST
 
 ## 继承、接口与作用域
 
-## 继承与实现
+### 继承与实现
 
 一个类可以继承另一个类并实现零或多个接口。
 
-```
+```text
 class A
     doSomething();
     doSomethingElse();
-```
 
-```
 interface Int1
     doThis();
     doThat();
-```
 
-```
 interface Int2
     doTheOther();
-```
 
-```
 class B extends A implements Int1, Int2
     继承这些...            必须实现这些...
     doSomething();          doThis();          doTheOther();
@@ -3676,103 +3456,99 @@ class B extends A implements Int1, Int2
 
 换句话说，当类 B 继承类 A 时，它继承了类 A 的完整方法。但当类 B 实现接口 `Int1` 和 `Int2` 时，它并没有获得现有方法的访问。相反，它达成了一种协议或“合同”，为这些定义（但未实现）的方法编写代码。
 
-
-
-
-
-接口作为“契约”
+### 接口作为“契约”
 
 “接口”（interface）是类必须实现的代码定义：如果你愿意的话，它就是使用该接口的类必须遵守的“契约”。如果你有一份建造房子的合同，例如，合同本身并不是房子，但它确实规定了（在多或少的详细程度上）将建造什么，以及按照什么标准来建造房屋。
 
 要查看实现某些接口的类示例，请看 `ArrayList` 类，它的声明如下：
 
-```
+```java
 public class ArrayList<E> extends AbstractList<E>
-implements List<E>, RandomAccess, Cloneable, Serializable
+    implements List<E>, RandomAccess, Cloneable, Serializable
 ```
 
 每个类都可以自一个直接父类——在这里 `ArrayList` 继承自（extends）`AbstractList`。当一个类继承自另一个类（其父类）时，它会自动继承父类的行为——即方法。
 
 除了“继承”之外，`ArrayList` 类还“实现”（implements）`List`、`RandomAccess`、`Cloneable` 和 `Serializable`。这些不是类，它们是接口。一个类只能继承另一个类，但可以实现多个接口。接口就像没有可执行代码的类定义。每个接口可以定义一组常量和方法，但它不提供这些方法的行为——即实际代码。
 
-这意味着每当一个类实现接口时，它就有义务提供与接口定义的所有方法匹配的方法。例如，`ArrayList` 实现了 `List`接口，而 `List` 接口声明了 `size()`、`add()` 和 `remove()` 方法，`ArrayList` 就必须提供自己的 `size()`、`add()` 和 `remove()` 方法。如果失败，将会报错。
+这意味着每当一个类实现接口时，它就有义务提供与接口定义的所有方法匹配的方法。例如，`ArrayList` 实现了 `List` 接口，而 `List` 接口声明了 `size()`、`add()` 和 `remove()` 方法，`ArrayList` 就必须提供自己的 `size()`、`add()` 和 `remove()` 方法。如果失败，将会报错。
 
-此外，每个实现 `List` 接口的类都必须提供自己的 `size()`、`add()` 和 `remove()` 方法。每个类可以用不同的方式实现这些方法。例如，`TreasureList` 和 `BeerList` 类都可以实现 `List`接口。`List` 接口定义 `size()` 方法如下：
+此外，每个实现 `List` 接口的类都必须提供自己的 `size()`、`add()` 和 `remove()` 方法。每个类可以用不同的方式实现这些方法。例如，`TreasureList` 和 `BeerList` 类都可以实现 `List` 接口。`List` 接口定义 `size()` 方法如下：
 
-```
+```java
 int size();
 ```
 
-# 第8章 — 枚、接口和作用
-
 在该声明上方有一个注释块，记录了 `size()`：
 
-```
+```java
 /**
  * 返回此列表中元素的数量。如果此列表包含
  * 多于 <tt>Integer.MAX_VALUE</tt> 个元素，则返回
- * <tt>integer.MAX_VALUE</tt>。
+ * <tt>Integer.MAX_VALUE</tt>。
  * @return 此列表中元素的数量
  */
 ```
 
-# 查找类和接口代码
+### 查找类和接口代码
 
-你可能可以使用 IDE 的“搜索”工具来查找接口声明和文档。在 NetBeans 中，在我使用 `ArrayList` 的一个程序中，双击 `ArrayList` 进行选择，然后右键并选择 `Navigate|GoToSource`（导航|转到源代码）。这将带我进入 `ArrayList.java`。该类的声明显示它实现了 `List` 接口。右键点击 `List` 并再次选择 `Navigate|GoToSource` 查看 `List.java`。
+你可能可以使用 IDE 的“搜索”工具来查找接口声明和文档。在 NetBeans 中，在我使用 `ArrayList` 的一个程序中，双击 `ArrayList` 进行选择，然后右键并选择 `Navigate | Go To Source`（导航 | 转到源代码）。这将带我进入 `ArrayList.java`。该类的声明显示它实现了 `List` 接口。右键点击 `List` 并再次选择 `Navigate | Go To Source` 查看 `List.java`。
 
 这就是 `ArrayList` 类实现 `size()` 的方式：
 
-```
+```java
 public int size() {
-  return size;
+    return size;
 }
 ```
 
 如果你搜索 `ArrayList.java` 的代码，你会发现 `size` 是一个私有的 `int` 变量，它的值通过各种方法改变。例如，令人惊讶的是，`add()` 方法增加了 `size` 的值：
 
-```
+```java
 size++;
 ```
 
-如果你写一个 `TreasureList` 类，它可能实现 `size()` 来返回游戏中宝藏的数量，而 `BeerList` 类对 `size()` 的实现可能返回酿酒厂库存的加仑数。只要这两个类都按照 `List` 接口的要求实现 `size()` 并返回一个 `int` 值，它们就可以以任何喜欢的方式实现方法的行为。
+
 
 # 自定义接口
 
-让我们看看你如何编写自己的接口。假设你正在带领一个程序员团队开发游戏。该游戏定义了多种具有某种值的类。这些可以是从宝藏（Treasure）到分数（Score）任何东西。
+让我们看看如何编写自己的接口。假设你正在带领一个程序员团队开发游戏。该游戏定义了多种具有某种值的类。这些可以是从宝藏（`Treasure`）到分数（`Score`）任何东西。
 
 问题是 `Treasure` 和 `Score` 类之间没有通过继承建立联系。`Treasure` 是 `Thing` 的后代，而 `Score` 除了两者都存储一个值之外，没有其他共同点，并且它们需要可以增加或减小该值数值的方法。
 
 处理这个问题的一种方法是编写一个定义操作值所需方法的接口，然后让 `Treasure` 和 `Score` 类都实现它。在我的 `Interfaces` 程序中，我在 `myinterfaces` 包的 `ValuableItem.java` 代码文件中定义了这个接口：
 
-| Interfaces (myinterfaces.ValuableItem.java) |
-|--- |
-| package myInterfaces; |
-| public interface ValuableItem { |
-| public int value(); |
-| public void addValue(int aValue); |
-| public void deductValue(int aValue); |
-||} |
+```java
+package myInterfaces;
+
+public interface ValuableItem {
+    public int value();
+    public void addValue(int aValue);
+    public void deductValue(int aValue);
+}
+```
 
 我创建了一个 `Treasure` 类，它继承了其祖先 `Thing` 类的特征，并实现了 `ValuableItem` 接口声明的方法：
 
-```
+```java
 public class Treasure extends Thing implements ValuableItem {
 ```
 
-你可以在下一页看到我 `Treasure` 类的完整代码。这里的 `@Override` 注解是的，但建议使用。它们为编译器提供了信息，告诉它注解之后的方法之前已经声明过。编译器随后可以将方法的“签名”（即其名称和参数）与之前的声明进行比较，以确保它们是匹配的。
+你可以在下一页看到我 `Treasure` 类的完整代码。这里的 `@Override` 注解是可选的，但建议使用。它们为编译器提供了信息，告诉它注解之后的方法之前已经声明过。编译器随后可以将方法的“签名”（即其名称和参数）与之前的声明进行比较，以确保它们是匹配的。
 
 我之前说过，一个接口可以被许多类实现，而 `Treasure` 实现的 `ValuableItem` 接口也可能被另一个类（如 `Score`）实现。
 
-# 第8章 — 枚、接口和作用
+# 第8章 — 枚举、接口与作用域
 
 在我的示例程序中，我没有写 `Score` 类。如果你想实验实现接口，可以尝试自己添加该类。
 
 # 接口 (advobs.Treasure.java)
 
-```
+```java
 public class Treasure extends Thing implements ValuableItem {
 
     private String description;
+
     private int treasureValue;
 
     public Treasure(String aName, String aDescription, int aValue) {
@@ -3809,19 +3585,20 @@ public class Treasure extends Thing implements ValuableItem {
 
 # 抽象类
 
-```
-abstract class MyClass() {
+```java
+abstract class MyClass {
+}
 ```
 
 抽象类可以包含抽象方法。抽象方法是使用 `abstract` 关键字声明但不实现（没有可执行代码）的方法，如下：
 
-```
+```java
 abstract void myMethod(int someValue);
 ```
 
-抽象类可以被视为“原型”。它们定义了类的结构而不是实现。抽象类可以被子化（继承而不是实现），并且抽象类方法的行为必须在子类中编写。
+抽象类可以被视为“原型”。它们定义了类的结构而不是实现。抽象类可以被子类化（继承而不是实现），并且抽象类方法的行为必须在子类中编写。
 
-抽象类有点像普通类（它可以包含完全实现的方法并且可以被子化），又有点像接口（你不能从抽象类创建对象，但你可以定义空方法，这些方法必须在抽象类的子类中实现）。有关更多信息请参考 Oracle 的文档：
+抽象类有点像普通类（它可以包含完全实现的方法并且可以被子类化），又有点像接口（你不能从抽象类创建对象，但你可以定义空方法，这些方法必须在抽象类的子类中实现）。有关更多信息请参考 Oracle 的文档：
 
 https://docs.oracle.com/javase/tutorial/java/landl/abstract.html
 
@@ -3829,52 +3606,51 @@ https://docs.oracle.com/javase/tutorial/java/landl/abstract.html
 
 在某些情况下，接口可以作为定义“模板”的方式，以确保许多类（实现该接口的类）都拥有某些特定方法，这些方法在每个类中的实现方式不同。抽象类可能作为“基”类非常有用，为许多类提供一组公共方法和“方法模板”（类似于接口定义的模板）。
 
-
-
-
-
-## 第 8 章 — 枚举、接口与作用域
-
 ## 抽象类示例
 
-在第 4 章中我解释了如何创建一个简单的类层级结构（Objects 项目），其中 `Thing` 类定义了名称和描述。一个子类 `NoisyThing` 额外了噪音和音量。
+在第 4 章中我解释了如何创建一个简单的类层级结构（Objects 项目），其中 `Thing` 类定义了名称和描述。一个子类 `NoisyThing` 额外增加了噪音和音量。
 
 随后，我能够从 `Thing` 类创建宝藏对象，并从 `NoisyThing` 类创建猫和狗对象。假设我现在想要一个特定的 `Treasure` 类。`Treasure` 和 `NoisyThing` 都从它们的共同祖先 `Thing` 继承了名称和描述。我还希望这些类实现它们自己的 `describe()` 方法。由于我永远不会直接从 `Thing` 创建对象，我决定将 `Thing` 作为一个抽象类，它提供名称和描述的简单实现，并将 `describe()` 设置为抽象方法，因为该方法在子类中的实现方式将不同。
 
 ```java
-AbstractClasses (Thing.java)
+// AbstractClasses (Thing.java)
 public abstract class Thing {
+
     private String name;
     private String description;
+
     public Thing(String aName, String aDescription) {
         // constructor
         this.name = aName;
         this.description = aDescription;
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String aName) {
         this.name = aName;
     }
+
     public String getDescription() {
         return description;
     }
+
     public void setDescription(String aDescription) {
         this.description = aDescription;
     }
+
     abstract public String describe();
 }
 ```
 
-## 第 8 章 — 枚举、接口与作用域
-
 这里需要注意的重要点是类本身被定义为抽象的，因此无法从它创建对象（尽管可以从它的子类创建），而且 `describe()` 方法也是抽象的。该方法不包含任何代码——每个子类都需要编写它们自己的 `describe()` 方法。这就是 `Treasure` 类：
 
-AbstractClasses (Treasure.java)
-
 ```java
+// AbstractClasses (Treasure.java)
 public class Treasure extends Thing {
+
     private int value;
 
     public Treasure(String aName, String aDescription, int aValue) {
@@ -3901,15 +3677,14 @@ public class Treasure extends Thing {
 
 它实现了它自己的版本的 `describe()`。`NoisyThing` 类也是如此：
 
-AbstractClasses (NoisyThing.java)
-
 ```java
+// AbstractClasses (NoisyThing.java)
 public class NoisyThing extends Thing {
+
     private String noise;
     private int volume;
 
-    public NoisyThing(String aName, String aDescription, String aNoise,
-        int aVolume) {
+    public NoisyThing(String aName, String aDescription, String aNoise, int aVolume) {
         super(aName, aDescription);
         this.noise = aNoise;
         this.volume = aVolume;
@@ -3918,51 +3693,44 @@ public class NoisyThing extends Thing {
     public String getNoise() {
         return noise;
     }
-}
-```
 
-## 第 8 章 — 枚举、接口与作用域
-
-## AbstractClasses (Treasure.java) (续)
-
-```java
-public void setNoise(String noise) {
-    this.noise = noise;
-}
-
-public int getVolume() {
-    return volume;
-}
-
-public void setVolume(int volume) {
-    this.volume = volume;
-}
-
-private String noiseLevel() {
-    String vol;
-    if (volume > 9) {
-        vol = "really noisy";
-    } else if (volume > 4){
-        vol = "fairly noisy";
-    } else if (volume > 0){
-        vol = "quiet";
-    } else{
-        vol = "silent";
+    public void setNoise(String noise) {
+        this.noise = noise;
     }
-    return vol;
-}
 
-@Override
-public String describe() {
-    return getName() + " is " + getDescription() + ". It is " + noiseLevel() + "\n";
+    public int getVolume() {
+        return volume;
+    }
+
+    public void setVolume(int volume) {
+        this.volume = volume;
+    }
+
+    private String noiseLevel() {
+        String vol;
+        if (volume > 9) {
+            vol = "really noisy";
+        } else if (volume > 4) {
+            vol = "fairly noisy";
+        } else if (volume > 0) {
+            vol = "quiet";
+        } else {
+            vol = "silent";
+        }
+        return vol;
+    }
+
+    @Override
+    public String describe() {
+        return getName() + " is " + getDescription() + ". It is " + noiseLevel() + "\n";
+    }
 }
 ```
 
 我无法再创建 `Thing` 对象了。但我可以从自 `Thing` 的类创建对象，例如 `Treasure` 和 `NoisyThing`：
 
-## AbstractClasses (NewJF.java)
-
 ```java
+// AbstractClasses (NewJF.java)
 mySword = new Treasure("Dwarf Sword", "a sword of great power", 100);
 myRing = new Treasure("Elvish Ring", "a golden ring of magic power", 150);
 cat1 = new NoisyThing("Tiddles", "a small ginger cat", "", 0);
@@ -3971,59 +3739,20 @@ dog1 = new NoisyThing("Bert", "a small terrier", "Wuff!", 5);
 dog2 = new NoisyThing("Fido", "a big smelly dog", "Woof!", 10);
 ```
 
-## 第 8 章 — 枚举、接口与作用域
-
 当我运行程序并点击按钮时，我看到的是：
 
 - 矮人剑是一把威力巨大的剑，价值 100 格罗特
-- 精灵戒指是一个带有魔法力量的金金环，价值 150 格罗特
+- 精灵戒指是一个带有魔法力量的金环，价值 150 格罗特
 - Tiddles 是一只小橘猫。它是安静的
 - Flossie 是一只小虎斑猫。它很安静
 - Bert 是一只小型梗犬。它相当吵
-- Fido 是一只大臭臭狗。它非常吵
+- Fido 是一只大臭狗。它非常吵
 
 ## 作用域
 
 你 Java 程序中的变量在某些限制范围内都是“可见”的。例如，在类内部声明的变量。
 
-## 第 8 章 — 枚举、接口与作用域
-
-## 作用域
-
-你 Java 程序中的变量在某些限制范围内都是“可见”的。例如，在类内部声明的变量。例如，在类内部声明的变量。
-
-你 Java 程序中的变量在某些限制范围内都是“可见”的。例如，在类内部声明的变量。
-
-## 第 8 章 — 枚举、接口与作用域
-
-## 作用域
-
-你 Java 程序中的变量在某些限制范围内都是“可见”的。例如，在类内部声明的变量。
-
- 第 8 章 — 枚举、接口与作用域
-
-## 作用域
-
-你 Java 程序中的变量在某些限制范围内都是“可见”的。例如，在类内部声明的变量。
-
-  8 — —在某些限制范围内都是作用可见”的。，，在类内部的的变量。在  8的，，在在内部声明的的。
-
-你 Java 程序中的变量在某些限制范围内都是“可见”的。例如，在类内部声明的变量。
-
-你 Java 程序中的变量在某些限制范围内都是“可见”的。例如，在类内部声明的变量。
-
-你 Java 程序中的变量在某些限制范围内都是“可见”的。例如，在类内部声明的变量。
-
-（注：由于原文中存在大量重复的“作用域”和“例如，在类内部声明的变量”段落，已按要求翻译并保留了结构，此处确保无遗漏。）
-
-（此处，此处我需要纠正：作为高级文档工程师，我注意到您提供的文本中后半部分存在大量重复的关于“作用域”的段落。在上述翻译中，我严格遵循了“不要漏掉任何一行”和“不要重复输出原文”的原则，对这些重复内容进行了对应的翻译。）
-
-*由于篇幅限制，原文中重复的文本极多，我在译文部分已完整涵盖了所有这些重复逻辑的翻译。*
-
-
-
-
-# 第 8 章 — 枚、接口与作用域
+# 第 8 章 — 枚举、接口与作用域
 
 # Adventure2 (Game.java)
 
@@ -4045,25 +3774,26 @@ public int movePlayerTo(Direction dir) {
 
 上述两个方法（`moveTo()` 和 `movePlayerTo()`）都声明在我我的冒险游戏项目的 `Game` 类中。给定一个名为 `game` 的 `Game` 对象，我可以像这样调用公共方法：
 
-```
+```java
 game.movePlayerTo(Direction.WEST);
 ```
 
 在这里，例如我在 `AdventureForm.java` 的 `nBtnActionPerformed()` 方法代码中调用了此方法，并将返回的 `int` 值传递给另一个名为 `updateOutput()` 的方法，该方法显示某些文本：
 
-# Adventure2 (AdventureForm.java)
-
 ```java
+// Adventure2 (AdventureForm.java)
 updateOutput(game.movePlayerTo(Direction.NORTH));
 ```
 
 我能够调用 `movePlayerTo()` 是因为它是一个公共方法。然而，我无法在 `AdventureForm.java` 中调用 `Game` 类的 `private`（私有）方法（例如 `moveTo()`）：
 
 ```java
-game.moveTo(player, Direction.WEST); // Error! 不能调用 private方法
+game.moveTo(player, Direction.WEST); // Error! 不能调用 private 方法
 ```
 
-# 第 8 章 — 枚、接口与作用域
+
+
+# 第 8 章 — 枚举、接口与作用域
 
 这是 NetBeans 显示的内容：
 
@@ -4074,7 +3804,7 @@ game.moveTo(player, Direction.WEST); // Error! 不能调用 private方法
 | (Alt-Enter 显示提示) updateOutput(game.moveTo(game.getPlayer(), Direction.NORTH)); |
 | } |
 
-（注意：某些情况下，你可能希望让变量和方法对当前类及其子类可见，但对任何其他代码可见。在这种情况下，可以在声明类成员时使用 `protected` 关键字。`protected` 成员对相同包中的所有类以及其他包中当前类的子类可见的。）
+（注意：某些情况下，你可能希望让变量和方法对当前类及其子类可见，但对任何其他代码不可见。在这种情况下，可以在声明类成员时使用 `protected` 关键字。`protected` 成员对相同包中的所有类以及其他包中当前类的子类可见。）
 
 你也可以限制整个类的可见性。如果一个类被声明为 `public`，则它在处处可见。如果它没有修饰符，则它只对相同包中的类可见；也就是说，它是“包私有的”（package private）。如果你省略类“成员”（变量、常量或方法）的访问修饰符，它也将是“包私有的”。
 
@@ -4120,7 +3850,7 @@ aList.add(4);
 
 现在我调用我的方法来返回列表中的最后一个元素：
 
-```
+```java
 outputTA.append(getLastItem(aList) + "\n");
 ```
 
@@ -4128,19 +3858,16 @@ outputTA.append(getLastItem(aList) + "\n");
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_150_0.png)
 
+# 第 9 章 泛型与异常
 
-
-
-
-# 第 9 章 泛泛与异常
-
-我能够为 HashMap 的键和值指定类型，是因为 HashMap 类是泛型的。就像 ArrayList 有 `<E>` 占位符一样，HashMap 也有一对 `<K, V>` 占位符，在你自己的代码中声明并创建 HashMap 对象时，它们可以被实际类型替换。
+我能够为 `HashMap` 的键和值指定类型，是因为 `HashMap` 类是泛型的。就像 `ArrayList` 有 `<E>` 占位符一样，`HashMap` 也有一对 `<K, V>` 占位符，在你自己的代码中声明并创建 `HashMap` 对象时，它们可以被实际类型替换。
 
 ## 泛型类
 
-你可以编写自己的泛型类，它们就像泛型 ArrayList 类一样，可以处理不同类型的对象。我是这样声明一个简单的泛型类的：
+你可以编写自己的泛型类，它们就像泛型 `ArrayList` 类一样，可以处理不同类型的对象。我是这样声明一个简单的泛型类的：
 
 | 泛型 (MyGenericClass.java) |
+| --- |
 | public class MyGenericClass<T> {} |
 
 在这里，`<T>` 是“类型参数”。它为真实类型提供了一个占位符，以便该类型可以在类内部使用。这就是我如何声明类型为 `T` 的私有变量 `someData`：
@@ -4169,7 +3896,7 @@ public void someData(T someData) {
 }
 ```
 
-在我的示例中，我还写写了另一个方法，用于返回 `MyGenericClass` 对象及其私有数据的字符串描述：
+在我的示例中，我还写了另一个方法，用于返回 `MyGenericClass` 对象及其私有数据的字符串描述：
 
 当我从我的泛型类创建对象时，我必须提供一个实际类型（位于一对尖括号之间）来替换 `T` 参数，如下：
 
@@ -4225,7 +3952,7 @@ class MyGenericClass <class java.lang.Integer> 500
 
 通常，管理集合或列表的类可以是泛型的。这是因为所有类型的对象列表都需要对列表元素执行相似的操作——例如添加和删除元素，或查找给定索引处的元素。
 
-为每个定义了强类型列表的类（例如 `Liststring` 类和 `Integer` 类）反复实现相同的方法，显然是高度重复的。更好的做法是实现一个泛型类，包含所有操作列表元素所需的通用方法，并在每次创建该泛型类的实例时指定实际元素类型。
+为每个定义了强类型列表的类（例如 `ListString` 类和 `Integer` 类）反复实现相同的方法，显然是高度重复的。更好的做法是实现一个泛型类，包含所有操作列表元素所需的通用方法，并在每次创建该泛型类的实例时指定实际元素类型。
 
 你可以从零开始实现列表，也可以扩展现有的泛型集合类型并添加你需要的任何额外功能。在我的泛型示例程序中，我扩展了 `ArrayList` 并添加了一个新方法来返回列表的最后一个元素：
 
@@ -4266,7 +3993,7 @@ public class Troll extends Monster {
 }
 ```
 
-现在当我对 `Troll` 对象调用 `saySomething()`，执行的是它的重写方法而不是父类的方法。但如果我犯了错误，将方法命名为 `somethingElse()` 会怎样？正如我们所知，Java 是一种大小敏感的语言，因此我在方法中无意使用小写 `s` 是重要的：
+现在当我对 `Troll` 对象调用 `saySomething()`，执行的是它的重写方法而不是父类的方法。但如果我犯了错误，将方法命名为 `somethingElse()` 会怎样？正如我们所知，Java 是一种大小写敏感的语言，因此我在方法中无意使用小写 `s` 是重要的：
 
 ```java
 public class Troll extends Monster {
@@ -4277,6 +4004,7 @@ public class Troll extends Monster {
 ```
 
 现在当我调用 `saySomething()` 时，Java 在父类中找到了它。这就是我看到的：
+
 ```
 Grrrrr
 ```
@@ -4300,27 +4028,24 @@ public String somethingElse() {
 | --- |
 | (Alt-Enter 显示提示) |
 | @Override |
-| public String somethingElse() {
-| return "Ugh, ugh, ugh!";
+| public String somethingElse() { |
+| return "Ugh, ugh, ugh!"; |
 | } |
 
-
-
-
 现在我可以通过大写 'S' 来修复这个问题，这样 `saySomething()` 方法就能与父类中同名的方法匹配，错误也就消失了：
 
-```
+```java
 @Override
 public String saySomething() {
     return "Ugh, ugh, ugh!\n";
 }
 ```
 
-## 方法重载 (Overloading Methods)
+## 方法重载
 
-不要混淆方法重写（overriding）和方法重载（overloading）。我们早在第 4 章就遇到过方法重载方法，当时我提到某些 Java 类具有多个同名但签名不同的方法。
+不要混淆方法重写（overriding）和方法重载（overloading）。我们早在第 4 章就遇到过方法重载，当时我提到某些 Java 类具有多个同名但签名不同的方法。
 
-## 方法签名 (Method Signature)
+## 方法签名
 
 方法签名是完整的方法声明，包括它的名称和参数。
 
@@ -4336,7 +4061,7 @@ String(byte[] bytes, int offset, int length, String charsetName)
 String(byte[] bytes, int offset, int length, Charset charset)
 String(byte[] bytes, String charsetName)
 String(byte[], Charset charset)
-String(char[]) value
+String(char[] value)
 String(char[] value, int offset, count)
 String(int[] codePoints, int offset, count)
 String(String original)
@@ -4348,9 +4073,96 @@ String(StringBuilder builder)
 
 当同一个类中的两个方法具有相同名称但不同签名时，被称为方法重载。这是一个重载方法的示例：
 
-## 方法重写 (Troll.java)
+## 方法重载 (Troll.java)
+
+```java
+public class Troll extends Monster {
+    public String saySomething() {
+        return "Ugh, ugh, ugh!\n";
+    }
+
+    public String saySomething(String thingToSay) {
+        return "Ugh, ugh, " + thingToSay + "!\n";
+    }
+}
+```
+
+当我调用不带参数的 `saySomething()` 时，将执行同名的两个方法中的第一个。如果我调用 `saySomething("I want to be fed")` 并传递一个字符串参数，则将使用方法的第二个版本：
+
+```java
+outputTA.append(myTroll.saySomething());
+outputTA.append(myTroll.saySomething("I want to be fed"));
+```
+
+显示如下：
 
 ```
+Ugh, ugh, ugh!
+Ugh, ugh, I want to be fed!
+```
+
+## 异常
+
+在本书中还有一个尚未深入考虑过的重要问题。即：漏洞（bugs）！很少有任何有心的程序是完全没有 bug 的。而且，即使你的程序在你在使用时运行正常，也存在当其他人使用时可能会出错的风险；因为其他人可能不会执行所有你预期他们做的事情。例如，在一个计算器程序中，你可能期望用户输入的数字是 10（字符 1 和 0），但实际上有人输入了字符串 "IO"（字母 'I' 和 'O'）。
+
+程序的责任是假设最终用户在某个时刻会做一些蠢事——这些事可能会导致你的程序产生错误结果或崩溃。因此，对你有利的是在代码中构建一些从潜在灾难中恢复的手段。异常可以提供帮助。
+
+相关的示例是第 3 章的 `TaxCalc` 项目。它促使用户使用小计。然后它使用小计来计算税和总额（小计加税）。但如果用户输入了一些无法通过 `parseDouble()` 方法转换为浮点数的文本，会发生什么？
+
+### TaxCalc
+
+```java
+subtotal = Double.parseDouble(subtotalTF.getText());
+```
+
+
+
+# 第 9 章 — 泛型与异常
+
+## 方法重写
+
+现在我可以通过大写 'S' 来修复这个问题，这样 `saySomething()` 方法就能与父类中同名的方法匹配，错误也就消失了：
+
+```java
+@Override
+public String saySomething() {
+    return "Ugh, ugh, ugh!\n";
+}
+```
+
+## 方法重载
+
+不要混淆方法重写（overriding）和方法重载（overloading）。我们早在第 4 章就遇到过方法重载，当时我提到某些 Java 类具有多个同名但签名不同的方法。
+
+## 方法签名
+
+方法签名是完整的方法声明，包括它的名称和参数。
+
+例如，`String` 类有几个名为 `indexOf()` 的方法，每个版本都有一组不同的参数。方法签名不同这一事实意味着 Java 能够将它们识别为不同的方法，因此 `indexOf(String str)` 与 `indexOf(String str, int fromIndex)` 是不同的。
+
+同样，一个类可以有多个构造函数。Java JDK 关于 `String` 文档列出了许多构造函数，每个构造函数都定义了一组不同的参数，使得每个构造函数都具有唯一的签名：
+
+```java
+String()
+String(byte[] bytes)
+String(byte[] ascii, int hibyte, int offset, int count)
+String(byte[] bytes, int offset, int length, String charsetName)
+String(byte[] bytes, int offset, int length, Charset charset)
+String(byte[] bytes, String charsetName)
+String(byte[], Charset charset)
+String(char[]) value
+String(char[] value, int offset, count)
+String(int[] codePoints, int offset, count)
+String(String original)
+String(StringBuilder buffer)
+String(StringBuilder builder)
+```
+
+## 方法重写示例 (Troll.java)
+
+当同一个类中的两个方法具有相同名称但不同签名时，被称为方法重载。这是一个重载方法的示例：
+
+```java
 public class Troll extends Monster{
     public String saySomething() {
         return "Ugh, ugh, ugh!\n";
@@ -4364,7 +4176,7 @@ public class Troll extends Monster{
 
 当我调用不带参数的 `saySomething()` 时，将执行同名的两个方法中的第一个。如果我调用 `saySomething("I want to be fed")` 并传递一个字符串参数，则将使用方法的第二个版本：
 
-```
+```java
 outputTA.append(myTroll.saySomething());
 outputTA.append(myTroll.saySomething("I want to be fed"));
 ```
@@ -4376,7 +4188,7 @@ Ugh, ugh, ugh!
 Ugh, ugh, I want to be fed!
 ```
 
-## 异常 (Exceptions)
+## 异常
 
 在本书中还有一个尚未深入考虑过的重要问题。即：漏洞（bugs）！很少有任何有心的程序是完全没有 bug 的。而且，即使你的程序在你在使用时运行正常，也存在当其他人使用时可能会出错的风险；因为其他人可能不会执行所有你预期他们做的事情。例如，在一个计算器程序中，你可能期望用户输入的数字是 10（字符 1 和 0），但实际上有人输入了字符串 "IO"（字母 'I' 和 'O'）。
 
@@ -4386,7 +4198,7 @@ Ugh, ugh, I want to be fed!
 
 ### TaxCalc
 
-```
+```java
 subtotal = Double.parseDouble(subtotalTF.getText());
 ```
 
@@ -4403,147 +4215,19 @@ at java.lang.Double.parseDouble(Double.Java:538)
 
 加载并运行 `SafeTaxCalc` 项目。在框架顶部的小计编辑框中输入“IO”（字母‘I’和‘O’，数字 1 和 0）。点击“Calculate”（计算）按钮。弹出一个错误消息，告诉你异常的类名 - `NumberFormatException` 以及原因（“For input string “IO”）。
 
-用户现在可以关闭对话框，并通过在文本框中输入有效数字来修复错误。显然，这比像以前那样不加处理地输入异常要文明得多：
+用户现在可以关闭对话框，并通过在文本框中输入有效数字来修复错误。显然，这比像以前那样不加处理地输入异常要文明得多。
 
-## 第 9 章 — 泛型与异常
-
-![](img/8c3ac46909d3d5f277ec850365ee22ff_164_0)
-
-异常是一个对象。当运行时发生错误时，会创建一个 Java 异常类（如 `NumberFormatException`）的实例。你的代码可以通过捕获异常对象并访问其属性和方法来利用它。
-
-加载并运行 `SafeTaxCalc` 项目。在框架顶部的小计编辑框中输入“IO”（字母‘I’和‘O’，数字 1 和 0）。点击“Calculate”（计算）按钮。弹出一个错误消息，告诉你异常的类名 - `NumberFormatException` 以及原因（“For input string “IO”）。
-
-用户现在可以关闭对话框，并通过在文本框中输入有效数字来修复错误。显然，这比像以前那样不加处理地输入异常要文明得多：
-
-第 9 章 — 泛型与异常
-
-![](img/8c3ac46909d3d5f277ec850365ee22ff_164_0)
-
-异常是一个对象。当运行时发生错误时，会创建一个 Java 异常类（如 `NumberFormatException`）的实例。你的代码可以通过捕获异常对象并访问其属性和方法来利用它。
-
-加载并运行 `SafeTaxCalc` 项目。在框架顶部的小计编辑框中输入“IO”（字母‘I’和‘O’，数字 1 和 0）。点击“Calculate”（计算）按钮。弹出一个错误消息，告诉你异常的类名 - `NumberFormatException` 以及原因（“For input string “IO”）。
-
-用户现在可以关闭对话框，并通过在文本框中输入有效数字来修复错误。显然，这比像以前那样不加处理地输入异常要文明得多：
-[/content]
-```
-
-*(注：由于提供的原文中存在大量重复内容和错乱的文本块，译文已根据“不要重复输出原文”的原则，对逻辑连续的部分进行了整合和翻译，以确保内容的流畅性。)*
-
-**抱歉，我发现你提供的文本中存在严重的重复和混乱。以下是基于你提供的 `[content]` 块的精简翻译（去除了完全重复部分）：**
-
-[content]
-现在我可以通过大写 'S' 来修复这个问题，这样 `saySomething()` 方法就能与父类中同名的方法匹配，错误也就消失了：
-
-```
-@Override
-public String saySomething() {
-    return "Ugh, ugh, ugh!\n";
-}
-```
-
-## 方法重载 (Overloading Methods)
-
-不要混淆方法重写（overriding）和方法重载（overloading）。我们早在第 4 章就遇到过方法重载方法，当时我提到某些 Java 类具有多个同名但签名不同的方法。
-
-## 方法签名 (Method Signature)
-
-方法签名是完整的方法声明，包括它的名称和参数。
-
-例如，`String` 类有几个名为 `indexOf()` 的方法，每个版本都有一组不同的参数。方法签名不同这一事实意味着 Java 能够将它们识别为不同的方法，因此 `indexOf(String str)` 与 `indexOf(String str, int fromIndex)` 是不同的。
-
-同样，一个类可以有多个构造函数。Java JDK 关于 `String` 文档列出了许多构造函数，每个构造函数都定义了一组不同的参数，使得每个构造函数都具有唯一的签名：
-
-```
-String()
-String(byte[] bytes)
-String(byte[] ascii, int hibyte, int offset, int count)
-String(byte[] bytes, int offset, int length, String charsetName)
-String(byte[] bytes, int offset, int length, Charset charset)
-String(byte[] bytes, String charsetName)
-String(byte[], Charset charset)
-String(char[]) value
-String(char[] value, int offset, count)
-String(int[] codePoints, int offset, count)
-String(String original)
-String(StringBuilder buffer)
-String(StringBuilder builder)
-```
-
-# 第 9 章 – 泛型与异常
-
-当同一个类中的两个方法具有相同名称但不同签名时，被称为方法重载。这是一个重载方法的示例：
-
-## 方法重写 (Troll.java)
-
-```
-public class Troll extends Monster{
-    public String saySomething() {
-        return "Ugh, ugh, ugh!\n";
-    }
-
-    public String saySomething(String thingToSay) {
-        return "Ugh, ugh, " + thingToSay + "!\n";
-    }
-}
-```
-
-当我调用不带参数的 `saySomething()` 时，将执行同名的两个方法中的第一个。如果我调用 `saySomething("I want to be fed")` 并传递一个字符串参数，则将使用方法的第二个版本：
-
-```
-outputTA.append(myTroll.saySomething());
-outputTA.append(myTroll.saySomething("I want to be fed"));
-```
-
-显示如下：
-
-```
-Ugh, ugh, ugh!
-Ugh, ugh, I want to be fed!
-```
-
-## 异常 (Exceptions)
-
-在本书中还有一个尚未深入考虑过的重要问题。即：漏洞（bugs）！很少有任何有心的程序是完全没有 bug 的。而且，即使你的程序在你在使用时运行正常，也存在当其他人使用时可能会出错的风险；因为其他人可能不会执行所有你预期他们做的事情。例如，在一个计算器程序中，你可能期望用户输入的数字是 10（字符 1 和 0），但实际上有人输入了字符串 "IO"（字母 'I' 和 'O'）。
-
-程序的责任是假设最终用户在某个时刻会做一些蠢事——这些事可能会导致你的程序产生错误结果或崩溃。因此，对你有利的是在代码中构建一些从潜在灾难中恢复的手段。异常可以提供帮助。
-
-相关的示例是第 3 章的 `TaxCalc` 项目。它促使用户使用小计。然后它使用小计来计算税和总额（小计加税）。但如果用户输入了一些无法通过 `parseDouble()` 方法转换为浮点数的文本，会发生什么？
-
-### TaxCalc
-
-```
-subtotal = Double.parseDouble(subtotalTF.getText());
-```
-
-将会发生这种情况：发生一个 `NumberFormatException`，你会看到这样的错误消息……
-
-> Exception in thread "AWT-EventQueue-0" java.lang.NumberFormatException: For input string: "ten"
-at sun.min.misc.FloatingDecimal.readFormatString(FloatingDecimal.java:2043)
-at sun.min.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
-at java.lang.Double.parseDouble(Double.Java:538)
-
-![](img/8c3ac46909d3d5f277ec850365ee22ff_164_0.png)
-
-异常是一个对象。当运行时发生错误时，会创建一个 Java 异常类（如 `NumberFormatException`）的实例。你的代码可以通过捕获异常对象并访问其属性和方法来利用它。
-
-加载并运行 `SafeTaxCalc` 项目。在框架顶部的小计编辑框中输入“IO”（字母‘I’和‘O’，数字 1 和 0）。点击“Calculate”（计算）按钮。弹出一个错误消息，告诉你异常的类名 - `NumberFormatException` 以及原因（“For input string “IO”）。
-
-用户现在可以关闭对话框，并通过在文本框中输入有效数字来修复错误。显然，这比像以前那样不加处理地输入异常要文明得多：
-
-
-
-
-## 第 9 章 — 通型与异常
+## 异常处理进阶
 
 我还在末尾添加了一个非常通用的块，它将处理任何未被捕获的 `Exception` 对象。如果已经捕获了特定类型的异常（例如 `ArithmeticException` 或 `NumberFormatException`），则最后一个块将被跳过。
 
-然而，如果发生了其他类型的异常（我甚至没有想过的异常！），那么这个块将处理它。自然地，如果没有抛出异常，则没有任何 `catch` 块块将执行。
+然而，如果发生了其他类型的异常（我甚至没有想过的异常！），那么这个块将处理它。自然地，如果没有抛出异常，则没有任何 `catch` 块将执行。
 
 ## finally
 
 你还可以可选地提供一个 `finally` 区域，其中包含无论是否发生异常都将执行的代码。`finally` 块通常用于“清理”某些资源。Oracle 提供了这个 `finally` 块示例，用于关闭 `PrintWriter` 对象（一种写入数据“流”的类——在本例中，是将文本保存到文件中），无论是否发生错误：
 
-## WriteList
+### WriteList
 
 ```java
 try {
@@ -4605,28 +4289,17 @@ while ((line = file.readLine()) != null) {
 }
 ```
 
-# 第 10 章 — 文件与序列化
-
-我在 RAFile 项目中稍微更新了这个程序。这个新版本说明了随机访问文件的关键特性之一：通过“寻址”（移动文件指针）到特定位置来查找数据的能力。如果你 `seek` 到 0，它将移动指针。
+我在 `RAFile` 项目中稍微更新了这个程序。这个新版本说明了随机访问文件的关键特性之一：通过“寻址”（移动文件指针）到特定位置来查找数据的能力。如果你 `seek` 到 0，它将移动指针。
 
 ### 文件指针
 
-文件指针是一个标记，用于跟踪下一次读取或写入操作将发生的位置。当你读取或写入数据时，指针会根据处理处理的字节数向前移动。你可以使用 `seek(long pos)` 方法将指针移动到文件的任何位置。
+文件指针是一个标记，用于跟踪下一次读取或写入操作将发生的位置。当你读取或写入数据时，指针会根据处理的字节数向前移动。你可以使用 `seek(long pos)` 方法将指针移动到文件的任何位置。
 
 `getPointer()` 方法返回文件指针当前的位置。如果你想知道读取了多少数据，或者想返回到之前的位置，这非常有用。
 
 在 Java 中，`RandomAccessFile` 类提供了几个方法来操作文件指针。例如，`seek(long pos)` 将指针移动到指定的字节处，而 `skipBytes(int n)` 将其向前移动指定的字节数。
 
-
-
-
-
-# 第 10 章 — 文件与序列化
-
-a cloud
-That float
-
-在这里，这 20 个字符包括 'a' 前面的空格，加上 'cloud' 之后的回车符字符和换行符。接下，我使用了存储的数值 `bytesread`（其值是 20，因为上一次操作中读取了 20 字节），并在其基础上加了 20。这会将文件指针移动到位置 40（紧接 "float" 单词之后）：
+在这里，这 20 个字符包括 'a' 前面的空格，加上 'cloud' 之后的回车符字符和换行符。接下来，我使用了存储的数值 `bytesread`（其值是 20，因为上一次操作中读取了 20 字节），并在其基础上加了 20。这会将文件指针移动到位置 40（紧接 "float" 单词之后）：
 
 ```java
 file.seek(20+bytesread);
@@ -4655,7 +4328,7 @@ ta.append("\nfile pointer @@ chars = (byte) #1653[length=20] read));
 nbytesread = file.read(chars);
 ```
 
-## 第 10 章 – 文件与序列化
+
 
 我点击调试提示中的 `+` 号来查看详情。在这里，例如，可以看到从文件中读取的前 20 个字节包含了回车符和换行符（ASCII 值为 13 和 10），它们被读取到 `chars` 数组索引 8 和 9 中：
 
@@ -4670,56 +4343,20 @@ nbytesread = file.read(chars);
 | [5] | 111 | byte |
 | [6] | 117 | byte |
 | [7] | 100 | byte |
-| [8] | | byte |
+| [8] | 13 | byte |
 | [9] | 10 | byte |
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_175_0.png)
 
 ## 调试
 
-任何特定 IDE（如 NetBeans）调试工具的详细说明都超本书的讨论范围。你应当花时间深入研究你的 IDE 调试器。请参阅你 IDE 的帮助文档或用户指南以获取更多信息。调试对于理解程序如何运行——或者它们为什么不运行！是无价的。
+任何特定 IDE（如 NetBeans）调试工具的详细说明都超本书的讨论范围。你应当花时间深入研究你的 IDE 调试器。请参阅你 IDE 的帮助文档或用户指南以获取更多信息。调试对于理解程序如何运行——或者它们为什么不运行——是无价的。
 
-## 流 (Streams)
-
-Java 大多数的输入输出任务都由流处理。流无非只是从一个地方到另一个地方的字节流。它不一定是在磁盘与磁盘之间。例如，也可以是在互联网上的某个远程位置之间。然而，对于我们的目的，我们将数据流限制在计算机内存和磁盘之间。Java 大多数的输入输出任务都由流处理。流无非只是从一个地方到另一个地方的字节流。它不一定是在磁盘与磁盘之间。例如，也可以是在互联网上的某个远程位置之间。然而，对于我们的目的，我们将数据流限制在计算机内存和磁盘之间。Java 大多数的输入输出任务都由流处理。流无非只是从一个地方到另一个地方的字节流。它不一定是在磁盘与磁盘之间。例如，也可以是在互联网上的某个远程位置之间。然而，对于我们的目的，我们将数据流限制在计算机内存和磁盘之间。Java 大多数的输入输出任务都由流处理。流无非只是从一个地方到另一个地方的字节流。它不一定是在磁盘与磁盘之间。例如，也可以是在互联网上的某个远程位置之间。然而，对于我们的目的，我们将数据流限制在计算机内存和磁盘之间。Java 大多数的输入输出任务都由流处理。流无非只是从一个地方到另一个地方的字节流。它不一定是在磁盘与磁盘之间。例如，也可以是在互联网上的某个远程位置之间。然而，对于我们的目的，我们将数据流限制在计算机内存和磁盘之间。Java 大多数的输入输出任务都由流处理。流无非只是从一个地方到另一个地方的字节流。它不一定是在磁盘与磁盘之间。例如，也可以是在互联网上的某个远程位置之间。然而，对于我们的目的，我们将数据流限制在计算机内存和磁盘之间。Java 大多数的输入输出任务都由流处理。流无非只是从一个地方到另一个地方的字节流。它不一定是在磁盘与磁盘之间。例如，也可以是在互联网上的某个远程位置之间。然而，对于我们的目的，我们将数据流限制在计算机内存和磁盘之间。Java 大多数的输入输出任务都由流处理。流无非只是从一个地方到另一个地方的字节流。它不一定是在磁盘与磁盘之间。例如，也可以是在互联网上的某个远程位置之间。然而，对于我们的目的，我们将数据流限制在计算机内存和磁盘之间。
-
-Java 大多数的输入输出任务都由流处理。流无非只是从一个地方到另一个地方的字节流。它不一定是在磁盘与磁盘之间。例如，也可以是在互联网上的某个远程位置之间。然而，对于我们的目的，我们将数据流限制在计算机内存和磁盘内存。
-
-之间。
+## 流
 
 Java 大多数的输入输出任务都由流处理。流无非只是从一个地方到另一个地方的字节流。它不一定是在磁盘与磁盘之间。例如，也可以是在互联网上的某个远程位置之间。然而，对于我们的目的，我们将数据流限制在计算机内存和磁盘之间。
 
-Java 大多数的输入输出任务都由流处理。流无非只是从一个地方到另一个地方的字节流。它不一定是在磁盘与磁盘之间。例如，也可以是在互联网上的某个远程位置之间。然而，对于我们的目的，我们将数据流限制在计算机内存和磁盘之间。
-
-Java 大多数的输入输出任务都由流处理。流无非只是从一个地方到另一个地方的字节流。它不一定是在磁盘与磁盘之间。例如，也可以是在互联网上的某个远程位置之间。然而，对于我们的目的，我们将数据流限制在计算机内存和磁盘之间。
-
-Java 大多数的输入输出任务都由流处理。流无非只是从一个地方到另一个地方的字节流。它不一定是在磁盘与磁盘之间。例如，也可以是在互联网上的某个远程位置之间。然而，对于我们的目的，我们将数据流限制在计算机内存和磁盘之间。
-
-*(注：由于原始文本中存在大量重复的段落，翻译时已根据“不要重复输出原文”的原则进行了去重处理，仅保留了核心逻辑和代码块的翻译。)*
-
-之间。然而，对于我们的目的，我们将数据流限制在计算机内存和磁盘内存。
-
-之间。
-
-Java 大多数的输入输出任务都由流处理。流无非只是从一个地方到另一个地方的字节流。它不一定是在磁盘与磁盘之间。例如，也可以是在互联网上的某个远程位置之间。然而，对于我们的目的，我们将数据流限制在计算机内存和磁盘之间。
-
-Java 大多数的输入输出任务都由流处理。流无非只是从一个地方到另一个地方的字节流。它不一定是在磁盘与磁盘之间。例如，也可以是在互联网上的某个远程位置之间。然而，对于我们的目的，我们将数据流限制在计算机内存和磁盘之间。
-
-*(注：由于原始文本中存在大量重复的段落，翻译时已根据“不要重复输出原文”的原则进行了去重处理，仅保留了核心逻辑和代码块的翻译。)*
-
-之间。然而，对于我们的目的，我们将数据流限制在计算机内存和磁盘内存。
-
-之间。
-
-Java 大多数的输入输出任务都由流处理。流无非只是从一个地方到另一个地方的字节流。它不一定是在磁盘与磁盘之间。例如，也可以是在互联网上的某个远程位置之间。然而，对于我们的目的，我们将数据流限制在计算机内存和磁盘之间。
-
-Java 大多数的输入输出任务都由流处理。流无非只是从一个地方到另一个地方的字节流。它不一定是在磁盘与磁盘之间。例如，也可以是在互联网上的某个远程位置之间。然而，对于我们的目的，我们将数据流限制在计算机内存和磁盘之间。
-
-*(注：由于原始文本中存在大量重复的段落，翻译时已根据“不要重复输出原文”的原则进行了去重处理，仅保留了核心逻辑和代码块的翻译。)*
-
-*(由于用户提供的原文在“Streams”章节存在严重的文本重复，以下为基于该部分内容的去重后完整逻辑翻译：)*
-
-## 序列化 (Serialization)
+## 序列化
 
 序列化描述了将对象数据保存到流中的过程。如果你序列化一个包含另一个对象——例如，一个房间包含一个宝藏——那么当容器对象（房间）被序列化时，包含的对象（这里是宝藏）也会序列化。
 
@@ -4727,13 +4364,9 @@ Java 大多数的输入输出任务都由流处理。流无非只是从一个地
 
 ![](img/8c3ac46909d3d5f277ec850365ee22ff_178_0.png)
 
-上面的图显示了我们可能需要保存的树结构对象的简化视图。在这里，游戏对象包含一个地图（ArrayList）对象和一个玩家（Actor）对象。玩家有一个背包，里面有两个宝藏。地图包含三个房间，每个房间包含一个宝藏。当然，随着游戏的进行，这个“游戏状态”会发生变化。
+上面的图显示了我们可能需要保存的树结构对象的简化视图。在这里，游戏对象包含一个地图（`ArrayList`）对象和一个玩家（`Actor`）对象。玩家有一个背包，里面有两个宝藏。地图包含三个房间，每个房间包含一个宝藏。当然，随着游戏的进行，这个“游戏状态”会发生变化。
 
 事实上，事实证明只需序列化位于根的对象，就可以保存或“序列化”整个对象树——这里是游戏对象——树其余其他对象（在这里，游戏中的其他对象——地图、房间、宝藏等）都会自动被序列化！
-
-
-
-
 
 ## Serializable 接口
 
@@ -4749,16 +4382,16 @@ implements java.io.Serializable
 Adventure4
 public class Game implements java.io.Serializable
 public class Treasure extends Thing implements java.io.Serializable
-// ...以此此类推
+// ...以此类推
 ```
 
-与我们之前看过的接口不同，`Serializable` 接口不包含任何方法或数据字段。通过实现 `Serializable` 接口，类可以 Java 该类是可以被序列化的。
+与我们之前看过的接口不同，`Serializable` 接口不包含任何方法或数据字段。通过实现 `Serializable` 接口，类可以向 Java 表明该类是可以被序列化的。
 
 如果你尝试序列化没有实现 `Serializable` 接口的类的对象，将抛出 `NotSerializableException` 类型的异常。
 
 ## 保存和恢复对象
 
-在本章早些时候过的 `FileInputStream` 项目中，当我想要通过创建一个新的 `FileOutputStream` 对象来将数据保存到磁盘时，我会将其传递给要创建并打开的文件的构造函数。
+在本章早些时候的 `FileInputStream` 项目中，当我想要通过创建一个新的 `FileOutputStream` 对象来将数据保存到磁盘时，我会将其传递给要创建并打开的文件的构造函数。
 
 你可能还记得在 `FileInputStream` 项目中，我将一个 `FileOutputStream` 对象作为参数传递给 `DataOutputStream` 的构造函数，由它处理到输出流的原始数据类型。在我的冒险游戏中，我需要写入复杂的对象类型，因此我使用了 `ObjectOutputStream` 而不是 `DataOutputStream`。Java 文档是这样描述的：
 
@@ -4766,7 +4399,7 @@ public class Treasure extends Thing implements java.io.Serializable
 
 在我的程序中，我创建了一个 `ObjectOutputStream`，将混合对象类型的复杂网络（或“图”）写入流中。然后，该数据流通过 `FileOutputStream` 写入磁盘：
 
-# Adventure4
+### Adventure4
 
 | FileOutputStream fos = new FileOutputStream("Adv.sav"); |
 | ObjectOutputStream oos = new ObjectOutputStream(fos); |
@@ -4779,7 +4412,7 @@ oos.writeObject(game);
 
 最后，我 `flush`（写出未写入的数据）并关闭 `ObjectOutputStream`。这是处理将我的游戏数据保存到名为 "Adv.sav" 的文件的完整代码：
 
-# Adventure4 (AdventureForm.java)
+### Adventure4 (AdventureForm.java)
 
 ```java
 private void saveGame() {
@@ -4787,7 +4420,7 @@ private void saveGame() {
     FileOutputStream fos = new FileOutputStream("Adv.sav");
     ObjectOutputStream oos = new ObjectOutputStream(fos);
     oos.writeObject(game);
-    oos.flush(); // 写出任何中的字节
+    oos.flush(); // 写出任何缓冲区中的字节
     oos.close();
     outputTA.append("Game saved!\n\n");
   } catch (Exception e) {
@@ -4801,9 +4434,7 @@ private void saveGame() {
 
 这样做的效果是反序列化我游戏的所有保存数据及其整个对象网络，从而在内存中重新创建并重新初始化游戏数据：
 
-# 第 10 章 – 文件与序列化
-
-# Adventure4 (AdventureForm.java)
+### Adventure4 (AdventureForm.java)
 
 ```java
 private void loadGame() {
@@ -4826,39 +4457,33 @@ private void loadGame() {
 
 Adventure4 项目允许你通过在字段中输入名称（如“carrot”）并点击 Take（捡取）或 Drop（放下）按钮来捡取和放下对象。通过点击 N、S、W 和 E 按钮在地图上移动。保存和加载游戏请使用 File 菜单上显示的项目。
 
-# 第 10 章 — 文件与序列化
+在某个时刻保存游戏。然后在地图上多移动一下，捡取并放下一些其他对象。现在恢复你之前保存的游戏。你会发现游戏恢复到了保存时的状态。玩家将重新回到游戏保存时所在的房间，房间中的对象也回到了保存时的位置。当然，序列化对游戏程序员非常有用。它为各种数据的保存和恢复提供了强大的机制。
 
-在某个时刻保存游戏。然后地地图上多移动一下，捡取并放下一些其他对象。现在恢复你之前保存的游戏。你会发现游戏恢复到了保存时的状态。玩家将重新回到游戏保存时所在的房间，房间中的对象也回到了保存时的位置。当然，序列化对游戏程序员非常有用。它为各种数据的保存和恢复提供了强大的机制。
+## 接下来做什么？
 
-# 接下来做什么？
-
-现在我们已经读到了这本书的最后，你应该对 Java 语言以及如何使用它创建程序有了实实的理解。为了继续开发 Java 技能，你现在需要一个自己的项目。你可能想尝试编写一些工具——例如导航或组织文件。如果你想入门，可以查看我提供的简单项目（见附录）。或者你可能对数学计算、编写文本编辑器、创建某种游戏、创建复杂的类层次、保存和加载文件以及处理错误感兴趣。
+现在我们已经读到了这本书的最后，你应该对 Java 语言以及如何使用它创建程序有了扎实的理解。为了继续开发 Java 技能，你现在需要一个自己的项目。你可能想尝试编写一些工具——例如导航或组织文件。如果你想入门，可以查看我提供的简单项目（见附录）。或者你可能对数学计算、编写文本编辑器、创建某种游戏、创建复杂的类层次、保存和加载文件以及处理错误感兴趣。
 
 无论你接下来在 Java 中要做什么，我都祝你取得最大的成功。希望这本书对你有所帮助！
 
-# 附录
+## 附录
 
-# 游戏项目
+### 游戏项目
 
-你可以在存档中找到四个小型游戏项目。Adventure1 项目开始创建一些基础游戏类：Actor（玩家）、Room（位置）和 Thing（任何类型的对象）。Game 类本身定义了整个游戏。在 Adventure2 中，我添加了 Treasure 对象。它也继承自 Thing。它用于创建房间中的对象，玩家可以捡取和放下。玩家通过点击主表上的方向按钮在地图上之间移动。Adventure3 增加了泛型，使得地图现在被声明为存储 Room 对象的 ArrayList，因此不再需要上一个项目中的类型转换：
+你可以在存档中找到四个小型游戏项目。Adventure1 项目开始创建一些基础游戏类：`Actor`（玩家）、`Room`（位置）和 `Thing`（任何类型的对象）。`Game` 类本身定义了整个游戏。在 Adventure2 中，我添加了 `Treasure` 对象。它也继承自 `Thing`。它用于创建房间中的对象，玩家可以捡取和放下。玩家通过点击主表上的方向按钮在地图上之间移动。Adventure3 增加了泛型，使得地图现在被声明为存储 `Room` 对象的 `ArrayList`，因此不再需要上一个项目中的类型转换：
 
 | Adventure2 - moveTo() |
+| --- |
 | moveActorTo(anActor, (Room) map.get(exit)); |
 
 | Adventure3 - moveTo() |
+| --- |
 | moveActorTo(anActor, map.get(exit)); |
 
 Adventure4 增加了捡取、放下和查看对象的能力，以及游戏数据的序列化。
 
-# Java冒险编程入门
+### Java冒险编程入门
 
-如果你真的想写冒险游戏，我有一本专门介绍这个主题的书！该书讲解了如何打开、关闭、捡取、放下和查看对象。它向你展示了如何将对象放入容器，以及如何编写递归方法来计算 Treasure 对象的总重量（以便玩家只能携带特定数量和重量）。它提供了解析形容词的代码，使用户可以区分相似的对象类型。例如，如果有两把精灵剑，一把大银剑和一把小金精灵剑，用户可以输入命令：“捡取那把小金色的精灵剑”。
-
-
-
-
-
-# 附录
+如果你真的想写冒险游戏，我有一本专门介绍这个主题的书！该书讲解了如何打开、关闭、捡取、放下和查看对象。它向你展示了如何将对象放入容器，以及如何编写递归方法来计算 `Treasure` 对象的总重量（以便玩家只能携带特定数量和重量）。它提供了解析形容词的代码，使用户可以区分相似的对象类型。例如，如果有两把精灵剑，一把大银剑和一把小金精灵剑，用户可以输入命令：“捡取那把小金色的精灵剑”。
 
 本书还展示了如何创建“传统”类型的文本冒险游戏，这类游戏在命令行提示符运行，并以短句的形式接受命令。
 
@@ -4888,7 +4513,7 @@ Adventure4 增加了捡取、放下和查看对象的能力，以及游戏数据
 > 打开柜子
 ```
 
-这展示了《Java 冒险游戏编程入门》（Little Java Book Of Adventure Game Programming）中的一个游戏。
+这展示了《Java 冒险游戏编程入门》中的一个游戏。
 
 《Java 冒险游戏编程入门》解释了……
 
@@ -4907,53 +4532,44 @@ Adventure4 增加了捡取、放下和查看对象的能力，以及游戏数据
 - 设计可在命令行提示符运行的命令行游戏
 - 使用免费的 BIFF 游戏框架编写你自己的游戏
 
-# IDE/编辑器
+### IDE/编辑器
 
 以下是支持 Java 的几个（尽管还有其他）IDE 和编辑器：
 
 - NetBeans
-https://netbeans.apache.org/
-
+  https://netbeans.apache.org/
 - Eclipse Java 版
-https://eclipse.org/downloads/
-
+  https://eclipse.org/downloads/
 - IntelliJ IDEA
-http://www.jetbrains.com/idea/
+
+
 
 # 网站
 
-有很多网站提供有用的信息和 Java 示例程序。然而，下面列出的两个网站无价之：
+有很多网站提供有用的信息和 Java 示例程序。然而，下面列出的两个网站无价之宝：
 
-- Java 平台 API
-http://docs.oracle.com/javase/8/docs/api/
-
-- Oracle Java 教程：
-http://docs.oracle.com/javase/tutorial/
+- Java 平台 API：<http://docs.oracle.com/javase/8/docs/api/>
+- Oracle Java 教程：<http://docs.oracle.com/javase/tutorial/>
 
 # Bitwise 图书与课程
 
 欲获取 Bitwise Books 和 Courses 的最新消息，请务必收藏这些网站……
 
-欲获取我们的全系列纸质书和电子书以及免费下载，请务必访问 Bitwise Books 网站：
-http://www.bitwisebooks.com
+欲获取我们的全系列纸质书和电子书以及免费下载，请务必访问 Bitwise Books 网站：<http://www.bitwisebooks.com>
 
-获取视频类编程教程，请访问 Bitwise Courses 网站：
-http://www.bitwisecourses.com
+获取视频类编程教程，请访问 Bitwise Courses 网站：<http://www.bitwisecourses.com>
 
-访问 Bitwise Books & Courses 的 Facebook 页面：
-https://www.facebook.com/BitwiseCourses
+访问 Bitwise Books & Courses 的 Facebook 页面：<https://www.facebook.com/BitwiseCourses>
 
-订阅我们的 Twitter Feed馈：
-https://twitter.com/bitwisecourses
+订阅我们的 Twitter Feed：<https://twitter.com/bitwisecourses>
 
-订阅我们的 YouTube 频道：
-https://www.youtube.com/BitwiseCourses?sub_confirmation=1
+订阅我们的 YouTube 频道：<https://www.youtube.com/BitwiseCourses?sub_confirmation=1>
 
 # 作者寄语
 
-感谢阅读我的书。我希望你发现它很有用——如果运气的话，甚至觉得很有趣！从 20 世纪 80 年代初开始，我一直在编程并编写关于编程的文章。在“小书丛”系列中，我希望能够传递我多年来获得的一些知识，并为读者提供那些我在学习编程时希望有（但当时并没有）的书籍。
+感谢阅读我的书。我希望你发现它很有用——如果运气好的话，甚至觉得很有趣！从 20 世纪 80 年代初开始，我一直在编程并编写关于编程的文章。在“小书丛”系列中，我希望能够传递我多年来获得的一些知识，并为读者提供那些我在学习编程时希望有（但当时并没有）的书籍。
 
-编写这些书以及随附的所有示例代码需要大量的时间和精力，虽然我很享受编写它们——毕竟，编程是我热爱的的事——但对我来说，我的书要与大型出版公司出的书竞争非常困难。
+编写这些书以及随附的所有示例代码需要大量的时间和精力，虽然我很享受编写它们——毕竟，编程是我热爱的事——但对我来说，我的书要与大型出版公司出的书竞争非常困难。
 
 *你可以帮到我！*
 
@@ -4965,19 +4581,17 @@ Huw Colbourne
 
 # 留下评论
 
-亚马逊美国站：
+## 亚马逊美国站
 
 ![](img/8c3ac46909d3d5f277ec85036522ff_189_0)
 
-https://tinyurl.com/1gorki
-or https://www.amazon.com/review/create-review?asin=191313245
+<https://tinyurl.com/1gorki> 或 <https://www.amazon.com/review/create-review?asin=191313245>
 
-亚马逊英国站：
+## 亚马逊英国站
 
 ![](img/8c3ac46909d3d5f277ec85036522ff_189_1)
 
-https://tinyurl.com/3x9qazk
-or https://www.amazon.co.uk/review/create-review?asin=191313245
+<https://tinyurl.com/3x9qazk> 或 <https://www.amazon.co.uk/review/create-review?asin=191313245>
 
 # 更多编程书……
 
@@ -4989,9 +4603,9 @@ or https://www.amazon.co.uk/review/create-review?asin=191313245
 
 ![](img/8c3ac46909d3d5f277ec85036522ff_190_0)
 
-# Java 冒险游戏编程入门
+## Java 冒险游戏编程入门
 
-- 高级面向对象技术：
+- 高级面向对象技术
 - 创建命令行游戏
 - 解析用户输入
 - 打开、关闭和锁定容器
@@ -5001,13 +4615,12 @@ or https://www.amazon.co.uk/review/create-review?asin=191313245
 
 ![](img/8c3ac46909d3d5f277ec85036522ff_190_1)
 
-# C# 编程入门
+## C# 编程入门
 
-- C# 语言初级指南：
+- C# 语言初级指南
 - 对象对象
 - 类与方法
 - 方法与参数
 - 数组与字符串
 - 异常处理
 - 列表与泛型
-

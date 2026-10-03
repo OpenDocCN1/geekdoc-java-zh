@@ -1,3 +1,4 @@
+
 # Spring Boot Hello World 示例-百里香叶
 
 > 原文：<http://web.archive.org/web/20230101150211/https://mkyong.com/spring-boot/spring-boot-hello-world-example-thymeleaf/>
@@ -6,7 +7,7 @@
 
 在本文中，我们将向您展示如何开发一个 Spring Boot web 应用程序，使用百里香叶视图，嵌入式 Tomcat，并将其打包为一个可执行的`JAR`文件。
 
-使用的技术:
+使用的技术：
 
 *   Spring Boot 2.1.2 .版本
 *   弹簧 5.1.4 释放
@@ -16,18 +17,18 @@
 *   maven3
 *   Java 8
 
-## 1.项目目录
+## 1. 项目目录
 
 ![project directory](img/df8737b28e376e4e8fefe25222582b39.png)
 
-## 2.专家
+## 2. 专家
 
 放上`spring-boot-starter-web`和`spring-boot-starter-thymeleaf`，它将获得我们开发 Spring MVC + Thymeleaf web 应用程序所需的任何东西，包括嵌入式 Tomcat 服务器。
 
-pom.xml
+`pom.xml`
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project  
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
@@ -108,13 +109,15 @@ pom.xml
         </plugins>
 
     </build>
-</project> 
+</project>
 ```
 
 显示项目依赖关系。
 
+
+
 ```java
- $ mvn dependency:tree
+$ mvn dependency:tree
 
 [INFO] org.springframework.boot:web-thymeleaf:jar:1.0
 [INFO] +- org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE:compile
@@ -183,17 +186,17 @@ pom.xml
 [INFO] |  \- org.springframework.boot:spring-boot-autoconfigure:jar:2.1.2.RELEASE:compile
 [INFO] \- org.webjars:bootstrap:jar:4.2.1:compile
 [INFO]    +- org.webjars:jquery:jar:3.0.0:compile
-[INFO]    \- org.webjars:popper.js:jar:1.14.3:compile 
+[INFO]    \- org.webjars:popper.js:jar:1.14.3:compile
 ```
 
-## 3.开发者工具
+## 3. 开发者工具
 
 ```java
- <dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-devtools</artifactId>
-		<optional>true</optional>
-	</dependency> 
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-devtools</artifactId>
+    <optional>true</optional>
+</dependency>
 ```
 
 这个`spring-boot-devtools`有助于禁用高速缓存并启用热插拔，这样开发人员将总是看到最后的更改。有利于发展。阅读此–[Spring Boot–开发者工具](http://web.archive.org/web/20221118095836/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-devtools)尝试修改百里香模板或属性文件，刷新浏览器以查看更改是否立即生效。
@@ -201,14 +204,14 @@ pom.xml
 *   对于 Eclipse IDE 来说，它与`spring-boot-devtools`集成得很好。
 *   对于 Intellij IDEA，需要额外的步骤，阅读此[重新加载静态文件不工作](http://web.archive.org/web/20221118095836/https://www.mkyong.com/spring-boot/intellij-idea-spring-boot-template-reload-is-not-working/)
 
-## 4.Spring Boot + MVC
+## 4. Spring Boot + MVC
 
-4.1 简单的控制器。
+### 4.1 简单的控制器
 
-WelcomeController.java
+`WelcomeController.java`
 
 ```java
- package com.mkyong.controller;
+package com.mkyong.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -239,23 +242,25 @@ public class WelcomeController {
     // /hello?name=kotlin
     @GetMapping("/hello")
     public String mainWithParam(
-            @RequestParam(name = "name", required = false, defaultValue = "") 
-			String name, Model model) {
+            @RequestParam(name = "name", required = false, defaultValue = "")
+            String name, Model model) {
 
         model.addAttribute("message", name);
 
         return "welcome"; //view
     }
 
-} 
+}
 ```
 
-4.2 创建一个类并用`@SpringBootApplication`标注。在 IDE 中，运行此类来启动整个 web 应用程序。
+### 4.2 创建启动类
 
-StartWebApplication.java
+创建一个类并用`@SpringBootApplication`标注。在 IDE 中，运行此类来启动整个 web 应用程序。
+
+`StartWebApplication.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -267,75 +272,43 @@ public class StartWebApplication {
         SpringApplication.run(StartWebApplication.class, args);
     }
 
-} 
+}
 ```
 
-## 5.百里香+静态文件
+## 5. 百里香 + 静态文件
 
 **Note**
+
 Read this [Spring Boot Serving static content](http://web.archive.org/web/20221118095836/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-static-content) to understand the resource mapping.
 
-5.1 对于百里香模板文件，放入`src/main/resources/templates/`
+### 5.1 模板文件位置
 
-src/main/resources/templates/welcome.html
+对于百里香模板文件，放入`src/main/resources/templates/`
 
-```java
- <!DOCTYPE HTML>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+`src/main/resources/templates/welcome.html`
 
-    <title>Spring Boot Thymeleaf Hello World Example</title>
 
-    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
-    <link rel="stylesheet" th:href="@{/css/main.css}"/>
 
-</head>
+## 5.2 Spring Boot 通用应用属性
 
-<body>
+参考：[通用应用属性](http://web.archive.org/web/20221118095836/https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">Mkyong.com</a>
-</nav>
+`src/main/resources/application.properties`
 
-<main role="main" class="container">
+```properties
+welcome.message: Mkyong
 
-    <div class="starter-template">
-        <h1>Spring Boot Web Thymeleaf Example</h1>
-        <h2>
-            <span th:text="'Hello, ' + ${message}"></span>
-        </h2>
-    </div>
-
-    <ol>
-        <li th:each="task : ${tasks}" th:text="${task}"></li>
-    </ol>
-
-</main>
-<!-- /.container -->
-
-<script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
-</body>
-</html> 
+spring.thymeleaf.cache=false
 ```
 
-5.2 Spring Boot [通用应用属性](http://web.archive.org/web/20221118095836/https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
+## 5.3 静态文件
 
-src/main/resources/application.properties
+对于 CSS 或 JS 等静态文件，放入`src/main/resources/static/`。
 
-```java
- welcome.message: Mkyong
+`src/main/resources/static/css/main.css`
 
-spring.thymeleaf.cache=false 
-```
-
-5.3 对于 CSS 或 JS 等静态文件，放入`src/main/resources/static/`
-
-src/main/resources/static/css/main.css
-
-```java
- body {
+```css
+body {
   padding-top: 5rem;
 }
 .starter-template {
@@ -343,23 +316,23 @@ src/main/resources/static/css/main.css
   text-align: center;
 }
 
-h1{
-	color:#0000FF;
+h1 {
+  color: #0000FF;
 }
 
-h2{
-	color:#FF0000;
-} 
+h2 {
+  color: #FF0000;
+}
 ```
 
-## 6.单元测试
+## 6. 单元测试
 
 `MockMvc`测试 Spring MVC 控制器。
 
-WelcomeControllerTest.java
+`WelcomeControllerTest.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import com.mkyong.controller.WelcomeController;
 import org.junit.Test;
@@ -413,59 +386,60 @@ public class WelcomeControllerTest {
                 .andExpect(model().attribute("message", equalTo("I Love Kotlin!")))
                 .andExpect(content().string(containsString("Hello, I Love Kotlin!")));
     }
-
-} 
+}
 ```
 
-## 7.演示
+## 7. 演示
 
-```java
- $ mvn spring-boot:run
+```bash
+$ mvn spring-boot:run
 
 : Tomcat initialized with port(s): 8080 (http)
 : Starting service [Tomcat]
 : Starting Servlet engine: [Apache Tomcat/9.0.14]
 
 : Tomcat started on port(s): 8080 (http) with context path ''
- Started StartWebApplication in 1.858 seconds (JVM running for 2.222) 
+ Started StartWebApplication in 1.858 seconds (JVM running for 2.222)
 ```
 
-URL = *http://localhost:8080*
+URL = `http://localhost:8080`
 
 ![](img/901417d8cbc5d9c6e8e53e2102beb25e.png)
 
-URL =*http://localhost:8080/hello？name=abc*
+URL = `http://localhost:8080/hello?name=abc`
 
 ![](img/24c78e15ac7f490872f357de505d7e82.png)
 
-## 8.创建可执行的 JAR
+## 8. 创建可执行的 JAR
 
 对于部署，只需普通的 Maven 包来创建一个可执行的 JAR 文件。
 
-```java
- $ mvn clean package
+```bash
+$ mvn clean package
 
-$ java -jar target\web-thymeleaf-1.0.jar 
+$ java -jar target\web-thymeleaf-1.0.jar
 ```
 
 ## 下载源代码
 
-$ git clone [https://github.com/mkyong/spring-boot.git](http://web.archive.org/web/20221118095836/https://github.com/mkyong/spring-boot.git)
+```bash
+$ git clone https://github.com/mkyong/spring-boot.git
 $ cd web-thymeleaf
 $ mvn spring-boot:run
+```
 
 ## 参考
 
-*   [使用 Spring MVC 提供 Web 内容](http://web.archive.org/web/20221118095836/https://spring.io/guides/gs/serving-web-content/)
-*   [JUnit–如何测试列表](http://web.archive.org/web/20221118095836/https://www.mkyong.com/unittest/junit-how-to-test-a-list/)
-*   [Spring Boot +朱尼特 5 +莫奇托](http://web.archive.org/web/20221118095836/https://www.mkyong.com/spring-boot/spring-boot-junit-5-mockito/)
-*   [常用应用属性](http://web.archive.org/web/20221118095836/https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
-*   [Intellij IDEA–Spring boot 重新加载静态文件不起作用](http://web.archive.org/web/20221118095836/https://www.mkyong.com/spring-boot/intellij-idea-spring-boot-template-reload-is-not-working/)
-*   [百里香官网](http://web.archive.org/web/20221118095836/https://www.thymeleaf.org/)
-*   [Spring Boot–静态内容](http://web.archive.org/web/20221118095836/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-static-content)
-*   [Spring Boot——开发者工具](http://web.archive.org/web/20221118095836/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-devtools)
-*   [部署 Spring Boot 应用](http://web.archive.org/web/20221118095836/https://spring.io/blog/2014/03/07/deploying-spring-boot-applications)
-*   [spring MVC–in ucci CSS 文件](http://web.archive.org/web/20221118095836/https://www.mkyong.com/spring-mvc/spring-mvc-how-to-include-js-or-css-files-in-a-jsp-page/)
-*   [Spring Boot Hello World 示例–JSP](http://web.archive.org/web/20221118095836/https://www.mkyong.com/spring-boot/spring-boot-hello-world-example-jsp/)
+* [使用 Spring MVC 提供 Web 内容](http://web.archive.org/web/20221118095836/https://spring.io/guides/gs/serving-web-content/)
+* [JUnit – 如何测试列表](http://web.archive.org/web/20221118095836/https://www.mkyong.com/unittest/junit-how-to-test-a-list/)
+* [Spring Boot + JUnit 5 + Mockito](http://web.archive.org/web/20221118095836/https://www.mkyong.com/spring-boot/spring-boot-junit-5-mockito/)
+* [常用应用属性](http://web.archive.org/web/20221118095836/https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
+* [Intellij IDEA – Spring Boot 重新加载静态文件不起作用](http://web.archive.org/web/20221118095836/https://www.mkyong.com/spring-boot/intellij-idea-spring-boot-template-reload-is-not-working/)
+* [Thymeleaf 官网](http://web.archive.org/web/20221118095836/https://www.thymeleaf.org/)
+* [Spring Boot – 静态内容](http://web.archive.org/web/20221118095836/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-spring-mvc-static-content)
+* [Spring Boot – 开发者工具](http://web.archive.org/web/20221118095836/https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-devtools)
+* [部署 Spring Boot 应用](http://web.archive.org/web/20221118095836/https://spring.io/blog/2014/03/07/deploying-spring-boot-applications)
+* [Spring MVC – 如何引入 JS 或 CSS 文件](http://web.archive.org/web/20221118095836/https://www.mkyong.com/spring-mvc/spring-mvc-how-to-include-js-or-css-files-in-a-jsp-page/)
+* [Spring Boot Hello World 示例 – JSP](http://web.archive.org/web/20221118095836/https://www.mkyong.com/spring-boot/spring-boot-hello-world-example-jsp/)
 
 <input type="hidden" id="mkyong-current-postId" value="14216">

@@ -1,10 +1,11 @@
+
 # 检测文本边界
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/text/boundaryintro.html`](https://docs.oracle.com/javase/tutorial/i18n/text/boundaryintro.html)
 
 操纵文本的应用程序需要定位文本内的边界。例如，考虑一些文字处理器的常见功能：突出显示一个字符，剪切一个单词，将光标移动到下一个句子，以及在行尾换行一个单词。为了执行这些功能，文字处理器必须能够检测文本中的逻辑边界。幸运的是，您不必编写自己的例程来执行边界分析。相反，您可以利用[`BreakIterator`](https://docs.oracle.com/javase/8/docs/api/java/text/BreakIterator.html)类提供的方法。
 
-## 关于 BreakIterator 类
+## 关于 `BreakIterator` 类
 
 本节讨论了`BreakIterator`类的实例化方法和虚拟光标。
 

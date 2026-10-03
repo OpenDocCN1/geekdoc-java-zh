@@ -1,3 +1,4 @@
+
 # 标准 LDAP 控件
 
 > 原文：[`docs.oracle.com/javase/tutorial/jndi/newstuff/controls-std.html`](https://docs.oracle.com/javase/tutorial/jndi/newstuff/controls-std.html)

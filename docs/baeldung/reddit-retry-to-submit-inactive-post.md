@@ -1,20 +1,21 @@
+
 # 重试向 Reddit 提交没有足够吸引力的帖子
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/reddit-retry-to-submit-inactive-post>
 
-## 1。概述
+## 概述
 
-在 Reddit 上发帖毫无意义。一个帖子可能做得很好，得到很多关注，而另一个可能更好的帖子可能得不到任何喜爱。如何在早期关注这些帖子——如果它们没有获得足够的关注—**快速删除它们并重新提交它们**。
+在 Reddit 上发帖毫无意义。一个帖子可能做得很好，得到很多关注，而另一个可能更好的帖子可能得不到任何喜爱。如何在早期关注这些帖子——如果它们没有获得足够的关注——**快速删除它们并重新提交它们**。
 
 在这篇简短的文章中，我们通过实现一个有趣的功能**来继续[Reddit 案例研究](/web/20211127053914/https://www.baeldung.com/case-study-a-reddit-app-with-spring)，删除并重新提交一篇没有立即引起足够关注的帖子**。
 
-简单的目标是允许用户配置 Reddit 上的投票数足以认为帖子在特定时间间隔内获得了足够的关注度。
+简单的目标是允许用户配置 Reddit 上的投票数，足以认为帖子在特定时间间隔内获得了足够的关注度。
 
-## 2。更多 Reddit 权限
+## 更多 Reddit 权限
 
 首先——我们需要**从 Reddit API 请求额外的权限**——特别是我们需要编辑帖子。
 
-因此，我们将在 Reddit `Resource`中添加`edit`范围:
+因此，我们将在 Reddit `Resource` 中添加 `edit` 范围：
 
 ```java
 @Bean
@@ -26,9 +27,9 @@ public OAuth2ProtectedResourceDetails reddit() {
 }
 ```
 
-## 3。实体和存储库
+## 实体和存储库
 
-现在，让我们在我们的`Post`实体中添加额外的信息:
+现在，让我们在我们的 `Post` 实体中添加额外的信息：
 
 ```java
 @Entity
@@ -41,14 +42,14 @@ public class Post {
 }
 ```
 
-字段:
+字段：
 
-*   **`redditID`**:Reddit 上的帖子 ID，在查看分数和删除帖子时使用
-*   **`noOfAttempts`** :重新提交尝试的最大次数(删除帖子并重新提交)
-*   **`timeInterval`** :检查帖子是否获得足够牵引力的时间间隔
-*   **`minScoreRequired`** :认为成功到可以放弃的最低分数
+- **`redditID`**：Reddit 上的帖子 ID，在查看分数和删除帖子时使用。
+- **`noOfAttempts`**：重新提交尝试的最大次数（删除帖子并重新提交）。
+- **`timeInterval`**：检查帖子是否获得足够牵引力的时间间隔。
+- **`minScoreRequired`**：认为成功到可以放弃的最低分数。
 
-接下来，让我们在我们的`PostRepository`界面中添加一些新的操作，以便在我们需要检查帖子时方便地检索它们:
+接下来，让我们在我们的 `PostRepository` 接口中添加一些新的操作，以便在我们需要检查帖子时方便地检索它们：
 
 ```java
 public interface PostRepository extends JpaRepository<Post, Long> {
@@ -61,9 +62,9 @@ public interface PostRepository extends JpaRepository<Post, Long> {
 }
 ```
 
-## 4。新的预定任务
+## 新的预定任务
 
-现在，让我们在调度程序中定义一个新任务，即重新提交任务:
+现在，让我们在调度程序中定义一个新任务，即重新提交任务：
 
 ```java
 @Scheduled(fixedRate = 3 * 60 * 1000)
@@ -76,9 +77,9 @@ public void checkAndReSubmitPosts() {
 }
 ```
 
-每隔几分钟，这只是简单地重复仍在播放的帖子，如果它们没有得到足够的关注，它会删除它们并再次提交它们。
+每隔几分钟，这只是简单地重复仍在播放的帖子；如果它们没有得到足够的关注，它会删除它们并再次提交它们。
 
-这里是`checkAndReSubmit()`方法:
+这里是 `checkAndReSubmit()` 方法：
 
 ```java
 private void checkAndReSubmit(Post post) {
@@ -117,7 +118,7 @@ private void resetPost(Post post) {
 }
 ```
 
-我们还需要在第一次提交给 Reddit 时跟踪`redditID`:
+我们还需要在第一次提交给 Reddit 时跟踪 `redditID`：
 
 ```java
 private void submitPostInternal(Post post) {
@@ -132,11 +133,11 @@ private void submitPostInternal(Post post) {
 }
 ```
 
-这里的逻辑也很简单——我们只需保存 id 并减少尝试次数计数器。
+这里的逻辑也很简单——我们只需保存 ID 并减少尝试次数计数器。
 
-## 5。获取 Reddit 帖子分数
+## 获取 Reddit 帖子分数
 
-现在，让我们看看如何从 Reddit 获得这篇文章的当前得分:
+现在，让我们看看如何从 Reddit 获得这篇文章的当前得分：
 
 ```java
 private int getPostScore(String redditId) {
@@ -147,14 +148,14 @@ private int getPostScore(String redditId) {
 }
 ```
 
-请注意:
+请注意：
 
-*   当从 Reddit 检索文章信息时，我们需要“`read`”范围
-*   我们向 reddit id 添加“`t3_`”，以获得帖子的全名
+- 当从 Reddit 检索文章信息时，我们需要 `read` 范围。
+- 我们向 Reddit ID 添加 `t3_`，以获得帖子的全名。
 
-## 6。删除 Reddit 帖子
+## 删除 Reddit 帖子
 
-接下来，让我们看看如何使用 id 删除 Reddit 帖子:
+接下来，让我们看看如何使用 ID 删除 Reddit 帖子：
 
 ```java
 private void deletePost(String redditId) {
@@ -165,9 +166,9 @@ private void deletePost(String redditId) {
 }
 ```
 
-## 7。`RedditController`
+## `RedditController`
 
-现在，让我们将新信息添加到控制器中:
+现在，让我们将新信息添加到控制器中：
 
 ```java
 @RequestMapping(value = "/schedule", method = RequestMethod.POST)
@@ -184,11 +185,11 @@ public String schedule(Model model,
 }
 ```
 
-## 8。UI–配置规则
+## UI：配置规则
 
-最后，让我们修改非常简单的时间表，添加并重新提交新的设置:
+最后，让我们修改非常简单的时间表，添加并重新提交新的设置：
 
-```java
+```html
 <label class="col-sm-3">Resubmit Settings</label>
 
 <label>Number of Attempts</label> 
@@ -202,16 +203,16 @@ public String schedule(Model model,
 
 <label>Time interval</label>
 <select name="interval">
-    <option value="0" selected >None</option>
+    <option value="0" selected>None</option>
     <option value="45">45 minutes</option>
     <option value="60">1 hour</option>
     <option value="120">2 hours</option>
 </select>
 
 <label>Min score</label>
-<input type="number"value="0" name="score" required/>
+<input type="number" value="0" name="score" required/>
 ```
 
-## 9。结论
+## 结论
 
 我们正在继续改进这个简单应用程序的功能——我们现在可以向 Reddit 发帖——如果帖子没有很快获得足够的关注——我们可以让系统删除它并重新发帖，让它有更好的表现机会。

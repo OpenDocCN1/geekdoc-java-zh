@@ -1,3 +1,4 @@
+
 # 签署 JAR 文件
 
 > 原文：[`docs.oracle.com/javase/tutorial/security/toolfilex/step3.html`](https://docs.oracle.com/javase/tutorial/security/toolfilex/step3.html)
@@ -10,7 +11,6 @@
 jarsigner -keystore examplestanstore
     -signedjar sContract.jar
     Contract.jar signLegal
-
 ```
 
 系统会提示您输入存储密码和私钥密码。

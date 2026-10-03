@@ -1,45 +1,47 @@
+
 # Spring 数据 MongoDB hello world 示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/mongodb/spring-data-mongodb-hello-world-example/>
 
-在本教程中，我们将向您展示如何使用" [SpringData for MongoDB](http://web.archive.org/web/20201112042503/http://www.springsource.org/spring-data/mongodb) "框架，通过 Spring 的注释和 XML schema 在 MongoDB 中执行 CRUD 操作。
+在本教程中，我们将向您展示如何使用"SpringData for MongoDB"框架，通过 Spring 的注释和 XML schema 在 MongoDB 中执行 CRUD 操作。
 
 **Updated on 1/04/2013**
+
 Article is updated to use latest SpringData v 1.2.0.RELEASE, it was v1.0.0.M2.
 
-使用的工具和技术:
+使用的工具和技术：
 
-1.  spring Data MongoDB–1 . 2 . 0 . release
-2.  弹簧芯–3 . 2 . 2 .释放
-3.  Java Mongo 驱动程序–2 . 11 . 0
-4.  eclipse–4.2
-5.  jdk 1.6
-6.  maven–3 . 0 . 3
+1. spring Data MongoDB–1 . 2 . 0 . release
+2. 弹簧芯–3 . 2 . 2 .释放
+3. Java Mongo 驱动程序–2 . 11 . 0
+4. eclipse–4.2
+5. jdk 1.6
+6. maven–3 . 0 . 3
 
 *P.S Spring 数据要求 JDK 6.0 及以上，Spring Framework 3.0.x 及以上。*
 
-## 1.项目结构
+## 1. 项目结构
 
 一个经典的 Maven 风格的 Java 项目目录结构。
 
-
-
 ![SpringData-helloworld-example](img/083cf876a194514da58dfb61bd101ec4.png)
 
-## 2.属国
+## 2. 属国
 
-需要以下库:
+需要以下库：
 
 ~~**spring-data-mongodb**
-Currently, the “`spring-data-mongodb`” jar is only available in “*http://maven.springframework.org/milestone*“, so, you have to declare this repository also.~~
+
+Currently, the "`spring-data-mongodb`" jar is only available in "*http://maven.springframework.org/milestone*", so, you have to declare this repository also.~~
 
 **更新于 2012 年 13 月 9 日**
+
 `spring-data-mongodb`在 Maven 中央存储库中可用，不再需要 Spring 存储库。
 
-pom.xml
+`pom.xml`
 
 ```java
- <project  
+<project  
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
 	http://maven.apache.org/maven-v4_0_0.xsd">
@@ -110,23 +112,25 @@ pom.xml
 		</plugins>
 	</build>
 
-</project> 
+</project>
 ```
 
-## 3.Spring 配置、注释和 XML
+## 3. Spring 配置、注释和 XML
 
 在这里，我们向您展示了两种配置 Spring 数据和连接到 MongoDB 的方法，分别是通过注释和 XML schema。
 
 Note
+
 Refer to this official reference [Connecting to MongoDB with Spring](http://web.archive.org/web/20201112042503/http://static.springsource.org/spring-data/data-mongodb/docs/current/reference/html/mongo.core.html#mongodb-connectors).
 
-**3.1 注释**
+### 3.1 注释
+
 扩展了`AbstractMongoConfiguration`是最快的方式，它有助于配置你需要启动的一切，像`mongoTemplate`对象。
 
-SpringMongoConfig.java
+`SpringMongoConfig.java`
 
 ```java
- package com.mkyong.config;
+package com.mkyong.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -148,15 +152,15 @@ public class SpringMongoConfig extends AbstractMongoConfiguration {
 	public Mongo mongo() throws Exception {
 		return new MongoClient("127.0.0.1");
 	}
-} 
+}
 ```
 
 或者，我更喜欢这个，更灵活地配置一切。
 
-SpringMongoConfig1.java
+`SpringMongoConfig1.java`
 
 ```java
- package com.mkyong.config;
+package com.mkyong.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -183,22 +187,22 @@ public class SpringMongoConfig1 {
 
 	}
 
-} 
+}
 ```
 
-并载入`AnnotationConfigApplicationContext`:
+并载入`AnnotationConfigApplicationContext`：
 
 ```java
- ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringMongoConfig.class);
-    MongoOperations mongoOperation = (MongoOperations)ctx.getBean("mongoTemplate"); 
+ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringMongoConfig.class);
+MongoOperations mongoOperation = (MongoOperations)ctx.getBean("mongoTemplate");
 ```
 
-**3.2 XML 模式**
+### 3.2 XML 模式
 
-SpringConfig.xml
+`SpringConfig.xml`
 
 ```java
- <beans 
+<beans 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
@@ -216,27 +220,28 @@ SpringConfig.xml
 		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
 	</bean>
 
-</beans> 
+</beans>
 ```
 
-并将其包含在 Spring 的`GenericXmlApplicationContext`:
+并将其包含在 Spring 的`GenericXmlApplicationContext`：
 
 ```java
- ApplicationContext ctx = new GenericXmlApplicationContext("SpringConfig.xml");
-   MongoOperations mongoOperation = (MongoOperations)ctx.getBean("mongoTemplate"); 
+ApplicationContext ctx = new GenericXmlApplicationContext("SpringConfig.xml");
+MongoOperations mongoOperation = (MongoOperations)ctx.getBean("mongoTemplate");
 ```
 
 **So, XML or Annotation?**
-Actually, both are doing the same thing, it’s just based on personal preferences. Personally, I like XML to configure things.
 
-## 4.用户模型
+Actually, both are doing the same thing, it's just based on personal preferences. Personally, I like XML to configure things.
+
+## 4. 用户模型
 
 一个用户对象，annotated @ Document——保存哪个集合。稍后，我们将向您展示如何使用 Spring 数据将该对象绑定到 MongoDB 或从 MongoDB 绑定。
 
-User.java
+`User.java`
 
 ```java
- package com.mkyong.model;
+package com.mkyong.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -253,17 +258,19 @@ public class User {
 
 	//getter, setter, toString, Constructors
 
-} 
+}
 ```
 
-## 5.演示–CRUD 操作
+## 5. 演示–CRUD 操作
 
 完整的示例向您展示了如何使用 Spring 数据在 MongoDB 中执行 CRUD 操作。Spring 数据 API 非常简洁，应该是不言自明的。
 
-App.java
+`App.java`
+
+
 
 ```java
- package com.mkyong.core;
+package com.mkyong.core;
 
 import java.util.List;
 
@@ -323,16 +330,16 @@ public class App {
 
     }
 
-} 
+}
 ```
 
-*输出*
+**输出**
 
 ```java
- 1\. user : User [id=516627653004953049d9ddf0, username=mkyong, password=password123]
+1\. user : User [id=516627653004953049d9ddf0, username=mkyong, password=password123]
 2\. find - savedUser : User [id=516627653004953049d9ddf0, username=mkyong, password=password123]
 3\. updatedUser : User [id=516627653004953049d9ddf0, username=mkyong, password=new password]
-4\. Number of user = 0 
+4\. Number of user = 0
 ```
 
 ## 下载源代码
@@ -341,23 +348,22 @@ Download it – [SpringMongoDB-HelloWorld-Example.zip](http://web.archive.org/we
 
 ## 参考
 
-1.  【MongoDB 的春季数据
-2.  [用 Spring 连接到 MongoDB】](http://web.archive.org/web/20201112042503/http://static.springsource.org/spring-data/data-mongodb/docs/current/reference/html/mongo.core.html#mongodb-connectors)
-3.  [奥雷利春天数据 mongodb 教程](http://web.archive.org/web/20201112042503/http://ofps.oreilly.com/titles/9781449323950/id2318796_07-mongodb.html)
-4.  [又一个好的春季数据 mongodb 教程](http://web.archive.org/web/20201112042503/http://krams915.blogspot.com/2011/02/spring-data-mongodb-tutorial.html)
+1. [MongoDB 的春季数据](http://web.archive.org/web/20201112042503/http://static.springsource.org/spring-data/data-mongodb/docs/current/reference/html/mongo.core.html#mongodb-connectors)
+2. [用 Spring 连接到 MongoDB](http://web.archive.org/web/20201112042503/http://static.springsource.org/spring-data/data-mongodb/docs/current/reference/html/mongo.core.html#mongodb-connectors)
+3. [奥雷利春天数据 mongodb 教程](http://web.archive.org/web/20201112042503/http://ofps.oreilly.com/titles/9781449323950/id2318796_07-mongodb.html)
+4. [又一个好的春季数据 mongodb 教程](http://web.archive.org/web/20201112042503/http://krams915.blogspot.com/2011/02/spring-data-mongodb-tutorial.html)
 
-Tags : [hello world](http://web.archive.org/web/20201112042503/https://mkyong.com/tag/hello-world/) [mongodb](http://web.archive.org/web/20201112042503/https://mkyong.com/tag/mongodb/) [spring-data](http://web.archive.org/web/20201112042503/https://mkyong.com/tag/spring-data/)<input type="hidden" id="mkyong-current-postId" value="8863">
+Tags : [hello world](http://web.archive.org/web/20201112042503/https://mkyong.com/tag/hello-world/) [mongodb](http://web.archive.org/web/20201112042503/https://mkyong.com/tag/mongodb/) [spring-data](http://web.archive.org/web/20201112042503/https://mkyong.com/tag/spring-data/)
 
 ### 相关文章
 
-*   [由于基础科目的限制，你不能](/web/20201112042503/https://mkyong.com/java/due-to-limitations-of-the-basicdbobject-you-cant-add-a-second-and/)
-*   [Spring Data MongoDB:插入文档](/web/20201112042503/https://mkyong.com/mongodb/spring-data-mongodb-insert-document/)
-*   [Spring Data MongoDB:更新文档](/web/20201112042503/https://mkyong.com/mongodb/spring-data-mongodb-update-document/)
-*   [Spring Data MongoDB:查询文档](/web/20201112042503/https://mkyong.com/mongodb/spring-data-mongodb-query-document/)
-*   [Spring Data MongoDB:删除文档](/web/20201112042503/https://mkyong.com/mongodb/spring-data-mongodb-delete-document/)
-
-*   [MongoDB hello world 示例](/web/20201112042503/https://mkyong.com/mongodb/mongodb-hello-world-example/)
-*   [Spring Data MongoDB:保存二进制文件，GridFS exa](/web/20201112042503/https://mkyong.com/mongodb/spring-data-mongodb-save-binary-file-gridfs-example/)
-*   [Spring Data MongoDB remove _ class 列](/web/20201112042503/https://mkyong.com/mongodb/spring-data-mongodb-remove-_class-column/)
-*   [Spring Data MongoDB:获取最后修改的记录(d](/web/20201112042503/https://mkyong.com/mongodb/spring-data-mongodb-get-last-modified-records-date-sorting/)
-*   [Spring Data MongoDB -选择要返回的字段](/web/20201112042503/https://mkyong.com/mongodb/spring-data-mongodb-select-fields-to-return/)
+* [由于基础科目的限制，你不能](/web/20201112042503/https://mkyong.com/java/due-to-limitations-of-the-basicdbobject-you-cant-add-a-second-and/)
+* [Spring Data MongoDB:插入文档](/web/20201112042503/https://mkyong.com/mongodb/spring-data-mongodb-insert-document/)
+* [Spring Data MongoDB:更新文档](/web/20201112042503/https://mkyong.com/mongodb/spring-data-mongodb-update-document/)
+* [Spring Data MongoDB:查询文档](/web/20201112042503/https://mkyong.com/mongodb/spring-data-mongodb-query-document/)
+* [Spring Data MongoDB:删除文档](/web/20201112042503/https://mkyong.com/mongodb/spring-data-mongodb-delete-document/)
+* [MongoDB hello world 示例](/web/20201112042503/https://mkyong.com/mongodb/mongodb-hello-world-example/)
+* [Spring Data MongoDB:保存二进制文件，GridFS exa](/web/20201112042503/https://mkyong.com/mongodb/spring-data-mongodb-save-binary-file-gridfs-example/)
+* [Spring Data MongoDB remove _ class 列](/web/20201112042503/https://mkyong.com/mongodb/spring-data-mongodb-remove-_class-column/)
+* [Spring Data MongoDB:获取最后修改的记录(d](/web/20201112042503/https://mkyong.com/mongodb/spring-data-mongodb-get-last-modified-records-date-sorting/)
+* [Spring Data MongoDB -选择要返回的字段](/web/20201112042503/https://mkyong.com/mongodb/spring-data-mongodb-select-fields-to-return/)

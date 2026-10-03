@@ -1,13 +1,13 @@
+
 # 获取和设置字段值
 
 > 原文：[`docs.oracle.com/javase/tutorial/reflect/member/fieldValues.html`](https://docs.oracle.com/javase/tutorial/reflect/member/fieldValues.html)
 
 给定一个类的实例，可以使用反射来设置该类中字段的值。通常只在特殊情况下进行此操作，当通常方式无法设置值时。由于这种访问通常违反了类的设计意图，应该谨慎使用。
 
-``Book``类演示了如何设置长整型、数组和枚举字段类型的值。获取和设置其他基本类型的方法在[`Field`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html#method_summary)中有描述。
+`Book`类演示了如何设置长整型、数组和枚举字段类型的值。获取和设置其他基本类型的方法在[`Field`](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html#method_summary)中有描述。
 
 ```java
-
 import java.lang.reflect.Field;
 import java.util.Arrays;
 import static java.lang.System.out;
@@ -52,7 +52,6 @@ public class Book {
 	}
     }
 }
-
 ```
 
 这是相应的输出：
@@ -65,10 +64,7 @@ BEFORE:  characters   = [Alice, White Rabbit]
  AFTER:  characters   = [Queen, King]
 BEFORE:  twin         = DEE
  AFTER:  twin         = DUM
-
 ```
-
-* * *
 
 **注意：** 通过反射设置字段的值会带来一定的性能开销，因为必须执行各种操作，如验证访问权限。从运行时的角度来看，效果是相同的，操作与直接在类代码中更改值一样原子。
 
@@ -78,9 +74,6 @@ BEFORE:  twin         = DEE
 int x = 1;
 x = 2;
 x = 3;
-
 ```
 
 使用`Field.set*()`的等效代码可能不会。
-
-* * *

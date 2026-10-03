@@ -1,3 +1,4 @@
+
 # Java 里怎么查质数？[已解决]
 
 > 原文：<https://medium.com/javarevisited/how-to-check-prime-number-in-java-solved-da08dca780c5?source=collection_archive---------3----------------------->

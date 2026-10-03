@@ -1,11 +1,5 @@
+
 # Java Web 服务
-
-
-
-
-
-
-
 
 ## 1. 引言
 
@@ -19,11 +13,9 @@ Web 服务代表了一种新类型的 Web 应用程序，其目的不是向屏�
 
 在本单元中，我们将详细分析 Web 服务的内部工作原理和目的，以及其架构所基于的不同技术和标准。从实践角度来看，我们将学习如何使用 Java / Java EE 实现基于 Web 服务的应用程序。
 
+## 2. 面向服务的架构（SOA）
 
-
-
-
-## 面向服务的架构（SOA）是一组通过集成现有软件模块（服务）来构建应用程序的设计原则。
+面向服务的架构（SOA）是一组通过集成现有软件模块（服务）来构建应用程序的设计原则。
 
 其结果是一个分布式应用程序，该程序集成了不同的程序，每个程序都有不同的实现方式，负责为应用程序添加不同的功能。
 
@@ -33,18 +25,21 @@ Web 服务代表了一种新类型的 Web 应用程序，其目的不是向屏�
 
 从本质上说，构建应用程序简单地涉及组织如何处理对服务的调用。
 
-## 2.1 服务
+### 2.1 服务
 
 服务可以被定义为应用程序函数，它被封装成一个可重用的自治组件，该组件可以在构建其他应用程序时使用。为了让服务能够用于构建 SOA 应用程序，它必须满足以下要求：
 
-- 良好的定义接口：SOA 服务通过接口暴露其功能，接口描述了服务提供的操作以及它们应该接收和返回的信息，同时隐藏了服务的实现细节。
-- 技术独立性：SOA 服务必须能够被任何客户端应用程序使用，而不受实现每个程序时使用的语言、技术以及它们运行平台的影响。
+- **良好的定义接口**：SOA 服务通过接口暴露其功能，接口描述了服务提供的操作以及它们应该接收和返回的信息，同时隐藏了服务的实现细节。
+
+- **技术独立性**：SOA 服务必须能够被任何客户端应用程序使用，而不受实现每个程序时使用的语言、技术以及它们运行平台的影响。
 
 ![](img/index-7_1.jpg)
-![](img/index-7_2.jpg)
-- 消息通信：客户端通过交换包含信息的的消息与服务通信，这些信息的格式应该在服务的接口中描述。
 
-## 2.2 Web 服务
+![](img/index-7_2.jpg)
+
+- **消息通信**：客户端通过交换包含信息的的消息与服务通信，这些信息的格式应该在服务的接口中描述。
+
+### 2.2 Web 服务
 
 Web 服务是一种部署在应用程序服务器上的特殊 SOA 服务，客户端应用程序通过 Web 使用 XML 和 HTTP 标准连接到它。具体来说，Web 服务可以被定义为软件模块，它以方法的形式在 Web 上暴露其功能，客户端应用程序可以通过在 HTTP 请求中发送 XML 文档来调用这些方法（图 2）。
 
@@ -52,7 +47,7 @@ Web 服务是一种部署在应用程序服务器上的特殊 SOA 服务，客�
 
 Web 服务执行其方法后产生的数据将通过 HTTP 响应传递给客户端，同样采用 XML 格式。Web 服务使用 XML 与客户端应用程序通信的能力允许它们完全相互独立。这意味着 Web 服务可以用 Java 实现，而应用程序可以用 C 或 VB 语言编写。在这种情况下，由 Java 服务生成的 XML 文档可以被 C/VB 应用程序正确解释，反之亦然。
 
-## 2.3 Web 服务的结构
+### 2.3 Web 服务的结构
 
 从技术角度来看，Web 服务只是部署在应用程序服务器上的 Web 应用程序。
 
@@ -60,14 +55,15 @@ Web 服务执行其方法后产生的数据将通过 HTTP 响应传递给客户�
 
 该应用程序由两个定义良好的层组成，如图 3 所示：
 
-- **应用逻辑：** 包含用你选择的任何语言实现的 Web 服务所暴露的方法。在 Java/Java EE 应用程序的情况下，此层由 `EJBs` 或标准类实现。
-- **XML 适配器：** 负责使用服务的方法调用信息解释接收到的 HTTP 请求中的 XML 文档。一旦文档被解密，并从中提取出我们想要调用的服务的方法名和参数，该组件将对应用层对象执行相应的调用。因此，根据这些对象返回的数据，XML 适配器构建出 XML 响应文档，该文档将通过 HTTP 消息的正文发送给客户端。
+- **应用逻辑**：包含用你选择的任何语言实现的 Web 服务所暴露的方法。在 Java/Java EE 应用程序的情况下，此层由 `EJBs` 或标准类实现。
+
+- **XML 适配器**：负责使用服务的方法调用信息解释接收到的 HTTP 请求中的 XML 文档。一旦文档被解密，并从中提取出我们想要调用的服务的方法名和参数，该组件将对应用层对象执行相应的调用。因此，根据这些对象返回的数据，XML 适配器构建出 XML 响应文档，该文档将通过 HTTP 消息的正文发送给客户端。
 
 在 Java/Java EE 应用程序中，此层将由 `Servlets` 和 `JSPs` 实现。尽管，为了帮助构建它们，Java EE 包含一个名为 `JAX-RPC` 的 XML API，通过它可以在 Java 对象和 XML 文档之间以及反之创建简单的映射，便于对其进行操作。
 
 ![](img/index-9_1.jpg)
 
-# 3. Web 服务架构标准
+## 3. Web 服务架构标准
 
 除了构成所有 Web 服务架构的基础标准 XML 和 HTTP 之外，由 W3C 组织管理的国际社区也有必要定义额外的标准，以解决基于此类模式实现应用程序时出现的问题。例如，在与 Web 服务交互时使用的 XML 文档如何结构，或者服务应该如何定义其接口。
 
@@ -77,7 +73,7 @@ Web 服务执行其方法后产生的数据将通过 HTTP 响应传递给客户�
 - WSDL
 - UDDI
 
-## 3.1 SOAP
+### 3.1 SOAP
 
 SOAP（简单对象访问协议）是一种用于在计算机网络中传输 XML 消息的协议规范。SOAP 定义了 XML 文档应该具备的格式，以便在 Web 服务和客户端应用程序之间交换信息，即它建立了用于调用服务方法的 XML 文档结构，以及由服务生成的包含响应的文档结构（图 4）。
 
@@ -85,12 +81,13 @@ SOAP（简单对象访问协议）是一种用于在计算机网络中传输 XML
 
 尽管 SOAP 独立于使用的网络传输协议，但当前的规范（SOAP 1.2）专注于在请求/响应场景中使用 HTTP，以及用于异步调用服务方法的 JMS。
 
-### 3.1.1 SOAP 消息
+#### 3.1.1 SOAP 消息
 
 由 SOAP 标准定义的请求和响应 XML 文档被称为 SOAP 消息。一个 SOAP 消息由两部分组成：
 
-- **头部（Header）：** 包括用于中间应用程序的可控制信息。
-- **主体（Body）：** 包含消息本身，即从一个应用程序传输到另一个应用程序的信息。
+- **头部（Header）**：包括用于中间应用程序的可控制信息。
+
+- **主体（Body）**：包含消息本身，即从一个应用程序传输到另一个应用程序的信息。
 
 XML SOAP 文档的结构如下：
 
@@ -107,9 +104,11 @@ XML SOAP 文档的结构如下：
 
 从这里我们可以看到命名空间中有三个主要元素：`http://schemas.xmlsoap.org/envelope/`
 
-- **Envelope（节点）：** 代表所有 SOAP 文档的根元素。
-- **Header（头部）：** 一个可选元素，包含头部参数。
-- **Body（主体）：** 强制性的 `body` 元素包含消息内容。这包括特定于应用程序元素，描述 Web 服务与客户端应用程序之间交换的信息。
+- **Envelope（节点）**：代表所有 SOAP 文档的根元素。
+
+- **Header（头部）**：一个可选元素，包含头部参数。
+
+- **Body（主体）**：强制性的 `body` 元素包含消息内容。这包括特定于应用程序元素，描述 Web 服务与客户端应用程序之间交换的信息。
 
 除了这些应用程序元素，SOAP 规范还允许在 `body` 中使用 `fault` 元素用于错误管理。
 
@@ -144,23 +143,19 @@ XML SOAP 文档的结构如下：
 </soapenv:Envelope>
 ```
 
-
-
-
-
 在上述内容中我们可以看到 `body` 结构由一个根元素组成，通常称为 `service_nameResponse`，它包含一个持有返回值的子元素。与请求文档一样，响应正体中包含的元素也定义在应用程序的命名空间中。
 
-### 3.1.2. SOAP 消息类型
+#### 3.1.2 SOAP 消息类型
 
 根据 Web 服务处理信息的方式，分为两种 SOAP 消息样式。
 
-#### 3.1.2.1. RPC 消息
+##### 3.1.2.1 RPC 消息
 
-RPC 消息基于一种名为**远程过程调用 (Remote Procedure Call, RPC)** 的交互类型，其中 Web 服务的请求 XML 文档代表对方法或过程调用以及相应的输入参数，而作为响应生成的 XML 文档则代表该方法的返回值。
+RPC 消息基于一种名为**远程过程调用（Remote Procedure Call, RPC）**的交互类型，其中 Web 服务的请求 XML 文档代表对方法或过程调用以及相应的输入参数，而作为响应生成的 XML 文档则代表该方法的返回值。
 
 这是最简单且常见的 Web 服务类型，客户端和服务之间进行同步通信。
 
-#### 3.1.2.2. 文档导型消息
+##### 3.1.2.2 文档导型消息
 
 此类文档的 `body` 可以包含一个或多个子元素，根据其所代表的应用程序进行结构化。
 
@@ -168,7 +163,7 @@ RPC 消息基于一种名为**远程过程调用 (Remote Procedure Call, RPC)** 
 
 此类文档的一个示例可以用于处理订单的 Web 服务。在这种情况下，客户端向 Web 服务发送一个 XML 文档，其中包含购买的产品代码、银行详情和送货地址。一旦消息被解码，Web 服务就会开始执行各项任务，如检查客户端的银行详情、通知分销商等。最后，Web 服务发送一个带有确认或拒绝购买订单的响应文档。
 
-### 3.1.3. 错误消息
+#### 3.1.3 错误消息
 
 在处理 SOAP 请求时可能会发生错误，在这种情况下，应通过发送名为 SOAP 错误的特殊消息来通知客户端应用程序。
 
@@ -176,16 +171,19 @@ RPC 消息基于一种名为**远程过程调用 (Remote Procedure Call, RPC)** 
 
 以下是 `<fault>` 的子元素：
 
-- `faultcode`: 错误源。可以具有以下四个值之一：
-    - `mustUnderstand`: 表示文档头中被标记为 `mustUnderstand` 的值无法被目标节点或某些中间节点解释。
-    - `versionmismatch`: 响应消息中指定的 SOAP 版本未被某些节点识别。
-    - `server`: 服务器在处理消息时发生了了错误。
-    - `client`: 由于客户端请求消息内部错误导致了错误。
-- `faultstring`: 解释性错误消息。
-- `faultfactor`: 表示引起错误的角色。
-- `detail`: 特定于应用程序的错误信息。仅当错误发生在 `body` 而非 `header` 时，该元素存在。
+- `faultcode`：错误源。可以具有以下四个值之一：
+  - `mustUnderstand`：表示文档头中被标记为 `mustUnderstand` 的值无法被目标节点或某些中间节点解释。
+  - `versionmismatch`：响应消息中指定的 SOAP 版本未被某些节点识别。
+  - `server`：服务器在处理消息时发生了了错误。
+  - `client`：由于客户端请求消息内部错误导致了错误。
 
-## 3.2 WSDL
+- `faultstring`：解释性错误消息。
+
+- `faultfactor`：表示引起错误的角色。
+
+- `detail`：特定于应用程序的错误信息。仅当错误发生在 `body` 而非 `header` 时，该元素存在。
+
+### 3.2 WSDL
 
 WSDL（Web 服务描述语言）是一种基于 XML 的语言，用于描述 Web 服务的接口。Web 服务提供者使用这种语言通过扩展名为 `.wsdl` 的 XML 文档来定义服务暴露的方法以及它们接收和返回的数据。
 
@@ -222,15 +220,16 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 </schema>
 </wsdl:types>
 ```
-*(注：源文件中提供的 XML 已被截断/不完整；根据指令保留了结构。)*
 
-#### 3.2.1. WSDL 文档的结构
+*（注：源文件中提供的 XML 已被截断/不完整；根据指令保留了结构。）*
+
+#### 3.2.1 WSDL 文档的结构
 
 每个 WSDL 文档由根元素 `definitions` 组成，其中声明了文档中使用的不同命名空间（图 5）。
 
-为了完成服务的定义，*definitions* 中包含的其余子元素是 *types, message, portType, binding and service*。
+为了完成服务的定义，`definitions` 中包含的其余子元素是 `types`、`message`、`portType`、`binding` 和 `service`。
 
-#### 3.2.1.1. types
+##### 3.2.1.1 types
 
 此元素定义了服务将使用的数据类型，包括方法参数及其返回值。在定义 Web 服务的数据类型时，使用了 XML 架构（XML Schema）：
 
@@ -245,9 +244,9 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 </wsdl:types>
 ```
 
-#### 3.2.1.2. message
+##### 3.2.1.2 message
 
-每个 **message** 元素定义了 Web 服务与其客户端之间交换的信息消息，这些消息由 *types* 中定义的数据组成。事实上，每个消息都包含一个子元素 *part*，其中指定了它所包含的数据类型。
+每个 `message` 元素定义了 Web 服务与其客户端之间交换的信息消息，这些消息由 `types` 中定义的数据组成。事实上，每个消息都包含一个子元素 `part`，其中指定了它所包含的数据类型。
 
 ```xml
 <wsdl:message name="loginRequest">
@@ -258,16 +257,12 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 </wsdl:message>
 ```
 
-
-
-
-
 ```xml
 <wsdl:part element="intf:loginResponse" name="parameters"/>
 </wsdl:message>
 ```
 
-### 3.2.1.3. portType
+##### 3.2.1.3 portType
 
 `portType` 元素描述了 Web 服务暴露出的操作。实际上，每个操作都由 `operation` 元素定义，并与一个输入消息和一个输出消息相关：
 
@@ -280,9 +275,11 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 </wsdl:portType>
 ```
 
-### 3.2.1.4. binding
+##### 3.2.1.4 binding
 
 一旦定义了 Web 服务将执行的操作，就应该将它们绑定到特定的协议。这是通过 `binding` 元素实现的，在其中我们可以指定传输类型（SOAP 或 JMS）、执行特定操作的网络访问点以及样式（document 或 RPC）：
+
+
 
 ```xml
 <wsdl:binding name="OperationsSoapBinding" type="intf:Operations">
@@ -302,7 +299,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 ### 3.2.1.5. service
 
-最后，我们需要在 `service` 元素中指定 Web 服务的地址或入口。在 `port` 子元素中，指定了每个 `binding` 元素的地址。在 SOAP 的情况下，`address` 元素中的 `location` 属性包含了实际地址。
+最后，我们需要在`service`元素中指定 Web 服务的地址或入口。在`port`子元素中，指定了每个`binding`元素的地址。在 SOAP 的情况下，`address`元素中的`location`属性包含了实际地址。
 
 ```xml
 <wsdl:service name="OperationsService">
@@ -318,8 +315,9 @@ UDDI（通用描述、发现与集成项目）规范的目的是定义在与 UDD
 
 UDDI 注册表是一种“金页/黄页”风格的数据库，存储了与发布的 Web 服务相关的信息。这意味着两种类型的应用程序可以访问此类注册表：
 
-*   **服务提供者**：发布服务。UDDI 提供了机制，使提供者能够注册其 Web  WSDL 描述和其他相关信息。
-*   **服务消费者**：使用注册表定位服务并使用该服务（服务绑定）。UDDI 支持服务搜索机制。
+* **服务提供者**：发布服务。UDDI 提供了机制，使提供者能够注册其 Web WSDL 描述和其他相关信息。
+
+* **服务消费者**：使用注册表定位服务并使用该服务（服务绑定）。UDDI 支持服务搜索机制。
 
 对于发布、编辑和搜索，使用 SOAP 消息来访问 UDDI 注册表。
 
@@ -327,7 +325,7 @@ UDDI 注册表是一种“金页/黄页”风格的数据库，存储了与发�
 
 识别构成 Web 服务注册条目的 XML 数据结构类型。UDDI XML 架构定义了四种基本数据类型，描述了存储在 UDDI 注册表中的信息。这些数据通过以下元素供所有人可见：
 
-*   **businessEntity**：描述提供服务的实体的信息。这些信息包括实体的名称、描述、提供的服务列表、类别以及可用于搜索的标识列表（图 6）。
+* **businessEntity**：描述提供服务的实体的信息。这些信息包括实体的名称、描述、提供的服务列表、类别以及可用于搜索的标识列表（图 6）。
 
 ```xml
 <businessEntity businessKey="35AF7F00-1419-11D6-A0DC-000C0E00ACDD" authorizedName="0100002CAL" operator="www-3.ibm.com/services/uddi">
@@ -344,9 +342,10 @@ UDDI 注册表是一种“金页/黄页”风格的数据库，存储了与发�
   </businessServices>
 </businessEntity>
 ```
+
 **图 6。**
 
-*   **businessService**：识别由实体提供的 Web 服务。由于一个实体可以提供多个 Web 服务，因此一个 `businessEntity` 可以包含多个 `businessService` 元素，所有这些元素都封装在 `businessServices` 中。每个 `businessService` 条目都包含服务的描述，以及可选的所属所属的类别列表。`businessService` 的主子元素是 `bindingTemplates`，它提供了绑定到服务的技术信息。
+* **businessService**：识别由实体提供的 Web 服务。由于一个实体可以提供多个 Web 服务，因此一个`businessEntity`可以包含多个`businessService`元素，所有这些元素都封装在`businessServices`中。每个`businessService`条目都包含服务的描述，以及可选的所属类别列表。`businessService`的主子元素是`bindingTemplates`，它提供了绑定到服务的技术信息。
 
 ```xml
 <businessServices>
@@ -358,11 +357,14 @@ UDDI 注册表是一种“金页/黄页”风格的数据库，存储了与发�
   </businessService>
 </businessServices>
 ```
+
 **图 7。**
 
-*   **bindingTemplate**：每个 `bindingTemplates` 由一个或多个 `bindingTemplate` 元素组成。`bindingTemplate` 元素提供两种信息：
-    *   技术规范，例如用于与服务通信的协议。
-    *   访问点，即可以调用该服务的 URL。
+* **bindingTemplate**：每个`bindingTemplates`由一个或多个`bindingTemplate`元素组成。`bindingTemplate`元素提供两种信息：
+
+  * 技术规范，例如用于与服务通信的协议。
+
+  * 访问点，即可以调用该服务的 URL。
 
 ```xml
 <wsdl:portType name="Operations">
@@ -372,9 +374,10 @@ UDDI 注册表是一种“金页/黄页”风格的数据库，存储了与发�
   </wsdl:operation>
 </wsdl:portType>
 ```
+
 **图 8。**
 
-*   **tModel**：基本上，`tModel` 包含了 WSDL 文档地址。除了之外，`overviewDoc` 包含了服务。服务所属类别可以包含在 `categoryBag` 中。
+* **tModel**：基本上，`tModel`包含了 WSDL 文档地址。除此之外，`overviewDoc`包含了服务。服务所属类别可以包含在`categoryBag`中。
 
 ```xml
 <tModel businessKey="35AF7F00-1419-11D6-A0DC-000C0E00ACDD" authorizedName="0100002CAL" operator="www-3.ibm.com/services/uddi">
@@ -389,9 +392,10 @@ UDDI 注册表是一种“金页/黄页”风格的数据库，存储了与发�
   </categoryBag>
 </tModel>
 ```
+
 **图 9。**
 
-可以看出 `businessEntity`、`businessService` 和 `tModel` 结构可以归类在 `categoryBag` 指定列表中，结构所属的每个类别由子元素 `keyedReference` 定义。
+可以看出`businessEntity`、`businessService`和`tModel`结构可以归类在`categoryBag`指定列表中，结构所属的每个类别由子元素`keyedReference`定义。
 
 ### 3.3.2. UDDI API
 
@@ -401,33 +405,26 @@ UDDI 注册表是一种“金页/黄页”风格的数据库，存储了与发�
 
 | 函数 | 类别 |
 | :--- | :--- |
-| find_business | Inquiry |
-| find_service | Inquiry |
-| find_binding | Inquiry |
-| find_tModel | Inquiry |
-| get_businessDetail | Inquiry |
-| get_serviceDetail | Inquiry |
-| get_bindingDetail | Inquiry |
-| get_tModelDetail | Inquiry |
-| save_business | Publication |
-| save_service | Publication |
-| save_binding | Publication |
-| save_tModel | Publication |
-| delete_business | Publication |
-
-
-
-
-
-# 发布
-
-- delete_service
-- delete_binding
-- delete_tModel
+| `find_business` | Inquiry |
+| `find_service` | Inquiry |
+| `find_binding` | Inquiry |
+| `find_tModel` | Inquiry |
+| `get_businessDetail` | Inquiry |
+| `get_serviceDetail` | Inquiry |
+| `get_bindingDetail` | Inquiry |
+| `get_tModelDetail` | Inquiry |
+| `save_business` | Publication |
+| `save_service` | Publication |
+| `save_binding` | Publication |
+| `save_tModel` | Publication |
+| `delete_business` | Publication |
+| `delete_service` | Publication |
+| `delete_binding` | Publication |
+| `delete_tModel` | Publication |
 
 ### 图. 10.
 
-要从应用程序调用这些函数，你应该发送在 `body` 中包含适当内容的 SOAP 消息。例如，要查找一家名为“Shop”的公司，你需要在 `body` 中包含图 11 所示的 XML 块。
+要从应用程序调用这些函数，你应该发送在`body`中包含适当内容的 SOAP 消息。例如，要查找一家名为“Shop”的公司，你需要在`body`中包含图 11 所示的 XML 块。
 
 ```xml
 <find_business generic=”2.0” xmlns=”urn:uddi-org:api_v2">
@@ -437,9 +434,9 @@ UDDI 注册表是一种“金页/黄页”风格的数据库，存储了与发�
 
 ### 图. 11.
 
-注册表生成的响应也是一个 SOAP 文档，其 `body` 中包含一个 XML 块，其中包含了通过搜索准则找到的信息。
+注册表生成的响应也是一个 SOAP 文档，其`body`中包含一个 XML 块，其中包含了通过搜索准则找到的信息。
 
-对于图 12 中的消息，注册表将生成一个包含 `businessList` 元素的响应，其中将出现一组 `businessInfo` 子元素，每个元素代表一个名为 Shop 的注册公司。
+对于图 12 中的消息，注册表将生成一个包含`businessList`元素的响应，其中将出现一组`businessInfo`子元素，每个元素代表一个名为 Shop 的注册公司。
 
 ```xml
 <businessList generic="2.0" operator="uddi.sourceOperator" truncated="true" xmlns="urn:uddi-org:api_v2">
@@ -463,7 +460,7 @@ UDDI 注册表是一种“金页/黄页”风格的数据库，存储了与发�
 
 # 4. 使用 JAVA / JAVA EE 基于 Web 服务的应用程序实现
 
-如前所述，Java EE 平台提供了一个便于构建基于 Web 服务应用程序的 API，称为 JAX-RPC。然而，最近大多数开发环境都包含了助手，它们极大地简化了构建 Web 服务的工作，将过程简化为为实现应用程序逻辑层。
+如前所述，Java EE 平台提供了一个便于构建基于 Web 服务应用程序的 API，称为 JAX-RPC。然而，最近大多数开发环境都包含了助手，它们极大地简化了构建 Web 服务的工作，将过程简化为实现应用程序逻辑层。
 
 NetBeans 也是如此。使用此 IDE，程序员只需要负责实现带有所需业务方法的 EJB 或类，而让 NetBeans 动态生成描述接口的 XML 适配器和 WSDL 文档。
 
@@ -472,14 +469,16 @@ NetBeans 也是如此。使用此 IDE，程序员只需要负责实现带有所�
 借助 NetBeans 的帮助，我们可以在应用程序服务器中创建并部署 Web 服务。我们的操作方法取决于我们已经拥有什么，这为我们提供了三个起点：
 
 - **从零开始创建 Web 服务**：不使用任何现有的应用程序逻辑或任何类型的规范，而是从零开始创建 Web 服务。
+
 - **从现有的 EJB 创建 Web 服务**：应用程序逻辑已实现在 EJB 中，我们希望将其暴露为 Web 服务。
+
 - **从 WSDL 文档创建 Web 服务**：Web 服务应该暴露的方法描述已在 WSDL 接口中定义好。
 
 ### 4.1.1. 从零开始创建 Web 服务
 
-为了解释使用 NetBeans 创建 Web 服务的过程，我们将开发一个名为 `CalcWS` 的简单示例 Web 服务，它将暴露一个名为 `factorial` 的方法，该方法的作用是计算传入参数的数字阶乘。
+为了解释使用 NetBeans 创建 Web 服务的过程，我们将开发一个名为`CalcWS`的简单示例 Web 服务，它将暴露一个名为`factorial`的方法，该方法的作用是计算传入参数的数字阶乘。
 
-首先，由于所有 Web 服务都是 Web 应用程序，我们将创建一个名为 `ExampleProyectWS` 的 Web 应用程序类型项目（图 13）。
+首先，由于所有 Web 服务都是 Web 应用程序，我们将创建一个名为`ExampleProyectWS`的 Web 应用程序类型项目（图 13）。
 
 ### 图. 13.
 
@@ -487,13 +486,13 @@ NetBeans 也是如此。使用此 IDE，程序员只需要负责实现带有所�
 
 出于部署目的，我们可以使用 Tomcat 或 GlassFish 作为应用程序服务器。
 
-项目创建完成后，使用鼠标在项目（Project）窗口中右键点击，从弹出菜单中选择 `New -> Web Service`。将出现图 14 所示的对话框。
+项目创建完成后，使用鼠标在项目（Project）窗口中右键点击，从弹出菜单中选择`New -> Web Service`。将出现图 14 所示的对话框。
 
 ### 图. 14.
 
 在这个对话框中，我们应该输入 Web 服务名称和它将所在的包，同时选择是从零开始创建 Web 服务（默认）还是从现有的会话 bean EJB。
 
-假设我们从零开始创建 Web 服务，点击“Finish”（完成）后，我们将在 NetBeans 编辑器中看到 `CalcWS` 类（图 15）。在这里，我们实现想要在 Web 服务中暴露的方法。
+假设我们从零开始创建 Web 服务，点击“Finish”（完成）后，我们将在 NetBeans 编辑器中看到`CalcWS`类（图 15）。在这里，我们实现想要在 Web 服务中暴露的方法。
 
 ```java
 package services;
@@ -509,21 +508,22 @@ public class CalcWS {
 ### 图. 15.
 
 ![](img/index-24_1.jpg) 
+
 ![](img/index-24_2.jpg)
 
-正如我们所见，带有服务方法的实现类是一个普通的 Java 类，区别在于它必须按照 `javax.jws.WebService` 包定义的声明带有 `@WebService` 注解。使用此注解，运行时环境将生成所有必要的内容，以便类方法被暴露为 Web 服务方法。
+正如我们所见，带有服务方法的实现类是一个普通的 Java 类，区别在于它必须按照`javax.jws.WebService`包定义的声明带有`@WebService`注解。使用此注解，运行时环境将生成所有必要的内容，以便类方法被暴露为 Web 服务方法。
 
-在编辑器窗口的最上方有一个名为 `Design`设计）的按钮，允许你切换到类的设计视图（图 16）。
+在编辑器窗口的最上方有一个名为`Design`（设计）的按钮，允许你切换到类的设计视图（图 16）。
 
 ### 图. 16.
 
-使用 `Add Operation`添加操作）按钮，我们可以图形化地添加服务方法，输入方法名、参数和返回类型（图 17）。
+使用`Add Operation`（添加操作）按钮，我们可以图形化地添加服务方法，输入方法名、参数和返回类型（图 17）。
 
 ### 图. 17.
 
 ![](img/index-25_1.jpg)
 
-点击 OK 按钮返回到我们的类源码视图，我们可以看到阶乘方法的声明，在这里我们可以确认方法和参数都标记了 `@WebMethod` 和 `@WebParam`。
+点击 OK 按钮返回到我们的类源码视图，我们可以看到阶乘方法的声明，在这里我们可以确认方法和参数都标记了`@WebMethod`和`@WebParam`。
 
 ```java
 package services;
@@ -545,13 +545,14 @@ public class CalcWS {
 }
 ```
 
-这就是使用 NetBeans 实现 Web 服务所需的所有操作。接下来我们通过 `Deploy` 弹出菜单将应用程序部署到应用程序服务器。一旦部署完成，Web 服务即可供客户端使用。从 NetBeans 内部我们可以测试 Web 服务。要这样做，在 Web 服务文件夹内部，右键点击我们的 Web 服务并从弹出菜单中选择 `Test Web Service`（图 18）。
+这就是使用 NetBeans 实现 Web 服务所需的所有操作。接下来我们通过`Deploy`弹出菜单将应用程序部署到应用程序服务器。一旦部署完成，Web 服务即可供客户端使用。从 NetBeans 内部我们可以测试 Web 服务。要这样做，在 Web 服务文件夹内部，右键点击我们的 Web 服务并从弹出菜单中选择`Test Web Service`（图 18）。
 
-测试 Web 服务时，NetBeans 打开一个浏览器实例向 Web 服务发送请求，并在 URL 中包含 `tester` 参数。给定此参数，应用程序知道这是来自浏览器的请求，并生成一个允许选择要执行的方法并输入参数的测试页面（图 19）。
+测试 Web 服务时，NetBeans 打开一个浏览器实例向 Web 服务发送请求，并在 URL 中包含`tester`参数。给定此参数，应用程序知道这是来自浏览器的请求，并生成一个允许选择要执行的方法并输入参数的测试页面（图 19）。
 
 ### 图. 18.
 
 ![](img/index-26_1.jpg)
+
 ![](img/index-26_2.jpg)
 
 ### 图. 19.
@@ -564,7 +565,9 @@ public class CalcWS {
 
 在本次练习中，我们将开发一个通过数据库验证用户的 Web 服务，该服务可以在许多其他需要相同功能的应用程序中重用。
 
-首先，在我们创建了 Web 服务将所在的应用程序后，我们将创建一个封装应用程序数据访问逻辑的类。该类的源代码（命名为 `Operations`）所示：
+首先，在我们创建了 Web 服务将所在的应用程序后，我们将创建一个封装应用程序数据访问逻辑的类。该类的源代码（命名为`Operations`）所示：
+
+
 
 ```java
 package model;
@@ -602,10 +605,6 @@ public class Operations {
     }
 }
 ```
-
-
-
-
 
 ```java
 catch(ClassNotFoundException ex){
@@ -646,7 +645,7 @@ public boolean login(String user, String password){
 }
 ```
 
-从这里开始，按照上一节概述的步骤，我们将创建一个名为 `ValidationsWS` 的 Web 服务，它暴露一个 `login()` 方法，该方法利用 `Operations` 类检查用户是否存在于数据库中。Web 服务的实现类源码应该如下所示：
+从这里开始，按照上一节概述的步骤，我们将创建一个名为`ValidationsWS`的 Web 服务，它暴露一个`login()`方法，该方法利用`Operations`类检查用户是否存在于数据库中。Web 服务的实现类源码应该如下所示：
 
 ```java
 package service;
@@ -681,9 +680,9 @@ public class ValidationsWS {
 
 #### 4.1.1.1 复杂返回类型
 
-Web 服务方法不仅限于返回基本类型，它们还可以返回复杂类型。对于用 Java 实现的 Web 服务，方法可以返回 `JavaBean` 类型对象，这意味着从 SOAP 响应的角度来看，它是一个包含一组 XML 子元素的条目，这些元素代表了 bean 的每个字段。
+Web 服务方法不仅限于返回基本类型，它们还可以返回复杂类型。对于用 Java 实现的 Web 服务，方法可以返回`JavaBean`类型对象，这意味着从 SOAP 响应的角度来看，它是一个包含一组 XML 子元素的条目，这些元素代表了 bean 的每个字段。
 
-例如，假设我们想为上一个练习中的 Web 服务添加一个名为 `loginClient` 的新方法，该方法返回的不是简单的 `Boolean`，而是与客户端相关的完整数据集，例如用户、密码和电子邮件。第一要工作是实现一个名为 `Client` 的类，并带有一个封装所需字段的默认构造函数。该类的代码可以如下：
+例如，假设我们想为上一个练习中的 Web 服务添加一个名为`loginClient`的新方法，该方法返回的不是简单的`Boolean`，而是与客户端相关的完整数据集，例如用户、密码和电子邮件。第一要工作是实现一个名为`Client`的类，并带有一个封装所需字段的默认构造函数。该类的代码可以如下：
 
 ```java
 package beans;
@@ -725,7 +724,7 @@ public class Client {
 }
 ```
 
-下一步一步是修改 `Operations` 类以包含以下 `loginClient()` 方法：
+下一步一步是修改`Operations`类以包含以下`loginClient()`方法：
 
 ```java
 public Client loginClient(String user, String password){
@@ -786,9 +785,9 @@ public Client loginClient(
 
 ### 4.1.2 从 EJB 创建 Web 服务
 
-如果业务逻辑实现在 `EJB` 中，我们可以创建一个 Web 服务，其方法将调用重定向到 `EJB` 的方法，从而暴露任何应用程序的组件逻辑。第一要工作是在 IDE 中打开我们已经定义 `EJB` 模块的企业项目。
+如果业务逻辑实现在`EJB`中，我们可以创建一个 Web 服务，其方法将调用重定向到`EJB`的方法，从而暴露任何应用程序的组件逻辑。第一要工作是在 IDE 中打开我们已经定义`EJB`模块的企业项目。
 
-例如，假设我们有一个名为 `Calculator-ejb` 的简单 `EJB` 模块，其中一个无状态会话 EJB 暴露两个方法：一个计算两个数字之和，另一个计算它们的乘积。实现组件的源码如下：
+例如，假设我们有一个名为`Calculator-ejb`的简单`EJB`模块，其中一个无状态会话 EJB 暴露两个方法：一个计算两个数字之和，另一个计算它们的乘积。实现组件的源码如下：
 
 ```java
 package ejbs;
@@ -806,7 +805,7 @@ public class Calculator implements CalculatorLocal {
 }
 ```
 
-为了创建“封装” `EJB` 方法的 Web 服务，我们创建一个 Web 应用，可以在与 `EJB` 相同的应用程序中，也可以作为一个独立的应用程序。接下来，我们按照之前创建 Web 服务的步骤操作，但在进入 `New Web Service` 对话框时，我们应该选择 `Create Web Service From Session Bean` ，并点击 `browse` 按钮选择实现应用程序逻辑的会话 bean。
+为了创建“封装”`EJB`方法的 Web 服务，我们创建一个 Web 应用，可以在与`EJB`相同的应用程序中，也可以作为一个独立的应用程序。接下来，我们按照之前创建 Web 服务的步骤操作，但在进入`New Web Service`对话框时，我们应该选择`Create Web Service From Session Bean`，并点击`browse`按钮选择实现应用程序逻辑的会话 bean。
 
 生成的 Web 服务类代码如下：
 
@@ -837,11 +836,11 @@ public class CalculatorWS {
 
 ### 4.1.3 从 WSDL 文档创建 Web 服务
 
-虽然自底向的开发方法更为常见（即从预定义的方法集创建 Web 服务），但在其他情况下需要所谓的自顶向的开发方法。在自顶向的开发中，起点是描述我们想要实现的 Web 服务功能的 `WSDL` 接口，我们据此开发 Web 服务的方法代码和 XML 适配器。
+虽然自底向的开发方法更为常见（即从预定义的方法集创建 Web 服务），但在其他情况下需要所谓的自顶向的开发方法。在自顶向的开发中，起点是描述我们想要实现的 Web 服务功能的`WSDL`接口，我们据此开发 Web 服务的方法代码和 XML 适配器。
 
-在 NetBeans 中，从 `WSDL` 接口构建 Web 服务实现类非常简单。要这样做，从项目弹出菜单中选择 `New -> Web Service From WSDL` 选项，这将打开一个对话框，除了输入 Web 服务名称外，我们还需要输入定义其方法的 WSDL 文档地址。
+在 NetBeans 中，从`WSDL`接口构建 Web 服务实现类非常简单。要这样做，从项目弹出菜单中选择`New -> Web Service From WSDL`选项，这将打开一个对话框，除了输入 Web 服务名称外，我们还需要输入定义其方法的 WSDL 文档地址。
 
-点击 `Finish` 后，将生成一个带有 `@WebService` 注解的类，包含根据 `WSDL` 文档规范 Web 服务应该暴露的方法：
+点击`Finish`后，将生成一个带有`@WebService`注解的类，包含根据`WSDL`文档规范 Web 服务应该暴露的方法：
 
 ```java
 @WebService(serviceName = "OperationsWS",
@@ -850,10 +849,6 @@ endpointInterface = "services.Operations",
 targetNamespace = "http://service",
 wsdlLocation = "WEB-INF/wsdl/service_from_wsdl/Operations.wsdl")
 ```
-
-
-
-
 
 ```java
 public class service_from_wsdl {
@@ -867,7 +862,7 @@ public class service_from_wsdl {
 
 ## 4.2. 开发 Web 服务的客户端应用程序
 
-正如我们之前在 Web 服务中所看到的，在客户端应用程序中也存在两个独立的、定义良好的模块。一方面，我们有应用程序逻辑，即使用 Web 服务的方法执行应用程序特定任务的程序部分。另一方面，我们有一个与服务交互的模块，其任务是编码和解码 SOAP 消息。这个模块被称为 `proxy`（代理）（见图 23）。
+正如我们之前在 Web 服务中所看到的，在客户端应用程序中也存在两个独立的、定义良好的模块。一方面，我们有应用程序逻辑，即使用 Web 服务的方法执行应用程序特定任务的程序部分。另一方面，我们有一个与服务交互的模块，其任务是编码和解码 SOAP 消息。这个模块被称为`proxy`（代理）（见图 23）。
 
 **图 23。**
 
@@ -876,6 +871,7 @@ public class service_from_wsdl {
 大多数开发环境也提供了你所需的一切内容，因此你无需担心实现代理模块，我们只需要集中在应用程序逻辑上。
 
 ![](img/index-35_1.jpg)
+
 ![](img/index-35_2.jpg)
 
 NetBeans 的情况也是如此，当需要创建 Web 服务的客户端应用程序时，它会自动根据描述 Web 服务的 WSDL 文档地址创建一组用于创建代理的类。
@@ -886,13 +882,16 @@ NetBeans 的情况也是如此，当需要创建 Web 服务的客户端应用程
 
 ### 4.2.2. 使用 NetBeans 创建客户端应用程序
 
-Web 服务的 Java 客户端应用程序可以是一个控制台应用程序、servlet 甚至是另一个 Web 服务等。无论如何，一旦选择了客户端的项目类型，我们就可以点击项目弹出菜单中的 `New -> Web Service Client` 选项来创建代理类（见图 25）。如果该菜单中没有 `Web Service Client` 选项，你可以选择 `Other`，在随后的对话框中，在 `Web Service` 类别下，你也会找到相同的选项。
+Web 服务的 Java 客户端应用程序可以是一个控制台应用程序、servlet 甚至是另一个 Web 服务等。无论如何，一旦选择了客户端的项目类型，我们就可以点击项目弹出菜单中的`New -> Web Service Client`选项来创建代理类（见图 25）。如果该菜单中没有`Web Service Client`选项，你可以选择`Other`，在随后的对话框中，在`Web Service`类别下，你也会找到相同的选项。
+
+
 
 在弹出的对话框中，它会要求我们指定描述 Web 服务的 WSDL 文档（见图 26）。NetBeans 将根据提供的这些信息构建代理。我们的 WSDL 文档可以发布在服务器上，在这种情况下我们将输入服务器的 URL。我们也可以提供位于实际客户端项目中的本地副本，甚至位于另一个已加载的项目。
 
 **图 25。**
 
 ![](img/index-36_1.jpg)
+
 ![](img/index-36_2.jpg)
 
 在同一个对话框中，我们还需要指定客户端应用程序中的包（即我们想要存储代理和辅助类的地方），以及调用样式。
@@ -906,11 +905,13 @@ Web 服务的 Java 客户端应用程序可以是一个控制台应用程序、s
 与 Web 服务名称相同的接口（在我们的案例中为 `CalcWS.java`）定义了服务暴露的 Java 版本方法。代理对象将是任何实现此接口的类的对象，我们可以使用 `<ServiceName>Service.java` 类获取该对象（在我们的示例中为 `CalcWSService.java`）。因此，要获取代理对象，我们遵循以下步骤：
 
 1. 创建一个 `CalcWSService` 对象：使用无参数的类构造函数，我们可以创建一个它的实例：
+
 ```java
 CalcWSService cservice = new CalcWSService ();
 ```
 
 2. 获取代理对象：对上一个对象调用 `getCalcWSPort()` 方法，该方法返回一个实现 `CalculosWS` 接口的对象：
+
 ```java
 CalcWS proxy = cservice.getCalcWSPort();
 ```
@@ -1019,12 +1020,7 @@ public class Login extends HttpServlet {
 }
 ```
 
-在代理模块包含的类中，我们可以看到 `Client` 类，它
-
-
-
-
-在调用 `ValidationsWS` 对象的 `loginClient()` 方法时会非常有用。换句话说，Web 服务返回的复杂数据由客户端代理映射为 **JavaBean 对象**。
+在代理模块包含的类中，我们可以看到 `Client` 类，它在调用 `ValidationsWS` 对象的 `loginClient()` 方法时会非常有用。换句话说，Web 服务返回的复杂数据由客户端代理映射为 JavaBean 对象。
 
 ### 练习 3
 
@@ -1127,6 +1123,8 @@ public class Verify extends HttpServlet {
 
 要异步调用 Web 服务，我们将“Async Callback”元素拖到客户端类中，生成如图 31 所示的应用程序：
 
+
+
 ```java
 public static void main(String[] args) {
     try {
@@ -1163,12 +1161,9 @@ public static void main(String[] args) {
 
 **图 31。**
 
+除了 Web 服务自身的参数外，该方法还接收一个实现了`AsyncHandler`接口的对象。调用此方法返回一个`Future`对象，允许我们使用`isDone()`方法检查结果是否已返回给客户端。
 
-
-
-除了 Web 服务自身的参数外，该方法还接收一个实现了 `AsyncHandler` 接口的对象。调用此方法返回一个 `Future` 对象，允许我们使用 `isDone()` 方法检查结果是否已返回给客户端。
-
-例如，以下程序使用 `CalcWS` Web 服务计算 7 的阶乘，在计算进行期间，客户端程序每隔十分之一秒显示一次“waiting（等待中）”消息：
+例如，以下程序使用`CalcWS` Web 服务计算 7 的阶乘，在计算进行期间，客户端程序每隔十分之一秒显示一次“waiting（等待中）”消息：
 
 ```java
 package client;
@@ -1213,9 +1208,9 @@ Google 提供了多种 Web 服务，开发者可以使用这些服务将其强�
 
 以下是访问 Google 服务的一些主要 API：
 
-*   **AJAX API**：一组 JavaScript 对象，允许从任何  访问经典的 Google 搜索服务，并集成了 AJAX 功能。
-*   **Google maps API**：让您能够在 网站中集成交互式地图。
-*   **Google Web ToolKit**：用于在任何应用程序中集成搜索服务的 Java API。
+* **AJAX API**：一组 JavaScript 对象，允许从任何访问经典的 Google 搜索服务，并集成了 AJAX 功能。
+* **Google maps API**：让您能够在网站中集成交互式地图。
+* **Google Web ToolKit**：用于在任何应用程序中集成搜索服务的 Java API。
 
 作为使用这些 Web 服务的示例，我们将分析 Google AJAX API，通过它，我们可以在自己的网页中实现一个 Google 搜索引擎。
 
@@ -1233,9 +1228,9 @@ Google 提供了多种 Web 服务，开发者可以使用这些服务将其强�
 <script type="text/javascript" src="http://www.google.com/jsapi?key=mykey"></script>
 ```
 
-在这里，`mykey` 代表 Google 在上述 URL 中提供的密钥。该密钥可以用于应用程序中所有想要使用 AJAX API 的页面。
+在这里，`mykey`代表 Google 在上述 URL 中提供的密钥。该密钥可以用于应用程序中所有想要使用 AJAX API 的页面。
 
-接下来，我们使用 `google` 对象的 `load` 方法来加载搜索 API：
+接下来，我们使用`google`对象的`load`方法来加载搜索 API：
 
 ```html
 <script type="text/javascript">
@@ -1243,21 +1238,21 @@ google.load("search", "1");
 </script>
 ```
 
-加载器（实际上是 `google` 对象）可以加载多个不同的 API。通过将字符串“search”作为第一个参数显然加载了搜索 API，而如果我们想加载 Google Maps API，则在这里输入“maps”。
+加载器（实际上是`google`对象）可以加载多个不同的 API。通过将字符串“search”作为第一个参数显然加载了搜索 API，而如果我们想加载 Google Maps API，则在这里输入“maps”。
 
-接下来，我们将创建一个 `SearchControl` 实例，该对象代表 Google 搜索控件，即带有搜索按钮的文本字段：
+接下来，我们将创建一个`SearchControl`实例，该对象代表 Google 搜索控件，即带有搜索按钮的文本字段：
 
 ```javascript
 var searchControl = new google.search.SearchControl();
 ```
 
-为了执行搜索，控件需要知道在哪里进行搜索，例如是本地搜索、Web 搜索、搜索新闻组等。要定义您想在哪里进行搜索，您必须实例化相关的搜索对象并使用 `addSearcher()` 方法将它们添加到搜索集合中。例如，要执行 Web 搜索，请包含以下指令：
+为了执行搜索，控件需要知道在哪里进行搜索，例如是本地搜索、Web 搜索、搜索新闻组等。要定义您想在哪里进行搜索，您必须实例化相关的搜索对象并使用`addSearcher()`方法将它们添加到搜索集合中。例如，要执行 Web 搜索，请包含以下指令：
 
 ```javascript
 searchControl.addSearcher(new google.search.WebSearch());
 ```
 
-最后，剩下的就是指定我们想在哪里显示 Google 搜索控件。这是一个 `<div>` 元素，除了控件外，搜索结果也将显示在这里。例如，如果 `<div>` 元素的 id 为 `search`，则应包含以下指令：
+最后，剩下的就是指定我们想在哪里显示 Google 搜索控件。这是一个`<div>`元素，除了控件外，搜索结果也将显示在这里。例如，如果`<div>`元素的 id 为`search`，则应包含以下指令：
 
 ```javascript
 searchControl.draw(document.getElementById("search"));
@@ -1290,11 +1285,11 @@ function OnLoad() {
 </html>
 ```
 
-###### 5.1.2. 个性化搜索控件
+#### 5.1.2. 个性化搜索控件
 
-如果我们想使用自己的搜索控件而不是 Google 的，我们需要在 JavaScript 代码中包含与执行搜索所执行的操作相同的指令。为了执行 Web 搜索，我们需要一个 `google.search.WebSearch` 类的实例，其 `execute()` 方法使用提供的字符串在 Web 上执行搜索。
+如果我们想使用自己的搜索控件而不是 Google 的，我们需要在 JavaScript 代码中包含与执行搜索所执行的操作相同的指令。为了执行 Web 搜索，我们需要一个`google.search.WebSearch`类的实例，其`execute()`方法使用提供的字符串在 Web 上执行搜索。
 
-由于 `execute()` 是异步执行的，我们应该使用 `WebSearch` 的 `setSearchCompleteCallback()` 方法指定回调函数，在浏览器接收响应后进行处理。使用 `WebSearch` 的 `results()` 方法访问响应数据，它包含一个 `SearchResult` 类型的结果数组。`SearchResult` 暴露了一系列属性如 `title` 或 `url`，分别为我们提供找到的页面标题及其 URL。
+由于`execute()`是异步执行的，我们应该使用`WebSearch`的`setSearchCompleteCallback()`方法指定回调函数，在浏览器接收响应后进行处理。使用`WebSearch`的`results()`方法访问响应数据，它包含一个`SearchResult`类型的结果数组。`SearchResult`暴露了一系列属性如`title`或`url`，分别为我们提供找到的页面标题及其 URL。
 
 以下代码用于图 33 中的页面，该页面实现了一个使用简单 HTML 控件与用户交互的个性化搜索控件：
 
@@ -1329,10 +1324,6 @@ function process(response) {
 </html>
 ```
 
-
-
-
-
 ```javascript
 searchControl.execute("servers");
 
@@ -1358,17 +1349,29 @@ function process() {
   }
 }
 ```
+
 </script>
+
 </head>
+
 <body>
+
   <center>
+
     <h1>使用 Google 搜索控制控件</h1>
+
     搜索文本: <input type="text" id="text" /><br />
+
     <input type="button" onclick="search();" value="搜索" />
+
   </center>
+
   <br />
+
   <div id="result"></div>
+
 </body>
+
 </html>
 
 ![](img/index-52_1.jpg)
@@ -1378,36 +1381,59 @@ function process() {
 # 自测测试
 
 1. 用 Java 实现的 Web 服务和客户端应用程序通过以下方式进行通信：
+
    A. HTTP。
+
    B. RMI
+
    C. FTP。
+
    D. HTML
 
 2. SOAP 协议定义了：
+
    A. 实现 Web 服务的编程语言。
+
    B. 服务暴露的方法与客户端应用程序交换的数据类型。
+
    C. 客户端访问 Web 服务的方法。
+
    D. Web 服务请求和响应 XML 文档的格式。
 
 3. 选择下列陈述中**错误**的一项：
+
    A. 仅需 WSDL 文档即可开发 Web 服务的客户端应用程序。
+
    B. 用 Java 开发的 Web 服务可以在 .NET 应用程序中使用。
+
    C. Web 服务的方法只能通过同步方式访问。
+
    D. 使用 UDDI API 可以从应用程序查找 UDDI 注册项。
 
 4. 下列哪些 SOAP 文元素是可选的？
+
    A. Envelope（封包）
+
    B. Header（头部）
+
    C. Body（主体）
+
    D. 所有都是可选的
 
 5. Web 服务处理的数据类型在其接口文档中使用以下描述：
+
    A. 实现 Web 服务的原生语言。
+
    B. SOAP 规范中的特定标签。
+
    C. UDDI
+
    D. XML Schema
 
-6. 下面代码属于一个 servlet，它使用代理对象调用名为 `SearchWS` 的 Web 服务的方法：
+6. 下面代码属于一个 servlet，它使用代理对象调用名为`SearchWS`的 Web 服务的方法：
+
+
+
 ```java
 public class TestServlet extends HttpServlet {
   // 缺失的代码行在此处
@@ -1421,39 +1447,59 @@ public class TestServlet extends HttpServlet {
       // servlet 的其余部分
     }
 ```
+
 下列哪项可以成功完成代码（替换注释掉的缺失行）？
-   A. `@WebServiceRef(wsdlLocation = "dirección doc wsdl")`
-   B. `@WebService(name= SearchWSservice);`
-   C. `new SearchWSService();`
-   D. 无缺失代码
+
+A. `@WebServiceRef(wsdlLocation = "dirección doc wsdl")`
+
+B. `@WebService(name= SearchWSservice);`
+
+C. `new SearchWSService();`
+
+D. 无缺失代码
 
 7. 在异步调用其方法后，访问 Web 服务返回的信息：
-   A. 我们应该调用代理对象的 `result()` 方法。
-   B. 必须实现 `handleResponse()` 方法。
-   C. 代理对象会将结果放在标记有 `@Result` 注解的变量中。
-   D. 应该创建一个 WebService 的子类。
+
+A. 我们应该调用代理对象的 `result()` 方法。
+
+B. 必须实现 `handleResponse()` 方法。
+
+C. 代理对象会将结果放在标记有 `@Result` 注解的变量中。
+
+D. 应该创建一个 `WebService` 的子类。
 
 8. 使用 Google AJAX API 从 JavaScript 代码进行个性化搜索，我们需要：
-   A. 一个 `google.search.Searcher` 对象。
-   B. 一个 `google.search.GoogleMap` 对象。
-   C. 一个 `google.search.WebSearch` 对象。
-   D. 一个 `google` 对象。
+
+A. 一个 `google.search.Searcher` 对象。
+
+B. 一个 `google.search.GoogleMap` 对象。
+
+C. 一个 `google.search.WebSearch` 对象。
+
+D. 一个 `google` 对象。
 
 # 建议练习
 
 1. 假设你有一个包含以下字段的书籍表：`isbn`、`title`、`author`、`pages`。创建一个 Web 服务，暴露一个方法，根据书籍的 `ISBN` 返回其所有数据。然后，为该 Web 服务创建一个控制台客户端应用程序，向用户询问 `ISBN` 并显示 Web 服务返回的书籍数据。
-   方法调用应该是异步的，这样当客户端应用程序等待结果时，每隔十分之一秒应显示一次“awaiting response”（等待响应）。
+
+方法调用应该是异步的，这样当客户端应用程序等待结果时，每隔十分之一秒应显示一次“awaiting response”（等待响应）。
 
 2. 开发一个 Web 应用程序，使用 [www.xmethods.org](http://www.xmethods.org/) 上发布的 Web 服务之一，允许其用户向手机发送短信。
 
 # 自测测试答案页
 
 1. A
-2. D
-3. C
-4. B
-5. B
-6. A
-7. B
-8. C
 
+2. D
+
+3. C
+
+4. B
+
+5. B
+
+6. A
+
+7. B
+
+8. C

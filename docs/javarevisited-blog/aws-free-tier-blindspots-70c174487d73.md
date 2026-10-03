@@ -1,3 +1,4 @@
+
 # AWS 自由层—盲点
 
 > 原文：<https://medium.com/javarevisited/aws-free-tier-blindspots-70c174487d73?source=collection_archive---------0----------------------->
@@ -18,9 +19,9 @@
 
 [![](img/a72b1485ac866320ffcc92c0f43a9d1b.png)](https://hackernoon.com/top-5-amazon-web-services-or-aws-courses-to-learn-online-free-and-best-of-lot-d94e192054b7?source=user_profile---------23-----------------------)
 
-来源:[https://docs.aws.amazon.com](https://docs.aws.amazon.com/)
+来源：[https://docs.aws.amazon.com](https://docs.aws.amazon.com/)
 
-我曾经在我的免费层帐户中停止/终止很多次，假设我将节省一些额外的使用时间；显然， [AWS](https://www.java67.com/2018/05/top-5-amazon-web-services-or-aws-courses-to-learn-online.html) 并不是这样计算使用量的。因此，让它运行一个小时或更短时间是安全的，不要在每次实例空闲时匆忙终止实例。
+我曾经在我的免费层帐户中停止/终止很多次，假设我将节省一些额外的使用时间；显然，[AWS](https://www.java67.com/2018/05/top-5-amazon-web-services-or-aws-courses-to-learn-online.html) 并不是这样计算使用量的。因此，让它运行一个小时或更短时间是安全的，不要在每次实例空闲时匆忙终止实例。
 
 # 亚马逊 S3
 
@@ -28,7 +29,7 @@ S3 可能是 AWS 历史上使用最多的服务。耐用性、可扩展性和存
 
 ## 放下并忘记
 
-显然，我们在这里也容易犯错误。最常见的错误是假设如果没有 EC2 实例正在运行，那么在免费层结束后我们将不会被收费。然而，我们可能忘记了删除我们很久以前使用的 S3 桶中的对象。同样适用于**亚马逊 EBS/EFS、亚马逊弹性容器注册、亚马逊 DynamoDB、亚马逊 RDS 等。，**即使用存储空间。
+显然，我们在这里也容易犯错误。最常见的错误是假设如果没有 EC2 实例正在运行，那么在免费层结束后我们将不会被收费。然而，我们可能忘记了删除我们很久以前使用的 S3 桶中的对象。同样适用于**亚马逊 EBS/EFS、亚马逊弹性容器注册、亚马逊 DynamoDB、亚马逊 RDS 等。**，即使用存储空间。
 
 # 弹性负载平衡
 
@@ -61,7 +62,7 @@ ELB 用于跨多个 Amazon EC2 实例分发传入的应用程序流量。在非�
 
 您可以在 [**计费和成本管理仪表板**](https://console.aws.amazon.com/billing/home) 中查看所有符合自由层条件的 AWS 服务及其使用情况，如顶层自由层服务表[中所述【此处为](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/tracking-free-tier-usage.html#free-tier-table)。
 
-## **跟踪预算**
+## 跟踪预算
 
 可以使用 [**AWS Budgets**](https://docs.aws.amazon.com/en_pv/awsaccountbilling/latest/aboutv2/tracking-free-tier-usage.html#free-budget) 跟踪您的自由层帐户的预算，它可以在您的使用量达到一定限制时提醒您，从而帮助您跟踪您的自由层使用量。您还可以配置个别服务特定的警报。例如，*亚马逊 S3 桶超过你的每月存储限制。*
 
@@ -69,7 +70,7 @@ ELB 用于跨多个 Amazon EC2 实例分发传入的应用程序流量。在非�
 
 你不应该错过的最重要的部分是发票。虽然您有免费层帐户，但有更多的变化消费更多的服务使用超过您的期望使用，这可能会导致额外的计费成本。如“ ***通过电子邮件将发票发送给您*** ”部分[此处](https://docs.aws.amazon.com/en_pv/awsaccountbilling/latest/aboutv2/emailed-invoice.html)所述，配置一份包含月度发票 PDF 副本的电子邮件报告。
 
-# *结论*
+# 结论
 
 简而言之，免费层对于学习 AWS 中的新服务来说是惊人的。如果您知道这些服务中涉及的成本和计算的细节，您就可以成为云英雄。
 
@@ -94,4 +95,4 @@ ELB 用于跨多个 Amazon EC2 实例分发传入的应用程序流量。在非�
 
 **P. S.** —如果你是云计算和 AWS 的新手，正在寻找一些学习亚马逊 Web 服务的免费课程，那么你也可以在 HackerNoon 上查看这个针对初学者的免费 AWS 课程列表<https://hackernoon.com/top-5-amazon-web-services-or-aws-courses-to-learn-online-free-and-best-of-lot-d94e192054b7>**。**
 
-**<https://javarevisited.blogspot.com/2019/05/top-5-courses-to-crack-aws-solutions-architect-associate-certification-exam-SAA-C01.html#axzz5rHwAwycj> **
+**<https://javarevisited.blogspot.com/2019/05/top-5-courses-to-crack-aws-solutions-architect-associate-certification-exam-SAA-C01.html#axzz5rHwAwycj>**

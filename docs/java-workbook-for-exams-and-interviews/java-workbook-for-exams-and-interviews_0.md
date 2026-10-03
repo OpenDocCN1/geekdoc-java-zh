@@ -1,16 +1,14 @@
-# JAVA 考试与面试练习指南
 
-
+# Java 考试与面试练习指南
 
 ![](img/cover0007.jpeg)
-
 
 - 计算所有数字位之和的 Java 程序
 - 计算复利的 Java 程序
 - 寻找最大数的 Java 程序
 - 运行应用程序的 Java 程序
 - 打印斐波那契序列的 Java 程序
-- 使用 for 循环打印 1 到 N 的数字
+- 使用 `for` 循环打印 1 到 N 的数字
 - Java 数据类型练习
 - 华氏度转摄氏度
 - Java 数据类型练习：英寸到米
@@ -22,7 +20,7 @@
 - 输入 5 个数字并计算和和平均值
 - 显示 n 项自然数及其和
 - 显示 1 到 7 之间的星期几
-- 使用 while 循环打印 1 到 N 的数字
+- 使用 `while` 循环打印 1 到 N 的数字
 - 一维数组和二维数组的加法
 - 十进制转二进制的 Java 程序
 - 逐行读取文件的 Java 程序
@@ -31,19 +29,28 @@
 
 给定一个数字，我们必须使用 Java 程序找到它所有数字位的和。
 
-### 示例 1:
+### 示例 1
+
 输入：
+
 数字：852
+
 输出：
+
 所有数字之和：15
 
-### 示例 2:
+### 示例 2
+
 输入：
+
 数字：256868
+
 输出：
+
 所有数字之和：35
 
 ### 程序
+
 ```java
 import java.util.Scanner;
 
@@ -68,25 +75,41 @@ public class AddDigits {
 ```
 
 ### 输出
+
 首次运行：
+
+```text
 Enter the Number : 582
+
 Sum of Digits of 582 : 15
+```
+
 第二次运行：
+
+```text
 Enter the Number : 256868
+
 Sum of Digits of 256868 : 35
+```
 
 ## 计算复利的 Java 程序
 
 给定本金、利率和时间，必须使用 Java 程序找到复利。
 
-### 示例:
+### 示例
+
 输入本金：5000
+
 输入利率：5
+
 输入时间：3
+
 金额：5788.1250000000
+
 复利：788.1250000000
 
 ### 程序
+
 ```java
 import java.util.Scanner;
 
@@ -110,23 +133,29 @@ public class CompoundInterest {
     }
 }
 ```
-*(注：原文代码中 Rate 变量未定义，此处保留原样逻辑)*
+
+注：原文代码中 `Rate` 变量未定义，此处保留原样逻辑。
 
 ### 输出
+
 首次运行：
+
+```text
 Enter Principal : 5000
+
 Enter Rate : 5
+
 Enter Time : 3
+
 Amount : 5788.1250000000
+
 Compound Interest : 788.1250000000
+```
 
-
-
-
-
-输入值 `n` : 15
+输入值 `n`：15
 
 数字为：
+
 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
 
 ## Java 数据类型练习
@@ -135,7 +164,8 @@ Compound Interest : 788.1250000000
 
 ![](img/image00066.jpeg)
 
-### JAVA 代码
+### Java 代码
+
 ```java
 import java.util.Scanner;
 public class Exercise1 {
@@ -150,7 +180,8 @@ public class Exercise1 {
 ```
 
 ### 输出
-```
+
+```text
 Input a degree in Fahrenheit: 212
 212.0 degree Fahrenheit is equal to 100.0 in Celsius
 ```
@@ -160,14 +191,21 @@ Input a degree in Fahrenheit: 212
 编写一个 Java 程序，接收英寸值并将其转换为米。
 
 ### 英寸转米
+
 1 INCH = 0.025400 METERS
+
 2 INCH = 0.050800 METERS
+
 3 INCH = 0.076200 METERS
+
 4 INCH = 0.101600 METERS
+
 5 INCH = 0.127000 METERS
+
 6 INCH = 0.152400 METERS
 
-### JAVA 代码
+### Java 代码
+
 ```java
 import java.util.Scanner;
 public class Exercise2 {
@@ -182,7 +220,8 @@ public class Exercise2 {
 ```
 
 ### 输出
-```
+
+```text
 Input a value for inch: 1000
 1000.0 inch is 25.4 meters
 ```
@@ -193,7 +232,8 @@ Input a value for inch: 1000
 
 ![](img/image00067.jpeg)
 
-### JAVA 代码
+### Java 代码
+
 ```java
 import java.util.Scanner;
 public class Main {
@@ -215,7 +255,8 @@ public class Main {
 ```
 
 ### 输出
-```
+
+```text
 Input an integer between 0 and 1000: 565
 The sum of all digits in 565 is 16
 ```
@@ -226,7 +267,8 @@ The sum of all digits in 565 is 16
 
 ![](img/image00068.jpeg)
 
-### JAVA 代码
+### Java 代码
+
 ```java
 import java.util.Scanner;
 public class Exercise4 {
@@ -243,7 +285,8 @@ public class Exercise4 {
 ```
 
 ### 输出
-```
+
+```text
 Input the number of minutes: 3456789
 3456789 minutes is approximately 6 years and 210 days
 ```
@@ -252,7 +295,8 @@ Input the number of minutes: 3456789
 
 编写一个 Java 程序，读取一个数字并显示该数字的平方、立方和四次方。
 
-### JAVA 代码
+### Java 代码
+
 ```java
 import java.util.Scanner;
 public class Exercise8 {
@@ -268,7 +312,8 @@ public class Exercise8 {
 ```
 
 ### 输出
-```
+
+```text
 Input the side length value: 15
 Square:       225.00
 Cube:       3375.00
@@ -279,7 +324,8 @@ Fourth power: 50625.00
 
 ![](img/image00069.jpeg)
 
-### JAVA 代码
+### Java 代码
+
 ```java
 import java.util.Scanner;
 public class Exercise27 {
@@ -299,7 +345,8 @@ public class Exercise27 {
 ```
 
 ### 输出
-```
+
+```text
 Input a number: 7
 positive
 ```
@@ -308,7 +355,8 @@ positive
 
 ![](img/image00070.jpeg)
 
-### JAVA 代码
+### Java 代码
+
 ```java
 import java.util.Scanner;
 public class Exercise12 {
@@ -328,7 +376,8 @@ public class Exercise12 {
 ```
 
 ### 输出
-```
+
+```text
 Input the 5 numbers : 1
 2
 3
@@ -344,7 +393,8 @@ The Average is : 3.0
 
 ![](img/image00071.jpeg)
 
-### JAVA 代码
+### Java 代码
+
 ```java
 import java.util.Scanner;
 public class Exercise11 {
@@ -366,7 +416,8 @@ public class Exercise11 {
 ```
 
 ### 输出
-```
+
+```text
 Input number: 7
 The first n natural numbers are : 7
 1
@@ -379,17 +430,15 @@ The first n natural numbers are : 7
 The Sum of Natural Number upto 7 terms : 28
 ```
 
-
-
-
-
 前 n 项自然数之和：28
 
 ## 显示 1 到 7 之间的星期
 
 ![](img/image00072.jpeg)
 
-### JAVA 代码
+### Java 代码
+
+
 
 ```java
 import java.util.Scanner;
@@ -401,6 +450,7 @@ public class Exercise5 {
         int day = in.nextInt();
         System.out.println(getDayName(day));
     }
+
     // 获取周几名称
     public static String getDayName(int day) {
         String dayName = "";
@@ -420,12 +470,16 @@ public class Exercise5 {
 ```
 
 ### 输出
+
+```text
 Input number: 3
 Wednesday
+```
 
-## 使用 while 循环打印 1 到 N 的数字
+## 使用 `while` 循环打印 1 到 N 的数字
 
 ### 程序
+
 ```java
 import java.util.Scanner;
 
@@ -440,14 +494,17 @@ public class Print_1_To_N_UsingWhile {
         // 读取值
         int n = Sc.nextInt();
         System.out.println("Numbers are : ");
-        while(i<=n) {
+        while (i <= n) {
             System.out.println(i);
             i++;
         }
     }
 }
 ```
-输出
+
+### 输出
+
+```text
 Enter the value n : 15
 Numbers are :
 1
@@ -465,74 +522,86 @@ Numbers are :
 13
 14
 15
+```
 
 ## Java 程序中一维数组和二维数组的相加
 
 ### 有 2 个程序：两个一维数组相加，两个二维数组相加
 
 ### 1) Java 中两个一维数组相加
+
 ```java
-class AddTwoArrayClass{
-    public static void main(String[] args){
+class AddTwoArrayClass {
+    public static void main(String[] args) {
         // 数组的声明与初始化
-        int a[] = {1,2,3,4,5};
-        int b[] = {6,7,8,9,10};
+        int a[] = {1, 2, 3, 4, 5};
+        int b[] = {6, 7, 8, 9, 10};
         // 实例化第三个数组存储结果
         int c[] = new int[5];
-        for(int i=0; i<5; ++i){
+        for (int i = 0; i < 5; ++i) {
             // 两个数组相加结果存储在第三个数组中
             c[i] = a[i] + b[i];
             // 显示结果
-            System.out.println("Enter sum of "+i +"index" +" " + c[i]);
+            System.out.println("Enter sum of " + i + "index" + " " + c[i]);
         }
     }
 }
 ```
-输出
+
+### 输出
+
+```text
 Enter sum of 0index 7
 Enter sum of 1index 9
 Enter sum of 2index 11
 Enter sum of 3index 13
 Enter sum of 4index 15
+```
 
 ### 2) Java 中两个二维数组相加
+
 ```java
-class AddTwoArrayOf2DClass{
-    public static void main(String[] args){
+class AddTwoArrayOf2DClass {
+    public static void main(String[] args) {
         // 二维数组的声明与初始化
-        int a[][] = {{1,2,3},{4,5,6}};
-        int b[][] = {{7,8,9},{10,11,12}};
+        int a[][] = {{1, 2, 3}, {4, 5, 6}};
+        int b[][] = {{7, 8, 9}, {10, 11, 12}};
         // 实例化第三个数组存储结果
         int c[][] = new int[2][3];
-        for(int i=0; i<2; ++i){
-            for(int j=0; j<3; ++j){
+        for (int i = 0; i < 2; ++i) {
+            for (int j = 0; j < 3; ++j) {
                 // 两个数组相加结果存储在第三个数组中
                 c[i][j] = a[i][j] + b[i][j];
-                System.out.println("Enter sum of "+i + " " + j +"index" +" " + c[i][j]);
+                System.out.println("Enter sum of " + i + " " + j + "index" + " " + c[i][j]);
             }
         }
     }
 }
 ```
-输出
+
+### 输出
+
+```text
 Enter sum of 0 0index 8
 Enter sum of 0 1index 10
 Enter sum of 0 2index 12
 Enter sum of 1 0index 14
 Enter sum of 1 1index 16
 Enter sum of 1 2index 18
+```
 
 ## Java 将十进制转换为二进制的程序
 
 给定一个整数（十进制）数字，并使用 Java 程序将其转换为二进制。
 
 ### 程序
+
 ```java
 // Scanner 类用于从用户处获取输入
 import java.util.Scanner;
 
-class DecimalToBinary{
-    public static void main(String[] args){
+class DecimalToBinary {
+    public static void main(String[] args) {
         // 创建 Scanner 对象
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Any Number :");
@@ -540,30 +609,39 @@ class DecimalToBinary{
         int input_decimal_num = sc.nextInt();
         String binary_string = "";
         // 循环持续直到 input_decimal_num > 0
-        while(input_decimal_num > 0){
+        while (input_decimal_num > 0) {
             // 余数加到字符串
-            binary_string = input_decimal_num%2 + binary_string;
-            input_decimal_num = input_decimal_num/2;
+            binary_string = input_decimal_num % 2 + binary_string;
+            input_decimal_num = input_decimal_num / 2;
         }
         // 显示最终结果
         System.out.println("Conversion of binary is : " + binary_string);
     }
 }
 ```
-输出
+
+### 输出
+
+```text
 Enter Any Number : 30
 Conversion of binary is : 11110
+```
 
 ## Java 逐行读取文件的程序
 
 给定一个文件，并使用 Java 程序逐行读取其内容。
-我们为此程序使用一个名为 "B.txt" 的文件，它位于 "F:" 盘，因此文件路径为 "F:\B.txt"，文件内容为：
+
+我们为此程序使用一个名为 `"B.txt"` 的文件，它位于 `"F:"` 盘，因此文件路径为 `"F:\B.txt"`，文件内容为：
+
+```text
 This is line 1
 This is line 2
 This is line 3
 This is line 4
+```
 
 ### 程序
+
 ```java
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -572,22 +650,22 @@ import java.util.Scanner;
 public class ReadLineByLine {
     public static void main(String[] args) {
         // 创建 scanner 类对象。
-        Scanner Sc=new Scanner(System.in);
+        Scanner Sc = new Scanner(System.in);
         // 输入文件名
         System.out.print("Enter the file name:");
-        String sfilename=Sc.next();
-        Scanner Sc1= null;
-         FileInputStream fis=null;
+        String sfilename = Sc.next();
+        Scanner Sc1 = null;
+        FileInputStream fis = null;
         try {
-            fis=new FileInputStream(sfilename);
-            Sc1=new Scanner(fis);
+            fis = new FileInputStream(sfilename);
+            Sc1 = new Scanner(fis);
             // 读取数据到数据末尾
-            while(Sc1.hasNext()) {
-                String data=Sc1.nextLine();
+            while (Sc1.hasNext()) {
+                String data = Sc1.nextLine();
                 // 打印数据
-                System.out.print("The file data is : " +data);
+                System.out.print("The file data is : " + data);
             }
-        } catch(IOException e) {
+        } catch (IOException e) {
             System.out.println(e);
         }
     }

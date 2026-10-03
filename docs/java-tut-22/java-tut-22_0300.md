@@ -1,22 +1,17 @@
+
 # 保护富互联网应用程序的指南
 
 > [`docs.oracle.com/javase/tutorial/deployment/doingMoreWithRIA/devGuidelines.html`](https://docs.oracle.com/javase/tutorial/deployment/doingMoreWithRIA/devGuidelines.html)
 
 以下指南提供了您可以采取的步骤，以减少您向用户提供的富互联网应用程序（RIA）的漏洞性。
 
-+   遵循安全编码指南
-
-+   使用最新版本的 JRE 进行测试
-
-+   包含清单属性
-
-+   使用已签名的 JNLP 文件
-
-+   签名和时间戳 JAR 文件
-
-+   使用 HTTPS 协议
-
-+   避免本地 RIA
+- 遵循安全编码指南
+- 使用最新版本的 JRE 进行测试
+- 包含清单属性
+- 使用已签名的 JNLP 文件
+- 签名和时间戳 JAR 文件
+- 使用 HTTPS 协议
+- 避免本地 RIA
 
 ## 遵循安全编码指南
 

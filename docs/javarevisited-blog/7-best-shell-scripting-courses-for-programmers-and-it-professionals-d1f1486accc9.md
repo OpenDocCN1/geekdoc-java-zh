@@ -1,14 +1,15 @@
+
 # 2022 年程序员学习的 7 门最佳 Linux shell 脚本课程
 
 > 原文：<https://medium.com/javarevisited/7-best-shell-scripting-courses-for-programmers-and-it-professionals-d1f1486accc9?source=collection_archive---------0----------------------->
 
-## 这些是学习 bash、sh、csh、ksh 和其他 Linux shells 中的 shell 脚本的最佳在线课程。
+## 这些是学习 `bash`、`sh`、`csh`、`ksh` 和其他 Linux shells 中的 shell 脚本的最佳在线课程。
 
 [![](img/8ee351675af04247041c92592125d94f.png)](http://linkedin-learning.pxf.io/c/1193463/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fpaths%2Flearning-bash-scripting)
 
 image_credit —领英的 Bash Learning
 
-大家好，如果你一直想学习 bash 脚本并成为一名 rockstar 开发人员，并且正在寻找最好的 shell 脚本课程，那么你来对地方了。在上一篇中，我已经分享了 [**最佳 Linux 课程**](/javarevisited/top-10-courses-to-learn-linux-command-line-in-2020-best-and-free-f3ee4a78d0c0?source=collection_home---4------0-----------------------) 、 [**学习 Linux 的最佳网站**](/javarevisited/6-best-websites-to-learn-linux-4861ac21bfdf) 、 [**最佳 Linux 书籍**](/javarevisited/10-best-linux-unix-and-system-programming-books-for-beginners-2fe750951c9f) ，今天，我将分享学习 bash shell 的最佳课程。
+大家好，如果你一直想学习 bash 脚本并成为一名 rockstar 开发人员，并且正在寻找最好的 shell 脚本课程，那么你来对地方了。在上一篇中，我已经分享了[最佳 Linux 课程](/javarevisited/top-10-courses-to-learn-linux-command-line-in-2020-best-and-free-f3ee4a78d0c0?source=collection_home---4------0-----------------------)、[学习 Linux 的最佳网站](/javarevisited/6-best-websites-to-learn-linux-4861ac21bfdf)、[最佳 Linux 书籍](/javarevisited/10-best-linux-unix-and-system-programming-books-for-beginners-2fe750951c9f)，今天，我将分享学习 bash shell 的最佳课程。
 
 *披露—顺便说一句，其中一些链接是附属链接，如果你使用我的链接加入这些课程，我可能会得到报酬。*
 
@@ -40,12 +41,13 @@ image_credit —领英的 Bash Learning
 
 这是从头开始学习 shell 脚本的最佳课程之一，尤其是如果您在 shell 脚本和自动化方面没有太多经验的话。课程安排得很好，既不太长也不太短，这意味着您将在很短的时间内学到必要的知识，并立即开始创建脚本。本课程结束后，您将能够轻松创建 shell 脚本。您将学习如何在 Linux、Unix 或 MAC 系统上，将乏味且重复的任务转化为节省时间并简化生活的程序。
 
-该课程教授基本的 shell 脚本技术，如
-—检查程序和命令的退出状态，以及如何在 shell 脚本中有效地使用它们。
-—如何接受用户的输入
-—如何在 shell 脚本中编写条件语句和循环
-—他收集的 shell 脚本的真实例子。
-—练习和测验。
+该课程教授基本的 shell 脚本技术，如：
+
+- 检查程序和命令的退出状态，以及如何在 shell 脚本中有效地使用它们。
+- 如何接受用户的输入
+- 如何在 shell 脚本中编写条件语句和循环
+- 他收集的 shell 脚本的真实例子。
+- 练习和测验。
 
 简而言之，学习 Linux、Unix、Mac shell 编程的最佳课程之一。
 
@@ -53,7 +55,7 @@ image_credit —领英的 Bash Learning
 
 [![](img/66e8bb4cdde3896bcbfb9913751b6d43.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=562016.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fshell-scripting-linux%2F)
 
-## 2.[初学 Linux Shell 编程](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=562016.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Flinux-shell-programming-for-beginners%2F)
+## 2. [初学 Linux Shell 编程](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=562016.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Flinux-shell-programming-for-beginners%2F)
 
 这是使用 bash shell 学习 Linux 中的 shell 脚本的最完整的课程之一。在本课程中，讲师不仅解释了什么是 shell 或什么是 bash 等基础知识，以及它与仅在命令行中键入命令有何不同，而且还继续向您展示如何使用 shell 脚本来自动化您的日常任务。
 
@@ -89,7 +91,7 @@ Bash 脚本将帮助您自动化日常任务并节省宝贵的时间，无论您
 
 [![](img/5f3aa674dd3e180293dc3caa024fa977.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=562016.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fcomplete-bash-shell-scripting%2F)
 
-## 5.[学习 Bash 脚本](http://linkedin-learning.pxf.io/c/1193463/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fpaths%2Flearning-bash-scripting)
+## 5. [学习 Bash 脚本](http://linkedin-learning.pxf.io/c/1193463/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fpaths%2Flearning-bash-scripting)
 
 这是从头开始学习 Bash 脚本的另一个很好的课程。本课程由 LinkedInLearning 提供，非常适合 bash 初学者。
 
@@ -107,7 +109,7 @@ image_credit —领英的 Bash Learning
 
 顺便说一下，你需要一个[**LinkedIn Learning subscription**](http://linkedin-learning.pxf.io/c/1193463/449670/8005?u=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fsubscription%2Fproducts)来观看这个课程，这个课程每月花费大约 29.99 美元，但是你也可以通过参加他们的 1 个月免费试用来免费观看这个课程，这是一个探索他们 16000+最新技术在线课程的好方法。
 
-## 6.[掌握 Bash Shell](https://www.educative.io/courses/master-the-bash-shell?affiliate_id=5073518643380224)
+## 6. [掌握 Bash Shell](https://www.educative.io/courses/master-the-bash-shell?affiliate_id=5073518643380224)
 
 这是一个从[教育性](https://medium.com/u/85b9909ed1cf?source=post_page-----d1f1486accc9--------------------------------)学习 Bash shell 的基于文本的互动课程。如果您是 bash 初学者或学习一些 bash 命令，本课程可以帮助您学习和掌握 bash shell，这是一个对开发人员有用的工具。
 
@@ -117,44 +119,46 @@ image_credit —领英的 Bash Learning
 
 [![](img/bfa6ac3cdd271e007bfccad51b344130.png)](https://www.educative.io/courses/master-the-bash-shell?affiliate_id=5073518643380224)
 
-此外，如果您发现教育平台和他们的互动课程很有用，那么您还可以获得 [**教育订阅**](https://www.educative.io/subscription?affiliate_id=5073518643380224) ，每月只需 18 美元(47%的折扣)即可访问他们的 100 多门课程。非常划算，非常适合准备编码面试。
 
-<https://www.educative.io/subscription?affiliate_id=5073518643380224>  
+
+此外，如果您发现教育平台和他们的互动课程很有用，那么您还可以获得 [**教育订阅**](https://www.educative.io/subscription?affiliate_id=5073518643380224)，每月只需 18 美元（47% 的折扣）即可访问他们的 100 多门课程。非常划算，非常适合准备编码面试。
+
+<https://www.educative.io/subscription?affiliate_id=5073518643380224>
 
 ## 7. [Bash Shell 脚本初学者教程](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=562016.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fbash-shell-scripting-tutorial-for-beginners%2F)
 
-Linux 有许多 shell，如 Bourne shell (sh)、C shell (cash)、Korn shell (ksh)和 Bourne Again shell(俗称 bash)。
+Linux 有许多 shell，如 Bourne shell（`sh`）、C shell（`csh`）、Korn shell（`ksh`）和 Bourne Again shell（俗称 `bash`）。
 
-它融合了 ksh 和 csh shell 的有用特性。Bash 不仅是一个优秀的命令行 shell，它本身也是一种脚本语言，本课程帮助您实现 bash 和 Linux 命令的全部潜力。
+它融合了 `ksh` 和 `csh` shell 的有用特性。`Bash` 不仅是一个优秀的命令行 shell，它本身也是一种脚本语言，本课程帮助您实现 `bash` 和 Linux 命令的全部潜力。
 
 *这里是加入课程的链接:* [***Bash Shell 脚本初学者教程***](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=562016.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fbash-shell-scripting-tutorial-for-beginners%2F)
 
-在本课程中，您不仅将学习如何使用 Bash 编写 Shell 脚本，还将快速学习几个有用的 Linux 命令。一般来说，任何人在没有任何指导的情况下都需要花费很长时间来发现这些命令，但是本课程会在几个小时内教会你。
+在本课程中，您不仅将学习如何使用 `Bash` 编写 Shell 脚本，还将快速学习几个有用的 Linux 命令。一般来说，任何人在没有任何指导的情况下都需要花费很长时间来发现这些命令，但是本课程会在几个小时内教会你。
 
 [![](img/80e0f0d29d8b11348e46472998a85e47.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=562016.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fbash-shell-scripting-tutorial-for-beginners%2F)
 
 以上是针对程序员和 Linux 用户的一些最好的 shell 脚本课程。自动化是一项非常重要的技能，随着你的经验和责任的增长，你会更加欣赏自动化。
 
-在 Linux 中使用 bash 或者使用 [Python](/swlh/5-free-python-courses-for-beginners-to-learn-online-e1ca90687caf) 或 Perl 或任何其他脚本语言编写 shell 脚本的良好知识对于提高您作为 IT 专业人员的工作效率大有帮助。
+在 Linux 中使用 `bash` 或者使用 [Python](/swlh/5-free-python-courses-for-beginners-to-learn-online-e1ca90687caf) 或 Perl 或任何其他脚本语言编写 shell 脚本的良好知识对于提高您作为 IT 专业人员的工作效率大有帮助。
 
 其他**你可能喜欢的程序员和开发者的在线资源**
 
-*   [2022 年学习 Python 的十大课程](/better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
-*   [学习 Git 和 Github 的 5 门免费课程](http://javarevisited.blogspot.sg/2018/01/5-free-git-courses-for-programmers-to-learn-online.html#axzz568Oo1Jao)
-*   [5 门免费学习核心 Java 的在线课程](http://javarevisited.blogspot.sg/2017/11/top-5-free-java-courses-for-beginners.html#axzz4zuIICRs9)
-*   [5 门免费学习 Angular 的在线培训课程](http://www.java67.com/2018/01/top-5-free-angular-js-online-courses-for-web-developers.html)
-*   [2022 年学习 AWS 的 10 门课程](/javarevisited/top-10-courses-to-learn-amazon-web-services-aws-cloud-in-2020-best-and-free-317f10d7c21d)
-*   [面向 Java 和 Web 开发人员的 5 个节点 JS 课程](http://javarevisited.blogspot.sg/2018/01/top-5-nodejs-and-express-js-online-courses-for-web-developers.html)
-*   [学习大数据和 Apache Spark 的 5 门课程](http://javarevisited.blogspot.com/2017/12/top-5-courses-to-learn-big-data-and.html)
-*   [学习云计算的 5 大课程](https://javarevisited.blogspot.com/2019/07/top-5-online-courses-to-learn-cloud-computing-aws.html)
-*   [5 门免费学习数据结构和算法的课程](http://javarevisited.blogspot.sg/2018/01/top-5-free-data-structure-and-algorithm-courses-java--c-programmers.html#axzz55lOcYrUM)
-*   【Java 开发者学习 Android 的 5 门课程
-*   [10 门免费的 Maven、Jenkins 和 Docker 课程](/javarevisited/top-10-free-courses-to-learn-maven-jenkins-and-docker-for-java-developers-51fa7a1e66f6)
-*   [前 5 名 Selenium 与 Java Web 驱动程序课程](http://javarevisited.blogspot.sg/2018/02/top-5-selenium-webdriver-with-java-courses-for-testers.html)
-*   [Java 开发人员学习 Kotlin 编程的 5 门课程](http://javarevisited.blogspot.sg/2018/02/5-courses-to-learn-kotlin-programming-java-android.html#axzz56R4AatoQ)
+* [2022 年学习 Python 的十大课程](/better-programming/top-5-courses-to-learn-python-in-2018-best-of-lot-26644a99e7ec)
+* [学习 Git 和 Github 的 5 门免费课程](http://javarevisited.blogspot.sg/2018/01/5-free-git-courses-for-programmers-to-learn-online.html#axzz568Oo1Jao)
+* [5 门免费学习核心 Java 的在线课程](http://javarevisited.blogspot.sg/2017/11/top-5-free-java-courses-for-beginners.html#axzz4zuIICRs9)
+* [5 门免费学习 Angular 的在线培训课程](http://www.java67.com/2018/01/top-5-free-angular-js-online-courses-for-web-developers.html)
+* [2022 年学习 AWS 的 10 门课程](/javarevisited/top-10-courses-to-learn-amazon-web-services-aws-cloud-in-2020-best-and-free-317f10d7c21d)
+* [面向 Java 和 Web 开发人员的 5 个节点 JS 课程](http://javarevisited.blogspot.sg/2018/01/top-5-nodejs-and-express-js-online-courses-for-web-developers.html)
+* [学习大数据和 Apache Spark 的 5 门课程](http://javarevisited.blogspot.com/2017/12/top-5-courses-to-learn-big-data-and.html)
+* [学习云计算的 5 大课程](https://javarevisited.blogspot.com/2019/07/top-5-online-courses-to-learn-cloud-computing-aws.html)
+* [5 门免费学习数据结构和算法的课程](http://javarevisited.blogspot.sg/2018/01/top-5-free-data-structure-and-algorithm-courses-java--c-programmers.html#axzz55lOcYrUM)
+* [Java 开发者学习 Android 的 5 门课程](http://javarevisited.blogspot.sg/2018/02/5-courses-to-learn-android-for-java-programmers.html)
+* [10 门免费的 Maven、Jenkins 和 Docker 课程](/javarevisited/top-10-free-courses-to-learn-maven-jenkins-and-docker-for-java-developers-51fa7a1e66f6)
+* [前 5 名 Selenium 与 Java Web 驱动程序课程](http://javarevisited.blogspot.sg/2018/02/top-5-selenium-webdriver-with-java-courses-for-testers.html)
+* [Java 开发人员学习 Kotlin 编程的 5 门课程](http://javarevisited.blogspot.sg/2018/02/5-courses-to-learn-kotlin-programming-java-android.html#axzz56R4AatoQ)
 
 感谢您阅读本文。如果你喜欢这些*最好的 shell 脚本课程*，那么请分享给你的朋友和同事。如果您有任何问题或反馈，请留言。
 
-**附言——**如果你正在寻找一些免费的在线课程来开始你的 Linux shell 脚本之旅，那么不要难过。我之前也分享了一些 [**学习 Linux**](https://www.java67.com/2019/04/top-5-free-course-to-learn-bash-shell-scripting-linux.html)bash 脚本的最佳免费课程，你也可以去看看。底线是，学习 shell 脚本来成为一个更有价值的程序员。
+**附言——**如果你正在寻找一些免费的在线课程来开始你的 Linux shell 脚本之旅，那么不要难过。我之前也分享了一些 [**学习 Linux**](https://www.java67.com/2019/04/top-5-free-course-to-learn-bash-shell-scripting-linux.html) `bash` 脚本的最佳免费课程，你也可以去看看。底线是，学习 shell 脚本来成为一个更有价值的程序员。
 
-</javarevisited/6-free-courses-to-learn-bash-shell-scripting-in-linux-and-unix-a50461ecd4fe> 
+</javarevisited/6-free-courses-to-learn-bash-shell-scripting-in-linux-and-unix-a50461ecd4fe>

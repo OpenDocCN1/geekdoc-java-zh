@@ -1,8 +1,9 @@
+
 # 缩进
 
 ## 4 - 缩进
 
-4 个空格常被作为缩进排版的一个单位。缩进的确切解释并未详细指定 (使用空格 还是 tab) . Tab 一定要设置为 8 个空格 (而非 4 个)。
+4 个空格常被作为缩进排版的一个单位。缩进的确切解释并未详细指定 (使用空格还是 tab)。Tab 一定要设置为 8 个空格 (而非 4 个)。
 
 ### 4.1 行长度
 
@@ -23,76 +24,76 @@
 以下是断开方法调用的一些例子:
 
 ```java
- someMethod(longExpression1, longExpression2, longExpression3, 
-               longExpression4, longExpression5);
+someMethod(longExpression1, longExpression2, longExpression3, 
+           longExpression4, longExpression5);
 
-    var = someMethod1(longExpression1,
-                      someMethod2(longExpression2,
-                                  longExpression3)); 
+var = someMethod1(longExpression1,
+                  someMethod2(longExpression2,
+                              longExpression3)); 
 ```
 
 以下是两个断开算术表达式的例子。前者更好，因为断开处位于括号表达式的外边，这是个较高级别的断开。
 
 ```java
- longName1 = longName2 * (longName3 + longName4 - longName5)
-                + 4 * longname6; // 推荐
+longName1 = longName2 * (longName3 + longName4 - longName5)
+            + 4 * longname6; // 推荐
 
-    longName1 = longName2 * (longName3 + longName4
-                             - longName5) + 4 * longname6; // 避免 
+longName1 = longName2 * (longName3 + longName4
+                         - longName5) + 4 * longname6; // 避免 
 ```
 
 以下是两个缩进方法声明的例子。前者是常规情形。后者如果按照常规的缩进方法就会使得第二行和第三行太靠右边，所以只缩进 8 个字符。
 
 ```java
- //常规缩进
-    someMethod(int anArg, Object anotherArg, String yetAnotherArg,
-               Object andStillAnother) {
-        ...
-    }
+//常规缩进
+someMethod(int anArg, Object anotherArg, String yetAnotherArg,
+           Object andStillAnother) {
+    ...
+}
 
-    //缩进 8 个空格来避免缩进的太深
-    private static synchronized horkingLongMethodName(int anArg,
-            Object anotherArg, String yetAnotherArg,
-            Object andStillAnother) {
-        ...
-    } 
+//缩进 8 个空格来避免缩进的太深
+private static synchronized horkingLongMethodName(int anArg,
+        Object anotherArg, String yetAnotherArg,
+        Object andStillAnother) {
+    ...
+} 
 ```
 
-if 语句的换行通常使用 8 个空格的规则，因为常规缩进(4 个空格)会使语句体看起来比较费劲。比如:
+`if`语句的换行通常使用 8 个空格的规则，因为常规缩进(4 个空格)会使语句体看起来比较费劲。比如:
 
 ```java
- //不要使用这种
-    if ((condition1 && condition2)
+//不要使用这种
+if ((condition1 && condition2)
+    || (condition3 && condition4)
+    ||!(condition5 && condition6)) { //BAD WRAPS
+    doSomethingAboutIt();            //MAKE THIS LINE EASY TO MISS
+} 
+
+//用这个来代替
+if ((condition1 && condition2)
         || (condition3 && condition4)
-        ||!(condition5 && condition6)) { //BAD WRAPS
-        doSomethingAboutIt();            //MAKE THIS LINE EASY TO MISS
-    } 
+        ||!(condition5 && condition6)) {
+    doSomethingAboutIt();
+} 
 
-    //用这个来代替
-    if ((condition1 && condition2)
-            || (condition3 && condition4)
-            ||!(condition5 && condition6)) {
-        doSomethingAboutIt();
-    } 
-
-    //或用这种
-    if ((condition1 && condition2) || (condition3 && condition4)
-            ||!(condition5 && condition6)) {
-        doSomethingAboutIt();
-    } 
+//或用这种
+if ((condition1 && condition2) || (condition3 && condition4)
+        ||!(condition5 && condition6)) {
+    doSomethingAboutIt();
+} 
 ```
 
 这里有三种可行的方法用于处理三元运算表达式:
 
 ```java
- alpha = (aLongBooleanExpression) ? beta : gamma;  
+alpha = (aLongBooleanExpression) ? beta : gamma;  
 
-    alpha = (aLongBooleanExpression) ? beta
-                                     : gamma;  
+alpha = (aLongBooleanExpression) ? beta
+                                 : gamma;  
 
-    alpha = (aLongBooleanExpression)
-            ? beta 
-            : gamma; 
+alpha = (aLongBooleanExpression)
+        ? beta 
+        : gamma; 
 ```
 
 PREVIOUS | CONTENTS | NEXT

@@ -1,3 +1,4 @@
+
 # 使用属性
 
 > 译文：[`docs.oracle.com/javase/tutorial/jaxp/properties/usingProps.html`](https://docs.oracle.com/javase/tutorial/jaxp/properties/usingProps.html)
@@ -32,7 +33,6 @@ schemaFactory.setProperty(name, value);
 
 TransformerFactory factory = TransformerFactory.newInstance();
 factory.setAttribute(name, value);
-
 ```
 
 以下是一个将 DOM 解析器限制为仅本地连接的外部 DTD 的示例：
@@ -40,11 +40,10 @@ factory.setAttribute(name, value);
 ```java
 DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 try {
-    dbf.setAttribute({{XMLConstants.ACCESS_EXTERNAL_DTD}}, "file, jar:file");
+    dbf.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "file, jar:file");
 } catch (IllegalArgumentException e) {
     //jaxp 1.5 feature not supported
 }
-
 ```
 
 当代码更改可行，并且对于新开发，建议设置新属性如上所示。通过这种方式设置属性，应用程序可以确保无论部署到较旧还是较新版本的 JDK，或者通过系统属性或`jaxp.properties`设置属性，都能保持所需的行为。
@@ -65,18 +64,16 @@ some processing here
 
 //after it's done, clear the property
 System.clearProperty("javax.xml.accessExternalSchema");
-
 ```
 
 ## 使用 jaxp.properties
 
 `jaxp.properties` 是一个普通的配置文件。它位于`${java.home}/lib/jaxp.properties`，其中 `java.home` 是 JRE 安装目录，例如，`[安装目录路径]/jdk7/jre`。
 
-可通过将以下行添加到 jaxp.properties 文件来设置外部访问限制：
+可通过将以下行添加到 `jaxp.properties` 文件来设置外部访问限制：
 
 ```java
 javax.xml.accessExternalStylesheet=file, http
-
 ```
 
 设置此项后，所有 JDK/JRE 的调用将遵守加载外部样式表的限制。

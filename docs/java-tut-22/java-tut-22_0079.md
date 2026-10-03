@@ -1,3 +1,4 @@
+
 # 课程：接口和继承
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/IandI/index.html`](https://docs.oracle.com/javase/tutorial/java/IandI/index.html)

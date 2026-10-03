@@ -1,9 +1,5 @@
+
 # Java 类笔记教程 1
-
-
-
-
-
 
 - Java 是一种高级编程语言
 - 编程语言是人与硬件/软件交互的媒介
@@ -16,28 +12,23 @@
 
 ![](img/c7c1d07c55f63dc1b96f816c41bc4141_0_0.png)
 
-JVM : Java 虚拟机（依赖平台）
-WORA : 写一次，处处运行（Write Once Run Anywhere）
+`JVM`：Java 虚拟机（依赖平台）
 
-字节码是一种中间形式，既不是低级语言也不是高级语言，因此它使用 jvm -> (1) 转换为机器级 (2) 逐行执行
+`WORA`：写一次，处处运行（Write Once Run Anywhere）
 
-- 首先，我们使用编辑器构建 Java 程序并以 `.java` 扩展名保存
+字节码是一种中间形式，既不是低级语言也不是高级语言，因此它使用`jvm` -> (1) 转换为机器级 (2) 逐行执行
+
+- 首先，我们使用编辑器构建 Java 程序并以`.java`扩展名保存
 - 一旦我们完成程序开发，我们需要对其进行编译（Compile）
-
 - 编译是一个检查我的 Java 程序中是否存在任何错误的过程
-
 - 如果编译失败，我们会得到错误报告，根据错误报告我们需要对程序进行调试（debug）
-
 - 如果编译成功，我们会生成字节码，它是中间代码 / 平台无关的代码
-
 - 所有字节码的扩展名都可以在所有平台上执行，即所有操作系统
-
 - 此字节码可以在所有平台上执行，即所有操作系统
 
 ## 变量
 
 - 变量被包含是为了存储某些数据/信息。初始化/赋值发生从右侧（RHS）到左侧（LHS）
-
 - 变量分为两类
 
 | 全局变量 | 局部变量 |
@@ -47,41 +38,43 @@ WORA : 写一次，处处运行（Write Once Run Anywhere）
 
 ![](img/c7c1d07c55f63dc1b96f816c41bc4141_1_0.png)
 
-示例：Age = 25
-| 左侧 | 右侧 |
-| --- | --- |
-| Age | 25 |
+示例：`Age = 25`
 
-Height = 5.5
 | 左侧 | 右侧 |
 | --- | --- |
-| Height | 5.5 |
+| `Age` | `25` |
+
+`Height = 5.5`
+
+| 左侧 | 右侧 |
+| --- | --- |
+| `Height` | `5.5` |
 
 ## 数据类型
 
 - 数据类型用于指示存储在变量中的数据类型
-
 - 数据类型分为两类
+
 1) 原始数据类型（primitive）
+
 2) 非原始数据类型（Nonprimitive）
 
 - 为了存储非小数数值，我们有以下数据类型
-
 - 这些数据类型之间的区别在于内存大小（MemorySize）
 
 | 数据类型 | 内存大小（字节 Bytes） | 内存大小（比特 Bits） |
 | --- | --- | --- |
-| byte | 1 | 8 |
-| short | 2 | 16 |
-| Int | 4 | 32 |
-| long | 8 | 64 |
+| `byte` | 1 | 8 |
+| `short` | 2 | 16 |
+| `Int` | 4 | 32 |
+| `long` | 8 | 64 |
 
 - 为了存储小数数值，我们有以下数据类型
 
 | 数据类型 | 内存大小（字节 Bytes） | 内存大小（比特 Bits） |
 | --- | --- | --- |
-| float | 4 | 32 |
-| double | 8 | 64 |
+| `float` | 4 | 32 |
+| `double` | 8 | 64 |
 
 小数广泛使用的默认数据类型。
 
@@ -89,36 +82,40 @@ Height = 5.5
 
 | 数据类型 | 内存大小（字节 Bytes） | 内存大小（比特 Bits） |
 | --- | --- | --- |
-| Boolean | 1 | 8 |
+| `Boolean` | 1 | 8 |
 
-- 为了存储单个字符，我们使用 char，
-
-- char 数据应该被括在'单引号'（' '）中
-
-- char 的内存大小为 2 字节：16 比特
+- 为了存储单个字符，我们使用`char`，
+- `char`数据应该被括在'单引号'（`' '`）中
+- `char`的内存大小为 2 字节：16 比特
 
 注意：上述所有 8 种数据类型合称为原始数据类型
 
-String 是一种存储字符序列的数据类型
-- String 数据必须括在“双引号”（" "）中
+`String`是一种存储字符序列的数据类型
 
-注意：Java 是大小敏感的，小写字母的值不等于于大写字母（a≠A）
+- `String`数据必须括在“双引号”（`" "`）中
+
+注意：Java 是大小敏感的，小写字母的值不等于于大写字母（`a≠A`）
 
 ## 32/01/2020 变量声明
 
 语法：
-数据类型 变量名;
-int age;
-double salary;
+
+`数据类型 变量名;`
+
+`int age;`
+
+`double salary;`
 
 语法； 变量初始化
-变量名 = 值;
 
-| age = 20; | 20 Age |
+`变量名 = 值;`
+
+| `age = 20;` | `20 Age` |
 | --- | --- |
-| salary = 5000-69 | 5000-69 Salary |
+| `salary = 5000-69` | `5000-69 Salary` |
 
 变量声明与初始化
+
 语法：初始化
 
 ```
@@ -137,7 +134,9 @@ char gender = 'M';
 ## Java 程序的结构
 
 1) 类（Class）
+
 2) 主方法（Main method）
+
 3) 打印语句（Print Statement）
 
 ```java
@@ -150,7 +149,7 @@ class className {
 }
 ```
 
-保存文件时文件名应与 className 相同
+保存文件时文件名应与`className`相同
 
 ```java
 例:1 类 Firstprogram
@@ -185,20 +184,23 @@ class Demo {
 }
 ```
 
-输出：javac Demo.java
-java Demo
+输出：`javac Demo.java`
 
-| 10 |
-| 45.67 |
-| true |
-| 2 |
-| jsp@2020 |
+`java Demo`
+
+| `10` |
+| `45.67` |
+| `true` |
+| `2` |
+| `jsp@2020` |
 
 ## 例 3) 编写一个 Java 程序以遵循以下场景
 
-i) 创建一个名为 student 的类
-ii) 定义 main 方法
-iii) 在 main 方法下初始化为相应的值
+i) 创建一个名为`student`的类
+
+ii) 定义`main`方法
+
+iii) 在`main`方法下初始化为相应的值
 
 ```java
 Class student {
@@ -211,10 +213,10 @@ Class student {
 }
 ```
 
-| Bhagi |
-| 23 |
+| `Bhagi` |
+| `23` |
 
-注意：在 Java 中为了执行字符串拼接使用 '+' 运算符
+注意：在 Java 中为了执行字符串拼接使用`+`运算符
 
 ```java
 class Employee {
@@ -230,25 +232,38 @@ class Employee {
 ```
 
 输出
-java Employee
-Employee Id: 10
-Employee name is: Bhagi
-Employee Salary: 23
+
+`java Employee`
+
+`Employee Id: 10`
+
+`Employee name is: Bhagi`
+
+`Employee Salary: 23`
 
 ## 运算符
 
 1) 算术运算符
-+ 加
-- 减
-* 乘
-/ 除
-% 取模
+
+`+`加
+
+`-`减
+
+`*`乘
+
+`/`除
+
+`%`取模
 
 2) 赋值运算符
-=
-+=
--=
-*=
+
+`=`
+
+`+=`
+
+`-=`
+
+`*=`
 
 ```java
 例 赋值运算符
@@ -266,21 +281,26 @@ Employee Salary: 23
 }
 ```
 
-| Value of x is 10 |
-| value of x is 30 |
-| Value of a is 6 |
-| value of a is 30 |
+| `Value of x is 10` |
+| `value of x is 30` |
+| `Value of a is 6` |
+| `value of a is 30` |
 
 3) 关系/条件运算符
 
-< 小于
-> 大于
-<= 小于等于
->= 大于等于
-== 等
-!= 不等于
+`<`小于
 
-注意：比较运算符总是返回布尔值（true/false）
+`>`大于
+
+`<=`小于等于
+
+`>=`大于等于
+
+`==`等
+
+`!=`不等于
+
+注意：比较运算符总是返回布尔值（`true`/`false`）
 
 ```java
 Class Comparison
@@ -305,9 +325,12 @@ Class Comparison
 ```
 
 4) 逻辑运算符
-AND => &&      true = 1
-OR => ||       返回 => 布尔 false = 0
-NOT => !
+
+AND => `&&` true = 1
+
+OR => `||` 返回 => 布尔 false = 0
+
+NOT => `!`
 
 | AND | OR | NOT |
 | --- | --- | --- |
@@ -338,16 +361,12 @@ NOT => !
 }
 ```
 
-
-
-
-
 ### 5) 一元运算符
 
-- ++ (加 1)
-- -- (减 1)
-- ++ 前置自增
-- ++ 后置自增
+- `++` (加 1)
+- `--` (减 1)
+- `++`前置自增
+- `++`后置自增
 - 前置自减
 - 后置自减
 
@@ -370,11 +389,15 @@ NOT => !
 }
 ```
 
-输出 => x:5
-x:6
-x:7
-x:6
-x:5
+输出 => `x:5`
+
+`x:6`
+
+`x:7`
+
+`x:6`
+
+`x:5`
 
 ```java
 int x = 10;
@@ -435,13 +458,17 @@ class Unary {
 
 这些语句用于根据指定的条件做出决策。不同的决策语句如下：
 
-1. 1) 简单 if
-2. 2) if else
-3. 3) if else if
-4. 4) 嵌套 if
-5. 5) Switch
+1. 1) 简单`if`
 
-简单 if 是一种决策语句，只有在条件为真时才执行一组指令。
+2. 2)`if else`
+
+3. 3)`if else if`
+
+4. 4) 嵌套`if`
+
+5. 5)`Switch`
+
+简单`if`是一种决策语句，只有在条件为真时才执行一组指令。
 
 示例：流程图
 
@@ -449,7 +476,7 @@ class Unary {
 
 ![](img/c7c1d07c55f63dc1b96f816c41bc4141_13_0.png)
 
-示例：类 SimpleIfDemo
+示例：类`SimpleIfDemo`
 
 ```java
 {
@@ -461,15 +488,15 @@ class Unary {
 }
 ```
 
-## if (a<=b)
+## `if (a<=b)`
 
-System.out.println("a 小于或等于 " + b);
+`System.out.println("a 小于或等于 " + b);`
 
-System.out.println("end");
+`System.out.println("end");`
 
-# if else:-
+# `if else`:-
 
-if else 是一种决策语句。如果条件为真，我们执行 if 块；否则，如果条件为假，则执行 else 块。
+`if else`是一种决策语句。如果条件为真，我们执行`if`块；否则，如果条件为假，则执行`else`块。
 
 ![](img/c7c1d07c55f63dc1b96f816c41bc4141_14_0.png)
 
@@ -539,7 +566,14 @@ class Number
 }
 ```
 
-1) 编写一个 Java 程序判断数字是偶数还是奇数
+
+
+# Java 条件语句与循环语句
+
+## 1. 基础条件判断
+
+### 1.1 判断数字是偶数还是奇数
+
 ```java
 class Number {
     public static void main(String[] args) {
@@ -553,7 +587,9 @@ class Number {
 }
 ```
 
-2) 编写一个 Java 程序找到两个数中的最大值
+### 1.2 找到两个数中的最大值
+
+```java
 class Number2 {
     public static void main(String[] args) {
         int x=5;
@@ -567,11 +603,14 @@ class Number2 {
 }
 ```
 
-if-else-if
-if-else-if 是一种决策语句，用于检查多个条件。
+## 2. `if-else-if` 语句
+
+`if-else-if` 是一种决策语句，用于检查多个条件。
+
+### 语法
 
 ```
-语法: if (条件) {
+if (条件) {
   ---
 }
 else if (条件) {
@@ -584,6 +623,8 @@ else {
   ---
 }
 ```
+
+### 示例
 
 ```java
 class IfElseDemo {
@@ -642,11 +683,14 @@ else
 
 输出：Fail
 
-嵌套 if:
-嵌套 if 是一种决策语句，其中 if 出现在条件内部。
+## 3. 嵌套 `if`
+
+嵌套 `if` 是一种决策语句，其中 `if` 出现在条件内部。
+
+### 语法
 
 ```
-语法: if (条件)
+if (条件)
 {
     if (条件)
     {
@@ -659,9 +703,10 @@ else
 }
 ```
 
+### 示例
+
 ```java
 class NestedIf Demo
-
 public static void main(String[] args) {
     char id = 'b';
     int password = 123;
@@ -682,14 +727,15 @@ public static void main(String[] args) {
 }
 ```
 
-输出 (1) 用户 ID 无效
-(2) 用户 ID 有效密码有效 不成功
+输出：
+1. 用户 ID 无效
+2. 用户 ID 有效密码有效 不成功
 
-示例
+### 示例场景
 
-男性 21 -> 已结婚
-女性 21 -> 已结婚
-女性 18
+- 男性 21 -> 已结婚
+- 女性 21 -> 已结婚
+- 女性 18
 
 ```java
 class NestedIfDemo {
@@ -719,12 +765,14 @@ class NestedIfDemo {
 }
 ```
 
-输出：- 男性
-年龄: 21
-已结婚 & 快乐
-保持快乐
+输出：
+- 男性
+- 年龄: 21
+- 已结婚 & 快乐
+- 保持快乐
 
-8) 编写一个 Java 程序找到三个数中的最大值
+## 4. 找到三个数中的最大值
+
 ```java
 class largest of threeNumbers {
   public static void main(String[] args) {
@@ -770,11 +818,11 @@ else if (c>a && c>b)
 }
 ```
 
-## Switch 语句
+## 5. `switch` 语句
 
-Switch 是一种通常用于字符比较的条件语句
+`switch` 是一种通常用于字符比较的条件语句
 
-## 语法:-
+### 语法
 
 ```
 switch (选择/输入) {
@@ -787,7 +835,7 @@ switch (选择/输入) {
 }
 ```
 
-## 示例:-
+### 示例
 
 ```java
 class switch Demo {
@@ -811,9 +859,9 @@ class switch Demo {
 }
 ```
 
-注意 Break：是一个关键字，用于将控制转移到当前执行块之外
+注意 `break`：是一个关键字，用于将控制转移到当前执行块之外
 
-示例类 monthvalidation
+### 示例：类 `monthvalidation`
 
 ```java
 void psm(String[] args) {
@@ -832,38 +880,40 @@ void psm(String[] args) {
 }
 ```
 
-输出：开始
-无效月份
-结束
+输出：
+- 开始
+- 无效月份
+- 结束
 
-
-
-
-
-## 循环语句
+## 6. 循环语句
 
 循环语句通常用于重复特定任务
 
 - 循环语句通常也用于遍历数据
 - 不同的循环语句如下：
-1) for 循环
-2) While 循环
-3) do while 循环
-4) 嵌套循环
+  1. `for` 循环
+  2. `while` 循环
+  3. `do while` 循环
+  4. 嵌套循环
 
-for 循环是一种循环语句，用于按指定的次数重复执行任务
+### 6.1 `for` 循环
 
-- 当我们知道逻辑起点和逻辑终点时，使用 for 循环
+`for` 循环是一种循环语句，用于按指定的次数重复执行任务
+
+- 当我们知道逻辑起点和逻辑终点时，使用 `for` 循环
+
+#### 语法
 
 ```java
-Syntax: for (initialisation; condition; updation)
+for (initialisation; condition; updation)
 {
     要重复的指令集;
 }
 ```
 
+#### 示例：打印 5 次 Hello world
+
 ```java
-Ex: 打印 5 次 Hello world
 for (int i=1; i<=5; i++)
 {
     System.out.println("Hello world");
@@ -900,14 +950,12 @@ class FonloopDemo
     }
     System.out.print(" - - - - ");
     }
-
     for (int event=2; event<=10; event=event+2)
     {
         System.out.println(event);
     }
     System.out.println(" - - - - ");
     }
-
     for (int i=156; i<256; i++) // for (int i=156; 2<=256; 2H)
     {
         System.out.print(2);
@@ -917,8 +965,7 @@ class FonloopDemo
 }
 ```
 
-# papergrid
-日期: / /
+### 6.2 练习
 
 ```java
 for (int i=1; i<9; i+=2)
@@ -932,7 +979,7 @@ for (int i=2; i<=15; i+=3)
 }
 ```
 
-Q) 写一个程序按倒序打印 1 到 10 的数字
+**Q) 写一个程序按倒序打印 1 到 10 的数字**
 
 ```java
 Class Reverseorder
@@ -991,7 +1038,7 @@ for (int i=1; i<=30; i++) {
 }
 ```
 
-a) 打印 'n' 个自然数的和。
+**a) 打印 'n' 个自然数的和。**
 
 ```java
 Class NaturalNumbers {
@@ -1005,7 +1052,7 @@ Class NaturalNumbers {
 }
 ```
 
-b) 写一个程序求 1 到 10 之间偶数的和。
+**b) 写一个程序求 1 到 10 之间偶数的和。**
 
 ```java
 Class EvenNum {
@@ -1018,23 +1065,35 @@ Class EvenNum {
 }
 ```
 
-### While 循环
-While 循环是一种循环语句，用于执行一组指令，直到条件为假
-换句话说，如果条件为真，while 循环继续执行，当条件为假时停止
+### 6.3 `while` 循环
+
+`while` 循环是一种循环语句，用于执行一组指令，直到条件为假
+
+换句话说，如果条件为真，`while` 循环继续执行，当条件为假时停止
+
+#### 语法
 
 ```java
-Syntax :: while (condition)
+while (condition)
 {
     实现
 }
 ```
 
+#### 示例
+
 ```java
-Ex) int i=1;
+int i=1;
 while(i<=5)
 {
-    System.out.println(i);
+```
+
+
+
+```java
+System.out.println(i);
 }
+
 i++;
 ```
 
@@ -1057,13 +1116,16 @@ while(n>=1)
 }
 ```
 
-```输出
-
 ## do while 循环
+
 do while 循环是一种与 while 循环类似的循环语句
+
 它持续执行直到条件为假
+
 While 和 do 循环的区别在于：
+
 -> While 循环先检查条件再执行指令
+
 -> do 循环先执行指令再检查条件。
 
 ```java
@@ -1092,6 +1154,7 @@ do
 ### While 与 do 循环的区别
 
 While 循环 do
+
 - While 循环先检查条件再执行指令
 - do 循环先执行指令再检查条件
 - 如果条件为假，While 循环不执行
@@ -1113,6 +1176,7 @@ Ex) do {
 ```
 
 嵌套 for 循环是在另一个 for 循环内部的 for 循环
+
 内部 for 循环的值执行
 
 ```java
@@ -1181,10 +1245,13 @@ do {
 对象：对象是现实世界的实体
 
 - 现实世界中任何具有物理存在的物体都可以对象
+
 例如：笔、人类
 
 - 对象的属性通常分为两类：
+
 1) 状态 (States)
+
 2) 行为 (Behaviour)
 
 - 状态用于存储对象的某些值
@@ -1198,12 +1265,10 @@ do {
 | 型 | 换挡 |
 
 - 从编程的角度来看，对象名视为类名，状态视为变量，行为视为方法/函数
-
 - 类是对象的蓝图
 - 类提供了存储特定对象状态和行为的平台
-
 - 类是逻辑实体
-- 类必须使用 class 关键字来指示
+- 类必须使用`class`关键字来指示
 - 类也可以作为数据类型
 
 ```java
@@ -1242,8 +1307,7 @@ Ex: 类 Boy { bl = new Boy(); }
 ```
 
 - Q) 如何区分静态变量和非静态变量？
-
-- 如果使用 static 关键字声明变量，我们将其称为静态变量，否则将其称为非静态变量
+- 如果使用`static`关键字声明变量，我们将其称为静态变量，否则将其称为非静态变量
 
 ```
 变量
@@ -1286,8 +1350,6 @@ public static void main(String[] args) {
 }
 }
 ```
-```
-
 
 注意：同类或另一个类中的非静态属性都可以通过创建对象来访问
 
@@ -1311,9 +1373,12 @@ class Test {
 ```
 
 输出
+
+```
 java TestEmployee.java
 java TestEmployee
 Jerry earns: $12000
+```
 
 注意：我们可以为特定类创建任意数量的对象，对一个对象的修改不会反映在另一个对象上
 
@@ -1335,15 +1400,14 @@ public static void main(String[] args) {
 
 ## 输出
 
+```
 pen.java
 java pen
-
 100 100
 300 100
-
-```java
-如果一个变量仅声明但未初始化任何值，编译器将自动将其初始化为默认值
 ```
+
+如果一个变量仅声明但未初始化任何值，编译器将自动将其初始化为默认值
 
 | 数据类型 | 内存大小 | 默认值 |
 | --- | --- | --- |
@@ -1388,7 +1452,6 @@ public static void main(String[] args)
 class student {
     int age = 25;
     String name = "Tom";
-
     public static void main(String[] args) {
         student std1 = new student();
         System.out.println();
@@ -1400,21 +1463,17 @@ class student {
 Class student {
     String name;
     int age;
-
     public static void main(String[] args) {
         student s1 = new student();
         student s2 = new student();
-
         System.out.println(s1.name + " " + s1.age);
         System.out.println(s2.name + " " + s2.age);
-
         //在 s1 对象中重新初始化
         s1.name = "Tom";
         s1.age = 20;
         //在 s2 对象中重新初始化
         s2.name = "jerry";
         s2.age = 15;
-
         System.out.println(s1.name + " is " + s1.age + " years old");
         System.out.println(s2.name + " is " + s2.age + " years old");
     }
@@ -1422,10 +1481,13 @@ Class student {
 ```
 
 输出
+
+```
 null 0
 null 0
 Tom is 20 years old
 Jerry is 15 years old
+```
 
 # 31/11/2020 方法/函数
 
@@ -1454,6 +1516,7 @@ iv) 带参数有返回值的方法
 语法 : 对象名.方法名();
 
 Q) 演示无参数无返回值方法的程序
+
 class Demo {
     void display() {
         System.out.println("HelloWorld");
@@ -1467,11 +1530,15 @@ class Demo {
 }
 ```
 
+```
 Start
 HelloWorld
 End
+```
 
 P) 带参数无返回值的方法
+
+```java
 class Addition {
     //带参数且无返回值的方法
     void add(int a, int b) { // 参数
@@ -1488,10 +1555,12 @@ public static void main(String[] args) {
 }
 ```
 
+```
 30
 12
+```
 
-Q) 创建一个名为 multiply 方法，接受 3 个参数并打印它们的积
+Q) 创建一个名为`multiply`方法，接受 3 个参数并打印它们的积
 
 ```java
 class multiply {
@@ -1508,9 +1577,11 @@ public static void main(String[] args) {
 }
 ```
 
+```
 600
+```
 
-class Test
+```java
 class Test {
     int display() {
         System.out.println("start");
@@ -1520,15 +1591,16 @@ class Test {
         System.out.println("end");
     }
 }
+```
 
 ## 无参数且有返回值的方法
 
+```java
 class Test {
     // 无参数且有返回值的方法
     String display() {
         return "Hello";
     }
-
     public static void main(String[] args) {
         Test t = new Test();
         String result = t.display();
@@ -1537,9 +1609,11 @@ class Test {
         System.out.println("End");
     }
 }
+```
 
 ## 带参数且有返回值的方法
 
+```java
 class calculation {
     int test(int a) {
         return a;
@@ -1554,11 +1628,14 @@ public static void main(String[] args) {
 }
 ```
 
+```
 4
 25
+```
 
 使用哪种返回类型
 
+```java
 int test() {
     return 10;
 }
@@ -1571,8 +1648,11 @@ String test() {
     return "Dinga";
 }
 String name = "tom";
+```
 
+```
 Name: tom
+```
 
 # 纸
 
@@ -1580,14 +1660,18 @@ Name: tom
 double test() {
   return 10.5;
 }
+```
 
+
+
+```java
 String test(int age) {
-  return "Age: " + age;
+    return "Age: " + age;
 }
 
 String test(double age) {
-  int a = 5+5;
-  return "weight: " + a;
+    int a = 5+5;
+    return "weight: " + a;
 }
 ```
 
@@ -1615,10 +1699,9 @@ public static void main(String[] args) {
 - 方法重载是具有多个方法的过程
 - 换句话说，在一个类中具有相同名称但参数不同的多个方法
 - 为了实现方法重载，我们必须满足以下规则之一：
-
-- 规则1：参数的数量发生变化-参数长度
-- 规则2：参数的数据类型发生变化
-- 规则3：参数的类型顺序发生变化
+  - 规则1：参数的数量发生变化-参数长度
+  - 规则2：参数的数据类型发生变化
+  - 规则3：参数的类型顺序发生变化
 - 注意：变量名必须相同
 - 注意：通过方法重载可以实现编译时多态
 
@@ -1626,25 +1709,25 @@ public static void main(String[] args) {
 
 ```java
 class MO {
-  void display(int a) {
-    System.out.println(a);
-  }
+    void display(int a) {
+        System.out.println(a);
+    }
 
-  void display(int a, double b) {
-    System.out.println("\t" + b);
-  }
+    void display(int a, double b) {
+        System.out.println("\t" + b);
+    }
 
-  void display (string a, string b) {
-    System.out.println("\t" + b);
-  }
+    void display (string a, string b) {
+        System.out.println("\t" + b);
+    }
 
-  void display (int a, string b ) {
-    System.out.println("\t" + b);
-  }
+    void display (int a, string b ) {
+        System.out.println("\t" + b);
+    }
 
-  void display (string a ) {
-    System.out.println(a);
-  }
+    void display (string a ) {
+        System.out.println(a);
+    }
 }
 ```
 
@@ -1664,16 +1747,13 @@ class TestMO {
 ```
 
 输出:
+```
 10
 Hello
-
 10 Hello
 Hi 50
 10 10.5
-
-
-
-
+```
 
 ```java
 ps vm(string[] a) -> execution starts from this
@@ -1691,10 +1771,10 @@ ps vm(int[] a)
 
 ## Static 关键字
 
-- Static 是一个可以用于变量和方法的关键字
+- `Static` 是一个可以用于变量和方法的关键字
 - 静态属性每个类只有一个副本
 - 所有的静态属性都被加载到名为类区域（class Area）/ 静态池（static pool）/ 静态变量池的内存位置
-- 为了定义静态变量，我们必须使用 static 关键字
+- 为了定义静态变量，我们必须使用 `static` 关键字
 - 如果我们有任何静态属性，应该始终通过类名访问它
 
 ```java
@@ -1722,16 +1802,19 @@ Student {
         System.out.println("studying");
     }
 }
+
 static class Area {
 ```
 
 输出
+```
 Start
 20
 studying
 End.
+```
 
-注意：静态属性可以直接访问，也可以在同一个类中通过 lastname 访问
+注意：静态属性可以直接访问，也可以在同一个类中通过 `lastname` 访问
 
 ```java
 class Employee {
@@ -1754,11 +1837,13 @@ public static void main(String[] args)
 }
 ```
 
-output
+输出
+```
 Emp sal : 1.2
 Employee is working
 1.2
 Employee is working
+```
 
 ```java
 class car {
@@ -1776,8 +1861,10 @@ class TestCar {
 }
 ```
 
+```java
 System.out.println(can.price);
 car.stant();
+```
 
 ```java
 /* ERROR
@@ -1785,37 +1872,43 @@ so.println(price);
 Slant();*/
 ```
 
-内部是 Testcanprice & Testcarstant
-其中 Testcan 没有一个名为 price 的变量
-且没有名为 stant 的方法，所以报错
+内部是 `Testcanprice` & `Testcarstant`
+其中 `Testcan` 没有一个名为 `price` 的变量
+且没有名为 `stant` 的方法，所以报错
 
 Y
 Y
 
-Output
+输出
+```
 javac Testcan.java
 java Testcan
 12000
 carstatic
+```
 
 Class Pen
+```java
 $ static int cost = 50; // 静态变量
 public static void main(String[] args) //
-
-```java
-{\ystem.out.println(cost); // pen.cost
-cost = 70; // pen-cost = 70;
-system.out.println(pen.cost); //hp
+{
+    \ystem.out.println(cost); // pen.cost
+    cost = 70; // pen-cost = 70;
+    system.out.println(pen.cost); //hp
+}
 ```
 
 Y
 Y
 
-Output
+输出
+```
 50
 70
+```
 
 | Pen | |
+| --- | --- |
 | cost | 50 70 |
 
 | | 访问方式 | 访问方式 | 内存位置 | 副本数量 |
@@ -1824,7 +1917,7 @@ Output
 | 变量 | (1) 直接或 | (1) 通过类名 | 类区域 / | |
 | & 方法 | (2) 通过类名 | | 静态池 | |
 | 非静态属性 | 对象创建 | 对象创建 | 堆区域 | 取决于 |
-| 变量 | | | | |的对象的对象数量 |
+| 变量 | | | | 的对象的对象数量 |
 
 ```java
 class person {
@@ -1855,30 +1948,30 @@ age=10 age=10
 
 ```java
 class pen {
-  static int a=10; // 静态变量
-  int b=20; // 非静态变量
+    static int a=10; // 静态变量
+    int b=20; // 非静态变量
 }
 ```
 
 ```java
 public static void main(String[] args) {
-  system.out.println(pen.a);
-  //system.out.println(pen.b);
-  pen p = new pen();
-  system.out.println(p.b); // 使用对象引用访问静态和非静态
-  system.out.println(p.a); // 使用类名访问静态变量
+    system.out.println(pen.a);
+    //system.out.println(pen.b);
+    pen p = new pen();
+    system.out.println(p.b); // 使用对象引用访问静态和非静态
+    system.out.println(p.a); // 使用类名访问静态变量
 }
 ```
 
 ```java
 pen {
-  10
-  20
+    10
+    20
 }
 ```
 
 | 类名 | 对象引用 |
-|---|---|---|
+| --- | --- |
 | 静态属性 (变量 & 方法) | ✓ | (创建对象后) ✓ |
 | 非静态属性 (变量 & 方法) | X | ✓ |
 
@@ -1921,11 +2014,12 @@ pen {
 4) 栈：Java 程序的执行发生在栈中
 
 | JRE | 开发工具 |
-|---|---|
+| --- | --- |
 | 1) JIT | 编译器 |
 | 2) 类加载器 | 调试器 |
 | 3) 解释器 | |
 | 4) JVM | |
+
 - 堆区域
 - 类区域
 - 方法区域
@@ -1975,6 +2069,7 @@ package com;
 
 public class Demo {
     static int x=10;
+
     static {
         system.out.println("initializing to 20");
         x=20;
@@ -1994,12 +2089,14 @@ public class Demo {
 ```
 
 输出
+```
 Initializing to 20 30
 Start
 End
+```
 
 | I | -- 20 |
-|---|---|
+| --- | --- |
 | J | -- 30 |
 | | 20 |
 | | 30 |
@@ -2014,6 +2111,7 @@ package com;
 
 public class Test {
     System.out.println("In Non-static Block-1");
+
     public static void main(String[] args) {
         System.out.println("start");
         Test t = new Test(); // 创建对象
@@ -2028,10 +2126,13 @@ static {
 }
 ```
 
-输出：start
+输出：
+```
+start
 In non static Blocks-1
 In Non static Blocks-2
 start End
+```
 
 ```java
 package com;
@@ -2060,20 +2161,18 @@ public static void main(String[] args) {
 ```
 
 输出
+```
 start
 initializing to 20
 initializing to 30
 Age:30
 end
+```
 
-
-
-
-
+```java
 // 115
 System.out.println("NSB-1");
 
-```java
 public static void main(String[] args) {
     System.out.println("Hello");
     System.out.println(can);
@@ -2082,43 +2181,42 @@ public static void main(String[] args) {
 }
 ```
 
-Output
+输出
+```
 in NSB-1
 Hello
 10
 in NSB-1
 20
+```
 
-Scanner 是 `java.util` 包中的一个预定义类。
+`Scanner` 是 `java.util` 包中的一个预定义类。
 
-Scanner 类用于动态接收来自用户的输入。
+`Scanner` 类用于动态接收来自用户的输入。
 
-- 使用 Scanner 类的规则
-1) 创建 scanner 类的对象
-2) 将 `system.in` 传递给 scanner 对象的构造函数调用（以接收输入）
-   语法：`Scanner sc = new Scanner(System.in);`
-3) 使用以下语法导入 scanner 类
-   import java.util.Scanner;
+- 使用 `Scanner` 类的规则
+  1) 创建 `scanner` 类的对象
+  2) 将 `system.in` 传递给 `scanner` 对象的构造函数调用（以接收输入）
+     语法：`Scanner sc = new Scanner(System.in);`
+  3) 使用以下语法导入 `scanner` 类
+     `import java.util.Scanner;`
 
-利用利用预定义方法来增强特定类型的输入
+利用预定义方法来增强特定类型的输入
 
+```java
 package org;
 import java.util.Scanner;
 
-```java
 public class Demo {
     public static void main(String[] args) {
         System.out.println("start");
         Scanner scan = new Scanner(System.in);
-
         System.out.println("Enter a:");
         int a = scan.nextInt();
         System.out.println("value of a is: " + a);
-
         System.out.println("Enter b:");
         int b = scan.nextInt();
         System.out.println("value of b is: " + b);
-
         int sum = a + b;
         System.out.println("Sum: " + sum);
         System.out.println("End");
@@ -2126,6 +2224,9 @@ public class Demo {
 }
 ```
 
+
+
+```
 start
 Enter a
 10
@@ -2135,23 +2236,24 @@ Enter b
 value of b is: 20
 Sum: 30
 End
+```
 
-1) byte - nextByte()
+1. `byte` - `nextByte()`
+2. `short` - `nextShort()`
+3. `int` - `nextInt()`
+4. `long` - `nextLong()`
+5. `float` - `nextFloat()`
+6. `double` - `nextDouble()`
+7. `boolean` - `nextBoolean()`
+8. `string` - `nextChar()` 或 `nextLine()`
 
-2) short - nextShort()
+a) `char` -> `next(Q)` - `charAt(Q)` 位于 `pos(th)` 处的索引值
 
-3) int - nextInt()
-
-4) long - nextLong()
-5) float - nextFloat()
-6) double - nextDouble()
-7) boolean - nextBoolean()
-8) string - nextChar() or nextLine()
-
-a) char -> next(Q) - charAt(Q) 位于 pos(th) 处的索引值
+```java
 "Java".charAt(0)
+```
 
-# 构造函数 :=
+# 构造函数
 
 - 构造函数是用于初始化和实例化的特殊指令集
 - 初始化意味着赋值
@@ -2160,39 +2262,37 @@ a) char -> next(Q) - charAt(Q) 位于 pos(th) 处的索引值
 - 构造函数永远没有返回类型
 - 构造函数在对象创建时执行
 
-语法 := 可选输入 / 参数
+语法：可选输入 / 参数
 
 ```
 访问修饰符 类名 ( { )
 ```
 
-```
-构造函数的范围
-```
+## 构造函数的范围
 
-* 构造函数通常分为 2 类
-i) 默认构造函数
-ii) 自定义/用户定义的构造函数
+构造函数通常分为 2 类：
+
+1. 默认构造函数
+2. 自定义/用户定义的构造函数
 
 ### 默认构造函数
-* 如果一个类没有任何显式构造函数，则编译器会自动生成一个构造函数，因此该构造函数被称为默认构造函数
 
-* 默认构造函数既不接受任何参数也没有任何实现
+- 如果一个类没有任何显式构造函数，则编译器会自动生成一个构造函数，因此该构造函数被称为默认构造函数
+- 默认构造函数既不接受任何参数也没有任何实现
 
 ### 自定义构造函数
-* 如果程序员显式定义了一个构造函数，则它被称为自定义构造函数
 
-* 自定义构造函数可以进一步分为 2 类
-ni) 无参数构造函数
-ii) 带参数构造函数
+- 如果程序员显式定义了一个构造函数，则它被称为自定义构造函数
+- 自定义构造函数可以进一步分为 2 类：
+  1. 无参数构造函数
+  2. 带参数构造函数
 
-注意：如果存在默认构造函数，则不能存在自定义构造函数；反之，如果存在自定义构造函数，则不能存在默认构造函数
+注意：如果存在默认构造函数，则不能存在自定义构造函数；反之，如果存在自定义构造函数，则不能存在默认构造函数。
 
 ```java
 public class pen {
     // 无参数或非参数构造函数
     pen() {}
-
     // 自定义构造函数
     pen("in pen class constructor") {}
 }
@@ -2200,9 +2300,9 @@ public class pen {
 
 ```java
 pvsm(String[] args) {
-  System.out.println("start");
-  Pen p = new Pen();
-  System.out.println("end");
+    System.out.println("start");
+    Pen p = new Pen();
+    System.out.println("end");
 }
 ```
 
@@ -2217,40 +2317,39 @@ End
 
 ```java
 class Can {
-  Can(int a) {
-    System.out.println(a);
-  }
+    Can(int a) {
+        System.out.println(a);
+    }
 }
 ```
 
 ```java
 => pvsm(--)
 -> System.out.println("start");
-  Can c = new Can(50);
-  System.out.println("end");
+Can c = new Can(50);
+System.out.println("end");
 ```
 
-构造函数调用
-olp
+构造函数调用输出：
+
+```
 Start
 50
-End 在调用构造函数时
+End
+```
 
-## 全局成员变量
-
-## 局部变量
+## 全局成员变量与局部变量
 
 - 如果变量直接在类内部声明，则我们称其为全局变量或成员变量
 - 成员变量可以被所有人全局访问
 - 如果变量在特定范围内声明（如方法构造等），则我们称其为局部变量
 - 局部变量只能在特定范围内访问
 
-默认值仅适用于全局/成员变量。它可以是静态或非静态的
+默认值仅适用于全局/成员变量。它可以是静态或非静态的。
 
 ```java
 public class Demo {
     int as // 全局或成员变量;
-
     void display(int b) // b & c 是局部变量 {
         int c=20;
         System.out.println("bt" + c);
@@ -2273,10 +2372,10 @@ public static void main(String[] args) {
 }
 ```
 
-## this 关键字
+## `this` 关键字
 
-* this 是用于指向的关键字
-* 在 java 中，成员变量与局部变量同名是可能的，局部变量将占优
+- `this` 是用于指向的关键字
+- 在 Java 中，成员变量与局部变量同名是可能的，局部变量将占优
 
 ```java
 public class Kangaroo {
@@ -2320,15 +2419,15 @@ public void main(String[] args) {
 
 ```java
 class person {
-  int age;
-  String name;
+    int age;
+    String name;
 }
 ```
 
 ```java
 person(int age, String name) {
-  this.age = age;
-  this.name = name;
+    this.age = age;
+    this.name = name;
 }
 ```
 
@@ -2345,13 +2444,11 @@ public class Employee {
     int empid;
     string empName;
     double emsalary;
-
     Employee(int empid, string empName, double salary) {
         this.empid = empid;
         this.empName = empName;
         this.emsalary = salary;
     }
-
     static void main(String[] args) {
         Employee e1 = new Employee(1, "A", 12);
         Employee e2 = new Employee(2, "B", 23);
@@ -2365,151 +2462,138 @@ public class Employee {
 
 ## 构造函数重载
 
-* 构造函数重载在类中定义多个构造函数被称为构造函数重载
+- 构造函数重载在类中定义多个构造函数被称为构造函数重载
 - 构造函数在参数列表中在参数类型或参数长度上不同
 - 类中的任何两个构造函数都不应匹配
 - 重载构造函数根据参数/参数类型进行调用
 
 ```java
-构造函数重载
 class program {
-  int x;
-  int y;
+    int x;
+    int y;
 ```
 
 ```java
 program(int ang1) {
-  x = ang1;
+    x = ang1;
 }
 ```
 
 ```java
 program(double ang2) {
-  y = ang2;
+    y = ang2;
 }
 ```
 
 ```java
 program(int ang1, double ang2) {
-  x = ang1;
-  y = ang2;
+    x = ang1;
+    y = ang2;
 }
 ```
 
-
-
-
-
-papergrid
-Date: / /
-
 ```java
 void display() {
-  System.out.println("x value" + x);
-  System.out.println("y value" + y);
+    System.out.println("x value" + x);
+    System.out.println("y value" + y);
 }
 ```
 
 ```java
 class Main {
-  public static void main(String args[]) {
-    program p1 = new program(2);
-    p1.display();
-    program p2 = new program(3.4);
-    p2.display();
-    program p3 = new program(12, 3.4);
-    p3.display();
-  }
+    public static void main(String args[]) {
+        program p1 = new program(2);
+        p1.display();
+        program p2 = new program(3.4);
+        p2.display();
+        program p3 = new program(12, 3.4);
+        p3.display();
+    }
 }
 ```
 
-8/5/2020 构造方法链:-
+## 构造方法链
 
 - 构造方法链是指一个构造函数调用另一个构造函数的过程。
-- 构造方法链可以通过调用语句（`this()`）来实现。
+- 构造方法链可以通过调用语句 `this()` 来实现。
 - 为了实现构造方法链，我们需要具备构造方法重载。
 - `this()` 调用语句应该是构造函数中的第一行可执行代码。
 - `this()` 调用语句用于调用同一类中的另一个构造函数。
 
-使用 CamScanner 扫描
-
-## 示例) class Demo
+### 示例：`class Demo`
 
 ```java
 class Demo {
-  Demo() {
-    this(10);
-    System.out.println(1);
-  }
-
-  Demo(int a) {
-    System.out.println(2);
-  }
-
-  public static void main(String[] args) {
-    System.out.println("start");
-    Demo d = new Demo();
-    System.out.println("End");
-  }
+    Demo() {
+        this(10);
+        System.out.println(1);
+    }
+    Demo(int a) {
+        System.out.println(2);
+    }
+    public static void main(String[] args) {
+        System.out.println("start");
+        Demo d = new Demo();
+        System.out.println("End");
+    }
 }
 ```
 
-Demo : start
+输出：
+```
+start
 2
 end
+```
 
 > 注意：Java 中是不存在递归链的。如果有 n 个构造方法，我们最多可以有 n-1 个调用语句。
 
-## 示例) class Demo
+### 示例：`class Demo`（递归调用）
 
 ```java
 class Demo {
-  Demo() {
-    this(10);
-    System.out.println(1);
-  }
-
-  Demo(int a) {
-    this();
-    System.out.println(2);
-  }
+    Demo() {
+        this(10);
+        System.out.println(1);
+    }
+    Demo(int a) {
+        this();
+        System.out.println(2);
+    }
 }
 ```
 
-# void main(String[] args) 
+```java
+void main(String[] args) 
+```
 
-输出
+输出：
+```
+无限循环 (Infinite)
+```
 
-{
-  无限循环 (Infinite)
-}
-
+```java
 Demo d = new Demo();
+```
 
-y
+### 示例：包方法链
 
-y
-
-示例 包方法链
-
+```java
 class student {
-  Student(int id) {
-    System.out.println("Id:"+id);
-  }
-
-  student(int age, int marks) {
-    this("Tom");
-    System.out.println("Age:"+age+" Marks:"+marks);
-  }
-
-  public static void main(String[] args) {
-    student s = new student(25, 67);
-  }
-
-  student(String name) {
-    this(101);
-    System.out.println("Name:"+name);
-  }
+    Student(int id) {
+        System.out.println("Id:"+id);
+    }
+    student(int age, int marks) {
+        this("Tom");
+        System.out.println("Age:"+age+" Marks:"+marks);
+    }
+    public static void main(String[] args) {
+        student s = new student(25, 67);
+    }
+    student(String name) {
+        this(101);
+        System.out.println("Name:"+name);
+    }
 }
 ```
 
@@ -2519,10 +2603,6 @@ class student {
 | Name:Tom |
 | Age:25 |
 | Marks:67 |
-
-# papergrid
-
-Date: / /
 
 ```java
 package chaining;
@@ -2543,8 +2623,10 @@ public class student {
 }
 ```
 
-输出
+输出：
+```
 101 Jerry
+```
 
 | id | null |
 | :--- | :--- |
@@ -2554,24 +2636,28 @@ public class student {
 
 - 数据类型是指赋值给变量的数据种的规范说明。
 - 数据类型通常分为：
-  i) 基本数据类型关键字
-  ii) 非基本数据类型类
+  1. 基本数据类型关键字
+  2. 非基本数据类型类
 
-### i) 基本数据类型
+### 基本数据类型
+
 如果一个关键字作为数据类型使用，那么它就是基本数据类型。
 
 - 所有基本数据类型都有固定大小。
-Java 仅支持 8 种基本类型，它们是：
-  i) int, float
-  ii) byte, double
-  iii) short, boolean
-  iv) long, char
 
-### ii) 非基本数据类型
+Java 仅支持 8 种基本类型，它们是：
+
+1. `int`, `float`
+2. `byte`, `double`
+3. `short`, `boolean`
+4. `long`, `char`
+
+### 非基本数据类型
+
 - 如果一个类作为数据类型使用，那么它就是非基本数据类型。
 - 非基本数据类型没有固定大小。
 - 我们可以拥有任意数量的非基本类型。
-- 最好的例子是 string。
+- 最好的例子是 `string`。
 
 注意：接口类型上任何非基本或类类型的默认值为 `null`。
 
@@ -2582,7 +2668,7 @@ Java 仅支持 8 种基本类型，它们是：
 - 数组是同质类型，即只能存储相似类型的数据。
 - 数组是基于索引的，索引位置从 0 开始。
 
-数组声明 - { }
+### 数组声明
 
 ```java
 语法：datatype[] arrayName;
@@ -2590,9 +2676,10 @@ Java 仅支持 8 种基本类型，它们是：
 datatype[] arrayName;
 ```
 
-数组创建：`arrayName = new datatype[size];`
+### 数组创建
 
 ```java
+arrayName = new datatype[size];
 marks = new int[5];
 names = new String[3];
 ```
@@ -2601,13 +2688,11 @@ names = new String[3];
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | names | null | null | null | | |
 
-数组声明与创建合并进行
+### 数组声明与创建合并进行
 
 ```java
-数组声明语法：datatype[] arrayName = new datatype[size];
+语法：datatype[] arrayName = new datatype[size];
 ```
-
-数组创建
 
 ```java
 double[] Salary = new double[3];
@@ -2616,7 +2701,7 @@ Salary[1] = 10.56;
 Salary[2] = 12.34;
 ```
 
-### iv) 数组初始化
+### 数组初始化
 
 ```java
 语法：arrayName[Index] = value;
@@ -2636,16 +2721,12 @@ a[1] = 300;
 a[2] = 100;
 ```
 
-### v) 直接初始化数组
+### 直接初始化数组
 
 ```java
 语法：datatype[] arrayName = {v1, v2, v3};
 int[] a = {10, 20, 30};
 ```
-
-
-
-
 
 ```java
 for (int i=0; i<length; i++) {
@@ -2654,15 +2735,18 @@ for (int i=0; i<length; i++) {
 }
 ```
 
-3
-输出/输出
+输出：
+```
 org.car@7852c922
 BMK 100
 org.car@4e251548
 Suzuki 200
+```
 
+```java
 C[0] = C1
 C C[1] = C2 222
+```
 
 ```java
 for (int i=0; i<length; i++) {
@@ -2671,12 +2755,16 @@ for (int i=0; i<length; i++) {
 }
 ```
 
+```
 111-brand 111-cost "Bmw"
 BYW
 Cost 100
 C2 -> 222
 brand "SOU 52"
 Cost 2004
+```
+
+
 
 ```java
 class student {
@@ -2710,11 +2798,16 @@ for (int i=0; i<std.length; i++) {
 }
 ```
 
-org-123
+`org-123`
+
 1 Bhagya 100
-org-222
+
+`org-222`
+
 2 Rekha 200
-org-333
+
+`org-333`
+
 3 Nivi 300
 
 ## 继承
@@ -2725,36 +2818,46 @@ org-333
 
 获取属性的类被称为子类 / 衍生类 / 派生类。
 
-Java 中的继承通过使用 `extends` 关键字实现。继承也被称为“是一个...”的关系（Is-A Relationship）。
+Java 中的继承通过使用`extends`关键字实现。继承也被称为“是一个...”的关系（Is-A Relationship）。
 
 在 Java 中，只有变量和方法不会被继承，而块和构造函数是不继承的。
 
 - 继承的不同方式如下：
+
 1) 单级继承
+
 2) 多级继承
+
 3) 单层级继承
+
 4) 多重继承
+
 5) 混合继承
 
 ### 单级继承
+
 1 个父类和 1 个子类的组合被称为单级继承。
 
 ![](img/c7c1d07c55f63dc1b96f816c41bc4141_98_0.png)
 
 ### 多级继承
+
 多个父类和多个子类按顺序组合。B 是 A 的父类也是子类。
 
 ### 单层级继承
+
 1 个父类和多个子类的组合被称为单层级继承。
 
 ![](img/c7c1d07c55f63dc1b96f816c41bc4141_99_0.png)
 
 ### 多重继承
+
 1 个子类和多个父类的组合被称为多重继承。
 
 ![](img/c7c1d07c55f63dc1b96f816c41bc4141_99_1.png)
 
 ### 混合继承
+
 它是两种或更多类型继承的组合。
 
 在 Java 中，混合继承在一定程度上被支持，但不完全支持。
@@ -2782,11 +2885,11 @@ public static void main(String[] args) {
 
 | Father |
 | :--- |
-| x = 10 |
+| `x = 10` |
 | Son |
-| y = 20 |
+| `y = 20` |
 
-Son 隐式地期望父类的属性。
+`Son`隐式地期望父类的属性。
 
 ### 多级继承示例
 
@@ -2829,15 +2932,23 @@ public class solution {
 ```
 
 ...
-d.noofcollege();
-d.noofstudents();
+
+`d.noofcollege();`
+
+`d.noofstudents();`
+
 输出
 
 University Name : VTU
+
 College Name : Spiders
+
 Department Name : CSE
+
 NO of colleges are 200
+
 NO of students are 400
+
 Fav subject is JAVA
 
 ## 类图
@@ -2848,13 +2959,14 @@ Fav subject is JAVA
 | Department | 4 |
 | Department | 6 |
 | car | bike |
-| : | : | |
+| : | : |
 | int | string |
-| driving | ride() void |
+| driving | `ride()` void |
 | vehicle | brand: |
-| & 4 wheels |
+| & 4 wheels | |
 
 ## vehicle
+
 ```java
 class vehicle {
     String brand = "BMW";
@@ -2895,7 +3007,7 @@ public class runner {
 
 ## Super 关键字
 
-Super 是用于指向或访问父类的关键字。Super 关键字可以用于变量和方法。
+`Super`是用于指向或访问父类的关键字。`Super`关键字可以用于变量和方法。
 
 ```
 语法：
@@ -2903,7 +3015,7 @@ super.variableName
 super.methodName();
 ```
 
-注意：使用 super 关键字是强制的。
+注意：使用`super`关键字是强制的。
 
 ```java
 package com;
@@ -2952,9 +3064,11 @@ class Father {
 }
 ```
 
-// this 关键字：同类方法
-// super 关键字：另一个类方法是父类方法
-// 使用 super 关键字需要继承关系
+// `this`关键字：同类方法
+
+// `super`关键字：另一个类方法是父类方法
+
+// 使用`super`关键字需要继承关系
 
 ```java
 public class Son extends Father {
@@ -2975,8 +3089,11 @@ public class Son extends Father {
 ```
 
 playing
+
 father is working
+
 eating
+
 playing
 
 ## 方法重写
@@ -2984,7 +3101,7 @@ playing
 | 方法 | 说明 |
 | :--- | :--- |
 | 方法重写 | 是继承方法并更改被继承方法的实现的过程 |
-| 为了实现方法重写必须遵循以下规则 |
+| 为了实现方法重写必须遵循以下规则 | |
 | 规则 | |
 | Rule1 | 方法名应相同 |
 | Rule2 | 参数应相同 |
@@ -2994,11 +3111,11 @@ playing
 
 为了实现方法重写，继承是必要的。
 
-可选地，在重写时可以使用注解 `@override`, `@Override`。
+可选地，在重写时可以使用注解`@override`, `@Override`。
 
-> @Override 是向程序员和 JVM 表明该方法已被继承并重写的指示。
+> `@Override`是向程序员和 JVM 表明该方法已被继承并重写的指示。
 
-> @Override 从 jdk 1.5 开始引入。
+> `@Override`从 jdk 1.5 开始引入。
 
 ```java
 public class Father {
@@ -3036,6 +3153,7 @@ public class solution {
 ```
 
 Son's Bike
+
 Son is Eating
 
 # 格
@@ -3082,7 +3200,6 @@ class IC ICICI extends Bank {
 }
 ```
 
-
 ```java
 public class SBI extends Banks {
     Void RateOfInterest() {
@@ -3106,32 +3223,50 @@ public class test {
 ```
 
 利率为 0%;
+
 利率为 6.%.
+
 e = =
+
 利率为 9%;
+
 利率为 0.
+
 ```
 
 # papergrid
 日期: / /
 
 ```java
+
 WAI
+
 message(): void
+
 ```
 
 ```java
+
 WAZ
+
 message(): void ST
+
 call(): void DT
+
 语音通话
+
 ```
 
 ```java
+
 WA3
+
 message(): void ST, DT, BT
+
 call(): void voice, videoCall
+
 payment(): void
+
 ```
 
 - 1) 单张图片
@@ -3139,53 +3274,93 @@ payment(): void
 - 3) 视频 3
 
 ```java
+
 public class WhatsApp {
+
     void message() {
+
         System.out.println("Supports singleTicks");
+
     }
+
 }
+
 ```
 
 ```java
+
 public class WhatsApp2 extends WhatsApp {
+
     @Override
+
     void message() {
+
         super.message();
+
         System.out.println("Supports DoubleTicks");
+
     }
+
 }
+
 ```
 
 ```java
+
 void call()
+
 {
+
   System.out.println("supports voice call");
+
 }
 
 public class WhatsApp3 extends WhatsApp2 { 
+
   @Override
+
   void message() {
+
     super.message();
+
     System.out.println("we can pay through WhatsApp");
+
   }
+
   @Override
+
   void call() {
+
     super.call();
+
     System.out.println("supports video call");
+
   }
+
   void payment() {
+
     System.out.println("can pay through whatsapp");
+
   }
+
 }
 
 public class user {
+
   void main(String[] args) {
+
     WhatsAppApp a = new WhatsAppApp(c);
+
     a.message();
+
     a.call();
+
     a.payment();
+
   }
+
 }
+
 ```
 
 # papergrid
@@ -3198,7 +3373,7 @@ public class user {
 - 继承的构造函数链
 - 子类构造函数调用父类构造函数的过程被称为继承的构造函数链。
 - 为了在另一个类中实现构造函数链，必须继承。
-- 我们使用了 super 调用语句。
+- 我们使用了`super`调用语句。
 - 为了在另一个类中实现构造函数链。
 - 构造函数链分为两种两种方式：
 
@@ -3212,12 +3387,19 @@ public class user {
 父类 java
 
 ```java
+
 public class Father {
+
     Father() {
+
         System.out.println(1);
+
     }
+
 }
 ```
+
+
 
 ## Son.java
 
@@ -3228,6 +3410,7 @@ public class Son extends Father {
         System.out.println("java");
     }
 }
+
 public class Test {
     public static void main(String[] args) {
         System.out.println("start");
@@ -3241,6 +3424,7 @@ public class Test {
 ```
 
 # papergrid
+
 日期: / /
 
 ## 显式构造函数链
@@ -3310,17 +3494,19 @@ class Test {
 ```
 
 # papergrid
+
 日期: / /
 
 构造函数链类
 
-相同(this)
-另一个(super())
+相同(`this`)
+另一个(`super()`)
 
 隐式
 显式
+
 - 递归链（在 Java 中不可行）
-- 第一条可执行语句：this() & super() 不能出现在同一个构造函数中
+- 第一条可执行语句：`this()` & `super()` 不能出现在同一个构造函数中
 
 ## 继承的优点
 
@@ -3393,18 +3579,23 @@ public class Runner {
     }
 }
 ```
+
 输出
+
+```
 1 D 124
 2 A 122
+```
+
 访问修符
 
-* 访问修符用于指定成员的可见性
-* public 是全局可见的
+- 访问修符用于指定成员的可见性
+- `public` 是全局可见的
 
-1) public
-2) protected
-3) default（默认）
-4) private
+1) `public`
+2) `protected`
+3) `default`（默认）
+4) `private`
 
 | 外部类 | 同包类 | 不同包类 |
 |---|---|---|
@@ -3415,27 +3606,25 @@ public class Runner {
 
 访问修符如下：
 
-1) public
-2) protected
-3) default
-4) private
-
-
-
+1) `public`
+2) `protected`
+3) `default`
+4) `private`
 
 # 21/2/2020
 
 ## default (默认)
 
-default 是一种访问修饰符，它可以在同一个类、同一个包内被访问。
+`default` 是一种访问修饰符，它可以在同一个类、同一个包内被访问。
 
 当我们不使用任何访问修饰符时，它将默认为默认。
 
-default 意味着包级别。
+`default` 意味着包级别。
 
 ```java
 // 在同一类中访问默认属性
 package com;
+
 class Mobile {
   int cost=2000;
   public static void main(String[] args) { // 输出: 200
@@ -3448,6 +3637,7 @@ class Mobile {
 ```java
 // 在同一包的另一个类中访问默认属性
 package com;
+
 class student {
   static int rollNO=123;
   void study() {
@@ -3458,6 +3648,7 @@ class student {
 
 ```java
 package com;
+
 public class solution {
     public static void main(String[] args) {
         System.out.println(student.rollNO);
@@ -3476,16 +3667,19 @@ studying
 
 ```java
 import java.util.Scanner;
+
 java.util.Scanner s;
 ```
 
 ```java
 package Demo.java
+
 a.b.c.Demo.java
 ```
 
 ```java
 package com.pen;
+
 public class Pen {
     public static int cost=20;
     public int x=10;
@@ -3494,7 +3688,9 @@ public class Pen {
 
 ```java
 package org;
+
 //import java.util.Scanner;
+
 public class Runner {
     public void main(String[] args) {
         System.out.println(com.pen.cost);
@@ -3514,11 +3710,12 @@ java.util.Scanner s=new java.util.Scanner(System.in);
 输出 20
 10
 
-- protected 是一种访问修饰符，它可以在同一个类、同一个包内以及包外部、在存在 Is-A 关系的情况下的另一个包内访问。
+- `protected` 是一种访问修饰符，它可以在同一个类、同一个包内以及包外部、在存在 Is-A 关系的情况下的另一个包内访问。
 
 ```java
 // 在包外访问受保护成员
 package com;
+
 public class Father {
     protected int age=40;
 }
@@ -3526,7 +3723,9 @@ public class Father {
 
 ```java
 package com2;
+
 import com.Father;
+
 public class Son extends Father {
     public static void main(String[] args) {
         Son s = new Son();
@@ -3539,7 +3738,7 @@ public class Son extends Father {
 
 ## final 关键字
 
-final 是一个可以与变量、类的关键字。
+`final` 是一个可以与变量、类的关键字。
 
 - Final 变量（Final Variables）不能重新初始化，即它充当常量。
 - Final 方法（Final method）可以被继承但不能被重写。
@@ -3562,10 +3761,11 @@ final 是一个可以与变量、类的关键字。
 - 封装的最佳示例是 Java Bean。
 
 创建 Java Bean 的规范：
+
 1) 创建一个公共非抽象类
 2) 声明私有数据成员
 3) 定义公共的 setter 和 getter 方法
-4) 类必须实现 Serializable 接口
+4) 类必须实现 `Serializable` 接口
 5) 类应该有一个带参构造函数
 
 ```java
@@ -3602,10 +3802,10 @@ class Test {
 }
 ```
 
-- i) 创建一个名为 employee 的公共非抽象类
-- ii) 声明私有变量 id, name
+- i) 创建一个名为 `employee` 的公共非抽象类
+- ii) 声明私有变量 `id`, `name`
 - iii) 分别拥有公共 getter 和 setter 方法
-- iv) 创建另一个名为 solution 的类并在 main 方法来调用这些相应的方法
+- iv) 创建另一个名为 `solution` 的类并在 `main` 方法来调用这些相应的方法
 
 ```java
 public class employee {
@@ -3614,15 +3814,12 @@ public class employee {
     public void setId(int id) {
         this.id = id;
     }
-
     public int getId() {
         return this.id;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public String getName() {
         return name;
     }
@@ -3640,8 +3837,11 @@ public static void main(String[] args) {
 ```
 
 输出
+
+```
 100
 Name
+```
 
 solution.java
 
@@ -3652,23 +3852,18 @@ solution.java
 3) 封装可以隐藏类的内部实现细节，只暴露接口。
 4) 封装可以增加代码的可维护性和安全性。
 
-
-
-
-
 ## 具体方法 (Concrete Method)：同时具有声明和实现的方法被称为具体方法。
 
 ```java
 void test() -> Method Declaration
 {
-    
 }
 // 方法实现 / 定义
 ```
 
 抽象方法 (Abstract Method)：只有声明而没有实现的方法被称为抽象方法。抽象方法必须使用 `abstract` 关键字声明。
 
-语法：访问修符 abstract 返回类型 方法名();
+语法：访问修符 `abstract` 返回类型 方法名();
 
 ```java
 例 :- 1) public abstract void display();
@@ -3681,7 +3876,7 @@ void test() -> Method Declaration
 
 ## 规则 1 的示例
 
-例：抽象类 person，类 student 继承 person
+例：抽象类 `person`，类 `student` 继承 `person`
 
 ```java
 {
@@ -3706,6 +3901,7 @@ public static void main() {
 规则 2：如果抽象方法无法被重写，则使子类变为抽象类。
 
 ProjectManager.java
+
 ```java
 public abstract class projectManager
 {
@@ -3714,6 +3910,7 @@ public abstract class projectManager
 ```
 
 Developer.java
+
 ```java
 public abstract class Developer extends projectManager
 {
@@ -3750,28 +3947,27 @@ public class solution {
     public static void main(String[] args) {
         Intern i = new Intern();
         i.developApp();
-        i.getTask();
-        i.display();
-    }
-}
-```
 
-// 开发一些小型项目
-study.java
-Hello o
+
+
+```java
+i.getTask();
+i.display();
+```
 
 ## 注意：我们不能创建抽象类的对象（因为它是不完全的）
 
-- 2) 抽象方法不能是私有的 (private)
-- 3) 抽象方法不能是静态的 (static)
-- 4) 抽象方法不能是最终的 (final)
+- 抽象方法不能是私有的（`private`）
+- 抽象方法不能是静态的（`static`）
+- 抽象方法不能是最终的（`final`）
 
-抽象类可以拥有构造函数，这些构造函数如果是公共，可以通过隐式或显式地使用 `Super` 调用语句来触发。
+抽象类可以拥有构造函数，这些构造函数如果是公共，可以通过隐式或显式地使用`Super`调用语句来触发。
 
 子类应该是一个具体类。
 
+### `father.java`
+
 ```java
-father.java
 public abstract class Father {
     Father(int x) {
         System.out.println(1);
@@ -3779,8 +3975,9 @@ public abstract class Father {
 }
 ```
 
+### `son.java`
+
 ```java
-son.java
 public class son extends Father {
     son() {
         super(10);
@@ -3789,7 +3986,7 @@ public class son extends Father {
 }
 ```
 
-## Test.java
+### `Test.java`
 
 ```java
 public class Test {
@@ -3801,9 +3998,9 @@ public class Test {
 
 ## OOP 1
 
-接口 (Interface) 是一种 Java 类型定义，必须使用 `interface` 关键字声明。接口也可以被视为 2-5 个系统之间的媒介。例如，一个系统将作为客户端行为，另一个系统将作为带有资源的系统行为。
+接口（Interface）是一种 Java 类型定义，必须使用`interface`关键字声明。接口也可以被视为 2-5 个系统之间的媒介。例如，一个系统将作为客户端行为，另一个系统将作为带有资源的系统行为。
 
-接口中可以包含变量，这些变量自动是公共的 (public)、静态的 (static) 最终的 (final)。接口仅允许抽象方法，这些方法自动是公共且抽象的。
+接口中可以包含变量，这些变量自动是公共的（`public`）、静态的（`static`）最终的（`final`）。接口仅允许抽象方法，这些方法自动是公共且抽象的。
 
 ```java
 interface Test {
@@ -3814,70 +4011,73 @@ interface Test {
 
 接口不包含任何构造函数，因此我们无法创建接口的对象。
 
-类可以通过 `implements` 关键字与接口实现“是”关系（继承）。
+类可以通过`implements`关键字与接口实现"是"关系（继承）。
 
 注意：当一个类实现接口时，必须重写抽象方法。
 
 注意：访问规范应保持相同或具有更高的可见性。
 
 ```java
-interface College
-{
-  public void enjoy();
+interface College {
+    public void enjoy();
 }
 ```
 
 ```java
 class Student implements College {
-  @Override
-  public void enjoy() {
-    System.out.println("enjoyed");
-  }
+    @Override
+    public void enjoy() {
+        System.out.println("enjoyed");
+    }
 }
 ```
 
 ```java
 public static void main() {
-  Student s = new Student();
-  s.enjoy();
+    Student s = new Student();
+    s.enjoy();
 }
 ```
 
 ## IS-A 类接口
 
-| IS-A | 类 (Class) | 接口 (Interface) |
+| IS-A | 类（Class） | 接口（Interface） |
 |---|---|---|
-| 类 (Class) | extends | implements |
-| 接口 (Interface) | X | |
+| 类（Class） | `extends` | `implements` |
+| 接口（Interface） | X | |
 
-## Father.java
+### `Father.java`
 
 ```java
 package org;
+
 public interface Father {
-    int age=40; //public, static, final int public static final int age=40;
-    void work(); //public and abstract public abstract void work();
+    int age = 40; // public, static, final int public static final int age = 40;
+    void work(); // public and abstract public abstract void work();
 }
 ```
 
-## Son.java
+### `Son.java`
 
 ```java
 package org;
+
 public interface Son extends Father {
     void enjoy();
 }
 ```
 
-## Grandson.java
+### `Grandson.java`
 
 ```java
 package org;
+
 public class Grandson implements Son {
     @Override
     public void work() {
         System.out.println("working");
     }
+
     @Override
     public void enjoy() {
         System.out.println("enjoying");
@@ -3885,13 +4085,13 @@ public class Grandson implements Son {
 }
 ```
 
-## Runner java
+### `Runner.java`
 
 ```java
 package org;
 
 public class Runner {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         System.out.println("Father-age");
         Grandson gs = new Grandson();
         gs.work();
@@ -3900,68 +4100,65 @@ public class Runner {
 }
 ```
 
-olp
-4o
+输出：
+```
 Working
 enjoying
+```
 
-- * 一个类可以实现任意数量的接口
-- * 一个类可以继承另一个类并实现任意数量的接口
+- 一个类可以实现任意数量的接口
+- 一个类可以继承另一个类并实现任意数量的接口
 
 ```java
-interface A
-{
+interface A {
     void m1();
 }
-
 ```
 
 ```java
-interface B
-{
+interface B {
     void m2();
 }
-
 ```
 
- ProjectManager.java
+### `ProjectManager.java`
+
 ```java
-public abstract class projectManager
-{
-  abstract void createTask();
+public abstract class projectManager {
+    abstract void createTask();
 }
 ```
 
-## Developer.java
+### `Developer.java`
+
 ```java
-public abstract class Developer extends projectManager
-{
-  abstract void developApp();
-  void display() {
-    System.out.println("HELLO");
-  }
+public abstract class Developer extends projectManager {
+    abstract void developApp();
+    
+    void display() {
+        System.out.println("HELLO");
+    }
 }
 ```
 
-## Intern.java
+### `Intern.java`
+
 ```java
 public class Intern extends Developer {
     @Override
     void getTask() {
         System.out.println("study java");
     }
-}
-```
 
-```java
     @Override
     void developApp() {
-    System.out.println("Develop some" + "mini project");
+        System.out.println("Develop some" + "mini project");
     }
 }
 ```
 
-## Solution.java
+### `Solution.java`
+
 ```java
 public class solution {
     public static void main(String[] args) {
@@ -3973,71 +4170,16 @@ public class solution {
 }
 ```
 
-## father.java
-```java
-public abstract class Father {
-    Father(int x) {
-        System.out.println(1);
-    }
-}
-```
+# ASCII：美国标准代码信息交换
 
-```java
-son.java
-public class son extends Father {
-    son() {
-        super(10);
-        System.out.println(2);
-    }
-}
-```
-
-## Test.java
-```java
-public class Test {
-    public static void main(String[] args) {
-        Son s = new Son();
-    }
-}
-```
-
-```java
-interface Test {
-    public static final int x = 50;
-    public abstract void display(int y);
-}
-```
-
-```java
-interface College
-{
-  public void enjoy();
-}
-```
-
-```java
-class Student implements College {
-  @Override
-  public void enjoy() {
-    System.out.println("enjoyed");
-  }
-}
-```
-
-
-
-
-
-# ASCII : (美国标准代码信息交换)
-
-面试 (重要**)
+面试（重要）
 
 - 编写一个程序打印从 a 到 z 的字母及其对应的 ASCII 值。
 
 ```java
 class Ascii {
     public static void main(String[] args) {
-        for (int i=65; i<96; i++) {
+        for (int i = 65; i < 96; i++) {
             System.out.println("The ASCII value of " + (char)i + " is " + i);
         }
     }
@@ -4045,40 +4187,40 @@ class Ascii {
 ```
 
 ```java
-for (char i='A'; i<='z'; i++) {
+for (char i = 'A'; i <= 'z'; i++) {
     System.out.println((int)(i));
 }
 ```
 
-面试 (重要**)
+面试（重要）
 
-- 为什么在初始化 float 变量时，要在末尾指定 float？
+- 为什么在初始化`float`变量时，要在末尾指定`float`？
 
-在 Java 中，每当编译器遇到小数型数值值时，它会假定其为 double 类型（即 8 字节）。
-- 当我们尝试将其存储在 float 中时，我们实际上是在将其强制转换为 4 字节，即将 double 转换为 float
+在 Java 中，每当编译器遇到小数型数值值时，它会假定其为`double`类型（即 8 字节）。
+
+- 当我们尝试将其存储在`float`中时，我们实际上是在将其强制转换为 4 字节，即将`double`转换为`float`
 
 ```java
 public class Solution {
     public static void main(String[] args) {
-        byte a=5;
-        short b=55;
-        int c=555;
-        long mobNo=9739070632L;
+        byte a = 5;
+        short b = 55;
+        int c = 555;
+        long mobNo = 9739070632L;
         System.out.println("= ==");
-
-        float x=6.7f; // float x=6.7f 或 float x=(float)6.7f
-        double y=5.5;
+        float x = 6.7f; // float x = 6.7f 或 float x = (float)6.7f
+        double y = 5.5;
     }
 }
 ```
 
-- Q) 为什么 Java 不支持多继承？
+- Q）为什么 Java 不支持多继承？
+
 构造函数链调用中的歧义
 
 | 父类 Father | 母类 Mother |
-| --- | --- |
-| Father() | mother() |
-| { | { |
+|---|---|
+| `Father()` | `mother()` |
 
 子类 Son
 
@@ -4091,39 +4233,44 @@ Son s = new Son();
 
 它不知道应该调用哪个父类的构造函数，即产生混淆/歧义
 
-### 2) 菱形问题
+### 菱形问题
 
 当父类具有相同的变量或方法时，会产生问题/歧义。
+
 :: Java 不支持多继承。
 
 | A |
-| x=10 |
+|---|
+| `x = 10` |
 
 | B | C |
-| x=10 | x=10 |
+|---|---|
+| `x = 10` | `x = 10` |
 
 | D |
-| ? |
+|---|
+| `?` |
 
 | A | B |
-| x=10 | x=10 |
+|---|---|
+| `x = 10` | `x = 10` |
 
 | C |
-| x=? |
+|---|
+| `x = ?` |
 
+```java
 C obj = new C();
 System.out.println(obj.x);
+```
 
-### 向上转型 (Upcasting) & 向下转型 (Downcasting)
+## 向上转型（Upcasting）与向下转型（Downcasting）
 
 - 向上转型是将子类对象的内存地址赋值给父类类型引用的过程。
-
-- 为了实现向上转型，继承中的“is-A”关系是强制性的。
-
+- 为了实现向上转型，继承中的"is-A"关系是强制性的。
 - 向上转型总是隐含发生的。通过向上后的引用，我们只能访问父类的属性，而不能访问子类的属性。
 
-向下转型
-将向上转型后的引用转换回子类类型引用的过程被称为向下转型。
+向下转型是将向上转型后的引用转换回子类类型引用的过程。
 
 - 向下转型必须显式进行。
 - 只有在向上转型之后才能实现向下转型。
@@ -4138,57 +4285,62 @@ Son s = (Son) f;
 
 ## 示例
 
-|  vehicle | 向下转型 |
-| --- | --- |
-| 向上转型 brand = "suzuki" | |
-| Bike cost = 200 | |
+| vehicle | 向下转型 |
+|---|---|
+| 向上转型 `brand = "suzuki"` | |
+| Bike `cost = 200` | |
 
 ### 向上转型
 
+```java
 vehicle v = new Bike();
+```
 
-| brand cost |
+| `brand` `cost` |
+|---|
 
+```java
 Bike b = new Bike();
 vehicle v = b;
-
 Bike b = (Bike) v;
+```
 
-| brand cost |
+| `brand` `cost` |
+|---|
 
-### 示例 1 Developer.java
+### 示例 1：`Developer.java`
 
 ```java
 package classypecasting;
 
 public class Developer {
     String domain = "Java";
-
+    
     void work() {
         System.out.println("Developer is working");
     }
 }
 ```
 
-## J2Engineer-Java
+### `J2Engineer.java`
 
 ```java
 package classypecasting;
-```
 
-```java
 public class J2Engineer extends Developer {
     String name = "Tom";
+    
     void task() {
         System.out.println("learn Java");
     }
 }
 ```
 
-## Solution.java
+### `Solution.java`
 
 ```java
 package classypecasting;
+
 public class solution {
     public static void main(String[] args) {
         Developer d = new J2Engineer(); // 向上转型 UP-CASTING
@@ -4207,16 +4359,19 @@ JrEngineer jn = (JrEngineer) d;
 System.out.println(jr.domain + " " + jr.name);
 jr.work();
 jr.task();
+```
 
-输出
+输出：
+```
 Java
 Developer is working
 = = =
 Java Tom
 Developer is working
 Learn java
+```
 
-- 面试(重要**)
+- 面试（重要）
 - 静态方法可以重载，但不能被重写。
 - 非静态方法可以同时被重载和重写。
 
@@ -4224,6 +4379,7 @@ Learn java
 
 ```java
 package classstype casting;
+
 public class Father {
     void bike() {
         System.out.println("old fashioned bike");
@@ -4231,17 +4387,18 @@ public class Father {
 }
 ```
 
-## public class Son extends Father {
-
 ```java
-@Override
-void bike() {
-    System.out.println("Modified Bike");
+public class Son extends Father {
+    @Override
+    void bike() {
+        System.out.println("Modified Bike");
+    }
 }
 ```
 
+### `Test.java`
+
 ```java
-TestJava
 public class Test {
     public static void main(String[] args) {
         Father f = new Son();
@@ -4253,61 +4410,58 @@ public class Test {
 }
 ```
 
-
-
-
-
-# 同学
-
-日期
-页码
-
 ```java
-void display (double a) {
-  System.out.println(a);
+void display(double a) {
+    System.out.println(a);
 }
-Output
+```
+
+输出：
+```
 23.45
 10 hai
 bye 1234
 ```
 
 ```java
-void display (int a, String b) {
-  System.out.println(a + " "+b);
+void display(int a, String b) {
+    System.out.println(a + " " + b);
 }
 ```
 
 ```java
 public void main(String[] args) {
-  Demo d = new Demo();
-  d.display(23.45);
-  d.display(100);
-  d.display(10, "hai");
-  d.display("bye", 1234);
+    Demo d = new Demo();
+    d.display(23.45);
+    d.display(100);
+    d.display(10, "hai");
+    d.display("bye", 1234);
 }
 ```
 
-## 方法绑定 (Method Binding)
+## 方法绑定（Method Binding）
 
 方法绑定是将方法调用与其方法实现关联起来的过程（称为方法绑定）。
 
 ```
 Method Declaration -> method caller
 void display() {
- -> Method implementation -> mapping -> method binding
-m1(), mapping, (10)
-m(), ()
-m1(int ay);
+    -> Method implementation -> mapping -> method binding
+    m1(), mapping, (10)
+    m(), ()
+    m1(int ay);
+}
 ```
-```
+
+
 
 ## 运行时多态 (Run Time Polymorphism)
 
-运行时多态可以通过以下帮助帮助实现：
-1) IS-A 关系
-2) 方法重写 (Method Overriding)
-3) 向上转型 (Upcasting)
+运行时多态可以通过以下帮助实现：
+
+1. IS-A 关系
+2. 方法重写 (Method Overriding)
+3. 向上转型 (Upcasting)
 
 * 运行时多态也称为晚绑定 (late Binding) 或动态绑定 (dynamic binding)。
 * 在运行时多态期间，方法绑定始终在运行时由 JVM 完成。
@@ -4320,7 +4474,13 @@ class Vehicle {
     System.out.println("VS");
   }
 }
+
 class Bike extends Vehicle {
+  @Override
+  void start() {
+    System.out.println("B-S");
+  }
+}
 ```
 
 ```java
@@ -4335,49 +4495,20 @@ class Test {
 ```
 
 ```java
-@Override
-void start() {
-  System.out.println("B-S");
-}
-```
-
-![](![](img/c7c1d07c55f63dc1b96f816c41bc4141_168_0.png)
-
-# 同学
-日期
-页码
-
-3) class Car extends Vehicle
-
-```java
-{
+class Car extends Vehicle {
   @Override
   void start() {
-    v2 -> 222
-    void start(Object x3) {
-      OxU
-      Ox 4
-      CS
-    }
     System.out.println("CS");
-    v1 -> 111
-    void start(Object x1) {
-      Ox2
-      Ox1
-      BS
-    }
   }
 }
-class Car
 ```
 
-例) 另一种方法
+### 另一种方法
 
 ```java
-class Test
-{
-  void display (Vehicle v) {
-    System.out.println v.start();
+class Test {
+  void display(Vehicle v) {
+    System.out.println(v.start());
   }
 }
 ```
@@ -4388,16 +4519,14 @@ public static void main(String[] args) {
   t.display(new Bike()); // BS
   t.display(new Car()); // CS
   Car c = new Car();
-  t.display(c); 
-}
+  t.display(c);
 }
 ```
 
-## Bank-java
+## Bank.java
 
-public class Bank 
 ```java
-{
+public class Bank {
   void rateOfInterest() {
     System.out.println("ROI is 8%");
   }
@@ -4423,32 +4552,33 @@ public class ICICI extends Bank {
 ```
 
 ```java
-public class customer {
-    public static void main(String[] args) {
-        Bank b1 = new SBI();
-        b1.rateOfInterest();
-        Bank b2 = new ICICI();
-        b2.rateOfInterest();
-        // ICICI 中的 ROI 是 8.7%;
-    }
+public class Customer {
+  public static void main(String[] args) {
+    Bank b1 = new SBI();
+    b1.rateOfInterest();
+    Bank b2 = new ICICI();
+    b2.rateOfInterest();
+    // ICICI 中的 ROI 是 8.7%;
+  }
 }
 ```
 
 ```java
 public class AccountHolder {
-    void checkROI(Bank b) {
-        b.rateOfInterest();
-    }
-    public static void main(String[] args) {
-        AccountHolder a = new AccountHolder();
-        a.checkROI(new ICICI());
-        a.checkROI(new SBI());
-        System.out.println(" == == ");
-        SBI s = new SBI();
-        a.checkROI(s);
-        ICICI i = new ICICI();
-        a.checkROI(i);
-    }
+  void checkROI(Bank b) {
+    b.rateOfInterest();
+  }
+
+  public static void main(String[] args) {
+    AccountHolder a = new AccountHolder();
+    a.checkROI(new ICICI());
+    a.checkROI(new SBI());
+    System.out.println(" == == ");
+    SBI s = new SBI();
+    a.checkROI(s);
+    ICICI i = new ICICI();
+    a.checkROI(i);
+  }
 }
 ```
 
@@ -4462,7 +4592,7 @@ SBI 中的 ROI 是 6%。
 SBI 中的 ROI 是 6%。
 ICICI 是 8%。
 
-多态
+### 多态
 
 - 编译时
 - 早期绑定
@@ -4472,144 +4602,161 @@ ICICI 是 8%。
 - 动态绑定
 
 方法重载 (Method Overloading)
-是一种方法重写 (Method Overriding)
+方法重写 (Method Overriding)
 向上转型
 
 运行时方法绑定
 
-## 抽象 (Abstraction):
+## 抽象 (Abstraction)
 
 抽象是通过抽象类/接口隐藏实现细节并只显示行为或功能细节的过程。
 
-* 1 抽象可以通过以下规则实现：抽象类 / 接口
-* 2 IS-A 关系（继承）
-* 3 方法重写
-* 4 向上转型
+抽象可以通过以下规则实现：
 
-5) person-java 抽象类 person
-```java
-abstract void work();
-```
+1. 抽象类 / 接口
+2. IS-A 关系（继承）
+3. 方法重写
+4. 向上转型
 
-Employee-java 类 employee 继承 person
+### Person.java
+
 ```java
-@Override
-void work() {
-  System.out.println("person is working");
+abstract class Person {
+  abstract void work();
 }
 ```
 
-Test-java 公共类 Test
+### Employee.java
+
 ```java
-public class Test
+class Employee extends Person {
+  @Override
+  void work() {
+    System.out.println("person is working");
+  }
+}
 ```
 
+### Test.java
 
+```java
+public class Test {
+}
+```
 
 ## 外卖 App Java 实现
 
+### FoodDeliveryApp.java
+
 ```java
 public interface FoodDeliveryApp {
-    void orderFood();
-    void cancelFood();
+  void orderFood();
+  void cancelFood();
 }
 ```
 
-## Swiggy java
+### Swiggy.java
 
 ```java
 public class Swiggy implements FoodDeliveryApp {
-    @Override
-    public void orderFood() {
-        System.out.println("ordering food using swiggy App");
-    }
+  @Override
+  public void orderFood() {
+    System.out.println("ordering food using swiggy App");
+  }
 
-    @Override
-    public void cancelFood() {
-        System.out.println("Canceled Food in swiggy APP");
-    }
+  @Override
+  public void cancelFood() {
+    System.out.println("Canceled Food in swiggy APP");
+  }
 }
 ```
 
-## Zomato java
+### Zomato.java
 
 ```java
 public class Zomato implements FoodDeliveryApp {
-    @Override
-    public void orderFood() {
-        System.out.println("ordering food using Zomato APP");
-    }
+  @Override
+  public void orderFood() {
+    System.out.println("ordering food using Zomato APP");
+  }
 
-    @Override
-    public void cancelFood() {
-        System.out.println("canceling food using Zomato APP");
-    }
+  @Override
+  public void cancelFood() {
+    System.out.println("canceling food using Zomato APP");
+  }
 }
 ```
 
-## foodpanda java
+### Foodpanda.java
 
 ```java
-public class foodpanda implements FoodDelivery {
-    @Override
-    public void orderfood(char c) {
-    }
+public class Foodpanda implements FoodDeliveryApp {
+  @Override
+  public void orderFood() {
+  }
 
-    @Override
-    public void cancelFood(char c) {
-    }
+  @Override
+  public void cancelFood() {
+  }
 }
 ```
 
-```java
-public class {
-    FoodDeliveryApp F;
-    FoodDeliveryApp decideApp(int choice) {
-        if (choice == 1) {
-            F = new swiggy(c);
-        } else if (choice == 2) {
-            F = new zomato(c);
-        } else {
-            System.out.println("Invalid choice");
-        }
-        return F;
-    }
-}
-```
+### Mobile.java
 
 ```java
-public class mobile {
-    FoodDeliveryApp f;
-    public FoodDeliveryApp(char choice) {
-        if (choice == 's') {
-            f = new swiggy();
-        } else if (choice == 'z') {
-            f = new zomato();
-        } else if (choice == 'f') {
-            f = new foodpanda();
-        }
+public class Mobile {
+  FoodDeliveryApp f;
+
+  FoodDeliveryApp decideApp(int choice) {
+    if (choice == 1) {
+      f = new Swiggy();
+    } else if (choice == 2) {
+      f = new Zomato();
+    } else {
+      System.out.println("Invalid choice");
     }
+    return f;
+  }
 }
 ```
 
 ```java
-public class user {
-    public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        Mobile m = new Mobile(System.in);
-        System.out.println("Enter choice\n1: swiggy 2: foodpanda");
-        char choice = s.next().charAt(0);
-        FoodDeliveryApp f = m.decideApp(choice);
-        if (f != null) {
-            f.orderFood();
-            f.cancelFood();
-        }
+public class Mobile {
+  FoodDeliveryApp f;
+
+  public Mobile(char choice) {
+    if (choice == 's') {
+      f = new Swiggy();
+    } else if (choice == 'z') {
+      f = new Zomato();
+    } else if (choice == 'f') {
+      f = new Foodpanda();
     }
+  }
+}
+```
+
+### User.java
+
+```java
+public class User {
+  public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+    Mobile m = new Mobile(System.in);
+    System.out.println("Enter choice\n1: swiggy 2: foodpanda");
+    char choice = s.next().charAt(0);
+    FoodDeliveryApp f = m.decideApp(choice);
+    if (f != null) {
+      f.orderFood();
+      f.cancelFood();
+    }
+  }
 }
 ```
 
 ## 输出
 
+```
 输入你的选择
 1: Zomato
 2: Swiggy
@@ -4617,4 +4764,4 @@ public class user {
 
 通过 zomato 订餐
 取消食物
-
+```

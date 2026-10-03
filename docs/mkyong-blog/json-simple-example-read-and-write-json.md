@@ -1,31 +1,36 @@
-# JSON . simple——读写 JSON
+
+# JSON.simple——读写 JSON
 
 > 原文：<http://web.archive.org/web/20230101150211/https://www.mkyong.com/java/json-simple-example-read-and-write-json/>
 
 [JSON.simple](http://web.archive.org/web/20221117050521/https://github.com/fangyidong/json-simple) 是一个简单的 Java 库，用于 JSON 处理、读写 JSON 数据，完全符合 [JSON 规范(RFC4627)](http://web.archive.org/web/20221117050521/https://www.ietf.org/rfc/rfc4627.txt)
 
-**Warning**
-This article is using the old `JSON.simple 1.x` ,which is deprecated and no longer maintained by the author. Please visit this upgraded article – [JSON.simple 3.x – How to parse JSON](http://web.archive.org/web/20221117050521/https://www.mkyong.com/java/json-simple-how-to-parse-json/)**Why not Jackson or Gson?**
-You may have interest to read this article – How to parse JSON with [Jackson](http://web.archive.org/web/20221117050521/https://www.mkyong.com/java/jackson-how-to-parse-json/) or [Gson](http://web.archive.org/web/20221117050521/https://www.mkyong.com/java/how-to-parse-json-with-gson/)
+**警告**
 
-## 1.下载 JSON.simple
+本文使用的是旧版 `JSON.simple 1.x`，该版本已弃用，作者不再维护。请参阅升级版文章——[JSON.simple 3.x – 如何解析 JSON](http://web.archive.org/web/20221117050521/https://www.mkyong.com/java/json-simple-how-to-parse-json/)
 
-pom.xml
+**为什么不用 Jackson 或 Gson？**
+
+您可能对以下文章感兴趣——如何使用 [Jackson](http://web.archive.org/web/20221117050521/https://www.mkyong.com/java/jackson-how-to-parse-json/) 或 [Gson](http://web.archive.org/web/20221117050521/https://www.mkyong.com/java/how-to-parse-json-with-gson/) 解析 JSON。
+
+## 1. 下载 JSON.simple
+
+`pom.xml`
 
 ```java
- <dependency>
-		<groupId>com.googlecode.json-simple</groupId>
-		<artifactId>json-simple</artifactId>
-		<version>1.1.1</version>
-	</dependency> 
+<dependency>
+    <groupId>com.googlecode.json-simple</groupId>
+    <artifactId>json-simple</artifactId>
+    <version>1.1.1</version>
+</dependency>
 ```
 
-## 2.将 JSON 写入文件
+## 2. 将 JSON 写入文件
 
-JsonSimpleWriteExample.java
+`JsonSimpleWriteExample.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -58,29 +63,29 @@ public class JsonSimpleWriteExample {
 
     }
 
-} 
+}
 ```
 
 输出
 
-Terminal
+`Terminal`
 
 ```java
- {"name":"mkyong.com","messages":["msg 1","msg 2","msg 3"],"age":100} 
+{"name":"mkyong.com","messages":["msg 1","msg 2","msg 3"],"age":100}
 ```
 
-c:\\projects\\test.json
+`c:\\projects\\test.json`
 
 ```java
- {"name":"mkyong.com","messages":["msg 1","msg 2","msg 3"],"age":100} 
+{"name":"mkyong.com","messages":["msg 1","msg 2","msg 3"],"age":100}
 ```
 
-## 3.将 JSON 读取到文件
+## 3. 将 JSON 读取到文件
 
-JsonSimpleReadExample.java
+`JsonSimpleReadExample.java`
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -124,31 +129,31 @@ public class JsonSimpleReadExample {
 
     }
 
-} 
+}
 ```
 
 输出
 
-Terminal
+`Terminal`
 
 ```java
- {"name":"mkyong.com","messages":["msg 1","msg 2","msg 3"],"age":100}
+{"name":"mkyong.com","messages":["msg 1","msg 2","msg 3"],"age":100}
 mkyong.com
 100
 msg 1
 msg 2
-msg 3 
+msg 3
 ```
 
 ## 参考
 
-*   [JSON.simple 3.x 首页](http://web.archive.org/web/20221117050521/https://cliftonlabs.github.io/json-simple/)
-*   [JSON.simple 1.x 首页](http://web.archive.org/web/20221117050521/https://github.com/fangyidong/json-simple)
-*   [JSON.simple 1.x 谷歌主页](http://web.archive.org/web/20221117050521/https://code.google.com/archive/p/json-simple/)
-*   [JSON.simple 1.x 编码示例](http://web.archive.org/web/20221117050521/https://code.google.com/archive/p/json-simple/wikis/EncodingExamples.wiki)
-*   [JSON . simple 1 . x decoding 示例](http://web.archive.org/web/20221117050521/https://code.google.com/archive/p/json-simple/wikis/DecodingExamples.wiki)
-*   [Gson–如何处理 JSON](http://web.archive.org/web/20221117050521/https://www.mkyong.com/java/how-to-parse-json-with-gson/)
-*   [Jackson–如何解析 JSON](http://web.archive.org/web/20221117050521/https://www.mkyong.com/java/jackson-how-to-parse-json/)
-*   [JSON . simple 3 . x–如何解析 JSON](http://web.archive.org/web/20221117050521/https://www.mkyong.com/java/json-simple-how-to-parse-json/)
+- [JSON.simple 3.x 首页](http://web.archive.org/web/20221117050521/https://cliftonlabs.github.io/json-simple/)
+- [JSON.simple 1.x 首页](http://web.archive.org/web/20221117050521/https://github.com/fangyidong/json-simple)
+- [JSON.simple 1.x 谷歌主页](http://web.archive.org/web/20221117050521/https://code.google.com/archive/p/json-simple/)
+- [JSON.simple 1.x 编码示例](http://web.archive.org/web/20221117050521/https://code.google.com/archive/p/json-simple/wikis/EncodingExamples.wiki)
+- [JSON.simple 1.x 解码示例](http://web.archive.org/web/20221117050521/https://code.google.com/archive/p/json-simple/wikis/DecodingExamples.wiki)
+- [Gson – 如何处理 JSON](http://web.archive.org/web/20221117050521/https://www.mkyong.com/java/how-to-parse-json-with-gson/)
+- [Jackson – 如何解析 JSON](http://web.archive.org/web/20221117050521/https://www.mkyong.com/java/jackson-how-to-parse-json/)
+- [JSON.simple 3.x – 如何解析 JSON](http://web.archive.org/web/20221117050521/https://www.mkyong.com/java/json-simple-how-to-parse-json/)
 
 <input type="hidden" id="mkyong-current-postId" value="9975">

@@ -1,3 +1,4 @@
+
 # JUnit–类别测试
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/unittest/junit-categories-test/>
@@ -5,41 +6,42 @@
 在 JUnit 中，您可以将测试用例组织成不同的类别，并使用`@Categories.ExcludeCategory`或`@Categories.IncludeCategory`运行这些分类的测试用例
 
 **Note**
+
 This `@Categories` annotation is available since JUnit 4.12
 
 ## 1.类别=标记界面
 
 在 JUnit 中，您需要创建标记接口来表示类别:
 
-PerformanceTests.java
+`PerformanceTests.java`
 
 ```java
- package com.mkyong.category;
+package com.mkyong.category;
 
 //category marker interface
 public interface PerformanceTests {
-} 
+}
 ```
 
-RegressionTests.java
+`RegressionTests.java`
 
 ```java
- package com.mkyong.category;
+package com.mkyong.category;
 
 public interface RegressionTests {
-} 
+}
 ```
 
- ## 2.@类别示例
+## 2.@类别示例
 
 将测试用例组织成不同的类别。
 
 2.1 方法级别的`@Category`。
 
-ClassA.java
+`ClassA.java`
 
 ```java
- package com.mkyong.category;
+package com.mkyong.category;
 
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -60,15 +62,15 @@ public class ClassA {
         assertThat(1 == 1, is(true));
     }
 
-} 
+}
 ```
 
 2.2 `@Category`在班级层面。
 
-ClassB.java
+`ClassB.java`
 
 ```java
- package com.mkyong.category;
+package com.mkyong.category;
 
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -84,15 +86,15 @@ public class ClassB {
         assertThat(1 == 1, is(true));
     }
 
-} 
+}
 ```
 
 2.3 多个`@Category`例子。
 
-ClassC.java
+`ClassC.java`
 
 ```java
- package com.mkyong.category;
+package com.mkyong.category;
 
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -114,19 +116,19 @@ public class ClassC {
         assertThat(1 == 1, is(true));
     }
 
-} 
+}
 ```
 
- ## 3.套件测试
+## 3.套件测试
 
 运行分类测试用例的例子。
 
 3.1 包含类别示例，运行`PerformanceTests`类别。
 
-PerformanceTestSuite.java
+`PerformanceTestSuite.java`
 
 ```java
- package com.mkyong.category;
+package com.mkyong.category;
 
 import org.junit.experimental.categories.Categories;
 import org.junit.runner.RunWith;
@@ -138,7 +140,7 @@ import org.junit.runners.Suite;
 //@Categories.IncludeCategory({PerformanceTests.class, RegressionTests.class})
 @Suite.SuiteClasses({ClassA.class, ClassB.class, ClassC.class})
 public class PerformanceTestSuite {
-} 
+}
 ```
 
 输出
@@ -147,15 +149,14 @@ public class PerformanceTestSuite {
 ClassA.test_a_1()
 ClassB.test_b_1()
 ClassC.test_c_1()
-
 ```
 
 3.2 包含类别示例，运行`RegressionTestSuite`类别。
 
-RegressionTestSuite.java
+`RegressionTestSuite.java`
 
 ```java
- package com.mkyong.category;
+package com.mkyong.category;
 
 import org.junit.experimental.categories.Categories;
 import org.junit.runner.RunWith;
@@ -165,7 +166,7 @@ import org.junit.runners.Suite;
 @Categories.IncludeCategory(RegressionTests.class)
 @Suite.SuiteClasses({ClassA.class, ClassB.class, ClassC.class})
 public class RegressionTestSuite {
-} 
+}
 ```
 
 输出
@@ -174,15 +175,14 @@ public class RegressionTestSuite {
 ClassB.test_b_1()
 ClassC.test_c_1()
 ClassC.test_c_2()
-
 ```
 
 3.3 排除类别示例。
 
-ExcludePerformanceTestSuite.java
+`ExcludePerformanceTestSuite.java`
 
 ```java
- package com.mkyong.category;
+package com.mkyong.category;
 
 import org.junit.experimental.categories.Categories;
 import org.junit.runner.RunWith;
@@ -192,7 +192,7 @@ import org.junit.runners.Suite;
 @Categories.ExcludeCategory(PerformanceTests.class)
 @Suite.SuiteClasses({ClassA.class, ClassB.class, ClassC.class})
 public class ExcludePerformanceTestSuite {
-} 
+}
 ```
 
 输出
@@ -200,23 +200,18 @@ public class ExcludePerformanceTestSuite {
 ```java
 ClassA.test_a_2()
 ClassC.test_c_2()
-
 ```
 
 **Note**
+
 This is similar with the [TestNG group test](http://web.archive.org/web/20190223082759/http://www.mkyong.com/unittest/testng-groups-example/).
 
 ## 参考
 
-1.  [JUnit 类别 JavaDoc](http://web.archive.org/web/20190223082759/http://junit.org/junit4/javadoc/4.12/org/junit/experimental/categories/Categories.html)
-2.  [JUnit Wiki–类别](http://web.archive.org/web/20190223082759/https://github.com/junit-team/junit4/wiki/Categories)
-3.  [TestNG 组测试](http://web.archive.org/web/20190223082759/http://www.mkyong.com/unittest/testng-groups-example/)
+1. [JUnit 类别 JavaDoc](http://web.archive.org/web/20190223082759/http://junit.org/junit4/javadoc/4.12/org/junit/experimental/categories/Categories.html)
+
+2. [JUnit Wiki–类别](http://web.archive.org/web/20190223082759/https://github.com/junit-team/junit4/wiki/Categories)
+
+3. [TestNG 组测试](http://web.archive.org/web/20190223082759/http://www.mkyong.com/unittest/testng-groups-example/)
 
 [category test](http://web.archive.org/web/20190223082759/http://www.mkyong.com/tag/category-test/) [group test](http://web.archive.org/web/20190223082759/http://www.mkyong.com/tag/group-test/) [junit](http://web.archive.org/web/20190223082759/http://www.mkyong.com/tag/junit/)
-
-
-
-
-
-
-

@@ -1,14 +1,13 @@
+
 # 使用预编译语句
 
 > 原文：[`docs.oracle.com/javase/tutorial/jdbc/basics/prepared.html`](https://docs.oracle.com/javase/tutorial/jdbc/basics/prepared.html)
 
 本页涵盖以下主题：
 
-+   预编译语句概述
-
-+   创建一个 PreparedStatement 对象
-
-+   为 PreparedStatement 参数提供值
+- 预编译语句概述
+- 创建`PreparedStatement`对象
+- 为`PreparedStatement`参数提供值
 
 ## 预编译语句概述
 
@@ -25,7 +24,7 @@
 以下方法，`CoffeesTable.updateCoffeeSales`，将当前周内销售的咖啡磅数存储在每种咖啡的`SALES`列中，并更新每种咖啡的`TOTAL`列中销售的咖啡总磅数：
 
 ```java
-  public void updateCoffeeSales(HashMap<String, Integer> salesForWeek) throws SQLException {
+public void updateCoffeeSales(HashMap<String, Integer> salesForWeek) throws SQLException {
     String updateString =
       "update COFFEES set SALES = ? where COF_NAME = ?";
     String updateStatement =
@@ -57,30 +56,27 @@
         }
       }
     }
-  }
-
+}
 ```
 
-## 创建 PreparedStatement 对象
+## 创建`PreparedStatement`对象
 
 以下创建了一个接受两个输入参数的`PreparedStatement`对象：
 
 ```java
-    String updateString =
-      "update COFFEES " + "set SALES = ? where COF_NAME = ?";
-	// ...
-    PreparedStatement updateSales = con.prepareStatement(updateString);
-
+String updateString =
+  "update COFFEES " + "set SALES = ? where COF_NAME = ?";
+// ...
+PreparedStatement updateSales = con.prepareStatement(updateString);
 ```
 
-## 为 PreparedStatement 参数提供值
+## 为`PreparedStatement`参数提供值
 
 在执行`PreparedStatement`对象之前，必须在问号占位符的位置提供值（如果有的话）。通过调用`PreparedStatement`类中定义的 setter 方法来实现。以下语句为名为`updateSales`的`PreparedStatement`提供了两个问号占位符的值：
 
 ```java
 updateSales.setInt(1, e.getValue().intValue());
 updateSales.setString(2, e.getKey());
-
 ```
 
 这些 setter 方法的每个第一个参数指定了问号占位符。在这个例子中，`setInt`指定了第一个占位符，`setString`指定了第二个占位符。
@@ -89,7 +85,7 @@ updateSales.setString(2, e.getKey());
 
 ```java
 // changes SALES column of French Roast
-//row to 100
+// row to 100
 
 updateSales.setInt(1, 100);
 updateSales.setString(2, "French_Roast");
@@ -101,7 +97,6 @@ updateSales.executeUpdate();
 
 updateSales.setString(2, "Espresso");
 updateSales.executeUpdate();
-
 ```
 
 ### 使用循环设置值
@@ -116,12 +111,11 @@ for (Map.Entry<String, Integer> e : salesForWeek.entrySet()) {
   updateSales.setString(2, e.getKey());
   // ...
 }
-
 ```
 
 方法`CoffeesTable.updateCoffeeSales`接受一个参数，`HashMap`。`HashMap`参数中的每个元素都包含当前周内销售的一种咖啡的名称和该种咖啡的磅数。for-each 循环遍历`HashMap`参数的每个元素，并设置`updateSales`和`updateTotal`中相应的问号占位符。
 
-## 执行 PreparedStatement 对象
+## 执行`PreparedStatement`对象
 
 与`Statement`对象一样，要执行`PreparedStatement`对象，调用一个执行语句：如果查询只返回一个`ResultSet`（如`SELECT` SQL 语句），则调用`executeQuery`，如果查询不返回`ResultSet`（如`UPDATE` SQL 语句），则调用`executeUpdate`，如果查询可能返回多个`ResultSet`对象，则调用`execute`。`CoffeesTable.updateCoffeeSales(HashMap<String, Integer>)`中的两个`PreparedStatement`对象都包含`UPDATE` SQL 语句，因此都通过调用`executeUpdate`来执行：
 
@@ -134,7 +128,6 @@ updateTotal.setInt(1, e.getValue().intValue());
 updateTotal.setString(2, e.getKey());
 updateTotal.executeUpdate();
 con.commit();
-
 ```
 
 在执行`updateSales`和`updateTotals`时，`executeUpdate`不需要提供参数；两个`PreparedStatement`对象已经包含要执行的 SQL 语句。
@@ -143,12 +136,11 @@ con.commit();
 
 ```java
 con.setAutoCommit(false);
-
 ```
 
 因此，在调用方法`commit`之前，不会提交任何 SQL 语句。有关自动提交模式的更多信息，请参阅事务。
 
-### executeUpdate 方法的返回值
+### `executeUpdate`方法的返回值
 
 而`executeQuery`返回一个包含发送到 DBMS 的查询结果的`ResultSet`对象，`executeUpdate`的返回值是一个`int`值，表示更新了表的多少行。例如，下面的代码展示了`executeUpdate`的返回值被赋给变量`n`：
 
@@ -157,7 +149,6 @@ updateSales.setInt(1, 50);
 updateSales.setString(2, "Espresso");
 int n = updateSales.executeUpdate();
 // n = 1 because one row had a change in it
-
 ```
 
 表`COFFEES`已更新；值`50`替换了`Espresso`行中`SALES`列的值。这次更新影响了表中的一行，因此`n`等于 1。
@@ -166,12 +157,10 @@ int n = updateSales.executeUpdate();
 
 ```java
 // n = 0
-int n = executeUpdate(createTableCoffees); 
-
+int n = executeUpdate(createTableCoffees);
 ```
 
 注意，当`executeUpdate`的返回值为 0 时，可能意味着两种情况之一：
 
-+   执行的语句是一个影响零行的更新语句。
-
-+   执行的语句是一个 DDL 语句。
+- 执行的语句是一个影响零行的更新语句。
+- 执行的语句是一个 DDL 语句。

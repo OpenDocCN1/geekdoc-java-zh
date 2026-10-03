@@ -1,3 +1,4 @@
+
 # 观察受限应用程序
 
 > 原文：[`docs.oracle.com/javase/tutorial/security/toolsign/rstep1.html`](https://docs.oracle.com/javase/tutorial/security/toolsign/rstep1.html)
@@ -8,17 +9,13 @@
 
 ```java
 java -cp sCount.jar Count C:\TestData\data
-
 ```
 
 要使用安全管理器执行应用程序，请添加`-Djava.security.manager`，如下所示：
 
 ```java
 java -Djava.security.manager -cp sCount.jar Count C:\TestData\data
-
 ```
-
-* * *
 
 **重要：** 运行此命令时，您的 Java 解释器将抛出下面显示的异常：
 
@@ -31,9 +28,6 @@ access denied (java.io.FilePermission C:\TestData\data read)
     at java.lang.SecurityManager.checkRead(Compiled Code)
     at java.io.FileInputStream.<init>(Compiled Code)
     at Count.main(Compiled Code)
-
 ```
 
 在此示例中，`AccessControlException`报告说`count`应用程序没有权限读取文件`C:\TestData\data`。您的解释器引发此异常，因为除非在`policy`文件中包含的`grant`语句中明确允许，否则它不会允许任何在安全管理器下运行的应用程序读取文件或访问其他资源。
-
-* * *

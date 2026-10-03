@@ -1,3 +1,4 @@
+
 # [敏捷开发]如何确定产品需求文档(PRD)
 
 > 原文：<https://medium.com/javarevisited/agile-development-how-to-nail-a-product-requirements-document-prd-fcdf95983b7d?source=collection_archive---------2----------------------->
@@ -43,14 +44,15 @@
 在这一部分中，您将解决所有可能出现的约束，例如**时间、预算和资源约束**。描述所有可预见的障碍，以便团队可以克服并创建一个更现实的战术路线图。以下是一些有用的问题，可帮助您识别您正在处理的工作流程限制:
 
 *   你理想的发射日期是什么时候？你想什么时候上市或开始 beta 测试？
+
 *   有没有其他团队依赖你的释放？你还缺少什么资源？
 
 # 6.问题
 
-一旦你认为你理解了你想要解决的问题，你就该意识到并质疑你的假设了。此外，当团队了解产品需求时，他们经常会有问题。为未知者创建****【TBD】和占位符注释**的表格来跟踪这些项目。**
+一旦你认为你理解了你想要解决的问题，你该意识到并质疑你的假设了。此外，当团队了解产品需求时，他们经常会有问题。为未知者创建**【TBD】**和占位符注释的表格来跟踪这些项目。
 
-# **最后的想法**
+# 最后的想法
 
-**一个有效的产品需求文档提供了每个利益相关者需要的所有东西的集中资源，从用户问题到技术改进。将它作为[敏捷开发](https://www.java67.com/2020/10/best-agile-and-scrum-courses-for-programmers-developers.html)的指导性文件，让每个团队保持一致，减少例会。**
+一个有效的产品需求文档提供了每个利益相关者需要的所有东西的集中资源，从用户问题到技术改进。将它作为[敏捷开发](https://www.java67.com/2020/10/best-agile-and-scrum-courses-for-programmers-developers.html)的指导性文件，让每个团队保持一致，减少例会。
 
-**</javarevisited/7-best-agile-and-scrum-online-training-courses-3b191e9b65eb> **
+</javarevisited/7-best-agile-and-scrum-online-training-courses-3b191e9b65eb>

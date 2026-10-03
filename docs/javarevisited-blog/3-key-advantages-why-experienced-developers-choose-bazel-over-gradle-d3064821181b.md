@@ -1,3 +1,4 @@
+
 # 为什么有经验的开发人员选择 Bazel 而不是 Gradle 的 3 个关键优势
 
 > 原文：<https://medium.com/javarevisited/3-key-advantages-why-experienced-developers-choose-bazel-over-gradle-d3064821181b?source=collection_archive---------0----------------------->

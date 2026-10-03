@@ -1,3 +1,4 @@
+
 # 在生产数据库上运行 SQL 查询时要记住的 5 件事
 
 > 原文：<https://medium.com/javarevisited/5-things-you-should-keep-in-mind-while-running-sql-queries-on-production-databases-bf29aa8d75da?source=collection_archive---------1----------------------->
@@ -16,7 +17,7 @@
 
 由于许多数据科学家不是 SQL 专家，但他们确实编写了 [SQL 查询](https://www.java67.com/2013/04/10-frequently-asked-sql-query-interview-questions-answers-database.html)、[存储过程](http://javarevisited.blogspot.sg/2013/02/-create-and-call-mysql-stored-procedure-database-sql-example-tutorial.html)，并与测试和生产数据库进行交互，因此他们看似无害的操作很可能会导致生产问题。
 
-去年同一时间，我们遇到了这样一个事件，数据科学家的**选择查询阻塞了生产中的一些流程**。看似无害的 SELECT 查询锁定了一个表，该表是尝试更新和向同一个表中插入数据的过程所需要的。
+去年同一时间，我们遇到了这样一个事件，数据科学家的**选择查询阻塞了生产中的一些流程**。看似无害的 `SELECT` 查询锁定了一个表，该表是尝试更新和向同一个表中插入数据的过程所需要的。
 
 数据科学家在一天结束时运行查询，然后忘记了这件事，第二天早上才发现一些重要的工作还没有完成，它们从昨晚就开始运行了。最终，数据库管理员参与进来，他们切断了阻塞作业的连接，一切都恢复了。
 
@@ -32,15 +33,15 @@
 
 ## 1.总是使用 NOLOCK 选项进行查询
 
-如果某个作业也在运行并试图更新您正在查询的同一个表，这可能会导致生产问题。通过说 NOLOCK，您可以降低阻塞和死锁的风险，就像
+如果某个作业也在运行并试图更新您正在查询的同一个表，这可能会导致生产问题。通过说 `NOLOCK`，您可以降低阻塞和死锁的风险，就像
 
 ```
 SELECT Id, Name, Address from Employee with (NOLOCK) where Id= 2
 ```
 
-当您使用 NOLOCK 提示运行查询时，它会指示查询引擎不要发出共享锁，并且不支持排他锁。使用 with NOLOCK 选项时，可能会读取未提交的事务或在读取过程中回滚的一组页面。
+当您使用 `NOLOCK` 提示运行查询时，它会指示查询引擎不要发出共享锁，并且不支持排他锁。使用 `with (NOLOCK)` 选项时，可能会读取未提交的事务或在读取过程中回滚的一组页面。
 
-脏读是可能的。不过，值得注意的是，这个选项只适用于 SELECT 语句，对 Microsoft SQL Server 可用。请参阅 Udemy 上的 [**使用 Transact-SQL**](https://www.udemy.com/course/70-461-session-2-querying-microsoft-sql-server-2012/) 查询微软 SWL 服务器课程，了解更多关于表级和行级锁定的信息。
+脏读是可能的。不过，值得注意的是，这个选项只适用于 `SELECT` 语句，对 Microsoft SQL Server 可用。请参阅 Udemy 上的 [**使用 Transact-SQL**](https://www.udemy.com/course/70-461-session-2-querying-microsoft-sql-server-2012/) 查询微软 SWL 服务器课程，了解更多关于表级和行级锁定的信息。
 
 <https://click.linksynergy.com/deeplink?id=JVFxdTr9V80&mid=39197&murl=https%3A%2F%2Fwww.udemy.com%2Fcourse%2F70-461-session-2-querying-microsoft-sql-server-2012%2F>  
 
@@ -62,7 +63,7 @@ SELECT Id, Name, Address from Employee with (NOLOCK) where Id= 2
 
 如果您不是单独工作，并且有一些团队成员，您可以随时要求您的同事对您想要在生产中运行的查询进行四目检查。如果您可以从 DBA 那里查看您的查询，那就更好了。
 
-以上是在查询生产数据库时需要记住的一些**重要提示。您还应该了解更多关于数据库如何执行 SQL 查询的信息，如索引如何工作、锁定如何工作、表扫描、行扫描、表级锁定或行级锁定等。**
+以上是在查询生产数据库时需要记住的一些**重要提示**。您还应该了解更多关于数据库如何执行 SQL 查询的信息，如索引如何工作、锁定如何工作、表扫描、行扫描、表级锁定或行级锁定等。
 
 如果您很好地了解这些基础知识，您可以更确定地预测您的查询行为，并可能避免不愉快的意外。
 
@@ -75,15 +76,25 @@ SELECT Id, Name, Address from Employee with (NOLOCK) where Id= 2
 您可能想探索的其他**有用的编程资源**有:
 
 *   [初学者学习棱角的 10 门免费课程](/javarevisited/top-10-free-courses-to-learn-angular-framework-in-2020-bb62148c73d3)
+
 *   [2023 年 React 开发者路线图](https://javarevisited.blogspot.com/2018/10/the-2018-react-developer-roadmap.html)
+
 *   [40 多岁能学编码和 Web 开发吗？](/javarevisited/can-you-learn-programming-and-become-a-web-developer-in-the-40s-and-50s-f9e117f32721)
+
 *   [2023 年学会反应的 10 门免费课程](/javarevisited/top-10-free-courses-to-learn-react-js-c14edbd3b35f)
+
 *   成为全栈式网络开发人员的 10 门最佳课程
+
 *   每个软件工程师都应该学习的 10 件事
+
 *   [2023 年我最喜欢学的课程 node . js](/javarevisited/top-10-online-courses-to-learn-node-js-in-depth-8ef0e31ca139)
+
 *   [我最喜欢的学习 HTML 和 CSS 的免费课程](/javarevisited/5-free-html-and-css-courses-to-learn-front-end-web-development-online-8b04517c6ecb?source=collection_home---4------0-----------------------)
+
 *   [2023 年学习打字稿的前 7 门课程](/javarevisited/7-best-courses-to-learn-typescript-in-depth-58439e1ce729)
+
 *   [7 门免费学习网页设计自举的课程](/javarevisited/7-free-courses-to-learn-bootstrap-for-web-designers-and-developers-5135215648f1)
+
 *   [我最喜欢的深入学习 Web 开发的课程](/better-programming/my-5-favorite-courses-to-learn-web-development-in-2019-a5e74167f8b2)
 
 感谢您阅读本文，如果您喜欢这些在生产环境中运行 SQL 查询的简单安全提示，请与您的朋友和同事分享。这很有帮助

@@ -1,3 +1,4 @@
+
 # 关于静态和最终关键字
 
 > 原文：<https://medium.com/javarevisited/all-about-static-and-final-keywords-f0998de711e?source=collection_archive---------3----------------------->
@@ -6,7 +7,7 @@
 
 ![](img/b223403776fac355d706eb1c756a6667.png)
 
-由[大卫·艾姆里奇](https://unsplash.com/@davidemrich?utm_source=medium&utm_medium=referral)在 [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral) 上拍摄的照片
+由[大卫·艾姆里奇](https://unsplash.com/@davidemrich?utm_source=medium&utm_medium=referral)在 [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral) 上拍摄的照片
 
 # 什么是静态关键字？
 

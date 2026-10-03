@@ -1,3 +1,4 @@
+
 # 阿帕奇火花，蜂巢和 Spring Boot-测试指南
 
 > 原文：<https://medium.com/javarevisited/apache-spark-hive-and-spring-boot-testing-guide-42b07f2b480e?source=collection_archive---------0----------------------->
@@ -123,8 +124,11 @@ Apache Spark 架构
 *相反，`LOCAL`概要文件定义了正确运行所需的一组默认属性。以下是最重要的几个。*
 
 1.  *`setMaster("local")`告诉 Apache Spark 启动单个本地节点。*
+
 2.  *`javax.jdo.option.ConnectionURL`和`javax.jdo.option.ConnectionDriverName`声明 Apache Hive 元存储的 JDBC 连接。这就是我们添加 Apache Derby 作为项目依赖项的原因*
+
 3.  *`spark.sql.catalogImplementation`表示本地文件应以 Apache Hive 兼容格式存储*
+
 4.  *`spark.sql.warehouse.dir`是存储 Apache Hive 数据的目录。这里我们使用临时目录。*
 
 *`JavaSparkContext`接受已定义的`SparkConf`作为构造函数参数。同时`SparkSession`包裹现有的`JavaSparkContext`。注意，应该手动启用 Apache Hive 支持(`enableHiveSupport`)。*
@@ -146,185 +150,198 @@ Apache Hive DDL 脚本*
 *如果没有的话，创建`media`数据库。*
 
 ```
-*create database if not exists media*
+create database if not exists media
 ```
 
 ***V2 _ _ media . subscriber _ info . hql***
 
 *如果不存在，则创建`subscriber_info`表。*
 
-```
-*create table if not exists media.subscriber_info (
+
+
+```sql
+create table if not exists media.subscriber_info (
   subscriber_id string,
   msisdn string
 )
 row format delimited
 fields terminated by ','
 lines terminated by '\n'
-stored as textfile*
+stored as textfile
 ```
 
-***掉 V1 _ _ mediatv _ DDS . subscriber _ info . hql***
+掉`V1_mediatv_DDS.subscriber_info.hql`
 
-*掉落了`subscriber_info`的桌子。*
+掉落了`subscriber_info`的桌子。
 
+```sql
+drop table if exists media.subscriber_info
 ```
-*drop table if exists media.subscriber_info*
-```
 
-> *`*V[N]*` *前缀不是必须的。我放置它们是为了确保每个新的表脚本都将作为最后一个执行。让测试确定性地工作是有帮助的。**
+> `V[N]`前缀不是必须的。我放置它们是为了确保每个新的表脚本都将作为最后一个执行。让测试确定性地工作是有帮助的。
 
-*好了，现在我们需要一个处理程序来处理这些 HQL 查询。看看下面的例子。*
+好了，现在我们需要一个处理程序来处理这些 HQL 查询。看看下面的例子。
 
-*Apache Hive DDL 脚本处理程序*
+Apache Hive DDL 脚本处理程序
 
-*首先要注意的是`@Profile(LOCAL)`用法。因为我们不需要在生产环境中创建或删除表。*
+首先要注意的是`@Profile(LOCAL)`用法。因为我们不需要在生产环境中创建或删除表。
 
-*`createTables`和`dropTables`方法提供了包含所需查询的资源列表。*
+`createTables`和`dropTables`方法提供了包含所需查询的资源列表。
 
-> *`*getResources*` *是从* [*类路径*](http://www.java67.com/2012/08/what-is-path-and-classpath-in-java-difference.html) *中读取文件的实用函数。你可以在这里* *发现* [*的实现。*](https://github.com/SimonHarmonicMinor/apache-spark-integration-testing-example/blob/master/src/main/java/com/mts/metric/spark/util/ResourceUtil.java)*
+> `getResources`是从[类路径](http://www.java67.com/2012/08/what-is-path-and-classpath-in-java-difference.html)中读取文件的实用函数。你可以在这里发现[的实现。](https://github.com/SimonHarmonicMinor/apache-spark-integration-testing-example/blob/master/src/main/java/com/mts/metric/spark/util/ResourceUtil.java)
 
-*所以，现在我们已经准备好编写业务代码了！*
+所以，现在我们已经准备好编写业务代码了！
 
-# *商业代码*
+# 商业代码
 
-## *外表*
+## 外表
 
-*核心接口是`EnricherService`*
+核心接口是`EnricherService`
 
-*核心接口*
+核心接口
 
-*我们预计它可能有许多实现。每一个都代表整个批处理过程中一个步骤。*
+我们预计它可能有许多实现。每一个都代表整个批处理过程中一个步骤。
 
-*然后我们有封装了所有`EnricherService`实现的`EnricherServiceFacade`，并逐个运行它们。*
+然后我们有封装了所有`EnricherService`实现的`EnricherServiceFacade`，并逐个运行它们。
 
-*EnricherServiceFacade*
+`EnricherServiceFacade`
 
-*我们正在尝试运行每一个提供的浓缩步骤。如果其中任何一个错误失败，我们抛出异常，将所有错误合并成一个整体。*
+我们正在尝试运行每一个提供的浓缩步骤。如果其中任何一个错误失败，我们抛出异常，将所有错误合并成一个整体。
 
-*最后，我们需要告诉 Spring 在应用程序启动时执行`EnricherServiceFacade.proceedEnrichment`。我们可以将它直接添加到`main`方法中，但它不是*弹簧方式*。因此，这增加了测试的难度。更好的选择是`@EventListener`。*
+最后，我们需要告诉 Spring 在应用程序启动时执行`EnricherServiceFacade.proceedEnrichment`。我们可以将它直接添加到`main`方法中，但它不是弹簧方式。因此，这增加了测试的难度。更好的选择是`@EventListener`。
 
-*主监听器*
+主监听器
 
-*当 [Spring context](https://javarevisited.blogspot.com/2020/05/top-20-spring-boot-interview-questions-answers.html) 启动时，调用`proceedEnrichment`方法。顺便说一下，只有激活的`PROD`配置文件才会触发作业。*
+当 [Spring context](https://javarevisited.blogspot.com/2020/05/top-20-spring-boot-interview-questions-answers.html) 启动时，调用`proceedEnrichment`方法。顺便说一下，只有激活的`PROD`配置文件才会触发作业。
 
-## *EnricherService 实现*
+## EnricherService 实现
 
-*我们将处理一个单独的`EnricherService`实现。它只是从`media.subcriber_info`表中选择所有行，并将结果放入 Aerospike 数据库。看看下面的代码片段。*
+我们将处理一个单独的`EnricherService`实现。它只是从`media.subcriber_info`表中选择所有行，并将结果放入 Aerospike 数据库。看看下面的代码片段。
 
-*SubscriberIdEnricherService*
+`SubscriberIdEnricherService`
 
-*有许多问题需要澄清。*
+有许多问题需要澄清。
 
-***序列化***
+### 序列化
 
-*Apache Spark 应用了标准的 Java 序列化机制。因此， [lambdas](/javarevisited/8-best-lambdas-stream-and-functional-programming-courses-for-java-developers-3d1836a97a1d) ( `map`、`filter`、`groupBy`、`forEach`等)中使用的任何依赖项。)必须实现`Serializable`接口。否则，您将在运行时得到`NotSerializableException`。*
+Apache Spark 应用了标准的 Java 序列化机制。因此， [lambdas](/javarevisited/8-best-lambdas-stream-and-functional-programming-courses-for-java-developers-3d1836a97a1d) ( `map`、`filter`、`groupBy`、`forEach`等)中使用的任何依赖项。)必须实现`Serializable`接口。否则，您将在运行时得到`NotSerializableException`。
 
-*我们在`foreachPartition`回调中引用了`AerospikeProperties`。因此，应该允许这个类和`SubscriberIdEnricherService`本身进行序列化(因为后者将`AerospikeProperties`保留为一个字段)。如果在任何 Apache Spark lambda 中没有使用依赖项，可以将其标记为`transient`。*
+我们在`foreachPartition`回调中引用了`AerospikeProperties`。因此，应该允许这个类和`SubscriberIdEnricherService`本身进行序列化(因为后者将`AerospikeProperties`保留为一个字段)。如果在任何 Apache Spark lambda 中没有使用依赖项，可以将其标记为`transient`。
 
-*最后，`serialVersionUID`手动分配至关重要。原因是 Apache Spark 可能会多次序列化和反序列化传递的对象。并且不能保证每次自动生成的`serialVersionUID`都是一样的。这可能是难以跟踪浮动错误的原因。为了防止这种情况，你应该自己申报`serialVersionUID`。*
+最后，`serialVersionUID`手动分配至关重要。原因是 Apache Spark 可能会多次序列化和反序列化传递的对象。并且不能保证每次自动生成的`serialVersionUID`都是一样的。这可能是难以跟踪浮动错误的原因。为了防止这种情况，你应该自己申报`serialVersionUID`。
 
-*更好的方法是强制编译器在任何`Serializable`类上验证`serialVersionUID`字段的存在。在这种情况下，您需要将`-Xlint:serial`警告标记为错误。看看 Gradle 的例子。*
+更好的方法是强制编译器在任何`Serializable`类上验证`serialVersionUID`字段的存在。在这种情况下，您需要将`-Xlint:serial`警告标记为错误。看看 Gradle 的例子。
 
-```
-*tasks.withType(JavaCompile) {
+```groovy
+tasks.withType(JavaCompile) {
     options.compilerArgs << "-Xlint:serial" << "-Werror" 
-}*
+}
 ```
 
-***气塞客户端实例化***
+### 气塞客户端实例化
 
-*不幸的是，Java Aerospike 客户端没有实现`Serializable`接口。所以，我们必须在 lambda 表达式中实例化它。在这种情况下，将直接在 worker 节点上创建对象。它使得序列化变得多余。*
+不幸的是，Java Aerospike 客户端没有实现`Serializable`接口。所以，我们必须在 lambda 表达式中实例化它。在这种情况下，将直接在 worker 节点上创建对象。它使得序列化变得多余。
 
-> **我应该承认 Aerospike 提供了*[*Aerospike Connect Framework*](https://docs.aerospike.com/connect/spark/configuration)*允许通过 Apache Spark 以声明的方式传输数据，而无需创建任何 Java 客户端。反正你要用，就得直接把打包好的库安装到 Apache Spark 集群上。不能保证你在这种情况下会有这样的机会。所以，我省略了这个场景。**
+> 我应该承认 Aerospike 提供了[Aerospike Connect Framework](https://docs.aerospike.com/connect/spark/configuration)允许通过 Apache Spark 以声明的方式传输数据，而无需创建任何 Java 客户端。反正你要用，就得直接把打包好的库安装到 Apache Spark 集群上。不能保证你在这种情况下会有这样的机会。所以，我省略了这个场景。
 
-***分区***
+### 分区
 
-*`Dataset`类有`foreach`方法，该方法简单地为每个当前行执行给定的 lambda。然而，如果你在回调中初始化一些繁重的资源(例如数据库连接)，新的资源将为每一行创建(在某些情况下可能有数十亿行)。不是很有效率吧？*
+`Dataset`类有`foreach`方法，该方法简单地为每个当前行执行给定的 lambda。然而，如果你在回调中初始化一些繁重的资源(例如数据库连接)，新的资源将为每一行创建(在某些情况下可能有数十亿行)。不是很有效率吧？
 
-*`foreachPartition`方法的工作方式稍有不同。Apache Spark 在每个`Dataset`分区执行一次。它也接受`Iterator<Row>`作为参数。因此，在 lambda 中，我们可以初始化“重”资源(例如`AerospikeClient`)并将它们应用于迭代器中每个`Row`的计算。*
+`foreachPartition`方法的工作方式稍有不同。Apache Spark 在每个`Dataset`分区执行一次。它也接受`Iterator<Row>`作为参数。因此，在 lambda 中，我们可以初始化“重”资源(例如`AerospikeClient`)并将它们应用于迭代器中每个`Row`的计算。
 
-> **分区大小是根据输入源和 Apache Spark 集群配置自动计算的。虽然您可以通过调用* `[*repartition*](https://spark.apache.org/docs/latest/api/java/org/apache/spark/sql/Dataset.html#repartition-org.apache.spark.sql.Column...-)` *方法来手动设置它。反正不在文章范围之内。**
+> 分区大小是根据输入源和 Apache Spark 集群配置自动计算的。虽然您可以通过调用 [repartition](https://spark.apache.org/docs/latest/api/java/org/apache/spark/sql/Dataset.html#repartition-org.apache.spark.sql.Column...-) 方法来手动设置它。反正不在文章范围之内。
 
-# *测试*
+# 测试
 
-## *气塞式安装*
+## 气塞式安装
 
-*好了，我们已经写了一些业务代码。我们如何测试它？首先，让我们为[测试容器](https://www.testcontainers.org/)声明 Aerospike 设置。看看下面的代码片段。*
+好了，我们已经写了一些业务代码。我们如何测试它？首先，让我们为[测试容器](https://www.testcontainers.org/)声明 Aerospike 设置。看看下面的代码片段。
 
-*集成套件*
+集成套件
 
-*`IntegrationSuite`类被用作所有集成测试的父类。`IntegrationSuite.Initializer`内部类被用作 Spring 上下文初始化器。当所有属性和 bean 定义都已经加载，但是还没有创建 bean 时，框架调用它。它允许我们在运行时覆盖一些属性。*
+`IntegrationSuite`类被用作所有集成测试的父类。`IntegrationSuite.Initializer`内部类被用作 Spring 上下文初始化器。当所有属性和 bean 定义都已经加载，但是还没有创建 bean 时，框架调用它。它允许我们在运行时覆盖一些属性。
 
-*我们将 Aerospike 容器声明为`GenericContainer`，因为该库不提供对数据库的开箱即用支持。然后在`initialize`方法中，我们检索容器的主机和端口，并将它们分配给`aerospike.hosts`属性。*
+我们将 Aerospike 容器声明为`GenericContainer`，因为该库不提供对数据库的开箱即用支持。然后在`initialize`方法中，我们检索容器的主机和端口，并将它们分配给`aerospike.hosts`属性。
 
-## *Apache Hive 实用程序*
+## Apache Hive 实用程序
 
-*在每个测试方法之前，我们应该删除 Apache Hive 中的所有数据，并添加当前场景所需的新行。所以，测试不会互相影响。让我们为 Apache Hive 声明一个定制的测试外观。看看下面的代码片段。*
+在每个测试方法之前，我们应该删除 Apache Hive 中的所有数据，并添加当前场景所需的新行。所以，测试不会互相影响。让我们为 Apache Hive 声明一个定制的测试外观。看看下面的代码片段。
 
-*睾丸组织*
+睾丸组织
 
-*只有两种方法。`cleanHive`删除所有现有的并重新创建。因此，所有以前的数据都将被擦除。这个`insertInto`很棘手。它的目的是以静态类型的方式向 Apache Hive 插入新行。这是怎么做到的？首先我们来考察一下`HiveTable<T>`接口。*
+只有两种方法。`cleanHive`删除所有现有的并重新创建。因此，所有以前的数据都将被擦除。这个`insertInto`很棘手。它的目的是以静态类型的方式向 Apache Hive 插入新行。这是怎么做到的？首先我们来考察一下`HiveTable<T>`接口。
 
-*如你所见，这是一个普通的 Java 函数接口。尽管实现不是很明显。*
+如你所见，这是一个普通的 Java 函数接口。尽管实现不是很明显。
 
-*订户信息*
+订户信息
 
-*该类接受`SparkSession`作为构造函数依赖。`SubscriberInfo.Values`是通用参数。类表示包含要插入的值的数据结构。最后，`values`实现执行实际的新行创建。*
+该类接受`SparkSession`作为构造函数依赖。`SubscriberInfo.Values`是通用参数。类表示包含要插入的值的数据结构。最后，`values`实现执行实际的新行创建。
 
-*关键是`subscriberInfo`静态方法。退回`Function<SparkSession, SubscriberInfo>`的理由是什么？它与`TestHiveUtils.insertInto`的结合为我们提供了静态类型化的`INSERT INTO`语句。看看下面的代码示例。*
+关键是`subscriberInfo`静态方法。退回`Function<SparkSession, SubscriberInfo>`的理由是什么？它与`TestHiveUtils.insertInto`的结合为我们提供了静态类型化的`INSERT INTO`语句。看看下面的代码示例。
 
-*将数据插入 Apache 配置单元*
+将数据插入 Apache 配置单元
 
-*一个优雅的解决方案，你不觉得吗？*
+一个优雅的解决方案，你不觉得吗？
 
-## *火花积分测试片*
+## 火花积分测试片
 
-*Spring 集成测试需要特定的配置。明智的做法是声明一次，重复使用。看看下面的代码片段。*
+Spring 集成测试需要特定的配置。明智的做法是声明一次，重复使用。看看下面的代码片段。
 
-*SparkIntegrationTestSuite*
+`SparkIntegrationTestSuite`
 
-*在`[SpringBootTest](https://javarevisited.blogspot.com/2021/12/what-is-springboottest-annotation-in.html)` <https://javarevisited.blogspot.com/2021/12/what-is-springboottest-annotation-in.html>中，我们列出了测试运行期间使用的所有 beans。*
+在[SpringBootTest](https://javarevisited.blogspot.com/2021/12/what-is-springboottest-annotation-in.html)中，我们列出了测试运行期间使用的所有 beans。
 
-> *`*TestAerospikeFacade*` *只是 Java Aerospike 客户端的一个薄薄的包装，用于测试目的。它的实现相当简单，但是你可以通过* [*这个链接*](https://github.com/SimonHarmonicMinor/apache-spark-integration-testing-example/blob/master/src/test/java/com/mts/metric/spark/testutils/facade/TestAerospikeFacade.java) *查看源代码。**
+> `TestAerospikeFacade`只是 Java Aerospike 客户端的一个薄薄的包装，用于测试目的。它的实现相当简单，但是你可以通过[这个链接](https://github.com/SimonHarmonicMinor/apache-spark-integration-testing-example/blob/master/src/test/java/com/mts/metric/spark/testutils/facade/TestAerospikeFacade.java)查看源代码。
 
-*`EnricherServiceTestConfiguration`是 Spring 配置，声明了`EnricherService`接口的所有实现。看看下面的例子。*
+`EnricherServiceTestConfiguration`是 Spring 配置，声明了`EnricherService`接口的所有实现。看看下面的例子。
 
-*EnricherService 测试配置*
+`EnricherService`测试配置
 
-> **我想指出的是* ***所有的*** `*EnricherService*` *实现都应该列在类里面。如果我们为每个测试套件应用不同的配置，Spring 上下文将被重新加载。大多数情况下，这不是问题。但是 Apache Spark 的使用带来了障碍。你看，当* `*JavaSparkContext*` *被创建时，它启动了本地的 Apache Spark 节点。但是当我们在应用程序生命周期中实例化它两次时，就会导致一个异常。解决这个问题最简单的方法是确保* `*JavaSparkContext*` *只被创建一次。**
+> 我想指出的是**所有的**`EnricherService`实现都应该列在类里面。如果我们为每个测试套件应用不同的配置，Spring 上下文将被重新加载。大多数情况下，这不是问题。但是 Apache Spark 的使用带来了障碍。你看，当`JavaSparkContext`被创建时，它启动了本地的 Apache Spark 节点。但是当我们在应用程序生命周期中实例化它两次时，就会导致一个异常。解决这个问题最简单的方法是确保`JavaSparkContext`只被创建一次。
 
-*现在我们可以进入测试过程了。*
+现在我们可以进入测试过程了。
 
-## *集成测试示例*
+## 集成测试示例
 
-*下面是一个简单的集成测试，它向 Apache Spark 插入两行，并检查相应的两个记录是否在 10 秒钟内在 Aerospike 中创建。请看下面的代码片段。*
+下面是一个简单的集成测试，它向 Apache Spark 插入两行，并检查相应的两个记录是否在 10 秒钟内在 Aerospike 中创建。请看下面的代码片段。
 
-*subscriberidernicherserviceintegrationtest*
+`SubscriberIdEnricherServiceIntegrationTest`
 
-*如果一切都调整正确，测试将会通过。*
+如果一切都调整正确，测试将会通过。
 
-> **整个测试源可通过*<https://github.com/SimonHarmonicMinor/apache-spark-integration-testing-example/blob/master/src/test/java/com/mts/metric/spark/service/SubscriberIdEnricherServiceIntegrationTest.java>**这个环节获得。***
+> 整个测试源可通过<https://github.com/SimonHarmonicMinor/apache-spark-integration-testing-example/blob/master/src/test/java/com/mts/metric/spark/service/SubscriberIdEnricherServiceIntegrationTest.java>这个环节获得。
 
-**![](img/0c0ffe2f282a4b0fc701031993053436.png)**
+![](img/0c0ffe2f282a4b0fc701031993053436.png)
 
-# **结论**
+# 结论
 
-**这就是我想告诉你的关于测试 Apache Hive、Apache Spark 和 Aerospike 与 Spring Boot 用法的集成的全部内容。如你所见，大数据世界终究没有那么复杂。所有代码示例都取自[这个库](https://github.com/SimonHarmonicMinor/apache-spark-integration-testing-example)。您可以克隆它并自己进行测试。**
+这就是我想告诉你的关于测试 Apache Hive、Apache Spark 和 Aerospike 与 Spring Boot 用法的集成的全部内容。如你所见，大数据世界终究没有那么复杂。所有代码示例都取自[这个库](https://github.com/SimonHarmonicMinor/apache-spark-integration-testing-example)。您可以克隆它并自己进行测试。
 
-**如果您有任何问题或建议，请在下面留下您的评论。感谢阅读！**
+如果您有任何问题或建议，请在下面留下您的评论。感谢阅读！
 
-# **资源**
+# 资源
 
-1.  **[带有示例的存储库](https://github.com/SimonHarmonicMinor/apache-spark-integration-testing-example)**
-2.  **[HDFS (Hadoop 分布式文件系统)](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html)**
-3.  **[阿帕奇蜂巢](https://hive.apache.org/)**
-4.  **[阿帕奇火花](https://spark.apache.org/)**
-5.  **[阿帕奇德比](https://db.apache.org/derby/)**
-6.  **[气塞式气塞数据库](https://aerospike.com/)**
-7.  **[气塞连接框架](https://docs.aerospike.com/connect/spark/configuration)**
-8.  **[Java 流 API](https://www.baeldung.com/java-8-streams)**
-9.  **[弹簧初始状态](https://start.spring.io/)**
-10.  **[弹簧型材](https://www.baeldung.com/spring-profiles)**
-11.  **[测试容器](https://www.testcontainers.org/)**
-12.  **[Gradle 插件 shadow-jar](https://github.com/johnrengelman/shadow)**
+1. [带有示例的存储库](https://github.com/SimonHarmonicMinor/apache-spark-integration-testing-example)
+
+2. [HDFS (Hadoop 分布式文件系统)](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html)
+
+3. [阿帕奇蜂巢](https://hive.apache.org/)
+
+4. [阿帕奇火花](https://spark.apache.org/)
+
+5. [阿帕奇德比](https://db.apache.org/derby/)
+
+6. [气塞式气塞数据库](https://aerospike.com/)
+
+7. [气塞连接框架](https://docs.aerospike.com/connect/spark/configuration)
+
+8. [Java 流 API](https://www.baeldung.com/java-8-streams)
+
+9. [弹簧初始状态](https://start.spring.io/)
+
+10. [弹簧型材](https://www.baeldung.com/spring-profiles)
+
+11. [测试容器](https://www.testcontainers.org/)
+
+12. [Gradle 插件 shadow-jar](https://github.com/johnrengelman/shadow)

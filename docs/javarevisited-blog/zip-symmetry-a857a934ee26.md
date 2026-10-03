@@ -1,3 +1,4 @@
+
 # 拉链对称
 
 > 原文：<https://medium.com/javarevisited/zip-symmetry-a857a934ee26?source=collection_archive---------7----------------------->
@@ -26,11 +27,11 @@
 
 换句话说，如果您有两个对象列表，并且您将它们压缩在一起，您将得到一个对象对的列表。
 
-这里有一个例子，说明如何在 Eclipse Collections (EC)中使用`[zip](https://www.eclipse.org/collections/javadoc/9.0.0/org/eclipse/collections/api/list/ListIterable.html#zip-java.lang.Iterable-)`进行对象收集。
+这里有一个例子，说明如何在 Eclipse Collections (EC)中使用`zip`进行对象收集。
 
 ```
-MutableList<String> one = Lists.***mutable***.with(**"1"**, **"2"**, **"3"**);
-ImmutableList<String> two = Lists.***immutable***.with(**"one"**, **"two"**, **"three"**);
+MutableList<String> one = Lists.mutable.with("1", "2", "3");
+ImmutableList<String> two = Lists.immutable.with("one", "two", "three");
 MutableList<Pair<String, String>> zipOneAndTwo = one.zip(two);
 ImmutableList<Pair<String, String>> zipTwoAndOne = two.zip(one);
 ```
@@ -45,8 +46,8 @@ ImmutableList<Pair<String, String>> zipTwoAndOne = two.zip(one);
 我们可以把第一个列表改成像这样的`Integer`对象。
 
 ```
-MutableList<Integer> one = Lists.***mutable***.with(1, 2, 3);
-ImmutableList<String> two = Lists.***immutable***.with(**"one"**, **"two"**, **"three"**);
+MutableList<Integer> one = Lists.mutable.with(1, 2, 3);
+ImmutableList<String> two = Lists.immutable.with("one", "two", "three");
 MutableList<Pair<Integer, String>> zipOneAndTwo = one.zip(two);
 ImmutableList<Pair<String, Integer>> zipTwoAndOne = two.zip(one);
 ```
@@ -61,22 +62,25 @@ ImmutableList<Pair<String, Integer>> zipTwoAndOne = two.zip(one);
 我讨厌将整数装箱。我希望能够使用`IntList`而不是`Integer`对象的`List`。以前在 EC 里，我们不能把`Integer`的`MutableList`改成`MutableIntList`。现在我们可以了，但是这个新能力凸显了一个小问题。
 
 ```
-MutableIntList one = IntLists.***mutable***.with(1, 2, 3);
-ImmutableList<String> two = Lists.***immutable***.with(**"one"**, **"two"**, **"three"**);
-MutableList<IntObjectPair<String>> zipOneAndTwo = one.zip(two);// The following code does not compile
-***ImmutableList<ObjectIntPair<String>> zipTwoAndOne = two.zip(one);***
+MutableIntList one = IntLists.mutable.with(1, 2, 3);
+ImmutableList<String> two = Lists.immutable.with("one", "two", "three");
+MutableList<IntObjectPair<String>> zipOneAndTwo = one.zip(two);
+
+// The following code does not compile
+ImmutableList<ObjectIntPair<String>> zipTwoAndOne = two.zip(one);
 ```
 
 我用下面的签名向原语列表添加了一个方法`zip`(下面以`IntList`为例)。
 
 ```
-*/**
- * Returns a {****@code*** *MutableList} formed from this {****@code*** *MutableIntList} and a {****@code*** *ListIterable} by
+/**
+ * Returns a {@code MutableList} formed from this {@code MutableIntList} and a {@code ListIterable} by
  * combining corresponding elements in pairs. If one of the two Lists is longer than the other, its
  * remaining elements are ignored.
  *
- ** ***@since*** *9.1.
- */* default <T> MutableList<IntObjectPair<T>> zip(ListIterable<T> list)
+ * @since 9.1.
+ */
+default <T> MutableList<IntObjectPair<T>> zip(ListIterable<T> list)
 ```
 
 `zip`我们还不能用一个原语链表来表示一个对象链表。通过在一个方向(图元+对象)上添加一个特征，我发现(或创建)了在另一个方向(对象+图元)上缺乏对称性。
@@ -86,20 +90,21 @@ MutableList<IntObjectPair<String>> zipOneAndTwo = one.zip(two);// The following 
 我们可以将两个对象列表压缩在一起，而不考虑对象类型，所以我希望至少能够压缩两个 int 列表、两个 double 列表、两个 short 列表等。除此之外，现在还可以用一个对象列表压缩一个原语列表。因此，下面的签名也包含在内，并且今天生成了代码(下面的例子是`IntList`上的`zipInt`)。还为`DoubleList`生成了一个方法`zipDouble`，为`FloatList`生成了`zipFloat`，以此类推。我使用了一种命名模式，这种模式可以很容易地允许以后添加额外的表单，如果出现了它们的用例的话。
 
 ```
-*/**
- * Returns a {****@code*** *MutableList} formed from this {****@code*** *MutableIntList} and another {****@code*** *IntList} by
- * combining corresponding elements in pairs. If one of the two {****@code*** *IntList}s is longer than the other, its
+/**
+ * Returns a {@code MutableList} formed from this {@code MutableIntList} and another {@code IntList} by
+ * combining corresponding elements in pairs. If one of the two {@code IntList}s is longer than the other, its
  * remaining elements are ignored.
  *
- ** ***@since*** *9.1.
- */* default MutableList<IntIntPair> zipInt(IntList list)
+ * @since 9.1.
+ */
+default MutableList<IntIntPair> zipInt(IntList list)
 ```
 
 这里有一个使用方法`zipInt`将两个`IntLists`压缩在一起的例子。
 
 ```
-MutableIntList one = IntLists.***mutable***.with(1, 2, 3);
-ImmutableIntList two = IntLists.***immutable***.with(10, 20, 30);
+MutableIntList one = IntLists.mutable.with(1, 2, 3);
+ImmutableIntList two = IntLists.immutable.with(10, 20, 30);
 MutableList<IntIntPair> zipOneAndTwo = one.zipInt(two);
 ImmutableList<IntIntPair> zipTwoAndOne = two.zipInt(one);
 ```

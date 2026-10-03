@@ -1,230 +1,325 @@
+
 # Java 实战
 
-
-
-
-
-
-
-
-
-序言由 James Ward 
+序言由 James Ward
 
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_0_0.png)
 
-
-
-
-
-
-
-
-
-
-
 开发编辑：Karen Miller
+
 共同编辑：Benjamin Berg, Melinda Rankin
+
 校对：Andy Carroll
+
 排字员：Dottie Marsarsico
+
 封面设计：Marija Tudor
 
- 1 2 3 4 5 6 7 8 9 10 – EBM – 19 18 17 16 15 14
-
-
-
-
-
-
+1 2 3 4 5 6 7 8 9 10 – EBM – 19 18 17 16 15 14
 
 关于本书 xix
 
-# 第一部分 引言与入门步骤 ................1
+# 第一部分 引言与入门步骤
 
-# Play 3 简介
+## 第 1 章 Play 简介
 
-1.1 什么是 Play 4
-关键特性 4 • Java 和 Scala 5 • Play 并非 Java EE 6
-1.2 高生产力 Web 开发 6
-与 HTTP 交互 6 • 简单性、生产力与易用性 7
+### 1.1 什么是 Play
 
-1.3 响应式编程 7
-事件驱动 7 • 可扩展性 8 • 韧性 8 • 响应性 8
+#### 关键特性
+#### Java 和 Scala
+#### Play 并非 Java EE
 
-1.4 Play 2 企业级特性 8
-简单性 8 • 传统数据访问 9 • 活性 9
-集成 9 • 大团队应用 9 • 安全性 9
-模块化 10
+### 1.2 高生产力 Web 开发
 
-# 1.5 Hello Play! 10
+#### 与 HTTP 交互
+#### 简单性、生产力与易用性
 
-安装 Play 10 • 创建你的第一个应用程序 12
-Play 应用程序结构 13 • 运行应用程序 13
-访问运行中的应用程序 16 • 修改控制器类 14 • 添加一个编译错误 16 • 使用 HTTP 请求参数 16 • 添加一个 HTML 页面模板 17
+### 1.3 响应式编程
 
-# 1.6 控制台 18
+#### 事件驱动
+#### 可扩展性
+#### 韧性
+#### 响应性
 
-# 1.7 总结 19
+### 1.4 Play 2 企业级特性
 
-# 2 应用程序的组成部分 21
+#### 简单性
+#### 传统数据访问
+#### 活性
+#### 集成
+#### 大团队应用
+#### 安全性
+#### 模块化
 
-2.1 介绍我们的应用程序 22
-2.2 Play 应用概述 22
-2.3 Play 的配置文件 23
-2.4 构建配置文件 25
-2.5 公共资源 26
-2.6 应用程序代码 27
-编译后的资源 28
+### 1.5 Hello Play!
 
-2.7 设置 IDE 29
-Eclipse 29 • NetBeans 30 • IntelliJ IDEA 34 • 使用调试器 34
+#### 安装 Play
+#### 创建你的第一个应用程序
+#### Play 应用程序结构
+#### 运行应用程序
+#### 访问运行中的应用程序
+#### 修改控制器类
+#### 添加一个编译错误
+#### 使用 HTTP 请求参数
+#### 添加一个 HTML 页面模板
 
-2.8 总结 36
+### 1.6 控制台
 
-# 3 一个基础的 CRUD 应用 57
+### 1.7 总结
 
-3.1 添加控制器和动作 38
-3.2 使用路由将 URL 映射到动作方法 39
-3.3 添加模型并实现功能 40
-创建模型类 40
+## 第 2 章 应用程序的组成部分
 
-3.4 模拟数据 41
-3.5 实现列表方法 43
-列表模板 43
+### 2.1 介绍我们的应用程序
 
-3.6 添加产品表单 47
-构建表单对象 48 • 渲染 HTML 表单 48
-渲染输入 49
+### 2.2 Play 应用概述
 
-3.7 处理表单 52
-3.8 添加删除按钮 53
-3.9 总结 61
+### 2.3 Play 的配置文件
 
+### 2.4 构建配置文件
 
+### 2.5 公共资源
 
-4.1 什么是 Play 4
-4.2 Play 应用概述 22
-4.3 认识到保护所写内容的重要性，Manning 的政策是在出版的书籍上使用无酸纸，并我们为此付出了最大努力。我们也意识到负有保护地球资源的责任，Manning 书籍使用的纸张至少含有 15% 的再生纸，并且在不使用元素氯的情况下进行加工。
-4.4 定义企业级应用 68
-4.5 总结 70
+### 2.6 应用程序代码
 
-# 5 控制器——处理 HTTP 请求 72
+#### 编译后的资源
 
-5.1 介绍我们的应用程序 22
-5.2 Play 应用概述 22
-5.3 Play 的配置文件 23
-5.4 构建配置文件 25
-5.5 公共资源 26
-5.6 应用程序代码 27
-编译后的资源 28
-5.7 设置 IDE 29
-Eclipse 29 • NetBeans 30 • IntelliJ IDEA 34 • 使用调试器 34
-5.8 总结 36
+### 2.7 设置 IDE
 
-# 6 处理用户输入 102
+#### Eclipse
+#### NetBeans
+#### IntelliJ IDEA
+#### 使用调试器
 
-6.1 控制器——处理 HTTP 请求 72
-6.2 Play 应用概述 22
-6.3 Play 的配置文件 23
-6.4 构建配置文件 25
-6.5 公共资源 26
-6.6 应用程序代码 27
-编译后的资源 28
-6.7 设置 IDE 29
-Eclipse 29 • NetBeans 30 • IntelliJ IDEA 34 • 使用调试器 34
-6.8 总结 36
+### 2.8 总结
 
-# 7 模型与持久化 138
+## 第 3 章 一个基础的 CRUD 应用
 
-7.1 添加控制器和动作 38
-7.2 使用路由将 URL 映射到动作方法 39
-7.3 添加模型并实现功能 40
-创建模型类 40
-7.4 模拟数据 41
-7.5 实现列表方法 43
-列表模板 43
-7.6 添加产品表单 47
-构建表单对象 48 • 渲染 HTML 表单 48
-渲染输入 49
-7.7 处理表单 52
-7.8 添加删除按钮 53
-7.9 总结 61
+### 3.1 添加控制器和动作
 
-# 8 使用视图模板生成输出 177
+### 3.2 使用路由将 URL 映射到动作方法
 
-8.1 控制器——处理 HTTP 请求 72
-8.2 Play 应用概述 22
-8.3 Play 的配置文件 23
-8.4 构建配置文件 25
-8.5 公共资源 26
-8.6 应用程序代码 27
-编译后的资源 28
-8.7 设置 IDE 29
-Eclipse 29 • NetBeans 30 • IntelliJ IDEA 34 • 使用调试器 34
-8.8 总结 36
+### 3.3 添加模型并实现功能
 
-# 9 异步数据 207
+#### 创建模型类
 
-9.1 什么是异步数据？ 208
-9.2 处理异步数据 209
-处理异步请求 210 • 返回异步结果 212
-9.3 调度异步任务 214
-9.4 流式 HTTP 响应 215
-标准响应和 Content-Length 头部
-提供文件服务 216 • 分块响应 217
-9.5 使用 Comet 进行单向通信 220
-9.6 使用 WebSocket 进行双向通信 223
-WebSocket 详解 224 • 一个更高级的 WebSocket 应用 227
-9.7 总结 231
+### 3.4 模拟数据
 
-# 10 安全性 232
+### 3.5 实现列表方法
 
-10.1 Play 安全概念 232
-Play 2 会话 233 • 跨站脚本 234 • SQL 注入 235 • 跨站请求伪造 235
-10.2 使用过滤器添加基本身份验证 238
-10.3 使用动作组合进行细粒度身份验证 243
-10.4 总结 248
+#### 列表模板
 
+### 3.6 添加产品表单
 
+#### 构建表单对象
+#### 渲染 HTML 表单
+#### 渲染输入
 
+### 3.7 处理表单
 
+### 3.8 添加删除按钮
 
-# 11 模块与部署 249
+### 3.9 总结
 
-11.1 模块 249
-- 使用模块 250
-- 创建模块 254
+## 第 4 章 定义企业级应用
 
-11.2 将你的应用程序拆分为多个应用程序 260
+### 4.1 什么是 Play
 
-11.3 部署到生产环境 262
-- 打包你的应用程序 263
-- 多配置处理工作 263
-- 为管理器创建原生包 265
-- 设置前端代理 266
-- 使用 SSL 268
-- 部署到云提供商 269
-- 部署到应用服务器 270
+### 4.2 Play 应用概述
 
-11.4 总结 270
+### 4.3 认识到保护所写内容的重要性，Manning 的政策是在出版的书籍上使用无酸纸，并我们为此付出了最大努力。我们也意识到负有保护地球资源的责任，Manning 书籍使用的纸张至少含有 15% 的再生纸，并且在不使用元素氯的情况下进行加工。
 
-# 12 测试你的应用程序 271
+### 4.4 定义企业级应用
 
-12.1 测试 Play 应用 272
-- 编写测试 272
-- 运行测试 273
+### 4.5 总结
 
-12.2 功能测试 276
-- 测试你的控制器 276
-- 模板测试 278
-- 测试路由 281
+## 第 5 章 控制器——处理 HTTP 请求
 
-12.3 集成测试 282
-- 测试你的 HTTP 接口 282
-- 浏览器测试 283
+### 5.1 介绍我们的应用程序
 
-12.4 总结 286
+### 5.2 Play 应用概述
 
-索引 289
+### 5.3 Play 的配置文件
+
+### 5.4 构建配置文件
+
+### 5.5 公共资源
+
+### 5.6 应用程序代码
+
+#### 编译后的资源
+
+### 5.7 设置 IDE
+
+#### Eclipse
+#### NetBeans
+#### IntelliJ IDEA
+#### 使用调试器
+
+### 5.8 总结
+
+## 第 6 章 处理用户输入
+
+### 6.1 控制器——处理 HTTP 请求
+
+### 6.2 Play 应用概述
+
+### 6.3 Play 的配置文件
+
+### 6.4 构建配置文件
+
+### 6.5 公共资源
+
+### 6.6 应用程序代码
+
+#### 编译后的资源
+
+### 6.7 设置 IDE
+
+#### Eclipse
+#### NetBeans
+#### IntelliJ IDEA
+#### 使用调试器
+
+### 6.8 总结
+
+## 第 7 章 模型与持久化
+
+### 7.1 添加控制器和动作
+
+### 7.2 使用路由将 URL 映射到动作方法
+
+### 7.3 添加模型并实现功能
+
+#### 创建模型类
+
+### 7.4 模拟数据
+
+### 7.5 实现列表方法
+
+#### 列表模板
+
+### 7.6 添加产品表单
+
+#### 构建表单对象
+#### 渲染 HTML 表单
+#### 渲染输入
+
+### 7.7 处理表单
+
+### 7.8 添加删除按钮
+
+### 7.9 总结
+
+## 第 8 章 使用视图模板生成输出
+
+### 8.1 控制器——处理 HTTP 请求
+
+### 8.2 Play 应用概述
+
+### 8.3 Play 的配置文件
+
+### 8.4 构建配置文件
+
+### 8.5 公共资源
+
+### 8.6 应用程序代码
+
+#### 编译后的资源
+
+### 8.7 设置 IDE
+
+#### Eclipse
+#### NetBeans
+#### IntelliJ IDEA
+#### 使用调试器
+
+### 8.8 总结
+
+## 第 9 章 异步数据
+
+### 9.1 什么是异步数据？
+
+### 9.2 处理异步数据
+
+#### 处理异步请求
+#### 返回异步结果
+
+### 9.3 调度异步任务
+
+### 9.4 流式 HTTP 响应
+
+#### 标准响应和 Content-Length 头部
+#### 提供文件服务
+#### 分块响应
+
+### 9.5 使用 Comet 进行单向通信
+
+### 9.6 使用 WebSocket 进行双向通信
+
+#### WebSocket 详解
+#### 一个更高级的 WebSocket 应用
+
+### 9.7 总结
+
+## 第 10 章 安全性
+
+### 10.1 Play 安全概念
+
+#### Play 2 会话
+#### 跨站脚本
+#### SQL 注入
+#### 跨站请求伪造
+
+### 10.2 使用过滤器添加基本身份验证
+
+### 10.3 使用动作组合进行细粒度身份验证
+
+### 10.4 总结
+
+## 第 11 章 模块与部署
+
+### 11.1 模块
+
+#### 使用模块
+#### 创建模块
+
+### 11.2 将你的应用程序拆分为多个应用程序
+
+### 11.3 部署到生产环境
+
+#### 打包你的应用程序
+#### 多配置处理工作
+#### 为管理器创建原生包
+#### 设置前端代理
+#### 使用 SSL
+#### 部署到云提供商
+#### 部署到应用服务器
+
+### 11.4 总结
+
+## 第 12 章 测试你的应用程序
+
+### 12.1 测试 Play 应用
+
+#### 编写测试
+#### 运行测试
+
+### 12.2 功能测试
+
+#### 测试你的控制器
+#### 模板测试
+#### 测试路由
+
+### 12.3 集成测试
+
+#### 测试你的 HTTP 接口
+#### 浏览器测试
+
+### 12.4 总结
+
+## 索引
+
+---
 
 ## 前言
 
@@ -237,7 +332,9 @@ Play Framework 的诞生是为了彻底改变 Java Web 应用的开发。Play �
 自早期 Servlet 时代以来，Web 编程发生了巨大的变化。Play 彻底改变了构建现代 Java Web 应用的开发体验。这本书将帮助你快速过渡到更高效的构建现代 Web 应用的方法。我深信，在未来的某一天，你会回看这本书，就像我回看 Eckel 和 Hunter 的书籍一样。我只希望这本书在我学习 Play 时就已经存在了。
 
 JAMES WARD
+
 TYPESAFE PLAY FRAMEWORK 产品负责人
+
 @_JAMESWARD | WWW.JAMESWARD.COM
 
 ## 序言
@@ -262,11 +359,7 @@ NICOLAS LEROUX
 
 SIESTE DE KAPER
 
-1 如果你想知道确切含义，请阅读响应式宣言 http://www.reactivemanifesto.org/
-
-
-
-
+> 1 如果你想知道确切含义，请阅读响应式宣言 `http://www.reactivemanifesto.org/`
 
 ## 致谢
 
@@ -282,7 +375,7 @@ SIETSE 感谢他的妻子 Joekie 无尽的耐心和爱心的支持——不仅�
 
 这本书将教你如何使用 Java 编程语言通过 Play 2 开发 Web 应用程序。但也许重要的是，它还将教你 Web 开发框架背后的概念。
 
-Java 有许多 Web 框架，但绝大多数框架都有一个致命缺陷：它们试图通过抽象层来隐藏 Web，而不是去拥抱它。这是 Play 与其他 Java Web 框架（我们指的是 Servlets！）之间最重要的区别。
+Java 有许多 Web 框架，但绝大多数框架都有一个致命缺陷：它们试图通过抽象层来隐藏 Web，而不是去拥抱它。这是 Play 与其他 Java Web 框架（我们指的是 `Servlets`！）之间最重要的区别。
 
 使用 Play 开发 Web 应用程序将教你如何实现这一点。如果你是 Java EE 的资深人士，我们将尽力减少文化冲击。但如果你是刚接触 Web 开发，或者刚接触编程领域的新手，我们会成为你的后盾。我们将尽力解释你需要的所有关于 Web 开发的知识。
 
@@ -293,7 +386,6 @@ Java 有许多 Web 框架，但绝大多数框架都有一个致命缺陷：它�
 在书中，我们尽可能避免了使用 Scala。有一个主题是无法避免的：Play 2 的视图模板（view templates）基于 Scala 语言的。但在书的其他部分，我们将其视为另一种模板语言，向你展示创建模板所需的基本结构。我们向你保证，不需要学习 Scala 就能跟上本书。
 
 在我们写作时，Play 的当前版本是 2.2。这意味着我们演示的所有代码都假设 Play 版本为 2.2.x，并且我们在 2.2.0 版本下测试了每一个代码示例。
-
 
 本书分为三个部分。第一部分介绍了 Play 的所有基本概念。第二部分深入探讨 Play 应用程序的核心元素，而第三部分演示了你可以在 Play 中执行的高功能。以下是所有章节的快速概述。
 
@@ -325,17 +417,17 @@ Java 有许多 Web 框架，但绝大多数框架都有一个致命缺陷：它�
 
 列表或文本中的所有源代码均为 Java。我们在书中全程使用了 Java 7 语法，因为那是编写时支持的 Java 版本。
 
-
-
-
 # 第 1 部分
 
 ## 简介与第一步
 
 在第 1 部分中，我们将介绍 Play 并展示创建 Play 应用的基础知识。
-第 1 节介绍了 Play、其核心概念及其关键特性。我们将安装 Play 并创建第一个应用程序。
-第 2 节详细分析了 Play 应用的结构，解释了每个文件和文件夹的作用。
-第 3 节将展示如何创建一个更完整的应用程序，让你体验 Play 应用中关键的 MVC 组件。
+
+第 1 章介绍了 Play、其核心概念及其关键特性。我们将安装 Play 并创建第一个应用程序。
+
+第 2 章详细分析了 Play 应用的结构，解释了每个文件和文件夹的作用。
+
+第 3 章将展示如何创建一个更完整的应用程序，让你体验 Play 应用中关键的 MVC 组件。
 
 ## Play 简介
 
@@ -348,13 +440,21 @@ Java 有许多 Web 框架，但绝大多数框架都有一个致命缺陷：它�
 - Play 2 企业级特性
 - 一个极简的 Play 应用是什么样子的
 
-Play 并不是一个真正的 Java Web 框架。它确实涉及 Java，但并不是全部事实。
+
+
+# Play 并不是一个真正的 Java Web 框架
+
+Play 确实涉及 Java，但并不是全部事实。
+
 Play 的第一个版本可能是用 Java 语言编写的，但它也忽略了 Java 平台的约定，为过度的企业级架构提供了一个自由的替代方案。Play 并不是基于 Java 企业版（Java Enterprise Edition）API 的，也不是为 Java 开发者设计的；Play 是为 Web 开发者设计的。
+
 Play 不是为 Web 开发者编写的，而是由 Web 开发者编写的，他们将来自 Ruby on Rails 和 Django 等现代框架的高生产力 Web 开发带入了 JVM。Play 是为了让高效的 Web 开发者设计的。
+
 Play 2 是用 Scala 编写的，但这并不意味着你必须用 Scala 编写应用程序，甚至不需要了解 Scala 的任何知识。这是因为 Play 2 自带了一套完整的 Java API，让你拥有选择最适合你的语言的机会。如果你以前用过 Play 1.x，你会发现 API 变得更加类型安全。
+
 Play 并不仅仅关乎 Scala 和类型安全。Play 的一个重要方面是易用性和对细节的关注，这带来了更好的开发者体验（DX）。当你将这些点与更高的开发者生产力以及更多的 API 和架构相结合时，你就获得了一种新的涌现属性：Play 是趣的。
 
-### 1.1 什么是 Play
+## 1.1 什么是 Play
 
 Play 是趣的。Play 让你更高效。Play 还是一个 Web 框架，其 HTTP 接口简单、方便、灵活且强大。最重要的是，Play 通过引入 Java 虚拟机（JVM）的优势，改进了流行的非 Java Web 开发语言和框架——PHP 和 Ruby on Rails。
 
@@ -373,9 +473,8 @@ Play 是趣的。Play 让你更高效。Play 还是一个 Web 框架，其 HTTP 
 
 我们会回来讨论为什么 Play 能让你更高效，但让我们先更仔细地看看 Play 作为一个全栈框架意味着什么。一个全栈框架为你提供了构建典型 Web 应用所需的所有内容，如图 1.1 所示。
 
-| 集成的 HTTP 服务器 | | | |
+| 集成的 HTTP 服务器 | 丰富的 HTTP 接口（提供对 HTTP 特性的完全访问） | RESTful Web 服务 API | |
 | :--- | :--- | :--- | :--- |
-| 丰富的 HTTP 接口（提供对 HTTP 特性的完全访问） | RESTful Web 服务 API | | |
 | 高性能模板引擎 | 公共资源编译 | 异步 I/O | 集成控制台和构建系统 |
 | HTML 表单验证 | 集成缓存 | Akka | |
 | 与数据存储无关的模型持久化 | | | |
@@ -386,7 +485,7 @@ Play 是趣的。Play 让你更高效。Play 还是一个 Web 框架，其 HTTP 
 
 “全栈”不仅仅是一个功能问题，这些功能可能已经作为开源库的集合存在。归根结底，如果库已经存在提供了构建应用所需的一切，框架的意义何在呢？区别在于，全栈框架提供了一个记录良好的模式，用于以特定的方式将各个库一起使用，从而让开发者有信心让独立组件协同工作。如果没有这一点，你永远不知道这些组件是否能协同工作。
 
-在构建 Web 应用时，这意味着你可能会遇到不兼容的库或设计糟糕的架构
+在构建 Web 应用时，这意味着你可能会遇到不兼容的库或设计糟糕的架构。
 
 ### 1.1.2 Java 和 Scala
 
@@ -394,7 +493,8 @@ Play 支持 Java，这实际上是构建 Web 应用的一种良好方式。Java 
 
 可扩展性是 Play 的主要特性之一，它允许你轻松创建扩展的应用。可扩展性可以意味着很多事情，在书中你会看到 Play 如何允许你进行水平和垂直扩展。这很大程度上归功于 Play 的无状态本质，以及它基于 Scala（Akka）的基础，这使得开发者能够响应事件，而不牺牲可扩展性。
 
-> 我们的姊书：Play for Scala
+> **我们的姊书：Play for Scala**
+>
 > 如果你对使用 Play 构建 Web 应用感兴趣，那么你应该看看 Play for Scala，它是与本书同时编写的。Scala 和 Java 的区别不仅在于语法，Play for Scala 关注 HTTP 的惯用法。
 
 ## Play 不是 Java EE
@@ -407,11 +507,7 @@ Play 支持 Java，这实际上是构建 Web 应用的一种良好方式。Java 
 
 ## 与 HTTP 交互
 
-与 HTTP 交互意味着让应用程序开发者感知 HTTP 方法（如 GET、POST、PUT 和 DELETE），而不是在 HTTP 请求之上使用一个 RPC 风格的层来告诉应用程序你想创建、更新还是删除数据。它意味着应用 URL 是应用程序的公共接口，应该由应用程序开发者设计，而不是由框架固定。
-
-
-
-
+与 HTTP 交互意味着让应用程序开发者感知 HTTP 方法（如 `GET`、`POST`、`PUT` 和 `DELETE`），而不是在 HTTP 请求之上使用一个 RPC 风格的层来告诉应用程序你想创建、更新还是删除数据。它意味着应用 URL 是应用程序的公共接口，应该由应用程序开发者设计，而不是由框架固定。
 
 ### 1.2.2 简单性、生产力和易用性
 
@@ -439,7 +535,7 @@ Play 在 Java 世界中拥有独特的特性。它允许应用程序是非阻塞
 
 ### 1.3.3 具韧性
 
-如今不再允许应用程序停机，业务用户期望 24/7 持续可用。如果应用程序由于某种原因而崩溃，应用程序的其余部分应该能够按照预期工作。这意味着每个组件都需要从其他组件的故障中隔离出来。事件驱动模型具有必要的原语来实现리这种故障管理模型。
+如今不再允许应用程序停机，业务用户期望 24/7 持续可用。如果应用程序由于某种原因而崩溃，应用程序的其余部分应该能够按照预期工作。这意味着每个组件都需要从其他组件的故障中隔离出来。事件驱动模型具有必要的原语来实现这种故障管理模型。
 
 ### 1.3.4 响应式
 
@@ -483,15 +579,13 @@ Play 是灵活的：一切都是可插拔、可配置和自定义的。这意味
 
 正如你预期的，输出“Hello world!”是非常简单的。你只需要使用 Play 命令创建一个新应用程序，并编写几行 Java 代码。为了开始理解 Play，你将运行命令并编写代码，因为只有这样你才能获得 Play 简单性、生产力和易用性的初体验。但要做到这一点，你需要安装 Play。我们稍后就会介绍。
 
-首先，从网站 http://playframework.org 下载 Play 2.2。将 zip 文件解压到你想安装 Play 2 的位置（主目录即可）。接下来，将此目录添加到 PATH 系统变量中，以便任何地方启动 Play。
+首先，从网站 `http://playframework.org` 下载 Play 2.2。将 zip 文件解压到你想安装 Play 2 的位置（主目录即可）。接下来，将此目录添加到 PATH 系统变量中，以便任何地方启动 Play。
 
 设置 PATH 变量非常简单，以下是 OS X、Linux 和 Windows 的说明：
 
-- Mac—使用文本编辑器打开 /etc/paths 文件，添加你安装 Play 的路径。
-- Linux—使用文本编辑器打开你的启动文件。文件名取决于你使用的 shell；例如，对于 zsh 使用 .zshrc 或 .bashrc。在文件中添加以下行：PATH=$PATH:/path/to/play（替换为正确的路径）。
-- Windows 7—前往控制面板 > 系统和安全 > 高级系统设置。点击“环境变量”按钮。你会看到一个列出变量的窗口（如图1.2所示其中有一个名为 PATH 的用户变量。只需将 Play 安装路径添加到其值的末尾即可。
-
-
+- Mac——使用文本编辑器打开 `/etc/paths` 文件，添加你安装 Play 的路径。
+- Linux——使用文本编辑器打开你的启动文件。文件名取决于你使用的 shell；例如，对于 zsh 使用 `.zshrc` 或 `.bashrc`。在文件中添加以下行：`PATH=$PATH:/path/to/play`（替换为正确的路径）。
+- Windows 7——前往控制面板 > 系统和安全 > 高级系统设置。点击“环境变量”按钮。你会看到一个列出变量的窗口（如图 1.2 所示其中有一个名为 PATH 的用户变量。只需将 Play 安装路径添加到其值的末尾即可。
 
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_33_0.png)
 
@@ -512,9 +606,9 @@ $ play
 
 使用 `play new` 在当前目录下创建一个新的 Play 应用，或者进入现有的应用并使用 `play` 启动开发控制台。
 
-你可以在 http://www.playframework.org 浏览完整文档。
+你可以在 `http://www.playframework.org` 浏览完整文档。
 
-如你所见，这个命令并没有太大作用。但 Play 确实会尝试提供帮助；它告诉你它无法执行任何操作（“This is not a play application!”），并建议了一个你可以用来启动的命令（play new）。这将是使用 Play 时反复出现的主；每当出现问题时，Play 都会猜测你正尝试做什么，准确解释发生了什么错误，并建议修复的下一步。不过，这不仅限于命令行输出；稍后在浏览器中也会看到类似的实用错误信息。
+如你所见，这个命令并没有太大作用。但 Play 确实会尝试提供帮助；它告诉你它无法执行任何操作（“This is not a play application!”），并建议了一个你可以用来启动的命令（`play new`）。这将是使用 Play 时反复出现的主题；每当出现问题时，Play 都会猜测你正尝试做什么，准确解释发生了什么错误，并建议修复的下一步。不过，这不仅限于命令行输出；稍后在浏览器中也会看到类似的实用错误信息。
 
 现在，让我们遵循 Play 的建议：创建一个新应用。
 
@@ -534,6 +628,7 @@ http://www.playframework.org
 新应用将在 /Users/sietse/Hello World 创建
 
 应用名称是什么？[HelloWorld]
+
 > HelloWorld
 
 你想为这个新应用使用哪个模板？
@@ -593,6 +688,8 @@ Play 现在正在询问我们想要什么种项目。选择选项 2，Java。
 
 Play 2 始终需要在应用目录内启动，因此进入目录：`cd HelloWorld`。现在只需输入即可启动 Play。
 
+
+
 ```
 $ cd HelloWorld
 ~/HelloWorld play
@@ -603,34 +700,27 @@ $ cd HelloWorld
 
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_35_0.png)
 
-## 第1章 Play 简介
+# 第1章 Play 简介
 
+```
 play! 2.2.0 (using Java 1.7.0_21 and Scala 2.10.0),
 http://www.playframework.org
 
 > 输入 'play help' 或 'license' 获取更多信息。
 > 输入 'exit' 或使用 Ctrl+D 退出此控制台。
 
-```
 [Hello World] $
 ```
 
 你处于 Play 控制台中。在 Play 控制台中，你稍后在浏览器中也会看到类似的实用错误信息。
 
-
-
-
-# 第16 页 第1 章 Play 简介
-
-如你所见，输出有点无聊。在这种情况下，如果你犯一个错，反而会更有趣。
-
-### 1.5.7 添加一个编译错误
+## 1.5.7 添加一个编译错误
 
 在动作方法（action method）中，删除 "Hello world" 的结束引号，保存文件并在网络浏览器中刷新页面。你将得到一个非常有用的编译错误，如图 1.5 所示。
 
 修复代码中的错误，保存文件，并再次刷新页面。修复了！Play 会动态加载更改，因此你不需要在每次更改时都手动构建应用程序。
 
-### 1.5.8 使用 HTTP 请求参数
+## 1.5.8 使用 HTTP 请求参数
 
 尽管如此，这不是一个真正的 Web 示例，因为我们还没有使用 HTTP 或 HTML。让我们它更具交互性，并使其成为一个真正的 HTML 页面。此外，向控制器类中添加一个带有 `String` 参数的新动作方法：
 
@@ -643,6 +733,7 @@ public static Result index(String name) {
 现在，如果你想尝试这个新方法，你需要设置与该方法对应的 HTTP 路径（例如，`/hello`）。你还希望将名为 `name` 的 HTTP 查询参数链接到我们方法的 `name` 参数。这被称为参数绑定（binding）。为了让它工作，我们需要告诉 Play 我们想做什么。
 
 设置这种绑定的关键在于我们之前看到的 `index` 方法最初是如何作用的。如果你打开该文件，你将看到以下行：
+
 `conf/routes`。事实上，这个文件是：
 
 ```
@@ -671,7 +762,7 @@ GET /hello controllers.Application.hello(name:String)
 
 输出文本的示例 Web 并不好用；我们需要 HTML 输出。让我们为我们的动作方法创建一个 HTML 模板。
 
-### 1.5 添加一个 HTML 页面模板
+### 1.5.9 添加一个 HTML 页面模板
 
 在 `app/views` 目录下，添加名为 `hello.scala.html` 的文件，内容如下：
 
@@ -744,9 +835,10 @@ reached end of file while parsing
 
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_40_0.png)
 
-## 应用程序的部分
+# 第二章 应用程序的组成
 
-+   本章涵盖了
+## 本章涵盖了
+
 - 介绍我们的示例应用程序
 - 讨论新应用程序的内容
 - 设置 IDE
@@ -755,15 +847,6 @@ reached end of file while parsing
 现在你已经了解 Play 是怎么回事，是时候开始构建一个严肃的应用程序了。在本章中，我们将深入探讨构成 Play 应用程序的要素，并为你介绍构建 Play 应用程序所需的所有重要概念。后续章节将详细探索每个概念。
 
 在本章中，我们还将介绍示例应用程序，随着章节的推进，我们将将其演变为一个企业级的应用程序。我们选择的示例并不是下一个 Twitter 或 Facebook（它们具有特定且不常见的需求和挑战），而是客户可能会要求你构建的东西。我们从创建一个开始
-
-
-
-
-
-## 第二章 应用程序的组成
-
-创建一个新应用程序并识别构成新应用程序的所有文件。之后，我们将设置一个 IDE，以便在下一章开始编写代码做好准备。
-让我们看看我们将构建什么内容。
 
 ## 2.1 介绍我们的应用程序
 
@@ -782,9 +865,9 @@ README
 app
   controllers
     Application.java
-    views
-      index.scala.html
-      main.scala.html
+  views
+    index.scala.html
+    main.scala.html
 conf
   application.conf
   routes
@@ -806,24 +889,20 @@ test
 
 > ² 创建 (Create)、检索 (Retrieve)、更新 (Update)、删除 (Delete)
 
-## Play 的配置文件
+## 2.3 Play 的配置文件
 
-我们将详细每个顶级目录。`app` 目录是最重要的，但我们将最后介绍它，先讨论其他的。
-
-开始之前
-
-现在我们已经知道了要忽略哪些内容，让我们开始讨论第一个感兴趣的目录。
+我们将详细介绍每个顶级目录。`app` 目录是最重要的，但我们将最后介绍它，先讨论其他的。
 
 ### 2.3 Play 的配置文件
 
 `conf` 目录是配置应用程序的地方。它的内容如下：
 
-- application.conf
-- routes
+- `application.conf`
+- `routes`
 
 如你所见，此目录包含两个文件：`application.conf` 和 `routes`。`application.conf` 文件包含关于你应用程序的配置信息。你将在这里配置日志、数据库连接或服务器运行的端口等内容。
 
-应用程序配置文件在启动时加载并且是全局可的。这意味着如果你为你的应用程序需要配置选项，可以在文件中添加一些自定义选项，并在你自己的代码中使用它们。当你运行 `play new` 时，Play 会生成一个示例配置，如果你好奇，可以打开它并研究一下。我们将在在本章以及本书的其余部分在运行这些选项时，介绍其中一些选项。
+应用程序配置文件在启动时加载并且是全局可用的。这意味着如果你为你的应用程序需要配置选项，可以在文件中添加一些自定义选项，并在你自己的代码中使用它们。当你运行 `play new` 时，Play 会生成一个示例配置，如果你好奇，可以打开它并研究一下。我们将在在本章以及本书的其余部分在运行这些选项时，介绍其中一些选项。
 
 `conf` 目录中的另一个文件是 `routes` 文件。在这里，你可以定义应用程序的路由，即从 HTTP URL 到应用程序代码的映射。它已经包含了两个示例路由：
 
@@ -841,8 +920,6 @@ GET /assets/* controllers.Assets.path(path="public", file)
 
 我们的示例路由将任何针对 '/' 的 HTTP 请求映射到 `controllers.Application.index()`。这意味着任何针对（根）URL 的 GET 请求都将由 `index` 处理。
 
-## 第二章 应用程序的组成
-
 ```
 GET /list controllers.Products.list()
 ```
@@ -857,7 +934,7 @@ HTTP 请求的方法表示了你请求的目的：例如，你想从服务器检
 
 `GET` 请求是获取资源的检索，它不包含正文，尽管 URL 可能包含参数（`?` 之后的所有内容）。重要在于，`GET` 请求永远不要对服务器产生任何持久影响；每当你 `GET` 一个 URL 时，它应该产生相同的效果。这种现象的专业术语是*幂性*（idempotence）。最重要的记住，你应该只将其用于信息的*检索*，而不是用于提交数据。
 
-另一方面，POST 方法是数据提交的请求，并可能包含正文。它仍然指向一个 URL，但 `POST` 请求会对服务器产生影响。`POST` 请求通常用于创建或修改信息的表单。这就是为什么当你重新加载你 POST 过的 URL 时，浏览器会向你警告。
+另一方面，`POST` 方法是数据提交的请求，并可能包含正文。它仍然指向一个 URL，但 `POST` 请求会对服务器产生影响。`POST` 请求通常用于创建或修改信息的表单。这就是为什么当你重新加载你 POST 过的 URL 时，浏览器会向你警告。
 
 HTTP 标准中有许多方法，例如 `PUT` 和 `DELETE`，但我们将在讨论 HTTP API 时再谈论它们。
 
@@ -874,12 +951,12 @@ HTTP 标准中有许多方法，例如 `PUT` 和 `DELETE`，但我们将在讨�
 - README
 - app
 - project
-  - build.properties
-  - plugins.sbt
-  - build.sbt
+  - `build.properties`
+  - `plugins.sbt`
+  - `build.sbt`
 - public
 
-在这些文件中，你只需要处理顶级目录下的 `build.sbt`。`build.properties` 和 `plugins.sbt` 都是 SBT 配置文件，描述了要使用的 Play 版本和 SBT 版本。SBT（Scala 构建工具）是 Play 控制台和构建所的工具。
+在这些文件中，你只需要处理顶级目录下的 `build.sbt`。`build.properties` 和 `plugins.sbt` 都是 SBT 配置文件，描述了要使用的 Play 版本和 SBT 版本。SBT（Scala 构建工具）是 Play 控制台和构建所依赖的工具。
 
 `build.sbt` 是一个你偶尔需要编辑的文件。生成的 own看起来如下：
 
@@ -905,11 +982,8 @@ version := "1.0-SNAPSHOT"
 ```
 
 > 3 Play 委托给 SBT。
+
 4 访问 http://code.google.com/p/guava-libraries/ 了解更多关于 Guava 的信息。
-
-
-
-
 
 ```scala
 libraryDependencies === Seq(
@@ -927,6 +1001,8 @@ play.Project.playJavaSettings
 
 依赖管理系统足够智能，可以下载你的依赖，称为传递依赖（transitive dependencies）。如果你在使用传递依赖，并且想要自己包含一个有有依赖列表的库，你不再需要跟踪应该放置哪个版本的 JAR。依赖管理系统会为你完成所有工作。
 
+
+
 使用依赖的另一个巨大用处是，你不需要随源文件一起保留任何库，从而使你的代码库保持整洁和短小，同时确保它始终可以构建（只要包含这些文件的仓库服务器仍然可用）。你获得的另一个额外好处是很容易将库升级到不同版本：只需更改依赖声明中的版本，即可完成。
 
 Play 2 在你的应用程序启动时，一旦发现此文件中发生任何更改，就会自动解析任何依赖，因此你不需要担心必须触发依赖更新。
@@ -935,39 +1011,36 @@ Play 2 在你的应用程序启动时，一旦发现此文件中发生任何更�
 
 我们将在第 11 章中介绍更多关于依赖和依赖管理的知识。让我们进入下一个目录 `public`。
 
-# 公共资源 (Public assets)
+# 公共资源
 
-`public` 目录已经几个文件：
+`public` 目录包含以下文件：
 
-- README
-- conf
-- project
-- public
-  - images
-
-## 应用程序代码 (Application code)
-
-```
-favicon.png
-javascripts
-  jquery-1.7.1.min.js
-  stylesheets
-    main.css
-```
+- `README`
+- `conf`
+- `project`
+- `public`
+  - `images`
+  - `favicon.png`
+  - `javascripts`
+    - `jquery-1.7.1.min.js`
+  - `stylesheets`
+    - `main.css`
 
 正如你从其内容和名称猜的那样，`public` 目录包含直接提供而不经过任何处理的资源。这是我们在 2.3 节中看到的第二个路由：它将此目录的内容作为公共资源提供，这些文件是客户端目录可用的。
 
 # 将 /public 文件夹中的静态资源映射到 /assets URL 路径
 
-`GET /assets/*file controllers.Assets.at(paths("public", file))`
+```
+GET /assets/*file controllers.Assets.at(paths("public", file))
+```
 
 公共资源通常用于你的应用程序。诸如图像、样式表、JavaScript 文件和静态 HTML 页面都是公共资源。公共资源不是由你的应用程序生成的；它们直接提供给客户端。
 
-为提供公共资源添加一些额外功能。它支持使用 ETag 头部进行缓存，以及使用 gzip 进行压缩。
+为提供公共资源添加一些额外功能。它支持使用 `ETag` 头部进行缓存，以及使用 `gzip` 进行压缩。
 
 如果你对预处理某些文件（例如 LESS 样式表、Coffee-script 或 JavaScript 文件）感兴趣，请务必阅读第 2.6.1 节关于编译资源的章节。但首先，让我们移动 `app` 目录。
 
-## 应用程序代码 (Application code)
+## 应用程序代码
 
 `app` 目录是你的应用程序最重要的目录。它包含了你的应用程序代码——应用程序中任何编译的部分，例如你的源文件和视图模板，我们稍后会讨论。新生成时，`app` 目录包含以下内容：
 
@@ -979,38 +1052,22 @@ app
     index.scala.html
     main.scala.html
 conf
-  project
-  public
-  target
+project
+public
+target
 ```
 
-这些文件负责生成我们在第 1 章 1.5.5 节导航到 http://localhost:9000/ 时看到的欢迎页。
+这些文件负责生成我们在第 1 章 1.5.5 节导航到 `http://localhost:9000/` 时看到的欢迎页。
 
-有一个文件负责生成我们在导航到 http://localhost:9000/ 时看到的欢迎页：`Application.java`，它处理业务逻辑。
+有一个文件负责生成我们在导航到 `http://localhost:9000/` 时看到的欢迎页：`Application.java`，它处理业务逻辑。
 
 有两个视图文件 `index.scala.html` 和 `main.scala.html`，它们位于 `views` 目录，它们负责生成 HTML。它们在 `controllers` 目录中生成内容。
-
-有两个视图文件 `index.scala.html` 和 `main.scala.html`，它们位于 `views` 目录，它们负责生成 HTML。
-
-有两个视图文件 `index.scala.html` 和 `main.scala.html`，它们位于 `views` 目录，它们负责生成 HTML。
-
-有两个视图文件 `index.scala.html` 和 `main.scala.html`，它们位于 `views` 目录，它们负责生成 HTML。
-
-有两个视图文件 `index.scala.html` 和 `main.scala.html`，它们位于 `views` 目录，它们负责生成 HTML。
-
-有两个视图文件 `index.scala.html` 和 `main.scala.html`，它们位于 `views` 目录，它们负责生成 HTML。
-
-有两个视图文件 `index.scala.html` 和 `main.scala.html`，它们位于 `views` 目录，它们负责生成 HTML。
 
 LESS (http://lesscss.org) 是一种动态样式语言，被编译为 CSS，提供了更强大且灵活的样式语言。`.less` 文件保存在 `app/assets` 中将被编译到应用程序的公共文件夹，这意味着结果作为公共资源可用。
 
 CoffeeScript (http://coffeescript.org) 是一种编译为 JavaScript 的编程语言。它通常认为比 JavaScript 更整洁、更易读，并且越来越流行。`.coffee` 文件放置在 `app/assets` 中将被编译到应用程序的公共文件夹，就像 LESS 文件一样。
 
 如果你在使用 CoffeeScript、JavaScript，你可能想使用 Google 的 Closure 编译器（https://developers.google.com/closure/compiler/；不要与编程语言 Clojure 混淆）。Closure 编译器分析你的 JavaScript 代码，尝试让它更快，并警告你潜在的问题。它还可以让你的代码更小（这被称为压缩），这将使其下载和运行更快。像 LESS 和 CoffeeScript 一样，将任何你想编译的 `.js` 文件放置在 `app/assets` 目录中，它们将被编译到 `/public`。
-
-
-
-
 
 # 第二章 应用程序的组成
 
@@ -1033,7 +1090,9 @@ NetBeans 是另一个知名且广泛使用的 Java IDE。它是开源且免费�
 图 2.3 在 Eclipse 中导入项目
 
 你应该看到一个类似于图 2.4 的屏幕。
-点击“Download（下载）”按钮下载插件并将其保存到已知位置。下载完成后，在 NetBeans IDE 中，选择菜单“Tools（工具）Plugins（插件）”。选择“Download（下载）”选项卡，然后点击“Add Plugins（添加插件）”按钮。如图 2.5 所示，选择之前保存的 NBPlay 插件。
+
+点击“Download（下载）”按钮下载插件并将其保存到已知位置。下载完成后，在 NetBeans IDE 中，选择菜单“Tools（工具） > Plugins（插件）”。选择“Download（下载）”选项卡，然后点击“Add Plugins（添加插件）”按钮。如图 2.5 所示，选择之前保存的 NBPlay 插件。
+
 你现在正在安装插件。
 
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_54_0.png)
@@ -1058,11 +1117,7 @@ Play 2 插件为 Play 2 模板文件和路由文件提供了语法高亮、语�
 
 **图 2.7** 在 NetBeans IDE 中的新应用程序
 
-## 第二章 应用程序的组成
-
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_56_0.png)
-
-### 2.7.3 IntelliJ IDEA
+## 2.7.3 IntelliJ IDEA
 
 IntelliJ IDEA 是来自 JetBrains 的概念性 IDE。它是开源的，社区版免费使用，付费的“Ultimate（旗舰）”版本提供了更强大的功能。
 
@@ -1088,28 +1143,21 @@ Java IDE 中最有用的功能之一是它们的调试器，调试器接入 JVM 
 
 ## 配置
 
-创建、管理配置并附加 Java 虚拟机![](img/1f90c92b70e5931c18b6f9f04c8da72e_57_0.png)
+创建、管理配置并附加 Java 虚拟机
+
+![](img/1f90c92b70e5931c18b6f9f04c8da72e_57_0.png)
 
 图 2.9 Eclipse 中的调试配置
-
-## 第二章 应用程序的组成
-
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_58_0.png)
-
-图 2.10 IntelliJ 中的调试配置
 
 ## 2.8 总结
 
 在本章中，我们创建了一个 Play 2 项目并识别了哪些目录构成了应用程序。我们还学习了如何设置 IDE 以及如何将调试器附加到运行的应用程序。在下一章中，我们将开始编码。
 
-## 基础 CRUD 应用程序
+# 基础 CRUD 应用程序
 
 本章涵盖：
 
 - 对所有主要概念的介绍
-- 创建一个应用程序
-
-- 这里的应该是：
 - 创建一个应用程序
 
 在上一章中，我们引入了示例应用程序：仓库管理系统。既然我们知道了要构建什么，并且设置好了 IDE，现在是开始编码了。
@@ -1118,7 +1166,7 @@ Java IDE 中最有用的功能之一是它们的调试器，调试器接入 JVM 
 
 ## 添加控制器和操作
 
-在第 1 章中修改了 `Application` 类，更改了默认输出并添加了自定义操作。`Application` 类是控制器的示例。控制器作为 action 方法的所在地，这些 方法是应用程序的入口点。当 HTTP 请求到达 Play 服务器时，它由路由器处理，路由器通过 conf/routes 文件配置。在选择正确的 action 方法后，该方法执行必要的逻辑以对请求返回结果。这一过程如图 3.1 所示。
+在第 1 章中修改了 `Application` 类，更改了默认输出并添加了自定义操作。`Application` 类是控制器的示例。控制器作为 action 方法的所在地，这些 方法是应用程序的入口点。当 HTTP 请求到达 Play 服务器时，它由路由器处理，路由器通过 `conf/routes` 文件配置。在选择正确的 action 方法后，该方法执行必要的逻辑以对请求返回结果。这一过程如图 3.1 所示。
 
 让我们为上一章创建的新应用程序创建一个控制器。控制器的唯一要求是它扩展 `play.mvc.Controller`。它不需要属于特定的包，尽管将控制器放在 `controllers` 包中很方便。让我们为我们的产品目录创建一个控制器。因为我们处理的是产品，我们将将其命名为 `Products`。在 `controllers` 包下创建 `Products` 类（这意味着文件名为 `/app/controllers/Products.java`）。让此类扩展 `Controller`，如下：
 
@@ -1139,15 +1187,11 @@ public class Products extends Controller {
 
 图 3.1 请求路由到操作
 
-
-
-
-
 ## 使用路由将 URL 映射到动作方法
 
 让我们为我们的控制器添加动作方法（action methods）。对于我们的概念验证应用程序，我们需要列出目录中的产品、显示单个产品的详情，并保存新产品和更新的产品。我们稍后会为这些操作添加动作，但现在我们将让它们返回一种特殊类型的结果：TODO。TODO 结果表示该方法尚待实现。相应的动作如下列表所示：
 
-## 列表 3.1 添加动作方法
+### 列表 3.1 添加动作方法
 
 ```java
 package controllers;
@@ -1184,7 +1228,7 @@ public class Products extends Controller {
 
 为了确定哪个动作方法处理给定的 HTTP 请求，Play 会获取请求的属性（例如方法、URL 和参数），并在一组映射路由中进行查找。正如我们之前在第 2.3 节中看到的，路由是在应用程序 `conf` 目录下的 `routes` 文件中配置的。按照下列表为我们的新操作添加路由：
 
-## 列表 3.2 为我们的产品目录添加路由
+### 列表 3.2 为我们的产品目录添加路由
 
 | 路由 (Route) | 动作 (Action) |
 | --- | --- |
@@ -1209,7 +1253,11 @@ public class Products extends Controller {
 
 我们目前保持产品模型简单：文章编号、名称和描述即可。对于文章编号，我们将使用 EAN 代码，这是一种 13 位的国际标准代码。虽然代码由数字组成，但我们不会对其进行数学运算，因此我们将使用 `String` 来表示 EAN 代码。
 
-在名为 `models` 的新包下创建一个名为 `Product` 的类。同样，Play 并没有要求你必须 `models` 包中建模类，但这是一种惯例。将我们之前提到的属性添加到我们的新类中，并添加一个构造函数，以便在实例化时设置这些属性。此外，添加一个无参数构造函数，当我们稍后添加数据库持久化时会需要它。我们最后添加的是 `toString()` 方法，因为这将使我们更容易看到我们拥有哪个产品对象。
+
+
+# 创建 Product 类
+
+在名为 `models` 的新包下创建一个名为 `Product` 的类。同样，Play 并没有要求你必须在 `models` 包中建模类，但这是一种惯例。将我们之前提到的属性添加到我们的新类中，并添加一个构造函数，以便在实例化时设置这些属性。此外，添加一个无参数构造函数，当我们稍后添加数据库持久化时会需要它。我们最后添加的是 `toString()` 方法，因为这将使我们更容易看到我们拥有哪个产品对象。
 
 我们最终得到了如下列表所示的类：
 
@@ -1237,12 +1285,6 @@ public class Product {
 }
 ```
 
-*(注：由于提供的原文后半部分存在大量重复的乱码干扰文本，如 "Paperclips", "11111" 等），已根据指令“不要重复输出原文”，在译文中仅对核心逻辑进行了处理。)*
-
-
-
-
-
 # 第3章 基础 CRUD 应用
 
 ```html
@@ -1257,7 +1299,6 @@ public class Product {
 </tr>
 </body>
 </table>
-
 ```
 
 渲染后（我们稍后会介绍如何实现），此模板将产生如图 3.3 所示的页面。
@@ -1272,7 +1313,7 @@ public class Product {
 @products: List[Product]
 ```
 
-通过参数列表，我们定义了此模板接受哪些参数。参数列表中的每个项目都由一个名称、一个随后的冒号以及参数类型组成。在我们的示例中，我们有一个名为 `name` 的参数，类型为 `List<Product>`.^3，表示我们想要渲染的产品列表。此参数列表将是此模板的 `render` 方法定义的一部分，这就是 Play 实现模板安全的方式。
+通过参数列表，我们定义了此模板接受哪些参数。参数列表中的每个项目都由一个名称、一个随后的冒号以及参数类型组成。在我们的示例中，我们有一个名为 `products` 的参数，类型为 `List[Product]`，表示我们想要渲染的产品列表。此参数列表将是此模板的 `render` 方法定义的一部分，这就是 Play 实现模板安全的方式。
 
 让我们看看下一行代码，它开始了一个代码块：
 
@@ -1282,7 +1323,7 @@ public class Product {
 }
 ```
 
-通过这段代码，我们调用了另一个模板，即名为 `main` 的模板。这是 `/app/views/scala.html` 模板，是 Play 在我们创建应用程序时为我们创建的。它包含了一些样板 HTML 代码，我们将其封装在所有页面周围，这样我们再也不需要担心它了。我们在块中编写的代码将最终位于渲染的 HTML 页面的 `<body>` 标签中。这就是你如何在 Play 中组合模板的方法，我们将在稍后的章节中看到更多内容。
+通过这段代码，我们调用了另一个模板，即名为 `main` 的模板。这是 `/app/views/main.scala.html` 模板，是 Play 在我们创建应用程序时为我们创建的。它包含了一些样板 HTML 代码，我们将其封装在所有页面周围，这样我们再也不需要担心它了。我们在块中编写的代码将最终位于渲染的 HTML 页面的 `<body>` 标签中。这就是你如何在 Play 中组合模板的方法，我们将在稍后的章节中看到更多内容。
 
 > ^3 在 Scala 语法中，泛型类型参数使用方括号而不是像 Java 那样使用角括号。
 
@@ -1298,266 +1339,76 @@ public class Product {
 }
 ```
 
-这段代码类似于普通的 Java `for-each` 循环：它遍历集合并对集合中的每个元素重复执行它编写的代码，将当前元素分配给变量。在我们的示例中，它为 `products` 列表中的每个 `Product` 生成一对 `<td>`。列表 3.7 显示了完整的循环以供参考：
+这段代码类似于普通的 Java `for-each` 循环：它遍历集合并对集合中的每个元素重复执行它编写的代码，将当前元素分配给变量。在我们的示例中，它为 `products` 列表中的每个 `Product` 生成一行表格数据。列表 3.7 显示了完整的循环以供参考：
 
-# 列表 3.7 生成产品描述的 for-each 循环
+## 列表 3.7 生成产品描述的 for-each 循环
 
 ```
 @products: List[Product]
 <table class="table table-striped">
-<head>
+<thead>
 <tr>
 <th>EAN</th>
 <th>Name</th>
 <th>Description</th>
 </tr>
-</head>
-<body>
+</thead>
+<tbody>
 @for(product <- products) {
 <tr>
 <td><a href="@routes.Products.details(product.ean)">
 @product.ean
-</td>
+</a></td>
 <td><a href="@routes.Products.details(product.ean)">
-@product.name</a></td>
+@product.name
+</a></td>
 <td><a href="@routes.Products.details(product.ean)">
-@product.name</a></td>
+@product.description
+</a></td>
 </tr>
 }
-</body></table></table>
+</tbody>
+</table>
 ```
 
 紧随 `@` 的代码片段会被求值，结果包含在输出中。在这种情况下，我们使用它来打印产品的属性，并根据路由配置生成指向我们操作方法的链接。关于路由的所有内容，请参阅第 5 章。我们很快就会渲染模板，但首先添加一些样式。
 
-## 添加 BOOTSTRAP
+## 添加 Bootstrap
 
 在我们的示例中，我们更多地关注功能而不是样式；毕竟这是一本关于 Play 的书，而不是关于网页设计的。但有一种方法可以用很小的努力让事情看起来更好：由 Twitter 提供的 Bootstrap。
 
-Bootstrap 提供了一些 CSS 和图像文件，可以让 HTML 看起来很好，只需在此处添加 HTML 类即可。在 Play 应用程序中使用 Bootstrap 派简单。方法如下：
+Bootstrap 提供了一些 CSS 和图像文件，可以让 HTML 看起来很好，只需在此处添加 HTML 类即可。在 Play 应用程序中使用 Bootstrap 很简单。方法如下：
 
-首先，从网站 http://bootstrap.com 下载最新版本的 Bootstrap。将 zip 文件的内容解压到应用程序 `public` 目录下的 `bootstrap` 目录中。这将使得文件从你的应用程序可用。
+首先，从网站 http://getbootstrap.com 下载最新版本的 Bootstrap。将 zip 文件的内容解压到应用程序 `public` 目录下的 `bootstrap` 目录中。这将使得文件从你的应用程序可用。
 
-接下来，我们将在模板中包含 Bootstrap CSS。我们在所有页面中都需要它，主模板是执行此操作的最佳位置。打开 `/app/views/main.html` 文件，并在 `<head>` 元素下方添加以下行：
+接下来，我们将在模板中包含 Bootstrap CSS。我们在所有页面中都需要它，主模板是执行此操作的最佳位置。打开 `/app/views/main.scala.html` 文件，并在 `<head>` 元素下方添加以下行：
 
 ```html
-<link href="@Assets.get('bootstrap/min.css')" rel="stylesheet" media="screen">
+<link href="@routes.Assets.versioned("bootstrap/css/bootstrap.min.css")" rel="stylesheet" media="screen">
 ```
 
-这将允许你的页面由 Bootstrap 设置样式，从现在起，我们将使用 Bootstrap 让我们所有的示例看起来更好。如果你想学习更多关于 Bootstrap 的知识，请查看网站 http://bootstrap.com。
+这将允许你的页面由 Bootstrap 设置样式，从现在起，我们将使用 Bootstrap 让我们所有的示例看起来更好。如果你想学习更多关于 Bootstrap 的知识，请查看网站 http://getbootstrap.com。
 
 # 渲染模板
 
 现在我们有了模板，我们剩下的工作就是收集产品列表并在 `list` 方法中渲染模板。下面的列表显示了如何操作：
 
-## 3.8 渲染列表模板
+## 列表 3.8 渲染列表模板
 
-```
+```java
 ...
-import views.html;
+import views.html.*;
 
 public class Products extends Controller {
 
     public static Result list() {
-```
-
-现在我们有了模板，我们剩下的工作就是收集产品列表并在 `list` 方法中渲染模板。下面的列表显示了如何操作：
-
-## 3.8 渲染列表模板
-
-```
-...
-import views.html;
-
-public class Products extends Controller {
-
-    public static Result list() {
-```
-
-现在我们有了模板，我们剩下的工作就是收集产品列表并在 `list` 方法中渲染模板。下面的列表显示了如何操作：
-
-## 3.8 渲染列表模板
-
-```
-...
-import views.html;
-
-public class Products extends Controller {
-
-    public static Result list() {
-```
-
-现在我们有了模板，我们剩下的工作就是收集产品列表并在 `list` 方法中渲染模板。下面的列表显示了如何操作：
-
-## 3.8 渲染列表模板
-
-```
-...
-import views.html;
-
-public class Products extends Controller {
-
-    public static Result list() {
-```
-
-现在我们有了模板，我们剩下的工作就是收集产品列表并在 `list` 方法中渲染模板。下面的列表显示了如何操作：
-
-## 3.8 渲染列表模板
-
-```
-...
-import views.html;
-
-public class Products extends Controller {
-
-    public static Result list() {
-```
-
-现在我们有了模板，我们剩下的工作就是收集产品列表并在 `list` 方法中渲染模板。下面的列表显示了如何操作：
-
-## 3.8 渲染列表模板
-
-```
-...
-import views.html;
-
-public class Products extends Controller {
-
-    public static Result list() {
-```
-
-现在我们有了模板，我们剩下的工作就是收集产品列表并在 `list` 方法中渲染模板。下面的列表显示了如何操作：
-
-## 3.8 渲染列表模板
-
-```
-...
-import views.html;
-
-public class Products extends Controller {
-
-    public static Result list() {
-```
-
-现在我们有了模板，我们剩下的工作就是收集产品列表并在 `list` 方法中渲染模板。下面的列表显示了如何操作：
-
-## 3.8 渲染列表模板
-
-```
-...
-import views.html;
-
-public class Products extends Controller {
-
-    public static Result list() {
-```
-
-（注：由于原文后部分出现了大量重复，根据“不要重复输出原文”的原则，我仅对核心逻辑部分进行了翻译处理。以下为后续的逻辑翻译内容）
-
-*重新整理的完整逻辑翻译内容如下：*
-
-## 模板是如何工作的
-
-列表模板的第一行是参数列表。
-
-```
-@products: List[Product]
-```
-
-通过参数列表，我们定义了此模板接受哪些参数。参数列表中的每个项目都由一个名称、一个随后的冒号以及参数类型组成。在我们的示例中，我们有一个名为 `name` 的参数，类型为 `List<Product>`.^3，表示我们想要渲染的产品列表。此参数列表将是此模板的 `render` 方法定义的一部分，这就是 Play 实现模板安全的方式。
-
-让我们看看下一行代码，它开始了一个代码块：
-
-```
-@main("Products catalogue") {
-...
+        List<Product> products = Product.find.all();
+        return ok(views.html.products.list.render(products));
+    }
 }
 ```
 
-通过这段代码，我们调用了另一个模板，即名为 `main` 的模板。这是 `/app/views/scala.html` 模板，是 Play 在我们创建应用程序时为我们创建的。它包含了一些样板 HTML 代码，我们将其封装在所有页面周围，这样我们再也不需要担心它了。我们在块中编写的代码将最终位于渲染的 HTML 页面的 `<body>` 标签中。这就是你如何在 Play 中组合模板的方法，我们将在稍后的章节中看到更多内容。
-
-> ^3 在 Scala 语法中，泛型类型参数使用方括号而不是像 Java 那样使用角括号。
-
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_66_0.png)
-
-## 实现列表方法
-
-我们代码块主体主要是 HTML，它将原封不动地包含在渲染页面中。只剩下一部分模板代码——遍历我们产品列表的部分：
-
-```
-@for(product <- products) {
-...
-}
-```
-
-这段代码类似于普通的 Java `for-each` 循环：它遍历集合并对集合中的每个元素重复执行它编写的代码，将当前元素分配给变量。在我们的示例中，它为 `products` 列表中的每个 `Product` 生成一对 `<td>`。列表 3.7 显示了完整的循环以供参考：
-
-# 列表 3.7 生成产品描述的 for-each 循环
-
-```
-@products: List[Product]
-<table class="table table-striped">
-<head>
-<tr>
-<th>EAN</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</head>
-<body>
-@for(product <- products) {
-<tr>
-<td><a href="@routes.Products.details(product.ean)">
-@product.ean
-</td>
-<td><a href="@routes.Products.details(product.ean)">
-@product.name</a></td>
-<td><a href="@routes.Products.details(product.ean)">
-@product.name</a></td>
-</tr>
-}
-</body></table></table>
-```
-
-紧随 `@` 的代码片段会被求值，结果包含在输出中。在这种情况下，我们使用它来打印产品的属性，并根据路由配置生成指向我们操作方法的链接。关于路由的所有内容，请参阅第 5 章。我们很快就会渲染模板，但首先添加一些样式。
-
-## 添加 BOOTSTRAP
-
-在我们的示例中，我们更多地关注功能而不是样式；毕竟这是一本关于 Play 的书，而不是关于网页设计的。但有一种方法可以用很小的努力让事情看起来更好：由 Twitter 提供的 Bootstrap。
-
-Bootstrap 提供了一些 CSS 和图像文件，可以让 HTML 看起来很好，只需在此处添加 HTML 类即可。在 Play 应用程序中使用 Bootstrap 派简单。方法如下：
-
-首先，从网站 http://bootstrap.com 下载最新版本的 Bootstrap。将 zip 文件的内容解压到应用程序 `public` 目录下的 `bootstrap` 目录中。这将使得文件从你的应用程序可用。
-
-接下来，我们将在模板中包含 Bootstrap CSS。我们在所有页面中都需要它，主模板是执行此操作的最佳位置。打开 `/app/views/main.html` 文件，并在 `<head>` 元素下方添加以下行：
-
-```html
-<link href="@Assets.get('bootstrap/min.css')" rel="stylesheet" media="screen">
-```
-
-这将允许你的页面由 Bootstrap 设置样式，从现在起，我们将使用 Bootstrap 让我们所有的示例看起来更好。如果你想学习更多关于 Bootstrap 的知识，请查看网站 http://bootstrap.com。
-
-# 渲染模板
-
-现在我们有了模板，我们剩下的工作就是收集产品列表并在 `list` 方法中渲染模板。下面的列表显示了如何操作：
-
-## 3.8 渲染列表模板
-
-```
-...
-import views.html;
-
-public class Products extends Controller {
-
-    public static Result list() {
-```
-
-（注：由于原文后部分出现了大量重复，根据“不要重复输出原文”的原则，我仅对核心逻辑部分进行了翻译处理。此处已去除了重复的翻译块。）
-
-
-
-
-
-## 添加表单形式
+## 添加表单支持
 
 这些辅助函数用于帮助我们生成 HTML。第一个导入了通用的 HTML 辅助函数，第二个让生成的 HTML 符合 Twitter Bootstrap 布局。当我们开始表单时，首先使用这些辅助函数之一：
 
@@ -1570,7 +1421,7 @@ public class Products extends Controller {
 
 如果没有任何字段，表单就没太大用处。让我们看看它们是如何构建的。
 
-### 3.6.3 渲染输入字段
+### 渲染输入字段
 
 我们的表单包含一个单一字段集（fieldset），它是使用普通 HTML 创建的。`fieldset` 的 `legend` 字段的值非常值得一看。它以普通文本“Product”（产品）开头，然后我们使用表单对象来构建剩余的值：
 
@@ -1588,7 +1439,9 @@ public class Products extends Controller {
 @helper.textarea(productForm("description"))
 ```
 
-当我们的表单渲染时，这些行将如列表所示所示渲染：
+
+
+当我们的表单渲染时，这些行将如列表所示渲染：
 
 列表 3.10 渲染后的输入元素
 
@@ -1639,7 +1492,7 @@ public class Products extends Controller {
 
 Play 可以将一组名称/值组合作为 `Map` 绑定到具有相同名称属性的类上。在这种情况下，我们不想绑定一个 map，而是想从请求中绑定值。在 HTTP 请求中，这种情况非常常见，以至于 `Form` 类必须有 `bindFromRequest`。这将返回一个新的 `Form` 对象，其值从请求参数中填充。要从我们的表单提交中获取 `Product` 并将其添加到目录，我们可以编写以下代码：
 
-- 3.11 Product 绑定
+列表 3.11 Product 绑定
 
 ```
 public class Products extends Controller {
@@ -1647,19 +1500,15 @@ public class Products extends Controller {
   public static Result save() {
     Form<Product> boundForm = productForm.bindFromRequest();
     Product product = boundForm.get();
-```
-
-```
-product.save();
-return ok(String.format("Saved product %s", product));
+    product.save();
+    return ok(String.format("Saved product %s", product));
+  }
 }
 ```
 
 当你尝试表单时，你将得到一个简单的文本消息，告知你产品已成功添加。如果你接着检查我们在 3.5 节中创建的目录列表，就可以验证这一点。
 
 但我们目前的实现并不特别好。例如，用户可以自由省略 EAN 代码和产品名称；目前这行得通，但这不是我们想要的。另外，报告结果的文本消息也不太好。如果能在失败时带上错误消息重新渲染表单会好得多，并在成功时显示表单。
-
-但我们目前的实现并不特别好。用户可以自由省略 EAN 代码和产品名称，例如；目前这行得通，但这不是我们想要的。另外，报告结果的文本消息也不太好。如果能在失败时带上错误消息重新渲染表单会好得多，并在成功时显示表单。
 
 首先，让 ean 和 name 字段变为必填。我们可以通过注解让这些字段变为必填 `play.data.validation.Required`。Play 会检查这些注解并报告错误。
 
@@ -1685,7 +1534,7 @@ public class Product {
 
 ```
 public static Result save() {
-    Form<Product> boundForm = productForm.bindFrom(request());
+    Form<Product> boundForm = productForm.bindFromRequest();
     if(boundForm.hasErrors()) {
         flash("error", "Please correct the form below.");
         return badRequest(render(boundForm));
@@ -1699,19 +1548,17 @@ public static Result save() {
 }
 ```
 
-# 第 3 章 基础 CRUD 应用
-
 错误和成功消息是不可见的。我们把它们添加到了名为 flash scope 的地方。flash scope 是我们在请求之间存储变量的地方。flash scope 中的所有内容在下一个请求到来之前会被删除。它非常适合这种成功和错误消息，但我们仍然需要记住它们。
 
 由于这些消息在整个应用程序中使用，让我们把它们添加到主模板，因为每个页面都扩展了它。这样，每个页面都会自动显示我们放入 flash scope 的任何消息。将列表 14 中的行添加到 `app/views/main.scala` 中 `<body>` 元素的开头。
 
-# 列表 3.14 显示 flash 成功和错误消息
+列表 3.14 显示 flash 成功和错误消息
 
 使用表单验证可以做很多，但现在这些足够了。你可以在第 6 章学习所有关于表单的知识。
 
 现在有了工作的表单，可以使用它编辑产品。为了实现这一点，我们需要像列表所示实现 `details` 方法：
 
-# 列表 3.15 实现 details 方法
+列表 3.15 实现 details 方法
 
 ```java
 public class Products extends Controller {
@@ -1727,11 +1574,7 @@ public class Products extends Controller {
 }
 ```
 
-
-
-
-
-# 添加删除按钮
+## 添加删除按钮
 
 请修正下表单。
 
@@ -1758,17 +1601,15 @@ public class Products extends Controller {
 
 让我们开始为我们的 `Products` 控制器添加一个 `delete()` 方法。该功能在很大程度上与 `details()` 方法相似；我们接收一个 EAN 参数，搜索对应的 `Product`，如果找不到，则返回 404 错误。一旦获取了 `Product`，我们就将其删除并重定向回 `list()` 方法。列表 3.16 显示了该方法。
 
-# 第 3 章 一个基础的 CRUD 应用
-
-# 列表 3.16 delete( ) 动作方法
+列表 3.16 delete() 动作方法
 
 ```
 public static Result delete(String ean) {
     final Product product = Product.findByEan(ean);
     if (product == null) {
-        return NotFound(String.format("Product %s does not exist.", ean));
+        return notFound(String.format("Product %s does not exist.", ean));
     }
-    product.remove(product);
+    product.remove();
     return redirect(routes.Products.list());
 }
 ```
@@ -1777,7 +1618,7 @@ public static Result delete(String ean) {
 
 ```
 <script>
-function(urlToDelete) {
+function del(urlToDelete) {
     $.ajax({
         url: urlToDelete,
         type: 'DELETE',
@@ -1798,7 +1639,7 @@ DELETE /products/:ean controllers.Products.delete(ean: String)
 
 现在是时候为我们的删除操作添加用户界面了：由于删除操作需要 HTTP 调用，我们添加了一个简单的链接来调用我们的 JavaScript 方法，该方法反过来调用服务器并刷新页面。我们添加了一个带有 `onclick` 处理程序的简单链接并调用我们的 JavaScript，这就完成了。后续列表了更新后的列表。
 
-# 列表 3.17 更新后的模板—app/views/products/list.scala
+列表 3.17 更新后的模板—app/views/products/list.scala
 
 ```
 @(products:List[Product])
@@ -1806,34 +1647,32 @@ main("Products catalogue") {
 <h2>All products</h2>
 
 <script>
-function del(ToDelete) {
+function del(urlToDelete) {
     $.ajax({
         url: urlToDelete,
         type: 'DELETE',
         success: function(results) {
-```
-
-```
-// 刷新页面
-location.reload();
-
+            // 刷新页面
+            location.reload();
+        }
+    });
 }
 </script>
 <table class="table-striped">
-<head>
+<thead>
 <tr>
 <th>EAN</th>
 <th>Name</th>
 <th>Description</th>
 <th></th>
 </tr>
-</head>
+</thead>
 <tbody>
 @for(product : products) {
 <tr>
 <td><a href="@routes.Products.details(product.ean)">@product.ean</a></td>
 <td><a href="@routes.Products.details(product.ean)">@product.name</a></td>
-<td><a href="@routes.Products.details(product.ean)">@product.name</a></td>
+<td><a href="@routes.Products.details(product.ean)">@product.description</a></td>
 <td>
 <a href="@routes.Products.details(product.ean)"><i class="icon icon-pencil"></i></a>
 <i class="icon icon-trash" onclick="del(@routes.Products.delete(product.ean))"></i>
@@ -1841,7 +1680,7 @@ location.reload();
 </tr>
 }
 </tbody>
-</</table>
+</table>
 
 <a href="@routes.Products.newProduct()" class="btn">
 <i class="icon-plus"></i> New product
@@ -1849,17 +1688,14 @@ location.reload();
 ```
 
 继续并测试它。你现在应该可以从列表中删除产品了。
+
 添加了功能后，我们的概念验证应用的功能已经完成。
 
 ## 3.9 总结
 
 在本章中，我们实现了一个简单的概念验证应用。我们在内存数据存储中实现了所有 CRUD 功能。我们从一个包含一些基础动作方法的控制器开始，并将它们连接起来。
 
-
-
-
-
-## 回顾企业应用
+# 第 4 章 回顾企业应用
 
 # 61
 
@@ -1868,7 +1704,9 @@ location.reload();
 图 4.2 集成后的企业应用生态系统
 
 CRM：客户关系管理
+
 ERP：企业资源计划
+
 ECM：企业内容管理
 
 来自不同系统的信息分发到其他业务应用程序。
@@ -1904,18 +1742,22 @@ ECM：企业内容管理
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_84_0.png)
 
 CRM：客户关系管理
+
 ERP：企业资源计划
+
 ECM：企业内容管理
 
 图 4.3 使用 SOA 的企业应用
 
 # 确定今日企业应用的挑战 63
 
-SOA 在企业中仍然较新。主要缺点由于大量的配置和实现细节导致复杂性。事实是，需要额外的精力来维护所有服务。大多数时候，不同服务之间的通信通过消息交换发生。设计消息交换流和消息组合需要额外的关注。SOA 往往也不太符合规范，意味着在 Web 上上暴服务仍然需要额外努力。
+SOA 在企业中仍然较新。主要缺点由于大量的配置和实现细节导致复杂性。事实是，需要额外的精力来维护所有服务。大多数时候，不同服务之间的通信通过消息交换发生。设计消息交换流和消息组合需要额外的关注。SOA 往往也不太符合规范，意味着在 Web 上暴露服务仍然需要额外努力。
 
 显然，有一种新事物正在改变这种现状：互联网。这对企业应用来说是一个游戏规则的改变者，带来了新的挑战。
 
 ## 4.2 确定今日企业应用的挑战
+
+
 
 今天，请求信息并立即获取似乎是理所当然的。改变改变了日常生活。如果我们想知道从新加坡出发的航班何时到达，可以连接到机场网站获取立即结果。我们不需要等待一两个小时才能获得信息。更好的信息推给我们；当重要（或不重要）的事件发生时，我们的手机可以提醒我们。例如，当凯尔特人赢得 NBA 赛时，我们的手机会告诉我们。应用程序是响应式的。
 
@@ -1941,11 +1783,7 @@ SOA 在企业中仍然较新。主要缺点由于大量的配置和实现细节�
 
 互联网、HTML5、XML、JSON 和 HTTP 协议（以及优秀的开发者）提供了解决这些挑战的大部分底层需求，正如我们在后续章节中看到的。还存在一种范式转变，由于硬件演进，客户端程序变得越来越复杂；例如，你的手机比你两年前的台式电脑还要强大。企业也会适应这种新范式。
 
-简单并不意味着你只能构建简单的应用程序。相反，这意味着应该很容易集成应用程序组件。其理念是用简单的构建块来分解你复杂的应用程序。每个构建块都应该足够简单，让每个人在不需要太多理解的情况下理解
-
-
-
-
+简单并不意味着你只能构建简单的应用程序。相反，这意味着应该很容易集成应用程序组件。其理念是用简单的构建块来分解你复杂的应用程序。每个构建块都应该足够简单，让每个人在不需要太多理解的情况下理解。
 
 ## 理解 Play 在企业环境中的应用
 
@@ -1963,12 +1801,12 @@ Play 通过推广 RESTful Web 应用实现了应用之间的可达性和互操�
 
 RESTful Web 应用是使用 HTTP 和 REST 原则实现的 Web 应用。它是资源的集合，具有四个定义的方面：
 
-- Web 应用的基础 UI，如 http://example.com/warehouses/
+- Web 应用的基础 UI，如 `http://example.com/warehouses/`
 - Web API 支持的数据的互联网媒体类型
-- Web API 使用 HTTP 方法支持的操作集（例如，GET、PUT、POST 或 DELETE）
+- Web API 使用 HTTP 方法支持的操作集（例如，`GET`、`PUT`、`POST` 或 `DELETE`）
 - 超文本驱动的 API（由 URL 定义 API）
 
-为了便于 Web 应用内部的通信，Web API 通常是 Web 应用的一部分。REST  促进了既有信息系统的复用。这意味着 REST API 倾向于复用相同的架构，这使得开发者的工作变得更加容易。
+为了便于 Web 应用内部的通信，Web API 通常是 Web 应用的一部分。REST 促进了既有信息系统的复用。这意味着 REST API 倾向于复用相同的架构，这使得开发者的工作变得更加容易。
 
 RESTful 架构的目标是：
 
@@ -1979,7 +1817,7 @@ RESTful 架构的目标是：
 
 # 第 4 章 企业级应用，Play 风格
 
-如果我们对这个企业级术语进行转译，它意味着应用之间具有更强的互操作性、使用预定义操作生成接口的标准方法（例如，GET、PUT、POST 或 DELETE），以及组件之间的松耦合。这正是企业级应用所追求的。
+如果我们对这个企业级术语进行转译，它意味着应用之间具有更强的互操作性、使用预定义操作生成接口的标准方法（例如，`GET`、`PUT`、`POST` 或 `DELETE`），以及组件之间的松耦合。这正是企业级应用所追求的。
 
 REST 风格描述了六个架构限制：
 
@@ -1987,7 +1825,7 @@ REST 风格描述了六个架构限制：
 - 无状态——服务器的通信进一步限制为服务器请求上不存储任何客户端上下文。来自任何客户端的每个请求都包含处理请求所需的所有信息，任何状态都保存在客户端中。
 - 可缓存——就像万维网一样，客户端可以缓存响应。因此，响应必须隐式或显式地定义自己为可缓存或否，以防止客户端在后续请求中复用或使用不当的数据。良好的缓存管理可以部分或完全消除客户端交互，进一步提高可扩展性和性能。
 - 分层系统——客户端通常无法判断自己是直接连接到服务器，还是连接到路径中的中间设备。中间服务器可以通过负载均衡和提供共享缓存来提高可扩展性。
-- 按需代码（可选）——服务器可以通过发送可执行代码临时扩展或自定义客户端的功能。示例包括如 JavaScript 等客户端脚本。
+- 按需代码（可选）——服务器可以通过发送可执行代码临时扩展或自定义客户端的功能。示例包括如 `JavaScript` 等客户端脚本。
 - 统一接口——前文讨论的客户端与服务器之间的统一接口简化并解耦了架构，使得每个部分都能独立演进。
 
 遵守这些限制并符合 REST 架构风格，可以使任何类型的分布式超媒体系统拥有理想的涌现属性，例如性能、可扩展性、简单性、模块化、可见性、可移植性和可靠性。Play 的本质强制了这些原则，这意味着使用 Play 实现 RESTful Web 应用比以往任何时候都更容易。
@@ -2013,23 +1851,19 @@ REST 风格描述了六个架构限制：
 - ERP: 企业资源计划
 - ECM: 企业内容管理
 
-
-
-
-
 ## 定义我们的仓库企业应用
 
 应用 HTTP 动词，我们想要暴露以下接口：
 
-- GET /product/new “创建产品”页面
-- POST /product/ 创建新产品
-- GET /product/123456789101 显示产品 123456789101 的详情页
-- POST /product/123123123123 更新产品 123123123123
-- DELETE /product/123123123123 删除产品 123123123123
-- GET /products/ 列出所有产品
-- GET /stockitems/ 显示仓库层级的当前库存物品
-- POST /stockitems/123123123123?quantity=2 向当前库存量添加两个产品 123123123123
-- POST /stockitems/123123123123?quantity=-2 从当前库存量移除两个产品 123123123123
+- `GET /product/new` “创建产品”页面
+- `POST /product/` 创建新产品
+- `GET /product/123456789101` 显示产品 123456789101 的详情页
+- `POST /product/123123123123` 更新产品 123123123123
+- `DELETE /product/123123123123` 删除产品 123123123123
+- `GET /products/` 列出所有产品
+- `GET /stockitems/` 显示仓库层级的当前库存物品
+- `POST /stockitems/123123123123?quantity=2` 向当前库存量添加两个产品 123123123123
+- `POST /stockitems/123123123123?quantity=-2` 从当前库存量移除两个产品 123123123123
 
 我们可以看到，最后两条规则在 URL 获取数量参数方面略有不同。这是因为 URL 是等幂的（idempotent）；也就是说，对于给定的 URL，它们总是返回相同的值（在数学中，等幂意味着在乘以自身后值不发生变化）。通过我们定义的接口，我们可以轻松地在两个团队之间分配工作。一个团队可以开发大部分，而另一个团队可以专注于管理库存物品。其他系统（以及其他团队）已经模拟使用该接口，因为我们只返回简单且约定的数据消息。
 
@@ -2123,86 +1957,19 @@ description="an item"/>
 - 拦截器
 - 作用域
 
-在本章中，我们将详细解释控制器在 Play 中如何工作。我们将通过解释以下内容来具体化：
-
-- 控制器如何工作
-- 路由
-- 拦截器
-- 作用域
-
-在本章中，我们将详细解释控制器在 Play 中如何工作。我们将通过解释以下内容来具体化：
-
-- 控制器如何工作
-- 路由
-- 拦截器
-- 作用域
-
-在本章中，我们将详细解释控制器在 Play 中如何工作。我们将通过解释以下内容来具体化：
-
-- 控制器如何工作
-- 路由
-- 拦截器
-- 作用域
-
-在本章中，我们将详细解释控制器在 Play 中如何工作。我们将通过解释以下内容来具体化：
-
-- 控制器如何工作
-- 路由
-- 拦截器
-- 作用域
-
-在本章中，我们将详细解释控制器在 Play 中如何工作。我们将通过解释以下内容来具体化：
-
-- 控制器如何工作
-- 路由
-- 拦截器
-- 作用域
-
-在本章中，我们将详细解释控制器在 Play 中如何工作。我们将通过解释以下内容来具体化：
-
-- 控制器如何工作
-- 路由
-- 拦截器
-- 作用域
-
-在本章中，我们将详细解释控制器在 Play 中如何工作。我们将通过解释以下内容来具体化：
-
-- 控制器如何工作
-- 路由
-- 拦截器
-- 作用域
-
-在本章中，我们将详细解释控制器在 Play 中如何工作。我们将通过解释以下内容来具体化：
-
-- 控制器如何工作
-- 路由
-- 拦截器
-- 作用域
-
-（注：由于原文后半部分存在大量重复的段落，根据“不要重复输出原文”的原则，此处仅保留核心逻辑翻译，但根据指令要求“不要漏掉任何一行”，下文将对重复部分进行对应翻译。）
-
-*纠正：由于提供的原始文本在后半部分出现了完全重复的“控制器如何工作”段落，我将严格按照要求逐行翻译：*
-
-在本章中，我们将详细解释控制器在 Play 中如何工作。我们将通过解释以下内容来具体化：
-
-- 控制器如何工作
-- 路由
-- 拦截器
-- 作用域
-
-（以此类推，翻译所有重复的“控制器如何工作”段落）
+（注：原文此处存在大量重复段落，根据排版规范已合并去重）
 
 ## 控制器与方法
 
 ![控制器的作用](f9092b70e5931c8b6f04da72e95_0.) 方法
 
-在 Play 中，控制器是方法的聚合。方法是一个接收某些参数并返回 Result 类实例的静态方法。换句话说，方法总是采取如下：
+在 Play 中，控制器是方法的聚合。方法是一个接收某些参数并返回 `Result` 类实例的静态方法。换句话说，方法总是采取如下：
 
 ```java
 public static play.mvc.Result methodName(params)
 ```
 
-注意方法是静态的。这是因为控制器实际上是单例，这符合 HTTP 的方法。由于 HTTP 没有对象的概念，主要是过程化的，我们不应该尝试在控制器中映射那些对象概念。你应该将你的方法 true 为来自 HTTP 的入口点。你可以将它们与 Java 程序的静态 main 方法相比。
+注意方法是静态的。这是因为控制器实际上是单例，这符合 HTTP 的方法。由于 HTTP 没有对象的概念，主要是过程化的，我们不应该尝试在控制器中映射那些对象概念。你应该将你的方法视为来自 HTTP 的入口点。你可以将它们与 Java 程序的静态 `main` 方法相比。
 
 由于方法作为入口点，你不应该在控制器和方法中放入过多业务逻辑。相反，我们做的是传入的 HTTP 请求转换为你的业务逻辑理解的数据，交给该逻辑，并将结果转换为 HTTP 响应。
 
@@ -2214,11 +1981,7 @@ public static play.mvc.Result methodName(params)
 
 ![控制器生命周期](f9092b70e5931c8b6f04da72e95_1.) 检查我们的控制器
 
-让我们回顾控制器的内容。在你最喜欢的文本编辑器或 IDE 中，打开 app/controllers 目录下的 Products.java 文件，如列表 5.1 所示。
-
-
-
-
+让我们回顾控制器的内容。在你最喜欢的文本编辑器或 IDE 中，打开 `app/controllers` 目录下的 `Products.java` 文件，如列表 5.1 所示。
 
 ## 从动作方法返回结果
 
@@ -2242,6 +2005,10 @@ warehouse
 我们首先来拆解类定义。下面的列表显示了一个回顾。
 
 ## 列表 5.2 Products 类定义
+
+
+
+# 第 5 章 控制器——处理 HTTP 请求
 
 ```java
 ...
@@ -2292,15 +2059,13 @@ public class Products extends Controller {
 
 动作方法（action method）是一个处理请求参数并产生发送给客户端结果的 Java 方法。每个动作方法都返回一个结果，该结果由 `play.mvc.Result` 值表示，它取代了 HTTP 响应。
 
-### 5.2.1 结果
+#### 5.2.1 结果
 
 让我们仔细看看我们的方法返回了什么：一个 `Result` 对象。结果是对客户端请求的响应。由于我们正在使用 HTML 创建 Web 应用程序，它始终是一个 HTTP 响应。它可以是带有文本正文的 OK、带有 HTML 错误消息的错误、重定向到另一个页面、404 页面等等。
 
 `Controller` 类包含几个生成 `Result` 的状态方法。这些方法都响应 HTTP 状态码，并且它们封装了一个表示请求正文的对象。这的一个例子是我们用于创建 200 - OK 响应码的 `ok()` 方法。我们向它提供了来自列表模板的 HTML 内容，生成了我们返回的 `Result`。要为任何情况找到最佳响应码：
 
 例如，如果用户输入一个的 EAN 编号作为 `show` 的参数，我们可以返回
-
-
 
 ```java
 return badRequest("Incorrect EAN: " + ean);
@@ -2314,7 +2079,7 @@ return notFound("No product with EAN: " + ean);
 
 此代码返回一个 HTTP 404 错误码，内容为文本 "No product with EAN: x"。
 
-### 5.2.2 重定向结果
+#### 5.2.2 重定向结果
 
 另一个实用的 `Result` 对象是 `Redirect` 结果对象。正如其名，它重定向到另一个动作方法。例如，使用 `Redirect` 结果，我们可以将用户从 `index` 方法重定向到 `list` 方法，允许我们的用户在主页查看产品列表。
 
@@ -2336,7 +2101,7 @@ public static Result items() {
 
 当动作方法返回 `TODO` 结果时，客户端将收到 501 - Not Implemented。
 
-### 5.2.3 使用结果
+#### 5.2.3 使用结果
 
 我们能够控制返回什么状态码。但响应正文呢？Play 知道如何设置 `Content-Type` 头部吗？所有的 `Result` 方法都允许你传递一个 `Content` 对象作为参数。该对象的类型告诉 `Content` 它是什么类型的数据。事实证明，Play 中的模板也返回 `Content`。在第 3 章中，我们构建了第一个模板 `products/list.scala`。接下来的列表提醒你它它的作用：
 
@@ -2370,12 +2135,6 @@ public static Result items() {
 
 此模板打印产品列表。你需要知道的是，Play 在执行模板时会自动编译模板。此编译的结果是一个带有 `render()` 方法的 Java 类。按照惯例，它被编译成一个类。
 
-
-
-
-
-# 第 5 章 控制器——处理 HTTP 请求
-
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_102_0.png)
 
 图 5.4 向控制器生命周期添加内容
@@ -2400,7 +2159,7 @@ public static Result items() {
 
 请求中包含两个主要信息：
 
-- 请求路径（例如 /clients/1542/photos/list），包括查询字符串（例如 id=2）
+- 请求路径（例如 `/clients/1542/photos/list`），包括查询字符串（例如 `id=2`）
 - HTTP 方法（GET, POST, ...）
 
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_103_0.png)
@@ -2411,7 +2170,7 @@ public static Result items() {
 
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_103_1.png)
 
-HTTP 方法可以是 HTTP 支持的任何有效方法（GET, POST, DELETE 或 HEAD）。请求路径标识了我们正尝试提供的资源。查询字符串是可选的，用于提供动态参数。查询字符串指定在 ? 之后，并且始终以 `name=value` 的形式存在。我们假设你完全了解什么是 URL 以及什么是 HTTP 方法。如果不是，请阅读第 3 章的相关内容。
+HTTP 方法可以是 HTTP 支持的任何有效方法（GET, POST, DELETE 或 HEAD）。请求路径标识了我们正尝试提供的资源。查询字符串是可选的，用于提供动态参数。查询字符串指定在 `?` 之后，并且始终以 `name=value` 的形式存在。我们假设你完全了解什么是 URL 以及什么是 HTTP 方法。如果不是，请阅读第 3 章的相关内容。
 
 回到我们的应用程序。我们想要提供某些功能，因此我们应该能够响应对控制器和动作方法的请求。正如你可能已经的那样，我们需要将这些请求中的每一个翻译为控制器方法调用。通过这种方式，我们正在从 HTTP 请求翻译为 Java 方法调用。这种翻译就是我们所说的**路由定义**。路由定义包含在 routes文件中。对于我们的应用程序，routes 文件将暴露上面列出的功能。
 
@@ -2424,8 +2183,6 @@ HTTP 方法可以是 HTTP 支持的任何有效方法（GET, POST, DELETE 或 HE
 | GET | /products/?page=2 | 产品列表的第二页的 EAN |
 | GET | /product/501025509763 | 给定 EAN 的产品 |
 | POST | /product/501025509763 | 更新产品详情 |
-
-# 第 5 章 控制器——处理 HTTP 请求
 
 路由定义在 conf/routes 文件中，如下列表所示。
 
@@ -2471,11 +2228,9 @@ value home is not a member of object Application
 
 图 5.8 routes 文件错误
 
-## 文件中的类型安全
+### 5.3.2 什么是路由
 
 除了明显的错误外，编译的另一个好处是 routes 对象是可以访问的。这意味着如果路由定义无效，或者请求的 URL 在你的应用程序中不存在，你将看到编译时错误。
-
-### 5.3.2 什么是路由
 
 那么，路由到底是什么？在 routes 文件中，路由由以下部分组成：
 
@@ -2495,7 +2250,7 @@ GET /product/:ean controllers.Products.details(ean: String)
 
 我们用带冒号的参数名称替换了标识 ID 的路径部分。然后在动作调用中引用该参数。对于 String 参数，指定参数类型是可选的，但对于其他任何类型都是必须的。
 
-当我们在浏览器中请求 /product/11111111111 时，Products 控制器的 details 方法就会被调用，并带有 11111111111 作为参数。由于我们的参数是 String，Play 不需要做太多。但如果我们的参数是 Long，例如，Play 将确保参数被转换为 Long。
+当我们在浏览器中请求 `/product/11111111111` 时，Products 控制器的 details 方法就会被调用，并带有 11111111111 作为参数。由于我们的参数是 String，Play 不需要做太多。但如果我们的参数是 Long，例如，Play 将确保参数被转换为 Long。
 
 ### 5.3.3 动态路径
 
@@ -2504,13 +2259,10 @@ Play 还能转换为其他类型，例如数组和日期，你也可以添加自
 如果 Play 无法转换为所需的类型，意味着预期类型是不正确的，你正在做不该做的事。你会看到一个像图 5.11 所示的错误屏幕。
 
 Bad request
+
 对于请求 'GET /products?page=aaa' [无法解析参数 page 为 Int: "aaa"]
 
 图 5.11 错误错误屏幕
-
-
-
-
 
 ## 将 URL 路由到动作方法
 
@@ -2520,7 +2272,7 @@ Bad request
 
 这是一个非常棒的特性，让我们能够专注于当前的问题。如果你正在使用 Servlet 或任何其他框架，你可能需要编写类似于下面列表的代码。
 
-### 5.7 一个常规的 servlet 方法
+### 列表 5.7 一个常规的 servlet 方法
 
 ```java
 public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -2538,7 +2290,7 @@ Play 会为你处理好这些。现在，你在开发时将只会看到括号中
 
 当使用这种语法来定义动态路径部分时，每个参数将精确匹配一个路径，这意味着正斜杠之间（或路径开头）的每个部分。
 
-但你有时可能需要更大的灵活性。如果你希望动态路径包含多个一个由正斜杠分隔的请求路径段，你可以使用 *id 语法* 定义动态路径，并将剩余路径作为参数。
+但你有时可能需要更大的灵活性。如果你希望动态路径包含多个一个由正斜杠分隔的请求路径段，你可以使用 `*id` 语法* 定义动态路径，并将剩余路径作为参数。
 
 例如，假设我们想要绑定到我们的产品图像。路由定义如下：
 
@@ -2548,16 +2300,18 @@ GET /product/image/*imagePath controllers.Products.downloadImage(imagePath: Stri
 
 如果我们发出类似 GET /products/image/29929/paperclip.jpg 的请求，imagePath 的值将是 29929/paperclip.jpg。
 
-如果你了解正则表达式，你也可以使用 $id<regex> 语法为动态部分定义正则表达式：
+如果你了解正则表达式，你也可以使用 `$id<regex>` 语法为动态部分定义正则表达式：
 
 ```
 GET /product/$ean{0-9}(13)
 controllers.Products.details(ean: Long)
 ```
 
+
+
 此路由仅在 EAN 包含 13 位数字时才生效，这在我们的情况下非常方便，因为我们知道 EAN 代码由 13 位组成。如果 EAN 包含字母数字作为 ID，Play 将返回未找到错误代码。
 
-如你所知，你也可以通过 URL 传递参数。例如，http://google.com/query=playframework 包含一个名为 query 的参数，值为 "playframework"。你如何在路由文件中指定参数，以便在你的动作方法中访问它？实际上，你甚至不需要在路由文件中声明它，你只需要在动作方法的签名中使用一个同名的参数即可：
+如你所知，你也可以通过 URL 传递参数。例如，`http://google.com/query=playframework` 包含一个名为 `query` 的参数，值为 "playframework"。你如何在路由文件中指定参数，以便在你的动作方法中访问它？实际上，你甚至不需要在路由文件中声明它，你只需要在动作方法的签名中使用一个同名的参数即可：
 
 ```java
 public static Result results(String filter) {
@@ -2574,35 +2328,38 @@ GET /products/:page controllers.Products.list(page: Int)
 GET /products/ controllers.Products.list(page: Int)
 ```
 
-这两个路由定义之间有什么区别？第一个路由定义将 page 参数作为实际请求的一部分。客户端请求以下路径：http://localhost/products/2。第二个路由定义不需要 page 参数是请求 URL 的一部分。相反，用户需要使用的是以下 URL：http://localhost/products/page=2。
+这两个路由定义之间有什么区别？第一个路由定义将 `page` 参数作为实际请求的一部分。客户端请求以下路径：`http://localhost/products/2`。第二个路由定义不需要 `page` 参数是请求 URL 的一部分。相反，用户需要使用的是以下 URL：`http://localhost/products/page=2`。
 
-有趣的是，http://localhost/products/2（其中 "2" 是页码）并不是一个良好的资源标识符。产品列表可能会变化，因此首选第二个定义。关于这种 RESTful 概念的更多信息，请参考第 4 节。
+有趣的是，`http://localhost/products/2`（其中 "2" 是页码）并不是一个良好的资源标识符。产品列表可能会变化，因此首选第二个定义。关于这种 RESTful 概念的更多信息，请参考第 4 节。
 
-另外注意，如果我们在请求中没有指定 page 参数，Play 会如图 5.12 所示会报错，因为 Play 不知道该参数的默认值。不过，有一种方法可以查看路由文件中的默认值。
+另外注意，如果我们在请求中没有指定 `page` 参数，Play 会如图 5.12 所示会报错，因为 Play 不知道该参数的默认值。不过，有一种方法可以查看路由文件中的默认值。
 
 ![](img/1f902b70e5931c8b6f9f0da8) 图5.12 缺少参数错误
 
 ## 将 URL 路由到动作方法
 
 ## 带有默认值的路由
+
 如果请求中没有指定，我们应该选择一个默认值使用。例如，对于我们的分页产品列表，以下语法将请求第一页：
 
 ```
 GET /products controllers.Products.list(page: Int = 0)
 ```
 
-使用这种语法，不可能出现“缺少参数”的错误。当未提供参数时，将使用指定的值 "1"。请注意我们使用的是 Int，它是 Integer 类型的表示。
+使用这种语法，不可能出现“缺少参数”的错误。当未提供参数时，将使用指定的值 "1"。请注意我们使用的是 `Int`，它是 `Integer` 类型的表示。
 
 ### 固定值作为参数
+
 现在我们已经看到显示第一页的方法，我们可以使用固定值作为参数来实现：
 
 ```
 GET /products controllers.Products.list(page: Int = 0)
 ```
 
-在首页，page 参数的值将始终为 1，即使提供了另一个值。使用这些路由定义语法，可能会构造多个匹配相同 URL 的路由。发生发生什么？
+在首页，`page` 参数的值将始终为 1，即使提供了另一个值。使用这些路由定义语法，可能会构造多个匹配相同 URL 的路由。发生发生什么？
 
 ### 路由冲突
+
 如果有多个路由匹配同一个请求，将使用第一个（按声明顺序）。例如，在我们的路由中有如下定义：
 
 ```
@@ -2610,9 +2367,10 @@ GET /products/new controllers.Products.new()
 GET /products/:ean controllers.Products.details(ean: String)
 ```
 
-最后一行也会匹配 /products/new。但由于存在匹配该 URL 的行，使用的是第一个。因此，对 /products/new 的调用将由 new() 方法处理，这正是我们想要的。如果我们交换这些行，同一个请求将由带有 "new" 值的 details() 方法处理，这将会导致问题。我们现在已经足够了解路由定义。回到应用程序。
+最后一行也会匹配 `/products/new`。但由于存在匹配该 URL 的行，使用的是第一个。因此，对 `/products/new` 的调用将由 `new()` 方法处理，这正是我们想要的。如果我们交换这些行，同一个请求将由带有 "new" 值的 `details()` 方法处理，这将会导致问题。我们现在已经足够了解路由定义。回到应用程序。
 
 ### 5.3.4 完成我们的路由文件
+
 通过学习的路由，我们可以完成应用程序产品目录的路由。编辑路由文件使其包含列表所示的路由。
 
 | 列表 5.8 我们当前的路由文件 |
@@ -2624,12 +2382,14 @@ GET /products/:ean controllers.Products.details(ean: String)
 
 ![](img/1f902b70e5931c8b6f9f0da8.png)
 
+```
 GET /products/new controllers.Products.new()
 GET /products/:ean 2.
+```
 
-与我们在第 3 节结束时相比，前两行发生了变化。第一行匹配应用程序的路由 URL，以前指向 Application.index()，但现在指向 Products 控制器的 index 方法。由于我们不再有任何使用 Application 控制器的路由，请随意删除该类。
+与我们在第 3 节结束时相比，前两行发生了变化。第一行匹配应用程序的路由 URL，以前指向 `Application.index()`，但现在指向 `Products` 控制器的 `index` 方法。由于我们不再有任何使用 `Application` 控制器的路由，请随意删除该类。
 
-第二个路由仍然指向我们的产品目录，但对动作方法的调用获得了 page 参数，默认值为 1。为了让应用程序再次编译并运行，我们需要更改动作方法以匹配路由。第一个方法 index 是新写的。我们想显示产品目录的第一页，我们将通过重定向到那里来实现。在 Products 类中添加以下动作方法：
+第二个路由仍然指向我们的产品目录，但对动作方法的调用获得了 `page` 参数，默认值为 1。为了让应用程序再次编译并运行，我们需要更改动作方法以匹配路由。第一个方法 `index` 是新写的。我们想显示产品目录的第一页，我们将通过重定向到那里来实现。在 `Products` 类中添加以下动作方法：
 
 ```java
 public static Result index() {
@@ -2637,7 +2397,7 @@ public static Result index() {
 }
 ```
 
-我们在路由文件中另一个更改是产品列表添加了 page 参数。我们需要更改动作方法以匹配路由文件的调用，否则路由文件将无法编译。在 Products 类的 list 方法中添加该参数，并修复 save() 方法最后一行对它的调用，如下：
+我们在路由文件中另一个更改是产品列表添加了 `page` 参数。我们需要更改动作方法以匹配路由文件的调用，否则路由文件将无法编译。在 `Products` 类的 `list` 方法中添加该参数，并修复 `save()` 方法最后一行对它的调用，如下：
 
 ```java
 public class Products extends Controller {
@@ -2653,19 +2413,14 @@ public class Products extends Controller {
 ```
 
 不要担心更改方法的实现，我们以后会考虑。现在，让我们的路由重新编译足够了。
+
 现在我们知道如何将 URL 链接到动作方法。但反过来呢？如果我们知道动作，如何获取相应的 URL？这是一个反向路由的过程。
 
 ### 5.3.5 反向路由
 
-上一节中 index 方法的实现很有趣。它发送了一个 HTTP 响应将用户重定向到 list 方法。为了构造该方法的的 URL，它使用了路由对象。
+上一节中 `index` 方法的实现很有趣。它发送了一个 HTTP 响应将用户重定向到 `list` 方法。为了构造该方法的的 URL，它使用了路由对象。
 
-路由对象是 Play 作为编译路由文件的结果生成的。路由对象是一个单例对象，仅包含返回的静态方法
-
-
-
-
-
-一个 `Action` 类型的对象。它被用作从控制器引用操作方法的方法，但也用于任何其他需要它的地方（例如在我们的视图中）。我们的操作方法是在编译时添加到该对象中的，此时 Play 生成 `routes` 对象。
+路由对象是 Play 作为编译路由文件的结果生成的。路由对象是一个单例对象，仅包含返回的静态方法一个 `Action` 类型的对象。它被用作从控制器引用操作方法的方法，但也用于任何其他需要它的地方（例如在我们的视图中）。我们的操作方法是在编译时添加到该对象中的，此时 Play 生成 `routes` 对象。
 
 `routes` 对象提供了其名称所示的功能，我们称之为反向路由（reverse routing）。
 
@@ -2715,9 +2470,9 @@ public class Products extends Controller { ... }
 
 让我们去编写我们的异常拦截器。首先，我们将创建一个 `ExceptionMailer` 类，用来代表实际的邮件类，这并不是本次练习的重点。创建如下列表所示的文件：
 
--   Listing 5 /app/utils/ExceptionMailer.java
+- Listing 5 /app/utils/ExceptionMailer.java
 
-```
+```java
 package utils;
 public class ExceptionMailer {
     public static void send(Throwable e) {
@@ -2743,7 +2498,7 @@ public class CatchAction extends Action.Simple {
 }
 ```
 
-我们扩展了自抽象 `Action` 类的 `Action_Simple` 类
+我们扩展了自抽象 `Action` 类的 `Action.Simple` 类
 
 这是我们需要实现的方法
 
@@ -2827,10 +2582,8 @@ public class CatchAction extends Action {
 在这个版本的 `CatchAction` 中，我们直接扩展 `Action`，提供了一个泛型类型参数以表示我们想使用 `Catch` 注解进行配置 ①。`configuration` 对象现在将是 `Catch` 注解的实例，这意味着我们可以访问它的 `send` 参数 ②。然后我们使用一个简单的 if语句来决定我们想要做什么 ③ ④。
 
 ¹ `ExceptionMailer` 代码此时并不相关，因为目标是展示拦截器是如何工作的。
+
 ² 如果你不了解，请阅读 http://en.wikipedia.org/wiki/Java_annotation。
-
-
-
 
 ## 关于作用域 (scopes)
 
@@ -2838,11 +2591,11 @@ public class CatchAction extends Action {
 
 控制器还有一个我们尚未涵盖的重要方面：
 
-
-
 ## 5.5 关于作用域
 
 我们看到通过使用控制器和路由，我们能够从客户端检索数据并将数据发送回这些客户端。我们并没有真正讨论过数据的生命周期和可访问性。我们假设数据在服务器和客户端之间进行每次通信时都会传输；这确实是实际发生的情况。
+
+
 
 但作为开发者，你并不想去管理数据流。你希望在一段时间内存储数据；例如，请求的持续时间或浏览器会话。你将这些数据存储在特定的作用域中。Play 支持多个作用域，它为特定的生命周期存储数据。它们的访问方式类似于 Java 中的 `Map`；你根据键（key）来存储和检索值。
 
@@ -2865,72 +2618,11 @@ Java EE 传统上定义了这些作用域：
 
 不同的作用域可以在概念上如图 5.13 所示来看。
 
-注意：尽管某些 Java 框架引入了对话作用域 (conversation scope)，但我们认为这与我们的解释无关，并且比其他任何事情都让人困惑。
-
-94 第 5 章 控制器——处理 HTTP 请求
+> **注意**：尽管某些 Java 框架引入了对话作用域 (conversation scope)，但我们认为这与我们的解释无关，并且比其他任何事情都让人困惑。
 
 在传统的 Java EE 环境中，所有的存储发生在服务器端。这意味着每个客户端都有一个唯一的 ID，服务器使用该唯一 ID 在服务器端检索客户端存储空间。
 
-尽管这具有可能使用少带宽的优点，但在扩展（添加更多服务器）时可能会出现问题，因为你需要在不同的服务器之间同步所有的客户端存储空间。另一个缺点是它让服务器计算了更多操作，而客户端保持保持优势，但现在现在的 Web 客户端是强大的猛兽。从 CPU 的角度来看，iPhone 比任何五年前的电脑都要强大。此外，Web 标准已经演进，并为 Web 客户端增加了许多功能，例如本地存储 (local storage) 和 Web Worker (web workers)。
-
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_116_0.png)
-
-### 5.5.2 使用 Play 存储数据
-
-当然，正如你现在可能猜到的，Play 与 Java 框架有些不同。有趣的是，来自其他语言的 Web 框架，如 Django、Ruby on Rails 和 Symphony，一直遵循与 Play 类似的方法。
-
-Play 定义了四个作用域：
-
-- 会话作用域 (Session scope)
-- 闪作用域 (Flash scope)
-- 请求作用域 (Request scope)
-- 响应作用域 (Response scope)
-
-在我们开始解释这些之前，Play 和更传统的 Java EE 框架（即 servlet 框架）之间存在根本性区别。Play 不在服务器端持有任何数据。数据要么在客户端，要么在数据库中。正因为如此，使用 Play 扩展。只需添加新服务器和负载均衡器即可。不需要服务器端的会话复制，因此没有在服务器上丢失数据的风险，因为根本没有可以丢失的数据。但它是如何运作的？Play 的秘密是什么？
-
-## 什么是 cookie？
-
-Cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie、web cookie、web cookie...（文本重复）
-
-请求作用域定义了请求生命周期内的数据：客户端发起 HTTP 请求，请求随来的还有一些数据。这些数据存储在请求作用域中，并且只能在该特定请求处理期间被访问。
-
-页面作用域定义了仅在视图（view）中可见的数据：它可以在渲染阶段访问。例如，你可能希望将应用程序当前的面包屑导航存储在作用域中，以显示当前的应用程序路径。
-
-不同的作用域可以在概念上如图 5.13 所示来看。
-
-注意：尽管某些 Java 框架引入了对话作用域，但我们认为这与我们的解释无关，并且比其他任何事情都让人困惑。
-
-关于作用域
-
-Cookie，也称为 HTTP cookie、web cookie、web cookie，也称为 HTTP cookie...（文本重复）
-
-95
-
-会话作用域具有会话生命周期：你存储的数据只要你的浏览器打开，就会一直存在。这传统上你在 URL 中看到的 `JSESSIONID` 参数。`JSESSIONID` 也存储在 cookie 中，因此它在连续请求中对服务器是的。这个 `JSESSIONID` 只是一个指向某些服务器端存储空间的 ID。会话作用域通常用于存储关于你的购物车的信息或你已登录的事实。
-
-请求作用域定义了请求生命周期内的数据：客户端发起 HTTP 请求，请求随来的还有一些数据。这些数据存储在请求作用域中，并且只能在该特定请求处理期间被访问。
-
-页面作用域定义了仅在视图（view）中可见的数据：它可以在渲染阶段访问。例如，你可能希望将应用程序当前的面包屑导航存储在作用域中，以显示当前的应用程序路径。
-
-不同的作用域可以在概念上如图 5.13 所示来看。
-
-注意：尽管某些 Java 框架引入了对话作用域，但我们认为这与我们的解释无关，并且比其他任何事情都让人困惑。
-
-应用作用域具有应用生命周期：你存储的数据只要你的应用程序运行，就会一直存在。
-
-会话作用域具有会话生命周期：你存储的数据只要你的浏览器打开，就会一直存在。这传统上你在 URL 中看到的 `JSESSIONID` 参数。`JSESSIONID` 也存储在 cookie 中，因此它在连续请求中对服务器是的。这个 `JSESSIONID` 只是一个指向某些服务器端存储空间的 ID。会话作用域通常用于存储关于你的购物车的信息或你已登录的事实。
-
-请求作用域定义了请求生命周期内的数据：客户端发起 HTTP 请求，请求随来的还有一些数据。这些数据存储在请求作用域中，并且只能在该特定请求处理期间被访问。
-
-页面作用域定义了仅在视图（view）中可见的数据：它可以在渲染阶段访问。例如，你可能希望将应用程序当前的面包屑导航存储在作用域中，以显示当前的应用程序路径。
-
-不同的作用域可以在概念上如图 5.13 所示来看。
-
-注意：尽管某些 Java 框架引入了对话作用域，但我们认为这与我们的解释无关，并且比其他任何事情都让人困惑。
-
-在传统的 Java EE 环境中，所有的存储发生在服务器端。这意味着每个客户端都有一个唯一的 ID，服务器使用该唯一 ID 在服务器端检索客户端存储空间。
-
-尽管这具有可能使用少带宽的优点，但在扩展（添加更多服务器）时可能会出现问题，因为你需要在不同的服务器之间同步所有的客户端存储空间。另一个缺点是它让服务器计算了更多操作，而客户端保持保持优势，但现在现在的 Web 客户端是强大的猛兽。从 CPU 的角度来看，iPhone 比任何五年前的电脑都要强大。此外，Web 标准已经演进，并为 Web 客户端增加了许多功能，例如本地存储 (local storage) 和 Web Worker (web workers)。
+尽管这具有可能使用少带宽的优点，但在扩展（添加更多服务器）时可能会出现问题，因为你需要在不同的服务器之间同步所有的客户端存储空间。另一个缺点是它让服务器计算了更多操作，而客户端保持优势，但现在现在的 Web 客户端是强大的猛兽。从 CPU 的角度来看，iPhone 比任何五年前的电脑都要强大。此外，Web 标准已经演进，并为 Web 客户端增加了许多功能，例如本地存储 (local storage) 和 Web Worker (web workers)。
 
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_116_0.png)
 
@@ -2949,15 +2641,7 @@ Play 定义了四个作用域：
 
 ## 什么是 cookie？
 
-（此处由于原文存在大量重复文本，翻译已省略重复部分并保持逻辑结构）
-
-
-
-
-
-## 关于作用域 (scopes)
-
-你也可以通过将数据序列化为字符串来存储更多信息，但记住每个 cookie 只能存储 4 KB。因此，只保存你需要的内容，通常是 ID。
+Cookie，也称为 HTTP cookie、web cookie。你也可以通过将数据序列化为字符串来存储更多信息，但记住每个 cookie 只能存储 4 KB。因此，只保存你需要的内容，通常是 ID。
 
 最后，要丢弃 cookie，使用 `discardCookies`：
 
@@ -2987,7 +2671,7 @@ String value = session.get("x");
 System.out.println(value);
 ```
 
-> 为什么我只能在 Session 中存储字符串？
+> **为什么我只能在 Session 中存储字符串？**
 
 你可能会认为，只能存储 String 对象的 Session 对象是一种退步；但我们认为它本该是这样。通过禁用复杂对象的存储，我们还消除了许多与对象状态同步或任何副作用相关的问题。通过在会话中存储不可变对象（如字符串），就不会发生任何副作用。
 
@@ -3019,15 +2703,11 @@ POST /phonumber/
 
 图 5.16 展示了相同的问题，但使用了 flash 作用域作为解决方案。
 
-注意 flash 作用域在 Java EE 6 中引入，并定义了与其 Play 等效的周期，但它存储在服务器端。在本文编写期间，Java EE 框架还没有 flash 作用域。
+> **注意**：flash 作用域在 Java EE 6 中引入，并定义了与其 Play 等效的周期，但它存储在服务器端。在本文编写期间，Java EE 框架还没有 flash 作用域。
 
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_120_0.png)
 
-图 5.15 不使用 flash 作用域提交无效表单
-
-## 关于作用域 (scopes)
-
-http://localhost:9000/
+**图 5.15** 不使用 flash 作用域提交无效表单
 
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_121_0.png)
 
@@ -3039,25 +2719,25 @@ http://localhost:9000/
 
 出于这个原因，cookies 使用密钥密钥进行签名，客户端无法修改 cookie 数据（如果他们修改了，数据将失效）。
 
-用于签名 cookie 的密钥实际上设置在你的 `conf/application.conf` 中（见下文列表）。
+用于签名 cookie 的密钥实际上设置在你的 `conf/application.conf` 中。
 
-> 列表 5.12 项目结构
+> **列表 5.12 项目结构**
+>
+> ```
+> warehouse
+>  app
+> ├── controllers
+> │   ├── Products.java
+> │   └── models
+> │       └── views
+>  conf
+> ├── routes
+> │   └── application.conf
+>  public
+>  db
+> ```
 
-```
-warehouse
- app
-├── controllers
-│   ├── Products.java
-│   └── models
-│       └── views
- conf
-├── routes
-│   └── application.conf
- public
- db
-```
-
-application.conf 包含了应用程序配置和重要的密钥
+`application.conf` 包含了应用程序配置和重要的密钥。
 
 如果你在编辑器中使用 `application.conf` 文件，你会发现一行以 `application.secret:` 开头的代码：
 
@@ -3065,28 +2745,27 @@ application.conf 包含了应用程序配置和重要的密钥
 application.secret="
 ```
 
-# 第 5 章 控制器——处理 HTTP 请求
-
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_122_0.png)
 
-图 5.17 带有集群的密钥
+**图 5.17** 带有集群的密钥
 
 这是我们签名 cookie 的密钥。保持它的安全非常重要，确保不要泄露。这还引出了另一个重要点：如果你运行多个应用程序实例，密钥需要在之间共享，否则一个实例无法验证另一个实例设置的数据。
 
-让我们想象以下场景：一个负载器和应用程序运行在两个节点上：server1 和 server2。如果 server1 和 server2 不共享密钥，客户端每次都需要通信；否则服务器无法解码 cookie。如果 server1 和 server2 拥有相同的密钥，它们就可以解码 cookie，负载器也不需要区分 server1 和 server2。
+让我们想象以下场景：一个负载器和应用程序运行在两个节点上：server1 和 server2。如果 server1 和 server2 不共享密钥，客户端每次都需要通信；否则服务器无法解码 cookie。如果 server1 和 server2 拥有相同的密钥，它们就可以解码 cookie，负载器也不需要区分 server1 和 server2。图 5.17 展示了加密/解密流。
 
-图 5.17 展示了加密/解密流。
+> **但我的会话超时怎么办？**
 
-> 但我的会话超时怎么办？
 我们同意会话超时是作为服务器端存储的技术解决方案引入的，而不是有用的功能。事实上，如果没有这个功能，会话会在服务器上增长，导致内存不足。但开发者习惯了会话超时，他们将其视为有用的功能。
 
-## 总结
-
+> **总结**
+>
 > 在 Play 中，会话没有技术超时。它在用户关闭浏览器时失效。如果你需要特定应用程序的功能超时，只需在用户会话中存储时间戳并根据应用程序需求（最大会话时长、最大空闲时间等）进行检查。
 
 ## 5.6 总结
 
 我们在本章从解释什么是控制器开始，然后研究了 Play 控制器的细节，特别是控制器的动作方法。我们学习了如何将客户端的请求路由到我们的动作代码。
+
+
 
 让我们从本章总结一些关键实践：
 
@@ -3097,10 +2776,6 @@ application.secret="
 我们涵盖了如何使用拦截器以及它们为什么有用。我们实现了一个简单的拦截器，它可以捕获所有错误并发送电子邮件。
 
 在本章中，我们学习了许多关于控制器内部机制的知识，在下一章中，我们将通过实现一些漂亮的视图来为我们的仓库应用程序增加视觉吸引力。
-
-
-
-
 
 # 处理用户输入
 
@@ -3128,9 +2803,9 @@ application.secret="
 
 图 6.1 我们的“创建新产品”表单
 
-## 6.1 显示新产品表单
+## 6.1.1 显示新产品表单
 
-为了显示表单，我们创建一个 Form 实例来表示它。在这种情况下，我们希望表单表示一个基于 `Product` 类的表单（Form<Product>）。我们现有的 `newProduct()` 操作方法正是如此：
+为了显示表单，我们创建一个 `Form` 实例来表示它。在这种情况下，我们希望表单表示一个基于 `Product` 类的表单（`Form<Product>`）。我们现有的 `newProduct()` 操作方法正是如此：
 
 ```java
 ...
@@ -3153,6 +2828,7 @@ public static Result newProduct() {
 # 第 6 章 处理用户输入
 
 入口点
+
 /product/new
 
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_126_0.png)
@@ -3173,7 +2849,7 @@ GET /products/new controllers.Product.newProduct()
 
 在第 3 章中，我们创建了 `product.scala.html` 模板来渲染我们的 HTML 模板。`newProduct()` 操作方法使用它渲染一个空白的产品表单。
 
-“新产品”表单模板允许我们收集创建新产品所需的信息。它使用 HTML 标签允许 HTML 表单由 Play Form 对象处理。
+“新产品”表单模板允许我们收集创建新产品所需的信息。它使用 HTML 标签允许 HTML 表单由 Play `Form` 对象处理。
 
 重要的是要意识到该对象是一个容器对象。它包含了有关我们对象模型的信息，并且可能包含验证错误信息。在第 6.4 节中，我们将广泛讨论验证。
 
@@ -3231,7 +2907,7 @@ GET /products/new controllers.Product.newProduct()
 
 # 为表单填充初始值
 
-由于我们在视图中使用了 Form 对象，我们可以决定为表单填充一些默认值。如果我们想编辑产品，这就是我们需要做的。当我们知道要编辑对象的唯一标识符时，可以从数据库中获取它，以便在 HTML 表单中使用这些值。我们为实现此目的而编写的操作方法所示：
+由于我们在视图中使用了 `Form` 对象，我们可以决定为表单填充一些默认值。如果我们想编辑产品，这就是我们需要做的。当我们知道要编辑对象的唯一标识符时，可以从数据库中获取它，以便在 HTML 表单中使用这些值。我们为实现此目的而编写的操作方法所示：
 
 ```java
 public class Products extends Controller {
@@ -3249,7 +2925,7 @@ public class Products extends Controller {
 }
 ```
 
-我们还在路由文件中添加了以下路由。该路由表示每次访问 /products/xxx 页面都会为产品 xxx填充编辑页面，其中 xxx 是产品的 EAN 号。
+我们还在路由文件中添加了以下路由。该路由表示每次访问 `/products/xxx` 页面都会为产品 xxx 填充编辑页面，其中 xxx 是产品的 EAN 号。
 
 ```
 GET /products/xxx controllers.Product.edit(ean:Long)
@@ -3283,7 +2959,7 @@ GET /products/xxx controllers.Product.edit(ean:Long)
 
 # 6.1.3 处理输入
 
-表单提交后，处理表单提交的操作方法会将发送到服务器的数据转换为 Product 实例并保存。最后，它在 flash 作用域中设置成功消息并重定向到显示所有产品的页面。以下列出了处理表单提交的操作方法 `save()`。
+表单提交后，处理表单提交的操作方法会将发送到服务器的数据转换为 `Product` 实例并保存。最后，它在 flash 作用域中设置成功消息并重定向到显示所有产品的页面。以下列出了处理表单提交的操作方法 `save()`。
 
 # 代码列表 6.4 save() 操作方法
 
@@ -3316,14 +2992,6 @@ public static Result save() {
 
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_129_3.png)
 
-
-
-
-
-## 第 6 章 处理用户输入
-
-我们已经看到了表单提交是如何处理的。一旦表单显示，用户就会输入数据并提交表单。浏览器将向我们的应用程序发送一个带有表单数据的 POST 请求。路由文件（routes）决定了处理过程将委托给 `save()` 操作。
-
 ## 6.2 数据绑定
 
 Play 使用一种名为“数据绑定”（data binding）的过程将提交的信息转换为 Java 对象。数据绑定是将请求中的元素转换为对象的过程。在 Play 中有三种绑定类型：
@@ -3334,7 +3002,7 @@ Play 使用一种名为“数据绑定”（data binding）的过程将提交的
 
 数据绑定原理非常简单。HTTP 参数被映射到 Java 对象对应的属性上。映射是使用参数名称完成的。每当参数名称与对象的属性名称匹配时，该对象的属性就会被设置为参数的值。图 6.5 阐释了这一点。
 
-在 Play 中，表单绑定主要在 Form 对象的帮助下通过 `bindRequest()` 方法完成。绑定处理被委托给 Spring Data，这是一个可以获取请求体并将其转换为 Java 对象属性的库。
+在 Play 中，表单绑定主要在 `Form` 对象的帮助下通过 `bindRequest()` 方法完成。绑定处理被委托给 Spring Data，这是一个可以获取请求体并将其转换为 Java 对象属性的库。
 
 URL 查询参数绑定包括获取 URL 参数（例如 `?x=y`）并将它们映射到 Java 对象上。该模式源自路由文件。
 
@@ -3358,21 +3026,27 @@ Play 将字符串 "12"（查询参数始终是字符串）转换为该类型。U
 
 ### 数据绑定
 
+```
 GET /products/:id Products.edit(id: Long)
+```
+
 并且你调用：
 
+```
 http://localhost:9000/products/12
-Play 将字符串 "12"（查询路径）转换为 Long 类型 12。
+```
+
+Play 将字符串 "12"（查询路径）转换为 `Long` 类型 12。
 
 数据绑定是反向过程。我们有一个对象，并想将其转换为有效的 URL 或表单表示。这在反向路由（reverse routing）的情况下尤为有用。关于反向路由的更多信息，请参考第 5.3.5 节。
 
-注意的是，在 Play 中，每种类型的绑定都可以自定义和扩展。让我们先退一步，看看我们的产品是如何映射的。
+值得注意的是，在 Play 中，每种类型的绑定都可以自定义和扩展。让我们先退一步，看看我们的产品是如何映射的。
 
-## 6.2 绑定简单值
+## 6.2.1 绑定简单值
 
-Product 定义为以下类：
+`Product` 定义为以下类：
 
-```
+```java
 public class Product {
     public String bean;
     public String name;
@@ -3400,15 +3074,15 @@ http://localhost:9000/product/save?bean=111111111111111&name=product&description
 Form<models.Product> productForm = form(models.Product.class).bindFromRequest();
 ```
 
-这创建了一个新的 Product 实例，然后对于匹配属性名称的每个 HTTP 请求，我们都在该属性上设置值。对于这个 GET 请求，创建了一个新的 Product，`bean` 参数绑定到 `bean` 属性，`name` 参数绑定到 `name` 属性，以此此类推。
+这创建了一个新的 `Product` 实例，然后对于匹配属性名称的每个 HTTP 请求，我们都在该属性上设置值。对于这个 GET 请求，创建了一个新的 `Product`，`bean` 参数绑定到 `bean` 属性，`name` 参数绑定到 `name` 属性，以此此类推。
 
-我们的产品表单被请求中的 HTTP 参数值填充。然后我们可以使用以下代码访问新创建的 Product 实例：
+我们的产品表单被请求中的 HTTP 参数值填充。然后我们可以使用以下代码访问新创建的 `Product` 实例：
 
 ```
 models.Product product = productForm.get();
 ```
 
-product 对象包含以下数据：
+`product` 对象包含以下数据：
 
 ```
 bean: 111111111111111,
@@ -3418,30 +3092,32 @@ description=a20 description
 
 如你所见，它与我们在 URL 中提供的参数相匹配。这是一个简单且可预测的机制。现在在 HTTP 参数和对象之间进行往返映射变得而易举。
 
-它适用于 String、Integer、Long 等简单类型。Play 还提供了对更复杂的类型（如 Date）以及必须映射到数组或 List 对象的多个值的支持。
+它适用于 `String`、`Integer`、`Long` 等简单类型。Play 还提供了对更复杂的类型（如 `Date`）以及必须映射到数组或 `List` 对象的多个值的支持。
 
 对于日期，你可以为模型添加注解：`@play.data.format.Formats.DateTime(pattern = "yyyy-MM-dd") public Date date;`
 
-如果我们使用带有年、月、日格式的 HTTP 参数，Play 能够通过表单数据绑定器将字符串转换为 Date 对象。例如：
+如果我们使用带有年、月、日格式的 HTTP 参数，Play 能够通过表单数据绑定器将字符串转换为 `Date` 对象。例如：
 
 ```
 http://localhost:9000/project/save?date=2021-10-02
 ```
 
-在绑定到 Form 对象时会产生一个 Date 对象。
+在绑定到 `Form` 对象时会产生一个 `Date` 对象。
 
 Play 提供了一些内置格式化器（Formatters），位于 `play.data.Formats`。接下来，让我们看看多值绑定如何工作。
 
-## 6.2 绑定多个值
+## 6.2.2 绑定多个值
 
-这是一个常见的情况：用户从值列表中选择多个值，并且我们需要存储它们。为了说明这种情况，让我们定义一个新的场景。我们想要为产品打上标签。每个产品可以有多个标签，每个标签可以应用于多个产品。6.6 阐释了这种关系。
+这是一个常见的情况：用户从值列表中选择多个值，并且我们需要存储它们。为了说明这种情况，让我们定义一个新的场景。我们想要为产品打上标签。每个产品可以有多个标签，每个标签可以应用于多个产品。图 6.6 阐释了这种关系。
 
 | Product | 1..n | 1..n |
 |---|---|---|
 
 图 6.6 产品-标签 关系
 
-我们需要定义新模型。让我们创建一个 Tag 类。我们在 app/models 目录下创建一个。
+
+
+我们需要定义新模型。让我们创建一个 `Tag` 类。我们在 `app/models` 目录下创建一个。
 
 ### 6.5 项目结构
 
@@ -3452,7 +3128,7 @@ app
     - models
 ```
 
-我们的新 Tag 类
+我们的新 `Tag` 类
 
 这是一个相对简单的类；它持有标签名称。后续列表显示了我们的新类。
 
@@ -3485,13 +3161,13 @@ public class Tag {
 }
 ```
 
-我们需要修改 Product 类以关联 Tag 类。我们使用 List，以便每个产品可以持有多个标签。这通过向我们的 Product 类（/app/models/Product.java）添加以下行轻松实现。
+我们需要修改 `Product` 类以关联 `Tag` 类。我们使用 `List`，以便每个产品可以持有多个标签。这通过向我们的 `Product` 类（`/app/models/Product.java`）添加以下行轻松实现。
 
-```
+```java
 public List<Tag> tags = new LinkedList<Tag>();
 ```
 
-我们现在需要创建标签。为了这一点，我们将像创建某些测试 Product 一样伪造 Tag 对象。我们在第 7 章将向你展示如何使用数据库作为后端。现在，让我们坚持静态标签列表。在 Tag 类中，添加后续列表中的行。
+我们现在需要创建标签。为了这一点，我们将像创建某些测试 `Product` 一样伪造 `Tag` 对象。我们在第 7 章将向你展示如何使用数据库作为后端。现在，让我们坚持静态标签列表。在 `Tag` 类中，添加后续列表中的行。
 
 # Listing 6.7 在 Tag.java 中添加模拟数据
 
@@ -3506,10 +3182,6 @@ public class Tag {
 ```
 
 > lightweight 标签被添加到名称匹配 paperclips 1 的产品中
-
-
-
-
 
 # 第 6 章 处理用户输入
 
@@ -3527,7 +3199,7 @@ public static Tag findById(Long id) {
 }
 ```
 
-我们已经准备好了可供使用的标签。接下来，我们需要修改视图以便对产品进行打标记。为了保持简单，我们将使用一组预定义的标签集，而不是动态生成复选框列表。让我们在我们的 `products/details.schema.html` 中添加以下代码段。
+我们已经准备好了可供使用的标签。接下来，我们需要修改视图以便对产品进行打标记。为了保持简单，我们将使用一组预定义的标签集，而不是动态生成复选框列表。让我们在我们的 `products/details.scala.html` 中添加以下代码段。
 
 ```html
 <div class="control-group">
@@ -3536,7 +3208,7 @@ public static Tag findById(Long id) {
     <input name="tags[1].id" value="2" type="checkbox" > metal
     <input name="tags[2].id" value="3" type="checkbox" > plastic
   </div>
-</</div>
+</div>
 ```
 
 我们添加了一些类型为复选框的 HTML 元素。在绑定过程中，这些输入元素的重要部分是 `id` 属性。`[]` 符号告诉 Play 将复选框绑定到产品标签集合（在本例中为 `List<Tag>`）。一旦提交表单，Play 将自动创建一个新的 `List`，为每个被选中的框创建一个新的 `Tag` 对象，并带有 `value` 属性中指定的 ID。例如，如果我们选择了“lightweight”和“plastic”，Play 在绑定过程中期间会创建一个包含两个 `Tag` 对象的新 `List`。第一个 `Tag` 对象的 ID 将设置为 2，第二个设置为 3。如图 6.7 所示。
@@ -3544,7 +3216,7 @@ public static Tag findById(Long id) {
 现在我们已经准备好了带有复选框的表单，让我们看看产品表单的视觉观 (6.8)。
 
 | HTML 表单 | Play 绑定 | 列表 |
-|---|---|---||
+|---|---|---|
 | ☑ lightweight (value=1) | 发送值（在控制器代码中使用 `bindFromRequest()`） | 创建 tag.id=1 |
 | ☑ plastic (value=2) | | tag.id=2 |
 | ○ metal (value=3) | | |
@@ -3611,12 +3283,7 @@ public class Products extends Controller {
 </div>
 ```
 
-```
-
-
-
-
-# 数据绑定
+## 数据绑定
 
 ```java
 public String javascriptUnbind() {
@@ -3656,7 +3323,7 @@ public static Result details(Product product) {
 
 > 新的 edit 方法直接绑定到 product 对象
 
-现在我们更改了方法签名，也需要更新调用者。目前，我们只有一个调用者。在产品列表模板 `products/list/scala.html` 中，更改以下内容
+现在我们更改了方法签名，也需要更新调用者。目前，我们只有一个调用者。在产品列表模板 `products/list.scala.html` 中，更改以下内容
 
 ```html
 <a href="@routes.Products.details(product.ean)">
@@ -3678,11 +3345,11 @@ http://localhost:9000/products?ean=1
 
 # 第 6 章 处理用户输入
 
-当 Play 遇到此 URL 时，它应该根据提供的 EAN 在数据库中查找 Product。为了实现这一点，我们必须实现 `play.mvc.QueryStringBindable` 接口，类似于我们实现 `Path-Bindable` 的方式。由于我们需要查找 `Product` 对象，我们将在 `Product` 模型类上实现该接口。
+当 Play 遇到此 URL 时，它应该根据提供的 EAN 在数据库中查找 Product。为了实现这一点，我们必须实现 `play.mvc.QueryStringBindable` 接口，类似于我们实现 `PathBindable` 的方式。由于我们需要查找 `Product` 对象，我们将在 `Product` 模型类上实现该接口。
 
 修改 `Product` 模型类。
 
-#  6.11 项目目录结构
+### 6.11 项目目录结构
 
 ```
 warehouse
@@ -3699,9 +3366,9 @@ test
 
 这次我们需要更改它以实现 `play.mvc.QueryStringBindable` 接口。像 `PathBindable` 一样，该接口提供了我们需要实现的三个方法：
 
-- *Option<T> bind(String key, Map<String,String[]>> data)*
-- *String unbind(String key)*
-- *String javascriptUnbind()*
+- `Option<T> bind(String key, Map<String,String[]>> data)`
+- `String unbind(String key)`
+- `String javascriptUnbind()`
 
 `bind` 允许访问查询参数（包括值和关联键），并且必须返回类型为 `T` 的 `Option` 对象。在我们的案例，`T` 是 `Product`。`Option` 类允许我们选择返回某些内容或返回空，这是比返回 `null` 更好的替代方案。`bind` 方法的 `data` 参数允许我们访问查询参数。它由一个 `Map` 表示，包含查询参数名称及其对应的值。
 
@@ -3713,6 +3380,7 @@ test
 ...
 import play.mvc.PathBindable;
 import play.mvc.QueryStringBindable;
+
 public class Product implements play.mvc.QueryStringBindable {
     ...
 ```
@@ -3786,35 +3454,53 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-
-public class Global extends GlobalSettings {
-    public void onStart(Application app) {
-        Formatters.register(Date.class, 
-            new SimpleFormatter<Date>() {
-                private final static String PATTERN = "dd-MM-yyyy";
-
-                public Date parse(String text, Locale locale) throws java.text.ParseException {
-                    if (text == null || text.trim().isEmpty()) {
-                        return null;
-                    }
-                    SimpleDateFormat sdf = new SimpleDateFormat(PATTERN, locale);
-                    sdf.setLenient(false);
-                    return sdf.parse(text);
-                }
-
-                public String format(Date date, Locale locale) {
-                    if (date == null) {
-                        return "";
-                    }
-                    return new SimpleDateFormat(PATTERN, locale).format(date);
-                }
-            });
-    }
-}
 ```
 
 
 
+public class Global extends GlobalSettings {
+
+    public void onStart(Application app) {
+
+        Formatters.register(Date.class, 
+
+            new SimpleFormatter<Date>() {
+
+                private final static String PATTERN = "dd-MM-yyyy";
+
+                public Date parse(String text, Locale locale) throws java.text.ParseException {
+
+                    if (text == null || text.trim().isEmpty()) {
+
+                        return null;
+
+                    }
+
+                    SimpleDateFormat sdf = new SimpleDateFormat(PATTERN, locale);
+
+                    sdf.setLenient(false);
+
+                    return sdf.parse(text);
+
+                }
+
+                public String format(Date date, Locale locale) {
+
+                    if (date == null) {
+
+                        return "";
+
+                    }
+
+                    return new SimpleDateFormat(PATTERN, locale).format(date);
+
+                }
+
+            });
+
+    }
+
+}
 
 # 数据绑定
 
@@ -3832,16 +3518,25 @@ public class Global extends GlobalSettings {
 让我们从注解开始：
 
 ``` Listing 6.15 The DateFormat annotation, /app/utils/DateFormat.java
+
 package utils;
 
 import play.data.Form;
+
 import play.lang.annotation.*;
+
 @Target(ElementType.FIELD)
+
 @Retention(RetentionPolicy.RUNTIME)
+
 @Form.field(name = "format.date", attributes = {"value"})
+
 public @interface DateFormat {
+
     String value();
+
 }
+
 ```
 
 该注解非常简单，是我们的日期格式的持有者。定义在 `DateFormat` 上的 `Display` 注解包含了 Play 的元数据。当由于日期格式不导致无法绑定时，Play 使用元数据在表单上显示错误消息。该注解告诉 Play 使用 `format.date` 消息键，并且该值可以作为消息的参数。
@@ -3850,34 +3545,60 @@ public @interface DateFormat {
 
 让我们定义我们的格式化器。我们必须指示我们想要一个注解格式化器。这是通过扩展 `Formatters.AnnotationFormatter` 完成的。
 
-#  6.16 AnnotationDateFormatter 类
+## 6.16 AnnotationDateFormatter 类
 
 ```
+
 Extends Formatters.AnnotationFormatter so we're
+
 annotation aware--the Formatter applies to
+
 DateFormat annotation and to Date object
+
 public static class AnnotationDateFormatter
+
     extends Formatters.AnnotationFormatter<DateFormat, Date> {
+
         public Date parse(DateFormat annotation, String text,
+
             Locale locale)
+
             throws java.text.ParseException {
+
             if(text == null || text.trim().isEmpty()) {
+
                 return null;
+
             }
+
             SimpleDateFormat sdf = new
+
                 SimpleDateFormat(annotation.value(), locale);
+
             sdf.setLenient(false);
+
             return sdf.parse(text);
+
         }
+
         public String print(DateFormat annotation, Date value,
+
             Locale locale) {
+
             if(value == null) {
+
                 return "";
+
             }
+
             return new SimpleDateFormat(annotation.value(), locale)
+
                 .format(value);
+
         }
+
 }
+
 ```
 
 由于我们扩展了 `Formatters.AnnotationFormatter` 抽象类，与之前的 `SimpleDateFormat` 类一样，我们必须实现两个方法：`parse()` 方法执行字符串表示以创建 `Date` 对象，而 `print()` 方法执行完全相反的操作。但这次，`Formatters.AnnotationFormatter` 是感知注解的，我们的 `print()` 和 `parse()` 方法多了一个额外参数：我们的 `dateFormat` 注解。我们使用它来访问配置的模式。
@@ -3886,25 +3607,36 @@ public static class AnnotationDateFormatter
 
 # 请求体解析器
 
-#  6.17 在 Global.java 文件中注册你的 AnnotationDateFormat
+## 6.17 在 Global.java 文件中注册你的 AnnotationDateFormat
 
 ```
+
 public class Global extends GlobalSettings {
+
     public void onStart(Application app) {
+
         Formatters.register(Date.class, new AnnotationDateFormat());
+
     }
+
 }
+
 ```
 
 现在，我们可以对模型类上的任何对象进行注解，使用以下语法表示我们想要从 `Form` 对象中绑定和取消绑定 `Date`：
 
-#  6.18 使用 DateDateFormat 的对象模型
+## 6.18 使用 DateDateFormat 的对象模型
 
 ```
+
 public class Person {
+
     @DateFormat("MM-dd-yyyy")
+
     public Date birthDate;
+
 }
+
 ```
 
 现在在我们的视图中，每个 Person 的出生日期将显示为 `MM-dd-yyyy`。在提交表单时，`birthDate` 属性将包含一个带有预期日期的 `Date` 对象。注意，在示例中，我们看到的已经是 Play 的一部分了。你不需要自己编写代码，可以使用 `play.data.format.Format` 类中定义的 `@DateTime` 注解。
@@ -3915,21 +3647,26 @@ public class Person {
 
 每个传入的 HTTP POST 和 PUT 请求都包含一个体。此体可以是单部分的多部分的（multipart），并可能包含 XML、JSON、二进制数据或任何其他类型。
 
-# 124 第 6 章 处理用户输入
+## 124 第 6 章 处理用户输入
 
 请求体解析器“解码”请求并将其转换为 Play 使用的对象。由于 JSON 体与 XML 体的解析方式不同，不同的内容类型有特定的解析器。
 
-# 6.3.1 body-parser API
+### 6.3.1 body-parser API
 
 所有请求体解析器都会生成 `play.mvc.Http.RequestBody` 值。该值可以通过 `request().body()` 获取。以下显示了如何使用该 API：
 
 > Listing 6.19 获取请求体
 
 ```
+
 public static Result index() {
+
     RequestBody body = request().body();
+
     return ok("Here is the body: " + body);
+
 }
+
 ```
 
 你可以使用 `@BodyParser.Of` 为特定操作指定 BodyParser。这意味着我们可以使用特定的请求体解析器来解析请求并访问值。Listing 6.20 显示了一个指定 JSON 体解析器的示例：
@@ -3937,23 +3674,33 @@ public static Result index() {
 > Listing 6.20 指定特定的请求体解析器
 
 ```
+
 @BodyParser.Of(BodyParser.Json.class)
+
 public static Result index() {
+
     RequestBody body = request().body();
+
     return ok("Expected to get json: " + body);
+
 }
+
 ```
-
-
 
 ## 列表 6.21 使用 as() 辅助方法
 
 ```
+
 @BodyParser.Of(BodyLengthParser.class)
+
 public static Result index() {
+
     BodyLength body = request().body().as(BodyLength.class);
+
     return ok("Request body length: " + body.getLength());
+
 }
+
 ```
 
 如果你没有指定解析器，Play 将使用 Content-Type 头部来决定使用哪种内置解析器：
@@ -3970,17 +3717,27 @@ public static Result index() {
 ## 列表 6.22 使用 body.asText() 方法
 
 ```
+
 public static Result save() {
+
     RequestBody body = request().body();
+
     String textBody = body.asText();
 
 if(textBody != null) {
+
     return ok("Got: " + text);
+
 } else {
+
     return badRequest(
+
         ("Expecting text/plain request body")
+
     );
+
 }
+
 ```
 
 基于文本的解析器（如文本、JSON、XML 或 URL 编码表单）使用最大内容长度，因为它们必须将所有内容加载到内存中。默认内容长度限制为 100 KB。
@@ -3990,9 +3747,13 @@ if(textBody != null) {
 你也可以通过 `@BodyParser.Of` 注解指定最大长度，例如接受 10 KB 的数据：
 
 ```
+
 @BodyParser.Of(value = BodyParser.Text.class, maxLength = 10 * 1024)
+
 public static Result index() {
+
     n...
+
 ```
 
 ## 第 6 章 处理用户输入
@@ -4012,85 +3773,94 @@ public static Result index() {
 Play 会验证它绑定到领域模型上的数据。Play 使用 JSR-303 和 Hibernate 验证器来执行这一步。定义约束就像在对象模型上添加注解一样简单。例如，确保用户在产品表单中提供 EAN 码，只需在 `Product` 对象上添加 `@Required` 注解：
 
 ```
+
 import play.data.validation.Constraints;
 
 public Product extends Model {
-    @Required
-    public String Bean;
-}
-```
 
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_148_0.png)
+    @Required
+
+    public String Bean;
+
+}
+
+```
 
 为了确保用户输入符合注解定义的约束，我们需要检查 `Form` 对象上的 `hasError` 方法。验证发生在绑定后立即，并在发现错误时将其注册到表单中。验证过程会将所有错误设置到构建的 Form 中。验证错误包含相关的 i18n 错误消息键、字段名称以及可能与错误消息一起显示的参数列表。列表 6.23 显示了第 6.1.3 节中的 `save` 方法，并添加了验证检查。
 
 列表 6.23 用于验证的 save 操作方法
 
 ```
+
 public static Result save(\ {
+
 Form<models.Product> productForm = 
+
 form(models.Product.class).bindFromRequest(request);
+
 models.Product newProduct = productForm.get();
+
 }
+
 ```
-
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_148_1.png)
-
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_148_2.png)
-
-³ JSR-303 是一种 Java规范，定义了基于注解的 JavaBean 验证元数据模型和 API；参见 http://jcp.org/en/js/j/detail=303。
-
-## 验证
 
 如果发生了验证
 
 ```
+
 if (productForm.hasErrors()) {
+
     return ok(edit.render(productForm));
+
 } else {
+
     newProduct.saveOrUpdate();
+
     return redirect(routes.Product.all());
+
 }
 ```
 
+
+
 - 重新渲染我们的表单
-- 保存或更新当前的 Product 对象
+- 保存或更新当前的 `Product` 对象
 - 重定向到我们的“查看所有产品”页面
 
 如你所见，验证表单是简单的。
 
-表 6.1 内置注解
+### 表 6.1 内置注解
 
 | 名称 | 描述 |
 | :--- | :--- |
-| @Min | 表示最小数字应为；例如，1。 |
-| @Max | 表示最大数字应为；例如，2。 |
-| @Decimal | 表示最小数字应为；例如，1.1。 |
-| @DecimalMax | 表示最大数字应为；例如，4.2。 |
-| @Size | 表示范围数字应为；例如，@Size(min=2, max=4)。 |
-| @Digits(integer, fraction) | 检查属性是否为数字，最多包含 (integer) 位整数和 (fraction) 位小数。 |
-| @Past | 检查注解的日期是否在过去。 |
-| @Future | 检查注解的日期是否在未来。 |
-| @Pattern(regex) | 检查注解的字符串是否匹配 (regex) 表达式模式。 |
-| @Valid | 对对象进行递归验证。 |
-| @Email | 检查指定的字符串是否为有效的电子邮件地址。 |
-| @Length(min, max) | 验证注解的字符串在 (min) 和 (max) 之间（包含）。 |
+| `@Min` | 表示最小数字应为；例如，1。 |
+| `@Max` | 表示最大数字应为；例如，2。 |
+| `@Decimal` | 表示最小数字应为；例如，1.1。 |
+| `@DecimalMax` | 表示最大数字应为；例如，4.2。 |
+| `@Size` | 表示范围数字应为；例如，`@Size(min=2, max=4)`。 |
+| `@Digits(integer, fraction)` | 检查属性是否为数字，最多包含 `(integer)` 位整数和 `(fraction)` 位小数。 |
+| `@Past` | 检查注解的日期是否在过去。 |
+| `@Future` | 检查注解的日期是否在未来。 |
+| `@Pattern(regex)` | 检查注解的字符串是否匹配 `(regex)` 表达式模式。 |
+| `@Valid` | 对对象进行递归验证。 |
+| `@Email` | 检查指定的字符串是否为有效的电子邮件地址。 |
+| `@Length(min, max)` | 验证注解的字符串在 `(min)` 和 `(max)` 之间（包含）。 |
 
-表 6.2 内置验证器
+### 表 6.2 内置验证器
 
 | 名称 | 描述 |
 | :--- | :--- |
-| @Null | 表示字段应为 null。 |
-| @NotNull | 表示字段不能为空。 |
-| @NotEmpty | 检查字符串是否不为空或空。 |
-| @AssertTrue | 断言此字段的布尔值为 true。 |
-| @AssertFalse | 断言此字段的布尔值为 false。 |
+| `@Null` | 表示字段应为 null。 |
+| `@NotNull` | 表示字段不能为空。 |
+| `@NotEmpty` | 检查字符串是否不为空或空。 |
+| `@AssertTrue` | 断言此字段的布尔值为 true。 |
+| `@AssertFalse` | 断言此字段的布尔值为 false。 |
 
-⁴ 具体来说是 Hibernate Validator。
+> ⁴ 具体来说是 Hibernate Validator。
 
 ## 第 6 章 处理用户输入
 
-表 6.2 内置注解（续）
+### 表 6.2 内置注解（续）
 
 | 名称 | 描述 |
 | :--- | :--- |
@@ -4100,53 +3870,41 @@ if (productForm.hasErrors()) {
 
 常见的用例是针对同一个对象模型有多个验证约束。由于我们在对象模型上定义约束，因此有多个引用同一个对象模型的表单是正常的。为了说明这个用例，我们可以想象一个简单的向导，用户在以下步骤输入新产品：
 
-+   1. 用户输入产品名称并提交表单。
+1. 用户输入产品名称并提交表单。
 2. 用户输入产品 EAN 名称和描述。
 
-我们可以在第 2 步验证产品名称，但在此时显示产品名称的错误信息会很奇怪。幸运的是，Play 允许你执行部分验证。对于每个注解值，我们需要指示在哪一步
-
-
-
-
-
-# 验证
-
-应用。我们可以通过注解中的 `groups` 属性来实现这一点。让我们将 `Product` 模型类修改为：
+我们可以在第 2 步验证产品名称，但在此时显示产品名称的错误信息会很奇怪。幸运的是，Play 允许你执行部分验证。对于每个注解值，我们需要指示在哪一步应用。我们可以通过注解中的 `groups` 属性来实现这一点。让我们将 `Product` 模型类修改为：
 
 ```java
 public class Product extends Model {
-    public interface Step1()
-    public interface Step2()
+
+    public interface Step1 {}
+
+    public interface Step2 {}
+
     @Required(groups = Step1.class)
     public String name;
+
     @Required(groups = Step2.class)
     public String ean;
 }
 ```
 
-定义第一步
-
-定义第二步
-
-此约束仅适用于第一步
-
-此约束仅适用于第二步
+> 定义第一步
+> 定义第二步
+> 此约束仅适用于第一步
+> 此约束仅适用于第二步
 
 我们现在需要指示我们正处于哪一步。请求 Step1：
 
 ```java
 // 我们将验证限制在 Step1 "组"中
 Form<Product> productForm = form(Product.class, Product.Step1.class).bindFromRequest();
+
 if(filledForm.hasErrors())
 ```
 
-在绑定时，
-告诉验证器
-我们只
-感兴趣
-适用于
-第一步的
-约束
+> 在绑定时，告诉验证器我们只感兴趣适用于第一步的约束
 
 我们可以对 Step2 执行相同的操作。如果模型对象被用于不同的表单并带有验证约束，这种方法就非常有用。
 
@@ -4154,53 +3912,63 @@ if(filledForm.hasErrors())
 
 Play 允许你添加自己的验证器。当你需要执行自定义验证时，这非常有用。你可以通过不同的方式实现自己的验证器：
 
-- 使用即时验证（ad hoc validation）——这种方法最快最简单
-- 使用 @ValidateWith 并定义你自己的 Validator 类
-- 定义一个新的 JSR 303 注解并定义一个新的 Validator 类
+- 使用即时验证——这种方法最快最简单
+- 使用 `@ValidateWith` 并定义你自己的 `Validator` 类
+- 定义一个新的 JSR 303 注解并定义一个新的 `Validator` 类
 
 我们将详细研究这些每方法，从即时验证开始。
 
-# 即时验证
+### 即时验证
 
 你可以通过在模型对象上添加 `validate` 方法来定义即时验证。Play 将调用每个模型对象的 `validate` 方法。例如，为了验证我们的 EAN 数字，我们可以在 `Product` 对象模型上添加一个 `validate` 方法。`validate` 方法必须返回一个 `String` 或 `null`。如果返回 `String`，则它必须包含验证错误信息或其 i18n 键。返回 `null` 表示没有错误。
 
 EAN 是一个 13 位数字。我们的 `validate` 方法必须检查 `String EAN` 变量是否恰好包含 13 位数字。列表 6.24 显示了如何实现。
 
-#  6.24 EAN 数字即时验证的 validate 方法
+#### 列表 6.24 EAN 数字即时验证的 validate 方法
 
 ```java
 public class Product extends Model {
+
   ...
+
   public String ean;
+
   public String validate(String name) {
+
     String pattern = "^[0-9]{13}$";
+
     Pattern regex = Pattern.compile(pattern);
+
     return name != null && regex.matcher(name).matches() ? null : "Invalid EAN number";
+
   }
+
 }
 ```
 
 > `validate` 方法在成功时返回 null，否则返回错误消息
-
 > 此正则表达式模式意味着“数字字符，重复13次”
-
 > 如果输入不匹配，则返回错误消息；否则返回 null
 
-如果你有多个属性需要验证，`validate` 方法可能并不 Practical实用，但它是添加简单验证约束最容易、最快的方法。让我们看看如何进行复杂的验证。
+如果你有多个属性需要验证，`validate` 方法可能并不 Practical 实用，但它是添加简单验证约束最容易、最快的方法。让我们看看如何进行复杂的验证。
 
-# @VALIDATEWITH
-使用 `@ValidateWith` 我们可以对验证进行细细粒度的控制。让我们再次以 EAN 数字作为示例。首先，我们需要在属性上标上 `@Constraints.ValidateWith.ValidateWith` 注解。`@ValidateWith` 方法接受一个类作为参数，我们将在该类中进行自定义验证。
+### @ValidateWith
 
-我们需要实现一个实现了 `Constraints.class` 的类。在我们的验证器中，我们需要实现 `isValid` 和 `getErrorMessageKey` 方法。`isValid()` 测试字段的有效性，`getErrorMessageKey()` 返回错误消息的 i18n 键。下面的列表显示了如何使用 `@ValidateWith` 验证 EAN 数字。
+使用 `@ValidateWith` 我们可以对验证进行细粒度的控制。让我们再次以 EAN 数字作为示例。首先，我们需要在属性上标上 `@Constraints.ValidateWith` 注解。`@ValidateWith` 方法接受一个类作为参数，我们将在该类中进行自定义验证。
 
-# 6.25 使用 @ValidateWith 注解验证 EAN 数字
+我们需要实现一个实现了 `Constraints.Validator` 的类。在我们的验证器中，我们需要实现 `isValid` 和 `getErrorMessageKey` 方法。`isValid()` 测试字段的有效性，`getErrorMessageKey()` 返回错误消息的 i18n 键。下面的列表显示了如何使用 `@ValidateWith` 验证 EAN 数字。
+
+#### 列表 6.25 使用 @ValidateWith 注解验证 EAN 数字
 
 ```java
 package models;
 
 import play.data.validation.Constraints;
-  ...
-public class Product implements PathBindable<Product, QueryStringBindable<Product>> {
+
+...
+
+public class Product implements PathBindable<Product>, QueryStringBindable<Product> {
+
   public static class EanValidator extends Constraints.Validator<String> {
 
     @Override
@@ -4213,68 +3981,61 @@ public class Product implements PathBindable<Product, QueryStringBindable<Produc
     public F.Tuple<String, Object[]> getErrorMessageKey() {
       return new F.Tuple<String, Object[]>("error.invalid.ean");
     }
+
   }
+
+  @Constraints.Required
+  @Constraints.ValidateWith(value = EanValidator.class, message = "must be 13 numbers")
+  public String ean;
+}
 ```
 
 > 我们的自定义验证器类必须继承 Play 的抽象验证器
-
 > 我们对 `isValid` 方法的实现如果字符串有 13 位数字则返回 true
-
-# 验证
-
-```java
-Object[][];
-)
-)
-
-@Constraints.Required
-@Constraints.ValidateWith(value=EanValidator.class, message="must be 13 numbers")
-public String ean;
-```
-
 > `getErrorMessageKey` 返回 i18n 消息键和可能的参数值
+> 表示我们想要验证我们的自定义验证器类
 
 使用 `@ValidateWith` 我们现在有了一个自定义的、细粒度的、可重用的验证机制。这种验证方法是 Play 特有的，但通过使用 JSR-303 标准，有一种更可移植的方式指定验证逻辑。让我们看看它是如何运作的。
 
-> 表示我们想要验证我们的自定义验证器类
-
-# JSR-303 自定义注解和验证器
+### JSR-303 自定义注解和验证器
 
 这种方法是使用 JSR-303 标准添加自定义验证的方法。它不特定于 Play，可以用于其他非 Play 应用程序。这种方法需要两个步骤：
 
 - 定义一个注解并对 Validator 类的引用
 - 定义被注解引用的 Validator 类
 
-让我们定义一个注解，以确保我们的 EAN 数字恰好是 13 位。我们需要声明一个注解并标上 `Constraint`。下面的列表显示了如何创建该注解。
+让我们定义一个注解，以确保我们的 EAN 数字恰好是 13 位。我们需要声明一个注解并标上 `@Constraint`。下面的列表显示了如何创建该注解。
 
-# 6.26 JSR-303 EAN 注解
+#### 列表 6.26 JSR-303 EAN 注解
 
 ```java
 @Constraint(validatedBy = EanValidator.class)
 @Target({ FIELD })
 @Retention(RetentionPolicy.RUNTIME)
 public @interface EAN {
+
   String message() default "error.invalid";
   Class<?>[] groups() default {};
   Class<? extends Payload>[] payload() default {};
+
 }
 ```
 
 > 设置注解时可以计算消息
-
 > 验证期间应用的组——参见 6.4.2
-
 > Payload 属性目前未被 Play 使用
 
-# 第6章 处理用户输入
+## 第 6 章 处理用户输入
 
 我们需要定义一个包含验证 EAN 数字业务逻辑验证器。我们需要实现 `ConstraintValidator` 接口并实现 `isValid` 方法。`isValid` 方法返回一个指示是否有效的布尔值。下面的列表显示了 EAN 实现。
 
-# 6.27 JSR-303 验证器
+#### 列表 6.27 JSR-303 验证器
 
 ```java
 public static class EANValidator extends Constraints.Validator<String> implements ConstraintValidator<EAN, String> {
+
     final public String message = "error.invalid.ean";
+
     public EANValidator() { }
 
     @Override
@@ -4287,10 +4048,9 @@ public static class EANValidator extends Constraints.Validator<String> implement
 
     @Override
     public F.Tuple<String, Object[]> getErrorMessageKey() {
-        return new F.Tuple<String, Object[]>(message,
-            new Object[]{})
-        );
+        return new F.Tuple<String, Object[]>(message, new Object[]{});
     }
+
 }
 ```
 
@@ -4298,9 +4058,12 @@ public static class EANValidator extends Constraints.Validator<String> implement
 
 ```java
 public class Product extends Model {
+
     ...
+
     @EAN
     public String ean;
+
 }
 ```
 
@@ -4310,13 +4073,9 @@ public class Product extends Model {
 
 很好——我们可以验证表单。但我们还需要向用户展示验证错误的原因。这轻而易举；错误消息存储在我们的 `Form` 对象中。通过将 `Form` 对象传递给视图，我们可以轻松地显示错误消息。例如，在控制器的 `save()` 操作中，我们检查表单是否有错误并传递给视图：
 
-
-
-
-# 验证
-
-```
+```java
 Form<Product> boundForm = productForm.bindFromRequest();
+
 if (boundForm.hasErrors()) {
     return ok(details.render(productForm));
 }
@@ -4333,7 +4092,7 @@ if (boundForm.hasErrors()) {
 </p>
 ```
 
-如果你想按字段访问错误，可以在字段的表字段值（field value）上使用 `errors()` 方法。例如，如果我们想访问产品名称字段潜在的验证错误：
+如果你想按字段访问错误，可以在字段的表字段值上使用 `errors()` 方法。例如，如果我们想访问产品名称字段潜在的验证错误：
 
 ```scala
 @productForm("name").errors()
@@ -4347,59 +4106,66 @@ if (boundForm.hasErrors()) {
 
 对于我们当前的表单，没有需要使用这些方法，因为表单辅助类已经包含了错误。但表单辅助类并没有魔法；它们渲染错误的方法正是使用了这种技术，正如接下来的列表所示，该列表显示了字段辅助类的模板。
 
-| 列表 6.28 | 字段辅助类模板的源代码 |
+### 列表 6.28 字段辅助类模板的源代码
 
 ```scala
 @(elements: views.html.helper.FieldElements)
 
 @import play.api.i18n._
+
 @import views.html.helper._
 
 ********************************************************************
+
 * 根据 twitter bootstrap 规则生成输入
+
 ********************************************************************
+
 <div class="clearfix" @elements.arg('class')
-  @if(elements.hasErrors('error'))
+  @if(elements.hasErrors('error))
   id="@elements.arg('_id').getOrElse(elements.id + " _field")">
     <label for="@elements.id">@elements.label(elements.lang)</label>
     <div class="input">
       @elements.input
       <span class="help-inline">
-        @elements.elements(elements.lang).mkString(",", ",")
+        @elements.errors(elements.lang).mkString(",", ",")
       </span>
     </div>
     <span class="help-block">
-```
-
-```scala
-@elements.infos(elements.lang).mkString("", "")
-</span>
-</div>
+      @elements.infos(elements.lang).mkString("", "")
+    </span>
+  </div>
 </div>
 ```
 
-我们现在知道如何验证并将任何验证错误报告给用户。
-我们现在能够提交任何用户输入，处理它们，并拒绝任何无效数据。
-让我们看看更复杂的输入情况：文件上传。
+我们现在知道如何验证并将任何验证错误报告给用户。我们现在能够提交任何用户输入，处理它们，并拒绝任何无效数据。让我们看看更复杂的输入情况：文件上传。
 
 ## 6.5 文件上传
 
 是时候回到我们当前的应用程序了。这里缺少一些东西，可以让我们的剪辑更具可识别度；我们需要在视觉上识别它们。让我们添加一张图片吧。为此，我们需要稍微修改 Product 对象模型：参见下面的列表。
 
-- 列表 6.29 在 Product 对象模型中添加图片
+### 列表 6.29 在 Product 对象模型中添加图片
 
 ```java
 public class Product {
+
     ...
+
     @Constraints.Required
     @Constraints.ValidateWith(BeanValidator.class)
     public String email;
+
     @Constraints.Required
     public String name;
+
     public String description;
+
     public byte[] picture;
+
 }
 ```
+
+
 
 我们现在需要给用户上传产品图片的机会；我们需要在表单中添加一个 HTML `input file` 元素。为此，我们需要编辑在 6.1.1 节中创建的现有 `product.scala` 模板，添加一个 HTML 文件输入，并使用 HTML `img` 元素显示它的图片。我们需要更改文件编码以发送多部分数据（multipart data）。
 表单现在看起来如下列表所示。
@@ -4408,29 +4174,44 @@ public class Product {
 
 ```scala
 @productForm: Form[Product]
+
 @import helper._
+
 @import helper.twitter_bootstrap._
 
 @main("Product form") {
+
     <h1>表单</h1>
+
     @helper.form(action = routes.Products.save(
         enctype = "multipart/form-data") {
+
             <legend>产品 (@productForm("name").valueOr("New"))</legend>
+
             @helper.inputText(productForm("email"))
+
             @helper.inputText(productForm("name"))
+
             @helper.textarea(productForm("description"))
+
             @helper.inputFile(productForm("picture"))
 ```
 
 ```scala
 @if(productForm("picture").valueOr("").isEmpty()) {
+
   <div class="control-group">
+
     <div class="controls">
+
       <img
       style="position:relative; left:50px;height:80px"
       src="/picture/@productForm("ean").value">
+
     </div>
+
   </div>
+
 }
 ```
 
@@ -4446,26 +4227,35 @@ public class Product {
 
 ```java
 public Result save(Http request) {
+
     Form<Product> boundForm = request.bindFromRequest();
+
     if (boundForm.hasErrors()) {
+
         return ok(details.render(productForm));
+
     }
+
     Product product = boundForm.get();
+
     HttpFile file = request.bodyMultipartData("picture");
+
     if (file != null) {
+
         product.picture = FileUtils.toBytes(file);
+
     }
+
     product.save();
+
     return redirect(routes.index());
+
 }
 ```
 
 我们现在知道如何验证并将任何验证错误报告给用户。
 我们现在能够提交任何用户输入，处理它们，并拒绝任何无效数据。
 让我们看看更复杂的输入情况：文件上传。
-
-
-
 
 ## 模型与持久化
 
@@ -4513,15 +4303,22 @@ Java 类（特别是 JavaBeans）经常被赋予 getter 和 setter 方法的主�
 
 ```java
 public class Person {
+
     private final String name;
 
     public Person(String name) {
+
         this.name = name;
+
     }
 
     public String getName() {
+
         return name;
+
     }
+
+}
 ```
 
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_162_0.png)
@@ -4531,6 +4328,7 @@ public class Person {
 ```java
 String name = new Person("John Doe").getName();
 ```
+
 在这个示例中，我们定义了一个字段，但对它的访问通过 `getName()` 方法委托。我们使用 getter 方法向 `Person` “询问”它的名字。
 
 下面的列表显示了使用 public 字段实现的相同类。
@@ -4539,18 +4337,24 @@ String name = new Person("John Doe").getName();
 
 ```java
 public class Person {
+
     public final String name;
 
     public Person(String name) {
-        this.name = name;
-    }
-}
 
-String name = new Person("John Doe").name;
+        this.name = name;
+
+    }
+
+}
 ```
 
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_162_3.png)
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_162_4.png)
+
+```java
+String name = new Person("John Doe").name;
+```
 
 在这个示例中，我们暴露了字段，现在客户端直接读取 `name` 字段。我们实现了与上一个相同的结果，但代码更少。
 
@@ -4577,10 +4381,6 @@ Play 使用一种称为字节码增强的技巧，在原始代码编译后添加
 > 以前像 Play 1.x 那样有很多“魔法”，但在 Play 2 中，这是从 Play 1 继承过来的唯一东西。如果你不想用，就不需要它；你可以创建自己的 getters 和 setters，Play 不会动你的类。
 
 访问 http://docs.oracle.com/jave/tutorial/javabeans/ 了解更多信息。
-
-
-
-
 
 # 第 7 章 模型与持久化
 
@@ -4624,15 +4424,23 @@ Play 使用一种称为字节码增强的技巧，在原始代码编译后添加
 
 ```java
 public class Product {
+
     public String ean;
+
     public String name;
+
     public String description;
+
     public byte[] picture;
+
     public List<Tag> tags;
 
     public String toString() {
+
         return name;
+
     }
+
 }
 ```
 
@@ -4640,9 +4448,13 @@ EAN 是国际产品代码。
 
 ```java
 public class Tag {
+
     public Long id;
+
     public String name;
+
     public List<Product> products;
+
 }
 ```
 
@@ -4650,42 +4462,55 @@ public class Tag {
 
 ```java
 public class Warehouse {
+
     public String name;
+
     public List<StockItem> stock = new ArrayList<>();
 
     public String toString() {
+
       return name;
+
     }
+
 }
 
 public class StockItem {
+
   public Warehouse warehouse;
+
   public Product product;
+
   public Long quantity;
 
   public String toString() {
+
     return String.format("%d %s", quantity, product);
+
   }
+
 }
 ```
 
+
+
 注意这些字段是关系。
 
-你的应用程序目录现在应该看起来所示。
+你的应用程序目录现在应该看起来如下所示。
 
 - warehouse
   - app
     - controllers
-      - models
-        - Product.java
-        - StockItem.java
-        - Tag.java
+    - models
+      - Product.java
+      - StockItem.java
+      - Tag.java
       - Warehouse.java
     - views
-      - conf
-      - public
-      - test
-      - db
+    - conf
+    - public
+    - test
+    - db
 
 恭喜你，你拥有了一个完整的数据模型！先不要太担心浏览器；我们将在第 8 章讨论视图模板。
 
@@ -4693,53 +4518,7 @@ public class StockItem {
 
 ## 7.2 持久化与对象关系映射 (ORM)
 
-拥有所有这些数据是有用的，但目前我们在处理请求期间构建的所有数据在处理完请求后就会丢失。我们需要持久化这些数据。我们将使用 Ebean 工具来保存我们的对象。
-
-## 7.2 持久化与对象关系映射 (ORM)
-
-拥有所有这些数据是有用的，但目前我们在处理请求期间构建的所有数据在处理完请求后就会丢失。我们需要持久化这些数据。我们将使用 Ebean 工具来保存我们的对象。
-
-## 7.2 持久化与对象关系映射 (ORM)
-
-拥有所有这些数据是有用的，但目前我们在处理请求期间构建的所有数据在处理完请求后就会丢失。我们需要持久化这些数据。我们将使用 Ebean 工具来保存我们的对象。
-
-## 7.2 持久化与对象关系映射 (ORM)
-
-拥有所有这些数据是有用的，但目前我们在处理请求期间构建的所有数据在处理完请求后就会丢失。我们需要持久化这些数据。我们将使用 Ebean 工具来保存我们的对象。
-
-## 7.2 持久化与对象关系映射 (ORM)
-
-拥有所有这些数据是有用的，但目前我们在处理请求期间构建的所有数据在处理完请求后就会丢失。我们需要持久化这些数据。我们将使用 Ebean 工具来保存我们的对象。
-
-## 7.2 持久化与对象关系映射 (ORM)
-
-拥有所有这些数据是有用的，但目前我们在处理请求期间构建的所有数据在处理完请求后就会丢失。我们需要持久化这些数据。我们将使用 Ebean 工具来保存我们的对象。
-
-## 7.2 持久化与对象关系映射 (ORM)
-
-拥有所有这些数据是有用的，但目前我们在处理请求期间构建的所有数据在处理完请求后就会丢失。我们需要持久化这些数据。我们将使用 Ebean 工具来保存我们的对象。
-
-## 7.2 持久化与对象关系映射 (ORM)
-
-拥有所有这些数据是有用的，但目前我们在处理请求期间构建的所有数据在处理完请求后就会丢失。我们需要持久化这些数据。我们将使用 Ebean 工具来保存我们的对象。
-
-## 7.2 持久化与对象关系映射 (ORM)
-
-拥有所有这些数据是有用的，但目前我们在处理请求期间构建的所有数据在处理完请求后就会丢失。我们需要持久化这些数据。我们将使用 Ebean 工具来保存我们的对象。
-
-## 7.2 持久化与对象关系映射 (ORM)
-
-拥有所有这些数据是有用的，但目前我们在处理请求期间构建的所有数据在处理完请求后就会丢失。我们需要持久化这些数据。我们将使用 Ebean 工具来保存我们的对象。
-
-## 7.2 持久化与对象关系映射 (ORM)
-
-拥有所有这些数据是有用的，但目前我们在处理请求期间构建的所有数据在处理完请求后就会丢失。我们需要持久化这些数据。我们将使用 Ebean 工具来保存我们的对象。
-
-## 7.2 持久化与对象关系映射 (ORM)
-
-拥有所有这些数据是有用的，但目前我们在处理请求期间构建的所有数据在处理完请求后就会丢失。我们需要持久化这些数据。我们将使用 Ebean 工具来保存我们的对象。
-
-（注：由于输入文本中存在大量重复的段落，根据“不要重复输出原文”原则，以下是针对核心内容的逻辑翻译整合）
+拥有所有这些数据是有用的，但目前我们在处理请求期间构建的所有数据在处理完请求后就会丢失。我们需要持久化这些数据。我们将使用 `Ebean` 工具来保存我们的对象。
 
 ### 7.2.1 关于关系数据库
 
@@ -4747,59 +4526,23 @@ public class StockItem {
 
 ### 7.2.3 介绍 Ebean
 
-Ebean 是一个 ORM 框架，它在管理实体方面采取了与 JPA 不同的方法。主要区别（以及它与 Play 非常契合的地方）在于它有一个无缝 API。不用太担心这意味着什么，但如果你用过 JPA，你会发现管理实体状态的时间更短了。
+`Ebean` 是一个 ORM 框架，它在管理实体方面采取了与 JPA 不同的方法。主要区别（以及它与 Play 非常契合的地方）在于它有一个无缝 API。不用太担心这意味着什么，但如果你用过 JPA，你会发现管理实体状态的时间更短了。
 
-Ebean 借用了 JPA 的一个方面：映射实体的注解。在使用 Ebean 时，映射实体的方式与 JPA 相同。让我们来看看它是如何运作的。
+`Ebean` 借用了 JPA 的一个方面：映射实体的注解。在使用 `Ebean` 时，映射实体的方式与 JPA 相同。让我们来看看它是如何运作的。
 
 ## 7.3 映射基础实体
 
-跳过章节：如果你已经熟悉如何使用 JPA 映射实体，可以跳到下一节。请查看代码示例以上手。
+> **跳过章节**：如果你已经熟悉如何使用 JPA 映射实体，可以跳到下一节。请查看代码示例以上手。
 
-在将类映射到数据库时，你需要指示 ORM 工具（在这里是 Ebean）将对象模型中的数据映射到数据库中。你通过将类和字段映射到表和列来实现。你还需要将一个类标记为实体，告诉工具它是你想作为数据模型部分的类。
+在将类映射到数据库时，你需要指示 ORM 工具（在这里是 `Ebean`）将对象模型中的数据映射到数据库中。你通过将类和字段映射到表和列来实现。你还需要将一个类标记为实体，告诉工具它是你想作为数据模型部分的类。
 
 存储在数据库中的任何内容都需要一种方式来标识它。这被称为主键。虽然我们可以使用实体上的某个保证唯一的字段（这被称为自然键），例如 `Product` 类上的 `ean` 字段，但通常认为更好的做法是专门为此目的设置字段（称为合成键）。因此，我们将为实体引入一个名为 `id` 的 `Long` 字段，并使用 `@Id` 进行注解。
 
-
-
-
-
-# 第7章 模型与持久化
-
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_168_0.png)
-
-图 7.3 关注 Product 类
-
-要像图 7.3 所示映射 Product 类，请按照列表 7.4 所示进行更改。
-
-# **列表 7.4 映射 Product 类**
-
-```java
-import javax.persistence.*;
-import play.db.ebean.Model;
-
-@Entity
-public class Product extends Model {
-    @Id
-    public Long id;
-    public Long bean;
-    public String name;
-    public String description;
-}
-```
-
-> 添加此注解以将此类标记为实体（entity）
-
-> 继承 Model 类以便方便
-
-> 引入 id 字段
-
-... 就这些了。我们稍后会尝试一下，但首先，让我们了解如何使用数据库和 Ebean 来实体。
-
 ### 7.3.1 配置 Ebean 和数据库
 
-我们将使用 H2，这是一种与 Play 自带的轻量级数据库管理系统（DBMS）。H2 的优点是它具有“嵌入式”模式，这意味着它会在 Play 运行时在 JVM 中按需加载。它还可以根据需要创建数据库，这非常适合在开发期间使用，此时你可能想要对数据库进行实验，并且不在意数据是否被保留。
+我们将使用 `H2`，这是一种与 Play 自带的轻量级数据库管理系统（DBMS）。`H2` 的优点是它具有“嵌入式”模式，这意味着它会在 Play 运行时在 JVM 中按需加载。它还可以根据需要创建数据库，这非常适合在开发期间使用，此时你可能想要对数据库进行实验，并且不在意数据是否被保留。
 
-Play 的配置包含了 H2 和 Ebean 的默认设置，但它们被注释掉了，因为并不是所有应用都需要持久化。打开应用程序目录下的 `conf/application.conf` 文件，找到并取消以下行的注释：
+Play 的配置包含了 `H2` 和 `Ebean` 的默认设置，但它们被注释掉了，因为并不是所有应用都需要持久化。打开应用程序目录下的 `conf/application.conf` 文件，找到并取消以下行的注释：
 
 ```
 db.default.driver=org.h2.Driver
@@ -4810,74 +4553,51 @@ ebean.default.models=.*
 ```
 
 > 告诉 Play 的数据库系统使用 H2
-
 > 为我们的模型包启用 Ebean
-
-## 映射基础实体
 
 注意我们使用的是 `db.default` 命名空间，但我们可以指定任何命名空间。Play 支持连接多个数据库。你只需要指定不同的命名空间（例如 `db.acceptance.driver`、`db.test.driver` 等）。
 
-在测试工作之前，让我们回顾一下我们正在做的内容。在章节开头，我们使用 Java 类定义了数据模型，这些类在代码中代表了现实世界的概念。这允许我们在 JVM 内存中存储仓库状态的表示。现在，我们想将数据存储在更持久的地方；我们希望将其持久化到数据库中。Java 使用对象和方法调用，而数据库在表中存储数据并通过 SQL 进行访问。为了弥补 Java 和 SQL 世界之间的鸿沟，我们正在使用一种称为 ORM（对象关系映射）的工具将类映射到数据库。我们选择的工具是 Ebean。
+在测试工作之前，让我们回顾一下我们正在做的内容。在章节开头，我们使用 Java 类定义了数据模型，这些类在代码中代表了现实世界的概念。这允许我们在 JVM 内存中存储仓库状态的表示。现在，我们想将数据存储在更持久的地方；我们希望将其持久化到数据库中。Java 使用对象和方法调用，而数据库在表中存储数据并通过 SQL 进行访问。为了弥补 Java 和 SQL 世界之间的鸿沟，我们正在使用一种称为 ORM（对象关系映射）的工具将类映射到数据库。我们选择的工具是 `Ebean`。
 
-开发应用程序时数据库服务器（也称为 DBMS）是 H2。这是因为它提供了灵活性，这也是它与 Play 绑的原因。当你将应用迁移到生产环境时，你可能会将其更换为数据库，例如 MySQL、PostgreSQL 或 Oracle，这些是最著名的选项。Ebean 支持大多数主流 DBMS，但如果你担心兼容性，请务必检查 Ebean 文档。
+开发应用程序时数据库服务器（也称为 DBMS）是 `H2`。这是因为它提供了灵活性，这也是它与 Play 绑定的原因。当你将应用迁移到生产环境时，你可能会将其更换为数据库，例如 MySQL、PostgreSQL 或 Oracle，这些是最著名的选项。`Ebean` 支持大多数主流 DBMS，但如果你担心兼容性，请务必检查 `Ebean` 文档。
 
-7.4 展示了我们描述的架构。
+图 7.4 展示了我们描述的架构。
 
-好了，现在（重新）加载 http://localhost:9000/ 页面，看看是否成功了。
+好了，现在（重新）加载 `http://localhost:9000/` 页面，看看是否成功了。
 
-哇。发生了什么？嗯，虽然看起来可能不像，但这是 Play 在提供帮助。当我们定义数据库连接时，我们让 Play 连接到 H2 数据库，它将在连接时自动创建数据库模式（schema），即它的结构——表和列定义。Play 为此生成了一个 SQL 脚本，现在默认提议为你运行它。脚本位于 `conf/evolutions/default/1.sql` 文件中。这被称为数据库演进（database evolution），我们稍后会看到它允许你创建数据库模式的增量版本。默认文件夹与我们之前指定的数据库配置相匹配。现在，点击“Apply this script now”（立即应用此脚本）！你会看到我们在图 1.3 中看到的默认欢迎页面。
+哇。发生了什么？嗯，虽然看起来可能不像，但这是 Play 在提供帮助。当我们定义数据库连接时，我们让 Play 连接到 `H2` 数据库，它将在连接时自动创建数据库模式（schema），即它的结构——表和列定义。Play 为此生成了一个 SQL 脚本，现在默认提议为你运行它。脚本位于 `conf/evolutions/default/1.sql` 文件中。这被称为数据库演进（database evolution），我们稍后会看到它允许你创建数据库模式的增量版本。默认文件夹与我们之前指定的数据库配置相匹配。现在，点击“Apply this script now”（立即应用此脚本）！你会看到我们在图 1.3 中看到的默认欢迎页面。
 
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_169_0.png)
+要像图 7.3 所示映射 `Product` 类，请按照列表 7.4 所示进行更改。
 
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_169_0.png)
+### 列表 7.4 映射 Product 类
+
+```java
+import javax.persistence.*;
+import play.db.ebean.Model;
+
+@Entity
+public class Product extends Model {
+    @Id
+    public Long id;
+    public Long ean;
+    public String name;
+    public String description;
+}
+```
 
 > 添加此注解以将此类标记为实体（entity）
-
 > 继承 Model 类以便方便
-
 > 引入 id 字段
 
-
-
-
-
-# 映射关系
-
-151
-
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_173_0.png)
-
-- ## PLATIONS
-* PRODUCTIONS
-* PRODUCT
-* ID
-* EAN
-* NAME
-* DESCRIPTION
-* INFORMATION_SCHEMA
-* Users
-* Id 1.3.172 (2013-05-25)
-
-这是我们在保存实体时添加到表中的行数据。
-
-图 7.7 H2 控制台显示了 product 表的内容。
-
-如果一切看起来都运行正常，我们就可以处理下一个实体，它将与我们创建的 Product 类有关系。
+... 就这些了。我们稍后会尝试一下，但首先，让我们了解如何使用数据库和 `Ebean` 来实体。
 
 ## 7.4 映射关系
 
 让我们开始处理 `StockItem` 类。图 7.8 显示了它在模型中作用的提示。
-在我们的模型中，`StockItem` 类有两个关系：一个指向 Product，另一个指向 Warehouse。我们先忽略仓库，重点关注对以下内容的引用：
 
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_173_1.png)
-
-图 7.8 重点关注 StockItem 类。
-
-# 第 7 章 模型与持久化
+在我们的模型中，`StockItem` 类有两个关系：一个指向 `Product`，另一个指向 `Warehouse`。我们先忽略仓库，重点关注对以下内容的引用：
 
 每个库存项都恰好有一个指向产品的引用。
-
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_174_0.png)
 
 一个产品有许多库存项引用它。
 
@@ -4885,45 +4605,19 @@ ebean.default.models=.*
 
 在我们的仓库产品目录中，我们将存储许多不同类型的产品：红色纸夹、蓝色纸夹等。
 
-在我们的物理仓库中，我们将存储这些产品的批次，我们称之为为库存项（stock items）。例如，假设产品目录中有一个“一盒 1000 个蓝色纸夹”，我们每种类型有三托盘，每托盘装有 500 盒。其中一个目前在 A 仓库，另外两个在 B 仓库。我们总共有三个库存项。
+在我们的物理仓库中，我们将存储这些产品的批次，我们称之为库存项（stock items）。例如，假设产品目录中有一个“一盒 1000 个蓝色纸夹”，我们每种类型有三托盘，每托盘装有 500 盒。其中一个目前在 A 仓库，另外两个在 B 仓库。我们总共有三个库存项。
 
 每个单独的库存项将代表产品目录中恰好一个产品的库存。这意味着库存项与其产品之间是“多对一”关系。反之也是如此；每个产品都可能被许多库存项引用，因此产品与库存项之间是“一对多”关系。该概念如图 7.9 所示。
 
-在关系型数据库中，一对多关系通常被建模为“多”的一侧的一一个列（在本例中，即库存项），该列指向“一”的一侧中记录的 ID（例如产品）。每当从数据库中检索一个库存项时，如果需要，可以使用该 ID 从产品表中检索出正确的行。用于指向任何其他表的主键的 ID 被称为外键。这如图 7.10 所示。
+在关系型数据库中，一对多关系通常被建模为“多”的一侧的一个列（在本例中，即库存项），该列指向“一”的一侧中记录的 ID（例如产品）。每当从数据库中检索一个库存项时，如果需要，可以使用该 ID 从产品表中检索出正确的行。用于指向任何其他表的主键的 ID 被称为外键。这如图 7.10 所示。
 
-### 7.4.1 映射一对多关系
+### 7.4.1 映射多对一关系
 
-让我们映射 `StockItem` 类。在 `StockItem` 类上添加 `@Entity` 注解，扩展自 `Model`，并给它一个 `id` 字段。在这个示例中，对于 `Product` 类，我们没有对该类的字段添加任何注解。这是因为它的所有字段都可以存储在数据库中；不涉及任何关系。在 `StockItem` 类中，我们只有一个字段：`quantity` 字段，它是一个 `Long` 类型，可以完美映射到 SQL `number` 类型，Ebean 可以自动进行映射。
+让我们映射 `StockItem` 类。在 `StockItem` 类上添加 `@Entity` 注解，扩展自 `Model`，并给它一个 `id` 字段。在这个示例中，对于 `Product` 类，我们没有对该类的字段添加任何注解。这是因为它的所有字段都可以存储在数据库中；不涉及任何关系。在 `StockItem` 类中，我们只有一个字段：`quantity` 字段，它是一个 `Long` 类型，可以完美映射到 SQL `number` 类型，`Ebean` 可以自动进行映射。
 
-其他字段是我们的 `Product` 和 `Warehouse` 类。我们需要告诉 Ebean 它们是对其他实体的引用，以及它们具有什么类型的关系。我们现在关注 `StockItem`。正如我们之前看到的，`StockItem` 与 Product 是多对一
+其他字段是我们的 `Product` 和 `Warehouse` 类。我们需要告诉 `Ebean` 它们是对其他实体的引用，以及它们具有什么类型的关系。我们现在关注 `StockItem`。正如我们之前看到的，`StockItem` 与 `Product` 是多对一关系。因此，我们用 `@ManyToOne` 标记此字段，如下列表所示。
 
-# 映射关系
-
-| id | product_id | quantity |
-|---|---|---|
-| 1 | 1 | 500 |
-| 2 | 1 | 500 |
-| 3 | 1 | 500 |
-
-`product_id` 列使用产品的 ID 将库存项链接到产品。
-
-| id | ean | name | description |
-|---|---|---|---|
-| 1 | 123456789231 | 1000 个蓝色纸夹 | 这些蓝色纸夹... |
-| 2 | 123456789232 | 1000 个红色纸夹 | 这些红色纸夹... |
-| 3 | 123456789233 | 1000 个绿色纸夹 | 这些绿色纸夹... |
-| 4 | 123456789234 | 1000 个黄色纸夹 | 这些黄色纸夹... |
-
-**图 7.10 一对多的数据库关系**
-
-与 Product 的关系。因此，我们用 `@ManyToOne` 标记此字段，如下列表所示。
-
-# Listing 7.6 StockItem-Product 多对一关系
-
-```java
-在 `StockItem` 类上添加 `@Entity` 注解，扩展自 `Model`，并给它一个 `id` 字段。在这个示例中，对于 `Product` 类，我们没有对该类的字段添加任何注解。这是因为它的所有字段都可以存储在数据库中；不涉及任何关系。在 `StockItem` 类中，我们只有一个字段：`quantity` 字段，它是一个 `Long` 类型，可以完美映射到 SQL `number` 类型，Ebean 可以自动进行映射。
-
-其他字段是我们的 `Product` 和 `Warehouse` 类。我们需要告诉 Ebean 它们是对其他实体的引用，以及它们具有什么类型的关系。我们现在关注 `StockItem`。正如我们之前看到的，`StockItem` 与 Product 是多对一
+### 列表 7.6 StockItem-Product 多对一关系
 
 ```java
 import javax.persistence.ManyToOne;
@@ -4934,13 +4628,13 @@ public class StockItem extends Model {
     public Long id;
 
     @ManyToOne
-    public Warehouse warehouse;
+    public Product product;
 
     public Long quantity;
 }
 ```
 
-# Listing 7.7 保存 StockItem 及其关系
+### 列表 7.7 保存 StockItem 及其关系
 
 ```java
 StockItem item = new StockItem();
@@ -4950,37 +4644,40 @@ item.product = product;
 product.save();
 ```
 
-在浏览器中刷新添加此行
+在浏览器中刷新添加此行。
 
-# 154 第 7 章 模型与持久化
-
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_176_0.png)
-
-在 H2 控制台显示 stock item 表
-
-在应用数据库进化时要小心
-
-在 H2 控制台显示 stock item 表
-
-当我们创建库存项时，结果如下 7.11。
+当我们创建库存项时，结果如图 7.11 所示。
 
 我们已经学习了如何映射一对多关系，那么另一侧多对一呢？当我们有一个 `StockItem` 实例时，我们可以知道产品。但当我们有一个 `Product` 时，我们无法知道库存项。为了这一点，我们需要使关系是双向的。
 
 ### 7.4.2 映射一对多关系
 
-双向多一对关系不会影响数据库；关系信息已经存储在“一”的一侧（见 7.12）。
-
-| id | name | address_id | id | street | city | country |
-|---|---|---|---|---|---|---|
-| 1 | Warehouse A | 1 | Heemstraat | 70 | Rotterdam | Netherlands |
-| 2 | Warehouse B | 2 | Rue Taibut | 64 | Paris | France |
-| 3 | Warehouse C | 3 | Sand Hill Rd | | |
+双向多对一关系不会影响数据库；关系信息已经存储在“一”的一侧（见图 7.12）。
 
 这意味着检索属于特定产品的库存项只需要查询 `product_id` 列。
 
-让我们解释如何检索 `StockItem` 对象。首先，我们需要一个字段来存储它们，作为 `Product` 类的 `List-StockItem` 字段。我们现在只需要将其标记为一对多关系，正如我们对 `StockItem` 上的多对一字段所做的那样：用 `@ToMany` 注解它。因为 `StockItem` 类是持久化关系的一侧，我们需要指示 `StockItem` 类中哪个属性持有该关系。我们通过在注解中使用 `mappedBy` 属性来实现这一点，如下列表。
+让我们解释如何检索 `StockItem` 对象。首先，我们需要一个字段来存储它们，作为 `Product` 类的 `List<StockItem>` 字段。我们现在只需要将其标记为一对多关系，正如我们对 `StockItem` 上的多对一字段所做的那样：用 `@OneToMany` 注解它。因为 `StockItem` 类是持久化关系的一侧，我们需要指示 `StockItem` 类中哪个属性持有该关系。我们通过在注解中使用 `mappedBy` 属性来实现这一点，如下列表。
 
-## 7.8 使 Product-StockItem 关系双向
+### 列表 7.8 使 Product-StockItem 关系双向
+
+```java
+import javax.persistence.OneToMany;
+import java.util.List;
+
+@Entity
+public class Product extends Model {
+    @Id
+    public Long id;
+    public Long ean;
+    public String name;
+    public String description;
+
+    @OneToMany(mappedBy = "product")
+    public List<StockItem> stockItems;
+}
+```
+
+
 
 ```java
 import javax.persistence.*;
@@ -5023,10 +4720,6 @@ public class StockItem extends Model {
     public Long quantity;
 }
 ```
-
-
-
-
 
 # 第 7 章 模型与持久化
 
@@ -5113,6 +4806,7 @@ public class Warehouse {
 ```
 
 图 7.13 用图表展示了这些类。
+
 现在来进行映射
 
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_179_0.png)
@@ -5173,11 +4867,6 @@ public class Address {
 }
 ```
 
-（注：由于原文后半部分存在大量重复内容，译文已根据要求“不要重复输出原文”进行了去重处理，保留核心逻辑翻译）
-
-
-
-
 # 第 7 章 模型与持久化
 
 Ebean 翻译的此方法可以调用一个或多个 SQL INSERT 语句，这就是我们使用 SQL 在数据库表中存储新记录的方式。
@@ -5200,7 +4889,7 @@ Ebean 翻译的此方法可以调用一个或多个 SQL INSERT 语句，这就�
 
 你需要实例化它，所以让我们为 Product 类添加一个字段以获取用于 Products 的 Finder 实例。在 Product 类中添加以下方法：
 
-```
+```java
 public class Product extends Model {
 ...
   public static Finder<Long, Product> find =
@@ -5221,7 +4910,7 @@ Product.findById(ID);
 
 ### 列表 7.18 我们当前的 Product 类 EAN 查找
 
-```
+```java
 ... import play.mvc.PathBindable;
 import play.libs.F.Option;
 public class Product implements PathBindable<Product> {
@@ -5247,7 +4936,7 @@ public class Product implements PathBindable<Product> {
 
 ### 列表 7.19 更新后的 findByEan 实现
 
-```
+```java
 public class Product {
 ...
     public static Product findByEan(String ean) {
@@ -5266,7 +4955,7 @@ public class Product {
 
 ### 列表 7.20 新的 save() 实现
 
-```
+```java
 public static Result save() {
 MultipartFormData body = request().body().asMultipartFormData();
 Form-Product bound = product.form.fromRequest(body);
@@ -5301,15 +4990,12 @@ return redirect(routes.list(1));
 }
 ```
 
-
-
-
-
 ### 7.5.3 加载初始数据
 
 我们已经确定需要在应用程序启动时加载数据。Play 允许通过两种方式加载数据：
 
 - 演化脚本（Evolution scripts）
+
 - 启动时调用的 Global Java 类的 onCreate() 方法以及 YAML 数据文件
 
 ### 演化脚本
@@ -5329,6 +5015,7 @@ SET REFERENTIAL_INTEGRITY FALSE;
 演化脚本用于创建数据库 schema 并为你的应用程序填充初始数据。它们还用于在应用程序的不同版本之间执行 schema 更新。演化脚本包含两个部分：应用程序启动时执行的 SQL 和应用程序关闭时执行的 SQL。
 
 演化脚本按顺序调用（`1.sql`, `2.sql` 等）；在应用程序启动时，会应用 Ups 部分定义的 SQL；在应用程序关闭时，会应用 Downs 部分。
+
 你可以通过在演化脚本的 Ups 部分添加 SQL insert 语句，用现有的产品预填充你的数据库。
 
 ### YAML 数据文件
@@ -5343,12 +5030,14 @@ SET REFERENTIAL_INTEGRITY FALSE;
 
 ### 列表 7.22 Global 类上新的 onStart() 方法
 
+
+
 ```java
 import com.avaje.ebean.*;
 import models.*;
 
 public class Global extends GlobalSettings {
-...
+    ...
     public void onStart(Application app) {
         InitialData.insert(app);
     }
@@ -5396,11 +5085,7 @@ JPA 和 Hibernate（以及其他解决方案）通过定义不同的查询语言
 
 构建查询的替代方案是基于标准的 API。基于标准的 API 允许你使用对象组合来构建查询对象，该对象将为你构建并执行 SQL 查询。这意味着你不需要处理混乱的字符串。
 
-
-
-
-
-# 列表 7.25 StockItem 的 find 方法
+### 列表 7.25 StockItem 的 find 方法
 
 ```java
 public static Finder<Long, Product> find() {
@@ -5410,13 +5095,15 @@ public static Finder<Long, Product> find() {
 
 > 构建一个用于查找 StockItem 对象的 Finder
 
-当我们运行此代码时，将获得数据库中所有的库存项目列表。在浏览器中加载 http://localhost:9000/stockitems/。你将看到类似下面的输出：
+当我们运行此代码时，将获得数据库中所有的库存项目列表。在浏览器中加载 `http://localhost:9000/stockitems/`。你将看到类似下面的输出：
 
 StockItem 1 - 300x product 1
+
 StockItem 2 - 200x product 1
+
 StockItem 3 - 500x product 1
 
-# 过滤我们的选择
+#### 过滤我们的选择
 
 让我们看看查询在英文版本的子句是什么：
 
@@ -5431,11 +5118,10 @@ StockItem 3 - 500x product 1
 
 ```java
 public static Result index() {
-
-  List<StockItem> items = StockItem.find(
-    .where(
-      .ge("quantity", 300)
-    ).findList());
+  List<StockItem> items = StockItem.find()
+    .where()
+    .ge("quantity", 300)
+    .findList();
 
   return ok(items);
 }
@@ -5444,6 +5130,7 @@ public static Result index() {
 在浏览器中重新加载，列表现在应该只包含数量为 300 或更多的库存项目：
 
 StockItem 1 - 300x product 1
+
 StockItem 3 - 500x product 1
 
 可以使用许多其他条件；请查阅 Ebean Query 类的文档获取完整列表。
@@ -5457,17 +5144,17 @@ StockItem 3 - 500x product 1
 
 现在的列表某种程度上是随机排序的。嗯，它是按 ID 排序的，因为我们没有指定顺序；数据库可以自由地按任何顺序返回项目。永远不要信任默认排序行为；如果你切换数据库供应商（例如将应用迁移到生产环境时），它可能会发生。
 
-# 排序
+#### 排序
 
 让我们指定一个排序子句。这是通过 `orderBy` 方法实现的，并指定我们想要排序的字段：在我们的例子中是 `quantity`。
 
 ```java
 public static Result index() {
-  List<StockItem> items = StockItem.find(
+  List<StockItem> items = StockItem.find()
     .where()
     .ge("quantity", 300)
     .orderBy("quantity")
-    .findList());
+    .findList();
   return ok(items);
 }
 ```
@@ -5487,12 +5174,12 @@ StockItem 3 - 500x product 1 StockItem 1 - 300x product 1
 
 ```java
 public static Result index() {
-  List<StockItem> items = StockItem.find(
+  List<StockItem> items = StockItem.find()
     .where()
     .ge("quantity", 300)
     .orderBy("quantity")
     .setMaxRows(10)
-    .findList());
+    .findList();
   return ok(items);
 }
 ```
@@ -5505,11 +5192,11 @@ StockItem 3 - 500x product 1
 
 使用这两个方法就可以实现分页。Ebean 让它变得更加简单，不需要你手动计算分页参数。让我们详细查看。
 
-# 分页
+#### 分页
 
 表格分页是大多数 Web 应用都需要的功能。使用 Ebean 执行起来非常简单。以我们的产品列表为例。现在，我们的 Controller 正在调用 Product 对象上的 `find()` 方法。让我们定义一个接受页码参数的 `find()` 方法，如 7.26 所示。
 
-列表 7.26 支持分页的 find() 方法
+### 列表 7.26 支持分页的 find() 方法
 
 ```java
 public static List<Product> find(int page) {
@@ -5522,9 +5209,7 @@ public static List<Product> find(int page) {
 ```
 
 > find 现在返回 Page 对象
-
 > 我们需要 fetch 数据吗？
-
 > 当前页码，从 0 开始
 
 分页查询所有产品并按 ID 返回最多 10 个产品。我们现在需要如下修改 Product Controller 的 `list()` 方法：
@@ -5538,7 +5223,7 @@ public static Result list(Integer page) {
 
 由于我们现在使用了 `list.scala.html` 视图，我们需要对其进行微调。下面显示了相关的更改。
 
-列表 7.27 list.scala.html 视图
+### 列表 7.27 list.scala.html 视图
 
 ```scala
 @(currentPage: com.ebean.Page[Product])
@@ -5565,22 +5250,20 @@ public static Result list(Integer page) {
 ```
 
 > 将 Page 对象作为参数传递给模板
-
 > 返回当前页的产品列表
-
 > 判断是否有上一页的方便方法
 
-# 使用 JPA 代替 Ebean
+### 使用 JPA 代替 Ebean
 
 在开发新应用时，你可能会使用 Ebean，也可能觉得更好。事实上，包含 JPA 是不错的。
 
-# 7.61 配置 Play
+### 7.6.1 配置 Play
 
 启用 JPA 有两个步骤：将数据源暴露给 JNDI 以及将 JPA 添加到依赖中。首先，打开 `application.conf`，在数据库配置中添加 `jdbc` 属性（参见 7.3）。此外，如果你已经启用了 Ebean，请确保删除或注释掉所有以 `ebean` 开头的行以禁用它。
 
 接下来，我们将 Play 的 Ebean 模块切换为 Play 的 JPA 模块。打开 `project/Build.scala`，将 `Ebean` 替换为 `javaJpa`，使得 `appDependencies` 列表如下：
 
-# 列表 7.28 appDependencies
+### 列表 7.28 appDependencies
 
 ```scala
 val appDependencies = Seq(
@@ -5603,11 +5286,11 @@ val appDependencies = Seq(
 
 启动应用时，JPA 将可用。你仍然需要配置 JPA 本；它需要一个持久单元，
 
-# 7.62 添加 Persistence.xml
+### 7.6.2 添加 Persistence.xml
 
 对于 Play 应用，没有特殊的地方来配置 JPA。与所有项目一样，JPA 需要在 `persistence.xml` 中声明持久单元。在 Play 中，你需要将其放在 `conf/META-INF` 目录下。列表 7.29 显示了一个 `persistence.xml` 示例，对应于上一节中配置的 H2 `DefaultDS` 源。
 
-# 列表 7.29 persistence.xml
+### 列表 7.29 persistence.xml
 
 ```xml
 <persistence xmlns="http://java.sun.com/xml/ns/persistence"
@@ -5619,18 +5302,14 @@ version="2.0">
   transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <non-jta-data-source>DefaultDS</non-jta-data-source>
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+    </properties>
   </persistence-unit>
 </persistence>
 ```
 
 
-
-<properties>
-  <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
-</properties>
-<persistence-unit>
-</persistence>
-```
 
 现在你的 JPA 应用已经准备就绪了。它的运行方式与其他任何 JPA 应用无异，但 Play 中的一些类会让你的工作变得更容易。
 
@@ -5673,7 +5352,7 @@ JPA 映射的内容比这些关系类型多得多，例如映射类继承或嵌�
 
 我们涵盖了 MVC 中的 M 和 C，但 V（即视图层）呢？我们需要一个视图层来向客户端展示应用程序所做的工作，无论客户端是浏览器还是使用我们 API 的其他系统。
 
-使用 Play 开发应用程序时，创建输出的选项是是模板。你可能以前用过某种模板系统，但你会发现 Scala 模板引擎（Play 自带的默认模板引擎）有些不同。正如我们在前面的章节中所的，Scala 模板被编译成类，并且是完全类型安全的。
+使用 Play 开发应用程序时，创建输出的选项是模板。你可能以前用过某种模板系统，但你会发现 Scala 模板引擎（Play 自带的默认模板引擎）有些不同。正如我们在前面的章节中所说，Scala 模板被编译成类，并且是完全类型安全的。
 
 在本章中，我们将向你展示在 Play 应用中使用 Scala 模板创建视图所需的所有知识。但 Scala 模板并不是你唯一的选择。在章节结束处，我们将向你展示替代模板引擎。
 
@@ -5685,102 +5364,29 @@ JPA 映射的内容比这些关系类型多得多，例如映射类继承或嵌�
 
 首先，不要害怕；与任何其他模板系统不同，你只需要学习如何执行某些事情（例如遍历集合或做出 if/else 决策），而无需了解其原理或语法的含义。此外，许多 Scala 语法与 Java 非常相似；下面的代码段在 Java 和 Scala 中都是在对象上调用带参数方法的有效语法：
 
-```
+```scala
 catalog.getProduct(ean);
 ```
 
-使用 Scala 并不是是使 Scala 模板引擎与其他模板系统不同的唯一之处。最传统的模板系统工作原理是：你用自定义语法编写模板文件，并通过该模板的文件名调用引擎。然后模板引擎加载并评估它。¹ 此时它会显示自定义指令，通常称为标签（tags），这些指令描述了模板的结构。这些通常是循环、if/else 结构，或者包含或扩展其他模板文件的指令。
+使用 Scala 并不是使 Scala 模板引擎与其他模板系统不同的唯一之处。最传统的模板系统工作原理是：你用自定义语法编写模板文件，并通过该模板的文件名调用引擎。然后模板引擎加载并评估它。此时它会显示自定义指令，通常称为标签（tags），这些指令描述了模板的结构。这些通常是循环、if/else 结构，或者包含或扩展其他模板文件的指令。
 
 在解析模板结构后，模板引擎将开始生成输出，此时它将评估模板的动态部分，即表达式。这些表达式解析出作为模板标签输入的值或直接输出的变量。这些表达式通常定义在某些模板语言中，例如 JEE 框架中的统一表达式语言（UEL），或者任何像 Ruby 或 Groovy 这样的动态语言。
 
-这种方法的缺点之一是，每每次渲染模板时都必须重复表达式评估工作。每一次都是如此。这是浪费的。
+这种方法的缺点之一是，每次渲染模板时都必须重复表达式评估工作。每一次都是如此。这是浪费的。
 
-另一个缺点是，大多数表达式引擎是动态类型的，这意味着无法保证什么种类型的对象最终进入你的模板，因此当你犯错时，编译器无法警告你。这就是为什么 Scala 模板与不同；它们被编译成类，并且是完全类型安全的。
-
-
-
-
-
-# Scala 模板语法
-
-虽然编译后的模板和类型安全很棒，但它们并没有解释为什么这种模板语言要用 Scala。毕竟，Java 本身也具有这些特性，为什么不直接用 Java 呢？答案是 Scala 具有一些 Java 中不具备的特性，或者能让代码更简洁的特性。例如，Scala 编译器比 Java 具有更好的类型推断能力，²节省了大量的类型声明。
-
-既然我们已经知道了原因，让我们来看看具体实现方法：实际的模板语法。
+另一个缺点是，大多数表达式引擎是动态类型的，这意味着无法保证什么种类型的对象最终进入你的模板，因此当你犯错时，编译器无法警告你。这就是为什么 Scala 模板与众不同；它们被编译成类，并且是完全类型安全的。
 
 ## 8.2 Scala 模板语法
 
-Scala 模板语法并不复杂：它只包含文本和 Scala 代码，以及一种区分两者的方法。当然，如果你不熟悉 Scala，事情就会变得复杂。别担心，我们将向你展示使用 Scala 模板所需的所有知识。关于 Scala 模板最基本的记住的一点是，@ 符号会切换到 Scala 上下文；其后的所有内容都是 Scala 代码，直到表达式的逻辑结束。我们稍后会展示它是如何工作的，但首先，让我们看看你是如何定义 Scala 模板的。
+虽然编译后的模板和类型安全很棒，但它们并没有解释为什么这种模板语言要用 Scala。毕竟，Java 本身也具有这些特性，为什么不直接用 Java 呢？答案是 Scala 具有一些 Java 中不具备的特性，或者能让代码更简洁的特性。例如，Scala 编译器比 Java 具有更好的类型推断能力，节省了大量的类型声明。
+
+既然我们已经知道了原因，让我们来看看具体实现方法：实际的模板语法。
 
 ### 8.2.1 模板定义
 
 正如我们在前面的章节所示，Scala 模板会被编译为类，你可以从 Java 代码中调用它们。编译后的类将位于一个 view 包中，并且它们都包含一个名为 render 的方法。该方法依赖于哪些参数取决于模板本身顶部定义的模板参数。
 
-模板参数是函数参数，类似于 Java 中的方法参数，它们需要一个名称和一个类型。在 Scala 中，名称在前，后面跟着一个 `:`，然后是类型。模板可以有零个或多个参数，用逗号分隔，并且它们都应该放在模板文件的顶部。例如，一个具有类型为 `List<Product>` 的 `product` 参数和一个类型为 `Integer` 的 `count` 参数的模板：
-
-```scala
-@(product: List[Product], count: Integer)
-```
-
-你可以看到，List 的类型参数与普通的 Java 语法略有不同：Java 在 `List<Product>` 中使用尖括号，而 Scala 使用方括号 `[]`，这意味着你必须写成 `List[Product]`。唯一的区别在于语法；意义仍然相同。
-
-现在我们已经知道了如何定义模板参数，可以可以查看模板的实际主体了。
-
-### 8.2.2 模板主体
-
-模板主体由纯文本（可以是任何内容，如 HTML、JSON、XML 或 CSV）与 Scala 代码混合组成。文本将直接复制到输出，而 Scala 代码则实现了模板的逻辑和动态部分。
-
-> ² 这意味着编译器知道对象的类型，而无需在源代码中显式说明。
-
-模板引擎唯一引入的表示 Scala 代码的符号是：字符 `@`。例如，来自我们在第 3 章列表模板的这段代码片段，如下列表所示。
-
-#### 列表 8.3 scala.html
-
-你可以看到，这个模板由纯 HTML 组成，渲染时将直接复制到输出。我们标记了作为 Scala 代码的部分。这些部分使得你的模板具有动态性。
-
-这段代码片段中最有趣的部分是 `for` 语句。在这种形式下，Scala for 表达式等同于普通的 for/in 循环；它接收一个集合，并为集合中的每个成员重复主体中的代码。但在这种情况下，主体不是代码，只是文本。不过循环的行为正如你预期的那样；主体会为 `products` 中的每个条目进行重复。
-
-for 循环的主体还包含一些 Scala 表达式，这些 Scala 表达式会被求值，结果的值将被包含在模板输出中。出于安全和兼容性考虑，所有表达式都经过了 HTML 转义。这意味着
-
-# Scala 模板语法
-
-即任何作为 HTML 文本无效的字符都经过了正确的转义，以便在 HTML 文档中显示。如果你希望显示表达式的原始的、未转义的值，可以使用 `@Html()`：
-
-```scala
-// boldName = <b>world</b>
-Hello ${boldName}!
-```
-
-如前所述，Scala 表达式以 `@` 字符开始。但表达式和其余文本从何时开始呢？
-
-### 8.2.3 表达式的作用范围
-
-在这个 `for` 循环的案例中，Scala 表达式的作用范围很明确：行开头的表达式，如果它包含块，则在块的结束处结束（由大括号指定）。
-
-内联表达式的情况就没那么明确了，例如对 `routes.product.show()` 的函数调用以为产品链接的 `href` 属性生成值，或者构成链接大部分文本的值引用。在这些情况下，模板引擎足够智能出一个表达式并输出它找到的第一个值。因此，这种语法适用于简单表达式。考虑我们产品链接的文本（在第 8.3 节中描述）。表达式和纯文本的拆解如图 8.2 所示。
-
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_205_0.png)
-
-图 8.2 链接文本拆解
-
-在这里，模板引擎知道 Scala 表达式何时结束，并继续将行的其余部分视为直到下一个 `@` 字符。
-
-有时一个简单的表达式是不够的；你可能想输出某个需要稍微修改的值。在这种情况下，你仍然可以使用 `@` 语法，但你应该将表达式包裹在大括号中，如图 8.3 所示。
-
-这种语法风格允许你通过显式指定结束位置来编写更复杂的表达式。现在，如果你想写，你可以编写一个更冗长的、多语句的表达式，使用大括号而不是，如图 8.4 所示。
-
-这种语法风格允许你通过显式指定结束位置来编写更复杂的表达式。现在，如果你想写，你可以编写一个更冗长的、多语句的表达式，使用大括号而不是，如图 8.4 所示。
-
-img/1f90c92b70e5931c18b6f9f04c8da72e_205_0.png
-
-图 8.3 多语句表达式
-
-## 8.3 使用模板输出
-
-```scala
-@(product: List[Product], count: Integer)
-```
-
-### 8.4 模板参数是函数参数，类似于 Java 中的方法参数，它们需要一个名称和一个类型。在 Scala 中，名称在前，后面跟着一个 `:`，然后是类型。模板可以有零个或多个参数，用逗号分隔，并且它们都应该放在模板文件的顶部。例如，一个具有类型为 `List<Product>` 的 `product` 参数和一个类型为 `Integer` 的 `count` 参数的模板：
+模板参数是函数参数，类似于 Java 中的方法参数，它们需要一个名称和一个类型。在 Scala 中，名称在前，后面跟着一个 `:`，然后是类型。模板可以有零个或多个参数，用逗号分隔，并且它们都应该放在模板文件的顶部。例如，一个具有类型为 `List[Product]` 的 `product` 参数和一个类型为 `Integer` 的 `count` 参数的模板：
 
 ```scala
 @(product: List[Product], count: Integer)
@@ -5794,7 +5400,66 @@ img/1f90c92b70e5931c18b6f9f04c8da72e_205_0.png
 
 模板主体由纯文本（可以是任何内容，如 HTML、JSON、XML 或 CSV）与 Scala 代码混合组成。文本将直接复制到输出，而 Scala 代码则实现了模板的逻辑和动态部分。
 
-> ² 这意味着编译器知道对象的类型，而无需在源代码中显式说明。
+> 这意味着编译器知道对象的类型，而无需在源代码中显式说明。
+
+模板引擎唯一引入的表示 Scala 代码的符号是：字符 `@`。例如，来自我们在第 3 章列表模板的这段代码片段，如下列表所示。
+
+#### 列表 8.3 scala.html
+
+你可以看到，这个模板由纯 HTML 组成，渲染时将直接复制到输出。我们标记了作为 Scala 代码的部分。这些部分使得你的模板具有动态性。
+
+这段代码片段中最有趣的部分是 `for` 语句。在这种形式下，Scala for 表达式等同于普通的 for/in 循环；它接收一个集合，并为集合中的每个成员重复主体中的代码。但在这种情况下，主体不是代码，只是文本。不过循环的行为正如你预期的那样；主体会为 `products` 中的每个条目进行重复。
+
+for 循环的主体还包含一些 Scala 表达式，这些 Scala 表达式会被求值，结果的值将被包含在模板输出中。出于安全和兼容性考虑，所有表达式都经过了 HTML 转义。这意味着即任何作为 HTML 文本无效的字符都经过了正确的转义，以便在 HTML 文档中显示。如果你希望显示表达式的原始的、未转义的值，可以使用 `@Html()`：
+
+```scala
+// boldName = <b>world</b>
+Hello ${boldName}!
+```
+
+如前所述，Scala 表达式以 `@` 字符开始。但表达式和其余文本从何时开始呢？
+
+### 8.2.3 表达式的作用范围
+
+在这个 `for` 循环的案例中，Scala 表达式的作用范围很明确：行开头的表达式，如果它包含块，则在块的结束处结束（由大括号指定）。
+
+内联表达式的情况就没那么明确了，例如对 `routes.product.show()` 的函数调用以为产品链接的 `href` 属性生成值，或者构成链接大部分文本的值引用。在这些情况下，模板引擎足够智能解析出一个表达式并输出它找到的第一个值。因此，这种语法适用于简单表达式。考虑我们产品链接的文本（在第 8.3 节中描述）。表达式和纯文本的拆解如图 8.2 所示。
+
+![](img/1f90c92b70e5931c18b6f9f04c8da72e_205_0.png)
+
+图 8.2 链接文本拆解
+
+在这里，模板引擎知道 Scala 表达式何时结束，并继续将行的其余部分视为直到下一个 `@` 字符。
+
+有时一个简单的表达式是不够的；你可能想输出某个需要稍微修改的值。在这种情况下，你仍然可以使用 `@` 语法，但你应该将表达式包裹在大括号中，如图 8.3 所示。
+
+这种语法风格允许你通过显式指定结束位置来编写更复杂的表达式。现在，如果你想写，你可以编写一个更冗长的、多语句的表达式，使用大括号而不是，如图 8.4 所示。
+
+img/1f90c92b70e5931c18b6f9f04c8da72e_205_0.png
+
+图 8.3 多语句表达式
+
+## 8.3 使用模板输出
+
+```scala
+@(product: List[Product], count: Integer)
+```
+
+### 8.4 模板参数是函数参数，类似于 Java 中的方法参数，它们需要一个名称和一个类型。在 Scala 中，名称在前，后面跟着一个 `:`，然后是类型。模板可以有零个或多个参数，用逗号分隔，并且它们都应该放在模板文件的顶部。例如，一个具有类型为 `List[Product]` 的 `product` 参数和一个类型为 `Integer` 的 `count` 参数的模板：
+
+```scala
+@(product: List[Product], count: Integer)
+```
+
+你可以看到，List 的类型参数与普通的 Java 语法略有不同：Java 在 `List<Product>` 中使用尖括号，而 Scala 使用方括号 `[]`，这意味着你必须写成 `List[Product]`。唯一的区别在于语法；意义仍然相同。
+
+现在我们已经知道了如何定义模板参数，可以查看模板的实际主体了。
+
+### 8.2.2 模板主体
+
+模板主体由纯文本（可以是任何内容，如 HTML、JSON、XML 或 CSV）与 Scala 代码混合组成。文本将直接复制到输出，而 Scala 代码则实现了模板的逻辑和动态部分。
+
+> 这意味着编译器知道对象的类型，而无需在源代码中显式说明。
 
 模板引擎唯一引入的表示 Scala 代码的符号是：字符 `@`。例如，来自我们在第 3 章列表模板的这段代码片段，如下列表所示。
 
@@ -5821,7 +5486,7 @@ Hello ${boldName}!
 
 在这个 `for` 循环的案例中，Scala 表达式的作用范围很明确：行开头的表达式，如果它包含块，则在块的结束处结束（由大括号指定）。
 
-内联表达式的情况就没那么明确了，例如对 `routes.product.show()` 的函数调用以为产品链接的 `href` 属性生成值，或者构成链接大部分文本的值引用。在这些情况下，模板引擎足够智能出一个表达式并输出它找到的第一个值。因此，这种语法适用于简单表达式。考虑我们产品链接的文本（在第 8.3 节中描述）。表达式和纯文本的拆解如图 8.2 所示。
+内联表达式的情况就没那么明确了，例如对 `routes.product.show()` 的函数调用以为产品链接的 `href` 属性生成值，或者构成链接大部分文本的值引用。在这些情况下，模板引擎足够智能解析出一个表达式并输出它找到的第一个值。因此，这种语法适用于简单表达式。考虑我们产品链接的文本（在第 8.3 节中描述）。表达式和纯文本的拆解如图 8.2 所示。
 
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_205_0.png)
 
@@ -5843,10 +5508,6 @@ img/1f90c92b70e5931c18b6f9f04c8da72e_205_0.png
 @(product: List[Product], count: Integer)
 ```
 
-
-
-
-
 # 第 8 章 使用模板生成输出
 
 ## 示例 8.6 使用索引变量迭代
@@ -5855,7 +5516,7 @@ img/1f90c92b70e5931c18b6f9f04c8da72e_205_0.png
 @(products: Set[Product])
 <table class="table-striped">
 // 我们将跳过无关部分
-@for(product, i) <- products.zipWithIndex) {
+@for((product, i) <- products.zipWithIndex) {
   <tr>
     <td>@i</td>
     <td><a href="/routes.Products.show(ean)">详情</a></td>
@@ -5929,189 +5590,23 @@ public Static Result list(Integer page) {
 <html>
 <head>
     <title>Routes</title>
-    <link href="@Routes.Assets.at('css/bootstrap.min.css')"" rel="stylesheet">
-    <link href="@Routes.Assets.at('stylesheets/main.css')"" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="@Routes.Assets.at('images/favicon.png')" />
-    <script src="@Routes.Assets.at('javascripts/jquery-1.9.min.js')"" type="text/javascript"></script>
-</head>
-<body>
-    <div class="navbar navbar-inverse" id="navigation">
-        <div class="container">
-            <a class="brand" href="@Routes.Products.index()">日志</a>
-            <ul class="nav">
-                <li><a href="@Routes.Products.index()">首页</a></li>
-                <li><a href="@Routes.Products.list()">产品</a></li>
-                <li><a href="@Contact">联系</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="container">
-        @if(flash.containsKey("success")) {
-            <div class="alert alert-success">
-                @flash.get("success")
-            </div>
-        }
-
-        @if(flash.containsKey("error")) {
-            <div class="alert alert-error">
-                @flash.get("error")
-            </div>
-        }
-
-        <h2>所有产品</h2>
-    </div>
-    <script type="text/javascript">
-        function del(urlToDelete) {
-            $.ajax({
-                url: urlToDelete,
-                type: 'DELETE',
-                success: function(results) {
-                    // 刷新页面
-                    location.reload();
-                }
-            });
-        }
-    </script>
-
-    <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>EAN</th>
-        <th>名称</th>
-        <th>描述</th>
-        <th>日期</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-    @for(product <- currentPage.getList()) {
-      <tr>
-        <td><a href="@routes.Products.details(product)">@product.ean</a></td>
-        <td><a href="@routes.Products.details(product)">@product.name</a></td>
-        <td><a href="@routes.Products.details(product)">@product.date.format("dd-MM-yyyy")</a></td>
-        <td><a href="@routes.Products.details(product)"><i></a></td>
-        <td><a href="@routes.Products.details(product)"><i class="icon-pencil"></i></a></td>
-      </tr>
-    }
-    </tbody>
-    </table>
-
-    <div class="pagination">
-      <ul>
-        @if(currentPage.hasPrev()) {
-          <li class="previous"><a href="@Routes.Products.list(currentPage.page - 1)">&laquo;</a></li>
-        } else {
-          <li class="disabled"><span>&laquo;</span></li>
-        }
-        <li class="active"><span>@currentPage.page</span></li>
-        @if(currentPage.hasNext()) {
-          <li class="next"><a href="@Routes.Products.list(currentPage.page + 1)">&raquo;</a></li>
-        } else {
-          <li class="disabled"><span>&raquo;</span></li>
-        }
-      </ul>
-    </div>
-</body>
-</html>
 ```
 
 
 
+# 第 8 章 使用视图模板生成输出
 
+## 8.4.2 布局
 
-# 192 第 8 章 使用视图模板生成输出
+我们在上一节中使用的 include 让我们的模板变得更好了一些，但它并不完美。目前，目录页面仍然渲染了它本不需要的整个 HTML，例如 HTML DOCTYPE 声明、`head` 元素以及页眉和页脚（这些在每个页面上都存在）。
 
-```javascript
-url: urlToDelete,
-type: 'DELETE',
-uccess: function(results) {
-  // 刷新页面
-  location.reload();
-}
-});
+事实上，只有 `<h2>所有产品</h2>` 和页脚之间的部分才是目录操作的职责：
+
+```html
+<h2>所有产品</h2>
+
 <script>
-```
-
-```html
-<table class="table table-striped">
-<head>
-<tr>
-<th>EAN</th>
-<th>名称</th>
-<th>描述</th>
-<th>日期</th>
-<th></</th>
-</tr>
-</head>
-<tbody>
-@for(product <- currentPage.getList()) {
-<tr>
-<td><a href="@routes.Products.details(product)">@product.ean</a></td>
-<td><a href="@routes.Products.details(product)">@product.name/</a></td>
-<td><a href="@routes.Products.details(product)">@product.name</a></td>
-<td>@product.date.format('dd-MM-yyyy')</td>
-<td>
-<a href="@routes.Products.details(product)"><i class="icon icon-pencil"></i></a>
-<a onclick="javascript:delete(@routes.Products.delete(product.ean))"><i class="icon icon-trash"></i></a>
-</td>
-</tr>
-}
-</tbody>
-</table>
-```
-
-```html
-<div id="pagination" class="pagination">
-<ul>
-@if(currentPage.hasPrev) {
-<li class="prev">
-<a href="@routes.Products.list(currentPage.getPageIndex - 1)">&ll;</a>
-</li>
-} else {
-<li class="prev disabled">
-<a>&ll;</a>
-</li>
-}
-<li class="current"></li>
-</ul>
-<a>@currentPage.getDisplayXToYof(" * - ", / ")</a
-```
-
-```html
-<li></li>
-@if(currentPage.hasNext) {
-  <li class="next">
-    <a href="@routes.Products.list(currentPage.getPageIndex + 1)">&rarr;</a>
-  </li>
-} else {
-  <li class="next disabled">
-    <a>&rarr;</a>
-  </li>
-}
-</ul>
-</div>
-<a href="@routes.Products.newProduct()" class="btn">
-  <i class="icon-plus"></i> 新产品</a>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p>Copyright ©2012 paperclips.example.com</p>
-  </div>
-</footer>
-```
-
-这改进了我们的模板，因为之前的页面不再需要知道如何渲染导航栏。这种将模板部分内容提取到可重用的单独模板中的模式被称为“包含”（includes），其中被提取的模板就是包含项。
-
-## 8.4.2 布局 (Layouts)
-
-我们在上一节中使用的 include 让我们的模板变得更好了一些，但它并不完美。目前，目录页面仍然渲染了它本不需要的整个 HTML，例如 HTML DOCTYPE 声明、head 元素以及页眉和页脚（这些在每个页面上都存在）。
-
-事实上，在 8.10 中，只有 `<h2>All products</h2>` 和页脚之间的部分才是是目录操作（catalog action）的职责：
-
-```html
-<h2>All products</h2>
-<script>
-function delete(urlToDelete) {
+function del(urlToDelete) {
   $.ajax({
     url: urlToDelete,
     type: 'DELETE',
@@ -6122,114 +5617,101 @@ function delete(urlToDelete) {
   });
 }
 </script>
+
 <table class="table table-striped">
   <thead>
-```
-
-```html
-<tr>
-<th>EAN</th>
-<th>名称</th>
-<th>描述</th>
-<th>日期</th>
-<th></</th>
-</tr>
-</head>
-<tbody>
-@for(product <- currentPage.getList()) {
-<tr>
-<td><a href="@routes.Products.details(product)">$product.ean</a></td>
-<td><a href="@routes.Products.details(product)">$product.name</a></td>
-<td><a href="@routes.Products.details(product)">$product.description</a></td>
-<td><i>${$product.date.format('dd-MM-yyyy')}</i></td>
-<td>
-<a href="@routes.Products.details(product)"><i class="icon icon-pencil"></i></a>
-<a onclick="javascript:del('@routes.Products.delete(product)')"><i class="icon icon-trash"></i></a>
-</td>
-</tr>
-}
-
-</body>
+    <tr>
+      <th>EAN</th>
+      <th>名称</th>
+      <th>描述</th>
+      <th>日期</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(product <- currentPage.getList()) {
+      <tr>
+        <td><a href="@routes.Products.details(product)">@product.ean</a></td>
+        <td><a href="@routes.Products.details(product)">@product.name</a></td>
+        <td><a href="@routes.Products.details(product)">@product.description</a></td>
+        <td>@product.date.format("dd-MM-yyyy")</td>
+        <td>
+          <a href="@routes.Products.details(product)"><i class="icon icon-pencil"></i></a>
+          <a onclick="javascript:del('@routes.Products.delete(product)')"><i class="icon icon-trash"></i></a>
+        </td>
+      </tr>
+    }
+  </tbody>
 </table>
+
 <div id="pagination" class="pagination">
-<ul>
-@if(currentPage.hasPrev()) {
-<li class="prev">
-<a href="@routes.Products.list(currentPage.getPageIndex - 1)">&laquo;</a>
-</li>
-} else {
-<li class="prev disabled">
-<a href="&larr;"></a>
-</li>
-}
-<li class="current">
-<a>${currentPage.getDisplayXYoZ("*", " / / ")}</a>
-</li>
-@if(currentPage.hasNext()) {
-<li class="next">
-<a href="@routes.Products.list(currentPage.getPageIndex + 1)">&rarr;</a>
-</li>
-} else {
-<li class="next disabled">
-<a href="&larr;"></a>
-</li>
-}
-</ul>
+  <ul>
+    @if(currentPage.hasPrev()) {
+      <li class="prev">
+        <a href="@routes.Products.list(currentPage.getPageIndex - 1)">&laquo;</a>
+      </li>
+    } else {
+      <li class="prev disabled">
+        <a>&larr;</a>
+      </li>
+    }
+    <li class="current">
+      <a>@currentPage.getDisplayXToYofZ("*", " / ")</a>
+    </li>
+    @if(currentPage.hasNext()) {
+      <li class="next">
+        <a href="@routes.Products.list(currentPage.getPageIndex + 1)">&rarr;</a>
+      </li>
+    } else {
+      <li class="next disabled">
+        <a>&rarr;</a>
+      </li>
+    }
+  </ul>
 </div>
+
+<a href="@routes.Products.newProduct()" class="btn">
+  <i class="icon-plus"></i> 新产品
+</a>
 ```
 
-```html
-<ul>
-</div>
-<a href="@routes.Products.newProduct() class="btn">
-<i class="icon-plus"></i> 新产品</a
-```
+所有内容都应该从模板中提取出来。我们可以使用 include 技术，但在这里并不理想，因为我们需要提取内容之前的 HTML 和内容之后的 HTML。如果使用 include，我们需要两个模板：一个包含内容之前，另一个包含内容之后。这会破坏模板的结构。幸运的是，模板引擎提供了一些功能，允许我们将其提取到单一模板中。
 
-所有内容都应该从模板中提取出来。我们可以使用 include 技术，但在这里并不理想，因为我们需要提取内容之前的 HTML 和内容之后的 HTML。如果使用 include，我们需要两个模板：一个包含内容之前，另一个包含内容之后。这会破坏模板的结构。幸运的是，模板引擎提供了一些功能，允许我们将其提取到单一模板中。在下面的列表中：
-
-### 布局 (layout)
+### 布局模板
 
 ```html
 <!DOCTYPE html>
 <html>
 <head>
   <title>paperclips.example.com</title>
-  <link href="@routes.assets('css/bootstrap.css')" rel="stylesheet">
-  <link href="@routes.assets('stylesheets/main.css')" rel="stylesheet">
-  <link rel="icon" href="@routes.assets('images/favicon.png')">
-  <script src="@routes.assets('javascript/jquery.min.js')"></script>
+  <link href="@routes.Assets.at('css/bootstrap.css')" rel="stylesheet">
+  <link href="@routes.Assets.at('stylesheets/main.css')" rel="stylesheet">
+  <link rel="icon" href="@routes.Assets.at('images/favicon.png')">
+  <script src="@routes.Assets.at('javascript/jquery.min.js')"></script>
 </head>
 <body>
-  <navigation>
+  <div class="navbar navbar-inverse" id="navigation">
     <div class="container">
-      @if(currentPage.hasPrev) {
-        <li class="prev">
-          <a href="@routes.Products.list(currentPage.getPageIndex - 1)">&laquo;</a>
-        </li>
-      } else {
-        <li class="prev disabled">
-          <a href="&larr;"></a>
-        </li>
-      }
-      <li class="current">
-        <a>${currentPage.getDisplayXYoZ("*", " / / ")}</a>
-      </li>
-      @if(currentPage.hasNext()) {
-        <li class="next">
-          <a href="@routes.Products.list(currentPage.getPageIndex + 1)">&rarr;</a>
-        </li>
-      } else {
-        <li class="next disabled">
-          <a href="&larr;"></a>
-        </li>
-      }
+      <a class="brand" href="@routes.Products.index()">日志</a>
+      <ul class="nav">
+        <li><a href="@routes.Products.index()">首页</a></li>
+        <li><a href="@routes.Products.list()">产品</a></li>
+        <li><a href="@Contact">联系</a></li>
+      </ul>
     </div>
-    <a href="@routes.Products.newProduct()" class="btn">
-      <i class="icon-plus"></i> 新产品
-    </a>
-  </navigation>
+  </div>
 
   <div class="container">
+    @if(flash.containsKey("success")) {
+      <div class="alert alert-success">
+        @flash.get("success")
+      </div>
+    }
+    @if(flash.containsKey("error")) {
+      <div class="alert alert-error">
+        @flash.get("error")
+      </div>
+    }
     @content
   </div>
 
@@ -6242,6 +5724,8 @@ function delete(urlToDelete) {
 </html>
 ```
 
+
+
 ## 197 使用模板组合构建页面
 
 我们有一个可以调用的模板，例如 `views.html.main`。起初，这似乎没什么用。我们如何从目录模板调用它？我们没有可以传递的内容。目录模板正在渲染想要包含在主模板的内容。
@@ -6252,7 +5736,9 @@ function delete(urlToDelete) {
 
 ```scala
 @currentPage: ebean[Product]
+
 @main(@Products) {
+
 <h2>All products</h2>
 
 <script>
@@ -6295,10 +5781,8 @@ function del(urlToDelete) {
 </table>
 ```
 
-
-
-```
-<a onclick="javascript:del(\@Routes.Products.delete(product.ean))">
+```html
+<a onclick="javascript:del(@Routes.Products.delete(product.ean))">
   <i class="icon-trash"></i></a>
 </td>
 </tr>
@@ -6308,7 +5792,7 @@ function del(urlToDelete) {
 <ul>
   @if(currentPage.hasPrev) {
     <li class="prev">
-      <a href="@Routes.Products.list(currentPage.getPage - 1)\&amp;lt;</a></a>
+      <a href="@Routes.Products.list(currentPage.getPage - 1)&amp;lt;</a></a>
     </li>
   } else {
     <li class="prev disabled">
@@ -6320,7 +5804,7 @@ function del(urlToDelete) {
   </li>
   @if(currentPage.hasNext) {
     <li class="next">
-      <a href="@Routes.Products.list(currentPage.getPage + 1)\&amp;gt;</a></a>
+      <a href="@Routes.Products.list(currentPage.getPage + 1)&amp;gt;</a></a>
     </li>
   } else {
     <li class="next disabled">
@@ -6329,24 +5813,23 @@ function del(urlToDelete) {
   }
 </ul>
 </div>
-
 <a href="@Routes.Products.newProduct()" class="btn">
   <i class="icon-plus"></i> 新产品
 </a>
-
 ```
 
 我们将此模板构建的所有 HTML 都包装在了一个对主模板的调用中！现在，此模板唯一的操作就是调用主模板，并传递正确的内容参数。这在 Play 中被称为“布局参数”（layout parameter）。
+
 我们可以向主模板添加除内容参数以外的参数，我们将为下一个参数添加一个新的参数列表，因为你只能在包含单个参数的参数列表周围使用花括号。假设我们还想将页面标题设为参数，那么我们可以更新主模板的第一部分：
+
+```scala
 @(content: Html)
 <html>
 <head>
   <title>回形网商店</title>
 ```
 
-# 使用 LESS 和 CoffeeScript：资源流水线
-
-到：
+改为：
 
 ```scala
 @(title: String) (content: Html)
@@ -6362,7 +5845,7 @@ function del(urlToDelete) {
 }
 ```
 
-为 main.scala html 的标题参数提供一个默认值很有用，这样我们可以在调用方法时选择跳过它：
+为 `main.scala.html` 的标题参数提供一个默认值很有用，这样我们可以在调用方法时选择跳过它：
 
 ```scala
 @(title: String="回针!") (content: Html)
@@ -6378,15 +5861,15 @@ function del(urlToDelete) {
 
 注意，对于第一个参数列表仍然我们需要空括号；我们无法完全跳过它。
 
-- 网页不仅仅由 HTML 组成。样式由 CSS 提供，额外的交互由 JavaScript 提供。Play 通过支持改进现有技术的工具，让编写 CSS 和 JavaScript 变得更容易。
+## 8.5 使用 LESS 和 CoffeeScript：资源流水线
 
-# 8.5 使用 LESS 和 CoffeeScript：资源流水线
+网页不仅仅由 HTML 组成。样式由 CSS 提供，额外的交互由 JavaScript 提供。Play 通过支持改进现有技术的工具，让编写 CSS 和 JavaScript 变得更容易。
 
-浏览器通过 CSS 和 CoffeeScript 处理 HTML，因此你的应用程序必须输出这些格式，浏览器才能理解它们。然而，这些语言并不是开发者的唯一选择。许多开发者倾向于使用 LESS 和 CoffeeScript 而不是 CSS 和 JavaScript。CoffeeScript 是一种样式语言，它通过 LESS 解释器或编译器转换为 CSS；而 CoffeeScript 是一种脚本语言，它通过 CoffeeScript 编译器转换为 JavaScript。
+浏览器通过 CSS 和 JavaScript 处理 HTML，因此你的应用程序必须输出这些格式，浏览器才能理解它们。然而，这些语言并不是开发者的唯一选择。许多开发者倾向于使用 LESS 和 CoffeeScript 而不是 CSS 和 JavaScript。LESS 是一种样式语言，它通过 LESS 解释器或编译器转换为 CSS；而 CoffeeScript 是一种脚本语言，它通过 CoffeeScript 编译器转换为 JavaScript。
 
 正如我们在第 2 章中提到的，Play 集成了 LESS 和 CoffeeScript 编译器。虽然我们不会教你这些技术，但我们将向你展示如何在 Play 应用中使用它们。
 
-## 8.5.1 LESS
+### 8.5.1 LESS
 
 相比纯 CSS，LESS 为你提供了许多优势。LESS 支持变量、混合器（mixins）、嵌套以及其他让 Web 开发人员生活更轻松的结构。考虑以下纯 CSS 示例，我们将头部和页脚元素的背景颜色设置为绿色。此外，我们对页脚中的链接元素使用了粗字体。
 
@@ -6404,7 +5887,7 @@ footer a {
 }
 ```
 
-这个示例展示了 CSS 的某些局限性。我们必须重复颜色代码，如果我们想选择页脚内部的元素，必须重复 .footer 选择器。使用 LESS，我们可以编写如下内容：
+这个示例展示了 CSS 的某些局限性。我们必须重复颜色代码，如果我们想选择页脚内部的元素，必须重复 `.footer` 选择器。使用 LESS，我们可以编写如下内容：
 
 ```less
 @green: #0b5c20;
@@ -6414,16 +5897,15 @@ footer a {
 
 footer {
   background-color: @green;
-}
-
-a {
-  font-weight: bold;
+  a {
+    font-weight: bold;
+  }
 }
 ```
 
-我们使用描述性名称声明了一个变量来存储颜色，因此可以在一处更改值。我们还通过将选择器移动到 .footer 选择器内部对 .footer 选择器使用了嵌套。这使得代码更容易读取和维护。
+我们使用描述性名称声明了一个变量来存储颜色，因此可以在一处更改值。我们还通过将选择器移动到 `.footer` 选择器内部对 `.footer` 选择器使用了嵌套。这使得代码更容易读取和维护。
 
-## 8.5.2 CoffeeScript
+### 8.5.2 CoffeeScript
 
 CoffeeScript 是一种编译为 JavaScript 的语言，主要由对 JavaScript 的语法改进组成。CoffeeScript 不使用花括号而是使用缩进，并具有非常短的函数字面量表示。考虑以下 JavaScript 示例：
 
@@ -6446,79 +5928,13 @@ math =
   cube: (x) -> x * square(x)
 ```
 
-# 8.5.3 资源流水线
+### 8.5.3 资源流水线
 
-浏览器通过 CSS 和 CoffeeScript 处理 HTML，因此你的应用程序必须输出这些格式，浏览器才能理解它们。然而，这些语言并不是开发者的唯一选择。许多开发者倾向于使用 LESS 和 CoffeeScript 而不是 CSS 和 JavaScript。CoffeeScript 是一种样式语言，它通过 LESS 解释器或编译器转换为 CSS；而 CoffeeScript 是一种脚本语言，它通过 CoffeeScript 编译器转换为 JavaScript。
+Play 的资源流水线会自动编译 LESS 和 CoffeeScript 文件，并在生产环境中进行压缩和合并。
 
-正如我们在第 2 章中提到的，Play 集成了 LESS 和 CoffeeScript 编译器。虽然我们不会教你这些技术，但我们将向你展示如何在 Play 应用中使用它们。
+## 8.6 国际化
 
-## 使用 LESS 和 CoffeeScript：资源流水线
-
-相比纯 CSS，LESS 为你提供了许多优势。LESS 支持变量、混合器（mixins）、嵌套以及其他让 Web 开发人员生活更轻松的结构。考虑以下纯 CSS 示例，我们将头部和页脚元素的背景颜色设置为绿色。此外，我们对页脚中的链接元素使用了粗字体。
-
-```css
-.header {
-  background-color: #0b5c20;
-}
-
-footer {
-  background-color: #0b5c20;
-}
-
-footer a {
-  font-weight: bold;
-}
-```
-
-这个示例展示了 CSS 的某些局限性。我们必须重复颜色代码，如果我们想选择页脚内部的元素，必须重复 .footer 选择器。使用 LESS，我们可以编写如下内容：
-
-```less
-@green: #0b5c20;
-.header {
-  background-color: @green;
-}
-
-footer {
-  background-color: @green;
-}
-
-a {
-  font-weight: bold;
-}
-```
-
-我们使用描述性名称声明了一个变量来存储颜色，因此可以在一处更改值。我们还通过将选择器移动到 .footer 选择器内部对 .footer 选择器使用了嵌套。这使得代码更容易读取和维护。
-
-## CoffeeScript
-
-CoffeeScript 是一种编译为 JavaScript 的语言，主要由对 JavaScript 的语法改进组成。CoffeeScript 不使用花括号而是使用缩进，并具有非常短的函数字面量表示。考虑以下 JavaScript 示例：
-
-```javascript
-math = {
-  root: Math.sqrt,
-  square: square,
-  cube: function(x) {
-    return x * square(x);
-  }
-}
-```
-
-在 CoffeeScript 中，你可以这样写：
-
-```coffeescript
-math =
-  root: Math.sqrt
-  square: square
-  cube: (x) -> x * square(x)
-```
-
-
-
-
-
-# 国际化
-
-## 203
+### 8.6.1 消息文件
 
 这是一个逗号分隔的语言列表，每个语言由一个 ISO 639-2 语言代码组成，可选地跟着一个连字符和 ISO 3166-1 alpha-2 国家代码。
 
@@ -6532,31 +5948,31 @@ welcome=Bienvenue!
 
 为了处理应用程序中的消息，建议从一个 messages 文件开始，并确保它是完整的。如果你以后决定添加更多 messages 文件，当你忘记在另一种语言的 messages 文件中添加键时，或者你没有该消息的翻译时，将使用默认的 messages 文件。
 
-## 8.6.2 在应用程序中使用消息
+### 8.6.2 在应用程序中使用消息
 
 要在应用程序中使用消息，你可以使用 `play.i18n.Messages` 类上的 `get()` 方法：
 
-```
+```scala
 Messages.get("welcome")
 ```
 
 默认情况下，Play 将使用当前请求的 `Accept-Language` 头部中指定的语言，或者默认使用应用程序配置中定义的语言。如果你愿意，可以覆盖你想使用的语言，如下：
 
-```
+```scala
 Messages.get(new Lang("fr"), "welcome")
 ```
 
 在模板中，你可以如下所示使用 `Messages` 类：
 
-```
-@
+```scala
+@(title: String = "Paperclips!")
 <h1>@Messages.get("welcome")</h1>
 ```
 
 在 Play 2.1 之前，为了让模板中的自动语言选择生效，你必须添加一个隐式参数以便请求可用。你可以这样这样做：
 
-```
-@(title:String = "Paperclips!") (implicit request: Request)
+```scala
+@(title: String = "Paperclips!") (implicit request: Request)
 <h1>@Messages.get("welcome")</h1>
 ```
 
@@ -6568,7 +5984,7 @@ validation.required={} is required
 
 你可以通过在调用 `Messages.get()` 时指定更多参数来替换这些内容：
 
-```
+```scala
 Messages.get("validation.required", "email")
 ```
 
@@ -6580,7 +5996,7 @@ shop.basketCount=Your cart (0,choice,0#is empty|1#has one item|1 < has 0 items).
 
 现在如果我们在模板中使用：
 
-```
+```scala
 <p>@Messages("shop.basket", 0)</p>
 <p>@Messages("shop.basket", 1)</p>
 <p>@Messages("shop.basket", 42)</p>
@@ -6594,13 +6010,13 @@ Your cart has one item.
 Your cart has 42 items.
 ```
 
-通过这种方式，你可以实现与其语言不同的高级格式化，并且与应用程序逻辑解耦。有关 `Message-Format` 的更多可能性，请参阅 Java SE API 文档。
+通过这种方式，你可以实现与其语言不同的高级格式化，并且与应用程序逻辑解耦。有关 `MessageFormat` 的更多可能性，请参阅 Java SE API 文档。
 
 ## 8.7 总结
 
-在本章中，我们看到 Play 了一了一个基于 Scala 的类型安全模板引擎。这种类型安全的模板引擎帮助你编写更健壮的模板，让你更有信心认为在重构后一切仍将按预期工作。在...之上
+在本章中，我们看到 Play 提供了一个基于 Scala 的类型安全模板引擎。这种类型安全的模板引擎帮助你编写更健壮的模板，让你更有信心认为在重构后一切仍将按预期工作。
 
-模板语法非常简洁：`#` 字符是特殊字符。模板中引用的任何值实际上都解析为一个对象，你可以对其调用方法。如果你尝试使用不存在的值或方法，Play 将准确地告诉你错误是什么以及错误在哪里。
+模板语法非常简洁：`@` 字符是特殊字符。模板中引用的任何值实际上都解析为一个对象，你可以对其调用方法。如果你尝试使用不存在的值或方法，Play 将准确地告诉你错误是什么以及错误在哪里。
 
 模板被编译为类，我们已经看到了如何通过组合从可重用的组件编译复杂的页面。
 
@@ -6610,15 +6026,17 @@ Your cart has 42 items.
 
 在下一章中，我们将更紧密地查看 Play 2 提供的高级异步功能。
 
-# 第 3 部分
+# 第 3 部分：高级主题
 
-# 高级主题
+第 3 部分涵盖了 Play 中的高级功能。这里介绍的技巧通常不是创建基础 Play Web 应用所必需的，但它们可以使你的应用程序更好。
 
-第 3 部分涵盖了 Play 中的高级功能。这里介绍的技巧通常不是创建基础 Play Web 所必需的，但它们可以使你的应用程序更好。
 
-第 9 章关于 Play 较强大的功能之一：异步请求处理。它解释了为什么耗时任务在“后台”执行更好，以及如何轻松地实现这一点。它还展示了如何使用 WebSockets 或 Comet 构建具有流式数据的 Web 应用程序。
 
-第 10 章解释了如何在 Play 中构建一个安全的应用程序。它解释了你如何避免常见的安全问题，以及如何使用过滤器（filters）来实现身份验证。
+# 第 9 章 异步数据
+
+第 9 章关于 Play 较强大的功能之一：异步请求处理。它解释了为什么耗时任务在“后台”执行更好，以及如何轻松地实现这一点。它还展示了如何使用 `WebSockets` 或 `Comet` 构建具有流式数据的 Web 应用程序。
+
+第 10 章解释了如何在 Play 中构建一个安全的应用程序。它解释了你如何避免常见的安全问题，以及如何使用过滤器（`filters`）来实现身份验证。
 
 第 11 章涵盖了 Play 的构建过程。它解释了配置文件，并向你展示如何将代码封装在可重用的模块中。最后，它展示了将应用程序投入生产环境涉及的内容。
 
@@ -6631,40 +6049,34 @@ Your cart has 42 items.
 - 异步处理数据
 - 调度异步任务
 - 流式响应
-- 使用 Comet 进行单向通信
-- 使用 WebSocket 进行双向通信
+- 使用 `Comet` 进行单向通信
+- 使用 `WebSocket` 进行双向通信
 
-在本章中，我们将学习如何异步处理数据以及如何调度任务。首先，我们将熟悉异步数据背后的原理以及它为什么有用。处理数据的目标之一是允许应用程序扩展到数千个并发连接。然后我们将学习一种较旧且广泛使用的协议：Comet。最后我们将以 WebSocket 结束，它是处理数据的一种标准。这是一个很长的章节，我们将涵盖 Play 的大部分方面。但由于这是 Play 的一项功能，它是值得的。在开始之前，对异步数据的简单介绍是有用的。
+在本章中，我们将学习如何异步处理数据以及如何调度任务。首先，我们将熟悉异步数据背后的原理以及它为什么有用。处理数据的目标之一是允许应用程序扩展到数千个并发连接。然后我们将学习一种较旧且广泛使用的协议：`Comet`。最后我们将以 `WebSocket` 结束，它是处理数据的一种标准。这是一个很长的章节，我们将涵盖 Play 的大部分方面。但由于这是 Play 的一项功能，它是值得的。在开始之前，对异步数据的简单介绍是有用的。
 
 ## 什么是异步数据？
 
-传统的 框架使用“调用并返回”，称为同步处理。这意味着客户端调用服务并停止；等待服务完成任务后才继续。如果客户端代码没有其他可做，这将运行客户端的系统造成负担，让代码一直留在内存中。例如，假设你正在请求显示报告。生成报告是非常耗时的。同步处理如图 9.1 所示。
+传统的框架使用“调用并返回”，称为同步处理。这意味着客户端调用服务并停止；等待服务完成任务后才继续。如果客户端代码没有其他可做，这将运行客户端的系统造成负担，让代码一直留在内存中。例如，假设你正在请求显示报告。生成报告是非常耗时的。同步处理如图 9.1 所示。
 
 相比之下，如果我们把密集型处理委托给另一个子系统，我们的框架就有更多时间响应其他客户端或做其他事情。例如，我们可以调用一个服务计算报告，另一个时间计算另一个报告。这两个报告可以并行执行而不是顺序执行。这种情况被称为异步处理。你可以将其想象为客户端向服务发送消息，然后执行其他工作。服务完成其工作，完成后，它向客户端发送响应。
 
-
-
-
-
-# 处理异步数据
+### 9.2 处理异步数据
 
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_231_0.png)
 
-会阻塞 Play 应用程序的 Akka 组件（Akka 线程池已饱和）并阻碍应用程序的响应能力。因此，我们需要确保正在使用 Play 的异步特殊功能，这些功能将在下一节中解释。
+会阻塞 Play 应用程序的 `Akka` 组件（`Akka` 线程池已饱和）并阻碍应用程序的响应能力。因此，我们需要确保正在使用 Play 的异步特殊功能，这些功能将在下一节中解释。
 
-## 9.2 处理异步数据
-
-让我们来看异步编程在 Play 应用程序中实际是如何工作的示例。我们的仓库应用程序需要一个仪表板。仪表板包含几份显示当前仓库性能的报告（也称为性能指标或 KPI）。这些报告的计算非常耗时。因此，并行执行它们会好得多。图 9.3 显示了我们想要的目标。
+让我们来看异步编程在 Play 应用程序中实际是如何工作的示例。我们的仓库应用程序需要一个仪表板。仪表板包含几份显示当前仓库性能的报告（也称为性能指标或 `KPI`）。这些报告的计算非常耗时。因此，并行执行它们会好得多。图 9.3 显示了我们想要的目标。
 
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_231_1.png)
 
 图 9.3 Play 中的并行执行
 
-### 9.2.1 处理异步请求
+#### 9.2.1 处理异步请求
 
-让我们看看如何从请求中并行计算两个报告。在我们的项目中创建一个 Reports 控制器和一个 Report 模型。以下列表显示了在何创建文件。
+让我们看看如何从请求中并行计算两个报告。在我们的项目中创建一个 `Reports` 控制器和一个 `Report` 模型。以下列表显示了在何创建文件。
 
-# 列表 9.1 项目目录结构
+##### 列表 9.1 项目目录结构
 
 ```
 app
@@ -6678,11 +6090,11 @@ conf
   test
 ```
 
-Report 模型非常简单，由执行某些计算组成。以下列表显示了如何模拟报告生成。
+`Report` 模型非常简单，由执行某些计算组成。以下列表显示了如何模拟报告生成。
 
-# 列表 9.2 模拟报告生成的模型
+##### 列表 9.2 模拟报告生成的模型
 
-```
+```java
 package models;
 import play.Logger;
 
@@ -6710,15 +6122,15 @@ public class Report {
 }
 ```
 
-Report 模型非常直观，包含一个报告名称和一个用于模拟报告生成的 `execute()` 方法。
+`Report` 模型非常直观，包含一个报告名称和一个用于模拟报告生成的 `execute()` 方法。
 
-如你所知，action 方法必须返回一个 Result。为了实现异步化，我们需要返回一个 Promise (`Promise<Result>`)。Promise 是对执行或不做某事的承诺。`Promise<Result>` 最终将用类型为 `Result` 的值兑现。通过提供 `Promise<Result>` 而不是普通结果，我们能够在不阻塞任何内容的情况下计算结果。Play 将 Promise 兑现后提供此结果。
+如你所知，action 方法必须返回一个 `Result`。为了实现异步化，我们需要返回一个 `Promise` (`Promise<Result>`)。`Promise` 是对执行或不做某事的承诺。`Promise<Result>` 最终将用类型为 `Result` 的值兑现。通过提供 `Promise<Result>` 而不是普通结果，我们能够在不阻塞任何内容的情况下计算结果。Play 将 `Promise` 兑现后提供此结果。
 
-异步执行代码块并获取 Promise 的简单方法是使用 `play.libs.Akka` 辅助类，如列表 9.3 所示。要异步运行代码，只需要实现 `Callable` 接口。你也可以查看在其他服务器线程上执行代码段的 Akka 辅助类，但那是另一个话题。你可以在 Manning 出版的优秀书籍中找到关于该主题的更多信息。
+异步执行代码块并获取 `Promise` 的简单方法是使用 `play.libs.Akka` 辅助类，如列表 9.3 所示。要异步运行代码，只需要实现 `Callable` 接口。你也可以查看在其他服务器线程上执行代码段的 `Akka` 辅助类，但那是另一个话题。你可以在 Manning 出版的优秀书籍中找到关于该主题的更多信息。
 
-## 9.3 并行执行报告生成的控制器
+##### 列表 9.3 并行执行报告生成的控制器
 
-```
+```java
 package controllers;
 
 import models.Report;
@@ -6734,144 +6146,110 @@ import views.html.*;
 
 public class Reports extends Controller {
     public static Result index() {
-```
+        Promise<Report> promiseOfEKPIReport = play.libs.Akka.future(new Callable<Report>() {
+            public Report call() {
+                return intensiveEKPIReport();
+            }
+        });
+        Promise<Report> promiseOfETAREport = play.libs.Akka.future(new Callable<Report>() {
+            public Report call() {
+                return intensiveETAREport();
+            }
+        });
+        Promise<List<Report>> promises = Promise.waitAll(promiseOfEKPIReport, promiseOfETAREport);
+        return async(promises.map(
+            new Function<List<Report>, Result>() {
+                public Result apply(List<Report> reports) {
+                    return ok(report.render(reports));
+                }
+            }
+        ));
+    }
 
-```java
-Promise<Report> promiseOfEKPIReport = play.libs.Akka.future(new Callable<Report>() {
-public Report call() {
-    return intensiveEKPIReport();
-});
-Promise<Report> promiseOfETAREport = play.libs.Akka.future(new Callable<Report>() {
-public Report call() {
-    return intensiveETAREport();
-});
-Promise<List<Report>> promises = Promise.waitAll(promiseOfEKPIReport, promiseOfETAREport);
-return async();
+    public static Report intensiveKPIReport() {
+        Report r = new Report("KPI report");
+        r.execute();
+        return r;
+    }
+
+    public static Report intensiveETARport() {
+        Report r = new Report("ETA report");
+        r.execute();
+        return r;
+    }
+}
 ```
 
 > 表示此报告异步运行
-
+>
 > 表示我们想要返回一个稍后将计算的结果
+>
+> 表示我们希望报告生成的结果位于 `Promise` 中
 
-> 表示我们希望报告生成的结果位于 Promise 中
+一旦我们得到了结果，我们就会返回一个 `Result`。渲染报告。视图将在稍后创建。
 
-2 Akka in Action, http://www.manning.com/roostenberg/ 由 Raymond Roostenberg, Rob Bakker, 和 Rob Williams 编写。
+前面的代码需要仔细的解释。首先，我们封装了每个异步运行报告生成代码块（使用 `Callable` 实现）。然后我们告诉程序，在返回结果之前，我们需要等待报告生成。使用 `Promise` 对象允许不等待报告处理完成。`Promise` 兑现后 Play 会提供结果。
 
-# 第 9 章 异步数据
-
-一旦我们得到了结果，我们就会返回一个 Result
-
-```
-promises.map(
-    new Function<List<Report>, Result>()() {
-        public Result ok(List<Report> reports) {
-            return ok(report.render(reports));
-        }
-    }
-);
-public static Report ReportintensiveKPIRport() {
-    Report r = new Report("KPI report");
-    r.execute();
-    return r;
-}
-
-public static ReportintensiveETARport() {
-    Report r = new Report("ETA report");
-    r.execute();
-    return r;
-}
-```
-
-渲染报告。视图将在稍后创建。
-
-前面的代码需要仔细的解释。首先，我们封装了每个异步运行报告生成代码块（使用 `Callable` 实现）。然后我们告诉程序，在返回结果之前，我们需要等待报告生成。使用 `Promise` 对象允许不等待报告处理完成。Promise 兑现后 Play 会提供结果。
-
-### 9.2.2 返回异步结果
+#### 9.2.2 返回异步结果
 
 你可能注意到，我们使用以下代码来返回异步结果：
 
-```
+```java
 Promise<List<Report>> promises = Promise.waitAll(promiseOfEKPIReport, promiseOfETAREport);
-return async();
+return async(promises.map(
+    new Function<List<Report>, Result>() {
+        public Result apply(List<Report> reports) {
+            return ok(report.render(reports));
+        }
+    }
+));
 ```
 
-异步执行一个代码块并获取 Promise 的简单方法是使用 `play.libs.Akka` 辅助类，如列表 9.3 所示。要异步运行代码，只需要实现 `Callable` 接口。你也可以查看在其他服务器线程上执行代码段的 Akka 辅助类，但那是另一个话题。你可以在 Manning 出版的优秀书籍中找到关于该主题的更多信息。
-
-# 处理异步数据
-
-# 213
-
-时间
+异步执行一个代码块并获取 `Promise` 的简单方法是使用 `play.libs.Akka` 辅助类，如列表 9.3 所示。要异步运行代码，只需要实现 `Callable` 接口。你也可以查看在其他服务器线程上执行代码段的 `Akka` 辅助类，但那是另一个话题。你可以在 Manning 出版的优秀书籍中找到关于该主题的更多信息。
 
 ![](img/1f90c92b70e5931c18b6f9f04c8da72e_235_0.png)
 
 图 9.4 事件序列
 
-一旦 Promise 兑现，我们就会返回一组新生成的报告。
+一旦 `Promise` 兑现，我们就会返回一组新生成的报告。
 
 注意的是，报告生成同时开始并同时结束。它们是并行执行的，而不是顺序执行。图 9.5 显示了报告生成后应用程序的界面。
 
 我们现在能够异步的方式执行任务。让我们看看如何调度任务。
 
-## 9.3 调度异步任务
+### 9.3 调度异步任务
 
-在 Play 中，你可以使用 Akka 调度重复任务，通过通过一个 actor 或传递一个 `Runnable` 类。例如，每五秒向默认 actor 发送订单：
+在 Play 中，你可以使用 `Akka` 调度重复任务，通过一个 `actor` 或传递一个 `Runnable` 类。例如，每五秒向默认 `actor` 发送订单：
 
 ```java
 Akka.system().scheduler().schedule(
-Duration.create(4, SECONDS),
-Duration.create(5, SECONDS),
-defaultActor,
-new Order(),
-Akka.system().dispatcher(),
-null
+    Duration.create(4, SECONDS),
+    Duration.create(5, SECONDS),
+    defaultActor,
+    new Order(),
+    Akka.system().dispatcher(),
+    null
 );
 ```
 
-# 214 第 9 章 异步数据
+`Akka.system().scheduler()` 允许我们调度后台任务；该任务在初始化四秒后开始，并每五秒执行一次。每隔五秒，我们会向默认 `actor` 发送一个新的订单（`Order`）。解释 `actor` 是本书的主题，但 `actor` 可以被视为一种活动对象的形式，调用方法对应于发送消息。你可以在 Manning 出版的优秀著作《Akka in Action》中读到更多关于 `actor` 和 `Akka` 的知识。
 
-```
-[info] play - database [default] connected to jdbc:h2:mem
-play - Application started (Dev)
-application - starting intensive KPI report at 138609106439
-application - starting intensive ETA report at 138609106439
-application - done with intensive ETA report at 138609111444
-application - done with intensive KPI report at 138609111444
-application - took 5s application - took 5s
-```
-
-Report ETA 开始
-Report KPI 结束
-Report KPI 开始
-Report ETA 结束
-
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_236_0.png)
-
-图 9.5 报告生成后应用程序截图
-
-
-
-
-
-# 流式 HTTP 响应
-
-Akka.system.scheduler 允许我们调度后台任务；该任务在初始化四秒后开始，并每五秒执行一次。每隔五秒，我们会向默认 actor 发送一个新的订单（Order）。解释 actor 是本书的主题，但 actor 可以被视为一种活动对象的形式，调用方法对应于发送消息。你可以在 Manning 出版的优秀著作《Akka in Action》³ 中读到更多关于 actor 和 Akka 的知识。
-
-除了 actor，你还可以使用实现 `Runnable` 接口的类并将业务逻辑放在 `run()` 方法中：
+除了 `actor`，你还可以使用实现 `Runnable` 接口的类并将业务逻辑放在 `run()` 方法中：
 
 ```java
 Akka.system().scheduler().schedule(
-  Duration.create(10, TimeUnit.SECONDS),
-  new Runnable() {
-    public void run() {
-      // 在此处编写你的业务逻辑。
+    Duration.create(10, TimeUnit.SECONDS),
+    new Runnable() {
+        public void run() {
+            // 在此处编写你的业务逻辑。
+        }
     }
-});
+);
 ```
 
 让我们看看 Play 是如何响应客户端的，以及 Play 如何向其客户端流式传输大量数据。
 
-## 9.4 流式 HTTP 响应
+### 9.4 流式 HTTP 响应
 
 正如我们在前面的章节中看到的，在接收并解析请求消息后，Play 会用一个 HTTP 响应消息进行响应。
 
@@ -6879,23 +6257,9 @@ Akka.system().scheduler().schedule(
 
 在开始处理快速订单之前，让我们回顾一下使用 Play 返回数据的不同方法，并从技术角度来看流式数据传输有何不同。
 
-### 9.4.1 标准响应和 Content-Length 头部
+#### 9.4.1 标准响应和 Content-Length 头部
 
 当你发送标准的（非流式的）HTTP 响应时，Play 会自动随响应发送相应的 `Content-Length` 头部，一旦响应中的所有字节传输完毕，客户端和服务器之间的连接就会关闭。为了实现这一功能，Play 需要在开始响应之前知道响应的全部内容。
-
-> ³ Akka in Action, http://www.manning.com/roestenburg 由 Raymond Roostenburg, Rob Bakker 和 Rob Williams 编写。
-
-## 当前订单
-
-准备所有订单
-
-| 订单 ID |
-| :--- |
-| 订单 221862654 |
-| 订单 1068025170 |
-| 订单 683713848 |
-
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_238_0.png)
 
 例如，以下代码向客户端返回“Hello World”消息：
 
@@ -6911,7 +6275,7 @@ public static Result index() {
 
 这种方法的另一个问题是，整个响应必须加载到内存中——如果响应很大（例如传输文件时），可能会出现问题。
 
-## 9.4.2 提供文件
+#### 9.4.2 提供文件
 
 Play 能够向 Web 客户端流式传输文件，而无需将文件内容加载到内存中。如果采用之前的报告示例，或者报告计算完成，我们可以轻松地将计算出的报告作为 PDF 文件发送：
 
@@ -6927,11 +6291,11 @@ public static Result retrievePdf(String reportId) {
 
 我们刚刚看到如何通过固定大小的响应向 Web 客户端流式传输大文件。让我们看看如何将序列化数据流回给客户端。
 
-### 9.4.3 分块响应
+#### 9.4.3 分块响应
 
 我们的应用示例需要流式传输快速订单。没有预定义的内容长度；它实际上可能是无限的：对于这种响应，我们使用分块传输编码（chunked transfer encoding），Play 提供了完全支持。
 
-顾如名，分块传输编码将响应分成多个块发送。其工作原理是，当可用合理数量的字节时，这些数据块就会被发送。服务器首先发送下一个块的大小，然后是块本身。重复此过程，直到响应完成。
+顾名思义，分块传输编码将响应分成多个块发送。其工作原理是，当可用合理数量的字节时，这些数据块就会被发送。服务器首先发送下一个块的大小，然后是块本身。重复此过程，直到响应完成。
 
 这种方法的优点是，我们可以在数据可用时提供实时服务。缺点是，由于 Web 浏览器不知道内容的大小，它无法显示正确的下载进度条，但这对于我们的快速订单来说并不是问题。
 
@@ -6946,7 +6310,9 @@ public static Result index() {
 
 这要求我们实现快速订单服务以返回一个 `InputStream`。快速订单在输入后立即被写入输入流。
 
-另一个（（的）替代方案是实现你自己的分块响应构建器。Play Java API 同时支持文本和二进制分块（通过 `String` 和 `byte[]`）。列表 9.5 显示了我们 `Applicationjava` 控制器中的 `liveUpdate()` 方法。
+
+
+另一个替代方案是实现你自己的分块响应构建器。Play Java API 同时支持文本和二进制分块（通过 `String` 和 `byte[]`）。列表 9.5 显示了我们 `Application.java` 控制器中的 `liveUpdate()` 方法。
 
 > 列表 9.5 流式传输快速订单：Application 控制器
 
@@ -6963,15 +6329,11 @@ public static Result liveUpdate() {
         response().setContentType("text/html;charset=UTF-8");
     }
 
-on(chunks);
+    on(chunks);
 }
 ```
 
 # 第 9 章 异步数据
-
-
-
-
 
 ## 使用 Comet 进行单向通信
 
@@ -6995,7 +6357,7 @@ Comet socket 只是只包含 HTML `<script>` 元素的分块文本。在每个�
 
 我们需要更改视图以反映我们新的 Comet 实现。让我们编辑 `comet.html` 文件。列表 9.9 显示了新的视图。
 
-### 列表 9.9 Comet 客户端端实现（我们的视图）
+### 列表 9.9 Comet 客户端实现（我们的视图）
 
 ```java
 @main("Comet") {
@@ -7006,14 +6368,14 @@ Comet socket 只是只包含 HTML `<script>` 元素的分块文本。在每个�
 }
 ```
 
-对于我们收到的每个分块，我们将订单添加到 ID 为 `container` 的 div 中。`<script>` 标签引用了父 jQuery 函数。由于 iframe 接收了 `liveUpdate` 动作方法，用户会将 Comet 视为普通的普通的 页面。我们现在需要用以下路由更新我们的路由文件：
+对于我们收到的每个分块，我们将订单添加到 ID 为 `container` 的 div 中。`<script>` 标签引用了父 jQuery 函数。由于 iframe 接收了 `liveUpdate` 动作方法，用户会将 Comet 视为普通的页面。我们现在需要用以下路由更新我们的路由文件：
 
 ```java
 GET /live controllers.Application.index()
 GET /live-update controllers.Application.liveUpdate()
 ```
 
-如果你在 浏览器（http://localhost:9000/live）中运行它，你将看到订单显示在网页上。
+如果你在浏览器（http://localhost:9000/live）中运行它，你将看到订单显示在网页上。
 
 Play 提供了一个处理 Comet 分块流的辅助方法，其功能与我们刚刚编写的几乎相同。它确实做到了，通过为了浏览器兼容性推送初始空白数据，并支持 String 和 JSON 消息。让我们重写示例以使用 Comet（见列表 9.10）。
 
@@ -7051,7 +6413,7 @@ public class ExpeditedOrders extends UntypedActor {
 
 写入的标准技术是在 iframe 中加载一个无限的分块 Comet 响应，并使用回调调用带有 HTML 页面的父框架。我们将在接下来的列表中重写我们的 `comet.html` 视图：
 
-### 列表 9.12 客户端端 Comet 实现（我们的视图）
+### 列表 9.12 客户端 Comet 实现（我们的视图）
 
 ```html
 @(message: String)
@@ -7112,21 +6474,17 @@ public abstract void onReady(In<A> in, Out<A> out);
 
 这个方法是我们代码的入口。我们的动作方法必须返回一个实现了该方法的 WebSocket 结果。
 
-
-
-
-
 ## 使用 WebSockets 进行双向通信
 
 `In` 对象允许你为传入的事件添加处理器。为了处理客户端消息，你可以通过提供回调处理器来使用以下两个方法：
 
-- *onMessage()*—当客户端发送消息时，该方法会调用提供的处理器。
-- *onClose()*—当客户端关闭与服务器的连接时，该方法会调用提供的处理器。
+- `onMessage()`——当客户端发送消息时，该方法会调用提供的处理器。
+- `onClose()`——当客户端关闭与服务器的连接时，该方法会调用提供的处理器。
 
 要向客户端发送消息，需要实现以下方法：
 
-- *write*—向客户端发送消息。
-- *close*—关闭与客户端的连接。
+- `write`——向客户端发送消息。
+- `close`——关闭与客户端的连接。
 
 消息的类型为 `String` 类型或 `byte[]` 类型。WebSocket 可以访问请求头（来自启动 WebSocket 连接的 HTTP 请求），允许你检索标准头和会话数据。但它无法访问任何请求体，也无法访问 HTTP 响应。一旦 WebSocket 准备就绪，你就会同时获得输入和输出通道。
 
@@ -7136,26 +6494,26 @@ public abstract void onReady(In<A> in, Out<A> out);
 
 ```java
 public static WebSocket<String> hello() {
-    return new WebSocket<String>()() {
+    return new WebSocket<String>() {
 
-    public void onReady(WebSocket.In<String> in,
-        WebSocket.Out<String> out) {
-        in.onMessage(new Callback<String>() {
-            public void onInvoke(Event event) {
-                System.out.println("event");
-            }
-        });
+        public void onReady(WebSocket.In<String> in,
+            WebSocket.Out<String> out) {
+            in.onMessage(new Callback<String>() {
+                public void onInvoke(Event event) {
+                    System.out.println("event");
+                }
+            });
 
-        in.onClose(new Callback() {
-            public void onInvoke() {
-                System.out.println("Disconnected");
-            }
-        });
+            in.onClose(new Callback() {
+                public void onInvoke() {
+                    System.out.println("Disconnected");
+                }
+            });
 
-        out.write("Hello client!");
-    }
-
-};
+            out.write("Hello client!");
+        }
+    };
+}
 ```
 
 Play 服务端的实现非常直观。唯一棘手的部分在于添加 `Callback` 处理器：它们是你需要实现的接口。列表 9.14 显示了客户端的实现。编辑新的 `index.html` 视图，并将列表内容添加到视图中。
@@ -7188,9 +6546,12 @@ Play 服务端的实现非常直观。唯一棘手的部分在于添加 `Callbac
 
 最后一点，为了完成我们的示例，我们需要为我们的 `hello()` 操作方法添加一条规则。在路由文件中添加以下行：
 
+```java
 GET /hello controllers.Application.hello()
+```
 
-现在，如果你将浏览器指向 http://localhost:9000/，你应该应该在控制台中看到如图 9.10 所示的输出。
+现在，如果你将浏览器指向 http://localhost:9000/，你应该在控制台中看到如图 9.10 所示的输出。
+
 查看你的浏览器控制台，你会看到与图 9.11 相同的输出。
 
 ```
@@ -7217,25 +6578,30 @@ Hello server
 
 ### 列表 9.15 我们的应用程序服务端
 
+
+
 ```java
 public static WebSocket<String> liveUpdate() {
     return new WebSocket<String>() {
+        // 当 WebSocket 握手完成时调用
+        public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out) {
+            // 对于 socket 上收到的每个事件
+            in.onMessage(new Callback<String>() {
+                public void invoke(String event) {
+                    ExpeditedOrders.notifyOthers(out, event + " is processed");
+                }
+            });
 
-    // 当 WebSocket 握手完成时调用
-    public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out) {
-        // 对于 socket 上收到的每个事件
-        public void onMessage(Callback<String> event) {
-            ExpeditedOrders.notifyOthers(out, event + " is processed");
+            // 当 socket 关闭时
+            in.onClose(new Callback() {
+                public void invoke() {
+                    ExpeditedOrders.unregister(out);
+                }
+            });
         }
-
-        // 当 socket 关闭时
-        in.onClose(new Callback() {
-            public void invoke() {
-                ExpeditedOrders.unregister(out);
-            }
-        });
     };
-ExpeditedOrders.register(out);
+    ExpeditedOrders.register(out);
+}
 ```
 
 这段代码与我们之前看到的非常相似；当 socket 准备就绪时，我们开始监听事件。对于每个传入的事件，我们使用 `ExpeditedOrders` 对象来跟踪客户端的连接，注册其 `WebSocket.Out` 对象。让我们现在看看 `ExpeditedOrders` 对象如何通知其他客户端，如列表 9.16 所示。
@@ -7243,10 +6609,10 @@ ExpeditedOrders.register(out);
 ### 列表 9.16 通知我们的客户端
 
 ```java
-public class ExpedOrders extends UntypedActor {
+public class ExpeditedOrders extends UntypedActor {
     static List<WebSocket.Out<String>> members = new ArrayList<>();
 
-    static ActorRef defaultActor = Akka.system().actorOf(new Props(ExpeditedOrders));
+    static ActorRef defaultActor = Akka.system().actorOf(new Props(ExpeditedOrders.class));
 
     static {
         Akka.system().scheduler().schedule(
@@ -7280,7 +6646,7 @@ public class ExpedOrders extends UntypedActor {
     }
 
     public void onReceive(Object message) throws Exception {
-        Order order = (Order)message;
+        Order order = (Order) message;
         notifyAll(order.toString());
     }
 }
@@ -7288,7 +6654,7 @@ public class ExpedOrders extends UntypedActor {
 
 你会发现列表 9.16 与 Comet `ExpeditedOrders` 实现相似。我们有两个方法：一个通知所有客户端 (`notifyAll()`)，另一个通知其他客户端 (`notifyOthers()`)。后者在我们被通知有客户端领取订单时使用。毕竟，我们只需要通知其他客户端订单正在处理中。
 
-每五秒，`onReceived()` 方法就会带有一个新的 `Order` 参数被调用。然后我们使用 `notifyAll()` 方法通知所有客户端已发送新订单。
+每五秒，`onReceive()` 方法就会带有一个新的 `Order` 参数被调用。然后我们使用 `notifyAll()` 方法通知所有客户端已发送新订单。
 
 ![](img/1f90c2b70e5931c18bf9f04c8da72e_251_0.png)
 
@@ -7296,25 +6662,25 @@ public class ExpedOrders extends UntypedActor {
 
 每当用户点击订单时，`notifyOthers()` 方法就会被调用，信号服务器特定客户端正在处理订单。随后调用 `onMessage()` 方法。反之，它调用 `ExpeditedOrders` 对象的 `notifyOthers()` 方法。图 9.12 说明了事件的顺序。
 
-注意的是，WebSocket 协议是双向的，允许客户端向 Web 服务器发送消息（使用 Comet 协议）。以下列出了客户端的实现，以便在客户端发送和接收消息。
+值得注意的是，WebSocket 协议是双向的，允许客户端向 Web 服务器发送消息（使用 Comet 协议）。以下列出了客户端的实现，以便在客户端发送和接收消息。
 
 ### 列表 9.17 我们的应用程序的客户端 WebSocket 部分
 
+```html
 @(message: String)
 
-```html
 @main(message) {
 <script type="text/javascript" charset="utf-8">
 $(function() {
-  var WS = window['WebSocket'] ? WebSocket : WebSocket
-  var socket = new WS(`/routes.Application.liveUpdate.websocketURL(request)`);
+  var WS = window['WebSocket'] ? WebSocket : WebSocket;
+  var socket = new WS(`@routes.Application.liveUpdate.websocketURL(request)`);
   var sendMessage = function() {
-    socket.send($(this).text);
+    socket.send($(this).text());
     $(this).css("background-color", "#EEE");
   }
 
-  var receiveEvent = function () {
-    var a = $("<a href="#">" + event.data + "</a>").append("#container");
+  var receiveEvent = function (event) {
+    var a = $("<a href='#'>" + event.data + "</a>").appendTo("#container");
     if (event.data.match(/processed/g)) {
       a.css("background-color", "#EEE");
     } else {
@@ -7322,35 +6688,27 @@ $(function() {
     }
   }
 
-  socket.onmessage = receiveEvent
+  socket.onmessage = receiveEvent;
 });
-}
-```
-
-
-
-
-230 第 9 章 异步数据
-
-```javascript
-));
 </script>
+</div>
 <div class="hero-unit">
 <h1>当前订单</h1>
 <p>准备好它们！</p>
 </div>
 <ul id="container" class="nav nav-tabs-stacked">
-</ul
-{
+</ul>
+}
 ```
 
-这种客户端实现非常直观。我们有两个函数：每次接收到消息时触发的 `socket.onMessage`，以及允许我们向 Web 服务器发送消息的 `socket.send`。
+这种客户端实现非常直观。我们有两个函数：每次接收到消息时触发的 `socket.onmessage`，以及允许我们向 Web 服务器发送消息的 `socket.send`。
 
-现在，打开两个浏览器，分别在它们中导航到 http://localhost:9000/live，并在其中一个浏览器中点击订单。你将在另一个浏览器中看到一条消息，指示订单已被取取并正在处理，如图 9.13 所示。
+现在，打开两个浏览器，分别在它们中导航到 `http://localhost:9000/live`，并在其中一个浏览器中点击订单。你将在另一个浏览器中看到一条消息，指示订单已被领取并正在处理，如图 9.13 所示。
 
 如你所见，WebSockets 易于使用，它们促进了客户端与服务器之间的实时通信，构建交互式 Web 应用变得更加容易。
 
 # 当前订单
+
 准备好它们！
 
 | 订单 | 日期 |
@@ -7376,17 +6734,17 @@ $(function() {
 
 在本章中，你学习了处理异步数据的高级技术。这是一个很长的章节，但你学到了很多东西。你了解了如何异步处理请求以及如何返回异步结果。异步结果允许你并发处理大量请求。当你必须处理多个数据源时，这一点非常重要。
 
-你还学习了如何流式传输数据，从文件等固定大小的数据到任意长度的响应。从那里开始，你学习了分块响应（chunked responses）的概念。为了更好地理解如何使用分块响应，你看到了关于它们在 Comet 协议中如何使用的演示。本章最后解释了较新的 WebSocket 协议以及如何在 Play 应用程序中使用它。
+你还学习了如何流式传输数据，从文件等固定大小的数据到任意长度的响应。从那里开始，你学习了分块响应的概念。为了更好地理解如何使用分块响应，你看到了关于它们在 Comet 协议中如何使用的演示。本章最后解释了较新的 WebSocket 协议以及如何在 Play 应用程序中使用它。
 
-在接下来的章节中，你将了解到 Play 的安全机制，并查看如何保护你的应用程序免安全。
+在接下来的章节中，你将了解到 Play 的安全机制，并查看如何保护你的应用程序免受攻击。
 
 # 安全
 
 # 本章涵盖
 
 - Play 安全概念
-- 使用过滤器（filters）添加基本身份认证
-- 使用 action 组合（action composition）进行细粒度认证
+- 使用过滤器添加基本身份认证
+- 使用 action 组合进行细粒度认证
 
 在本章中，我们首先查看 Play 2 的安全概念，以从开发者的角度理解安全应用程序意味着什么。我们将回顾我们的应用程序可能面临的各种攻击类型，以及 Play 2 提供的保护应用程序的工具。然后，我们将转向在应用程序中实际实现安全，使用过滤器进行基本认证和授权。该部分展示了低级框架的安全实现，当然 Play 提供了用于身份认证和授权的内置辅助方法。最后，我们将看到如何将这些辅助方法与 action 组合一起，为我们的应用程序添加更细粒的安全约束。
 
@@ -7396,23 +6754,7 @@ Web 应用程序框架旨在帮助开发者构建 Web 应用程序。其中一�
 
 总的来说，不存在这种“即插即用”的安全。安全性取决于使用框架的人，有时取决于开发方法。它还取决于 Web 应用程序环境的所有层级：后端存储、Web 服务器以及 Web 应用程序本身（可能还有其他层或应用程序）。
 
-据估计约 75% 的攻击发生在 Web 应用程序层。在 2004 年，一项研究发现 75% 的攻击发生在 Web 应用程序层（注：此处原文数据可能有重复或错误，已按原文翻译）。研究发现 75% 的攻击发生在... 
-
-总的来说，不存在这种“即插即用”的安全。安全性取决于使用框架的人，有时取决于开发方法。它还取决于 Web 应用程序环境的所有层级：后端存储、Web 服务器以及 Web 应用程序本身（可能还有其他层或应用程序）。
-
-据估计约 75% 的攻击发生在 Web 应用程序层。在 2004 年，一项研究发现 75% 的攻击发生在... 
-
-*(注：由于原文文本中存在大量重复段落，译文已遵循“不要重复输出原文”原则进行处理)*
-
-
-
-
-
-# Play 安全概念 235
-
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_257_0.png)
-
-图 10.2 弹出窗口：你好，用户
+据估计约 75% 的攻击发生在 Web 应用程序层。在 2004 年，一项研究发现 75% 的攻击发生在 Web 应用程序层。
 
 默认情况下，Play 2 会保护你免受跨站脚本攻击。由于某种原因，你可能想允许原始数据被渲染，这时你可以在模板中编写 `@Html` 指令。因此，按照我们之前的示例：
 
@@ -7422,9 +6764,13 @@ Web 应用程序框架旨在帮助开发者构建 Web 应用程序。其中一�
 
 用户将看到图 10.2 所示的弹出窗口。这就是为什么在模板中使用 `@Html` 指令时需要小心。
 
+![](img/1f90c92b70e5931c18b6f9f04c8da72e_257_0.png)
+
+图 10.2 弹出窗口：你好，用户
+
 ### 10.1.3 SQL 注入
 
-SQL 注入是一种利用手段，它通过使用用户输入来执行开发者并非本意执行的 SQL 查询。这可以用于破坏数据，或访问当前用户不应看到的数据。当你使用高层“find”方法时，你应该已经受到了防止 SQL 注入的保护。当你手动构建查询时，需要注意不要进行字符串拼接，而要正确使用查询占位符 (?) 并让底层持久化服务转义数据。
+SQL 注入是一种利用手段，它通过使用用户输入来执行开发者并非本意执行的 SQL 查询。这可以用于破坏数据，或访问当前用户不应看到的数据。当你使用高层“find”方法时，你应该已经受到了防止 SQL 注入的保护。当你手动构建查询时，需要注意不要进行字符串拼接，而要正确使用查询占位符 (`?`) 并让底层持久化服务转义数据。
 
 例如，JPA 风格，以下代码存在 SQL 注入风险：
 
@@ -7451,26 +6797,31 @@ JPA.em().createQuery("SELECT * from product where name = ?")
 
 在我们的情况下，这可能是指向我们仓库应用程序的链接。例如，你可能正在浏览一个聊天论坛，另一个用户 Bob 在那里发布了消息。假设 Bob 构建了一个 HTML 图像元素，引用了我们仓库网站上的某个操作（而不是图像文件）。
 
-### Bob 的帖子可能像这样：
+**Bob 的帖子可能像这样：**
 
 你好！看这里：
-<img src="http://paperclips.example.com/transfer?productId=l&to=Bob*">
 
-由于我们仓库应用程序的身份信息存储在 cookie 中，且 cookie 未过期，浏览器加载图像的尝试将提交带有 cookie 的产品表单，从而在未经原始用户许可的情况下授权了交易。Play 2 提供了一个简单的机制来防止请求伪造攻击；正确保护关键操作的唯一方法是发布身份验证令牌（authenticity token）。其核心是为给定用户生成一个唯一的令牌，并检查表单是否提交了相同的令牌。Play 2 提供了实现此操作的所有工具。
+```
+<img src="http://paperclips.example.com/transfer?productId=1&to=Bob">
+```
 
-我们将保护新的产品表单免受跨站请求伪造。为了实现这一点，我们必须启用特殊的过滤器（filter）。我们将在下一节详细介绍过滤器的所有内容。现在，为了启用过滤器，我们需要将该模块导入到我们的应用程序项目中。
+由于我们仓库应用程序的身份信息存储在 cookie 中，且 cookie 未过期，浏览器加载图像的尝试将提交带有 cookie 的产品表单，从而在未经原始用户许可的情况下授权了交易。Play 2 提供了一个简单的机制来防止请求伪造攻击；正确保护关键操作的唯一方法是发布身份验证令牌。其核心是为给定用户生成一个唯一的令牌，并检查表单是否提交了相同的令牌。Play 2 提供了实现此操作的所有工具。
+
+我们将保护新的产品表单免受跨站请求伪造。为了实现这一点，我们必须启用特殊的过滤器。我们将在下一节详细介绍过滤器的所有内容。现在，为了启用过滤器，我们需要将该模块导入到我们的应用程序项目中。
 
 这是通过编辑 `build.sbt` 文件实现的。以下显示了 `build.sbt` 所在的位置：
 
-- warehouse
-  - app
-  - conf
-  - public
-  - project
-  - test
-  - build.sbt
+```
+warehouse
+├── app
+├── conf
+├── public
+├── project
+├── test
+└── build.sbt
+```
 
-我们需要在 `build.sbt` 中添加过滤器模块。这在 `Application` 类的 `libraryDependencies` 部分可以轻松完成。
+我们需要在 `build.sbt` 中添加过滤器模块。这在 `libraryDependencies` 部分可以轻松完成。
 
 ### 列表 10.1 build.sbt
 
@@ -7478,8 +6829,8 @@ JPA.em().createQuery("SELECT * from product where name = ?")
 name := "warehouse"
 version := "1.0-SNAPSHOT"
 libraryDependencies := Seq(
-  Jdbc,
-  javabean,
+  jdbc,
+  javaJdbc,
   cache,
   "com.google.guava" % "guava" % "14.0",
   filters
@@ -7491,12 +6842,14 @@ play.JavaSettings
 
 我们还需要创建一个扩展 `GlobalSettings` 的新类 `Global.java`。以下显示了创建 `Global` 类的位置。
 
-- warehouse
-  - app
-  - conf
-  - project
-  - test
-  - Global.java
+```
+warehouse
+├── app
+├── conf
+├── project
+├── test
+└── Global.java
+```
 
 以下显示了我们 `Global.java` 中的 `filters()` 方法。
 
@@ -7505,20 +6858,43 @@ play.JavaSettings
 ```java
 import play.*;
 import play.api.mvc.EssentialFilter;
-import play.filters.csrf.CSRFFFilter;
+import play.filters.csrf.CSRFFilter;
 
 public class Global extends GlobalSettings {
   @Override
   public List<? extends EssentialFilter> filters() {
-    filters = List.of(new CSRFFFilter());
-    return filters;
+    return List.of(new CSRFFilter());
   }
 }
 ```
 
 ### Global 类是我们的应用程序入口点
 
-`Global` 类扩展了 `GlobalSettings`。它在应用程序周期期间调用方法，例如 `onStart`、`onStop`、`onError` 等。你可以查看 javadoc 类以获取更多信息。在我们的情况下，我们希望提供一个允许我们更改跨站伪造攻击的过滤器。我们需要修改产品表单以包含生成的令牌。修改位于 `app` 下的 `details.scala.html`。
+`Global` 类扩展了 `GlobalSettings`。它在应用程序周期期间调用方法，例如 `onStart()`、`onStop()`、`onError()` 等。你可以查看 javadoc 类以获取更多信息。在我们的情况下，我们希望提供一个允许我们更改跨站伪造攻击的过滤器。我们需要修改产品表单以包含生成的令牌。修改位于 `app` 下的 `details.scala.html`。
+
+```
+app
+├── controllers
+├── models
+```
+
+
+
+# Play 安全概念
+
+## 目录结构
+
+- products
+- conf
+- public
+- views
+- details.scala.html
+
+## 应用程序入口点
+
+我们的应用程序入口点是 `Global` 类。它在应用程序生命周期期间调用方法，例如 `onStart()`、`onStop()`、`onError()` 等。你可以查看 javadoc 类以获取更多信息。在我们的情况下，我们希望提供一个过滤器来允许我们处理跨站伪造攻击。我们需要修改产品表单以包含生成的令牌。修改位于 `app` 下的 `details.scala.html`。
+
+## 目录结构（app 目录下）
 
 - app
   - controllers
@@ -7529,60 +6905,46 @@ public class Global extends GlobalSettings {
   - views
   - details.scala.html
 
-我们的应用程序入口点是 `Global` 类。它在应用程序生命周期期间调用方法，例如 `onStart`、`onStop`、`onError` 等。你可以查看 javadoc 类以获取更多信息。在我们的情况下，我们希望提供一个过滤器来允许我们处理跨站伪造攻击。我们需要修改产品表单以包含生成的令牌。修改位于 `app` 下的 `details.scala.html`。
+---
 
-- app
-  - controllers
-  - models
-  - products
-  - conf
-  - public
-  - views
-  - details.scala.html
+# 10.1 安全概念
 
-我们的应用程序入口点是 `Global` 类。它在应用程序生命周期期间调用方法，例如 `onStart`、`onStop`、`onError` 等。你可以查看 javadoc 类以获取更多信息。在我们的情况下，我们希望提供一个过滤器来允许我们处理跨站伪造攻击。我们需要修改产品表单以包含生成的令牌。修改位于 `app` 下的 `details.scala.html`。
-
-*(注：由于原文后部分存在大量重复和乱码，翻译时已根据“不要重复输出”的原则进行了逻辑清理。)*
-
-[content]
-# Play 安全概念 235
-
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_257_0.png)
-
-图 10.2 弹出窗口：你好，用户
+## 10.1.1 跨站脚本攻击 (XSS)
 
 默认情况下，Play 2 会保护你免受跨站脚本攻击。由于某种原因，你可能想允许原始数据被渲染，这时你可以在模板中编写 `@Html` 指令。因此，按照我们之前的示例：
 
-```
+```scala
 @Html(product.description)
 ```
 
 用户将看到图 10.2 所示的弹出窗口。这就是为什么在模板中使用 `@Html` 指令时需要小心。
 
-### 10.1.3 SQL 注入
+![图 10.2 弹出窗口：你好，用户](img/1f90c92b70e5931c18b6f9f04c8da72e_257_0.png)
 
-SQL 注入是一种利用手段，它通过使用用户输入来执行开发者并非本意执行的 SQL 查询。这可以用于破坏数据，或访问当前用户不应看到的数据。当你使用高层“find”方法时，你应该已经受到了防止 SQL 注入的保护。当你手动构建查询时，需要注意不要进行字符串拼接，而要正确使用查询占位符 (?) 并让底层持久化服务转义数据。
+## 10.1.2 SQL 注入
+
+SQL 注入是一种利用手段，它通过使用用户输入来执行开发者并非本意执行的 SQL 查询。这可以用于破坏数据，或访问当前用户不应看到的数据。当你使用高层“find”方法时，你应该已经受到了防止 SQL 注入的保护。当你手动构建查询时，需要注意不要进行字符串拼接，而要正确使用查询占位符 (`?`) 并让底层持久化服务转义数据。
 
 例如，JPA 风格，以下代码存在 SQL 注入风险：
 
-```
-JPA.em().createQuery('select * from product where name=" + name);
+```java
+JPA.em().createQuery("select * from product where name=" + name);
 ```
 
 这意味着你可以插入以下名称：
 
-```
+```sql
 'nicol':drop table users;
 ```
 
 显然，这不是我们希望看到的。相反，你应该使用以下代码：
 
-```
+```java
 JPA.em().createQuery("SELECT * from product where name = ?")
-.setParameter(1, name);
+     .setParameter(1, name);
 ```
 
-### 10.1.4 跨站请求伪造
+## 10.1.3 跨站请求伪造 (CSRF)
 
 这种攻击方法的原理是将恶意代码或链接包含在已验证的用户查看的页面中。如果该 Web 应用程序的会话未超时，攻击者可能就会执行未经授权的命令。
 
@@ -7590,12 +6952,12 @@ JPA.em().createQuery("SELECT * from product where name = ?")
 
 ### Bob 的帖子可能像这样：
 
-你好！看这里：
-<img src="http://paperclips.example.com/transfer?productId=l&to=Bob*">
+> 你好！看这里：
+> `<img src="http://paperclips.example.com/transfer?productId=1&to=Bob">`
 
-由于我们仓库应用程序的身份信息存储在 cookie 中，且 cookie 未过期，浏览器加载图像的尝试将提交带有 cookie 的产品表单，从而在未经原始用户许可的情况下授权了交易。Play 2 提供了一个简单的机制来防止请求伪造攻击；正确保护关键操作的唯一方法是发布身份验证令牌（authenticity token）。其核心是为给定用户生成一个唯一的令牌，并检查表单是否提交了相同的令牌。Play 2 提供了实现此操作的所有工具。
+由于我们仓库应用程序的身份信息存储在 cookie 中，且 cookie 未过期，浏览器加载图像的尝试将提交带有 cookie 的产品表单，从而在未经原始用户许可的情况下授权了交易。Play 2 提供了一个简单的机制来防止请求伪造攻击；正确保护关键操作的唯一方法是发布身份验证令牌。其核心是为给定用户生成一个唯一的令牌，并检查表单是否提交了相同的令牌。Play 2 提供了实现此操作的所有工具。
 
-我们将保护新的产品表单免受跨站请求伪造。为了实现这一点，我们必须启用特殊的过滤器（filter）。我们将在下一节详细介绍过滤器的所有内容。现在，为了启用过滤器，我们需要将该模块导入到我们的应用程序项目中。
+我们将保护新的产品表单免受跨站请求伪造。为了实现这一点，我们必须启用特殊的过滤器。我们将在下一节详细介绍过滤器的所有内容。现在，为了启用过滤器，我们需要将该模块导入到我们的应用程序项目中。
 
 这是通过编辑 `build.sbt` 文件实现的。以下显示了 `build.sbt` 所在的位置：
 
@@ -7611,7 +6973,7 @@ JPA.em().createQuery("SELECT * from product where name = ?")
 
 ### 列表 10.1 build.sbt
 
-```
+```scala
 name := "warehouse"
 version := "1.0-SNAPSHOT"
 libraryDependencies := Seq(
@@ -7642,73 +7004,60 @@ play.JavaSettings
 ```java
 import play.*;
 import play.api.mvc.EssentialFilter;
-import play.filters.csrf.CSRFFFilter;
+import play.filters.csrf.CSRFFilter;
 
 public class Global extends GlobalSettings {
   @Override
   public List<? extends EssentialFilter> filters() {
-    filters = List.of(new CSRFFFilter());
-    return filters;
+    return List.of(new CSRFFilter());
   }
 }
-[/content]
+```
 
-*(注：由于原文后半部分存在大量重复和乱码，翻译时已根据“不要重复输出”的原则进行了逻辑清理。)*
+---
 
-对歉，由于你提供的原始文本后半部分出现了大量的重复和无意义的乱码，作为高级文档工程师，我已剔除了冗余内容，并对核心逻辑进行了准确翻译。以下是针对剩余有效部分的译文：
+# 10.2 使用过滤器添加基础身份认证
 
-[content]
-## 10.2 使用过滤器添加基础身份认证
-
-在本节中，我们将讨论过滤器，这是 Play 2 的一项功能。在下一节中，我们将看到如何使用它们。现在是时候保护我们的仓库应用程序并只允许选定的用户访问了。为了这一点，我们将实现基础身份认证。基础认证是简单且被所有浏览器支持的。当服务器要求用户进行认证时，会发送带有 `WWW-Authenticate` 头的 HTTP 401 Unauthorized 响应。基础认证的 `WWW-Authenticate` 头部通常如下：
+在本节中，我们将讨论过滤器，这是 Play 2 的一项功能。现在是时候保护我们的仓库应用程序并只允许选定的用户访问了。为了这一点，我们将实现基础身份认证。基础认证是简单且被所有浏览器支持的。当服务器要求用户进行认证时，会发送带有 `WWW-Authenticate` 头的 HTTP 401 Unauthorized 响应。基础认证的 `WWW-Authenticate` 头部通常如下：
 
 ```
 WWW-Authenticate: Basic realm="warehouse app"
 ```
 
-在客户端，当用户代理想要发送身份凭据时，可能会使用 `Authorization` 头部。该头部的构建如下：用户名和密码组合成一个字符串：username:password。
-
-生成的字符串使用 Base64 编码。然后在编码字符串之前放置认证方法和空格（例如 "Basic"）。如果用户代理使用 Nicolas 作为用户名，那么那么头部格式如下：
+在客户端，当用户代理想要发送身份凭据时，可能会使用 `Authorization` 头部。该头部的构建如下：用户名和密码组合成一个字符串：`username:password`。生成的字符串使用 Base64 编码。然后在编码字符串之前放置认证方法和空格（例如 "Basic"）。如果用户代理使用 Nicolas 作为用户名，那么头部格式如下：
 
 ```
-Authorization: bmljb2xhzppcG2FZQ==
+Authorization: Basic bmljb2xhzppcG2FZQ==
 ```
 
-10.3 总结了基础身份认证协议：我们需要检查每个传入请求的 `Authorization` 头部以查看客户端是否已授权。如果 `Authorization` 头部有值，我们需要对其进行解码并检查用户名和密码。我们在每个操作方法中这样做，但这并不方便，因为我们真的希望认证应用于整个应用程序。这正是过滤器的用武之地。过滤器本质上是应用到每个传入请求和/或响应的代码片段。过滤器在项目之间也是可复用的。这与在 `Global` 类中实现自定义代码并重写 `Request` 方法（该方法与过滤器同时被调用）实际上不同。
+总结了基础身份认证协议：我们需要检查每个传入请求的 `Authorization` 头部以查看客户端是否已授权。如果 `Authorization` 头部有值，我们需要对其进行解码并检查用户名和密码。我们在每个操作方法中这样做，但这并不方便，因为我们真的希望认证应用于整个应用程序。这正是过滤器的用武之地。过滤器本质上是应用到每个传入请求和/或响应的代码片段。过滤器在项目之间也是可复用的。这与在 `Global` 类中实现自定义代码并重写 `Request` 方法（该方法与过滤器同时被调用）实际上不同。
 
-
-
-作为提醒，当发出 HTTP 请求时，Play 2 会解析请求头。然后接收请求正体。接下来 Play 2 会解析正体，正如第 9 章所示。下一步是发送 HTTP 响应。HTTP 响应由一组响应头组成，随后是响应正体。过滤器（Filters）在 Play 2 解析完传入请求的 HTTP 头并解析完正体后立即运行。
+作为提醒，当发出 HTTP 请求时，Play 2 会解析请求头。然后接收请求正体。接下来 Play 2 会解析正体，正如第 9 章所示。下一步是发送 HTTP 响应。HTTP 响应由一组响应头组成，随后是响应正体。过滤器在 Play 2 解析完传入请求的 HTTP 头并解析完正体后立即运行。
 
 在 Play 2 中，过滤器更多地说是 Scala 的特性而非 Java 的特性。但在 Java 中创建过滤器仍然是可行的，尽管某些部分对于普通的 Java 开发者来说可能看起来很奇怪。让我们看看如何创建我们的基础身份验证过滤器。
 
 首先，我们需要在 `utils` 包中创建一个新的 `BasicAuthenticationFilter` 类：
 
-```java
-
-warehouse
-  app
-    utils
-      BasicAuthenticationFilter.java
-  conf
-  public
-  project
-  test
-```
+- warehouse
+  - app
+    - utils
+      - BasicAuthenticationFilter.java
+  - conf
+  - public
+  - project
+  - test
 
 过滤器实现了 `EssentialFilter` 接口。该接口只有一个方法，它接收一个 `EssentialAction` 并返回一个 `EssentialAction`。`EssentialAction` 是一个接口，本质上代表了需要发送回客户端的内容：HTTP 请求头和正体。例如，一个 OK 响应是一个 `EssentialAction`，其 HTTP 请求头响应码为 200，正体文本为 ok。在我们的情况下，过滤器允许将 `EssentialActions` 链到一段代码上。在我们的案例中，我们需要检查 `Authorization` 请求头，如果头中包含的用户名和密码有效，则继续下一个 `EssentialAction`。`EssentialActions` 是一个接一个链下去的——我们只需要实现我们的 `EssentialAction`。
 
-由于我们在 Java 中使用了 Scala，我们需要稍微调整代码。我们将深入研究 Play 2 的机制。要做的第一件事是创建一个抽象类，以便我们能够重用 Scala 函数并扩展 `EssentialAction` 接口。通过以下代码可以轻松实现。我们不会深入细节，但 `AbstractFunction` 是由 Scala 库提供的 Scala-Java 桥接。
+由于我们在 Java 中使用了 Scala，我们需要稍微调整代码。我们将深入研究 Play 2 的机制。要做的第一件事是创建一个抽象类，以便我们能够重用 Scala 函数并扩展 `EssentialAction` 接口。通过以下代码可以轻松实现。我们不会深入细节，但 `AbstractFunction1` 是由 Scala 库提供的 Scala-Java 桥接。
 
 ```java
-public abstract class JavaEssentialAction extends
-  AbstractFunction<RequestHandler, Iteratee<byte[], Result>>
-  implements EssentialAction
+public abstract class JavaEssentialAction extends AbstractFunction1<RequestHeader, Iteratee<byte[], Result>> implements EssentialAction {}
 ```
 
 我们现在准备好实现我们的 `BasicAuthenticationFilter` 了。下面的列表显示了我们基础身份验证过滤器的完整源代码。
 
-# 列表 10.3 BasicAuthenticationFilter.java
+### 列表 10.3 BasicAuthenticationFilter.java
 
 ```java
 package utils;
@@ -7719,114 +7068,82 @@ import play.api.libs.iteratee.Done;
 import play.api.mvc.*;
 import play.libs.Scala;
 import scala.Option;
-import scala.Tuple;
+import scala.Tuple2;
 import scala.collection.Seq;
 import scala.runtime.AbstractFunction1;
-import sun.misc.util.BASE64Decoder;
-
+import sun.misc.BASE64Decoder;
 import java.util.ArrayList;
 import java.util.List;
-```
 
-```java
 public class BasicAuthenticationFilter implements EssentialFilter {
 
     public BasicAuthenticationFilter() {
-        // 左空
+        // 留空
     }
 
+    @Override
     public EssentialAction apply(final EssentialAction next) {
+        // 实现 EssentialFilter 接口的唯一方法。让我们继续下一个操作（链式调用）。
+        return new JavaEssentialAction() {
+            @Override
+            public Iteratee<byte[], SimpleResult> apply(RequestHeader rh) {
+                // 调用 EssentialAction 的 apply 方法。该方法接收 RequestHeader 并以正体和 Result (Iteratee<byte[]>) 形式返回响应。
+                Option<String> authorization = rh.headers().get("Authorization");
+                if (authorization.isEmpty()) {
+                    return unauthorizedResponse();
+                }
 
-        return
-```
+                String auth = authorization.get();
+                // 如果我们有 Authorization 请求头，继续解码此内容
+                BASE64Decoder decoder = new BASE64Decoder();
+                try {
+                    String decoded = new String(decoder.decodeBuffer(auth.split(" ")[1]));
+                    String[] credentials = decoded.split(":");
+                    String username = credentials[0];
+                    String password = credentials[1];
 
-> 实现 EssentialFilter 接口的唯一方法。让我们继续下一个操作（链式调用）。
-
-```java
-new JavaEssentialAction()
-```
-
-> 实现 EssentialAction。（JavaEssentialAction 的 Scala 兼容版本）
-
-```java
-@Override
-public EssentialAction apply() {
-    return next.apply(rh);
-}
-```
-
-> 调用 EssentialAction 的 apply 方法。该方法接收 RequestHeader 并以正体和 Result (Iteratee<byte[]>) 形式返回响应。
-
-```java
-@Override
-public Iteratee<byte[]>, SimpleResult> apply(RequestHeader rh) {
-    Option<String> authorization=rh.headers().get("authorization");
-    if (authorization.isEmpty()) {
-        String auth=authorization.get();
-        BASE64Decoder decoder=new BASE64Decoder();
-        String pass=auth.split("(":")[1];
-        try {
-            String[] pass=new String(decoder.decode(pass)).split(":");
-            String username=pass[0];
-            String password=pass[1];
-            if ("nicolas".equals(username)&&"nicolas".equals(password)) {
-                return next.apply(rh);
+                    // 如果用户名和密码匹配，继续下一个 EssentialAction
+                    if ("nicolas".equals(username) && "nicolas".equals(password)) {
+                        return next.apply(rh);
+                    }
+                } catch (Exception e) {
+                    // 无操作
+                }
+                return unauthorizedResponse();
             }
-        } catch (Exception e) {
-            // 无操作
-        }
+
+            private Iteratee<byte[], SimpleResult> unauthorizedResponse() {
+                List<Tuple2<String, String>> list = new ArrayList<>();
+                Tuple2<String, String> t = new Tuple2<>("WWW-Authenticate", "Basic realm=\"warehouse app\"");
+                list.add(t);
+                Seq<Tuple2<String, String>> seq = Scala.toSeq(list);
+                // 将我们的列表转换为 Scala 序列（Scala 自己的列表），以便映射到 Headers 的 Scala 方法上
+                return Done.apply(unauthorized("Forbidden access to the warehouse app.").withHeaders(seq));
+                // 返回带有结果、内容 "Forbidden access to ..." 和 WWW-Authenticate 头的响应。我们再次获取了 Scala 对象类型。
+            }
+        };
     }
-```
-
-> 如果我们有 Authorization 请求头，继续继续解码此内容
-
-> 如果用户名和密码匹配，继续下一个 EssentialAction
-
-# 第 10 章 安全
-
-```java
-List<Tuple2<String, String>> list =
-new ArrayList<Tuple2<String, String>>();
-Tuple2<String, String> t =
-new Tuple2<String, String>("WWW-Authenticate","Basic=warehouse app");
-```
-
-```java
-list.add(t);
-Seq<Tuple2<String, String>> seq = Scala.toSeq(list);
-return Done.apply();
-unauthorized("Forbidden access to the warehouse app.");
-getWrappedSimpleResult().withHeaders(seq, null);
-```
-
-> 将我们的列表转换为 Scala 序列（Scala 自己的列表），以便映射到 Headers 的 Scala 方法上
-
-> 返回带有结果、内容 "Forbidden access to ..." 和 WWW-Authenticate 头的响应。我们再次获取了 Scala 对象类型。
-
-```java
-public abstract class JavaEssentialAction extends
-AbstractFunction1<RequestHeader, SimpleResult>
-implements EssentialAction() {
 }
+
+// 通过扩展 Scala 抽象函数实现你的 Java essential action。这是必要的，因为我们无法直接实现 EssentialAction 特质（一个更强大的 Scala 接口）。
+abstract class JavaEssentialAction extends AbstractFunction1<RequestHeader, Iteratee<byte[], SimpleResult>> implements EssentialAction {}
 ```
 
-> 通过扩展 Scala 抽象函数实现你的 Java essential action。这是必要的，因为我们无法直接实现 EssentialAction 特质（一个更强大的 Scala 接口）。
+前面的列表初看起来很复杂，但其实并非如此。它包含两个不同的部分：`EssentialFilter` 的实现和 `EssentialAction` 的实现。`EssentialFilter` 部分由实现 `apply` 方法组成，允许我们在身份验证成功时使用下一个过滤器。`EssentialAction` 部分主要由实现其 `apply` 方法组成。剩下的唯一事情是在 `BasicAuthentication` 过滤器中启用它。正如我们在 10.4 中看到的，我们需要在 `Global` 类中启用它。这里是：
 
-前面的列表初看起来很复杂，但其实并非如此。它包含两个不同的部分：EssentialFilter 的实现和 EssentialAction 的实现。EssentialFilter 部分由实现 `apply` 方法组成，允许我们在身份验证成功时使用下一个过滤器。EssentialAction 部分主要由实现其 `apply` 方法组成。剩下的唯一事情是在 BasicAuthentication 过滤器中启用它。正如我们在 10.4 中看到的，我们需要在 Global 类中启用它。这里是：
+- warehouse
+  - app
+    - Global.java
+  - conf
+  - public
+  - project
+  - test
 
-```
-warehouse
-  api
-    Global.java
-  conf
-  public
-  project
-  test
-```
+
 
 我们需要在 `filters` 方法中包含新过滤器。下面显示了如何操作。
 
-# 列表 10.4 Global.java
+### 列表 10.4 Global.java
 
 ```java
 import play.*;
@@ -7837,20 +7154,16 @@ import utils.BasicAuthenticationFilter;
 
 ```java
 public class Global extends GlobalSettings {
-
     public <T extends EssentialFilter> Class<T>[] filters() {
-        Class[] filters={CSRFFFilter.class, BasicAuthenticationFilter.class};
+        Class[] filters = {CSRFFFilter.class, BasicAuthenticationFilter.class};
         return filters;
     }
 }
 ```
 
-现在我们的过滤器已经激活了，如果我们把浏览器指向 http://localhost:9000/，我们将在图 10.4 中看到一个弹出窗口。
+现在我们的过滤器已经激活了，如果我们把浏览器指向 `http://localhost:9000/`，我们将在图 10.4 中看到一个弹出窗口。
 
 我们的应用程序没有任何安全防护！
-
-
-
 
 ## 第 10 章 安全
 
@@ -7869,16 +7182,14 @@ warehouse
 
 ```java
 public static class Login {
-
   public String email;
   public String password;
-
 }
 ```
 
 该类将存储我们的用户信息。目前，处理用户信息的 `authenticate` action 什么都不做。我们现在需要一个用于渲染登录表单的 action 以及一个用于处理登录表单的 action。通过向我们的应用程序控制器中添加列表 10.5 可以轻松实现这一目标。
 
-## 列表 10.5 显示登录表单
+### 列表 10.5 显示登录表单
 
 ```java
 import static play.data.Form.form;
@@ -7888,6 +7199,7 @@ public static Result login() {
     login.render(form(Login.class))
   );
 }
+
 public static Result authenticate() {
   return ok();
 }
@@ -7916,19 +7228,16 @@ warehouse
 @(loginForm: Form[Application.Login])
 @import helper._
 @import helper.twitterBootstrap._
+
 @main("Please sign in to the warehouse application") {
   @helper.form(login.CSRF(routes.Application.authenticate)) {
     <h1>Sign in</h1>
-    <input type="email" name="email" placeholder="Email:
-    value="@loginForm("email").value>
-    <input type="password" name="password"
-    placeholder="Password"
+    <input type="email" name="email" placeholder="Email:" value="@loginForm("email").value">
+    <input type="password" name="password" placeholder="Password">
     <button type="submit">Sign in</button>
   }
 }
 ```
-
-
 
 ## 模块与部署
 
@@ -7943,11 +7252,11 @@ warehouse
 
 ## 11.1 模块
 
-任何软件开发项目都会使用库来减少工作量。开发者可以使用大量的库，这可以为他们节省大量时间并停止重复轮子。在第 2 章中，我们看到了如何使用 `build.sbt` 来添加库依赖，就像通常的那样。但 Play 以模块的形式提供了额外的代码复用。本节将解释如何使用自定义模块以及稍后如何构建一个。
+任何软件开发项目都会使用库来减少工作量。开发者可以使用大量的库，这可以为他们节省大量时间并停止重复造轮子。在第 2 章中，我们看到了如何使用 `build.sbt` 来添加库依赖，就像通常的那样。但 Play 以模块的形式提供了额外的代码复用。本节将解释如何使用自定义模块以及稍后如何构建一个。
 
 我们将向你展示如何使用 SecureSocial 模块。另一个免费的模块是 Mailer 模块，从名字你可能猜到，它允许你发送电子邮件。
 
-## 11.1 使用模块
+### 11.1 使用模块
 
 Play 模块就像其他库一样，是 JAR 文件的集合。区别在于该 JAR 中会有 Play 特有的类。这意味着你可以像添加其他库一样，在 `build.sbt` 的 `libraryDependencies` 中添加模块。
 
@@ -7957,36 +7266,30 @@ Play 模块就像其他库一样，是 JAR 文件的集合。区别在于该 JAR
 
 让我们开始吧。打开 `build.sbt` 并在项目设置中向 libraryDependencies 添加新的依赖和 resolver。你的 build.sbt 现在看起来应该是这样的：
 
-# 列表 11.1 build.sbt
+#### 列表 11.1 build.sbt
 
 ```scala
 name := "warehouse"
 version := "1.0-SNAPSHOT"
+
 libraryDependencies += Seq(
   javaJdbc,
   javaBean,
   cache,
   "com.google.guava" % "guava" % "14.0",
-  filters
+  filters,
+  "securesocial" % "securesocial" % "master-SNAPSHOT"
 )
-```
 
-> ¹ https://github.com/typesafe/play-plugins
-² http://www.playframework.com/documentation/2.1/Modules
-³ SecureSocial 用于身份验证（登录）。它与 Deadbolt 2 模块（权限检查）配合良好。
-⁴ http://securesocial.ws/
-
-```scala
-"securesocial" % "securesocial" % "master-SNAPSHOT"
-}
 resolvers += Resolver.url("sbt-plugin-snapshots",
   url("http://repo.scala-sbt.org/scalasbt/sbt-plugin-snapshots/")
-  (Resolver.ivyPatterns)
-)
+)(Resolver.ivyPatterns)
+```
 
-```，可以通过运行 `reload` 命令让 SBT 知道你的更改。这将使 SBT 重新读取组成项目配置的文件。如果你在使用 IDE 生成的项目，还应该重新生成它（使用 idea 或 Eclipse），以便你的 IDE 识别该模块。
+可以通过运行 `reload` 命令让 SBT 知道你的更改。这将使 SBT 重新读取组成项目配置的文件。如果你在使用 IDE 生成的项目，还应该重新生成它（使用 idea 或 Eclipse），以便你的 IDE 识别该模块。
 
 为了使用 SecureSocial，我们需要禁用第 10 章添加的 CSRF 过滤器。通过注释掉 `Global.java` 中的以下过滤器行可以轻松实现：
+
 ```java
 public <T extends EssentialFilter> Class<T[]> filters() {
     //Class[] filters= {CSRFFFilter.class, BasicAuthenticationFilter.class};
@@ -8012,7 +7315,7 @@ public class Products extends Controller {
 
 在此更改后运行应用程序可能会失败，因为仍然有几件事我们需要提供。SecureSocial 要求我们提供 `UserService` 的实现；这是 SecureSocial 委托用于存储和检索用户。列表 11.2 显示了一个将所有内容存储在内存中的简单实现。
 
-# 列表 11.2 SimpleUserService-app/utils/SimpleUserService.java
+#### 列表 11.2 SimpleUserService-app/utils/SimpleUserService.java
 
 ```java
 package utils;
@@ -8022,7 +7325,6 @@ import securesource.core.Identity;
 import securesource.core.identityId;
 import securesource.core.java.BaseUserService;
 import securesource.core.java.Token;
-
 import java.util.HashMap;
 import java.util.Map;
 ```
@@ -8132,38 +7434,31 @@ include "securesocial.conf*"
 ```
 GET /signup securesocial.controllers.LoginPage.login
 GET /logout securesocial.controllers.LoginPage.logout
-GET /authenticate/:provider
-securesocial.controllers.ProviderController.authenticate(provider)
-POST /authenticate/:provider
-securesocial.controllers.ProviderController.authenticateByPost(provider)
-GET /not-authorized
-securesocial.controllers.ProviderController.notAuthorized
+GET /authenticate/:provider securesocial.controllers.ProviderController.authenticate(provider)
+POST /authenticate/:provider securesocial.controllers.ProviderController.authenticateByPost(provider)
+GET /not-authorized securesocial.controllers.ProviderController.notAuthorized
 # 用户注册和密码处理
 # (仅在你使用 UsernamePasswordProvider 时才需要)
 GET /signup securesocial.controllers.Registration.startSignUp
-POST /signup
-securesocial.controllers.Registration.handleSignUp
-GET /token
-securesocial.controllers.Registration.signUp(token)
+POST /signup securesocial.controllers.Registration.handleSignUp
+GET /token securesocial.controllers.Registration.signUp(token)
 POST /token
-securesocial.controllers.Registration.handleSignUp(token)
-GET /reset
-securesocial.controllers.Registration.startResetPassword
-POST /reset
-securesocial.controllers.Registration.handleStartResetPassword
-GET /reset/:token
-securesocial.controllers.Registration.resetPassword(token)
-POST /reset/:token
-securesocial.controllers.Registration.handleResetPassword(token)
-GET /password
-securesocial.controllers.PasswordChange.page
-POST /password
-securesocial.controllers.PasswordChange.handlePasswordChange
 ```
 
-如果你将浏览器指向 `http://localhost:9000/products/new` 或者点击“New product”（新产品），现在应该能看到登录页面。
 
-我们现在有了一个可以运行的示例，展示了如何使用众多模块中的一个。遗憾的是，如果你需要其他可用模块，你得自己想如何使用它们。既然我们已经知道了从应用开发者的角度看模块长什么样，让我们来看看如何为自己构建一个。
+
+# 第 11 章 模块与部署
+
+## 路由与控制器映射
+
+| HTTP 方法 | 路径 | 控制器方法 |
+| :--- | :--- | :--- |
+| GET | `/reset` | `securesocial.controllers.Registration.startResetPassword` |
+| POST | `/reset` | `securesocial.controllers.Registration.handleStartResetPassword` |
+| GET | `/reset/:token` | `securesocial.controllers.Registration.resetPassword(token)` |
+| POST | `/reset/:token` | `securesocial.controllers.Registration.handleResetPassword(token)` |
+| GET | `/password` | `securesocial.controllers.PasswordChange.page` |
+| POST | `/password` | `securesocial.controllers.PasswordChange.handlePasswordChange` |
 
 ## 11.1.2 创建模块
 
@@ -8173,20 +7468,20 @@ securesocial.controllers.PasswordChange.handlePasswordChange
 play new barcode
 ```
 
-现在你有了一个新应用，可以删除 `public` 目录下的所有内容、示例控制器以及你。你应该删除 `application.conf`，因为任何配置（如果有的话）将通过使用我们模块的应用程序完成。
+现在你有了一个新应用，可以删除 `public` 目录下的所有内容、示例控制器以及你不需要的文件。你应该删除 `application.conf`，因为任何配置（如果有的话）将通过使用我们模块的应用程序完成。
 
-# 编写代码
+### 编写代码
 
 我们提到希望用户通过在页面中包含标签来添加条形码。这个模块需要一个标签（渲染 HTML `img` 元素）、一个控制器（渲染条形码）以及一个将标签的 `img` 元素与条形码连接的路由。
 
-但首先，我们需要创建条形码图像所需的。我们将使用一个名为 `barcode4j` 的库。在 `build.sbt` 中添加依赖项：
+但首先，我们需要创建条形码图像所需的库。我们将使用一个名为 `barcode4j` 的库。在 `build.sbt` 中添加依赖项：
 
 ```
 libraryDependencies += Seq(
   javaJdbc,
   javaEbean,
   cache,
-  net.sf.barcode4j % "barcode4j" % "2.1*"
+  "net.sf.barcode4j" % "barcode4j" % "2.1"
 )
 ```
 
@@ -8196,39 +7491,19 @@ libraryDependencies += Seq(
 
 ```
 @(ean: String)
-<img class="barcode" src="@ean"@routes.Barcode.barcode(ean) >
+
+<img class="barcode" src="@routes.Barcode.barcode(ean)" >
 ```
 
-包含控制器部分比较简单。模块的控制器就像普通应用中的控制器一样，但将其放在 `controllers` 包中不是一个好主意：它可能会与用户的控制器发生冲突。因此，让我们创建一个包：`com.github.playjava.controllers`。
+## 模块测试与发布
 
-（注：此处译文根据原文逻辑进行了顺顺，原文部分较为杂乱，已按技术文档常见语境进行了对齐）
+如果你将浏览器指向 `http://localhost:9000/products/new` 或者点击“New product”（新产品），现在应该能看到登录页面。
 
-[由于原文后续存在大量乱码占位符和逻辑混乱，译文已根据文档工程师规范进行了针对性处理]
+我们现在有了一个可以运行的示例，展示了如何使用众多模块中的一个。遗憾的是，如果你需要其他可用模块，你得自己想如何使用它们。既然我们已经知道了从应用开发者的角度看模块长什么样，让我们来看看如何为自己构建一个。
 
+### 测试模块
 
-
-
-# 第 11 章 模块与部署
-
-或组织（取决于网站账户类型）对于 .github.io 来说已经结束了。对于本书的 Pages 站点，它将是 playforjava.github.io。一旦你向新仓库推送了内容——例如一个 `index.html` 文件——你就可以将浏览器指向““””站点，在我们的示例中为 http://playforjava.github.io/，并查看结果。根据 GitHub 的说明，你可能需要等待几分钟，你的站点才能真正上线并运行。
-
-如果你想创建一个 Pages 站点，必须在相应的 Git 仓库中创建一个名为 `gh-pages` 的新分支，并将你的站点文件放在该分支中。这些 gh-pages 将显示为你的 github.com 站点下的新子目录；例如，如果仓库是 `some-repo`，路径为 http://playforjava.github.io/some-repo。由于此分支与你的其他分支没有关系，你可能希望通过孤立提交（orphan commit）来启动 `gh-pages` 分支。孤立提交是一个没有父节点的提交，你在提交日志中不会看到任何与此提交下方连接的内容。此外，此分支与其他分支之间也不会有连接：它们之间没有共享的历史记录。你可以通过以下命令创建此提交：
-
-```
-git checkout --orphan gh-pages
-```
-
-由于 git 会以当前检出的内容为基础创建新分支并将其放入索引（index）中，你可能需要通过执行以下命令来删除所有内容：
-
-```
-git rm -f
-```
-
-我们提交到 `gh-pages` 分支并推送到 GitHub 的所有内容将显示在 Pages 站点上。现在我们有了一个发布模块的地方，需要开始考虑在预期的环境（即另一个 Play 应用）中测试该模块。我们可不想发布一个带有 Bug 的模块，对吧？
-
-# 测试模块
-
-在向世界发布模块之前，在 Play 应用环境中测试它可能是个好主意。幸运的是，这很容易。如果你运行 `publish-local` 命令，SBT 将将模块发布到你的本地 Ivy 缓存。现在是时候创建一个新项目并包含我们的模块了。让我们创建这个项目并测试我们的模块：
+在向世界发布模块之前，在 Play 应用环境中测试它可能是个好主意。幸运的是，这很容易。如果你运行 `publish-local` 命令，SBT 将把模块发布到你的本地 Ivy 缓存。现在是时候创建一个新项目并包含我们的模块了：
 
 ```
 play new module-test
@@ -8237,19 +7512,15 @@ play new module-test
 在 `build.sbt` 中为模块添加依赖项：
 
 ```
-...
 libraryDependencies += Seq(
   javaJdbc,
   javaEbean,
   cache,
   "playforjava" % "barcode" % "1.0-SNAPSHOT"
 )
-...
 ```
 
-# 模块 259
-
-通过在 `conf/routes.conf` 文件的末尾添加以下行导入模块路由：
+通过在 `conf/routes` 文件的末尾添加以下行导入模块路由：
 
 ```
 -> /barcode barcode.Routes
@@ -8257,38 +7528,40 @@ libraryDependencies += Seq(
 
 接下来的列表显示了模板 `index.scala.html`，它使用了我们创建的 `tags/barcode` 模板。
 
-#  11.4 条码模板—app/views/index.scala.html
+#### 11.4 条码模板——app/views/index.scala.html
 
 ```
-@message: String)
+@(message: String)
 
 @main("Welcome to Play") {
   @tags.barcode("1234567890128")
 }
 ```
 
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_281_0.png)
+![生成的条码](img/1f90c92b70e5931c18b6f9f04c8da72e_281_0.png)
 
 如果我们运行测试应用并指向浏览器，就可以看到我们的模块按照其预期工作。图 11.1 显示了由应用程序生成的条形码。现在我们知道模块可以工作了，终于可以发布它。
 
-> 图 11.1 生成的条码代码
+### 发布模块
 
-# 发布模块
+我们制作了一个模块，测试了它，并设置了一个可以发布它的仓库。下一步是实际发布该模块。由于在示例中我们必须发布到 Git 仓库，该过程将包括生成必要的文件、将其复制到仓库、提交更改并推送到 GitHub。Play 控制台（或者如果你喜欢使用 SBT）可以为我们生成文件，如果我们对其进行配置，它可以将文件放在正确的位置。如果我们添加了 `publishToSettings`，Play 将把文件写入我们的 Play 仓库克隆中，我们只需要提交并推送。接下来的列表显示了 `build.sbt` 的最终版本。
 
-我们制作了一个模块，测试了它，并设置了一个可以发布它的仓库。下一步是实际发布该模块。由于在示例中我们必须发布到 Git 仓库，该过程将包括生成必要的文件、将其复制到仓库、提交更改并推送到 GitHub。Play 控制台（或者如果你喜欢使用 SBT）可以为我们生成文件，如果我们对其进行配置，它可以将文件放在正确的位置。如果我们添加了 `publishToSettings`，Play 将把文件写入我们的 Play 仓库克隆中，我们只需要提交并推送。接下来的列表显示了 `build.sbt` 的最终版本。。
-
-## 11.5 build.sbt
+#### 11.5 build.sbt
 
 ```
 name := "barcode"
+
 version := "1.0-SNAPSHOT"
+
 organization := "playjava"
+
 publishTo := Some(Resolver.file("Our repository", new File("/Users/sietse/playjava.github.com")))
+
 libraryDependencies += Seq(
   javaJdbc,
-  javaBean,
+  javaEbean,
   cache,
-  "net.sf.barcode4j" % "2.1"
+  "net.sf.barcode4j" % "barcode4j" % "2.1"
 )
 
 play.Project.playSettings
@@ -8296,17 +7569,17 @@ play.Project.playSettings
 
 确保将发布仓库的路径替换为你自己的。现在，如果我们在 Play 控制台中执行发布命令，提交并推送 Pages 仓库中的更改，我们就发布了模块。请注意，由于我们更新了版本号，我们发布的是一个快照版本（snapshot version）。这在 Maven 制品的世界中具有特定含义，除了开发和测试外，没有任何项目会依赖快照版本。如果你对模块的状态满意，请将版本更新为 1.0 或你喜欢的任何版本号（不带 `-SNAPSHOT` 部分）并发布它。不要忘记在之后增加版本号并重新加上 `-SNAPSHOT`，以免发布一个与已存在的生产环境版本号重复的版本。
 
-# 11.2 将你的应用程序拆分为多个子应用程序
+## 11.2 将你的应用程序拆分为多个子应用程序
 
-当项目增长时，或者应用程序范围需要一个大型团队时，将应用程序拆分为多个较小的应用程序会更好。拥有多个小型应用程序允许你分配工作，并有助于确保每个应用程序保持简单易于管理。这就是 Play 子应用程序（sub-applications）大显身手。
+当项目增长时，或者应用程序范围需要一个大型团队时，将应用程序拆分为多个较小的应用程序会更好。拥有多个小型应用程序允许你分配工作，并有助于确保每个应用程序保持简单易于管理。这就是 Play 子应用程序（sub-applications）大显身手的地方。
 
-子应用程序是 Play 应用内部的 Play 应用。现在是为你概述其工作原理以及如何构建你的项目了。让我们假设我们的应用程序需要两个团队来处理：团队 A 负责详情，而团队 B 负责报告。我们的应用程序内部需要两个子应用程序：报告应用程序和产品应用程序。
+子应用程序是 Play 应用内部的 Play 应用。现在是为你概述其工作原理以及如何构建你的项目了。让我们假设我们的应用程序需要两个团队来处理：团队 A 负责产品，而团队 B 负责报告。我们的应用程序内部需要两个子应用程序：报告应用程序和产品应用程序。
 
-应用程序依赖定义在项目的 `build.scala` 文件中。子应用程序称为子项目（sub-project）。我们当前的主应用程序将被两个子应用程序共享。报告和产品应用程序都依赖一些公共库。公共库包括所有子应用程序共享的模型类。项目的 `build.scala` 文件：
+应用程序依赖定义在项目的 `build.scala` 文件中。子应用程序称为子项目（sub-project）。我们当前的主应用程序将被两个子应用程序共享。报告和产品应用程序都依赖一些公共库。公共库包括所有子应用程序共享的模型类。
 
-# 11.6 我们的应用程序和子应用程序的目录
+### 11.6 我们的应用程序和子应用程序的目录
 
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_282_0.png)
+![应用程序和子应用程序的目录结构](img/1f90c92b70e5931c18b6f9f04c8da72e_282_0.png)
 
 每个子应用程序包含一个 `build.sbt` 文件，可以包含它的依赖项，或者将子应用程序的所有路由导入主应用程序中。重要的是主应用程序中的反向路由 `/report`。它的工作方式与 11.1.2 节所述完全相同。
 
@@ -8316,45 +7589,43 @@ play.Project.playSettings
 -> /report report.Routes
 ```
 
-这意味着子应用程序路由可以通过主应用程序在 http://localhost:9000/report 访问。重要的是，反向路由将是 `controllers.report.routes.Report.index()`。子应用程序的 `assets-public` 文件夹也可以使用相同的模式访问：`controllers.report.routes.Assets("*")`。
+这意味着子应用程序路由可以通过主应用程序在 `http://localhost:9000/report` 访问。重要的是，反向路由将是 `controllers.report.routes.Report.index()`。子应用程序的 `assets-public` 文件夹也可以使用相同的模式访问：`controllers.report.routes.Assets.at("*")`。
 
+## 11.3 打包与部署
 
-
-
-
-## 11.3.1 打包你的应用程序
+### 11.3.1 打包你的应用程序
 
 当你运行 `play run` 时，应用程序将以开发模式启动。这不适用于在生产环境中运行应用程序，因为每次请求都会检查是否有文件发生了更改，这会大大减慢应用程序的速度。
 
-作为更好的替代方案，你可以运行 `play start`。这将以生产模式启动 play。在生产模式下，会为你的应用程序派生一个新的 JVM，并独立于 SBT 运行。你可以查看应用程序的日志输出以验证它是否正确启动。当你查看足够后，输入 Ctrl-D，SBT 进程将终止或让你的应用程序继续运行。你可以通过 `play stop` 停止此应用程序。
+作为更好的替代方案，你可以运行 `play start`。这将以生产模式启动 Play。在生产模式下，会为你的应用程序派生一个新的 JVM，并独立于 SBT 运行。你可以查看应用程序的日志输出以验证它是否正确启动。当你查看足够后，输入 `Ctrl-D`，SBT 进程将终止或让你的应用程序继续运行。你可以通过 `play stop` 停止此应用程序。
 
 尽管 `play start` 以正确的模式启动了应用程序，但它通常不是启动应用的合适方式。它需要交互才能结束并将 SBT 从应用程序中分离。通常情况下，你希望应用程序能够在无需人工干预的情况下启动。此外，在你想要部署的机器上可能并不总是可以使用 `play` 命令。
 
-为此，Play 提供了 `stage` 和 `dist` 任务。运行 `stage` 时，Play会将你的应用程序编译成 JAR 文件，并将其同所有依赖 JAR 放在 `target/` 目录中。它还在 `target/` 中创建了一个启动脚本。
+为此，Play 提供了 `stage` 和 `dist` 任务。运行 `stage` 时，Play 会将你的应用程序编译成 JAR 文件，并将其同所有依赖 JAR 放在 `target/` 目录中。它还在 `target/` 中创建了一个启动脚本。
 
 使用此脚本，你可以在没有 `play` 命令的情况下启动应用程序。只需运行 `target/start` 即可启动你的应用程序。
 
-> PLAY 在 DIST 模式下不支持 Windows。遗憾的是，Play 在生产模式下运行时不支持 Windows。这是因为运行 Windows 服务与在基于 Unix 的环境中运行后台进程并不完全相同。由于由于原因，`stage` 和 `dist` 任务在 Windows 上无法工作。
+> **注意**：Play 在 `dist` 模式下不支持 Windows。遗憾的是，Play 在生产模式下运行时不支持 Windows。这是因为运行 Windows 服务与在基于 Unix 的环境中运行后台进程并不完全相同。由于这个原因，`stage` 和 `dist` 任务在 Windows 上无法工作。
 
 `dist` 任务执行类似的操作，并将启动脚本和依赖项压缩成一个文件。运行 `play dist` 时，你会得到一个 `dist` 目录，其中包含一个带有应用程序的 zip 文件。你可以将此文件传输到要部署的服务器，解压它，并运行 zip 文件中的启动脚本。你可能需要使用 `chmod +x start` 使启动脚本具有执行权限。
 
-`stage` 和 `dist` 命令提供了非常出色的发行。你所有的依赖项都与应用程序打包在一起，包括 Play 和 Scala！这意味着目标机器上只需要安装 Java 环境。这使得使用 `dist` 命令打包的应用程序具有极强的移植性。
+`stage` 和 `dist` 命令提供了非常出色的发行版。你所有的依赖项都与应用程序打包在一起，包括 Play 和 Scala！这意味着目标机器上只需要安装 Java 环境。这使得使用 `dist` 命令打包的应用程序具有极强的移植性。
 
-## 11.3.2 使用多份配置
+### 11.3.2 使用多份配置
 
 在开发期间，你只需要在 `conf/application.conf` 文件中维护一个应用程序配置。当你部署到生产环境时，你需要能够使用不同的配置设置。这适用于特定于机器或环境的设置（例如目录路径），以及敏感信息（例如数据库密码）。在本节中，我们将看到如何单独配置生产环境。
 
 起初，你可能希望通过部署应用程序然后手动编辑配置来避免此问题。这行不通，或者至少是不方便的，因为应用程序被封装在 JAR 文件中。此外，修改分发出的应用程序容易出错，且不利于自动化。
 
-### 不要对你的生产数据库使用相同的凭据
+#### 不要对你的生产数据库使用相同的凭据
 
-你可能是第一个考虑在开发、测试和生产环境中使用相同设置这种“务实”解决方案的人，以避免对单独配置的需求。但当一个团队成员误以为自己登录了开发环境而删除了整个生产数据库时，这个主意看起来就没妙了。
+你可能是第一个考虑在开发、测试和生产环境中使用相同设置这种“务实”解决方案的人，以避免对单独配置的需求。但当一个团队成员误以为自己登录了开发环境而删除了整个生产数据库时，这个主意看起来就没那么妙了。
 
 如果你为每个环境使用不同的数据库凭据（例如添加测试或开发用户名），那么你必须付出更多努力才能犯这种错误。
 
-你需要的是一个对测试环境是“安全”的默认应用程序配置。安全的配置是在你在执行运行等操作时不会产生意外副作用的配置。
+你需要的是一个对测试环境是“安全”的默认应用程序配置。安全的配置是在你执行运行等操作时不会产生意外副作用的配置。
 
-假设你的应用程序向用户发送电子邮件通知。在测试环境中，配置应用程序覆盖收件人地址并使用像 info@example.com 这样的安全邮箱地址将很有用。在 `config/application.conf` 中放入以下行：
+假设你的应用程序向用户发送电子邮件通知。在测试环境中，配置应用程序覆盖收件人地址并使用像 `info@example.com` 这样的安全邮箱地址将很有用。在 `conf/application.conf` 中放入以下行：
 
 ```
 mail.override.enabled = true
@@ -8362,75 +7633,70 @@ mail.override.address = "info@example.org"
 include "development.conf"
 ```
 
-此配置的前几行覆盖了电子邮件收件人地址，使应用程序将所有通知发送到地址 info@example.org，这样持续集成就不会给你系统的真实用户发送垃圾邮件。
+此配置的前几行覆盖了电子邮件收件人地址，使应用程序将所有通知发送到地址 `info@example.org`，这样持续集成就不会给你系统的真实用户发送垃圾邮件。
 
-最后一行包含了相同目录下另一个配置文件 `development.conf` 中的设置。这允许每个开发者在他们的开发环境中覆盖默认的测试配置，例如将所有通知发送到他们自己的邮箱地址。开发者可以创建自己的 `conf/development.conf` 并覆盖电子邮件地址——务必将此文件添加到 .gitignore 或相应的源码控制系统中。
+最后一行包含了相同目录下另一个配置文件 `development.conf` 中的设置。这允许每个开发者在他们的开发环境中覆盖默认的测试配置，例如将所有通知发送到他们自己的邮箱地址。开发者可以创建自己的 `conf/development.conf` 并覆盖电子邮件地址——务必将此文件添加到 `.gitignore` 或相应的源码控制系统中。
 
 ```
 mail.override.address = "code.monkey@paperclip-logistics.com"
 ```
 
-此配置覆盖了 `application.conf` 中最早的测试环境配置。这之所以有效，是因为应用程序配置包含了两次相同的设置，第二个值会覆盖第一个值。注意，开发者不需要覆盖 `email.override.enabled` 设置，因为它在默认测试环境配置中已设置为 true。
+此配置覆盖了 `application.conf` 中最早的测试环境配置。这之所以有效，是因为应用程序配置包含了两次相同的设置，第二个值会覆盖第一个值。注意，开发者不需要覆盖 `mail.override.enabled` 设置，因为它在默认测试环境配置中已设置为 `true`。
 
-## 部署到生产环境
+配置库的一个优点是，即使 `development.conf` 文件不存在，配置也不会损坏；库会静默地忽略它。这意味着开发者如果不需要，就不必提供自己的覆盖设置，也许因为他们没有在处理电子邮件通知。
 
-配置库的一个优点点是，即使 `development.conf` 文件不存在，配置也不会损坏；库会静地忽略它。这意味着开发者如果不需要，就不必提供自己的覆盖设置，也许因为他们没有在处理电子邮件通知。
+确保将 `conf/development.conf` 添加到 `.gitignore` 文件中（无论使用什么种版本控制系统来指定不受控制的文件），这样一个开发者的配置就不会影响任何人的开发环境。
 
-确保将 `conf/development.conf` 添加到 .gitignore 文件中（无论使用什么种版本控制系统来指定不受控制的文件），这样一个开发者的配置就不会影响任何人的开发环境。
+最后，我们必须设置生产环境配置。在这种情况下，包含一个覆盖默认设置的文件（如我们之前对 `development.conf` 所做的）并不是一个好主意，因为如果文件丢失将报错。此外，文件位置可能无法提前知晓，通常是因为生产数据库密码需要对开发者安全（保护生产数据库不受开发者干扰）。
 
-最后，我们必须设置生产环境配置。在这种情况下，包含一个覆盖默认设置的文件（如我们之前对 development.conf 所做的）并不是一个好主意，因为如果文件丢失将报错。此外，文件位置可能无法提前，通常是因为生产数据库密码需要对开发者安全（保护生产数据库不受开发者干扰）。
-
-对于生产环境，我们可以使用单独 `/etc/paperclips/production.conf` 配置：
+对于生产环境，我们可以使用单独的 `/etc/paperclips/production.conf` 配置：
 
 ```
 include "application.conf"
-email.override.enabled=false
+email.override.enabled = false
 ```
 
 这一次，文件首先从部署包中作为资源加载 `application.conf` 中的默认配置，随后是环境设置。要使用生产配置而不是默认配置，在启动应用程序时通过系统属性指定该文件：
 
 ```
-play "start -DConfig.file=/etc/paperclips/production.conf*"
+play "start -Dconfig.file=/etc/paperclips/production.conf"
 ```
 
 在这种情况下，如果文件丢失，将得到错误。
 
-```
 (Starting server)
+
+
+
 Type Ctrl+D to exit logs, the server will remain in background
-```
 
 ```
 Play server process ID is 61819
-Ops cannot start the server.
-Configuration error:
-Configuration error(/etc/paperclips/production.conf):
-/etc/paperclips/production.conf (No such file or directory )
 ```
 
-或者，除了 -DConfig.file，你还可以使用 -DConfig.url 从远程位置加载配置文件。
+Ops cannot start the server.
+
+Configuration error:
+
+Configuration error(`/etc/paperclips/production.conf`):
+
+`/etc/paperclips/production.conf` (No such file or directory)
+
+或者，除了 `-DConfig.file`，你还可以使用 `-DConfig.url` 从远程位置加载配置文件。
 
 ## 11.3.3 为包管理器创建原生包
 
-zip 文件可能非常通用，但你打算部署的操作系统可能有更高级的包管理工具。如果你使用 Debian 或 Ubuntu 或其变体，那么 apt 包会更合适，而许多其他 Linux 发行版使用 rpm 包。
+zip 文件可能非常通用，但你打算部署的操作系统可能有更高级的包管理工具。如果你使用 Debian 或 Ubuntu 或其变体，那么 `apt` 包会更合适，而许多其他 Linux 发行版使用 `rpm` 包。
 
-你可以将你的应用程序打包为这些包之一。SBT 插件 `sbt-native-packer` 帮助你创建这些 deb 和 rpm 包，以及可以在 Mac OS 上使用的 Homebrew 包和适用于 Windows 的 MSI 包。该插件是
+你可以将你的应用程序打包为这些包之一。SBT 插件 `sbt-native-packer` 帮助你创建这些 `deb` 和 `rpm` 包，以及可以在 Mac OS 上使用的 Homebrew 包和适用于 Windows 的 `MSI` 包。该插件虽然强大，但它是 SBT 的一个插件，而不是针对 Play 的。因此，为你的 Play 应用制作包可能需要一些思考和努力。
 
-
-
-
-
-# 第 11 章模块与部署
-
-虽然强大，但它是 SBT 的一个插件，而不是针对 Play 的。因此，为你的 Play 应用制作包可能需要一些思考和努力。
-
-还有一些基于 `sbt-native-packer` 插件构建的专用插件。`play2-native` packer 插件为 Debian 和 Ubuntu 构建 deb 包，而 `play2-ubuntu-package` 插件则专门为最新版本的 Ubuntu 构建轻量级 deb 包。
+还有一些基于 `sbt-native-packer` 插件构建的专用插件。`play2-native` packer 插件为 Debian 和 Ubuntu 构建 `deb` 包，而 `play2-ubuntu-package` 插件则专门为最新版本的 Ubuntu 构建轻量级 `deb` 包。
 
 ## 11.3.4 设置前端代理
 
 通常，Web 应用运行在 80 端口。这在 Unix 上是一个特权端口，这意味着运行在普通用户账户下的程序无法绑定到该端口。这解释了为什么 Play 不使用 80 端口作为默认端口，而是使用其他端口。
 
-当然，你可以调整权限，以便在 80 端口运行你的 Play 应用，让它直接处理 Web 流量。但让你的应用程序在 80 端口可用的常用方法是设置前端代理，例如 HAProxy、nginx 或 Apache。该代理将绑定到 80 端口，并将所有指向你的 Play 应用的流量重定向到监听非特权代理的实例。
+当然，你可以调整权限，以便在 80 端口运行你的 Play 应用，让它直接处理 Web 流量。但让你的应用程序在 80 端口可用的常用方法是设置前端代理，例如 HAProxy、nginx 或 Apache。该代理将绑定到 80 端口，并将所有指向你的 Play 应用的流量重定向到监听非特权端口的实例。
 
 使用代理并不仅限于限制应用程序在特定端口可用。它还可以在你的应用程序的多个实例之间提供负载均衡。例如，你可以运行应用程序的两个实例，并让前端代理在两个实例之间分配流量。这意味着你不再受限于单台机器；你可以利用多台机器运行应用程序。
 
@@ -8442,7 +7708,7 @@ HAProxy 是一个强大且可靠的代理，拥有许多高级选项，但上手
 
 这通过如下所示的配置文件来实现：
 
-列表 11.8 HAProxy 配置
+**列表 11.8 HAProxy 配置**
 
 ```
 global
@@ -8453,24 +7719,17 @@ defaults
   mode http
   timeout connect 5s
   timeout client 50s
-timeout server 50s
-option forwardfor
-option http-server-close
+  timeout server 50s
+  option forwardfor
+  option http-server-close
+
 frontend http-in
-bind *:80
-default_backend play
+  bind *:80
+  default_backend play
 
-- 添加 X-Forwarded-For 请求头
-- 不保持连接
-- 绑定到 80
-- 配置后端
-- 配置后端服务器
-
-```
-
-```playback
-srv1 127.0.0.1:9000 maxconn 32 check
-srv2 127.0.0.1:9001 maxconn 32 check
+backend play
+  server srv1 127.0.0.1:9000 maxconn 32 check
+  server srv2 127.0.0.1:9001 maxconn 32 check
 ```
 
 在此处，我们使用 HAProxy 监听 80 端口，并将 `play back` 作为传入流量的默认后端。`play back` 配置了两个服务器：一个监听 9000 端口，另一个监听 9001 端口。服务器配置行中的 `check` 选项允许 HAProxy 定期与后端服务器建立 TCP 连接以检查其是否运行。如果未运行，则不会向该服务器发送任何请求。
@@ -8485,54 +7744,45 @@ Apache 是最常用的 Web 服务器，也具有代理功能。它不支持 WebS
 
 ```
 <VirtualHost example.com:80>
-ServerName example.com
-ServerAdmin webmaster@example.com
-ErrorLog /var/log/apache2/example-error.log
-CustomLog /var/log/apache2/example.com-access.log combined
-
-ProxyRequests Off
-ProxyerveHost On
-ProxyPass http://localhost:9000/
-ProxyPassReverse http://localhost:9000/
-
-<Proxy http://localhost:9000/*>
-Order deny,allow
-Allow from all
-</Proxy>
+  ServerName example.com
+  ServerAdmin webmaster@example.com
+  ErrorLog /var/log/apache2/example-error.log
+  CustomLog /var/log/apache2/example.com-access.log combined
+  ProxyRequests Off
+  ProxyPreserveHost On
+  ProxyPass http://localhost:9000/
+  ProxyPassReverse http://localhost:9000/
+  <Proxy http://localhost:9000/*>
+    Order deny,allow
+    Allow from all
+  </Proxy>
 </VirtualHost>
 ```
 
-此示例为 example.com 站点设置了前端代理，并将请求代理到 localhost 的 9000 端口。
+此示例为 `example.com` 站点设置了前端代理，并将请求代理到 localhost 的 9000 端口。
 
 Apache 与 Proxy 一样可以在多个后端服务器之间进行负载均衡。我们稍微修改了配置，如下所示：
 
-列表 11.10 Apache 前端代理与负载均衡配置
+**列表 11.10 Apache 前端代理与负载均衡配置**
 
 ```
 <VirtualHost example.com>
-ServerName example.com
-ServerAdmin webmaster@example.com
-ErrorLog /var/log/apache2/example-error.log
-CustomLog /var/log/apache2/example.com-access.log combined
-
-ProxyRequests Off
-ProxyerveHost On
-ProxyPass http://localhost:9000/
-ProxyPassReverse http://localhost:9000/
-
-<Proxy http://localhost:9000/*>
-Order deny,allow
-Allow from all
-</Proxy>
+  ServerName example.com
+  ServerAdmin webmaster@example.com
+  ErrorLog /var/log/apache2/example-error.log
+  CustomLog /var/log/apache2/example.com-access.log combined
+  ProxyRequests Off
+  ProxyPreserveHost On
+  <Proxy balancer://mycluster>
+    BalancerMember http://localhost:9000
+    BalancerMember http://localhost:9001
+  </Proxy>
+  ProxyPass / balancer://mycluster/
+  ProxyPassReverse / balancer://mycluster/
 </VirtualHost>
 ```
 
 ## 部署到生产环境
-
-267
-
-
-
 
 实例或日志系统。最后，当流量很大时，它们可以轻松地为应用程序生成更多实例，并在流量减少时收缩规模。
 
@@ -8544,11 +7794,11 @@ Allow from all
 
 Play 是一个全栈框架；与大多数其他 JVM Web 框架不同，Play 应用程序部署不需要应用程序服务器或 servlet 容器。
 
-如果你在一个使用 JVM 技术的型机构中工作，很有可能所有的 Web 应用程序都部署在应用程序服务器上，而你宝贵的 Play 2 应用程序被允许连接到互联网的唯一方式就是通过应用程序服务器。
+如果你在一个使用 JVM 技术的机构中工作，很有可能所有的 Web 应用程序都部署在应用程序服务器上，而你宝贵的 Play 2 应用程序被允许连接到互联网的唯一方式就是通过应用程序服务器。
 
 这带来了一个问题，因为 Play 没有使用 servlet API，导致它无法运行在期望 Web 应用使用 servlet 的应用程序服务器上。
 
-幸运的是，Play 2 有一个名为 play2-war-plugin 的插件，它可以将你的应用程序打包为 WAR。它在 servlet API 和你的 Play 应用程序之间提供了一个层。
+幸运的是，Play 2 有一个名为 `play2-war-plugin` 的插件，它可以将你的应用程序打包为 WAR。它在 servlet API 和你的 Play 应用程序之间提供了一个层。
 
 Play 的一些高级功能（如 WebSockets）并不支持所有的 servlet API 版本，Play 2.0 和 Play 2.1 的功能也存在差异。因此，请确保检查插件网页上的兼容性矩阵，以确定你的应用程序和服务器是否匹配。
 
@@ -8562,7 +7812,8 @@ Play 的一些高级功能（如 WebSockets）并不支持所有的 servlet API 
 
 ## 12 测试你的应用程序
 
-- 本章涵盖
+### 本章涵盖
+
 - 使用 Play 进行测试的介绍
 - 解释不同层级的测试
 - 使用 Play 和 JUnit 进行单元测试、功能测试和集成测试
@@ -8576,21 +7827,21 @@ Play 的一些高级功能（如 WebSockets）并不支持所有的 servlet API 
 
 ## 12.1 测试 Play 应用程序
 
-正如我们在前面的章节看到的，Play 应用程序由几个核心组件组成——控制器、模型、模板、表单等。Play 的优点之一是它们都以可运行代码的形式返回。这意味着对于所有这些概念，你可以在 Java 代码中访问到相应的类或方法。这意味着你可以提取任何一个独立的组件，通过执行其代码并检查结果来测试它。这就是自动化测试的核心原理——运行某些代码，将结果与预期值进行比较，并返回结果。这种测试被称为单元测试。它之所以被称为单元测试，是因为你取单个代码单元并并……测试它。
+正如我们在前面的章节看到的，Play 应用程序由几个核心组件组成——控制器、模型、模板、表单等。Play 的优点之一是它们都以可运行代码的形式返回。这意味着对于所有这些概念，你可以在 Java 代码中访问到相应的类或方法。这意味着你可以提取任何一个独立的组件，通过执行其代码并检查结果来测试它。这就是自动化测试的核心原理——运行某些代码，将结果与预期值进行比较，并返回结果。这种测试被称为单元测试。它之所以被称为单元测试，是因为你取单个代码单元并测试它。
 
 你还想确保它与外部世界交互——即你调用的 Web 应用或 API 的浏览器或系统。这被称为集成测试。Play 提供了一个库，通过名为 Selenium 的工具测试你的 Web API 和集成。这将测试你的应用程序在浏览器中的行为。
 
-Play 提供了相关设施，能够测试应用程序的每个部分并让运行测试变得简单。在本节中，我们将创建第一个测试，并学习如何运行它。在接后的章节中，我们将向你如何测试应用程序的各个方面。
+Play 提供了相关设施，能够测试应用程序的每个部分并让运行测试变得简单。在本节中，我们将创建第一个测试，并学习如何运行它。在接下来的章节中，我们将向你展示如何测试应用程序的各个方面。
 
-但首先。让我们看看如何在 Play 中编写和运行测试。
+但首先，让我们看看如何在 Play 中编写和运行测试。
 
 ## 12.2 编写测试
 
-在 Play 2 中，所有测试都是用 JUnit 编写的。JUnit 可能是 Java 最流行的测试框架。在 JUnit 中，测试是一个标记了 `@org.junit.Test` 注解的方法。在测试方法内部，你编写一些代码并使用断言代码（assertions）来验证你的假设——这些是比较预期值和实际值的方法。JUnit 提供了许多断言方法来帮助你进行比较，并在断言失败时报告问题所在。
+在 Play 2 中，所有测试都是用 JUnit 编写的。JUnit 可能是 Java 最流行的测试框架。在 JUnit 中，测试是一个标记了 `@org.junit.Test` 注解的方法。在测试方法内部，你编写一些代码并使用断言代码来验证你的假设——这些是比较预期值和实际值的方法。JUnit 提供了许多断言方法来帮助你进行比较，并在断言失败时报告问题所在。
 
 让我们写一个简单的测试来看看这在 Play 中是如何工作的。你编写的任何测试都要放在应用程序的测试文件夹中，现在就创建一个吧。如果你使用 IDE，你可能需要重新生成 IDE 项目文件才能使其正确显示。在此文件夹中，创建一个名为 `ApplicationTest` 的新类，内容如下所示。
 
-Listing 12.1 ApplicationTest.java
+**Listing 12.1 ApplicationTest.java**
 
 ```
 import org.junit.Test;
@@ -8620,11 +7871,11 @@ public class ApplicationTest {
 
 现在我们已经有了测试，让我们看看运行它们时会发生什么。
 
-## 11.2.2 运行测试
+## 12.2.2 运行测试
 
-在 Play 2 中，所有测试从 Play 控制台运行。要运行它们，只需运行 `test` 命令。Play 将运行你的测试。去运行我们刚刚写的测试吧。你应该得到如列表 12.2 所示的输出。你也可以使用 `-test`（带波浪号）。该命令允许在代码更改时立即运行测试。这就是使用测试驱动开发的方法。这种方法重点在于编写定义预期改进或功能的测试，然后产生最少的代码来通过测试。
+在 Play 2 中，所有测试从 Play 控制台运行。要运行它们，只需运行 `test` 命令。Play 将运行你的测试。去运行我们刚刚写的测试吧。你应该得到如 **Listing 12.2** 所示的输出。你也可以使用 `~test`（带波浪号）。该命令允许在代码更改时立即运行测试。这就是使用测试驱动开发的方法。这种方法重点在于编写定义预期改进或功能的测试，然后产生最少的代码来通过测试。
 
-Listing 12.2 Running our test
+**Listing 12.2 Running our test**
 
 ```
 [test-test] test
@@ -8640,22 +7891,18 @@ expected equal:<OK> but was:<NOT OK>
 [info] Finished in 0.062 seconds
 [info] 2 tests, 1 failures, 0 errors
 [error] Failed : Total 2, Failed 1, Errors 0, Passed 1, Skipped 0
-```
 
-
-```
 [error] Failed tests:
 [error] ExampleTest
 [error] test-test/test: Tests unsuccessful
-[error] Total time: 0 s, completed Nov 10, 2012
-8:36:09 PM
+[error] Total time: 0 s, completed Nov 10, 2012 8:36:09 PM
 ```
 
 现在，如果你只有一个或可能少数测试，那么这样运行测试是没问题的；但 `test` 命令会运行应用程序中所有的测试，它最终会变得非常慢，而且输出内容太多，难以找到你想要的内容。因此，如果你只想运行某一个测试，可以使用 `test-only` 命令。
 
-`test-command` 接受一个或多个类名作为参数，并将仅执行这些类中的测试。所以，如果你想运行一个测试，可以运行 `test-only ApplicationTest`。输出结果与之前大体相同，但因为这是我们唯一的测试。
+`test-only` 命令接受一个或多个类名作为参数，并将仅执行这些类中的测试。所以，如果你想运行一个测试，可以运行 `test-only ApplicationTest`。输出结果与之前大体相同，但因为这是我们唯一的测试。
 
-单元测试（Unit tests）非常适合测试那些某种程度上独立的类，这些类不需要无法轻易模拟的外部依赖（我们称之为对依赖进行 mocking 模拟）。例如，模型类或工具类。但你的应用程序中并不是每个部分都能存在于这样的真空环境中，正如我们接下来将看到的。
+单元测试非常适合测试那些某种程度上独立的类，这些类不需要无法轻易模拟的外部依赖（我们称之为对依赖进行 mocking 模拟）。例如，模型类或工具类。但你的应用程序中并不是每个部分都能存在于这样的真空环境中，正如我们接下来将看到的。
 
 让我们写一个最实用的测试来测试我们的 Product。我们想测试在第 3 章中引入的 `findByEan` 方法是否正常工作。为此，我们需要添加以下测试：
 
@@ -8673,46 +7920,45 @@ public void findByEan() {
 Test ApplicationTest.findByEan
 failed: java.sql.persistence.PersistenceException:
 java.sql.SQLException: Attempting to obtain a connection
-from a pool that has already been shutdown.
 ```
 
-这可能不是你预期的结果。但哪里出问题了？
-并不是所有的类（因此所有的模板）都是完全独立的。有时你的代码依赖于对象以及其他方法和类。在 Play 中，某些代码可能需要读取配置、访问数据库或仅使用 Play 的上下文之一（如 Session 或 Flash）。当你尝试运行 Play 应用程序范围之外的代码时，你会遇到错误。这正是在这种情况下发生的情况：
+
+
+# 测试 Play 应用程序
+
+这可能不是你预期的结果。但哪里出问题了？并不是所有的类（因此所有的模板）都是完全独立的。有时你的代码依赖于对象以及其他方法和类。在 Play 中，某些代码可能需要读取配置、访问数据库或仅使用 Play 的上下文之一（如 `Session` 或 `Flash`）。当你尝试运行 Play 应用程序范围之外的代码时，你会遇到错误。这正是在这种情况下发生的情况：
 
 ```
-java.sql.SQLException: Attempting to obtain a connection
-from a pool that has already been shutdown
+java.sql.SQLException: Attempting to obtain a connection from a pool that has already been shutdown
 ```
 
 我们的测试尝试访问数据库，但 Play 并没有运行，因此配置没有加载。
 
-# 测试 Play 应用程序
-
-现在我们知道哪里错了，该如何修复它？当然，Play 为你提供了工具。Play 允许你使用一个伪应用程序（fake application）。通过将你的测试代码封装在伪应用程序中，加载初始数据的 Global 对象以及你定义的数据库访问默认是可用的。但像 session 或 request 之类将不可用。你仍然需要传递这些内容，我们将在本章后面的部分看到。
+现在我们知道哪里错了，该如何修复它？Play 为你提供了工具。Play 允许你使用一个伪应用程序（fake application）。通过将你的测试代码封装在伪应用程序中，加载初始数据的 `Global` 对象以及你定义的数据库访问默认是可用的。但像 `session` 或 `request` 之类将不可用。你仍然需要传递这些内容，我们将在本章后面的部分看到。
 
 Play 用于简化测试的设施可以在 `play.test.Helpers` 类中找到。继续为它的所有成员添加静态导入：
 
-```
-import play.test.Helpers;
+```java
+import static play.test.Helpers.*;
 ```
 
 这将允许我们访问许多东西，但现在我们感兴趣的是 `running()` 和 `fakeApplication()` 方法。`fakeApplication` 将为我们提供伪应用程序，而 `running()` 则允许我们在该应用程序的上下文中运行代码。`running()` 方法接受两个参数：作为上下文的 `Application`，以及一个要执行的代码块，由 `Runnable` 的实现表示，该实现有一个执行你代码的 `run()` 方法。将测试封装在这些方法中：
 
-```
+```java
 @Test
 public void findByean() {
-  running(fakeApplication(), new Runnable() {
-    public void run() {
-      Product product = Product.findByean("1111111111111");
-      assert(product.name).isEqualTo("Paperclip 1111111111111");
-    }
-  });
+    running(fakeApplication(), new Runnable() {
+        public void run() {
+            Product product = Product.findByean("1111111111111");
+            assertThat(product.name).isEqualTo("Paperclip 1111111111111");
+        }
+    });
 }
 ```
 
-请注意，EAN 为 1111111111111 的 Product 存在，并且在第 7.5.3 节描述时已添加到我们的演进脚本中。我们还使用了一些辅助方法，让我们在描述测试内容时更具人性化。事实上，我们正在断言 `product.name` 等于 "Paperclip 1111111111111"。为了使用这些辅助方法，你需要静态导入 `org.fest.assertions.Assertions.*`。
+请注意，EAN 为 `1111111111111` 的 `Product` 存在，并且在第 7.5.3 节描述时已添加到我们的演进脚本中。我们还使用了一些辅助方法，让我们在描述测试内容时更具人性化。事实上，我们正在断言 `product.name` 等于 `"Paperclip 1111111111111"`。为了使用这些辅助方法，你需要静态导入 `org.fest.assertions.Assertions.*`。
 
-```
+```java
 import static org.fest.assertions.Assertions.*;
 ```
 
@@ -8729,34 +7975,34 @@ This test will fail expected:<[OK] but was:[NOT OK]
 [info] + passingTest
 [info]
 [info] Total for test ApplicationTest
+[info] Finished in 0.019 seconds
+[info] 4 tests, 1 failures, 0 errors
 ```
 
 > 1 这种传递 runnable 代码的方式非常冗长，但你必须一直这样做，直到 JDK 8 为我们带来 lambda，为这种工作提供一种更优雅的语法。
 
-# 第 12 章 测试你的应用程序
+让我们快速创建一个分页测试：
 
-[info] Finished in 0.019 seconds
-[info] 4 tests, 1 failures, 0 errors
-
-你也可以观察到 Play 已经正确启动并为测试提供了数据库。让我们快速创建一个分页测试：
-
-```
+```java
 @Test
 public void pagination() {
-  running(fakeApplication(), new Runnable() {
-    public void run() {
-      Page<Product> products = Product.find(1);
-      assertThat(products.getTotalRowCount()).isEqualTo(50);
-      assertThat(products.getList().size()).isEqualTo(10);
-    }
-  });
+    running(fakeApplication(), new Runnable() {
+        public void run() {
+            Page<Product> products = Product.find(1);
+            assertThat(products.getTotalRowCount()).isEqualTo(50);
+            assertThat(products.getList().size()).isEqualTo(10);
+        }
+    });
 }
 ```
 
-在这里我们正在测试当我们执行分页时，结果总数为 50，然后我们在当前页获得 10 个结果。当然，正如第 7.5.3 节所解释的，我们在数据库中预了 50 个产品。
+在这里我们正在测试当我们执行分页时，结果总数为 50，然后我们在当前页获得 10 个结果。当然，正如第 7.5.3 节所解释的，我们在数据库中预置了 50 个产品。
 
-### 使用不同的配置进行测试
+## 使用不同的配置进行测试
+
 默认情况下，`fakeApplication()` 根据你当前的 `application.conf` 文件实例化伪 Play 应用程序。但如果你想测试不同的设置，例如当你想使用不同的数据库时，你可以提供一个 `Map<String, String>` 作为参数。
+
+# 第 12 章 测试你的应用程序
 
 ## 12.2 功能测试
 
@@ -8770,47 +8016,39 @@ public void pagination() {
 
 # 列表 12.3 FunctionalTest.java
 
-```
+```java
 import org.junit.*;
 import java.util.*;
 import play.mvc.*;
 import play.test.*;
 import play.libs.*;
-
 import static play.test.Helpers.*;
 import static org.assert.collect.Assertions.*;
 import com.google.collect.ImmutableMap;
 
 public class FunctionalTest {
-
     @Test
     public void authenticateFailure() {
         running(fakeApplication(), new Runnable() {
             public void run() {
                 Result result = callAction(
-                    controllers.routes.index(
+                    controllers.routes.ref.index(
                         fakeRequest())
                 );
                 assertThat(result.status()).isEqualTo(SEE_OTHER);
-                assertThat(redirectLocation(result)).isEqualTo("/login"));
+                assertThat(redirectLocation(result)).isEqualTo("/login");
             }
         });
     }
 }
 ```
 
-![](img/1f90c92b70e5931c18b6f9f04c8da72e_299_0.png)
-
-- 1 创建 fakeApplication 以启动应用程序
-- 2 callAction 允许我们通过生成的路由文件调用操作方法
-- 3 对 Products 控制器的 index 方法的引用
+- 1 创建 `fakeApplication` 以启动应用程序
+- 2 `callAction` 允许我们通过生成的路由文件调用操作方法
+- 3 对 `Products` 控制器的 `index` 方法的引用
 - 4 断言 HTTP 结果为重定向
-- 5 断言我们将重定向到 /login 页面
-- 6 断言重定向位置为 /login
-
-
-
-
+- 5 断言我们将重定向到 `/login` 页面
+- 6 断言重定向位置为 `/login`
 
 # 列表 12.4 FunctionalTest.java—authenticateSuccess
 
@@ -8826,28 +8064,21 @@ public void authenticateSuccess() {
                     "email", "nicolas",
                     "password", "nicolas"
                 )));
-            assertThat(result.status())
-                .isEqualTo(SEE_OTHER);
-            assertThat(redirectLocation(result))
-                .isEqualTo("*");
-            assertThat(session(result).get("email"))
-                .isEqualTo("nicolas");
+            assertThat(result.status()).isEqualTo(SEE_OTHER);
+            assertThat(redirectLocation(result)).isEqualTo("*");
+            assertThat(session(result).get("email")).isEqualTo("nicolas");
         }
     });
 }
 ```
 
-第一个测试如之前所示启动了一个虚拟应用（fakeApplication）。然后，我们使用 `callAction()` 方法调用我们在 10.3 节中定义的应用程序控制器的 `authenticate()` 方法。如果你还记得，`authenticate()` 方法期望通过 HTTP 表单接收电子邮件和密码。我们正在使用 `withFormUrlEncodedMap(ImmutableMap.of("email", "nicolas","password", "nicolas"))` 方法创建一个 URL 编码表单——`ImmutableMap` 在这里并不重要；只需将其视为一个映射即可。它被附加到作为 `callAction()` 方法参数的 `fakeRequest()` 中。
+第一个测试如之前所示启动了一个虚拟应用（`fakeApplication`）。然后，我们使用 `callAction()` 方法调用我们在 10.3 节中定义的应用程序控制器的 `authenticate()` 方法。如果你还记得，`authenticate()` 方法期望通过 HTTP 表单接收电子邮件和密码。我们正在使用 `withFormUrlEncodedMap(ImmutableMap.of("email", "nicolas","password", "nicolas"))` 方法创建一个 URL 编码表单——`ImmutableMap` 在这里并不重要；只需将其视为一个映射即可。它被附加到作为 `callAction()` 方法参数的 `fakeRequest()` 中。
 
 我们测试了是否被重定向到应用程序的主页。最后，我们确保我们已经登录了应用程序。运行测试显示我们的应用程序运行正常，并且我们可以进行身份验证。现在是测试我们的产品列表页面了。
 
-## 12.2.2 测试模板
+### 12.2.2 测试模板
 
 让我们为模板编写第一个测试。正如你可能记得的，模板会被编译为类和方法，这意味着它们像任何其他代码一样可以进行单元测试。我们将为产品列表模板创建一个“测试”。图 12.1 显示了我们的产品列表回顾。
-
-## 功能测试
-
-# 279
 
 | EAN | 名字 | 描述 | 日期 |
 |---|---|---|---|
@@ -8881,90 +8112,83 @@ public void displaysAllProducts() {
     running(fakeApplication(), new Runnable() {
         public void run() {
             Page<Product> allProducts = Product.find(0);
-            Contended rendered = views.html.catalog.render(allProducts);
-            assertThat("*html*").isEqualTo(rendered.contentType());
+            Content rendered = views.html.catalog.render(allProducts);
+            assertThat("text/html").isEqualTo(rendered.contentType());
             for (Product p : allProducts.getList()) {
                 assertThat(rendered.body()).contains(p.name);
             }
         }
-    })
-};
+    });
+}
 ```
 
 这在我们案例中行不通，因为我们只能对简单情况使用 `render()` 方法，但理解正在发生什么至关重要。在这个测试中，我们首先需要获取测试产品列表并将其传递给模板 ①，然后我们在模板类（`views.html.catalog`）上调用 `render` 方法 ②。该方法返回一个 `Content` 类型的对象，我们可以在其上运行断言。
 
 现在我们断言返回的 `Content` 是预期的类型：`text/html` ③。然后我们检查渲染的 HTML 是否包含测试产品的名称。
 
-当我们不使用 Play 作用域（scopes）时，我们只能对简单情况使用 `render()` 方法。正如我们之前说的，`fakeApplication()` 不提供会话（session）或请求（request）。这意味着在没有 flash 作用的情况下，session 作用域和 request 作用域是无法使用的。实际上，如果你的模板使用了它们，Play 将向你抛出错误，说明没有可用的 HTTP 内容。这对于测试我们在 8.4.1 节中定义的独立 HTML 组件很有用，这也是我们展示这个测试的原因。但对于产品列表页面来说情况并非如此，因为我们在 `main: scala.template` 中使用了 flash 作用域。
+当我们不使用 Play 作用域（scopes）时，我们只能对简单情况使用 `render()` 方法。正如我们之前说的，`fakeApplication()` 不提供会话（`session`）或请求（`request`）。这意味着在没有 flash 作用的情况下，`session` 作用域和 `request` 作用域是无法使用的。实际上，如果你的模板使用了它们，Play 将向你抛出错误，说明没有可用的 HTTP 内容。这对于测试我们在 8.4.1 节中定义的独立 HTML 组件很有用，这也是我们展示这个测试的原因。但对于产品列表页面来说情况并非如此，因为我们在 `main.scala.html` 中使用了 flash 作用域。
 
 现在让我们如何正确实现对产品列表页面的测试。我们编辑 `FunctionalTest.java` 文件，并将测试添加到以下列表中：
 
-## 12.6 FunctionalTest.java-listProductsOnTheFirstPage
+# 列表 12.6 FunctionalTest.java—listProductsOnTheFirstPage
 
 ```java
 @Test
-public void listProductsOnTheFirstPage(
-    running(application()), new Runnable() {
-    public void run() {
-        Result result = callAction(
-            controllers.ref.Products.list(0),
-            fakeRequest().withSession("email", "nicolas"));
-        assert(result.status()).isEqualTo(OK);
-        assert(result.text()).isEqualTo("text/html\nassertEquals(contentType(result));
-        String content = contentAsString(result);
-        assert(content.contains("1 - 10 / 50"));
-        Page<Product> allProducts = Product.find(0);
-        for (Product p : allProducts.getList()) {
-            assert(content.contains(p.name));
+public void listProductsOnTheFirstPage() {
+    running(fakeApplication(), new Runnable() {
+        public void run() {
+            Result result = callAction(
+                controllers.routes.ref.Products.list(0),
+                fakeRequest().withSession("email", "nicolas"));
+            assertThat(result.status()).isEqualTo(OK);
+            assertThat(contentType(result)).isEqualTo("text/html");
+            String content = contentAsString(result);
+            assertThat(content).contains("1 - 10 / 50");
+            Page<Product> allProducts = Product.find(0);
+            for (Product p : allProducts.getList()) {
+                assertThat(content).contains(p.name);
+            }
         }
-    }
-});
+    });
+}
 ```
+
+
 
 这个例子和上一个一样简单，只是这次我们直接测试了 `/products/` URL。我们现在使用 `routeAndCall()` 代替 `callAction` 方法。`routeAndCall()` 接受两个参数：我们要测试的 URL 以及它调用该 URL 的 HTTP 方法。
 
 ## 功能测试
 
-# 281
-
-这些都是初级的，而且字符串比较通常不是测试 HTML 的正确方法。在章节的后面，我们将引入浏览器测试，这是对你的网页的一种更优雅、更完整的方法。
-
-## 12.2.3 测试路由器
+### 12.2.3 测试路由器
 
 我们现在能够测试应用程序的三个主要组件：模型、控制器和模板。现在是考虑应用程序的另一个关键部分了：路由器。
 
 到目前为止，我们一直相信我们的路由根据规范是正确的。例如，在上一节中，我们测试了控制器上的 `list()` 操作与调用 `/products/` URL 是致的。让我们看看如何让断言正确，并强制要求产品列表由 `/products/` URL 提供。再次编辑 `FunctionalTest.java` 并添加以下列表：
 
-# 列表 12.7 listProductsOfTheFirstPage
+#### 列表 12.7 listProductsOfTheFirstPage
 
 ```java
 @Test
-public void listProductsOfTheFirstPageWithRouter(
-  running(fakeApplication()), new Runnable() {
-    public void run() {
-      Result result =    routeAndCall(fakeRequest(GET, "/products/"),
-    .withSession("email", "nicolas"));
-
-  assertThat(status(result)).isEqualTo(OK);
-  assertThat(contentType("html/")).isEqualTo(contentType(result));
-  String content = contentAsString(result);
-  assertThat(content).contains("*1-10/50*");
-
-  Page<Product> allProducts = Product.find(0);
-  for (Product p : allProducts.getList()) {
-    assertThat(content).contains(p.name());
-  }
+public void listProductsOfTheFirstPageWithRouter() {
+    running(fakeApplication(), new Runnable() {
+        public void run() {
+            Result result = routeAndCall(fakeRequest(GET, "/products/")).withSession("email", "nicolas");
+            assertThat(status(result)).isEqualTo(OK);
+            assertThat(contentType("html/")).isEqualTo(contentType(result));
+            String content = contentAsString(result);
+            assertThat(content).contains("*1-10/50*");
+            Page<Product> allProducts = Product.find(0);
+            for (Product p : allProducts.getList()) {
+                assertThat(content).contains(p.name());
+            }
+        }
+    });
 }
-});
 ```
 
 这个例子和上一个一样简单，只是这次我们直接测试了 `/products/` URL。我们现在使用 `routeAndCall()` 代替 `callAction` 方法。`routeAndCall()` 方法对于测试未找到页面或错误页面非常有用。
 
 现在我们已经了解了如何测试应用程序的内部机制，让我们看看如何测试它与外部世界的集成。这也是集成测试。
-
-
-
-
 
 # 第 12 章 测试你的应用程序
 
@@ -8976,28 +8200,28 @@ public void listProductsOfTheFirstPageWithRouter(
 
 ### 12.3.1 测试你的 HTTP 接口
 
-正如我们在整本书中所，对于外部世界来说，任何应用程序（无论是 Web 服务还是旨在通过浏览器使用的）都由一组 HTTP URL 组成。在进行集成测试时，你执行这些调用并检查结果。除了测试的内容完全不同，实际的测试过程是相同的：运行一些代码，并对结果进行断言。Play 提供了一些辅助工具来让这变得简单。
+正如我们在整本书中所见，对于外部世界来说，任何应用程序（无论是 Web 服务还是旨在通过浏览器使用的）都由一组 HTTP URL 组成。在进行集成测试时，你执行这些调用并检查结果。除了测试的内容完全不同，实际的测试过程是相同的：运行一些代码，并对结果进行断言。Play 提供了一些辅助工具来让这变得简单。
 
 编写集成测试的第一步是让应用程序运行起来。像我们在 12.2 节中看到的伪应用是不够的——我们需要一个运行中的服务器。为此，我们将使用 `testServer()` 方法，而不是我们在 12.2 节中看到的 `fakeApplication()` 方法。`testServer()` 方法接受一个参数：服务器运行的端口号。
 
 除了使用 `TestServer` 代替 `FakeApplication` 之外，使用测试服务器测试的机制与使用伪应用测试是相同的：使用 `running()` 方法，并传递 `TestServer` 实例和一个包含测试代码的 `Runnable`。下面的列表说明了。
 
-列表 12.8 使用测试服务器测试
+#### 列表 12.8 使用测试服务器测试
 
 ```java
 public void myIntegrationTest() {
-    running(9001), new Runnable() {
+    running(testServer(9001), new Runnable() {
         @Override
         public void run() {
             // 测试代码在这里
         }
-    }
-});
+    });
+}
 ```
 
 为了实际执行 HTTP 调用，我们可以使用 `WS` 类。`WS` 类是 Play 提供的 WS (WebService) 库的一部分，允许我们从客户端角度向远程系统发起 Web 调用。正如我们将看到的，它非常简单。我们将测试产品列表 URL 是否返回状态码 200 且主体不为空。列表 12.9 显示了该测试。尽管运行它吧：它应该通过。
 
-列表 12.9 一个简单的 HTTP 调用测试
+#### 列表 12.9 一个简单的 HTTP 调用测试
 
 ```java
 public void myIntegrationTest() {
@@ -9016,11 +8240,11 @@ public void myIntegrationTest() {
 
 ### 12.3.2 浏览器测试
 
-Play 带有 Selenium 2 和 FluentSelenium 3 的集成。Selenium 是一个允许自动化浏览器测试的工具。它支持多种浏览器，以及 HtmlUnit，无无头测试的方法——即在不实际使用浏览器的情况下进行浏览器测试。FluentSelenium 是一个测试框架，允许你像编写单元测试一样编写测试，而不是录制并回放浏览器交互（这是创建 Selenium 测试的“常规”方法）。
+Play 带有 Selenium 2 和 FluentSelenium 3 的集成。Selenium 是一个允许自动化浏览器测试的工具。它支持多种浏览器，以及 HtmlUnit，无头测试的方法——即在不实际使用浏览器的情况下进行浏览器测试。FluentSelenium 是一个测试框架，允许你像编写单元测试一样编写测试，而不是录制并回放浏览器交互（这是创建 Selenium 测试的“常规”方法）。
 
-Play 让运行 Selenium/FluentSelenium 测试变得简单。基本方法与我们在集成测试中看到的相同：使用 `running()` 方法，并向它传递 `testServer` 和一个包含你实际测试代码的对象。区别在于，我们还必须传递一个浏览器配置，并且我们的测试包含在 `Callback` 中而不是 `Runnable` 中。⁴。
+Play 让运行 Selenium/FluentSelenium 测试变得简单。基本方法与我们在集成测试中看到的相同：使用 `running()` 方法，并向它传递 `testServer` 和一个包含你实际测试代码的对象。区别在于，我们还必须传递一个浏览器配置，并且我们的测试包含在 `Callback` 中而不是 `Runnable` 中。⁴
 
-解释所有的 Selenium 和 FluentSelenium 需要一整书，所以我们不尝试这样做，但我们将向你展示一个基础测试，来说说明如何配合 Play 使用这些工具。如果你想了解更多信息，Selenium 和 FluentSelenium 都有非常优秀的文档。
+解释所有的 Selenium 和 FluentSelenium 需要一整书，所以我们不尝试这样做，但我们将向你展示一个基础测试，来说明如何配合 Play 使用这些工具。如果你想了解更多信息，Selenium 和 FluentSelenium 都有非常优秀的文档。
 
 对于我们的测试，让我们看看产品列表是否符合我们的预期。我们将测试页面是否实际上包含产品列表，以及点击产品是否会进入产品详情视图。首先，让我们建立基本的测试结构。列表 12.10 显示了如何做。
 
@@ -9028,27 +8252,24 @@ Play 让运行 Selenium/FluentSelenium 测试变得简单。基本方法与我�
 - ³ https://github.com/FluentSelenium/FluentSelenium
 - ⁴ 我们使用 `Callback` 是因为它接收参数，而 `Runnable` 不行。
 
-列表 12.10 IntegrationTest.java
+#### 列表 12.10 IntegrationTest.java
 
 ```java
 import static play.test.Helpers.*;
 import org.junit.Test;
 import play.libs.Helpers;
 import play.test.TestBrowser;
-
 import static org.junit.Assert.*;
 
 public class IntegrationTest {
     @Test
     public void simpleProductsTest() {
-        running(testServer(3333), HTMLUNIT,
-            new Callback<TestBrowser>(){
-                @Override
-                public void invoke(TestBrowser browser)
-                    throws Throwable {
-                    // 测试代码在这里
-                }
-            });
+        running(testServer(3333), HTMLUNIT, new Callback<TestBrowser>() {
+            @Override
+            public void invoke(TestBrowser browser) throws Throwable {
+                // 测试代码在这里
+            }
+        });
     }
 }
 ```
@@ -9060,16 +8281,12 @@ public class IntegrationTest {
 1. 转到产品列表的 URL
 2. 断言页面上至少存在一个指向产品的链接
 3. 点击列表中的一个产品
-4. 断言浏览器的位置已更改到产品详情页的 URL。
+4. 断言浏览器的位置已更改到产品详情页的 URL
 5. 断言页面显示正确的产品名称。
 
 ```java
 browser.goTo("http://localhost:3333/products");
 ```
-
-
-
-
 
 # 第 12 章 测试您的应用程序
 
@@ -9077,20 +8294,29 @@ browser.goTo("http://localhost:3333/products");
 
 要点击链接，我们可以先选择它，然后在其上调用 `click()` 方法。要检查浏览器的位置，我们可以在浏览器对象上调用 `url()` 方法。当然，光凭 URL 并不够说服我们。为了验证这确实是产品详情页，我们将检查其是否包含产品名称的测试项。最后的测试显示在下面的列表中。
 
-# 列表 12.12 测试交互
+#### 列表 12.12 测试交互
 
-```
+```java
 ...
 @Test
 public void productListingTest() {
-    running(tester(3333)
+    running(testServer(3333), HTMLUNIT, new Callback<TestBrowser>() {
+        @Override
+        public void invoke(TestBrowser browser) throws Throwable {
+            browser.goTo("http://localhost:3333/products");
+            // 后续测试代码
+        }
+    });
+}
 ```
 
-如果你还没有运行，请尽管去运行这些测试——它们都会顺利通过。现在，这些测试看起来可能很傻，——为什么要测试链接是否有效呢？你明明完全可以容易地检查其 `href` 属性的值？嗯，没错，在某些情况下，我们本质上是在测试浏览器是否正常工作（一个依赖大量 JavaScript 的网页）。事件处理器实际上可能会破坏导航功能。如果不使用自动化，没有办法测试这一点——测试是非常有用的——它们像用户一样测试你的网页，而不需要让真实的人去承担所有各种无聊的点击操作。既然我们已经实现了这种测试的自动化，我们就可以每个层级对我们的应用程序进行测试。
+
+
+如果你还没有运行，请尽管去运行这些测试——它们都会顺利通过。现在，这些测试看起来可能很傻——为什么要测试链接是否有效呢？你明明完全可以容易地检查其 `href` 属性的值？嗯，没错，在某些情况下，我们本质上是在测试浏览器是否正常工作（一个依赖大量 JavaScript 的网页）。事件处理器实际上可能会破坏导航功能。如果不使用自动化，没有办法测试这一点——测试是非常有用的——它们像用户一样测试你的网页，而不需要让真实的人去承担所有各种无聊的点击操作。既然我们已经实现了这种测试的自动化，我们就可以每个层级对我们的应用程序进行测试。
 
 ## 12.4 总结
 
-在本章中，我们看到了 Play 如何帮助你编写自动化测试。我们了解了如何运行 JUnit 测试，以及单元测试、集成测试和浏览器测试之间的区别。我们看到可以测试 Play 应用的不同部分：模型（models）、控制器（controllers）、模板（templates）和路由器（router）。使用 `FakeApplication` 以及 `play.test.Helpers` 类中的 `running()` 方法，可以通过直接调用应用程序代码来测试整个应用程序。`TestServer` 允许像客户端应用程序一样调用应用程序的 HTTP 接口，让你能够运行集成测试。Play 与 Selenium 和 Flium 的集成意味着你可以轻松地测试用户看到的应用程序，包括 JavaScript 的效果和用户交互的影响。
+在本章中，我们看到了 Play 如何帮助你编写自动化测试。我们了解了如何运行 JUnit 测试，以及单元测试、集成测试和浏览器测试之间的区别。我们看到可以测试 Play 应用的不同部分：模型（models）、控制器（controllers）、模板（templates）和路由器（router）。使用 `FakeApplication` 以及 `play.test.Helpers` 类中的 `running()` 方法，可以通过直接调用应用程序代码来测试整个应用程序。`TestServer` 允许像客户端应用程序一样调用应用程序的 HTTP 接口，让你能够运行集成测试。Play 与 Selenium 和 Fluentium 的集成意味着你可以轻松地测试用户看到的应用程序，包括 JavaScript 的效果和用户交互的影响。
 
 你现在已经完成了 Play 的学习并学到了很多；你掌握了应对现代 Web 应用的知识，并可以扩展这些知识。作为最后的建议，尽量保持与 Play 社区的联系。这是一个忙碌且令人兴奋的地方，我们乐意在那里听到你的声音。希望你喜欢这段旅程！
 
@@ -9098,28 +8324,28 @@ public void productListingTest() {
 
 ## 符号
 
-- : (冒号) 84
-- ( 括号) 186
-- { (大括号 183)
-- @ (@ 符号) 45, 181, 184
-- ~ (波浪号) 273
-- $ ($符号) 285
+- `:` (冒号) 84
+- `(` (括号) 186
+- `{` (大括号) 183
+- `@` (@ 符号) 45, 181, 184
+- `~` (波浪号) 273
+- `$` ($符号) 285
 
 - Apache 266
 - app 目录
-- 编译资源 28
-- 概述 27
+  - 编译资源 28
+  - 概述 27
 - app/views 目录 17
 - 应用服务器
-- 部署 270
-- 用于测试 276
-- 目的 23
+  - 部署 270
+  - 用于测试 276
+  - 目的 23
 - 秘密钥签名
 - 硬币 99
 
 - LESS 支持 29
 - public 目录 26–27
--  reactive 63
+- reactive 63
 - 运行 13–44
 - SBT 配置文件 24–26
 
@@ -9129,13 +8355,13 @@ public void productListingTest() {
 - Acme Paperclip 公司 22
 - action 属性 50
 - action 方法
-- 控制器 74
-- def 15
-- 用于 CRUD 应用 38
-- URL 映射 39–40
-- 参数 86
-- 从一个到另一个的引用 83
-- routes 文件 23
+  - 控制器 74
+  - def 15
+  - 用于 CRUD 应用 38
+  - URL 映射 39–40
+  - 参数 86
+  - 从一个到另一个的引用 83
+  - routes 文件 23
 - aggregate() 函数 26
 - AJAX (异步 JavaScript 和 XML) 222
 - Aka 7
@@ -9160,15 +8386,15 @@ public void productListingTest() {
 - AnnotationBuild 类 236
 - 可访问并运行 14
 - app 目录
-- 复杂资源 28
-- 概述 27
+  - 复杂资源 28
+  - 概述 27
 - CoffeeScript 209
 - 冲突文件 23–24
 - 创建 12
 - 企业级应用
-- 挑战 63–64
-- 概述 59–63
-- Play 和 64–68
+  - 挑战 63–64
+  - 概述 59–63
+  - Play 和 64–68
 - 仓库示例应用 68–70
 - 22 的文件结构 22–23
 - Google Closure 编译器 29
@@ -9177,36 +8403,37 @@ public void productListingTest() {
 - @FalseFalse 注解 128
 - @True 注解 127
 - 资源
-- 目录 29
-- LESS 199–200
-- 使用模板 201
+  - 目录 29
+  - LESS 199–200
+  - 使用模板 201
 - asJson() 方法 125
 - async() 方法 212
 - 异步数据
-- Comet 220–223
-- 已定义，208–209
-- 接收请求 212–214
-- 返回任务 214–215
-- 流式响应
-- 分块响应 217–219
+  - Comet 220–223
+  - 已定义，208–209
+  - 接收请求 212–214
+  - 返回任务 214–215
+  - 流式响应
+    - 分块响应 217–219
 
 ## 索引
 
 - 异步数据，流式响应（续）
-- Content Length 请求头 215–216
-- 概述 215
-- 服务文件 216–217
-- WebSockets
-- 示例 227–230
-- 概述 225–227
+  - Content Length 请求头 215–216
+  - 概述 215
+  - 服务文件 216–217
+  - WebSockets
+    - 示例 227–230
+    - 概述 225–227
 - 异步 JavaScript 和 XML, JSON
 - 签名 @ 45, 181, 184
 - 攻击 233
 - 认证
-- 基础认证 238–243
-- 与 action
+  - 基础认证 238–243
+  - 与 action
 
 ## B
+
 - badRequest() 方法 76
 - 代码控制器 255
 - 条码 256
@@ -9214,17 +8441,17 @@ public void productListingTest() {
 - 基础认证 238–243
 - BasicFilter 类 240
 - 与 WebSockets 双向通信
-- 示例 227–230
-- 概述 225–227
+  - 示例 227–230
+  - 概述 225–227
 - 二进制体解析器 223
 - bind() 方法 116, 119
 - 数据绑定
-- 表单字段 119–123
-- 多值值 110–114
-- 概述 108–109
-- 路径构建器 114–117
-- 查询字符串 116–119
-- 单值 109
+  - 表单字段 119–123
+  - 多值值 110–114
+  - 概述 108–109
+  - 路径构建器 114–117
+  - 查询字符串 116–119
+  - 单值 109
 - 表单实体 50
 - 终止 181–183
 - bodyparser API 124–226
@@ -9236,6 +8463,7 @@ public void productListingTest() {
 - 字节码增强 141
 
 ## C
+
 - 缓存 目录 7
 - RESTful 应用 66
 - session 范围 97
@@ -9252,7 +8480,7 @@ public void productListingTest() {
 - 部署到 Cloud 269
 - Cloudbees 269
 - 代码库，精简 200–201
-- 冒号 : 84
+- 冒号 `:` 84
 - 逗号分隔值。另见 CSV
 - 编译错误 16
 - 评估 180
@@ -9278,18 +8506,18 @@ public void productListingTest() {
 - 结束 91–93
 - 目的 73–74
 - 结果
-- Redirect 77
-- 在响应中使用 77–80
+  - Redirect 77
+  - 在响应中使用 77–80
 - 冲突路由 87
 - 默认值 87
 - 固定值 84
 - 反向路由 84, 89
 - 类型安全 83
 - 范围
-- flash 范围 98
-- 历史 93–94
-- request 范围 96–97
-- response 范围 97
+  - flash 范围 98
+  - 历史 93–94
+  - request 范围 96–97
+  - response 范围 97
 - 结构 74–75
 - 测试 276–278
 - 对话规模 93
@@ -9300,6 +8528,7 @@ public void productListingTest() {
 - 跨站脚本 234–235
 
 ## D
+
 - CRUD (Create, Retrieve, Update, Delete) 控制器和 action 38–39
 - 映射实体 146–147
 - 保存实体 149–151
@@ -9317,32 +8546,32 @@ public void productListingTest() {
 - 解析传递性依赖 26
 - dependent() 261
 - 部署
-- 添加 Bootstrap 45–46
-- 渲染 47
-- URL 映射到方法 39–40
-- 模型 41–43
-- 产品表单对象 48
-- 输入字段 49–50
-- 概述 47–48
-- 渲染 48–49
-- 运行 50
-- 概述 151–152
-- 地址句和 146–159
-- ORM Ebean 147
-- 概述 143–145
-- 按 ID 查询数据库 162
-- 应用服务器 270
-- 云提供商 269
-- 配置文件 263–265
-- 包管理器 255–266
-- 设置在生产环境 268
-- 使用 SSL 268–269
+  - 添加 Bootstrap 45–46
+  - 渲染 47
+  - URL 映射到方法 39–40
+  - 模型 41–43
+  - 产品表单对象 48
+  - 输入字段 49–50
+  - 概述 47–48
+  - 渲染 48–49
+  - 运行 50
+  - 概述 151–152
+  - 地址句和 146–159
+  - ORM Ebean 147
+  - 概述 143–145
+  - 按 ID 查询数据库 162
+  - 应用服务器 270
+  - 云提供商 269
+  - 配置文件 263–265
+  - 包管理器 255–266
+  - 设置在生产环境 268
+  - 使用 SSL 268–269
 - details.class.html 112
 - 开发者体验。另见 DX
 - 注解 128
 - discard(Cookies()) 方法 97
 - dist 类 253
-- ($) 285
+- `($)` 285
 - 下载 Play 10
 - 时间 86
 - DX (开发者体验) 4
@@ -9353,7 +8582,7 @@ public void productListingTest() {
 - CSR 跨站请求伪造 csrfToken 参数 238
 - CS (层级样式表) 199
 - CSV (逗号分隔值) 181
-- 大括号 [] 183
+- 大括号 `[]` 183
 - 过滤 170–171
 - 加载数据排序 171–72
 - 概述 161–162, 168–170
@@ -9364,12 +8593,12 @@ public void productListingTest() {
 - 按 ID 查询数据库 162
 - 数据访问 9
 - 数据绑定
-- 表单字段 119–123
-- 多值 110–114
-- 概述 108–109
-- 路径数据 114–117
-- 查询字符串 116–119
-- 单值 109
+  - 表单字段 119–123
+  - 多值 110–114
+  - 概述 108–109
+  - 路径数据 114–117
+  - 查询字符串 116–119
+  - 单值 109
 - 表单实体 50
 - 终止 181–183
 - bodyparser API 124–226
@@ -9383,20 +8612,20 @@ public void productListingTest() {
 ## E
 
 - Ebean
-- 配置 146–147
-- 数据访问 9
-- 概述 145
+  - 配置 146–147
+  - 数据访问 9
+  - 概述 145
 - Eclipse 29–30
 - eclipse 命令 30
 - @Email 注解 127–128
 - 企业级应用
-- 挑战 264–265
-- 数据访问 9
-- 灵活性 9
-- 集成 9
-- 大团队应用 9
-- 模块化 10
-- 概述 59–63
+  - 挑战 264–265
+  - 数据访问 9
+  - 灵活性 9
+  - 集成 9
+  - 大团队应用 9
+  - 模块化 10
+  - 概述 59–63
 
 
 
@@ -9406,6 +8635,7 @@ public void productListingTest() {
 # 索引
 
 ## 企业级应用（续）
+
 - 外键 152
 - 通用类型 44
 - Play 和 64-68
@@ -9476,6 +8706,7 @@ public void productListingTest() {
 - 提交 50–133
 
 # H
+
 - 脚本 166
 - 辅助函数 106
 - H2
@@ -9493,6 +8724,7 @@ public void productListingTest() {
 - hasError() 方法 126
 
 # F
+
 - 方法 130–131
 - 无头浏览器测试 283
 - @Validate
@@ -9548,6 +8780,7 @@ public void productListingTest() {
 - Scala 中的 for-each 循环 184
 
 # G
+
 - get(e) 方法 170
 - generated.keystore 269
 
@@ -9555,23 +8788,25 @@ public void productListingTest() {
 # 索引
 
 ## HTTP (超文本传输协议)
+
 - 拦截器
-- @Annotation 89–91
-- 结束 91–93
+  - @Annotation 89–91
+  - 结束 91–93
 - 国际化
-- 定义 202
-- JUnit 272
-- JVM (Java 虚拟机) 4
-- "OK" 响应 15
-- 在框架中使用 6
-- 方法 24
-- 16–17 中的参数
-- 响应 43
-- 本地化 202
-- 消息文件 202–203
-- 使用
+  - 定义 202
+  - JUnit 272
+  - JVM (Java 虚拟机) 4
+  - "OK" 响应 15
+  - 在框架中使用 6
+  - 方法 24
+  - 16–17 中的参数
+  - 响应 43
+  - 本地化 202
+  - 消息文件 202–203
+  - 使用
 
 ## K
+
 - 测试接口 282–283
 - http.port 属性 269
 - https.server 属性 269
@@ -9581,15 +8816,19 @@ public void productListingTest() {
 - https-server-option 267
 
 ## 超文本标记语言.
+
 - 见
 ## 超文本传输协议.
+
 - 见
 ## HTTP
+
 - isValid() 方法 130, 132
 - 迭代 184–186
 - 视图布局 193–199
 
 ## J
+
 - IDE (集成开发环境)
 - 应用 34–36
 - 等等性 69
@@ -9627,12 +8866,13 @@ public void productListingTest() {
 - 初始数据 167
 
 ## L
+
 - 大型团队应用 9
 - 本地化 202
 - 国际化
-- 定义 202
-- 消息文件 202–203
-- 使用
+  - 定义 202
+  - 消息文件 202–203
+  - 使用
 - 工程
 - http.port 属性 269
 - https.server 属性 269
@@ -9642,6 +8882,7 @@ public void productListingTest() {
 - https-server-option 267
 
 ## M
+
 - Mac OS 10
 - main.class 文件 27
 - 多对 159–161
@@ -9649,18 +8890,19 @@ public void productListingTest() {
 - 国际化消息文件
 - MessageFormat 类 203–206
 - 压缩 JavaScript 29
--  Mock 274
+- Mock 274
 - 模型类 40–41
 - 模块化 9–10
 - 模块
-- 创建代码 255–256
-- 列表 250
-- 命名 256
+  - 创建代码 255–256
+  - 列表 250
+  - 命名 256
 - multipart/data-content 类型 125
 - 多语句表达式 183
 - MySQL 147
 
 ## N
+
 - 自然键 145
 - 导航，测试 284
 - NetBeans 50–33
@@ -9672,6 +8914,7 @@ public void productListingTest() {
 - Null 注解 127
 
 ## O
+
 - JUnit, 253
 - 对象关系映射.
 - Se ORM
@@ -9687,15 +8930,17 @@ public void productListingTest() {
 - orderBy(method) 171
 
 ## ORM
+
 - Ebean 145
 - 概述 143–145
 - 孤儿提交 258
 
 ## P
+
 - PaaS (平台即服务) 269
 - 包
-- 创建包 265–266
-- 命名 256
+  - 创建包 265–266
+  - 命名 256
 - 页面模板。服务页面，
 - Git, GitHub
 - 用于数据库查询的数据库 172–173
@@ -9728,19 +8973,21 @@ public void productListingTest() {
 - 一对多双向关系 154–156
 
 ## ORM (对象关系映射)
+
 - Ebean 145
 - 概述 143–145
 - 孤儿提交 258
 - 查询数据库
-- 通过 ID 162
-- 加载
-- 过滤选择 170–171
-- 启动 166–171
-- 概述 161–1680
-- 分页 172–173
-- 使用 Finder API 162–165
+  - 通过 ID 162
+  - 加载
+  - 过滤选择 170–171
+  - 启动 166–171
+  - 概述 161–1680
+  - 分页 172–173
+  - 使用 Finder API 162–165
 
 ## PHP 6
+
 - 平台即服务。Ser PaaS
 - Play
 - 访问运行
@@ -9766,6 +9013,7 @@ public void productListingTest() {
 # 295
 
 Play，企业特性（续）
+
 - 集成 9
 - 大规模应用
 - 模块化 10
@@ -9866,6 +9114,7 @@ Play，企业特性（续）
 - 表单对象 48
 
 # Q
+
 - 查询字符串绑定 117-119
 - 通过 ID 查询数据库 162
 - 过滤服务 170-171
@@ -9878,6 +9127,7 @@ Play，企业特性（续）
 - QueryStringBuilder 接口 118
 
 # R
+
 - 响应式编程
   - 事件 7-8
   - 概述 7
@@ -9950,6 +9200,7 @@ Play，企业特性（续）
   - 综合键 145
 
 # S
+
 - Safari 224
 - SBT 配置文件 24-26
 - sib-package 插件 265
@@ -9957,7 +9208,7 @@ Play，企业特性（续）
   - 泛型 44
   - 模板
     - 使用 178-181
-    -  199-201
+    - 199-201
     - 代码复杂度 184
     - 表达式范围 183-184
     - if/else 语句 186-187
@@ -10036,6 +9287,7 @@ Play，企业特性（续）
     - 综合键 145
 
 # U
+
 - Ubuntu 265
 - ubind() 116-118
 - 解绑定
@@ -10056,7 +9308,7 @@ Play，企业特性（续）
 - 路径处理器 114-117
 - 查询字符串绑定 117-119
 - 单值 109-110
-@Validate 注解 128
+- @Validate 注解 128
 - @Validate 注解 127, 130-131
 - 验证
   - 内置验证器 126-128

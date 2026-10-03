@@ -1,3 +1,4 @@
+
 # Lambda 表达式
 
 > 原文：[`docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html`](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)
@@ -9,35 +10,20 @@
 本节涵盖以下主题：
 
 +   Lambda 表达式的理想使用情况
-
     +   方法 1：创建搜索符合一个特征的成员的方法
-
     +   方法 2：创建更通用的搜索方法
-
     +   方法 3：在本地类中指定搜索条件代码
-
     +   方法 4：在匿名类中指定搜索条件代码
-
     +   方法 5：使用 Lambda 表达式指定搜索条件代码
-
     +   方法 6：使用 Lambda 表达式与标准功能接口
-
     +   方法 7：在整个应用程序中使用 Lambda 表达式
-
     +   方法 8：更广泛地使用泛型
-
     +   方法 9：使用接受 Lambda 表达式作为参数的聚合操作
-
 +   GUI 应用程序中的 Lambda 表达式
-
 +   Lambda 表达式的语法
-
 +   访问封闭范围的局部变量
-
 +   目标类型
-
     +   目标类型和方法参数
-
 +   序列化
 
 ## Lambda 表达式的理想使用情况
@@ -50,22 +36,8 @@
 | 主要执行者 | 管理员 |
 | 前提条件 | 管理员已登录到系统。 |
 | 后置条件 | 操作仅在符合指定条件的成员上执行。 |
-| 主要成功场景 |
-
-1.  管理员指定要执行某个操作的成员的条件。
-
-1.  管理员指定对所选成员执行的操作。
-
-1.  管理员选择**提交**按钮。
-
-1.  系统找到所有符合指定条件的成员。
-
-1.  系统对所有匹配成员执行指定操作。
-
-|
-
+| 主要成功场景 | 1. 管理员指定要执行某个操作的成员的条件。 2. 管理员指定对所选成员执行的操作。 3. 管理员选择**提交**按钮。 4. 系统找到所有符合指定条件的成员。 5. 系统对所有匹配成员执行指定操作。 |
 | 扩展 | 1a. 管理员在指定执行操作或选择**提交**按钮之前有选项预览符合指定条件的成员。 |
-| --- | --- |
 | 出现频率 | 一天中多次。 |
 
 假设这个社交网络应用程序的成员由以下`Person`类表示：
@@ -213,7 +185,7 @@ printPersons(
 
 您可以使用标准的函数式接口来替代`CheckPerson`接口，从而进一步减少所需的代码量。
 
-### 第六种方法：使用 Lambda 表达式与标准函数式接口
+### 方法 6：使用 Lambda 表达式与标准函数式接口
 
 重新考虑`CheckPerson`接口：
 
@@ -254,7 +226,7 @@ public static void printPersonsWithPredicate(
 }
 ```
 
-因此，下面的方法调用与你在第 3 种方法：在本地类中指定搜索条件代码中调用`printPersons`以获取符合选择性服务资格的成员时是相同的：
+因此，下面的方法调用与你在方法 3：在本地类中指定搜索条件代码中调用`printPersons`以获取符合选择性服务资格的成员时是相同的：
 
 ```java
 printPersonsWithPredicate(
@@ -267,7 +239,7 @@ printPersonsWithPredicate(
 
 这个方法中使用 Lambda 表达式的地方并不是唯一的。以下方法建议其他使用 Lambda 表达式的方式。
 
-### 第七种方法：在整个应用程序中使用 Lambda 表达式
+### 方法 7：在整个应用程序中使用 Lambda 表达式
 
 重新考虑`printPersonsWithPredicate`方法，看看还能在哪里使用 Lambda 表达式：
 
@@ -330,6 +302,8 @@ public static void processPersonsWithFunction(
 
 以下方法从`roster`中包含的每个符合应征条件的成员中检索电子邮件地址，然后打印它：
 
+
+
 ```java
 processPersonsWithFunction(
     roster,
@@ -375,13 +349,10 @@ processElements(
 
 此方法调用执行以下操作：
 
-1.  从集合`source`中获取对象的源。在这个例子中，它从集合`roster`中获取`Person`对象的源。注意，集合`roster`是一个`List`类型的集合，也是一个`Iterable`类型的对象。
-
-1.  过滤与`tester`对象匹配的对象。在这个例子中，`Predicate`对象是一个指定哪些成员符合应征条件的 lambda 表达式。
-
-1.  将每个经过筛选的对象映射到由`mapper`对象指定的值。在这个例子中，`Function`对象是一个返回成员电子邮件地址的 lambda 表达式。
-
-1.  根据`Consumer`对象`block`指定的操作对每个映射对象执行动作。在此示例中，`Consumer`对象是一个打印字符串的 Lambda 表达式，该字符串是由`Function`对象返回的电子邮件地址。
+1. 从集合`source`中获取对象的源。在这个例子中，它从集合`roster`中获取`Person`对象的源。注意，集合`roster`是一个`List`类型的集合，也是一个`Iterable`类型的对象。
+2. 过滤与`tester`对象匹配的对象。在这个例子中，`Predicate`对象是一个指定哪些成员符合应征条件的 lambda 表达式。
+3. 将每个经过筛选的对象映射到由`mapper`对象指定的值。在这个例子中，`Function`对象是一个返回成员电子邮件地址的 lambda 表达式。
+4. 根据`Consumer`对象`block`指定的操作对每个映射对象执行动作。在此示例中，`Consumer`对象是一个打印字符串的 Lambda 表达式，该字符串是由`Function`对象返回的电子邮件地址。
 
 您可以用聚合操作替换每个这些操作。
 
@@ -404,10 +375,10 @@ roster
 
 | `processElements`操作 | 聚合操作 |
 | --- | --- |
-| 获取对象源 | `Stream<E> **stream**()` |
-| 过滤与`Predicate`对象匹配的对象 | `Stream<T> **filter**(Predicate<? super T> predicate)` |
-| 根据`Function`对象将对象映射到另一个值 | `<R> Stream<R> **map**(Function<? super T,? extends R> mapper)` |
-| 根据`Consumer`对象指定的操作执行动作 | `void **forEach**(Consumer<? super T> action)` |
+| 获取对象源 | `Stream<E> stream()` |
+| 过滤与`Predicate`对象匹配的对象 | `Stream<T> filter(Predicate<? super T> predicate)` |
+| 根据`Function`对象将对象映射到另一个值 | `<R> Stream<R> map(Function<? super T,? extends R> mapper)` |
+| 根据`Consumer`对象指定的操作执行动作 | `void forEach(Consumer<? super T> action)` |
 
 操作`filter`、`map`和`forEach`是*聚合操作*。聚合操作处理来自流的元素，而不是直接来自集合（这就是为什么此示例中调用的第一个方法是`stream`的原因）。*流*是元素的序列。与集合不同，它不是存储元素的数据结构。相反，流通过管道从源（例如集合）传递值。*管道*是一系列流操作，本示例中是`filter`-`map`-`forEach`。此外，聚合操作通常接受 Lambda 表达式作为参数，使您能够自定义它们的行为。
 
@@ -420,69 +391,68 @@ roster
 在 JavaFX 示例[`HelloWorld.java`](https://docs.oracle.com/javase/8/javafx/get-started-tutorial/hello_world.htm)（在上一节匿名类中讨论）中，您可以在此语句中用 Lambda 表达式替换突出显示的匿名类：
 
 ```java
-        btn.setOnAction(new EventHandler<ActionEvent>() {
+btn.setOnAction(new EventHandler<ActionEvent>() {
 
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
+    @Override
+    public void handle(ActionEvent event) {
+        System.out.println("Hello World!");
+    }
+});
 ```
 
 方法调用`btn.setOnAction`指定了当选择由`btn`对象表示的按钮时会发生什么。此方法需要一个`EventHandler<ActionEvent>`类型的对象。`EventHandler<ActionEvent>`接口只包含一个方法`void handle(T event)`。该接口是一个函数式接口，因此您可以使用以下突出显示的 Lambda 表达式来替换它：
 
 ```java
-        btn.setOnAction(
-          event -> System.out.println("Hello World!")
-        );
+btn.setOnAction(
+  event -> System.out.println("Hello World!")
+);
 ```
 
 ## Lambda 表达式的语法
 
 一个 lambda 表达式由以下内容组成：
 
-+   用括号括起的逗号分隔的形式参数列表。`CheckPerson.test`方法包含一个参数`p`，它表示`Person`类的一个实例。
++ 用括号括起的逗号分隔的形式参数列表。`CheckPerson.test`方法包含一个参数`p`，它表示`Person`类的一个实例。
 
-    **注意**：您可以在 lambda 表达式中省略参数的数据类型。此外，如果只有一个参数，您可以省略括号。例如，以下 lambda 表达式也是有效的：
+  **注意**：您可以在 lambda 表达式中省略参数的数据类型。此外，如果只有一个参数，您可以省略括号。例如，以下 lambda 表达式也是有效的：
 
-    ```java
-    p -> p.getGender() == Person.Sex.MALE 
-        && p.getAge() >= 18
-        && p.getAge() <= 25
-    ```
+  ```java
+  p -> p.getGender() == Person.Sex.MALE 
+      && p.getAge() >= 18
+      && p.getAge() <= 25
+  ```
 
-+   箭头标记，`->`
++ 箭头标记，`->`
 
-+   一个由单个表达式或语句块组成的主体。本示例使用以下表达式：
++ 一个由单个表达式或语句块组成的主体。本示例使用以下表达式：
 
-    ```java
-    p.getGender() == Person.Sex.MALE 
-        && p.getAge() >= 18
-        && p.getAge() <= 25
-    ```
+  ```java
+  p.getGender() == Person.Sex.MALE 
+      && p.getAge() >= 18
+      && p.getAge() <= 25
+  ```
 
-    如果您指定一个单一表达式，那么 Java 运行时将评估该表达式，然后返回其值。或者，您可以使用一个返回语句：
+  如果您指定一个单一表达式，那么 Java 运行时将评估该表达式，然后返回其值。或者，您可以使用一个返回语句：
 
-    ```java
-    p -> {
-        return p.getGender() == Person.Sex.MALE
-            && p.getAge() >= 18
-            && p.getAge() <= 25;
-    }
-    ```
+  ```java
+  p -> {
+      return p.getGender() == Person.Sex.MALE
+          && p.getAge() >= 18
+          && p.getAge() <= 25;
+  }
+  ```
 
-    返回语句不是一个表达式；在 lambda 表达式中，您必须用大括号（`{}`）括起语句。然而，在 void 方法调用中，您不必用大括号括起。例如，以下是一个有效的 lambda 表达式：
+  返回语句不是一个表达式；在 lambda 表达式中，您必须用大括号（`{}`）括起语句。然而，在 void 方法调用中，您不必用大括号括起。例如，以下是一个有效的 lambda 表达式：
 
-    ```java
-    email -> System.out.println(email)
-    ```
+  ```java
+  email -> System.out.println(email)
+  ```
 
 请注意，lambda 表达式看起来很像方法声明；您可以将 lambda 表达式视为匿名方法——没有名称的方法。
 
 以下示例`Calculator`是一个使用多个形式参数的 lambda 表达式的示例：
 
 ```java
-
 public class Calculator {
 
     interface IntegerMath {
@@ -504,7 +474,6 @@ public class Calculator {
             myApp.operateBinary(20, 10, subtraction));    
     }
 }
-
 ```
 
 方法`operateBinary`对两个整数操作数执行数学运算。操作本身由`IntegerMath`的实例指定。该示例使用 lambda 表达式定义了两个操作，`addition`和`subtraction`。该示例打印如下内容：
@@ -519,7 +488,6 @@ public class Calculator {
 像局部类和匿名类一样，lambda 表达式可以捕获变量；它们对封闭范围的局部变量具有相同的访问权限。然而，与局部类和匿名类不同，lambda 表达式没有任何遮蔽问题（有关更多信息，请参见遮蔽）。Lambda 表达式是词法作用域的。这意味着它们不继承任何名称来自超类型，也不引入新的作用域级别。lambda 表达式中的声明被解释为在封闭环境中一样。以下示例`LambdaScopeTest`演示了这一点：
 
 ```java
-
 import java.util.function.Consumer;
 
 public class LambdaScopeTest {
@@ -571,7 +539,6 @@ y = 23
 z = 2
 this.x = 1
 LambdaScopeTest.this.x = 0
-
 ```
 
 如果在 lambda 表达式`myConsumer`的声明中，将参数`x`替换为`y`，那么编译器会生成一个错误：
@@ -607,33 +574,27 @@ p -> p.getGender() == Person.Sex.MALE
 
 此 lambda 表达式在以下两个方法中使用：
 
-+   方法 3：在本地类中指定搜索条件代码 中的 `public static void printPersons(List<Person> roster, CheckPerson tester)`
-
-+   方法 6：使用标准函数接口和 Lambda 表达式 中的 `public void printPersonsWithPredicate(List<Person> roster, Predicate<Person> tester)`
++ 方法 3：在本地类中指定搜索条件代码 中的 `public static void printPersons(List<Person> roster, CheckPerson tester)`
++ 方法 6：使用标准函数接口和 Lambda 表达式 中的 `public void printPersonsWithPredicate(List<Person> roster, Predicate<Person> tester)`
 
 当 Java 运行时调用方法 `printPersons` 时，它期望的数据类型是 `CheckPerson`，因此 lambda 表达式就是这种类型。然而，当 Java 运行时调用方法 `printPersonsWithPredicate` 时，它期望的数据类型是 `Predicate<Person>`，因此 lambda 表达式就是这种类型。这些方法期望的数据类型称为*目标类型*。为了确定 lambda 表达式的类型，Java 编译器使用 lambda 表达式所在上下文或情况的目标类型。由此可知，只能在 Java 编译器能够确定目标类型的情况下使用 lambda 表达式：
 
-+   变量声明
-
-+   赋值语句
-
-+   返回语句
-
-+   数组初始化器
-
-+   方法或构造函数参数
-
-+   Lambda 表达式主体
-
-+   条件表达式，`?:`
-
-+   强制类型转换表达式
++ 变量声明
++ 赋值语句
++ 返回语句
++ 数组初始化器
++ 方法或构造函数参数
++ Lambda 表达式主体
++ 条件表达式，`?:`
++ 强制类型转换表达式
 
 ### 目标类型和方法参数
 
 对于方法参数，Java 编译器使用另外两个语言特性来确定目标类型：重载解析和类型参数推断。
 
 考虑以下两个函数式接口（[`java.lang.Runnable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html)和[`java.util.concurrent.Callable<V>`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html)）：
+
+
 
 ```java
 public interface Runnable {

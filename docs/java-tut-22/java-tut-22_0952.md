@@ -1,3 +1,4 @@
+
 # 定义简单的通用类型
 
 > 原文：[`docs.oracle.com/javase/tutorial/extra/generics/simple.html`](https://docs.oracle.com/javase/tutorial/extra/generics/simple.html)
@@ -14,7 +15,6 @@ public interface Iterator<E> {
     E next();
     boolean hasNext();
 }
-
 ```
 
 这段代码应该都很熟悉，除了尖括号中的内容。那些是接口`List`和`Iterator`的*形式类型参数*的声明。
@@ -30,7 +30,6 @@ public interface IntegerList {
     void add(Integer x);
     Iterator<Integer> iterator();
 }
-
 ```
 
 这种直觉可能有所帮助，但也是误导的。

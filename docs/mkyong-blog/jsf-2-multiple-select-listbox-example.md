@@ -1,11 +1,12 @@
+
 # JSF 2 多重选择列表框示例
 
 > 原文：<http://web.archive.org/web/20230101150211/http://www.mkyong.com/jsf2/jsf-2-multiple-select-listbox-example/>
 
-在 JSF 中，**<h:selectmany listbox/>**标签用于呈现一个多选 listbox-HTML 选择元素，具有“**多个**”和“**大小**属性。
+在 JSF 中，`<h:selectManyListbox/>`标签用于呈现一个多选 listbox-HTML 选择元素，具有“**多个**”和“**大小**属性”。
 
 ```java
- //JSF...
+//JSF...
 <h:selectManyListbox value="#{user.favFood1}">
    	<f:selectItem itemValue="Fry Checken" itemLabel="Food1 - Fry Checken" />
    	<f:selectItem itemValue="Tomyam Soup" itemLabel="Food1 - Tomyam Soup" />
@@ -20,25 +21,25 @@
 </select> 
 ```
 
-## h:selectManyListbox example
+## h:selectManyListbox 示例
 
-一个 JSF 2.0 示例，展示了如何使用“ **h:selectManyListbox** ”标记来呈现多个选择列表框，并以 3 种不同的方式填充数据:
+一个 JSF 2.0 示例，展示了如何使用“`h:selectManyListbox`”标记来呈现多个选择列表框，并以 3 种不同的方式填充数据：
 
-1.  “**f:selecti item**标签中的硬核值。
-2.  用 Map 生成值，并将其放入“**f:selecti items**标签中。
-3.  用一个对象数组生成值，放入“ **f:selectItems** ”标签，然后用“ **var** 属性表示值。
+1. “`f:selectItem`”标签中的硬核值。
+2. 用 `Map` 生成值，并将其放入“`f:selectItems`”标签中。
+3. 用一个对象数组生成值，放入“`f:selectItems`”标签，然后用“`var`”属性表示值。
 
-## 1.支撑豆
+## 1. 支撑豆
 
-用于保存和生成多选列表框值的数据的后备 bean。保存多选列表框值的属性**必须是集合类型或数组类型**；否则将会出现以下错误信息
+用于保存和生成多选列表框值的数据的后备 bean。保存多选列表框值的属性**必须是集合类型或数组类型**；否则将会出现以下错误信息：
 
 ```java
- WARNING: Target model Type is no a Collection or Array
+WARNING: Target model Type is no a Collection or Array
 javax.faces.FacesException: Target model Type is no a Collection or Array 
 ```
 
 ```java
- package com.mkyong;
+package com.mkyong;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -117,12 +118,12 @@ public class UserBean implements Serializable{
 } 
 ```
 
-## 2.JSF·佩奇
+## 2. JSF 页面
 
-演示“ **h:selectManyListbox** ”标签使用的 JSF 页面。
+演示“`h:selectManyListbox`”标签使用的 JSF 页面。
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html    
@@ -168,10 +169,10 @@ public class UserBean implements Serializable{
 </html> 
 ```
 
-result.xhtml…
+`result.xhtml`…
 
 ```java
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html    
@@ -194,24 +195,20 @@ result.xhtml…
 </html> 
 ```
 
-## 3.演示
-
-
+## 3. 演示
 
 ![jsf2-multi-select-listbox-example-1](img/3a2714dd53ca2dc3f25bface56feaf4e.png "jsf2-multi-select-listbox-example-1")
 
-单击“提交”按钮时，链接到“result.xhtml”页面并显示提交的多选列表框值。
-
-
+单击“提交”按钮时，链接到`result.xhtml`页面并显示提交的多选列表框值。
 
 ![jsf2-multi-select-listbox-example-2](img/64e4e50d733c20a19bec0000624bfa0c.png "jsf2-multi-select-listbox-example-2")
 
 ## 如何预先选择多个列表框值？
 
-如果“**f:selecti items**”标签的值与“ **h:selectManyListbox** ”标签的“值”匹配，则选择该标签的值。在上面的示例中，如果您将 favFood1 属性设置为“Fry Checken”和“Tomyam Soup”:
+如果“`f:selectItems`”标签的值与“`h:selectManyListbox`”标签的“值”匹配，则选择该标签的值。在上面的示例中，如果您将`favFood1`属性设置为“Fry Checken”和“Tomyam Soup”：
 
 ```java
- @ManagedBean(name="user")
+@ManagedBean(name="user")
 @SessionScoped
 public class UserBean{
 
@@ -220,7 +217,7 @@ public class UserBean{
 	//... 
 ```
 
-默认情况下，“favFood1”列表框值、“Fry Checken”和“Tomyam Soup”被选中。
+默认情况下，`favFood1`列表框值、“Fry Checken”和“Tomyam Soup”被选中。
 
 ## 下载源代码
 
@@ -228,16 +225,17 @@ Download It – [JSF-2-Multi-Select-Listbox-Example.zip](http://web.archive.org/
 
 #### 参考
 
-1.  [JSF < h:selectmany listbox/ > JavaDoc](http://web.archive.org/web/20201226142700/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/h/selectManyListbox.html)
-2.  [http://www.w3schools.com/tags/att_select_multiple.asp](http://web.archive.org/web/20201226142700/https://www.w3schools.com/tags/att_select_multiple.asp)
+1. [JSF `<h:selectManyListbox/>` JavaDoc](http://web.archive.org/web/20201226142700/https://javaserverfaces.dev.java.net/nonav/docs/2.0/pdldocs/facelets/h/selectManyListbox.html)
+2. [http://www.w3schools.com/tags/att_select_multiple.asp](http://web.archive.org/web/20201226142700/https://www.w3schools.com/tags/att_select_multiple.asp)
 
-标签:[JSF 2](http://web.archive.org/web/20201226142700/https://mkyong.com/tag/jsf2/)[listbox](http://web.archive.org/web/20201226142700/https://mkyong.com/tag/listbox/)<input type="hidden" id="mkyong-current-postId" value="7289">
+标签：[JSF 2](http://web.archive.org/web/20201226142700/https://mkyong.com/tag/jsf2/)[listbox](http://web.archive.org/web/20201226142700/https://mkyong.com/tag/listbox/)<input type="hidden" id="mkyong-current-postId" value="7289">
 
 ### 相关文章
 
-*   [JSF 2 列表框 103](/web/20201226142700/https://mkyong.com/jsf2/jsf-2-listbox-example/)
-*   [检票口列表选择示例](/web/20201226142700/https://mkyong.com/wicket/wicket-listchoice-example/)
-*   [检票口列表多选示例](/web/20201226142700/https://mkyong.com/wicket/wicket-listmultiplechoice-example/) [JSF 2 link、commandLink 和输出链接示例](/web/20201226142700/https://mkyong.com/jsf2/jsf-2-link-commandlink-and-outputlink-example/)
-*   [JSF 新协议数据表示例](/web/20201226142700/https://mkyong.com/jsf2/jsf-2-datatable-example/)
-*   [Example of JSF2 radio button](/web/20201226142700/https://mkyong.com/jsf2/jsf-2-radio-buttons-example/)
-*   [Warning: JSF1063: Warning! Set unseriable](/web/20201226142700/https://mkyong.com/jsf2/warning-jsf1063-warning-setting-non-serializable-attribute-value-into-httpsession/)
+* [JSF 2 列表框 103](/web/20201226142700/https://mkyong.com/jsf2/jsf-2-listbox-example/)
+* [检票口列表选择示例](/web/20201226142700/https://mkyong.com/wicket/wicket-listchoice-example/)
+* [检票口列表多选示例](/web/20201226142700/https://mkyong.com/wicket/wicket-listmultiplechoice-example/)
+* [JSF 2 link、commandLink 和输出链接示例](/web/20201226142700/https://mkyong.com/jsf2/jsf-2-link-commandlink-and-outputlink-example/)
+* [JSF 新协议数据表示例](/web/20201226142700/https://mkyong.com/jsf2/jsf-2-datatable-example/)
+* [Example of JSF2 radio button](/web/20201226142700/https://mkyong.com/jsf2/jsf-2-radio-buttons-example/)
+* [Warning: JSF1063: Warning! Set unseriable](/web/20201226142700/https://mkyong.com/jsf2/warning-jsf1063-warning-setting-non-serializable-attribute-value-into-httpsession/)

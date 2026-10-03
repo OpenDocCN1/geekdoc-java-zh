@@ -1,52 +1,53 @@
+
 # CQL 数据类型
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/cassandra-data-types>
 
-## 1.概观
+## 1. 概观
 
 在本教程中，我们将展示 Apache Cassandra 数据库的一些不同的数据类型。 **[Apache Cassandra](/web/20220625071705/https://www.baeldung.com/cassandra-with-java) 支持丰富的数据类型集，包括集合类型、原生类型、元组类型和用户定义类型**。
 
-Cassandra 查询语言(CQL)是结构化查询语言(SQL)的简单替代。它是一种声明性语言，用于提供与其数据库的通信。与 SQL 类似，CQL 也将数据存储在表中，并将数据组织成行和列。
+Cassandra 查询语言（CQL）是结构化查询语言（SQL）的简单替代。它是一种声明性语言，用于提供与其数据库的通信。与 SQL 类似，CQL 也将数据存储在表中，并将数据组织成行和列。
 
-## 延伸阅读:
+## 延伸阅读
 
-## [使用 Cassandra、Astra 和 Stargate 构建仪表板](/web/20220625071705/https://www.baeldung.com/cassandra-astra-stargate-dashboard)
+### [使用 Cassandra、Astra 和 Stargate 构建仪表板](/web/20220625071705/https://www.baeldung.com/cassandra-astra-stargate-dashboard)
 
-了解如何使用 DataStax Astra(一种由 Apache Cassandra 和 Stargate APIs 支持的数据库即服务)构建仪表板。[阅读更多](/web/20220625071705/https://www.baeldung.com/cassandra-astra-stargate-dashboard) →
+了解如何使用 DataStax Astra（一种由 Apache Cassandra 和 Stargate APIs 支持的数据库即服务）构建仪表板。[阅读更多](/web/20220625071705/https://www.baeldung.com/cassandra-astra-stargate-dashboard) →
 
-## [用 Cassandra、Astra、REST&graph QL——记录状态更新](/web/20220625071705/https://www.baeldung.com/cassandra-astra-rest-dashboard-updates)
+### [用 Cassandra、Astra、REST&GraphQL——记录状态更新](/web/20220625071705/https://www.baeldung.com/cassandra-astra-rest-dashboard-updates)
 
 用 Cassandra 存储时序数据的例子。[阅读更多信息](/web/20220625071705/https://www.baeldung.com/cassandra-astra-rest-dashboard-updates) →
 
-## [用卡珊德拉、阿斯特拉和 CQL 构建一个仪表板——绘制事件数据](/web/20220625071705/https://www.baeldung.com/cassandra-astra-rest-dashboard-map)
+### [用 Cassandra、Astra 和 CQL 构建一个仪表板——绘制事件数据](/web/20220625071705/https://www.baeldung.com/cassandra-astra-rest-dashboard-map)
 
-了解如何根据存储在阿斯特拉数据库中的数据在交互式地图上显示事件。[阅读更多](/web/20220625071705/https://www.baeldung.com/cassandra-astra-rest-dashboard-map) →
+了解如何根据存储在 Astra 数据库中的数据在交互式地图上显示事件。[阅读更多](/web/20220625071705/https://www.baeldung.com/cassandra-astra-rest-dashboard-map) →
 
-## 2.Cassandra 数据库配置
+## 2. Cassandra 数据库配置
 
-让我们使用 [docker 映像](https://web.archive.org/web/20220625071705/https://github.com/bitnami/bitnami-docker-cassandra)创建一个数据库，并使用`cqlsh`将其连接到数据库。接下来，我们应该创建一个`keyspace:`
+让我们使用 [docker 映像](https://web.archive.org/web/20220625071705/https://github.com/bitnami/bitnami-docker-cassandra)创建一个数据库，并使用`cqlsh`将其连接到数据库。接下来，我们应该创建一个`keyspace`：
 
 ```java
 CREATE KEYSPACE baeldung WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 1};
 ```
 
-出于本教程的目的，我们创建了一个只有一个数据副本的`keyspace `。现在，让我们将客户端会话连接到一个`keyspace:`
+出于本教程的目的，我们创建了一个只有一个数据副本的`keyspace`。现在，让我们将客户端会话连接到一个`keyspace`：
 
 ```java
-USE <code class="language-shell">baeldung;
+USE baeldung;
 ```
 
-## 3.内置数据类型
+## 3. 内置数据类型
 
 CQL 支持丰富的原生数据类型。这些数据类型是预定义的，我们可以直接引用它们中的任何一种。
 
-### 3.1.数字类型
+### 3.1. 数字类型
 
-数字类型类似于 Java 和其他语言中的标准类型，如不同范围的整数或浮点数:
+数字类型类似于 Java 和其他语言中的标准类型，如不同范围的整数或浮点数：
 
 [![](img/9d1c7994fde378cf77955ea71f6fae42.png)](/web/20220625071705/https://www.baeldung.com/wp-content/uploads/2021/07/numeric.png)
 
-让我们创建一个包含所有这些数据类型的表:
+让我们创建一个包含所有这些数据类型的表：
 
 ```java
 CREATE TABLE numeric_types
@@ -62,13 +63,13 @@ CREATE TABLE numeric_types
 );
 ```
 
-### 3.2.文本类型
+### 3.2. 文本类型
 
-CQL 提供了两种数据类型来表示文本。**我们可以使用 text 或 varchar 创建一个 UTF-8 字符串**。UTF-8 是最新的、使用最广泛的文本标准，支持国际化。
+CQL 提供了两种数据类型来表示文本。**我们可以使用`text`或`varchar`创建一个 UTF-8 字符串**。UTF-8 是最新的、使用最广泛的文本标准，支持国际化。
 
-**还有 ascii 类型创建一个 ASCII 字符串**。如果我们处理 ascii 格式的遗留数据，ASCII 类型是最有用的。文本值的大小受列的最大大小限制。单列值大小为 2 GB，但建议仅为 1 MB。
+**还有`ascii`类型创建一个 ASCII 字符串**。如果我们处理 ascii 格式的遗留数据，ASCII 类型是最有用的。文本值的大小受列的最大大小限制。单列值大小为 2 GB，但建议仅为 1 MB。
 
-让我们创建一个包含所有这些数据类型的表:
+让我们创建一个包含所有这些数据类型的表：
 
 ```java
 CREATE TABLE text_types
@@ -80,9 +81,9 @@ CREATE TABLE text_types
 );
 ```
 
-### 3.3.日期类型
+### 3.3. 日期类型
 
-现在，我们来谈谈日期类型。Cassandra 提供了几种类型，证明在定义唯一分区键或定义普通列时非常有用:
+现在，我们来谈谈日期类型。Cassandra 提供了几种类型，证明在定义唯一分区键或定义普通列时非常有用：
 
 [![](img/c9291cac08519da40955fcb99a985d5b.png)](/web/20220625071705/https://www.baeldung.com/wp-content/uploads/2021/07/date2.png)
 
@@ -90,7 +91,7 @@ CREATE TABLE text_types
 
 第一个整数表示月数，第二个表示天数，第三个表示纳秒数。
 
-让我们来看一个`create table`命令的例子:
+让我们来看一个`create table`命令的例子：
 
 ```java
 CREATE TABLE date_types
@@ -104,13 +105,13 @@ CREATE TABLE date_types
 );
 ```
 
-### 3.4。计数器类型
+### 3.4. 计数器类型
 
-**计数器类型用于定义`counter columns`。**计数器列是其值为 64 位有符号整数的列。我们只能对计数器列执行两个操作——递增和递减。
+**计数器类型用于定义`counter columns`。** 计数器列是其值为 64 位有符号整数的列。我们只能对计数器列执行两个操作——递增和递减。
 
 因此，我们不能将值设置为计数器。我们可以使用计数器来跟踪统计数据，比如页面浏览量、tweets、日志消息等。**我们不能将计数器类型与其他类型混合**。
 
-让我们看一个例子:
+让我们看一个例子：
 
 ```java
 CREATE TABLE counter_type
@@ -120,14 +121,17 @@ CREATE TABLE counter_type
 );
 ```
 
-### 3.5。其他数据类型
+### 3.5. 其他数据类型
 
-*   布尔值是一个简单的真/假值
-*   uuid 是一种 4 型 UUID，完全基于随机数。我们可以通过使用破折号分隔的十六进制数字序列来输入 UUIDs
-*   二进制大对象(blob)是一个通俗的计算术语，指任意字节数组。CQL blob 类型存储媒体或其他二进制文件类型。最大 blob 大小为 2 GB，但建议小于 1 MB。
-*   inet 是代表互联网地址的类型
+*   `boolean` 是一个简单的真/假值
 
-同样，让我们用这些类型创建一个表:
+*   `uuid` 是一种 4 型 UUID，完全基于随机数。我们可以通过使用破折号分隔的十六进制数字序列来输入 UUIDs
+
+*   二进制大对象（`blob`）是一个通俗的计算术语，指任意字节数组。CQL `blob`类型存储媒体或其他二进制文件类型。最大 `blob`大小为 2 GB，但建议小于 1 MB。
+
+*   `inet` 是代表互联网地址的类型
+
+同样，让我们用这些类型创建一个表：
 
 ```java
 CREATE TABLE other_types
@@ -140,17 +144,17 @@ CREATE TABLE other_types
 );
 ```
 
-## 4.集合数据类型
+## 4. 集合数据类型
 
 有时我们希望存储相同类型的数据，而不生成新列。集合可以存储多个值。CQL 提供了三种集合类型来帮助我们，比如列表、集合和地图。
 
 例如，我们可以创建一个包含文本元素列表、整数列表或其他元素类型列表的表。
 
-### 4.1.一组
+### 4.1. 一组
 
-**我们可以使用 set 数据类型存储多个唯一值。**同样，在 Java 中`,` 元素也不是按顺序存储的。
+**我们可以使用`set`数据类型存储多个唯一值。** 同样，在 Java 中，元素也不是按顺序存储的。
 
-让我们创建一个集合:
+让我们创建一个集合：
 
 ```java
 CREATE TABLE collection_types
@@ -160,31 +164,31 @@ CREATE TABLE collection_types
 );
 ```
 
-### 4.2.目录
+### 4.2. 目录
 
 **在这种数据类型中，值以列表的形式存储。我们不能改变元素的顺序。将值存储在列表中后，元素会获得一个特定的索引。我们可以通过使用这些索引来检索数据。**
 
-与集合不同，列表可以存储重复值。让我们在表格中添加一个列表:
+与集合不同，列表可以存储重复值。让我们在表格中添加一个列表：
 
 ```java
 ALTER TABLE collection_types
     ADD scores list<text>;
 ```
 
-### 4.3.地图
+### 4.3. 地图
 
-使用 Cassandra **，我们可以使用 map 数据类型**将数据存储在键值对集合中。密钥是唯一的。正因为如此，我们可以按关键字对地图进行排序。
+使用 Cassandra，**我们可以使用`map`数据类型**将数据存储在键值对集合中。密钥是唯一的。正因为如此，我们可以按关键字对地图进行排序。
 
-让我们向表中添加另一列:
+让我们向表中添加另一列：
 
 ```java
 ALTER TABLE collection_types
     ADD address map<uuid, text>;
 ```
 
-## 5.元组
+## 5. 元组
 
-**元组是一组不同类型的元素**。这些集合具有固定的长度:
+**元组是一组不同类型的元素**。这些集合具有固定的长度：
 
 ```java
 CREATE TABLE tuple_type
@@ -194,9 +198,9 @@ CREATE TABLE tuple_type
 );
 ```
 
-## 6.用户定义的数据类型
+## 6. 用户定义的数据类型
 
-Cassandra 提供了创建我们自己的数据类型的可能性。我们可以创建、修改和删除这些数据类型。首先，让我们创建自己的类型:
+Cassandra 提供了创建我们自己的数据类型的可能性。我们可以创建、修改和删除这些数据类型。首先，让我们创建自己的类型：
 
 ```java
 CREATE TYPE user_defined_type (
@@ -206,7 +210,7 @@ CREATE TYPE user_defined_type (
     type4 text);
 ```
 
-所以，现在我们可以用我们的类型创建一个表:
+所以，现在我们可以用我们的类型创建一个表：
 
 ```java
 CREATE TABLE user_type
@@ -216,7 +220,7 @@ CREATE TABLE user_type
 );
 ```
 
-## 7.结论
+## 7. 结论
 
 在这个快速教程中，我们探索了基本的 CQL 数据类型。此外，我们用这些数据类型创建了表。之后，我们讨论了它们可以存储什么样的数据。
 

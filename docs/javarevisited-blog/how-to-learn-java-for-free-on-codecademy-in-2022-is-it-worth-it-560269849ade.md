@@ -1,3 +1,4 @@
+
 # CodeCademy Java 课程回顾【学习 Java 的最佳免费课程】
 
 > 原文：<https://medium.com/javarevisited/how-to-learn-java-for-free-on-codecademy-in-2022-is-it-worth-it-560269849ade?source=collection_archive---------1----------------------->
@@ -12,11 +13,11 @@
 
 鉴于 Java 提供了一个很好的就业前景，而且学习 Java 的理由不止一个，我对注册学生的数量并不感到惊讶。CodeCademy 一直是从一开始就学习新编程语言或技术的绝佳资源。
 
-我第一次使用 CodeCademy 是通过他们的免费 JavaScript 课程来学习 JavaScript，然后几个月前我用它来提高我的 T2 Python 和 Linux 命令技能。
+我第一次使用 CodeCademy 是通过他们的免费 JavaScript 课程来学习 JavaScript，然后几个月前我用它来提高我的 Python 和 Linux 命令技能。
 
 虽然 [**Codecademy 的免费 Java 课程**](https://www.pntrs.com/t/TUJGR0lLR0JHRklJSkhCR0ZISk1N?url=https%3A%2F%2Fwww.codecademy.com%2Flearn%2Flearn-java) 对于任何一个懂 Java 的人来说都太基础了，但是如果你不懂 Java 又想学的话还是很棒的。它也终结了 StackOverflow、Reddit、Java 论坛上关于像 CodeCademy 学习 Java 这样的*网站的众多问题。你现在有 CodeCademy 本身教 Java。书本是知识和学习的唯一来源的日子一去不复返了。如今，互联网上充满了互动的网站和教程，它们将帮助你更快地学习。他们也很有魅力，所以你不会觉得无聊。顺便说一句，并不是所有的都像 CodeCademy 一样质量很好，所以总是要做一些研究，选择最好的。
 
-简而言之，如果你想学习一门新的技术或者编程语言，比如 [Java](https://www.java67.com/2018/08/top-10-free-java-courses-for-beginners-experienced-developers.html) 或者 [JavaScript](/javarevisited/12-free-courses-to-learn-javascript-and-es6-for-beginners-and-experienced-developers-aa35874c9a32) ，先查一下 CodeCademy 有没有什么课程；如果是的话，那你就不用再进一步搜索了，直接抓起，马上开始学习。*
+简而言之，如果你想学习一门新的技术或者编程语言，比如 [Java](https://www.java67.com/2018/08/top-10-free-java-courses-for-beginners-experienced-developers.html) 或者 [JavaScript](/javarevisited/12-free-courses-to-learn-javascript-and-es6-for-beginners-and-experienced-developers-aa35874c9a32) ，先查一下 CodeCademy 有没有什么课程；如果是的话，那你就不用再进一步搜索了，直接抓起，马上开始学习。
 
 # 为什么要从 CodeCademy 学 Java？
 
@@ -44,17 +45,17 @@
 
 [![](img/dc6eb54f9100f6c99dd5bb56f8d19c4e.png)](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F)
 
-顺便说一下，Udemy 还为 Java 程序员提供了更高级的课程，如**[**Spring Framework 5:初学者到大师**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fspring-framework-5-beginner-to-guru%2F) 学习 Spring Framework 的最新版本。**
+顺便说一下，Udemy 还为 Java 程序员提供了更高级的课程，如 [**Spring Framework 5:初学者到大师**](https://click.linksynergy.com/fs-bin/click?id=JVFxdTr9V80&subid=0&offerid=323058.1&type=10&tmpid=14538&RD_PARM1=https%3A%2F%2Fwww.udemy.com%2Fspring-framework-5-beginner-to-guru%2F) 学习 Spring Framework 的最新版本。
 
-**他们也有许多 Java 程序的免费课程，你可以参加。甚至他们的付费课程也非常便宜，我在他们不时进行的 Udemy 销售上以每门课程 10 美元的价格买了很多。您也可以在 [**5 个网站上阅读我的文章，在线学习 Java**](http://javarevisited.blogspot.com/2015/06/2-websites-to-learn-coding-in-java-online-free.html)。它为您提供了更多免费在线学习 Java 的资源。**
+他们也有许多 Java 程序的免费课程，你可以参加。甚至他们的付费课程也非常便宜，我在他们不时进行的 Udemy 销售上以每门课程 10 美元的价格买了很多。您也可以在 [**5 个网站上阅读我的文章，在线学习 Java**](http://javarevisited.blogspot.com/2015/06/2-websites-to-learn-coding-in-java-online-free.html)。它为您提供了更多免费在线学习 Java 的资源。
 
-**</javarevisited/10-best-places-to-learn-java-online-for-free-ce5e713ab5b2>  
+</javarevisited/10-best-places-to-learn-java-online-for-free-ce5e713ab5b2>
 
 互联网上有很多关于 Java 的免费信息，就像你可以在线阅读或下载 PDF 格式的关于 Java 的免费书籍[一样，其中也包括用 Java 思考。有几个 Java 论坛](http://java67.blogspot.com/2013/11/10-free-java-programing-books-download-PDF-HTML.html)，你可以在那里发表你的疑问并寻求帮助。
 
 那都是家伙。对于所有想学习 Java 的人来说，这是一个好消息。你现在可以去 CodeCademy[**创建你的免费账户**](https://bit.ly/codecademyhome) 并开始学习 Java。由于书籍是学习的重要组成部分，您也可以购买 Head First Java 第二版来进一步促进您的学习。
 
-<https://bit.ly/codecademyhome>  
+<https://bit.ly/codecademyhome>
 
 您可能喜欢的其他免费 Java 编程资源
 
@@ -77,4 +78,4 @@
 
 **P.S.** —如果你不介意投资一些钱来学习像 Java 这样有价值的技能，那么你可能也想看看这个关于学习 Java 编程的 [**10 门最佳课程的列表**](/javarevisited/top-5-java-online-courses-for-beginners-best-of-lot-1e1e240a758) 。我精心挑选了最好的 Java 课程，让你深入学习所有核心的 Java 概念。
 
-<https://javarevisited.blogspot.com/2018/05/top-5-java-courses-for-beginners-to-learn-online.html> **
+<https://javarevisited.blogspot.com/2018/05/top-5-java-courses-for-beginners-to-learn-online.html>

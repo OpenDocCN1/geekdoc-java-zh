@@ -1,14 +1,15 @@
+
 # Java 中的映射到字符串转换
 
 > 原文：<https://web.archive.org/web/20220930061024/https://www.baeldung.com/java-map-to-string-conversion>
 
-## 1.概观
+## 1. 概观
 
 在本教程中，我们将重点关注从`Map`到`String`的转换，反之亦然。
 
 首先，我们将看到如何使用核心 Java 方法来实现这些，然后，我们将使用一些第三方库。
 
-## 2.基本`Map`示例
+## 2. 基本`Map`示例
 
 在所有示例中，我们将使用相同的`Map`实现:
 
@@ -20,9 +21,9 @@ wordsByKey.put(3, "three");
 wordsByKey.put(4, "four");
 ```
 
-## 3.通过迭代将一个`Map`转换成一个`String`
+## 3. 通过迭代将一个`Map`转换成一个`String`
 
-让我们遍历我们的`Map`中的所有键，并为它们中的每一个，将键值组合附加到我们生成的`[StringBuilder](/web/20221101145551/https://www.baeldung.com/java-string-builder-string-buffer) `对象中。
+让我们遍历我们的`Map`中的所有键，并为它们中的每一个，将键值组合附加到我们生成的`StringBuilder`对象中。
 
 出于格式化的目的，我们可以用花括号将结果括起来:
 
@@ -47,7 +48,7 @@ public void givenMap_WhenUsingIteration_ThenResultingStringIsCorrect() {
 }
 ```
 
-## 4.使用 Java 流将一个`Map`转换成一个`String`
+## 4. 使用 Java 流将一个`Map`转换成一个`String`
 
 为了使用流执行转换，我们首先需要用可用的`Map`键创建一个流。
 
@@ -64,9 +65,9 @@ public String convertWithStream(Map<Integer, ?> map) {
 }
 ```
 
-## 5.使用番石榴将`Map`转化为`String`
+## 5. 使用番石榴将`Map`转化为`String`
 
-让我们将 [Guava](https://web.archive.org/web/20221101145551/https://search.maven.org/search?q=g:com.google.guava%20AND%20a:guava) 添加到我们的项目中，看看我们如何在一行代码中实现转换:
+让我们将 Guava 添加到我们的项目中，看看我们如何在一行代码中实现转换:
 
 ```java
 <dependency>
@@ -84,9 +85,9 @@ public String convertWithGuava(Map<Integer, ?> map) {
 }
 ```
 
-## 6.使用 Apache Commons 将一个`Map`转换成一个`String`
+## 6. 使用 Apache Commons 将一个`Map`转换成一个`String`
 
-要使用 [Apache Commons](https://web.archive.org/web/20221101145551/https://search.maven.org/search?q=a:commons-collections4%20AND%20g:org.apache.commons) ，让我们先添加以下依赖项:
+要使用 Apache Commons ，让我们先添加以下依赖项:
 
 ```java
 <dependency>
@@ -124,7 +125,7 @@ Map as String =
 } java.util.HashMap
 ```
 
-## 7.使用流将一个`String`转换成一个`Map`
+## 7. 使用流将一个`String`转换成一个`Map`
 
 要执行从`String`到`Map`的转换，让我们定义在哪里拆分以及如何提取键和值:
 
@@ -137,7 +138,7 @@ public Map<String, String> convertWithStream(String mapAsString) {
 }
 ```
 
-## 8.使用番石榴将`String`转化为`Map`
+## 8. 使用番石榴将`String`转化为`Map`
 
 上面的一个更紧凑的版本是依靠番石榴在一行程序中为我们做分割和转换:
 
@@ -147,8 +148,8 @@ public Map<String, String> convertWithGuava(String mapAsString) {
 }
 ```
 
-## 9.结论
+## 9. 结论
 
 在本文中，我们看到了如何使用核心 Java 方法和第三方库将一个`Map`转换成一个`String`，反之亦然。
 
-所有这些例子的实现都可以在 GitHub 上找到[。](https://web.archive.org/web/20221101145551/https://github.com/eugenp/tutorials/tree/master/core-java-modules/core-java-collections-maps-2)
+所有这些例子的实现都可以在 GitHub 上找到。

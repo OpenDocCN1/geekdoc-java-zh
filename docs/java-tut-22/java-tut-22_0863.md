@@ -1,3 +1,4 @@
+
 # 准备初始程序结构
 
 > 原文：[`docs.oracle.com/javase/tutorial/security/apisign/vstep1.html`](https://docs.oracle.com/javase/tutorial/security/apisign/vstep1.html)
@@ -34,8 +35,8 @@ class VerSig {
 
 注意：
 
-+   用于验证数据的方法位于`java.security`包中，因此程序从该包中导入所有内容。程序还从`java.io`包中导入所需的用于输入要签名的文件数据的方法，以及从`java.security.spec`包中导入包含`X509EncodedKeySpec`类的内容。
++ 用于验证数据的方法位于`java.security`包中，因此程序从该包中导入所有内容。程序还从`java.io`包中导入所需的用于输入要签名的文件数据的方法，以及从`java.security.spec`包中导入包含`X509EncodedKeySpec`类的内容。
 
-+   期望有三个参数，分别指定公钥、签名和数据文件。
++ 期望有三个参数，分别指定公钥、签名和数据文件。
 
-+   在本课程后续步骤中编写的代码将放在`try`和`catch`块之间。
++ 在本课程后续步骤中编写的代码将放在`try`和`catch`块之间。

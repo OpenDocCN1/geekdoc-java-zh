@@ -1,3 +1,4 @@
+
 # 指定方法抛出的异常
 
 > 原文：[`docs.oracle.com/javase/tutorial/essential/exceptions/declaring.html`](https://docs.oracle.com/javase/tutorial/essential/exceptions/declaring.html)
@@ -14,19 +15,16 @@ public void writeList() {
     }
     out.close();
 }
-
 ```
 
 要指定`writeList`可能会抛出两个异常，需要在`writeList`方法的方法声明中添加一个`throws`子句。`throws`子句包括`throws`关键字，后面跟着一个逗号分隔的由该方法抛出的所有异常的列表。该子句放在方法名和参数列表之后，方法范围定义的大括号之前；以下是一个示例。
 
 ```java
 public void writeList() throws IOException, IndexOutOfBoundsException {
-
 ```
 
 请记住`IndexOutOfBoundsException`是一个未经检查的异常；在`throws`子句中包含它并不是强制性的。你可以只写如下内容。
 
 ```java
 public void writeList() throws IOException {
-
 ```

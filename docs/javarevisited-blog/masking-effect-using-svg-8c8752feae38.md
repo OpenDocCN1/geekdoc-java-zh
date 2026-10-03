@@ -1,3 +1,4 @@
+
 # 使用 SVG 的掩蔽效果
 
 > 原文：<https://medium.com/javarevisited/masking-effect-using-svg-8c8752feae38?source=collection_archive---------3----------------------->

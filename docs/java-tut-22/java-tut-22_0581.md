@@ -1,3 +1,4 @@
+
 # 检查表
 
 > 原文：[`docs.oracle.com/javase/tutorial/i18n/intro/checklist.html`](https://docs.oracle.com/javase/tutorial/i18n/intro/checklist.html)
@@ -8,37 +9,22 @@
 
 文本消息是随文化变化最明显的数据形式。然而，其他类型的数据可能会随地区或语言而变化。以下列表包含了文化相关数据的例子：
 
-+   消息
-
-+   GUI 组件上的标签
-
-+   在线帮助
-
-+   声音
-
-+   颜色
-
-+   图形
-
-+   图标
-
-+   日期
-
-+   时间
-
-+   数字
-
-+   货币
-
-+   测量
-
-+   电话号码
-
-+   敬语和个人头衔
-
-+   邮政地址
-
-+   页面布局
++ 消息
++ GUI 组件上的标签
++ 在线帮助
++ 声音
++ 颜色
++ 图形
++ 图标
++ 日期
++ 时间
++ 数字
++ 货币
++ 测量
++ 电话号码
++ 敬语和个人头衔
++ 邮政地址
++ 页面布局
 
 ## 在资源包中隔离可翻译文本
 
@@ -48,7 +34,6 @@
 String buttonLabel = "OK";
 // ...
 JButton okButton = new JButton(buttonLabel);
-
 ```
 
 详细信息请参见隔离特定区域数据部分。
@@ -61,7 +46,6 @@ JButton okButton = new JButton(buttonLabel);
 Integer fileCount;
 // ...
 String diskStatus = "The disk contains " + fileCount.toString() + " files";
-
 ```
 
 尽可能避免构建复合消息，因为它们很难翻译。然而，如果你的应用程序需要复合消息，你可以使用消息部分中描述的技术来处理它们。
@@ -76,7 +60,6 @@ TextField amountField;
 // ...
 String displayAmount = amount.toString();
 amountField.setText(displayAmount);
-
 ```
 
 你应该用一个能正确格式化数字的例程替换前面的代码。Java 编程语言提供了几个格式化数字和货币的类。这些类在数字和货币部分有讨论。
@@ -91,7 +74,6 @@ TextField dateField;
 // ...
 String dateString = currentDate.toString();
 dateField.setText(dateString);
-
 ```
 
 如果你使用日期格式化类，你的应用程序可以在全球范围内正确显示日期和时间。有关示例和说明，请参见日期和时间部分。
@@ -104,7 +86,6 @@ dateField.setText(dateString);
 char ch;
 // This code is incorrect
 if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
-
 ```
 
 注意类似这样的代码，因为它在除英语以外的语言中无法正常工作。例如，`if`语句在德语单词 Grün 中漏掉了字符ü。
@@ -115,7 +96,6 @@ if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
 char ch;
 // ...
 if (Character.isLetter(ch))
-
 ```
 
 有关`Character`比较方法的更多信息，请参阅检查字符属性部分。
@@ -132,7 +112,6 @@ if (target.equals(candidate)) {
 // ...
 if (target.compareTo(candidate) < 0) {
 // ...
-
 ```
 
 `String.equals`和`String.compareTo`方法执行二进制比较，在大多数语言中排序时效率低下。相反，您应该使用`Collator`类，该类在比较字符串部分有描述。
